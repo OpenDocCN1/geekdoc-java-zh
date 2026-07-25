@@ -1,0 +1,3723 @@
+![](cover.jpeg)
+
+![image-0GGJ6QQB.jpg](OEBPS/Images/image-0GGJ6QQB.jpg)![image-0GGJ6QQB.jpg](OEBPS/Images/image-0GGJ6QQB.jpg)![image](OEBPS/Images/image-L48S4UTT.jpg)
+
+For Doris
+
+### CONTENTS
+
+[Cover Image](#chapter0000.html)
+
+[Title Page](#chapter0001.html)
+
+[Dedication](#chapter0002.html)
+
+[Introduction](#chapter0004.html)
+
+Chapter One—Looking through the Mirror
+
+[First Contact](#chapter0006.html)
+
+[Practical Taoism](#chapter0007.html)
+
+Chapter Two—Lifeforce
+
+[A Car Ride](#chapter0009.html)
+
+[The Martial Arts and Ch’i](#chapter0010.html)
+
+Chapter Three—Beginnings
+
+[The Apprentice](#chapter0011.html)
+
+Chapter Four—The Immortals
+
+[The Master’s Story](#chapter0013.html)
+
+[The Hsien](#chapter0014.html)
+
+[Revelations](#chapter0015.html)
+
+Chapter Five—The Story of Liao Sifu
+
+[Duel of the Immortals](#chapter0016.html)
+
+Chapter Six—Lessons to Be Learned
+
+[The Examination](#chapter0018.html)
+
+[Power](#chapter0019.html)
+
+[A Chinese Story](#chapter0018.html)
+
+Chapter Seven—Yin and Yang
+
+Chapter Eight—The Will of Heaven
+
+[The Letter](#chapter0021.html)
+
+Chapter Nine—The Keris
+
+[The Prince](#chapter0022.html)
+
+Chapter Ten—The Nature of Reality
+
+[Reinventing the Wheel](#chapter0024.html)
+
+[A Change in the Weather](#chapter0023.html)
+
+[Levitation](#chapter0024.html)
+
+[Epilogue: For a Breath I Tarry. . . .](#chapter0025.html)
+
+[Appendix One: Notes](#chapter0027.html)
+
+[Appendix Two: Observations and Speculation](#chapter0028.html)
+
+[Footnotes](#chapter0031.html)
+
+[About the Author](#chapter0032.html)
+
+[About Inner Traditions • Bear & Company](#chapter0033.html)
+
+[Books of Related Interest](#chapter0034.html)
+
+[Copyright & Permissions](#chapter0035_split_000.html)
+
+### INTRODUCTION
+
+Imagine a world where the mind and soul of man are free to reach their greatest potential, where powers once considered supernatural or paranormal are a simple fact of life. Imagine a place where diseases hitherto thought incurable can be treated with the uncomplicated administration of the healer’s own abundant life energy, a place where mankind can readily communicate with earthbound spirits, where powerful yogis can speak with their Creator God Himself. Wouldn’t it be wonderful to dwell in such a domain, the stuff of fairy tales, myths and legends, storybooks, and Hollywood celluloid? Wouldn’t life have a distinct flavor, a tangy zest, if such things were indeed true?
+
+Welcome to my world. I live in such a place, where all the extraordinary things that I have suggested are real and incontrovertible. In my world Western science and Eastern mysticism walk hand in hand, embraced and inseparable, mirror aspects of the same reality, equally factual and valid. The opportunity to grow is there every waking moment, the gift of our own great potential.
+
+You might suppose that such a destiny is far away, but in truth it is at mankind’s doorstep. There can be no doubt that humanity is once again in the process of changing. Traditions are evolving as cross-cultural barriers continue to fall. Old values, ideals, and concepts are no longer blindly accepted; people of all creeds, races, and nations have become less hesitant to question, to ask why.
+
+The mind of man is in a frenzy as never before, technology growing logarithmically by leaps and bounds. We have set foot on the moon and touched the bottom of the ocean. We have moved at many times the speed of sound and have viewed the faces of the planets around us. We control the power of the atom and can replace a crippled human heart with that of a suitable (and willing) donor. We are a step away from creating an artificial, silicon-based intelligence. We have even invaded the sanctity of the gene and created clones. It seems that our quest for knowledge is constrained only by energy, time, and financial allocation.
+
+We have made much social progress. Despite discriminatory distribution, education levels are at an all-time high for the human race. The phenomenon of human serfdom and subjugation is on the wane; rebellion is evident all over the world. People are aware of their rights and are willing to fight—perhaps even to die—for them. (No simple thing, this, when you consider that the economies of all historic empires were founded on slavery.) Even more stirring is the fact that many individuals are now willing to fight and die for other people’s rights, perhaps more so than in any other period in our history. What is equally important is that the self-sacrifice of these heroes is not based on any specific religious belief or practice, but rather on the simple conviction that human rights deserve to be protected.
+
+There is a backlash to this, of course. Ethnic and religious fanaticism is on the rise. Fascism troubles us once more. Multinational corporations abuse their power at will for greater profits, bribing corrupt governments to rape their land and use their own citizens. The planet’s ecological balance has been destroyed—permanently, some people claim. Our flora and fauna are dying, the planet suffering. The Almighty Dollar rules, and consumerism is the creed of the day.
+
+It seems that for all our power—for we are powerful—we have yet to answer the fundamental questions of life. Who are we? Where are we going? Why are we here? What are our inherent capabilities, what our final potential? Do we live on after death, as is believed? What is true happiness and how can we reach it? Is there, indeed, a Creator God? The list is endless, as old as man himself.
+
+It is possible for us to answer these questions. The secret to a successful resolution of these basic inquiries, however, is that we must make a committed effort as a species, not as nations or groups of people, to find the answers. The method required is as simple, and as difficult, as that.
+
+Humanity has developed along many different lines. There are as many cultural approaches to life as there are natural and sensory stimuli. Some cultures are visual, others acoustic, others olfactory, others intuitive. It is hard to quantify human culture with precision, and such an analysis is far beyond the scope of this book. However, it is possible to say (speaking very generally) that, as a dominant tendency, Western science has turned outward, its intent being to quantify and modify man’s environment to suit man’s wishes. Eastern science, on the other hand, has turned inward, attempting to quantify and develop the innate capabilities of the human species and understand its role in the scheme of things. While it is very dangerous and unscientific to make statements of this sort, for the time being it is important that I take this standpoint, if for no other reason than to clarify the purpose of this text.
+
+Let me return to the phrase a committed effort as a species. This statement implies that we human beings must pierce through our ethnic and national barriers and work together. History tells us that incredible events have unfolded whenever we were able to temporarily cross our self-imposed thresholds. The Hellenistic Age, for example, clearly shows us what can be achieved through cultural interaction; in the fourth century BCE ancient Greece met with ancient India, and the destiny of the world was forever, and quite radically, changed.¹
+
+The exploits of King Alexander and his men, however, are not directly pertinent to this book. The point is, there is no reason that we today cannot duplicate what the ancients achieved then, and that is to learn from each other in order to grow, to survive, perhaps even to thrive. In the nineteenth century Kipling wrote, “East is East and West is West, and never the twain shall meet.”*1 He was wrong. East is meeting West today, and will continue to do so if we can just nurture their union. To realize this, we must ensure that both cultures approach each other with mutual respect, open themselves completely to each other, and share their conclusions. It is not an easy task.
+
+Chinese culture, and more specifically Taoist culture, has taken the West by storm. Acupuncture is practiced everywhere. Chinese restaurants are ubiquitous. Kung fu movies and TV shows are popular far and wide. Meditation has been recognized as a bio-behavioral state by Western medicine.*2 The Tao Te Ching is being read by university students all over the world, and many Western businessmen are using the I Ching and feng shui (Chinese divination methods) in their day-to-day decision making.
+
+And yet, despite the popular appeal of Chinese Taoist culture, a fine fusion of East and West has only begun to take place in recent years. For the most part, people in the West either entirely reject the Eastern approach as mumbo-jumbo or embrace it with religious fervor as more ancient and spiritual than Western science. Both of these attitudes are erroneous. The first presumptuously rejects the value of Chinese learning; the second takes tried and proven biophysical techniques developed over millennia and turns them into dogma. This problem is compounded by the fact that many Westerners and Chinese alike are too eager to push what little tidbits of knowledge they have down consumers’ throats in a desperate quest for money.
+
+The Chinese themselves are responsible for much of this. There is, unfortunately, no such thing as Chinese science. Instead, there are family and clan sciences and arts developed by the people of the Chinese nation over millennia. The knowledge developed by the Chinese was never widespread, not even within China itself. It was the prerogative and the power base of the privileged few and their families.
+
+In the past a Chinese Master never taught his apprentices 100 percent of his knowledge. Instead he retained, say, the foremost 10 percent for himself alone. Perhaps he would write down the rest in a document for his favorite student, to be opened after his death. The result of this approach was that the sum of each clan’s learning decreased by 10 percent with each generation, until some charismatic student was able to decipher the mystery and return to the status of the original teacher, at which point the cycle went on with his students, and so forth. The capabilities and exploits of the Masters became the stuff of legend, and later the storyline of the Chinese opera. Today they are the essence of all kung fu movies.
+
+To make matters worse, the Masters almost never worked together. The concept of a Western university, where knowledge is shared and experiences are compared, was an alien one for them. Power was meant to be used for profit, material and spiritual. More often than not martial Masters challenged each other; much knowledge was forfeited in this manner because the bested Master frequently lost his life as well. To our Western culture, such an approach seems shocking, to say the least. Information dissemination is evident everywhere; indeed, it is very difficult, even undesirable, to keep knowledge secret or proprietary in our society.²
+
+Yet there is a way that a complete union of these two cultures can be accomplished, and that is simply by the creation of a new science that is neither Eastern nor Western but a union of both. Bold visionaries of generations past have foretold such a discipline. I believe that it is mankind’s destiny to come together in this fashion, and that such a science, combining the orthological*3 approach of the West with the mystical discipline of the East, is being forged in our day and age. This story, in essence, represents the future direction chosen by humanity’s awakening desire for a better life and a higher truth. You will find many parallels with readily available existing texts. The main difference, however, between this book and any other is that it is representative of a working, extant system, not a historical account of something that once was. It is fact, not supposition or a dogmatic system of beliefs.
+
+There is a man in Indonesia who is a master of the ancient Chinese science of neikung, or “internal power.” His name is John Chang, and he is my teacher. Mr. Chang was first presented to the world in the award-winning documentary series Ring of Fire,†4 filmed by the brothers Lorne and Lawrence Blair; his privacy was protected by the rather ignominious pseudonym Dynamo Jack. In this documentary Master Chang shocked the world by demonstrating the impossible: First he generated an electrical current of high amperage inside his own body to heal Lorne of an eye infection, and then he “zapped” Lawrence (and their sound recordist) utilizing the same energy.*5 In a dramatic conclusion Master Chang then used this bio-energy to set a crumpled-up newspaper ablaze, warning the researchers that the same power that had healed Lorne could readily be used to kill a man as well.
+
+It was the first documented demonstration of neikung given to the Western world. What is even more amazing is that tens of thousands of people around the world (myself included) readily believed it, and that the two brothers had no idea what it was they were filming at the time.
+
+In order for you to fully understand what the term neikung implies, you’ll have to work your way through this text. What is important at this point is that, for the first time in human development, a man who according to Chinese culture is a hsien, a Taoist immortal, is willing to come forth and reveal to the West the truth behind his teaching. John Chang is unique in the annals of mankind. Like the Jedi Knights of the Star Wars saga, he has amazing preternatural abilities: telekinesis, pyrogenesis, electrogenesis, telepathy, levitation, remote viewing, even astral projection (for lack of a better term). Thousands of people have witnessed him do these things. My teacher’s power is unfathomable to the Western mind; a small percentage of its accumulated energy can instantly overpower, or heal, a human being or larger animal. And yet Mr. Chang is a Westerner. A resident of urban Java, he visits Europe and the United States often. He has searched through China for others like himself with the intent of learning and sharing—a unique trait for one such as he, as you will discover. It could be said that Mr. Chang is the ultimate combination of East and West or, more poetically, that in the bridge between East and West, he is one of the foundation towers.
+
+This text will essentially cover the life history and preliminary teachings of John Chang. I have attempted to follow the method suggested by the Jedi and present Eastern concepts in a manner that all Westerners can understand. As such, I pray that this volume will be up to the task, and honor John Chang and his teachings.
+
+Perhaps we are indeed fortunate to be living in that time in our development when God has decreed that the separate branches of human science come together. Perhaps we of the West need the East to save our world from ourselves.
+
+—Kosta Danaos
+
+Athens, Greece
+
+Chapter One
+
+LOOKING THROUGH THE MIRROR
+
+### FIRST CONTACT
+
+I am by training a scientist, and have degrees in two fields of engineering. Among other things, I have been employed as a senior project engineer by one of the largest corporations in the world. Logic and social stereotyping would dictate that I am not the sort of person who readily believes what he hears or sees in film format, that things would have to be repeatedly proven to me for me to question my established pattern of beliefs. When I saw the documentary, however, I did not doubt its credibility for a second. I knew that what I was witnessing was real, that it was neither special effects nor fraud. I was sure of it. Perhaps it is the coming of the new millennium that allows this, that a man schooled in Western thought and science can look at a deviation from the accepted laws of nature and say: “This is real.”
+
+As I mentioned earlier, the well-done documentary by the brothers Lorne and Lawrence Blair, called Ring of Fire, depicts a nondescript Oriental man doing what is impossible according to our Western branch of medical knowledge and our Western science of physics: using his own internal bio-energy to light a newspaper on fire. This was accomplished with a minimum of fuss, almost nonchalantly. The man waited until the film crew was ready, looked up to check with the cameraman, steadied his right palm over a crumpled newspaper, tensed his body, and set the paper ablaze. It was obvious to the viewer that some kind of potent energy was being generated from the man’s open palm—so much so that the newspaper burst into a roaring flame.
+
+There are at least two ways that this feat could have been accomplished as an illusion. One is that the filmmakers were collaborating with the man and, through special effects, perpetrating a hoax. The other is that it was the man himself who was tricking the researchers, having slipped a piece of phosphorus or some other inflammable into the crumpled paper and timing his display to coincide with the chemical’s oxidation. But I knew that neither was the case; I knew that I was looking at the real McCoy, so to speak.
+
+There were reasons for this, the most important being the man himself. He was a well-built but small Oriental, smiling and unpretentious. He appeared to be of indeterminate age, with a full head of thick black hair and the skin of youth, but his eyes were the eyes of an ancient, and sincerity shone through them. His voice was caring and compassionate, without guile. He was even nervous in front of the camera! Most important, it appeared that the man had nothing to gain from the display; neither his name nor his location was disclosed by the researchers, and he certainly was not asking anyone for money.
+
+None of these things occurred to me at the time, however. In that moment when I first saw the video, I knew only one thing: that I had finally, after twenty-five years of searching, met my master. It was shocking; I looked at him and knew him, and nothing could sway me from going to him.
+
+Like many people of my generation, I had been studying the martial arts for a long time. I had started at the age of ten and drifted through a series of Oriental fighting arts to finally settle on Japanese jujutsu in my early twenties. What I had been searching for was simple: I wanted what the actor David Carradine had so eloquently portrayed in the now classic hit series Kung Fu. I wanted an art whose Masters were wise, enlightened philosophers who could kill a tiger with a punch if they had to, yet abhorred the violence they trained for. I wanted an art whose practitioners would actually grow stronger with age rather than weaker. I wanted an art through which my teacher would indeed teach me about myself and the world around me. I wanted to be Kwai Chang Caine.
+
+I had searched around the world for such a mentor, and what I had found generally fell into three categories: enlightened philosophers who could not punch their way out of a paper bag given the opportunity; total animals who were great fighters, but whom a civilized man would not invite into his house; and individuals who appeared to be exactly what I was searching for but proved inadequate to the task, ultimately displaying either lack of judgment, inherent weakness, fraudulent motives, or emotional instability. It is also quite possible that it was I who was not worthy of them, and left them before I came to understand them.
+
+In the past I had repeatedly rejected the Chinese martial arts because of the notable scarcity of authentic knowledge inherent to their dissemination in Western society. In the 1970s and 1980s the Chinese arts were notorious for their lack of credible teachers. Trustworthy instructors were, in general, much harder to find than impostors cashing in on the popularity of kung fu movies. Also, I could not enter Communist China to search for a true master until 1992 because of my profession. And yet I had, like all diligent martial artists, read the books by reliable researchers and teachers. I knew the theory behind the Chinese martial arts, and I knew that the man I had seen on the film was Chinese. I also knew what I had witnessed was called neikung—the manipulation of internal power.
+
+I had to find him.
+
+I knew it was not going to be easy. I didn’t know the man’s name. The documentary had indicated that he lived somewhere in Java or Bali, but I had no way of knowing if even that implication was true—they could have filmed him in San Francisco, for all I knew. And I spoke neither Chinese nor Malay.
+
+Ten days later I was on a plane to the Indonesian capital of Jakarta. After an eighteen-hour trip, I checked into the cleanest of the dirty motels found on Jalan Jaksa and rested up for the morrow. I knew it would be tough going.
+
+The next day I pocketed the stack of photographs I had taken of the video sequence in Ring of Fire and set off for Jakarta’s Chinatown, a district called Glodok. My plan was to visit all the Chinese pharmacies and acupuncture clinics in Glodok, asking them whether or not they knew the man in the photographs. It seemed like a good idea at the time.
+
+They thought I was insane.
+
+I must have made their week. It was my first trip to Indonesia; I had expected the worst and was dressed like a Western tourist on safari. Some shopkeepers laughed in my face; others just politely told me to piss off. One of them even threw me out! After six or seven hours of constant rejection, walking among beggars and lepers and being followed by a pack of street kids, I spied an ancient Chinese temple in the midst of it all and walked in. Immediately, the noise went away and I was left alone.
+
+The temple caretakers were curious. What was I doing there? I was too shy and too embarrassed to tell them. They bought me dinner and gave me water to drink and sent me on my way.
+
+I returned to Glodok the following day, my resolve strengthened and armed with a note my motel clerk had written out for me. I later learned that what he had written was:
+
+Honored sir or madam,
+
+I am a very stupid foreigner who has been tricked into coming here all the way from Greece. These are pictures of a man I saw on a video; I am looking for him. I do not know his name or where he lives. Do you know him? Thank you.
+
+This is probably why people were more polite and why I saw more smiles on my second day. After a few hours of diplomatic rejection, I made my way back to the temple, thinking that I would meet with yesterday’s friends.
+
+They were delighted to see me and twice as curious as before. This time I was the one who bought them all lunch; we sat together for a time, laughing and communicating in broken English and sign language. As our camaraderie developed, they grew curious enough to pressure me for details.
+
+“Kosta, tell us, what are you doing here?”
+
+“No, it’s stupid, you don’t want to know.”
+
+Finally they were so insistent that I relented and, rather than explaining, handed them the note.
+
+Suddenly I was faced with a group of statues; their smiles had been replaced by distrust. A chill went up my back. One man whispered something to a young boy, who ran off. As one, all my newfound friends stood.
+
+“Stay here,” a burly man said.
+
+Ten minutes later a wiry Chinese of indeterminate age rode up on a bicycle. He offered me his hand and sat down.
+
+“My name is Aking,” he said. “I am a student of the man you seek.”
+
+Aking grilled me for almost a week, asking me questions like “Who sent you?” and “Why did you come to this place?” It was ludicrous to him that I could have found a lead to his teacher so easily, coming as I did from Greece—of all places—without a clue as to local custom and geography. He was sure I was a spy in the service of some intelligence agency; he even made me surrender my passport to him! After a week Aking finally gave me an address in a city in eastern Java and told me to fly out there the next morning; the man I had seen in the documentary would be expecting me, I was told.
+
+Well, I didn’t believe him.
+
+It had been too easy, too unbelievably easy. I thought that these grinning Chinese were playing a joke on the foreigner, sending him on a wild goose chase and having a laugh at his expense. I boarded the plane with hesitation, felt like a fool when I landed, felt even more like a fool when I took a taxi to the address I had been given and was told the man was out. Come back at two o’clock, they said. At least they spoke English.
+
+I spent a few hours fuming in my room at the dirty motel where I was staying. I vowed eternal vengeance on the people who had sent me out here. I would teach them to beware of Greeks. Hah! Hear about the Trojan War, my friends? You’re about to trade up. I felt ridiculous, like a jackass, stupid; I kept telling myself that the whole thing was a hoax, that I had spent way too much money coming out here, that I was an idiot and stupid and trusting and naive and. . . .
+
+I went back at two o’clock. The man was there.
+
+I cannot plainly convey the shock, the joy, and the relief of finding Dynamo Jack standing in front of his home. I had been an imbecile, succumbing to my all-too-ready anger. No one had been playing a practical joke on me; the student I met had actually tried to help me, sending me on to his teacher.
+
+We shook hands and he invited me in. He said, quite simply, that his name was John. The surname on the doorbell said CHANG in Latin characters, a common-enough name for a Chinese. John Chang was the equivalent of John Smith in the United States, a name anyone could have.
+
+I introduced myself formally.
+
+“Kosta,” he said, rolling the word around on his tongue. The name must have sounded strange to him. “How did you find me?” His English was simple and lightly accented.
+
+“I saw you in a video . . . a documentary,” I replied.
+
+“Ah. That was some years ago. They told me it would be for scientific research; otherwise I would never have demonstrated for them.”
+
+“Why not?”
+
+“Because I promised my Master that I would not. What can I do for you? You have some kind of problem?”
+
+John was a healer. He applied acupuncture to the traditional points, but supplemented its effect greatly by passing his ch’i, his bio-energy if you will, through the needles. He had healed hundreds of people whom Western medicine could not aid, something I did not know at the time. I winged it.
+
+“Well, two things.” I had rehearsed this part many times. “I do have a problem with my joints after so many years of pounding them in martial arts training . . . uh, something like osteoarthritis. Bone spurs and such.”
+
+He smiled. “Too many years of improper training, I think. It’s possible that I could help you. I’ll have to check you out first.”
+
+“Okay.”
+
+“I’m going to have to touch you. Don’t be alarmed at what you’ll feel.”
+
+I took off my shirt and he put his hands on my chest and upper back.
+
+Imagine a powerful, continuous electrical current passing through your body. Imagine that, despite its impact, you are somehow aware that this current is benevolent, not damaging. Imagine it working like a radar, searching, weighing, feeling. I gasped and almost fell over.
+
+“Your heart is very good,” he said.
+
+I nodded and gulped. I must have looked odd, but he was probably used to it. The stream of bio-energy he was sending through me made my muscles jerk uncontrollably.
+
+“Lungs are okay. Kidneys are good. Liver’s all right.” While he was talking, I felt like I was going through some kind of high-intensity ultrasound. I could feel his power inside me, the energy building up as he became more confident of my physical condition.
+
+“Oh,” he said. “I have it. It’s in the blood. Your blood chemistry makes you prone to calcium deposits.”
+
+“Can you do anything about it?”
+
+“I’m not sure. We can try. Where are you staying?”
+
+I named the motel.
+
+He nodded. “We’ll find you someplace better. What else did you want?”
+
+“I wanted you to accept me as your student!” I blurted out. It came in a rush, and I was immediately disappointed with myself. I had prepared such an eloquent speech for that moment, and alternate ones, at that—plan B should plan A fail, and so on. I was thirty-five years old at the time, and had experienced much; I was not prone to stage fright, but where I should have been mature I felt like a child before this man. More precisely, like a punk kid.
+
+“No,” he said. “Oh no no. I don’t accept students anymore. But you can come back tomorrow morning if you want us to get started on your treatment.”
+
+I was crushed. I wanted to fly back home, magically transform myself into a five-year-old, crawl into my mother’s lap, and cry. Instead I went back to my cheap, dirty motel room, and waited.
+
+### PRACTICAL TAOISM
+
+Taoism is a millennia-old system of beliefs that has, along with its rival and antipode Confucianism, shaped the course of Chinese culture. To quote the Encyclopedia Britannica: “Taoism [is] a religio-philosophical tradition that has, along with Confucianism, shaped Chinese life for more than 2000 years. The Taoist heritage, with its emphasis on individual freedom and spontaneity, laissez-faire government and social primitivism, mystical experience and techniques of self-transformation, represents in many ways the antithesis to Confucian concern with individual moral duties, community standards, and governmental responsibilities.”*6
+
+Many things popularly thought to be Chinese in the West are actually Taoist, and have become widespread even in China only in the past century. Among these are many practices that have become “brand names” in Western society, such as acupuncture, t’ai chi chuan, feng shui, and the I Ching. The truth is, it is now impossible to separate Taoism from Chinese culture; the two have, in our age, become one and the same.
+
+Taoism has been categorized by sinologists as having both a philosophical and a religious tradition complete with formalized doctrine and a religious hierarchy. The West has been flooded in the past twenty years with books claiming to be the authoritative text on Taoism. Many of these books are valid, some less so, while others are simply a hodgepodge of ridiculous theories. Even more frustrating, many are excellent translations of medieval Chinese texts that are misleading simply because, as translations, they are subject to each individual translator’s interpretation; the disparities in meaning that you can find between lines in the translated texts when you compare one author with another are shocking.
+
+John Chang, the teacher whose life and theories are the focus of this book, is the Headmaster of a kung fu lineage whose roots can be traced back twenty-four hundred years. John himself denies the appellation Taoist, perhaps rightfully so, because Taoism has come to be considered a religion by the world. However, since the teachers of Master Chang’s lineage basically lived within the confines of historical Taoist retreats, and since the word Taoism has become a generic term in the West for “native Chinese philosophy,” I will continue to call my teacher a Taoist. Perhaps it would be more accurate to refer to his teaching as “practical Taoism” to differentiate it from the Taoism of other sources or lineages. John himself calls Taoism a “philosophical science,” the simple study of natural law, for reasons that I will outline below.
+
+Of all the spiritual disciplines Taoism is perhaps the most confusing and difficult to define in that it began its development as a philosophical school, turned into a religion, and was propagated as a series of folk beliefs. However, there are many ways by which to differentiate a religion from a philosophy and, more so, from a science. In our specific case, two justifications are most clear. The first is that a religion is based on beliefs that cannot be proven, that are a matter of each individual’s faith. We as practical Taoists consider our teaching a science that gives testimony to natural phenomena that both the students of our generation and past Masters of our lineage have experienced firsthand, and that can be reproduced and experienced by others at any time. This is the most important distinction and one that I cannot stress sufficiently. To put the argument more simply, a high school student studying physics and algebra will inevitably reach certain conclusions and develop specific capabilities, duplicating the experiences and the logic of his teachers and of those in past generations who passed these sciences along. There is nothing “religious” in the experience of physics and algebra; they are tools of knowledge and power, with no doctrine or system of beliefs. Algebra and physics offer, in other words, what has become the key term of Western science: reproducible results. They pass on nothing that cannot be proven. This approach is precisely what someone going through training as John Chang’s student will experience; he will follow in the footsteps of those who came before him, encounter the same phenomena, reach the same conclusions.
+
+The second reason I assert that “practical Taoism” is a naturalistic science is that the word religion has come to imply a falling-out between man and the Divine—one that the proffered doctrine can reconcile by acting as an intermediary.*7 We can find no proof that man has ever fallen from God’s grace,*8 assuming that there is a God; instead there seems to be considerable evidence that man is evolving to become whatever God intended him to be. As “practical Taoists” we offer no special means of redemption, no salvation, no carrot to make the donkey run. Rather, we offer a method of enhancing existence, making each individual more of what he already is and moving him toward what he can hope to become. We are, simply put, a philosophical science.
+
+Perhaps you will understand the distinction a bit better if I analyze the Chinese term kung fu. Many people think that it means “martial arts,” but this is not the case. (The Chinese terms for martial technique and martial arts are now wu shu and wu yi, respectively.) The two words kung fu are very difficult to translate; indeed, we must absolutely study Chinese writing to comprehend their meaning. Let’s make the attempt.
+
+Kung fu is composed of the ideograms:
+
+![image](OEBPS/Images/image-Z3CJ2387.jpg)
+
+Now, the first term, kung, is written as a combination of the characters kung ( ) and li ( ). Kung means “to build, to construct.” Li means “power or strength.” The second term, fu, is made up of the single character fu ( ), which is a complex ideogram to interpret. Fu is derived from the character for man ( ), with added widespread arms and an adult man’s hatpin through the character (in medieval China each adult male wore a hatpin through his hat and hair). The implication is of a mature, large, responsible adult man or father figure; the character is also used in other contexts to denote someone’s husband. In other words, the term kung fu actually means: “the construction and development of one’s energy over time, through daily effort, such that in the end one obtains mature power and the spiritual development of a Master.”
+
+Kung fu, in other words, is a path of continual discipline and training, of nonstop growth over your entire life. This is precisely the path chosen and represented by John Chang.³
+
+Chapter Two
+
+LIFEFORCE
+
+### A CAR RIDE
+
+“I have to go to my prawn farm this afternoon. You can come with me if you wish.”
+
+It was about two weeks into my acquaintance with the man who was to become my teacher. For two weeks he had stuck acupuncture needles into my elbows, knees, and wrists, sending a steady current of ch’i (life energy) coursing through my body. As I progressed I was able to relax more and more during the treatment, and John methodically increased the intensity with each session. I had discovered to my surprise that he used a current intensity of no more than 0.5 percent of his total power to treat patients. It was staggering. Normal people, even the strongest men, could be knocked out by 2 percent.
+
+For two weeks I had asked him every day to accept me as a student. He was always firm in refusing, but he never insinuated that I should “piss off” (to put it bluntly), and he always invited me back for further treatment the following day. I did just that, never missing a chance for a session, gritting my teeth against the pain and trying to retreat into meditation as John “upped the current,” increasing the intensity of the power he sent into me to the highest levels I could stand. It was indeed painful but, more important, there was an effect. It seemed that with every session my joints felt better and better, and while the calcium deposits in my right arm did not go away (they had been there for twelve years), those in my left arm (which had been forming for a year or so) disappeared completely. John also showed me a set of “exercises,” as he called them, to supplement the healing process, and I practiced them rigorously every day.
+
+He had stunned me the first week of our acquaintance by taking a chopstick and nonchalantly pushing it through an inch-thick board (I learned later that he could do this at will with a six- or eight-inch-thick piece of wood; thickness was irrelevant). You must understand that he did not hammer it in with his fist or anything of that sort. He simply braced his palm against the back of the chopstick, and it flowed into the board. John handed me the board and I tried to push the chopstick in farther; it would not move, but when I pulled it out, it came quite easily. The reason for this was the chopstick’s conical shape; it narrowed from base to tip. To push it in farther, I’d have to crush the wood around it, as John had; when I pulled it out, only air resisted the movement.
+
+“You understand about yang and yin?” he had asked. I nodded. In this day and age few people in the West had not heard of these two opposing universal forces. “Inside our bodies, both flow in equal amounts,” he continued. “These energies are opposites; they can never meet. Yin and yang normally run parallel to each other, never letting go of one another. I use my yin and yang together as one; that is why I can do what I do. By itself, yang ch’i cannot pass the limits of the body.”⁴
+
+“Neikung,” I had said.
+
+“Yes.” He seemed pleased that I knew the word.
+
+When he asked me to go with him to his business establishment, I leapt at the chance to get to know the man better. Did I want to go? Is the Pope Catholic?
+
+John was a highly successful businessman, and quite wealthy. He was a contractor and an exporter of both manufactured and perishable goods. The expatriate Chinese, if they may be called that, are often referred to as the “Jews of Asia,” and with good reason. Like their Western counterparts, they control the major arteries of economic development in Southeast Asia. John was such a man. I was to discover that he had been born in abject poverty, however, and that he was a self-made millionaire.
+
+We went to the prawn farm by car. John drove, quite fast but not recklessly. When we reached eighty-eight miles per hour I became a bit concerned because neither the laws nor the traffic conditions of the country he resided in allowed for such a velocity. (And bear in mind that I am a Greek and, as such, am used to both high speeds and deplorable road conditions.) Traffic was very heavy and, after a time, the inevitable happened.
+
+John’s cellular phone rang and the call was important; he began speaking on the unit in short, rapid sentences, cradling the phone under his chin and basically driving with one hand, not two. To complicate things, he began passing a series of cars—quite illegally, as there was a double dividing line in the center of the road. His lane was clear beyond those cars, and he was in a hurry.
+
+John had completed his maneuver and reentered his proper lane when suddenly a truck, intent on passing a similarly slow-moving vehicle in front of it and having had John’s speedy approach masked by that vehicle, entered our lane. The cars we had passed were less than one hundred yards behind us, a minute distance at our speed.
+
+I gripped the console and was suddenly very glad I was wearing my seat belt. We were doing about ninety; the oncoming truck was going at least sixty, and John was driving with one hand while speaking on the phone. I was sure that we were heading for a major accident and was thankful that our car was large and strong. Gritting my teeth, I pointed at the oncoming car and braced for impact.
+
+John hardly looked up. Without skipping a beat or pausing in conversation, he swerved onto the soft shoulder of the road, passed the truck, and returned to his lane. He checked the rearview mirror to ensure that the truck had successfully avoided the cars that had been behind us as well, and we went on. After a minute or so he finished his conversation and clicked off the phone.
+
+“My eyes are still good,” he said to me dryly. He was fifty-seven at the time and looked forty.
+
+“Do you always drive this fast?” was the only response I could think of.
+
+“When I’m by myself I usually drive faster, about 110 to 125 miles per hour or so. I like speed, you see. When I have other people in the car I usually stay below ninety because otherwise, if anything happens, I can’t protect them.”
+
+“Have you ever had an accident?”
+
+“Only once. I broadsided a truck doing about a hundred.”
+
+“What happened?”
+
+“Nothing happened. I used my power to absorb the impact on my body. They had to cut me out with chain saws. The witnesses thought it was a miracle, that God or some saint had protected me.”
+
+I was stunned. What he was telling me was that his body, augmented by the powers his neikung training had given him, had withstood a stress greater than the yield strength of steel. I tried to imagine the metal and glass shards flowing around his body, unable to pierce human flesh. Certainly, plastic deformation as planned by the car’s designers allowed for much, but there was no denying that the momentum he had absorbed had been phenomenal.
+
+Was it true? Could a human being reach a state in which he was impervious to exterior harm? It seemed too much to swallow.
+
+“You know,” he continued, “when I was younger I wanted to be a Hollywood stuntman, since I couldn’t really be hurt in crashes because of my power. But then I thought, no, if you do that too many times people will wonder about you, and besides, I had promised my Master that I would not use my power to make money.”
+
+We drove on for a while in silence. He began to question me about Greece. He understood about the Balkans. He had been born penniless, and he was Chinese.
+
+“My father died when I was four,” he said. “I grew up very poor. Basically I was a street kid. Though my mother worked very hard, she did not have the money to send me to school. I did finish high school later on, though, but I never studied at any college or university.”
+
+“Right,” I joked. “You just have a Ph.D. in becoming superhuman.”
+
+“No,” he replied seriously, “you mustn’t think of me as being a superman. I am like a fighter pilot or a championship athlete. Not everyone can become like me—there are certain qualifications—but some people can. What I am is a product of discipline and training as much as natural talent.
+
+“My wife really helped me,” he continued. “I explained to her when we were married that I could not do anything else, that I had to spend all my spare time training. She agreed to this.”
+
+He had been married at eighteen and had seven children.
+
+“I worked as a driver for almost twenty years, you know.” He smiled. “So you see, you needn’t be so concerned about my driving. I know these roads.”
+
+We drove on in silence for a while. “Do you really understand,” he finally asked, “what we mean when we talk about ch’i?”
+
+“I think so,” I replied. I reckoned I understood the basics; I had read all there was to read, after all, and had studied martial arts for twenty-five years.
+
+Ch’i, or bio-energy, is a phenomenon that has been much discussed in recent years in the West. With the establishment of the new Kung Fu series, David Carradine once again contributed to the West’s understanding by uttering the word on television at least once a week. Acupuncture, too, is now commonplace, and there is hardly a doctor anywhere who has not spent some time looking into it. The phenomenon of bio-energy is thus under pronounced medical and physical investigation.*9
+
+The original Chinese ideogram for ch’i is best rendered as “vapor” in English. It has also been rendered as “vitality,” but ch’i is very closely associated with breath (though it would be better to say that breath contains ch’i). Other cultures have given it other names: The Hindus call it prana, the Tibetans rlung (which means “wind”), the Hebrews ruach (wind), and the Pacific Islanders mana, while the ancient Greeks called it pneuma (spirit, wind).†10 Ch’i is similar to electricity flowing through a wire; it can generate heat or work or energy, but none of these results identifies ch’i itself.
+
+“So you know that our bodies have both yin ch’i and yang ch’i?” he continued.
+
+“Well,” I smiled, “I read about it in the Tao Te Ching.”
+
+“Ah! Lao-tzu the Taoist,” he said. “He was a wise man. What does he say about ch’i?”
+
+I thought at the time that he was testing me. Later I would discover that John had never read the Tao Te Ching. “Well,” I replied, “he says that ch’i has both yin and yang components, and that it is the interaction between the two that makes life possible.”⁵
+
+Such feedback between the positive and negative poles of existence was the prime component of our lifeforce; when we as a species begin to understand this phenomenon from a technical perspective, we will begin to understand life itself. (I would later discover, however, that our bodies are briefly capable of storing both pure yang and pure yin ch’i in different areas, though this state of nonequilibrium is subject to entropy.)
+
+“Interaction.” John rolled the word around on his tongue. “Like electricity, positive and negative?”
+
+“I guess.”
+
+“Not quite correct.” He paused. “But you know, one time I let a student of mine hook me up to a voltmeter and an amperometer. He registered no voltage, but I blew the amp-meter off the scale. I burned the machine!”
+
+“Are you telling me that ch’i has amperage but does not have voltage?”
+
+“I think so. For example, I can withstand household electrical current indefinitely without pain, but I cannot light up a lightbulb. I have tried, many times.”
+
+I thought about that. Clinical investigation in medical laboratories seems to indicate that the electrical resistance of the skin changes markedly at acupuncture points. There are “electrical acupuncture machines” that make use of this phenomenon to locate the points for neophytes. This is an indication that ch’i and voltage are somehow inversely related (though other explanations have been offered). But I was to find out years later that John was wrong. His ch’i in fact displayed neither voltage nor amperage; rather, it was an entirely different phenomenon, based on very different forces.
+
+“And other than being more powerful, is your ch’i different from that of the average person’s?”
+
+John simply smiled, but did not answer.
+
+We arrived at the farm. It was of medium size; about twenty people were employed there. I roamed around while he finished his business. A young girl brought out a bowl of fruit and a decanter of coffee for me; the tropical fruit was delicious, the coffee mediocre.
+
+John walked up and sat down, helping himself to some coffee. “People are so stupid,” he said. “My shipment is being held up in customs because some local official wants a bribe. That’s the way we operate here, you know.”
+
+“It’s the same all over the world,” I said. “You have to grease the wheels for them to turn.”
+
+He was delighted by the clichéd English metaphor and committed it to memory. “We have a similar phrase here. It’s true that people often abuse their positions in society for their own benefit. In the end, it’s all about power,” he said. He seemed to think about the last word for a second, then turned suddenly toward me. “What is the difference between ch’ikung and neikung?” he asked.
+
+“Well, ch’ikung means ‘to develop the energy of the body.’. . .”
+
+“All over the body, yes. What about neikung?”
+
+“Neikung means ‘internal power.’”
+
+“Yes, but internal to what?” he asked.
+
+I hesitated, and John drew three ideograms on a napkin:
+
+![image](OEBPS/Images/image-YKIY30MK.jpg)
+
+“This is neikung. The first ideogram, nei, means “a man entering a house.” Kung you know.”
+
+“Yes.”
+
+“So when we practice neikung, we put ch’i inside, but inside what?”
+
+“Uh . . . the dantien? The bones? Chakras?” I was grasping at straws.
+
+John grinned. “Well, well. I see all the books you read did some good. What is the dantien?”
+
+The dantien, or “elixir field,” is the primary bio-energy warehouse of the human body. Located four fingers below the navel in the middle of the torso, this center has the ability to store vast amounts of ch’i. For this reason it is also known as ch’i hai (ocean of ch’i). But it is a mistake to think that the dantien itself generates ch’i, as presented in many texts. Rather, it is possible to store there that ch’i which the practitioner intakes from the universe around him. It is practice and persistence that lead to “dantien power”; such power is not an implied characteristic of the human body. I can perhaps explain better with a simile. Say that a specific youth has exceptional talent in a given sport. Nevertheless, he still needs to train and work hard—to hone his skills and his mind every day in order to become a championship athlete. The dantien is similar to that youth. Yes, it can store seemingly limitless amounts of energy, but that energy must be put there for the dantien to function. It will not soak up, nor will it generate, power of its own accord.
+
+I told John as much.
+
+He nodded, somewhat pleased. “All right,” he said. “I’ll show you one more thing today. Give me a banana.”
+
+I reached into the basket and picked a banana at random from one of the two bunches in the basket. I had already eaten three (imagine the smaller fruit found in Asia, not the overgrown and artificially ripened bananas that reach our tables in the West); they were delicious and completely untampered with. John took the fruit from me and held it in plain sight in his left hand. He extended the index and middle fingers of his right hand, folding the other two into the thumb. Tensing briefly, he passed his hand in a slicing motion about three inches away from the banana; there was an audible click, and half the fruit fell to the floor.
+
+I was long past being amazed at this point; the whole thing seemed kind of matter-of-fact. He handed me the other half of the fruit. It was shiny, as if cleaved by a hot knife that had fused the surface of the banana into a glassy mass.
+
+John pointed to the center of his palm. “This,” he said, “is like a shotgun.” He extended his two fingers again and pointed to their tips. “This,” he continued, “is like a laser.”
+
+### THE MARTIAL ARTS AND CH’I
+
+There can be no denying that the martial arts are as old as man. Beginning perhaps as a derivative of the hunting skills of primitive tribesmen, the martial arts developed as man pitted himself against man. With the appearance of empires and the establishment of state government, these arts developed to such an extent as to approach and perhaps surpass today’s fighting arts. There are wall paintings in Beni Hasan in Egypt dating from 2000 BCE reminiscent of modern judo, and if the archaeological record left behind is any indication, the ancient Greek martial art of pankration (dated at least to 1450 BCE) was much more comprehensive than karate has become in our day.
+
+One aspect often neglected by hoplologists*11 and martial historians is that, for some reason, the martial arts were always closely tied to and aligned with religion or spirituality. Temple walls all over the world—in both East and West—have, since the dawn of time, been adorned with scenes of combat. The heroic sagas of all nations are consistent on two themes: a series of conflicts throughout which the hero triumphs, and his interaction with gods or God in doing so. The Old Testament, for example, is undoubtedly a martial epic, much like the Indian Ramayana and the Greek Iliad. In China this precept holds true in both the Buddhist and Taoist traditions.
+
+Chinese boxing, wu shu, is undoubtedly the art of fighting. Perhaps at first it involved only muscular force and strategic application. Over time, however, the Chinese martial arts came to be influenced by Taoist and yogic meditative-respiratory techniques, which perhaps were first applied for health purposes, but were later found to have martial applications. There is every indication that all aspects of Chinese medicine and divination were extant and complete by 1000 BCE; it would not be an outrageous extrapolation to assume that the Taoist martial arts or at least martial arts influenced by Taoism were also complete by that time. Master John Chang has records of martial artists like himself living in China almost two thousand years in the past. It is also interesting to note that the Chinese made more limited use of metal armor historically than would be expected considering their technological development; before I understood the true capabilities that ch’ikung imparted to the practitioner, I used to wonder why. In any case, the martial arts were well under way in China long before the arrival of Buddhism.
+
+Popular literature demands that the martial arts in China be tied to the arrival of the Indian prince Bodhidharma at the Shaolin temple in Honan province. But, this is inaccurate to say the least. What is true is that China is a vast country inhabited by many ethnic groups with an often poorly recorded history. To try to trace the history of the martial arts in this quagmire of records is an arduous task. The literature on Chinese boxing is full of gaps and smothered by ambiguities in many places. Still, we can trace the martial arts reliably to the Chou dynasty (1122–255 BCE).*12 The Spring and Autumn Annals (722–481 BCE) of that dynasty, as well as the literature of the Warring States period (403–221 BCE), mention displays of archery, fencing, and wrestling performed by nobles. I have already discussed the evolution of philosophy during this time; it is evident in the literature that yogic respiratory-psychophysiological practices were much in use by the sixth century BCE as well. Indeed, the Lao Tzu and Chuang Tzu are both full of references to vital energy and Taoist yoga.
+
+Meng-tzu (Mencius), the organizer of Confucianism and a contemporary of Chuang-tzu, was among others proficient in the cultivation of ch’i, something popular conception hardly anticipates from a moralist Confucian. He promoted the approach that “if the will (yi) is concentrated, the vital energy (ch’i) will follow it and become active.” Mencius also wrote: “Will (yi) is of the highest importance; vitality (ch’i) stands second.” I have heard the same comment from another student of John Chang.
+
+According to Chinese thought, there are basically two types of training involving our vital energies: ch’ikung and neikung. It is difficult to say where one ends and the other begins, but essentially ch’ikung centers on the development and control of yang ch’i (also called lii ch’i or “fire” ch’i), while neikung involves the joint employment of yang ch’i and yin ch’i (called “water” ch’i or kann ch’i). In truth, yin and yang energies run parallel to each other in our bodies, and both are vital to our continued health. Like yin and yang, it is impossible to separate ch’ikung from neikung; indeed, the latter is a higher form of the same art. Perhaps the distinction was created simply to help define the abilities of the adept. Yang ch’i cannot pass beyond the confines of the physical body, while yin ch’i can and so may impart to the practitioner preternatural abilities such as those demonstrated by Master Chang.
+
+In the second century CE Buddhist monks began to arrive in China. Then circa 500 CE came the Zen patriarch Bodhidharma (Tamo) and the Ch’arn (Zen) sect. Tamo arrived at the Shaolin temple to preach to and subsequently stay with the Buddhist monks, passing on to them two methods, the Yi Gin Ching, which is essentially ch’ikung, and the Shi Sui Ching, which is essentially neikung. It is from these two forms that the Shaolin school developed. Apparently the neikung techniques were lost within a few generations, and only those of the Yi Gin Ching retained. Many of today’s martial arts, especially those outside China, are descended from the Shaolin school with a strictly ch’ikung approach.
+
+The Taoist martial arts remained very much alive inside China, however, specifically in places such as Wu Tang mountain and other Taoist retreats. Broadly speaking, it can be said that their approach is guided more by the interplay of yin and yang than the generation of power evident in Buddhist martial arts like the hard-style Shaolin forms. I have noticed a tendency to move the weight completely from one foot to the other in Taoist arts, in both external and internal styles, as opposed to the solid stances of the Buddhist arts. In addition, there seems to be more of a flowing and bending of the spine in the former than is evident in the latter. Again, these comparisons are very general and, in truth, there has been so much interaction between Buddhist and Taoist techniques and philosophies that it is difficult to separate the two. I have seen references to “Taoist breathing” and “Buddhist breathing” in the literature, for example, but such a distinction is inaccurate. Careful research shows that it is no easy task to disengage the two philosophies at this point, at least not in China.
+
+Whatever the path, martial artists quickly saw that by applying the esoteric techniques used by the seekers of enlightenment and immortality in their quest, they developed a power base and capacity much broader than those achievable by muscular strength alone. Practitioners of ch’ikung acquired prodigious strength; they were able to balance their entire weight on one finger, for example. Practitioners of neikung discovered that there were ways to escape the limitations of the physical plane of existence. Pyrokinesis, telekinesis, telepathy, levitation—these abilities and others became their reward for a lifetime of dedication and discipline. We will see in the following chapters what such a quest was like, and where it could take the practitioner . . . and still can today.
+
+#### Chapter Three
+
+### BEGINNINGS
+
+John had more than a dozen patients to see on the last day I was in the country. He never charged anyone a dime for therapy and always made time for whoever came out to see him, often without prior arrangement. I had seen miraculous things during the month I was there: A stroke victim had regained the use of a paralyzed limb, a woman who had suffered from chronic spinal pain was suddenly healed. John specialized in treating neurological disease, though orthopedic ailments and chronic infections were also right up his alley. I often assisted him with his patients, a process that basically involved standing there, touching the patient, and acting as a ground for John’s bio-electricity.
+
+I had been treated myself for a month. With the exception of two very old calcium deposits in my right arm, my joints were fine. I never missed a chance to ask John whether or not he would accept me as an apprentice; he always said no. My self-esteem was at an all-time low and I had no idea what to do. My money was running out, but I did not want to leave the country without John acquiescing to at least send me on to some student’s student. Anything, just don’t order me away, please. . . .
+
+I waited my turn for treatment on that day, helping John out with the other patients; he left me for last. He knew I would be leaving the following morning. We were alone in his clinic when I asked him for what I thought would be the final time to either admit me as a pupil or at least give me a name and an address I could apply to. I didn’t care if he sent me on to the lowest man on the totem pole; I just wanted to study what he had to teach.
+
+I was lying face-up on one of his therapy couches, my knees and elbows full of acupuncture needles. There was no way I could have changed position even if I had wanted to; all sudden movements were dangerous. I slowly turned to face John, who had gone quiet. He was studying me carefully, his soft eyes looking into my face and beyond, a small smile playing on his lips.
+
+This is the most dangerous man in the Western world, I thought. I was a head and a half taller than he was, and sixty pounds heavier, and yet there was no way I could withstand 2 percent of his power.
+
+Good thing he was benevolent.
+
+“Actually,” he said, “I have already shown you the training method for Level One. Now, when you finish with that, I can show you Level Two.”
+
+“Does that mean . . . ?”
+
+“Yes.”
+
+He had caught me completely by surprise. I choked back a flood of tears; it was my opinion then that it would not do to become emotional while pinned down on a table like a fly on paper. In any case, I did not know what more to say to him at that point. I had already promised him my obedience and diligence for the rest of my life should he accept me as an apprentice, and had meant every word I said.
+
+Traditionally under these circumstances the apprentice was supposed to kneel before the Master and pledge to him once again that he would be a loyal and hardworking student. In my case that was impossible, because I could only turn my head. What the hell, I thought; John is a Westerner as well as a Master of neikung.
+
+I was silent for a time, and he respected that silence. John lit up a cigarette, took a few puffs, and settled it into an ashtray. He wiped his hands with alcohol and began pulling out the needles, wiping each area down with alcohol as he went along.
+
+“Thank you,” I said finally and sat up on the edge of the couch.
+
+John nodded and shrugged. He kept smiling.
+
+“I don’t know what to say,” I continued.
+
+“It doesn’t matter,” he said. “Have a nice trip back home.”
+
+Two years later, sitting on the balcony of his home with my girlfriend, I elaborated on the above story for her benefit. John sat silently smoking while I went through the motions, and Doris, who had heard it a hundred times in the past, simply waited politely for me to finish.
+
+“You think you had a hard time?” John asked when I had finished. “Your case was nothing! There are people who have searched for me for nine years before they finally found me, and then there was no guarantee that I would welcome them as students.”
+
+“Have you ever sent people away?” I asked.
+
+“Many times.” What a spoiled Westerner, his glance seemed to say, and I felt sheepish. Finally I looked down, unable to meet his gaze.
+
+“I saw your coming in a dream,” he said softly, “three months before you came to stand at my doorstep. The day you arrived, I was waiting for you.”
+
+“Yeah?”
+
+“Yes.” He paused. “Do you want to hear what I went through to be accepted as a student by my teacher?” he finally asked.
+
+We both jumped at the chance and John began the story of his apprenticeship. I discovered that I had gotten off very easily. By the time he was finished, Doris and I were rolling on the floor with laughter; John was a very good storyteller, with an expressive face, and he remembered everything vividly.
+
+“My Master’s name was Liao Tsu Tong,” he said in his pleasantly accented English, “and he was from mainland China. I first met him when I was ten years old. I loved kung fu from the beginning and had trained with various teachers almost from the moment I could walk, but I had a friend—Chan Tien Sun was his name—who kept telling me that he was studying a very powerful kung fu system from an old man in his neighborhood. Chan kept saying that the old man was a great healer and an eminent Master of the martial arts. I was curious, so I went with him to the old man’s house. . . .
+
+### The Apprentice
+
+When the young boy first saw the old man, he was not overly impressed. He had come only because his childhood friend had insisted. The old man sold bananas for a living; the people in the neighborhood called him “Mr. Banana.” Some people even called him “Mr. Weird Banana” because it was said that the old man was very strange and difficult to understand.
+
+Chan had declared that the old man was a great Master and that he had healed many people who were seriously ill. The young boy had heard the stories, too, though it seemed that the old man was very picky about whom he treated. Some people he kept waiting for days outside his house and then sent away uncured; contrarily, he would heal other sufferers who didn’t want his help even against their will, sometimes chasing them into their own homes! (Later the boy would learn that the Master was able to see each individual’s karma, and would heal the person or not based on that observation.) Anyway, he wasn’t all that keen on studying with the old man, but, well, Tien Sun was his best friend and had insisted that they train together.
+
+“What do you want here, boy?” the old man asked the small boy he found standing on the steps outside his home. Master Liao studied the child carefully. The boy was essentially a street kid of Southeast Asia, dressed in simple clothes and quite rough around the edges. He had probably been in fights from the moment he could walk. The old Master saw that the boy’s fortunes had taken a turn for the better recently, but the signs of past malnutrition were still there. He saw much pain—an orphan? What type of education had the boy received?
+
+He saw something else, too, something that excited him considerably, though he did not show it, of course. The boy had the talent.
+
+Not one man in one thousand could become like he was. His skill was similar to that of the greatest Olympic athletes; not only did you have to have the God-born gift, but you also had to suffer through decades of hard discipline to reach the final prize. It was no easy task.
+
+Master Liao was in his late sixties, almost seventy, and had trained in the martial arts all his life, since the moment he could walk. He had been in Java for more than six years and had seen few people in that time who possessed all the requirements to make it through to the end.
+
+Could this street waif accomplish the training?
+
+“I . . . I’m a good friend of Chan Tien Sun, Sifu,*13” the child stuttered, “I would like to study kung fu with you as well.”
+
+The old Master laughed. He was almost seventy but looked younger. “There are so many kung fu teachers in this city! Why me? If I accepted you, what would your purpose be in studying with me?”
+
+“Well, for self-defense and for sport, too.”
+
+“I see. Self-defense and exercise. What is your name?”
+
+“Chang, Sifu. John Chang,” the boy said, but he was taken aback. The old man was nothing like he had imagined. He had seen many teachers. Most were proud and arrogant; some were more civil. But this old Master! There was something there he could not touch, something indefinable that almost scared him. The old man was being ironic, but there was compassion evident at the same time. He certainly was strange, just as people said; it was as if some ageless creature was looking at him from across the centuries, full of experiences he could not fathom. Liao Sifu proceeded to ask him many questions about his life and his family; he seemed very kind at that point, almost fatherly. The boy realized he was being given a test of sorts and tried to answer as best he could.
+
+“Come back tomorrow at 4 P.M.,” the old man finally said. “We can talk more at that time.”
+
+The next day John arrived promptly at the specified time, but the old man was nowhere to be found. He waited on the steps for the rest of the afternoon. Liao Sifu finally showed up at seven.
+
+“Well,” he said to the disappointed boy, “it’s too late to do anything now. Why don’t you come back here tomorrow at four?”
+
+The same thing happened on the next day. And the next. And the next.
+
+The young boy was very disillusioned. It was obvious to him that the old teacher had no intention of accepting him and was just having fun at his expense. He resolved to drop the notion of studying with Tien Sun and tell the old man to forget the whole thing. But something kept him coming back, something he could not quite put his finger on.
+
+On the fifth day Liao Sifu kept his four o’clock appointment and questioned the young boy again; this time they talked for almost two hours. The Master kept him on the steps, however; he did not invite him into his house.
+
+It went on for a month. The old teacher would meet John on the steps outside his house, talk to him for a few hours, and then send him home. The boy was disheartened and bored. He would have given up except for the fact that Tien Sun encouraged him to keep at it, insisting that Liao Sifu was a great Master. So John put in an appearance every day, hoping to sway the teacher.
+
+After a month the Master gave the boy hope. John arrived outside of Liao Sifu’s house at 4 P.M., the specified time. The old man was just setting off to run an errand. He greeted the boy, began to walk away, then turned to look at him. “Kung fu is very difficult to learn. It is very heavy training. Are you capable of it?”
+
+The boy was ecstatic. “Yes, oh yes!” he said.
+
+“Then come back tomorrow at noon, if you feel that you are hardworking.”
+
+That night John was so excited he could hardly sleep. At last! He would start training on the next day with the mysterious Liao Sifu. He had heard more about the old man during his month of waiting and was really beginning to be in awe of him. Finally he would be able to share in the secrets of the old man’s martial science! The wait had been worth it. Tien Sun was right.
+
+The next day, when the boy kept his appointment at the Master’s house, he was invited in for the first time in a month. He saw that the neighborhood was quite correct in calling the old man “Mr. Weird Banana.” There was no furniture at all in the house, not even a bed. The boy thought, Where does he sleep? There was a hole in the roof that let in the rain; it had been left open, with no sign of attempted repair.
+
+Liao Sifu spoke abruptly to him. “Clean the house with that broom and that mop over there. Use the rake that you will find in the backyard to rake up all the leaves around the house. Oh, and, while you’re at it, fill up the storage basin with water from the well, would you?”
+
+The old man turned to go. “You can come back here tomorrow at noon, if you wish,” he said to John. Then he was gone. The boy was left alone in the house.
+
+John was puzzled. If he’s such a great Master, he thought, why does he live like this? (Later he would realize that the Master retained nothing any other person might desire.) But he did do the work requested and left the house spotless. He knew that kung fu Masters often tried the patience and determination of their apprentices and had decided that he would show the old man he could be a worthwhile pupil.
+
+When he came back the next day, the old man told him once again to clean the house, and left him to it. (What for? I just cleaned it yesterday! And there’s nothing in here to get dirty, John thought.) The boy performed the job again as demanded, despite thinking it a waste of time.
+
+When the same thing occurred again on the two following days, the boy began to wonder if he would ever be taught kung fu or just be an unpaid servant for the rest of his life.
+
+On the fourth day after being allowed into Liao Sifu’s house, John discovered that his purgatory was to be given a new dimension. The old man was congenial on that day, almost jovial. He offered John tea, and they drank together for a time, saying nothing, the Master studying him. Suddenly Liao Sifu looked into his cup with distaste and scrutinized John with impromptu inspiration.
+
+“You know,” he said, “I have a friend down the road, about five hundred yards away, who has a well with wonderful water.”
+
+“Yes, Sifu,” John replied hesitatingly. He did not like the direction the conversation was beginning to take; besides, he knew that the well water all over the area was the same. He had learned about such things in school; irrigation and sanitation were very important in Southeast Asia.
+
+“I want you to carry water from his well to fill my storage reservoir here. Come with me.”
+
+They went out onto the balcony and the old man showed him where his friend’s house was located.
+
+“What’s wrong with the water from your well here, Sifu?” the boy asked timidly.
+
+“It’s not good. It makes the tea taste bitter.”
+
+“But Sifu, the water is the same all over the neighborhood!”
+
+“No, it’s not.”
+
+“Why can’t we just use the water from this well?”
+
+The old man stood up. “If you don’t want to do the work, you can go home, you know. But don’t come back.” He walked away and left John standing on his balcony.
+
+The young boy was angry but he was also terrified of the old man. John had heard even more unusual things about him; Liao Sifu was becoming a legend in the neighborhood. So he did the chores expected of him, waited a while for Liao Sifu to return, then went home when he didn’t.
+
+It went on for weeks. Every day the young boy would go out to the Master’s house, clean the interior, rake and tidy the exterior, and carry water from the well a quarter mile away. It took him all afternoon, and the old man always sent him home afterward without teaching him a thing. Tien Sun kept him at it, encouraging him every time they met, insisting that Liao Sifu was great and that soon he would begin to train John in earnest.
+
+“Did the same thing happen to you?” John asked his friend after a month had passed.
+
+Chan looked down. “Well, no. He started to teach me right away.”
+
+The boy was instantly furious. The old man was using him! He held on to his anger all that night and the next morning. When it came time to go to the old man’s house, he barged right in and confronted the Master. The child’s standing up to him amused the old man.
+
+“Are you going to teach me kung fu or not?”
+
+“What’s your problem?
+
+“Chan Tien Sun said that you started teaching him right away, that you accepted him as a student right away!”
+
+“Ah, I see.” Liao Sifu kept his face serious. “He is wrong, you know. So far, I have never had a student in my life. Your friend is not my student.”
+
+“What? But he. . . . “ Suddenly John felt very small and frightened.
+
+“I teach Chan Tien Sun because his family helped me once when I was very ill. I was stricken with fever and helpless. When I did not appear for three days, Tien Sun’s father entered my home and his family gave me water and food. Later, they bought me the medicine I requested and I recovered. If not for their help, I would be dead. So I teach their son to repay my debt to them. Do you understand?”
+
+“Yes Sifu. But I’ve been coming here every day for two months, working hard, cleaning, and so far you haven’t shown me anything! Not one movement!”
+
+Despite his preternatural powers of concentration, Liao Sifu had to turn away to hide his grin from the boy. “Kung fu is very difficult to learn,” he said. Then he left the house, choking down his laughter.
+
+The boy immediately began to clean and perform his daily chores. He wondered if he had blown it for good.
+
+Liao Sifu kept him working for two more months. When the boy had completed four months of servitude, the Master spoke to him. “Now we will see,” the Master said, “if you are capable of training.”
+
+John was ecstatic.
+
+“I want you to stand here like this.” Liao Sifu showed him the basic entry into what has been popularly called the “Horse Riding Stance” (Ma Bu in Chinese). John eagerly copied his movement, assuming the stance. Liao Sifu grunted in approval, corrected him briefly, then to John’s horror turned and began to head out the door.
+
+“Sifu!” the boy cried. “How long do you want me to stand here like this?”
+
+The Master scowled down at him. “Why, for as long as you can, of course!” he said, then walked out of the house.
+
+John’s trial went on for two more months. The Master persisted in making him clean the house and the surroundings and carrying water from the distant well; when he finished his chores, John had to stand in the Horse Riding Stance for hours at a time. The Master was relentless, never giving him a minute’s rest. Through this ordeal, the boy persisted. He even became cheerful. I studied kung fu before I came here, he thought, but never like this!
+
+During the fifth month, the boy noticed something unusual. The Master had bought a few pieces of basic furniture for the house. These items were rarely used but present. Among them was a large table, four yards long by one yard wide, which Liao Sifu occasionally used as a desk.
+
+On the first day of the seventh month of his trial, Liao Sifu decided to accept the boy as a student. He had tested him for six months and had a good idea of his character. To initiate the child, he decided to give him an exhibition of the most basic skills he possessed.
+
+The boy was mystified. Liao Sifu was unexpectedly condescending on that day. To John’s surprise, he handed him a sharp knife and jumped up on the table. “Climb up here, boy,” he said.
+
+John did so, puzzled and somewhat afraid.
+
+“Don’t worry,” the Master said. “I won’t hurt you.”
+
+The boy stood there.
+
+“I want you to attack me with that knife. If you can make me jump off the table or touch my shirt with the blade, you win.”
+
+The boy jabbed forward with the knife jokingly.
+
+“Don’t play!” the old man growled. “Attack me or leave my house!”
+
+John made a halfhearted lunge. The old man hardly moved.
+
+Then suddenly something slapped John across the face, hard. He was thrown from the table, the knife flying from his hands. Whatever happened had occurred so quickly he could not react. (The Master had simply cuffed him across the face, a movement too fast for the boy’s eyes to follow.)
+
+John stood up, shaking with pain and anger. His face stung and was turning red where he had been struck.
+
+The old man was scowling down at him from the table. “You can either attack me with the knife or I will slap you again and again until you do.”
+
+The boy leapt on the table. He lunged forward wildly, fully intending to hurt the old Master. There was nowhere for him to escape to, he thought. He will have to either jump down or be cut.
+
+Just when John was almost on him, the old man leapt completely over his head and landed behind him.
+
+John went berserk. He turned and attacked wildly, at full speed, caring little if he should hurt the old man or not. But try as he might, he could not touch Liao Sifu. It seemed that the old Master always moved at the last second; just when the knife was almost upon him, suddenly he was no longer there. The teacher never blocked a slash, never resisted, never touched him. He just moved around the boy as if John were not there. His clothing was not cut and he did not leap off the table.
+
+It was like fighting a ghost.
+
+Suddenly, the boy had an inkling of the breadth of the old man’s knowledge and power. This was no ordinary human. He threw down the knife and knelt on the table before the old teacher.
+
+“Master,” he said, “please forgive my arrogance and anger. Please accept me as your student.”
+
+The old man smiled. He appeared as relaxed as ever, as if he had exerted no effort at all.
+
+“Very well, Mr. Chang,” he said. “Today we begin your apprenticeship.”
+
+John walked us out to our taxi and bid us a good evening. I was silent as we were driven back to our hotel. I thought of the evening’s story and how fortunate I had been to hear it. The tale had been vivid and, knowing John’s personality, it was as if I had been a witness to the events rather than hearing them secondhand. The scenes unfolded before me on the movie screen of my mind.
+
+“You’re very quiet,” Doris said.
+
+“I was thinking how lucky I am, how lucky we all are,” I said.
+
+“Yes, you got off very easy when you think about it. John didn’t give you a hard time at all.”
+
+“That’s not what I mean. I can only hope I deserve Sifu’s trust—so far I’ve made a mess of my training and fortunately he’s very tolerant. No, I was thinking of John himself, how different he is from Liao Sifu and yet how similar.”
+
+“John is a Westerner,” she said, “as well as an Oriental.”
+
+“Yes,” I replied. “You know, I get the feeling that the old man knew this all those decades ago. Perhaps he simply saw the changes that were going on around him even at that time and extrapolated what their effect would be on the future. Or maybe it was something more than that, I don’t know. I mean, his whole life must have been one of constant change and continuous turmoil, taking into account that he came from China and bearing in mind how old he was. He must have witnessed so much: the Opium Wars, the Boxer Rebellion, the fall of the emperor and the institution of the republic, the war between the Russians and the Japanese, the period of the warlords, the invasion by the Japanese; I mean, all those things happened while he was still in China. Maybe he could feel the West breathing down the back of the East’s neck. Or maybe, somehow, he could see ahead into the future and knew that John would be the right person to bring his lineage into the twentieth century.”
+
+“Of course,” she said. She had picked up on it from the beginning.
+
+Women are so much more perceptive than men.
+
+Chapter Four
+
+THE IMMORTALS
+
+### THE MASTER’S STORY
+
+It was a temperate night, and a cooling wind was blowing. I had gone to my teacher’s house to see him, as I did every evening that I was in Java. John had just finished a game of Ping-Pong with his son and was pleasantly tired; his son Johann had carried the day and was ecstatic (the grudge match had been going on for five years, neither party willing to surrender). In the distance the two men looked the same; it was hard to tell who was the father and who the son. I had watched them play their game in the past many times and it was always very amusing. John moved like a kung fu Master, torso upright, slipping away from the incoming ball and countering as if delivering a punch. His son’s kinesiology was that of an expert table tennis player, weight on the toes, crouched a bit forward, anticipating his opponent’s moves. East meets West, I thought, looking at them.
+
+“You’re just in time for dinner,” John said, and I felt awkward as always. It seemed that every time I came to his house I was given free board; after a while it made me feel like a freeloader.
+
+John and his son showered, and we sat down to the usual endless courses of Chinese food. I finished last, as always; until I visited the East for the first time I had always considered myself a rapid eater. I had been indoctrinated by the Chinese, however, into the concept that when you eat, you eat; there would always be time for conversation later. It went against my grain as a Greek; in my country, dinner is an excuse to socialize and often lasts for hours.
+
+John wolfed down his food and rose from the table. “Okay,” he said, “when you finish, I want to see how far along Level One you are. I’ll give you a test.”
+
+“You’re kidding! I just ate.”
+
+“So what? It makes no difference.”
+
+Oh great, I thought. This has to be a joke. My belly was swollen not from ch’i but from fried rice and Szechuan beef. I forced myself to calm down; no matter what happened, it would be interesting.
+
+We went into his acupuncture clinic and I sat on the floor in a half lotus, the back of my palms on my knees. I had never been through this; my heart was beating a mile a minute.
+
+“You’re tense!” John said. “Relax. Concentrate.”
+
+“Hard to when you’re being tested.”
+
+“You get used to it,” he said and laughed.
+
+I forced myself to relax and succeeded in partially entering meditation. It was enough for John. He brought his index fingers close to my open palms. I felt a jolt; current entered the center of my palms and crossed into my body, down to my dantien in the center of my belly.
+
+“About 20 percent full,” he said.
+
+I was disappointed. I had been hoping for much more. I did learn a lesson, however, and that lesson was that the most minute details mattered very much in this sort of training. You could spend a lot of effort training incorrectly and get nowhere, and I had been making a lot of mistakes. I was never a good student and training long distance allowed for a lot of leeway.
+
+John was not disconcerted; he seemed happy that I was training at all. “So many people have come to me,” he said, “asking me to accept them as my students and then never did any of the training! They think I can give them a pill or something and give them my power.”
+
+“Like the old Chinese alchemists.”
+
+“Something like that. It takes diligence and effort, Kosta. I myself studied for eighteen years, you know.”
+
+We went out onto his balcony and sat in the warm night, sipping tea.
+
+“I have already told you,” he said, “the story of how I met my Master and was accepted as his student. Do you want to hear the rest of it?”
+
+“Of course!”
+
+“It would make a good movie, Kosta. You can write the screenplay in the years to come.”
+
+He settled back in his chair and looked off into the distance.
+
+“I have told you that when I was a child we were very poor; we didn’t know if we would eat from day to day. I had to work odd jobs to help my mother keep us alive, and so I could not go to school.” John sipped his tea.
+
+“It is terrible,” he continued, “to be in despair, never knowing what will happen the next day, wondering if you will survive the month, hungry, often thirsty. For an honorable person such circumstances are even worse; it is easy to slip into decadence or into crime when confronted by a repressive fate. The crime rates in the ghettos of the major cities all over the world are very high, and that is understandable, human nature being what it is. It takes an exceptional personality to make a stand and say: ‘Despite this karma, I will not fall.’ We never did. My mother kept us clean, honest, and hardworking.”
+
+His gaze went off into the night as bitter memory intruded to break into his soliloquy. It was strange seeing him like this, so human. More often than not my teacher was beyond such things, or perhaps I simply saw him as being so. But at that moment I noticed grief and sadness in his face, though not a trace of anger was evident. What was he thinking?
+
+“My sister married when I was eight,” he continued. “My brother-in-law was, let’s say, middle class, and had some money, so I went to live with them in their house. He sent me on to school as well; I started at eight years old and had to work very hard to catch up, but I did manage. I have already told you how I met Liao Sifu when I was ten years old.”
+
+“Yes. It was a great story.”
+
+John grinned. “He had a sense of humor but we never caught on. Anyway, I studied kung fu with Liao Sifu every day for eight years nonstop. I trained every day, literally. I was married at eighteen so I had to train intermittently after that because of my increased responsibilities, but I never stopped. Liao Sifu never let me.”
+
+He paused to sip his tea. “When I turned sixteen, I started driving a mini bus, transporting people and goods around town; I was forced to drop out of school because of our increasing financial problems. Despite my difficulties, I continued to practice my kung fu and meditation every day. Oh, I forgot to tell you that Liao Sifu had shown me the meditation for Level One, the same one you are working on now, when I was fourteen years old.”
+
+“Not earlier?”
+
+“No. It is better if the nervous system of the trainee is fully developed before training starts. Also it is good to be past the beginning of puberty.”
+
+“I see.”
+
+“Liao Sifu knew everything I did at all times. It mystified me; I could not figure out how he did it. I even thought he had people spying on me! He knew, for example, whether or not I had trained on a specific day and when I purposefully tried to avoid training. He could tell when I was lying, too, you know. I recall one day when I visited his house and he asked me if I had meditated that day. To tell you the truth, he had never explained anything to me and I constantly wondered why I had to do all that useless meditation, so I tried to avoid it when I could. The scene went something like this:
+
+“Liao Sifu: Did you meditate today?”
+
+“Young John:     Yes, Sifu.”
+
+“Liao Sifu: Did you meditate today?”
+
+“Young John:     Yes, Sifu.”
+
+SLAP! John goes flying across the room.
+
+“Liao Sifu: You’re lying!”
+
+I burst out laughing. John joined in briefly.
+
+“After that,” he continued, “Liao Sifu was like a god to me. Since he knew everything I did, there was no point in lying to him, and so I decided I had better do exactly what he asked. I became a diligent student, never missing a day, putting in many hours. It seemed that during my later teenage years I was either working or training, not much else.
+
+“I was nineteen before I was given an inkling of how powerful my Master truly was. He called me to him one day and announced that I had finished with Level One. I had no idea what he was taking about.”
+
+“What is Level One exactly?” I asked. “You’ve shown me the training method, but we’ve never talked about what I’m supposed to be doing,”
+
+“In Level One you fill up your dantien with yang ch’i. You must be in actual meditation to achieve this, and it is time dependent. In Level Two we shape the yang ch’i to our specifications so that the practitioner can push it out of his body. This is what neikung is, really.”
+
+“What about Level Three?”
+
+“We can talk about that when the time comes. I will tell you this: In Level Four you bring your yin and yang ch’i together and begin to become as I am.”
+
+“How many different levels are there?”
+
+“Seventy-two.”
+
+“What?!”
+
+John smiled. “No one said it was easy. The levels correspond to the number of chakras in the human body. You know what a chakra is? An energy center?”
+
+“These days everybody does.”
+
+“Perhaps. The last chakra to open, Level Seventy-Two, is at the very top of your head.”
+
+“I know of it. I used to practice Buddhist meditation.”
+
+“I see. I myself knew nothing about those matters until the day my teacher came to me and told me I had finished with Level One. On that evening he gave me a demonstration of inner power, neikung.”
+
+“What did he do?”
+
+“Do you remember the long table that he had in his house, on top of which we had our fight? It was four yards long. He placed a bowl on one end and sat at the other. He put four fingers of his right hand on top of the table; his thumb was below it. When he pushed forward with his fingers, the bowl exploded.
+
+“At first I didn’t believe it. His thumb was under the tabletop, so I immediately began to look for a button or a wire or something. I thought he had rigged the ashtray with an explosive, that it was a trick! Liao Sifu laughed and asked me to bring my old friend the broom over. I began to clean up the pieces of the bowl but he said no, bring the broom over to him. He asked me whether or not it was a trick broom, and I said no, of course not. After all, that broom had become a good friend of mine the past nine years! He took it from my hands and laid it against the wall. Then he passed his right hand over it and asked me to pick up the broom and sweep the floor. When I did, it crumbled to dust at my touch!”
+
+John took a sip of tea. “It was at that time,” he said, “that I began to realize what my teacher was. He made me promise I would meditate and train diligently to obtain this power, and I agreed readily, of course.”
+
+“Sifu,” I said, “you mean to tell me that you trained with him for nine years and he never showed you, not once, what he could do?”
+
+“No, never.”
+
+“Good God!”
+
+John laughed. “I keep telling all my students that they have it easy and that I spoil them constantly. Maybe now they will believe me.”
+
+He turned to face me. “You know,” he said, “it was doubly hard for me not to doubt what I saw, being a modern Chinese. Powers such as his were the stuff of Chinese legends, and I had been taught in school that these things were utter nonsense. It was the late 1950s, when people believed that all things Western were good and all things of the East superstition. But I knew too that Liao Sifu was a great healer who had cured many people of terrible diseases that Western physicians could do nothing about.”
+
+“Did he use acupuncture, like you?” I asked.
+
+“No. Never! Instead he would heal from a distance, passing his hands over the patient, and what they would feel I could describe best with the words a golden heat. Sometimes he would supplement the treatment with herbs. He could even cure cancer, which I cannot.”
+
+I was silent, having just lost my father to that disease two months in the past. John nodded, reading my thoughts. He had managed to convey the power of Liao Sifu to me in a simple sentence that had hit home at once.
+
+“Anyway,” he continued, “I kept at it over the years. I finished Level Two and was into Level Three when Sifu called me to him one evening. He told me that he wanted to test me again, the same way that he had when I was a boy, so we jumped up on the table and went at it, this time bare handed. Now, I was already into Level Three, which means I had some power, Kosta, but the Master said not to hold back, to attack him as hard and as fast as I could. He ordered me to try to kill him! I knew better than to refuse by then.
+
+“We fought for about six or seven minutes with no end result; I was happy that I managed to stay on the table! Suddenly I leapt forward and hit him on the chest, and Liao Sifu was thrown off the table. I used a technique we call Meng Hu Chu Tong, ‘fierce tiger charging out of the cave.’
+
+“He appeared hurt,” John said. “I leapt down from the table and helped him up. He was grabbing his chest where I hit him. I apologized immediately, but he just laughed and told me that I was great, that I had reached the point where I could overwhelm my Master. I immediately puffed up with pride, and from that point on I was always very brave—cocky, actually. Before that incident I was quite timid, you know. He did that to remove the fear from my heart.”
+
+“You hadn’t really hurt him; he let you hit him,” I said.
+
+“Of course, Kosta! Liao Sifu was Level Forty-Eight at that time, I was Level Three. Do you have any idea what that means?”
+
+“Well, no. I can’t imagine.”
+
+“I had about as much chance of injuring him as a tiny butterfly has of injuring you. But at the time, I really did think I was great!”
+
+“I see.”
+
+“And the downside of the incident was that I became unbearably arrogant. I would fight with people all the time, and always won. Usually it would end with only one punch, and I hardly used even the power I had at that time. I was young and proud. You know, I used to fight in bare-knuckle tournaments here in Java, for Chinese students of kung fu only, and I was the undefeated champion.”
+
+He straightened unconsciously and a smile flitted over his face as he recalled his youth. I had to grin. Then he suddenly became serious. “In 1962 my Master called me to him again and said that he had only three months more to live. I believed him, and asked him what his plan was. He said that he wanted to die back in China. He still had no money, so we collected funds from all the people he had healed to pay for his ticket; we paid his bills and still had a good chunk of money left over to last him through his dying day.
+
+“Before he left, I went to his house every night for the following two months. One evening he gave me an ancient book containing the secrets of inner power all the way up to Level Seventy-Two. He made me promise that I would not open the book and read it until I had finished with Level Three. And I went through a formal Taoist ceremony; Liao Sifu made a charm, a fu as we call it. He drew the charm on a piece of paper and I had to write down the following three promises on the same piece of paper:
+
+That if I finished with Level Four:
+
+1\. I was not allowed to use this power for evil purposes.
+
+2\. I was not allowed to make money with this power.
+
+3\. I would not demonstrate to anyone except my students.
+
+I signed the fu with a drop of my own blood and Liao Sifu burned it on a pier. Then he mixed the ashes with another drop of my blood and made me drink it. It bound me, Kosta; I had to do exactly what I promised.”
+
+John became silent and then continued in a soft voice. “He left for China on board a ship with two hundred other people. I knew one of the people he was going over there with, so I kept asking the man’s family for information. Liao Sifu had rented a small house and was enjoying the time he had left very peacefully. He ate the food he favored, took walks, that sort of thing.”
+
+“He had no family over there?” I asked.
+
+“No. No one,” John replied, speaking even more softly. “I will tell you his story some other day, maybe tomorrow. I went to the man’s house every day, asking for news, and one day the expected message arrived. Liao Sifu was dead, as he himself had predicted, and he had died on the very day he had foreseen. I asked the man’s family how it had happened, and had to wait almost a month for the reply. Liao Sifu had asked his neighbor to buy him a newspaper around six o’clock in the afternoon on that day, then sat in his rocking chair on his porch to read. At seven o’clock sharp he died in a most strange manner. Blood came out of what we call the seven orifices of his head; you know, the eyes, the ears, the two nostrils, and the mouth. Maybe a massive stroke or something, I don’t know.”
+
+We sat silently for a time. I realized that John was talking about the death of the man he considered his father. I didn’t know what to say, and was becoming emotional myself. “He must have loved you very much, Sifu,” I said.
+
+John smiled. “Yes. I know he did. But it was much later that I realized, from his actions, that he was willing to give me everything he had, including his life. I will tell you about it some other time. But he never told me in words that he loved me, you know, not once.”
+
+“Maybe it was not in his culture to do so,” I said.
+
+“Of course,” John continued. “Anyway, the years passed, Kosta. I kept training and finished with Level Three. One year after that, I achieved Level Four and began to develop my power.”
+
+“What was that like?” I asked.
+
+“Like riding a bucking bronco!” he replied. “The first time that I was successful, I fainted and could not hold on. There was so much power there! I have already told you that in Level Four our yin and yang ch’i come together. The power that is generated then is incredible, like having a lightning bolt in your belly. The second time I tried, I was unsuccessful also. But the third time . . . the third time I held on to it for ten minutes, then forced it into the very center of my dantien. At that point the power was mine, forever.”
+
+“How old were you when you achieved Level Four?” I asked.
+
+“Thirty-two.”
+
+“And then?”
+
+“Life went on, Kosta. Remember, I could not use my power for personal gain. I continued to work as a driver, and we continued to be very poor. I also kept on with my training and proceeded through Levels Five, Six, et cetera. I had read in the text that Liao Sifu gave me how I could use this power in combination with acupuncture to heal, and I began to do so. I cured many people, Kosta. And I could not take money after the fact! I mean, people would offer me money out of gratitude and I had to say no. Not even to pay for food for my family. Some days we would go hungry; we could not afford anything to eat, and I had a large family by that time. One day a rich man I had healed gave my eldest son some money while he was at school, and I was forced to order him to give it back. And later I threatened the boy that I would throw him out of the house if he ever accepted money from anyone again! It was maddening.
+
+“But five years later my life changed,” he went on. “I was thirty-seven years old at the time, and I was desperate. We were eating every other day, my children were crying, and I had my back up against the wall, so to speak. I became angry, very angry at the situation. After all, the only thing I needed to do was open a kung fu school and I would have millions; there was no one around who could do what I did. That afternoon I was in our bedroom and began to scream up at heaven in rage. I kept crying up at God, Kosta. I shouted up at Him: ‘Why did you give me this power? To torture me? Why? Do you hate me? What have I done to deserve this?’ (and also many other things I am not so proud of).”
+
+John looked me in the eye. “Then suddenly I heard my Master’s voice in my ear; he said: ‘John, don’t worry, your life will change soon.’ At first I thought it was my mind playing tricks on me, but the voice was so real, I looked around. And there Liao Sifu was, sitting in the corner, as solid as you or I!
+
+“I rubbed my eyes and stared again at him. I thought that I was going insane from the stress of trying to make ends meet. He looked so real, though, that I thought I would try to speak with him.
+
+“‘Master?’ I said, timidly.
+
+“Liao Sifu laughed, ‘Yes, it’s me. You needn’t be so amazed.’
+
+“‘But . . . you are . . . you’re dead!’ I said.
+
+“‘Undeniably,’ he replied. He seemed very amused.
+
+“‘What are you doing here?’
+
+“‘This is the specialty of our type of training, that after death you retain the characteristics and powers you had when you were alive. When you pass Level Four, you can take all your yang ch’i with you.’
+
+“I didn’t know what to say, Kosta,” John continued. “I didn’t really believe what I was seeing, but there he was, as bright as day and as human as the last day that I saw him. It is hard to doubt the testimony of your own eyes.
+
+“‘When you have trouble,’ Liao Sifu said, ‘meditate, look for me, and I will come to help you.’
+
+“And I did, Kosta, and he did. I called him almost every day at first and there was no one who could not hear him, though only about 10 percent of the people could see him and then again in varying hues. I think you have to have a lot of yin ch’i to see a spirit plainly. Anyway, to some people he was transparent, to others as solid as you or I. But no one doubted for a moment that he was there. Even when they could only hear him, they felt a physical sensation when he was around, like an electromagnetic field or something.” John paused. “You don’t seem shocked by what I am saying.”
+
+“No,” I said. “Stories like this were the reason I came looking for you in the first place. I would have been disappointed if they were not true.”
+
+“And do you think that people in the West will believe it as well?”
+
+“I think that people in the West are ready to believe it. The 1950s were a long time ago.”
+
+John laughed. “Indeed,” he said. “Anyway, Liao Sifu helped me cure many sick people, directing me on which traditional medicine to use and what technique. He was always right, and the patient always got better. The funny thing is that he never used the same formula twice for the same illness; it depended on the individual each time.”
+
+“It was always on a case-by-case basis.”
+
+“Yes. I tried it many times, you know. I would give a different patient with the same illness the same treatment as a patient who had been cured by Liao Sifu’s spirit, and nothing would happen. Finally I gave up on it.”
+
+“But all Chinese medicine is like this, right? It’s always case dependent.”
+
+“Yes. That’s what makes it so difficult. Chinese medicine is really an art form, not a science. You cannot open a prescription book and dispense medication, like a Western medical doctor.”
+
+John paused for a while, then continued. “Then one day a very rich businessman I had helped came to me and asked if I wanted to be partners in a joint venture with him. I said I had no money and he said, it’s okay, you just do the work and I will put up the capital. I asked my Master if it was all right and he said yes, it was okay for people to be grateful as long as I did not directly take money for services rendered. So I took the job, so to speak, and made a good piece of change. And since then I have studied and learned the ways of the business world with the same diligence that I spent studying kung fu. As you can see, I did okay.”
+
+His house was worth six million dollars.
+
+“What you’re telling me,” I said slowly after he had finished, “is that you proved to many people that there is life after death.”
+
+“To hundreds of people, Kosta,” he responded. “I can still prove it to anyone at any time. Would you like to meet a spirit?”
+
+I jumped up in response.
+
+“Very well,” he laughed. “Tomorrow we will go on a short trip by car; it’s about half an hour away from here. We can talk more about it then.”
+
+### THE HSIEN
+
+It would be neglectful to go on at this point and not give you some background on what is popularly considered “immortality” by Taoist alchemists, and what the theory behind the state of immortality is per the school of nei-dan Taoist belief. Immortals are thought to display abilities similar to those of John Chang, and the warping of accepted natural law is said to be commonplace around them. However, I must caution you that the technique and method of Master Chang differ greatly from those used by other systems. Also, as I stated earlier, John’s teachings have nothing to do with religion. If the outline below leads you to other books, I must warn against practicing the methodology outlined in those publications; I have no idea whether or not the procedures described are fact or fancy (or whether or not they are dangerous to the student).
+
+The perfected, immortal human or hsien (literally, “mountain man”) is a central figure of religious Taoism. The techniques whereby people sought immortality were grounded both on internal and external alchemy. The external school (wei-dan) developed techniques based on chemical experimentation and dietary regimens and hoped for actual physical immortality; there is strong evidence that they did, in fact, come up with an elixir that provided at least some partial rejuvenation (I have heard that China’s modern leaders consume such a potion to retain their vitality and youth). The internal school (neidan) stressed breath control, yogic exercises, meditation, and sexual techniques. Through breath control and the movement of one’s lifeforce (ch’i) through the fields of the body, the individual both prolonged life in this body and achieved immortality through the nourishment within of an embryonic “spirit body” (shen), which became the immortal self after death.*14 Throughout its development, three themes came to be central to the teachings of nei-dan Taoism:
+
+1\. The philosophy of wu-wei (spontaneity and noninterference) coupled with a profound reverence for life and an enhanced perception of the workings of nature on all levels.
+
+2\. The yogic alchemy for transmuting the endowments of the mind and body into an immortal spirit with power over the physical world. This spirit body, the shen, was created and nourished by the distillation of life energy (ch’i) augmented by the power inherent in purified semen (ching). This “purification” was a meditational process.
+
+3\. The yogas of absolute meditation whereby passion and desire were vanquished, allowing the yogi to enter into a condition of enlightenment wherein the spirit body can exist independent of the body and emanate to “ride the clouds.”†15
+
+The word hsien in Chinese is composed of the ideograms for mountain ( ) and man ( ), and means just that. It is thought that, though mountains themselves are yang, some mountains are full of the primal yin energy of the universe, and it is to that energy that Taoist seekers flocked to “charge their batteries” and enjoy the stillness of the surroundings in meditation. I come from a mountainous area myself and can verify that when training in the highlands, the energy I feel is hundreds of times what I experience when training in the city where I normally reside.
+
+The wei-dan school, which sought a chemical formula for actual physical immortality, is not directly pertinent to this text. The neidan, or internal school, on the other hand, is. Nei-chia Taoists, who followed this school, sought a means by which the condition of human existence could be transformed into one that would last indefinitely, but not necessarily in physical form. To achieve this, they worked exclusively with the tools nature has given us, those of our mind, body, and spirit. The “elixir of immortality” was brewed not in some crucible using potions of arsenic, mercury, and pearl, as in the wei-dan school, but in the body itself, using the individual’s own life energies.
+
+In China the three qualities of man’s energy are called the San Bao, or “three treasures.” They are ching, ch’i, and shen, or essence, energy, and consciousness. By transmutation of the three treasures from coarse to subtle form, and by subsequent interreaction, a mysterious “something” is conceived. That “something” is the spirit embryo, which, like any baby, requires further gestation prior to final birth. However, should the Taoist yogi be successful in developing the spirit body, he can exist independent of his physical body and is as such immortal.
+
+Central to the belief in the spirit body is the tenet that, while man does have a soul that lives on after death, the soul is not immortal and will also die after time. I personally believe that this religious doctrine came into being simply because the yogis could not perceive the spirits of specific deceased individuals after a given period of time—whereas before that point they could. Neither failure nor ignorance is widely tolerated in China; you cannot simply say “I don’t know.” Thus the Taoist teachers had to come up with something, and the dogma outlined above was the result. You’ll find that there is a basis for my assumption in following chapters.
+
+Ching—the term essentially means “essence”—is the primal stuff of life. Many believe that you are given a fixed amount of ching for your lifetime, and that if you use it up, you are out of luck. In the male, ching is present in coarse form in the sperm, and is deposited in the testicles. In more refined form ching circulates through the bone marrow of the body, and is stored in the kidneys.*16 Therefore, what was of crucial importance was to preserve essence; it is this approach that led to the theories of sperm retention and controlled ejaculation that have become representative of Taoism in popular Western literature. Some teachers stated that ching had a natural tendency to flow downward. They thus forbade sexual intercourse for a thousand days at a time while training, so that the ching could “pile up” and enliven the energy centers of the body. Others allowed for a minimum amount of sexual release; the philosopher Sun Szuemo recommends the following program: “For men in their twenties, one ejaculation every four days; in their thirties, one in eight days; in their forties, one in sixteen days; in their fifties, one in twenty-one days. From the age of sixty upwards emission should be avoided altogether, though a sixty year old who is still robust may allow himself one ejaculation a month.”
+
+This is a far cry from the exorbitant sexual stimulation evident in Western society. In Europe you can hardly walk down the street without thinking of sex; large-breasted women pout down from the covers of magazines in every corner kiosk (some nude, some scantily clad), while their male counterparts pump iron and promise female readers endless repetitive orgasms with their gaze. It is hardly natural; we need only look at the animal kingdom to realize that attempted reproduction is not something a mammal should engage in every day.*17 My dog can outrun me in his sleep and has kept abreast of a snowmobile in deep snow; the average human could not hope to parallel his physical prowess. He breeds twice a year. Perhaps it is this natural conservation of ching that allows other mammals their tremendous physical abilities.
+
+I have discussed ch’i. Shen, the final treasure, is a bit more difficult to identify. In coarse form it most certainly means “mind, self, soul”; I will use the term personal awareness. As determined earlier, many Taoists believe that the spirit itself cannot last indefinitely, and must be “enhanced” so that the prize of immortality can be captured. There seems to be a process for this.
+
+I have said that ching, the essence of life, is first transmuted and refined into ch’i. I have seen many procedures for this in the literature, ranging from the seductive to the painful.⁶ The most common approach is, simply, sexual abstinence coupled with yogic breathing exercises.
+
+If you’re noticing that the emphasis is on the male and sperm, you are correct; there is little written in Taoist texts that is of use to women seeking the Way. Nevertheless, historically and in myth there have been Taoist immortals and Masters who were women. It is as to how they developed their powers and achieved immortality that the literature is silent (short of taking a pill, which we must discount).
+
+Once ching had been transmuted to ch’i through meditation and yogic breathing, the practitioner discarded the entanglements of mundane life and “sought stillness” so that he could further enliven the shen through the ch’i. (Reportedly, the area where the seedling shen resides is between and behind the eyebrows—the third eye to some.) But once the shen was conceived it had to gestate; once gestated it had to be born; once born it required nourishment; and so forth until it could stand on its own. The procedure demanded the continuous refinement of ching into ch’i and the transference of the energy of ch’i to the shen. Needless to say, it took a long time, perhaps the practitioner’s entire life, and was not something to be undertaken lightly.
+
+For the Taoist alchemist, the dantien was the crucible in which the elixir of immortality was brewed. It was there that ching was refined into ch’i, while from the dantien purified ch’i was sent up to the “Spirit Valley” between the eyebrows to give birth to the embryo shen. Needless to say, the dantien was a very precious commodity and one carefully preserved (indeed, it is common in China even today to wrap one’s belly against the cold, leaving the chest and arms lightly clad).
+
+There was a further step from that point on if the yogi truly desired eternity: The independent shen had to be merged with the Source of All Things, the Tao. In essence, what the teachers were saying was that the personality had to unite with the flow of the whole universe. If such a thing is possible, it can only be the final stage in human development.
+
+There is a clear reference in the Tao Te Ching to the seedling shen and the continuation of the consciousness after death:
+
+Those who retain their center endure.
+
+Those who die but continue to exist are immortal.
+
+This particular section of the Old Master is very important and the reader should bear it in mind in the chapters to come. It has caused much consternation and confusion among sinologists in the West, with the question being, how do you “die but continue to exist”? I sincerely hope that this text will help clear up the quandary.⁷
+
+Let me repeat my word of warning before I go on. Though much has been written about it in numerous publications, the San Bao method is not precisely that followed by Master Chang; there are some similarities, and many of the concepts are pertinent (which is why I included them here), but in essence both the approach and method are different. By no means should you follow the San Bao method without direct, competent guidance in an attempt to generate abilities like my teacher’s; that way lie madness and death.
+
+### REVELATIONS
+
+The next evening I was in a car with my Master and his family heading toward a place on the outskirts of the city he lived in. I was quiet; I find it difficult to talk when there is much weighing on my mind, and that night there was. John’s comments on the previous day had shaken me greatly. Once again, I did not doubt him for a second; I was anxious and wary of what I would see on that evening.
+
+“We are going to the house of a friend of mine,” John said. “He has heard strange noises at night while his family has been sleeping, and he is quite afraid that there is a spirit there. They just moved into that house, by the way.”
+
+“So the stories of haunted houses are true,” I said.
+
+“Of course,” he replied. “Spirits are bound by space and time the same way as anything that exists, but on a different level because they are part of the yin world. We ourselves are yang; they are yin.”
+
+“But we have yin energy in our bodies too, right?” I asked.
+
+“Correct,” he replied. “However, a pure spirit exists in a different space-time continuum than we do. One year for us is one day for them, and they are not limited by the present moment but exist in the immediate future and past as well. Do you understand?”
+
+“I think so.” I took out a pen and paper. “Do you mean something like this?” On the paper I drew:
+
+![image](OEBPS/Images/image-08PLKLKX.jpg)
+
+“Exactly!” he said. “You know how in meditation we slow down our breathing and our pulse? It’s because we move more and more into our yin consciousness.”
+
+“I see. But are you saying that we have two separate bodies, a yin body and a yang body, and that our consciousness can move from one to the other?”
+
+“No. It is not so simple and easy as that. What I said is that everything on the earth is yang, though the earth itself is yin. We, as human beings, are yang creatures, but we have yin energy as well. It is the combination of the two that gives us life. When we die, when we cease to have life, our awareness moves to the yin state of being.” He paused. “But it does not remain unaltered in the process,” he continued.
+
+“And what we are going to see tonight, if there is one there, is a human spirit, right?” I said. “A . . . ghost?” I hated using that word.
+
+“Yes,” he said.
+
+“I see. Sifu, what about what we are told about the afterlife—heaven and hell, reincarnation, that sort of thing?”
+
+He was silent for a very long time and I thought that I had offended him. Finally he spoke. “I don’t know,” he said.
+
+“But you have seen so many spirits, spoken with your Master after he died, and. . . .”
+
+“I didn’t say that I haven’t had experience with life after death,” he interrupted. “What I said is that I don’t know what the final state of the afterlife is like.”
+
+John lit up a cigarette. “I will tell you what I do know,” he said. “There appears to be an intermediate state between this life and the next. I call it the white wave and the black wave. The spirits of those who have been good in their lives go into the white wave, those that have been evil into the black wave. It is very much like the concepts of heaven and hell except for one thing—neither condition is permanent. At some point all spirits shoot straight up to God. What happens to them at that point, I don’t know. It depends on whom you ask, I suppose.”
+
+“You mean to say that there is a heaven and a hell?” I asked, astonished.
+
+“That’s not what I said, is it? I said that there seems to be an area characterized by a field of white yin energy into which the spirits with a positive karma enter. There they are given all that they desire, and they do desire. I have entered into the white field; people were gathered around celebrating, eating and drinking, only there was no food really present. It is all an illusion for their benefit; they just think that they are eating and drinking. Maybe they have to enjoy what they were denied in life in order to go on, I don’t know. Perhaps they think that they are still human.”
+
+“But they are not?”
+
+“No. The mental and emotional perspectives of the average spirit are very different from those of a human being.”
+
+“But not your Master’s. He looked and sounded the same dead as he did alive.”
+
+“Yes. A spirit with even a little yang energy is very different. A spirit like my Master retains all its human characteristics.”
+
+I thought about the classic lines from the Tao Te Ching, lines that had caused so much controversy among scholars in the past:
+
+Those who retain their center endure.
+
+Those who die but continue to exist are immortal.
+
+Their meaning was clear to me at that moment. According to Taoist thought, to continue being human after death, you had to bring some of your yang energy with you. Was the “center” that the Lao Tzu referred to the dantien, which filled up with yang energy in Level One? And according to Chang Sifu, to remain completely human after death, you had to bring all your yang energy with you—that is to say, to complete Level Four. Like Liao Sifu. Like my Master.
+
+A shudder ran through me. Was evolution at play here? Was humanity no more than the breeding ground for higher spirits? I thought about how an embryo came into being: Out of millions of sperm only one became a baby. Was this the case for us also, that from a million humans only one was destined to become a hsien? And was it for entities of this sort that all the fuss was about? Or were we evolving as a species to the point where all of us could live on without our physical bodies?
+
+I desperately wanted to change the subject, but there was no dodging the issue. I thought about the metaphysical “waves” of reward and penance John had spoken of. Concepts such as heaven and hell, the Elysian Fields and Hades, were as old as the human race. Were they real?
+
+“And what about the black wave?” I asked.
+
+“If you ever reach Level Four, remember that I said never to go into the black if you can help it. It is not a pleasant place. The spirits there desire, they hurt, they cry, and are denied everything; it is pitch dark, you cannot see a thing. The only good point about the black wave is that it does not last forever; after a time those spirits are freed, when their karma has been fulfilled.”
+
+“Sifu, what is karma?”
+
+“The consequence of their actions, thoughts, emotions, and desires—of their lives, if you want.”
+
+It was getting to be too much, too anthropomorphic for me to swallow, like something out of ancient mythology, or the most esoteric beliefs of the world’s major religions.
+
+He seemed to guess my thoughts. “I don’t have any final answers for you, Kosta, no dogma to respond to the questions people have about their existence. I can only tell you what I have seen; you can choose to believe me or not. Consider me a metaphysical scientist. I have not told you anything of my own religious beliefs, and I will not.”
+
+“Why not?”
+
+“Because I don’t want to interfere with anyone’s religion,” he said.
+
+“Sifu, what you described is so . . . basic, so primitive a model that. . . .”
+
+“It’s too hard to swallow in our scientific age where everything has to be complicated and mathematical? Well, you can judge for yourself. Maybe the whole problem with our day and age is that we’ve stepped too far away from the primitive, rejecting our essential nature.”
+
+“And God, Sifu? You’ve mentioned God many times, both today and in the past. Is there really a God, a force that cares for us, the center of our existence?”
+
+“I know there is.”
+
+“Why? How do you know there is a God?”
+
+“Some other time, Kosta.”
+
+We reached the house. “Sifu,” I asked as we got out of the car, “why is it that some spirits are earthbound, like this one—if there is one here?”
+
+He shrugged. “Why do you live where you do? It depends on each case. For the most part spirits stay away from towns and cities and prefer the wilderness.”
+
+We were met at the door by my teacher’s friend and his family. The house was pleasant enough, a two-story, three-bedroom affair. It was quite modern and had been built only in the last twenty years. It was certainly no centuries-old castle! More people arrived; indeed, quite a large group gathered to see the show. John joked with the men, talking about soccer, the latest trends in world business, and whether or not a restaurant that had recently opened was any good. It seemed the thing they all studiously ignored was whether or not the house was haunted.
+
+After a time they decided to go about the business at hand. “Okay, Kosta,” John said. “Come on.”
+
+We went up the stairs to the top floor, and everyone gathered together. There were so many of us that we could hardly fit in the room. The owner pulled out a table, and on it the participants placed various offerings to the spirit. There was a stick of incense, a cigarette on an ashtray, tea without sugar, coffee without sugar, cakes without sugar, and water. It was stressed to me that sugar would offend the spirit.
+
+“He can smell the offerings,” my teacher’s son said to me. “It’s what they enjoy.”
+
+I thought about the period some years prior when I had studied Tibetan Buddhism. I had learned that those entities in a perpetual state of spirithood were called scent-eaters. I had also been told then that most people were reincarnated within forty days; I thought of the concepts of dogma and proof.
+
+My teacher sauntered over to where I was standing. “If there is a spirit,” he said, “you will see the offerings move as he takes them.”
+
+“You mean that they have enough power to move objects?” I asked.
+
+“No no no. I will enter total meditation—like the borderline between sleep and waking, okay? At that point he will be able to take yang ch’i from me, and he will move the objects.”
+
+“Yes,” I said, “but how do I know that it is not simply you moving them? I mean, I’ve seen you use telekinesis before.”
+
+He laughed, delighted; he was not offended in the least. “If you pull up your yin ch’i like this, you may be able to see something as well.” He showed me the method. “I don’t think you will be able to see the spirit himself, because your yin is very weak,” he continued, “but you may see something. Especially if he is a black spirit.”
+
+We all gathered around the table. Someone shut off the lights. Only a few dim candles lit the room. (Light, being yang, would drive the spirit away.) Everyone quieted down, and John began his meditation. I did as my teacher said, pulling up my yin energy. There was an intense quiet, a total absence of sound, and then suddenly things began to happen.
+
+I heard a sound like the wind blowing; the incense stick appeared to split in two, as if I had double vision. I rubbed my eyes. The stick began to move! It bobbed in the direction of my teacher, who immediately began talking. He spoke in Chinese; I could not understand the words, but I could tell from his tone of voice that he was soothing and heaping praise on whatever was there.
+
+The cup of tea began to move on the table, and I heard a sound of satisfaction (aaahhh). I thought, Your mind is playing tricks on you. I pulled up my yin and tried to concentrate. Something was over the table. It was indefinable and vague, like a heat wave over hot tar, but there was no denying that my vision blurred when I looked in that direction. It was actually hard to stare at it; it seemed that the phenomenon went away when my eyes (my will?) locked on to it. But I could see it clearly with my peripheral vision. If I kept my line of sight down on the tabletop, I could see a sort of cloud dancing and playing over the table. I wondered: Is our eyesight yang? Is that the reason I can see it only with my peripheral vision?
+
+John was talking up a storm, everyone started laughing, and I felt like the odd man out. Suddenly the incense burner flew off the table to land at my Master’s feet; it was porcelain and shattered into many pieces.
+
+Instantly the lights were turned back on and people began cleaning up the mess. I walked over to where John was sitting. He looked annoyed.
+
+“What happened?” I asked him.
+
+“Stupid spirit.”
+
+“I couldn’t see anything, just a blur.”
+
+“Because he is a white spirit,” John replied. “If he were a black spirit, you would see him.”
+
+“Why did he knock over the incense burner?”
+
+“Because he’s a Muslim,” John said, “and the incense stick offended him. He considers incense as being something from the Buddhist religion.”
+
+“What? How can a spirit be a Muslim—or any other religion, for that matter?”
+
+John laughed. “They are in the intermediate state, Kosta. They have not had their questions answered yet and, believe me, they are much more anxious about the afterlife than we are. Direct interest, you see. Many spirits retain their religious beliefs after death; indeed, some become very devout, much more so than they were in life.”
+
+“Oh boy.”
+
+“Too much? Did you hear the wind when he came in?”
+
+“I guess I could swear to it in court.”
+
+“Ah. Your yin is weak, you know. You will have to work on that. I will show you how later. There is always wind associated with a spirit. My master was so loud that he sounded like a helicopter. Everyone could hear him coming.”
+
+I stood there stunned, feeling like a goon. I thought about the words that various cultures around the world had used to describe our life energy: the Chinese ch’i, the Greek pneuma, the English spirit, the Hebrew ruach, the Indian prana, the Tibetan rlung. They all meant “wind or vapor.” It made sense, too much damn sense to ignore anymore.
+
+“Here,” John said, “you all have to move back a bit. There’s too much yang energy around the table, and he is afraid.”
+
+“You’re going to call him again?”
+
+“Oh yes. That wasn’t polite, you know. If he had just asked, I would have put out the incense.”
+
+John lit another cigarette and placed it in the ashtray. I walked over to where my teacher’s son was sitting and sat down next to him. “Can you translate for me what your father is saying?”
+
+“Sure. Basically my father asks the spirit questions and then articulates the replies he gets out loud, so that we can hear them as well.”
+
+“It won’t bother him if you talk?”
+
+“My father? When he’s in meditation, you cannot disturb him even if you wished.”
+
+The lights went out again. Everyone sat down on the floor farther from the table; only John remained in front of it. I concentrated as before on the end of the lit offering, in this case the cigarette; once again it seemed to split in two, and once again things began to suddenly happen. The teacup began to move, spilling some of the tea, the glass of water, the cigarette. John began to speak, and, with his son’s help, I understood the conversation. It went something like this:
+
+“Yes, yes, I understand. You are a Muslim and we will not leave out incense for you. We meant no offense. Did you enjoy the cigarette? Good, good. Why are you here? Ah, God said you must stay here and you are not leaving no matter what. That’s okay. Can the people stay in this house? Oh, you like them! Yes, they are good people, aren’t they? You like banana pudding? Of course they will leave some out as an offering to you. Every Tuesday night. Okay. But you must promise to protect them and never try to hurt them. If there is a problem, you can come to me. You do promise? Good. They also promise they will give you banana pudding every Tuesday night. And cigarettes also? Okay. Good, good. I’m glad you are happy. By the way, who do you think will win the soccer game tomorrow? No, try harder, because I want to make a bet with my friends. Ah, good. Yes, they are my favorite team as well.”
+
+People started laughing. The lights went on. The owner of the house wrote down the spirit’s request. One man helped himself to some of the cakes and the coffee that had been put out as an offering. The atmosphere was very congenial; there was nothing mystical about any of it.
+
+It was the most natural thing I had seen in my life.
+
+I was envious, incredibly envious. I thought of the West and how death is treated there, the separation and the fear that people feel for their dead, beloved or not. Here were people who nonchalantly took everything in stride. Just as the most primitive culture could speak to the dead through their shaman, the spirit world was no stranger to them. Death really was a verifiable transition, the consciousness moving on to something different. It was like growing older; most people realize and accept that they will reach old age and make plans for retirement. It is part of life, after all. But what plans do we make in the West for our “retirement” after death? Our only comfort is religion, indirect and distant, with nonverifiable dogma at its core and a whole hierarchy of intermediaries between us and what is to come. But here was something anyone could touch, something matter-of-fact. John had talked about sports with the dead, for God’s sake!
+
+I looked at my Master with new awe. I walked over to him as he joked around with his friend and his friend’s wife.
+
+He glanced over at me. “Well, Kosta,” he said. “New experience?”
+
+“Yes, Sifu. Why did you ask him about the soccer game tomorrow?”
+
+“Because I always bet with my friends about who is going to win the game. An average spirit can see into the future about a day or so. I cheated.”
+
+“Is it a hundred percent? I mean, can they predict the future with precision?”
+
+“It depends on the spirit. The stronger they are, the more accurate they are as well. This one was a very small old man, so I do not trust him all that much, but he was a nice fellow in the end.”
+
+“Would he lie to you—try to trick you?”
+
+“No. A spirit cannot lie, not even a black spirit. They can either speak or not. But that does not mean that they are always right.”
+
+After bidding me a goodnight, he sent me back to my hotel in a friend’s van, along with a group of other people. I was so numbed by what I had seen that I could hardly speak. One man in the van spoke English well and tried to engage me in conversation, unsuccessfully. I must have insulted him. The man was of Sumatran extraction, and he started telling the others that Greeks really were racist and prejudiced against darker-skinned people. I intervened once I understood the gist of the conversation, explaining to him that I simply did not want to talk; I was shaken by what I had seen that evening.
+
+“Oh!” he said. “Was this the first time you had seen a spirit?”
+
+I nodded, and he looked puzzled.
+
+“Don’t people die in your country?” he asked, and I did not know what to say.
+
+Hamlet had called death “the undiscovered country, from whose bourn no traveler returns.” These people had lost all dread of that other place. For them there was no “undiscovered country”; it had been explored and charted.
+
+I wondered if anyone would believe me.
+
+#### Chapter Five
+
+### THE STORY OF LIAO SIFU
+
+It was late evening when I next sat down to talk with my teacher. He had just finished watching a soccer game on television, and his favorite team had won. Knowing John, he had probably wagered a good sum of money on the outcome—and presumably won as well. As a result, he was in a good mood. We moved to the outside balcony once again and sat down for the customary tea.
+
+“I promised you that I would tell you my Master’s story today,” John began. “I have already told you how I found him and he accepted me as his apprentice. What you must understand also is the great degree of difference in ability between Liao Sifu and myself. My powers are nothing compared with his.”
+
+I nodded and kept silent, though I felt like laughing hysterically. It was surreal to hear him speak of his capabilities in this manner. As yet John’s own powers were incomprehensible to me, and I had only witnessed a small fraction of his energy. In the three years I had been with him I had observed telekinesis, pyrogenesis, telepathy, electrogeneration, the displacement of matter, the manipulation of chance circumstance, levitation, the absorption of enormous amounts of momentum, and perhaps even communication with the spirits of the dead. These were phenomena I myself could testify to, and would be willing to do so under oath. The full power of John Chang was beyond belief, if what I had been told by others was true (and I had no reason to doubt them); I certainly could not imagine the extent of Liao Sifu’s.
+
+“Liao Sifu was born in a village named Lee Hwa Kang in China’s Santong province,” my Master continued. “He was part of a large clan—the Liaos, as the name implies. This clan had its own style of kung fu, which they called Liao Chia Chuan. Liao Sifu began studying the family art at the age of five and continued studying it until he was about twenty, by which point he mastered the system. He became quite good at both the external and internal elements of the martial arts, and a good fighter.
+
+“And fight he did, I’m afraid. You see, next to his village, a few miles away, there was another village. This village was called Pu Chia Siang, which basically means ‘the Pu family village.’ Between the two villages was a spring, the only one in the area (it was quite a barren place, Kosta). It was over this supply of fresh water that they fought. Their clans had been fighting for a hundred years, and many died.”
+
+“It must have been horrible,” I said, “fighting over the right to drink.”
+
+“Yes,” John said. “The right to survive, you mean. You know how in Africa the lions gather around the springs and wait for their prey? Well, imagine something like this, and you will be close to the way it was for them. Every day of their lives, because a man needs fresh water to live, right?”
+
+“There was no water anywhere else? Nothing?”
+
+“Not a drop, I’m told. Oh, maybe there was water thirty or forty miles away, but can you imagine making a trip like that to get water for your family, and carrying it back?”
+
+“No.”
+
+“Neither could they. So they fought, each clan trying to force the other to move away.
+
+“Now,” he continued, “in Jiangsi province, almost a month’s journey given the resources of the age, there was a famous teacher called Pai Lok Nen.”
+
+“When did this happen, Sifu?” I interrupted.
+
+“Oh, this part of Liao Sifu’s story takes place roughly between 1915 and 1925, give or take a few years either way. Anyway, because of the war, Liao Sifu did not marry and generally led a very turbulent existence. Maybe their region was like Bosnia or Kosovo in our day. When he was in his midthirties, his life changed dramatically. One of his relatives had studied with Pai Lok Nen. This man returned to Lee Hwa Kang at some point, and it was evident that he had developed great abilities. Because Liao Sifu was a dedicated and sincere martial artist, and (let’s face it) because of the war, the relative wrote a letter of recommendation for Liao Sifu to also go and study with Pai Lok Nen. So Liao Sifu made the journey and eventually, because of the letter, was accepted as Pai Lok Nen’s student. He stayed with Pai Sifu for five years, at which point he returned to his home village. At the time he was almost forty years old and had achieved Level Twenty-Six.”
+
+John settled back in his chair and assumed a more comfortable position. “Now,” he continued, “bear in mind that these were different times. News did not travel very fast, if at all, and most of rural China lived in third-world conditions. When Liao Sifu returned to his home, he found that his clan had been decimated. There was only one man left alive, and he was crippled, unable to walk. The neighbors kept him alive with their charity. Liao Sifu went crazy with grief; he had lost all his loved ones. Can you imagine, Kosta, leaving your home for five years and returning to find that all your brothers and sisters, your cousins, aunts, uncles, lovers, and friends, had been killed?”
+
+“Yes, I can,” I said softly. “I’m from the Balkans.”
+
+“You are, aren’t you?” John said. “So maybe you can understand such pain, or perhaps there are similar circumstances in your family history. Liao Sifu wanted to rush over and attack the neighboring village. But his clansman wouldn’t let him.
+
+“‘You are the last one of us left alive,’ he said. ‘They have killed us all. Even though you are Level Twenty-Six, there are many warriors in Pu Chia Siang, and you are only one man. Perhaps they will kill you instead, and then the Liao clan will be lost.’
+
+The clansman was his senior, and given the Confucian ethic of his day, Liao Sifu had to obey him. The man sent him back to Pai Lok Nen with the promise that he would study for a further five years. Liao Sifu did this, swallowing his rage and pain and putting them aside. He thought of revenge all the time, though; he could not let it go. When he returned to his village, five years later, he was more than Level Thirty. That is a very special turning point for people like us, you know. It’s a sort of graduation.”
+
+I wanted to press him for details but John became suddenly quiet, staring off into space. At length he spoke.
+
+“When Liao Sifu returned to his home, he found the body of his clansman, pierced by a spear. They had not even had the decency to bury the man; the corpse was rotting where it lay. Then Liao Sifu went mad. It was as if the floodgates of the dam had opened; the pain he had suppressed all those years could no longer be contained and came rushing out. It was as if his surviving relative were the last bridge to reason; with him gone Liao Sifu went crazy. He gave in to his anger and his hatred and went to Pu Chia Siang to take bloody revenge.
+
+“For one hour he killed anything that moved, and they were helpless against him. It was as if the Angel of Death had attacked their village and the warriors of Pu Chia Siang could do nothing to stop him. Men, women, children, and animals he killed, even the chickens! So great was his anger, Kosta, that he wanted the village to be wiped off the face of the earth, with not one life remaining in it to poison the land. Spears and swords bounced off him like paper; he could not be hurt, and yet he killed from more than ten yards away with blasts of neikung energy. Nothing escaped him. When they ran, he caught them; when they hid, he found them.
+
+“After one hour, as he stood among the ruins of the village, the madness left him and he saw clearly what he had done. He knew he had abused the power that God had blessed him with and had become a demon. In one hour he had taken more than one hundred human lives. Liao Sifu was a good man; he really did not want to hurt anybody, you know. His heart was crushed like broken glass by his crime, and he turned dead inside. At that moment he knew pain, the very real agony of remorse, before which the suffering he had felt from his anger was nothing. Also, Liao Sifu was a Taoist Master; he knew about the spirit world and about life after death. He knew he would have to pay off the karma of his actions when he passed away. So he became very afraid for his soul. It was in despair that he ran back to his teacher, Pai Lok Nen.”
+
+John took a break and sipped tea. I was silent, shocked by what I had heard. “I always thought,” I said finally, “that you had to be good and moral to be able to develop abilities of this sort. That power went hand-in-hand with divine integrity. How is it possible that Liao Sifu had not progressed beyond thoughts of revenge at that level?”
+
+John laughed. “You’ve read too many Western books, Kosta, or watched the TV series Kung Fu too often. A human being is a human being; don’t think it is so easy to stop being human! Liao Sifu knew the consequences, he knew that what he was doing was wrong, but he still took revenge, and bloody revenge at that. He was a man, after all, not God, and his family had been wiped out. What would you have done?”
+
+I looked down. “I don’t know,” I said. I thought of the depictions of the Buddha on Tibetan thanka; they normally showed a Buddha attended by a bodhisattva of compassion on one hand, and one of power on the other. I thought of the icons in my native Greek Orthodox Church: The Virgin, personification of compassion, was a central theme, but the Archangel Michael, whom I can safely call one tough dude, was ubiquitous as well. I began to understand that power and clemency are indeed two separate things.
+
+“Of course you do,” John continued. “And later you would have repented it as well, as Liao did, and you would have had to pay the price, as he did. Themes of revenge and regret are everywhere in human literature, Kosta; it is not so easy to become God and forgive. Imagine the Jewish people forgiving the Nazis.”
+
+The crimson past of the Balkans was bred into my genes; he was right and I knew it. I told him as much, and he nodded.
+
+“Yes,” he said. “It is difficult to be powerful, twice as difficult to be powerful and good, but that is what we must do. That is our destiny. You know how little children are rarely good by themselves, how they have to learn compassion?”
+
+“Oh yes,” I said. I had bitter memories.
+
+“A child’s mind will give you an idea of man’s basic nature. Our purpose in life is to become more than what we are born as. Most people are not successful at this; they just think that they are. And you know, this is why it is so important for us to pick our students carefully. We do not want to create monsters.”
+
+John looked off into the night as his dog came running up to be petted. He played with the animal for a while, and I scribbled down my notes. A servant brought more tea, and, after a time, John continued his narration.
+
+“Pai Lok Nen lived on a mountain called Lung Hu Shan, ‘dragon tiger mountain,’” he said.
+
+“Is that the Lung Hu Shan that the lineage of T’ien Shih Chang had made their home?” I asked.⁸
+
+“Yes,” he replied. He seemed pleased that I knew about the history of China. “But Pai Lok Nen was not a member of their sect; they respected him greatly and so offered him space on their land. Pai Lok Nen was a hermit, the Master of the school of Mo-Tzu;⁹ he lived on an island in the middle of a lake. My teacher said that it was an inaccessible area, its waters were very difficult to traverse. Liao Sifu used a series of trees to get across, jumping from one to the other like Tarzan, but Pai Lok Nen just threw a leaf on the waters and floated across.”
+
+“Good God!” I said. “What level was he?”
+
+“Level Fifty-One.”
+
+“I can’t imagine.”
+
+“No,” John replied, grinning, “you can’t. Now, China was plagued by many bandits at the time, and Pai Lok Nen was always there to help people. He fought for the villagers and killed many bad men. He had killed more than a hundred himself, I’m told, many of them with a very high level of skill. Pai Sifu’s cause was justified, though, because he fought to protect others, not for his own gain. There is still karma associated with this type of combat, but not so much, especially if one engages in it with no thoughts of glory or ego. Pai Lok Nen was a hermit. He did not fight to become famous, or so that he could seduce women; he fought because it fell to him to be a protector of the people around him. He was a healer as well and had cured hundreds. You know, he spared the lives of many bandits provided that they would repent and stop being thieves and murderers; that mercy was to be his undoing in the end.”
+
+“He just let them go?” I asked.
+
+“No. He always made sure they could no longer terrorize people before he allowed them their lives and liberty. Since the notion seems to shock you so much, I will tell you now the story of a very bad man at an incredibly high level, and his final encounter with Pai Lok Nen. That man’s name was Lim. . . .”
+
+### Duel of the Immortals
+
+Liao sat before a roaring fire, deep in thought. It was a cold afternoon, cold enough for him to seek the heat to warm his bones. He was over fifty-five, but with the constitution and appearance of a much younger man; people thought him a hsien, an immortal, the apprentice of the immortal Pai Lok Nen. On the rare occasions that he ventured into the local villages, they bowed before him, treating him to their modest fare with the esteem reserved for divinity.
+
+If they only knew that I am nothing but a murderer, he thought. The decimation of Pu Chia Siang plagued him constantly, and he knew that one day he would have to pay the price. In restitution Liao had committed himself, at Sifu’s suggestion, to the monastic life—he would try to reach the highest level of power he could in this life and help as many people as deserved his aid. Maybe then, when the time came for him to enter that other world, the Lord God would be merciful in His judgment.
+
+How could I have killed children?
+
+Liao stared into the flames. The truth was, he did not need the warmth of the fire to stay comfortable any more than a snow bear did; he was beyond such things. But why waste internal energy to warm himself when a good fire was available, and much more pleasant to boot? Liao had stayed with Pai Sifu on Dragon Tiger Mountain for many years since that fateful day, meditating, training, and studying the system of his Master’s lineage. He had learned much and progressed to Level Forty; to his chagrin, his task had grown more difficult, not easier, as he increased in level. Level Four, which he had thought earth shattering at the time, had been as easy as pie in comparison; he grinned as he thought of some of the younger students he knew, struggling with Levels Three or Four and so proud of that fact. They were in for a rude awakening.
+
+Pai Sifu was gone for one of his ten-day retreats, leaving him alone with the Old Robber. Pai Lok Nen’s method of training was very clever: He would meditate for ten days somewhere up in the mountains, then come back down to their small house for ten days to recuperate and prepare for the next session. Moderation and persistence were the keys to success, Liao knew.
+
+The Old Robber’s name was Assam, and he was almost seventy years old. Assam had been a highwayman and terrorized the surrounding countryside until he’d had the misfortune to pick Pai Lok Nen as a victim. When beaten by the nonchalant immortal, Assam had pleaded for his life, promising that he would do anything if he could just be spared; he would never steal from or injure anyone again. Pai Lok Nen had not known what to do with the man; he could not very well leave him where he was, because the bandit was surely untrustworthy. He finally decided to take him with him as a servant. To make sure that Assam would neither injure anyone again nor run away, he had lamed him by partially paralyzing the greater sciatic nerve in the robber’s right leg. Pai Sifu then brought him out to the island, where it was impossible for the man to escape. Now Assam hobbled around everywhere on the isle, the thumping of the thick staff he used to support his weight the old man’s trademark sound.
+
+Liao had sent the Old Robber out to gather some firewood; the old man had gone sulkily, not appreciating the directives of the younger Liao. He whined constantly, but what could he do? After all, Liao was a high-level student of the Master, and Assam had no power to speak of. He had tried repeatedly to convince Liao that his being Pai Lok Nen’s servant did not mean he was Liao’s servant as well, but the younger man was not buying it. And since Assam was, with good reason, terrified of Liao’s powers, he did what the other man said.
+
+But he didn’t have to be quick about it. And so he took the whole afternoon to complete an hour’s chore.
+
+Liao was quite alone when he heard the sound. It came softly, stealthily, and there was a threat drawing near with it, Liao knew. A man was approaching the house, a careful man checking his way as he went, aware of dangers. A man at war, Liao thought. An enemy?
+
+He rose and stalked over to the door. Beyond their small garden a dark form approached cautiously. It halted when it sensed him, waited, then began to approach again.
+
+Liao saw that it was a man with a dark cloth tied over his eyes. A blind man. “Good afternoon, brother,” Liao said. This was no normal blind man; Liao did not need to observe the way that the other walked to know this. The man had made it to the island; that in itself was enough.
+
+“Good afternoon,” the man replied. “Is this the home of the Master Pai Lok Nen?”
+
+“It is.”
+
+“Ah. Good. I am an old friend of his. We have not seen each other in twelve years.”
+
+“Please come in and warm yourself. Pai Sifu will return soon.”
+
+Liao stood aside to let the blind man pass. He noticed that the man entered the hut carefully, as if checking for possible attack. He also saw that the man vibrated and hummed with a power similar to that of his teacher. Surely more than Level Fifty, Liao thought. Could it be that he was higher than his Master?
+
+When he sensed that there was no one else in the room, the man gratefully sat by the fire and began to warm his hands. Liao saw that he was an older man, in his eighties, about the same age as his teacher.
+
+“Can I offer you some tea, Mr. . . ?” Liao asked.
+
+“Ah, Lim. My name is Lim. Yes, please. I would be most appreciative.”
+
+“How do you know Pai Sifu?” Liao asked while brewing the tea.
+
+“Ah. We met twelve years back, as I said. It is to him that I owe my current . . . power.”
+
+“I see. Are you a student of my teacher’s lineage?”
+
+“No. I studied with another school, just as old and just as powerful.”
+
+Liao handed the other man a cup of hot tea.
+
+Lim sipped it with relish. “Thank you,” he said. “The tea is most appropriate on such a cold day.”
+
+“Yes it is. You have reached a very high level, good sir.”
+
+“Yes. It took a long time and great dedication, but I have managed to become as I am after ten years of fierce training. I think that your Master will be quite surprised with my power.”
+
+Liao stared at the hooded face. “He may be surprised, but will he be pleased?” he asked finally.
+
+The other put down his cup. “What is your name?” Lim asked finally.
+
+“Liao Tsu Tong.”
+
+“Liao Tsu Tong, if you do not interfere when we fight, I will spare your life this day, in gratitude for the tea you have offered me.”
+
+“Why do you hate him so?”
+
+The other man untied the bandage over his eyes; two empty sockets yawned back at him. It was the face of a demon.
+
+“He took my eyes from me. I cannot forgive him,” Lim said.
+
+“I understand,” Liao said. “I also have wasted my life in search of revenge. But Pai Sifu has always been just in his punishments. What did you do to deserve such a sentence?”
+
+“It does not matter.”
+
+“Of course it does! God’s justice must be understood.”
+
+“Oh? Did you follow God’s justice when you took revenge?”
+
+Liao looked away.
+
+The blind man laughed ironically. “I suppose not, eh?” Lim said. “And who is Pai Lok Nen to speak for God, anyway? Your name is familiar to me, Liao Tsu Tong, as it is to all China, though until this moment I did not know that you were Pai’s student.”
+
+Liao searched the tortured face. “What do you mean that my name is known to all China?”
+
+“If you behave and do not interfere, I will let you live to discover what I mean.”
+
+“I myself have regretted my actions. After twelve years, has your rage not been tempered by time?” Liao asked.
+
+“Tempered by time? Are you a baby to ask me questions like that? For ten years I sacrificed my life, doing nothing but training every day, thinking of nothing but finding him and taking vengeance. It took me two years to find him; the people in the area protected him, the fools. No one would answer my questions! But find him I did in the end.”
+
+“And what was your crime?”
+
+The other was silent. “You are either a very brave man or a very stupid one. I was a warlord in a neighboring province. My band of warriors demanded tribute from the nearby towns. At one point I became greedy, and an old man called in Pai Lok Nen. My band was destroyed and my eyes were taken from me.”
+
+“It sounds like you got what you deserved.”
+
+“Perhaps. It is not for you to judge, destroyer of Pu Chia Siang.”
+
+“He spared your life. He was merciful.”
+
+The teacup instantly crumbled to dust in Lim’s hand and the hot tea boiled away as superheated steam. Liao feared for his life in that instant. “A thousand times that he would have killed me!” Lim roared. “I was powerful and he made me weak! Whatever I desired, a woman or a jewel, it was mine for the taking! I was the king of my land, and he turned me into a beggar!”
+
+Liao kept his seat.
+
+After a moment Lim calmed down and turned toward the fire. He wrapped the bandage over his eyes once again.
+
+“Would you like some more tea?” Liao asked. “You seem to have lost your cup.”
+
+Lim laughed. “Yes, you are undoubtedly a very brave man. I would indeed like another cup.”
+
+Liao stood and went over to a small cupboard. He brought over a cup and offered Lim tea. “You know,” Liao said, “Pai Sifu is not all that he used to be.”
+
+“What do you mean?”
+
+“He was crippled in a fight. He lost the use of one leg and now walks with a cane.”
+
+“Hmm. It must have been some enemy. I’m glad that the other didn’t kill him; that he left him for me.”
+
+“Yes, but Sifu is not the Master that he used to be. He’s old and crippled now and has lost his power.”
+
+“Are you that young and stupid or are you just trying to tempt fate and my patience? You know as well as I that his physical condition has nothing to do with it! He is as powerful as ever. Besides, I hate him so much that even if he were dead I would destroy his grave and desecrate his corpse.”
+
+“I see. I pity you, Mr. Lim. Having felt such hatred myself, I know what a worm like that can do to your soul. May you find peace.”
+
+The other man’s reply was choked off by the sound of someone’s approach. They both heard the heavy footstep, the rhythmic thumping of the cane. Lim stood smoothly and swiftly to face the door. He pushed Liao to the wall behind him. “Don’t interrupt or else,” Lim whispered softly. “Remember what I said.”
+
+Assam was carrying a load of firewood, and the going had been difficult for the old man. He eased the heavy stack off his back and laid it down gently in a corner of the garden, still tied with the ropes he had used to make his bundle. He would be damned if he’d bring the wood into the house for Liao as well. That upstart was almost fifteen years younger than he was, after all, and should have some respect for his elders. It was enough that he had gone out to get the wood at Liao’s request; too bad for the young punk if it had taken the entire afternoon!
+
+Inside the cottage Liao saw the man’s silhouette darken the doorway. He had no misconceptions about what would happen, and knew that Lim sensed the other’s approach as well. Lim stood before him, his back to him and facing the door. He was ready to fight. Well, so was Liao.
+
+He was at Level Forty himself, but he knew that Lim was much higher. Still, it might work, he thought.
+
+“Look out! It’s a trap!” he yelled to Assam, and at the same time hit Lim with all his power in the area of the kidneys (and only from a yard’s distance). He expected the other to fly forward from the impact, at which point he was ready to hit him repeatedly.
+
+Nothing happened. Lim was unaffected.
+
+Liao was allowed a fraction of a second in which to curse the circumstances with the worst profanity he could think of. Then Lim moved like a whirlwind. He kicked backward, hit Liao, and knocked him completely through the wall to land in the garden outside, where he lost consciousness. At the same time he hit Assam three times from five yards away with energy blasts generated from the center of his palm. Assam died instantly with the first blast, but Lim could not believe that Pai Lok Nen would be so easy to defeat (for indeed, Liao’s strategy of passing Assam off as Pai Lok Nen had worked) and struck again and again.
+
+When Liao came to, his Master was standing over him. It was morning. He had been unconscious all night.
+
+“Are you all right?” Pai Sifu asked him.
+
+Liao sat up and coughed up some blood. “I think so,” he said. “For some reason he wanted to keep me alive. Assam?”
+
+“Dead. Gone. Who did this?”
+
+“Lim. He said his name was Lim.”
+
+“Lim? I don’t know any man named Lim.”
+
+Liao was briefly exasperated. It seemed that his teacher had killed so many marauders that he had forgotten the details of the encounters. “He was blind. He said you had taken out his eyes.”
+
+Pai Lok Nen was astonished. “Him? The warlord? Yes, of course, his name was Lim, that’s right, I remember now. But how? I mean, he was at a fairly high level when we fought, but nowhere close to this.”
+
+“Hatred.”
+
+“Sorry?”
+
+“Hatred fueled his training.”
+
+Pai was silent. “Of course,” he said finally. “I regret leaving him alive. Many will suffer because I thought to show mercy. Some men are beyond redemption.”
+
+Liao stood on quavering legs. He saw the hole in the wall his body had made when thrown backward.
+
+“Help me with Assam,” Pai Sifu told him brusquely.
+
+They walked over to the other man’s remains. Of the body itself, only a jellied mass was left.
+
+“Do you know why your strategy worked?” Pai Sifu asked him.
+
+“Maybe. I think it was because the man was so obsessed that he was blind in more ways than one.”
+
+“No. It was because Lim is obviously more than Level Fifty. A blow from a man like that runs through the bone marrow and crumbles the bone to dust. Assam was hit at least three and maybe four times; as you can see, there is not much left of him. His skull is mush; Lim was unable to inspect the body to see if it was me or not.”
+
+“I understand.”
+
+“Why did you trick him into believing that Assam was me?”
+
+“Because honestly, Sifu, the man frightened me and I had no idea which of you had more power.”
+
+“And you thought nothing of sacrificing Assam’s life?”
+
+“Before your own, Sifu, no.”
+
+“And you thought nothing of sacrificing your own life as well, I see.”
+
+“It was my duty, Master.”
+
+They buried Assam’s body. It had no structure and was difficult to pick up; it was as if the old man had been turned into a giant, dead invertebrate. Pai was silent all that day. When evening came, they sat by the fire. Pai Lok Nen handed Liao a large book and some scrolls.
+
+“In this book,” Sifu told him, “are the secrets of internal power all the way up to Level Seventy-Two. These scrolls designate you as my heir. You are now the Master of my school of Pa Lei Chuan (eight ways thunder boxing). You may leave this place or stay here as you wish.”
+
+“You are going after Lim.”
+
+“It is my duty. I have unleashed a monster on the land and must face up to the consequence of my actions. I forbid you to come with me, if that is what you were going to ask.”
+
+“Master. . . .”
+
+“I forbid it!”
+
+“But of course,” John continued, “Liao Sifu did not listen to him. When Pai Sifu left, he followed at a distance, staying away from his teacher but never losing track of him. It took Pai Lok Nen a week to find Lim, but find him he did. They met in a jungle. Liao Sifu was close by but he did not dare intrude.”
+
+My teacher took a sip of tea.
+
+“For three days and three nights they fought,” he said softly. “They were evenly matched in the end; both were at Level Fifty-One. They destroyed the jungle around them in their struggle, and still no one could get the upper hand. Like the ancient gods they fought, throwing thunder and lightning at each other, Kosta. Finally, on the dawn of the fourth day, Pai Sifu in desperation used a technique called Ching Tjik Tue Lik, which in Chinese means “Golden Rooster stands on one leg.” I showed you that movement yesterday; it is a very dangerous technique in that you can hit three points with one movement, but you also open up weak points yourself, which the opponent can strike. Of the three points attacked, Lim managed to block two, but the third blow caught him in the chest; at the same time, however, he managed to kick Pai Sifu in the chest. They both fell over and lay still. Then Liao Sifu emerged from hiding and approached; before that point he had not dared interfere, as I said.”
+
+“There is that much difference in power between Levels Forty and Fifty?” I asked.
+
+“Yes, and between Levels Twenty and Thirty or Thirty and Forty as well,” John replied. “The forest was as if it had been destroyed by bombs, Kosta. Liao Sifu checked the bodies. Lim was dead, but Pai Lok Nen was alive. Liao Sifu buried Lim and stayed with Pai Sifu, trying to nurse him back to health. At some point, though, Pai Lok Nen passed away. Liao Sifu buried him and stayed in the area for forty days, then moved on.”
+
+“Where did he go?” I asked.
+
+“He was in for a surprise,” John said. “He went to a large town nearby and saw that he was famous. The government had put a reward on his head; he was the most wanted criminal in China.”
+
+“The village massacre,” I said.
+
+“Yes. Posters with his picture on them were everywhere. He was forced to flee first to Nanchang city in Jiangsi, where he remained for a time, then out of China. He finally settled as a penniless refugee in Java.”
+
+“It’s exactly like the old TV show Kung Fu, with David Carradine!” I said.
+
+John thought about it for a while. “I never watch that show, you know,” he said at last. “I mean, I’ve seen segments of it from time to time on television, but I’ve never actually sat down to watch an episode. Listen, you don’t think that they heard about Liao Sifu’s story from somewhere and copied it?”*18
+
+Chapter Six
+
+LESSONS TO BE LEARNED
+
+### THE EXAMINATION
+
+It was raining heavily when I next saw my Master. He had been gone for a week, out of the country on business; I had spent the time traveling, reading, and digesting the teachings of our previous encounters as best I could. My wait hadn’t been all that much fun, because I had seen most of the country already, and the city he lived in was a boring place. John telephoned on the day that he returned. I took my usual taxi out to his home in the late afternoon, eagerly anticipating seeing him again.
+
+I shook the rain off my windbreaker and entered his home. There were many people there, and there was considerable excitement all around. The atmosphere was that of a party waiting to happen.
+
+John yelled out a greeting. “Kosta! You are very lucky tonight. I will test a pair of students for Level Two. We are preparing now.”
+
+I had never seen such testing before and immediately became excited myself. It had been worth the week of waiting. Perhaps the most important thing about the abilities my teacher displayed was that they are an acquired skill; what he has can be passed on to others. That evening I would see proof of such a transmission for the first time. It should be noted that not everyone can become like John Chang, just as not everyone can become an Olympic athlete; still, almost every able-bodied person can be taught to run, and if not to run, at least to jog. Level Two is somewhat like that. Almost anyone with the right degree of perseverance and discipline can complete it (though it might take as long as fifteen years). As far as becoming like Chang Sifu, however, perhaps one man in a thousand can achieve this. If that many.
+
+Anyway, I was quite eager to see what these two men could do.
+
+They were the only ones there who did not seem particularly happy. Both were very nervous, excusing themselves to run to the toilet on occasion and spending quite a bit of time on the balcony in meditation, trying to regain control of their minds and bodies. I was told that it was not up to the student when he would be tested; John himself often picked the time and place and said, “Now.” That was the whole point of the test, they said: to catch the student unawares so that he would learn to be ready at any point in his life for whatever might occur to him.
+
+I was glad it wasn’t me. One of the men looked particularly miserable.
+
+An argument ensued; a student of John’s whom I knew well and who was there as a witness began protesting loudly. Another man, evidently a senior student, took no regard. Ignoring the other’s disapproval, he seized the man’s cigarettes and shook them out of their container. He handed the loose cigarettes back to my friend and kept the pack. The slighted party went over to a corner and sulked, stuffing the cigarettes into a pocket. The senior student then produced two more empty packs of cigarettes and stacked them atop a table along with the pack he had just pilfered. The empty boxes (hardpacks!) were laid on their bases, three in a row, the brand names all facing in one direction.
+
+It was up to the men being tested to move them with telekinesis from more than four feet away.
+
+John sauntered up to me. “You understand what we are doing here tonight?” he asked. I nodded. “They will have to move the packs from a distance of five times their forearm length; this is our tradition.” He looked at my long forearm and longer fingers and grinned. “In your case,” he said, “it will have to be more than one and a half yards away.” I squirmed, and he was delighted.
+
+John was a practical joker. I had been with him on an elevator one evening along with twenty other people. The elevator was a glass-walled unit that ferried people up and down the floors of a shopping mall; there was a steel railing all around that people rested their backs on. We were going out to eat that evening at a local restaurant on the top floor of the mall.
+
+Suddenly a burst of current pulsed through the steel backstop. Women screamed and everyone pulled away, suspecting a short circuit. John had pulled away, too, as I had, but I needed only one look at the barely suppressed grin on his face to realize what had really happened: He had sent a pulse of bio-energy through the railing! The elevator attendant cautioned everyone to stay away from the backstop, and, as we reached the top floor, he radioed for maintenance and shut the unit down.
+
+All right, so it was funny.
+
+In any case, the students were nervous as hell. They would have to knock over all three packs to pass the test.
+
+The first man began his trial. They measured his forearm, hand, and fingers and drew a line beyond which he could not cross. John stood on the line itself and scowled at the student as he approached, making sure that the man would not dare cheat, not even a little. The man stood behind the line in the Horse Riding Stance, brought his right palm up even with the line, took a breath to calm himself, and began.
+
+He pushed his ch’i through his palm and toward the cigarette boxes. One of them fell over.
+
+“He missed,” a man next to me whispered. “But he will pass for sure.”
+
+John reprimanded the student and the man tried again. This time there was no hesitation; he knew he could do it. He concentrated fiercely and pushed.
+
+All three packets fell over on the tabletop. The first was pushed so hard that it fell off the table. The student had passed.
+
+There was a pause before the second man’s trial, and I was allowed to approach the testing area.
+
+“Okay, Kosta,” John said. “Inspect everything carefully.”
+
+And I did. I looked for magnets, for wires, for fans, for anything electrical or chemical, with all the expertise I had gained after twelve years in the engineering field. Nothing. The table was wood; I picked it up off the ground. There were no wires or strings anywhere. The packs of cigarettes were just that; they had not been tampered with, short of being emptied of cigarettes. I pulled out of my vest pocket a small compass I always carry with me in the Orient, and ran it over the table and surrounding area. No magnets—or at least no residual magnetism was evident. I could find no indication of the presence of chemicals of any sort. The room was brilliantly lit, and everything had happened in plain sight. There was no hocus-pocus going on.
+
+The inspection was superfluous; I did it for everyone else’s sake rather than my own. I had no doubts about what I was seeing. In any case, the group gained nothing by tricking me.
+
+“I want to make one more inspection when the testing is over,” I said to John, who readily agreed.
+
+The second man’s turn came up; this man was very nervous. It was obvious to everyone except me that he would not succeed. The group repeated the procedure for him, drawing a new line; he, as had his brother student, took his place.
+
+And failed. Nothing happened.
+
+John encouraged him, told him to relax and try again.
+
+He did, and was unsuccessful once more. The man was in a bad emotional state. I thought they would stop.
+
+They didn’t. John allowed the man to try from a yard’s distance; the packets not only fell over, they flew off the table to land a good yard away. At that moment I realized something of importance: The field phenomenon associated with this action degraded exponentially. That is to say, its behavior followed this pattern:
+
+Someday I will map its response and characterize the process, I thought. I had already figured out how to do it.
+
+![image](OEBPS/Images/image-X0Z3KIDN.jpg)
+
+The man was given another chance, which he also failed. At this point John let him stop. He would be given another test the following year, but the opportunities were not indefinite; at some point, if you failed, you were deemed an inappropriate student and not allowed further instruction.
+
+“What additional examination did you want to do?” John asked.
+
+I pulled out a pocketknife and cut an empty pack of cigarettes in half. It was not lined with metal; there was no way it could have been affected by magnetism. Again, I did it more for the group’s sake than my own; it seemed very important to them that I be convinced, and I had to prove that I was.
+
+I was good at that sort of thing. The previous year a friend of John’s had tried to play a trick on me. He had offered me a stick of gum, which I took, then asked me if I would like to see his power. I had replied affirmatively, and he dipped the wrapper in water.
+
+“Now hold it in your hand and squeeze,” he said.
+
+I did not need John’s look of disapproval to know that I was being hoodwinked; dipping the wrapper in water had given the man away. Sodium metal, I thought, and only pretended to squeeze the wrapper. It was wax coated; squeezing would break the coating and allow the sodium to react with the water, generating intense heat.
+
+The man became disconcerted; he expected me to drop the wrapper in pain. I disappointed him. “You can let go if you feel the heat,” he said. “Don’t burn yourself.”
+
+“No, it’s not hot at all,” I said innocently. “See?” I gave him back the wrapper, which I had carefully pressed into a small ball. A look of puzzlement came onto his face, and he took the wrapper from me and squeezed as hard as he could. Suddenly he grimaced and dropped it. He looked at me in wonderment; why hadn’t the trick worked on the foreigner?
+
+John had loved it. Anyway, I knew I had to convince them on that evening that I believed what they were doing was real, and so cut the empty pack in half.
+
+“How long have you been studying?” I asked the man who had passed.
+
+“About twelve years,” he said.
+
+“And how much training did you do every day?”
+
+“Only about an hour a day. That’s why it took so long. But what could I do? I had to work for a living.”
+
+John came over and held a long discourse with the man. He lectured him profusely, then let him go and pulled me over.
+
+“I told him that he had to be very careful from now on,” John said. “When you finish with Level Two, your ch’i is always ready to move. Much of it is governed by your emotions. If he were to hit a man in anger now, the ch’i would run into that man’s body and destroy his heart. The man would die.”
+
+“What if he hits him on the arm, say?” I asked.
+
+“It doesn’t matter where he hits him. The ch’i will always run up to the other’s heart, and it will kill him. And you know, no Western hospital in the world can help a man hit in that manner. He will die unless treated by someone like me within twenty-four hours.”
+
+“You’re right. He should be very careful from now on.”
+
+“Yes. You know, when we teach new students kung fu, we always move slowly, and always without power. Safety is our primary concern. People see that on occasion and think we are weak; bad mistake.”
+
+“Sifu, what they just did, we call telekinesis in the West. Did they manage that with their own power or did you help them a bit?”
+
+He looked at me, amused. “I ‘helped them a bit,’ as you say. They can pass ch’i from their body, but it is only yang ch’i. During the test I myself generate yin ch’i and act as an opposite pole by standing next to the packs. This induces their yang ch’i to extend over to my yin, and that action allows them to move the cigarette packs. The test is really to see how much yang ch’i the student has in him.”
+
+“I see. So when you say that if they hit a person they will transfer ch’i to him, they must touch that person physically to do so, correct?”
+
+“Yes. Because they still use only yang ch’i. To do it from a distance, they would have to use yin and yang together. That would be Level Four.”
+
+“Sifu,” I asked, “physiologically, what is the difference between what I just saw and Level Four?”
+
+We moved over to a table and John began to jot down notes for me. “Look,” he said, “I have already told you that Level One is simply to fill up your dantien with yang ch’i, right? That requires eighty-one hours of absolute meditation. Now, a beginning student cannot hold his concentration for long. Perhaps in one hour of sitting, he is actually in meditation for 1.3 minutes. That means he is meditating only 2.2 percent of the time, which means that if he sits for one hour a day, he needs ten years of training to get his eighty-one hours of meditation.”
+
+“What is actual meditation like?” I asked.
+
+“There are no thoughts and there is no sense of time. If you are thinking, you are not in meditation. If you are aware of yourself, you are also not in meditation. You must become like a baby in the womb, there and yet not there. Meditation is like the borderline between sleep and waking, between consciousness and unconsciousness.”
+
+“Very difficult.”
+
+“Not so difficult, Kosta. You stayed in meditation for long periods when you were an embryo and a baby, and you pass through it now each time you drift off to sleep. You just have to remember how.”
+
+I felt uncomfortable. “What about Level Two?” I asked, to change the subject.
+
+“In Level Two we fill up the channels in our body with yang ch’i while at the same time shaping the ch’i in our dantien to our specifications. Then we can push our yang ch’i out of our body—though not through space. When a student becomes proficient at this, he can pass the test that you witnessed this evening.”
+
+“And Level Three?”
+
+“Level Three is very difficult to pass. It requires at least three continuous hours of training a day, perhaps more.”
+
+“You don’t want to talk about it; okay, fair enough. Level Four?”
+
+“Level Four is the point where we begin to bring yin and yang together. When you finish with Level Four, the two sit in your dantien like this,” he continued, and drew:
+
+![image](OEBPS/Images/image-WU108PFH.jpg)
+
+“Like the yin-yang symbol,” I said. He nodded. “Why is it that, in popular literature, they put the two dots in center of the opposing circles, and say that yin has yang in it and vice versa?”
+
+“I don’t know. I think that they may have become confused over the passing of time, or maybe their knowledge has become somewhat mixed up due to political circumstances. There is also a chance that I myself am wrong.”
+
+But I doubt it, I thought. “Because many people have written that yin changes to yang and so on with the flow of time,” I went on.
+
+“Nothing is as simple as it seems,” he replied.
+
+“They also write that a man progresses from yin and yang to t’ai chi . . .”
+
+“This is t’ai chi. That’s correct.”
+
+“. . . and from there to wu-chi,” I finished.
+
+“What is wu-chi?” he asked.
+
+It was my turn to be shocked. What had just occurred was the equivalent of Mohammed the Prophet asking a Muslim just who this Allah was that they kept referring to! Wu-chi is a concept central to Taoism, and I was being asked by a man I considered a Taoist Master, in no uncertain terms, exactly what it was that I was talking about.
+
+“Er . . . wu-chi is like this; beyond yin and yang,” I stammered, and drew on the paper:
+
+![image](OEBPS/Images/image-P756CASF.jpg)
+
+“I see. I have never seen anything like this,” John said.
+
+“But all the books on Taoism refer to this,” I said. “It’s the final step, the transformation where a human being returns to the Source.”
+
+“I see. As I’ve told you many times, I’m not a Taoist.” He raised a hand to silence my protest. “Yes, I know, I know. There are many things about my teaching that you will say are unquestioningly Taoist, and my teachers came from a Taoist mountain. You have every right to be confused. I consider myself, however, simply a practitioner of neikung.”
+
+He looked down at the circle I had drawn.
+
+“In our school man can never become like this. Human beings—those who can complete Level Four, that is to say—stay at t’ai chi all the way up to Level Seventy-Two. We are never at wu-chi. Perhaps in other lineages, like the Mao-shan Pai or the Wutang-Pai,¹⁰ they have discovered a method to accomplish this, but I do not know of it, nor have I ever witnessed it. In any case, we in the Mo-Pai*19 do not use it. What else have you been reading?”
+
+Lots of translations, I thought, but this is not the time. “The problem with the printed word is that anyone can write whatever they want, Sifu,” I said.
+
+“Okay,” he said, “you write a book.”
+
+“Are you serious?”
+
+“Yes. I want to teach people about ch’i—that it is real, and what its nature is. I want them to know that ch’ikung and neikung are not hocus-pocus but a science.”
+
+Whooyay! I thought. Time to have some fun.
+
+## A Chinese Story
+
+In the days before his passing Liao Sifu frequently lectured his two students on the desired mode of behavior according to the Taoist†20 canons of his own lineage. On one such evening the following incident occurred:
+
+John Chang, then in his early twenties, sat at the feet of his Master along with his brother student Chan Tien Sun. Liao Sifu was due to leave for China within a month, and he would be dead within two.
+
+“If the three of us were suffering from a fatal illness, and suddenly a bottle of medicine that could cure this illness appeared in your palm, what would you do, John?” Liao Sifu asked. “Bear in mind that there is enough medicine there to cure only one person, and that the other two must die.”
+
+John did not hesitate. There was one thing that had been gnawing at his heart and mind for a long time: He loved the old man profusely, without reservation, and had never been able to tell him so. The master had been a father and more to him, but he was also very much a part of the old Chinese culture. According to the Confucian ethic that had dominated Chinese society since K’ung Fu Tzu’s passing, it was not appropriate for him to voice the softer emotions he felt for his teacher, or vice versa. Duty and honor were fine, but love was for poets. Even though Liao Sifu was a Taoist, he still held himself in reserve; a British lord would have been proud of his composure, and would probably have told him that his “stiff upper lip” was quite in order.
+
+John himself was a product of the modern age as well as being Chinese; his thoughts and feelings had been influenced by multicultural stimuli and by the information dissemination from Western civilization. As such, he had many options to consider as far as what was to be deemed proper social behavior. Liao Sifu had told him that he would soon be dead, and that he would be leaving for China to see his home one last time. How could he tell the old man that he loved him, that he had been like a father to him? Coming right out and saying it was unacceptable. Perhaps this moment would be one of his last opportunities to express it at all.
+
+“I would give it to you, Liao Sifu,” he told his teacher with affection.
+
+Dear God, the old teacher thought. How can I teach this boy that he must rise above his own emotions, his own likes and dislikes, to serve the universe as a whole? How can I teach him that true love comes from heaven, that man as a being can only draw close to this essence? He must place humanity above his own personal loves and desires! In an instant Liao Sifu knew what he had to do, and hardened his heart for it.
+
+The old man moved like a blur and the blow was powerful; he slapped John across the face with such force that the younger man was thrown across the room. Liao Sifu stood, seemingly furious with his pupil.
+
+“Because you spoke with your heart and not your mind, I will forgive you this time,” he said to John. “I struck you so that you will remember this instance all your life. The truth is that if such a medicine did indeed exist the three of us would go to war with each other over the right to drink it, for life is the most precious treasure of all, and no one gives it up readily. The fact that this medicine has appeared in your hand means that it is your destiny to consume it; therefore you must drink it and no other. Fix yourself first and then you can help others! Do you understand?”
+
+John nodded, stung. He would indeed never forget the lesson.
+
+### POWER
+
+I couldn’t sleep that night. The more I thought about writing a book, the more I realized what a problem it would be. The project would have to involve both a text and a videotape documentary, I recognized, and it would be no easy task. How do you convince people that what they were seeing was real? Almost everyone would think it was a scam perpetrated by special effects and willing henchmen. And I was a scientist—an engineer for God’s sake, with an inbred dislike of space cookies and everything unsubstantiated. Oh, I watched and enjoyed The X-Files as much as anyone else, but I was primarily concerned with reality, not fiction.
+
+“You know, I really don’t think it would be such a good idea to do a book,” I had told John after thinking about it for a few minutes (much to my dismay). I was rationalizing: Such an effort would have many repercussions, and it would be difficult to plan for every contingency. My main concern was protecting my teacher’s privacy. On the other hand, I really did want the information I had acquired to become common scientific knowledge, if for no other reason than to safeguard people from half truths.
+
+It hit me in the middle of the night like a ton of bricks and I woke up, excited. I knew how to do it! The approach had occurred to me in my sleep. John would get his book, and people would realize that the world was not as dull and gray as our materialistic society made it out to be.
+
+John was a scientist, too; he was just a different kind of scientist. It was true that he was the stuff of Chinese myths and legends, but that was okay. I knew from my own homeland that many scholars in the nineteenth century were positive that Troy was a myth before Schliemann began excavating at Hisarlik; additionally, many eminent professors vehemently opposed the theory that the Mycenaeans were Greek until 1952, when Ventris deciphered Linear B. All those people had been wrong, and the few dreamers who dared stand against them had been right. Even in our day the established community of scholars tended to regard anything outside their norm with dismay, and often fought tooth and nail to crush it. The Inquisition had burned Giordano Bruno at the stake in 1600 for insisting that the sun, and not the earth, was at the center of the solar system. I wondered if the established scientific community would try to burn me at the stake as well.
+
+No matter, I thought. Giordano Bruno was an honest Italian; I was a wily Greek, and I would use a Trojan horse to batter down their walls.
+
+John was the stuff of legends, it was true, but he was real, just as Troy was real, just as the Mycenaean Greeks had surely existed.
+
+What was science, after all? Our Western approach had been founded on two major premises: careful and objective observation, and reproducible results. As long as I followed those two main criteria, I could be doubted, but never seriously challenged.
+
+Now, I was sure that John had no inclination whatsoever to go around to every local university and give a demonstration for the professors there; nor did I want him to do so. However, there was precedent for what I was planning. In 1978 the Laetoli footprints had been discovered in the Serengeti. They were three and a half million years old and proved conclusively that early hominids walked upright in a fashion equal to, if not better than, modern man. The footprints were made in a volcanic ash that had come again to the surface after millennia of erosion; they were very fragile and could not be preserved for long. To record them, the team of scientists made plaster casts and took careful pictures. To preserve them, they buried them once again deep in the sand, with disastrous results. The sand they used was that preferred by the local African vegetation, and as a consequence there are now acacia trees growing over the site, whose roots are undoubtedly destroying the very prints the researchers sought to protect. Nevertheless, scores of documents and analyses had been written based on the plaster casts and the pictures. And how many researchers had seen the actual tracks themselves? Perhaps less than a dozen. Yet no one doubted that the tracks existed (or at least had existed), simply because their presence could be ascertained by digging up the site again.
+
+The “document-and-bury” approach was common for archaeologists in my native Greece as well. The country had been settled for five thousand years, and there were ruins everywhere; it was difficult to dig in one’s basement without uncovering something. As such, when a building was in its preliminary stages of fabrication and ruins were uncovered, the archaeologists were called in; usually they just photographed and documented the site, coated it with a protective resin, and allowed construction to go on.*21 There were typically enough witnesses to go around that no one doubted the buried site’s existence, or suspected that anyone had made it up.
+
+Well, I knew that thousands of people had seen John and could testify to his abilities in court. He himself could reproduce a demonstration at any time, should he choose to do so. I realized that all I had to do was document his powers and those of his students before a panel of reliable witnesses, and I’d be home free. The important thing would be to carefully choose the one eyewitness no one would dare dispute.
+
+I was so excited that I rushed over to his house the following morning uninvited, without calling ahead first. That was a faux pas, and something I usually never did. It was ten o’clock and John was still in his pajamas. He looked like a truck had run over him.
+
+“I couldn’t sleep last night,” he said. “The air conditioner broke down in my bedroom.”
+
+He poured himself a cup of coffee, and I started laughing; I couldn’t help myself! John Chang, man of contrasts, I thought. This late riser was the same yogi who could stop his heart at will and had once spent eight days in total meditation, hardly breathing, his vital signs so faint a doctor would have pronounced him dead. I realized then how important this man was to humanity; it was the first time in history that such a human being existed. Here was someone who on the one hand could be the life of a party when he chose, spend days watching soccer, or cut a high-dollar international deal involving industrial products; on the other hand, this same someone was equally happy in the wilderness, wearing simple cotton clothes while impervious to heat or cold. Here was a man who could kill a grizzly with a punch, a man who had once spent two years living in an isolated cave in the mountains practicing meditation (surviving on roots and plants), a man who spoke with spirits and healed the paralyzed.
+
+A true man of both worlds.
+
+“I know how to go about doing your book,” I said.
+
+He glared at me. At the moment he was more interested in his coffee. I caught the drift of his thoughts: Why don’t you run off somewhere and play, little boy. I grinned even wider, and suddenly he couldn’t help laughing along with me. “All right, tell me,” he said.
+
+I did, outlining my approach.
+
+He was grumpy. “I see,” he said. “You know I can demonstrate only in front of students or patients.”
+
+“That will be a stumbling block, but I’ll see what I can do.”
+
+“And I can’t make money from the demonstration. If you film me demonstrating, I won’t be able to earn a penny. Remember my vow.”
+
+“So donate the money to a charity.”
+
+He shot me a piercing glance. He liked the idea. “You know,” he said, sipping his coffee, “I have always wanted to build an orphanage.” John straightened and looked at me with renewed interest. “Not that I think that it would sell,” he continued. “Neikung has always been for the few. Can you imagine the average man practicing hours every day?”
+
+“No,” I replied, “but the average man doesn’t study nuclear physics either. That doesn’t mean that there are no such things as nuclear power plants.”
+
+He smiled and sipped his coffee. “Let us hope that your example is not appropriate and that the same will not happen with neikung as did with nuclear power.”
+
+“You mean the chance of its being used destructively?”
+
+“Yes.”
+
+“I don’t think so. Not if everything is open, aboveboard, and available to all mankind. My main worry is protecting your privacy.”
+
+“Don’t be concerned about that, Kosta.”
+
+“I mean, reporters will come from all over the world and harass you.”
+
+“They cannot enter my home if I do not allow them to, and if they are too annoying and impolite, I will send them away.”
+
+Brrr, I thought. John was a practical joker as well as being a paranormal; I pitied the poor journalist who went too far, anticipating an exclusive. “Also, you will be swamped by thousands of sick people hoping for a cure.”
+
+“You’re not going to print my address, are you?”
+
+“No, of course not.”
+
+“Fine. Then if those people can find me, it is their karma to do so, and it will be my joy to treat them, as it has always been.”
+
+John saw about ten patients a day, usually in the morning. I wanted to be sure that he understood it might go up to fifty a day, and told him so. He was unperturbed.
+
+“I have considered all this before, Kosta. None of it matters. The real problem will be the Chinese, who may come over to challenge me.”
+
+“What?” I was flabbergasted.
+
+“There are at least ten Masters in China who are like me,” he said. “One of them or all of them may want to come over and challenge me.”
+
+“Why? What the hell for?”
+
+“Because it’s tradition.”
+
+“You’ve got to be kidding me!”
+
+It was John’s turn to be amused; I was getting hot.
+
+“You don’t need to reproach me, Kosta,” he said. “I understand you completely. But you have shown me repeatedly that you really do not understand Chinese culture. Unfortunately, we Chinese are, for the most part, racist and ethnocentric. There is the chance that many kung fu Masters will be affronted by our opening up the truth behind Chinese esoteric science to the scrutiny of the West. Now, that really doesn’t matter, since many of those insulted probably do not know the precise truth themselves. Also, there is a cultural tradition in China that one kung fu Master may challenge another in order to determine the most powerful style; many martial artists do not question this, but follow the tradition without hesitation. It is what is expected of them, you see.
+
+“One of my dreams is to be able to go to the Chinese people and show them five students who have completed Level Four, one from each race of man. I would like to go even farther and put one such a man in each country if I can. Like you, I believe that it is time for humanity to move on and leave the restrictions of the past behind. But there are people in China who, having been trained in the traditional manner, have beliefs other than my own. Some of them are much more powerful than I; those are the ones you don’t have to be afraid of, Kosta. Since I am no threat to them, they will do nothing against me.”
+
+“Like when Liao Sifu, who was at Level Forty, attacked Mr. Lim, who was at Level Fifty-One,” I said. “Lim just shrugged it off.”
+
+“Yes,” he said, “because it was like a child attacking a man, you see? The real danger is from someone who is plus or minus five levels from me, because then he will want to fight. In that case it comes down to martial technique, not levels of power.” He took a sip of coffee. “One of us may die,” he added softly.
+
+Like hell, I thought. You are too precious to humanity to risk. “How can someone be so advanced,” I said, “and still be so stupid?”
+
+“Don’t be so quick to judge,” he said. “Most of these people live in the wilds of China and have nothing to do with the modern day. Their traditions are all they know.”
+
+I thought of the television series Highlander; duel of the immortals come to life . . . how asinine!
+
+One of John’s students entered the room at that point. He had been removing his shoes at the entrance and had heard the gist of our conversation.
+
+I knew the man. He was a Level Three student, a former kung fu Master of the praying mantis style, and quite a good fighter.
+
+“Why are you so opposed to honorable combat?” he asked.
+
+“Because combat for the sake of combat is stupid!” I almost shouted. “Look, we Greeks gave up such nonsense after the Trojan War more than three thousand years ago! That’s why we came up with the Olympic Games in the first place; we were tired of our bravest men killing each other just to prove who was the better fighter.”
+
+“And what if I were to challenge you?”
+
+“To the death?”
+
+“Not necessarily.”
+
+“Then I would fight you in the spirit of a contest, with my prime interest being that neither you nor I were hurt. I would rather lose than hurt you, for example.”
+
+The above was not true; I hated being challenged as much as the next man and would rise to take the bait like any other serious martial artist. I had even injured a few people in the process. It was true, however, that I felt sick to my stomach after every such event, and at the moment I was representing a point of view, not my own faults.
+
+“And if I were to challenge you to a fight to the death?”
+
+“What for? Just to see who was the better fighter? I would consider it an act of war and go after you with everything I had. That is, I would use technology and chemistry and modern techniques until I killed you. I would shoot you in the dark from two hundred yards away with a sniper rifle given the opportunity; I have been trained to do so.”
+
+“And if the two of us had personal differences? Serious personal differences?”
+
+I squirmed; he had me. I was all for dueling and severely disappointed that it had been made illegal. In my opinion dueling had been outlawed by the ruling classes in the past century to prevent their increasingly flaccid progeny from being slaughtered on the field of honor. I was trying to convince the others, though, that fighting to the death just to see who was the more skilled fighter was stupid as hell. Why battle when you could instead become friends and share a few beers together?
+
+“Then we would fight face to face,” I growled.
+
+He laughed. “In the Orient you Greeks have a reputation for being fierce warriors, both in the past centuries and in modern times. Your people won honor in Korea, for example.”
+
+“Yes, damn it, for life and home and to protect the innocent, but not just for the fuck of it! Never for that!”
+
+John was displeased with my outburst and stood up from his seat and went away. When he came back, I had calmed down.
+
+“Can you imagine,” I asked him, “what it would be like if four or five people like yourself could get together and work in harmony, something like a Western university or a research center,*22 rather than fighting each other? Can you imagine sharing notes and experiences with a man like yourself?”
+
+“I have wanted to do so; you are preaching to the choir, Kosta,” he said softly. “I have gone to China twice looking for people like myself, hoping to find a brother. I was unsuccessful both times.”
+
+“But you know of their existence now?” I asked.
+
+“Yes,” he said. “I know that there are for sure two and I can sense eight more. I think that there are at least ten.”
+
+He leaned back in his chair. “A few years back,” he said, “three of my Level Three students went to China and stayed for a month, looking for neikung practitioners. They searched everywhere, Kosta; in Taoist centers, at the Shaolin temple, in the major cities. They found nothing, nothing at all. Finally, on the day before they were due to leave, a shopkeeper in Beijing said to them: ‘Hey, I hear you are looking for neikung masters. Well, you can be at such-and-such a park at four o’clock in the morning. There is an old man who comes and practices t’ai chi chuan there; he is a great Master.’
+
+“So they went to the specified place and hid in the bushes nearby. Promptly at four o’clock, an old man did appear and began to practice his t’ai chi. When he finished his form, he walked over to a large boulder (they tell me it was a yard tall) and passed his hand over it. Then he stepped away from it and, from a distance of ten yards or more, hit it with ch’i. The boulder cracked in two.
+
+“My students leapt out and kneeled, asking for permission to speak to him, but he ignored them and walked away; they did not dare stop him. He had known they were there all along, of course, and had simply wanted them to know that they were nothing, that their abilities were those of children.”
+
+“Sifu,” I asked, “do these people understand the shape the world is in and what lies ahead for us? Do they know how much they can contribute, that possibly with their assistance we can avert disaster for the whole human race? You, the ten of you that remain, you must work together!”
+
+“Kosta the innocent dreamer,” he said. “Do you expect that we will all meet, suddenly become good friends, and create a new science out of the traditions of the past?”
+
+“Why not? There are so few of you left that each one is precious beyond compare. Why not create a new science? You know, like the Jedi in George Lucas’s Star Wars, who combined technology with internal mastery. The best of both worlds, Sifu.”
+
+He smiled kindly. “It is a good dream, Kosta,” he said. “Unfortunately, I am not the one you have to convince.”
+
+“Do you want to know what I believe in?” I asked.
+
+To my chagrin both men groaned. “I’m not sure,” John laughed. “But I don’t think that we’re going to be given a choice, in any case.”
+
+“I believe that humanity has grown along two different paths,” I said. “In the West we have taken a yang approach, turning outward. We modify and catalog our environment to suit our desires. Our science is a yang science, our lives are yang lives. In the East you have taken a yin approach, turning inward. You modify and train the human being, in both mind and body, to become potent and complete in the environment that nature has already created for you, to reach your full potential while altering nothing. Both approaches, Eastern and Western, have to do with cultivating power, but since each has been pursued along different lines, neither approach is correct or complete on its own. Well, the time has come for yin and yang to come together, like Level Four. It is time for humanity to develop yin-yang kung.”
+
+There were so many other things that I wanted to say to them, but the language barrier prevented me from doing so. Intuitively, I knew that they had understood the gist of what I had just said, but it was the details that I wanted desperately to discuss with them. We had gone too far in the West, and it was time for people like John, the last true representatives of the opposing pole of man’s development, to save us from ourselves.
+
+The industrial process had certainly been both a blessing and a curse for the human race. It had allowed us to reach new heights of technological development. On the other hand, in separating the craftsman from his product, it had begun what was to be a long process of segregating people from each other and from the world around them. In essence both the industrial process and consumerism were grounded in the process of isolation, of separation. Each individual did his little part; only those in the upper rungs of society could bring it all together. The East, however—and Taoism in particular—were founded on synthesis; it was in unity with the world that the individual found his strength. The true Taoist did not build walls between himself and the world, human or otherwise.
+
+We had to learn that all over again. It was time.
+
+“Look,” John said kindly. “We all approach life in a way that reveals who we really are. No one is ever above this. Sometimes it is life itself that tests us, exposing our weaknesses to scrutiny. Practitioners of kung fu systems are not exempt; sometimes circumstances draw us into battle with each other; it is our karma, if you will. These people are not evil. It is simply their way to test themselves. Can you understand this?”
+
+I kept thinking of the Highlander TV series. “I understand your words,” I said, “but I disagree with this reasoning.”
+
+“Interesting,” John said suddenly, stood up, and walked away.
+
+“You know,” the other man said conspiratorially, “John himself used to challenge people, and be challenged by people, all the time when he was younger. He always fought; he never turned down a challenge. I myself am an example. I used to practice and teach the mantis style; I defied John because I didn’t believe the stories about him. He beat me and since then I have become his student.”
+
+“What happened?”
+
+“What do you think? It is impossible to fight someone with power like that. For him, it was like fighting a baby.”
+
+“But he didn’t hurt you.”
+
+“Of course not! Do you want to hear the story of a typical challenge?”
+
+“Sure!”
+
+“John had gone to the United States, to California, because he had heard that there were people in the Chinese community there who had mastered ch’i. He looked everywhere and found nothing. Finally he did find one guy in San Francisco who was a ch’ikung master. John asked to see a demonstration.
+
+“Well, the man took two clay pots, one in each hand, and squeezed, exhaling with force. The pots shattered into pieces. The man looked at John; John said nothing. Then the man took a nail and drove it into a tabletop, pounding it in with his fist. Still John said nothing. Finally the man asked a student of his to get a machete; he stood there performing the ch’ikung called Iron Shirt while allowing the student to attack him with the machete. The student could not cut through the man’s flesh.
+
+“John turned to one of his students, whom he had brought along, and sent him out on an errand. Then he addressed the ch’ikung master.
+
+“‘Finished?’ John asked.
+
+“‘Yes,’ the man replied, a bit put off.
+
+“‘Good. Do you have any coins?’
+
+“‘Coins? What sort of coins?’
+
+“‘Oh, anything will do.’
+
+“The man gave him two quarters. John put them in the center of his palms and squeezed. He handed them back to the man folded in half. When the man saw the coins, his eyes almost popped out of his head.
+
+“‘Do you have a chopstick?’ John asked.
+
+“The man found a chopstick for him, and John pushed it into and through the tabletop with his palm, right next to the nail. The ch’ikung master was silent. Then John’s student came back; he had managed to find a straight razor at a local cutlery shop. John gave the ch’ikung master the razor and asked him to cut him anywhere he liked. Try as he might, the man could not hurt John, even though in the end he put all his power and emotion into it.”
+
+“What happened then?” I asked.
+
+“Nothing. The man had lost the contest.”
+
+“Did he become John’s student?”
+
+“No. He was too proud.”
+
+“Do you know why the man lost?” John asked suddenly from behind us. He had crept up silently and was listening in.
+
+“Because he had only yang ch’i?” I replied.
+
+“That’s correct. He was a dedicated practitioner, but he didn’t have all the proper information. What he did was ch’ikung, but not neikung. A man can train all his life and not get anywhere unless he is correct in his training. It doesn’t matter how much you train; only how you train in whatever time you do practice.”
+
+“For us in the West,” I said, “meditation is difficult.”
+
+“Yes,” he said. “It is difficult to sit still in our day and age, but stillness is the key to success in the end. We are overstimulated by our environment. It is hard to keep your thoughts in the present moment, isn’t it? You are always looking ahead, looking back, worried about this, angered by that. You must put your mind on where you are now, not where you were or where you want to be.”
+
+“How do I do that?”
+
+“I cannot tell you. Each must find his own way.”
+
+Great, I thought. Hope I manage it some day. I asked, “Sifu, Level Four is completed strictly by meditation, isn’t it?”
+
+“Yes,” he said. “Meditation is most important. You balance your conscious and unconscious minds when meditating. In this day and age we have come to ignore our limbic system, our stem brain, concentrating instead solely on our forebrains and plain logic. But this is unnatural and limits our capabilities. It is like using only one hand when you have two available.”
+
+“But how can we be unaffected by all the stress and hurry in our lives?” I asked.
+
+“Difficult. You have to make conscious choices regarding your lifestyle. For example, to complete Level Four, I left my home and went into the jungle for a year. I did this in order to reach a state of total calm. I reverted to the primitive; this is most important. Your mind must be utterly still for yang and yin to come together. I myself managed to complete Level Four within a year of finishing Level Three, you know.”
+
+“What was it like?”
+
+“You become very weak in the endeavor, perhaps weaker than you were when you started training in the first place. You coax the two centers to go together like lovers, positive and negative. The first time I was successful and they met, the power was such that I fainted, as I told you before. But the book my Master had given me on inner power said: ‘Ignore the pain. Don’t focus on it; if you do, it will become too much.’ I followed that advice, but the next time I tried, I couldn’t stand it either. It was on my third try that I grabbed the power and held on to it for ten minutes. Then it was mine.”
+
+“And then you became as you are now?”
+
+He laughed. “Of course not! I still had to progress, Kosta. You know, when you are at Level Four, you have to sweat and struggle for fifteen minutes for the power to come out. It was when I finished with Level Five that I began to use it.”
+
+“So you have the battery in your belly but you still have to hook up the cables.”
+
+“Of course! And just how powerful you become depends on how many cables you are able to hook up, at first.”
+
+“At first?”
+
+“Yes. It becomes more complicated as you go on.”
+
+“But when someone completes Level Four, he is a hsien, an immortal, correct?”
+
+“Not in my opinion. I think that someone has to be more than Level Thirty to be considered a hsien.”
+
+I was going to ask why, but I could see that John was in no mood to continue the conversation. His son Johann saved the day; he came over and challenged his father to a game of Ping-Pong.
+
+John could never resist a challenge.
+
+### Chapter Seven
+
+### YIN AND YANG
+
+Titan! to whose immortal eyes,
+
+The sufferings of mortality, seen in their sad reality,
+
+Were not as things that gods despise;
+
+What was thy pity’s recompense?
+
+A silent suffering, and intense; the rock, the vulture, and the chain,
+
+All that the proud can feel of pain. . . .
+
+George Gordon, Lord Byron, Prometheus
+
+Andreas was an Aussie of Polish extraction with all the exuberance and openness of the stereotypical Australian—a younger form of Paul Hogan, if you will. He was a brother student; we had met in Java at Chang Sifu’s home during one of my trips there. Being around Andreas meant being around his incessant deluge of beer and cigarettes; usually it was fun.
+
+Andreas had also encountered Chang Sifu under circumstances too bizarre to be coincidental, having searched for him previously for nine years after seeing Ring of Fire. We had shared many strange experiences under the guidance of our teacher, and traded notes when and where we could.
+
+At the moment we were once again on our way to the prawn farm, riding in a van at high velocity as John negotiated the Javanese roads with his usual flair. With us was Handoko, a Chinese man who was also a brother student, a good friend, and our reliable translator to Chang Sifu during those times when the discussion became too “deep” for conversational English.*23 Handoko had a problem with his right leg, a congenital neurological disorder that had remained uncured until he had met Chang Sifu several years before. After continual treatment, his leg was coming back; nerves that had been dormant for thirty years were springing to life. It was incredible to witness. Each time I visited my teacher I could see my friend’s leg becoming stronger and stronger, the muscles more pronounced; the circumference of his thigh, once atrophied and emaciated, was larger and more powerful on every occasion.
+
+Sifu was keeping us entertained with a steady flow of stories about his youth, his training, and his teacher. He had promised us an unusual demonstration that evening as well, one by which he would show us what the opposing forces of yin and yang were truly like; we were all eager for the show and excited by the journey. Sifu himself had asked us out to the prawn farm, and this was itself unusual; he typically just told us to wait until he had returned.
+
+I had finished Level One and was beginning Level Two; the hardest parts were ahead of me. So far I had not trained seriously but rather matter-of-factly. A long series of personal problems, ranging from my father’s death from lung cancer to a string of financial setbacks, had impeded my practice considerably. These problems were compounded by the fact that I had managed thus far to read everything in print in English on neikung, ch’ikung, and Taoism; the many theories and methods put forth had confused me greatly and made me waste a good deal of effort. It was only recently that I had come to understand the two points my teacher had put forth from the beginning. The first was that, although the teachers of his lineage had come from Taoist centers and many of his theories coincided with Taoist principles, he himself was not really a Taoist. And second, there were as many methods of neikung and ch’ikung as there were Chinese Masters; you really should not try to progress by studying what is in print. “You will only confuse yourself that way,” John had said. I had found that, as far as my own practice was concerned, he was correct. Neikung and ch’ikung were essentially manifestations of Chinese science and philosophy; they had adopted various religious trappings over time simply in order to survive. Being by nature a scholar, though, I had to put it all together historically and culturally before following a given path. Having satisfied myself that I had done so, I could concentrate on my training.
+
+We stopped at a roadside restaurant and wolfed down sizable portions of stale food. My teacher’s place of business was close by; he drove off to run an errand and left us there. We sat around drinking warm Coca-Colas.
+
+“What do you think he’s going to show us tonight?” Andreas said. His pronunciation was rather like Crocodile Dundee’s would have been after a week of drinking Foster’s in the outback. Andreas tried to shove a cigarette my way; his fingers were nicotine stained from the habit.
+
+“Who knows. Something amazing,” I said, making a face and throwing the intact cancer stick into a nearby bin with relish. I was tired and caustic. A stomach disorder had left me ten pounds lighter; my clothes hung on me like rags.
+
+“Oh come on, Kosta. Don’t be such a grouch; lighten up a little.”
+
+“You know,” Handoko said to Andreas, “Kosta is your senior; you must always address him respectfully.”
+
+“Bullshit.”
+
+“Myself also. We are older, you are younger, we have seniority.”
+
+The strong Confucian ethic that bound all expatriate Chinese was an endless source of suffering to us Westerners; we did not agree with it and often got into trouble because of this. As a Greek, while I believed that age should be respected, I also knew that there were a lot of stupid old men out there. The thought of kowtowing to someone simply because of his age (or wealth) made my blood boil.*24 You should understand that, while in the West we repeatedly find in literature the image of the parent dying to save his or her child, under the Confucian ethic these roles were reversed; it was the child who dutifully died for the parent. It was an alien and strange philosophy for me, and I wasn’t buying any. In the years that followed, my contempt for Confucian morality would get me into trouble.
+
+Andreas simply could not stomach the thought of me being his senior.
+
+“Kid’s getting hot,” I said, and we all finally laughed.
+
+“I’ll tell you what I’ve seen,” I told Andreas. “Last year John wanted to show me what the yang was like. It was night. He had just finished playing Ping-Pong with Johann, as they do every evening. Sifu took the Ping-Pong ball in his left hand and held it in the center of his palm. He opened his hands and held his right palm about two feet away. Suddenly the ball pulsed with a bluish-violet light; it made a noise, too, sort of like a canary singing. Bluish white sparks flew from the ball toward his right palm; they were like miniature lightning bolts. He kept it up for a few seconds and then handed me the ball. It wasn’t overly hot, but it was warm. I did my usual thing and cut it in half on the spot, which pissed off everybody, because it was the last ball in the house and they wanted to continue their game. But I had to make sure that there wasn’t any circuitry inside the ball.”
+
+“Big Trouble in Little China,” Handoko said, referring to a similar scene in the opening sequence of the film by John Carpenter.
+
+“Yeah,” I nodded, but my mind was elsewhere. I was thinking, as I had the evening of that particular demonstration, of Wilhelm Reich’s work in the 1940s and 1950s. Reich had stipulated that the particles of the unknown lifeforce he had discovered, which he had called the orgone bions, were blue. This was almost the same color the yang ch’i had become before my very eyes when my teacher had contained it by force of will. And ch’i was, essentially, lifeforce.
+
+There were reasons why this particular demonstration was the most important of all that I had seen: It defined the nature of the yang ch’i. First of all, the Ping-Pong ball’s surface was made of solid nonporous plastic, while the ball itself was hollow. I had immediately asked John if he could duplicate the demonstration with a solid-rubber ball, and he had replied in the negative; the ball had to be hollow for this particular test to work. His statement implied that what I had witnessed was not a surface phenomenon. Rather, the energy had been transferred inside the ball, where it had shone much like a common lightbulb. On the scale of molecular physics, this also meant that the energy John called the yang ch’i was neither a particle nor a wave, but both.
+
+I was convinced that this demonstration indicated that the yang energy was a solar phenomenon, just as the Chinese classics stipulated.
+
+Wilhelm Reich had died in federal prison in 1957 following a witch hunt by the U.S. government during which his work and notes were seized. Had he discovered the yang ch’i and been persecuted by the powers that be, who didn’t want such knowledge to become common? This question frightened me; I was alarmed by what I would be facing when it came time to do Sifu’s book.
+
+The possibility that the yang ch’i was colored blue was important to me personally for one additional reason. Throughout the eastern Mediterranean people had historically worn blue beads or blue talismans to ward off the evil eye. This practice dates back to Neolithic times and continues today. Could it be that the wearing of blue was simply using color of yang as defense against the power of yin energy? It was an exciting speculation.
+
+“His right hand became completely yin, his left hand yang, so sparks flew between the two,” Handoko said.
+
+I nodded, still thinking of Reich and his orgone.
+
+That evening, sitting on a couch in John’s cozy office, the three of us broached with him the question of the exact nature of yin and yang. John looked at our faces, ordered coffee for four, and sat back comfortably in his office chair; he knew it was going to be a long conversation.
+
+“Yin and yang,” he said softly, “exist in the world. They are universal forces found in all of nature, from one end of the universe to the other. They are not poetry—they are actual, physical forces, there for all of us to experience and observe.”
+
+“Where does the yang ch’i come from?” I asked.
+
+“It is in the air. Nature creates it, life uses it. All things that are alive have both yin and yang ch’i.” He pounded his desk. “This is yang. Of itself it is lifeless. For life to exist, a body must have both yin and yang.”
+
+All things carry the yin on their backs and enfold yang within; when the two combine, life’s energy is created harmoniously. This stanza from the Tao Te Ching leapt into my mind once again; it was intriguing how Chang Sifu’s teachings both complemented and contradicted the available literature on Taoism.
+
+“When you say all living things, do you mean plants, animals. . . ?”
+
+“Everything! Everything that is alive has yin and yang ch’i.”
+
+“Where does yin ch’i come from?” Andreas asked.
+
+“From the earth. The yin comes from the earth. It is some kind of field phenomenon that feeds our lifeforce. It can be blocked by insulators. For example, if you have a carpet made from synthetic materials in your house, the yin ch’i cannot pass through it. That’s not so good for your health.
+
+“The yin ch’i enters the body through an acupuncture point that we call hui yin, he added. “It’s located between the urinary tract and the anus.”
+
+Wow, I thought Father Sky and Mother Earth, you do indeed give us life. Just as all the ancient cultures of the world believed. And we as a species were destroying both in our quest for gold. I wondered if there would be clean air enough in the future for the next generation to get its share of yang ch’i. Or even find a place with trees in it to sit quietly and gather yin. Probably not.
+
+“When we train for Level One, do we gather only yang ch’i?” Andreas asked.
+
+“No. You gather both yin and yang, because the two always go together, struggling, one always trying to complement the other. But inside your dantien, you put only yang ch’i. The yin ch’i goes elsewhere in the body. It is useless to you before you finish Level Four.”
+
+“And for Level Two,” I asked, “we compress the yang ch’i in our dantien, correct?”
+
+“Yes.” John said. He pulled out a sheet of paper, picked up a pencil, and drew a circle on it. “Say this is the dantien, right? First it is empty; then we fill it with yang ch’i. So:
+
+![image](OEBPS/Images/image-P756CASF.jpg)
+
+LEVEL ZERO
+
+![image](OEBPS/Images/image-WG086VTR.jpg)
+
+LEVEL ONE
+
+“Then, for Level Two, we compress the yang ch’i and actually introduce twice as much into the same area. We make it hard, so to speak. This is what you are working on now, Kosta. As you know, you must be sexually abstinent to complete this training.” On the paper he drew:
+
+![image](OEBPS/Images/image-2T7708PG.jpg)
+
+I was not very happy about the sexual abstinence part, but the results were undeniable and there was no way around it. Chang Sifu’s explanation had been very different from that put forth by the other theories I had read. According to mainstream Chinese literature, the idea was that the energy in the sperm of the male (the Chinese word ching means both “sperm” and “essence”) was transformed into ch’i. Chang Sifu had simply said that sexual abstinence kept “the gates of the dantien” open so that the ch’i could be compressed. I had no idea whether the actual methodology followed one or the other model or both; I did know that when training consistently, I had no problem with not ejaculating, whether I had nonorgasmic sex or simply was abstinent. I had no idea if that meant that the ching was being transformed into ch’i.
+
+“And Level Three?” I asked.
+
+He surprised me by answering. “In Level Three we make the dantien mobile. We can make it move, in other words. Like this:
+
+![image](OEBPS/Images/image-ZW07PAHF.jpg)
+
+“We move it in these four directions at first, like an X; after that we can make the dantien move anywhere,” he continued.
+
+I thought about that. I had a friend in Greece who was a Korean Master of Tang Soo Do and a practitioner of neikung. He had on several occasions publicly demonstrated his prowess by breaking two-by-four wooden beams, inviting anyone in the audience to attempt the feat before he did (no one had dared). This man had a “ball” in his belly at the dantien point, a solid mass that he moved around at will. Manipulating the ball as John had indicated, this man could pass ch’i energy into his arms and legs. One physician, upon examining him, had thought my friend had cancer when he felt the huge lump; the doctor had gone through the roof when my friend had caused the ball to dance around. I said as much to John.
+
+“It is the same for us,” he replied after a long silence. “This man is at least Level Three.”
+
+“You mean the ball that moves around in his belly corresponds to our Level Three?” I asked.
+
+“Yes. It is a solid lump of hardened yang ch’i he can tap into, and use, at will.”
+
+“Sifu, what is the difference in ability between, for example, someone at Level Five and Level Six?” Andreas asked.
+
+“The power doubles,” John said simply. “For each level after Level Three, the power doubles.”
+
+“Wait a minute,” I said. Handoko, Andreas, and I looked at each other, shocked. “Sifu, do you mean to say. . . .”
+
+“Yes. Each level has twice the power of the previous.”
+
+“So Level Six has twice that of Level Five, Level Seven twice that of Level Six, and so on,” Handoko said slowly.
+
+“Yes,” John replied simply.
+
+Handoko and I looked at each other again. My mouth fell open. It must have been very surreal, like a silent movie.
+
+“Jesus,” I said.
+
+The implication was that the levels of power progressed exponentially, following the algebraic law 2(x-3). Someone at Level Four was two times stronger than a human being. Someone at Level Six was 2 x 2 x 2 = 8 times more powerful. And someone at Level Thirty was 2²⁷ times (or roughly 134 million times) more powerful than the average human being, at least from the standpoint of lifeforce. Oh, I was sure that there was an algorithm involved and that the numbers did not exactly follow a linear progression as John’s tradition seemed to suggest, but even if he were off by 50 percent, so what? Someone at Level Thirty would still be . . . a god for all practical purposes.
+
+I was glad I was sitting down. It was imperative that such power not fall into the wrong hands in our day and age. That included not only the criminal element (John’s stories had indicated that such power could be achieved regardless of an individual’s ethics) but Consumer Products International as well. There was no telling what a multinational corporation could do with such a force behind it. Or even a government agency.
+
+“You know,” John said, “in the entire history of China, there have only been two people who have made it all the way up to Level Seventy-Two. One was Tamo, or Bodhidharma, who taught the monks at Shaolin. The other was Chang San Feng of the Wutang-Pai, who was also one of the Headmasters in our school’s lineage.”¹¹
+
+“Wait a minute, Sifu,” Andreas said. “Is this the same Chang San Feng they say founded t’ai chi chuan?”
+
+“I can’t tell you whether or not he founded t’ai chi,” John replied. “I do know that he studied for a while at the Shaolin monastery, and that after a time in isolation he made it up to Level Seventy-Two by studying Taoism. He did found the internal school of kung fu, of which we are a part. We trace our lineage back to Chang San Feng, you know.”
+
+“Sifu,” I asked slowly, “when do you think that Chang San Feng lived?”
+
+“Almost a thousand years ago,” he replied. “Why?”
+
+Sung dynasty, I thought. Just like the stories about him claim. “Because different records place him at different times in Chinese history,” I said. “Some say that he lived to be five hundred years old. Others say that he is still alive today, that he never died.”¹²
+
+John was silent. “He was Level Seventy-Two,” he said simply.
+
+“Could he still be alive?”
+
+“No. He lived to be two hundred and died like any man. So did Bodhidharma.”
+
+“Sifu,” Andreas said, “will you tell us about Level Four now?”
+
+“If you wish. When we are finished with Level Three, we send our yang down to the hui yin. There it gathers as much yin as we have sent down yang. After a time, maybe even months or years, yin and yang rise together like this:
+
+![image](OEBPS/Images/image-H9WPXMRR.jpg)
+
+“The white circle is the yang, the black the yin. They float around inside the body, and the pain is incredible, constant, unbelievable. Only if you have the discipline to ignore it can you control them and put their power inside your dantien. At that point, they become squeezed together and take this shape, like the t’ai chi symbol.”
+
+![image](OEBPS/Images/image-WU108PFH.jpg)
+
+I had seen it before, and so was not as surprised as the other two.
+
+“If you are successful,” John continued, “by forcing the two together, you also force them to react. Remember, they are not like electrical poles; they do not attract each other, but repel. This is how the spark, the lightning bolt between the two is generated, and you begin to become as I am.”
+
+“And if we are not successful?” I asked.
+
+“Then you will probably die,” John said softly. “There is no point in doing this type of training unless you are ready to die for it.”
+
+There was an awkward silence.
+
+“For example,” John continued, “Do you know of Mo-Tzu?”
+
+“Yes.”
+
+“Mo-Tzu was the founder of our lineage. He knew about yin ch’i and yang ch’i, but he had no idea how to put the two together. So he experimented with his students; he told one man to try it this way, another to try it that way. Many people died; to these men we owe a debt, because without their sacrifice we would not have discovered the precise method of bringing the two energies together.”
+
+I did not know what to think of this; it was certainly cold, ordering men to their deaths in a sort of human laboratory. On the other hand, few cared to remember how our governments had gleefully absorbed the information derived from the Nazis’ laboratory experiments on Jewish prisoners. And how much of our current medical knowledge was based on this data? As a society, we had forfeited the right to judge such things.
+
+“Was Mo-Tzu himself successful?” I asked.
+
+“No. He never managed to make yin and yang meet. It was an unknown teacher of the school of Mo-Tzu, the Mo-Pai, who finally managed it hundreds of years later. After him there were various Headmasters at different levels, until Chang San Feng, who became the first to reach Level Seventy-Two. He left us a book outlining the method; it was this book that Liao Sifu left to me. If and when you reach Level Three, you may copy it. But you have to learn to read ancient Chinese first.”
+
+“Can you show us what yin and yang are like, individually?” Andreas asked.
+
+“Yes. Touch my hand.” John extended his arm, and Andreas touched his fingers with his own. John sent a burst of ch’i to his fingertips; immediately Andreas pulled his hand back as it he had been burned. I had suffered the same display many times in the past.
+
+“Hot, isn’t it?” John laughed.
+
+“So when you demonstrate by setting a newspaper on fire, it’s yang ch’i that you send down to it?”
+
+“Yes.”
+
+“And what is the yin ch’i like?”
+
+“The yin is passive. It can only follow, never lead. It can absorb energy but never initiate motion. You know the rites where people walk on coals and such things?”
+
+”Yes.”
+
+“We have them in Greece as well,” I butted in. “We call them the Anastenaria.” Andreas glared at me.
+
+“When people walk on coals, it is yin ch’i that they are using,” John said. “Sometimes it is the yin of their own bodies, sometimes it is the yin ch’i of spirits. The yin absorbs the yang of the fire.”*25
+
+Interesting, I thought. According to Chinese medical theory, the acupuncture point yongquan was found on the bottom of the foot; it was associated with the kidney meridian, which was considered to be yin. Was yin ch’i stored in the kidneys, and did that ch’i somehow run down that meridian to the sole of the foot to protect an individual walking on coals?
+
+“I can show you what the yin is like,” John said. “Just a minute.”
+
+He disappeared for a few minutes. When he returned, he was holding an air rifle, the kind that you pump up to prime, and a cardboard pack of lead pellets.
+
+He picked up an empty fruit juice can; the alloy was not the thin aluminum of Coca-Cola cans, but the thicker “tin” metal found in tuna cans, for example. John began to pump up the air rifle; after about twelve full cycles, when he could no longer press down the lever with muscular strength, he inserted a lead pellet into the chamber. He put the can on the ground with a thick phone book behind it. Placing the muzzle of the rifle about an inch away from the can, he pulled the trigger.
+
+The can was pierced through both sides diametrically. The air rifle had power; it could easily wound human flesh.
+
+“Okay, Handoko. You first,” John said. He handed me the air rifle; I pumped it twelve times and placed a pellet in the chamber. John told Handoko to place his palm over the muzzle of the air rifle. “When I tell you to shoot, pull the trigger immediately,” John said to me.
+
+Standing behind Handoko, John placed the first knuckle of his right index finger into the small of Handoko’s back. “Shoot!” he said, and I did. The rifle went off with the characteristic chuff made by such weapons.
+
+Handoko opened his hand. The pellet lay in his palm.
+
+It was undeformed. Whatever had absorbed the momentum of the slug had not damaged it in any way. Nor had Handoko been harmed in the least. Neither had he felt anything.
+
+“Me next,” I said. I pulled a lead pellet out of the packet. With my penknife, I scratched the surface of the slug’s point. I would recognize it in this manner; it would be impossible for someone to swap it with another. I pumped up the air rifle twelve times, put the marked slug in the chamber, and handed the weapon to Handoko. I grasped the muzzle in my right hand.
+
+John came up behind me and pulled my shirt out of my pants. As with Handoko, he put a knuckle up against the small of my back, in the area of my kidneys.
+
+Suddenly I felt like I was being pumped up with air. I could feel my belly distending and my bladder being squeezed; I wanted to pee. There was no other sensation; no cold, no rush of energy, no electrical discharge, nothing. Just the feeling of fullness.
+
+“Shoot!” John shouted.
+
+I heard the chuff and looked into my palm. I was holding the marked pellet, undeformed. I had not really felt it hit me; there had been a slight sensation, the lightest touch, but that was all.
+
+“Strange,” I said.
+
+I was intrigued; the air rifle had pierced both sides of the “tin” can when shot at point-blank range. As a materials engineer, I reckoned that the alloy failed at a stress of about thirty thousand pounds per square inch (psi). In comparison, the soft tissues of the human body could not stand much more than one thousand psi. There was no way we would not have been wounded by the pellet; it should have gone all the way down to the bone, cutting through muscle and tendon as it went.
+
+And the slug was undeformed! Whatever had protected us had protected it as well. This was not an invisible, hard shield around the individual, as some authorities seem to suggest. Whatever was there had absorbed any and all the energy we chose to throw at it, and left no trace of itself.
+
+Suddenly I was dizzy, shaken by the implication. The First Law of Thermodynamics did not seem to apply in this case.
+
+And John could transfer this force to others.
+
+I shivered again, thinking of the powerful getting their hands on this type of information.
+
+“Me next!” Andreas almost leapt out of his chair.
+
+“Well, for you we’ll have to do something different,” John said. “I think we’ll let Kosta shoot you in the belly.”
+
+I was delighted and immediately began to pump up the air rifle with vigor.
+
+“Twelve times, no more,” John warned me.
+
+Andreas pulled his shirt over his head and stood there. John took his place behind him as before. I put a particularly evil grin on my face and looked Andreas right in the eye, pointing the rifle at his belly.
+
+He faltered. I can look mean when I want to; Balkan facial features.
+
+“Shoot!” John shouted and I did. There was a shocked look on Andreas’s face; he was worried. He expected the worst.
+
+The pellet fell off his belly. There was a small red bruise there.
+
+John came around and looked at the mark. “Why were you frightened?” he asked Andreas.
+
+“Because of Kosta! He had a look on his face like he wanted to shoot me!”
+
+“Nonsense,” I said. “I normally use a sawed-off shotgun for that sort of thing. Less chance you’d get up.”
+
+John glared at me, then turned to Andreas. “If you are frightened, or your emotions are going wild, the yin will not be stable, and it cannot protect you as much as when you are calm. That is why you were bruised.”
+
+I picked up the lead pellet. It was undeformed, as before. I said as much and showed it to John.
+
+“Oh yes,” he said. “I gave him the yin energy; he just threw a bit of it out of his body by being afraid.”
+
+“Sifu, can we hold this yin energy you transfer to us inside our bodies for long periods of time?” I asked.
+
+“No. You can only keep as much yin as you have yang. When I do a demonstration like this, the yin energy I give you leaches from your body almost immediately. It is a waste of my own energy, which I have to replenish by meditation.”
+
+“So you don’t like to do this very often.”
+
+“Of course not. I did it for you students, so that you can understand what the yin ch’i is like.”
+
+“Thank you, Sifu,” we all chimed in together.
+
+I was silent for most of that evening. The existence of yin energy as a phenomenon that was associated with the energy field of our planet could possibly fill in many gaps in field theory in general. What was it? John had said that its behavior was similar to that of an electromagnetic field, that an insulator could block it, and that its flow could be easily disrupted. How could any scientist characterize a phenomenon he could not trace? And how could any scientist resist such a challenge? For example, germs and bacteria float around us and through us by the billions, but we cannot directly perceive them; it was not until the discovery of the microscope that they could be traced. To do the same for yin energy we would have to first—like a new Leeuwenhoek—find a way to quantify and measure it, and then use this information to present its existence to the scientific community of the world. I was more excited by the yin than the yang; I was fairly sure that the yang ch’i would be discovered and quantified soon, with all the work being done on vital energies and psychic phenomena. But of the yin, well, the West did not yet have a clue.
+
+There would be a Nobel Prize for the scientist who identified either yang or yin energy, of this I was sure. I also knew that the current shape of the world would change once we understood ch’i—and for the better. Life and nature would no longer be denied.
+
+John had mentioned that a student had to be at least Level Three to be able to sense the yin; that a human being, by his own nature yang, cannot sense yin energy directly. Rather, a human senses the presence of yin by its reaction to the yang. Here is an unidentified force that leaves no trace of itself, that we cannot feel inside our own bodies even in excess (unlike electricity, but perhaps like gravity), but whose results I had witnessed, experienced, and felt.
+
+It was a frustrating position for an engineer to be in. I had seen the “ether” but needed a way to prove its existence to the world.¹³
+
+What was also intriguing was the fact that most people in the West think of yin and yang as philosophical concepts rather than as actual physical energies. A serious presentation placing the two in an orthological vein would be revolutionary at best. Oh, there were plenty of references in the literature to yin and yang as physical energies (particularly in martial arts books and related texts on ch’ikung), but most sinologists considered yin and yang no more than dualistic modeling, much like computer binomials. Similarly, I had seen many respected authors treat Taoism like poetry, rather than the collection of actual biophysical learning it was.
+
+I finally grinned, a particularly evil grin, thinking of the trouble I would stir up given the opportunity.
+
+Later that night I traded notes with Andreas, who had studied physics at college. He was horrified. “Keep this quiet,” he said. “Let’s digest it and see where it takes us. Maybe the world is not ready for information of this sort at the moment. Maybe it never will be.”
+
+I grumbled something uncomplimentary in return and wished him a good night. To hell with your fears, kid, I thought. Ten to one Andreas had never actually read Goethe’s Faust anyway. I could not deny, though, that he had a point. Andreas’s concerns were justifiable if you sought to simply quantify John’s powers without the proper spiritual insight, in essence subjugating Eastern science to Western. Hell did indeed gape wide its doors at the end of that road. But I reckoned the trail to success followed a more precipitous route. We had to revise Western physical theory and convince scientists to embrace the concepts of yin and yang ch’i. In doing so, the boundary between physics and metaphysics would inevitably fall, altering the world’s destiny forever. For the better, I hoped.
+
+The role model we had to emulate here was not Faust, but Prometheus. I could see that John burned with the compulsion to bring the knowledge of this particular fire to mankind. Why else accept Western students? My main apprehension was making sure that the information would become public knowledge. I wanted to shake up the status quo—rock the chairs at the top and the foundations at the bottom. I had thought of a hundred applications, and even worked out an approach toward quantifying the phenomenon. I wondered if the gods would chain me to a boulder and have an eagle eat out my liver if I made the attempt.
+
+Perhaps it would even be worth it. I would wait and see.
+
+I slept like a baby, dreaming of Byron.
+
+#### Chapter Eight
+
+### THE WILL OF HEAVEN
+
+We were having a heated argument. The issue at hand was, once again, whether or not what John was teaching could or should be labeled Taoism. The combatants were myself and Wei Chin, the Level Three student who had previously taught the praying mantis style of kung fu. Handoko was the referee, and Andreas the audience. The ring was John’s front porch, as usual, and the fight was very bloody. I had my opponent cornered, but he was tough; he managed to slip and slide on the ropes at will, avoiding my “blows.” Just when I thought I had him in the crushing grip of reason, he wriggled free and punched back hard.
+
+It was fun. No one was winning.
+
+“Taoism,” Wei Chin said, “is a religion. We are a school of kung fu.”
+
+“Yes,” I said, “but we are a school of kung fu whose Headmasters came from Taoist centers like Lung Hu Shan and Wutang-shan. Also, much of the training is very basic Taoist internal alchemy, just like you read about in the literature, and the results are very much the same.”
+
+“The training method is very different; it is not at all the same.”
+
+“Okay, but it deals with many of the same concepts. In the West, when you talk about yin and yang, or the t’ai chi state of our Level Four, or neikung, then you are talking about Taoism. The word Taoism has become synonymous with Chinese philosophy in the West.”
+
+“Yes, but for us Chinese, Taoism is the same as Tao-chiao, the Taoist religion. We in the Mo-Pai are not Taoists. You Westerners are wrong.”
+
+It was an interesting dilemma. Wei Chin was very educated in Chinese history and culture by traditional schooling; I had read everything published in English on Chinese philosophy.
+
+All four of us were speaking at once when John came outside carrying a cup of coffee; we must have been like something out of a cartoon to him. He stood and watched silently for a while, amused. “What are we arguing about?” he asked.
+
+“Taoism,” the mantis teacher said.
+
+John just nodded and pulled up a chair. “Okay,” he said, “tonight I will tell you about my own spiritual beliefs and experiences. Then you can compare my beliefs with Taoism as you wish.”
+
+There was a stunned and surreal moment of silence on the faces of us two Westerners, to be replaced by looks of avid greed. I shut up completely, and Andreas drew closer.
+
+“When I was young,” John began, “I really did not pay attention to the different things that my teacher, Liao Sifu, had told me about metaphysics. I was not really interested, you see; I wanted simply to learn to fight and to have power. But many of the things came back to me later. I have already told you how, eventually, after I completed Level Four, my Master’s spirit found me and guided me for many years. He would always come when I called him, and sometimes when I didn’t call him, more often than not to scold me for something that I had done wrong.”
+
+He took a sip of coffee and looked at me.
+
+“Liao Sifu performed many miracles, you know. It is unfortunate that none of the people involved are now willing to come forth and testify.”
+
+“For example?” I asked.
+
+“Okay, two cases. One is a student of mine who was riding on his motorcycle when he suddenly got an intense feeling that something was very wrong. He pulled over to the side of the road. Inside his wallet he kept my picture; he pulled it out and prayed up to the heavens aloud: ‘Liao Sifu,’ he said, ‘please, Si-Gung,*26 whatever it is that is happening and is a threat, please protect me and my family.’ At that very moment this man’s brother was crushed by a truck in a construction accident. Everyone thought that he was dead; it was impossible that he was alive, for a cement truck had fallen on him. When they cleared the truck from his body, though, they found that the man alive and unharmed.”
+
+John searched our faces and saw acceptance. We had seen too much to disbelieve him.
+
+“Another incident,” he continued, “was the case of the high-income surgeon whose daughter had developed bone cancer. She was hospitalized in Singapore, and the only treatment they had for her was to amputate her right leg before the cancer spread. In desperation he came to me asking for help; he was not a student, just someone who knew about me. I called my teacher and asked him whether or not he would help the doctor, and he said: ‘Oh, him. He always refuses treatment to those who cannot pay him and deals with people like cattle. You tell him that if he wants his daughter to become well, he must first give a third of all his wealth to the poor, and then every night for a week, from midnight to five in the morning, he must stay awake and beg God for forgiveness. Only then will I give him the medicine to help his girl.’
+
+“Meanwhile the daughter was under a time constraint; they had to amputate the leg within a few days to save her life. But the man believed in us because he had heard so much and decided to trust us. He gave away his money as Liao Sifu had ordered, and spent his evenings in repentance. When the week was up, he came to me asking for the medicine, but Liao Sifu would not answer my call. So the man went back to Singapore furious and cursing me. When he got there, he put his daughter through a complete examination, hoping that there was time to amputate the leg. Of the bone cancer, they could not find a trace; it was completely gone.”
+
+He took another sip of coffee. We were all silent, enthralled.
+
+“Liao Sifu’s spirit was with me for about fifteen years. In that time it was impossible not to develop a deep interest in the meta physical, since I dealt with it almost every day. I began to see spirits whether I wanted to or not, and I still remember the first time that I myself was out of my physical body.”
+
+He leaned back. “I was lying on my bed when I drifted off into meditation. Suddenly I stood there looking at myself on the bed. Interesting, I thought. That is my yang body, so this must be my yin body, and my consciousness has moved from one to the other. So I wanted to prove to myself that what was happening was real. First I walked over to the light switch and tried to turn it on. I heard the click, but nothing happened; the light stayed off. Okay, I thought, I’ll walk outside and leave the door open. So I opened the door and walked out, leaving it ajar. I took a walk around the house. Outside there were some taxi drivers sitting around on the sidewalk playing cards; I memorized their faces and what they were wearing, the license numbers of their cars, and went back inside. I made sure again that the door was open and went to the bedroom, where I saw my body on the bed. Walking toward it, I was suddenly awake, lying down. I stood up. The lights were off and the switch had not been moved; Strike one, I thought. Then I walked to the door to see what had happened there; it was locked and bolted, just as I had left it before lying down on the bed. Okay, strike two, I thought. So I went outside my home. There I did indeed find the taxi drivers, just as I had seen them, playing cards, the same faces, the same vehicles.”
+
+He looked at me. “I know what you are thinking, Kosta: The same thing happens in hospital operating rooms all the time, right? But for me, at the time, it was a new experience. And from that point on I could understand what was happening to those people who did have out-of-body experiences; their consciousness was simply moving from their yang energy to their yin energy. It was not much later that I learned to do so at will.
+
+“Anyway,” he continued, “all during those fifteen years, Liao Sifu kept telling me that it was my duty to go up to the mountains and spend time in retreat, away from other men and women. Finally, in 1992, it came time for him to leave this world forever; his term of penance was over and he could go up to God. ‘This is your last chance,’ he said to me. ‘It’s now or never.’ I had no interest in going away, I liked my life just fine; I was having a good time, and my businesses were successful. But because I had promised Liao Sifu that I would, I finally did leave. One day I put on comfortable clothes and shoes, put my passport in my pocket, and took a few hundred dollars with me. I also wore my Rolex because I wanted something that kept time well and that I could trade for money if I became desperate. I had no idea where I would be sent; I thought the Himalayas or something like that. So I told my wife I was going down to the prawn farm for a few days and kissed her and the children goodbye. On the way I handed my chauffeur a letter explaining everything, then I told him to stop for a while on the side of the road so that I could buy cigarettes. I disappeared from sight. After a few hours of looking for me, he returned home and handed the letter to my wife. She cried and cried, and so did the children, but because I had already arranged for their protection and their welfare, there was not much more I could do.
+
+“I finally wound up in the jungle, along the border between Malaysia and Borneo. The closest small village was a three-day march away; I was isolated from society. I hated the place at first. When night fell, I could not see my hand in front of my face; if I tried to light a fire, so many mosquitoes came that they would eat me alive! But it was there that my teacher had insisted I go.
+
+“There was not much to eat; I had to hunt wild boar and scrounge for berries and fruit. The funny thing was that there was a tribe of Dayak natives there who harassed me and finally attacked me openly with spears, and on one occasion arrows. I pulled down a large tree and set it ablaze with my ch’i; after that they left me alone. It must have been very frightening for them. I bet they are still scaring naughty children with stories about me!”
+
+We all laughed; I could imagine John the practical joker relishing the occasion. Poor natives.
+
+“Anyway,” John continued, “it was there that I stayed and meditated, living in a cave. It rained frequently, and food was scarce. Despite that, after a month I could stand it reasonably well; after six months I did not want to leave.
+
+“In time, something very strange happened. I could spend longer and longer periods in meditation; once I did not move for eight days. And my consciousness would fly all over the world as I desired. I saw my family in their home going about their business; I saw my friends and relatives, everyone and anyone I wanted to. All I had to do was wish to see something and I was there; if I closed my eyes, actual events would flash across my mind as if I were watching television. I wrote letters to family and friends telling them what they were doing on specific days, then made the trek to the village to mail these letters to them. They were very surprised when they received them! I remember even watching them as they received these letters—seeing the look on their faces when they read what I had written.
+
+“In that mountain I saw many spirits; indeed, spirits and animals were my constant companions. And when my consciousness had expanded, I could see spirits going up regularly. One day I became curious and decided to follow them, to see where they were going. I sent my awareness out of my body and accompanied them as they went.
+
+“The earth receded below me, and somehow there was a shift; I cannot explain what I felt. I was suddenly in a wave of blackness; around me there was much pain and anger and hate and jealousy. I left that place quickly to find myself in a field of white; there I saw many spirits around me who were very joyful. Some of them were making motions as if they were eating and drinking and invited me to join in. Okay, I thought, I’d like a piece of chicken. Without warning, a tasty drumstick appeared before me; when I grabbed it, though, I saw that it was not real, that it was an illusion for the benefit of the spirits in that place who thought they were still human. Still, I saw other souls going higher and higher. I followed them through two more levels of white energy, and beyond that point I could pass no farther.”
+
+John paused, and I checked an urge to interrupt him. There were so many questions that I wanted to ask. He was, after all, describing heaven.
+
+“After a while,” John continued, “I became worried about my physical body, because I knew that time passed very differently in that place, and I had no idea how long I was gone. I decided to return to the earth. In doing so, I passed once again through the black wave. I was curious; you cannot see anything at all in that place, but you can hear the spirits moaning. So I approached one of them and asked him, ‘Hey, how are you doing?’ (Yes, Kosta, as simple as that!) He said, ‘Oh, I hurt, I’m in pain.’ Suddenly I became very afraid, and with that strong emotion I woke up back in my body.”
+
+What do you say in response to a story like that? I had heard it in short form in the past, but that had not had the impact of this longer narration. That he had called spirits before me I no longer doubted; on three separate occasions he had spoken to the shades of the dead with me as the silent witness. While I could not, as a scientist, swear in court that he was not producing an illusion for my benefit through his undeniable powers, I would have to question the motivation for producing a fraud of this sort. He certainly had no need to trick us. I did not doubt that John could make me see something that was not there should he choose, but why would he do so?
+
+I recalled the shamanistic origins of Taoist practices;¹⁴ what he had just described was very similar to the journey of the shaman into the spirit world, including the various levels. I was very sure that John had never read Joseph Campbell; he was describing what he had seen. And he gained nothing by trickery. Indeed, he sacrificed much because his powers were very real.
+
+“Is there any way of telling if someone will become a white or black spirit?” I asked.
+
+John shot me a piercing look. “You are thinking of your father,” he said. “Well, yes, if their passage is not due to violence or accident, then usually you can tell by the look on their faces what will become of them. They get a glimpse of what lies in store for them before they completely leave our world.”
+
+My father had died with relief after fighting the cancer for half a year. Indeed, he had died consciously, waiting for all of us to gather around him before letting go of his final breath. I said as much to John.
+
+“Your father is probably a white spirit now,” he said. “But you know, because he had no yang to take with him, his nature is much simpler than you think.”
+
+“What do you mean, Sifu?” I asked.
+
+“I mean that a typical spirit is basically like our unconscious mind. He cannot think deliberately, make decisions, or create. He is subject to whatever he has brought with him.” John was silent for a time, then caught my eye and held me with his gaze. “For example,” he said, “your father can remember everything about you. He knows that you are his son. He remembers holding you in his arms when you were born. What he cannot remember is what it was like to love you.”
+
+We were shocked, all of us.
+
+“They have only yin,” he continued softly, “so what defines their continuation is simply their karma, good or bad. That is why it is so important to have yang to take with you when your time comes.”
+
+“Because that way you retain your humanity,” I whispered. John nodded approvingly. “Does having yang ch’i in our dantien somehow lessen the effects of karma?” I asked him.
+
+“No. You still have to pay for what you have done—or be rewarded. But having yang with you makes it easier all around, and more deliberate either way.”
+
+“Heaven and hell,” Andreas said.
+
+“Not really,” John answered. “None of the conditions I described is permanent. After a time all spirits return to God.”
+
+And there it was: the big question that I had danced around since I had come to know him. I could not resist. “Sifu,” I dared, “tell us about God. You mention Him frequently.” And mentioning God was not very Taoist, I thought; perhaps this was the distinction between John’s teaching and mainstream Taoism.
+
+John leaned back and looked at us one by one. “All right,” he said. “Before I went up to the mountain, in my heart of hearts, I did not really believe in God. Oh, I used to go to church every Sunday, for I am nominally a Christian, but I had no faith; I went to church matter-of-factly. When I was up in the mountain, I wanted to experience God for myself, to see if He was real or not.
+
+“I prayed and I prayed for weeks, asking God to reveal Himself to me. Finally I sat down in deep meditation and sent my awareness out as before. Every day, every moment, I kept asking, ‘God, please tell me the truth about the afterlife; which religion is correct? Please, Lord, tell me.’ I received no answer, but I kept at it with persistence.
+
+“Without warning, one day a voice boomed in the air above me. It was like a thunderclap, and it said to me:
+
+“‘Religion is like a walking stick. When you are young, you need help from your parents to walk. When you are old, you need a cane. When you are a healthy adult, you have no need for a cane; if you try to run, it will only hinder you. All religions are like that; touch God directly, and you will have no need of them.’
+
+“I came out of meditation with a start; it was so strong and so real! I had felt the words like a vibration inside me. At first I was ecstatic, but when I tried to reach the voice again, there was no answer. So after a time I began to doubt; finally, I no longer believed that it was God, just some strong spirit having fun with me. I had had many experiences of the sort with Liao Sifu, remember, and I knew that there were many such beings out there. Finally I became very angry. I roamed around the mountaintops like a madman screaming up at heaven.
+
+“‘Talk to me, God,’ I screamed. ‘If You do not talk to me, I will not believe in You!’”
+
+John chuckled to himself. “You cannot imagine what I was like,” he said. “I was very thin because I didn’t have much to eat; my beard and hair were long because I had nothing to shave with. My clothing hung on my body, and I must have smelled very bad. I moved from times of extremely deep meditation to moments of extreme rage as if someone were throwing a switch inside me; I often sat down in the lotus position in meditation and then suddenly leapt up all in one motion to go running around the mountaintops. All that time I had only one thought in mind: to speak with the Lord God. I wanted proof that He was real.
+
+“Eight days later it happened. I was in meditation at the moment and begging God to let me come to Him. Suddenly a star brightened incredibly, like a second sun, and fell out of the sky with a crash to land before me in an explosion of earth and dust. It made a huge hole and lay there, burning. A wind like a thousand hurricanes buffeted my body and shook the ground.
+
+“‘You are not yet clean enough to come to Me!’ a voice said, and I knew it was Him.
+
+“I came out of meditation with a start and opened my eyes. In front of me was a large crater in the ground. And I knew one thing in my heart that made me happy beyond belief: The voice was still with me! God was allowing me to speak with Him.
+
+“Many things I asked Him in the days that followed; I wanted to know what sort of behavior was right and what was wrong. For example, I wanted to know if fighting was okay, since I was a kung fu Master and had been in many fights. The voice told me that it was all right to defend myself, but I should never initiate aggression; many things were judged by how you felt inside. If I was afraid for my safety, I could even attack first to protect myself and my family, but there were no fine lines governing behavior; it all came down to how you felt inside.
+
+“I asked Him about hunting and killing game. I detected amusement in His voice when he answered that question, because He said: ‘You are asking Me about this because you killed a wild boar last week to eat, didn’t you? It’s okay to kill for food; all of nature is a struggle for survival. But you must never kill for sport or for pride, because all of nature belongs to God.’”
+
+John bowed his head. “Anyway, many things like that I asked Him; to some questions I received answers, to others not.” He looked up at us and smiled.
+
+Andreas broke the silence. “Sifu, are you saying that you spoke to God?”
+
+“I think so,” John said. “I spoke to an unbelievably powerful sentience. Whether it was God or some kind of angel or other spirit, I really don’t know to this day. But something came and answered my questions, and stayed with me for a long time.”
+
+“How long were you up in the mountains?” I asked.
+
+“Two years,” he said. “I came back down because my son developed rheumatoid arthritis. Western medicine could do nothing for him; my friends took him to a native healer, who simply said, ‘Only the father can cure this boy.’ So I came back.”
+
+“Did you cure him?”
+
+“Yes, with acupuncture, within two months.”
+
+“And you just knew he was ill; no one sent you a message?”
+
+“I have already told you that, when I was up in the mountains, I could see people and places far away during the time I spent in meditation. I watched my family a lot; it helped me feel less lonely.”
+
+A servant came out with tea, which we gratefully accepted. No one was willing to start up the conversation again. What we had just heard had shocked all of us more than anything John had ever said or done. Here was a man who stated very simply and directly that he had spoken to God; it was the pinnacle of human experience, and there was not much anyone could add to it.
+
+There were a thousand things that I wanted to ask him. We have lost the luxury in this day and age of being able to speak in such personal terms when describing the eternal, society and science being what they are. People don’t just sit down and ask God questions!
+
+The Lord God Himself?
+
+Why the hell not? I believed my teacher. At least I believed that he was neither a liar nor delusional. He had seen . . . something.
+
+I dared the question. “Sifu, when you spoke to God, did you ask Him what happens to our souls after we die?”
+
+He looked puzzled. “I have already described the black wave and the white wave to you,” he said.
+
+“Yes, and you said that neither condition was permanent, that after a time all spirits went up to God.”
+
+“Yes.”
+
+“So what happens next? Do we reincarnate? Do we live only one life? Do we cease to exist? What’s the story?”
+
+“I have already told you that I don’t know.”
+
+“But. . . .”
+
+“He never answered that question.” John pulled out a cigarette, lit it up, and leaned back. “I can tell you what I myself, as an individual, believe. This is not something that I teach; I have students who are Christian, Buddhist, Muslim, skeptics like yourself, and more. Neikung has no basis in religious theory. If you want my own opinions, you are welcome to them, but remember, they are nothing more than my own opinions.”
+
+“Okay.”
+
+“I believe that it is logical for reincarnation to exist, since God is very just and very fair. Why should someone suffer for something that they haven’t done? Why should one man be born a cripple and another with everything? It doesn’t seem fair or even logical. So either the universe is unjust or, if you believe in a just God, then He has planned for justice in our lives. So I believe in reincarnation.”
+
+I did not want to debate him; different religions in the history of humanity have even postulated the existence of an unjust God to explain life’s disparate distribution of blessings.
+
+“You have mentioned karma*27 to me in the past,” I continued. “The consequence of our actions?”
+
+“Action and reaction. People paying for bad actions and being rewarded for good ones. Makes sense, doesn’t it?”
+
+“Do you believe that someone carries their karma with them from one life to the other?” Andreas asked.
+
+“Yes. I personally as an individual, yes,” John answered.
+
+I had studied Buddhism for many years; one of the issues not addressed sufficiently by that religion (in my opinion) is the very obvious evolution of the species going on continuously around us, as if by divine plan. And man’s presence and development on the planet cannot be accounted for with satisfaction, even by modern science, giving rise to theories of little green men performing experiments on primates and what not. “Sifu, is evolution directed?” I charged to drive the point home.
+
+“Sorry?”
+
+“Does God have a plan for man and the earth? Is there a guiding intelligence behind everything?”
+
+“In my opinion, yes.”
+
+And there it was: the core of religion’s debate with science.
+
+“And is this God a judge?” I continued. “Does He decide everyone’s karma?”
+
+“No. We decide our own karma. God Himself interferes very little in our lives and in the judgment of our consciousness after our deaths.”
+
+“But what about the white waves and the black wave you described?”
+
+“What about them?”
+
+“Doesn’t God decide whose spirit goes into which area and how long he remains there?”
+
+“Not really; karma decides that. God basically intercedes very little in the course of affairs. We call the will of heaven jodo in Chinese. For example, that you Kosta, and you Andreas, are here is jodo. Do you know how many people have come searching for me and could not find me? It is the will of heaven that you are here.”
+
+We looked at each other. We had certainly both found our teacher under unusual circumstances—impossible circumstances, statistically speaking.
+
+“Sifu,” I insisted, “Why isn’t finding you merely just good karma? What is the difference between jodo and karma?”
+
+“Jodo comes from God,” he said. “Karma comes from us.”
+
+“So God has a plan, but it is up to us to live up to it,” Andreas said.
+
+“Yes,” John answered. “And you will reap the consequence of all your actions, whether good or bad. Karma is purely natural law, like biology and physics; jodo is the will of heaven. I cannot make things any clearer than that. For most people, jodo simply decides the time and place of their birth and the time and place of their death. But bad karma can also make your life shorter; if you are destined to live a hundred years, you may wind up living fifty instead.
+
+“For example,” he continued suddenly, “Liao Sifu could see an individual’s karma and decide to heal him or not based on that karma. He could also see jodo, the will of heaven, as it approached. Let me tell you a story. . . .”
+
+### The Letter
+
+Old Liao had few friends, because most people considered him a strange and alien being, and so he held his true friends very dear. He had enjoyed himself greatly in Java; for the first time in his life he had been a member of a boisterous and connected human society. Neither the circumstances of his youth nor the isolation of his middle years had offered him much hope for joy in life, and the consequences of his great crime haunted him continuously with evil foreboding. Liao had found peace in Indonesia. He had many acquaintances, some friends, and he was widely respected as a great healer.
+
+And he had the boy at his side whom he had come to love like a son. Liao knew that the young one would reach the upper levels of mastery, though how high the child would go, he did not know.
+
+One of his friends was an affluent businessman who was a learned scholar of Chinese history and culture as well. With this man Liao spent long hours sipping tea and waging endless debate. He had made arrangements to visit him on a given morning and set out to the man’s house. It was roughly ten o’clock when he arrived. A servant opened the door and Liao was ushered into the man’s inner chambers. His friend rose to greet him.
+
+“Liao Sifu,” he said, “once again you honor me.”
+
+Liao stopped briefly in his tracks, stunned. He could see that the man was going to die at noon! Jodo, the will of heaven, was standing over him like an ax.
+
+He fought back an urge to sit down. Outwardly, his friend detected nothing amiss in the old Master’s composure; indeed, what had seemed like an endless pause to Liao had been less than a quarter of a second in real time, undetectable to the other.
+
+“I cannot stay at the moment, my friend,” Liao said, “but I want you to do me a favor.”
+
+He moved with preternatural speed and stole a blank sheet of paper from his friend’s desk, seemingly pulling it out from under his robe.
+
+“Do you have an envelope?” he asked.
+
+His friend handed him one, and Liao folded the paper into the envelope. After writing something on the top and sealing it, he handed it back to him.
+
+“At exactly eleven forty-five, I want you to take this envelope to the top of the hill at whose base your land begins, and leave it there,” Liao said.
+
+“But I have an appointment at noon, and, as you know, my house borders on the jungle. That hilltop is almost half a mile into the jungle.”
+
+“Yes, I know.”
+
+“I will have to change clothes and. . . .”
+
+“Yes, I know.”
+
+“Very well, Liao Sifu. If it is so important to you, I will do it.”
+
+“Thank you.” To the man’s surprise, Liao Sifu gave him an almost emotional farewell.
+
+The old Master went immediately back to his own dwelling and began to pray earnestly, centered in deep meditation, requesting that God prolong his friend’s life and lift whatever karma had made it so short. At eleven forty-five his friend, impatient with having to go into the jungle and everything that action entailed, gave the letter to a servant instead, with the instruction that he take it into the forest and leave it at the top of the hill. The man himself set off for his appointment in the city.
+
+At noon precisely, as he crossed the road in front of the city post office on the way to his appointment, he was struck and killed by a passing truck.
+
+Thus Liao Sifu learned that the will of heaven cannot be overturned.
+
+“So, Kosta,” John continued, “tell me now. Am I a Taoist?”
+
+“In my judgment as an educated man, you are very much a neichia Taoist, Sifu.”
+
+“I see. And if I told you that I practiced ch’ikung and neikung strictly for martial arts skill, as I am the Headmaster of a martial arts school and not a priest, what would you say to that? Remember, I only became exposed to the realm of spirits after I had developed yin-yang kung—Levels Four, Five, and so on. I was thirty-seven years old when I first saw my Master’s spirit; besides which, I only developed a knowledge and an interest in matters of the spirit after I went up to the mountains for my retreat in 1992\. In other words, I did not originally pursue neikung for any metaphysical gain it offered, nor because of any specific spiritual belief.”
+
+“Okay, if you are not a Taoist alchemist, what are you, then?”
+
+“I’m the Headmaster of Pa Lei Chuan, a school of kung fu. I am the teacher of a Chinese science called neikung that involves studying, enhancing, and finally combining the energies of yin and yang in the body; the particular neikung I teach is of the lineage attributed to the sage Mo-Tzu. Beyond this I am simply a man like any other.”
+
+I did not know what to say to all that. There can be little doubt in our day and age that consciousness is as much a product of the physical as of the spiritual. Descartes’s axioms separating the psyche from the flesh have long since been proven wrong. An injury to or illness of the brain would readily affect someone’s personality; modern medicine has millions of documented cases. Our “consciousness” is the result of the intermingling of the mind and the body, of the spirit and the flesh. Had the ancient philosophers of China stumbled onto this secret in their investigation of the energies of yin and yang? Had they somehow isolated the body’s energies and seen how they could be transferred completely to the spirit? Is this how Taoism the religion had developed? And what can the science of neikung offer to the world in our time of rapid technological growth? Here was a man who had many of the answers in his pocket.
+
+“I suppose, Sifu,” I said, “that you are whatever you want to be.”
+
+He smiled at that, and I looked down at the ground. A brief discussion of plants followed; John supported the position that they had awareness and were telepathic, and Andreas, an avid botanist, was agreeing with everything he said.
+
+I was uncharacteristically silent for a while. Finally, in the pause that followed, I asked, “Sifu, will you teach us? Will you teach the world about neikung?”
+
+“I am already teaching you.”
+
+“No, I mean, will you teach everyone in the world; will you demonstrate openly and explain what you are doing?”
+
+He was silent himself for a moment, then said simply: “Do you know about Atlantis?”
+
+“Of course.”
+
+“Do you know why the island of Atlantis was destroyed?”
+
+“In my culture we say that it is because the gods were jealous.”
+
+“It was because they had gotten too close to the secrets of heaven. When humanity today gets too close, we also will be destroyed.”
+
+“What the hell for?”
+
+“Because the human animal is not yet ready to become a god.”
+
+“Then why create us in the first place? Logically, we were either created to develop toward some higher purpose, or we are the playthings of a higher sentience who simply wants to keep us as slaves. To say that God Himself will destroy us makes me think much less of God.”
+
+That blunt statement shocked everyone.
+
+“So you think I should come forth completely, share all my knowledge, become famous, and win the Nobel Prize,” John said.
+
+“Yes and no. I think you should offer the world concrete, reproducible proof that yin and yang ch’i exist, without specific information as to their precise nature. That would be enough for you to go down in history as the man who helped humanity evolve to the next plateau,” I replied.
+
+“It has never been that way in human history.”
+
+“We have never been at this point in human history before, Sifu. Look at yourself, for example! You are the first Master of the Mo-Pai to accept Western students. Mankind is evolving; East meets West. There is no hard evidence that Atlantis ever existed anyway;*28 maybe it’s just a story that captured the imagination of a Greek philosopher centuries in the past—man against the gods.” I made a silent promise to buy John a copy of Plato’s works Kritias and Timaeus.
+
+“And perhaps it is a true story. I follow the will of heaven, Kosta. I will do what God wants me to do.”
+
+He stood up.
+
+“But I will think about what you have said,” he finished.
+
+And with that, our evening lesson was over.
+
+On the way back to our hotel Andreas berated me continuously. He had been shocked by my confrontational approach. “What would you do,” he asked, “if you were Sifu?”
+
+“Bring fire to mankind,” I answered unhesitatingly.
+
+“And be chained to a rock by the sea with an eagle eating out your liver for all eternity. . . .”
+
+“Prometheus’s torment didn’t last for all eternity, Andreas. After a time, the gods set him free because they felt guilty. He did what he did out of pity—to aid humanity, you see.”
+
+“Are you sure it wasn’t pride?”
+
+It was my turn to be silent. He had struck a point home.
+
+We didn’t say much for the rest of that evening, each of us wrapped in our own thoughts. Andreas’s comment had brought home something vital, something I had always known in my heart but that, obfuscated as it was by my own pride, I had not clearly seen before. I was no Titan; it was not up to me. Only John could play Prometheus’s role and share his secrets with humanity. Our mission was to convince him to bestow such a gift and, in so convincing, shoulder a portion of the consequences.
+
+#### Chapter Nine
+
+### THE KERIS
+
+There are more things in heaven and earth, Horatio, than are dreamt of in your philosophy.
+
+Hamlet, Act I, Scene v
+
+Henky was another Javanese-Chinese, a local businessman and friend of my Master for over twenty years. Henky had attempted the Mo-Pai training as well but had unfortunately not progressed very far. Still, he had garnered benefits; he was over fifty but looked much younger, perhaps early forties, with a slim figure and a springing step. A dedicated sportsman, he exercised and ran on a daily basis as well.
+
+Henky was very much a product of Java. He spoke not a word of Chinese and was ignorant of Chinese history; rather, he spoke fluent Dutch and good English because he had gone to a Dutch school. A devoted student of the history of his own home nation, Henky was particularly an expert on the Majapahit Javanese-Hindu empire, which had held sway in Java and the surrounding islands during the fourteenth century CE.
+
+He owned three Javanese kerises, all antiques, all more than five hundred years old, all dating from the time of the Majapahit state.
+
+They were magically charged.
+
+Before I proceed, it would be useful to go into the history and mythos of this particular bladed weapon. There was a time when all Javanese men, from the age of three on, were required to wear a keris; it is still worn today in formal ceremonies. The sheaths and hilts of the keris were often exquisitely decorated with carvings and jewels, while ornaments on the blade itself were thought to provide additional protection from misfortune. The keris blade often has undulations (lok), usually seven or nine, though up to thirty-one have been counted. An odd number of lok assures that luck will be good. The wavy blade is also thought to create a more damaging wound, though the keris is a difficult blade to wield in combat.
+
+Kerises are considered to be magical by all Indonesians and Malaysians. Traditionally, old kerises are kept as family heirlooms and are passed from generation to generation. The making of the keris was a work involving great power and art; the empu, or “smith,” was considered a holy man, and his work was fraught with ritual.
+
+Once a year the keris was taken out of its scabbard, cleaned with lime juice and arsenic, and sacrificed to. Incense was burned to it and prayers offered; the blade was coated with a fragrant oil. The number of times the weapon had tasted blood added to its power.
+
+Magical kerises (not today’s tourist fare) are thought to be able to speak, fly, change shape, and even father human children. They can protect the wearer from harm or destroy his enemies. They are thought to rattle in their scabbards to warn their owners of impending danger. In general, they are objects of great reverence, and are very powerful.
+
+When Henky offered to show me his keris’s powers, I was tempted to laugh, except for the fact that he was a good friend of John’s. In truth, I had already seen so much from John himself that I no longer knew how to approach such claims; I no longer had the luxury of skepticism.
+
+“A magical keris?” I asked.
+
+“No, three of them.”
+
+“What can they do?”
+
+“Many things, orang putih,*29 but for you they may move around a bit, and you can see John talking to them.”
+
+“John can speak to a piece of metal?”
+
+“They are not just pieces of metal; they are aware, just as we are.”
+
+I glared at Henky out of my left eye, the mean one. My face is extremely expressive, part of my Mediterranean heritage, and somewhat bimorphic; I am gentle and kind on the right side and mean and nasty on the left. I have a lot of Neanderthal genes in me as well, the result of millennia of Balkan inbreeding, which gives me an edge when I want to look either dangerous, saintly, or stupid.
+
+“You’re serious, right?” I asked.
+
+“I’m always serious when I talk about money or things of a spiritual nature.”
+
+My money had run out, and Henky was buying me lunch. I was getting tired of Chinese food, indeed had lost a lot of weight on what I called “the rice diet,” so Henky was treating me to a Western-style steak. I was very grateful.
+
+“All right,” I said, “I’ll bite. Doris is flying in this afternoon; maybe we can make an appointment with Sifu tonight. I’m sure she’d love to see this as well.”
+
+My girlfriend, Doris, had been my constant companion during the years I had known John Chang and, as a result, had suffered the same assault on her established perception of reality that I had during that time period. She tended to accept things much more readily than I, though, being more intelligent and having less of a temper.
+
+“I mean it,” Henky said, “The kerises are sentient in their own way.”
+
+“Sure.”
+
+“Look, I could tell you many stories, but I will settle for this one: A few years ago my daughter was going to go on a trip with some friends. They pulled up to our house in their jeep and she started to go out the door; suddenly there was a banging sound from the cupboard where we keep our kerises. When I opened the cupboard, my most powerful and oldest keris was shaking in his scabbard. I told my daughter not to go on the trip, but she insisted; new boyfriend, you see. Well, I could not let her go unprotected, so I gave her the keris to take with her, with firm instructions that he protect her. That night they had an accident and the jeep went off the road. They rolled over three times before they hit a tree; the vehicle was a total loss, but no one was hurt, not even a scratch. They were not wearing seat belts and were thrown around inside the jeep considerably as it rolled.”
+
+I did not know what to think and had no way of judging his story. Certainly there were enough myths of magical swords and legends of sentient weapons in general in every culture all over the world (think Excalibur). Could they be true—the way John Chang was real, the way Troy, which had been considered a myth by many learned men for generations before its discovery by Schliemann in the nineteenth century, was real as well?
+
+I had seen too much of the spirit world around my teacher to scoff; the word shaman suited John as well as the word Taoist, if you could truly distinguish the two. Indeed, as I wrote this book, I was troubled by what I should present regarding John and the spirit world. Could I discount my own eyes and ears? If John was pulling a scam, he was fooling thousands of people. There were other plausible explanations for what we were seeing—one of which was simply that John was imposing his will and imagery on the minds of the participants, a sort of mass hypnosis. But even if that were the case, it was a power worth noting, and I would have no problem walking into a courtroom and testifying to the experience. To say nothing at all would simply be cowardly, and unfair to John as well.
+
+Let me share with you one such encounter with a powerful and benevolent spirit. Judge for yourself.
+
+### The Prince
+
+Hercules (no relation to the hero) was a cousin of mine whom I had brought with me to Indonesia; John had been kind enough to allow him to join our group and witness the summoning of a spirit who had died at Level Three. This spirit was reputed to be so powerful that anyone could hear him, and some people could see him as well; at Level Three, he certainly had a lot of yang ch’i.
+
+The ghost was the spirit of a sixteenth-century prince, and his gravesite was situated in the Puncak Pass near Bogor in central Java. He had slain many enemies during his lifetime, and his karma was to watch over the island of Java in retribution. For the last four centuries or so the lonely ghost had lingered on the hilltop that bore his grave, guarding his native land. People came to sleep there and ask him for favors and protection, while Indonesia’s leaders, even in this modern day, often visited the site with various psychics.
+
+A large party of us walked up the trail to the gravesite; an Indonesian minister had paved that path with concrete for his own convenience. Herc was excited and anxious. He had first met John on a business transaction I had arranged, knowing nothing at the time of my teacher’s powers. This trip had changed all that; John had showed him much and welcomed him into his home. But seeing this ghost (well, hearing him, anyway) was going to be the pièce de résistance. I had been begging John for years to take me to visit the prince. He had finally consented, and just in time: In a few short months the prince’s spirit would be going up into the white wave forever. Herc was lucking out. With us were Handoko, one of Indonesia’s industrial leaders, a few friends, and some of John’s students, fifteen people in all.
+
+“Did you bring your microcassete recorder?” Handoko asked me on the way up.
+
+“Nope. I forgot it in my hotel room.”
+
+“People have tried to record him in the past, and all that comes out is a kind of squeaking noise.”
+
+“Maybe he speaks directly to the brain centers of the people present,” I said. “Maybe it’s not sound at all, but simply seems that way to us.”
+
+“Yeah. Or maybe the spirit simply doesn’t want to be recorded, and erases the tape each time.”
+
+“Interesting phenomenon, though,” I said. “It also shows that Sifu hasn’t planted a wireless microphone somewhere in the area.”
+
+“Good point,” Handoko said.
+
+We reached the area, and my brother students immediately began to clean up and prepare the site. As I had witnessed in the past, they laid out flowers and food for the spirit, and lit up an incense stick or hu.
+
+All fifteen of us gathered close to the offerings and John went into meditation, summoning the prince. Immediately we heard the loud and shrill whining of the wind, the mark of a spirit. I saw the incense stick move. Suddenly, to the right of the offerings and directly in front of my master, there was an orange glow. A sweet, gentle voice spoke to us in Indonesian.
+
+“Greetings, Brother Chang,” it said to my teacher. “I am happy that you are here with me again. You have brought many friends today . . . many new faces. What are their names?
+
+“Handoko,” John began.
+
+“Handoko,” the voice whispered gently. “And next to him there are white men. Are these men from Holland?”
+
+“No,” John said quickly, “Dari Junani . . . from Greece.”
+
+“Ah. What are their names?” the prince asked.
+
+“Kosta and Hercules,” John answered, and the spirit repeated them.
+
+I concentrated as hard as I could on the shining orange light and made out a slim hand dancing in it, but try as I might I could see nothing more. The conversation went on, too difficult for me to understand with my poor Indonesian; after a time, John thanked the spirit and he left.
+
+I immediately approached my Master. “Why did he ask if we were from Holland?” I asked.
+
+“Because he saw Hercules’s blond hair. While the prince was alive, the white men who were coming to Java were Dutch, and he was not fond of them. He wondered what you were doing here, that’s all.”
+
+Brrr, I thought. Good thing he understood we were not his ancient enemies. “Did everything go well?” I asked.
+
+“Not really. I wanted to ask him about a friend of mine who was dying, whether or not he could help; the spirit simply said that my friend had developed bad karma, and that it was the will of heaven that he die now. He suggested I remind my friend that there was a God, to trust in Him completely, and not resist whatever punishment his karma brought him.”
+
+I was quiet. My teacher’s words had moved me, and I realized at the same time that he had done us a great honor.
+
+We were the first white men that the spirit of the prince had seen in four hundred years; the first that my Master had brought up to the Puncak Pass with him.
+
+I didn’t know what to say to my teacher. Once again he had honored me beyond all words. Hugging John was out of the question; Java is not the Mediterranean, and the Chinese did not go in for displays of affection in general. I hoped that in the future I would be able to repay him for the many gifts he had given me.
+
+We met John in the late evening and had dinner at his house, as usual. Later, after the customary pleasantries had been exchanged and we were sipping tea out on his terrace, John asked Henky to bring out his kerises.
+
+There were three of them, as Henky had said, one more beautiful than the others. The blades of the first two were undulated, but the last and most beautiful had a straight, unwavering blade. The surface of the metal was blackened, coarse, and damascened, as was the custom in Malaysia and Indonesia; kerises were etched with hot lime juice and arsenic upon fabrication.
+
+The kerises smelled fragrant, the surface of the blades coated with a sweet-smelling oil. I asked Henky what it was.
+
+“The oil of a tree that we use for this purpose in Indonesia,” he said simply. “It is their favorite.”
+
+“I see.”
+
+“You must use the oil from a living plant on a keris, never a petroleum derivative.”
+
+“Okay.”
+
+“I am serious.”
+
+“So am I. How much does one of these things cost?”
+
+“Between twenty and forty thousand dollars, if it has real power.”
+
+“I doubt I’ll ever own one, Henky, but thanks for the tip,” I said.
+
+“You may desire one to protect your family in the future,” he said simply.
+
+John stepped in. “I think we should show Kosta and Doris what the keris can do,” he said. “You must all sit down on the ground.”
+
+Doris complied immediately. I was stupid enough to ask, “Why?”
+
+“Because it’s better,” John replied, simply enough.
+
+We cleared the coffee table between us of the tea utensils and cups and sat down around it. I sat across from John; Doris was to my left, Henky across from her.
+
+John took a saucer and flipped it over, setting it down on its face. He took a stick of incense and lit it, laying it down carefully on the back of the saucer to protect the tabletop, which was Formica. He took the smallest keris and laid it out on the table, the blade resting on the sheath.
+
+Without warning he was all concentration, and my belly shook. His face became like a statue and I could almost hear his heart slowing, stopping. Everything seemed to condense into a sphere around him.
+
+Suddenly the blade turned to move over the incense.
+
+Doris smiled.
+
+John picked up the keris, played the incense over it, and returned it to its sheath.
+
+“This one doesn’t have all that much power,” he said.
+
+He took out the second keris and laid it on the table the same way as he had the first. Again he concentrated, this time briefly. The second keris turned also, rotating to come over the incense. It seemed to be eagerly consuming the smoke, vibrating slightly as it did. John picked it up.
+
+“This one is in a very bad mood tonight,” he said. “We will not use him.”
+
+He set the point of the keris into its scabbard. The keris pulled the scabbard over its “body” with much force, making a loud clacking noise.
+
+“I’d like to see that again,” I said.
+
+John smiled. “All right,” he said. “Here, hold the scabbard.” He removed the blade from its wooden sheath and offered the latter to me.
+
+I took the wooden scabbard in my right hand, holding firmly.
+
+John inserted the tip of the blade into the sheath. He whispered something to the keris.
+
+The scabbard was jerked from my grasp with considerable force, the keris blade pulling the wooden sheath over itself.
+
+“As I said,” John remarked, “this one is in a very bad mood and does not want to be bothered.”
+
+He removed the blade from its sheath, played the incense over it, and returned it to the scabbard. He placed it to one side.
+
+Henky handed him the last keris, the one with the straight blade.
+
+“This one is very powerful,” John said. “He was made during the early years of the Majapahit empire, and his name is Samar.”*30
+
+John laid the weapon on the table in a similar manner, and it immediately spun to settle over the burning incense stick.
+
+“Sifu,” Doris asked, “how do you know its name?”
+
+“He told me,” John answered. “He remembers everything about his making, the circumstances and the time. He remembers his name as well. He is over five hundred years old.”
+
+John picked up the keris and passed the incense stick under it. If a piece of metal could appear content, that one certainly did. John whispered something to the weapon, then set it down on the table. He put the incense stick back on the dish and turned to Henky. The two men spoke to each other briefly.
+
+I looked at Doris, who seemed very happy. That evening confirmed for her what I had told her of my own experiences with spirits in John’s company in the past.
+
+“Sifu,” she asked, “how can the keris do what it does?”
+
+“Because it has yin power,” he answered. “It is, for all practical purposes, a spirit.”
+
+I reached out to adjust the incense stick on the saucer. It had rolled near the edge of the saucer, and I was worried that it might roll off and burn the Formica.
+
+The keris Samar spun around very fast and tried to cut me. I pulled my hand back in time just as everyone other than John gasped.
+
+“Be careful!” Henky said. “They have a mind of their own, you know.”
+
+I looked at the keris; somehow I knew how to handle this. “I’m not trying to take away your incense, my friend,” I said. “I just wanted to adjust it on the table.”
+
+“He doesn’t understand English,” John said. “But go ahead and try to make friends with him.”
+
+I picked the weapon up gingerly by the handle with one hand and passed the incense stick under him with the other; I concentrated and tried to project appeasing thoughts, much as I would have done with the pet of a friend that had taken a dislike to me.
+
+Even though I was expecting it, it was thrilling to feel the vibration in my hand as the keris seemed to hum.
+
+“Apology accepted,” John said. “Put him down.”
+
+I did so.
+
+“He is actually very nice and now wants to show us what he can do,” John said. He put the weapon back in its scabbard and set it down, the hilt facing toward himself. John smiled and looked at us. “Watch this.” He looked at the keris briefly. “Samar!” he said, and the weapon leapt completely out of its sheath to skip across the table and jump into his open hand.
+
+We were delighted.
+
+“Want to see it again?” John asked, and we of course said yes.
+
+He called the keris again, and once more it jumped over to him.
+
+“He seems very eager to please,” Doris said.
+
+I was reminded of a golden retriever I knew; their dispositions seemed about the same.
+
+John picked Samar up by the hilt and ran the incense stick under him. The keris vibrated in contentment. Suddenly John laughed and put the weapon back in his sheath, handing it to Henky.
+
+“Like a baby,” he said. “He has his own mind and his opinions are very funny.”
+
+Just then John’s Lhasa apso, called Lovely, trotted up to my heels. I reached down to pet the furry back. Lovely sniffed around a bit, wrestled briefly with Doris, then set off to find something more interesting to occupy her time.
+
+“A keris spirit is something like that,” John said, pointing to Lovely. “If you pet him and stroke him and feed him regularly, he will be loyal and happy. If you starve him and ignore him, kick him and beat him, he can become unpleasant.”
+
+“Their intelligence is about the same?” I asked.
+
+“No. The keris’s sentience is not so developed.”
+
+“Sifu,” Doris said, “you can speak to him because you have combined yin and yang, correct?”
+
+“Correct.”
+
+“And how about us? Can he hear us?”
+
+“Oh yes. He can hear you and see you and sense you in ways you cannot understand. It is you who cannot speak with him; you must be into Level Three to sense yin power, unless you learn how to use your dreams.”
+
+“There is a Tibetan Buddhist dream meditation called the milam,” I said.
+
+“Yes, and in Indonesia people often go to the graves of Muslim saints and sleep there,” Henky said, “hoping to communicate with them. Frequently these spirits do speak to the people in their dreams and give them answers to their questions.”
+
+“Sifu,” I asked, “does the keris have yang? Is that how he can move?”
+
+“No. He has yin power trapped inside a frame of metal. He is taking yang from me at my request. But since he has yin power, he can absorb yang and so protect you. If an individual manages to combine yin and yang, then he can make a keris move and speak to him at will.”
+
+I wanted to clear up something that was gnawing at the back of my mind, something that would be incredible if it were true. “Sifu,” I asked, “Samar is a created being, isn’t he?”
+
+John looked at me with interest. “No, Kosta, you are missing the point. Nice try, but no cigar, as they say. Samar is not a created being at all; he is the extension of a man who once was.”
+
+“Can you explain this, Sifu?”
+
+“When I first developed my power,” John said, “I was curious about the abilities of the keris. In an antiques shop I found a keris of power that was rusting away; the storekeeper could not sense that the keris was charged, you see. That weapon was five hundred years old, but he thought it was junk and treated it as such. I bought it for a few dollars and took it home, where I investigated its origins using my own skills. In the very center of the keris, buried in the layers of metal, was a strip of paper on which a charm was written in Sanskrit letters. It was very similar to a Chinese talisman, a fu. At that point I understood the technique of fabricating the keris.”
+
+“What’s a fu?” Doris asked.
+
+“A charm, a Taoist talisman of protection and healing,” I answered her quickly and turned to John.
+
+“A fu comes from our own person,” John said. “When we make a fu, we extend our consciousness and our power into the charm, and there that power can serve a specific purpose. For example, when I speak to a keris, it is actually the spirit of the keris’s maker whom I am speaking to; this man has, in the past, extended a part of his own lifeforce and spirit into the fu in the heart of the keris.”
+
+He leaned back. “A fu is like an antenna,” he continued. “You know, when I was young and wanted to meditate, I had serious problems at night because there are so many mosquitoes here in the Tropics. We could not afford screens, and chemical repellents had not yet been developed, so I had problems concentrating because of their constant attacks. Liao Sifu showed me how to make a fu that would attract mosquitoes; I would focus, draw the charm on a piece of paper, and put power into it. Then I would place it in my backyard and, in this manner, be left in peace for as long as I wanted to meditate. After I finished, I would tear up the fu and release the mosquitoes; there were always hundreds of them there.”
+
+“You mean the mosquitoes would be attracted to the paper?”
+
+“Yes. But it was my own lifeforce that made the charm possible.”
+
+“How long does a fu last?”
+
+“All of these items have a time span, and their energies have to be renewed constantly,” John answered. “In the case of the keris, the metal body naturally holds the yin power well. When the keris is a family heirloom, its power is renewed on a yearly basis because of the ceremonies associated with its keeping. But you know, to make a fu, the practitioner must have abilities like myself, and even then perhaps makes only one or two fu in his whole lifetime. It is no easy thing. The tourist-trade fu you see for sale in Taoist temples have no real power; they are imitations, like a fake Rolex.”
+
+Doris was quiet. “It sounds almost like magic,” she said finally.
+
+John shrugged. “Perhaps in a way. Magic, or sorcery if you will, is by definition the use of outside energies to fulfil a specific task or desire. Strictly speaking, since a fu comes from our own person, it is not magic. One does not invoke spirits to make a fu. In any case, Doris, even if you were to consider these kerises magical, they are not my doing. I am no sorcerer. The neikung training I have done all my life simply gives me power over such things.”
+
+I thought over the concept of the fu as an antenna to the dead maker’s spirit. “Sifu,” I said, “you told me once that a spirit cannot lie. That means he cannot create as well; is that correct?”
+
+“Yes, Kosta. It is the coming together of yin and yang that allows creation; it is specifically this attribute that makes all life on earth special. The human being is even more unique in that he possesses the biological qualifications to make full use of the ability to create.”
+
+“Our brains.”
+
+“Yes.”
+
+“So this fu in the keris, this antenna, it feeds the maker information and allows him to act on the earth as well,” I said.
+
+“Yes, but only with yin power,” John answered.
+
+“Fair enough. How strong his influence is depends on the fu, right? It’s like computer programming, isn’t it?”
+
+![image](OEBPS/Images/image-OY6KTN71.jpg)![image](OEBPS/Images/image-KID30EBZ.jpg)
+
+Fig. 1\. An example of a typical Chinese Buddhist fu used for protection against negative forces is shown at (a). The Sanskrit syllable used to charge the talisman is depicted in (b). However, the image by itself is not “charged”—it would be useless for you to copy it and attempt to employ it.
+
+“Yes and no. The personality of the maker was established during his lifetime by the interaction of yin and yang; now that he is only yin, he cannot develop, lie, or create. I see what you are saying, though; his decisions are filtered by the fu and constrained by the fact that he is a spirit. That is correct.”
+
+Doris looked at John. “Is he right? Is this writing down of the characters—whether Sanskrit or Chinese—during the talisman’s making a kind of programming?”
+
+“Close enough,” John said. “It’s a way of initializing a process. Aren’t you yourself the result of programming? Your brain, which is a type of computer, read external stimuli as input when you were a baby. It processed the data, and, through the years, your personality was formed. It is much the same, except that you as a human being possess both yin and yang in equal balance. The keris does not. Making a fu is like giving birth, in a way. You are essentially putting a part of yourself into something else, and this antenna will continue for a given duration.”
+
+John paused to light a cigarette and leaned back. “The problem is,” he said, “that many Indonesians and Malaysians treat their family kerises as articles of worship rather than the loyal companions of mediocre perception that they really are.”
+
+Doris looked at Henky, who grinned.
+
+John smiled. “Not Henky. The truth is, I doubt that a keris will ever win the Nobel Prize in physics, because of the double constraints that we mentioned earlier. Samar is an example of a highly intelligent one. A keris should be treated like a pet, fed and cared for, but never worshipped like a god. This is a very serious mistake, and one I constantly reproach my friends for. Some people even pray to their kerises!”
+
+Lovely came trotting up again. John picked her up, put her in his lap and began to pet her. “This is how a keris should be treated—or any fu, for that matter—like a loyal friend and protector. You can caress her if you wish, but I doubt you would ever pray to her, would you? There is only one God, and He alone should be worshipped by man.”
+
+We could not really add much to that simple statement. Perhaps of all the things I had seen around John, the keris and the concept of fu were the most shocking. I could see that Doris was shaken as well by the ramifications.
+
+Could all the myths and legends of humanity indeed be true? Suddenly many things were clear to me. Years of academic schooling stopped butting heads with years of searching for esoteric truths; the moments I had spent with John rushed through my mind like a hurricane and I was granted answers to questions that had plagued me for decades.
+
+I had grasped an understanding of nature.
+
+It remained to be seen what I would do with it.
+
+John studied me carefully and nodded. Perhaps he had seen something in my face that mirrored the thoughts racing through my mind. Awkwardly, Doris and I stood up and said our goodnights. It was time to go home.
+
+Since that day I have seen hundreds of kerises, some with great power, others with less, but each with its own distinct personality. The phenomenon never ceases to amaze me. I will close this chapter with the simple affirmation that I have become convinced that the magic of the keris is genuine. For the moment, to say anything more would be pointless.
+
+#### Chapter Ten
+
+### THE NATURE OF REALITY
+
+It was at sunset on a beach on the island of Evia, north of Athens, that I finally entered into hypernormal states of consciousness. I was seated in a half lotus, engaged in my Level Two exercises, pulling in yang ch’i, sending it down to my dantien, and compressing it there by yogically holding my breath.
+
+Suddenly there was a whirring noise, like a helicopter or the propeller of a boat (indeed, at first I thought there was a boat passing by). The noise kept getting louder and louder. Without warning, everything went black: Good God, I’m having a stroke, I thought. It was not an uncomfortable feeling, however; indeed, the sensation was rather pleasant. I observed the phenomenon for a while, completely aware and conscious, before I began to feel afraid and pulled my ch’i back up.
+
+The world came back to me and I reeled, dizzy for a few seconds. I felt powerful, not weak; this was no stroke. Wanting to finish the set of exercises I had begun, I sent my ch’i back down. Immediately, the whirring noise began again, but this time I was apprehensive; I interrupted the process and pulled away. A third repetition yielded the same result. It was getting to be too much. I stood on shaky legs and walked over to where Doris was waiting.
+
+She was furious. “I thought you said you were only going to be twenty minutes or so!” she said.
+
+“Well, I was, I mean, I thought. . . . Was I late?” I stammered. Where did the time go? I thought. A yogic repetition usually took me a minute; I had wanted to do twenty before we went to dinner at a local taverna.
+
+“What are you talking about? I’ve been waiting here watching you for forty-five minutes! You didn’t move at all for at least twenty minutes one time. I was worried.”
+
+I was shocked. It seemed that, for twenty minutes or more, I had held my breath and lost all awareness of time.
+
+I immediately called John.
+
+“Congratulations,” he said.
+
+“What do you mean, congratulations?”
+
+“Good experience. It means you’re progressing well along Level Two.”
+
+“It was supposed to happen?”
+
+“Sure.”
+
+“What was the whirring noise? A Sufi friend of mine said that it was the dantien’s chakra wheel as it spun.”
+
+He laughed. “Oh yeah? You transferred your awareness down to your dantien, that’s all.”
+
+That’s all? The miraculous had apparently become routine and the sublime common around John. How could I go about bringing such knowledge to the Western world without being ridiculed or condemned? What was the best way to proceed? And how to keep my own ambitions and hopes at bay while I did so? These thoughts were foremost on my mind at the time of the above incident, and with good reason.
+
+You will recall that Liao Sifu made my teacher pledge never to demonstrate his powers in public, nor use them for profit or for evil purposes. When John made the decision to go ahead with a book and film in May 1996, he consulted with his Master, who had died more than thirty-four years earlier and gone up in 1992\. To reach Liao Sifu’s consciousness, John fasted for more than ten days and entered deep meditation, sending his awareness out and away. Liao Sifu told him that it would be okay to proceed; the time was ripe, and humanity was ready. He also warned John that we would bear the karma of the effort. If we could teach humanity about the factual benefits of meditation, ch’ikung, and neikung, then the blessings would be great indeed; if it backfired, and we created a Frankenstein monster, then the karma would be very bad.
+
+When initially taking up the task of producing a book for my teacher, I had quickly seen the need for a noted scientific authority to lend credibility to what I was writing. I was also acutely aware of the limitations imposed by John’s oath to his own Master: A public demo under clinical conditions was not permitted. The plan I came up with to overcome this obstacle was simple: John was allowed to treat anyone with a real illness, and the phenomenon of electrogenesis he used during these acupuncture treatments was enough of a demonstration for any clinical physicist. My strategy was to find a distinguished authority who was ill, set up a therapy session with John, and hopefully induce this man or woman to support us. John could then do a full demonstration on film in front of those students of his who were also degreed scientists; there were quite a few of us. It would be enough, with the right person in our corner. I spent long hours feeling people out and setting up contacts with eminent researchers. In two such cases John got cold feet at the last possible instant, and I was left with making the necessary phone calls to the men (who were probably convinced at that moment that Dynamo Jack was a fraud).
+
+After many frustrating months I returned to Indonesia in November 1997, where I met with Andreas and Handoko. At that time Chang Sifu reaffirmed to us that a public demonstration was out of the question: While he had received permission from his teacher to do a book and film, he was still bound by his promise to Liao Sifu. In the roundtable discussions that followed, Andreas had the idea of bringing Lawrence Blair*31 into the project, as a filmmaker who had already witnessed what our Master could do, and because Ring of Fire had been our introduction to John in the first place. It was a good idea. The next morning I boarded a plane for Bali and began looking for Blair.
+
+Now, Lawrence Blair and John had not spoken for ten years; the latter was angry with the former, for he believed that Dr. Blair had tricked him. According to John, the original footage for Ring of Fire had been filmed for the purpose of scientific documentation of his abilities, not for commercial use. Lawrence was terrified of John and had stayed away from him for ten years when he heard that my teacher was upset.
+
+I met with Dr. Blair that same evening in his house in Ubud; according to him, a misunderstanding was at the core of the matter. Blair had used the Malay word dokumentair while speaking with John; Chang Sifu had construed the word to mean “documentation,” while at the same time Blair believed he had carte blanche to use the footage.
+
+I brought the two men together that week, with the intent of having Lawrence do a second documentary employing the existing footage he had from Ring of Fire. Apparently that meeting went very well because John reached an unexpected decision: Dr. Blair was given permission to shoot a new documentary on John, with Henky’s assistance. I breathed a sigh of relief, free to continue with my own project.
+
+I had an agenda to keep. I wanted to reach out to those like myself, people with Western technical degrees who were also experienced martial artists, people who could and would combine John’s neikung training with an orthological approach and Western science. It had taken humanity a long, long time to evolve such stock, men and women who were neither East nor West but a little of both. It was time to cash in on the investment. Perhaps those whom George Lucas had named the Jedi would come in the flesh.
+
+But it would be no easy task, for the rules could not be broken. I knew first-hand what happened when someone broke an oath around John. Let me share one such incident with the reader:
+
+### A Change in the Weather
+
+I was driving back down to Athens from my village in northern Greece when the rainstorm hit.
+
+With me in my VW Golf was Spiro, a twenty-eight-year-old pilot who was both a friend and my student in the martial arts. It was springtime, flowers were everywhere, and Easter had come and gone. The sun was shining and there was not a cloud in the sky.
+
+Quite suddenly, and in view of the fact that Spiro’s father had just lost a kidney to infection, the topic of our conversation turned to death and the potential of an afterlife. I had known John for about a year at the time and was bursting to tell someone, anyone, what I had witnessed. I was, however, under strict orders not to discuss what I had seen, and had promised John as much.
+
+Seizing the moment, I told Spiro what I had learned in Indonesia, how there was no longer any doubt in my mind that there was life after death. I described the white wave and the black wave and what John had taught me.
+
+Suddenly a mass of water struck the windshield. I couldn’t see, and turned the wipers on.
+
+We were passing freshly turned fields. “We must have passed through a sprinkler,” I said to Spiro. Strange that I hadn’t seen it.
+
+Half a minute or so went by as I drove on. Water kept pouring down on the windshield with unbridled ferocity; I clicked the wipers to their highest speed.
+
+“No, it’s a rainstorm,” Spiro said. He was puzzled. As a professional pilot, he knew about weather, and there had been no indications we would be having a shower, let alone one of such intensity. The rain continued to pummel us with vigor, so much that I could hardly see.
+
+We rode on in silence. After about a mile I noticed something strange. The cars that were coming toward me in the opposite lane didn’t have their wipers on.
+
+I looked down at the ground as we passed. It appeared to be dry!
+
+“What kind of fucking rainstorm is this?” I said out loud.
+
+At the same moment I heard a small and frightened whimper from the passenger’s seat. “Uh, did you do something you weren’t supposed to when you told me about all this?” Spiro asked. I looked over at him. He was white with fear and amazement.
+
+“I don’t know,” I said. The situation was surreal, like a cartoon brought to life, and I was beginning to enjoy myself. I actually grinned, then looked up at the heavens.
+
+“I’m sorry, Sifu,” I said. “It won’t happen again.”
+
+Spattering us with the rattle of a few final drops, the rain suddenly stopped. I pulled over to the curb and we got out quickly.
+
+My VW was soaked. It had the look of a car that has been left in tropical thunderstorms for a week. Other cars, completely dry, kept passing us left and right as we stood on the side of the road. The sun was shining; as before, there was not a cloud in the sky.
+
+Spiro caught my eye. “Okay,” he said, “either it didn’t happen and I walk away from you, or it did happen and I have to start training.” He paused for a second and smiled. “When can you show me Level One?”
+
+I called John as soon as I got back home, describing the incident to him. He let me have it, holding nothing back.
+
+“It was from my Master!” he said. “Next time, when you make a promise, you keep it no matter what!”
+
+Since that day I have kept every promise I have made. I fear my own pride and greed, you see, and try to be aware of them as much as possible. In writing this book, for example, in presenting John to the West, I am walking on a tightrope. I, too, will have to pay the karma of my actions and intentions, good and bad. I dread the latter; my heart is far from pure, and my hands not as clean as I would like them to be.
+
+### REINVENTING THE WHEEL
+
+As I’ve stated repeatedly, the point is not to subjugate Eastern science to Western, but rather to create a new science that is neither East nor West. Scientific theory is always—to paraphrase Dr. Fritjof Capra*32—at best an approximation, someone’s attempt to model or document the underlying nature and processes of physical reality. For example, classical Newtonian theory was quite adequate for illustrating the behavior of large, slow-moving masses, but had problems characterizing electromagnetic fields and even more problems on the atomic scale. The trials and tribulations of the world’s thinkers can be amusing to follow (if you’re the type of individual who enjoys watching intelligent people running headfirst into brick walls). Two hundred years ago, for example, people believed in something called phlogiston, an imaginary substance thought to exist only because humankind did not properly understand combustion. The failure to come up with an adequate model for combustion was an insurmountable obstacle against real progress in chemical theory. Never willing to say “I don’t know,” the scientists of the day announced the existence of the imponderable phlogiston, a substance contained in all materials capable of sustaining oxidation. There is, of course, no such thing.
+
+I could not, as a scientist, discount what I had seen with my own eyes, and, unless John was the greatest magician in the world (or a genetic mutant), there was no way he could be tricking so many people. You can completely discount the metaphysical aspects of this text as John’s own impressions or delusions, but there was no discounting the energies that I and thousands of people had witnessed and experienced. In addition, the assumption that John’s powers are the result of a genetic mutation is not valid, because all his students encountered the energies he described within our own bodies during our training. In a sparring session, for instance, I accidentally nearly killed one of my own students, who had surprised me with a quick punch. In reaction I hit him in the chest with my right palm while blocking with my left. The man—a strapping, powerful Greek villager—immediately suffered a mild heart attack and collapsed. There was no rational explanation for such a reaction, nor could any clarification of his condition be found in a hospital. He was, and thankfully still is, exceptionally healthy.
+
+The cornerstone of our body of knowledge is the science of physics. Most people today take quantum physics for granted, or look at that science with distrust; indeed, its immediate practical application, nuclear power, will plague us until we come to understand the physics of fusion. In 1905, when Albert Einstein (then a clerk in the Swiss patent office) published his now classic papers on relativity and what was to become quantum mechanics, the response from the established community of Newtonian physicists was quite vicious. Despite this outcry, within two decades a team of dedicated, brilliant men,*33 working across international borders, had irrefutably set the foundations of quantum theory. The point is that man’s perception of the universe changed radically and suddenly, destroying the established conceptions of the scientific community in a short and bewildering twenty years. While it is more comforting to think that scientific theory is constant and on top of things—thus reducing the insecurity in our own lives—the truth is that scientific theory is ever changing in its attempts to describe reality. And I use the term ever changing rather than evolving purposely, because in many cases the departure from established patterns of thought has been quite revolutionary.
+
+Imagine the shock to the established scientific community when the reality of the atom came to be understood. Until then people had supposed atoms to be incredibly hard, indivisible particles of solid mass; quantum mechanics (and the discovery of the X ray) showed them to be mostly space, existing only in relation to each other and definable only by the laws of probability.
+
+Relativity theory and quantum mechanics are, of necessity, holistic and ecological; however, as far as humanity’s social evolution goes their discovery is fairly recent, and there has not yet been enough time for them to have a benevolent effect. (Indeed, their initial de-rivative—nuclear power—has to date been negative.) It is certain that we will see their positive side in the next fifty years; for the moment it is reassuring to know that the creators of quantum theory themselves quickly appreciated how closely their new physics followed the model of Eastern mysticism. Many of them began studying the wisdom of the East in order to better understand their own brainchild. Niels Bohr visited China in 1937\. When he was knighted ten years later by the king of Denmark, he chose the t’ai chi (yinyang) symbol as his coat of arms to acknowledge the harmony between ancient Eastern and modern Western sciences.
+
+Let us assume for a second that both John’s abilities and his theories prove true. I would like to touch upon what such information could offer humanity. (For a more detailed approach, turn to appendix 2.) In the third century CE Chinese sages described the process by which things were created from the Source and would return to it.¹⁵ To symbolize the state before time and space began, those who would come to be called Taoists came up with the concept of wu-chi (literally, “there is no extremity”), symbolized by a circle. Wu-chi is the condition of stillness in which all things are undifferentiated from the ultimate. From this state a point of movement, of pure yang, shines out. There is interaction between yin and yang leading to the state of t’ai chi (the supreme extremity); here yin and yang are embraced, distinct yet together, counteracting each other’s forces.
+
+![image](OEBPS/Images/image-QLU0SLU3.jpg)
+
+Fig 2\. (a) Wu-chi, pure yin. (b) and (c) A spark of movement in the stillness; yang in the center of yin. (d) T’ai chi; yin and yang embraced and balanced.
+
+If John’s theories and the model in figure 2 are accurate, then our own archetype of the universe is missing a key ingredient: the fact that the substance existing before the “Big Bang”*34 is in constant interplay with the fabric of our present physical universe, stillness (yin) and motion (yang) forever balanced as one. It is safe to say that such a postulate would account for the many discrepancies in physical theory that scientists around the world have observed and reported. The yin is not precisely the “ether” sought by Hendrik Lorentz and Jules-Henri Poincaré,†35 ¹⁶ but it does offer many exciting possibilities.
+
+John disclosed the following key statement to me on one occasion: “Everything on the earth is yang, but the earth itself is yin.” For me, as a scientist, this implies that yin energy is associated with gravitational wells such as planets and singularities, and that the balance described by the t’ai chi symbol exists in the universe as follows:
+
+![image](OEBPS/Images/image-CLFA031R.jpg)
+
+Fig 3\. Macrocosmic yang and yin.
+
+This simple diagram suggests incredible things. First of all, I am fairly certain that the yang ch’i is a solar phenomenon.*36 John had said, “The yang ch’i is in the air; nature creates it.” I have seen it to be blue in color, as I noted earlier. As a neikung trainee, I can feel the yang ch’i constantly stored within my dantien; it is hot, just as the classical Chinese texts describe it to be. Both these observations mesh perfectly with Wilhelm Reich’s work on the orgone. It seems as well that the concentration of yang ch’i increases with increasing elevation; in other words, yang ch’i tends to break away from gravity (which is why yogis flock to the mountains). I can feel the yang ch’i wanting to go up within my own body, if that is any indication. The existence of the yang ch’i clearly shows how insane we are as a species: Considering that our current lifestyle is bent on destroying the environment, and assuming that nature circulates and propagates essential life energy, then by eliminating nature we are killing ourselves.
+
+The great surprise, however, in John’s model of the universe is yin energy, because it simply behaves unlike any other recorded physical phenomenon. Nothing accounts for it—not telekinesis, not mind control. John passed it into my body on several occasions, and the sensation was unlike anything else I have encountered. It was a cold rush, a winter breeze, the vacuum of outer space. Classical Chinese theory called the yin ch’i kann (water) in an attempt to describe its texture; likewise, it had called the yang ch’i lii (fire). Both names are apropos.
+
+The law of conservation of energy is a foundation pillar of physics. During the incident at the prawn farm, when John passed the yin ch’i into our bodies and we caught the bullets from the air rifle, there had been no deformation of the lead pellet, nor any radiation of heat. This suggested that the bullet’s energy was not conserved but rather somehow ceased to exist. Under current physical law, this is not possible.
+
+The prospect that such a continuum exists in our world, passive but ever present, is maddeningly exciting. The yin is the primal chaos that existed before matter and space-time had come; such order as we have in our world comes from the interaction defined by the t’ai chi symbol. Yin fought against yang, but the balance of their forces created life. I reckoned that understanding the nature of yin and yang ch’i would give humanity antigravity, faster-than-light speed, and almost certainly clues to the riddle of time; I had valid reasons for these assumptions.
+
+## Levitation
+
+We were in Barcelona. John was touring Europe in the company of the Indonesian minister of the interior; he had confided in me jokingly that the man felt safer when he was around.
+
+John came into my hotel room munching on Indonesian peanuts; he tossed me a bag and slumped into a lounge chair. For a few moments we made small talk; then, quite suddenly, the topic turned to the subject of ch’i in relation to the biophysical sciences.
+
+“You cannot study ch’i under a microscope,” John said. “Ch’i is the study of our existence, not simple matter. For example, if you have ch’i, you can bypass what we define today as natural law. You can walk through walls, you can rise from the ground, you can do many things.”
+
+“You mean levitation,” I said. “So the stories of yogis levitating off the ground in meditation are true. Can you do that?”
+
+“Of course!” he replied. “It took me only a few months to learn that trick, but it’s no big deal. You just rise up about a yard off the ground and sit there; you cannot move in any direction, just back down.”
+
+“Yes, but. . . .”
+
+“No buts!” he interrupted. “Anyone with ch’i can learn how to do this. It’s nothing!” He thought that statement over for a second, then added, “But first you must have ch’i.”
+
+“Can you show me this, Sifu?”
+
+John looked at me with disappointment. “Sure,” he said, and sat down on the floor, crossing his legs in a full lotus. He became still; it appeared that his breathing stopped. He was a statue of an Eastern mystic for a time.
+
+Smoothly and suddenly, almost matter-of-factly, he rose from the floor at least eight inches, and remained there.
+
+My breath caught in my throat; after half a minute or so, John came back down.
+
+“The carpet is synthetic,” he said, standing up, “otherwise I would have risen much more.”
+
+I thanked him repeatedly; he seemed surprised that I was so impressed. For him it had been no great feat—a parlor trick, functionally useless except as a demonstration of the inherent capacities of man.
+
+“We’re going out to dinner,” he said at the door. “Coming with us?”
+
+“Chinese food again?” I asked.
+
+“Yes. There’s a good Chinese restaurant down the street.”
+
+The little hairs on the back of my neck stood up.
+
+“Sifu,” I said, “may I ask you something? You’ve been to Holland, Germany, Austria, Switzerland, Italy, Nice, and now Spain, right?” He nodded. “All this time, have you only eaten Chinese food?”
+
+“Of course not!” he replied indignantly. “Sometimes we eat Thai food as well!”
+
+For an immediate outlook as to how modern mathematics can be applied to John’s theories, look at the work of Dr. Ilya Prigogine.*37 In 1977 he received the Nobel Prize for showing that complex chemical systems tend to organize themselves into structured relationships of their own accord—in other words, that self-organization is a fundamental characteristic of the universe. These chemical systems behave in such a manner as to almost be alive, except for the fact that they do not generate or reproduce cells. Such self-organized systems seem to be the halfway point between what can be considered alive and what cannot. Indeed, in recent decades our established conceptions of what life really is have received severe blows. Viruses, for example, cannot really be considered alive as we define the term today because outside of a living cell they have no real “state of being.” It is only when they have infected a host and penetrated a cell that they form a system in conjunction with the cell; this system does function in a self-organized way. Contrary to most other examples of the biological cycle, however, the virus-cell system’s purpose is not the survival of the system, but simply the generation of hundreds of new viruses at the expense of the original cell. Perhaps such behavior can be explained by the simple interplay of yin and yang forces.
+
+Viruses aside, I am convinced that complexity and chaos theory hold the mathematical formula for modeling the interaction of yin and yang. As such, I sincerely hope that this text will provide the necessary impetus for such a model to be formulated. I cannot stress enough that the yin-yang image made popular by modern culture has been misinterpreted; yin and yang are, as I have said repeatedly, opposing forces.*38 Yet life itself is a combination of yin and yang energies running in parallel. As such, the archaic t’ai chi symbol (see figure 4b) describes their balance far better than the modern symbol used today (figure 4a). The configuration suggested by figure 4a is a description of yin and yang in flow and by nature inconstant. It could be said that the archaic model better depicts yin and yang in their most productive balance, at that moment when the two energies combine to create life, whereas the modern symbol better describes their process of change over time. (One example would be that of a star in the red-giant phase—greater yang—transforming into a black hole, or lesser yin. More on this in appendix 2.) In the human body the modern t’ai chi symbol is strictly alchemical and requires heightened states of energy to exist (though once achieved, it is permanent).
+
+![image](OEBPS/Images/image-MNDWJSDJ.jpg)![image](OEBPS/Images/image-74C4VUA9.jpg)
+
+Fig. 4\. Yin and yang in balance. The figure shown in (a) is under tension; it relates to Levels Four and Five of neikung training and requires heightened states of energy. This symbol is erroneously used in popular works to describe the natural state of our lifeforces’ balance, which is more accurately depicted in (b) (Third century CE depiction).¹⁷
+
+I will close this chapter with one final bombshell. Consider the yin as the primal quality before space-time; the antagonistic complement of our own yang nature. John himself senses yin energy by its interaction with yang; he feels an electrical current when the two energies are brought together (as do we all). Since the yang ch’i is both a prerequisite to and a result of life—and assuming it is, as I believe, a solar energy—then its presence implies that there was an intent behind the creation of matter. We can see testimony of our continuous growth from the yin toward the yang in the evolutionary record of life. While our universe is a balance of yang and yin forces, some things are more one than the other. Water is considered a yin element. Life began in the oceans in the form of fluid one-celled creatures; evolved into plants, into fish; and finally stepped away from the yin to the solid shore in the shape of amphibians. Our evolutionary process continued on the land; we are still growing more and more into the yang with each epoch. It seems unlikely that the ancient Chinese understood the evolutionary process between 1000 BCE and 300 CE, when the yin-yang theory was fully developed. Moreover, as stated by the Tao Te Ching and confirmed by John, in order for life to exist, living beings (plants, animals, bacteria) must have both yin and yang ch’i running parallel to each other. A wooden table is simply yang and lifeless, while a tree has both yin and yang and is alive. What I am saying, in summary, is that the reality of yin and yang energies lends credence to our hopes that there is a Creator God, and to the idea that the universe was actualized with the intent of producing life itself.
+
+And this, in our age of rigid logic, is perhaps the most shocking realization of all.
+
+Epilogue
+
+FOR A BREATH I TARRY . . . .
+
+### THE LIMITS OF GROWTH
+
+A human being is a part of the whole, called by us “Universe.” . . . The delusion (of separation) is a kind of prison for us. . . . Our task must be to free ourselves from this prison by widening our circle of compassion to embrace all living creatures and the whole of nature in its beauty.
+
+Albert Einstein
+
+This book may have been no more to you than a journey through Wonderland. A logical man might not wish to go too far in concurring with what he has read. For example, if I myself were outside looking in and not intimately involved with the project, I would probably be very hesitant to express a positive judgment. Granted, thousands of witnesses can affirm that John Chang has unique abilities. Perhaps a hundred more, such as myself, would be willing to come forward and swear in court that he possesses the knowledge whereby most men can develop some proficiency with what we (until now) have labeled paranormal skills. To the skeptic this does not mean that everything Chang Sifu believes in is scientifically verifiable, nor that it should be taken as gospel. As a scientist I cannot, and will not, argue with this mode of thought.
+
+I can take such a functional analysis a step farther. Let me assume that you accept both my own sincerity and that of my teacher: Everything I have written here is fact and you believe it. There is still room to wonder what the point behind all the effort is. I mean, why bother? What is to be practically gained by the lessons presented in this text? Even if everything stated here is factual and true, how and why should it affect your day-to-day existence?
+
+The answer is quite simple. If our day-to-day existence were not in jeopardy—if we did not need the lessons provided in this work—the demonstrations would never have taken place, nor would this volume have ever been written.
+
+It is a staple of the Chinese esoteric tradition to avoid intervention in the course of the affairs of the world at large. We have seen, however, that historically this tradition has been broken from time to time, and that many masters (such as Pai Lok Nen and Mo-Tzu) have walked a fine line, merging their karma with the world’s where they saw fit. No Taoist master, not even one at Level Seventy-Two, is a god; they all remain human beings, with the desires and emotions of a human being, however refined. Foremost among these emotions are love and concern for their fellow men and for the progress of human culture. They do give a damn, so to speak, and do not always stand by and watch. Sometimes they step in, and this is one such a time.
+
+I do not know Chang Sifu’s reasons for opening up his teaching to the world, but I do know my own. Therefore, in this section, I would like to speak for myself. What follows is based on my own ideals and opinions, and does not necessarily define the teachings of Chang Sifu. However, much of my rationale is grounded in my experiences with him. Therefore, any errors are my own, while any credit belongs to my teacher.
+
+We live in a problematic world. It is readily apparent that greed is our major sin, the major cancer inherent in our Western lifestyle. We can never say, “This much is enough,” and that has been our downfall. Most of us are not aware, or simply do not care, that our standard of living is in fact destroying both our planet and ourselves. I will address the destruction of both our bodies and our world, but before I do, I would like to address the issue of greed.
+
+It is very difficult to deal with an intangible. How do we define greed? Most dictionaries call it “an ardent and selfish desire.” It’s as good a definition as any. I prefer to use the term shortsightedness, which implies that the person suffering from greed is not aware that in the end he is doing his own self harm. He simply does not have the perception to see this.
+
+Proper perception is an all-important trait and a difficult one to understand. We must be able to disengage ourselves from events, to look at them completely detachedly in order to be able to assess criteria correctly. There is the much-used model of the antelope and the biologist, for example. To a herd of antelopes, a lion is an evil entity, intent only on killing and rending. To a biologist, however, the lion has a purpose in the scheme of things; the predator is in fact ensuring the continued survival and health of the prey. Inside nature’s system of checks and balances, one cannot survive without the other. But the antelope does not have the perception to see its dependency on the lion, and therefore would like nothing better than to be rid of it.
+
+It is unfortunate that life is somewhat like this example. Our desires and preconceptions induce us to look at the world strictly from our own standpoint. The twin axioms of ignorance and greed often serve to further separate us from reality as well. Sometimes, people as a mass can persist in a distorted standpoint to the extent that they wind up doing themselves or others damage. Many cultures have reached annihilation in this manner. We in the modern day, too, have pushed the limit far, but luckily we have also been given time and the means to stop our self-destruction. Most people do not realize that we have become like the gods of old mythology, for we have almost unlimited power and wealth but lack the common sense to use it correctly.¹⁸
+
+Man is by instinct and evolution a pack animal, more content to follow than to explore and individually decide for himself. When under the direction of the leaders of our society, we commonly let things go until we are hard pressed to ignore them, regardless of whether this has a positive or negative overall effect on our wellbeing. It is a mistake to think that the science of sociodynamics is any less advanced in our day and age than, say, physics or chemistry; the degree of control that world leaders have over the populace is staggering when analyzed. And the world can be a very unforgiving place when we live in it so narrow-mindedly. Most phenomena in nature follow the law of exponential progression; this cardinal rule has led to our undoing from the beginning.
+
+In 1972 an international team of scientists headed by Professor Dennis L. Meadows of the Massachusetts Institute of Technology published the results of a study, performed at MIT under the direction of the Club of Rome, in which a computer simulation tracked the decline of world resources based on existing trends. The same conclusions had been reached by other scholars in the past, more notably by the geologist M. King Hubbert in the early 1950s, but the MIT study was the first that world politicians paid any attention to. Dr. Meadows’s research was eventually published for the mass market and became the classic bestseller The Limits of Growth,*39 which sold millions of copies in the 1970s but appears to have been forgotten in the 1990s. Basically, the simulation projected the death by starvation of a third of the world population by the year 2100; the destruction of our ecosystem and the collapse of the world financial base will induce and accompany this worldwide famine.
+
+Manifestations of the phenomenon are already evident in Africa, India, and Southeast Asia. Few people seem to care. In Greece, for example, more sweat is spent on whether hemlines should rise in a given year, or a new talk-show hostess has had breast implants (are they real?), than on the hungry millions in nearby Albania and Kosovo.
+
+So given the continuing phenomena of greed and ignorance, how close are we to the destruction predicted by Professor Meadows’s model? At the moment, the simulation is uncomfortably on track.
+
+There can be no more denying, for example, that global warming caused by irresponsible industrialization and deforestation is a fact. The United Nations and the World Meteorological Organization have established the Intergovernment Panel on Climate Change to monitor the situation and propose an action plan. To date the IPCC has analyzed what we can expect in the future as far as global warming is concerned. Here is a brief summary.
+
+The average temperature of the planet will rise by one degree centigrade by the year 2025 and an additional two degrees by the year 2100\. That may not sound like much, but bear in mind that this rise will not be uniform all over the planet. The temperature at the poles may rise much more than at the equator, and the air will be much warmer over land masses than over the seas. (Another model suggests that, following the initial meltdown of the polar ice caps, the poles will actually get colder, initiating another ice age at high latitudes).
+
+Established wind patterns will change; El Niño is one such example. Asian monsoons might become American monsoons. There will be a worldwide increase in rainfall, but this increase will also be unevenly distributed. At moderate latitudes we might see an increase of 5 to 10 percent in annual precipitation, but the areas of the planet that are already dry will become even more so. Perhaps the entire U.S. Sunbelt, for example, will at some point become one endless desert. There will be an increase in severe climatic phenomena: hurricanes, storms, and floods. We are already seeing this if the severe floods and storms in the last three years of the past century are any indication.
+
+Within the next fifty years, lands currently used for agriculture will become arid and useless; cultivation will have to take place at higher elevations to ensure growth in the forthcoming hotter climate. The ice cap is indeed melting; scientists expect a six-centimeter rise in the level of the oceans by every ten years from now on.
+
+And the ozone layer! Seven years ago a sunblock factor of 2 was acceptable for those of us of Mediterranean descent; now we have to put on sunscreen rated level 24 and heed “sun intensity warnings” to avoid skin cancer.
+
+In March 1997 the National Science Foundation established beyond a shadow of a doubt that the fish in the Antarctic were suffering increased mutation rates and genetic anomalies due to elevated solar radiation. It confirmed that, during the spring season, the ozone level in the Antarctic drops to 50 percent below the limit that ensures protection from UV radiation. This is just the beginning.
+
+Having said all the above, let me also affirm that synthetic materials are unquestioningly wonderful for use in their proper place. As I will discuss further on in this section, there can be no doubt that polymers and synthetic materials have given mankind the keys to the future; the advances we are seeing in technology and medicine would not be available without them.
+
+No, the issues I am addressing are subtle ones: greed and ignorance, nothing else. I have lived under primitive conditions; it is not that great. My point here is that what Western civilization needs to succeed is a careful balance of objectives, actions, and responsibilities. Our children and our children’s children will have to pay the price for our decisions and our inaction today; as such, our love for them should temper our desires.
+
+The word karma translates as “consequence.” You don’t always have to act to be responsible for something; you can also, by inaction, promote consequences. We in the West have allowed our elected representatives to act as they have; therefore, we also must shoulder part of the blame. And we will. A student once asked me if I thought the citizens of Iraq deserved to watch their homes destroyed and their loved ones killed just because a power-hungry dictator ruled their country. I replied in the affirmative, because they unfortunately bore the collective consequence of allowing him to control their lives in the first place. Under the rule of exponential progression, they had allowed Saddam Hussein to grow in might until he became too powerful to deal with. Nature is not very forgiving.
+
+So what does all this have to do with Chang Sifu? Nothing and everything. The horror stories outlined above are simply the facts of life, but they can also serve as examples. John Chang agreed to this book for one reason only: to expand the horizons of people around the world and show them, beyond a shadow of a doubt, that their lives are not as limited as they think. Sometimes it is enough to give people a hint. All sorts of miracles can happen. I am reminded of the member of Greenpeace who, having clandestinely taken a position as a cook aboard a tuna boat, brought the tuna industry to its knees after filming the wholesale slaughter of dolphins on tuna boats. That man struck the spark that started a fire. I am hoping that this book will work in a similar manner.
+
+Chang Sifu’s lessons are intended for the leaders of the world as well as the common man. “Look,” he tells the powers that be, “the universe is not as simple and plain as you once thought it was. You cannot act as you do with no thought for the future or regard for retribution. You will have to pay for the consequences of your actions. There are aspects of the human state of being that you are unaware of at the moment.” Perhaps the leaders will not care, you say. Hasn’t every religion in the world issued the same warning? Many powerful people feel exempt simply because there is no proof of the validity of their personal religion or creed. History has shown us, however, that such an attitude is erroneous.
+
+The aforementioned Greenpeace member notwithstanding, it is astonishing how often the efforts of one man can affect the course of history. Our current Western civilization is essentially still based on the approach and methodology of two seventeenth-century scholars: Francis Bacon and René Descartes.
+
+Bacon was the founder of the modern scientific empirical method. A philosopher and politician, he wrote that man should “seize Nature and force her to serve us.” Bacon asserted that man should essentially make nature his slave, that he should “tie her hand and foot and torture her so that she will reveal her secrets.” Today such words may sound insane; historians realize that the famous philosopher was simply echoing the judicial system of his day. One wonders how he would have enjoyed a tour through a nuclear waste dumpsite.
+
+As for Descartes, there can be no doubt that he was a brilliant man; there can also be no doubt that it is to him we owe much of our current misery. Descartes was a profound mathematician, scientist, and philosopher, but under his direction Western man began a separation from the earth, natural forces, and his own kind the extent of which we are only now beginning to realize. Indeed, Descartes’s most famous line, “Cogito ergo sum,” defines that separation clearly. In severing mind and body and making the flesh worthless and subordinate to mind, Descartes drove a wedge between man and the universe—a wedge that does not, and cannot, physically exist. It is well known, for example, that Descartes vivisected living animals, ignoring their cries of pain and despair in order to determine the structures of their bodies. His was the mechanistic approach; nature was a machine to be analyzed, nothing more. Functional analysis was to be carried out in ever-increasing detail so that, in the end, each component would surrender its final specific secret. It was undoubtedly the Cartesian method that put man on the moon. On the other hand, it is apparent that, by embracing the Cartesian method, we have concentrated so much on the gears that we have lost sight not only of the machine but of the road this machine has taken as well.
+
+I have used the word separation again and again (much to the chagrin of the editor of this text, I’m sure) simply because I believe that it is indeed separation that defines the Cartesian system (and, unfortunately, today’s Western society). The industrial process, for example—an unmistakable derivative of Cartesian philosophy—has separated the craftsman from his product. In other words, by working in an assembly line, each employee fabricates only a tiny part of the entire project; his self-worth is only as great as the partial product he shapes. In contrast, the medieval blacksmith took great pride in his work because it was his from beginning to end. Today’s assembly-line worker, who may do no more than drill holes in a detail part (which will be riveted into place by someone else), has no regard for his chore and can hardly wait for the weekend (or any time when he isn’t working). Despite the progress Western society has made toward advancing the rights of the individual, employment has once again become serfdom.
+
+Conversely, the Japanese have enjoyed immense commercial success with their factory goods basically due to their policy of integration. The president of a company often goes down to the assembly line and assists the workers; all white-collar employees are expected to have spent their time “on the line.” This approach fosters the idea of unity and pride in the product, which, in the manner of the craftsman of past centuries, has led to people considering their work important. As such, their merchandise has sold well.
+
+A further example of an operation that thrives on separation is today’s food industry. The process of meat production is an abomination; animals are sequestered in stalls, not allowed to move, stuffed with hormones and recycled foods, and subsequently slaughtered. Their lives are a living hell and have nothing to do with the pleasant ranches and wide-open spaces of the past. Meat is processed and packaged and put on display in neat cases in the supermarket; most children these days have no idea that they are eating what was once a living animal. Fruits and vegetables are unfortunately just as bad: The amount of chemicals and pesticides used would cause most of us to quit buying fruit altogether were we aware of them. The continual and incessant rape of the seas and marine wildlife is even worse; in a few decades there will be no fish left to eat.
+
+The point is, all of this can be turned around if society as a whole adopts the proper attitude, if we can realize that the lifestyle we are following has no real place in the world. I have seen many Western medical doctors who previously disregarded Chinese medical theory completely stop in their tracks when someone simply spoke to them in their own language. Contrary to Descartes’s expectations, the body’s cell structure is not a constant and mechanistic thing; indeed, cellular biology is somewhat like quantum theory. The pancreas, for example, replaces all its cells every twenty-four hours, while the stomach replaces its cells every three days. The body’s white blood cells are renewed every ten days, while 98 percent of the protein-based tissue in that most complicated and wonderful of organs, the human brain, is replaced once a month. We can thus approach medical doctors with the simple explanation that Chinese medicine is based on the process of continual change—not the details of primary anatomy focused on by our Cartesian-based Western medical system. Generally that distinction suffices to break the ice and seize the audience’s attention.
+
+To close the loop and get back to Chang Sifu, it is apparent that your viewpoint of the world can govern your efforts and axioms, as well as your resulting social direction. It is to the holistic viewpoint afforded by Eastern mysticism (and modern Western science) that we must turn if we wish to survive as a species. For most of us, the common people, the lessons of the East are simple. We need not indulge in consumerism or blindly follow the directives of special-interest manipulators. We are each capable of thinking and deciding for ourselves. The road of life is one of balance, consequence, and simplicity.
+
+Taoist doctrine states that the universe is comprised of heaven, earth, and man, and that all embody a part of the Tao. We have reached that stage in our development where we must accept this truth. Everything and everyone around us has the right to life; indeed, all life is a precious gift and should be treated as such. For all our power, do we really understand life? The wisdom of ancient China tells us that everything begins in and returns to the Tao. Similarly, our technology can tell us much about the origins of our solar system and life on earth, and what we have learned gives us cause to wonder. The assumption that our world is simply the result of a random agglomeration of elements is no longer viable. The earth is roughly four billion years old. Even taking into account the latest developments in complexity theory, there is no way that we can account for the fact that life, in the form of bacteria and single-celled animals, began roughly four hundred million years into the earth’s existence. A single bacterium contains two thousand enzymes; our most liberal estimates of the time it would take for the random assembly of such enzymes to give birth to bacteria is roughly forty billion years, two orders of magnitude off. The second problem is that evolution seems to have occurred in much too ordered and purposeful a fashion; our current mathematics and current theories simply cannot account for the evident complexity and interdependence of living beings.
+
+It seems that if indeed everything is a part of the Tao, then we are quite a way from understanding one of its components, life on earth. And what about man himself? Our own evolution is puzzling. Modern human beings have been on this planet for about forty thousand years; how and why did we come to be as we are? The size of our brains exploded in evolutionary terms, doubling in almost two million years. Indeed, the increase in brain size was so sudden that the rest of our bodies did not have a chance to catch up. As a result of these larger brains, which could not pass through the mother’s birth canal, human infants had to be born very early in their development. (The size of a human child’s brain doubles in the first year of life.) The infants of most mammals can walk within a few days of their birth. Conversely, human babies cannot walk for a year and are helpless for almost three. These totally dependent children restructured the order of society; they had to be protected and taught to function. The evolutionary history of the human animal seems to defy both the standard process of evolution and the principles of self-organization outlined by complexity theory. It is even more perplexing if we examine closely the history of mankind through the last ten millennia. The wheat plant, for example, mutated quite suddenly ten thousand years ago, almost as if it wanted to be made into bread by the people of that age. And there is still no evolutionary justification for the pleasant effects that the fermentation process has on milk, grape, and grain.
+
+So in dealing with earth and man, have we finally come to address heaven? Is evolution directed? Is there indeed a God? As we have seen, Master John Chang believes strongly in God, and is undoubtedly a creationist. I myself am a product of my age and so question everything. Oh, I firmly believe in unconditional universal principles: love, justice, consequence. I believe that there is an afterlife and that I have seen spirits. As a scientist, however, I feel more comfortable with the Eastern notion of heaven in the sense of an indefinable, incomprehensible, quantum-physics-like absolute encompassing the entire universe. Perhaps there is a personal God whose domain is this planet, who has seen to our growth. Perhaps He is even the manifestation of a Universal Spirit that encompasses all the extant galaxies, as suggested by the Christian concept of the Father, Son, and Holy Spirit. I do not know, and I am much too small to judge, so all I can do is hope.
+
+We as a species have been given, and continue to receive, great opportunities. We are also in great peril. From now on, therefore, we have to act carefully and with forethought—like responsible adults—in order to reach our full potential. Our world will tolerate no more mistakes or foolishness, no more childishness. The human animal is, as a remarkable man so eloquently put it so long ago, at Childhood’s End.*40
+
+And there is hope for the future.
+
+We are neither born into the world without suffering the pain of birth nor pass through adolescence without experiencing doubt and heartache. Humanity as an entity has just passed through puberty and stands on the threshold of adulthood. Like a teenager, we have suffered for a time and been subject to our weaknesses and impulses, but now we are growing up. As we enter the third millennium of the Common Era (more than the fourth millennium of recorded history), humanity is indeed ready to become a responsible adult.
+
+Look how far we have come in less than one hundred years, and how rapidly we are progressing at this point! Let us concentrate for a while on our triumphs rather than our failures. In the face of nuclear war, for instance, reason did prevail; the superpowers of the world took a step back from their Cold War antagonism—a war that, after all, was fought over an economic system and nothing more. Ecological organizations are more powerful now than ever before. Information dissemination has become worldwide, and literacy is growing in third-world nations. Medical knowledge is soaring; we can now perform miracles. Imagine telling a nineteenth-century physician that it would become routine to rip out the sickened heart of an ill man and replace it with another, stored for that purpose, from a suitable donor (and with the donor’s consent—itself no small thing)? Or imagine telling the same doctor that, harnessing the power of light, we can perform surgery on the delicate human eye; that we can open and close the human brain?
+
+Citizens around the world are now more than ever aware of their rights and willing to stand up and fight for them; not only that, we do not hesitate to stand and fight nonviolently for the rights of others. Even more surprising, this system works, and world leaders are ready to concede to it! Ghandi would not have had a chance in medieval Europe.
+
+Despite setbacks, we have indeed set foot on the moon and are making progress toward conquering the solar system. We may be close to a new form of clean energy. Legislation has been passed in the West restricting corporations from irresponsible ecological damage. Technology is advancing so rapidly that electronics are often obsolete within a few years. Wonderful new materials—created by our investigations on the molecular level—will allow us to reach even farther than before. Very soon, as computers become more and more powerful, we will be creating intelligent life ourselves. We have cloned mammals and are close to understanding the fabric of life itself. We can map the DNA strand, the very building block of organic existence. Perhaps someday we will be able to scientifically pinpoint the location of the soul itself.
+
+Five thousand windmills in the Tehachapi Mountains north of Los Angeles, California, produce 1.6 billion kilowatts of electricity—more than all the households of San Francisco use in a year. Studies have shown that wind farms in the windiest 1.5 percent of the surface of the United States could produce 25 percent of the electricity that country uses. Even more amazing, people in the U.S. government are listening. Similar studies have shown that if 4 percent of the world’s desert regions were covered by commercial solar cells, this would provide enough energy to satisfy worldwide demand. (This equates to an area roughly five hundred miles by five hundred miles, and a capital investment smaller than that required in the future should we continue to use oil and fission as fuel sources.) Once again political leaders are giving the idea serious consideration; the major stumbling blocks are special-interest factions and the need for various sovereign nations to work together. But it is coming.
+
+On a similar note, biological fermentation farms for the production of electricity have become a reality since 1995\. In the United States one such farm, using a combustion cell that burns millet, provides a thousand households with electricity while at the same time using only 250 acres for cultivation of the millet! There does seem to be a real desire to use environmentally friendly fuels in conjunction with future technologies. For example, the Russian aircraft manufacturer Tupolew, in partnership with the German giant Daimler-Benz Aerospace, is readying an aircraft for production in the year 2010 that will use hydrogen as a fuel. Hydrogen burns cleanly, turning into water vapor when oxidized.
+
+The point is, had we not gone through a phase of rapid industrialization and technological growth, we would not have developed the knowledge we now have that makes such dreams possible. It is our current material and physical sciences that have handed us these rewards on the proverbial silver platter. The world of the future will indeed be “clean” from an ecological standpoint, because the majority of people on the earth want it to be.
+
+This book is also a good example of how far we have come. Even thirty years ago, in the heyday of the 1960s, I would never have dared to write these words, nor present the concepts I have, for fear of retribution. In truth, I myself am very much a product of the yoke forged by earlier generations, a person neither Occident nor Orient but both.*41 Moreover, it is certain that Master Chang himself would not have bothered to come forth in the past, for lack of a suitable audience. But in our day everyone has seen Star Wars on the silver screen and Kung Fu on television, many of us both in youth and middle age, and such things are more readily accepted as natural phenomena.†42
+
+If any of us needs more proof of our growth as a species, then more than our accomplishments it is our dreams that we must examine. Where do we want to be? What is it that we covet? Look deep into yourself. Do we, in fact, not covet the stars? Can there be any doubt of this? There is a catch here, however, as I have tried to make clear in this chapter: In order to reach the stars we hunger for, we must first preserve the womb that bore us, this very planet earth. There is no way around this.
+
+So how does neikung enter the picture? Well, what if everything I have written is true? Can it be developed and nurtured? And if so, where will it lead us?
+
+I believe that such inquiry will guide us to the threshold of the stars we so desire. Neikung is the study of our life’s energies and more; it is the study of our existence itself. Many of the answers we seek are hidden within the activities of yin and yang. When we are ready and able to unlock these secrets for all mankind, only then will we step into the future promised by our dreams. I believe that in this unfolding epoch, the boundary between physics and metaphysics will fall for good (if it was ever really there in the first place), and that even death will begin to lose its terror. Conceivably we as a species will come to perceive the answers to the questions that have plagued us since the dawn of time: Why are we here? And Where are we going?
+
+Such a world is John Chang’s gift to humanity.
+
+### Appendix One
+
+### NOTES
+
+[1\. Alexander of Macedon—“King of the Greeks” in the words of Kipling’s Man Who Would Be King—swept across Asia from 334 to 326 BCE with an army of forty thousand men to reach the northern borders of India. He was stopped only by the unwillingness of his men to go on; they rebelled, refusing to march eastward beyond the Hyphasis River. Alexander’s successors and their descendants penetrated even farther into India, creating kingdoms and becoming the stuff of legends. Some historians say that the list of Greek kings in India is as long as that of the kings of England from the Norman invasion to the present day.*43 In any case, what is important is that the two cultures did meet and interacted in a wave of mutual admiration and respect. The resulting exchange of ideas and information had a profound effect on the history and development of both the East and the West.](#chapter0004.html)
+
+From the Greeks the Indians learned sculpture, architecture, astronomy, and mathematics. From the Indians the Greeks learned about the inner workings of man’s mind and body. Many Greeks became Buddhists; in fact, one Hellenistic king, Menandros, is honored as a Buddhist saint by the Theravadan denomination. There can be no denying the pronounced effect that Indian thought had on the Greek philosophers of the period and, as a consequence, on later Western development. Since it was Hellenistic thought and science that subsequently influenced the Romans and, through them, the early European nations, I can safely state that the philosophy of the East did in fact strongly affect the history of the West. The two peoples had spoken well of each other even before Alexander’s coming. The Brahmin leaders of India, in the classic Laws of Manu, placed the Javanas (the Sanskrit word for “Greeks,” from ’Iωνεç or e-o-nes, as the Greeks of Asia Minor were called) in the warrior (Kshatriya) caste; there is a reference to the Greeks in the Indian epic Mahabharata as well. In the fifth century BCE the Greeks Herodotus (a historian) and Hekateus (a geographer) affirmed that “of all barbarians the Indians are least barbaric” (a strong statement from the ethnocentric classical Greeks). By Hellenistic times the Greeks were speaking of the Indian sages with open admiration. The famous philosophers Apollonius and Plotinus both went to India in search of esoteric knowledge, and many a Greek diplomat in the court of Indian kings wrote bestselling books describing India to the Greeks back home!*44 †45
+
+Many scholars are of the opinion that it is the Greeks themselves who were responsible for the Mahayana school of Buddhism.‡46 If this was the case, and taking into account that it was Mahayana Buddhism that spread to China, Tibet, Korea, and Japan, then the West did indeed strongly influence the history of the East. Conversely, there can be no denying the pronounced effect that Indian thought had on the Greek philosophers of the period and, as a consequence, on later Western development. The philosopher Pyrrhron, for example—who followed Alexander to India and returned to Greece to influence all those who came after him (Xeno and Epicurus, among others)—was for all practical purposes a student of the Digambara (sky-clad) sect of the Jain religion.§47
+
+The consequences of the Hellenistic Age spread all the way to China in the first century BCE with the establishment of the Silk Road; the continuous exchange of learning and technology that was a by-product of the silk trade affected people’s lives from Spain to northern China.
+
+[2\. I had often wondered what prompted Mao Zedong to turn so dramatically against Chinese culture and science, attacking basically everything in sight first in 1949 and then again so bloodily in 1966 with the Cultural Revolution. I have come to believe that it was this elitism and sequestering of knowledge, this continual conflict among the powerful, that the man resented. There can be no doubt, however, that Mao botched the job and destroyed much that would have otherwise benefited humanity.](#chapter0004.html)
+
+[3\. Many sinologists and translators, quite rightly, have despaired of ever conveying the proper meaning to Westerners and have been content to use the term “energy-time” for kung fu, duplicating the simplicity of the Chinese ideograms. I would like to take a more Jedi approach to the ideograms’ meanings. We cannot hope, as Westerners, to duplicate the conciseness of the Chinese characters with words. However, we can use another Western approach, that of mathematics, to duplicate Eastern culture. In short:](#chapter0007.html)
+
+![image](OEBPS/Images/image-OOW698AO.jpg)
+
+Fig. 5\. Kung Fu = 0 ∫t F(E,t) dt, where E=energy and t=time.
+
+In other words kung fu is equal to the integral of the energy spent in training per day, over the total amount of time spent in training! The area under the curve, the integral, defines the total power that you have achieved through your efforts. You will see later on how precise this definition is. (You can also see how a trainee’s efforts vary from day to day; kung fu refers to the total power accumulated in the process.) It seems that there are indeed two English words that convey the meaning of kung fu, and those are hard work!
+
+[4\. The theory that Taoism has made most famous is that of two opposing universal forces; I am referring of course to yin and yang. It is hard to imagine an area of the world where these two ubiquitous words have not been heard. (Indeed, where they have not been heard is where the concepts are probably still referred to by other words!). As I typed this text, I activated my word processor’s spellcheck program; it did not pause for either yin or yang, one more indication of the words’ acceptance in the West.](#chapter0009.html)
+
+The twin forces of yang and yin are complete opposites: male and female, white and black, light and darkness, hot and cold, positive and negative. The Chinese ideogram for yang may be translated as “the sunny side of the mountain”; that of yin as “the shady side of the mountain.” Our physical bodies are yang; the energy and being of spirits is yin. Conversely, yang comes from heaven, yin from the earth. Both forces are present in everything alive on this planet, but they are not harmonious forces, as often represented in the West. Instead, they are in constant struggle, never able to meet yet always interacting. It must be stressed that this clash is a struggle of natural universal energies, not a contention of sentient deities! Neither yin nor yang has anything to do with good and evil; they are independent of purpose and morality. It is very interesting to note that many diverse cultural groups have made use of the same imagery. The Navajo Indians draw Father Sky and Mother Earth in their sand paintings in such a way that even the most naive observer will think of yang and yin. The ancient Greeks made use of the same idea, asserting in their myths that everything on the world was created by the mating of Father Sky (Uranus) and Mother Earth (Gaia).
+
+By 1000 BCE the concepts of yin and yang had been refined and the patterns of the two forces’ interaction charted; the date indicates that this philosophy existed long before the concept and word of Taoism were developed.
+
+[5\. The Taoist philosophical tradition (Tao-chia) is associated with the classical texts Tao Te Ching (or Lao Tzu), Chuang Tzu, Lieh Tzu, and others. It has been said that next to the Bible and the Bhagavad Gita, the Tao Te Ching is the most translated book in the world. Much also has been said about the conflict between Confucianism and Taoism, which in popular notion portrays K’ung Fu Tzu as the glorified civil servant stressing obedience, while Lao-tzu is the mystical hermit residing somewhere in the mountain wilderness. The truth, however, seems to be that both were simply men of their age, struggling with concepts germinating and developing during their lifetimes.](#chapter0009.html)
+
+Lao-tzu (old master) is the honorific given to Li Erh Tan, a minor official of the Chou state who lived around the fifth century BCE. (We have no way of proving or disproving this information.) After his death and for the next hundred years, sayings were collected that were attributed to Li and presented in a volume called the Lao Tzu. Of Lao-tzu the man we really know nothing. What is important is that this work, which came to be known as the Tao Te Ching sometime between the first century BCE and the first century CE, sets the base for philosophical Taoism. However, it is certain that Laotzu did not call himself a Taoist. Instead the Lao Tzu, like the works of Confucius, is more concerned with providing a base for correct political leadership—a manual for rulers, if you will. Indeed, the title Tao Te Ching tells us much about the volume.
+
+Tao (simply translated as “the way”) is the nameless, the origin beyond origins. It cannot be defined by human beings—it is untold times beyond us, as we are above the amoeba. The Tao is unknowable, eternal, without shape or end yet having all shapes and all endings. Formless, it permeates everything and is the goal of all existence.
+
+Te is an equally difficult concept. It can be translated as “integrity,” “virtue,” “the proper mode of behavior in relation to the will of heaven,” “power,” “inner potency,” “knighthood,” “strength effused with honor.” The key issue is that both Lao-tzu and K’ung Fu Tzu thought that te is something a good ruler should have. They were not too far apart in their basic ideas; it was their approaches that differed. Confucius saw the Way as being a set of rules that heaven had bequeathed to man, hierarchical in nature and full of filial dependencies with clear and unyielding rankings. Material rewards and status were compensations for correctly following the Way. Hence, what was to be stressed was te (since te came from heaven); the Way would then take care of itself. (Because Confucianism emphasized obedience, it is obvious why the ruling classes were all for its adoption by their subordinates!)
+
+Lao-tzu did not follow the same route. He counseled “sagehood” and stressed the Way for its own sake rather than for the community’s profit. Just as all beings assuredly returned to the Tao in death, so it was necessary in life for each individual to return to the original purity and simplicity of his basic nature. The key was to “manifest the simple and embrace the primal.” Tao was likened to p’u, the “uncarved log,” the best metaphor for expressing the simplicity of the Way. “Though the uncarved log is small,” Lao-tzu said, “no one in the world dares subjugate it.” The key to achieving the Tao was wu-wei, spontaneity and noninterference—“going with the flow,” to use a New Age– ism. However, it should be understood that wu-wei does not imply passivity. Rather, like a wise swimmer crossing a deep and powerful river, the Taoist swims with the current rather than against it.
+
+The particular section of the Lao Tzu I quoted to John Chang goes as follows: “All things carry the yin on their backs and enfold the yang within; when the two combine, life’s energy is created harmoniously.” (Tao Te Ching, section 42).
+
+[6\. Since ching is associated with the reproductive process and apparently flows downward, some Taoists (and Buddhists of the Ch’arn sect both—the two dogmas are not that far apart) took to using the Chinese theory of “opposing flows” to make the ching rise. This theory says, simply, that if you want something to rise, pull it down, and vice versa. To make the ching ascend to a higher position in the body where it can be refined into ch’i, these practitioners took to hanging and swinging heavy weights from their penises! I have seen photos of a monk from the Shaolin temple suspending a sixty-pound stone from his organ with ropes. I am unaware if he achieved the ascendance of the ching through this practice, but he had most certainly, over many years of repetition, developed what is colloquially called “an enormous schwanstuecker.” Conversely, how many men have suffered impotence or damage as a result of this practice, I do not know (and I say this by way of warning, because I know that there is not a male out there who did not, upon reading this, immediately think: “Aha! So that’s the way to do it!”).](#chapter0014.html)
+
+Other Taoists took to what is euphemistically called “double cultivation,” and is actually nonorgasmic sex. That is to say, the practitioner engages in the sexual act up to the point of orgasm, at which he withdraws and or ceases. The next step is to yogically force the collected semen to rise, once again, to an area of the body where it can be processed. I have seen many books in the West describing this technique, but, once again, I have no verification of its efficiency.
+
+[7\. Because this is such an important verse, and one that you must understand in order to comprehend the metaphysical outlook of John’s school, it would be best if I presented a literal translation of the Chinese ideograms. They are:](#chapter0014.html)
+
+![image](OEBPS/Images/image-G8RSAGHI.jpg)
+
+To die (a parent standing over the death-bed of a child)
+
+![image](OEBPS/Images/image-198W27H5.jpg)
+
+but (a mustache)
+
+![image](OEBPS/Images/image-L6UZHFG2.jpg)
+
+not (a seed under the ground)
+
+![image](OEBPS/Images/image-F5I30KTZ.jpg)
+
+vanish, perish (a man in a crypt)
+
+![image](OEBPS/Images/image-5M76FIIA.jpg)
+
+he who (an old man speaking)
+
+![image](OEBPS/Images/image-Y3JYQ0TL.jpg)
+
+immortality, long life (long life)
+
+Many different interpretations of this stanza have been attempted in order to make the passage “fit” into Western philosophical models. In truth its meaning is very literal. An exact translation would be, “He who dies but does not perish has long life.” I chose a more peremptory usage: “He who dies but continues to exist is immortal.” The passage’s meaning is simple: Individuals who (like John Chang) have reached t’ai chi and combined yin and yang inside their beings retain all awareness, memory, and ability after death. They “take their yang with them,” as John so aptly put it.
+
+[8\. No account of religious Taoism would be complete without a presentation of Chang Tao Ling. Born Chang Ling during the Late Han dynasty in Szechuan province (probably in the year 150 CE, though others say 35 CE), he was a child genius. At seven he could read and elaborate on the Tao Te Ching, and by eight he had mastered the art of feng shui (divination). As an adult he displayed preternatural abilities and tremendous healing powers, on both the physical and psychological levels. But Chang Ling was unique in more than just his capabilities. He was also the first Taoist master to organize his followers into a movement.](#chapter0016.html)
+
+Chang managed this by instituting a lifetime fee for healing or for mediation with the spirit world. Now, it had been customary since primeval times for the village to support the shaman, but no one prior to Chang Ling had grasped the concept of organization so fundamentally. Chang charged his patients five bushels of rice each year for life (the American Medical Association would approve of this approach). This is a lot of food, and the payment was guaranteed for many years. It was a lifetime fee also in the sense that if you paid the fee, it ensured unlimited medical and spiritual treatment; there was no extra charge each time you became sick (sort of a combined church and HMO). This tithe enabled Chang to gather around him a large group of followers, whom he promptly graded into a hierarchy based on each individual’s abilities and latent talents. So unusual was this innovation that his group became known as the Five Bushels Sect. In all fairness, however, it is said that he worked miracles; the paralyzed did walk and the blind did see, so to speak. Otherwise, he would never have been able to pull it off, not in China (for reasons I will explore in further chapters) and certainly not in the second century CE. The man had power.
+
+Chang Tao Ling and the people who gathered around him were unique in one more specific way (indeed, in this case his perspective goes radically against the popular image of the Taoist hermit, indifferent to society). Chang Ling, by organizing his followers and agreeing to keep people healthy and happy through his powers, and by agreeing to fight with evil and exorcise demons and evil spirits, consented to intercede in the course of humanity where he could—where karma allowed him to. This was a profound step for a Taoist, primarily because in doing so, he accepted the consequences of his actions. Remember that, according to his beliefs, if he did well, his karma would be good; if he failed, he would have to pay for it. Bear in mind also that Chang lived during the second century CE, before Mahayana Buddhism with its idea of the bodhisattva and self-denying sacrifice entered China. You should be able to see by now that the image of Taoism propagated in the West is not at all accurate.
+
+Chang assumed the title T’ien Shih, “heavenly master” (or T’ien Sifu, “heavenly teacher”; it depends on whom you ask) and passed it on to his offspring (he did have children—once again in contrast to the image of the Taoist hermit). His descendants, after a history of various wars followed by the short-lived establishment of a Taoist theocracy, eventually settled on a mountain called Lung Hu Shan (dragon tiger mountain) in Jiangsi province. Over the centuries they continued the practice of interceding in humanity’s affairs, storing in their halls, among other things, thousands of jars in which they jailed the powerful demons they had exorcised. Other Taoists, not of their denomination but loosely affiliated with them, and sharing their belief that a man blessed with power should aid humanity, congregated on their mountain; there they were given shelter and a place to meditate in peace. One such man will be central to this book, as we will see later on.
+
+In 1927 the Communist section of the Nationalist Army broke off and attacked Lung Hu Shan while en route to Hailufeng. They forced the monks in the temples, among them the hereditary Heavenly Master, to flee for their lives. The troops smashed thousands of jars and containers, releasing (according to the monks) thousands of evil spirits to once again walk the earth; purportedly, it is these spirits that caused World War II! The T’ien Shih eventually settled on Taiwan, where they continue to live to the present day. What is again central to our story is that (as happened also on Mao-Shan in 1949), some of the hermits on Lung Hu Shan were not at all put off by the army’s appearance; they were so powerful that they frightened the soldiers away from their retreats!
+
+[9\. Chances are that if you asked one hundred people who have read up on Chinese philosophy who Lao-tzu was, they could all tell you, some perhaps in great detail. The typical researcher, however, might be shocked to discover that a man whose school was historically a greater rival to Confucianism than Lao-tzu’s Taoism ever was is virtually unknown in our day. Such a man was Mo-Tzu or Mo Ti. He is pertinent to this text in that the school of kung fu inherited by John Chang traces its lineage back to Mo-Tzu himself.](#chapter0016.html)
+
+For the two centuries following his death, the school of Mo was the main rival of Confucianism. Born in the state of Lu in 469 BCE, roughly ten years after K’ung Fu Tzu’s passing, Mo-Tzu was extremely well educated as a youth and apparently a martial artist and master of strategy as well. Indications are that he was from a poor family and may have even been branded as a criminal, since Mo-Tzu means “Mr. Tattoo.” The principles of justice were the driving force of his ministry, however, and though by nature a stubborn and extreme individual, universal love was the center of his teaching. Four hundred years prior to the birth of Christ, Mo-Tzu is recorded as having said the following:
+
+“If people were to regard other states as they regard their own, and their neighbor as they regard themselves, then they would not attack one another, for it would be like attacking their own person.”
+
+Before I continue, it might be prudent to say that there is a difficulty in using the words universal love to describe the central theme of Mo-Tzu’s philosophy. From my own standpoint those two words better depict a Western consciousness than an Eastern approach to life (though I will continue to use universal love in the text for lack of a better term). The reason for my insistence on a distinction is that Mo-Tzu was preoccupied with justice as much as he was with compassion, and did not tend to be a very forgiving fellow. Contrarily, in the West, as a consequence of our Judaeo-Christian tradition, universal love has become associated with the forgiveness of sins, which is not really focal here. Perhaps a better word for Mo-Tzu’s teaching would be universality,*48 which does a better job of tracing back to the central essence of Taoism and the concept of karma. In any case, the universal person considers his neighbor the same as himself, and the father of his neighbor the same as his own father, and acts accordingly.
+
+In 393 BCE Prince Wen of Ku Yang was planning to attack the much smaller state of Cheng. Mo-Tzu went to him and asked him what he would do if some of the larger cities in his country suddenly raided the smaller towns, killing and plundering. The prince replied that he would punish them severely. Mo-Tzu then asked him if he himself would not be punished in the same manner by heaven for attacking Cheng. Prince Wen replied that he was justified in his assault, for the people of Cheng had murdered their lords for three generations, and were already suffering the retribution of heaven. Mo-Tzu asked him how he would feel if, when punishing his son for some bad deed, his neighbor suddenly appeared and began hitting the boy, declaring that it was heaven’s will that he do so! If the lord of a great nation attacks his neighboring state, killing its people and stealing their possessions, then writes down how grand and justified he is for doing so, how is he different from the simple man who attacks his neighbors? Prince Wen realized the wisdom of his words and backed down from his plans.†49
+
+Mo-Tzu never hesitated to stand up to the powerful and risked his life on many occasions while doing so. His driving force was a pronounced love for justice. Indeed, Mo-Tzu’s followers later became the protectors of the common man and of holy places. Heaven is aware of every crime that people commit, he wrote, and heaven loves justice and hates injustice. How do we know that heaven loves justice? In a just world there is life, wealth, and order, while in an unjust world there is death, poverty, and chaos.
+
+Mo-Tzu believed that heaven cherished the entire world universally and sought mutual benefit for all living beings. This is a very simple, direct, and eloquent statement attempting to describe the Tao. According to Mo-Tzu, heaven desired that those who have strength protect and work for others, those with wealth share it with others, those in positions of authority work ethically for proper government, while those laboring should diligently carry out their tasks. When a state or society as a whole avoids conflict along its borders, feeds the hungry, ministers to the ill, then that nation will flower and prosper. Almost twenty-four hundred years ago, Mo-Tzu had written that if we substitute good government for offensive warfare and spend less on the army, we will gain many benefits; if a leader acts according to the universal laws of justice and sets an example, then he will have no enemies and bring incalculable benefit to the world. As an example of this, Mo-Tzu noted how many hundreds of officials and how many thousands of soldiers are required for a military expedition. In the meantime internal government was neglected, farmers forgot their crops, merchants hoarded their wares. If one fifth of the supplies and weapons were salvaged afterward, it was considered fortunate. Countless men died or were crippled in a war. Mo-Tzu asked if it was not perverse that the leaders of the world delighted in the injury and extermination of their own citizens.
+
+Mo-Tzu attacked nepotism as well. Originally, he wrote, government was intended to benefit and help the poor, bring safety where there was danger, and restore order where there was chaos. People chose the most capable among themselves as leaders so that government could be unified under intelligent direction. However, administration in his day was carried out by court flattery, while the relatives and friends of those already in power were exclusively appointed to positions of authority. Since the citizens realized that these individuals had not been commissioned for the welfare of the people, they resented them and did not identify with them, which fostered revolution. Was this surely not insane? Mo-Tzu suggested that those in positions of power honor the worthy and impartially demote those without ability, to do away with interpersonal conflicts.
+
+Unfortunately, no world leader to date (other than Ghandi) has seen fit to listen to such common sense. Mo-Tzu’s observations are still pertinent today; we have learned nothing in two millennia. Even in our so-called modern democracies, “It ain’t what you know, it’s who you know” and “Might makes right” are fundamentally accepted principles.
+
+Mo-Tzu believed in nonhuman spiritual beings and the spirits of human ancestors; as evidence, he commented that countless people all over the world had experienced encounters with such entities. His philosophy and worldview were, from a metaphysical standpoint, very close to the shamanistic model.
+
+Mo-Tzu could be very extreme in his views, and certainly his ascetic’s outlook appealed more to disciplined warriors than to layfolk. He wore only coarse clothing and had few possessions. He practiced yoga and the martial arts continuously. The historical (and scientific, by the standards of the day) document Huai-nan-tzu stated that he never stayed in one place for very long. Perhaps the author’s main disagreement with Mo-Tzu was his expressed dislike of music. Mo-Tzu thought that singing, dancing, and playing music were a waste of time; that such an enlightened individual missed out on the joys of creative expression is sad to say the least.*50 The celebrated Taoist philosopher Chuang-tzu himself, while calling Mo-Tzu “one of the greatest of souls in the world,” criticized him for economizing on funerals and music. Chuang-tzu said that people will sing when happy and wail when in grief, and to attempt to stop such things went against human nature. I could not agree more.
+
+As stated earlier, for two centuries after his death in 391 BCE, the school of Mo-Tzu was the main rival to the school of K’ung Fu Tzu. Mo-Tzu’s followers became temple guardians and the defenders of the simple man; most of them were from common stock themselves while also very educated (quite a contrast in the fourth century BCE). However, his school quickly broke into three branches, each accusing the other of heresy, and because of this conflict among themselves and with Confucianism, they quickly lost power. By the Common Era they had mostly disappeared or gone underground.
+
+[10\. In addition to the Lung Hu Shan sect, there are three other Taoist traditions that have had an impact on Chinese history; all were established in the fourth to sixth centuries. One is the Maoshan Shang-ch’ing (Mao Mountain supreme purity) sect, which followed the teachings of Wei Hua-ts’un, Yang Hsi, and T’ao Hung-ching, among others. This sect did come closer to the popular image of the Taoist hermit, stressing peaceful meditation and a reclusive lifestyle to obtain the prize of immortality. The second is the Ling-pao (sacred jewel) scriptural tradition, which was based on sacred texts and emphasized complex rituals and liturgies. The third is the Wutang-Pai, which emphasized martial arts training as a means to enlightenment; one of its members, Chang San Feng, is regarded as the founder of internal martial arts and is certainly pertinent to our story. (See note 12.)](#chapter0018.html)
+
+[11\. The issue of ultimate enlightenment or immortality is one that has been written about in detail and requires several volumes to address. In short, there seem to be different stages to the game. From the point of view of John’s lineage, the first stage is achieved by completing Level Four (actually Level Five, though I have not addressed the distinction to avoid confusion), which ensures that you can take all your yang energy with you when you die. Such a spirit is still bound by the laws of karma, however, and will remain so until Level Thirty is attained. In other words, to ensure escape from the cycle of rebirth you must attain Level Thirty or more while alive. Ultimate enlightenment results at Level Seventy-Two, when all seventy-two chakras in the body are opened and the very last, located at the top of the skull, is allowed to bloom. At this point the yogi is one with the universe.](#chapter0020.html)
+
+I have found John’s method to be similar to that of Kundalini yoga and the Tibetan Buddhist yogas of Naropa (as well as some branches of Taoism and shamanism), but, as mentioned above, a proper comparison is beyond the scope of this book.
+
+One issue, however, that I would like to address is the fact that such an approach is not limited to Eastern mysticism. In my opinion the ancient Greeks, Mesopotamians, and Egyptians all used the same method. While the evidence for this is circumstantial rather than hard, it would appear that the theory is on track.
+
+The serpent is a symbol found everywhere in the Greek archaic religious record as well as the Egyptian. The depiction of the snake refers to “earth energy” or, in the words of John Chang, “yin power” (yin ch’i rising from the earth).
+
+Certain researchers have proposed the theory that the chakras of Eastern mysticism are no more than a network of “standing waves” in the field of yin energy that surrounds and pervades us. This standing-wave network reflects our personalities and our karma both, a counterpart to our genetic makeup.
+
+In figure 6a a simplified version of the chakras of Eastern mysticism is shown (that is, the main seven, rather than all seventy-two). Compare these chakras to the basic standing wave of physics (figure 6b), and to the staff of Hermes (figure 6c) used as a symbol by physicians around the world. This symbol is actually quite old and can be seen on a Mesopotamian vase in the Louvre dated to 2000 BCE (figure 6d). You could also look at the staff of Asclepius, god of healing (figure 6e), or the snake crown of the pharaohs of ancient Egypt (figure 6f). All the images refer to the ascension of earth energy. I will leave it to others to make a more detailed comparison.*51
+
+![image](OEBPS/Images/image-BS2DCY8B.jpg)![image](OEBPS/Images/image-RLV8RWSV.jpg)![image](OEBPS/Images/image-QZN0UH5H.jpg)![image](OEBPS/Images/image-C65SND2F.jpg)![image](OEBPS/Images/image-8ZWVX6V6.jpg)![image](OEBPS/Images/image-GOA4BWOI.jpg)
+
+Fig. 6\. (a) The chakras of Eastern mysticism. (b) A standing wave. (c) The staff of Hermes. (d) Mesopotamian image showing the same network of energies. (e) The staff of Asclepius. (f) The snake crown of Egypt.
+
+[12\. One other semihistorical figure who has a bearing on this text is Chang San Feng. An internal alchemist of great power, he is credited by many with originating the internal martial arts—that is, the application of nei-dan training to martial technique. John Chang’s school of kung fu counts him as a prominent and highly successful member of its lineage. Among other things, Chang San Feng is considered by some the originator of t’ai chi chuan, although his legacy’s alleged influence on t’ai chi is an area of controversy. I will stick my neck out and say that I personally am convinced that Chang San Feng’s internal martial art did indeed influence t’ai chi (though I will not at this point get into the whys and hows). Feng’s name appears in historical Chinese texts under two different spellings, as Chang “Three Mountain Peaks” and Chang “Three Abundances” (both pronounced Chang San Feng). As such, some Chinese writers suggest that Chang lived to be at least five hundred years old . . . or more.](#chapter0020.html)
+
+The first reference we have to Chang is from the seventeenth-century scholar Huang Tsung-Hsi in his Epitaph for Wang Cheng-nan, who wrote: “Shaolin is famous for its martial art. However, their art stresses only offense, which allows an opponent to take advantage of this to strike weak points. There are internal martial arts, which employ stillness to overcome activeness; as soon as the aggressors come into bodily contact, they are immediately thrown. For this reason, Shaolin is regarded as an external martial art. The internal martial arts originated with Chang San Feng [Chang Three Mountain Peaks] of the Sung dynasty [960–1279 CE], who was an alchemist on the mountain of Wu Tang. He received a summons from the emperor Hui Tsung. On the way to see him, he found the road blocked by a group of bandits. That night he dreamed that the heavenly emperor Hsuan-Wu, the Taoist god of war, taught him martial arts. In the morning Chang killed over a hundred bandits.”*52
+
+Of significance is John’s insistence that Chang was a Shaolin monk before he became a Taoist, something that fits in well with the seventeenth-century scholar Huang Pai-Chia’s (Tsung-Hsi’s son) statement that “Chang San Feng was a master of Shaolin, but reversing its principles developed the Internal school.”†53 This is a distinction of some consequence to martial arts historians, one that has not been sufficiently stressed (in my opinion) and that, most assuredly, Taoist scholars will take umbrage with. Another important point is Huang’s use of the word stillness to describe internal martial arts. He is referring to yin energy. It should be noted that internal martial arts are not of necessity flowing and evasive, as we have come to believe in the West (since all movement is of necessity yang). Rather, in this text, Huang is denoting yin in the context used by John Chang, in other words as a “gravitational force” that absorbs energy and warps space-time. The Epitaph for Wang Cheng-nan offers considerable circumstantial evidence that John’s school is indeed descended from Chang San Feng.
+
+In the Ming historical text Ming Shih Fan Gi Chwan, we find a reference to Chang San Feng; he is presented as being “big and tall, with a crane’s back.”*54 Apparently, the first Ming emperor tried to find him in 1392, but Chang didn’t want to be found. Seventy years later (in the Ming text Ming Lan Yin Chi Shou Lei Kou) we find mention of him again. That particular Ming emperor was successful, for Chang deigned to visit him.†55
+
+Other Ming references catalog Chang Three Abundances as a native of the Yi district of Liaoning province in northern China. He is listed as being a Taoist leader between the end of the Yuan and the beginning of the Ming dynasty (1368 CE) who eventually built a cottage on Wu Tang mountain to devote himself to the study of Taoism.‡56
+
+Was there a Chang San Feng who lived to be more than five centuries old? Even five years ago I would have said that claims like this were sheer nonsense. These days I hesitate to even offer an opinion on such matters. That there was a historical Chang San Feng (or several of them), there can be no doubt. Who or what he really was, however, we cannot know. Perhaps his is simply a case of one man in each generation posing as his predecessor—a quite common ruse in world history. Or perhaps he was indeed an ageless Taoist immortal. The Taoist author Li Han-hsu, in 1844, upon publishing a book titled The Complete Works of Chang San Feng, claimed to have met the man.
+
+It would be wonderful if he were still alive, sharing a joke at this author’s expense. I’d like to think that indeed he is, somewhere in the mountains of China.
+
+[13\. The question of the ether’s existence plagued scientists at the turn of the century. Beginning with Clerk Maxwell’s and Michael Faraday’s discovery of electromagnetics, the controversy as to how such forces should propagate puzzled scientists, who were still working with Newtonian mechanics and material bodies. Over time the behavior of a “field” came to be understood, and in turn that of a “wave.” All efforts then centered on understanding the nature of light, with Fresnel’s theory that light propagated in a substance called the luminiferous ether being most popular (this ether was thought to be at rest in absolute space). In 1887 the famous Michelson-Morley experiment proved that a mechanical ether could not in fact exist. For eighteen years this finding was the center of debate, but was finally accepted, despite fierce resistance from some of the greatest scientists of the day (such as Lord Kelvin, Hendrik Lorentz, and Jules-Henri Poincaré). The issue was settled in 1905 with Albert Einstein’s famous papers on quantum theory and relativity. There were still adherents to the old ether theory, however—notably Lorentz and Poincaré, who introduced a model whereby a clock slowed as it moved into the ether. I believe that they were close to the truth.](#chapter0020.html)
+
+[14\. The roots of Taoism stretch back to the shamanistic tradition that swept through all parts of the world beginning some thirty thousand years ago.*57 The word shaman comes from the Tungus people of Siberia, who lived on the northernmost borders of the Chinese world. However, it is a mistake to assume that shamanism as a belief began in Siberia. According to the archaeological record, its origins were almost certainly European.†58 Shamanism was the first major world religion and reached from northern Europe across Asia to the American continents. Indications are that it dispersed through Asia into North America between 11,000 and 8000 BCE.](#chapter0021.html)
+
+A shaman functions by studying and knowing nature, and thus is able to reach out to nature on all levels. The core belief of shamanism is that the universe is made up of two parallel and overlapping worlds, the physical and the spiritual. We of the physical world may be influenced by those of the spiritual. It is thus necessary for an intermediary to communicate with the denizens of the spirit world and intercede for the dwellers on the physical plane; this mediator was the shaman. The forces of the spirit world, who may be deceased humans or nonhuman in origin, can bring on good fortune or bad, illness or prosperity. The shaman enters the spirit world through the trance state, during which he speaks with and/or becomes a mouthpiece for the spirits. The spirit world’s main directive usually was that people follow and understand the way of nature; indeed, the cosmology of shamanism took the first steps in establishing that there was a Way human beings could follow to be in accord with the world and avoid sickness and disaster. It is this primordial immediacy and understanding of the natural world that shamanism has bequeathed to Taoism.
+
+The early kings of China were shamans. It was to the first king, Fu Hsi, that the spirits revealed how to bring civilization to man, reputedly around 3000 BCE. Fu Hsi taught his subjects agriculture and writing, among other things. He is also the patron of the Chinese divination arts in that he first originated the eight trigrams (pak’ua) that led to the eventual development of the I Ching. It is said that the secret of the eight trigrams was inscribed on the side of a horse that rose from the River Ho to reveal itself to Fu Hsi; thus this pattern is called the Ho-t’u, and describes the underlying nature of all things. It is interesting to note that an animal presents Fu Hsi with the knowledge of the workings of the universe, and that Fu Hsi is often drawn wearing a tiger’s skin and accompanied by animals such as the tortoise. There can be no clearer ties to shamanism.
+
+One of the greatest shaman-kings to follow, and one especially revered by Taoists as the traditional founder of Taoism, is the Yellow Emperor, Huang Ti, who reportedly lived between 2697 and 2597 BCE. He is credited with inventing government administration and medicine, among other things. Indeed, China’s most famous medical text is called The Yellow Emperor’s Classic of Internal Medicine (though chances are it was written in the second century BCE). Huang Ti is also reputed to be the inventor of the chimney, of plows, and of silk looms, but is better known for his experiments with internal and external alchemy and discovery of the secrets of immortality. Another shaman-king was Yue, who founded the Hsia dynasty (2205–1765 BCE); it was said that he had been designated by heaven to lead his people. Like his predecessor in centuries past, King Yue saw an animal emerge from the waters (in this case a tortoise from the River Lo) with a pattern of eight trigrams inscribed on its back. This pattern is called the Lo-shu and is referred to as the Later Heaven pa-k’ua, while the Ho-t’u is called the Earlier Heaven pa-k’ua. The Ho-t’u describes the ideal order of things in the universe, while the Lo-shu describes the order of flux and change. It can be seen that what shamanism offered to Taoism was the sense of a relationship between the laws of nature and the ultimate power of the universe, including the concept that change cannot be forced or halted but simply understood. The idea of “going with the flow” is as shamanistic as it is Taoist; indeed, it is very difficult to draw a line between the two and specify where one tradition ends and the other commences.
+
+[15\. The sage Kuo-pu’s Ch’ing-lung ching (Classic Treatise on the Patterns of the Green Mountains), written during the third century CE, clearly describes the process by which things are created from the Tao and return to it. This work reflects ideas that had been in existence for millennia and were confirmed by other writers in the Sung dynasty eight hundred years later.*59](#chapter0024.html)
+
+The author begins: “In the beginning was darkness, for the Void is not visible.”†60 Compare this with the ancient Greek myth (per Hesiod) that the earth sprang from chaos, the unformed,‡61 or to the Old Testament. Wu-chi is the primordial, the Source. It is the condition of stillness where all things are undifferentiated from the ultimate. In this state a point of movement—of pure yang—shines out (see figure 7). There is interaction between yin and yang leading to the state of t’ai chi (the supreme extremity) where yin and yang are embraced, distinct yet together, balancing each other’s forces. This is the One referred to by Lao-tzu, the mother of “the ten thousand things” (all life). Where wu-chi is absolute stillness, t’ai chi has the potential of change. When t’ai chi is at rest, yang and yin are united; when t’ai chi is in motion, the two opposing forces separate. Herein lies the secret of immortality.
+
+![image](OEBPS/Images/image-ZQORKF2K.jpg)![image](OEBPS/Images/image-2P3MGIPL.jpg)![image](OEBPS/Images/image-AXEJAS4G.jpg)![image](OEBPS/Images/image-DWFNCWCB.jpg)
+
+Fig. 7\. Kuo-pu’s presentation. (a) Wu-chi, the Tao. (b) and (c) A spark of movement in the stillness; yang in the center of yin. (d) T’ai chi; yin and yang embraced and balanced.
+
+[16\. See my text for note 13.](#chapter0024.html)
+
+[17\. See my text for note 15.](#chapter0024.html)
+
+[18\. A historic example of how much damage man can do in the process of being greedy and ignorant is the complete elimination of the buffalo in the United States in the late nineteenth century. Most people are aware that the great herds that once roamed the plains were wantonly slaughtered, but not many realize how quickly it was done, and by how few.](#chapter0026.html)
+
+In 1870 there were twenty million buffalo roaming the grasslands; by 1889, less than twenty years later, there were only one thousand left. From those thousand, careful conservation has yielded a herd two hundred thousand strong in our day. Why were the buffalo killed? What purpose did the elimination of such an incredibly large food supply serve?
+
+It’s simple. Nobody owned them. They were free, and could feed the economically disadvantaged of the nation without anyone making a profit. With the buffalo extant, the cattle barons, and the politicians in their pay, could not hope to corner the world meat market. These men had already determined that the grasslands were excellent for raising cattle; so they made the buffalo go away. The corpses of the slaughtered animals were useless as food, since they had normally spoiled by the time anyone could get to them; instead they were carted off to plants like the Michigan Carbon Works in Detroit, where they were crushed into fertilizer. Into fertilizer, for God’s sake!
+
+It was simply a case of greed and ignorance working hand-in-hand, as usual. Why did people do nothing at all back then in the face of such slaughter? Perhaps they didn’t care. Perhaps they had been told that killing the buffalo wouldn’t matter. Perhaps they believed that buffalo meat was just no damn good.
+
+### Appendix Two
+
+### OBSERVATIONS AND SPECULATION
+
+At this point a truly academic discussion of the phenomena delineated in the text is out of the question because no clinical trials have been held. However, I cannot help but speculate further on the things I witnessed in the course of being John Chang’s student, and in this brief appendix would like to offer additional comment.
+
+It is exciting to believe that we will one day come to understand the nature of the energies that lend John his powers. Yang ch’i and yin ch’i govern the equation of life, as Chang Sifu himself has repeatedly stated. A brother student of mine once mocked my pseudoscientific attempts to quantify yin and yang by remarking that John experienced reality directly, and thus had no need for quantification. He was not far from the truth. Nevertheless, while Chang Sifu may not need such discourse himself, the rest of us certainly do, so we may as well attempt it.
+
+### OBSERVATION
+
+### Yang Energy
+
+The Ping-Pong ball demonstration. Outlined in chapter 7, this demonstration basically involved John’s transferring yang energy into a Ping-Pong ball held in his left hand while at the same time generating a yin pole in his right palm. The ball pulsed with a blue light while at the same time emitting a chirping sound similar to the song of a canary. A continuous stream of bluish sparks was observed to flow from the ball toward John’s right palm, in essence a miniature lightning bolt. John kept this up for about five seconds and stopped, fatigued. When questioned as to whether he could do it with a solid rubber ball, he replied in the negative, stating that the ball had to be hollow.
+
+Pyrogenesis. As seen in Ring of Fire and captured by myself on simple video film as well, John is capable of inducing pyrogenesis using the yang ch’i. The typical subject matter ignited is newspaper or tissue, but he has boiled water on occasion as well.
+
+Energy blasts. Though I have not witnessed this specific phenomenon personally (yet), I have heard it described by other students: John is capable of issuing energy bolts of great power over considerable distance, similar to lightning bolts. (The color of these blasts is also blue; the energy used is identical to that used in the Ping-Pong ball demo.) I cannot help but think of the films Mortal Combat, Powder, Big Trouble in Little China, or the Chinese legend of the god L’ei Kung (Zeus in Greece). The extent of these powers is unknown. I have heard that brother students of mine at Level Three are capable of striking up to eight meters away with the addition of just a bit of John’s yin energy into their bodies, which allows their yang energy to escape the confines of their own skin. (You can assume that our skin is a sort of Faraday cage for our bodies’ energies.)
+
+X ray diffraction. In trials held many years ago John and two of his students at Level Three allowed their dantien points to be subjected to frontal, dorsal, and lateral X-ray examination. John’s dantien showed up as a flat circular disk, while those of his students exhibited curved globular indications (also flat).
+
+### Yin Energy
+
+Telekinesis. I have captured John on film moving a matchbox from one yard away. He extended his left palm toward the box, which we had placed on the floor, generating a yin pole in that palm. The matchbox skidded across the floor with observable acceleration to rest in his grasp.
+
+Absorption of energy. On two separate occasions John passed yin energy into my body. I was then capable of catching a bullet from an air rifle by placing my hand over the muzzle. Two different air rifles were used in these trials. The pellets showed no deformation and there was neither generation of heat nor any impact upon capture (chapter 7).
+
+### Yin-Yang Energy
+
+Electrogenesis. The easiest of John’s powers to witness, it is also the most difficult to quantify. The repulsive force between yin and yang brings about this dynamism, as the two energies are “squeezed” together in Chang Sifu’s dantien. John routinely uses this ability on a daily basis to treat patients with acupuncture, passing said energy into the traditional points. However, repeated testing with both AC and DC voltmeters and amperometers indicated neither current nor potential; nor was my teacher capable of producing incandescence in a DC light bulb of the lowest voltage (to ensure that this “current” was indeed being passed during the trials, the author acted as ground). Therefore, while this power feels like electricity, it is most definitely not. One characteristic worth noting is that the “current” generated does not seem to follow the standard wave form of physics, but instead consists of a series of peaks. I have no hard data to quantify this statement, but I could feel this effect in Chang Sifu’s body during electrogenesis. That is, I received the impression that the power generated did not follow this mode:
+
+![image](OEBPS/Images/image-7IPZL0FX.jpg)
+
+but rather this one:
+
+![image](OEBPS/Images/image-9BSFMENR.jpg)
+
+Only time will tell if this assessment is accurate.
+
+### SPECULATION
+
+### Yang Energy
+
+The Ping-Pong ball demonstration mentioned above and described in chapter 7 very much defines the nature of yang ch’i, should such a thing truly exist as an independent form of energy. The color blue observed is reminiscent of Reich’s orgone; indeed, many of the behavioral characteristics described are similar. The necessity of using a hollow, plastic, seamless ball to accomplish the demo is most important: It suggests that what I witnessed was not a surface phenomenon, but rather that the energy had penetrated the polymeric shell and shone inside the ball much like light shines in an incandescent lightbulb. This seems to indicate that the yang ch’i is neither particle nor wave, but both. I believe that it is a solar energy stored in our earth’s atmosphere.
+
+The yang energy is hot. It is capable of incendiary effects, as evidenced by the pyrogenesis demonstrations. Moreover, there is an interesting correlation between Chang Sifu’s archetypes and Reich’s observations on the orgone in the treatment of cancer. Reich had written that cancer cells die when placed near the orgone bions. My teacher has successfully used an overdose of yang ch’i to treat cancer, stating that cancer cells “dry up” when exposed to strong yang. (That said, I must at present dash whatever hopes I may have given to those afflicted with cancer. As John has said, he cannot cure cancer. He has made seven trials to date and has had a 43 percent success rate. While three of those people were instantly cured and are alive today, the other four died on the spot, their weakened frames unable to endure the blast of energy. Chang Sifu no longer attempts this type of therapy. I have written this passage in faith that further research may lead us to a cure. Once we understand the yang ch’i, we will be able to cure cancer.) I am convinced that what Reich called the orgone, we in the Mo-Pai have for the last twenty-five hundred years called yang ch’i.
+
+The phenomenon of X ray diffraction is also an interesting point (we know that it is the yang energy inducing this effect by virtue of the fact that John’s two Level Three students also evidenced an indication). X ray diffraction may prove to be the method by which we can correlate and clinically prove bioenergy.
+
+### Yin Energy
+
+It is simply impossible at this point to have a clear idea as to what the yin ch’i really is. If any of the properties accounted can be clinically proven, then we will have to revise the First Law of Thermodynamics. The demonstration involving the air rifle is most precise in defining the characteristics of yin: The energy of the pellet was not conserved, there was no deformation, no generation of heat, no impact (conservation of momentum). In a recent conversation John described the yin as “being like gravity in that gravity itself was also a yin ch’i.” I have stuck my neck out in this text repeatedly, not least by stating that understanding the yin energy will give us the secrets to faster-than-light speeds. Let me do so once again in this paragraph with another simple sentence: If energy can disappear into nowhere, then it can be created from nothing as well. Imagine what a blow such news would be to the energy industry; they would probably fight like rabid wolves to prevent such information from making the rounds, even as idle speculation.
+
+During the demonstration of telekinesis described, John explained that he had used yin ch’i to draw the matchbox into his grasp. I believe that what occurred during this telekinesis was essentially a warping of space and time in the direction of his left palm, much in the manner of a gravity well. In other words, to use a simple model, what is transpiring is as shown in figure 8\. Again, whether such an assessment is accurate or not remains to be seen.
+
+![image](OEBPS/Images/image-453K5OVR.jpg)
+
+Fig. 8\. (a) Figurative surface of space-time. (b) Yin field—object begins to “fall.”
+
+### Yin-Yang Energy
+
+Perhaps the clearest statement I can make regarding the power of electrogenesis displayed by Chang Sifu is to say that it is most definitely not the result of electron flow. If it were, such electron movement could have been recorded as a potential or a current of some sort, and John would have been able to produce incandescence in a lightbulb. Nevertheless, anyone coming into contact with this energy will swear that he feels an electric current passing through his body. In addition, this energy is thoroughly transferrable through conductors (metals, water), but not through insulators. If this current is not due to electron flow, then what is causing it?
+
+I would like to take another shot in the dark at this point and propose that increased nuclear oscillation may be the cause of this phenomenon.
+
+Several researchers (Kevran, Komaki, Pappas, Hillman, Goldfein)*62 have suggested that electrically induced nuclear fusion (“cold” nuclear fusion) takes place inside the body at all times, and indeed may be the driving force that fuels the sodium-potassium transfer inside the cell. I have chosen the word transfer carefully. The mainstream theory (called the Sodium-Potassium Pump) proposes a mechanism whereby sodium is exchanged for potassium inside and out of the cell in an attempt to explain the transmembrane potential of the cell membrane. However, this model has never been validated and stumps today’s investigators. Proponents of the biological cold nuclear fusion theory, on the other hand, suggest that sodium is nuclearly transmuted to potassium inside the cell,*63 and that the process should rightfully be labeled the Sodium-Potassium Transmutation. This model is, of course, outside the accepted boundaries of today’s physics. Taking everything into consideration, however, it seems to me quite sensible to propose that John’s yin-yang kung energy may be due to increased states of nuclear excitation. This energy is generated as a series of pulses, and is induced by the interaction of the solar yang energy with the “gravitational” or “dark-matter” force of the yin ch’i. It is this increased nuclear excitation (or fusion) that John’s patients and students feel as current. (The difference between my viewpoint and that of the aforementioned researchers is that I do not believe that this fusion is electrically induced. Neither is it “cold,” strictly speaking.)
+
+You will see that such a postulate is most logical if we look at things once again from a macrocosmic, astrophysical perspective. Our current science accepts the notion that, were it not for the dynamism of nuclear fusion serving as an expansive force, our sun would collapse under the force of its own gravity. In fact, models delineating the evolution (life and death) of a star follow the archetype†64 in figure 9 (not to scale!).
+
+What this means is that all stars are battlefields between gravity and some force providing outward pressure. Under normal conditions, the outward force exceeds the force of gravity, and a sun radiates energy (9a). In a white dwarf the pressure of gravity collapses a star when its “fire “runs out, creating a dense-packed atomic structure (9b). A neutron star, the result of the explosive death of a star two to three solar masses large, is even more compact, its atoms crushed and their nuclei stacked together (9c). Finally we come to the case of a black hole, where space and time lose all meaning and we have a singularity (9d).
+
+![image](OEBPS/Images/image-5X30EYRH.jpg)![image](OEBPS/Images/image-ADZA1CQX.jpg)![image](OEBPS/Images/image-SUEIJFCK.jpg)![image](OEBPS/Images/image-DM02CKU8.jpg)
+
+Fig. 9\. (a) Our sun. Its radius is 1.4 million km. (b) White dwarf; radius 10,000 km. (c) Neutron star; radius 60 km. (d) Black hole; radius 6 km.
+
+If you look at the modern t’ai chi symbol below, you can see that it accurately depicts the transmutation of a star at peak solar power, such as a red giant (greater yang), explosively transforming into a black hole (lesser yin).
+
+![image](OEBPS/Images/image-WU108PFH.jpg)
+
+Let’s look at our t’ai chi model of the universe once again, using the archaic symbol. It is probably beginning to make more sense to you by now:
+
+![image](OEBPS/Images/image-CLFA031R.jpg)
+
+Understanding t’ai chi is easier once we redefine fundamental concepts to coincide with the archetype. Let’s start with gravity. When most people think of gravity, they remember the basics learned in high school: One mass exerts an attractive force on another, and it is this attractive force that keeps us on the planet’s surface. Let’s take this truism one step farther and define things more precisely: Gravity is that force in the universe that wants all matter to collapse into a single mass, and ultimately into one singularity. That is, gravity is that force that seeks to compact space and time into a single, massive black hole! It is this dynamism that absorbs energy and sends it into nowhere. Gravity is precisely the intrinsic yin ch’i used by John Chang to achieve his spectacular, energy-absorbing demonstrations. (I must reiterate, however, that while gravity is a yin ch’i, the yin field is not limited to gravity. There are other aspects.)
+
+Solar fire, on the other hand, is the expansive force that defines space and time and keeps it extant. Western science calls this solar force nuclear fusion. The ancient scholars of China called it yang ch’i. It is one and the same. Macrocosmically the combat between the forces of gravity and solar fire (yin and yang) defines the nature of reality. Microcosmically their interaction fuels our lifeforce. (It is logical to hypothesize that should such a contest comprise the fundamental natural condition of our universe, then our own bodies and our very lifeforce would reflect it. The ancient Chinese, who knew nothing of black holes and red giants, experienced and deduced this struggle using other methods.)
+
+While a true equation governing such behavior would be fractal in nature, we could mathematically state the balance of t’ai-chi in simplified form as:
+
+![image](OEBPS/Images/image-52I8OX0M.jpg)
+
+where defines the nature of the yin ch’i, that of the yang, and K is a constant. (Time, t, is not applicable to the definition of yin, because it is a yang characteristic.)
+
+Let me shake things up even more for those who may think I have gone off the deep end. Chang Sifu’s “electricity” is transmittable through metal objects. The English word metal is an adaptation of the Greek word metallon ( ), which means, quite simply, “that which transmutes.” Better men than I have found ancient cultures to be extremely sagacious in the ways of the world. Perhaps the ancient Greeks simply understood things a bit better than we do today. Let’s close on that thought.
+
+## Footnotes
+
+[*1\. Rudyard Kipling, “The Ballad of East and West,” 1889.](#chapter0004.html)
+
+[*2\. Herbert Benson, The Relaxation Response (New York: William Morrow and Co., 1975).](#chapter0004.html)
+
+[*3\. From the Greek ortho—meaning correct, proper, straight—and “logic.” Orthological means “having proper logic.”](#chapter0004.html)
+
+[†4\. Lorne and Lawrence Blair, Ring of Fire: East of Krakatoa, 1988.](#chapter0004.html)
+
+[*5\. Maintaining physical contact with him at that point would have been like putting one’s hand in a wall socket. I have called this ability electrogenesis (or electrogeneration) for lack of a better term.](#chapter0004.html)
+
+[*6\. Encyclopedia Britannica Online, “Taoism.”](#chapter0007.html)
+
+[*7\. The original Latin verb religare means “to tie firmly,” suggesting union with the Divine; as such it is much closer in concept to the Sanskrit word yoga (from which comes the English yoke), rather than the concept of rejoining that the word religion has come to imply today.](#chapter0007.html)
+
+[*8\. Or, conversely, that the purpose of existence is simply suffering, samsara, from which human beings should strive to escape. It was not my intent to harp on Judaeo-Christianity; I simply wanted to keep this section as brief as possible.](#chapter0007.html)
+
+[*9\. I hope that this text will contribute to such research.](#chapter0009.html)
+
+[†10\. It is interesting to note that the Latin spiritus also means “breath,” and that the Greek word for the respiratory organs of our body (the lungs) is pneumon (from which we get the word pneumonia, for example).](#chapter0009.html)
+
+[*11\. A hoplologist is an archaeologist or historian who studies weapons and their use throughout history.](#chapter0010.html)
+
+[*12\. Draeger, Donn F., and Robert W. Smith, Comprehensive Asian Fighting Arts (Tokyo and New York: Kodansha, 1980).](#chapter0010.html)
+
+[*13\. The term actually means “father-teacher,” though “master” is widely used in the West as the translation.](#chapter0011.html)
+
+[*14\. Encyclopedia Britannica Online, “Religious Taoism.”](#chapter0014.html)
+
+[†15\. Blofield, John, Taoism, The Road to Immortality (Boston: Shambhala Publications, 1978).](#chapter0014.html)
+
+[*16\. When I began to study the literature on Taoism, I was surprised by how many concepts coincided with folk beliefs in my native Greece. Upon engaging in a torrid love affair with a new girlfriend, and subsequently showing up to teach my jujutsu class somewhat dazed, I was counseled by the oldest man in the class to “refrain from losing too much sperm, as you will begin to lose your bone marrow.”](#chapter0014.html)
+
+[*17\. I am aware of both the natural inclination and the reproductive cycle of the dolphin, for readers who think they have caught a faux pas.](#chapter0014.html)
+
+[*18\. Such is not the case! Kung Fu, the original series, was an example of art imitating life, as it were; the hero was a Buddhist rather than a Taoist monk, and he had killed the emperor’s son rather than an entire village.](#chapter0016.html)
+
+[*19\. The school of Mo-Tzu.](#chapter0018.html)
+
+[†20\. I use the term Taoist in place of the more appropriate native Chinese philosophy.](#chapter0018.html)
+
+[*21\. I have seen one instance in which a contractor was so taken with the Roman mosaic uncovered that he made it a part of the building’s main entrance, sacrificing an entire apartment’s worth of square footage in the process. Good for him! It cost him a pretty penny, but he proved himself a man of culture.](#chapter0019.html)
+
+[*22\. Actually more like a library or an academy in the Alexandrian sense than a modern university.](#chapter0019.html)
+
+[*23\. Handoko is present in every deep conversation in this book; it is only for reasons of expediency that his contribution has been removed. Many of the major philosophical points are Handoko’s translation of what Chang Sifu was telling me (and others) in Chinese.](#chapter0020.html)
+
+[*24\. Wealth and education are tied together for the expatriate Chinese; the concept we have in the West of a highly educated middle class is not very widespread.](#chapter0020.html)
+
+[*25\. Many researchers have postulated the existence of an unknown force to explain fire walking because both the Leidenfrost effect and thermal conductivity laws seem insufficient on their own.](#chapter0020.html)
+
+[*26\. Literally, “grandfather-teacher.”](#chapter0021.html)
+
+[*27\. The Sanskrit word means “consequence” or “action.”](#chapter0021.html)
+
+[*28\. Though there is linguistic and circumstantial evidence as such.](#chapter0021.html)
+
+[*29\. “Orang putih” translates as “white man.”](#chapter0022.html)
+
+[*30\. Since to know the name of a keris is to have power over it, I have changed the weapon’s name to protect Henky.](#chapter0022.html)
+
+[*31\. See the introduction and chapter 1.](#chapter0023.html)
+
+[*32\. Capra, Fritjof, The Tao of Physics (New York: Bantam New Age Books, 1977).](#chapter0024.html)
+
+[*33\. Einstein, Max Planck, Niels Bohr, Werner Heisenberg, Erwin Schrödinger, Wolfgang Pauli, Paul Dirac, and Louis de Broglie.](#chapter0024.html)
+
+[*34\. Assuming that there was a Big Bang. The Chinese model also covers the possibility that energy is constantly being produced, and the universe has no beginning or end.](#chapter0024.html)
+
+[†35\. Interestingly enough, when Poincaré postulated that a clock slowed in time as it moved into the ether, he was describing one of the attributes of yin energy.](#chapter0024.html)
+
+[*36\. Indeed, I believe that, like light photons, yang ch’i is neither a particle nor a wave but both.](#chapter0024.html)
+
+[*37\. Best known for his contributions to nonequilibrium statistical mechanics and his theories on the role of time in irreversible processes.](#chapter0024.html)
+
+[*38\. The newer figure is alchemical, describing the transition and flux of energy with time rather than a steady state situation. The current astrophysical model of the evolution of stars helps us understand this. It would seem that the growth of a star to the red-giant stage, and its subsequent transformation into a black hole, suggests a transition from greater yang to yin. Check appendix 2 for further analysis.](#chapter0024.html)
+
+[*39\. Meadows, Dennis L., et al., The Limits of Growth (New York: Signet Books, The New American Library, 1972).](#chapter0026.html)
+
+[*40\. Arthur C. Clarke, for younger readers.](#chapter0026.html)
+
+[*41\. Other than the personal experiences involved, nothing in this text should be considered innovative. As far back as 1934, Professor W. Y. Evans-Wentz was talking about forging a new science that was neither East nor West in his book Tibetan Yoga and Secret Doctrines.](#chapter0026.html)
+
+[†42\. I return to George Lucas’s work again and again simply because I feel that it has bearing on where we as a species could be heading. The Jedi are all-important in that they successfully combine technology with mysticism, and in doing so, touch people’s hearts all around the world.](#chapter0026.html)
+
+[*43\. Woodcock, George, The Greeks in India (London: Faber & Faber Ltd, 1966).](#chapter0027.html)
+
+[*44\. For example, Megasthenis’s Indian Tales and Diimachus’s On India, neither of which is extant today.](#chapter0027.html)
+
+[†45\. Dimou, Nikos, The Greek Buddha (Athens: Nefeli Publications, 1984).](#chapter0027.html)
+
+[‡46\. Durant, W., The Story of Civilization, vol. II (Geneva: Edito-Service, 1963).](#chapter0027.html)
+
+[§47\. Dimou, The Greek Buddha.](#chapter0027.html)
+
+[*48\. Watson, Burton, The Basic Writings of Mo-Tzu, Hsun-Tzu, and Han Fei Tzu (New York: Columbia University Press, 1967).](#chapter0027.html)
+
+[†49\. Beck, Sanderson, Ethics of Taoism and Mo-Tzu. http://www.san.beck.org/EC15-Taoism.html](#chapter0027.html)
+
+[*50\. For those who are interested in such things, I am an (untalented) amateur musician who lives with a talented and competent professional musician.](#chapter0027.html)
+
+[*51\. All of these concepts were presented by Lefteris Saragas in Atrapos magazine, Aldebaran publishing, Athens, Greece, June 1998\. The original sketch of the vase in the Louvre was first published in the newspaper Eleftherotypia, Athens, October 4, 1998.](#chapter0027.html)
+
+[*52\. The wording is my own, based on two translations:](#chapter0027.html)
+
+a. Huang, Alfred, Complete Tai Chi (Tokyo: Charles E. Tuttle, 1993).
+
+b. Wile, Douglas, Lost T’ai-Chi Classics from the Late Ch’ing Dynasty (Albany: State University of New York Press, 1996).
+
+[†53\. Wile, ibid. I recommend this book to the serious scholar.](#chapter0027.html)
+
+[*54\. Yang Jwing Ming, Advanced Yang Style Tai Chi Chuan (Jamaica Plain, Mass.: Yang’s Martial Arts Association, 1987).](#chapter0027.html)
+
+[†55\. Yang Jwing Ming, ibid.](#chapter0027.html)
+
+[‡56\. Huang, Alfred, Complete Tai Chi.](#chapter0027.html)
+
+[*57\. Palmer, Martin, The Elements of Taoism (Shaftesbury, Dorset: Element Books 1994).](#chapter0027.html)
+
+[†58\. Campbell, Joseph, The Way of the Animal Powers, Mythologies of the Great Hunt (New York: Harper and Row, 1988).](#chapter0027.html)
+
+[*59\. Wong, Eva, Feng-Shui (Boston: Shambhala Publications, 1996).](#chapter0027.html)
+
+[†60\. Wong, ibid.](#chapter0027.html)
+
+[‡61\. The word chaos in its original context has nothing to do with its meaning today of “confused crazed mass.” Instead the word (χaος) comes from the Greek root meaning “to open wide,” referring to space, the indefinable.](#chapter0027.html)
+
+[*62\. Please check http://www.papimi.gr for related literature.](#chapter0030.html)
+
+[*63\. Following this formula: 11Na²³ + 8O¹⁶ + Δ(Energy) = 19K³⁹.](#chapter0030.html)
+
+[†64\. Lasota, Jean-Pierre, “Unmasking Black Holes.” Scientific American 280:5, May 1999.](#chapter0030.html)
+
+## About the Author
+
+[Kosta Danaos is a professional engineer, an experienced martial arts instructor in jujutsu, kung fu, and t’ai chi chuan, and a freelance writer. He lives in Athens, Greece.](http://store.innertraditions.com/Contributor.jmdx?action=displayDetail&id=332)
+
+## About Inner Traditions • Bear & Company
+
+Founded in 1975, Inner Traditions is a leading publisher of books on indigenous cultures, perennial philosophy, visionary art, spiritual traditions of the East and West, sexuality, holistic health and healing, self-development, as well as recordings of ethnic music and accompaniments for meditation.
+
+In July 2000, Bear & Company joined with Inner Traditions and moved from Santa Fe, New Mexico, where it was founded in 1980, to Rochester, Vermont. Together Inner Traditions • Bear & Company have eleven imprints: Inner Traditions, Bear & Company, Healing Arts Press, Destiny Books, Park Street Press, Bindu Books, Bear Cub Books, Destiny Recordings, Destiny Audio Editions, Inner Traditions en Español, and Inner Traditions India.
+
+For more information or to browse through our more than one thousand titles in print, visit www.InnerTraditions.com.
+
+#### BOOKS OF RELATED INTEREST
+
+Nei Kung
+
+The Secret Teachings of the Warrior Sages
+
+by Kosta Danaos
+
+The Martial Arts of Ancient Greece
+
+Modern Fighting Techniques from the Age of Alexander
+
+by Kostas Dervenis and Nektarios Lykiardopoulos
+
+The Spiritual Practices of the Ninja
+
+Mastering the Four Gates to Freedom
+
+by Ross Heaven
+
+Qigong Teachings of a Taoist Immortal
+
+The Eight Essential Exercises of Master Li Ching-yun
+
+by Stuart Alve Olson
+
+The Jade Emperor’s Mind Seal Classic
+
+The Taoist Guide to Health, Longevity, and Immortality
+
+by Stuart Alve Olson
+
+Iron Shirt Chi Kung
+
+by Mantak Chia
+
+Bone Marrow Nei Kung
+
+Taoist Techniques for Rejuvenating the Blood and Bone
+
+by Mantak Chia
+
+Martial Arts Teaching Tales of Power and Paradox
+
+Freeing the Mind, Focusing Chi, and Mastering the Self
+
+by Pascal Fauliot
+
+Inner Traditions • Bear & Company
+
+P.O. Box 388
+
+Rochester, VT 05767
+
+1-800-246-8648
+
+[www.InnerTraditions.com](http://www.InnerTraditions.com)
+
+Or contact your local bookseller
+
+Inner Traditions International
+
+One Park Street
+
+Rochester, Vermont 05767
+
+[www.InnerTraditions.com](http://www.InnerTraditions.com)
+
+Copyright © 2000 by Kosta Danaos
+
+All rights reserved. No part of this book may be reproduced or utilized in any form or by any means, electronic or mechanical, including photocopying, recording, or by any information storage and retrieval system, without permission in writing from the publisher.
+
+Library of Congress Cataloging-in-Publication Data
+
+Danaos, Kosta
+
+The Magus of Java : teachings of an authentic Taoist immortal / Kosta Danaos.
+
+     p. cm.
+
+Includes bibliographical references.
+
+eISBN-13: 978-1-59477-877-3
+
+1\. Chang, John. 2\. Taoists—Indonesia—Java—Biography. 3. Healers—Indonesia—Java—Biography. I. Title.
+
+BL1940.C426 D36 2000
+
+299’.514’092—dc21
+
+[B]
+
+00-036942
+
+Electronic edition produced by
+
+#### ePubNow!
+
+![image](OEBPS/Images/image-Y2XRI9M4.jpg)
+
+[www.epubnow.com](http://www.epubnow.com)
+
+[www.digitalmediainitiatives.com](http://www.digitalmediainitiatives.com)

@@ -603,6 +603,8 @@
 +   [Java 典：Chat-GPT 连接：揭秘 Java：基于 CHAT-GPT 提示词的基础概念之旅](docs/the-java-codex-the-chat-gpt-connection-unveiling-java-a-jour/README.md)
 +   [Java 开发者秘籍：现代编程成功食谱](docs/the-java-developers-cookbook-recipes-for-success-in-modern-p/README.md)
 +   [SQL 语言 (第2版)](docs/the-language-of-sql-2nd-edition/README.md)
++   [Java 大师](docs/the-magus-of-java-ed/README.md)
 +   [荷属东印度群战役 1941-42：日本的石油追求（战役系列）](docs/the-netherlands-east-indies-campaign-194142-japans-quest-for/README.md)
++   [Java 的力量 (编程的力量)](docs/the-power-of-java-power-of-coding/README.md)
 +   [Thinking in Java (Java 编程思想)](docs/thinking-in-java/README.md)
 +   [Typescript 和 Java 编程轻松入门：初学者编程指南 - 二合一](docs/typescript-and-java-coding-made-simple-a-beginners-guide-to-/README.md)

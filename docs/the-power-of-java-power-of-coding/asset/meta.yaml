@@ -1,0 +1,112 @@
+name: The Power of Java (Power of Coding)
+name_cn: Java 的力量 (编程的力量)
+slug: the-power-of-java-power-of-coding
+toc:
+- - '###'
+  - 修复后的目录
+- - '#'
+  - Java 的力量 (编程的力量)
+- - '##'
+  - 你世界中的 Java：智能手机与 Pokemon Go
+- - '##'
+  - 现代计算：网页与互联网的简史
+- - '##'
+  - 新边疆的新语言
+- - '##'
+  - 绿色团队
+- - '##'
+  - “网络就是计算机”
+- - '##'
+  - Sun Microsystems, Inc .
+- - '##'
+  - 名字的含义
+- - '##'
+  - James Gosling
+- - '##'
+  - 初登：当世界首次想象 Java 能做什么时
+- - '##'
+  - 工作原理
+- - '##'
+  - 什么是语言？
+- - '##'
+  - 阿达·洛芙莱斯：程序员
+- - '##'
+  - 理解 Java 语法
+- - '##'
+  - 代码结构与语法
+- - '##'
+  - 面向对象：超越“Main”的编码
+- - '##'
+  - 超越语言：编译器、平台与机器
+- - '##'
+  - 波浪滑行者 (Wave Glider)
+- - '##'
+  - 优势与劣势
+- - '###'
+  - 从橡树长出 Java，再从 C 语言长出橡树
+- - '##'
+  - 面向对象的方法
+- - '##'
+  - C++ 和 Java：面向对象的比较
+- - '##'
+  - 语言障碍与互操作性
+- - '##'
+  - 写一次，到处运行
+- - '##'
+  - 压力下的优雅：使用 Java 进行扩展
+- - '##'
+  - NASA 的 World Wind：互操作性研究
+- - '##'
+  - 跨平台范式的可能性
+- - '##'
+  - 一次编写，随处调试：跨平台的承诺与问题
+- - '##'
+  - Java 与 Objective-C：为 Android 和 iOS 开发应用
+- - '##'
+  - Java 语言和 JVM 的其他局限性
+- - '#'
+  - 入门
+- - '##'
+  - Java 争战与智能手机大战
+- - '##'
+  - 韩国的 iPhone
+- - '##'
+  - 冷咖啡约：Oracle 与 Google 为 Java 争战
+- - '#'
+  - 当今编程市场中的 Java
+- - '##'
+  - 所以，你想成为 Java 程序员吗？
+- - '##'
+  - 为编程职业进行自我教育
+- - '##'
+  - 超越 Java：多语言并行
+- - '##'
+  - Java 开发者的职业前景
+- - '###'
+  - 光、摄、魔法
+- - '##'
+  - Java 的未来
+- - '##'
+  - Books
+- - '##'
+  - Websites
+- - '###'
+  - BlueJ
+- - '###'
+  - Greenfoot
+- - '###'
+  - Young Developer - Visual Programming Software Tools
+- - '##'
+  - Videos
+- - '###'
+  - Java Programming
+- - '###'
+  - Java Programming—Easy-to-Follow Java Tutorial for Beginners with Interesting Examples
+- - '#'
+  - 索引
+- - '##'
+  - 技术与概念
+- - '##'
+  - 人物与组织
+- - '##'
+  - 产品与应用
