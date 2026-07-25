@@ -581,5 +581,6 @@
 +   [Spring Boot 入门指南：一本不后悔的入门：[实用指南]从基础学习 Spring Boot 2.4——Java, Spring Data JPA, Spring MVC, Spring Security, Spring Web, Mybatis, Spring Framework](docs/spring-boot-primer-an-introductory-book-to-not-regret-hands-/README.md)
 +   [Spring Cloud 基础指南：Java 代码示例](docs/spring-cloud-fundamentals-with-java-codes-english-edition/README.md)
 +   [Spring MVC 入门指南](docs/spring-mvc-a-tutorial-a-tutorial/README.md)
++   [SQL 入门指南：SQL 编码（数据库编程、计算机编程、如何编程、SQL 傻瓜、计算机编程、Java...编码、CSS、Java、PHP）（第 7 卷）](docs/sql-beginners-guide-for-coding-sql-sql-database-programming-/README.md)
 +   [Thinking in Java (Java 编程思想)](docs/thinking-in-java/README.md)
 +   [Typescript 和 Java 编程轻松入门：初学者编程指南 - 二合一](docs/typescript-and-java-coding-made-simple-a-beginners-guide-to-/README.md)
