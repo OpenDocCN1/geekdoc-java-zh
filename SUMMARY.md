@@ -537,6 +537,7 @@
 +   [Kubernetes 和 OpenShift 上的 Java 微服务实战](docs/playing-with-java-microservices-on-kubernetes-and-openshift/README.md)
 +   [ChatGPT Java 编程：通过集成 OpenAI API 并利用生成式 AI 和大语言模型开发、原型化并验证 Java 应用](docs/practical-java-programming-with-chatgpt-develop-prototype-an/README.md)
 +   [Java 数据结构与算法问题解决](docs/problem-solving-in-data-structures-algorithms-using-java/README.md)
++   [JAVA 全栈编程指南](docs/programming-language-java-full-stack/README.md)
 +   [REST 实战](docs/rest-ia/README.md)
 +   [RxJava Essentials 中文翻译版](docs/rxjava-ess/README.md)
 +   [Spring Boot 参考指南](docs/sprbt-refgd/README.md)
