@@ -613,6 +613,7 @@
 +   [Java 入门指南：从控制结构到数据结构 (第2版) (Gaddis 系列)](docs/starting-out-with-java-from-control-structures-through-data-/README.md)
 +   [从 LibGDX：Java 游戏开发入门 (LibGDX 系列第 1 册)](docs/starting-with-libgdx-your-first-steps-in-java-game-developme/README.md)
 +   [计算机程序的结构与解释：JavaScript 版 (MIT 电子工程与计算机科学)](docs/structure-and-interpretation-of-computer-programs-javascript/README.md)
++   [T-SQL 基础（开发者参考）](docs/t-sql-fundamentals-developer-reference/README.md)
 +   [教孩子编程：家长友 Python 编程指南](docs/teach-your-kids-to-code-a-parent-friendly-guide-to-python-pr/README.md)
 +   [初学者 Java 测验大师练习答案：教师指南](docs/the-answers-of-the-assignments-of-java-quizmaster-for-beginn/README.md)
 +   [美容师与亿万富翁 · 第一集 · 交易](docs/the-beautician-and-the-billionaire-episode-1-the-deal/README.md)
