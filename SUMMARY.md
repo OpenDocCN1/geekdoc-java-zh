@@ -553,6 +553,7 @@
 +   [Java 与 JavaScript 编程：初学者指南 - 一天学会 · 第2版](docs/programming-java-javascript-coding-for-beginners-learn-in-a-/README.md)
 +   [JAVA 全栈编程指南](docs/programming-language-java-full-stack/README.md)
 +   [Java 编程（精通编程语言系列）](docs/programming-with-java-mastering-programming-languages-series/README.md)
++   [Python 与 Java 编程练习：零基础学者基础指南](docs/python-and-java-coding-with-exercises-basics-for-absolute-be/README.md)
 +   [REST 实战](docs/rest-ia/README.md)
 +   [RxJava Essentials 中文翻译版](docs/rxjava-ess/README.md)
 +   [Spring Boot 参考指南](docs/sprbt-refgd/README.md)
