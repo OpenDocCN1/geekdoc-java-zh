@@ -550,6 +550,7 @@
 +   [Java 数据结构与算法问题解决：编程终极指南](docs/problem-solving-in-data-structures-algorithms-using-java-the/README.md)
 +   [Java 高级指南：高级特性（核心系列）更新至 Java 8](docs/professional-java-advanced-features-core-series-updated-to-j/README.md)
 +   [Web 应用 Java 高级指南：包含 Websockets、Spring 框架、JPA Hibernate 和 Spring Security](docs/professional-java-for-web-applications-featuring-websockets-/README.md)
++   [编程与编码：IoT 开发、Java、Java EE、Java Swing、JavaScript、jQuery、JSON、Julia 编程、Junit、内核、Kotlin、Laravel、Laravel 框架、LaTeX、LibGDX、LINQ 与 Linux](docs/programming-coding-iot-development-java-java-ee-java-swing-j/README.md)
 +   [编程：初学者计算机编程指南：学习 HTML5、JavaScript 和 CSS 基础 - 第2版（编码、C 编程、Java 编程、网页设计、JavaScript、Python、HTML 和 CSS）](docs/programming-computer-programming-for-beginners-learn-the-bas/README.md)
 +   [ANSI C 编程入门指南（第 8 版）](docs/programming-in-ansi-c-8th-edition/README.md)
 +   [Haskell 编程入门指南](docs/programming-in-haskell/README.md)
