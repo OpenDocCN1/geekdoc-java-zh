@@ -505,6 +505,8 @@
 +   [Java 8 简明教程](docs/modern-java/README.md)
 +   [现代 Java - Java 8 指南指南](docs/modern-java---a-guide-to-java-8/README.md)
 +   [现代 Web 开发：理解领域、技术与用户体验（开发者参考）](docs/modern-web-development-understanding-domains-technologies-an/README.md)
++   [更多 Java 自制游戏：Java 图形与事件驱动编程入门指南（第 2 卷）](docs/more-do-it-yourself-java-games-an-introduction-to-java-graph/README.md)
++   [人物肖照（Java 探案系列，#2）](docs/mug-shot-a-java-jive-mystery-2/README.md)
 +   [摩卡杀案（Java 探探探系列，#5）](docs/murder-over-mochas-a-java-jive-mystery-5/README.md)
 +   [我的中国、日本与爪哇之旅，1903 (kegan Paul 旅行者系列)](docs/my-travels-in-china-japan-and-java-1903-kegan-paul-traveller/README.md)
 +   [MySQL 入门指南（编程语言 - JavaScript, Java, MySQL, PHP 及 Python 自动化）](docs/mysql-guide-for-beginner-programming-languages---javascript-/README.md)
