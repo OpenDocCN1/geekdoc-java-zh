@@ -601,6 +601,7 @@
 +   [从 LibGDX：Java 游戏开发入门 (LibGDX 系列第 1 册)](docs/starting-with-libgdx-your-first-steps-in-java-game-developme/README.md)
 +   [初学者 Java 测验大师练习答案：教师指南](docs/the-answers-of-the-assignments-of-java-quizmaster-for-beginn/README.md)
 +   [美容师与亿万富翁 · 第一集 · 交易](docs/the-beautician-and-the-billionaire-episode-1-the-deal/README.md)
++   [Android 入门指南：游戏开发](docs/the-beginners-guide-to-android-game-development/README.md)
 +   [囚犯17326的日记：一个男孩在日本劳工营的生活（第二次世界大战：全球、人文与伦理维度）](docs/the-diary-of-prisoner-17326-a-boys-life-in-a-japanese-labor-/README.md)
 +   [Java 典：Chat-GPT 连接：揭秘 Java：基于 CHAT-GPT 提示词的基础概念之旅](docs/the-java-codex-the-chat-gpt-connection-unveiling-java-a-jour/README.md)
 +   [Java 开发者秘籍：现代编程成功食谱](docs/the-java-developers-cookbook-recipes-for-success-in-modern-p/README.md)
