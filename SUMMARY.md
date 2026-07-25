@@ -598,6 +598,7 @@
 +   [Spring MVC 入门指南](docs/spring-mvc-a-tutorial-a-tutorial/README.md)
 +   [SQL 入门指南：SQL 编码（数据库编程、计算机编程、如何编程、SQL 傻瓜、计算机编程、Java...编码、CSS、Java、PHP）（第 7 卷）](docs/sql-beginners-guide-for-coding-sql-sql-database-programming-/README.md)
 +   [SQL：初学者易 SQL 编程与数据库管理，SQL 数据库学习分步指南（SQL 系列）](docs/sql-easy-sql-programming-database-management-for-beginners-y/README.md)
++   [Start Concurrent 2014：Java 并发问题解决入门指南](docs/start-concurrent-2014-an-introduction-to-problem-solving-in-/README.md)
 +   [从 LibGDX：Java 游戏开发入门 (LibGDX 系列第 1 册)](docs/starting-with-libgdx-your-first-steps-in-java-game-developme/README.md)
 +   [初学者 Java 测验大师练习答案：教师指南](docs/the-answers-of-the-assignments-of-java-quizmaster-for-beginn/README.md)
 +   [美容师与亿万富翁 · 第一集 · 交易](docs/the-beautician-and-the-billionaire-episode-1-the-deal/README.md)
