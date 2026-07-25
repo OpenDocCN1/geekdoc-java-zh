@@ -574,6 +574,7 @@
 +   [RxJava Essentials 中文翻译版](docs/rxjava-ess/README.md)
 +   [初学者脚本超级包：Python、Powershell、Bash 和 Java 精通指南](docs/scripting-superpack-for-beginners-python-powershell-bash-and/README.md)
 +   [使用 Sensei 进行安全高质量的 Java 编码：使用 Secure Code Warrior Sensei IntelliJ 插件编写安全高质量代码指南](docs/secure-and-quality-java-coding-using-sensei-a-how-to-guide-f/README.md)
++   [Java Selenium 初学者指南：使用 Java Selenium 进行 浏览器自动化测试，第一版](docs/selenium-with-java-a-beginners-guide-web-browser-automation-/README.md)
 +   [Java 高效编程简单指南](docs/simple-guide-to-effective-java-programming/README.md)
 +   [Java 开发者软件设计模式：专家级构建可重用软件与企业级应用指南](docs/software-design-patterns-for-java-developers-expert-led-appr/README.md)
 +   [Spark：一天学会 Spark！从入门到 Spark 基础的终极速成课程 (Spark 课程、Spark 开发、Spark 书籍、Spark 初学者指南)](docs/spark-learn-spark-in-a-day---the-ultimate-crash-course-to-le/README.md)
