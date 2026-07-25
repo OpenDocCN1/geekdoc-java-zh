@@ -1,0 +1,156 @@
+name: Spring Cloud Fundamentals： with java codes (English Edition)
+name_cn: Spring Cloud 基础指南：Java 代码示例
+slug: spring-cloud-fundamentals-with-java-codes-english-edition
+toc:
+- - '#'
+  - Spring Cloud 基础指南：Java 代码示例
+- - '#'
+  - 目录
+- - '##'
+  - 模块 1：课程概述
+- - '##'
+  - 模块 2：熟悉 Spring Cloud
+- - '###'
+  - 什么是“云”
+- - '###'
+  - 云带来的新挑战
+- - '##'
+  - 本书的重点
+- - '###'
+  - 先决条件
+- - '##'
+  - 第 3 模块：使用服务发现查找服务
+- - '###'
+  - 什么是服务发现？
+- - '###'
+  - 介绍 Spring Cloud Netflix
+- - '###'
+  - 涉及服务发现的关键组件
+- - '###'
+  - 发现服务器
+- - '###'
+  - 演示：设置服务发现服务器
+- - '###'
+  - 应用程序服务 (Application Service)
+- - '###'
+  - Demo：使应用程序可发现
+- - '###'
+  - Demo：作为应用客户端查找并调用服务
+- - '###'
+  - Spring Cloud Eureka Dashboard
+- - '###'
+  - Configuration
+- - '###'
+  - Health and High Availability
+- - '###'
+  - AWS Support
+- - '###'
+  - 总结
+- - '###'
+  - 介绍 Spring Cloud Config Server
+- - '###'
+  - 使用 Spring Cloud Config Server
+- - '###'
+  - 'Config Server REST Support: Parameters'
+- - '###'
+  - 'Config Server REST Support: Endpoints'
+- - '###'
+  - 演示：设置配置服务器 (Config Server)
+- - '##'
+  - 放置所有全局配置
+- - '###'
+  - 使用 Spring Cloud Client
+- - '###'
+  - 演示：使用 Config Client 获取配置
+- - '###'
+  - 在运行时更新配置
+- - '###'
+  - 使用 @RefreshScope 注解
+- - '###'
+  - 演示：无需重启应用刷新配置
+- - '##'
+  - '在此处放置应用特定的配置（应用名称: client-config-app）'
+- - '###'
+  - 加密和解密敏感配置
+- - '###'
+  - 使用加密和解密支持
+- - '###'
+  - 加密和解密 REST 端点
+- - '###'
+  - 工具类 REST 端点：解密值
+- - '###'
+  - 总结
+- - '##'
+  - 第 5 模块：使用智能路由映射服务
+- - '###'
+  - 什么是智能路由？
+- - '###'
+  - 通过网关服务的智能路由
+- - '###'
+  - 在 Netflix Zuul 中配置路由
+- - '###'
+  - 演示：使用 Netflix Zuul 作为智能路由
+- - '###'
+  - 使用 Netflix Zuul & Spring Cloud 创建过滤器
+- - '###'
+  - 演示：创建和使用 ZuulFilter
+- - '###'
+  - 智能路由的需求
+- - '##'
+  - 第 6 模块：使用客户端负载均衡调用服务
+- - '###'
+  - 模块介绍
+- - '###'
+  - 客户端负载均衡 vs 服务端负载均衡
+- - '###'
+  - 上手 Spring Cloud 和 Netflix Ribbon
+- - '###'
+  - 使用 `@LoadBalanced` 注解
+- - '###'
+  - Demo：使用 Ribbon 和服务发现进行负载均衡
+- - '###'
+  - 自定义你的 RibbonClient 配置：IPing Bean
+- - '###'
+  - 演示：自定义 RibbonClient 负载均衡策略
+- - '###'
+  - 总结
+- - '##'
+  - 模块 7：使用断路器创建自愈服务
+- - '###'
+  - 引言
+- - '###'
+  - 级联故障与资源过载
+- - '###'
+  - 使用断路器模式拥抱失败
+- - '###'
+  - 使用 Netflix Hystrix 和 Spring Cloud 实现容错
+- - '###'
+  - 使用 Spring Cloud 和 Netflix Hrix
+- - '###'
+  - 演示：使用 Netflix Hystrix 实现容错
+- - '###'
+  - 使用 Hystrix Dashboard 获取指标和洞察
+- - '###'
+  - 使用 Spring Cloud 和 Netflix Hystrix Dashboard
+- - '###'
+  - 阅读和理解 Hystrix Dashboard
+- - '###'
+  - 演示：使用 Hystrix Dashboard 监控容错指标
+- - '###'
+  - 使用 Netflix Turbine 聚合 Hystrix 指标
+- - '###'
+  - 使用 Spring Cloud 和 Netflix Turbine
+- - '###'
+  - 总结
+- - '##'
+  - 模块 8：整合一切与后续展望
+- - '###'
+  - 引言
+- - '###'
+  - 这一切是如何整合在一起的？
+- - '###'
+  - 整合一切：启动时
+- - '###'
+  - 整合一切：请求处理时
+- - '###'
+  - 下一步计划

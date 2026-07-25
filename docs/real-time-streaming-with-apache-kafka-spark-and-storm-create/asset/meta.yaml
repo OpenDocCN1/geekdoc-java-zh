@@ -1,0 +1,361 @@
+name: Real-Time Streaming with Apache Kafka, Spark, and Storm： Create Platforms That
+  Can Quickly Crunch Data and Deliver Real-Time Analytics to Users (English Edition)
+name_cn: Apache Kafka、Spark 和 Storm 实时流处理：构建能够快速处理数据并为用户提供实时分析的平台（英文版）
+slug: real-time-streaming-with-apache-kafka-spark-and-storm-create
+toc:
+- - '#'
+  - 第 1 章
+- - '##'
+  - Kafka 简介
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '##'
+  - Apache Kafka 简介
+- - '##'
+  - Kafka 与传统消息队列
+- - '##'
+  - Kafka 架构：生产者、消费者和代理
+- - '#'
+  - Kafka 核心 API
+- - '#'
+  - 使用 Kafka 的优势
+- - '#'
+  - Kafka 的应用
+- - '#'
+  - 总结
+- - '#'
+  - 问题
+- - '#'
+  - 答案
+- - '#'
+  - 第 2 章
+- - '##'
+  - 安装 Kafka
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '###'
+  - 安装 JDK
+- - '###'
+  - 安装 Zookeeper
+- - '###'
+  - 运行 Zookeeper
+- - '###'
+  - Zookeeper 中的可配置参数
+- - '###'
+  - Kafka 安装
+- - '###'
+  - 运行 Kafka 服务器
+- - '###'
+  - 停止 Kafka 服务器
+- - '###'
+  - 结论
+- - '###'
+  - 问题
+- - '#'
+  - 第 3 章
+- - '##'
+  - Kafka 消息传递
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '###'
+  - 消息传递中的组件
+- - '###'
+  - Kafka 代理和 Kafka 分区
+- - '###'
+  - Kafka 故障转移
+- - '###'
+  - 创建 Kafka 主题
+- - '###'
+  - 2. 执行以下命令：
+- - '###'
+  - 3.要列出所有创建的 topic，使用以下命令：
+- - '###'
+  - 删除 Kafka topic
+- - '###'
+  - 通过命令行发送和接收消息
+- - '###'
+  - 创建 producer
+- - '###'
+  - 创建 consumer
+- - '###'
+  - 创建多个 brokers
+- - '###'
+  - 安装并使用 Eclipse 和 Maven
+- - '###'
+  - 安装 IntelliJ IDE
+- - '###'
+  - 结论
+- - '##'
+  - Kafka 生产者 API
+- - '###'
+  - Java 中的生产者实现
+- - '###'
+  - 确认类型 (Types of acknowledgments)
+- - '###'
+  - Kafka 生产者的应用
+- - '###'
+  - 结论
+- - '###'
+  - 问题
+- - '###'
+  - 回答
+- - '##'
+  - 组协调协议
+- - '##'
+  - Kafka 消费者的 API
+- - '###'
+  - Java 中的消费者实现
+- - '###'
+  - 执行消费者
+- - '###'
+  - 结论
+- - '###'
+  - 问题
+- - '#'
+  - 第 6 章
+- - '##'
+  - Storm 简介
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '###'
+  - Storm 简介
+- - '###'
+  - Kafka 与 Storm 的比较
+- - '###'
+  - Hadoop 与 Storm 的比较
+- - '###'
+  - Storm 的核心组件
+- - '###'
+  - Apache Storm 架构
+- - '###'
+  - Storm 的优势
+- - '###'
+  - Storm 的应用
+- - '###'
+  - 总结
+- - '###'
+  - 问题
+- - '###'
+  - 答案
+- - '#'
+  - 第 7 章：Storm 的安装与配置
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '###'
+  - Apache Storm 的前提条件
+- - '###'
+  - Storm 框架安装
+- - '###'
+  - 设置 Storm 集群
+- - '###'
+  - 结论
+- - '###'
+  - 问题
+- - '###'
+  - 答案
+- - '#'
+  - 第 8 章：Spouts 和 Bolts
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '###'
+  - 交易告警应用程序
+- - '###'
+  - 创建 Maven 项目
+- - '###'
+  - Spout 实现
+- - '###'
+  - Bolt 实现
+- - '###'
+  - TransactionParserBolt.java
+- - '###'
+  - TransactionCountTrackerBolt.java
+- - '###'
+  - TransactionAlertBolt.java
+- - '###'
+  - 创建拓扑
+- - '###'
+  - 运行应用程序
+- - '###'
+  - 结论
+- - '###'
+  - 问题
+- - '##'
+  - Spark 与 Hadoop 的比较
+- - '##'
+  - Spark 与 Storm 的比较
+- - '##'
+  - Spark 与 Kafka 的比较
+- - '###'
+  - 核心概念
+- - '###'
+  - Spark 的优势和特性
+- - '###'
+  - Spark 架构
+- - '###'
+  - Spark 的应用
+- - '###'
+  - 结论
+- - '###'
+  - 问题
+- - '#'
+  - 第 10 章
+- - '##'
+  - Spark Streaming
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '###'
+  - Spark streaming 的核心概念
+- - '###'
+  - Spark Shell 命令的执行
+- - '###'
+  - 使用 Eclipse 实现 Spark
+- - '###'
+  - 结论
+- - '###'
+  - 问题
+- - '###'
+  - 回答
+- - '#'
+  - 第 11 章：Kafka 与 Spark 的集成
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '###'
+  - Kafka 和 Spark 的集成
+- - '###'
+  - 集成方法
+- - '###'
+  - Kafka 与 Spark 的结构化流集成
+- - '###'
+  - 创建批查询的 Kafka 源
+- - '###'
+  - 2. 消费者缓存
+- - '###'
+  - 3. 将数据写入 Kafka
+- - '###'
+  - 4. 为流式查询创建 sink
+- - '###'
+  - 5. 将批量查询的输出写入 Kafka
+- - '##'
+  - Kafka 和 Spark Streaming 的实现
+- - '###'
+  - 问题
+- - '###'
+  - 答案
+- - '##'
+  - 关键术语
+- - '#'
+  - 第 12 章
+- - '##'
+  - Kafka 与 Storm 的集成
+- - '###'
+  - 引言
+- - '###'
+  - 结构
+- - '###'
+  - 目标
+- - '###'
+  - Kafka-Storm 集成引言
+- - '###'
+  - 创建 Maven 项目
+- - '###'
+  - Kafka 和 Storm 的依赖项
+- - '###'
+  - Bolt 的实现
+- - '###'
+  - 创建拓扑
+- - '###'
+  - 执行集成流
+- - '###'
+  - 结论
+- - '##'
+  - Apache Spark
+- - '###'
+  - Apache Storm
+- - '###'
+  - Application
+- - '###'
+  - Bolt
+- - '###'
+  - Callback
+- - '###'
+  - Consumer
+- - '###'
+  - Direct Approach
+- - '###'
+  - Eclipse
+- - '###'
+  - Group
+- - '###'
+  - Hadoop
+- - '###'
+  - Integration Approach
+- - '###'
+  - IntelliJ IDE
+- - '###'
+  - Java
+- - '###'
+  - Kafka
+- - '###'
+  - Maven
+- - '###'
+  - Messages
+- - '###'
+  - Microservice
+- - '###'
+  - Multiple brokers
+- - '###'
+  - Partitions
+- - '###'
+  - Producer
+- - '###'
+  - Receiver-based approach
+- - '###'
+  - Records
+- - '###'
+  - 弹性性分布式数据集 (RDD)
+- - '###'
+  - Spark Shell
+- - '###'
+  - Spout
+- - '###'
+  - Storm
+- - '###'
+  - Topology
+- - '###'
+  - Traditional message queues
+- - '###'
+  - Transaction alert application
+- - '###'
+  - Zookeeper

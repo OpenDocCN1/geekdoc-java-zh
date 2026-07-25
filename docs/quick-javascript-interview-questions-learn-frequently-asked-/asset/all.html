@@ -1,0 +1,2664 @@
+<p><img src="Images/cover00115.jpeg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<p><font></p>
+<h1><strong>Quick JavaScript Interview Questions</strong></h1>
+<p><strong>Copyright Blurb</strong><br />
+All rights reserved. No part of this book may be reproduced in any form
+or by any electronic or mechanical means including information storage
+and retrieval systems – except in the case of brief quotations in
+articles or reviews – without the permission in writing from its
+publisher, <strong>Sandeep Kumar Patel</strong>.<br />
+All brand names and product names used in this book are trademarks,
+registered trademarks, or trade names of their respective holders. I am
+not associated with any product or vendor in this book.<br />
+<strong>Published By<br />
+Sandeep Kumar Patel</strong>.</p>
+<p><strong></strong></p>
+<h2>Table of Contents</h2>
+<p>Quick JavaScript Interview Questions Table of Contents<br />
+Chapter 1 Inheritance<br />
+Chapter 2 Questions on Event<br />
+Chapter 3 Closure<br />
+Chapter 5 Questions on DOM<br />
+Chapter 6 Date Object<br />
+Chapter 7 Regular Expression<br />
+Chapter 8 Questions on Canvas API Chapter 9 Geo Location API<br />
+Chapter 10 Web Workers<br />
+Chapter 11 Local Storage<br />
+Chapter 12 File API<br />
+Chapter 13 Web RTC<br />
+Chapter 14 Drag &amp; Drop API<br />
+Chapter 15 App Cache API<br />
+Chapter 16 Server Sent Events Chapter 17 Miscellaneous Questions About
+The Author<br />
+One Last Thing...</p>
+<h2>Chapter 1 Inheritance</h2>
+<p></b></font></p>
+<p><font color="#C00000">Q. How to create a class? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>JavaScript does not have a class definition. To mimic classes in
+JavaScript functions can be used to declare a class. </font></p>
+<p><font></p>
+<p><strong>Example</strong> :<br />
+Let’s create a student class in JavaScript which takes two parameters
+name and roll as property. The code will look like below,</p>
+<p>function Student(name,roll){ this.name = name;<br />
+this.roll = roll;</p>
+<p>} </font></p>
+<p><font color="#C00000">Q. How to create an object?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>An object in JavaScript can be created using two ways:</font></p>
+<p><font></p>
+<p><strong>New Keyword:</strong><br />
+To create a student object from the above student class we can call the
+Student function using new keyword.</p>
+<p>var student1 = new Student(‘sandeep’,2)</p>
+<p><strong>Anonymous Object:</strong><br />
+Anonymous objects can be created using pair of curly braces containing
+property name and value pairs.</p>
+<p>Var rose = {‘color’: ’red’}</font><br />
+<font color="#C00000">Q. How to declare a private and a public
+member?</font><br />
+<font>Private members are declared using <strong>var</strong> keyword
+and constructor function.</p>
+<p>function Student(name,roll){ var id= ABCD123;<br />
+this.name = name;<br />
+this.roll = roll;</p>
+<p>}</p>
+<p>When a Student object will be created the propertied name and roll
+will be accessible using dot operator but <strong>id</strong> will not
+be accessible as it behaves as a private member and return
+<strong>undefined</strong> on call.</p>
+<p></font> <img src="Images/image00050.jpeg" /></p>
+<p><font>The above chrome console is showing a student1 object is
+created.name property is accessible as it is showing sandeep on</font>
+<font size="-1"><font color="#FF0000">student1.name</font></font><font>
+call. So name is a public property for the student object. But id
+property is not accessible and returned undefined on</font>
+<font size="-1"><font color="#FF0000">student1.id</font></font><font>
+call. This shows id is a private property in student1 object.
+</font></p>
+<p><font color="#C00000">Q. What is prototype property? </font>
+<font></p>
+<p>By Using Prototype we can add <strong>new members</strong> to an
+existing object. Every JavaScript object has this property internally.
+Initially it is an <strong>empty</strong> object.</p>
+<p><strong>Example:</strong></p>
+<p>function Student(name,roll){<br />
+this.name = name;<br />
+this.roll = roll;</p>
+<p>}<br />
+var student1 = new Student('sangeeta',30); Student.prototype.mark =
+100;</p>
+<p>Checkout the below chrome console for the use of
+protype.</font><br />
+<img src="Images/image00051.jpeg" /></p>
+<p><font>Initially the student1 object has only two properties name and
+roll. By using prototype a new property <strong>mark</strong> has been
+added to student object with a value of <strong>100</strong>.Now the
+console shows that the mark property is also added to the existing
+<strong>student1</strong> object. </font></p>
+<p><font color="#C00000">Q. What is constructor property?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Constructor property of an object maintains a reference to its
+creator function.<br />
+<strong>Example</strong>:<br />
+Let us checkout an example by creating a student object and calling the
+constructor property on it.</font></p>
+<p><font></p>
+<p>function Student(name, mark){<br />
+this.name=name;<br />
+this.mark =mark;</p>
+<p>}<br />
+var student1 = new Student('sandeep',123);
+console.log(student1.constructor);</p>
+<p>Checkout the following screen shot for above code in chrome console.
+The console log is printing the referenced function by
+<strong>student1</strong> object.</p>
+<p></font> <img src="Images/image00052.jpeg" /></p>
+<p><font color="#C00000">Q. How to call other class
+methods?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Using <strong>call()</strong> and <strong>apply()</strong> method
+we can use methods from different context to the current context. It is
+really helpful in reusability of code and context binding.</font></p>
+<p><font></p>
+<p><strong>call()</strong> : It is used to calls a function with a given
+this value and arguments provided individually.<br />
+<strong>apply():</strong> It is used to call a function with a given
+this value and arguments provided as an array.</p>
+<p>Below code has two function <strong>getTypeOfNumber()</strong> and
+<strong>getTypeOfAllNumber().</strong> The details pf these functions
+are below. <strong>getTypeOfNumber</strong> : This method takes single
+number as<br />
+parameter and return the type either Even or Odd.<br />
+<strong>getTypeOfAllNumber</strong> : This method takes array of
+numbers<br />
+as parameter and return the types in an array with Even or<br />
+Odd.</p>
+<p>var MyNumber = {<br />
+<strong>getTypeOfNumber</strong> : function(number){<br />
+var type = (number % 2 === 0) ? "Even" : "Odd"; return type;</p>
+<p>},<br />
+<strong>getTypeOfAllNumber</strong> : function (){<br />
+var result = [],i=0;<br />
+for (; i &lt; arguments.length; i++){<br />
+var type =<br />
+MyNumber.getTypeOfNumber.call(null,arguments[i]) ;<br />
+result.push(type)<br />
+}<br />
+return result;<br />
+}<br />
+};<br />
+var typeOfNumber =<br />
+MyNumber.getTypeOfNumber.<strong>call</strong>(null,<strong>21</strong>)
+console.log(typeOfNumber)<br />
+var typeOfAllNumber =<br />
+MyNumber.getTypeOfAllNumber.<strong>apply</strong>(null<strong>,[2,4,5,7
+8,21])</strong><br />
+console.log(typeOfAllNumber)</p>
+<p>Below screenshot shows output of the above code Firebug
+console.</font><br />
+<img src="Images/image00053.jpeg" /></p>
+<p><font color="#C00000">Q. Explain method overriding with an
+Example?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>We can override any inbuilt method of JavaScript by declaring its
+definition again. The existing definition is accessible to override by
+the <strong>prototype</strong> property. Consider the below example,
+<strong>split()</strong> is an built-in method for a string object .Its
+default behaviour to break the specified string to an array and is a
+member function of <strong>String</strong> class. But we have overridden
+its definition using its prototype property.</font></p>
+<p><font>Below screenshot shows the inbuilt behaviour of
+<strong>split()</strong> method. It has divided the string into an array
+of element.</font><br />
+<img src="Images/image00054.jpeg" /><font>The following screenshot shows
+the new overridden definition of <strong>split ()</strong> method. It is
+now normally returns string “<strong>I am
+overriden</strong>”.</font><br />
+<img src="Images/image00055.jpeg" /></p>
+<p><font color="#C00000">Q. How to inherit from a class?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Inheritance can be achieved in JavaScript using
+<strong>prototype</strong> property.</font></p>
+<p><img src="Images/image00056.jpeg" /><font>We need to follow 2 steps
+to create an inheritance.<br />
+<strong>Step1:</strong><br />
+Child class prototype should point to parent class object.<br />
+&lt;ChildClassName&gt;.prototype = new &lt;ParentClass&gt;();<br />
+<strong>Step2:</strong><br />
+Reset the child class prototype constructor to point self.<br />
+&lt;ChildClassName&gt;.prototype.constructor=&lt;ChildClassName&gt;</p>
+<p><strong>Example:</strong><br />
+Below example shows <strong>ScienceStudent</strong> class as a child
+class of <strong>Student</strong> class. As the method
+<strong>showMyType()</strong> is available for ScienceStudent
+object.</p>
+<p>function Student(name){<br />
+this.name=name;<br />
+}<br />
+Student.prototype.sayMyType = function(){<br />
+console.log("I am student type")<br />
+}<br />
+function ScienceStudent(name){<br />
+}<br />
+ScienceStudent.prototype = new Student();<br />
+ScienceStudent.prototype.constructor = ScienceStudent;<br />
+var student2 = new ScienceStudent('sangeeta');<br />
+console.log(student2.sayMyType());</p>
+<p>Check out the below screen shot for the output of the above code in
+the developer console.</font><br />
+<img src="Images/image00057.jpeg" /></p>
+<p><font>To test the type of an object belongs to a class or not
+<strong>instanceOf</strong> can be used. This returns a Boolean value,
+<strong>TRUE</strong> for an object belongs to a class or else
+<strong>FALSE</strong>. Check the below screen shot for the test of
+student2 object using <strong>instanceOf</strong>. </font></p>
+<p><img src="Images/image00058.jpeg" /></p>
+<p><font color="#C00000">Q. What is differential
+inheritance?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Differential Inheritance is a common prototype-oriented model that
+uses the concept that most objects are derived from other, more generic
+objects, and only differ in a few small aspects. Each object maintains a
+reference to its prototype and a table of properties that are different.
+</font></p>
+<p><font color="#C00000">Q. What is Object.create() method
+do?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>ECMAScript 5.1 has this method in its specification. This method
+can be used to create a new object with given prototype object and
+properties. The syntax of this method is listed below.</font></p>
+<p><font>Object.create(proto[, propertiesObject])</font></p>
+<p><font><strong>Example:</strong><br />
+Below code has a Student class function with name property and the
+prototype object has a
+method</font><font size="-1"><font color="#FF0000">
+getStudentName()</font></font><font> which return the name of the
+student. A new
+</font><font size="-1"><font color="#FF0000">student1</font></font><font>
+object has been creates using
+</font><font size="-1"><font color="#FF0000">
+Object.create()</font></font><font> method by passing the prototype
+object of Student with value of the name as sandeep. Then the</font>
+<font size="-1"><font color="#FF0000">getStudentName()</font></font><font>
+method is called on</font><font size="-1"><font color="#FF0000">
+student1</font></font><font> object and logged in the
+console.</font></p>
+<p><font>function Student(name) {<br />
+this.name = name;<br />
+}<br />
+Student.prototype = {<br />
+getStudentName: function() {<br />
+return "Name of Student is :" + this.name; }<br />
+};</p>
+<p>var student1 = Object.create(Student.prototype); student1.name =
+"Sandeep";<br />
+console.log(student1.getStudentName());</p>
+<p>The following screenshot shows the output of the above code in the
+developer console.</font><br />
+<img src="Images/image00059.jpeg" /></p>
+<p><font color="#C00000">Q. Write a polyfill for Object.create() method
+if it is not present in the browser?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>ECMAScript 5.1 has this method in its specification. If the
+browser is old then</font>
+<font size="-1"><font color="#FF0000">Object.create()</font></font><font>
+method is not present.To resolve this we need to write a polyfill. Below
+code shows the polyfill for</font>
+<font size="-1"><font color="#FF0000">Object.create()</font></font><font>
+method.</font></p>
+<p><font></p>
+<p>//check if create method is present inside Object if (typeof
+Object.create != 'function') {<br />
+//define the create method<br />
+Object.create = (function() {<br />
+var Object = function() {};</p>
+<p>return function(prototype) {</p>
+<p>if (arguments.length &gt; 1) {<br />
+throw Error('Second argument not supported');<br />
+}</p>
+<p>if (typeof prototype != 'object') {<br />
+throw TypeError('Argument must be an object');<br />
+}</p>
+<p>Object.prototype = prototype;<br />
+var result = new Object();<br />
+Object.prototype = null;<br />
+return result; };<br />
+})();<br />
+} </font></p>
+<p><font>The above code checks if the </font>
+<font size="-1"><font color="#FF0000">create()</font></font><font>
+method is already present inside the Object using if condition and
+comparing its type to</font>
+<font size="-1"><font color="#FF0000">function</font></font><font>. If
+this condition true it means the
+</font><font size="-1"><font color="#FF0000">create()</font></font><font>
+method is not present. Then the polyfill code block gets executes and
+assigns the empty object to
+</font><font size="-1"><font color="#FF0000">Object.create</font></font><font>
+property.</font></p>
+<p><font color="#C00000">Q. What is the purpose of
+Object.defineProperties() method?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>ECMAScript 5.1 provides
+</font><font size="-1"><font color="#FF0000">Object.defineProperties()</font></font><font>
+method to create new properties to a defined object. It provides many
+configuration options to initialize these members. Below code shows the
+use of this method.</font></p>
+<p><font>function Student(name) {<br />
+this.name = name;<br />
+}<br />
+var student1 = Object.create(Student.prototype),<br />
+properties ={<br />
+"subject": {<br />
+value: "Computer",<br />
+writable: true,<br />
+enumerable:true<br />
+},<br />
+"marks": {<br />
+value: 0,<br />
+writable: false,<br />
+enumerable:true<br />
+}<br />
+};<br />
+Object.defineProperties(student1, properties);<br />
+student1.name = "Sandeep";<br />
+student1.subject ="Mathematics";<br />
+student1.marks=75;<br />
+console.log(student1); </font></p>
+<p><font>In the above code a </font>
+<font size="-1"><font color="#FF0000">student1</font></font><font>
+object created using
+</font><font size="-1"><font color="#FF0000">Object.create()</font></font>
+<font>method. Then some new properties like
+</font><font size="-1"><font color="#FF0000">subject</font></font><font>
+and</font><font size="-1"><font color="#FF0000">
+marks</font></font><font> are added to this object. The
+</font><font size="-1"><font color="#FF0000">enumerable</font></font><font>
+option decided whether the property can be enumerated as own
+property.</font><font size="-1"><font color="#FF0000">
+Writable</font></font><font> property decides whether the property is
+modifiable or not. The
+</font><font size="-1"><font color="#FF0000">value</font></font><font>
+property takes the default value of the property. Below screenshot shows
+the output of the above code in the developer console. </font></p>
+<p><img src="Images/image00060.jpeg" /></p>
+<p><font color="#C00000">Q. How can you distinguish scope and context in
+JavaScript?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Scope pertains to the visibility of variables and context refers
+to the object to which a method belongs and can be changed by using call
+or applies.</font></p>
+<p><font color="#C00000">Q. What are two ways in which the variable can
+be assigned to an empty object?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>When creating a new empty object, you can instantiate the
+</font><font size="-1"><font color="#FF0000">Object()</font></font>
+<font>constructor or you can simply create an empty object literal. In
+either case, you can then add properties to the new object. The syntax
+of creating empty object is listed below.</font></p>
+<p><font>var aEmptyObject= new Object();<br />
+var aEmptyObject= = {};</p>
+<h2><strong>Chapter 2 Questions on Event</strong></h2>
+<p></font></p>
+<p><font color="#C00000">Q. How Event works?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Event propagation follows two phases <strong>capturing</strong>
+and <strong>bubbling</strong> phase.</font></p>
+<p><img src="Images/image00061.jpeg" /><font></p>
+<p><strong>Capturing Phase:</strong><br />
+In this phase, event first makes its way <strong>downwards</strong> from
+the <strong>DOCUMENT</strong> to the <strong>target</strong> element by
+passing all inner elements.</p>
+<p><strong>Bubbling Phase:</strong><br />
+In this phase event makes its way back <strong>upwards</strong> from the
+<strong>target</strong> element to <strong>DOCUMENT</strong> by passing
+all outer wrapped elements.</p>
+<p></font></p>
+<p><font color="#C00000">Q. How to attach event to an
+element?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>According to DOM Level 2 Event Specification an event can be
+attached to an element using <strong>addEventListener()</strong> method
+using <strong>three</strong> arguments. </font></p>
+<p><font><strong>Syntax</strong>:<br />
+&lt;element&gt;.addEventListener(&lt;eventname&gt;,&lt;eventcallback&gt;,&lt;bo
+oleanphase&gt;)</p>
+<p><strong>eventname:</strong><br />
+Represents type of event as String parameter. For Example click,
+mouseover, mouseout etc.</p>
+<p><strong>eventcallback</strong> :<br />
+This represents the callback function to be called for the event to be
+handled.</p>
+<p><strong>booleanphase :</strong><br />
+This represents the phase of the event where the listener is attached. A
+FALSE value represents the bubbling phase and a TRUE value represents a
+capturing phase.</p>
+<p><strong>Example:</strong><br />
+A click event listener is added to the document which alerts a message
+when click occur.</p>
+<p>document.addEventListener('click', function () { alert("Insider Event
+Listener");<br />
+},false);</p>
+<p></font></p>
+<p><font color="#C00000">Q. How to attach event prior to IE9 browser
+version?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>In IE older bowser an event can be attached to an element using
+attachEvent() method. Only For bubbling phase a listener can be added.
+</font></p>
+<p><font><strong>Syntax:</strong><br />
+&lt;element&gt;.attachEvent(&lt;eventname&gt;,&lt;eventcallback&gt;)</p>
+<p><strong>Example:</strong><br />
+A click event listener is added to the document which alerts a message
+when click occur. Below screenshot shows adding a click event in IE 10
+developer toolbar.</p>
+<p></font> <img src="Images/image00062.jpeg" /></p>
+<p><font>Except IE, the other browser added by
+<strong>addEventListener()</strong> method. Below screenshot shows the
+demonstration this method in Firebug.</font></p>
+<p><img src="Images/image00063.jpeg" /></p>
+<p><font color="#C00000">Q. How to remove event listener?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>According to DOM Level 2 Event Specification an Event Listener can
+be removed using <strong>removeEventListener()</strong> method. For IE
+browsers <strong>detachEvent()</strong> method must be used.<br />
+The following screenshot shows detaching click event handler from
+document for IE browser.</font></p>
+<p><img src="Images/image00064.jpeg" /></p>
+<p><font>The following screenshot shows removing click event handler
+from document for Firefox browser. </font></p>
+<p><img src="Images/image00065.jpeg" /></p>
+<p><font color="#C00000">Q. How setTimeOut() and clearTimeOut() function
+works?</font> <font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The <strong>setTimeout()</strong> method calls a function or
+evaluates an expression <strong>once</strong> after a specified number
+of milliseconds. <strong>clearTimeOut()</strong> method stop the
+execution of the function specified in the <strong>setTimeout()</strong>
+method.</font></p>
+<p><font></p>
+<p><strong>Syntax:</strong><br />
+var timeOut = setTimeout(function,milliseconds,lang)
+clearTimeout(timeOut)</p>
+<p>Below code shows the demonstration of these time out methods.</p>
+<p>var timeOutHandler= function(){<br />
+console.log("inside Time Now ", new Date().getSeconds());
+clearTimeout(timeOut)</p>
+<p>}<br />
+console.log("Time Now ", new Date().getSeconds()); var timeOut =
+setTimeout(timeOutHandler,4000);</p>
+<p>Below screenshot show the execution of the
+<strong>timeOutHandler()</strong> method after 4 seconds. </font><br />
+<img src="Images/image00066.jpeg" /></p>
+<p><font color="#C00000">Q. How setInterval() and clearInterval()
+function works?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The <strong>setInterval()</strong> method calls a function or
+evaluates an expression in specified <strong>interval</strong> of
+milliseconds. <strong>clearInterval()</strong> method stop the execution
+of the function specified in the <strong>setInterval()</strong> method.
+</font></p>
+<p><font></p>
+<p><strong>Syntax:</strong><br />
+var timeInterval = setInterval(function, milliseconds)
+clearInterval(timeInterval)</p>
+<p>Below code demonstrate these interval handlers.</p>
+<p>var counter = 0,<br />
+timeIntervaltHandler= function(){<br />
+console.log("inside Time Now ", new Date().getSeconds());
+counter++;<br />
+console.log("Handler Called count ",counter)<br />
+if(counter === 4) {</p>
+<p>clearInterval(timeInterval);<br />
+console.log("Clearing the interval handler")</p>
+<p>}<br />
+}<br />
+console.log("Time Now ", new Date().getSeconds()); var timeInterval =
+setInterval(timeIntervaltHandler,2000);</p>
+<p>Below screenshot shows the handler called every 2 second for 4 times
+.After 4<sup>th</sup> called <strong>clearInterval()</strong> remove the
+execution.</font> <img src="Images/image00067.jpeg" /></p>
+<h2><font><strong>Chapter 3 Closure</strong></font></h2>
+<p><font color="#C00000">Q. What is Closure?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>A closure is an inner function that has access to the outer
+wrapped function’s variables. It has three different scope accesses:-
+<strong>Self-scope:</strong><br />
+It has access to properties present in its own scope.<br />
+<strong>Wrapped function’s scope:</strong><br />
+It has access to the properties present to from its enclosing
+function.<br />
+<strong>Global Scope:</strong><br />
+It has access to the properties present in global scope that is window
+scope.<br />
+<strong>Example:</strong><br />
+The inner function still has the access to prop1 though prop1 belongs to
+outer function scope.</font></p>
+<p><font></p>
+<p>function myOuterFunction(){ var prop1 = 5;<br />
+return function innerFunction(){</p>
+<p>return prop1;<br />
+}<br />
+}<br />
+var res = myOuterFunction(); console.log(res.name);<br />
+console.log(res());</p>
+<p>Below screenshot shows the output of the above code in the
+console.</font><br />
+<img src="Images/image00068.jpeg" /></p>
+<p><font color="#C00000">Q. Give an example of practical implication of
+closure concept?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>In web page development closures are more frequently used by the
+developers. A most common scenario is when we need some kind of factory
+which will return a function object with different value that can be
+used by application.<br />
+<strong>Example:</strong><br />
+The following code has a background color factory named</font>
+<font size="-1"><font color="#FF0000">backgroundColorFactory</font></font><font>
+which returns a function with an input color. Using this factory we have
+created</font><font size="-1"><font color="#FF0000">
+greenBackground</font></font><font>
+and</font><font size="-1"><font color="#FF0000">
+blueBackground</font></font> <font>function objects and binded with the
+2 buttons. Once user clicks these buttons the background color of the
+body is changed to the targeted color.</font></p>
+<p><font>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;</p>
+<p>&lt;head&gt;<br />
+&lt;meta charset="utf-8"&gt;<br />
+&lt;title&gt;Practical Closure Example&lt;/title&gt;</p>
+<p>&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;button id="greenButton"&gt;Green Background&lt;/button&gt;
+&lt;button id="blueButton"&gt;Blue Background&lt;/button&gt;
+&lt;script&gt;</p>
+<p>var backgroundColorFactory = function(color) { return function()
+{<br />
+document.body.style.background = color; };<br />
+};<br />
+var greenBackground = backgroundColorFactory('green'); var
+blueBackground = backgroundColorFactory('blue');</p>
+<p>document.getElementById('greenButton').onclick =
+greenBackground;<br />
+document.getElementById('blueButton').onclick = blueBackground;<br />
+&lt;/script&gt;<br />
+&lt;/body&gt;</p>
+<p>&lt;/html&gt;<br />
+The output of the above code is listed in below screenshot.</font><br />
+<img src="Images/image00069.jpeg" /></p>
+<p><font color="#C00000">Q. Emulate the private data using closure?
+</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The following code demonstrates the declaration of private
+variable <strong>_name</strong>. It means we can assign the _name value
+using Student constructor with a new keyword.</font></p>
+<p><font>function Student(name) { var _name = name;</p>
+<p>this.getName = function() { return _name;<br />
+};<br />
+}</p>
+<p>var student1 = new Student("Sandeep"); student1 ._name =
+"John";<br />
+console.log(student1.getName());</p>
+<p>The details of the previous code are as follows:<br />
+A Student object <strong>student1</strong> is created with
+<strong>_name</strong> has value <strong>Sandeep</strong>.<br />
+A new name value <strong>John</strong> is assigned to _name but the
+<strong>getName()</strong> method prints <strong>Sandeep</strong> to the
+console. It proves _name is private.</p>
+<p>The following screenshot shows the Chrome console with the output of
+the previous code. </font><br />
+<img src="Images/image00070.jpeg" /></p>
+<h2><font><strong>Chapter 4 Questions on JSON</strong></font></h2>
+<p><font color="#C00000">Q. What is JSON ? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The JSON text format is syntactically identical to the code for
+creating JavaScript objects. JSON is only a subset of JS object literal
+notation, but apart from looking similar, they have nothing in common.
+JSON is used as data exchange format, like XML. JSON is built on two
+structures:</font></p>
+<p><font>A collection of name/value pairs. In various languages, this is
+realized as an object, record, struct, dictionary, hash table, keyed
+list, or associative array.<br />
+An ordered list of values. In most languages, this is realized as an
+array, vector, list, or sequence. </font></p>
+<p><font color="#C00000">Q. Why does Google prepend while (1); to their
+JSON responses?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>It prevents JSON hijacking. This is to ensure some other site
+can't do nasty tricks to try to steal data. By replacing the array
+constructor, then including this JSON URL via a
+</font><font size="-1"><font color="#FF0000">&lt;script&gt;</font></font><font>
+tag, a malicious thirdparty site could steal the data from the JSON
+response. By putting a </font>
+<font size="-1"><font color="#FF0000">while(1);</font></font><font> at
+the start, the script will crash instead. A same-site request using XHR
+and a separate JSON parser, on the other hand, can easily ignore the
+</font><font size="-1"><font color="#FF0000">while(1);</font></font><font>
+prefix.</font></p>
+<p><font color="#C00000">Q. What is JSONP ?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>JSONP stands for “</font><font><strong>JSON with
+Padding</strong></font><font>”.</font><font> It means JSON data wrapped
+in a function call. A callback (processing/padding) function already
+defined in the Web page at the time of requesting remote JSON
+data.</font></p>
+<p><font><strong>Example</strong> :<br />
+The below JavaScript code shows a callback function
+</font><font size="-1"><font color="#FF0000">paddingFunction()</font></font>
+<font>for a remote URL<br />
+<em>//abcdurl</em> .<br />
+function paddingFunction(data){ </font></p>
+<p><font>console.log("response data processing code")<br />
+}<br />
+var script = document.createElement('script');<br />
+script.src = '//abcdurl?callback=paddingFunction'<br />
+document.getElementsByTagName('head')[0].appendChild(scrip t);
+</font></p>
+<p><font color="#C00000">Q. Why use JSON over XML ? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The following points are in favor of JSON over XML
+format:</font></p>
+<p><font>JSON can contain Integer, String, List, Arrays. XML is just
+nodes and elements that needs to be parsed into Integer, String and so
+on before it is used by your application. JSON is smaller, faster and
+lightweight compared to XML. So for data delivery between servers and
+browsers, JSON is a better choice.<br />
+JSON is best for use of data in web applications from web services
+because of JavaScript which supports JSON. The overhead of parsing XML
+nodes is more compare to a quick look up in JSON.<br />
+For a newbie, JSON might look complex to read and understand because of
+its structure unless it is well written with all brackets and commas
+properly indented. JSON can be mapped more easily into object oriented
+system.<br />
+JSON and XML both use Unicode and thus support
+Internationalization.<br />
+JSON is a better data exchange format. XML is a better document exchange
+format.<br />
+JSON is less secure because of absence of JSON parser in browser.<br />
+If the data is in XML, you can write an XSLT template and run it over
+the XML to output the data into another format: HTML, SVG, plain text,
+comma-delimited, even JSON. When you have data in JSON, it’s pretty much
+stuck there. There’s no easy way to change it into another data format.
+So here, XML scores over JSON.</font></p>
+<p><font color="#C00000">Q. What is MIME type for JSON? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The MIME type for JSON is <strong>application/json</strong>.
+</font></p>
+<p><font color="#C00000">Q. What data types are supported by
+JSON?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Different data types supported by JSON are Number, String,
+Boolean, Array, Object, null. The following code shows a JSON object
+containing different data types:</font></p>
+<p><font></p>
+<p>{ name:"Sandeep",<br />
+score:65,<br />
+isPassed: true,<br />
+subject: ["Computer", "Algebra"],<br />
+address: { city:"Bangalore", country:"India"}, email: null</p>
+<p>}<br />
+The following screenshot shows the above JSON object in a chrome
+developer console with all properties listed in key value
+pair.</font><br />
+<img src="Images/image00071.jpeg" /></p>
+<p><font color="#C00000">Q. What is the role of JSON.stringify()
+method?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>JSON.stringify() turns an object into a JSON text and stores that
+JSON text in a string. The following screenshot shows the use of
+<strong>stringify()</strong> method: </font></p>
+<p><img src="Images/image00072.jpeg" /></p>
+<p><font color="#C00000">Q. What is the role of JSON.parse()
+method?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The <strong>JSON.parse()</strong> method parses a string as JSON,
+optionally transforming the value produced by parsing. The following
+screenshot shows the use of <strong>JSON.parse()</strong> method to
+convert the student1 JSON string to a JSON object.</font></p>
+<p><img src="Images/image00073.jpeg" /></p>
+<p><font color="#C00000">Q. What is the complete syntax of JSON.parse()
+method?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The complete syntax for <strong>JSON.parse()</strong> method is as
+follows: </font></p>
+<p><font>JSON.parse(text[, reviver])</p>
+<p>The details of the above syntax are as follows:<br />
+<strong>Text</strong>: It represents the string to parse as JSON.<br />
+<strong>Reviver</strong>: It represents a function, prescribes how the
+value originally produced by parsing is transformed, before being
+returned.</p>
+<p></font></p>
+<p><font color="#C00000">Q. How to convert date object to
+JSON?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The <strong>toJSON()</strong> method can convert the date object
+to JSON. The following screenshot shows the use of
+<strong>toJSON()</strong> method for a date object in chrome
+console.</font></p>
+<p><img src="Images/image00074.jpeg" /></p>
+<h2><font><strong>Chapter 5 Questions on DOM</strong> </font></h2>
+<p><font color="#C00000">Q. What is DOM ? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Document Object Model (DOM) is a programming API for HTML and XML
+document. JavaScript is most widely used language to access these DOM
+API properties and methods.</font></p>
+<p><font color="#C00000">Q. What are the different objects involved in
+DOM ?</font> <font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>According to DOM Level 2 specification it has following main
+objects.</font></p>
+<p><font></p>
+<p><strong>Attribute</strong> : Represents an element attribute.
+<strong>Attributes</strong>: Represents a collection of attribute.
+<strong>CDATASection</strong> : Represents an XML CDATA section.
+<strong>Comment</strong>: Represents an XML comment.
+<strong>Document</strong>: Represents an XML document.
+<strong>Element</strong>: Represents an XML element node.
+<strong>Node</strong>: Represents a generic node object in an XML
+document.</p>
+<p><strong>NodeList</strong>: Represents an ordered collection of node
+objects.<br />
+<strong>ProcessingInstruction</strong>: Represents an XML processing
+instruction.<br />
+<strong>TextNode</strong>: Represents an XML text node.</font></p>
+<p><font color="#C00000">Q. What are the different properties involved
+in DOM ?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>According to DOM Level 2 specification it has following main
+properties </font></p>
+<p><font></p>
+<p><strong>name</strong> : It has the name of the Attribute.<br />
+<strong>namespaceURI</strong>: It represents namespace URI of the
+node.</p>
+<p><strong>nextSibling</strong>: It contains the next sibling of the
+Node in document source order.</p>
+<p><strong>nodeName</strong> : This represents name of the node.
+<strong>nodeType</strong>: It represents type of the node.<br />
+<strong>nodeValue</strong>: It has value of the node.</p>
+<p><strong>ownerDocument</strong>: It has reference to the Document
+object that contains the Node.</p>
+<p><strong>ownerElement</strong> : It has reference of the Element to
+which the Attribute belongs.<br />
+<strong>parentNode</strong>: It represents parent Node to which the node
+belongs.<br />
+<strong>prefix</strong>: It represents namespace prefix of the node.</p>
+<p><strong>previousSibling</strong> : It has the previous sibling of the
+Node in document source order.<br />
+<strong>text</strong>: It has contents of all the text nodes contained
+by the Node and any element nodes that it contains.</p>
+<p><strong>value</strong> : It has value of the Attribute.<br />
+<strong>attributes</strong>: Represents collection of Attribute
+objects.</p>
+<p><strong>childNodes</strong> : Represents NodeList collection of node
+objects.<br />
+<strong>data</strong>: Represents text stored within a TextNode,
+CDATASection, or Comment.<br />
+<strong>documentElement</strong>: It contains root element node of the
+document.<br />
+<strong>firstChild</strong>: This is first child of the Node in document
+source order.<br />
+<strong>lastChild</strong>: This is the last child of the Node object in
+document source order.</p>
+<p><strong>length</strong>: It represents number of elements in the
+collection.<br />
+<strong>localName</strong>: It has local name of the node..</font></p>
+<p><font color="#C00000">Q. What is windows load event?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Load event occurs generally fired after the object is completely
+loaded. Window load event is event occurs when images, script files, CSS
+files and other dependencies get loaded. Below screenshot shows use of
+load event.</font></p>
+<p><img src="Images/image00075.jpeg" /></p>
+<p><font color="#C00000">Q. What is DOM ready event? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>DOM ready event get fired when elements are get loaded to browser.
+It does not wait for images and other files loaded. We can listen to
+this event by attaching a callback method. A method can be added to
+<strong>readyStateChange</strong> or
+<strong>DOMContentLoaded</strong>.The below code shows the use of these
+events.</font></p>
+<p><font>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;</p>
+<p>&lt;head&gt;<br />
+&lt;title&gt;Window Ready Event Example&lt;/title&gt;<br />
+&lt;script&gt;<br />
+var readyHandler = function(){</p>
+<p>var element = document.querySelector("#message1"); element.innerHTML
+= "Ready Handler Fired : readystatechange &lt;span
+style='color:blue'&gt;"+new Date()+"<br />
+&lt;/span&gt;"<br />
+}<br />
+document.onreadystatechange = readyHandler; &lt;/script&gt;<br />
+&lt;script&gt;<br />
+document.addEventListener("DOMContentLoaded",<br />
+function(event) {<br />
+var element = document.querySelector("#message2"); element.innerHTML = "
+Ready Handler Fired :<br />
+DOMContentLoaded &lt;span style='color:red'&gt;"+new<br />
+Date()+"&lt;/span&gt;";<br />
+});<br />
+&lt;/script&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;h2 id="message1"&gt;<br />
+&lt;/h2&gt;<br />
+&lt;h2 id="message2"&gt;<br />
+&lt;/h2&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p>The following screenshot shows the output of the above
+code.</font><br />
+<img src="Images/image00076.jpeg" /></p>
+<p><font color="#C00000">Q. What is query selector in DOM?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>DOM provides <strong>querySelector()</strong> and
+<strong>querySelectorAll()</strong> methods for selecting DOM elements.
+querySelector() method return a single element which matches first in
+the DOM. querySelectorAll() method return a node list of matched
+elements. Below code demonstrates the use of these methods in selecting
+elements from DOM.</font></p>
+<p><font></p>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;</p>
+<p>&lt;title&gt;Document Query Selector Example&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;</p>
+<p>&lt;h5 class="name"&gt;Sandeep Kumar Patel&lt;/h5&gt;<br />
+&lt;h4 class="country"&gt;India&lt;/h4&gt;<br />
+&lt;h4 class="country"&gt;UK&lt;/h4&gt;<br />
+&lt;h5 class="name"&gt;Surabhi Patel&lt;/h5&gt;<br />
+&lt;h4 class="country"&gt;US&lt;/h4&gt;<br />
+&lt;h4 id="my-score"&gt;520&lt;/h4&gt;<br />
+&lt;script&gt;</p>
+<p>var element = document.querySelector( "#my-score" );
+element.style.color="red";<br />
+var elements = document.querySelectorAll("h4#my-score,</p>
+<p>h5.name");<br />
+for (var item of elements) {<br />
+item.style.fontStyle = "Italic";<br />
+}<br />
+var aElement = document.querySelector( "h4.country, h4#my-score" );</p>
+<p>aElement.style.background = "orange";<br />
+&lt;/script&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p>The following screenshot shows the output of the above code in
+Browser. </font><br />
+<img src="Images/image00077.jpeg" /></p>
+<p><font color="#C00000">Q. What is primary Data Type of
+DOM?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Node interface is the primary data type of DOM. It represents a
+single item from DOM tree. Document, Element, CharacterData,
+ProcessingInstruction, DocumentFragment, DocumentType, Notation, Entity,
+EntityReference interface inherits from Node interface.</font></p>
+<p><font color="#C00000">Q. What is document fragment in
+DOM?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font><strong>DocumentFragment</strong> is a light weight version of
+DOM. It does not have any parent class. It is generally used by the
+developer as a temporary storage of DOM elements. Below code shows an
+Example of creating document fragment and adding HTML element to it and
+finally placing it to the body of the DOM.</font></p>
+<p><font></p>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;</p>
+<p>&lt;title&gt;DocumentFragment Example&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;</p>
+<p>&lt;script&gt;<br />
+var aFragment = document.createDocumentFragment(), aHTMLElement =
+document.createElement("h2"), aTEXTElement =
+document.createTextNode("SANDEEP");</p>
+<p>aHTMLElement.appendChild(aTEXTElement);<br />
+aFragment.appendChild(aHTMLElement);<br />
+document.body.appendChild(aFragment);</p>
+<p>&lt;/script&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+Below screenshot shows an h2 element with a child text node containing
+value SANDEEP is place inside document fragment. Finally the document
+fragment is appended as a child to the body element.</p>
+<p></font> <img src="Images/image00078.jpeg" /></p>
+<p><font color="#C00000">Q. Which is basic object of DOM? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Node is most basic object of DOM. It is the most common interface
+from which lot of other DOM object are inherited. The following
+interfaces all inherit from Node its methods and properties: Document,
+Element, CharacterData, ProcessingInstruction, DocumentFragment,
+DocumentType, Notation, Entity, EntityReference. These interfaces may
+return null in particular cases where the methods and properties are not
+relevant. They may throw an exception - for example when adding children
+to a node type for which no children can exist.</font></p>
+<p><font color="#C00000">Q. What are the common doctype
+declarations?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>There are 8 different type of doctype declaration and are listed
+below.<br />
+<strong>HTML 5</strong>: This document type is used in HTML5.</font></p>
+<p><font>&lt;!DOCTYPE html&gt;</p>
+<p><strong>HTML 4.01 Strict</strong> : This DTD contains all HTML
+elements and attributes, but does NOT INCLUDE presentational or
+deprecated elements (like font). Framesets are not allowed.</p>
+<p>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"<br />
+"http://www.w3.org/TR/html4/strict.dtd"&gt;</p>
+<p><strong>HTML 4.01 Transitional</strong> : This DTD contains all HTML
+elements and attributes, INCLUDING presentational and deprecated
+elements (like font). Framesets are not allowed.</p>
+<p>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01
+Transitional//EN"<br />
+"http://www.w3.org/TR/html4/loose.dtd"&gt;</p>
+<p><strong>HTML 4.01 Frameset</strong>: This DTD is equal to HTML 4.01
+Transitional, but allows the use of frameset content.</p>
+<p>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN"<br />
+"http://www.w3.org/TR/html4/frameset.dtd"&gt;</p>
+<p><strong>XHTML 1.0 Strict</strong> : This DTD contains all HTML
+elements and attributes, but does NOT INCLUDE presentational or
+deprecated elements (like font). Framesets are not allowed. The markup
+must also be written as well-formed XML.</p>
+<p>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"<br />
+Strict//EN"<br />
+strict.dtd"&gt;<br />
+<strong>XHTML 1.0 Transitional</strong>: This DTD contains all HTML
+elements and attributes, INCLUDING presentational and deprecated
+elements (like font). Framesets are not allowed. The markup must also be
+written as well-formed XML.</p>
+<p>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0
+Transitional//EN"<br />
+Transitional//EN"<br />
+transitional.dtd"&gt;</p>
+<p><strong>XHTML 1.0 Frameset</strong>: This DTD is equal to XHTML 1.0
+Transitional, but allows the use of frameset content.</p>
+<p>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"<br />
+Frameset//EN"<br />
+frameset.dtd"&gt;</p>
+<p><strong>XHTML 1.1</strong> : This DTD is equal to XHTML 1.0 Strict,
+but allows you to add modules (for example to provide ruby support for
+East-Asian languages).</p>
+<p>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"<br />
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" &gt;</p>
+<h2><strong>Chapter 6 Date Object</strong></h2>
+<p></font></p>
+<p><font color="#C00000">Q. What is a JavaScript Date Object?
+</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>JavaScript Date object returns time in that single moment. It
+contains the value in number of milliseconds since 1 January, 1970 UTC.
+</font></p>
+<p><font color="#C00000">Q. What are the different ways to create a Date
+object? Or what are the different constructor forms of Date
+object?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>JavaScript Date object has 4 overloaded constructors. These
+constructors are listed below.</font></p>
+<p><font>new Date()<br />
+new Date(milliseconds)<br />
+new Date(dateString)<br />
+new Date(year, month, day, hours, minutes, seconds,
+milliseconds)</font></p>
+<p><font color="#C00000">Q. How to get 1<sup>st</sup> January 1970 in a
+date object, the date from where time is gets calculated? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>1st January 1970 is the day from where the time is get calculated
+as number of milliseconds elapsed. It can be calculated by creating a
+new JS object with parameter 0.below screenshot demonstrate the date
+object with parameter 0. </font></p>
+<p><img src="Images/image00079.jpeg" /></p>
+<p><font color="#C00000">Q. How JavaScript counts months? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>JavaScript counts months from 0 to 11 for the twelve months a
+year. 0 represents January and 11 represent December. Below screenshot
+shows the code for today’s date that is July 23 and year 2014 and
+<strong>getMonth()</strong> returns 6. </font></p>
+<p><img src="Images/image00080.jpeg" /></p>
+<p><font color="#C00000">Q. When RangeError invalid date exception
+occurs?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>When a date object is created with invalid date string and
+<strong>toISOString()</strong> method is applied to this invalid date
+then this RangeError occurs. Below screenshot shows '2014-13-13' string
+which is representing YYYY-MM-DD format where month is out of range
+produces the RangeError exception. </font></p>
+<p><img src="Images/image00081.jpeg" /></p>
+<h2><font><strong>Chapter 7 Regular Expression</strong> </font></h2>
+<p><font color="#C00000">Q. What is Regular Expression in JavaScript?
+</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Regular expressions are used for pattern matching in a string. A
+regular expression in JavaScript can be declared in two ways. Syntax for
+these two approaches is listed below.</font></p>
+<p><font>var aRegExpression = new RegExp(pattern,modifiers); var
+aRegExpression = /pattern/modifiers;<br />
+The details of these syntaxes are as follows:<br />
+<strong>pattern</strong> : it represents the search string.<br />
+<strong>modifiers</strong> : it represents the conditional switches that
+will be applied to the pattern matching</font></p>
+<p><font color="#C00000">Q. What are the methods of a regular
+expression?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>There are 3 different methods for regular expressions are listed
+below.</font></p>
+<p><font></p>
+<p><strong>exec()</strong> : scans for a matching string and returns the
+first matched string<br />
+<strong>test()</strong> : scans for a matching string and returns
+boolean value false or true.</p>
+<p><strong>toString()</strong> : This method returns the string value of
+a regular expression. </font></p>
+<p><font color="#C00000">Q. What is the switch \w
+represents?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The \w represents an alphanumeric character. The following code
+demonstrate the use of \w switch .</font></p>
+<p><font></p>
+<p>var regEx= /\wu/; var out1 = regEx.exec("sandeep Ku Patel"), out2 =
+regEx.test("sandeep Ku Patel");</p>
+<p>console.log(out1);<br />
+console.log(out2);</p>
+<p>Below screenshot shows the output of the above code which pattern
+match any substring having alphanumeric character with 2<sup>nd</sup>
+character as u.</p>
+<p></font> <img src="Images/image00082.jpeg" /></p>
+<p><font color="#C00000">Q. Write a Regular expression to reverse the
+first and last name? For example Sandeep Patel becomes Patel
+Sandeep.</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>To reverse first and last name we have to use
+<strong>replace()</strong> function on input string with regular
+expression. The following code shows the method to reverse first and
+last name.</font></p>
+<p><font>var reverseFirstLastName = function(nameString){<br />
+var regex = /(\w+)\s(\w+)/,<br />
+resultString = nameString.replace(regex, '$2 $1');<br />
+return resultString;<br />
+};</p>
+<p>var inputName = "Sandeep Patel",<br />
+output = reverseFirstLastName(inputName);<br />
+console.log(output);<br />
+The following screenshot shows the chrome console executing above code
+and output is printed on console.</p>
+<p></font> <img src="Images/image00083.jpeg" /></p>
+<p><font color="#C00000">Q. Write a Regular expression to validate email
+address?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>To validate email we have to use <strong>test()</strong> method on
+input string which returns true or false on execution. The following
+code shows the method to validate email string.</font></p>
+<p><font></p>
+<p>function validateEmail(email) {<br />
+var re =<br />
+/^(([^&lt;&gt;()[\]\\.,;:\s@\"]+(\.[^&lt;&gt;()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\<br />
+/^(([^&lt;&gt;()[\]\\.,;:\s@\"]+(\.[^&lt;&gt;()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\<br />
+<br />
+9]+\.)+[a-zA-Z]{2,}))$/;<br />
+return re.test(email);<br />
+};</p>
+<p>var email1 = "sandeeppateltech@gmail.com",<br />
+email2 = "sandeep@@gmail.com",<br />
+result1 = validateEmail(email1),<br />
+result2 = validateEmail(email2);</p>
+<p>console.log(result1);<br />
+The following screenshot shows the output of the email validation code
+in a chrome developer console.</p>
+<p></font> <img src="Images/image00084.jpeg" /></p>
+<p><font color="#C00000">Q. Write a Regular expression to validate a URL
+? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>For validating URL we have considered the protocol will be either
+<strong>http/https/ftp</strong> and it must start with
+<strong>WWW</strong> word .Considering these points the javascript code
+for validating a URL is as follows.</font></p>
+<p><font></p>
+<p>function validateURL(url) {<br />
+var regExUrl = new RegExp("(http|ftp|https)://[\w-]+(\.[\w<br />
+]+)+([\w.,@?^=%&amp;amp;:/~+#-]*[\w@?^=%&amp;amp;/~+#-])?"); return
+regExUrl.test(url);<br />
+};<br />
+var url1 = "http://www.google.com",<br />
+url2 = "htttp://www.google.com",<br />
+result1 = validateURL(url1),<br />
+result2 = validateURL(url2);<br />
+console.log(result2);</p>
+<p>The following screenshot shows the chrome console with URL validation
+code in execution for a given URL. </font><br />
+<img src="Images/image00085.jpeg" /></p>
+<h2><font><strong>Chapter 8 Questions on Canvas API</strong></font></h2>
+<p><font color="#C00000">Q. What is a canvas in HTML5?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Canvas is a new element in HTML5 for drawing graphics. A graphics
+can be drawn on canvas by following below steps.</font></p>
+<p><font>Define the canvas area.<br />
+Get the drawing context.<br />
+Using the context start the drawing.</font></p>
+<p><font color="#C00000">Q. What is the difference between Canvas and
+SVG?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Difference between Canvas and SVG (Scalable Vector Graphics) are
+listed in below table.</font></p>
+<p><font>CANVAS SVG</p>
+<p><strong>i.</strong> A diagram can be drawn i. using a context
+in<br />
+Canvas.</p>
+<p><strong>ii.</strong> A diagram drawn in ii. canvas is
+resolution<br />
+dependent.</p>
+<p><strong>iii.</strong> A diagram drawn in iii. Canvas can be saved
+to<br />
+PNG or JPG format.</p>
+<p><strong>iv.</strong> Diagram drawn in Canvas iv. is pixel based. No
+DOM<br />
+elements are involved.</p>
+<p><strong>v.</strong> Rendering game v. graphics, such as sprites and
+backgrounds can be created.<br />
+A diagram is drawn using XML like SVG element.</p>
+<p>A diagram drawn in SVG is resolution<br />
+independent.</p>
+<p>SVG diagrams cannot be saved to PNG or JPG format.</p>
+<p>Diagram drawn in SVG is DOM element based. No pixels are involved in
+the diagram.<br />
+Highly interactive<br />
+animated user interfaces can be created.<br />
+<strong>vi.</strong> Poor text rendering vi.</p>
+<p>capabilities</p>
+<p><strong>vii.</strong> Poor SEO and vii. Accessibility as<br />
+everything pixel based<br />
+and content are not<br />
+accessible.</p>
+<p><strong>viii.</strong> Modified through script viii. only.</p>
+<p><strong>ix.</strong> Performance is better ix. with smaller surface,
+a<br />
+larger number of objects (&gt;10k), or both.<br />
+Good text rendering capabilities</p>
+<p>Better SEO and<br />
+Accessibility as it DOM based rendering.</p>
+<p>Modified through script and CSS.</p>
+<p>Performance is better with smaller number of objects (&lt;10k), a
+larger surface, or both.</p>
+<p></font></p>
+<p><font color="#C00000">Q. What is canvas 2d context and how it is
+created?</font><br />
+<font color="#00B050"><strong>ANSWER’</strong></font><br />
+<font>Using <strong>getContext()</strong> method with parameter
+<strong>'2d'</strong> a canvas context can be created.<br />
+This context method is a type of
+<strong>CanvasRenderingContext2D</strong> object. Below code shows a
+simple 2d context creation and log the object’s constructor. </font></p>
+<p><font></p>
+<p>&lt;html&gt;<br />
+&lt;body&gt;<br />
+&lt;canvas id="myCanvas"&gt;&lt;/canvas&gt;<br />
+&lt;script&gt;</p>
+<p>var canvas = document.getElementById("myCanvas"), context =
+canvas.getContext("2d");<br />
+console.log(context.constructor);</p>
+<p>&lt;/script&gt;<br />
+&lt;/body&gt;</p>
+<p>&lt;/html&gt;<br />
+The following screenshot shows the constructor function of the context
+object which is CanvasRenderingContext2D native object.</p>
+<p></font> <img src="Images/image00086.jpeg" /></p>
+<p><font color="#C00000">Q. How to load an image in Canvas?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>An image can be loaded using <strong>drawImage()</strong> method.
+This method takes several inputs for drawing an image. These parameters
+are positioning and clipping type. We will discuss these parameters in
+separate question. Below code shows how to use the
+<strong>drawImage()</strong> method to load a PNG image from a URL
+inside the canvas.</font></p>
+<p><font>&lt;html&gt;<br />
+&lt;body&gt;<br />
+&lt;canvas id="myCanvas"&gt;&lt;/canvas&gt;<br />
+&lt;script&gt;<br />
+var canvas = document.getElementById("myCanvas"), context =
+canvas.getContext("2d"),<br />
+img = new Image();<br />
+img.src =<br />
+"http://www.gravatar.com/avatar/4205261332ff131e971b48db<br />
+31dcb528.png";<br />
+img.onload = function() {<br />
+context.drawImage(img, 10, 10);<br />
+};<br />
+&lt;/script&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+Below screenshot shows the Gravatar image getting drawn inside the HTML5
+canvas element. This drawing is done using 2d context.</font></p>
+<p><img src="Images/image00087.jpeg" /></p>
+<p><font color="#C00000">Q. what are the different overloaded signature
+for drawImage() method?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The <strong>drawImage()</strong> method has 3 different signature
+and listed below.</font></p>
+<p><font></p>
+<p><strong>drawImage(img, x, y)</strong> :This method position the image
+on the canvas at <strong>&lt;x, y&gt;</strong> coordinates.<br />
+<strong>drawImage(img, x, y, width, height)</strong> : This method
+position the image on the canvas at <strong>&lt;x, y&gt;</strong>
+coordinates with a specified <strong>height</strong>.</p>
+<p><strong>drawImage(img, sx, sy, swidth, sheight, x, y, width,
+height)</strong> : This method clipped the image with starting point
+<strong>&lt;sx, sy&gt;</strong> having height <strong>sheight</strong>
+and width <strong>swidth</strong> and position it at <strong>&lt;x,
+y&gt;</strong> coordinates with a specified <strong>height</strong> and
+<strong>width</strong>.</p>
+<h2><strong>Chapter 9 Geo Location API</strong></h2>
+<p></font></p>
+<p><font color="#C00000">Q. What is Geo Location API?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Geo Location API publishes the location of the user to the web. It
+needs user’s permission for privacy reason. The Geo location API is
+present inside <strong>navigator.geolocation</strong> object.</font></p>
+<p><font color="#C00000">Q. How to determine Geo Location API is
+supported in browser?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>To determine Geo location API is supported in browser can be
+determined by the truth value of geolocation object inside the navigator
+object. Below code has the function which returns true or false Boolean
+value based on the geolocation object present inside the navigator.
+</font></p>
+<p><font></p>
+<p>function isGeoLocationSupported(){<br />
+var flag = navigator.geolocation ? true : false; return flag;</p>
+<p>}<br />
+var isSupported = isGeoLocationSupported(); if(isSupported){</p>
+<p>console.log(navigator.geolocation);<br />
+}else{<br />
+console.log("Geo Location API not supprted"); }</p>
+<p>The following screenshot shows the output of the above code as the
+geolocation object is present inside the navigator API. </font> <img
+src="Images/image00088.jpeg" /></p>
+<h2><font><strong>Chapter 10 Web Workers</strong> </font></h2>
+<p><font color="#C00000">Q. What is a Web Worker?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Web Workers are new HTML5 feature to achieve concurrency in
+JavaScript execution in web application. A web worker is JavaScript file
+which run in the background of the browser without impacting the page
+performance. This helps in resolve the age old problem “<strong>Un
+responsive script alert box</strong>”. Generally these workers can be
+used for extensive computation purpose. </font></p>
+<p><font color="#C00000">Q. How to detect Web Worker is supported by
+browser?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>We can check the support of Web Worker in a browser by validating
+the Worker property is present in the window object. Code for checking
+Web Worker support is as follows:</font></p>
+<p><font></p>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head lang="en"&gt;</p>
+<p>&lt;title&gt;Web Worker&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;</p>
+<p></font></p>
+<p><font>&lt;script&gt;</font><br />
+<font color="#747959"><strong>var
+isWorkerSupported</strong></font><font> =
+</font><font color="#747959"><strong>window.Worker</strong></font><font>
+? </font><font color="#747959"><strong>true</strong></font><font> :
+</font><font color="#747959"><strong>false</strong></font><font>;
+console.log("Is Web Worker Supported: </font></p>
+<p><font>"+isWorkerSupported);<br />
+&lt;/script&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+In the previous code</font><font size="-1"><font color="#FF0000">
+isWorkerSupported</font></font><font> variable can
+contain</font><font size="-1"><font color="#FF0000">
+TRUE</font></font><font> or </font>
+<font size="-1"><font color="#FF0000">FALSE</font></font><font> value
+based on the existence of</font><font size="-1"><font color="#FF0000">
+Worker</font></font><font> property
+inside</font><font size="-1"><font color="#FF0000"> window</font></font>
+<font>object. The following screenshot shows the output of above code in
+chrome console.</font></p>
+<p><img src="Images/image00089.jpeg" /></p>
+<p><font color="#C00000">Q. What is a dedicated worker?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>A dedicated worker is only accessible by the calling script. A
+dedicated worker object can be created using worker constructor. Syntax
+for creating a new dedicated worker is listed below.</font></p>
+<p><font>var aDedicatedWorker = new Worker("script.js")<br />
+The parameter inside the Worker object is the JavaScript file which will
+run as worker in the background of the browser.</font></p>
+<p><font color="#C00000">Q. What is a shared worker?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>A Shared Worker can be accessed by multiple scripts. A shared
+worker is accessible by different window, iframe and by other worker
+having same origin. Syntax for creating a new dedicated worker is as
+follows. </font></p>
+<p><font><font size="-1">var aSharedWorker = new
+SharedWorker("script.js")</font><br />
+The parameter inside the Worker object is the JavaScript file which will
+run as shared worker in the background of the browser.</font><br />
+<font color="#C00000">Q. Develop a dedicated worker to display the
+time?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font></p>
+<p><font>Let’s create the time worker in <strong>dateWorker.js</strong>
+file and we can call this worker in <strong>dateWorkerDemo.html</strong>
+file. The following code shows the content of
+<strong>dateWorker.js</strong> file which listens to the messages and
+posts the current time in every second.</font></p>
+<p><font size="-1"></p>
+<p><font color="#660E7A"><strong>self</strong></font>
+<font>.</font><font color="#7A7A43">addEventListener</font><font>(</font><font color="#008000"><strong>"message"</strong></font><font>,</font><font color="#000080"><strong>function</strong></font><font>(event){</font>
+<font color="#7A7A43">setInterval</font><font>(</font><font color="#000080"><strong>function</strong></font><font>(){
+</font><br />
+<font color="#000080"><strong>var</strong></font><font color="#458383">
+time </font><font>= </font><font color="#000080"><strong>new</strong>
+</font><font>Date();</font><br />
+<font color="#660E7A"><strong>self</strong></font><font>.</font><font color="#7A7A43">postMessage</font><font>({
+</font></p>
+<p><font color="#660E7A"><strong>hour</strong></font>
+<font>:</font><font color="#458383">time</font><font>.</font><font color="#7A7A43">getHours</font><font>(),</font><br />
+<font color="#660E7A"><strong>minute</strong></font><font>:
+</font><font color="#458383">time</font><font>.</font><font color="#7A7A43">getMinutes</font><font>(),
+</font><br />
+<font color="#660E7A"><strong>second</strong></font><font>:
+</font><font color="#458383">time</font><font>.</font><font color="#7A7A43">getSeconds</font><font>()
+</font></p>
+<p><font>});<br />
+},</font><font color="#0000FF">1000</font></font><font><font size="-1">);<br />
+});</font></p>
+<p>The following code shows the content of
+<strong>dateWorkerDemo.html</strong> containing creation of worker
+instance and listening to worker response.</p>
+<p></font> <font size="-1"></p>
+<p><font>&lt;!DOCTYPE</font> <font color="#0000FF">
+html</font><font>&gt;<br />
+&lt;</font><font color="#000080">html</font><font>&gt;<br />
+&lt;</font><font color="#000080">head
+</font><font color="#0000FF">lang=</font><font color="#008000">"en"</font><font>&gt;
+</font></p>
+<p><font>&lt;</font> <font color="#000080">meta
+</font><font color="#0000FF">charset=</font><font color="#008000">"UTF-8"</font><font>&gt;<br />
+&lt;</font><font color="#000080">title</font><font>&gt;Time Web Worker
+Demo&lt;/</font><font color="#000080">title</font><font>&gt;
+&lt;/</font><font color="#000080">head</font><font>&gt;<br />
+&lt;</font><font color="#000080">body</font><font>&gt;<br />
+&lt;</font><font color="#000080">h1</font><font color="#0000FF">
+id=</font><font color="#008000">"resultContainer"</font><font>&gt;&lt;/</font><font color="#000080">h1</font><font>&gt;<br />
+&lt;</font><font color="#000080">button
+</font><font color="#0000FF">id=</font><font color="#008000">"timeButton"</font><font>&gt;Get
+Time&lt;/</font><font color="#000080">button</font><font>&gt;
+</font></p>
+<p><font>&lt;</font> <font color="#000080">script</font><font>&gt;
+</font><br />
+<font color="#000080">var
+</font><font color="#660E7A"><em>dateWorker</em> </font><font>=
+</font><font color="#000080">new</font><font>
+Worker(</font><font color="#008000">"dateWorker.js"</font><font>),</font><br />
+<font color="#660E7A"><em>resultContainer</em></font><font> =
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>(</font><font color="#008000">"resultContainer"</font><font>),
+</font> <font color="#660E7A"><em>timeButton</em></font><font> =
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>(</font><font color="#008000">"timeButton"</font><font>);</font></p>
+<p><font color="#FF0000"><em>timeButton</em>
+.addEventListener("click",function(){<br />
+<em>dateWorker</em>.postMessage(null);<br />
+});<br />
+<em>dateWorker</em>.addEventListener("message",function(workerEvent){
+var responseData = workerEvent.data,<br />
+hour = responseData.hour,<br />
+minute = responseData.minute,<br />
+second = responseData.second;<br />
+<em>resultContainer</em>.innerText = "HOUR: "+hour + </font></p>
+<p><font color="#008000">" MINUTE: "</font>
+<font>+</font><font color="#458383">minute</font><font>
++</font><font color="#008000">" SECOND:
+"</font><font>+</font><font color="#458383">second</font><font>;
+});<br />
+&lt;/</font><font color="#000080">script</font><font>&gt;<br />
+&lt;/</font><font color="#000080">body</font><font>&gt;<br />
+&lt;/</font><font color="#000080">html</font><font>&gt; </font></p>
+<p></font></p>
+<p><font>The output of the preceding code shown in following screenshot
+with hour, minute and second is displayed from the worker response
+messages.</font></p>
+<p><img src="Images/image00090.jpeg" /></p>
+<p><font color="#C00000">Q. Develop a dedicated worker to find square of
+a number?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The definition of square worker is present in
+<strong>doSquareWorker.js</strong> file and listens to message and
+generates the square of number. The square worker is instantiated in
+<strong>squareWorkerDemo.html</strong> file which listens to the
+response from the square worker and prints it in browser.The code
+content of <strong>doSquareWorker.js</strong> file are as follows.
+</font></p>
+<p><font size="-1"></p>
+<p><font color="#660E7A"><strong>self</strong></font>
+<font>.</font><font color="#7A7A43">addEventListener</font><font>(</font><font color="#008000"><strong>"message"</strong></font><font>,</font><font color="#000080"><strong>function</strong></font><font>(event){</font><br />
+<font color="#000080"><strong>var</strong></font><font color="#458383">
+inputData </font><font>=
+event.</font><font color="#660E7A"><strong>data</strong></font><font>,
+</font><br />
+<font color="#458383">inputNumber</font><font> =
+</font><font color="#7A7A43">parseInt</font><font>(</font><font color="#458383">inputData</font><font>.</font><font color="#660E7A"><strong>number</strong></font><font>,</font><font color="#0000FF">10</font><font>),<br />
+squareResult =</font><font color="#660E7A">
+<strong>Math</strong></font><font>.</font><font color="#7A7A43">pow</font><font>(</font><font color="#458383">inputNumber</font><font>,</font><font color="#0000FF">2</font><font>);
+</font></p>
+<p><font color="#660E7A"><strong>self</strong></font><font>.</font><font color="#7A7A43">postMessage</font><font>({</font><font color="#660E7A"><strong>result</strong></font></font><font><font size="-1">:squareResult});<br />
+});</font><br />
+The <strong>squareWorkerDemo.</strong>html file has the following
+code.</font> <font size="-1"></p>
+<p><font>&lt;!DOCTYPE</font> <font color="#0000FF">
+html</font><font>&gt;<br />
+&lt;</font><font color="#000080">html</font><font>&gt;<br />
+&lt;</font><font color="#000080">head
+</font><font color="#0000FF">lang=</font><font color="#008000">"en"</font><font>&gt;
+</font></p>
+<p><font>&lt;</font> <font color="#000080">meta
+</font><font color="#0000FF">charset=</font><font color="#008000">"UTF-8"</font><font>&gt;<br />
+&lt;</font><font color="#000080">title</font><font>&gt;Square Web Worker
+Demo&lt;/</font><font color="#000080">title</font><font>&gt;
+&lt;/</font><font color="#000080">head</font><font>&gt;<br />
+&lt;</font><font color="#000080">body</font><font>&gt; </font></p>
+<p><font>&lt;</font><font color="#000080">h1</font><font color="#0000FF">
+id=</font><font color="#008000">"resultContainer"</font><font>&gt;&lt;/</font><font color="#000080">h1</font><font>&gt;
+</font></p>
+<p><font>&lt;</font> <font color="#000080">input
+</font><font color="#0000FF">type=</font><font color="#008000">"number"
+</font><font color="#0000FF">id=</font><font color="#008000">"inputNumber"</font><font color="#0000FF">
+placeholder=</font><font color="#008000">"Enter a number" </font>
+<font color="#0000FF">value=</font><font color="#008000">"5"</font><font>&gt;<br />
+&lt;</font><font color="#000080">button
+</font><font color="#0000FF">id=</font><font color="#008000">"squareButton"</font><font>&gt;
+SQUARE&lt;/</font><font color="#000080">button</font><font>&gt;
+</font></p>
+<p><font>&lt;</font> <font color="#000080">script</font><font>&gt;
+</font><br />
+<font color="#000080">var
+</font><font color="#660E7A"><em>squareWorker</em> </font><font>=
+</font><font color="#000080">new</font><font>
+Worker(</font><font color="#008000">"doSquareWorker.js"</font><font>),</font>
+<font color="#660E7A"><em>resultContainer</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>(</font><font color="#008000">"resultContainer"</font><font>),
+</font> <font color="#660E7A"><em>squareButton</em></font><font> =
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>(</font><font color="#008000">"squareButton"</font><font>),
+</font>
+<font color="#660E7A"><em>inputNumber</em></font><font>=</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>(</font><font color="#008000">"inputNumber"</font><font>);</font></p>
+<p><font color="#660E7A"><em>squareButton</em></font>
+<font>.</font><font color="#7A7A43">addEventListener</font><font>(</font><font color="#008000">"click"</font><font>,</font><font color="#000080">function</font><font>(){
+</font>
+<font color="#660E7A"><em>squareWorker</em></font><font>.</font><font color="#7A7A43">postMessage</font><font>({</font><font color="#660E7A">number</font><font>:</font><font color="#660E7A"><em>inputNumber</em></font><font>.</font><font color="#660E7A">value</font><font>});<br />
+});</font></p>
+<p><font color="#660E7A"><em>squareWorker</em></font><font>.</font><font color="#7A7A43">addEventListener</font><font>(</font><font color="#008000">"message"</font><font>,</font><font color="#000080">function</font><font>(workerEvent){</font>
+<font color="#000080">var </font><font>responseData =
+workerEvent.</font><font color="#660E7A">data</font><font>,
+</font><br />
+<font color="#458383">squareResult</font><font>=
+responseData.</font><font color="#660E7A">result</font><font>;
+</font><br />
+<font color="#660E7A"><em>resultContainer</em></font><font>.</font><font color="#660E7A">innerText</font><font>
+= </font><font color="#458383">squareResult</font><font>;<br />
+});</font></p>
+<p><font>&lt;/</font>
+<font color="#000080">script</font><font>&gt;<br />
+&lt;/</font><font color="#000080">body</font><font>&gt;<br />
+&lt;/</font><font color="#000080">html</font><font>&gt; </font></p>
+<p></font></p>
+<p><font>The output of the preceding code shown in following screenshot
+with square of a number is displayed from the worker response messages.
+</font></p>
+<p><img src="Images/image00091.jpeg" /></p>
+<p><font color="#C00000">Q. How to define an inline web worker?
+Demonstrate an inline worker for multiplying 2 numbers?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>An inline web worker can be defined inside a HTML markup using
+<strong>&lt;script&gt;</strong> tag with <strong>type</strong> attribute
+having value <strong>javascript/worker</strong>.
+<strong>Syntax:</strong> </font></p>
+<p><font size="-1"><font>&lt;</font> <font color="#000080">script
+</font><font color="#0000FF">type=</font><font>"javascript/worker"&gt;<br />
+//JavaScript Code for defining a worker<br />
+&lt;/</font><font color="#000080">script</font><font>&gt;
+</font></font></p>
+<p><font><strong>Example:</strong><br />
+The <strong>inlineWorkerDemo.html</strong> file contains the code for
+defining multiplication worker which listens to the messages and
+calculates the multiplication and post the response. The listener to the
+multiply worker extracts the result and renders in the browser. The
+following code shows the content of
+<strong>inlineWorkerDemo.html</strong> file.</font></p>
+<p><font size="-1"></p>
+<p><font>&lt;!DOCTYPE</font> <font color="#0000FF">
+html</font><font>&gt;<br />
+&lt;</font><font color="#000080">html</font><font>&gt;<br />
+&lt;</font><font color="#000080">head
+</font><font color="#0000FF">lang=</font><font>"en"&gt;</font></p>
+<p><font>&lt;</font> <font color="#000080">meta
+</font><font color="#0000FF">charset=</font><font>"UTF-8"&gt;<br />
+&lt;</font><font color="#000080">title</font><font>&gt;Inline Web Worker
+Demo&lt;/</font><font color="#000080">title</font><font>&gt;<br />
+&lt;/</font><font color="#000080">head</font><font>&gt;<br />
+&lt;</font><font color="#000080">body</font><font>&gt;<br />
+&lt;</font><font color="#000080">h1</font><font color="#0000FF">
+id=</font><font>"resultContainer"&gt;&lt;/</font><font color="#000080">h1</font><font>&gt;<br />
+&lt;</font><font color="#000080">input
+</font><font color="#0000FF">type=</font><font>"number"</font><font color="#0000FF">
+id=</font><font>"number1"
+</font><font color="#0000FF">value=</font><font>"8"
+</font><font color="#0000FF">placeholder=</font><font>"Enter first
+number"&gt; &lt;</font><font color="#000080">input
+</font><font color="#0000FF">type=</font><font>"number"</font><font color="#0000FF">
+id=</font><font>"number2"
+</font><font color="#0000FF">value=</font><font>"10"
+</font><font color="#0000FF">placeholder=</font><font>"Enter second
+number"&gt;<br />
+&lt;</font><font color="#000080">button
+</font><font color="#0000FF">id=</font><font>"multiplyButton"&gt;Multiply&lt;/</font><font color="#000080">button</font><font>&gt;<br />
+&lt;</font><font color="#000080">script
+</font><font color="#0000FF">id=</font><font>"multiplyWorker"</font><font color="#0000FF">
+type=</font><font>"javascript/worker"&gt;<br />
+self.addEventListener("message",function(event){<br />
+var requestData = event.data,<br />
+number1 = requestData.number1,<br />
+number2 = requestData.number2,<br />
+multiplyResult = number1 * number2;<br />
+self.postMessage({result:multiplyResult});<br />
+});<br />
+&lt;/</font><font color="#000080">script</font><font>&gt;<br />
+&lt;</font><font color="#000080">script</font><font>&gt; </font><br />
+<font color="#000080">var
+</font><font color="#660E7A"><em>textContent</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">querySelector</font><font>('#multiplyWorker').</font><font color="#660E7A">textContent</font><font>,
+</font> <font color="#660E7A"><em>workerBlob</em></font><font> =
+</font><font color="#000080">new</font><font color="#660E7A">
+Blob</font><font>([</font><font color="#660E7A"><em>textContent</em></font><font>]),
+</font><br />
+<font color="#660E7A"><em>workerURL</em> </font><font>=
+</font><font color="#660E7A">window</font><font>.URL.createObjectURL(</font><font color="#660E7A"><em>workerBlob</em></font><font>),</font>
+<font color="#660E7A"><em>multiplyWorker</em></font><font> =
+</font><font color="#000080">new</font><font>
+Worker(</font><font color="#660E7A"><em>workerURL</em></font><font>),</font><br />
+<font color="#660E7A"><em>resultContainer</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>("resultContainer"),
+</font> <font color="#660E7A"><em>multiplyButton</em></font><font> =
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>("multiplyButton"),</font>
+<font color="#660E7A"><em>number1</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>("number1"),</font><br />
+<font color="#660E7A"><em>number2</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>("number2");</font><br />
+<font color="#660E7A"><em>multiplyButton</em></font><font>.</font><font color="#7A7A43">addEventListener</font><font>("click",
+</font><font color="#000080">function</font><font> () { </font><br />
+<font color="#660E7A"><em>multiplyWorker</em></font><font>.</font><font color="#7A7A43">postMessage</font><font>({
+</font><br />
+<font color="#660E7A">number1</font><font>:</font><font color="#7A7A43">parseInt</font><font>(</font><font color="#660E7A"><em>number1</em></font><font>.</font><font color="#660E7A">value</font><font>,</font><font color="#0000FF">10</font><font>),
+</font><br />
+<font color="#660E7A">number2</font><font>:
+</font><font color="#7A7A43">parseInt</font><font>(</font><font color="#660E7A"><em>number2</em></font><font>.</font><font color="#660E7A">value</font><font>,</font><font color="#0000FF">10</font><font>)<br />
+});<br />
+});</font><br />
+<font color="#660E7A"><em>multiplyWorker</em></font><font>.</font><font color="#7A7A43">addEventListener</font><font>("message",
+</font><font color="#000080">function</font><font> (workerEvent)
+{</font><br />
+<font color="#000080">var </font><font color="#458383">responseData
+</font><font>=
+workerEvent.</font><font color="#660E7A">data</font><font>,
+</font><br />
+<font color="#458383">result </font><font>=
+</font><font color="#458383">responseData</font><font>.</font><font color="#660E7A">result</font><font>;
+</font><br />
+<font color="#660E7A"><em>resultContainer</em></font><font>.</font><font color="#660E7A">innerText</font><font>
+= "Result: " + </font><font color="#458383">result</font><font>;<br />
+});<br />
+&lt;/</font><font color="#000080">script</font><font>&gt;<br />
+&lt;/</font><font color="#000080">body</font><font>&gt;<br />
+&lt;/</font><font color="#000080">html</font><font>&gt; </font></p>
+<p></font></p>
+<p><font>User can input two numbers in the text box and press the
+multiply button. The multiply worker calculate the multiplication and
+result is rendered in the browser. The outputs of the preceding code are
+rendered as following screenshot. </font></p>
+<p><img src="Images/image00092.jpeg" /></p>
+<p><font color="#C00000">Q. How to handle error in web
+worker?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>We can throw error using <strong>throw</strong> keyword from the
+web worker. A callback method can be attached to the
+<strong>error</strong> event to handle the generated error. The
+<strong>positiveNoSqaureWorkerDemo.html</strong> file contains a worker
+which takes only positive number as input. If a negative number is
+passed it throws an error. The code content of this file is as
+follows.</font></p>
+<p><font size="-1"></p>
+<p><font>&lt;!DOCTYPE</font> <font color="#0000FF">
+html</font><font>&gt;<br />
+&lt;</font><font color="#000080">html</font><font>&gt;<br />
+&lt;</font><font color="#000080">head
+</font><font color="#0000FF">lang=</font><font color="#008000">"en"</font><font>&gt;
+</font></p>
+<p><font>&lt;</font> <font color="#000080">meta
+</font><font color="#0000FF">charset=</font><font color="#008000">"UTF-8"</font><font>&gt;<br />
+&lt;</font><font color="#000080">title</font><font>&gt;Web Worker Error
+Handler
+Demo&lt;/</font><font color="#000080">title</font><font>&gt;<br />
+&lt;/</font><font color="#000080">head</font><font>&gt;<br />
+&lt;</font><font color="#000080">body</font><font>&gt;<br />
+&lt;</font><font color="#000080">h1</font><font color="#0000FF">
+id=</font><font color="#008000">"resultContainer"</font><font>&gt;&lt;/</font><font color="#000080">h1</font><font>&gt;<br />
+&lt;</font><font color="#000080">input
+</font><font color="#0000FF">type=</font><font color="#008000">"number"</font><font color="#0000FF">
+id=</font><font color="#008000">"number1"
+</font><font color="#0000FF">value=</font><font color="#008000">"-4"
+</font><font color="#0000FF">placeholder=</font><font color="#008000">"Enter
+a number"</font><font>&gt; &lt;</font><font color="#000080">button
+</font><font color="#0000FF">id=</font><font color="#008000">"squareResult"</font><font>&gt;Square&lt;/</font><font color="#000080">button</font><font>&gt;<br />
+&lt;</font><font color="#000080">script
+</font><font color="#0000FF">id=</font><font color="#008000">"squareWorker"
+</font><font color="#0000FF">type=</font><font color="#008000">"javascript/worker"</font><font>&gt;<br />
+self.addEventListener("message",function(event){<br />
+var requestData = event.data,<br />
+number1 = requestData.number1,<br />
+squareResult = 0;<br />
+if(number1&gt;0) {<br />
+squareResult = number1 * number1<br />
+self.postMessage({result:squareResult});<br />
+} else{<br />
+//For negative number throw error<br />
+throw "It is a negative number.Please supply a positive number.";
+}<br />
+});<br />
+&lt;/</font><font color="#000080">script</font><font>&gt;<br />
+&lt;</font><font color="#000080">script</font><font>&gt; </font><br />
+<font color="#000080">var
+</font><font color="#660E7A"><em>textContent</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">querySelector</font><font>(</font><font color="#008000">'#squareWorker'</font><font>).</font><font color="#660E7A">textContent</font><font>,
+</font><br />
+<font color="#660E7A"><em>workerBlob</em></font><font> =
+</font><font color="#000080">new</font><font color="#660E7A">
+Blob</font><font>([</font><font color="#660E7A"><em>textContent</em></font><font>]),
+</font><br />
+<font color="#660E7A"><em>workerURL</em> </font><font>=
+</font><font color="#660E7A">window</font><font>.URL.createObjectURL(</font><font color="#660E7A"><em>workerBlob</em></font><font>),</font><br />
+<font color="#660E7A"><em>squareWorker</em></font><font> =
+</font><font color="#000080">new</font><font>
+Worker(</font><font color="#660E7A"><em>workerURL</em></font><font>),
+</font><br />
+<font color="#660E7A"><em>resultContainer</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>(</font><font color="#008000">"resultContainer"</font><font>),
+</font><br />
+<font color="#660E7A"><em>squareResult</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>(</font><font color="#008000">"squareResult"</font><font>),</font><br />
+<font color="#660E7A"><em>number1</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>(</font><font color="#008000">"number1"</font><font>),
+</font><br />
+<font color="#660E7A"><em>number2</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>(</font><font color="#008000">"number2"</font><font>);</font><br />
+<font color="#660E7A"><em>squareResult</em></font><font>.</font><font color="#7A7A43">addEventListener</font><font>(</font><font color="#008000">"click"</font><font>,
+</font><font color="#000080">function</font><font> () {</font><br />
+<font color="#660E7A"><em>squareWorker</em></font><font>.</font><font color="#7A7A43">postMessage</font><font>({
+</font><br />
+<font color="#660E7A">number1</font><font>:</font><font color="#7A7A43">parseInt</font><font>(</font><font color="#660E7A"><em>number1</em></font><font>.</font><font color="#660E7A">value</font><font>,</font><font color="#0000FF">10</font><font>)<br />
+});<br />
+});</font><br />
+<em><font color="#808080">//Success Handler for the worker</font><br />
+<font color="#660E7A">squareWorker</font></em><font>.</font><font color="#7A7A43">addEventListener</font><font>(</font><font color="#008000">"message"</font><font>,
+</font><font color="#000080">function</font><font> (workerEvent)
+{</font> <font color="#000080">var
+</font><font color="#458383">responseData </font><font>=
+workerEvent.</font><font color="#660E7A">data</font><font>,
+</font><br />
+<font color="#458383">result </font><font>=
+</font><font color="#458383">responseData</font><font>.</font><font color="#660E7A">result</font><font>;
+</font><br />
+<font color="#660E7A"><em>resultContainer</em></font><font>.</font><font color="#660E7A">innerText</font><font>
+= </font><font color="#008000">"Result: "</font><font> +
+</font><font color="#458383">result</font><font>;<br />
+});</font><br />
+<em><font color="#808080">//Error Handler for the worker </font><br />
+<font color="#660E7A">squareWorker</font></em><font>.</font><font color="#7A7A43">addEventListener</font><font>(</font><font color="#008000">'error'</font><font>,
+</font><font color="#000080">function</font><font>(workerErrorEvent){</font>
+<font color="#660E7A"><em>resultContainer</em></font><font>.</font><font color="#660E7A">innerText</font><font>
+= </font><font color="#008000">"Error: "</font><font> +
+workerErrorEvent.</font><font color="#660E7A">message</font><font>; },
+</font><font color="#000080">false</font><font>);<br />
+&lt;/</font><font color="#000080">script</font><font>&gt;<br />
+&lt;/</font><font color="#000080">body</font><font>&gt;<br />
+&lt;/</font><font color="#000080">html</font><font>&gt; </font></p>
+<p></font> <font>The output of the above code is rendered as following
+screenshot rendering the error message in the browser.</font><br />
+<img src="Images/image00093.jpeg" /></p>
+<p><font color="#C00000">Q. How to import an external script in web
+worker? Demonstrate it with an example?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>To import external script inside a web worker we need to use
+<strong>importScripts()</strong> method with a file name as input
+parameter. To demonstrate import script functionality we have created 3
+files <strong>greatest-number-script.js</strong>,
+<strong>numberWorker.js</strong>,<br />
+<strong>numberWorkerDemo.html</strong> file. The following screenshot
+shows these files. </font></p>
+<p><img src="Images/image00094.jpeg" /></p>
+<p><font>The <strong>greatest-number-script.js</strong> is the external
+script that we need to import it to our web worker. It has a single
+method<br />
+<strong>findGreatestNumber()</strong> method to find out a bigger number
+among two supplied numbers. The following code shows the content of
+<strong>greatest-number-script.js</strong> file.</font></p>
+<p><font size="-1"><font color="#000080"><strong>var</strong></font>
+<font> <em>findGreatestNumber</em> =
+</font><font color="#000080"><strong>function</strong></font><font>(number1,number2){</font><br />
+<font color="#000080"><strong>return</strong></font><font>
+number1&gt;number2 ? number1 : number2;<br />
+};</font></font></p>
+<p><font>The <strong>numberWorker.js</strong> file contains the code for
+importing the external script inside the web worker message listener
+callback method. The following code shows the content of<br />
+<strong>numberWorker.js</strong> file.</font></p>
+<p><font size="-1"><font color="#FF0000"></p>
+<p><strong>self</strong>
+.addEventListener(<strong>"message"</strong>,<strong>function</strong>(event){<br />
+<strong>var</strong> numberWorker =
+<strong>self</strong>.importScripts(<strong>'greatest-number-script.js'</strong>);
+<strong>var</strong> requestData = event.<strong>data</strong>,</p>
+<p>number1 = requestData.<strong>number1</strong>,<br />
+number2 = requestData.<strong>number2</strong>, </font><br />
+<font>greatestNumber =
+<em>findGreatestNumber</em>(</font><font color="#458383">number1</font><font>,</font><font color="#458383">number2</font><font>);</font>
+<font color="#660E7A"><strong>self</strong></font><font>.</font><font color="#7A7A43">postMessage</font><font>({</font><font color="#660E7A"><strong>result</strong></font></font><font><font size="-1">:greatestNumber});<br />
+});</font></p>
+<p>The <strong>numberWorkerDemo.html</strong> file contains the code for
+instantiating the number web worker and listening to response message.
+The following code shows the content of<br />
+<strong>numberWorkerDemo.html</strong> file.</p>
+<p></font> <font size="-1"></p>
+<p><font>&lt;!DOCTYPE</font> <font color="#0000FF">
+html</font><font>&gt;<br />
+&lt;</font><font color="#000080">html</font><font>&gt;<br />
+&lt;</font><font color="#000080">head
+</font><font color="#0000FF">lang=</font><font>"en"&gt;</font></p>
+<p><font>&lt;</font> <font color="#000080">meta
+</font><font color="#0000FF">charset=</font><font>"UTF-8"&gt;<br />
+&lt;</font><font color="#000080">title</font><font>&gt;Time Web Worker
+Demo&lt;/</font><font color="#000080">title</font><font>&gt;<br />
+&lt;/</font><font color="#000080">head</font><font>&gt;<br />
+&lt;</font><font color="#000080">body</font><font>&gt;<br />
+&lt;</font><font color="#000080">h1</font><font color="#0000FF">
+id=</font><font>"resultContainer"&gt;&lt;/</font><font color="#000080">h1</font><font>&gt;<br />
+&lt;</font><font color="#000080">input
+</font><font color="#0000FF">type=</font><font>"number"</font><font color="#0000FF">
+id=</font><font>"number1"
+</font><font color="#0000FF">value=</font><font>"7"
+</font><font color="#0000FF">placeholder=</font><font>"Enter first
+number"&gt; &lt;</font><font color="#000080">input
+</font><font color="#0000FF">type=</font><font>"number"</font><font color="#0000FF">
+id=</font><font>"number2"
+</font><font color="#0000FF">value=</font><font>"9"
+</font><font color="#0000FF">placeholder=</font><font>"Enter second
+number"&gt;<br />
+&lt;</font><font color="#000080">button
+</font><font color="#0000FF">id=</font><font>"greatButton"&gt;Find
+Greatest
+Number&lt;/</font><font color="#000080">button</font><font>&gt;<br />
+&lt;</font><font color="#000080">script</font><font>&gt; </font><br />
+<font color="#000080">var
+</font><font color="#660E7A"><em>numberWorker</em> </font><font>=
+</font><font color="#000080">new</font><font>
+Worker("numberWorker.js"),</font><br />
+<font color="#660E7A"><em>resultContainer</em></font><font> =
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>("resultContainer"),
+</font> <font color="#660E7A"><em>greatButton</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>("greatButton"),</font><br />
+<font color="#660E7A"><em>number1</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>("number1"),</font><br />
+<font color="#660E7A"><em>number2</em></font><font>=</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>("number2");
+</font><br />
+<font color="#660E7A"><em>greatButton</em></font><font>.</font><font color="#7A7A43">addEventListener</font><font>("click",</font><font color="#000080">function</font><font>(){
+</font><br />
+<font color="#660E7A"><em>numberWorker</em></font><font>.</font><font color="#7A7A43">postMessage</font><font>({</font><br />
+<font color="#660E7A">number1</font><font>:</font><font color="#7A7A43">parseInt</font><font>(</font><font color="#660E7A"><em>number1</em></font><font>.</font><font color="#660E7A">value</font><font>,</font><font color="#0000FF">10</font><font>),
+</font><br />
+<font color="#660E7A">number2</font><font>:
+</font><font color="#7A7A43">parseInt</font><font>(</font><font color="#660E7A"><em>number2</em></font><font>.</font><font color="#660E7A">value</font><font>,</font><font color="#0000FF">10</font><font>)<br />
+});<br />
+});</font><br />
+<font color="#660E7A"><em>numberWorker</em></font><font>.</font><font color="#7A7A43">addEventListener</font><font>("message",</font><font color="#000080">function</font><font>(workerEvent){</font>
+<font color="#000080">var </font><font color="#458383">responseData
+</font><font>=
+workerEvent.</font><font color="#660E7A">data</font><font>;
+</font><br />
+<font color="#660E7A"><em>resultContainer</em></font><font>.</font><font color="#660E7A">innerText</font><font>
+= "Greatest Number:
+"+</font><font color="#458383">responseData</font><font>.</font><font color="#660E7A">result</font><font>;<br />
+});<br />
+&lt;/</font><font color="#000080">script</font><font>&gt;<br />
+&lt;/</font><font color="#000080">body</font><font>&gt;<br />
+&lt;/</font><font color="#000080">html</font><font>&gt; </font></p>
+<p></font> <font>The output of this code is rendered as following
+screenshot containing the greatest number from the supplied
+numbers.</font><br />
+<img src="Images/image00095.jpeg" /></p>
+<p><font color="#C00000">Q. Create a shared worker to calculate the
+length of a string?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The <strong>calculateLengthWorker.js</strong> contains the code
+for listening messages and calculates the length of input string. The
+shared worker listens to message in a port by listening to connect
+event. The code for <strong>calculateLengthWorker.js</strong> file is as
+follows. </font></p>
+<p><font size="-1"></p>
+<p><font color="#660E7A"><strong>self</strong></font>
+<font>.</font><font color="#7A7A43">addEventListener</font><font>(</font><font color="#008000"><strong>"connect"</strong></font><font>,
+</font><font color="#000080"><strong>function</strong></font><font>
+(event) {</font><br />
+<font color="#000080"><strong>var</strong></font><font color="#458383">
+port</font><font> =
+event.ports[</font><font color="#0000FF">0</font><font>];</font><br />
+<font color="#458383">port</font><font>.</font><font color="#7A7A43">addEventListener</font><font>(</font><font color="#008000"><strong>"message"</strong></font><font>,
+</font><font color="#000080"><strong>function</strong>
+</font><font>(event) {</font></p>
+<p><font color="#000080"><strong>var</strong></font>
+<font color="#458383"> requestData </font><font>=
+event.</font><font color="#660E7A"><strong>data</strong></font><font>,
+</font><br />
+<font color="#458383">inputString</font><font> =
+</font><font color="#458383">requestData</font><font>.</font><font color="#660E7A"><strong>string</strong></font><font>,
+</font><br />
+<font color="#458383">stringLength</font><font> =
+</font><font color="#458383">inputString</font><font>.</font><font color="#660E7A"><strong>length</strong></font><font>;
+</font></p>
+<p><font color="#458383">port</font>
+<font>.</font><font color="#7A7A43">postMessage</font><font>({</font><font color="#660E7A"><strong>result</strong></font><font>:</font><font color="#458383">stringLength</font><font>});<br />
+},
+</font><font color="#000080"><strong>false</strong></font><font>);</font><br />
+<font color="#458383">port</font><font>.</font><font color="#7A7A43">start</font><font>();
+</font></p>
+<p><font>},
+</font><font color="#000080"><strong>false</strong></font></font><font><font size="-1">);</font></p>
+<p>The <strong>lengthWorkerDemo.html</strong> file contains the code for
+instantiating the shared worker and rendering the response in browser.
+The code content of <strong>lengthWorkerDemo.html</strong> file are
+listed as follows.</p>
+<p></font> <font size="-1"><font color="#FF0000"></p>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head lang="en"&gt;</p>
+<p>&lt; meta charset="UTF-8"&gt;<br />
+&lt;title&gt;Shared Web Worker Demo&lt;/title&gt; &lt;/head&gt;<br />
+&lt;body&gt;</p>
+<p></font></p>
+<p><font>&lt;</font>
+<font color="#000080">h1</font><font color="#0000FF">
+id=</font><font>"resultContainer"&gt;&lt;/</font><font color="#000080">h1</font><font>&gt;<br />
+&lt;</font><font color="#000080">input
+</font><font color="#0000FF">type=</font><font>"text"
+</font><font color="#0000FF">id=</font><font>"inputString"</font><font color="#0000FF">
+value=</font><font>"Hello"
+</font><font color="#0000FF">placeholder=</font><font>"Enter a
+string"&gt; &lt;</font><font color="#000080">button
+</font><font color="#0000FF">id=</font><font>"lengthButton"&gt;Get
+Length&lt;/</font><font color="#000080">button</font><font>&gt;<br />
+&lt;</font><font color="#000080">script</font><font>&gt; </font></p>
+<p><font color="#000080">var </font>
+<font color="#660E7A"><em>lengthWorker</em> </font><font>=
+</font><font color="#000080">new</font><font color="#660E7A">
+SharedWorker</font><font>("calculateLengthWorker.js"),</font>
+<font color="#660E7A"><em>resultContainer</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>("resultContainer"),
+</font> <font color="#660E7A"><em>lengthButton</em></font><font> =
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>("lengthButton"),
+</font> <font color="#660E7A"><em>inputString</em> </font><font>=
+</font><font color="#660E7A">document</font><font>.</font><font color="#7A7A43">getElementById</font><font>("inputString");</font></p>
+<p><font color="#660E7A"><em>lengthButton</em></font>
+<font>.</font><font color="#7A7A43">addEventListener</font><font>("click",
+</font><font color="#000080">function</font><font> () {</font><br />
+<font color="#660E7A"><em>resultContainer</em></font><font>.</font><font color="#660E7A">innerText</font><font>
+= ""; </font><br />
+<font color="#660E7A"><em>lengthWorker</em></font><font>.</font><font color="#660E7A">port</font><font>.</font><font color="#7A7A43">postMessage</font><font>({
+</font></p>
+<p><font color="#660E7A">string</font>
+<font>:</font><font color="#660E7A"><em>inputString</em></font><font>.</font><font color="#660E7A">value
+</font><br />
+<font>});<br />
+});</font><br />
+<em><font color="#808080">//start the worker </font><br />
+<font color="#660E7A">lengthWorker</font></em><font>.</font><font color="#660E7A">port</font><font>.</font><font color="#7A7A43">start</font><font>();
+</font><br />
+<em><font color="#808080">//Success Handler for the worker</font><br />
+<font color="#660E7A">lengthWorker</font></em><font>.</font><font color="#660E7A">port</font><font>.</font><font color="#7A7A43">addEventListener</font><font>("message",</font><font color="#000080">
+function</font><font> (workerEvent) {</font></p>
+<p><font color="#000080">var </font> <font color="#458383">responseData
+</font><font>=
+workerEvent.</font><font color="#660E7A">data</font><font>,
+</font><br />
+<font color="#458383">result </font><font>=
+</font><font color="#458383">responseData</font><font>.</font><font color="#660E7A">result</font><font>;
+</font><br />
+<font color="#660E7A"><em>resultContainer</em></font><font>.</font><font color="#660E7A">innerText</font><font>
+= "Result: " + </font><font color="#458383">result</font><font>;<br />
+});<br />
+&lt;/</font><font color="#000080">script</font><font>&gt;<br />
+&lt;/</font><font color="#000080">body</font><font>&gt;<br />
+&lt;/</font><font color="#000080">html</font><font>&gt; </font></p>
+<p></font> <font>The output of the preceding code is rendered as
+following screenshot displaying length of the input string.</font><br />
+<img src="Images/image00096.jpeg" /></p>
+<h2><font><strong>Chapter 11 Local Storage</strong> </font></h2>
+<p><font color="#C00000">Q. What is local storage? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>HTML5 provides a feature to store data locally in end user’s
+browser. Data is stored in the browser as key-value pair. Unlike cookie
+it has average space of 5 MB. This storage comes in 2 different type
+sessionStorage and localStorage.</font></p>
+<p><font><strong>localStorage</strong> : it stores data with no
+expiration date. <strong>sessionStorage</strong> : it stores data with
+an expiration date.</font></p>
+<p><font color="#C00000">Q. Which one is the main Storage
+interface?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font><strong>window.Storage()</strong> is the main interface from where
+the localStorage and sessionStorage are implemented. This interface has
+the below definition. </font></p>
+<p><font></p>
+<p>interface Storage {<br />
+readonly attribute unsigned long length;<br />
+DOMString? key(unsigned long index);<br />
+getter DOMString? getItem(DOMString key);<br />
+setter creator void setItem(DOMString key, DOMString value); deleter
+void removeItem(DOMString key);<br />
+void clear();</p>
+<p>}<br />
+The details of the above code are as follows:<br />
+<strong>setItem(key,value)</strong> : This methods stored the value in
+storage using <strong>key-value</strong> pair.</p>
+<p><strong>getItem(key)</strong> : This method retrieves the stored
+object using the key.<br />
+<strong>removeItem(key)</strong> : This methods removes the stored item
+based on the key.<br />
+<strong>clear()</strong> : Deletes all the items from the storage.
+<strong>length</strong> : This property returns the length of the
+storage, no of elements inside the storage.<br />
+<strong>key(position)</strong> : This method returns the key for the
+value in the given numeric position.</p>
+<p></font></p>
+<p><font color="#C00000">Q. How to store and retrieve an object in local
+storage?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Local storage provides setItem() and getItem() for storing and
+retrieving an object from the storage. <strong>setItem(key,
+value)</strong> method takes 2 input parameter to store the object. The
+<strong>getItem(key)</strong> method retrieves the value using key as
+input parameter. Below code shows the storing “<strong>Sandeep
+Kumar</strong>” string in “<strong>myName</strong>” key and then
+retrieves this string place it in a HTML element.</font></p>
+<p><font>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;</p>
+<p>&lt;body&gt;<br />
+&lt;div id="resultContainer"&gt;<br />
+&lt;/div&gt;</p>
+<p>&lt;script&gt;<br />
+var container =<br />
+document.getElementById("resultContainer");<br />
+localStorage.setItem("myName", "Sandeep Kumar"); container.innerHTML =
+localStorage.getItem("myName"); &lt;/script&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+Below screenshot shows the chrome developer storage preview which holds
+the above object as key and value pair.</font><br />
+<img src="Images/image00097.jpeg" /></p>
+<p><font color="#C00000">Q. How to attach an event to a local
+storage?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>When local storage objects get modified a storage event is fired.
+A callback method can be attached to window object using
+<strong>addEventListener()</strong> or <strong>attachEvent()</strong>
+method.</font></p>
+<p><font></p>
+<p><strong>NOTE:</strong><br />
+When the <strong>setItem(), removeItem(),</strong> and
+<strong>clear()</strong> methods are called on a Storage object x that
+is associated with a local storage area, if the methods did something,
+then in every Document object whose Window object's localStorage
+attribute's Storage object is associated with the same storage area,
+other than x, a storage event must be fired.</p>
+<p>In simple sentence, a storage event is fired on every<br />
+window/tab except for the one that updated<br />
+the localStorage object and caused the event. Below code has a callback
+method listening to storage event. When the button is clicked in one of
+the tab to update the local storage object the storage event listener in
+the other tab got triggered and content is updated.</p>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;</p>
+<p>&lt;body&gt;<br />
+&lt;div id="resultContainer"&gt; &lt;/div&gt;<br />
+&lt;button onclick="update()"&gt;Click Me&lt;/button&gt;
+&lt;script&gt;</p>
+<p>var container =<br />
+document.getElementById("resultContainer"), methodStorageEvent =
+function(event){ container.innerHTML = "Event</p>
+<p>Fired"+localStorage.getItem("myName") ;<br />
+},<br />
+counter = 1,<br />
+update = function(){</p>
+<p>localStorage.setItem("myName", ++counter); container.innerHTML
+=<br />
+localStorage.getItem("myName") ;<br />
+};<br />
+window.addEventListener("storage",<br />
+methodStorageEvent,false)<br />
+&lt;/script&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p>Below screenshot demonstrates how the storage event is fired and the
+other tabs which accessing the same page receives the storage event and
+update their content.</p>
+<p></font> <img src="Images/image00098.jpeg" /></p>
+<h2><font><strong>Chapter 12 File API</strong> </font></h2>
+<p><font color="#C00000">Q. What is HTML5 File API?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>HTML5 provides new API to work with files inside a browser. This
+API provides File, FileList and Blob data type to work with files. It
+provide FileReader interface to read files asynchronously.</font></p>
+<p><font color="#C00000">Q. What are the methods provided by FileReader
+for asynchronous read?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>FileReader provides 4 different methods to work with loaded files.
+These asynchronous methods are listed as follows.</font></p>
+<p><font></p>
+<p><strong>readAsBinaryString(Blob | File)</strong> : Reads the target
+file and save it to binary string containing integer of range
+0-255.<br />
+<strong>readAsText(Blob | File, opt_encoding)</strong>: Reads the target
+file and save it as UTF-8 text file.</p>
+<p><strong>readAsDataURL(Blob | File)</strong> : Reads the target file
+and returns a data URL containing base64 ascii string.
+<strong>readAsArrayBuffer(Blob | File)</strong> : Reads the target file
+and save it in a array buffer. </font></p>
+<p><font color="#C00000">Q. What is Blob object in javascript?
+</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>A blob object refers to a sequence of bytes representing data. The
+IDL(Interface Definition Syntax) for Blob object is as
+follows:</font></p>
+<p><font></p>
+<p>interface Blob {<br />
+readonly attribute unsigned long long size; readonly attribute DOMString
+type; Blob slice(optional [Clamp] long long start,</p>
+<p>optional [Clamp] long long end, optional DOMString contentType); void
+close();<br />
+};</p>
+<p>The details of the method and properties are as follows:
+<strong>slice method</strong> : The slice method returns a new Blob
+object</p>
+<p>with bytes ranging from the optional start parameter up to but not
+including the optional end parameter, and with a type attribute that is
+the value of the optional contentType parameter</p>
+<p><strong>close method</strong> : The close method must permanently
+neuter the original Blob object. This is an irreversible and
+nonidempotent operation; once a Blob has been neutered, it cannot be
+used again; dereferencing a Blob URL bound to a Blob object on which
+close has been called results in a network error. A neutered Blob must
+have a size of 0.</p>
+<p><strong>size property</strong>: It returns the size of the Blob
+object in bytes. <strong>type property</strong>: It returns the type of
+the content that the Blob object holds.</font></p>
+<p><font color="#C00000">Q. How to create a Blob Object?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>A blob object can be created using new keyword with Blob
+constructor. A Blob constructor takes the following
+parameters:</font></p>
+<p><font><strong>Blob part sequence</strong>: This can be either
+ArrayBuffer, ArrayBufferView, Blob and DOMString</p>
+<p><strong>Blob property bag</strong> : It takes one parameter
+representing type of the ASCII-encoded string in lower case representing
+the media type of the Blob.</p>
+<p>The following code shows an example of creating Blob using new
+keyword:<br />
+var a = new Blob();<br />
+var b = new Blob(["foobarbazetcetc" + "birdiebirdieboo"], {type:
+"text/plain;charset=UTF-8"}); </font></p>
+<p><font color="#C00000">Q. What are readable states for a Blob
+object?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>A Blob must have a readability state, which is one of OPENED or
+CLOSED. </font></p>
+<p><font>A Blob that refers to a byte sequence, including one of 0
+bytes, is said to be in the OPENED readability state.</p>
+<p>A Blob is said to be closed if its close method has been called. A
+Blob that is closed is said to be in the CLOSED readability state.</p>
+<p></font></p>
+<p><font color="#C00000">Q. What are different states of
+FileReader?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The FileReader object can be in one of 3 states. The readyState
+attribute, on getting, must return the current state, which must be one
+of the following values:</font></p>
+<p><font></p>
+<p><strong>EMPTY</strong> : The FileReader object has been constructed,
+and there are no pending reads. None of the read methods have been
+called. This is the default state of a newly minted FileReader object,
+until one of the read methods have been called on it.</p>
+<p><strong>LOADING</strong> : A File or Blob is being read. One of the
+read methods is being processed, and no error has occurred during the
+read.</p>
+<p><strong>DONE</strong> : The entire File or Blob has been read into
+memory, OR a file error occurred during read, OR the read was aborted
+using abort(). The FileReader is no longer reading a File or Blob. If
+readyState is set to DONE it means at least one of the read methods have
+been called on this FileReader.</p>
+<h2><strong>Chapter 13 Web RTC</strong></h2>
+<p></font></p>
+<p><font color="#C00000">Q. What is Web RTC?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Web RTC provides the capability to browsers for real time
+communication without any additional plugin installed. It involves
+audio, video and other type of data streaming among the browser with
+their native capability.</font></p>
+<p><font color="#C00000">Q. What is the API implemented by Web
+RTC?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Web RTC implements three different API. These interfaces are
+listed below.</font></p>
+<p><font></p>
+<p><strong>MediaStream</strong> : This represents a synchronized media
+stream using camera and microphone.<br />
+<strong>RTCPeerConnection</strong> : This interface is responsible for
+stable connection between peer browser during real time
+communication.</p>
+<p><strong>RTCDataChannel</strong> : This interface is responsible for
+other type of data communication between peer browser. For example the
+remote desktop sharing using browser.</p>
+<p></font></p>
+<p><font color="#C00000">Q</font> <font color="#800080">.
+</font><font color="#C00000">What is MediaStream?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font></p>
+<p><font>MediaStream basically represents the stream captured by Camera
+and microphone. Each MediaStream has an input which captures the stream.
+This MediaStream can be accessed using
+<strong>navigator.getUserMedia()</strong> method.</font></p>
+<p><font color="#C00000">Q</font> <font color="#800080">.
+</font><font color="#C00000">What are the input parameters to
+getUserMedia() method?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The <strong>getUserMedia()</strong> method takes 3 parameters as
+input. These parameters are as follows:<br />
+Constraint Object similar to a configuration object. Success Callback
+Method.<br />
+Error Callback Method.</font></p>
+<p><font color="#C00000">Q</font><font color="#800080">.
+</font><font color="#C00000">What are MediaStreamTracks?</font></p>
+<p><font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The MediaStream returned by <strong>getUserMedia()</strong> has 2
+useful methods <strong>getAudioTracks()</strong> and
+<strong>getVideoTracks()</strong>.Both of these methods returns an array
+of <strong>MediaStramTracks</strong>. </font></p>
+<p><font color="#C00000">Q</font> <font color="#800080">.
+</font><font color="#C00000">What are the protocols used by Web RTC
+for<br />
+communication?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Web RTC uses 2 different protocols for communication. These 2
+protocols are listed as follows.</font></p>
+<p><font><strong>DTLS</strong>: Datagram Transport Layer Security.<br />
+<strong>SRTP</strong>: Secure Real-time Transport Protocol. </font></p>
+<p><font color="#C00000">Q</font> <font color="#800080">.
+</font><font color="#C00000">How to view the statistics of an in
+progress Web RTC session in Chrome browser?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>We can view the detail statistics and charts of an ongoing Web RTC
+session in chrome browser by using
+<strong>chrome://webrtc-internals/</strong> in chrome browser.
+</font></p>
+<p><font color="#C00000">Q</font> <font color="#800080">.
+</font><font color="#C00000">What are the different event handlers for a
+channel?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>A channel has 4 different event handlers. These event handlers are
+as follows.</font></p>
+<p><font><strong>Onopen</strong> : Executed when the connection is
+established. <strong>Onerror</strong>: Executed if there is an error
+creating the connection.<br />
+<strong>Onmessage</strong>: When you receive a message, this method will
+execute<br />
+<strong>Oclose</strong>: Executed if the other peer closes the
+connection.</font></p>
+<p><font color="#C00000">Q</font> <font color="#800080">.
+</font><font color="#C00000">What is a signal channel?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>WebRTC can’t create connections without some sort of server in the
+middle. We call this the Signal Channel.</font></p>
+<p><font color="#C00000">Q</font> <font color="#800080">.
+</font><font color="#C00000">What is an ICE technique?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Interactive Connectivity Establishment (ICE) is a technique used
+in computer networking involving network address translators (NATs) in
+Internet applications of Voice over Internet Protocol (VoIP),
+peer-to-peer communications, video, instant messaging and other
+interactive media. </font></p>
+<p><font color="#C00000">Q</font><font color="#800080">.
+</font><font color="#C00000">What is an ICE Candidate?</font></p>
+<p><font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>While communication peers must exchange information about the
+network connection. This is known as an ICE candidate.</font></p>
+<p><font color="#C00000">Q</font> <font color="#800080">.
+</font><font color="#C00000">What are the server side functionalities
+needed by the Web RTC?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Web RTC requires following functionalities from server side to
+create a communication between peers.</font></p>
+<p><font>User discovery and communication.<br />
+Signaling.<br />
+NAT/firewall traversal.<br />
+Relay servers in case peer-to-peer communication fails.</font></p>
+<p><font color="#C00000">Q</font><font color="#800080">.
+</font><font color="#C00000">What is STUN protocol?</font>
+<font color="#00B050"><strong>ANSWER</strong></font> <font></p>
+<p>STUN (Session Traversal Utilities for NAT) is a standardized set of
+methods and a network protocol to allow an end host to discover its
+public IP address if it is located behind a NAT.</p>
+<h2><strong>Chapter 14 Drag &amp; Drop API</strong></h2>
+<p></font></p>
+<p><font color="#C00000">Q. How to make content draggable inside the
+browser?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>HTML5 provides drag and drop feature. An element can be made
+draggable by setting its draggable property to true. Check the below
+code having 2 buttons. One button is draggable and other is just a
+normal button.</font></p>
+<p><font></p>
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;</p>
+<p>&lt;title&gt;Draggable Element&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;</p>
+<p>&lt;button draggable="true"&gt;Draggable Button&lt;/button&gt;
+&lt;button&gt;Normal Button&lt;/button&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p>
+<p>Below screenshot shows both these buttons. The draggable button is
+movable while the normal button is fixed in its position.</font><br />
+<img src="Images/image00099.jpeg" /></p>
+<p><font color="#C00000">Q. What happens when drag starts for an
+element? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>There are 3 important key points to note when a drag starts. These
+key points are as follows.</font></p>
+<p><font color="#800080"><strong>Drag Data</strong>: It represent the
+type of data that will be transferred while dragging<br />
+<strong>Drag Feedback</strong>: This represents image which appears
+beside the mouse pointer during the drag operation. <strong>Drag
+Effect</strong>: This represents the type of drag happens to element. It
+can be 3 types and listed below.</font>
+<font><font face="Courier, serif">o</font> <strong>Copy</strong>: This
+effect indicates that the</p>
+<p>data being dragged will be copied from its present location to the
+drop location.</p>
+<p><font face="Courier, serif">o</font> <strong>Move</strong>: This
+effect indicates that the data being dragged will be moved from its
+original position to drop<br />
+location.</p>
+<p><font face="Courier, serif">o</font> <strong>Link</strong>: This
+effect indicates that some form of relationship or connection will be
+created between the source and drop locations.</p>
+<p></font></p>
+<p><font color="#C00000">Q. What are the Drag and drop
+events?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>There are 7 different drag and drop events that can be
+attached</font></p>
+<p><font></p>
+<p>with a callback method programmatically.<br />
+<strong>Dragstart</strong>: it is fired on an element when a drag is
+started <strong>Dragenter</strong>: it is fired when the mouse enters an
+element while a drag is occurring.<br />
+<strong>Dragover</strong>: This event is fired as the mouse is moving
+over an element when a drag is occurring.</p>
+<p><strong>Dragleave</strong> : This event is fired when the mouse
+leaves an element while a drag is occurring.<br />
+<strong>Drop</strong>: The drop event is fired on the element where the
+drop occurred at the end of the drag operation.<br />
+<strong>Dragend</strong>: The source of the drag will receive a dragend
+event when the drag operation is complete, whether it was successful or
+not.</p>
+<p></font></p>
+<p><font color="#C00000">Q. What is a dataTransfer
+property?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>dataTransfer object holds the piece of data sent in a drag action.
+<strong>dataTransfer</strong> is set in the <strong>dragstart</strong>
+event and read/handled in the drop event. The syntax for setting value
+in dataTransfer object is as follows. </font></p>
+<p><font><font size="-1">event.dataTransfer.setData(format,
+data)</font><br />
+The above syntax will set the object's content to the mime type and data
+payload passed as arguments.</font></p>
+<p><font color="#C00000">Q. Develop an example to drag and drop an
+element from one place to another? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>To demonstrate drag and drop we have created div element with
+rounded border and background color red. We will drag this element and
+drop it in a container. The following code shows the drag and drop
+example. </font></p>
+<p><font size="-1"><font color="#FF0000"></p>
+<p>&lt;!DOCTYPE <strong>HTML</strong>&gt;<br />
+&lt;<strong>html</strong>&gt;<br />
+&lt;<strong>head</strong>&gt;</p>
+<p>&lt; <strong>style</strong>&gt;<br />
+<strong>#ball</strong>{<br />
+<strong>width</strong>:50<strong>px</strong>;<br />
+<strong>height</strong>:50<strong>px</strong>;<br />
+<strong>background</strong>: <strong>red</strong>;
+<strong>border-radius</strong>: 100%;</p>
+<p></font></p>
+<p><font>}</font><br />
+<font color="#000080"><strong>#dropZone</strong></font><font> {
+</font><br />
+<font color="#0000FF"><strong>width</strong></font><font>:</font><font color="#0000FF">200</font><font color="#008000"><strong>px</strong></font><font>;
+</font><br />
+<font color="#0000FF"><strong>height</strong></font><font>:</font><font color="#0000FF">100</font><font color="#008000"><strong>px</strong></font><font>;
+</font><br />
+<font color="#0000FF"><strong>padding</strong></font><font>:</font><font color="#0000FF">10</font><font color="#008000"><strong>px</strong></font><font>;
+</font><br />
+<font color="#0000FF"><strong>border</strong></font><font>:</font><font color="#0000FF">1</font><strong><font color="#008000">px
+solid </font><font color="#000080">#aaaaaa</font></strong><font>;<br />
+}<br />
+&lt;/</font><font color="#000080"><strong>style</strong></font><font>&gt;<br />
+&lt;/</font><font color="#000080"><strong>head</strong></font><font>&gt;<br />
+&lt;</font><font color="#000080"><strong>body</strong></font><font>&gt;<br />
+&lt;</font><strong><font color="#000080">div
+</font><font color="#0000FF">id=</font><font color="#008000">"dropZone"</font><br />
+<font color="#0000FF">ondrop=</font><font color="#008000">"drop(event)"</font><br />
+<font color="#0000FF">ondragover=</font><font color="#008000">"allowDrop(event)"</font></strong><font>&gt;<br />
+&lt;/</font><font color="#000080"><strong>div</strong></font><font>&gt;<br />
+&lt;</font><font color="#000080"><strong>br</strong></font><font>&gt;<br />
+&lt;</font><strong><font color="#000080">div
+</font><font color="#0000FF">id=</font><font color="#008000">"ball"</font><br />
+<font color="#0000FF">draggable=</font><font color="#008000">"true"</font><br />
+<font color="#0000FF">ondragstart=</font><font color="#008000">"drag(event)"</font></strong><font>&gt;&lt;/</font><font color="#000080"><strong>div</strong></font><font>&gt;<br />
+&lt;</font><font color="#000080"><strong>script</strong></font><font>&gt;
+</font><br />
+<font color="#000080"><strong>function</strong>
+</font><font><em>allowDrop</em>(ev) {<br />
+ev.</font><font color="#7A7A43">preventDefault</font><font>();<br />
+}</font><br />
+<font color="#000080"><strong>function</strong>
+</font><font><em>drag</em>(ev) {<br />
+ev.dataTransfer.</font><font color="#7A7A43">setData</font><font>(</font><font color="#008000"><strong>"text"</strong></font><font>,
+ev.</font><font color="#660E7A"><strong>target</strong></font><font>.</font><font color="#660E7A"><strong>id</strong></font><font>);<br />
+}</font><br />
+<font color="#000080"><strong>function</strong>
+</font><font><em>drop</em>(ev) {<br />
+ev.</font><font color="#7A7A43">preventDefault</font><font>();</font><br />
+<font color="#000080"><strong>var</strong></font><font color="#458383">
+data </font><font>=
+ev.dataTransfer.</font><font color="#7A7A43">getData</font><font>(</font><font color="#008000"><strong>"text"</strong></font><font>);<br />
+ev.</font><font color="#660E7A"><strong>target</strong></font><font>.</font><font color="#7A7A43">appendChild</font><font>(</font><font color="#660E7A"><strong>document</strong></font><font>.</font><font color="#7A7A43">getElementById</font><font>(</font><font color="#458383">data</font><font>));<br />
+}<br />
+&lt;/</font><font color="#000080"><strong>script</strong></font><font>&gt;<br />
+&lt;/</font><font color="#000080"><strong>body</strong></font><font>&gt;<br />
+&lt;/</font><font color="#000080"><strong>html</strong></font><font>&gt;
+</font></p>
+<p></font></p>
+<p><font>The output of the code looks like following screenshot before
+dragging with both the element are in there original
+position.</font></p>
+<p><img src="Images/image00100.jpeg" /></p>
+<p><font>The output of the code looks like following screenshot after
+dragging and dropping the draggable element to the container.</font></p>
+<p><img src="Images/image00101.jpeg" /></p>
+<h2><font><strong>Chapter 15 App Cache API</strong> </font></h2>
+<p><font color="#C00000">Q. What is app cache? What are the benefits of
+using app cache API in a web application? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>App cache API is the new feature provided by the HTML5.This API
+power up a web application working without an internet connection. The
+most important benefits by this API are listed below:</font></p>
+<p><font></p>
+<p><strong>Speed</strong> : Like all other cache it increases the speed
+of accessing the page content.<br />
+<strong>Offline browsing</strong>: It increases the usability of
+application as it can be accessed without internet.<br />
+<strong>Reduced load</strong>: As the content and data is now cache in
+the browser the load of the application is reduced form the server.</p>
+<p><strong>Few network calls</strong>: As most of reusable content is
+present in app cache it this reduces the no of network call to the
+server.</font></p>
+<p><font color="#C00000">Q. How to enable application cache in an html
+file?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>To enable application cache in a HTML file we need to have
+<strong>manifest</strong> attribute in <strong>&lt;HTML&gt;</strong>
+element containing the name of the <strong>appcache</strong> file. The
+syntax of declaring application cache in HTML file is as follows.
+</font></p>
+<p><font size="-1"><font>&lt;!DOCTYPE</font> <font color="#0000FF">
+HTML</font><font>&gt;<br />
+&lt;</font><font color="#000080">html</font><font color="#0000FF">
+manifest=</font><font color="#008000">"filename.appcache"</font><font>&gt;
+&lt;/</font><font color="#000080">html</font><font>&gt;
+</font></font></p>
+<p><font color="#C00000">Q. What is the media type of appcache
+file?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>A manifest file needs to have <strong>text/cache-manifest</strong>
+media type</font><font>. </font></p>
+<p><font color="#C00000">Q. What are the 3 different section of manifest
+file?</font></p>
+<p><font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>A manifest file has 3 different sections. These 3 different
+sections are as follows. </font></p>
+<p><font><strong>CACHE MANIFEST</strong> : Files listed under this
+header will be cached after they are downloaded for the first time.
+<strong>NETWORK</strong>: Files listed under this header require a
+connection to the server, and will never be cached.
+<strong>FALLBACK</strong>: Files listed under this header specifies
+fallback pages if a page is inaccessible.</font></p>
+<p><font color="#C00000">Q. What is NETWORK section? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>NETWORK is one of the sections in manifest file. The file
+name</font></p>
+<p><font>listed in the NETWORK section is never cached locally. The
+following code shows a sample of NETWORK section.<br />
+<font size="-1">NETWORK: login.html</font></font></p>
+<p><font color="#C00000">Q. What is FALLBACK section? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>FALLBACK is one of the sections in manifest file. In this section
+we </font></p>
+<p><font>can mention the <strong>file</strong> name which will be called
+when application is offline. The following code shows a sample of
+FALLBACK section.<br />
+<font size="-1">FALLBACK:<br />
+/html/ /offline.html</font></font></p>
+<p><font color="#C00000">Q. What is CACHE MANIFEST section?
+</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>CACHE MANIFEST is one of the sections in manifest file. The file
+names mentioned in this section is cached locally. The following code
+shows a sample of CACHE MANIFEST section. </font></p>
+<p><font size="-1"><font>/style.css<br />
+/favicon.gif /app.js</font></font></p>
+<p><font color="#C00000">Q. How to view app cache detail in chrome
+browser?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>We can view the app cache content like what it is caching, size
+and time etc. using the following link in chrome browser.</font></p>
+<p><font><font size="-1">chrome://appcache-internals/.</font><br />
+The following screenshot shows the appcache internal for my browser.
+</font><br />
+<img src="Images/image00102.jpeg" /></p>
+<p><font color="#C00000">Q. How to detect the support of browser for
+appcache?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>We can detect the support of appcache by checking the existence of
+<strong>applicationCache</strong> in <strong>window</strong> object. We
+can use javascript if statement which checks the truth value of<br />
+<strong>window.applicationCache</strong> object. The following
+screenshot shows the chrome console detecting applicationCache object.
+</font></p>
+<p><img src="Images/image00103.jpeg" /></p>
+<p><font color="#C00000">Q. How to update the appcache manually?
+</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>We can update the cache by doing hard reload to the browser. We
+can also call <strong>swapCache()</strong> method to programmatically
+update the cache.</font></p>
+<h2><font><strong>Chapter 16 Server Sent Events</strong></font></h2>
+<p><font color="#C00000">Q. What is Server Side Events
+(SSE)?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>HTML5 provides server side events feature by which a web page gets
+the update from the server automatically. A great example of this
+feature is Facebook notification or Google + updates.</font></p>
+<p><font color="#C00000">Q. What is the content type of the server sent
+response? </font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The content type of the server response is
+“<strong>text/event-stream</strong>” for the
+“<strong>Content-Type</strong>” header.</font></p>
+<p><font color="#C00000">Q. How to create an event source for listening
+to server updates?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>An event source can be created by instantiating the object of
+<strong>EventSource</strong> class with a server path. The syntax for
+creating an event source is listed below.</font></p>
+<p><font>var source = new EventSource(“&lt;URL to
+Server&gt;”);</font></p>
+<p><font color="#C00000">Q. What are the event types is fired by an
+EventSource?</font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>An EventSource fires 3 different events. Callback methods can be
+attached to the source for listening to these events. These event types
+are listed below.</font></p>
+<p><font><strong>onopen</strong> : This event is fired when the server
+open the connection to the browser.<br />
+<strong>onmessage</strong>: This event is fired when server produces the
+new output to the stream.<br />
+<strong>onerror</strong>: This event is fired when an error occurs by
+some means. </font></p>
+<p><font color="#C00000">Q. How to close an event stream? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The event stream can be closed using <strong>close()</strong>
+method. </font></p>
+<p><font color="#C00000">Q. What is the format of event
+stream?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The event stream is a simple stream of text data, which must be
+encoded using <strong>UTF-8</strong>. Each message is separated by a
+pair of newline characters. A colon as the first character of a line is,
+in essence, a comment, and is ignored.</font></p>
+<h2><font><strong>Chapter 17 Miscellaneous Questions</strong>
+</font></h2>
+<p><font color="#C00000">Q. What is strict mode? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Strict mode is a new directive in new ECMA 5 JavaScript
+specification. It is used for secure JavaScript coding. It eliminates
+some JavaScript silent errors by changing them to throw
+errors.</font></p>
+<p><font>The syntax of writing strict mode is below expression.<br />
+“use strict”<br />
+Below code shows the use of strict mode inside a function.</p>
+<p>function sayHello(){<br />
+"use strict";<br />
+myName = "Sandeep";</p>
+<p>}<br />
+sayHello();<br />
+The following screenshot shows the error produces by using an undeclared
+variable inside the <strong>sayHello()</strong> method. </font><br />
+<img src="Images/image00104.jpeg" /></p>
+<p><font color="#C00000">Q. List out some of the conditions that are not
+allowed in strict mode?</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Find the list of the conditions that are not allowed in ECMA5
+strict mode in below:</font></p>
+<p><font>Using a variable without declaring is not allowed. Deleting a
+variable, a function, or an argument is not allowed.</p>
+<p>Defining a property more than once is not allowed. Duplicating a
+parameter name is not allowed.</p>
+<p>Octal numeric literals and escape characters are not allowed.<br />
+Writing to a read-only property is not allowed. Deleting an undeletable
+property is not allowed.</p>
+<p>The string "eval" cannot be used as a variable. The string
+"arguments" cannot be used as a variable. The with statement is not
+allowed.<br />
+Future reserved keywords are not allowed.</p>
+<p></font></p>
+<p><font color="#C00000">Q. What is the output of 0.1+0.2 produces in
+the console and why? </font>
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>JavaScript math library follows IEEE 754 standards for math. IEEE
+754 standards use 64 bit representation for a floating point number.
+This causes a problem while evaluating the 0.1 + 0.2 expression. Below
+screenshot shows the Firebug console for this expression.</font></p>
+<p><img src="Images/image00105.jpeg" /></p>
+<p><font>JavaScript internally converts the 0.1 to 16 precision which
+becomes 0.1000000000000000 and then 0.2 gets added and becomes
+0.30000000000000004. Below screenshot shows this<br />
+demonstration in JavaScript code. </font></p>
+<p><img src="Images/image00106.jpeg" /></p>
+<p><font color="#C00000">Q. How to resolve the issue 0.1+0.2 =
+0.30000000000000004 and produce 0.1+0.2 = 03? </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>This issue can be resolved by using to toFixed(1) method to this
+expression. toFixed() method converts a number to the specified decimal
+points. Below screenshot shows the use of toFixed() method to produce
+the correct output which is 0.3.</font></p>
+<p><img src="Images/image00107.jpeg" /><font color="#C00000">Q. What
+will be the output of the below code and why?</font></p>
+<p><font color="#C00000">(function(){<br />
+var a = b = 3;<br />
+})();<br />
+console.log(typeof a);<br />
+console.log(typeof b);</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The above code will print undefined and Number in the console.
+Below screenshot shows the output of the above code in the Firebug
+console. </font></p>
+<p><img src="Images/image00108.jpeg" /></p>
+<p><font>JavaScript treats the above code as below screenshot. From the
+below code it is clear that variable <strong>a</strong> is in local
+scope of the function and be is treated as <strong>this.b</strong> . The
+current reference this represents the <strong>window</strong> object.
+</font></p>
+<p><img src="Images/image00109.jpeg" /></p>
+<p><font color="#C00000">Q. What will be the output of the below code
+and why? console.log(1+2+4); </font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>The output of the above code is 7 as the parameters are all<br />
+numbers. Below screenshot shows the output of the above code in<br />
+a chrome console.</font></p>
+<p><img src="Images/image00110.jpeg" /></p>
+<p><font color="#C00000">Q. Explain Hoisting in JavaScript?
+</font><br />
+<font color="#00B050"><strong>ANSWER</strong></font><br />
+<font>Hoisting is JavaScript's default behavior of moving declarations
+to the top. In other words, a variable can be used before it has been
+declared. Let’s understand hoisting using these following
+examples.</font></p>
+<p><font><strong>Example 1:</strong><br />
+The following code has a <strong>display()</strong> method which prints
+the value of a in the console.</p>
+<p><font size="-1">function display(){ console.log(a);<br />
+}<br />
+display();</font></p>
+<p>The output of the preceding code will be a <strong>reference</strong>
+error as we have not defined the variable. The following screenshot
+shows the output of the preceding code.</p>
+<p></font> <img src="Images/image00111.jpeg" /><font><strong>Example
+2:</strong><br />
+The following code has a <strong>display()</strong> method which prints
+the value of a in the console. <font size="-1"></p>
+<p>function display(){<br />
+var a;<br />
+console.log("Output: "+a);</p>
+<p>}<br />
+display();</font></p>
+<p>The output of the preceding code will be undefined as we have defined
+the variable but not assigned any value. The following screenshot shows
+the output of the preceding code.</p>
+<p></font> <img src="Images/image00112.jpeg" /><font><strong>Example
+3:</strong><br />
+The following code has a <strong>display()</strong> method which prints
+the value of a in the console. <font size="-1"></p>
+<p>function display(){<br />
+console.log("Output: "+a);<br />
+var a;</p>
+<p>}<br />
+display();</font></p>
+<p>The output of the preceding code will be undefined as we have defined
+the variable but not assigned any value. Example 2 and Example 3 has
+same output. It means the variable declaration is moved to the top. The
+following screenshot shows the output of the preceding code.</p>
+<p></font> <img src="Images/image00113.jpeg" /></p>
+<h2><font><strong>About The Author</strong></font></h2>
+<p><img src="Images/image00114.jpeg" /></p>
+<p><font>Sandeep Kumar Patel is a senior web developer and founder of
+www.tutorialsavvy.com, a widely- read programming blog since 2012. He
+has more than five years of experience in object-oriented JavaScript and
+JSON-based web applications development. He is GATE-2005 Information
+Technology (IT) qualified and has a Master’s degree from VIT University,
+Vellore.</font></p>
+<p><font><strong>You can know more about him from his<br />
+-</strong>LinkedIn profile
+(</font><font color="#FF8700"><strong>http://www.linkedin.com/in/techblogger</strong></font><font>).<br />
+<strong>-</strong>He has received the Dzone Most Valuable Blogger (MVB)
+award for technical publications related to web technologies. His
+article can be viewed at
+</font><font color="#FF8700"><strong>http://www.dzone.com/users/sandeepgiet</strong></font><font>.<br />
+-He has also received the Java Code Geek (JCG) badge for a technical
+article published in JCG. His article can be viewed at</font>
+<font color="#FF8700"><strong>http://www.javacodegeeks.com/author/sandeep-kumar-patel/</strong></font><font>.<br />
+-Author of “Instant GSON” for Packt publication,</font><br />
+<font color="#FF8700"><strong>http://www.packtpub.com/create-json-data-java-objectsimplement-with-gson-library/book</strong></font><br />
+<font>Questions or comments? E-mail me at</font><br />
+<font color="#FF8700"><strong>sandeeppateltech@gmail.com</strong></font><font>
+or find me on the following social networks:<br />
+-Facebook Page:</font><br />
+<font color="#FF8700"><strong>http://www.facebook.com/SandeepTechTutorials</strong></font><font>
+.<br />
+-Tutorial Blog:
+</font><font color="#FF8700"><strong>http://www.tutorialsavvy.com</strong></font></p>
+<p><font></p>
+<h2><strong>One Last Thing...</strong></h2>
+<p>When you turn the page, Kindle will give you the opportunity to rate
+this book and share your thoughts on Facebook and Twitter. If you
+believe the book is worth sharing, please would you take a few seconds
+to let your friends know about it? If it turns out to make a difference
+in their professional lives, they’ll be forever grateful to you, as will
+I.</p>
+<p>All the best,</p>
+<h3>Sandeep Kumar Patel.</h3>
+<p></font></p>
