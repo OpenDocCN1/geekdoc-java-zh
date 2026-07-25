@@ -1,0 +1,2 @@
++   [Scalyr 快速上手日志指南：Java,Log4j2,PHP,Ruby,Rails,Swift,Scala,Django,Angular & Meteor 日志快速启动指南](README.md)
++   [Scalyr 快速上手日志指南：Java,Log4j2,PHP,Ruby,Rails,Swift,Scala,Django,Angular & Meteor 日志快速启动指南](the-scalyr-guide-to-getting-started-logging-as-quickly-as-po_0.md)

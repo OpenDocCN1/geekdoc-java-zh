@@ -613,5 +613,6 @@
 +   [Java 大师](docs/the-magus-of-java-ed/README.md)
 +   [荷属东印度群战役 1941-42：日本的石油追求（战役系列）](docs/the-netherlands-east-indies-campaign-194142-japans-quest-for/README.md)
 +   [Java 的力量 (编程的力量)](docs/the-power-of-java-power-of-coding/README.md)
++   [Scalyr 快速上手日志指南：Java,Log4j2,PHP,Ruby,Rails,Swift,Scala,Django,Angular & Meteor 日志快速启动指南](docs/the-scalyr-guide-to-getting-started-logging-as-quickly-as-po/README.md)
 +   [Thinking in Java (Java 编程思想)](docs/thinking-in-java/README.md)
 +   [Typescript 和 Java 编程轻松入门：初学者编程指南 - 二合一](docs/typescript-and-java-coding-made-simple-a-beginners-guide-to-/README.md)

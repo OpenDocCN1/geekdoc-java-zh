@@ -1,0 +1,3555 @@
+<p><img src="Images/cover.jpg" /></p>
+<p><span id="cover.xhtml"></span></p>
+<p><img src="Images/cover.jpg" style="height:100.0%"
+alt="cover.jpg" /></p>
+<p><span id="TOC.xhtml"></span></p>
+<div class="sgc-toc-title">
+Table of Contents
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0001.xhtml">Chapter 1: Centralized Logging Is a
+Modern Solution for At-Scale Applications</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0002.xhtml">Chapter 2: Get Started Quickly With
+Java Logging</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0003.xhtml">Chapter 3: Getting Started Quickly
+With Log4j2 Configuration</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0004.xhtml">Chapter 4: Getting Started Quickly
+With PHP Logging</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0005.xhtml">Chapter 5: Getting Started Quickly
+With Ruby Logging</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0006.xhtml">Chapter 6: Getting Started Quickly
+With Rails Logging</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0007.xhtml">Chapter 7: Getting Started Quickly
+With Swift Logging</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0008.xhtml">Chapter 8: Getting Started Quickly
+With Scala Logging</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0009.xhtml">Chapter 9: Getting Started Quickly
+With Django Logging</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0010.xhtml">Chapter 10: Getting Started Quickly
+With Angular Logging</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0011.xhtml">Chapter 11: Getting Started Quickly
+With Meteor Logging</a>
+</div>
+<div class="sgc-toc-level-1">
+<a href="../Text/Section0012.xhtml">About Scalyr</a>
+</div>
+<p><span id="Section0001.xhtml"></span></p>
+<div id="Section0001.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<h2 class="Heading-2 ParaOverride-1"
+id="Section0001.xhtml_sigil_toc_id_1"><span
+id="Section0001.xhtml__idTextAnchor000"></span>Chapter 1: Centralized
+Logging Is a Modern Solution for At-Scale Applications</h2>
+<p>I remember the very first website I created. This was in the late
+90s. It was about military fighter jets, and I built it in pure HTML
+with inline CSS—no JavaScript. I also only ever ran it locally.</p>
+<p>The most complex websites of that time were probably e-commerce
+websites. They had to handle content management, user accounts, and
+payment processing. While not a trivial task at the time, the way the
+web applications of the late 90s and early 2000s were constructed seems
+simple and straightforward today.</p>
+<p>Things have shifted over the years. Companies used to have just one
+instance of an application running on a single server. Only the biggest
+enterprises needed to think about scaling because most websites saw a
+limited amount of traffic. Today, even relatively small organizations
+take scale into account.</p>
+<p>Luckily, the cloud allows us to build services without needing to
+manage our hardware. This can significantly save cost and effort for
+enterprises, both small and large. Going further, microservices give us
+the opportunity to develop individual services that remain loosely
+coupled and scale more easily.</p>
+<p>Yet we can’t just say things have become easier and simpler. In fact,
+microservices in a cloud environment can form a jungle of moving parts,
+making it hard to get an overview of their communication flow. We need
+something more.</p>
+<p>We need logging.</p>
+<p><span id="Section0001.xhtml__idTextAnchor001"></span>Scale Has
+Increased Our Need for Logging</p>
+<p>If you have a single application with maybe one or two dependencies
+to other services, logging is easy. The application can log information
+to the server’s disk, which you can then check to see what’s going on.
+You’ll get a chronological overview of all performed actions. This gives
+you an easy way of investigating any issues that arise.</p>
+<p>In a scaled environment, things get a bit more complicated. Your
+application probably consists of multiple services, with either services
+offering different functionalities or different instances of the same
+service. The interaction of these services increases the chances of
+things going wrong. So the need for logging increases as well.</p>
+<p>When you make an in-process method call, not much can break so long
+as you provide the correct input. However, if you’re making a call to
+another service, there are more opportunities for things to fail:</p>
+<ul>
+<li>The network might be slow or down.</li>
+<li>The other service might produce an error.</li>
+<li>Your service could be providing the wrong input.</li>
+</ul>
+<p>All this magnifies the need for logging so that you can more easily
+see what’s going wrong.</p>
+<p><span id="Section0001.xhtml__idTextAnchor002"></span>The Need for
+Centralized Logging</p>
+<p>Having each service log to the server’s disk quickly becomes a
+nightmare. When one service calls another, you need to look at the other
+service’s logs. If that service calls a third, you have even more work
+to do. After investigating all logs, you need to aggregate this
+information to complete the picture. And if you’ve ever investigated
+issues that span several services, you’ve experienced the pain of logs
+spread out everywhere.</p>
+<p>This is why centralized logging is becoming increasingly important,
+as companies move to an architecture where one application actually
+consists of multiple services interacting with each other. But in fact,
+this isn’t so different from what we used to do. In the past, we went to
+a central location to read the logs—specifically, the server running the
+single service. Now that we have multiple services, it’s still useful to
+be able to go to a single location.</p>
+<p><span id="Section0001.xhtml__idTextAnchor003"></span>Microservices as
+a Model for Massive Scale</p>
+<p>Microservices are a great way of developing applications that need to
+scale. But they create challenges for logging. We need to be able to
+correlate log statements across different services, especially when many
+requests are coming in at a fast pace.</p>
+<p>While that all might sound complicated, logging is probably still the
+best way to identify the root cause of problems. Monitoring provides a
+great overview of the health of our applications, but when something
+goes wrong, we often need to go back several steps to see what led to
+the issue. A stack trace usually isn’t enough.</p>
+<p>Centralized logging allows us to follow the flow of a user’s request
+across multiple services, so it’s the way to go.</p>
+<p><span id="Section0001.xhtml__idTextAnchor004"></span>Hybrid
+Environments</p>
+<p>These days, many companies take a hybrid approach to the
+cloud/on-premise choice. Some services run on local servers that the
+company manages. Some might be running on a hosted infrastructure. Yet
+others may run on one of the major cloud providers.</p>
+<p>This is due in part to our world is evolving so quickly. We might
+start by running on Platform A but later decide to switch to Platform B
+for new services. The old services aren’t always ported immediately. And
+why should they be, if they’re running great?</p>
+<p>Logging is often overlooked when planning these architectures. The
+first step is to log to the local file system. This works well on the
+developer’s machine. But when we’re talking about multiple services
+deployed across multiple platforms, this approach starts falling apart.
+Yet many companies keep each service logging to its own location.</p>
+<p>Migrating all your services to a single platform would be a costly
+and unnecessary solution. A far simpler solution is to keep everything
+running where it is but send the logs to a central location. Of course,
+this means the central log can become massive. But with good tools, this
+shouldn’t be an issue.</p>
+<p>Centralizing logging can really save a company money. Support staff
+will need less time to find the root cause of issues. Developers will
+have the information to reproduce the issue faster. This means less
+frustration in the organization and less chance of people leaving. But
+it also means less frustration for your customers, as issues can be
+identified and resolved sooner.</p>
+<p><span id="Section0001.xhtml__idTextAnchor005"></span>The New
+Serverless</p>
+<p>Serverless, or function as a service (FaaS), is a new way of
+developing applications. I’ve seen it described as microservices on
+steroids. Each function has a very limited scope. This means an
+application consists of tens if not hundreds (or thousands!) of separate
+functions.</p>
+<p>Because all these function interact with each other, it’s difficult
+to get an idea of the application’s flow by just looking at the logging
+of one function. In Amazon’s AWS Lambda, for example, you can use
+CloudWatch to check the logs of a single function. But currently, it’s
+still impossible to combine the logs of different functions; you’re
+forced to switch between multiple views or queries.</p>
+<p>Centralized logging is even more important here. Instead of having a
+few microservice logs, you can now have an incredible amount of logs in
+different locations.</p>
+<p><span id="Section0001.xhtml__idTextAnchor006"></span>Easier, Not
+Simpler</p>
+<p>Developing software has become easier thanks to the plethora of tools
+that help developers by eliminating difficult tasks. These tools
+include</p>
+<ul>
+<li>The cloud.</li>
+<li>Modern IDEs.</li>
+<li>Development frameworks and libraries.</li>
+<li>Automated testing, building, and deployment tools.</li>
+<li>Low- or no-code platforms that allow you to build applications with
+little to no coding experience.</li>
+</ul>
+<p>But even though things are easier, they haven’t become simpler. In
+fact, they’re more complex. Instead of building a single stand-alone
+application, we now write applications that consist of multiple smaller
+applications. These all interact with each other and with services that
+are out of our control.</p>
+<p>All this complexity gives us great advantages, like easier scaling
+and improved efficiency. But they also increase the amount of places
+where bugs and issues can occur. Luckily, we have modern monitoring
+tools that can quickly notify us and even provide context and
+information. But logging is still the best way to see what led up to the
+issue.</p>
+<p>In these complex environments, centralized logging is the number one
+way to gain access to all necessary information. Centralized logging
+makes our lives easier and allows us to fix issues faster and
+cheaper.</p>
+</div>
+<p><span id="Section0002.xhtml"></span></p>
+<div id="Section0002.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<h2 class="Heading-2 ParaOverride-1"
+id="Section0002.xhtml_sigil_toc_id_2">Chapter 2: Get Started Quickly
+With Java Logging</h2>
+<p><span id="Section0002.xhtml__idTextAnchor007"></span>For our first
+experiment in getting started quickly with logging, we’re going to
+tackle Java. In this chapter, we’ll not only provide a quick guide but
+also go into more detail about logging, diving particularly into the
+what and why of logging.</p>
+<p><img src="Images/Image280.png" class="_idGenObjectAttribute-1"
+alt="http://blog.scalyr.com/wp-content/uploads/2018/01/Java-Logging-Icon.png" /></p>
+<p>The Simplest Possible Java Logging That Could Possibly Work</p>
+<p>For this demo, I’m going to use the free <a
+href="https://www.jetbrains.com/idea/download/#section=windows"><span
+class="CharOverride-2">community version of IntelliJ IDEA</span></a>.
+I’m also assuming that you have the <a
+href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html?ssSourceSiteId=otnpt"><span
+class="CharOverride-2">Java JDK</span></a> installed on your
+machine.</p>
+<p><img src="Images/Image287.png" class="_idGenObjectAttribute-2"
+alt="IntelliJ IDEA Screenshot" /></p>
+<p>On the next screen, select <span class="CharOverride-3">Java</span>
+as the type of project on the left panel. You’ll also need to point to
+the JDK’s path, in case you haven’t yet.</p>
+<p><img src="Images/Image296.png" class="_idGenObjectAttribute-3"
+alt="JDK Path Screenshot" /></p>
+<p>Third step—mark the <span class="CharOverride-3">Create project from
+template</span> option and then select <span
+class="CharOverride-3">Command Line App</span>:</p>
+<p><img src="Images/Image304.png" class="_idGenObjectAttribute-3"
+alt="New Project Screenshot" /></p>
+<p>I’ve called my project <span
+class="CharOverride-3">JavaLoggingDemo</span>, as you can see from the
+image below.</p>
+<p><img src="Images/Image311.png" class="_idGenObjectAttribute-3"
+alt="JavaLoggingDemo Screenshot" /></p>
+<p>After doing the steps above, you should see the <span
+class="CharOverride-3">Main</span> class that was automatically created
+for you. It should look like this:</p>
+<p><img src="Images/Image319.png" class="_idGenObjectAttribute-4" /></p>
+<p>Let’s get to work. Replace the <span class="CharOverride-3">// write
+your code here</span> comment with the following line:</p>
+<p><img src="Images/Image328.png" class="_idGenObjectAttribute-5" /></p>
+<p>Now you have an application that displays a friendly greeting.</p>
+<p>Next, let’s run our app. Go to <span class="CharOverride-3">Run &gt;
+Run ‘Main’</span> or use the shortcut <span
+class="CharOverride-3">SHIFT+F10</span> (Windows and Linux) or <span
+class="CharOverride-3">CTRL+R</span> on Mac.</p>
+<p>If everything went well, you should see something like this:</p>
+<p><img src="Images/Image335.png" class="_idGenObjectAttribute-6"
+alt="Program File Screenshot" /></p>
+<p>Nice. But let’s say the requirements for our little app changed, as
+they always seem to do. Now we need our app to not only display a
+message but also log it somewhere. How do we go about that?</p>
+<p>There are a lot of sophisticated options we could use, but let’s try
+to do the simplest thing we can. Edit the code in your <span
+class="CharOverride-3">main</span> function so it looks like this:</p>
+<p><img src="Images/Image343.png" class="_idGenObjectAttribute-7" /></p>
+<p>Notice the changes. We’ve added a new variable <span
+class="CharOverride-3">(message)</span> to store the greeting’s text.
+Then there’s the printing. And finally, there’s a new line, which is
+meant to save the text to a file.</p>
+<p>We also had to add a throw declaration to our method since the last
+line can throw an <span class="CharOverride-3">IOException</span>.
+Additionally, we’ve added some new import declarations. The whole code
+now looks like this:</p>
+<p><img src="Images/Image351.png" class="_idGenObjectAttribute-8" /></p>
+<p>When you run your application again, it should behave the same as
+before. But the last line added will create a log file for you. The log
+file will be located in your project folder:</p>
+<p><img src="Images/Image358.png" class="_idGenObjectAttribute-9"
+alt="Project File Screenshot" /></p>
+<p>That’s pretty much it. You’ve just written your first Java logger!
+And with that first, small step, you’re ready to try larger ones.</p>
+<p>What Is Application Logging?</p>
+<p>Let’s zoom out for a second and briefly define what application
+logging is.</p>
+<p>According to <a href="https://en.wikipedia.org/wiki/Log_file"><span
+class="CharOverride-2">Wikipedia</span></a>,</p>
+<p><span class="CharOverride-5">In computing, a log file is a file that
+records either events that occur in an operating system or other
+software runs, or messages between different users of a communication
+software. Logging is the act of keeping a log. </span></p>
+<p>A little bit vague, right? I tend to prefer the definition we gave at
+the beginning of the Scalyr’s first book on logging, <a
+href="https://www.amazon.com/Getting-Started-Logging-Quickly-Possible-ebook/dp/B07H8SNT2Q"><span
+class="CharOverride-6">The Scalyr Guide to Getting Started Logging as
+Quickly as Possible</span></a>:</p>
+<p><span class="CharOverride-5">Application logging involves recording
+information about your application’s runtime behavior to a more
+persistent medium. </span></p>
+<p>With the <span class="CharOverride-5">what </span>out of the way,
+let’s get to the <span class="CharOverride-5">why</span> of logging.</p>
+<p>What’s the Motivation for Logging?</p>
+<p>I think the key part of the logging definition from the previous
+section was the word “persistent.” Why would we need to record
+information about the behavior of our app in a persistent medium?</p>
+<p>Well, for the same reason we record anything to a persistent medium:
+so we can get back to it later. The question then becomes: “Why would
+you want to do that with events that happened in an application
+execution?”</p>
+<p>It all boils down to the nature of software itself.</p>
+<p>A piece of software in production is a very complicated thing, more
+often than not running in a totally non-controlled environment. How do
+you know it’s going to work? And when things go wrong, how can you know
+what exactly went off the rails?</p>
+<p>You can always cross your fingers and hope, but as they say, hope is
+not a strategy. Logging is, though!</p>
+<p>In a nutshell, you use logging so that you can after-the-fact debug
+your application. By reading the log entries, you can understand the
+events that happened with your application, or even retrace the steps
+taken by a user, in order to diagnose and fix issues.</p>
+<p>Evolving Our Approach: What Should We Capture? And to Where?</p>
+<p>Being able to do an after-the-fact investigation on your app sounds
+like a great benefit—and indeed it is. The humble logger we just created
+isn’t able to provide us this benefit, though, since all it can do is
+write some text to a file.</p>
+<p>Our job now should be to evolve our logger, turning it into a richer
+source of information for its future readers. So how do we go about
+that?</p>
+<p>The key point to understand is the nature of a log entry. Think of a
+log entry as an event<span class="CharOverride-5">.</span> Something
+that is of interest to your application happened in a given moment in
+time. So the value of your log entry derives from the data you capture
+about the event.</p>
+<p>The following list contains some examples of data that you’ll
+probably want to capture:</p>
+<ul>
+<li>A timestamp. Exactly when did the event take place? (You’ll want to
+record times in UTC and using a standard format such as ISO-8601, in
+case you’re logging to a file.)</li>
+<li>Context that makes it clear to a reader what the entry is about.
+Just recording “Hello, user!” might prove confusing weeks or months
+later. A better message might say, “Recorded user greeting of ‘Hello,
+user!’”</li>
+<li>Tags or categories for each entry, to enable later search and
+classification.</li>
+<li>Log levels, such as <span class="CharOverride-3">Error</span>, <span
+class="CharOverride-3">Warning</span>, or <span
+class="CharOverride-3">Info</span>, that allow even more filtering and
+context.</li>
+</ul>
+<p>After deciding what things you want to capture, the next step is
+defining where you want to log to. Even though I’ve used a file in our
+first example, there’s nothing stopping you from logging to other media,
+such as a database (relational or not), the Windows event viewer, or
+even the console.</p>
+<p>Enter the Logging Framework</p>
+<p>Time to get back to our demo. Here’s the thing: this was designed to
+give you a quick start on the Java logging world. But now you’re
+equipped to look at it in a more critical way. So let’s do just
+that.</p>
+<p>As it turns out, our humble logger is inadequate in several important
+ways.</p>
+<p>For one thing, the code always overwrites the log file. A log
+strategy that only allows you to see the last event isn’t terribly
+useful, is it? Since we’re talking about overwriting the file, it
+probably wouldn’t hurt to think about file permissions, how to deal with
+concurrent access, and other things of that sort.</p>
+<p>Finally, it sounds like an awful lot of work having to write
+boilerplate code in each logging call to get log levels, timestamps, and
+all that jazz I mentioned in the previous section.</p>
+<p>I could go on and on, but you’ve got the picture: coming up with a
+sound Java logging approach requires a lot of thought. I have good news,
+though. As it turns out, people have already solved these problems. Not
+only that, they provide their solutions for you, ready to use and often
+for free<span class="CharOverride-5">,</span> in the form of a logging
+framework.</p>
+<p>A logging framework is a package you install in your application that
+provides easy and configurable logging for you. With a little bit of
+configuration, you can make one-line calls as simple as the one in our
+toy example. But this time, they’ll have consistent and nicely formatted
+log entries, and they’ll have answers to all those questions from the
+previous section.</p>
+<p>Installing a Logging Framework</p>
+<p>The first thing we’re going to do is go back to our codebase and
+delete that line that writes to the file. Then we can proceed to install
+a logging framework called <a
+href="https://logging.apache.org/log4j/2.x/"><span
+class="CharOverride-7">Log4j</span></a>. This is only one of the options
+out there, and I do encourage you to try alternatives later. But since
+this is a quick guide, it makes sense to go with Log4j because it’s a
+widely used framework.</p>
+<p>On the <span class="CharOverride-3">Project</span> tool windows,
+right-click on the <span class="CharOverride-3">JavaLoggingDemo</span>
+module and then on <span class="CharOverride-3">Add Framework
+Support...</span></p>
+<p><img src="Images/Image368.png" class="_idGenObjectAttribute-10"
+alt="Add Framework Screenshot" /></p>
+<p>Now, select <span class="CharOverride-3">Maven</span> and click <span
+class="CharOverride-3">OK</span>:</p>
+<p><img src="Images/Image375.png" class="_idGenObjectAttribute-11"
+alt="Maven Screenshot" /></p>
+<p>After you’ve done this, the IDE will create a <span
+class="CharOverride-3">pom.xml</span> file for you and open it for
+editing:</p>
+<p><img src="Images/Image382.png" class="_idGenObjectAttribute-12"
+alt="Pom XML Screenshot" /></p>
+<p>Now, use the following XML text in your file:</p>
+<p><img src="Images/Image390.png"
+class="_idGenObjectAttribute-13" /></p>
+<p>The whole file should look like this by now:</p>
+<p><img src="Images/Image397.png"
+class="_idGenObjectAttribute-14" /></p>
+<p>After adding the dependencies to the file, you should see a small
+pop-up in the bottom-right corner of your screen. Click on <span
+class="CharOverride-3">Import Changes</span> to finish the
+installation.</p>
+<p><img src="Images/Image405.png" class="_idGenObjectAttribute-15"
+alt="Import Changes Screenshot" /></p>
+<p>Configuring the Logger</p>
+<p>Now it’s time to configure Log4j. What I’m going to show you is just
+one way of doing this; it’s not the only one, and it’s probably not even
+the best one, whatever “best” may mean. But it’s definitely shorter than
+a lot of the tutorials you see out there.</p>
+<p>Pretty much all you have to do is create a configuration file and
+then write some lines of code. Don’t believe me? Well, let me just show
+you!</p>
+<p>First, go to the <span class="CharOverride-3">Project</span> tool
+window on IntelliJ. Expand the folders and locate the <span
+class="CharOverride-3">resources</span> folder, under <span
+class="CharOverride-3">JavaLoggingDemo &gt; src &gt; main</span>, just
+like in the image below:</p>
+<p><img src="Images/Image412.png" class="_idGenObjectAttribute-16"
+alt="Java Logging Demo Screenshot" /></p>
+<p>Now, right-click on the resources folder and then select <span
+class="CharOverride-3">New &gt; File</span>:<span
+class="CharOverride-3"> </span></p>
+<p><img src="Images/Image420.png" class="_idGenObjectAttribute-17"
+alt="New File Screenshot" /></p>
+<p>When you’re prompted for a name, enter <span
+class="CharOverride-3">log4j2.xml</span>. After the file is created, add
+the following text to it:</p>
+<p><img src="Images/Image429.png"
+class="_idGenObjectAttribute-18" /></p>
+<p>Editing the Code</p>
+<p>First, at the top of the file, add the following two import
+declarations:</p>
+<p><img src="Images/Image440.png"
+class="_idGenObjectAttribute-19" /></p>
+<p>Then, add the following line to the top of the <span
+class="CharOverride-3">Main </span>class, which declares a private field
+to hold the instance of the logger:</p>
+<p><img src="Images/Image455.png"
+class="_idGenObjectAttribute-20" />Finally, add the following line of
+code to where you had the call to <span
+class="CharOverride-3">Files.write(Paths.get(“log.txt”),
+message.getBytes()): </span></p>
+<p><img src="Images/Image462.png"
+class="_idGenObjectAttribute-21" /></p>
+<p>The whole class should now look like this:</p>
+<p><img src="Images/Image470.png"
+class="_idGenObjectAttribute-18" /></p>
+<p>And we’re done! Now all you have to do is run the application.</p>
+<p>Checking the Results</p>
+<p>Now, if you navigate back to the application folder, you should
+notice a new file there called <span
+class="CharOverride-3">proper.log</span>. If you open it using a text
+editor, you should see the following:</p>
+<p><img src="Images/Image477.png"
+class="_idGenObjectAttribute-22" /></p>
+<p>Let’s break this line into its components.</p>
+<p>First, we have the timestamp, <span class="CharOverride-3">2017-12-31
+15:39:29.739 , </span>in the ISO-8601-compliant format.</p>
+<p>Then we have <span class="CharOverride-3">[main]. </span>This refers
+to the name of the thread from which the event originated.</p>
+<p>Next is <span class="CharOverride-3">Info</span>, the logging
+level.</p>
+<p>Then comes <span class="CharOverride-3">com.company.Main,</span> the
+name of the class.</p>
+<p>And last but not least, the message itself: <span
+class="CharOverride-3">Hello there!</span></p>
+<p>The Power of a Logging Framework</p>
+<p>I think you’ll agree that our logger just got a lot more useful after
+the update we made. Just by creating a config file and writing a few
+lines of code, we were able to configure a realistic example of a
+logger. This isn’t all there is to it, of course, but it’s already
+enough to be useful in a real application. What’s more, it gives you a
+pretty good idea of the power a logging framework can put into your
+hands.</p>
+<p>The XML configuration file is one of the places this power really
+manifests itself. It offers you a lot of options to configure each entry
+that you log, such as the name of the log file or if the logger should
+append to it or overwrite it.</p>
+<p>A lot of the flexibility Log4j provides is due to something called an
+appender. The appender is the component that effectively writes the
+message to some medium, and there are many of them available. This means
+it’s possible to direct your logs somewhere else entirely—just by adding
+a new appender to the XML file—without even touching your application
+code.</p>
+<p>Separation of concerns at its finest, if you ask me.</p>
+<p>What’s Next?</p>
+<p>What we’ve <span id="Section0002.xhtml__idTextAnchor008"></span>seen
+in this chapter is just the tip of the iceberg. If this is your first
+time logging, make no mistake: you now have a lot of learning ahead of
+you. But you have the advantage of already having a live, functional,
+and realistic setup to work with. Start by playing with it and tweaking
+it. Here are some tips on what you can do:</p>
+<ul>
+<li>Learn how to configure different loggers, one for each log
+level.</li>
+<li>Research and try out the different appenders available.</li>
+<li>Play with the options available for the “layout” entry.</li>
+<li>Learn about the other ways you can configure Log4j.</li>
+<li>Try some new logging frameworks, once you’re confident enough with
+Log4j. You have lots of options.</li>
+</ul>
+<p>Learning something from the ground up can be an overwhelming task.
+Fortunately for you, you don’t have to do that. We’ve given you the
+fundamentals upon which you can build a solid and long-lasting body of
+knowledge.</p>
+<p>Now it’s up to you.</p>
+<p><span class="CharOverride-5">This chapter was contributed by Carlos
+Schults. </span><a href="http://carlosschults.net/"><span
+class="CharOverride-6">Carlos</span></a><span class="CharOverride-5"> is
+a software developer with experience in both desktop and web
+development, now trying his hand at mobile. He has a passion for writing
+clean and concise code, and he’s also very interested in practices that
+help you improve your app’s health.</span></p>
+</div>
+<p><span id="Section0003.xhtml"></span></p>
+<div id="Section0003.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<p><span class="CharOverride-5"> </span></p>
+<h2 class="Heading-2" id="Section0003.xhtml_sigil_toc_id_3">Chapter 3:
+Getting St<span id="Section0003.xhtml__idTextAnchor009"></span>a<span
+id="Section0003.xhtml__idTextAnchor010"></span>r<span
+id="Section0003.xhtml__idTextAnchor011"></span>te<span
+id="Section0003.xhtml__idTextAnchor012"></span>d Quickly With Log4j2
+Configuration</h2>
+<p>In the previous chapter<span class="CharOverride-8">, we used
+</span>L<span class="CharOverride-8">og4j, a logging framework from the
+Apache project. Let’s go one step further with Java application logging
+and look at </span>L<span class="CharOverride-8">og4j2
+configuration.</span></p>
+<p><span class="CharOverride-8">Log4j</span>’<span
+class="CharOverride-8">s capabilities have made it one of
+Java</span>’<span class="CharOverride-8">s most popular logging
+frameworks. It can be configured for multiple logging destinations and a
+variety of log file formats. Log messages can be filtered and directed
+at the individual class level, giving developers and operations
+personnel granular control over application messages.</span></p>
+<p><span class="CharOverride-8">Let</span>’<span
+class="CharOverride-8">s examine these mechanisms by configuring
+</span>L<span class="CharOverride-8">og4j with a command line Java
+application.</span></p>
+<p><img src="Images/Image485.png"
+class="_idGenObjectAttribute-23" /></p>
+<p>Sample Application</p>
+<p>Let’s s<span id="Section0003.xhtml__idTextAnchor013"></span>tart
+where we left off in the previous chapter: with an application that logs
+with Log4j.</p>
+<p><img src="Images/Image492.png"
+class="_idGenObjectAttribute-24" /></p>
+<p>We’re logging the same message at each of Log4j’s predefined logging
+levels: <span class="CharOverride-3">Trace</span>, <span
+class="CharOverride-3">Debug</span>, <span
+class="CharOverride-3">Info</span>, <span
+class="CharOverride-3">Warn</span>, <span
+class="CharOverride-3">Error</span>, and <span
+class="CharOverride-3">Fatal</span>.</p>
+<p>We will be using Log4j’s YAML file format, so you’ll need to add a
+few additional dependencies to your <span
+class="CharOverride-3">pom.xml</span> (or <span
+class="CharOverride-3">build.gradle</span>).</p>
+<p><img src="Images/Image500.png"
+class="_idGenObjectAttribute-25" /></p>
+<p>Set this code up so you can build and run it using your favorite Java
+tools.</p>
+<p>Essential Log4j2 Configurati<span
+id="Section0003.xhtml__idTextAnchor014"></span>on</p>
+<p>Next, let’s talk configuration.</p>
+<p>Default Configuration</p>
+<p>Let’s <span id="Section0003.xhtml__idTextAnchor015"></span>run our
+application without a Log4j configuration file. If you already have one,
+delete it or move it to another file name so that Log4j will ignore
+it.</p>
+<p>When we run the application, we see this on the console:</p>
+<p><img src="Images/Image507.png"
+class="_idGenObjectAttribute-26" /></p>
+<p>Two of the six log messages, the ones specified as <span
+class="CharOverride-3">Error</span> and <span
+class="CharOverride-3">Fatal</span>, are sent to the console.</p>
+<p>Note: Log4j has a default configuration. It will log to the console,
+showing messages classified as <span class="CharOverride-3">Error</span>
+or higher.</p>
+<p>Knowing how Log4j will behave without a configuration file is useful,
+but let’s look at how to set it up for our needs.</p>
+<p>Configuration File Location</p>
+<p>W<span id="Section0003.xhtml__idTextAnchor016"></span>e can provide
+Log4j with a configuration file in a specific location via the <span
+class="CharOverride-3">log4j.configurationFile</span> system property.
+This is the first place it will look for a configuration file.</p>
+<p>If Log4j cannot find the system property, it looks for a file in the
+classpath. Since Log4j2 supports four different file formats and two
+different file naming conventions, the rules for locating a file are
+complicated. We’ll go over how to locate a file after we cover the
+different format and naming options.</p>
+<p>Configuration File Formats</p>
+<p>Lo<span id="Section0003.xhtml__idTextAnchor017"></span>g4j will load
+Java properties and YAML, JSON, and XML configuration files. It
+identifies the file format by examining the file extension.</p>
+<ul>
+<li>For Java properties, the extension is <span
+class="CharOverride-3">.properties</span></li>
+<li>For YAML, the extensions are <span
+class="CharOverride-3">.yaml</span> or <span
+class="CharOverride-3">.yml</span></li>
+<li>For JSON, the extensions are <span
+class="CharOverride-3">.json</span> or <span
+class="CharOverride-3">.jsn</span></li>
+<li>For XML, the extension is <span
+class="CharOverride-3">.xml</span></li>
+</ul>
+<p>A file specified by the <span
+class="CharOverride-3">log4j.configurationFile</span> system property
+must have one of these file extensions, but it can have any base name.
+Log4j will parse it based on the format indicated by the extension.</p>
+<p>When Log4j scans the classpath for a file, it checks for each format
+in the order listed above and stops when it finds a match. For example,
+if it finds a YAML configuration, it will stop searching and load it. If
+there is no YAML file but it finds a JSON one, it will stop searching
+and use that instead.</p>
+<p>Configuration File Names</p>
+<p>When<span id="Section0003.xhtml__idTextAnchor018"></span> Log4j scans
+the classpath, it looks for one of two file names: <span
+class="CharOverride-3">log4j2-test.[extension]</span> or <span
+class="CharOverride-3">log4j2.[extension]</span>. It loads test files
+first, giving developers a convenient mechanism for forcing an
+application to log at the <span class="CharOverride-3">Debug </span>or
+<span class="CharOverride-3">Trace </span>levels without altering the
+standard configuration.</p>
+<p>Scanning for Configuration</p>
+<p>Wh<span id="Section0003.xhtml__idTextAnchor019"></span>en we put the
+rules for file formats and names together, we can see Log4j’s algorithm
+for configuring itself.</p>
+<p>If any of the following steps succeeds, Log4j will stop and load the
+resulting configuration file.</p>
+<ol>
+<li>Check for the <span
+class="CharOverride-3">log4j.configurationFile</span> system property
+and load the specified file if found.</li>
+<li>Search for <span
+class="CharOverride-3">log4j2-test.properties</span> in the
+classpath.</li>
+<li>Scan classpath for <span class="CharOverride-3">log4j2-test.yaml
+</span>or <span class="CharOverride-3">log4j2-test.yml</span>.</li>
+<li>Check for <span class="CharOverride-3">log4j2-test.json </span>or
+<span class="CharOverride-3">log4j2-test.jsn</span>.</li>
+<li>Search for <span class="CharOverride-3">log4j2-test.xml</span>.</li>
+<li>Look for <span class="CharOverride-3">log4j2.properties</span>.</li>
+<li>Search for <span class="CharOverride-3">log4j2.yaml</span> or <span
+class="CharOverride-3">log4j2.yml</span>.</li>
+<li>Scan classpath for <span class="CharOverride-3">log4j2.json</span>
+or <span class="CharOverride-3">log4j2.jsn</span>.</li>
+<li>Check for <span class="CharOverride-3">log4j2.xml</span>.</li>
+<li>Use the default configuration.</li>
+</ol>
+<p>Practice Proper Configuration<span
+id="Section0003.xhtml__idTextAnchor020"></span> File Hygiene</p>
+<p>There are 12 potential configuration file names for Log4j. Loading
+the wrong one can lead to lost logging information or diminished
+performance. That’s because an application may log unnecessary messages
+in a production environment.</p>
+<p>Before deploying code, make sure your application has one—and only
+one—configuration file and that you know where it is. If you insist on
+loading configuration from the classpath, scan for spurious files before
+releasing your code.</p>
+<p>Basic Configuration</p>
+<p>Now that <span id="Section0003.xhtml__idTextAnchor021"></span>we know
+how to supply a configuration to Log4j, let’s create one and use it to
+customize our application.</p>
+<p>Log4j’s Default Configuration<span
+id="Section0003.xhtml__idTextAnchor022"></span> Revisited</p>
+<p>We’ll start with the default configuration and modify our
+application’s behavior from there. Taking the hint from Log4j’s
+configuration rules, we’ll use YAML.</p>
+<p>The default configuration looks like this:</p>
+<p><img src="Images/Image515.png"
+class="_idGenObjectAttribute-27" /></p>
+<p>Create a file name <span class="CharOverride-3">log4j2.yaml</span>
+with these contents and set <span
+class="CharOverride-3">log4j.configurationFile</span> to point to its
+location.</p>
+<p>Next, run the application. You’ll see the same output as before.</p>
+<p><img src="Images/Image524.png"
+class="_idGenObjectAttribute-28" /></p>
+<p>We’ve taken control of our application’s logging configuration. Now
+let’s improve it.</p>
+<p>Log File Location</p>
+<p>The first ste<span id="Section0003.xhtml__idTextAnchor023"></span>p
+is to get our logs off of the console and into a file. To do this, we
+need to understand appenders.</p>
+<p>Appenders put log messages where they belong. The default
+configuration supplies a console appender. As the name suggests, it
+appends messages to the console.</p>
+<p><img src="Images/Image535.png"
+class="_idGenObjectAttribute-29" /></p>
+<p>We want a file appender. Let’s replace our console appender.</p>
+<p><img src="Images/Image548.png"
+class="_idGenObjectAttribute-30" /></p>
+<p>File appenders have a <span class="CharOverride-3">name</span>, just
+like console appenders. But instead of a target, they have a <span
+class="CharOverride-3">fileName</span>.</p>
+<p>Similar to console appenders, they also have a <span
+class="CharOverride-3">PatternLayout</span>, which we’ll cover
+below.</p>
+<p>The name is not just for show. If we want to replace the console
+appender with the file appender, we need to let our logger know where to
+put our log messages.</p>
+<p>So change the ref value in the logger to the file appender’s
+name.</p>
+<p><img src="Images/Image555.png"
+class="_idGenObjectAttribute-31" /></p>
+<p>Now, rerun the application. Instead of logging to the console, it
+places the messages in a file named <span
+class="CharOverride-3">logfile.log</span> in the working directory.
+We’ve moved our logs to a file!</p>
+<p>Logging Levels</p>
+<p>We still only saw t<span
+id="Section0003.xhtml__idTextAnchor024"></span>wo of our six log
+messages in our log file. Let’s talk about loggers and how they manage
+log messages.</p>
+<p>Our basic configuration defines a single logger.</p>
+<p><img src="Images/Image563.png"
+class="_idGenObjectAttribute-32" /></p>
+<p>It has a level of <span class="CharOverride-3">Error</span>, so it
+only prints messages that are <span class="CharOverride-3">Error
+</span>or <span class="CharOverride-3">Fatal</span>.</p>
+<p>When a logger receives a log message, it passes it on or filters it
+based on its configured level. This table shows the relationship between
+logger configuration and log message level.</p>
+<p><img src="Images/Image570.png"
+class="_idGenObjectAttribute-33" /></p>
+<p>So if we change the level of our logger, we’ll see more messages. Set
+it to <span class="CharOverride-3">Debug</span>.</p>
+<p><img src="Images/Image578.png"
+class="_idGenObjectAttribute-34" /></p>
+<p>Next, rerun the program. The application logs all of the messages
+that are <span class="CharOverride-3">Debug</span> level or higher.</p>
+<p>Logger Hierarchy</p>
+<p>Log4j arranges logge<span
+id="Section0003.xhtml__idTextAnchor025"></span>rs in a hierarchy. This
+makes specifying a different configuration for individual classes
+possible.</p>
+<p>Let’s change our application and see this in action.</p>
+<p><img src="Images/Image585.png"
+class="_idGenObjectAttribute-33" /></p>
+<p>We’ve added an inner class that creates a logger and logs a message
+with it.</p>
+<p>After <span class="CharOverride-3">Main</span> does its logging, it
+calls <span class="CharOverride-3">LoggerChild</span>.</p>
+<p>If we run this with our current config, we see the new message and
+that it’s logged from a different class.</p>
+<p><img src="Images/Image593.png"
+class="_idGenObjectAttribute-35" /></p>
+<p>Loggers have a class hierarchy similar to Java’s. All loggers are
+descendants of the <span class="CharOverride-3">Root</span> logger we’ve
+been working with so far. Loggers that lack any specific configuration
+inherit the <span class="CharOverride-3">Root</span> configuration.</p>
+<p>So when <span class="CharOverride-3">Main </span>and <span
+class="CharOverride-3">LoggerChild </span>create loggers using their
+class name, these loggers inherit <span
+class="CharOverride-3">Root</span>’s configuration, which is to send
+<span class="CharOverride-3">Debug </span>level and higher messages to
+the <span class="CharOverride-3">File_Appender.</span></p>
+<p>We can override this specifying configuration for the two
+loggers.</p>
+<p><img src="Images/Image600.png"
+class="_idGenObjectAttribute-36" /></p>
+<p>Loggers are named in the <span class="CharOverride-3">logger</span>
+section. Since we’re listing two, we use the YAML array syntax.</p>
+<p>We set <span class="CharOverride-3">com.company.Main</span> logger to
+<span class="CharOverride-3">Error </span>and <span
+class="CharOverride-3">com.company.Main.LoggerChild</span> to <span
+class="CharOverride-3">Debug</span>.</p>
+<p>The <span class="CharOverride-3">additivity</span> setting controls
+whether or not Log4j will send messages from a logger’s ancestor to a
+descendant. If set to <span class="CharOverride-3">true</span>, both
+loggers will process the same message. Some systems want to add the same
+message to two different logs. We don’t want this behavior, so we’ve
+overridden the default and specified <span
+class="CharOverride-3">false.</span></p>
+<p>Now run the program again:</p>
+<p><img src="Images/Image608.png"
+class="_idGenObjectAttribute-37" /></p>
+<p>We only saw the error message from <span
+class="CharOverride-3">Main</span> but still saw the debug message from
+<span class="CharOverride-3">LoggerChild</span>!</p>
+<p>More Than One Appender</p>
+<p>Just like we can h<span
+id="Section0003.xhtml__idTextAnchor026"></span>ave more than one logger,
+we can have more than one appender.</p>
+<p>Let’s make a few changes to our configuration.</p>
+<p>Add a second file appender. To do this, create a list with the
+original appender and the second one with a different name and file.
+Your <span class="CharOverride-3">Appenders</span> section should look
+like this:</p>
+<p><img src="Images/Image618.png"
+class="_idGenObjectAttribute-38" /></p>
+<p>Next, point the <span class="CharOverride-3">LoggerChild</span>
+logger at the new appender. Your <span
+class="CharOverride-3">Loggers</span> section will look like this.</p>
+<p><img src="Images/Image629.png"
+class="_idGenObjectAttribute-39" /></p>
+<p>Now run the application. You’ll see two different log files, each
+with the messages from their associated classes.</p>
+<p>Log Message Formatting</p>
+<p>Each of our appender<span
+id="Section0003.xhtml__idTextAnchor027"></span>s has a <span
+class="CharOverride-3">PatternLayout</span>.</p>
+<p><img src="Images/Image642.png"
+class="_idGenObjectAttribute-40" /><span
+class="CharOverride-3">PatternLayout </span>is an instance of a Log4j
+layout class. Log4j has built-in layouts for logging messages in CSV,
+JSON, Syslog, and a variety of different formats.</p>
+<p><span class="CharOverride-3">PatternLayout </span>has a set of
+operators for formatting messages that works like C’s <span
+class="CharOverride-3">sprintf</span> function. By specifying a pattern,
+we control the format of log messages when they’re written by the
+appender.</p>
+<p>Our layout string looks like this:</p>
+<p><img src="Images/Image649.png"
+class="_idGenObjectAttribute-41" /></p>
+<p>Each <span class="CharOverride-3">% </span>corresponds to a field in
+a log message.</p>
+<p><img src="Images/Image657.png"
+class="_idGenObjectAttribute-42" /></p>
+<p>There are many additional operators for <span
+class="CharOverride-3">PatternLayout</span>, too, which you can explore
+on your own.</p>
+<p>Variable Replacement</p>
+<p>Configuration files can b<span
+id="Section0003.xhtml__idTextAnchor028"></span>ecome repetitive as
+appenders and loggers multiply. Log4j supports variable substitution to
+help reduce repetition and make things easier to maintain. Let’s refine
+our configuration with the use of <span
+class="CharOverride-3">Properties</span>.</p>
+<p><img src="Images/Image664.png"
+class="_idGenObjectAttribute-43" /></p>
+<p>At the top of the file, we declared two <span
+class="CharOverride-3">Properties,</span> one named <span
+class="CharOverride-3">LogDir</span> and another <span
+class="CharOverride-3">DefaultPattern</span>.</p>
+<p>After declaring a property, it can be used in the configuration using
+braces and a dollar sign: <span class="CharOverride-3">${LogDir}
+</span>or <span class="CharOverride-3">${DefaultPattern}</span>.</p>
+<p>LogDir is a subdirectory name we added to the names of the two log
+files. When we run the application, Log4j will create this directory and
+place the log files there.</p>
+<p>We specified <span class="CharOverride-3">DefaultPattern</span> as
+the pattern layout for our two log files, moving the definition to one
+place. If we want to modify our log file format, we only have to worry
+about changing it once now.</p>
+<p>Log4j can also import properties from the environment. (You can read
+more about this <a
+href="https://logging.apache.org/log4j/2.x/manual/configuration.html#Property_Substitution"><span
+class="CharOverride-2">on the Apache Logging Services
+website.</span></a>) For example, if we want to import the log file
+directory from a Java system property, we specify it as <span
+class="CharOverride-3">${sys</span>:<span
+class="CharOverride-3">LogDir}</span> in the Log4j configuration and set
+a <span class="CharOverride-3">LogDir</span> system property to the
+desired directory.</p>
+<p>Automatic Reconfiguration</p>
+<p>Log4j can reload its <span
+id="Section0003.xhtml__idTextAnchor029"></span>configuration at a
+periodic interval, giving us the ability to change an application’s
+logging configuration without restarting it.</p>
+<p>Add the <span class="CharOverride-3">monitorInterval</span> setting
+to the <span class="CharOverride-3">Configuration</span> section of the
+file and Log4j will scan the file at the specified interval.</p>
+<p><img src="Images/Image672.png"
+class="_idGenObjectAttribute-44" /></p>
+<p>The interval is specified in seconds.</p>
+<p>Conclusion</p>
+<p>Log4j is a powerful logging framework<span
+id="Section0003.xhtml__idTextAnchor030"></span> that allows us to
+configure our applications to log in a variety of different ways, with
+granular control over how different components use log files. This
+tutorial covered the basic aspects of configuring Log4j, but there’s
+much more to learn. You can learn about Log4j configuration on the
+project’s <a
+href="https://logging.apache.org/log4j/2.x/manual/configuration.html"><span
+class="CharOverride-2">website</span></a>.</p>
+<p><span class="CharOverride-5">This chapter was contributed by Eric
+Goebelbecker. </span><a href="http://ericgoebelbecker.com/"><span
+class="CharOverride-9">Eric</span></a><span class="CharOverride-5"> has
+worked in the financial markets in New York City for 25 years,
+developing infrastructure for market data and financial information
+exchange (FIX) protocol networks. He loves to talk about what makes
+teams effective (or not so effective!).</span></p>
+</div>
+<p><span id="Section0004.xhtml"></span></p>
+<div id="Section0004.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<h2 class="Heading-2" id="Section0004.xhtml_sigil_toc_id_4">Chapter 4:
+Getting Started Quickly With PHP Logg<span
+id="Section0004.xhtml__idTextAnchor031"></span>ing</h2>
+<p>In this chapter, let’s discuss logging techniques in a very popular
+language: PHP.</p>
+<p>I’ll open with a quick example of manual logging in PHP. Then I’ll
+revisit the details discussed in chapter two of this book—details about
+why logging matters and what your logs should show. And lastly, I’ll
+show you how to set up and use the most popular PHP logging
+framework.</p>
+<p>Let’s get started, then!</p>
+<p><img src="Images/Image679.png"
+class="_idGenObjectAttribute-45" /></p>
+<p>A (Super Simple) Example of PHP Logging</p>
+<p><span class="CharOverride-8">For the p<span
+id="Section0004.xhtml__idTextAnchor032"></span>urpose of this tutorial,
+I</span>’<span class="CharOverride-8">ll be using Linux with a clean
+installation of the </span><a
+href="https://www.digitalocean.com/community/tags/lamp-stack?type=tutorials"><span
+class="CharOverride-2">LAMP stack</span></a><span
+class="CharOverride-8">. You might need to adjust the tools and the
+commands if you</span>’<span class="CharOverride-8">re using Mac or
+Windows instead of Linux.</span></p>
+<p><span class="CharOverride-8">Navigate to the </span><span
+class="CharOverride-10">/var/www/html </span><span
+class="CharOverride-8">folder and delete a file named </span><span
+class="CharOverride-10">index.html </span><span
+class="CharOverride-8">from there:</span></p>
+<p><img src="Images/Image687.png"
+class="_idGenObjectAttribute-46" /></p>
+<p><span class="CharOverride-8">Then create a new file </span><span
+class="CharOverride-10">index.php</span><span class="CharOverride-8">
+and open it in your favorite text editor (I</span>’<span
+class="CharOverride-8">m using Emacs):</span></p>
+<p><img src="Images/Image694.png"
+class="_idGenObjectAttribute-47" /></p>
+<p>Add the following HTML code into <span
+class="CharOverride-3">index.php</span>:</p>
+<p><img src="Images/Image702.png"
+class="_idGenObjectAttribute-48" /></p>
+<p>This HTML code will create a simple subscription form. To see the
+resulting page, open your browser and go to <span
+class="CharOverride-3">http://localhost</span>:</p>
+<p><img src="Images/Image711.png"
+class="_idGenObjectAttribute-49" /></p>
+<p>Even though you can see the form in the browser, it doesn’t do
+anything useful right now. To make it functional, add the following PHP
+script at the top of the <span class="CharOverride-3">index.php</span>
+file, before the HTML code:</p>
+<p><img src="Images/Image722.png"
+class="_idGenObjectAttribute-50" /></p>
+<p>The above code will extract the name and email parameters from the
+submitted request and pass them into the subscribe function, which will
+have the code that takes care of subscribing new users. But since this
+tutorial is about logging, I’ll leave the subscribe function’s body
+empty for now.</p>
+<p>Now, let’s say you want a log file that keeps track of all
+subscription requests alongside their respective parameters. You can do
+that by adding just two lines right before a call to the <span
+class="CharOverride-3">subscribe </span>function:</p>
+<p><img src="Images/Image736.png"
+class="_idGenObjectAttribute-51" /></p>
+<p>The additional two lines of code will call to PHP’s <span
+class="CharOverride-3">file_put_contents </span>function that will
+append a new log message to the contents of <span
+class="CharOverride-3">server.log</span> file.</p>
+<p>Now if you open <span class="CharOverride-3">http://localhost</span>
+in your browser, populate the input fields, and click on the <span
+class="CharOverride-3">subscribe</span> button, this script will create
+a new file named <span class="CharOverride-3">server.log</span> in the
+<span class="CharOverride-3">/var/www/html </span>directory and write
+the log entry into it. I can read the contents of this file using cat
+command:</p>
+<p><img src="Images/Image743.png"
+class="_idGenObjectAttribute-52" /></p>
+<p>Congratulations! You’ve logged your first entry written in PHP.</p>
+<p>Now, let’s back up a bit.</p>
+<p>What Is Application Logging?</p>
+<p><span class="CharOverride-8">You probably already have a<span
+id="Section0004.xhtml__idTextAnchor033"></span>n intuitive understanding
+of what logging is, but it</span>’<span class="CharOverride-8">s still
+worth taking the time to go over a proper definition we can build upon.
+</span>W<span class="CharOverride-8">e </span>previously<span
+class="CharOverride-8"> defined application logging like
+this:</span></p>
+<p><span class="CharOverride-5">Application logging involves recording
+information about your application’s runtime behavior to a more
+persistent medium.</span></p>
+<p><span class="CharOverride-8">There are two important points to note
+here.</span></p>
+<p><span class="CharOverride-8">First, logging is all about the
+application</span>’<span class="CharOverride-8">s runtime behavior. In
+other words, it involves recording the application</span>’<span
+class="CharOverride-8">s events as a function of time.</span></p>
+<p><span class="CharOverride-8">Second, you always want to store logs in
+a more persistent medium. The exact meaning of </span>“<span
+class="CharOverride-8">more persistent</span>”<span
+class="CharOverride-8"> will vary depending on your requirements and
+environment, but at the very least, you</span>’<span
+class="CharOverride-8">ll want to be able to read the logs even if the
+application—or the entire server—crashes.</span></p>
+<p><span class="CharOverride-8">While this definition explains what
+logging </span><span class="CharOverride-11">is</span><span
+class="CharOverride-8">, it doesn</span>’<span class="CharOverride-8">t
+explain </span><span class="CharOverride-11">why you</span><span
+class="CharOverride-5">’</span><span class="CharOverride-11">d want to
+use logging</span><span class="CharOverride-8"> in your application.
+That</span>’<span class="CharOverride-8">s an important question, and
+I</span>’<span class="CharOverride-8">d like to address it in
+detail.</span></p>
+<p>Why Log?</p>
+<p>If we lived in an ideal world, our applications<span
+id="Section0004.xhtml__idTextAnchor034"></span> would just work exactly
+as we planned. However, the reality is that even well-constructed
+applications have bugs and will be at risk of crashing at one point or
+another.</p>
+<p>When you develop on your personal computer and encounter errors,
+they’re usually relatively simple to resolve. After all, you know what
+you’ve been working on and what sequence of events led to the error. In
+addition, you can develop in debug mode, which gives you lots of
+additional information about the system.</p>
+<p>But at some point, you need to release the application to your users.
+They will use it in original ways and in environments you couldn’t have
+imagined, and there will potentially be many of them using the
+application concurrently. Plus, your application will need to function
+for much longer periods of time. Debugging errors in this situation is
+impossible without additional information.</p>
+<p>Enter logging.</p>
+<p>Having a record of your application’s past runtime behavior allows
+you to investigate all kinds of undesired behavior post-factum. In other
+words, even if your application crashes and loses all its runtime state,
+you’ll still be able to understand what led to that crash using
+application’s logs.</p>
+<p>But the usefulness of logs doesn’t stop there. Logs become priceless
+when users report bugs. They can audit your application, including
+regulatory audits required in specific business domains. Or they can be
+processed and analyzed in real time to warn you about potential
+performance issues. That’s just to name a few things.</p>
+<p>In short, application logging is a must for production applications
+because it gives you visibility into your application’s runtime
+history.</p>
+<p>What Should You Log?</p>
+<p>The simple logging approach from th<span
+id="Section0004.xhtml__idTextAnchor035"></span>e beginning of this
+chapter fulfills the persistence requirement because it stores the logs
+in a file. However, it’s not great for recording runtime behavior
+because it doesn’t tell you exactly when each specific event
+happened.</p>
+<p>This leads to a more general question: what information should be
+logged?</p>
+<p>It’s a widespread practice to include at least the following
+information in each log entry:</p>
+<ul>
+<li>A timestamp that states exactly when the event described by the log
+entry happened. To make your life easier, use properly formatted <a
+href="https://en.wikipedia.org/wiki/ISO_8601"><span
+class="CharOverride-7">ISO 8601</span></a> date/time in UTC.</li>
+<li>Event context that is descriptive. For example, it would be a bad
+idea to log <span class="CharOverride-3">name: testName; email:
+test@test.com</span> because a month from now, you’ll probably forget
+what this means. Here’s some context to make the log entry more
+descriptive: <span class="CharOverride-3">Subscription; user: testName
+email: test@test.com</span>.</li>
+<li>Log severity level, such as <span
+class="CharOverride-3">Error</span>, <span
+class="CharOverride-3">Warning</span>, <span
+class="CharOverride-3">Info</span>, etc. This information provides
+additional context and allows you to easily filter logs by
+severity.</li>
+</ul>
+<p>I suggest that you treat the above list as the absolute baseline for
+your logging strategy and don’t log less information than that.
+Otherwise, you’ll have a hard time reading your logs and making sense of
+them.</p>
+<p>Make Logging Easier With the Monolog Framework</p>
+<p>In the ex<span id="Section0004.xhtml__idTextAnchor036"></span>ample
+at the beginning of this chapter, I showed you how to do basic logging
+in PHP. However, my solution didn’t log timestamps and severity levels,
+which, as you now know, are two mandatory pieces of information that
+must be included in each log entry.</p>
+<p>Sure, I can add more code and enhance my solution to accommodate more
+advanced needs, but that would be a waste. See, I do logging only
+because I need to—it’s not really part of my application’s
+functionality. Therefore, each minute I spend on implementing logging
+solutions is one less minute I have to work on the core functionality of
+my application.</p>
+<p>Luckily, my logging needs are very similar to the needs of millions
+of other developers, so this problem has already been solved in form of
+logging frameworks. These are third-party libraries that I can import
+and use in my project without having to concern myself with exactly how
+they work. In other words, there’s no need for me to reinvent the wheel
+when it comes to logging.</p>
+<p>The most popular logging framework for PHP is <a
+href="https://github.com/Seldaek/monolog"><span
+class="CharOverride-7">Monolog</span></a>. In the next sections, I’ll
+show you how you can use it in your projects.</p>
+<p>Installing Monolog PHP Logging Framework</p>
+<p>If you’re devel<span
+id="Section0004.xhtml__idTextAnchor037"></span>oping your application
+using a PHP framework (like Laravel, for example), chances are this
+framework already integrates with Monolog. Check your framework’s
+documentation for details.</p>
+<p>Since I’m working with a very simple PHP project, I can show you how
+to install and use Monolog from scratch.</p>
+<p>First, you’ll need to install the PHP <a
+href="https://getcomposer.org/doc/00-intro.md"><span
+class="CharOverride-7">Composer</span></a> package manager. The
+following commands will achieve that:</p>
+<p><img src="Images/Image751.png"
+class="_idGenObjectAttribute-53" /></p>
+<p>Once you’ve got Composer on your machine, go to the root directory of
+your project at <span class="CharOverride-3">/var/www/html/</span> and
+execute the following command:</p>
+<p><img src="Images/Image758.png"
+class="_idGenObjectAttribute-54" /></p>
+<p>This command will create <span
+class="CharOverride-3">vendor/directory</span> and import Monolog files
+there. The next step will be to make use of Monolog from within the PHP
+code.</p>
+<p>Using Monolog</p>
+<p>To use Monolog in your code, you’ll need to <span
+id="Section0004.xhtml__idTextAnchor038"></span>load it as a dependency.
+For this purpose, Composer conveniently generated an <span
+class="CharOverride-3">autoload.php</span> file that you can access from
+your code.</p>
+<p>Put the following code at the top of your PHP script in an <span
+class="CharOverride-3">index.php</span> file:</p>
+<p><img src="Images/Image766.png"
+class="_idGenObjectAttribute-55" /></p>
+<p>And right after that, specify two specific Monolog dependencies that
+you’re going to use:</p>
+<p><img src="Images/Image773.png"
+class="_idGenObjectAttribute-56" /></p>
+<p>Logger is the object that generates logs, and <a
+href="https://docs.python.org/2/library/logging.handlers.html"><span
+class="CharOverride-7">StreamHandler</span></a> is a special object that
+Logger uses internally to write logs to files. As you might guess,
+Monolog supports different handlers that allow you to route the logs
+into different mediums.</p>
+<p>So far, you’ve loaded Monolog and imported specific dependencies. Now
+instantiate a new <span class="CharOverride-3">Logger</span> and name it
+<span class="CharOverride-3">SimpleLogger</span>:</p>
+<p><img src="Images/Image781.png"
+class="_idGenObjectAttribute-57" /></p>
+<p>Next, use StreamHandler to make sure the logger stores the logs into
+your existing <span class="CharOverride-3">server.log</span> file:</p>
+<p><img src="Images/Image788.png"
+class="_idGenObjectAttribute-58" /></p>
+<p>The second parameter in StreamHandler’s constructor defines the
+lowest severity level it picks up. Since you want it to capture all log
+entries in this case, specify the lowest severity level, which is <span
+class="CharOverride-3">Debug</span>.</p>
+<p>After setting up the <span class="CharOverride-3">Logger</span>
+object, you can replace your old logging implementation with Monolog’s
+logger. So, delete this line:</p>
+<p><img src="Images/Image796.png"
+class="_idGenObjectAttribute-59" /></p>
+<p>Now replace it with the following call:</p>
+<p><img src="Images/Image805.png"
+class="_idGenObjectAttribute-60" /></p>
+<p>As you can see, even though you had to do a bit of upfront setup,
+this process made logging much simpler. Given that in real applications
+you might want to log hundreds of events, this conciseness will become
+very handy.</p>
+<p>All in all, your <span class="CharOverride-3">index.php</span> file
+should look like this:</p>
+<p><img src="Images/Image819.png"
+class="_idGenObjectAttribute-61" /></p>
+<p>Reading Monolog Logs</p>
+<p>If you go to <span class="CharOverride-3">http://localhost</span> in
+your browse<span id="Section0004.xhtml__idTextAnchor039"></span>r again,
+specify the same user details, and click on subscribe, a new log entry
+will be added to <span class="CharOverride-3">server.log</span> file.
+Let’s contrast the original log entry from the first example with the
+one generated by Monolog.</p>
+<p>Here’s the original log entry:</p>
+<p><img src="Images/Image833.png"
+class="_idGenObjectAttribute-62" /></p>
+<p>And here’s what Monolog produced:</p>
+<p><img src="Images/Image840.png"
+class="_idGenObjectAttribute-63" /></p>
+<p>As you see, Monolog automatically added the following information to
+the log entry:</p>
+<ul>
+<li>Timestamp</li>
+<li>Logger name</li>
+<li>Log severity level</li>
+</ul>
+<p>And the best part is that you didn’t need to write all this stuff
+yourself.</p>
+<p>The only issue with this log entry is that the timestamp is not UTC.
+There are at least two ways to fix that:</p>
+<ol>
+<li>Specify UTC timezone when instantiating <span
+class="CharOverride-3">Logger</span>.</li>
+<li>Specify UTC timezone for the entire PHP script.</li>
+</ol>
+<p>In most cases, you’ll want your entire application to use UTC time,
+so I suggest adding the following method call at the top of your PHP
+script:</p>
+<p><img src="Images/Image848.png"
+class="_idGenObjectAttribute-64" /></p>
+<p>All date and time function calls following this line will use UTC
+timezone by default—very useful.</p>
+<p>What Now?</p>
+<p>In this chapter I’ve explained the basics of logging in PH<span
+id="Section0004.xhtml__idTextAnchor040"></span>P, which should be enough
+to get you started. Still, you might want to search for more advanced
+information to solidify your understanding.</p>
+<p>If you’re going to use Monolog (as you probably should), invest some
+time into reading its <a
+href="https://github.com/Seldaek/monolog/blob/master/doc/01-usage.md"><span
+class="CharOverride-7">documentation</span></a>. This logging framework
+is extremely powerful and configurable, which allows you to support
+basically any logging requirements.</p>
+<p>As your applications grow in size and as your log files become more
+complex, you might find it challenging to make sense of them even if you
+follow all best practices. That’s where <a
+href="%20https://www.scalyr.com/blog/log-aggregation-help/"><span
+class="CharOverride-7">log aggregation tools</span></a> can be
+lifesavers. These tools help you aggregate, process, search, and
+visualize your logs, making it easier to find what you need in the vast
+ocean of log entries.</p>
+<p>So go ahead and use application logging in your PHP projects! And
+remember: you should probably err on the side of logging more than you
+currently think you need.</p>
+<p><span class="CharOverride-11">This </span><span
+class="CharOverride-5">chapter was contributed</span><span
+class="CharOverride-11"> by Vasiliy Zukanov. </span><a
+href="https://www.techyourchance.com/"><span
+class="CharOverride-9">Vasily</span></a><span class="CharOverride-11">
+worked in the semiconductor industry and then became a software engineer
+specializing in Android. After several years of 9-5 jobs, he decided to
+go into Android dev freelancing. Currently, he consults and creates
+Android video courses for developers.</span></p>
+</div>
+<p><span id="Section0005.xhtml"></span></p>
+<div id="Section0005.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<h2 class="Heading-2 ParaOverride-1"
+id="Section0005.xhtml_sigil_toc_id_5">Chapter 5: Getting Started Quickly
+With Ruby Logging</h2>
+<p>Let’s conti<span
+id="Section0005.xhtml__idTextAnchor041"></span>n<span
+id="Section0005.xhtml__idTextAnchor042"></span>ue<span
+id="Section0005.xhtml__idTextAnchor043"></span> to get started logging
+quickly, this time with Ruby.</p>
+<p>We’ve talked about many languages so far. So, what about tipping the
+scale to the side of dynamically-typed interpreted languages? That’s
+exactly what we’re doing in this chapter by teaching you how to get up
+and running with logging using the Ruby programming language.</p>
+<p>This chapter will cover:</p>
+<ul>
+<li>How to implement a very rudimentary logger.</li>
+<li>My take on the fundamentals of logging: why bother logging, what
+data to log, and where to log.</li>
+<li>Finally, a very simple yet realistic example of proper logging, with
+help from the Ruby <span class="CharOverride-3">Logger</span>
+class.</li>
+</ul>
+<p>As in the previous chapters, we’ll create a very simple toy app in
+order to demonstrate how to log. And we’ll start with a very
+primitive—though functional—approach. We’ll then evolve it toward a more
+sophisticated and realistic solution.</p>
+<p><img src="Images/Image855.png" class="_idGenObjectAttribute-65"
+alt="Ruby With Scalyr Colors" /></p>
+<p>Some Words About Ruby and Rails</p>
+<p>Before we jump into the logging part, I figured it’d be useful to set
+the scene. The Ruby language first appeared in 1995, created by Yukihiro
+Matsumoto, aka Matz. But it really gained popularity after 2005, largely
+due to the very successful Ruby On Rails web framework.</p>
+<p>Even though many (or even most) developers get to know Ruby thanks to
+Rails, Ruby itself is a general-purpose language that can be used in a
+variety of situations, not just when building web applications. For that
+reason, this chapter won’t cover logging in Rails—that’s covered fully
+in the next chapter. But here, we’ll explore logging in the context of a
+simple command-line Ruby application.</p>
+<p>With that out of the way, I think it’s time to get our hands dirty.
+Let’s start.</p>
+<p>The Simplest Ruby Logging That Could Possibly Work</p>
+<p>For our demo, I’m going to use <a
+href="https://www.jetbrains.com/ruby/"><span
+class="CharOverride-2">JetBrain</span></a><a
+href="https://www.jetbrains.com/ruby/"><span
+class="CharOverride-2">’</span></a><a
+href="https://www.jetbrains.com/ruby/"><span class="CharOverride-2">s
+RubyMine IDE</span></a>. Also, make sure you’ve got <a
+href="https://www.ruby-lang.org"><span
+class="CharOverride-2">Ruby</span></a> installed.</p>
+<p>Once you’re all set up and good to go, open RubyMine and click on
+<span class="CharOverride-3">Create New Project</span>:</p>
+<p><img src="Images/Image864.png" class="_idGenObjectAttribute-3"
+alt="http://blog.scalyr.com/wp-content/uploads/2018/02/Screenshot-2018-02-22-20.45.42.png" /></p>
+<p>In the next screen, you’ll be asked to choose the project’s type:</p>
+<p><img src="Images/Image871.png" class="_idGenObjectAttribute-3"
+alt="http://blog.scalyr.com/wp-content/uploads/2018/02/Screenshot-2018-02-22-20.52.59.png" /></p>
+<p>As I already mentioned, we’re not creating a Rails app but rather a
+simple Ruby app. So choose <span class="CharOverride-3">Empty
+Project</span>, which is the first option under <span
+class="CharOverride-3">Ruby</span> on the left bar. The next step is to
+set the location/name for your project. After doing that, select the
+location of the Ruby SDK:</p>
+<p><img src="Images/Image879.png" class="_idGenObjectAttribute-66"
+alt="http://blog.scalyr.com/wp-content/uploads/2018/03/Highlighted.png" /></p>
+<p>Once you’re done, click on the <span
+class="CharOverride-3">Create</span> button. We’ve successfully created
+a new Ruby project on RubyMine. Time to start coding.</p>
+<p>First, let’s add a class. Go to <span class="CharOverride-3">File
+&gt; New... &gt; Ruby class</span>:</p>
+<p><img src="Images/Image886.png" class="_idGenObjectAttribute-67"
+alt="http://blog.scalyr.com/wp-content/uploads/2018/02/add-new-ruby-class.png" /></p>
+<p>Name it <span class="CharOverride-3">Greeter</span> and click on
+<span class="CharOverride-3">OK</span>:</p>
+<p><img src="Images/Image894.png" class="_idGenObjectAttribute-68"
+alt="http://blog.scalyr.com/wp-content/uploads/2018/02/Screenshot-2018-02-22-21.22.03.png" /></p>
+<p>RubyMine will create the class and open it up for editing. Let’s add
+a <span class="CharOverride-3">Greet</span> method that will receive a
+user’s name as input and print a friendly greeting:</p>
+<p><img src="Images/Image903.png" class="_idGenObjectAttribute-7" /></p>
+<p>Nice. Now let’s add a new file. Go to the <span
+class="CharOverride-3">File</span> menu, then <span
+class="CharOverride-3">New...</span>, and finally click on <span
+class="CharOverride-3">File</span>. When the dialog box shows up, enter
+<span class="CharOverride-3">main.rb</span> as the file name and click
+on <span class="CharOverride-3">OK</span>:</p>
+<p><img src="Images/Image914.png" class="_idGenObjectAttribute-69"
+alt="http://blog.scalyr.com/wp-content/uploads/2018/02/Screenshot-2018-02-22-21.50.45.png" /></p>
+<p>This file will serve as the entry point for our little toy app.
+Insert the following code into it:</p>
+<p><img src="Images/Image927.png"
+class="_idGenObjectAttribute-70" /></p>
+<p>This code should be very easy to understand. On the first line, we
+load the <span class="CharOverride-3">greeter.rb</span> file so we can
+access the <span class="CharOverride-3">Greeter</span> class we’ve
+defined.</p>
+<p>Following this, we print a request to the user to type their name.
+Then we read from <span class="CharOverride-3">stdin</span> and assign
+the value to a new variable called <span
+class="CharOverride-3">name</span>. On the next line, we create a new
+instance of the <span class="CharOverride-3">Greeter</span> class and
+assign it to a variable of the same name. Finally, we call the <span
+class="CharOverride-3">Greet</span> method on <span
+class="CharOverride-3">Greeter</span>, passing the name we read from
+<span class="CharOverride-3">stdin</span> as a parameter.</p>
+<p>Time to run our app. Go to the <span
+class="CharOverride-3">Run</span> menu and choose the first option, as
+is shown in the figure below:</p>
+<p><img src="Images/Image934.png" class="_idGenObjectAttribute-71"
+alt="http://blog.scalyr.com/wp-content/uploads/2018/02/run-main.png" /></p>
+<p>Alternatively, use the shortcut <span
+class="CharOverride-3">SHIFT+F10</span> on Windows and Linux or <span
+class="CharOverride-3">CTRL+R </span>on Mac. If everything goes well,
+you should see something like this on the <span
+class="CharOverride-3">Run</span> tool window:</p>
+<p><img src="Images/Image942.png" class="_idGenObjectAttribute-72"
+alt="http://blog.scalyr.com/wp-content/uploads/2018/02/pleas-type.png" /></p>
+<p>Type your name and press <span class="CharOverride-3">Enter</span>,
+and you should see this:</p>
+<p><img src="Images/Image949.png" class="_idGenObjectAttribute-70"
+alt="http://blog.scalyr.com/wp-content/uploads/2018/02/hi-carlos.png" /></p>
+<p>Well, not <span class="CharOverride-5">exactly </span>this, of
+course. Unless your name is also Carlos, in which case I congratulate
+your parents on their good taste in names.</p>
+<p>Jokes aside, we’ve got our little toy app up and running! It
+successfully displays a greeting to the user. But now let’s say someone
+decided this isn’t enough. We also need to register the greetings
+somewhere, which can really come in handy in several ways. How to go
+about that? There’s no shortage of options, of course, but since this is
+meant to get you logging as quickly as possible, we don’t really want to
+get fancy.</p>
+<p>Go back to the <span class="CharOverride-3">Greeter</span> class and
+edit it so it looks like this:</p>
+<p><img src="Images/Image957.png"
+class="_idGenObjectAttribute-73" /></p>
+<p>Not a lot of changes. We’ve just added a new line of text that writes
+the greeting to a file. There’s also a new variable, <span
+class="CharOverride-3">message</span>, that exists just to prevent
+duplication. So, run the app again, type your name, and the app should
+continue behaving the exact same way.</p>
+<p>But now navigate to the project folder and you’ll see a new file
+there, accompanying the project’s source files:</p>
+<p><img src="Images/Image964.png" class="_idGenObjectAttribute-74"
+alt="http://blog.scalyr.com/wp-content/uploads/2018/02/log-file.png" /></p>
+<p>Open the file and you should see the greeting message. And that’s it.
+If this was your first attempt at logging with Ruby, congrats—you were
+successful!</p>
+<p>What Is Application Logging?</p>
+<p>As a starting point for discussion, let’s repeat the definition of
+application logging shared early on in this book.</p>
+<p><span class="CharOverride-5">Application logging involves recording
+information about your application’s runtime behavior to a more
+persistent medium. </span></p>
+<p>This definition is, in my opinion, as good as it gets; it’s short,
+easy, and to the point. I don’t really feel the need to add more to it,
+which lets us get to a more interesting question: why log?</p>
+<p>What’s the Motivation for Logging?</p>
+<p>Why bother logging? Basically, we log for the same reasons we record
+any kind of information—so we can get back to it later. In the case of
+your application behavior, there are many ways in which this can come in
+handy.</p>
+<p>It probably goes without saying, but software is a massively
+complicated thing. While you’re developing it, you hopefully employ
+techniques, tools, and principles to try to ensure its correctness.</p>
+<p>But when the time for release comes and you set your application free
+into the world, you’re basically giving up control. Things can go wrong,
+and they often do. If you don’t have a proper strategy for monitoring
+your application’s behavior in production, you’re basically running
+blind. Without logging, you can’t know things like</p>
+<ul>
+<li>If everything is OK.</li>
+<li>What happened, exactly, when something goes wrong. You also won’t
+know when or how it happened.</li>
+<li>Which features people use the most and which ones they don’t they
+use at all.</li>
+<li>Which area of the application is responsible for most crashes.</li>
+</ul>
+<p>As we’ve seen, application logging is essential not only to help you
+understand and fix errors but also to help you gather data so you
+understand the needs of your users.</p>
+<p>Evolving Our Approach: What Should We Capture? And Where Should We
+Store It?</p>
+<p>Being able to put on your detective hat by investigating your
+application’s log files can bring several benefits, as we’ve just seen.
+Our toy log, in its current form, isn’t quite there yet. It just writes
+the greeting to a file, after all.</p>
+<p>Now it’s up to us to evolve our approach so our log files can reach
+their maximum usefulness. But how to proceed with that?</p>
+<p>First, we have to understand the nature of a log entry. This is going
+to sound familiar if you’ve read previous chapters, but I’m going to
+recap here for completeness’ sake. You should think of a log entry as an
+event—something that’s of interest to your app that happened at some
+time. So the value of your entry is all about what you capture regarding
+the event.</p>
+<p>Here are some examples of things that might make sense for you to
+capture:</p>
+<ul>
+<li>A timestamp. When did the event take place? (You’ll probably want to
+follow best practices of dealing with dates and times, such as using the
+ISO-8601 format, for instance.)</li>
+<li>Context. You need to make it as easy as possible for the future
+reader to understand what this entry is about.</li>
+<li>Log levels. Log entries can wildly vary in their purpose. You have
+to have some way of distinguishing an entry whose sole purpose is to
+debug some execution path from another that records some event of
+interest to the business (customer placed an order) or from even another
+that writes down the details of a fatal crash for posterior
+investigation. Log levels are your friends here.</li>
+</ul>
+<p>After deciding what type of events you want to log (Each method call?
+Just business events? Only fatal errors?) and what data about them you
+want to capture (timestamp, description, log level, logged user, or time
+of session?), the next step is deciding where you want to log to.</p>
+<p>See, even though the demo app logs to a file, there’s nothing
+preventing you from logging to a variety of targets, such as the
+database, the console, or even an online service.</p>
+<p>Enter the Logging Framework</p>
+<p>Think about our toy app. It was designed to give you as quick a start
+on the Ruby logging world as humanly possible. But now you’re more
+knowledgeable about logging and can analyze our demo in a more critical
+way.</p>
+<p>By doing that, we can come up with several questions that need
+answering, such as:</p>
+<ul>
+<li>How can we prevent the log file from getting overwritten every
+time?</li>
+<li>Since we’re talking about files, don’t we have to worry about file
+permissions, concurrent access, and other concerns that arise when doing
+IO?</li>
+<li>Will we have to write a lot of code to add the timestamp, log
+levels, and other important information we want to capture with each
+event?</li>
+</ul>
+<p>It didn’t take a lot of thought to conclude that our logging strategy
+lacks a lot of important things. Coming up with a proper logging
+strategy is no small feat, as you can see.</p>
+<p>The good news is this: you don’t have to answer all of those issues
+on your own. People have already solved those kinds of problems before,
+and guess what? Many of them decided to make their solutions available
+to the world in the form of a logging framework.</p>
+<p>A logging framework is a package meant to provide “free” logging for
+you. With a little bit of configuration, you can make one-line calls
+that, despite being as simple as the one in our toy example, can do a
+lot more. They’ll generate log entries with nice, consistent formatting,
+and all of the issues we discussed above will be pretty much taken care
+of.</p>
+<p>As with Python, Ruby has logging built in, which can really make
+things easier. Let’s explore it a little bit.</p>
+<p>Getting Started With the Ruby Logger</p>
+<p>First of all, let’s change our existing code to make use of the <span
+class="CharOverride-3">Logger</span> class. Go to the <span
+class="CharOverride-3">Greeter</span> file and add the following line
+right at the start of the file:</p>
+<p><img src="Images/Image972.png"
+class="_idGenObjectAttribute-21" /></p>
+<p>Now, remove the line where we write the greeting to a file, and add
+the following lines:</p>
+<p><img src="Images/Image979.png"
+class="_idGenObjectAttribute-19" /></p>
+<p>Then, the complete <span class="CharOverride-3">Greet</span> method
+should look like this:</p>
+<p><img src="Images/Image987.png"
+class="_idGenObjectAttribute-75" /></p>
+<p>The code should be easy enough to understand. We create a new
+instance of the <span class="CharOverride-3">Logger</span> class, giving
+it a new file by parameter. In the next line, we log the greeting
+message at the <span class="CharOverride-3">Info </span>level.</p>
+<p>Now, let’s run the app again and see what happens.</p>
+<p>Checking the Results</p>
+<p>Next, navigate back to the project folder, and you’ll notice there’s
+a new file hanging out there called <span
+class="CharOverride-3">proper.log</span>. Open it using your favorite
+text editor, and you should get something like the following:</p>
+<p><img src="Images/Image996.png"
+class="_idGenObjectAttribute-21" /></p>
+<p>Let’s break this line down:</p>
+<p>First, we have the severity ID, <span
+class="CharOverride-3">I</span>. The <span
+class="CharOverride-3">I</span> stands for <span
+class="CharOverride-3">Info</span>.</p>
+<p>What follows—<span
+class="CharOverride-3">2018-02-23T14:41:59.538985</span>—is the event
+timestamp, in ISO-8601 format.</p>
+<p>Then we have our app’s PID, <span class="CharOverride-3">#11520,
+</span>and the label for the severity<span class="CharOverride-3">,
+Info</span>.<span class="CharOverride-5"> </span></p>
+<p>And finally, we have our message: <span class="CharOverride-3">Hi
+Carlos!</span></p>
+<p>The Power of a Logging Framework</p>
+<p>Just by adding three lines of code (the <span
+class="CharOverride-3">require</span> line<span
+id="Section0005.xhtml__idTextAnchor044"></span> and the two new lines
+inside the method), we were able to implement a simple yet realistic
+example of a logger. Of course, a logger for a “real life” application
+would require a lot more thought—and work. But I do hope that after this
+quick example, you’re now both more knowledgeable about the principles
+that govern logging and also eager to explore and learn more.</p>
+<p>What’s Next?</p>
+<p>There’s obviously more to logging in Ruby, but I think we’ve
+delivered o<span id="Section0005.xhtml__idTextAnchor045"></span>n our
+promise: you’re up and running with Ruby logging as quickly as possible.
+Your challenge from here on out is to build upon this knowledge. So why
+not start playing with the demo logger you now have?</p>
+<p>There’s no shortage of things for you to try. Here are some
+suggestions:</p>
+<ul>
+<li>Experiment with the different severity levels.</li>
+<li>Learn about formatting options for your logger.</li>
+<li>Research logging to targets other than files, such as a
+database.</li>
+<li>Once you’re confident enough, try logging options other than the
+built-in class. Use GitHub and Ruby Gems to learn about those options,
+and try them!</li>
+</ul>
+<p>Good luck on your logging journey with Ruby!</p>
+<p><span class="CharOverride-5">This chapter was contributed by Carlos
+Schults. </span><a href="http://carlosschults.net/"><span
+class="CharOverride-6">Carlos</span></a><span class="CharOverride-5"> is
+a software developer with experience in both desktop and web
+development, now trying his hand at mobile. Carlos has a passion for
+writing clean and concise code, and he’s also very interested in
+practices that help you improve your app’s health.</span></p>
+</div>
+<p><span id="Section0006.xhtml"></span></p>
+<div id="Section0006.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<p><span class="CharOverride-5"> </span></p>
+<h2 class="Heading-2" id="Section0006.xhtml_sigil_toc_id_6">Chapter 6:
+Getting Started Quickly With Rails Logging</h2>
+<p>Let’s continue our our journey<span
+id="Section0006.xhtml__idTextAnchor046"></span> g<span
+id="Section0006.xhtml__idTextAnchor047"></span>etting starting with
+loggers for different languages and platforms. In the last chapter, we
+covered logging with Ruby; now it’s time to take a look at the platform
+most often associated with that language: Rails.</p>
+<p>We’ll start with a simple application, with scaffolding for CRUD
+operations on a single record. We’ll look at Rails’ default logging
+configuration and how to use logging in an application. Then we’ll look
+at how logging can be improved and why you might want to improve it.</p>
+<p>This tutorial uses <a
+href="https://www.ruby-lang.org/en/downloads/"><span
+class="CharOverride-7">Ruby v2.5.1</span></a> and <a
+href="https://weblog.rubyonrails.org/2018/4/9/Rails-5-2-0-final/"><span
+class="CharOverride-7">Rails 5.2.0</span></a>. You’ll need to have them
+installed to follow along. These instructions will use the command line
+to create and configure the application and will not rely on a specific
+IDE or editor. We’ll let Rails use SQLite for the backend database.</p>
+<p><img src="Images/Image1007.png"
+class="_idGenObjectAttribute-76" /></p>
+<p>Create a Rails Application</p>
+<p><span class="CharOverride-8">We</span>’<span
+class="CharOverride-8">ll start off by creating a Rails application. Run
+this command first</span>:</p>
+<p><img src="Images/Image1019.png"
+class="_idGenObjectAttribute-77" /></p>
+<p>After few screens of output, Rails has created the application.</p>
+<p><span class="CharOverride-8">Next, we</span>’<span
+class="CharOverride-8">ll let Rails create a model and a controller for
+us so we have something interesting to log. Move into the </span><span
+class="CharOverride-10">logging_app</span><span class="CharOverride-8">
+directory and run this</span>:</p>
+<p><img src="Images/Image1026.png"
+class="_idGenObjectAttribute-78" /></p>
+<p><span class="CharOverride-8">Rails creates the scaffolding for a user
+record with a name and an email address.</span></p>
+<p><span class="CharOverride-8">Finally, have Rails migrate the
+application into </span><span class="CharOverride-10">SQLite</span><span
+class="CharOverride-8">.</span></p>
+<p><img src="Images/Image1034.png"
+class="_idGenObjectAttribute-79" /></p>
+<p><span class="CharOverride-8">And we have an application!
+Let</span>’<span class="CharOverride-8">s run it and confirm
+that</span>’<span class="CharOverride-8">s all set up.</span></p>
+<p><img src="Images/Image1042.png"
+class="_idGenObjectAttribute-80" /></p>
+<p><span class="CharOverride-8">Point a browser at </span><span
+class="CharOverride-10">http://localhost:3000/users, </span><span
+class="CharOverride-8">and we see our main page for managing
+users</span>:</p>
+<p><img src="Images/Image1050.png"
+class="_idGenObjectAttribute-81" /></p>
+<p><span class="CharOverride-8">We</span>’<span
+class="CharOverride-8">re ready to get started with logging!</span></p>
+<p>Rails Logger</p>
+<p><span class="CharOverride-8">Rails creates an instance of
+</span><span class="CharOverride-10">ActiveSupport::Logger</span><span
+class="CharOverride-8"> as part of initialization and uses it for
+logging to standard output.</span></p>
+<p><span class="CharOverride-8">Take a look at the application output
+when we open the </span><span class="CharOverride-10">/users</span><span
+class="CharOverride-8"> page:</span></p>
+<p><img src="Images/Image1057.png"
+class="_idGenObjectAttribute-82" /></p>
+<p><span class="CharOverride-10">Logger</span><span
+class="CharOverride-8"> produces this output</span><span
+class="CharOverride-10">. </span><span class="CharOverride-8">In
+addition to standard output, we can find the same input in the default
+log file. Let</span>’<span class="CharOverride-8">s stop the server and
+take a look at the last ten lines of the log file</span>:</p>
+<p><img src="Images/Image1064.png"
+class="_idGenObjectAttribute-83" /></p>
+<p><span class="CharOverride-8">The default name of the log file is the
+environment name. In development, it</span>’<span
+class="CharOverride-8">s named </span><span
+class="CharOverride-10">development.log</span><span
+class="CharOverride-8">; in production, it</span>’<span
+class="CharOverride-8">s named </span><span
+class="CharOverride-10">production.log</span><span
+class="CharOverride-8">; and so on.</span></p>
+<p><span class="CharOverride-8">The default logger is available to
+application code in a globally accessible instance named </span><span
+class="CharOverride-10">logger. </span><span
+class="CharOverride-8">Let</span>’<span class="CharOverride-8">s add an
+extra debug message when the application displays a user.</span></p>
+<p><span class="CharOverride-8">First, add a log message to </span><span
+class="CharOverride-10">app/user_controller.rb </span><span
+class="CharOverride-8">in the </span><span
+class="CharOverride-10">show</span><span class="CharOverride-8">
+method.</span></p>
+<p><img src="Images/Image1071.png"
+class="_idGenObjectAttribute-84" /></p>
+<p><span class="CharOverride-8">Then start the application. Go to the
+</span><span class="CharOverride-10">/users </span><span
+class="CharOverride-8">and add a user named </span><span
+class="CharOverride-10">John Doe</span><span class="CharOverride-8">
+with an email address of </span><a href="mailto:john@doe.com"><span
+class="CharOverride-12">john@doe.com</span></a><span
+class="CharOverride-8">.</span></p>
+<p><span class="CharOverride-8">Your log should have an entry similar to
+this:</span></p>
+<p><img src="Images/Image1080.png"
+class="_idGenObjectAttribute-85" /></p>
+<p><span class="CharOverride-8">Rails has a reputation for making life
+easy for developers, and logging is an example of why it go</span>t that
+reputation<span class="CharOverride-8">. Let</span>’<span
+class="CharOverride-8">s look at how we can customize the Rails
+</span>l<span class="CharOverride-8">ogger.</span></p>
+<p>What Is Application Logging?</p>
+<p>Before we delve into how to improve the Rails logger, let’s go back
+to first principles. What are we trying to do? What is application
+logging? If you’ve read any of our other chapters, you’re already quite
+familiar with our definition:</p>
+<p><span class="CharOverride-5">Application logging involves recording
+information about your application’s runtime behavior to a more
+persistent medium.</span></p>
+<p>So, in Rails, we’ve already seen that we have a way to record
+information about our application to a file and to standard output,
+which our DevOps team can redirect to where they wish with standard
+output. But we can do more.</p>
+<p>What Is Application Logging For?</p>
+<p><span class="CharOverride-8">Why do we write logs? It seems like an
+obvious question, but it</span>’<span class="CharOverride-8">s worth
+considering.</span></p>
+<p><span class="CharOverride-8">We write logs so we have a record of
+what</span>’<span class="CharOverride-8">s happening.</span></p>
+<p><span class="CharOverride-8">We</span>’<span
+class="CharOverride-8">ve released our code to production, and we need
+to get to work on something else. But at some point, something will go
+wrong, and we’ll be asked to diagnose the problem. Logs are often the
+only thing we have.</span></p>
+<p><span class="CharOverride-8">We may also be asked for information
+about what’s happening in production when nothing is wrong. How many
+pages are loaded per day? Per hour? Per minute? Where are users coming
+from? What features are used most often, and what features are ignored?
+</span></p>
+<p><span class="CharOverride-8">While some of this information is
+available from web analytics, logs can drill down to a higher level of
+detail.</span></p>
+<p><span class="CharOverride-8">Application logging is a critical tool
+for helping us locate and fix errors and for collecting information that
+can help us improve our applications.</span></p>
+<p>What Information Should We Log?</p>
+<p>The messages we’ve seen from Rails are messages about what’s
+happening in the application. They lack context, though. Let’s define
+what we want from a log message and then configure the system to give us
+that.</p>
+<p>A log entry represents an event. Something happened to the
+application, and the developer thought it was interesting enough to save
+for later review.</p>
+<p>The most obvious thing we might want to know about an event is <span
+class="CharOverride-5">when</span> it happened. None of the log entries
+we’ve seen so far have a timestamp on them. We’ll need to add that.</p>
+<p>It’s also useful to have some context. We added this log message to
+our code earlier.</p>
+<p><img src="Images/Image1089.png"
+class="_idGenObjectAttribute-86" /></p>
+<p>Rails logged this:</p>
+<p><img src="Images/Image1100.png"
+class="_idGenObjectAttribute-87" /></p>
+<p><span class="CharOverride-8">What happened to </span><span
+class="CharOverride-3">D</span><span
+class="CharOverride-10">ebug</span><span class="CharOverride-8">? We
+called the logger at </span><span class="CharOverride-3">D</span><span
+class="CharOverride-10">ebug</span><span class="CharOverride-8"> level,
+but that information was</span>n’<span class="CharOverride-8">t passed
+on. All of the log entries appear as equivalent with the default
+configuration, reducing their usefulness.</span></p>
+<p><span class="CharOverride-8">Let</span>’<span
+class="CharOverride-8">s get started changing the Rails
+logger</span>’<span class="CharOverride-8">s configuration.</span></p>
+<p>Configuring Logs</p>
+<p><span class="CharOverride-8">Like most loggers, </span><span
+class="CharOverride-10">ActiveSupport::Logger</span><span
+class="CharOverride-8"> supports different levels. Those levels are
+</span><span class="CharOverride-3">D</span><span
+class="CharOverride-10">ebug, Info, </span><span
+class="CharOverride-3">W</span><span class="CharOverride-10">arn,
+</span><span class="CharOverride-3">E</span><span
+class="CharOverride-10">rror,</span><span class="CharOverride-8"> and
+</span><span class="CharOverride-3">F</span><span
+class="CharOverride-10">atal.</span></p>
+<p><span class="CharOverride-8">We can log a message at any one of these
+levels by calling the associated method:</span></p>
+<p><img src="Images/Image1112.png"
+class="_idGenObjectAttribute-88" /></p>
+<p><span class="CharOverride-8">This gives us a way to categorize
+messages, and we</span>’<span class="CharOverride-8">ll add the level to
+the messages below. But let</span>’<span class="CharOverride-8">s look
+at filtering messages first.</span></p>
+<p><span class="CharOverride-10">Debug </span><span
+class="CharOverride-8">messages are useful for, well, debugging. Their
+very name implies they</span>’<span class="CharOverride-8">re for
+development or for isolating a problem. We don</span>’<span
+class="CharOverride-8">t typically want to see them in production where
+they can reduce the signal-to-noise ratio in log files and potentially
+compromise performance.</span></p>
+<p><span class="CharOverride-8">We can filter which messages make it to
+the console or log file in Rails</span>’<span class="CharOverride-8">
+configuration.</span></p>
+<p><span class="CharOverride-8">If we add this to our configuration,
+only messages logged at </span><span
+class="CharOverride-10">Error</span><span class="CharOverride-8"> or
+</span><span class="CharOverride-10">Fatal</span><span
+class="CharOverride-8"> will be logged.</span></p>
+<p><img src="Images/Image1119.png"
+class="_idGenObjectAttribute-89" /></p>
+<p><span class="CharOverride-8">Rails has a </span>hierarchical<span
+class="CharOverride-8"> configurations scheme. We can add logging
+configuration in </span><span
+class="CharOverride-10">config/application.rb</span><span
+class="CharOverride-8"> or </span><span
+class="CharOverride-10">config/environment/{environment_name}.rb</span><span
+class="CharOverride-8">. The environment-specific file takes
+precedence.</span></p>
+<p><span class="CharOverride-8">So when we add this to </span><span
+class="CharOverride-10">config/application.rb</span>...</p>
+<p><img src="Images/Image1119.png"
+class="_idGenObjectAttribute-89" /></p>
+<p>a<span class="CharOverride-8">nd this to </span><span
+class="CharOverride-10">config/environment/development.rb</span>...</p>
+<p><img src="Images/Image1134.png"
+class="_idGenObjectAttribute-90" /></p>
+<p>...w<span class="CharOverride-8">e still see </span><span
+class="CharOverride-3">D</span><span
+class="CharOverride-10">ebug</span><span class="CharOverride-8">
+messages in development but only </span><span
+class="CharOverride-3">E</span><span
+class="CharOverride-10">rror</span><span class="CharOverride-8"> and
+</span><span class="CharOverride-3">F</span><span
+class="CharOverride-10">atal</span><span class="CharOverride-8"> in
+production.</span></p>
+<p><span class="CharOverride-8">We can change the name and location of
+log files by supplying Rail with logger instance initialized with our
+preferences.</span></p>
+<p><img src="Images/Image1142.png"
+class="_idGenObjectAttribute-91" /></p>
+<p><span class="CharOverride-8">This also means we can create new
+subclasses of </span><span class="CharOverride-10">Logger</span><span
+class="CharOverride-8"> if we want to change logging
+behavior.</span></p>
+<p><span class="CharOverride-8">But let</span>’<span
+class="CharOverride-8">s change the behavior we</span>’<span
+class="CharOverride-8">re most interest in right now: log message
+formatting.</span></p>
+<p>Log Message Format</p>
+<p><span class="CharOverride-8">Rails</span>’<span
+class="CharOverride-8"> configuration has a mechanism for supplying
+Rails with a log message formatter instance. The first step is creating
+that message formatter class.</span></p>
+<p><img src="Images/Image1149.png"
+class="_idGenObjectAttribute-92" /></p>
+<p><span class="CharOverride-8">We extended the </span><span
+class="CharOverride-10">ActiveSupport::Logger::SimpleFormatter</span><span
+class="CharOverride-8"> and overloaded its </span><span
+class="CharOverride-10">call</span><span class="CharOverride-8"> method.
+We need an instance of </span><span
+class="CharOverride-10">SimpleFormatter </span><span
+class="CharOverride-8">for the configuration.</span></p>
+<p><span class="CharOverride-10">Logger </span><span
+class="CharOverride-8">passes</span><span class="CharOverride-10">
+call</span><span class="CharOverride-8"> four parameters. They are
+</span></p>
+<ul>
+<li>The <span class="CharOverride-8">log level (as
+severity).</span></li>
+<li>T<span class="CharOverride-8">he time of the message.</span></li>
+<li>The p<span class="CharOverride-8">rogram name.</span></li>
+<li>T<span class="CharOverride-8">he message.</span></li>
+</ul>
+<p><span class="CharOverride-8">We formatted the severity into a fixed
+width field and the time as a human-readable string. Then we put the
+parts together into a familiar message format.</span></p>
+<p><span class="CharOverride-8">There are a variety of ways we can add
+this class to our code. The use of the </span><span
+class="CharOverride-10">libs </span><span
+class="CharOverride-8">directory can be controversial with Rails, but
+we</span>’<span class="CharOverride-8">ll use it for the sake of getting
+a formatter installed.</span></p>
+<p><span class="CharOverride-8">First, create the formatter class in
+</span><span class="CharOverride-10">logging_app/libs</span><span
+class="CharOverride-8"> as </span><span
+class="CharOverride-10">message_formatter.rb</span><span
+class="CharOverride-8">.</span></p>
+<p><span class="CharOverride-8">Next, since Rails 5.x does not load
+classes from lib automatically, add these lines to </span><span
+class="CharOverride-10">config/application.rb</span><span
+class="CharOverride-8"> in the </span><span
+class="CharOverride-10">LoggingApp</span><span class="CharOverride-8">
+class declaration</span>:</p>
+<p><img src="Images/Image1156.png"
+class="_idGenObjectAttribute-93" /></p>
+<p><span class="CharOverride-8">Finally, add the formatter to
+</span><span
+class="CharOverride-10">config/environment/development.rb</span><span
+class="CharOverride-8">:</span></p>
+<p><img src="Images/Image1164.png"
+class="_idGenObjectAttribute-94" /></p>
+<p>When we run the server and open a user entry, we see log messages
+with our custom format.</p>
+<p><img src="Images/Image1173.png"
+class="_idGenObjectAttribute-95" /></p>
+<p>We’ve added the logging severity and the timestamp to the message.
+The program name isn’t always used, but it will appear if specified in a
+call.</p>
+<p>You’re Ready to Go!</p>
+<p>In this chapter, we looked at the Rails logger and how to call it
+from our application code. Then we looked at how to customize the
+configuration and extend the log messages to make them more useful.</p>
+<p>There’s a great deal more you can do with logging, so keep
+learning!</p>
+<p><span class="CharOverride-5">This chapter was contributed by Eric
+Goebelbecker. </span><a href="http://ericgoebelbecker.com/"><span
+class="CharOverride-6">Eric</span></a><span class="CharOverride-5"> has
+worked in the financial markets in New York City for 25 years,
+developing infrastructure for market data and financial information
+exchange (FIX) protocol networks. He loves to talk about what makes
+teams effective (or not so effective!)</span></p>
+</div>
+<p><span id="Section0007.xhtml"></span></p>
+<div id="Section0007.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<h2 class="Heading-2" id="Section0007.xhtml_sigil_toc_id_7">Chapter 7:
+Getting Started Quickly With Swift Logging</h2>
+<p>In this chapter, it’s time to talk about Apple’s Sw<span
+id="Section0007.xhtml__idTextAnchor048"></span>if<span
+id="Section0007.xhtml__idTextAnchor049"></span>t language. Swift has
+slowly been gaining popularity, especially since its open-source
+release.</p>
+<p>I’ll start with a quick example of manual logging in Swift. Then I’ll
+give you my own take on a subject frequently covered in this book:
+details of how and why logging matters. Finally, I’ll move on to using
+Apple’s Unified Logger in a Swift application and let you know how it
+can improve your ability to monitor applications and track down
+issues.</p>
+<p>The code example will be for MacOS, but you can easily adapt it for
+any Apple platform.</p>
+<p>Let’s get to work!</p>
+<p><img src="Images/Image1182.png"
+class="_idGenObjectAttribute-23" /></p>
+<p>The Simplest Swift Logging That Could Possibly Work</p>
+<p>Let’s start by creating a new project in Xcode. If you d<span
+id="Section0007.xhtml__idTextAnchor050"></span>on’t already have it
+installed, go to the App Store and install it from there.</p>
+<p>Next, start Xcode and select <span class="CharOverride-3">Create a
+new Xcode Project</span> from the first dialog window.</p>
+<p><img src="Images/Image1193.png" class="_idGenObjectAttribute-96"
+alt="getting started with swift logging" /></p>
+<p>We’re going to keep the code as simple as we can in this tutorial, so
+select <span class="CharOverride-3">MacOS</span> and <span
+class="CharOverride-3">Command Line Tool</span> and then click <span
+class="CharOverride-3">Next</span>. You’ll see this.</p>
+<p><img src="Images/Image1206.png"
+class="_idGenObjectAttribute-97" /></p>
+<p>Now, you can give your project a name. These values are not critical,
+but make sure that <span class="CharOverride-3">Swift</span> is set as
+the project language.</p>
+<p><img src="Images/Image1213.png"
+class="_idGenObjectAttribute-76" /></p>
+<p><span class="CharOverride-8">Finally, we have a project.</span></p>
+<p><img src="Images/Image1221.png"
+class="_idGenObjectAttribute-98" /></p>
+<p>Select <span class="CharOverride-3">main.swift</span> in the IDE, and
+you can see the code Xcode added for us.</p>
+<p><img src="Images/Image1228.png"
+class="_idGenObjectAttribute-99" /></p>
+<p>Rather than print to the console, we want to save logging information
+to a text file.</p>
+<p>Swift works differently from many of the other languages we’ve worked
+with before. There are several ways to write a string to a file. But
+since the purpose here is to demonstrate the easiest way to, here it
+is:</p>
+<p><img src="Images/Image1236.png"
+class="_idGenObjectAttribute-100" /></p>
+<p>Set the file name to something that will allow you to quickly locate
+it. Keep in mind that the working directory for Xcode projects is buried
+somewhere deep in your <span class="CharOverride-3">Library</span>
+directory, so you may want to set the log file location to your home
+directory.</p>
+<p>When you’ve picked a place for the file, build and run the project.
+Then find the file and open it with any editor you wish. You’ll see your
+log message.</p>
+<p>We started by declaring where our log file will be. As you’ll see
+below, this is important. It’s something all components have to
+know—unless there’s a framework that manages log locations for us.</p>
+<p>Next, we converted that file name to a URL. All Swift strings can
+write themselves to a URL, so we’re taking advantage of that.</p>
+<p>Finally, we created a string and wrote it to the URL.</p>
+<p>While this would work for simple logging, it wouldn’t necessarily
+work well. What’s the cost of having every log message open a URL and
+write itself to it? I doubt it scales well for hundreds or thousands of
+log messages. What would happen when more than one message wanted to log
+itself at the same time? Is this mechanism threadsafe? Would it block
+the entire program?</p>
+<p>Let’s look at a better way.</p>
+<p>What Is Application Logging?</p>
+<p>First, let’s take a look at what logging is.</p>
+<p>You’ve probably dealt with logging befor<span
+id="Section0007.xhtml__idTextAnchor051"></span>e and have an idea of
+what it means, but it’s still worth defining it so we can evaluate a
+logging framework in terms of what we need. You already know that we
+like to define application logging like this:</p>
+<p><span class="CharOverride-5">Application logging involves recording
+information about your application’s runtime behavior to a more
+persistent medium.</span></p>
+<p>But let me break that down.</p>
+<p>Logging means recording runtime behavior. We’re documenting events
+about an application. The time factor implies in chronological
+order.</p>
+<p>Second, we store logs in a more persistent medium. Application events
+occur quickly, and we want to be able to go back and review them. Maybe
+we’re trying to track down an error, or perhaps we have to maintain an
+audit trail. A persistent medium can be a disk, a relational database,
+or a search engine.</p>
+<p>So, that’s what logging is. How can you do it more effectively in
+Swift? And why would you want to? These are important questions. Let’s
+get back to work.</p>
+<p>Apple’s Unified Logging System</p>
+<p>With MacOS Sierra and iOS 10, Apple introduced the new unified
+logging system. Whil<span
+id="Section0007.xhtml__idTextAnchor052"></span>e they haven’t deprecated
+the legacy logging system yet, this new logger is the direction they’re
+going.</p>
+<p>The unified logger has built-in security and performance features
+that make it desirable. But it does have an idiosyncrasy that many
+developers dislike: messages are stored in memory and a proprietary data
+store. There are no clear-text log files, and messages can only be read
+with <span class="CharOverride-3">Console.app</span> or the command line
+log tool.</p>
+<p>Let’s add the unified logger to our application and see how it
+works.</p>
+<p>We’ll start by removing the code for manipulating files and just
+replacing it with <span class="CharOverride-3">os_log()</span>, the
+unified logger. We need to import the OS package and add the call to
+<span class="CharOverride-3">os_log</span>.</p>
+<p><img src="Images/Image1243.png"
+class="_idGenObjectAttribute-101" /></p>
+<p>Hmm. This program doesn’t build.</p>
+<p><img src="Images/Image1250.png" class="_idGenObjectAttribute-102"
+alt="getting started with swift logging" />We can only pass static
+strings to <span class="CharOverride-3">os_log</span>. So we’ll change
+how our string is defined.</p>
+<p><img src="Images/Image1258.png"
+class="_idGenObjectAttribute-103" /></p>
+<p>Build and run this version, and everything looks fine.</p>
+<p>But where’s the log message?</p>
+<p>Run the <span class="CharOverride-3">Console</span> application. You
+can find it in <span
+class="CharOverride-3">Applications/Utilities</span> or by opening
+Spotlight and searching for it.</p>
+<p>Search for the text <span class="CharOverride-3">Process:
+Swift</span> in the search bar as shown below.<img
+src="Images/Image1267.png" class="_idGenObjectAttribute-104" /><br />
+There’s our log message.</p>
+<p>The unified logger takes care of the log file location by storing all
+logs in the same system and indexing them. We don’t have to worry about
+where they belong, how to open them, and when to close them.</p>
+<p>So what do we need to concern ourselves with when it comes to Swift
+logging?</p>
+<p>Why Log?</p>
+<p>Someday you’ll write that perfect application. You know which—the one
+that has no bugs, reacts correctly to u<span
+id="Section0007.xhtml__idTextAnchor053"></span>nexpected events, and
+anticipates your customers’ every need. But until then, you’ll need a
+way to keep an eye on things. Here in the real world, even
+well-constructed applications have bugs and other shortcomings, and we
+need to monitor what’s going on inside them.</p>
+<p>We can find and fix problems quickly when we’re developing code. We
+have the debugger, we can add print statements, and yes, we even use
+logs as we’re coding. We’re watching our application in captivity, in a
+sterile environment where we have control.</p>
+<p>But our application is going to leave the tender embrace of our
+development environment eventually. It will be used in ways we didn’t
+anticipate, and it will encounter conditions we never imagined. And
+then, when it fails, we’ll need a way to figure out what happened.</p>
+<p>This is where logs come in.</p>
+<p>Isolating bugs isn’t the only use for logs, either. They’re useful
+for watching an application that works and finding opportunities for
+improvement. We can use them to detect patterns of behavior that can be
+improved upon. We might be able to discover a resource that should be
+cached in memory instead of a file or a feature that’s never used.</p>
+<p>And of course, the usefulness of logs doesn’t stop there. Sometimes
+we need an extra copy of transactional data, such as credit card charges
+or other financial transactions.</p>
+<p>We need visibility into our application’s runtime behavior, and we
+get it by logging.</p>
+<p>How Should You Log?</p>
+<p>We already took a quick look at Apple’s unified logging system. It
+fulfills the requirement for pe<span
+id="Section0007.xhtml__idTextAnchor054"></span>rsistently storing logs
+in a central location. We can find these logs with a text search via the
+console application or a command line tool.</p>
+<p>But it would be nice if the logs were easier to find inside the
+system and had a bit more context.</p>
+<p>This leads to a more general question: what information should be
+logged?</p>
+<p>Most logging systems include at least the following information in
+each log entry:</p>
+<ul>
+<li>Timestamp: when the event described in the log entry happened. The
+unified logger takes care of this for us.</li>
+<li>Event context: useful information about the event. “It worked” or
+“it’s broken” might be useful or entertaining during a debugging
+session. “Failed to connect to database at 192.9.168.3:5000” is more
+useful in production.</li>
+<li>Severity level: logs tend to have a level that puts them in context
+compared to other entries. The unified logger defines <span
+class="CharOverride-3">Default</span>, <span
+class="CharOverride-3">Info</span>, <span
+class="CharOverride-3">Debug</span>, <span
+class="CharOverride-3">Error</span>, and <span
+class="CharOverride-3">Fault</span>. We’ll take a closer look at logging
+levels below.</li>
+</ul>
+<p>So the unified logger takes care of two out of three essential
+aspects of logging for us. But it’s up to us to manage the content of
+our messages effectively.</p>
+<p>Customizing the Unified Logging System</p>
+<p>Let’s take some time to talk about customization.</p>
+<p>Adding a Log Level</p>
+<p>First, we’<span id="Section0007.xhtml__idTextAnchor055"></span>ll
+cover how to make our use of the unified logger more effective. We can
+already log inf<span
+id="Section0007.xhtml__idTextAnchor056"></span>ormation to persistent
+storage with a single line of code. But what more can we do?</p>
+<p>First, let’s add some additional context to our logs with log levels.
+Change the call to <span class="CharOverride-3">os_log </span>by adding
+a few more arguments and the log message text.</p>
+<p><img src="Images/Image1277.png"
+class="_idGenObjectAttribute-105" /></p>
+<p>Build, run, and take a look at the console application.</p>
+<p><img src="Images/Image1289.png"
+class="_idGenObjectAttribute-106" /></p>
+<p>The logger tagged the message as an <span
+class="CharOverride-3">Error </span>for us because we passed <span
+class="CharOverride-3">.error</span> for the <span
+class="CharOverride-3">type: argument</span>. We can also pass in <span
+class="CharOverride-3">.info</span>, <span
+class="CharOverride-3">.debug</span>, or <span
+class="CharOverride-3">.fatal</span>. If we omit the <span
+class="CharOverride-3">type: argument</span>, the message is logged as
+default.</p>
+<p>To do this, we had to pass the call to <span
+class="CharOverride-3">os_log</span> the log message, an instance of a
+logger, along with the log message type.</p>
+<p>Let’s take a closer look at the notion of a log instance before
+continuing to customize our messages.</p>
+<p>Log Instances</p>
+<p>We’d been calling <span class="CharOverride-3">os_log</span> with a
+single call to log messages up until the previous exercise. This is a
+conv<span id="Section0007.xhtml__idTextAnchor057"></span>enience
+function. When we called it with only a message, it used a default
+logger instance. When we called it with an instance and a log type, we
+were calling a different function that manipulated the instance we
+passed in.</p>
+<p>Let’s take a closer look at our log message in the console
+application.</p>
+<p><img src="Images/Image1302.png"
+class="_idGenObjectAttribute-107" /></p>
+<p>Because we used the default logger instance, the message doesn’t have
+subsystem or category information.</p>
+<p>If we want to populate these fields, we need our own logger
+instance—one that’s initialized with information about our application.
+Let’s create one.</p>
+<p>The first step is to create a <span class="CharOverride-3">plist
+</span>with logging configuration information.</p>
+<p>In Xcode, create a new file. Select the <span
+class="CharOverride-3">property list</span> type.</p>
+<p><img src="Images/Image1309.png" class="_idGenObjectAttribute-108"
+alt="swift logging new plist" /></p>
+<p>Name it <span class="CharOverride-3">com.scalyr.SwiftLogger</span>
+and save the file.</p>
+<p>The file will open in the property editor. But life’s too short for
+that. Right-click on the file name in the project navigator, select
+<span class="CharOverride-3">open as</span>, and then select <span
+class="CharOverride-3">source code</span>.</p>
+<p><img src="Images/Image1317.png" class="_idGenObjectAttribute-76"
+alt="https://www.hitsubscribe.com/wp-content/uploads/2018/09/open-as-source-code.png" /></p>
+<p>Enter this text:</p>
+<p><img src="Images/Image1324.png"
+class="_idGenObjectAttribute-109" /></p>
+<p>This property list defines a logger system that defines how <span
+class="CharOverride-3">Info</span>-level messages are handled. We’ll go
+over this in more detail after this example.</p>
+<p>Copy this file over to the <span
+class="CharOverride-3">/Library</span> area of your system.</p>
+<p>You’ll need to be in the working directory of your project and have
+root access.</p>
+<p><img src="Images/Image1332.png"
+class="_idGenObjectAttribute-110" /></p>
+<p>This property list defines a logging subsystem named <span
+class="CharOverride-3">com.scalyr.SwiftLogger</span> that we can refer
+to when we create a new instance.</p>
+<p>So, let’s update the code.</p>
+<p><img src="Images/Image1339.png"
+class="_idGenObjectAttribute-26" /></p>
+<p>We’re creating a logger instance with <span
+class="CharOverride-3">OSLog.init</span>. We pass it the name of our
+subsystem and then a logging category. A category is an arbitrary name
+for group log messages.</p>
+<p>Next, we pass the logger instance to <span
+class="CharOverride-3">os_log</span>.</p>
+<p>Run the code, and you’ll find a log message set to the <span
+class="CharOverride-3">Default </span>level in the console app. Click on
+it to see the details.</p>
+<p><img src="Images/Image1346.png"
+class="_idGenObjectAttribute-111" /></p>
+<p>Let’s send this message as a <span
+class="CharOverride-3">Fault</span>.</p>
+<p><img src="Images/Image1354.png"
+class="_idGenObjectAttribute-112" /></p>
+<p>Run this version, and check the console application.</p>
+<p><img src="Images/Image1364.png" class="_idGenObjectAttribute-113"
+alt="swift logging" /></p>
+<p>We see the details and the <span class="CharOverride-3">Fault
+</span>log level.</p>
+<p>Log Message Storage</p>
+<p>In the <span class="CharOverride-3">plist</span>, you can see this
+section toward the middle:</p>
+<p><img src="Images/Image1373.png"
+class="_idGenObjectAttribute-114" /></p>
+<p>This defines the storage options for the <span
+class="CharOverride-3">Info</span> log<span
+id="Section0007.xhtml__idTextAnchor058"></span> level. It tells the
+system to inherit the default. We only needed to establish a log system
+to get past the step of creating a named logger.</p>
+<p>But it’s useful to understand the default rules for storing logs.</p>
+<ul>
+<li><span class="CharOverride-3">Default </span>log messages are stored
+in memory buffers. The system will compress and move them to the data
+store as memory buffers fill.</li>
+<li><span class="CharOverride-3">Info </span>log messages are stored in
+memory buffers. The system won’t move them to the data store. It purges
+them as memory buffers fill.</li>
+<li><span class="CharOverride-3">Debug </span>messages are only captured
+in memory when <span class="CharOverride-3">Debug </span>logging is
+enabled through a configuration change. The system will never write them
+to disk.</li>
+<li>Unified logging always saves <span class="CharOverride-3">Error
+</span>and <span class="CharOverride-3">Fatal</span> messages to the
+data store.</li>
+</ul>
+<p>Log Contents</p>
+<p>We can set up a log with a subsystem and category, and we can control
+the level messages we send with it. That leaves<span
+id="Section0007.xhtml__idTextAnchor059"></span> log contents.</p>
+<p>Even though we’re limited to passing static strings in the log
+message, we can still use C-style formatting with those strings.</p>
+<p>So we can use log strings as a formatter:</p>
+<p><img src="Images/Image1384.png"
+class="_idGenObjectAttribute-115" /></p>
+<p>Run this from Xcode, and you’ll see the log message.</p>
+<p>We can log scalar values too:</p>
+<p><img src="Images/Image1396.png"
+class="_idGenObjectAttribute-116" /></p>
+<p>But what we see from inside Xcode is not what happens in
+production.</p>
+<p>Let’s change the code back to printing a string in the log
+message:</p>
+<p><img src="Images/Image1403.png"
+class="_idGenObjectAttribute-117" /></p>
+<p>Run this in Xcode, and you’ll see “The answer is a secret” in the
+console application.</p>
+<p>Now, let’s build the application and run it from the command
+line.</p>
+<p>Open a shell and move to the project directory. Run <span
+class="CharOverride-3">xcodebuild </span>and then run the
+application.</p>
+<p><img src="Images/Image1412.png"
+class="_idGenObjectAttribute-118" /></p>
+<p>Check the log message in <span
+class="CharOverride-3">console</span>.</p>
+<p><img src="Images/Image1419.png"
+class="_idGenObjectAttribute-119" /></p>
+<p>The unified logger redacted the string. This is the default behavior
+for string messages. It isn’t for scalar values.</p>
+<p>If you do not want a string to be redacted use the <span
+class="CharOverride-3">{public}</span> notation.</p>
+<p><img src="Images/Image1427.png"
+class="_idGenObjectAttribute-58" /></p>
+<p>If you want a scalar value redacted, use the <span
+class="CharOverride-3">{private}</span> notation.</p>
+<p><img src="Images/Image1434.png"
+class="_idGenObjectAttribute-120" /></p>
+<p>This is a built-in security feature that helps protect critical
+information. As tempting as it might be to mark everything public,
+resist the urge.</p>
+<p>What Now?</p>
+<p>We’ve covered the hows and the whys of logging with Swift on an Apple
+platform with the unified logger. It’s a comprehensive sy<span
+id="Section0007.xhtml__idTextAnchor060"></span>stem that makes logging
+easy for an application developer.</p>
+<p>Even though we’ve talked about a lot of logging approaches in this
+book, there’s still more to know about logging. If you want to branch
+out from what you’ve learned in this chapter, you can start with the the
+<a
+href="https://developer.apple.com/documentation/os/logging#2878594?changes=_1"><span
+class="CharOverride-7">Apple unified logger documentation</span></a> on
+the Apple Developer website. But now you know the fundamentals, and that
+means you can get started with logging in your Swift applications
+today!</p>
+<p><span class="CharOverride-5">This chapter was contributed by Eric
+Goebelbecker. </span><a href="http://ericgoebelbecker.com/"><span
+class="CharOverride-6">Eric</span></a><span class="CharOverride-5"> has
+worked in the financial markets in New York City for 25 years,
+developing infrastructure for market data and financial information
+exchange (FIX) protocol networks. He loves to talk about what makes
+teams effective (or not so effective!).</span></p>
+</div>
+<p><span id="Section0008.xhtml"></span></p>
+<div id="Section0008.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<h2 class="Heading-2" id="Section0008.xhtml_sigil_toc_id_8">Chapter 8:
+Getting Started Quickly With Scala Logging</h2>
+<p>Now that we’ve talked about logging with a couple different languages
+and platfo<span id="Section0008.xhtml__idTextAnchor061"></span>rm<span
+id="Section0008.xhtml__idTextAnchor062"></span>s, it’s time to show how
+you can get started quickly with Scala logging.</p>
+<p>First, I’ll show you with a quick example of manual logging with
+Scala. I’ll use IntelliJ IDEA to create and run a Scala project, using
+sbt to build the code. That way, you can use the application to get
+started on any platform that supports Scala and Java.</p>
+<p>Next, I’ll discuss details of how and why logging matters. You’ve
+already heard some other folks’ takes on this, but I’m sharing mine
+here.</p>
+<p>And finally, I’ll move on to using the Scala logging wrapper in an
+application, and I’ll tell you about how it can improve your ability to
+monitor your applications and issues.</p>
+<p>Let’s get started!</p>
+<p><img src="Images/Image1441.png"
+class="_idGenObjectAttribute-23" /></p>
+<p>A Simple Scala Logging Implementation</p>
+<p>Let’s kick things off by launching Scala project. Then, we’ll show
+the simplest Scala logging that c<span
+id="Section0008.xhtml__idTextAnchor063"></span>ould possibly work.</p>
+<p>Creating a Scala Project</p>
+<p>We’ll use <a href="https://www.jetbrains.com/idea/download/"><span
+class="CharOverride-7">IntelliJ IDEA</span></a> for this tutorial, which
+has a free community edition that you can download.</p>
+<p>First, make <span id="Section0008.xhtml__idTextAnchor064"></span>sure
+you have the Scala plugin installed and activated. Once you have that
+set up, start IntelliJ. Before you open any projects, select <span
+class="CharOverride-3">Preferences</span> from the start screen.</p>
+<p><img src="Images/Image1450.png" class="_idGenObjectAttribute-121"
+alt="scala logging start plugins" /></p>
+<p>Select <span class="CharOverride-3">Plugins </span>from the configure
+menu.</p>
+<p>This will open the plugins management window.</p>
+<p><img src="Images/Image1459.png" class="_idGenObjectAttribute-122"
+alt="jetbrains plugins scala logging" /></p>
+<p>Now, click <span class="CharOverride-3">Install JetBrains plugin...
+</span>on the bottom left-hand side of the window. This will bring up a
+window listing the official JetBrains-supported plugins for IDEA.</p>
+<p><img src="Images/Image1468.png" class="_idGenObjectAttribute-123"
+alt="scala logging plugin" /></p>
+<p>Now, select the <span class="CharOverride-3">Languages</span>
+category at the top and scroll down until you find the Scala option.
+Install the plugin if it’s not already there. You’ll be prompted to
+restart the IDE after the plugin is downloaded and restarted.</p>
+<p>You’re ready to write Scala applications now!</p>
+<p><img src="Images/Image1479.png" class="_idGenObjectAttribute-124"
+alt="scala logging new project" /></p>
+<p><span class="CharOverride-8">In the next window, select </span><span
+class="CharOverride-10">Scala</span><span class="CharOverride-8"> and
+</span><span class="CharOverride-10">sbt </span><span
+class="CharOverride-8">as shown, and then click </span><span
+class="CharOverride-10">Next</span><span
+class="CharOverride-8">.</span></p>
+<p><img src="Images/Image1491.png" class="_idGenObjectAttribute-125"
+alt="scala logging tutorial" /></p>
+<p>Now give the project a name at the top. Verify that the latest JDK
+you have available is selected, as well as the <span
+class="CharOverride-3">Scala SDK</span> and <span
+class="CharOverride-3">sbt </span>version.</p>
+<p><img src="Images/Image1498.png" class="_idGenObjectAttribute-125"
+alt="scala logging last project window" /></p>
+<p>If Scala is not installed, no SDK will be available. Click the <span
+class="CharOverride-3">Create</span> button and download the latest
+available version (2.12.7, as of this writing). Now, click <span
+class="CharOverride-3">Finish</span>, and IDEA will create your
+project.</p>
+<p>We have one more step to finish before we can start coding. Adding
+the Scala framework to the project will make creating Scala classes and
+objects easier. After the project is finished loading, right-click on
+the project name in the browser window.</p>
+<p><img src="Images/Image1506.png" class="_idGenObjectAttribute-126"
+alt="scala logging Add Framework support" /></p>
+<p>Select <span class="CharOverride-3">Add Framework Support...</span>
+as shown. This brings up the <span class="CharOverride-3">Add Frameworks
+</span>window. Scroll down in the left-hand pane until you find Scala.
+Check the box and then click <span class="CharOverride-3">OK</span>.</p>
+<p><img src="Images/Image1513.png" class="_idGenObjectAttribute-10"
+alt="Add scala framework" /></p>
+<p>That’s it. Let’s write some code!</p>
+<p>Simple Scala Logging</p>
+<p>Let’s start with a new class. Open up the <span
+class="CharOverride-3">src </span>folder in the project browser and
+navigate to the <span class="CharOverride-3">Scala</span> folder.</p>
+<p><img src="Images/Image1521.png" class="_idGenObjectAttribute-127"
+alt="New Scala Class" /></p>
+<p>Right-click a<span id="Section0008.xhtml__idTextAnchor065"></span>nd
+select <span class="CharOverride-3">Scala Class</span>.</p>
+<p><img src="Images/Image1528.png"
+class="_idGenObjectAttribute-128" /></p>
+<p>Change the selector from <span class="CharOverride-3">class </span>to
+<span class="CharOverride-3">object</span>, and give your new object a
+name. Then, click <span class="CharOverride-3">OK</span>.</p>
+<p>IDEA will create a file and add skeleton code to it.</p>
+<p><img src="Images/Image1535.png"
+class="_idGenObjectAttribute-129" /></p>
+<p>Now, modify the new class to extend the <span
+class="CharOverride-3">App </span>class. That way, we can run it. Then
+add a single line of code:</p>
+<p><img src="Images/Image1543.png"
+class="_idGenObjectAttribute-130" /></p>
+<p>Let’s now have the IDE run the class. Right-click on the object name
+in the project browser.</p>
+<p><img src="Images/Image1552.png" class="_idGenObjectAttribute-131"
+alt="scala logging run first time" /></p>
+<p>Select <span class="CharOverride-3">Run </span>in the menu as
+shown.</p>
+<p>A run pane will open in the IDE, and you’ll see the program
+output.</p>
+<p><img src="Images/Image1561.png"
+class="_idGenObjectAttribute-132" /></p>
+<p>That was easy! But now the requirements for your application have
+changed. You need to not only log to the console but also to a file.
+Your operations personnel want to be able to go back and look at past
+log messages.</p>
+<p>There are several options for writing to a text file in Scala, but
+let’s use the simplest option. Edit the code in the object, so it looks
+like this:</p>
+<p><img src="Images/Image1572.png"
+class="_idGenObjectAttribute-133" /></p>
+<p>Now, rerun the program. The output is the same, but a new file called
+<span class="CharOverride-3">output.log</span> appears in the project
+browser.</p>
+<p><img src="Images/Image1584.png" class="_idGenObjectAttribute-134"
+alt="scala logging output.log" /></p>
+<p>Double-click on <span class="CharOverride-3">output.log</span> and
+the IDE will display the contents.</p>
+<p><img src="Images/Image1591.png"
+class="_idGenObjectAttribute-135" /></p>
+<p>We have a log file.</p>
+<p>But there are some issues with this approach. For example, <span
+class="CharOverride-3">PrintWriter </span>uses the current platform’s
+default encoding. So log files created on a Mac will not look correct
+when examined on Windows and vice versa.</p>
+<p>Let’s discuss some logging basics, and then we’ll see a better method
+for Scala logging.</p>
+<p>What Is Application Logging?</p>
+<p>What is logging? Why do we need it? When do we need it?</p>
+<p>At this point in the book, you probably have a good idea of what
+loggi<span id="Section0008.xhtml__idTextAnchor066"></span>ng is. And you
+may have already dealt with it in an application that you’ve created or
+maintained. But let’s revisit our definition so we can evaluate a
+logging framework in terms of what we need. Way back at the start of
+this book, we defined application logging this way:</p>
+<p><span class="CharOverride-5">Application logging involves recording
+information about your application’s runtime behavior to a more
+persistent medium.</span></p>
+<p>Let’s take a closer look at this definition.</p>
+<p>When we log, we record runtime behavior. We document the events that
+occur inside an application. While it’s not explicit in this definition,
+we can also assume that the events are recorded in chronological
+order.</p>
+<p>Second, we store logs in a more persistent medium, like a disk, a
+relational database, or a search engine. Sometimes application events
+occur more quickly than we can follow in real time. We want to be able
+to review them later. Maybe we’re trying to track down an error, or
+perhaps we have to maintain an audit trail.</p>
+<p>The following list contains some examples of things that you’ll
+probably want to capture in a log entry:</p>
+<ul>
+<li>A timestamp. Exactly when did the event take place? (You’ll want to
+record times in UTC, using a standard format such as ISO-8601, in case
+you’re logging to a file.)</li>
+<li>A context that makes it clear to a reader what the entry is about.
+Just recording “Hello, user!” might be difficult to decipher weeks or
+months later. A better message might say, “User greeting of ‘Hello,
+user!’”</li>
+<li>Log levels, such as <span class="CharOverride-3">Error</span>, <span
+class="CharOverride-3">Warning</span>, or <span
+class="CharOverride-3">Info</span>. These provide context.</li>
+</ul>
+<p>Enter the Logging Framework</p>
+<p>So, that’s what logging is. Our simple solution above only scratches
+the surface of what we need for effective logging. It also<span
+id="Section0008.xhtml__idTextAnchor067"></span> relies on the developer
+to open the file, close it, manage the log entry format, and avoid
+overwriting old log entries when the application is restarted. Also, the
+solution wouldn’t scale across multiple objects. We would have to write
+a library or framework for that.</p>
+<p>I could continue, but I’m sure you understand. Creating a sound
+logging approach requires a lot of work and a lot of thought. But these
+problems have already been solved for Java and, as a result, for
+Scala.</p>
+<p>Scala-logging is a library that wraps the <a
+href="https://www.slf4j.org"><span class="CharOverride-7">Simple Logging
+Facade for Java (SLF4J)</span></a> in a Scala-friendly library. SLF4J
+supports many different logging frameworks, including both Log4j, which
+we covered earlier in the book; and <a
+href="https://logback.qos.ch"><span
+class="CharOverride-7">Logback</span></a>, a similar framework. We’re
+going to use Logback for this tutorial because the set will be
+easier.</p>
+<p>Let’s get back to the tutorial.</p>
+<p>Using a Framework for Scala Logging</p>
+<p>First, we need to add SLF4J to our application dependencies. Open
+<span class="CharOverride-3">build.sbt</span> in the code editor.</p>
+<p><img src="Images/Image1599.png" class="_idGenObjectAttribute-136"
+alt="scala logging build.sbt" /></p>
+<p>Add the dependency fo<span
+id="Section0008.xhtml__idTextAnchor068"></span>r <span
+class="CharOverride-3">scala-logging</span> so the file contents look
+like this:</p>
+<p><img src="Images/Image1606.png"
+class="_idGenObjectAttribute-29" /></p>
+<p>Next, we need to download jar files for <span
+class="CharOverride-3">logback </span>and add them to the runtime
+classpath.</p>
+<p>First, create a new directory in your project folder named <span
+class="CharOverride-3">libs</span>.</p>
+<p>Then, add it to the project’s classpath. Right-click on the project
+name and select <span class="CharOverride-3">Open Module
+Settings</span>.</p>
+<p><img src="Images/Image1614.png" class="_idGenObjectAttribute-137"
+alt="module settings" /></p>
+<p>Select the <span class="CharOverride-3">Dependencies </span>tab, and
+then click the plus sign to add a directory.</p>
+<p><img src="Images/Image1621.png"
+class="_idGenObjectAttribute-138" /></p>
+<p>When you select <span class="CharOverride-3">Add jars or
+directories</span>, IDEA will let you select a folder. Below is the
+display for IDEA on a Mac.</p>
+<p><img src="Images/Image1628.png"
+class="_idGenObjectAttribute-139" /></p>
+<p>Select the folder, and then click <span
+class="CharOverride-3">OK</span>.</p>
+<p>We’ve added a folder to the classpath. Now we need to add the jars.
+Download the latest Logback jars from its website, specifically at <a
+href="https://logback.qos.ch/download.html"><span
+class="CharOverride-7">https://logback.qos.ch/download.html</span></a>.
+Open the archive and copy <span
+class="CharOverride-3">logback-classic-XXX.jar</span> and <span
+class="CharOverride-3">logback-core-XXX.jar</span> to the libs
+directory, where XXX is the latest version.</p>
+<p>We’re finally ready to write some code.</p>
+<p>Modify your tutorial class to look like this.</p>
+<p><img src="Images/Image1636.png"
+class="_idGenObjectAttribute-140" /></p>
+<p>We’re importing the logger class and then creating an instance named
+<span class="CharOverride-3">logger</span>. Then, we print a log message
+at the error logging facility.</p>
+<p>Rerun the application.</p>
+<p><img src="Images/Image1645.png"
+class="_idGenObjectAttribute-141" /></p>
+<p>SLF4J passed our log messages to Logback. Then, Logback printed them
+to the console, which is the default behavior when no configuration is
+specified. You can see that each log message has a timestamp, a level
+that corresponds to the function we called with each message, and the
+name of the thread that logged. We’ve satisfied our list of requirements
+for log messages, and we wrote less code than in the simple example
+above.</p>
+<p>Scala Logging: Mission Accomplished</p>
+<p>We did it—we logged in Scala! But this is only the beginning. Java’s
+existing logging frameworks support Scala, so getting sta<span
+id="Section0008.xhtml__idTextAnchor069"></span>rted is the easy
+part.</p>
+<p>Your next mission? Spend some time developing a strategy for logging.
+You’ll need it.</p>
+<p><span class="CharOverride-5">This chapter was contributed by Eric
+Goebelbecker. </span><a href="http://ericgoebelbecker.com/"><span
+class="CharOverride-6">Eric</span></a><span class="CharOverride-5"> has
+worked in the financial markets in New York City for 25 years,
+developing infrastructure for market data and financial information
+exchange (FIX) protocol networks. He loves to talk about what makes
+teams effective (or not so effective!).</span></p>
+</div>
+<p><span id="Section0009.xhtml"></span></p>
+<div id="Section0009.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<h2 class="Heading-2" id="Section0009.xhtml_sigil_toc_id_9">Chapter 9:
+Getting Started Quickly With Django Logging</h2>
+<p>Django is one of the most popular Python web application frameworks,
+and for good reason. Since it employs<span
+id="Section0009.xhtml__idTextAnchor070"></span> the built-in Python
+logging facility, logging in Django is a snap.</p>
+<p>Still, there are a few specific Django configuration options to keep
+in mind. In this chapter, we’ll</p>
+<ul>
+<li>Create a Python virtual environment.</li>
+<li>Set up a small Django project to work with.</li>
+<li>Write a basic logging example.</li>
+<li>Configure the Django logger.</li>
+<li>Explore the Django logging extensions.</li>
+</ul>
+<p>If you want to skip writing code, you can find all of my code from
+this chapter over on GitHub (<a
+href="https://github.com/caseydunham/django-logging"><span
+class="CharOverride-7">https://github.com/caseydunham/django-logging</span></a>).</p>
+<p>Also, note that this chapter won’t go into details on the specifics
+of Python logging. If you want a primer on those, check out ”Get Started
+Quickly With Python Logging” from our first logging book, <a
+href="https://www.amazon.com/Getting-Started-Logging-Quickly-Possible-ebook/dp/B07H8SNT2Q"><span
+class="CharOverride-6">The Scalyr Guide to Getting Started Logging as
+Quickly as Possible</span></a>.</p>
+<p>Now: ready, set, log!</p>
+<p><img src="Images/Image1654.png"
+class="_idGenObjectAttribute-23" /></p>
+<p>Create a Python Virtual Environment</p>
+<p>Python virtual environments are a great way to keep your system-wide
+Python environment clean. They isolate your project depend<span
+id="Section0009.xhtml__idTextAnchor071"></span>encies and keep the
+Python system installation free of cruft and dependency issues.</p>
+<p>Since we’ll be using Python 3 in this chapter, before creating the
+Python virtual environment, you should double-check to make sure you’re
+running a recent version:</p>
+<p><img src="Images/Image1665.png"
+class="_idGenObjectAttribute-142" /></p>
+<p>Next, create a directory to keep our project in:</p>
+<p><img src="Images/Image1677.png"
+class="_idGenObjectAttribute-143" /></p>
+<p>All right. Before we move onto the next section, let’s create and
+activate our new virtual environment:</p>
+<p><img src="Images/Image1684.png"
+class="_idGenObjectAttribute-144" /></p>
+<p>Now everything is good to go to install Django.</p>
+<p>Install Django</p>
+<p>Within the virtual environment, installing Django is as easy as one,
+two, <span class="CharOverride-3">pip install Django</span>:</p>
+<p><img src="Images/Image1692.png"
+class="_idGenObjectAttribute-145" /></p>
+<p>Quickly verify the installation by checking the version<span
+id="Section0009.xhtml__idTextAnchor072"></span> of Django:</p>
+<p><img src="Images/Image1699.png"
+class="_idGenObjectAttribute-146" /></p>
+<p>Great! Now let’s move on to creating a simple hello world
+application.</p>
+<p>Create a Simple Application</p>
+<p>For this chapter, this project isn’t going to be anything fancy—just
+a simple web page handler that will be the logging test bed. Before
+cre<span id="Section0009.xhtml__idTextAnchor073"></span>ating our
+module, we’ll need a name, which will be <span
+class="CharOverride-3">app</span>. (I know, that’s not very clever, but
+it’ll do for our purposes.)</p>
+<p>The <span class="CharOverride-3">django-admin</span> command will
+create an initial application skeleton for us:</p>
+<p><img src="Images/Image1707.png"
+class="_idGenObjectAttribute-147" /></p>
+<p>There won’t be any output, but in your directory you should see a new
+app folder:</p>
+<p><img src="Images/Image1714.png"
+class="_idGenObjectAttribute-148" /></p>
+<p>As a final step to make sure everything’s up and running, fire up the
+built-in Django web server:</p>
+<p><img src="Images/Image1721.png"
+class="_idGenObjectAttribute-149" /></p>
+<p>See that scary message about the 15 unapplied migrations? Just ignore
+that. Open up a browser and point it at <span
+class="CharOverride-3">http://localhost:8000</span>. You should see the
+default Django web page:</p>
+<p><img src="Images/Image1729.png" class="_idGenObjectAttribute-150"
+alt="https://www.hitsubscribe.com/wp-content/uploads/2018/11/Django__the_Web_framework_for_perfectionists_with_deadlines_-1024x594.png" /></p>
+<p>Add a New Django Module</p>
+<p>Now that we’ve got all our scaffolding in place, let’s create a
+module named <span class="CharOverride-3">hello</span>. Once again,
+Django provides another handy script, <a
+href="https://docs.djangoproject.com/en/2.1/ref/django-admin/"><span
+class="CharOverride-12">manage.py</span></a>, tha<span
+id="Section0009.xhtml__idTextAnchor074"></span>t takes care of a bit of
+scaffolding:</p>
+<p><img src="Images/Image1738.png"
+class="_idGenObjectAttribute-151" /></p>
+<p>This command will create a new folder named <span
+class="CharOverride-3">hello</span>,<span class="CharOverride-3">
+</span>along with a few additional Python files. Replace the contents of
+<span class="CharOverride-3">hello/views.py</span> with the
+following:</p>
+<p><img src="Images/Image1747.png"
+class="_idGenObjectAttribute-152" /></p>
+<p>This creates our initial view, but we still need to let Django know
+about it. Create a new file in <span
+class="CharOverride-3">hello/urls.py</span> and add the following to
+it:</p>
+<p><img src="Images/Image1761.png"
+class="_idGenObjectAttribute-153" /></p>
+<p>This hooks up our view to the base URL path (the empty string). Now
+all we need to do is hook this into the <span
+class="CharOverride-3">app/urls.py</span> file so Django knows how to
+route everything.</p>
+<p>Open <span class="CharOverride-3">app/urls.py</span> and replace its
+contents with the following:</p>
+<p><img src="Images/Image1774.png"
+class="_idGenObjectAttribute-154" /></p>
+<p>Next, start the web server, as we did before:</p>
+<p><img src="Images/Image1781.png"
+class="_idGenObjectAttribute-155" /></p>
+<p>Instead of the default Django welcome screen, we’ll see our
+lackluster but useful view:</p>
+<p><img src="Images/Image1789.png" class="_idGenObjectAttribute-156"
+alt="https://www.hitsubscribe.com/wp-content/uploads/2018/11/hello_logging-1024x360.png" /></p>
+<p>Whew. Thanks for sticking with it. Now that we have all that out of
+the way, let’s look at how to utilize logging within the Django
+application.</p>
+<p>First Steps With Logging</p>
+<p>The simplest possible logging we can do is to just import the Python
+logging module and start logging.</p>
+<p>Begin by updating the <span
+class="CharOverride-3">app/views.py</span> file with the <span
+id="Section0009.xhtml__idTextAnchor075"></span>following code:</p>
+<p><img src="Images/Image1796.png"
+class="_idGenObjectAttribute-157" /></p>
+<p>Here, we’re importing the logging module and then using the <span
+class="CharOverride-3">getLogger</span> method to get a logging instance
+we can use. In the <span class="CharOverride-3">Index </span>method, we
+emit our log message using the <span
+class="CharOverride-3">logger.error</span> method. Restart the web
+server and refresh the page to see our message in the console
+window:</p>
+<p><img src="Images/Image1804.png"
+class="_idGenObjectAttribute-158" /></p>
+<p>Configure the Logger</p>
+<p>By default, Django uses the <span
+class="CharOverride-3">dictConfig</span> format for configuring logging
+handlers, filters, and formatting. These settings are set through the
+<span class="CharOverride-3">LOGGING</span> dictionary,<span
+id="Section0009.xhtml__idTextAnchor076"></span> which is merged with the
+Django default logging configuration. Let’s look at a simple logging
+configuration and then walk through it.</p>
+<p><img src="Images/Image1811.png"
+class="_idGenObjectAttribute-159" /></p>
+<p><span class="CharOverride-8">OK, that</span>’s<span
+class="CharOverride-8"> a lot. Let</span>’<span class="CharOverride-8">s
+break it down.</span></p>
+<p><span class="CharOverride-3">version</span>:<span
+class="CharOverride-3"> </span>The <span
+class="CharOverride-3">dictConfig</span> schema doesn’t require a
+version, but setting it ensures backward compatibility. Currently, the
+only valid value here is 1.</p>
+<p><span class="CharOverride-3">disable_existing_loggers</span>:<span
+class="CharOverride-3"> </span><span class="CharOverride-8">This setting
+disables existing loggers. The default value is </span><span
+class="CharOverride-10">False</span><span class="CharOverride-8">, but
+it doesn</span>’<span class="CharOverride-8">t hurt to be explicit. When
+setting this to </span><span class="CharOverride-10">True</span><span
+class="CharOverride-8">, define additional loggers. Otherwise, messages
+may be lost.</span></p>
+<p><span class="CharOverride-3">formatters</span>: <span
+class="CharOverride-8">This section defines what our log statements will
+look like. Let</span>’<span class="CharOverride-8">s take a look at the
+console log format:</span></p>
+<p><img src="Images/Image1818.png"
+class="_idGenObjectAttribute-160" /></p>
+<p>Here’s what’s going on:</p>
+<ul>
+<li><span class="CharOverride-3">%(name)</span>: this is the package
+name that emits the log message.</li>
+<li><span class="CharOverride-3">%(levelname)</span>: the log level of
+the message (<span class="CharOverride-3">Error</span>, <span
+class="CharOverride-3">Warning</span>, <span
+class="CharOverride-3">Info</span>, etc.).</li>
+<li><span class="CharOverride-3">%(message)</span>: this is the actual
+log message.</li>
+</ul>
+<p>The <span class="CharOverride-3">-12s</span> and the <span
+class="CharOverride-3">-8s</span> control spacing between the different
+format specifications. An example message in this format will look like
+the following:</p>
+<p><img src="Images/Image1826.png"
+class="_idGenObjectAttribute-161" /></p>
+<p>You’ll notice the file formatter includes an additional specifier,
+the <span class="CharOverride-3">%(asctime)</span>. This adds a
+timestamp to each message sent through the file handler. As an example,
+the message from our defined <span
+class="CharOverride-3">debug.log</span> will resemble this:</p>
+<p><img src="Images/Image1835.png"
+class="_idGenObjectAttribute-162" /></p>
+<p><span class="CharOverride-3">handlers</span>: This section defines
+how to handle log messages. We can send messages to the console, files,
+or even sockets! All the default handlers are in the Python docs <a
+href="https://docs.python.org/3/library/logging.handlers.html"><span
+class="CharOverride-7">on their website</span></a>. This configuration
+defines separate handlers: one for console messages and another for
+messages sent to the file. In addition, for the file handler, we specify
+the handler class, the file name to log to, and the log level. This
+handler also specifies which formatter to use.</p>
+<p><span class="CharOverride-3">loggers</span>: This last section is
+where we tie it all together and define our loggers, including how to
+handle the root logger (represented by the empty string) messages. We
+also set the logging level to <span class="CharOverride-3">Debug</span>
+and define two handlers—one to the console and one to the file.</p>
+<p>Let’s update the configuration now and take it for a spin.</p>
+<p>Update and Test the New Configuration</p>
+<p>Update the <span class="CharOverride-3">app/views.py</span> to
+include the above logging configuration. It should look like this:</p>
+<p><img src="Images/Image1844.png"
+class="_idGenObjectAttribute-163" /></p>
+<p>Running that as before and refreshing the browser,<span
+id="Section0009.xhtml__idTextAnchor077"></span> the console log message
+now includes the additional information from our format string:</p>
+<p><img src="Images/Image1855.png"
+class="_idGenObjectAttribute-164" /></p>
+<p>The log file will contain the same message and format, but with the
+addition of the timestamp:</p>
+<p><img src="Images/Image1867.png"
+class="_idGenObjectAttribute-165" /></p>
+<p>This is enough to start incorporating logging in any Django project.
+However, we have one more topic to cover: the logging extensions that
+Django provides.</p>
+<p>Tour the Django Logging Extensions</p>
+<p>In a web server environment, we often have routine information we
+need to log. Django provides a few logging extensions to cover these use
+cases.</p>
+<p><span class="CharOverride-3">django<span
+id="Section0009.xhtml__idTextAnchor078"></span></span>: This is a
+catch-all logger for messages in the <span class="CharOverride-3">django
+</span>hierarchy. Messages aren’t posted using this logger name since
+one of the following loggers will be used.</p>
+<p><span class="CharOverride-3">django.request</span>: <span
+class="CharOverride-8">This logger handles the logging of HTTP requests
+and will raise exceptions for certain status codes. All HTTP 5xx error
+codes will raise </span><span class="CharOverride-3">Error </span><span
+class="CharOverride-8">messages. Likewise, HTTP 4xx codes will appear as
+</span><span class="CharOverride-3">Warning </span><span
+class="CharOverride-8">messages.</span></p>
+<p><span class="CharOverride-3">django.server</span>: When running the
+server using the <span class="CharOverride-3">runserver </span>command
+(which we’ve been doing), this will log messages related to the handling
+of those requests, just like the <span
+class="CharOverride-3">django.request</span> logger—except that all
+other messages are logged at the <span class="CharOverride-3">Info
+</span>level. These are messages that don’t trigger an HTTP status code
+of 5xx or 4xx.</p>
+<p><span class="CharOverride-3">django.template</span>: No matter how
+often I’ve worked with Django templates, I’ve never put one together
+without errors the first time. The <span
+class="CharOverride-3">django.template</span> logger handles errors
+related to the rendering of templates. Missing context variables will
+appear in the log as <span class="CharOverride-3">Debug
+</span>messages.</p>
+<p><span class="CharOverride-3">django.db.backends</span>: This logger
+handles any messages from the interaction of the code with the database.
+All application-level SQL statements will appear at the <span
+class="CharOverride-3">Debug </span>level. As this can get quite noisy,
+<span class="CharOverride-3">Debug </span>logging needs to be enabled by
+changing <span class="CharOverride-3">settings.DEBUG</span> to <span
+class="CharOverride-3">True</span>.</p>
+<p><span class="CharOverride-3">django.security.*</span>: Django
+provides handlers for security-related errors. In particular, the logger
+will receive any messages that result from a <span
+class="CharOverride-3">SuspiciousOperation </span>error. Django defines
+subclasses for each kind of security error, such as <span
+class="CharOverride-3">DisallowedHost</span> or <span
+class="CharOverride-3">InvalidSessionKey</span>. The rest of the
+subclasses of <span class="CharOverride-3">SuspiciousOperation</span>
+can be found <a
+href="https://docs.djangoproject.com/en/2.1/ref/exceptions/#django.core.exceptions.SuspiciousOperation"><span
+class="CharOverride-7">on </span></a><a
+href="https://docs.djangoproject.com/en/2.1/ref/exceptions/#django.core.exceptions.SuspiciousOperation"><span
+class="CharOverride-7">Django’s website, under their exceptions page in
+the documentation</span></a>. A word of caution—if the <span
+class="CharOverride-3">django.security</span> logger handles a message,
+it won’t be sent through the <span
+class="CharOverride-3">django.request</span> logger. So don’t ignore
+messages from the <span class="CharOverride-3">django.security.*</span>
+loggers!</p>
+<p><span class="CharOverride-3">django.security.csrf</span>: This logger
+doesn’t inherit from the <span
+class="CharOverride-3">SuspiciousOperation</span> logger that the other
+security handlers extend. This handles any exceptions that occur due to
+cross-site request forgery (CSRF) attacks.</p>
+<p>As one final example, let’s log messages from the <span
+class="CharOverride-3">django.request</span> extension. This is done by
+adding the logger to the logging section of the configuration like
+so:</p>
+<p><img src="Images/Image1874.png"
+class="_idGenObjectAttribute-166" /></p>
+<p>This will log request messages like the following:</p>
+<p><img src="Images/Image1882.png"
+class="_idGenObjectAttribute-167" /></p>
+<p>Feel free to experiment, and don’t forget to log the <span
+class="CharOverride-3">django.security.*</span> messages!</p>
+<p>You’ve Got This!</p>
+<p>That was a lot of information, so let’s recap:</p>
+<ul>
+<li>Django uses the standard Python logging facilities.</li>
+<li>Logging settings are set through the <span
+class="CharOverride-3">logging.dictConfig</span> dictionary.</li>
+<li>Djang<span id="Section0009.xhtml__idTextAnchor079"></span>o provides
+a few <a
+href="https://docs.djangoproject.com/en/2.1/topics/logging/#django-s-logging-extensions"><span
+class="CharOverride-7">logging extensions</span></a> for handling common
+web server issues.</li>
+</ul>
+<p>If you need to delve further, you can read up on the Python logging
+facility as well as the Django logging specifics, both on their
+respective websites. Until next time, happy logging!</p>
+<p><span class="CharOverride-5">This chapter was contributed by Casey
+Dunham. </span><a href="https://www.caseydunham.com/"><span
+class="CharOverride-6">Casey</span></a><span class="CharOverride-5">,
+who recently launched his own security business, is known for his unique
+approaches to all areas of application security, stemming from his 10+
+year career as a professional software developer. His strengths include
+secure SDLC development consulting; threat modeling; developer training;
+and auditing web, mobile, and desktop applications for security
+flaws.</span></p>
+</div>
+<p><span id="Section0010.xhtml"></span></p>
+<div id="Section0010.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<h2 class="Heading-2" id="Section0010.xhtml_sigil_toc_id_10">Chapter 10:
+Getting Started Quickly With Angular Logging</h2>
+<p>In this chapter, I’ll show you how to quickly get started logging in
+one of the most popular front-end development frameworks: Ang<span
+id="Section0010.xhtml__idTextAnchor080"></span>ul<span
+id="Section0010.xhtml__idTextAnchor081"></span>ar.</p>
+<p>“But wait!” you might be thinking. “Do you mean Angular or
+AngularJS?” I mean both. After a bit of Angular history, we’ll look at
+logging with AngularJS, and then we’ll use the current Angular version
+to show you logging in action.</p>
+<p><img src="Images/Image1889.png"
+class="_idGenObjectAttribute-23" /></p>
+<p>A Bit of Angular History</p>
+<p>The history of Google’s Angular development is tumultuous. Each major
+version made the previous one obsolete, as the codebase developed in
+previous Angular versions <span
+id="Section0010.xhtml__idTextAnchor082"></span>was not compatible with
+newer versions. If the cost of refactoring the entire codebase was too
+high for your company, you never made the upgrade to newer Angular
+versions.</p>
+<p>Like all front-end development frameworks of the time, Angular
+started as a JavaScript framework. The first version of Angular was
+called AngularJS, and the JS in the name stands for JavaScript.</p>
+<p>Around 2015 at the Angular Conference, the Angular team announced
+they were moving to TypeScript instead of JavaScript, which marked
+another major change in the codebase. This is when the JS was dropped
+from the product name and it simply became Angular.</p>
+<p>In addition to moving away from JavaScript, newer Angular versions
+started embracing component- and service-centered development. While it
+added more complexity to getting started, this approach is the better
+architecture for supporting large single-page applications. Currently,
+Angular has a very structured and opinionated approach to front-end
+development.</p>
+<p>There you have it—some background on Angular. Now, let’s get started
+with logging in AngularJS!</p>
+<p>AngularJS Logging Application</p>
+<p>Let me start with a blast from the past, when Angular was young and
+called AngularJS. Even though it’s an old version now, there are many
+current applications s<span
+id="Section0010.xhtml__idTextAnchor083"></span>till using Angular 1. In
+AngularJS (last version 1.7.2), things were simpler to bootstrap. Let’s
+revisit a simple example for logging with AngularJS.</p>
+<p>With Windows Explorer, create a new folder called <span
+class="CharOverride-3">angular-logging</span>. Place this in your
+development folder on your hard drive. This folder will contain our two
+simple files: <span class="CharOverride-3">script.js</span> (containing
+our logging logic) and <span class="CharOverride-3">index.html</span>
+(containing our template view).</p>
+<p>In Visual Studio Code, open this folder by choosing <span
+class="CharOverride-3">File &gt; Open Folder</span>. Then, click <span
+class="CharOverride-3">File &gt; New File</span> (<span
+class="CharOverride-3">CTRL+N</span>) and type the file name: <span
+class="CharOverride-3">script.js</span>. This new file will contain our
+Angular 1 controller, which will perform the Angular logging logic.</p>
+<p><img src="Images/Image1897.png"
+class="_idGenObjectAttribute-168" /></p>
+<p>When creating an Angular controller, we pass in a name for the
+controller and an array of parameters that define this controller’s
+dependencies. In our case, we’re passing the <span
+class="CharOverride-3">$scope</span> object and the <span
+class="CharOverride-3">$log</span> module that we’ll use.</p>
+<p>The last parameter is the actual function that performs our
+logic...logging. To keep things simple, we add two variables on the
+global <span class="CharOverride-3">$scope</span> object: <span
+class="CharOverride-3">logger </span>and <span
+class="CharOverride-3">message</span>.</p>
+<p>The logger variable is the actual <span
+class="CharOverride-3">$log</span> library, and the message variable
+will be bound to the HTML template <span
+class="CharOverride-3">index.html</span>.</p>
+<p>Next, we create the HTML template—our view—that will be controlled by
+<span class="CharOverride-3">LogController</span>.</p>
+<p><img src="Images/Image1904.png"
+class="_idGenObjectAttribute-169" /></p>
+<p>What do we have in our HTML view? Let’s take a closer look above,
+inside <span class="CharOverride-3">index.html</span>.</p>
+<p>After importing the Angular library and our controller code, start
+binding the HTML elements to the <span
+class="CharOverride-3">LogController</span> and the message variable. In
+addition, add click listeners using the Angular 1 directive <span
+class="CharOverride-3">ng-click</span> so that when we click the
+buttons, our controller’s function will be called.</p>
+<p>Testing Our AngularJS Logging Application</p>
+<p>In Firefox, click <span class="CharOverride-3">File &gt; Open
+File</span> and navigate to the <span
+class="CharOverride-3">index.html</span> file. Once the file loads,
+bring up Firefox Developer Tools and then click the <span
+class="CharOverride-3">Conso<span
+id="Section0010.xhtml__idTextAnchor084"></span>le</span> tab.</p>
+<p><img src="Images/Image1911.png" class="_idGenObjectAttribute-170"
+alt="https://www.hitsubscribe.com/wp-content/uploads/2018/11/angular1-logging-view.png" /></p>
+<p>By clicking on the buttons, we can see the various logging levels
+displayed. We can also change the text being logged in the <span
+class="CharOverride-3">Message </span>field since it’s bound two ways to
+the controller.</p>
+<p>In AngularJS, the <span class="CharOverride-3">$log</span> module is
+a simple wrapper to <span class="CharOverride-3">console.log</span> and
+doesn’t provide any extra functionality.</p>
+<p>There you have it! Logging with AngularJS in a few steps. In
+AngularJS, things are much simpler.</p>
+<p>Now, let’s move on to logging in today’s version of Angular. But
+before we take a look at that, we need to build a simple Angular
+application skeleton. This will prove to be more difficult than it was
+with AngularJS.</p>
+<p>Building a Simple Angular Application</p>
+<p>Getting started with Angular is going to be different. Gone are the
+days when you can simply load an HTML file straight from your browser
+and get coding qu<span
+id="Section0010.xhtml__idTextAnchor085"></span>ickly. To get even a
+simple application bootstrapped, you must have a few things
+installed.</p>
+<p>Let’s get started! First, we’ll need to <a
+href="https://nodejs.org/"><span class="CharOverride-7">install
+Node.js</span></a>. Node comes with its own package manager npm, which
+we’ll need in order to install Angular.</p>
+<p>Next, we need to install the Angular command line interface (CLI).
+Before we can talk about logging with Angular, we’ll need to use Angular
+CLI to generate an application skeleton:</p>
+<p><img src="Images/Image1919.png"
+class="_idGenObjectAttribute-171" /></p>
+<p>The <span class="CharOverride-3">-g</span> flag stands for <span
+class="CharOverride-3">global</span>. If we don’t use <span
+class="CharOverride-3">-g</span>, Angular CLI will only be installed in
+the current folder, and it’s not going to be accessible anywhere
+else.</p>
+<p>If you’re on a Mac, you need to put <span
+class="CharOverride-3">sudo</span> at the beginning of this command to
+execute it as an administrator. Otherwise, you’ll get permission
+errors.</p>
+<p>If you’re doing this for the first time, this step might take a
+while. Once Angular CLI has been installed, we can create a simple
+application:</p>
+<p><img src="Images/Image1929.png"
+class="_idGenObjectAttribute-172" /></p>
+<p>Here we’re telling Angular CLI to generate a new project called <span
+class="CharOverride-3">hello-world</span> and store it in a folder with
+the same name. It’ll be created in the folder where you’re running the
+Angular CLI commands, and it’ll contain all the files needed for the
+Angular application to run.</p>
+<p>Now, let’s run it.</p>
+<p><img src="Images/Image1938.png"
+class="_idGenObjectAttribute-173" /></p>
+<p>Ugh! Now you have to wait a while (depending on your machine’s
+muscles) for Angular to actually compile all that TypeScript code that
+was generated. Look for an output like this:</p>
+<p><img src="Images/Image1949.png"
+class="_idGenObjectAttribute-71" /></p>
+<p>Testing Our New Angular Application</p>
+<p>Finally! Now you can simply point your browser to <span
+class="CharOverride-3">localhost:4200</span> and see the Angular logo.
+As you can see, wow—this was not trivial.</p>
+<p><img src="Images/Image1961.png" class="_idGenObjectAttribute-174"
+alt="https://www.hitsubscribe.com/wp-content/uploads/2018/11/angular4-hello-world-1.png" /></p>
+<p>Now let’s take a look at t<span
+id="Section0010.xhtml__idTextAnchor086"></span>he <span
+class="CharOverride-3">hello-world</span> folder and see what Angular
+CLI actually created for us:</p>
+<p><img src="Images/Image1968.png" class="_idGenObjectAttribute-122"
+alt="https://www.hitsubscribe.com/wp-content/uploads/2018/11/angular4-hello-visual-code.png" /></p>
+<p>Remember that we’re still trying to get to logging with Angular. But
+for now, here’s a quick summary of an Angular application structure:</p>
+<p>The top folder called <span class="CharOverride-3">e2e</span> is for
+testing our application. The next one, <span
+class="CharOverride-3">node_modules</span>, is for all the modules your
+application needs. If we expand <span
+class="CharOverride-3">node_modules</span>, we’ll see that even for the
+simplest applications, there are a lot of modules needed. Finally, we
+get to the <span class="CharOverride-3">src </span>folder that has our
+source code. This is where we will do our work. And down the tree,
+there’s <span class="CharOverride-3">index.html</span>, which is our
+application’s entry point.</p>
+<p>Generating an Angular Logging Component</p>
+<p>Now, as promised, let’s turn our attention to logging in Angular.
+We’ll add a new Angular component that has several buttons, and these
+buttons will trigger lo<span
+id="Section0010.xhtml__idTextAnchor087"></span>gging at the console at
+different levels. In addition, we’ll add a timestamp to each logging
+statement.</p>
+<p><img src="Images/Image1976.png" class="_idGenObjectAttribute-175"
+alt="https://www.hitsubscribe.com/wp-content/uploads/2018/11/angular-new-component.png" /></p>
+<p>Our first step is to generate a new Angular component for logging.
+We’ll do this using the Angular CLI in the same folder as our project
+<span class="CharOverride-3">hello-world</span>.</p>
+<p><img src="Images/Image1983.png"
+class="_idGenObjectAttribute-176" /></p>
+<p>In this command, <span class="CharOverride-3">g</span> stands for
+<span class="CharOverride-3">generate</span>, while <span
+class="CharOverride-3">c</span> stands for <span
+class="CharOverride-3">component</span>. <span
+class="CharOverride-3">Logger </span>is the name of our new component.
+Taking a look at the project folder (<span
+class="CharOverride-3">hello-world</span>) inside the <span
+class="CharOverride-3">src/app</span> folder, we see a new folder called
+<span class="CharOverride-3">logger</span>.</p>
+<p>The logger folder contains the four basic parts of an Angular
+component: styling (<span class="CharOverride-3">.css</span>), view
+(<span class="CharOverride-3">.html</span>), test (<span
+class="CharOverride-3">spec.ts</span>), and model (<span
+class="CharOverride-3">.ts</span>).</p>
+<p>In addition, our application’s module file (<span
+class="CharOverride-3">app.module.ts</span>) has been modified to
+automatically import the new component.</p>
+<p><img src="Images/Image1991.png"
+class="_idGenObjectAttribute-177" /></p>
+<p>This way, as soon as we generate a new component, we can immediately
+use it.</p>
+<p>So, let’s use our brand-spanking-new Angular component.</p>
+<p>Adding Logging Logic in Our Angular Component</p>
+<p>To start adding logging logic, we’ll first open our application view
+file <span class="CharOverride-3">app.component.html</span>. We
+generated this file at the very beginning when we created t<span
+id="Section0010.xhtml__idTextAnchor088"></span>he hello world
+application.</p>
+<p>Let’s add our new Angular component, as well as the new custom HTML
+tag that was just created (<span
+class="CharOverride-3">&lt;app-logger&gt;&lt;/app-logger&gt;</span>):</p>
+<p><img src="Images/Image1998.png"
+class="_idGenObjectAttribute-178" /></p>
+<p>Now, let’s go inside our new Angular component model (<span
+class="CharOverride-3">logger.component.ts</span>) and add some logging
+logic.</p>
+<p><img src="Images/Image2005.png"
+class="_idGenObjectAttribute-179" /></p>
+<p>Take a look at our model file. Our main method is <span
+class="CharOverride-3">log </span>(<span class="CharOverride-3">level,
+message</span>) method, which simply logs to the console the message
+passed in, according to the level passed in.</p>
+<p>Next, we’ll take a look at our model file above (<span
+class="CharOverride-3">logger.component.ts</span>). So, the method <span
+class="CharOverride-3">log </span>simply logs to the console the message
+passed in as a parameter. Additionally, logging is done according to the
+logging level, which is also passed in as a parameter. We then finish
+formatting each log statement to include the level and a simple
+timestamp, in addition to the message.</p>
+<p>Now, let’s add our controls to the HTML view in <span
+class="CharOverride-3">logger.component.html</span>:</p>
+<p><img src="Images/Image2013.png"
+class="_idGenObjectAttribute-180" /></p>
+<p>Let’s note a few things here in our view. First, notice lines 1 and
+6, which are <span class="CharOverride-3">{{title}}</span> and <span
+class="CharOverride-3">{{logStatement}}</span>. These are our model
+variables that were bound to our view. In Angular, they’re bound two
+ways, which means that if the value changes in the view, the model value
+is updated and vice versa. If you change the value in the model, the
+value in the view will also be updated.</p>
+<p>In our particular case, the <span
+class="CharOverride-3">{{logStatement}}</span> will be changed in our
+model as we click the various logging level buttons. The HTML view will
+update when the model value updates.</p>
+<p>Let’s take a look at our Angular logging application:</p>
+<p><img src="Images/Image2022.png" class="_idGenObjectAttribute-181"
+alt="https://www.hitsubscribe.com/wp-content/uploads/2018/11/angular4-logging-app.png" /></p>
+<p>On the right-hand side, we have our Google Chrome console, which
+first displays the message in the <span
+class="CharOverride-3">ngOnInit</span> method. Then, as we click on the
+various logging buttons, we log to the console in the appropriate
+logging level.</p>
+<p>Generating a New Service With Angular CLI</p>
+<p>Logging inside an Angular component was a very quick way to log with
+Angular, certainly. But that’s not the proper way to create a logging
+utility that can be reuse<span
+id="Section0010.xhtml__idTextAnchor089"></span>d to log in our Angular
+application.</p>
+<p>To do it properly, let’s create a logging service called <span
+class="CharOverride-3">LogEngine</span>. A service is a small piece of
+our software that specializes in performing one specific function. Our
+new service specializes in logging messages to the console.</p>
+<p>This time, since we already have our logger component, let’s create
+an Angular service that will contain our logging logic. We’ll also
+change our logger component to only have our user interface that will
+use the new service.</p>
+<p>We could simply use the Angular CLI again to generate a service, just
+as we generated the Angular component above. To do that, in a terminal
+window, we’d make sure we’re inside our <span
+class="CharOverride-3">hello-world </span>folder. We’d then use Angular
+CLI to generate a service instead of a component:</p>
+<p><img src="Images/Image2031.png"
+class="_idGenObjectAttribute-182" /></p>
+<p>As usual, <span class="CharOverride-3">g</span> stands for <span
+class="CharOverride-3">generate</span>, while <span
+class="CharOverride-3">s</span> stands for <span
+class="CharOverride-3">service</span>. We’re naming our logging service
+<span class="CharOverride-3">logEngine</span>. Notice that in addition
+to the service name, we also include the path to this new service. And
+let me share a piece of advice: make sure you don’t use the word <span
+class="CharOverride-3">service</span> in the name of your service when
+you’re creating through the CLI. Angular CLI automatically adds the word
+<span class="CharOverride-3">service</span> to the class definition.</p>
+<p>But I’ve chosen not to generate our new service using Angular CLI.
+Let’s discuss how to do this manually instead.</p>
+<p>Creating a New Angular Logging Service Manually</p>
+<p>This time, let’s create the new Angular logging service manually.
+It’s good to know how to do this because, many times, it’s helpful to
+see what happens behind<span
+id="Section0010.xhtml__idTextAnchor090"></span> the scenes when things
+are generated for us.</p>
+<p>In Visual Studio Code, under <span
+class="CharOverride-3">src/app</span>, we’ll create a new folder called
+<span class="CharOverride-3">services</span>. Inside that, create
+another new folder called <span
+class="CharOverride-3">log-engine</span>. This folder will hold our
+<span class="CharOverride-3">logEngine </span>service. Inside this new
+folder, let’s create a new file called <span
+class="CharOverride-3">log-engine.service.ts</span>. This is our service
+file.</p>
+<p><img src="Images/Image2042.png" class="_idGenObjectAttribute-183"
+alt="https://www.hitsubscribe.com/wp-content/uploads/2018/11/angular-service-created-215x300.png" /></p>
+<p>Next, let’s take a look at our IDE. We should still see the logger
+component folder from above. Now we have the <span
+class="CharOverride-3">services </span>folder with the <span
+class="CharOverride-3">log-engine </span>subfolder inside it. It’s here
+that we’ll find our new <span
+class="CharOverride-3">log-engine.service.ts</span> file. In this file,
+we’ll create our <span class="CharOverride-3">LogEngineService
+</span>logic.</p>
+<p>Now, let’s move all our logging logic from the old <span
+class="CharOverride-3">logger.component.ts</span> to the new logging
+service, <span class="CharOverride-3">log-engine.service.ts</span>.</p>
+<p>We’ll also refactor our logging methods to better resemble a normal
+logging interface, with specific methods for each logging level.</p>
+<p>Moving Logging Logic to the New Angular Service</p>
+<p>At this point, we’ll simply move our existing logging logic from our
+logger component to our new <span
+class="CharOverride-3">LogEngineService</span>. In addition, we’ll
+refactor the existing log <span
+id="Section0010.xhtml__idTextAnchor091"></span>method and split it into
+specific methods dedicated to each log level. This is a much better
+interface for logging, as it resembles the well-known console logging
+interface.</p>
+<p><img src="Images/Image2054.png"
+class="_idGenObjectAttribute-184" /></p>
+<p>Notice that the class name is <span
+class="CharOverride-3">LogEngineService</span>. Angular CLI
+automatically adds the word <span class="CharOverride-3">service</span>
+when creating a service. And we should do the same, even though we’re
+creating the file manually.</p>
+<p>We still want to add the logging level and the timestamp in each log
+entry. In addition, each method in our <span
+class="CharOverride-3">LogEngineService </span>returns each log entry.
+We want to also display the logging statement in our application via our
+HTML view. This will become clearer in a little bit.</p>
+<p>Now let’s wire our <span class="CharOverride-3">LogEngineService
+</span>and use it in our logger Angular component.</p>
+<p>Wiring the New Angular Logging Service</p>
+<p>To wire the service, we’ll open <span
+class="CharOverride-3">app.module.ts</span>. Here’s where we define our
+application-level dependencies. We need to add our new service as one of
+the providers.</p>
+<p><img src="Images/Image2061.png"
+class="_idGenObjectAttribute-185" /></p>
+<p>Notice<span id="Section0010.xhtml__idTextAnchor092"></span> that we
+added <span class="CharOverride-3">LogEngineService </span>in the
+providers list—<span class="CharOverride-3">providers:
+[LogEngineService]</span>.</p>
+<p>Using Our Service Inside Our Angular Component</p>
+<p>Next in our journey toward logging quickly with Angular, we need to
+add <span class="CharOverride-3">LogEngineService </span>to our logger
+component inside <span
+class="CharOverride-3">logger.component.ts</span>. Let’s take a look at
+t<span id="Section0010.xhtml__idTextAnchor093"></span>he import
+statement on top of the file:</p>
+<p><img src="Images/Image2069.png"
+class="_idGenObjectAttribute-186" /></p>
+<p>Now our existing logger component is ready to use our new <span
+class="CharOverride-3">logEngine </span>service. I’ve also refactored
+our existing component so it has clear button listeners, specific to
+each button. Our old component doesn’t have any logging logic because
+we’ve moved all that logic to our new service.</p>
+<p>Let’s take a look again at the entire <span
+class="CharOverride-3">logger.component.ts</span> file:</p>
+<p><img src="Images/Image2076.png"
+class="_idGenObjectAttribute-187" /></p>
+<p>I’m sure you quickly noticed the new button listeners. But what’s
+<span class="CharOverride-3">logService</span>? Well, it’s our new <span
+class="CharOverride-3">LogEngineService</span> that we just created and
+imported into our logger component. Notice the constructor. That’s how
+<span class="CharOverride-3">LogEngineService </span>becomes <span
+class="CharOverride-3">logService</span>:</p>
+<p><img src="Images/Image2084.png"
+class="_idGenObjectAttribute-188" /></p>
+<p>Now all our button listeners can use the <span
+class="CharOverride-3">logService </span>instance to call the logging
+methods on our new service.</p>
+<p>Take special note of the <span class="CharOverride-3">logStatement
+</span>variable. We bind this model variable to our HTML view. Our <span
+class="CharOverride-3">LogEngineService</span> updates this variable
+with the value of the last log entry. That’s why our <span
+class="CharOverride-3">LogEngineService</span> log methods return every
+log entry.</p>
+<p>Refactoring the HTML View and Retesting</p>
+<p>The last step is to update our logger component’s HTML view (<span
+class="CharOverride-3">logger.component.html</span>) to use the new
+button listeners that we just created:</p>
+<p><img src="Images/Image2091.png"
+class="_idGenObjectAttribute-189" /></p>
+<p>Here, we just added calls to each<span
+id="Section0010.xhtml__idTextAnchor094"></span> button listener with a
+message. We no longer have to pass the desired logging level since each
+button listener will send the right logging level to the <span
+class="CharOverride-3">LogEngineService </span>methods.</p>
+<p>All we have to do now is to save all files and refresh our
+application running at <span
+class="CharOverride-3">localhost:4200</span>. Let’s take a look:</p>
+<p><img src="Images/Image2098.png" class="_idGenObjectAttribute-190"
+alt="https://www.hitsubscribe.com/wp-content/uploads/2018/11/angular-logging-final-debug-1024x463.png" /></p>
+<p>There you have it! Same exact functionality as we previously
+implemented when we were logging from inside the container itself.
+However, now we have an independent Angular service, specialized in
+logging our messages, embellished with the logging level and
+timestamp.</p>
+<p>Enhance Your Logging Service!</p>
+<p>In this chapter, we learned how to get started logging quickly with
+Angular and AngularJS. We also touched on installing Angular CLI and
+using it to create a skeleton for developing wit<span
+id="Section0010.xhtml__idTextAnchor095"></span>h Angular. Plus, we
+refactored our logging component so that it uses an Angular logging
+service. That equates to much better organization of our code and
+logic.</p>
+<p>It’s probably obvious that logging to the console doesn’t bring much
+value other than during debugging. However, after exploring Angular
+services, you should have some ideas now about how you could enhance
+your logging service so that it can persist logs via REST calls or
+integrate with a log aggregation service. So go forth and log in Angular
+like a pro!</p>
+<p><span class="CharOverride-5">This chapter was contributed by
+</span><a href="https://www.organizepictures.com/"><span
+class="CharOverride-6">Vlad Georgescu</span></a><span
+class="CharOverride-5">. Vlad is senior system architect and full-stack
+enterprise software developer with almost two decades of experience in
+the development lifecycle. He also has experience as a SCRUM master,
+agile coach, and team leader. On the communications front, Vlad is also
+effective: he’s created online communities and worked on social media
+marketing strategies.</span></p>
+</div>
+<p><span id="Section0011.xhtml"></span></p>
+<div id="Section0011.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<h2 class="Heading-2" id="Section0011.xhtml_sigil_toc_id_11">Chapter 11:
+Getting Started Quickly With Meteor Logging</h2>
+<p>We’ve covered a lot of bases in previous chapters. In addition to
+Java and PHP, we’ve created guides for Ruby, Swift, Django, and more.
+Now, we’ll discuss lo<span
+id="Section0011.xhtml__idTextAnchor096"></span>gg<span
+id="Section0011.xhtml__idTextAnchor097"></span>ing from a Meteor point
+of view.</p>
+<p>Since Meteor can follow the same premise as JavaScript and Node.js,
+we’re going to change things up a bit. Instead of an empty app, we’re
+going to clone an existing sample app and add logging to it. But if this
+tutorial isn’t quite what you were looking for, go check out the basic
+JavaScript and Node.js chapters from our first logging book, <a
+href="https://www.amazon.com/Getting-Started-Logging-Quickly-Possible-ebook/dp/B07H8SNT2Q"><span
+class="CharOverride-6">The Scalyr Guide to Getting Started Logging as
+Quickly as Possible</span></a>. They’ll cover anything else you might
+need.</p>
+<p>But don’t worry, we’ll still cover these topics:</p>
+<ul>
+<li>Meteor overview</li>
+<li>Basic logging</li>
+<li>Where to log</li>
+<li>What to log</li>
+</ul>
+<p>Now let’s get started.</p>
+<p><img src="Images/Image2106.png" class="_idGenObjectAttribute-23"
+alt="Meteor_logging_image_with_scalyr_colors" /></p>
+<p>Meteor Overview</p>
+<p><span class="CharOverride-8">If you came to this </span>chapter with
+some experience using Meteor, you might not need this section<span
+class="CharOverride-8">. But I’d like to make sure we’re all starting
+from the same point, so here’s some quick Meteor info. Don’<span
+id="Section0011.xhtml__idTextAnchor098"></span>t worry</span>.<span
+class="CharOverride-8"> I’ll be brief.</span></p>
+<p>Meteor<span class="CharOverride-8"> provides a full-stack JavaScript
+platform for developing web and mobile apps. It includes a number of
+packages from Node.js and other JavaScript libraries. </span>And i<span
+class="CharOverride-8">t focuses on and provides full stack reactivity
+so your UI acts seamlessly with your backend server. And as a bonus, it
+provides easy MongoDB integration right out of the box.</span></p>
+<p>Basic Logging</p>
+<p>As I mentioned above, instead of creating a bare application, we’re
+going to clone one of the existing sample applications that the folks
+over at Meteor have provided. Since we’re adding logging to an a<span
+id="Section0011.xhtml__idTextAnchor099"></span>lready existing app,
+we’ll be able to see different logs come through with minimal
+effort.</p>
+<p>Setup</p>
+<p>If you haven’t used Meteor before, no worries—basic setup is a
+breeze. First, you’ll need to install both Node.js and npm. If you’re on
+a Mac, you’ll need Xcode as well.</p>
+<p>For step two, we’ll install Meteor using<span
+id="Section0011.xhtml__idTextAnchor100"></span> either Chocolatey or a
+curl command, depending on your operating system.</p>
+<p><img src="Images/Image2115.png"
+class="_idGenObjectAttribute-191" /></p>
+<p>All set? Great. Next, let’s clone the simple todo app from
+Meteor:</p>
+<p><img src="Images/Image2124.png"
+class="_idGenObjectAttribute-192" /></p>
+<p>Once you’ve got everything downloaded and installed, cd into the
+<span class="CharOverride-3">simple-todo</span> directory and run the
+app using the Meteor command.</p>
+<p><img src="Images/Image2135.png" class="_idGenObjectAttribute-193"
+alt="https://library.scalyr.com/2019/02/15124602/011.png" /></p>
+<p>Once the application has started, go to <span
+class="CharOverride-3">http://localhost:3000/</span>. You should see a
+simple todo app there.</p>
+<p><img src="Images/Image2147.png" class="_idGenObjectAttribute-190"
+alt="https://library.scalyr.com/2019/02/15124645/021-1024x463.png" /></p>
+<p>You should be able to add users, add items to the checklist, and so
+on. Go ahead and play around with it. I’ll be waiting at the next
+section for you.</p>
+<p>Console Logging</p>
+<p>Now that you’ve had a chance to check out the application, let’s get
+started. To demonstrate simple logging, we’re going to add some console
+logs to our application. This can be helpful for debugging issu<span
+id="Section0011.xhtml__idTextAnchor101"></span>es on the client side
+while you’re developing. But it won’t do much for you once your
+application is being used by someone out in the real world—you won’t
+have access to their console logs.</p>
+<p>To start, let’s add some code to the <span
+class="CharOverride-3">imports/api/tasks.js</span> file. This file
+contains the JavaScript that’s executed when we add or remove tasks from
+the list. In the <span class="CharOverride-3">tasks.insert</span>
+method, add the <span class="CharOverride-3">log.console</span> line
+shown in this image:</p>
+<p><img src="Images/Image2154.png" class="_idGenObjectAttribute-194"
+alt="https://library.scalyr.com/2019/02/15124721/031-1024x439.png" /></p>
+<p>Next, after saving that file, head over to your browser window. It
+should have updated automatically, so you don’t have to restart the app.
+When you add a new task, you should see the output in your browser
+console.</p>
+<p><img src="Images/Image2162.png" class="_idGenObjectAttribute-195"
+alt="https://library.scalyr.com/2019/02/15124750/041-1024x280.png" /></p>
+<p>Looks great, right? What if we also want to add some user context?
+Modify the line in the <span class="CharOverride-3">tasks.insert</span>
+method to also print out the <span class="CharOverride-3">userId
+</span>object that this application has defined.</p>
+<p><img src="Images/Image2169.png"
+class="_idGenObjectAttribute-58" /></p>
+<p>After that, you should see something like this:</p>
+<p><img src="Images/Image2177.png" class="_idGenObjectAttribute-49"
+alt="https://library.scalyr.com/2019/02/15124816/051-1024x221.png" /></p>
+<p>Not super helpful, is it? Let’s make it a little more useful by
+asking Meteor to find the username associated with this ID instead.</p>
+<p><img src="Images/Image2184.png"
+class="_idGenObjectAttribute-196" /></p>
+<p>Yes, that looks much better!</p>
+<p><img src="Images/Image2191.png" class="_idGenObjectAttribute-197"
+alt="https://library.scalyr.com/2019/02/15124841/06-1024x243.png" /></p>
+<p>OK, now that we’ve done some simple console logging, we can move on
+to the next section. However, I have one thing I’d like you to do
+first.</p>
+<p>Now that you have a Meteor application up and running, take some time
+to explore its various functionalities by adding your own console
+logging throughout the code. It really helps you understand the
+application by seeing data flow through the system as you use it. And
+though these may not be logs you want to keep around forever, they’ll
+help you gain a sense of what goes into a good Meteor application.</p>
+<p>Where to Log</p>
+<p>Let’s return to something I mentioned at the beginning of the console
+logging section. You won’t be able to view your customer’s <span
+class="CharOverride-3">console.log files</span>. So let’s discuss what
+you should do instead.</p>
+<p>Send Logs to the Ser<span
+id="Section0011.xhtml__idTextAnchor102"></span>ver</p>
+<p>As discussed, if your application is being used by actual customers,
+you won’t have access to their console logs. Sure, you could have them
+open their browser console and send you what’s there every tim<span
+id="Section0011.xhtml__idTextAnchor103"></span>e there’s an issue. But
+you’re assuming that people will know how to do that. And even if they
+do know, it doesn’t provide a great user experience for them.</p>
+<p>So what can we do instead? Well, instead of just writing to a
+console, we could send logs back to the server. But then what?</p>
+<p>Save Logs for Later Use</p>
+<p>With Meteor, one option could be to set up a logging table in
+MongoDB. So instead of just inserting tasks as our example above shows,
+we could insert logging or error messages. However, storing logs in
+<span id="Section0011.xhtml__idTextAnchor104"></span>a database
+typically doesn’t make sense. You want to store them somewhere easily
+accessible so you can start harvesting some analytics.</p>
+<p>Let’s consider another option. How about taking a look at some of
+Scalyr’s <a href="https://www.scalyr.com/help/api"><span
+class="CharOverride-7">APIs</span></a>? There are a lot of goodies
+there. And two of them let us add events to our Scalyr logs, either one
+at a time or by batch. So instead of logging to the console or saving
+the logs to our database, we can send events that require logging right
+back to Scalyr.</p>
+<p>In this situation, I would send the logs over to the server side of
+my Meteor application and then call the Scalyr APIs with the token tied
+to my account. Let’s go over this in greater detail.</p>
+<p>First, adding simple HTTP functionality to your Meteor app requires
+running the following command within your Meteor directory.</p>
+<p><img src="Images/Image2199.png"
+class="_idGenObjectAttribute-198" /></p>
+<p>That will let you make HTTP calls to remote servers easily.</p>
+<p>Then we can use the following syntax to send an event to Scalyr’s
+<span class="CharOverride-3">addEvents</span> API.</p>
+<p><img src="Images/Image2208.png"
+class="_idGenObjectAttribute-199" /></p>
+<p>You may have noticed that I broke out the username from the message I
+sent. That’s because breaking parts of the log into separate attributes
+will help with searching later.</p>
+<p>What to Log</p>
+<p>With great logging comes great responsibility. So what should we log
+in our applications?</p>
+<p>Well, that depends—not only on what your application does, but also
+on whether you’re logging on the client side or the server<span
+id="Section0011.xhtml__idTextAnchor105"></span> side. You also want to
+make sure that what you log adds value. Logging every little action is
+usually a bad idea.</p>
+<p>In fact, the example above doesn’t represent something I’d want to be
+logged in my system. I don’t care what my customers add to their to-do
+lists. I care about metrics, performance, and errors. And I want
+specific information that can help debug issues.</p>
+<p>So what sort of data can we log?</p>
+<ul>
+<li>Errors: if something goes wrong, we want to know about it.</li>
+<li>Usage: let’s see how often various parts of our application are
+used. If we have features no one uses, we can deprecate them or make
+them better.</li>
+<li>Performance: we want to know what the customer experiences regarding
+latency. If the application slows down too much for them, we need to
+investigate.</li>
+</ul>
+<p>Specifically for error logging, what information do we need?</p>
+<ul>
+<li>Timestamps that tell exactly when an error occurred.</li>
+<li>User ID or context, so we know who was affected.</li>
+<li>Relevant parameters to help recreate the problem and find a
+solution.</li>
+<li>Unique and specific error messages to help pinpoint the
+problem.</li>
+</ul>
+<p>You’re on Your Way</p>
+<p>You’re in a great place. You’ve got a sample Meteor app to experiment
+with, as well as some guidance on how to log information in it. Once
+you’ve logged data from your application, remember to review the logs
+<span id="Section0011.xhtml__idTextAnchor106"></span>from time to time.
+Iterate on what’s being logged and the format until you have a useful
+set of data that will help you debug and optimize your application. And
+now you can rest easy knowing you’ll be able to support your Meteor
+application in production.</p>
+<p><span class="CharOverride-5">This chapter was contributed by Sylvia
+Fronczak. </span><a href="https://sylviafronczak.com/"><span
+class="CharOverride-6">Sylvia</span></a><span class="CharOverride-5"> is
+a software developer who has worked in various industries with various
+software methodologies. She’s currently focused on design practices that
+the whole team can own, understand, and evolve over time.</span></p>
+</div>
+<p><span id="Section0012.xhtml"></span></p>
+<div id="Section0012.xhtml__idContainer228"
+class="_idGenObjectStyleOverride-1">
+<h2 class="Heading-2 ParaOverride-14"
+id="Section0012.xhtml_sigil_toc_id_12">About Scalyr</h2>
+<p>Scalyr is the log management and observability platform for the new
+stack. Purpose-built to handle the scale and complexity of modern cloud
+architectures, Scalyr changes the dynamics of delivering healthy
+applicatio<span id="Section0012.xhtml__idTextAnchor107"></span>ns by
+allowing engineers to quickly troubleshoot problems and focus on doing
+what they love—coding. With 96% of searches completing in under one
+second and thousands of active users, Scalyr has transformed logs from
+afterthought into advantage.</p>
+<p>Learn more at <a href="http://scalyr.com/"><span
+class="CharOverride-7">scalyr.com</span></a> and follow on Twitter
+(@scalyr).</p>
+</div>
+<div class="_idGenObjectLayout-1">
+<div id="Section0012.xhtml__idContainer229"
+class="_idGenObjectStyleOverride-1">
+
+</div>
+</div>
