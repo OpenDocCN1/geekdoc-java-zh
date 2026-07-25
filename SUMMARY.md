@@ -552,6 +552,7 @@
 +   [编程：初学者计算机编程指南：学习 HTML5、JavaScript 和 CSS 基础 - 第2版（编码、C 编程、Java 编程、网页设计、JavaScript、Python、HTML 和 CSS）](docs/programming-computer-programming-for-beginners-learn-the-bas/README.md)
 +   [ANSI C 编程入门指南（第 8 版）](docs/programming-in-ansi-c-8th-edition/README.md)
 +   [Haskell 编程入门指南](docs/programming-in-haskell/README.md)
++   [Scala 编程指南（第四版）](docs/programming-in-scala-fourth-edition-1116/README.md)
 +   [Java 与 JavaScript 编程：初学者指南 - 一天学会 · 第2版](docs/programming-java-javascript-coding-for-beginners-learn-in-a-/README.md)
 +   [JAVA 全栈编程指南](docs/programming-language-java-full-stack/README.md)
 +   [Swift 编程：一天学会创建一个功能完备的应用（Apps, PHP, HTML, Python, 编程指南, Java, 应用开发）](docs/programming-swift-create-a-fully-functioning-app-learn-in-a-/README.md)
