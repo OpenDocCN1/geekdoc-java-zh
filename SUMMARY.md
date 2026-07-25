@@ -605,6 +605,7 @@
 +   [SQL：初学者易 SQL 编程与数据库管理，SQL 数据库学习分步指南（SQL 系列）](docs/sql-easy-sql-programming-database-management-for-beginners-y/README.md)
 +   [Start Concurrent 2014：Java 并发问题解决入门指南](docs/start-concurrent-2014-an-introduction-to-problem-solving-in-/README.md)
 +   [并发编程：Java 并发编程问题解决入门指南，2014](docs/start-concurrent-an-introduction-to-problem-solving-in-java-/README.md)
++   [Java 入门指南：从控制结构到数据结构 (第2版) (Gaddis 系列)](docs/starting-out-with-java-from-control-structures-through-data-/README.md)
 +   [从 LibGDX：Java 游戏开发入门 (LibGDX 系列第 1 册)](docs/starting-with-libgdx-your-first-steps-in-java-game-developme/README.md)
 +   [教孩子编程：家长友 Python 编程指南](docs/teach-your-kids-to-code-a-parent-friendly-guide-to-python-pr/README.md)
 +   [初学者 Java 测验大师练习答案：教师指南](docs/the-answers-of-the-assignments-of-java-quizmaster-for-beginn/README.md)
