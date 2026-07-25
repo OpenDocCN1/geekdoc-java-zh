@@ -597,5 +597,6 @@
 +   [SQL 入门指南：SQL 编码（数据库编程、计算机编程、如何编程、SQL 傻瓜、计算机编程、Java...编码、CSS、Java、PHP）（第 7 卷）](docs/sql-beginners-guide-for-coding-sql-sql-database-programming-/README.md)
 +   [SQL：初学者易 SQL 编程与数据库管理，SQL 数据库学习分步指南（SQL 系列）](docs/sql-easy-sql-programming-database-management-for-beginners-y/README.md)
 +   [初学者 Java 测验大师练习答案：教师指南](docs/the-answers-of-the-assignments-of-java-quizmaster-for-beginn/README.md)
++   [美容师与亿万富翁 · 第一集 · 交易](docs/the-beautician-and-the-billionaire-episode-1-the-deal/README.md)
 +   [Thinking in Java (Java 编程思想)](docs/thinking-in-java/README.md)
 +   [Typescript 和 Java 编程轻松入门：初学者编程指南 - 二合一](docs/typescript-and-java-coding-made-simple-a-beginners-guide-to-/README.md)
