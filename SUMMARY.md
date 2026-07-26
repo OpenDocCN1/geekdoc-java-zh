@@ -429,6 +429,7 @@
 +   [JavaScript：高效学习 JavaScript 编程的初学者指南](docs/javascript-the-ultimate-beginners-guide-to-learn-javascript-/README.md)
 +   [Javascript：Javascript编程终极指南（Javascript 初学者指南、如何编程、软件开发、基础 Javascript、浏览器... 编码、CSS、Java、PHP）（第 7 卷）](docs/javascript-the-ultimate-guide-for-javascript-programming-jav/README.md)
 +   [JavaScript：快速高效学习 JavaScript 编程的技巧与窍门](docs/javascript-tips-and-tricks-to-learn-javascript-programming-q/README.md)
++   [《Sams 自学手册：Java 24小时学会（涵盖Java 8）》第7版](docs/javatm-in-24-hours-sams-teach-yourself-covering-java-8-seven/README.md)
 +   [JavaTutorialNetwork 中文系列教程](docs/javatutnet/README.md)
 +   [Jenkov 中文系列教程](docs/jenkov/README.md)
 +   [Jquery 入门指南](docs/jquery-pocket-primer-computing/README.md)
