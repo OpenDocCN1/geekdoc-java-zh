@@ -22,6 +22,7 @@
 +   [渗透测试高级指南：攻破全球最安全的网络](docs/advanced-penetration-testing-hacking-the-worlds-most-secure-/README.md)
 +   [高级 Selenium Web 无障碍性测试：软件自动化测试秘籍揭秘](docs/advanced-selenium-web-accessibility-testing-software-automat/README.md)
 +   [Java 算法：通过精美图解算法，轻松高效地掌握](docs/algorithms-java-explains-algorithms-with-beautiful-pictures-/README.md)
++   [Java 8 全详解；Lambdas：介绍 Java 8 Lambda 表达式](docs/all-about-java-8lambdas-introducing-java-8-lambdas/README.md)
 +   [全合一 Java, Spring, Jpa, Hibernate 端到端 Web 应用开发指南](docs/all-in-one-place-java-spring-jpa-hibernate-end-to-end-webapp/README.md)
 +   [Amazing Java：快速学习 Java！](docs/amazing-java-learn-java-quickly/README.md)
 +   [Java 语言原理实践入门指南：Java 程序员篇](docs/an-experiential-introduction-to-principles-of-programming-la/README.md)
