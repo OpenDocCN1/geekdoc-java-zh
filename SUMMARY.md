@@ -318,6 +318,7 @@
 +   [Java For Humans：学习编程生活](docs/java-for-humans-learn-to-code-life/README.md)
 +   [程序员的 Java：生成式 AI](docs/java-for-programmers-with-generative-ai/README.md)
 +   [面向程序员的 Java：生成式 AI，第 5 版](docs/java-for-programmers-with-generative-ai-5th-edition/README.md)
++   [面向程序员的生成式AI Java（第五版）（Raymond Rhine专用版）](docs/java-for-programmers-with-generative-ai-fifth-edition-for-ra/README.md)
 +   [小团队的 Java](docs/java-for-small-teams/README.md)
 +   [Java Web 开发：使用 Servlets、JSP 、MVC 模式和数据库连接创建全栈 Java 应用（英文版）](docs/java-for-web-development-create-full-stack-java-applications/README.md)
 +   [Java Foundations 1Z0-811 考试实践指南](docs/java-foundations-1z0-811-exam-practice-test/README.md)
