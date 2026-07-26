@@ -24,6 +24,7 @@
 +   [Java 算法：通过精美图解算法，轻松高效地掌握](docs/algorithms-java-explains-algorithms-with-beautiful-pictures-/README.md)
 +   [Java 8 全详解；Lambdas：介绍 Java 8 Lambda 表达式](docs/all-about-java-8lambdas-introducing-java-8-lambdas/README.md)
 +   [全合一 Java, Spring, Jpa, Hibernate 端到端 Web 应用开发指南](docs/all-in-one-place-java-spring-jpa-hibernate-end-to-end-webapp/README.md)
++   [所有 MNC Java 面试题：简易 Java 面试破解指南](docs/all-mnc-java-interview-questions-simplified-java-cracked-int/README.md)
 +   [Amazing Java：快速学习 Java！](docs/amazing-java-learn-java-quickly/README.md)
 +   [Java 语言原理实践入门指南：Java 程序员篇](docs/an-experiential-introduction-to-principles-of-programming-la/README.md)
 +   [数据科学入门指南 第1版](docs/an-introduction-to-data-science-1st-edition/README.md)
