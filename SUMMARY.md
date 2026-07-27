@@ -7,6 +7,7 @@
 +   [250+ Java 程序输出示例](docs/250-java-programs-with-output/README.md)
 +   [255 道 Java 面试成功题：深入理解 Java 理论、语法与 API，自信面试](docs/255-java-interview-success-questions-dive-deep-into-java-the/README.md)
 +   [50 个 Java 算法练习：提升编程技能的 50 个实用练习](docs/50-algorithmic-exercises-in-java-50-practical-exercises-to-d/README.md)
++   [每个开发者应该熟悉的 50 个 Java 概念](docs/50-java-concepts-every-developer-should-know/README.md)
 +   [50 个 Java 练习（初学者与中级）：学习 Java 编程的实用方法](docs/50-java-exercises-beginner-intermediate-a-practical-way-to-l/README.md)
 +   [Java 数据结构入门指南](docs/a-concise-introduction-to-data-structures-using-java/README.md)
 +   [Java 入门：编程入门指南](docs/a-piece-of-java-introduction-to-programming/README.md)
