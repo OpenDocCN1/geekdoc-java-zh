@@ -33,6 +33,7 @@
 +   [高级 Selenium Web 无障碍性测试：软件自动化测试秘籍揭秘](docs/advanced-selenium-web-accessibility-testing-software-automat/README.md)
 +   [反对创新：受损的机构代理与监管行为](docs/against-innovation-compromised-institutional-agency-and-acts/README.md)
 +   [Java 算法：通过精美图解算法，轻松高效地掌握](docs/algorithms-java-explains-algorithms-with-beautiful-pictures-/README.md)
++   [算法（第二部分，电子版）](docs/algorithms-part-2-electronic-edition/README.md)
 +   [从 Alice 3 到 Java：通过故事讲述和游戏学习创意编程](docs/alice-3-to-java-learning-creative-programming-through-storyt/README.md)
 +   [Java 8 Lambda 表达式详解：Java 8 Lambda 表达式入门指南](docs/all-about-java-8-lambdas-introducing-java-8-lambdas/README.md)
 +   [Java 8 全详解；Lambdas：介绍 Java 8 Lambda 表达式](docs/all-about-java-8lambdas-introducing-java-8-lambdas/README.md)
