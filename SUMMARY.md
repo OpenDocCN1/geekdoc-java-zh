@@ -43,6 +43,7 @@
 +   [Amazing Java：快速学习 Java！](docs/amazing-java-learn-java-quickly/README.md)
 +   [大卫·格雷伯债务分析：前 5,000 年](docs/an-analysis-of-david-graebers-debt-the-first-5000-years/README.md)
 +   [Java 语言原理实践入门指南：Java 程序员篇](docs/an-experiential-introduction-to-principles-of-programming-la/README.md)
++   [不便宜的末日：环境崩溃、气候危机与人类命运](docs/an-inconvenient-apocalypse-environmental-collapse-climate-cr/README.md)
 +   [数据科学入门指南 第1版](docs/an-introduction-to-data-science-1st-edition/README.md)
 +   [Android 应用开发指南](docs/android-app-development/README.md)
 +   [Android 应用开发傻学者指南](docs/android-application-development-all-in-one-for-dummies/README.md)
