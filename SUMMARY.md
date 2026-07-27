@@ -19,6 +19,7 @@
 +   [Activiti 5.x 用户指南](docs/actvt-5x-usrgd/README.md)
 +   [高级 Java 游戏自制：Java 线程与动画视频游戏入门指南](docs/advanced-do-it-yourself-java-games-an-introduction-to-java-t/README.md)
 +   [初学者级 Java 入门指南](docs/advanced-java-for-beginners/README.md)
++   [高级 Java 面试高频问题 (面试问题系列)](docs/advanced-java-interview-questions-youll-most-likely-be-asked/README.md)
 +   [高级 Java 实验手册](docs/advanced-java-laboratory-manual/README.md)
 +   [渗透测试高级指南：攻破全球最安全的网络](docs/advanced-penetration-testing-hacking-the-worlds-most-secure-/README.md)
 +   [高级 Selenium Web 无障碍性测试：软件自动化测试秘籍揭秘](docs/advanced-selenium-web-accessibility-testing-software-automat/README.md)
