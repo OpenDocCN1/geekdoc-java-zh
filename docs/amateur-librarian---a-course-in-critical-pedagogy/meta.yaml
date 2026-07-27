@@ -1,0 +1,935 @@
+groups:
+- md: '
+
+    # Amateur Librarian - A Course in Critical Pedagogy
+
+
+    Tomislav Medak & Marcell Mars (Public Library project)
+
+
+    A proposal for a curriculum in amateur librarianship, developed through the activities
+    and exigencies of the Public Library project. Drawing from a historic genealogy
+    of public library as the institution of access to knowledge, the proletarian tradition
+    of really useful knowledge and the amateur agency driven by technological development,
+    the curriculum covers a range of segments from immediately applicable workflows
+    for scanning, sharing and using e-books, over politics and tactics around custodianship
+    of online libraries, to applied media theory implicit in even practices of amateur
+    librarianship. The proposal is made with further development,
+
+
+    # PUBLIC LIBRARY, A POLITICAL GENEALOGY
+
+
+    Public libraries have historically achieved as an institutional space of exemption
+    from the commodification and privatization of knowledge. A space where works of
+    literature and science are housed and made accessible for the education of every
+    member of society regardless of their social or economic status. If, as a liberal
+    narrative has, education is a prerequisite for full participation in a body politic,
+    it is in this narrow institutional space that citizenship finds an important material
+    base for its universal realization.
+
+
+    The library as an institution of public access and popular literature, however,
+    did not develop before a series of transformations and social upheavals unfolded
+    in the course of 18th and 19th century. These developments brought about by a
+    flood of books and political demands pushing the library to become embedded in
+    an egalitarian and democratizing political horizon. The historic backdrop for
+    these developments was the rapid ascendancy of the book as a mass commodity and
+    the growing importance of the reading culture in the aftermath of the invention
+    of the movable print. Having emerged almost in parallel with capitalism, by the
+    early 18th century the trade in books was rapidly expanding. While in the 15th
+    century the libraries around the monasteries, courts and universities of Western
+    Europe contained no more than 5 million manuscripts, the output of printing presses
+    in the 18th century alone exploded to formidable 700 million volumes. [11] And
+    while this provided a vector for the emergence of a bourgeois reading public and
+    an unprecedented expansion of modern science, the culture of reading and Enlightenment
+    remained largely a privilege of the few.
+
+
+    Two social upheavals stood to change that. On 2 November 1789 the French revolutionary
+    National Assembly passed a decision to seize all library holdings from the Church
+    and aristocracy. Millions of volumes were transferred to the Bibliothèque Nationale
+    and local libraries across France. At the same time capitalism was on the rise,
+    particularly in England. It massively displaced the impoverished rural population
+    into growing urban centres, propelled the development of industrial production,
+    and by the mid-19th century, introduced the steam-powered rotary press into the
+    commercial production of books. As books became more easily-produced, the commercial
+    subscription libraries catering to the better-of-art parts of society blossomed.
+    This brought the class aspect of the nascent demand for public access to the fore.
+
+
+    After the failed attempt to introduce universal suffrage and end the system of
+    political representation based on property entitlements the Reform Act of 1832,
+    the English Chartist movement started to open reading rooms and cooperative lending
+    libraries that would quickly become a popular hotbed of social exchange between
+    the lower classes. In the aftermath of the revolutionary upheavals of 1848, the
+    ruling classes finally consented to the demand for tax-financed public libraries,
+    hoping that the access to literature and edification would after all help educate
+    skilled workers that were increasingly in demand and ultimately hegemonize the
+    working class for the benefits of capitalism''s culture of self-interest and competition.
+    [22]
+
+
+    # REALLY USEFUL KNOWLEDGE
+
+
+    It''s no surprise that the Chartists, reeling from a political defeat, had started
+    to open reading rooms and cooperative lending libraries. The education provided
+    to the proletariat and the poor by the ruling classes of that time consisted,
+    indeed, either of a pious moral edification serving political pacification or
+    of an inculcation of skills and knowledge useful to the factory owner. Even the
+    seemingly noble efforts of the Society for the Diffusion of the Useful Knowledge,
+    a Whig organization aimed at bringing high-brow learning to the middle and working
+    classes in the form of simplified and inexpensive publications, were aimed at
+    dulling the edge of radicalism of popular movements. [44]
+
+
+    These efforts to pacify the downtrodden masses pushed them to seek self-organized
+    education that would provide them with literacy and really useful knowledge –
+    not applied, but critical knowledge that would allow them to see through their
+    own political and economic subjetion, develop radical politics and innovate shadow
+    social institutions of their own. The radical education, reliant on meagre resources
+    and time of the working class, developed in the informal setting of household,
+    neighbourhood and workplace, but also through radical press and communal reading
+    and discussion groups. [55]
+
+
+    The demand for really useful knowledge encompassed a critique of “all forms of
+    ‘provided’ education” and of the liberal conception “that national education was
+    a necessary condition for the granting of universal suffrage.” Development of
+    radical “curricula and pedagogies” formed a part of the arsenal of “political
+    strategy as a means of changing the world.” [66]
+
+
+    # CRITICAL PEDAGOGY
+
+
+    This is the context of the emergence of the public library. A historical compromise
+    between a push for radical pedagogy and a response to dull its edge. And with
+    the age of digitization, where one would think that the opportunities for access
+    to knowledge have expanded immensely, public libraries find themselves increasingly
+    limited in their ability to acquire and lend digital and paper editions. It is
+    a sign of our radically unequal times that the political emancipation finds itself
+    on a defensive fighting again for this material base of pedagogy against the rising
+    forces of privatization. Not only has mass education become accessible only under
+    the condition of high fees, student debt and adjunct peerage, but the useful knowledge
+    that the labour market and reproduction of the neoliberal capitalism demands has
+    become the one and only rationale for education.
+
+
+    No wonder that over the last 6-7 years we have seen self-education, shadow libraries
+    and amateur librarians emerge again to counteract the contraction of spaces of
+    exemption that have been shrunk by austerity and commodity.
+
+
+    The project Public Library was initiated with the counteraction in mind. To help
+    everyone learn to use simple tools to be able to act as an Amateur – to digitize,
+    to collect, to share, to preserve books and articles that were unaffordable, unavailable,
+    undesirable in the troubled corners of the Earth we hail from.
+
+
+    Amateur Librarian played an important role in the narrative of Public Library.
+    And it seemed it was successful. People easily join the project by ''becoming''
+    a librarian using Calibre 71 and [let''s share books]. [81] Other aspects of the
+    Public Library narrative add a political articulation to that simple yet disobient
+    act. Public Library detects an institutional crisis in education, an economic
+    deadlock of austerity and a domination of commodity logic in the free of copyright.
+    It conjures the amateur librarians'' practice of sharing books/catalogues as a
+    relevant challenge against the convergence of that crisis, deadlock and copyright
+    regime.
+
+
+    To understand the political and technological assumptions and further develop
+    the strategies that lie behind the countermeasures of amateur librarians, we propose
+    a curriculum that is indebted to a tradition of critical pedagogy. Critical pedagogy
+    is a productive and theoretical practice rejecting an understanding of educational
+    process that reduces it to a technique of imparting knowledge and a neutral mode
+    of knowledge acquisition. Rather, it sees the pedagogy as a broader “struggle
+    over knowledge, desire, values, social relations, and, most importantly, modes
+    of political agency”, “drawing attention to questions regarding who has control
+    over the conditions for the production of knowledge.” [9]
+
+
+    No industry in the present demonstrates more the asymmetries of control over the
+    conditions of production of knowledge than the academic publishing. The denial
+    of access to outrageously expensive academic publications for many universities,
+    particularly in the Global South, stands in stark contrast to the super-profs
+    that a small number of commercial publishers draws from the free labour of scientists
+    who write, review and edit contributions and the extractive prices their institutional
+    libraries have to pay for subscriptions. It is thus here that the amateur librarianship
+    attains its poignancy for a critical pedagogy, inviting us to closer formulate
+    and unfold its practices in a shared process of discovery.
+
+
+    # A CURRICULUM
+
+
+    Public library is:
+
+
+    - free access to books for every member of society,
+
+    - library catalogue,
+
+    - librarian.
+
+    '
+  mdcn: '
+
+
+    # 业余图书馆员 - 批判教育学课程
+
+
+    Tomislav Medak & Marcell Mars (公共图书馆项目)
+
+
+    这是一份关于业余图书馆员学课程的建议书，通过“公共图书馆项目”的活动和需求开发。该课程汲取了公共图书馆作为知识获取机构的历史谱系、追求“真正有用知识”的无产阶级传统，以及由技术发展驱动的业余主体性。课程内容涵盖了多个领域：从扫描、共享和使用电子书的即刻可用操作工作流，到围绕在线图书馆维护的政治与战术，再到蕴含在即便是业余图书馆员实践中的应用媒体理论。本建议书是为进一步的发展而提出的。
+
+
+    # 公共图书馆：一种政治谱系
+
+
+    从历史上看，公共图书馆作为上实现了一个免于知识商品化和私有化的制度空间。在这个空间里，文学和科学作品被收藏并供社会每个成员（无论其社会或经济地位如何）进行教育。如果正如自由主义叙事所言，教育是充分参与政治体的前提，那么正是在这一狭窄的制度空间内，公民身份为其普遍实现找到了重要的物质基础。
+
+
+    然而，图书馆作为公共获取和大众文学的机构，直到 18 世纪和 19 世纪发生的一系列变革和社会动荡才出现。这些发展源于书籍的洪流和政治需求，推动图书馆嵌入到平等和民主的政治愿景中。这些发展的历史背景是书籍作为大众商品的迅速崛起，以及在活字印刷发明后阅读文化日益重要的地位。书籍几乎与资本主义同步出现，到
+    18 世纪初，书籍贸易迅速扩张。虽然 15 世纪，西欧修道院、宫廷和大学周围的图书馆仅包含 500 万份手稿，但仅 18 世纪的印刷机产量就爆炸到惊人的 7
+    亿册。[11] 尽管这为资产阶级读者的出现和现代科学前所未有的扩张提供了矢量，但阅读文化和启蒙在很大程度上仍然是少数人的特权。
+
+
+    两场社会变革改变了这一点。1789 年 2 月 2 日，法国革命国民议会通过了一项决议，从教会和贵族手中没收所有图书馆藏。数百万卷被转移到法国国家图书馆和法国各地的当地图书馆。与此同时，资本主义正在兴起，特别是在英国。它将贫困的农村人口大量推向日益增长的中心，推动了工业生产的发展，并在
+    19 世纪中期将蒸汽动力轮机引入了书籍的商业生产。随着书籍变得更容易生产，面向社会精英阶层的商业订阅制图书馆蓬勃发展。这使得新兴的公共获取需求中的阶级属性凸显出来。
+
+
+    在通过 1832 年《改革法案》尝试引入普遍投票并结束基于财产权利的政治代表制度失败后，英国宪章运动（Chartist movement）开始开放阅览室和合作借阅图书馆，这些场所迅速成为下层阶级社会交流的热点。在
+    1848 年革命动荡之后，统治阶级终于同意了对税收资助的公共图书馆的需求，希望对文学和教化的获取最终有助于教育那些日益增加的熟练工人，并最终为了资本主义自利和竞争的文化而对工人阶级进行霸权化。[22]
+
+
+    # 真正有用的知识
+
+
+    并不意外，从政治失败中恢复过劲的宪章派已经开始开放阅览室和合作借阅图书馆。当时统治阶级为无产阶级和穷人提供的教育，实际上要么是服务于政治安抚的虔诚道德教育，要么是灌输对工厂主有用的技能和知识。即使是有用知识传播协会（Society
+    for the Diffusion of the Useful Knowledge）看似高尚的努力——这是一个旨在通过简化和廉价的出版物将高级学习带来中产阶级和工人阶级的自由党组织——其目标也是削弱大众运动激进性。[44]
+
+
+    这些平息受压迫大众的努力迫使他们寻求自组织的教育，以为他们提供识字能力和真正有用的知识——不是应用知识，而是批判性知识，这种知识让他们看透自己的政治和经济隶属地位，发展激进政治并创新他们自己的影子社会机构。激进教育依赖工人阶级匮乏的资源和时间，在家庭、社区和工作场所的非正式环境中发展，同时也通过激进报刊以及集体阅读和讨论小组进行。[55]
+
+
+    对“真正有用知识”的需求包含了对“所有形式的‘提供型’教育”以及对自由主义观念“国家教育是授予普遍选举权的必要条件”的批判。激进“课程和教学法”的发展形成了“作为改变世界手段的政治策略”武器库的一部分。[66]
+
+
+    # 批判教育学
+
+
+    这是公共图书馆出现的背景。这是在推动激进教学法与削弱其锋芒的回应之间的一种历史妥协。随着数字化时代的到来，人们本认为获取知识的机会大大增加了，但公共图书馆发现自己在获取和借阅数字版及纸质版的能力上日益受到限制。这是我们极度不平等时代的标志：政治解放正处于防御状态，再次为了日益崛起的私有化力量为这种教学法的物质基础进行斗争。大众教育不仅只有在高学费、学生债务和兼职贵族化的条件下才能获得，而且劳动市场和新自由主义资本主义生产所需的有用知识已成为教育的唯一理由。
+
+
+    难怪在过去的 6-7 年里，我们看到自学、影子图书馆和业余图书馆员再次出现，用以对抗因紧缩政策和商品化而萎缩的豁免空间。
+
+
+    “公共图书馆”项目的初衷就是为了反击。帮助每个人学会使用简单工具，以便像一个“业余者”一样行动——数字化、收集、共享和保护那些在我们所处的地球动荡角落买不起、得不到、不被需要的书籍和文章。
+
+
+    “业余图书馆员”在公共图书馆的叙述中发挥了重要作用。看起来它是成功的。人们通过使用 Calibre 和 [let''s share books] “成为”图书馆员，轻松加入该项目。[81]
+    公共图书馆叙述的其他方面为这一简单却不从的行为增加了政治表述。公共图书馆检测到了教育中的制度危机、紧缩带来的经济僵局以及在无版权领域中商品逻辑的主统治。它召唤了业余图书馆员共享书籍/目录的实践，作为一种针对这种危机、僵局和版权制度汇合的相关挑战。
+
+
+    为了理解政治和技术假设，并进一步发展业余图书馆员对策措施背后的策略，我们提出了一份债于批判教育传统的课程。批判教育学是一种生产性和理论性的实践，它拒绝将教育过程简化为传授知识的技术和获取知识的中立模式。相反，它将教学法视为一场更广泛的“关于知识、欲望、价值观、社会关系，以及最重要的政治主体性模式的斗争”，“关注关于谁控制着知识生产条件的问题”。[9]
+
+
+    没有任何一个行业比学术出版更能体现知识生产条件控制权的不对称性。许多大学（特别是全球南方国家）无法获得极其昂贵的学术出版物，这与少数商业出版商从科学家编写、评审和编辑贡献的免费劳动中汲取的“超级教授”，以及其机构图书馆为订阅必须支付的榨取性价格形成了鲜明对比。因此，正在这里，业余图书馆员学对于批判教育学获得了其深刻意义，邀请我们在共同的发现过程中更严密地制定并展开其实践。
+
+
+    # 课程内容
+
+
+    公共图书馆是：
+
+
+    - 社会每个成员都能免费获取书籍，
+
+    - 图书馆目录，
+
+    - 图书员。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # Amateur Librarian - A Course in Critical Pedagogy
+
+
+    Tomislav Medak & Marcell Mars (Public Library project)
+
+
+    A proposal for a curriculum in amateur librarianship, developed through the activities
+    and exigencies of the Public Library project. Drawing from a historic genealogy
+    of public library as the institution of access to knowledge, the proletarian tradition
+    of really useful knowledge and the amateur agency driven by technological development,
+    the curriculum covers a range of segments from immediately applicable workflows
+    for scanning, sharing and using e-books, over politics and tactics around custodianship
+    of online libraries, to applied media theory implicit in the practices of amateur
+    librarianship. The proposal is made with further development,'
+  - '[PAGE 1]
+
+
+    # PUBLIC LIBRARY, A POLITICAL GENEALOGY
+
+
+    Public libraries have historically achieved as an institutional space of exemption
+    from the commodification and privatization of knowledge. A space where works of
+    literature and science are housed and made accessible for the education of every
+    member of society regardless of their social or economic status. If, as a liberal
+    narrative has, education is a prerequisite for full participation in a body politic,
+    it is in this narrow institutional space that citizenship finds an important material
+    base for its universal realization.
+
+
+    The library as an institution of public access and popular literature, however,
+    did not develop before a series of transformations and social upheavals unfolded
+    in the course of 18th and 19th century. These developments brought about by a
+    flood of books and political demands pushing the library to become embedded in
+    an egalitarian and democratizing political horizon. The historic backdrop for
+    these developments was the rapid ascendancy of the book as a mass commodity and
+    the growing importance of the reading culture in the aftermath of the invention
+    of the movable print. Having emerged almost in parallel with capitalism, by the
+    early 18th century the trade in books was rapidly expanding. While in the 15th
+    century the libraries around the monasteries, courts and universities of Western
+    Europe contained no more than 5 million manuscripts, the output of printing presses
+    in the 18th century alone exploded to formidable 700 million volumes.\[11\]] And
+    while this provided a vector for the emergence of a bourgeois reading public and
+    an unprecedented expansion of modern science, the culture of reading and Enlightenment
+    remained largely a privilege of the few.
+
+
+    Two social upheavals stood to change that. On 2 November 1789 the French revolutionary
+    National Assembly passed a decision to seize all library holdings from the Church
+    and aristocracy. Million of volumes were transferred to the Bibliothèque Nationale
+    and local libraries across France. At the same time capitalism was on the rise,
+    particularly in England. It massively displaced the impoverished rural population
+    into growing urban'
+  - '[PAGE 2]
+
+
+    centres, propelled the development of industrial production, and by the mid-19th
+    century, introduced the steam-powered rotary press into the commercial production
+    of books. As books became more easily-produced, the commercial subscription libraries
+    catering to the better-of-art parts of society blossomed. This brought the class
+    aspect of the nascent demand for public access to the fore.
+
+
+    After the failed attempt to introduce universal suffrage and end the system of
+    political representation based on property entitlements the Reform Act of 1832,
+    the English Chartist movement started to open reading rooms and cooperative lending
+    libraries that would quickly become a popular hotbed of social exchange between
+    the lower classes. In the aftermath of the revolutionary upheavals of 1848, the
+    ruling classes finally consented to the demand for tax-financed public libraries,
+    hoping that the access to literature and edification would after all help educate
+    skilled workers that were increasingly in demand and ultimately hegemonize the
+    working class for the benefits of capitalism''s culture of self-interest and competition.[22]
+
+
+    # REALLY USEFUL KNOWLEDGE
+
+
+    [3]
+
+
+    It''s no surprise that the Chartists, reeling from a political defeat, had started
+    to open reading rooms and cooperative lending libraries. The education provided
+    to the proletariat and the poor by the ruling classes of that time consisted,
+    indeed, either of a pious moral edification serving political pacification or
+    of an inculcation of skills and knowledge useful to the factory owner. Even the
+    seemingly noble efforts of the Society for the Diffusion of the Useful Knowledge,
+    a Whig organization aimed at bringing high-brow learning to the middle and working
+    classes in the form of simplified and inexpensive publications, were aimed at
+    dulling the edge of radicalism of popular movements.[44]
+
+
+    These efforts to pacify the downtrodden masses pushed them to seek self-organized
+    education that would provide them with literacy and really useful knowledge –
+    not applied, but critical knowledge that would allow them to see through their
+    own political and economic subjetion, develop radical politics and innovate shadow
+    social institutions of their own. The radical'
+  - '[PAGE 3]
+
+
+    education, reliant on meagre resourses and time of the working class, developed
+    in the informal setting of household, neighbourhood and workplace, but also through
+    radical press and communal reading and discussion groups.[55]
+
+
+    The demand for really useful knowledge encompassed a critique of “all forms of
+    ‘provided’ education” and of the liberal conception “that national education was
+    a necessary condition for the granting of universal suffrage.” Development of
+    radical “curricula and pedagogies” formed a part of the arsenal of “political
+    strategy as a means of changing the world.”[66]
+
+
+    # # CRITICAL PEDAGOGY
+
+
+    This is the context of the emergence of the public library. A historical compromise
+    between a push for radical pedagogy and a response to dull its edge. And with
+    the age of digitization, where one would think that the opportunities for access
+    to knowledge have expanded immensely, public libraries find themselves increasingly
+    limited in their ability to acquire and lend digital and paper editions. It is
+    a sign of our radically unequal times that the political emancipation finds itself
+    on a defensive fighting again for this material base of pedagogy against the rising
+    forces of privatization. Not only has mass education become accessible only under
+    the condition of high fees, student debt and adjunct peerage, but the useful knowledge
+    that the labour market and reproduction of the neoliberal capitalism demands has
+    become the one and only rationale for education.
+
+
+    No wonder that over the last 6-7 years we have seen self-education, shadow libraries
+    and amateur librarians emerge again to counteract the contraction of spaces of
+    exemption that have been shrunk by austerity and commodity.
+
+
+    The project Public Library was initiated with the counteraction in mind. To help
+    everyone learn to use simple tools to be able to act as an Amateur – to digitize,
+    to collect, to share, to preserve books and articles that were unaffordable, unavailable,
+    undesirable in the troubled corners of the Earth we hail from.
+
+
+    Amateur Librarian played an important role in the narrative of Public Library.
+    And it seemed it was successful. People easily join the project by'
+  - '[PAGE 4]
+
+
+    ''becoming'' a librarian using Calibre⁷¹¹ and [let''s share books].[⁸¹] Other
+    aspects of the Public Library narrative add a political articulation to that simple
+    yet disobient act. Public Library detects an institutional crisis in education,
+    an economic deadlock of austerity and a domination of commodity logic in the free
+    of copyright. It conjures the amateur librarians'' practice of sharing books/catalogues
+    as a relevant challenge against the convergence of that crisis, deadlock and copyright
+    regime.
+
+
+    To understand the political and technological assumptions and further develop
+    the strategies that lie behind the countermeasures of amateur librarians, we propose
+    a curriculum that is indebted to a tradition of critical pedagogy. Critical pedagogy
+    is a productive and theoretical practice rejecting an understanding of educational
+    process that reduces it to a technique of imparting knowledge and a neutral mode
+    of knowledge acquisition. Rather, it sees the pedagogy as a broader “struggle
+    over knowledge, desire, values, social relations, and, most importantly, modes
+    of political agency”, “drawing attention to questions regarding who has control
+    over the conditions for the production of knowledge.”⁹
+
+
+    No industry in the present demonstrates more the asymmetries of control over the
+    conditions of production of knowledge than the academic publishing. The denial
+    of access to outrageously expensive academic publications for many universities,
+    particularly in the Global South, stands in stark contrast to the super-profs
+    that a small number of commercial publishers draws from the free labour of scientists
+    who write, review and edit contributions and the extractive prices their institutional
+    libraries have to pay for subscriptions. It is thus here that the amateur librarianship
+    attains its poignancy for a critical pedagogy, inviting us to closer formulate
+    and unfold its practices in a shared process of discovery.
+
+
+    # A CURRICULUM
+
+
+    Public library is:
+
+
+    +   * free access to books for every member of society,
+
+    * library catalogue,
+
+    * librarian.'
+- md: "\nThe curriculum in amateur librarianship develops aspects and implications\
+    \ of this definition. Parts of this curriculum have evolved over a number of workshops\
+    \ and talks previously held within the Public Library project, parts of it are\
+    \ yet to evolve from a process of future research, exchange and knowledge production\
+    \ in the education process. While schematic, scaling from the immediately practical,\
+    \ strategic and tactical, to reflexive registers of knowledge, there are actual\
+    \ – here unnamed – people and practices we imagine we could learn from.\n\nThe\
+    \ first iteration of this curriculum could be either a summer academy rostered\
+    \ with our all-star team of librarians, designers, researchers and teachers, or\
+    \ a small workshop with a small group of students delving deeper into one particular\
+    \ aspect of the curriculum. In short it is an open curriculum: both open to educational\
+    \ process and contributions by others. We welcome comments, derivations, and additions.\n\
+    \n## MODULE 1: WORKFLOWS\n\n- from book to e-book\n  - digitizing a book on a\
+    \ book scanner\n  - removing DRM and converting e-book formats\n\n- from clutter\
+    \ to catalogue\n  - managing an e-book library with Calibre\n  - finding e-books\
+    \ and articles on online libraries\n\n- from reference to bibliography\n  - annotating\
+    \ in an e-book reader device or application\n  - creating a scholarly bibliography\
+    \ in Zotero\n\n- from block device to network device\n  - sharing your e-book\
+    \ library on a local network to a reading device\n  - sharing your e-book library\
+    \ on the internet with [let's share books]\n\n- from private to public IP space\n\
+    \  - using [let's share books] & library.memoryoftheworld.org\n  - using Logan\
+    \ & jessica\n  - using Science Hub\n  - using Tor\n\n## MODULE 2: POLITICS/TACTICS\n\
+    \n- from developmental subordination to subaltern disobedience\n  - uneven development\
+    \ & political strategies\n  - strategies of the developed v strategies of the\
+    \ underdeveloped: \n    open access v piracy\n\n- from property to commons\n \
+    \ - from property to commons\n  - copyright, scientific publishing, open access\n\
+    \  - shadow libraries, piracy, custodians.online\n\n- from collection to collective\
+    \ action\n  - critical pedagogy & education\n  - archive, activation & collective\
+    \ action\n\n## MODULE 3: ABSTRACTIONS IN ACTION\n\n- from linear to computational\n\
+    \  - library & epistemology: catalogue, search, discovery, reference\n  - print\
+    \ book v e-book: page, margin, spine\n\n- from central to distributed\n  - deep\
+    \ librarianship & amateur librarians\n  - network infrastructure(s)/topologies\
+    \ (ruling class studies)\n\n- from factual to fantastic\n  - universe as library\
+    \ as universe\n\n## READING LIST\n\n- Mars, Marcell; Vladimir, Klemo. Download\
+    \ & How to: Calibre & [let's share books]. Memory of the World (2014) https://www.memoryoftworld.org/blog/2014/10/28/calibre-lets-share-books/\n\
+    - Buringh, Eljo; Van Sonder, Jan Luiten. Charting the “Rise of the West”: Manuscripts\
+    \ and Printed Books in Europe, A Long-Term Perspective from the Sixth through\
+    \ Eighteenth Centuries. The Journal of Economic History (2009) http://journals.cambridge.org/article/S0022507090000837\n\
+    - Matters, Shannon. Library as Infrastructure. Places Journal (2014) https://placesjournal.org/article/library-as-infrastructure/\n\
+    - Antoni, Voja. Our beloved bookstore. Memory of the World (2012) https://www.memoryoftworld.org/blog/2012/10/28/our-beloved-bookscanner/\n\
+    - Medak, Tomislav; Sekulić, Mertens, An. How to: Booksanning. Memory of the World\
+    \ (2014) https://www.memoryoftworld.org/blog/2014/12/08/how-to-booksanning/\n\
+    - Barok, Dušan. Talks/Public Library. Monoskop (2015) http://monoskop.org/Talks/Public_Library\n\
+    - Custodians.online. In Solidarity with Library Genesis and Science Hub (2015)\
+    \ http://custodians.online\n- Battles, Matthew. Library: An Unquiet History Random\
+    \ House (2014)\n- Harris, Michael H. History of Libraries of the Western World.\
+    \ Scarecrow Press (1999)\n- MayDay Rooms. Activation (2015) http://maydayrooms.org/activation/\n\
+    - Krajewski, Markus. Paper Machines: About Cards & Catalogs, 1548-1929. MIT (2011)\
+    \ https://library.memoryoftheworld.org/PaRC3gdlHrZ3MuNPXyrh1M1meyyaqhaWI-HTvr53NRjJ2k\n\
+    \nFor updates: https://www.zotero.org/groups/amateur librarian - a_course in critical\
+    \ pedagogy reading list\n\nLast Revision: 28·06·2016\n\n1. For an economic history\
+    \ of the book in the Western Europe see Eljo Buring and Luiten Van Zanden, \"\
+    Charting the Rise of the West\": Manuscripts and Printed Books in Europe, A Long-Term\
+    \ Perspective from the Sixth through Eighteenth Centuries.\" The Journal of Economic\
+    \ History 69, No. 02 (June 2009): 409–45, doi:10.1017/S002205070900037, particularly\
+    \ Tables 1-5.\n2. For the social history of public library see Matthew Battles,\
+    \ Library: An Unquiet History (Random House, 2014) chapter 5: \"Books for all\"\
+    .\n3. For this concept we remain indebted to the curatorial collective, How and\
+    \ for Whom/WHW, who have presented the work of Public Library within the exhibition\
+    \ Really Useful Knowledge they organized at Museo Reina Sofia in Madrid, October\
+    \ 29, 2014 – February 9, 2015.\n4. \"Society for the Diffusion of Useful Knowledge,\
+    \ Wikipedia, The Free Encyclopedia, June 25, 2015, https://en.wikipedia.org/w/index.php?title=Society_for_the_Diffusion_of_Useful_Knowledge&cold=668644340\n\
+    5. Richard Johnson, \"Really Useful Knowledge,\" in CCCS Selected Working Papers:\
+    \ Volume 1, edition, vol. 1 (London u.a.: Routledge, 2014), 755.\n6. Ibid., 752.\n"
+  mdcn: "\n\n业余图书馆学课程开发了这一定义的各个方面和内涵。该课程的部分已通过此前在“公共图书馆”项目中举办的多次研讨会和讲座演变出来，另一部分则待通过未来教育过程中的研究、交流和知识生产来演变。尽管它是纲括性的，规模涵盖了从即时实用、战略和战术到反思性知识的领域，但存在一些真实的（此处未命名）的人和实践，我们可以想象可以从他们中学习。\n\
+    \n该课程的首次迭代可以是由我们全明星级别的图书员、设计师、研究人员和教师组成的夏季学院课程表，也可以是由一小部分学生深入研究课程某一特定方面的小型研讨会。简而言之，这是一个开放课程：既对教育过程开放，也欢迎他人的贡献。我们欢迎各种意见、衍生和补充。\n\
+    \n## 模块 1：工作流\n\n- 从书籍到电子书\n  - 使用书籍扫描仪对书籍进行数字化\n  - 移除 DRM 并转换电子书格式\n\n- 从混乱到目录化\n\
+    \  - 使用 Calibre 管理电子书库\n  - 在线图书馆查找电子书和文章\n\n- 从参考资料到参考文献\n  - 在电子书阅读设备或应用程序中进行注释\n\
+    \  - 在 Zotero 中创建学术参考文献\n\n- 从块设备设备到网络设备\n  - 在局域网上将你的电子书库共享到阅读设备\n  - 使用 [let's\
+    \ share books] 在互联网上共享你的电子书库\n\n- 从私有 IP 空间到公共空间\n  - 使用 [let's share books] &\
+    \ library.memoryoftheworld.org\n  - 使用 Logan & jessica\n  - 使用 Science Hub\n \
+    \ - 使用 Tor\n\n## 模块 2：政治/策略\n\n- 从发展性从属到底层不服从\n  - 不平衡发展与政治策略\n  - 发达国家的策略对比欠发达国家的策略：\
+    \ \n    开放获取对比 盗版\n\n- 从产权到公有\n  - 从产权到公有\n  - 著作权、科学出版、开放获取\n  - 影子图书馆、盗版、custodians.online\n\
+    \n- 从收藏到集体行动\n  - 批判教育学与教育\n  - 归档、激活与集体行动\n\n## 模块 3：行动中的抽象\n\n- 从线性到计算\n  -\
+    \ 图书馆与认识论：目录、搜索、发现、参考\n  - 纸质书对比电子书：页面、页边距、书脊\n\n- 从中心到分布式\n  - 深度图书馆学与业余图书员\n\
+    \  - 网络基础设施/拓扑结构（统治阶级研究）\n\n- 从事实到奇幻\n  - 宇宙即图书馆，即宇宙\n\n## 阅读列表\n\n- Mars, Marcell;\
+    \ Vladimir, Klemo. Download & How to: Calibre & [let's share books]. Memory of\
+    \ the World (2014) https://www.memoryoftworld.org/blog/2014/10/28/calibre-lets-share-books/\n\
+    - Buringh, Eljo; Van Sonder, Jan Luiten. Charting the “Rise of the West”: Manuscripts\
+    \ and Printed Books in Europe, A Long-Term Perspective from the Sixth through\
+    \ Eighteenth Centuries. The Journal of Economic History (2009) http://journals.cambridge.org/article/S0022507090000837\n\
+    - Matters, Shannon. Library as Infrastructure. Places Journal (2014) https://placesjournal.org/article/library-as-infrastructure/\n\
+    - Antoni, Voja. Our beloved bookstore. Memory of the World (2012) https://www.memoryoftworld.org/blog/2012/10/28/our-beloved-bookscanner/\n\
+    - Medak, Tomislav; Sekulić, Mertens, An. How to: Booksanning. Memory of the World\
+    \ (2014) https://www.memoryoftworld.org/blog/2014/12/08/how-to-booksanning/\n\
+    - Barok, Dušan. Talks/Public Library. Monoskop (2015) http://monoskop.org/Talks/Public_Library\n\
+    - Custodians.online. In Solidarity with Library Genesis and Science Hub (2015)\
+    \ http://custodians.online\n- Battles, Matthew. Library: An Unquiet History Random\
+    \ House (2014)\n- Harris, Michael H. History of Libraries of the Western World.\
+    \ Scarecrow Press (1999)\n- MayDay Rooms. Activation (2015) http://maydayrooms.org/activation/\n\
+    - Krajewski, Markus. Paper Machines: About Cards & Catalogs, 1548-1929. MIT (2011)\
+    \ https://library.memoryoftheworld.org/PaRC3gdlHrZ3MuNPXyrh1M1meyyaqhaWI-HTvr53NRjJ2k\n\
+    \n获取更新：https://www.zotero.org/groups/amateur librarian - a_course in critical\
+    \ pedagogy reading list\n\n最后修订日期：28·06·2016\n\n1. 关于西欧书籍的经济史，请参阅 Eljo Buring\
+    \ 和 Luiten Van Zanden, \"Charting the Rise of the West\": Manuscripts and Printed\
+    \ Books in Europe, A Long-Term Perspective from the Sixth through Eighteenth Centuries.\"\
+    \ The Journal of Economic History 69, No. 02 (2009年6月): 409–45, doi:10.1017/S002205070900037，特别是表1-5。\n\
+    2. 关于公共图书馆的社会史，请参阅 Matthew Battles, Library: An Unquiet History (Random House,\
+    \ 2014) 第5章：“所有人的书”。\n3. 关于这一概念，我们非常感谢策展团体 How and for Whom/WHW，他们在马德里的雷纳·索菲亚博物馆于2014年10月29日至2015年2月9日举办的“有用知识”展览中展示了公共图书馆的作品。\n\
+    4. “Society for the Diffusion of Useful Knowledge，”维基百科百科，2015年6月25日，https://en.wikipedia.org/w/index.php?title=Society_for_the_Diffusion_of_Useful_Knowledge&cold=668644340\n\
+    5. Richard Johnson, \"Really Useful Knowledge,\" in CCCS Selected Working Papers:\
+    \ Volume 1, edition, vol. 1 (London u.a.: Routledge, 2014), 755.\n6. 同上，752.\n\
+    \n"
+  merge: 0
+  raw:
+  - "[PAGE 5]\n\nThe curriculum in amateur librarianship develops aspects and implications\
+    \ of this definition. Parts of this curriculum have evolved over a number of workshops\
+    \ and talks previously held within the Public Library project, parts of it are\
+    \ yet to evolve from a process of future research, exchange and knowledge production\
+    \ in the education process. While schematic, scaling from the immediately practical,\
+    \ strategic and tactical, to reflexive registers of knowledge, there are actual\
+    \ – here unnamed – people and practices we imagine we could learn from.\n\nThe\
+    \ first iteration of this curriculum could be either a summer academy rostered\
+    \ with our all-star team of librarians, designers, researchers and teachers, or\
+    \ a small workshop with a small group of students delving deeper into one particular\
+    \ aspect of the curriculum. In short it is an open curriculum: both open to educational\
+    \ process and contributions by others. We welcome comments, derivations, and additions.\n\
+    \n# MODULE 1: WORKFLOWS\n\n+   * from book to e-book\n  * digitizing a book on\
+    \ a book scanner\n  * removing DRM and converting e-book formats\n\n+   * from\
+    \ clutter to catalogue\n  * managing an e-book library with Calibre\n  * finding\
+    \ e-books and articles on online libraries\n\n+   * from reference to bibliography\n\
+    \  * annotating in an e-book reader device or application\n  * creating a scholarly\
+    \ bibliography in Zotero\n\n+   * from block device to network device\n  * sharing\
+    \ your e-book library on a local network to a reading device"
+  - "[PAGE 6]\n\n+   - sharing your e-book library on the internet with [let's share\
+    \ books]\n\n+   - from private to public IP space\n  - using [let's share books]\
+    \ & library.memoryoftheworld.org\n  - using Logan & jessica\n  - using Science\
+    \ Hub\n  - using Tor\n\n# MODULE 2: POLITICS/TACTICS\n\n+   - from developmental\
+    \ subordination to subaltern disobedience\n  - uneven development & political\
+    \ strategies\n  - strategies of the developed v strategies of the underdeveloped\
+    \ : \n    open access v piracy\n\n+   - from property to commons\n  - from property\
+    \ to commons\n  - copyright, scientific publishing, open access\n  - shadow libraries,\
+    \ piracy, custodians.online\n\n+   - from collection to collective action\n  -\
+    \ critical pedagogy & education\n  - archive, activation & collective action\n\
+    \n# MODULE 3: ABSTRACTIONS IN ACTION\n\n+   - from linear to computational\n \
+    \ - library & epistemology: catalogue, search, discovery, reference\n  - print\
+    \ book v e-book: page, margin, spine\n\n+   - from central to distributed\n  -\
+    \ deep librarianship & amateur librarians"
+  - "[PAGE 7]\n\nnetwork infrastructure(s)/topologies (ruling class studies)\n\n+\
+    \   - from factual to fantastic\n  - universe as library as universe\n\n# # READING\
+    \ LIST\n\n+   - Mars, Marcell; Vladimir, Klemo. Download & How to: Calibre & [let's\
+    \ share books]. Memory of the World (2014) https://www.memoryoftworld.org/blog/2014/10/28/calibre-lets-share-books/\n\
+    - Buringh, Eljo; Van Sonder, Jan Luiten. Charting the “Rise of the West”: Manuscripts\
+    \ and Printed Books in Europe, A Long-Term Perspective from the Sixth through\
+    \ Eighteenth Centuries. The Journal of Economic History (2009) http://journals.cambridge.org/article/S0022507090000837\n\
+    - Matters, Shannon. Library as Infrastructure. Places Journal (2014) https://placesjournal.org/article/library-as-infrastructure/\n\
+    \ Antoni, Voja. Our beloved bookstore. Memory of the World (2012) https://www.memoryoftworld.org/blog/2012/10/28/our-beloved-bookscanner/\n\
+    - Medak, Tomislav; Sekulić, Mertens, An. How to: Booksanning. Memory of the World\
+    \ (2014) https://www.memoryoftworld.org/blog/2014/12/08/how-to-booksanning/\n\
+    - Barok, Dušan. Talks/Public Library. Monoskop (2015) http://monoskop.org/Talks/Public_Library\n\
+    - Custodians.online. In Solidarity with Library Genesis and Science Hub (2015)\
+    \ http://custodians.online\n- Battles, Matthew. Library: An Unquiet History Random\
+    \ House (2014)\n- Harris, Michael H. History of Libraries of the Western World.\
+    \ Scarecrow Press (1999)\n- MayDay Rooms. Activation (2015) http://maydayrooms.org/activation/\n\
+    - Krajewski, Markus. Paper Machines: About Cards & Catalogs, 1548-1929. MIT (2011)\
+    \ https://"
+  - '[PAGE 8]
+
+
+    library.memoryoftheworld.org/
+
+    PaRC3gdlHrZ3MuNPXyrh1M1meyyaqhaWI-HTvr53NRjJ2k
+
+
+    For updates: https://www.zotero.org/groups/amateur librarian -
+
+    a_course in critical pedagogy reading list
+
+
+    Last Revision: 28 ·06·2016
+
+
+    +   1. For an economic history of the book in the Western Europe see Eljo Buring
+    and Luiten Van Zanden, "Charting the Rise of the West": Manuscripts and Printed
+    Books in Europe, A Long-Term Perspective from the Sixth through Eighteenth Centuries."
+    The Journal of Economic History 69, No. 02 (June 2009): 409–45, doi:10.1017/S002205070900037,
+    particularly Tables 1-5.
+
+    2. For the social history of public library see Matthew Battles, Library: An Unquiet
+    History (Random House, 2014) chapter 5: "Books for all".
+
+    3. For this concept we remain indebted to the curatorial collective, How and for
+    Whom/WHW, who have presented the work of Public Library within the exhibition
+    Really Useful Knowledge they organized at Museo Reina Sofia in Madrid, October
+    29, 2014 – February 9, 2015.
+
+    4. "Society for the Diffusion of Useful Knowledge, Wikipedia, The Free Encyclopedia,
+    June 25, 2015, https://en.wikipedia.org/w/index.php?title=Society_for_the_Diffusion_of_Useful_Knowledge&cold=668644340
+
+    5. Richard Johnson, "Really Useful Knowledge," in CCCS Selected Working Papers:
+    Volume 1 , edition, vol. 1 (London u.a.: Routledge, 2014), 755.
+
+    6. Ibid., 752.
+
+    7. http://calibre-ebook.com/
+
+    8. https://www.memoryoftheworld.org/blog/2014/10/28/calibre-lets-share-books/
+
+    9. Henry A. Giroux, On Critical Pedagogy (Bloomsbury Academic, 2011), 5.'
+pages:
+- img_proc: true
+  md: '# Amateur Librarian - A Course in Critical Pedagogy
+
+
+    Tomislav Medak & Marcell Mars (Public Library project)
+
+
+    A proposal for a curriculum in amateur librarianship, developed through the activities
+    and exigencies of the Public Library project. Drawing from a historic genealogy
+    of public library as the institution of access to knowledge, the proletarian tradition
+    of really useful knowledge and the amateur agency driven by technological development,
+    the curriculum covers a range of segments from immediately applicable workflows
+    for scanning, sharing and using e-books, over politics and tactics around custodianship
+    of online libraries, to applied media theory implicit in the practices of amateur
+    librarianship. The proposal is made with further development,'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# PUBLIC LIBRARY, A POLITICAL GENEALOGY
+
+
+    Public libraries have historically achieved as an institutional space of exemption
+    from the commodification and privatization of knowledge. A space where works of
+    literature and science are housed and made accessible for the education of every
+    member of society regardless of their social or economic status. If, as a liberal
+    narrative has, education is a prerequisite for full participation in a body politic,
+    it is in this narrow institutional space that citizenship finds an important material
+    base for its universal realization.
+
+
+    The library as an institution of public access and popular literature, however,
+    did not develop before a series of transformations and social upheavals unfolded
+    in the course of 18th and 19th century. These developments brought about by a
+    flood of books and political demands pushing the library to become embedded in
+    an egalitarian and democratizing political horizon. The historic backdrop for
+    these developments was the rapid ascendancy of the book as a mass commodity and
+    the growing importance of the reading culture in the aftermath of the invention
+    of the movable print. Having emerged almost in parallel with capitalism, by the
+    early 18th century the trade in books was rapidly expanding. While in the 15th
+    century the libraries around the monasteries, courts and universities of Western
+    Europe contained no more than 5 million manuscripts, the output of printing presses
+    in the 18th century alone exploded to formidable 700 million volumes.\[11\]] And
+    while this provided a vector for the emergence of a bourgeois reading public and
+    an unprecedented expansion of modern science, the culture of reading and Enlightenment
+    remained largely a privilege of the few.
+
+
+    Two social upheavals stood to change that. On 2 November 1789 the French revolutionary
+    National Assembly passed a decision to seize all library holdings from the Church
+    and aristocracy. Million of volumes were transferred to the Bibliothèque Nationale
+    and local libraries across France. At the same time capitalism was on the rise,
+    particularly in England. It massively displaced the impoverished rural population
+    into growing urban'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'centres, propelled the development of industrial production, and by the mid-19th
+    century, introduced the steam-powered rotary press into the commercial production
+    of books. As books became more easily-produced, the commercial subscription libraries
+    catering to the better-of-art parts of society blossomed. This brought the class
+    aspect of the nascent demand for public access to the fore.
+
+
+    After the failed attempt to introduce universal suffrage and end the system of
+    political representation based on property entitlements the Reform Act of 1832,
+    the English Chartist movement started to open reading rooms and cooperative lending
+    libraries that would quickly become a popular hotbed of social exchange between
+    the lower classes. In the aftermath of the revolutionary upheavals of 1848, the
+    ruling classes finally consented to the demand for tax-financed public libraries,
+    hoping that the access to literature and edification would after all help educate
+    skilled workers that were increasingly in demand and ultimately hegemonize the
+    working class for the benefits of capitalism''s culture of self-interest and competition.[22]
+
+
+    # REALLY USEFUL KNOWLEDGE
+
+
+    [3]
+
+
+    It''s no surprise that the Chartists, reeling from a political defeat, had started
+    to open reading rooms and cooperative lending libraries. The education provided
+    to the proletariat and the poor by the ruling classes of that time consisted,
+    indeed, either of a pious moral edification serving political pacification or
+    of an inculcation of skills and knowledge useful to the factory owner. Even the
+    seemingly noble efforts of the Society for the Diffusion of the Useful Knowledge,
+    a Whig organization aimed at bringing high-brow learning to the middle and working
+    classes in the form of simplified and inexpensive publications, were aimed at
+    dulling the edge of radicalism of popular movements.[44]
+
+
+    These efforts to pacify the downtrodden masses pushed them to seek self-organized
+    education that would provide them with literacy and really useful knowledge –
+    not applied, but critical knowledge that would allow them to see through their
+    own political and economic subjetion, develop radical politics and innovate shadow
+    social institutions of their own. The radical'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'education, reliant on meagre resourses and time of the working class, developed
+    in the informal setting of household, neighbourhood and workplace, but also through
+    radical press and communal reading and discussion groups.[55]
+
+
+    The demand for really useful knowledge encompassed a critique of “all forms of
+    ‘provided’ education” and of the liberal conception “that national education was
+    a necessary condition for the granting of universal suffrage.” Development of
+    radical “curricula and pedagogies” formed a part of the arsenal of “political
+    strategy as a means of changing the world.”[66]
+
+
+    # # CRITICAL PEDAGOGY
+
+
+    This is the context of the emergence of the public library. A historical compromise
+    between a push for radical pedagogy and a response to dull its edge. And with
+    the age of digitization, where one would think that the opportunities for access
+    to knowledge have expanded immensely, public libraries find themselves increasingly
+    limited in their ability to acquire and lend digital and paper editions. It is
+    a sign of our radically unequal times that the political emancipation finds itself
+    on a defensive fighting again for this material base of pedagogy against the rising
+    forces of privatization. Not only has mass education become accessible only under
+    the condition of high fees, student debt and adjunct peerage, but the useful knowledge
+    that the labour market and reproduction of the neoliberal capitalism demands has
+    become the one and only rationale for education.
+
+
+    No wonder that over the last 6-7 years we have seen self-education, shadow libraries
+    and amateur librarians emerge again to counteract the contraction of spaces of
+    exemption that have been shrunk by austerity and commodity.
+
+
+    The project Public Library was initiated with the counteraction in mind. To help
+    everyone learn to use simple tools to be able to act as an Amateur – to digitize,
+    to collect, to share, to preserve books and articles that were unaffordable, unavailable,
+    undesirable in the troubled corners of the Earth we hail from.
+
+
+    Amateur Librarian played an important role in the narrative of Public Library.
+    And it seemed it was successful. People easily join the project by'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '''becoming'' a librarian using Calibre⁷¹¹ and [let''s share books].[⁸¹] Other
+    aspects of the Public Library narrative add a political articulation to that simple
+    yet disobient act. Public Library detects an institutional crisis in education,
+    an economic deadlock of austerity and a domination of commodity logic in the free
+    of copyright. It conjures the amateur librarians'' practice of sharing books/catalogues
+    as a relevant challenge against the convergence of that crisis, deadlock and copyright
+    regime.
+
+
+    To understand the political and technological assumptions and further develop
+    the strategies that lie behind the countermeasures of amateur librarians, we propose
+    a curriculum that is indebted to a tradition of critical pedagogy. Critical pedagogy
+    is a productive and theoretical practice rejecting an understanding of educational
+    process that reduces it to a technique of imparting knowledge and a neutral mode
+    of knowledge acquisition. Rather, it sees the pedagogy as a broader “struggle
+    over knowledge, desire, values, social relations, and, most importantly, modes
+    of political agency”, “drawing attention to questions regarding who has control
+    over the conditions for the production of knowledge.”⁹
+
+
+    No industry in the present demonstrates more the asymmetries of control over the
+    conditions of production of knowledge than the academic publishing. The denial
+    of access to outrageously expensive academic publications for many universities,
+    particularly in the Global South, stands in stark contrast to the super-profs
+    that a small number of commercial publishers draws from the free labour of scientists
+    who write, review and edit contributions and the extractive prices their institutional
+    libraries have to pay for subscriptions. It is thus here that the amateur librarianship
+    attains its poignancy for a critical pedagogy, inviting us to closer formulate
+    and unfold its practices in a shared process of discovery.
+
+
+    # A CURRICULUM
+
+
+    Public library is:
+
+
+    +   * free access to books for every member of society,
+
+    * library catalogue,
+
+    * librarian.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "The curriculum in amateur librarianship develops aspects and implications of\
+    \ this definition. Parts of this curriculum have evolved over a number of workshops\
+    \ and talks previously held within the Public Library project, parts of it are\
+    \ yet to evolve from a process of future research, exchange and knowledge production\
+    \ in the education process. While schematic, scaling from the immediately practical,\
+    \ strategic and tactical, to reflexive registers of knowledge, there are actual\
+    \ – here unnamed – people and practices we imagine we could learn from.\n\nThe\
+    \ first iteration of this curriculum could be either a summer academy rostered\
+    \ with our all-star team of librarians, designers, researchers and teachers, or\
+    \ a small workshop with a small group of students delving deeper into one particular\
+    \ aspect of the curriculum. In short it is an open curriculum: both open to educational\
+    \ process and contributions by others. We welcome comments, derivations, and additions.\n\
+    \n# MODULE 1: WORKFLOWS\n\n+   * from book to e-book\n  * digitizing a book on\
+    \ a book scanner\n  * removing DRM and converting e-book formats\n\n+   * from\
+    \ clutter to catalogue\n  * managing an e-book library with Calibre\n  * finding\
+    \ e-books and articles on online libraries\n\n+   * from reference to bibliography\n\
+    \  * annotating in an e-book reader device or application\n  * creating a scholarly\
+    \ bibliography in Zotero\n\n+   * from block device to network device\n  * sharing\
+    \ your e-book library on a local network to a reading device"
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "+   - sharing your e-book library on the internet with [let's share books]\n\
+    \n+   - from private to public IP space\n  - using [let's share books] & library.memoryoftheworld.org\n\
+    \  - using Logan & jessica\n  - using Science Hub\n  - using Tor\n\n# MODULE 2:\
+    \ POLITICS/TACTICS\n\n+   - from developmental subordination to subaltern disobedience\n\
+    \  - uneven development & political strategies\n  - strategies of the developed\
+    \ v strategies of the underdeveloped : \n    open access v piracy\n\n+   - from\
+    \ property to commons\n  - from property to commons\n  - copyright, scientific\
+    \ publishing, open access\n  - shadow libraries, piracy, custodians.online\n\n\
+    +   - from collection to collective action\n  - critical pedagogy & education\n\
+    \  - archive, activation & collective action\n\n# MODULE 3: ABSTRACTIONS IN ACTION\n\
+    \n+   - from linear to computational\n  - library & epistemology: catalogue, search,\
+    \ discovery, reference\n  - print book v e-book: page, margin, spine\n\n+   -\
+    \ from central to distributed\n  - deep librarianship & amateur librarians"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "network infrastructure(s)/topologies (ruling class studies)\n\n+   - from factual\
+    \ to fantastic\n  - universe as library as universe\n\n# # READING LIST\n\n+ \
+    \  - Mars, Marcell; Vladimir, Klemo. Download & How to: Calibre & [let's share\
+    \ books]. Memory of the World (2014) https://www.memoryoftworld.org/blog/2014/10/28/calibre-lets-share-books/\n\
+    - Buringh, Eljo; Van Sonder, Jan Luiten. Charting the “Rise of the West”: Manuscripts\
+    \ and Printed Books in Europe, A Long-Term Perspective from the Sixth through\
+    \ Eighteenth Centuries. The Journal of Economic History (2009) http://journals.cambridge.org/article/S0022507090000837\n\
+    - Matters, Shannon. Library as Infrastructure. Places Journal (2014) https://placesjournal.org/article/library-as-infrastructure/\n\
+    \ Antoni, Voja. Our beloved bookstore. Memory of the World (2012) https://www.memoryoftworld.org/blog/2012/10/28/our-beloved-bookscanner/\n\
+    - Medak, Tomislav; Sekulić, Mertens, An. How to: Booksanning. Memory of the World\
+    \ (2014) https://www.memoryoftworld.org/blog/2014/12/08/how-to-booksanning/\n\
+    - Barok, Dušan. Talks/Public Library. Monoskop (2015) http://monoskop.org/Talks/Public_Library\n\
+    - Custodians.online. In Solidarity with Library Genesis and Science Hub (2015)\
+    \ http://custodians.online\n- Battles, Matthew. Library: An Unquiet History Random\
+    \ House (2014)\n- Harris, Michael H. History of Libraries of the Western World.\
+    \ Scarecrow Press (1999)\n- MayDay Rooms. Activation (2015) http://maydayrooms.org/activation/\n\
+    - Krajewski, Markus. Paper Machines: About Cards & Catalogs, 1548-1929. MIT (2011)\
+    \ https://"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'library.memoryoftheworld.org/
+
+    PaRC3gdlHrZ3MuNPXyrh1M1meyyaqhaWI-HTvr53NRjJ2k
+
+
+    For updates: https://www.zotero.org/groups/amateur librarian -
+
+    a_course in critical pedagogy reading list
+
+
+    Last Revision: 28 ·06·2016
+
+
+    +   1. For an economic history of the book in the Western Europe see Eljo Buring
+    and Luiten Van Zanden, "Charting the Rise of the West": Manuscripts and Printed
+    Books in Europe, A Long-Term Perspective from the Sixth through Eighteenth Centuries."
+    The Journal of Economic History 69, No. 02 (June 2009): 409–45, doi:10.1017/S002205070900037,
+    particularly Tables 1-5.
+
+    2. For the social history of public library see Matthew Battles, Library: An Unquiet
+    History (Random House, 2014) chapter 5: "Books for all".
+
+    3. For this concept we remain indebted to the curatorial collective, How and for
+    Whom/WHW, who have presented the work of Public Library within the exhibition
+    Really Useful Knowledge they organized at Museo Reina Sofia in Madrid, October
+    29, 2014 – February 9, 2015.
+
+    4. "Society for the Diffusion of Useful Knowledge, Wikipedia, The Free Encyclopedia,
+    June 25, 2015, https://en.wikipedia.org/w/index.php?title=Society_for_the_Diffusion_of_Useful_Knowledge&cold=668644340
+
+    5. Richard Johnson, "Really Useful Knowledge," in CCCS Selected Working Papers:
+    Volume 1 , edition, vol. 1 (London u.a.: Routledge, 2014), 755.
+
+    6. Ibid., 752.
+
+    7. http://calibre-ebook.com/
+
+    8. https://www.memoryoftheworld.org/blog/2014/10/28/calibre-lets-share-books/
+
+    9. Henry A. Giroux, On Critical Pedagogy (Bloomsbury Academic, 2011), 5.'
+  merge: -1
+  pgno: 8
+toc: []
