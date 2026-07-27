@@ -15,6 +15,7 @@
 +   [一名软件工程师学习 Java 与面向对象编程](docs/a-software-engineer-learns-java-and-object-orientated-progra/README.md)
 +   [基于面向对象对象的 Java 重构工具研究](docs/a-study-of-java-refactoring-tool-as-per-oop/README.md)
 +   [拿铁谋杀（Java 爵探之谜 #3）](docs/a-whole-latte-murder-a-java-jive-mystery-3/README.md)
++   [Java 初学者指南（第一部分）Java 4 Selenium WebDriver：学习自动化测试编程](docs/absolute-beginner-part-1-java-4-selenium-webdriver-come-lear/README.md)
 +   [Java 绝对指南（附学生资源光盘）](docs/absolute-java-with-student-resource-disk/README.md)
 +   [跨越赤道：爪哇岛假期之旅](docs/across-the-equator-a-holiday-trip-in-java/README.md)
 +   [Activiti 5.x 用户指南](docs/actvt-5x-usrgd/README.md)
