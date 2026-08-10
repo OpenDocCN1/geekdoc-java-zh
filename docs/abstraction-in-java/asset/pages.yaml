@@ -1,0 +1,1090 @@
+- img_proc: true
+  md: '# # ABSTRACTION
+
+    in JAVA
+
+
+    THE ULTIMATE GUIDE
+
+
+    ![](img/3ed46cf971278dea2d7c239e74f87929_0_0.png)
+
+
+    HUGH HAMILL
+
+
+    ![](img/3ed46cf971278dea2d7c239e74f87929_0_1.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Abstraction in Java'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Contents
+
+
+    +   1 Introduction 1
+
+
+    +   2 Interfaces 2
+
+
+    +   2.1 Defining Interfaces 3
+
+
+    +   2.2 Implementing Interfaces 3
+
+
+    +   2.3 Using Interfaces 3
+
+
+    +   3 Abstract Classes 5
+
+
+    +   3.1 Defining Abstract Classes 5
+
+
+    +   3.2 Extending Abstract Classes 6
+
+
+    +   3.3 Using Abstract Classes 7
+
+
+    +   4 A Worked Example - Payments System 9
+
+
+    +   4.1 The Payee Interface 9
+
+
+    +   4.2 The Payment System 9
+
+
+    +   4.3 The Employee Classes 10
+
+
+    +   4.3.1 The SalaryEmployee Class 11
+
+
+    +   4.3.1.1 Class Diagram 11
+
+
+    +   4.3.1.2 Code 11
+
+
+    +   4.3.2 The CommissionEmployee Class 11
+
+
+    +   4.3.2.1 Class Diagram 12
+
+
+    +   4.3.2.2 Code 12
+
+
+    +   4.3.3 The Employee Abstract Class 13
+
+
+    +   4.3.3.1 Class Diagram 13
+
+
+    +   4.3.3.2 Code 13
+
+
+    +   4.4 The Application 14
+
+
+    +   4.4.1 The PaymentApplication Class 15
+
+
+    +   4.5 Handling Bonuses 16
+
+
+    +   4.5.1 The Employee Class for Bonuses 16
+
+
+    +   4.6 Contracting Companies 18
+
+
+    +   4.6.1 The ContractingCompany Class 18'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '+   4.6.1.1 Class Diagram ............................................................................................................................................................................
+    19
+
+
+    +   4.6.1.2 Code .................................................................................................................................................................
+    . . . . . . . . . . . . . . . 19
+
+
+    +   4.7 Advanced Functionality: Taxation .................................................................................................................................................
+    . . . . . . 21
+
+
+    +   4.7.1 The TaxablePayee Interface ................................................................................................................................................................................
+    21
+
+
+    +   4.7.1.1 Class Diagram .......................................................................................................................................................................................................................
+    22
+
+
+    +   4.7.1.2 Code .................................................................................................................................................................................................................................
+    . . . . . . . . 22
+
+
+    +   4.7.2 Taxation changes in PaymentSystem ............................................................................................................................................................................
+    24
+
+
+    # 5 Conclusion .................................................................................................................................................................................................................................................................................................................................................................
+    27'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'Copyright (c) Exelix Media P.C., 2015
+
+    All rights reserved. Without limiting the rights under copyright reserved above,
+    no part of this publication may be reproduced, stored or introduced into a retrieval
+    system, or transmitted, in any form or by any means (electronic, mechanical, photocopying,
+    recording or otherwise), without the prior written permission of the copyright
+    owner.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Preface
+
+
+    In software engineering and programming language theory, the abstraction principle
+    (or the principle of abstraction) is a basic dictum that aims to reduce duplication
+    of information in a program (usually with emphasis on code duplication) whenever
+    practical by making use of abstractions provided by the programming language or
+    software libraries. The principle is sometimes stated as a recommendation to the
+    programmer, but sometimes stated as requirement of the programming language, assuming
+    it is self-understood why abstractions are desirable to use. The origins of the
+    principle are uncertain; it has been reinvented a number of times, sometimes under
+    a different name, with slight variations.
+
+
+    When read as recommendation to the programmer, the abstraction principle can be
+    generalized as the "don''t repeat yourself" principle, which recommends avoiding
+    the duplication of information in general, and also avoiding the duplication of
+    human effort involved in the software development process.
+
+
+    +   * Wikipedia
+
+
+    http://en.wikipedia.org/wiki/Abstraction_principle_%28computer_programming%29'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# About the Author
+
+
+    Hugh Hamill is a Senior Software Engineer and Certified Scrum Master based in
+    Galway, Ireland. He achieved his B.Sc. in Applied Computing from Waterford Institute
+    of Technology in 2002 and has been working in industry since then. He has worked
+    for a several large blue chip software companies listed on both the NASDAQ and
+    NYSE.
+
+
+    Hugh has previously worked with both C++ and VB but currently concentrates on
+    the Java stack. He has experience of building desktop applications using swing
+    and enterprise back ends using both JEE and Spring. He has been tech lead and
+    architect on several projects including thick client configuration tools, an event
+    replicating DB access layer, a performance test infrastructure, a portlet framework,
+    a rules based decision engine for DRM and is currently working on a next gen technology
+    for processing large amounts of customer data.
+
+
+    His main areas of interest include Core Java, JEE, Spring, Design Patterns, TDD,
+    Maven and Agile Software Development.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Chapter 1
+
+
+    # Introduction
+
+
+    In this tutorial we will give an introduction to Abstraction in Java and define
+    a simple Payroll System using Interfaces, Abstract Classes and Concrete Classes.
+
+
+    There are two levels of abstraction in Java - **Interfaces**, used to define expected
+    behaviour and **Abstract Classes**, used to define incomplete functionality.
+
+
+    We will now look at these two different types of abstraction in detail.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# # Chapter 2\n\n# # Interfaces\n\nAn interface is like a contract. It is a\
+    \ promise to provide certain behaviours and all classes which implement the interface\
+    \ guarantee to also implement these behaviours. To define the expected behaviours\
+    \ the interface lists a number of method signatures. Any class which uses the\
+    \ interface can rely on methods being implemented in the runtime class which implements\
+    \ the interface. This allows anyone using the interface to know what functionality\
+    \ will be provided without having about how that functionality will actually be\
+    \ achieved. The implementation details are hidden from the client, this is a crucial\
+    \ benefit of abstraction.\n\n# ## 2.1 Defining Interfaces\n\nYou can use the keyword\
+    \ `interface` to define an interface:\n\n```\npublic MyInterface {\n    void methodA();\n\
+    \    int methodB();\n    String methodC(double x, double y);\n}\n```\n\nHere we\
+    \ have an interface called `MyInterface`, note that you should use the same case\
+    \ conventions for Interfaces that you use for Classes. `MyInterface` defines 3\
+    \ methods, each with different return types and parameters. You can see that none\
+    \ of these methods have a body; when working with interfaces we are only interested\
+    \ in defining the expected behaviour, not in its implementation.\n\n**Note:**\
+    \ Java 8 introduced the ability to create a default implementation for interface\
+    \ methods, however we will not cover that functionality in this tutorial.\n\n\
+    Interfaces can also contain state data by the use of member variables:\n\n```\n\
+    public MyInterfaceWithState {\n    int someNumber;\n    void methodA();\n}\n```\n\
+    \nAll the methods in an interface are public by default and in fact you can't\
+    \ create a method in an interface with an access level other than public."
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "# 2.2 Implementing Interfaces\n\nNow we have defined an interface we want to\
+    \ create a class which will provide the implementation details of the behaviour\
+    \ we have defined. We do this by writing a new class and using the implements\
+    \ keyword to tell the compiler what this class should implement.\n\n```\npublic\
+    \ class MyClass implements MyInterface {\n    public void method() {\n       \
+    \ System.out.println(\"Method A called!\");\n    }\n\n    public int method()\
+    \ {\n        return 42;\n    }\n\n    public String methodC(double x, double y)\
+    \ {\n        return \"x = \" + x + \", y = \" + y;\\n    }\n}\n```\n\nWe took\
+    \ the method signatures which we defined in MyInterface and gave them bodies to\
+    \ implement. We just said we could have done anything in those bodies, as long\
+    \ as they satisfied the method signatures. We could also create many implementing\
+    \ classes as we want, each with different implementation details of the methods\
+    \ from MyInterface.\n\nWe implemented all methods from MyInterface in MyClass\
+    \ and if we failed to implement any of them compiler would have given us an error.\
+    \ This is because that MyClass implements MyInterface means that MyClass is guaranteed\
+    \ to provide an implementation for each of the methods from MyInterface. This\
+    \ lets any clients use the interface we rely on for fact that there will be an\
+    \ implementation in the class it wants to call.,\n\n# 2.3 Using Interfaces\n\n\
+    To call the methods of the interface from the client we just need to use the (.)\
+    \ operator, just like with the methods of classes:\n\n```\nMyInterface object1\
+    \ = new MyClass();\nobject1.methodA(); // Guaranteed to work\n```\n\nWe see something\
+    \ unusual above, instead of something like MyClass object1 = new MyClass(); (which\
+    \ is perfectly acceptable) we declare object1 is of type MyInterface. This works\
+    \ because MyClass is an implementation of MyInterface when we want to call a method\
+    \ defined in MyInterface we will provide the implementation. object1 is a reference\
+    \ to that object which implements, in this case it is an instance of MyClass.\n\
+    \nWhen we make the call to object1.methodA() we are executing the method defined\
+    \ in MyClass because the runtime type of object is MyClass, even though the reference\
+    \ is of type MyInterface. We can only call methods on object1 that are defined\
+    \ in MyInterface, for all intents and we can refer to object1 as being of type\
+    \ MyInterface even though the runtime type is MyClass. In fact if MyClass defined\
+    \ another method called methodD() we couldn't call it on object1, because the\
+    \ compiler only knows object1 is a reference to a MyInterface, not that it is\
+    \ specifically a MyClass.\n\nThis important distinction is what lets us create\
+    \ different implementation classes for our interfaces without worrying which one\
+    \ is being called at runtime.\n\nTake the following interface:"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# Abstraction in Java\n\n```\npublic interface OneMethodInterface {\n    void\
+    \ methodName();\n}\n```\n\nIt defines one void method which takes no parameters.\n\
+    Let's implement it:\n\n```\npublic class ClassA implements OneMethodInterface\
+    \ {\n    public void methodName() {\n        System.out.println(\"Runtime type\
+    \ is ClassA.\");\n    }\n}\n```\n\nWe can use this in a client just before:\n\n\
+    ```\nOneMethodInterface myObject = new ClassA();\nmyObject.methodName();\n```\n\
+    \nOutput:\n\n```\nRuntime type is ClassA.\n```\n\nNow let's make a different implementation\
+    \ for OneMethodInterface:\n\n```\npublic class ClassB implements OneMethodInterface\
+    \ {\n    public void methodName() {\n        System.out.println(\"The runtime\
+    \ type of this class is ClassB.\");\n    }\n}\n```\n\nAnd modify our code above:\n\
+    \n```\nOneMethodInterface myObject = new ClassA();\nmyObject = new ClassB();\n\
+    myObject.methodName();\n```\n\nOutput:\n\n```\nRuntime type is ClassA.\nRuntime\
+    \ type of this class is ClassB.\n```\n\nWe have successfully used the Reference\
+    \ (myObject) to refer to instances of two different runtime types. The actual\
+    \ implementation that OneMethodInterface is implemented, by, anything, and in\
+    \ any way. As far as the compiler is concerned myObject is a OneMethodInterface,\
+    \ and one() is available, even if it is reassigned to a different instance object\
+    \ of a different class. This ability to provide more than one runtime type and\
+    \ it resolved at run time, rather than compile, is called polymorphism.\n\nInterfaces\
+    \ define behaviour without any implementation details (ignoring Java 8) and implementing\
+    \ classes define all the implementation for the classes they define, but what\
+    \ if we want a mix of the two concepts? If we want to mix some behaviour definition\
+    \ and some implementation together in the same place we can use an abstract class."
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# Chapter 3\n\n# Abstract Classes\n\nAn abstract class is like an incomplete\
+    \ blueprint, it defines some of the implementation details of the class while\
+    \ leaving others as simple behaviour definitions to be implemented later.\n\n\
+    Imagine a blueprint of a house where the house is drawn in completely but there\
+    \ is a big empty square where the garage will be gone. We do not know what it\
+    \ will look like. Somebody else will have to take a copy of our blueprint in the\
+    \ garage. In fact many different people may take copies of our blueprint and draw\
+    \ in different types of garage. Houses built using these blueprints will be recognizable\
+    \ variants of our house; the front door, the room layouts and the windows will\
+    \ be all identical, however the garages will be different.\n\nLike the blueprint\
+    \ above our abstract classes define some methods completely, and these method\
+    \ implementations will be the same in all implementations of the abstract class.\
+    \ The abstract class will define only the signature for other methods, in the\
+    \ same way that interfaces does. The method implementations for these methods\
+    \ will vary in the implementing classes. Implementing an abstract class is commonly\
+    \ referred to as a concrete class. Due to the inheritance relationship between\
+    \ the concrete class and the abstract class we generally say that a concrete extends\
+    \ an abstract class, rather than implements it as we say with interfaces.\n\n\
+    Just like interfaces any client code knows that if a concrete class is extending\
+    \ the abstract class class guarantees to provide method bodies for the abstract\
+    \ methods of the abstract class (the abstract class provides its own methods for\
+    \ non-abstract methods, of course).\n\nAgain, just like interfaces, there can\
+    \ be different concrete classes of a given abstract class, each define very different\
+    \ behaviours for the abstract methods of the abstract class while satisfying the\
+    \ contract of the abstract class. The implementation details are hidden from the\
+    \ client.\n\n# 3.1 Defining Abstract Classes\n\nThe keyword abstract is used to\
+    \ define both class and its methods as abstract.\n\n```\npublic abstract class\
+    \ MyAbstractClass {\n    protected int someNumber = 0;\n\n    public void increment()\
+    \ {\n        someNumber++;\n    }\n\n    public abstract void doSomethingWithNumber();\n\
+    }\n```\n\nHere we defined an abstract class called MyAbstractClass which contains\
+    \ an integer and provides a method for incrementing that integer. We also define\
+    \ an abstract method called doSomethingWithNumber(). We don't yet know what this"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# Abstraction in Java\n\nmethod will do, it will be defined in any concrete\
+    \ classes which extend MyAbstractClass.doSomethingNumber() doesn't have a method\
+    \ body because it is abstract.\n\nIn interfaces all methods are public by default,\
+    \ however the scope of the abstract method may be package, protected or private.\
+    \ You can see that some behavioural implementation in interface is mixed with\
+    \ some behavioural definition in doingSomethingNumber() in this class abstract.\
+    \ Abstract classes mix some implementation with some definition. Concrete classes\
+    \ which extend Abstract class will reuse the implementation of increment() while\
+    \ guaranteeing to provide their own implementations of doSomethingNumber().\n\n\
+    # 3.2 Extending Abstract Classes\n\nNow we have created an abstract class let's\
+    \ make a concrete implementation for it. We make concrete implementations from\
+    \ abstract classes using the extends keyword in a class which is not abstract.\n\
+    \n```\npublic class MyConcreteClass extends MyAbstractClass {\n    public void\
+    \ sayHello() {\n        System.out.println(\"Hello there!\");\n    }\n\n    public\
+    \ void doSomethingNumber() {\n        System.out.println(\"The number is \" +\
+    \ someNumber);\n    }\n}\n```\n\nWe have created a concrete class called MyConcreteClass\
+    \ and extended MyAbstractClass. We only needed to provide implementation for the\
+    \ abstract method doSomethingNumber() because we inherit the private member variables\
+    \ and methods from MyAbstractClass. If any client calls increment() on MyConcreteClass\
+    \ implementation defined in MyAbstractClass will be executed. A new method called\
+    \ sayHello is unique to MyConcreteClass and wouldn't be available from any other\
+    \ class which implements MyAbstractClass.\n\nWe also extend MyAbstractClass with\
+    \ another abstract class where we do not define doSomethingNumber - this means\
+    \ another abstract class will have to be defined, which extends this class in\
+    \ order to implement doSomethingNumber().\n\n```\npublic abstract class MyAbstractClass\
+    \ extends MyAbstractClass {\n    public void sayHello() {\n        System.out.println(\"\
+    Hello there!\");\n    }\n}\n```\n\nWe didn't have to make any reference to doSomethingNumber()\
+    \ here, however we create a concrete class for MyAbstractClass we will provide\
+    \ the implementation for doSomethingNumber().\n\nLastly, abstract classes can\
+    \ implement interfaces. Because the abstract class is not instantiated itself\
+    \ it does have to provide an implementation for all (or any) of the interface\
+    \ methods. If the abstract class does not provide an implementation for an interface\
+    \ method, the class which extends the abstract class will have to provide the\
+    \ implementation.\n\n```\npublic abstract MyImplementingAbstractClass implements\
+    \ MyInterface {\n    public void methodA() {\n        System.out.println(\"Method\
+    \ A has been implemented in this abstract class\");\n    }\n}\n```\n\nHere we\
+    \ see that MyImplementingAbstractClass implements MyInterface but only provides\
+    \ an implementation for methodA(). If any concrete class extends MyImplementingAbstractClass\
+    \ it will have to provide an implementation for methodB() and methodC() as defined\
+    \ in MyInterface."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# 3.3 Using Abstract Classes\n\nLike with Interfaces and regular classes, to\
+    \ call the methods of an abstract class you use the (.) operator.\n\n```\nMyAbstractClass\
+    \ object1 = new MyConcreteClass();\nobject1.increment();\nobject1.doSomethingWithNumber();\n\
+    ```\n\nAgain notice that object1 is a reference to an instance that provides a\
+    \ concrete implementation for MyAbstractClass and the runtime type of instance\
+    \ is MyConcreteClass. For all intents and purposes object1 is created by the compiler\
+    \ as it is a MyAbstract instance. If you tried to call the sayHello() method defined\
+    \ in MyConcreteClass you would get a compiler error. This method is not visible\
+    \ to the compiler because object1 is a MyAbstract class. The only guarantee object1\
+    \ provides is it will have implementations for the methods defined in MyAbstractClass.\
+    \ Any other methods provided by the runtime are not visible.\n\n```\nobject1.sayHello();\
+    \ // compiler error\n```\n\nAs with interfaces we can provide different runtime\
+    \ types and use them through the same reference.\n\nDefines a new abstract class\n\
+    \n```\npublic abstract class TwoMethodAbstractClass {\n\n    public void oneMethod()\
+    \ {\n        System.out.println(\"oneMethod is implemented in TwoMethodAbstractClass.\"\
+    );\n    }\n\n    public abstract void twoMethod();\n\n}\n```\n\nIt defines one\
+    \ method implemented and an abstract method.\n\nLet's extend it with a concrete\
+    \ class\n\n```\npublic class ConcreteA extends TwoMethodAbstractClass {\n\n  \
+    \  public void twoMethod() {\n        System.out.println(\"twoMethod is implemented\
+    \ in ConcreteA.\");\n    }\n\n}\n```\n\nWe can use it in a client just like this:\n\
+    \n```\nTwoMethodAbstractClass myObject = new ConcreteA();\nmyObject.oneMethod();\n\
+    myObject.twoMethod();\n```\n\nOutput:\n\n```\noneMethod is implemented in TwoMethodAbstractClass.\n\
+    twoMethod is implemented in ConcreteA.\n```\n\nNow let's make a different concrete\
+    \ class which extends TwoMethodAbstractClass:\n\n```\npublic class ConcreteB extends\
+    \ TwoMethodAbstractClass {\n\n    public void twoMethod() {\n        System.out.println(\"\
+    ConcreteB implements its own twoMethod.\");\n    }\n\n}\n```\n\nAnd modify our\
+    \ code above:"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Abstraction in Java
+
+
+    ```
+
+    TwoMethodAbstractClass myObject = new ConcreteClassA();
+
+    myObject.oneMethod();
+
+    myObject.twoMethod();
+
+    myObject = new ConcreteClassB();
+
+    myObject.oneMethod();
+
+    myObject.twoMethod();
+
+    ```
+
+
+    Output:
+
+
+    TwoMethod is implemented in TwoMethodAbstractClass.
+
+    TwoMethod is implemented in ConcreteClassA.
+
+    ConcreteClassB implements its own twoMethod.
+
+
+    We have used the reference (myObject) to refer to instances of two different runtime
+    types. When the runtime type of myObject is ConcreteClassA it uses the implementation
+    of twoMethod from ConcreteClassA. When the runtime of myObject is ConcreteClassB
+    it uses the implementation of twoMethod from ConcreteClassB. In both cases the
+    common implementation of oneMethod from TwoMethodAbstractClass is used.
+
+
+    Abstract classes are used to define common behaviours while providing contracts
+    or promises that other behaviours will be available from a concrete class later.
+    This allows us to build object models where we can reuse common functionality
+    and capture differing requirements in different concrete classes.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# Chapter 4\n\n# A Worked Example - Payments System\n\nWe have been asked to\
+    \ build a payments system for a company. We know that the company has different\
+    \ types of employees that can be paid in different ways; salaried and with commission.\
+    \ The boss of the company understands that his needs will change and the system\
+    \ may be changed later to accommodate different types of entities which will receive\
+    \ payments.\n\n# 4.1 The Payee Interface\n\nLet's start by considering the employees.\
+    \ They must receive payments, but we also know that later on we may need to have\
+    \ different entities also receive payments. Let's create an interface, Payee,\
+    \ which will define the sort of behaviour we' expect from entities which can receive\
+    \ payments.\n\n```\npublic interface Payee {\n    String name();\n    Double grossPayment();\n\
+    \    Integer bankAccount();\n}\n```\n\nHere we have a Payee interface let's write\
+    \ some code that guarantees three behaviours; the ability to provide a name for\
+    \ the Payee, the ability to provide a gross payment amount which should be paid\
+    \ and the ability to provide a bank account number where the funds should be deposited.\n\
+    \n# 4.2 The Payment System\n\nNow that we have a Payee defined let's write some\
+    \ code that it uses. We'll create a PaymentSystem class which maintains a list\
+    \ of Payees and will on cycle through them and transfer the requested amount into\
+    \ the appropriate bank account.\n\n```\npublic class PaymentSystem {\n    private\
+    \ List<Payee> payees;\n\n    public PaymentSystem() {\n        payees = new ArrayList<>();\n\
+    \    }\n\n    public void addPayee(Payee payee) {\n        if (!payees.contains(payee))\
+    \ {\n            payees.add(payee);\n        }\n    }\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "```\n)\n)public void processPayments() {\n    for (Payee payee : payees) {\n\
+    \        Double grossPayment = payee.grossPayment();\n\n        System.out.println(\"\
+    Paying to \" + payee.name());\n        System.out.println(\"\\tgross\\t\" + grossPayment);\\\
+    n        System.out.println(\"\\tTransferred to Account: \" + bankAccount());\n\
+    \    }\n}\n```\n\nYou can see that the PaymentSystem is totally agnostic to the\
+    \ runtime types of the Payees, it doesn't have to care. It knows that no matter\
+    \ what the runtime type the Payee being process is guaranteed to implement name().\n\
+    grossPayment() and bankAccount(). Given that knowledge it's simply a matter of\
+    \ executing a for loop all the\nPayees and processing their payments using these\
+    \ methods.\n\n# 4.3 The Employee Classes\n\nWe have been told by the boss that\
+    \ he has two different types of Employee - Salaried Employees and Commissioned\
+    \ Employees.\nSalaried Employees have a base salary which doesn't change while\
+    \ Commissioned Employees have a base salary and also can\n given sales commissions\
+    \ for successful sales.\n\n# 4.3.1 The SalaryEmployee Class\n\nLet's start with\
+    \ a class for Salaried Employees. It should implement the Payee interface so it\
+    \ can be used by the Payee System.\nLet's represent our changes using class diagrams\
+    \ in addition to code. In class diagrams a dotted arrow.name an implements\nrelationship\
+    \ and a solid arrow means an extends relationship."
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# 4.3.1.1 Class Diagram\n\n![](img/3ed46cf971278dea2d7c239e74f87929_17_0.png)\n\
+    \nFigure 4.1: screenshot\n\n# 4.3.1.2 Code\n\n```\npublic class SalaryEmployee\
+    \ implements Payee {\n    private String name;\n    private Integer bankAccount;\n\
+    \    protected Double grossWage;\n\n    public SalaryEmployee(String name, Integer\
+    \ bankAccount, Double grossWage) {\n        this.name = name;\n        this.bankAccount\
+    \ = bankAccount;\n        this.grossWage = grossWage;\n    }\n\n    public Integer\
+    \ bankAccount() {\n        return bankAccount;\n    }\n\n    public String name()\
+    \ {\n        return name;\n    }\n\n    public Double grossPayment() {\n     \
+    \   return grossWage;\n    }\n}\n```\n\n# 4.3.2 The CommissionEmployee Class\n\
+    \nNow let's make a CommissionEmployee class. This class will be quite similar\
+    \ to the SalaryEmployee with the ability to pay commissions."
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "Abstraction in Java\n\n# 4.3.2.1 Class Diagram\n\n![](img/3ed46cf971278dea2d7c239e74f87929_18_0.png)\n\
+    \nFigure 4.2: screenshot\n\n# 4.3.2.2 Code\n\n```\npublic class CommissionEmployee\
+    \ implements Payee {\n    private String name;\n    private Integer bankAccount;\n\
+    \    protected Double grossWage;\n    private Double grossCommission = 0.0;\n\
+    \    public CommissionEmployee(String name, Integer bankAccount, Double grossWage)\
+    \ {\n        this.name = name;\n        this.bankAccount = bankAccount;\n    \
+    \    this.grossWage = grossWage;\n    }\n    public Integer bankAccount() {\n\
+    \        return bankAccount;\n    }\n    public String name() {\n        return\
+    \ name;\n    }\n    public Double grossPayment() {\n        return grossWage +\
+    \ doCurrentCommission();\n    }\n    public Double doCurrentCommission() {\n \
+    \       Double commission = grossCommission;\n        grossCommission = 0.0;\n\
+    \        return commission;\n    }\n}\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# Abstraction in Java\n\n```\npublic void giveCommission(Double amount) {\n\
+    \    grossCommission += amount;\n}\n```\n\nAs you can see a lot of the code is\
+    \ duplicated between SalaryEmployee and CommissionEmployee. In fact the only thing\
+    \ that's different is the calculation for grossPayment, which uses a commission\
+    \ value in CommissionEmployee. Some of the functionality is the same, and some\
+    \ is different. This looks like a good candidate for an Abstract Class.\n\n# 4.3.3\
+    \ The Employee Abstract Class\n\nLet's abstract the name and bank account functionality\
+    \ into an Employee abstract class. SalaryEmployee and CommissionEmployee can then\
+    \ extend this abstract class and provide different implementations for grossPayment\
+    \ ().\n\n# 4.3.3.1 Class Diagram\n\n![](img/3ed46cf971278dea2d7c239e74f87929_19_0.png)\n\
+    \nFigure 4.3: screenshot\n\n# 4.3.3.2 Code\n\n```\npublic abstract class Employee\
+    \ implements Payee {\n\n    private String name;\n    private Integer bankAccount;\n\
+    \    protected Double grossWage;\n```"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# Abstraction in Java\n\n```\npublic Employee(String name, Integer bankAccount,\
+    \ Double grossWage) {\n    this.name = name;\n    this.bankAccount = bankAccount;\n\
+    \    this.grossWage = grossWage;\n}\n\npublic String name() {\n    return name;\n\
+    }\n\npublic Integer bankAccount() {\n    return bankAccount;\n}\n```\n\nNote that\
+    \ Employee doesn't to implement the grossPayment() method defined in Payee because\
+    \ Employee is abstract.\n\nNow let's create two Employee classes:\n\n```\npublic\
+    \ class SalaryEmployee extends Employee {\n    public SalaryEmployee(String name,\
+    \ Integer bankAccount, Double grossWage) {\n        super(name, bankAccount, grossWage);\n\
+    \    }\n\n    public Double grossPayment() {\n        return grossWage;\n    }\n\
+    }\n\npublic class CommissionEmployee extends Employee {\n    private Double grossCommission\
+    \ = 0.0;\n    public CommissionEmployee(String name, Integer bankAccount, Double\
+    \ grossWage) {\n        super(name, bankAccount, grossWage);\n        grossCommission\
+    \ = commission;\n    }\n\n    public Double grossPayment() {\n        return grossWage\
+    \ + currentCommission();\n    }\n\n    private Double currentCommission() {\n\
+    \        Double commission = grossCommission;\n        grossCommission = 0.0;\n\
+    \        return commission;\n    }\n\n    public void giveCommission(Double amount)\
+    \ {\n        grossCommission += amount;\n    }\n}\n```\n\nMuch neater!\n\n# 4.4\
+    \ The Application\n\nLet's using our new Employee types in an application. We'll\
+    \ create an application class that initializes the system by creating a Payment\
+    \ System, some Employees and simulating a week of work."
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# 4.4.1 The PaymentApplication Class\n\nThe application class looks like this:\n\
+    \n```\npublic class PaymentApplication {\n    public static void main(final String...\
+    \ args) {\n        // Initialization\n        PaymentSystem paymentSystem = new\
+    \ PaymentSystem();\n\n        CommissionEmployee johnSmith = new CommissionEmployee(\"\
+    John Smith\", 1111, 300.0);\n        paymentSystem.addPayee(johnSmith);\n\n  \
+    \      CommissionEmployee paulJones = new CommissionEmployee(\"Paul Jones\", 2222,\
+    \ 350.0);\n        paymentSystem.addPayee(paulJones);\n\n        SalaryEmployee\
+    \ maryBrown = new SalaryEmployee(\"Mary Brown\", 3333, 500.0);\n        paymentSystem.addPayee(maryBrown);\n\
+    \n        SalaryEmployee susanWhite = new SalaryEmployee(\"Susan White\", 4444,\
+    \ 470.0);\n        paymentSystem.addPayee(sanWhite);\n\n        // Simulate Week\n\
+    \        johnSmith.giveCommission(40.0);\n        johnSmith.giveCommission(35.0);\n\
+    \        johnSmith.giveCommission(45.0);\n\n        paulJones.giveCommission(45.0);\n\
+    \        paulJones.giveCommission(51.0);\n        paulJones.giveCommission(23.0);\n\
+    \        paulJones.giveCommission(14.5);\n        paulJones.giveCommission(57.3);\n\
+    \n        // Process Weekly Payment\n        paymentSystem.processPayments();\n\
+    \    }\n}\n```\n\nWe created commissioned employees and salaried employees, each\
+    \ with their own names, base wages and bank account numbers. We added each of\
+    \ the employees to the Payment System we created. We then simulate a week by giving\
+    \ commissions to the commissioned employees and then ask the Payment System to\
+    \ process all the payments for the week.\n\nOutput:\n\n```\nPaying to John Smith\n\
+    \    Gross 420.0\n    Transferred to Account: 1111\nPaying to Paul Jones\n   \
+    \ Gross 240.0\n    Transferred to Account: 2222\nPaying to Mary Brown\n    Gross\
+    \ 500.0\n    Transferred to Account: 3333\nPaying to Susan White\n    Gross 470.0\n\
+    \    Transferred to Account: 4444\n```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# Handling Bonuses\n\nThe boss is very happy with the system far, but he's\
+    \ tells us that in order to motivate his employees he wants the ability to give\
+    \ them weekly percentage bonuses. He tells us that Commissioned Employees are\
+    \ typically on a lower salary we should give them a bonus of 1.5x in order that\
+    \ their percentage bonus is bumped up. The bonus should be reflected in the gross\
+    \ payment of each employee.\n\n# The Employee Class for Bonuses\n\nLet's add a\
+    \ field to capture any bonuses that are given, a protected method to return and\
+    \ reset the bonus and an abstract method to give the bonus. The getBonus method\
+    \ is abstract because it will be implemented differently for Salaried and Commissioned\
+    \ Employees.\n\n```\npublic abstract class Employee implements Payee {\n    private\
+    \ String name;\n    private Integer bankAccount;\n\n    protected Double currentBonus;\n\
+    \    protected Double grossWage;\n\n    public Employee(String name, Integer bankAccount,\
+    \ Double grossWage) {\n        this.name = name;\n        this.bankAccount = bankAccount;\n\
+    \        this.grossWage = grossWage;\n        currentBonus = 0.0;\n    }\n\n \
+    \   public String name() {\n        return name;\n    }\n\n    public Integer\
+    \ bankAccount() {\n        return bankAccount;\n    }\n\n    public abstract void\
+    \ giveBonus(Double percentage);\n\n    protected Double doCurrentBonus() {\n \
+    \       Double bonus = currentBonus;\n        currentBonus = 0.0;\n        return\
+    \ bonus;\n    }\n}\n```\n\nUpdates to SalaryEmployee:\n\n```\npublic class SalaryEmployee\
+    \ extends Employee {\n    public SalaryEmployee(String name, Integer bankAccount,\
+    \ Double grossWage) {\n        super(name, bankAccount, grossWage);\n    }\n\n\
+    \    public void giveBonus(Double percentage) {\n        currentBonus += grossWage\
+    \ * (percentage/100.0);\n    }\n\n    public Double grossPayment() {\n       \
+    \ return grossWage + doCurrentBonus();\n    }\n}\n```"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Abstraction in Java\n\n}\n\n# Updates to CommissionEmployee:\n\n```\npublic\
+    \ class CommissionEmployee extends Employee {\n    private static final Double\
+    \ bonusMultiplier = 1.5;\n    private Double grossCommission = 0.0;\n    public\
+    \ CommissionEmployee(String name, Integer bankAccount, Double grossWage) {\n \
+    \       super(name, bankAccount, grossWage);\n    }\n    public void giveBonus(Double\
+    \ percentage) {\n        currentBonus += grossWage + (percentage/100.0) + bonusMultiplier;\n\
+    \    }\n    public Double grossPayment() {\n        return getCurrentCommission();\n\
+    \    }\n    private Double getCurrentCommission() {\n        Double commission\
+    \ = grossCommission;\n        grossCommission = 0.0;\n        return commission;\n\
+    \    }\n    public void giveCommission(Double amount) {\n        grossCommission\
+    \ += amount;\n    }\n\n}\n```\n\nWe can see that both classes implement giveBonus()\
+    \ differently - CommissionEmployee uses the bonus multiplier. We can also see\
+    \ that both classes use the getCurrentBonus() method defined in Employee when\
+    \ working out the gross payment.\n\nLet's update our application to paying some\
+    \ money to our employees:\n\n```\npublic class PaymentApplication {\n    public\
+    \ static void main(String... args) {\n        // Initialization\n        PaymentSystem\
+    \ paymentSystem = new PaymentSystemV1();\n        CommissionEmployee johnSmith\
+    \ = new CommissionEmployee(\"John Smith\", 1111, 300.0);\n        paymentSystem.addPayee(johnSmith);\n\
+    \        CommissionEmployee paulJones = new CommissionEmployee(\"Paul Jones\"\
+    , 2222, 350.0);\n        paymentSystem.addPayee(paulJones);\n        SalaryEmployee\
+    \ maryBrown = new SalaryEmployee(\"Mary Brown\", 3333, 500.0);\n        paymentSystem.addPayee(maryBrown);\n\
+    \        SalaryEmployee susWhite = new SalaryEmployee(\"Susan White\", 4444, 470.0);\n\
+    \        paymentSystem.addPayee(susanWhite);\n\n        // Simulate Week\n   \
+    \     johnSmith.giveCommission(40.0);\n        johnSmith.giveCommission(35.0);\n\
+    \    }\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Abstraction in Java
+
+
+    ```
+
+    johnSmith.giveCommission(45.0);
+
+    johnSmith.giveBonus(5.0);
+
+
+    paulJones.giveCommission(45.0);
+
+    paulJones.giveCommission(51.0);
+
+    paulJones.giveCommission(23.0);
+
+    paulJones.giveCommission(14.5);
+
+    paulJones.giveCommission(57.3);
+
+    paulJones.giveBonus(6.5);
+
+
+    maryBrown.giveBonus(3.0);
+
+
+    susanWhite.giveBonus(7.5);
+
+
+    // Process Weekly Payment
+
+    paymentSystem.processPayments();
+
+    ```
+
+
+    Output:
+
+    Paying to John Smith
+
+    Gross 442.5
+
+    Transferred to Account: 1111
+
+    Paying to Paul Jones
+
+    Gross 574.925
+
+    Transferred to Account: 2222
+
+    Paying to Mary Brown
+
+    Gross 515.0
+
+    Transferred to Account: 3333
+
+    Paying to Susan White
+
+    Gross 505.25
+
+    Transferred to Account: 4444
+
+
+    The Gross amounts now reflect the bonuses paid to the employees.
+
+
+    # 4.6 Contracting Companies
+
+
+    The boss is delighted with the Payment System, he''s thought of someone else he
+    needs to pay. From time to time he will engage the services of a contracting company.
+    Obviously these companies don''t have wages and are not paid. They can get several
+    off payments and when processed by the payment system should be paid cumulative
+    payments and have their balance cleared.
+
+
+    # 4.6.1 The ContractingCompany Class
+
+
+    The ContractingCompany class should implement Payee so it can be used by the Payments
+    System. It should have a method for paying for services which will be tracked
+    by a cumulative total and used for payments.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# Abstraction in Java\n\n# 4.6.1.1 Class Diagram\n\n![](img/3ed46cf971278dea2d7c239e74f87929_25_0.png)\n\
+    \n# 4.6.1.2 Code\n\n```\npublic class ContractingCompany implements Payee {\n\
+    \    private String name;\n    private Integer bankAccount;\n    private Double\
+    \ currentBalance;\n\n    public ContractingCompany(String name, Integer bankAccount)\
+    \ {\n        this.name = name;\n        this.bankAccount = bankAccount;\n    \
+    \    currentBalance = 0.0;\n    }\n\n    public String name() {\n        return\
+    \ name;\n    }\n\n    public Double grossPayment() {\n        return doPayment();\n\
+    \    }\n\n    public Double doPayment() {\n        Double balance = currentBalance;\n\
+    \        currentBalance = 0.0;\n        return balance;\n    }\n}\n```"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# Abstraction in Java\n\n```\npublic Integer bankAccount() {\n    return bankAccount;\n\
+    }\n\npublic void payForServices(Double amount) {\n    currentBalance += amount;\n\
+    }\n```\n\nLets add a class of contracting companies to our Payment Application\
+    \ and simulate some payments to them:\n\n```\npublic class PaymentApplication\
+    \ {\n\n    public static void main(String... args) {\n        // Initialization\n\
+    \        PaymentSystem paymentSystem = new PaymentSystemV1();\n\n        CommissionEmployee\
+    \ johnSmith = new CommissionEmployee(\"John Smith\", 1111, 3000, 100.0);\n   \
+    \     paymentSystem.addPayee(johnSmith);\n\n        CommissionEmployee paulJones\
+    \ = new CommissionEmployee(\"Paul Jones\", 2222, 3550, 125.0);\n        paymentSystem.addPayee(paulJones);\n\
+    \n        SalaryEmployee maryBrown = new SalaryEmployee(\"Mary Brown\", 3333,\
+    \ 500.0, 110.0);\n        paymentSystem.addPayee(maryBrown);\n\n        SalaryEmployee\
+    \ susanWhite = new SalaryEmployee(\"Susan White\", 4444, 470.0, 130.0);\n    \
+    \    paymentSystem.addPayee(susanWhite);\n\n        ContractingCompany acmeInc\
+    \ = new ContractingCompany(\"Acme Inc\", 5555);\n        paymentSystem.addPayee(acmeInc);\n\
+    \n        ContractingCompany javaCodeGeeks = new ContractingCompany(\"javacodegeeks.com\"\
+    , 6666);\n        paymentSystem.addPayee(javaCodeGeeks);\n\n        // Simulate\
+    \ Week\n        johnSmith.giveCommission(40.0);\n        johnSmith.giveCommission(35.0);\n\
+    \        johnSmith.giveCommission(45.0);\n        johnSmith.giveBonus(5.0);\n\n\
+    \        paulJones.giveCommission(45.0);\n        paulJones.giveCommission(51.0);\n\
+    \        paulJones.giveCommission(23.0);\n        paulJones.giveCommission(14.5);\n\
+    \        paulJones.giveCommission(57.3);\n        paulJones.giveBonus(6.5);\n\n\
+    \        maryBrown.giveBonus(3.0);\n        susanWhite.giveBonus(7.5);\n\n   \
+    \     acmeInc.payForServices(100.0);\n        acmeInc.payForServices(250.0);\n\
+    \        acmeInc.payForServices(300.0);\n\n        javaCodeGeeks.payForServices(400.0);\n\
+    \        javaCodeGeeks.payForServices(250.0);\n}\n```"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '```
+
+    // Process Weekly Payment
+
+    paymentSystem.processPayments();
+
+    }
+
+    ```
+
+
+    Output:
+
+    Paying to John Smith
+
+    Gross 442.5
+
+    Transferred to Account: 1111
+
+    Paying to Paul Jones
+
+    Gross 574.925
+
+    Transferred to Account: 2222
+
+    Paying to Mary Brown
+
+    Gross 515.0
+
+    Transferred to Account: 3333
+
+    Paying to Susan White
+
+    Gross 505.25
+
+    Transferred to Account: 4444
+
+    Paying to Acme Inc.
+
+    Gross 650.0
+
+    Transferred to Account: 5555
+
+    Paying to Janavacodegeeks.com
+
+    Gross 650.0
+
+    Transferred to Account: 6666
+
+
+    We have now successfully added a new type of Payee to the system without having
+    change one single line of code in the PaymentSystem class which handles Payees.
+    This is the power of abstraction.
+
+
+    # 4.7 Advanced Functionality: Taxation
+
+
+    The boss is ever on the moon with the Payment System, however the trouble the
+    taxman has sent him a letter telling him that he has to incorporate some sort
+    of tax withholding into the system or he''ll be in trouble. There should be a
+    global rate for the system and each employee should have a personal tax allowance.
+    The tax should only be collected on payments made to an employee and above the
+    tax free allowance. The employee should then only be paid the amount of payment
+    due to them. Contracting Companies are responsible for paying their own tax so
+    the system should not withhold from them.
+
+
+    In order to handle taxation we will need to create a new, type of Payee which
+    is taxable and can provide a tax allowance
+
+
+    In we can extend interfaces. Let''s us add behaviour definitions without modifying
+    our original interface. All of the behaviour defined in the original interface
+    will be automatically carried into the new.
+
+
+    # 4.7.1 The TaxablePayee Interface
+
+
+    We''ll extend Payee to create a new TaxablePayee interface, we''ll then have Employee
+    implement that interface, while letting ContractingCompany remain as a regular,
+    untaxed, Payee.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# Abstraction in Java\n\n# 4.7.1.1 Class Diagram\n\n![](img/3ed46cf971278dea2d7c239e74f87929_28_0.png)\n\
+    \n# 4.7.1.2 Code\n\n```\npublic interface TaxablePayee extends Payee {\n    public\
+    \ Double allowance();\n}\n```\n\nHere we see that Payee is extended and an additional\
+    \ method is defined - allowance() which returns the tax allowance of the TaxablePayee.\n\
+    \nWe'll need to update Employee to implement TaxablePayee and we will see that\
+    \ this will have a knock on effect on both concrete Employee classes.\n\n```\n\
+    public abstract class Employee implements TaxablePayee {\n    private String name;\n\
+    \    private Integer bankAccount;\n    private Double allowance;\n}\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# Abstraction in Java\n\n```\nprotected Double currentBonus;\nprotected Double\
+    \ grossWage;\n\npublic Employee(String name, Integer bankAccount, Double grossWage,\
+    \ Double\n    allowance) {\n    this.name = name;\n    this.bankAccount = bankAccount;\n\
+    \    this.grossWage = grossWage;\n    this.allowance = allowance;\n    currentBonus\
+    \ = 0.0;\n}\n\npublic String name() {\n    return name;\n}\n\npublic Integer bankAccount()\
+    \ {\n    return bankAccount;\n}\n\npublic Double allowance() {\n    return allowance;\n\
+    }\n\npublic abstract void doCurrentBonus(Double percentage) {\n    Double bonus\
+    \ = currentBonus;\n    currentBonus = 0.0;\n    return bonus;\n}\n\n```\n\nWe\
+    \ had to change the constructor of Employee which implies that the constructors\
+    \ of our two abstract classes will also need to change.\n\n```\npublic class SalaryEmployee\
+    \ extends Employee {\n    public SalaryEmployee(String name, Integer bankAccount,\
+    \ Double grossWage, Double\n        allowance) {\n        super(name, bankAccount,\
+    \ grossWage, allowance);\n    }\n\n    @Override\n    public void giveBonus(Double\
+    \ percentage) {\n        currentBonus += grossWage * (percentage/100.0);\n   \
+    \ }\n\n    @Override\n    public Double grossPayment() {\n        return grossWage\
+    \ + doCurrentBonus();\n    }\n}\n```\n\nCommissionEmployee:\n\n```\npublic class\
+    \ CommissionEmployee extends Employee {\n    private static final Double bonusMultiplier\
+    \ = 1.5;\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# Abstraction in Java\n\n```\nprivate Double grossCommission = 0.0;\n\npublic\
+    \ CommissionEmployee(String name, Integer bankAccount, Double grossWage,\nDouble\
+    \ allowance) {\n    super(name, bankAccount, grossWage, allowance);\n}\n\n@Override\n\
+    public void giveBonus(Double percentage) {\n    currentBonus += grossWage + (percentage/100.0)\
+    \ + bonusMultiplier;\n}\n\n@Override\npublic Double grossPayment() {\n    return\
+    \ grossWage + currentBonus() + currentCommission();\n}\n\nprivate Double currentCommission()\
+    \ {\n    Double commission = grossCommission;\n    grossCommission = 0.0;\n  \
+    \  return commission;\n}\n\npublic void giveCommission(Double amount) {\n    grossCommission\
+    \ += amount;\n}\n```\n\n# 4.7.2 Changes in PaymentSystem\n\nWe need to update\
+    \ PaymentSystem to withhold tax and to do we'll need some way of determining if\
+    \ a given Payee is a TaxPayee or a regular Payee. We can take advantage of a Java\
+    \ keyword instanceof to do this.\\ Instanceof checks if a given reference's runtime\
+    \ types make a test type. It returns a boolean and can be called so: if (object\
+    \ instanceof MyClass). This will return true if MyClass is a subclass or implementing\
+    \ class (if MyClass is an interface) of MyClass. This means we can test anywhere\
+    \ along the inheritance hierarchy making it a very powerful tool. We can use this\
+    \ tool to determine if a given Payee is an instance of a TaxPayee and take appropriate\
+    \ measures based on that knowledge.\n\nWe update the PaymentSystem as follows:\n\
+    \n```\nclass PaymentSystem {\n\n    private List<Payee> payees;\n    private Double\
+    \ taxRate = 0.2;\n\n    public PaymentSystem() {\n        payees = new ArrayList<>();\n\
+    \    }\n\n    public void addPayee(Payee payee) {\n        if (!payees.contains(payee))\
+    \ {\n            payees.add(payee);\n        }\n    }\n\n    public void processPayments()\
+    \ {\n        for (Payee payee) {\n            Double grossPayment = payee.grossPayment();\n\
+    \            Double tax = 0.0;\n            if (payee instanceof TaxablePayee)\
+    \ {\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# Abstraction in Java\n\n```\nDouble taxableIncome = grossPayment - ((TaxablePayee)\
+    \ payee) -> {\nallowance();\ntax = taxableIncome * taxRate;\n\nDouble netPayment\
+    \ = grossPayment - tax;\n\nSystem.out.println(\"Paying to \" + payee());\nSystem.out.println(\"\
+    \\tgross\\t\" + grossPayment);\nSystem.out.println(\"\\tax\\t\" + tax);\nSystem.out.println(\"\
+    \\tnet\\t\" + netPayment);\nSystem.out.println(\"Transferred to Account: \" +\
+    \ payee.bankAccount());\n};\n```\n\nThe new code checks if the Payee being processed\
+    \ is an instance of TaxPayee, if it does then a cast on the Payee to refer to\
+    \ it as a reference to Payee for the purposes of calling the allowance() method\
+    \ defined in TaxPayee. Remember; if the reference as a Payee the allowance() method\
+    \ would not be visible by the PaymentSystem because it is defined in TaxPayee,\
+    \ not. The cast is safe because we already confirmed that the payee is an instance\
+    \ of TaxPayee. Now that PaymentSystem has the allowance it can work out the taxable\
+    \ amount and the tax to be withheld based on the contract rate of 20%.\n\nIf the\
+    \ Payee is not a TaxPayee the system continues to process as normal, not anything\
+    \ related to tax processing.\n\nLet's update our application to cover our employees\
+    \ free allowances and execute the application:\n\n```\npublic class PaymentApplication\
+    \ {\n    public static void main(String[] args) {\n        // Initialization\n\
+    \        PaymentSystem paymentSystem = new PaymentSystemV1();\n\n        CommissionEmployee\
+    \ johnSmith = new CommissionEmployee(\"John Smith\", 1111, 3000, 100.0);\n   \
+    \     paymentSystem.addPayee(johnSmith);\n\n        CommissionEmployee paulJones\
+    \ = new CommissionEmployee(\"Paul Jones\", 2222, 3550, 0, 125.0);\n        paymentSystem.addPayee(paulJones);\n\
+    \n        SalaryEmployee maryBrown = new SalaryEmployee(\"Mary Brown\", 3333,\
+    \ 500.0, 110.0);\n        paymentSystem.addPayee(maryBrown);\n\n        SalaryEmployee\
+    \ susanWhite = new SalaryEmployee(\"Susan White\", 4444, 470.0, 130.0);\n    \
+    \    paymentSystem.addPayee(usanWhite);\n\n        ContractingCompany acmeInc\
+    \ = new ContractingCompany(\"Acme Inc\", 5555);\n        paymentSystem.addPayee(acmeInc);\n\
+    \n        ContractingCompany javaCodegeeks = new ContractingCompany(\"javacgeocode.com\"\
+    , 6666);\n        paymentSystem.addPayee(javaCodegeeks);\n\n        // Simulate\
+    \ Week\n        johnSmith.giveCommission(40.0);\n        johnSmith.giveCommission(35.0);\n\
+    \        johnSmith.giveCommission(45.0);\n        johnSmith.giveBonus(5.0);\n\n\
+    \        paulJones.giveCommission(45.0);\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Abstraction in Java
+
+
+    ```
+
+    paulJones.giveCommission(51.0);
+
+    paulJones.giveCommission(23.0);
+
+    paulJones.giveCommission(14.5);
+
+    paulJones.giveCommission(57.3);
+
+    paulJones.giveBonus(6.5);
+
+
+    maryBrown.giveBonus(3.0);
+
+
+    susanWhite.giveBonus(7.5);
+
+
+    acme.Inc.payForServices(100.0);
+
+    acme.Inc.payForServices(250.0);
+
+    acme.Inc.payForServices(300.0);
+
+
+    javaCodeGeeks.payForServices(400.0);
+
+    javaCodeGeeks.payForServices(250.0);
+
+
+    // Process Weekly Payment
+
+    paymentSystem.processPayments();
+
+
+    ```
+
+
+    Output:
+
+
+    Paying to John Smith
+
+    Gross 442.5
+
+    Tax -68.5
+
+    Net 374.0
+
+    Transferred to Account: 1111
+
+    Paying to Paul Jones
+
+    Gross 574.25
+
+    Tax -89.985
+
+    Net 484.9399999999994
+
+    Transferred to Account: 2222
+
+    Paying to Mary Brown
+
+    Gross 515.0
+
+    Tax -81.0
+
+    Net 434.0
+
+    Transferred to Account: 3333
+
+    Paying to Susan White
+
+    Gross 505.25
+
+    Tax -75.05
+
+    Net 430.2
+
+    Transferred to Account: 4444
+
+    Paying to Acme Inc
+
+    Gross 650.0
+
+    Tax -0.0
+
+    Net 650.0
+
+    Transferred to Account: 5555
+
+    Paying to javacodege.com
+
+    Gross 650.0
+
+    Tax -0.0
+
+    Net 650.0
+
+    Transferred to Account: 6666
+
+
+    As you can see tax is calculated and withheld for Employees, while Contracting
+    Companies continue to pay no tax. The boss couldn''t be happier with the system
+    and is going to give us all expenses paid vacation for keeping him out of jail!'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Chapter 5
+
+
+    # Conclusion
+
+
+    Abstraction is a very powerful tool in Java when used in the correct way. It opens
+    up many possibilities for advanced java use and for building complex, extensible
+    and maintainable software. We have just scratched the surface of what abstraction
+    can do for us and hopefully built a foundation for learning about the different
+    ways abstraction can be used in more detail.'
+  merge: -1
+  pgno: 33
