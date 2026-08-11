@@ -1,0 +1,772 @@
+- - '#'
+  - Android Studio 3.0 开发核心要义 - Android 8 版本
+- - '#'
+  - 7 在实体 Android 设备上测试 Android Studio 应用
+- - '#'
+  - 8 Android Studio 代码编辑器的基础
+- - '#'
+  - 9 Android 架构概览
+- - '##'
+  - 10 Android 应用程序剖析
+- - '##'
+  - 11 理解 Android 应用和生命周期
+- - '##'
+  - 12 处理状态更改
+- - '##'
+  - 13 通过示例处理 Android 状态更改
+- - '##'
+  - 14 保存和恢复 Android Activity 状态
+- - '##'
+  - 15 理解 Android 视图、组和布局
+- - '##'
+  - 16 Android Studio 布局工具指南
+- - '##'
+  - 17 ConstraintLayout 指南
+- - '##'
+  - 18 在 Android Studio 中使用 ConstraintLayout 指南
+- - '##'
+  - 19 在 Android Studio 中处理 ConstraintLayout 链和比例
+- - '##'
+  - 20 Android Studio 布局编辑器 ConstraintLayout 教程
+- - '##'
+  - 21 Android Studio 中的手动 XML 布局设计
+- - '##'
+  - 22 使用 ConstraintSet 管理约束
+- - '##'
+  - 23 ConstraintSet 教程
+- - '##'
+  - 24 Android Studio 中 Instant Run 的使用指南
+- - '##'
+  - 25 Android 事件处理概述与示例
+- - '##'
+  - 26 Android 触摸与多点触摸事件处理
+- - '##'
+  - 27 使用 Android GestureDetector 类检测常见手势
+- - '##'
+  - 28 在 Android 上实现自定义手势与缩放识别
+- - '##'
+  - 29 Android Fragments (片段) 简介
+- - '##'
+  - 30 在 Android Studio 中 Fragments - 示例
+- - '##'
+  - 31 在 Android 上创建溢出菜单 (Overflow Menu)
+- - '##'
+  - 32 使用 Transitions 和 Scenes 制作用户界面
+- - '##'
+  - 33 Scene Transitions
+- - '##'
+  - 34 Custom Transitions 和 TransitionSets
+- - '##'
+  - 35 使用悬浮按钮 (Floating Buttons)
+- - '##'
+  - 36 创建标签页界面 (Tabbed Interface)
+- - '##'
+  - 37 使用 ViewPager
+- - '##'
+  - 38 使用 TabLayout 实现 RecyclerView
+- - '##'
+  - 39 使用 AppBar 和 Collapsing Toolbar
+- - '##'
+  - 40 实现导航抽屉 (Navigation Drawer)
+- - '##'
+  - 41 Android 主/详情流 (Master/Detail Flow) 教程
+- - '##'
+  - 42 Android Intents (意图)
+- - '##'
+  - 43 Android 显式 Intent – 实例详解
+- - '##'
+  - 44 Android 隐式 Intent – 实例详解
+- - '##'
+  - 45 Android 广播 Intent 与广播接收器
+- - '##'
+  - 46 线程与 AsyncTask 基础概述
+- - '##'
+  - 47 Android 启动服务与绑定服务概述
+- - '##'
+  - 48 实现 Android 启动服务 – 实例详解
+- - '##'
+  - 49 Android 本地绑定服务 – 实例详解
+- - '##'
+  - 50 Android 远程绑定服务 – 实例详解
+- - '##'
+  - 51 Android 通知教程
+- - '##'
+  - 53 多窗口 (Multi-Window) 简介
+- - '##'
+  - 54 Android Studio 多窗口
+- - '##'
+  - 55 SQLite SQLite
+- - '##'
+  - 56 TableLayout 与行
+- - '##'
+  - 57 SQLite 数据库
+- - '##'
+  - 58 理解内容提供者 (Content Providers)
+- - '##'
+  - 59 在 Android Studio 中实现 Content Provider
+- - '##'
+  - 60 使用 Android 存储访问框架访问云存储
+- - '##'
+  - 62 使用 VideoView 和 MediaController 类在 Android 上实现视频播放
+- - '##'
+  - 63 Android 画中画模式 (Picture-in-Picture Mode)
+- - '##'
+  - 64 Android 画中画教程
+- - '##'
+  - 65 使用 Camera Intents 在 Android 上进行视频录制和图像捕捉
+- - '##'
+  - 66 在 Android 中进行运行时权限请求
+- - '##'
+  - 67 使用 MediaPlayer 和 MediaRecorder 进行 Android 音频录制和播放
+- - '##'
+  - 68 在 Android Studio 中使用 Google Maps Android API
+- - '##'
+  - 69 使用 Android 打印框架进行打印
+- - '##'
+  - 70 一个 Android HTML 和 Web 内容打印示例
+- - '##'
+  - 71 Android 打印指南
+- - '##'
+  - 72 Android 打印功能
+- - '##'
+  - 73 Android 链接
+- - '##'
+  - 74 即时应用 (Instant Apps) 教程
+- - '##'
+  - 75 使用 Android 模块
+- - '##'
+  - 76 在 Android 中实现
+- - '##'
+  - 77 多模块功能应用
+- - '##'
+  - 78 Android 分析器指南
+- - '##'
+  - 79 指纹识别教程
+- - '##'
+  - 80 处理不同的 Android 设备和显示器
+- - '##'
+  - 81 签名并准备 Android 应用
+- - '##'
+  - 82 Android Studio 中 Gradle 概述
+- - '##'
+  - 82.1 Gradle 概述
+- - '##'
+  - 82.2 Gradle 与 Android Studio
+- - '###'
+  - 82.2.1 默认合理值
+- - '###'
+  - 82.2.2 依赖关系
+- - '###'
+  - 82.2.3 构建变体
+- - '###'
+  - 82.2.4 Manifest 条目
+- - '###'
+  - 82.2.5 APK 签名
+- - '###'
+  - 82.2.6 ProGuard 支持
+- - '##'
+  - 82.3 根 Gradle 构建文件
+- - '##'
+  - 82.4 模块级 Gradle 构建文件
+- - '##'
+  - 82.5 在构建文件中配置签名设置
+- - '##'
+  - 82.6 从命令行运行 Gradle 任务
+- - '##'
+  - 82.7 总结
+- - '#'
+  - 1 引言
+- - '##'
+  - 1.1 下载代码示例
+- - '##'
+  - 1.2 《Firebase Essentials》书籍现已发售
+- - '##'
+  - 1.3 反馈
+- - '##'
+  - 1.4 勘误
+- - '#'
+  - 2 设置 Android Studio
+- - '###'
+  - 2.1 系统要求
+- - '##'
+  - 2.2 下载 Android Studio 包
+- - '##'
+  - 2.3 安装 Android Studio
+- - '###'
+  - 2.3.1 在 Windows 上安装
+- - '###'
+  - 2.3.2 在 macOS 上安装
+- - '###'
+  - 2.3.3 在 Linux 上安装
+- - '##'
+  - 2.4 Android Studio 设置向导
+- - '##'
+  - 2.5 安装额外的 Android SDK 包
+- - '##'
+  - 2.6 使 Android SDK 命令行可用
+- - '###'
+  - 2.6.1 Windows 7
+- - '###'
+  - 2.6.2 Windows 8.1
+- - '###'
+  - 2.6.3 Windows 10
+- - '###'
+  - 2.6.4 Linux
+- - '###'
+  - 2.6.5 macOS
+- - '##'
+  - 2.7 更新 Android Studio 和 SDK
+- - '##'
+  - 2.8 总结
+- - '#'
+  - 3 在 Android Studio 中创建一个示例 Android 应用
+- - '###'
+  - 3.1 创建新项目
+- - '###'
+  - 3.2 定义项目和 SDK 设置
+- - '###'
+  - 3.3 创建活动 (Activity)
+- - '###'
+  - 3.4 修改应用程序
+- - '###'
+  - 3.5 布局和资源
+- - '###'
+  - 3.6 总结
+- - '#'
+  - 4 Android Studio 用户界面概览
+- - '###'
+  - 4.1 欢迎界面
+- - '###'
+  - 4.2 主窗口
+- - '###'
+  - 4.3 工具窗口
+- - '###'
+  - 4.4 Android Studio 快捷键
+- - '###'
+  - 4.5 Switcher 切换器与最近文件
+- - '###'
+  - 4.6 更改 Android 主题
+- - '###'
+  - 4.7 总结
+- - '#'
+  - 5 在 Android Studio 中创建 虚拟设备 (AVD)
+- - '###'
+  - 5.1 关于 Android 虚拟设备
+- - '###'
+  - 5.2 创建新的 AVD
+- - '###'
+  - 5.3 启动模拟器
+- - '###'
+  - 5.4 在 AVD 中运行
+- - '###'
+  - 5.5 运行配置
+- - '###'
+  - 5.6 停止运行的应用程序
+- - '###'
+  - 5.7 命令行创建 AVD
+- - '###'
+  - 5.8 Android 虚拟设备配置文件
+- - '###'
+  - 5.9 移动和重命名虚拟设备
+- - '###'
+  - 5.10 总结
+- - '#'
+  - 6 使用和配置 Android AVD 模拟器
+- - '###'
+  - 6.1 模拟器环境
+- - '###'
+  - 6.2 模拟器工具栏
+- - '###'
+  - 6.3 在缩放模式工作
+- - '###'
+  - 6.4 调整模拟器大小
+- - '###'
+  - 6.5 扩展选项
+- - '###'
+  - 6.6 拖放支持
+- - '###'
+  - 6.7 配置
+- - '###'
+  - 6.8 总结
+- - '#'
+  - 7 在物理设备上测试 Android Studio 应用
+- - '###'
+  - 7.1 调试 (ADB)
+- - '###'
+  - 7.2.1 macOS 配置
+- - '###'
+  - 7.2.2 Windows 配置
+- - '###'
+  - 7.2.3 Linux 配置
+- - '###'
+  - 7.3 测试连接
+- - '###'
+  - 7.4 总结
+- - '#'
+  - 8 Android Studio 代码编辑器基础
+- - '###'
+  - 8.1 Android 编辑器
+- - '###'
+  - 8.2 分拆编辑器窗口
+- - '###'
+  - 8.3 代码补全 (Completion)
+- - '###'
+  - 8.4 语句补全
+- - '###'
+  - 8.5 参数信息
+- - '###'
+  - 8.6 参数提示
+- - '###'
+  - 8.7 代码生成
+- - '###'
+  - 8.8 代码折叠
+- - '###'
+  - 8.9 快速查找
+- - '###'
+  - 8.10 代码格式化
+- - '###'
+  - 8.11 查找示例
+- - '###'
+  - 8.12 总结
+- - '#'
+  - 9 Android 架构概览
+- - '###'
+  - 9.1 软件栈
+- - '###'
+  - 9.2 Linux 内核
+- - '###'
+  - 9.3 Android运行时 (ART)
+- - '###'
+  - 9.4 Android库
+- - '###'
+  - 9.5 应用程序框架
+- - '###'
+  - 9.6 应用程序
+- - '###'
+  - 9.7 总结
+- - '#'
+  - 10 Android 应用程序剖析
+- - '###'
+  - 10.1 Android Activity
+- - '###'
+  - 10.2 Android Intent (意图)
+- - '###'
+  - 10.3 广播意图 (Broadcast Intents)
+- - '###'
+  - 10.4 广播接收器 (Broadcast Receivers)
+- - '###'
+  - 10.5 Android 服务
+- - '###'
+  - 10.6 内容提供者
+- - '###'
+  - 10.7 应用程序清单（Manifest）
+- - '###'
+  - 10.8 应用程序资源
+- - '###'
+  - 10.9 应用程序上下文（Application Context）
+- - '###'
+  - 10.10 总结
+- - '#'
+  - 11 理解 Android 应用程序和生命周期
+- - '##'
+  - 11.1 应用程序与资源管理
+- - '##'
+  - 11.2 Android 进程状态
+- - '###'
+  - 11.2.1 前台进程
+- - '###'
+  - 11.2.2 可见进程 (Visible Process)
+- - '###'
+  - 11.2.3 服务进程 (Service Process)
+- - '###'
+  - 11.2.4 后台进程 (Background Process)
+- - '###'
+  - 11.2.5 空进程 (Empty Process)
+- - '##'
+  - 11.3 进程间依赖 (Inter-Process Dependencies)
+- - '##'
+  - 11.4 Activity 生命周期 (The Activity Lifecycle)
+- - '##'
+  - 11.5 活动栈 (The Activity Stack)
+- - '##'
+  - 11.6 活动状态 (Activity States)
+- - '##'
+  - 11.7 配置更改 (Configuration Changes)
+- - '##'
+  - 11.8 处理状态变化 (Handling State Change)
+- - '##'
+  - 11.9 总结 (Summary)
+- - '#'
+  - 12 处理 Android Activity 状态更改
+- - '##'
+  - 12.1 Activity 类
+- - '##'
+  - 12.2 动态状态与持久化状态
+- - '##'
+  - 12.3 Android 生命周期方法
+- - '##'
+  - 12.4 活动生命周期
+- - '##'
+  - 12.5 禁用配置更改
+- - '##'
+  - 12.6 总结
+- - '#'
+  - 13 Android 活动更改示例
+- - '###'
+  - 13.1 创建状态示例项目
+- - '##'
+  - 13.2 设计用户界面
+- - '##'
+  - 13.3 重写活动生命周期方法
+- - '##'
+  - 13.4 过滤 Logcat 面板
+- - '##'
+  - 13.5 运行应用程序
+- - '##'
+  - 13.6 对 Activity 进行实验
+- - '##'
+  - 13.7 总结
+- - '#'
+  - 14 保存和恢复 Android Activity 的状态
+- - '##'
+  - 14.1 保存动态状态
+- - '##'
+  - 14.2 用户界面的默认保存
+- - '##'
+  - 14.3 Bundle 类
+- - '##'
+  - 14.4 保存状态
+- - '##'
+  - 14.5 恢复状态
+- - '##'
+  - 14.6 测试应用程序
+- - '##'
+  - 14.7 总结
+- - '#'
+  - 15 理解视图、布局组和布局
+- - '###'
+  - 15.1 针对不同的 Android 设备设计
+- - '###'
+  - 15.2 视图和布局组
+- - '##'
+  - 15.3 Android 布局管理器
+- - '##'
+  - 15.4 视图层次结构
+- - '##'
+  - 15.5 创建用户界面
+- - '##'
+  - 15.6 总结
+- - '#'
+  - 16 Android Studio 布局工具指南
+- - '###'
+  - 16.1 基础与空模板
+- - '###'
+  - 16.2 布局编辑器
+- - '###'
+  - 16.3 设计模式
+- - '###'
+  - 16.4 调色板 (Palette)
+- - '###'
+  - 16.5 平移与缩放 (Pan and Zoom)
+- - '###'
+  - 16.6 设计视图与布局
+- - '###'
+  - 16.7 文本模式 (Text Mode)
+- - '###'
+  - 16.8 设置属性 (Setting Attributes)
+- - '###'
+  - 16.9 配置属性 (Configuring Attributes)
+- - '###'
+  - 16.10 创建自定义布局 (Creating a Custom Layout Definition)
+- - '#'
+  - 17 ConstraintLayout 指南
+- - '###'
+  - 17.1 ConstraintLayout 的原理
+- - '###'
+  - 17.2 基线对齐 (Baseline Alignment)
+- - '###'
+  - 17.3 使用辅助线 (Guidelines)
+- - '###'
+  - 17.4 约束 (Constraints)
+- - '###'
+  - 17.5 屏障 (Barriers)
+- - '###'
+  - 17.6 链 (Chains)
+- - '###'
+  - 17.7 比例 (Ratios)
+- - '###'
+  - 17.8 ConstraintLayout 的优势
+- - '###'
+  - 17.9 总结
+- - '#'
+  - 18 在 Android Studio 中使用 ConstraintLayout 指南
+- - '###'
+  - 18.1 Android 布局示例
+- - '###'
+  - 18.2 布局编辑器
+- - '###'
+  - 18.3 设计模式
+- - '###'
+  - 18.4 自动连接 (Autoconnect Mode)
+- - '###'
+  - 18.5 推断模式 (Inference Mode)
+- - '###'
+  - 18.6 手动操作
+- - '###'
+  - 18.7 约束
+- - '###'
+  - 18.8 总结
+- - '#'
+  - 19 在 Android Studio 中处理 ConstraintLayout 链和比例
+- - '###'
+  - 19.1 创建链（Chains）
+- - '###'
+  - 19.2 更改样式
+- - '###'
+  - 19.3 内部链 (Inside Chain)
+- - '###'
+  - 19.4 聚集链（Packed Chain）
+- - '###'
+  - 19.5 带偏移的链 (Packed Chain with Bias)
+- - '###'
+  - 19.6 权重链（Weighted Chain）
+- - '###'
+  - 19.7 比例（Ratios）
+- - '###'
+  - 19.8 总结
+- - '#'
+  - 20 Android Studio 布局编辑器 ConstraintLayout 教程
+- - '###'
+  - 20.1 Android Studio 布局编辑器示例
+- - '###'
+  - 20.2 创建 Activity
+- - '###'
+  - 20.3 准备布局
+- - '###'
+  - 20.4 用户界面添加组件
+- - '###'
+  - 20.5 添加约束
+- - '###'
+  - 20.6 测试布局
+- - '###'
+  - 20.7 使用布局器
+- - '###'
+  - 20.8 总结
+- - '#'
+  - 21 Android Studio 中的手动 XML 布局设计
+- - '###'
+  - 21.1 手动创建 布局
+- - '###'
+  - 21.2 手写 XML 布局设计
+- - '###'
+  - 21.3 总结
+- - '#'
+  - 22 使用 ConstraintSet 管理约束
+- - '###'
+  - 22.1 Java 代码与布局
+- - '###'
+  - 22.2 创建视图 (Views)
+- - '###'
+  - 22.3 视图属性 (View Attributes)
+- - '###'
+  - 22.4 约束集 (Constraint Sets)
+- - '###'
+  - 22.4.1 建立连接 (Establishing Connections)
+- - '###'
+  - 22.4.2 将约束应用布局 (Applying Constraints to a Layout)
+- - '###'
+  - 22.4.3 父级连接 (Parent Connections)
+- - '###'
+  - 22.4.4 尺寸约束 (Sizing Constraints)
+- - '###'
+  - 22.4.5 约束偏移 (ConstraintBias)
+- - '###'
+  - 22.4.6 对齐约束 (Alignment Constraints)
+- - '###'
+  - 22.4.7 复制和应用集 (Copying and Applying Sets)
+- - '###'
+  - 22.4.8 ConstraintLayout 链 (ConstraintLayout Chains)
+- - '###'
+  - 22.4.9 指南
+- - '###'
+  - 22.4.1 移除约束
+- - '###'
+  - 22.4.1 缩放
+- - '###'
+  - 22.4.1 旋转
+- - '###'
+  - 22.5 总结
+- - '#'
+  - 23 Android ConstraintSet 教程
+- - '##'
+  - 23.1 在 Android Studio 中创建项目
+- - '##'
+  - 23.2 向 Activity 中添加视图
+- - '##'
+  - 23.3 设置视图属性
+- - '##'
+  - 23.4 创建视图 ID (View IDs)
+- - '##'
+  - 23.5 配置约束集 (Constraint Set)
+- - '##'
+  - 23.6 添加 EditText 视图
+- - '##'
+  - 23.7 将独立像素 (dp) 转换为像素 (px)
+- - '##'
+  - 23.8 总结
+- - '#'
+  - 24 Android Studio 中 Instant Run 的使用指南
+- - '##'
+  - 24.1 简介 Instant Run
+- - '##'
+  - 24.2 理解 Instant Run 的交换级别
+- - '##'
+  - 24.3 启用和禁用 Instant Run
+- - '##'
+  - 24.4 使用 Instant Run
+- - '##'
+  - 24.5 Instant Run 教程
+- - '##'
+  - 24.6 触发 Instant Run 热交换
+- - '##'
+  - 24.9 运行按钮
+- - '##'
+  - 24.10 总结
+- - '#'
+  - 25 Android 事件处理概述与示例
+- - '###'
+  - 25.1 理解 Android 事件
+- - '###'
+  - 25.2 使用 `android:onClick` 资源
+- - '###'
+  - 25.3 事件监听器与回调方法
+- - '###'
+  - 25.4 事件处理示例
+- - '###'
+  - 25.5 设计用户界面
+- - '##'
+  - 25.6 事件监听器和回调方法
+- - '##'
+  - 25.7 消费事件
+- - '##'
+  - 25.8 总结
+- - '#'
+  - 26 Android 触摸与多点触摸事件处理
+- - '###'
+  - 26.1 拦截触摸事件
+- - '##'
+  - 26.2 MotionEvent 对象
+- - '##'
+  - 26.3 理解触摸动作
+- - '##'
+  - 26.4 处理多点触摸
+- - '##'
+  - 26.5 总结
+- - '#'
+  - 27 使用 Android GestureDetector 类检测常见手势
+- - '#'
+  - 28 在 Android 上实现自定义手势与缩放识别
+- - '#'
+  - 29 Android Fragments (片段) 简介
+- - '#'
+  - 30 在 Android Studio 中 Fragments - 示例
+- - '#'
+  - 31 在 Android 上创建溢出菜单 (Overflow Menu)
+- - '#'
+  - 32 使用 Transitions 和 Scenes 制作用户界面
+- - '#'
+  - 33 Scene Transitions
+- - '#'
+  - 34 Custom Transitions 和 TransitionSets
+- - '#'
+  - 35 使用悬浮按钮 (Floating Buttons)
+- - '#'
+  - 36 创建标签页界面 (Tabbed Interface)
+- - '#'
+  - 37 使用 ViewPager
+- - '#'
+  - 38 使用 TabLayout 实现 RecyclerView
+- - '#'
+  - 39 使用 AppBar 和 Collapsing Toolbar
+- - '#'
+  - 40 实现导航抽屉 (Navigation Drawer)
+- - '#'
+  - 41 Android 主/详情流 (Master/Detail Flow) 教程
+- - '#'
+  - 42 Android Intents (意图)
+- - '##'
+  - 43 Android 显式 Intent – 实例详解
+- - '##'
+  - 44 Android 隐式 Intent – 实例详解
+- - '##'
+  - 45 Android 广播 Intent 与广播接收器
+- - '##'
+  - 46 线程与 AsyncTask 基础概述
+- - '##'
+  - 47 Android 启动服务与绑定服务概述
+- - '##'
+  - 48 实现 Android 启动服务 – 实例详解
+- - '##'
+  - 49 Android 本地绑定服务 – 实例详解
+- - '##'
+  - 50 Android 远程绑定服务 – 实例详解
+- - '##'
+  - 51 Android 通知教程
+- - '##'
+  - 53 多窗口 (Multi-Window) 简介
+- - '##'
+  - 54 Android Studio 多窗口
+- - '##'
+  - 55 SQLite SQLite
+- - '##'
+  - 56 TableLayout 与行
+- - '##'
+  - 57 SQLite 数据库
+- - '##'
+  - 58 理解内容提供者 (Content Providers)
+- - '##'
+  - 59 在 Android Studio 中实现 Content Provider
+- - '##'
+  - 60 使用 Android 存储访问框架访问云存储
+- - '##'
+  - 62 使用 VideoView 和 MediaController 类在 Android 上实现视频播放
+- - '##'
+  - 63 Android 画中画模式 (Picture-in-Picture Mode)
+- - '##'
+  - 64 Android 画中画教程
+- - '##'
+  - 65 使用 Camera Intents 在 Android 上进行视频录制和图像捕捉
+- - '##'
+  - 66 在 Android 中进行运行时权限请求
+- - '##'
+  - 67 使用 MediaPlayer 和 MediaRecorder 进行 Android 音频录制和播放
+- - '##'
+  - 68 在 Android Studio 中使用 Google Maps Android API
+- - '##'
+  - 69 使用 Android 打印框架进行打印
+- - '##'
+  - 70 一个 Android HTML 和 Web 内容打印示例
+- - '##'
+  - 71 Android 打印指南
+- - '##'
+  - 72 Android 打印功能
+- - '##'
+  - 73 Android 链接
+- - '##'
+  - 74 即时应用 (Instant Apps) 教程
+- - '##'
+  - 75 使用 Android 模块
+- - '##'
+  - 76 在 Android 中实现
+- - '##'
+  - 77 多模块功能应用
+- - '##'
+  - 78 Android 分析器指南
+- - '##'
+  - 79 指纹识别教程
+- - '##'
+  - 80 处理不同的 Android 设备和显示器
+- - '##'
+  - 81 签名并准备 Android 应用
+- - '##'
+  - 82 Android Studio 中 Gradle 概述
