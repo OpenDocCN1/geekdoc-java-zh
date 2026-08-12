@@ -1,0 +1,470 @@
+- - '#'
+  - Java 基础与高级 Java 项目：在软件公司参加 10 面试并获得 5 个录用通知书
+- - '##'
+  - AMIT K
+- - '#'
+  - 第1 章：引言
+- - '##'
+  - JDK 和 JRE
+- - '###'
+  - JRE ( Java 运行环境 )
+- - '###'
+  - JDK ( Java 开发工具包 )
+- - '#'
+  - 第2 章：Java 中的数据类型
+- - '##'
+  - 数据类型概览
+- - '###'
+  - 基本类型
+- - '###'
+  - byte
+- - '###'
+  - boolean
+- - '###'
+  - char
+- - '###'
+  - short
+- - '###'
+  - int
+- - '###'
+  - long
+- - '###'
+  - float
+- - '###'
+  - double
+- - '###'
+  - 引用类型
+- - '###'
+  - 类
+- - '###'
+  - 数组
+- - '###'
+  - 接口
+- - '###'
+  - 包装类
+- - '#'
+  - 第3 章：Java 中的 if else 语句
+- - '##'
+  - 1 if 语句
+- - '###'
+  - if 语句允许执行代码块，如果条件为真。
+- - '##'
+  - 2 if-else 语句
+- - '##'
+  - 3 if-else if-else 语句
+- - '##'
+  - 4 布尔值
+- - '##'
+  - 5 条件表达式中涉及的运算符
+- - '#'
+  - 第4 章：Java 中的 Switch 语句
+- - '##'
+  - 1 switch 语句的结构
+- - '##'
+  - 2 switch 示例
+- - '##'
+  - 3 Java 中的 break 语句
+- - '#'
+  - 第5 章：Java 中的循环
+- - '##'
+  - 1 Java 中的循环
+- - '##'
+  - 2 for 循环
+- - '##'
+  - 3 for-each 循环
+- - '##'
+  - 4 while 循环
+- - '##'
+  - 5 do-while 循环
+- - '##'
+  - 6 循环中的 break 语句
+- - '##'
+  - 7 循环中的 continue 语句
+- - '##'
+  - 8 标签循环
+- - '#'
+  - 第6 章：Java 中的数组
+- - '##'
+  - 1 什么是数组
+- - '##'
+  - 2 一维数组
+- - '##'
+  - 3 一维数组与 for-each 循环
+- - '##'
+  - 4 一维数组的工具方法
+- - '##'
+  - 5 二维数组
+- - '#'
+  - 第7 章：Java 中的继承与多态
+- - '##'
+  - 1 引言
+- - '##'
+  - 2 类、构造函数和实例
+- - '##'
+  - 3 Java 中的继承
+- - '##'
+  - 4 Java 中的多态
+- - '#'
+  - 第8 章：Java 中的抽象类和接口
+- - '##'
+  - 1 引言
+- - '##'
+  - 2 抽象类
+- - '##'
+  - 3 抽象类示例
+- - '##'
+  - 4 接口概览
+- - '##'
+  - 5 接口的结构
+- - '##'
+  - 6 类实现接口
+- - '###'
+  - ElseExample.java
+- - '###'
+  - 输出
+- - '###'
+  - 4 Boolean
+- - '###'
+  - BooleanExample.java
+- - '###'
+  - 输出
+- - '###'
+  - ElseExample2.java
+- - '###'
+  - 输出
+- - '#'
+  - 第4 章：Java 中的 Switch 语句
+- - '##'
+  - 1 switch 语句结构
+- - '###'
+  - switch语句的特点
+- - '##'
+  - 2 switch 示例
+- - '###'
+  - 输出
+- - '##'
+  - 3 switch 中的 break 语句
+- - '###'
+  - 输出
+- - '##'
+  - 3 for-each 循环
+- - '###'
+  - EachExample.java
+- - '###'
+  - 输出
+- - '##'
+  - 4 while 循环
+- - '###'
+  - WhileExample.java
+- - '###'
+  - 输出
+- - '##'
+  - 5 do-while 循环
+- - '###'
+  - DoWhileExample.java
+- - '###'
+  - 输出
+- - '##'
+  - 6 循环中的 break 语句
+- - '###'
+  - LoopBreakExample.java
+- - '###'
+  - 输出
+- - '##'
+  - 7 循环中的 continue 语句
+- - '###'
+  - LoopContinue.java
+- - '###'
+  - 输出
+- - '##'
+  - 8 标签循环 (Loop)
+- - '##'
+  - 2 层嵌套循环，无标签
+- - '##'
+  - 2 层嵌套循环，有标签
+- - '###'
+  - LoopBreakExample.java
+- - '###'
+  - 输出
+- - '###'
+  - ArrayExample.java
+- - '###'
+  - 输出
+- - '##'
+  - 3 一维数组和 for-each 循环
+- - '###'
+  - ArrayEachExample.java
+- - '###'
+  - 输出
+- - '##'
+  - 4. 一维数组的工具方法
+- - '###'
+  - ArraysExample.java
+- - '###'
+  - 输出
+- - '##'
+  - 5. 二维数组
+- - '###'
+  - TwoDimensionalExample.java
+- - '###'
+  - 输出
+- - '#'
+  - 第7 章：继承与多态
+- - '##'
+  - 1 引言
+- - '##'
+  - 2 类、构造函数和实例
+- - '###'
+  - 构造函数和实例：
+- - '##'
+  - 3 Java 中的继承
+- - '###'
+  - Animal.java
+- - '###'
+  - 输出：
+- - '###'
+  - 继承自 Animal
+- - '###'
+  - Cat.java
+- - '###'
+  - 输出：
+- - '###'
+  - Casting in Java
+- - '###'
+  - InstanceDemo.java
+- - '###'
+  - 输出：
+- - '##'
+  - 4 Java 中的多态
+- - '###'
+  - AsianCat.java
+- - '###'
+  - JobDemo.java
+- - '###'
+  - 输出
+- - '##'
+  - 4 接口概览 (Overview of the interface)
+- - '##'
+  - 5 接口的结构 (Structure of an Interface)
+- - '###'
+  - 一个没有访问修饰符的接口
+- - '###'
+  - CanMove.java
+- - '###'
+  - CanDrink.java
+- - '##'
+  - 6 类实现接口 (Class implements Interface)
+- - '###'
+  - Cat.java
+- - '#'
+  - Spring 配置
+- - '###'
+  - 1 步：
+- - '###'
+  - 2 步：
+- - '###'
+  - 3 步：
+- - '###'
+  - 4 步：
+- - '###'
+  - 5 步：
+- - '###'
+  - 6 步：
+- - '###'
+  - 7 步：
+- - '###'
+  - 8 步：
+- - '###'
+  - 9 步：
+- - '###'
+  - 10 步：
+- - '###'
+  - 11 步：
+- - '###'
+  - 12 步：
+- - '###'
+  - 13 步：
+- - '###'
+  - 14 步：
+- - '###'
+  - 15 步：
+- - '###'
+  - 16 步：
+- - '###'
+  - 17 步：
+- - '###'
+  - 18 步：
+- - '###'
+  - 19 步：
+- - '###'
+  - 20 步：
+- - '#'
+  - Hibernate
+- - '##'
+  - 引言
+- - '##'
+  - 首页
+- - '##'
+  - 环境
+- - '##'
+  - 目录结构
+- - '##'
+  - Hibernate 设置与流程
+- - '###'
+  - 医院设计
+- - '###'
+  - 1. 整体功能
+- - '###'
+  - 2. 设计
+- - '###'
+  - 模块数量
+- - '###'
+  - 组件图
+- - '###'
+  - 序列图（患者注册）
+- - '###'
+  - 活动图（患者）
+- - '###'
+  - 活动图（医生）
+- - '###'
+  - 活动图（管理员）
+- - '##'
+  - 创建数据库 (table1)
+- - '##'
+  - 部署 (医院 Web 应用)
+- - '##'
+  - 首页
+- - '##'
+  - 再次进入 MySQL (服务器)
+- - '###'
+  - 医生表
+- - '###'
+  - 患者表
+- - '###'
+  - 预约记录表
+- - '###'
+  - admin 表
+- - '###'
+  - 4 dl_curappointment 当前预约表
+- - '###'
+  - 5 dl_patient 患者表
+- - '###'
+  - 6 dl_history 历史表
+- - '##'
+  - 实体关系图
+- - '###'
+  - 概述
+- - '###'
+  - 基础架构
+- - '###'
+  - 概念分层架构
+- - '###'
+  - abd/action/AllAction.java
+- - '###'
+  - 业务逻辑层代码位于下方
+- - '###'
+  - 项目资源生成
+- - '###'
+  - src/com/abd/biz
+- - '###'
+  - AdminBiz.java
+- - '###'
+  - DoctorBiz.java
+- - '###'
+  - PatientBiz.java
+- - '###'
+  - src/abd/biz/impl
+- - '###'
+  - DoctorBizImpl.java
+- - '###'
+  - PatientBizImpl.java
+- - '###'
+  - src/com/abd/dao
+- - '###'
+  - AdminDao.java
+- - '###'
+  - AppointmentDao.java
+- - '###'
+  - CurappointmentDao.java
+- - '###'
+  - DoctorDao.java
+- - '###'
+  - HistoryDao.java
+- - '###'
+  - PatientDao.java
+- - '###'
+  - PinqueueDao.java
+- - '###'
+  - src/com/abd/dao/impl
+- - '###'
+  - AdminDaoImpl.java
+- - '###'
+  - AppointmentDaoImpl.java
+- - '###'
+  - CurappointmentDaoImpl.java
+- - '###'
+  - DoctorDaoImpl.java
+- - '###'
+  - HistoryDaoImpl.java
+- - '###'
+  - PatientDaoImpl.java
+- - '###'
+  - PinqueueDaoImpl.java
+- - '###'
+  - src/com/abd/entity
+- - '###'
+  - Admin.java
+- - '###'
+  - Appointment.java
+- - '###'
+  - Curappointment.java
+- - '###'
+  - Doctor.java
+- - '###'
+  - 医生问诊历史.java
+- - '###'
+  - 医生问诊队列.java
+- - '###'
+  - 历史.java
+- - '###'
+  - 患者.java
+- - '###'
+  - 队列.java
+- - '###'
+  - hosp.hbm.xml
+- - '###'
+  - src/com/abd/util
+- - '###'
+  - Util.java
+- - '###'
+  - src/res
+- - '###'
+  - AppResources.properties
+- - '###'
+  - AppResources_zh.properties
+- - '###'
+  - src
+- - '###'
+  - log4j.properties
+- - '###'
+  - 将日志输出到 stdout
+- - '###'
+  - 将日志输出到文件
+- - '###'
+  - 将日志级别从 'info' 设置为 'debug'
+- - '###'
+  - 记录 HQL 查询器
+- - '###'
+  - 只记录 SQL
+- - '###'
+  - 记录 JDBC 绑定参数
+- - '###'
+  - 记录架构导出/更新
+- - '###'
+  - 记录 HQL 解析树
+- - '###'
+  - 记录缓存活动
+- - '###'
+  - 记录事务活动
+- - '###'
+  - 记录 JDBC 资源获取
