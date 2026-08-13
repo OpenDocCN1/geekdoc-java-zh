@@ -1,0 +1,3450 @@
+- img_proc: true
+  md: '# Building a
+
+    REST API with
+
+    Spring 4'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# TABLE OF CONTENTS
+
+
+    +   1: BOOTSTRAP A WEB APPLICATION WITH SPRING 4
+
+
+    +   2: BUILD A REST API WITH SPRING 4 AND JAVA CONFIG
+
+
+    +   3: SPRING SECURITY FOR A REST API
+
+
+    +   4: SPRING SECURITY BASIC AUTHENTICATION
+
+
+    +   5: SPRING SECURITY DIGEST AUTHENTICATION
+
+
+    +   6: BASIC AND DIGEST AUTHENTICATION FOR A REST SERVICE WITH SPRING SECURITY
+
+
+    +   7: HTTP MESSAGE CONVERTERS WITH THE SPRING FRAMEWORK
+
+
+    +   8: REST API DISCOVERABILITY AND HATEOAS
+
+
+    +   9: HATEOAS FOR A SPRING REST SERVICE
+
+
+    +   10: ETAGS FOR REST WITH SPRING
+
+
+    +   11: REST PAGINATION IN SPRING
+
+
+    +   12: ERROR HANDLING FOR REST WITH SPRING
+
+
+    +   13: VERSIONING A REST API
+
+
+    +   14: TESTING REST WITH MULTIPLE MIME TYPESA'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'Building a REST API with Spring
+
+
+    # 1: BOOTSTRAP A WEB APPLICATION WITH SPRING 4
+
+
+    +   1. Overview ................................................................................................
+    11
+
+    2. The Maven pom.xml .................................................................................
+    11
+
+    2.1. The cglib dependency before Spring 3.2 ............................................
+    12
+
+    2.2. The cglib dependency in Spring 3.2 and beyond .................................
+    13
+
+    3. The Java based Web Configuration ..........................................................
+    13
+
+    3.1. The web.xml..................................................................................................
+    15
+
+    4. Conclusion ................................................................................................
+    16
+
+
+    # 2: BUILD A REST API WITH SPRING 4 AND JAVA CONFIG
+
+
+    +   1. Overview ................................................................................................
+    18
+
+    2. Understanding REST in Spring ...................................................................
+    18
+
+    3. The Java Configuration ........................................................................
+    19
+
+    4. Testing the Spring Context ................................................................
+    19
+
+    5. The Controller .......................................................................................
+    20
+
+    6. Mapping the HTTP response codes ......................................................
+    21
+
+    6.1. Unmapped Requests ........................................................................
+    21
+
+    6.2. Valid, Mapped Requests ................................................................
+    22
+
+    6.3. Client Error .......................................................................................
+    22
+
+    6.4. Using @ExceptionHandler ................................................................
+    22'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# 3: SPRING SECURITY FOR A REST API
+
+
+    +   1. Overview ................................................................................................26
+
+
+    +   2. Spring Security in the web.xml ................................................................26
+
+
+    +   3. The Security Configuration ...................................................................27
+
+
+    +   3.2. The Entry Point ............................................................................28
+
+
+    +   3.3. The Login Form for REST ...................................................................29
+
+
+    +   3.4. Authentication should return 200 instead of 301 ..........................29
+
+
+    +   3.5. Failed Authentication should return 401 instead of 302 ................30
+
+
+    +   3.6. The Authentication Manager and Provider ................................31
+
+
+    +   3.7 Finally – Authentication against the running REST Service ...............31
+
+
+    +   4. Maven and other trouble ................................................................32
+
+
+    +   5. Conclusion .................................................................................32
+
+
+    # 4: SPRING SECURITY BASIC AUTHENTICATION
+
+
+    +   1. Overview ................................................................................................34
+
+
+    +   2. The Spring Security Configuration .......................................34
+
+
+    +   3. Consuming the Secured Application ...................................35
+
+
+    +   4. Further Configuration – The Entry Point ..........................36'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '+   5. The Maven Dependencies ................................................................................................................37
+
+
+    +   6. Conclusion ...................................................................................................................................38
+
+
+    # 5: SPRING SECURITY DIGEST AUTHENTICATION
+
+
+    +   1. Overview .....................................................................................................................................40
+
+
+    +   2. The Security XML Configuration ................................................................................................40
+
+
+    +   3. Consuming the Secured Application ................................................................................42
+
+
+    +   4. The Maven Dependencies....................................................................................................43
+
+
+    +   5. Conclusion .................................................................................................................................44
+
+
+    # 6: BASIC AND DIGEST AUTHENTICATION FOR A REST SERVICE WITH SPRING SECURITY
+
+
+    +   1. Overview .................................................................................................................................46
+
+
+    +   2. Configuration of Basic Authentication .......................................................................46
+
+
+    +   2.1. Satisfying the stateless constraint – getting rid of sessions ................................47
+
+
+    +   3. Configuration of Digest Authentication ................................................................47
+
+
+    +   4. Supporting both authentication protocols in the same RESTful service ................48
+
+
+    +   4.1. Anonymous request ...................................................................................................49
+
+
+    +   4.2. Request with authentication credentials ................................................49
+
+
+    +   5. Testing both scenarios ................................................................................49
+
+
+    +   6. Conclusion ...................................................................................................................50'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'Building a REST API with Spring 4
+
+
+    # 7: HTTP MESSAGE CONVERTERS WITH THE SPRING FRAMEWORK
+
+
+    +   1. Overview ................................................................................................
+    52
+
+    2. The Basics ................................................................................................
+    52
+
+    2.1. Enable Web MVC .................................................................................
+    52
+
+    2.2. The Default Message Converters ............................................................
+    53
+
+    3. Client-Server Communication – JSON only ............................................
+    54
+
+    3.1. High Level Content Negotiation ........................................................
+    54
+
+    3.2. @ResponseBody .......................................................................................
+    54
+
+    3.3. @RequestBody .......................................................................................
+    55
+
+    4. Custom Converters Configuration – adding XML Support ................... 56
+
+    5. Using Spring’s RestTemplate with Http Message Converters ......... 58
+
+    5.1. Retrieving the Resource with no Accept Header ...............................
+    58
+
+    5.2. Retrieving a Resource with application/xml Accept header ........... 58
+
+    5.3. Retrieving a Resource with application/json Accept header ........... 59
+
+    5.4. Update a Resource with XML Content-Type .................................
+    60
+
+    6. Conclusion ................................................................................................
+    61
+
+
+    # 8: REST API DISCOVERABILITY AND HATEOAS
+
+
+    +   1. Overview ................................................................................................
+    63
+
+    2. Why make the API Discoverable ......................................................
+    63
+
+    3. Discoverability Scenarios (Driven by tests) .................................
+    64'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Building a REST API with Spring4
+
+
+    +   3.1. Discover the valid HTTP methods ............................................................................
+    64
+
+
+    +   3.2. Discover the URI of newly created Resource .................................................
+    64
+
+
+    +   3.3. Discover the URI to GET All Resources of that type ........................................
+    65
+
+
+    +   4. Other potential discoverable URIs and microformats ......................................
+    66
+
+
+    +   5. Conclusion ..........................................................................................................
+    67
+
+
+    # 9: HATEOAS FOR A SPRING REST SERVICE
+
+
+    +   1. Overview ................................................................................................................
+    69
+
+
+    +   2. Decouple Discoverability through events ........................................................
+    69
+
+
+    +   3. Make the URI of a newly created Resource discoverable ................................
+    71
+
+
+    +   4. Get of single Resource ................................................................................
+    71
+
+
+    +   5. Discoverability at the Root .......................................................................
+    72
+
+
+    +   5.1. Discoverability is not about changing URIs ........................................
+    73
+
+
+    +   6. Caves of Discoverability .......................................................................
+    73
+
+
+    +   7. Conclusion.................................................................................................
+    74
+
+
+    # 10: ETAGS FOR REST WITH SPRING
+
+
+    +   1. Overview ................................................................................................................
+    76
+
+
+    +   2. REST and ETags .......................................................................................
+    76
+
+
+    +   3. Client-Server communication with *curl* ........................................
+    77
+
+
+    +   4. ETag support in Spring ...................................................................
+    78'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '5. Testing ETags...............................................................................................................79
+
+
+    6. ETags are BIG ................................................................................................................81
+
+
+    7. Conclusion......................................................................................................................82
+
+
+    # 11: REST PAGINATION IN SPRING
+
+
+    1. Overview.......................................................................................................................84
+
+
+    2. Page as Resource vs Page as Representation ...............................................................84
+
+
+    3. The Controller ................................................................................................85
+
+
+    4. Discoverability for REST pagination ................................................................85
+
+
+    5. Test Driving Pagination ................................................................................87
+
+
+    6. Test Driving Pagination Discoverability ......................................................87
+
+
+    7. Getting All Resources ................................................................................88
+
+
+    8. REST Paging with Range HTTP headers ...............................................................89
+
+
+    9. Conclusion.....................................................................................................89
+
+
+    # 12: ERROR HANDLING FOR REST WITH SPRING
+
+
+    1. Overview.......................................................................................................91
+
+
+    2. Solution 1 – The Controller level @ExceptionHandler ...................................91
+
+
+    3. Solution 2 – The HandlerExceptionHandlerResolver ......................................92
+
+
+    3.1. HandlerExceptionHandlerResolver ........................................................92
+
+
+    3.2. DefaultExceptionHandlerResolver ........................................................93'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '+   3.3. ResponseStatusExceptionResolver .................................................................
+    93
+
+
+    +   3.4. SimpleMappingExceptionResolver and AnnotationMethodExceptionHandlerResolver
+    ................... 94
+
+
+    +   3.5. Custom HandlerExceptionHandlerResolver ................................................................
+    94
+
+
+    +   4. Solution 3 – The New @ControllerAdvice (Spring 3.2 And Above) ...................................
+    95
+
+
+    +   5. Conclusion ........................................................................................................
+    97
+
+
+    # 13: VERSIONING A REST API
+
+
+    +   1. The Problem.......................................................................................................
+    99
+
+
+    +   2. What is in the Contract?......................................................................................
+    99
+
+
+    +   2.1. URIs part of the Contract?..................................................................................
+    99
+
+
+    +   2.2. Media Types part of the Contract?..............................................................
+    100
+
+
+    +   3. High Level Options.................................................................................................
+    100
+
+
+    +   4. Advantages and Disadvantages..................................................................
+    102
+
+
+    +   5. Possible Changes to the API...............................................................................
+    103
+
+
+    +   5.1. Adding to the Representation of a Resource..................................................
+    103
+
+
+    +   5.2. Removing or changing an existing Representation..................................
+    103
+
+
+    +   5.3. Major Semantic Changes......................................................................
+    104
+
+
+    +   6. Conclusion ................................................................................................
+    105
+
+
+    # 14: TESTING REST WITH MULTIPLE MIME TYPES
+
+
+    +   1. Overview.................................................................................................
+    107'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Building a REST API with Spring4
+
+
+    +   2. Goals....................................................................................................................
+    107
+
+
+    +   3. Testing Infrastructure ................................................................................
+    107
+
+
+    +   4. The JSON and XML Marshallers ...................................................................
+    109
+
+
+    +   5. Consuming the Service with both JSON and XML .......................................
+    110
+
+
+    +   6. Maven and Jenkins ................................................................................
+    111
+
+
+    +   7. Conclusion...............................................................................................................
+    112'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# 1: BOOTSTRAP A WEB APPLICATION WITH SPRING 4\n\n# 1. Overview\n\nThis section\
+    \ illustrates how to Bootstrap a Web Application with Spring and also discusses\
+    \ how to make the jump from XML to Java without having to completely migrate the\
+    \ entire XML configuration.\n\n# 2. The Maven pom.xml\n\n```\n<project xmlns=\"\
+    http://maven.apache.org/POM/4.0.0\"\nxmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\
+    \n     xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\"\
+    >\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>rest</groupId>\n  <artifactId>rest</artifactId>\n\
+    \  <version>0.0.1-SNAPSHOT</version>\n  <packaging>war</packaging>\n\n  <dependencies>\n\
+    \    <dependency>\n      <groupId>org.springframework</groupId>\n      <artifactId>spring-webmvc</artifactId>\n\
+    \      <version>5.3.1</version>\n      <exclusions>\n        <artifactId>commons-logging</artifactId>\n\
+    \        <groupId>commons-logging</groupId>\n      </exclusions>\n    </dependency>\n\
+    \  </dependencies>\n\n  <build>\n    <finalName>rest</finalName>\n```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# Building a REST API with Spring\n\n# 2.1. The cglib dependency before Spring\
+    \ 3.2\n\n```\n<plugins>\n  <plugin>\n    <groupId>org.apache.maven</groupId>\n\
+    \    <artifactId>maven-compiler-plugin</artifactId>\n    <version>3.1</version>\n\
+    \    <configuration>\n      <source>1.6</source>\n      <target>1.6</target>\n\
+    \      <encoding>UTF-8</encoding>\n    </configuration>\n  </plugin>\n</build>\n\
+    <properties>\n  <spring.version>4.0.5.RELEASE</spring.version>\n</properties>\n\
+    </project>\n```\n\n# 2.1. The cglib dependency before Spring 3.2\n\nYou may wonder\
+    \ why cglib is a dependency - it turns out there is a valid reason to include\
+    \ it the entire configuration cannot function without it. If removed, Spring will\
+    \ throw:\n\nCaused by: java.lang.IllegalStateException: CGLIB is required to process\
+    \ @Configuration classes. Either add CGLIB to the classpath or remove the following\
+    \ @Configuration bean definitions\n\nThe reason this happens is explained by the\
+    \ way Spring deals with @Configuration classes. These classes are effectively\
+    \ beans, and because of this they need to be aware of the Context, and respect\
+    \ scope and other bean semantics. This is achieved by dynamically creating a cglib\
+    \ proxy with this awareness for each @Configuration class, hence the cglib dependency.\n\
+    \nAlso, because of this, there are a few restrictions for Configuration annotated\
+    \ classes:\n\n+   - Configuration classes should not be final\n- They should have\
+    \ a constructor with no arguments"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# 2.2. The cglib dependency in Spring 3.2 and beyond\n\nStarting with Spring\
+    \ 3.2, it is no longer necessary to add cglib as an explicit dependency. This\
+    \ is because Spring is now inlining cglib - which will ensure that all class based\
+    \ proxying functionality will work out of the box with Spring 3.2.\n\nThe new\
+    \ cglib code is placed under the Spring package: org.springframework.cglib (replacing\
+    \ the original net.cglib). The reason for the package change is to avoid conflicts\
+    \ with any cglib versions already existing on the classpath.\n\nAlso, the new\
+    \ cglib 3.0 is now used, upgraded from the older 2.2 dependency (see this JIRA\
+    \ issue for more details).\n\nFinally, now Spring 4.0 is out in the wild, changes\
+    \ like this (removing the cglib dependency) are to be expected with Java 8 just\
+    \ around the corner - you can watch this. Spring Jira to keep track of the Spring\
+    \ support, and the Java 8 Resources page to keep tabs on that.\n\n# 3.2. The Java\
+    \ based Web Configuration\n\n```\n@Configuration\n@ImportResource(\"classpath:/rest_config.xml\"\
+    )\n@ComponentScan(basePackages=\"org.rest\")\n@PropertySource(\"classpath:rest.properties\"\
+    ,\"classpath:web.properties\")\npublic class AppConfig {\n  @Bean\n  public static\
+    \ PropertySourcesPlaceholderConfigurer properties(Properties properties) {\n \
+    \   return new PropertySourcesPlaceholderConfigurer();\n  }\n}\n```\n\nFirst,\
+    \ the @Configuration annotation - this is the meta artifact used by the Java Spring\
+    \ configuration; it is itself-annotated with @Component, which makes the annotated\
+    \ classes standard beans and as such, also candidates for component scanning.\
+    \ The main purpose of @Configuration classes is to sources of bean definitions\
+    \ for the Spring IoC Container. For a more detailed description, see the official\
+    \ docs."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Building a REST API with Spring4
+
+
+    Then, @ImportResource is used to import the existing XML based Spring configuration.
+    This configuration will still be migrated from XML to Java, or simply legacy configuration
+    that you wish to keep. Either way, importing it into the Container is essential
+    for a successful migration, allowing small steps without to much risk. The equivalent
+    XML annotation that is replaced:
+
+
+    ```
+
+    <import resource="classpath:/rest_config.xml" />
+
+    ```
+
+
+    Moving on to @ComponentScan - this configures the component scanning directive,
+    effectively replacing the XML:
+
+
+    ```
+
+    <context:component-scan base-package="org.rest" />
+
+    ```
+
+
+    As of Spring 3.1, the @Configuration are excluded from classpath scanning by default
+    - see this JIRA issue. Before Spring 3.1 though, these classes should have been
+    excluded explicitly:
+
+
+    ```
+
+    excludeFilters = { @ComponentScan.Filter(Configuration.class) }
+
+    ```
+
+
+    The @Configuration classes should not be autodiscovered because they are already
+    specified and used by the Container - allowing them to be rediscovered and introduced
+    into the Spring context will result in the following error:
+
+
+    > Caused by: org.springframework.framework.context.annotation.ConflictingBeanDefinitionException:
+    Annotation-specified bean name ''webConfig'' for bean class [org.rest.spring.AppConfig]
+    conflicts with existing, non-compatible bean definition of same name and class
+    [org.rest.spring.AppConfig]
+
+
+    And finally, using the @Bean annotation to configure the properties support -
+    PropertySourcesPlaceholderConfigurer is initialized in a @Bean annotated method,
+    indicating it will a Spring bean managed by the Container. This new configuration
+    has replaced the following XML:
+
+
+    ```
+
+    <context:property-placeholder location="classpath:persistence.properties, classpath:web.properties"
+    ignore-unresolvable="true" />
+
+    ```'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\nFor a more in depth discussion on why\
+    \ it was necessary to manually register the PropertySourcesPlaceholderConfigurer,\
+    \ see the Properties with Spring Tutorial.\n\n# 3.1. The web.xml\n\n```\n<?xml\
+    \ version=\"1.0\" encoding=\"UTF-8?>\n<web-app xmlns=\"http://java.sun.com/xml/ns/javaee\"\
+    \ xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"\
+    http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd http://java.sun.com/xml/ns/javaee\"\
+    \ id=\"rest\" version=\"3.0\">\n\n<context-param>\n    <param-name>contextClass</param-name>\n\
+    \    <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>\n\
+    </context-param>\n<context-param>\n    <param-name>contextConfigLocation</param-name>\n\
+    \    <param-value>org.springframework.rest.root</param-value>\n</context-param>\n\
+    <listener>\n    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>\n\
+    </listener>\n<servlet>\n    <servlet-name>rest</servlet-name>\n    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>\n\
+    \    <init-param>\n        <param-name>contextClass</param-name>\n        <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>\n\
+    \    </init-param>\n    <init-param>\n        <param-name>contextConfigLocation</param-name>\n\
+    \        <param-value>org.springframework.rest.root</param-value>\n    </init-param>\n\
+    \    <load-on-startup>1</load-on-startup>\n</servlet>\n<servlet-mapping>\n   \
+    \ <servlet-name>rest</servlet-name>\n    <url-pattern>/api/*</url-pattern>\n</servlet-mapping>\n\
+    \n<welcome-file-list>\n    <welcome-file/></welcome-file>\n</welcome-file-list>\n\
+    </web-app>\n```"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Building a REST API with Spring4
+
+
+    First, the root context is defined and configured to use
+
+    AnnotationConfigWebApplicationContext instead of the default XmlWebApplicationContext.
+    The newer AnnotationConfigWebApplicationContext accepts @Configuration annotated
+    classes as input for the Container configuration and is needed in order to set
+    up the Java based context.
+
+
+    Unlike XmlWebApplicationContext, it assumes no default configuration class locations,
+    so the "contextConfigLocation" init-param for the Servlet must be set. This will
+    point to the java package where the @Configuration classes are located; the fully
+    qualified name(s) of the classes are also supported.
+
+
+    Next, the DispatcherServlet is configured to use the same kind of context, with
+    the only difference that it''s loading configuration classes out of a different
+    package.
+
+
+    Other than this, the web.xml doesn''t really change from an XML to a Java based
+    configuration.
+
+
+    # 4. Conclusion
+
+
+    The presented approach allows for a smooth migration of the Spring configuration
+    from XML to Java, mixing the old and the new. This is important for older projects,
+    which may have a lot of XML based configuration that cannot be migrated all at
+    once.
+
+
+    This way, in a migration, the XML beans can be ported in small increments.
+
+
+    In the next section on REST with Spring, I cover setting up MVC in the project,
+    configuration of the HTTP status codes, payload marshalling and content negotiation.
+
+
+    This is an Eclipse based project, so it should be easy to import and run as it
+    is.
+
+
+    ![](img/9e952c1884adb105358b0d748e0b42fd_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: Building a REST API with Spring 4
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# 2: BUILD A REST API WITH SPRING 4 AND JAVA CONFIG
+
+
+    # 1. Overview
+
+
+    This section shows how to set up REST in Spring – the Controller and HTTP response
+    codes, configuration of payload marshalling and content negotiation.
+
+
+    # 2. Understanding REST in Spring
+
+
+    The Spring framework supports 2 ways of creating RESTful services:
+
+
+    +   - using MVC with ModelAndView
+
+    - using HTTP message converters
+
+
+    The ModelAndView approach is older and much better documented, but also more verbose
+    and configuration heavy. It tries to shoehorn the REST paradigm into the old model,
+    which is without problems. The Spring team understood this and provided first-class
+    REST support with Spring 3.0.
+
+
+    The new approach, based on HttpMessageConverter and annotations, is much more
+    lightweight and easy to implement. Configuration is minimal and provides sensible
+    defaults for what you would expect from a RESTful service. It is however newer
+    and a bit on the light side concerning documentation; what''s more, the reference
+    doesn''t go out of it''s way to make the distinction and the tradeoffs between
+    the two approaches as clear as they should be. Nevertheless, this is the way RESTful
+    services should be built after Spring 3.0.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# 3. The Java Configuration
+
+
+    ```
+
+    @Configuration
+
+    @EnableMvc
+
+    public class WebConfig{
+
+    //}
+
+    ```
+
+
+    The new @EnableMvc annotation does a number of useful things - specifically, in
+    the case of REST, it detects the existence of Jackson and JAXB 2 on the classpath
+    and automatically creates and registers default JSON and XML converters. The functionality
+    of the annotation is equivalent to the XML version:
+
+
+    ```
+
+    <mvc:annotation-driven />
+
+    ```
+
+
+    This is a shortcut, and though it may be useful in many situations, it''s not
+    perfect. When more complex configuration is needed, remove the annotation and
+    extend WebMvcConfigurationSupport directly.
+
+
+    # 4. Testing the Spring Context
+
+
+    Starting with Spring 3.1, we get first-class testing support for @Configuration
+    classes:
+
+
+    ```
+
+    @RunWith(SpringJUnit4Runner.class)
+
+    @ContextConfiguration(classes = {ApplicationConfig.class, PersistenceConfig.class
+    }, loader = AnnotationConfigContextLoader.class)
+
+    public class SpringTest{
+
+
+    @Test
+
+    public void whenContextIsInstantiated_thenNoExceptions(){
+
+    //
+
+    }
+
+    ```
+
+
+    The Java configuration classes are simply specified with the @Configuration annotation
+    and the new AnnotationConfigContextLoader loads the bean definitions from @Configuration
+    classes.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# 5. The Controller\n\n**Notice** that the WebConfig configuration class was\
+    \ not included in the test because it needs to run in a Servlet context, which\
+    \ is not provided.\n\nThe **@Controller** is the central artifact in the entire\
+    \ Web Tier of the RESTful API. For the purpose of the following examples, the\
+    \ controller is modeling a simple REST resource – Foo:\n\n```\n@Controller\n@RequestMapping(value\
+    \ = \"foos\")\nclass FooController{\n\n    @Autowired\n    FooService service;\n\
+    \n    @RequestMapping(method = RequestMethod.GET)\n    @ResponseBody\n    public\
+    \ List<Foo> findAll() {\n        return service.findAll();\n    }\n\n    @RequestMapping(value\
+    \ = \"/id\", method = RequestMethod.GET)\n    @ResponseBody\n    public Foo findOne(@PathVariable(\"\
+    id\") Long id) {\n        return RestPreconditions.checkFound(service.findById(id));\n\
+    \    }\n\n    @RequestMapping(method = RequestMethod.POST)\n    @ResponseStatus(Status.CREATED)\n\
+    \    public Long create(@RequestBody Foo resource) {\n        Preconditions.checkNotNull(resource);\n\
+    \        return service.create(resource);\n    }\n\n    @RequestMapping(value\
+    \ = \"/id\", method = RequestMethod.PUT)\n    @ResponseStatus(Status.OK)\n   \
+    \ public void update(@PathVariable(\"id\") Long id, @RequestBody Foo resource)\
+    \ {\n        Preconditions.checkNotNull(resource);\n        RestPreconditions.checkNotNull(service.getById(resource.getId()));\n\
+    \        service.update(resource);\n    }\n\n    @RequestMapping(value = \"/id\"\
+    , method = RequestMethod.DELETE)\n    @ResponseStatus(Status.OK)\n    public void\
+    \ delete(@PathVariable(\"id\") Long id) {\n        service.deleteById(id);\n \
+    \   }\n}\n```"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# Building a REST API with Spring\n\n# 6. Mapping the HTTP response codes\n\
+    \nYou may have noticed I'm using a very simple, guava style RestPreconditions\
+    \ utility:\n\n```\npublic class RestPreconditions {\n    public static <T> T checkFind(final\
+    \ T resource) {\n        if (resource == null) {\n            throw new MyResourceNotFoundException();\n\
+    \        }\n        return resource;\n    }\n}\n```\n\nThe Controller implementation\
+    \ is non-public** – this is because it doesn't need to be. Usually the controller\
+    \ is the last in the chain (`DispatcherServlet`) and simply receives HTTP requests\
+    \ from the Spring front controller. If there is no use case where the controller\
+    \ has been injected or manipulated through a direct reference, then I prefer not\
+    \ to declare it as public.\n\nThe **request mappings** are straightforward - as\
+    \ with any controller, the actual value of the mapping as well as the method used\
+    \ to determine the target method for the request.. `@RequestBody` will bind the\
+    \ parameters of the method to the body of the HTTP request, whereas `@ResponseBody`\
+    \ does the same for the response and return type. They also ensure that the resource\
+    \ will be marshalled and unmarshalled using the correct HTTP converter. **Content\
+    \ negotiation** will take place to choose which one of the active converters will\
+    \ be used, based mostly on the Accept header, although other HTTP headers may\
+    \ be used to determine the representation as well.\n\n# 6. Mapping the HTTP response\
+    \ codes\n\nThe status codes of the HTTP response are one of the most important\
+    \ parts of the REST service, and the subject can quickly become very complex.\
+    \ Getting these right can be what makes or breaks the service.\n\n# 6.1. Unmapped\
+    \ Requests\n\nIf Spring MVC receives a request which doesn't have a mapping, it\
+    \ considers the request not to be allowed and returns a **405 METHOD NOT ALLOWED**\
+    \ back to the client. It is also"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Building a REST API with Spring4
+
+
+    6.2. Valid, Mapped Requests
+
+
+    good practice to include the Allow HTTP header when returning a 405 to the client,
+    in order to specify which operations are allowed. This is the standard behavior
+    of Spring MVC and does not require any additional configuration.
+
+
+    # 6.2. Valid, Mapped Requests
+
+
+    For any request that has a mapping, Spring MVC considers the request valid and
+    responds with 200 OK if no status code is specified otherwise. It is because of
+    that this controller declares different @ResponseEntity for the create, update
+    and delete actions but not for get, which should indeed return the default 200
+    OK.
+
+
+    # 6.3. Client Error
+
+
+    In case of a client error, custom exceptions are defined and mapped to the appropriate
+    error codes. Simply throwing these exceptions from any of the layers of the web
+    tier will ensure Spring maps the corresponding status code on the HTTP response.
+
+
+    ```
+
+    @ResponseEntity(value = HttpStatus.BAD_REQUEST )
+
+    public class BadRequestException extends RuntimeException(
+
+    //
+
+    )
+
+    @ResponseEntity(value = HttpStatus.NOT_FOUND)
+
+    public class ResourceNotFoundException extends RuntimeException(
+
+    )
+
+    ```
+
+
+    These exceptions are part of the REST API and, as such, should only be used in
+    the appropriate layers conforming to REST; if instance a DAO/DAL layer exist,
+    it should not use the exceptions directly. Note also that these are not checked
+    exceptions but runtime exceptions - in line with Spring practices and idioms.
+
+
+    # 6.4. Using @ExceptionHandler
+
+
+    Another option to map custom exceptions on specific status codes is to use the
+    @ExceptionHandler annotation in the controller. The problem with that approach
+    is that the annotation only applies to the controller in which it is defined,
+    not to the entire Spring
+
+
+    Page 22 / 113'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 7. Additional Maven dependencies\n\n\
+    Container, which means it needs to be declared in each controller individually.\
+    \ This quickly becomes cumbersome, especially in more complex applications which\
+    \ many controllers. There are a few JIRA issues opened with Spring at this time\
+    \ and handle all related limitations: SPR-8124, SPR-7278, SPR-8406.\n\n# 7. Additional\
+    \ Maven dependencies\n\nIn addition to the spring-webmvc dependency required for\
+    \ the standard web application, we'll need to set up content marshalling and unmarshalling\
+    \ for the REST API:\n\n```\n<dependencies>\n  <dependency>\n    <groupId>com.fasterxml.jackson.core</groupId>\n\
+    \    <artifactId>jackson-databind</artifactId>\n    <version>${jackson.version}</version>\n\
+    \  </dependency>\n  <dependency>\n    <groupId>javax.xml.bind</groupId>\n    <artifactId>jaxb-api</artifactId>\n\
+    \    <version>${jaxb-api.version}</version>\n    <scope>runtime</scope>\n  </dependency>\n\
+    </dependencies>\n```\n\n```\n<properties>\n  <jackson.version>2.4.0</jackson.version>\n\
+    \  <jaxb-api.version>2.2.11</jaxb-api.version>\n</properties>\n```\n\nThese are\
+    \ the libraries used to convert the representation of the REST resource to either\
+    \ JSON or XML."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# 8. Conclusion
+
+
+    This section covered the configuration and implementation of a REST Service using
+    Spring 4 and Java based configuration, discussing HTTP response codes, basic Content
+    Negotiation and marshaling.
+
+
+    In the next sections of the series I will focus on Discoverability of the API,
+    advanced content negotiation and working with additional representations of a
+    Resource.
+
+
+    This is an Eclipse based project, so it should be easy to import and run as it
+    is.
+
+
+    ![](img/9e952c1884adb105358b0d748e0b42fd_23_0.png)'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: Building a REST API with Spring 4
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# 3: SPRING SECURITY FOR A REST API
+
+
+    # 1. Overview
+
+
+    This section shows how to Secure a REST Service using Spring and Spring Security
+    3.1 with Java based configuration. We will focus on how to set up the Spring Configuration
+    specifically for the REST API using a Login and Cookie approach.
+
+
+    # 2. Spring Security in the web.xml
+
+
+    The architecture of Spring Security is based entirely on Servlet Filters and,
+    as such, comes before Spring MVC in regards to the processing of HTTP requests.
+    Keeping this in mind, a filter needs to be declared in the web.xml of the application:
+
+
+    ```
+
+    <filter>
+
+    <filter-name>springSecurityFilterChain</filter-name>
+
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+
+    </filter>
+
+    <filter-mapping>
+
+    <filter-name>springSecurityFilterChain</filter-name>
+
+    <url-pattern>/*</url-pattern>
+
+    </filter-mapping>
+
+    ```
+
+
+    The filter must necessarily be named ''springSecurityFilterChain'' to match the
+    default bean created by Spring Security in the container.
+
+
+    Note the defined filter is not the actual class implementing the security logic
+    but a DelegatingFilterProxy with the purpose of delegating the Filter''s methods
+    to an internal bean. This is done so that the target bean can still benefit from
+    the Spring context lifecycle and flexibility.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n3. The Security Configuration\n\nThe\
+    \ URL pattern used to configure the Filter is /* even though the entire web service\
+    \ is mapped to /api/* so that the security configuration has the option to secure\
+    \ other possible mappings as well, if required.\n\n# 3. The Security Configuration\n\
+    \n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<beans\n  xmlns=\"http://www.springframework.org/schema/security\"\
+    \n  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n  xmlns:beans=\"\
+    http://www.springframework.org/schema/beans\"\n  xmlns:sec=\"http://www.springframework.org/schema/security\"\
+    \n  xsi:schemaLocation=\"http://www.springframework.org/schema/security\n  http://www.springframework.org/schema/security/spring-security-3.2.xsd\n\
+    \  http://www.springframework.org/schema/beans\n  http://www.springframework.org/schema/beans/spring-beans-4.0.xsd\"\
+    >\n\n  <http entry-point-ref=\"authenticationEntryPoint\">\n    <intercept-url\
+    \ pattern=\"/api/admin/**\" access=\"ROLE_ADMIN/>\n  </http>\n\n  <form-login\n\
+    \    authentication-success-handler-ref=\"mySuccessHandler\"\n    authentication-failure-handler-ref=\"\
+    myFailureHandler\"\n  />\n\n  <logout />\n\n  <bean id=\"mySuccessHandler\"\n\
+    \    class=\"org.rest.security.MySavedRequestAwareAuthenticationSuccessHandler\"\
+    />\n  <bean id=\"myFailureHandler\"\n    class=\"org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler\"\
+    />\n\n  <authentication-manager alias=\"authenticationManager\">\n    <authentication-provider>\n\
+    \      <user-service>\n        <user name=\"temporary\" password=\"temporary\"\
+    \ authorities=\"ROLE_ADMIN\"/>\n        <user name=\"user\" password=\"user\"\
+    \ authorities=\"ROLE_USER\"/>\n      </user-service>\n    </authentication-provider>\n\
+    \  </authentication-manager>\n\n</beans>\n```\n\nMost of the configuration is\
+    \ done using the security namespace – for this to be enabled, the schema locations\
+    \ must be defined and point to the correct 3.1 or 3.2 XSD versions. The namespace\
+    \ is designed so that it extends the common uses of Spring Security while providing\
+    \ raw beans to accommodate more advanced scenarios."
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "Building a REST API with Spring4\n\n3.2. The Entry Point\n\n# 3.1. The &lt;http&gt;\
+    \ element\n\nThe &lt;http&gt; element is the main container element for HTTP security\
+    \ configuration. In the current implementation, it only secured a single mapping:\
+    \ /api/admin/**. Note that the mapping is relative to the root context of the\
+    \ web application, not to the rest Servlet; this is because the entity security\
+    \ configuration lives in the root Spring context and not in the child context\
+    \ of the Servlet.\n\n# 3.2. The Entry Point\n\nIn a standard web application,\
+    \ the authentication process may be automatically triggered when the client tries\
+    \ to access a secured resource without being authenticated – this is usually done\
+    \ by redirecting to a login page so that the user can enter credentials. However,\
+    \ for a REST Web Service this behavior doesn't make sense – Authentication should\
+    \ only be done by a request to the correct URI and all requests should simply\
+    \ fail with a 401 UNAUTHORIZED status code if the user is not authenticated.\n\
+    \nSpring Security handles this automatic triggering of the authentication process\
+    \ with the concept of an Entry Point – this is a required part of the configuration,\
+    \ and can be injected via the entry-point-ref attribute of the &lt;http&gt; element.\
+    \ Keeping in mind that this functionality doesn't make sense in the context of\
+    \ the REST Service, the new custom entry point is defined to simply return 401\
+    \ whenever it is triggered:\n\n```\n@Component(\"restAuthenticationEntryPoint\"\
+    )\npublic class RestAuthenticationEntryPoint implements AuthenticationEntryPoint{\n\
+    \    @Override\npublic void commence(HttpServletRequest request, HttpServletResponse\
+    \ response,\nAuthenticationException authException) throws IOException(\n    response.sendError(HttpServletResponse.SC_UNAUTHORIZED,\
+    \ \"Unauthorized\");\n}\n```\n\nA quick sidenote here is that the 401 is sent\
+    \ without the WWW-Authenticate header, as required by the HTTP Spec – we of course\
+    \ set the value manually if we need to."
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# 3.3. The Login Form for REST
+
+
+    There are multiple ways to do Authentication for a REST API - one of the default
+    Spring Security provides is Form Login - which uses an authentication processing
+    filter - org.springframework.security.web.authentication.UsernameAuthenticationFilter.
+
+
+    The `<form-login>` element will create this filter and also allow us to set our
+    custom authentication success handler on it. This can also be done manually using
+    the `<custom-filter>` element to register a filter at the position FORM_LOGIN_FILTER
+    - but the namespace support is flexible enough.
+
+
+    > Note that for a standard web application, the auto-config attribute of the <http>
+    element is shorthand syntax for some simple web security configuration. While
+    this makes sense in the context of some simple configurations, it doesn''t fit
+    and should not be used for a REST API.
+
+
+    # 3.4. Authentication should return 200 instead of 301
+
+
+    By default, form login will answer a successful authentication request with a
+    301 MOVED PERMANENTLY status code; this makes sense in the context of an actual
+    login form which needs to redirect after login. For a RESTful web service however,
+    the desired response for successful authentication should be 200 OK.
+
+
+    This is done by injecting a custom authentication success handler in the login
+    filter, to replace the default one. The new handler implements the exact same
+    login as the default org.springframework.security.web.authentication.Handler SavedRequestAwareAuthenticationSuccessHandler
+    with one notable difference - the redirect logic is removed.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# 3.5. Failed Authentication should return 401 instead of 302\n\nSimilarly\
+    \ – we configured the authentication failure handler – same way we did with the\
+    \ success handler.\n\nLuckily – in this case, we don’t need to actually define\
+    \ a new class for this handler – the standard implementation – SimpleUrlAuthenticationFailureHandler\
+    \ – does just fine.\n\nThe only difference is that – now that we’re defining this\
+    \ explicitly in our XML config – it’s not going to get a default defaultFailureUrl\
+    \ from Spring – and so it won’t redirect.\n\n```\npublic class MySavedRequestAuthenticationSuccessHandler\n\
+    extends SimpleUrlAuthenticationSuccessHandler\n\nprivate RequestCache requestCache\
+    \ = new HttpSessionRequestCache();\n\n@Override\npublic void onAuthenticationSuccess(HttpServletRequest\
+    \ request, HttpServletResponse response, Authentication authentication) throws\
+    \ ServletException, IOException {\n    SavedRequest savedRequest = requestCache.getRequest(request);\n\
+    \n    if (savedRequest == null) {\n        clearAuthenticationAttributes(request);\n\
+    \        return;\n    }\n    String targetUri = getDefaultTargetUrl(request) ||\
+    \ (targetUri == null && StringUtils.hasText(savedRequest.getRequest().getURI()))\
+    \ ? savedRequest.getRequest().getURI() : null;\n    requestCache.removeRequest(request,\
+    \ response);\n    clearAuthenticationAttributes(request);\n    return;\n}\n\n\
+    clearAuthenticationAttributes(request);\n}\n\npublic void setRequestCache(RequestCache\
+    \ requestCache) {\n    this.requestCache = requestCache;\n}\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# 3.6. The Authentication Manager and Provider
+
+
+    The authentication process uses an in-memory provider to perform authentication
+    – this is meant to simplify the configuration as a production implementation of
+    these artifacts is outside the scope of this post.
+
+
+    # 3.7 Finally – Authentication against the running REST Service
+
+
+    Now let''s see how we can authenticate against the REST API – the URL for login
+    is /j_spring_security_check – and a simple curl command performing login would
+    be:
+
+
+    ```
+
+    curl -i X POST -d username=user -d password=userPass
+
+    http://localhost:8080/spring-security-rest/j_spring_security_check
+
+    ```
+
+
+    This request will return the Cookie which will be used by any subsequent request
+    against the REST Service.
+
+
+    We can use curl to authentication and store the cookie it receives in a file:
+
+
+    ```
+
+    curl -i X POST -d username=user -d password=userPass -c /opt/cookies.txt
+
+    http://localhost:8080/spring-security-rest/j_spring_security_check
+
+    ```
+
+
+    Then we can use the cookie from the file to do further authenticated requests:
+
+
+    ```
+
+    curl -i--header "Accept:application/json" GET -b /opt/cookies.txt
+
+    http://localhost:8080/spring-security-rest/api/foos
+
+    ```
+
+
+    This authenticated request will correctly result in a 200 OK:
+
+
+    ```
+
+    HTTP/1.1 200 OK
+
+    Server: Apache-Coyote/1.1
+
+    Content-Type: application/json;charset=UTF-8
+
+    Transfer-Encoding: chunked
+
+    Date: Wed, 24 Jul 2013 20:31:13 GMT
+
+
+    [{"id":"0","name":"JbidXc"}]
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# 4. Maven and other trouble
+
+
+    The Spring core dependencies necessary for a web application and for the REST
+    Service have been discussed in detail. For example, we''ll need to add: spring-security-web
+    and spring-security-config - all of these have also been covered in the Maven
+    for Spring Security tutorial.
+
+
+    It''s worth paying close attention to how the Maven will resolve the older Spring
+    dependencies - the resolution strategy will start causing problems once the security
+    artifacts are added to the pom. To address this problem, some of the core dependencies
+    will need to be overridden in order to keep them at the right version.
+
+
+    # 5. Conclusion
+
+
+    This section covered the basic security configuration and implementation for a
+    RESTful Service using Spring Security 3.1, discussing the web.xml, the security
+    configuration, the HTTP status codes for the authentication process and the Maven
+    resolution of the security artifacts.
+
+
+    ![](img/9e952c1884adb105358b0d748e0b42fd_31_0.png)'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: Building a REST API with Spring4
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "Building a REST API with Spring4\n\n1. Overview\n\n# 4: SPRING SECURITY BASIC\
+    \ AUTHENTICATION\n\n# 1. Overview\n\nThis section shows how to set up, configure\
+    \ and customize Basic Authentication with Spring. We're going to build on this\
+    \ simple Spring MVC example, and secure the UI of the MVC application with the\
+    \ Basic Auth mechanism provided by Spring Security.\n\n# 2. The Spring Security\
+    \ Configuration\n\nThe Configuration for Spring Security is still XML:\n\n```\n\
+    <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<beans xmlns=\"http://www.springframework.org/schema/security\"\
+    \nxmlns:xsi=\"http://www.w3.org/2001/XML-Schema-instance\"\nxmlns:beans=\"http://www.springframework.org/schema/beans\"\
+    \nsi:schemaLocation=\"http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd\
+    \ http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd\"\
+    >\n\n  <http use-expression=\"true\">\n    <intercept-url pattern=\"/**\" access=\"\
+    isAuthenticated()\" />\n  </http>\n\n  <http-basic />\n</http>\n\n  <authentication-manager>\n\
+    \    <authentication-provider>\n      <user-service>\n        <user name=\"user1\"\
+    \ password=\"userPass\" authorities=\"ROLE_USER\" />\n      </user-service>\n\
+    \    </authentication-provider>\n  </authentication-manager>\n\n</beans>\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'There is of course the option of Java based configuration as well.
+
+
+    What is relevant here is the <http-basic> element inside the main <http> element
+    of the configuration - this is enough to enable Basic Authentication for the entire
+    application. The Authentication Manager is not the focus of this section, so we
+    are using an in memory manager with the user and password defined in plaintext.
+
+
+    The *web.xml* of the web application enabling Spring Security has already been
+    discussed in the previous section.
+
+
+    # 3. Consuming The Secured Application
+
+
+    The *curl* command is our go to tool for consuming the secured application.
+
+
+    First, let''s try to request the /homepage.html without providing any security
+    credentials.
+
+
+    ```
+
+    curl -i http://localhost:8080/spring-security-mvc-basic-auth/homepage.html
+
+    ```
+
+
+    We get back the expected 401 Unauthorized and the Authentication Challenge:
+
+
+    ```
+
+    HTTP/1.1 401 Unauthorized
+
+    Server: Apache-Coyote/1.1
+
+    Set-Cookie: JSESSIONID=E5ABD3C16B65A007FAAE619; Path=/spring-security-mvc-basic-auth/;
+    HttpOnly
+
+    WWW-Authenticate="Spring Security Application"
+
+    Content-Type: text/html;charset=utf-8
+
+    Content-Length: 1061
+
+    Date: Wed, 29 May 2013 15:14:08 GMT
+
+    ```
+
+
+    The browser would interpret this challenge and prompt us for credentials with
+    a simple dialog, but since we''re using *curl*, this isn''t the case.
+
+
+    Now, let''s request the same resource - the homepage – **provide the credentials**
+    to access it as well:
+
+
+    ```
+
+    curl -i user1:user1Pass http://localhost:8080/spring-security-mvc-basic-auth/homepage.html
+
+    ```
+
+
+    Now, the response from the server is **200 OK** along with a *Cookie*.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Building a REST API with Spring4
+
+
+    # 4. Further Configuration – The Entry Point
+
+
+    HTTP/1.1 200 OK
+
+    Server: Apache-Coyote/1.1
+
+    Set-Cookie: JSESSIONID=301225C7AE7C7B40892887389996785D; Path=/security-mvc-basic-auth/;
+    HttpOnly
+
+    Content-Type: text/html;charset=ISO-8859-1
+
+    Content-Language: en-US
+
+    Content-Length: 90
+
+    Date: Wed, 29 May 2013 15:19:38 GMT
+
+
+    From the browser, the application can be consumed normally - the only difference
+    is that a login page is no longer a hard requirement since all browsers support
+    Basic Authentication and use a dialog to prompt the user for credentials.
+
+
+    # 4. Further Configuration – The Entry Point
+
+
+    By default, the BasicAuthenticationEntryPoint provisioned by Spring Security returns
+    a full html page for a 401 Unauthorized response back to the client. This html
+    representation of the error renders well in a browser, but it is not well suited
+    for other scenarios, such as a REST API where a json representation may be preferred.
+
+
+    The namespace is flexible enough for this requirement as well – to address this
+    – the entry point can be overridden:
+
+
+    ```
+
+    <http-basic entry-point-ref="myBasicAuthenticationEntryPoint" />
+
+    ```
+
+
+    The new entry point is defined as a standard bean:'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n```\n@Component\npublic class MyBasicAuthenticationEntryPoint\
+    \ extends BasicAuthenticationEntryPoint {\n\n    @Override\n    public void doAuthenticate(HttpServletRequest\
+    \ request, HttpServletResponse response, AuthenticationException auth)\n     \
+    \   throws IOException, ServletException {\n        response.addHeader(\"WWW-Authenticate\"\
+    , \"Basic realm=\" + getRealmName() + \"\\\");\n        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);\n\
+    \        PrintWriter writer = response.getWriter();\n        writer.println(\"\
+    HTTP Status 401 - \" + auth.getMessage());\n    }\n\n    @Override\n    public\
+    \ void afterPropertiesSet(PropertiesSet set) throws Exception {\n        setRealmName(\"\
+    Baelung\");\n        super.afterPropertiesSet(set);\n    }\n}\n```\n\nBy writing\
+    \ directly to the HTTP Response we now have full control over the format of the\
+    \ response body.\n\n# 5. The Maven Dependencies\n\nThe Maven dependencies for\
+    \ Spring Security have been discussed before in the Spring Security with Maven\
+    \ article - we will need both spring-security-web and spring-security-config available\
+    \ at runtime."
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# 6. Conclusion
+
+
+    In this example we secured the existing REST application with Spring Security
+    and Basic Authentication. We discussed the XML configuration and we consumed the
+    application with simple curl commands. Finally took control of the exact error
+    message format - moving from the standard HTML error page to a custom text or
+    json format.
+
+
+    The implementation of this section can be found in the github project - this is
+    an Eclipse based project, so it should be easy to import and run as it is. When
+    the project runs locally, the sample html can be accessed at:
+
+
+    ```
+
+    http://localhost:8080/spring-security-mvc-basic-auth/homepage.html
+
+    ```'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '![](img/9e952c1884adb105358b0d748e0b42fd_38_0.png)'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# 5: SPRING SECURITY DIGEST AUTHENTICATION\n\n#  1. Overview\n\nThis section\
+    \ illustrates how to set up, configure and customize Digest Authentication with\
+    \ Spring. Similar to the previous section about Basic Authentication, we're going\
+    \ to built on top of the Spring REST Service from the previous sections, and secure\
+    \ the application with the Digest Auth mechanism provided by Spring Security.\n\
+    \n# 2. The Security XML Configuration\n\nFirst thing to understand about the configuration\
+    \ is that, while Spring Security does have full out of the box support for the\
+    \ Digest authentication mechanism, this support is **not as well integrated into\
+    \ the namespace** as Basic Authentication was.\n\nIn this case, we need to manually\
+    \ define the raw beans that are going to make up the configuration - the *DigestAuthenticationFilter*\
+    \ and the *DigestAuthenticationEntryPoint*.\n\n```\n<?xml version=\"1.0\" encoding=\"\
+    UTF-8\"?>\n<beans xmlns=\"http://www.springframework.org/schema/security\"\n \
+    \    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n     xmlns:beans=\"\
+    http://www.springframework.org/schema/beans\"\n     xsi:location=\"http://www.springframework.org/schema/security\n\
+    http://www.springframework.org/schema/security/spring-security-3.1.xsd\nhttp://www.springframework.org/schema/beans\n\
+    http://www.springframework.org/schema/beans/spring-beans-3.2.xsd\">\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 2. The Security XML Configuration\n\
+    \n```\n<beans:bean id=\"digestFilter\"\n  class=\"org.springframework.security.web.authentication.DigestAuthenticationFilter\"\
+    >\n  <property name=\"userDetails\" ref=\"userService\" />\n  <property name=\"\
+    authenticationEntryPoint\" ref=\"digestEntryPoint\" />\n</beans:bean>\n<beans:bean\
+    \ id=\"digestEntryPoint\"\n  class=\"org.springframework.security.web.authentication.DigestAuthenticationEntryPoint\"\
+    >\n  <property name=\"realName\" value=\"Realm via Digest Authentication\" />\n\
+    \  <property name=\"key\" value=\"acegi\" />\n</beans:bean>\n\n<!-- the security\
+    \ namespace configuration -->\n<http url-expressions=\"true\" point-ref=\"digestEntryPoint\"\
+    >\n  <intercept-url pattern=\"/*\" access=\"isAuthenticated(j)\"/>\n</http>\n\n\
+    <custom-filter ref=\"digestFilter\" after=\"BASIC_AUTH_FILTER\" />\n\n<authentication-manager>\n\
+    \  <authentication-provider>\n    <user-service id=\"userService\">\n      <user\
+    \ name=\"user1\" password=\"userPass\" authorities=\"ROLE_USER\" />\n    </user-service>\n\
+    \  </authentication-provider>\n</authentication-manager>\n\n<beans:beans>\n```\n\
+    \nNext, we need to integrate these beans into the overall security configuration\
+    \ – and in this case, the namespace is still flexible enough to allow us to do\
+    \ that.\n\nThe first part of this is to pointing the custom entry point bean,\
+    \ via the entry-point-ref attribute of the main <http> element.\n\nThe second\
+    \ part is **adding the newly defined digest filter into the security filter chain**.\
+    \ Since this filter is functionally equivalent to the *BasicAuthenticationFilter*,\
+    \ we are using the same position in the chain – this is specified by the BASIC_AUTH_FILTER\
+    \ alias in the overall Spring Security Standard Filters.\n\nFinally, notice that\
+    \ the Digest Filter is configured to **point to the user service bean** – and\
+    \ here, the namespace is again very useful as it allows us to specify a bean name\
+    \ for the default user service created by the \\<user-service>* element:\n\n```\n\
+    <user-service id=\"userService\">\n```"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# 3. Consuming the Secured Application
+
+
+    We''re going to use the `curl command` to consume the secured application and
+    understand how a client can interact with it.
+
+
+    Let''s start by requesting the homepage - **without providing security credentials**
+    in the request:
+
+
+    ```
+
+    curl -i http://localhost/spring-security-mvc-digest-auth/homepage.html
+
+    ```
+
+
+    As expected, we get back a response with a 401 Unauthorized status code:
+
+
+    ```
+
+    HTTP/1.1 401 Unauthorized
+
+    Server: Apache-Coyote/
+
+    Set-Cookie: JSESSIONID=CF0233C; Path=/spring-security-mvc-digest-auth/; HttpOnly
+
+    WWW-Authenticate: Digest Realm via Digest Authentication", qop="auth", nonce="MTM3M30zODE2Nt3GToC3MmtxN2JJKOWYYzXtc4MdzMzZmIn2QYm0ZT0UN2RKZg=""
+
+    Content-Type: text/html; charset=utf-8
+
+    Content-Length: 1061
+
+    Date: Fri, 12 Jul 2013 14:04:25 GMT
+
+    ```
+
+
+    If this request was sent by the browser, the authentication challenge would prompt
+    the user for credentials using a simple user/password dialog.
+
+
+    Let''s now **provide the correct credentials** and send the request again:
+
+
+    ```
+
+    curl -i --user user1:Pass http://localhost/spring-security-mvc-digest-auth/homepage.html
+
+    ```
+
+
+    **Notice** that we are enabling Digest Authentication for the `curl` command via
+    the `-digest` flag.
+
+
+    The first response from the server will be the same – the **401 Unauthorized**
+    – but the challenge will be intercepted and acted upon a second request – which
+    will succeed with a **200 OK**.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Building a REST API with Spring 4
+
+
+    # 4. The Maven Dependencies
+
+
+    ```
+
+    HTTP/1.1 401 Unauthorized
+
+    Server: Apache-Coyote/1.1
+
+    Set-Cookie: SESSIONID-A5661ED0...; Path=/spring-security-mvc-digest-auth/; HttpOnly
+
+    WWW-Authenticate: Digest realm=''Contacts Realm via Digest Authentication'', qop="auth",
+
+    MTMMzYxQyOgtOTcMzIz4MOWQGUYzQgYmZWRIJMDQZZWKOA==
+
+    Content-Type: text/html;charset=utf-8
+
+    Content-Length: 101
+
+    Date: Fri, 12 Jul 2013 14:15:29 GMT
+
+
+    HTTP/1.1 200 OK
+
+    Server: Apache-Coyote/1.1
+
+    Set-Cookie: SESSIONID-55F996B...; Path=/spring-security-mvc-digest-auth/; HttpOnly
+
+    Content-Type: text/html;charset=ISO-8859-1
+
+    Content-Language: en-US
+
+    Content-Length: 39
+
+    Date: Fri, 12 Jul 2013 14:15:29 GMT
+
+
+    <html>
+
+    <head></head>
+
+    <body>
+
+    <h1>This is the homepage</h1>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    A final note on this interaction is that a client preemptively send the correct
+    Authorization header with the first request, and thus entirely avoid the server
+    security challenge and the second request.
+
+
+    # 4. The Maven Dependencies
+
+
+    The security dependencies are discussed in depth in the Spring Security Maven
+    tutorial. In short, we will need to define spring-security-web and spring-security-config
+    as dependencies in our pom.xml.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# 5. Conclusion
+
+
+    In this section we introduce security into a simple Spring REST API by leveraging
+    the Digest Authentication support in the framework.
+
+
+    The implementation of these examples can be found in the github project - this
+    is an Eclipse based project, so it should be easy to import and run as it is.
+
+
+    When the project runs locally, the homepage html can be accessed at (or, with
+    minimal Tomcat configuration, on port 80):
+
+
+    http://localhost:8080/spring-security-mvc-digest-auth/homepage.html
+
+
+    Finally, in the next section we''ll see that there is no reason for an application
+    needs to choose between Basic and Digest authentication - both can be set up simultaneously
+    on the same URI structure, in such a way that the client can pick between the
+    two mechanisms when consuming the web application.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: Building a REST API with Spring 4
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# 6: BASIC AND DIGEST AUTHENTICATION FOR A REST SERVICE WITH SPRING SECURITY\n\
+    \n# 1. Overview\n\nThis section discusses how to **set up both Basic and Digest\
+    \ Authentication on the same URI structure of a REST API**. In the two previous\
+    \ sections, we discussed another method of securing the REST Service - form based\
+    \ authentication, so Basic and Digest authentication is the natural alternative,\
+    \ as well as the RESTful one.\n\n# 2. Configuration of Basic Authentication\n\n\
+    The main reason that form based authentication is not ideal for a RESTful Service\
+    \ is that Spring Security will make **use of Sessions** - this of course on the\
+    \ server, **the statelessness constraints in REST** is practically ignored.\n\n\
+    We'll start by setting up Basic Authentication – first we remove the old custom\
+    \ entry point and filter from the `<http>` security element:\n\n```\n<http create-session=\"\
+    stateless\">\n  <intercept-url pattern=\"/api/admin/**\" access=\"ROLE_ADMIN\"\
+    \ />\n\n<http-basic />\n</http>\n```\n\nNote how support for basic authentication\
+    \ has been added with a single configuration line - `<http-basic />` - which handles\
+    \ the creation and wiring of both the `BasicAuthenticationFilter` and the `BasicAuthenticationEntryPoint`."
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# 2.1. Satisfying the stateless constraint – getting rid of sessions
+
+
+    One of the main constrains of the RESTful architectural style is that the client-server
+    communication is fully stateless, as the original dissertation reads:
+
+
+    ### 5.1.3 Stateless
+
+    We add a constraint to the client-server interaction: communication must be stateless
+    in nature, as in the client-stateless-server (CSS) style of Section 3.4.3 (Figure
+    5-3), such that each request from client to server must contain all of the information
+    necessary to understand the request, and cannot take advantage of any stored context
+    on the server. Session state is therefore kept entirely on the client.
+
+
+    The concept of Session on the server is with a long history in Spring Security,
+    and removing it has been difficult until now, especially when configuration was
+    done by using the namespace. However, Spring Security 3.1 augments the namespace
+    configuration with a new stateless option for session creation, which effectively
+    guarantees that no session will be created or used by Spring. What this new option
+    does completely removes all session related filters from the security filter chain,
+    ensuring that authentication is performed for each request.
+
+
+    # 3. Configuration of Digest Authentication
+
+
+    Starting with the previous configuration, the filter and entry point necessary
+    to set up digest authentication will be defined as beans. Then, the digest entry
+    point created by <http-basic> behind the scenes. Finally, the custom digest filter
+    will be introduced in the security filter chain using the after semantics of the
+    security namespace to position it directly after the basic authentication filter.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 4. Supporting authentication protocols\
+    \ in the same RESTful service\n\n```\n<http create-session=\"stateless\" entry-point-ref=\"\
+    digestEntryPoint\">\n  <intercept-url pattern=\"api/admin/**\" access=\"ROLE_ADMIN\"\
+    \ />\n</http>\n\n<http-basic>\n  <custom-filter ref=\"digestFilter\" after=\"\
+    BASIC_AUTH_FILTER\" />\n</http>\n\n<bean id=\"digestFilter\" class=\"org.springframework.security.web.authentication.DigestFilter\"\
+    >\n  <beans:property name=\"userDetailsService\" ref=\"userService\" />\n  <beans:property\
+    \ name=\"authenticationEntryPoint\" ref=\"digestEntryPoint\" />\n</beans:bean>\n\
+    \n<bean id=\"digestEntryPoint\" class=\"org.springframework.security.web.authentication.DigestAuthenticationEntryPoint\"\
+    >\n  <beans:property name=\"realmName\" value=\"Contacts Realm via Digest Authentication\"\
+    \ />\n  <beans:property name=\"key\" value=\"acegi\" />\n</beans:bean>\n\n<authentication-manager>\n\
+    \  <authentication-provider>\n    <user-service id=\"userService\" />\n    <user\
+    \ name=\"eparasiv\" password=\"eparasiv\" authorities=\"ROLE_ADMIN\" />\n    <user\
+    \ name=\"user\" password=\"user\" authorities=\"ROLE_USER\" />\n  </authentication-provider>\n\
+    </authentication-manager>\n```\n\nUnfortunately there is no support in the security\
+    \ namespace to automatically configure the digest authentication the way basic\
+    \ authentication can be configured with <http-basic>. Because of that, the necessary\
+    \ beans had to be defined and wired manually into the security configuration.\n\
+    \n# 4. Supporting authentication protocols in the same RESTful service\n\nBasic\
+    \ or Digest authentication can be easily implemented in Spring Security 3.x; it\
+    \ is supporting both of them for the same RESTful web service, on the same URI\
+    \ mappings introduces a new level of complexity in the configuration and testing\
+    \ of the service."
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# 4.1. Anonymous request
+
+
+    With both basic and digest filters in the security chain, the way a anonymous
+    request – a request containing no authentication credentials (Authorization HTTP
+    header) is processed by Spring Security is the two authentication filters find
+    no credentials and will continue execution of the filter chain. Then, seeing how
+    the request wasn''t authenticated, an AccessDeniedException is thrown and caught
+    in the ExceptionTranslationFilter, which commences the digest entry point, prompting
+    the client for credentials.
+
+
+    The responsibilities of both basic and digest filters are very narrow – they will
+    continue to execute the security filter chain if they are unable to identify the
+    type of authentication credentials in the request. It is because of that Spring
+    Security can have the flexibility to be configured with support for multiple authentication
+    protocols on the same URI.
+
+
+    When a request is containing the correct authentication credentials – either basic
+    or digest – that protocol will be rightly used. However, for an anonymous request,
+    the client will get prompted only for digest authentication credentials. This
+    is because the digest entry point is configured as the main and single entry point
+    of the Spring Security chain; as such digest authentication can be considered
+    the default.
+
+
+    # 4.2. Request with authentication credentials
+
+
+    A request with credentials for Basic authentication will be identified by the
+    Authorization header starting with the prefix “Basic”. When processing such a
+    request, the credentials will be decoded in the basic authentication filter and
+    the request will be authorized. Similarly, a request with credentials for Digest
+    authentication will use the prefix “Digest” for it’s Authorization header.
+
+
+    # 5. Testing both scenarios
+
+
+    The tests will consume the REST service by creating a new resource after authenticating
+    with either basic or digest:'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Building a REST API with Spring4
+
+
+    # 5. Testing both scenarios
+
+
+    ```
+
+    @Test
+
+    public void givenAuthenticatedByBasicAuth_whenARourcesCreated_then201IsReceived(){
+
+    // Given
+
+    // When
+
+    Response response = given()
+
+    .auth(digest).preemptively(basic(ADMIN_USERNAME, ADMIN_PASSWORD))
+
+    .contentType(HttpStatus.MIME_JSON).body(new Foo(randomAlphabetic( 6 ))
+
+    .post(paths.getFooURL());
+
+
+    // Then
+
+    assertThat(response.getStatusCode(), is( 201 ));
+
+    }
+
+    @Test
+
+    public void givenAuthenticatedByDigestAuth_whenARourcesCreated_then201IsReceived(){
+
+    // Given
+
+    // When
+
+    Response response = given()
+
+    .auth(digest).basic(ADMIN_USERNAME, ADMIN_PASSWORD))
+
+    .contentType(HttpStatus.MIME_JSON).body(new Foo(randomAlphabetic( 6 ))
+
+    .post(paths.getFooURL());
+
+
+    // Then
+
+    assertThat(response.getStatusCode(), is( 201 ));
+
+    }
+
+    ```
+
+
+    Note that the test using basic authentication adds credentials to the request
+    preemptively, regardless if the server has challenged for authentication or not.
+    This is to ensure that the server doesn''t need to challenge the client for credentials,
+    because if it did, the challenge would be for Digest credentials, since that is
+    the default.
+
+
+    # 6. Conclusion
+
+
+    This section covered the configuration and implementation of both Basic and Digest
+    authentication for a RESTful service, using mostly Spring Security 3.0 namespace
+    support as well as new features added by Spring 3.1.
+
+
+    For the full implementation, check out the github project.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: Building a REST API with Spring4
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# 7: HTTP MESSAGE CONVERTERS WITH THE SPRING FRAMEWORK
+
+
+    # 1. Overview
+
+
+    This section describes **how to Configure HttpConverter in Spring.**
+
+
+    Simply put, message converters are used to marshall and unmarshall Java Objects
+    to and from JSON, XML, etc - over HTTP.
+
+
+    # 2. The Basics
+
+
+    # 2.1. Enable Web MVC
+
+
+    The Web Application needs to be **configured with Spring MVC support** - one convenient
+    and very customizable way to do this is to use the `@EnableWebMvc` annotation:
+
+
+    ```
+
+    @EnableWebMvc
+
+    @Configuration
+
+    @ComponentScan("org.baeldung.web")
+
+    public class WebConfig extends WebMvcConfigurerAdapter {
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'Building a REST API with Spring4
+
+
+    2.2. The Default Message Converters
+
+
+    Note that this class extends WebMvcConfigurerAdapter – which will allow us to
+    change the default list of Http Converters with our own.
+
+
+    # 2.2. The Default Message Converters
+
+
+    By default, the following HttpMessageConverters instances are pre-enabled:
+
+
+    +   * ByteArrayHttpMessageConverter - converts byte arrays
+
+    * StringHttpMessageConverter - converts Strings
+
+    * ResourceHttpMessageConverter – converts org.springframework.core.io.Resource
+    for any type of octet stream
+
+    * SourceHttpMessageConverter – converts javax.xml.transform.Source
+
+    * FormHttpMessageConverter – converts form data to/from a MultiValueMap<String,
+    String>
+
+    * Jaxb2RootElementHttpMessageConverter – converts Java objects to/from XML (added
+    only if JAXB2 is present on the classpath)
+
+    * MappingJackson2HttpMessageConverter – converts JSON (added only if Jackson 2
+    is present on the classpath)
+
+    * MappingJacksonHttpMessageConverter – converts JSON (added only if Jackson is
+    present on the classpath)
+
+    * AtomFeedHttpMessageConverter – converts Atom feeds (added only if Rome is present
+    on the classpath)
+
+    * RssChannelHttpMessageConverter – converts RSS feeds (added only if Rome is present
+    on the classpath)
+
+
+    Page 53 / 113'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# 3. Client-Server Communication – JSON only
+
+
+    # 3.1. High Level Content Negotiation
+
+
+    Each HttpMessage implementation has one or several associated MIME Types.
+
+
+    When receiving a new request, Spring will **use of the “Accept” header to determine
+    the media type** that it needs to respond with.
+
+
+    It will then try to find a registered converter that is capable of handling that
+    specific media type – and it will use to **convert the entity** and send back
+    the response.
+
+
+    The process is similar for receiving a request which contains JSON information
+    – the framework will **use the “Content-Type” header to determine the media**
+    type of the request body.
+
+
+    It will then search for a HttpMessageConverter that can **convert the body** sent
+    by the client to a Java Object.
+
+
+    Let’s clarify this with a **quick example:**
+
+
+    +   - the Client sends a GET request to /foo with the **Accept** header set to
+    *application/json* – to get all *Foo* resources as Json
+
+    - the Foo Controller is hit and returns the corresponding Foo Java entities
+
+    - Spring then uses one of the Jackson message converters to marshall the entities
+    to json
+
+
+    Let’s now look at the specifics of how this works – and how we should leverage
+    the @ResponseBody and @RequestBody annotations.
+
+
+    # 3.2. @ResponseBody
+
+
+    @ResponseBody on a Controller method indicates to Spring that **the return value
+    of the method** is serialized directly to the body of the HTTP Response. As discussed
+    above, the “Accept” header specified by the Client will be used to choose the
+    appropriate Http Converter to marshall the entity.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# Building a REST API with Spring\n\nLet's look at a simple example:\n\n```\n\
+    @RequestMapping(method=RequestMethod.GET, value=\"/foos/{id}\")\npublic @ResponseBody\
+    \ Foo findById(@PathVariable long id) {\n    return fooService.get(id);\n}\n```\n\
+    \nNow, the client will specify the \"Accept\" header to application/json in the\
+    \ request - example curl command:\n\n```\ncurl --header \"Accept: application/json\"\
+    \ http://localhost:8080/spring-rest/foos/1\n```\n\nThe Foo class:\n\n```\npublic\
+    \ class Foo {\n    private long id;\n    private String name;\n}\n```\n\nAnd the\
+    \ Http Response Body:\n\n```\n{\n    \"id\": 1,\n    \"name\": \"Paul\",\n}\n\
+    ```\n\n# 3.3. @RequestBody\n\n@RequestBody is used on the argument of a Controller\
+    \ method - it indicates to Spring that the body of the HTTP Request is deserialized\
+    \ to that particular Java entity. As discussed previously, the “Content-Type”\
+    \ header specified by the Client will be used to determine the appropriate converter\
+    \ for this."
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "Let's look at an example:\n\n```\n@RequestMapping(method=RequestMethod.PUT,\
+    \ value=\"/foo/{id}\")\npublic @ResponseBody void updateFoo(@RequestBody Foo foo,\
+    \ @PathVariable String id) {\n    fooService.update(foo);\n}\n```\n\nNow, let's\
+    \ consume this with a JSON object - we're specifying \"Content-Type\" to be application/json.\n\
+    \n```\ncurl -i X PUT \"Content-Type: application/json\" \\n-d '{\"id\":\"83\"\
+    ,\"name\":\"Klik\"}' http://localhost:8080/spring-rest/foo/1\n```\n\nWe get back\
+    \ 200 OK – a successful response:\n\n```\nHTTP/1.1 200 OK\nServer: Apache-Coyote/1.1\n\
+    Content-Length: 0\nDate: Fri, 10 Jan 2014 11:18:54 GMT\n```\n\n# 4. Custom Converters\
+    \ Configuration – adding XML Support\n\nWe can customize the message converters\
+    \ by extending the WebMvcConfigurer class and overriding the configureMessageConverters\
+    \ method:\n\n```\n@EnableWebMvc\n@Configuration\n@ComponentScan(\"org.baeldung.web\"\
+    )\npublic class WebMMvcConfig extends WebMvcConfigurerAdapter {\n\n@Override\n\
+    public void configureMessageConverters(List<? extends HttpMessageConverter> converters)\
+    \ {\n    messageConverters.add(createXmlConverter());\n    messageConverters.add(new\
+    \ MappingJackson2HttpMessageConverter());\n\n    super.configureMessageConverters(converters);\n\
+    }\n```"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# Building a REST API with Spring 4. Custom Converters Configuration – adding\
+    \ XML Support\n\n```\nprivate HttpMessageConverter<Object> createXmlHttpMessage()\
+    \ {\n  MarshallingHttpMessage xmlConverter = \n    new MarshallingHttpMessage();\n\
+    \n  XStreamMarshall xstreamMarshall = new XStreamMarshall();\n  xmlConverter.setSerializer(xstreamMarshall);\n\
+    \  xmlConverter.setUnmarshaller(xstreamMarshall);\n\n  return xmlConverter;\n\
+    }\n```\n\nNote that the XStream library now needs to be present on the classpath.\n\
+    \nAlso be aware by extending this support class, we are losing the default message\
+    \ converters which were previously pre-registered – we only have what we define.\n\
+    \nLet's go over this example – we are creating a new converter – the MarshallingHttpMessageConverter\
+    \ and we're using the Spring XStream support to configure it. This allows a great\
+    \ deal of flexibility since we're working with the low level APIs of the underlying\
+    \ marshalling framework – and in case XStream – we can configure however we want.\n\
+    \nWe can of now do the same for Jackson – by defining our Mapping.Jackson2HttpMessageConverter\
+    \ we can now use a custom ObjectMapper on this converter and has been configured\
+    \ as we need.\n\nIn this case XStream the selected marshaller/unmarshaller implementation,\
+    \ but others like CastorMarshall can be used – refer to Spring api documentation\
+    \ for full list of available marshallers.\n\nAt this point – with XML enabled\
+    \ on the back end – we can consume the API with XML Representations:\n\n```\n\
+    curl --header \"Accept: application/xml\" http://localhost:8080/spring-rest/foos/1\n\
+    ```"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# 5. Using Spring’s RestTemplate with Http Message Converters\n\nAs well as\
+    \ the server side, HTTP Message Conversion can be configured in the client side\
+    \ on the Spring RestTemplate.\n\nWe're going to configure the template with the\
+    \ \"Accept\" and \"Content-Type\"headers when appropriate and we're going to try\
+    \ to consume the REST API with full marshalling and unmarshalling of the Foo Resource\
+    \ – both with JSON and with XML.\n\n# 5.1. Retrieving the Resource with no Accept\
+    \ Header\n\n```\n@Test\npublic void testGetFoo() {\n  String uri = \"http://localhost:8080/spring-rest/foos/{id}\"\
+    ;\n  RestTemplate restTemplate = new RestTemplate();\n  Foo foo = restTemplate.getForObject(uri,\
+    \ Foo.class,\"1\");\n  assertEquals(new Integer(1), foo.getId());\n}\n```\n\n\
+    # 5.2. Retrieving a Resource with application/xml Accept header\n\nLet's now explicitly\
+    \ retrieve the Resource as an XML Representation – we're going to define a set\
+    \ of Converters – same way we did previously – and we're going to set these on\
+    \ the RestTemplate."
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 5.3. Retrieving a Resource with application/json\
+    \ Accept header\n\nBecause we're consuming XML, we're going to use the same XStream\
+    \ marshaller as before:\n\n```\n@Test\npublic void ConsumingXml_whenReadingTheFoo_thenCorrect()\
+    \ {\n    String URI = BASE_URI + \"foos/{id}\";\n    RestTemplate restTemplate\
+    \ = new RestTemplate();\n    restTemplate.setMessageConverters(getMessageConverters());\n\
+    \n    HttpHeaders headers = new HttpHeaders();\n    headers.setAccept(Arrays.asList(MediaType.APPLICATION_XML));\n\
+    \    HttpEntity<Foo> foo = new HttpEntity<>(headers);\n\n    ResponseEntity<Foo>\
+    \ response = \n        restTemplate.exchange(URI, HttpMethod.GET, foo, Foo.class,\
+    \ \"1\");\n    Foo resource = response.getBody();\n    assertThat(resource, notNullValue());\n\
+    }\n\nprivate List<HttpMessageConverter<?>> getMessageConverters() {\n    XStreamMarshall\
+    \ marshaller = new XStreamMarshaller();\n    MarshallingHttpMessageConverter marshallingConverter\
+    \ = \n        new MarshallingHttpMessageConverter(marshaller);\n    converters.add(marshaller);\n\
+    \    return converters;\n}\n```\n\n```\nList<HttpMessageConverter<?>> converters\
+    \ = new ArrayList<HttpMessageConverter<?>>();\nreturn converters;\n```\n\n# 5.3.\
+    \ Retrieving a Resource with application/json Accept header\n\nSimilarly, let's\
+    \ consume the REST API by asking for JSON:\n\n```\n@Test\npublic void ConsumingJson_whenReadingTheFoo_thenCorrect()\
+    \ {\n    String URI = BASE_URI + \"foos/{id}\";\n\n    RestTemplate restTemplate\
+    \ = new RestTemplate();\n    restTemplate.setMessageConverters(getMessageConverters());\n\
+    \n    HttpHeaders headers = new HttpHeaders();\n    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));\n\
+    \    HttpEntity<Foo> foo = new HttpEntity<>(headers);\n\n    ResponseEntity<Foo>\
+    \ response = \n        restTemplate.exchange(URI, HttpMethod.GET, foo, Foo.class,\
+    \ \"1\");\n    Foo resource = response.getBody();\n}\n```"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "Building a REST API with Spring4\n\n5.4. Update a Resource with XML Content-Type\n\
+    \n```\nassertThat(resource, notNullValue());\nprivate List<HttpMessageConverter<?>>\
+    \ getMessageConverters() {\n    List<HttpMessageConverter<?>> converters = new\
+    \ ArrayList<HttpMessageConverter<?>>();\n    converters.add(new MappingJackson2HttpMessageConverter());\n\
+    \    return converters;\n}\n```\n\n# 5.4. Update a Resource with XML Content-Type\n\
+    \nFinally, let's also send JSON to the REST API and specify the media type of\
+    \ that data via the Content-Type header:\n\n```\n@Test\npublic void givenConsumingXml_whenWritingTheFoo_thenCorrect()\
+    \ {\n    String URI = BASE_URI + \"foo/{id}\";\n    RestTemplate restTemplate\
+    \ = new RestTemplate();\n    restTemplate.setMessageConverters(getMessageConverters());\n\
+    \n    Foo resource = new Foo(4, \"json\");\n    HttpHeaders headers = new HttpHeaders();\n\
+    \    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));\n    headers.setContentType(MediaType.APPLICATION_XML);\n\
+    \    HttpEntity<Foo> entity = new HttpEntity<>(resource, headers);\n\n    ResponseEntity<Foo>\
+    \ response = \n        restTemplate.exchange(URI, HttpMethod.PUT, entity, Foo.class,\
+    \ resource.getId());\n    Foo fooResponse = response.getBody();\n\n    Assert.assertEquals(resource.getId(),\
+    \ fooResponse.getId());\n}\n```\n\nWhat's we interested in here is that we're\
+    \ able to mix the media types - we are sending XML data but we're waiting for\
+    \ JSON data back from the server. This shows just how powerful the Spring conversion\
+    \ mechanism is."
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'Building a REST API with Spring4
+
+
+    5.4. Update a Resource with XML Content-Type
+
+
+    # 6. Conclusion
+
+
+    In this section, we looked at how Spring MVC allows us to specify and fully customize
+    Http Message Converters to automatically marshall/unmarshall Java Entities to
+    and from XML or JSON. This is of course a simplistic definition, and there is
+    so much more that the message conversion mechanism can do - as we can see from
+    the last test example.
+
+
+    We have also looked at how to leverage the same powerful mechanism with the RestTemplate
+    client - leading to a fully type-safe way of consuming the API.
+
+
+    This is an Eclipse based project, so it should be easy to import and run as it
+    is.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '![](img/9e952c1884adb105358b0d748e0b42fd_61_0.png)'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# 8: REST API DISCOVERABILITY AND HATEOAS
+
+
+    # 1. Overview
+
+
+    The section will focus on Discoverability of the REST API, HATEOAS and practical
+    scenarios driven by tests.
+
+
+    # 2. Why make the API Discoverable
+
+
+    Discoverability of an API is a topic that doesn''t get enough well deserved attention,
+    and as a consequence very few APIs get it right. It is also something that, if
+    done correctly, can make the API not only RESTful and usable but also elegant.
+
+
+    To understand discoverability you need to understand that constraint that is Hypermedia
+    As The Engine Of Application State (HATEOAS); this constraint of a REST API is
+    about full discoverability of actions/transitions on a Resource from Hypermedia
+    (Hypertext really), and the only driver of application state.
+
+
+    If interaction is to be driven by the API through the conversation itself, concretely
+    via Hypertext, then there can be no documentation, as would coerce the client
+    to make assumptions that are in fact out of the context of the API.
+
+
+    In conclusion, the server should be descriptive enough to instruct the client
+    how to use the API via Hypertext only, which, in the case of a HTTP conversation,
+    may be the Link header.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "Building a REST API with Spring4\n\n3. Discoverability Scenarios (Driven by\
+    \ tests)\n\n# 3. Discoverability Scenarios (Driven by tests)\n\nSo does it mean\
+    \ for a REST service to be discoverable? Throughout this section, we will test\
+    \ individual traits of discoverability using Junit, rest-assured and Hamcrest.\
+    \ Since the REST Service has been previously secured, each test first need to\
+    \ authenticate before consuming the API.\n\n# 3.1. Discover the valid HTTP methods\n\
+    \nWhen a REST Service is consumed with an invalid HTTP method, the response should\
+    \ be 405 METHOD NOT ALLOWED; in addition, it should also help the client discover\
+    \ the valid HTTP methods that are allowed for that particular Resource, using\
+    \ the Allow HTTP Header in the:\n\n```\n@Test\npublic void\nwhenPOSTIsSentToValidResource_thenAllowHeaderListsTheAllowedActions()\
+    \ {\n  // Given\nString uriOfExistingResource = restTemplate.createResource();\n\
+    \n  // When\nResponse res = givenAuth().post(uriOfExistingResource);\n\n  // Then\n\
+    String allowHeader = res.getHeader(HttpHeaders.ALLOW);\nasertThat(allowHeader,\
+    \ AnyOf<String> anyOf(\ncontainsString(\"GET\"), containsString(\"PUT\"), containsString(\"\
+    DELETE\"))));\n}\n```\n\n# 3.2. Discover the URI of the newly created Resource\n\
+    \nThe operation of creating a new Resource should always include the URI of the\
+    \ newly created resource in the response, using the Location HTTP Header. If the\
+    \ client does a GET on that URI, the resource should be available:"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 3.3. Discover the URI to GET All Resources\
+    \ of type\n\n```\n@Test\npublic void whenResourcesCreated_thenUriOfTheNewlyCreatedResourcesDiscoverable()\
+    \ {\n  // When\n  Foo newResource = new Foo(randomAlphabetic(6));\n  Response\
+    \ resp = givenAuth(Auth()).contentType(\"application/json\")\n    body(unserializedResource).post(fooURI);\n\
+    \  String uriOfNewResource = resp.getHeader(HttpHeaders.LOCATION);\n\n  // Then\n\
+    \  Response response = givenAuth(Auth()).header(HttpHeaders.ACCEPT, \"application/json\"\
+    )\n    get(uriOfNewResource);\n\n  Foo resourceFromServer = response.body(Foo.class);\n\
+    \  assertThat(newResource, equalTo(resourceFromServer));\n}\n```\n\nThe test follows\
+    \ a simple scenario: a new *Foo* is created and the HTTP response is used to **discover\
+    \ the URI** where the Resource is now accessible. The tests then goes one step\
+    \ further and does a GET on that URI to retrieve the resource and compares it\
+    \ to the original, and make sure that it has been correctly persisted.\n\n# 3.3.\
+    \ Discover the URI to GET All Resources of type\n\nWhen we GET any particular\
+    \ *Foo* resource, we should be able to **discover** what we can do next: we can\
+    \ list all the available *Foo resources*. Thus, the operation of retrieving a\
+    \ resource should always include in its response the URI to get all the resources\
+    \ of that type, making use of the **Link** header:\n\n```\n@Test\npublic void\
+    \ whenResourcesRetrieved_thenUriToGetAllResourcesIsDiscoverable() {\n  // When\n\
+    \  String uriOfExistingResource = createAsUri();\n\n  // When\n  Response getResponse\
+    \ = givenAuth(Auth()).get(uriOfExistingResource);\n\n  // Then\n  String uriToAllResources\
+    \ = HTTPLinkHeaderUtil\n    .extractUriByRel(getResponse.getHeader(\"Link\"),\
+    \ \"collection\");\n\n  Response getAllResponse = givenAuth(Auth()).get(uriToAllResources);\n\
+    \  assertThat(getAllResponse.getStatusCode(), is(200));\n}\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'Building a REST API with Spring4
+
+
+    4. Other potential discoverable URIs and microformats
+
+
+    Note that the full low level code for extractURIByRel - responsible for extracting
+    the URIs by rel relation is shown here.
+
+
+    This test covers the thorny subject of Link Relations in REST: the URI to retrieve
+    all resources uses the rel="collection" semantics.
+
+
+    This type of link relation has not yet been standardized, but is already in use
+    by several microformats and proposed for standardization. Usage of non-standard
+    link relations opens the discussion about microformats and richer semantics in
+    RESTful servers.
+
+
+    # 4. Other potential discoverable URIs and microformats
+
+
+    Other URIs could potentially be discovered via the Link header, but there is only
+    so much the existing types of link relations allow without moving to a richer
+    semantic markup such as defining custom link relations, the Atom Publishing Protocol
+    or microformats.
+
+
+    For example the client should be able to discover the URI to create new Resources
+    when doing a GET on a specific Resource; unfortunately there is no link relation
+    to model semantics. Luckily it is standard practice that the URI for creation
+    is the same as the URI to GET all resources of that type, with the only difference
+    being the POST HTTP method. Forms can also be used to achieve this.
+
+
+    * Note'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# 5. Conclusion
+
+
+    We have seen how a REST API is fully discoverable from the root and with no prior
+    knowledge - meaning the client is able to navigate it by doing a GET on the root.
+    Moving forward, all state changes are driven by the client using the available
+    and discoverable transitions that the REST API provides in representations (hence
+    Representational State Transfer).
+
+
+    This section covered the some of the traits of discoverability in the context
+    of a REST web service, discussing HTTP method discovery, the relation between
+    create and get, discovery of the URI to get all resources, etc.
+
+
+    The implementation of all these examples and code snippets can be found in my
+    github project - this is an Eclipse based project, so it should be easy to import
+    and run as it is.'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: Building a REST API with Spring 4
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# 9: HATEOAS FOR A SPRING REST SERVICE\n\n# 1. Overview\n\nThis section will\
+    \ focus on the implementation of discoverability in a Spring REST Service and\
+    \ on satisfying the HATEOAS constraint.\n\n# 2. Decouple Discoverability through\
+    \ events\n\nDiscoverability as a separate aspect or concern of the web layer should\
+    \ be decoupled from the controller handling the HTTP request. In order to do so,\
+    \ the Controller will fire off events for all the actions that require additional\
+    \ manipulation of the HTTP response.\n\nFirst, the events:\n\n```\npublic class\
+    \ SingleResourceRetrieved extends ApplicationEvent {\n    private HttpServletResponse\
+    \ response;\n\n    public SingleResourceRetrieved(Object source,\n        HttpServletResponse\
+    \ response) {\n        super(source);\n        this.response = response;\n   \
+    \ }\n\n    public HttpServletResponse getResponse() {\n        return response;\n\
+    \    }\n}\npublic class ResourceCreated extends ApplicationEvent {\n    private\
+    \ HttpServletResponse response;\n    private long idOfNewResource;\n\n    public\
+    \ ResourceCreated(Object source,\n        HttpServletResponse response, long idOfNewResource)\
+    \ {\n        super(source);\n```"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 2. Decouple Discoverability through\
+    \ events\n\n```\nthis.response = response;\nthis.idOfNewResource = idOfNewResource;\n\
+    }\npublic HttpServletResponse getResponse() {\n    return response;\n}\npublic\
+    \ long getIdOfNewResource() {\n    return idOfNewResource;\n}\n\n```\n\nThen,\
+    \ the Controller, with 2 simple operations - find by id and create:\n\n```\n@Controller\n\
+    @RequestMapping(value = \"/foos\")\npublic class FooController {\n\n    @Autowired\n\
+    \    private ApplicationEvent eventPublisher;\n\n    @Autowired\n    private FooService\
+    \ service;\n\n    @RequestMapping(value = \"foos/{id}\", method = RequestMethod.GET)\n\
+    \    @ResponseBody\n    public Foo findById(@PathVariable(\"id\") Long id, HttpServletResponse\
+    \ response) {\n        Foo resourceById = Preconditions.checkNotNull(service.findOne(id));\n\
+    \        eventPublisher.publishEvent(new SingleResourceRetrieved(this, resourceById));\n\
+    \        return resourceById;\n    }\n\n    @RequestMapping(method=RequestMethod.POST)\n\
+    \    @ResponseStatus(HttpStatus.CREATED)\n    public void create(@RequestBody\
+    \ Foo resource, HttpServletResponse response) {\n        Preconditions.checkNotNull(resource);\n\
+    \        Long id = service.create(resource).getId();\n        eventPublisher.publishEvent(new\
+    \ ResourceCreated(this, response));\n    }\n}\n```\n\nThese events can be handled\
+    \ by any number of decoupled listeners, each focusing on it’s particular case\
+    \ and each moving towards satisfying the overall HATEOAS constraint.\n\nThe listeners\
+    \ should be the last objects in the call stack and no direct access to them is\
+    \ necessary; as such are not public."
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# 3. Make the URI of a newly created Resource discoverable\n\nAs discussed\
+    \ in the previous section on HATEOAS, the operation of creating a new Resource\
+    \ should return the URI of that resource in the Location HTTP header of the response;\
+    \ this is returned by a listener:\n\n```\n@Component\nclass ResourceCreatedDiscoverabilityListener\n\
+    implements ApplicationListener<ResourceCreated>{\n    @Override\n    public void\
+    \ onApplicationEvent(ResourceCreated resourceCreatedEvent) {\n        Preconditions.notNull(resourceCreatedEvent);\n\
+    \n        HttpServletResponse response = resourceCreated.getResponse();\n    \
+    \    long idOfNewResource = resourceCreated.getIdOfNewResource();\n\n        addLinkHeaderOnResourceCreation(response,\
+    \ idOfNewResource);\n    }\n    void addLinkHeaderOnResourceCreation(HttpServletResponse\
+    \ response, ) {\n        Uri uri = ServletUriComponentsBuilder.fromCurrentRequest().path(\"\
+    /{idOfNewResource}\").buildAndExpand(idOfNewResource).toUri();\n        response.setHeader(\"\
+    Location\", uri.toASCIIString());\n    }\n}\n```\n\nWe are now using the ServletUriComponentsBuilder\
+    \ - this was introduced in Spring 3.1 to help with using the current Request.\
+    \ This way, we don't need to pass anything around and we can simply access this\
+    \ statically.\n\nIf the API would return ResponseEntity - we could also use the\
+    \ Location support introduced here.\n\n# 4. Get of single Resource\n\nOn retrieving\
+    \ a single Resource, the client should be able to discover the URI to get all\
+    \ Resources of that particular type:"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "Building REST API with Spring4\n\n```\n@Component\nclass SingleResourceRetrievedDiscoveryabilityListener\n\
+    implements ApplicationListener<SingleResourceRetrieved>{\n    @Override\n    public\
+    \ void onApplicationEvent(SingleResourceRetrieved resourceRetrievedEvent) {\n\
+    \        Preconditions.checkNull(resourceRetrievedEvent);\n    }\n    HttpServletResponse\
+    \ response = resourceRetrievedEvent.getResponse();\n    addLinkHeaderOnSingleResourceRetrieval(request,\
+    \ response);\n    }\n    void addLinkHeaderOnSingleResourceRetrieval(HttpServletResponse\
+    \ response) {\n        String requestURL = ServletUrlBuilder.fromCurrentRequest()\n\
+    \            .path(toLastSlash()).build().toString();\n        int positionOfLastSlash\
+    \ = requestURL.indexOf(\"/\");\n        String uriForResourceCreation = requestURL.substring(0,\
+    \ positionOfLastSlash);\n        String linkHeaderValue = LinkUtil\n         \
+    \   .createLinkHeader(uriForResourceCreation, \"collection\");\n        response.addHeader(LINK_HEADER,\
+    \ linkHeaderValue);\n    }\n}\n```\n\n**Note** the semantics of the link relation\
+    \ make use of the \"collection\" relation type, specified and used in several\
+    \ microformats, but not yet standardized.\n\nThe Link header is one of the most\
+    \ used HTTP header for the purposes of discoverability. The utility to create\
+    \ this header is simple::\n\n```\npublic final class LinkUtil {\n    public static\
+    \ String createLinkHeader(String uri, String rel) {\n        return \"<\" + uri\
+    \ + \\;rel=\"\" + rel + \"\";\n    }\n}\n```\n\n# 5. Discoverability at the Root\n\
+    \nThe root is the entry point in the entire service - it is what the client comes\
+    \ into contact when consuming the API for the first time. The HATEOAS constraint\
+    \ is to be considered and implemented throughout, then this is the place to start.\
+    \ The fact that **all main URIs of the system have to be discoverable from the\
+    \ root** shouldn't come as much of a surprise by this point."
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 5.1. Discoverability is not about changing\
+    \ URIs\n\nLet's look at the controller for this:\n\n```\n@RequestMapping(value\
+    \ = \"admin\",method = RequestMethod.GET)\n@ResponseStatus(value = HttpStatus.NO_CONTENT)\n\
+    public void adminRoot(HttpServletRequest request, HttpServletResponse response)\
+    \ {\n    String rootURI = request.getURI().toString();\n    URI fooUri = new UriTemplate(\"\
+    {rootURI}/resource\").expand(rootURI, \"foo\");\n    String linkToFoo = LinkUtil.createLinkHeader(fooUri.toASCII(),\
+    \ \"collection\");\n    response.addHeader(\"Link\", linkToFoo);\n}\n```\n\nThis\
+    \ is of course an illustration of the concept, focusing on a single, sample URI,\
+    \ for Foo Resources - a real implementation should add, similarly, URIs for all\
+    \ the Resources published to the client.\n\n# 5.1. Discoverability is not about\
+    \ changing URIs\n\nThis can be a controversial point - the one hand, the purpose\
+    \ of HATEOAS is to have the client discover the URIs of the API and not rely on\
+    \ hardcoded values. On the other hand - this is not how the web works: yes, URIs\
+    \ are discovered, but they are also bookmarked.\n\nA subtle but important distinction\
+    \ is evolution of the API - the old URIs should still work, but any client that\
+    \ will discover the API should discover the new URIs - allows the API to change\
+    \ dynamically, and good clients to work well when the API changes.\n\nIn conclusion\
+    \ - just because all URIs of the RESTful service web be considered cool URLs (and\
+    \ cool URIs don't change) - that doesn't mean that adhering to the HATEOAS constraint\
+    \ isn't extremely useful when evolving the API.\n\n# 6. Caveats of Discoverability\n\
+    \nAs some of the discussions around the previous articles state, the first goal\
+    \ of discoverability is to make minimal or no use of documentation and have the\
+    \ client learn and understand how to use the API via the responses it gets. In\
+    \ fact, this shouldn't be regarded as such a far"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'Building a REST API with Spring4
+
+
+    6. Caveats of Discoverability
+
+
+    fetched ideal – it is how we consume every new web page – without any documentation.
+    So, if the concept is more problematic in the context of REST, then it must be
+    a matter of technical implementation, not of a question of whether or not it''s
+    possible.
+
+
+    That being said, technically, we are still far from the fully working solution
+    – the specification and framework support are still evolving, and because of that,
+    some compromises may have to be made; these are nevertheless compromises and should
+    be regarded as such.
+
+
+    # 7. Conclusion
+
+
+    ![](img/9e952c1884adb105358b0d748e0b42fd_73_0.png)
+
+
+    In this section we covered the implementation of some of the traits of discoverability
+    in the context of a RESTful Service Spring MVC and touched on the concept of discoverability
+    at the root.
+
+
+    The implementation of all these examples and code snippets can be found in my
+    github project – this is an Eclipse based project, so it should be easy to import
+    and run as it is.
+
+
+    Page 74 / 113'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: Building a REST API with Spring 4
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# 10: ETAGS FOR REST WITH SPRING
+
+
+    #  1. Overview
+
+
+    This section will focus on **working with ETags in Spring**, integration testing
+    of the REST API and consumption scenarios with `curl`.
+
+
+    # 2. REST and ETags
+
+
+    From the official Spring documentation on ETag support:
+
+
+    An ETag (entity tag) is an HTTP response header returned by an HTTP/1.1 compliant
+    server used to determine change in content at a given URL.
+
+
+    ETags are used for two things – caching and conditional requests. The **ETag value
+    can be tough as a hash tag** computed out of the bytes of the Response body. Because
+    a cryptographic hash function is lowly used, even the smallest modification of
+    the body will drastically change the output and thus the value of ETag. This is
+    only for strong ETags – the protocol provide a weak ETag as well.
+
+
+    Using an `If-*` header turns a standard GET request into a conditional GET. The
+    two `If-*` headers that are using with ETags are "If-None-Match" and "If-Match"
+    – each with its own semantics as discussed later in this section.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# Building a REST API with Spring4
+
+
+    # 3. Client-Server communication with curl
+
+
+    # 3. Client-Server communication with curl
+
+
+    A simple Client-Server communication involving ETags can be broken down into the
+    steps:
+
+
+    +   - first, the Client makes a REST API call – the Response includes the ETag
+    header to be stored for future:
+
+
+    ```
+
+    curl -H "Accept: application/json" -i http://localhost:8080/rest-sec/api/resources/1
+
+    ```
+
+
+    ```
+
+    HTTP/1.1 200 OK
+
+    ETag: "f88dd058fe00490961a64f01be66a7"
+
+    Content-Type: application/json;charset=UTF-8
+
+    Content-Length: 52
+
+    ```
+
+
+    +   - next the Client requests the REST API includes the If-None-Match request
+    header with the ETag value from the previous step; if the Resource has not changed
+    on the Server, the Response will contain no body and a status code of 304 - Not
+    Modified:
+
+
+    ```
+
+    curl -H "Accept: application/json" -H "If-None-Match: "f88dd058fe00490961a64f01be66a7"
+
+    -i http://localhost:8080/rest-sec/api/resources/1
+
+    ?
+
+    ```
+
+
+    ```
+
+    HTTP/1.1 304 Not Modified
+
+    ETag: "f88dd058fe00490961a64f01be66a7"
+
+    ```
+
+
+    +   - now, before retrieving the Resource again, we will change it by performing
+    an update:
+
+
+    ```
+
+    curl --user admin@fake.com:adminpass -H "Content-Type: application/json" -
+
+    -X PUT -data "{"id":"1","name":"newRoleName2","description":"theNewDescription"
+    }
+
+    ```
+
+
+    ```
+
+    http://localhost:8080/rest-sec/api/resources/1
+
+    ```
+
+
+    ```
+
+    HTTP/1.1 200 OK
+
+    ETag: "d41d8cd98f00b204e9800998ecf8427e"
+
+    Content-Length: 0
+
+    ```'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "# Building a REST API with Spring\n\n# 4. ETag support in Spring\n\n- **finally**,\
+    \ we send out the last request to retrieve the Privilege again; keep in mind that\
+    \ it has been updated since the last time it was retrieved, so the ETag value\
+    \ should no longer work – the response will contain the new data and a new ETag,\
+    \ again, can be stored for further use:\n\n```\ncurl -H \"Accept: application/json\"\
+    \ -H \"If-None-Match: f88dd058fe004909615a64f01be66a7\" \n```\n\n```\nhttp://localhost:8080/rest-sec/api/resources/1\n\
+    ```\n\n```\nHTTP/1.1 200 OK\nETag: \"0c3b37c66770c68c0aad4cb04c3a2a11\"\nContent-Type:\
+    \ application/json;charset=UTF-8\nContent-Length: 56\n```\n\nAnd there you have\
+    \ it – ETags in the wild and saving bandwidth.\n\n# 4. ETag support in Spring\n\
+    \nOn the Spring support – to use ETag in Spring is extremely easy to set up and\
+    \ completely **transparent** for the application. The support is enabled by adding\
+    \ a simple *Filter* in the web.xml:\n\n```\n<filter>\n<filter-name>etagFilter</filter-name>\n\
+    <filter-class>org.springframework.web.filter.ShallowETagHeaderFilter</filter-class>\n\
+    </filter>\n<filter-mapping>\n<filter-name>etagFilter</filter-name>\n<url-pattern>/api/*</url-pattern>\n\
+    </filter-mapping>\n```\n\nThe filter is mapped on the same URI pattern as the\
+    \ RESTful API itself. The filter itself is the standard implementation of ETag\
+    \ since Spring 3.0.\n\nThe implementation is a **shallow** one – the ETag is calculated\
+    \ based on the response,"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 5. Testing ETags\n\nwill save bandwidth\
+    \ not server performance. So, a request that will benefit from the ETag support\
+    \ will still be processed as a standard request, consume any resource that it\
+    \ would normally consume (database connections, etc) and only before having it's\
+    \ response returned back to the client will the ETag support kick in.\n\nAt that\
+    \ point the ETag will be calculated out of the Response body and set on the Resource\
+    \ itself, if the If-None-Match header was set on the Request, it will be handled\
+    \ as well.\n\nA deeper implementation of the ETag mechanism could potentially\
+    \ provide much greater benefits – as serving some requests from the cache and\
+    \ not having to perform the computation at all – but the implementation would\
+    \ most definitely not be as simple, nor pluggable as the shallow approach described\
+    \ here.\n\n# 5. Testing ETags\n\nLet’s start simple – we need to verify that the\
+    \ response of a simple request retrieving a single Resource will actually return\
+    \ the “ETag” header:\n\n```\n@Test\npublic void givenResourceExists_whenRetrievingResource_thenETagsIsReturned()\
+    \ {\n  // Given\n  String uriOfResource = createAsUri();\n\n  // When\n  Response\
+    \ findOneResponse = RestAssured.given().header(\"Accept\", \"application/json\"\
+    ).get(uriOfResource);\n\n  // Then\n  assertNotNull(findOneResponse.getHeader(\"\
+    ETag\"));\n}\n```\n\nNext, we verify the happy path of the ETag behaviour – if\
+    \ the Request to retrieve the Resource from the server uses the correct ETag value,\
+    \ then the Resource is no longer returned.\n\n```\n@Test\npublic void givenResourceWasRetrieved_whenRetrievingAgainWithETag_thenNotModifiedReturned()\
+    \ {\n  // Given\n  String uriOfResource = createAsUri();\n  Response findOneResponse\
+    \ = RestAssured.given().header(\"Accept\", \"application/json\").get(uriOfResource);\n\
+    \  String etagValue = findOneResponse.getHeader(HttpHeaders.ETAG);\n```"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Building a REST API with Spring\n\n# 5. Testing ETags\n\n```\n// When\nResponse\
+    \ findOneResponse= RestAssured.given();\nheader(\"Accept\", \"application/json\"\
+    ).headers(\"If-None-Match\", etagValue)\nget(uriOfResource);\n\n// Then\nassertTrue(findOneResponse.getStatusCode()\
+    \ == 304);\n```\n\nStep by step:\n\n+   - a Resource is first created and then\
+    \ retrieved - the ETag value is stored for further use\n- a new retrieve request\
+    \ is sent, with this time with the \"If-None-Match\" header specifying the ETag\
+    \ value previously stored\n- on this second request, the server returns a 304\
+    \ Not Modified, since the Resource itself has not been modified between the two\
+    \ retrieval operations\n\nFinally, we verify that the Resource is changed between\
+    \ the first and second retrieval requests:\n\n```\n@Test\npublic void givenResourceWasRetrievedThenModified_whenRetrievingAgainWithETag_thenReturned()\
+    \ {\n  // Given\nString uriOfResource = createAsUri();\nResponse findOneResponse\
+    \ = RestAssured.given();\nheader(\"Accept\", \"application/json\").get(uriOfResource);\n\
+    String etagValue = findOneResponse.getHeader(HttpHeaders.ETAG);\n\n  existingResource.setName(randomAlphabetic(6));\n\
+    update(existingResource);\n\n  // When\n  Response findOneResponse = RestAssured.given();\n\
+    \  header(\"Accept\", \"application/json\").headers(\"If-None-Match\", etagValue)\n\
+    \  get(uriOfResource);\n\n  // Then\n  assertTrue(findOneResponse.getStatusCode()\
+    \ == 200);\n}\n```\n\nStep by step:\n\n+   - a Resource is first created and then\
+    \ retrieved - the ETag value is stored for further use\n- the same Resource is\
+    \ then updated\n- a new retrieve request is sent, with this time with the \"If-None-Match\"\
+    \ header specifying the"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\nETag value previously stored\n- on this\
+    \ second request, the server returns a 200 OK along with the full Resource, since\
+    \ the ETag value is no longer correct, the Resource has been updated in the meantime\n\
+    \nFinally, the last test – which is **not going to work** because the functionality\
+    \ has not yet been implemented in Spring - is the support for the If-Match HTTP\
+    \ header.\n\n```\n@Test\npublic void resourceExists_whenRetrievedWithIfMatchIncorrectETag_then412IsReceived()\
+    \ {\n  // Given\n  T existingResource = getApi().create(createNewEntity());\n\n\
+    \  // When\n  String uriResource = baseUri + \"/\" + existingResource.getId();\n\
+    \  Response findOneResponse = RestAssured.given()\n    .header(\"Accept\", \"\
+    application/json\")\n    .header(\"If-Match\", randomAlphaNumeric(8)).get(uriResource);\n\
+    \n  // Then\n  assertTrue(findOneResponse.getStatusCode() == 412);\n}\n```\n\n\
+    # Step by step:\n\n+   - a Resource is first created\n- the Resource is retrieved\
+    \ with the \"If-Match\" header specifying an incorrect ETag value - this is a\
+    \ **conditional GET request**\n- the server should return a **412 Precondition\
+    \ Failed**\n\n# 6. ETags are BIG\n\nWe have only used ETags for **read operations**\
+    \ – [RFC exists](https://example.com) trying to clarify how implementations should\
+    \ deal with ETags on **write operations** – this is not standard, but is an interesting\
+    \ read.\n\nThere are other cases where using the ETag mechanism, such as for an\
+    \ [Optimistic Locking Mechanism using Spring 3.1](https://example.com) as well\
+    \ as dealing with the [related “Lost Update Problem”](https://example.com).\n\n\
+    There are also several known [potential pitfalls and caveats](https://example.com)\
+    \ to be aware of when using ETags."
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# 7. Conclusion
+
+
+    In this section, we only scratched the surface with what''s possible with Spring
+    and ETags.
+
+
+    For a full implementation of an ETag enabled RESTful service, along with integration
+    tests verifying the ETag behavior, **check out** the github project - this is
+    an Eclipse based project, so it should be easy to import and run as it is.
+
+
+    ![](img/9e952c1884adb105358b0d748e0b42fd_81_0.png)'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: Building a REST API with Spring 4
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# 11: REST PAGINATION IN SPRING
+
+
+    # 1. Overview
+
+
+    This section will focus on the implementation of pagination in a REST API, using
+    Spring MVC and Spring Data.
+
+
+    # 2. Page as Resource vs Page as Representation
+
+
+    The first question when designing pagination in the context of a RESTful architecture
+    whether to consider the page as an actual Resource or a Representation of Resources.
+
+
+    Treating the page itself as a resource host introduces a host of problems such
+    as no longer being able to uniquely identify resources between calls. This, coupled
+    with the fact that, in the persistence layer, the page is not proper entity but
+    a holder that is constructed when necessary, makes the choice straightforward:
+    the page is part of the representation.
+
+
+    The next question in the pagination design in the context of REST is where to
+    include the paging information:
+
+
+    +   - in the URI path: /foo/page/1
+
+    - the URI query: /foo?page=1
+
+
+    Keeping in mind that a page is not a Resource, encoding the page information in
+    the URI is no longer an option.
+
+
+    We are going to use the standard way of solving this problem by encoding the paging
+    information in a URI query.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# 3. The Controller\n\nNow, for the implementation – the Spring MVC Controller\
+    \ for pagination is straightforward:\n\n```\n@RequestMapping(value = \"admin/foo\"\
+    ,params = { \"page\", \"size\"},method = GET )\n@ResponseBody\npublic List<Foo>\
+    \ findPaginated(\n    @RequestParam(\"page\") int page, @RequestParam(\"size\"\
+    ) int size,\n    UriComponentsBuilder uriBuilder, HttpServletResponse response)\
+    \ {\n    Page<Foo> resultPage = service.findPaginated(page, size);\n    if (page\
+    \ > resultPage.getTotalPages()) {\n        throw new ResourceNotFoundException();\n\
+    \    }\n    eventPublisher.publishEvent(new PaginatedResultsRetrievedEvent<Foo(\n\
+    \        Foo.class, uriBuilder, response, page, resultPage.getTotalPages(), size));\n\
+    \n    return resultPage.getContent();\n```\n\nThe two query parameters are injected\
+    \ into the Controller method via @RequestParam.\n\nWe're also injecting the Http\
+    \ Response and UriComponentsBuilder to help with **Discoverability** – we are\
+    \ decoupling via a custom event. If that is not a goal of the API, you can simply\
+    \ remove the custom event and be done.\n\nFinally – note that the focus of this\
+    \ article is only the REST and the web layer – to go deeper into the data access\
+    \ of pagination you can check out this article about Pagination with Spring Data.\n\
+    \n# 4. Discoverability for REST pagination\n\nWithin the scope of **pagination**,\
+    \ satisfying the HATEOAS constraint of REST means enabling the client of the API\
+    \ to discover the next and previous pages based on the current page in the navigation.\
+    \ For this purpose, we are going to use the **Link HTTP header**, coupled with\
+    \ the official \"next\", \"prev\", \"first\" and \"last\" link relation types."
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\nIn REST, Discoverability is a cross cutting\
+    \ concern, applicable not only to specific operations but to types of operations.\
+    \ For example, time a Resource is created, the URI of that Resource should be\
+    \ discoverable by the client. This requirement is relevant for the creation of\
+    \ ANY Resource, it should be dealt with separately and decoupled from the main\
+    \ Controller flow.\n\nWith Spring, this decoupling is focused on Events, as was\
+    \ thoroughly discussed in the previous section focused on Discoverability of the\
+    \ REST Service. In the case of pagination, the event-PaginatedResultsRetrievedEvent\
+    \ - fired in the controller layer, and discoverability is implemented with a custom\
+    \ listener for this:\n\n```\nvoid addLinkHeaderOnPagedResourceRetrieval(\n   \
+    \ UriComponentsBuilder builder, HttpServletResponse response,\n    Class clazz,\
+    \ int totalPages, int size) {\n\n    String resourceName = clazz.getSimpleName().toString().toLowerCase();\n\
+    \    builder.path(\"/admin/\" + resourceName);\n\n    StringBuilder linkHeader\
+    \ = new StringBuilder();\n    if (hasNextPage(page, totalPages)) {\n        String\
+    \ nextPage = constructNextPageUri(builder, page, size);\n        linkHeader.append(createLinkHeader(nextPage,\
+    \ \"next\"));\n    }\n    if (hasPreviousPage(page)) {\n        String prevPage\
+    \ = constructPrevPageUri(builder, page, size);\n        linkHeader.append(createLinkHeader(prevPage,\
+    \ \"prev\"));\n    }\n    if (hasFirstPage(page)) {\n        String firstPage\
+    \ = constructFirstPageUri(builder, size);\n        linkHeader.append(createLinkHeader(firstPage,\
+    \ \"first\"));\n    }\n    if (hasLastPage(page, totalPages)) {\n        String\
+    \ lastPage = constructLastPageUri(builder, totalPages, size);\n        linkHeader.append(createLinkHeader(lastPage,\
+    \ \"last\"));\n    }\n    response.addHeader(\"Link\", linkHeader.toString());\n\
+    }\n```\n\nIn short, - listeners check if the navigation allows for a next, previous,\
+    \ first and last pages and if it adds the relevant URIs to the Link HTTP Header.\n\
+    \nNote, that for brevity, I included only a partial code sample and the full code\
+    \ here."
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "# 5. Test Driving Pagination\n\nBoth the main logic of pagination and discoverability\
+    \ are covered by small, focused integration tests; as in the previous section,\
+    \ the rest-assured library is used to consume the REST service and to verify the\
+    \ results.\n\nThese are a example of pagination integration tests; for a full\
+    \ test suite, check out the github project (at the end of the section):\n\n```\n\
+    @Test\npublic void whenResourcesAreRetrievedPaged_then200IsReceived() {\n  Response\
+    \ response = givenAuth().get(paths.getFooURL() + \"?page=0&size=2\");\n\n  assertThat(response.getStatusCode(),\
+    \ is(200));\n}\n@Test\npublic void whenPageResourcesAreRetrievedOutOfBounds_then404IsReceived()\
+    \ {\n  String url = getFooURL() + \"?page=\" + randomNumeric(5) + \"&size=2\"\
+    ;\n  Response response = givenAuth().get(url);\n\n  assertThat(response.getStatusCode(),\
+    \ is(404));\n}\n@Test\npublic void whenResourcesExist_whenFirstPagesAreRetrieved_thenPaginationContainsResources()\
+    \ {\n  createResource();\n\n  Response response = givenAuth().get(paths.getFooURL()\
+    \ + \"?page=0&size=2\");\n\n  assertFalse(response.body().as(List.class).isEmpty());\n\
+    }\n```\n\n# 6. Test Driving Pagination Discoverability\n\nTesting that pagination\
+    \ is discoverable by a client is relatively straightforward, although there is\
+    \ a lot of ground to cover. The tests are focused on the position of the current\
+    \ page in navigation and the different URIs that should be discoverable from each\
+    \ position:\n\n```\n@Test\npublic void whenFirstPageResourcesAreRetrieved_thenSecondPagesNext()\
+    \ {\n  Response response = givenAuth().get(getFooURL() + \"?page=0&size=2\");\n\
+    }\n```\n\nString uriToNext = extractUriBy(response.getHeader(\"Link\"), \"next\"\
+    );"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 7. Getting All Resources\n\n```\nassertEquals(getFOURL()(\"\
+    ?page=1&size=2\", uriToNextPage);\n\n@Test\npublic void whenFirstPageOfResourcesAreRetrieved_thenNoPreviousPage({\n\
+    \    Response response = getAuth().getgetFOURL()(\"?page=0&size=2\");\n\n    String\
+    \ uriToPrev = extractUriByRel(response.getHeader(\"Link\"), \"prev\");\n    assertNull(uriToPrev);\n\
+    }\n\n@Test\npublic void whenSecondPageOfResourcesAreRetrieved_thenFirstPageIsPrevious({\n\
+    \    Response response = getAuth().getFOURL()(\"?page=1&size=2\");\n\n    String\
+    \ uriToPrev = extractUriByRel(response.getHeader(\"Link\"), \"prev\");\n    assertEquals(getFOURL()(\"\
+    ?page=0&size=2\", uriToPrev);\n}\n\n@Test\npublic void whenLastPageOfResourcesAreRetrieved_thenNextPagesIsDiscoverable({\n\
+    \    Response first = getAuth().getFOURL()(\"?page=0&size=2\");\n    String uriToLastPage\
+    \ = extractUriByRel(first.getHeader(\"Link\"), \"last\");\n\n    Response response\
+    \ = getAuth().get(uriToPage);\n\n    String uriToNextPage = extractUriByRel(response.getHeader(\"\
+    Link\"), \"next\");\n    assertNull(uriToNextPage);\n})\n```\n\nNote that the\
+    \ full level code for extractUriByRel – responsible for extracting the URLs by\
+    \ rel relation is here.\n\n# 7. Getting All Resources\n\nOn the same topic of\
+    \ pagination and discoverability, the choice must be made if a client is allowed\
+    \ to retrieve all the Resources in the system at once, or if the client MUST ask\
+    \ for them paginated. If the choice is made that the client cannot retrieve all\
+    \ Resources with a single request, and pagination is not optional but required,\
+    \ then several options are available for the response to get all request. One\
+    \ option is to return a 404 (Not Found) and use the Link header to make the first\
+    \ page discoverable:\n\n```\nLink=<http://localhost:8080/rest/api/admin/foo?page=0&size=2>;\
+    \ rel=\"first\", <http//localhost:8080/rest/api/admin/foo?page=103&size=2>; rel=\"\
+    last\"\n```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# Building a REST API with Spring4
+
+
+    # 8. REST Paging with Range HTTP headers
+
+
+    Another option is to return redirect - 303 (See Other) - to the first page. A
+    conservative route would be to simply return to the client a 405 (Method Not Allowed)
+    for the GET request.
+
+
+    # 8. REST Paging with Range HTTP headers
+
+
+    A relatively different way of implementing pagination is to work with the HTTP
+    Range headers - Range, Content-Range, If-Range, Accept-Ranges - and HTTP status
+    codes - 206 (Partial Content), 413 (Request Entity Too Large), 416 (Requested
+    Range Not Satisfiable). One view on this approach is that the HTTP Range extensions
+    were not intended for pagination, and that they should be managed by the Server,
+    not by the Application. Implementing pagination based on the HTTP Range header
+    extensions is nevertheless technically possible, although not nearly common as
+    the implementation discussed in this section.
+
+
+    # 9. Conclusion
+
+
+    We illustrated how to implement Pagination in a REST API using Spring, and discussed
+    how to set up and test Discoverability.
+
+
+    If you want to go in depth on pagination in the persistence level, check out our
+    JPA or Hibernate pagination tutorials.
+
+
+    The implementation of all these examples and code snippets can be found in my
+    github project - this is an Eclipse based project, so it should be easy to import
+    and run as it is.
+
+
+    ![](img/9e952c1884adb105358b0d748e0b42fd_88_0.png)'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: Building a REST API with Spring 4
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# 12: ERROR HANDLING FOR REST WITH SPRING
+
+
+    # 1. Overview
+
+
+    This section will focus on **how to implement Exception Handling with Spring for
+    a REST API**. We''ll look at the recommended solution with Spring 3.2 and 4.x
+    but also at at the older options as well.
+
+
+    **Before Spring 3.2**, the two main approaches to handling exceptions in a Spring
+    MVC application: `ExceptionHandlerResolver` or the `@ExceptionHandler` annotation.
+    Both of these have some clear downsides.
+
+
+    **After 3.2** we now have the new @ControllerAdvice annotation to address the
+    limitations of the previous two solutions.
+
+
+    All of these do have one in common - they deal with the **separation of concerns**
+    well. The app can throw exception normally to indicate a failure of some kind
+    - exceptions which will then be handled separately.
+
+
+    # 2. Solution 1 – The Controller level @ExceptionHandlerHandler
+
+
+    The first solution works at the @Controller level - we will define a method to
+    handle exceptions, and annotate that with @ExceptionHandler.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "# Building a REST API with Spring\n\n# 3. Solution 2 – The HandlerExceptionResolver\n\
+    \n```\npublic class FooController{\n    @ExceptionHandler(CustomException1.class,\
+    \ CustomException2.class)\n    public void handleException() {\n        //\n \
+    \   }\n}\n```\n\nThis approach has a major drawback – the @ExceptionHandler annotated\
+    \ method is only active for that particular Controller, not globally for the entire\
+    \ application. Course adding this to every controller makes it not well suited\
+    \ for a general exception handling mechanism.\n\nThe limitation is often worked\
+    \ around by having all Controllers extend a Base Controller class – however, this\
+    \ can be a problem for applications, for whatever reasons, the Controllers cannot\
+    \ be made to extend from another base class which may be in another jar or not\
+    \ directly modifiable, or by themselves not be directly modifiable.\n\nNext, we'll\
+    \ look at another way to solve the exception handling problem – one that is global\
+    \ and does not include any changes to existing artifacts as Controllers.\n\n#\
+    \ 3. Solution 2 – The HandlerExceptionResolver\n\nThe second solution is to define\
+    \ a HandlerExceptionResolver – this will resolve any exception thrown by the application.\
+    \ It will also allow us to implement a uniform exception handling mechanism in\
+    \ our REST API.\n\nBefore going for a custom resolver, let’s go over the existing\
+    \ implementations.\n\n# 3.1 ExceptionHandlerExceptionResolver\n\nThis resolver\
+    \ was introduced in Spring 3.1 and is enabled by default in the DispatchDispatcher.\
+    \ This is actually the core component of how the @ExceptionHandler mechanism presented\
+    \ earlier works."
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "Building a REST API with Spring4\n\n3.2. DefaultHandlerExceptionResolver\n\n\
+    # 3.2. DefaultHandlerExceptionResolver\n\nThe Resolver was introduced in Spring\
+    \ 3.0 and is enabled by default in the DispatcherServlet. It is used to resolve\
+    \ standard Spring exceptions to their corresponding HTTP Status Codes, namely\
+    \ Client error - 4xx and Server error - 5xx status codes. Here is the full list\
+    \ of the Spring Exceptions handles, and how these are mapped to status codes.\n\
+    \nWhile it sets the Status Code of the Response properly, one limitation is it\
+    \ doesn't set anything to the body of the Response. For a REST API - the Status\
+    \ Code is really not enough information to present to the Client - the response\
+    \ has to have a body as well, the application to give additional information about\
+    \ the failure.\n\nThis can be solved by configuring View resolution and rendering\
+    \ error content through ModelAndView, but the solution is not optimal - which\
+    \ is why a better option has been made available with Spring 3.2 - we'll talk\
+    \ about that in the latter part of this section.\n\n# 3.3. ResponseStatusExceptionResolver\n\
+    \nThis resolver was also introduced in Spring 3.0 and is enabled by default in\
+    \ the DispatcherServlet. It's main responsibility is to use the @ResponseStatus\
+    \ annotation on custom exceptions and to map these exceptions to HTTP status codes.\n\
+    \nSuch a custom exception may look like:\n\n```\n@ResponseStatus(value = HttpStatus.NOT_FOUND)\n\
+    public final class ResourceNotFoundException extends RuntimeException {\n    public\
+    \ ResourceNotFoundException() {\n        super();\n    }\n    public ResourceNotFoundException(String\
+    \ message, Throwableable cause) {\n        super(message, cause);\n    }\n   \
+    \ public ResourceNotFoundException(String message) {\n        super(message);\n\
+    \    }\n    public ResourceNotFoundException(Throwable cause) {\n        super(cause);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 3.4.SimpleMappingExceptionHandlerResolverAndAnnotationMethodExceptionHandlerResolver\n\
+    \nSame as the DefaultExceptionHandlerResolver, this resolver is limited in the\
+    \ way it deals with the body of the response - it maps the Status Code on the\
+    \ response, but the body is still null.\n\n# 3.4. SimpleMappingExceptionHandlerResolverAnnotationMethodExceptionHandlerResolver\n\
+    \nThe SimpleMappingExceptionHandlerResolver has been around for quite some time\
+    \ - it comes out the older Spring MVC model and is not relevant for a REST Service.\
+    \ It is used to map exception class names to view names.\n\nThe AnnotationMethodExceptionHandlerResolver\
+    \ was introduced in Spring 3.0 to handle exceptions through the @ExceptionHandler\
+    \ annotation, but has been deprecated by ExceptionHandlerResolver as of Spring\
+    \ 3.2.\n\n# 3.5. Custom HandlerExceptionHandlerResolver\n\nThe combination of\
+    \ DefaultExceptionHandlerResolver and ResponseStatusExceptionHandler goes a long\
+    \ way towards providing a good error handling mechanism for a Spring REST Service.\
+    \ The downside is - as mentioned before - no control over the body of the response.\n\
+    \nIdeally, we'd be able to output JSON or XML, depending on what format the client\
+    \ has asked for (via the Accept header).\n\nThis alone justifies creating a new,\
+    \ custom exception resolver:\n\n```\n@Component\npublic class ResponseStatusExceptionHandlerResolver\
+    \ extends AbstractExceptionHandlerResolver (\n\n  @Override\n  protected ModelAndView\
+    \ doResolveException(\n    HttpServletRequest request, HttpServletResponse response,\
+    \ Object handler, Exception ex) {\n    try {\n      if (ex instanceof IllegalArgumentException)\
+    \ {\n        return handleIllegalArgument((IllegalArgumentException)ex, response,\
+    \ handler);\n      }\n    }\n  }...\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 4. Solution 3 – The New @ControllerAdvice\
+    \ (Spring 3.2 And Above)\n\n```\n```java\ncatch (ExceptionHandler ex) {\n    logger.warn(\"\
+    Handling of \" + ex.getClass().getName() + \" \");\n    resulted in Exception\"\
+    , handlerException);\n}\nreturn null;\n}\n\nprivate ModelAndView handleIllegalArgument(\n\
+    \    IllegalArgumentException ex, HttpServletResponse response) throws IOException\
+    \ {\n    response.sendError(HttpServletResponse.SC_CONFLICT);\n    String accept\
+    \ = request.getHeader(HttpHeaders.ACCEPT);\n    return new ModelAndView();\n}\n\
+    ```\n```\n\nOne detail to notice here is the Request header itself is available,\
+    \ so the application can consider the value of the Accept header sent by the client.\
+    \ For example, if the client asks for application/json then, in case of an error\
+    \ condition, the application should still return a response encoded with application/json.\n\
+    \nThe other implementation detail is that a ModelAndView is returned – this is\
+    \ the body of the response and it will allow the application to set whatever is\
+    \ necessary on.\n\nThis approach is a consistent and easily configurable mechanism\
+    \ for the error handling of a Spring REST Service. It does however have limitations:\
+    \ it's interacting with the low level HttpServletResponse and it fits into the\
+    \ old MVC model which uses ModelAndView – so there's still room for improvement.\n\
+    \n# 4. Solution 3 – The New @ControllerAdvice (Spring 3.2 And Above)\n\nSpring\
+    \ 3.2 brings support for a global @ExceptionHandler with the new @ControllerAdvice\
+    \ annotation. This enables a mechanism that breaks away from the older MVC model\
+    \ and use of ResponseEntity along with the type safety and flexibility of @ExceptionHandler."
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# Building a REST API with Spring4 4. Solution 3 – The New @ControllerAdvice\
+    \ (Spring 3.2 And Above)\n\n```\n@ControllerAdvice\npublic class ResponseEntityExceptionHandler\
+    \ extends EntityExceptionHandler {\n\n    @ExceptionHandler(value = {IllegalIllegalArgumentException.class,\
+    \ IllegalStateException.class})\n    protected ResponseEntity<Object> handleConflict(RuntimeException\
+    \ ex, WebRequest request) {\n        String bodyOfResponse = \"This should be\
+    \ application specific\";\n        return handleExceptionInternal(ex, bodyOfResponse,\
+    \ new HttpHeaders(), HttpStatus.CONFLICT, request);\n    }\n}\n```\n\nThe new\
+    \ annotation allows the multiple scattered @ExceptionHandler from before to be\
+    \ consolidated into a single, global error handling component.\n\nThe actual mechanism\
+    \ is extremely simple but also very flexible:\n\n+   * it allows full control\
+    \ over the body of the response as well as the status code\n* it allows mapping\
+    \ of several exceptions to the same method, to be handled together\n* it makes\
+    \ good use of the newer RESTful ResponseEntity response\n\nOne thing to keep in\
+    \ mind here is to match the exceptions declared with @ExceptionHandler with the\
+    \ exception used as argument of the method. If these don't match, the compiler\
+    \ will not complain – no reason it should, and Spring will not complain either.\n\
+    \nHowever, when the exception is actually thrown at runtime, the exception resolving\
+    \ mechanism will fail with:\n\n```\njava.lang.IllegalStateException: No suitable\
+    \ resolver for argument [0] [type=...\nHandlerMethod details: ...\n```"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: 'Building a REST API with Spring
+
+
+    4. Solution 3 - The New @ControllerAdvice (Spring 3.2 And Above)
+
+
+    # 5. Conclusion
+
+
+    We discussed here several ways to implement an exception handling mechanism for
+    a REST API in Spring, starting with the older mechanism and continuing with the
+    Spring 3.2 support and into 4.0 and 4.1.
+
+
+    It''s an Eclipse based project, so it should be easy to import and run as it is.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: Building a REST API with Spring 4
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# 13: VERSIONING A REST API
+
+
+    # 1. The Problem
+
+
+    Evolving a REST API is a difficult problem – one for which many options are available.
+    This section discusses through some of these options.
+
+
+    # 2. What is in the Contract?
+
+
+    Before anything else, we need to answer one simple question: What is the Contract
+    between the API and the Client?
+
+
+    # 2.1. URIs part of the Contract?
+
+
+    Let''s first consider the URI structure of the REST API – is that part of the
+    contract? Should clients bookmark, hardcode and generally rely on URIs of the
+    API?
+
+
+    If they would, the interaction of the Client with the REST Service would no longer
+    be driven by the Service itself, but by what Roy Fielding calls out-of-band information:
+
+
+    A REST API should be entered with no prior knowledge beyond the initial URI (bookmark)
+    and set of standardized media types that are appropriate for the intended audience...Failure
+    implies that out-of-band information is driving interaction instead of hypertext.
+
+
+    So clearly URIs are not part of the contract! The client should only know a single
+    URI – the entry point to the API – all other URIs should be discovered while consuming
+    the API.'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# 2.2. Media Types part of the Contract?
+
+
+    What about the Media Type information used for the representations of Resources
+    – are these part of the contract between the Client and the Service?
+
+
+    In order to successfully consume the API, the Client must have prior knowledge
+    of these Media Types – in fact, the definition of these media types represents
+    the entire contract, and is where the REST Service should focus on the most:
+
+
+    A REST API should spend almost all of its descriptive effort in defining the media
+    type(s) used for representing resources and driving application state, or in extending
+    relation names and/or hypertext-enabled mark-up for existing standard media types.
+
+
+    So the Media Type definitions are part of the contract and should be prior knowledge
+    for the client that consumes the API – this is where standardization comes in.
+
+
+    We now have a good idea of what the contract is, let’s move on to how to actually
+    tackle the versioning problem.
+
+
+    # 3. High Level Options
+
+
+    Let''s now discuss the high level approaches to versioning the REST API:
+
+
+    +   - URI Versioning – version the URI space using version indicators
+
+    - Media Type Versioning – version the Representation of the Resource
+
+
+    When we introduce the version in the URI space, the Representations of Resources
+    are considered immutable, so when changes need to be introduced in the API, a
+    new URI space needs to be created.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "For example, say an API publishes the following resources – users and privileges:\n\
+    \n```\nhttp://host/v1/users\nhttp://host/v1/privileges\n```\n\nNow, let's consider\
+    \ that a breaking change in the users API requires **a second version to** be\
+    \ introduced:\n\n```\nhttp://host/v2/users\nhttp://host/v2/privileges\n```\n\n\
+    When we **version the Media Type and extend the language**, we [go through]()\
+    \ Content Negotiation on this header. The REST API would make use of custom [endor\
+    \ media types]() instead of generic media types as *application/json*. It is these\
+    \ media types that are going to be versioned instead of the URIs.\n\nFor example:\n\
+    \n```\n==>\nGET /users/3 HTTP/1.1\nAccept: application/vnd.myname.v1+json\n<=\n\
+    HTTP/1.1 200 OK\nContent-Type: application/vnd.myname.v1+json\n{\n  \"user\":{\n\
+    \    \"name\": \"John Smith\"\n  }\n}\n```\n\nWhat is important to understand\
+    \ here is that **the client makes no assumptions about the structure of the response**\
+    \ what is defined in the media type. This is why generic media types are not ideal\
+    \ – these **do not provide enough semantic information** and force the client\
+    \ to use additional hints to process the actual representation of the resource.\n\
+    \nAn exception to this is using some other way of uniquely identifying the semantics\
+    \ of the content – such as an XML schema."
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# 4. Advantages and Disadvantages
+
+
+    Now that we have a clear concept of what is part of the Contract between the Client
+    and the Service, as well as a high level overview of the options to version the
+    API, let''s discuss the advantages and disadvantages of each approach.
+
+
+    First, introducing version identifiers in the URI leads to a very large URI footprint.
+    This is due to the fact that any breaking change in any of the published APIs
+    will introduce a whole new tree of representations for the entire API. Over time,
+    this becomes a burden to maintain as well as a problem for the client – which
+    now has more options to choose from.
+
+
+    Version identifiers in the URI also severely inflexible - there is no way to evolve
+    the API of a single Resource, or a small subset of the overall API. As we mentioned
+    before, this is an all or nothing approach - part of the API moves to the new
+    version, then the entire API has move along with it. This makes upgrading clients
+    from v1 to v2 a major undertaking – which leads to slower upgrades and longer
+    sunset periods for the old versions.
+
+
+    HTTP Caching is also a major concern when it comes to versioning.
+
+
+    From the perspective of proxy caches in the middle, each approach has advantages
+    and disadvantages: if the URI is versioned, then the cache will need to keep multiple
+    copies of each Resource – one for every version of the API. This puts load on
+    the cache and decreases the cache hit rate, since different clients will use different
+    versions. Also, some cache invalidation mechanisms will not work. If the media
+    type is the one that is versioned, then the Client and the Service need to support
+    the Vary HTTP header to indicate that there are multiple versions being cached.
+
+
+    From the perspective of client caching however, the solution that versions the
+    media type involves slightly more than the one where URLs contain the version
+    identifier. This is because it''s simply easier to cache something when its key
+    is an URL than a media type.
+
+
+    Let''s end this section with defining some goals (straight out of API Evolution):
+
+
+    +   - keep compatible changes out of names
+
+    - avoid new major versions
+
+    - makes changes backwards-compatible
+
+    - think about forwards-compatibility'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "# 5. Possible Changes to the API\n\nNext, let's consider the types of changes\
+    \ to the REST API – these are introduced here:\n\n+   - representation format\
+    \ changes\n- resource changes\n\n# 5.1. Adding to the Representation of a Resource\n\
+    \nThe format documentation of the media type should be designed with forward compatibility\
+    \ in mind; specifically - a client should ignore information that it doesn't understand\
+    \ (which JSON does better than XML).\n\nNow, adding information in the Representation\
+    \ of a resource **will not break existing clients** these are correctly implemented.\n\
+    \nTo continue our earlier **example**, adding the amount in the representation\
+    \ of the user will be a breaking change:\n\n```\n{\n  \"user\": {\n    \"name\"\
+    : \"John Smith\",\n    \"amount\": \"300\"\n  }\n}\n```\n\n# 5.2. Removing or\
+    \ changing an existing Representation\n\nRemoving, renaming or generally restructuring\
+    \ information in the design of existing representations is a breaking change for\
+    \ clients, because they already understand and rely on the old format.\n\nThis\
+    \ is where Content Negotiation comes in – for such changes, **a new vendor MIME\
+    \ type** needs to be introduced."
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "# Building a REST API with Spring 4\n\nLet's continue with the previous example\
+    \ - say we want to break the name of the user into firstname and lastname.\n\n\
+    ```\n>>> /users/3 HTTP/1.1\nAccept: application/vnd.myname.v2+json\n===\nHTTP/1.1\
+    \ 200 OK\nContent-Type: application/vnd.myname.v2+json\n{\n  \"firstname\": \"\
+    John\",\n  \"lastname\": \"Smith\",\n  \"amount\": \"300\"\n}\n```\n\nAs such,\
+    \ this does represent an incompatible change for the Client - which will have\
+    \ to respect the new Representation and understand the new semantics, but the\
+    \ URI space will remain stable and will not be affected.\n\n# 5.3. Major Semantic\
+    \ Changes\n\nThese changes are in the meaning of the Resources, the relations\
+    \ between them or what the map to in the backend. This kinds of changes may require\
+    \ a new media type, or they may require publishing a new, sibling Resource next\
+    \ to the old one and making use of linking to point to it.\n\nWhile this sounds\
+    \ like using version identifiers in the URI all again, the important distinction\
+    \ is that the new Resource is published independently of any other Resources in\
+    \ the API and will not affect the entire API at root.\n\nThe REST API should adhere\
+    \ to the HATEOAS constraint - most of the URIs should be DISCOVERED by Client,\
+    \ not hardcoded. Changing such an URI should not be considered an incompatible\
+    \ change - the new URI can replace the old one and Clients will be able to discover\
+    \ the URI and still function.\n\nIt is worth noting that, while using version\
+    \ identifiers in the URI is problematic for these reasons, it is not un-RESTful\
+    \ in any way."
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# 6. Conclusion
+
+
+    This section is tried to provide an overview of the very diverse and difficult
+    problem of evolving a REST Service. We discussed the two common solutions, advantages
+    and disadvantages of each one, and ways to reason about these approaches in the
+    context of REST. The material concludes making the case for the second solution
+    - versioning the media types, while examining the possible changes to a RESTful
+    API.'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# 14: TESTING REST WITH MULTIPLE MIME TYPES
+
+
+    #  1. Overview
+
+
+    This final section will focus on **testing a REST Service with multiple Media
+    Types/representations.**
+
+
+    We will write integration tests capable of switching between the multiple types
+    of Representations supported by the API. The goal is to be able to run the exact
+    same test consuming the exact same URIs of the service, just asking for a different
+    Media Type.
+
+
+    # 2. Goals
+
+
+    Any REST API needs to expose it''s Resources as representations using some sort
+    of Type, and in many cases more than a single one. **The client will set the Accept
+    header** to choose the type of representation it asks for from the service.
+
+
+    Since the Resource can have multiple representations, the server will have to
+    implement a mechanism responsible with choosing the right representation - also
+    known as **Content Negotiation**. Thus, if the client asks for `application/xml`,
+    then it should get an XML representation of the Resource, and if it asks for `application/json`,
+    then it should get JSON.
+
+
+    # 3. Testing Infrastructure
+
+
+    We will begin by defining a simple interface for a **marshaller** – this will
+    be the main abstraction that will allow the test to switch between different Media
+    Types:'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n```\npublic interface IMarshaller {\n\
+    ...\n    String getMime();\n}\n```\n\nWe then need a way to initialize the right\
+    \ marshaller. For this mechanism, we will use a SpringFactoryBean to initialize\
+    \ the marshaller and a simple property to determine which marshaller to use:\n\
+    \n```\n@Component\n@Profile(\"test\")\npublic class TestMarshaller implements\
+    \ FactoryBean<IMarshaller> {\n\n    @Autowired\n    private Environment env;\n\
+    \n    public IMarshaller getObject() {\n        String testMime = env.getProperty(\"\
+    test.mime\");\n        if (testMime != null) {\n            switch (testMime)\
+    \ {\n                case \"json\":\n                    return new JacksonMarshaller();\n\
+    \                case \"xml\":\n                    return new XStreamMarshaller();\n\
+    \                default:\n                    throw new IllegalStateException();\n\
+    \            }\n        }\n        return new JacksonMarshaller();\n    }\n\n\
+    \    public Class<IMarshaller> getObjectType() {\n        return IMarshaller.class;\n\
+    \    }\n\n    public boolean isSingleton() {\n        return true;\n    }\n}\n\
+    ```\n\nLet's look over this:\n\n+   - first, the new Environment abstraction introduced\
+    \ in Spring 3.1 is used here – for more on this check out the detailed article\
+    \ on Properties with Spring\n- the test.mime property is retrieved from the environment\
+    \ and used to determine"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 4. The JSON and XML Marshallers\n\n\
+    +   - which marshaller to create - some Java 7 switch on String syntax at work\
+    \ here\n- next, the default marshaller, in case the property is not defined at\
+    \ all, is going to be the Jackson marshaller for JSON support\n- finally this\
+    \ BeanFactory is only active in a test scenario, as the new @Profile support,\
+    \ also introduced in Spring 3.1 is used\n\nThat's it - the mechanism is able to\
+    \ switch between marshallers based on whatever the value of the test.mime property\
+    \ is.\n\n# 4. The JSON and XML Marshallers\n\nMoving on, we'll need the actual\
+    \ marshaller implementation – one for each supported Type.\n\nFor JSON we'll use\
+    \ Jackson as the underlying library:\n\n```\npublic class JacksonMarshaller implements\
+    \ Marshaller {\n  private ObjectMapper objectMapper;\n\npublic JacksonMarshaller()\
+    \ {\n  super();\n  objectMapper = new ObjectMapper();\n}\n\n@Override\npublic\
+    \ String getMime() {\n  return MediaType.APPLICATION_JSON.toString();\n}\n```\n\
+    \nFor the XML support, the marshaller uses XStream.\n\n```\npublic class XStreamMarshaller\
+    \ implements Marshaller {\n  private XStream xstream;\n\npublic XStreamMarshaller()\
+    \ {\n  super();\n  xstream = new XStream();\n}\n```"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "# Building a REST API with Spring4\n\n# 5. Consuming the Service with both\
+    \ JSON and XML\n\n```\n...\npublic String getMimeType() {\n    return MediaType.APPLICATION_XML.toString();\n\
+    }\n```\n\nNote that these marshallers are not Spring beans themselves. The reason\
+    \ for that they are bootstrapped into the Spring context by the TestMarshallerFactory,\
+    \ so there is no need to make them components directly.\n\n# 5. Consuming the\
+    \ Service with both JSON and XML\n\nAt this point we should be able to run a full\
+    \ integration test against the deployed service. Using the marshaller is straightforward\
+    \ – an IMarshall is simply injected directly into the test:\n\n```\n@ActiveProfiles(\"\
+    test\")\npublic abstract class SomeRestLiveTest {\n\n@Autowired\nprivate IMarshall\
+    \ marshaller;\n\n// tests\n\n}\n```\n\nThe exact marshaller that will be injected\
+    \ by Spring will of course be decided by the value of test.mime property; this\
+    \ could be picked up from a properties file or simply set on the test environment\
+    \ manually. If however a value is not provided for this property, the TestMarshallerFactory\
+    \ will simply fall back on the default marshaller – the JSON marshaller."
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# 6. Maven and Jenkins
+
+
+    If Maven is set up to run integration tests against an already deployed REST Service,
+    then it can be run like this:
+
+
+    ```
+
+    mvn test -Dtest.mime=xml
+
+    ```
+
+
+    Or, if this the build uses the integration-test phase of the Maven lifecycle:
+
+
+    ```
+
+    mvn integration-test -Dtest.mime=xml
+
+    ```
+
+
+    For more details about how to use these phases and how to set up the Maven build
+    so that it will bind the deployment of the application to the *pre-integration-test
+    goal*, run the integration tests in the integration-test goal and then shut down
+    the deployed service in *post-integration-test*, see the [Integration Testing
+    with Maven]() article.
+
+
+    With **Jenkins**, the job must be configured with:
+
+
+    ```
+
+    This build is parametrized
+
+    ```
+
+
+    And the *String* parameter: **test.mime=xml** added.
+
+
+    A common Jenkins configuration would be having to jobs running the same set of
+    integration tests against the deployed service - one with XML and the other with
+    JSON representations.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# 7. Conclusion
+
+
+    This section showed how to properly test a REST API that works with multiple representations.
+    Most APIs do publish their Resources under multiple Representations, so testing
+    of these is vital; the fact that we can use the exact same tests across all of
+    them is just cool.
+
+
+    The full implementation of this mechanism – using actual integration tests and
+    verifying both the XML and JSON representations - can be found in the github project.
+    This is an Eclipse based project, so it should be easy to import and run as it
+    is.'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: Building a REST API with Spring4
+  merge: -1
+  pgno: 112
