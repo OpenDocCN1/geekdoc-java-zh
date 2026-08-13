@@ -1,0 +1,602 @@
+- - '#'
+  - Android Java 蓝牙低功耗：物联网编程指南
+- - '#'
+  - 献辞
+- - '#'
+  - 前言
+- - '#'
+  - 第一节
+- - '##'
+  - 本书使用的规范
+- - '#'
+  - 引言
+- - '##'
+  - 概述
+- - '##'
+  - 广播
+- - '##'
+  - 扫描
+- - '##'
+  - 连接
+- - '##'
+  - 断开连接
+- - '##'
+  - 通信
+- - '##'
+  - 字节序
+- - '##'
+  - 权限
+- - '##'
+  - 描述符
+- - '##'
+  - UUID
+- - '##'
+  - 蓝牙硬件
+- - '##'
+  - 功率与范围
+- - '##'
+  - 引入 Android
+- - '##'
+  - API 属性
+- - '##'
+  - 启动 (Bootstrapping)
+- - '##'
+  - 编写中心设备程序
+- - '##'
+  - 请求蓝牙功能
+- - '##'
+  - 启用蓝牙
+- - '##'
+  - 检查蓝牙是否启用
+- - '##'
+  - 整合 (Putting Together)
+- - '#'
+  - Manifest
+- - '#'
+  - ExampleBLE
+- - '##'
+  - 为外设设备编程
+- - '##'
+  - 请求蓝牙功能
+- - '##'
+  - 启用蓝牙
+- - '##'
+  - 检查外设模式是否可用
+- - '##'
+  - 整合在一起
+- - '##'
+  - 资源 (Resources)
+- - '###'
+  - 示例3-9. res/values/strings.xml
+- - '##'
+  - 对象 (Objects)
+- - '###'
+  - 示例3-10. java/example.com.comexampleble/BlePeripheral.java
+- - '##'
+  - Activity (Activities)
+- - '###'
+  - 示例3-11. java/example.com.exampleble/ble/MainActivity.java
+- - '###'
+  - 示例3-12. res/layout/activity_main.xml
+- - '###'
+  - 示例3-13. manifests/AndroidManifest.xml
+- - '#'
+  - ExampleBLE
+- - '##'
+  - Example code
+- - '##'
+  - 扫描与广播
+- - '##'
+  - 中心设备编程
+- - '##'
+  - APIs 18-20
+- - '##'
+  - APIs 21 及更高版本
+- - '##'
+  - 表 4-3. ScanSettings
+- - '##'
+  - 整合一切
+- - '##'
+  - 资源
+- - '##'
+  - 为按钮和标签添加文本：
+- - '##'
+  - 对象
+- - '#'
+  - 用户界面
+- - '##'
+  - Activity
+- - '##'
+  - ListView 和主菜单包含在 activity_main.xml 中
+- - '###'
+  - 示例 4-11. res/layout/activity_main.xml
+- - '##'
+  - 在 MainActivity 类中将它们一切整合在一起：
+- - '###'
+  - 示例 4-12. java/example.com.exampleble/MainActivity.java
+- - '#'
+  - ExampleBLETalk 扫描
+- - '#'
+  - ExampleBLEScan 停止
+- - '#'
+  - 外外设编程
+- - '##'
+  - 广播
+- - '##'
+  - BluetoothLeAdvertiser 类：
+- - '###'
+  - 表 4-5. 广播模式
+- - '###'
+  - 表 4-6. 传输功率
+- - '###'
+  - 表 4-7. AdvertiseCallback
+- - '###'
+  - 表 4-8. 广播失败的原因
+- - '##'
+  - 整合
+- - '##'
+  - 资源
+- - '##'
+  - 对象
+- - '##'
+  - 开关：
+- - '###'
+  - 示例 4-11. res/layout/activity_main.xml
+- - '##'
+  - 在 MainActivity 类中整合所有内容：
+- - '###'
+  - 示例 4-12. java/example.com.exampleble/MainActivity.java
+- - '#'
+  - ExampleBLE
+- - '##'
+  - 图 4-7. 显示广播外设的应用屏幕
+- - '#'
+  - 示例代码
+- - '#'
+  - 连接与断开连接
+- - '##'
+  - 外设 (Peripheral)
+- - '##'
+  - 中心设备 (Central)
+- - '##'
+  - 为中心设备
+- - '###'
+  - 表 4-1. BluetoothGattCallback
+- - '##'
+  - 整合一切
+- - '##'
+  - 资源
+- - '##'
+  - 对象
+- - '###'
+  - 示例 5-2. java/example.exampleble/ble/BlePeripheral.java
+- - '#'
+  - 活动
+- - '#'
+  - Manifest
+- - '#'
+  - 对象
+- - '#'
+  - Activity
+- - '###'
+  - 示例 5-5. res/layout/activity_connect.xml
+- - '#'
+  - ExampleBLEPeripheral
+- - '##'
+  - ExampleBLEPeripheral
+- - '##'
+  - 代码
+- - '##'
+  - 服务和服务
+- - '##'
+  - 识别服务和服务特征
+- - '##'
+  - 通用属性配置文件 (Generic Attribute Profile)
+- - '###'
+  - 表 6-1. 特性权限
+- - '##'
+  - 数据长度与速度
+- - '##'
+  - 编写中心
+- - '###'
+  - 表 6-3. BluetoothGatt 权限
+- - '##'
+  - 关于缓存的说明
+- - '##'
+  - 整合
+- - '###'
+  - 示例 6-1. res/values/strings.xml
+- - '##'
+  - 对象
+- - '###'
+  - 示例 6-2. java/example.com.exampleble/ble/BlePeripheral
+- - '##'
+  - 视图
+- - '###'
+  - 示例 6-3. java/example/com.exampleble/models/BleGattServiceListItem
+- - '###'
+  - 示例 6-4. res/layout/list_item_ble_service.xml
+- - '###'
+  - 示例 6-5. java/example.com.exampleble/models/BleGattCharacteristicList
+- - '###'
+  - 示例 6-6. java/example.com.exampleble/adapters/BLEServiceListAdapter
+- - '#'
+  - ExampleBLEConnect
+- - '##'
+  - DISCONNECT
+- - '##'
+  - MyDevice
+- - '##'
+  - ExampleBLEConnect DISCONNECT
+- - '##'
+  - MyDevice
+- - '#'
+  - 为外设进行编程
+- - '##'
+  - 关于 GATT 配置最佳实践的说明
+- - '##'
+  - 整合一切
+- - '##'
+  - 对象
+- - '##'
+  - ExampleBLEPeripheral
+- - '##'
+  - 示例代码
+- - '##'
+  - 从外设读取数据
+- - '##'
+  - 外设
+- - '##'
+  - 中心设备
+- - '##'
+  - 编写中心设备程序
+- - '##'
+  - 整合整体
+- - '##'
+  - 资源
+- - '###'
+  - 示例 7-1. res/values/strings.xml
+- - '##'
+  - 对象
+- - '###'
+  - 示例 7-2. java/example.com.exampleble/ble/BlePeripheral
+- - '##'
+  - 示例 8-3. java/example.com.exampleble/utilities/DataConverter
+- - '##'
+  - 视图 Views
+- - '##'
+  - Activity Activities
+- - '##'
+  - Manifest
+- - '###'
+  - 示例 7-9. manifests/AndroidManifest.xml
+- - '#'
+  - ExampleBLETalk DISCONNECT
+- - '##'
+  - MyDevice
+- - '##'
+  - ExampleBLEConnect DISCONNECT
+- - '##'
+  - 为 Peripheral 编程
+- - '###'
+  - 表 7-2. BluetoothGattServerCallback
+- - '##'
+  - 整合
+- - '##'
+  - ExampleBLEPeripheral
+- - '##'
+  - 示例代码
+- - '##'
+  - 向外设写入数据
+- - '##'
+  - 外设
+- - '##'
+  - 中心设备
+- - '##'
+  - 为中心设备编程
+- - '###'
+  - 表 8-1. BluetoothGattCallback
+- - '##'
+  - 整合一切
+- - '##'
+  - 资源
+- - '##'
+  - 对象
+- - '##'
+  - 视图 (Views)
+- - '###'
+  - 示例 8-4. res/layout/list_item_ble_characteristic.xml
+- - '##'
+  - Activity (Activities)
+- - '###'
+  - 为 Talk Activity 添加两个新方法：
+- - '###'
+  - 示例 8-5. java/example.com.exampleble/TalkActivity.java
+- - '###'
+  - 示例 8-6. res/layout/activity_talk.xml
+- - '#'
+  - 视图
+- - '##'
+  - ExampleBLETalk
+- - '##'
+  - 我的设备
+- - '##'
+  - ExampleBLEConnect 断开连接
+- - '##'
+  - 编写外设
+- - '##'
+  - 整合在一起
+- - '##'
+  - 资源
+- - '##'
+  - 对象
+- - '###'
+  - 示例 8-3. java/example.exampleble/ble/callbacks/BlePeripheralCallback
+- - '##'
+  - Activity
+- - '###'
+  - 示例 8-5. java.com.exampleble/MainActivity.java
+- - '##'
+  - 示例代码
+- - '##'
+  - 使用通知
+- - '##'
+  - 外设（Peripheral）
+- - '##'
+  - 中心设备（Central）
+- - '##'
+  - 为中心设备编程
+- - '###'
+  - 表 9-2. BluetoothGattCallback
+- - '##'
+  - 整合一切
+- - '##'
+  - 资源
+- - '##'
+  - 对象
+- - '###'
+  - 示例 9-1. res/values/strings.xml
+- - '##'
+  - 对象
+- - '###'
+  - 示例 9-2. java/com.exampleble/ble/BlePeripheral
+- - '###'
+  - 示例 9-3. java/example.exampleble/adapters/BleGattProfile
+- - '##'
+  - Views
+- - '##'
+  - Activities
+- - '###'
+  - 在 Talk activity 布局中添加一个复框。
+- - '#'
+  - ExampleBLETalk
+- - '##'
+  - MyDevice
+- - '##'
+  - ExampleBLETalk
+- - '##'
+  - MyDevice
+- - '##'
+  - 为外设编程
+- - '##'
+  - 将所有内容
+- - '##'
+  - 资源
+- - '##'
+  - 对象
+- - '###'
+  - 示例 9-6. res/layout/activity_main.xml
+- - '##'
+  - ExampleBLEPeripheral
+- - '##'
+  - 示例Java
+- - '##'
+  - 流数据
+- - '##'
+  - 编写中心设备
+- - '##'
+  - 第一个数据包被初始化：
+- - '##'
+  - 整合在一起
+- - '##'
+  - 对象
+- - '###'
+  - 示例 10-1. java/example/exampleble/ble/BlePeripheral
+- - '##'
+  - Activity
+- - '##'
+  - 整合内容
+- - '##'
+  - 对象
+- - '##'
+  - Activity
+- - '##'
+  - ExampleBLEPeripheral
+- - '##'
+  - 示例代码
+- - '#'
+  - '项目: iBeacon'
+- - '##'
+  - 测距
+- - '##'
+  - 空间感知
+- - '##'
+  - iBeacons
+- - '###'
+  - 表 11-1. iBeacon广播数据
+- - '##'
+  - 图11-4. iBeacon广播数据
+- - '##'
+  - 编写中心设备
+- - '##'
+  - 从 iBeacon 计算距离
+- - '##'
+  - 空间感知
+- - '##'
+  - 中心设备到 iBeacon 的距离可以使用距离处报告的 RSSI、1 米处的 RSSI 以及近似的常数来估算，使用此公式：
+- - '##'
+  - 已知变量
+- - '##'
+  - 计算两个 iBeacon 之间的距离
+- - '##'
+  - 计算 $P_1$ 到 $P_2$ 的单位向量
+- - '##'
+  - 计算 $P_1$ 到 $P_3$ 距离的模
+- - '##'
+  - 计算 P1 和 P3 之间的单位向量
+- - '##'
+  - 计算 P1 和 P3 之间的幅度
+- - '##'
+  - Find Central 到 iBeacons 的相对距离
+- - '###'
+  - 图 11-13. 带 Central 水平位置的 iBeacon 输出位置
+- - '###'
+  - 图 11-14. 带 Central 垂直位置的 iBeacon 输出位置
+- - '##'
+  - 计算 Central 在 P4 处的绝对位置
+- - '##'
+  - 整合所有内容
+- - '##'
+  - 对象
+- - '###'
+  - 示例 14-
+- - '##'
+  - BleScanCallbackv1 处理较新 Android 设备中的外设发现和蓝牙射频状态。
+- - '###'
+  - 示例 14-
+- - '##'
+  - 创建一个 IBeacon 对象，从 ScanData 中提取 iBeacon 信息
+- - '###'
+  - 示例 12-2. java/example.com.beacon/ble/IBeacon.java
+- - '##'
+  - 创建一个 iBeaconListAdapter，用于在 ListView 中显示 iBeacons
+- - '###'
+  - 示例 12-
+- - '###'
+  - 示例 12-
+- - '#'
+  - 模型
+- - '##'
+  - 创建 iBeaconLayout 类，在屏幕上显示 iBeacon 和中心位置。
+- - '###'
+  - 示例 12-6. java/example.com.exampleble/models/IBeaconListItem.java
+- - '###'
+  - 示例 12-7. res/layout/list_item.xml
+- - '###'
+  - 示例 12-8. java/example.com.exampleble/MainActivity.java
+- - '#'
+  - 修改主 Activity 的布局文件。
+- - '#'
+  - 扫描与连接
+- - '##'
+  - 连接
+- - '##'
+  - 发现特征
+- - '##'
+  - 订阅通知
+- - '##'
+  - 写入消息
+- - '##'
+  - 读取响应
+- - '##'
+  - 整合应用
+- - '###'
+  - 示例 14-
+- - '###'
+  - 示例 14-
+- - '###'
+  - 示例 14-3. java/com.example.echocient/ble/callbacks/EchoServerCallback
+- - '##'
+  - Activities
+- - '###'
+  - 示例 13-5 res/layout/activity_main
+- - '###'
+  - 示例 14-7. res/menu/menu_main.xml
+- - '##'
+  - 进度扫描器的定义如下：
+- - '###'
+  - 示例 14-7. res/layout/scanner_progress.xml
+- - '##'
+  - BleEchoClient
+- - '##'
+  - EchoServer
+- - '##'
+  - 为外设设备编程
+- - '##'
+  - 权限
+- - '##'
+  - 整合在一起
+- - '##'
+  - Manifest
+- - '##'
+  - 资源
+- - '##'
+  - 对象
+- - '###'
+  - 示例 13-3. java/com.example.echoserver/ble/EchoServer
+- - '##'
+  - Activity
+- - '###'
+  - 示例 13-4. java/example.com.echoserver/MainActivity.java
+- - '#'
+  - BleEchoServer
+- - '##'
+  - 示例代码
+- - '#'
+  - 项目：远程控制 LED
+- - '##'
+  - 设备端 (Peripheral)
+- - '##'
+  - 中心端 (Central)
+- - '##'
+  - 向设备端发送命令
+- - '###'
+  - 表 13-1. 尾部值
+- - '###'
+  - 表 13-2. 命令值
+- - '###'
+  - 表 13-3. 确认值
+- - '##'
+  - GATT 配置
+- - '###'
+  - 表 13-4. 特征用途
+- - '##'
+  - 编写中心端
+- - '##'
+  - GATT 配置
+- - '##'
+  - 数据格式化
+- - '##'
+  - 权限
+- - '#'
+  - 扫描与连接
+- - '##'
+  - 连接
+- - '##'
+  - 发现特征
+- - '##'
+  - 订阅通知
+- - '##'
+  - 写入命令
+- - '##'
+  - 读取响应
+- - '##'
+  - 整合整体
+- - '##'
+  - Manifest
+- - '###'
+  - 示例 14-1. app/manifests/AndroidManifest.xml
+- - '##'
+  - 资源
+- - '###'
+  - 示例 14-2. res/values/strings.xml
+- - '##'
+  - 对象
+- - '###'
+  - 示例 14-3. java/com.example.ledremote/ble/BleManager
+- - '##'
+  - 示例 14-
+- - '###'
+  - 示例 14-
+- - '###'
+  - 示例 14-3. java/com.example./ble/
