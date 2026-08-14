@@ -1,0 +1,3778 @@
+- img_proc: true
+  md: '# Job Interview Questions Series
+
+
+    # Core JAVA
+
+    Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    ![](img/d27d2465428a9ec4df4fcfe09d910370_0_0.png)
+
+
+    155 Core JAVA Questions
+
+    51 HR Interview Questions
+
+
+    # Vibrant Publishers'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '![](img/d27d2465428a9ec4df4fcfe09d910370_1_0.png)
+
+
+    https://archive.org/details/isbn_9781452854649'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Core JAVA
+
+
+    # Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    Job Interview Questions Series
+
+
+    VP Vibrant Publishers
+
+
+    www.vibrantpublishers.com'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Core JAVA Interview Questions
+
+    nYou''ll Most Likely Be Asked
+
+
+    © 2011, By Vibrant Publishers, USA. All rights reserved. No part of this publication
+
+    be reproduced or distributed in any form or by any means, or stored in a
+
+    database or retrieval system, without the prior permission of the publisher.
+
+
+    ISBN : 1452854645
+
+    EAN-13 : 9781452854649
+
+
+    This publication is designed to provide accurate and authoritative information
+    in
+
+    regard to the subject matter covered. The author has made every effort in the
+
+    preparation of this book to ensure the accuracy of the information. However,
+
+    information in this book is sold without warranty either expressed or implied.
+
+    The or the Publisher will not be liable for any damages caused or alleged to be
+
+    cused either directly or indirectly by this book.
+
+
+    The publisher wishes to thank Preeti Asai - Thakkar (California) for her invaluable
+
+    inputs to this edition.
+
+
+    Vibrant Publishers books are available at special quantity discount for sales
+
+    promotions, or for use in corporate training programs. For more information please
+
+    write to bulkorders@vibrantpublishers.com
+
+
+    Please email feedback / corrections (technical, grammatical or spelling) to
+
+    spellererrors@vibrantpublishers.com
+
+
+    To access the complete catalogue of Vibrant Publishers, visit
+
+    www.vibrantpublishers.com'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Here’s what others say about this book!
+
+
+    What an excellent book. Couldn’t have asked for anything better! - Nimish Patwardhan,
+    Foster City
+
+
+    This would be a good book to look over when preparing for interviews. - Robert
+    D’Souza, Gurgaon
+
+
+    A perfect guide for the last minute revisions. - Ruby Fox
+
+
+    My then potential employer is my current employer. Thanks to this wonderful guide.
+    - Amy Davis, Central Europe
+
+
+    Covers OOPS, Java Basic, Collections, Core JAVA plus the bonus HR interview questions.
+    This book is super-duper. - Jenny LaFever, Jersey City
+
+
+    Good book, Great questions, Worth the Price! - David Brown, Silicon Valley
+
+
+    A few questions are quite challenging, helps me choose the right candidate for
+    my team. - Derrick Hill, TX'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: This page is intentionally left blank.
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Core JAVA Interview
+
+    Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# OOPS'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 1: What are the principle concepts of OOPS?
+
+
+    Answer:
+
+
+    There are four principle concepts upon which object oriented design and programming
+    rest. They are:
+
+
+    +   a) Abstraction
+
+    b) Polymorphism
+
+    c) Inheritance
+
+    d) Encapsulation
+
+
+    (i.e. easily remembered as A-PIE).
+
+
+    # 2: What is Abstraction?
+
+
+    Answer:
+
+
+    Abstraction refers to the act of representing essential features without including
+    the background details or explanations.
+
+
+    # 3: What is Encapsulation?
+
+
+    Answer:
+
+
+    Encapsulation is a technique used for hiding the properties'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'and behaviors of an object and allowing outside access only as appropriate.
+    It prevents other objects from directly altering or accessing the properties or
+    methods of the encapsulated object.
+
+
+    # 4: What is the difference between abstraction and encapsulation?
+
+
+    Answer:
+
+
+    Abstraction focuses on the outside view of an object (i.e. the interface) Encapsulation
+    (information hiding) prevents clients from seeing it’s inside view/ where the
+    behavior of the abstraction is implemented. Abstraction solves the problem in
+    the design side while Encapsulation is the Implementation: Encapsulation is the
+    deliverable of Abstraction. Encapsulation barely talks about grouping up your
+    abstraction to suit the developer needs.
+
+
+    # 5: What is Inheritance?'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'Answer:
+
+
+    Inheritance is the process by which objects of one class acquire the properties
+    of objects of another class. A class that is inherited is called a superclass.
+    The class that does the inheriting is called a subclass. Inheritance is done using
+    the keyword extends.
+
+
+    The two most common reasons to use inheritance are:
+
+
+    +   a) To promote code reuse
+
+    b) To use polymorphism
+
+
+    # 6: What is Polymorphism?
+
+
+    Answer:
+
+
+    Polymorphism is briefly described as "one interface, many implementations." Polymorphism
+    is a characteristic of being able to assign a different meaning or usage to something
+    in different contexts - specifically, to allow an entity such as a variable, a
+    function, or an object to have more than one form.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# 7: How does Java implement polymorphism?
+
+
+    Answer:
+
+
+    Inheritance, Overloading and Overriding are used to achieve Polymorphism in Java.
+    Polymorphism manifests itself in Java in the form of multiple methods having the
+    same name.
+
+
+    In some cases, multiple methods have the same name, but different formal argument
+    lists (overloaded methods). In other cases, multiple methods have the same name,
+    same return type, and same formal argument list (overridden methods).
+
+
+    # 8: Explain the different forms of Polymorphism.
+
+
+    Answer:
+
+
+    There are two types of polymorphism, one is Compile time polymorphism and the
+    other is run time polymorphism. Compile time polymorphism is method overloading.
+    Runtime time polymorphism is done using inheritance and interface.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Note: From a practical programming viewpoint, polymorphism manifests itself
+    in three distinct forms in Java:
+
+
+    +   a) Method overloading
+
+    b) Method overriding through inheritance
+
+    c) Method overriding through the Java interface
+
+
+    9: What is runtime polymorphism or dynamic method dispatch?
+
+
+    Answer:
+
+
+    In Java, runtime polymorphism or dynamic method dispatch is a process in which
+    a call to an overridden method is resolved at runtime rather than at compile-time.
+    In this process, an overridden method is called through the reference variable
+    of a superclass. The determination of the method to be called is based on the
+    object being referred to by the reference variable.
+
+
+    10: What is Dynamic Binding?'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'Core JAVA Interview Questions You''ll Most Likely Be Asked                                                              13
+
+
+    # Answer:
+
+
+    Binding refers to the linking of a procedure call to the code to be executed in
+    response to the call. Dynamic binding (also known as late binding) means that
+    the code associated with a given procedure call is not known until the time of
+    the call at run-time. It is associated with polymorphism and inheritance.
+
+
+    # 11: What is method overloading?
+
+
+    # Answer:
+
+
+    Method Overloading means to have two or more methods with same name in the same
+    class with different arguments. The benefit of method overloading is that it allows
+    you to implement methods that support the same semantic operation but differ by
+    argument number or type.
+
+
+    # Important Note:
+
+
+    +   a) Overloaded methods MUST change the argument list.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '+   b) Overloaded methods CAN change the return type.
+
+
+    +   c) Overloaded methods CAN change the access modifier.
+
+
+    +   d) Overloaded methods CAN declare new or broader checked exceptions.
+
+
+    +   e) A method can be overloaded in the same class or in a subclass.
+
+
+    # 12: What is method overriding?
+
+
+    Answer:
+
+
+    Method overriding occurs when sub class declares a method that has the same type
+    arguments as a method declared by one of its superclass. The key benefit of overriding
+    is the ability to define behavior that’s specific to a particular subclass type.
+
+
+    Note: The overriding method cannot have a more restrictive access modifier than
+    the method being overridden (Ex0 You can’t override a method marked public and
+    make it protected). You cannot override a'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'method marked final. You cannot override a method
+
+    marked Static.
+
+
+    # 13: What is the difference between method overloading
+
+    and method overriding?
+
+
+    Answer:
+
+
+    | | Overloaded Method | Overridden Method |
+
+    |---|---|---|
+
+    | Arguments | Must change | Must not change |
+
+    | Return type | Can change | Can''t change except for covariant returns |
+
+    | Exceptions | Can change | Can reduce or eliminate. Must not throw new or broader
+    checked exceptions |
+
+    | Access | Can change | Must not make more restrictive (can be less restrictive)
+    |
+
+    | Invocation | Reference type determines which overloaded version is selected.
+    Happens at compile time. | Object type determines which method is selected. Happens
+    at runtime. |'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# 14: Can overloaded methods be overridden too?
+
+
+    Answer:
+
+
+    Yes, derived classes still can override the overloaded methods. Polymorphism can
+    still happen. Compiler will not bind the method calls since it is overloaded,
+    because it might be overridden now or in the future.
+
+
+    # 15: Is it possible to override the main method?
+
+
+    Answer:
+
+
+    NO, because main is a Static method. A Static method can''t be overridden in Java.
+
+
+    # 16: How to invoke a superclass version of an Overridden method?
+
+
+    Answer:
+
+
+    To invoke a superclass method that has been overridden in a subclass, you must
+    either call the method directly through a superclass instance, or use the super
+    prefix in the subclass itself. From the point of view of the'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'subclass, the super prefix provides an explicit reference to
+
+    the superclass'' implementation of the method.
+
+
+    ```
+
+    // From subclass
+
+    super.overriddenMethod();
+
+    ```
+
+
+    # 17: What is Super?
+
+
+    Answer:
+
+
+    Super is a keyword which is used to access the method or
+
+    member variables from the superclass. If a method hides
+
+    one of the member variables in its superclass, the method
+
+    can refer to the hidden variable through the use of the
+
+    super keyword. In the same way, if a method overrides
+
+    one of the methods in its superclass, the method can
+
+    inv the overridden method through the use of the
+
+    super keyword.
+
+
+    Note: You can only go back one level. In the constructor, if
+
+    y use super(), it must be the very first code, and you
+
+    cannot access any this.xxx variables or methods to
+
+    compute its parameters.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# 18: How do you prevent a method from being overridden?\n\nAnswer:\n\nTo prevent\
+    \ a specific method from being overridden in a subclass, use the final modifier\
+    \ on the method declaration, which means \"this is the final implementation of\
+    \ this method\", the end of its inheritance hierarchy.\n\n```\npublic final void\
+    \ exampleMethod() {\n  // Method statements\n}\n```\n\n# 19: What is an Interface?\n\
+    \nAnswer:\n\nAn interface is a description of a set of methods that conforming\
+    \ implementing classes must have.\n\nNote:\n\n+   a) You can't mark an interface\
+    \ as final.\nb) Interface variables must be Static.\nc) An Interface cannot extend\
+    \ anything but another"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'interfaces.
+
+
+    # 20: Can we instantiate an interface?
+
+
+    Answer:
+
+
+    You can''t instantiate an interface directly/ but you can instantiate a class
+    that implements an interface.
+
+
+    # 21: Can we create an object for an interface?
+
+
+    Answer:
+
+
+    Yes, it is always necessary to create an object implementation for an interface.
+    Interfaces cannot be instantiated in their own right, so you must write a class
+    that implements the interface and fulfill all the methods defined in it.
+
+
+    # 22: Do interfaces have member variables?
+
+
+    Answer:
+
+
+    Interfaces may have member variables, but these are implicitly public, Static,
+    and final- in other words,'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'interfaces can declare only constants, not instance variables that are available
+    to all implementations and may be used as key references for method arguments
+    for example.
+
+
+    # 23: What modifiers are allowed for methods in an Interface?
+
+
+    Answer:
+
+
+    Only public and abstract modifiers are allowed for methods in interfaces.
+
+
+    # 24: What is a marker interface?
+
+
+    Answer:
+
+
+    Marker interfaces are those which do not declare any required methods, but signify
+    their compatibility with certain operations. The java.io.Serializable interface
+    and Cloneable are typical marker interfaces. These do not contain any methods,
+    but classes must implement this interface in order to be serialized and'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 25: What is an abstract class?
+
+
+    Answer:
+
+
+    Abstract classes are classes that contain one or more abstract methods. An abstract
+    method is a method that is declared, but contains no implementation.
+
+
+    Note:
+
+
+    +   a) If even a single method is abstract, the whole class must be declared abstract.
+
+
+    +   b) Abstract classes may not be instantiated, and require subclasses to provide
+    implementations for the abstract methods.
+
+
+    +   c) You can’t mark a class as both abstract and final.
+
+
+    # 26: Can we instantiate an abstract class?
+
+
+    Answer:
+
+
+    An abstract class can never be instantiated. Its sole purpose is to be extended
+    (subclassed).'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# 27: What is the difference between an Interface and an
+
+
+    Abstract Class?
+
+
+    Answer:
+
+
+    | Abstract Class | Interfaces |
+
+    | An abstract class can provide complete, default code and/or just the details
+    that have to be overridden. | An interface cannot provide any code at all,just
+    the signature. |
+
+    | In case of abstract class, a class may extend only one abstract class. | A Class
+    may implement several interfaces. |
+
+    | An abstract class can have non-abstract methods. | All methods of an Interface
+    are abstract. |
+
+    | An abstract class can have instance variables. | An Interface cannot have instance
+    variables. |
+
+    | An abstract class can have any visibility: public, private, protected. | An
+    Interface visibility must be public (or) none. |
+
+    | If we add a new method to an abstract class then we have the option of providing
+    default implementation and therefore all the existing code might work properly.
+    | If we add a new method to an Interface then we have to track down all the implementations
+    of the interface and define implementation for the new method. |
+
+    | An abstract class can contain constructors . | An Interface cannot contain constructors
+    . |
+
+    | Abstract classes are fast. | Interfaces are slow as it requires extra indirection
+    to find corresponding method in the actual class. |'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# 28: When should I use abstract classes and when should I use interfaces?
+
+
+    Answer:
+
+
+    Use Interfaces when:
+
+
+    +   a) You see that something in your design will change frequently. If various
+    implementations only share method signatures then it is better to use Interfaces.
+
+
+    b) You need some classes to use some methods which you don''t want to be included
+    in the class, then you go for the interface, which makes it easy to just implement
+    and make use of the methods defined in the interface.
+
+
+    Use Abstract Class:
+
+
+    +   a) If various implementations are of the same kind and use common behavior
+    or status then abstract class is better to use.
+
+
+    b) When you want to provide a generalized form of abstraction and leave the implementation
+    task with the inheriting subclass.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'c) Abstract classes are an excellent way to create planned inheritance hierarchies.
+    They''re also a good choice for nonleaf classes in class hierarchies.
+
+
+    # 29: When you declare a method as abstract, can other nonabstract methods access
+    it?
+
+
+    Answer:
+
+
+    Yes, other nonabstract methods can access a method that you declare as abstract.
+
+
+    # 30: Can there be an abstract class with no abstract methods in it?
+
+
+    Answer:
+
+
+    Yes, there can be an abstract class without abstract methods.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# JAVA BASICS'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# 31: What is Constructor?
+
+
+    Answer:
+
+    A constructor is a special method whose task is to initialize the object of its
+    class. It is special because its name is the same as the class name. They do not
+    have return types, not even void and therefore they cannot return values. They
+    cannot be inherited, though a derived class can call the base class constructor.
+    Constructor is invoked whenever an object of its associated class is created.
+
+
+    # 32: What is a default constructor?
+
+
+    Answer:
+
+    If a class defined by the code does not have any constructor, compiler will automatically
+    provide one-parameter-constructor (default-constructor) for the class in the byte
+    code. The access modifier (public/private/etc.) of the default constructor is
+    the same as the class itself.
+
+
+    # 33: Can a constructor be inherited?'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    No, constructor cannot be inherited, though a derived class can call the base
+    class constructor.
+
+
+    # 34: What are the differences between Contructors and Methods?
+
+
+    # Answer:
+
+
+    | Purpose | Methods |
+
+    | --- | --- |
+
+    | Create an instance of a class | Group Java statements |
+
+    | Modifiers | Cannot be abstract, final, native, Static, or synchronized | Can
+    be abstract, final, native, Static, or synchronized |
+
+    | Return Type | No return type, not even void | void or a valid return type |
+
+    | Name | Same name as the class (first letter is capitalized by convention) --
+    usually a noun | Any name except the class. Method names begin with a lowercase
+    letter -- usually the name of an action |
+
+    | this | Refers to another constructor in the same class. If used, it must be
+    the first line of the constructor | Refers to an instance of the owning class.
+    Cannot be used by Static methods. |'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Core JAVA Interview Questions You''ll Likely Be Asked
+
+
+    | super | Calls the constructor of the parent class. If used, must be the first
+    line of the constructor | Calls an overridden method in the parent class |
+
+    | Inheritance | Constructors are not inherited | Methods are inherited ||
+
+
+    # 35: How are this this() and super() used with constructors?
+
+
+    Answer:
+
+
+    Constructors use this to refer to another constructor in the same class with a
+    different parameter list. Constructors use super to invoke the superclass''s constructor.
+    If a constructor uses super, it must use it in the first line; otherwise, the
+    compiler will complain.
+
+
+    # 36: What are the differences between Class Methods and Instance Methods?
+
+
+    Answer:
+
+
+    | Class Methods | Instance Methods |
+
+    | Class methods are methods which are declared as Static. | Instance methods on
+    the other hand require an instance of the class to exist before they can be called,
+    |'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Core JAVA Interview Questions You''ll Likely Be Asked
+
+
+    | The method can be called without creating an instance | so an instance of a
+    class needs to be created by using the new keyword. Instance methods operate on
+    specific instances of classes. |
+
+    | Class methods can only operate on class members and not on instance members
+    as class methods are unaware of instance members. | Instance methods of the class
+    can also not be called from within a class method unless they are being called
+    on an instance of that class. |
+
+    | Class methods are methods which are declared as Static. The method can be called
+    without creating an instance of the class. | Instance methods are not declared
+    as Static |
+
+
+    37: What is classpath?
+
+
+    Answer:
+
+
+    Classpath is the path where Java looks for loading class at run time and compile
+    time.
+
+
+    38: What are Access Specifiers?
+
+
+    Answer:
+
+
+    One of the techniques in object-oriented programming encapsulation. It concerns
+    the hiding of data in a class and'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'making this class available only through methods. Java allows you to control
+    access to classes, methods, and fields via so-called access specifiers.
+
+
+    # 39: Name the Access Specifiers available in Java?
+
+
+    Answer:
+
+
+    Java offers four access specifiers, listed below in decreasing accessibility:
+
+
+    Public - Public classes, methods, and fields can be accessed from everywhere.
+
+
+    Protected - Protected methods and fields can only be accessed within the same
+    class to which the methods and fields belong, within its subclasses, and within
+    classes of the same package.
+
+
+    Default(no specifier) - If you do not set access to specific level, then such
+    a class, method, or field will be accessible from inside the same package to which
+    the class, method, or field belongs, but not from outside this package.
+
+
+    Private - Private methods and fields can only be accessed'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'within the same class to which the methods and fields belong. private methods
+    and fields are not visible within subclasses and are not inherited by subclasses.
+    See details in the following table.
+
+
+    | Situation | Public | Protected | Default | Private |
+
+    |---| Accessible to class from same package? | Yes | Yes | Yes | No |
+
+    | Accessible to class from different package? | Yes | No, unless it is a subclass
+    | No | No |
+
+
+    # 40: What is final modifier?
+
+
+    Answer:
+
+
+    The final modifier keyword makes sure that the programmer cannot change the value
+    anymore. The actual meaning depends on whether it is applied to a class, a variable,
+    or a method.
+
+
+    final Classes - A final class cannot have subclasses.
+
+
+    final Variables - A final variable cannot be changed once it is initialized.
+
+
+    final Methods - A final method cannot be overridden by'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'subclasses.
+
+
+    # 41: What are the uses of final method?
+
+
+    Answer:
+
+
+    There are two reasons for marking a method as final:
+
+
+    +   a) Disallowing subclasses to change the meaning of the method.
+
+
+    +   b) Increasing efficiency by allowing the compiler to turn calls to the method
+    into inline Java code.
+
+
+    # 42: What is a Static block?
+
+
+    Answer:
+
+
+    Static block is executed exactly once when the class is loaded into JVM. Before
+    going to the main method the Static block will execute.
+
+
+    # 43: What are Static variables?
+
+
+    Answer:
+
+
+    Variables that have only one copy per class are known as'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'Static variables. They are not attached to a particular instance of a class
+    but rather belong to a class as a whole.
+
+
+    They are declared by using the Static keyword as a modifier.
+
+
+    ```
+
+    Static type varIdentifier;
+
+    ```
+
+
+    where, the name of the variable is varIdentifier and its data type is specified
+    by type.
+
+
+    **Note:** Static variables that are not explicitly initialized in the code are
+    automatically initialized with a default value.
+
+
+    The default value depends on the data type of the variables.
+
+
+    # 44: What is the difference between Static and non-Static variables?
+
+
+    **Answer:**
+
+
+    A Static variable is associated with the class as a whole rather than with specific
+    instances of a class. Non-Static variables take on unique values with each object
+    instance.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# 45: What are Static methods?
+
+
+    Answer:
+
+
+    Methods declared with the keyword Static as modifier are called Static methods
+    or class methods. They are called Static methods because they affect a class as
+    a whole, not a particular instance of the class. Static methods are always invoked
+    without reference to a particular instance of a class.
+
+
+    Note: The use of a Static method suffers from the following restrictions:
+
+
+    +   a) A Static method can only call other Static methods.
+
+    b) A Static method must only access Static data.
+
+    c) A Static method cannot reference to the current object using keywords super
+    or this.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# JAVA COLLECTION'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# 46: What is an Iterator?
+
+
+    Answer:
+
+
+    The Iterator interface is used to step through the elements of a Collection. Iterators
+    let you process each element of a Collection.
+
+
+    Iterators are a generic way to go through all the elements of a Collection no
+    matter how it is organized. Iterator is an Interface implemented a different way
+    for every Collection.
+
+
+    # 47: How do you traverse through a collection using its Iterator?
+
+
+    Answer:
+
+
+    To use an iterator to traverse through the contents of a collection, follow these
+    steps:
+
+
+    +   a) Obtain an iterator to the start of the collection by calling the collection''s
+    iterator() method.
+
+
+    +   b) Set up a loop that makes a call to hasNext(). Have the loop iterate as
+    long as hasNext() returns true.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'c) Within the loop, obtain each element by calling next().
+
+
+    # 48: How do you remove elements during Iteration?
+
+
+    Answer:
+
+
+    Iterator also has a method remove() when remove is called, the current element
+    in the iteration is deleted.
+
+
+    # 49: What is the difference between Enumeration and Iterator?
+
+
+    Answer:
+
+
+    | Enumeration | Iterator |
+
+    | Enumeration doesn''t have a remove() method | Iterator has a remove() method
+    |
+
+    | Enumeration acts as Read-only interface, because it has the methods only to
+    traverse and fetch the objects | Can be abstract, final, native, Static, or synchronized
+    |
+
+
+    # 50: What is ListIterator?
+
+
+    Answer:
+
+
+    ListIterator is just like Iterator, except it allows us to access'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: 'the collection in either the forward or backward direction
+
+    and lets us modify an element
+
+
+    # 51: What is the List interface?
+
+
+    Answer:
+
+
+    The List interface provides support for ordered collections of objects. Lists
+    may contain duplicate elements.
+
+
+    # 52: What are the main implementations of the List interface?
+
+
+    Answer:
+
+
+    The main implementations of the List interface are as follows :
+
+
+    ArrayList: Resizable-array implementation of the List interface. The best all-around
+    implementation of the List interface.
+
+
+    Vector: Synchronized resizable-array implementation of the List interface with
+    additional "legacy methods."
+
+
+    LinkedList: Doubly-linked list implementation of the List'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Core JAVA Interview Questions You''ll Most Likely Be Asked 39
+
+
+    interface. May provide better performance than the ArrayList implementation if
+    elements are frequently inserted or deleted within the list. Useful for queues
+    and double-ended queues (deques).
+
+
+    # 53: What are the advantages of ArrayList over arrays?
+
+
+    Answer:
+
+
+    Some of the advantages ArrayList has over arrays are:
+
+
+    +   a) It can grow dynamically
+
+    b) It provides more powerful insertion and search mechanisms than arrays.
+
+
+    # 54: Difference between ArrayList and Vector?
+
+
+    Answer:
+
+
+    | ArrayList | Vedor |
+
+    | --- | --- |
+
+    | ArrayList is NOT synchronized by default. | Vector List is synchronized by default.
+    |
+
+    | ArrayList can use only Iterator to access the elements. | Vector list can use
+    Iterator and Enumeration Interface to access the elements. |
+
+    | The ArrayList increases its array size by 50 percent if it runs out of room.
+    | A Vector defaults to doubling the size of its array if it runs out of room |'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# 55: How to obtain Array from an ArrayList?
+
+
+    Answer:
+
+
+    Array can be obtained from an ArrayList using to() method on ArrayList.
+
+
+    ```
+
+    ArrayList arrayList = new ArrayList();
+
+
+    alistist.add(obj1)
+
+
+    Object a[] = arrayList.toArray();
+
+    ```
+
+
+    # 56: Why insertion and deletion in ArrayList is slow compared to LinkedList?
+
+
+    Answer:
+
+
+    ArrayList internally uses an array to store the elements, when that array gets
+    filled by inserting elements a new array of roughly 1.5 times the size of the
+    original array is created and all the data of old array is copied to new array.
+    During deletion, all elements present in the array after the deleted elements
+    have to be moved one step back to fill the'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'space created by deletion.
+
+
+    In linked list data is stored in nodes that have reference to the previous node
+    and the next node so adding element is simple as creating the node and updating
+    the next pointer on the last node and the previous pointer on the new node.
+
+
+    Deletion in linked list is fast because it involves only updating the next pointer
+    in the node before the deleted node and updating the previous pointer in the node
+    after the deleted node.
+
+
+    # 57: Why are Iterators returned by ArrayList called Fail Fast?
+
+
+    Answer:
+
+
+    Because, if list is structurally modified at any time after the iterator is created,
+    in any way except through the iterator''s own remove or add methods, the iterator
+    will throw a ConcurrentModificationException. Thus, in the face of concurrent
+    modification, the iterator fails quickly and cleanly, rather than risking arbitrary,
+    non -deterministic'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'behavior at an undetermined time in the future.
+
+
+    # 58: How do you decide when to use ArrayList and when to use LinkedList?
+
+
+    **Answer:**
+
+
+    If you need to support random access, without inserting or removing elements from
+    any place other than the end, then ArrayList offers the optimal collection. If,
+    however, you need to frequently add and remove elements from the middle of the
+    list and only access the list elements sequentially, then LinkedList offers the
+    better implementation.
+
+
+    # 59: What is the Set interface?
+
+
+    **Answer:**
+
+
+    The Set interface provides methods for accessing the elements of a finite mathematical
+    set.
+
+
+    +   a) Sets do not allow duplicate elements
+
+
+    +   b) Contains no methods other than those inherited from Collection'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'c) It adds the restriction that duplicate elements are prohibited
+
+
+    d) Two Set objects are equal if they contain the same elements
+
+
+    # 60: What are the main Implementations of the Set interface?
+
+
+    Answer:
+
+
+    The main implementations of the List interface are as follows:
+
+
+    +   a) HashSet
+
+    b) TreeSet
+
+    c) LinkedHashSet
+
+    d) EnumSet
+
+
+    # 61: What is a HashSet? When it should be used?
+
+
+    Answer:
+
+
+    A HashSet is an unsorted, unordered Set. It uses the hashcode of the object being
+    inserted (the more efficient'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'your hashcode() implementation the better access performance you’ll get. Use
+    this class when you want a collection with no duplicates and you don’t care about
+    order when you iterate through it.
+
+
+    # 62: What is a TreeSet?
+
+
+    Answer:
+
+
+    TreeSet is a set implementation that keeps the elements in sorted order. The elements
+    are sorted according to the natural order of elements or by the comparator provided
+    at creation time.
+
+
+    # 63: What is an EnumSet?
+
+
+    Answer:
+
+
+    An EnumSet is a specialized set for use with enum types, all of the elements in
+    the Enum type that is specified, explicitly or implicitly, when the set is created
+
+
+    # 64: Difference between HashSet and TreeSet?'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    Answer:
+
+
+    | HashSet | TreeSet |
+
+    | HashSet is under set interface i.e. it does not guarantee for either sorted
+    order or sequence order. | TreeSet is under set i.e. it provides elements in a
+    sorted order (acceding order). |
+
+    | We can add any type of elements to hash set. | We can add only similar types
+    of elements to tree set. |
+
+
+    # 65: What is a Map?
+
+
+    A Map is an object that stores associations between keys and values (key/value
+    pairs). Given a key, you can find its value. Both keys and values are objects.
+    The keys must be unique, but the values may be duplicated. Some Maps can accept
+    a null key and null values, others cannot.
+
+
+    # 66: What are the main Implementations of the Map interface?
+
+
+    Answer:
+
+
+    The main implementations of the List interface are as follows:'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '+   a) HashMap
+
+    b) HashTable
+
+    c) TreeMap
+
+    d) EnumMap
+
+
+    # 67: What is a TreeMap?
+
+
+    Answer:
+
+
+    TreeMap actually implements the SortedMap interface which extends the Map interface.
+    In a TreeMap the data will be sorted in ascending order of keys according to the
+    natural order for the key''s class, or by the comparator provided at creation
+    time. TreeMap is based on the Red-Black tree data structure.
+
+
+    # 68: How do you decide when to use HashMap and when to use TreeMap?
+
+
+    Answer:
+
+
+    For inserting, deleting, and locating elements in a Map, the HashMap offers the
+    best alternative. If, however, you need'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Core JAVA Interview Questions You''ll Most Likely Be Asked 47
+
+
+    to traverse the keys in a sorted order, then TreeMap is your better alternative.
+    Depending on the size of your collection, it may be faster to add elements to
+    a HashMap, then convert the map to a TreeMap for sorted key traversal.
+
+
+    # 69: Difference between HashMap and Hashtable
+
+
+    Answer:
+
+
+    | HashMap | Hashtable |
+
+    | --- | --- |
+
+    | HashMap lets you have null values as well as one null key. | HashTable does
+    not allows null values as key and value. |
+
+    | The iterator in the HashMap is fail-safe (If you change the map while iterating/
+    you''ll know). | The enumerator for the Hashtable is not fail-safe. |
+
+    | HashMap is unsynchronized. | Hashtable is synchronized. |
+
+
+    # 70: What is Static initializer block? What is its use?
+
+
+    Answer:
+
+
+    Static initializer block is a block of code that declares the Static keyword.
+    It normally contains the block of code that must execute at the time of class
+    loading. The Static'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'initializer block will execute only once, at the time of loading the class.
+
+
+    # 71: Name different Collection Views that Maps Provide?
+
+
+    Answer:
+
+
+    Maps Provide Three Collection Views.
+
+
+    Key Set - Allows Map''s contents to be viewed as a set of keys.
+
+
+    Values Collection - Allows Map''s contents to be viewed as a set of values.
+
+
+    Entry Set - Allow Map''s contents to be viewed as a set of key-value mappings.
+
+
+    # 72: What is a KeySet View?
+
+
+    Answer:
+
+
+    KeySet is a set returned by the keySet() method of the Map Interface. It is a
+    set that contains all the keys present in the Map.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# 73: What is Values Collection View?
+
+
+    Answer:
+
+
+    Values Collection View is a collection returned by the values() method of the
+    Map Interface. It contains all the objects present as values in the map.
+
+
+    # 74: What is an EntrySet View?
+
+
+    Answer:
+
+
+    EntrySet view is a set that is returned by the entrySet() method in the map and
+    contains Objects of type Map. Entry each of which has both Key and Value.
+
+
+    # 75: How do you sort an ArrayList (or any list) of user-defined objects?
+
+
+    Answer:
+
+
+    Create an implementation of the java.lang.Comparable interface that knows how
+    to order your objects and pass to java.util.Collections.sort(List, Comparator).'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# 76: What is the Comparable interface?
+
+
+    Answer:
+
+
+    The Comparable interface is used to sort collections and arrays of objects using
+    the Collections.sort() and java.utils.Arrays.sort() methods respectively. The
+    objects of the class implementing the Comparable interface can be ordered.
+
+
+    The Comparable interface in the generic form is written as follows:
+
+
+    ```
+
+    interface Comparable<T>
+
+    ```
+
+
+    where T is the name of the type parameter. All classes implementing the Comparable
+    interface must implement the compareTo() method that has the return type as an
+    integer. The signature of the compareTo() method is as follows:
+
+
+    ```
+
+    int i = object1.compareTo(object2)
+
+    ```
+
+
+    If object1 < object2: The value of i returned will be negative.
+
+
+    If object1 > object2: The value of i returned will be positive.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    If object1 = object2: The value of i returned will be zero.
+
+
+    # 77: What are the differences between the Comparable and Comparator interfaces?
+
+
+    Answer:
+
+
+    | Comparable | Comparator |
+
+    |---|---|
+
+    | It uses the compareTo() method. | It uses the compare() method. |
+
+    | int objectOne.compareTo(objectTwo) | int compare(ObjOne, ObjTwo) |
+
+    | It is necessary to modify the class whose instance is going to be sorted. |
+    A separate class can be created in order to sort the instances. |
+
+    | Only one sort sequence can be created. | Many sort sequences can be created.
+    |
+
+    | It is frequently used by the API classes. | It used by third-party classes to
+    sort instances |'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# CORE JAVA'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# 78: How Observer and Observable are used?
+
+
+    Answer:
+
+
+    Subclass of Observable class maintains a list of observers.
+
+
+    Whenever an Observable object is updated, it invokes the
+
+    update() method of each of its observers to notify the
+
+    observers that it has a changed state. An observer is any
+
+    object that implements the interface Observer.
+
+
+    # 79: What is Synchronization?
+
+
+    Answer:
+
+
+    Synchronization is the ability to control the access of
+
+    multiple threads to shared resources. Synchronization
+
+    stops multi-threading. With synchronization, at a time
+
+    only one thread will be able to access a shared resource.
+
+
+    # 80: What is the difference between yield() and sleep()?
+
+
+    Answer:
+
+
+    When a object invokes yield() it returns to ready state. But
+
+    when an object invokes sleep() method enters to not ready'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'state.
+
+
+    # 81: Can we call finalize() method?
+
+
+    Answer:
+
+
+    Yes. Nobody will stop us to call any method, if it is accessible in our class.
+    But a garbage collector cannot call an object''s finalize method if that object
+    is reachable.
+
+
+    # 82: What is the difference between time slicing and preemptive scheduling?
+
+
+    Answer:
+
+
+    In preemptive scheduling, highest priority task continues execution till it enters
+    a not running state or a higher priority task comes into existence. In time slicing,
+    the task continues its execution for a predefined period of time and reenters
+    the pool of ready tasks.
+
+
+    # 83: What are the differences between boolean & operator and && operator'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'Core JAVA Interview Questions You''ll Most Likely Be Asked 55
+
+
+    # Answer:
+
+
+    When an expression containing the & operator is evaluated, both operands are evaluated
+    and the & operator is applied to the operand.
+
+
+    When an expression containing && operator is evaluated, the first operand is evaluated.
+    If the first operand returns a value of true only then the second operand is evaluated
+    otherwise the second part will not get executed. && is also called short cut and.
+
+
+    # 84: What are the differences between an abstract class and an interface?
+
+
+    # Answer:
+
+
+    An Abstract class can have concrete method, which is not allowed in an interface.
+    Abstract class can have private or protected methods and variables and only public
+    methods and variables are allowed in interface. We can implement more than one
+    interface, but we can extend only one abstract class. Interfaces provides loose
+    coupling where as'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'abstract class provides tight coupling.
+
+
+    # 85: What is the difference between synchronized block and synchronized method?
+
+
+    Answer:
+
+
+    Synchronized blocks place locks for the specified block where as synchronized
+    methods place locks for the entire method.
+
+
+    # 86: How can you force garbage collection in Java?
+
+
+    Answer:
+
+
+    You cannot force Garbage Collection, but you can request it by calling the method
+    system.gc(). But it doesn''t mean that Garbage Collection will start immediately.
+    The garbage collection is a low priority thread of JVM.
+
+
+    # 87: What''s the difference between normal methods and constructors?
+
+
+    Answer:'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    Constructors must have the same name of the class and can not have a return type.
+    They are called only once, while regular methods can be called whenever required.
+    We cannot explicitly call a constructor.
+
+
+    # 88: What is the use of packages in Java?
+
+
+    Answer:
+
+
+    Packages are a way to organize files in Java when a project consists of more than
+    one module. It helps in resolving name conflicts when different modules have classes
+    with the same names.
+
+
+    # 89: What is serialization?
+
+
+    Answer:
+
+
+    Serialization is the process of saving the state of an object.
+
+
+    # 90: What is de-serialization?
+
+
+    Answer:
+
+
+    De-serialization is the process of restoring the state of an'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: 'object.
+
+
+    # 91: What is externalizable?
+
+
+    Answer:
+
+
+    It is an interface that extends Serializable. It is having two different methods
+    writeExternal() and readExternal. This interface allows us to customize the output.
+
+
+    # 92: What are different type of exceptions in Java?
+
+
+    Answer:
+
+
+    There are two types of exceptions in Java i.e. Checked exceptions and Unchecked
+    exceptions. Any exception that is derived from Throwable and Exception is called
+    checked exception except RuntimeException and its subclasses. The compiler will
+    check whether the exception is caught or not at compile time. We need to catch
+    the checked exception or declare in the throws clause. Any exception that is derived
+    from Error and RuntimeException is called unchecked exception. We don''t'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'need to explicitly catch an unchecked exception.
+
+
+    # 93: Can we catch an error in our Java program?
+
+
+    Answer:
+
+
+    Yes. We can catch anything that is derived from Throwable. Since Error is a sub
+    class of Throwable we can catch an error also.
+
+
+    # 94: What is Thread Priority?
+
+
+    Answer:
+
+
+    Thread Priority is an integer value that identifies the relative order in which
+    it should be executed with respect to others. The thread priority values ranging
+    from 1-10 and the default value is 5. But if a thread has higher priority doesn’t
+    means that it will execute first. The thread scheduling depends on the OS.
+
+
+    # 95: How many times may an object''s finalize() method be invoked by the garbage
+    collector?'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'Answer:
+
+
+    Only once.
+
+
+    # 96: What is the difference between a Continue statement and a Break statement?
+
+
+    Answer:
+
+
+    Break statement results in the immediate termination of the statement to which
+    it applies (switch, for, do, or while). A Continue statement is used to end the
+    current loop iteration and return control to the loop statement.
+
+
+    # 97: What must a class do to implement an interface?
+
+
+    Answer:
+
+
+    A Class must identify the interface in its implements clause. Also it must provide
+    definition for all the methods in the interface otherwise it must be declared
+    abstract.
+
+
+    # 98: What is an abstract class?
+
+
+    Answer:'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    An abstract class is an incomplete class. It is declared with the modifier abstract.
+    We cannot create objects of the abstract class.
+
+
+    It is used to specify a common behavioral protocol for all its child classes.
+
+
+    # 99: What is the difference between notify and notifyAll method?
+
+
+    Answer:
+
+
+    Notify wakes up a single thread that is waiting for object''s monitor. If any
+    threads are waiting on this object, one of them is chosen to be awakened. The
+    choice is arbitrary and occurs at the discretion of the implementation.
+
+    notifyAll Wakes up all threads that are waiting on this object''s monitor. A thread
+    waits on an object''s monitor by calling one of the wait methods.
+
+
+    # 100: What does wait method do?
+
+
+    Answer:'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: 'It causes current thread to wait until either another thread invokes notify
+    or notifyAll method of the current object, or a specified amount of time has elapsed.
+
+
+    # 101: What are the different states of a thread?
+
+
+    Answer:
+
+
+    The different thread states are ready, running, waiting and dead.
+
+
+    # 102: What is the difference between Static and non-Static inner class?
+
+
+    Answer:
+
+
+    A non-Static inner class can have an object instances that are associated with
+    instances of the class''s outer class. A Static inner class can not have any object
+    instances.
+
+
+    # 103: What is the difference between String and StringBuffer class?
+
+
+    Answer:'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'Strings are immutable (constant), their values cannot be changed after they
+    are created. StringBuilder supports mutable objects.
+
+
+    # 104: What is the difference between readers and streams?
+
+
+    Answer:
+
+
+    Readers are character oriented whereas streams are byte oriented. The readers
+    are having full support for Unicode data.
+
+
+    # 105: What is constructor chaining?
+
+
+    Answer:
+
+
+    When a constructor of a class is executed it will automatically call the default
+    constructor of the super class (if no explicit call to any of the super class
+    constructor) till the root of the hierarchy.
+
+
+    # 106: What are the different primitive data types in Java?
+
+
+    Answer:'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'There are 8 primitive types in Java.
+
+
+    +   a) boolean ,
+
+    b) char,
+
+    c) byte,
+
+    d) short,
+
+    e) int,
+
+    f) long,
+
+    g) float,
+
+    h) double.
+
+
+    # 107: What is static keyword?
+
+
+    Answer:
+
+
+    Static means one per class. Static variables are created when the class loads.
+    They are associated with the class. In order to access a Static variables we don''t
+    need objects. We can directly access Static methods and variables by calling classname.
+    variable name.
+
+
+    # 108: Why we cannot override Static methods?'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: 'Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    Static means they are associated with a class. In Static methods , the binding
+    mechanism is Static binding. So it must be available at compile time.
+
+
+    # 109: What is the difference between Static and non Static variables?
+
+
+    # Answer:
+
+
+    A Static variable is associated with the class as a whole rather than with specific
+    instances of a class. There will be only one value for Static variable for all
+    instances of that class.
+
+
+    Non-Static variables take unique values with each object instance.
+
+
+    # 110: When does a compiler supply a default constructor for a class?
+
+
+    # Answer:
+
+
+    If there is no other constructor existing in a class, the'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: 'compiler will supply a default constructor.
+
+
+    # 111: What are the restrictions placed on overriding a method?
+
+
+    Answer:
+
+
+    The overridden method has the exact signature of the super class method, including
+    the return type. The access specified cannot be less restrictive than the super
+    class method. We cannot throw any new exceptions in overridden method.
+
+
+    # 112: What is Casting?
+
+
+    Answer:
+
+
+    Casting means converting one type to another. There are mainly two types of Casting.
+
+
+    +   a) Casting between primitive types and
+
+    b) Casting between object references.
+
+
+    Casting between primitive numeric types is used to convert larger data types to
+    smaller data types.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    Casting between object references is used to refer to an object by a compatible
+    class, interface, or array type reference.
+
+
+    # 113: What is the difference between == and equals?
+
+
+    Answer:
+
+
+    The equals method can be considered to perform a deep comparison of the value
+    of an object, whereas the == operator performs a shallow comparison. If we are
+    not overriding the equals method both will give the same result. == is used to
+    compare the object references. It is used to check whether two objects are pointing
+    to the same reference.
+
+
+    # 114: What is a void return type?
+
+
+    Answer:
+
+
+    A void indicates that the method will not return anything.
+
+
+    # 115: What will happen if an exception is not caught?'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'Answer:
+
+
+    An uncaught exception results in the uncaughtException() method of the thread''s
+    ThreadGroup, which results in the termination of the program.
+
+
+    # 116: What are the different ways in which a thread can enter into waiting state?
+
+
+    Answer:
+
+
+    There are three ways for a thread to enter into waiting state.
+
+
+    +   a) By invoking its sleep() method,
+
+    b) By blocking on I/O,
+
+    c) By unsuccessfully attempting to acquire an object''s lock, or by invoking an
+    object''s wait() method.
+
+
+    # 117: What is a ResourceBundle class?
+
+
+    Answer:
+
+
+    The ResourceBundle class is used to store locale-specific resources that can be
+    loaded by a program to create the'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: 'program''s appearance to the particular locale in which it is being run.
+
+
+    # 118: What is Numeric promotion?
+
+
+    Answer:
+
+
+    Numeric promotion is the conversion of a smaller numeric type to a larger numeric
+    type. In Numerical promotion, byte, char, and short values are converted to int
+    values. The int, long and float values are converted to the desired types if required.
+
+
+    # 119: What is the difference between the prefix and postfix forms of the ++ operator?
+
+
+    Answer:
+
+
+    The prefix form first performs the increment operation and then returns the value
+    of the increment operation. The postfix form first returns the current value of
+    the expression and then performs the increment operation on that value.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# 120: What are synchronized methods and synchronized statements?
+
+
+    Answer:
+
+
+    Synchronized methods are methods that are declared with the keyword synchronized.
+    Threads execute a synchronized method only after it has acquired the lock for
+    the method''s object or class. Synchronized statements are similar to synchronized
+    methods. It is a block of code declared with synchronized keyword. A synchronized
+    statement can be executed only after a thread has acquired the lock for the object
+    or class referenced in the synchronized statement.
+
+
+    # 121: How can we create a thread?
+
+
+    Answer:
+
+
+    A thread can be created by extending Thread class or by implementing Runnable
+    interface. Then we need to override the method public void run().'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# 122: What is the difference between a switch statement and an if statement?
+
+
+    Answer:
+
+
+    If statement is used to select from two alternatives. It uses a boolean expression
+    to decide which alternative should be executed. The expression in if must be a
+    boolean value. The switch statement is used to select from multiple alternatives.
+    The case values must be promoted to an int value.
+
+
+    # 123: What is hashCode?
+
+
+    Answer:
+
+
+    The hashcode of a Java Object is simply a number (32-bit signed int) that allows
+    an object to be managed by a hash-based data structure. A hashcode should be,
+    equal for equal object, fast to compute based on all or most of the internal state
+    of an object, use all or most of the space of 32-bit integers in a fairly uniform
+    way, and likely to be different even for objects that are very similar. If you
+    are'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'overriding hashCode you need to override equals method also.
+
+
+    # 124: What is an I/O filter?
+
+
+    Answer:
+
+
+    An I/O filter is an object that reads from one stream and writes to another, usually
+    altering the data in some way as it is passed from one stream to another.
+
+
+    # 125: What is the difference between RandomAccessFile and File?
+
+
+    Answer:
+
+
+    The File class contains information the files and directories of the local file
+    system. The RandomAccessFile class contains the methods needed to directly access
+    data contained in any part of a file.
+
+
+    # 126: What is final?
+
+
+    Answer:'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: 'A final is a keyword in Java. If final keyword is applied to a variable, then
+    the variable will become a constant. If it applied to method, sub classes cannot
+    override the method. If final keyword is applied to a class we cannot extend from
+    that class.
+
+
+    # 127: What is the difference among JVM Spec, JVM Implementation, JVM Runtime?
+
+
+    Answer:
+
+
+    The JVM spec is the blueprint for the JVM generated and owned by Sun. The JVM
+    implementation is the actual implementation of the spec by a vendor and the JVM
+    runtime is the actual running instance of a JVM implementation.
+
+
+    # 128: What is the difference between thread and process?
+
+
+    Answer:
+
+
+    A process runs in its own address space. No two processes share their address
+    space. Threads will run in the same'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: 'address space of the process that owns them.
+
+
+    # 129: What is the difference between Vector and ArrayList?
+
+
+    Answer:
+
+
+    Vector is synchronized, ArrayList is not. Vector has a constructor to specify
+    the incremental capacity, but ArrayList doesn''t have one. By default Vector grows
+    by 100% but ArrayList grows by 50% only.
+
+
+    # 130: What is the difference between Hashtable and HashMap?
+
+
+    Answer:
+
+
+    Hashtable is synchronized but HashMap is not synchronized. Hashtable does not
+    allow null values, but HashMap allows null values.
+
+
+    # 131: What are the access modifiers available in Java?
+
+
+    Answer:'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: 'Access modifier specify where a method or attribute can be used. Public is
+    accessible from anywhere. Protected is accessible from the same class and its
+    subclasses. Package/Default are accessible from the same package. Private is only
+    accessible from within the class.
+
+
+    # 132: Why Java is said to be pass-by-value?
+
+
+    Answer:
+
+
+    When assigning an object to a variable, we are actually assigning the memory address
+    of that object to the variable. So the value passed is actually the memory location
+    of the object. This results in object aliasing, meaning you can have many variables
+    referring to the same object on the heap.
+
+
+    # 133: What do you mean by immutable? How to create an immutable object?
+
+
+    Answer:
+
+
+    Immutability means an object cannot be modified after it'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: 'has been initialized. There will not be any setter methods in an immutable
+    class. And normally these classes will be final.
+
+
+    # 134: What is class loader in Java?
+
+
+    Answer:
+
+
+    A class loader is a class that is responsible for loading the class. All JVM contains
+    one class loader called Primordial class loader.
+
+
+    # 135: What is a weak reference?
+
+
+    Answer:
+
+
+    A weak reference is the one that does nor prevent the referenced object from being
+    garbage collected. The weak reference will not keep the object that it refers
+    to alive. A weak reference is not counted as a reference in garbage collection.
+    This will make the memory use more effective.
+
+
+    # 136: What is object cloning?'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Answer:
+
+
+    It is the process of duplicating an object so that two identical objects will
+    exist in the memory at the same time.
+
+
+    # 137: What is object pooling?
+
+
+    # Answer:
+
+
+    Creating a large number of identical short lived objects is called object pooling.
+    This helps to minimize the need of garbage collection and makes the memory use
+    more effective.
+
+
+    # 138: What is Garbage collection?
+
+
+    # Answer:
+
+
+    Garbage collection is the process of releasing memory used by unreferenced objects.
+    It relieves the programmer from the process of manually releasing the memory used
+    by objects.
+
+
+    # 139: What is the disadvantage of Garbage collection?'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '78 Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    It adds an overhead that can affect performance.
+
+
+    Additionally, there is no guarantee that the object will be garbage collected.
+
+
+    # 140: What is JAR file?
+
+
+    # Answer:
+
+
+    JAR stands for Java Archive. This is a file format that enables you to bundle
+    multiple files into a single archive file. A JAR file will contain a manifest.mf
+    file inside META-INF folder that describes the version and other features of JAR
+    file.
+
+
+    # 141: What is Static initializer block? What is its use?
+
+
+    # Answer:
+
+
+    A Static initializer block is a block of code that declares with the Static keyword.
+    It normally contains the block of code that must execute at the time of class
+    loading. The Static initializer block will execute only once at the time of'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'loading the class only.
+
+
+    # 142: What is a marker interface? Give some examples.
+
+
+    Answer:
+
+
+    Marker interface contains no methods. It is used to just mark Java classes that
+    support certain capability.
+
+    Eg: Serializable, Cloneable, SingleThreadModel etc.
+
+
+    # 143: What are Tag interfaces?
+
+
+    Answer:
+
+
+    Tag interface is an alternate name for Marker interface.
+
+
+    # 144: What are the restrictions placed on Static method?
+
+
+    Answer:
+
+
+    We cannot override Static methods. We cannot access any object variables inside
+    Static method. Also the this reference is not available in Static methods.
+
+
+    # 145: What is JVM?'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'Answer:
+
+
+    JVM stands for Java Virtual Machine. It is the run time for Java programs. All
+    Java programs are running inside this JVM. It converts Java byte code to OS specific
+    commands. In addition to governing the execution of an application’s byte codes,
+    the virtual machine handles related tasks such as managing the system’smemory,
+    providing security against malicious code, and managing multiple threads of program
+    execution.
+
+
+    # 146: What is JIT?
+
+
+    Answer:
+
+
+    JIT stands for Just In Time compiler. It compiles Java byte code to native code.
+
+
+    # 147: What is Method overloading?
+
+
+    Answer:
+
+
+    Method overloading is the process of creating a new method with the same name
+    and different signature.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# 148: What is Method overriding?
+
+
+    Answer:
+
+
+    Method overriding is the process of giving a new definition for an existing method
+    in its child class.
+
+
+    # 149: What is finalize()?
+
+
+    Answer:
+
+
+    Finalize is a protected method in java. When the garbage collector is executed,
+    it will first call finalize( ), and on the next garbage-collection it reclaims
+    the objects memory. So finalize( ), gives you the chance to perform some cleanup
+    operation at the time of garbage collection.
+
+
+    # 150: What is Multi-threading?
+
+
+    Answer:
+
+
+    Multi-threading is the scenario where more than one threads are running.
+
+
+    # 151: What is a deadlock?'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# Answer:
+
+
+    Deadlock is a situation when two threads are waiting for each other to release
+    a resource. Each thread waits for a resource which is held by the other waiting
+    thread.
+
+
+    # 152: What is the difference between Iterator and Enumeration?
+
+
+    # Answer:
+
+
+    Enumeration is twice as fast as Iterator and uses very less memory. Enumeration
+    is very basic and fits to basic needs, but Iterator is much safer as compared
+    to Enumeration because it always denies other threads to modify the collection
+    object. Whenever a second thread tries for that, Iterator will throw a ConcurrentModificationException.
+    Iterators that do this are known as fail-fast iterators as they fail quickly and
+    cleanly.
+
+
+    An Enumeration is used for iterating over a given collection, usually of unknown
+    size. Enumeration does not'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: 'allow modification of the collection, which can be achieved using Iterator.
+
+
+    Iterator’s “remove” method removes from the underlying collection the last element
+    returned by the iterator. This method can be called only once per call to the
+    Iterator’s “next” method.
+
+
+    # 153: What is internationalization?
+
+
+    Answer:
+
+
+    Internationalization is the process of designing an application so that it can
+    be adapted to various languages and regions without changes.
+
+
+    # 154: What is the difference between URL and URLConnection?
+
+
+    Answer:
+
+
+    A URL represents the location of a resource, and a URLConnection represents a
+    link for accessing or communicating with the resource at the location.'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# 155: What are the two important TCP Socket classes?
+
+
+    Answer:
+
+
+    +   - a) ServerSocket
+
+
+    +   - b) Socket.
+
+
+    ServerSocket is useful for two-way socket communication.
+
+    Socket class helps us to read and write through the sockets.
+
+    getInputStream() and getOutputStream() are the two methods available in Socket
+    class.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# HR Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# 1: Tell me about yourself?
+
+
+    Answer:
+
+
+    The most often asked question in interviews. You need to have a short statement
+    prepared in your mind. Keep your answer to one or two minutes. Don’t ramble. Be
+    careful that it does not sound rehearsed. Limit it to work-related items unless
+    instructed otherwise. Talk about things you have done and jobs you have held that
+    relate to the position you are interviewing for. Start with the item farthest
+    back and work up to the present (If you have a profile or personal statement(s)
+    at the top of your CV use this as your starting point).
+
+
+    # 2: Why did you leave your last job?
+
+
+    Answer:
+
+
+    Stay positive regardless of the circumstances. Never refer to a major problem
+    with management and never speak ill of supervisors, co- workers or the organization.
+    If you do, you will be the one looking bad. Keep smiling and talk'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: 'about leaving for a positive reason such as an opportunity, a chance to do
+    something special or other forward-looking reasons.
+
+
+    # 3: What experience do you have in this field?
+
+
+    Answer:
+
+
+    Speak about specifics that relate to the position you are applying for. If you
+    do not have specific experience, get as close as you can.
+
+
+    # 4: Do you consider yourself successful?
+
+
+    Answer:
+
+
+    You should always answer yes and briefly explain why. A good explanation is that
+    you have set goals, and you have met some and are on track to achieve the others.
+
+
+    # 5: What do co-workers say about you?
+
+
+    Answer:
+
+
+    Be prepared with a quote or two from co-workers. Either a'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'specific statement or a paraphrase will work. Bill Smith, a co-worker at Clarke
+    Company, always said I was the hardest workers he had ever known. It should be
+    as powerful as Bill having said it at the interview herself.
+
+
+    #  6: What do you know about this organization?
+
+
+    Answer:
+
+
+    This question is one reason to do some research on the organization before the
+    interview. Research the company''s products, size, reputation, Image, goals, problems,
+    management style, skills, History and philosophy. Be informed and interested.
+    Find out where they have been and where they are going. What are the current issues
+    and who are the major players?
+
+
+    #  7: What have you done to improve your knowledge in the last year?
+
+
+    Answer:
+
+
+    Try to include improvement activities that relate to the job.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: 'A wide variety of activities can be mentioned as positive self-improvement.
+    Have some good ones handy to mention.
+
+
+    # 8: Are you applying for other jobs?
+
+
+    Answer:
+
+
+    Be honest but do not spend a lot of time in this area. Keep the focus on this
+    job and what you can do for this organization. Anything else is a distraction.
+
+
+    # 9: Why do you want to work for this organization?
+
+
+    Answer:
+
+
+    This may take some thought and certainly, should be based on the research you
+    have done on the organization. Sincerity is extremely important here and will
+    easily be sensed. Relate it to your long-term career goals. Never talk about what
+    you want; first talk about their Needs. You want to be part of an exciting forward-moving
+    company. You can make a definite contribution to specific company'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: 'goals.
+
+
+    # 10: Do you know anyone who works for us?
+
+
+    Answer:
+
+
+    Be aware of the policy on relatives working for the organization. This can affect
+    your answer even though they asked about friends not relatives. Be careful to
+    mention a friend only if they are well thought of.
+
+
+    # 11: What kind of salary do you need?
+
+
+    Answer:
+
+
+    A loaded question! A nasty little game that you will probably lose if you answer
+    first. So, do not answer it. Instead/ say something like/ that''s a tough question.
+    Can you tell me the range for this position? In most cases, the interviewer, taken
+    off guard, will tell you. If not, say that it can depend on the details of the
+    job. Then give a wide range.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# 12: Are you a team player?
+
+
+    Answer:
+
+
+    You are, of course, a team player. Be sure to have examples ready. Specifics that
+    show you often perform for the good of the team rather than for yourself is good
+    evidence of your team attitude. Do not brag; just say it in a matter-of-fact tone.
+    This is a key point.
+
+
+    # 13: How long would you expect to work for us if hired?
+
+
+    Answer:
+
+
+    Specifics here are not good. Something like this should work: I''d like it to
+    be a long time. Or As long as we both feel I''m doing a good job.
+
+
+    # 14: Have you ever had to fire anyone? How did you feel about that?
+
+
+    Answer:
+
+
+    This is serious. Do not make light of it or in any way seem like you like to fire
+    people. At the same time, you will do it'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: 'when it is is the right thing to do. When it comes to the organization versus
+    the individual who has created a harmful situation, you will protect the organization.
+    Remember firing is not the same as layoff or reduction in force.
+
+
+    # 15: What is your philosophy towards work?
+
+
+    Answer:
+
+
+    The interviewer is not looking for a long or flowery dissertation here. Do you
+    have strong feelings that the job gets done? Yes. That''s the type of answer that
+    works best here. Keep it short and positive, showing a benefit to the organization.
+
+
+    # 16: If you had enough money to retire right now, would you?
+
+
+    Answer:
+
+
+    Answer yes if you would. But since you need to work, this is the type of work
+    you prefer. Do not say yes if you do not'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: 'mean it.
+
+
+    # 17: Have you ever been asked to leave a position?
+
+
+    Answer:
+
+
+    If you have not not, say no. If you have, be honest, brief and avoid saying negative
+    things about the people or organization involved.
+
+
+    # 18: Explain how you would be an asset to this organization.
+
+
+    Answer:
+
+
+    You should be anxious for this question. It gives you a chance to highlight your
+    best points as they relate to the position being discussed. Give a little advance
+    thought to this relationship.
+
+
+    # 19: Why should we hire you?
+
+
+    Answer:
+
+
+    Point out how your assets meet what the organization'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: 'needs. Also mention about your knowledge, experience, abilities, and skills.
+    Never mention any other candidates to make a comparison.
+
+
+    # 20: Tell me about a suggestion you have made.
+
+
+    Answer:
+
+
+    Have a good one ready. Be sure and use a suggestion that was accepted and was
+    then considered successful. One related to the type of work applied for is a real
+    plus.
+
+
+    # 21: What irritates you about co-workers?
+
+
+    Answer:
+
+
+    This is a trap question. Think real hard but fail to come up with anything that
+    irritates you. A short statement that you seem to get along with folks is great.
+
+
+    # 22: What is your greatest strength?
+
+
+    Answer:
+
+
+    Numerous answers are good, just stay positive. A few'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: 'good examples: Your ability to prioritize, Your problem-solving skills, Your
+    ability to work under pressure, Your ability to focus on projects, Your professional
+    expertise, Your leadership skills, Your positive attitude
+
+
+    # 23: Tell me about your dream job or what are you looking for in a job?
+
+
+    Answer:
+
+
+    Stay away from a specific job. You cannot win. If you say the job you are contending
+    for is it, you strain credibility. If you say another job is it, you plant the
+    suspicion that you will be dissatisfied with this position hired. The best is
+    to stay genetic and say something like: A job where I love the work, like the
+    people, can contribute and can''t wait to get to work.
+
+
+    # 24: Why do you think you would do well at this job?
+
+
+    Answer:
+
+
+    Give several reasons and include skills, experience and'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: 'interest.
+
+
+    # 25: What do you find the most attractive about this position? (Least attractive?)
+
+
+    Answer:
+
+
+    +   a) List a couple of attractive factors such as the responsibility the post
+    offers and the opportunity to work with experienced teams that have a reputation
+    for innovation and creativity.
+
+    b) Say you''d need more information and time before being able to make a judgment
+    on any unattractive aspects.
+
+
+    # 26: What kind of person would you refuse to work with?
+
+
+    Answer:
+
+
+    Do not be trivial. It would take disloyalty to the organization, violence or lawbreaking
+    to get you to object. Minor objections will label you as a whiner.'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# 27: What is more important to you: the money or the work?
+
+
+    Answer:
+
+
+    Money is always important, but the work is the most important. There is no better
+    answer.
+
+
+    # 28: What would your previous supervisor say your strongest point is?
+
+
+    Answer:
+
+
+    There are numerous good possibilities:
+
+    Loyalty, Energy, Positive attitude, Leadership, Team player, Expertise, Initiative,
+    Patience, Hard work, Creativity, Problem solver.
+
+
+    # 29: Tell me about a problem you had with a supervisor.
+
+
+    Answer:
+
+
+    Biggest trap of all! This is a test to see if you will speak ill of your boss.
+    If you fall for it and tell about a problem with a former boss, you may well below
+    the interview right'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: 'there. Stay positive and develop a poor memory about any trouble with a supervisor.
+
+
+    # 30: What has disappointed you about a job?
+
+
+    Answer:
+
+
+    Don''t get trivial or negative. Safe areas are few and can include:
+
+
+    +   a) Not enough of a challenge.
+
+
+    +   b) You were laid off in a reduction Company did not win a contract, which
+    would have given you more responsibility.
+
+
+    # 31: Tell me about your ability to work under pressure.
+
+
+    Answer:
+
+
+    You may say that you thrive under certain types of pressure. Give an example that
+    relates to the type of position applied for.
+
+
+    # 32: Do your skills match this job or another job more'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: 'closely?
+
+
+    Answer:
+
+
+    Probably this one! Do not give fuel to the suspicion you may want another job
+    more than this one.
+
+
+    # 33: What motivates you to do your best on the job?
+
+
+    Answer:
+
+
+    This is a personal trait that only you can say, but good examples are: Challenge,
+    Achievement, and Recognition.
+
+
+    # 34: Are you willing to work overtime? Nights? Weekends?
+
+
+    Answer:
+
+
+    This is up to you. Be totally honest.
+
+
+    # 35: How would you know you were successful on this job?
+
+
+    Answer:'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: 'Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    Several ways are good measures:
+
+    nYou set high standards for yourself and meet them. Your outcomes are a success.
+    Your boss tells you that you are successful and doing a great job.
+
+
+    # 36: Would you be willing to relocate if required?
+
+
+    Answer:
+
+    You should be clear on this with your family prior to the interview if you think
+    there is a chance it may come up. Do not say yes just to get the job if the real
+    answer is no. This can create a lot of problems later on in your career. Be honest
+    at this point. This will save you from future grief.
+
+
+    # 37: Are you willing to put the interests of the organization ahead of your own?
+
+
+    Answer:
+
+    This is a straight loyalty and dedication question. Do not worry about the deep
+    ethical and philosophical implications. Just say yes.'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# 38: Describe your management style.
+
+
+    Answer:
+
+
+    Try to avoid labels. Some of the more common labels, like progressive, salesman
+    or consensus, can have several meanings or descriptions depending on which management
+    expert you listen to. The situational style is safe, because it says you will
+    manage according to the situation, instead of one size fits all.
+
+
+    # 39: What have you learned from mistakes on the job?
+
+
+    Answer:
+
+
+    Here you have to come up with something or you strain credibility. Make it small,
+    well intentioned mistake with a positive lesson learned. An example would be,
+    working too far ahead of colleagues on a project and thus throwing coordination
+    off.
+
+
+    # 40: Do you have any blind spots?
+
+
+    Answer:'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'Trick question! If you know about blind spots, they are no longer blind spots.
+    Do not reveal any personal areas of concern here. Let them do their own discovery
+    on your bad points. Do not hand it to them.
+
+
+    # 41: If you were hiring a person for this job, what would you look for?
+
+
+    Answer:
+
+
+    Be careful to mention traits that are needed and that you have.
+
+
+    # 42: Do you think you are overqualified for this position?
+
+
+    Answer:
+
+
+    Regardless of your qualifications, state that you are very well qualified for
+    the position you''ve been interviewed for.
+
+
+    # 43: How do you propose to compensate for your lack of experience?
+
+
+    Answer:'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'First, if you have experience that the interviewer does not know about, bring
+    that up: Then, point out (if true) that you are a hard working quick learner.
+
+
+    # 44: What qualities do you look for in a boss?
+
+
+    Answer:
+
+
+    Be generic and positive. Safe qualities are knowledgeable, a sense of humor, fair,
+    loyal to subordinates and holder of high standards. All bosses think they have
+    these traits.
+
+
+    # 45: Tell me about a time when you helped resolve a dispute between others.
+
+
+    Answer:
+
+
+    Pick a specific incident. Concentrate on your problem solving technique and not
+    the dispute you settled.
+
+
+    # 46: What position do you prefer on a team working on a project?
+
+
+    Answer:'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: 'Core JAVA Interview Questions You''ll Most Likely Be Asked 105
+
+
+    Be honest. If you are comfortable in different roles, point that out.
+
+
+    # 47: Describe your work ethic.
+
+
+    Answer:
+
+
+    Emphasize benefits to the organization. Things like, determination to get the
+    job done and work hard but enjoy your work are good.
+
+
+    # 48: What has been your biggest professional disappointment?
+
+
+    Answer:
+
+
+    Be sure that you refer to something that was beyond your control. Show acceptance
+    and no negative feelings.
+
+
+    # 49: Tell me about the most fun you have had on the job.
+
+
+    Answer:
+
+
+    Talk about having fun by accomplishing something for the organization.'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# 50: What would you do for us? (What can you do for us that someone else can’t?)
+
+
+    +   a) Relate past experiences that represent success in Working for your previous
+    employer.
+
+
+    +   b) Talk about your fresh perspective and the relevant experience you can bring
+    to the company.
+
+
+    +   c) Highlight your track record of providing creative, Workable solutions.
+
+
+    # 51: Do you have any questions for me?
+
+
+    Answer:
+
+
+    Always have some questions prepared. Questions prepared where you will be an asset
+    to the organization are good. How soon will I be able to be productive? What type
+    of projects will I be able to assist on?
+
+
+    And Finally Good Luck!'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# INDEX
+
+
+    # Core Java Questions
+
+
+    # OOPS
+
+
+    +   1: What are the principle concepts of OOPS?
+
+    2: What is Abstraction?
+
+    3: What is Encapsulation?
+
+    4: What is the difference between abstraction and encapsulation?
+
+    5: What is Inheritance?
+
+    6: What is Polymorphism?
+
+    7: How does Java implement polymorphism?
+
+    8: Explain the different forms of Polymorphism.
+
+    9: What is runtime polymorphism or dynamic method dispatch?
+
+    10: What is Dynamic Binding?
+
+    11: What is method overloading?
+
+    12: What is method overriding?
+
+    13: What is the difference between method overloading and method overriding?
+
+    14: Can overloaded methods be too?
+
+    15: Is it possible to override the main method?
+
+    16: How to invoke a superclass version of an Overridden method?
+
+    17: What is Super?
+
+    18: How do you prevent a method from being overridden?
+
+    19: What is an Interface?
+
+    20: Can we instantiate an interface?
+
+    21: Can we create an object for an interface?
+
+    22: Do interfaces have member variables?
+
+    23: What modifiers are allowed for methods in an Interface?
+
+    24: What is a marker interface?
+
+    25: What is an abstract class?
+
+    26: Can we instantiate an abstract class?
+
+    27: What is the difference between an Interface and an Abstract class?
+
+    28: When should I use abstract classes and when should I use interfaces?
+
+    29: When do you declare a method as abstract, can other nonabstract methods access
+    it?
+
+    30: Can there be an abstract class with no methods in it?
+
+
+    # JAVA BASICS
+
+
+    +   31: What is Constructor?
+
+    32: What is a default constructor?
+
+    33: Can a constructor be inherited?
+
+    34: What are the differences between Constructors and Methods?
+
+    35: How are this() and super() used with constructors?
+
+    36: What are the differences between Class Methods and Instance Methods?
+
+    37: What is Classpath?
+
+    38: What are Access Specifiers?
+
+    39: Name the Access Specifiers available in Java?
+
+    40: What is final modifier?
+
+
+    * Item'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    +   41: What are the uses of final method?
+
+    42: What is a Static block?
+
+    43: What are Static variables?
+
+    44: What is the difference between Static and non-Static variables?
+
+    45: What are Static methods?
+
+
+    # JAVA COLLECTION
+
+
+    +   46: What is an Iterator?
+
+    47: How do you traverse through a collection using its Iterator?
+
+    48: How do you remove elements during Iteration?
+
+    49: What is the difference between Enumeration and Iterator?
+
+    50: What is ListIterator?
+
+    51: What is the List interface?
+
+    52: What are the main implementations of the List interface?
+
+    53: What are the advantages of ArrayList over arrays?
+
+    54: Difference between ArrayList and Vector?
+
+    55: How to obtain Array from an ArrayList?
+
+    56: Why insertion and deletion in ArrayList is slower compared to LinkedList?
+
+    57: Why are Iterators returned by ArrayList Fail Fast?
+
+    58: How do you decide when to use ArrayList and when to use LinkedList?
+
+    59: What is the Set interface?
+
+    60: What are the main implementations of the Set interface?
+
+    61: What is a HashSet? When should it be used?
+
+    62: What is a TreeSet?
+
+    63: What is an EnumSet?
+
+    64: Difference between HashSet and TreeSet?
+
+    65: What is a Map?
+
+    66: What are the main implementations of the Map interface?
+
+    67: What is a TreeMap?
+
+    68: How do you decide when to use HashMap and when to use TreeMap?
+
+    69: Difference between HashMap and Hashtable
+
+    70: What is Static block? What is its use?
+
+    71: Name different Collection Views that Maps Provide?
+
+    72: What is a KeySet View?
+
+    73: What is Values Collection View?
+
+    74: What is an EntrySet View?
+
+    75: How do you sort an ArrayList(or any list) of user -defined objects?
+
+    76: What is the Comparable interface?
+
+    77: What are the differences between the Comparable and Comparator interfaces?
+
+
+    # CORE JAVA
+
+
+    +   78: How Observer and Observable are used?
+
+    79: What is Synchronization?
+
+    80: What is the difference between yield() and sleep()?
+
+    81: Can we call finalize() method?
+
+    82: What is the difference between time slicing and preemptive scheduling?
+
+    83: What are the differences between boolean & operator and && operator
+
+    84: What are the differences between an abstract class and an interface?'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    +   85: What is the difference between synchronized block and synchronized method?
+
+    86: How can you force garbage collection in Java?
+
+    87: What''s the difference between normal methods and constructors?
+
+    88: What is the use of packages in Java?
+
+    89: What is serialization?
+
+    90: What is de-serialization?
+
+    91: What is externalizable?
+
+    92: What are different type of exceptions in Java?
+
+    93: Can we catch an error in our Java program?
+
+    94: What is Thread Priority?
+
+    95: How many times can an object''s finalize() method be invoked by the garbage
+    collector?
+
+    96: What is the difference between a Continue statement and a Break statement?
+
+    97: What must a class do to implement an interface?
+
+    98: What is an abstract class?
+
+    99: What is the difference between notify and notifyAll method?
+
+    100: What does wait method?
+
+    101: What are the different states of a thread?
+
+    102: What is the difference between Static and non -Static class?
+
+    103: What is the difference between String and StringBuffer class?
+
+    104: What is the difference between readers and streams?
+
+    105: What is constructor chaining?
+
+    106: What are the primitive data types in Java?
+
+    107: What is static keyword?
+
+    108: Why we cannot override Static methods?
+
+    109: What is the difference between Static and not Static variables?
+
+    110: When does a compiler supply a default constructor or for a class?
+
+    111: What are the restrictions placed on overriding a method?
+
+    112: What is Casting?
+
+    113: What is the difference between == and equals?
+
+    114: What is a void return type?
+
+    115: What will happen if an exception is not caught?
+
+    116: What are the different ways in which a thread can enter into waiting state?
+
+    117: What is a ResourceBundle class?
+
+    118: What is Numeric promotion?
+
+    119: What is the difference between the prefix and postfix of the ++ operator?
+
+    120: What are synchronized methods and synchronized statements?
+
+    121: How can we create a thread?
+
+    122: What is the difference between a switch statement and an if statement?
+
+    123: What is hashCode?
+
+    124: What is an I/O file?
+
+    125: What is the difference between RandomAccessFile and File?
+
+    126: What is final?
+
+    127: What is the difference among JVM Spec, JVM Implementation, JVM Runtime?
+
+    128: What is the difference between thread and process?
+
+    129: What is the difference between Vector and ArrayList?
+
+    130: What is the difference between Hashtable and HashMap?
+
+    131: What are the access modifiers available in Java?
+
+    132: Why Java is said to be pass-by-value?'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    +   133: What do you mean by immutable? How to create an immutable object?
+
+    134: What is class loader in Java?
+
+    135: What is a weak reference?
+
+    136: What is object cloning?
+
+    137: What is object pooling?
+
+    138: What is Garbage collection?
+
+    139: What is the disadvantage of Garbage collection?
+
+    140: What is JAR file?
+
+    141: What is Static initializer block? What is its use?
+
+    142: What are marker interface? Give some examples.
+
+    143: What are Tag interfaces?
+
+    144: What are the restrictions placed on Static method?
+
+    145: What is JVM?
+
+    146: What is JIT?
+
+    147: What is Method overloading?
+
+    148: What is Method overriding?
+
+    149: What is finalize()?
+
+    150: What is Multi-threading?
+
+    151: What is a deadlock?
+
+    152: What is the difference between Iterator and Enumeration?
+
+    153: What is internationalization?
+
+    154: What is the difference between URL and URLConnection?
+
+    155: What are the two important TCP Socket classes?'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# Core JAVA Interview Questions You''ll Most Likely Be Asked
+
+
+    # HR Questions
+
+
+    +   1: Tell me about yourself?
+
+    2: Why did you leave your last job?
+
+    3: What experience do you have in this field?
+
+    4: Do you consider yourself successful?
+
+    5: What do co-workers say about you?
+
+    6: What do you know about this organization?
+
+    7: What have you done to improve your knowledge in the last year?
+
+    8: Are you applying for other jobs?
+
+    9: Why do you want to work for this organization?
+
+    10: Do you know anyone who works for us?
+
+    11: What kind of salary do you need?
+
+    12: Are you a team player?
+
+    13: How long would you expect to work for us if hired?
+
+    14: Have you ever had to fire anyone? How did you feel about that?
+
+    15: What is your philosophy towards work?
+
+    16: If you had enough money to retire right now, would you?
+
+    17: Have you ever been asked to leave a position?
+
+    18: Explain how you would be an asset to this organization.
+
+    19: Why should we hire you?
+
+    20: Tell me about a suggestion you have made.
+
+    21: What irritates you co-workers?
+
+    22: What is your greatest strength?
+
+    23: Tell me about your dream job or what are you looking for in a job?
+
+    24: Why do you think you would do this work at this position?
+
+    25: What do you find the most attractive about this position? (Least attractive)?
+
+    26: What kind of person would you refuse to work with?
+
+    27: What is more important to you: the money or the work?
+
+    28: What would your previous supervisor say your strongest point is?
+
+    29: Tell me about a problem you had with a supervisor.
+
+    30: What has disappointed you about a job?
+
+    31: Tell me about your ability to work under pressure.
+
+    32: Do your skills match this job or another job more closely?
+
+    33: What motivates you to do your best on the job?
+
+    34: Are you willing to work overtime? Nights? Weekends?
+
+    35: How would you know you were successful on this job?
+
+    36: Would you be willing to relocate if required?
+
+    37: Are you willing to put the interests of the organization ahead of your own?
+
+    38: Describe your management style.
+
+    39: What have you learned from mistakes on the job?
+
+    40: Do you have any blind spots?
+
+    41: If you were hiring a person for this job, what would you look for?
+
+    42: Do you think you are overqualified for this position?
+
+    43: How do you propose to compensate for your lack of experience?
+
+    44: What qualities do you look for in a boss?
+
+    45: Tell me about a time when you helped resolve a dispute between others.
+
+    46: What position do you prefer on a team working on a project?'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '+   47: Describe your work ethic.
+
+    48: What has been your biggest professional disappointment?
+
+    49: Tell me about the most fun you have had on the job.
+
+    50: What would you do for us? (What can you do for us that someone else can''t?)
+
+    51: Do you have any questions for me?'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# Some of the following titles might also be handy:
+
+
+    +   1. Oracle / PLSQL Interview Questions
+
+    2. ASP.NET Interview Questions
+
+    3. VB.NET Interview Questions
+
+    4. .NET Framework Interview Questions
+
+    5. C#.NET Interview Questions
+
+    6. OOPS Interview Questions
+
+    7. Core Java Interview Questions
+
+    8. JSP-Servlet Interview Questions
+
+    9. EJB (J2EE) Interview Questions
+
+    10. ADO.NET Interview Questions
+
+    11. SQL Server Interview Questions
+
+    12. C & C++ Interview Questions
+
+    13. 200 (HR) Interview Questions
+
+    14. JavaScript Interview Questions
+
+    15. JAVA/J2EE Interview Questions
+
+    16. Oracle DBA Interview Questions
+
+    17. XML Interview Questions
+
+    18. Unix Shell Programming Interview Questions
+
+    19. PHP Interview Questions
+
+    20. J2ME Interview Questions
+
+    21. Hardware and Networking Interview Questions
+
+    22. Data Structures & Algorithms Interview Questions
+
+    23. Oracle E-Business Suite Interview Questions
+
+    24. UML Interview Questions
+
+    25. HTML, XHTML & CSS Interview Questions
+
+    26. JDBC Interview Questions
+
+    27. Hibernate, Springs & Struts Interview Questions
+
+    28. Linux Interview Questions
+
+
+    For complete list visit
+
+
+    www.vibrantpublishers.com'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# NOTES'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: 'Made in the USA
+
+    Lexington, KY
+
+    16 May 2012'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# Job Interview Questions Series
+
+
+    # Core JAVA
+
+    Interview Questions
+
+    You’ll Most Likely Be Asked
+
+
+    Core JAVA Interview Questions You’ll Most Likely Be Asked is a perfect companion
+    to stand a head above the rest in today’s competitive job market. Rather than
+    going through comprehensive, textbook-sized reference guides, this book includes
+    only the information required immediately for job search to build an IT career.
+    This book puts the interviewee in the driver’s seat and helps them steer their
+    way to impress the interviewer.
+
+
+    Includes:
+
+
+    +   - 155 Core JAVA Interview Questions, Answers and Proven Strategies for getting
+    hired as an JAVA professional
+
+    - Dozens of examples to respond to interview questions
+
+    - 51 HR Questions with Answers and Proven strategies to give specific, impressive,
+    answers that help nail the interviews
+
+
+    VP Vibrant Publishers
+
+
+    ![](img/d27d2465428a9ec4df4fcfe09d910370_119_0.png)'
+  merge: -1
+  pgno: 119
