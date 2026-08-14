@@ -1,0 +1,2322 @@
+- img_proc: true
+  md: '# # Kids Coding Workbook
+
+
+    # Code Using Java
+
+
+    Fun activities for absolute beginners
+
+
+    By: Troy Tuckett
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Kid’s Coding Workbook Series
+
+
+    # Code Using Java
+
+
+    First Edition Revision 2
+
+
+    By Troy Tuckett
+
+
+    Copyright © 2018 by Troy Tuckett, All rights reserved.
+
+    Printed in the United States of America
+
+
+    Java is a product licensed through Oracle Corporation. IntelliJ IDEA is a product
+    licensed through jetbrains.com
+
+
+    ISBN: 9781791550820'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Other Books by the Author
+
+
+    Today you can find these additional Kids Coding Workbooks on Amazon.com
+
+
+    +   - Kids Coding Workbook Using Scratch (paperback and kindle versions)
+
+    - Kids Coding Workbook Using Python (paperback and kindle versions)
+
+    - Kids Coding Workbook Using Pseudo Code (paperback and kindle versions)
+
+    - Kids Coding Workbook - Create Games Using Scratch (paperback and kindle versions)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# INTRODUCTION
+
+
+    # For Parents...
+
+
+    This workbook was written after decades of teaching beginners coding skills. It
+    is meant to teach key principles and cement them in the minds of kids using fun
+    and exciting exercises.
+
+
+    The workbook was created to promote self-paced learning, but it can also be used
+    in a classroom setting. It has two main elements that work together to help kids
+    learn coding. “Learn It!” sections teach a principle in detail and provide examples
+    that are useful to learning the topic. “Try It!” sections then use exercises and
+    games to reinforce the learning in the prior section.
+
+
+    # For Kids...
+
+
+    It has been my experience that kids learn best when coding concepts are visual
+    and you take the time to use your hands and code what you have learned. I strongly
+    encourage you to go through the examples and exercises using Scratch and you are
+    reading this workbook. Doing this will help you to better retain what you have
+    learned.
+
+
+    # What do you need to know to start?
+
+
+    I am assuming in this book that you have little or no knowledge of coding and
+    no knowledge of Java. I provide every step you need to get started and learn the
+    language. Because there are some download and install steps, some computer skills
+    and understanding of folders and windows will be helpful. If you don''t have them,
+    have a parent help you.
+
+
+    # Learn It!
+
+
+    # Getting Started with Java
+
+
+    Java is a general-purpose language that is very popular in business. Because of
+    its popularity, it is a great language to learn.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'Before you write a program using Java you will need to have the proper software
+    installed. This includes installing an Integrated Development Environment (IDE).
+    A common environment that supports a variety of operating systems is called IntelliJ
+    IDEA. We will be using the Community edition because it installs easily and is
+    free to use.
+
+
+    Here are the steps to get the IDE installed and a short program written.
+
+
+    Begin by going to https://www.jetbrains.com/idea/download/ and selecting "Download"
+    under the Community heading. Once the file is downloaded, click on the install
+    file and follow the install process.
+
+
+    Once the product is installed, find the installed program and double click to
+    run it.
+
+
+    The first time running the program, it might require you answer some questions
+    about where to store files and such. After that, you will end up at the welcome
+    page.
+
+
+    Select "Create New Project" from the welcome page.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_4_0.png)
+
+
+    Select "Java" from the different types of projects and click
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_4_1.png)
+
+
+    Name your project. I called mine "Stuff" but you can call yours what you like.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_4_2.png)
+
+
+    With the project created, Select the project folder in the upper left.
+
+
+    From the project tree select the name of your project ("Stuff" for me) and then
+    click "src" and choose "New" and "Java Class".'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "A dialog will pop up where you provide a name for your class. Let's call it\
+    \ \"MyClass\". Then click OK.\n\nWithin the editor on the right side of the page,\
+    \ type the following program, making sure you include all of the elements.\n\n\
+    ```\npublic class MyClass {\n    public static void main(String[] args) {\n  \
+    \      System.out.println(\"Hello World\");\n    }\n}\n```\n\nWhen done, right\
+    \ click within the editor and select 'Run 'MyClass.main()'\n\nIf everything is\
+    \ set up right, toward the bottom of your IDE you should see the output of.\n\n\
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_5_0.png)\n\nIf your response looks like\
+    \ this, you are ready to get cracking on coding."
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# BASIC COMPUTER CONCEPTS
+
+
+    # Learn It!
+
+
+    # Learn Computer Parts
+
+
+    Learn the most basic parts that make up a computer system.
+
+
+    A computer is made up of three different types of parts: inputs, processing, and
+    outputs.
+
+
+    No matter what the type of computer—desktop, laptop, smartphone, or other systems—each
+    of these parts are there. Here are some examples of what you might see in these
+    parts of a system.
+
+
+    Input
+
+
+    +   * Keyboard
+
+    * Mouse
+
+    * Finger
+
+
+    Processing
+
+
+    +   * Calculations
+
+    * Controls
+
+
+    Output
+
+
+    +   * Monitor/Screen
+
+    * Printer
+
+
+    These three elements work together to provide the experiences we have come to
+    expect from our computers.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_6_0.png)'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Inputs come into the computer and flow into a processing program where logic
+    and calculations are applied. Once the processing is complete, the results are
+    output. This can happen thousands of times per second.
+
+
+    # Try It!
+
+
+    # Examples of Parts
+
+
+    This exercise helps you remember the parts of a computer.
+
+
+    Write down an example of each of these types of parts.
+
+
+    | Input |
+
+    | Processing |
+
+    | Output |
+
+
+    # Learn It!
+
+
+    # Learn Input
+
+
+    Learn the different kinds of input that a computer can receive, and what the computer
+    can do with the input.
+
+
+    Inputs are an important part of a computer. They are the way a computer system
+    receives information that is processed. Once inputs have been processed, outputs
+    can be created.
+
+
+    In the previous lesson we talked about the different kinds of inputs a computer
+    might have. We talked about a small list of inputs, but there are many others.
+
+
+    +   - Keyboard
+
+    - Mouse
+
+    - Touch Screen'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '+   - File or Database
+
+    - Sensors
+
+
+    Input can also be events like a mouse getting clicked or a screen being touched.
+    Inputs can be stored to be used later in your program.
+
+
+    The simple input from the keyboard we will use in examples and exercises is this.
+
+
+    ```
+
+    variableName = input.next();
+
+    ```
+
+
+    The input statement stores the keyboard input in a variable called variableName.
+    You will learn more about variables later in this workbook.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_8_0.png)
+
+
+    # # My First Input
+
+
+    This exercise helps you understand the concept of inputs.
+
+
+    Follow these steps to create your first program with inputs.
+
+
+    +   1. Find the project you created in IntelliJ and right click on scr. Select
+    New and Java Class.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_8_1.png)
+
+
+    +   2. Name your class MyFirstInputProgram and hit Enter.
+
+    3. The file name will appear in the editor area on the right. In that area type
+
+
+    ```
+
+    import java.util.Scanner;
+
+    ```'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "```\npublic class MyFirstInputProgram {\n    public static void main(String[]\
+    \ args) {\n        Scanner input = new Scanner(System.in);\n        System.out.print(\"\
+    What's your name?\");\n        input.next();\n    }\n}\n```\n\n+   4. Now right\
+    \ click in the white area and find Run ‘MyFirstInputProgram.main()\n5. The output\
+    \ at the bottom of the screen should look like this. You will need to type a name\
+    \ for your program to finish.\n\nWhat's your name? bob\n\n# Learn It!\n\n# Learn\
+    \ Output\n\nLearn the different kinds of output that a computer can send once\
+    \ processing has been completed.\n\nOutputs are the way a computer system shows\
+    \ the results of processing that has happened.\n\nThere are a bunch of ways that\
+    \ a computer can provide output. This is a small list, but there are many others.\n\
+    \n+   * Monitor or Screen\n* Files or Databases\n* Printers\n* Other Devices\n\
+    \nWithout output, we don't know what has happened within the computer program.\
+    \ In the early days of personal computers, the Altair computer would output through\
+    \ a bunch of flashing lights. Today our output seems almost real. We have come\
+    \ a long way since the Altair."
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# 1980 2018
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_10_0.png)
+
+
+    For the examples and exercises in this workbook, we are using a simple screen
+    output like this.
+
+
+    ```
+
+    System.out.println("This is what is being output.")
+
+    ```
+
+
+    > Most programs today use much better-looking outputs. Windows or Mac programs
+    use a graphical window output using forms, buttons, fields, and more. The browser
+    on your computer uses a similar output. Video games use a much more complex graphical
+    output. When you print a document to the printer, you are also seeing output from
+    the computer. In fact, the ding of your phone or even when it vibrates are forms
+    of output.
+
+
+    | First name: |
+
+    | Mickey |
+
+    | Last name: |
+
+    | Mouse |
+
+
+    # Try It!
+
+
+    # My First Output
+
+
+    This exercise helps you understand the concept of outputs.
+
+    Follow these steps to create your first program with outputs.
+
+
+    +   1. Create a new Java Class called "FirstOutputProgram" and hit Enter.
+
+    2. In the editor area for your new file, type.
+
+
+    ```
+
+    import java.util.Scanner;
+
+    ```'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "```\npublic class MyFirstOutputProgram {\n    public static void main(String[]\
+    \ args) {\n        Scanner input = new Scanner(System.in);\n        String name;\n\
+    \n        System.out.println(\"What's your name?\");\n        name = input.next();\n\
+    \n        System.out.println(\"Your name is \" + name);\\n\n    }\n}\n```\n\n\
+    +   3. Right click in the editor and select Run 'MyFirstOutputProgram'\n4. The\
+    \ output at the bottom of the screen should look like this.\n\nWhat's your name?\
+    \ bob\nYour name is bob\n\n# Learn It!\n\n# Learn About Programming Languages\n\
+    \nLearn what a programming language does and why we use them.\n\nComputers think\
+    \ in zeros and ones. Humans think in words, sentences and expressions. Programming\
+    \ languages allow us to tell the computer the steps to take using something that\
+    \ is similar to our own language or similar to a game.\n\nThere are lots of different\
+    \ programming languages that are good at doing different things. Some of them\
+    \ are more general purpose and others are more specialized.\n\nOnce you learn\
+    \ one programming language, it is easier to learn another one."
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "Coding languages have these 6 basic functions:\n\n1) Take input, 2) Give output,\
+    \ 3) Store variables, 4) Perform calculations, 5) Make\nbranching, and 6) Provide\
+    \ looping.\n\nYou have already learned about a couple of these. Throughout this\
+    \ workbook we will learn\nall of the basic functions of programming languages.\n\
+    \nHere are some example statements from different languages.\n\n| Language | Statements\
+    \ |\n| --- | --- |\n| Java | public class HelloWorld {\n  public static void main(String[]\
+    \ args) {\n    System.out.println(\"Hello World!\");\n} |\n| COBOL | PROCEDURE\
+    \ DIVISION.\nDisplayPrompt.\n  DISPLAY \" Hello World!\".\nSTOP RUN. |\n| C++\
+    \ | int main() {\n  cout << \"Hello World!\";\n  return 0;\n} |\n| Basic | 10\
+    \ PRINT \"Hello World!\"\n  20 END |\n| Python | Print(\"Hello World!\") |\n|\
+    \ Pseudo Code | Display \"Hello World!\" |\n| Scratch | say Hello World! for 2\
+    \ secs |\n\nNotice how each of these languages do the same thing (print Hello\
+    \ World! to the screen) but in a\ndifferent way.\n\nIn coding we usually call\
+    \ the statements written in a programming language \"Source Code\" or\n\"Code\"\
+    \ for short. We call it because even though it often looks like English, it is\
+    \ a set of special\ninstructions that tell the computer what to do."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Before source code can be executed by the computer it must first be changed
+    into something the computer understands. Some languages use an interpreter to
+    translate the code on the fly while it is running. This takes the code and puts
+    it into a language the computer can use line by line at run time. A compiler is
+    a little bit different than an interpreter because the code is transformed into
+    a file you can run.
+
+
+    # Try It!
+
+
+    # # Functions of Programming Languages
+
+
+    This exercise helps you learn the basic functions of a programming language.
+
+
+    Fill out the missing pieces about basic functions of programming languages.
+
+
+    +   - Take \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+    output
+
+    - Store \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+    calculations
+
+    - Make \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+    looping'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# BASIC CODING PRINCIPLES\n\n# Learn It!\n\n# Learn Sequencing\n\nLearn the\
+    \ way that a computer interprets and processes a program.\n\nSequencing means\
+    \ a set of steps one after another.\n\nHere are some of the ideas around how a\
+    \ computer processes a program.\n\n+   1. One step at a time\n2. Top to bottom\n\
+    3. The only things that break this top to bottom flow are:\n   a. Branches\n \
+    \  b. Loops\n   c. Objects and Methods\n\nWe will discuss these in this workbook.\
+    \ A computer doesn't make guesses like we do. It has to be told in detail every\
+    \ little thing to do.\n\nThat level of detail is what a computer needs to know\
+    \ to execute your program."
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Simple Exercise
+
+
+    Think about what steps you would have to take to get from one side of a classroom
+    to the other.
+
+
+    +   1 - Walk three steps ahead
+
+    2 - Turn left a half turn
+
+    3 - Walk two steps ahead
+
+    4 - Turn left a quarter turn
+
+    5 - Walk five steps ahead
+
+    6 - Stop
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_15_0.png)
+
+
+    # Sequencing Example
+
+
+    Here is an example of some steps that show the level of detail you must use to
+    tell the computer what to do.
+
+
+    ```
+
+    Scanner input = new Scanner(System.in);
+
+    String name;
+
+    float price1;
+
+    float price2;
+
+    float price3;
+
+    float total;
+
+
+    System.out.print("Please enter your name: ");
+
+    name = input.next();
+
+    System.out.print("Please enter the price of book 1: ");
+
+    price1 = input.nextFloat();
+
+    System.out.print("Please enter the price of book 2: ");
+
+    price2 = input.nextFloat();
+
+    System.out.print("Please enter the price of book 3: ");
+
+    price3 = input.nextFloat();
+
+    total = price1 + price2 + price3;
+
+    System.out.println("Name: " + name + " your total price is: " + total);");
+
+    ```
+
+
+    I know you aren’t going to know all of this means yet, but from the example you
+    can see the level of detail and number of steps it takes to get stuff done within
+    a program.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Recipe to Steps
+
+
+    This exercise helps you think through the detailed steps using a recipe.
+
+
+    +   1. Find a medium sized recipe for food you like to eat. The recipe should
+    have between 5 and 8 steps.
+
+    2. Change the recipe into a set of steps written using something like a program.
+
+
+    | Step | Instruction |
+
+    |---||
+
+    | 1 | |
+
+    | 2 | |
+
+    | 3 | |
+
+    | 4 | |
+
+    | 5 | |
+
+    | 6 | |
+
+    | 7 | |
+
+    | 8 | |
+
+
+    # Sequence Exercise
+
+
+    This exercise helps you think through the detailed steps needed to complete a
+    simple task.
+
+
+    Create a set of steps so that the girl moves so that she is standing next to the
+    boy.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'Remember: You have to tell the computer exactly what to do.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_17_0.png)
+
+
+    | Step | Instruction |
+
+    |---|---|
+
+    | 1 | |
+
+    | 2 | |
+
+    | 3 | |
+
+    | 4 | |
+
+    | 5 | |
+
+    | 6 | |
+
+    | 7 | |
+
+    | 8 | |'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# # My First Sequence\n\nThis exercise helps you think through the detailed\
+    \ steps needed to complete a simple task.\n\nYou've already written a program\
+    \ with a very short sequence of two steps. Follow the below steps to create your\
+    \ first sequence program with more steps.\n\n+   1. Create a new Java class called\
+    \ \"MyFirstSequenceProgram\" and hit Enter.\n2. In the editor area for your new\
+    \ file, type.\n\n```\nimport java.util.Scanner;\npublic class MyFirstSequenceProgram\
+    \ {\n    public static void main(String[] args) {\n        Scanner input = new\
+    \ Scanner(System.in);\n        String name;\n        String address;\n       \
+    \ String phone;\n        int age;\n\n        System.out.print(\"What's your name?\
+    \ \");\n        name = input.nextLine();\n        System.out.print(\"What's your\
+    \ address? \");\n        address = input.nextLine();\n        System.out.print(\"\
+    What's your phone number? \");\n        phone = input.nextLine();\n        System.out.print(\"\
+    What's your age? \");\n        age = input.nextInt();\n\n        System.out.println(\"\
+    Your name is \" + name + \" your address\n        is \" + address + \" your phone\
+    \ number is \" + phone + \" your\n        age is \" + age + \");\n    }\n}\n```\n\
+    \n+   3. Right click in the editor area at the bottom and select Run 'MyFirstSequenceProgram'\n\
+    4. The output on the screen should look like this.\n\n```\nWhat's your name? bob\n\
+    What's your address? 123 Main Street\nWhat's your phone number? 5551234\nWhat's\
+    \ your age? 15\nYour name is bob your address is 123 Main Street your phone number\
+    \ is 5551234 your age is 15\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Learn It!
+
+
+    # Learn the Coding Process
+
+
+    Learn how to do coding using a simple and standard process.
+
+
+    We have learned so far that coding is about putting a bunch of lines of code together
+    in a sequence to complete some kind of a task.
+
+
+    To be able to know what statements need to go together, you first need to understand
+    what problem you are solving. You get this from something called requirements.
+
+
+    An example of requirements might be something like this.
+
+
+    Show the sum of 4 numbers that you get as input from the user.
+
+
+    Now you need to decide how you are going to meet the requirements. To do this,
+    you will write out a set of high-level steps.
+
+
+    An example of these steps would be something like this:
+
+
+    +   1. Ask the user for first number and store in variable1
+
+    2. Ask the user for second number and store in variable2
+
+    3. Ask the user for third number and store in variable3
+
+    4. Ask the user for fourth number and store in variable4
+
+    5. Add up the numbers and store in total
+
+    6. Display the total
+
+
+    After you have the steps down and have walked through them a couple of times to
+    make sure they are correctly arranged, it is time to change these steps into a
+    program.
+
+
+    The Java code for the above steps would look like this.
+
+
+    ```
+
+    Scanner input = new Scanner(System.in);
+
+    int variable;
+
+    ```'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '```
+
+    int variable2;
+
+    int variable3;
+
+    int variable4;
+
+    int total;
+
+    ```
+
+
+    ```
+
+    System.out.print("What is the first number you want to add? ");
+
+    variable1 = input.nextInt();
+
+    System.out.print("What is the second number you want to add? ");
+
+    variable2 = input.nextInt();
+
+    System.out.print("What is the third number you want to add? ");
+
+    variable3 = input.nextInt();
+
+    System.out.print("What is the forth number you want to add: ");
+
+    variable4 = input.nextInt();
+
+    ```
+
+
+    ```
+
+    total = variable1 + variable2 + variable3 + variable4;
+
+    System.out.println("The total of the four numbers is " + total);
+
+    ```
+
+
+    Notice the linkage between the requirements, high-level steps, and the Java code.
+    The code has much more specific details.
+
+
+    # Learn It!
+
+
+    # Learn Variables
+
+
+    Learn how temporary data is stored in computer memory and then brought back when
+    needed.
+
+
+    Sometimes we need to store some numbers or other data to be used later as we write
+    our program. This temporary data is stored in things called "Variables".
+
+
+    Have you ever been to the post office? Inside the post office is a wall of mailboxes.
+    Think of a variable as one of these mailboxes. At your post office visit, you
+    might have noticed that the mailboxes come in different shapes and sizes.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_20_0.png)'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "> Just like a mailbox, each variable has a name like the number\non a mailbox;\
+    \ each variable has a type\nlike ones that holds letters,\ninstance; and each\
+    \ variable has a valu\nlike the letters stored in your mailbox>\n\n| Type (size)\
+    \ | Name |\n|---|---|\n| | Value |\n\nWhen it comes to using variables, here are\
+    \ a few rules that you will need to learn and follow.\n\n+   - Declare variables\
+    \ before you use them\n- When you declare a variable, specify its name and type\n\
+    - You can change the value of a variable throughout your program (thus the name\
+    \ \"variable\")\n- The type of variable affects more than just the size. Different\
+    \ types of variables different categories of data within them. Some common types\
+    \ are:\n  - int - A number without a decimal point\n  - float - A number with\
+    \ a decimal point\n  - String - Multiple characters and numbers together\n  -\
+    \ char - A single letter or other character\n  - Boolean - True or False\n\nHere\
+    \ is what it looks like to declare a variable.\n\n```\nType Name\nint myVariable\n\
+    ```\n\nHere is what it looks like to store data within a variable.\n\n```\nName\
+    \ Initialize\nmyVariable = 10\n```\n\nHere is what it looks like to retrieve data\
+    \ from a variable.\n\n```\nSystem.out.println(\"The number is: \" + myVariable)\n\
+    ```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "This line shows a string of \"The number is: \" and gets the value from myVariable,\
+    \ converts it to a String type and adds it to the output.\n\n# Try It!\n\n# Matching\
+    \ types\n\nThis exercise helps the student to learn different types of variables.\n\
+    \nDraw a line to match the value with the correct variable type.\n\n+   A - Single\
+    \ letter\n\nString\n\n+   100 - Number between 0 and 100\n\nBoolean\n\n+   2.50\
+    \ - Number with a decimal\n\nChar\n\n+   Cat - A word or sentence\n\nInteger\n\
+    \n+   TRUE - A true or a false\n\nFloat\n\n# Try It!\n\n# My First Variable\n\n\
+    This exercise helps you about using variables in your programs.\n\nFollow these\
+    \ steps to create your first program that uses a variable.\n\n+   1. Create a\
+    \ new Java Class called \"MyVariableProgram\" and hit Enter.\n\n+   2. In the\
+    \ editor area for your new file, type.\n\n```\npublic class MyVariableProgram\
+    \ {\n    public static void main(String[] args) {\n        int myNumber;\n```"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '```
+
+    myNumber = 10;
+
+    System.out.print("Your number is " + myNumber);
+
+    }
+
+    ```
+
+
+    +   3. Right click in the editor area and select Run ''FirstVariableProgram''
+
+    4. The output at the bottom of the screen should look like this.
+
+
+    Your number is 10
+
+
+    # My First Program
+
+
+    This exercise tests your skills at writing your first program using variables
+    and the coding process.
+
+
+    In previous exercises, I have given you the steps to creating a program. This
+    will be your first program you do completely on your own.
+
+
+    Refer to the earlier examples and the Java Reference at the end of the workbook
+    to help you write your first Java program.
+
+
+    Here are the requirements. . Show a word that was input by the user.
+
+
+    # Steps
+
+
+    First, write down the high-level steps you will take to meet the requirements.
+
+
+    | 1 |
+
+    | 2 |
+
+    | 3 |
+
+    | 4 |
+
+    | 5 |'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'Go into the Java IDE and create this program.
+
+
+    # Learn It!
+
+
+    # Learn Arithmetic Expressions
+
+
+    Learn how to use variables and operations together to create arithmetic expressions.
+
+
+    It is very common when writing a program that you will need to do something more
+    involved than just store values in variables. Here we will learn the principles
+    around arithmetic expressions that are found in programs.
+
+
+    When we set or change a variable, we can also add arithmetic expressions to the
+    line. Here is the example of setting a value and an arithmetic expression.
+
+
+    ```
+
+    total = (number1 + number2) + (number3 * number4)
+
+    ```
+
+
+    In coding, multiplication is usually done using a * and division is usually done
+    using a /.
+
+
+    The sky''s limit is on the different types of arithmetic expressions you can perform.
+    In addition to simple + - * and ÷, most languages also include functions to handle
+    more complex operations including exponents, square root, trigonometry operations,
+    and some business operations.
+
+
+    Here are a couple of common operations written as arithmetic expressions in a
+    program.
+
+
+    ```
+
+    a = cmath.sqrt(math.pow(r,2))
+
+    K = b * (cmath.sqrt(4* math.pow(a,2)) - math.pow(b,2)) / 4
+
+    mean = sumOfTheTerms / numberOfDiffTerms
+
+    speed = totalDistance / totalTime
+
+    pythagorean = math.pow(a,2) + math.pow(b,2) - math.pow(c,2)
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'When writing your arithmetic expressions, you need to consider the mathematical
+    order of operations. Below are some of these rules:
+
+
+    | Rule 1 | First perform any calculations inside parentheses. |
+
+    | Rule 2 | Next perform all multiplication and division, working from left to
+    right. |
+
+    | Rule 3 | Lastly, perform all addition and subtraction, working from left to
+    right. |
+
+
+    # # Try It!
+
+
+    # # Create A Calculator
+
+
+    This exercise helps you learn about variables and arithmetic expressions using
+    a calculator program.
+
+
+    Write a program that creates a simple calculator that adds and subtracts two numbers
+    using the below details
+
+
+    +   1. Ask the user for two numbers
+
+    2. Perform the calculation (either add or subtract)
+
+    3. Display the result
+
+
+    Go into the Java IDE and create this program.
+
+
+    # # Try It!
+
+
+    # # Change Fahrenheit to Celsius
+
+
+    This exercise helps you learn about variables and arithmetic expressions using
+    a program that calculates Celsius.
+
+
+    Write a program that changes a temperature from Fahrenheit to Celsius using the
+    following details.
+
+
+    +   1. Ask the user for a number in Fahrenheit'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '+   2. Change the number to Celsius using the below formula.
+
+    3. Display the answer in Celsius
+
+
+    Formula:
+
+    celsius = (fahrenheit - 32) x 5/9
+
+
+    Extra Credit: Write another program that changes from Celsius to Fahrenheit using
+    this formula.
+
+
+    Formula:
+
+    fahrenheit = celsius x (9/5) + 32
+
+
+    Go into the Java IDE and create this program.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_26_0.png)
+
+
+    # House Payment Calculator
+
+
+    This exercise helps you learn about variables and arithmetic expressions using
+    a program that calculates a monthly house payment.
+
+
+    Given:
+
+    Loan Principle = 200000
+
+    Annual Interest Rate = 6.5% (use .065)
+
+    Term of Loan= 30 years
+
+
+    Monthly payment calculation:
+
+    payment=(principle)/(1/(interest rate)-(1/(interest rate * Math.pow(1 + interest
+    rate, -months)))
+
+
+    Pow is a Java function that calculates exponent.
+
+
+    Write a program that calculates monthly payment and displays it as output.
+
+
+    Go into the Java IDE and create this program.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# MORE CODING PRINCIPLES
+
+
+    # Learn It!
+
+
+    # Learn Branching
+
+
+    Learn the most basic concepts around branching within a computer program.
+
+
+    Computers are really good at making decisions, but we have to tell the computer
+    the rules around how to make these decisions.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_27_0.png)
+
+
+    Branches, also called conditional statements, allow a program to take more than
+    one route. The computer uses a logical expression to decide which route to take.
+
+
+    > A logical expression resolves to True or False. Here are some of the elements
+    of logical expressions:
+
+
+    | Equality | "abc" == "abc" |
+
+    | Inequality | "abc" != "def" |
+
+    | AND | (100 AND 200) > 50 |
+
+    | OR | (100 OR 200) > 50 |
+
+    | NOT | NOT (100 > 50) |'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "If you wanted to write logical expression that decides if you can go to a PG-13\
+    \ movie, it might look like this.\n\n```\n(myAge > 12)\n```\n\nTo be able to go\
+    \ to a PG-13 movie, you need to be older than 12.\n\nThis logical expression would\
+    \ return false for some of you but might return true for some of us who are older\
+    \ than 12.\n\n# Conditions\n\nIn its most simple form, branching has one route\
+    \ but two outcomes. When the logical expression is true the program goes down\
+    \ path and when it is false, it skips over the true path. A simple condition with\
+    \ these routes looks like this.\n\n![](img/4b0b7323b2e8849b30ec17cea1bb735f_28_0.png)\n\
+    \n```\nif (logical expression){\n  Do something if true\n}\n```\n\nA more complex\
+    \ form of a branching has more than one route. It looks like this.\n\n```\nif\
+    \ (logical expression) {\n  Do something if true\n} else {\n  Do something if\
+    \ false\n}\n```\n\n![](img/4b0b7323b2e8849b30ec17cea1bb735f_28_1.png)\n\nIn the\
+    \ above case the true condition goes down the first route, and the false condition\
+    \ goes down the second route (after the else).\n\nThere are times when you even\
+    \ need a more complex version of branching. You might have three or more routes\
+    \ to take. In Java branching with three routes looks like this.\n\n```\nif (logical\
+    \ expression) {\n  Do something if true\n} if (another logical expression) {\n\
+    \  Do something if the first expression is false and this\n  one is true.\n} else\
+    \ {\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "Do something if are false\n\nYou can also put the if and if-else inside of\
+    \ other blocks of code as needed.\n\nHere is an example of a simple program that\
+    \ uses branching. We will use the PG-13 example we talked about earlier in this\
+    \ section.\n\n```\nimport java.util.*;\npublic class BranchClass {\n    public\
+    \ static void main(String[] args) {\n        Scanner input = new Scanner(System.in);\n\
+    \        System.out.println(\"How old are you?\");\n        int age = input.nextInt();\n\
+    \        if (age > 13 || age == 13) {\n            System.out.println(\"You are\
+    \ old enough to attend a PG-13 movie.\");\n        } else {\n            System.out.println(\"\
+    Sorry that you aren't old enough to go to a PG-13 movie.\");\n        }\n    }\n\
+    }\n```\n\nIn the example we ask the user for their age and store it in a variable\
+    \ called age. We use an if-else statement where we test the users age is greater\
+    \ than 13 or equal to 13. If this test is true, we display a message that the\
+    \ person is old enough to attend. Otherwise we display a message that the person\
+    \ cannot attend.\n\n![](img/4b0b7323b2e8849b30ec17cea1bb735f_29_0.png)\n\n# Find\
+    \ Positive Numbers\n\nThis exercise helps you learn about arithmetic expressions\
+    \ and branching using a program that finds positive numbers.\n\nWrite a program\
+    \ that decides whether a number provided by the user is positive or negative using\
+    \ the below details:\n\n+   1. Ask user for a number\n2. Decide if the number\
+    \ is positive or negative"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '3. Display one message if it is positive and another if it is negative.
+
+
+    Go into the Java IDE and create this program.
+
+
+    # Try It!
+
+
+    # Guessing Game Round One
+
+
+    This exercise helps you learn branching and logical expressions by creating a
+    simple guessing game.
+
+
+    Write a guessing game program using the below details.
+
+
+    +   - Start with a mystery number
+
+    - Ask someone else to guess it
+
+    - Tell them if their guess was too high or too low
+
+    - Display the results
+
+
+    Go into the Java IDE and create this program.
+
+
+    # Learn It!
+
+
+    # Learn Looping
+
+
+    Learn the basic concepts around looping statements in a program.
+
+
+    In addition to branching, computers are also great at doing the same thing over
+    and over again. In coding this is often referred to as looping..
+
+
+    Looping statements allow a portion of your program to execute more than once.
+    In a way, it is like a dog chasing its tail.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "![](img/4b0b7323b2e8849b30ec17cea1bb735f_31_0.png)\n\nHere are a couple of\
+    \ the most often used looping statements:\n\n```\nfor (int count = 0; count<10;\
+    \ count++\nwhile (count < 10)\n```\n\nThe while loop uses logical expressions\
+    \ like you used with branching.\n\nWhen it comes to loops, there are usually two\
+    \ basic types. Use this information to decide when and how to use them.\n\n| For\
+    \ loop | While loop |\n| Used you know how many times you iterate through the\
+    \ loop before the loop starts. | Use when you need to use a logical expression\
+    \ to decide when the loop will end. In most cases you don't know how many iterations\
+    \ it will go through. |\n The for loop has a variable and a set of elements associated\
+    \ with it. | The while loop has an external control that can be a counter or can\
+    \ be another type of control used in a logical expression. |\n In this below example\
+    \ we see a variable called counter is declared and initialized to 0. It will increase\
+    \ until it is no longer less than 10. | The logical expression, using the control,\
+    \ must become false during the loop |\n| for (int count=0; count<10; count++)\
+    \ | isDone = false;\nwhile (!isDone) |"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "Here is a quick example of using a while loop. We would like to add up 10 numbers\
+    \ the user specifies. Here is what it would look like.\n\n```\nimport java.util.*;\n\
+    public class LoopClass {\n    public static void main(String[] args) {\n     \
+    \   Scanner input = new Scanner(System.in);\n        int count = 0;\n        int\
+    \ total = 0;\n\n        while (count < 10) {\n            System.out.println(\"\
+    Enter a number to add: \");\n            int number = input.nextInt();\n     \
+    \       total = total + number;\n            count++;\n        }\n        System.out.println(\"\
+    The total of the numbers is \" + total);\n    }\n}\n```\n\nIn this program we\
+    \ go through the loop 10 times (0 through 9). Each time we loop, we ask the user\
+    \ for a number, we grab the number and put it in a variable called number and\
+    \ we add the number to our accumulated total. The count variable keeps track of\
+    \ how many times we have been through the loop, so we also have to add one to\
+    \ it time through. Once we are done, display the total.\n\n# # Try It!\n# Guessing\
+    \ Game Round Two\n\nThis exercise helps you learn more about branching and looping\
+    \ by expanding our guessing game.\n\nEnhance the guessing game by adding the following\
+    \ new requirements to your existing program.\n\n+   - In the previous program\
+    \ the user got one guess. We want them to guess until they reach the correct answer\n\
+    - What will you use to end the loop?\n- What kind of a loop will you use?"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'By the way, you can use this function to calculate a random number for your
+    mystery number. **random.nextInt(10)** calculates random number between 0 and
+    10
+
+
+    Go into the Java IDE and create this program.
+
+
+    # Try It!
+
+
+    # Rock, Paper, Scissors
+
+
+    This exercise helps you learn more about branching and looping through the Rock
+    Paper Scissors game.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_33_0.png)
+
+
+    +   - Write a program that uses the Rock, Paper, Scissors rules below.
+
+
+    +   - Run a set number of matches but keep trying after that number while the
+    players are tied.
+
+
+    | RPS Rules |
+
+    | Rock crushes Scissors |
+
+    | Scissors cut Paper |
+
+    | Paper covers Rock |
+
+    | No one wins if the two are the same |
+
+
+    Go into the Java IDE and create this program.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Try It!
+
+
+    # Russian Roulette
+
+
+    This exercise helps you learn branching and looping as you create Russian Roulette.
+
+
+    Russian Roulette is where a person takes a revolver with a single bullet in it.
+    They spin the cylinder, aim the gun at a target, and pull the trigger.
+
+
+    Create a program that creates the Russian Roulette practice using the below details.
+
+
+    +   1. The location of the bullet in the six chamber is selected at random
+
+    2. The cylinder is spun and the selected chamber is decided at random
+
+    3. The gun is aimed at the target and the trigger is pulled
+
+    4. The result is displayed to the user
+
+    5. The user is asked if they want to try again
+
+    6. If so, the trigger is pulled again
+
+
+    Go into the Java IDE and create this program.
+
+
+    # Learn It!
+
+
+    # Testing the Coding Process
+
+
+    Consider how testing fits within our simple and standard process.
+
+
+    Earlier in this workbook we talked about the coding process. Using this process
+    helps you to think step by step as you try to solve a problem. When we talked
+    about the process earlier, we hadn''t talked about branching and looping. Both
+    of these can make it hard to think through the right steps.
+
+
+    In addition to the three steps listed below, I would also suggest that you then
+    test your program’s logic (does the program match the requirements).'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "> Remember the coding process we went through earlier:\n* Think about the requirements\
+    \ of your program.\n* Write down the high-level steps needed to meet the requirements.\n\
+    * Create your program following these steps.\n\nHere is a simple way you can test\
+    \ your logic.\n\n+   1) Get yourself a blank piece of paper.\n2) Write the variable\
+    \ names in your program across the top of the paper. If you are using looping,\
+    \ there aren't always variable names, but you should include each of them across\
+    \ the top as well. Call them Loop1, Loop2, etc. If you have arrays (we cover them\
+    \ next in the workbook), you should also include these.\n3) Now, run through your\
+    \ program step by step. Don't run the program, but walk through the steps as you\
+    \ look at the program.\n4) Write down the value of each variable on the paper.\
+    \ Write down the value of each of the loops. When the value changes, write the\
+    \ new value below the previous one.\n5) Toward the bottom of the paper write down\
+    \ the output of your program.\n\nDoing this will help you make the logic of the\
+    \ steps are correct. It will help you to make sure you have correctly thought\
+    \ through the process.\n\nHere is an example of how to do this. We will use this\
+    \ program from our Sequencing topic.\n\n```\nimport java.util.*;\npublic class\
+    \ ProcessTest {\n    public static void main(String[] args) {\n        Scanner\
+    \ input = new Scanner(System.in);\n        String name;\n        float price1;\n\
+    \        float price2;\n        float price3;\n        float total;\n\n      \
+    \  System.out.print(\"What's your name? \");\n        name = input.next();\n \
+    \       System.out.print(\"Please enter the price of book 1 \");\n        price1\
+    \ = input.nextFloat();\n        System.out.print(\"Please enter the price of book\
+    \ 2 \");\n        price2 = input.nextFloat();\n```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "```\nSystem.out.print(\"Please enter the price of book 3 \");\nprice3 = input.nextFloat();\n\
+    total = price1 + price2 + price3;\nSystem.out.println(\"Your name is \" + name\
+    \ + \" and your total is \" + \ntotal);\n```\n\n| Variables | Price1 | Price2\
+    \ | Price3 | Total |\n|---|---|---|---|---||\n| Bob | 123 | | | |\n| | | 234 |\
+    \ | |\n| | | | 345 | |\n| | | | | 702 |\n\nOutputs\nYour name is Bob and your\
+    \ total is 702\n\nNotice how the value of each variable is updated on the piece\
+    \ of paper as each line is stepped through. Also notice how the output is included\
+    \ at the bottom of the paper.\n\nAs you take the time to test in this way, you\
+    \ will better understand what your program is doing and whether it has the right\
+    \ steps to solve the problem.\n\n![](img/4b0b7323b2e8849b30ec17cea1bb735f_36_0.png)\n\
+    \n# Fibonacci Numbers\n\nThis exercise helps you using the coding process with\
+    \ the Fibonacci sequence.\n\nA scientist named Fibonacci was trying to calculate\
+    \ how many rabbits he could raise over time. Create a program that calculates\
+    \ the Fibonacci sequence using these details.\n\n+   1. Ask user for how many\
+    \ numbers they would like to display\n2. Calculate each element of the Fibonacci\
+    \ sequence using the below information:"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "a. The sequence 1, 1, 2, 3, 5, 8, 13, 21. ...\nb. The sequence always starts\
+    \ with 1. Then you take 1 and add it to 1 and you get 2. 1 + \n2 equals 3, 2 +\
+    \ 3 equals 5, 3 + 5 equals 8, etc.\n\n3. Display each element until the desired\
+    \ number of elements has been reached.\n\nRemember to use the coding process we\
+    \ have covered. Once you have created your program,\nuse the testing process we\
+    \ just talked about to make sure your program correctly calculates the\nFibonacci\
+    \ sequence.\n\nGo into the Java IDE and create this program.\n\n# Try It!\n\n\
+    # Find a School\n\nThis exercise helps you use the coding process by writing a\
+    \ program that finds the correct type of\nschool.\n\nWrite a program that decides\
+    \ which type of school a student should attend based on their age\nusing the below\
+    \ details.\n\n+   1. Ask user for their age\n2. Use this table to decide which\
+    \ school the user should attend.\n\n| Ages | School |\n| 5 - 11 | Elementary |\n\
+    | 12 - 14 | Jr. High |\n| 15 - 18 | High School |\n| > 18 | Graduated |"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '3. Display the output as follows:
+
+    n"Because you are X years old, you go to Y."
+
+
+    Like in the previous exercise, remember to use the coding process we have just
+    covered. Once you have created your program, use the testing process we just talked
+    about to make sure your program correctly finds the right school.
+
+
+    Go into the Java IDE and create this program.
+
+
+    # Learn It!
+
+
+    # Learn Arrays
+
+
+    Learn what arrays are and how you would use them in your program.
+
+
+    Arrays are used when you need many of the same type of variable. They are often
+    used when you don''t know how many variables you need until your program is running.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_38_0.png)
+
+
+    An array is a set of variables of the same type. Like variables (since an array
+    is a special kind of variable), each array has...a name, a type (size), a set
+    of values (what is in it), and each element has an index to be used to reference
+    it.
+
+
+    Before you can use an array, you must first declare it like this.
+
+
+    ```
+
+    int myArray[] = {1,2,3,4,5};
+
+    ```
+
+
+    This example creates an array of 5 integers that are specified when you declare
+    it.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "If you don’t know the values writing the code because you are going to calculate\
+    \ them or ask the user to input them, you can declare your array like this.\n\n\
+    ```\nint myArray[] = new int[10];\n```\n\nThis example creates an empty array.\
+    \ You now need to fill it with values. A **for** loop is often used in connection\
+    \ with an array. See how we would fill an array with values using a loop.\n\n\
+    ```\nfor (int count=0; count<10; count++) {\n  myArray[count]=count*100;\n}\n\
+    ```\n\nThe example loops 10 times (0 to 9) and adds an array element with a value\
+    \ calculated using (count * 100). Notice that it uses count as an index to specify\
+    \ the element to set.\n\nThere is another example that uses two indexes to store\
+    \ a set of people’s names and phone numbers.\n\n```\nimport java.util.*;\npublic\
+    \ class ArrayExample {\n  public static void main(String[] args) {\n    Scanner\
+    \ input = new Scanner(System.in);\n    String nameArray[] = new String[10];\n\
+    \    String phoneArray[] = new String[10];\n\n    for (int index=0; index<10;\
+    \ index++) {\n      System.out.print(\"Please enter a name \");\n      nameArray[index]\
+    \ = input.nextLine();\n    }\n\n    System.out.print(\"Please enter a phone number\
+    \ \");\n      phoneArray[index] = input.nextLine();\n    }\n\n    for (int index=0;\
+    \ index<10; index++) {\n      System.out.println(\"Name: \" + nameArray[index]\
+    \ \n      + \" Phone: \" + phoneArray[index]);\n    }\n  }\n}\n```\n\nThe table\
+    \ below shows an array of names with 5 elements.\n\n| Index | Value |\n|---|---|\n\
+    | 0 | Bob |\n| 1 | Anna |\n| 2 | Jim |\n| 3 | Sandy |\n| 4 | Debbie |"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'In the above example we collect both name and phone within the first loop and
+    store them in their respective arrays using the index variable to refer their
+    index. Then, we loop again to println the value for name and phone for each array
+    element. Using two arrays in this way is called parallel arrays.
+
+
+    # Try It!
+
+
+    # Calculate Average Number
+
+
+    This exercise helps you learn more about branching, looping, and arrays as you
+    create a program that calculates the average of several numbers.
+
+
+    Write a program that calculates the average of a set of numbers using the following
+    details:
+
+
+    +   1. Ask the user for each of 10 numbers
+
+    2. Store each of the numbers in an array
+
+    3. Once you have the 10 numbers stored, loop through the array and calculate the
+    average of the numbers
+
+    4. Display the results
+
+
+    Average is calculated using this formula.
+
+
+    ```
+
+    average = sumOfNumbers / numberOfItems
+
+    ```
+
+
+    Go into the Java IDE and create this program.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# # Try It!
+
+
+    # # Magic 8-Ball
+
+
+    This exercise helps you learn more about branching, looping, and arrays by creating
+    the Magic 8-Ball as a program.
+
+
+    Write a program that creates the Magic 8-Ball
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_41_0.png)
+
+
+    +   - Shake the ball and ask a question
+
+    - The ball chooses an answer for you
+
+    - Answers are chosen randomly
+
+    - The ball stores 10 different answers. Use an array to store the answers
+
+
+    **Note:** You can use this function to calculate a random number. random.nextInt(10)
+    calculates random number between 1 and 10
+
+
+    | Answers |
+
+    | Ask again later |
+
+    | Cannot predict now |
+
+    | Very Hazy. Try again |
+
+    | Don''t count on it |
+
+    | Most likely |
+
+    | Outlook is good |
+
+    | My sources say no |
+
+    | Better not tell you now |
+
+    | Definitely yes |
+
+    | Outlook is not so good |
+
+
+    Go into the Java IDE and create this program.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# # Try It!
+
+
+    # # My Media Collection
+
+
+    This exercise helps you learn arrays using a media collection.
+
+
+    Many of you love music. Like you, I have a lot of different music. Because I''m
+    old, this music is stored on media like Cassettes, Records, and CDs.
+
+
+    You are tasked with creating a collection of media. You will want to use an array
+    to store the media.
+
+
+    Put together a program that creates the media collection as described above. It
+    will need to give a way to add more media to my collection and view the items
+    I already have.
+
+
+    Go into the Java IDE and create this program.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# # ADVANCED CODING
+
+    PRINCIPLES
+
+
+    # # Learn Methods
+
+
+    Learn the concept of methods, provide examples of the two types of methods, and
+    introduce recursion.
+
+
+    Modular coding is all about breaking a program into logical pieces that are grouped
+    together to form a method. The method can take input parameters and will either
+    do something or return something. Because it is bundled in its own package, it
+    can be developed and tested on its own and reused as needed.
+
+
+    Before you can use a method, it needs to be defined. The first line of the definition
+    tells the computer more about the method. Like declaring a variable, the first
+    line tells the access of the method, the type of the method, the name of the method,
+    and if there are any parameters. Until we get to Objects, we will treat the methods
+    as "static". That means that we are going to use them within the class rather
+    than in an object. You will learn more about that later. All you need to know
+    at this point is include the word "static" after the accessor.
+
+
+    | Accessor | Static | Type | Name | Parameters |
+
+    | --- | --- | --- | --- | --- |
+
+    | (public, protected, private) | (static or blank) | (void means no value returned,
+    or a real type) | | (A comma delimited list with type and name) |
+
+    | public | static | void | methodName | (parameterName) |
+
+
+    Next, you need to write the steps that the method will perform. You can use all
+    of the different coding elements we have discussed so far in this workbook.
+
+
+    Here is a simple example of a method.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\npublic static void printNumbers() {\n    for (int count=1; count=10; count++)\
+    \ {\n        System.out.println(count);\n    }\n}\n```\n\nThis method runs through\
+    \ a loop from 1 to 10 and displays the numbers. Here is a simple example of a\
+    \ method that returns a value.\n\n```\npublic static int returnNumber(int startValue)\
+    \ {\n    int total = startValue\n    for (int count=1; count=10; count++) {\n\
+    \        total = total + count;\n    }\n    return total;\n}\n```\n\nLike the\
+    \ earlier example, the one above runs through a loop from 1 to 10. It takes in\
+    \ a parameter (we will talk about those in a minute) and calculates a total which\
+    \ is then returned to the calling line of your program using the `return` statement.\n\
+    \n# Parameters\n\nUsing parameters is a way to send a value to a method while\
+    \ you are using it. This value is then used just like a populated variable within\
+    \ the method. In the last example above, a value is passed into the `returnNumber()`\
+    \ method. Within the method the value can be used through the `startValue` variable.\
+    \ Notice how in the first line we set `total=` to the value of `startValue`.\n\
+    \n# Using a Method\n\nDefining methods is great, but then you need to use them\
+    \ in your program. This is done by \"calling\" the method. To call a method that\
+    \ returns a value, you will treat it exactly like a variable in an arithmetic\
+    \ expression like this.\n\n```\nmyNumber = MyClass.returnNumber(123);\n```\n\n\
+    Remember we named our method `returnNumber()` and we pass a value in the parameter\
+    \ array of 123. This is then used within the method itself.\n\nThe method doesn't\
+    \ return a value, you call it without including it in an arithmetic expression\
+    \ like this."
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\nMyClass.printNumbers();\n```\n\n# Recursion\n\nIn addition to using a\
+    \ method from your program, you can also call methods from within that method.\
+    \ When you call the method you are in, this is called recursion.\n\nIn a simple\
+    \ example, we will display a set of messages similar to using a loop but will\
+    \ use recursion instead.\n\n```\npublic static void showMessage(int numberOfTimes)\
+    \ {\n  if (numberOfTimes > 0) {\n    System.out.println(\"Printing a recurring\
+    \ message \");\n    showMessage(numberOfTimes -1);\n  }\n}\n```\n\nThe if statement\
+    \ is really important because without it the program would loop forever.\n\nSee\
+    \ the line in the method that calls showMessage(?) That is what makes this a recursion.\
+    \ If you were to call this method from your program as follows,\n\n```\nMyClass.showMessage(5);\n\
+    ```\n\nthe method would call itself 5 times and display the message \"Printing\
+    \ a recurring message\" five times before ending.\n\nThere are many reasons to\
+    \ use a recursion. We will explore more within the exercises.\n\n![](img/4b0b7323b2e8849b30ec17cea1bb735f_45_0.png)\n\
+    \n# Factorial\n\nThis exercise will help you learn recursion and methods using\
+    \ the factorial formula.\n\nThe factorial formula is a great way to learn recursion.\
+    \ 5 factorial, also written as 5! is calculated as follows."
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '```
+
+    factorial = 1 * 2 * 3 * 4 * 5
+
+    ```
+
+
+    Write a factorial method that takes an integer as a parameter. It will need to
+    return a value. The method will then execute recursively until it has looped through
+    the number of times spelled in the parameter. When it is done, the method should
+    return results.
+
+
+    **Note**: Make sure you include an If statement that allows the recursion to break
+    out or it will run forever.
+
+
+    Go into the Java IDE and create this program.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_46_0.png)
+
+
+    # # Guessing Game using Methods
+
+
+    This exercise will help you learn methods as you refactor the guessing game.
+
+
+    We have used the Guessing Game idea in a couple of previous exercises. For this
+    exercise, refactor (improve on) the Guessing Game by breaking some of the code
+    into separate methods. Try to use at least two methods you created when updating
+    the game.
+
+
+    Go into the Java IDE and create this program.
+
+
+    ![](img/4b0b7323b2e8849b30ec17cea1bb735f_46_1.png)
+
+
+    # # Learn Objects
+
+
+    Learn what objects are and how to do coding using them.
+
+
+    Working with objects can be an incredible way of coding. Object-oriented coding
+    involves basic tenets:
+
+
+    +   - Encapsulation
+
+    - Inheritance
+
+    - Polymorphism'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "We will get into these tenets in sections that follow. For now, let's talk\
+    \ about objects in general.\n\n> There are two things you need to visualize objects.\
+    \ The first is a class and the other is an object.\n\n| CLASS | OBJECT |\n|---|---|\n\
+    | Defines the \"blueprint\" of a type of object. | Implements the blueprint into\
+    \ a usable object. |\n\n![](img/4b0b7323b2e8849b30ec17cea1bb735f_47_0.png)\n\n\
+    We write the general functionality of our program within classes and then create\
+    \ an instance of that class (called an object) that we use.\n\nHere is what the\
+    \ code looks like to create a class:\n\n```\npublic class Car {\n  String color\
+    \ = \"\";\n\n  public void displayInformation() {\n    System.out.println(\"The\
+    \ color of this car is \" + color);\n  }\n}\n```\n\nIn the code above we define\
+    \ our class. This is like creating a new type Car. In this class, we define a\
+    \ variable called color and we define a method called displayinformation(). Notice\
+    \ that this method is a little different from the ones we looked at in the previous\
+    \ section. In this example and the rest of them in this workbook, there will not\
+    \ be a \"static\" indicator. Below we will create an object that will refer to\
+    \ rather than the class name."
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "In Java the .Java file and the class name need to match exactly, including\
+    \ the case (upper and lower case). I suggest that you right click on src and create\
+    \ a new Java Class for each of these examples. Be careful to make sure the file\
+    \ matches the class name.\n\nIf you wanted to use this class, you will need to\
+    \ create an object instance of the class like this.\n\n```\nCar myCar = new Car();\n\
+    ```\n\nWith the object instance created, you can now use the object as follows.\n\
+    \n```\nmyCar.color = \"Red\";\nmyCar.displayInformation();\n```\n\nThe last statement\
+    \ above would produce output like this.\n\nThe color of this car is Red\n\nThe\
+    \ last thing we need to talk about is a special kind of method called a constructor.\
+    \ The constructor is a way to set up the values of an object at the time it is\
+    \ created. The only thing really different here is what we name the method. A\
+    \ constructor has the same name as the class. Let's take our Car class and add\
+    \ the constructor:\n\n```\npublic class Car {\n    String color= \"\";\n\n   \
+    \ //This is the constructor\n    public Car(String tempColor) {\n        color\
+    \ = tempColor;\n    }\n\n    public void displayInformation() {\n        System.out.println(\"\
+    The color of this car is \"\n            + + color);\n    }\n}\n```\n\nOnce the\
+    \ constructor is defined, we can then use it like this.\n\n```\nCar myCar = new\
+    \ Car(\"Yellow\");\n```"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'See how we set the color to Yellow at the time we create the object instance?
+
+
+    These are the very basics of objects. In the next several lessons we will delve
+    into the topic in more detail.
+
+
+    # Try It!
+
+
+    # Try Objects
+
+
+    This exercise helps you learn object coding using a simple program.
+
+
+    Using the previous lesson and the examples contained therein create a program
+    with these requirements,
+
+
+    +   - Create a class using something of your choosing. Define at least one variable
+    and one method within the class
+
+    - Write the code that would be used to create an object instance of the class
+    you created above
+
+    - Write a snippet of code that would use the object you created above
+
+
+    Go into the Java IDE and create this program.
+
+
+    # Learn It!
+
+
+    # Learn Encapsulation
+
+
+    Learn about encapsulation, one of the tenets of object-oriented coding.
+
+
+    Encapsulation is about bundling data and operations into a single package. Doing
+    this allows us to better manage our program in a couple of ways.
+
+
+    First, it allows you to manage the scope of change when it comes to variables
+    within the class and the operations (methods) that affect that data.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "We haven't used an accessor yet, but they determine the visibility of a class,\
+    \ variable, or method. The **public** accessor allows the element to be visible\
+    \ to all other classes inside and outside the class. **Protected** allows only\
+    \ classes within the inheritance hierarchy to see the element. **Private** restricts\
+    \ visibility to the element only within the class. When we set a variable as **private**,\
+    \ we can ensure any changes to variable data must come through methods in the\
+    \ class.\n\n```\npublic class Car {\n    private String color = \"\";\n\n    public\
+    \ Car(String tempColor) {\n        color = tempColor;\n    }\n\n    public void\
+    \ displayInformation({\n        System.out.println(\"Car: The color of this car\
+    \ is \" + color);\n    }\n}\n```\n\nSecond, when it comes to testing the class,\
+    \ you can do it as a single unit, which is the basis for unit testing. Keeping\
+    \ the changes and the tests focused on a single class allow you to manage the\
+    \ impacts that change has on the data and operations.\n\nIt is considered a best\
+    \ practice to use encapsulation as shown in the **Car** example above to ensure\
+    \ access and scope are closely managed.\n\n# Learn It!\n\n# Learn Inheritance\n\
+    \nLearn about inheritance, one of the tenets of object-oriented coding.\n\nInheritance\
+    \ is something we see all around us. In your own family you inherit certain traits\
+    \ from your father and mother. If you have a sibling, that person likewise inherits\
+    \ traits. Classes can have inheritance in a similar way to that of your family.\n\
+    \nIn coding we call the parent \"super\" class. Other classes can inherit from\
+    \ the super class. Those that inherit from the super are called \"sub\" classes."
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "Let's look at some examples. Let's use the Car class we've seen in previous\
+    \ lessons. You might notice that we have changed the accessor of the color variable\
+    \ to protected. Protected allows subclasses to access this variable.\n\n```\n\
+    public class Car {\n    protected String color = \"\";\n\n    public Car(String\
+    \ temp) {\n        color = tempColor;\n    }\n\n    public void displayInformation()\
+    \ {\n        System.out.println(\"Car: The color of this car is \" + color);\n\
+    \    }\n}\n```\n\nThis is our super class. Now we get more specific by adding\
+    \ a couple of subclasses that inherit from Car.\n\n```\npublic class Lamborghini\
+    \ extends Car {\n    private int numberOfOfCylinders=0;\n\n    public Lamborghini(int\
+    \ tempNumberOfCylinders, String tempColor) {\n        super(tempColor);\n    \
+    \    numberOfCylinders = tempNumberOfCylinders;\n    }\n\n    public void displayInformation()\
+    \ {\n        System.out.println(\"Lamborghini: The color of this car is \" + color\
+    \ + \" and the number of cylinders is \" + numberOfOfCylinders);\n    }\n}\n\n\
+    public class Ferrari extends Car {\n    private int numberOfOfCylinders=0;\n\n\
+    \    public Ferrari(int tempNumberOfCylinders, String tempColor) {\n        super(tempColor);\n\
+    \        numberOfCylinders = tempNumberOfCylinders;\n    }\n\n    public void\
+    \ displayInformation() {\n        System.out.println(\"Ferrari: The color of this\
+    \ car is \" + color + \" and the number of cylinders is \" + numberOfOfCylinders);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '```
+
+    + numberOfOfCylinders);
+
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    Notice that both Lamborghini and Ferrari have Car in parenthesis. That means that
+    they inherit from Car. All three of these classes have a constructor. The first
+    line in the subclasses constructors call the super class''s constructor and pass
+    it a value for color. The rest of the classes are pretty straight forward.
+
+
+    Now let''s look at how they can be used in a program. Within our program we are
+    going to declare and create an object instance of the Lamborghini class.
+
+
+    ```
+
+    Lamborghini lamb = new Lamborghini(12, "Red");
+
+    lamb.displayInformation();
+
+    ```
+
+
+    We are using this class pretty much as we used Car in previous lessons. One thing
+    that we should call out is that we set lamb.color but if you look at the Lamborghini
+    class, it doesn''t have a color variable. That is because Lamborghini and Ferrari
+    inherit that variable from their parent, Car.
+
+
+    The power of inheritance is that we don''t have to reinvent the wheel for each
+    class we create. When there is really an "Is a" relationship, we are able to use
+    inheritance to reuse functionality that exists in another class.
+
+
+    # Learn It!
+
+
+    # Learn Polymorphism
+
+
+    Learn about polymorphism, one of the tenets of object-oriented coding.
+
+
+    While the name, "Polymorphism", sounds really complicated, it isn''t actually
+    that tough. It has to do with the computer determining the type of an object at
+    the time the program is running. Key to polymorphism is the way your program is
+    set up. It will use inheritance in a specific way.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "You've already learned about inheritance in the last section. We will use the\
+    \ same Car types when we learn polymorphism. In the last section we set up a super\
+    \ class called Car and two sub classes called Lamborghini and Ferrari.\n\nFor\
+    \ our example we will declare an array of Cars and add a bunch of different types\
+    \ of cars to the array.\n\n```\npublic static void main(String[] args) {\n   \
+    \ Car myCarArray[] = {new Lamborghini(12, \"Red\",\n        new Ferrari(10, \"\
+    Green\",\"),\n        new Lamborghini(12, \"Pink\",\n        new Ferrari(10, \"\
+    Blue\"),\n        new Car(\"Yellow\")\nn}\n```\n\nWith five elements in our array,\
+    \ we can show the power of polymorphism. We are going to use a for loop to step\
+    \ through the elements within the array. For each element in the array, we will\
+    \ call it displayInformation() method.\n\nThe power of polymorphism is that the\
+    \ computer will figure out the type of the object and determine which displayInformation()\
+    \ method to call on its own. If we add the below lines within the main() method\
+    \ we can get the results.\n\n```\nfor (Car car : myCarArray) {\n    car.displayInformation();\n\
+    }\n```\n\nWhen the program is executed, the output will look like this.\n\nLamborghini:\
+    \ The color of this car is Red and the number of cylinders is 12\nFerrari: The\
+    \ color of this car is Green and the number of cylinders is 10\nLamborghini: The\
+    \ color of this car is Pink and the number of cylinders is 12\nFerrari: The color\
+    \ of this car is Blue and the number of cylinders is 10\nCar: The color of this\
+    \ car is Yellow\n\nSee how different displayInformation() methods are displayed\
+    \ based on the type of the object?"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'The keys to setting polymorphism up are to have several classes that inherit
+    from a super class. Notice when we declared the array it was the type of the super
+    class (Car). This is really important. Also notice that in the for loop we treat
+    all of the elements of the array as if they were the super class. We also have
+    to make sure we have common methods across super and subclasses. displayInformation()
+    is implemented in all three classes. When these things are found together we have
+    polymorphism.
+
+
+    # Try It!
+
+
+    # My Media Collection
+
+
+    This exercise helps you learn objects, inheritance, and polymorphism using a media
+    collection.
+
+
+    If you know me, you know that I love my media. I have a ton of different types
+    of media including cassettes, records, and CDs.
+
+
+    You are tasked with creating a collection of media with these types. You will
+    want to use an array to store the media. The three types above will inherit from
+    a super class called Media. Media will have a base set of variables and methods
+    and each of the other types will have unique variables and methods. All of the
+    types, including Media, will have a display method.
+
+
+    Put together a program that implements the media collection as described above.
+    Try to use polymorphism in your program.
+
+
+    Go into the Java IDE and create this program.
+
+
+    # Try It!
+
+
+    # Russian Roulette Using Objects
+
+
+    This exercise helps you learn branching, looping, and objects as they implement
+    Russian Roulette.
+
+
+    Russian Roulette is where a person takes a revolver with a single bullet in it.
+    They spin the cylinder, aim the gun at a target, and pull the trigger.
+
+
+    Create a program that creates the Russian Roulette practice using the below details.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "+   1. The location of the bullet in the six chamber revolver is selected at\
+    \ random.\n2. The cylinder is spun and the selected chamber is decided at random.\n\
+    3. The gun is aimed at the target and the trigger is pulled\n4. The result is\
+    \ displayed to the user.\n5. The user is asked if they want to try again.\n6.\
+    \ If so, the trigger is pulled again.\n7. Use an object-oriented approach to implementing\
+    \ this program.\n\nGo into the Java IDE and create this program.\n\n# Learn It!\n\
+    \n# Learn Files\n\nLearn how to use files to write and read data in your programs.\n\
+    \nLoading and saving data from a file within your program can enhance the robustness\
+    \ of the user experience. All of our programs prior to this lesson have required\
+    \ that the user enter data each time the program runs. While this is fine for\
+    \ a guessing game or a calculator, , if I must reenter all of my cassettes, records,\
+    \ and CDs into my media collection each time the program runs, I am going to be\
+    \ pretty grumpy.\n\nIncorporating files into our programs allow us to store data\
+    \ from a program to a file that can be loaded again from the file the next time\
+    \ our program runs.\n\nAny time we want to use a file, we first need to open the\
+    \ file. If our program was going to open a file for output (saving data to a file)\
+    \ our code would look like this.\n\n```\ntry {\n    FileWriter writer = new FileWriter(\"\
+    myfile.txt\");\n} catch (IOException ex) {\n    System.err.println(ex.getMessage());\n\
+    } \n```"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'By the way, you will want to add import java.io.*; at the top of your program
+    to use some of the classes we''ve included.
+
+
+    We will talk about the **try/catch** pieces in a minute here. To begin with, we
+    will discuss the **FileWriter** line. **FileWriter** is a class in Java built
+    to write files. You create an object instance of it we talked about in our Objects
+    section. The constructor includes the path and name of your file. For this example
+    I chose a simple file name without a path, but you might need to include the path.
+    If you use the ''\'' symbol in your path, you might want to use two of them ''\\''.
+    ''\ is a special character in Java used for pattern matching. Putting two together
+    tells Java to treat it like a normal symbol.
+
+
+    Now on **try/catch**. The **try** block and the **catch** block help us when something
+    doesn''t go right when our program is running. Let''s say you are trying to write
+    a file to a place that didn''t exist or you didn''t have access to. **Try** tells
+    Java to watch for possible problems. **Catch** tells Java how to filter problems
+    that happen and what to do with them. Our **catch** block tells Java to look for
+    the IOException problem. If one of these problems occur, our program will write
+    to the error console (kind of like the output ''out'' console we are used to)
+    so we know what the problem is.
+
+
+    For an output stream we will want to **write** data to the file. We do it it like
+    this.
+
+
+    ```
+
+    writer.write("My First Record");
+
+    ```
+
+
+    The above statement is similar to a **println** statement but writes to a file
+    instead. You can write a literal string like in the example above or you can include
+    a variable name.
+
+
+    For all file-related operations, you need to make sure you **close** the file
+    when you are done. Leaving a file open wastes system resources and can result
+    in a memory leak. Here is how you close the file.
+
+
+    ```
+
+    writer.close();
+
+    ```
+
+
+    We have talked about an output stream. Now let''s discuss using an input stream.
+    An input stream **reads** data from a file that already exists. If the file doesn''t
+    exist, your program will probably throw an error. You will find that the syntax
+    to open an input stream is very close to the output stream.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "```\ntry {\n    FileReader reader = new FileReader(\"mytestfile.txt\");\n}\
+    \ catch (IOException ex) {\n    System.err.println(ex.getMessage());\n}\n```\n\
+    \nThe code to read from our file is a little different than to write because it\
+    \ reads a character at a time. Here is what it looks like the file.\n\n```\nint\
+    \ myChar;\nwhile ((myChar = reader.read()) != -1) {\n    System.out.print((char)myChar);\n\
+    }\n```\n\nThe read method in our program is within the while loop. As we read\
+    \ from the file, we check to see if it gets a -1. When it gets a -1, that tells\
+    \ us that we have reached the end of the file. Since it is reading a character\
+    \ at a time, we use a print method rather than println to print the data out.\n\
+    \nTo close the open file this time we use this code.\n\n```\nreader.close();\n\
+    ```\n\nIf you were to run the output stream code and then the input stream code\
+    \ and display the value of myChar, it would look like this.\n\n# My First Record\n\
+    \nHere is the entire program using an Object based approach to read and write\
+    \ to a file.\n\n```\nimport java.io.*;\npublic class FileTest {\n    String fileName;\n\
+    \    public FileTest(String tempFile) {\n        fileName = tempFile;\n    }\n\
+    \    public void writeFile() {\n        try {\n            FileWriter writer =\
+    \ new FileWriter(fileName);\n            writer.write(\"My First Record\");\n\
+    \            writer.close();\n        } catch (IOException ex) {\n           \
+    \ System.err.println(ex.getMessage());\n        }\n    }\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "```\n}\npublic void readFile() {\n  try {\n    FileReader reader = new FileReader(fileName);\n\
+    \    int myChar;\n    while ((myChar = reader.read()) != -1) {\n      System.out.print((char)myChar);\n\
+    \    }\n    reader.close();\n  } catch (IOException ex) {\n    System.err.println(ex.getMessage());\n\
+    \  }\n}\n```\n\n```\npublic static void main(String[] args) {\n  FileTest fileTest\
+    \ = new FileTest(\"testfile.txt\");\n  fileTest.writeFile();\n  fileTest.readFile();\n\
+    }\n```\n\nWhile there are other operations like deleting and renaming files, we\
+    \ have been able to work through the most common operations a programmer will\
+    \ typically perform. Adding file operations to your program can add significant\
+    \ benefit to your users.\n\n![](img/4b0b7323b2e8849b30ec17cea1bb735f_58_0.png)\n\
+    \n# My Improved Media Collection\n\nThis exercise will help you to use files to\
+    \ improve your media collection program.\n\nI've been using the great media collection\
+    \ program you put together earlier but am kind of tired of retyping all of my\
+    \ media into the program each time it runs.\n\nFor this exercise, enhance the\
+    \ media collection program written earlier to write the collection to a file at\
+    \ the end of the program and read the collection from the file at the beginning.\n\
+    \nOne thing you are going to need to consider is how you store the type of the\
+    \ media in the file and how you repopulate the array using the correct object\
+    \ types."
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: Go into the Java IDE and create this program.
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# REFERENCE
+
+
+    # Java Reference
+
+
+    This workbook will use the following Java syntax.
+
+
+    | Variable Declarations | `int variableName = 10;` <br> `String arrayName[] =
+    ("bob","ann","fred","isa");` <br> or `String arrayName = new String[10];` |
+
+
+    | Variable Assignments | `Types: int, float, string, boolean` <br> `variableName
+    = Assignment;` <br> `arrayName[index] = Assignment;` |
+
+
+    | Arithmetic Expression | + Addition <br> - Subtraction <br> * Multiplication
+    <br> / Division <br> % Modulus <br> ^ Exponent <br> `Math.Pow Exponent` <br> `java.util.Random.randint(1,10)`
+    calculates random number between 1 and 10 |
+
+
+    | Output | `System.out.println(Item);` <br> `System.out.println(Item + Item);`
+    <br> `import java.util.*;` <br> `Scanner input = new Scanner(System.in);` |
+
+
+    | Logical Expressions | `variableName = input.nextLine();` <br> `variableName
+    = input.nextInt();` <br> > Greater than <br> < Less <br> >= Greater or equal <br>
+    <= Less or equal <br> == Equal <br> != Not <br> AND <br> OR <br> NOT |
+
+
+    | Branching | `if (logical expression)` |'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# Statements
+
+
+    ```
+
+    if (logical expression)
+
+    Statements
+
+    else
+
+    Statements
+
+    ```
+
+
+    # Looping
+
+
+    ```
+
+    while (logical expression)
+
+    Statements
+
+    ```
+
+
+    ```
+
+    for (int variable = 0; variable < 10; variable++)
+
+    Statements
+
+    ```
+
+
+    ```
+
+    for (Object variable : arrayName)
+
+    Statements
+
+    ```
+
+
+    # Methods
+
+
+    ```
+
+    public void methodName([Type][Parameter], ...)
+
+    Statements
+
+    return Value
+
+    ```
+
+
+    ```
+
+    methodName(Value)
+
+    variableName = methodName(Value)
+
+    ```
+
+
+    # Classes
+
+
+    ```
+
+    public class className [extends SuperClass]
+
+    Variable and method definitions
+
+    ```
+
+
+    ```
+
+    className = new ClassName();
+
+    className.variable;
+
+    className.method();
+
+    ```
+
+
+    # Files
+
+
+    ```
+
+    import java.io.*;
+
+    ```
+
+
+    ```
+
+    FileWriter writer = new FileWriter(fileName);
+
+    FileReader reader = new FileReader(fileName);
+
+    ```
+
+
+    ```
+
+    writer.write("message");
+
+    int myChar;
+
+    while ((myChar = reader.read()) != -1)
+
+    System.out.print((char) myChar);
+
+    ```
+
+
+    ```
+
+    try {
+
+    Statements
+
+    } catch (IOException ex) {
+
+    System.err.println(ex.getMessage());
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# # Other Coding Language References
+
+
+    Below is a list of references to common coding languages. You might want to use
+    these references to help you do the exercises in this workbook using another language.
+
+
+    | Language | Link to Reference |
+
+    | --- | --- |
+
+    | Java | https://docs.oracle.com/javase/10/docs/api/overview-summary.html |
+
+    | Python | https://docs.python.org/2.7/reference/index.html |
+
+    | Visual Basic | https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/
+    |
+
+    | C | https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html |
+
+    | Scratch | https://download.scratch.mit.edu/ScratchReferenceGuide14.pdf |'
+  merge: -1
+  pgno: 62
