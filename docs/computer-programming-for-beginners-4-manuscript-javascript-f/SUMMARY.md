@@ -1,0 +1,2 @@
++   [初学者计算机编程指南。4 手稿：JavaScript 初学者指南、Python 编程初学者指南、SQL 编程终极初学者指南、学习 Java 编程](README.md)
++   [初学者计算机编程指南。4 手稿：JavaScript 初学者指南、Python 编程初学者指南、SQL 编程终极初学者指南、学习 Java 编程](computer-programming-for-beginners-4-manuscript-javascript-f.md)
