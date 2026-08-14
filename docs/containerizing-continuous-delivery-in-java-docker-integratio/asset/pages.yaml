@@ -1,0 +1,2146 @@
+- img_proc: true
+  md: '# # Containerizing Continuous Delivery in Java
+
+
+    Docker Integration for Build Pipelines and Application Architecture
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_0_0.png)
+
+
+    Daniel Bryant'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Containers
+
+    # without chaos
+
+
+    Flawless application delivery with NGINX Plus
+
+
+    +   - Advanced load balancing and automated routing
+
+    - Application-aware health checks and container monitoring
+
+    - Access controls and rate limiting to secure your applications
+
+
+    +   - On-the-fly reconfiguration for scalable service discovery
+
+    - Content caching for better availability and performance
+
+
+    Learn more at:
+
+    nginx.com/microservices'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # Containerizing Continuous Delivery in Java
+
+    Docker Integration for Build Pipelines and Application Architecture
+
+
+    Daniel Bryant'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Containerizing Continuous Delivery in Java
+
+
+    by Daniel Bryant
+
+
+    Copyright © 2017 O''Reilly Media Inc. All rights reserved.
+
+
+    Printed in the United States of America.
+
+
+    Published by O''Reilly Media, Inc., 1005 Gravenstein Highway North, Sebastopol,
+    CA 95472.
+
+
+    O''Reilly books may be purchased for educational, business, or sales promotional
+    use. Online editions are also available for most titles (http://oreilly.com/safari).
+    For more information, contact our corporate/institutional sales department: 800-998-9938
+    or corporate@oreilly.com.
+
+
+    Editor: Brian Foster
+
+
+    Interior Designer: David Futato
+
+
+    Production Editor: Nicholas Adams
+
+
+    Cover Designer: Karen Montgomery
+
+
+    Copyditor: Gillian McGarvey
+
+
+    Illustrator: Rebecca Demarest
+
+
+    January 2017: First Edition
+
+
+    Revision History for the First Edition
+
+
+    2017-01-13: First Release
+
+
+    The O''Reilly logo is a registered trademark of O''Reilly Media, Inc. Containerizing
+    Continuous Delivery in Java, the cover image, and related trade dress are trademarks
+    of O''Reilly Media, Inc.
+
+
+    While the publisher and the author have used good faith efforts to ensure that
+    the information and instructions contained in this work are accurate, the publisher
+    and the author claim all responsibility for errors or omissions, including without
+    limitation responsibility for damages resulting from the use of reliance on this
+    work. Use of the information and instructions contained in this work is at your
+    own risk. If any code samples or other technology this work contains or describes
+    subject to open source licenses or the intellectual property rights of others,
+    it is your responsibility to ensure that your use thereof complies with such licenses
+    and/or rights.
+
+
+    978-1-491-97960-0
+
+
+    [LSI]'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Table of Contents
+
+
+    Foreword...............................................................................................
+    v
+
+
+    Introduction.......................................................................................
+    vii
+
+
+    +   1. Continuous Delivery Basics...............................................................
+    1
+
+    Continuous Delivery with a Java Build Pipeline 1
+
+    Maximize Feedback: Automate All the Things 3
+
+    nThe Impact of Containers on Continuous Delivery 3
+
+
+    +   2. Continuous Delivery of Java Applications with Docker................ 7
+
+    Adding Docker to the Build Pipeline 7
+
+    Introducing the Docker Java Shopping Application 9
+
+    Pushing Images to a Repository and Testing 16
+
+    Running Docker as a Deployment Fabric 24
+
+    It''s a Brave New (Containerized) World 31
+
+
+    +   3. The Impact of Docker on Java Application Architecture.............. 33
+
+    Cloud-Native Twelve-Factor Applications 33
+
+    The Move to Microservices 37
+
+    API-Driven Applications 38
+
+    Containers and Mechanical Sympathy 39
+
+
+    +   4. The Importance of Continuous Testing..................................
+    43
+
+    Functional Testing with Containers 43
+
+    Nonfunctional Testing: Performance 44
+
+    Nonfunctional Testing: Security Across the System 45'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "+   5. Operations in the World of Containers..................................................................\
+    \ 47\n   Host-Level Monitoring 47\n   Container-Level Metrics 48\n   Application-Level\
+    \ Metrics and Health Checks 50\n6. Conclusion and Next Steps.....................................................................\
+    \ 53"
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Foreword
+
+
+    Despite being around for more than two decades, Java is one of the most widely
+    used programming languages today. Though it''s often associated with legacy, monolithic
+    JEE apps, when combined with Docker and continuous delivery (CD) practices, tried-and-true
+    Java becomes a valuable tool in a modern microservices-based application environment.
+
+
+    In this report, author Daniel Bryant covers everything you need to know as you
+    containerize your Java apps, fit them into CD pipelines, and monitor them in production.
+    Bryant provides detailed step-by-step instructions with screenshots to help make
+    the complex process as smooth as possible. By the end of the report, you will
+    be well on your way to self-service deployments of containerized Java apps.
+
+
+    One of the biggest challenges in production—Java or otherwise—is interconnecting
+    them. With monolithic apps, everything remains on the same server, but microservices
+    and containerizing apps introduces a new component you have to design and maintain:
+    the network they use to communicate. With CD, the containers are continuously
+    being updated and changing location, further complicating things.
+
+
+    To help solve these networking and service discovery problems, we''ve created
+    a series of reference architectures for microservices, powered by NGINX Plus.
+    We''ve made it easy to connect, secure, and scale your distributed application
+    by simply adding a few lines to a Dockerfile to embed NGINX Plus in your containers.
+    Each container can then independently discover, route, and load balance to other
+    services without the need for any middleware. This greatly speeds up communications
+    between services and enables fast'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "SSL/TLS connections. To learn more about our microservice reference architectures,\
+    \ please visit nginx.com/mra.\n\nWe hope that you enjoy this report and that it\
+    \ helps you use Java in exciting new ways.\n\n> — Faisal Memon, \nProduct Marketer,\
+    \ NGINX Inc."
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Introduction
+
+
+    > "It is not the most intellectual of the species that survives; it is not the
+    strongest that survives; but the species that survives is the one that is able
+    to adapt and adjust to the changing environment in which it finds itself."
+
+
+    —C. Megginson, interpreting Charles Darwin
+
+
+    Java is a programming language with an impressive history. Not many other languages
+    claim 20-plus years of active use, and the fact that the platform is still evolving
+    to adapt to modern hardware and developer requirements will only add to this longevity.
+    Many things have changed during the past 20 years in the IT industry, and the
+    latest trend of packaging and deploying applications in containers is causing
+    a seismic shift in how software is developed. The open source release of Docker
+    in March 2013, developers have rapidly become captivated with the promises that
+    accompany this technology. The combination of a well-established language like
+    Java and an emerging technology such as Docker may appear at first glance like
+    a strange mix. But, it is not. Packaging applications that were developed using
+    the production-ready, battle-hardened Java within flexible container technology
+    can bring the best of both worlds to any project.
+
+
+    As is with the introduction of any new paradigm or technology, some things must
+    change. The process of containerizing Java applications is no exception, especially
+    when an organization or development team aspires to practice continuous delivery.
+    The emergence of practices like continuous integration and continuous delivery
+    is currently transforming the software development industry, where short technical
+    feedback cycles, improved functional/nonfunctional validation, and rapid deployment
+    are becoming enablers. If'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'we combine this with public cloud technology and programmable infrastructure,
+    we have a potent recipe for deploying applications that can scale cost-effectively
+    and on demand. Because not every-thing can be covered in a book of this size,
+    the primary aim is to provide the reader with a practical guide to continuously
+    delivering Java applications deployed within Docker containers. Let’s get started!
+
+
+    # Acknowledgments
+
+
+    I would like to express gratitude to the people who made writing this book not
+    only possible, but also a fun experience! First and foremost, I would like to
+    thank Brian Foster for providing the initial opportunity, and also extend this
+    thanks to the entire O’Reilly team for providing excellent support throughout
+    the writing, reviewing, and publishing process. Thanks to Arun Gupta for his very
+    useful technical review, and to Nic Jackson (and the entire notontheightstreet.com
+    technical team), Tareq Abedrabdo, and the OpenCredo and SpectLabs teams for support
+    and guidance throughout the writing process. Finally, I would like to thank the
+    many people of the IT community that reach out to me at conferences, meetings,
+    and via my writing—your continued sharing of knowledge, feedback, and questions
+    are the reason I enjoy what I do so much!'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# CHAPTER 1
+
+
+    # Continuous Delivery Basics
+
+
+    > “Our highest priority is to satisfy the customer through early and continuous
+    delivery of valuable software.”
+
+    —First principle of the Agile Manifesto
+
+
+    Continuous delivery (CD) is fundamentally a set of practices and disciplines in
+    which software delivery teams produce valuable and robust software in short cycles.
+    Care is taken to ensure that functionality is added in small increments and that
+    the software can be reliably released at any time. In 2010, Jez Humble and Dave
+    Farley published their seminal book Continuous Delivery (Addison-Wesley), which
+    collated their experiences working on software delivery projects around the world,
+    and this publication is still the go-to reference for CD. The book contains a
+    very valuable collection of techniques, methodologies, and advice from the perspective
+    of both technology and organizations. One of the core recommended practices of
+    CD is the creation of a build pipeline, through any candidate change to the software
+    being built is integrated, tested, and validated before determining that it is
+    ready for deployment to a production environment.
+
+
+    # Continuous Delivery with a Java Build Pipeline
+
+
+    Figure 1-1 demonstrates a typical continuous delivery build pipeline for a Java-based
+    monolithic application. The first step of the process of CD is continuous integration
+    (CI). Code that is created on a developer’s laptop is continually committed (integrated)
+    into a'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'shared version control repository, and automatically begins its journey through
+    the entire pipeline.
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_11_0.png)
+
+
+    Figure 1-1. A typical Java application continuous delivery pipeline
+
+
+    The primary goal of the build pipeline is to prove that changes are production-ready.
+    A code of configuration modification can fail at any stage of the pipeline, and
+    this change will accordingly be rejected and not marked as ready for deployment
+    to production.
+
+
+    # # Feature Branching and CI
+
+
+    It''s worth noting that many people argue that code must be continually integrated
+    (at least daily) into a trunk/master/development branch if one is practicing CI.
+    An associated antipattern for this practice is long-lived feature branches that
+    are not continually merged with the main codebase, and which often result in “merge
+    hell” when they are integrated. Steve Smith has contributed several informative
+    articles on this subject.
+
+
+    2 | Chapter 1: Continuous Delivery Basics'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Initially, the software application to which a code change is being applied
+    is built and tested in isolation, and some form of code quality analysis (should)
+    also be applied, perhaps using a tool like Sonar Qube. Code that successfully
+    passes the initial unit and component tests the code-quality metrics moves to
+    the right in the pipeline, and is exercised within a larger integrated context.
+    Ultimately, code that has fully validated emerges from the pipeline and is marked
+    as ready for deployment into production. Some organizations automatically deploy
+    applications that have successfully navigated the build pipeline and passed all
+    quality checks—this is known as continuous delivery.
+
+
+    # Maximize Feedback: Automate All the Things
+
+
+    The build pipeline must provide rapid feedback for the development team in order
+    to be useful within their daily work cycles. Accordingly, automation is used extensively
+    (with the goal of 100% automation) as this provides a reliable, repeatable, and
+    error-free approach to processes. The following items should be automated:
+
+
+    +   * Software compilation and code-quality status analysis
+
+    * Functional testing, including unit, component, integration, and end-to-end
+
+    * Provisioning of all environments, including the integration of logging, monitoring,
+    and alerting hooks
+
+    * Deployment of software artifacts to all environments, including production
+
+    * Data store migrations
+
+    * System testing, including nonfunctional requirements like fault tolerance, performance,
+    and security
+
+    * Tracking and auditing of change history
+
+
+    # The Impact of Containers on Continuous Delivery
+
+
+    Java developers will look at Figure 1-1 and recognize that in a typical Java build
+    pipeline, these two are consistent regardless of the application framework (like
+    Java EE or Spring) being used. The first is that Java applications are often packaged
+    as Java Archives (JAR) or web application archive (WAR) deployment artifacts,
+    and the second is that these artifacts are typically stored in an artifact reposi'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'tory as Nexus Apache Achiva, or Artificatory. This changes when developing
+    Java applications that will ultimately be deployed within container technology
+    like Docker.
+
+
+    # Docker Isn''t the Only Container Technology
+
+
+    It is worth noting that although this book focuses on the combination of Docker
+    and Java, Docker is not the only technology available. Indeed, many people (including
+    the author at times) conflate the words "container" and "Docker"; but this is
+    not correct. Other container technologies include CoreOS and rkt, Canonical''s
+    LXD, and Microsoft''s Windows Server Containers. Much of the high-level CD advice
+    and patterns presented within this book will apply to all of these container technologies.
+
+
+    Additional information for teams developing on a Windows platform can be found
+    in the O''Reilly mini-book Continuous Delivery with Windows and .NET by Chris
+    O''Dell and Matthew Skelton. Although this is .NET-focused, there are many useful
+    chapters on Windows-related topics.
+
+
+    Saying that a JAR file is similar to a Docker image is not a fair comparison.
+    It is somewhat analogous to comparing an engine and a car—and following this analogy,
+    Java developers are much more familiar with the skills required for building engines.
+    For the scope of this book, an explanation of the basics of Docker is not included,
+    the reader new to containerization and Docker is strongly encouraged to read Arun
+    Gupta''s Docker for Java Developers and Adrian Mouat''s Using Docker for a deep-dive
+    into the technology.
+
+
+    Because Docker images run as containers within a host operating system, they typically
+    include some form of operating system (OS), from lightweight ones like Alpine
+    Linux or Debian Linux, to a fully-functional Linux distribution like Ubuntu, CentOS,
+    or RHEL. The exception of running on OS inside a Docker container is the "scratch"
+    base image that can be used when deploying statically compiled binaries (e.g.,
+    when deploying applications) in Go. Regardless of the OS chosen, including Java,
+    also require the packaging of a platform runtime that must be considered (e.g.,
+    when deploying Java applications, a JVM must also be installed and running within
+    the container).
+
+
+    4 | Chapter 1: Continuous Delivery Basics'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'The packaging of a Java application within a container that includes a full
+    OS often brings more flexibility, allowing, for example, the installation of OS
+    utilities for debugging and diagnostics. However, with great responsibility (and
+    increased risk). Packaging an OS within our build artifacts increases a developer''s
+    area of responsibility, such as the security attack surface. Introducing Docker
+    into the technology stack also means that additional build artifacts now managed
+    within version control, such as the Dockerfile, which specifies what container
+    image should be built.
+
+
+    One of the core tenets of CD is testing in a production-like environment as soon
+    as is practical, and container technology can make this easier in comparison with
+    traditional deployment fabrics like bare metal, OpenStack, or even cloud platforms.
+    Docker-based orchestration frameworks that are used as a deployment fabric within
+    a production environment, such as Docker Swarm, Kubernetes (nanokube), and Mesos
+    (minimesos), can typically be spun up on a developer''s laptop or an inexpensive
+    local or cloud instance.
+
+
+    The increase in complexity of packaging and running Java applications within containers
+    can largely be mitigated with an improved build pipeline—which we will be looking
+    at within this book—and also an increased collaboration between developers and
+    operators. This is one of the founding principles with DevOps movement.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Continuous Delivery of Java Applications with Docker
+
+
+    > "Integrating containers into a continuous-delivery pipeline is far from easy.
+    Along with the benefits Docker brings, there are also challenges both technological
+    and process-related."
+
+    —Viktor Farcic, author of DevOps 2.0
+
+
+    This chapter examines the impact of introducing Docker into a Java application
+    build pipeline. In addition to looking at the theoretical issues, practical examples
+    will also be provided, with the goal being to enable a Java developer already
+    familiar with the basic concepts of Docker to start creating an appropriate pipeline.
+    For Java developers looking for an introductory explanation of Docker, Arun Gupta''s
+    Docker for Java Developers is an excellent primer.
+
+
+    # Adding Docker to the Build Pipeline
+
+
+    Introducing Docker into a typical Java application build pipeline will primarily
+    impact 4 locations within the pipeline. The figure below shows an extended example
+    of the earlier Java application build pipeline with the locations of change highlighted
+    (Figure 2-1).'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Figure 2-1. A Dockerized Java application continuous delivery pipeline
+
+
+    Location 1, the developer''s machine, will now include packaging and running Java
+    application within a Docker container. Typically, testing will occur here in two
+    phases: the first ensures that the Java build artifact (JAR, WAR, etc.) is thoroughly
+    tested, and the second asserts that the container image wrapping the artifact
+    has been assembled correctly and functions as expected.
+
+
+    The CI-driven packaging of the application within a container is highlighted in
+    Location 2. Notice now that instead of pushing a Java build artifact (JAR, WAR,
+    etc.) to an artifact repository, a Docker image is being pushed to a centralized
+    container registry, such as
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_17_0.png)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'Docker Hub. This Docker image now becomes the single source of truth, as opposed
+    to the WAR previously, and this is the artifact promoted through the pipeline.
+    It is worth noting that some organizations may want to store code artifacts in
+    addition to Docker images, and accordingly JFrog''s Artifactory can store them.
+
+
+    Location points for defining and running multi-container Docker application (such
+    as Docker Compose) could be used to drive acceptance and performance testing.
+    Other existing options for orchestration and execution of build artifacts can
+    also be used, including Maven/Gradle scripts, configuration management tooling
+    (e.g., Ansible, Chef, Puppet), and deployment tooling like Capistrano.
+
+
+    Location 4 highlights that application environments from QA to production must
+    now change in order to support the execution of Docker containers, with the testing
+    of an application within a production-like (containerized) environment as early
+    as possible. Typically, the creation of a container deployment environment would
+    be implemented by the container orchestration framework like Docker Swarm, Kubernetes,
+    or Apache Mesos, but discussing this is outside of the scope of this book.
+
+
+    The easiest way to understand these changes is to explore them with an example
+    Java application and associated build pipeline. This is the focus of the next
+    section.
+
+
+    # Introducing the Docker Java Shopping Application
+
+
+    Throughout the remainder of this chapter, we will be working with an example project
+    that is a simplified representation of an e-commerce application.
+
+
+    # Obtaining the Example Project Code and Pipeline
+
+
+    For the examples in this chapter, we will use a simple e-commercestyle Java application
+    named Docker Java Shopping, which is available via GitHub. The source repository
+    contains three applications (with Docker build templates), a Docker Compose for
+    deploying of these applications, and a fully functional Jenkins build pipeline
+    Vagrant virtual machine (VM) configuration. If you would like to follow along
+    with the examples in this chapter,'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'please clone the repository locally (↵) indicates where a code line has been
+    broken to fit the page):
+
+
+    git clone ↵
+
+    https://github.com/danielbryantuk/oreilly-docker-java-shopping/
+
+
+    The GitHub repository root project directory structure can be seen in Figure-2.
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_19_0.png)
+
+
+    Figure 2-2. The Docker Java Shopping project on GitHub
+
+
+    # Docker Java Shopping Application Architecture
+
+
+    The application follows the microservices-style architecture and consists of three
+    applications, or services. Don''t be too concerned with the use of the microservice
+    pattern at the moment, as this will be discussed in Chapter 3, and we will deal
+    with each of the three services as applications in their own right. The shopfront
+    service has a UI that can be seen in Figure-2-3.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "![](img/4d47989b22b26f7571903fa9a64cdd6d_20_0.png)\n\nFigure 2-3 shows the\
+    \ architecture of this system, with the shopfront Spring Boot-based application\
+    \ acting as the main entry point. The shopfront application is mainly concerned\
+    \ with displaying and aggregating information from two other services that expose\
+    \ data via REST-like endpoints: the productcatalogue Dropwizard/Java EE-based\
+    \ application provides data on the products in the system, and the stockmanager\
+    \ Spring Boot-based application provides stock (SKU and quantity) data on the\
+    \ associated products.\n\nIn the default configuration (running via Docker Compose),\
+    \ the productcatalogue runs on port 8020, and the products can be viewed as JSON\
+    \ as shown in the following code:\n\n```\n$ localhost:8020/products | jq\n{\n\
+    \  \"id\": \"1\",\n  \"name\": \"Widget\",\n  \"description\": \"Premium ACME\
+    \ Widgets\",\n  \"price\": 1.2\n},\n{\n  \"id\": \"2\",\n  \"name\": \"Sprocket\"\
+    ,\n  \"description\": \"Grade B sprockets\",\n  \"price\": 4.1\nn\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "```\n\"id\": \"3\",\n  \"name\": \"Anvil\",\n  \"description\": \"Large Anvils\"\
+    ,\n  \"price\": 45.5\n\n```\n\n```\n{\"id\": \"4\",\n  \"name\": \"Cogs\",\n \
+    \ \"description\": \"Grade Y cogs\",\n  \"price\": 1.8\n\n```\n\n```\n\"id\":\
+    \ \"5\",\n  \"name\": \"Multitool\",\n  \"description\": \"Multitools\",\n  \"\
+    price\": 154.1\n\n```\n\nAlso in the default configuration, the stockmanager runs\
+    \ on port 8030, and the product stock data can be viewed as JSON as shown in the\
+    \ following code:\n\n```\n$ curl localhost:8030/stocks | jq\n{\n  \"productId\"\
+    : \"1\",\n  \"sku\": \"12345678\",\n  \"amountAvailable\": 5\n},\n{\n  \"productId\"\
+    : \"2\",\n  \"sku\": \"34567890\",\n  \"amountAvailable\": 2\n},\n{\n  \"productId\"\
+    : \"3\",\n  \"sku\": \"54326745\",\n  \"amountAvailable\": 999\n},\n{\n  \"productId\"\
+    : \"4\",\n  \"sku\": \"93847614\",\n  \"amountAvailable\": 0\n},\n{\n  \"productId\"\
+    : \"5\",\n  \"sku\": \"11856388\",\n  \"amountAvailable\": 1\n}\n\n```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# Local Development Environment Configuration\n\nIf you plan to follow along\
+    \ with the examples in this book, the remainder of this chapter assumes that your\
+    \ local development system has the following software installed:\n\n+   - Docker\
+    \ and Docker Compose\n  - This can be installed for Mac and Windows via the Docker\
+    \ Toolbox\n  - Developers using a Linux distribution can find instructions for\
+    \ installation on the Docker website\n- Java 8\n  - OpenJDK or Oracle JDK\n- Maven\n\
+    - Git\n- Vagrant\n- Oracle VM VirtualBox\n\nFor developers to explore the example\
+    \ Docker Java Shopping application, first check out the project repository and\
+    \ build the applications locally. All three of the applications must be built\
+    \ via Maven (there is a convenient build_all.sh script for Mac and Linux users),\
+    \ and then run via the docker compose up --build` command, which should be executed\
+    \ in the root of the project. The shopfront application can be found at http://localhost:8010.\n\
+    \nLet's look at the project in more detail, and see how the Java applications\
+    \ have been deployed via Docker.\n\n# Building a Docker Image Locally\n\nFirst\
+    \ we will look at the shopfront application located at the root of the project.\
+    \ This is a simple Spring Boot application that acts as an ecommerce \"shop front.\\\
+    \ The application's build and dependencies are managed by Maven, and can be built\
+    \ with the `mvn clean install` command. Doing this triggers the compilation and\
+    \ integration (Maven Surefire) testing, and creates a JAR deployment artifact\
+    \ in the project's target directory. The contents of the target directory after\
+    \ a successful build can be seen in Example 2-1."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Example 2-1. Typical output
+
+
+    (master) oreilly-docker-java-shopping $ ls
+
+    README.md docker-compose.yml resttests
+
+    build_all.sh guests shopfront
+
+    ci-vagrant productcatalogue stockmanager
+
+
+    So far, this is nothing different from a typical Java project. However, there
+    is also a Dockerfile in the shopfront directory. The contents are as follows:
+
+
+    ```
+
+    FROM jdk:8-jre
+
+    ADD target/shopfront-0.0.1-SNAPSHOT.jar app.jar
+
+    EXPOSE 8010
+
+    ENTRYPOINT ["java", "
+
+    -Djava.security.egd=/dev/urandom",-jar", "/app.jar"]
+
+    ```
+
+
+    Assuming basic Docker knowledge, we can see that this Dockerfile is built from
+    the default OpenJDK image with the 8-jre tag (ensuring that an OpenJDK8 JRE is
+    installed within the base image), the shopfront application JAR is added to the
+    image (and renamed to app.jar), and the entrypoint is set to execute the application
+    via the java -jar <jar_file> command. Due to the scope of this book, the Dockerfile
+    syntax will not be discussed in further detail in this chapter, as Arun''s Docker
+    for Java Developers contains the majority of the commands that a developer will
+    need.
+
+
+    Now that the Java application JAR has been built, we can use the following Docker
+    command in the shopfront directory to build the associated image:
+
+
+    ```
+
+    docker build -t danielbryantuk/djshopfront
+
+    ```
+
+
+    This builds a Docker image using the Dockerfile in the current directory (the
+    specified build context of .) and tags (-t) the image as danielbryantuk/djshopfront.
+    We now have a Docker image that can be run as a container with the following command:
+
+
+    ```
+
+    docker run -p 8010:8010 danielbryantuk/djshopfront
+
+    ```
+
+
+    After the application has initialized (visible via the logs shown after executing
+    the run command), visit http://localhost:8010/health in a browser to confirm the
+    successful startup (’ss well worth noting that attempting to visit the shopfront
+    UI will result in an error response, as the dependent productcatalogue and stockmanager'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'applications have not been started). The docker run command can be stopped
+    by issuing SIGINT via the key combination Ctrl-C.
+
+
+    You should now have a basic understanding of how to build, package, and run Java
+    applications locally via Docker. Let''s look at a few important questions that
+    Docker using Java imposes, before we move to creating a Docker-based continuous
+    delivery pipeline.
+
+
+    # Packaging Java Within Docker: Which OS, Which Java?
+
+
+    Packaging a Java application within a Docker image may be the first time many
+    Java developers have been exposed to Linux (especially if you develop Java applications
+    on MS Windows), and as the result Docker container being running is within a production
+    environment, this warrants a brief discussion.
+
+
+    A Java developer who works in an organization that implements a similar pipeline
+    as demonstrated in Figure 2-1 may not have been exposed to the runtime operational
+    aspects of deployment; this developer may simply develop, test, and build a JAR
+    or WAR file on their local, and push the code to a version control system. However,
+    when an application is running in production, it runs on a deeper operational
+    stack: a JAR or WAR file is typically run within an application container (e.g.,
+    Tomcat, Websphere, etc.). When it runs on a Java JDK or JRE (Oracle, OpenJDK,
+    etc.), which runs on an operating system (Ubuntu, CentOS, etc.), bare metal, VMs,
+    cloud, etc.). When a developer packages an application within a Docker container,
+    they are implicitly taking more responsibility further down this operational stack.
+
+
+    Accordingly, a developer looking to incorporate the packaging of Java applications
+    with a Docker container will have to discuss choices with their operations/sysadmin
+    (or take individual responsibility for the deployment). The first decision is
+    what operating system (OS) to use as the base image. For the reasons of size,
+    performance, and security, Docker developers generally prefer base images with
+    the smaller Linux distributions (e.g., Debian, Jessie, or Alpine) over traditional
+    full-featured distributions (Ubuntu, RHEL). However, many organizations already
+    have licenses or policies that dictate a certain distribution must be used. The
+    same can often be said with the version of Java being used to run applications.
+    Many organizations prefer to run the Oracle JDK'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'or JRE, but the default Java Docker images available from the Docker Hub public
+    container repository only offer OpenJDK for licensing reasons.
+
+
+    Regardless of which OS and Java are chosen, it is essential that the usage is
+    consistent throughout the pipeline; otherwise, unexpected issues may show up in
+    production (e.g., if you are building on Ubuntu using the OpenJDK but running
+    production on CentOS with Oracle''s JRE, then your application hasn''t been tested
+    within a realistic production environment).
+
+
+    # Packing Java Within Docker: JDK or JRE?
+
+
+    Although most Java development occurs alongside a full Java Development Kit (JDK),
+    it is often beneficial to run an application using only a Java Runtime Environment
+    (JRE). A JRE installation takes up less disk space, and due to the exclusion of
+    many build and debugging tools has a smaller security attack surface. However,
+    developing and testing, it is also convenient to run your application on a JDK,
+    as includes additional tooling for easy debugging. It should be stated again,
+    though, whatever you build and test must be identical to what is used in the production
+    environment).
+
+
+    # Pushing Images to a Repository and Testing
+
+
+    Traditional Java application deployment involved creating a JAR or WAR and pushing
+    this to an artifact repository such as Nexus using a pipeline tool like Jenkins.
+    Jenkins is an open source automation server written in Java that enables automation
+    of the nonhuman (build pipeline) parts of the software development process. Alternatives
+    to Jenkins include Bamboo, Team, and SaaS-based offers like TravisCI and CircleCI.
+
+
+    Builds can be triggered in Jenkins by a variety of methods, such as code commit
+    or a cron schedule, and resulting artifacts can be executed via scripts and external
+    tooling like SonarQube. As shown in Location 2 in Figure 2-1, with Docker-based
+    Java deployment a Docker image artifact is now pushed to a container registry,
+    as such as Docker Hub or JFrog''s Artifactory, rather than a traditional Java
+    artifact repository.
+
+
+    In order to explore this next stage of the Java/Docker CD process, we need a Jenkins
+    installation to illustrate the changes. Using Hashi'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'Corp’s Vagrant tool, the oreilly-docker-java-shopping project repository enables
+    the construction of a Docker-enabled Jenkins server running on Ubuntu 16.04. To
+    follow the instructions here, you must have locally installed the latest version
+    of Vagrant and Oracle’s VirtualBox virtual machine hypervisor.
+
+
+    # Create a Jenkins Server via Vagrant
+
+
+    From the docker-java-shopping project root, navigate into the ci-vagrant folder
+    that contains a single Vagrant file. The Jenkins VM can be created by issuing
+    the vagrant up command within this folder. The creation of the VM may take some
+    time, especially on the first run, which downloads the Ubuntu 16.04 base image.
+    While the VM is being created, the Vagrantfile can be explored to learn how the
+    machine has been provisioned.
+
+
+    The simple shell provisioning option has been used to install the necessary dependencies
+    on a basic Ubuntu 16.04 base image. If you are familiar with Ubuntu operations,
+    none of the commands should come as any surprise; if you aren''t, don''t overly
+    concerned as this book focuses on the developer perspective on CD. It is worth
+    noting that for a production-grade deployment of a Jenkins server, it would be
+    typical to provision a machine using a configuration management tool like Puppet,
+    Chef, or Ansible.
+
+
+    Once the Jenkins Vagrant box is provisioned, you can navigate to http://localhost:8080,
+    supply the Jenkins key that is provided, in the terminal window at the end of
+    the Vagrant provisioning process, create a Jenkins account, and install the recommended
+    Jenkins plugins. One of the biggest technical strengths of Jenkins is that it
+    is extremely extensible through the use of plugins, which can be installed to
+    provide additional basic customization and functionality.
+
+
+    Now navigate to the Manage Jenkins menu on the left of the Jenkins home page,
+    and select Manage Plugins from the resulting main menu. Select the Available tab
+    and search for docker. Approximately a quarter of down the page is a plugin named
+    CloudBees Docker Build and Publish Plugin, which provides the ability to build
+    projects with a Dockerfile and publish the resultant tagged image (repo) to the
+    docker registry. Install this plugin without a restart and navigate back to the
+    Jenkins home page.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Building a Docker Image for a Java Application
+
+
+    Now create a new job by selecting New Item from the menu on the left. Enter the
+    item name of djshopfront and choose “Freestyle project” before pressing the OK
+    button. On the item configuration page that is displayed, scroll down to the Source
+    Code Management section and select the Git radiobox. Enter the oreilly-docker-java-shopping
+    details in this section of the configuration, as shown in Figure 2-4.
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_27_0.png)
+
+
+    Figure 2-4. Configuring Invoke top-level Maven targets in the djshopfront Jenkins
+    build item
+
+
+    Now add an “Invoke top-level Maven targets” in the Build section of the configuration,
+    shown in Figure 2-5. Enter the Goals as specified, and don’t forget to specify
+    the correct POM, as this Git project repository contains applications in subdirectories
+    from the root.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '![](img/4d47989b22b26f7571903fa9a64cdd6d_28_0.png)
+
+
+    Figure 2-5. Configuring Maven in the shopfront Jenkins build item
+
+
+    Next add a "Docker Build and Publish" build step, and enter the information as
+    specified in Figure 2-6, but be sure to replace the tag in Repository Name with
+    your Docker Hub account details (e.g., janesmith/shopfront). Docker Hub is free
+    to use for the public hosting of images, but other commercial container registries
+    are available. If you wish to follow along with the example, then you will need
+    to sign up for a free account and add your credentials to the "Registry credentials"
+    in the Docker Build and Publish section of each build job.
+
+
+    Typically when building and pushing docker build -t <image_name:tag> . and docker
+    push <image_name:tag> commands are used, but the CloudBe Jenkins Docker Build
+    and Publish plugin allows this to be managed via the Jenkins configuration under
+    Build.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Docker Build and Publish
+
+
+    | Repository Name | danielbryantukdjhopfront |
+
+    | Tag | |
+
+    | Docker Host URI | |
+
+    | Server credentials | - none Ad# |
+
+    | Registry URL | danielbryantuk***** Ad# |
+
+    | Skip Push | Do not push image to registry/index on successful completion |
+
+    | No Cache | Force rebuild - do not use docker cache (may be slower) |
+
+    | Force Pull | Update the source image before building when it exists locally
+    |
+
+    | Skip Build | Do not build the image |
+
+    | Create fingerprints | Do not decorate the build name |
+
+    | Skip tag as latest | Do not tag this build as the latest |
+
+    | Build Context | shopfront
+
+    The project path for the build. Defaults to the workspace root if not specified
+    |
+
+    | Force Tag Replacement | Force tag replacement when tag already exists (only
+    use in Docker pre-1.10) |
+
+    | Additional Build Arguments | Additional arguments passed to docker build such
+    as --build-arg http_proxy="http://some.proxy/port" |
+
+    | Dockerfile Path | Path to the Dockerfile for build. File must be relative to
+    build context. Can be used to specify a Dockerfile with a non-standard name. Uses
+    Docker default if not specified |
+
+
+    Figure 2-6. Configuring CloudBees Docker Build and Publish in the Jenkins build
+    item
+
+
+    # # Don’t Use the “latest” Docker Image Tag
+
+
+    Any application artifact deployed via a build pipeline must have a version associated
+    with it; otherwise, it is impossible to know when the artifact was built and what
+    functionality (and compatibility with other applications) offers. In the Java
+    world, we are using to use GAV Maven coordinates—groupId, artifacts, and version.
+    Docker allows images to be versioned with a tag, which can be an arbitrary string;
+    we will discuss the impact this has on versioning in more depth. However, it is
+    worth mentioning that Docker offers a latest tag, but this is unfortunately one
+    of the most misunderstood tags, and simply indicates the last/tag that ran without
+    a spe-
+
+
+    2 | Chapter 2: Continuous Delivery of Java Applications with Docker'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'cific tag/version specified. Don''t use the latest tag in your build pipeline,
+    and instead pass tag version information as a parameter to the build item. As
+    Adrian Mouat suggested, if you don''t your Docker images properly, then you are
+    heading towards a bad place.
+
+
+    The dj한편 job item can now be saved and run. By clicking on the Console Output
+    menu item for the job, the build initialization in Figure 2-7 should initially
+    displayed:
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_30_0.png)
+
+
+    Figure 2-7. Jenkins build log from the start of the dj한편 job build item
+
+
+    Upon completion of the job, the resultant Docker image should have been pushed
+    to the Docker Hub (if there are any errors displayed here, please check that you
+    have entered your Docker Hub registry credentials correctly in the job configuration):
+
+
+    Pushing Images to a Repository and Testing | 21'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# djshopfront > Console Output
+
+
+    ```
+
+    Step 1: Pull layer
+
+    Step 2: Pull layer
+
+    Step 3: Pull layer
+
+    Step 4: Pull layer
+
+    Step 5: Pull layer
+
+    Downloading image
+
+    Extracting file layers
+
+    Status: Verifying Checksum
+
+    Status: Verifying Checksum
+
+    Status: Verifying Checksum
+
+    Status: Verifying Checksum
+
+    Successfully pulled
+
+    Successfully pulled
+
+    Successfully downloaded image
+
+    Building image
+
+    Successfully extracted
+
+    Successfully extracted
+
+    Successfully extracted
+
+    Successfully extracted
+
+    Successfully finished
+
+    Digest: sha256:71d4a511f711a51171c5a511711ca511711ca511711ca511711ca511711ca511
+
+    Size: 1999
+
+    Step 1: Running container
+
+    Step 2: Running container
+
+    Step 3: Running container
+
+    Step 4: Running container
+
+    Step 5: Running container
+
+    Starting container
+
+    Starting container
+
+    Starting container
+
+    Starting container
+
+    Starting container
+
+    Extracting container
+
+    Extracting container
+
+    Extracting container
+
+    Extracting container
+
+    Extracting container
+
+    Running container
+
+    Running container
+
+    Running container
+
+    Running container
+
+    Running container
+
+    Stopping container
+
+    Stopping container
+
+    Stopping container
+
+    Stopping container
+
+    Stopping container
+
+    Removing container
+
+    Removing container
+
+    Removing container
+
+    Removing container
+
+    Removing container
+
+    ```
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_31_0.png)
+
+
+    Once this job is run successfully, the resultant Docker image JAR will be available
+    for download by any client that has access to the registry (or, in this case,
+    the registry is publicly accessible) via docker pull danielbryant/djshopfront.
+    This Docker image can now be run in any of the additional build pipeline test
+    steps instead of the previous process of running the Fat JAR or deploying the
+    WAR to an application container.
+
+
+    Now repeat the above process for the productcatalogue and stockmanager applications
+    under the project root. Once complete, your Jenkins home page should look similar
+    to Figure 2-9.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'Figure 2-9. The Jenkins UI showing all three service build items
+
+
+    If all Java application images have been successfully pushed to Docker Hub, you
+    should be able to log in to the Docker Hub UI with your credentials and view the
+    image details, as shown in Figure 2-10.
+
+
+    Figure 2-10. DockerHub UI showing the successful push of the three service Docker
+    images
+
+
+    # Potential Improvements to the Build Pipeline
+
+
+    The previous section of this book provided an introduction to building Java applications
+    in Docker using Jenkins. It is worth noting that many of the techniques used with
+    traditional Java Jenkins build pipelines can still be applied here:
+
+
+    Pushing Images to a Repository and Testing | 23'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '+   - The artifact build process (and any unit, integration, and code quality
+    tests) can be conducted separately from a job that packages the resulting JAR
+    or WAR within a Docker image. This can save time and compute resources if a Docker
+    image is not required upon every build.
+
+
+    +   - Java artifacts can be stored in a Java artifact repository, such as Nexus,
+    and pulled from this location into a Docker image within an additional job build.
+
+
+    +   - Docker labels can be used to indicate artifact versions and metadata in
+    the same format as the Maven groupId, artifactid, and version (GAV) format.
+
+
+    +   - Jenkins jobs can be parameterized, and users upstream jobs can pass parameters
+    to jobs to indicate the (label) version or other configuration options.
+
+
+    +   - The Jenkins Promoted Build plugin can be used to "gate" build stages, and
+    indicate when an artifact is ready to be promoted from one stage to the next.
+
+
+    # # The Importance of Metadata
+
+
+    It is important to understand, track, and manage artifacts that are produced within
+    the build pipeline. Typical Java artifacts are versioned using GAV Maven coordinates,
+    which follow principles of semantic versioning (semver); for example, 1.12.01
+    (major.minor.patch). Additional metadata, such as the VCS commit SHA, QA control/audit
+    information, and date/time of build is often included in manifest files. Docker
+    has not yet standardized an approach to packaging this type of metadata, but several
+    prominent members of the container community have proposed a label specification
+    based on the use of Docker/container labels. You can learn more at label-schema.org.
+
+
+    # # Running Docker as a Deployment Fabric
+
+
+    The changes at Location 3 in Figure 2-1 indicate that any environment that previously
+    ran Java applications as Fat JARS or deployed WARs must now be modified to instead
+    run Docker containers.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# Component Testing with Docker\n\nCreation of component test environments\
+    \ and the triggering of associated tests (Location 2 in Figure 2-1) can be achieved\
+    \ via the Jenkins Pipeline job type and the CloudBee Docker Pipeline plugin, which\
+    \ can be installed in a similar manner to the previously mentioned CloudBee plugin.\
+    \ After this has been installed, create a new item named djshopfront-component-test\
+    \ of type Pipeline and click O.K.\n\n# The Power of Jenkins' Pipelines (Formerly\
+    \ Workflow)\n\nAs stated on the Jenkins website, while standard Jenkins freestyle\
+    \ jobs support simple continuous integration by allowing you to define sequential\
+    \ tasks in an application lifecycle, they do not create a record of execution\
+    \ that persists through planned or unplanned restarts, enable one script to address\
+    \ all the steps in a complex workflow, or offer the other advantages of pipelines.\n\
+    \nPipeline functionality Jenkins to support continuous delivery (CD). The Pipeline\
+    \ plugin was built with requirements for a flexible, extensible, and script-based\
+    \ CD workflow capability.\n\nA key feature of pipelines is the ability to define\
+    \ stages within a build, which both help to clearly separate the configuration\
+    \ of disparate parts of a build process and also separate the reporting of the\
+    \ outcomes.\n\nScroll the resulting item configuration page to the Pipeline section,\
+    \ and enter the following:\n\n```\nnode {\n  stage('Successful startup check')\
+    \ {\n    docker.image('danielbryantuk/djshopfront')\n    .withRun('-p 8010:8010')\
+    \ {\n      timeout(time: 30, unit: 'SECONDS') {\n        waitUntil {\n       \
+    \   r = sh script: \"\\n            curl http://localhost:8010/health | grep \\\
+    n              'UP'\", returnStatus: true\\n            return (r == 0);\"\n \
+    \       }\n      }\n    }\n  }\n}\n}\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: 'This pipeline command uses the CloudBees docker .image library to run the danielbryant/djshopfront
+    image, sets a timeout for 30 seconds (to allow a max to wait for the Spring Boot
+    application initialization), and waits until the application health endpoint returns
+    UP from a curl.
+
+
+    # The Value of Health Checks
+
+
+    The provisioning of health checks are extremely important when deploying applications
+    into production, as an applications that is in trouble or cannot initialize correctly
+    most likely indicates that it should not be sent traffic (for example, adding
+    the health check verification to a load balancer that is managing traffic). Pausing
+    for an arbitrary time for tests within a build pipeline should also be avoided,
+    as this can introduce nondeterministic results depending on the load of the build
+    server and timing of the build, and accordingly it is best to set a timeout and
+    continually probe the health check endpoint until a good response is received.
+    Many container orchestration frameworks offer health checks out of the box and
+    Docker has introduced native support for a healthcheck command in a Dockerfile
+
+
+    The curl/grep test above can be replaced with any command or execution of any
+    application that returns an exit code to indicate success or failure (e.g., a
+    test Docker container or JUnit-powered test obtained from a Git repo).
+
+
+    Figure 2-11 shows the example pipeline code within the Jenkins configuration page.
+    Save this item and run the associated job via the Build Now option in the left
+    menu.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '![](img/4d47989b22b26f7571903fa9a64cdd6d_36_0.png)
+
+
+    Figure 2-11. Jenkins pipeline build configuration for djshopfront-component-test
+
+
+    Figure 2-12 shows the output from a typical execution of this test.
+
+
+    Running Docker as a Deployment Fabric | 27'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "![](img/4d47989b22b26f7571903fa9a64cdd6d_37_0.png)\n\nFigure 2-12. Jenkins\
+    \ build logs from a successful run of djshopfrontcomponent-test\n\n# # Using Docker\
+    \ Compose for E2E Testing\n\nThe acceptance and performance testing stage of the\
+    \ pipeline, Location 4 in Figure 2-1, can be further modified with the introduction\
+    \ of Docker by using Docker Compose, a tool for defining and running multicontainer\
+    \ Docker applications. Using the same approach above with the Jenkins pipeline\
+    \ job we can write jobs using Docker Compose, as:\n\n```\nnode {\n  stage('build')\
+    \ {\n    git url: 'https://github.com/danielbryant/oreilly-java-shopping.git'\n\
+    \    // construct other build tasks\n  }\n\n  stage('end-to-end tests') {\n  \
+    \  timeout(time: 60, unit: 'SECONDS') {\n    try {\n      sh 'docker-compose up\
+    \ -d'\n    }\n\n    waitUntil { // application is up\n      def r = sh script:\n\
+    \    \n}\n```\n\n28 | Chapter 2: Continuous Delivery of Java Applications with\
+    \ Docker"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "```\ncurl http://localhost:8010/health | grep \"UP\", returnStatus: true\n\
+    return (r == 0);\n```\n\n```\n// conduct main test here\nsh curl http://localhost:8010\
+    \ | grep Docker Java\"\n```\n\n```\nfinally {\n  sh docker-compose stop\n}\n```\n\
+    \n```\nstage ('deploy') {\n  // deploy the containers/application here\n}\n```\n\
+    \nThe resulting job output can be seen in the Figure 2-13.\n\n![](img/4d47989b22b26f7571903fa9a64cdd6d_38_0.png)\n\
+    \nFigure 2-13. Jenkins build logs for a successful run of end-to-end tests\n\n\
+    Navigating back to the dj-end-to-end-builds build page shows the multiple pipeline\
+    \ stages, and whether each stage has succeeded or\n\nRunning Docker as a Deployment\
+    \ Fabric | 29"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: 'not. Figure 2-14 shows an example of this with several builds succeeding.
+
+
+    Adrian Mouat talks more about using Docker Compose in this fashion in his Using
+    Docker book.
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_39_0.png)
+
+
+    # Running Docker in Production
+
+
+    Discussing the running of Docker in production is out of scope in a book of this
+    size, but we strongly recommend researching technologies as Docker Swarm, Kubernetes,
+    and Mesos, as these platforms make for excellent Docker-centric deployment fabrics
+    that can be deployed on top of bare metal, private VMs, or the public cloud.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# # It’s a Brave New (Containerized) World
+
+
+    There is no denying the flexibility afforded by deploying Java applications in
+    Docker containers. However, deploying applications in containers adds several
+    new constraints, and there are also a series of best practices emerging that can
+    affect CD. Skills must be learned and new techniques mastered across architecture,
+    testing, and operations. Let''s look at this over the next three chapters.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# CHAPTER 3
+
+
+    # The Impact of Docker on Java Application Architecture
+
+
+    > “If you can''t build a [well-structured] monolith, what makes you think microservices
+    are the answer?”
+
+
+    —Simon Brown, Coding the Architecture
+
+
+    Continuously delivering Java applications within containers require several long-standing
+    architectural patterns and paradigms be challenged (along with new properties
+    imposed like potential for automation and immutability with new properties provide
+    resource-restriction and transience) means that new architecture and configuration
+    approaches are required. This chapter looks at examples of these changes, such
+    as the Twelve-Factor Application, the decomposition of monolithic applications
+    into smaller API-driven composable components (microservices), and the need to
+    develop mechanical sympathy—an appreciation and respect for the underlying deployment
+    fabric.
+
+
+    # Cloud-Native Twelve-Factor Applications
+
+
+    In early 2012, Platform-as-a-Service (PaaS) pioneer Heroku developed the Twelve-Factor
+    App, a series of rules and guidance for helping developers build cloud-ready PaaS
+    applications that:
+
+
+    +   - Use declarative formats for setup automation, to minimize time and cost
+    for new developers joining the project'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '+   - Have a clean contract with the underlying operating system, offering
+    maximum portability between execution environments
+
+    - Are suitable for deployment on modern cloud platforms, minimizing the need for
+    servers and systems administration
+
+    - Minimize divergence between development and production, enabling continuous
+    deployment for maximum agility
+
+    - Can scale without significant changes to tooling, architecture, or development
+    practices
+
+
+    These guidelines were written before container technology became mainstream, but
+    are all equally (if not more) relevant to Docker-based applications. Let''s looks
+    briefly each of the factors now, and see how they map to continuously deploying
+    Java applications within containers:
+
+
+    +   **1. Codebase:** One codebase tracked in revision control, many deploys
+
+
+    Each Java application (or service) should be tracked in a single, shared code
+    repository, and Docker configuration files, such as Dockerfiles, should be stored
+    alongside the application code.
+
+
+    +   **2. Dependencies:** Explicitly declare and isolate dependencies
+
+
+    Dependencies are commonly managed within Java applications using Maven or Gradle,
+    and OS-level dependencies should be clearly specified in the associated Dockerfile.
+
+
+    +   **3. Config:** Store config in the environment
+
+
+    The Twelve-Factor App guidelines suggest that configuration data should be injected
+    into an application via environment variables, although in practice many Java
+    developers prefer to use configuration files, and there can be security issues
+    with exposing secrets via environment variables. Storing nonsensitive configuration
+    data in a remote service like Spring Cloud Config (backed by Git or Consul) and
+    secrets in a service like HashiCorp''s Vault can be a good compromise. It is definitely
+    not recommended to include secrets in a Dockerfile or Docker image.
+
+
+    +   **4. Backing services:** Treat backing services as attached resources (typically
+    consumed over the network)
+
+
+    Java developers are accustomed to treating data stores and middleware in this
+    fashion, and in-memory substitutes (e.g., HSQQLDB, Apache Qpid, and Stubbed Cassandra)
+    or service virtualization (e.g.,'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'Hoverfly can be used for in-process component testing within the build pipeline.
+
+
+    # 5. Build, release, run: Strictly separate build and run stages
+
+
+    For a compiled language such as Java, this guideline comes as no surprise (and
+    with little choice of implementation!). It is worth mentioning that the flexibility
+    provided by Docker means that separate containers can be used to build, test,
+    and run the application, configured as appropriate. For example, a container can
+    be created for build and test with a full OS, JDK, and diagnostic tools; and a
+    container can be built for running an application in production with only a minimal
+    OS or JRE. However, some may see this as an antipattern, as should only be one
+    “source of truth” artifact that is created, tested, and deployed within the pipeline,
+    and using multiple Docker images can lead to an impedance mismatch and configuration
+    drift between images.
+
+
+    # 6. Processes: Execute the app as one or more stateless processes
+
+
+    Building and running a Java application as a series of microservices can be made
+    easier by using Docker (the concept of microservice is explained later in this
+    chapter).
+
+
+    # 7. Port binding: Export services via port binding
+
+
+    Java developers are used to exposing application services via ports (e.g., running
+    an application on Jetty or Apache Tomcat). Docker compliments this by allowing
+    the declarative specification of exposed ports within an Dockerfile, and Docker
+    Compose also enables the same functionality when orchestrating multiple containers.
+
+
+    # 8. Concurrency: Scale out via the process model
+
+
+    Traditional Java applications typically take the opposite approach to scaling,
+    as the JVM runs as a giant “uberprocess” that is often vertically scaled by adding
+    more heap memory, or horizontally scaled by cloning and load-balancing across
+    multiple running instances. However, the combination of decomposing Java applications
+    into microservices and running these components within Docker containers can enable
+    this approach to scalability. Regardless of the approach taken to implement scalability,
+    this should be tested within the build pipeline.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# 9. Disponability: Maximize robustness with fast startup and graceful shutdown
+
+
+    This can require a mindset shift with developers who are used to creating a traditional
+    long-running Java application, where much of the expense of application configuration
+    and initialization was front-loaded in the JVM/application startup process. Modern,
+    container-ready applications utilize more just-in-time (JIT) configuration, and
+    ensure that best efforts are taken to clean up resource and state during shutdown.
+    The JDK exposes hooks for JRE/application startup and shutdown, and Docker (and
+    the OS) can be instructed to call these, such as issuing SIGTERM (versus SIGKILL)
+    to running processes within a container.
+
+
+    # 10. Dev/prod parity: Keep development, staging, and production as similar as
+    possible
+
+
+    The use of Docker in orchestration with technologies like Docker Swarm, Kubernetes,
+    and Mesos can make this easier in comparison with traditional bare metal deployments
+    where the underlying hardware and OS configuration is significantly different
+    than developer or test machines. As an application artifact moves through the
+    build pipeline, it should be exposed to more and realistic environments (e.g.,
+    unit testing can run in-memory [within a Docker container] on a build box). However,
+    end-to-end testing should be conducted in a production-like environment (e.g.,
+    if you are running Docker Swarm in production, you should be testing on Docker
+    Swarm).
+
+
+    # 11. Logs: Treat logs as ever event streams
+
+
+    Java has had a long and sometimes arduous relationship with logging frameworks,
+    but modern frameworks like Logback and Log4j 2 can be configured to stream standard
+    output (and hence viewed when running in a container by using the docker logs
+    command) or streamed to disk (which can be mounted from the host running container).
+
+
+    # 12. Admin processes: Run admin/management tasks as one-off processes
+
+
+    The ability to create simple Java applications that can run within a Docker container
+    contains all administrative tasks to be run as one-off processes. However, these
+    processes must be tested within (or as part of) the build pipeline.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'This section of the chapter has attempted to summarize the benefits of using
+    the principles from the Twelve-Factor App. For developers looking to develop a
+    deeper understanding, Kevin Hoffman''s Beyond the Twelve-Factor App (O''Reilly)
+    is a recommended read.
+
+
+    # # The Move to Microservices
+
+
+    One of the early use cases for Docker containers was the process isolation—the
+    fact that multiple application instances could be deployed onto the same hardware
+    without the need for a virtual machine hypervisor. Arguments emerged that suggested
+    running only a single process per container was best practice, and that runtime
+    limits should be minimal and the artifacts deployed into them should be monolithic
+    applications. This proved a difficult (if not impossible) set of requirements
+    for existing Java applications that were already running in production. These
+    arguments, in combination with other trends in the software development industry,
+    led to the increase in popularity of a new architectural style we now refer to
+    microservices.
+
+
+    This book covers the concept of microservices in depth; instead, an introduction
+    to the topic can be found in Christian Post''s Microservices for Java Developers
+    (O''Reilly), and a more thorough treatment can be found in Sam Newman''s Building
+    Microservices (O''Reilly). However, Amundsen et al''s Microservice Architecture
+    (O''Reilly). it is worth mentioning that many developers are embracing this architectural
+    style in combination with adopting containerization technologies like Docker.
+
+
+    Don''t Conflate Microservices with Container Technology
+
+    It is tempting to conflate microservices with container technology (or Docker
+    specifically), but the microservice pattern is an architectural style, and containers
+    are a packaging/deployment technology. Although microservices and Docker are complementary,
+    implementing one does not necessarily require the other.
+
+
+    A core concept of microservices revolves around creating services that follow
+    the single-responsibility principle and have one reason to'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'change. Building Java-based microservices impacts the implementation of CD
+    in several ways:
+
+
+    +   - Multiple build pipelines (or branches within a single pipeline) must be
+    created and managed
+
+    - Deployment of multiple services to an environment now have to be orchestrated,
+    managed, and tracked
+
+    - Component testing may now have to mock, stub, or virtualize services
+
+    - End-to-end testing must now orchestrate multiple services (and associated state)
+    before and after executing tests
+
+    - Process must be implemented to manage service version control (e.g., the enforcement
+    of only allowing the deployment of compatible interdependent services)
+
+    - Monitoring, metrics, and application performance management (APM) tool must
+    be adapted to handle multiple services
+
+
+    Decomposing an existing monolithic application, or creating a new application
+    that provides functionality through a composite of microservices is a non-trivial
+    task. Techniques such as mapping, from domain-driven design, can help developers
+    (working alongside stakeholders and the QA team) understand how application/business
+    functionality should be composed as a series of contexts or focused services.
+    It is also critical to understand how to design service application programming
+    interfaces (APIs).
+
+
+    # API-Driven Applications
+
+
+    Once service boundaries have been determined, the development team (and stakeholders)
+    can define service functionality and the associated interfaces—the application
+    programming interfaces (APIs). Mike Amundsen''s O''Reilly video series "Designing
+    APIs for the Web" is a good place if you want to learn more about API design.
+    Many teams attempt to define a service API upfront, but in reality the design
+    process will be iterative. A useful technique to enable this iterative approach
+    is the behavior-driven development (BDD) technique named "The Three Amigos" where
+    any requirement should be defined with at least one developer, one QA specialist,
+    and one stakeholder present.
+
+
+    The typical outputs from this stage of the service design process include: a series
+    of BDD-style acceptance tests that asserts compo'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'nent (single microservice level requirements, such as Cucumber Gherkin syntax
+    acceptance test scripts; and an API specification, such as a Swagger RAML file,
+    which the test scripts will operate against. It is also recommended that each
+    service has basic (happy path) performance test scripts created (for example,
+    using Gatling or JMeter) and also security tests (for example, using bdd-security).
+    These service-level components can be run continuously within the build pipeline,
+    and will validate local microservice functional and nonfunctional requirements.
+    Additional internal resource API endpoints can be added to test, which can be
+    used to manipulate internal state for test purposes or expose metrics.
+
+
+    The benefits to the CD process of exposing application or service functionality
+    via an API include:
+
+
+    +   - Easier automation of test setup and teardown via internal resource endpoints
+    (and this limits removes the need to manipulate state via file system or data
+    access).
+
+
+    +   - Easier automation of specification tests (e.g., REST-assured). Triggering
+    functionality through a fragile UI is no longer required for every test.
+
+
+    +   - API contracts can be validated automatically, potentially using techniques
+    like consumer contracts and consumer-driven contracts (e.g., Pact-JVM).
+
+
+    +   - Dependent services that expose functionality through an API can be efficiently
+    mocked (e.g., WireMock), stubbed (e.g., stubby4j), or virtualized (e.g., Hoverfly).
+
+
+    +   - Easier access to metrics and monitoring data via internal resource endpoints
+    (e.g., Codahale Metrics or Spring Boot Actuator).
+
+
+    # # Containers and Mechanical Sympathy
+
+
+    Martin Thompson and Dave Farley have talked about the concept of mechanical sympathy
+    in software development for several years. They were inspired by the Formula One
+    racing driver Jackie Stewart''s famous quote "You don''t have to be a racing driver,
+    but you do have to have mechanical sympathy", meaning that understanding how a
+    car works will make you a better driver; and it has been argued that this is analogous
+    to programmers understanding how computer hardware works. Not necessarily a'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'degree in computer science or to be a hardware engineer, you do need to understand
+    how hardware works and take that into consideration when you design software.
+    The days of architects sitting in ivory towers and drawing UML diagrams is over.
+    Architects and developers must continue to develop practical and operational experience
+    from working with the new technologies.
+
+
+    Using container technologies like Docker can fundamentally change the way your
+    software interacts with the hardware it is running on, and it is beneficial to
+    be aware of these changes:
+
+
+    +   - Container technology can limit access to system resources, due to developer/operator
+    specification, or to resource contention.
+
+    - In particular, watch out for the restriction of memory available to a JVM, and
+    remember that Java application memory requirements are not simply equal to heap
+    size. In reality, Java applications'' memory requirements include the sum of Heap
+    size, PermGen/Metaspace, native memory thread requirements, and JVM overhead.
+
+    - Another source of potential issues is that containers typically share a single
+    source of entropy (/dev/random) on the host machine, and this can be quickly exhausted.
+    This manifests with Java applications unexpectedly stalling/blocking during cryptographic
+    operations such as token generation on the initialization of security functionality.
+    It is often beneficial to use the JVM option -Djava.security.egd=/dev/urandom,
+    but be aware that this can have security implications.
+
+    - Container technology (incidentally) expose incorrect resource availability to
+    the JVM (e.g., the number of processor cores typically exposed to a JVM application
+    is based on the underlying host properties, not the restrictions applied to a
+    running container)
+
+    - When running deployment fabric, it is often the case that additional layers
+    of abstraction are applied over the operating system (e.g., orchestration framework,
+    container technology itself, and an additional OS).
+
+    - Container orchestration and scheduling frameworks often stop, start, and move
+    containers (and applications) much more often compared to traditional deployment
+    platforms.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '+   - The hardware fabric upon which containerized applications are run is
+    typically more ephemeral in nature (e.g., cloud computing).
+
+
+    +   - Containerized applications can expose new security attack vectors that must
+    be understood and mitigated.
+
+
+    These changes to the properties of the deployment fabric should not be a surprise
+    to developers, as the use of many new technologies introduce some form of change
+    (e.g., upgrading the JVM version on an application container, and running Java
+    applications within an application container, and running Java applications in
+    the cloud). The vast majority of these potential issues can be mitigated by augmenting
+    the testing processes within the CD build pipeline.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# CHAPTER 4
+
+
+    # The Importance of Continuous Testing
+
+
+    > "If you don''t like testing your product, most likely your customers won''t
+    like testing it either."
+
+    —Anonymous)
+
+
+    Testing is a core part of any continuous delivery build pipeline, and the introduction
+    of Docker into the system technology stack has no impact in some areas of testing
+    and a great impact in others. This chapter attempts to highlight these two cases,
+    and makes recommendations for modifying an existing Java build pipeline to support
+    the testing of containerized Java applications.
+
+
+    # Functional Testing with Containers
+
+
+    The good news is that running Java applications within containers does not fundamentally
+    affect functional testing. The bad news is that many systems being developed do
+    not have an adequate level of functional testing regardless of the deployment
+    technology.
+
+
+    The approach to unit and integration testing with Java applications that will
+    ultimately be executed within containers remains unchanged. However, any component
+    or system-level end-to-end tests should be run against applications running within
+    containers in an environment as close to production as possible. In reality, placing
+    an application inside a container can often make it easier to'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '“spin up” and test, and the major area of concern is avoiding port and data
+    clashes when testing concurrently.
+
+
+    Although it is not generally recommended to run production data stores from within
+    containers, RDBMS and other middleware within containers during the build pipeline
+    test phase can allow easier scenario creation by the loading of “pre-canned” data
+    within containers, “data containers,” or by cloning and specifying data directories
+    to be mounted into a container.
+
+
+    Finally, regardless of whether or not an application is being deployed within
+    a container, it is strongly recommended to use executable specifications and automated
+    acceptance tools to define, capture, and run functional tests. Favorites in the
+    Java development ecosystem include Serenity BDD, Cucumber, JBehave, REST-assured,
+    Selenium.
+
+
+    # Nonfunctional Testing: Performance
+
+
+    Running Java applications within containers makes it much easier to configure
+    hardware and operating system resources (for example, using cgroups). Because
+    of this, it is imperative during the later stages of the build pipeline, performing
+    nonfunctional testing of the runtime environment is as production-like as possible.
+    This includes executing the container with production-like options (e.g., with
+    Docker CPU cores configured via the --cpuset command-line option, CPU shares via
+    -c, and memory limits via -m), running the container within the same orchestration
+    framework used in production, and executing the orchestration/container runtime
+    on comparable hardware infrastructure (perhaps scaled down).
+
+
+    Performance and load testing can be implemented by Jenkins using a tool like Docker
+    Compose to orchestrate deployment of an application (or a series of services)
+    and tools like Gatler or JMeter to run the tests. In order to isolate individual
+    services under test, the technique of service virtualization can be used to control
+    the performance characteristics of interdependent services. More information on
+    this technique in the context of testing microservices can be found in my “Proposed
+    Recipe for Designing, Building, and Testing Microservices” blog post.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# # Nonfunctional Testing: Security Across the System
+
+
+    Security should be of paramount concern to any developer, regardless of whether
+    deployment is occurring in containers. However, executing Java applications within
+    a containerized runtime can add new security attack vectors, and these must be
+    mitigated.
+
+
+    # ## Host-Level Security
+
+
+    Any host running containers must be hardened at the operating system level. This
+    includes:
+
+
+    +   * Ensuring the latest operating system version available is being used, and
+    the OS is fully patched (potentially with kernel hardening options like grseurity)
+
+    * Ensuring the application attack surface exposed in minimized (e.g., correctly
+    exposing ports, running applications behind a firewall with DMZ, and using certificate-based
+    login)
+
+    * Using application-specific SELinux or AppArmor
+
+    * Using an application-specific seccomp whitelist possible
+
+    * Enabling user namespaces
+
+
+    The Center for Internet Security (CIS) regularly publishes guidance for running
+    containers in production. The CIS Docker 1.12.0-benchmark can be found on the
+    CIS website. The team has also created the Docker Bench for Security, which attempts
+    to automate many of the checks and assertions that the CIS documentation recommends.
+    The Docker Bench for Security tool can be downloaded and executed as a container
+    on the target host, and a comprehensive report about the current state of the
+    machine''s security will be generated. Ideally, execution of the Docker Bench
+    Security should be conducted on the initialization of any host that will be running
+    containers, and also periodically against all servers to check for configuration
+    drift or new issues. This process can be automated as part of an infrastructure
+    build pipeline.
+
+
+    # ## Container-Level Security
+
+
+    Java developers may not be used to dealing with OS-level security threats, but
+    will be exposed to this when packaging applications'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'within containers. A Docker image running a Java application will typically
+    include a Linux-based operating system such as Alpine, Ubuntu, or Debian Jessie,
+    and may also have other tool installed via a package manager. Ensuring the OS
+    and all associated software is up-to-date and configured correctly is very challenging
+    without automation. Frankly, tooling like CoreOS''s open source Clair project
+    can be used to statically analyze Docker images for vulnerabilities. This tool
+    can be integrated within a build pipeline, or if Docker images are being pushed
+    to a centralized image repository like Docker Hub or CoreOS Quay, then this will
+    most likely be enabled by default (but do take care to ensure it is, and also
+    actionable results—such as vulnerability detection—are fed back into the build
+    pipeline).
+
+
+    # Application-Level Security
+
+
+    Any build pipeline should include automated security testing in addition to manual
+    vulnerability analysis and penetration testing. Tooling such as OWASP ZAP and
+    Continuum bdd-security can also be included in a standard build pipeline, and
+    run at the (micro)service/application and system-level testing phases.
+
+
+    # Additional Reading
+
+
+    Further information on security aspects of running containers can be found in
+    Adrian Mouat''s Using Docker (O''Reilly) or Aaron Grattafori''s white paper “Understanding
+    and Hardening Linux Containers.”'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# CHAPTER 5
+
+
+    # Operations in the World of Containers
+
+
+    > “You were not in control. You had no visibility: maybe there was a car in front
+    of you, maybe not.”
+
+
+    —Alain Prost, Formula Driver
+
+
+    With continuous delivery, the build pipeline provides confidence that new or modified
+    application features will work correctly, both at the functional and nonfunctional
+    level. However, this is only part of the story for continuously delivering software
+    to users—as soon as an application is released to production it must be monitored
+    for signs of malfunction, performance issues, and security vulnerabilities.
+
+
+    # Host-Level Monitoring
+
+
+    Starting at the host level, it is essential that any machine running containers
+    (and applications) provide hardware- and OS-level metrics. All cloud vendors provide
+    an API for obtaining metrics such as CPU usage, disk and network I/O performance,
+    and such an API is relatively easy to create and expose when running on bare metal
+    (for example, using sar/sysstat). All Linux-based OSes provide excellent metrics,
+    as number of processes running, run queue averages, and swap space usage.
+
+
+    Regardless of where metrics originate, they should be collected and processed
+    centrally, such as by using a tool like Prometheus, the'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'InfluxData TICK stack, a SaaS-based offering like Datadog. Centralization not
+    only provides a single place for developers and operators to manually monitor
+    metrics, but also enables core alerts and automated warnings to be defined. Any
+    unexpected or critical issues that require operator intervention should trigger
+    a paging system like PagerDuty, and the on-call developer or operator must act
+    the alert.
+
+
+    All host and operating system-level logs should also be collected centrally, which
+    is typically done by streaming logs to a tool like the Elasticsearch-Logstash-Kibana
+    (ELK) stack (shown in Figure 5) or a commercial equivalent.
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_57_0.png)
+
+
+    Figure 5-1. Kibana UI dashboard, part of the ELK stack
+
+
+    Operators may also consider running a host intrusion detection system (HIDS) if
+    security or governance is of paramount concern (over and above hardening systems),
+    and open source offers such as OSSEC or Bro Network Security Monitor.
+
+
+    # Container-Level Metrics
+
+
+    Monitoring at the container level ranges from as simple as the output to docker
+    stats or using the more detailed overview provided by cAdvisor, to the full power
+    of Sysdig.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'The built-in Docker stats command returns a live data stream of basic metrics
+    for running containers, as shown in Figure 5-2.
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_58_0.png)
+
+
+    **Figure 5-2.** Command line output from docker stats command
+
+
+    More detailed information about a container''s resource usage can also be found
+    enabling and using the Docker Remote API, which is exposed as a REST-like API.
+
+
+    cAdvisor (Container Advisor) is Google''s container monitoring daemon that collects,
+    aggregates, and exports information about running containers (see Figure 5-3).
+    Specifically, for each container it keeps resource isolation parameters, historical
+    resource usage, histograms of complete historical resource usage, and network
+    statistics. This data is exported by container and machine-wide.
+
+
+    Sysdig is a container-friendly, open source, system-level exploration tool that
+    can capture system state and activity from a running Linux instance, then save,
+    filter, and analyze this data. Sysdig is scriptable in Lua and includes a command-line
+    interface and a powerful interactive UI, csydig, that runs in a terminal.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '![](img/4d47989b22b26f7571903fa9a64cdd6d_59_0.png)
+
+
+    Figure 5-3. Web UI of cAdvisor showing local container metrics
+
+
+    # # Application-Level Metrics and Health Checks
+
+
+    Developers should expose important application metrics via API endpoints, like
+    those provided by CodaHale''s Metrics library and Spring Boot''s Actuator. Metrics
+    are typically exposed as gauges, counters, histograms, and timers, and relay vital
+    information to both operators and business stakeholders. Many Java-based metric
+    libraries also support the creation of health-check endpoints that can be queried
+    by monitoring systems and load balancers in order to determine if the application
+    instance is healthy and ready to accept traffic (Figure 5-4).'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Sysdig: Processes
+
+
+    | PID | %CPU | %MEM | S | VSIZE | RSS | USER | COMMAND |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 2394 | 0.0 | 0.0 | S | 1988K | 0 | root | /usr/bin/python3 server-monitor.py
+    |
+
+    | 2405 | 0.0 | 0.0 | S | 2086K | 4K | root | /usr/bin/core -s set -auth /var/lightdm/root/
+    -A |
+
+    | 2618 | 0.0 | 0.0 | S | 3116K | 4K | root | dbus-daemon |
+
+    | 2711 | 0.0 | 0.0 | S | 2116K | 4K | root | postgres: worker process |
+
+    | 2815 | 0.0 | 0.0 | S | 2136K | 0 | root | postgres: worker process |
+
+    | 10265 | 0.0 | 0.0 | S | 2176K | 4K | root | /bin/bash |
+
+    | 10501 | 0.0 | 0.0 | S | 2186K | 4K | root | /usr/bin/sysdig-agent --linux-bluetooth-daemon
+    |
+
+    | 10822 | 0.0 | 0.0 | S | 2206K | 4K | root | /usr/bin/sysdig-agent --linux-kernel-monitor
+    |
+
+    | 11034 | 0.0 | 0.0 | S | 2236K | 4K | root | /usr/lib/NetworkManager/NetworkManager-dhcp-client
+    |
+
+    | 11254 | 0.0 | 0.0 | S | 2256K | 4K | root | /var/lib/containerd/run/containerd/task-shim
+    |
+
+    | 11548 | 0.0 | 0.0 | S | 2286K | 4K | root | /usr/bin/dockerd |
+
+    | 11710 | 0.0 | 0.0 | S | 2306K | 4K | root | /usr/bin/sysdig-agent --network-debug
+    |
+
+    | 11810 | 0.0 | 0.0 | S | 2326K | 4K | root | /usr/bin/sysdig-agent |
+
+    | 12014 | 0.0 | 0.0 | S | 2356K | 4K | root | /usr/bin/sysdig-agent --network-debug
+    |
+
+    | 12233 | 0.0 | 0.0 | S | 2386K | 780 | root | /var/lib/docker/overlay2/group/containerd2
+    |
+
+    | 12455 | 0.0 | 0.0 | S | 2406K | 4K | root | /usr/bin/dockermanager |
+
+    | 12610 | 0.0 | 0.0 | S | 2426K | 4K | root | /usr/bin/sysdig-agent --network-debug
+    |
+
+    | 12810 | 0.0 | 0.0 | S | 2456K | 4K | root | /usr/sbin/apache2 |
+
+    | 13013 | 0.0 | 0.0 | S | 2476K | 4K | root | /usr/bin/sysdig-agent --network-debug
+    |
+
+    | 13203 | 0.0 | 0.0 | S | 2496K | 4K | root | /usr/sbin/nginx |
+
+    | 13403 | 0.0 | 0.0 | S | 2516K | 4K | root | /usr/bin/sysdig-agent --network-debug
+    |
+
+    | 13602 | 0.0 | 0.0 | S | 2536K | 4K | root | /usr/bin/sysdig-agent |
+
+    | 13801 | 0.0 | 0.0 | S | 2556K | 4K | root | /usr/bin/docker-engine-shim |
+
+    | 14001 | 0.0 | 0.0 | S | 2576K | 4K | root | /usr/bin/sysdig-agent --network-debug
+    --use-group-session |
+
+    | 14201 | 0.0 | 0.0 | S | 2596K | 4K | root | /usr/bin/sysdig-agent |
+
+
+    Figure 4- Sysdig''s interactive UI running at the command line
+
+
+    Application performance management (APM) is also a useful tool for developers
+    and operators to understand and debug a system. Historically, the commercial solutions
+    have much more functionality in comparison with open source tooling, Naver''s
+    Point is now offering much of the expected core functionality (see **Figure 5**).
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_60_0.png)
+
+
+    Figure 5-5. Pinpoint web UI dashboard
+
+
+    As many Java developers who are embracing container technology like Docker are
+    also looking to develop microservice-based applications, distributed tracing solutions
+    like **OpenZipkin''s Zipkin** are very
+
+
+    Application-Level Metrics and Health Checks | 51'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'valuable when exploring the request/response and data flows through a distributed
+    system (see Figure 5-6).
+
+
+    ![](img/4d47989b22b26f7571903fa9a64cdd6d_61_0.png)
+
+
+    Figure 5-6. OpenZipkin web UI'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# CHAPTER 6
+
+
+    # Conclusion and Next Steps
+
+
+    In a book of this size, it would be impossible to cover every detail about continuously
+    delivering Java applications in Docker. Instead, we have attempted to highlight
+    core areas for consideration, and also provide several practical examples for
+    getting started. The value of implementing continuous delivery cannot be underestimated,
+    and the increase in speed of feedback combined with the ability to reliably and
+    repeatedly guarantee quality is a true game changer. The flexibility provided
+    by packaging Java applications within Docker is also not to be be underestimated,
+    and what might at first glance appear to be a strange marriage between a 20-year-old
+    programming language and an emerging packaging and runtime format can add a lot
+    of flexibility to building, testing, and deploying applications.
+
+
+    The true benefits of continuously delivering Java applications within Docker rarely
+    starts to emerge when these approaches and technologies are combined with a holistic
+    approach to agility—embracing agile and lean practices at the business level,
+    designing evolutionary architectures with patterns like microservices, developing
+    and testing software using techniques from extreme programming (XP), deploying
+    software to programmatically defined agile infrastructure such as cloud and modern
+    cluster managers, and also supporting the growth of a DevOps culture and shared
+    responsibility.
+
+
+    There is much to learn, but we hope this guide serves you as well as an introduction!'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# About the Author
+
+
+    Daniel Bryant is chief scientist at OpenCredo and CTO at Specto-Labs. Acting as
+    a technical leader and aspiring to be the archetypal “generalizing specialist,”
+    his current work includes enabling agility within organizations by introducing
+    better requirement gathering, focusing on the relevance of architecture within
+    agile development, implementing high-quality testing strategies, and facilitating
+    continuous integration/delivery.
+
+
+    Daniel''s current technical expertise focuses on DevOps tooling, cloud/container
+    platforms, and microservice implementations. He is also a leader within the London
+    Java Community (LJC), contributes to several open source projects, writes for
+    well-known technical websites such as O''Reilly, InfoQ, and Voxed, and regularly
+    presents at international conferences such as QCon, JavaOne, and Devoxx.'
+  merge: -1
+  pgno: 63
