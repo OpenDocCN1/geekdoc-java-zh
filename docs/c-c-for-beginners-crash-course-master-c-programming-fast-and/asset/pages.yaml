@@ -1,0 +1,3318 @@
+- img_proc: true
+  md: '# # C#nFOR BEGINNERS
+
+    CRASH COURSE
+
+
+    Master C# Programming
+
+    Fast and Easy Today
+
+
+    > 50+ CODE EXAMPLES
+
+
+    RAJ ALI
+
+
+    MADE BY PROGRAMMERS
+
+    FOR PROGRAMMERS'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # C#
+
+    FOR BEGINNERS
+
+    CRASH COURSE
+
+
+    Master C# Programming
+
+    Fast and Easy Today
+
+
+    By
+
+
+    RAJ ALI'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '© Copyright 2014 - All rights reserved.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    either electronic means or in printed format. Recording of this publication is
+    strictly prohibited and any storage of this document is not allowed unless with
+    written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+    Respective authors own all copyrights not held by the publisher.
+
+
+    # Legal Notice:
+
+
+    This book is copyright protected. This is only for personal use. You cannot amend,
+    distribute, sell, use, quote or paraphrase any part or the content of this book
+    without the consent of the author or copyright owner. Legal action will be pursued
+    if this is breached.
+
+
+    # Disclaimer Notice:
+
+
+    Please note the information contained within this document is for educational
+    and entertainment purposes only. Every attempt has been made to provide accurate,
+    up to date and reliable complete information. No warranties of any kind are expressed
+    or implied. Readers acknowledge that the author is not engaging in the rendering
+    of legal, financial, medical or professional advice.
+
+
+    By reading this document, the reader agrees that under no circumstances are we
+    responsible for any losses, direct or indirect, which are incurred as a result
+    of the use of information contained within this document, including, but not limited
+    to, —errors, omissions, or inaccuracies.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "# # Table of Contents\n\n+   Chapter 1 Introduction to C#n* 1.1 Overview of\
+    \ C#\n* 1.2 Programming features of C#\n* 1.3 C# Environment\n  * Components of\
+    \ .NET framework\n\n+   Chapter 2 Program Structure in C#n* 2.1 Introduction to\
+    \ C# Program structure\n  * Namespace declaration\n    * Class\n    * Class Methods\n\
+    \    * Comments\n* 2.2 User Interface elements\n  * Start Page\n  * Standard Toolbar\n\
+    \  * Solution Explorer\n  * Output window\n  * Error List\n  * Class View Window\n\
+    \  * Code Editor\n\n+   2.3 Compiling and executing C# program\n\n+   Chapter\
+    \ 3 Syntax, Data Types, and conversionn* 3.1 Different keywords in C#\n* 1) Keywords\
+    \ for class, method, field property\n* 2) Keywords for type conversions\n* 3)\
+    \ Keywords useful for program flow control\n* 4) Keywords used for built in types\
+    \ and enumerations\n* 5) Keywords used for exception handling\n* 6) Keywords used\
+    \ as literals, method passing parameters\n* 7) Keywords useful in function pointers,\
+    \ object allocation, unmanaged code\n* 3.2 Data Types in C#"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# 3.3 Type conversion in C#
+
+
+    Implicit type conversion
+
+
+    Explicit type conversion
+
+
+    # Chapter 4 Variables and Constants
+
+
+    # 4.1 Exploring variables in C#
+
+
+    # 4.2 Constants and literals in C#
+
+
+    # Chapter 5 Operators in C#
+
+
+    # 5.1 Introduction to operators
+
+
+    # 5.2 Arithmetic operators
+
+
+    # 5.3 Relational operators
+
+
+    # 5.4 Logical operators
+
+
+    # 5.5 Bitwise operators
+
+
+    # 5.6 Assignment operators
+
+
+    # 5.7 Miscellaneous operators
+
+
+    # Chapter 6 C# Decision making statements
+
+
+    # 6.1 If Statement
+
+
+    # 6.2 If else statement
+
+
+    # 6.3 Nested if statement
+
+
+    # 6.4 Switch statement
+
+
+    # 6.5 Nested switch statement
+
+
+    # Chapter 7 Loops in C#
+
+
+    # 7.1 While loop
+
+
+    # 7.2 For loop
+
+
+    # 7.3 Do while loop
+
+
+    # 7.4 Break statement
+
+
+    # 7.5 Continue statement
+
+
+    # Chapter 8 Classes and Methods in C#
+
+
+    # 8.1 Class declaration
+
+
+    C# constructors
+
+
+    C# destructors
+
+
+    # 8.2 Defining methods
+
+
+    # 8.3 Calling methods
+
+
+    # 8.5 Recursive method call
+
+
+    # 8.4 Passing parameters to method'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Chapter 9 Arrays in C#
+
+
+    +   9.1 Introduction to arrays
+
+
+    +   9.2 Arrays declaration
+
+
+    +   9.3 Initializing and adding values
+
+
+    +   9.4 Accessing array elements
+
+
+    +   9.5 Foreach loop
+
+
+    +   9.6 Different C# arrays
+
+
+    # Chapter 10 Strings in C#
+
+
+    +   10.1 Creation of string
+
+
+    +   10.2 Properties and methods of string class
+
+
+    +   10.3 Examples demonstrating the string functionality
+
+
+    # Chapter 11 Encapsulation and Polymorphism
+
+
+    +   11.1 Introduction to encapsulation
+
+
+    +   11.2 Access specifier in C#
+
+
+    +   11.3 Polymorphism
+
+
+    +   11.4 Static Polymorphism
+
+
+    +   11.5 Dynamic Polymorphism
+
+
+    # Chapter 12 Inheritance and Interfaces
+
+
+    +   12.1 Introduction to Inheritance
+
+
+    +   12.2 Base and derived classes
+
+
+    +   12.3 Base class initialization
+
+
+    +   12.4 Interfaces in C#
+
+
+    +   12.5 Multiple inheritance in C#
+
+
+    # Chapter 13 Operator overloading and exception handling
+
+
+    +   13.1 Introduction to Operator Overloading
+
+
+    +   13.2 Different operators in overloading
+
+
+    +   13.3 Introduction to exception handling
+
+
+    +   13.4 Exception classes in C#
+
+
+    +   13.5 Exception handling
+
+
+    +   13.6 User defined exceptions
+
+
+    # Chapter 14 Multithreading
+
+
+    +   14.1 Thread in C#
+
+
+    +   14.2 Life cycle of a thread
+
+
+    +   14.3 Main thread'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '+   14.4 Properties and methods of the Thread class
+
+
+    +   14.5 Creating and managing threads
+
+
+    +   14.6 Destroying threads
+
+
+    +   Reference links on C#
+
+
+    +   Conclusion'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# Chapter 1 Introduction to C#\n\n# 1.1 Overview of C#\n\nC# is an object oriented,\
+    \ type safe high level programming language. It has been\ndeveloped by Microsoft\
+    \ during the development of the .NET framework. C# was\ndeveloped for the Common\
+    \ Language Infrastructure (CLI), this infrastructure was\ncreated to allow programs\
+    \ from various other high level languages to work together\n the need to rewrite\
+    \ those programs entirely. The CLI contains a various\nexecutable programs referred\
+    \ simply as executables and are housed and ran in a system\ncalled the runtime\
+    \ environment.\n\nAll the programs created in .Net framework execute in an environment\
+    \ that handles the\nruntime requirements. The Common Language Runtime (CLR) provides\
+    \ the virtual\nmachine, which helps the programmers not to consider the CPU specifications.\
+    \ The\nclass library and CLR make the .NET framework."
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# 1.2 Programming features of C#
+
+
+    +   * It is simple, advanced, object oriented language
+
+    * It contains data types and classes common for all the .NET languages
+
+    * The Common Language Runtime (CLR) is similar to the Java Virtual Machine (JVM)
+
+    * C# provides support for encapsulation, inheritance, polymorphism, interfaces
+
+    * Visual Studio provides support to VC++, Visual Basic, Vscript, and Jcript
+
+    * .NET consists of class library and common execution engine
+
+    * Garbage collection, automatic memory management, interoperability are inbuilt
+    in C#n* User can develop console, windows and web applications using C#'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 1.3 C# Environment
+
+
+    C# is a part of .NET framework. It is used for creating .NET applications. Using
+    .NET framework, user can design, deploy and develop the applications. Robust applications
+    can be easily built using the simple programming model.
+
+
+    # Components of .NET framework
+
+
+    The .NET framework diagram containing several components is as shown:
+
+
+    | Windows Forms | Console Application | Web and Windows Services |
+
+    |---|---|---||
+
+    | Common Language Specification | | Visual Studio .NET |
+
+    | .NET framework Base class library | | |
+
+    | Common Language Runtime | | |
+
+
+    The .NET framework consists of the following components:
+
+
+    +   * Common Language Runtime
+
+    * .NET framework base class library
+
+    * Common Language Specification
+
+    * User and Program interfaces
+
+
+    # Common Language Runtime (CLR)
+
+
+    The core component of the .NET framework is the CLR. It is an environment where
+    the programs are executed. The code in CLR is translated into Intermediate Language
+    (IL). This IL code is then used across different platforms.
+
+
+    The IL code is converted into machine language by the Just in Time (JIT) compiler.
+    The compiler checks for the type safety. This ensures objects are accessed in
+    a compatible way.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# .NET framework class library
+
+
+    The class library works with any .NET languages like VB.NET, VC# and VC++.NET.
+    The library provides classes used in the code for performing different programming
+    tasks like data collection, string management, file access and connecting to the
+    database.
+
+
+    # Common Language Specification
+
+
+    CLR contains set of common rules used by all the programming languages in .NET
+    framework. They are known Common Language Specification (CLS). CLS helps an object
+    to interact with objects or applications of other languages.
+
+
+    # User and Program Interfaces
+
+
+    .NET framework provides three different types of user interfaces:-
+
+
+    +   - Windows Forms: They are windows based applications.
+
+    - Web Forms: They are used for creating web based applications.
+
+    - Console Applications: They are useful for creating console based applications
+    which are executed by the command line.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# # Chapter 2 Program Structure in C#\n\n# ## 2.1 Introduction to C# Program\
+    \ structure\n\nC# Program consists of various parts. We shall explore all the\
+    \ components needed for a C# program.\n\nConsider the code demonstrating the C#\
+    \ program.\n\n```\nExample 1:\nusing System;\nnamespace class WelcomeUser\n{\n\
+    \    static void Main(string[] args)\n    {\n        Console.WriteLine(\"Welcome\
+    \ User\");\n        Console.Read();\n    }\n}\n```\n\nThe code consists of several\
+    \ parts. They are as mentioned below:\n\n# ### Namespace declaration\n\nThe namespace\
+    \ consists of collection of classes used in programming. The using keyword is\
+    \ used for adding the System namespace. The System class consists of classes and\
+    \ methods useful for the user.\n\nIn the above code, namespace welcome is added.\n\
+    \n# ### Class\n\nThe class consists of data and method definitions used by the\
+    \ program. The class can have one or many methods. Every class must have a Main\
+    \ method, which is the first method run in the code. In the above code, WelcomeUser\
+    \ class is declared."
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# Class Methods\n\nMethods in a class specify the behavior of the statement.\
+    \ In the above code, WriteLine method is used for writing the value in the console.\
+    \ It is defined in the Console class inside the Systemnamespace.\n\nThe Read method\
+    \ of the Console class is used for waiting till the user hits a key. Thus prevents\
+    \ the screen from closing too quickly.\n\n# Comments\n\nComments are text useful\
+    \ for providing additional information about the code. The compiler ignores any\
+    \ code that is placed inside a comment block. There are two types of comments;\
+    \ one comment is used for single line entries and the other for multi line entries.\n\
+    \nFor example:\n\n| Example 2: |\n```csharp\nusing System;\nnamespace comment\n\
+    /*It is a simple code\nUsed for writing value to the console\n*/\nclass Demo\n\
+    {\n    static void Main()\n    {\n        //It is added inside Main method\n \
+    \       Console.WriteLine(\"Demonstration of code\");\n    }\n```|"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# 2.2 User Interface elements
+
+
+    There are various user interface elements present in the Visual Studio application
+    that can be used in a project. We shall explore the user interface elements in
+    detail.
+
+
+    # Start Page
+
+
+    The Start Page is the initial page that gets displayed when the user opens the
+    Microsoft Visual Studio application.
+
+
+    ![](img/c133ae999967b1fbceab3bccc1cb1d4f_13_0.png)
+
+
+    The Visual Studio IDE provides the start page as the default home page. Through
+    the start page user can specify the preferences, developer communication using
+    the .NET platform, exploring new .NET features.
+
+
+    In Visual Studio .NET, the Projects tab displays the recent projects and the latest
+    modification date. User can use any of the existing projects from the list. Click
+    on the New Project button when you need to work for a new project. Click on the
+    Open project button when user wants to open the existing project.
+
+
+    # Standard Toolbar
+
+
+    The standard toolbar is used to provide the shortcut menu commands. There are
+    several buttons on the toolbar that help user to perform tasks related to opening,
+    closing, saving, editing, pasting on the file.
+
+
+    There are functions related to the tools present in the standard toolbar. They
+    are as listed below.
+
+
+    +   - New Project: A new project can be created in the application. The button
+    is used.
+
+    - Add New Item: A new item is added to the project. The button is used'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '+   * Save All the programs created in a particular solution are saved. The
+    button is used
+
+
+    +   * Save All: It saves all the unsaved items in an application. The button is
+    used
+
+
+    +   * Cut: The selected objects are placed on the clipboard using this option.
+    The icon is used
+
+
+    +   * Copy: The copy of the selected item is kept on the clipboard. The icon is
+    used
+
+
+    +   * Paste: It is used to paste the contents in the document. The icon is used
+
+
+    +   * Debugging: The compilation and execution of the project is done. The icon
+    is used
+
+
+    # Solution Explorer
+
+
+    In the solution explorer window, classes, project and solution name used in the
+    project gets displayed. Double click the file in the solution explorer for opening
+    the file.
+
+
+    The following figure shows the solution explorer window in application.
+
+
+    ![](img/c133ae999967b1fbceab3bccc1cb1d4f_14_0.png)
+
+
+    # Output window
+
+
+    The messages for the status of the features of Visual Studio .NET IDE are provided
+    by the output window. The current status of the application is displayed when
+    the user compiles it. The number of errors present during compilation is displayed
+    in the window. The View -> Output Window option is used to open the window.
+
+
+    The following figure shows the output window in Visual Studio application.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Error List
+
+
+    The list of errors present in the application is displayed in the error list window.
+
+    The user can locate errors as soon as the code is compiled. Double the error and
+    the source file for it is located. Click View, Error List Window to open the error
+    list window.
+
+
+    The following figure shows the error list window.
+
+
+    ![](img/c133ae999967b1fbceab3bccc1cb1d4f_15_0.png)
+
+
+    # Class View Window
+
+
+    The class view window is useful in displaying classes, properties and methods
+    associated with a file. The tree view is used to display the items. The code editor
+    window can be viewed by double clicking the item.
+
+
+    The window contains two buttons, one for sorting the items, other for new folder
+    creation. The View, Class View option is used for opening the class view window.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# Code Editor\n\nUser can enter or edit code in the code editor. User can add\
+    \ code to the editor for the class.\n\nThe following window shows the code editor.\n\
+    \n```\nusing System.Collections.Generic;\nusing System.ComponentModel;\nusing\
+    \ System.Data;\nusing System.Drawing;\nusing System.Linq;\nusing System.Text;\n\
+    using System.Windows.Forms;\n\nnamespace WindowsFormsApplication1\n{\n    public\
+    \ partial class Form1 : Form\n    {\n        public Form1()\n        {\n     \
+    \       InitializeComponent();\n        }\n    n}\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# 2.3 Compiling and executing C# program
+
+
+    There are some steps involved in compiling and executing the program as mentioned
+    below:
+
+
+    +   1) Open Visual Studio application
+
+    2) Click File, New, Project option from the list
+
+    3) Select the Visual C# template and select Windows option
+
+    4) Select the console application template from the template list
+
+    5) Add a project name and click OK button
+
+    6) A new project is created in the solution explorer window
+
+    7) Add the needed code in the code editor window
+
+    8) Press F5 or click the Run button for project execution. User can view the output
+    for the code
+
+
+    The compiling of the code of C# program using the command line of the Visual Studio
+    IDE is possible.
+
+
+    +   1) Add the code in the text editor and save the file with .cs extension
+
+    2) Open the command prompt and navigate to the file
+
+    3) The csc filename.cs and compile the code
+
+    4) The command prompt moves to the next line and creates an executable file
+
+    5) Add the filename and execute the program'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Chapter 3 Syntax, Data Types, and conversion
+
+
+    # 3.1 Different keywords in C#
+
+
+    Keywords are special predefined reserved words and are each assigned with a unique
+    meaning. These keywords can be organized in to categories useful for better understanding.
+    Below is a list of keywords categorized into different types.
+
+
+    1) Keywords for class, method, field and property
+
+
+    +   - abstract
+
+    - extern
+
+    - internal
+
+    - new
+
+    - const
+
+    - override
+
+    - protected
+
+    - private
+
+    - public
+
+    - sealed
+
+    - readonly
+
+    - static
+
+    - virtual
+
+    - void
+
+
+    2) Keywords for type conversions
+
+
+    +   - explicit
+
+    - implicit
+
+    - as
+
+    - is
+
+    - operator
+
+    - sizeof
+
+    - typeof
+
+
+    3) Keywords useful for program flow control
+
+
+    +   - if'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '+   - else
+
+    - for
+
+    - foreach
+
+    - in
+
+    - case
+
+    - break
+
+    - continue
+
+    - return
+
+    - while
+
+    - goto
+
+    - default
+
+    - do
+
+    - switch
+
+
+    # 4) Keywords used for built in types and enumerations
+
+
+    +   - bool
+
+    - char
+
+    - class
+
+    - byte
+
+    - decimal
+
+    - enum
+
+    - double
+
+    - float
+
+    - interface
+
+    - long
+
+    - int
+
+    - object
+
+    - sbyte
+
+    - short
+
+    - string
+
+    - uint
+
+    - struct
+
+    - ulong
+
+    - ushort
+
+
+    # 5) Keywords used for exception handling
+
+
+    +   - try
+
+    - catch'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '+   * throw
+
+    * finally
+
+    * checked
+
+    * unchecked
+
+
+    # 6) Keywords used as literals, method passing parameters
+
+
+    +   * true
+
+    * false
+
+    * null
+
+    * this
+
+    * value
+
+    * out
+
+    * params
+
+    * ref
+
+
+    # 7) Keywords useful in function pointers, object allocation, unmanaged code
+
+
+    +   * delegate
+
+    * event
+
+    * new
+
+    * stackalloc
+
+    * unsafe'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# 3.2 Data Types in C#
+
+
+    Data types are used to store the data in a specific type. There are several built
+    data types that are used by the programmers for declaring data.
+
+
+    Every data type has a limited set of options it can be, these limited number of
+    options are called the data range for the data type. Listed below are the different
+    data types present and the data range that they can be:
+
+
+    +   - bool: Used to represent the Boolean value. The values that can be assigned
+    true or false.
+
+
+    +   - byte: 8–bit unsigned integer. The range of value for a byte data type is
+    from 0 to 255
+
+
+    +   - char: 16–bit Unicode character. The range of values is from U+0000 to U+ffff
+
+
+    +   - double: 64–bit double precision floating point type. The range of values
+    is from (+/-) 5.0 x 10-324 to (+/-) 1.7 x 10308
+
+
+    +   - decimal: 128 bit precise decimal values with significant digits. The range
+    of values is from (-7.9 x 1028 to 7.9 x 1028) / 100 to 28
+
+
+    +   - float: 32 bit single precision floating point. The range of values is from
+    -3.4 to 3.4 x 1038
+
+
+    +   - int: 32–bit signed integer type. It has range of values from -2,147,483,648
+    to 2,147,483,647
+
+
+    +   - long: 64–bit signed integer type. It has range of values from -923,372,036,854,775,808
+    to 9,223,372,036,854,775,807
+
+
+    +   - sbyte: 8–bit signed integer type. It has range of values from -128 to 127
+
+
+    +   - short: 16–bit signed integer type. It has range of values from -32,768 to
+    32,767
+
+
+    +   - unit: 32–bit unsigned integer type. It has range of values from 0 to 4,294,967,295
+
+
+    +   - ulong: 64–bit unsigned integer type. It has range of values from 0 to'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '18,446,744,073,709,551,615
+
+
+    +   - ushort: 16 – bit unsigned integer type. It has range of values from 0 to
+    65,535'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# 3.3 Type conversion in C#
+
+
+    Type conversion is useful when the programmer needs to convert from one data type
+    to another. The type conversion is also known as type casting. There are two types
+    of type casting in C#. They are implicit type conversion and explicit type conversion.
+
+
+    # Implicit type conversion
+
+
+    The implicit type keyword is used for implicit conversions. They do not need any
+    casting operator. These conversions include small to large integral type, from
+    derived class to base class.
+
+
+    # Explicit type conversion
+
+
+    The explicit conversions are done explicitly by users through the use of the pre-defined
+    functions. In these conversions, a cast operator is needed.
+
+
+    ![](img/c133ae999967b1fbceab3bccc1cb1d4f_23_0.png)
+
+
+    C# consists of type conversion methods that are useful for users.
+
+
+    The following list shows the type conversion methods.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "+   - ToByte: Used for converting a type to byte\n- ToBoolean: Used for converting\
+    \ Boolean value\n- ToDateTime: Used for converting a type to the date time type\n\
+    - ToDouble: Converts a type to a double\n- ToDecimal: Converts the floating point\
+    \ or integer to decimal type\n- ToInt64: Converts the type to 64 bit integer\n\
+    - ToSingle: Converts the type to floating point number\n- ToString: Converts the\
+    \ type to string type\n- ToUInt64: Converts a type to an unsigned big integer\n\
+    \nThe following code snippet shows the conversion of value type to Double type.\n\
+    \n# Example 4:\n\n```\nusing System;\nnamespace type\n{\n    class DoubleConversion\n\
+    \    {\n        int a=10;\n        float f=30.05f;\n        bool b=false;\n\n\
+    \        Console.WriteLine(a.ToDouble());\n        Console.WriteLine(f.ToDouble());\n\
+    \        Console.WriteLine(b.ToDouble());\n        Console.Read();\n    }\n}\n\
+    ```"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Chapter 4 Variables and Constants
+
+
+    # 4.1 Exploring variables in C#
+
+
+    A variable is name assigned to the memory location used by the programs. Every
+    variable has a data type associated with it. The data type determines the size
+    of the variable’s memory used for storing within the memory.
+
+
+    The data types provided by C# are distinguished as:
+
+
+    +   1. Integral types: int, unit, short, byte, sbyte, long, ulong, and char
+
+    2. Floating point types: double, float
+
+    3. Decimal types: decimal
+
+    4. Boolean type: true or false values
+
+    5. Nullable type: nullable data type
+
+    6. Reference type: class
+
+
+    Defining Variables
+
+
+    The syntax for declaring the variables is:
+
+
+    ```
+
+    <data_type> <variable_list>;
+
+    ```
+
+
+    Where, data_type is a valid C# data type. It can be int, char, float, double,
+    or a user defined type. The variable_list contains one or more identifiers.
+
+
+    Examples of variables
+
+
+    ```
+
+    int a,b,c;
+
+    char x,y;
+
+    float price, totolcost;
+
+    double area;
+
+    ```
+
+
+    # Initializing Variables
+
+
+    The variables are initialized using an equal sign and followed by an expression.
+    The syntax for initializing variable is:'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '```
+
+    variable_name = value;
+
+    ```
+
+
+    The variables can be initialized in the declaration. The general form for initializing
+    the variable is:
+
+
+    ```
+
+    <data_type><variable_name> = value;
+
+    ```
+
+
+    Examples of variable initialization:
+
+
+    +   int a = 4;
+
+    char z = ''z'';
+
+    double y = 12.145;
+
+
+    Example for demonstrating variable types:
+
+
+    ![](img/c133ae999967b1fbceab3bccc1cb1d4f_26_0.png)
+
+
+    # Accepting values from user
+
+
+    The Console class present in the System namespace provides ReadLine() function.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'The function is used for accepting input from the user and stored into variable.
+
+
+    Example:
+
+
+    ```
+
+    int no;
+
+    no=Convert.ToInt32(Console.ReadLine());
+
+    ```
+
+
+    The `Convert.ToInt32()` function converts the data entered by the user to integer
+    data type. The function accepts the data in string format.
+
+
+    # Lvalue and RValue Expressions
+
+
+    The two types of expressions in C# are:
+
+
+    +   - **lvalue**: The expression is an lvalue appears on the left side of the
+    assignment.
+
+    - **rvalue**: The expression is an rvalue that appears on the right side but not
+    on the left side of the assignment.
+
+
+    The variables are lvalues and hence appear on the left side of the assignment.
+    The numeric values are rvalues and hence appear on the right side.
+
+
+    ```
+
+    int a=50;
+
+    ```'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# 4.2 Constants and literals in C#\n\nConstant is a class member that represents\
+    \ a fixed value. Constant value can be computed at compile time but cannot be\
+    \ modified. Constants are declared using the const keyword.\n\nSyntax:\n\n```\n\
+    const<data_type> <constant_name> = value;\n```\n\nExample of Constant:\n\nExample\
+    \ 6:\nusing System;\nnamespace conste\nclass Program\n{\n    static void Main(string[]\
+    \ args)\n    {\n        const int i=3;\n        int x;\n        Console.WriteLine(\"\
+    The value for x is:\");\n        x=Convert.ToInt32(Console.ReadLine());\n    \
+    \    int mult = x*i;\n        Console.WriteLine(\"Value of multiplication is:{0}\"\
+    ,mult);\n        Console.ReadLine();\n    }\n}\n\n# Literals\n\nA literal is a\
+    \ source code representation of a value. There are different types of literals\
+    \ in C#.\n\n# Integer Literals\n\nInteger literal is used to write values of type\
+    \ int, long, unit, and ulong. It can be represented as decimal, octal, or hexadecimal\
+    \ constant. The base or radix is specified by the prefix. The value 0x or 0X represents\
+    \ the hexadecimal, 0 defines octal and"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'decimal is used without prefix.
+
+
+    Some of the examples of integer literals are 15, 0321, 0x5b, 30l.
+
+
+    # Floating point literals
+
+
+    Floating point literal consist of integer part, fraction part, decimal part, and
+    an exponent part. The floating point literals can be represented in exponent or
+    decimal form.
+
+
+    Floating point literals can be mentioned as 3.1415, 1423E-6L.
+
+
+    # Character Literals
+
+
+    Character literals represent a single character. They are enclosed in single quotes.
+    Characters that are preceded by a backslash are called escape characters and some
+    of these escape characters have special meanings when used in a string to designate
+    a special function such as creating a tab or a carriage return. Below is a list
+    of some of these special escape characters:
+
+
+    +   * \'' single quote
+
+    * " Double quote
+
+    * \ Backslash
+
+    * \0 null
+
+    * \a Alert
+
+    * \b Backspace
+
+    * \f feed
+
+    * \t Horizontal tab
+
+    * \v Vertical tab
+
+    * \r Carriage return
+
+
+    # String Literals
+
+
+    There are two string literals types supported by C#: regular string literals and
+    verbatim string literals. Regular string literals contain zero or more characters
+    enclosed in double quotes.
+
+
+    A verbatim string literals contains @ character followed by a double quote character,
+    zero or more character. A verbatim string literal can span multiple lines.
+
+
+    Examples showing string literals.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '“welcome user"
+
+    “welcome, \
+
+    user"
+
+    @""welcome user”'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# # Chapter 5 Operators in C#
+
+
+    # ## 5.1 Introduction to operators
+
+
+    Operator is used to define the meaning of an expression. It is a set of one or
+    more characters used for computations or comparisons. Operators can change one
+    or more data values, called operands into a new value.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# 5.2 Arithmetic operators
+
+
+    Arithmetic operators are used for performing the arithmetic operations on variables.
+    The table shows the arithmetic operators in C#.
+
+
+    | Operator | Description | Example |
+
+    |---|---|--|
+
+    | + | Add two operands | c=a+b<br>If a=10, b=20, c=10+20=30 |
+
+    | - | Substracts second operand from the first | c=a-b<br>If a=10, b=5, c=10-5=5
+    |
+
+    | * | Multiplies both the operands | c=a*b<br>If a=10, b=5, c=10*5=50 |
+
+    | / | Divides the numerator by denominator | c=a/b<br>If a=21, b=2, c=21/2=10
+    |
+
+    | % | Modulus operator and remainder after integer division | c=a%b<br>If a=21,
+    b=2, c=21%2=1 |
+
+    | ++ | Increment operator. User for increasing value by one | If a=10,<br>a++=11
+    |
+
+    | -- | Decrement. The value can be decreased by one | If a=10<br>a--=9 |'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# 5.3 Relational operators
+
+
+    The relational operators are used for relational operations and type comparisons.
+
+
+    | Operator | Description | Example |
+
+    | --- | --- | --- |
+
+    | = | It checks values of the operands are equal or not. | If x=10, y=20, (x=y)
+    is not true |
+
+    | != | If the values of the two operands are not equal then condition is true
+    | If x=11, y=12, (x!=y) is true |
+
+    | > | If the left operand is greater than right, condition is true | If x=13,
+    y=17, (x>y) is not true |
+
+    | < | If the right operand is greater than left, condition is true | If x>10,
+    y=15, (x<y) is not true |
+
+    | >= | If the value of the left operand is greater or equal to right, condition
+    is true | If x=5, y=3, (x>=y) is not true |
+
+    | <= | If the value of the left operand is less or equal to right, condition is
+    true | If x=10, y=4, (x<=y) is not true |'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# ## 5.4 Logical operators
+
+
+    Logical operators are used for evaluating an expression and return a Boolean value.
+
+
+    | Operator | Description | Example |
+
+    | --- | --- | --- |
+
+    | && | Logical AND operator. If both the expressions are true, result is true
+    | X has Boolean value as true and Y has Boolean value false, (A&B) is false |
+
+    | ! | Logical NOT operator. If the expression is false, returns true | X has Boolean
+    value true, !(X) = false |
+
+    | || | Logical OR operator. If either of the expression is true, result is true
+    | X has Boolean value true, Y has Boolean value false, (X||Y) is true |
+
+    | ^ | If either of the expression is true, returns true. It returns false if both
+    the expressions are true or false | X has Boolean value true, Y has value false,
+    (X^Y) is true |'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# # 5.5 Bitwise operators
+
+
+    Bitwise operators are used on bits. They perform bit operation.
+
+
+    | a | b | a&b | a|b | a^b |
+
+    | 0 | 0 | 0 | 0 | 0 |
+
+    | 0 | 1 | 0 | 1 | 1 |
+
+    | 1 | 0 | 0 | 1 | 1 |
+
+    | 1 | 1 | 1 | 1 | 0 |'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# 5.6 Assignment operators\n\nAssignment operators are used for performing\
+    \ arithmetic operations on the operands. The resultant value is assigned to any\
+    \ one of them.\n\n| Operator | Description | Example |\n| = | Assigns value from\
+    \ right side operands to the left side operand | z=x+y assigns value pf x+y to\
+    \ z |\n += | Add AND assignment operator. Adds the right operand to the left operand\
+    \ and the result is assigned to left operand | x+=y is similar to x=x+y |\n| -=\
+    \ | Subtract AND assignment operator. Subtracts the right operand from the left.\
+    \ | x-=y is similar to x=x-y |\n| *= | Multiply AND assignment operator. Multiplies\
+    \ the right operand with the left | x*=y is similar to x=x*y |\n| /= | Divide\
+    \ AND assignment operator. Divides left operand with the right | x/=y is similar\
+    \ to x=x/y |\n| %= | Modulus AND assignment operator. It takes the modulus of\
+    \ both the operands | x%=y is similar to x=x%y |\n| << | Left shift assignment\
+    \ operator | a<<2 is similar to a=a<<2 |\n| >> | Right shift assignment operator\
+    \ | a>>2 is similar to a=a>>2 |\n| &= | Bitwise AND assignment operator | a&=3\
+    \ is similar to a=a&3 |\n| ^= | Bitwise exclusive OR assignment operator | a^=4\
+    \ is similar to a=a^4 |\n| |= | Bitwise inclusive OR assignment operator | a|=5\
+    \ is similar to a=a |5 |"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# 5.7 Miscellaneous operators
+
+
+    | Operator | Description | Example |
+
+    | --- | --- | --- |
+
+    | sizeof() | It returns the data size | sizeof(int), returns 4 |
+
+    | typeof() | The type of class is provided | typeof(StreamWriter); |
+
+    | & | Address of an variable | \&, actual address of the variable |
+
+    | ?: | Conditional expression | If condition is true? X value else Y |
+
+    | as | If the cast is not succs, cast without raising exception | Object 0l =
+    new StringReader("Welcome"); StringReader s = obj as StringReader; |
+
+    | is | It checks if the object is of specific type | If(Maths is Subject), Checks
+    for the subject maths |'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# # Chapter 6 C# Decision making statements
+
+
+    Decision making is structured in the following way:
+
+
+    +   - There must be at least one condition for the statements to meet
+
+    - There must be at least two end outcomes
+
+
+    Looking at the diagram below, we can see a general representation of the decision
+    making logic.
+
+
+    ![](img/c133ae999967b1fbceab3bccc1cb1d4f_38_0.png)
+
+
+    In the diagram above, the arrows represent the flow of statements executing in
+    the system. When the statement reaches a conditional logic (diamond shape) the
+    statement is matched to the condition. This condition has two outcomes True or
+    False.
+
+
+    If the statement matches the condition then it will be declared as True and the
+    statement'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: 'will run a set of code (rectangle) before reaching the end. If the statement
+    does not match the condition then it will be declared as false and will directly
+    proceed to the end point.
+
+
+    C# has various types of decision making statements. They are explained in detail.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# 6.1 If Statement\n\nIf statement contains a Boolean expression True or False.\
+    \ It is followed by one or more statements.\n\nSyntax:\n\n```\nif (boolean_expression)\n\
+    {\n  //if the Boolean expression is true, statement executed\n}\n```\n\nIf the\
+    \ expression contains value true, the statements in the block of code will be\
+    \ executed. If the expression has value false, the set of code after the end of\
+    \ if statement will be executed.\n\nFlow Diagram\n\n![](img/c133ae999967b1fbceab3bccc1cb1d4f_40_0.png)"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# Example of if statement\n\n| Example 7: |\n\n\n```\nusing System;\nnamespace\n\
+    {\n    class Program\n{\n        static void Main(string[] args)\n        {\n\
+    \            /*local variables*/\n            int i = 15;\n            /*boolean\
+    \ condition is checked*/\n            if(i < 15)\n            {\n            \
+    \    Console.WriteLine(\"The value of i is less than 15\");\n                Console.WriteLine(\"\
+    Value of i is {0}\",i);\n                Console.Read();\n            }\n    \
+    \    }\n    }\n}\n```\n\nIn this code example we can see see that the condition\
+    \ is if(i<15). So here the variable i must meet the condition to be less than\
+    \ 15 for the condition to be True or else it is False."
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# 6.2 If else statement\n\nAn if statement can be added with an optional else\
+    \ statement. The else statement is executed when the expression value is false.\n\
+    \nSyntax:\n\n```\nif(boolean_expression) {\n  /* If the Boolean expression is\
+    \ true, this statement is executed */\n} else {\n  /* If the Boolean expression\
+    \ is false, this statement will be executed */\n}\n```\n\nIf the expression has\
+    \ value true then the if block is executed, otherwise else block is executed.\n\
+    \nFlow Diagram\n\n![](img/c133ae999967b1fbceab3bccc1cb1d4f_42_0.png)"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# Example of if else statement:\n\n![](img/c133ae999967b1fbceab3bccc1cb1d4f_43_0.png)\n\
+    \n```\nusing System;\nnamespace ifelse\nclass User\n{\n    static void Main(string[]\
+    \ args)\n    {\n        int age;\n        Console.WriteLine(\"Enter the age of\
+    \ the user\");\n        age=Convert.ToInt32(Console.ReadLine());\n        if(age\
+    \ < 18)\n        {\n            Console.WriteLine(\"Not an adult\");\n       \
+    \ }\n        else\n        {\n            Console.WriteLine(\"User is an adult\"\
+    );\n        }\n    }\n}\n```\n\nIn the code example, the condition ( age < 18\
+    \ ) is specified. So here the variable must meet the condition less than 18 for\
+    \ the condition to be True, otherwise the else block is executed.\n\n# The else\
+    \ if else statement\n\nAn if statement is also followed by an else if else construct.\
+    \ Many conditions can be checked using if else if statement.\n\n# Syntax\n\n```\n\
+    if (boolean_expression 1)\n{\n    /*If the Boolean expression 1 is true, the statement\
+    \ is executed*/\n}\nelse if(boolean_expression 2)\n```"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\n{\n  /* If the Boolean expression 2 is true, the statement is executed*/\n\
+    }\nelse if(boolean_expression 3)\n{\n  /* If the Boolean expression 3 is true,\
+    \ the statement is executed*/\n}\nelse\n{\n  /* executes if none of the condition\
+    \ is true*/\n}\n```\n\n# Example of else if else statement\n\n```\nExample 8:\n\
+    using System;\nnamespace elseifelse\n{\n    class Program\n    {\n        static\
+    \ void Main(string[] args)\n        {\n            int x = 30;\n            if(x\
+    \ == 100)\n            {\n                Console.WriteLine(\"The value is 100\"\
+    );\n            }\n            else if(x == 20)\n            {\n             \
+    \   Console.WriteLine(\"The value is 20\");\n            }\n            else if(x\
+    \ == 10)\n            {\n                Console.WriteLine(\"The value is 10\"\
+    );\n            }\n            else\n            {\n                Console.WriteLine(\"\
+    No matching value found\");\n            }\n            Console.Read();\n    \
+    \    }\n    }\n}\n```"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    In the above example, the value x = 30 is specified. If there is an expression
+    that matches the value of x, the appropriate block is executed. If none of the
+    expression matches, the **else** block is executed.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# 6.3 Nested if statement\n\nThe nested if statement contains one if or else\
+    \ statement inside another if or else statement.\n\n# Syntax for nested if statement\n\
+    \n```\nif(boolean_expression1)\n{\n    /*If the expression 1 is true, statement\
+    \ is executed*/\n    if(boolean_expression2)\n    {\n        /*If the expression\
+    \ 2 is true, statement is executed*/\n    }\n}\n```\n\n# Example for nested if\
+    \ statement\n\nExample 9:\nusing System;\nnamespace nestedif\n{\n    class Program\n\
+    \    {\n        static void Main(string[] args)\n        {\n            int x\
+    \ = 20;\n            int y = 40;\n            if(x = 20)\n            {\n    \
+    \            if(y = 40)\n                {\n                    Console.WriteLine(\"\
+    Value of x is:{0} and y is {40}\");\n                }\n            }\n      \
+    \      Console.WriteLine(\"Value of x is:{0}\"x\");\n            Console.WriteLine(\"\
+    Value of y is:{0}\"y\");\n            Console.Read();\n        }\n    }\n}"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: In the above code, the value for x and y variables is assigned. The value inside
+    if statement is checked. If it is same, the inner statements are executed, else
+    the control moves out of the loop.
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# 6.4 Switch statement\n\nA switch statement helps to evaluate a variable for\
+    \ multiple conditions efficiently.\nEvery condition is known as a case and the\
+    \ variable switched is checked for the switch case.\n\nSyntax:\n\n```\nswitch(Expression)\n\
+    {\n    case ConstantExpression1:\n        statements;\n    break;\n    case ConstantExpression2:\n\
+    \        statements;\n    break;\n    ....\n    case ConstantExpression_n:\n \
+    \       statements;\n    break;\n    default:\n        statements;\n        break;\n\
+    }\n```\n\nThe rules added in the switch statement are:\n\n+   - Expression in\
+    \ a switch statement must be an integer or of a class type.\n- A user can add\
+    \ any number of case statements in a switch statement.\n- The ConstantExpression\
+    \ must be of the data type similar to the expression in the switch.\n- When the\
+    \ Expression matches the ConstantExpression, the code inside that case will be\
+    \ executed and hit the break keyword which will force the execution out of the\
+    \ switch statement."
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "+   - Every case does not need a break keyword.\n\n+   - The optional default\
+    \ case appears at the end of the switch and acts as a backup in case the expression\
+    \ does not match any of the ConstantExpressions.\n\n# Flow Diagram\n\n![](img/c133ae999967b1fbceab3bccc1cb1d4f_49_0.png)\n\
+    \n# Example of switch statement\n\n| Example 10: |\n|| using System;\nnamespace\
+    \ switchcase\n{\n class Program\n{\n static void Main(string[] args)\n{\nchar\
+    \ grade =='A+';\n}\n} |"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "```\nswitch(grade)\n{\n    case C:\n        Console.WriteLine(\"Fair\");\n\
+    \        break;\n    case B:\n        Console.WriteLine(\"Good\");\n        break;\n\
+    \    case A:\n        Console.WriteLine(\"Excellent\");\n        break;\n    default:\n\
+    \        Console.WriteLine(\"No matching grade\");\n        break;\n}\nConsole.WriteLine(\"\
+    Grade is {0}\",grade);\nConsole.ReadLine();\n```\n\nIn the above code, the value\
+    \ of grade is assigned.  It is matched with the different switch cases. If the\
+    \ value matches from among the declared cases, the corresponding message is displayed.\
+    \ If none of the expression matches, the default caseis executed."
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# 6.5 Nested switch statement\n\nUser can switch part of the statement sequence\
+    \ of the outer switch. The common values in the switches do not conflict.\n\n\
+    Syntax:\n\n```\nswitch(c1)\n{\n    case 'A':\n        Console.WriteLine(\"A is\
+    \ the part of outer switch\");\n        break;\n    switch(c2)\n    {\n      \
+    \  case 'A':\n            Console.WriteLine(\" A is the part of inner switch\"\
+    );\n            break;\n        case 'B':\n    }\n    break;\n    case 'B':\n\
+    }\n```\n\nExample of nested switch statement\n\n| Example 11: |\n| using System;\n\
+    \ namespace switchcase\n{\n class Program\n{\n    static void Main(string[] args)\n\
+    \    {\n        char grade='A+';\n        switch(grade)\n        {\n         \
+    \   case C:\n                Console.WriteLine(\"Fair\");\n                break;\n\
+    \            case B:|"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "```\nConsole.WriteLine(\"Good\");\nbreak;\ncase A:\n    Console.WriteLine(\"\
+    Excellent\");\n    break;\n    default:\n        Console.WriteLine(\"No matching\
+    \ grade\");\n        break;\n}\nConsole.WriteLine(\"Grade is {0}.grade\");\nConsole.ReadLine();\n\
+    }\n}\n```\n\n# Example 12:\n\n```\nusing System;\nnamespace switch\n{\n    class\
+    \ Program\n    {\n        static void Main(string[] args)\n        {\n       \
+    \     int x = 20;\n            int y = 40;\n\n            switch(x)\n        \
+    \    {\n                case 20:\n                    Console.WriteLine(\"Part\
+    \ of outer switch\");\n                    switch(y)\n                    {\n\
+    \                        case 40:\n                            Console.WriteLine(\"\
+    Part of inner switch\");\n                            break;\n               \
+    \     }\n                    break;\n            }\n            Console.WriteLine(\"\
+    Value of x is: {0}\",x);\n            Console.WriteLine(\"Value of y is: {0}\"\
+    ,y);\n            Console.ReadLine();\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    In the above code, the value of variable x and y is assigned. If the value for
+    variable x matches the expression, the statements inside the switch case are executed,
+    else the control moves out of the case structure.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# # Chapter 7 Loops in C#
+
+
+    Loop structures are used for executing one or more lines again and again. Various
+    control structures are provided for complicated execution.
+
+
+    ![](img/c133ae999967b1fbceab3bccc1cb1d4f_54_0.png)'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# 7.1 While loop\n\nA while loop consists of a conditional expression that\
+    \ must be matched before the logical statements inside the while loop can be executed.\
+    \ If a statement matches the expression then it will run the code inside the loop\
+    \ and then return back to the conditional expression to re-check the statement\
+    \ still matches the expression. If it matches again the loop will execute again\
+    \ otherwise it will skip the loop completely.\n\nLet us visit the syntax of a\
+    \ while loop.\n\nSyntax:\n\n```\nwhile (expression)\n{\n    statements;\n}\n```\n\
+    \nFlow Diagram\n\n![](img/c133ae999967b1fbceab3bccc1cb1d4f_55_0.png)"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# Example of while loop\n\n```\nExample 13:\nusing System;\nnamespace while\
+    \ loop\n{\n    class Program\n    {\n        static void Main(string[] args)\n\
+    \        {\n            int var;\n            var=50;\n            while(var<150)\n\
+    \            {\n                Console.WriteLine(\"Value of variable is:{0}\"\
+    ,var);\n                var+=10;\n            }\n        }\n    }\n}\n```\n\n\
+    In the preceding code, the variable var is initialized with value 50. The while\
+    \ loop checks for the condition. If the condition is less than 150, the statements\
+    \ inside the loop are executed. If false, the control does not enter the while\
+    \ loop."
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# 7.2 For loop\n\nA for loop is used to execute a block of statements for a\
+    \ specific number of times.\n\nSyntax:\n\n```\nfor (initialization; condition;\
+    \ increment/decrement)\n{\n    statement(s);\n}\n```\n\nWhere,\n\n+   * **initialization**\
+    \ is used to declare and initialize the loop control variables. It is executed\
+    \ at the beginning of the loop\n* **condition** checks for the expression. If\
+    \ the value is true, the body of the loop is executed. If false, the control jumps\
+    \ out from the loop\n* **increment/decrement** is used for increasing or decreasing\
+    \ the variable value.\n\n# Flow Diagram"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "![](img/c133ae999967b1fbceab3bccc1cb1d4f_58_0.png)\n\nExample of for loop\n\
+    \n# Example 14:\n\n```\nusing System;\nnamespace forloop\n{\n    class Program\n\
+    \    {\n        static void Main(string[] args)\n        {\n            int i;\n\
+    \            for(int i=1;i<=10;i++)\n            {\n                Console.WriteLine(\"\
+    Value of variable is:{0}\",i);\n            }\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    In the above code, value for variable i is declared. For loop contains assignment,
+    condition, increment. If the condition is true, the value is incremented. The
+    statement inside for loop is executed. Once the condition is false, the control
+    moves out of the loop.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# 7.3 Do while loop\n\nThe do...while loop construct is similar to the while\
+    \ loop. Both the loops will continue until the condition is false. The difference\
+    \ is that the statements in a do...while loop are executed at least once, as the\
+    \ statements in the block are executed before the condition is checked.\n\nSyntax:\n\
+    \n```\ndo\n{\n  Statements;\n}while(expression);\n```\n\nFlow Diagram\n\n![](img/c133ae999967b1fbceab3bccc1cb1d4f_60_0.png)\n\
+    \nExample of do while loop\n\nExample 15:"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\nusing System;\nnamespace dowhile\n{\n    class Program\n    {\n      \
+    \  static void Main(string[] args)\n        {\n            int x=1;\n        \
+    \    do\n            {\n                Console.WriteLine(\"Value of x is:{0}\"\
+    ,x);\n                x=x+1;\n            }while(i<10);\n            Console.ReadLine();\n\
+    \        }\n    }\n}\n```\n\nIn the above code, the variable x is assigned with\
+    \ value I. The do loop prints the statements inside the block. Once the condition\
+    \ in the while loop is false, the statements in the do while loop will not be\
+    \ executed."
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# 7.4 Break statement\n\nThe **break** statement is used to exit from the loop.\
+    \ When this statement is encountered, the loop is terminated, the control resumes\
+    \ to the next statement following loop.\n\nSyntax:\n\n```\nbreak;\n```\n\nFlow\
+    \ Diagram\n\n![](img/c133ae999967b1fbceab3bccc1cb1d4f_62_0.png)\n\nExample of\
+    \ break statement\n\n> Example 16:\n\n```\nusing System;\nnamespace break;\n{\n\
+    \    class Program\n{\n        static void Main(string[] args)\n    }\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\nint i=11;\nwhile(i<15)\n{\n    Console.WriteLine(\"value of i:{0}\",i);\n\
+    \    i++;\n    if(i>13)\n    {\n        break;\n    }\n}\nConsole.ReadLine();\n\
+    ```\n\nIn the code example, value of variable i is assigned to 11. The while loop\
+    \ checks the condition of i. If the condition is true, the statements in the while\
+    \ loop are executed. The value for i is incremented.\n\nIf loop checks for value\
+    \ i. Once the value of i is greater than 13, the break statement executed and\
+    \ the control moves out of the loop."
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# 7.5 Continue statement\n\nThe continue statement is similar to the break\
+    \ statement, but instead of breaking out of the loop the **continue** forces the\
+    \ next iteration of the loop, skipping any code in between.\n\nSyntax:\n\n```\n\
+    continue;\n```\n\nFlow Chart\n\n![](img/c133ae999967b1fbceab3bccc1cb1d4f_64_0.png)\n\
+    \nExample of Continue statement\n\n```\n### Example 17:\nusing System;\nnamespace\
+    \ continue\n{\n    class Program\n{\n        int i=45;\n        do\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\n{\n  if(i<=50) {\n    i=i+1;\n    continue;\n  }\n  Console.WriteLine(\"\
+    Value of i:{0}\",i);\n  i++;\n}\nwhile(i<60) {\n  Console.ReadLine();\n}\n}\n\
+    ```\n\nSo in the code example above we can see a combination of the do-while loop\
+    \ and continue in action. We can see that i is initially set as a 45 when it enters\
+    \ the statements inside the do. At this point i is checked to see if it matches\
+    \ 50, it doesn't so the value of i is outputted in a message and i is incremented\
+    \ by one.\n\nThis process happens until i is 50, at which point i will be incremented\
+    \ by one and hit the continue keyword which will skip the rest of the code in\
+    \ the do section and move straight to the while conditional expression.\n\nOnce\
+    \ i reaches 61 the while conditional statement will not match and the execution\
+    \ will leave the loop."
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# Chapter 8 Classes and Methods in C#\n\n# 8.1 Class declaration\n\nIn C# classes\
+    \ are the primary building blocks of the language. It provides predefined set\
+    \ of variables and methods. Objects are defined as an instance of a class, therefore\
+    \ the methods inside the class determine what can be executed on the object.\n\
+    \n# Class Definition\n\nA class definition starts with keyword class followed\
+    \ by the actual class name. The class variables and methods are all enclosed between\
+    \ the curly brackets; this area is also called the class body.\n\nSyntax:\n\n\
+    ```\n<access specifier>class class_name\n{\n    //member variables\n    <access\
+    \ specifier><data type> variable1;\n    <access specifier><data type> variable2;\n\
+    \    ...\n\n<access specifier><data type> variableN;\n    //member methods\n \
+    \   <access specifier><return type>method1(parameter_list)\n    {\n        //method\
+    \ body\n    }\n    <access specifier><return type>method2(parameter_list)\n  \
+    \  {\n        //method body\n    }\n    ...\n    <access specifier><return type>methodN(parameter_list)\n\
+    \    {\n        //method body\n    }\n```"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "```\n}\n```\n\n+   - Access specifiers define the level of contact for other\
+    \ methods and members to be able to interact with methods and members of the given\
+    \ class. If no access specifier is specified, the default access specifier is\
+    \ **private**.\n- The data type specifies the variable type and the return type\
+    \ is used to state type of data is returned from the method, although it should\
+    \ be noted that a method does not need always return anything.\n- The dot(.) operator\
+    \ is used for accessing the class member\n- The dot operator is used to link the\
+    \ object name and member name\n\nExample to demonstrate class\n\n```\nExample\
+    \ 18:\nusing System;\nnamespace demo\n{\n    class Calculate\n    {\n        public\
+    \ int len;\n        public int bread;\n    }\n    class Program\n    {\n     \
+    \   static void Main(string[] args)\n        {\n            Calculate c1 = new\
+    \ Calculate();\n            Calculate c2 = new Calculate();\n            int area\
+    \ = 0;\n            int area1 = 0;\n\n            c1.len = 10;\n            c1.bread\
+    \ = 5;\n\n            c2.len = 15;\n            c2.bread = 10;\n\n           \
+    \ area = c1.len*c1.bread;\n            Console.WriteLine(\"area of rectangle 1\
+    \ is:{0}\",area);\n\n            area1 = c2.len*c2.bread;\n            Console.WriteLine(\"\
+    area of rectangle 2 is:{0}\",area1);\n            Console.ReadLine();\n      \
+    \  }\n    }\n}\n```"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'When compiled the result of this class will be:
+
+    area of rectangle2 is:50
+
+    area of rectangle2 is:150'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# C# constructors
+
+
+    A constructor is a special type of method invoked automatically when the instance
+    of the class is created. The members of the class are initialized inside the constructors.
+    The constructor has to have the same name as the class itself.
+
+
+    # Example of Constructor
+
+
+    ![](img/c133ae999967b1fbceab3bccc1cb1d4f_69_0.png)
+
+
+    When compiled the result of this class will be:
+
+
+    The total is: 60
+
+
+    In the example above every time the class Calculate is instantiated, the constructor
+    manually assigns a fixed value to number1 and number2. However what if you wanted
+    to'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "make the values of number1 and number2 different and dynamic? How would this\
+    \ be achieved?\n\nWell this is where a concept of a parameterized constructor\
+    \ comes in. Essentially what this term means is that we pass in values directly\
+    \ in to the constructor, this allows us to pass in values at the point of instantiation\
+    \ of the class. Lets look at an example:\n\n# Example of parameterized constructor\n\
+    \n```\nusing System;\nnamespace construct\n{\n    class Calculate\n    {\n   \
+    \     int number1_number2_sum;\n\n        // Parameters are added in here inside\
+    \ the constructor\n        Calculate(int num1,int num2)\n        {\n         \
+    \   // We assign the parameters to the class variables\n            number1 =\
+    \ num1;\n            number2 = num2;\n        }\n\n        public void Addition()\n\
+    \        {\n            sum=number1+number2;\n        }\n\n        public void\
+    \ Show()\n        {\n            Console.WriteLine(\"The total is:{0}\",sum);\n\
+    \        }\n\n        public static void Main(string[] args)\n        {\n    \
+    \        int a,b;\n\n            Console.WriteLine(\"Enter value of a\");\n  \
+    \          a = Convert.ToInt32(Console.ReadLine());\n\n            Console.WriteLine(\"\
+    Enter value of b\");\n            b = Convert.ToInt32(Console.ReadLine());\n\n\
+    \            // a and b are passed through to the class constructor\n        \
+    \    Calculate c1 = new Calculate(a,b);\n        }\n    }\n```"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '```
+
+    c1.Addition();
+
+    c1.Show();
+
+
+    Console.ReadLine();
+
+
+    ```
+
+
+    When compiled the result of the class is:
+
+
+    Enter value of a
+
+    10
+
+    Enter value of b
+
+    20
+
+    The total is: 30'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# # C# destructors\n\nA destructor is a special function in a class that is\
+    \ used very rarely to usually release unmanaged resources before exiting the class.\
+    \ The destructor has several limitations on how it can be used:\n\n+   - It cannot\
+    \ be inherited.\n- It cannot be overloaded.\n- There can only be one destructor\
+    \ in any given class.\n- The destructor cannot be directly called by the programmer;\
+    \ it is instead called by the Garbage Collector.\n\nDestructor has the same name\
+    \ as its class and is prefixed with ~ symbol which is represented by a tilde.\n\
+    \n# Example of Destructors\n\n```\nExample 21:\nusing System;\nnamespace destruct\n\
+    {\nclass Calculate\n{\n    int number1,number2,sum;\n    Calculate()\n    {\n\
+    \        number1=15;\n        number2=4;\n    }\n    public void Addition()\n\
+    \    {\n        sum=number1+number2;\n    }\n    public void Show()\n    {\n \
+    \       Console.WriteLine(\"The total is:{0}\",sum);\n    }\n\n    // Destructor\
+    \ is defined here and is called when the class\n    // goes out of scope.\n  \
+    \  ~Calculate()\n    {\n        Console.WriteLine(\"Destructor invoked\");\n \
+    \   }\n}\n```"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "```\npublic static void Main(string[] args)\n{\n    Calculate c1=new Calculate();\n\
+    \    c1.Addition();\n    c1.Show();\n}\n```\n\nWhen compiled the result of the\
+    \ class will be:\n\nThe total is: 19"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# 8.2 Defining methods\n\nMethod is a set of one or more program statements,\
+    \ which can be executed by calling the method name. For using a method, the user\
+    \ first needs to define a method and then call the method.\n\nDefining a method\
+    \ means declaring the element of its structure. The following syntax is used for\
+    \ defining the method.\n\n```\n<Access Specifier> <Return Type> <Method Name>\
+    \ ( Parameter List)\n{\n  Method Body\n}\n```\n\nThe different elements of a method:\n\
+    \n+   * Access specifier: It checks the extent to which the variable or method\
+    \ can be accessed.\n* Return Type: This defines what the type is for the value\
+    \ returned by the method. If the type is set as void then this would mean that\
+    \ the method does not return anything.\n* Method Name: It is a unique identifier\
+    \ and case sensitive. The method name cannot be the same as a variable name.\n\
+    * Parameter List: The values that are passed and received by the method. After\
+    \ the method name, they are written in parentheses.\n* Method Body: The set of\
+    \ instructions for performing the function of the actual method.\n\nExample:\n\
+    \n![](img/c133ae999967b1fbceab3bccc1cb1d4f_74_0.png)"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "```\npublic int Number(int no1, int no2)\n{\n    int output;\n    output =\
+    \ no1+no2/2;\n    return output;\n}\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "# 8.3 Calling methods\n\nOnce the method is defined, a user can call the method\
+    \ using the method name. The method name is followed by the parentheses.\n\nExample:\n\
+    \n```\nExample 23:\nusing System;\nclass Average\n{\n    public int Number(int\
+    \ no1, int no2)\n{\n        int output;\n        output = no1+no2;\n        return\
+    \ output;\n    }\n    static void Main(string[] args)\n{\n        Average a =\
+    \ new Average();\n        // calling method Number from object class a\n     \
+    \   int value = a.Number(20,30);\n        Console.WriteLine(\"The result is {0}\"\
+    ,value);\n    }\n}\n```\n\nWhen the code is compiled the result is:\n\nThe result\
+    \ is 25"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "# 8.5 Recursive method call\n\nA method can call itself this is known as recursion.\n\
+    \n```\nExample 24:\nusing System;\nnamespace recursive\n{\n    class recursivecall\n\
+    \    {\n        public int factorial(int no)\n        {\n            int result;\n\
+    \            if(no == 1)\n            {\n                return 1;\n         \
+    \   }\n            else\n            {\n                result = factorial(no-1)*no;\n\
+    \                return result;\n            }\n        }\n        static void\
+    \ Main(string[] args)\n        {\n            recursivecall r = new recursivecall();\n\
+    \            Console.WriteLine(\"Factorial of no is {0}\".n.factorial(2));\n \
+    \           Console.WriteLine(\"Factorial of no is {0}\".n.factorial(3));\n  \
+    \          Console.Read();\n        }\n    }\n}\n```\n\nWhen the code is complied\
+    \ the result will be:\n\nFactorial of no is 2\nFactorial of no is 6"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# 8.4 Passing parameters to method\n\nWhen a user calls a method, if the method\
+    \ parameters then then these will have to be passed through at the time the method\
+    \ is called. There are three types of parameters passed to the method.\n\n# Value\
+    \ parameter\n\nWith a value parameter, the method creates a copy of this passed\
+    \ in parameter as a variable for use inside the method. If the value of this variable\
+    \ is changed, it will be only changed in the scope of the method itself and not\
+    \ of the original variable that was passed in as a parameter to the method.\n\n\
+    Example:\n\n```\nExample 25:\nclass Program\n{\n    void Increaseno(int no)\n\
+    \    {\n        no++;\n    }\n    public static void Main()\n    {\n        Program\
+    \ p = new Program();\n        int number = 2;\n        p.Increaseno(number);\n\
+    \        Console.WriteLine(number);\n    }\n}\n```\n\nWhen the code is complied\
+    \ the result will be:\n\n2\n\n# Reference Parameter\n\nThe reference parameter\
+    \ is the same as the value parameter except that when the parameter is passed\
+    \ to the method, instead of creating a copy of the parameter value, it instead\
+    \ directly points to the original stored value in memory. Thus, if the value is"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "changed in the scope of the method then it will also change the value of the\
+    \ original variable that was passed in as a parameter.\n\nThe ref keyword is used\
+    \ for declaring the reference parameter.\n\nExample:\n\n# ### Example 26:\n```csharp\n\
+    class Program\n{\n    void Increase(int no)\n    {\n        no++;\n    }\n   \
+    \ public static void Main()\n    {\n        Program p = new Program();\n     \
+    \   int number = 2;\n        p.Increase(ref number);\n        Console.WriteLine(number);\n\
+    \    }\n}\n```\n\nWhen the code is complied the result will be:\n\n3\n\n# Output\
+    \ parameter\n\nThe return statement is used for returning value from the method.\
+    \ Only a single variable can be returned using return statement. The output parameter\
+    \ provides this purpose.\n\nThey are similar to reference parameters, except they\
+    \ transfer data out of the method.\n\nExample:\n\n# ### Example 27:\n```csharp\n\
+    class Program\n{\n    void Demo(out int no)\n}\n```"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\nno=10;\npublic static void Main()\n{\n    Program p=new Program();\n \
+    \   int number;\n    p.Demo(out number);\n    Console.WriteLine(number);\n}\n\
+    }\n```\n\nWhen the code is complied the result will be:\n\n10"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# Chapter 9 Arrays in C#'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# # 9.1 Introduction to arrays
+
+
+    An array is a collection of values of similar data type. The variables in the
+    array are known as the elements of the array. The array elements are accessed
+    using a single name and an index number representing the position of the element
+    within the array.
+
+
+    An array has a rank that determines the number of indices associated with every
+    array element. The rank of the array is also referred to as the dimensions of
+    the array. The following figure shows the array structure in the system.
+
+
+    ![](img/c133ae999967b1fbceab3bccc1cb1d4f_82_0.png)'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# 9.2 Arrays declaration
+
+
+    An array is declared before it is used in any program. The following syntax is
+    used to declare an array.
+
+
+    ```
+
+    datatype[] ArrayName;
+
+    ```
+
+
+    The syntax of an array involves the components mentioned below:
+
+
+    +   - datatype: Used for specifying the data type for elements. It will be stored
+    in an array.
+
+    - [] : Specify the size of the array and is referred to as rank.
+
+    - ArrayName: States the name of the array.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# 9.3 Initializing and adding values
+
+
+    The **new** keyword is used to create an instance of the array. The size of array
+    is specified when it is initialized. The following code snippet is used to initialize
+    the array.
+
+
+    ```
+
+    int [ ] x;
+
+    x = new int [15];
+
+    ```
+
+
+    The array can be initialized by combining the two statements and is written as:
+    int [ ] x = new int [15];
+
+
+    # Assigning values to an array
+
+
+    The values can be assigned to each element of the array using the **index number**.
+    It is also known as subscript of the element. The following code snippet is used
+    for assigning the values to an array.
+
+
+    ```
+
+    int [ ] amount = new int [5];
+
+    int [0] = 50;
+
+    ```
+
+
+    The array can be created and initialized using the following code:
+
+
+    ```
+
+    int [ ] amount = { 40,60,70,80};
+
+    ```
+
+
+    The size of an array can be removed.
+
+
+    ```
+
+    int [ ] age = new int[ ] { 21,31,40 };
+
+    ```
+
+
+    When a user copies the data from one array into another, the source and target
+    array refer to same location. The following code snippet shows the copying of
+    one array to another.
+
+
+    ```
+
+    int [ ] age = new int[ ] { 12,14,15,16};
+
+    int [ ] amount = age;
+
+    ```
+
+
+    The two arrays as **age** and **amount** are created. They point to same memory
+    location.'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "# 9.4 Accessing array elements\n\nTo access an element in an array, you will\
+    \ need to use an index. An index is the number that represents the position of\
+    \ elements in the array. Indexes always start from zero, so to access the first\
+    \ element in an array we would do so in this format:\n\n```\narray_name[index]\n\
+    ```\n\nIn this case the value of index will be zero.\n\nExample:\n\n> Example\
+    \ 28:\nusing System;\nnamespace arraydeclare\n{\n    class ArrayDemo\n    {\n\
+    \        static void Main(string[] args)\n        {\n            int [] a = new\
+    \ int[5];\n            int x,y;\n\n            for(int x=0;x<5;x++)\n        \
+    \    {\n                a[x]=x+10;\n            }\n            for(y=0;y<5;y++)\n\
+    \            {\n                Console.WriteLine(\"Element [{}]={1}\", y,a[y]);\n\
+    \            }\n            Console.ReadLine();\n        }\n    }\n}\n\nWhen the\
+    \ code is compiled and executed, the output is:\n\nElement [0] = 10\nElement [1]\
+    \ = 11\nElement [2] = 12\nElement [3] = 13\nElement [4] = 14"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "# 9.5 Foreach loop\n\nThis loop is specifically designed to iterate through\
+    \ all elements of an array. It is great for retrieving elements of an array efficiently.\n\
+    \nSyntax:\n\n```\nforeach(type identifier in expression)\n    statement – block\n\
+    ```\n\nExample:\n\n![](img/c133ae999967b1fbceab3bccc1cb1d4f_86_0.png)\n\nThe code\
+    \ is compiled and executed, the output is:\n\nElement[0] = 10\nElement[1] = 11\n\
+    Element[2] = 12"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: 'Element [3] = 13
+
+    Element [4] = 14'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "# 9.6 Different C# arrays\n\nThe following are various types of C# arrays that\
+    \ are used for developing code.\n\n# Multi-dimensional arrays\n\nA multi-dimensional\
+    \ array stores data in more than one row dimension. It is also known as rectangular\
+    \ array. User can declare two-dimensional array of integer as:\n\n```\nint [ ,\
+    \ ] no;\n```\n\nA two-dimensional array can be considered as table. It has x rows\
+    \ and y columns. two-dimensional array contains 2 rows and 4 columns.\n\n| | Column\
+    \ 0 | Column 1 | Column 2 | Column 3 |\n|---|---|---|---||\n| Row 0 | x[0][0]\
+    \ | x[0][1] | x[0][2] | x[0][3] |\n| Row 1 | x[1][0] | x[1][1] | x[1][2] | x[1][3]\
+    \ |\n\n# Initializing two dimensional arrays\n\nThe following array has 3 rows\
+    \ and 3 columns.\n\n```\nint [ , ] x = int [ 3, 3 ] = {\n  {1, 2, 3},\n  {4, 5,\
+    \ 6},\n  {7, 8, 9}\n};\n```\n\n# Accessing elements of multidimensional array\n\
+    \nAn element from the multi dimensional array can be accessed using the subscripts.\
+    \ They are row and column index of the array.\n\n# Example:"
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '```
+
+    int output = a [1, 2];
+
+    ```
+
+
+    In the above statement, the element from second row and column is accessed.
+
+
+    # Example:
+
+
+    ```
+
+    Example 30:
+
+    using System;
+
+    namespace twimensional{
+
+    class multiarray{
+
+    static void Main(string[] args) {
+
+    int [ , ] x = new int[3,2]{{1,1},{2,2},{3,3}};
+
+    int a,b;
+
+    for(a=0;a<3;a++) {
+
+    for(b=0;b<2;b++) {
+
+    Console.Write("x[{0}],{1}={2}",a,b,x[a]);
+
+    }
+
+    Console.ReadLine();
+
+    }
+
+    }
+
+    }
+
+    ```
+
+
+    The code is compiled and executed, the output is:
+
+
+    x[0,0] = 1
+
+    x[0,1] = 1
+
+    x[1,0] = 2
+
+    x[1,1] = 2
+
+    x[2,0] = 3
+
+    x[2,1] = 3
+
+
+    # Jagged Array
+
+
+    A jagged array is an array of arrays. The jagged array of int type is declared
+    as:
+
+
+    ```
+
+    int [ ][ ] marks;
+
+    ```'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "An array can be initialized as:\n\n```\nint [ ] [ ] marks = new int [ ] []\
+    \ new int [ ] {45,57,78}, new int [ ] {60, 75,\n86,45,35};\n```\n\nThe marks array\
+    \ is of two arrays of integers as marks[0] with 3 integers and marks[1]\nwith\
+    \ 5 integers.\n\n# Example:\n\n# Example 31:\n\n```\nusing System;\nnamespace\
+    \ Jaggedarray\n{\n    class jagged\n    {\n        static void Main(string[] args)\n\
+    \        {\n            int[][] x = new int[][][\n                new int[]{0,0},\n\
+    \                new int[]{2,2},\n                new int[]{3,4},\n          \
+    \      new int[]{4,2},\n                new int[]{1,3};\n            int a,b;\n\
+    \            for(a=0;a<5;a++)\n            {\n                for(b=0;b<2;b++)\n\
+    \                {\n                    Console.WriteLine(\"x[{0}][{1}]={2}\"\
+    ,a,b,x[a][b]);\n                }\n            }\n            Console.ReadLine();\n\
+    \        }\n    }\n}\n```\n\nThe code is compiled and executed, the output is:\n\
+    \nx[0,0] = 0"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "x[0,1] = 0\nx[1,0] = 2\nx[1,1] = 2\nx[2,0] = 3\nx[2,1] = 4\nx[3,0] = 4\nx[3,1]\
+    \ = 2\nx[4,0] = 1\nx[4,1] = 3\n\n# Param Arrays\n\nWhen a method is declared,\
+    \ the number of arguments to be passed as parameter is not decided. The **Param**\
+    \ array is used.\n\n# Example:\n\n```\n**Example 32:**\n```csharp\nusing System;\n\
+    amespace ParamArray\n{\n    class ParamArray\n    {\n        public int AddValues(params\
+    \ int[] data)\n        {\n            int total = 0;\n            foreach(int\
+    \ a in data)\n            {\n                total+= a;\n            }\n     \
+    \       return total;\n        }\n    }\n\n    class Test\n    {\n        static\
+    \ void Main(string[] args)\n        {\n            ParamArray pa = new ParamArray();\n\
+    \            int total=pa.AddValues(2,3,4,5,6);\n            Console.WriteLine(\"\
+    The sum is {0}\",total);\n            Console.Read();\n        }\n    }\n}\n```\n\
+    ```"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "When the code is compiled and executed, the output is:\n\nThe sum is 20\n\n\
+    # Array Class\n\nThe array class is the base class for all arrays in C#. The System\
+    \ namespace contains the array class. There are various properties and methods\
+    \ used in the array class.\n\n# Properties of Array class\n\n+   * **Length**:\
+    \ The total number of items in all dimensions of an array are returned\n* **Rank**:\
+    \ It returns the rank of an array\n* **IsFixedSize**: It is a value indicating\
+    \ an array has fixed size or not\n* **IsReadOnly**: Value stating the array is\
+    \ read only or not\n\n# Methods of Array class\n\n+   * **Sort**: The sort operation\
+    \ on an array passed to it as a parameter\n* **Clear**: It removes all the items\
+    \ in an array and sets range of items to 0\n* **GetLength**: The number of items\
+    \ in an array are returned\n* **GetValue**: The value of the specified item in\
+    \ an array\n* **IndexOf**: The index of the first occurrence of a value in one\
+    \ dimensional array returned\n* **Reverse**: It reverses the sequence of elements\
+    \ in the array\n\n# Example:\n\n```\nExample 33:\nusing System;\nnamespace Array\n\
+    {\nclass Array1\n{\n    static void Main(string[] args)\n    {\n        int[]\
+    \ item = {12,34,23,55,64};\n        int[] value = item;\n        Console.Write(\"\
+    Original Array:\");\n        foreach(int x in item)\n    }\n}\n}\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "```\nConsole.Write(x+\" \");\n}\nConsole.WriteLine();\n\n//reverse the array\n\
+    Array Reverse(value);\nConsole.Write(\"Array reversed:\");\n\nforeach(int x in\
+    \ value)\n{\n    Console.Write(x+\" \");\n    Console.WriteLine();\n}\n\n//sort\
+    \ the array\nArray.Sort(item);\nConsole.Write(\"Array sorted:\");\nConsole.Read();\n\
+    }\n}\n```\n\nWhen the code is compiled and executed, the output is:\n\nOriginal\
+    \ Array: 12 34 23 55 64\nArray reversed: 64 55 23 34 12\nArray sorted: 12 23 34\
+    \ 55 64"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# Chapter 10 Strings in C#'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# 10.1 Creation of string\n\nA string in C# is an array of characters. The\
+    \ string keyword is used for declaring the variable. The keyword is an alias for\
+    \ System.String class.\n\n# String Object creation\n\nThere are various methods\
+    \ used for string creation. They are:\n\n+   * Retrieving a property or calling\
+    \ a method returning a string\n* Use of string class constructor\n* Use of string\
+    \ concatenation operator (+)\n* Calling formatted method for converting a value\
+    \ or an object to the string representation\n* Assigning a string literal to the\
+    \ string variable\n\nExample:\n\n```\nExample 34:\nusing System;\nnamespace StringType\n\
+    {\nclass Program\n{\n    static void Main(string[] args)\n{\n        //string\
+    \ literal and concatenation\n        string name=\"Location\";\n        name =\
+    \ \"Harry\";\n        string value = name +location;\n        Console.WriteLine(\"\
+    The value is:{0}\",value);\n\n        //string constructor\n        char[] vowels\
+    \ = {'a',''e',''i',''o',''u'};\n        string item = new string(vowels);\n  \
+    \      Console.WriteLine(\"The item contains values:{0}\",item);\n\n        //formatting\
+    \ method for value conversion\n        DateTime dt = new DateTime(2014,12,10,15,34,1);\n\
+    \        string msg = string.Format(\"Message sent at {0} on {0:D}\",dt);\n  \
+    \  }\n}\n//method returning value\n```"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '```
+
+    string[] array = {"Welcome","User"};
+
+    string result = String.Join("",",array);
+
+    Console.WriteLine("Message is:{0}",result);
+
+    ```
+
+
+    When the code is compiled and executed, the output is:
+
+
+    The value is: Harry USA
+
+    The item contains values: aeiou
+
+    Message sent at 2.30 PM on Tuesday, June 02, 2015
+
+    Message is: Welcome User'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# 10.2 Properties and methods of string class
+
+
+    Properties of string class
+
+
+    +   - Chars: Gets the Char object at specific position in the String object
+
+    - Length: Gets the number of characters in the String object
+
+
+    Methods of string class
+
+
+    +   - public bool Equals(string value)
+
+    Checks whether the current String object and the specified object have same value
+
+    - public string Insert(int startIndex, string value)
+
+    Returns a new string in which the specified is inserted at a specific index position
+
+    - public string Replace(char oldchar, string newValue)
+
+    All the occurrences of a specific character in the string object are replaced
+    with Unicode character and a new string is returned
+
+    - public int LastIndexOf(string value)
+
+    The zero based index position of the last occurrence of the Unicode character
+    in the string object is returned
+
+    - public string Trim()
+
+    All leading and trailing white space characters from the object are returned.
+
+    - public static int Compare(string str1, string str2, bool IgnoreCase)
+
+    Compares the two strings and an integer value stating the relative position in
+    sort order
+
+    - public static String Concat(string str1, string str2)
+
+    Concatenates the two string objects
+
+    - public string[] Split(char[] separator, int count)
+
+    A array containing the substrings in the current string object is returned. It
+    is delimited by the elements of a specific Unicode character array. The number
+    of substrings is returned by the int parameter.
+
+    - public bool Contains(string value)
+
+    Returns value stating the specified string object occurs in the string
+
+    - public static string Copy(string str)
+
+    Creates a new String object with the same value as the specified string
+
+    - public string ToUpper()
+
+    Copy of the string converted into uppercase is returned
+
+    - public int IndexOf(string value)'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: 'Returns the zero – based index of the first occurrence of the specified string
+    in the instance
+
+
+    +   * **public string Remove(int startIndex)**n  It removes the characters in
+    the current instance, beginning at the specified position and moving to the last
+    one. It returns a string.
+
+
+    +   * **public char[] ToCharArray()**n  A Unicode character array with all the
+    characters in the current object is returned
+
+
+    +   * **public string ToLower()**n  Copy of the string converted into lowercase
+    is returned'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "# 10.3 Examples demonstrating the string functionality\n\nString Comparison\n\
+    \n```\nExample 35:\nusing System;\nnamespace string1\n{\n    class Program\n \
+    \   {\n        static void Main(string[] args)\n        {\n            string\
+    \ string1 = \"A string named as string1\";\n            string string2 = \"A string\
+    \ named as string2\";\n            if (String.Compare(string1,string2) == 0)\n\
+    \            {\n                Console.WriteLine(string1+\"and\"+string2+\"equal\"\
+    );\n            }\n            else\n            {\n                Console.WriteLine(string1+\"\
+    and\"+string2+\"not equal\");\n            }\n            Console.Read();\n  \
+    \      }\n    }\n}\n```\n\nWhen the code is compiled and executed, the output\
+    \ is:\n\nA string named as string1 and A string named as string2 are not equal\n\
+    \n# Joining strings\n\n```\nExample 36:\nusing System;\nnamespace string1\n{\n\
+    \    class Program\n    {\n        static void Main(string[] args)\n        {\n\
+    \            string[] str1 = new string[]{\"Set your aims high\",\n          \
+    \  \"Rome was not built in a day\",\n        }\n        }\n}\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "```\n```csharp\n\"Save Time\";\nstring str = String.Join(\"\\n\",str1);\nConsole.WriteLine(str);\n\
+    Console.Read();\n}\nn}\n```\n```\n\n# When the code is compiled and executed,\
+    \ the output is:\n\nSet your aims high\nRome was not built in a day\nSave Time\n\
+    \n# String containing value\n\n![](img/c133ae999967b1fbceab3bccc1cb1d4f_100_0.png)\n\
+    \n```\n```csharp\nusing System;\nnamespace string1\n{\n    class Program\n   \
+    \ {\n        static void Main(string[] args)\n        {\n            string str\
+    \ = \"A new user\";\n            if(str.Contains(\"user\"))\n            {\n \
+    \               Console.WriteLine(\"The value 'user' is present\");\n        \
+    \    }\n            Console.Read();\n        }\n    }\n}\nn```\n```\n\nWhen the\
+    \ code is compiled and executed, the output is:\n\nThe value 'user' is present"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Chapter 11 Encapsulation and Polymorphism'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# # 11.1 Introduction to encapsulation
+
+
+    **Encapsulation** is the process of enclosing data and function within a physical
+    or logical package. It helps the developers to prevent the access to the essential
+    details of an application. It binds the code and data together.
+
+
+    **Abstraction** states that all the information is present, but only **relevant
+    information** is provided to the user.
+
+
+    Abstraction and encapsulation are related features. Encapsulation assists abstraction
+    by providing means of hiding the non-essential details. Using encapsulation some
+    information is visible and others are hidden.'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "# 11.2 Access specifier in C#\n\nAn access specifier defines the scope of a\
+    \ class member. The member is used for referring the functions and variables of\
+    \ a class. A program consists of one or more classes. Some member of the class\
+    \ needs to be accessed by other classes.\n\n# Types of Access Specifier\n\nThe\
+    \ following access specifiers are supported by C#.\n\n+   * public\n* private\n\
+    * protected\n* internal\n* protected internal\n\n# Public Access Specifier\n\n\
+    Public access specifier allows the class to expose the member variables and functions\
+    \ with other classes. The member declared as public can be accessed from outside\
+    \ the class.\n\n# Example of public access specifier\n\n```\nExample 38:\nusing\
+    \ System;\nnamespace public1\n{\nclass User\n{\n    //member variables\n    public\
+    \ string name;\n    public int age;\n    public void AddValue()\n    {\n     \
+    \   Console.WriteLine(\"Enter the user name:\");\n        name = Console.ReadLine();\n\
+    \        Console.WriteLine(\"Enter the age:\");\n        age = Convert.ToInt32(Console.ReadLine());\n\
+    \    }\n    public void Show()\n{\n}\n```"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "```\nConsole.WriteLine(\"User name is:{0}\",name);\nConsole.WriteLine(\"Age\
+    \ is:{0}\",age);\n\n}\nclass Program {\n    static void Main(string[] args) {\n\
+    \        User u = new User();\n        u.AddValue();\n        u.Show();\n    \
+    \    Console.Read();\n    }\n}\n\n```\n\nWhen the code is compiled and executed,\
+    \ the output is:\n\nEnter the user name:\nMark\nter the age:\n20\nUser name is:\
+    \ Mark\nAge is: 20\n\n# Private Access Specifier\n\nThe private access specifier\
+    \ allows the user to hide classes' member variables and functions from other class\
+    \ objects and functions. The private members are not visible from outside the\
+    \ class. Only the class functions within the class itself can access the private\
+    \ entity. Objects or instances of the class cannot access any private variables\
+    \ or functions as they are declared as external to the class.\n\nExample:\n\n\
+    | Example 39:\nusing System;\nnamespace private1 {\n    class Student {\n    \
+    \    //member variables\n    }\n}"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "```\nprivate string name;\nprivate int age;\npublic void AddValue()\n{\n  \
+    \  Console.WriteLine(\"Enter the student name:\");\n    name = Console.ReadLine();\n\
+    \    Console.WriteLine(\"Enter the age:\");\n    age = Convert.ToInt32(Console.ReadLine());\n\
+    }\npublic void Show()\n{\n    Console.WriteLine(\"Student name is:{0}\",name);\n\
+    \    Console.WriteLine(\"Age is:{0}\",age);\n}\nclass Program\n{\n    static void\
+    \ Main(string[] args)\n    {\n        Student s = new Student();\n        s.AddValue();\n\
+    \        s.Show();\n        Console.Read();\n    }\n}\n```\n\nWhen the code is\
+    \ compiled and executed, the output is:\n\nEnter the student name:\nHarry\nEnter\
+    \ the age:\n15\n\nStudent name is: Harry\nEnter the age: 15\n\n# Protected access\
+    \ specifier\n\nProtected access specifier allows the class to hide the member\
+    \ variables and functions from other class objects and functions, except from\
+    \ child classes. The specifier is useful during the implementation of inheritance.\n\
+    \n# Example:"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "# Example 40:\n\n```\nusing System;\nnamespace protected1\n{\n    class Employee\n\
+    \    {\n        //member variables\n        protected string name;\n        public\
+    \ void AddValue()\n        {\n            Console.WriteLine(\"Enter the employee\
+    \ name:\");\n            name = Console.ReadLine();\n        }\n        public\
+    \ void Show()\n        {\n            Console.WriteLine(\"Employee name is:{0}\"\
+    ,name);\n        }\n    }\n    class Program\n    {\n        static void Main(string[]\
+    \ args)\n        {\n            Employee e = new Employee();\n            e.AddValue();\n\
+    \            e.Show();\n            Console.Read();\n        }\n    }\n}\n```\n\
+    \nWhen the code is compiled and executed, the output is:\n\nEnter the employee\
+    \ name:\nAjay\nEmployee name is: Ajay\n\n# Internal access specifier\n\nInternal\
+    \ access specifier allows a class to expose its member functions and variables\
+    \ to the containing child classes or classes within the same application.\n\n\
+    Example:"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "# Example 41:\n\n```\nusing System;\nnamespace internal\n{\n    class Location\n\
+    \    {\n        //member variables\n        internal string city;\n        public\
+    \ void AddValue()\n        {\n            Console.WriteLine(\"Enter the city name:\"\
+    );\n            name = Console.ReadLine();\n        }\n        public void Show()\n\
+    \        {\n            Console.WriteLine(\"City name is:{0}\",name);\n      \
+    \  }\n    }\n    class Program\n    {\n        static void Main(string[] args)\n\
+    \        {\n            Location l = new Location();\n            l.AddValue();\n\
+    \            l.Show();\n            Console.Read();\n        }\n    }\n```\n\n\
+    When the code is compiled and executed, the output is:\n\nEnter the city name:\n\
+    London\nCity name is: London\n\n# Protected Internal access specifier\n\nThe **protected\
+    \ internal** access specifier allows a class to expose the member functions and\
+    \ variables to the containing class, child class, or classes in same application.\
+    \ The access to the derived classes outside the application is allowed."
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# Example:\n\n# Example 42:\n\n```\nusing System;\nnamespace protectinternal\n\
+    {\n    class number\n    {\n        //member variables\n        protected int\
+    \ no;\n        public void AddValue()\n        {\n            Console.WriteLine(\"\
+    Enter the number:\");\n            no = Convert.ToInt32(Console.ReadLine());\n\
+    \        }\n        public void Show()\n        {\n            Console.WriteLine(\"\
+    Number is: {0}\",no);\n        }\n    }\n    class Program\n    {\n        static\
+    \ void Main(string[] args)\n        {\n            number n = new number();\n\
+    \            n.AddValue();\n            n.Show();\n            Console.Read();\n\
+    \        }\n    }\n}\n```\n\nWhen the code is compiled and executed, the output\
+    \ is:\n\nEnter the number:\n10\nNumber is: 10"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# 11.3 Polymorphism
+
+
+    Polymorphism is the ability of the function to exist in different forms. The word
+    ‘poly’ means many and ‘morphos’ means forms.
+
+
+    There are two types of polymorphism:
+
+
+    +   - Static: The response to a function is decided at compile time
+
+    - Dynamic: The response to function is decided at run time'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# 11.4 Static Polymorphism
+
+
+    The static polymorphism refers to entity which exists in different forms. C# has
+    two approaches for implementing polymorphism.
+
+
+    +   - Function overloading
+
+    - Operator overloading
+
+
+    # Function overloading
+
+
+    Function overloading helps a user to use the similar name for two or more functions.
+    The function definition must be different from each other by type or number of
+    arguments in the list.
+
+
+    Example:
+
+
+    ```
+
+    | Example 43:
+
+    using system;
+
+    namespace calculate
+
+    {
+
+    class calculate
+
+    {
+
+    public int Min(int no1, int no2)
+
+    {
+
+    if(no1 < no2)
+
+    {
+
+    return no1;
+
+    }
+
+    elelse
+
+    {
+
+    return no2;
+
+    }
+
+    }
+
+    public float Min(int no1, int no2)
+
+    {
+
+    if(no1 < no2)
+
+    {
+
+    return no1;
+
+    }
+
+    else
+
+    {
+
+    return no2;
+
+    }
+
+    n}
+
+    ```'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "```\n}\\class Program\n{\n    static void Main(string[] args)\n    {\n    \
+    \    Program p = new Program();\n        Console.WriteLine(\"Minimum value is:{0}\"\
+    ,p.Min(3,4));\n        Console.WriteLine(\"Minimum value is:{0}\", p.Min(3.2F,1.2F));\n\
+    \        Console.ReadLine();\n    }\n}\n}\n```\n\nWhen the code is compiled and\
+    \ executed, the output is:\n\nMinimum value is: 3\nMinimum value is: 1.2"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# 11.5 Dynamic Polymorphism
+
+
+    C# has two approaches for implementing dynamic polymorphism. They are:
+
+
+    +   - **Abstract classes**: They are unique type of base classes containing abstract
+    class members. The class members derived from the abstract class must implement
+    abstract functions and properties.
+
+    - **Virtual functions**: They do not really exist. They appear to be present in
+    some parts.
+
+
+    # Abstract class
+
+
+    An abstract class provides partial implementation of the class. When the derived
+    class inherits it, the implementation is completed. There are abstract methods
+    which are implemented using derived class.
+
+
+    # Rules for abstract class creation
+
+
+    +   - User cannot declare an abstract method outside the abstract class
+
+    - The instance of the abstract class cannot be created
+
+    - A class derived from an abstract class must override all the methods of the
+    class
+
+    - The abstract class cannot be declared as **sealed**
+
+
+    # Example:
+
+
+    ![](img/c133ae999967b1fbceab3bccc1cb1d4f_112_0.png)'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "```\n}\npublic override int average()\n{\n    Console.WriteLine(\"The average\
+    \ is:\");\n    return (x + y / 2);\n}\nclass Program\n{\n    static void Main(string[]\
+    \ args)\n    {\n        Data d = new Data(30, 70);\n        int a = d.average();\n\
+    \        Console.WriteLine(\"Average:{0}\",a);\n        Console.Read();\n    }\n\
+    }\n```\n\nWhen the code is compiled and executed, the output is:\n\nThe average\
+    \ is:\nAverage: 50\n\n# Virtual Functions\n\nIf you need a function that is defined\
+    \ in a class and needs to be implemented by an inherited class, the virtual function\
+    \ is used. The inherited class modifies the functionality of the inherited class\
+    \ depending on the requirement. The call to method at runtime.\n\nThe virtual\
+    \ keyword is used before the return type of the function.\n\n# Example:\n\n![](img/c133ae999967b1fbceab3bccc1cb1d4f_113_0.png)"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "```\npublic class Calculate(int l = 0, int m = 0)\n{\n    x = l;\n    y = m;\n\
+    \    public virtual int operation()\n    {\n        return 0;\n    }\n}\n```\n\
+    \n```\nclass Multiplication : Calculate\n{\n    public Multiplication(int l =\
+    \ 0, int m = 0):base(l,m)\n\n    public override int operation()\n{\n        Console.WriteLine(\"\
+    Multiplication is:\");\n        return x * y;\n    }\n}\n```\n\n```\nclass Addition\
+    \ : Calculate\n{\n    public Addition(int l = 0, int m = 0):base(l,m)\n\n    public\
+    \ override int operation()\n{\n        Console.WriteLine(\"Addition is:\");\n\
+    \        return x + y;\n    }\n}\n```\n\n```\nclass call\n{\n    public void callvalue(Calculate\
+    \ c)\n{\n        int z;\n        z = c.operation();\n        Console.WriteLine(\"\
+    Result:{0}\",z);\n    }\n}\n```\n\n```\nclass Program\n{\n    static void Main(string[]\
+    \ args)\n{\n        call p = new call();\n    }\n}\n```"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '```
+
+    Multiplication m = new Multiplication(10,2);
+
+    Addition t = new Addition(15,16);
+
+    p.callvalue(m);
+
+    p.callvalue(t);
+
+    Console.Read();
+
+    ```
+
+
+    When the code is compiled and executed, the output is:
+
+
+    Multiplication is:
+
+    Result: 20
+
+    Addition is:
+
+    Result: 31'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# Chapter 12 Inheritance and Interfaces'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# 12.1 Introduction to Inheritance
+
+
+    The concept of inheritance is fundamental to not only C# but also to most other
+    programming languages. It allows the user to create classes that inherit data
+    members and methods from other classes. Inheritance can save the user time by
+    allowing them to create several popular and well-used methods in a core class
+    and have other classes inherit that core class and all its methods. This stops
+    the user from repeating the same method in every class.'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "# 12.2 Base and derived classes\n\nThe structure of inheritance can be summed\
+    \ up in a few ways, for this example we have three classes A, B and C. The class\
+    \ B is derived from the class A. The class C is derived from class B. So what\
+    \ does this mean?\n\nIf we symbolize the relationship of these classes then we\
+    \ could show it like this:\n\nClass A Class Class B Class C\n\n+   * Since class\
+    \ B is derived from class A, we say that class A is the parent of class B. We\
+    \ can also say that class B is the child of class A.\n* Since class C is derived\
+    \ from class B, we say that class B is the parent of class C. We can also say\
+    \ that class C is the child of class B.\n* Since class C is derived from class\
+    \ B, which in turn is derived from class A, we say that class A is the grandparent\
+    \ of class C. We can also say that class C is the grandchild of class A.\n* In\
+    \ this instance since class A does not inherit from other classes, this class\
+    \ would be called the base class. Class B and class C would be declared as derived\
+    \ classes.\n\nIn this instance we have used the metaphor of parent and child to\
+    \ represent the relationship between the different classes and you will also encounter\
+    \ other metaphors such as super class (base class) and sub classes (derived classes)\
+    \ that describe the same relations.\n\nThe following is the way we would declare\
+    \ these relationships in code:\n\n```\n<access - speculator> class <base_class>\n\
+    {\n    ...\n}\nclass <derived_class> : <base_class>\n{\n    ...\n```"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "Example:\n\n# Example 46:\n\n```\nusing System;\n{\n    class Demo\n    {\n\
+    \        public void side(int s)\n        {\n            side = s;\n        }\n\
+    \        protected int side;\n    }\n    //Derived class\n    class Area : Demo\n\
+    \    {\n        public int getAreaOfSquare()\n        {\n            return s\
+    \ * s;\n        }\n    }\n    class Program\n    {\n        static void Main(string[]\
+    \ args)\n        {\n            Area a = new Area();\n            a.side(4);\n\
+    \n            //Display the area of square\n            Console.WriteLine(\"Area\
+    \ is {0}\",a.getAreaOfSquare());\n            Console.Read();\n        }\n   \
+    \ }\n}\n```\n\nWhen the code is compiled and executed, the output is:\n\nArea\
+    \ is: 16"
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: "# 12.3 Base class initialization\n\nWhen creating an inheritance structure\
+    \ the user must start with the base class (super class) first. Below is an example\
+    \ of how a base class is set up and how derived classes inherit from it.\n\nExample:\n\
+    \n```\nExample 47:\nusing System;\nnamespace Base1\n{\n    class Square\n    {\n\
+    \        //member variables\n        protected int side;\n        public Square(int\
+    \ s)\n        {\n            side = s;\n        }\n        public int CalculateArea()\n\
+    \        {\n            return side * side;\n        }\n        public void Show()\n\
+    \        {\n            Console.WriteLine(\"The value of side is:{0}\",side);\n\
+    \            Console.WriteLine(\"Area is:{0}\",CalculateArea());\n        }\n\
+    \    }\nclass Paint : Square\n{\n    private int amount;\n    public Paint(int\
+    \ side):base(side)\n    {\n    }\n    public int Totalamount()\n    {\n      \
+    \  int amount;\n        amount = CalculateArea * 50;\n        return amount;\n\
+    \    }\n```"
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "```\n}\npublic void Show()\n{\n    base.Show();\n    Console.WriteLine(\"Total\
+    \ amount is:{0}\",Totalamount());\n}\nclass Program\n{\n    static void Main(string[]\
+    \ args)\n    {\n        Paint p = new Paint(7);\n        p.Show();\n        Console.Read();\n\
+    \    }\n}\n}\n```\n\nWhen the code is compiled and executed, the output is:\n\n\
+    The value of side is: 3\nArea is: 9\nTotal amount is: 450"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "# 12.4 Interfaces in C#\n\nAn interface is an abstract base class that declares\
+    \ methods but do not declare any logic within the methods. Essentially interfaces\
+    \ can be described as contracts, which all classes that inherit the interface\
+    \ must follow. Interfaces spell out what methods and attributes every derived\
+    \ class must have. If these methods are not present in the derived classes then\
+    \ an error will occur.\n\n# Declaring Interfaces\n\nThe interface keyword is used\
+    \ for declaring the interface. They have public as their default data type.\n\n\
+    # Example of interface declaration\n\n```\npublic interface IInterface\n{\n  \
+    \  void MethodToImplement();\n}\n```\n\nExample:\n\n```\nExample 48:\nusing System;\n\
+    namespace interface I\n{\n    public interface IStudentInfo\n    {\n        //interface\
+    \ members\n        void ShowData();\n    }\n\n    public class StudentInfo : IStudentInfo\n\
+    \    {\n        private int srno;\n        private string name;\n        private\
+    \ string subject;\n\n        public StudentInfo()\n        {\n            srno\
+    \ = \"111\";\n        }\n    }\n```"
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "```\nname = \"\";\nsubject = \"\";\n}\n\npublic StudentInfo(int s, string n,\
+    \ string b)\n{\n    srno = s;\n    name = n;\n    subject = b;\n}\n\npublic void\
+    \ ShowData()\n{\n    Console.WriteLine(\"Student no:{0}\",srno);\n    Console.WriteLine(\"\
+    Student name is:{0}\",name);\n    Console.WriteLine(\"Subject is:{0}\",subject);\n\
+    }\n\nclass Program\n{\n    static void Main(string[] args)\n    {\n        StudentInfo\
+    \ s = new StudentInfo(10,\"Alex\",\"Maths\");\n        StudentInfo s1 = new StudentInfo(20,\"\
+    Adam\",\"Science\");\n        s.ShowData();\n        s1.ShowData();\n        Console.Read();\n\
+    \    }\n}\n```\n\nWhen the code is compiled and executed, the output is:\n\nStudent\
+    \ no: 10\nStudent name is: Alex\nSubject is: Maths\nStudent no: 20\nStudent name\
+    \ is: Adam\nSubject is: Science"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: "# ## 12.5 Multiple inheritance in C#\n\nMultiple inheritance is the practice\
+    \ of derived classes inheriting from two unrelated classes. This practice is not\
+    \ naturally supported in C#, however with the use of interfaces we can mimic the\
+    \ behavior of multiple inheritance to a certain degree.\n\nBelow is an example\
+    \ of this use of interfaces to simulate multiple inheritance:\n\n```\nExample\
+    \ 49:\nusing System;\nnamespace multiple1\n{\n    class Area\n    {\n        protected\
+    \ int base;\n        protected int height;\n        public void setbase(int b)\n\
+    \        {\n            base = b;\n        }\n        public void setheight(int\
+    \ h)\n        {\n            height = h;\n        }\n    }\n\n//Base class\npublic\
+    \ interface Paint\n{\n    int amount(int area);\n}\n\n//Derived class\nclass Triangle\
+    \ : Area,Paint\n{\n    public int getValue()\n    {\n        return ( 1/2 * b\
+    \ * h);\n    }\n    public int amount(int area)\n    {\n        return area *\
+    \ 50;\n    }\n}\nclass Program\n```"
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "```\n{\n    Triangle t = new Triangle();\n    int area;\n    t.setbase(4);\n\
+    \    t.setheight(5);\n    area = t.getArea();\n\n    //Display the area\n    Console.WriteLine(\"\
+    Area is: {0}\",t.getValue());\n    Console.WriteLine(\"Total paint cost is: {0}\"\
+    ,t.amount());\n    Console.Read();\n}\n```\n\nWhen the code is compiled and executed,\
+    \ the output is:\n\nArea is: 10\nTotal Pain cost is: 500"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# Chapter 13 Operator overloading and exception handling'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "# 13.1 Introduction to Operator Overloading\n\nThe built in operators can be\
+    \ redefined or overloaded in C#. The overloaded operators are functions having\
+    \ an operator keyword. It is followed by the symbol for the operator to be defined.\
+    \ The overloaded operator has a return type and a parameter list.\n\nExample:\n\
+    \nExample 50:\nusing System;\nnamespace operator1\n{\n    class Room\n    {\n\
+    \        private int length;\n        private int breadth;\n        public int\
+    \ getArea()\n        {\n            return length * breadth;\n        }\n    \
+    \    public void setlen(int len)\n        {\n            length = len;\n     \
+    \   }\n        public void setbread(int bread)\n        {\n            breadth\
+    \ = bread;\n        }\n+// operator is overloaded\n        public static Room\
+    \ operator + (Room r, Room s)\n        {\n            Room o = new Room();\n \
+    \           o.length = r.length + s.length;\n            o.breadth = r.bread +\
+    \ s.bread;\n            return o;\n        }\n    }\n    class Program\n    {\n\
+    \        public static void Main(string[] args)\n        {\n            Room o1\
+    \ = new Room();\n        }\n    }"
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '```
+
+    Room o2 = new Room();
+
+    Room o3 = new Room();
+
+    int area = 0;
+
+    ```
+
+
+    ```
+
+    // Room 1 specification
+
+    o1.setlen(10);
+
+    o1.setbread(5);
+
+    ```
+
+
+    ```
+
+    // Room 2 specification
+
+    o2.setlen(5);
+
+    o2.setbread(10);
+
+    ```
+
+
+    ```
+
+    // area of room 1
+
+    area = o1.getArea();
+
+    Console.WriteLine("Area of Room 1 is:{0}",area);
+
+    ```
+
+
+    ```
+
+    // area of room2
+
+    area = o2.getArea();
+
+    Console.WriteLine("Area of Room 2 is:{0}",area);
+
+    ```
+
+
+    ```
+
+    // Adding two objects
+
+    o3 = o1 + o2;
+
+    ```
+
+
+    ```
+
+    //Area of Room 3
+
+    area = o3.getArea();
+
+    Console.WriteLine("Area of Room 3 is:{0}",area);
+
+    Console.Read();n}
+
+    ```
+
+
+    When the code is compiled and executed, the output is:
+
+
+    Area of Room 1 is: 50
+
+    Area of Room 2 is: 150
+
+    Area of Room 3 is: 225'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# 13.2 Different operators in overloading
+
+
+    The operators that can be overloaded in C# are mentioned below:
+
+
+    | Operators | Description |
+
+    |---|---|
+
+    | +, -, *, % | Binary operators has two operands and can be overloaded |
+
+    | +, -, ++, -- | Unary operators take one operand and can be overloaded |
+
+    | &&, || | Conditional logical operators. They cannot be overloaded directly |
+
+    | =, !=, <, >, <=, >= | Comparison operators. They cannot be overloaded |
+
+    | =, .., ?, new, is sizeof, typeof | They cannot be overloaded |
+
+    | +=, -=, *=, /=, %= | Assignment operators and cannot be overloaded |'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: "# # 13.3 Introduction to exception handling\n\nAn **exception** is an error\
+    \ that occurs during the execution of a program. The exception occurs when an\
+    \ operation is not completed normally, thus the system throws an error when an\
+    \ exception occurs.\n\nC #exception handling is based on four keywords: **try,\
+    \ catch, finally and throw.**\n\n+   - **try**: Try block checks the block of\
+    \ code for a particular exception when activated. One or more catch blocks are\
+    \ present.\n- **catch**: The catch keyword is used to catch the exceptions. A\
+    \ program catches an exception at a place in the program where user wants to handle\
+    \ the issue.\n- **finally**: The finally block is used to execute statements even\
+    \ if the exception is thrown or not.\n- **throw**: The throw keyword is used to\
+    \ throw an exception.\n\nSyntax:\n\n```\ntry\n{\n    //statements causing exception\n\
+    }\ncatch( ExceptionName e1 )\n{\n    //error handling code\n}\ncatch( ExceptionName\
+    \ e2 )\n{\n    //error handling code\n}\ncatch( ExceptionName eN )\n{\n    //error\
+    \ handling code\n}\nfinally\n{\n    //statements to be executed\n}\n```"
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '# 13.4 Exception classes in C#
+
+
+    There are several exception classes which are directly or indirectly derived from
+    the System.Exception class. Some of the classes that are derived from the System.Exception
+    class are System.ApplicationException and System.Exception classes.
+
+
+    For a user-defined application having its own exception, the exception must be
+    inherited from the ApplicationException class.
+
+
+    The System.Exception class is the base class for all exceptions.
+
+
+    | Exception class | Description |
+
+    |---|---|n| System.IO.IOException | It handles the I/O Errors |
+
+    | System.NullReferenceException | Errors generated during the process of dereferencing
+    a null object |
+
+    | System.IndexOutOfRangeException | Errors generated when a method refers an array
+    element out of bound |
+
+    | System.DivideByZeroException | Errors generated during the process of dividing
+    the dividend by zero |
+
+    | System.OutOfMemoryException | Memory allocation to the application errors |
+
+    | System.InvalidCastException | Errors due to type casting |
+
+    | System.StackOverflowException | The errors generated due to stack overflow |'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: "# 13.5 Exception handling\n\nThe structured solution in the form of try and\
+    \ catch block is provided by C#. The core program statements are divided from\
+    \ the error handling statements. The finally block is used to handle errors.\n\
+    \nExample:\n\n```\nExample 51:\nusing System;\nnamespace DivNumbers\n{\n    class\
+    \ Divide\n    {\n        int output;\n        Divide()\n        {\n          \
+    \  output = 0;\n        }\n\n        public void division(int no1, int no2)\n\
+    \        {\n            try\n            {\n                output = no1 / no2;\n\
+    \            }\n            catch(DivideByZeroException e)\n            {\n  \
+    \              Console.WriteLine(\"Exception handled:{0}\",e);\n            }\n\
+    \            finally\n            {\n                Console.WriteLine(\"Output\
+    \ is:{0}\",output);\n            }\n        }\n        public static void Main(string[]\
+    \ args)\n        {\n            Divide d = new Divide();\n            d.division(5,0);\n\
+    \            Console.Read();\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: 'When the code is compiled and executed, the output is:
+
+
+    Exception handled: System.DivideByZeroException: Attempted to divide by zero
+
+
+    Output is: 0'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: "# 13.6 User defined exceptions\n\nUsers can create their own exception classes\
+    \ when the situation arises where the user needs to handle an exception in a special\
+    \ way using custom code. These exceptions are known as user defined exceptions.\n\
+    \nThe user defined exceptions classes are derived from the ApplicationException\
+    \ class.\n\n```\n### Example 52:\nusing System;\nnamespace userdefined\n{\n  \
+    \  class Average\n    {\n        static void Main(string[] args)\n        {\n\
+    \            Perform p = new Perform();\n            try\n            {\n    \
+    \            p.CalAverage();\n            }\n            catch (CountZeroException\
+    \ e)\n            {\n                Console.WriteLine(\"CountZeroException: {0}\"\
+    ,e.Message);\n            }\n            Console.Read();\n        }\n    }\n}\n\
+    public class CountZeroException:ApplicationException\n{\n    public CountZeroException(string\
+    \ message):base(message)\n    {\n    }\n}\npublic class Perform\n{\n    int n1\
+    \ = 0;\n    int count = 0;\n    float average;\n    public void CalAverage()\n\
+    \    {\n        if(count == 0)\n        {\n            throw(new CountZeroException(\"\
+    Count is zero in calculation\"));\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: "```\nelse\n{\n    average = no1 / count;\n}\n}\n```\n\nWhen the code is compiled\
+    \ and executed, the output is:\n\nCountZeroException: Count is zero in calculation"
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '# Chapter 14 Multithreading'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# 14.1 Thread in C#
+
+
+    A thread defines a control flow. Thread is a basic unit to which the operating
+    system allocates a thread. The execution of a thread is independent within a program.
+
+
+    A single process is executed using one thread. Such process is known as single-threaded
+    process. Only one task can be performed at a time. The user has to wait for the
+    task to complete before executing new task.
+
+
+    For executing more than one thread at a time, multiple threads are created. The
+    process creating two or more threads is known as multithreading.'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: "# 14.2 Life cycle of a thread\n\nThe life cycle of a thread starts when the\
+    \ object of System.Threading.Thread class is created. The life ends as soon as\
+    \ the task is completed. There are various states in the life cycle of a thread.\n\
+    \n+   * Unstarted State: When the instance of the Thread class is created, the\
+    \ thread enters in unstarted state.\n* Ready State: The thread is in this state\
+    \ till the program calls the Start() method.\n* Not Runnable State: A thread is\
+    \ not in the runnable state if:\n  1. Waiting: The Wait() method is called to\
+    \ make the thread for a specified condition\n  2. Blocked: The thread is blocked\
+    \ by an I/O operation\n  3. Sleeping: The Sleep() method is called to put the\
+    \ thread in sleeping mode.\n* Dead State: Once the thread completes its execution\
+    \ or aborted, it is placed in a dead state"
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: "# 14.3 Main thread\n\nThe System.Threading.Thread class is used for working\
+    \ with threads. The main thread is created soon as program starts execution. The\
+    \ Thread class is used for creating threads. They are known as child threads.\
+    \ The user can access the main thread by using the CurrentThread property of the\
+    \ Thread class.\n\nExample:\n\n```\nusing System;\nnamespace thread\n{\n    static\
+    \ void Main(string[] args)\n    {\n        Thread t1 = new Thread();\n       \
+    \ t1.Name=\"Thread1\";\n        Console.WriteLine(\"Thread is:{0}\",t1.Name);\n\
+    \        Console.Read();\n    }\n}\n```\n\nWhen the code is compiled and executed,\
+    \ the output is:\n\nThread is: Thread1"
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '# 14.4 Properties and methods of the Thread class
+
+
+    Properties:
+
+
+    +   - **IsAlive**: The value showing the execution status of the current thread
+
+    - **CurrentThread**: The current running thread is retrieved
+
+    - **CurrentContext**: The current context in which the thread is executing retrieved
+
+    - **ExecutionContext**: The ExecutionContext object contains information about
+    different contexts
+
+    - **Name**: Gets or sets name of the thread
+
+    - **ThreadState**: The value containing states of the current thread
+
+    - **Priority**: It gets or sets the value showing the scheduling priority of a
+    thread
+
+
+    Methods:
+
+
+    +   - **public static void BeginThreadAffinity():**: The host is to about to execute
+    instructions depending on the current physical operating system thread.
+
+    - **public void Abort():**: The ThreadAbortException is raised in thread on which
+    it is invoked.
+
+    - **public void interrupt():**: The thread present in the WaitSleepJoin state
+    is interrupted
+
+    - **public static AppDomain GetDomain():**: A unique domain identifier is returned
+
+    - **public static void MemoryBarrier():**: The processor executes the current
+    thread. The instructions cannot be reordered.
+
+    - **public void Start():**: It starts the thread
+
+    - **public static bool Yield():**: The calling thread to yield execution to another
+    thread which is ready to run on the processor'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: "# 14.5 Creating and managing threads\n\nThe extended thread class creates a\
+    \ thread. The extended thread class calls the Start method to start the child\
+    \ thread execution.\n\nExample:\n\n```\nExample 54:\nusing System;\nusing System.Threading;\n\
+    \nnamespace ThreadProgram\n{\n    class ThreadChild\n    {\n        public static\
+    \ void CallChild()\n        {\n            Console.WriteLine(\"Start child thread\"\
+    );\n        }\n        public static void Main(string[] args)\n        {\n   \
+    \         Thread child1 = new ThreadStart(CallChild);\n            Console.WriteLine(\"\
+    Creating child thread\");\n            Thread child2 = new Thread(child1);\n \
+    \           child2.Start();\n            Console.Read();\n        }\n    }\n}\n\
+    ```\n\nWhen the code is compiled and executed, the output is:\n\nStart child thread\n\
+    Creating child thread\n\n# Managing Threads\n\nWhen there is a need to pause a\
+    \ thread for a period of time so that another thread can execute, the Thread.Sleep()\
+    \ method is used. The method takes a single argument stating time in milliseconds.\n\
+    \nExample:"
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: "# Example 55:\n\n```\nusing System;\nusing System.Threading;\n\nnamespace Multithreaded\n\
+    {\n    class Program\n    {\n        public static void ChildThread()\n      \
+    \  {\n            Console.WriteLine(\"Start child thread\");\n            int\
+    \ sleeptime = 4000;\n            Console.WriteLine(\"Thread sleeping for {0} seconds\"\
+    ,sleeptime / 1000);\n            Thread.Sleep(sleeptime);\n            Console.WriteLine(\"\
+    Resume child thread\");\n        }\n        public static void Main()\n      \
+    \  {\n            Thread t1 = new Thread(ChildThread);\n            Console.WriteLine(\"\
+    child thread created\");\n            Thread child1 = new Thread(t1);\n      \
+    \      child1.Start();\n            Console.Read();\n        }\n    }\n}\n```\n\
+    \nWhen the code is compiled and executed, the output is:\n\nStart child thread\n\
+    Thread sleeping for 4 seconds\nResume child thread\nchild thread created"
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: "# 14.6 Destroying threads\n\nThe Thread.Abort() method is used to destroy the\
+    \ thread. The ThreadAbortException is thrown when the thread is destroyed. The\
+    \ exception is not caught and is sent to the finally block.\n\nExample:\n\n```\n\
+    Example 56:\nusing System;\nusing System.Threading;\n\nnamespace ThreadDemo\n\
+    {\n    class Program\n    {\n        public static void ChildThread()\n      \
+    \  {\n            try\n                Console.WriteLine(\"Child thread started\"\
+    );\n                for(int j = 0; j <= 10; j ++)\n{\n                    Thread.Sleep(1000);\n\
+    \                    Console.WriteLine(\"Child thread finished\");\n         \
+    \       }\n            } catch(ThreadAbortException e)\n            {\n      \
+    \          Console.WriteLine(\"Exception caught\");\n            }\n         \
+    \   finally\n            {\n                Console.WriteLine(\"Exception is not\
+    \ handled\");\n            }\n        }\n\n        public static void Main()\n\
+    \        {\n            ThreadStart t1 = new ThreadStart(ChildThread);\n     \
+    \       Console.WriteLine(\"Creating child thread\");\n            Thread t2 =\
+    \ new Thread(t1);\n            t1.Start();\n        }\n    }\n}\n//main thread\
+    \ is stopped\n```"
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '```
+
+    Thread.Sleep(2000);
+
+    //child thread aborted
+
+    Console.WriteLine("Aborting child thread");
+
+    t2.Abort();
+
+    Console.Read();
+
+    ```
+
+
+    When the code is compiled and executed, the output is:
+
+
+    Creating child thread
+
+    Child Thread started
+
+    0
+
+    Aborting child thread
+
+    Exception caught
+
+    Exception is not handled'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '# Reference links on C#
+
+
+    User can get more detailed information about the C# language using the following
+    reference links.
+
+
+    +   - Visual Studio Application – The IDE for creating C# applications.
+
+    - C# ( Programming guide ) – An overview of C# programming language
+
+    - C# Programming – The information about the C# features using .NET framework
+    is explained
+
+    - Mono – Cross platform applications can be easily created using the software.
+
+    - C# Complete tutorial – It contains lessons useful for beginners to learn C#
+    language'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '# Conclusion
+
+
+    This brings us to the end of this book. We hope that this guide has been thoroughly
+    comprehensible and easy for you to understand and follow. The book should not
+    end your journey on the road to learning C#, instead it should only serve as the
+    beginning. There is a vast amount of information that you can learn on C# therefore
+    once you are done with this book, explore further boundaries of C#.
+
+
+    C# has a growing popularity and is steadily being used more and more. Many famous
+    sites and enterprise level applications are powered by C#. You can find C# in
+    the scientific computing being run on supercomputers. System administration tasks
+    such as package management and configuration use C# as well. No matter what your
+    programming interests, the possibilities for learning, exploring, and growing
+    are endless.'
+  merge: -1
+  pgno: 147
