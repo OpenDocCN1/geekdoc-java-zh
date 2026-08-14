@@ -1,0 +1,1192 @@
+- img_proc: true
+  md: '# Cooling Effect on the Floating Solar PV: Performance and Economic Analysis
+    on the Case of West Java in Indonesia
+
+
+    Adimas Pradityo Sukarko and Kyung Nam *
+
+
+    KU-KIST Graduate School of Energy and Environment (Green School), Korea University,
+    Seoul 02841, Korea;
+
+    adimas.pradityo@ptjb.com
+
+    * Correspondence: i005034@korea.ac.kr. Tel.:82-10-6348-9677
+
+    Received: 18 March 2020; Accepted: 22 April 2020; Published: 26 April 2020
+
+
+    **Abstract:** Solar photovoltaic technology is one of the most well established
+    and renewable energy technologies. Many researchers have undertaken research and
+    development in this sector, including material and design system. To protect the
+    exhaustion of global terrestrial land and to avoid the occasion of extensive farmland,
+    solar photovoltaic (PV) developers, and policymakers, have pursued various solutions,
+    including the development of floating solar PV (FPV). This study considers a technological
+    and economic perspective to analyze the floating solar PV system. The authors
+    utilize remote sensing results to predict FPV efficiency and measure energy yield
+    from the system while also demining analysis on an FPV project comparison with
+    ground-based PV (GPS). The results from remote sensing method found that FPV has
+    a lower temperature, with an annual difference around 8 °C. FPV efficiency was
+    also shown to be around 0.61% higher than GPS in terms of the prediction. FPV
+    economic comparison also resulted in 3.37/kWh lower leveled cost of electricity
+    (LCOE), and 6.08% higher internal rate of return (IRR) for FPV in the base scenario.
+
+
+    **Keywords:** floating solar photovoltaic; ground-based remote sensing; cooling
+    effect; performance analysis; economic analysis
+
+
+    # 1. Introduction
+
+
+    Consumption of energy is related to human welfare in life. Nowadays, the welfare
+    of the world population is facing constraints of climate change that occur on
+    after the period of industrialization. Energy consumption and production activities
+    are responsible for two-thirds of greenhouse gases (GHG) emissions. Almost 80%
+    of the total energy sources are currently from fossil fuels [1]. The electric
+    power generation sector plays a significant role in total world energy consumption,
+    where most with a surface area of more than 1,900,000 km² abundant natural resources,
+    Indonesia has a high potential for renewable energy. The Indonesian state-owned
+    electric company, PT Perusahaan Listrik Negara (PT PLN), from Indonesia national
+    energy general plan [2] estimates that a total potential capacity of 442.9 GW
+    of electric could be generated from renewable energy sources. A report from the
+    national energy general plan explains that the average solar PV potential in Indonesia
+    is 4.8 kWh/m²/day
+
+
+    The innovation of technology, especially electric energy supply, can contribute
+    a new and renewable energy (NRE) technology and paradigm could constitute a solution
+    to the problem of world dependence on fossil fuel-based energy. Technological
+    innovation has made solar photovoltaic (PV) systems, wind energy, energy storage,
+    and electric vehicles, commercially
+
+
+    Energies 2020, 13, 2126; doi:10.3390/energies1322126'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Energies 2020, 13, 2126
+
+
+    2 of 16
+
+
+    competitive, and well-developed [1]. Solar PV increasing capacity in 2017 was
+    approximately 402 GW [4]. Simultaneous to the increase in international awareness
+    of solar PV beneficiaries, worldwide experts have predicted that the solar PV
+    market will keep developing in the near future. Solar PV market penetration is
+    also expected to create a positive collateral effect on the labor sector regarding
+    work opportunity and availability.
+
+
+    Nonetheless, technology is facing several significant challenges, such as intermittent
+    loads, low efficiency, and tariff policies. The most popular installation type
+    of solar PV is a ground-based installation, which generally faces land price constraints
+    because of the usage of land, which is a premium commodity. It is also well known
+    that solar energy production has a strong correlation with panel temperature to
+    determine solar PV panel efficiency.
+
+
+    In order to address land-use constraints, methods of solar PV installation have
+    evolved and now include rooftop, canal, off-shore, and floating (FPV) installations.
+    FPV was first introduced in Aichi, Japan, 2007, and became prominent in Napa Valley,
+    USA 2008 [6]. Its total capacity in 2013 was 1.1 MW and was 98.6 MW in 2017 [7].
+    FPV has also become a solution for unseless water surface areas such as lakes,
+    dams, and water reservoirs to be created economically and environmentally attractive
+    projects in NRE sector. Therefore, FPV is a suitable solution for a country that
+    has lot of hydropower plants with open water areas. Even though FPV has been in
+    use since 2007, there is no specific software that will allow us to include the
+    cooling effect in its energy production measurement.
+
+
+    The economic parameters of NRE solar PV are also evaluated through the cost generation
+    price. At the technology of 2018, with various types of commercial solar PV product,
+    solar product, PV installation cost in the range of ... electricity generated
+    from PV will have become more competitive than fossil-based electricity.
+
+
+    cost also becomes one of the parameters to ensure investor attractiveness in the
+    NRE sector. According to Indonesia''s state-owned electric company PT PLN''s stated
+    report [9], 2018, the estimation cost of RE in Indonesia is still very high (around
+    54.8 cents/kWh) compared to a traditional steam power plant (5.93 cents/kWh).
+
+
+    The authors realize that predicting the energy by FPV is a challenge for many
+    researchers. Therefore, in this article design a system to develop a combination
+    of sensing methods and a process of calculating the efficiency of FPV, completes
+    this assessment with economic analysis. In particular, this study is the first
+    trial to measure the temperature from the remote sensing through sensitivity and
+    apply it to the FPV system performance. The authors hope that the methodology
+    and tools in this paper can be helpful to future FPV performance research.
+
+
+    # 2. Literature Review
+
+
+    According to Thi, 2017 [10] and Sahu, Yadav et al. 2016 [11], typical known solar
+    PV installations are ground-mounted, floating solar PV (FPV) was related to premium
+    land cost, utilization of water area, and energy efficiency. The impact of the
+    temperature rise of the PV module is one solve the mentioned deficiencies. Solar
+    PV installation above water bodies will prevent evaporation, and with cooling
+    methods benefit the solar panel, panel temperature will reduce, increasing energy
+    production [12]. Several cooling methods, including evaporative cooling, were
+    investigated by Kalaiselvan, Karthikeyan et al. 2018 [13]; Rishi, Balakrishnan
+    et al. 2018 [14], Peng, Hortmanesh et al. 2017 [15] and Siecker, Kusakana et al.
+    2017 [16].
+
+
+    FPV was shown to have a better environmental impact within construction, operation,
+    and end-of-life period compared to PV [17]. Blocked sunlight by PV installation
+    above the water reservoir and benefit the panel was considered to stop uncontrolled
+    algae growth and reduce the water reservoir evaporation process. FPV also requires
+    a smaller area compared to'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'Energies 2020, 13, 2126
+
+
+    3 of 16
+
+
+    GPV for laydown and connecting processes. The previous floating installation resulted
+    in solar PV efficiency increasing with various values compared to ground installation
+    of solar PV systems. In late 2018, Helio floater technology was one example of
+    a floater that was available for FPV installation. Helio® is a product from French
+    company Chile et Terre (Saighin-Melantois, France) which dominates around 75%
+    of the Japanese market, which is the location of the most significant installations
+    of the FPV in comparison to GPV (Table 1).
+
+
+    Many studies have measured FPV efficiency in comparison to
+
+
+    **Table 1. Previous studies: Difference degrees of floating solar photovoltaic
+    (FPV) efficiency with ground-bound solar PV (GPV).
+
+
+    | Authors | Reference No. | Efficiency Differences (+/-) |
+
+    |---|---|---|n| Choi, Lee, et al. 2013 | [18] | 10.3; 13.5; and 11 |
+
+    | Durkovič, Djurisic et al. 2015 | [12] | 31.29 |
+
+    | Trapani, Safante et al. 2015 | [19] | 20.0-25.0 |
+
+    | Spencer, Maverick et al. 2018 | [20] | -4.0-2.0 |
+
+    | Liu, Wang, et al. 2017 | [21] | 1.58-2.0 |
+
+    | Lee, Joo, et al. 2014 | [22] | 0.6-1.8 |
+
+    | Rosa-clclat, Tina, et al. 2017 | [23] | 10.0 |
+
+    | Yadav and Gupta, 2016 | [24] | 3.7 |
+
+    | Azmi, Othman, et al. 2013 | [25] | 2.82-14.58 |
+
+    | Majid, Rasul, et al. 2014 | [26] | 5.93-15.5 |
+
+    | Kamuyu, Lim, et al. 2018 | [27] | 14.69 |
+
+
+    The results showed that FPV efficiency is significantly superior to that of GPV.
+    Kamuyu, Lim, et al. [2018] performed a 500 kW installation at Hapcheon Dam, a
+    water reservoir located in Hapcheon, South Korea. They were able to calculate
+    the FPV module as a function of wind speed, irradiation, temperature, and water
+    temperature before comparison with results. The results show that water temperature
+    is one of the critical factors in determining FPV panel temperature; in method
+    to calculate direct in-situ measurement or data access is through the national
+    aeronautics and space administration (NASA) software named "NASA power" online
+    application. Remote sensing of lake surfaces'' water temperatures have been monitored
+    to track global environmental change [28] as well as climatic contribution to
+    the global carbon cycle
+
+
+    The satellites employed for water temperature monitoring include the advanced
+    high-resolution radiometric (AVHRR) as well as the long scanner (STAR) [28,30].
+    The Landsat program was initiated in 1965 by the US government to gather facts
+    about natural resources of the Earth, and the government launched the first Landsat
+    in 1972. Current and the most recent are after being launched in 1999 and 2013,
+    respectively [33]. Landsat satellites provide the longest record of space-based
+    line observations [34]. Compared to previous Landsat 7, Landsat 8 has a narrower
+    spectral band, improved resolution and signal to noise characteristics, 12 radiometric
+    resolutions, and more precise geometry [35]. In this study, we also use remote
+    sensing method to estimate water temperature.
+
+
+    For purposes, the authors simulate a fixed type of the FPV system in capacity
+    of 1 MW that is installed and operating at Cirata Dam, West Java province, Indonesia.
+    The design of 1 MW FPV adopts the mathematical equation from Paslić, Asković et
+    al. 2018 [36] which is planned by Janlana Bašić, 2016 [37] at Sangyong Open pit
+    limestone, Korea. Several popular software packages such as RETChem (Government
+    of Canada), PVGIS (European Union/EU science hub, European Commission), PVWatts
+    (The national energy laboratory/NREL, Washington, D.C., USA), System Advisor Model/SAM
+    (NREL, Washington, D.C., USA), Homer comes a tool to calculate energy production
+    of the NRE project'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Energies 2020, 13, 2126
+
+
+    [38] while Psomopoulos, Ioannidis et al. 2015 [39] and Blair, Dobos et al. 2014
+    [40] compared and briefly reviewed the NREL software systems.
+
+
+    SAM is software developed for predicting performance of renewable energy systems
+    and analyzing the feasibility of project. SAM is a techno-economic model that
+    supports people who are interested in the NREL industry. SAM is suitable for simulating
+    NREL on-grid performance systems with the financial model of the NREL project.
+    SAM''s advantages are the availability of options in the analysis section, which
+    provide parametric, sensitivity, statistical, and probability results as an extension
+    of analysis [40]
+
+
+    Economic analysis comprises a variety of evaluation methods such as leveled cost
+    of energy (LCOE), net value (NPV), internal rate of return (IRR) and power purchase
+    agreement (PPA). LCOE is a parameter that allows for the comparison of alternative
+    technologies between different scales of operation, different investment, and
+    operating periods. LCOE also could be used to compare the cost of energy generated
+    by renewable resources with fossil-based power plants. PPA of electricity is a
+    contract between two parties, and electricity undertakes. IRR of a project is
+    the discount rate (nominal value agreeing to SAM) that corresponds to NPV for
+    the PPA financial models [41]. IRR of an investment that has a series of cash
+    flows is a rate that sets the NPV of the cash flows to zero. IRR analysis is commonly
+    used for either acceptance or rejection decisions, allowing a comparison with
+    a minimum acceptable rate.
+
+
+    # 3. Data and Methodology
+
+
+    # 3.1. Systematic Workflow
+
+
+    This paper consists of four main analysis parts, as shown in Figure 1. First,
+    the authors investigate surface temperature by remote sensing methodology. Second,
+    the developed formula and conditions the solar module efficiency in four location
+    cases, labeled Lake 1, Lake 2, Soil, and Dam. Lake 1 and Lake 2 represent water-based
+    locations, while Soil and Dam represent groundbased locations. Third, the authors
+    compare the analyzed energy production, i.e., the performance of each case. Lastly,
+    the authors analyze the financial results with the PPA price scenario.
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_3_0.png)
+
+
+    Figure 1. Schematic workflow of the Study.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "Energies 2020, 13, 2126\n\nBased on the performance analysis results, using\
+    \ SAM software facilities and other financial parameter input, the authors make\
+    \ a simulation to find the impact of the uncertainty with parametric, stochastic,\
+    \ and macro-tornado analysis in the business as well as policy perspective before\
+    \ making a conclusion.\n\n# 3.2. Remote Sensing Methodology\n\nThis study uses\
+    \ Landsat satellite images to obtain the surface area around West Java Province,\
+    \ the Cirata lake area. The located GIS is 6°41'59.9\"S 107°22'01.6\"E in Figure\
+    \ 2 (red circle). According to Landsat database path and rows, it is located in\
+    \ path 122 and row 065. Data repository screening is Undert for the only day data,\
+    \ under cloud conditions for 20% of the area of interest, and starting from 2014\
+    \ database.\n\n![](img/6920548fe7daf37aeb031ac079641ebe_4_0.png)\n\nA geographical\
+    \ information system (GIS) software is a useful tool for converting Landsat imagery\
+    \ into a user-friendly interface. Two software packages, ArcGIS (Environmental\
+    \ systems institute/ESRI, Redlands, California, USA) and QGIS (QGIS development\
+    \ team) are well-known GIS software [42,43]. QGIS is open-source software, and\
+    \ ArcGIS is a non-open source application for desktop. For this study, QGIS uses\
+    \ an additional plug-in-supervised classification program (SCP) introduced by\
+    \ Congedo, 2016 [44]. For comparing imagery satellite data, the study uses emissivity\
+    \ through the emissivity value. Emissivity is an effective value of the emitting\
+    \ energy in a thermal radiation. Use of land surface emissivity value, normalized\
+    \ difference vegetation index (NDVI) value from QGIS recognition and calculation\
+    \ of satellite metadata are necessary to acquire surface temperature. This study\
+    \ uses the emissivity values as in Table 2.\n\n| Water | Building Dam | Vegetation\
+    \ | Bare Soil |\n| --- | --- | --- | --- |\n| 0.99 | 0.94 | 0.98 | 0.94 |\n\n\
+    # 3.3. Solar Panel Efficiency\n\nNotable formula to calculate traditional linear\
+    \ expression of solar module efficiency in function of module temperature explained\
+    \ by Evans and Florschetz, 1977 [45]\n\n```\n$\\eta = \\eta_{dc}[1 - \\beta_{ref}(T_c\
+    \ - T_{ref})]$\n```\n\nA notable equation created by Kamuyu, Lim et al. 2018 [27]\
+    \ to obtain FPV module temperature from GIS and water data is\n\n```\n$T_{ppv}\
+    \ = (1.8081 + (0.92882T_a + 0.021G) - (1.2210V_w) + (0.0246T_{w}))\n```\n\nThe\
+    \ general formula to calculate operating temperature of ground-mounted solar PV\
+    \ panel is a function of material, radiation, ambient temperature, and wind speed,\
+    \ developed by Duffy and Beckman, 2013 [46] and shown as follows\n\n```\n$T_{gpv}\
+    \ = T_a + \\left(\frac{G}{G_{noct}}\\right)(T_{cnoc} - T_a) \\left(\\frac{9.5}{5.7\
+    \ + (3.8V_a)}\right)$\n```"
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'This study uses a solar panel and inverter for SAM database repository, as
+    shown in Table 3.
+
+
+    # Table 3. Solar module and Inverter specification.
+
+
+    | Solar Module: | Inverter Type: |
+
+    |---|---|
+
+    | SunPower SPR-220-BLK | Schneider Electric Solar Inverter USA |
+
+    | Rated Power: 221.43 Watt | GT500-480 (480 V) |
+
+    | Nominal Efficiency (η): 17.8% | Rated Power: AC: 50 KW |
+
+    | Voltage Module: 40.8 V | Vmax_mppt: 480 V |
+
+    | βref:-0.041/C | Vmin_mppt: 310 V |
+
+    | Length × Width: 1.244 m x 1 m | Inverter DC to AC ratio: 0.99 |
+
+    | Lifetime Expectation: 25 Years | Efficiency: 97% |
+
+    | Solar Module Condition | Irradiation: 1000 W/m²; Ambient temp (Ta): 25°C; Module
+    temp (Ti): 49°C |
+
+
+    # 3.4. Economic Analysis
+
+
+    The financial calculation methodology for this study calculates the value from
+    NPV, IRR, and LCOE of this proposed study. The authors utilize all parameters
+    in SAM software functions to calculate the financial parameter of the project.
+    This research also requires sensitivity analysis among FPV and NPV projects. Financial
+    parameters for economic analysis will benefit the input from Indonesia''s national
+    data, literature reviews, and assumptions. SAM provides the software with various
+    simulation analysis tools that capable of mapping impacts out variations and uncertainty
+    in input assumptions on the model. The parametric analysis tool is sensitivity
+    analysis which to assign multiple values to input variables to create graphs and
+    tables showing the outputs for each value. This tool is useful for optimization
+    and exploring relationships between input variables and results.
+
+
+    The stochastic analysis uses a statistical distribution to assign variable input
+    value. A stochastic analysis also a parametric analysis, which generates values
+    of input variables over a range; a probability distribution and sensitivity analysis
+    specifically, as is the case for SAM. Stochastic analysis also show the effect
+    on metric output with uncertain input values. This study also includes a tornado
+    chart for the simplicity of uncertain parameter input that affects output results.
+    Since SAM has no input for floater in the parameters, the authors searched for
+    a footer reference in $/Watt data in the research. The authors set the logic that
+    the cost of floater is an input in Land with a $/Watt parameter while the Land
+    cost is an input in Land with a $/acre unit parameter.
+
+
+    # 4. Result and Analysis
+
+
+    # 4.1. The Solar PV Design Result
+
+
+    This study proposes solar PV with 1 MW capacity and a central inverter system.
+    Based on system design calculation, as seen in the literature review, the system
+    will require ten modules per string with a total of 460 strings. The system also
+    requires two inverters'' central model types. With these configurations, the system
+    is predicted to occupy 1.5 acres of area for the solar PV capacity.
+
+
+    # 4.2. Remote Sensing Result
+
+
+    The authors select four locations in the Cirata lake for the analysis. The information
+    on the location areas is in Table 4. This study proposes solar PV with 1 MW capacity
+    and a central inverter, based on system design calculation.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Energies 2020, 13, 2126
+
+
+    7 of 16
+
+
+    # Table 4. Area of interest coordinate.
+
+
+    | Areas of Interest | Lake 1 | Lake 2 | Soil | Dam |
+
+    | --- | --- | --- | --- | --- |
+
+    | GPS Coordinate | 6°51''54.2''''S | 6°41''28.6''''S | 6°39''19.0''''S | 6°42''02.1''''S
+    |
+
+    | | 107°21''55.2'''' | 107°20''47.6'''' | 107°22''09.5'''' | 107°22''02.4''''
+    |
+
+
+    The selected fours show the monthly trends of the temperature as Figure 3. Lake
+    1 and Lake 2 represent water-based temperature, while soil and building represent
+    ground base temperature.
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_6_0.png)
+
+
+    Figure 3. Areas of the interest temperature trend.
+
+
+    The result from remote sensing is introduced to Equations (1)-(3) to calculate
+    solar PV project estimates (Table 5) and the annual average result is shown in
+    Figure 3.
+
+
+    # Table 5. Solar PV prediction result.
+
+
+    | Location | Lake 1 | Lake 2 | Soil | Building Dam | Unit |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | Efficiency | 17.581 | 17.564 | 17.469 | 17.473 | % |
+
+
+    Based on Figure 3, others consider that remote sensing measurement has a generally
+    consistent pattern. Differences between water-based and ground-based temperatures
+    are on average 8 ℃ in the measurement value. The results in the figure clearly
+    show that there is a difference between the predicted results of the panel efficiency
+    based on the locations of installation. FPV in water-based area Lake 1 and Lake
+    2 have a higher efficiency compared to ground installation. Energy production
+    from each location was calculated after introducing a predicted efficiency value
+    to the simple efficiency model and system design SAM software with specific GIS
+    data based on the individual location. A variable tilting among all locations
+    was calculated to determine maximum yield, as shown in Table 6.
+
+
+    # Table 6. Predicted energy production of solar.
+
+
+    | Location | Lake 1 | Lake 2 | Soil | Dam | Unit |
+
+    | --- | --- | --- | --- | --- | --- |
+
+    | Tilting | 12 | 12 | 10 | 12 | degrees |
+
+    | Potential Energy | 1.439 | 1.432 | 1.408 | 1.396 | GWh/year |
+
+
+    4.3. Economic Analysis Result
+
+    In this subsection, the authors examine the results of an economic analysis based
+    on the best among representative type of location. From the performance results
+    of four cases, the authors select Lake 1 and Soil for a more detailed economic
+    analysis. The first approach of economic analysis is to find financial parameters
+    NPV, IRR, and LCOE in base. Electricity price in Indonesia is unequal based on
+    territory and population area. The Ministry of Energy and Mineral Resources (MoMEM)
+    developed the basic cost of generation (BCoG) which consists of three methods,
+    such as national, regional, and local BCoG. Local BCoG in 2019 has widely'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Energies 2020, 13, 2126
+
+
+    8 of 16
+
+
+    differentiated tariffs from 6.91 cents/kWh to 21.34 cents/kWh. The base condition
+    utilizes the existing sell tariff regard the existing policy on NPE for selling
+    energy to the utility. West Java province, the area of interest, ratifies 6.91
+    cents/kWh from the NRE source. The financial parameter results are shown in Table
+    7.
+
+
+    Table 7. Base scenario result.
+
+
+    | Location | Type | Energy Yield (GWh) | LCOE,Nominal,After Tax (cents/kWh) |
+    IRR (%) | Net Present Value ($) |
+
+    |---|---|---|---|---||}{
+
+    | Lake 1 | Water | 1.439 | 9.81 | -1.10 | -285,733 |
+
+    | Soil | Ground | 1.408 | 13.18 | -7.18 | -605,312 |
+
+
+    In the case of two higher energy yield locations that represent water and ground-based
+    installations, using an existing tariff in base scenario, LCOE of FPV installed
+    at Lake1 resulted in values that were 3.37 cents/kWh lower compared to GPV installed
+    at Lake 1 on the soil location. However, from the IRR and NPV parameters, methods
+    of installation show negative values, which means the existing tariff is too low
+    to draw attention to solar PV project investment.
+
+
+    # 4.4. Parametric Analysis in the Policy Perspective
+
+
+    In the second approach of economic analysis, the authors expected to find the
+    implications from the policy perspective. Therefore, the authors considered the
+    price policy in NRE to see the impact on the ToD(Tod) factor. The main impact
+    in the alternative price policy is the time on delivery electricity delivered.
+    It is possible to change the tariff multiplier of electricity on the power purchase
+    agreement negotiations. Even though Indonesia only recognizes the NRE tariff based
+    on the BCoG method, this study tries to analyze the ToD factor in terms of the
+    NPV value. Previous analysis on the base scenario uses a flat-rate universal dispatch
+    where the multiplier is equal to 1.0. After observation of a heat map of the irradiation,
+    as shown in Figure 4 below, the authors found it that most of the energy yield
+    in the area of interest is from 09:00 to 16:00. Therefore, the authors developed
+    a manual ToD, as shown in Figure 5, as the second scheme, considering a heat map
+    of irradiation obtained from weather files. A classification created with incremental
+    steps and maximum multiplier is 2.0 of the existing tariff.
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_7_0.png)
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_7_1.png)
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_7_2.png)
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_7_3.png)
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_7_4.png)
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_7_5.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Energies 2020, 13, 2126
+
+
+    9 of 16
+
+
+    # July
+
+
+    # August
+
+
+    # September
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_8_0.png)
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_8_1.png)
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_8_2.png)
+
+
+    # October
+
+
+    # November
+
+
+    # December
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_8_3.png)
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_8_4.png)
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_8_5.png)
+
+
+    Figure 4. Cirata irradiation heat map.
+
+
+    # TOD factors
+
+
+    | Period | Value |
+
+    |---|---|
+
+    | Period 1 | 0 |
+
+    | Period 2 | 1 |
+
+    | Period 3 | 1.5 |
+
+    | Period 4 | 1.75 |
+
+    | Period 5 | 2 |
+
+    | Period 6 | 1 |
+
+    | Period 7 | 1 |
+
+    | Period 8 | 1 |
+
+    | Period 9 | 1 |
+
+
+    # Weekday
+
+
+    | | 12am | 2am | 4am | 6am | 8am | 10am | 12pm | 2pm | 4pm | 6pm | 8pm | 10pm
+    | 12pm |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | Jan | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Feb | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Mar | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Apr | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | May | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Jun | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Jul | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Aug | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Sep | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Oct | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Nov | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Dec | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+
+    # Weekend
+
+
+    | | 12am | 2am | 4am | 6am | 8am | 10am | 12pm | 2pm | 4pm | 6pm | 8pm | 10pm
+    | 12pm |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | Jan | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Feb | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Mar | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Apr | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | May | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Jun | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Jul | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Aug | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Sep | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Oct | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Nov | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+    | Dec | 1 | 1 | 1 | 1 | 2 | 3 | 3 | 5 | 5 | 5 | 3 | 2 | 1 |
+
+
+    Figure 5. ToD scheme.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "Energies 2020, 13, 2126\n\n10 of 16\n\nUnder the ToD scheme, the financial\
+    \ results shown in Table 8 describe the effect ToD with an existing tariff to\
+    \ IRR and NPV parameter for both projects. ToD in this section was created with\
+    \ consideration of the location heat map with multiplier tariff differences. Under\
+    \ the same ToD scheme among two types of installations, FPV resulted in positive\
+    \ NPV, and higher IRR percentage compared to NPV installation. Therefore, the\
+    \ authors have justified that FPV is more attractive compared to GPV. ToD can\
+    \ be a useful incentive to encourage FPV penetration in a country like Indonesia,\
+    \ which has a significant target to achieve the future.\n\n# Energy result.\n\n\
+    Table 8. On Energy result.\n\n| Location | Energy Yield (GWh) | LCOE_Nominal_After\
+    \ Tax (cents/kWh) | IRR (%) | Net Present Value ($) |\n|---|---|---|---|--|\n\
+    \ Lake I | ToD | 1.439 | 9.81 | 15.60 | 320,025 |\n Soil | ToD | 1.408 | 13.18\
+    \ | 7.13 | -15,132 |\n\nSAM delivers multiple solutions that the users can choose\
+    \ between two types of solution from the financial parameter. PPA price is price\
+    \ value, which discussed in PPA negotiations. The specified IRR solution mode\
+    \ allows the user to use specific, through as SAM, the IRR percentage as an input.\
+    \ On the expected IRR, SAM selects the most appropriate PPA price to meet the\
+    \ target. For the target IRR, this study uses the estimation years, which are\
+    \ commonly used, of a solar PV project, 10 years per IRR target. The IRR value\
+    \ is usually higher than the nominal discount rate, which is applicable in Indonesia.\
+    \ SAM calculates the nominal discount rate considering real and inflation rates.\
+    \ With the national data above, the nominal discount rate from SAM’s is 13.56%.\
+    \ The findings of the PPA price results are shown as follows in Table 9.\n\nTable\
+    \ 9. Power purchase agreement (PPA) price result under the target internal rates\
+    \ of return (IRRs).\n\n| Location | Lake 1 | Soil |\n| flip_target_irr (%) | PPA\
+    \ price (cents/kWh) | NPV (million $) | PPA price (cents/kWh) | NPV (million $)\
+    \ |\n|---|---|---|---|--|\n| 8 | 9.986 | 0.018 | 13.474 | 0.028 |\n| 14 | 12.374\
+    \ | 0.253 | 16.601 | 0.349 |\n\nFrom the result in this section, the authors try\
+    \ to shift the point of view in terms of project initiator from the government\
+    \ side, to state PPA price. Therefore the authors select an IRR of 14% as the\
+    \ minimum to draw attention from the investor. From Table 9, on an IRR of 14%,\
+    \ the difference between FPV PPA and GPV PPA is 4.427 cents/kWh. The expansion\
+    \ of the PPA Difference is not linear for increased IRR targets. This means that,\
+    \ for more significant IRR targeted from the investors, GPV will cost exponentially\
+    \ higher compared to FPV.\n\n4.5. Stochastic and Macro-Tornado Analysis in the\
+    \ Business Perspective\n\nThe authors see that various uncertain values of system\
+    \ inputs in the calculation will affect the system output result. Therefore the\
+    \ authors see +/- range of change in each main parameter, shown in Table 10."
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Table 10. The range value of the financial parameter.
+
+
+    | Parameter | Value | Unit | Sensitivity Range | Unit |
+
+    |---|---|---|---|--|
+
+    | Module Cost | 0.25 | $Watt | 0.22–04 | $Watt |
+
+    | Inverter Cost | 0.10 | $Watt | 20 | % |
+
+    | Operation & Maintenance (O&M) Cost | 14.5 | $kiloWatt | 10–19 | $%kWatt |
+
+    | Balance of System Cost | 0.13 | $Watt | 50 | % |
+
+    | Analysis Period | 25 | Years | 5–10 | Years |
+
+    | Engineering Cost | 0.14 | $Watt | 50 | % |
+
+    | Permit and Environment Studies | 0.01 | $Watt | 50 | % |
+
+    | Land Preparation Cost | 0.02 | $Watt | 60 | % |
+
+    | PPA Price FPV | 12.374 | Cents/kWh | 60 | % |
+
+    | PPA Price GPV | 16.801 | Cents/KWh | 60 | % |
+
+    | Discount Rate | 10.11 | % | 50 | % |
+
+    | Floater Cost | 0.15 | $Watt | –25→+10 | % |
+
+    | Land Cost | 303,515 | $/Acre | 10 | % |
+
+    | Degradation Rate | 0.5 | % | 20 | % |
+
+    | Insurance Rate | 0.5 | % | 10 | % |
+
+    | Inflation | 3.131 | % | | |
+
+
+    For minimizing and analyzing the result, this study uses stochastic analysis SAM
+    to examine the output value of uncertain input with a minimum of 800 sample simulations.
+    The first analysis studies the effect of uncertain input parameters within the
+    system to examine the LCOE output of proposed projects. The second analysis uses
+    uncertain determined to examine LCOE, IRR, and the third analysis examines NPV
+    as output. This study develops sensitivity analysis through a tornado graph with
+    a variable setting of the value alteration to describe specific factors of FPV
+    and GPV that affect the output results. After capturing the top 5 most significant
+    impacts on output from the tornado graph, the authors undertake stochastic analysis
+    with normal distribution in the probability scheme.
+
+
+    From the tornado graph in Figure 6 and histogram data sets in Table 11, the LCOE
+    value in FPV is mostly dependent on variables such as module cost, floater cost,
+    engineering, the balance of the system, and O&M cost. Nevertheless, a reduction
+    in the GPV land cost with 50% less input value still generates much higher LCOE
+    compared to the FPV LCOE base scenario. From the stochastic analysis, the histogram
+    shows that the top 5 probability result, from FPV, varies from 9.2 to 10.2 cents/kWh.
+
+
+    # Table 11. Histogram data sets.
+
+
+    | Type Parameter | Mean Median | Standard Deviation | Unit |
+
+    |---|---|---|---|--|
+
+    | GPV | LCOE | 13.180 | 13.184 | 0.899 | Cents/kWh |
+
+    | | IRR | 18.679 | 18.663 | 3.811 | % |
+
+    | | NPV | 0.350 | 0.354 | 0.260 | Million $ |
+
+    | FPV | LCOE | 9.807 | 9.813 | 0.588 | Cents/kWh |
+
+    | | IRR | 16.813 | 18.594 | 3.868 | % |
+
+    | | NPV | 0.253 | 0.255 | 0.058 | Million $'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Energies 2020, 13, 2126
+
+
+    # 12 of 16
+
+
+    | Classification | LCOE | IRR | NPV |
+
+    |---|---|---|---|n| Macro-Tornado Analysis (Chart) | ![LCOE Chart](image) | ![IRR
+    Chart](image) | ![NPV Chart](image) |
+
+
+    | P Stochastic Analysis (Monte-Carlo simulation) | ![LCOE Chart](image) | ![IRR
+    Chart](image) | ![NPV Chart](image) |
+
+
+    | FP Stochastic Analysis (Monte-Carlo simulation) | ![LCOE Chart](image) | ![IRR
+    Chart](image) | ![NPV Chart](image) |
+
+
+    Figure 6. Stochastic and tornado chart result of LCOE, IRR, and NPV.
+
+
+    On the other hand, the 5 range probability from GPV shows the variation from 12.6
+    to 13.8 cents/kWh. While both FPV and GPV are mainly affected by the PPA Price.
+    PPA Price significantly affects the IRR in both projects, with a range of more
+    than 70%.
+
+
+    Other parameters do not significantly impact value. The second factor is the parameter
+    of land cost in the GPV project and module cost on FPV. With IRR expectation above
+    the nominal discount rate (13.56%), both projects create an IRR promising. Net
+    Present Value (NPV) is one of the measures to measure the economic analysis of
+    project feasibility. It includes both cost and revenue values. A positive NPV
+    indicates a project is feasible, while a negative NPV value indicates an economically
+    infeasible project. Uncertain values of floater on the FPV system affect the NPV
+    value but not as significantly as the land cost impact on GPV NPV. The real discount
+    rate and inflation rate uncertainties do not significantly affect NPV value on
+    either project. From the histogram results, uncertainty input values still create
+    the most positive'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "Energies 2020, 13, 3126\n\nNPV, more than 90% among all possibilities within\
+    \ value 0.18 to 0.34 million $. The GPV stochastic\ntariff result has a higher\
+    \ NPV value, upto 0.9 million $, however around 800\ntests of statistical analysis\
+    \ and histogram analysis from Table 11 that has 8.7% (70 of 800) has a\nnegative\
+    \ value (below zero) NPV.\n\n# 5. Conclusion and Discussion\n\nThrough remote\
+    \ sensing methodology, the authors found that temperature in the area of\ninterest,\
+    \ Lake 1 and Lake 2 at the Cirat dam have a higher temperature value compared\n\
+    ground temperature of the Soil and Dam. There is approximately an 8 C consistent\
+    \ annual\ntperature difference between water and ground surface temperature in\
+    \ the area of interest. The\nhighest temperature difference between water- and\
+    \ ground-based areas is 15\nC October, while the lowest is 3.8 C in November and\
+    \ December. From the\ncalculation, the authors estimate that FPV has a lower operating\
+    \ temperature, and\nhig efficiency compared to GPV. The authors calculate that\
+    \ FPV installation on location Lake 1 has\n0.11% higher efficiency compared to\
+    \ solar PV.\n\nRegarding design system, the required area to perform performance\
+    \ calculations, and considering the MoEM regulation\n50 of 2017, and after implementation\
+    \ by Regulation No 53 of 2018, the NRE tariff rate based on BCG\ntarif is too\
+    \ low to attract investment in solar project in West Java province is unfeasible.\
+    \ The\n province lacks attraction from performance incentives to invest in solar\
+    \ PV. Financial\nparametric results show a positive NPV for FPV or GPV projects.\n\
+    \nThe authors conclude that it requires a tariff of 0.90 cents/kWh for FPV and\
+    \ 13.4 cents/kWh for\nGPV. The difference between these technologies is 3.5 cents/kWh.\
+    \ If difference applied to the annual energy yield that is produced from 1\nMW\
+    \ of installation capacity, it amounts to $46,260 (641 million rupiah) of savings,\
+    \ which is\nobtainable from FPV utilization. Considering this benefit from FPV,\
+    \ a supported and\nregulation policy of FPV utilization in Indonesia must be put.\n\
+    \nThe suggestion of a more economically feasible solution is tariff raising using\
+    \ range of BCG and\nimplementation of time on delivery (ToD) schemes. From this\
+    \ analysis using the ToD\nfactor heat map map irradiation, is possible to achieve\
+    \ positive NPV by creating a\nToD scheme. ToD scheme can become an active policy\
+    \ to achieve maximum cost by considering of\nt system itself. The system proposed\
+    \ in this study does not apply only the application of ToD in the study.\n\nFinancial\
+    \ analysis with sensitivity analysis shows value is the input parameter that FPV\
+    \ is a\nmore promising and interesting project over GPV. With an existing parameter,\
+    \ the LCOE\nof FPV was estimated at 9.2 to 10.2 cents/kWh while GPV was estimated\
+    \ to be\n12.6 to 13.8 cents/kWh. The IRR stochastic result shows that a value\
+    \ for FPV and GPV of more\n14 are both with positive probability of more than\
+    \ 88%. Positive NPV for the FPV\nstinstallation has better probability value of\
+    \ 99.6% while GPV is in the 91.2% range probability.\n\nConsidering the performance\
+    \ and financial results of both technologies, this factor will draw attention\n\
+    from the government and investor to develop FPV. The authors consider that the\
+    \ limitations\nregarding this paper are uncertainty. The first of these is determining\
+    \ an exact point for the\nlocation to increase the accuracy of temperature measurement.\
+    \ The authors tried to mitigate this with\ntailed and detailed reading. The result\
+    \ is the assumption on a couple of cost parameters.\nThe authors tried to apply\
+    \ sensitivity and stochastic analysis to fluctuating cost and price in order to\n\
+    represent the most accurate approach. Based on the results, the authors can conclude\
+    \ that FPV offers\nse advantages to mitigate the challenges in the deployment\
+    \ of solar PV. Therefore, the authors\nsuggest a better and clear policy regarding\
+    \ the utilization of water reservoirs as a location for FPV\nstinstallation as\
+    \ one of the leading solutions for energy transition."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Energies 2020, 13, 2126
+
+
+    Author Contributions: Conceptualization, A.P.S.; Methodology, A.P.S. and K.N.K.;
+    Validation, A.P.S. and K.N.K.; Investigation, A.P.S. and K.N.K.; Writing—original
+    draft preparation, A.P.S.; Writing—review and editing, A.P.S. and K.N.K.; supervision,
+    K.N.K.; Project administration, K.N.K.; funding acquisition, K.N.K. All authors
+    have read and agreed to the published version of the manuscript.
+
+
+    Funding: This work was supported by a grant from the Human Resources Development
+    program 201501010400100 by the Korean Institute of Energy Evaluation and Planning
+    (KETEP), funded by the Ministry of Trade, Industry, and Energy of the Korean Government,
+    and supported by the KU-KIST Graduate School Project
+
+
+    Conflicts of Interest: The authors declare no conflict of interest.
+
+
+    # Nomenclature
+
+
+    +   - η = panel efficiency (%)
+
+    T = temperature (°C)
+
+    β = coefficient value (°C)
+
+    G = Irradiance (kWh/m²/day)
+
+    V = speed (m/s)
+
+    V = speed (m/s)
+
+
+    # Subscripts
+
+
+    +   - stc = standard test condition
+
+    ref = reference/nominal condition
+
+    c = operating condition
+
+    gpv = ground solar PV
+
+    fp = floating solar PV
+
+    a = ambient
+
+    wi = wind
+
+    w2 = water
+
+    oct = normal operating temperature (1000 W/m²)
+
+
+    # References
+
+
+    +   1. IEA, Energy technology perspectives 2017, IEA, Paris. 2017. Available online:
+    https://www.iea.org/reports/energy-technology-perspectives-2017 (accessed 5 October
+    , 2019).
+
+    2. Government of Indonesia. Republic of Indonesia Regulation no 22/2017 on National
+    Energy General Plan; Government of Indonesia: Jakarta, Indonesia, 2017.
+
+    3. World Economic Forum. Accelerating Sustainable Energy Innovation; World Economic
+    Forum: Switzerland, 2018.
+
+    4. REN221 Century. Renewable Energy Network for 21st Century 2018 Global Status
+    Report; REN221: Bonn, Germany, 2018.
+
+    5. IRENA. Renewable Energy Benefits: Leveraging Locality For Solar PV; IRENA:
+    Abu Dhabi, United Arab Emirates, 2017.
+
+    6. S Corporation Using vacant spaces for floating photovoltaics. Renewable Energy
+    Focus 2008, 9, 64–65, doi:10.1016/j.renenev.2007.06.010:442.
+
+    7. Meshabi, M., Minamino, S. Top 70 floating solar PV plants. Solarplaza. Available
+    online: https://www.solarplaza.com/channels/top-10/11761/floating-solar-pv-plants/
+    (accessed on 10 February, 2019).
+
+    8. IRENA. Renewable Power Generation Cost 2018; IRENA: Abu Dhabi, United Arab
+    Emirates, 2018.
+
+    9. PLN, PT Statistik PLN 2018; PLN PT: Jakarta, Indonesia, 2018.
+
+    10. Thi, N.D.A. The Evaluation of Floating Solar Photovoltaics: Research Gate:
+    Berlin, Germany, 2017.
+
+    11. Sahu, A.; Yadav, N.; Sudhakar, K. Floating photovoltaic power: A review. Renew.
+    Sustain. Energ. Rev. 2016, 66, 815–824.
+
+    12. Durković, V., Djurisic, S. Analysis of the potential use of floating solar
+    power on the skader for electricity supply of aluminium plant in Montenegro. Energies
+    2017, 10, 1505, doi:10.3390/en10101505.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'Energies 2020, 13, 2126
+
+
+    15 of 16
+
+
+    13. Kalaisaisen, S.; Karthikeyan, V.; Rajesh, J.; Kumaran, A.; Ramikiran, B.;
+    Neelamagam, P. Solar pv and passive cooling technologies—A Review. In Proceedings
+    of the 2018 International Conference on Computation of Power, Information and
+    Communication (ICCEPC), Tamil Nadu, 28–29 pp. 168–169.
+
+
+    14. Rishi, K.; Balakrishnan, M.; Raakul, G.; Srinivasagan, A.; Ramikiran, B.;
+    Neelamagam, P. Solar cooling technologies— A Review. In Proceedings of the 2018
+    International Conference on Computation of Power, Information and Communication
+    (ICCEPC), Tamil Nadu, 28–29 March 2018.
+
+
+    15. Peng, Z. M.; R. Hefarteshameh, and Y. Liu. “Cooled solar pv panels for output
+    energy efficiency improvement.” Optimization and management 2019; 54:587–595.
+
+
+    16. Sieker, J.; Kusaka, K.; Numbi, B. A review of solar photovoltaic systems cooling
+    technologies. Renew. Sustain. Rev. 2017, 79, 192–203.
+
+
+    17. Pimentel da Silva, G.; Castro Brasileiro, D. Is photovoltaic better than conventional
+    photovoltaic? Assessing environmental impacts. Impact Assess. Projects. 2018;
+    36, 390–400.
+
+
+    18. Chou, Y.-K; Lee, N.-H; Kim, K.-J. Empirical research on the efficiency of
+    pv systems compared with overcast pv. In Proceedings of the 3rd International
+    Conference on Circuits, Communication, Electricity, Electronics, Energy, System
+    and Simulation, USA, 19–20 July 2001; pp. 284–289.
+
+
+    19. Tapadin, R.; Sanofte, M. A review of fluctuating photovoltaic systems: 2007–2013.
+    Progress Technol. Appl. 2015, 23, 524–532.
+
+
+    20. Spencer, R.S.; Macknick, J.; Aznar, A.; Warren, A.; Rees, M.O. Technical assessment
+    of photovoltaic systems on man-made bodies in the United States. Electron. Sci.
+    2009, 53, 1680–1689.
+
+
+    21. Liu, J.; Wang, Q; Lin, H.; Li, H.; Sun. Power generation efficiency and prospects
+    of photovoltaic systems. Energy Conversion 2017, 105, 1136–1142.
+
+
+    22. Lee, Y.-G; Hao, H.-J; Yoon, S.-J. Design and installation of fluctuating energy
+    generation systems using proper farms. Solar Energy 2014, 188, 13–27.
+
+
+    23. Rosa-Clot, M.; Tina, G.M. Modeling and Fluctuating Photovoltaic Systems: Modelling,
+    Design and Case Studies; Academic Press; Cambridge, MA, USA, 2007.
+
+
+    24. Yadav, N.; Gupta, M. K. Assessment of fluctuating photovoltaic power. In Proceedings
+    of the 2016 International Conference on Electrical Power and Energy Systems (ICESEP),
+    Bhopal, Madhya Pradesh, India, 14–16 December 2016; pp. 264–269.
+
+
+    25. Aziz, M.S.M.; Othman, M.Y.H.; Ruslan, M.H.J; Sofian, K.; Majid, Z.A.A. Study
+    on electrical power output of fluctuating photovoltaic and conventional photovoltaic.
+    AIP Conf. 2016, 1571, 951–910.
+
+
+    26. Majid, Z.; Ruslan, M.H.; Sofian, K.; Othman, M.Y.; Study on performance of
+    80 watt photovoltaic panel. J. Mech. Eng. 2014, 7:1110–1150.
+
+
+    27. Charles Lawrence Kamuyu, W.; Lee, J.; Wan, C.; Son, A. H. Prediction model
+    of photovoltaic power for performance of fluctuating power. Solar Energy 2018,
+    181, 4–14.
+
+
+    28. Shao, S.; Gray, D. K.; Rees, J. S.; O''Reilly, C.; Schneider, P.; Quadrad,
+    A.; Gries, C.; Stefanoff, J.; Hampton, S.E. H. Global analysis of lake surface
+    temperature collected in situ and satellite methods from 1985–2009. Data 2015,
+    2, 1.
+
+
+    29. Hook, S.J.; Prata, F. J.; Alley, R.E.; Atabahi, A.; Richards, R.C.; Schalow,
+    G.S.; Pålmsson, S. Retrieval of lake bodies using satellite and along-tracking
+    radiometer (aster-2): A case study using Lake Taho, California. J. Atmospheric
+    Ocean 2003, 20, 534–548.
+
+
+    30. Pagano, T.S.; Durhan, R.M. Resolution imaging spectroradiometer (modis). In
+    Proceedings of the Sensor Systems for the Early Earth Observation Systems, Orlando,
+    FL, USA 13–14 April 1993; pp. 2–5.
+
+
+    31. Włoczyk, C.; Richter, R.; Borg, E.; Neubert, W. Sea and lake surface temperature
+    retrieval from landsat thermal data in Int. Remote Sens. Sens. 2006, 27, 2489–2502.
+
+
+    32. USGS. Landsat 2019. Available online: https://www.usgs.gov/land-resources/nli/landsat
+    (accessed on 16 February).'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'Energies 2020, 13, 216
+
+
+    16 of 16
+
+
+    +   34. Roy, D.P.; Wulder, M.A.; Loveland, T.R.; Woodcock, C.; Allen, R.G.; Anderson,
+    M.C.; Helder, D.; Irons, J.R.; Johnson, D.M.; Kennedy, R. Science and product
+    vision for terrestrial global change research. Remote Sens. Environ. 2014, 145,
+    154–172.
+
+
+    +   35. Irons, J.R.; Weyer, J.L.; Barsi, J.A. The next satellite: The Landsat
+    data continuity mission. Remote Sens. Environ. 2012, 12, 11–23.
+
+
+    +   36. Pasalic, S.; Akamovics, A.; Avlovskis, S. Floating photovoltaic plants
+    on artificial constructions–Example of Jamaica Lake. In Proceedings of the 2018
+    IEEE International Energy Conference (ENERGYCON), Limassol, Cyprus, 3–7 June 2018:
+    pp. 1–6.
+
+
+    +   37. Song, J; Choi, Y. Analysis of the performance of photovoltaic systems
+    in Mine Pit Lakes: Case study at the Sangyeong-open-pit mine in Korea. Energies
+    2016, 9, 10.
+
+
+    +   38. Lalwani, M.; Kothari, J.; Singh, M. Investigation of solar photovoltaic
+    simulation softwares. Int. J. Appl. Eng. Res. 2010, 1, 585–401.
+
+
+    +   39. Pompoulos, C.S.; Iornidis, G.C.; Kaminaris, S.D.; Mardikis, J.D.; Katsikas,
+    N.G. A comparative evaluation of photovoltaic electricity production systems (pvgs
+    and watts). Renew. Energy Pros. 2015, 2, 175–189.
+
+
+    +   40. Blair, N.; Dobos, A.P.; Freeman, J.; Weiner, W.; Ferguson, T.; Gilman,
+    P.; Janzou, S. System Advisor Model, 2014.14. General; National Renewable Energy
+    Lab.(NREL): Golden, CO, USA, 2014.
+
+
+    +   41. Short, W.; D.J.; Holt, T. A Manual for the Economic Evaluation of Energy
+    Efficiency and Renewable Technologies; National Renewable Energy Lab.(NREL): Golden,
+    CO, USA, 1995.
+
+
+    +   42. Friedrich, C. Comparison of ArcGIS and QGIS for Applications in Sustainable
+    Spatial Planning. Ph.D. Thesis, Universal Wien, Vienna, Austria, 2014.
+
+
+    +   43. Osterman, A. Visualization in ArcGIS QGIS and Mapinfo. Master’s Thesis,
+    KTH, Stockholm, Sweden, 2014. Congedo, L. Semi-automatic classification plugin
+    domain. Release 2016, 4, 29.
+
+
+    +   44. Evans, D.; Florscheutz, L. Cost studies on terrestrial photovoltaic power
+    systems with sunlight concentration. Solar Energy 1977, 19, 255–262.
+
+
+    +   46. Duffie, J.A.; Beckman, W.A. Solar Engineering of Thermal Processes. John
+    Wiley & Sons: Hoboken, NJ, USA, 2013.
+
+
+    +   47. Indonesia Ministry of Energy and Mineral Resources, Mechanism for Determining
+    Basic Cost of Generation PT PLN no 24/2017; Ministry of Energy and Mineral Resources:
+    Jakarta, Indonesia, 2017. Available online at https://idih.esdm.go.id/index.php/result?nomor_peraturan-24&tahun-terbit-2017
+    (accessed on 25 January 2019).
+
+
+    ![](img/6920548fe7daf37aeb031ac079641ebe_15_0.png)
+
+
+    © 2020 by the authors. Submitted for open access under the terms and conditions
+    of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).'
+  merge: -1
+  pgno: 15
