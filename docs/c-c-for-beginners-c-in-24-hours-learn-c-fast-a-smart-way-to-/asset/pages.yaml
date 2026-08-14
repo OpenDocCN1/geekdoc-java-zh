@@ -1,0 +1,1231 @@
+- img_proc: true
+  md: '# The Ultimate Beginners Guide
+
+
+    # C++
+
+    FOR BEGINNERS
+
+
+    ![](img/ff37a0bcb18b4a432276b7406e26478e_0_0.png)
+
+
+    # A Smart Way To Learn C++
+
+    Plain, Fast and Easy Steps
+
+
+    STANLEY HOFFMAN'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# C++
+
+
+    # C++ for Beginners, C++ in 24 Hours, Learn C++ fast!'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Introduction
+
+
+    C++ is an up and coming programming language that ’s based on objects and compiling.
+    If you ’re someone ’s never programmed before, you might be confused by the words
+    object and compiling.
+
+
+    A program that utilized compiling is read by the computer ’s CPU rather than being
+    interpreted by a program installed on the computer to run that program. Therefore,
+    the program speaks more to the computer ’s processing system rather than a program.
+
+
+    You may already know this, but computers are not able to read letters and have
+    to read binary code, so the code has to be translated into a computer readable
+    one. Now, object-orientedcode is just how the code is structured. You ’Il understand
+    that tidbit a little better in the following chapters.
+
+
+    So what does all mean and why do you need to know it? As a programmer using C++,
+    you ’re going to need more than just the average text editor. There only a few
+    programming languages where that ’s all you ’ll need, and they ’re not really
+    programming languages. One of the things you are going to need is a compiler.
+
+
+    Another thing you ’re going to want an Integrated Development Environment, also
+    known as an IDE. This is a programmer-oriented text editor that has a syntax highlighting
+    and is compiler integrated. For Windows and Linux, you can use a few different
+    options.
+
+
+    You don ’t really need an IDE because a basic text editor will, but something
+    like Notepad is going to make things a little more difficult. Word processors
+    are also a bad choice because they have autocorrectwith spelling and grammar,
+    which will miss up your code if you ’re not careful.
+
+
+    To begin with C++, you should understand that it is a rigid syntax. This means
+    the code is case sensitive, so typing ’Hello ’ is going to be different than typing
+    ’hello’. In addition, you should know that the programming language doesn ’t care
+    much about white space, so don ’t worry about it.
+
+
+    So that ’s all you need to know about C++ when you first begin. Let ’s get into
+    some actual coding to get you started!'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'I think next book will also be interesting for you:
+
+
+    **Computer Hacking** by Matt Benton
+
+
+    ![](img/ff37a0bcb18b4a432276b7406e26478e_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Contents
+
+
+    +   Introduction
+
+    Chapter One – Your First Program
+
+    Chapter Two – Variables
+
+    Using Variables
+
+    Chapter Three – Expanding Your Program
+
+    iostream Library
+
+    Chapter Four – Operators
+
+    Chapter Five – Conditionals
+
+    Chapter Six – Loops
+
+    Chapter Seven – Arrays
+
+    Chapter Eight – Functions
+
+    Chapter Nine – Pointers
+
+    Chapter Ten – Dynamic Memory
+
+    Chapter Eleven - Classes and Objects
+
+    Conclusion'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# Chapter One – Your First Program\n\nDue to being this short tutorial on how\
+    \ to get started with C++, we are going to start you out with a program in the\
+    \ first chapter. Your first program is going to be very simple. All you are going\
+    \ to do is write a single phrase on the screen, it is not as simple as writing\
+    \ it in a Word document. First, take a look at the code and we will go further\
+    \ into what it means.\n\n```\n#include <iostream>\nusing namespace std;\nint main()\
+    \ {\n    cout << \"Hello, world!\";\n    return 0;\n}\n```\n\nThe line is going\
+    \ to tell the compiler it has to link to the iostream library to the program.\
+    \ A library is a repository where snippets of code are stored, known as functions.\
+    \ The library stores other things, like variables and operators.\n\nThe iostream\
+    \ library has code that will let you send characters into the text stream, which\
+    \ is then fed onto the screen. Think of it like a river. You are the source and\
+    \ the screen the sea. Whatever is put into the river from the source is going\
+    \ to go onto the screen.\n\nThe following line, line two, lets the compiler know\
+    \ that you want to use the namespace known as std, which is a standard namespace.\
+    \ Namespaces are an area where the code is stored. This is useful if you have\
+    \ two pieces of code that have the same name. Normally, pieces of code are not\
+    \ able to share the same name, but if one of them is in a separate namespace than\
+    \ the other, then they can have the same name.\n\nThe third line of code is the\
+    \ beginning of the code. It is the main block, as the name implies. Everything\
+    \ inside the braces will be translated by the compiler. You will need that line\
+    \ in every program because nothing will happen without it."
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Now comes the printing of the phrase, ‘ Hello World ''! To do this, you use
+    code that ’ s stored inside the iostream library. This part of the code is known
+    as the statement or cout, which sends information to the stream. The << comes
+    after the cout is an operator. This means ‘ output '', with so the cout it translates
+    to ‘ output this stream ’ .
+
+
+    The following stream is ‘ Hello, World!’ and is known as a string. Strings are
+    a sequence of characters and are shown by enclosing them in double quotation marks.
+    This ends with a semi-colon and signifies the end of the statement. If the semicolon
+    is not used, then the program is not going to compile.
+
+
+    ```
+
+    <hello-world />
+
+    ```
+
+
+    The last line, not the closing brace, is very simple but also very important.
+    It ’ s placed at the end of main and tells the computer that the main block has
+    been finished. It will return a value of 0 to the CPU. A non-zero value will create
+    an error, so it ’ s a necessary line.
+
+
+    Now that you have the source code of the program, you will have to compile i.
+    If the program closes once you run it, then running it from the cmd/terminal prompt
+    instead.
+
+
+    Now that you know how to create your first program and what it looks like let
+    ’ s a look at variables!'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Chapter Two – Variables
+
+
+    In the last chapter, variables were mentioned and it was said that they would
+    be discussed. Now is the time to discuss them. A variable is something that stores
+    a value. Imagine that every variable is a box and every box is labeled with a
+    name and category.
+
+
+    ![](img/ff37a0bcb18b4a432276b7406e26478e_12_0.png)
+
+
+    The category is what type of item ''s storing and its name is the specific variable
+    it ''s called. Boxes are able to store many things, but only if that thing fits
+    inside the box. This is the same with variables. They all have a type, name, and
+    size that govern what they are and are not able to store.
+
+
+    For example, one type of variable is the integer. If you know basic mathematics,
+    then you know that integers are zero, whole numbers, and their negative counterparts.
+    So -5, 4, 0 and -378 are all integers. In addition, integer variables will have
+    a fixed size.
+
+
+    They are only able to hold one number between two others. These are specific to
+    the variable and will not be discussed quite yet, a default integers range is
+    between -2³= -2, 147, 483, 648 and 2³– 1 = 2, 147, 483, 647. You probably won
+    ''t need numbers larger than that, so we ''ll save the rest for another time.
+
+
+    Here ''s to see the different types of variables you can use.
+
+
+    | C++ Type | Stores |
+
+    | int | Whole numbers (integers) |
+
+    | bool | True or False (0 or 1) |
+
+    | float | Fractional numbers (reals) |
+
+    | double | Float with twice the precision |
+
+    | char | A single ASCII character |'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: There are a few different variable types. You 'll probably use them all when
+    you program, but for now you 're only going to use a few.
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Using Variables
+
+
+    Take a look at the following program:
+
+
+    ```
+
+    1 #include <iostream>
+
+    2 using namespace std;
+
+    3
+
+    4 int variable;
+
+    5
+
+    6 int main()
+
+    7 {
+
+    8
+
+    9 variable = 42;
+
+    10
+
+    11 cout << variable;
+
+    12 return 0;
+
+    13
+
+    14 }
+
+    ```
+
+
+    Most of this program is going to look familiar, except for the fourth and sixth
+    lines. The first unfamiliar part declares the variable. This is telling the compiler
+    that you’re going to use a variable. In declarations, the variable type is going
+    to come first. In the example, it’s using the int type. Next is the variable’s
+    name, which would be known as var.
+
+
+    It’s easy and simple. A variable name can be anything, but be sure it’s something
+    relevant and not something that it’s already reserved and means something in C++
+    and it doesn’t begin with a number or a special character. You should start with
+    a lowercase letter, and end the statement with a semi-colon.
+
+
+    Line nine in the code above is known as an assignment and assigns a value to the
+    variable. The equal sign is the assignment operator, and it is what it does assigning.
+    The variable on the left is given the value on the right, and the = is a binary
+    operator because it has two operands. One to the left and the other to the right.
+    The operand on the right doesn’t have to be a value. It can be another variable.
+    The left has to be a variable and you can’t change the meaning of the number seven.
+    In the example, the integer var is a value of forty-two.
+
+
+    You can see the cout statement doesn’t have quotations marks around the variable
+    name. That’s because you want to output the value of the var and not display the
+    string ‘ var’. If you were compiling the program, it would print ‘ 42 ’ because
+    that is the value of the var has. By trying it to another integer and look at
+    the output.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '```
+
+    C:\WINDOWS\system32\cmd.exe
+
+    OUTPUT PROGRAM
+
+    Maths = 28
+
+    Physics = 77
+
+    Chemistry = 69
+
+    ```
+
+
+    Variables also have prefixes that are added to their declaration that changes
+    how they act. Some will change the size, and others will not allow negative numbers,
+    and others might do something entirely different.
+
+
+    Now that you know about variables let ’ s talk about how to expand the program!'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Chapter Three - Expanding Your Program
+
+
+    Now that you know how to use variables and how to put them into the programlet
+    '' s a look at how to expand the program. All you really know what to do is use
+    the variables and put them into your program, so all you can really do is set
+    the output and values of the variable. That isn '' t useful when you ''re creating
+    a real program.
+
+
+    ![](img/ff37a0bcb18b4a432276b7406e26478e_18_0.png)
+
+
+    What you need is a way to manipulate the variables and receive input from a user.
+    So let '' s take a look at the next!'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# iostream Library
+
+
+    You already know that the iostream library is able to output data, but it can
+    also obtain input data, too. The command is very like the cout statement. The
+    command is cin. There is one different, though. When you use cin, the operator
+    afterit '' '' is inverted.
+
+
+    Instead of being <<, '' >>. This is confusing to remember in the beginning, but
+    you '' ll learn it eventually. Note that when you run the program, you '' ll need
+    to press the enter key you put in the desired information, like a terminal/cmd
+    prompt.
+
+
+    A look at << the following program to see the difference between the two.
+
+
+    ```
+
+    1 cout << "string";n2 cout << var;
+
+    3
+
+    4 cin >> var;
+
+    ```
+
+
+    You can probably see that it '' s simple to get the user '' input using the iostream
+    library, which produces some more useful programs. iostream is a lot more powerful,
+    though. You can combine many statements into one.
+
+
+    For example, to put out two strings or variables you would normally need two statements,
+    but you can combine many cout statements and produce a much shorter code. All
+    you have to do is just add another operator for the item you '' re outputting
+    or inputting.
+
+
+    For example:
+
+
+    ```
+
+    1 cout << "Hello, " << "World!";
+
+    ```
+
+
+    You can also combine together cin statements in the same way you '' d receive
+    several parts of the input in a row. Enter has to be pressed after each one, and
+    you can '' t mix input and output on a line of code.
+
+
+    Now that you know how to combine code and expand your programlet '' s talk more
+    about'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: operators.
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Chapter Four – Operators
+
+
+    You ''ve learned how to output text, declare a variable and obtain input, but
+    you can ''t do anything with the variables. Sure, you can give them values, but
+    what use is that in the real world? What you really need is a way to manipulate
+    the variables without doing hard work. Luckily, the operators will save you!
+
+
+    You ''ve already investigated two operators that are linked to the iostream library,
+    the input and output or >> <<.
+
+
+    | Operator | Use | Example | Result |
+
+    |---|---|---|--|
+
+    | + | To add two numbers | i=3+2 | 5 |
+
+    | | For subtraction | i=3-2 | 1 |
+
+    | * | For multiplication | i=3*2 | 6 |
+
+    | / | For division | i=3/2 | 1 |
+
+    | % | Modular division (Reminder after division) | i=10%3 | 1 |
+
+
+    These operators are able to be put into categorical groups, the first being arithmetic
+    operators. These are -, +, /, and *. You would use them exactly you would use
+    them in math. For example, this piece of code will add two numbers together and
+    display the results.
+
+
+    ```
+
+    #include <iostream>
+
+    using namespace std;
+
+    int sum = 0;
+
+    int main() {
+
+    sum = 64 + 32;
+
+    cout << sum;
+
+    return 0;
+
+    }
+
+    ```
+
+
+    Now that you know how to use operators let ''s take a look at conditionals!'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Chapter Five – Conditionals
+
+
+    It ''s great to have a program that does single, linear tasks, like saying ''
+    Hello '', but it ’s rare that you '' going to come across for the need of having
+    a program that does linear tasks only. Programs usually use something known as
+    conditions, or statements that branch the code into different paths depending
+    on whether a condition is true or not. It ’ like a fork on the road, basically.
+
+
+    C++ conditionals have the form of if statements. For example, if something is
+    true, execute this line of code, if something is false, execute another line of
+    code. Take a look at the following code piece as an example.
+
+
+    ```
+
+    1 int a;
+
+    2
+
+    3 if (a<2)
+
+    4 {
+
+    5 cout<<"a is less than 2/n";n6 }
+
+    ```
+
+
+    Lines one through five should be pretty obvious to you by this point, but line
+    three is the one where you may need a little explanation. This is the example
+    of the if statement. It operates by first taking the matter of the integer variable
+    a, and checks to see if it ’s less 2. If that ’s true, then it ’ll run the code
+    that ’s in the curly brackets.
+
+
+    If it ’s not, then it will continue as if the piece of code didn ’t exist. We
+    know that 1 or the value of a is less than 2, so if you were to run this program,
+    then you ’d see ’ a is less than 2! ’ on the screen.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'Here there another operator introduced, the less one, <. If you ''re familiar
+    with math, then the use of this sign is pretty self-explanatory. If you ''re not,
+    then you ''ll need to learn it. Note that while it looks <<, they are not even
+    close to the same thing and are not related to programming.
+
+
+    # C++ Loops and Conditionals
+
+
+    +   - Loops
+
+    - for
+
+    - while
+
+    - do
+
+    - Conditionals
+
+    - it, else, else if
+
+    - ? operator
+
+    - switch
+
+
+    Of course, C++ is a strong language, and so it ''s able to do more powerful things
+    using these condition if statements.
+
+
+    So in summary, C++ conditionals start with an if statement, and they can have
+    a number of else ifs after them, too. An important thing you should remember is
+    that once one of them has been satisfied, then all the rest is going to be skipped.
+    If you want all of your statements checked, then do several single if statements
+    one after another.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Chapter Six – Loops
+
+
+    ![](img/ff37a0bcb18b4a432276b7406e26478e_30_0.png)
+
+
+    Now you are able to write code that is able to read input from the, but if you
+    do different things depending on the input, and then show the results, but if
+    you want to do the same thing with some different parameters, several times? It
+    would be boring to write the same code over and over again, and awkward if you
+    don not know how many times you need to run that piece of code when you are writing
+    it. What if it depends on something the user entered?
+
+
+    To complete this action, you ill need to use something known as a loop. Loops
+    are a piece of code that are repeated several times, one after another until a
+    condition is met. C++ has three different types of loops. There s the while loop,
+    the for loop and the do while loop. Let start with the while loop since its s
+    easiest.
+
+
+    While loops look like if statements, almost.
+
+
+    ```
+
+    1 int userInput= 0;
+
+    2
+
+    3 while (userInput!=10)
+
+    4 {
+
+    5 cin >> userInput;
+
+    6 }
+
+    ```
+
+
+    The use of while is evident when you know what loops actually do. Here, the code
+    is saying that while the value of in the userInput variable does not equal 10,
+    obtain some input from the user . In addition, remember the lmeans not s in C++,
+    so the code != s translates to not equal.
+
+
+    If the userInput is ten, then the code is not going to be executed and the loop
+    will be'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'skipped. While loops can be seen as being an if statement that jumps back to
+    the information in itself once the code has been run.
+
+
+    Before we keep going, it ''s important to know that the following piece of code
+    is usable in C++:
+
+
+    ```
+
+    while (1 == 1)
+
+    {
+
+    cout << "a";
+
+    }
+
+    ```
+
+
+    It actually has its own name. It ''s an infinite loop so it will loop infinitely.
+    Going through the code, you ''d get something like ''Is 1 equal to 1? Yes it is,
+    print an ''a ''.'' This will repeat over and over again. There are other ways
+    to make infinite loops, but you probably don ''t want to make one.
+
+
+    The second type of loop is the do while loop. Do while loops look like this:
+
+
+    ```
+
+    int userInput = 0;
+
+
+    do
+
+    {
+
+    cin >> userInput;
+
+    } while (userInput != 10);
+
+    ```
+
+
+    While it looks different from the standard while loop you just saw, it ''s almost
+    the same thing, except there ''s one difference. The while loop evaluates a condition
+    to see if it ''s true and will run the code if it is, and then check to see if
+    it is true. Due to this happening, no matter what you initialized as userInput
+    to the code between the curly brackets will definitely run.
+
+
+    The third type of loop is the for loop. This is the more complicated out of the
+    three, but it ''s powerful when you understand it. For now, let ''s just cover
+    the uses. Take a look at this for loop.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '```
+
+    1 int i = 0;
+
+    2
+
+    3 for(i = 2; i < 10; ++i)
+
+    4 {
+
+    5 cout<<i<<"/n";
+
+    6 }
+
+    ```
+
+
+    This piece of code tells the program to start by setting the value i to 2 and
+    as long as i is less than 10, then output its value to the screen and increment.
+    You can easily replicate this loop using a while loop, but it uses a lot more
+    line of code and is pretty untidy.
+
+
+    You should also know that the variables used in the first line of for loop have
+    to be the same variable. You should also remember that the first statement is
+    not a conditional, it ''s assignment.
+
+
+    This kind of loop comes in handy when you want to step through various pieces
+    of data, and you ''ll see this when you read about arrays in the next chapter.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Chapter Seven – Arrays
+
+
+    Arrays are a list of variables that are grouped together because they have a common
+    use. They don’t really have to have something in common, when you put unrelated
+    things toget it’s not really a good idea. It’s like filling your filing cabinet
+    with random papers and never organizing them. What the need for a filing cabinet
+    of you ’re going to do?
+
+
+    Here’s a declaration of an array of integer variables.
+
+
+    ```
+
+    int a [5];
+
+    ```
+
+
+    You can see that arrays look like normal variables, but they have some square
+    brackets at the ends. When you declare arrays, the brackets are then filled with
+    the size of the array ’re looking for. In this case, you ’re going to store five
+    integer variables.
+
+
+    | a: | a[0] | a[1] | | | | a[9] |
+
+
+    An array can be whatever size you want as long as you have the RAM to spare, but
+    it can hold only one type of variable at once. The variable type can be something
+    you ’d normally use.
+
+
+    Accessing a certain variable in the array is simplistic. You put the numbers of
+    variables you want in the square brackets. So for the first variable you want
+    [0], for the second you put [1] and keep going. Take a look at the following example.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '```
+
+    1 int a[5];
+
+    2
+
+    3 // Set the first variable in a to 1
+
+    4 a[0] = 1;
+
+    5
+
+    6 // Set the second variable in a to 4
+
+    7 a[1] = 4;
+
+    8
+
+    9 // Output the first variable
+
+    10 cout << a[0];
+
+    ```
+
+
+    One thing you shouldn ''t do is access a variable that ''s not in the array that
+    doesn ''t exist, like the tenth variable in an array that has five places, or
+    doesn ''t have a variable assigned to it. If it doesn ''t have a variable assigned
+    to it, you ''ll get what ''s known as a garbage value because the value it returns
+    is not going to be useable.
+
+
+    If the variable doesn ''t exist, you can get a segmentation fault because the
+    program will try to access a segment of memory that it ''s not allowed to. This
+    can result in the program terminating unexpectedly.
+
+
+    Now that you know how to create arrays let ''s take a look at creating functions!'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# Chapter Eight – Functions\n\nFunctions are a great way of writing out complex\
+    \ programs without needing to repeat code. For example, let 's say you have a\
+    \ complicated part of code that gets some input from the user and parses it. Now\
+    \ let 's say you need to run the code several times, but not in a loop. Up until\
+    \ this point, you 'd have to write it out every time.\n\n```\nmain () {\n  function1\
+    \ () {\n    function2 () {\n      function3 () {\n      }\n    }\n  }\n}\n```\n\
+    \nWith modern copying and pasting, it 's not that big of a deal, it 'll look horrible\
+    \ and having repeating code can be a problem when you go to fix any errors. To\
+    \ remedy this problem, you can create functions, which are pieces of code that\
+    \ you 're able to call repeatedly without needing to write it out every time.\n\
+    \nActually, you 've already used a function. Main is a function. So let 's take\
+    \ a look at it to see how it works.\n\n```\nint main () {\n2 {\n3 cout << \"I'm\
+    \ in a function!\\n\";\n4\n5 return 0;\n6}\n```\n\nLet 's examine the first line,\
+    \ the one that has the word main in it. This begins the definition of the function\
+    \ that will take no parameters, known as main, and will give back a value of type\
+    \ int. You already known what an int is, a type of variable, but what does return\
+    \ a value mean?\n\nA function in C++ is like a function in math, you insert a\
+    \ number and some operation is"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'performed on it, and you get an answer. Here, the int is the variable that
+    the output function is going to be. A parameter is the variable that is put into
+    the function, and then the function performs an operation before it returns the
+    results.
+
+
+    Let ’s take a look at a function that has a main.
+
+
+    ```
+
+    1 // This is a different way of writing main
+
+
+    2 intmain(int argc, char*argv[])
+
+
+    3 {
+
+
+    4 cout << ''I''m in a function!/n";
+
+
+    5
+
+    6 return 0;
+
+
+    7 }
+
+    ```
+
+
+    The parameters are written like a variable definition and is separated by a comma.
+    They are written right after the function name and are closed by parenthesis.
+    Now there is an integer value known as argc and an array of characters known as
+    argv as the parameter. You can use any type of variable you want as a function
+    parameter, as long as when you use that function you provide a variable that ’s
+    of the same type.
+
+
+    Now that you know what a function is and does let ’s take a look at pointers.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Chapter Nine – Pointers
+
+
+    RAM or random access memory is where the computer saves all the variables the
+    program uses, and is basically a long line of numbers. Every number is identified
+    by the address or where it is on that line. These are logical, so the number with
+    the address comes after the three but before the five.
+
+
+    The exact size of the number at address is figured out by the computer architecture.
+    Say you have two integers and a character. One might have an address of 1000 while
+    the other has an address of 1004. The character or char might have an address
+    of 1008. So why is there a four byte gap between the variables? Integers are four
+    bytes long, and they take up four addresses in order to store their value. It
+    doesn ''t matter if you use one byte and dont use the other three, it will still
+    take up four bytes of memory.
+
+
+    ![](img/ff37a0bcb18b4a432276b7406e26478e_43_0.png)
+
+
+    But why do you need to know this? C++ programmers need to know that their compiler
+    does not have fancy addressing for them, translating their variables into addresses
+    in RAM, but sometimes it '' s good to know the translations on our own. Think
+    about how the arrays work for a moment, they are just long lines of variables
+    whose type is what the programmer tells the compiler.
+
+
+    So you might be thinking this is just like RAM and you ''d right. When you labeled
+    the arrays and the fifth value was actually the number six because all arrays
+    start at zero, you ''re actually taking the fifth variable after the first variable.
+    So if you say the array is an integer one, with the first integer coming from
+    RAM address 1000, then combine that what you know about integers being in four
+    bytes, you can see that the nth integer in the array would have this address:'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'Address of the nth element = 1000 + (4 x (n-1))
+
+
+    or
+
+
+    Address of nth element = Address of 1st element + (variable size x (n-1))
+
+
+    Therefore, the address of the sixth element is 1020. So why is this useful? You
+    can make the array while the program is compiling and running and make it the
+    proper size.
+
+
+    A pointer is a normal variable, but instead of storing the integer, it stores
+    the address of another variable. Here is a pointer.
+
+
+    ```
+
+    1/* This is a pointer */
+
+    2 int *foo=0;
+
+    ```
+
+
+    In this pointer, you have a variable that stores the address of the integer. The
+    * is the variable as a pointe rand not a normal variable. You ''ve assigned it
+    to the value of zero. When you assign values to pointers, you ''re not giving
+    them numbers or characters, you ''re giving them the address of another variable.
+
+
+    Now that you know what they are, let ''s move on to dynamic memory in the following
+    chapter.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Chapter Ten - Dynamic Memory
+
+
+    So far you ''ve been able to create variables at compile-time and modify them
+    during runtime; however, you can create them in run-time, too when you use dynamic
+    memory allocation. This method uses allocation and deallocation of RAM as the
+    program is running. Since you ''re accessing RAM, it ''s natural to assume that
+    you ''ll do it with pointers, but dynamic memory in C++ is utilized differently
+    than it is in C.
+
+
+    Take a look at the following block of code.
+
+
+    ```
+
+    int* i = new int;
+
+    2
+
+    3 *i = 5;
+
+    4
+
+    5 cout <<*i << "at address"<<i
+
+    6 << "which itself is at address " <<& << std::endl;
+
+    7 delete i;
+
+    ```'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'Here you '' made a pointer to an int and set some memory for it. Since i is
+    still the pointer, not a variable, you ''ll have to set the value pointed to by
+    i to five and not i. This changes the location point by i and orphaned the set
+    aside memory in RAM somewhere. This memory has been forgotten known as memory
+    leak. To stop this, be sure to deallocate the memory you set aside in the first
+    place using the delete operator.
+
+
+    ![](img/ff37a0bcb18b4a432276b7406e26478e_48_0.png)
+
+
+    Allocating memory down to single variables doesn ''t help much, though. If you
+    know the variable was going to exist then you could declare normally. What this
+    does create variable size arrays that are not known as compile-time. How would
+    you possibly know it, really? You can ''t create an array of pointers and tap
+    into them as you need them, that ''s just a more RAM intensive version of making
+    gigantic array and hoping everything goes well.
+
+
+    Now that you know what dynamic memory is and how to use it let ''s take a look
+    at classes and objects in the following chapter.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Chapter Eleven - Classes and Objects
+
+
+    This is actually what C++ was made to, support classes and objects. Without them,
+    C++ is just really C. But what are the classes and objects that have been mentioned
+    before? Classes are a type of mold and the object is the thing that comes from
+    the mold. These molds are flexible and are able to be used to make whatever type
+    of object you ’ d like. The molds can be general or they can be specific.
+
+
+    ![](img/ff37a0bcb18b4a432276b7406e26478e_51_0.png)
+
+
+    So let ’ s say you want to make a vehicle. This is going to be an abstract tutorial
+    as the code is not actually doing to do anything. Think of what properties a car
+    needs. They need speed, price, color, manufacturer, and a model. What about if
+    ’ s four wheel drive or not? And what can you do with it? Can you start the engine
+    and stop?
+
+
+    Let ’ s take a look at the class definition of what the car looks like.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '```
+
+    1 class Car
+
+    2 {
+
+    3 private:
+
+    4
+
+    5 bool running;
+
+    6
+
+    7 public:
+
+    8
+
+    9 string manufacturerName;
+
+    10 string modelName
+
+    11 bool fwd;
+
+    12
+
+    13 double topSpeed;
+
+    14 double price;
+
+    15
+
+    16 unsigned int color; // Colors like 0xB9DDCED
+
+    17
+
+    ```'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '```
+
+    Car(string manufacturerName, string modelName, double topSpeed, double price,
+    unsigned int color,
+
+    bool fwd)
+
+
+    19 {
+
+
+    20 this->manufacturerName = manufacturerName;
+
+
+    21 this->modelName = modelName;
+
+
+    21 this->topSpeed = topSpeed;
+
+
+    22 this->price = price;
+
+
+    23 this->color = color;
+
+
+    24 this->fwd = fwd;
+
+
+    25 this->running = false;
+
+
+    26 }
+
+
+    27
+
+
+    28 void start ()
+
+
+    29 {
+
+
+    30 this->running = true;
+
+
+    31 }
+
+
+    32
+
+
+    33 void stop ()
+
+
+    34 {
+
+
+    35 this->running = false;
+
+
+    36 }
+
+
+    37
+
+
+    38 };
+
+    ```
+
+
+    So as you can see, classes are defined a lot like structs, and that makes sense
+    because they are both a way to group data. But this class contains something that
+    a struct is not able to, functions.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Conclusion
+
+
+    So by now you know how to create your first, simple program and much more! You
+    know what a variable is, how to expand your program, how to use operators, conditions,
+    loops, arrays, functions, pointers, dynamic memory, and classes and objects to
+    morph your program into a masterpiece! You see, C++ was not as difficult as you
+    may have once though it was.
+
+
+    The next step is to gather the knowledge you '' ve gleaned from this book and
+    go on to read more about the wonderful world of C++ programming. Once you '' re
+    comfortable, set up a virtual machine to do your coding in and get started! You
+    '' ll learn a skill that '' s highly valuable in the computer industry today.
+
+
+    I hope you enjoyed the information you found in this eBook. If so, please leave
+    a review at your online eBook retailer '' s website.
+
+
+    Thank you for reading!'
+  merge: -1
+  pgno: 54
