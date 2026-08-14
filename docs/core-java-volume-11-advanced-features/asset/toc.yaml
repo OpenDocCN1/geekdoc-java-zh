@@ -1,0 +1,698 @@
+- - '#'
+  - Core Java 第 11 ：高级特性
+- - '#'
+  - 关于本电子书
+- - '##'
+  - 13.1. 从 Java 程序调用 C 函数
+- - '##'
+  - 13.2. 数值参数和返回值
+- - '##'
+  - 前言
+- - '###'
+  - 致读者
+- - '##'
+  - 本书简介
+- - '#'
+  - 致谢
+- - '#'
+  - 第1章 流
+- - '##'
+  - 1.2. Stream 的创建
+- - '##'
+  - java.util.Spliterators
+- - '##'
+  - java.util.Arrays
+- - '##'
+  - java.lang.String
+- - '##'
+  - java.util.regex.Pattern
+- - '##'
+  - java.nio.file.Files
+- - '##'
+  - java.util.stream.StreamSupport
+- - '##'
+  - java.lang.Iterable
+- - '##'
+  - java.util.Scanner
+- - '##'
+  - java.util.function.Supplier<T>
+- - '##'
+  - 1.3. filter, map, 和 flatMap 方法
+- - '##'
+  - 1.4. 提取子流和合并流
+- - '##'
+  - java.util.stream.Stream 8
+- - '##'
+  - 1.5. 其他流转换
+- - '##'
+  - 1.6. 简单归约
+- - '##'
+  - 1.7. Optional 类型
+- - '###'
+  - 1.7.1. 获取 Optional
+- - '###'
+  - 1.7.2. 消费 Optional 值
+- - '##'
+  - java.util.Optional 8
+- - '##'
+  - 1.7.3. Optional 值的管道化
+- - '##'
+  - java.util.Optional 8
+- - '##'
+  - 1.7.4. 如何正确使用 Optional 值
+- - '##'
+  - java.util.Optional 8
+- - '##'
+  - 1.7.5. 创建 Optional 值
+- - '##'
+  - 1.7.6. 组合 Optional 值
+- - '##'
+  - java.util.Optional 8
+- - '##'
+  - 1.7.7. 将 Optional 转换为 Stream
+- - '##'
+  - 如何获取用户流，同时跳过那些无效的 ID？
+- - '##'
+  - 1.8. 收集结果
+- - '##'
+  - java.util.stream.BaseStream
+- - '##'
+  - java.util.stream.Stream
+- - '##'
+  - java.util.stream.Collectors
+- - '##'
+  - IntSummaryStatistics 8
+- - '##'
+  - LongSummaryStatistics 8
+- - '##'
+  - DoubleSummaryStatistics 8
+- - '##'
+  - 1.9. 收集到 Map
+- - '##'
+  - 1.10. 分组与分区
+- - '##'
+  - java.util.stream.Collectors 8
+- - '##'
+  - 1.11. 下游收集器 (Downstream Collectors)
+- - '##'
+  - 你也可以应用两次 groupingBy：
+- - '##'
+  - java.util.Collectors 8
+- - '##'
+  - 1.12. 规约操作
+- - '##'
+  - 若要将原始流转换为对象流，请使用 `boxed` 方法
+- - '##'
+  - java.util.stream.LongStream 8
+- - '##'
+  - java.util.stream.DoubleStream 8
+- - '##'
+  - java.util.Optional 8
+- - '##'
+  - java.util.stream.IntSummaryStatistics 8
+- - '##'
+  - java.util.stream.LongSummaryStatistics 8
+- - '##'
+  - java.util.stream.DoubleSummaryStatistics 8
+- - '##'
+  - 1.14. 并行流
+- - '#'
+  - 并行流在海量内存数据集合和计算密集型处理时效果最好。
+- - '#'
+  - 或者，异步地：
+- - '##'
+  - 抽象方法 int read()
+- - '##'
+  - java.io.InputStream 1.0
+- - '##'
+  - java.io.OutputStream 1.0
+- - '##'
+  - 2.1.2 完整的流族
+- - '##'
+  - 2.1.3. 结合输入/输出流过滤器
+- - '##'
+  - 2.1.5. 如何读取文本输入
+- - '##'
+  - 2.1.6. 如何写入文本输出
+- - '##'
+  - 2.1.7. 以文本格式保存对象
+- - '##'
+  - 2.1.8. 字符编码
+- - '##'
+  - 2.1.9. 读取字符输入
+- - '##'
+  - 2. 读取和写入二进制数据
+- - '##'
+  - 2.2.1. DataInput 和 DataOutput 接口
+- - '##'
+  - java.util.zip.ZipEntry 1.1
+- - '##'
+  - java.util.zip.ZipFile 1.1
+- - '##'
+  - 2.3. 对象输入/输出流与序列化
+- - '###'
+  - 2.3.1. 保存和加载可序列化对象
+- - '##'
+  - java.io.ObjectOutputStream 1.1
+- - '##'
+  - java.io.ObjectInputStream 1.1
+- - '##'
+  - 2.3.2. 理解对象序列化文件格式
+- - '#'
+  - 最终，空引用被存储为 70
+- - '###'
+  - 2.3.3. transient 字段
+- - '###'
+  - 2.3.4. readObject 和 writeObject 方法
+- - '###'
+  - 2.3.5. readExternal 和 writeExternal 方法
+- - '##'
+  - 2.3.6. readResolve 和 writeReplace
+- - '##'
+  - 2.3.7. 版本控制
+- - '##'
+  - 2.3.8. 使用序列化
+- - '##'
+  - 2.3.9. 反序列化
+- - '##'
+  - 2.4.1. 路径
+- - '##'
+  - java.nio.file.Path
+- - '##'
+  - 2.4.2. 读取和写入
+- - '##'
+  - java.nio.file.Files
+- - '##'
+  - 2.4.3. 创建文件
+- - '##'
+  - 2.4.4. 复制、移动和删除
+- - '##'
+  - 2.4.5. 获取信息
+- - '##'
+  - 2.4.6. 访问目录
+- - '##'
+  - 2.4.7. 使用目录
+- - '##'
+  - 2.5.1. 内存映射文件
+- - '##'
+  - java.nio.Buffer 4
+- - '##'
+  - java.nio.ByteBuffer 4
+- - '##'
+  - java.nio.CharBuffer 4
+- - '##'
+  - 2.5.2. 数据结构
+- - '##'
+  - java.nio.WritableChannel 4
+- - '##'
+  - 2.6. 锁定
+- - '##'
+  - 2.7.2. 测试匹配
+- - '##'
+  - 2.7.4. 组
+- - '##'
+  - 2.7.6. 替换项
+- - '##'
+  - 2.7.7. 标志 (Flags)
+- - '##'
+  - java.util.regex.Matcher
+- - '#'
+  - 第 3 章 XML
+- - '##'
+  - 3.1. 引入 XML
+- - '##'
+  - 3.2. XML 文档的结构
+- - '##'
+  - 3.3. 解析 文档
+- - '##'
+  - org.w3c.dom.Element 4
+- - '##'
+  - org.w3c.dom.Node 4
+- - '##'
+  - org.w3c.dom.CharacterData 4
+- - '##'
+  - org.w3c.dom.NodeList 4
+- - '##'
+  - org.w3c.dom.NamedNodeMap 4
+- - '##'
+  - 3.4. 验证 文档
+- - '###'
+  - 3.4.1. 文档类型定义
+- - '##'
+  - 3.4.2. XML Schema
+- - '##'
+  - 3.4.3. 具体示例
+- - '##'
+  - 3.5. 使用 XPath 定位
+- - '##'
+  - javax.xml.xpath.XPath 5.0
+- - '##'
+  - javax.xml.xpath.XPathEvaluationResult<T>
+- - '##'
+  - 3.6. 使用命名空间（Namespaces）
+- - '##'
+  - 属性
+- - '###'
+  - org.w3c.dom.Node
+- - '###'
+  - java.xml.parsers.DocumentBuilderFactory
+- - '##'
+  - 流式解析器
+- - '###'
+  - 3.7.1. 使用 SAX 解析器
+- - '##'
+  - javax.xml.parsers.SAXParser 4
+- - '##'
+  - org.xml.sax.ContentHandler 4
+- - '##'
+  - org.xml.sax.Attributes 4
+- - '###'
+  - 3.7.2. 使用 StAX 解析器
+- - '##'
+  - javax.xml.stream.XMLInputFactory 6
+- - '##'
+  - javax.xml.stream.XMLStreamReader 6
+- - '##'
+  - 3.8. 生成 XML 文档
+- - '###'
+  - 3.8.1. 无命名空间的文档
+- - '##'
+  - 3.8.2. 带命名空间的文档
+- - '##'
+  - 3.8.3. 写入文档
+- - '##'
+  - 3.8.4. 使用 StAX 写入文档
+- - '#'
+  - 第 4 章 网络
+- - '##'
+  - 4.1 连接服务器
+- - '###'
+  - 4.1.1 使用 Telnet
+- - '##'
+  - 4.1.2. 使用 Java
+- - '##'
+  - 4.1.3. 超时
+- - '##'
+  - 4.1.4. IP 地址
+- - '##'
+  - java.net.InetAddress
+- - '##'
+  - 4.2. 实现
+- - '#'
+  - Transactions
+- - '#'
+  - 最后，提交整个批处理：
+- - '##'
+  - java.sql.Savepoint 1.4
+- - '##'
+  - java.sql.Statement 1.1
+- - '##'
+  - java.sql.DatabaseMetaData 1.1
+- - '#'
+  - 第 6 章 日期和时间
+- - '##'
+  - 6.1. 时间线
+- - '##'
+  - 6.2. 本地日期 (Dates)
+- - '##'
+  - java.time.LocalDate
+- - '##'
+  - 6.4. Local Time
+- - '##'
+  - 6.5. Zoned Time
+- - '##'
+  - java.time.ZonedDateTime
+- - '##'
+  - 6.6. 格式化与解析
+- - '##'
+  - java.time.DateTimeFormatter
+- - '#'
+  - 第 7 章 国际化
+- - '##'
+  - 7.1 区域
+- - '###'
+  - 7.1.1. 为什么需要语言
+- - '##'
+  - 7.1.2. 指定区域
+- - '##'
+  - java.util.Locale
+- - '##'
+  - 7.2. 数字格式
+- - '###'
+  - 7.2.1. 格式化
+- - '###'
+  - 7.2.2. 格式化
+- - '###'
+  - 7.2.3. 货币
+- - '###'
+  - 7.2.4. 符号
+- - '###'
+  - 7.2.5. 货币
+- - '##'
+  - 7.6. 日期和时间样式
+- - '##'
+  - 7.7. 格式
+- - '###'
+  - java.text.Format
+- - '###'
+  - 7.7. 边界
+- - '###'
+  - 7.7.1. 文本文件
+- - '##'
+  - 7.7.2. 行结束符
+- - '##'
+  - 7.7.3. 控制台
+- - '##'
+  - 7.7.4. UTF-8 字节顺序标记 (BOM)
+- - '##'
+  - 7.7.5. 源文件的编码
+- - '##'
+  - 7.8. 资源包 (Bundles)
+- - '###'
+  - 7.8.1. 定位资源包
+- - '##'
+  - 7.8.2. 属性文件
+- - '##'
+  - 7.8.3. 包类
+- - '##'
+  - java.util.ResourceBundle
+- - '##'
+  - 7.9. 完整示例
+- - '#'
+  - 第 8 章 编译与脚本
+- - '##'
+  - 8.1. 编译器 API
+- - '###'
+  - 8.1.1. 调用编译器
+- - '###'
+  - 8.1.2. 启动编译任务
+- - '##'
+  - 8.2. 动态 Java 代码生成
+- - '##'
+  - 8.2. Java 平台的脚本化
+- - '###'
+  - 8.2.1. 获取脚本引擎
+- - '###'
+  - 8.2.2. 脚本评估与绑定
+- - '###'
+  - 8.2.3. 重定向输入输出
+- - '##'
+  - 8.2.5. 编译脚本
+- - '##'
+  - 8.2.6. 示例：脚本表
+- - '#'
+  - 第 9 章 安全
+- - '##'
+  - 9.1. 类加载器
+- - '###'
+  - 9.1.1. 类加载过程
+- - '###'
+  - 9.1.2. 类加载器的层级结构
+- - '###'
+  - 9.1.3. 使用类加载器作为命名空间
+- - '##'
+  - 9.1.4. 编写你的类加载器
+- - '##'
+  - java.lang.ClassLoader 1.0
+- - '##'
+  - java.net.URLClassLoader 1.2
+- - '##'
+  - java.lang.Thread 1.0
+- - '##'
+  - 9.1.5 字节码验证
+- - '##'
+  - 9.2. 用户身份验证
+- - '###'
+  - 9.2.1. JAAS 框架
+- - '###'
+  - 9.2.2. JAAS 登录模块
+- - '##'
+  - javax.security.auth.callback.CallbackHandler 1.4
+- - '##'
+  - javax.security.auth.callback.NameCallback 1.4
+- - '##'
+  - javax.security.auth.callback.PasswordCallback 1.4
+- - '##'
+  - javax.security.auth.spi.LoginModule 1.4
+- - '##'
+  - 9.3. 数字签名
+- - '###'
+  - 9.3.1. 消息摘要
+- - '##'
+  - java.security.MessageDigest 1.1
+- - '##'
+  - 9.3.2. 消息签名
+- - '##'
+  - 9.3.3. 验证签名
+- - '##'
+  - 9.4. 加密
+- - '###'
+  - 9.4.1. 对称算法
+- - '##'
+  - 9.4.2. 密钥生成
+- - '##'
+  - javax.crypto.Cipher
+- - '##'
+  - 9.4.3. 密流 (Streams)
+- - '#'
+  - 第 10 章 图形界面编程
+- - '##'
+  - 10.1. 用户界面包
+- - '##'
+  - 10.2. 框架
+- - '##'
+  - 10.3. 组件中显示信息
+- - '###'
+  - 10.3.1. 2D 图形
+- - '##'
+  - 10.3.2. 标签
+- - '##'
+  - 10.3.3. 字体
+- - '##'
+  - 10.3.4. 图片
+- - '##'
+  - 10.4. 事件
+- - '###'
+  - 10.4.1. 基本事件概念
+- - '##'
+  - 10.4.2. 示例：处理点击
+- - '##'
+  - 10.4.3. 简洁地监听器
+- - '##'
+  - 10.4.4. 适配器类
+- - '##'
+  - 10.4.5. Action
+- - '##'
+  - 10.4.6. 鼠标事件
+- - '##'
+  - 10.4.7. AWT 事件层级结构
+- - '##'
+  - 10.5. Preferences API
+- - '##'
+  - 10.6. Component 类的继承层次结构
+- - '##'
+  - java.awt.Container 1.0
+- - '##'
+  - java.awt.FlowLayout 1.0
+- - '##'
+  - 11.2.2. Border Layout
+- - '##'
+  - 11.2.3. Grid Layout
+- - '##'
+  - javax.swing.text.JTextComponent 1.2
+- - '##'
+  - 11.3.1. Text Fields
+- - '##'
+  - javax.swing.JTextField 1.2
+- - '##'
+  - javax.swing.JComponent 1.2
+- - '##'
+  - 11.3.2. 标签与标签组件
+- - '##'
+  - javax.swing.JLabel 1.2
+- - '##'
+  - 11.3.3. 密码字段
+- - '##'
+  - 11.3.4. 文本区域
+- - '##'
+  - 11.3.5. 滚动面板
+- - '##'
+  - javax.swing.JTextArea 1.2
+- - '##'
+  - javax.swing.JScrollPane 1.2
+- - '##'
+  - 11.4. 选择组件
+- - '###'
+  - 11.4.1. 复选框
+- - '##'
+  - 11.4.2. 单选按钮
+- - '##'
+  - javax.swing.JRadioButton 1.2
+- - '##'
+  - javax.swing.ButtonGroup 1.2
+- - '##'
+  - javax.swing.ButtonModel 1.2
+- - '##'
+  - javax.swing.AbstractButton 1.2
+- - '##'
+  - 11.4.3. 边框
+- - '##'
+  - javax.swing.BorderFactory 1.2
+- - '##'
+  - javax.swing.border.SoftBevelBorder 1.2
+- - '##'
+  - javax.swing.border.LineBorder 1.2
+- - '##'
+  - 11.4.4. 组合框（Combo Boxes）
+- - '##'
+  - javax.swing.JComboBox 1.2
+- - '##'
+  - 11.4.5. 滑块 (Sliders)
+- - '##'
+  - javax.swing.JSlider 1.2
+- - '##'
+  - javax.swing.JMenu 1.2
+- - '##'
+  - javax.swing.JMenuItem 1.2
+- - '##'
+  - javax.swing.JFrame 1.2
+- - '##'
+  - 11.5. 布局布局
+- - '##'
+  - 11.5.2. 菜单项
+- - '##'
+  - 11.5.3. 复选框和单选按钮
+- - '##'
+  - 11.5.4. 弹出菜单
+- - '##'
+  - 11.5.5. 快捷键
+- - '##'
+  - 11.5.6. 启用和禁用菜单
+- - '##'
+  - 11.5.7. 工具栏
+- - '##'
+  - 11.5.8. 提示
+- - '##'
+  - javax.swing.JToolBar
+- - '##'
+  - 11.6. 网格布局 (Grid Bag Layout)
+- - '###'
+  - 11.6.1. Grid Bag 基础
+- - '###'
+  - 11.6.2. gridx, gridy, gridwidth 参数
+- - '##'
+  - 11.6.3. 权重字段 (Weight Fields)
+- - '##'
+  - 11.6.4. 填充和锚 (fill and anchor)
+- - '##'
+  - 11.6.5. 边距 (Padding)
+- - '##'
+  - 11.6.6. gridx, gridy, gridwidth 参数的替代方法
+- - '##'
+  - 11.6.7. Grid Bag 布局配方 (Grid Bag Recipe)
+- - '##'
+  - 11.6.8. 辅助类 (A Helper Class to Tame the Grid Bag)
+- - '##'
+  - 11.7. 对话框
+- - '###'
+  - 11.8.1. 选项面板 (Option Panes)
+- - '##'
+  - 11.8.2. 创建对话框
+- - '##'
+  - 11.8.3. 数据交换
+- - '##'
+  - javax.swing.FileChooser 1.2
+- - '##'
+  - javax.swing.filechooser.FileFilter 1.2
+- - '##'
+  - javax.swing.filechooser.FileNameExtensionFilter 6
+- - '##'
+  - javax.swing.filechooser.FileView 1.2
+- - '#'
+  - 第 12 章 高级 Swing 与图形
+- - '##'
+  - TableTest
+- - '##'
+  - 12.1.2. 表格模型 (Table Models)
+- - '##'
+  - 12.2. 操作行和列
+- - '###'
+  - 12.2.1. 列类
+- - '###'
+  - 12.2.2. 访问表格列
+- - '###'
+  - 12.2.3. 调整列宽
+- - '###'
+  - 12.2.4. 调整行高
+- - '###'
+  - 12.2.5. 选择行、列和单元格
+- - '##'
+  - 12.2.8. 隐藏和显示列
+- - '##'
+  - 12.3 Cell Rendering and Editing
+- - '###'
+  - 12.3.1. Rendering Cells
+- - '###'
+  - 12.3.2. 渲染表头
+- - '###'
+  - 12.3.3. 编辑单元格
+- - '###'
+  - 12.3.4. 自定义编辑器
+- - '##'
+  - 12.4.1. 简单树
+- - '##'
+  - 12.4.2. 编辑树和路径
+- - '##'
+  - 12.4.3. 节点
+- - '##'
+  - 12.4.4. 渲染节点
+- - '##'
+  - 12.4.5. 监听事件
+- - '##'
+  - 12.5. 高级 AWT
+- - '###'
+  - 12.5.1. 流水线
+- - '###'
+  - 12.5.2. 层次结构
+- - '###'
+  - 12.5.3. 构建形状
+- - '##'
+  - 12.5.4. Areas
+- - '##'
+  - 12.5.5. Strokes
+- - '##'
+  - 12.5.8. 裁剪 (Clipping)
+- - '##'
+  - 12.5.9. 透明与合成
+- - '##'
+  - 12.7.2. 多页打印
+- - '##'
+  - 12.7.3. 服务
+- - '##'
+  - 12.7.4. 流式打印服务
+- - '##'
+  - 12.7.5. 打印属性
+- - '#'
+  - 第 13 章 原生方法
+- - '##'
+  - 13.1. 从 Java 程序调用 C 函数
+- - '##'
+  - 13.2. 数字参数和返回值
+- - '##'
+  - 13.4. 访问字段
+- - '###'
+  - 13.4.1. 访问实例字段
+- - '###'
+  - 13.4.2. 访问静态字段
+- - '##'
+  - 13.5. 签名编码
+- - '##'
+  - 13.6. 调用 Java 方法
+- - '###'
+  - 13.6.1. 实例方法
+- - '###'
+  - 13.6.2. 静态方法
+- - '##'
+  - 13.7 访问数组
+- - '##'
+  - 13.8. 处理错误
