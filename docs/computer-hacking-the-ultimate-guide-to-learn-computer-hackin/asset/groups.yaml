@@ -1,0 +1,4053 @@
+- md: '
+
+    # MATT BENTON
+
+
+    # COMPUTER HACKING
+
+
+    # SQL
+
+
+    Beginner''s Guide For Coding SQL
+
+
+    Stephen Hoffman
+
+
+    THE ESSENTIAL HACKING GUIDE FOR BEGINNERS
+
+
+    THE ESSENTIAL HACKING GUIDE FOR BEGINNERS
+
+
+    # Computer Hacking
+
+
+    The Ultimate Guide to Learn Computer Hacking and SQL (computer programming, hacking,
+    hacking exposed, hacking the system, database programming)
+
+
+    # Computer Hacking
+
+
+    # The Essential Hacking Guide for Beginners
+
+
+    # Contents
+
+
+    - Introduction – What is Hacking?
+
+    - Chapter 1 – Hacking and the Influence of Cyberpunk
+
+    - Chapter 2 – The Different Types of Hackers
+
+    - Chapter 3 – Computer Security
+
+    - Chapter 4 – Hacking Techniques
+
+    - Conclusion
+
+
+    I think next books will also be interesting for you:
+
+
+    C++
+
+
+    Python
+
+
+    # C++
+
+
+    Javascript
+
+
+    # Introduction – What is Hacking?
+
+
+    Hacking is the act of gaining unauthorized access to a computer system, and can
+    include viewing or copying data, or creating new data. Often hacking is understood
+    to be a way of maliciously disrupting a computer system, copying information,
+    or leaving behind a virus that destroys data.
+
+
+    There are many different reasons why hacking takes place, and these reasons range
+    from wanting to disrupt a system due to ideology (so hacking as a means of protesting);
+    wanting to gain profit for example in order to commit credit card fraud; or simply
+    hacking for the sake of enjoyment and amusement.
+
+
+    There is some controversy about the definition of the word ‘hacker’ because those
+    try to prevent such breaches in security from taking place, or seek to recover
+    lost files, can also be known as hackers. Thus, some people believe the correct
+    term for malicious system breaches is in fact ‘cracking’ and that ‘hacking’ is
+    the correct word to use for those who fight against such malicious exploitation
+    of computer weaknesses.
+
+
+    However, in the popular imagination and in general conversation, the word ‘hacker’
+    is mainly understood to refer to the ‘bad’ method of breaking through computer
+    security. The two processes share many common skills, regardless of motivation
+    (whether to steal or protect, break in to or save, computer data) the same understanding
+    of computers is required.
+
+
+    Hacking is more than simply a pastime for those who are interested in technology,
+    and more than simply an illegal activity used for personal gain and with malicious
+    intent, although both of these motivations make up much of hacking activity. In
+    fact, hacking is its own subculture, and members of the community feel very strong
+    about their ideologies, techniques and social relationships in the computer underworld.
+
+
+    There are many hacking groups and conventions, such as SummerCon, DEF CON, HoHoCon,
+    ShmoooCon, BlackHat, Chaos Communication and Hacker Halted, and local hacking
+    communities take their entries into hacking competitions very seriously. Unsurprisingly
+    there are numerous online groups and forums dedicated to the subject of hacking,
+    and there is certainly a strong community spirit felt by those with similar hacking
+    ideologies.
+
+
+    Furthermore, hackers are often passionate about literary depictions of the hacking
+    community, and ardently read fictional Cyberpunk and factual hacker magazines.
+
+
+    This book will serve as an introduction to the world of hacking, and ardently
+    read fictional Cyberpunk and factual hacker magazines. The first chapter will
+    consider the beginnings of hacking. The second chapter will look at types of hacking.
+    The third chapter will look at security issues. The final chapter will provide
+    an overview of techniques.
+
+
+    # Chapter 1 – Hacking and the Influence of Cyberpunk
+
+
+    Bruce Sterling, who was one of the first science-fiction writers who dealt with
+    Cyberpunk, has also shown the most interest in understanding the development of
+    hacking. In the popular imagination when we think of hackers we often think of
+    a lonely boy behind a darkened computer screen. In fact, Sterling, who was one
+    of the first science-fiction writers who dealt with Cyberpunk, has also shown
+    the most interest in understanding the development of hacking.
+
+
+    Sterling has traced the emergence of hacking, and the associated underground computer
+    network, to the Yippies, a counterculture group who were active in the 1960s and
+    published Technological Assistance Program, a newsletter that taught its readership
+    techniques for unauthorized access to telephones, known as phaking.
+
+
+    Many of the individuals who were involved in the phaking community are also an
+    active part of the underground hacking community, suggesting that the relationship
+    between the two groups.
+
+
+    Bruce Sterling, who was one of the first science-fiction writers who dealt with
+    Cyberpunk, has also shown the most interest in understanding the development of
+    hacking. In the popular imagination when we think of hackers we often think of
+    a lonely boy behind a darkened computer screen. In fact, Sterling, who was one
+    of the first science-fiction writers who dealt with Cyberpunk, has also shown
+    the most interest in understanding the development of hacking.
+
+
+    To a contemporary reader, this description of Cyberpunk is reminiscent of how
+    "Classic Cyberpunk characters were marginalized, alienated loners who lived in
+    filthy conditions, worked at night and slept all day, and did not have any social
+    life beyond chat rooms."
+
+
+    # Chapter 2 – The Different Types of Hackers
+
+
+    The computer hacking underground contains various different subcategories of hackers.
+    This is mainly due to conflicting ideologies, whereby certain groups call themselves
+    by a specific name, or call others a specific name, in order to emphasize that
+    they do not agree with the ideologies of others.
+
+
+    The generic word ‘hacker’ therefore, although referring to those who have technical
+    knowledge and are able to gain unauthorized access to computer systems, is rather
+    vague and does not distinguish between those who use different methods or believe
+    certain things.
+
+
+    Instead, separate names have emerged in order to distinguish between groups, and
+    to indicate that not all hackers follow the same rules or ideologies. One way
+    in which this is
+
+    '
+  mdcn: '
+
+
+    # MATT BENTON
+
+
+    # 计算机黑客
+
+
+    # SQL
+
+
+    SQL 编程入门指南
+
+
+    Stephen Hoffman
+
+
+    初学者必备黑客指南
+
+
+    初学者必备黑客指南
+
+
+    # 计算机黑客
+
+
+    学习计算机黑客和 SQL 的终极指南（计算机编程、黑客、黑客揭秘、破解系统、数据库编程）
+
+
+    # 计算机黑客
+
+
+    # 初学者必备黑客指南
+
+
+    # 目录
+
+
+    - 引言 – 什么是黑客？
+
+    - 第一章 – 黑客与赛博朋克的影响
+
+    - 第二章 – 不同类型的黑客
+
+    - 第三章 – 计算机安全
+
+    - 第四章 – 黑客技术
+
+    - 结论
+
+
+    我认为接下来的几本书你可能也会感兴趣：
+
+
+    C++
+
+
+    Python
+
+
+    # C++
+
+
+    Javascript
+
+
+    # 引言 – 什么是黑客？
+
+
+    黑客行为是指未经授权访问计算机系统的行为，可能包括查看或复制数据，或创建新数据。通常，黑客行为被理解为恶意破坏计算机系统、复制信息或留下破坏数据的病毒。
+
+
+    发生黑客行为有许多不同的原因，这些原因涵盖了由于意识形态而想要破坏系统（因此将黑客行为作为抗议的手段）；为了利益（例如为了实施信用卡欺诈）；或仅仅为了乐趣和娱乐而黑客。
+
+
+    关于“黑客（hacker）”一词的定义存在一些争议，因为那些试图防止此类安全漏洞发生或寻求恢复丢失文件的人也被称为黑客。因此，一些人认为恶意系统入侵的正确术语实际上是“破解（cracking）”，而“黑客（hacking）”应该是那些对抗计算机漏洞恶意利用的人的正确用词。
+
+
+    然而，在公众想象和日常交流中，“黑客”一词主要被理解为突破计算机安全的“坏”方法。这两个过程共享许多共同技能，无论动机是什么（是为了窃取还是保护、闯入还是拯救计算机数据），都需要对计算机有相同的理解。
+
+
+    对于对技术感兴趣的人，黑客行为不仅仅是一种消遣，也不仅仅是为了个人利益和带有恶意意图的非法活动，尽管这两种动机构成了大部分黑客活动。事实上，黑客是一门自己的亚文化，社区成员对他们在计算机地下世界的意识形态、技术和社交关系有着强烈的认同感。
+
+
+    有很多黑客小组和会议，例如 SummerCon、DEF CON、HoHoCon、ShmoooCon、BlackHat、Chaos Communication
+    和 Hacker Halted，当地的黑客社区非常认真地参加黑客竞赛。意料之中，有许多致力于黑客主题的在线小组和论坛，那些具有相似黑客意识形态的人确实能感受到强烈的社区精神。
+
+
+    此外，黑客们通常对黑客社区的文学描写充满热情，并热衷地阅读虚构的赛博朋克小说和真实的黑客杂志。
+
+
+    本书将作为黑客世界的介绍，并让你热衷地阅读虚构的赛博朋克小说和真实的黑客杂志。第一章将探讨黑客的起源。第二章将介绍黑客的类型。第三章将探讨安全问题。最后一章提供技术的概述。
+
+
+    # 第一章 – 黑客与赛博朋克的影响
+
+
+    布鲁斯·斯特林（Bruce Sterling）是第一批处理赛博朋克的科幻作家之一，他对理解黑客的发展表现出了最大的兴趣。在公众的想象中，当我们想起黑客时，往往会想
+    true一个坐在黑暗电脑屏幕后的孤独男孩。事实上，斯特林作为第一批处理赛博朋克的科幻作家之一，对理解黑客的发展表现出了最大的兴趣。
+
+
+    斯特林追踪了黑客的出现以及相关的地下计算机网络，将其追溯到嬉皮族（Yippies），这是一个活跃于 20 世纪 60 年代的反文化团体，他们出版了《技术援助计划》（Technological
+    Assistance Program），这封通讯报教读者未经访问电话的技巧，被称为“骗电（phaking）”。
+
+
+    许多参与骗电社区的个人也是地下黑客社区的活跃部分，这表明了小组之间的关系。
+
+
+    布鲁斯·斯特林（Bruce Sterling）是第一批处理赛博朋克的科幻作家之一，他对理解黑客的发展表现出了最大的兴趣。在公众的想象中，当我们想起黑客时，往往会想
+    true 一个坐在黑暗电脑屏幕后的孤独男孩。事实上，斯特林作为第一批处理赛博朋克的科幻作家之一，对理解黑客的发展表现出了最大的兴趣。
+
+
+    对于现代读者来说，这种对赛博朋克的描述让人想起了“经典的赛博朋克角色是边缘化的、疏远的独行者，他们生活在恶劣的环境中，昼夜颠倒，聊天室之外没有任何社交生活。”
+
+
+    # 第二章 – 不同类型的黑客
+
+
+    计算机黑客世界包含许多不同的黑客子类。这主要是由于意识形态的冲突，某些小组用特定的名称称呼自己，或用特定的名称称呼他人，以强调他们不同意别人的意识形态。
+
+
+    因此，“黑客（hacker）”这个通用词虽然指的是拥有技术知识并能够未经授权访问计算机系统的人，但它相当模糊，无法区分不同方法或持有某些观点的人。
+
+
+    相反，出现了不同的名称以区分小组，并表明并非所有黑客都遵循相同的规则或意识形态。这种方式之一
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # MATT BENTON
+
+
+    # COMPUTER HACKING
+
+
+    # SQL
+
+
+    Beginner''s Guide For Coding SQL
+
+
+    Stephen Hoffman
+
+
+    THE ESSENTIAL HACKING GUIDE FOR BEGINNERS
+
+
+    THE ESSENTIAL HACKING GUIDE FOR BEGINNERS2'
+  - '[PAGE 1]
+
+
+    # Computer Hacking
+
+
+    The Ultimate Guide to Learn Computer Hacking and SQL (computer programming, hacking,
+    hacking exposed, hacking the system, database programming)'
+  - '[PAGE 2]
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_2_0.png)
+
+
+    # Computer Hacking'
+  - '[PAGE 3]
+
+
+    # The Essential Hacking Guide for Beginners
+
+
+    MATT BENTON'
+  - '[PAGE 4]
+
+
+    # Contents
+
+
+    +   - Introduction – What is Hacking?
+
+
+    +   - Chapter 1 – Hacking and the Influence of Cyberpunk
+
+
+    +   - Chapter 2 – The Different Types of Hackers
+
+
+    +   - Chapter 3 – Computer Security
+
+
+    +   - Chapter 4 – Hacking Techniques
+
+
+    +   - Conclusion'
+  - '[PAGE 5]
+
+
+    I think next books will also be interesting for you:
+
+
+    C++
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_5_0.png)'
+  - '[PAGE 6]
+
+
+    Python
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_6_0.png)'
+  - '[PAGE 7]
+
+
+    # C++
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_7_0.png)'
+  - '[PAGE 8]
+
+
+    Javascript
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_8_0.png)'
+  - '[PAGE 9]
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_9_0.png)'
+  - '[PAGE 10]
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_10_0.png)'
+  - '[PAGE 11]
+
+
+    # Introduction – What is Hacking?
+
+
+    Hacking is the act of gaining unauthorized access to a computer system, and can
+    include viewing or copying data, or creating new data. Often hacking is understood
+    to be a way of maliciously disrupting a computer system, copying information,
+    or leaving behind a virus that destroys data.
+
+
+    There are many different reasons why hacking takes place, and these reasons range
+    from wanting to disrupt a system due to ideology (so hacking as a means of protesting);
+    wanting to gain profit for example in order to commit credit card fraud; or simply
+    hacking for the sake of enjoyment and amusement.
+
+
+    There is some controversy about the definition of the word ‘hacker’ because those
+    try to prevent such breaches in security from taking place, or seek to recover
+    lost files, can also be known as hackers. Thus, some people believe the correct
+    term for malicious system breaches is in fact ‘cracking’ and that ‘hacking’ is
+    the correct word to use for those who fight against such malicious exploitation
+    of computer weaknesses.
+
+
+    However, in the popular imagination and in general conversation, the word ‘hacker’
+    is mainly understood to refer to the ‘bad’ method of breaking through computer
+    security. The two processes share many common skills, regardless of motivation
+    (whether to steal or protect, break in to or save, computer data) the same understanding
+    of computers is required.
+
+
+    Hacking is more than simply a pastime for those who are interested in technology,
+    and more than simply an illegal activity used for personal gain and with malicious
+    intent, although both of these motivations make up much of hacking activity. In
+    fact, hacking is its own subculture, and members of the community feel very strong
+    about their ideologies, techniques and social relationships in the computer underworld.
+
+
+    There are many hacking groups and conventions, such as SummerCon, DEF CON, HoHoCon,
+    ShmoooCon, BlackHat, Chaos Communication and Hacker Halted, and local hacking
+    communities take their entries into hacking competitions very seriously. Unsurprisingly
+    there are numerous online groups and forums dedicated to the subject of hacking,
+    and there is certainly a strong community spirit felt by those with similar hacking
+    ideologies.
+
+
+    Furthermore, hackers are often passionate about literary depictions of the hacking'
+  - '[PAGE 12]
+
+
+    community, and ardently read fictional Cyberpunk and factual hacker magazines.
+
+
+    This book will serve as an introduction to the world of hacking, and will provide
+    insight into some of the key influences, ideologies, groups, concepts, and techniques
+    of hacking.
+
+
+    The first chapter will consider the beginnings of hacking and the influence of
+    the literary genre, Cyberpunk. The second chapter will look at the different types
+    of hackers, and draw a distinction between ethical and unethical hacking. The
+    third chapter will look at the issue of computer security, which is vital to an
+    understanding of hacking.
+
+
+    The final chapter will provide an overview of the various different techniques
+    for hacking, including automated and manual approaches as well as the importance
+    of the cyber confidence trick known as social engineering'
+  - '[PAGE 13]
+
+
+    # Chapter 1 – Hacking and the Influence of Cyberpunk
+
+
+    Michael Bruce Sterling, the American science fiction author, helped establish
+    the popular genre of Cyberpunk. Cyberpunk is a subcategory of science fiction
+    that focuses on the role of technology in a future setting. In this literary and
+    cinematic genre, lower-class citizens are depicted, who have access to, and a
+    great understanding of advanced technology.
+
+
+    Cyberpunk often explores the role of technology during the breakdown of social
+    order, in which there is an oppressive government restricting and damaging the
+    lives of the general population. Furthermore, artificial intelligence (such as
+    robots or intelligent computers) also plays a significant part in Cyberpunk stories,
+    and the Earth is depicted in the near future in a post-industrial dystopia versus
+    utopia, and therefore a bleak world characterized by oppression and often social
+    unrest.
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_13_0.png)
+
+
+    The impact of Cyberpunk in the present-day understanding of hacking is considerable.
+    Science fiction is particularly effective when we can recognize our own world
+    within the fictional representation, and with Cyberpunk we can recognize many
+    of the concerns of the contemporary technological age. Lawrence Person (editor
+    of the science fiction magazine Nova Express) describes the typical characters
+    in Cyberpunk:
+
+
+    "Classic cyberpunk characters were marginalized, alienated loners who lived on
+    the edge of society in generally dystopic futures where daily life was impacted
+    by rapid technological change, an ubiquitous data sphere of computerized information,
+    and'
+  - '[PAGE 14]
+
+
+    invasive modification of the human body."
+
+
+    To a contemporary reader, this description of Cyberpunk characters is reminiscent
+    of how hackers are thought of in the popular imagination, and depicted in books
+    and films. Therefore, the interplay between Cyberpunk characters and how we view
+    real-life hackers is considerable: in many ways our understanding of what a hacker
+    is like based on how Cyberpunk characters are depicted in fiction. One example
+    of this is how in Cyberpunk characters often live in filthy conditions, work at
+    night and sleep all day, and do not have any social life beyond chat rooms.
+
+
+    In the present-day imagination when we think of hackers we often think of a lonely
+    adolescent boy behind a darkened computer screen. In fact, Michael Bruce Sterling,
+    who was one of the first science-fiction writers who dealt with Cyberpunk, has
+    also shown the most interest in understanding the development of hacking.
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_14_0.png)
+
+
+    Sterling has traced the emergence of hacking, and the associated underground computer
+    network, to the Yippies, a counterculture group who were active in the 1960s and
+    published Technological Assistance Program, a newsletter that taught its readership
+    techniques for unauthorized access to telephones, known as phaking.
+
+
+    Many of the individuals who were involved in the phaking community are also an
+    active part of the underground hacking community, suggesting that the relationship
+    between the two groups.'
+  - '[PAGE 15]
+
+
+    # Chapter 2 – The Different Types of Hackers
+
+
+    The computer hacking underground contains various different subcatories of hackers.
+    This is mainly due to conflicting ideologies, whereby certain groups calls themselves
+    by a specific name, or call others a specific name, in order to emphasize that
+    they do not agree with the ideologies of others.
+
+
+    The generic word ‘hacker’ therefore, although referring to those who have technical
+    knowledge and are able to gain unauthorized access to computer systems, is rather
+    vague and does not distinguish between those who use different methods or believe
+    certain things.
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_15_0.png)
+
+
+    Instead, separate names have emerged in order to distinguish between groups, and
+    to indicate that not all hackers follow the same rules or ideologies. One way
+    in which this is'
+- md: '
+
+    can be seen, as discussed previously, is the distinction between hackers and crackers,
+    as advocated by Eric S. Raymond in The New Hacker’s Dictionary.
+
+
+    In this book Raymond compiled a glossary of hackers’ computer programming jargon,
+    but those from the hacking community feel that this book is too biased by Raymond’s
+    own view of hacking as a malicious practice.
+
+
+    Rather than following the dichotomy of hacker/cracker that Raymond suggested,
+    the general hacking community feels that this is too reductive and instead advocate
+    a wider list of name to reflect the spectrum of beliefs and practices of the large
+    hacking community.
+
+
+    One subcategory of hackers is known as ‘white hat hackers’ and they break through
+    computer security without a malicious motivation. Examples of why this might be
+    done include to test one’s own security effectiveness, or when doing work developing
+    computer security software.
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_16_0.png)
+
+
+    These breaches of security can occur whilst performing vulnerability assessments
+    of computer software as part of a contractual agreement, and is therefore legal.
+    In this way, the slang term ‘white hat’ references an ethical hacker who does
+    so for positive reasons, in order to protect rather than destroy. There are recognized
+    organizations, such as The International Council of Electronic Commerce Consultants,
+    who provide training and certificates for this area of ethical hacking.
+
+
+    On the other hand, there are ‘black hat hackers’ who breach computer security
+    systems simply to be malicious, or to gain profit. These hackers are the ones
+    who are also sometimes referred to as crackers. This subcategory - the cliché
+    hackers who are often depicted in films and television, and represent the elusive
+    and little-understood computer criminal who the public fears.
+
+
+    These types of hackers violate computer security in order to destroy, change or
+    steal information, or to prevent authorized users from being able to access the
+    system. In this way they can cause disruption, waste time, and cause distress,
+    but they can also steal significant amounts of money or access confidential information.
+
+
+    Generally a black hacker will spend time looking for and discovering faults in
+    programs, or weaknesses in computer systems, but rather than alert the public
+    to these problems they exploit them for personal gain or simply for fun. Once
+    they accessed a computer system, they can consequently make adjustments to prevent
+    somebody with authorized access from using the system and thus the black hackers
+    retain control.
+
+
+    Lying somewhere between the two, not quite a white hacker and not quite a black
+    hacker, is the gray hacker. This is somebody who without being asked to searches
+    the Internet for systems with a weakness or security flaw, and will then notify
+    the administrator and offer to rectify the problem for a fee.
+
+
+    In this way they are not as good as a white hacker (because they are demanding
+    a fee, and their services were never requested) but they are also not as bad as
+    a black hacker because they do not exploit these weaknesses in order to wreak
+    disruption or steal data. Another way in which gray hackers might respond to their
+    discovery of a security weakness is to publish their findings online, so that
+    the general public has access to the information.
+
+
+    In this way they are not performing malicious hacking themselves, but they are
+    publishing the information, which leaves their subject at risk of a security breach.
+    This type of hacking is illegal and also considered unethical, whether or not
+    the gray hacker has breached security for personal gain, because they have gained
+    unauthorized access to data and have left the system susceptible to hacking by
+    malicious bad hacker groups.
+
+
+    As well as these three main classifications for hacking, which differentiate hackers
+    based on their motivation and what they do about the information they discover,
+    there are other specific types of hacker. There is a social hierarchy amongst
+    hackers, who are recognized based on their skill.
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_17_0.png)
+
+
+    The highest of these statuses is the elite hacker, and sometimes form into elite
+    groups such as the ‘Masters of Deception.’ On the other end of the scale is a
+    script kiddie, who is still learning and has not yet developed their skills with
+    breaching security systems. A script kiddie uses automated tool written by others,
+    and is therefore simply following a code provided by a more skilled, black hacker,
+    and not having to work it out themselves. Usually a script kiddie does not really
+    have any knowledge or understanding of the complicated underlying technological
+    concepts, and simply follows a plan provided by a more experienced hacker.
+
+
+    Even less experience than a script kiddie is a neophyte, who is a completely new
+    hacker who has very little knowledge of computer technologies or the logic and
+    concepts behind hacking. A blue hat refers to somebody who is used by computer
+    security consulting firms but is not actually a part of the company; the blue
+    hat is used to test a system prior to its launch to determine whether it is vulnerable.
+    Hacktivism (a combination of the words ‘hacker’ and ‘activist’) is a hacker who
+    uses technology to broadcast political or social messages. Hacktivism itself has
+    two categories: cyber terrorism (where websites are damaged) and freedom of information
+    (making information available). Groups working collectively can include organized
+    criminal gangs, cyber warfare, and nation states. The different types of hackers
+    are indicative of these motivations.
+
+
+    ## Chapter 3 – Computer Security
+
+
+    Before we can begin to explore the key concepts of hacking, it is helpful to first
+    understand the basics of security. Computer security is applied to computers,
+    smartphones, computer networks (public and private) and the entire Internet in
+    order to protect devices and data.
+
+
+    Digital equipment is protected from unauthorized access by computer security,
+    to ensure that data is not stolen, changed or deleted. In present-day security,
+    where digital culture grows, protecting these systems is extremely important.
+    Part of computer security is protecting the physical equipment, whereas the other
+    part is information security, to protect the data itself.
+
+
+    However, sometimes these two fields overlap because if there is a breach in security
+    (e.g. if a laptop is stolen) then it becomes much easier for the individual to
+    succeed in a breach of information security, since they have the equipment.
+
+
+    Cyber security encompasses all security measures in place to protect a computer''s
+    data, and includes procedures such as awareness training, penetration testing,
+    and the use of passwords to confirm authorization in order to protect data both
+    when it is in transit and it is simply stored. The financial cost of being a victim
+    of a computer security breach is considerable and as there is a lucrative market
+    for anti-virus and computer security protection.
+
+
+    Computer security is a huge field of our present-day reliance on technology. Almost
+    every industry uses computers to a greater or lesser extent, and therefore the
+    extent and variety of computer security measures is vast. There are some areas,
+    however, where computer security is particularly important because they are especially
+    vulnerable to breaches. This is the area of financial systems, because hackers
+    can make a profit by stealing data and consequently accessing funds. Any website
+    that requires somebody to enter their credit card numbers are often targeted because
+    a hacker can immediately transfer money to their own account, or spend the victim''s
+    money online. Even if the hackers do not directly use the person''s bank details,
+    they may sell the information illegally, in order to distance themselves from
+    the crime and attempt to avoid being caught. It is not only online that a person''s
+    data can be stolen; in-store card machines and cash points can also be rigged
+    to collect personal information and thus gain access to funds.
+
+    '
+  mdcn: '
+
+    正如之前讨论过的，这是埃里克·S·雷蒙德（Eric S. Raymond）在《新黑客字典》（The New Hacker’s Dictionary）中提倡的黑客（hackers）与破解者（crackers）之间的区别。
+
+
+    在部书中，雷蒙德汇编了一份黑客计算机编程术语表，但黑客社区的人认为，这本书过于偏向于雷蒙德将黑客行为视为恶意行为的个人观点。
+
+
+    普通黑客社区并没有遵循雷蒙德建议的黑客/破解者二元分法，而是认为这种划分过于简单，并主张使用更广泛的名称列表来反映大型黑客社区中各种信仰和实践。
+
+
+    黑客的一个子类别被称为“白帽黑客”（white hat hackers），他们在没有恶意动机的情况下突破计算机安全防护。这样做的原因示例包括：测试自身的安全有效性，或者在开发计算机安全软件的工作中。
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_16_0.png)
+
+
+    这些安全漏洞可能发生在作为合同协议一部分对计算机软件进行漏洞评估期间，因此是合法的。通过这种方式，“白帽”这一俚语指的是为了积极理由而行动的伦理黑客，目的是保护而非破坏。目前有一些认可的组织，例如电子电子商务顾问国际委员会（The
+    International Council of Electronic Commerce Consultants），为这一伦理黑领域提供培训和认证。
+
+
+    另一方面，还有“黑帽黑客”（black hat hackers），他们仅仅为了恶意或盈利而突破计算机安全系统。这些黑客有时也被称为破解者。这个子类别——即电影和电视节目中经常描绘的刻板印象黑客——代表了公众恐惧的、难以捉摸且难以理解的计算机罪犯。
+
+
+    这些类型的黑客违反计算机安全是为了破坏、更改或盗取信息，或者防止授权用户访问系统。通过这种方式，他们可以造成混乱、浪费时间并引起痛苦，但也可以窃取大量资金或访问机密信息。
+
+
+    通常，黑帽黑客会花时间寻找发现程序中的错误或计算机系统的弱点，但他们并不是向公众警告这些问题，而是为了个人利益或纯粹好玩而利用它们。一旦他们访问了计算机系统，就可以进行调整以防止具有授权访问的人使用该系统，从而让黑帽黑客保持控制。
+
+
+    介于两者之间，既不是白帽黑客也不是黑帽黑客，的是“灰帽黑客”（gray hacker）。这些人会在没有要求的情况下搜索互联网上具有弱点或安全漏洞的系统，然后通知管理员并提议付费修复问题。
+
+
+    通过这种方式，他们不像白帽黑客那样（因为他们收取费用，而且他们的服务从未被请求），但也没有黑帽黑客那么坏，因为他们不会利用这些弱点来制造破坏或盗取数据。灰帽黑客应对发现安全弱点的另一种方式是在网上发布他们的发现，以便公众能够获取这些信息。
+
+
+    通过这种方式，他们本身并没有执行恶意黑客行为，但他们发布了信息，这导致目标面临安全泄露的风险。这种类型的黑客行为是非法的，无论灰帽黑客是否为了个人利益违反了安全，都被认为是不道德的，因为他们获得了未经授权的数据访问权限，并使系统容易受到恶意黑客团体的攻击。
+
+
+    除了这三种根据黑客动机以及他们对所发现信息的处理方式来区分黑客的主要分类外，还有其他特定的黑客类型。黑客之间存在一种基于技能认可的社会等级制度。
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_17_0.png)
+
+
+    这些身份中最高的是“精英黑客”（elite hacker），他们有时会组成精英小组，例如“欺骗大师”（Masters of Deception）。在量尺的另一端是“脚本小子”（script
+    kiddie），他们仍在学习阶段，尚未开发出突破安全系统的技能。脚本小子使用他人编写的自动化工具，因此他们只是在遵循由技术更丰富的黑帽黑客提供的代码，而不需要自己去研究。通常，脚本小子对复杂的底层技术概念没有真正的知识或理解，只是简单遵循经验更丰富的黑客提供的计划。
+
+
+    比脚本小子经验更少的是“初学者者”（neophyte），他们是完全完全的黑客，对计算机技术或黑客行为背后的逻辑和概念知之甚少。“蓝帽”（blue hat）指的是被计算机安全咨询公司使用但实际上并非公司成员的人；蓝帽用于在系统发布前对其进行测试，以确定其是否存在漏洞。“黑客行动”（Hacktivism，“黑客”与“活动家”的结合词）是指利用技术传播政治或社会信息的黑客。黑客行动本身分为两类：网络恐怖主义（网站受损）和信息自由（使信息可用）。集体工作的团体包括有组织的犯罪集团、网络战争和主国家。不同类型的黑客反映了这些动机。
+
+
+    ## 第 3 章 – 计算机安全
+
+
+    在我们开始探索黑客的关键概念之前，首先了解安全基础是有帮助的。计算机安全应用于计算机、智能手机、计算机网络（公共和私有）以及整个互联网，以保护设备和数据。
+
+
+    计算机安全保护数字设备免受未经授权的访问，确保数据不被盗取、更改或删除。在数字文化发展的今天，保护这些系统极其重要。计算机安全的一部分是保护物理设备，而另一部分是信息安全，即保护数据本身。
+
+
+    然而，这两个领域有时会重叠，因为如果发生了安全泄露（例如笔记本电脑被盗），那么个人就更容易成功破解信息安全，因为他们拥有了设备。
+
+
+    网络安全涵盖了保护计算机数据的所有安全措施，包括意识培训、渗透测试以及使用密码确认授权等程序，以保护在传输过程中和存储状态的数据。成为计算机安全泄露的受害者其财务成本是巨大的，因此防病毒软件和计算机安全保护存在利润丰的市场。
+
+
+    计算机安全是我们当今对技术依赖的一个巨大领域。几乎每个行业都在不同种程度上使用计算机，因此计算机安全措施的范围和种类非常广泛。然而，在某些领域计算机安全特别重要，因为它们特别容易受到泄露。这就是金融系统领域，因为黑客可以通过窃取数据并访问资金来获利。任何要求输入信用卡号的网站通常都是目标，因为黑客可以立即将资金转入自己的账户，或在网上花费受害者的钱。即使黑客没有直接使用个人的银行详情，他们也可能非法出售这些信息，以便与犯罪撇清并尝试避免被捕。不仅是在网上个人数据可以被盗取；店内的刷卡机和
+    ATM 机也可以被改动以收集个人信息从而获取资金。
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 16]
+
+
+    can be seen, as discussed previously, is the distinction between hackers and crackers,
+    as advocated by Eric S. Raymond in The New Hacker’s Dictionary.
+
+
+    In this book Raymond compiled a glossary of hackers’ computer programming jargon,
+    but those from the hacking community feel that this book is too biased by Raymond’s
+    own view of hacking as a malicious practice.
+
+
+    Rather than following the dichotomy of hacker/cracker that Raymond suggested,
+    the general hacking community feels that this is too reductive and instead advocate
+    a wider list of name to reflect the spectrum of beliefs and practices of the large
+    hacking community.
+
+
+    One subcategory of hackers is known as ‘white hat hackers’ and they break through
+    computer security without a malicious motivation. Examples of why this might be
+    done include to test one’s own security effectiveness, or when doing work developing
+    computer security software.
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_16_0.png)
+
+
+    These breaches of security can occur whilst performing vulnerability assessments
+    of computer software as part of a contractual agreement, and is therefore legal.
+    In this way, the slang term ‘white hat’ references an ethical hacker who does
+    so for positive reasons, in order to protect rather than destroy. There are recognized
+    organizations, such as The International Council of Electronic Commerce Consultants,
+    who provide training and certificates for
+
+
+    this area of ethical hacking.
+
+
+    On the other hand, there are ‘black hat hackers’ who breach computer security
+    systems simply to be malicious, or to gain profit. These hackers are the ones
+    who are also sometimes referred to as crackers. This subcategory the cliché hackers
+    who are often depicted in films and television, and represent the elusive and
+    little-understood computer criminal who the public fears.
+
+
+    These types of hackers violate computer security in order to destroy, change or
+    steal information, or to prevent authorized users from being able to access the
+    system. In this way they can cause disruption, waste time, and cause distress,
+    but they can also steal significant amounts of money or access confidential information.'
+  - '[PAGE 17]
+
+
+    Generally a black hacker will spend time looking for and discovering faults in
+    programs, or weaknesses in computer systems, but rather than alert the public
+    to these problems they exploit them for personal gain or simply for fun. Once
+    they accessed a computer system, they can consequently make adjustments to prevent
+    somebody with authorized access from using the system and thus the black hackers
+    retain control.
+
+
+    Lying somewhere between the two, not quite a white hacker and not quite a black
+    hacker, is the gray hacker. This is somebody who without being asked to searches
+    the Internet for systems with a weakness or security flaw, and will then notify
+    the administrator and offer to rectify the problem for a fee.
+
+
+    In this way they are not as good as a white hacker (because they are demanding
+    a fee, and their services were never requested) but they are also not as bad as
+    a black hacker because they do not exploit these weaknesses in order to wreak
+    disruption of steal data. Another way in which gray hackers might respond to their
+    discovery of a security weakness is to publish their findings online, so that
+    the general public has access to the information.
+
+
+    In this way they are not performing malicious hacking themselves, but they are
+    publishing the information, which leaves their subject at risk of a security breach.
+    This type of hacking is illegal and also considered unethical, whether or not
+    the gray hacker has breached security for personal gain, because they have gained
+    unauthorized access to data and have left the system susceptible to hacking by
+    malicious bad hacker groups.
+
+
+    As well as these three main classifications for hacking, which differentiate hackers
+    based on their motivation and what they do about the information they discover,
+    there are other specific types of hacker. There is a social hierarchy amongst
+    hackers, who are recognized based on their skill.
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_17_0.png)
+
+
+    The highest of these statuses is the elite hacker, and sometimes form into elite
+    groups such as the ‘Masters of Deception.’ On the other end of the scale is a
+    script kiddie, who is still learning and has not yet developed their skills with
+    breaching security systems. A script kiddie uses automated tool written by others,
+    and is therefore simply following a code provided by a more skilled,
+
+
+    black hacker, and not having to work it out themselves. Usually a script kiddie
+    does not really have any knowledge or understanding of the complicated underlying'
+  - '[PAGE 18]
+
+
+    technological concepts, and simply follows a plan provided by a more experienced
+    hacker.
+
+
+    Even less experience than a script kiddie is a neophyte, who is a completely new
+    hacker who has very little knowledge of computer technologies or the logic and
+    concepts behind hacking. A blue hat refers to somebody who is used by computer
+    security consulting firms but is not actually a part of the company; the blue
+    hat is used to test a system prior to its launch to determine whether it has sufficient
+    security or will be susceptible to hacking.
+
+
+    Hacktivist (a combination of the words ‘hacker’ and ‘activist’) is a hacker who
+    uses their knowledge of technology and their hacking skills in order to broadcast
+    a political, social or religious message. Hacktivism itself has two subcategories:
+    cyber terrorism (where websites are damaged or services cannot be accessed) and
+    freedom of information (making information available to the public that was previously
+    either undisclosed or stored in an encrypted format.)
+
+
+    Groups of hackers working collectively can include organized criminal gangs, and
+    cyber warfare of nation states. The different subcategories of hackers are indicative
+    of the various ideologies, motivations and techniques that are present in the
+    hacking community.'
+  - '[PAGE 19]
+
+
+    # Chapter 3 – Computer Security
+
+
+    Before we can begin to explore the key concepts and techniques of hacking, it
+    is helpful to first understand the basics of computer security. As hacking is
+    the act of breaking through security measures of computer systems, an understanding
+    of these systems is vital to any hacker who hopes to penetrate them. Computer
+    security is applied to computers, smartphones, computer networks (public and private)
+    and the entire Internet in order to protect devices, data and services.'
+  - '[PAGE 20]
+
+
+    Digital equipment is protected from unauthorized access by computer security,
+    to ensure that data is not stolen, changed or deleted and to maintain the smooth
+    running of systems. In present-day security, where digital culture grows, protecting
+    these systems is extremely important and thus the field of computer security is
+    forever growing and developing. Part of computer security is protecting the physical
+    equipment from theft, whereas the other part of computer security is information
+    security, to protect the data itself (and this is where hacking comes into play).
+
+
+    However, sometimes these two fields overlap because if there is a breach in physical
+    security (e.g. if a laptop is stolen) then it becomes much easier for the individual
+    to succeed in a breach of information security, since they have the piece of equipment
+    and it is therefore easier to access data than it is remotely.
+
+
+    Cyber security encompasses all security measures in place to protect a computer''s
+    data, and includes procedures such as awareness training, penetration testing,
+    and the use of passwords to confirm authorization in order to protect data both
+    when it is in transit and it is simply stored. The financial cost of being a victim
+    of a computer security breach is considerable and as there is a lucrative market
+    for anti-virus and computer security protection.
+
+
+    Computer security is a huge field of our present-day reliance on technology. Almost
+    every industry uses computers to a greater or lesser extent, and therefore the
+    extent and variety of computer security measures is vast. There are some areas,
+    however, where computer security is particularly important because they are especially
+    vulnerable to breaches in security.
+
+
+    This is the area of financial systems, because hackers can make a profit by stealing
+    data and consequently accessing funds. Any website that requires somebody to enter
+    their credit card numbers are often targeted because a hacker can immediately
+    transfer money to their own account, or spend the victim''s money online.
+
+
+    Even if the hackers do not directly use the person''s bank details, they may sell
+    the information illegally, in order to distance themselves from the crime and
+    attempt to avoid being caught. It is not only online that a person''s data can
+    be stolen; in-store card machines and cash points can also be rigged to collect
+    personal information and thus gain access to funds.'
+- md: '
+
+    People are becoming increasingly aware of this risk when doing online shopping
+    or entering their card details, and therefore various measures are being put in
+    place using passwords and answering security questions. The aviation industry
+    is another field in which computer security is of the utmost importance, because
+    the consequences of a breach in security can range from the publication of confidential
+    information, to the loss of expensive equipment and human life.
+
+
+    There are various reasons why the aviation industry may become subject to a computer
+    security attack, depending on the motivation for the crime. These motivations
+    include sabotage and espionage in the military aviation industry, and industrial
+    competition and terrorism in commercial aviation industry. Air traffic control
+    is one of the aviation industries most vulnerable systems, any attack can be difficult
+    to trace, and are relatively simple because it only requires a spoofed message
+    on the radio.
+
+
+    There are those who seek to exploit computer vulnerabilities (either through thrill
+    seeking, to make a political/social statement or for financial gain) and of course
+    on the other side those who work to uphold computer security against such threats.
+    Somebody with knowledge of technology, and the ability to hack into computer systems,
+    can therefore either become involved in the illegal and unethical form of hacking
+    (otherwise known as cracking), or serve the other side by identifying threats,
+    improving security measures and alerting companies to the vulnerabilities in their
+    systems.
+
+
+    For those whose aim is to protect computer security, there are various countermeasures
+    to guard against damaging hacking, whereby the risk of being vulnerable to a breach
+    of computer security can be minimized or eliminated. These precautions vary in
+    cost and complexity, but can include: intrusion detection systems (to detect threats
+    and also analyze attacks after the event), the use of account controls (passwords
+    and encryption of data); and the installation of firewalls (providing either hardware
+    or software package filtering of certain forms of attack.
+
+
+    Precautions against a computer system being compromised by attack include making
+    steps to prevent attack, ensure any potential attacks are detected, and the ability
+    to respond to an attack to prevent further damage.
+
+
+    However, despite being a range of countermeasures available, computer systems
+    still remain vulnerable to attack and it is certainly not uncommon for a computer
+    to have its security compromised. The first reason why attempted security violations
+    still occurs is that the police are often unfamiliar with computer technology
+    and as a result do not either the skill or the inclination to solve the crimes
+    and apprehend the criminals responsible.
+
+
+    Furthermore, any investigation of such matters requires a search warrant in order
+    for an officer to examine the entire network and this can make the procedure extremely
+    time consuming. Another difficulty in ensuring computer security is that in the
+    age of globalization, in which information can be shared throughout the world
+    using the internet, and technology can spread data extremely easily, identifying
+    and apprehending those responsible is particularly difficult.
+
+
+    The reason for this difficulty is that a hacker might be working from one jurisdiction,
+    while the system they are hacking into is in a different jurisdiction. Furthermore,
+    hacker can use various techniques (such as a temporary dial-up internet) in order
+    to ensure their anonymity. The third problem is due to the high number of attacks
+    that occur.
+
+
+    Organizations can be subject to many attacks and therefore are unable to pursue
+    every security threat. A computer user would benefit from taking precautionary
+    measures in order to ensure their computer security, as once a breach of security
+    has occurred there is not much that can be done to rectify it.
+
+
+    ## Chapter 4 – Hacking Techniques
+
+
+    There are various techniques that can be used by hackers in order to gain unauthorized
+    access to a computer system, in order to wreak havoc, steal money or data, or
+    to prevent the system from operating as it is supposed to. The three main methods
+    that are used in order to attack a system that is connected to the Internet are:
+    network enumeration, vulnerability analysis and exploitation.
+
+
+    A network enumerator is a program that is used in order to discover the usernames
+    and other information from networked computers. The program discovers any weaknesses
+    in the computer network''s security and the findings are reported to a hacker
+    who may use this information in order to access the network and cause damage (either
+    by stealing data or corrupting the network).
+
+
+    On the other hand, ethical hackers can use the same process simply to discover
+    any weaknesses in their system in order to tighten security. Another method used
+    is vulnerability analysis, which identifies any points of vulnerability in a system;
+    this information can be used to attack the system, or to remove the weakness.
+    Vulnerability analysis can lead to exploitation, where the hacker uses the vulnerability
+    information in order to breach a computer or system''s security.
+
+
+    There are many specific techniques that can be used, but they employ the main
+    concepts and methods described above. The first more specific example of a hacking
+    technique is a vulnerability scanner, which is a program used to check a network
+    for susceptibility to attack. A port scanner can also be used, which identifies
+    avenues of access to a computer and can establish how to circumnigate a firewall.
+
+
+    As well as these mechanized devices, hackers can also find these vulnerabilities
+    themselves, which can be done by manually searching the code of the computer and
+    then testing they are right. Brute-force attack is another method by which a hacker
+    can gain unauthorized entry to a computer network, and this involves guessing
+    passwords. Password cracking is another hacking technique that uses passwords,
+    but rather than guessing the password, the hacker recovers password information
+    that has been stored in the computer, or transmitted. A spoofing attack (otherwise
+    known phishing) is an enemy program, system or website that poses as a trusted
+    one. By falsifying data the hacker is able to masquerade as a trusted system and
+    thus fool a program or user into revealing confidential information such as passwords
+    or bank details. Another hacking technique that is commonly used is a root kit,
+    which is a program that manages to take over the control of an operating system
+    by employing hard to detect methods.
+
+
+    A Trojan horse is yet another technique that is a program which manages to fool
+    systems and users; it works by working in one way seeming to be something else.
+    By using this method a hacker is able to gain unauthorized access to a system
+    and create an access point so that they can re-enter via established route later
+    on. A computer virus is the most widely recognized form of hacking, as it is the
+    computer threat that most of the public is aware of.
+
+
+    The virus works by self-replicating and implanting itself into codes and; while
+    some computer viruses are malicious some are merely irritating or harmless. A
+    computer worm is similar in that it is self-replicating, but it is able to enter
+    a computer program without a user inadvertently letting it in, and it does not
+    need to insert itself into present programs.
+
+
+    Finally, a keylogger is a tool that records every keystroke on a given machine,
+    which can later be accessed and viewed by the hacker. This is usually to enable
+    the hacker to access confidential information that has been typed by the victim.
+    In fact, there are some legitimate uses for such a technique, for example some
+    companies use a keylogger in order to detect any dishonesty or fraud committed
+    by an employee.
+
+    '
+  mdcn: '
+
+    人们在网上购物或输入卡片详情时，正愈发地意识到这种风险，因此正在通过密码和回答安全问题来采取各种措施。航空业是另一个计算机安全至关重要的领域，因为安全漏洞的后果可能从机密信息的泄露到昂贵设备的损失以及人类生命的代价不等。
+
+
+    航空业可能受到计算机安全攻击有多种原因，这取决于犯罪的动机。这些动机包括军事航空工业中的破坏和间谍活动，以及民用航空业中的工业竞争和恐怖主义。空中交通控制是航空行业中最脆弱的系统之一，任何攻击都可能难以追踪，而且由于相对简单，因为只需要在无线电中发送一个伪造的消息即可。
+
+
+    有些人寻求利用计算机漏洞（无论是通过寻求刺激、为了发表政治/社会声明还是为了获取利益），而当然，在另一端是那些致力于维护计算机安全以应对此类威胁的人。拥有技术知识并能够黑入计算机系统的人，因此可以参与非法且不符合道德的黑客行为（又被称为“破解”，即
+    cracking），也可以通过识别威胁、改进安全措施以及提醒公司系统中的漏洞来服务另一方。
+
+
+    对于那些目标是保护计算机安全的人来说，有各种防御措施来防止破坏性的黑客攻击，从而使遭受计算机安全漏洞的风险降至最低或消除。这些预防措施的成本和复杂性各异，但包括：入侵检测系统（用于检测威胁并在事件后分析攻击）、使用账户控制（密码和数据加密）以及安装防火墙（提供硬件或软件软件包过滤，对某些形式的攻击进行过滤）。
+
+
+    防止计算机系统受攻击而破解的预防措施包括采取步骤防止攻击、确保任何潜在攻击都能被检测，以及响应攻击以防止进一步损害的能力。
+
+
+    然而，尽管有一系列防御措施可用，计算机系统仍然容易受到攻击，计算机的安全性被破坏的情况也并非罕见。尝试违反安全行为仍然发生的首要原因是，警察通常不熟悉计算机技术，因此既没有解决犯罪和逮捕负责犯罪犯的技能，也没有意愿。
+
+
+    此外，对此类事务的任何调查都需要搜查令，官员才能检查整个网络，这可能使程序变得极其耗时。确保计算机安全的另一个困难是，在信息化时代，信息可以通过互联网在全球范围内共享，技术可以非常容易地传播数据，识别并捕这些这些责任的人特别为困难。
+
+
+    这种困难的原因在于，黑客可能在一个司法管辖区工作，而他们正在黑入的系统位于另一个司法管辖区。此外，黑客可以使用各种技术（如临时拨号上网连接）来确保他们的匿名性。第三个问题是由于发生的攻击数量很高。
+
+
+    组织可能会受到许多攻击，因此无法追踪每一个安全威胁。计算机用户将从采取预防措施以确保其计算机安全中获益，因为一旦发生安全漏洞，就没多少可以做的事来补救了。
+
+
+    ## 第 4 章 – 黑客技术
+
+
+    黑客可以使用各种技术来获取对计算机系统的未经授权访问，以制造骚乱、盗取金钱或数据，或防止系统按预期方式运行。攻击连接到互联网的系统使用的三种主要方法是：网络枚举、漏洞分析和利用。
+
+
+    网络枚举器是一种用于从网络化计算机中发现用户名和其他信息的程序。该程序发现计算机网络安全中的任何弱点，并将发现的结果报告给黑客，黑客可能会利用这些信息访问网络并造成破坏（通过盗取数据或损坏网络）。
+
+
+    另一方面，伦理黑客可以使用相同的流程仅仅是为了发现他们系统中的任何弱点，以加强安全。另一种使用的方法是漏洞分析，它识别系统中的任何漏洞点；这些信息可用于攻击系统，也可用于消除弱点。漏洞分析可以导致利用，即黑客利用漏洞信息来破解计算机。
+
+
+    可以使用许多特定技术，但它们采用了上述的主要概念和方法。黑客技术的第一个具体例子是漏洞扫描器，它是用于检查网络易攻击性的程序。端口扫描器也可以使用，它可以识别访问计算机的途径并可以绕过防火墙。
+
+
+    除了这些机械设备外，黑客还可以自己发现这些漏洞，这可以通过手动搜索计算机代码来实现。暴力攻击是另一种黑客获取计算机未经授权访问的方法，这涉及猜测密码。密码破解另一种利用密码的黑客技术，但它不是猜测密码，而是恢复存储或传输中的密码信息。欺骗攻击（又被称为网络钓鱼）是一种伪装成可信系统的敌程序、系统或网站。通过伪造数据，黑客可以假装成可信系统，从而欺骗程序或用户泄露密码信息。另一种常用的黑客技术是根包（root
+    kit），它是一种通过采用难以检测的方法来接管操作系统控制权的程序。
+
+
+    特洛马是另一种技术，它是一种欺骗系统和用户的程序；它的工作方式是表现为其他东西。通过使用这种方法，黑客可以获得对系统的未经授权访问，并创建一个访问点，以便以后通过既定路线重新进入。计算机病毒是广为人知的黑客形式，因为它是大多数人所知的计算机威胁。
+
+
+    病毒的工作原理是自我复制并将其植入代码中，；虽然某些计算机病毒是有恶意的，但有些仅仅是烦人的或无害的。计算机虫与其相似之处在于它也是自我复制的，但它可以在用户无意的情况下进入计算机程序，并且不需要插入现有的程序中。
+
+
+    最后，键盘记录是一个记录给定机器上每次按键的工具，黑客随后可以访问并查看这些记录。这通常是为了让黑客访问受害者输入的机密信息。事实上，这种技术有一些合法的用途，例如某些公司使用键盘记录来检测员工的任何不诚实或欺诈行为。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 21]
+
+
+    People are becoming increasingly aware of this risk when doing online shopping
+    or entering their card details, and therefore various measures are being put in
+    place using passwords and answering security questions. The aviation industry
+    is another field in which computer security is of the utmost importance, because
+    the consequences of a breach in security can range from the publication of confidential
+    information, to the loss of expensive equipment and human life.
+
+
+    There are various reasons why the aviation industry may become subject to a computer
+    security attack, depending on the motivation for the crime. These motivations
+    include sabotage and espionage in the military aviation industry, and industrial
+    competition and terrorism in commercial aviation industry. Air traffic control
+    is one of the aviation industries most vulnerable systems, any attack can be difficult
+    to trace, and are relatively simple because it only requires a spoof message on
+    the radio.
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_21_0.png)
+
+
+    There are those who seek to exploit computer vulnerabilities (either through thrill
+    seeking, to make a political/social statement or for financial gain) and of course
+    on the other side those who work to uphold computer security against such threats.
+    Somebody with knowledge of technology, and the ability to hack into computer systems,
+    can therefore either become involved in the illegal and unethical form of hacking
+    (otherwise known as cracking), or serve the other side by identifying threats,
+    improving security measures and alerting companies to the vulnerabilities in their
+    systems.
+
+
+    For those whose aim is to protect computer security, there are various countermeasures
+    to guard against damaging hacking, whereby the risk of being vulnerable to a breach
+    of computer security can be minimized or eliminated. These precautions vary in
+    cost and complexity, but can include: intrusion detection systems (to detect threats
+    and also analyze attacks after the event), the use of account controls (passwords
+    and encryption of data); and the installation of firewalls (providing either hardware
+    or software package filtering of certain forms of attack.
+
+
+    Precautions against a computer system being compromised by attack include making
+    steps to prevent attack, ensure any potential attacks are detected, and the ability
+    to respond to an attack to prevent further damage.
+
+
+    However, despite being a range of countermeasures available, computer systems
+    still'
+  - '[PAGE 22]
+
+
+    remain vulnerable to attack and it is certainly not uncommon for a computer to
+    have its security compromised. The first reason why attempted security violations
+    still occurs is that the police are often unfamiliar with computer technology
+    and as a result do not either the skill or the inclination to solve the crimes
+    and apprehend the criminals responsible.
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_22_0.png)
+
+
+    Furthermore, any investigation of such matters requires a search warrant in order
+    for an officer to examine the entire network and this can make the procedure extremely
+    time consuming. Another difficulty in ensuring computer security is that in the
+    age of globalization, in which information can be shared throughout the world
+    using the internet, and technology can spread data extremely easily, identifying
+    and apprehending those responsible is particularly difficult.
+
+
+    The reason for this difficulty is that a hacker might be working from one jurisdiction,
+    while the system they are hacking into is in a different jurisdiction. Furthermore,
+    hacker can use various techniques (such as a temporary dial-up internet) in order
+    to ensure their anonymity. The third problem is due to the high number of attacks
+    that occur.
+
+
+    Organizations can be subject to many attacks and therefore are unable to pursue
+    every security threat. A computer user would benefit from taking precautionary
+    measures in order to ensure their computer security, as once a breach of security
+    has occurred there is not much that can be done to rectify it.'
+  - '[PAGE 23]
+
+
+    <!-- no content -->'
+  - '[PAGE 24]
+
+
+    # Chapter 4 – Hacking Techniques
+
+
+    There are various techniques that can be used by hackers in order to gain unauthorized
+    access to a computer system, in order to wreak havoc, steal money or data, or
+    to prevent the system from operating as it is supposed to. The three main methods
+    that are used in order to attack a system that is connected to the Internet are:
+    network enumeration, vulnerability analysis and exploitation.
+
+
+    A network enumerator is a program that is used in order to discover the usernames
+    and other information from networked computers. The program discovers any weaknesses
+    in the computer network''s security and the findings are reported to a hacker
+    who may use this information in order to access the network and cause damage (either
+    by stealing data or corrupting the network).
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_24_0.png)
+
+
+    On the other hand, ethical hackers can use the same process simply to discover
+    any weaknesses in their system in order to tighten security. Another method used
+    is vulnerability analysis, which identifies any points of vulnerability in a system;
+    this information can be used to attack the system, or to remove the weakness.
+    Vulnerability analysis can lead to exploitation, where the hacker uses the vulnerability
+    information in order to breach a computer or system''s security.
+
+
+    There are many specific techniques that can be used, but they employ the main
+    concepts and methods described above. The first more specific example of a hacking
+    technique is a vulnerability scanner, which is a program used to check a network
+    for susceptibility to attack. A port scanner can also be used, which identifies
+    avenues of access to a computer and can establish how to circumnigate a firewall.
+
+
+    As well as these mechanized devices, hackers can also find these vulnerabilities'
+  - '[PAGE 25]
+
+
+    # Internet
+
+
+    # LAN
+
+
+    Non-spoofed packet
+
+
+    FIREWALL
+
+
+    Spoofed packet
+
+
+    target
+
+
+    A spoofing attack (otherwise known phishing) is an enemy program, system or website
+    that poses as a trusted one. By falsifying data the hacker is able to masquerade
+    as a trusted system and thus fool a program or user into revealing confidential
+    information such as passwords or bank details. Another hacking technique that
+    is commonly
+
+
+    themselves, which can be done by manually searching the code of the computer and
+    then testing they are right. Brute-force attack is another method by which a hacker
+    can gain unauthorized entry to a computer network, and this involves guessing
+    passwords. Password cracking is another hacking technique that uses passwords,
+    but rather than guessing the password, the hacker recovers password information
+    that has been stored in the computer, or transmitted.
+
+
+    used is a root kit, which is a program that manages to take over the control of
+    an operating by employing hard to detect methods.
+
+
+    A Trojan horse is yet another technique that is a program which manages to fool
+    systems and users; it works by working in one way seeming to be doing something
+    else. By using this method a hacker is able to gain unauthorized access to a system
+    and create an access point so that they can re-enter via established route later
+    on. A computer virus is the most widely recognized form of hacking, as it is the
+    computer threat that most of the public is aware of.
+
+
+    The virus works by self-replicating and implanting itself into codes and; while
+    some computer viruses are malicious some are merely irritating or harmless. A
+    computer worm is similar in that it is self-replicating, but it is able to enter
+    a computer program without a user inadvertently letting it in, and it does not
+    need to insert itself into present programs.
+
+
+    Finally, a keylogger is a tool that records every keystroke on a given machine,
+    which can later be accessed and viewed by the hacker. This is usually to enable
+    the hacker to access confidential information that has been typed by the victim.
+    In fact, there are some legitimate uses for such a technique, for example some
+    companies use a keylogger in order to detect any dishonesty or fraud committed
+    by an employee.
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_25_0.png)'
+- md: '
+
+    A large area of computer hacking involves the use of social engineering, whereby
+    to circumvent information security a person is manipulated in order to reveal
+    confidential information or to grant access to secure networks. This technique
+    (including phishing) is usually only part of complex routine in a wider fraud
+    scheme, but it is also a dangerous step because human beings are more likely to
+    be won over by a convincing trickster than a machine.
+
+
+    Social engineering relies on the psychological aspect of decision-making, and
+    can be thought of as one of the most significant vulnerabilities in a computer
+    security system. There are many different ways in which social engineering can
+    be applied to gain unauthorized access to a computer system, and this includes
+    criminals posing as IT technicians who pretend that they are fixing the company
+    while stealing data.
+
+
+    Another example would be a trickster informing a company that the number of the
+    IT helpdesk has changed, so when employees phone the number they will willingly
+    disclose their account details thinking they are talking to somebody they can
+    trust with the information. These sorts of scenarios come under the category of
+    ''pretexting'' because making up a believable scenario allows the criminal to
+    access the required information and leads the victim to disclose the information.
+
+
+    Other professionals that a hacker involved in social engineering could pose as
+    the police or bank manager, because these are individuals who we believe have
+    the right to be granted any information that they request. Baiting is a subcategory
+    of social engineering because it relies on human psychology in order to work.
+    Baiting is when a victim''s computer security is compromised when an infected
+    device, or USB stick is used.
+
+
+    An example of baiting would be for the criminal to post a USB through somebody''s
+    door with a tempting label and simply wait for the curious victim to plug it into
+    their laptop, at which point malware would automatically install and infect their
+    computer. This technique makes the most of the human tendency towards curiosity
+    and greed, because if a label promises erotic images, money or gossip then a victim
+    may find it hard to resist taking a look.
+
+
+    Kevin Mitnik, a once computer criminal who later became a security consultant,
+    has pointed out that it is much easier and quicker to trick a person into disclosing
+    confidential information than it is to crack into the system using luck, brute
+    force or technical knowledge. Christopher Hadnagy has written a book titled Social
+    Engineering: The Art of Human Hacking, which emphasizes the way in which humans
+    are the most vulnerable part of any computer system.
+
+
+    ## Conclusion
+
+
+    This book has provided an overview of some of the key concepts to do with hacking.
+    We have considered the beginnings of hacking and how it was once influenced by
+    the literary tradition of Cyberpunk. It is interesting to note that what was once
+    depicted in science-fiction as an imagined activity in a dystopian society has
+    become real and has gone on to pose a significant threat to computer security
+    and a central concern of information technology experts.
+
+
+    Here we can see the true beginnings of hacking and how what was once a fictional
+    theoretical concept has become a reality with a significant impact on the digital
+    culture. Next we looked at the different types of hackers and noted the distinction
+    between ethical hackers, who perform hacking legally and in order to improve computer
+    security (otherwise known as white hat hackers) and unethical hackers, who use
+    their skills illegally in order to wreak havoc, disrupt services, and steal information
+    and data (otherwise known as black hat hackers).
+
+
+    With it is interesting to note how technical skill can be used differently depending
+    on motivation, and how the hacking community is not united by a clear and consistent
+    ideology. Subsequently we looked at computer security in order to better understand
+    the conditions within which hacking takes place. By learning about computer security
+    it is possible to understand the challenges faced by hackers who come against
+    security measures, as well as the challenges faced by those seeking to maintain
+    the security of their computer systems.
+
+
+    Any introduction to hacking would not be complete without this examination of
+    computer security because the value of maintaining computer security motivates
+    ethical hackers, and what unethical hackers are fighting against. Finally we looked
+    at the different hacking techniques that can be utilized, including both automated
+    software that finds and exploits vulnerabilities in computer systems, as well
+    as manual methods for breaking through security measures such as discovering a
+    password through trial and error.
+
+
+    In this chapter we also considered the vast area of hacking that is social engineering,
+    by which a hacker is able to access a secure network by illegally obtaining the
+    information needed. In today''s digital culture we are becoming increasingly reliant
+    on technology for everything that we do.
+
+
+    As technology has improved our lives have become easier in many ways, but with
+    this blossoming industry new types of criminals have also been created. A criminal
+    does not even need to leave the house in order to steal money, but can do so simply
+    by hacking into their victim''s always confidential data.
+
+
+    Hacking is not always illegal though, and this book has also looked at the ways
+    in which there is an increasing demand for computer experts to become ethical
+    hackers in order to further promote and protect computer security. This introduction
+    to the world of hacking has revealed that hacking is not a simple activity but
+    a huge spectrum of different behaviors that involve a wide range of techniques
+    and motivations.
+
+
+    Moreover, hacking is shown to be an activity that has a strong sense of cult affiliation,
+    in the sense that hackers strongly feel part of the hacking community. As digital
+    culture continues to grow, it seems that both ethical and unethical hacking will
+    become more skilled and its impact evermore significant.
+
+
+    ## SQL
+
+    ### Beginner’s Guide For Coding SQL
+
+    Stephen Hoffman
+
+
+    ## SQL
+
+    ### Beginner’s Guide for Coding SQL (sql, database programming, computer programming,
+    how to program)
+
+    STEPHEN HOFFMAN
+
+
+    ## CONTENTS
+
+    - Introduction
+
+    - Types of Databases
+
+    - Chapter 1: A Closer Look on Relational Model
+
+    - Tables, Columns, and Rows
+
+    - Keys
+
+    - Chapter 2: Examples of Relational Models
+
+    - Chapter 3: SQL Statements
+
+    - SQL Facts
+
+    - SQL Commands
+
+    - Naming Values
+
+    - Creating Data in SQL
+
+    - Data Types
+
+    - CHAPTER 4: Coding in MySQL
+
+    - SELECT Command Anatomy
+
+    - FROM Command
+
+    - Limiting The Results
+
+    - Conclusion
+
+
+    # Introduction
+
+
+    A database serves as a container. It is a storage where programmer scan organize
+    data in a constructive manner. Keep in mind that there is no need to create a
+    database if you are only dealing with few amounts of data. For instance, handling
+    hundreds of Excel spreadsheets require a database while five spreadsheets can
+    be dealt with without a database.
+
+
+    # A Closer Look On Database
+
+
+    Organizing all data inside a database allows you to easily execute tasks such
+    as querying the data, updating the data, and deleting previous data.
+
+
+    Let us say, for instance, that a company has to manage its overall financial expenses.
+    Basically, there is a specific department to handle this and such department has
+    several people in it. Now if these people have their own copies of the spreadsheets,
+    then it will be somewhat difficult to come up with non-conflicting data.
+
+
+    A database, on the other hand, will be able to store and organize the data with
+    higher accuracy and lesser conflicts.
+
+
+    Another example to help you understand what a database is, is by looking at your
+    phone’s contact list. Each contact is a data and your smartphone serves as the
+    database. With just a touch of a few buttons, you can easily get the contact you
+    are looking for. You can easily edit the details of each contact as well. This
+    advance data management is way better than listing each contact in a pen-and-paper
+    phone directory.
+
+    '
+  mdcn: '
+
+    计算机黑客行为的一个很大领域涉及社会工程学，即通过操纵个人来规避信息安全，使其泄露机密信息或授予对安全网络的访问。这种技术（包括网络钓鱼）通常只是更广泛欺诈计划中复杂日常操作的一部分，但它也是危险的步骤，因为人类比机器更容易被有说服力的骗子所说服。
+
+
+    社会工程依赖于决策的心理因素，可以被认为是计算机安全系统中最严重的漏洞之一。社会工程有许多不同的应用方法来获取对计算机系统的未经授权访问，这犯罪分子伪装成
+    IT 技术人员，假装他们正在修复公司的同时窃取数据。
+
+
+    另一个例子是骗子告知公司 IT 帮助台的电话号码已经变了，这样当员工拨打该号码时，他们会乐意透露自己的账户详情，认为自己正在与可以信任信息的人交谈。这类场景属于“借口法”（pretexting）类别，因为编造一个可信的场景让犯罪分子能够获取所需的信息，并引导受害者披露信息。
+
+
+    参与社会工程的黑客还可以伪装的其他专业人士包括警察或银行经理，因为我们认为这些人有权获得他们所要求的任何信息。诱饵攻击（Baiting）是社会工程的一个子类，因为它依赖于人类心理学。诱饵攻击是指在使用受感染设备或
+    USB 盘时受害者的计算机安全遭到破坏。
+
+
+    诱饵攻击的一个例子是犯罪分子将一个带有诱人标签的 USB 盘投进某门口，只需等待好奇的受害者将其插入笔记本电脑，此时恶意软件将自动安装并感染他们的计算机。这种技术充分利用了人类好奇和贪婪的倾向，因为如果标签承诺有情图片、金钱或八卦，受害者可能会发现难以抵制查看。
+
+
+    凯文·米特尼克（Kevin Mitnik）曾是一个计算机犯罪分子，后来成为安全顾问，他指出，欺骗一个人泄露机密信息比利用运气、暴力破解或技术知识破解系统要容易得多、快捷得多。克里斯托弗·哈德纳西（Christopher
+    Hadnagy）写了一本名为《社会工程学：人类黑客艺术》的书，强调了人类是任何计算机系统中最脆弱的部分。
+
+
+    ## 结论
+
+
+    本书提供了有关黑客行为的一些关键概念的概述。我们考虑了黑客行为的起源以及它曾如何受到赛博朋克文学传统的影响。值得注意的是，曾经在科幻小说中被描绘为反托邦社会中想象的活动已变成现实，并对计算机安全构成了重大威胁，成为信息技术专家关注的核心问题。
+
+
+    在这里我们可以看到黑客行为的真正起源，以及曾经的虚构理论概念如何变成现实，并对数字文化产生了重大影响。接下来我们查看了不同类型的黑客，并指出了伦理黑客（合法且为了提高计算机安全而进行黑客攻击，又称为白帽黑客）与不道德黑客（非法使用其技能制造破坏、干扰服务并窃取信息和数据，又称为黑帽黑客）之间的区别。
+
+
+    有趣的是，技术技能可以根据动机的不同被以不同的方式使用，而且黑客社区并不是由于一个清晰且一致的意识形态而团结在一起的。随后，我们研究了计算机安全，以便更好地理解黑客行为发生的条件。通过学习计算机安全，可以理解反对安全措施的黑客所面临的挑战，以及寻求维护计算机系统安全的人所面临的挑战。
+
+
+    任何对黑客行为的介绍，如果没有对计算机安全的检查都是不完整的，因为维护计算机安全的价值激励了伦理黑客，也是不道德黑客所反对的。最后，我们查看了可以利用各种黑客技术，包括发现和利用计算机系统漏洞的自动化软件，以及突破安全措施的人工方法（例如通过试错法发现密码）。
+
+
+    在本章中，我们还考虑了黑客行为中社会工程学这一大领域，通过这种方式，黑客能够非法获取所需信息来访问安全网络。在当今的数字文化中，我们所做的一切都越来越依赖技术。
+
+
+    随着技术的进步，我们的生活在许多方面变得更加容易，但随着这个蓬勃发展的行业，也产生了新类型的犯罪分子。犯罪分子甚至不需要出门就能偷钱，只需通过黑入受害者始终保密的数据即可做到。
+
+
+    然而，黑客行为并不总是非法的，本书还研究了对计算机专家成为伦理黑客日益增长的需求，以进一步促进和保护计算机安全。这个对黑客世界的介绍揭示了黑客行为并不是一项简单的活动，而是一个涉及广泛技术和动机的巨大行为谱系。
+
+
+    此外，黑客行为被显示为一种具有强烈社群归属感的活动，即黑客强烈感觉到自己是黑客社区的一部分。随着数字文化的持续增长，伦理黑客和不道德黑客似乎将变得更加熟练，其影响也将日益显著。
+
+
+    ## SQL
+
+    ### SQL 编码初学者指南
+
+    Stephen Hoffman
+
+
+    ## SQL
+
+    ### SQL 编码初学者指南 (sql, 数据库编程, 计算机编程, 如何编程)
+
+    STEPHEN HOFFMAN
+
+
+    ## 目录
+
+    - 引言
+
+    - 数据库类型
+
+    - 第 1 章：深入观察关系模型
+
+    - 表格、列和行
+
+    - 键
+
+    - 第 2 章：关系模型示例
+
+    - 第 3 章：SQL 语句
+
+    - SQL 事实
+
+    - SQL 命令
+
+    - 命名值
+
+    -在 SQL 中创建数据
+
+    - 数据类型
+
+    - 第 4 章：在 MySQL 中编码
+
+    - SELECT 命令剖析
+
+    - FROM 命令
+
+    - 限制结果
+
+    - 结论
+
+
+    # 引言
+
+
+    数据库充当容器。它是一个存储空间，程序员可以在其中以建设的方式组织数据。请记住，如果你只处理少量数据，则没有必要创建数据库。例如，处理数百个 Excel 表格需要数据库，而五个表格在没有数据库的情况下也可以处理。
+
+
+    # 深入观察数据库
+
+
+    在数据库中组织所有数据允许你轻松执行诸如查询数据、更新数据和删除旧数据之类的任务。
+
+
+    比方，假设公司必须管理其总财务支出。基本上，有一个特定的部门来处理这些，且该部门有几个人。现在，如果这些人都有自己的表格副本，那么获得不冲突的数据将相当困难。
+
+
+    相反，数据库能够以更高的准确性和更少的冲突来存储和组织数据。
+
+
+    另一个帮助你理解什么是数据库的例子是查看手机联系人列表。每个联系人都是一条数据，你的智能手机就是数据库。只需点击几个按钮，你就可以轻松找到正在寻找的联系人。你也可以轻松编辑每个联系人的详情。这种的数据管理比在纸质电话簿中列出每个联系人要好得多。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 26]
+
+
+    A large area of computer hacking involves the use of social engineering, whereby
+    to circumvent information security a person is manipulated in order to reveal
+    confidential information or to grant access to secure networks. This technique
+    (including phishing) is usually only part of complex routine in a wider fraud
+    scheme, but it is also a dangerous step because human beings are more likely to
+    be won over by a convincing trickster than a machine.
+
+
+    Social engineering relies on the psychological aspect of decision-making, and
+    can be thought of as one of the most significant vulnerabilities in a computer
+    security system. There are many different ways in which social engineering can
+    be applied to gain unauthorized access to a computer system, and this includes
+    criminals posing as IT technicians who pretend that they are fixing the company
+    while stealing data.
+
+
+    Another example would be a trickster informing a company that the number of the
+    IT helpdesk has changed, so when employees phone the number they will willingly
+    disclose their account details thinking they are talking to somebody they can
+    trust with the information. These sorts of scenarios come under the category of
+    ''pretexting'' because making up a believable scenario allows the criminal to
+    access the required information and leads the victim to disclose the information.
+
+
+    Other professionals that a hacker involved in social engineering could pose as
+    the police or bank manager, because these are individuals who we believe have
+    the right to be granted any information that they request. Baiting is a subcategory
+    of social engineering because it relies on human psychology in order to work.
+    Baiting is when a victim''s computer security is compromised when an infected
+    device, or USB stick is used.
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_26_0.png)
+
+
+    An example of baiting would be for the criminal to post a USB through somebody''s
+    door with a tempting label and simply wait for the curious victim to plug it into
+    their laptop, at which point malware would automatically install and infect their
+    computer. This technique makes the most of the human tendency towards curiosity
+    and greed, because if a label promises erotic images, money or gossip then a victim
+    may find it hard to resist taking a look.
+
+
+    Kevin Mitnik, a once computer criminal who later became because a security consultant,
+    has'
+  - '[PAGE 27]
+
+
+    pointed out that it is much easier and quicker to trick a person into disclosing
+    confidential information than it is to crack into the system using luck, brute
+    force or technical knowledge. Christopher Hadnagy has written a book titled Social
+    Engineering: The Art of Human Hacking, which emphasizes the way in which humans
+    are the most vulnerable part of any computer system.'
+  - '[PAGE 28]
+
+
+    # Conclusion
+
+
+    This book has provided an overview of some of the key concepts to do with hacking.
+    We have considered the beginnings of hacking and how it was once influenced by
+    the literary tradition of Cyberpunk. It is interesting to note that what was once
+    depicted in science-fiction as an imagined activity in a dystopian society has
+    become real and has gone on to pose a significant threat to computer security
+    and a central concern of information technology experts.
+
+
+    Here we can see the true beginnings of hacking and how what was once a fictional
+    theoretical concept has become a reality with a significant impact on the digital
+    culture. Next we looked at the different types of hackers and noted the distinction
+    between ethical hackers, who perform hacking legally and in order to improve computer
+    security (otherwise known as white hat hackers) and unethical hackers, who use
+    their skills illegally in order to wreak havoc, disrupt services, and steal information
+    and data (otherwise known as black hat hackers).
+
+
+    With it is interesting to note how technical skill can be used differently depending
+    on motivation, and how the hacking community is not united by a clear and consistent
+    ideology. Subsequently we looked at computer security in order to better understand
+    the conditions within which hacking takes place. By learning about computer security
+    it is possible to understand the challenges faced by hackers who come against
+    security measures, as well as the challenges faced by those seeking to maintain
+    the security of their computer systems.
+
+
+    Any introduction to hacking would not be complete without this examination of
+    computer security because the value of maintaining computer security motivates
+    ethical hackers, and what unethical hackers are fighting against. Finally we looked
+    at the different hacking techniques that can be utilized, including both automated
+    software that finds and exploits vulnerabilities in computer systems, as well
+    as manual methods for breaking through security measures such as discovering a
+    password through trial and error.'
+  - '[PAGE 29]
+
+
+    In this chapter we also considered the vast area of hacking that is social engineering,
+    by which a hacker is able to access a secure network by illegally obtaining the
+    information needed. In today''s digital culture we are becoming increasingly reliant
+    on technology for everything that we do.
+
+
+    As technology has improved our lives have become easier in many ways, but with
+    this blossoming industry new types of criminals have also been created. A criminal
+    does now even need to leave the house in order to steal money, but can do so simply
+    by hacking into their victim''s always confidential data.
+
+
+    Hacking is not always illegal though, and this book has also looked at the ways
+    in which there is an increasing demand for computer experts to become ethical
+    hackers in order to further promote and protect computer security. This introduction
+    to the world of hacking has revealed that hacking is not a simple activity but
+    a huge spectrum of different behaviors that involve a wide range of techniques
+    and motivations.
+
+
+    Moreover, hacking is shown to be an activity that has a strong sense of cult affiliation,
+    in the sense that hackers strongly feel part of the hacking community. As digital
+    culture continues to grow, it seems that both ethical and unethical hacking will
+    become more skilled and its impact evermore significant.'
+  - '[PAGE 30]
+
+
+    ![](img/dc3a21e694145a6334d92126a7367b5a_30_0.png)
+
+
+    # # SQL
+
+
+    Beginner’s Guide For Coding SQL
+
+
+    Stephen Hoffman'
+  - '[PAGE 31]
+
+
+    # SQL
+
+
+    # Beginner’s Guide for Coding SQL (sql, database programming, computer programming,
+    how to program, sql for dummies)
+
+
+    STEPHEN HOFFMAN'
+  - '[PAGE 32]
+
+
+    # CONTENTS
+
+
+    +   - Introduction
+
+    - Types of Databases
+
+    - Chapter 1 – A Closer Look on Relational Model
+
+    - Tables, Columns, and Rows
+
+    - Keys
+
+    - Chapter 2 – Examples of Relational Models
+
+    - Chapter 3 – SQL Statements
+
+    - SQL Facts
+
+    - SQL Commands
+
+    - Naming Values
+
+    - Creating Data in SQL
+
+    - Data Types
+
+    -CHAPTER 4 – Coding in MySQL
+
+    - SELECT Command Anatomy
+
+    - FROM Command
+
+    - Limiting The Results
+
+    - Conclusion'
+  - '[PAGE 33]
+
+
+    <!-- no content -->'
+  - '[PAGE 34]
+
+
+    # Introduction
+
+
+    A database serves as a container. It is a storage where programmer scan organize
+    data in a constructive manner. Keep in mind that there is no need to create a
+    database if you are only dealing with few amounts of data. For instance, handling
+    hundreds of Excel spreadsheets require a database while five spreadsheets can
+    be dealt with without a database. In other words, organizing a threshold amount
+    of data inside a database will save you from complex data management.
+
+
+    # A Closer Look On Database
+
+
+    Organizing all data inside a database allows you to easily execute tasks such
+    as querying the data, updating the data, and deleting previous data. Most of all,
+    a database prevents conflicts from having multiple copies of data.
+
+
+    Let us say, for instance, that a company has to manage its overall financial expenses.
+    Basically, there is a specific department to handle this and such department has
+    several people in it. Now if these people have their own copies of the spreadsheets,
+    then it will be somewhat difficult to come up with non-conflicting data considering
+    the possibility of human errors.
+
+
+    A database, on the other hand, will be able to store and organize the data with
+    higher accuracy and lesser conflicts.
+
+
+    Another example to help you understand what a database is, is by looking at your
+    phone’s contact list. Each contact is a data and your smartphone serves as the
+    database. With just a touch of a few buttons, you can easily get the contact you
+    are looking for. You can easily edit the details of each contact as well. This
+    advance data management is way better than listing each contact in a pen-and-paper
+    phone directory.'
+- md: '
+
+    # Types of Databases
+
+
+    The different types of database are as follows:
+
+
+    - Relational Databases
+
+    - Object-Oriented Databases
+
+    - Document-Based Databases
+
+
+    In this eBook, I will mainly focus on relational databases. Nevertheless, I will
+    not hesitate to include the other two types if deemed necessary.
+
+
+    You might have been introduced to some sort of new database type such as NoSQL.
+    They are considered to be under the category of the document-based databases.
+    These databases are now becoming popular and you might think that it is better
+    to study them instead of learning SQL.
+
+
+    Please do not consider the relational databases to be the things of the past.
+    A lot of databases that we still have today use the relational model. Moreover,
+    SQL is useful when it comes to relational data queries. Besides, the query language
+    of newly popularized databases is still somehow related to SQL since they were
+    mostly developed after SQL.
+
+
+    In other words, jumping into the new type of databases without understanding SQL
+    will give you tons of challenges along the way. Hence, you have made the right
+    decision of learning SQL first before moving forward to other databases like MongoDB.
+
+
+    Without further ado, let me now bring you to the world of SQL.
+
+
+    ## Chapter 1 – A Closer Look on Relational Model
+
+
+    The Structured Query Language, or SQL, was originally designed for relational
+    model. It is the language used to define the relationships between multiple data.
+    It is also the database programming language used to query data in a relational
+    schema.
+
+
+    So when did this all begin?
+
+
+    The first relational database was created in the 60s and the programming in this
+    model were primarily defined by mathematics. In fact, this model of database was
+    based on Tuple Relational Calculus and Relational Algebra.
+
+
+    Don’t worry though, there is no need for you to jump into algebra and calculus
+    to handle relational databases. SQL will make relational database programming
+    easier.
+
+
+    ## Tables, Columns, and Rows
+
+
+    In the relational database, the data is stored in a table. In this model, all
+    tables have names. For instance, you may name a table as “people” while you may
+    name another table as “sales”. These names refer to the kind of data stored inside
+    the table. In other words, the table we call “people” contains data of people
+    while the table we call “sales” contains data of sales.
+
+
+    Every table features a set of columns. These columns define the different pieces
+    of data within the table. This makes the relational model different from other
+    types of databases. You will notice that there are some databases that store all
+    together. In a relational model, however, all data is separated by columns and
+    each column has a name. Each column can also restrict the category and size of
+    data that will be added in. For instance, some columns can only store strings
+    while some columns can only store numbers. The restriction assigned to each column
+    depends on the creator of the database.
+
+
+    Columns are also categorized by being required and not required. A required column
+    means that every row in the table must have a data that corresponds to the column
+    requires. A not required column, on the other hand, means that we can assert a
+    NULL value for each row under that column. As you go through SQL, you will find
+    NULL has a lot uses in database programming.
+
+
+    The primary point of using rows is to have retrieveable data and containers where
+    you can store data. Why do we store data? Simply because we want to get that data
+    again in the future and we simply want a place for it to stay for the mean time.
+    Hence, the core idea of a database.
+
+
+    ## Keys
+
+
+    One of the vital elements of a relational database are keys. We now know that
+    a table has several columns and each column has names. Each column has related
+    properties as well. One of these properties that we can assert in a column is
+    a key.
+
+
+    In a relational database, we always assign a primary key for each row. This special
+    type of key is used to uniquely determine a specific row. This means that the
+    value of that key must remain unique and not have any duplicates within the table.
+    If, and only if, there is another table which contains that key in our relation
+    model; then, we may merge those two tables together.
+
+
+    When merging two tables, there will always be primary keys that have no duplicates.
+    Upon merging, you will notice that there will be a new column in the table with
+    these keys. These keys are now known as the Foreign keys. They serve as the primary
+    keys of the second table, allowing you to conveniently link rows from two separated
+    tables.
+
+
+    Aside from primary keys and foreign keys, we also have the natural keys. Natural
+    keys are global. This means that you cannot change them since they are used all
+    over the globe to identify a single entity. Published books, for instance, have
+    natural keys which we know as ISBN. Each published book has its own unique ISBN
+    which you need to use as primary keys when handling relational database for books.
+    This is different when handling databases with unnatural keys like emails, people,
+    where you need to invent your own primary keys for each row.
+
+
+    Let us use a database for people and their contact numbers as an example. We cannot
+    consider the name as the primary key. We consider the person''s phone number as
+    the primary key as well. This is because it is possible that there are two or
+    more people in the globe that have the same contact number, first name, or last
+    name. Hence, we should create the primary key ourselves. This is where the identity
+    column comes in.
+
+
+    The identity column serves as an auto-incrementing column that continues to generate
+    unique keys as we add data in the table. The key combination does not matter since
+    we only need is a unique key for every identity in our database.
+
+
+    ## Chapter 2 – Examples of Relational Model
+
+
+    Since we have in the previous chapter, I will now give you a simple example of
+    a relational model. This looks like this:
+
+
+    | First Name | Last Name |
+
+    |---|---|
+
+    | John | Doe |
+
+    | Mae | Lee |
+
+
+    In this table, we have two columns. Let us say that John has two email addresses
+    while Mae has three. The table will end up like this:
+
+
+    | First Name | Last Name | Email 1 | Email 2 | Email 3 |
+
+    |---|---|---|---|---|
+
+    | John | Doe | johndoe@email.com | johndoe2@email.com | NULL |
+
+    | Mae | Lee | maelee@email.com | maele2@email.com | maele3@email.com |
+
+
+    There is a problem here if we use this database design. First, what if the problem
+    we have at hand is to find how many email address each person has? It is quite
+    difficult and cumbersome to get the answer we need. This is the disadvantage in
+    using a column-based database. Second, this design is not practical and you do
+    not need to be a database specialist to realize that.
+
+
+    In order to address these issues, here is how we can do it. The first step is
+    to create a table for the entity first. In this table, we assigned the first column
+    for the primary keys. The second step is to create another table where we can
+    store the values for these people’s email addresses. The second table will look
+    like this:
+
+
+    | Key | Person''s Key | Email Address |
+
+    |---|---|---|
+
+    | 1 | 1 | johndoe@email.com |
+
+    | 2 | 1 | johndoe2@email.com |
+
+    | 3 | 2 | maelee@email.com |
+
+    | 4 | 2 | maele2@email.com |
+
+    | 5 | 2 | maele3@email.com |
+
+
+    In this table, you will see that there are two columns for the keys. The first
+    column refers to the primary key designated to each email address. The second
+    column refers to the foreign keys from our first table. This is an example of
+    a one-to-many relational model.
+
+
+    In this model, we are able to organize the data in the most practical way possible.
+    It is now easier for us to answer a query on how many emails each person has as
+    well. This method is known as Normalization.
+
+    '
+  mdcn: '
+
+
+    # 数据库类型
+
+
+    数据库的各种类型如下：
+
+
+    - 关系型数据库
+
+    - 对象型数据库
+
+    - 文档型数据库
+
+
+    在本部电子书中，我将主要关注关系型数据库。尽管如此，如果认为必要，我也不会包含另外两种类型。
+
+
+    你可能已经接触过某些新型数据库类型，例如 NoSQL。它们被认为属于文档型数据库范畴。这些数据库现在变得越来越流行，你可能会认为学习它们比学习 SQL 更好。
+
+
+    请不要认为关系型数据库是过去的事物。我们今天仍然使用的许多数据库都在使用关系模型。此外，在处理关系型数据查询时，SQL 是非常有用的。而且，新普及的数据库的查询语言与
+    SQL 仍有某种内在联系，因为它们大多是在 SQL 之后开发的。
+
+
+    换句话说，在不理解 SQL 的情况下直接跳入新型数据库，将让你在沿途中面临重重挑战。因此，在转向 MongoDB 等其他数据库之前，先学习 SQL 是一个正确的决定。
+
+
+    话话长说，现在让我带你进入 SQL 的世界。
+
+
+    ## 第1章 – 深入观察关系模型
+
+
+    结构化查询语言（或 SQL）最初是为关系模型设计的。它是用于定义多个数据之间关系的语言。它也是用于在关系模式中查询查询的数据库编程语言。
+
+
+    那么，这一切是从什么时候开始的呢？
+
+
+    第一个关系型数据库创建于 60 年代，该模型中的编程主要由数学定义。事实上，这种数据库模型是基于关系元组关系演算法（Tuple Relational Calculus）和关系代数（Relational
+    Algebra）。
+
+
+    不过不用担心，你不需要跳进代数和微积分来处理关系型数据库。SQL 会让关系型数据库编程变得更容易。
+
+
+    ## 表、列和行
+
+
+    在关系型数据库中，数据存储在表中。在这种模型中，所有表都有名称。例如，你可以将表命名为“people”（人员），而将另一个表命名为“sales”（销售）。这些名称指的是存储在表中的数据类型。换句话说，我们称为“people”的表包含人员数据，而我们称为“sales”的表包含销售数据。
+
+
+    每张表都有一组列。这些列定义了表内不同的数据片段。这使得关系模型与其他类型的数据库有所不同。你会注意到，有些数据库将所有内容存储在一起。但在关系模型中，所有数据都通过列分开，且每列都有一个名称。每列还可以限制将要添加的数据类别和大小。例如，某些列只能存储字符串，而某些列只能存储数字。分配给每列的限制取决于数据库的创建者。
+
+
+    列还分为“必填”和“非必填”。必填列意味着表中的每一行都必须有该列所需的对应的数据。相反，非必填列意味着我们可以为该列下的每一行断言一个 NULL 值。当你学习
+    SQL 时，你会发现 NULL 在数据库编程中有许多用途。
+
+
+    使用行的主要点是拥有可检索的数据和一个可以存储存储的容器。我们为什么要存储数据？简单是因为我们希望在未来再次获取这些数据，我们只是想为它们提供一个临时存放的地方。因此，数据库的核心思想。
+
+
+    ## 键
+
+
+    关系型数据库的要素元素之一是键（Keys）。我们现在知道一个表有几列，每列都有名称。每列还具有相关的属性。我们可以在列中断言的属性之一就是“键”。
+
+
+    在关系型数据库中，我们总是为每一行分配一个主键（Primary Key）。这种特殊的键用于唯一确定某一行。这意味着该键的值在表中必须保持唯一，不能有任何重复。当且仅当我们的关系模型中存在另一个包含该键的表时，我们可能将这两个表合并。
+
+
+    在合并两个表时，总会有会有没有重复的主键。合并后，你会注意到表中会出现一个带有这些键的新列。这些键现在被称为外键（Foreign Keys）。它们充当第二个表的主键，允许你方便地链接来自两个分离的的行。
+
+
+    除了主键和外键，我们还有自然键（Natural Keys）。自然键是全局通用的。这意味着你无法更改它们，因为它们在全球范围内被用于识别单个实体。例如，出版的书籍具有自然键，即我们所知的
+    ISBN。每本出版的书都有自己唯一的 ISBN，在处理书籍的关系型数据库时，你需要使用它作为主键。在处理如电子邮件、人员等具有非自然键的数据库时，情况就不同了，你需要为每一行发明自己的主键。
+
+
+    让我们用一个存储人员及其联系电话的数据库作为示例。我们不能将姓名视为主键。我们将人的电话号码也视为主键。这是因为全球范围内可能有两个或多个人具有相同的联系电话、名字或姓氏。因此，我们应该自己创建主键。这就是标识列（Identity
+    Column）派上用场的地方。
+
+
+    标识列充当自增列，随着我们向表中添加数据，它会继续生成唯一的键。键的组合并不重要，因为我们只需要为数据库中的每个身份一个唯一的键。
+
+
+    ## 第2章 – 关系模型示例
+
+
+    由于我们在上一章中已经提到了，现在我将给你一个简单的关系模型示例。它看起来像这样：
+
+
+    | First Name (名字) | Last Name (姓氏) |
+
+    |---|---|
+
+    | John | Doe |
+
+    | Mae | Lee |
+
+
+    在这个表中，我们有两个列。假设 John 有两个邮箱地址，而 Mae 有三个。表最终看起来像这样：
+
+
+    | First Name (名字) | Last Name (姓氏) | Email 1 | Email 2 | Email 3 |
+
+    |---|---|---|---|---|
+
+    | John | Doe | johndoe@email.com | johndoe2@email.com | NULL |
+
+    | Mae | Lee | maelee@email.com | maele2@email.com | maele3@email.com |
+
+
+    如果我们使用这种数据库设计，就会出现一个问题。首先，如果我们手头的问题是要找到每个人有多少个邮箱地址，获取我们所需的答案将是相当困难且繁琐的。这是基于列的数据库的缺点。其次，这种设计是不实用的，你不需要成为数据库专家也能意识到这一点。
+
+
+    为了解决这些问题，我们可以这样做。第一步是先为实体创建一个表。在这些表中，我们将第一列分配给主键。第二步是创建另一个表，可以在其中存储这些人的邮箱地址值。第二个表看起来如下：
+
+
+    | Key (键) | Person''s Key (人的键) | Email Address (邮箱地址) |
+
+    |---|---|---|
+
+    | 1 | 1 | johndoe@email.com |
+
+    | 2 | 1 | johndoe2@email.com |
+
+    | 3 | 2 | maelee@email.com |
+
+    | 4 | 2 | maele2@email.com |
+
+    | 5 | 2 | maele3@email.com |
+
+
+    在这个表中，你会看到有两个键的列。第一列引用分配给每个邮箱的主键。第二列引用来自我们第一张表的外键。这是一个一对多关系模型的示例。
+
+
+    在这个模型中，我们能够以最实用的方式组织数据。现在我们也更容易回答关于每个人有多少个邮箱的查询了。这种方法被称为规范化（Normalization）。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 35]
+
+
+    # Types of Databases
+
+
+    The different types of database are as follows:
+
+
+    +   - Relational Databases
+
+    - Object-Oriented Databases
+
+    - Document-Based Databases
+
+
+    In this eBook, I will mainly focus on relational databases. Nevertheless, I will
+    not hesitate to include the other two types if deemed necessary.
+
+
+    You might have been introduced to some sort of new database type such as NoSQL.
+    They are considered to be under the category of the document-based databases.
+    These databases are now becoming popular and you might think that it is better
+    to study them instead of learning SQL..
+
+
+    Please do not consider the relational databases to be the things of the past.
+    A lot of databases that we still have today use the relational model. Moreover,
+    SQL is useful when it comes to relational data queries. Besides, the query language
+    of newly popularized databases is still somehow related to SQLsince they were
+    mostly developed after SQL.
+
+
+    In other words, jumping into the new type of databases without understanding SQL
+    will give you tons of challenges along the way. Hence, you have made the right
+    decision of learning SQL first before moving forward to other databases like MongoDB.
+
+
+    Without further ado, let me now bring you to the world of SQL.'
+  - '[PAGE 36]
+
+
+    <!-- no content -->'
+  - '[PAGE 37]
+
+
+    <!-- no content -->'
+  - '[PAGE 38]
+
+
+    # Chapter 1 –A Closer Look on Relational Model
+
+
+    The Structured Query Language, or SQL, was originally designed for relational
+    model. It is the language used to define the relationships between multiple data.
+    It is also the database programming language used to query data in a relationalschema.
+
+
+    So when did this all begin?
+
+
+    The first relational database was created in the 60s and the programming in this
+    model were primarily defined by mathematics.In fact, this model of database was
+    based on Tuple Relational Calculus and Relational Algebra.
+
+
+    Don’t worry though, there is no need for you to jump into algebra and calculus
+    to handle relational databases. SQL will make relational database programming
+    easier.
+
+
+    # Tables, Columns, and Rows
+
+
+    In the relational database, the data is stored in a table. In this model, all
+    tables have names. For instance, you may name a table as “people” while you may
+    name another table as “sales”. These names refer to the kind of data stored inside
+    the table. In other words, the table we call “people” contains data of people
+    while the table we call “sales” contains data of sales.
+
+
+    Every table features a set of columns. These columns define the different pieces
+    of data within the table. This makes the relational model different from other
+    types of databases. You will notice that there are some databases that store all
+    together. In a relational model, however, all data is separated by columns and
+    each column has a name. Each column can also restrict the category and size of
+    data that will be added in. For instance, some columns can only store strings
+    while some columns can only store numbers. The restriction assigned to each column
+    depends on the creator of the database.
+
+
+    Columns are also categorized by being required and not required. A required column
+    means that every row in the table must have a data that corresponds to the column
+    requires. A not required column, on the other hand, means that we can assert a
+    NULL value for each row under that column. As you go through SQL, you will find
+    NULL has a lot uses in database programming.
+
+
+    The primary point of using rows is to have retrieveable data and containers where
+    you can store data. Why do we store data? Simply because we want to get that data
+    again in the'
+  - '[PAGE 39]
+
+
+    future and we simply want a place for it to stay for the mean time. Hence, the
+    core idea of a database.
+
+
+    # Keys
+
+
+    One of the vital elements of a relational database are keys. We now know that
+    a table has several columns and each column has names. Each column has related
+    properties as well. One of these properties that we can assert in a column is
+    a key.
+
+
+    In a relational database, we always assign a primary key for each row. This special
+    type of key is used to uniquely determine a specific row. This means that the
+    value of that key must remain unique and not have any duplicates within the table.
+    If, and only if, there is another table which contains that key in our relation
+    model; then, we may merge those two tables together.
+
+
+    When merging two tables, there will always be primary keys that have no duplicates.
+    Upon merging, you will notice that there will be a new column in the table with
+    these keys. These keys are now known as the Foreign keys. They serve as the primary
+    keys of the second table, allowing you to conveniently link rows from two separated
+    tables.
+
+
+    Aside from primary keys and foreign keys, we also have the natural keys. Natural
+    keys are global. This means that you cannot change them since they are used all
+    over the globe to identify a single entity. Published books, for instance, have
+    natural keys which we know as ISBN. Each published book has its own unique ISBN
+    which you need to use as primary keys when handling relational database for books.
+    This is different when handling databases with unnatural keys like emails, people,
+    where you need to invent your own primary keys for each row.
+
+
+    Let us use a database for people and their contact numbers as an example. We cannot
+    consider the name as the primary key. We consider the person''s phone number as
+    the primary key as well. This is because it is possible that there are two or
+    more people in the globe that have the same contact number, first name, or last
+    name. Hence, we should create the primary key ourselves. This is where the identity
+    column comes in.
+
+
+    The identity column serves as an auto-incrementing column that continues to generate
+    unique keys as we add data in the table. The key combination does not matter since
+    we only need is a unique key for every identity in our database.'
+  - '[PAGE 40]
+
+
+    <!-- no content -->'
+  - '[PAGE 41]
+
+
+    <!-- no content -->'
+  - '[PAGE 42]
+
+
+    # Chapter 2 – Examples of Relational Models
+
+
+    Since I have been using thepeople’s database in the previous chapter, I will now
+    give to you a contacts database as a perfect example of a relational model.
+
+
+    A simple database for contacts typically looks like this:
+
+
+    | First Name | Last Name | Email Address |
+
+    | --- | --- | --- |
+
+    | John | Doe | johndoe@email.com |
+
+    | Mae | Lee | maelee@email.com |
+
+
+    In this table, we have three columns that are looking for specific data. The first
+    column requests for the first name. The second for the last name and the third
+    for the email address of the person.
+
+
+    Our rows, excluding the first row, refers to a single entity. The row for our
+    first entity refers to the person with the name John Doe and his email is johndoe@email.com.
+    The row for our second entity refers to Mae Lee with an email address of maelee@email.com.
+
+
+    This is an example of a database with two entities divided by three columns.
+
+
+    Let us say that John Doe has two email addresses while Mae Lee has three. Some
+    people will end up adding columns to add the additional data. Hence, the table
+    will end up like this.
+
+
+    | First Name | Last Name | Email 1 | Email 2 | Email 3 |
+
+    | --- | --- | --- | --- | --- |
+
+    | John | Doe | johndoe... | johndoe2... | NULL |
+
+    | Mae | Lee | maelee@... | maelee2@... | maelee3@... |
+
+
+    There is a problem here if we use this kind of database design. First, what if
+    the problem we have at hand is to find how many email address each person has?
+    It is quite difficult'
+  - '[PAGE 43]
+
+
+    and cumbersome to get the answer we need. This is the disadvantage in using a
+    column-base database. The second problem is that we will end up with a lot of
+    NULL values for those who only have one email address. Third, this design is not
+    practical and you do not need to be a database specialist to realize that.
+
+
+    In order to address these three issues, here is how we can do it.
+
+
+    | Key | First Name | Last Name |
+
+    |---|---|--|
+
+    | 1 | John | Doe |
+
+    | 2 | Maee | Lee |
+
+
+    The first step is to create a table for the entity first. In this table, we assigned
+    the first column for the primary keys. The second step is to create another table
+    where we can store the values for these people’s email addresses. The second table
+    will look like this.
+
+
+    | Key | Person''s Key | Email Address |
+
+    |---|---|--|
+
+    | 1 | 1 | johndoe@email.com |
+
+    | 2 | 1 | johndoe2@email.com |
+
+    | 3 | 2 | maele@email.com |
+
+    | 4 | 2 | maele2@email.com |
+
+    | 5 | 2 | maele3@email.com |
+
+
+    In this table, you will see that there are two columns for the keys. The first
+    column refers to the primary key designated to each email address. The second
+    column refers to the foreign keys from our first table. This is an example of
+    a one-to-many relational model.
+
+
+    In this model, we are able to organize the data in the most practical way possible.
+    It is now easier for us to answer a query on how many emails each person has as
+    well. This method is known as Normalization.'
+- md: '
+
+    There are different ways to design your database and efficient designs depend
+    on what queries you are trying to answer.
+
+
+    With all that being said, you are now ready to meet SQL.
+
+
+    ## Chapter 3 – SQL Statements
+
+
+    SQL is a specific database language. We use this language to create statements.
+    These statements are made up of valid words. Some of the words should be defined
+    by SQL while some of the words should be defined by you. Some words you will be
+    asserting in these statements are table names, column names, and variables or
+    data that is inside tables.
+
+
+    ## SQL Facts
+
+
+    Before we proceed, I would like to show you some important facts about SQL.
+
+
+    The first thing you need to know about SQL is that it is readable since it is
+    written in the English language. In other words, it is easier to learn SQL more
+    than any other programming languages.
+
+
+    Second is that you can do a lot more using SQL. This is in contrast with most
+    people''s impressions that SQL is only used for data queries. This is wrong.
+
+
+    Third is that a valid SQL statement should end with a semi-colon (;). Although
+    some people will tell you that it is no longer needed, I suggest adding it in
+    your queries because it is part of the ANSI standard. Furthermore, it works fine
+    with both old and modern databases. Semi-colons allow you to conveniently assert
+    multiple statements together in what we call a batch. This method works even with
+    modern databases.
+
+
+    The fourth is that SQL is not case-sensitive. You can put your variables in both
+    lower and upper cases. Both ways will work out just fine in the structured query
+    language. One good way to practice this is to assert SQL-specific keywords in
+    uppercases and user-defined keywords in lowercases. This will allow you to efficiently
+    and quickly identify the different keywords within a statement.
+
+
+    ## SQL Commands
+
+
+    It is important to keep in mind that all SQL statements begin with a command.
+    The command is typically a verb to signify what the database needs to do. One
+    good example of a command used in SQL statements is SELECT.
+
+
+    The SELECT command tells the database to select a set of data. As you can see,
+    it is an English-based word and pretty much obvious of what the system will do.
+    This is how the command looks like when used in an SQL statement.
+
+
+    ```sql
+
+    SELECT VALUES
+
+    FROM TABLENAME;
+
+    ```
+
+
+    The example above is a generic example of an SQL statement and I will talk about
+    it piece by piece later on.
+
+
+    Take note that the set of values or variables that you need to assert in a statement
+    depends upon what command you are trying to execute. All these variables come
+    in the statement right after the command.
+
+
+    ## Naming Values
+
+
+    As I have already said, the SQL statement is made up of words that are within
+    SQL specification and user-created names. This means that naming values such as
+    keys, columns, and etc. are significant in SQL.
+
+
+    There is no absolute rule in naming things in SQL. People have their own ways
+    to name variables, but I suggest you follow the method I use in this book for
+    the sake of consistency. Here are two naming rules that I will be implementing
+    in this book:
+
+
+    - All table names must be in singular form. (e.g. person, email, phone, user,
+    etc.)
+
+    - Column names should never be repeated in the database.
+
+
+    There are some people who prefer to use plural names for their table names. This
+    is not wrong. Nevertheless, I am more comfortable when using singular form table
+    names. As the column names, there will always be a time when two or more columns
+    from separated tables have the same name. Hence, what I do is to uniquely name
+    each column for disambiguation purposes. For instance, instead of using ID as
+    the column name for primary keys in both the user table and email table; I would
+    rather use the names user_ID and email_ID for each column.
+
+
+    You should also take note that names in SQL are scoped. This means that the database
+    itself must have a name. The tables within the database must have names too. The
+    columns inside every table must be named as well. When calling for the table,
+    its name must be scoped through the database name with the use of period (.) to
+    separate the names. Hence, this is how they are going to look like when asserted
+    in an SQL statement:
+
+
+    - Database.Table
+
+    - Table.Column
+
+
+    ## Creating Data in SQL
+
+
+    I have no intention to teach you how to create a database from scratch. As beginners,
+    your tasks should only circle around adding or updating values to an already existing
+    database. However, I have a feeling that some of you still have that eagerness
+    to learn SQL in order to create the entire application including the database
+    itself. And so, I will introduce that part of SQL, but just enough to help you
+    jumpstart.
+
+
+    The SQL keyword to create a new database is the statement CREATE DATABASE and
+    this falls under ANSI specification. Let us say you want to create a new database
+    for contact numbers of people and you want to name this new database as Contacts.
+    Here is how you are going to do it.
+
+
+    ```sql
+
+    CREATE DATABASE Contact;
+
+    ```
+
+
+    In order for you to work on that database, you need to use it first. The keyword
+    we need here is the USE DATABASE command. This is how we are going to execute
+    it.
+
+
+    ```sql
+
+    USE DATABASE Contact;
+
+    ```
+
+
+    If you want to create a table inside the Contact database, then what you need
+    to execute is the CREATE TABLE command and here is how you do it.
+
+
+    ```sql
+
+    CREATE TABLE Contacts.User (...);
+
+    ```
+
+
+    After that, you can now put all column names, types, and definitions.
+
+
+    ## Data Types
+
+
+    Data types are important because it follows column restrictions. Here are some
+    of the major types:
+
+
+    | Data Type | Description |
+
+    | :--- | :--- |
+
+    | CHARACTER | Used to define characters. |
+
+    | CHARACTER VARCHARING | Used to define maximum of characters. |
+
+    | BINARY | Used to store data. |
+
+    | SMALLINT | Used to store numbers. |
+
+    | INTEGER | Used to store numbers. |
+
+    | BIGINT | Used to store numbers. |
+
+    | BOOLEAN | Used to store TRUE or FALSE values. |
+
+    | DATE | Used to store DAY, MONTH, and YEAR. |
+
+    | TIME | Used to store SECOND, MINUTE, and HOUR. |
+
+    | TIMESTAMP | Used to store both TIME and DATE. |
+
+
+    ## CHAPTER 4 – Coding in MySQL
+
+
+    I will teach you how to code SQL using MySQL. Why MySQL? First is because it is
+    an open-source platform and you can get it for free. Second is because it is compatible
+    with all major operating systems: Linux, OSX, and Windows. Third is because it
+    features ANSI mode which enforces ANSI specifications to your database. Not all
+    DBMS have this kind of feature.
+
+
+    In this chapter, I will teach you how to efficiently use the SELECT command.
+
+
+    ## SELECT Command Anatomy
+
+
+    You should have learned by now that we have the SQL keyword SELECT which is a
+    command to get specific data from database. After the SELECT keyword, what should
+    follow is the list of items we want to have from our database. We call it “select
+    list”. If the select list only contains variables, then you can simply write the
+    statement in this manner:
+
+
+    ```sql
+
+    SELECT ''Variable'',''Variable'';
+
+    ```
+
+
+    Most of the time, the select list contains the names of the columns. When it does,
+    it is important to define which table we can find these columns. This is where
+    the FROM command comes in.
+
+
+    ```sql
+
+    Format:
+
+    SELECT [COLUMN_NAME], [COLUMN_NAME] FROM [TABLE_NAME];
+
+
+    Example:
+
+    SELECT User,Email FROM;
+
+    ```
+
+
+    But, what if I have a lot of columns in the table and I want to select them all,
+    do you ask? Well, this is where the power of the asterisk (*) comes in. This is
+    known as the wildcard symbol in SQL statement. To select all columns inside a
+    table, you need to execute a *.
+
+    '
+  mdcn: '
+
+    设计数据库有多种方法，而高效的设计取决于你尝试回答的查询。
+
+
+    综上所述，你现在已经准备好接触 SQL 了。
+
+
+    ## 第 3 章 – SQL 语句
+
+
+    SQL 是一种特定的数据库语言。我们使用这种语言来创建语句。这些语句由有效的单词组成。其中某些单词应该由 SQL 定义，而另一些单词应该由你来定义。你在这些语句中断言的某些词是表名、列名以及表内部的变量或数据。
+
+
+    ## SQL 事实
+
+
+    在我们继续之前，我想向你展示一些关于 SQL 的重要事实。
+
+
+    关于 SQL，你需要知道的第一点是它是用英语编写的，因此具有良好的可读性。换句话说，学习 SQL 比任何其他编程语言都容易。
+
+
+    其次，你可以使用 SQL 执行更多操作。这与大多数人的印象形成对比，即 SQL 仅用于数据查询。这种观点是错误的。
+
+
+    第三，有效的 SQL 语句应该以分号（;）结尾。尽管有些人会告诉你它不再需要了，但我建议在查询中添加它，因为它是 ANSI 标准的一部分。此外，它在旧版和现代的的数据库中都能正常工作。分号允许你方便地将多个语句组合在一个我们所谓的“批处理”（batch）中。这种方法在现代数据库中同样有效。
+
+
+    第四点是 SQL 是不大小敏感的。你可以将变量写为小写或大写。这两种方式在结构化查询语言中都能完美运行。练习这种做法的一种良好方法是将 SQL 特定的关键字使用大写，将用户定义的关键字使用小写。这将允许你高效、快速地识别语句中的不同关键字。
+
+
+    ## SQL 命令
+
+
+    记住，所有的 SQL 语句都以一个命令开头。该命令通常是一个动词，表示数据库需要做什么。SQL 语句中使用的命令的一个很好的例子是 SELECT。
+
+
+    SELECT 命令告诉数据库选择一组数据。如你所见，它是一个基于英语的单词，系统将要做什么几乎显而易见。以下是该命令在 SQL 语句中使用时的样式：
+
+
+    ```sql
+
+    SELECT VALUES
+
+    FROM TABLENAME;
+
+    ```
+
+
+    上面的示例是一个 SQL 语句的通用示例，稍后我将逐一进行讨论。
+
+
+    请注意，你在语句中需要断言的值集或变量取决于你尝试执行的命令。所有这些变量都紧跟在命令之后的语句中。
+
+
+    ## 值的命名
+
+
+    正如我所说的，SQL 语句是由 SQL 规范内的单词和用户创建的名称组成的。这意味着为键（keys）、列等值命名在 SQL 中是非常重要的。
+
+
+    在 SQL 中命名事物没有绝对的规则。人们有自己命名变量的方法，但为了保持一致性，我建议你遵循我在本书中使用的方法。以下是我将在书中实施的两条命名规则：
+
+
+    - 所有表名必须是单数形式。（例如：person, email, phone, user 等）
+
+    - 列名在数据库中绝不应重复。
+
+
+    有些人人倾向于为他们的表名使用复数形式。这并没有错。尽管如此，在使用单数形式表名时我感到更舒服。至于列名，总会有可能来自不同表的两个或多个列具有相同的名称。因此，我的做法是为了消除歧义，为每个列命名唯一的名称。例如，我不想在
+    user 表和 email 表中都使用 ID 作为主键的列名；我倾向于为每个列使用 user_ID 和 email_ID。
+
+
+    你还应该注意，SQL 中的名称是有作用域的。这意味着数据库本身有一个名称。数据库中的表也必须有名称。每个表内部的列也必须命名。当调用表时，其名称必须通过数据库名并使用点（.）来分隔名称。因此，它们在
+    SQL 语句中断言时的格式如下：
+
+
+    - 数据库.表
+
+    - 表.列
+
+
+    ## 在 SQL 中创建数据
+
+
+    我并不打算教你如何从零创建一个数据库。作为初学者，你的任务应该只围绕向已有的数据库添加或更新值展开。然而，我感觉到你们一些人仍然渴望学习 SQL 以创建包括数据库本身在内的整个应用程序。因此，我将介绍
+    SQL 的这部分，但足以帮助你上手。
+
+
+    创建新数据库的 SQL 关键字是语句 CREATE DATABASE，它属于 ANSI 规范。假设你想为人员的联系电话创建一个新数据库，并将此新数据库命名为
+    Contacts。以下是操作方法：
+
+
+    ```sql
+
+    CREATE DATABASE Contact;
+
+    ```
+
+
+    为了操作该数据库，你需要先使用它。我们在这里需要的关键字是 USE DATABASE 命令。这是我们执行它的方式：
+
+
+    ```sql
+
+    USE DATABASE Contact;
+
+    ```
+
+
+    如果你想在 Contact 数据库内部创建一个表，那么你需要执行的是 CREATE TABLE 命令，以下是操作方法：
+
+
+    ```sql
+
+    CREATE TABLE Contacts.User (...);
+
+    ```
+
+
+    之后，你现在可以放置所有的列名、类型和定义。
+
+
+    ## 数据类型
+
+
+    数据类型非常重要，因为它们遵循列的限制。以下是一些主要类型：
+
+
+    | 数据类型 | 描述 |
+
+    | :--- | :--- |
+
+    | CHARACTER | 用于定义字符。 |
+
+    | CHARACTER VARCHARING | 用于定义最大字符。 |
+
+    | BINARY | 用于存储数据。 |
+
+    | SMALLINT | 用于存储数字。 |
+
+    | INTEGER | 用于存储数字。 |
+
+    | BIGINT | 用于存储数字。 |
+
+    | BOOLEAN | 用于存储 TRUE 或 FALSE 值。 |
+
+    | DATE | 用于存储日、月、年。 |
+
+    | TIME | 用于存储秒、分、时。 |
+
+    | TIMESTAMP | 用于存储时间和。
+
+
+    ## 第 4 章 – 在 MySQL 中编码
+
+
+    我将教你如何使用 MySQL 编写 SQL。为什么选择 MySQL？首先因为它是一个开源平台，你可以免费获取。其次是因为兼容所有主要的操作系统：Linux、OSX
+    和 Windows。第三是因为它具有 ANSI 模式，可以对你的数据库强制 ANSI 标准。并不是所有的 DBMS（数据库管理系统）都有这种功能。
+
+
+    在本章中，我将教你如何高效地使用 SELECT 命令。
+
+
+    ## SELECT 命令结构
+
+
+    到目前为止，你应该已经了解到我们有 SQL 关键字 SELECT，它是从数据库获取特定数据的命令。在 SELECT 关键字之后，应该跟随我们想要从数据库中获取的项目列表。我们称之为“选择列表”（select
+    list）。如果选择列表仅包含变量，你可以这样写语句：
+
+
+    ```sql
+
+    SELECT ''Variable'',''Variable'';
+
+    ```
+
+
+    大多数情况下，选择列表包含列名。如果是这样，定义从哪个表中找到这些列是非常重要的。这就是 FROM 命令的用场。
+
+
+    ```sql
+
+    格式：
+
+    SELECT [COLUMN_NAME], [COLUMN_NAME] FROM [TABLE_NAME];
+
+
+    示例：
+
+    SELECT User,Email FROM;
+
+    ```
+
+
+    但是，如果表有很多列，我想选择所有列怎么办，你问道？这就是星号 (*) 的的力量所在。它在 SQL 语句中被称为通配符符号。要选择表中的所有列，你需要执行一个
+    *.
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 44]
+
+
+    There are different ways to design your database and efficient designs depend
+    on what queries you are trying to answer.
+
+
+    With all that being said, you are now ready to meet SQL.'
+  - '[PAGE 45]
+
+
+    <!-- no content -->'
+  - '[PAGE 46]
+
+
+    <!-- no content -->'
+  - '[PAGE 47]
+
+
+    # Chapter 3 – SQL Statements
+
+
+    SQL is a specific database language. We use this language to create statements.
+    These statements are made up of valid words. Some of the words should be defined
+    by SQL while some of the words should be defined by you. Some words you will be
+    asserting in these statements are table names, column names, and variables or
+    data that is inside tables.
+
+
+    # SQL Facts
+
+
+    Before we proceed, I would like to show you some important facts about SQL.
+
+
+    The first thing you need to know about SQL is that it is readable since it is
+    written in the English language. In other words, it is easier to learn SQL more
+    than any other programming languages.
+
+
+    Second is that you can do a lot more using SQL. This is in contrast with most
+    people''s impressions that SQL is only used for data queries. This is wrong.
+
+
+    Third is that a valid SQL statement should end with a semi-colon (;). Although
+    some people will tell you that it is no longer needed, I suggest adding it in
+    your queries because it is part of the ANSI standard. Furthermore, it works fine
+    with both old and modern databases. Semi-colons allow you to conveniently assert
+    multiple statements together in what we call a batch.This method works even with
+    modern databases.
+
+
+    The fourth is that SQL is not case-sensitive. You can put your variables in both
+    lower and upper cases. Both ways will work out just fine in the structured query
+    language. One good way to practice this is to assert SQL-specific keywords in
+    uppercases and user-defined keywords in lowercases. This will allow you to efficiently
+    and quickly identify the different keywords within a statement.'
+  - '[PAGE 48]
+
+
+    # SQL Commands
+
+
+    It is important to keep in mind that all SQL statements begin with a command.
+    The command is typically a verb to signify what the database needs to do. One
+    good example of a command used in SQL statements is SELECT.
+
+
+    The SELECT command tells the database to select a set of data. As you can see,
+    it is an English-based word and pretty much obvious of what the system will do.
+    This is how the command looks like when used in an SQL statement.
+
+
+    ```
+
+    SELECTVALUES
+
+    FROMTABLENAME;
+
+    ```
+
+
+    The example above is a generic example of an SQL statement and I will talk about
+    it piece by piece later on.
+
+
+    Take note that the set of values or variables that you need to assert in a statement
+    depends upon what command you are trying to execute.All these variables come in
+    the statement right after the command.
+
+
+    # Naming Values
+
+
+    As I have already said, the SQL statement is made up of words that are within
+    SQL specification and user-created names. This means that naming values such as
+    keys, columns, and etc. are significant in SQL.
+
+
+    There is no absolute rule in naming things in SQL. People have their own ways
+    to name variables, but I suggest you follow the method I use in this book for
+    the sake of consistency. Here are two naming rules that I will be implementing
+    in this book:
+
+
+    +   - All table names must be in singular form. (e.g. person, email, phone, user,
+    etc.)'
+  - '[PAGE 49]
+
+
+    +   - Column names should never be repeated in the database.
+
+
+    There are some people who prefer to use plural names for their table names. This
+    is not wrong. Nevertheless, I am more comfortable when using singular form table
+    names. As the column names, there will always be a time when two or more columns
+    from separated tables have the same name. Hence, what I do is to uniquely name
+    each column for disambiguation purposes. For instance, instead of using ID as
+    the column name for primary keys in both the user table and email table; I would
+    rather use the names user_ID and email_ID for each column.
+
+
+    You should also take note that names in SQL are scoped. This means that the database
+    itself must have a name. The tables within the database must have names too. The
+    columns inside every table must be named as well. When calling for the table,
+    its name must be scoped through the database name with the use of period (.) to
+    separate the names. Hence, this is how they are going to look like when asserted
+    in an SQL statement:
+
+
+    +   - Database.Table
+
+
+    +   - Table.Column'
+  - '[PAGE 50]
+
+
+    # Creating Data in SQL
+
+
+    I have no intention to teach you how to create a database from scratch. As beginners,
+    your tasks should only circle around adding or updating values to an already existing
+    database. However, I have a feeling that some of you still have that eagerness
+    to learn SQL in order to create the entire application including the database
+    itself. And so, I will introduce that part of SQL, but just enough to help you
+    jumpstart.
+
+
+    The SQL keyword to create a new database is the statement CREATE DATABASE and
+    this falls under ANSI specification. Let us say you want to create a new database
+    for contact numbers of people and you want to name this new database as Contacts.
+    Here is how you are going to do it.
+
+
+    ```
+
+    CREATE DATABASE Contact;
+
+    ```
+
+
+    In order for you to work on that database, you need to use it first. The keyword
+    we need here is the USE DATABASE command. This is how we are going to execute
+    it.
+
+
+    ```
+
+    USE DATABASEContact;
+
+    ```
+
+
+    If you want to create a table inside the Contact database, then what you need
+    to execute is the CREATE TABLE command and here is you do it.
+
+
+    ```
+
+    CREATE TABLE Contacts.User (...);
+
+    ```'
+  - '[PAGE 51]
+
+
+    After that, you can now put all column names, types, and definitions.'
+  - '[PAGE 52]
+
+
+    # Data Types
+
+
+    Data types are important because it follows column restrictions. Each column has
+    a rule on which type of data you can store in it.
+
+
+    Here are some of the major data types and their short descriptions.
+
+
+    | Data Type | Description |
+
+    | --- | --- |
+
+    | CHARACTER | Used to define the number of characters allowed in the column. No
+    more, less. |
+
+    | CHARACTER VARYING | Used to define the maximum number of characters allowed
+    in the column. Can be less but not more than the specific value. |
+
+    | BINARY | Used to dedicate the column for hexadecimal data. |
+
+    | SMALLINT | Used to store numerical data ranging from -32, 768 to 32, 767. |
+
+    | INTEGER | Used to store numerical data ranging from -2, 147, 483, 648 to 2,
+    147, 483, 647. |
+
+    | BIGINT | Used to store numerical data ranging from -9, 223, 372, 036, 854, 775,
+    808 to 9, 223, 372, 036, 854, 775, 807. |'
+  - '[PAGE 53]
+
+
+    | BOOLEAN | Used to store either TRUE or FALSE values. |
+
+    | DATE | Used to store DAY, MONTH, and YEAR in the following format: YYYY-MM-DD.
+    |
+
+    | TIME | Used to store SECOND, MINUTE, and HOUR in the following format: HH:MM:SS.
+    |
+
+    | TIMESTAMP | Used to store both TIME and DATE. |
+
+
+    There are other data types supported that you can use for more complex numbers,
+    for instance. There is also also specific data type for UNICODE characters against
+    regular characters. Now these are just a few of the flavors that you can use in
+    database programming.'
+  - '[PAGE 54]
+
+
+    <!-- no content -->'
+  - '[PAGE 55]
+
+
+    <!-- no content -->'
+  - '[PAGE 56]
+
+
+    <!-- no content -->'
+  - '[PAGE 57]
+
+
+    # CHAPTER 4 – Coding in MySQL
+
+
+    I will teach you how to code SQL database using MySQL. Why MySQL? First is because
+    it is an open-source platform and you can get it for free. Second is because it
+    is compatible with all major operating systems: Linux, OSX, and Windows. Third
+    is because it features ANSI mode which enforces ANSI specifications to your database.
+    Not all RDMs have this kind of feature.
+
+
+    In this chapter, I will teach you how to efficiently use the SELECT command. This
+    will allow you to effectively use this command to create interesting and efficient
+    data queries.'
+  - '[PAGE 58]
+
+
+    # SELECT Command Anatomy
+
+
+    You should have learned by now that we have the SQL keyword SELECT which is a
+    command to get specific data from our database. After the SELECT keyword, what
+    should follow is the list of items we want to have from our database. We call
+    it “select list”. If the select list only contains variables, then you can simply
+    write the statement in this manner:
+
+
+    ```
+
+    SELECT ‘[Variable]’,’[Variable]’;
+
+    ```
+
+
+    Most of the time, the select list contains the names of the columns. When it does,
+    it is important to define which table we can find these columns. This is where
+    the FROM command comes in.
+
+
+    For instance, our select list contains User (column A) and Email (column B) and
+    we can find these columns inside the table named as Contact. In order to define
+    which table to look for, we should include the FROM command by doing this.
+
+
+    ```
+
+    Format:
+
+    SELECT [COLUMN_NAME], [COLUMN_NAME] FROM
+
+    [TABLE_NAME];
+
+
+    Example:
+
+    SELECTUser,EmailFROM;
+
+    ```
+
+
+    But, what if I have a lot of columns in the table and I want to select them all,
+    do you ask? Well, this is where the power of the asterisk (*) comes in. This is
+    known as the wildcard symbol in SQL statement. To select all columns inside a
+    table, you need to execute a *'
+- md: '
+
+    statement in this format.
+
+
+    ```
+
+    SELECT* FROM [TABLE_NAME];
+
+    ```
+
+
+    As you can see, the wildcard symbol comes after the SELECT command. Now this is
+    useful when selecting all the columns. If you do not need to select all the columns,
+    then using the wildcard symbol may become dangerous and inefficient.
+
+
+    There are different ways to quickly assert multiple columns in an SQL statement
+    depending upon the platform that you are using. I personally recommend that you
+    avoid using the wildcard command since the inefficient use of this syntax may
+    also break applications.
+
+
+    ## FROM Command
+
+
+    Selecting a single table is fairly easy to write an SQL statement. As you can
+    see from previous examples, it only follows a simple format.
+
+
+    ```
+
+    FROM [TABLE_NAME]
+
+    ```
+
+
+    In FROM clause, you can shorten the name of your table by creating an alias for
+    the table name. Let us say that your table name is “telecommunication” and you
+    are looking for the list of owner names that can be found under the “owner” column
+    of our table. Typing it with the use of the generic format will give you this.
+
+
+    ```
+
+    SELECT telecommunication.owner FROM telecommunication;
+
+    ```
+
+
+    Why do we need to type the table name before the column name in our format? This
+    is because we must qualify the column by using the table name. Furthermore, this
+    will save you from name collisions in the future if there will be columns with
+    similar names. I suggest you make this a habit.
+
+
+    Going back to the topic, doing so is too much of inconvenience. We can shorten
+    the table name by assigning an alias in the FROM clause. Here’s the format.
+
+
+    ```
+
+    SELECT [TABLE_NAME_ALIAS].[COLUMN_NAME] FROM [TABLE_NAME][TABLE_NAME_ALIAS];
+
+    ```
+
+
+    Using the owner column and telecommunication table, our new statement will look
+    like this.
+
+
+    ```
+
+    SELECT t.owner FROM telecommunication t;
+
+    ```
+
+
+    As you can see, I assigned the letter “t” to be the alias of the table name. This
+    is easier to write than repeating the complete name over and over again. Keep
+    in mind that it is not necessary to use the first character of your table name
+    as an alias. You can assign any alias to the table name and it can also be a combination
+    of characters. Just make sure that you are consistent with the alias you use.
+
+
+    ## Limiting The Results
+
+
+    Whenever you execute a SELECT query, the database will give you all the rows under
+    the column you specified. This means that if your table has 20,000 rows, then
+    it will return 20, 000 values to answer your statement.
+
+
+    There are two ways to address this issue. One is to assert additional clause after
+    the FROM clause. The other is by adding the DISTINCT qualifier before the select
+    list. This shown in this format.
+
+
+    ```
+
+    SELECT DISTINCT [SELECT LIST] FROM [TABLE_NAME];
+
+    ```
+
+
+    This format will only give you distinct values in return instead of providing
+    you with all the values under the specified column. For example, you have a table
+    for your contacts and some entities were asserted in several rows because they
+    own multiple phone numbers.
+
+
+    Relying on the generic format will give you duplicated results. This is not efficient
+    if you only want to know who are your contacts, right? Using the DISTINCT qualifier
+    will prevent you from receiving multiple rows for the same entity.
+
+
+    Here is our telecommunication table which has the column for owners and another
+    column for the telecom company.
+
+
+    | Key | Owner | Company |
+
+    |---|---|---|
+
+    | 1 | Jean Grey | AT&T |
+
+    | 2 | Luke Skywalker | Comcast |
+
+    | 3 | Mae Lee | AT&T |
+
+    | 4 | Stan Lee | AT&T |
+
+
+    Let us say we want to find the list of telecom companies in our database. Using
+    the generic format will give us three results for AT&T which is unnecessary. With
+    the DISTINCT qualifier, however, we will get only two results – one for Comcast
+    and another for AT&T which is what we really need.
+
+
+    Aside from DISTINCT qualifier, you can add the WHERE clause after the FROM clause
+    to limit the results as well. The WHERE clause serves as a search engine with
+    higher precision. This is done by using the following format.
+
+
+    ```
+
+    SELECT [SELECT LIST] FROM [TABLE_NAME] WHERE [EXPRESSION];
+
+    ```
+
+
+    To give you a simple example, let us use another table for people’s first and
+    last names. Let us name this table “person”.
+
+
+    | Key | First | Last |
+
+    |---|---|---|
+
+    | 1 | Lee | Mortis |
+
+    | 2 | Mae | Lee |
+
+    | 3 | John | Doe |
+
+    | 4 | Stan | Lee |
+
+    | 5 | Bruce | Lee |
+
+
+    Let say imagine that this is our database for our customers and we would like
+    to know how many customers do we have Lee as their family name. In order to do
+    that, we need to execute the WHERE clause command.
+
+
+    ```
+
+    SELECT p.last FROM person p WHERE p.last = ''Lee'';
+
+    ```
+
+
+    This will address the database to look specifically under the last name column
+    and merely focus on rows with Lee value under that column. It will ignore the
+    rows with no Lee value under that column. In other words, you will only get the
+    rows of your customers that have Lee as their names.
+
+
+    The secret in understanding the WHERE clause is by taking note of the different
+    operators you can use for WHERE expressions. These operators are similar to mathematical
+    operators. This means that it is easy to remember them. In contrast with mathematics,
+    the operators we use here also works for non-numerical data such as the equal
+    (=) sign we have used in our WHERE clause above. Here is the list of simple operators
+    that you can use for the WHERE clause.
+
+
+    | Operators | Name & Description |
+
+    |---|---|
+
+    | = | Equal to |
+
+    | <> | Not equal to |
+
+    | > | Greater than |
+
+    | < | Less than |
+
+    | >= | Greater than or equal to |
+
+    | <= | Less than or equal to |
+
+
+    These are the operators that will give you Boolean values when handling WHERE
+    clauses.
+
+
+    ## Conclusion
+
+
+    At this point, you are now familiar how relational databases work and how efficient
+    SQL in querying databases. It is important to take note how to designate restrictions
+    to columns. You have also learned that SQL statements contain both SQL-defined
+    and user-defined keywords. These keywords are case sensitive, but organizing and
+    writing the statements in a visual-friendly manner is highly recommended. Doing
+    so will not only give you convenience when viewing your coding but other people.
+    This is a best practice if you are working with a team.
+
+
+    It is also significant to qualify column names using table names when writing
+    SELECT statements. This will prevent future issues when there are different tables
+    with similar column names. You just learned to shorten the table names using an
+    alias.
+
+
+    You can also specify data extraction of the SELECT statement by clauses such as
+    FROM. The FROM clause allows you to specify which table to look at whenever your
+    SQL statement looks for columns. Aside from that, FROM clause also allows you
+    to assign an alias for the table name.
+
+
+    I am aware that this book is basic, but it is enough to prepare you in moving
+    forward to advanced studies in the structured query language. As a beginner, there
+    is no need for you to rush immediately on how to create your own database. It
+    is important to learn which database model functions SQL.
+
+
+    If you want to continue learning about SQL, then I suggest that you take advantage
+    of the book’s sequel where you will be introduced to deeper clauses of SELECT
+    statements, JOINS, handling data, and table creation.
+
+    '
+  mdcn: '
+
+
+    这种格式的语句。
+
+
+    ```
+
+    SELECT* FROM [TABLE_NAME];
+
+    ```
+
+
+    如你所见，通配符符号位于 SELECT 命令之后。这在选择所有列时非常有用。如果你不需要选择所有列，那么使用通配符符号可能会变得危险且低效。
+
+
+    根据你所使用的平台不同，在 SQL 语句中快速断言多个列有不同的方法。我个人个人建议你避免使用通配符命令，因为这种语法的低效使用可能会破坏应用程序。
+
+
+    ## FROM 命令
+
+
+    编写 SQL 语句来选择单个表其实非常简单。如之前的示例所示，它只遵循一个简单的格式。
+
+
+    ```
+
+    FROM [TABLE_NAME]
+
+    ```
+
+
+    在 FROM 子句中，你可以通过为表名创建别名来缩短表名。假设你的表名是“telecommunication”（电信），你正在查找表中“owner”（所有者）列下的所有者姓名列表。使用通用格式输入将得到如下结果：
+
+
+    ```
+
+    SELECT telecommunication.owner FROM telecommunication;
+
+    ```
+
+
+    为什么我们在格式中需要在列名之前输入表名呢？这是因为我们必须通过表名对列进行限定。此外，如果将来出现名称相似的列，这可以避免发生命名冲突。我建议你养成这个习惯。
+
+
+    回到主题，这样做太不方便了。我们可以通过在 FROM 子句中分配别名来缩短表名。格式如下：
+
+
+    ```
+
+    SELECT [TABLE_NAME_ALIAS].[COLUMN_NAME] FROM [TABLE_NAME][TABLE_NAME_ALIAS];
+
+    ```
+
+
+    使用 owner 列和 telecommunication 表，新语句看起来像这样：
+
+
+    ```
+
+    SELECT t.owner FROM telecommunication t;
+
+    ```
+
+
+    如你所见，我将字母“t”分配为表名的别名。这比反复重复完整名称要容易得多。请记住，没有必要使用表名的第一个字符作为别名。你可以为表名分配任何别名，也可以是字符的组合。只需确保你使用的别名保持一致即可。
+
+
+    ## 限制结果
+
+
+    每当你执行 SELECT 查询时，数据库都会返回你所指定列下的所有行。这意味着如果你的表有 20,000 行，它将返回 20,000 个值来回答你的查询语句。
+
+
+    解决这个问题有两种方法。一种是在 FROM 子句之后添加额外的子句。另一种是在选择列表之前添加 DISTINCT 限定符。格式所示如下：
+
+
+    ```
+
+    SELECT DISTINCT [SELECT LIST] FROM [TABLE_NAME];
+
+    ```
+
+
+    这种格式将只返回唯一值，而不是为你提供指定列下的所有值。例如，你有一个联系人表，某些实体在多行中被断言，因为他们拥有多个电话号码。
+
+
+    依赖通用格式将给你重复的结果。如果你只想知道你的联系人是谁，这显然是不高效的，对吧？使用 DISTINCT 限定符可以防止你接收到同一实体的多个行。
+
+
+    这是我们的 telecommunication 表，它有一列所有者列，另一列是电信公司列。
+
+
+    | Key | Owner | Company |
+
+    |---|---|---|
+
+    | 1 | Jean Grey | AT&T |
+
+    | 2 | Luke Skywalker | Comcast |
+
+    | 3 | Mae Lee | AT&T |
+
+    | 4 | Stan Lee | AT&T |
+
+
+    假设我们想找到数据库中电信公司的列表。使用通用格式将给我们三个关于 AT&T 的结果，这是没有必要的。然而，使用 DISTINCT 限定符，我们只得到两个结果——一个针对
+    Comcast，另一个针对 AT&T，这才是我们需要的。
+
+
+    除了 DISTINCT 限定符外，你还可以在 FROM 子句之后添加 WHERE 子句来限制结果。WHERE 子句充当精度更高的搜索引擎。通过使用以下格式实现：
+
+
+    ```
+
+    SELECT [SELECT LIST] FROM [TABLE_NAME] WHERE [EXPRESSION];
+
+    ```
+
+
+    为了给你举一个简单的例子，让我们使用另一个存储人名和姓氏的表。我们将此表命名为“person”（人）。
+
+
+    | Key | First | Last |
+
+    |---|---|---|
+
+    | 1 | Lee | Mortis |
+
+    | 2 | Mae | Lee |
+
+    | 3 | John | Doe |
+
+    | 4 | Stan | Lee |
+
+    | 5 | Bruce | Lee |
+
+
+    假设这是我们的客户数据库，我们想知道有多少客户的姓是 Lee。为了实现这一点，我们需要执行 WHERE 子句命令。
+
+
+    ```
+
+    SELECT p.last FROM person p WHERE p.last = ''Lee'';
+
+    ```
+
+
+    这将指示数据库专门查看姓列，并仅关注该列下值为 ''Lee'' 的行。它将忽略该列下没有 Lee 值的值的行。换句话之，你只会获得姓名为 Lee 的客户行。
+
+
+    理解 WHERE 子句的秘密在于注意你可以用于 WHERE 表达式的各种不同运算符。这些运算符与数学运算符相似，这意味着它们很容易记忆。与数学不同，我们在这里使用的运算符也适用于非数值数据，例如我们在上面的
+    WHERE 子句中使用的等号（=）。以下是你可以用于 WHERE 子句的简单运算符列表。
+
+
+    | Operators | Name & Description |
+
+    |---|---|
+
+    | = | 等于 |
+
+    | <> | 不等于 |
+
+    | > | 大于 |
+
+    | < | 小于 |
+
+    | >= | 大于等于 |
+
+    | <= | 小于等于 |
+
+
+    这些是在你处理 WHERE 子句时为你提供布尔值的运算符。
+
+
+    ## 总结
+
+
+    此时，你已经熟悉了关系型数据库的工作原理以及如何高效地查询数据库。重要的是注意如何对列进行限制。你还学习了 SQL 语句包含 SQL 定义的关键字和用户定义的关键字。这些关键字对大小不敏感，但强烈建议以视觉友好的方式组织和编写语句。这样做不仅方便你自己查看代码，对其他人也是如此。如果你在团队中工作，这是一种最佳实践。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 59]
+
+
+    statement in this format.
+
+
+    ```
+
+    SELECT* FROM [TABLE_NAME];
+
+    ```
+
+
+    As you can see, the wildcard symbol comes after the SELECT command. Now this is
+    useful when selecting all the columns. If you do not need to select all the columns,
+    then using the wildcard symbol may become dangerous and inefficient.
+
+
+    There are different ways to quickly assert multiple columns in an SQL statement
+    depending upon the platform that you are using. I personally recommend that you
+    avoid using the wildcard command since the inefficient use of this syntax may
+    also break applications.'
+  - '[PAGE 60]
+
+
+    # FROM Command
+
+
+    Selecting a single table is fairly easy to write an SQL statement. As you can
+    see from previous examples, it only follows a simple format.
+
+
+    ```
+
+    FROM [TABLE_NAME]
+
+    ```
+
+
+    In FROM clause, you can shorten the name of your table by creating an alias for
+    the table name. Let us say that your table name is “telecommunication” and you
+    are looking for the list of owner names that can be found under the “owner” column
+    of our table. Typing it with the use of the generic format will give you this.
+
+
+    ```
+
+    SELECTtelecommunication.ownerFROMtelecommunication;
+
+    ```
+
+
+    Why do we need to type the table name before the column name in our format? This
+    is because we must qualify the column by using the table name. Furthermore, this
+    will save you from name collisions in the future if there will be columns with
+    similar names. I suggest you make this a habit.
+
+
+    Going back to the topic, doing so is too much of inconvenience. We can shorten
+    the table name by assigning an alias in the FROM clause. Here’s the format.
+
+
+    ```
+
+    SELECT [TABLE_NAME_ALIAS].[COLUMN_NAME] FROM [TABLE_NAME][TABLE_NAME_ALIAS];
+
+    ```'
+  - '[PAGE 61]
+
+
+    Using the owner column and telecommunication table, our new statement will look
+    like this.
+
+
+    ```
+
+    SELECT t.owner FROM telecommunication t;
+
+    ```
+
+
+    As you can see, I assigned the letter “t” to be the alias of the table name. This
+    is easier to write than repeating the complete name over and over again. Keep
+    in mind that it is not necessary to use the first character of your table name
+    as an alias. You can assign any alias to the table name and it can also be a combination
+    of characters. Just make sure that you are consistent with the alias you use.
+
+
+    # Limiting The Results
+
+
+    Whenever you execute a SELECT query, the database will give you all the rows under
+    the column you specified. This means that if your table has 20, 000 rows, then
+    it will return 20, 000 values to answer your statement.
+
+
+    There are two ways to address this issue. One is to assert additional clause after
+    the FROM clause. The other is by adding the DISTINCT qualifier before the select
+    list. This shown in this format.
+
+
+    ```
+
+    SELECT DISTINCT [SELECT LIST] FROM [TABLE_NAME];
+
+    ```
+
+
+    This format will only give you distinct values in return instead of providing
+    you with all the values under the specified column. For example, you have a table
+    for your contacts and some entities were asserted in several rows because they
+    own multiple phone numbers.
+
+
+    Relying on the generic format will give you duplicated results. This is not efficient
+    if you only want to know who are your contacts, right? Using the DISTINCT qualifier
+    will prevent you from receiving multiple rows for the same entity.'
+  - '[PAGE 62]
+
+
+    Here is our telecommunication table which has the column for owners and another
+    column for the telecom company.
+
+
+    | Key | Owner | Company |
+
+    |---|---|--|
+
+    | 1 | Jean Grey | AT&T |
+
+    | 2 | Luke Skywalker | Comcast |
+
+    | 3 | Mae Lee | AT&T |
+
+    | 4 | Stan Lee | AT&T |
+
+
+    Let us say we want to find the list of telecom companies in our database. Using
+    the generic format will give us three results for AT&T which is unnecessary. With
+    the DISTINCT qualifier, however, we will get only two results – one for Comcast
+    and another for AT&T which is what we really need.
+
+
+    Aside from DISTINCT qualifier, you can add the WHERE clause after the FROM clause
+    to limit the results as well. The WHERE clause serves as a search engine with
+    higher precision. This is done by using the following format.
+
+
+    ```
+
+    SELECT [SELECT LIST] FROM [TABLE_NAME] WHERE [EXPRESSION];
+
+    ```
+
+
+    To give you a simple example, let us use another table for people’s first and
+    last names. Let us name this table “person”.
+
+
+    | Key | First | Last |
+
+    |---|---|--|
+
+    | 1 | Lee | Mortis |
+
+    | 2 | Mae | Lee |'
+  - '[PAGE 63]
+
+
+    | 3 | John | Doe |
+
+    | 4 | Stan | Lee |
+
+    | 5 | Bruce | Lee |
+
+
+    Let say imagine that this is our database for our customers and we would like
+    to know how many customers do we have Lee as their family name. In order to do
+    that, we need to execute the WHERE clause command.
+
+
+    ```
+
+    SELECT p.last FROM person p WHERE p.last = ''Lee'';
+
+    ```
+
+
+    This will address the database to look specifically under the last name column
+    and merely focus on rows with Lee value under that column. It will ignore the
+    rows with no Lee value under that column. In other words, you will only get the
+    rows of your customers that have Lee as their names.
+
+
+    The secret in understanding the WHERE clause is by taking note of the different
+    operators you can use for WHERE expressions. These operators are similar to mathematical
+    operators. This means that it is easy to remember them. In contrast with mathematics,
+    the operators we use here also works for non-numerical data such as the equal
+    (=) sign we have used in our WHERE clause above. Here is the list of simple operators
+    that you can use for the WHERE clause.
+
+
+    | Operators | Name & Description |
+
+    | = | Equal to – gives TRUE value if data on both sides are equal to one another.
+    |
+
+    | <> | Not equal to – gives TRUE value if data on both sides are not equal to
+    one another. |
+
+    | > | Greater than – gives TRUE value if data on the left side is greater than
+    the data on the right side. |
+
+    | < | Less than – gives TRUE value if data on the left side is less than the data
+    on the right side. |'
+  - '[PAGE 64]
+
+
+    | >= | Greater than or equal to – gives TRUE value if the data on the left is
+    either greater than or equal to the data on the right. |
+
+    | <= | Less than or equal to – gives TRUE value if the data on the left is either
+    less than or equal to the data on the right. |
+
+
+    These are the operators that will give you Boolean values when handling WHERE
+    clauses for your SQL queries.'
+  - '[PAGE 65]
+
+
+    # Conclusion
+
+
+    At this point, you are now familiar how relational databases work and how efficient
+    SQL in querying data from databases that utilize relational models.
+
+
+    It is important to take note of how to designate restrictions to columns and how
+    to call them specifically using SELECT statements. You have also learned that
+    SQL statements contain both SQL-defined keywords and user-defined keywords. These
+    keywords are not case sensitive, but organizing and writing the statements in
+    a visual-friendly manner is highly recommended. Doing so will not only give you
+    convenience when viewing your SQL coding but other people. This is a best practice
+    if you are working with a team.
+
+
+    It is also significant to qualify column names using table names when writing
+    SELECT statements. This will prevent future issues when there are different tables
+    with similar column names. You just learned to shorten the table names using an
+    alias.
+
+
+    You can also specify data extraction of the SELECT statement by clauses such as
+    FROM. The FROM clause allows you to specify which table to look at whenever your
+    SQL statement looks for columns. Aside from that, FROM clause also allows you
+    to assign an alias for the table name.
+
+
+    You also learned to limit the number of answered values with the use of DISTINCT
+    qualifier and the WHERE clause since it is an inefficient way to extract data
+    from your database. The WHERE clause, on the other hand, is a powerful command
+    that you need to master as a beginner. Familiarize the different operators and
+    try them out on an already built database.
+
+
+    I am aware that this book is basic, but it is enough to prepare you in moving
+    forward to advanced studies in the structured query language. As a beginner, there
+    is no need for you to rush immediately on how to create your own database. It
+    is important to learn which database model functions SQL. By understanding the
+    relational model, you will easily grasp the concept of SQL together with the statements
+    that you can do using language.
+
+
+    If you want to continue learning about SQL, then I suggest that you take advantage
+    of the book’s sequel where you will be introduced to deeper clauses of SELECT
+    statements. The second part also tackles JOINS, handling data, and table creation.'
+- md: '
+
+    Thank you for reading. I hope you enjoy it. Ask you to leave your honest feedback.
+
+    '
+  mdcn: '
+
+
+    感谢阅读。希望你喜欢。请留下你诚诚的反馈。
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 66]
+
+
+    Thank you for reading. I hope you enjoy it. Ask you to leave your honest feedback.'
