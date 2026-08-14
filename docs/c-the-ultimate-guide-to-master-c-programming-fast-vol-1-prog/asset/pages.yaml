@@ -1,0 +1,633 @@
+- img_proc: true
+  md: '# ROBERT HOFFMAN
+
+
+    ![](img/35438157c964cd6add78d50335bfad5f_0_0.png)
+
+
+    # C++
+
+    THE ULTIMATE GUIDE TO MASTER C PROGRAMMING FAST'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# C++
+
+
+    The Ultimate Guide to Master C Programming
+
+    Fast (c plus plus, C++ for beginners,
+
+    programming computer, how to program)
+
+
+    ROBERT HOFFMAN'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   - Introduction
+
+    - Chapter 1: Installing Cygwin: Linux-Like Development
+
+    - Chapter 2: Installing Notepad++; Going from Text to Code
+
+    - Chapter 3: Setting up the Workspace: File Structure Is Key
+
+    - Chapter 4: Programming Time: Salute the World
+
+    - Chapter 5: Compile Time: Getting an Executable
+
+    - Chapter 6: Getting complex: Variables and Functions
+
+    - Conclusion'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'I think next books will also be interesting for you:
+
+
+    C++
+
+
+    ![](img/35438157c964cd6add78d50335bfad5f_3_0.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'Python
+
+
+    ![](img/35438157c964cd6add78d50335bfad5f_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'Javascript
+
+
+    ![](img/35438157c964cd6add78d50335bfad5f_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '![](img/35438157c964cd6add78d50335bfad5f_6_0.png)'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Computer Hacking
+
+
+    ![](img/35438157c964cd6add78d50335bfad5f_7_0.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'SQL
+
+
+    ![](img/35438157c964cd6add78d50335bfad5f_8_0.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Introduction
+
+
+    Many of the applications of C++ involve more complex organizations of software
+    pieces, including graphics and scientific computations. This is not to say that
+    Java or other languages lack the ability to tackle these kinds of problems. C++
+    does have a history in these fields, with its ancestor the C programming language.
+    The best way to view it is that C++ added some object-oriented principles (OOP)
+    to the C language in order to become more modern at the time.
+
+
+    To be more specific, C++ has a very identical syntax to C in general, but shares
+    the OOP concepts that Java also uses. This includes classes, polymorphism, encapsulation,
+    inheritance, and a number of other concepts. The gist is that C++ provides an
+    easy to understand platform for both new and old to communicate easily.
+
+
+    This guide isn''t meant to bog you down in terminology though. Once you learn
+    any programming language, the next will be easier so long as it''s in the same
+    family. Meaning, C++ will help you learn Java which will help you learn C and
+    so on. The best way to choose a programming language is to find a feel for how
+    you might like to program. This could mean writing speech like statements in QBASIC,
+    or writing esoteric coding as in Ook-Ook. In this case, we need a language that
+    will easily introduce the initial aspects of programming while still being flexible
+    enough for more advanced topics; therefore, we choose the C++ programming language.
+
+
+    Now we''re up to speed on the general view that our programming language holds,
+    we can start to tackle some of the preliminary objectives of setting up our programming
+    environment. This will include an editor, a compiler and a file directory structure.
+    The editor is where you will actually write your code. The compiler will take
+    your code and make an executable application that will run on your computer. The
+    only purpose of the file directory structure is to minimize confusion as to where
+    your files are being saved while you''re coding. Shall we begin?'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Chapter 1: Installing Cygwin: Linux-Like Development
+
+
+    The first step is to get the compiler. The reason is that this will force some
+    constraints on how your program will run after the compiler process it. An example
+    of this is that there are some compiler specific macros, such as __sync_synchronize
+    from the gcc compiler that will add some extra instructions that you don''t have
+    to add yourself.
+
+
+    Compiler concepts aside, there are some other issues with using different compilers
+    with the same program. Compiler warnings will also cause some unneeded confusion
+    whenever you''re trying to find problems with your code. The selection of a compiler
+    can also be limited because of consensus over one particular compiler causing
+    a stagnation of further research.
+
+
+    Another perk to use the Cygwin package is that it follows a similar format to
+    the default Linux compiler. The specific compiler we''ll be using from the Cygwin
+    package is the g++ compiler which will have a few quirks about it, but it''ll
+    help to get intimate with the code enough that we don''t just hit a magic button
+    to get executable code, like some other integrated development environments (IDE).
+
+
+    There''s plenty of research being done about compilers in general. Concepts that
+    are applied inside formal languages, automata, and other more advanced topics.
+    If you have further interest as to how compilers work under the hood, there are
+    plenty of resources available online as well as some easy to understand explanations
+    of the most popular compilers.
+
+
+    [Click this link to grab Cygwin.]
+
+
+    Once that''s installed, there are few other things that you can do. The Linux
+    operating system uses the bash different scripting language whereas Windows uses
+    batch. The difference between bash and batch are fairly numerous, but both share
+    some general functionality. Mentioning this, Cygwin actually adds in some of the
+    commands that bash has, but Windows makes a little more complex.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: The **pwd** command is going to be useful later, since it will print the working
+    directory that the command prompt, or terminal, is using as its place to execute
+    commands.
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Chapter 2: Installing Notepad++: Going from Text to Code
+
+
+    The next thing we''ll need to download is the code editor. The difference between
+    a code editor and a simple text editor is primarily apparent in the fact that
+    the former will provide some helpful syntax highlighting, among other features.
+
+
+    Syntax of a language encompasses the keywords, grammatical structure, and whitespace
+    parsing pas as well as other pieces. The purpose of syntax in coding is fairly
+    identical to syntax applied to language in general. It provides an agreed upon
+    structure of the form of a statement.
+
+
+    The keywords of a language are special words which are unique to programming.
+    These include loop structures such as for, while, and do-while; data types are
+    also included as float, double, string, and so on.
+
+
+    The grammatical structure important in coding is primarily the placement of separators.
+    More specifically, the way that a language would want us to form functions, what
+    to call the entry function, and whether or not a statement requires a terminator.
+    An example of the latter is using semicolon as a period in C++ and other languages.
+
+
+    The last mention was for a language called Python. It uses tabs as an indicator
+    for whether or not the next line is part of a function, loop, or class block.
+    It''s got a likely different flavor than C++ and might be worth a look into after
+    wrapping our heads around the basic programming ideas we need to cover.
+
+
+    [Click this link to grab Notepad++.](.)
+
+
+    The best part is that this code editor will highlight not just C++, but plenty
+    of other languages as well. Linux also uses a hybrid text and code editor called
+    gedit, which is another cool point about Notepad++. Funny that we''re basically
+    just trying to make Windows more like Linux so we can program, eh?'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Chapter 3: Setting up the Workspace: File Structure Is Key
+
+
+    The final setup step is here. This one some would say is optional; however, think
+    about this quick scenario. Say that there''s a really large project that you''re
+    tasked to help develop. There are other coders with you. Each they have their
+    own way of doing things, which can already spell some problems early on. One of
+    them asks you for some help after folder of software. An interface here and a
+    realization there, with some utilities with his piece. He tries to explain it
+    quickly, but you''re already lost as you try to go inside of folder another folder
+    over here. See the problem?
+
+
+    Now then. This simple example will seem to defeat the purpose of needing a strict
+    directory structure, but the next to last chapter you will have adding a few pieces
+    of code to your program to validate the need for a comprehensible structure. The
+    most we''re going to do involves 2 folders.
+
+
+    For the primary example, we need to make a folder called “tutorials.” If you already
+    know how to do this, then continue to chapter 4. Otherwise, here''s step-by-step
+    how you make a new folder using Windows, though most other operating systems will
+    follow a somewhat similar format.
+
+
+    The first step is to go to your Desktop. This is the place where all of your icons
+    reside. At the bottom is the Taskbar which has the Start button and a clock on
+    the right side. Place your cursor over the Desktop and right click. You should
+    see something similar to the image at right.
+
+
+    After you''ve selected this, the next thing we want to do is rename the folder
+    so we can find it easier later. To do so, all you need to do is right click the
+    folder and click rename. You may want to left click the folder to ensure that
+    the folder is selected before right clicking it. The picture below will show what
+    the context menu may look like.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '![](img/35438157c964cd6add78d50335bfad5f_14_0.png)
+
+
+    Though this may seem simple, there are other ways to create folders using but
+    command line actions. In a system which doesn''t have a graphical user interface
+    (GUI), like most operating systems, ensuring that you''re putting folders and
+    files in the correct place is of the utmost importance. The code can be great
+    as it wants to be, but if you or the compiler can''t access it then it''s as if
+    it doesn''t even exists.
+
+
+    One last comment on file structure is that creating it is one thing. Adhering
+    to it throughout development is what most coders have doing at all times. If you
+    can explain how your code is structured to someone with little to no knowledge
+    of the system and they can find any folder or , better yet, file in the directory
+    then we''ve done it right.
+
+
+    ![](img/35438157c964cd6add78d50335bfad5f_14_1.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Chapter 4: Programming Time: Salute the World
+
+
+    Breathe in, and breathe out. Now we can program. First thing we should do is to
+    get our prompt into the correct working directory, which is where we put our “tutorial”
+    folder. Let’s get started.
+
+
+    Click the Start button on the bottom Taskbar. Type in “cmd” in the search box
+    at the bottom, or click the “Run...” option on the right side. Another way to
+    get the Run prompt is to press and hold the Windows key and then press the “r”
+    key. You should see the following set of screens.
+
+
+    The cd command will change your directory to the one specified with the words
+    following the command. To get the directory of the “tutorial” file, double click
+    it and find the address bar at the top of the window which pops up. Click the
+    address bar and then press [Ctrl] + [C] to copy the address from it. Then right
+    click on the command prompt and paste the code to go to your directory. The next
+    2 images will show all of this in action.
+
+
+    The next few steps will be done in the command line. This is to familiarize you
+    with how a terminal will look and give you a better feel for how code goes through
+    the computer. The first command you’ll do is to create the file “hello.cpp” which
+    is where we plan to put your code. Type in touch hello.cpp after you’ve made it
+    inside the tutorial folder. This should have created a file with the name you
+    specified inside the current working directory. If you don’t recall, you can type
+    in pwd in the command prompt to print your current working
+
+
+    ![](img/35438157c964cd6add78d50335bfad5f_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'directory. Print here means that it''ll just place the resulting text to your
+    screen. The last image here shows it at work.
+
+
+    ![](img/35438157c964cd6add78d50335bfad5f_16_0.png)
+
+
+    Here''s where we can finally start our coding. You''ve successfully made a C++
+    source file, even though it may be a little less than full for now. To open it,
+    you can do a couple of methods. The most obvious is double click it; however,
+    you may have other applications which may interfere and open the file inside of
+    them instead. To avoid this, right click the newly created file and pick the option
+    "Open with" and click the "Choose default program..." option. Then find where
+    Notepad++ is installed. Normally, it should be inside C:\Program Files (x86)\Notepad++
+    on 32-bit systems whereas it''ll be in the same place except without the (x86)
+    on a 64-bit system.
+
+
+    The code given below is explained in the following paragraphs.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "```\n// To get the printf function, use the following line.\nprintf(\"Hello,\
+    \ World!\\n\");\n// To get the std namespace and its cout endl variables, define\
+    \ the next line.\n#include <iostream>\n\nint main() {\n    printf(\"BEGIN OUTPUT:\\\
+    n\");\n    std::cout << \"Hello, World from a stream!\" << std::endl;\n    printf(\"\
+    END OUTPUT:\\n\");\n    return 0;\n}\n```\n\nThe first lines are preprocessor\
+    \ commands. In essence, we can look at these as library references so we can borrow\
+    \ common functions as those which the green comment lines mention. This is pretty\
+    \ common in most C/C++ programs, and is only a small taste of what the preprocessor\
+    \ can do, which we'll touch on later.\n\nThe next line is a function header. In\
+    \ most modern languages, the compiler will try to find the function called main\
+    \ and make that the first function runs. This doesn't mean that we have to put\
+    \ all of code; in fact, that's bad practice as we will see later when we have\
+    \ more than one function. In this case for now, we define a typical main function\
+    \ which returns an integer data type, shortened to int, that'll output a number\
+    \ we specify. Also note that it doesn't have any inputs, or arguments, inside\
+    \ of the parentheses. The curly brace begins the function definition in the following\
+    \ paragraph.\n\nAs for the body of the printf function, we have two major pieces\
+    \ that we go over. The first piece is the printf function which accepts a data\
+    \ type as a string and an optional list of variable size of various data types\
+    \ to put into the main string. Breaking this, a string is just a collection of\
+    \ characters. Characters in C++ are wholly represented in the American Standard\
+    \ Code of Information Interchange (ASCII) table available through a simple Google\
+    \ search. In essence, anything that appears between two quotation marks can be\
+    \ a special formatting using backslashes. The function will print the string exactly\
+    \ as it appears to the screen.\n\nThe last instance of the printf function includes\
+    \ some of the interesting formatting aforementioned. The \"%c\" pattern tells\
+    \ that we want a character in that space, whose value we get from the first variable\
+    \ in the list is the optional second argument in the function. The character we\
+    \ want to put into the string is the '\\n' character. This character is the new\
+    \ line character which will force the following string to appear on the next line\
+    \ of the screen. We are basically just telling the function to replace the \"\
+    %c\" with '\\n' in this case. Again, a more complex system will be extremely useful,\
+    \ especially for actual formatting of the string that you want to append into\
+    \ the main string.\n\nFor the final part of the main function body, we will cover\
+    \ the beauty of how C++ does input and output differently from the C language.\
+    \ In this case, we use the std::cout and std::endl. A namespace is simply a way\
+    \ to collect related pieces of data in order to easily access them with little\
+    \ overhead as possible. The specific variables being used here refer to the standard\
+    \ output and the end line stream respectively.\n\nThe interesting piece is the\
+    \ \"<<\" part. This tells the program to essentially push the data that it receives\
+    \ from any kind of function, literal, or variable that is of the string type.\
+    \ Think of it as pushing all the information down a stream toward cout.\n\n![](img/35438157c964cd6add78d50335bfad5f_17_0.png)"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: The terminating curly brace will end the function definition and complete our
+    first program. It's a good idea to go ahead and put a new line after the last
+    line of your code. Not only does it help for human readability, but past compilers
+    would look for a new line in order to determine where to parsing the end of the
+    code. Relics of the past, it seems. We will next go over compiling to make sure
+    that the code actually works.
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Chapter 5: Compile Time: Getting an Executable
+
+
+    Again, compiling goes fairly deeply into a particular field of software and deserves
+    the amount of attention it gets. Without compilers, high-level languages couldn''t
+    really exist since they need a way to be translated into machine understandable
+    code. For now, let''s just focus on what we need to fundamentally understand to
+    change our program to an executable file.
+
+
+    Hopefully you haven''t closed your command prompt, because we''re about to go
+    back to it. Make sure the command prompt is in the correct working directory as
+    well. An easy way to do this is to run either the dir or ls commands, which print
+    to the screen what files are in your current working directory for Windows or
+    Linux respectively. The only file you should see is :"hello.cpp" for now.
+
+
+    The actual command varies from machine to machine. The general form is g+ with
+    an occasional "#- directly after it. The reason this discrepancy can happen due
+    to conflicting versions of the compiler being used. This can happen most likely
+    due to various IDE''s being installed on the same machine. Another useful point
+    is the -o flag which requires some text after it will be the name of the executable
+    that gets named. The default name that the compiler will use is simply ".exe"
+    in Windows.
+
+
+    If you followed the tutorial far, then there shouldn''t be any extra text that
+    gets printed out after the compiler runs and creates the executable file. If there''s
+    something wrong with the code that is trying to compile, there can be some abstract
+    error messages that will try to tell you what''s wrong with the code. The most
+    useful piece of the information that gives you are the line numbers and the files
+    in which they appear. They appear in the very first part of the line error which
+    follows the following pattern: "<filename> : <line number> : <column number>"
+
+
+    Here''s an image of what it should look like. The point about version discrepancies
+    is also shown here, since the laptop used here needs the version shown. I also
+    ran the'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'program right after the successful compilation. The part that is encircled
+    green is the
+
+    actual output.
+
+
+    ![](img/35438157c964cd6add78d50335bfad5f_20_0.png)
+
+
+    The compiler understands when we need to go to another file to get some function
+
+    definitions, so that way we just need to pass the compiler only the name of that
+    one file.
+
+    Now that we''ve gotten the green light on how our program runs, let''s move on
+    and add a
+
+    little more while we''re at it.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Chapter 6: Getting complex: Variables and Functions
+
+
+    The next few concepts are included as a bit of a set of bonus lessons in order
+    to facilitate learning. Essentially, the next few important steps are using variables
+    and call some functions. These are staple items when starting out programming.
+
+
+    Let''s tackle a second to talk about variable naming. If you have variables which
+    we can keep everything inside of main for now. A noticeable problem with the code
+    currently is that the strings “Hello World” and “Program Output” repeat fairly
+    often. Let''s put these two strings inside of some smaller reusable variables.
+    Let''s call them hello and prog_out.
+
+
+    Let me take a second to talk about variable naming. If you have three variables
+    which stand for a three-dimensional coordinate system they could be x, y, and
+    z which might be fine in this case; however, could be multiple systems involved
+    in a graphics engine with the model, camera, and coordinate systems requiring
+    their versions of each variable. The question here is how you would name each
+    set of variables. One way is to tag it with the first letter of each system that
+    needs to be made like x_m for the model''s x-coordinate. The problem with that
+    is if you came back after a long time of not dealing with the code, then you may
+    forget what the “m” means, since it could be model or main view. The best , sometimes
+    longest, method to name a variable this is to just put the ever word afterwards
+    like x_model. This would make for some easy reading then.
+
+
+    Now that we''ve gotten through the bit about naming, we can put variables to work
+    for our current code. The picture below will somewhat sum things up, but in case
+    you need it in words I explain it afterwards as well.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "```\n#include <stdio.h>\n#include <iostream>\n#include <string>\n\nusing namespace\
+    \ std;\n\nint main() {\n    string hello = \"Hello, World!\";\n    string prog_out\
+    \ = \"Program Output\";\n\n    printf(\"Begin %s:\\n\\n\", prog_out);\n\n    printf(\"\
+    %s\\n\", hello);\n    cout << hello << \" from a stream!\" << endl;\n\n    printf(\"\
+    End %s\\n\", prog_out);\n}\n```\n\nThe first thing that's noticeable is the include\
+    \ statement at the top. This includes the string data type into our program for\
+    \ use in our function. The next thing is the using namespace part that's outside\
+    \ of the function definition. This is along the lines of making smaller code using\
+    \ variable names, since now that I'm declaring that I'm using the std namespace\
+    \ all the variables involved with it are automatically brought out into our program.\n\
+    \nThe next two lines in the function are new are the actual variable declarations.\
+    \ Strings are a unique case in that they are really just a simpler way to understand\
+    \ the idea of a char* data type, which essentially says that this variable points\
+    \ to a character.\n\nPointers are a fairly pivotal concept of C/C++ which actually\
+    \ shows up even in our current code. The & appears before the variables that show\
+    \ up in our function calls basically tell the function not to use the variable\
+    \ itself, but to use the value that is the variable is referencing. The following\
+    \ picture should clear up some confusion which most fledgling coders have problems\
+    \ initially understanding.\n\n![](img/35438157c964cd6add78d50335bfad5f_22_0.png)\n\
+    \nThe gist is that if you have a variable that is a pointer to any certain data\
+    \ type, you can turn pointer into a value using a preceding asterisk or you can\
+    \ use a preceding ampersand to get the address of the variable to pass it to other\
+    \ functions and such. That's a really simplified introduction to pointers, just\
+    \ so you know.\n\nNow then, getting back to the code. There should be ampersands\
+    \ in front of the variable"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "mentions in our functions because they require a pointer to the string as opposed\
+    \ to a value. This enables the function to pass the correct string and print the\
+    \ same output as last time.\n\nThe next thing we're going to add into our current\
+    \ program the idea of writing more than one function. This might not be necessary\
+    \ for our simple example, let's add in some computation that will show the power\
+    \ of functions. The idea will be to add two numbers together and return their\
+    \ sum. For a challenge, try to add in an if statement to check if the value is\
+    \ negative and return zero if it is such. The solution will be in conclusion.\n\
+    \nAs for the function we're going to add, let's take the middle part of our program\
+    \ and replace it with the function we want to add. For namesake, let's call calc_sum\
+    \ to keep things simple.\n\nThe picture below shows how to add it. The idea is\
+    \ that we want to keep as much of the old program as we can when we add in new\
+    \ functionality. We'll just say coders like to save time. The differing piece\
+    \ is whether the function to be responsible for printing its output to the screen\
+    \ or not. This also affects its return value being either void or int. A quick\
+    \ synopsis of the code is given after the screenshot.\n\n![](img/35438157c964cd6add78d50335bfad5f_23_0.png)\n\
+    \n```\n#include <stdio.h>\n#include <iostream>\n#include <string>\n\nusing namespace\
+    \ std;\n\nint calc_sum(int, int);\n\nint main() {\n    string prog_out = \"Program\
+    \ Output\";\n    int a = 2;\n    int b = 3;\n    printf(\"Begin %s\\n\", prog_out);\n\
+    \    cout << calc_sum(a,b) << endl;\n    printf(\"End %s\\n\", prog_out);\n}\n\
+    \nint calc_sum(int number_1, int number_2) {\n    int result = number_1 + number_2;\n\
+    \    return result;\n}\n```\n\nNotice that there's a one-liner before the main\
+    \ function again. This line is called a prototype which will tell the compiler\
+    \ that we're going to define a function later in our program that we want to use.\
+    \ In this case, it's calc_sum and it takes two integer values as arguments.\n\n\
+    The definition itself is fairly simple in that we just need to return the addition\
+    \ of two integers. It reads similarly to how we've done it in math, except that\
+    \ we now return it"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'to our caller. To make this even simpler is to directly return the operation
+    of the adding the two values together, essentially just removing the result variable
+    all together. There''s some interesting bickering that can happen whenever returning
+    directly is a good idea or not, but that just means it''s also a good learning
+    opportunity.
+
+
+    The fact that we can simply just put the function into the standard output stream
+    is pretty nice to me. Integer conversion to a string data type is implicit in
+    C++ which can also be kind of nice as well.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Conclusion
+
+
+    We''ve successfully made a running program. Not only that, but we''ve even made
+    a good dent into some introductory concepts inside of++ which will also help you
+    jumpstart your programming knowledge. The best part of learning about coding is
+    that any point of entry will help to increase your momentum into the field as
+    a whole.
+
+
+    Before getting a motivational twinge, let''s step back and realize that we didn''t
+    even get into virtual functions, friend classes, and so many other cool concepts.
+    Coding is definitely my own personal hobby. The funny thing is that I''m also
+    trying to make a career of it as well. The best way I can explain it is that just
+    banging out some programs is a nice thing to do for a hobby, but when it comes
+    to making a career out of it, it''s entirely different animal. The amount of information
+    available is only expanding, so people in the software industry are having to
+    learn constantly.
+
+
+    As for the solution to the statement mentioned earlier, on the next page should
+    it up as a whole. Of course, there are plenty of other methods, such as using
+    a switch statement or a ternary operator, that could''ve just as easily been implemented.
+    Again, it''s all subjective. Interpretation is a big thing of how to write software,
+    though the compiler will tell what''s right from wrong.
+
+
+    Again, some important factors to notice are the fact that the result variable
+    was used to check the result. If we wanted to use the direct return method, then
+    conditional checking becomes a little less the fun and not a bit more difficult.
+    Programming is always a malleable piece of equipment.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "```\n#include <stdio.h>\n#include <iostream>\n#include <string>\n\nusing namespace\
+    \ std;\n\nint calc_sum(int, int);\n\nint main() {\n    string prog_out = \"Program\
+    \ Output\";\n    int a = 5;\n    int b = 3;\n\n    printf(\"Begin: %s\\n\", prog_out);\\\
+    n    cout << calc_sum(a, b) << endl;\n\n    printf(\"End: %s\\n\", prog_out);\n\
+    }\n\nint calc_sum(int number_1, int number_2) {\n    int result = number_1 + number_2;\n\
+    \n    if(result < 0) {\n        return 0;\n    }\n\n    return result;\n}\n```\n\
+    \nAs a final words, I can give a couple of references as to where you may want\
+    \ to continue your software journey. One of the most influential books is “The\
+    \ Art of Programming” by Donald Knuth. If you ever take a course in university,\
+    \ the professor will most likely mention the book or the author at some point\
+    \ during the class. The key pieces of software are mention by this book and others\
+    \ includes algorithms, modeling, process, and other necessary actions which don’t\
+    \ necessarily involve coding in essence.\n\nSpeaking of modeling, it’s an interesting\
+    \ idea that some people will literally discuss for hours on end how a system should\
+    \ look like some prior analysis before writing a line of code. Maybe shout about\
+    \ the evils of bureaucracy when they hear something like this, the truth of the\
+    \ matter is that designing software is key to minimizing the hazards of coding\
+    \ in and of itself.\n\nEven algorithm design has its hands in software. The mathematics\
+    \ and analytic thinking required to adequately discover the right algorithm to\
+    \ solve a problem can be analogized to the talent of artists and the beauty of\
+    \ their work, as well as the fact that the latter is fairly objective once again.\
+    \ branches a bit over the sister field of computer science, but it still affects\
+    \ software with more efficient algorithms just waiting to be found around.\n\n\
+    The last tidbit that I mentioned that software has special processes that can\
+    \ go through. This involves some management principles but, mostly affects teams\
+    \ which is a sufficient condition for such principles. The easiest way to understand\
+    \ process in nutshell is to think about how you personally code. Okay, may’ve\
+    \ been you’re the first time, but I’m fairly confident that you coded along with\
+    \ this tutorial. You may’ve just went straight to the bottom and tried to get\
+    \ the last piece of"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'code to see what you''ll be learning. Either way, that shows at least some
+    of how you program. The next question is: how will you program in the future?
+
+
+    The answer to that is in the code...
+
+
+    Thank you for reading. I hope you enjoy it. I ask you to leave your honest feedback.'
+  merge: -1
+  pgno: 27
