@@ -1,0 +1,1166 @@
+- img_proc: true
+  md: '# Core Python
+
+
+    +   TABLE OF CONTENTS
+
+    Preface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 2
+
+    Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . 2
+
+    Modules and Packages . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . 2
+
+    Data Manipulation and Analysis . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . 2
+
+    Data Visualization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . 2
+
+    Machine Learning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . 3
+
+    Web Development . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . 3
+
+    Game Development . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . 3
+
+    Installing New Packages . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . 3
+
+    Data Types and Variables . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . 4
+
+    Strings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . 4
+
+    Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . 4
+
+    Sequence Unpacking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    5
+
+    Conditional Statements . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 5
+
+    if statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . 5
+
+    if-else statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . 5
+
+    if-elif-else statement . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    5
+
+    Loops . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 5
+
+    for loop . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 5
+
+    while loop . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . 5
+
+    Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 6
+
+    Function Definition . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    6
+
+    Function Call . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 6
+
+    Optional Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+
+    Variable-Length Arguments . . . . . . . . . . . . . . . . . . . . . . . . 6
+
+    Keyword Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    6
+
+    Default Argument Values. . . . . . . . . . . . . . . . . . . . . . . . . . 6
+
+    Anonymous Functions (Lambda Functions) . . . . . . . . . . . 6
+
+    Variable Scope . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+
+    Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    6
+
+    List methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+
+    Dictionaries . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+
+    Dictionary methods. . . . . . . . . . . . . . . . . . . . . . 7
+
+    Tuples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+
+    Sets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+
+    Set methods. . . . . . . . . . . . . . . . . . . . . . . . . 7'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Input and Output .................................................................................
+    7
+
+
+    Input .......................................................................................................
+    7
+
+
+    Output .......................................................................................................
+    7
+
+
+    File Handling ............................................................................................
+    7
+
+
+    Opening a file ......................................................................................
+    7
+
+
+    Reading from a file ................................................................................
+    7
+
+
+    Writing to a file ...................................................................................
+    7
+
+
+    Closing a file .......................................................................................
+    8
+
+
+    Exception Handling ...................................................................
+    8
+
+
+    Classes and Objects ...................................................................
+    8
+
+
+    Classes .........................................................................................
+    8
+
+
+    Objects .......................................................................................
+    8
+
+
+    @classmethod decorator ........................................................
+    8
+
+
+    Inheritance .........................................................................
+    8
+
+
+    Magic methods ......................................................................
+    9
+
+
+    Comments and Docstrings ........................................................
+    9
+
+
+    Modules and Packages ................................................... 10
+
+
+    Modules ..................................................................................
+    10
+
+
+    Packages ..................................................................................
+    10
+
+
+    Lambda Functions ................................................................
+    10
+
+
+    List Comprehensions ..........................................................
+    10
+
+
+    Generators ..........................................................................
+    10
+
+
+    Decorators ..........................................................................
+    10
+
+
+    Map, Filter, and Reduce ......................................................
+    11
+
+
+    Map ..................................................................................
+    11
+
+
+    Filter ..................................................................................
+    11
+
+
+    Reduce ..................................................................................
+    11
+
+
+    String Formatting ...............................................................
+    11
+
+
+    Regular Expressions ....................................................... 11
+
+
+    Functions .........................................................................
+    11
+
+
+    Metacharacters ................................................................
+    11'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Java Code Geeks CHEATSHEETS
+
+
+    # 2
+
+
+    # CORE PYTHON
+
+
+    # PREFACE
+
+
+    This datasheet is intended to serve as a quick reference guide for Python programming.
+    It covers some of the most commonly syntax and features of the language, including
+    data types, control structures, functions, modules, and libraries.
+
+
+    Whether you are a beginner Python for the first time or an experienced programmer
+    looking for a quick refresher, this datasheet should be a helpful resource for
+    you.
+
+
+    # MODULES AND PACKAGES
+
+
+    # DATA MANIPULATION AND ANALYSIS
+
+
+    # NumPy
+
+
+    NumPy is a powerful package for scientific computing in Python. It provides support,
+    along with multi-dimensional arrays and matrices, a wide range of mathematical
+    functions to manipulate and analyze the data. NumPy is a fundamental package for
+    scientific computing with Python and is widely used in the data science and machine
+    learning communities.
+
+
+    # Pandas
+
+
+    Pandas is a library for data manipulation and analysis. It provides data structures
+    for efficiently storing and querying data sets, along with a wide range of functions
+    for cleaning, transformation, and analyzing data. Pandas is a key tool for data
+    scientists and analysts working with tabular data.
+
+
+    # INTRODUCTION
+
+
+    Python is a high-level, interpreted programming language known for its simplicity,
+    readability, and versatility. It was first released in 1991 by Guido van Rossum
+    and has since become one of the most popular languages in the world
+
+
+    Python''s syntax emphasizes readability, with code written in a clear and concise
+    manner using whitespace and indentation to define blocks of code. It is an interpreted
+    language, meaning that code is executed line-by-line rather than compiled into
+    machine code. This makes it easy to write and test code quickly, without needing
+    to worry about details of low-level hardware.
+
+
+    # SciPy
+
+
+    SciPy is a Python library for scientific computing and technical computing. It
+    provides a large set of mathematical algorithms and functions for tasks such as
+    optimization, integration, interpolation, signal processing, linear algebra, and
+    more.
+
+
+    Python is a general-purpose language, meaning that it can be used for a wide variety
+    of applications, from web development to scientific computing to artificial intelligence
+    and machine learning. Its simplicity and ease of use make it a popular choice
+    for beginners, with its power and flexibility making it a favorite of experienced
+    developers.
+
+
+    # DATA VISUALIZATION
+
+
+    # Matplotlib
+
+
+    Matplotlib is a plotting library for Python. It provides a range of functions
+    for creating high-quality visualizations of data, including line charts, scatter
+    plots, histograms, and more. Matplotlib is widely used in scientific computing,
+    data visualization, and machine learning.
+
+
+    Python''s standard library contains a wide range of modules and packages, providing
+    support for everything from basic data types and control structures to advanced
+    data manipulation and visualization. Additionally, there countless third-party
+    packages available through Python''s package manager, allowing developers to extend
+    Python''s capabilities to suit their needs.
+
+
+    # Seaborn
+
+
+    Seaborn is a Python data visualization library that is built on top of the popular
+    visualization library, Matplotlib. It provides a high-level interface for creating
+    beautiful and informative statistical graphics. Seaborn is designed to work with
+    data in a Pandas DataFrame and provides a range of tools for visualizing relationships
+    between variables.
+
+
+    Overall, Python''s combination of simplicity, power, and flexibility makes it
+    an ideal language for a wide range of applications and skill levels.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# MACHINE LEARNING
+
+
+    # Arcade
+
+
+    # Scikit-learn
+
+
+    Arcade is a Python library for creating 2D arcade-style games. It is built on
+    top of the Pygame library and provides an easy-to-use framework for building games
+    with modern graphics and sound effects. Its cross-platform support (it works on
+    Windows, Mac, and Linux), its support for both 2D and 3D graphics, and its active
+    community of developers who are constantly creating new games and using the library.
+
+
+    Scikit-learn is a library for machine learning in Python. It provides a range
+    of functions for classification, regression, clustering, and dimensionality reduction,
+    all with tools for model selection and evaluation. Scikit-learn is a popular choice
+    for building and deploying machine learning models in Python.
+
+
+    # TensorFlow
+
+
+    # INSTALLING NEW PACKAGES
+
+
+    TensorFlow is a library for building and training machine learning models, particularly
+    deep support for building and training neural networks, along with a range of
+    tools for model evaluation and deployment. TensorFlow is widely used in the machine
+    learning and data science communities.
+
+
+    # Using pip
+
+
+    pip is the package installer for Python. You can use it to install new libraries
+    by running the following command in your terminal or command prompt:
+
+
+    ```
+
+    pip install library-name
+
+    ```
+
+
+    # WEB DEVELOPMENT
+
+
+    # Flask
+
+
+    Replace <library-name> with the name of the library you want to install. For example,
+    to install the numpy library, run:
+
+
+    Flask is a micro web framework for Python. It provides a range of tools for building
+    web applications, including routing, templates, and request handling. Flask is
+    a lightweight and flexible framework that is widely used for building web applications
+    and APIs in Python.
+
+
+    ```
+
+    pip install numpy
+
+    ```
+
+
+    # Using Anaconda
+
+
+    # Django
+
+
+    If you use Anaconda as your Python distribution, you can use the Anaconda Navigator
+    or the command line interface to install new libraries. For example, to install
+    the numpy library, run:
+
+
+    Django is a high-level web framework for Python that follows the Model-View-Controller
+    (MVC) architectural pattern. It provides a powerful set of tools for building
+    web applications, including a robust Object-Relational Mapping (ORM) system, a
+    templating engine, and built-in support for handling user authentication and authorization.
+
+
+    ```
+
+    conda install numpy
+
+    ```
+
+
+    # GAME DEVELOPMENT
+
+
+    # Manually
+
+
+    # Pygame
+
+
+    Pygame is a set of Python modules for creating video games and multimedia applications.
+    It provides support for graphics, sound, input, and networking, making it easy
+    to create games and interactive applications.
+
+
+    You can download the source code of a library from its website or GitHub repository
+    and install it manually by following the installation instructions provided by
+    the library.
+
+
+    Once you have installed a new library, you can import it into your Python code
+    using the import statement. For example, to import the numpy'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'library, you can use:
+
+
+    ```
+
+    import numpy
+
+    ```
+
+
+    Or you can use an alias to the library name for a
+
+    orter reference:
+
+
+    ```
+
+    import numpy as np
+
+    ```
+
+
+    # DATA TYPES AND VARIABLES
+
+
+    Python is a dynamically typed language. This
+
+    means that the data type of a variable is
+
+    determined at runtime based on the value that is
+
+    assigned to it. In other words, you don''t need to
+
+    sify the data type of variable when you declare
+
+    it, and you can assign values of different data types
+
+    to the same variable.
+
+
+    ```
+
+    x = 5          # x is an integer
+
+    x = "hello" # x is now a string
+
+    x = 3.14 # x is now a float
+
+    ```
+
+
+    +   - Integers: whole numbers without decimal
+
+    points. e.g. 1, 2, 3, 4, 5
+
+
+    +   - Floats: numbers with decimal points. e.g. 3.14,
+
+    4, 5, 6, 0
+
+
+    +   - Strings: sequences of characters. e.g. "hello",
+
+    ''world''
+
+
+    +   - Booleans: Containers for storing values. e.g. x =
+
+    10, y = "hello"
+
+
+    # STRINGS
+
+
+    Strings are sequences of characters enclosed in
+
+    single quotes '' or double quotes " . They are one of
+
+    the fundamental data types in Python and are used
+
+    to represent text and other types of data that can be
+
+    represented as a sequence of characters.
+
+
+    Here are some basic operations that can be
+
+    performed on: strings:
+
+
+    ```
+
+    # Creating a string
+
+    ```
+
+
+    my_string = "hello world"
+
+
+    ```
+
+    # Getting the length of a string
+
+    len = len(my_string) # Output:
+
+    11
+
+    ```
+
+
+    ```
+
+    # Accessing individual characters
+
+    first_char = my_string[0] # Output:
+
+    "h"
+
+    last_char = my_string[-1] # Output:
+
+    "d"
+
+    ```
+
+
+    ```
+
+    # Slicing a string
+
+    substring = my_string[0:5] #
+
+    Output: "hello",
+
+    ```
+
+
+    ```
+
+    # Concatenating strings
+
+    new_string = my_string + "!" #
+
+    Output: "hello world!",
+
+    ```
+
+
+    ```
+
+    # Repeating a string
+
+    repeat_string = my_string * 3 #
+
+    Output: "hello world hello world hello world"
+
+    ```
+
+
+    Strings in Python are immutable, which means that
+
+    y you create a string, you cannot change its
+
+    . However, you can create a new string that
+
+    contains the modified content.
+
+
+    String formatting is another important feature in
+
+    Python, which allows you to insert values into
+
+    a specific format.
+
+
+    ```
+
+    name = "Alice"
+
+    age = 30
+
+    greeting = "My name is {}" and I am
+
+    yeyars old.".format(name, age)
+
+    print(greeting) # Output: My name
+
+    is Alice and I am 30 years old
+
+    ```
+
+
+    # OPERATORS
+
+
+    +   - Arithmetic operations: +, -, /, (modulus),
+
+    (exponentiation)
+
+
+    +   - Comparison operators: == (equals), != (not
+
+    equals), >, <=, >=, ←'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'Logical operators: and, or, not
+
+
+    # SEQUENCE UNPACKING
+
+
+    Sequence unpacking is a feature in Python that allows you to assign the elements
+    of a sequence (such as a tuple or list) to individual variables. It provides a
+    convenient way to assign multiple values in a single statement.
+
+
+    ```
+
+    my_tuple = (1, 2, 3)
+
+    a, b, c = my_tuple
+
+    print(a) # Output: 1
+
+    print(b) # Output: 2
+
+    print(c) # Output: 3
+
+    ```
+
+
+    In this example, we define a tuple called my_tuple that contains three elements.
+    We then use sequence unpacking to assign each element to a separate variable a,
+    b, and c.
+
+
+    Sequence unpacking also works with lists:
+
+
+    ```
+
+    my_list = [4, 5, 6]
+
+    x, y, z = my_list
+
+    print(x) # Output: 4
+
+    print(y) # Output: 5
+
+    print(z) # Output: 6
+
+    ```
+
+
+    You can also use sequence unpacking to swap the values of two variables without
+    using a temporary variable:
+
+
+    ```
+
+    a = 1
+
+    b = 2
+
+    a, b = b, a
+
+    print(a) # Output: 2
+
+    print(b) # Output: 1
+
+    ```
+
+
+    # CONDITIONAL STATEMENTS
+
+
+    # IF STATEMENT
+
+
+    Executes a block of code if a condition is true.
+
+
+    ```
+
+    if condition:
+
+    ```
+
+
+    ```
+
+    # code to execute if condition
+
+    true
+
+    ```
+
+
+    # IF-ELSE STATEMENT
+
+
+    Executes a block of code if a condition is true, and another block if it''s false.
+
+
+    ```
+
+    if condition:
+
+    # code to execute if condition
+
+    true
+
+    else:
+
+    # code to execute if condition
+
+    false
+
+    ```
+
+
+    # ELIF-EL-ELSE STATEMENT
+
+
+    Executes a block of code based on multiple conditions.
+
+
+    ```
+
+    if condition1:
+
+    # code to execute if condition1
+
+    true
+
+    elif condition2:
+
+    # code to execute if condition2
+
+    true
+
+    else:
+
+    # code to execute if all
+
+    conditions are false
+
+    ```
+
+
+    # LOOPS
+
+
+    # FOR LOOP
+
+
+    Iterates over a sequence of values.
+
+
+    ```
+
+    for value in sequence:
+
+    # code to execute for each value
+
+    in sequence
+
+    ```
+
+
+    # WHILE LOOP
+
+
+    Executes a block of code as long as a condition is true.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "while condition:\n# code to execute\ncondition is true\n\n# FUNCTIONS\n\n#\
+    \ FUNCTION DEFINITION\n\nBlocks of code that perform a specific task. A function\
+    \ in Python is defined using the def keyword followed by the name and a set of\
+    \ parentheses. Any input parameters or arguments should be placed inside the parentheses.\
+    \ The function body should be indented and can contain one or more statements.\
+    \ The return statement is used to return a value from the calling code.\n\n```\n\
+    def function_name(parameters):\n# code to execute\nreturn value\n```\n\n# FUNCTION\
+    \ CALL\n\n```\nresult = function_name(argument1, argument2, ...)\n```\n\n# OPTIONAL\
+    \ ARGUMENTS\n\n```\nresult = def function_name(parameter1, parameter2=default_value,\
+    \ ...):\n# function body\nreturn value\n```\n\n# VARIABLE-LENGTH ARGUMENTS\n\n\
+    ```\ndef function_name(*args):\n# function body\nreturn value\n```\n\n# KEYWORD\
+    \ ARGUMENTS\n\n```\ndef function_name(parameter1, parameter2, ..., keyword1=value1,\
+    \ keyword2=value2, ...):\n# function body\nreturn value\n```\n\n# DEFAULT ARGUMENT\
+    \ VALUES\n\n```\ndef function_name(parameter1, parameter2=default_value):\n# function\
+    \ body\nreturn value\n```\n\n# ANONYMOUS FUNCTIONS (LAMBDA FUNCTIONS)\n\n```\n\
+    lambda arguments: expression\n```\n\n# VARIABLE SCOPE\n\n```\n# Global variable\n\
+    variable_name = value\ndef function_name():\n# Local variable\nvariable_name =\
+    \ value\n```\n\n# LISTS\n\nOrdered collections of items.\n\n```\nmy_list = [item1,\
+    \ item2, item3]\n```\n\n# LIST METHODS\n\n```\nmy_list.append(item) # adds an\
+    \ item\nto the end of the list\nmy_list.insert(index, item) # \nerts an item at\
+    \ a specific index\nmy_list.pop() # removes and returns\n```"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'the last item in the list
+
+    my_list.remove(item) removes the
+
+    first occurrence of an item
+
+
+    returns a new set with items that
+
+    are common to both sets
+
+
+    # DICTIONARIES
+
+
+    # INPUT AND OUTPUT
+
+
+    Unordered collections of key-value pairs.
+
+
+    # INPUT
+
+
+    Allow a user to enter data into a program.
+
+
+    ```
+
+    my_dict = {"key1": value1, "key2": value2, "key3": value3}
+
+    ```
+
+
+    ```
+
+    input_string = input("Enter a value:")
+
+    ```
+
+
+    ```
+
+    my_dict.keys() # returns a list of keys
+
+    my_dict.values() # returns a list of values
+
+    my_dict.items() # returns a list of key-value pairs
+
+    ```
+
+
+    # OUTPUT
+
+
+    Displays data to a user.
+
+
+    ```
+
+    print("Hello, world!")
+
+    ```
+
+
+    # DICTIONARY METHODS
+
+
+    # FILE HANDLING
+
+
+    ```
+
+    my_tuple = (item1, item2, item3)
+
+    ```
+
+
+    # TUPLES
+
+
+    Ordered collections of items that cannot be changed (immutable).
+
+
+    # OPENING A FILE
+
+
+    ```
+
+    file = open("filename.txt", "r") # open file for reading
+
+    file = open("filename.txt", "w") # open file for writing
+
+    ```
+
+
+    # SETS
+
+
+    # READ FROM A FILE
+
+
+    Unordered collections of unique items.
+
+
+    ```
+
+    my_set = {item1, item2, item3}
+
+    ```
+
+
+    ```
+
+    file_contents = file.read() # reads entire file
+
+    file_contents = file.readline() # reads one line of file
+
+    ```
+
+
+    # SET METHODS
+
+
+    # WRITING TO A FILE
+
+
+    ```
+
+    my_set.add(item) # adds an item to the set
+
+    my_set.remove(item) # removes an item from the set
+
+    my_set.union(other_set) # returns a new set with all unique items from both sets
+
+    my_set.intersection(other_set) #
+
+    ```
+
+
+    ```
+
+    file.write("Hello, world!") # writes string to file
+
+    ```'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# CLOSING A FILE\n\n```\n```python\\file.close() # closes file\n```\n```\n\n\
+    # EXCEPTION HANDLING\n\nErrors that occur during program execution.\n\n```\n```python\n\
+    try:\n    # code that might raise an exception\nexcept Exception:\n    # code\
+    \ to execute if exception occurs\nfinally:\n    # code to execute regardless of\
+    \ whether an exception occurred\n```\n```\n\n```\n```python\nperson1 = Person(\"\
+    Alice\", 25)\nperson2 = Person(\"Bob\", 30)\n\nperson1.say_hello()\nperson2.say_hello()\n\
+    ```\n```\n\n# @CLASSMETHOD DECORATOR\n\nIn Python, the @classmethod decorator\
+    \ is used to define class methods. A class method is bound to the class and not\
+    \ the instance of the class. It can be called on the class itself, rather than\
+    \ on an instance of the class.\n\n```\n```python\nclass MyClass:\n    class_var\
+    \ = \"This is a class variable\"\n\n    def __init__(self, x):\n        self.x\
+    \ = x\n\n    @classmethod\n    def class_method(cls):\n        print(cls.class_var)\n\
+    \nMyClass.class_method()\\```\n```\n\n# CLASSES AND OBJECTS\n\n# CLASSES\n\nIn\
+    \ Python, a class is a blueprint for creating objects. It defines a set of attributes\
+    \ and methods that the objects will have. When you create an instance of a class,\
+    \ you create a new object that has the same attributes and methods as the class.\n\
+    \n```\n```python\nclass Person:\n    def __init__(self, name, age):\n        self.name\
+    \ = name\n        self.age = age\nn    def say_hello(self):\n        print(f\"\
+    Hello, my name is {self.name}, and I'm {self.age}, years old.\")\n```\n```\n\n\
+    # OBJECTS\n\nInstances of a class with specific values for their attributes. To\
+    \ create an instance of the Person class, we use the constructor method __init\
+    \ which initializes the object's attributes. We then call the say_hello method\
+    \ on each object to print the greeting message.\n\nTo define a class method, we\
+    \ use the @classmethod decorator before the method definition. The first parameter\
+    \ of a class method is always cls which refers to the class. You can use the cls\
+    \ to access class variables and methods.\n\n# INHERITANCE\n\nClasses can also\
+    \ inherit attributes and methods from other classes.\n\n```\n```python\nclass\
+    \ Student(Person):\n    def __init__(self, name, age, grade):\n        super().__init__(name,\
+    \ age)\n        self.grade = grade\n\n    def say_hello(self):\n        print(f\"\
+    Hello, my name is {self.name}, I am {self.age} years old grade {self.grade}\"\
+    )\n```"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "old, and I am in grade\n{self.grade.})\n\n# MAGIC METHODS\n\nPython also supports\
+    \ a number of special methods, called \"magic methods\" or \"dunder methods\"\
+    \ (short for \"double underscore methods\\), that allow you to customize the behavior\
+    \ of object of a class. these methods have name that start and end with double\
+    \ underscores\n\n+   * `init(self, ..)` Initializes a new instance of the class\n\
+    * `str(self)` Defines the string representation of an object\n* `repr(self)` Defines\
+    \ the string representation of an object that can be used to recreate the object\n\
+    * `eq(self, other)` Defines how two objects are compared for equality using the\
+    \ `==` operator\n* `lt(self, other)` Defines how two objects are compared for\
+    \ less-than using the `<` operator\n* `len(self)` Defines the behavior of the\
+    \ `len()` function for an object\n* `getitem(self, key)` Defines how an object\
+    \ is accessed using square brackets, e.g. `my_object[key]`\n* `setitem(self, key,\
+    \ value)` Defines how an object is modified using square brackets, e.g. `my_object[key]\
+    \ = value`\n* `delitem(self, key)` Defines how an object is deleted using the\
+    \ `del` keyword and brackets, e.g. `del my_object[key]`\n* `getattr(self, name)`\
+    \ Defines an attribute that doesn't exist on the object is accessed, e.g. `my_object.foo`\n\
+    * `setattr(self, name, value)` Defines how an attribute is set on the object,\
+    \ e.g. `my_object.foo = 42`\n* `delattr(self, name)` Defines how an attribute\
+    \ is deleted from the object, e.g. `del my_object.foo`\n* `call(self, ..)` Allows\
+    \ an object to be called like a function, e.g. `my_object()`\n\n# COMMENTS AND\
+    \ DOCSTRINGS\n\nComments and docstrings are two important ways to document your\
+    \ code in Python. While comments are used to provide explanations for specific\
+    \ lines or blocks of code, docstrings are used to provide documentation for functions,\
+    \ classes, and modules.\n\n# Comments\n\nComments in Python start with the # symbol\
+    \ and can be used to provide explanations for specific lines of code:\n\n```\n\
+    # This is a comment\nx = 1 # This is another comment\n```\n\nIn this example,\
+    \ we use comments to explain what the code does. Comments are ignored by the Python\
+    \ interpreter and are not executed as code.\n\n# Docstrings\n\nDocstrings, on\
+    \ the other hand, are used to document functions, classes, and modules. They are\
+    \ enclosed in triple quotes \"\"\"\", and should describe what the function does,\
+    \ arguments it takes, and what it returns:\n\n```\ndef add_numbers(a, b):\n  \
+    \  \"\"\"\n    This function adds two numbers and\n    returns the result.\n \
+    \   Parameters:\n    a (int): The first number to\n    b (int): The second number\
+    \ to\n    add.\n    Returns:\n    int: The sum of a and b.\n    \"\"\"\n    return\
+    \ a + b\n```\n\nIn this example, we define a function called add_numbers and provide\
+    \ a docstring that describes what the function does, arguments it takes, and what\
+    \ it returns. The docstring should be placed immediately after the function definition."
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# Java Code Geeks CHEATSHEETS\n\n# 10\n\n# CORE PYTHON\n\nDocstrings are important\
+    \ because they make it easier for other programmers (and your future self) to\
+    \ understand what your code does and how to use it. They can be accessed using\
+    \ the help() function or by using the built-in doc attribute.\n\n```\nmy_list\
+    \ = [x**2 for x in range(5)]\n# creates a list of squares of\nnumbers 0-4\n```\n\
+    \n```\neven_numbers = [x for x in my_list\nif x % 2 == 0] # creates a list of\n\
+    even numbers from my_list\n```\n\n# MODULES AND PACKAGES\n\n# MODULES\n\nFiles\
+    \ containing Python code that can be imported and used in other programs.\n\n\
+    # GENERATORS\n\n```\nimport my_module\n\nmy_module.my_function() # calls a\nfunction\
+    \ from the module\n```\n\nFunctions that use the yield keyword to return values\
+    \ one at a time, instead of all once.\n\n```\ndef my_generator():\n  yield 1\n\
+    \  yield 2\n  yield 3\n```\n\n```\nfor value in my_generator():\n  # code to execute\
+    \ each value\nreturned by the generator\n```\n\n# PACKAGES\n\nCollections of related\
+    \ modules that can be imported together.\n\n# DECORATORS\n\n```\nimport my_package.my_module\n\
+    ```\n\n```\nmy_package.my_module.my_function()\n# calls a function from the module\n\
+    in the package\n```\n\nFunctions that modify the behavior of other functions.\n\
+    \n# LAMBDA FUNCTIONS\n\n```\ndef my_decorator(func):\n  def wrapper(*args, **kwargs):\n\
+    \    # code to execute before the\noriginal function\n    result = func(*args,\n\
+    \    **kwargs) # call the original\n    function\n    # code to execute after\
+    \ the\noriginal function\n    return result\n  return wrapper\n\n@my_decorator\n\
+    def my_function():\n  # code to execute\n```\n\nAnonymous functions that can be\
+    \ defined in a single line of code.\n\n```\nmy_lambda = lambda x: x**2 #\nines\
+    \ a lambda function that\nsqu its input\n```\n\n```\nresult = my_lambda(3) # calls\
+    \ the\nlambda function with input 3\n```\n\n# LIST COMPREHENSIONS\n\nCompact syntax\
+    \ for creating lists based on other\nlists or sequences."
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# MAP, FILTER, AND REDUCE\n\n# STRING FORMATTING\n\n# MAP\n\nAllows values\
+    \ to be inserted into a string in a specific format.\n\nApplies a function to\
+    \ every element in a sequence and returns a new sequence with the results.\n\n\
+    ```\ndef square(x):\n    return x**2\n\nname = \"Alice\"\nage = 30\ngreeting =\
+    \ \"Hello, my name is {} and I am {} years old.\".format(name, age) # creates\
+    \ a string with values inserted using curly braces\n```\n\n```\ndef square(x):\n\
+    \    return x**2\n\nmy_list = [1, 2, 3, 4]\nsquared_list = map(square, my_list)\n\
+    # creates a new list with squares of the original values\n```\n\n# REGULAR EXPRESSIONS\n\
+    \n# FILTER\n\nRegular expressions, also known as regex or regexp, are a sequence\
+    \ of characters that define a search pattern. They are powerful tools used to\
+    \ perform text manipulation and data extraction in programming languages such\
+    \ as Python. In Python, the re module provides support for regular expressions.\n\
+    \nApplies a function to every element in a sequence and returns a new sequence\
+    \ with only the elements that pass a certain test.\n\n```\ndef is_even(x):\n \
+    \   return x % 2 == 0\n\nmy_list = [1, 2, 3, 4]\neven_list = filter(is_even, my_list)\n\
+    # creates a new list with the even values from the original list\n```\n\n# FUNCTIONS\n\
+    \n+   - re.search(pattern, string): Searches for the first occurrence of the pattern\
+    \ in the string and returns a match object found. If not found, returns None.\n\
+    - re.findall(pattern, string): Searches for all occurrences of the pattern in\
+    \ the string and returns a list of all matches found.\n- re.sub(pattern, repl,\
+    \ string): Searches for all occurrences of the pattern in the string and replaces\
+    \ them with the repl string.\n\nApplies a function to pairs of elements in a sequence\
+    \ and returns a single result.\n\nfrom functools import reduce\n\ndef my_function(x,\
+    \ y):\n    return x + y\n\nmy_list = [1, 2, 3, 4]\nresult = reduce(my_function,\
+    \ my_list)\n# adds up all the values in the list to get a single result\n\n# METACHARACTERERS\n\
+    \n+   - (dot): Matches any character except a newline character.\n- (caret): Matches\
+    \ the start of a string.\n- $ (dollar): Matches the end of a string.\n- (asterisk):\
+    \ Matches zero or more occurrences of the preceding character.\n- + (plus): Matches\
+    \ one or more occurrences of the preceding character.\n- ? (question mark): Matches\
+    \ zero or one occurrence of the preceding character."
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# Java Code Geeks CHEATSHEETS\n\n# 12\n\n# CORE PYTHON\n\n+   - [] (square\
+    \ brackets): Matches any one of the characters enclosed in the brackets.\n- |\
+    \ (pipe): Matches either the expression before or after the pipe.\n\n```\nimport\
+    \ re\n\n# Search for a pattern in a string\ntext = \"The quick brown fox jumps\
+    \ over the lazy dog\"\nmatch = re.search(r\"brown\", text)\nif match:\n    print(\"\
+    Match found!\")\n\n# Find all occurrences of a pattern in a string\ntext = \"\
+    The quick brown fox jumps over the lazy dog\"\nmatches = re.findall(r\"the\",\
+    \ text, re.IGNORECASE)\nprint(matches)\n\n# Replace all occurrences of a pattern\
+    \ in a string\ntext = \"The quick brown fox jumps over the lazy dog\"\nnew_text\
+    \ = re.sub(r\"the\", \"that\", text, flags=re.IGNORECASE)\nprint(new_text)\n```\n\
+    \n![](img/91fa4f4c1d98390fa986948ba4a3e5ef_12_0.png)\n\nJCG delivers over 1 million\
+    \ pages each month to 700K software developers, architects and decision makers.\
+    \ JCG offers something for everyone, including news, tutorials, cheat sheets,\
+    \ research guides, feature articles, source code and more.\n\nCopyright 2014 Exelius\
+    \ Media P.C. All rights reserved. No part of this publication may be reproduced,\
+    \ stored in a retrieval system, or transmitted, in any form or media by electronic,\
+    \ mechanical, microcopying, or photocopying, without prior written permission\
+    \ of the publisher.\n\nCHEATSHEET FEEDBACK\nWELCOME\nsupport@javacodegeeks.com\n\
+    SPONSORSHIP\nOPPORTUNITIES\nsales@javacodegeeks.com\n\nJAVACODEGEEKS.COM | © ELIXEL\
+    \ MEDIA P.C. VISIT JAVACODEGEEKS.COM FOR MORE!"
+  merge: -1
+  pgno: 12
