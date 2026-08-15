@@ -1,0 +1,876 @@
+groups: []
+pages:
+- img_proc: false
+  md: '# # An Introduction to SAS Visual Analytics\ How to Explore Numbers, Design
+    Reports, and Gain Insight into Your Data
+
+
+    Find answers on the fly, or master something new. See pricing options.
+
+
+    Tricia Aanderud · Rob Collum · Ryan Kumpmfiller'
+  merge: -1
+  pgno: 0
+- img_proc: false
+  md: '# # An Introduction to SAS Visual Analytics
+
+
+    Find answers on the fly, or master something new. Subscribe today. See pricing
+    options.
+
+
+    How to Explore Numbers, Design Reports, and Gain Insight into Your Data
+
+
+    Tricia Aanderud • Rob Collum • Ryan Kumpfmiller'
+  merge: -1
+  pgno: 1
+- img_proc: false
+  md: '# # contents
+
+
+    +   - this book
+
+
+    +   - about others
+
+
+    +   - acknowledgments
+
+
+    +   - part 1: starting out
+
+
+    +   - chapter 1: accessing content
+
+
+    +   - accessing content with web browser
+
+
+    +   - accessing content using the requests
+
+
+    +   - accessing content with the requests library
+
+
+    +   - understanding requests
+
+
+    +   - analyzing HTML with BeautifulSoup
+
+
+    +   - transformation of the data
+
+
+    +   - understanding lxml
+
+
+    +   - scraping
+
+
+    +   - creating charts
+
+
+    +   - saving to csv or text file
+
+
+    +   - using the requests library
+
+
+    +   - navigating requests
+
+
+    +   - references
+
+
+    +   - chapter 2: building data frames
+
+
+    +   - accessing the data
+
+
+    +   - designing the data layout
+
+
+    +   - building a data frame
+
+
+    +   - adding data to series
+
+
+    +   - creating data tables
+
+
+    +   - plotting data
+
+
+    +   - inspecting the data
+
+
+    +   - adding data to series
+
+
+    +   - working with data frames
+
+
+    +   - inspecting data interactions
+
+
+    +   - saving the data
+
+
+    +   - exporting the data
+
+
+    +   - references
+
+
+    +   - chapter 3: working with data
+
+
+    +   - building data frames
+
+
+    +   - understanding the structure
+
+
+    +   - filtering the data
+
+
+    +   - creating new columns
+
+
+    +   - updating the data
+
+
+    +   - scheduling the data
+
+
+    +   - references
+
+
+    +   - part 2: visualizing your data
+
+
+    +   - chapter 4: visualizing your data
+
+
+    +   - elements of data visualization
+
+
+    +   - choosing the right chart
+
+
+    +   - getting started with matplotlib
+
+
+    +   - inspecting the results
+
+
+    +   - line charts
+
+
+    +   - bar charts
+
+
+    +   - inspecting the results
+
+
+    +   - scatter plots
+
+
+    +   - box plots
+
+
+    +   - inspecting the results
+
+
+    +   - heatmaps
+
+
+    +   - violin plots
+
+
+    +   - using seaborn
+
+
+    +   - references
+
+
+    +   - part 3: data analysis
+
+
+    +   - chapter 5: data analysis
+
+
+    +   - descriptive data analysis
+
+
+    +   - understanding the metrics
+
+
+    +   - grouping and aggregating
+
+
+    +   - correlation
+
+
+    +   - forecasting
+
+
+    +   - references
+
+
+    +   - part 4: machine learning
+
+
+    +   - chapter 6: machine learning
+
+
+    +   - introduction to machine learning'
+  merge: -1
+  pgno: 2
+- img_proc: false
+  md: '# about this book
+
+
+    SAS Visual Analytics is a data visualization and application that enables organizations
+    to understand and analyze their most important asset: data. There is a wealth
+    of information free to users on support.com, from simple blog tips to in-depth
+    documentation. All this information can make it much difficult for users to get
+    the most from the application, or even
+
+
+    Our purpose in this book is to provide a quick-start guide for new users who shy
+    through the applications; we want to teach you the basics so that you can then
+    expand your knowledge with some intermediate and advanced techniques. We want
+    to ensure users understand how to get the most from the application for their
+    organizations.
+
+
+    # IS THIS BOOK FOR YOU?
+
+
+    New users or those with some familiarity with SAS Analytics will find this book
+    useful. This book provides a tutorial for new users. It also contains in-depth
+    explanations of data visualizations and how to use them effectively.
+
+
+    If you have the administrative privileges for deploying, configuring, and maintaining
+    your SAS Visual Analytics environment, we''ve got covered here as well. Our goal
+    is to enhance your understanding of how the software works works so that you can
+    readily implement proven practices for efficient operation.
+
+
+    # PREREQUISITES
+
+
+    You do not need any previous experience with the Visual Analytics tooltip or SAS
+    to use this book. If you are familiar with SAS coding techniques and SAS data
+    handling, you might find some areas of the project easier to understand.
+
+
+    # SCOPE OF THIS BOOK
+
+
+    This book covers the following topics:
+
+
+    +   - SAS Visual Analytics 7.3 (and later)
+
+    - SAS Visual Analytics 8.1
+
+
+    # ABOUT THE EXAMPLES
+
+
+    # Software used to develop the book''s content
+
+
+    Reports and explorations for this book were created using the following software:
+
+
+    +   - SAS Visual Analytics 7.3 (and later)
+
+    - SAS Visual Analytics 8.1
+
+    - SAS Enterprise Guide 7.1 and SAS Studio were used for some preparation in this
+    book.
+
+
+    Most of the data sets were taken from existing sample libraries and no preparation
+    was required. These sources are identified at first.
+
+
+    # Example data and references
+
+
+    You can access an import package for the Building Your First Report and Your First
+    Dashboard chapters by linking to this book to its author page at http://support.sas.com/publishing/authors.
+    Select the name of the author. Then click the thumbnail of this book, and select
+    Example Code and Data to display the SAS programs that are included in this book.
+
+
+    The primary references used to write this book were the sections of the online
+    documentation for SAS Visual Analytics:'
+  merge: -1
+  pgno: 3
+- img_proc: false
+  md: '# introduction
+
+
+    At SAS Global Forum in 2012, CEO Jan Good introduced an application that offered
+    not only to quickly process data, but to make analytics accessible to business
+    users. There was an industry taking shape, and data was becoming a mainstream
+    too.
+
+
+    From a simple laptop to a desk, Good described the
+
+
+    laptop was connected to the servers in Cary, 600 miles away. The data had placed
+    him in a situation handling billions of rows. Neither felt concerned to him. His
+    focus was on the task, and with soft mouse clicks, he was discovering the mysteries
+    within the data world.
+
+
+    graphical simply user interface. The application was easy to analyze the data.
+    There was no required coding. This application was called SAS Viya.
+
+
+    This was being written during an interesting period for the evolution of SAS Analytics.
+    By publishing our shared contract, SAS Analytics ensures that the application
+    would empower users. It would become part of the newly announced, cloud-based
+    SAS Viya product and restart industry expectations. As users of the framework,
+    we are creating tools, content, and training sheets, SAS RAD was completing product
+    variety and adding some final touches for the new.
+
+
+    With the advantages, the changes are found in the industry organization and performance.
+    The larger change was to the in-memory storage engine. The in-memory component
+    is called the SAS Analytics Server. In the new release, it is renamed to the SAS
+    Cloud Analytics Server (CAS). Both servers are similar in that they serve fast
+    random access memory (RAM). The differences in how this is found and analyzed
+    in this chapter
+
+
+    If you want to understand how to use it, you can adopt the new release with minimal
+    effort. This chapter is largely based on SAS Analytics 7.3, but also includes
+    guidance for the SAS Viya release. This chapter provides an introduction and overview
+    of the applications. The part of this chapter
+
+
+    # APPLICATION INTRODUCTION
+
+
+    SAS Analytics provides a complete platform for various analytics, enabling you
+    to identify patterns and relationships in data that were not initially obvious.
+    All users of skill level can load data, search for analytics patterns, and create
+    robust reports and easily visualize data interactively.
+
+
+    The speed of the features is based on the in-memory performance, high-performance
+    analytics engine. Large data tables are loaded into the SAS RAM, which enables
+    nearly instant calculations and data analytics. The application supports out-the-web
+    server, where users can easily share analytics and reports through a browser or
+    mobile device.
+
+
+    # Understanding in-memory data storage
+
+
+    A key feature of SAS Analytics is the in-memory storage engine. In in-memory data,
+    the application loads the data from the file in the system''s random access memory
+    (RAM). The data loaded in RAM, queries, calculations, and analyses are instant.
+    The SAS Analytics Server handles this functionality.
+
+
+    # Understanding the application
+
+
+    Many new users are confused how the applications work together. The following
+    figure shows each application and data travels through each application.
+
+
+    ![](bbox=[0.095, 0.755, 0.904, 0.83])
+
+
+    Here''s a brief overview of each application and its purpose. Each of these applications
+    is discussed in full chapters.
+
+
+    +   - SAS Analytics Homepage (SAS Home/Hub)
+
+
+    This is the entry point to the tool. You can access the content and other applications
+    based on your assigned role.
+
+
+    +   - Report Viewer/BI Visual
+
+
+    The application enables you to create content such as reports or processes. The
+    BI Visual looks similar to the Report Viewer but runs on your mobile device or
+    tablet.
+
+
+    +   - Data Builder'
+  merge: -1
+  pgno: 4
+- img_proc: false
+  md: '# part one getting started
+
+
+    This part provides a tutorial for SAS Visual Analytics. You will learn how to
+    access content through SAS Home. Then you will build a simple report. In the next
+    chapter, you will learn the basics for creating a performance dashboard. After
+    completing those chapters, you will learn how to load data with the Data Builder.
+
+
+    +   **Chapter 1 Accessing Content**
+
+    This chapter explains how to use the SAS Home page, which provides a gateway to
+    the application features and content. You are guided through the home page features
+    and some of the Report Viewer features.
+
+
+    **Chapter 2 Building Your First Report**
+
+    The chapter is a tutorial for Visual Designer (also known as Report Builder).
+    It shows you how to build a simple report and provides an overview of the basic
+    product features. Topics include interface overview, adding data, creating a simple
+    report, and how to control the report look and feel.
+
+
+    **Chapter 3 Building Your First Dashboard**
+
+    This chapter is a tutorial for the advanced features in the tool. You are shown
+    how to create a performance dashboard that explains how to think about the data,
+    determine the best layout, and use extra features.
+
+
+    **Chapter 4 Using the Data Builder**
+
+    This chapter shows you how to massage and load your data into the SAS LASR Analytic
+    Server.'
+  merge: -1
+  pgno: 5
+- img_proc: false
+  md: '# # accessing content
+
+
+    AWS Virtualsoft allows you to call any public phone number worldwide. You can
+    use the AWS Console, CLI, or other tools to make and receive calls.
+
+
+    This starts with making a call to any number you want. You can make calls through
+    the AWS Console, CLI, or other tools using the AWS Virtualsoft API. To receive
+    a call, you will need to register your application to accept the call.
+
+
+    # METHODS OF ACCESSING CONTENT
+
+
+    # ### Accessing content with the API
+
+
+    Using AWS Virtualsoft through the API, you can call any public phone number worldwide.
+    You can make and receive calls using the API. You can access all features and
+    functions provided by the AWS Virtualsoft service.
+
+
+    # ### Accessing content through the portal
+
+
+    Using the portal, you will be able to call any public phone number. You can access
+    all the features and functions provided by the AWS Virtualsoft service. You can
+    also make and receive calls through the portal interface.
+
+
+    # ### Accessing content with the mobile app
+
+
+    Using the app, you can call any phone number from your mobile device. The mobile
+    app is available for Android and iOS. You can make and receive calls using the
+    app just like with the portal or API.
+
+
+    ![](bbox=[0.215, 0.495, 0.784, 0.565])
+
+
+    *Figure 1: Accessing content with the API*
+
+
+    # ### UNDERSTANDING THE ROLES
+
+
+    There are several roles to understand when you are working with AWS Virtualsoft.
+    These roles are:
+
+
+    +   - Administrator: This role has the power to manage the AWS Virtualsoft account.
+
+    - User: This role has the power to make and receive calls.
+
+    - Auditor: This role has the power to view reports and statistics.
+
+
+    # ### Transferring the ownership
+
+
+    The owner of the account can transfer the ownership to another person. This is
+    done through the AWS Console.
+
+
+    # ### Creating a report
+
+
+    To create a report, you should select the date range and the type of report. You
+    can then download the report as PDF.
+
+
+    ![](bbox=[0.215, 0.875, 0.784, 0.945])
+
+
+    *Figure 2: Transferring the ownership*
+
+
+    # ### USING THE REPORT'
+  merge: -1
+  pgno: 6
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 7
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 8
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 9
+- img_proc: false
+  md: '# part two
+
+    customizing your data visualizations
+
+
+    Once you have completed the basics of SAS Visual Analytics, it is time to dig
+    into the advanced features. In this part, you learn more about creating
+
+
+    Find answers on the fly, or master something new. depth learning for the basic
+    data visualizations along with guidelines from industry experts. The last chapter
+    shows you some of the more advanced statistical objects and features available
+    in the application and how to apply them.
+
+
+    One of the best features of SAS Visual Analytics is the ability to create advanced
+    analytical objects. After reading this chapter, you will be able to understand
+    the concepts even with only a limited understanding of the statistics.
+
+
+    +   **Chapter 5** Visualizing Your Data
+
+
+    This chapter walks through the simple objects like line, bar, and pie charts.
+    It explains how to use each object and provides tricks for overcoming the common
+    issues that intermediate users face as they create reports.
+
+
+    +   **Chapter 6** The Where of Data
+
+
+    Prepping your data is important to get the geography to work, so guidelines and
+    tips will be provided for that. The chapter discusses the map objects as well
+    as how to use location analysis.
+
+
+    +   **Chapter 7** Approachable Analytics
+
+
+    Business users are often intimidated by statistical objects. This chapter covers
+    how to use them along with the analytical features that are found in the Data
+    Explorer. This chapter shows how easy it is to turn data into insights!'
+  merge: -1
+  pgno: 10
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 11
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 12
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 13
+- img_proc: false
+  md: '# part three
+
+    administration and data loading
+
+
+    The SAS Visual Analytics solution provides a remarkably powerful and dynamic set
+    of software tools with which you can accomplish astounding feats of large-scale
+    digital data manipulation and analysis. It''s important to understand how those
+    software tools function and interoperate so that you can get the best and most
+    efficient results out of them.
+
+
+    In this part you will learn additional methods for loading data, how to administer
+    the LASR Analytic Server, and tips for tuning your system.
+
+
+    +   * Chapter 8 Loading Data
+
+
+    The SAS LAS Analytic Server supports a wide-range of data sources. This chapter
+    briefly explains what types of sources are supported as well as the considerations
+    of serial versus parallel loading.
+
+
+    +   * Chapter 9 LASR Administration
+
+
+    To successfully maintain the SAS LASR Analytic Server, the SAS administrator should
+    be familiar with the SAS Business Intelligence architecture, Hadoop architecture,
+    and how their respective software services inter-operate.
+
+
+    +   * Chapter 10 Performance Considerations
+
+
+    SAS software offers the enterprise an extremely flexible deployment and operational
+    architecture. Optimizing the software for your data and users for best utilization
+    is a necessary step. This chapter discusses the considerations for scalability,
+    availability, and efficiency.'
+  merge: -1
+  pgno: 14
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 15
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 16
+- img_proc: false
+  md: '# # performance considerations
+
+
+    SQL Server Analysis can help you identify performance bottlenecks. However, as
+    your data grows, you may run into performance issues when you try to query large
+    amounts of historical data.
+
+
+    When working with large datasets, it is important to consider the following factors
+    to ensure that your queries run quickly and efficiently:
+
+
+    +   - Data locality
+
+    - Data distribution
+
+    - Resource contention
+
+
+    # ## Data locality
+
+
+    Data locality is the ability to process data on the same node where it is stored.
+    This minimizes the amount of data that must be moved over the network, which is
+    often the biggest bottleneck in distributed systems.
+
+
+    ![](bbox=[0.135, 0.255, 0.865, 0.38])
+
+
+    # ## Data distribution
+
+
+    Data distribution refers to how data is spread across the nodes in a cluster.
+    If data is distributed unevenly, some nodes may become overloaded while others
+    remain idle, leading to poor query performance.
+
+
+    SQL Server uses a hash-based distribution mechanism to spread data across the
+    cluster nodes. This ensures that the work is balanced evenly across all nodes.
+
+
+    # ## Resource contention
+
+
+    Resource contention occurs when multiple processes compete for the same system
+    resources, such as CPU, memory, or I/O. In a distributed environment, this can
+    be particularly problematic if several nodes are overloaded.
+
+
+    # ## Scalability limitations
+
+
+    SQL Server Analysis Services is designed to scale horizontally, which means you
+    can add more nodes to a cluster to increase its capacity. However, there are limits
+    to how much it can scale.
+
+
+    One of the main limitations is the number of nodes that can be in a cluster. As
+    the number of nodes increases, the overhead of managing the cluster also increases,
+    which can impact performance.
+
+
+    # ## Memory-bound
+
+
+    SQL Server Analysis Services relies heavily on in-memory processing for performance.
+    If the dataset is larger than the available memory, the system must spill data
+    to disk, which can significantly slow down queries.
+
+
+    # ## CPU-bound
+
+
+    Some queries are CPU-intensive, meaning they require a lot of processing power.
+    In these cases, adding more nodes with faster CPUs can help to improve query performance.'
+  merge: -1
+  pgno: 17
+- img_proc: false
+  md: '# part four
+
+    SAS Visual Analytics 8.1
+
+
+    This part of the book takes you into the newest release of SAS Visual Analytics,
+    which is on SAS Viya. These chapters introduce you to the new environment and
+    show you how to navigate and use the Visual Data Builder and Visual Analytics
+    applications.
+
+
+    Find answers on the fly, or master something new. Subscribe today. See pricing
+    options.
+
+
+    +   * Chapter 11 Introducing the SAS Viya Platform
+
+
+    The chapter provides an overview of the SAS Viya environment and managing your
+    environment with the SAS Environment Manager.
+
+
+    +   * Chapter 12 Wrangling Your Data
+
+
+    This chapter takes you into an overview of the SAS Visual Data Builder that comes
+    with SAS Visual Analytics on SAS Viya. You learn about the new interface, how
+    to extract and load data into CAS, and how to use the new features to transform
+    your data sets.
+
+
+    +   * Chapter 13 Visualizing and Exploring Your Data
+
+
+    In this chapter, we take the dive into the reporting and analytics section of
+    SAS Visual Analytics on SAS Viya. You learn how to import data into the tool along
+    with how to build reports and get a deeper look into your data with the new interface.
+    There are many new features that let you quickly get to actionable insight.'
+  merge: -1
+  pgno: 18
+- img_proc: false
+  md: '# element viewer
+
+
+    # # introducing SAS Viya
+
+
+    In 2019, its new SAS Viya platform is built to leverage cloud-native integrated
+    parallel approach to power SAS analytics that
+
+
+    is needed today, and SAS Viya is designed to capitalize on the flexibility of
+    elastic infrastructure.
+
+
+    # ## OVERVIEW OF THE SAS VIYA PLATFORM
+
+
+    The Viya platform is made of many different features, but as can be seen in
+
+
+    +   - **CAS In-Memory Data Store**: The CAS allows users to load data from previous
+    versions into memory for analysis at high speed.
+
+    - **SAS Engine**: The SAS engine is used to create a clear for the CAS to manage
+    data sets.
+
+
+    It is important to note that SAS Viya does not require the SAS Foundation to be
+    installed. In many cases it has been possible to run SAS Viya without the SAS
+    Foundation.
+
+
+    ![](bbox=[0.285, 0.275, 0.715, 0.365])
+
+
+    At this stage of features of SAS Viya, this is just one option of many that are
+    available. However, we feel that the statistics and services will continue to
+    grow and evolve.
+
+
+    # ## UNDERSTANDING THE CAS IN-MEMORY ANALYTICS
+
+
+    To fully realize the capabilities of the CAS service, it''s important to understand
+    how it works and how it has evolved analytically over the last several years.
+
+
+    # ### Introducing parallel architecture
+
+
+    The first iteration of CAS was based on MPP approach which was introduced in SAS
+    9.4. In SAS 9.4, the High-Performance Analytics Server was introduced. SAS Viya
+    has introduced improved analytics that can be performed on large datasets.
+
+
+    The CAS architecture is based on distributed memory architecture, which allows
+    data to be loaded into memory where it is distributed across multiple nodes.
+
+
+    # ### Adding persistence
+
+
+    The second iteration of CAS was based on the SAS High-Performance Analytics Server.
+    In this version, the CAS service was able to persist data to disk and read it
+    back when necessary. This is important for performance when not datasets are small
+    enough to fit in memory.
+
+
+    The latest iteration of CAS allows users to scale the environment horizontally
+    and manage the environment dynamically. This is possible because CAS is a cloud-native
+    service.
+
+
+    ![](bbox=[0.285, 0.765, 0.715, 0.855])
+
+
+    # ## MANAGING THE SAS VIYA ENVIRONMENT
+
+
+    The SAS Environment Manager handles the management of SAS Viya as much as SAS
+    9 did. Using the SAS Environment Manager, users can manage the resources and control
+    the environment.
+
+
+    # ### Opening the application'
+  merge: -1
+  pgno: 19
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 20
+- img_proc: false
+  md: ''
+  merge: -1
+  pgno: 21
+toc: []
