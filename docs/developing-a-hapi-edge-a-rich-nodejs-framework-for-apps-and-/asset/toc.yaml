@@ -1,0 +1,366 @@
+- - '#'
+  - Developing hapi Edge：一种用于应用和服务的丰富 Node.js 框架
+- - '##'
+  - 本本书将教你什么？
+- - '##'
+  - 作者介绍
+- - '##'
+  - Wyatt Preul
+- - '##'
+  - Van Nguyen
+- - '##'
+  - Lloyd Benson
+- - '##'
+  - 技术评审员
+- - '##'
+  - hapi 简介
+- - '###'
+  - 历史
+- - '#'
+  - 第 1 章：hapi 简介
+- - '##'
+  - hapi-plugins.
+- - '##'
+  - Style
+- - '#'
+  - 第 2 章：服务器
+- - '##'
+  - 设置简单的服务器
+- - '##'
+  - 为 hapi-plugins 设置服务器
+- - '##'
+  - Glue
+- - '##'
+  - Rejoice
+- - '##'
+  - Confidence
+- - '##'
+  - 请求生命周期
+- - '##'
+  - 扩展点
+- - '##'
+  - 总结
+- - '#'
+  - 第 3 章：路由
+- - '##'
+  - 路径处理
+- - '##'
+  - 路由的组成部分
+- - '##'
+  - method
+- - '##'
+  - vhost
+- - '##'
+  - handler
+- - '##'
+  - config
+- - '##'
+  - ROUTE PREREQUISITES
+- - '##'
+  - path
+- - '##'
+  - SIMPLE PATH
+- - '##'
+  - OPTIONAL PARAMETERS
+- - '##'
+  - WILDCARDS
+- - '#'
+  - 第 4 章：处理器 (handler)
+- - '##'
+  - parameters (参数)
+- - '##'
+  - query (查询)
+- - '##'
+  - The request (请求)
+- - '##'
+  - payload (有效负载)
+- - '##'
+  - headers (请求头)
+- - '##'
+  - The reply (响应)
+- - '##'
+  - 视图处理器 (VIEWS HANDLER)
+- - '##'
+  - 使用 SERVER.VIEWS 的常规处理器
+- - '##'
+  - 代理 (proxy)
+- - '##'
+  - 在处理器中添加常用方法
+- - '##'
+  - 绑定到服务器 (Binding to server)
+- - '##'
+  - 装饰响应 (Decorating the reply)
+- - '##'
+  - Tails (尾任务)
+- - '##'
+  - 使用 server.handler 定义处理器
+- - '##'
+  - 点赞插件示例
+- - '##'
+  - 上传文件
+- - '##'
+  - 总结
+- - '##'
+  - 为 hapi-plugins.com 进行验证
+- - '##'
+  - 使用 joi 进行通用数据验证
+- - '##'
+  - 创建你自己的插件
+- - '##'
+  - 插件配置
+- - '##'
+  - 关于标签和选择插件的说明
+- - '##'
+  - 何时使用插件
+- - '#'
+  - 第 6 章：插件
+- - '##'
+  - hapi 插件生态系统：一些常用插件
+- - '###'
+  - hapi-auth-basic
+- - '###'
+  - blipp
+- - '###'
+  - bell
+- - '###'
+  - good
+- - '###'
+  - tv
+- - '###'
+  - lout / hapi-swagger
+- - '###'
+  - poop
+- - '##'
+  - 更多插件
+- - '##'
+  - hapi-auth-cookie
+- - '##'
+  - 总结
+- - '#'
+  - 第 8 章：模型
+- - '##'
+  - 模型 (Models)
+- - '##'
+  - 使用 HTTP
+- - '##'
+  - 预期用法
+- - '##'
+  - NPM 包
+- - '##'
+  - 插件模型：实际用法
+- - '##'
+  - 使用数据库
+- - '##'
+  - 设置数据库
+- - '##'
+  - 连接数据库
+- - '##'
+  - Schema 设计
+- - '##'
+  - 搜索插件
+- - '##'
+  - 添加插件
+- - '##'
+  - 总结
+- - '#'
+  - 第 9 章：模板化
+- - '##'
+  - 配置
+- - '##'
+  - 选项
+- - '##'
+  - ENGINES
+- - '##'
+  - COMPILEMODE 选项
+- - '##'
+  - PATHS
+- - '##'
+  - GLOBAL SPECIFIC
+- - '##'
+  - MORE OPTIONS
+- - '##'
+  - STARTER EXAMPLES
+- - '##'
+  - 视图加载 (View Loading)
+- - '##'
+  - 布局 (Layouts)
+- - '##'
+  - 配置 (Configuration)
+- - '##'
+  - 使用 (Usage)
+- - '##'
+  - 排除 (Exclusion)
+- - '##'
+  - 部分组件 (Partials)
+- - '##'
+  - 辅助函数 (Helpers)
+- - '##'
+  - 辅助函数文件 (Helper Files)
+- - '##'
+  - 共享上下文 (Shared Contexts)
+- - '##'
+  - 总结 (Summary)
+- - '#'
+  - lab 历史
+- - '##'
+  - 安装 lab
+- - '##'
+  - 安装 code
+- - '##'
+  - 编写简单的测试
+- - '##'
+  - lab 的原则
+- - '##'
+  - 始终是异步的
+- - '##'
+  - 测试脚本 (Test scripts)
+- - '##'
+  - 安全全局变量 (Safe globals)
+- - '##'
+  - 实验 (Experiments)
+- - '##'
+  - 编写 hapi 测试 (Writing a hapi test)
+- - '##'
+  - 代码覆盖 (Code coverage)
+- - '#'
+  - 第 10 章：测试
+- - '##'
+  - 报告器 (Reporters)
+- - '##'
+  - 测试报告
+- - '##'
+  - 代码检查 (Linting)
+- - '##'
+  - 插件测试 (Plugin Testing)
+- - '##'
+  - 总结
+- - '#'
+  - 第 11 章：调试
+- - '##'
+  - 章节概述
+- - '##'
+  - console.log
+- - '##'
+  - debug 模式
+- - '##'
+  - TV
+- - '##'
+  - Good
+- - '##'
+  - REPL
+- - '##'
+  - 堆快照 (Heap Snapshots)
+- - '##'
+  - 核心文件 (Core Files)
+- - '##'
+  - mdb corefile
+- - '##'
+  - pwd
+- - '##'
+  - ls -l
+- - '##'
+  - 总结
+- - '#'
+  - 第 12 章：安全
+- - '##'
+  - 最佳实践
+- - '##'
+  - 密码哈希：BCrypt
+- - '##'
+  - 解决方案
+- - '##'
+  - XSS
+- - '##'
+  - 解决方案
+- - '##'
+  - CSRF
+- - '##'
+  - 解决方案
+- - '##'
+  - SSL
+- - '##'
+  - 移除头部
+- - '##'
+  - 点击劫持 (CLICKJACKING)
+- - '###'
+  - 解决方案
+- - '##'
+  - X-POWERED-BY
+- - '###'
+  - 解决方案
+- - '##'
+  - IE 在文中文中 (IE OPEN WITHIN CONTEXT)
+- - '###'
+  - 解决方案
+- - '##'
+  - 内容安全策略 (contentSecurityPolicy)
+- - '###'
+  - 解决方案
+- - '##'
+  - CORS
+- - '###'
+  - 解决方案
+- - '##'
+  - 总结
+- - '##'
+  - 复习
+- - '#'
+  - 附录 13
+- - '##'
+  - 模型
+- - '###'
+  - 历史
+- - '##'
+  - HTTP 客户端概述
+- - '###'
+  - 历史
+- - '###'
+  - WRECK
+- - '###'
+  - REQUEST
+- - '##'
+  - 数据库客户端概述
+- - '##'
+  - MongoDB
+- - '###'
+  - mongodb
+- - '###'
+  - Mongoose
+- - '##'
+  - CASSANDRA
+- - '###'
+  - Apollo
+- - '###'
+  - cassandra-driver
+- - '##'
+  - POSTGRES
+- - '###'
+  - PG
+- - '###'
+  - Sequelize
+- - '##'
+  - Connection
+- - '##'
+  - MONGODB:MONGOOSE
+- - '##'
+  - CASSANDRA::APOLLO
+- - '##'
+  - Models
+- - '##'
+  - POSTGRES:PG
+- - '##'
+  - Postgres:Sequelize
+- - '##'
+  - Schemas
+- - '##'
+  - MongoDB::mongodb
+- - '##'
+  - 模板引擎
+- - '##'
+  - 选定模板引擎概述
+- - '##'
+  - MUSTACHE.JS / HOGAN.JS
+- - '##'
+  - HANDLEBARS.JS
+- - '##'
+  - ECT
