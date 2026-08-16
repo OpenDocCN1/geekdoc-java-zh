@@ -1,0 +1,2404 @@
+- img_proc: true
+  md: '# Design Patterns in JAVA
+
+
+    Devendra Singh'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # JAVA
+
+    DESIGN
+
+    PATTERNS
+
+
+    By
+
+    Devendra Singh
+
+
+    @Copyright 2016 Dev S'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# PREFACE
+
+
+    This technical e-book provides information about design patterns in java in the
+    simplest way to understand. It consists of detailed descriptions of each Java
+    design patterns with the simplest real worlds. All examples given in this e-book
+    have been compiled & run by me in my development environment. I tried best to
+    have the simplest example available in this book.
+
+
+    This book is intended for java developers as a beginner or experienced. Any java
+    developer can get benefits if he/she go through the full content & provided examples.
+    I have written this book keeping in mind that every level of developer can get
+    benefits from this.
+
+
+    Motivation for writing this e-book comes from the time I was learning java design
+    patterns. It was not very easy to understand each and every pattern in one or
+    two readings. I went through the various books & materials on the same and tried
+    to extract relevant facts about the different patterns to make them understand
+    easily & quickly. I included all those relevant & crucial points in this book.
+
+
+    Before getting started I would like to introduce myself. I am a java developer
+    having more than 10 years'' experience in Java/J2EE technologies. Currently I
+    am working with a multinational software company. One of my hobbies is to write
+    technical contents. I spared some time to write this book & feeling very happy
+    to share my experience and knowledge with other developers. In case you have any
+    suggestion, correction or queries going through this e-book please don''t hesitate
+    to connect me erdsingh24@gmail.com
+
+
+    # Table of Contents'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# PREFACE
+
+
+    +   ABOUT DESIGN PATTERNS
+
+
+    +   SINGLETON PATTERN
+
+
+    +   FACTORY PATTERN
+
+
+    +   ABSTRACT FACTORY PATTERN
+
+
+    +   BUILDER PATTERN
+
+
+    +   PROTOTYPE PATTERN
+
+
+    +   ADAPTER PATTERN
+
+
+    +   COMPOSITE PATTERN
+
+
+    +   PROXY PATTERN
+
+
+    +   FAÇADE PATTERN
+
+
+    +   DECORATOR PATTERN
+
+
+    +   FLYWEIGHT PATTERN
+
+
+    +   TEMPLATE METHOD PATTERN
+
+
+    +   MEDIATOR PATTERN
+
+
+    +   CHAIN OF RESPONSIBILITY
+
+
+    +   OBSERVER PATTERN
+
+
+    +   STRATEGY PATTERN
+
+
+    +   STRATEGY PATTERN
+
+
+    +   VISITOR PATTERN
+
+
+    +   STATE PATTERN
+
+
+    +   ITERATOR PATTERN
+
+
+    +   ITERATOR PATTERN
+
+
+    +   INTERPRETER PATTERN
+
+
+    +   MEMENTO PATTERN'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# ABOUT DESIGN PATTERNS
+
+
+    If a problem occurs over and over again, a solution to that problem has been used
+    effectively. That solution is described as a pattern. The design patterns are
+    language-independent strategies for solving common object-oriented design patterns.
+    When you make a design, you should know the name of some common solutions. Learning
+    design patterns is good for people to communicate each other effectively. In fact,
+    you may have been familiar with some design patterns; you may not use well-known
+    names to describe them. SUN suggests GOF (Gang of Four—four pioneers who wrote
+    a book named “Design Patterns”- Elements of Reusable Object-Oriented Software),
+    so we use that book as our guide to describe solutions. Please make you to be
+    familiar with these terms and learn how other people solve the coding problems.
+
+
+    If you want to be a professional Java developer, you should know at least some
+    popular solutions to coding problems. Such solutions have been proved efficient
+    and effective by the experienced developers. Learning design patterns speeds up
+    your experience accumulation in OAA/OOD. Once you grasped, you would be benefited
+    from them for all your life and jump up yourself to be a master of designing and
+    developing. Furthermore, you will be able to use these terms to communicate with
+    your fellows or assessors more effectively.
+
+
+    Many programmers with many years’ experience don''t know design patterns, but
+    as an Object-Oriented programmer, you have to know them, especially for new Java
+    programmers. You may not use a popular name to describe it or may not choose an
+    effective way to better intellectually control over what you built. Learning how
+    the experienced developers to solve the coding problems and trying to use them
+    in your project are a best way to earn your experience and certification.
+
+
+    Remember that learning the design patterns will really change how you use your
+    code; not only will you be smarter but you will sound a lot smarter, too. The
+    23 design patterns of GOF are well known, and more are to be discovered on the
+    way.
+
+
+    There are three well-known types of design patterns.
+
+
+    Creational Design Patterns: Creational design patterns provide solution to instantiate
+    object in the best possible way for specific situations. Following design patterns
+    come under this category.
+
+
+    +   * Singleton Pattern
+
+    * Factory Pattern
+
+    * Abstract Factory Pattern
+
+    * Builder Pattern
+
+    * Prototype Pattern'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Structural Design Patterns: Structural patterns provide different ways to create
+    a class structure for example using inheritance and composition to create a large
+    object from small objects. Following design patterns come under this category.
+
+
+    +   * Adapter Pattern
+
+    * Composite Pattern
+
+    * Proxy Pattern
+
+    * Flyweight Pattern
+
+    * Facade Pattern
+
+    * Bridge Pattern
+
+    * Decorator Pattern'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Behavioral Design Patterns: Behavioral patterns provide solution for the better
+    interaction between objects and how to lose coupling and flexibility to extend
+    easily. Following design patterns come under this category.
+
+
+    +   * Template Method Pattern
+
+    * Mediator Pattern
+
+    * Chain of Responsibility Pattern
+
+    * Observer Pattern
+
+    * Strategy Pattern
+
+    * Command Pattern
+
+    * State Pattern
+
+    * Visitor Pattern
+
+    * Iterator Pattern
+
+    * Interpreter Pattern
+
+    * Memento Pattern'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# SINGLETON PATTERN
+
+
+    Sometimes it’s important for some classes to have exactly one instance. There
+    are many objects we only need one instance of them and if we, instantiate more
+    than one, we’ll run into all sorts of problems like incorrect program behavior,
+    overuse of resources, or inconsistent results.
+
+
+    There are only two points in the definition of a singleton design pattern:
+
+
+    +   * There should be only one instance allowed for a class and
+
+
+    +   * We should allow global point of access to that single instance.
+
+
+    From the definition, it seems to be a very simple design pattern but when it comes
+    to implementation, it comes with a lot of implementation concerns. The implementation
+    of Java Singleton pattern has always been a controversial topic among developers.
+    We will learn about Singleton design pattern principles, different ways to implement
+    Singleton design pattern and some of the best practices for its usage.
+
+
+    Lazy initialization will be beneficial when we want to delay the initialization
+    until it is not needed. because if we use eager initialization and if initialization
+    fails there is no chance to get the instance further while in lazy initialization
+    we get it in second chance. In Lazy initialization we not get instance until we
+    call getInstance () method while in eager initialization creates instance at the
+    time of class loading.
+
+
+    There are some examples where Singleton pattern violation situation can be found.
+
+
+    We will compare the hash code values of the objects to verify the similar objects.
+    If hash code values of two objects are equal, those objects must be equal.
+
+
+    +   * Reflection: Using reflection we can set the private constructor to become
+    accessible at runtime as shown in the example below.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "```\nimport java.lang.reflect.Constructor;\npublic class SingletonR {\n   \
+    \ private static SingletonR instance=new SingletonR();\n    private SingletonR()\
+    \ {\n        System.out.println(\"Creating...\");\n    }\n    public static SingletonR\
+    \ getInstance() {\n        return instance;\n    }\n    public static void main(String[]\
+    \ args) throws Exception {\n        SingletonR s1 = SingletonR.getInstance();\n\
+    \        SingletonR s2 = SingletonR.getInstance();\n        print(\"s1\", s1);\n\
+    \        print(\"s2\", s2);\n        Class cls = Class.forName(\"com.dev.dp.creational.singleton.SingletonR\"\
+    );\n        Constructor<SingletonR> ctor = cls.getDeclaredConstructor();\n   \
+    \     ctor.setAccessible(true);\n        SingletonR s3 = ctor.newInstance();\n\
+    \        print(\"s3\", s3);\n    }\n    static static void print(String name,\
+    \ Object obj) {\n        System.out.println(String.format(\"Object: %s, Hashcode:\
+    \ %d\",name,obj.hashCode()));\n    }\n```\n\n# Output:\n\n![](img/776807b1115a8bf86c1ed9d6357c6fe1_9_0.png)\n\
+    \nHow to fix: Runtime Exception if someone tries to make instance in case instance\
+    \ already exists. This code will go into the private constructor of the Singleton\
+    \ class.\n\n```\nprivate SingletonR() {\n    System.out.println(\"Creating...\"\
+    );\n    if(instance != null) {\n        throw new RuntimeException(\"can't create\
+    \ instance. Please use getInstance());\n    }\n}\n```\n\n# Output post fix:\n\n\
+    ![](img/776807b1115a8bf86c1ed9d6357c6fe1_9_1.png)"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# * Cloning: If we try to make instance by cloning it, the generated hash code\
+    \ of cloned copy doesn't match with the actual object so it also violates the\
+    \ Singleton principle.\n\n```\npublic class Singleton Cloneable {\n    private\
+    \ static Singleton instance=new Singleton();\n    private Singleton() {\n    \
+    \    System.out.println(\"Creating...\");\n    }\n\n    public static Singleton\
+    \ getInstance() {\n        return instance;\n    }\n\n    @Override\n    protected\
+    \ Object clone() throws CloneNotSupportedException {\n        if (instance !=\
+    \ null) throw new CloneNotSupportedException();\n        return super.clone();\n\
+    \    }\n\n    public static void main(String[] args) throws Exception {\n    \
+    \    Singleton s1 = Singleton.getInstance();\n        Singleton s2 = Singleton.getInstance();\n\
+    \        print(\"s1\",s1);\n        print(\"s2\",s2);\n\n        Singleton s3\
+    \ = (Singleton)s1.clone();\n        print(\"s3\",s3);\n    }\n\n    private static\
+    \ void print(String name, Object obj) {\n        System.out.println(String.format(\"\
+    Object : %s, Hashcode: %d\",name,obj.hashCode()));\n    }\n}\n```\n\nOutput:\n\
+    \nCreating...\nObject : s1, Hashcode: 31168322\nObject : s2, Hashcode: 31168322\n\
+    Object : s3, Hashcode: 17225372\n\nHow to fix: Throw CloneNotSupportedException\
+    \ from the clone () method if someone tries to make another instance of it. Uncomment\
+    \ the commented line from clone () to method.\n\nOutput post fix:\n\n```\nCreating...\n\
+    Object : s1, Hashcode: 31168322\nObject : s2, Hashcode: 31168322\nException in\
+    \ thread \"main\" java.lang.CloneNotSupportedException: Singleton.clone(Singleton:18)\n\
+    \    at com.dev.dp.creational.singleton.SingletonC.main(SingletonC.java:29)\n\
+    ```\n\n* Serialization/Deserialization: When we serialize an object and deserialize\
+    \ it again there are different hash code values generated as shown in the example\
+    \ below. So our Singleton principle breaks in case of object serialization/deserialization."
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "```\npublic class Singleton implements Serializable {\n    private static Singleton\
+    \ instance = new Singleton();\n\n    private Singleton() {\n        System.out.println(\"\
+    Creating...\");\n    }\n\n    public static Singleton getInstance() {\n      \
+    \  return instance;\n    }\n\n    public static void main(String[] args) throws\
+    \ Exception {\n        Singleton s1 = Singleton.getInstance();\n        Singleton\
+    \ s2 = Singleton.getInstance();\n\n        System.out.printf(\"%s%s\\n\", s1);\n\
+    \        System.out.printf(\"%s%s\\n\", s2);\n\n        ObjectOutputStream oos\
+    \ = new ObjectOutputStream(new FileOutputStream(\"/tmp/s2.ser\"));\n        oos.writeObject(s2);\n\
+    \        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(\"\
+    /tmp/s2.ser\"));\n        Singleton s3 = (Singleton) ois.readObject();\n     \
+    \   System.out.printf(\"%s%s\\n\", s3);\n\n        private static void print(String\
+    \ name, Object obj) {\n            System.out.println(String.format(\"Object:\
+    \ %s, Hashcode: %d\", name, obj.hashCode()));\n        }\n}\n```\n\n# Output:\n\
+    \nCreating...\nObject : s1, Hashcode: 31168322\nObject : s2, Hashcode: 31168322\n\
+    Object : s3, Hashcode: 6585861\n\n# How to Fix: Implement readResolve() method\
+    \ in the Singleton class as shown below.\n\n```\nprivate Object readResolve()\
+    \ {\n    System.out.println(\"applying read resolve...\");\n    return instance;\n\
+    }\n```\n\n# Output post fix:\n\nCreating...\nObject : s1, Hashcode: 31168322\n\
+    Object : s2, Hashcode: 31168322\napplying read resolve...\nObject : s3, Hashcode:\
+    \ 31168322\n\n* Multithreaded: Singleton will work properly in multithreaded environment\
+    \ only if eager instantiation has been done because this instance creation will\
+    \ happen at the time of class loading only. But for Lazy instantiation we will\
+    \ have to take care of multiple threads. If we want to delay the instantiation\
+    \ because of cost, we use to go with lazy.\n\nFollowing code demonstrates the\
+    \ behavior of Singleton when two threads are executed by comparing their hash\
+    \ code values. Be careful while running the following code as it will work only\
+    \ in Java 8 and later versions."
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "```\npublic class SingletonT {\n    private static SingletonT instance=null;//lazy\
+    \ initialization\n\n    private SingletonT(){\n        System.out.println(\"Creating...\"\
+    );\n    }\n\n    public static SingletonT getInstance(){\n        if (instance\
+    \ == null) {\n            instance = new SingletonT();\n        }\n        return\
+    \ instance;\n    }\n\n    public static void useSingleton() {\n        Singleton\
+    \ singleton = SingletonT.getInstance();\n        print(singleton);\n    }\n\n\
+    \    public static void main(String[] args) throws Exception {\n        ExecutorService\
+    \ service = Executors.newFixedThreadPool(2);\n        service.submit(::useSingleton);\n\
+    \        service.submit(::useSingleton);\n        service.shutdown();\n    }\n\
+    \n    public static void print(String name, Object obj) {\n        System.out.println(String.format(\"\
+    Object : %s, Hashcode: %d\", name, obj.hashCode()));\n    }\n}\n```\n\nCreating...\n\
+    Object : singleton, Hashcode: 14229844\nObject : singleton, Hashcode: 14229844\n\
+    \nWhen you run the program many times you will notice that in multithreaded environment\
+    \ sometimes Singleton principle works but sometimes it violates. Therefore we\
+    \ need to synchronize the getInstance() method as shown below.\n\n```\npublic\
+    \ static synchronized SingletonT getInstance(){\n    if (instance == null) {\n\
+    \        instance = new SingletonT();\n    }\n    return instance;\n}\n```\n\n\
+    After applying synchronize keyword in the getInstance() method the program will\
+    \ execute properly without any issue but Java instead of synchronizing whole method\
+    \ we can synchronize only the block of code which is affected while creating instance\
+    \ to escape the extra overhead as below.\n\n```\npublic static SingletonT getInstance(){\n\
+    \    if (instance == null) {\n        synchronized (SingletonT.class) {\n    \
+    \        instance = new SingletonT();\n        }\n    }\n    return instance;\n\
+    }\n```"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "From the above code we have narrowed down the scope of synchronization for\
+    \ performance reasons. Notice that if a thread at line # 28 sees instance is null\
+    \ and then it gets the lock of object at line # 29. At the same time another thread\
+    \ already has the lock it will create the instance. To make sure no other thread\
+    \ has already acquired the lock we will apply one more check after acquiring the\
+    \ lock as shown below. This method is called Double Checked Locking.\n\n```\n\
+    public static SingletonT getInstance() {\n    if (instance == null) { // check\
+    \ 1\n        synchronized (SingletonT.class) {\n            if (instance == null)\
+    \ { // check 2\n                instance = new SingletonT();\n            }\n\
+    \        }\n    }\n    return instance;\n\n```\n\nSometimes double checked locking\
+    \ also breaks the Principle of Singleton.\n\nJava runtime publishes half initialized\
+    \ variable. Suppose 2 threads thread1&thread2 are entering into the code it goes\
+    \ through the line # 28 to line # 31 and created the instance. At the same time\
+    \ thread 2 enters and it knows there is something in variable named as 'instance'\
+    \ (which is at if half initialized state) and it returns the same from line #\
+    \ 35. Therefore Singleton principle breaks.\n\nTo address this situation use volatile\
+    \ keyword at the time of instance declaration. Value of volatile variable will\
+    \ be published only when the change completes. Change to write operation happens\
+    \ before read operation in volatile variable. In short all threads will see the\
+    \ same value of variable.\n\n```\nprivate static volatile Singleton instance=null;\
+    \ //lazy initialization\n```\n\n**Holder Class (Bill Pugh Method):** Bill Pugh\
+    \ came up with a different approach to create the Singleton class using an inner\
+    \ static helper class."
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "```\npackage com.dev.op.creational.singleton;\n\npublic class Singleton {\n\
+    \    private Singleton() {\n        System.out.println(\"Creating...\");\n   \
+    \ }\n    static class Holder {\n        static final Singleton INSTANCE = new\
+    \ Singleton();\n    }\n\n    public static Singleton getInstance() {\n       \
+    \ return Holder.INSTANCE;\n    }\n\n    public static void main(String[] args)\
+    \ throws Exception {\n        Singleton s1 = Singleton.getInstance();\n      \
+    \  Singleton s2 = Singleton.getInstance();\n        Singleton s3 = Singleton.getInstance();\n\
+    \n        print(\"s1, s2, s3\");\n        print(\"s1, s2, s3\");\n        print(\"\
+    s3, s2, s3\");\n    }\n\n    private static void print(String name, Singleton\
+    \ obj) {\n        System.out.println(String.format(\"Object: %s, %s, %s, %s\"\
+    , obj, name, name, obj.hashCode()));\n    }\n}\n```\n\nCreating...\nObject : s1,\
+    \ Hashcode: 31168322\nObject : s2, Hashcode: 31168322\nObject : s3, Hashcode:\
+    \ 31168322\n\n**Enum Singleton:** Joshua Bloch suggests the use of Enum to implement\
+    \ Singleton design pattern as Java ensures that any enum value is instantiated\
+    \ only once in a Java program. Since Java Enum values are globally accessible,\
+    \ so is the singleton. The drawback is that the enum type is somewhat inflexible;\
+    \ for example, it does not allow lazy initialization.\n\n```\npackage com.dev.dp.creational.singleton;\n\
+    \npublic enum EnumSingleton {\n    INSTANCE;\n\n    public static void doSomething()\
+    \ {\n        // do something\n    }\n}\n```\n\nEnum Singleton doesn’t violate\
+    \ principle of Singleton in any case described above."
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# FACTORY PATTERN\n\nFactory design pattern is used when we have a super class\
+    \ with multiple sub-classes and based on input, we need to return one of the sub-classes.\
+    \ This pattern takes out the responsibility of instantiation of a class from client\
+    \ program to the factory class. We can use Singleton pattern on Factory class\
+    \ or make the factory method static.\n\nSuper class in factory pattern can be\
+    \ an interface or a normal java class.\n\n**Benefits:**\n\n+   * Factory pattern\
+    \ provides approach to interface rather than implementation.\n* Factory pattern\
+    \ removes the instantiation of actual implementation classes from client code,\
+    \ making it more robust, less coupled and easy to extend. For example, we can\
+    \ easily change PC class implementation because client program is unaware of this.\n\
+    * Factory pattern provides abstraction between implementation and client classes\
+    \ because inheritance.\n\n**Usage in JDK:**\n\n+   * java.util.Calendar, ResourceBundle\
+    \ and NumberFormat getInstance() methods uses Factory pattern.\n* valueOf() method\
+    \ in wrapper classes like Boolean, Integer etc.\n\n```\npackage com.dev.dp.creational.factory;\n\
+    public interface IMobile {\n    public void cost();\n    public void pictureCapacity();\n\
+    \    public void batteryPower();\n}\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "```\npublic class Lenovo implements IMobile {\n    @Override\n    public void\
+    \ cost() {\n        System.out.println(\"Lenovo Cost starts from 10000\");\n \
+    \   }\n    @Override\n    public void pictureCapacity() {\n        System.out.println(\"\
+    Lenovo camera capacity starts from 10 MP\");\n    }\n    @Override\n    public\
+    \ void batteryPower() {\n        System.out.println(\"Lenovo battery power starts\
+    \ from 2500 Mah\");\n    }\n    @Override\n    public String toString() {\n  \
+    \      return \"Lenovo\" + toString()+\"=\" + super.toString() + \" \";\n    }\n\
+    }\n```\n\n```\npublic class Samsung implements IMobile {\n    @Override\n    public\
+    \ void cost() {\n        System.out.println(\"Samsung Cost starts from 6000\"\
+    );\n    }\n    @Override\n    public void pictureCapacity() {\n        System.out.println(\"\
+    Samsung camera capacity starts from 4 MP\");\n    }\n    @Override\n    public\
+    \ void batteryPower() {\n        System.out.println(\"Samsung battery power starts\
+    \ from 1200 Mah\");\n    }\n}\n```\n\n```\npackage com.dev.dp.creational.factory;\n\
+    public class MobileFactory {\n    public MobileFactory() {\n    }\n    public\
+    \ IMobile createMobile(String type) {\n        IMobile mob=null;\n        if(\"\
+    len\".equalsIgnoreCase(type)) {\n            mob=new Lenovo();\n            System.out.println(\"\
+    Lenovo created\");\n        } else if(\"sams\".equalsIgnoreCase(type)) {\n   \
+    \         mob=new Samsung();\n            System.out.println(\"Samsung created\"\
+    );\n        }\n        return mob;\n    }\n}\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "```\npublic class FactoryTest {\n    public static void main(String[] args)\
+    \ {\n        MobileFactory factory = new MobileFactory();\n        Lenovo len\
+    \ = (Lenovo)factory.createMobile(\"len\");\n        len.batteryPower();\n\n  \
+    \      Samsung sam = (Samsung)factory.createMobile(\"sam\");\n        sam.cost();\n\
+    \    }\n}\n```\n\n# Output:\n\n```\nLenovo created\nLenovo battery power starts\
+    \ from 2500 mAh\nSamsung created\nSamsung Cost starts from 6000\n```\n\nOther\
+    \ Example: Animal: Dog, Cat, Fox etc."
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# ABSTRACT FACTORY PATTERN
+
+
+    Almost similar to except the fact that it''s more like factory of factories. If
+    you are familiar with factory design pattern in java, you will notice that we
+    have a single Factory class that returns the differ sub-classes based on the input
+    provided and factory uses if-else or switch statement to achieve this. In Abstract
+    Factory pattern, we get rid of if-else block and have a factory class for each
+    sub-class and then an Abstract Factory that will return the sub-class based on
+    the input factory class.
+
+
+    An abstract factory is a factory that returns factories. Why is this layer of
+    abstraction useful? A normal factory is used to create sets of related objects.
+    An abstract factory returns factories. Thus, an abstract factory is used to return
+    factories that can be used to create sets of related objects.
+
+
+    As an example, you could have a Honda factory that returns car objects (Brio,
+    Civic, etc.) associated with a Honda factory. You could also have a Hyundai factory
+    that returns car objects (Santro, EON) associated with a Hyundai factory. We could
+    create an abstract factory that returns these different types of factories depending
+    on the car that we were interested in. We could then obtain car objects from the
+    car factories. Via polymorphism, we can use a common interface to get the different
+    factories, and we could then use a common interface to get the different cars.
+
+
+    # Benefits:
+
+
+    +   * Abstract Factory pattern provides approach to code for interface rather
+    than implementation.
+
+
+    +   * Abstract Factory pattern is “factory of factories” and can be easily extended
+    to accommodate more products, for example we can add another sub-class Cerio and
+    a factory MarutiFactory.
+
+
+    +   * Abstract Factory pattern is robust and avoid conditional logic of Factory
+    pattern.
+
+
+    # Use in JDK:
+
+
+    +   * javax.xml.parsers.DocumentBuilderFactory#newInstance()
+
+
+    +   * javax.xml.transform.TransformerFactory#newInstance()
+
+
+    +   * javax.xml.xpath.XPathFactory#newInstance()
+
+
+    When to use: A family of related product objects is designed to be used together,
+    and we need to enforce this constraint.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "```\npackage com.dp.creational.abstractFactory;\n\npublic interface IMobileFactory\
+    \ {\n    IMobileFactory createMobile(String type);\n}\n\npublic class MobileFactory\
+    \ implements IMobileFactory {\n    @Override\n    public IMobileFactory createMobile(String\
+    \ type) {\n        IMobileFactory mob = null;\n        if (\"lenf\".equalsIgnoreCase(type))\
+    \ {\n            mob = new LenovoMobileFactory();\n        } else if (\"samf\"\
+    .equalsIgnoreCase(type)) {\n            mob = new SamsungMobileFactory();\n  \
+    \      }\n        return mob;\n    }\n}\n\npublic class LenovoMobileFactory extends\
+    \ MobileFactory {\n    public Lenovo createLenovo() {\n        return new Lenovo();\n\
+    \    }\n}\n\npublic class SamsungMobileFactory extends MobileFactory {\n    public\
+    \ Samsung createSamsungMobile() {\n        return new Samsung();\n    }\n}\n\n\
+    public class AbstractFactoryTest {\n    public static void main(String[] args)\
+    \ {\n        MobileFactory factory = new MobileFactory();\n        IMobileFactory\
+    \ info = factory.createMobile(\"lenf\");\n        Lenovo len = (Lenovo)info.createLenovoMobile();\n\
+    \        len.pictureCapacity();\n    }\n}\n```\n\n# Output:\n\nLenovo camera capacity\
+    \ starts from 10 MP\n\nOther Example:\nnHonda Factory: Brio, Civic,\nHundai Factory:\
+    \ Santro, EON etc."
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# BUILDER PATTERN
+
+
+    In general, the details of object construction, such as instantiating and initializing
+    the components that make up the object, are kept within the object, often as part
+    of the constructor. This type of design closely ties the object construction process
+    with the components that make up the object. This approach is suitable as long
+    the object under construction is simple and the object construction process is
+    definite and always produces the same representation of the object.
+
+
+    However, this design may not be effective when the object being created is complex
+    and the series of steps constituting the object creation process can be implemented
+    in different ways, thus producing different representations of the object. Because
+    the different implementations of the construction process are all kept within
+    the object, the object can become bulky (construction bloat) and less modular.
+    Subsequently, adding a new implementation or making changes to an existing implementation
+    requires changes to the existing code.
+
+
+    Using the Builder pattern, the process of constructing such an object can be designed
+    more effectively. The Builder pattern suggests moving the construction logic out
+    of the object class to a separate class referred to as a builder class. There
+    can be more than one such builder classes, each with different implementations
+    for the series of steps to construct the object. Each builder implementation results
+    in a different representation of the object.
+
+
+    The intent of the Builder Pattern is to separate the construction of a complex
+    object from its representation, that the same construction process can create
+    different representations. This type of separation reduces the object size. The
+    design turns out to be more modular with each implementation contained in a different
+    builder object. Adding a new implementation (i.e., adding a new builder) becomes
+    easier. The object construction process becomes independent of the components
+    that make up the object. This provides more control over.
+
+
+    The Builder pattern suggests using a dedicated builder referred to as a Director,
+    which is responsible for invoking different builder methods required for the construction
+    of the final object. Different client objects can use of the Director to create
+    the required object. Once the object is constructed, the client object can directly
+    request from the builder the fully constructed object. To facilitate this process,
+    a new method getObject() can be declared in the common Builder interface to be
+    implemented by different concrete builders.
+
+
+    # Builder
+
+
+    +   * Specifies an abstract interface for creating parts of a Product object.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# ConcreteBuilder\n\n+   * Constructs assembles parts of the product by implementing\
+    \ the Builder interface.\n* Defines and keeps track of the representation it creates.\n\
+    * Provides an interface for retrieving the product.\n\n# Director\n\n+   * Constructs\
+    \ an object using the Builder interface.\n\n# Product\n\n+   * Represents the\
+    \ complex object under construction. ConcreteBuilder builds the product's internal\
+    \ representation and defines the process by which it's assembled.\n* Includes\
+    \ classes that define the constituent parts, including interfaces for assembling\
+    \ the parts into the final result.\n\nExample:\ncom.dev.dp.creational.builder2\n\
+    - BuilderTest.java\n IndianMealBuilder.java\n JapaneseMealBuilder.java\n Meal.java\n\
+    \ MealBuilder.java\n MealDirector.java\n\n# Another form of the Builder Pattern:\n\
+    \nSometimes there is an object with a long list of properties\n\nThe question\
+    \ is, what sort of constructor should we write for such class? Writing a constructor\
+    \ with long list of parameters is not a good choice, this could frustrate the\
+    \ client especially if the important fields are only a few. This could increase\
+    \ the scope of error; the client may provide a value accidentally to a wrong field.\
+    \ Long sequences of identically typed parameters can cause subtle bugs. If the\
+    \ client reverses two such parameters, the compiler won't complain, but the program\
+    \ will misbehave at runtime.\n\nInstead of making the desired object directly,\
+    \ the client calls a constructor with all of the required parameters and gets\
+    \ a builder object. The client calls setter-methods on the builder object to set\
+    \ each optional parameter of interest. Finally, the client calls a parameterless\
+    \ method to generate the object.\n\n+   * First of all you need to create a static\
+    \ nested class and copy all the arguments to the outer class is the Builder class.\
+    \ We should follow the naming convention and if the class name is Cake then builder\
+    \ class should be named as CakeBuilder.\n\n+   * The Builder class should have\
+    \ a public constructor with all the required attributes as parameters."
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "* Builder should have methods to set the optional parameters and it should\
+    \ return the same Builder object after setting the optional attribute.\n\n* The\
+    \ final step is to provide a build () method in the builder class that will return\
+    \ the Object needed by client program. For this we need to have a private constructor\
+    \ in the Class with Builder as argument.\n\n```\nclass Cake {\n    private double\
+    \ sugar; //cup\n    private double butter; //cup\n    private double milk; //cup\n\
+    \    private int cherry; //cup\n\n    public static class CakeBuilder {\n    \
+    \    private double sugar;\n        private double butter;\n        private double\
+    \ milk;\n        private int cherry;\n\n        public CakeBuilder sugar(double\
+    \ sugar) {\n            this.sugar = sugar;\n            return this;\n      \
+    \  }\n        public CakeBuilder butter(double butter) {\n            this.butter\
+    \ = butter;\n            return this;\n        }\n        public CakeBuilder milk(double\
+    \ milk) {\n            this.milk = milk;\n            return this;\n        }\n\
+    \        public CakeBuilder cherry(int cherry) {\n            this.cherry = cherry;\n\
+    \            return this;\n        }\n\n        public Cake build() {\n      \
+    \      return new Cake(this.sugar, this.butter, this.milk, this.cherry);\n   \
+    \     }\n    }\n\n    private Cake(double sugar, double butter, double milk, int\
+    \ cherry) {\n        this.sugar = sugar;\n        this.butter = butter;\n    \
+    \    this.milk = milk;\n        this.cherry = cherry;\n    }\n}\n```\n\n```\n\
+    // private constructor to enforce object creation through builder\nprivate Cake(CakeBuilder\
+    \ builder) {\n    this.sugar = builder.sugar;\n    this.butter = builder.butter;\n\
+    \    this.milk = builder.milk;\n    this.cherry = builder.cherry;\n}\n```\n\n\
+    ```\n@Override\npublic String toString() {\n    return \"Cake[\" + sugar + \"\
+    , butter=\" + butter + \", milk=\" + milk + \n```\n\n```\npublic class BuilderPattern\
+    \ {\n    public static void main(String[] args) {\n        // Creating object\
+    \ using Builder pattern\n        Cake cake = new CakeBuilder().sugar(0.5).butter(0.5).milk(0.5).build();\n\
+    \        \n        // Cake is ready to eat!\n        System.out.println(cake);\n\
+    \    }\n}\n```\n\nOutput: Cake[sugar=1.0, butter=0.5, milk=0.5, cherry=0]\n\n\
+    In static setting property, we can use setter method as another option.\nAs you\
+    \ can clearly see, now client only needs to provide the mandatory fields and the\
+    \ fields which are important to him. To form the object now, we need to invoke\
+    \ the CakeBuilder constructor which takes the mandatory fields and then we need\
+    \ to call the required methods and it finally the build method to get the form\
+    \ object."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# When to use the Builder Pattern:
+
+
+    Use the Builder pattern when
+
+
+    +   * The algorithm for creating a complex object object should be independent
+    of the parts that make up the object and how they’re assembled.
+
+
+    +   * The construction process must allow different representations for the object
+    that’s constructed.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Builder Pattern in JDK:
+
+
+    +   * java.lang.StringBuilder#append() (unsynchronized)
+
+    * java.lang.StringBuilder#append() (synchronized)
+
+    * java.nio.ByteBuffer#put() (also on CharBuffer, ShortBuffer, IntBuffer, LongBuffer,
+    FloatBuffer and DoubleBuffer)
+
+    * javax.swing.GroupLayout.Group#addComponent()
+
+    * All implementations of java.lang.Appendable.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# PROTOTYPE PATTERN
+
+
+    Prototype pattern is one of the Creational Design patterns, so it provides a mechanism
+    of object creation. Prototype pattern is used when the Object creation is a costly
+    affair and requires a lot of time and resources and you have a similar object
+    already existing. This so pattern provides a mechanism to copy the original object
+    to a new object and then modify it according to our needs. This pattern uses java
+    cloning to the object.
+
+
+    It would be easy to understand this pattern with an example, suppose we have an
+    Object that loads data from database. Now we need to modify this data in our program
+    multiple times, so it''s not a good idea to create the Object using new keyword
+    and load all the data from database. So the better approach is to clone the existing
+    object into a new object and then do the data manipulation.
+
+
+    Prototype design pattern mandates the Object which you are copying should provide
+    the copying feature. It should not be done by any other class. However whether
+    to use shallow or deep copy of the Object properties depends on the requirements
+    and it''s a design decision.
+
+
+    One example of how this is useful is if an original object is created with a resource
+    such as a data stream that may not be available at the time that a clone of the
+    object is needed. Another example is if the original object creation involves
+    a significant time commitment, such as reading data from a database or over a
+    network.
+
+
+    Normally in Java, if you''d like to use cloning (i.e., the prototype pattern),
+    you can utilize the clone () method and the Cloneable interface. By default, clone
+    () performs a shallow copy. Serializable can be used to simplify deep copying.
+
+
+    However, we can implement our own prototype pattern. To do so, we''ll create a
+    Prototype interface that features a doClone () method.
+
+
+    Below example describes how to design an advanced bike after cloning the basic
+    bike object.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\npublic class Bike implements Cloneable {\n    private int gears;\n   \
+    \ private String bitype;\n    private String model;\n\n    public Bike() {\n \
+    \       betype=\"Standard\";\n        model=\"leopard\";\n        gears=4;\n \
+    \   }\n\n    public Bike clone() {\n        return new Bike();\n    }\n\n    public\
+    \ void makeAdvanced() {\n        betype=\"Advanced\";\n        model=\"Jaguar\"\
+    ;\n        gears=6;\n    }\n\n    public String getModel() {\n        return model;\n\
+    \    }\n\n    @Override\n    public String toString() {\n        return \"Bike[gears=\"\
+    \ + gears + \", bitype=\" + bitype + \", model=\" + model + \"]\";\n    }\n}\n\
+    ```\n\n```\npublic class PrototypeTest {\n    public Bike makeJaguar(Bike basicBike)\
+    \ {\n        basicBike.makeAdvanced();\n        return basicBike;\n    }\n\n \
+    \   public static void main(String[] args) {\n        Bike bike = new Bike();\n\
+    \        PrototypeTest pt = new PrototypeTest();\n        Bike advancedBike =\
+    \ pt.makeJaguar(bike);\n        System.out.println(\"Prototype Design Pattern:\
+    \ \"+advancedBike.getModel());\nn        System.out.println(\"Prototype Design\
+    \ Pattern: \"+advancedBike.toString());\nn    }\n}\n```\n\n# Output:\n\nPrototype\
+    \ Design Pattern: Jaguar\nPrototype Design Pattern: Bike [gears=6, bitype=Advanced,\
+    \ model=Jaguar]\n\n# When to Use:\n\n+   * When the instances are specified at\
+    \ run-time, for example, by dynamic loading; or\n\n+   * To avoid building a class\
+    \ hierarchy of factories that parallels the class hierarchy of products; or\n\n\
+    +   * When instances of a class can have one of only a few different combinations\
+    \ of state. It may be more convenient to install a corresponding number of prototypes\
+    \ and clone them"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'rather than instantiating the class manually, each time with the appropriate
+    state.
+
+
+    **Usage in JDK:** java.lang.Object#clone ()'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# ADAPTER PATTERN\n\nSometimes, there could be a scenario when two objects\
+    \ don't fit together, as they\nin-order to get the work done. This situation could\
+    \ arise when we are trying to integrate a\nlegacy code with a new code, or when\
+    \ changing a 3rd party API in the code. This is due to\nincompatible interfaces\
+    \ of the two objects which don't fit together.\n\nIn other words, **Adapter design\
+    \ pattern** is one of the structural design patterns and it's\nused so that two\
+    \ unrelated interfaces can work together. The object that joins these\nunrelated\
+    \ interfaces is called an **Adapter**. As a real life example, we can think of\
+    \ a mobile\ncharger as an adapter because mobile battery needs 3 volts to charge\
+    \ the normal socket\nproduces 120V (US) or 240V (India). So the mobile charger\
+    \ works as an adapter\nbetween mobile charging socket and the wall socket.\n\n\
+    In the adapter pattern, a wrapper class (i.e., the adapter) is used translate\
+    \ requests from it\nto another class (i.e., the adaptee). In effect, an adapter\
+    \ provides particular interactions\nwith an adaptee that are not offered by the\
+    \ adaptee.\n\nThe adapter pattern takes two forms. In the first form, a “class\
+    \ adapter” utilizes\ninitance. The class adapter extends the adaptee class and\
+    \ adds the desired methods to\nan an interface (i.e., the “target” interface).In\
+    \ thensecond form; an “object adapter” utilizes composition. The object adapter\
+    \ contains an\nadapter and implements the target interface to interact with the\
+    \ adaptee.\n\npublic class Apple {\n\n```\npublic void getAppleColor(String color){\n\
+    \    System.out.println(\"Apple color is :\"+color);\n}\n```\n\npublic class Orange\
+    \ {\n\n```\npublic void getOrangeColor(String color){\n    System.out.println(\"\
+    Orange color is :\"+color);\n}\n```\n\npublic class AppleAdapter extends Apple\
+    \ {\n\n```\n//The purpose of the sample problem is to adapt an orange as an apple.\n\
+    private Orange orange;\npublic AppleAdapter(Orange orange) {\n    this.orange\
+    \ = orange;\n}\n```\n\n```\npublic void getColor(String color){\n    orange.getOrangeColor(color);\n\
+    }\n```\n\n}"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "```\npublic class AdapterPatternTest {\n    public static void main(String[]\
+    \ args) {\n\n        Apple apple1 = new Apple();\n        apple1.getAppleColor(\"\
+    green\");\n\n        Orange orange = new Orange();\n        AppleAdapter adapter\
+    \ = new AppleAdapter(orange);\n        adapter.getAppleColor(\"red\");\n    }\n\
+    }\n```\n\nOutput:\n\n![](img/776807b1115a8bf86c1ed9d6357c6fe1_31_0.png)\n\nOrange\
+    \ is adoptee, apple is target & AppleAdapter is the adapter. Here idea is to pass\
+    \ adoptee in adapter’s constructor to achieve the goal."
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# When to use Adapter Pattern:
+
+
+    The Adapter pattern should be used when:
+
+
+    +   * There is an existing class, and its interface does not match the one you
+    need.
+
+    * You want to create a reusable class that cooperates with unrelated or unforeseen
+    classes, that is, classes that don’t necessarily have compatible interfaces.
+
+
+    +   * There are several existing subclasses to be use, but it’s impractical to
+    adapt their interface by subclassing every one. An object adapter can adapt the
+    interface of its parent class.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Adapter Pattern Example in JDK:
+
+
+    +   * java.util.Arrays#asList()
+
+    * java.io.InputStreamReader(InputStream) (returns a Reader)
+
+    * java.io.OutputStreamWriter(OutputStream) (returns a Writer)'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# COMPOSITE PATTERN
+
+
+    There are times when you feel a need of a tree data structure in your code. There
+    are many variations to the tree data structure, but sometimes there is a need
+    of a tree in which both branches as well as leaves of the tree should be treated
+    as uniformly.
+
+
+    The Composite Pattern allows you to compose objects into a tree structure to represent
+    the part-whole hierarchy which means you can create a tree of objects that are
+    made of different parts, but that can be treated as one big thing. **Composite
+    lets clients to treat individual objects and compositions of objects uniformly,
+    that''s the intent of the Composite Pattern.**
+
+
+    In the composite pattern, a tree structure exists where identical operations can
+    be performed on leaves and nodes. A node in a tree is a class that can have children.
+    A node class is a ''composite'' class. A leaf in a tree is a ''primitive'' class
+    that does not have children. The children of a composite can be leaves or other
+    composites.
+
+
+    The leaf and the composite class share a common ''component'' interface that defines
+    the common operations that can be performed on leaves and composites. When an
+    operation on a composite is performed, this operation is performed on all children
+    of the composite, whether they are leaves or composites. Thus, the composite pattern
+    can be used to perform common operations on the objects that compose a tree.
+
+
+    In other words, Composite Pattern consists of following objects.
+
+
+    **Base Component** – Base component is the interface for all objects in the composition,
+    client program uses base component to work with the objects in the composition.
+    It can be an interface or an abstract class with some methods common to all the
+    objects.
+
+
+    **Leaf** – Defines the behavior for the elements in the composition. It is the
+    building block for the composition and implements base component. It doesn''t
+    have references to other Components.
+
+
+    **Composite** – It consists of leaf elements and implements the operations in
+    base component.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "![](img/776807b1115a8bf86c1ed9d6357c6fe1_37_0.png)\n\n```\npackage com.dev.dp.structural.composite;\n\
+    /**\n* First we will create component interface.\n* represents object in composition\n\
+    * It has all common operation that will be applicable to both manager and developer.\n\
+    * *\n* Manager(Composite)\n* Developer(Leaf)\n* Employee(Component)\n */\npublic\
+    \ interface Employee {\n    public void add(Employee emp);\n    public void remove(Employee\
+    \ emp);\n    public Employee getChild(int i);\n    public String getName();\n\
+    \    public double getSalary();\n    public void print();\n}\n\nn/**\n* Now we\
+    \ will create manager(composite class).\n* Key point is that all common method\
+    \ delegates its operations to child objects.\n* It has method to access and modify\
+    \ its children.\n */\nimport java.util.ArrayList;\npublic class Manager implements\
+    \ Employee {\n    private String name;\n    private double salary;\n\n    public\
+    \ Manager(String name, double salary) {\n        this.name = name;\n        this.salary\
+    \ = salary;\n    }\n    List<Employee> employees = new ArrayList<Employee>();\n\
+    \n    @Override\n    public void add(Employee emp) {\n        employees.add(emp);\n\
+    \    }\n\n    @Override\n    public void remove(Employee emp) {\n        employees.remove(emp);\n\
+    \    }\n\n    @Override\n    public Employee getChild(int i) {\n        return\
+    \ employees.get(i);\n    }\nn}\n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "```\n@Override\npublic String getName() {\n    return name;\n}\n```\n\n```\n\
+    @Override\npublic double getSalary() {\n    return salary;\n}\n```\n\n```\n@Override\n\
+    public void print() {\n    System.out.println(\"--- Name=\" + getName());\n  \
+    \  System.out.println(\"Salary=\" + getSalary());\n    System.out.println(\"---------------------\"\
+    );\n}\n```\n\n```\nIterator<Employee> empIterator = employees.iterator();\nwhile(empIterator.hasNext())\
+    \ {\n    Employee emp = empIterator.next();\n    emp.print();\n}\n```\n\n+   *\
+    \ In this class, there are many methods which are not applicable to developer\n\
+    * it is a leaf node.\n\n# public class Developer implements Employee {\n\n```\n\
+    private String name;\nprivate double salary;\n```\n\n```\npublic Developer(String\
+    \ name, double salary) {\n    this.name = name;\n    this.salary = salary;\n}\n\
+    ```\n\n```\n@Override\npublic void add(Employee emp) {\n    // this is leaf node\
+    \ so this method is not applicable to this class.\n}\n```\n\n```\n@Override\n\
+    public void remove(Employee emp) {\n    // this is leaf node so this method is\
+    \ not applicable to this class.\n}\n```\n\n```\n@Override\npublic Employee getChild(int\
+    \ i) {\n    // this is leaf node so this method is not applicable to this class.\n\
+    \    return null;\n}\n```\n\n```\n@Override\npublic String getName() {\n    return\
+    \ name;\n}\n```\n\n```\n@Override\npublic double getSalary() {\n    return salary;\n\
+    }\n```\n\n```\n@Override\npublic void print() {\n    System.out.println(\"---\
+    \ Name=\"+getName());\n    System.out.println(\"Salary=\"+getSalary());\n    System.out.println(\"\
+    ---------------------\");\n}\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "```\npackage com.dev.dp.structural.composite;\n\npublic class CompositePatternTest\
+    \ {\n\n    public static void main(String[] args) {\n\n        Employee emp1 =\
+    \ new Developer(\"John\", 10000);\n        Employee emp2 = new Developer(\"David\"\
+    , 15000);\n        Employee manager1 = new Manager(\"Daniel\", 25000);\n     \
+    \   manager1.add(emp1);\n        manager1.add(emp2);\n\n        Employee emp3\
+    \ = new Developer(\"Michael\", 20000);\n        Manager generalManager = new Manager(\"\
+    Mark\", 50000);\n        generalManager.add(emp3);\n        generalManager.add(manager1);\n\
+    \        generalManager.print();\n    }\n}\n\n```\n\n# Output:\n\n![](img/776807b1115a8bf86c1ed9d6357c6fe1_39_0.png)\n\
+    \n# When to use Composite Pattern:\n\n+   * When you want to represent part-whole\
+    \ hierarchies of objects.\n* When you want clients to be able to ignore the difference\
+    \ between compositions of objects and individual objects. Clients will treat all\
+    \ objects in the composite structure uniformly.\n\n# Usage in JDK:\n\njava.awt.Container#add\
+    \ (Component) is a great example of Composite pattern in java and used a lot in\
+    \ Swing."
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# PROXY PATTERN\n\nThe Proxy Pattern provides a surrogate or placeholder for\
+    \ another object to control access to it.\n\nThe Proxy Pattern is used to create\
+    \ a representative object that controls access to another object, which may be\
+    \ remote, expensive to create or in need of being secured.\n\nOne reason for controlling\
+    \ access to an object is to defer the full cost of its creation and initialization\
+    \ until we actually need to use it. Another reason could be to act as a local\
+    \ representative for an object that lives in a different JVM. The Proxy can be\
+    \ very useful in controlling the access to the original object, especially when\
+    \ objects should have different access rights.\n\nIn the Proxy Pattern, a client\
+    \ does not directly talk to the original object, it delegates to the proxy which\
+    \ calls the methods of the original object. The important point is that the client\
+    \ does not know about the proxy, the proxy acts as an original object for the\
+    \ client. But there are many variations to this approach which we will see soon.\n\
+    \nThere are three main variations to the Proxy Pattern:\n\n+   * A remote proxy\
+    \ provides a local representative for an object in a different address space.\n\
+    \n+   * A virtual proxy creates expensive objects on demand.\n\n+   * A protection\
+    \ proxy controls access to the original object. Protection proxies are useful\
+    \ when objects should have different access rights.\n\n```\npublic interface IFolder\
+    \ {\n    public void performOperations();\n}\n```\n\n```\npublic class Folder\
+    \ implements IFolder {\n    @Override\n    public void performOperations() {\n\
+    \        // access folder and perform various operations like copy or cut files\n\
+    \        System.out.println(\"Performing operation on folder\");\n    }\n}\n```"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "```\npublic class User {\n    String username;\n    String password;\n\n  \
+    \  public User(String username, String password) {\n        super();\n       \
+    \ this.username = username;\n        this.password = password;\n    }\n\n    public\
+    \ String getUsername() {\n        return username;\n    }\n\n    public void setUsername(String\
+    \ username) {\n        this.username = username;\n    }\n\n    public String getPassword()\
+    \ {\n        return password;\n    }\n\n    public void setPassword(String password)\
+    \ {\n        this.password = password;\n    }\n}\n```\n\n```\npublic class FolderProxy\
+    \ implements IFolder {\n    Folder folder;\n    User user;\n\n    public FolderProxy(User\
+    \ user) {\n        this.user = user;\n    }\n\n    @Override\n    public void\
+    \ performOperations(String dev) {\n        if (user.getPassword().equalsIgnoreCase(dev))\
+    \ {\n            folder = new Folder();\n            folder.performOperations();\n\
+    \        } else {\n            System.out.println(\"You don't have access to this\
+    \ folder\");\n        }\n    }\n}\n```\n\n```\npackage com.dev.dp.proxyPatternTest;\n\
+    public class ProxyPatternTest {\n    public static void main(String[] args) {\n\
+    \        User user = new User(\"dev\", \"dev\");\n        FolderProxy folderProxy\
+    \ = new FolderProxy(user);\n        System.out.println(\"***** username and password\
+    \ are correct:*\");\n        folderProxy.performOperations();\n        System.out.println(\"\
+    ****************************************\");\n        // if incorrect username\
+    \ and Password\n        User userWrong = new User(\"abc\", \"abc\");\n       \
+    \ FolderProxy folderProxyWrong = new FolderProxy(userWrong);\n        System.out.println(\"\
+    ***** username and password are incorrect:*\");\n        folderProxyWrong.performOperations();\n\
+    \    }\n}\n```\n\nOutput:"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '```
+
+    When userName and password are correct:
+
+    Performing operation on folder
+
+    ****************************************
+
+    When userName and password are incorrect:
+
+    You don''t have access to this folder
+
+    ```
+
+
+    # When to use the Proxy Pattern:
+
+
+    Proxy is applicable whenever there is a need for a more versatile or sophisticated
+    reference to an object than a simple pointer. Here are several common situations
+    in which the Proxy pattern is applicable:
+
+
+    +   * A remote proxy provides a local representative for an object in a different
+    address space.
+
+    * A virtual proxy creates expensive objects on demand.
+
+    * A protection proxy controls access to the original object. Protection proxies
+    are useful when objects should have different access rights.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Proxy Pattern in JDK:
+
+
+    The following cases are examples of usage of the Proxy Pattern in the JDK.
+
+
+    +   * java.lang.reflect.Proxy
+
+    * java.rmi.rmi.* (whole package)'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# FAÇADE PATTERN\n\nThe Facade pattern is a structural design pattern. In the\
+    \ facade pattern, a facade classes is used to provide a single interface to set\
+    \ of classes. The facade simplifies a client's interaction with a complex system\
+    \ by localizing the interactions into a single interface. As a result, the client\
+    \ can interact with a single object rather than being required to interact directly\
+    \ in complex ways with the objects that make up the subsystem.\n\nAccording to\
+    \ GoF design pattern: Provide a unified interface to a set of interfaces in a\
+    \ subsystem. Facade Pattern defines a higher-level interface that makes the subsystem\
+    \ easier to use.\n\nThe Facade does not encapsulate the subsystem classes or interfaces;\
+    \ it provides a simplified interface to their functionality. A client can access\
+    \ these classes directly. It still exposes the full functionality of the system\
+    \ for the clients who may need it. It just provides a layer to the complex interfaces\
+    \ of the sub-system which makes it easier to use.\n\nFacade design pattern is\
+    \ one among the other design patterns that promote loose coupling. It emphasizes\
+    \ one more important aspect of design which is abstraction. By hiding the complexity\
+    \ behind exposing a simple interface it achieves abstraction.\n\nFacade can wrap\
+    \ multiple classes, but a facade is used to an interface to simplify the of the\
+    \ complex interface, whereas, an adapter is used to convert the interface to an\
+    \ client expects.\n\nMediator design pattern may look very similar to facade design\
+    \ pattern in terms of abstraction, Mediator abstracts the functionality of the\
+    \ subsystems in which it is similar to the facade pattern. In the implementation\
+    \ of mediator pattern, subsystem or peers are aware of the mediator and interact\
+    \ with it. In the case of facade pattern, subsystems are not aware of the existence\
+    \ of facade. Only facade talks to the subsystems.\n\n```\npackage com.dev.dp.structural.facade;\n\
+    public class Class {\n// Class's doSomethingComplicated(method) takes an integer\
+    \ and returns its cube.\npublic int doSomethingComplicated(int x) {\n    return\
+    \ x * x * x;\n}\n\n```"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\npackage com.dev.structural.facade;\npublic class Class2 {\n    /*Class2.doAnotherThing()\
+    \ doubles the cube of an integer and returns it.*/\n    public int doAnotherThing(Class1\
+    \ class1, int x) {\n        return 2 * class1.doSomethingComplicated(x);\n   \
+    \ }\n}\n```\n\n```\npackage com.dev.structural.facade;\npublic class Class3 {\n\
+    \    /*Class3.doMoreStuff() takes a Class1 object, a Class2 object,and multiply\
+    \ them.*\n    public int doMoreStuff(Class1 class1, Class2 class2, int x) {\n\
+    \        return class1.doSomethingComplicated(x) * class2.doAnotherThing(class1,\
+    \ x);\n    nn}\",\n```\n\n```\npackage com.dev.structural.facade;\npublic class\
+    \ facade {\n    // we need it to simplify interaction with this system of classes\n\
+    \    // so that clients can interact with these classes in a simple, standardized\
+    \ manner.\n    // The facade will hide the fact that the names of methods clearly\
+    \ indicate what they do, and hide the interactions of Class1, Class2, and Class3\
+    \ from\n    public int cubeX(int x) {\n        Class1 class1 = new Class1();\n\
+    \        return class1.doSomethingComplicated(x);\n    }\n\n    public int cubeTimes(int\
+    \ x) {\n        Class1 class1 = new Class1();\n        Class2 class2 = new Class2();\n\
+    \        return class2.doAnotherThing(class1, x);\n    }\n\n    public int multiplyBoth(int\
+    \ x) {\n        Class1 class1 = new Class1();\n        Class2 class2 = new Class2();\n\
+    \        Class3 class3 = new Class3();\n        return class3.doMoreStuff(class1,\
+    \ class2);\n    }\n}\n```\n\n```\npackage com.dev.dp.structural.facade;\npublic\
+    \ class FacadeTest {\n    public static void main(string[] args) {\n        Facade\
+    \ facade = new Facade();\n        int x = 3;\n        System.out.println(\"Cube\
+    \ of \" + x + \": \" + facade.cubeX(x));\n        System.out.println(\"Cube of\
+    \ \" + x + \" * times 2: \" + facade.cubeTimes(x));\n        System.out.println(\"\
+    multiply \" + class1 + \" & \" + class2 + \": \" + facade.multiplyBoth(x));\n\
+    \    }\nn\n```\n\nOutput:\n\n```\nCube of 3:27\nCube of 3 times 2:54\nmultiply\
+    \ class1 & class2 :1458\n```\n\n# Important Points:\n\n+   * Facade pattern is\
+    \ more like a helper for client applications; it doesn't hide subsystem"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'interfaces from the client. Whether to use Facade or not is completely dependent
+    on client code.
+
+
+    +   * Facade pattern can be applied at any point of development, usually when
+    the number of interfaces grows and system gets complex.
+
+
+    +   * Subsystem interfaces are not aware of Facade and they shouldn’t have any
+    reference of the Facade interface.
+
+
+    +   * Facade pattern should be applied for similar kind of interfaces; its purpose
+    is to provide a single interface rather than multiple interfaces that does the
+    similar kind of jobs.
+
+
+    +   * Subsystem may be dependent with one another. In such case, facade can act
+    as a coordinator and decouple the dependencies between the subsystems.
+
+
+    +   * We can use factory design pattern with Facade to provide better interface
+    to client systems.
+
+
+    # Usage in Java:
+
+
+    In javax.faces.context, ExternalContext internally uses ServletContext, HttpSession,
+    HttpServletRequest, HttpServletResponse, etc. It allows the Faces API to be unaware
+    of the nature of its containing application environment.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# BRIDGE PATTERN
+
+
+    When we have interface hierarchies in both interfaces as well as implementations,
+    then builder design pattern is used to decouple the interfaces from implementation
+    and hiding the implementation details from the client programs.
+
+
+    According to GoF bridge design pattern is: Decouple an abstraction from its implementation
+    so that the two vary independently.
+
+
+    In the pattern bridge, we separate an abstraction and its implementation and develop
+    separate inheritance structures for both the abstraction and the implementer.
+    The abstraction is an interface or abstract class, The abstraction contains a
+    reference to the implementer. Children of the concrete implementer is likewise
+    an interface or abstract class. The abstraction are referred to as refined abstractions,
+    and children of the implementer are concrete implementers. Since we are can change
+    the reference to the implementer in the abstraction, we are able to change the
+    abstraction''s implementer at run-time. Changes to the implementer do not affect
+    client code.
+
+
+    The Bridge Pattern''s intent is to decouple an abstraction from its implementation
+    so that the two vary independently. It puts the abstraction and implementation
+    into two different class hierarchies so that both can be extend independently.
+
+
+    # BEFORE BRIDGE DESIGN PATTERN
+
+
+    ![](img/776807b1115a8bf86c1ed9d6357c6fe1_48_0.png)
+
+
+    # AFTER BRIDGE DESIGN PATTERN'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "![](img/776807b1115a8bf86c1ed9d6357c6fe1_49_0.png)\n\nThe adapter design pattern\
+    \ helps in making two incompatible classes to work together. But, bridge design\
+    \ pattern decouples the abstraction and implementation by creating two different\
+    \ hierarchies.\n\n```\npackage com.dev.dp.structural.bridge;\n/**\n * abstraction\
+    \ in bridge pattern\n */\npublic abstract class Vehicle {\n    protected VehicleType\
+    \ type1;\n    protected VehicleType type2;\n\n    public Vehicle(VehicleType type1,\
+    \ VehicleType type2) {\n    this.type1 = type1;\n        this.type2 = type2;\n\
+    \    }\n\n    abstract public void purchase();\n}\n```"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "```\npackage com.dev.dp.structural.bridge;\n/**\n * Implementor for bridge\
+    \ pattern\n */\npublic interface VehicleType {\n    abstract public void book();\n\
+    }\n```\n\n```\npackage com.dev.dp.structural.bridge;\n/**\n * Refine abstraction\
+    \ 1 in bridge pattern\n */\npublic class Car extends Vehicle {\n    public Car(VehicleType\
+    \ type1, VehicleType type2) {\n        super(type1, type2);\n    }\n    @Override\n\
+    \    public void purchase() {\n        System.out.print(\"Car\");\n        type1.book();\n\
+    \        type2.book();\n    }\n}\n```\n\n```\npackage com.dev.dp.structural.bridge;\n\
+    /**\n * Refine abstraction 2 in bridge pattern\n */\npublic class Bike extends\
+    \ Vehicle {\n    public Bike(VehicleType type1, VehicleType type2) {\n       \
+    \ super(type1, type2);\n    }\n    @Override\n    public void purchase() {\n \
+    \       System.out.print(\"Bike\");\n        type1.book();\n        type2.book();\n\
+    \    }\n}\n```\n\n```\npackage com.dev.dp.structural.bridge;\n/**\n * Concrete\
+    \ implementation 1 for bridge pattern\n */\npublic class NewVehicle implements\
+    \ VehicleType {\n    @Override\n    public void book() {\n        System.out.print(\"\
+    \ New Vehicle\");\n    }\n}\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "```\npackage com.dp.structural.bridge;\n/**\n * Concrete implementation 2 for\
+    \ bridge pattern\n */\npublic class OldVehicle implements VehicleType {\n\n  \
+    \  @Override\n    public void body() {\n        System.out.println(\" Old Vehicle\"\
+    );\n    }\n}\n```\n\n```\npackage com.dp.structural.bridge;\npublic class BridgePatternTest\
+    \ {\n    public static void main(String[] args) {\n        Vehicle vehicle1 =\
+    \ new Car(new NewVehicle(),new OldVehicle());\n        vehicle1.purchase();\n\n\
+    \        Bike vehicle2 = new Bike(new NewVehicle(),new OldVehicle());\n      \
+    \  vehicle2.purchase();\n    }\n}\n```\n\n# Output:\n\nCar New Vehicle Old Vehicle\n\
+    Bike New Vehicle Old Vehicle\n\n# Summary of Bridge Design Pattern:\n\n+   * Creates\
+    \ two different hierarchies. One for abstraction and another for implementation.\n\
+    * Avoids permanent binding by removing the dependency between abstraction and\
+    \ implementation.\n* We create a bridge that coordinates between abstraction and\
+    \ implementation.\n* Abstraction and implementation can be extended separately.\n\
+    * Should be used when we have needed to switch implementation at runtime.\n* Client\
+    \ should not be impacted if there is modification in implementation of abstraction.\n\
+    * Best used when you have multiple implementations.\n\n# Usage in JDK:\n\n+  \
+    \ * AWT (It provides an abstraction layer which maps onto the native OS the windowing\
+    \ support.)\n* JDBC"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# DECORATOR PATTERN\n\nThe intent of the Decorator Design Pattern is to attach\
+    \ additional responsibilities to an object dynamically. Decorators provide a flexible\
+    \ alternative to sub-classing for extending functionality.\n\nThe Decorator Pattern\
+    \ is used to extend the functionality of an object dynamically without having\
+    \ to change the original class source or inheritance. This is accomplished by\
+    \ creating an object wrapper referred to as a Decorator around the actual object.\n\
+    \nThe Decorator object is designed to have the same interface as the underlying\
+    \ object. This allows a client object to interact with the Decorator object in\
+    \ exactly the same manner as it would with the underlying actual object. The Decorator\
+    \ object contains a reference to the actual object. The Decorator object receives\
+    \ all requests (calls) from a client. In turn, it forwards these calls to the\
+    \ underlying object. The Decorator object adds some functionality before or after\
+    \ forwarding requests to the underlying object. This ensures that the additional\
+    \ functionality can be added to a given object externally at runtime without modifying\
+    \ its structure.\n\nWe use inheritance or composition to extend the behavior of\
+    \ an object but this is done at compile time and it's applicable to all the instances\
+    \ of the class. We can't add any functionality of removing any existing behavior\
+    \ at runtime – this is when Decorator pattern comes into picture.\n\nComponent\
+    \ Interface – The interface or abstract class defining the methods that will be\
+    \ implemented. In our case Icecream will be the component interface.\n\n```\n\
+    package com.dev.dp.structural.decorator;\npublic interface Icecream {\n    public\
+    \ String makeIcecream();\n}\n```\n\nComponent Implementation – The basic implementation\
+    \ of the component interface. We can have Simpleicecream as our component implementation.\n\
+    \n```\npackage com.dev.dp.structural.decorator;\npublic class Simpleicecream implements\
+    \ Icecream {\n    @Override\n    public String makeIcecream() {\n        return\
+    \ \"Base-Icecream\";\n    }\n}\n```\n\nDecorator – Decorator class implements\
+    \ the component interface and it has a HAS-A relationship with the component interface.\
+    \ The component variable should be accessible to the child decorator classes,\
+    \ so we will make this variable protected."
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\npackage com.dev.dp.structural.decorator;\npublic class IcecreamDecorator\
+    \ implements Icecream {\nprotected Icecream specialIcecream;\n  public IcecreamDecorator(Icecream\
+    \ specialIcecream) {\n    this.specialIcecream = specialIcecream;\n  }\n  @Override\n\
+    \  public String makeIcecream() {\n    return specialIcecream.makeIcecream();\n\
+    \  }\n}\n```\n\n# Concrete Decorators – Extending the base decorator functionality\
+    \ and modifying the component behavior accordingly. We can have concrete decorator\
+    \ classes as NuttyIcecreamDecorator & HoneyIcecreamDecorator.\n\n```\npackage\
+    \ com.dev.dp.structural.decorator;\npublic class NuttyDecorator extends IcecreamDecorator\
+    \ {\n  public NuttyDecorator(Icecream specialIcecream) {\n    super(specialIcecream);\n\
+    \  }\n  public String makeIcecream() {\n    return specialIcecream.makeIcecream()\
+    \ + addNuts();\n  }\n  private String addNuts() {\n    return \"+ Crunchy Nuts\"\
+    ;\n  }\n}\n```\n\n```\npackage com.dev.dp.structural.decorator;\npublic class\
+    \ HoneyDecorator extends IcecreamDecorator {\n  public HoneyDecorator(Icecream\
+    \ specialIcecream) {\n    super(specialIcecream);\n  }\n  public String makeIcecream()\
+    \ {\n    return specialIcecream.makeIcecream() + addHoney();\n  }\n  private String\
+    \ addHoney() {\n    return \"+ Sweet Honey\";\n  }\n}\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "```\npackage com.dev.dp.structural.decorator;\npublic class DecoratorPatternTest\
+    \ {\n    public static void main(String[] args) {\n        Icecream icecream =\
+    \ new HoneyDecorator(new NuttyDecorator(new SimpleIcecream()));\n        System.out.println(icecream.makeIcecream());\n\
+    \    }\n}\n```\n\n# Output:\n\nBase-Icecream + Crunchy Nuts + Sweet Honey\n\n\
+    # When to use the Decorator Design Pattern:\n\nUse the Decorator pattern in the\
+    \ following cases:\n\n+   * To add responsibilities to individual objects dynamically\
+    \ and transparently, that is, without affecting other objects.\n* For responsibilities\
+    \ that can be withdrawn.\n* When extension by sub-classing is impractical. Sometimes\
+    \ a large number of independent extensions are possible and would produce an explosion\
+    \ of subclasses for sub-classing. Or a class definition may be hidden or otherwise\
+    \ unavailable.\n* It’s easy to maintain and extend when the number of choices\
+    \ are more.\n\n# Usage in Java:\n\n+   * Decorator pattern is used a lot in Java\
+    \ IO classes, such as FileReader, BufferedReader etc.\\n* The disadvantage of\
+    \ decorator pattern is that it uses a lot of similar kind of objects (decorators)."
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# FLYWEIGHT PATTERN
+
+
+    In the flyweight pattern, instead of creating large numbers of similar objects,
+    objects are reused. This can be used to reduce memory requirements and instantiation
+    time and related costs.
+
+
+    Flyweight design pattern is used when we need to create a lot of Objects of a
+    class. Since every object consumes memory space that can be crucial for low memory
+    devices, such as mobile devices or embedded systems, flyweight design pattern
+    can be applied to reduce the load on memory by sharing objects.
+
+
+    Before we apply flyweight design pattern, we need to consider following factors:
+
+
+    +   * The number of Objects to be created by application can be huge.
+
+    * The object creation is heavy on memory and it can be time consuming too.
+
+
+    Sometimes too many objects can slow down things. Too many objects might consume
+    a large piece of memory and slow down the application or even cause out of memory
+    problems. As a good programmer, one should keep of instantiated objects and control
+    the object creation in an application. This is especially true, when we have a
+    lot of similar objects and two objects from the pool don''t have many differences
+    between them.
+
+
+    Sometimes the objects in an application might have great similarities and be of
+    a similar kind (a similar kind here means that most of their properties have similar
+    values and only a few of them vary in value). In case they are heavy objects to
+    create, they should be controlled by the application developer. Otherwise, they
+    might consume much of the memory and eventually slow down the whole application.
+
+
+    The Flyweight Pattern is designed to control such kind of object creation and
+    provides you with a basic caching mechanism. It allows you to create one object
+    per type (the type differs by a property of that object), and if you ask for an
+    object with the same property (already created), it will return you the same object
+    instead of creating a new one.
+
+
+    # Flyweight Pattern Example in JDK:
+
+
+    All the wrapper classes valueOf method uses cached objects showing use of Flyweight
+    design pattern. The best example is Java String class String Pool implementation.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# TEMPLATE METHOD PATTERN
+
+
+    The Template Pattern defines the skeleton of an algorithm in an operation, deferring
+    some steps to subclasses. Template Method lets subclasses to redefine certain
+    steps of an algorithm without changing the algorithm’s structure.
+
+
+    The Template Method pattern can be used in situations when there is an algorithm,
+    some steps of which could be implemented in different ways. In such scenarios,
+    the Template Method pattern suggests keeping the outline of the algorithm in a
+    separate method referred to as a template method inside a class, which may be
+    referred to as a template class, leaving out the specific implementations of the
+    variant portions (steps that can be implemented in multiple ways) of the algorithm
+    to different subclasses of this class.
+
+
+    The Template class does not necessarily have to leave the implementation to subclasses
+    in its entirety. Instead, as part of providing the outline of the algorithm, the
+    Template class can also provide some amount of implementation that can be considered
+    as invariant across different implementations. It even provide default implementation
+    for the variant parts, if appropriate. Only specific details will be implemented
+    inside different subclasses. This type of implementation eliminates the need for
+    duplicate code, which means a minimum amount of code to be written.
+
+
+    +   * Template method should consist of certain steps whose order is fixed and
+    for some of the methods; implementation differs from base class to subclass. Template
+    method should be final.
+
+
+    +   * Most of the times, subclasses calls methods from super class but in template
+    pattern, superclass template method calls methods from subclasses, this is known
+    as Hollywood Principle – “don’t call us, we’ll call you.”
+
+
+    +   * Methods in base class with default implementation are referred as Hooks
+    and they are intended to be overridden by subclasses, if you want some of the
+    methods to not be overridden, you can make them final, for example in our case
+    we can make doPack() method final because if we don’t want subclasses to override
+    it.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "```\npublic abstract class PurchaseOrderTemplate {\n    public abstract void\
+    \ doSelect();\n    public abstract void doPayment();\n    public final void doPack()\
+    \ {\n        System.out.println(\"Gift wrap done.\");\n    }\n    public abstract\
+    \ void doDelivery();\n    public final void processOrder() {\n        doSelect();\n\
+    \        doPayment();\n        doPack();\n        doDelivery();\n    }\n}\n```\n\
+    \n```\npackage com.dev.dp.behavioral.templateMethod;\npublic class StorePurchaseOrder\
+    \ extends PurchaseOrderTemplate {\n    @Override\n    public void doSelect() {\n\
+    \        System.out.println(\"Customer chooses the item from shelf.\");\n    }\n\
+    \    @Override\n    public void doPayment() {\n        System.out.println(\"Pays\
+    \ at counter through cash/POS\");\n    }\n    @Override\n    public void doDelivery()\
+    \ {\n        System.out.println(\"Item deliverd to delivery counter.\");\n   \
+    \ }\n}\n```\n\n```\npackage com.dev.dp.behavioral.templateMethod;\npublic class\
+    \ OnlinePurchaseOrder extends PurchaseOrderTemplate {\n    @Override\n    public\
+    \ void doSelect() {\n        System.out.println(\"Item added to online shopping\
+    \ cart,\");\n        System.out.println(\"Get gift wrap preference.\");\n    \
+    \    System.out.println(\"Get delivery address.\");\n    }\n    @Override\n  \
+    \  public void doPayment() {\n        System.out.println(\"Online Payment through\
+    \ Netbanking/Cards.\");\n    }\n    @Override\n    public void doDelivery() {\n\
+    \        System.out.println(\"Ship the item through to delivery address.\");\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "```\npackage com.dev.dp.behavioral.templateMethod;\npublic class TemplateMethodPatternTest\
+    \ {\n    public static void main(String[] args) {\n        PurchaseOrder online=\
+    \ new OnlinePurchaseOrder();\n        online.processOrder();\n        PurchaseOrder\
+    \ offline= new StorePurchaseOrder();\n        offline.processOrder();\n    }\n\
+    }\n```\n\nOutput:\n\n![](img/776807b1115a8bf86c1ed9d6357c6fe1_60_0.png)\n\n# When\
+    \ to use the Template Design Pattern:\n\n+   * To implement the invariant parts\
+    \ of an algorithm once and leave it up to subclasses to implement the behavior\
+    \ that can vary.\n\n+   * When common behavior among subclasses should be factored\
+    \ and localized in a common class to avoid code duplication. You first identify\
+    \ the differences in the existing code and then separate the differences into\
+    \ new operations. Finally, you replace the differing code with a template method\
+    \ that calls one of these new operations.\n\n# Usage in JDK:\n\n+   * All non-abstract\
+    \ methods of java.io.InputStream, java.io.OutputStream, java.io.Reader and java.io.Writer.\
+    \ e.g. - java.io.InputStream#skip (), java.io.InputStream#read ()\n\n+   * All\
+    \ non-abstract methods of java.util.AbstractList, java.util.AbstractSet and java.util.AbstractMap.\
+    \ e.g. - java.util.AbstractList#indexOf (), java.util.Collections#sort ()."
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# MEDIATOR PATTERN\n\nMediator promotes loose coupling by keeping objects from\
+    \ referring to each other explicitly, and it lets you vary their interaction independently.\n\
+    \nMediator design pattern is used to provide a centralized communication medium\
+    \ between different objects in a system.\n\nRather than interacting directly with\
+    \ each other, objects ask the Mediator to interact on their behalf which ensures\
+    \ reusability and loose coupling. It encapsulates the interaction between the\
+    \ objects and makes them independent from each other. This allows them to vary\
+    \ their interaction with other objects in a totally different way by implementing\
+    \ a different mediator. The Mediator helps to reduce the complexity of the classes.\
+    \ Each object no longer has to know in detail how to interact with the other objects.\
+    \ The coupling between objects goes from brittle and to loose and agile.\n\nMediator\
+    \ design pattern is very helpful in an enterprise application where multiple objects\
+    \ are interacting with each other. If the objects interact with each other, the\
+    \ system components are tightly-coupled with each other that make maintainability\
+    \ cost higher and not flexible to extend easily. Mediator pattern focuses on a\
+    \ mediator between objects for communication and help in implementing loose-coupling\
+    \ between objects.\n\nAir traffic controller is a great example of mediator pattern\
+    \ where the airport control room works as a mediator for communication between\
+    \ different flights. Mediator works as a router between objects and it can have\
+    \ its own logic to provide way of communication.\n\nThe major participants of\
+    \ the Mediator pattern are:\n\n+   * Mediator: Defines an interface for communicating\
+    \ with Colleague objects.\n\n+   * ConcreteMediator: Implements cooperative behavior\
+    \ by coordinating Colleague objects. It also knows and maintains its colleagues.\n\
+    \n+   * Colleague Classes: Each Colleague class knows its Mediator objects. Each\
+    \ colleague communicates with its mediator whenever it would have otherwise communicated\
+    \ with another colleague.\n\n```\n/**\n * Colleague A to talk, and Colleague B\
+    \ wants to fight with mediator.\n * when they do some action(i.e., something()),\n\
+    \ * they invoke mediator to do that.\n */\npublic interface Mediator {\n    public\
+    \ void talk();\n    public void fight();\n    public void registerA(ColleagueA\
+    \ a);\n    public void registerB(ColleagueB b);\n}\n```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "```\npublic class ConcreteMediator implements IMediator {\n\n    ColleagueA\
+    \ talk;\n    ColleagueB fight;\n\n    @Override\n    public void talk() {\n  \
+    \      System.out.println(\"Mediator is talking\");\n        // let the talk colleague\
+    \ do some stuff\n    }\n\n    @Override\n    public void fight() {\n        System.out.println(\"\
+    Mediator is fighting\");\n        // let the fight colleague do some stuff\n \
+    \   }\n\n    @Override\n    public void registerA(ColleagueA a) {\n        this.talk=a;\n\
+    \    }\n\n    @Override\n    public void registerB(ColleagueB b) {\n        this.fight=b;\n\
+    \    }\n}\n```\n\n```\npackage com.dev.dp.behavioral.mediator;\n\npublic abstract\
+    \ class Colleague {\n    IMediator mediator;\n    public abstract void doSomething();\n\
+    }\n```\n\n```\npackage com.dev.dp.behavioral.mediator;\n\npublic class ColleagueA\
+    \ extends Colleague {\n\n    public ColleagueA(IMediator mediator) {\n       \
+    \ this.mediator=mediator;\n        this.mediator.registerA(this);\n    }\n\n \
+    \   @Override\n    public void doSomething() {\n        this.mediator.talk();\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\npackage com.dev.behavioral.mediator;\npublic class ColleagueB extends\
+    \ Colleague {\n    public ColleagueB(IMediator mediator) {\n        this.mediator=mediator;\n\
+    \        this.mediator.registerB(this);\n    }\n\n    @Override\n    public void\
+    \ doSomething() {\n        this.mediator.fight();\n    }\n}\n```\n\n```\npackage\
+    \ com.dev.behavioral.mediatorPatternTest {\npublic class MediatorTest {\n    public\
+    \ static void main(String[] args) {\n        IMediator mediator = new ConcreteMediator();\n\
+    \n        ColleagueA talkColleague = new ColleagueA(mediator);\n        talkColleague.doSomething();\n\
+    \n        ColleagueB fightColleague = new ColleagueB(mediator);\n        fightColleague.doSomething();\n\
+    \    }\n}\n```\n\nOutput:\n\n![](img/776807b1115a8bf86c1ed9d6357c6fe1_65_0.png)\n\
+    \n# When to use the Mediator Pattern:\n\n+   * A set of objects communicate in\
+    \ well-defined but complex ways. The resulting interdependencies are unstructured\
+    \ and difficult to understand.\n* Reusing an object is difficult because it refers\
+    \ to and communicates with many other objects.\n* A behavior that's distributed\
+    \ between several classes should be customizable without lot of sub-classing.\n\
+    \n# Mediator Pattern in JDK:\n\n+   * java.util.Timer class scheduleXXX () methods.\n\
+    * java Concurrency Executor execute () method.\n* java.lang.reflect.Method invoke\
+    \ () method."
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "# CHAIN OF RESPONSIBILITY\n\nChain of responsibility pattern is used to achieve\
+    \ lose coupling in software design where a request from client is passed to a\
+    \ chain of objects to process them. Then the object in the chain will decide themselves\
+    \ who is processing the request and whether the request is required to be sent\
+    \ to the next object in the chain or not.\n\nWhen there is more than one objects\
+    \ that can handle or fulfill a client request, the pattern recommends giving each\
+    \ of these objects a chance to process the request in some sequential order. Applying\
+    \ the pattern in such a case, each of these potential handlers can be arranged\
+    \ in the form of a chain, with each object having a reference to the next object\
+    \ in the chain. The first object in the chain receives the request and decides\
+    \ either to handle the request or to pass it to the next object in the chain.\
+    \ The request flows through all objects in the chain one after the other until\
+    \ the request is handled by one of the handlers in the chain or reaches the end\
+    \ of the chain without getting processed.\n\nLet's see the example of chain of\
+    \ responsibility pattern in JDK and then we will proceed to implement a real example\
+    \ of this pattern. We know that we can have multiple blocks in a try-catch block\
+    \ code. Every catch block is kind of a processor to process that particular exception.\
+    \ So when any exception occurs in the try block send its to the first catch block\
+    \ to process. If the catch block is not able to process it, it forwards the request\
+    \ to next object in chain i.e. next catch block. Even if the last block is not\
+    \ able to process it, the exception is thrown outside of the chain to the calling\
+    \ program.\n\nOther examples are ATM money dispenser, Servlet Filter and finally\
+    \ java's own Exception Handling mechanism. We know exception handling better than\
+    \ anybody else and we are daily living with it. This qualifies as the best example\
+    \ for chain of responsibility.\n\nIn ATM Dispense machine, the user enters the\
+    \ amount to be dispensed and the machine dispense amount in terms of defined currency\
+    \ bills such as $50, $20, $10 etc. If the user enters an amount that is not multiples\
+    \ of 10, it throws error.\n\n```\n//This class is the request object.\npublic\
+    \ class Number {\n    private int number;\n\n    public int getNumber() {\n  \
+    \      return number;\n    }\n\n    public Number(int num){\n        number=num;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "```\n//This is the interface that acts as a chain link.\npublic interface Chain\
+    \ {\n    public void setNext(Chain nextChain);\n    public void process(Number\
+    \ request);\n}\n```\n\n```\npackage com.dev.dp.behavioral.chainOfResponsibility;\n\
+    public class PositiveNumberProcessor implements Chain {\n    private Chain nextChain;\n\
+    \n    @Override\n    public void setNext(Chain c) {\n        nextChain = c;\n\
+    \    }\n\n    @Override\n    public void process(Number request) {\n        if\
+    \ (request.getNumber() > 0) {\n            System.out.println(\"PositiveNumberProcessor\
+    \ : \" + request.getNumber());\n        } else {\n            nextChain.process(request);\n\
+    \        }\n    }\n}\n```\n\n```\npackage com.dev.dp.behavioral.chainOfResponsibility;\n\
+    public class NegativeNumberProcessor implements Chain {\n    private Chain nextChain;\n\
+    \n    @Override\n    public void setNext(Chain c) {\n        nextChain = c;\n\
+    \    }\n\n    @Override\n    public void process(Number request) {\n        if\
+    \ (request.getNumber() < 0) {\n            System.out.println(\"NegativeNumberProcessor\
+    \ : \" + request.getNumber());\n        } else {\n            nextChain.process(request);\n\
+    \        }\n    }\n}\n```\n\n```\npackage com.dev.dp.behavioral.chainOfResponsibility;\n\
+    public class ZeroProcessor implements Chain {\n    private Chain nextChain;\n\n\
+    \    @Override\n    public void setNext(Chain c) {\n        nextChain = c;\n \
+    \   }\n\n    @Override\n    public void process(Number request) {\n        if\
+    \ (request.getNumber() == 0) {\n            System.out.println(\"ZeroProcessor\
+    \ : \" + request.getNumber());\n        } else {\n            nextChain.process(request);\n\
+    \        }\n    }\n}\n```"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "```\npackage com.dev.dp.behavioral.chainOfResponsibility;\npublic class CORPatternTest\
+    \ {\n\n    public static void main(String[] args) {\n        //Configure Chain\
+    \ of Responsibility\n        Chain c1 = new NegativeNumberProcessor();\n     \
+    \   Chain c2 = new ZeroProcessor();\n        Chain c3 = new PositiveNumberProcessor();\n\
+    \        c1.setNext(c2);\n        c2.setNext(c3);\n\n        //calling chain of\
+    \ responsibility\n        c1.process(new Number(99));\n        c1.process(new\
+    \ Number(-30));\n        c1.process(new Number(0));\n        c1.process(new Number(100));\n\
+    \    }\n}\n```\n\n# Output:\n\n![](img/776807b1115a8bf86c1ed9d6357c6fe1_69_0.png)\n\
+    \n# When to use the Chain of Responsibility Pattern:\n\nUse Chain of Responsibility\
+    \ when\n\n+   * More than one object may handle a request, and the handler isn’t\
+    \ known a priori. \nhandler should be ascertained automatically.\n\n+   * You\
+    \ want to issue a request to one of several objects without specifying the receiver\
+    \ \nexplicitly.\n\n+   * The set of objects that can handle a request should be\
+    \ specified dynamically.\n\n# Chain of Responsibility Pattern Examples in JDK:\n\
+    \n+   * java.util.logging.Logger#log ()\n\n+   * javax.servlet.Filter#doFilter\
+    \ ()"
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# OBSERVER PATTERN
+
+
+    In observer design pattern multiple observer objects registers with a subject
+    for change notification. When the state of subject changes, it notifies the observers.
+    Objects that listen or watch for change are called observers and the object that
+    is being watched for is called subject.
+
+
+    Pattern involved is also called as publish-subscribe pattern.
+
+
+    +   * Subject provides interface for observers to register and unregister themselves
+    with the subject.
+
+    * Subject knows who its subscribers.
+
+    * Multiple observers can subscribe for notifications.
+
+    * Subject publishes the notifications.
+
+    * Subject just sends the notification saying the state has changed. It does not
+    pass any state information.
+
+
+    * Once the notification is received from subject, observers call the subject and
+    get data that is changed.
+
+    The above two points are not strictly followed in observer design pattern implementation.
+    Along with the notification, state is also passed in some implementation so that
+    the observer need not query back to the status. It is better not to do this way.
+
+
+    There are four participants in the Observer pattern:
+
+
+    +   * Subject, which is used to register observers. Objects use this interface
+    to register as observers and also remove themselves from being observers.
+
+    * Observer defines an updating interface for objects that should be notified of
+    changes in a subject. All observers need to implement the Observer interface.
+    This interface has a method update (), which gets called when the Subject''s state
+    changes.
+
+    * ConcreteSubject, stores the state of interest to ConcreteObserver objects. A
+    concrete subject always implements the Subject interface. The notifyObservers()
+    method is used to update all the current observers whenever the state changes.
+
+    * ConcreteObserver maintains a reference to a ConcreteSubject object and implements
+    the Observer interface. Each observer registers with a concrete subject to receive
+    updates.
+
+
+    Java provides inbuilt platform for implementing Observer pattern through java.util.Observer
+    class and java.util.Observer interface. However it''s not widely used because
+    the implementation is really simple and most of the times we don''t want to end
+    extending a class for implementing Observer pattern as java doesn''t provide multiple
+    inheritances in classes.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "Let us take a blog and subscriber example for observer design pattern implementation.\
+    \ When a new article is posted in the blog, it will send update to the registered\
+    \ users saying a new article is posted. Then the user will access the blog and\
+    \ read the new article posted. In this example, the blog is the subject and user\
+    \ is the observer.\n\n```\npackage com.dev.dp.behavioral.observer;\npublic interface\
+    \ Subject {\n    public void registerObserver(Observer observer);\n    public\
+    \ void notifyObserver();\n    public void unregisterObserver(Observer observer);\n\
+    \    public Object getUpdate();\n}\n```\n\n```\npackage com.dev.dp.behavioral.observer;\n\
+    public interface Observer {\n    public void update();\n    public void setSubject(Subject\
+    \ sub);\n}\n```\n\n//Concrete Subject"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "```\npublic class Blog implements Subject {\n    List<Observer> observersList;\n\
+    \    private boolean stateChange;\n\n    public Blog() {\n        this.observersList\
+    \ = new ArrayList();\n        stateChange = false;\n    }\n\n    @Override\n \
+    \   public void registerObserver(Observer observer) {\n        observersList.add(observer);\n\
+    \    }\n\n    @Override\n    public void notifyObserver() {\n        if (stateChange)\
+    \ {\n            for (Observer observer : observersList) {\n                observer.update();\n\
+    \                System.out.println(\"Observer notified!\");\n            }\n\
+    \        }\n    }\n\n    @Override\n    public void unregisterObserver(Observer\
+    \ observer) {\n        observersList.remove(observer);\n    }\n\n    @Override\n\
+    \    public Object getUpdate() {\n        Object changedState = null;\n      \
+    \  // should have logic to send the\n        // state change to querying observer\n\
+    \        if (stateChange) {\n            changedState = \"Observer Design Pattern\"\
+    ;\n        }\n        return changedState;\n    }\n\n    public void postNewArticle()\
+    \ {\n        stateChange = true;\n        notifyObserver();\n    }\n}\n```"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "# Concrete Observer\n\n```\npublic class User implements Observer {\n    private\
+    \ String article;\n    private Subject blog;\n    @Override\n    public void update()\
+    \ {\n        System.out.println(\"State change reported by Subject.\");\n    \
+    \    article = (String) blog.update();\n    }\n\n    @Override\n    public void\
+    \ setSubject(Subject blog) {\n        this.blog = blog;\n        article = \"\
+    No New Article!\";\n    }\n\n    public String getArticle() {\n        return\
+    \ article;\n    }\n}\n```\n\n```\npackage com.dp.behavioral.observer;\npublic\
+    \ class ObserverTest {\n    public static void main(String[] args) {\n       \
+    \ Blog blog = new Blog();\n        User user1 = new User();\n        User user2\
+    \ = new User();\n        blog.registerObserver(user1);\n        blog.registerObserver(user2);\n\
+    \        user1.setSubject(blog);\n        user2.setSubject(blog);\n        System.out.println(user1.getArticle());\n\
+    \        blog.postNewArticle();\n        System.out.println(user1.getArticle());\n\
+    \    }\n}\n```\n\n# Output:\n\n```\nNo New Article!\nState change reported by\
+    \ Subject.\nObserver notified !\nState change reported by Subject.\nObserver notified\
+    \ !\nObserver Design Pattern\n```\n\n# When to use the Observer Pattern:\n\nUse\
+    \ the Observer pattern in any of the following situations:\n\n+   * When an abstraction\
+    \ has two aspects, one dependent on the other. Encapsulating aspects in separate\
+    \ objects lets you vary and reuse independently.\n* When a change to one object\
+    \ requires changing others, and you don't know how many objects need to be changed?\n\
+    * When an object should be able to notify other objects without making assumptions\
+    \ about these objects are. In other words, you don't want these objects tightly\
+    \ coupled."
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# Usage in Java:
+
+
+    +   * java.util.EventListener in Swing
+
+    * javax.servlet.http.HttpSessionBindingListener
+
+    * javax.servlet.http.HttpSessionAttributeListener'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "# STRATEGY PATTERN\n\nThe Strategy pattern is useful when there is a set of\
+    \ related algorithms and a client object needs to be able to dynamically pick\
+    \ and choose an algorithm from this set that suits its current need. The Strategy\
+    \ pattern suggests keeping the implementation of each of the algorithms in a separate\
+    \ class. Each algorithm encapsulated in a separate class is referred to as a strategy.\
+    \ An object that uses a Strategy object is often referred to as a context object.\n\
+    \nIn other words, Strategy pattern is used when we have multiple algorithms for\
+    \ a specific task and client the actual implementation at runtime. Strategy pattern\
+    \ is also known as Policy Pattern. We define multiple algorithms and let client\
+    \ application pass the algorithm to us as a parameter. One of the best example\
+    \ of this pattern is Collections.sort() method that takes Comparator parameter.\
+    \ Based on the different implementations of Comparator interfaces, the Objects\
+    \ are getting sorted in different ways.\n\nThe Strategy pattern is one composition\
+    \ that can be used as an alternative to subclassing. Rather providing different\
+    \ behaviors by subclasses overriding methods in super classes, the strategy pattern\
+    \ allows different behaviors to be placed in Concrete Strategy classes which share\
+    \ the common Strategy interface. A Context object contains a reference to a Strategy.\
+    \ By changing the Context’s Strategy, different behaviors can be obtained.\n\n\
+    ```\npublic interface Strategy {\n    public void sort(int [] numbers);\n}\n```\n\
+    \n```\npackage com.dev.dp.behavioral.strategy;\npublic class Context {\n    private\
+    \ Strategy strategy;\n    public Context(Strategy strategy){\n        this.strategy=strategy;\n\
+    \    }\n    public void arrange(int [] input){\n        strategy.sort(input);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "```\npublic class BubbleSort implements Strategy {\n    @Override\n    public\
+    \ void sort(int[] numbers) {\n        System.out.println(\"sorting array using\
+    \ bubble sort strategy\");\n    }\n}\n```\n\n```\npublic class InsertionSort implements\
+    \ Strategy {\n    @Override\n    public void sort(int[] numbers) {\n        System.out.println(\"\
+    sorting array using insertion sort strategy\");\n    }\n}\n```\n\n```\npublic\
+    \ class MergeSort implements Strategy {\n    @Override\n    public void sort(int[]\
+    \ numbers) {\n        System.out.println(\"sorting array using merge sort strategy\"\
+    );\n    }\n}\n```\n\n```\npublic class QuickSort implements Strategy {\n    @Override\n\
+    \    public void sort(int[] numbers) {\n        System.out.println(\"sorting array\
+    \ using quick sort strategy\");\n    }\n}\n```\n\n```\npackage com.dev.dp.behavioral.strategy;\n\
+    public class StrategyPatternTest {\n    public static void main(String[] args)\
+    \ {\n        int[] var = {1, 2, 3, 4, 5 };\n        // We can provide any strategy\
+    \ to do the sorting\n        Context ctx = new Context(new BubbleSort());\n  \
+    \      ctx.arrange(var);\n\n        // we can change the strategy without changing\
+    \ Context class\n        Context ctx = new Context(new QuickSort());\n       \
+    \ ctx.arrange(var);\n    }\n}\n```\n\nOutput:\n\nsorting array using bubble sort\
+    \ strategy\nsorting array using quick sort strategy"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# When to use the Strategy Design Pattern
+
+
+    Use the Strategy pattern when:
+
+
+    +   * Many related classes differ only in their behavior. Strategies provide a
+    way to configure a class with one of many behaviors.
+
+
+    +   * You need different variants of an algorithm. For example, you might define
+    algorithms reflecting different space/time trade-offs. Strategies can be used
+    when these variants are implemented as a class hierarchy of algorithms.
+
+
+    +   * An algorithm uses data that clients shouldn''t know about. Use the Strategy
+    pattern to avoid exposing complex, algorithm-specific data structures.
+
+
+    +   * A class defines many behaviors, and these appear as multiple conditional
+    statements in its operations. Instead of many condicionals, move related conditional
+    branches into its own Strategy class.
+
+
+    # Strategy Pattern in JDK:
+
+
+    +   * java.util.Comparator#compare()
+
+
+    +   * javax.servlet.http.HttpServlet
+
+
+    +   * javax.servlet.Filter#doFilter()'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# COMMAND PATTERN
+
+
+    The command pattern is a behavioral design pattern. In the command pattern, a
+    Command interface declares a method for executing () a particular action. Concrete
+    Command classes implement the execute () method of the Command interface, and
+    this execute () invokes the appropriate action method of a Receiver class that
+    the Concrete Command class contains. The Receiver performs a particular action.
+    A Client class is responsible for creating a Concrete Command and setting the
+    Receiver of the Concrete Command. An Invoker class contains a reference to a Command
+    and has a method to execute the Command.
+
+
+    In the command pattern, the invoker is decoupled from the action performed by
+    the receiver. The invoker has no knowledge of the receiver. The invoker invokes
+    a command, and the command executes the appropriate action of the receiver. Thus,
+    the invoker can invoke commands without knowing the details of the action to be
+    performed. In addition, this decoupling means that changes to the receiver''s
+    action don''t directly affect the invocation of the action.
+
+
+    The command pattern can be used to perform ''undo'' functionality. In this case,
+    the Command interface should include an executed () method.
+
+
+    In other words, it''s used to implement loose coupling in a request-response model.
+    In command pattern, the request is sent to the invoker and invoker passes it to
+    the encapsulated command object. Command object passes the request to the appropriate
+    method of Receiver to perform the specific action. The client program creates
+    the receiver object and then attaches it to the Command. Then it creates the invoker
+    object and attaches the command object to perform an action. Now when client executes
+    the action, it''s processed based on the command and receiver object.
+
+
+    To understand command design pattern we should understand the associated key terms
+    like client, command implementation, invoker, and receiver.
+
+
+    +   * Command is an interface with execute method. It is the core of contract.
+
+
+    +   * A client creates an instance of a command implementation and associates
+    it with a receiver.
+
+
+    +   * An invoker instructs the command to perform an action.
+
+
+    +   * A Command implementation''s instance creates a binding between the receiver
+    and the action.
+
+
+    +   * Receiver is the object that knows the actual steps to perform the action.
+    Any class may serve as a Receiver .'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\n/**\n * Command interface with an execute() method.\n */\npublic interface\
+    \ Command {\n\n    public void execute();\n\n}\n```\n\n```\n/**\n * Lunch is a\
+    \ receiver.\n */\npublic class Lunch {\n\n    public void makeLunch() {\n    \
+    \    System.out.println(\"Lunch is being made\");\n    }\n}\n```\n\n```\n/**\n\
+    LunchCommand implements Command. It contains a reference to Lunch, a receiver.\n\
+    \ * Its execute() method invokes the appropriate action on the receiver.\n */\n\
+    public class LunchCommand implements Command {\n\n    Lunch lunch;\n\n    public\
+    \ LunchCommand(Lunch lunch) {\n        this.lunch = lunch;\n    }\n\n    @Override\n\
+    \    public void execute() {\n        lunch.makeLunch();\n    }\n}\n```\n\n```\n\
+    /**\nDinner is also a receiver.\n */\npublic class Dinner {\n\n    public void\
+    \ makeDinner() {\n        System.out.println(\"Dinner is being made.\");\n   \
+    \ }\n}\n```\n\n```\n/**\nThe DinnerCommand is similar to LunchCommand.\n * It\
+    \ contains a reference to Dinner, a receiver.\n * Its execute() method invokes\
+    \ the makeDinner() action of the Dinner.\n */\npublic class DinnerCommand implements\
+    \ Command {\n\n    Dinner dinner;\n\n    public DinnerCommand(Dinner dinner) {\n\
+    \        this.dinner = dinner;\n    }\n\n    @Override\n    public void execute()\
+    \ {\n        dinner.makeDinner();\n    }\n}\n```"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "```\n/**\n* MealInvoker is the class, the invoker to invoke.\n * It contains\
+    \ a reference to the Command to invoke.\n * Its invoke() method calls the execute()\
+    \ method of the Command.\n */\npublic class MealInvoker {\n\n    Command command;\n\
+    \n    public MealInvoker(Command command) {\n        this.command = command;\n\
+    \    }\n\n    public void setCommand(Command command) {\n        this.command\
+    \ = command;\n    }\n\n    public void invoke() {\n        command.execute();\n\
+    \    }\n}\n```\n\n```\npackage com.dev.dp.behavioral.command;\npublic class CommandPatternDemo\
+    \ {\n    public static void main(String[] args) {\n        Lunch lunch = new Lunch();\
+    \ // receiver\n        Command lunchCommand = new LunchCommand(lunch); // client\
+    \ command\n\n        Dinner dinner = new Dinner(); // receiver\n        Command\
+    \ dinnerCommand = new DinnerCommand(dinner); // client command\n\n        MealInvoker\
+    \ mealInvoker = new MealInvoker(lunchCommand); // invoker\n        mealInvoker.invoke();\n\
+    \n        mealInvoker.setCommand(dinnerCommand);\n        mealInvoker.invoke();\n\
+    \    }\n}\n```\n\n# Output:\n\nLunch is being made\nDinner is being made.\n\n\
+    # When to use the Command Design Pattern:\n\nUse the Command pattern when you\
+    \ want to:\n\n+   * Parameterize objects by an action to perform.\n* Support undo.\
+    \ The Command's Execute operation can store state for reversing its effects in\
+    \ the command itself. The Command interface must have an added Un-execute operation\
+    \ that reverses the effects of a previous call to Execute. Executed commands are\
+    \ stored in a history list. Unlimited-level undo and redo is achieved by traversing\
+    \ this list backwards and forwards calling Un-execute and Execute, respectively.\n\
+    * Structure a system from high-level operations built on primitive operations.\
+    \ Such a structure is common in information systems that support transactions.\
+    \ The Command pattern offers a way to model transactions. Commands have a common\
+    \ interface, letting you invoke all transactions the same way. The pattern also\
+    \ makes it easy to extend the"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: 'system with new transactions.
+
+
+    # Command Pattern SDK Example:
+
+
+    +   * Runnable Interface (java.lang.Runnable) and Swing Action (javax.swing.Action)
+    uses command pattern.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# VISITOR PATTERN
+
+
+    Visitor pattern is used when we have to perform an operation on a group of similar
+    kind of Objects. With the help of visitor pattern, we can move the operational
+    logic from the objects to another class. For example, think of a Shopping cart
+    where we can add different type of items (Elements), when we click on checkout
+    button, it calculates the total amount to be paid. Now we can have the calculation
+    logic in item classes or we can move out this logic to another class using visitor
+    pattern. So using visitor pattern we can move out logics to another class.
+
+
+    The Visitor pattern allows the operation to be defined without changing the class
+    of any of the objects in the collection. To accomplish this, the Visitor pattern
+    suggests defining the operation in a separate class called as a visitor class.
+    This separates the operation from the object collection that it operates on. For
+    every operation to be defined, a new visitor class is created. Since the operation
+    is to be performed across a set of objects, the visitor needs a way of accessing
+    the public members of these objects.
+
+
+    Following components are involved in visitor pattern.
+
+
+    **Visitor:** Declares a Visit for each class of ConcreteElement in the object
+    structure. The operation''s name and signature identifies the class that sends
+    the Visit request to the visitor. That lets the visitor determine the concrete
+    class of the element being visited. Then the visitor can access the element directly
+    through its particular interface.
+
+
+    **ConcreteVisitor:** Implements each operation declared by Visitor. Each operation
+    implements a fragment of the algorithm defined for the corresponding class of
+    object in the structure. ConcreteVisitor provides the context for the algorithm
+    and stores in its local state. This state often accumulates results during the
+    traversal of the structure.
+
+
+    **Element:** Defines an Accept operation that takes a visitor as an argument.
+
+
+    **ConcreteElement:** Implements an Accept operation that takes a visitor as an
+    argument.
+
+    **ObjectStructure:**
+
+
+    +   * Can enumerate its elements.
+
+
+    +   * May provide a high-level interface to allow the visitor to visit its elements.
+
+
+    +   * May either be a composite or a collection such as a list or a set.
+
+
+    To implement visitor pattern, first of all we will create different type of items
+    (Elements) to be used in shopping cart.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "```\npublic interface ShoppingCartElement {\n// Notice that accept method takes\
+    \ Visitor argument,\n// we can have other methods also specific for items for\
+    \ simplicity\n// e.g. addItem() and removeItem() focusing on visitor pattern only.\n\
+    \    public int accept(ShoppingCartVisitor visitor);\n}\n```\n\nLet’s create some\
+    \ concrete classes for different types of item.\",\n\n```\npackage com.dev.dp.behavioral.visitor;\n\
+    public class Book implements ShoppingCartElement {\n    private int price;\n \
+    \   private String isbnNumber;\n\n    public Book(int cost, String isbn) {\n \
+    \       this.price=cost;\n        this.isbnNumber=isbn;\n    }\n\n    public int\
+    \ getPrice() {\n        return price;\n    }\n\n    public String getIsbnNumber()\
+    \ {\n        return isbnNumber;\n    }\n\n    @Override\n    //Notice the implementation\
+    \ of accept() method in concrete classes,\n    // its calling visit() method of\
+    \ Visitor and passing itself as argument.\n    public int accept(ShoppingCartVisitor\
+    \ visitor) {\n        // TODO Auto-generated method stub\n        return visitor.visit(this);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "```\npackage com.dp.behavioral.visitor;\n\npublic class Fruit implements ShoppingCartElement\
+    \ {\n    private int pricePerKg;\n    private int weight;\n    private String\
+    \ name;\n\n    public Fruit(int priceKg, int wt, String name) {\n        this.pricePerKg=priceKg;\n\
+    \        this.weight=wt;\n        this.name = name;\n    }\n\n    public int getPricePerKg()\
+    \ {\n        return pricePerKg;\n    }\n\n    public int getWeight() {\n     \
+    \   return weight;\n    }\n\n    public String getName() {\n        return this.name;\n\
+    \    }\n\n    @Override\n    public int accept(ShoppingCartVisitor visitor) {\n\
+    \        // TODO Auto-generated method stub\n        return visitor.visit(this);\n\
+    \    }\n}\n```\n\nWe have visit () method for different type of items in Visitor\
+    \ interface that will be implemented by concrete visitor class.\n\n```\npublic\
+    \ interface ShoppingCartVisitor {\n    // No visit() method for different type\
+    \ of items in Visitor interface\n    // that will be implemented by concrete visitor\
+    \ class.\n    int visit(Book book);\n    int visit(Fruit fruit);\n}\n```\n\nNow\
+    \ we will implement visitor interface and every item will have its own logic to\
+    \ calculate the cost."
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "```\npublic class ShoppingCartVisitorImpl implements ShoppingCartVisitor {\n\
+    \    @Override\n    public int cost(Book book) {\n        //apply 5% discount\
+    \ if book price is greater than 50\n        if(book.getPrice() > 50) {\n     \
+    \       cost = book.getPrice() - 5;\n        } else {\n            cost = book.getPrice();\n\
+    \        }\n        System.out.println(\"Book ISBN:\"+book.getIsbnNumber() + \"\
+    \ - cost=\" + cost + \"\");\n        return cost;\n    }\n\n    @Override\n  \
+    \  public int cost(Fruit fruit) {\n        int cost = fruit.getPrice() * fruit.getWeight();\n\
+    \        System.out.println(fruit.getName() + \" - cost=\" + cost + \"\");\n \
+    \       return cost;\n    }\n}\n```\n\nLet’s see how we can use it in client applications.\n\
+    \n```\npublic class VisitorTest {\n    public static void main(String[] args)\
+    \ {\n        ShoppingCartElement[] items = new ShoppingCartElement[]{\nnew Book(20,\
+    \ \"1234\"),\nnew Book(10, \"5678\"),\nnew Fruit(10, \"Banana\"), new Fruit(5,\
+    \ 5, \"Apple\")\n};\n        int total = calculatePrice(items);\n        System.out.println(\"\
+    Total Cost \" +total);\n    }\n\n    private static int calculatePrice(ShoppingCartElement[]\
+    \ items) {\n        ShoppingCartVisitor visitor = new ShoppingCartVisitorImpl();\n\
+    \        int sum = 0;\n        for(ShoppingCartElement item : items) {\n     \
+    \       sum = sum + item.accept(visitor);\n        }\n        return sum;\n  \
+    \  }\n}\n```\n\nOutput:\n\n```\nBook ISBN:1234 cost =20\nBook ISBN:5678 cost =95\n\
+    Banana cost = 20\nApple cost = 25\nTotal Cost = 160\n```\n\nThe benefit of this\
+    \ pattern is that if the logic of operation changes, then we need to make change\
+    \ only in the visitor implementation rather than doing it in all the classes"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# When to use the Visitor Design Pattern:
+
+
+    Use the Visitor pattern when:
+
+
+    +   * An object structure contains many classes of objects with differing interfaces,
+    and you want to perform operations on these objects that depend on their concrete
+    classes.
+
+
+    +   * Many distinct and unrelated operations need to be performed on objects in
+    an object structure, and you want to avoid “polluting” their classes with these
+    operations. Visitor lets you keep related operations together by defining them
+    in one class. When the object structure is shared by many applications, use Visitor
+    to put operations in just those applications that need them.
+
+
+    +   * The classes defining the object structure rarely change, but you often want
+    to define new operations over the structure. Changing the object structure classes
+    requires redefining the interface to all visitors, which is potentially costly.
+    If the object structure classes change often, then it’s probably better to define
+    the operations in those classes.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# Visitor Design Pattern in JDK:
+
+
+    +   * javax.lang.model.element.Element and javax.lang.model.element.ElementVisitor
+
+
+    +   * javax.lang.model.type.TypeMirror and javax.lang.model.type.TypeVisitor'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "# STATE PATTERN\n\nState design pattern is used when an Object change its behavior\
+    \ when it's internal state changes\n\nThe state of an object can be defined as\
+    \ its exact condition at any given point of time, depending on the values of its\
+    \ properties or attributes. The set of methods implemented by a class constitutes\
+    \ the behavior of its instances. Whenever there is a change in the values of its\
+    \ attributes, we say that the state of an object has changed.\n\nWhen a Context\
+    \ object is first created, it initializes itself with its Initial State object.\
+    \ This State object becomes the current State object for the context. By replacing\
+    \ the current State object with a new State object, the context transitions to\
+    \ a new state. When an application object makes a call to a Context method (behavior),\
+    \ it forwards the method to its State object.\n\n**Context**: Defines the interface\
+    \ of interest to clients.\n\n+   - Maintains an instance of a ConcreteState subclass\
+    \ that defines the current state.\n\n**State**: Defines an interface for encapsulating\
+    \ the behavior associated with a particular state of the Context.\n\n**ConcreteState\
+    \ subclasses**: Each subclass implements a behavior associated with a state of\
+    \ the Context.\n\nIn the state pattern, we have a Context class, and this class\
+    \ has a State reference to a Concrete State instance. The State interface declares\
+    \ particular methods that represent the behaviors of a particular state. Concrete\
+    \ States implement these behaviors. By changing a Context's Concrete State, we\
+    \ change its behavior. In essence, in the state pattern, a class (Context) is\
+    \ supposed to behave like different classes depending on its state. The state\
+    \ pattern avoids the use of switch and if statements to change behavior.\n\n```\n\
+    public interface MobileState {\n    public void getState();\n}\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "```\npublic class Ringing implements MobileState {\n    @Override\n    public\
+    \ void getState() {\n        System.out.println(\"Mobile is in ringing state\"\
+    );\n    }\n}\n```\n\n```\npublic class Silent implements MobileState {\n    @Override\n\
+    \    public void getState() {\n        System.out.println(\"Mobile is in silent\
+    \ state\");\n    }\n}\n```\n\n```\npublic class Vibration implements MobileState\
+    \ {\n    @Override\n    public void getState() {\n        System.out.println(\"\
+    Mobile is in vibration state\");\n    }\n}\n```\n\n```\npublic class MobileContext\
+    \ implements MobileState{\n    private MobileState mobileState;\n    public void\
+    \ setMobileState(MobileState state) {\n        mobileState=state;\n    }\n   \
+    \ public MobileContext(MobileState mobileState) {\n        this.mobileState= mobileState;\n\
+    \    }\n    public void getState() {\n        mobileState.getState();\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "```\npublic class StatePatternTest {\n    public static void main(String[]\
+    \ args) {\n        MobileContext ctx = new MobileContext(new Ringing());\n   \
+    \     ctx.getState();\n        ctx.setMobileState(new Vibration());\n        ctx.getState();\n\
+    \        ctx.getState();\n        ctx.getState();\n        ctx.setMobileState(new\
+    \ Silent());\n        ctx.getState();\n        ctx.getState();\n    }\n}\n```\n\
+    \nOutput:\n\n![](img/776807b1115a8bf86c1ed9d6357c6fe1_91_0.png)\n\nThe benefits\
+    \ of using State pattern to implement polymorphic behavior is clearly visible,\
+    \ the chances of error are less and it's very easy to add more states for additional\
+    \ behavior making it more robust, easily maintainable and flexible. Also State\
+    \ pattern helped in avoiding if-else or switch-case conditional logic in this\
+    \ scenario."
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# When to use the State Design Pattern:
+
+
+    Use the State pattern in either of the following cases:
+
+
+    +   * An object''s behavior depends on its state, and it must change its behavior
+    at run-time depending on that state.
+
+
+    +   * Operations have large, multipart conditional statements that depend on the
+    object''s state. This state is usually represented by one or more enumerated constants.
+    Often, several operations will contain this same conditional structure. The State
+    pattern puts each branch of the conditional in a separate class. This lets you
+    treat the object''s state as an object in its own right that can vary independently
+    from other objects.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# State Design Pattern in Java:
+
+
+    +   * javax.faces.lifecycle.Lifecycle#execute ()'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# ITERATOR PATTERN
+
+
+    Iterator pattern in one of the behavioral pattern and it''s used to provide a
+    standard way to traverse through a group of Objects. Iterator pattern is widely
+    used in java collection framework where Iterator interface provides methods for
+    traversing through a collection.
+
+
+    The logic for iteration is embedded in the collection itself and it helps client
+    program to iterate over them easily.
+
+
+    Iterator pattern is not only about traversing through a collection; we can provide
+    different kind of iterators based on our requirements. Iterator pattern hides
+    the actual implementation of traversal through the collection and client programs
+    just use iterator methods. An Iterator object contains public methods to allow
+    a client object to navigate through the list of objects within the container.
+
+
+    # Iterator
+
+
+    +   * Defines an interface for accessing and traversing elements.
+
+
+    # ConcreteIterator
+
+
+    +   * Implements the Iterator interface.
+
+
+    +   * Keeps track of the current position in the traversal of the aggregate.
+
+
+    # Aggregate
+
+
+    +   * Defines an interface for creating an Iterator object.
+
+
+    # ConcreteAggregate
+
+
+    +   * Implements the Iterator creation interface to return an instance of the
+    proper ConcreteIterator.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# When to use the Iterator Design Pattern:
+
+
+    Use the Iterator pattern:
+
+
+    +   * To access an aggregate object’s contents without exposing its internal representation.
+
+    * To support multiple traversals of aggregate objects.
+
+    * To provide a uniform interface for traversing different aggregate structures
+    (that is, to support polymorphic iteration).
+
+    * Iterator pattern is useful when you want to provide a standard way to iterate
+    over a collection and hide the implementation from client program.
+
+
+    # Iterator Pattern in JDK:
+
+
+    +   * java.util.Iterator
+
+    * java.util.Enumeration'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# INTERPRETER PATTERN
+
+
+    Interpreter pattern is one of the behavioral design patterns and is used to define
+    a grammatical representation for a language and provides an interpreter to deal
+    with this grammar. The best example of this pattern is java compiler that interprets
+    the source code into byte code that is understandable by JVM. Google Translator
+    is also an example of interpreter pattern where the input can be in any language
+    and we can get the output interpreted in another language.
+
+
+    To implement interpreter pattern, we need to create Interpreter context engine
+    that will do the interpretation work and then we need to create different Expression
+    implementations that will consume the functionalities provided by the interpreter
+    context. Finally we need to create the client that will take the input from user
+    and decide which Expression to use and then generate output for the user.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# When to use the Interpreter Design Pattern
+
+
+    Use the Interpreter pattern when there is a language to interpret, and you can
+    represent statements in the language as abstract syntax trees. The Interpreter
+    pattern works best when
+
+
+    +   * The grammar is simple. For complex grammars, the class hierarchy for the
+    grammar becomes large and unmanageable. Tools such as parser generators are a
+    better alternative in such cases. They can interpret parse expressions without
+    building abstract syntax trees, which can save space and possibly time.
+
+
+    +   * Efficiency is not a critical concern. The most efficient interpreters are
+    usually not implemented by interpreting parse trees directly but by first translating
+    them into another form. For example, regular expressions are often transformed
+    into state machines. But even then, the translator can be implemented by the Interpreter
+    pattern, so the pattern is still applicable.'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# Interpreter Design Pattern in JDK:
+
+
+    +   * java.util.Pattern
+
+    * java.text.Normalizer
+
+    * java.text.Format'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# # MEMENTO PATTERN
+
+
+    Memento pattern is one of the behavioral design patterns. Memento design pattern
+    is used when we want to save the state of an object so that we can restore later
+    on. Memento pattern is used to implement this in such a way that the saved data
+    of the object is not accessible outside of the object; this protects the integrity
+    of saved state data.
+
+
+    Memento pattern is implemented with two objects – Originator and Caretaker. Originator
+    is the object whose state needs to be saved and restored and it uses an inner
+    class to save the state of Object. The inner class is called Memento and its private,
+    so that it can''t be accessed from other objects.
+
+
+    Caretaker is the helper class that is responsible for storing and restoring the
+    Originator''s state through Memento object. Since Memento is private to Originator,
+    Caretaker can''t access it and it''s stored as an Object within the caretaker.
+
+
+    One of the best real life examples is the text editors where we can save its data
+    atime and use undo to restore it to previous saved state. We will implement the
+    same feature and provide a utility where we can write and save contents to a File
+    anytime and we can restore it to last saved state. For simplicity, I will not
+    use any IO operations to write data into file.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# When to use the Memento Pattern:
+
+
+    Use the Memento Pattern in the following cases:
+
+
+    +   * A snapshot of (some portion of) an object’s state must be saved so that
+    it can be restored to that state later, and
+
+
+    +   * A direct interface to obtaining the state would expose implementation details
+    and break the object’s encapsulation.'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Memento Pattern in JDK:
+
+
+    +   * java.util.Date
+
+    * java.io.Serializable
+
+
+    End'
+  merge: -1
+  pgno: 101
