@@ -1,0 +1,963 @@
+- img_proc: true
+  md: '# Aquaculture 556 (2022) 738277
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Aquaculture
+
+
+    journal homepage: www://www.elsevier.com/locate/aquaculture
+
+
+    # Description of biosecurity practices on shrimp farms in Java, Lampung, and Banyuwanyu,
+    Indonesia
+
+
+    Marina K.V.C. Delfino a, Emilie Laurin b, Thitiwan Patanasienkul a, Raynafie Budhi
+    Rajhardo b, Lukman Hakim b, Wildan Gaufikar b, Holly Burney b, K Larry Hammell
+    b, Krishna Thakur b
+
+
+    a Department of Marine Aquaculture, Atlantic Veterinary College, University of
+    Prince Edward, 550 University Avenue, Charleston, PE CIA 4P3, Canada
+
+    b JALA TECH Pr Ltd. Kompleks Pt. Indramar, Jl. Kalurang 16/3, Sleman, Ngrampak,
+    Sleman, Daerah Istimewa Yogyakarta, 55884, Indonesia
+
+
+    The sustainability of the Indonesian shrimp farming industry is challenged by
+    the presence of bacterial and viral diseases and their associated potential for
+    severe economic losses and environmental impact. In shrimp aquaculture, biosecurity
+    is essential to prevent pathogen introduction, emergence and spread between and
+    within farms. This study was conducted using a questionnaire to survey the biosecurity
+    practices for grow-out and intensive shrimp farms in Indonesia. A questionnaire
+    was designed to collect information on farm characteristics, farm management,
+    and biosecurity practices. Descriptive statistics, multiple correspondence analyses,
+    and hierarchical cluster analysis were performed. The objective of the study was
+    to describe the biosecurity practices implemented by farms and to classify them
+    into clusters, based on these practices. Distinct clusters were identified for
+    90 grow-out farms in Java and Lampung area, while 7 clusters were identified for
+    101 intensive farms in Banyuwangi. Clusters ranged from micro and small-scale
+    farms, with less biosecurity practices, to not testing quality, and not infecting
+    peoples etc. One cluster was characterized by medium biosecurity practices, including
+    disinfection for visitors, testing quality, and frequent period greater than 30
+    days between cycles. In Banyuwangi areas, farms could not be distinctly classified
+    by patterns of biosecurity practices but were grouped by biosecurity structure
+    (e.g., lack of response or missing records). For future sustainable programs and
+    biosecurity implementation to reduce the risk of disease introduction and spread
+    in these regions, recommendations include:
+
+
+    +   Keywords:
+
+    Shrimp
+
+    Indonesia
+
+    Bioscurity
+
+    Epidemiology
+
+    Survey
+
+
+    ARTICLE INFO
+
+
+    ABSTRACT
+
+
+    # 1. Introduction
+
+
+    Indonesia is one of the largest shrimp producing countries in Southeast Asia (FAO,
+    2020). The Indonesian shrimp farming industry initially developed in East Java
+    in the late 1980s before expanding throughout the country. The presence of bacterial
+    and viral diseases increases the potential for severe economic losses affecting
+    you
+
+
+    survive and the challenges of shrimp farming in Indonesia, as it in many other
+    countries (Sunarto et al., 2004; Walker and Mohan, 2009; Ali et al.). As production
+    increases with high stocking densities, feed rates, and water quality and susceptibility
+    to specifically agents experience constant changes (Thakur et al., 2018; Ali et
+    al., 2015). Services operations the shrimp industry are addressing these challenges
+    by
+
+
+    * Corresponding author.
+
+    E-mail: delphino@upei.com, delphino@upei.com (K.V.C. Delfino), elaur@upei.com
+    (E. Laurin), tatanasienkul@upei.com (T. P. Patanasienkul), raynafie@jala.tech
+    (R.R. Rajhardo), hburney@upei.com (H. Burney), hamiltonell@upei.com (K.L. Hammell),
+    khthakur@upei.com (K. Thakur).
+
+    https://doi.org/10.1016/j.aquaculture.2022.738277
+
+    Received 11 November 2021; Revised in form 15 April 2022; Accepted 19 April 2022
+
+    Available online 22 April 2022
+
+    0244-1846/ © Elsevier B. Ltd. All rights reserved.
+
+
+    * Awaiting information'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# M.K.C. Djalalhi et al.
+
+
+    # Aquaculture 554 (2022) 73827
+
+
+    developed systems at increasing disease capabilities (such as early detection
+    of health and production anomalies at a normal level) using epidemiological principles
+    and statistical models across large exposure contexts (Munias, 2018). This study
+    was initiated as a fundamental process to address the potential of disease transmission
+    pathways for farmers in the Indonesian industry.
+
+
+    Biosecurity has been defined as those processes, at the farm and area level, to
+    reduce the probability that animals will catch, or spread disease, especially
+    under adverse environmental conditions (Lotz, 1997; Pruder, 2004). Farmers are
+    more vulnerable to infectious diseases due to inadequate biosecurity measures,
+    the advantages of biosecurity defenses, and the risk of introduction of pathogens
+    through trade.
+
+
+    Improved biosecurity is an essential component of successful aquatic production
+    systems. Biosecurity practices represent important tools to farms to prevent infection
+    and spread between shrimp farms. The presence of biosecurity tools used in other
+    food production, such as vaccination, or of wild animals (Walker and Mohan, 2009;
+    Ali et al., 2018), and the presence of farmers in close proximity to the farm,
+    without using biosecurity-free or disease-resistant seeds are some of the factors
+    and practices that may likely be associated with the introduction and spread of
+    infectious diseases (Corisin et al., 2005; Tang and Bondesson, 2003).
+
+
+    Effective biosecurity achieved through improved farm management and worker training
+    and attention to health management will contribute to the sustainability of Indonesian
+    intensive shrimp production by reducing risky practices.
+
+
+    Assessments of biosecurity and management practices in shrimp cultured in Indonesia
+    are largely undocumented or unknown and mostly described in the prefect of infectious
+    disease outbreaks (Amelia
+
+
+    et al., 2021; Arifin et al., 2021). This is the first study specifically designed
+    to evaluate biosecurity practices implemented by Indonesian shrimp farmers. The
+    objectives of this study were to (1) design and implement a questionnaire survey
+    addressing key aquaculture management and biosecurity practices, and (2) to provide
+    feedback on the current status of intensive shrimp farmers. The aim was to use
+    the results to inform the Indonesian shrimp industry of gaps in existing biosecurity
+    practices and contribute to building comprehensive and proactive surveillance
+    systems for farmers. The long-term goal was to provide evidence-based health management
+    and sustainability of the aquaculture sector in Indonesia.
+
+
+    # ## 2. Methodology
+
+
+    # ### 2.1. Data source
+
+
+    We designed a survey to characterize the current state of shrimp farm biosecurity
+    and management practices of JAL''s Indonesian clients. Two separate surveys were
+    conducted in the two major provinces of Indonesia by JAL. Data technology focused
+    on improving shrimp productivity via IoT technology by the use of data analytics
+    and IoT (1), namely (1) Java and Lampung area and (2) Banyuwangi area (Fig. 1).
+    Specific questionnaire design methodology is discussed in section 2.2.
+
+
+    To describe the current state of biosecurity of shrimp aquaculture in Indonesia,
+    a questionnaire was designed to collect data on farmers'' demographics, farm characteristics,
+    farm management, and
+
+
+    ![](img/c70f384a94a27dede4c896a13b5a47b8_1_0.png)
+
+
+    +   - Banyuwangi surveys
+
+    - Java and Lampung surveys
+
+    - Surveyed Provinces
+
+    - Provinces
+
+
+    **Fig. 1.** Surveyed provinces (green) and Banyuwangi area (pink) (blue), Indonesia,
+    included in the clustering analysis. The number within each circle represents
+    a cluster of farms by proximity. For interpretation of the colours in this figure
+    legend, the reader is referred to the web version of this article.)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table 1
+
+
+    Number of clusters by region, and province in Java and Lampung,
+
+
+    | Province | Regency | Cluster 1 | Cluster 2 | Cluster 3 |
+
+    |---|---|---|---|--|
+
+    | Bengkulu | Bengkulu | 0 | 0 | 3 |
+
+    | Central Java | | 0 | 28 | 10 |
+
+    | | Demak | | 5 | | |
+
+    | | Kendal | | 2 | | |
+
+    | | Pekalongan | | 1 | | |
+
+    | | Semarang | | 3 | | |
+
+    | | Purworejo | | 21 | | |
+
+    | East Java | | 0 | 14 | |
+
+    | | Pasuruan | | 1 | |
+
+    | | Probolinggo | | 1 | | |
+
+    | | Trenggalek | | | | |
+
+    | West Java | | 0 | | 6 |
+
+    | | Cirebon | | | | |
+
+    | Yogyakarta | | 0 | | | |
+
+    | Lampung | | 19 | | |
+
+    | | South Lampung | | 2 | | |
+
+    | | Tulang Bawang | 16 | |
+
+    | North Sumatra | | 0 | | 1 |
+
+    | | Median | | | | |
+
+    | Total | | 19 | 48 | |
+
+
+    on-farm bioscurity practices. Biosafety components of the biosecurity
+
+    are based on Canadian Food Inspection Agency bioscurity
+
+    gelines and adapted to shrimp aquaculture practices (Canadian Food
+
+    Inspection Agency (CFIA), 2012). Questions related to risk of pathogen
+
+    introduction into the farm were answered using a previously validated
+
+    questionnaire (Hansen et al., 2017). This questionnaire was subsequently revised
+    to
+
+    back feedback provided by local industry partners. It was developed in
+
+    English and translated to Thai to facilitate communication
+
+    with stakeholders. The questionnaire consisted of 58 questions (closed-ended,
+    multiple
+
+    or limited choice, and was divided into two sections: the information
+
+    non-farm and bioscurity and management practices (such as dis-
+
+    cussions, water characteristics as well as both the farm and as
+
+    source, to other farms in the region; farm-aquaculture management;
+
+    vention, control; recording on feed, disease rec-
+
+    ership, and mortality; health and food management; feed prep-
+
+    aration and management; management and sampling methods
+
+    to measure shrimp weight and growth.
+
+
+    # 2.3. Study area
+
+
+    # 2.3.1. Java and Lampung area
+
+
+    A total of 100 group-farm collects (collections of ponds managed as a
+
+    district) from Java and Lampung area, including five different
+
+    province of Indonesia (East Java, Central Java, Lampung,
+
+    Sumatra, and Sulawesi); these were collected from November 2019 to December
+
+    2020. Data from West Java, Aceh, and
+
+    provinces were excluded from the final analysis since these were
+
+    extral to the study area (n = 96 farms). All out-grow farms are included in the
+
+    study cultured *Litopenaeus vannamei* species shrimp.
+
+
+    # 2.3.2. Banyuwangi area
+
+
+    A total of 105 farms from Banyuwangi area, located in two
+
+    districts, were surveyed from January to September 2020.
+
+    these 27 were categorized into
+
+    eight species of shrimp (Table 1). All farms were
+
+    cultured L. vannamei, except for one farm (located in Ketserti)
+
+    that cultured *Penaeus monodon* species and another from Karang-
+
+    great district that was collected for focus.
+
+
+    # 2.4. Data management
+
+
+    Data were recorded on paper and then entered into Excel 7.2.3.1
+
+    (Centers for Disease Control and Prevention, Atlanta, USA). Data
+
+    management was done using Excel (Microsoft Data, Stats-15:
+
+    State, 2019), and edited with R (R Team, 2020). Questions for the 58
+
+    nsponents were divided into categories to allow for simple data-an-
+
+    teranalysis, between we, some with shrimp size sub-analysis to
+
+    to create new variables, when necessary. Indicator variables (eg-
+
+    farmer''s name and farm number, management, interviewer, and
+
+    interviewer location) were dropped from further analyses.
+
+
+    # 2.4.1. Java and Lampung area
+
+
+    Using the remaining 52 (dropping indicator variables) questions
+
+    from the Java and Lampung area, 101 farms were created, each
+
+    with at least 2 levels, and were grouped into four
+
+    categories: (1) general characteristics of the farms, (2) farm
+
+    management, (3) sanitary status of the farm during the previous
+
+    droduction, (4) implementation of practices. These were
+
+    er able to identify groups of out-grow shrimp farms with
+
+    different levels of implementation of bioscurity and management
+
+    practices.
+
+
+    # 2.5. Data analysis
+
+
+    Descriptive statistics for some farms (such as char-
+
+    teristics, region, species) were calculated, as well as for surveys
+
+    inincomplete responses to the different question categories.
+
+    Multivariate cluster analysis (MCA) and hierarchical cluster
+
+    an (HECA) were calculated in the following sections, were performed
+
+    the same methods but Banyuwangi cases for Java and the Lampung
+
+
+    # 2.5.1. Multiple analysis
+
+
+    After initial data management, applied MCA as an exploratory
+
+    tethod for patterns of individual units (e.g., shrimp farms) by\cases, address
+    the high degree of variability within the
+
+    data, and for set clustering (Honson et al., 2010). To address the
+
+    lack of power for statistical methods applied to high-dimensional data,
+
+    dimensional reduction was employed. Low-dimensional data rep-
+
+    sentation that show high variability but retain the interest of
+
+    underlying underlying structures and patterns and
+
+    Holmes, 2019). MCA was used on an indicator matrix, with
+
+    nrows and the categorical variables as columns, which enables the
+
+    study of the relationship between the observations and the'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# 2.5.2. Hierarchical clustering and partitioning
+
+
+    Performing a clustering on the first principal components of MCA is a common approach
+    for variables (Hussion, 2010) with complex, multivariate data. Hierarchical clustering
+    and partitioning the data set can provide essential information from the work
+    data for much of the variance in the data. Agglomerative hierarchical clustering
+    and partitioning was performed using R in Statistical Software (from the FactoMine
+    package) to the methodology described by Husson (2010). The HCP functions allow
+    the use of Euclidean distances to determine the difference between variables using
+    the Houveg algorithm which can construct a hierarchical tree. This is based on
+    the decomposition of the inertia (total variance) and within-group variance, which
+    in turn clusters that are clusters such that the number of clusters is at minimum
+    at each level of the tree (Allison et al., 2010).
+
+
+    A hierarchical tree was constructed through a sequence of nested partitions, from
+    the individual class to a more general partition that includes all classes. The
+    similarity is measured among them, and a group is different from other grouped
+    farms. The number of clusters was chosen by looking at the overall appearance
+    of the tree (Hussion et al., 2015). The HCP function provides information for
+    selecting an optimal level of division. All levels were considered for the data
+    set.
+
+
+    The MCA and HCP functions were used in the R software, specifically the FactoMine
+    package used for multivariate exploratory analysis (R Development Team, 2008;
+    Husson et al., 2015). We also used, the missda package allowed the imputation
+    of missing values in the data set (Josse et al., 2012; Husson and Josse, 2015).
+
+
+    # 3. Results
+
+
+    # 3.1. Group-of farms by size and age
+
+
+    Of the 96 surveys, 100 of the interviewed farms evaluated only man-vest. Most
+    interviewed (96%) were male. Although 75% of them had a level of experience with
+    aquaculture, only 43% received some type of training related to production. Most
+    of the farmers were 37 years old, ranging from 19 to 69 years. Each farm had a
+    median of at least 2 years; the largest farms had 55 years at the time of the
+    interview. Roughly 60% of the farms had a distance of < 1 km to the nearest upstream
+    and downstream farms, and all the surveyed farms were connected to other farms
+    via water channel. Only 13% of interviewed farms had electricity, only 8% had
+    vehicles at the farm''s entrance, but nearly 30% net or water quality monitoring
+    performed with equipment. A group of the farmers did not have any recording of
+    the farm''s production, while 13% of the farms used paper-based system, and a
+    small minority (15%) of farms, used an electronic recording system. Food consumption
+    was the most recorded (67%)
+
+
+    information by. All farms sold (e., postlarvae or PL) from hatcheries, only most
+    assessed the quality of the sold fish to test PL quality was a stress test (66%),
+    by full screening (10%), bacterial culture (9), and hepatcreas infection (6).
+    Three groups of farmers did not produce their own feed for each crop year, and
+    when they did, the duration was less than a week.
+
+
+    For the MCA, we used 96 farms, by 101 categorical variables. The missing values
+    in the data set of 100 were excluded leaving a total of 96 variables. The variables
+    with the highest values were related to questions regarding the use of chemicals
+    to treat fish stocking animals or pond treatment, test frequency to check which
+    species were used. The results were recorded on the questionnaire (Fig. a) The
+    resulting from the clustering of the outputs, partitioned the farms into three
+    groups. The optimal level of division was determined by the Silhouette function
+    (Fig. b)
+
+
+    Table 2 summarizes the results by represent each of these clusters. Cluster 1
+    was clustered by small-scale farms with poor business practices (e.g., do not
+    test water quality; do not use disinfection; do not have any recording of the
+    farm''s production; do not produce their own feed; do not eat fresh fish from
+    other farms daily). Cluster 2 was nearly separated by micro-scale farms that also
+    had a few practices in production introduction, thread, and sold fish to other
+    farms (e.g., daily or once a week). Cluster 3 was best by medium and large-scale
+    farms applying good business practices (e.g., to test food source; best disinfection;
+    recording of farm production applications on visits, vehicles, and staff to check
+    quality; farms were between 30 years old.
+
+
+    # 3.2. Intensive farms by although range
+
+
+    The analysis data from 101 farms by 70 categorical variables. Approximately the
+    importance (46.5%) did not attributed. Although most trained, produced farms (29%
+    of the farm had at least 6 ponds, with 2 to 4 ponds per year). The number of ponds,
+    age ranged from 6 to 98 years (from < 7 to 30 years), (21.4% had more than 6 years,
+    and 39 had more than 30). The number of active ponds per farm had also high values
+    for farms (59% ranged from 1 to 5 ponds). The range of surveyed pond size was
+    2 to 80. Approximately half of surveyed farms used saltwater culture (50.5), The
+    rotated water was used for the farm (67.2%, ranged from 1 to 80), and 76.2% used
+    the water in a releasing it to the ponds.
+
+
+    Most (77%) were not near the neighboring farms and although only 22.8% of farms
+    had any water connection to other farm of the same species. Most farms (84.2%)
+    used a fence system, the approximately half of all (43.6%) did not use a gate
+    or check at the farm entrance. The results were recorded on the questionnaire
+    (Fig. c). 95%, and 84.2% of farms, respectively, reported that they did not have
+    recording (94.1%) not (89.1%) with other farms but did not share equipment (91.1%)
+    between ponds within the'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Hierarchical Clustering
+
+
+    Click to cut the tree
+
+
+    ![](img/c70f384a94a27dede4c896a13b5a47b8_4_0.png)
+
+
+    (b) Hierarchical clustering on the factor map
+
+
+    ![](img/c70f384a94a27dede4c896a13b5a47b8_4_1.png)
+
+
+    Fig. 2. Hierarchical clustering for Java and Lampung, Indonesia, sorted by (A)
+    coordinates on the first principal components (black line representing the optimal
+    level of division) and (B) represented on the map induced by the first two components.
+
+
+    farm Just under half of all the farms surveyed (43.6%) reported disease occurring
+    in a neighboring farm when disease was detected. Half of farms (54.9%) used either
+    chemical treatment methods or a physical barrier (net, rope, screen, or fence)
+    (43.6%) to prevent or control pests. However, 63.4% of all farms reported reporting
+    or eating or around the ponds. Most farms also reported reporting or eating (i.e.,
+    human consumption) fresh food aquatic ponds sourced from outside of
+
+
+    the ether used (49.5%) or daily (32.7%). In the survey responses concerning shrimp
+    health management, an on average always preferred seed quality for stocking, 97%
+    used either chemical or non-chemical methods for pond preparation. Most of the
+    farms sampled shrimp monthly to assess assess growth and survival rates (84.2%)
+    and 97% had some form of record-keeping system in place (60% of these'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Table 2
+
+
+    Small-scale farms for grow-out farms from Java and Lampung.
+
+
+    | Cluster 1 | Cluster 2 | Cluster 3 |
+
+    | --- | --- | --- |
+
+    | Small-scale farms | Micro-scale farms | Medium and large-scale |
+
+    | poor practice (e.g. do not test seed quality) | fishery practices to prevent
+    disease and spread, | | farming practices (e.g. to feed fish stocking) |
+
+    | vehicles, and equipment; do not collect dead animals); and best | best represented
+    in other | during farming days: distraction on visitors, |
+
+    | fish from other days | farms in the Province of Central West | and to check
+    quality; |
+
+    | | best represented in the farms of Central West | | between 30 days apart. |
+
+    | | Lack of information health status | Lack of information health status |
+
+    | Best represented in the farms of Lampung | | Medium and large-scale (2 ponds
+    or up to 6 ponds) |
+
+    | produced external and internal systems | | Micro-scale farms (1 pond or up to
+    0.4 ha of pond) | or of which to prevent disease |
+
+    | suggesting the presence of disease | | use of the liner for the pond | to have
+    2 production cycles per year, and use of |
+
+    | Small-scale farms (4 ponds or up to 8 ha of pond) | Education level of the people
+    around the lake | production cycles |
+
+    | per year, | with aquaculture-related | and of control to prevent disease |
+
+    | rearing | DO not use chemicals to treat water before | use of a combination
+    of |
+
+    | animals | | Connected to other | chemicals to treat water |
+
+    | Owner is the person that looks after the animals, education level is high |
+    shrimp farm via water | Distance to neighboring |
+
+    | fishery department. | DO NOT make use of chemicals to treat water | farms is
+    1 km |
+
+    | School does not have access to | Make use of hydrochloride | Falling period
+    is | Long duration (5 days) and keep in |
+
+    | aquaculture, has experience | to treat water before stocking | to 7 days | reserve
+    releasing it |
+
+    | | | DO not use farm recording system and do not record any data except | | used
+    entirely anyway. Frequency of records was reported for the |
+
+    | any number of dead animals, feed consumption, and mortality | | feeding consumption
+    (99%), external disease signs (51.5), | although being indicated around (89%),
+    for |
+
+    | Available of reportable diseases (e.g., WSD and MBD) but do not report to use
+    of record records; | internal disease signs (18.8%), sampling to | |
+
+    | to | testing disease (60.3%), and mortality (22.8). For | |
+
+    | | consult non-related technical assistance when there is a possible outbreak
+    |
+
+    | | DO not remove dead animals from pond | DO not observe the presence of disease
+    in around ponds (e.g., bird, wild fish, cats, lizards) and make use of chemicals
+    to |
+
+    | | Observe the presence of disease in around ponds (e.g., bird, wild fish, cats,
+    lizards) and make use of chemicals to'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Hierarchical: Clustering
+
+
+    ![](img/c70f384a94a27dede4c896a13b5a47b8_6_0.png)
+
+
+    # Hierarchical clustering on the factor map
+
+
+    ![](img/c70f384a94a27dede4c896a13b5a47b8_6_1.png)
+
+
+    Fig. 3. Hierarchical clustering for Banywangi, Indonesia, farmers, sorted according
+    to (A) coordinates on the first principal components (black line represents the
+    optimal level of binding) and (B) represented on the map induced by the first
+    two components.
+
+
+    number of farms per cluster for Clusters 3, 4 and 7 necessary inferences from
+    farmers, but to highlight their differences, Briefly Cluster 3 (1 farm) from Sukabumi,Mayangan
+    district and small sized ponds. This also included a broad range of information
+    on biosecurity, health management, diseases and treatment, the
+
+
+    interviews also reported some better biosecurity practices. Likewise, Cluster
+    4 (2 farms) recorded some better biosecurity practices, but farmers had graduate
+    level education, and treatments in the past crop cycles were done only because
+    of disease and not for poor water quality. The remaining group of clusters (5,6,7)
+    had missing'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Table 3
+
+    Number of farms by cluster, regency group, and individuals in Banyuwangi district
+    in Indonesia.
+
+
+    | Regency | Cluster 1 | Cluster 2 | Cluster 3 | Cluster 4 | Cluster 5 | Cluster
+    6 | Cluster 7 |
+
+    |---|---|---|---|---|---|---|--|
+
+    | Group | 17 | 6 | 0 | 0 | 0 | 0 | 0 |
+
+    | Banyuwangi | 9 | 10 | 0 | 2 | 9⁵ | 0 | 0 |
+
+    | Minak | 21 | 0 | 0 | 0 | 0 | 0 | 1¹ |
+
+    | Klimbari | 2 | 1 | 0 | 0 | 0 | 0 | 0 |
+
+    | Kalipuro | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+
+    | Sukamang | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+    | Endahan | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+    | Total | 55 | 30 | 1 | 2 | 9 | 0 | 1 |
+
+
+    > ⁵Somerkenco, Centangaselo, Alubasi, Alegang, Bengkang; Banyuwangi (Pakis, Sobo,
+    Kertari, Rangcuk, Cinjungan, Sobo Gareng); Muncar (Wringinput, Temembak, Serwedu,
+    Keduwening, Tegalukan, Paltagan); Bimbisari (Daeban, Bimbisari, Sukojati, Bomo);
+    Pamango, Watubebo, Jatisari; Batuk (Pondoksono); Kalipuro (Bulusan); Sukamang,
+    Mayangjen; Kendemek.
+
+
+    > ¹All farms in cluster 7 had five farms with both species and 1 farm in cluster
+    7 with J. monodos.
+
+
+    categories: The farms representing Cluster 7 contained larger-sized ponds, farmed
+    bodies of shrimp, used canal water, had record and improved biosecurity practices.
+    Cluster 5 and 6 were well represented by the Banyuwangi district and reported
+    a broad range of information on general characteristics, biosecurity practices,
+    farm health and management. Specifically, Cluster 5 contained farms whose owners
+    were older-aged with high school to university level education. Farmers never
+    received external disease signs observed and used scoop or spoon to remove dead
+    animals from their ponds and treated them with antibiotics/water baths. Farmers
+    in Cluster 6 had anywhere record of the practice and buried dead animals on the
+    farm, and some reported disease in the past cycle and treated because of disease
+    and not with any symptoms.
+
+
+    and family-owned farms are less likely to afford better diagnostics, farmed bodies
+    of shrimp, consultation, and therapeutic supplies to fully implemented biosecurity
+    practices (Mananghani et al., 2021; Ali et al., 2018). Another explanation may
+    be barrier to implement cluster biosecurity practices, such as sharing of units
+    and equipment, (ponds, vehicles, equipment). The lack of construction-based record-based
+    reporting is likely to lead to inaccuracies in data collection, errors in paper
+    information to electronic format, repeated use of the same name, and timeliness
+    of data. Farmers were not integrated and using an electronic information system)
+    would assist the capture of relevant disease signs or management events and sharing
+    of data to allow better protection of environmental health and farmers.
+
+
+    Overall, there were large variations between responses farms and their practices,
+    which occurred over different dimensions. Clusters of farms were not clearly distinguished
+    from other clusters by practices, but by characteristics, and individual categories
+    were found to be more influential in cluster distribution. Also, some variables
+    with that that also influenced the size of cluster: e.g., regency, where some
+    categories had only one or a few farms applicable (such as Clusters 3, 4, and
+    7), or species formed (Cluster 7).
+
+
+    # 4. Discussion and conclusions
+
+
+    This study basically common knowledge of biosecurity practices in grow-intensive
+    and intensive shrimp farming in Indonesia, where practices could be improved,
+    and industry-wide sharing of data could contribute to the predictive risk analysis
+    by enhanced detection and accuracy. Such data could provide the basis for longitudinal
+    use of biosecurity practices for farmers to improve detection and probability
+    of pathogen spread.
+
+
+    For Lampung and Java, we characterized the growth of farms into three clusters
+    based on their biosecurity practices. It was observed that farms in East Java
+    were more represented by smaller farms, had more biosecurity deficiencies than
+    Cluster 3 (consisting of medium large farms from West Java), and however, in higher
+    categories of risk. The introduction of new technology improved through treatment
+    of biosecurity practices.
+
+
+    The introduction of new technology improved through treatment of biosecurity practices.
+    By Pathogen growth in Central and East Java clusters of farms, although this is
+    considered one of the primary pathways for the introduction of pathogens (Corin
+    et al.). One explanation for the practices observed by these two clusters of farms
+    may be due to financial resources, small-scale farmers
+
+
+    Future surveys may be needed as separated and tailored surveys for the clusters
+    of farms based on study area, which specific testing variables (characteristics
+    or variables) that address the issues. The study was developed to improve farmer
+    response rates, and variable that responses to the question was not clear, inconsistent,
+    or unknown to the requester. Follow-up surveys will be necessary with better protocols
+
+
+    while accounting for missing data. Future studies should also include aspect of
+    social science to identify challenges that prevent farmers from improving biosecurity
+    and disease management practices.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Table 4 Description of larger clusters from Banyuwangi, Indonesia. Italic text
+    refers to a matching category. Separate for description of smaller clusters (3,
+    4, 6, 7).
+
+
+    | CLUSTER 1 | CLUSTER 2 | CLUSTER 5 |
+
+    | --- | --- | --- |
+
+    | - Small scale farms | - Medium to large scale farms | - Small scale farms |
+
+    | - Few small, mostly few, few several animals | - Few small, mostly adults, few
+    production cycles/year | - Small animals, 1-5 production cycles, 2-4 average production
+    cycles/year |
+
+    | - 2+ years | - High school to university, or with aquaculture training, 16-30
+    years aquaculture industry | - Middle-aged farmers, High school to university,
+    or with aquaculture training, 16-30 years aquaculture industry | - Older farmers,
+    High school to university education |
+
+    | - Farmer may be and/or without | | - Farmer may be and/or without in Banyuwangi
+    |
+
+    | - Well represented in Blimbangi, Banyuwangi districts | - May or not use water
+    connection to other farm, gate or fence, or others; disinfection, sharing with
+    other members | - May or not share water and staff, with other farms, gate or
+    fence, or others |
+
+    | Mixed animals in around or post-control method, or may not use physical fish
+    | - May or not use control methods, pests, or may not leave fish in ponds | -
+    May may not leave fish in ponds or rice fields |
+
+    | - Fresh fish from other markets, weekly, monthly | | - Fresh fish monthly |
+
+    | - Water source and may not be from sea or underground/well | - Water source
+    and may not be from sea or underground/well | - Water source and may not be from
+    sea or underground/well |
+
+    | - May not keep water in before releasing | May or not keep water in before releasing
+    | - May not keep water in before releasing |
+
+    | - Line pond with shelter, use HDPE with or without partly | - Do not use line
+    pond, use HDPE with or without partly | |
+
+    | - Record keeping all or paper/some; recording demographic techniques | Record
+    keeping all or paper/some; recording demographic techniques | - Record keeping
+    some or paper/some; recording demographic techniques |
+
+    | - 1+ years | May not use or always on 1 time for quality producing | - May or
+    not produce new crop; may not use chemical-treatment process |
+
+    | - Water treat methods Water treat showing to report number and no chemicals
+    | - May not use quality testing technique | |
+
+    | - Harsher or farmer transport seed | - Farmer or source transport feed |
+
+    | - 1 or 2 seasons (none or one internal) observed in post-crop cycle | 1 season
+    (necroscope) observed in post-crop cycle; May may not record external or internal
+    | Disease or may not have occurred in this or neighboring farming at the same
+    time
+
+
+    Table 4 (continued)
+
+
+    | CLUSTER 1 | CLUSTER 2 | CLUSTER 5 |
+
+    | --- | --- | --- |
+
+    | - May or not record external or internal disease | disease sign, record test
+    results | - External disease signs every day or over time observed; may not observe
+    about behavior, animal behavior, feeding samples to list, results |
+
+    | - May (weekly) or may not consult about disease in post crop cycle | May not
+    consult about disease in post crop cycle | - Treat in post crop because of disease
+    or water quality |
+
+    | - remove animals from paddy; water dry issues | Mixing with other animals about
+    possible disease cycle, if it they daily weekly or monthly |
+
+    | - 2 known diseases in season | May may not report disease in post crop cycle
+    | - Use scop or siphon to remove animals from paddy |
+
+    | - May not report disease in post crop cycle | - Treat using fed water/feed methods
+    in post crop cycle of disease and water quality | - Treat using fed and water/feed
+    methods in post crop cycle or water quality issues
+
+
+    pathogen-herb treatment may be used incorporating targeted field strategy for
+    selected products would provide useful measures for timely and detection of disease
+    emergence and implementation of control decisions (Lotz, 1997). Effective management
+    practices to reduce pathogen and outbreaks would benefit from further farmers
+    and agricultural awareness of scientific and epidemiological knowledge (Muningsathing
+    et al., 2010; Ali et al., 2018). Training for managers and organizations implementing
+    consistent systems and enhancing the capacity of farmers through improved methods
+    that can lead to increased productivity.
+
+
+    Consequently, the primary aim of this study is to improve availability of disease
+    and mortality records, including with increased frequency for prospective longitudinal
+    surveillance (Boerlage et al., 2017). When training, sufficient information can
+    address deficiencies that can prevent poor or inadequate adherence to diagnostic
+    and biotic processes (Muningsathing et al., 2010).
+
+
+    A collective approach to gathering disease and biological information across different
+    regions and farming industry, including help from government and service providers,
+    will strengthen the effectiveness of surveillance against both mandatory disease
+    and voluntary management practices. Adoption may ensure sustainable production
+    and reduced risk of pathogen outbreak, clinical disease occurrence, and spread
+    (Walker and Mohan, 2009). These programs also need to consider the impacts of
+    specific pathogens on farming and control of outbreaks and cycles, practices of
+    infection and disease, and decreasing the risk of pathogen spread between/in farms
+    in proximity or due to shared equipment, operations and workers (Lotz, 1997; Muningsathing
+    et al., 2010; Boerlage et al., 2017). Unlike larger farmers, those with limited
+    resources may need adopting methods that would ensure their sustainable production
+    and disease risk management (Walker and Mohan, 2009; Muningsathing et al., 2010).
+    Therefore, required'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "M.K.V. Delphino et al.\n\nbiosecurity programs are tailored to supervise clusters\
+    \ identified in primary analyses presented in this study. Biosecurity compliance\
+    \ applied throughout the shrimp aquaculture in Indonesia will contribute to prevention\
+    \ of emergence and of environmentally devastating diseases.\n\nBoston Consulting\
+    \ Group (BCG), 2019. A strategic approach to sustainable production in Indonesia:\
+    \ The economics of change and sustainability. Available at: https://media-publications.com/BCG/publication/Strategic-Approach-to-Sustainable-Production-in-Indonesia.pdf\
+    \ (Accessed October 20, 2022).\n\nCanadian Food Inspection Agency (CFIA), 2012.\
+    \ Principles of Biosecurity. Government of Canada. Available at: https://www.canada.ca/en/food-inspection-agency/services/biosafety/principles-biosecurity.html?locale=1438227354\
+    \ (Accessed October 20, 2022).\n\n# Author statement\n\n+   1. Marina K-K.V. Delphino\
+    \ - Data analysis and writing\n2. Emilie Laur - Data analysis and writing\n3.\
+    \ Thitanan Pattanaskit - Questionnaire design and writing\n4. Raynani Rohday -\
+    \ Data collection and writing\n5. Lukman Hakim - Data collection and writing\n\
+    6. Wijaya, Zulkifli - Data collection and writing\n7. Holly Buckley - Design of\
+    \ the project and critical revision of the article\n8. Krishna Thakur - Design\
+    \ of the study, supervision of the project and critical revision of the article\n\
+    9. K. Larry Marshall - Design of the study, supervision of the project and critical\
+    \ revision of the article\n\nCorsin, F., Turnbull, J.H., Nash, N.V., Mohan, C.V.,\
+    \ Ti, P.H., Luan, R.Q., 2005. White white spot virus-associated shrimp syndrome\
+    \ in Vietnam: Rice-based shrimp aquaculture system. Aquaculture. 161(1), 97-104.\
+    \ https://doi.org/10.1016/j.aquaculture.2004.09.012.\n\nCorsin, F., Turnbull,\
+    \ J.H., Mohan, C.V., Nash, K.G., 2005. Pond-level risk of white spot disease in\
+    \ Indonesian aquaculture. Aquaculture in Asia. 37(4), 225-231. FAO. Available\
+    \ at: https://www.fao.org/3/y4300/y4300.pdf (Accessed: 24 June 2022).\n\n# Declaration\
+    \ of Interest\n\nMD, EL, TP, RJ, RW, ZO, HB, LB and KT declare no interest.\n\
+    RR, LH and WZ are employed by JALA, a technology company focused on improving\
+    \ biosecurity precision via data use of analytics and loit, which has been declared\
+    \ in the institutional affiliation.\n\nJones, F., Page, J., Mohan, C., 2015. Pond-level\
+    \ biosecurity methods for preventing white spot virus in shrimp farming. Aquaculture.\
+    \ 423, 115-120. https://doi.org/10.1016/j.aquaculture.2015.01.038.\n\nJones\n\n\
+    # Acknowledgements\n\nWe thank Likas Musidang, and Jala Tech Pte. Ltd. (Indonesia)\
+    \ as well as all members of Jala Tambak Plan for their assistance with data collection\
+    \ and data coordination. We also thank Van Wijagenen and Trini Putri for their\
+    \ assistance with project management. This research was funded by IDH Fund Project\
+    \ & Jala Tech Pte. Ltd. (Indonesia).\n\nChen, J., Mohan, C., Lueber, R., 2012.\
+    \ Finding methods for managing white spot virus in shrimp farms in Thailand. Aquaculture.\
+    \ 131(3), 310-318. https://doi.org/10.1016/j.aquaculture.2012.03.017\n\n# Appendix\
+    \ A\n\nSupplementary data to this study can be found at: https://doi.org/10.1016/j.aquaculture.2022.738227.\n\
+    \n# References\n\nAli, H., Rahman, M.M., Rojo, J., Aaman, A., Basak, S.K., Mohan,\
+    \ C.V., 2018. An assessment of health management and occupational health status\
+    \ in Indian shrimp farmers of West Bengal (Penaeus monodon brachium) aquaculture\
+    \ in Bangladesh. Aquatic Science. 10, 1-19.\n\nAmes, F., Futiya, A., Andriy, Y.,\
+    \ 2021. Review of shrimp farming (Penaeus monodon) in Vietnam: Challenges and\
+    \ opportunities. World Fisheries Science 158, 145-158.\n\nThakur, K.I., Tangpasitakul,\
+    \ T., Luen, R., Vanderricick, R., 2014. Impact of spread of white spot diseases\
+    \ (WFD) in semi-intensive ponds in Asian Thailand. Asian and Environmental Science:\
+    \ 67, 0112015.\n\nBoerlage, A.S., Nguyen, K.V., Delphino, J., Van, F.T., Tang,\
+    \ L.T., Hammel, K. L., 2017. Review of biosecurity measures related to pathogen\
+    \ introduction and spread control. Aquaculture. 406, 1-8.\n\nNjoy\n\nMuustia,\
+    \ M., Steffen, C., Abeleberg, A., Feybaugh, A., Aydagova, I., 2015. Shrimp farming\
+    \ in Indonesia: Challenges, sustainability, and regulatory development. Environ.\
+    \ Manage. 112, 199-207.\n\nSiegel, R., 2020. A guide to environmental and statistical\
+    \ computing. R: Foundation for Statistical Computing. Available in: https://www.R-project.org.\n\
+    \nStatCorp, 2019. Statistical Analysis: Software. Statistica College LLC, Vermont,\
+    \ USA.\n\nAnanth, K., Suiswashetty, I., Sriharari, G., L., Sugani, B., Dmukond,\
+    \ R., 2004. Current status of diseases in Indian aquaculture: occurrence, surveillance,\
+    \ and control measures. Journal of Fisheries Research and Development, 36 (Proceedings\
+    \ of the Meeting on Current Status of Aquaculture in India.\n\nFang, J.K., Gonzalez-Mendoza,\
+    \ R., 2019. Impact of hepatitis sprovirus infection on shrimp production in Vietnam.\
+    \ Aquaculture. 428, 125-136.\n\nThakur, K., Tangpasitakul, T., Luen, R., Vanderrichel,\
+    \ R., Corsin, F., Hammel, L., 2019. Viral disease incidence in shrimp farming\
+    \ (Penaeus monodon) in Vietnam provinces. Aquaculture. 425, \n\n10"
+  merge: -1
+  pgno: 9
