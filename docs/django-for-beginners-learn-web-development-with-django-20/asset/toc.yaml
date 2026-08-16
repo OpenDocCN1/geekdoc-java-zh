@@ -1,0 +1,352 @@
+- - '#'
+  - Django 初学者指南：使用 Django 2.0 进行 Web 开发
+- - '#'
+  - 导言
+- - '##'
+  - 为什么选择 Django 1
+- - '#'
+  - 书籍结构
+- - '#'
+  - 引言
+- - '#'
+  - 书籍布局
+- - '#'
+  - This is Python code
+- - '#'
+  - 引言
+- - '#'
+  - 代码
+- - '#'
+  - 命令行
+- - '#'
+  - 结论
+- - '#'
+  - 第 1 章：初始设置
+- - '#'
+  - 在 Linux 上安装 Python 3
+- - '##'
+  - 虚拟环境
+- - '##'
+  - 安装
+- - '##'
+  - 命令行
+- - '##'
+  - Django 欢迎页
+- - '#'
+  - 安装 Git
+- - '#'
+  - 第 2 章：Hello World 应用
+- - '##'
+  - 初始设置
+- - '##'
+  - 命令行
+- - '##'
+  - 安装成功！恭喜你！
+- - '##'
+  - Django 欢迎页
+- - '##'
+  - 创建一个应用
+- - '##'
+  - 视图 (Views)
+- - '##'
+  - pages/views.py
+- - '##'
+  - pages/urls.py
+- - '##'
+  - helloworld_project/urls.py
+- - '##'
+  - 好，世界！
+- - '##'
+  - Git
+- - '##'
+  - Bitbucket
+- - '##'
+  - Bitbucket 欢迎页
+- - '##'
+  - Bitbucket 创建仓库
+- - '##'
+  - 结论
+- - '##'
+  - 初始化设置
+- - '##'
+  - 模板
+- - '#'
+  - 第 3 章：Pages 应用
+- - '##'
+  - pages_project/settings.py
+- - '##'
+  - 基于基的视图 (Class-Based Views)
+- - '##'
+  - pages/views.py
+- - '##'
+  - URLs
+- - '##'
+  - pages_project/urls.py
+- - '##'
+  - pages/urls.py
+- - '##'
+  - Homepage
+- - '##'
+  - 添加一个关于页面 (About Page)
+- - '##'
+  - 扩展模板 (Extending Templates)
+- - '##'
+  - 测试 (Tests)
+- - '##'
+  - pages/tests.py
+- - '##'
+  - Git 和 Bitbucket
+- - '##'
+  - 本地与生产环境
+- - '##'
+  - Heroku
+- - '##'
+  - 附加文件
+- - '##'
+  - Pipfile
+- - '##'
+  - 首页。
+- - '##'
+  - 关于页面。
+- - '##'
+  - 结
+- - '#'
+  - 第 4 章：留言板应用
+- - '##'
+  - 初始化设置
+- - '##'
+  - mb_project/settings.py
+- - '##'
+  - 创建数据库模型
+- - '##'
+  - posts/models.py
+- - '##'
+  - 在此处创建你的模型
+- - '##'
+  - 激活模型
+- - '##'
+  - Django Admin
+- - '##'
+  - 管理登录页面
+- - '#'
+  - 第 4 章：消息板应用
+- - '##'
+  - 管理主页
+- - '##'
+  - posts/admin.py
+- - '##'
+  - 管理新条目
+- - '##'
+  - 视图/模板/URL
+- - '##'
+  - posts/views.py
+- - '##'
+  - settings.py
+- - '##'
+  - Bitbucket
+- - '##'
+  - Bitbucket 创建应用
+- - '##'
+  - Heroku 配置
+- - '##'
+  - Pipfile
+- - '##'
+  - Heroku 部署
+- - '##'
+  - 消息板首页
+- - '#'
+  - 第 5 章：博客应用
+- - '##'
+  - 初始化设置
+- - '##'
+  - blog_project/settings.py
+- - '##'
+  - django
+- - '##'
+  - 欢迎页面
+- - '##'
+  - 数据库模型
+- - '##'
+  - blog/models.py
+- - '##'
+  - 管理后台
+- - '##'
+  - 管理首页
+- - '##'
+  - 第一篇文章
+- - '##'
+  - 添加文章
+- - '##'
+  - 带有篇文章的管理首页
+- - '##'
+  - URLs
+- - '##'
+  - blog_project/urls.py
+- - '##'
+  - 视图
+- - '##'
+  - blog/views.py
+- - '##'
+  - 静态文件
+- - '##'
+  - blog_project/settings.py
+- - '##'
+  - 博客详情
+- - '##'
+  - 测试
+- - '##'
+  - blog/tests.py
+- - '#'
+  - 第 6 章：表单
+- - '##'
+  - 博客新页面
+- - '##'
+  - 博客首页
+- - '##'
+  - blog_project/settings.py
+- - '##'
+  - models.py
+- - '##'
+  - 更新表单
+- - '##'
+  - Is form working?
+- - '##'
+  - blog/views.py
+- - '##'
+  - blog/urls.py
+- - '##'
+  - 编辑文章
+- - '##'
+  - 博客编辑页面
+- - '##'
+  - 第 篇文章
+- - '#'
+  - 第 7 章：用户账户
+- - '##'
+  - 登录
+- - '##'
+  - 注册 首页
+- - '##'
+  - blog_project/urls.py
+- - '##'
+  - settings.py
+- - '##'
+  - http://127.0.0.1:8000/accounts/login/
+- - '##'
+  - 登录页面
+- - '##'
+  - 更新后的首页
+- - '##'
+  - 注销链接
+- - '##'
+  - 注册
+- - '##'
+  - accounts/urls.py
+- - '##'
+  - accounts/views.py
+- - '##'
+  - Django 注册页面
+- - '#'
+  - 第 8 章：自定义模型
+- - '##'
+  - 设置
+- - '##'
+  - users/models.py
+- - '##'
+  - users/forms.py
+- - '##'
+  - users/admin.py
+- - '##'
+  - 管理页面
+- - '#'
+  - 第 9 章：用户认证
+- - '##'
+  - 模板
+- - '##'
+  - newspaper_project/settings.py
+- - '##'
+  - newspaper_project/urls.py
+- - '##'
+  - 管理员后台
+- - '##'
+  - 管理员错误
+- - '##'
+  - 注册
+- - '##'
+  - 新注册页面
+- - '#'
+  - 第 10 章：Bootstrap
+- - '##'
+  - pages 应用
+- - '##'
+  - newspaper_project/settings.py
+- - '##'
+  - newspaper_project/urls.py
+- - '##'
+  - pages/urls.py
+- - '##'
+  - pages/views.py
+- - '##'
+  - 登录后的首页
+- - '##'
+  - 测试
+- - '##'
+  - pages/tests.py
+- - '##'
+  - 导航栏首页
+- - '##'
+  - 带有图标的移动端首页
+- - '##'
+  - 登录
+- - '##'
+  - 注册表单
+- - '##'
+  - Crispy注册页面
+- - '#'
+  - 第 11 章：密码更改与置
+- - '##'
+  - 密码更改
+- - '##'
+  - 密码重置
+- - '##'
+  - newspaper_project/settings.py
+- - '#'
+  - 第 12 章：邮件
+- - '##'
+  - SendGrid
+- - '##'
+  - SendGrid 定价
+- - '##'
+  - SendGrid 新账户
+- - '##'
+  - SendGrid 已登录
+- - '##'
+  - newspaper_project/settings.py
+- - '##'
+  - 自定义邮件
+- - '#'
+  - 第 13 章：Newspaper 应用
+- - '##'
+  - Articles 应用
+- - '##'
+  - newspaper_project/settings.py
+- - '##'
+  - articles/models.py
+- - '##'
+  - articles/admin.py
+- - '##'
+  - 管理页面
+- - '##'
+  - 添加文章页面
+- - '##'
+  - newspaper_project/urls.py
+- - '##'
+  - articles/urls.py
+- - '##'
+  - articles/views.py
+- - '##'
+  - 导航栏中有新链接的首页
+- - '##'
+  - 新文章
+- - '##'
+  - 详情页
