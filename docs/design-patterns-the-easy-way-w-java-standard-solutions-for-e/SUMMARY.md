@@ -1,0 +1,2 @@
++   [设计模式：简易方法，使用 Java 标准解决方案解决日常编程问题；适用于游戏编程、系统管理、应用及数据库系统（设计模式系列）](README.md)
++   [设计模式：简易方法，使用 Java 标准解决方案解决日常编程问题；适用于游戏编程、系统管理、应用及数据库系统（设计模式系列）](design-patterns-the-easy-way-w-java-standard-solutions-for-e.md)
