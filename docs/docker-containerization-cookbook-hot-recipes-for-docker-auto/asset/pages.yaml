@@ -1,0 +1,3516 @@
+- img_proc: true
+  md: '# # DOCKER CONTAINERIZATION COOKBOOK
+
+
+    Hot Recipes for Docker Automation
+
+
+    ![](img/eef4930f20bf8a25354ad13017767cce_0_0.png)
+
+
+    JAVA CODE GEEKS'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Docker Containerization Cookbook'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Contents
+
+
+    +   1 Docker Tutorial for Beginners .....................................................................................................................
+    1
+
+    1.1 Why do we need Docker? . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . 2
+
+    1.2 Machines, Images and Containers . . . . . . . . . . . . . . . . . . . . .
+    . . . 2
+
+    1.2.1 Installing docker and docker-machine . . . . . . . . . . . . . 3
+
+    1.3 Understanding the commands . . . . . . . . . . . . . . . . . . . . . . . .
+    4
+
+    1.3.1 Creating a machine . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+    1.3.2 Creating an image . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+    1.3.3 Creating a container . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+    1.3.4 Cleaning the environment . . . . . . . . . . . . . . . . . . . 6
+
+    1.4 Running integration tests with Maven ........................................................................................
+    6
+
+    1.4.1 Maven configuration . . . . . . . . . . . . . . . . . . . . 6
+
+    1.4.2 Creating integration tests . . . . . . . . . . . . . . 8
+
+    1.4.3 Running the tests . . . . . . . . . . . . . . . . . . 9
+
+    1.5 Download the source code .......................................................................................................
+    10
+
+
+    +   2 Install Docker on Ubuntu Tutorial ..........................................................................................
+    11
+
+    2.1 Requisites ...................................................................................................................................................................
+    11
+
+    2.2 Installation ...................................................................................................................................................................................................................................................................................................................................
+    11
+
+    2.2.1 Fixing "Cannot connect to the Docker daemon" error ............................................
+    12
+
+    2.3 Basic usage . . . . . . . . . . . . . . . . . . . . . . ............................................................
+    12
+
+    2.3.1 Pulling images . . . . . . . . . . . . . . . . . . . . .................................................
+    13
+
+    2.3.2 Creating images from Dockerfiles ................................................................................
+    13
+
+    2.3.3 Creating containers ................................................................................................................................
+    13
+
+    2.4 Summary .......................................................................................................................................................................................
+    14
+
+
+    +   3 Docker Kernel Requirements ...................................................................................................
+    15
+
+    3.1 Introduction .................................................................................................................................................................................................................
+    15
+
+    3.2 Docker engine dependencies from the Linux kernel ............................................................
+    15
+
+    3.3 Resource constraining dependencies ................................................................................................
+    16
+
+    3.3.1 3.1 Control groups a.k.a cgroups ..........................................................................................
+    16
+
+    3.3.2 Namespaces .................................................................................................................................................................................
+    17'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    +   3.4 Security dependencies ................................................................................................................
+    17
+
+    3.4.1 AppArmor ...................................................................................................................................................
+    17
+
+    3.4.2 Security Enhanced Linux a.k.a SELinux ..............................................................................................
+    17
+
+    3.4.3 Posix capabilities a.k.a Capabilities .....................................................................................................
+    17
+
+    3.4.4 Secure Computing Mode a.k.a seccomp ...................................................................................................
+    17
+
+    3.5 Networking dependencies ........................................................................................................................
+    18
+
+    3.5.1 Netfilter .....................................................................................................................................................
+    18
+
+    3.5.2 IPTables ....................................................................................................................................................
+    18
+
+    3.5.3 Netlink .....................................................................................................................................................
+    18
+
+    3.6 File system dependencies ......................................................................................................................
+    18
+
+    3.6.1 Device mapper ..........................................................................................................................................
+    18
+
+    3.7 Other non-kernel dependencies ................................................................................................................
+    19
+
+    3.7.1 LibContainer a.k.a RunC ..........................................................................................................................
+    19
+
+    3.7.2 LXC ............................................................................................................................................................
+    19
+
+    3.8 Summary .......................................................................................................................................................
+    19
+
+
+    +   4 Docker Hello World Example ................................................................................................
+    20
+
+    4.1 Introduction ..............................................................................................................................................
+    20
+
+    4.2 Run Docker Hello World image provided by Docker ......................................................................
+    20
+
+    4.3 Get a "Hello, world" Pred from Another Basic Docker Image ........................................................
+    21
+
+    4.4 Write a Simple "Hello, World" Program in Java and Run it Within a Docker Container
+    .......................... 22
+
+    4.4.1 Create HelloWorld.java ......................................................................................................................
+    22
+
+    4.4.2 Create a Dockerfile .......................................................................................................................................
+    23
+
+    4.4.3 Create Docker Hello World Image and Run it ...................................................................................
+    23
+
+    4.5 Execute a "Hello, World" Program in Java Using Gradle and Docker ...............................................
+    25
+
+    4.5.1 Initialize a New Project and Create HelloWorld.java ................................................................
+    25
+
+    4.5.2 Create a Dockerfile ...................................................................................................................................
+    26
+
+    4.5.3 Include Gradle-Docker Plugin ......................................................................................................
+    26
+
+    4.5.4 Configure the Docker Tasks in Gradle Build File ........................................................................
+    26
+
+    4.5.5 Create Docker Container and Run it ............................................................................................
+    27
+
+    4.6 Summary ................................................................................................................................................
+    29
+
+    4.7 Download the Source Code ...................................................................................................................
+    29
+
+
+    +   5 Docker as a Service ................................................................................................................
+    30
+
+    5.1 Why Docker as a Service? ................................................................................................................
+    30
+
+    5.2 Container as a Service (CaaS) ................................................................................................
+    31
+
+    5.3 Docker CaaS ................................................................................................................................................
+    32
+
+    5.4 Summary ......................................................................................................................................
+    32'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n+   6 Docker Build Example 33\n  6.1\
+    \ Introduction 33\n  6.2 Installation & Usage 33\n  6.3 Context definition 34\n\
+    \    6.3.1 Build with PATH 35\n    6.3.2 Build with URL 35\n    6.3.3 Build with\
+    \ - 35\n  6.4 Dockerfile location 36\n  6.5 Example 36\n  6.6 Conclusion 36\n\n\
+    +   7 Docker Compose example 37\n  7.1 Introduction 37\n  7.2 Docker Toolbox setup\
+    \ 38\n  7.3 Docker compose example: An HTTP server connected to Redis 38\n   \
+    \ 7.3.1 Creating the docker-compose.yml file 39\n    7.3.2 Creating the web server\
+    \ 39\n    7.3.3 Launching Docker Compose 42\n    7.3.4 Testing the web server\
+    \ 42\n  7.4 Download the complete source code 42\n\n+   8 Configuring DNS in Docker\
+    \ 43\n  8.1 Introduction 43\n  8.2 Basics of Networking Configurations in Docker\
+    \ Engine 43\n    8.2.1 2.1. Inspect Networks 43\n    8.2.2 2.2. Create User Defined\
+    \ Networks 44\n    8.2.3 2.3. Connect Containers Within a Network 45\n  8.3 Setup\
+    \ Container DNS in Bridge Network 46\n  8.4 Setup Container DNS in a User Defined\
+    \ Network 47\n  8.5 Summary 48\n\n+   9 Docker Start Container Example 49\n  9.1\
+    \ Installation 49\n  9.2 Pulling a sample image 49\n  9.3 Creating a container\
+    \ from an image and running it: run 50\n    9.3.1 Running container in detached\
+    \ mode 50\n    9.3.2 Giving a name to the container 50\n    9.3.3 Mapping container\
+    \ ports to host ports 51\n    9.3.4 Run a container and get the command line 51\n\
+    \    9.3.5 Specifying a username 51\n  9.4 Starting an existing container: restart\
+    \ 51\n  9.5 Summary 52"
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# 10 Docker List Containers Example .................................................................................
+    53
+
+
+    +   10.1 Installation ...................................................................................................................................................
+    53
+
+
+    +   10.2 Setting up some containers .......................................................................................................
+    53
+
+
+    +   10.2.1 Pulling a sample image ................................................................................................................
+    53
+
+
+    +   10.2.2 Creating sample containers ................................................................................................
+    53
+
+
+    +   10.3 Listing containers .....................................................................................................................
+    54
+
+
+    +   10.3.1 Formatting the output ......................................................................................................
+    54
+
+
+    +   10.3.2 Saving format templates in Docker configuration file ................................
+    55
+
+
+    +   10.3.3 Using filters ...................................................................................................................
+    56
+
+
+    +   10.4 Summary .......................................................................................................................................
+    56'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Copyright (c) Exelix Media P.C., 2016
+
+
+    All rights reserved. Without limiting the rights under copyright reserved above,
+    no part of this publication may be reproduced, stored or introduced into a retrieval
+    system, or transmitted, in any form or by any means (electronic, mechanical, photocopying,
+    recording or otherwise), without the prior written permission of the copyright
+    owner.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Preface
+
+
+    Docker is the world''s leading software containerization platform. Docker containers
+    wrap a piece of software in a complete filesystem that contains everything needed
+    to run: code, runtime, system tools, system libraries - anything that can be installed
+    on a server. This guarantees that the software will always run the same, regardless
+    of its environment. (Source: https://www.docker.com/what-docker)
+
+
+    Docker provides an additional layer of abstraction and automation of operating-system-level
+    virtualization on Linux. Docker uses the resource isolation features of the Linux
+    kernel such as cgroups and kernel namespaces, and a union-capable file system
+    such as OverlayFS and others to allow independent "containers" to run within a
+    single Linux instance, avoiding the overhead of starting and maintaining virtual
+    machines (Source: https://en.wikipedia.org/wiki/Docker_(software)).
+
+
+    In this ebook, we provide a compilation of Docker examples that will help you
+    kick-start your own automation projects. We cover a wide range of topics, from
+    installation and configuration, to DNS and commands. With our straightforward
+    tutorials, you will be able to get your own projects up and running in minimum
+    time.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# About the Author
+
+
+    JCGs (Java Code Geeks) is an independent online community focused on creating
+    the ultimate Java to Java developers resource center; targeted at the technical
+    architect, technical team lead (senior developer), project manager and junior
+    developers alike.
+
+
+    JCGs serve the Java, SOA, Agile and Telecom communities with daily news written
+    by domain experts, articles, tutorials, reviews, announcements, code snippets
+    and open source projects.
+
+
+    You can find them online at https://www.javacodegeek.com/'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Chapter 1
+
+
+    # Docker Tutorial for Beginners
+
+
+    In this article we are going to explain the main features of Docker. We are going
+    to briefly explain why containers are necessary, which are the main commands to
+    use and how to use Docker in our integration tests. The following table shows
+    an overview of the whole article:
+
+
+    +   1.1 Why do we need Docker?
+
+
+    ![](img/eef4930f20bf8a25354ad13017767cce_9_0.png)
+
+
+    Figure 1.1: docker
+
+
+    Docker is a tool to avoid the usual headaches of conflicts, dependencies and inconsistent
+    environments, which is an important problem for distributed applications, where
+    we need to install or upgrade several nodes with the same configuration.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    Docker is a container manager, which means that it is able to create and execute
+    containers that represent specific runtime environments for your software. In
+    contrast with virtual machines like VirtualBox, Docker uses resource isolation
+    features of the Linux kernel to allow independent "containers" to run within a
+    single Linux instance, avoiding the overhead of starting and maintaining virtual
+    machines. A computer with docker can run multiple containers at the same time.
+
+
+    Therefore, the automation of Docker mainly offers facilities for integration tests
+    and continuous delivery.
+
+
+    # 1.2 Machines, Images and Containers
+
+
+    In order to use docker, it is important to have clear some vocabulary. Docker
+    distinguishes three important concepts: docker machines, docker images and containers.
+
+
+    Docker containers are executions of an specific runtime environment. For example,
+    to simulate a machine with a specific database ap. These runtime environments
+    are called Docker images, which are the result of executing the set of commands
+    that appear in a specific script-like file called Dockerfile. Therefore, Docker
+    allow having multiple containers of a specific Docker image. These could be compared
+    with the concepts of program and process. Indeed, containers like processes, can
+    be created, stopped, died, or running.
+
+
+    Docker machines are local (and virtual) machines or remote machines(e.g in a cloud
+    such as Amazon AWS or DigitalOcean) with a docker running. Like physical machines,
+    docker machines has an specific IP address. Each docker machine can manage multiple
+    docker images and containers. From our own personal computer, the docker-machine
+    command, allow us connecting to all our docker machines to manage their containers
+    and images.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Docker machine {IP=192.168.99.100}
+
+
+    # Docker machine {IP=...}
+
+
+    # Docker containers
+
+
+    container1:MongoDB
+
+    container2:MongoDB
+
+    container3:MongoDB
+
+
+    DigitalOcean
+
+
+    # Docker machine {IP=...}
+
+
+    AWS
+
+
+    # Docker images
+
+
+    | MongoDB | Java8 |
+
+    | Ubuntu | ... |
+
+
+    ![](img/eef4930f20bf8a25354ad13017767cce_11_0.png)
+
+
+    # 1.2.1 Installing steps to docker and docker-machine
+
+
+    Follow the next steps to install docker and docker machine
+
+
+    Download and install the docker binary file from here. Once, you have followed
+    the installation instructions, you should be able to run the following command.
+
+
+    Docker installation test
+
+
+    ```
+
+    $ docker run ubuntu:14.04 /bin/echo ''It works!''
+
+    It works!
+
+    ```
+
+
+    Download the Docker Binary and update your PATH if you are running OS or Linux:
+
+
+    Unix Docker machine installation
+
+
+    ```
+
+    $ curl -L https://github.com/docker/machine/releases/download/v0.6.0/docker-machine-uname
+    \
+
+    -s-`uname -m` > /usr/local/bin/docker-machine && \
+
+    chmod +x /usr/local/bin/docker-machine
+
+    ```
+
+
+    If you are running Windows with git bash
+
+
+    Windows Docker Machine installation'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '```
+
+    $ if [ ! -d "$HOME/bin ]; then mkdir -p "$HOME/bin"; fi \ \
+
+    curl -L https://github.com/docker/machine/releases/download/v0.6.0/docker-machine-Windows-x86_64.exe
+    > "$HOME/bin/docker-machine.exe \ \
+
+    ```
+
+
+    Otherwise, use the installer from the Docker official releases.
+
+
+    # # 1.3 Understanding the commands
+
+
+    There are many docker commands. In fact, if we simply run docker from our terminal,
+    we can see all the available commands.
+
+
+    Commands:
+
+
+    | Commands | |
+
+    | --- | --- |
+
+    | attach | Attach to a running container |
+
+    | build | Build an image from a Dockerfile |
+
+    | commit | Create a new image from a container to changes |
+
+    | cp | Copy files/folders from a container to a HOSTDIR or to STDOUT |
+
+    | create | Create a new container |
+
+    | diff | Inspect changes on a container''s filesystem |
+
+    | events | Get real time events from the server |
+
+    | exec | Run a command in a running container |
+
+    | export | Export a container as a tar archive |
+
+    | history | Show the history of an image |
+
+    | import | Import the contents from a tarball to create a filesystem image |
+
+    | info | Display system-wide information |
+
+    | inspect | Return low information on a container or image |
+
+    | kill | Kill a running container |
+
+    | load | Load an image from a tar archive or STDIN |
+
+    | login | Register or log in to a Docker registry |
+
+    | logout | Log out from a Docker registry |
+
+    | logs | Fetch the logs of a container |
+
+    | pause | Pause all processes within a container |
+
+    | port | List port mappings or a specific mapping for the CONTAINER |
+
+    | ps | List live containers |
+
+    | pull | Pull an image or a repository from a registry |
+
+    | push | Push an image or a repository to a registry |
+
+    | rename | Rename a container |
+
+    | restart | Restart a running container |
+
+    | rm | Remove one or more containers |
+
+    | rmi | Remove one or more images |
+
+    | run | Run a command in a new container |
+
+    | save | Save an image(s) to a tar archive |
+
+    | search | Search the Docker Hub for images |
+
+    | start | Start one or more stopped containers |
+
+    | stats | List a live stream of container(s) resource usage statistics |
+
+    | stop | Stop a container |
+
+    | tag | Tag an image into a repository |
+
+    | top | Display the running processes within a container |
+
+    | unpause | Unpause all processes within a container |
+
+    | version | Show the docker version information |
+
+    | wait | Block until a container stops, then print its exit code
+
+
+    Run `docker COMMAND --help` for more information on a command.
+
+
+    In this section, we will see how to manage docker machines, how to pull a docker
+    image using a specific docker machine and how to create such a docker image.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# 1.3.1 Creating a machine
+
+
+    First of all, we will list the set of available docker machines with the following
+    command:
+
+
+    List Docker Machines
+
+
+    ```
+
+    docker-machine ls
+
+    ```
+
+
+    In case of not having any machine, we are going to create a new one as follows:
+
+
+    Docker installation test
+
+
+    ```
+
+    docker-machine create --driver virtualbox default
+
+    ```
+
+
+    Notice that in order to create a docker machine, we need to specify a driver,
+    which will determine if it is a virtual machine, in this case virtual box, or
+    if it is a connection to docker running in an external machine.
+
+
+    # 1.3.2 Creating an image
+
+
+    Docker images are created in a specific docker machine. In order to define the
+    docker machine that we want to use, we need to run the following command:
+
+
+    Select docker machine
+
+
+    ```
+
+    eval "$(docker-machine env default)"
+
+    ```
+
+
+    In order to check this, list the available docker machines again. At this moment,
+    a new machine should appear with a new IP address (192.168.99.100) and contains
+    an asterisk in the ACTIVE container.
+
+
+    Active Docker Machine
+
+
+    | NAME | ACTIVE | DRIVER | STATE | URL | SWARM |
+
+    |---|---|---|---|---|---|
+
+    | default | | virtualbox | Running | tcp://192.168.99.100:2376 | |
+
+
+    Docker images are binary files of runtime environments. The contents of a docker
+    image are the result of executing the set of instructions that appear in a plain
+    text file called Dockerfile. However, in order to avoid building docker images
+    from Dockerfiles over and again, there is an online repository for docker images
+    called Docker Hub.
+
+
+    For example, to pull a MongoDB image, we only need to execute the docker pull
+    command as follows:
+
+
+    Docker pull command
+
+
+    ```
+
+    docker pull mongo
+
+    ```
+
+
+    In order to see the installed images in our docker machine, use the following
+    command. Notice that a new entry appears with the Mongo image. Each image has
+    a unique identifier of the docker image for our machine called IMAGE ID.
+
+
+    List Docker Images
+
+
+    ```
+
+    docker images
+
+    ```
+
+
+    If you are interested to understand how to create a Dockerfile, we strongly recommend
+    follow this example.
+
+
+    # 1.3.3 Creating a container
+
+
+    Docker containers are executions of docker images. In order to create a container
+    from an image, we use the command docker run. For example:
+
+
+    List Docker Images
+
+
+    ```
+
+    docker run mongo
+
+    ```'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\nAfter that, we can check the list of\
+    \ containers, with the following instruction.\n\nList containers\n\n```\ndocker\
+    \ ps -a\n```\n\nNotice that our container has an identifier too, called CONTAINER\
+    \ ID. We will use it later.\nThe IP address to connect to this container from\
+    \ our application is the IP of our docker machine (192.168.99.100).\n\n# 1.3.4\
+    \ Cleaning the environment\n\nAt this point we have downloaded a docker machine\
+    \ and we have started a docker container. In order to stop and remove the container\
+    \ and the image we need to execute the following instructions:\n\nStop the container:\n\
+    \nStop Docker Container\n\n```\ndocker stop #containerId\n```\n\nRemove the container:\n\
+    \nRemove Docker Container\n\n```\ndocker rm #containerId\n```\n\nRemove the docker\
+    \ image:\n\nRemove Docker Image\n\n```\ndocker rmi #imageId\n```\n\n# 1.4 Running\
+    \ integration tests with Maven\n\nThere are different approaches to design integration\
+    \ tests with Docker. In this example, we will design a Maven project, which before\
+    \ executing JUnit tests, it automatically starts a MongoDB container.\n\n# 1.4.1\
+    \ Maven configuration\n\nFirst of all, this pom.xml file. We are going to use\
+    \ the docker-maven-plugin to automatically load the defined Docker images and\
+    \ create a container before running the integration tests. In order to support\
+    \ integration tests, we use the maven-failsafe-plugin.\n\npom.xml\n\n```\n<project\
+    \ xmlns=\"https://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\
+    \n xsi:schemaLocation=\"https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\"\
+    >\n <modelVersion>4.0.0</modelVersion>\n<groupId>javodegeeks</groupId>\n <artifactId>javadegeeks</artifactId>\n\
+    \ <version>1.0-SNAPSHOT</version>\n <packaging>jar</packaging>\n<properties>\n\
+    \ <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\n```"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "```\n<project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>\n\
+    <maven.compile.encoding>UTF-8</maven.compile.encoding>\n</properties>\n<build>\n\
+    <plugins>\n<plugin>\n  <artifactId>maven-compiler-plugin</artifactId>\n  <version>2.1</version>\n\
+    \  <configuration>\n    <source>1.8</source>\n    <target>1.8</target>\n    <encoding>UTF-8</encoding>\n\
+    \  </configuration>\n</plugin>\n<plugin>\n  <groupId>org.apache.maven.plugins</groupId>\n\
+    \  <artifactId>maven-failsafe-plugin</artifactId>\n  <version>2.9.1</version>\n\
+    \  <configuration>\n    <includes>\n      <include>**/IntegrationTest.java</include>\n\
+    \    </includes>\n  </configuration>\n  <executions>\n    <execution>\n      <id>integration-test</id>\n\
+    \      <goals>\n        <goal>integration-test</goal>\n      </goals>\n    </execution>\n\
+    \    <execution>\n      <id>verify</id>\n      <goals>\n        <goal>verify</goal>\n\
+    \      </goals>\n    </execution>\n  </executions>\n</plugin>\n<!-- Tell sure\
+    \ to skip test, we are using the failsafe plugin -->\n<plugin>\n  <groupId>org.apache.maven.plugins</groupId>\n\
+    \  <artifactId>maven-surefire-plugin</artifactId>\n  <version>2.10</version>\n\
+    \  <configuration>\n    <skip>true</skip>\n  </configuration>\n</plugin>\n<plugin>\n\
+    \  <groupId>io.fabric8</groupId>\n  <artifactId>docker-maven-plugin</artifactId>\n\
+    \  <version>0.15.0</version>\n  <configuration>\n    <logDate>default</logDate>\n\
+    \    <autoPull>true</autoPull>\n    <dockerHost>tcp://192.168.99.100:2376${dockerHost}</dockerHost>\n\
+    \    <certPath>$(user.home)/.docker/machine/certs/${certPath}</certPath>\n  <images>\n\
+    \    <image>\n      <name>mongo</name>\n      <run>\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n```\n<ports>\n  <port>27017:27017</port>\n\
+    </ports>\n<run>\n</image>\n<images>\n  <configuration>\n    <!-- Booking into\
+    \ the lifecycle -->\n    <executions>\n      <execution>\n        <id>start</id>\n\
+    \        <phase>pre-integration-test</phase>\n        <goals>\n          <goal>start</goal>\n\
+    \        </goals>\n      </execution>\n      <execution>\n        <id>stop</id>\n\
+    \        <phase>post-integration-test</phase>\n        <goals>\n          <goal>stop</goal>\n\
+    \        </goals>\n      </execution>\n    </executions>\n  </configuration>\n\
+    </plugin>\n<build>\n  <dependencies>\n    <dependency>\n      <groupId>org.mongodb</groupId>\n\
+    \      <artifactId>mongodb-java-driver</artifactId>\n      <version>3.2.2</version>\n\
+    \    </dependency>\n    <dependency>\n      <groupId>junit</groupId>\n      <artifactId>junit</artifactId>\n\
+    \      <version>4.12</version>\n      <scope>test</scope>\n    </dependency>\n\
+    \  </dependencies>\n</project>\n```\n\n#  1.4.2 Creating integration tests\n\n\
+    Integration tests are executed after creating a MongoDB container by the maven-docker-plugin.\
+    \ We are going to create a test to validate the following Zoo component, which\
+    \ has one operation addAnimal that inserts an animal to MongoDB.\n\nZoo.java\n\
+    \n```\npackage javacodegeeks;\n\nimport org.bson.Document;\n\nimport com.mongodb.MongoClient;\n\
+    \npublic class Zoo {\n\n  private MongoClient client;\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n```\npublic Zoo(MongoClient client) {\n\
+    \    this.client = client;\n}\n\npublic void addAnimal(String name, String type)\
+    \ {\n    Document doc = new Document(\"lion\").append(\"type\", \"mammal\");\n\
+    \    client.getDatabase(\"mydb\").getCollection(\"animals\").insertOne(doc);\n\
+    }\n```\n\nTo test the Zoo component, we validate it with an empty database, that\
+    \ after adding the addAnimal operation, MongoDB contains a new animal.\n\nIntegrationTest.javcodegeeks\n\
+    \n```\npackage org.bson.Document;\n\nimport org.junit.AfterClass;\nimport org.junit.Assert;\n\
+    import org.junit.BeforeClass;\nimport org.junit.Before;\nimport org.junit.Test;\n\
+    import com.mongodb.client.MongoClient;\nimport com.mongodb.client.FindIterable;\n\
+    import com.mongodb.client.MongoDatabase;\n\npublic class IntegrationTest {\n\n\
+    \    private static MongoClient client;\n\n    @BeforeClass\n    public static\
+    \ void start() {\n        client = new MongoClient(\"192.168.99.100\");\n    \
+    \    MongoDatabase db = client.getDatabase(\"mydb\");\n        db.createCollection(\"\
+    animals\");\n    }\n\n    @Test\n    public void testMongoInsert() {\n       \
+    \ Zoo zoo = new Zoo(client);\n        zoo.addAnimal(\"lion\", \"mammal\");\n\n\
+    \        FindIterable it = client.getDatabase(\"mydb\").getCollection(\"animals\"\
+    )\n            .find(new Document(\"name\", \"lion\"));\n        Assert.assertNotNull(it.first());\n\
+    \    }\n\n    @AfterClass\n    public static void stop() {\n        client.close();\n\
+    \    }\n}\n```\n\nNotice that the IP address of your MongoDB database is our Docker\
+    \ container.\n\n# 1.4.3 Running the tests\n\nTo run our integration tests, we\
+    \ simply execute the `mvn verify` command.\n\nRun integration tests"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    mvn verify
+
+
+    Which will produce these contents:
+
+
+    Mvn output
+
+
+    ```
+
+    [INFO] Building jar: /Users/rpau/workspace/javodegeeks/target/javodegeeks-1.0-SNAPSHOT.jar
+
+    [INFO] --- --- docker-maven-plugin:0.15.0:start (start) @ javodegeeks ---
+
+    [INFO] DOCKER > [mongos] : Start container a2a9d3cbbfd
+
+    [INFO] --- --- maven-failsafe-plugin:2.19.1:integration-test (integration-test)
+    @ javodegeeks --
+
+    ```
+
+
+    # TESTS
+
+
+    ```
+
+    Running javodegeeks.IntegrationTest
+
+    may 15, 2016 11:00:11 PM com.mongodb.dbclients.logging.JULLOGGER log ←
+
+    INFORMATION: Cluster created with settings={hosts=[192.168.99.100:27017], mode=SINGLE,
+
+    clusterType=Replica, serverSelectionTimeout=30000 ms, maxWaitQueueSize=500}
+
+    may 15, 2016 11:00:11 PM com.mongodb.dbclients.logging.JULLOGGER log ←
+
+    INFORMATION: No server chosen by cluster description ClusterDescription(type=UNKNOWN,
+    connectionMode=SINGLE, all=[ServerAddress(address=192.168.99.100:27017)]) Waiting
+    for 30000 ms before timing out
+
+    may 15, 2016 11:00:11 PM com.mongodb.dbclients.logging.JULLOGGER log ←
+
+    INFORMATION: Open connection [id:localValue:1, serverValue:1] to ←
+
+    may 15, 2016 11:00:11 PM com.mongodb.dbclients.logging.JULLOGGER log ←
+
+    INFORMATION: Monitor thread successfully connected to server with ServerAddress(address=192.168.99.100:27017,
+    type=STANDONE, state=CONNECTED, ok=true, serverVersion=0, maxVersion=4, maxMaxSize=1677216,
+    roundTripTimeMillis=147362)
+
+    may 15, 2016 11:00:11 PM com.mongodb.dbclients.logging.JULLOGGER log ←
+
+    INFORMATION: Open connection [id:localValue:2, serverValue:2] to ←
+
+    may 15, 2016 11:00:11 PM com.mongodb.dbclients.logging.JULLOGGER log ←
+
+    INFORMATION: Closed connection [id:localValue:2, serverValue:2] to ←
+
+    192.168.99.100:27017 failed because the pool has been closed.
+
+    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0.601 sec - in - javodegeeks.IntegrationTest
+
+    ```
+
+
+    Results :
+
+
+    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+
+    ```
+
+    [WARNING] File encoding not been set, using platform encoding UTF-8, i.e. build
+    is platform dependent! The file encoding outputs should be provided by the POM
+    property ${project.outputEncoding}.
+
+    [INFO] --- --- docker-maven-plugin:0.15.0 (stop) @ javodegeeks
+
+    [INFO] DOCKER > [mongos] : Stop and remove container a2a9d3cbbfd
+
+    [INFO] --- --- maven-failsafe-plugin:2.19.1:verify (verify) @ javodegeeks ---
+
+    ```
+
+
+    # 1.5 Download the source code
+
+
+    Download
+
+
+    You can download the full source of this example: Docker TutorialForBeginners'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Chapter 2
+
+
+    # Install Docker on Ubuntu Tutorial
+
+
+    Docker is, without any doubt, on of the most popular software at the moment, being
+    used by almost every developer and systems administrator. In this tutorial, we
+    will see how to install it in Ubuntu systems.
+
+    For this tutorial, we will use Linux Mint 18 (an Ubuntu based Linux distribution)
+    64-bit version.
+
+
+    # 2.1 Requisites
+
+
+    According to Docker documentation, we must meet the following prerequisites for
+    installing Docker:
+
+
+    +   - 64-bit distro. Obviously, we need a 64-bit microprocessor.
+
+    - At least, 3.10 kernel version. In Ubuntu, these versions are present since 13.10,
+    so it shouldn''t be a problem.
+
+
+    Just in case, we can check the kernel version with the following command:
+
+
+    ```
+
+    uname -r
+
+    ```
+
+
+    Which will show the kernel release. For this case, the output is:
+
+
+    ```
+
+    4.4.0-21-generic
+
+    ```
+
+
+    Now, let''s see how we can install it.
+
+
+    # 2.2 Installation
+
+
+    We can install Docker simply via apt-get, without the need of adding any repository,
+    just installing the docker.io package:
+
+
+    ```
+
+    sudo apt-get update
+
+    sudo apt-get install docker.io
+
+    ```
+
+
+    We can check that Docker has been successfully installed with executing the following:
+
+
+    ```
+
+    docker -v
+
+    ```
+
+
+    In this case, the following version has been installed:
+
+
+    ```
+
+    Docker version 1.11.2, build b9f10c9
+
+    ```
+
+
+    We can check if the Docker service was started:'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    ```
+
+    docker.service - Docker Application Container Engine
+
+    Loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+
+    Active: active (running) since Thu 2016-09-22 13:39:12 CEST; 4min 3s ago
+
+    Docs: https://docs.docker.com
+
+    Main PID: 18883 (docker)
+
+    CGroup: /system.slice/docker.service
+
+    18891 /usr/bin/docker daemon -H fd://
+
+    18891 containerd -l /var/run/docker/containererd/docker-containerd.sock
+
+    runtime run start --timeout 2m
+
+    ```
+
+
+    Finally, we can pull an image to check that Docker is working properly. For example,
+    we will use a BusyBox image:
+
+
+    ```
+
+    docker pull busybox
+
+    ```
+
+
+    And it should start to download the layers for the image.
+
+    Perhaps you get an error similar to the:
+
+
+    > Warning: failed to get default endpoint registry from daemon (Cannot connect
+    to the Docker daemon. The docker daemon running on this host?). Using system default:
+    https://index.docker.io/vi/
+
+
+    Cannot connect to the Docker daemon. The docker daemon running on this host?
+
+    If you get this error, don''t worry, we will see how to fix it in the following
+    subsection.
+
+
+    # 2.2.1 Fixing "Cannot connect to the Docker" error
+
+
+    Actually, it is not an error itself, but that the user is trying to execute Docker,
+    with no permission to access the Docker service.
+
+
+    This means that, if we try the same command with sudo permissions, we won''t get
+    the error:
+
+
+    ```
+
+    sudo docker pull busybox
+
+    ```
+
+
+    You will see that the image is being downloaded properly.
+
+    If we want to get rid of sudo permissions using Docker, we just have to add the
+    user in question to the docker group, created by Docker during installation. We
+    can check that, the user we are working with is not in the group:
+
+
+    ```
+
+    groups $(whoami)
+
+    ```
+
+
+    And we will see that the docker group is not in the list. To add it, we can simply
+    execute:
+
+    GG option is for secondary groups; and the -a is for appending to the existing
+    ones.
+
+
+    ```
+
+    sudo usermod -G docker $(whoami) -a
+
+    ```
+
+
+    If we check again groups, we will see that the now docker group is in the list.
+    But, before anything, we have to restart the service, to make the change.
+
+    After re-logging in, we will see that we can run Docker without the need of root
+    permissions:
+
+
+    ```
+
+    docker pull busybox # It works!
+
+    ```
+
+
+    # 2.3 Basic usage
+
+
+    Now that we have Docker running, we will see the most basic things we can do with
+    it.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# 2.3.1 Pulling images
+
+
+    The Docker community is so big. There is a huge number of preconfigured images,
+    many of them maintained by the official developers of the software in question
+    (e.g. MySQL, Nginx, Jenkins, and a large extent.).
+
+
+    These images can be found at Docker Hub. You don''t have to create a container
+    to pull the images from, but you will need one if you want to host your images.
+
+
+    We have already seen how to pull images. For these official images, we have just
+    to specify the name of the repository:
+
+
+    ```
+
+    docker pull <repository>
+
+    ```
+
+
+    For images of other users, we have to specify the username:
+
+
+    ```
+
+    docker pull <username>/<repository>
+
+    ```
+
+
+    By default, the image in the repository will be pulled (you have probably already
+    the "Using default tag: latest" message if you have pulled the BusyBox image).
+    But we can also pull a specific image, specified by a version tag. For that, we
+    just have to add the tag in after a colon:
+
+
+    ```
+
+    docker pull <username>/<repository>:<tag>
+
+    ```
+
+
+    For example:
+
+
+    ```
+
+    docker pull busybox:1.25.0
+
+    ```
+
+
+    Note: to see the images you have, you can use the images command:
+
+
+    ```
+
+    docker images
+
+    ```
+
+
+    # 2.3.2 Creating images from Dockerfiles
+
+
+    Creating files known as Dockerfiles is the way of creating our custom images,
+    basing on an existing one.
+
+
+    It only consists on writing the steps to execute in a file.
+
+
+    # 2.3.3 Creating containers
+
+
+    We have seen how to pull images and create our own ones, but not how to use them.
+
+
+    When we use an image, i.e., instantiate we create a container. We can have several
+    containers from the same image. The concept is almost the same as we with class
+    and objects in Object Oriented Programming.
+
+
+    For creating containers, we use the run command. The easiest way is to execute
+    it just specifying the image:
+
+
+    ```
+
+    docker run busybox
+
+    ```
+
+
+    Nothing seemed to happen. But, behind the scenes, Docker has created a container
+    from the image, execute it, and then end it, as we didn''t specify nothing to
+    do.
+
+
+    We can execute a command inside the container:
+
+
+    ```
+
+    docker run busybox echo "Hello world!"
+
+    ```
+
+
+    Not very impressive, right? But imagine doing so with a virtual machine, and compare
+    how much time takes each one.
+
+
+    We can also set an interactive shell with -it option:
+
+
+    ```
+
+    docker run -it busybox
+
+    ```
+
+
+    To see a more complete example, we are going to pull the Nginx image:'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    ```
+
+    docker pull nginx
+
+    ```
+
+
+    And then we are going to run it with the following command:
+
+
+    ```
+
+    docker run -p 8080:80 -d nginx
+
+    ```
+
+
+    And, if we follow localhost:8080 in our browser, we will see that we have a dockerized
+    Nginx web server!
+
+
+    ![](img/eef4930f20bf8a25354ad13017767cce_22_0.png)
+
+
+    Let''s explain what we have done:
+
+
+    +   * With -p 8080:80, we have bound to the host''s port 8080, the container''s
+    port 80.
+
+    * With -d option, we have detached the container to run it in the background,
+    receiving its id.
+
+
+    With this example, you have already noticed the powerfulness of Docker.
+
+
+    Note: To stop a container, we can execute the stop command followed by the container
+    id:
+
+
+    ```
+
+    docker stop <container-id>
+
+    ```
+
+
+    # 2.4 Summary
+
+
+    In this tutorial we have seen the installation of Docker in Ubuntu and its very
+    basic configuration. Apart from that, we have also seen the basic usage of Docker,
+    pulling images from the Docker Hub and creating containers from these images.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Chapter 3
+
+
+    # Docker Kernel Requirements
+
+
+    # 3.1 Introduction
+
+
+    Docker is a containerization technology that provides OS level virtualization
+    to applications. It isolates processes, storage, networking, and also provide
+    security to services running within it''s containers. To enable this, Docker depends
+    on various features of the Linux Kernel. Let us get introduced to these Docker
+    kernel requirements in this post.
+
+
+    # 3.2 Docker engine dependencies from the Linux kernel
+
+
+    The dependencies on the Linux kernel can be broadly categorized into 4 classes
+    - resource constraining, security, networking, and storage. Resource constraining
+    features allow container creators to place restrictions on container environments
+    like memory usage, cpu, etc., Security features allow security policies to be
+    applied on containers. Networking features allow for the SDN networking features
+    provided by Docker. Storage features allow Docker to support volumes, and various
+    storage backends.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '![](img/eef4930f20bf8a25354ad13017767cce_24_0.png)
+
+
+    Figure 3.1: Kernel dependencies for Docker
+
+
+    Let us now examine each of these dependencies in brief.
+
+
+    # 3.3 Resource constraining dependencies
+
+
+    # 3.3.1 3.1 Control groups a.k.a cgroups
+
+
+    Control groups, or cgroups, is a kernel feature to constrain the resource usage
+    of a process or a set of processes. This provides Docker with 4 main features:
+
+
+    +   - Limit resources (CPU, memory, network, disk I/O, ...) to user-defined processes.
+
+    - Prioritize resources (a set of processes will get more resources than another
+    set).
+
+    - Measure resource usage for billing purposes.
+
+    - Control a group of processes.
+
+
+    The docker run command is used to manipulate resources allocated to a container.
+    For instance, docker run --shares=<value> sets the cpu share allocated to a container
+    (every container gets 1024 shares by default). docker run --cpuset-cpu=<value>
+    sets the CPU core on which the container would be run. Do look at this insightful
+    article for some examples of manipulating cgroups settings for Docker containers.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    # 3.3.2 Namespaces
+
+
+    Namespaces is a kernel feature that provides lightweight process virtualization
+    to containers. This helps Docker isolate these resources for a container - process
+    IDs, hostnames, user IDs, network access, IPC and filesystems. Docker combines
+    namespaces and cgroups to isolate resources for containers and manage usage constraints.
+    These namespaces are used to isolate containers - Process ID (pid), Network (net),
+    Mount (mnt), Hostname (uts), Shared Memory (ipc).
+
+
+    +   - A pid namespace processes running within containers with sepaces isolated
+    from other containers.
+
+    - A net namespace creates separate network interfaces, IP addresses and for each
+    container.
+
+    - A mnt namespace creates isolated mounts for each container. Mount points from
+    host OS may be carried into the container but any additions to it are not propagated
+    back to the host.
+
+    - An uts namespace creates containers with their own hostnames without affecting
+    other containers or the rest of the system.
+
+    - An ipc namespace creates isolated shared memory space for each container and
+    prevents access between shared memory of different computers.
+
+
+    # 3.4 Security dependencies
+
+
+    # 3.4.1 AppArmor
+
+
+    AppArmor is a Mandatory Access Control (MAC) tool to restrict programs to a limited
+    set of resources. Restriction policies are set in a simple text file to administer
+    store, networking, capabilities of a process. A policy can run in enforcement
+    or complain mode. A policy in enforcement mode will enforce the policy and report
+    violations. A policy in complain mode will not enforce restrictions but only report
+    violations.
+
+
+    Docker installs a default AppArmor profile - /etc/apparmor.d/docker - installation.
+    This is applied to all Docker containers. You can apply a specific AppArmor profile
+    to a container using the docker run -it <container-name> --security-opt=apparmor=<profile-name>.
+
+
+    Read this page for details about Docker''s usage of AppArmor.
+
+
+    # 3.4.2 Enhanced Linux a.k.a SELinux
+
+
+    SELinux, like AppArmor, enforces MAC policies on subsystems of the kernel. When
+    compared to AppArmor, SELinux allows for more elaborate multi-level security policy
+    control. This is currently developed and maintained by RedHat.
+
+
+    # 3.4.3 Posix capabilities a.k.a Capabilities
+
+
+    Capabilities as implemented in Linux (known as Posix Capabilities) partition the
+    root user''s privileges into smaller units called "capabilities". These capabilities
+    are enabled/disabled as a unit and assigned to threads. A thread/process can perform
+    some operation with a minimal set of capabilities without assuming super privileges.
+    See man capabilities in Linux system for more details on capabilities. Docker
+    uses capabilities to restrict the actual capabilities of the container while providing
+    all possible features to the service within it. A root user within a container
+    may not have all privileges as a root user in the host OS.
+
+
+    Read this post for more exploration of Docker''s support of capabilities.
+
+
+    # 3.4.4 Secure Computing Mode a.k.a seccomp
+
+
+    Secure Computing Mode, also called seccomp, provides a facility to filter on the
+    system calls available to a user-defined process. This is combined with other
+    tools to provide a seccomp sandbox to filter a thread from all available system
+    calls. When seccomp is applied to a thread, it can perform only 4 system calls
+    - read(), write(), sigreturn() and exit(). The kernel will kill the process if
+    it uses any other system call.
+
+
+    A seccomp profile is set to a Docker container with the security-opt option of
+    docker run so:'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '```
+
+    $ docker run -it <container-name> --security-opt <value>
+
+    ```
+
+
+    Read this for more information about Docker''s use of seccomp.
+
+
+    # 3.5 Networking dependencies
+
+
+    # 3.5.1 Netfilter
+
+
+    Netfilter is a framework provided by the Linux Kernel that allows network packets
+    flowing through the machine to be manipulated. Features include static and stateful
+    packet filtering of IPv4 and IPv6 packets, Network address translation, port address
+    translation, extensible APIs for 3rd party app developers. Docker uses Netfilter
+    through it''s users counterpart IPTables.
+
+
+    # 3.5.2 IPTables
+
+
+    iptables is the user-space utility for netfilter. It interacts with netfilter
+    and allows a system administrator to define firewalls rules for packet filtering,
+    network address translation (NAT), and so on. The Docker daemon appends firewall
+    rules to iptables if it sees installed in the system. For example when we expose
+    a container''s port to the outside world Docker adds a corresponding rule to iptables.
+    To disable iptables, start Docker daemon with the option iptables set to false
+    so:
+
+
+    ```
+
+    $ docker --iptables=false
+
+    ```
+
+
+    See this blog post for a few examples of how Docker uses iptables.
+
+
+    # 3.5.3 Netlink
+
+
+    Netlink as a tool provides a mechanism for communication between kernel and userspace
+    components using a socket interface. Even userspace components can use this to
+    communicate among one another. This is an alternative to ioctl and reduces dependence
+    on direct system calls, ioctl calls, and such. Docker implements it''s netlink
+    libraries to talk to the kernel''s netlink interface to create and connect network
+    devices.
+
+
+    This excellent post has details about how Docker uses Netlink.
+
+
+    # 3.6 File system dependencies
+
+
+    Docker supports various storage drivers with a plug-in architecture. One can choose
+    a storage driver to run the Docker daemon with. However, Docker Engine can only
+    support one active storage driver at a time. A change in the storage drive will
+    need the Docker daemon to restart.
+
+
+    # 3.6.1 Device mapper
+
+
+    The devicemapper framework is provided by the kernel to map physical block devices
+    as virtual devices. It provides the foundation for features such as logical volume
+    management, device encryption, copy-on-write files, et... Docker uses this framework
+    to support copy-on-write files in containers.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# 3.7 Other non-kernel dependencies
+
+
+    # 3.7.1 LibContainer a.k.a RunC
+
+
+    libcontainer (Now called opencontainers/RunC) - This is not exactly a kernel feature.
+    Docker developed this as an execution engine that exposes a consistent standardized
+    Go API to work with Linux namespaces, cgroups, capabilities, AppArmor, security
+    profiles, network interfaces, firewalls and firewalling rules. RunC has replaced
+    LXC as the default execution driver of the Docker Engine.
+
+
+    # 3.7.2 LXC
+
+
+    Like libcontainer, LXC provides a userspace interface for the Linux Kernel''s
+    container supporting features. LXC was the initial execution engine before Docker
+    moved to RunC.
+
+
+    # 3.8 Summary
+
+
+    In this post we were introduced to the key kernel features on which Docker depends
+    and builds to enable containerization. Each of the Kernel features in itself can
+    be pursued further and understood more deeply to improve container security in
+    Docker. The Docker docs also contain more information about kernel level enablers.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Chapter 4
+
+
+    # Docker Hello World Example
+
+
+    In this example we will explore different ways of running basic "Hello, World"
+    containers in Docker.
+
+
+    # 4.1 Introduction
+
+
+    Creating a Docker Hello World container and getting it to work verifies that you
+    have the Docker infrastructure set up properly in your development environment.
+    We will go about this in 4 different ways:
+
+
+    +   * Run Docker hello world image provided by Docker
+
+    * Get a "Hello, world" printed from another basic Docker image
+
+    * Write a Simple "Hello, World" Program in Java and Run it Within a Docker Container
+
+    * Execute a "Hello, World" Program in Java Using Gradle and Docker
+
+
+    You should have Docker installed already to follow the examples. Please go to
+    the Docker home page to install the Docker engine before proceeding, if needed.
+    On Linux, please ensure that your user name is added into the "docker" group while
+    installing so that you do not invoke sudo to run the Docker client commands. You
+    should also have Java and Gradle installed to try examples 3 and 4. Install your
+    JRE distribution to get Java and install Gradle from gradle.org.
+
+    Let us get started!
+
+
+    # 4.2 Run Docker Hello World image provided by Docker
+
+
+    This is the simplest possible way to verify that you have Docker installed correctly.
+    Just run the hello-world Docker image in a terminal.
+
+
+    ```
+
+    $ docker run hello-world
+
+    ```
+
+
+    This command will download the hello-world Docker image from the Dockerhub, if
+    not present already, and run it. As a result, you should see the below output
+    if it went well.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    sh-4.2 docker run hello-world\docker: Unable to find image hello-world:latest
+
+    latest: Pulling from hello-world
+
+    ```
+
+
+    ```
+
+    @0cb14da8d4: Pull complete
+
+    Digest: sha256:c556e83a20277fb8f2ddb6763baddd67795b12411e42dccff93411alfeb60fd9
+
+    Status: Downloaded image for hello-world
+
+    ```
+
+
+    Hello from Docker!
+
+    This means that your installation is working correctly.
+
+
+    To generate this message, Docker took the following steps:
+
+
+    +   1. The Docker client contacted the Docker daemon.
+
+    2. The daemon pulled the image from the Docker Hub.
+
+    3. The daemon created a new container from that image which ran the
+
+    executable that produces the output you are currently reading.
+
+    4. The daemon streamed the output to the Docker client, which sent it
+
+    to your terminal.
+
+
+    ```
+
+    To try something more ambitious, you can run an Ubuntu container with:
+
+    $ docker run -it ubuntu
+
+    ```
+
+
+    Share images, automate workflows, and more with a free Docker Hub account:
+
+    https://hub.docker.com
+
+
+    For more examples and ideas, visit:
+
+    https://docs.docker.com/engine/userguide/
+
+    sh-4.2
+
+
+    ![](img/eef4930f20bf8a25354ad13017767cce_29_0.png)
+
+
+    Figure 4.1: Run Docker Hello-World Image
+
+
+    # 4.3 Get a "Hello, world" Printed from Another Basic Docker Image
+
+
+    This too is simple. Docker provides a few baseimages that can be used directly
+    to print a "Hello, World". This can be done as
+
+    shown below and it verifies that you have a successful installation of Docker.
+
+
+    ```
+
+    $ docker run alpine:latest "echo" "Hello, World"
+
+    ```
+
+
+    This command downloads the Alpine baseimage the first time and creates a Docker
+    container. It then runs the container and
+
+    executes the echo command. The echo command echoes the "Hello, World" string.
+    As a result, you should see the output as
+
+    below.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\nFile Edit Search Terminal Help\nsh-4.2$\
+    \ docker run alpine:latest \"echo\" \"Hello, World\"\nUnable to find image 'alpine:latest'\
+    \ locally\nlatest: Pulling from library/alpine\n\nDigest: sha256:1354db23ff5478120c980eca1611a51c9f2f8b61f24283ee820bf9a54f2e5c\n\
+    Status: Downloaded newer image for alpine:latest\nHello, World\nsh-4.2$ \n\n![](img/eef4930f20bf8a25354ad13017767cce_30_0.png)\n\
+    \nFigure 4.2: Use the Alpine Docker Image to Print Hello World\n\n# 4.4 Write\
+    \ a Simple \"Hello, World\" Program in Java and Run it Within a Docker Container\n\
+    \nLet us take it notch now. Let us write a simple hello world program in Java\
+    \ and execute it within a Docker container.\n\n# 4.4.1 Create HelloWorld.java\n\
+    \nFirst of all, let us create a simple Java program that prints \"Hello, World\"\
+    . Open up your favorite text editor and enter the following code:\n\n```\npublic\
+    \ class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"\
+    Hello, World\");\n    }\n}\n```\n\nThis is a standard HelloWorld program in Java\
+    \ very closely resembling the one provided in the Official Java tutorial. Save\
+    \ the file as HelloWorld.java. Now, compile this file using the Java compiler.\n\
+    \n```\n$ javac HelloWorld.java\n```\n\nThis should create the class HelloWorld.class.\
+    \ Normally, we would use the java command to execute HelloWorld as below"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    ```
+
+    File Edit View Search Terminal Help
+
+    sh-4.2$ java HelloWorld
+
+    Hello, World
+
+    sh-4.2$ |
+
+    ```
+
+
+    ![](img/eef4930f20bf8a25354ad13017767cce_31_0.png)
+
+
+    Figure 4.3: Run HelloWorld.main() in Your Native OS
+
+
+    But we want to run this from within a Docker container. To accomplish that we
+    need to create a Docker image. Let us do that now.
+
+
+    # 4.4.2 Create a Dockerfile
+
+
+    To create a Docker image we need to create a Dockerfile. A Dockerfile defines
+    a docker image. Let us create this now. Create a new file named Dockerfile and
+    enter the following in it and save it.
+
+
+    ```
+
+    FROM alpine:latest
+
+    ADD HelloWorld.class HelloWorld.class
+
+    RUN apk --update openjdk8-jre
+
+    ENTRYPOINT ["java", "Docker.security.egd=/dev/urandom", "HelloWorld"]
+
+    ```
+
+
+    The complete syntax can be found from Docker docs as this is briefly what we have
+    done. We extend our image from the Alpine image. We next added HelloWorld.class
+    into the image with the same name. Later installed a JRE environment using OpenJDK.
+    Finally, we gave the command to execute when this image is run - that is to run
+    our HelloWorld in the JVM.
+
+
+    # 4.4.3 Create Docker Hello Image and Run it
+
+
+    Now, build an image from this Dockerfile by executing the command below.
+
+
+    ```
+
+    $ docker build --tag "docker-hello-world:latest".
+
+    ```
+
+
+    As a result of this you should see the following output'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n```\nFile Edit View Search Terminal Help\n\
+    sh-4.2$ docker build --tag docker-hello-world:latest\nSending build context to\
+    \ Docker daemon 4.096 KB\nStep 1: FROM alpine:latest\n  --> ba5dc5971baa\nStep\
+    \ 2: ADD HelloWorld.class HelloWorld.class\n  --> Using cache\n  --> 44adc6c61343\n\
+    Step 3: RUN apk update --update add openjdk8-jre\n  --> Using cache\n  --> 392efc0aa3d\n\
+    Step 4: ENV JAVA_OPTIONS=-D.java.egdfile=/dev/urandom HelloWorld\n  --> 01e53de6d98\n\
+    \  --> 7d633cc7ff0b\nRemoving intermediate container 01e53de6d98\nSuccessfully\
+    \ built 7d633cc7ff0b\nsh-4.2$\n```\n\nFigure 4.4: Build Docker Image Called docker-hello-world\n\
+    \nFinally, run the Docker image to see the \"Hello, World\" printed.\n\n```\n\
+    $ docker run docker-hello-world:latest\n```\n\nAs a result of this you should\
+    \ see the below output\n\n```\nFile Edit View Search Terminal Help\nsh-4.2$ docker\
+    \ run docker-hello-world:latest\nHello, World\nsh-4.2$ \n```\n\nFigure 4.5: Run\
+    \ the Docker Image docker-hello-world\n\nThat's it. This verifies that you can\
+    \ create your own custom Docker images too and run them."
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# 4.5 Execute a \"Hello, World\" Program in Java Using Gradle and Docker\n\n\
+    Let us take it another notch now. Real world programs are more complex than the\
+    \ ones shown above. So let us create another hello Java program and run it in\
+    \ a Docker container using a few best-practices of the Java ecosystem. Furthermore,\
+    \ let set up a Java project using Gradle, add the Docker plugin for it, create\
+    \ a Docker image and run it using Gradle.\n\n# 4.5.1 Initialize a New Project\
+    \ and Create HelloWorld.java\n\nFirst of all, Create a new folder called \"docker-hello-world-example\"\
+    , open a terminal and change into this folder. Next, use Gradle to initialize\
+    \ a new Java project.\n\n```\n$ gradle init --java-library\n```\n\nOnce do you\
+    \ see the following folder structure created. You can free delete the files Library.java\
+    \ and LibraryTest.java. We will not be needing them.\n\n```\nFile Edit View Search\
+    \ Terminal Help\nsh-4.2$ tree\n |-- build.gradle\n|-- gradle\n|   -- wrapper\n\
+    |     |-- gradle-wrapper.jar\n|     |-- gradle-wrapper.properties\n|-- gradlew\n\
+    |-- gradle.bat\n|-- settings.gradle\n|-- src\n|   -- main\n|     |-- java\n| \
+    \      |-- Library.java\n|   -- test\n|     -- java\n|         -- LibraryTest.java\n\
+    7 directories, 8 files\nsh-4.2$ \n```\n\n> Figure 4.6: Folder structure for the\
+    \ Sample Java Project Created by Gradle\n\nNow, create a new file src/main/java/com/javacodegeeks/examples/HelloWorld.java\
+    \ and enter the following in it. Save it once done.\n\n```\npackage com.javacodegeeks;\n\
+    \npublic class HelloWorld {\n    public static void main(String[] args) {\n  \
+    \      System.out.println(\"Hello, World\");\n    }\n}\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# ## 4.5.2 Create a Dockerfile\n\nNext, create a Dockerfile in src/main/resources\
+    \ called \"src/resources/Dockerfile\" and enter the following. Save and close\n\
+    the file once.\n\n```\nFROM alpine:latest\nRUN apk --update openjdk8-jre\nCOPY\
+    \ docker-hello-example.jar app.jar\nENTRYPOINT [\"java\", \"-Djava.security.egd=file:/dev/./random\"\
+    , \"-jar\", \"app.jar\"]\n```\n\nLet us go quickly through what we did in the\
+    \ base Dockerfile. We derive our image from the Alpine Linux base. Next, we installed\
+    \ J2SE from OpenJDK. Next, we copy the jar generated by the build process as app.jar\
+    \ into the Docker image.\nFinally, we select to run when the Docker container\
+    \ is running which is to execute the app.jar.\n\n# ## 4.5.3 Include Gradle-Docker\
+    \ Plugin\n\nNext, make the following changes into the build.gradle file to update\
+    \ the Gradle manifest.\n\n```\nmainClassName = 'com.javacodegeeks.examples.HelloWorld'\n\
+    \njar {\n  manifest {\n    'Main-Class': mainClassName\n  }\n}\n```\n\nWe set\
+    \ the mainClassName to com.javacodegeeks.examples.HelloWorld and set the same\
+    \ attribute to be inserted\\into the manifest file of the jar that will be created.\n\
+    \nNext, insert the following changes at the very top of build.gradle file to configure\
+    \ and add the Gradle plugins for Docker.\n\n```\nbuildscript {\n  repositories\
+    \ {\n    url \"https://plugins.gradle.org/m2/\"\n  }\n\n  dependencies {\n   \
+    \ classpath \"gradle.plugin.com.palantir.gradle.docker:gradle-docker:0.9.1\"\n\
+    \  }\n}\n```\n\n```\nplugins {\n  id 'com.palantir.docker' version '0.9.1'\n \
+    \ id 'com.palantir.docker-run' version '0.9.1'\n}\n```\n\napply plugin: 'com.palantir.docker'\n\
+    \nHere we have added the Gradle plugins called docker and docker-run provided\
+    \ by Palantir. These plugins enable us\nto create Docker containers and run them\
+    \ using Gradle. We added the URL to find the gradle-docker plugin (https:////plugins.gradle.org/m2/).\
+    \ We also added the plugins into the classpath as build dependencies.\n\n# ##\
+    \ 4.5.4 Configure the Docker Tasks in Gradle Build File\n\nNext, insert the following\
+    \ changes at the bottom of build.gradle file to configure the details of the Docker\
+    \ image."
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n```\ndocker {\n  name 'com.javacodgeeks.examples.docker-hello-world:1'\n\
+    \  tags 'latest'\n  dockerfile 'src/main/docker/Dockerfile'\n  dependsOn tasks.jar\n\
+    }\n```\n\nHere we configured the details of the docker image. We assigned the\
+    \ image name com.javacodgeeks.examples/docker-hello-world with version 1. We assigned\
+    \ the tag latest and gave the path to where to find the Docker file. Finally,\
+    \ we made it depend on the Gradle task so that the output of the jar task will\
+    \ be fixed to this.\n\nFinally, we inserted the following changes at the bottom\
+    \ of build.gradle file to configure the details of the Docker container.\n\n```\n\
+    dockerRun {\n  name 'docker-hello-world-container'\n  image 'com.javacodgeeks.examples/docker-hello-world:1'\n\
+    \  command 'java', '-Djava.security.egd=file:/dev/random', '-jar', 'app.jar'\n\
+    }\n```\n\nHere we configured the details of the docker container. We assigned\
+    \ the container name 'docker-hello-world-container'. We assigned it the image\
+    \ from where to create the container and gave it a command to execute when running\
+    \ container.\n\n# 4.5. Create Docker Container and Run it\n\nNow we are ready\
+    \ to build and run this. Use Gradle to build and run this program\n\n```\n$ gradle\
+    \ clean build docker dockerRun\n```\n\nYou will notice that the code was built,\
+    \ java was created, Docker image and containers were created, and the container\
+    \ was too. However, there is no \"Hello, World\" actually printed on the screen."
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n```\nFile Edit View Search Terminal Help\n\
+    sh-4.2$ ./gradle clean build dockerRun\nSTARTING a gradle Daemon (subsequent builds\
+    \ will be faster)\nclean\ncompileJava\nprocessResources UP-TO-DATE\nclasses\n\
+    istartScripts\njar\ndist\ndistZip\ndockerFileZip\nassemble\ncompileJava UP-TO-DATE\n\
+    processTestResources UP-TO-DATE\ntestClasses UP-TO-DATE\ntest UP-TO-DATE\ncompile\
+    \ UP-TO-DATE\nbuild\ndocker UP-TO-DATE\ndocker\nSending building context to Docker\
+    \ daemon 245.8 kB\nStep 1 : FROM alpine\n---> Running in 8b2c5f9111\nStep 2 :\
+    \ apk update && apk add openjdk8-jre\n---> Running in d6b4f717273\nStep 3 : COPY\
+    \ --from=build /hello-world-example.jar /app.jar\n---> Copied 0d45368876\nStep\
+    \ 4 : ENTRYPOINT [\"java -Djava.security.egd=/dev/./urandom -app.jar\"]\n--->\
+    \ Running in b89b1f0c206a\n79f5b335 (5 seconds ago)\nRemoving intermediate container\
+    \ b89b1f0c206a\nSuccess: deleted container b89b1f0c206a\n:dockerRun\n:38590d5537b4c13e19351482ea3f3d3d251d5c28f8d589c1fd0d5b\n\
+    Docker container 'docker-hello-world-container' is RUNNING.\nBUILD SUCCESSFUL\n\
+    Total time: 13.492 secs\nsh-4.2$ \n```\n\n![](img/eef4930f20bf8a25354ad13017767cce_36_0.png)\n\
+    \nFigure 4.7: Run the Gradle task, build, docker, and dockerrun\n\nThe last line\
+    \ simply says that the Docker container docker-hello-world-container is running.\
+    \ To see if it printed \"Hello, World\" successfully, we need to check the logs\
+    \ created by the Docker container. This can be checked by executing the following\
+    \ command.\n\n```\n$ docker logs docker-hello-world-container\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "```\nFile Edit View Search Terminal Help\nsh-4.2$ docker logs docker-hello-world-container\n\
+    Hello, World\nsh-4.2$ \n```\n\nFigure 4.8: Check the Docker Container Logs to\
+    \ Check if Hello world was Printed\n\nThere it is!\n\n# 4.6 Summary\n\nIn this\
+    \ example we learned how to create Docker Hello world type containers in 4 different\
+    \ ways:\n\n+   - First, we learned how to run the hello-world image provided by\
+    \ Docker. This printed Hello World as soon as it was run\n- Next, we learned how\
+    \ to run the Alpine image and print a Hello World using the echo shell command\n\
+    - Next, we learned how to get the basic Hello World program into a Docker image\
+    \ and run it to Hello World. The source code for this can be downloaded from the\
+    \ links given below.\n- Finally, we learned how to set up a structured Java project\
+    \ using Gradle and generate Docker images and Containers using Gradle plugins.\
+    \ We used this structure to create a Hello World Java project and got to run in\
+    \ a container. Later, we verified the Docker logs for the container to see that\
+    \ Hello World was printed when the container was run. The source code for this\
+    \ also can be downloaded from the links given below.\n\n# 4.7 Download the Source\
+    \ Code\n\nDownload\n\nThe source code for example 3 can be downloaded here: docker-hello-world.zip\n\
+    \nThe source code for example 4 can be downloaded here: docker-hello-world-example.zip"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Chapter 5
+
+
+    # Docker as a Service
+
+
+    In the previous posts we learned about Docker, containers, and working with containers.
+    In this post we will learn about Containers as a Service (CaaS) in general and
+    how Docker realizes CaaS.
+
+
+    # 5.1 Why Docker as a Service?
+
+
+    Take a typical developer work-flow involving Docker. It will be typically as below.
+    This is based on the reference workflow provided in the Docker docs.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    ![](img/eef4930f20bf8a25354ad13017767cce_39_0.png)
+
+
+    Figure 5.1: A typical Docker workflow
+
+
+    As we can see from the above workflow, there is quite some IT activity to be performed
+    if Docker is used for app development at scale in an organization.
+
+
+    +   - Infrastructure to host Docker containers and all the other related tools
+    provided by Docker.
+
+    - Provide compute, storage and networking for the containers as needed.
+
+    - Application lifecycle support and touring.
+
+    - Monitor utilization of compute, storage and networking/stop/start containers
+    as needed.
+
+    - Address scaling needs of containers. Handle orchestration of containers at enterprise
+    scale.
+
+
+    These issues are significant at enterprise scale. The existing solution has for
+    administrators to use infrastructure-as-a-service (IaaS) like Amazon’s AWS EC2
+    and handle the above issues manually or through home-built tools. However, Docker
+    provides the Docker-as-a-service to address the above issues.
+
+
+    # 5.2 Container as a Service (CaaS)
+
+
+    So, what is CaaS? It is a cloud service model that enables users to order and
+    use containerization infrastructure from a cloud provider using a pay-as-you-go
+    model. Docker CaaS is an example, Amazon EC2 Container Service (ECS) by AWS is
+    another'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'example.
+
+    As a cloud service model, CaaS probably sits as a subset of IaaS in that it enables
+    a container-based infrastructure for it users.
+
+    A CaaS offering usually seeks to provide the following features to it users.
+
+
+    +   * Manage containers through an API or web interface.
+
+    * Monitor compute, storage and network resources used by the containers.
+
+    * Provide cluster management and orchestration capabilities for containers.
+
+    * Provide security and governance controls.
+
+    * Ideally, be cheap so that the CaaS can be shifted across cloud providers or
+    from in-premises to cloud.
+
+
+    # 5.3 Docker CaaS
+
+
+    Docker''s CaaS offering called Docker Datacenter packages Docker''s tools to provide
+    developers and IT with a consistent infrastructure. This is a commercial offering
+    aimed at enterprises and provides the following features.
+
+
+    +   * Brings well known source tools under a CaaS umbrella - Docker Engine, Docker
+    Compose, Docker registry, Docker Swarm.
+
+    * Adds commercial offerings - Universal Control Pane and Trusted Registry.
+
+    * Ability to deploy the CaaS in-premises or cloud.
+
+    * A private trusted registry for managing images.
+
+    * Cluster management and orchestration capabilities through Swarm and Universal
+    Control Pane.
+
+    * Tools for the application development lifecycle, continuous integration and
+    deployment.
+
+    * Provides security in the application lifecycle all the way from dev to production
+    stages.
+
+
+    Refer to the Docker Datacenter pages by Docker for more information about providing
+    Docker as a service.
+
+
+    # 5.4 Summary
+
+
+    In this short, we understood the need for a ''Docker-as-a-service'' solution to
+    handle containerized application development needs at scale for an organizations.
+    We briefly understood the features provided by a CaaS service in general. Then
+    we briefly discussed Docker''s CaaS offering called the Docker Datacenter that
+    offers Docker tools as a service to developers and IT administrators.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Chapter 6
+
+
+    # Docker Build Example
+
+
+    # 6.1 Introduction
+
+
+    Docker is a tool to avoid the usual headaches of conflicts, dependencies and inconsistent
+    environments, which is an important problem for distributed applications, where
+    we need to install or upgrade several nodes with the same configuration.
+
+
+    Docker is a container manager, which means that it is able to create and execute
+    containers that represent specific runtime environments for your software. An
+    specific runtime environment is called Docker image and containers are specific
+    executions of a Docker images. It is the same concept that classes and objects/instances,
+    which allow to define, for example, different network configurations for each
+    container.
+
+
+    Dockerhub is a repository of docker images. Docker users can upload their docker
+    images and share them with the community. It allows users of software providers
+    do not need to deal with installation guides. They just need to download the image
+    and create as many containers they need. In fact, it is specially useful when
+    system administrators need to scale the same software in a cluster of machines.
+
+
+    The purpose of this tutorial is to explain how to build docker images using the
+    docker build command and the supported building options. As we will see below,
+    docker allows to build images using different approaches.
+
+
+    # 6.2 Installation & Usage
+
+
+    The docker build command is available from your docker installation, which depends
+    on your operative system and are widely explained here for mac, here for windows
+    and here for ubuntu. Once, you have followed the installation instructions, you
+    should be able to run the docker build command.
+
+
+    Docker usage command
+
+
+    ```
+
+    docker build --help
+
+    ```
+
+
+    It prints the following output:'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    bash-3.2$ docker build --help
+
+    Usage: docker build [OPTIONS] PATH | URL | -
+
+    Build a new image from the source code at PATH
+
+
+    ```
+
+    -c,--cpu-shares=0      CPU shares (relative weight)
+
+    --cgroup-parent             Optional parent cgroup for the container
+
+    --cpu-period=               Limit the CFS (Completely Scheduler) period
+
+    --cpu-quota=                Limit the CFS (Completely Scheduler) quota
+
+    --cpuset-cpus=              CPUs in which allow execution (0-3, 0,1)
+
+    --memuset-mem=               MEMs in which to allow execution (0-3, 0,1)
+
+    --disable-content-trust=true  Skip image verification
+
+    -f,--file                  Name of the Dockerfile (Default is ''PATH/Dockerfile'')
+
+    --force-rm=false            Always remove intermediate containers
+
+    --help                      Print usage
+
+    -M,--memory=               Memory limit
+
+    --memory-swap=              Total memory (memory + swap), ''-1'' to disable swap
+
+    --no-cache=false             Do not use cache when building the image
+
+    --pull=false                 Always attempt to pull a newer version of the image
+
+    -Q,--quiet=false            Suppress the verbose output generated by the containers
+
+    --rm=true                    Remove intermediate containers after a successful
+    build
+
+    -t,--tag=                   Repository name (and optionally a tag) for the image
+
+    --limit=[]                   bandSize limit
+
+    ```
+
+
+    Figure 6.1: dockerbuild
+
+
+    The docker build command builds images from a Dockerfile and a context. In order
+    to specify a context you need to reference a local file directory or a URL. The
+    contents of this context can be referenced from ADD instructions of the Dockerfile
+    to reference a file in the context.
+
+
+    # 6.3 Context definition
+
+
+    The context of a docker build command can be a local directory (PATH), a Git repository
+    (URL) or the standard input (-). This section explains the usage scenarios of
+    these different contexts.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '![](img/eef4930f20bf8a25354ad13017767cce_43_0.png)
+
+
+    Figure 6.2: docker-build-alternatives
+
+
+    # ### 6.3.1 Build with PATH
+
+
+    Probably, you are assuming that the docker daemon is always running in your machine.
+    However, when you are building images for a remote machine, this command is sending
+    to the daemon a tar file with the contents of the local directory you have specified
+    to proceed with the build command. For example:
+
+
+    Docker build from path[source,java]
+
+
+    ```
+
+    docker build
+
+    ```
+
+
+    Sends the contents of the execution directory to the docker daemon.
+
+
+    # ### 6.3.2 Build with URL
+
+
+    URLs are specially designed for Git repositories. In this case, the build command
+    clones the Git repository and uses the cloned repository as context. The Dockerfile
+    at root of the repository is used as Dockerfile. Alternatively to http or https,
+    you can specify an arbitrary Git repository by the git:// or git@ schema. For
+    a GitHub repository, we can use docker build as follows:
+
+
+    Docker build from git
+
+
+    ```
+
+    docker build github.com/myuser/project
+
+    ```'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# 6.3.3 Build with -
+
+
+    This will read a Dockerfile from STDIN without context. It is commonly used to
+    send a compressed file. The Supported formats are: bzip2, gzip and gz. For example:
+
+
+    Docker build from the standard output
+
+
+    ```
+
+    docker build - < context.tar.gz
+
+    ```
+
+
+    # 6.4 Dockerfile location
+
+
+    The dockerfile location, is by default in the root directory of the specified
+    context and it is called Dockerfile. However, you can specify another one with
+    the -f option, but always must be located inside the build context. For example:
+
+
+    Docker build with a specific dockerfile
+
+
+    ```
+
+    docker build -f Dockerfile.debug
+
+    ```
+
+
+    # 6.5 Example
+
+
+    Now, to check if an Ubuntu image with Java from a Github project used in a previous
+    JavaCodes example. Run the following command:
+
+
+    Docker build with a real project
+
+
+    ```
+
+    docker build -t jacavgeeks/buildsample github.com/rpau/docker-example4j
+
+    ```
+
+
+    Now, to order if the image is available, execute docker images. This shows the
+    images for your docker daemon. It should show something similar to the following
+    output:
+
+
+    | bash-3.2 docker images | | IMAGE ID | CREATED | VIRTUAL SIZE |
+
+    |--- | --- | --- | --- | --- |
+
+    | REPOSITORY | TAG | | | |
+
+    | jacavgeeks/buildsample | latest | 3c33d4cb5c8f | 6 minutes ago | 961.2 MB |
+
+
+    ![](img/eef4930f20bf8a25354ad13017767cce_44_0.png)
+
+
+    Figure 6.3: dockerimages
+
+
+    # 6.6 Conclusion
+
+
+    This tutorial explains what a docker image is and how to build it using the command
+    docker build. This command requires to specify a context, which is the location
+    of the files that we need to add to the image and also the Dockerfile. Finally,
+    our example shows how to build an image from a Github project and to verify what
+    are the available images in our docker daemon with the docker images command.
+
+
+    Remember that creating docker images is extremely useful to set up an specific
+    execution environment that needs to be installed in a cluster of machines. Therefore,
+    it allows to avoid problems caused by differences between production and development
+    environments.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Chapter 7
+
+
+    # Docker Compose example
+
+
+    # 7.1 Introduction
+
+
+    Docker Compose is a tool for defining and running multi-container Docker applications.
+    With Compose, you define a config-uration file the set of docker containers that
+    application requires an specific machine. Then, using a single command, you create
+    and start all the services in a single host.
+
+
+    Docker Compose is specially useful for the following use case scenarios:
+
+
+    +   - Create a development environment with all the required services started
+    only using your own machine. In other words, stop to prepare your development
+    environment manually over and over again in your own or different machines.
+
+    - Automate test environments with the same characteristics as the production environments
+    and run integration tests.
+
+    - Single hosts deployments- that is use a machine with different services as docker
+    containers. The most recommended way to do so is using the Docker machine or Docker
+    swarm because you can launch docker compose remotely from your laptop in a safe
+    way without requiring SSH.
+
+
+    To use Docker Compose, you just need to create configuration file called docker-compose.yml,
+    which contains the specification to create and run a set of docker containers.
+    Let’s try to create an example with a web application that uses a redis database
+    server.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '![](img/eef4930f20bf8a25354ad13017767cce_46_0.png)
+
+
+    # 7.2 Docker Toolbox setup
+
+
+    Docker compose is one of the included tools into the Docker toolbox. To install
+    Docker toolbox, you just need to download the appropriate installer from here
+    for your operative system and execute it.
+
+    Docker Toolbox contains the following tools:
+
+
+    +   - Docker Compose : to create environments with multiple docker containers
+    in one machine.
+
+    - Docker Machine : to dynamically run docker containers to remote machines or
+    in the local/default zone.
+
+    - Docker Kitematic : to Build and run containers through a graphical user interface
+    (GUI).
+
+    - VirtualBox : to create and run docker containers.
+
+
+    Once you have finished the installation procedure, you should be able to run docker-compose
+    --help, which prints the accepted subcommands.
+
+
+    # 7.3 Docker compose example: An HTTP server connected to Redis
+
+
+    This example is about a web application for a TODO list using Redis with basically
+    a three steps:'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n+   - Define how to run the web and database\
+    \ docker images in docker-compose.yml so they can be together in an isolated environment.\n\
+    \n+   - Create the web application and its Dockerfile to create the runtime environment\
+    \ anywhere.\n\n+   - Lastly, run docker-compose up and Compose will start and\
+    \ run your entire app.\n\n# 7.3.1 Creating the docker-compose.yml file\n\nCreate\
+    \ an empty project called todos and copy the following docker-compose.yml inside\
+    \ the project directory, docker-compose.yml\n\n```\nweb:\n  build:\n    .\n  ports:\n\
+    \    - \"8000:8000\"\n  links:\n    - redis\nredis:\n  image: redis\n```\n\nThis\
+    \ file specifies two containers: web, which contains our Java code to launch a\
+    \ web server and redis server. Notice that in the first case, anyway builds the\
+    \ property, which the second case, the image property. It means that in order\
+    \ web container needs to build a docker image that appears in our local system.\
+    \ However, for the redis server, the image is downloaded from the DockerHub registry.\n\
+    \nWith this docker-compose.yml file, Compose simulates two machines with different\
+    \ IP in a same local network because they are linked (link property). However,\
+    \ only the web is externally through the 8000 of your docker-machine and Docker\
+    \ creates a binding between this port and the container 8000 port.\n\n# 7.3.2\
+    \ Creating the web server\n\nNow, let's create the Dockerfile that Compose requires\
+    \ in the same directory as the docker-compose.yml file with the following contents,\n\
+    \nDockerfile\n\n```\nFROM ubuntu:14.04\nMAINTAINER jacavodegeeks\n\nRUN apt-get\
+    \ update && apt-get install -y python-software-properties software-properties-common\n\
+    RUN add-apt-repository ppa:webupd8team/java\n\nRUN echo \"oracle-java8-installer\
+    \ shared/accepted-license-v1-1 boolean true\" | \ndebconf-set--selections\n\n\
+    RUN apt-get update && apt-get install -y oracle-java8-installer maven\n\nADD /usr/local/todolist\n\
+    RUN cd /usr/local/todolist && mvn install assembly:assembly\nCMD [\"java\", \"\
+    -cp\", \"/usr/local/todolist/target/todolist-1.0-jar-with-dependencies.jar\",\
+    \ \"com.jacavodegeeks.todolist.TodoServer\"]\n```\n\nThis Dockerfile builds our\
+    \ todolist project with Maven and starts a simple Java class. Thus, it is necessary\
+    \ to convert our todolist project into a Maven project. To do so, copy the following\
+    \ pom.xml in the project directory (the same place than Dockerfile and docker-compose.yml).\n\
+    \npom.xml"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n```\n<project xmlns=\"https://maven.apache.org/POM/4.0.0\"\
+    \ xmlns:xsi=\"https://www.w3.org/2001/XMLSchema-instance\"\n  xsi:schemaLocation=\"\
+    https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\"\
+    >\n  <model>4.0.0</model>\n  <groupId>com.javacodgeeks</groupId>\n  <artifactId>todolist</artifactId>\n\
+    \  <version>1.0</version>\n  <dependencies>\n    <dependency>\n      <groupId>org.bipaluch.redis</groupId>\n\
+    \      <artifactId>lettuce</artifactId>\n      <version>3.3.2</version>\n    </dependency>\n\
+    \    <dependency>\n      <groupId>commons-io</groupId>\n      <artifactId>commons-io</artifactId>\n\
+    \      <version>2.4</version>\n    </dependency>\n    <dependency>\n      <groupId>com.fasterxml.jackson.core</groupId>\n\
+    \      <artifactId>jackson-databind</artifactId>\n      <version>2.6.3</version>\n\
+    \    </dependency>\n  </dependencies>\n  <build>\n    <plugins>\n      <plugin>\n\
+    \        <artifactId>maven-assembly-plugin</artifactId>\n        <version>2.6</version>\n\
+    \        <configuration>\n          <descriptorRefs>\n            <descriptorRef>jar-with-dependencies</descriptorRef>\n\
+    \          </descriptorRefs>\n        </configuration>\n      </plugin>\n    </plugins>\n\
+    \  </build>\n</project>\n```\n\nThis POM file uses lettuce (a Java Redis client)\
+    \ and jackson-io as utility libraries for coding basic HTTP server src/main/java/com/javacodgeeks/todolist/TodoServer.java\n\
+    \n```\npackage com.javacodgeeks.todolist;\n\nimport java.io.IOException;\nimport\
+    \ java.io.OutputStream;\nimport java.net.InetAddress;\nimport java.net.MalformedURLExceptionException;\n\
+    import java.net.URI;\nimport java.util.List;\n\nimport org.apache.commons.io.IOUtils;\n\
+    \nimport com.fasterxml.jackson.databind.ObjectMapper;\nimport com.lambdawarks.redis.RedisClient;\n\
+    import com.lambdawarks.redis.RedisConnection;\nimport com.lambdawarks.redis.ValueScanCursor;\n\
+    import com.sun.net.httpserver.HttpExchange;\n```"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "import com.sun.net.httpserver.HttpHandler;\nimport com.sun.net.httpserver.HttpServer;\n\
+    \n```\npublic class TodoServer {\n    public static void main(String[] args) throws\
+    \ Exception {\n        HttpServer server = HttpServer.create(new InetSocketAddress(8000),\
+    \ 0);\n        server.createContext(\"/\", new MyHandler(System.getenv(\"REDIS_PORT\"\
+    )));\n        server.setExecutor(null); // creates a default executor\n      \
+    \  server.start();\n    }\n\n    static class MyHandler implements HttpHandler\
+    \ {\n        private RedisClient redisClient;\n        private RedisConnection\
+    \ connection;\n        private ObjectMapper mapper;\n\n        public MyHandler(String\
+    \ redisURL) throws MalformedURLException {\n            String hostPort = redisURL.substring(\"\
+    tcp://\\/\");\n            int separator = hostPort.indexOf(':');\n          \
+    \  redisClient = new RedisClient(hostPort.substring(0, separator), Integer.parseInt(hostPort.substring(separator\
+    \ + 1)));\n            connection = redisClient.connect();\n            mapper\
+    \ = new ObjectMapper();\n        }\n\n        public void handle(HttpExchange\
+    \ t) throws IOException {\n            String method = t.getRequestMethod();\n\
+    \            OutputStream os = t.getResponseBody();\n            String response\
+    \ = \"\";\n\n            if (t.getRequestURI().getPath().equals(\"/todos\")) {\n\
+    \                if (method.equals(\"GET\")) {\n                    ValueScansor<String>\
+    \ cursor = connection.scscan(\"todos\");\n                    List<String> tasks\
+    \ = cursor.getValues();\n                    response = mapper.writeValueAsString(tasks);\n\
+    \                }\n            } else if (method.equals(\"PUT\")) {\n\n     \
+    \           connection.sadd(\"todos\", IOUtils.toString(t.getRequestBody()));\n\
+    \                response = \"OK\";\n            }\n\n            t.sendResponseHeaders(200,\
+    \ response.length());\n            os.write(response.getBytes());\n          \
+    \  os.close();\n        }\n\n        @Override\n        public void finalize()\
+    \ {\n            connection.close();\n            redisClient.shutdown();\n  \
+    \      }\n    }\n}\n```\n\nNotice that the TodoServer is assuming the Redis connection\
+    \ URL appears in an environment variable called REDIS_PORT."
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    However, how to know the names of the available environment variables? Docker
+    defines a standard way to do so here.
+
+
+    # 7.3.3 Lauching Docker Compose
+
+
+    All the elements for the example are ready now. So, open your prompt, go to the
+    project directory and run:
+
+
+    ```
+
+    docker-compose up
+
+    ```
+
+
+    Voila! At this moment, we have an HTTP server connected with Redis in our default
+    docker-machine. In order to discover the IP of the default docker-machine, run
+    the following command.
+
+    Docker-Machine ip command
+
+
+    ```
+
+    $docker-machine ip default
+
+    192.168.99.100
+
+    ```
+
+
+    # 7.3.4 Testing the web server
+
+
+    Using the output of the previous command, we can test the web server using the
+    curl command. The available options are:
+
+    Create new tasks:
+
+
+    ```
+
+    curl -X PUT --data "new task" https://192.168.99.100:8000/todos
+
+    ```
+
+
+    List all tasks:
+
+    CURL command to List all tasks
+
+
+    ```
+
+    curl -X GET https://192.168.99.100:8000/todos
+
+    ```
+
+
+    # 7.4 Download the complete source code
+
+
+    This is an example of how running a Java program with Docker Compose.
+
+    Download
+
+
+    You can download the full source code of this example: docker-compose example'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# Chapter 8\n\n# Configuring DNS in Docker\n\n# 8.1 Introduction\n\nThis post\
+    \ introduces Docker Engine's network feature in general and specifically introduces\
+    \ configuring DNS in containers. This post assumes that you have the Docker Engine\
+    \ installed and that you know the basics of working with containers. We will not\
+    \ discuss discovery from other networks here since that needs a deeper knowledge\
+    \ of Docker tools like Docker Swarm. Since these posts focus on the basics of\
+    \ Docker we will focus on networking containers within the same host. So let's\
+    \ get started with understanding basics of networking in Docker.\n\n# 8.2 Basics\
+    \ of Networking Configurations in Docker Engine\n\nThe Docker Engine provides\
+    \ 3 networks by default - bridge, host and none. The command docker network lists\
+    \ all networks created by Docker. So on a default installation you will see something\
+    \ like this.\n\n```\n$ docker network ls\nNETWORK ID     DRIVER    SCOPE\n3d6f5e6e2e518\
+    \  bridge    local\n1e8e86864ea   host      local\nf187f168df62  none      null\n\
+    ```\n\nThe bridge network is mapped to the docker0 network bridge on the Docker's\
+    \ host. The ip address command can be used to check the details of.\n\n```\n$\
+    \ ip address show docker0\nd6: BROADCAST,MULTICAST,LOWER_UP> mtu 1500 qdisc noqueue\
+    \ state UP\n    link/ether 02:45:01:c0:ba7:ff:ff:ff:ff:ff\n    inet 172.17.0.1/16\
+    \ scope global docker0\n       valid_ft preferred_ft forever\n    inet6 fe80::422e:ff00:bac7/64\
+    \ scope link\n       valid_ft preferred_ft forever\n```\n\n# 8.2.1. Inspect Networks\n\
+    \nEvery container created by the Docker engine is added to the default bridge\
+    \ network. The command docker network inspect can be used to inspect the network\
+    \ like so...\n\n```\n$ docker network inspect bridge\n[\n```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n```\n{\"Name\": \"bridge\",\n  \"Id\"\
+    : \"3651e62e51d85430c78ce68bd2737e9ad055dd45097b04ef7597bce644\",\n  \"Scope\"\
+    : \"local\",\n  \"Driver\": \"bridge\",\n  \"Enable\": false,\n  \"IPAM\": {\n\
+    \    \"Driver\": \"default\",\n    \"Options\": null,\n    \"Config\": {\n   \
+    \   \"Subnet\": \"172.17.0.0/16\",\n      \"Gateway\": \"172.17.0.1\"\n    }\n\
+    \  },\n  \"Internal\": false,\n  \"Containers\": {},\n  \"Options\": {\n    \"\
+    com.docker.network.bridge.default_bridge\": \"true\",\n    \"com.docker.network.bridge.enable_ip_masquerade\"\
+    : \"true\",\n    \"com.docker.network.bridge.host_binding_ipv4\": \"0.0.0.0\"\
+    ,\n    \"com.docker.network.bridge.name\": \"docker0\",\n    \"com.docker.network.bridge.driver.mtu\"\
+    : \"1500\"\n  },\n  \"Labels\": {}\n}\n```\n\nNote the \"Containers\" in the above\
+    \ picture. It lists the containers attached to the bridge network. This section\
+    \ will be empty in a Docker installation or when all containers are stopped.\n\
+    \n# 8.2.2. User Defined Networks\n\nApart the default networks, users can create\
+    \ new networks with the docker network create command. Let us create a new network\
+    \ called example-network and inspect its contents now.\n\n```\n$ docker network\
+    \ create example-network && docker network inspect example-network 301ff3b3fc3e234d4d02bc687f2e5c6341c16011e91d57151577fa08c914a157\n\
+    {\n  \"Name\": \"example-network\",\n  \"Id\": \"301ff3b3fc3e234d4d02bc687f2e5c6341c16011e91d57151577fa08c914a157\"\
+    ,\n  \"Scope\": \"local\",\n  \"Driver\": \"bridge\",\n  \"EnableIPv6\": false,\n\
+    \  \"IPAM\": {\n    \"Driver\": \"default\",\n    \"Options\": {},\n    \"Config\"\
+    : {\n      \"Subnet\": \"172.18.0.0/16\",\n      \"Gateway\": \"172.18.0.1\"\n\
+    \    }\n  },\n  \"Internal\": false,\n  \"Containers\": {},\n  \"Options\": {},\n\
+    \  \"Labels\": {}\n}\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "# Docker Containerizationbook\n\nLet us now add a container to this network\
+    \ and inspect again. The command run --network- can be used to attach a container\
+    \ to a network of our choice, like below:\n\n```\n$ docker run --it --name=infinite_loop\
+    \ --network=example-network enharihan/infinite-loop\n8da6517324e009d6c7490c14afce483b30ff67ba7a804b45818c0975e7b8ba25\n\
+    ```\n\nThe container is added to the example-network. Let us now investigate the\
+    \ network settings again:\n\n```\n{\n  \"Name\": \"example-network\",\n  \"Id\"\
+    : \"303ff1db3fc32d340d2bc687fe5ec6341c6011e91d571577fa08c91a155557\"n   \"Scope\"\
+    :\n\",\"Driver\": \"bridge\",\n  \"EnableIPv6\": false,\n  \"IPAM\": {\n    \"\
+    Driver\": \"Default\",\n    \"Options\": {},\n    \"Config\": [\n      \"Subnet\"\
+    : \"172.18.0.0/16\",\n      \"Gateway\": \"172.18.0.1\"\n    ]\n  },\n  \"Internal\"\
+    : false,\n  \"Containers\": {\n    \"infinite_loop\": ←\n8da6517324e009d6c7490c14afce483b30ff67ba7a804b45818c0975e7b8ba25\"\
+    : {\n      \"Name\": \"infinite_loop\",\n      \"EndpointId\": ←cc03b31824c2dc3bbf1676f5a16e5ea839ad715ba6a4bcd4ad16cdaad4baaad973\"\
+    ,\n      \"MacAddress\": \"02:42:ac:12:00:02\",\n      \"IPv4Address\": \"172.18.0.2\"\
+    ,\n      \"IPv6Address\": \"\"\n    }\n  },\n  \"Options\": {},\n  \"Labels\"\
+    : {}\n}\n```\n\nYou can see that the \"Containers\" section now has the infinite_loop\
+    \ created from the image.\n\n# 8.2.3 2. Connect Containers Within a Network\n\n\
+    All containers are connected to the bridge network by default. Containers within\
+    \ the same Docker network can connect to each other. Let us see through a simple\
+    \ example. We will create 2 simple containers from the image enharihan/infinite-loop\
+    \ into the custom network we created earlier. We will inspect the network to see\
+    \ that the containers were added except:\n\n```\n$ docker run --it --name=infinite_loop_1\
+    \ --network=example-network enharihan/infinite- ←\nloop\n3c23fb845274e24ac8daa3216af5bc3d6d275b58e6a844424c40083c8022c$\n\
+    $ docker run --it --name=infinite_loop_2 --network=example-network enharihan/infinite-\
+    \ ←\nloop\n9bd94658d4456618f60413e0cb41f6b4502eb60cbfb325a1bd72f18bffdd45\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n```\n$ docker network inspect example-network\n\
+    {\n  \"Containers\": {\n    \"32cbfb845274e2acbcda3216affc3b6d2755b58e6a84424c0083ca8022c\"\
+    : {\n      \"Name\": \"infinite_loop_1\",\n      \"EndpointIP\": \"c7f2c552-d3b8-47a6fb70d9dc927a6b80a40d9b56eff2ed2bc0fa042a099\"\
+    ,\n      \"MacAddress\": \"02:42:ac12:01:00:02\",\n      \"IPv4Address\": \"172.18.0.2/16\"\
+    ,\n      \"IPv6Address\": \"\"\n    },\n    \"9bd94665d8435681f804130eb46ec6bff325a1bd7f218bffdd45\"\
+    : {\n      \"Name\": \"infinite_loop_2\",\n      \"EndpointIP\": \"\",\n     \
+    \ eeb3c4d3a6c2feea63cb23fb5319a06c8c23c220ad486f19de02b2225bd\",\n      \"MacAddress\"\
+    : \"02:42:ac12:12:00:03\",\n      \"IPv4Address\": \"172.18.0.3/16\",\n      \"\
+    IPv6Address\": \"\"\n    }\n  }\n}\n```\n\nContainers infinite_loop_1 and infinite_loop_2\
+    \ were created in detach. They have been added into example network with IP address\
+    \ 172.18.0.2 and 172.18.0.3, as confirmed. If the --network= is not provided then\
+    \ containers are added to the bridge network by default. Now, we open a session\
+    \ into the container infinite_loop_1 and ping infinite_loop_2.\n\n```\n$ docker\
+    \ exec -it infinite_loop_1 sh\n$ ping -c 5 172.18.0.3\nPING 172.18.0.3 (172.18.0.3)\
+    \ : 56 bytes\n64 bytes from 172.18.0.3: seq=0 ttl=64 time=0.165 ms\n64 bytes from\
+    \ 172.18.0.3: seq=1 ttl=64 time=0.124 ms\n64 bytes from 172.18.0.3: seq=2 ttl=64\
+    \ time=0.115 ms\n64 bytes from 172.18.0.3: seq=3 ttl=64 time=0.115 ms\n64 bytes\
+    \ from 172.18.0.3: seq=4 ttl=64 time=0.116 ms\n\n--- 172.18.0.3 statistics ---\n\
+    5 packets transmitted, 5 received, 0% packet loss\nround-trip min/avg/max = 0.106/0.117/0.137\
+    \ ms\n```\n\nSo as you can see, containers added to the same network can automatically\
+    \ find each other through their IP addresses. Next, let us set up DNS in Docker\
+    \ so that we use the IP addresses to communicate.\n\n# 8.3 Setup Container DNS\
+    \ in Bridge Network\n\nDocker uses these 3 files within every container to configure\
+    \ it's.\n\n+   * /etc/hostname - This file maps the container IP address to a\
+    \ name.\n* /etc/hosts - This file maps the container's IP addresses to names.\n\
+    * /etc/resolv.conf - This file contains the IP addresses of other servers to refer\
+    \ to if the container cannot resolve a name to address.\n\nThese files can be\
+    \ set and managed using the docker run command. The hostname for a container is\
+    \ set into /etc/hostname using the --hostname=option."
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '```
+
+    $ docker run -itd --name=infinite_loop_1 --hostname=container1 enhariharan/infinite-loop
+
+    986d9b5a283493edd6d33d1c9f0c3159b95ec2b4faa73ad99f5b1b090c46
+
+    $
+
+    $ docker exec -it infinite_loop_1 cat /etc/hostname
+
+    container1
+
+    ```
+
+
+    The entry of container can be put into the /etc/hosts file of container2 using
+    the --link option of docker
+
+    Run us try one more example now, we use link infinite_loop_1 to infinite_loop_2
+    and ping container
+
+    from within container2 using the hostname of infinite_loop_1.
+
+
+    ```
+
+    $ docker run -itd --name=infinite_loop_1 --hostname=container1 enhariharan/infinite-loop
+
+    c97fe6577ee1b2bca90d4b157a299c45bc52aca555dcc6156a4cd8
+
+    $
+
+    $ docker run -itd --name=infinite_loop_2 --hostname=container2 --link=infinite_loop_1
+
+    enhariharan/infinite-loop
+
+    2aa6daef9b06038a2b3e4f9a511875abbdb8e023502ea9c61d4c79dc6
+
+    $
+
+    $ docker exec -it infinite_loop_2 cat /etc/hosts
+
+    127.0.0.1 localhost
+
+    ::1 localhost ip6-localhost ip6-loopback
+
+    ff00:: ip6-allnodes
+
+    ff02::2 ip6-routers
+
+    172.17.0.3 infinite_loop_1 container1
+
+    container2
+
+    172.17.0.4
+
+    $
+
+    $ docker exec -it infinite_loop_2 ping -c 5 container1
+
+    PING container1 (172.17.0.3): 64 bytes of data
+
+    64 bytes from 172.17.0.3: icmp_seq=0 ttl=64 time=0.175 ms
+
+    64 bytes from 172.17.0.3: icmp_seq=1 ttl=64 time=0.118 ms
+
+    64 bytes from 172.17.0.3: icmp_seq=2 ttl=64 time=0.123 ms
+
+    64 bytes from 172.17.0.3: icmp_seq=3 ttl=64 time=0.118 ms
+
+    -
+
+    --- ping statistics ---
+
+    5 packets transmitted, 5 packets received, 0% loss
+
+    round-trip min/avg/max =0.115/0.129/0.175 ms
+
+    ```
+
+
+    But the win with discovering containers in the bridge network stops are here.
+    To connect containers using our
+
+    IP addresses and without using the link then we need to use dener-defined networks
+    of Docker. Let us see the
+
+    basics of that.
+
+
+    # 8.4 Setup DNS in a User Defined Network
+
+
+    There are important differences between connecting containers in user-defined
+    networks and bridge network. One
+
+    such point is that the --link option of docker will not work in user-defined networks.
+    Let us see how we can get the
+
+    functionality using user-defined networks. We add the containers infinite_loop_1
+    and infinite_lo-
+
+    op_2 into a user-defined network called example_network and ping infinite_loop_2
+    from within.
+
+
+    ```
+
+    $ docker run -itd --name=infinite_loop_1 --hostname=container1 --network=example_network
+
+    enhariharan/infinite-loop
+
+    d91975ae6e4bd01d9a37e73c9a34c145ed195e573f6bd998eb45dc0964
+
+    $
+
+    $ docker run -itd --name=infinite_loop_2 --hostname=container2 --network=example_network
+
+    enhariharan/infinite-loop
+
+    3b4dad71bhad7114025db7330686bc23114c670f705f2e34892c763aa7970f2b
+
+    ```'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n```\n$\n$ docker exec -it infinite_loop_2\
+    \ ping -c 4 infinite_loop_1\nPING infinite_loop_1 (172.20.0.2): 56 bytes\n6 bytes\
+    \ from 172.20.0.2: seq=0 ttl=64 time=0.111 ms\n6 bytes from 172.20.0.2: seq=1\
+    \ ttl=64 time=0.112 ms\n6 bytes from 172.20.0.2: seq=2 ttl=64 time=0.119 ms\n\
+    6 bytes from 172.20.0.2: seq=3 ttl=64 time=0.131 ms\n---\ninfinite_loop_1 ping\
+    \ statistics\n4 packets transmitted, 4 packets received, 0% packet loss\nround-trip\
+    \ min/avg/max = 0.111/0.120/0.131 ms\n$\n docker exec -it infinite_loop_2 ping\
+    \ -c 4 container1\nping: address 'container1'\n```\n\nFrom the above, it is seen\
+    \ that containers are visible in the same network by their container names but\
+    \ not their hosts names by using the hostname container1 does not work.\n\nThe\
+    \ recommended way is to add a network-alias to each container from the hostname.\
+    \ The network-alias can then be used to connect by other containers. Let us try\
+    \ the steps above by setting a network-alias as this.\n\n```\n$ docker run --it\
+    \ infinite_loop_1 --hostname container1 --network-alias=example_network \\\nnetwork-alias=container1_alias\
+    \ enharihan/infinite-loop\nc86f7533e35a23b5b84e31d75a60327ae95d42d197524a2ef6fc461a679f1c\n\
+    $ docker run --it infinite_loop_2 --hostname container2 --network-alias=example_network\
+    \ \\\nnetwork-alias=container2_alias enharihan/infinite-loop\n52b52d3cd2694ed4d1c3abe4a4c326716b321b329a5c3604f8eaacd60bd2d874\n\
+    $ docker exec -it infinite_loop_2 ping -c 4 container1_alias\nPING container1_alias\
+    \ (172.20.0.2): 56 bytes\n6 bytes from 172.20.0.2: seq=0 ttl=64 time=0.127 ms\n\
+    6 bytes from 172.20.0.2: seq=1 ttl=64 time=0.115 ms\n6 bytes from 172.20.0.2:\
+    \ seq=2 ttl=64 time=0.119 ms\n6 bytes from 172.20.0.2: seq=3 ttl=64 time=0.113\
+    \ ms\n---\ncontainer1_alias ping statistics ---\n4 packets transmitted, 4 packets\
+    \ received, 0% packet loss\nround-trip min/avg/max = 0.113/0.118/0.127 ms\n```\n\
+    \nSo is how Docker's Engine DNS enables so that containers can communicate with\
+    \ other containers within the same host and within the same network bridge. To\
+    \ talk among other networks or to talk other hosts an overlay network must be\
+    \ configured. A cluster of Docker hosts can be created using tools like Docker\
+    \ Swarm. These topics are outside the scope of this post and will be taken in\
+    \ a future post.\n\n# 8.5 Summary\n\nIn this post, we were introduced to the basics\
+    \ of Docker networking. We learned the types of networks supported and how to\
+    \ create a user-defined bridge network. We also learned how to add containers\
+    \ into specific networks and how the embedded DNS server provided by Docker works."
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Chapter 9
+
+
+    # Docker Start Container Example
+
+
+    A container, in Docker terminology, is an instance of an image. A typical simile
+    used for this, is the classes and objects in Object Oriented Programming.
+
+
+    This example will show how to start containers, that is, making run images instances.
+
+
+    For this example, Linux Mint 18 and Docker version 1.12.1 have been used.
+
+
+    # 9.1 Installation
+
+
+    Note: Docker requires a 64-bit system with a kernel version equal or higher to
+    3.10.
+
+    We can install Docker simply via apt-get, without the need of adding any repository,
+    just installing the docker.io package:
+
+
+    ```
+
+    sudo apt-get update
+
+    sudo apt-get install docker.io
+
+    ```
+
+
+    For more details, you can follow the Install Docker on Ubuntu Tutorial.
+
+
+    # 9.2 Pulling a sample image
+
+
+    If you have used Docker before, you (should) already know that a container is
+    an instance of an image, so, first, we need one.
+
+    The easiest way to obtain Docker images is from Docker Hub, pulling them. We could
+    pull, for example, an Nginx image:
+
+
+    ```
+
+    docker pull nginx
+
+    ```
+
+
+    You can check that you have the image on your system executing:
+
+
+    ```
+
+    docker images
+
+    ```
+
+
+    Which should show something similar to:
+
+
+    | REPOSITORY | TAG | IMAGE ID | CREATED | SIZE |
+
+    |---|---|---|---|--|
+
+    | nginx | latest | abf312888d13 | 2 weeks ago | 181.5 MB |'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# 9.3 Creating a container from an image and running it: run
+
+
+    Now we have a Docker image, we can easily create a container from it.
+
+
+    As before, a container is just an instance of an image. We can have several different
+    containers from a single image, running at the same time.
+
+
+    The run docker command creates the container, and then runs it. So, running a
+    container from an image is as easy as executing:
+
+
+    ```
+
+    docker run <image-name|image-id>[:tag]
+
+    ```
+
+
+    That means we can create our container executing:
+
+
+    ```
+
+    docker run nginx
+
+    ```
+
+
+    And, also:
+
+
+    ```
+
+    docker run abf31288d13
+
+    ```
+
+
+    Additionally, we can also specify the tag:
+
+
+    ```
+
+    docker run nginx:latest
+
+    ```
+
+
+    For the previous examples, Docker would create the container from the image that
+    already exists in our disk. But, we can directly run containers for which we do
+    not have the image in the disk; Docker is clever enough to know that it has to
+    pull, if it cannot be found in the disk. So, we would execute:
+
+
+    ```
+
+    docker run nginx:1.10
+
+    ```
+
+
+    Which is an image that doesn''t exist, and Docker will do a pull followed by the
+    run, after saying that it was unable to find the image:
+
+
+    ```
+
+    Unable to find image ''nginx:1.10'' locally
+
+    ```
+
+
+    # 9.3.1 Running containers in detached mode
+
+
+    If you run the container, you would say that the container is being ran in the
+    console, and, if you terminate the process, the container is stopped.
+
+
+    Usually, we want to run the containers in background or detached. For that, we
+    have to use the -d option:
+
+
+    ```
+
+    docker run -d nginx
+
+    ```
+
+
+    With this option, Docker will show the container ID, and then detach the container.
+
+
+    # 9.3.2 Giving a name to the container
+
+
+    The random names generated by Docker do not say anything about the container,
+    so, we should always give a meaningful name to the container. This is achieved
+    with the pull option, e.g.:
+
+
+    ```
+
+    docker run -d --name=nginx1 nginx
+
+    ```'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# 9.3.3 Mapping container ports to hosts port
+
+
+    An essential option for most of the containers is the port publishing. If we are
+    running a web server, as in this example, it is obviously essential.
+
+
+    For this, we want to use the -p (--publish) option, which follows this format:
+
+
+    ```
+
+    docker run -p <host-port>:<container-port>
+
+    ```
+
+
+    So, if example, we want to map the port 80 of the container to the port 80 of
+    the host, we would execute:
+
+
+    ```
+
+    docker run -d --name=nginx2 -p 80:80 nginx
+
+    ```
+
+
+    Now, if we follow localhost (127.0.0.1) in a browser, we can see the Nginx welcome
+    page. That is, we would be accessing the web root of the web server running in
+    container.
+
+
+    Of course, we can use any (free) port in the host:
+
+
+    ```
+
+    docker run -d --name=nginx3 -p 8080:80 nginx
+
+    ```
+
+
+    # 9.3.4 Run a container and get the command line
+
+
+    For some occasions, we just want to get the command line of a container. For this,
+    we have to use two options: -i (--interactive) and -t (--tty) and also specify
+    the shell:
+
+
+    ```
+
+    docker run -i -t <image> </path/to/shell
+
+    ```
+
+
+    For example:
+
+
+    ```
+
+    docker run --name=nginx4 -i -t nginx /bin/bash
+
+    ```
+
+
+    And we will run the container interactively.
+
+
+    For exiting the container, we can execute exit inside it.
+
+
+    We can combine both options in just one with -it:
+
+
+    ```
+
+    docker run --name=nginx5 -it nginx /bin/bash
+
+    ```
+
+
+    # 9.3.5 Specifying a username
+
+
+    Exists the possibility of specifying the username the container has to be ran,
+    with the -u (--user) option:
+
+
+    ```
+
+    docker run -u <username> <image>
+
+    ```
+
+
+    Applied to the previous example, for running the container not with root user,
+    but with nginx:
+
+
+    ```
+
+    docker run --name=nginx6 -u nginx -it nginx /bin/bash
+
+    ```
+
+
+    # 9.4 Starting an existing container: restart
+
+
+    Let''s suppose that we stop one of the containers:
+
+
+    ```
+
+    docker stop nginx1
+
+    ```
+
+
+    Now, the nginx container is stopped. If we would try to create a container with
+    the same name:'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '```
+
+    docker run --name=nginx1 nginx
+
+    ```
+
+
+    Docker would throw an error, and the container would be started:
+
+
+    ```
+
+    docker: Error response from daemon: Conflict. The name "nginx1" is already in
+    use by container 4ae3a240dc6c2dc6d968afdb91be14860be72ed6ca65e2d52ac8546e5d6ce16d.
+    You have to remove (or rename) that container to be able to reuse that name.
+
+    ```
+
+
+    The message is quite explanatory: we cannot create a container with the name of
+    another container (that''s why we have used different names for the containers
+    in this example), even if stopped.
+
+
+    If we want to do is to run that container, that is, that specific instance of
+    the nginx image that we created before, we would have to delete or rename it,
+    and we don''t have to use the start command, but to restart:
+
+
+    ```
+
+    docker restart <container-name>container-id>
+
+    ```
+
+
+    So, for restarting our stopped container, we just have to execute:
+
+
+    ```
+
+    docker restart nginx1
+
+    ```
+
+
+    And it will be running again, keeping the port mapping, specified.
+
+
+    # 9.5 Summary
+
+
+    This example has shown how to run Docker containers, that is, an instance of a
+    Docker image. We have seen several options for these. Apart from that, we have
+    also seen how to restart existing containers, which is slightly different from
+    creating them.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# Chapter 10\n\n# Docker List Containers Example\n\nThis example will show\
+    \ you how to list containers with Docker, one of the most popular software of\
+    \ the moment. Apart from just listing the containers, we will see the useful options\
+    \ that this command is provided with.\nFor this example, Linux Mint 18 and Docker\
+    \ version 1.12.1 have been used.\n\n# 10.1 Installation\n\nNote: Docker requires\
+    \ a 64-bit system with a kernel version equal or higher to 3.10.\n can install\
+    \ Docker simply via apt-get, without the need of adding any repository, just installing\
+    \ the docker.io package:\n\n```\nudo apt-get update\nsudo apt-get install docker.io\n\
+    ```\n\nFor more details, you can follow the Install Docker on Ubuntu Tutorial.\n\
+    \n# 10.2 Setting up some containers\n\n# 10.2.1 Pulling a sample image\n\nAs you\
+    \ should know, before creating containers, we need Docker images.\nThe easiest\
+    \ way to obtain a Docker image is to pull one from the Docker Hub. You don't have\
+    \ to have an account for pulling images.\nLet's pull a Busybox image:\n\n```\n\
+    <code class=\"plain\">docker pull busybox</code>\n```\n\n# 10.2.2 Creating sample\
+    \ containers\n\nLet's create several containers:\n\n```\ndocker run busybox\n\
+    docker run busybox echo \"Hello world\"\ndocker run --name=mybusybox busybox\n\
+    docker run -it busybox\n```\n\nNote: after the last container execution, open\
+    \ a new terminal, since the have set the interactive mode for it."
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'Docker Containerization Cookbook
+
+
+    # 10.3 Listing containers
+
+
+    The Docker command for listing containers is ps (yes, not a very good name). So,
+    let''s try it:
+
+
+    ```
+
+    docker ps
+
+    ```
+
+
+    For which will return an output like the following:
+
+
+    | CONTAINER | IMAGE | COMMAND | CREATED | STATUS | |
+
+    | --- | --- | --- | --- | --- | |
+
+    | e72b3c39fdd9 minutes | busybox | "sh" jolly_bhabha | 3 minutes ago | Up 3 |
+
+
+    The first thing that probably will come to our minds is that we are just seeing
+    a single container, when we actually instantiated several of them. This is because
+    ps just shows the active, running containers. And, actually, we only have a single
+    container running: the one we interactively.
+
+
+    If we want to show all containers, we must use the -a (--all) option to ps:
+
+
+    ```
+
+    docker ps -a
+
+    ```
+
+
+    In this case, the output would be:
+
+
+    | CONTAINER | IMAGE | COMMAND | CREATED | STATUS | |
+
+    | --- | --- | --- | --- | --- | |
+
+    | e72b3c39fdd9 minutes | busybox | "sh" jolly_bhabha | 3 minutes ago | Up 3 |
+
+    | 642aec6d538 | busybox | "sh" mybusybox | 3 minutes ago | Exited |
+
+    | (0) 3 minutes ago | busybox | "sh" grave_ramanujan | 3 minutes ago | Exited
+    |
+
+    | 05833ec5598 | busybox | "echo ''Hello world''" | 3 minutes ago | Exited |
+
+    | (0) 3 minutes ago | busybox | pedantic_hoover | 3 minutes ago | Exited |
+
+    | e4ceead7853b3 (0) 3 minutes ago | "sh" cranky_murdock | 3 minutes ago | Exited
+    |
+
+
+    # 10.3.1 Formatting the output
+
+
+    You might find the output not very pretty, since the lines are cramped if the
+    width of the window is not big enough. Fortunately, this command allows custom
+    formatting. This is achieved with the --format option. The format is specified
+    in "Go Template", which is pretty easy.
+
+
+    ```
+
+    docker ps --format ''{{.column-name}}: {{.column-value}}''
+
+    ```
+
+
+    Specifying as many columns as we want. Of course, the formatting is compatible
+    with -a option.
+
+
+    If we just wanted to see the names, we could execute:
+
+
+    ```
+
+    docker ps -a ''{{.Names}} {{.Status}}''
+
+    ```
+
+
+    Which would show:
+
+
+    ```
+
+    jolly_bhabha Exited (0) 5 minutes ago
+
+    mybusybox Exited (0) 5 minutes ago
+
+    grave_ramanujan Exited (0) 5 minutes ago
+
+    pedantic_hoover Exited (0) 5 minutes ago
+
+    cracky_murdock Exited (0) 5 minutes ago
+
+    ```
+
+
+    The name of fields are case sensitive, and for the same cases the field name we
+    use with --format is not very intuitive.
+
+    So this is the list of field name we use for each column:'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# Docker Containerization Cookbook\n\n+   * CONTAINER ID: ID\n* IMAGE: Image\n\
+    * COMMAND: Command\n* CREATED: Running\n* STATUS: Status\n* PORTS: Ports\n* NAMES:\
+    \ Names\n\nNote that the fields which were named CONTAINER ID and CREATED, use\
+    \ completely different names for the formatting. If we want to show the header\
+    \ for each column, we can add the table identifier before we specify the format,\
+    \ for example:\n\n```\ndocker ps -a --format 'table {{ .ID }} {{ .Names }}'\n\
+    ```\n\nWhich would make the output look like:\n\n| CONTAINER ID | NAMES |\n|---|---|n|\
+    \ e723bc39fd9 | jolly_bhabha |\n| 642aec18d38 | myusbox |\n| fe574b4cca5 | grave_ramanujan\
+    \ |\n| 0583be5c5598 | pedantic_hoover |\n| 4ceaeed785b3 | cranky_murdock |\n\n\
+    And, to align each column, we can use the tab character between each one:\n\n\
+    ```\ndocker ps -a --format 'table {{ .ID }}\t{{ .Names }}'\n```\n\nHaving a nicer\
+    \ formatting:\n\n| CONTAINER ID | NAMES |\n|---|---|n| e723bc39fd9 | jolly_bhabha\
+    \ |\n| 642aec18d38 | myusbox |\n| fe574b4cca5 | grave_ramanujan |\n| 0583be5c5598\
+    \ | pedantic_hoover |\n| 4ceaeed785b3 | cranky_murdock |\n\n# 10.3.2 Saving templates\
+    \ in Docker configuration file\n\nWe have seen how the custom formatting for container\
+    \ output, but on the other hand, it requires to write a lot, which makes us think\
+    \ that it is not worth\n\nFortunately, Docker allows to define a default formatting\
+    \ configuration for the ps command, every time we execute it, it will show the\
+    \ output defined, without needing to specify the --format option.\n\nFor this,\
+    \ we just have to open the config.json file with our favorite editor, located\
+    \ in the .docker/ folder, in the home directory:\n\n```\nvim ~/.docker/config.json\n\
+    ```\n\nAnd add a --table value for the psFormat, e.g.:\n\n```\n{\n  \"psFormat\"\
+    : \"table {{ .ID }}\\t{{ .Names }}\\t{{ .Status }}\"\n}\n```\n\nNow, just executing\
+    \ the following Docker command:"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Docker Containerization Cookbook
+
+
+    ```
+
+    docker ps -a
+
+    ```
+
+
+    The output would be:
+
+
+    | CONTAINER ID | NAMES | STATUS |
+
+    |---|---|---|
+
+    | 723bc39fdd9 | jolly_bhabha | Exited (0) 10 minutes ago |
+
+    | 642ae1d8d63 | mybybox | Exited (0) 10 minutes ago |
+
+    | fe574b4fcca5 | grave_ramanujan | Exited (0) 10 minutes ago |
+
+    | 0583be5c5598 | pedantic_hoover | Exited (0) 10 minutes ago |
+
+    | e4ceead785b3 | cranky_murdock | Exited (0) 10 minutes ago |
+
+
+    #  10.3 Using filters
+
+
+    The remaining interest for container listing is the filtering of the results.
+    This is useful if we are dealing with several containers, and we just want information
+    about some of them.
+
+
+    For filtering the output, use -f (--format) as the filter. The format is the following:
+
+
+    ```
+
+    docker ps -f "key1=value" -f "key2=value2" -f "keyN=valueN"
+
+    ```
+
+
+    As you can see, we can specify as many filters as we want, but for each, we have
+    to specify the filter.
+
+
+    For example, we could filter by the container name:
+
+
+    ```
+
+    docker ps -a f "name=mybybox"
+
+    ```
+
+
+    Showing the output:
+
+
+    | CONTAINER ID | NAMES | STATUS |
+
+    |---|---|---|
+
+    | 642ae1d8d63 | mybybox | Exited (0) 15 minutes ago |
+
+
+    (Keeping the configuration as we saw in previous section).
+
+
+    The filter also supports regular expressions, for example:
+
+
+    ```
+
+    docker ps -a f "name=.*"
+
+    ```
+
+
+    Looking for container names with an underscore, output:
+
+
+    | CONTAINER ID | NAMES | STATUS |
+
+    |---|---|---|
+
+    | 723bc39fdd9 | jolly_bhabha | Exited (0) 15 minutes ago |
+
+    | fe574b4fcca5 | grave_ramanujan | Exited (0) 15 minutes ago |
+
+    | 0583be5c5598 | pedantic_hoover | Exited (0) 15 minutes ago |
+
+    | e4ceead785b3 | cranky_murdock | Exited (0) 15 minutes ago |
+
+
+    # 10.4 Summary
+
+
+    In this tutorial, we have seen how to list containers created with Docker. But
+    we have gone gone further than that: we have seen the options that the command
+    for listing provides, make the output prettier and more suitable for our needs,
+    also seeing how to save the configuration to use it as default.'
+  merge: -1
+  pgno: 64
