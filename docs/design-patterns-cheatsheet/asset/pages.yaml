@@ -1,0 +1,537 @@
+- img_proc: true
+  md: '# Design Patterns
+
+
+    # Table of Contents
+
+
+    +   Preface ... 1
+
+    1. Introduction ... 1
+
+    2. Creational patterns ... 1
+
+    2.1. Singleton ... 1
+
+    2.2. Factory ... 1
+
+    2.3. Abstract Factory ... 2
+
+    2.4. Builder ... 2
+
+    2.5. Prototype ... 2
+
+    3. Structural patterns ... 3
+
+    3.1. Adapter ... 3
+
+    3.2. Bridge ... 3
+
+    3.3. Composite ... 3
+
+    3.4. Decorator ... 4
+
+    3.5. Facade ... 4
+
+    3.6. Flyweight ... 4
+
+    3.7. Proxy ... 4
+
+    4. Behavioral patterns ... 5
+
+    4.1. Chain of Responsibility ... 5
+
+    4.2. Command ... 5
+
+    4.3. Iterator ... 5
+
+    4.4. Mediator ... 5
+
+    4.5. Observer ... 6
+
+    4.6. Strategy ... 6
+
+    4.7. Template Method ... 6'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Preface
+
+
+    In this cheatsheet we are going to talk about design patterns in software development.
+    We will focus on what they are, how they can benefit us, but more importantly
+    where and when to use them.
+
+
+    Structural patterns deal with object composition, creating relationships between
+    objects to form larger structures.
+
+
+    Behavioral patterns focus on communication between objects, what goes on between
+    objects and how they operate together.
+
+
+    Design patterns can speed up the development process by providing tested, proven
+    design patterns. Effective software design requires considering issues that may
+    become visible until later in the implementation. Reusing design patterns helps
+    to prevent subtle issues that can cause major problems and improve readability
+    for coders and architects familiar with the patterns.
+
+
+    # 2. Creational patterns
+
+
+    # 2.1. Singleton
+
+
+    The Singleton design pattern is used to ensure that a class has only one instance,
+    and to provide a global access point to that instance.
+
+
+    | Singleton |
+
+    | - static sc |
+
+    | + static getInstance() |
+
+
+    Figure 1. Singleton UML.
+
+
+    +   - One advantage of the Singleton design pattern is that it ensures that there
+    is only one instance of a class, which can be useful for classes that manage resources
+    such as database connections or network sockets.
+
+    - It also provides a global access point to the instance, which can make it easier
+    to use the instance in different parts of the code.
+
+
+    # 1. Introduction
+
+
+    Design patterns are reusable solutions to common software design problems. They
+    provide a way to describe and document software architectures, as well as a common
+    vocabulary for developers to communicate about software design.
+
+
+    There are several types of design patterns, including creational, structural,
+    and behavioral patterns.
+
+
+    Creational patterns deal with object creation mechanisms, trying to create objects
+    in a manner suitable to the situation.
+
+
+    # 2.2. Factory
+
+
+    Provides a way to create objects without specifying the exact class of object
+    that will be created. A method that creates objects of a specific type. The method
+    takes the type of object to be created as an
+
+
+    Often, people only understand how to apply certain design techniques to certain
+    problems. These techniques are difficult to apply to a broader range of problems.
+    Design patterns provide general solutions, documented in a format that doesn''t
+    require specifics tied to a particular problem.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'argument and returns a new object of that type.
+
+
+    | interface | Creator |
+
+    | --- | --- |
+
+    | Product | operator() / factoryMethod() |
+
+
+    | ConcreteProduct | ConcreteCreator factoryMethod() |
+
+
+    Figure 2. Factory UML.
+
+
+    +   * Useful when you want to create objects that are compatible with a certain
+    framework or workflow, but you don''t want to specify the concrete classes of
+    the objects at runtime.
+
+
+    # 2.4. Builder
+
+
+    Allows for the creation of complex objects in a step-by-step manner. It separates
+    the construction of an object from its representation, allowing for different
+    representations to be created.
+
+
+    +   * One advantage of using the Factory design pattern is that it allows the
+    creation of objects to be centralized in a single location, which can make the
+    code more modular and easier to maintain.
+
+
+    +   * It also allows the implementation of object creation to be changed easily,
+    which can make the design more flexible and extensible.
+
+
+    +   * Allows objects to be created without specifying their exact class, which
+    can make the code more generic and reusable.
+
+
+    ![](img/d6a5dc163996c263d43b0b54748187e0_2_0.png)
+
+
+    Figure 4. Builder UML.
+
+
+    +   * Object creation algorithms should be decoupled from the system.
+
+
+    +   * Multiple representations of creation algorithms are required.
+
+
+    +   * The addition of new functionality without changing the core class is necessary.
+
+
+    # 2.3. Abstract Factory
+
+
+    Provides an interface for creating families of related or dependent objects without
+    specifying their concrete classes.
+
+
+    | interface | Client |
+
+    | --- | --- |
+
+    | AbstractFactory | Product |
+
+    | ConcreteFactoryA | ProductA |
+
+    | ConcreteFactoryB | ProductB |
+
+
+    Figure 3. class_diagram_1
+
+
+    +   * A system should be independent of how its products are created, composed,
+    and represented.
+
+
+    +   * A system should be configured with one of the multiple families of products.
+
+
+    +   * A family of related product objects is designed to be used together, and
+    you need to enforce this constraint.
+
+
+    # 2.5. Prototype
+
+
+    Allows for the creation of new objects by copying existing objects, rather than
+    creating new objects from scratch.
+
+
+    | Client | interface |
+
+    | --- | --- |
+
+    | | Prototype |
+
+    | | clone() |
+
+    | ConcretePrototype1 | clone() |
+
+    | ConcretePrototype2 | clone() |
+
+
+    Figure 5. Prototype UML.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Java Code Geeks CHEATSHEETS DESIGN PATTERNS
+
+
+    +   - Useful when creating complex objects independently when the cost of creating
+    a new object is high.
+
+
+    +   - A class will not know what classes it will be required to create.
+
+
+    +   - Subclasses may specify what objects should be created.
+
+
+    +   - Parent classes wish to defer creation to their subclasses.
+
+
+    ![](img/d6a5dc163996c263d43b0b54748187e0_3_0.png)
+
+
+    # 3. Structural patterns
+
+
+    # 3.1. Adapter
+
+
+    Allows two incompatible interfaces to work together by wrapping an adapter class
+    around one of the interfaces. This adapter class converts the interface of the
+    adapted class into the interface that the client is expecting.
+
+
+    +   - Abstractions and implementations should not be bound at compile time.
+
+
+    +   - Abstractions and implementations should be independently extensible.
+
+
+    +   - Changes in the implementation of abstraction should have no impact on clients.
+
+
+    +   - Implementation details should be hidden from the client.
+
+
+    # 3.3. Composite
+
+
+    Allows objects to be treated as a single unit. It is used to compose objects into
+    tree structures, and to create complex objects from simpler ones.
+
+
+    ![](img/d6a5dc163996c263d43b0b54748187e0_3_1.png)
+
+
+    +   - Adapters can not only convert data into various formats but can also help
+    objects with different interfaces
+
+
+    +   - Possible to create a two-way adapter that can convert the calls in both
+    directions.
+
+
+    ![](img/d6a5dc163996c263d43b0b54748187e0_3_2.png)
+
+
+    +   - Hierarchical representations of objects are needed.
+
+
+    +   - Objects and compositions of objects should be treated uniformly.
+
+
+    # 3.2. Bridge
+
+
+    Allows for the separation of abstraction and implementation, so that the two can
+    vary
+
+
+    JAVCODEGEEKS.COM | © ELIXELS MEDIA P.C. | VISIT JAVCODEGEEKS.COM FOR'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "# 3.4. Decorator\n\nAllows for the dynamic addition of new behavior to an existing\
+    \ object without changing its structure.\n\nmaintenance and modification of the\
+    \ system.\n\n# 3.6. Flyweight\n\nAims to minimize the use of memory by sharing\
+    \ common data among objects. This is done by creating a shared data object rather\
+    \ than each object having its own instance of the data.\n\n![](img/d6a5dc163996c263d43b0b54748187e0_4_0.png)\n\
+    \n+   - It can be used to add new functionality to a class or to wrap an existing\
+    \ class with additional functionality.\n\n![](img/d6a5dc163996c263d43b0b54748187e0_4_1.png)\n\
+    \n# 3.5. Facade\n\nProvides a simplified interface to a complex system.\n\n+ \
+    \  - We can reduce the memory footprint of our application and improve its performance.\n\
+    - Carefully consider the trade-off between the benefits of memory savings and\
+    \ the added complexity of implementing the pattern.\n\n![](img/d6a5dc163996c263d43b0b54748187e0_4_2.png)\n\
+    \n# 3.7. Proxy\n\nProvides an intermediary object between a client and a real\
+    \ subject.\n\nThe proxy pattern can be used to:\n\n```\ninterface {\n  request();\n\
+    }\n```\n\n+   - Useful when a system has a large number of interconnected classes\
+    \ or when a client needs to access a limited number of the system's capabilities.\n\
+    - It decouples the client from the complex subsystems and allows for easier\n\n\
+    ![](img/d6a5dc163996c263d43b0b54748187e0_4_3.png)"
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   Provide a placeholder for a potentially expensive or resource-intensive
+    object. The proxy can be used to create the real object only when it is needed,
+    rather than creating upfront.
+
+
+    +   Control access to the real subject. The proxy can be used to enforce access
+    restrictions or implement authentication and authorization checks.
+
+
+    +   Add additional functionality to the real subject. The proxy can be used to
+    intercept requests to the real subject and perform additional tasks before or
+    after forwarding the request.
+
+
+    # 4.2. Command
+
+
+    Allows for the encapsulation of a request as object, which can then be passed
+    to a receiver to be executed.
+
+
+    ![](img/d6a5dc163996c263d43b0b54748187e0_5_0.png)
+
+
+    +   Allows for the separation of the sender and receiver of a request.
+
+
+    +   Ability to queue or log requests, and to support undo/redo functionality.
+
+
+    #  4. Behavioral patterns
+
+
+    # 4.1. Chain of Responsibility
+
+
+    Allows an object to send a request to a chain of objects in order to handle the
+    request.
+
+
+    ![](img/d6a5dc163996c263d43b0b54748187e0_5_1.png)
+
+
+    # 4.3. Iterator
+
+
+    Allows clients to access elements of an aggregate object sequentially without
+    exposing the object''s underlying representation.
+
+
+    ![](img/d6a5dc163996c263d43b0b54748187e0_5_2.png)
+
+
+    +   Allows clients to traverse a collection of objects in a consistent, uniform
+    manner, regardless of the specific implementation of the collection.
+
+
+    +   Useful for situations where multiple objects may be able to handle a request,
+    and the specific object that should handle the request is not known in advance.
+
+
+    +   Allows for the easy addition or removal of objects from the chain without
+    disrupting the overall functionality.
+
+
+    # 4.4. Mediator
+
+
+    Allows multiple objects to communicate with each other without knowing the details
+    of their implementation.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# 4.6. Strategy
+
+
+    Allows an object to change its behavior or strategy at runtime by switching to
+    a different strategy object.
+
+
+    ![](img/d6a5dc163996c263d43b0b54748187e0_6_0.png)
+
+
+    +   - It provides a central point of communication, known as the mediator, which
+    acts as an intermediary between the objects.
+
+
+    +   - Useful in cases where there are a large number of objects that need to communicate
+    with each other, as it reduces the complexity of the system by separating the
+    communication logic from the objects themselves.
+
+
+    # 4.5. Observer
+
+
+    ![](img/d6a5dc163996c263d43b0b54748187e0_6_1.png)
+
+
+    Allows an object (the subject) to notify a set of objects (the observers) when
+    its state changes. The observer pattern is also known as the publish-subscribe
+    pattern.
+
+
+    +   - The only difference between many related classes is their behavior.
+
+
+    +   - Multiple versions or variations of an algorithm are required.
+
+
+    +   - Algorithms access or utilize data that calling code shouldn''t be exposed
+    to.
+
+
+    +   - The behavior of a class should be defined at runtime.
+
+
+    +   - Conditional statements are complex and hard to maintain.
+
+
+    # 4.7. Template Method
+
+
+    Defines the steps of an algorithm and allows subclasses to override certain steps,
+    while still preserving the overall structure of the algorithm.
+
+
+    ![](img/d6a5dc163996c263d43b0b54748187e0_6_2.png)
+
+
+    +   - Useful when you want to ensure that various objects are kept in sync with
+    each other, or when you want to be able to reuse subjects and observers independently
+    of each other.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# DESIGN PATTERNS
+
+
+    ![](img/d6a5dc163996c263d43b0b54748187e0_7_0.png)
+
+
+    Figure 19. Template Method UML.
+
+
+    +   * A single abstract implementation of an algorithm is needed.
+
+    * Common behavior among subclasses should be localized to a common class.
+
+    * Parent classes should be able to uniformly invoke behavior in their subclasses.
+
+    * Most, or all subclasses need to implement the behavior.
+
+
+    Java Code Geeks
+
+    JCG JAVA DEVELOPERS RESOURCE CENTER
+
+    JCG delivers over 1 million pages each month to more than 700K software developers,
+    architects and decision makers. JCG offers something for everyone, including news,
+    tutorials, cheat sheets research guides, feature articles, source code and more.
+
+
+    Copyright © 2014 Elexilis Media P.C. All rights reserved. No part of this publication
+    may be reproduced, stored in a retrieval system, or transmitted, in any form or
+    by means electronic, mechanical, photocopying, or otherwise, without prior written
+    permission of the publisher.
+
+
+    CHEATSHEET FEEDBACK
+
+    WELCOME
+
+    support@javacodegeeks.com
+
+
+    SPONSORSHIP
+
+    OPPORTUNITIES
+
+    sales@javacodegeeks.com
+
+
+    JAVAGEODEGEKS.COM | © ELEXILIS MEDIA P.C. VISIT JAVACODEGEKS.COM FOR MORE!'
+  merge: -1
+  pgno: 7
