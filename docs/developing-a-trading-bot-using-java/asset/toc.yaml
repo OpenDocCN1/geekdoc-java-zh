@@ -1,0 +1,218 @@
+- - '#'
+  - Java 交易机器人开发指南
+- - '##'
+  - 1. 交易机器人初探
+- - '##'
+  - 1.1 什么是交易机器人？
+- - '##'
+  - 1.2 为什么我们需要交易机器人？
+- - '##'
+  - 1.3 我们交易机器人的功能
+- - '##'
+  - 1.4 设计目标
+- - '##'
+  - 1.5 代码组织和使用的软件栈
+- - '##'
+  - 1.6 OANDA API 作为参考实现
+- - '###'
+  - 1.6.1 打开 OANDA 练习账户
+- - '####'
+  - OANDA
+- - '####'
+  - 几分钟内注册
+- - '####'
+  - 无限制虚拟资金
+- - '####'
+  - 永不过期
+- - '####'
+  - 五大交易平台
+- - '###'
+  - 1.6.2 Oanda 账户注册
+- - '####'
+  - 安全登录
+- - '####'
+  - Oanda 账户登录
+- - '####'
+  - 我的 fxTrade 练习账户
+- - '####'
+  - Oanda 账户仪表板
+- - '####'
+  - 管理 API 访问
+- - '####'
+  - 在此处使用 API 令牌
+- - '####'
+  - OANDA 开发 API 控制台
+- - '###'
+  - 1.6.3 OANDA JSON 键
+- - '####'
+  - OANDA 开发 API 控制台-Headers 标签页
+- - '###'
+  - 1.6.4 OANDA 实现的构造依赖
+- - '##'
+  - 1.7 事件驱动架构
+- - '###'
+  - 1.7.1 Google EventBus
+- - '##'
+  - 1.8 Provider Helper 接口
+- - '##'
+  - 1.9 TradingConfig 类
+- - '##'
+  - 1.10 获取源代码
+- - '##'
+  - 1.11 “亲自尝试一下”章节
+- - '##'
+  - 2. 账户管理
+- - '##'
+  - 2.1 Account Provider 接口
+- - '##'
+  - 2.2 具体实现
+- - '##'
+  - 2.3 将所有内容封装在通用的 AccountInfoService 之后
+- - '##'
+  - 2.4 动手实践
+- - '##'
+  - 3. 可交易工具
+- - '##'
+  - 3.1 Instrument Provider 接口提供者接口
+- - '##'
+  - 3.2 InstrumentDataProvider 的具体实现
+- - '##'
+  - 3.3 将所有内容封装在通用的 InstrumentService 之后
+- - '##'
+  - 4. 尝试一下
+- - '##'
+  - 4. 事件流：市场数据事件
+- - '##'
+  - 4.1 流式市场数据接口
+- - '##'
+  - 4.2 MarketDataStreamingService 的具体实现
+- - '##'
+  - 4.3 下游市场数据事件：MarketEventCallback
+- - '##'
+  - 4.4 下游
+- - '##'
+  - 5. 历史性市场数据
+- - '##'
+  - 5.1 如何读取 K 线
+- - '##'
+  - 5.2 定义 K 线粒度的枚举
+- - '##'
+  - 5.3 定义存储 K 线信息的 POJO
+- - '##'
+  - 5.4 HistoricMarketDataProvider 的具体实现
+- - '##'
+  - 5.5 讨论：另一种数据库实现
+- - '##'
+  - 5.6 用于移动平均计算的 K 线
+- - '##'
+  - 5.7 MovingAverageCalculationService
+- - '##'
+  - 5.8 尝试尝试一下
+- - '##'
+  - 6. 下单与交易
+- - '##'
+  - 6.1 Order POJO 定义
+- - '##'
+  - 6.2 Order Management 接口
+- - '##'
+  - 6.3 OrderManagement 的具体实现
+- - '##'
+  - 6.4 简单的 OrderInfoService
+- - '##'
+  - 6.5 执行前的订单验证：PreOrderValidationService
+- - '##'
+  - 6.6 在 OrderExecutionService 中整合所有内容
+- - '##'
+  - 6.7 Trade POJO 定义
+- - '##'
+  - 6.8 Trade Management 接口
+- - '##'
+  - 6.9 TradeManagementProvider 的具体实现
+- - '##'
+  - 6.10 在 TradeInfoService 之后封装读操作
+- - '##'
+  - 6.11 动手尝试
+- - '##'
+  - 7. 事件流
+- - '##'
+  - 7.1 流式事件接口
+- - '##'
+  - 7.2 EventsStreamingService 的具体实现
+- - '##'
+  - 7.3 尝试一下
+- - '##'
+  - 8. 与 Twitter 集成
+- - '##'
+  - 8.1 创建 Twitter 应用程序
+- - '##'
+  - 8.3 获取外汇推文
+- - '###'
+  - 8.3.1 TweetHarvester 接口
+- - '###'
+  - 8.3.2 FXTweetHandler 接口
+- - '###'
+  - 8.3.3 AbstractFXTweetHandler 类
+- - '###'
+  - 8.3.4 用户特定的 TweetHandlers
+- - '###'
+  - 8.3.4.1 SignalFactoryFXTweetHandler
+- - '###'
+  - 8.3.4.2 ZuluTrader101TweetHandler
+- - '##'
+  - 8.4 尝试一下
+- - '##'
+  - 9. 实现策略
+- - '##'
+  - 9.1 复制 Twitter 策略
+- - '##'
+  - 9.2 逆势策略 (Fade The Move Strategy)
+- - '##'
+  - 9.3 尝试自己
+- - '##'
+  - 10. 心跳
+- - '##'
+  - 10.1 HeartBeatPayload
+- - '##'
+  - 10.2 Streaming HeartBeat 接口
+- - '##'
+  - 10.3 HeartBeatStreamingService 的具体实现
+- - '##'
+  - 10.4 HeartBeatCallback 接口
+- - '##'
+  - 10.5 DefaultHeartbeatService
+- - '##'
+  - 10.6 动手一试
+- - '##'
+  - 11. 构建交易机器人应用模块
+- - '##'
+  - 11.1 通知设计
+- - '###'
+  - 11.1.1 EmailPayLoad POJO
+- - '###'
+  - 11.1.2 EmailContentGenerator 接口
+- - '###'
+  - 11.1.3 示例实现
+- - '##'
+  - 11.2 自己尝试
+- - '##'
+  - 12. 配置、部署与运行机器人
+- - '##'
+  - 12.1 机器人的配置
+- - '###'
+  - 12.1.2 Twitter 相关的 Bean 配置
+- - '###'
+  - 12.1.3 Provider Bean 配置
+- - '###'
+  - 12.1.5 服务配置
+- - '##'
+  - 12. 运行机器人
+- - '##'
+  - 13. 单元测试
+- - '##'
+  - 13.1 使用 Mockito 作为模拟框架（mocking framework）。
+- - '###'
+  - 13.1.1 模拟 HTTP 交互
+- - '###'
+  - 13.1.2 模拟流（Streams）
+- - '###'
+  - 13.1.4 Mock Twitter 交互
