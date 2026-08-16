@@ -1,0 +1,4493 @@
+- md: "\n# CUCUMBER WITH JAVA\n\n![](img/01a02959ac67a9cb80992ea769fa586c_0_0.png)\n\
+    \n## BEGINNER’S GUIDE\n\nPAUL WATSON\n\n**About the Author**\n\nMr. Paul Watson\
+    \ has many years of experience in working with BDD and Cucumber. He has worked\
+    \ on large software projects in USA, UK, Singapore, Hong Kong, Dubai, Australia\
+    \ and Switzerland.\n\nHis hobbies include travelling to new tourist places, watching\
+    \ basketball, cricket, Soccer and learning latest technological stuff.\n\n**Who\
+    \ is this book for**\n\nThis book is for software developers, automation testers,\
+    \ Devops and engineers working on IT project. Whether you are a beginner or an\
+    \ experienced developer, this book will help you master the skills on Cucumber.\n\
+    \nThe book starts with introduction of Cucumber and then dives into key concepts\
+    \ like creating project in IntelliJ IDEA, using tags, plugins, integration with\
+    \ Junit, executing selenium tests, using picocontainer and lam expressions.\n\n\
+    **Preface**\n\nThis book is for those who are new to Cucumber. It will help you\
+    \ understand what is Cucumber and how you can use it in your software project.\n\
+    \nIn this book, you will learn below topics.\n\n1. Introduction to Cucumber\n\
+    2. Installation of Cucumber\n3. Writing feature files using Gherkin\n4. Adding\
+    \ Cucumber dependency to Java project\n5. Cucumber Test\n6. Executing Cucumber\
+    \ tests using Cucumber class\n7. Cucumber options\n8. Filtering scenarios\n9.\
+    \ Passing parameters to steps\n10. Passing the data table to steps\n11. Feature\
+    \ file variations\n12. Running multiple feature files in Cucumber\n13. Sharing\
+    \ selenium Webdriver instance using PicoContainer\n14. Reports in Cucumber\n15.\
+    \ Cucumber using Lambda Expressions\n\nAbout the Author\nWho is this book for\n\
+    \nPreface\n\n1. Introduction\n2. Installation of Cucumber\n3. Writing feature\
+    \ files using Gherkin\n4. Adding Cucumber dependency to Java project\n5. Cucumber\
+    \ Test\n5.1 Writing first cucumber test\n6. Executing Cucumber tests using Cucumber\
+    \ class\n7. Cucumber options\n8. Filtering scenarios\n8.1 Tagging the scenarios\n\
+    8.2 Using name option\n9. Passing parameters to steps\n10. Passing the data table\
+    \ to steps\n10.1 Key-Value pair Datatable\n10.2 Multiple column datatable in Cucumber\n\
+    11. Feature file variations\n11.1 Scenario Background\n11.2 Scenario outline\n\
+    12. Running multiple feature files in Cucumber\n13. Sharing selenium Webdriver\
+    \ instance using PicoContainer\n14. Reports in Cucumber\n14.1 Embedding the screenshot\n\
+    14.2 Writing to Cucumber HTML reports\n15. Cucumber using Lambda Expressions\n\
+    15.1 Cucumber dependency for using Lambda expressions in Java 8\n15.2 Cucumber\
+    \ test using Lambda expressions\n\n**1. Introduction**\n\nCucumber is the BDD\
+    \ (Behavior driven development) testing framework.\n\nKey things to note about\
+    \ Cucumber are -\n\n1. Open source BDD testing framework.\n2. Cross platform framework.\n\
+    3. Tests are written in various languages like English, French, German and many\
+    \ more using Gherkin Syntax.\n4. We can write the tests in various programming\
+    \ languages like Ruby, JRuby, PHP, Java, Jython, Groovy, Javascript, Clojure,\
+    \ Gos, Lua, .Net, PHP, C++ and TCL\n5. Integrates very well with CI servers like\
+    \ Jenkins and TeamCity\n6. Reports can be generated in HTML, JSON, JUnit style\n\
+    7. Capybara - the testing framework - is a part of Cucumber\n8. Integrates very\
+    \ well with frameworks like Selenium, Appium, Spring, Watir, Ruby on Rails etc.\n\
+    \n**2. Installation of Cucumber**\n\nSetting up Cucumber is very simple.\n\nYou\
+    \ will need to install below tools.\n\n1. Java JDK\n2. Java IDE - IntelliJ IDEA\
+    \ or Eclipse\n3. Cucumber library\n4. Build tools like Maven or gradle\n5. IntelliJ\
+    \ IDEA Plugins - Gherkin and cucumber for Java\n\nBelow image shows the IntelliJ\
+    \ plugins that you need.\n\n![](img/01a02959ac67a9cb80992ea769fa586c_12_0.png)\n\
+    \n*Cucumber and Gherkin plugins in IntelliJ IDEA*\n\nCreate a simple Maven or\
+    \ gradle project and add below dependency.\n\n```xml\n<dependency>\n  <groupId>info.cukes</groupId>\n\
+    \  <artifactId>cucumber-java</artifactId>\n  <version>1.2.4</version>\n  <scope>test</scope>\n\
+    </dependency>\n```\n\nFor writing the test steps using lambda expression in Java\
+    \ 8, you will have to add below dependency.\n\n```xml\n<dependency>\n  <groupId>info.cukes</groupId>\n\
+    \  <artifactId>cucumber-java8</artifactId>\n  <version>1.2.4</version>\n  <scope>test</scope>\n\
+    </dependency>\n```\n\nYou also need below JUnit dependencies to integrate Cucumber\
+    \ with JUnit.\n\n```xml\n<dependency>\n  <groupId>junit</groupId>\n  <artifactId>junit</artifactId>\n\
+    \  <version>4.12</version>\n  <scope>test</scope>\n</dependency>\n\n<dependency>\n\
+    \  <groupId>info.cukes</groupId>\n  <artifactId>cucumber-junit</artifactId>\n\
+    \  <version>1.2.4</version>\n  <scope>test</scope>\n</dependency>\n```\n\n**3.\
+    \ Writing feature files using Gherkin**\n\nBDD is an emerging development model\
+    \ used with agile. Some of the key things to know about BDD are -\n\n1. First\
+    \ created BDD framework\n2. Other BDD frameworks are spec, Cucumber\n3. The tests\
+    \ are written in plain text of stories or features\n4. Domain specific language\
+    \ (Gherkin) is used for writing tests\n\n**What is Gherkin?**\n\nGherkin is the\
+    \ plain text language used to write feature files (also called as stories) implemented\
+    \ in most of languages like English, German, many more. This means any stakeholder\
+    \ can write and understand the tests.\n\n**Key points to note about feature file**\n\
+    \n1. Each feature file can contain one or more scenarios and outline\n2. Each\
+    \ scenario has steps like given, when, then\n\n**What are the keywords in Gherkin?**\n\
+    \nGherkin has some reserved keywords which have specific meaning in the context\
+    \ of feature files. Below is the list of\n\n1. Given - used to specify the condition\
+    \ of the scenario\n2. When - used to specify the action\n3. And - used to specify\
+    \ additional conditions\n4. Then - used to specify the result of the action\n\
+    5. Feature - used to specify the feature\n6. Scenario - used to specify the scenario\n\
+    7. Outline\n8. Background - used to specify the action to be taken before each\
+    \ scenario\n9. \"\" - used to pass data in line format\n10. | - used to pass data\
+    \ in table format\n11. @ - used to tag scenarios and features\n12. # - used to\
+    \ comment the line in feature file\n\nBelow feature file will make you understand\
+    \ most of the syntax of Cucumber.\n\n**Basic feature file**\n\nNow let us take\
+    \ a look at simplest feature file that we can have in gherkin.\n\nFeature: ATM\
+    \ authentication\n\nUser should be asked for the PIN once ATM card is inserted\
+    \ into the machine.\nUser should be given warning message if PIN number is wrong.\n\
+    User should be authenticated successfully if PIN number is correct.\n\nScenario:\
+    \ Enter wrong PIN at ATM\nGiven I insert the ATM card in machine\nAnd I am asked\
+    \ to enter the PIN\nWhen I enter the correct PIN\nThen I should be able to see\
+    \ option to withdraw money\n\n**Sample feature file with Outline and Examples\
+    \ keyword**\n\nScenario outline-are-used in cases where we need to repeat same\
+    \ set of actions but with different combination of data. For instance, In below\
+    \ scenario outline, we need to test the login functionality with different combinations\
+    \ of user id and password. In such cases, we use <VariableData> syntax to specify\
+    \ the varying data and it is supplied through examples keyword. So in below scenario,\
+    \ all steps will be executed 4 times - one for each user.\n\nScenario Outline:\
+    \ Password rules\nGiven that we are on login page\nWhen we enter user id <ID>\
+    \ and password <PASSWORD>\nThen the login should be <OUTCOME>\n\nExamples:\n|\
+    \ ID | PASSWORD | OUTCOME |\n| :--- | :--- | :--- |\n| Sagar | 128$9# | Fail |\n\
+    | Amol | 98sjdg | PASS |\n| Shaun | jslsh9 | PASS |\n| Ben | KON() | FAIL |\n"
+  mdcn: "\n\n# Java 语言下的 CUCUMBER \n\n![](img/01a02959ac67a9cb80992ea769fa586c_0_0.png)\n\
+    \n## 初学者指南\n\nPAUL WATSON\n\n**关于作者**\n\nPaul Watson 先生在 BDD 和 Cucumber 方面拥有多年经验。他曾在美国、英国、新加坡、香港、迪拜、澳大利亚和瑞士工作过大型软件项目。\n\
+    \n他的爱好包括去新的旅游胜地旅行、看篮球、板球、足球以及学习最新的技术知识。\n\n**这本书是写给谁的**\n\n本书适用于软件开发人员、自动化测试人员、Devops\
+    \ 以及从事 IT 项目的工程师。无论你是初学者还是经验丰富的开发者，这本书都将帮助你掌握 Cucumber 技能。\n\n本书从 Cucumber 的介绍开始，然后深入核心概念，如在\
+    \ IntelliJ IDEA 中创建项目、使用标签、插件、与 Junit 集成、执行 Selenium 测试、使用 PicoContainer 和 Lambda\
+    \ 表达式。\n\n**序言**\n\n本书是为 Cucumber 的初学者准备的。它将帮助你理解什么是 Cucumber，以及你如何在软件项目中使用它。\n\
+    \n在本书中，你将学习以下主题：\n\n1. Cucumber 简介\n2. 安装 Cucumber\n3. 使用 Gherkin 编写 feature 文件\n\
+    4. 为 Java 项目添加 Cucumber 依赖\n5. Cucumber 测试\n6. 使用 Cucumber 类执行 Cucumber 测试\n7.\
+    \ Cucumber 选项\n8. 过滤场景（Scenarios）\n9. 向步骤传递参数\n10. 向步骤传递数据表\n11. feature 文件变体\n\
+    12. 在 Cucumber 中运行多个 feature 文件\n13. 使用 PicoContainer 共享 selenium Webdriver 实例\n\
+    14. Cucumber 报告\n15. 使用 Lambda 表达式使用 Cucumber\n\n关于作者\n这本书是写给谁的\n\n序言\n\n1. 简介\n\
+    2. 安装 Cucumber\n3. 使用 Gherkin 编写 feature 文件\n4. 为 Java 项目添加 Cucumber 依赖\n5. Cucumber\
+    \ 测试\n5.1 编写第一个 cucumber 测试\n6. 使用 Cucumber 类执行 Cucumber 测试\n7. Cucumber 选项\n\
+    8. 过滤场景\n8.1 为场景打上标签\n8.2 使用 name 选项\n9. 向步骤传递参数\n10. 向步骤传递数据表\n10.1 键值对数据表\n\
+    10.2 Cucumber 中的多列数据表\n11. feature 文件变体\n11.1 场景背景（Background）\n11.2 场景大纲（Outline）\n\
+    12. 在 Cucumber 中运行多个 feature 文件\n13. 使用 PicoContainer 共享 selenium Webdriver 实例\n\
+    14. Cucumber 报告\n14.1 嵌入截图\n14.2 写入 Cucumber HTML 报告\n15. 使用 Lambda 表达式使用 Cucumber\n\
+    15.1 Java 8 中使用 Lambda 表达式 Cucumber 依赖\n15.2 使用 Lambda 表达式进行 cucumber 测试\n\n**1.\
+    \ 简介**\n\nCucumber 是 BDD（行为驱动开发）测试框架。\n\n关于 Cucumber 需要的关键点有：\n\n1. 开源 BDD 测试框架。\n\
+    2. 跨平台框架。\n3. 使用英语、法语、德语等多种语言通过 Gherkin 语法编写测试。\n4. 我们可以使用多种编程语言编写测试，如 Ruby, JRuby,\
+    \ PHP, Java, Jython, Groovy, Javascript, Clojure, Gos, Lua, .Net, PHP, C++ 和 TCL。\n\
+    5. 与 Jenkins 和 TeamCity 等 CI 服务器集成得非常好。\n6. 报告可以以 HTML、JSON、JUnit 格式生成。\n7. Capybara\
+    \ - 测试框架 - 是 Cucumber 的一部分。\n8. 与 Selenium, Appium, Spring, Watir, Ruby on Rails\
+    \ 等框架集成得非常好。\n\n**2. 安装 Cucumber**\n\n设置 Cucumber 非常简单。\n\n你需要安装以下工具：\n\n1. Java\
+    \ JDK\n2. Java IDE - IntelliJ IDEA 或 Eclipse\n3. Cucumber 库\n4. 构建工具，如 Maven 或\
+    \ gradle\n5. IntelliJ IDEA 插件 - 用于 Java 的 Gherkin 和 cucumber\n\n下图显示了你需要的 IntelliJ\
+    \ 插件。\n\n![](img/01a02959ac67a9cb80992ea769fa586c_12_0.png)\n\n*IntelliJ IDEA\
+    \ 中的 Cucumber 和 Gherkin 插件*\n\n创建一个简单的 Maven 或 gradle 项目并添加以下依赖。\n\n```xml\n<dependency>\n\
+    \  <groupId>info.cukes</groupId>\n  <artifactId>cucumber-java</artifactId>\n \
+    \ <version>1.2.4</version>\n  <scope>test</scope>\n</dependency>\n```\n\n要在 Java\
+    \ 8 中使用 lambda表达式编写测试步骤，你需要添加以下依赖。\n\n```xml\n<dependency>\n  <groupId>info.cukes</groupId>\n\
+    \  <artifactId>cucumber-java8</artifactId>\n  <version>1.2.4</version>\n  <scope>test</scope>\n\
+    </dependency>\n```\n\n你还需要以下 JUnit 依赖将 Cucumber 与 JUnit 集成。\n\n```xml\n<dependency>\n\
+    \  <groupId>junit</groupId>\n  <artifactId>junit</artifactId>\n  <version>4.12</version>\n\
+    \  <scope>test</scope>\n</dependency>\n\n<dependency>\n  <groupId>info.cukes</groupId>\n\
+    \  <artifactId>cucumber-junit</artifactId>\n  <version>1.2.4</version>\n  <scope>test</scope>\n\
+    </dependency>\n```\n\n**3. 使用 Gherkin 编写 feature 文件**\n\nBDD 是一种与敏捷结合的新兴开发模型。关于\
+    \ BDD 的一些关键点是：\n\n1. 最先创建的 BDD 框架\n2. 其他 BDD 框架有 spec, Cucumber\n3. 测试是用故事或特性的纯文本编写的\n\
+    4. 使用领域特定语言（Gherkin）来编写测试\n\n**什么是 Gherkin？**\n\nGherkin 是一种用于编写 feature 文件（也称为故事）的纯文本语言，可以用英语、德语等许多语言进行实现。这意味着任何利益相关者都可以编写并理解测试。\n\
+    \n**关于 feature 文件的关键点**\n\n1. 每个 feature 文件可以包含一个或多个场景（scenario）和大纲（outline）\n\
+    2. 每个场景都有如 given, when, then 这样的步骤\n\n**Gherkin 中的关键字有哪些？**\n\nGherkin 具有一些保留关键字，它们在\
+    \ feature 文件的文中具有特定含义。以下是列表：\n\n1. Given - 用于指定场景的条件\n2. When - 用于指定动作\n3. And\
+    \ - 用于指定额外条件\n4. Then - 用于指定动作的结果\n5. Feature - 用于指定功能\n6. Scenario - 用于指定场景\n\
+    7. Outline - 场景纲\n8. Background - 用于指定在每个场景之前要执行的操作\n9. \"\" - 用于以行格式传递数据\n10.\
+    \ | - 用于以表格格式传递数据\n11. @ - 用于为场景和功能标记标签\n12. # - 用于对 feature 文件中的行进行注释\n\n下面的\
+    \ feature 文件将让你理解 Cucumber 的大部分语法。\n\n**基础 feature 文件**\n\n现在让我们来看看我们在 gherkin\
+    \ 中可以拥的最简单的 feature 文件。\n\nFeature: ATM 身份验证\n\n当 ATM 卡插入机器时，应要求用户输入 PIN 码。\n\
+    如果 PIN 码错误，应给用户显示警告消息。\n如果 PIN 码正确，用户应成功通过身份验证。\n\nScenario: 在 ATM 输入错误的 PIN\n\
+    Given 我将 ATM 卡插入机器\nAnd 我被要求输入 PIN\nWhen 我输入正确的 PIN\nThen 我应该看到取款的选项\n\n**带有 Outline\
+    \ 和 Examples 关键字的示例 feature 文件**\n\nScenario outline 用于我们需要重复一组操作但使用不同数据组合的情况。例如，在下方的场景\
+    \ outline 中，我们需要用不同的用户 ID 和密码组合来测试登录功能。在这些情况下，我们使用 <VariableData> 语法来指定变化的数据，并通过\
+    \ examples 关键字提供。因此，在下面的场景中，所有步骤将执行 4 次 - 每个用户执行一次。\n\nScenario Outline: 密码规则\n\
+    Given 我们位于登录页面\nWhen 我们输入用户 ID <ID> 和密码 <PASSWORD>\nThen 登录结果应该是 <OUTCOME>\n\n\
+    Examples:\n| ID | PASSWORD | OUTCOME |\n| :--- | :--- | :--- |\n| Sagar | 128$9#\
+    \ | Fail |\n| Amol | 98sjdg | PASS |\n| Shaun | jslsh9 | PASS |\n| Ben | KON()\
+    \ | FAIL |\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # CUCUMBER WITH JAVA
+
+
+    ![](img/01a02959ac67a9cb80992ea769fa586c_0_0.png)
+
+
+    # ## BEGINNER’S GUIDE
+
+
+    PAUL WATSON'
+  - '[PAGE 1]
+
+
+    '
+  - '[PAGE 2]
+
+
+    **About�the�Author**
+
+
+    �
+
+
+    Mr.�Paul�Watson�has�many�years�of�experience�in�working�with�BDD�and�Cucumber.�He
+
+
+    has�worked�on�large�software�projects�in�USA,�UK,�Singapore,�Hong�Kong,�Dubai,
+
+
+    Australia�and�Switzerland.
+
+
+    His�hobbies�include�travelling�to�new�tourist�places,�watching�basketball,�cricket,�Soccer
+
+
+    and�learning�latest�technological�stuff.
+
+
+    �'
+  - '[PAGE 3]
+
+
+    '
+  - '[PAGE 4]
+
+
+    **Who�is�this�book�for**
+
+
+    �
+
+
+    This�book�is�for�software�developers,�automation�testers,�Devops�and�engineers�working
+
+
+    on�IT�project.�Whether�you�are�a�beginner�or�an�experienced�developer,�this�book�will�help
+
+
+    you�master�the�skills�on�Cucumber.
+
+
+    The�book�starts�with�introduction�of�Cucumber�and�then�dives�into�key�concepts�like
+
+
+    creating�project�in�IntelliJ�IDEA,�using�tags,�plugins,�integration�with�Junit,�executing
+
+
+    selenium�tests,�using�picocontainer�and�lamda�expressions.
+
+
+    �'
+  - '[PAGE 5]
+
+
+    '
+  - '[PAGE 6]
+
+
+    '
+  - '[PAGE 7]
+
+
+    **Preface**
+
+
+    This�book�is�for�those�who�are�new�to�Cucumber.�It�will�help�you�understand�what�is
+
+
+    Cucumber�and�how�you�can�use�it�in�your�software�project.
+
+
+    In�this�book,�you�will�learn�below�topics.
+
+
+    1.� Introduction�to�Cucumber
+
+
+    2.� Installation�of�Cucumber
+
+
+    3.� Writing�feature�files�using�Gherkin
+
+
+    4.� Adding�Cucumber�dependency�to�Java�project
+
+
+    5.� Cucumber�Test
+
+
+    6.� Executing�Cucumber�tests�using�Cucumber�class
+
+
+    7.� Cucumber�options
+
+
+    8.� Filtering�scenarios
+
+
+    9.� Passing�parameters�to�steps
+
+
+    10.����������������������Passing�the�data�table�to�steps
+
+
+    11.����������������������Feature�file�variations
+
+
+    12.����������������������Running�multiple�feature�files�in�Cucumber
+
+
+    13.����������������������Sharing�selenium�Webdriver�instance�using�PicoContainer
+
+
+    14.����������������������Reports�in�Cucumber
+
+
+    15.����������������������Cucumber�using�Lambda�Expressions
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    About�the�Author
+
+
+    Who�is�this�book�for
+
+
+    Preface
+
+
+    1.�Introduction
+
+
+    2.�Installation�of�Cucumber
+
+
+    3.�Writing�feature�files�using�Gherkin
+
+
+    4.�Adding�Cucumber�dependency�to�Java�project
+
+
+    5.�Cucumber�Test
+
+
+    5.1�Writing�first�cucumber�test
+
+
+    6.�Executing�Cucumber�tests�using�Cucumber�class
+
+
+    7.�Cucumber�options'
+  - '[PAGE 8]
+
+
+    8.�Filtering�scenarios
+
+
+    8.1�Tagging�the�scenarios
+
+
+    8.2�Using�name�option
+
+
+    9.�Passing�parameters�to�steps
+
+
+    10.�Passing�the�data�table�to�steps
+
+
+    10.1�Key�-�Value�pair�Datatable
+
+
+    10.2�Multiple�column�datatable�in�Cucumber
+
+
+    11.�Feature�file�variations
+
+
+    11.1�Scenario�Background
+
+
+    11.2�Scenario�outline
+
+
+    12.�Running�multiple�feature�files�in�Cucumber
+
+
+    13.�Sharing�selenium�Webdriver�instance�using�PicoContainer
+
+
+    14.�Reports�in�Cucumber
+
+
+    14.1�Embedding�the�screenshot
+
+
+    14.2�Writing�to�Cucumber�HTML�reports
+
+
+    15.�Cucumber�using�Lambda�Expressions
+
+
+    15.1�Cucumber�dependency�for�using�Lambda�expressions�in�Java�8
+
+
+    15.2�Cucumber�test�using�Lambda�expressions'
+  - '[PAGE 9]
+
+
+    '
+  - '[PAGE 10]
+
+
+    **1.�Introduction**
+
+
+    Cucumber�is�the�BDD�(Behavior�driven�development)�testing�framework.
+
+
+    Key�things�to�note�about�Cucumber�are�-
+
+
+    1.� Open�source�BDD�testing�framework.
+
+
+    2.� Cross�platform�framework.
+
+
+    3.� Tests�are�written�in�various�languages�like�English,�French,�German�and�many
+
+
+    more�using�Gherkin�Syntax.
+
+
+    4.� We�can�write�the�tests�in�various�programming�languages�like�Ruby,�JRuby,
+
+
+    PHP,�Java,�Jython,�Groovy,�Javascript,�Clojure,�Gosu,�Lua,�.Net,�PHP,�C++�and
+
+
+    TCL
+
+
+    5.� Integrates�very�well�with�CI�servers�like�Jenkins�and�TeamCity
+
+
+    6.� Reports�can�be�generated�in�HTML,�JSON,�JUnit�style
+
+
+    7.� Capybara�-�the�testing�framework��-�is�a�part�of�Cucumber
+
+
+    8.� Integrates�very�well�with�frameworks�like�Selenium,�Appium,�Spring,�Watir,
+
+
+    Ruby�on�Rails�etc.
+
+
+    �'
+  - '[PAGE 11]
+
+
+    '
+  - '[PAGE 12]
+
+
+    **2.�Installation�of�Cucumber**
+
+
+    Setting�up�Cucumber�is�very�simple.
+
+
+    You�will�need�to�install�below�tools.
+
+
+    1.� Java�JDK
+
+
+    2.� Java�IDE�-�IntelliJ�IDEA�or�Eclipse
+
+
+    3.� Cucumber�library
+
+
+    4.� Build�tools�like�Maven�or�gradle
+
+
+    5.� IntelliJ�IDEA�Plugins�-�Gherkin�and�cucumber�for�Java
+
+
+    Below�image�shows�the�IntelliJ�plugins�that�you�need.
+
+
+    ![](img/01a02959ac67a9cb80992ea769fa586c_12_0.png)
+
+
+    *Cucumber�and�Gherkin�plugins�in�IntelliJ�IDEA*
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    Create�a�simple�Maven�or�gradle�project�and�add�below�dependency.
+
+
+    <dependency>
+
+
+    <groupId>info.cukes</groupId>
+
+
+    <artifactId>cucumber-java</artifactId>'
+  - '[PAGE 13]
+
+
+    <version>1.2.4</version>
+
+
+    <scope>test</scope>
+
+
+    </dependency>
+
+
+    For�writing�the�test�steps�using�lambda�expression�in�Java�8,�you�will�have�to�add�below
+
+
+    dependency.
+
+
+    <dependency>
+
+
+    <groupId>info.cukes</groupId>
+
+
+    <artifactId>cucumber-java8</artifactId>
+
+
+    <version>1.2.4</version>
+
+
+    <scope>test</scope>
+
+
+    </dependency>
+
+
+    �
+
+
+    �
+
+
+    You�also�need�below�JUnit�dependencies�to�integrate�Cucumber�with�JUnit.
+
+
+    <dependency>
+
+
+    <groupId>junit</groupId>
+
+
+    <artifactId>junit</artifactId>
+
+
+    <version>4.12</version>
+
+
+    <scope>test</scope>
+
+
+    </dependency>
+
+
+    �
+
+
+    <dependency>
+
+
+    <groupId>info.cukes</groupId>
+
+
+    <artifactId>cucumber-junit</artifactId>
+
+
+    <version>1.2.4</version>
+
+
+    <scope>test</scope>
+
+
+    </dependency>
+
+
+    �'
+  - '[PAGE 14]
+
+
+    '
+  - '[PAGE 15]
+
+
+    **3.�Writing�feature�files�using�Gherkin**
+
+
+    BDD�is�an�emerging�software�development�model�used�along�with�agile�methodologies.
+
+
+    **Some�of�the�key�things�to�know�about�BDD�are�-**
+
+
+    1.� Dan�North�created�first�BDD�framework�-�Jbehave
+
+
+    2.� Other�BDD�frameworks�are�Rbehave,�Rspec,�Cucumber,�Behat
+
+
+    3.� The�tests�are�written�in�plain�text�in�the�form�of�stories�or�features
+
+
+    4.� The�Domain�specific�language�(Gherkin)�is�used�for�writing�the�tests.
+
+
+    **What�is�Gherkin?**
+
+
+    Gherkin�is�the�plain�text�language�used�to�write�feature�files�(also�called�as�story�files)�in
+
+
+    BDD�frameworks�like�cucumber.�Gherkin�is�implemented�in�most�of�languages�in�the
+
+
+    world�like�English,�German,�French….many�more.�This�means�that�any�project
+
+
+    stakeholder�can�write,�read�and�understand�the�tests�written�in�Gherkin.�That’s�the�crux�of
+
+
+    the�Gherkin�language.
+
+
+    **Key�points�to�note�about�feature�file**
+
+
+    1.� Each�feature�file�can�contain�one�or�more�scenarios�and�optinally�outline�and
+
+
+    background.
+
+
+    2.� Each�scenario�has�steps�like�given,�when,�and,�then,�but
+
+
+    **�**
+
+
+    **What�are�the�keywords�in�Gherkin?**
+
+
+    Gherkin�has�reserved�some�keywords�which�have�specific�meaning�in�the�context�of
+
+
+    feature�files.
+
+
+    Below�is�the�list�of�keywords�in�Gherkin.
+
+
+    1.� Given�-�used�to�specify�the�precondition�of�the�scenario
+
+
+    2.� When�-�used�to�specify�the�action
+
+
+    3.� And�-�used�to�specify�additional�preconditions�and�actions
+
+
+    4.� Then�-�used�to�specify�the�result�of�the�action
+
+
+    5.� Feature�-�Used�to�specify�the�description�of�the�feature
+
+
+    6.� Scenario�-�Used�to�specify�the�description�of�the�scenario
+
+
+    7.� Outline�and�Examples
+
+
+    8.� Background��-�Used�to�specify�the�action�to�be�taken�before�each�scenario�in
+
+
+    the�feature�file�is�executed.
+
+
+    9.� ”””�-�used�to�pass�data�in�multi-line�format
+
+
+    10.����������������������|�-�used�to�pass�data�in�table�format
+
+
+    11.����������������������@�-�used�to�tag�scenarios�and�features
+
+
+    12.����������������������#��-�used�to�comment�the�line�in�feature�file
+
+
+    Below�feature�file�will�make�you�understand�most�of�the�syntax�of�Gherkin�language.
+
+
+    **�**'
+  - '[PAGE 16]
+
+
+    **�**
+
+
+    **Basic�Sample�feature�file**
+
+
+    Now�let�us�take�a�look�at�simplest�feature�file�that�we�can�have�in�gherkin.
+
+
+    �
+
+
+    Feature:�ATM�Card�authentication
+
+
+    � User�should�be�asked�for�the�PIN�once�ATM�card�is�inserted�into�the�ATM�machine.
+
+
+    User�should�be�given�warning�message�if�PIN�number�entered�is�wrong.
+
+
+    User�should�be�authenticated�successfully�if�PIN�number�entered�is�correct.
+
+
+    �
+
+
+    ��**Scenario**:�Enter�wrong�PIN�at�ATM
+
+
+    **Given**�I�insert�the�ATM�card�in�ATM�machine
+
+
+    **And**�I�am�asked�to�enter�the�PIN
+
+
+    **When**�I�enter�the�correct�PIN
+
+
+    **Then**�I�should�be�able�to�see�option�to�withdraw�money
+
+
+    **�**
+
+
+    **�**
+
+
+    **�**
+
+
+    **Sample�feature�file�with�Outline�and�Examples�keyword**
+
+
+    Scenario�outline�are�used�in�cases�where�we�need�to�repeat�same�set�of�actions�but�with
+
+
+    different�combination�of�data.�For�instance,�In�below�scenario�outline,�we�need�to�test�the
+
+
+    login�functionality�with�different�combinations�of�user�id�and�password.�In�such�cases,�we
+
+
+    use�<VariableData>�syntax�to�specify�the�varying�data�and�it�is�supplied�through�examples
+
+
+    keyword.�So�in�below�scenario,�all�steps�will�be�executed�4�times�-�one�for�each�user.
+
+
+    **Scenario�Outline**:�Password�rules
+
+
+    ��**Given**�that�we�are�on�login�page
+
+
+    ��**When**�we�enter�user�id�<ID>�and�password�<PASSWORD>
+
+
+    ��**Then**�the�login�should�be�<OUTCOME>
+
+
+    �
+
+
+    ��**Examples**:
+
+
+    |�ID�����|�PASSWORD�|�OUTCOME�|
+
+
+    |���Sagar|��128$9#��|�����Fail|
+
+
+    |���Amol�|��98sjdg��|�����PASS|
+
+
+    |��Shaun�|��jslsh9��|�����PASS|
+
+
+    |����Ben�|��KON()%��|�����FAIL|
+
+
+    �'
+- md: "\n## Sample feature file with Background\n\nBackground keyword is used when\
+    \ we want to execute certain number of steps before each scenario. For example,\
+    \ suppose you want to clear browser cookies before execution of each scenario,\
+    \ then we can use background keyword with step to clear cookies.\n\n## Passing\
+    \ input data to the step\n\nEach scenario can have multiple steps and each step\
+    \ is the user action. A step is like specific operation in the system. A steps\
+    \ may need the input data to be processed. We can pass the input to the step using\
+    \ 3 ways.\n\n1. In-line Variables\n2. Multi-line string\n3. Tables\n\n## Grouping\
+    \ the scenarios and features with tags\n\nWe use tags to group similar scenarios\
+    \ and features together in Gherkin. @ symbol is used for tagging the scenarios\
+    \ and features.\n\n## 4. Adding Cucumber dependency to Java project\n\nTo write\
+    \ the tests using cucumber, we need to add 2 types of dependencies.\n\n1. cucumber-java\n\
+    2. junit\n\nIf you are using Maven build management system, you can use below\
+    \ XML block in POM.XML\n\n```xml\n<dependency>\n  <groupId>info.cukes</groupId>\n\
+    \  <artifactId>cucumber-java</artifactId>\n  <version>1.2.4</version>\n</dependency>\n\
+    \n<dependency>\n  <groupId>junit</groupId>\n  <artifactId>junit</artifactId>\n\
+    \  <version>4.12</version>\n  <scope>test</scope>\n</dependency>\n```\n\n## 5.\
+    \ Cucumber Test\n\n### 5.1 Writing first cucumber test\n\nJust follow below steps\
+    \ to write first cucumber test in IntelliJ IDEA.\n\n1. Create a maven project.\n\
+    2. Add feature file containing scenarios in Test Resources directory.\n3. Add\
+    \ the maven dependency for Cucumber.\n4. Write step definitions and execute the\
+    \ tests from feature file.\n\nHere is the feature file that we created and put\
+    \ in the test resources folder.\n\n```gherkin\n@selenium\nFeature: My feature\n\
+    \n  Scenario: Verify title\n    Given I am on the www.softpost.org home page\n\
+    \    Then I verify that title contains tutorials\n```\n\nNote that we have not\
+    \ added the step definitions for above steps in feature file. When you execute\
+    \ the feature file, you will see below errors.\n\nYou can implement missing steps\
+    \ with the snippets below:\n\n```java\n@Given(\"^^I am on the www\\\\.softpost\\\
+    \\.org home page$\")\npublic void i_am_on_the_www_softpost_org_home_page() throws\
+    \ Throwable {\n    // Write code here that turns the phrase above into concrete\
+    \ actions\n    throw new PendingException();\n}\n\n@Then(\"^^I verify that title\
+    \ contains tutorials$\")\npublic void i_verify_that_title_contains_tutorials()\
+    \ throws Throwable {\n    // Write code here that turns the phrase above into\
+    \ concrete actions\n    throw new PendingException();\n}\n```\n\nUndefined step:\
+    \ Given I am on the www.softpost.org home page\nUndefined step: Then I verify\
+    \ that title contains tutorials\n\n## Writing the step definitions\n\nYou can\
+    \ copy above method snippets and write your own code inside it. Alternatively,\
+    \ if you have cucumber for Java and Gherkin plugin installed in IntelliJ IDEA,\
+    \ then you can create the step definitions by pressing alt+enter on the steps\
+    \ in Feature file as shown in below image.\n\n![](img/01a02959ac67a9cb80992ea769fa586c_22_0.png)\n\
+    *Creating cucumber step definitions in IntelliJ IDEA*\n\nHere is the class with\
+    \ step definitions.\n\n```java\npackage org.softpost;\n\nimport cucumber.api.java.After;\n\
+    import cucumber.api.java.Before;\nimport cucumber.api.java.en.Given;\nimport cucumber.api.java.en.Then;\n\
+    import junit.framework.Assert;\nimport org.openqa.selenium.WebDriver;\nimport\
+    \ org.openqa.selenium.firefox.FirefoxDriver;\n\n/**\n***** Created by Sagar on\
+    \ 12-07-2016.\n*/\n@SuppressWarnings(\"ALL\")\npublic class seleniumsteps {\n\
+    \    WebDriver driver;\n\n    @Before\n    public void launchBrowser() {\n   \
+    \     driver = new FirefoxDriver();\n    }\n\n    @Given(\"^^I am on the www\\\
+    \\.softpost\\\\.org home page$\")\n    public void i_am_on_the_www_softpost_org_home_page()\
+    \ throws Throwable {\n        driver.get(\"http://www.softpost.org\");\n    }\n\
+    \n    @Then(\"^^I verify that title contains tutorials$\")\n    public void i_verify_that_title_contains_tutorials()\
+    \ throws Throwable {\n        Assert.assertTrue(driver.getTitle().toLowerCase().contains(\"\
+    tutorials\"));\n    }\n\n    @After\n    public void killBrowser() {\n       \
+    \ driver.close();\n        driver.quit();\n    }\n}\n```\n\nAfter writing the\
+    \ step definitions, you can create the run configuration for feature file as shown\
+    \ in below image. Note that Glue property is very important. You should specify\
+    \ the package name that contains step definitions in the Glue.\n\n![](img/01a02959ac67a9cb80992ea769fa586c_23_0.png)\n\
+    *glue in Cucumber run configuration*\n\nThen you can right-click on feature file\
+    \ and run the test as shown in below image.\n\n![](img/01a02959ac67a9cb80992ea769fa586c_24_0.png)\n\
+    *Running feature file in IntelliJ IDEA*\n\nIf everything is ok, tests will run\
+    \ successfully.\n\n## Cucumber Reports in IntelliJ IDEA\n\nYou can view report\
+    \ of execution as shown below.\n\n![](img/01a02959ac67a9cb80992ea769fa586c_25_0.png)\n\
+    *Viewing execution in IntelliJ*\n\n![](img/01a02959ac67a9cb80992ea769fa586c_25_1.png)\n\
+    *HTML report of tests*\n\n## 6. Executing tests using Cucumber class\n\nTo write\
+    \ the tests using JUnit @Run annotation, we need below dependencies.\n\n```xml\n\
+    <dependency>\n  <groupId>junit</groupId>\n  <artifactId>junit</artifactId>\n \
+    \ <version>4.12</version>\n  <scope>test</scope>\n</dependency>\n\n<dependency>\n\
+    \  <groupId>info.cukes</groupId>\n  <artifactId>cucumber-java</artifactId>\n \
+    \ <version>1.2.4</version>\n</dependency>\n```\n\nThen you can add below class.\
+    \ After running the test, cucumber generates the report at target/reports. Cucumber\
+    \ class reads the feature file and executes it.\n\n```java\npackage org.softpost;\n\
+    \nimport cucumber.junit.Cucumber;\nimport cucumber.junit.CucumberOptions;\n\n\
+    @RunWith(Cucumber.class)\n@CucumberOptions(\n    features = \"classpath:feature\"\
+    ,\n    glue = \"org.softpost\",\n    plugin = \"html:target/reports\"\n)\npublic\
+    \ class MyTests {\n}\n```\n\n## 7. Cucumber options\n\nWhen executing the scenarios,\
+    \ we can pass various options as mentioned below:\n\n1. features - path of the\
+    \ features\n2. glue - path of the step definitions\n3. dryRun - used to check\
+    \ that all steps are defined\n4. monochrome - true/false controls the output readability\n\
+    5. strict - false means undefined steps are skipped\n6. plugin - json, html, pretty\n\
+    7. snippets - style can be CamelCase or underscore\n\nHere is the sample class\
+    \ showing all options.\n\n```java\npackage org.softpost;\n\nimport cucumber.junit.Cucumber;\n\
+    import cucumber.junit.CucumberOptions;\nimport org.junit.runner.RunWith;\n\n@RunWith(Cucumber.class)\n\
+    @CucumberOptions(\n    features = \"classpath:feature\",\n    glue = \"org.softpost\"\
+    ,\n    plugin = \"html:target/reports\",\n    dryRun = false,\n    monochrome\
+    \ = true,\n    strict = true,\n    snippets = \"CamelCase\"\n)\npublic class MyTests\
+    \ {\n}\n```\n\n## 8. Filtering scenarios\n\n### 8.1 Tagging the scenarios\n\n\
+    We can tag scenarios using @ symbol in feature files as shown below example. Note\
+    \ that we can also tag all scenarios in a feature file by writing the tag at the\
+    \ beginning of the feature file. We can also associate multiple tags with the\
+    \ same scenario as well. In below example, we have tagged the scenario with 4\
+    \ tags - selenium, regression, sanity and critical.\n\n```gherkin\n@selenium\n\
+    Feature: My feature\n\n  @regression@sanity@critical\n  Scenario: Verify softpost\
+    \ title\n    Given I am on the www.softpost.org home page\n    Then I verify that\
+    \ title contains tutorials\n\n  @sanity\n  Scenario: Verify yahoo title\n    Given\
+    \ I am on the www.yahoo.com home page\n    Then I verify that title contains tutorials\n\
+    ```\n\nWe can also tie the @Before and @After methods with scenarios tagged with\
+    \ specific names. For example, below before method will be executed only before\
+    \ the scenarios tagged with selenium.\n\n```java\n@Before(\"@selenium\")\npublic\
+    \ void beforeMethod() {\n    // code\n}\n```\n"
+  mdcn: "\n\n## 带有 Background 的示例 feature 文件\n\nBackground 关键字用于在执行每个场景（scenario）之前执行某些数量的步骤。例如，假设你希望在执行每个场景之前清除浏览器\
+    \ cookie，那么我们可以使用 background 关键字配合清除 cookie 的步骤。\n\n## 向步骤传递输入数据\n\n每个场景可以包含多个步骤（step），而每个步骤都是用户操作。一个步骤类似于系统中的某个特定操作。某些步骤可能需要输入数据进行处理。我们可以通过以下\
+    \ 3 方式将输入传递给步骤：\n\n1. 内联变量（In-line Variables）\n2. 多行字符串\n3. 表格\n\n## 使用标签（tags）对场景和特性分组\n\
+    \n在 Gherkin 中，我们使用标签将相似的场景和特性分组。@ 符号用于标记场景和特性。\n\n## 4.向 Java 项目中添加 Cucumber 依赖\n\
+    \n要使用 cucumber 编写测试，我们需要添加 2 类型的依赖。\n\n1. cucumber-java\n2. junit\n\n如果你使用 Maven\
+    \ 构建管理系统，可以在 POM.XML 中使用下面的 XML 块：\n\n```xml\n<dependency>\n  <groupId>info.cukes</groupId>\n\
+    \  <artifactId>cucumber-java</artifactId>\n  <version>1.2.4</version>\n</dependency>\n\
+    \n<dependency>\n  <groupId>junit</groupId>\n  <artifactId>junit</artifactId>\n\
+    \  <version>4.12</version>\n  <scope>test</scope>\n</dependency>\n```\n\n## 5.\
+    \ Cucumber 测试\n\n### 5.1 编写第一个 cucumber 测试\n\n只需按照以下步骤在 IntelliJ IDEA 中编写第一个 cucumber\
+    \ 测试。\n\n1. 创建一个 maven 项目。\n2. 在 Test Resources 目录下添加包含场景的 feature 文件。\n3. 添加\
+    \ Cucumber 的 maven 依赖。\n4. 编写步骤定义（step definitions）并从 feature 文件执行测试。\n\n这是我们创建并放入\
+    \ test resources 文件夹的 feature 文件。\n\n```gherkin\n@selenium\nFeature: My feature\n\
+    \n  Scenario: Verify title\n    Given I am on the www.softpost.org home page\n\
+    \    Then I verify that title contains tutorials\n```\n\n注意，我们还没有为上述 feature 文件中的步骤添加步骤定义。当你执行\
+    \ feature 文件时，你将看到下面的错误。\n\n你可以使用下面的代码片段（snippets）实现缺失的步骤：\n\n```java\n@Given(\"\
+    ^^I am on the www\\\\.softpost\\\\.org home page$\")\npublic void i_am_on_the_www_softpost_org_home_page()\
+    \ throws Throwable {\n    // 在此处编写代码将上面的短语转换为具体的动作\n    throw new PendingException();\n\
+    }\n\n@Then(\"^^I verify that title contains tutorials$\")\npublic void i_verify_that_title_contains_tutorials()\
+    \ throws Throwable {\n    // 在此处编写代码将上面的短语转换为具体的动作\n    throw new PendingException();\n\
+    }\n```\n\nUndefined step: Given I am on the www.softpost.org home page\nUndefined\
+    \ step: Then I verify that title contains tutorials\n\n## 编写步骤定义\n\n你可以复制上面的方法片段并在内部编写你自己的代码。或者，如果你在\
+    \ IntelliJ IDEA 中安装了 cucumber for Java 和 Gherkin 插件，你可以通过在 Feature 文件中的步骤上按 alt+enter\
+    \ 如下所示所示创建步骤定义。\n\n![](img/01a02959ac67a9cb80992ea769fa586c_22_0.png)\n*在 IntelliJ\
+    \ IDEA 中创建 cucumber 步骤定义*\n\n这是带有步骤定义的类。\n\n```java\npackage org.softpost;\n\n\
+    import cucumber.api.java.After;\nimport cucumber.api.java.Before;\nimport cucumber.api.java.en.Given;\n\
+    import cucumber.api.java.en.Then;\nimport junit.framework.Assert;\nimport org.openqa.selenium.WebDriver;\n\
+    import org.openqa.selenium.firefox.FirefoxDriver;\n\n/**\n***** 由 Sagar 于 12-07-2016\
+    \ 创建。\n*/\n@SuppressWarnings(\"ALL\")\npublic class seleniumsteps {\n    WebDriver\
+    \ driver;\n\n    @Before\n    public void launchBrowser() {\n        driver =\
+    \ new FirefoxDriver();\n    }\n\n    @Given(\"^^I am on the www\\\\.softpost\\\
+    \\.org home page$\")\n    public void i_am_on_the_www_softpost_org_home_page()\
+    \ throws Throwable {\n        driver.get(\"http://www.softpost.org\");\n    }\n\
+    \n    @Then(\"^^I verify that title contains tutorials$\")\n    public void i_verify_that_title_contains_tutorials()\
+    \ throws Throwable {\n        Assert.assertTrue(driver.getTitle().toLowerCase().contains(\"\
+    tutorials\"));\n    }\n\n    @After\n    public void killBrowser() {\n       \
+    \ driver.close();\n        driver.quit();\n    }\n}\n```\n\n编写步骤定义后，你可以像下面所示为\
+    \ feature 文件创建运行配置（run configuration）。注意 Glue 属性非常重要。你应该在 Glue 中指定包含步骤定义的包名。\n\
+    \n![](img/01a02959ac67a9cb80992ea769fa586c_23_0.png)\n*glue 属性很重要*\n\n在 feature\
+    \ 文件上点击右键并运行，如下所示。\n\n![](img/01a02959ac67a9cb80992ea769fa586c_24_0.png)\n*运行\
+    \ feature 文件*\n\n当你执行 feature 文件时，你将看到如下所示的错误。\n\n![](img/01a02959ac67a9cb80992ea769fa586c_25_0.png)\n\
+    *在 IntelliJ IDEA 中执行*\n\n你可以像下面所示查看 cucumber 的执行报告。\n\n![](img/01a02959ac67a9cb80992ea769fa586c_26_0.png)\n\
+    *在 IntelliJ IDEA 中查看执行*\n\n如果一切正常，测试将成功运行。\n\n![](img/01a02959ac67a9cb80992ea769fa586c_27_0.png)\n\
+    *Cucumber 报告*\n\n## 6. 使用 JUnit 执行测试\n\n要使用 JUnit 注解编写测试，我们需要下面的依赖。\n\n```xml\n\
+    <dependency>\n  <groupId>junit</groupId>\n  <artifactId>junit</artifactId>\n \
+    \ <version>4.12</version>\n  <scope>test</scope>\n</dependency>\n```\n\n运行该类后，cucumber\
+    \ 会在 target/reports 生成报告。\n\n```java\npackage org.softpost;\n\nimport cucumber.junit.Cucumber;\n\
+    import cucumber.junit.CucumberOptions;\nimport org.junit.runner.RunWith;\n\n@RunWith(Cucumber.class)\n\
+    @CucumberOptions(\n    features = \"classpath:feature\",\n    glue = \"org.softpost\"\
+    ,\n    plugin = \"html:target/reports\"\n)\npublic class MyTests {\n}\n```\n\n\
+    ## 7. Cucumber 选项\n\n在执行场景时，我们可以传递下面的各种选项：\n\n1. features - 特性的路径\n2. glue - 步骤定义的路径\n\
+    3. dryRun - 用于检查所有步骤是否已定义\n4. monochrome - 控制输出的可读性\n5. strict - 设置为 false 时未定义的步骤将被跳过\n\
+    6. plugin - json, html, pretty\n7. snippets - 样式可以是 CamelCase 或下划线\n\n这是一个显示所有选项的示例类。\n\
+    \n```java\npackage org.softpost;\n\nimport cucumber.junit.Cucumber;\nimport cucumber.junit.CucumberOptions;\n\
+    import org.junit.runner.RunWith;\n\n@RunWith(Cucumber.class)\n@CucumberOptions(\n\
+    \    features = \"classpath:feature\",\n    glue = \"org.softpost\",\n    plugin\
+    \ = \"html:target/reports\",\n    dryRun = false,\n    monochrome = true,\n  \
+    \  strict = true,\n    snippets = \"CamelCase\"\n)\npublic class MyTests {\n}\n\
+    ```\n\n## 8. 过滤场景\n\n### 8.1 标记场景\n\n我们可以在 feature 文件中使用 @ 符号标记场景，如下示例所示。注意，我们也可以通过在\
+    \ feature 文件开头编写标签来标记所有的场景。我们也可以为同一个场景关联多个标签。在下面的示例中，我们为场景标记了 4 个标签：selenium、regression、sanity\
+    \ 和 critical。\n\n```gherkin\n@selenium\nFeature: My feature\n\n  @regression@sanity@critical\n\
+    \  Scenario: Verify softpost title\n    Given I am on the www.softpost.org home\
+    \ page\n    Then I verify that title contains tutorials\n\n  @sanity\n  Scenario:\
+    \ Verify yahoo title\n    Given I am on the www.yahoo.com home page\n    Then\
+    \ I verify that title contains tutorials\n```\n\n我们还可以将 @Before 和 @After 方法与带有特定名称的场景绑定。例如，下面的\
+    \ before 方法将只在标记为 selenium 的场景之前执行。\n\n```java\n@Before(\"@selenium\")\npublic\
+    \ void beforeMethod() {\n    // 代码\n}\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 17]
+
+
+    **Sample�feature�file�with�Background**
+
+
+    Background�keyword�is�used�when�we�want�to�execute�certain�number�of�steps�before
+
+
+    each�scenario.�For�example,�suppose�you�want�to�clear�browser�cookies�before�execution
+
+
+    of�each�scenario,�then�we�can�use�background�keyword�with�step�to�clear�cookies.
+
+
+    **Passing�input�data�to�the�step**
+
+
+    Each�scenario�can�have�multiple�steps�and�each�step�is�the�user�action.�A�step�is�like
+
+
+    specific�operation�in�the�system.�A�steps�may�need�the�input�data�to�be�processed.�We�can
+
+
+    pass�the�input�to�the�step�using�3�ways.
+
+
+    1.� In-line�Variables
+
+
+    2.� Multi-line�string
+
+
+    3.� Tables
+
+
+    **Grouping�the�scenarios�and�features�with�tags**
+
+
+    We�use�tags�to�group�similar�scenarios�and�features�together�in�Gherkin.�@�symbol�is�used
+
+
+    for�tagging�the�scenarios�and�features.
+
+
+    �
+
+
+    �'
+  - '[PAGE 18]
+
+
+    '
+  - '[PAGE 19]
+
+
+    **4.�Adding�Cucumber�dependency�to�Java�project**
+
+
+    To�write�the�tests�using�cucumber,�we�need�to�add�2�types�of�dependencies.
+
+
+    1.� cucumber-java
+
+
+    2.� junit
+
+
+    If�you�are�using�Maven�build�management�system,�you�can�use�below�XML�block�in
+
+
+    POM.XML
+
+
+    <dependency>
+
+
+    <groupId>info.cukes</groupId>
+
+
+    <artifactId>cucumber-java</artifactId>
+
+
+    <version>1.2.4</version>
+
+
+    </dependency>
+
+
+    �
+
+
+    <dependency>
+
+
+    <groupId>junit</groupId>
+
+
+    <artifactId>junit</artifactId>
+
+
+    <version>4.12</version>
+
+
+    <scope>test</scope>
+
+
+    </dependency>'
+  - '[PAGE 20]
+
+
+    '
+  - '[PAGE 21]
+
+
+    **5.�Cucumber�Test**
+
+
+    **5.1�Writing�first�cucumber�test**
+
+
+    Just�follow�below�steps�to�write�first�cucumber�test�in�IntelliJ�IDEA.
+
+
+    1.� Create�a�maven�project.
+
+
+    2.� Add�feature�file�containing�scenarios�in�Test�Resources�directory.
+
+
+    3.� Add�the�maven�dependency�for�Cucumber.
+
+
+    4.� Write�step�definitions�and�execute�the�tests�from�feature�file.
+
+
+    Here�is�the�feature�file�that�we�created�and�put�in�the�test�resources�folder.
+
+
+    @selenium
+
+
+    Feature:�My�feature
+
+
+    �
+
+
+    ��Scenario:�Verify�title
+
+
+    Given�I�am�on�the�www.softpost.org�home�page
+
+
+    Then�I�verify�that�title�contains�tutorials
+
+
+    Note�that�we�have�not�added�the�step�definitions�for�above�steps�in�feature�file.�When�you
+
+
+    execute�the�feature�file,�you�will�see�below�errors.
+
+
+    �
+
+
+    �
+
+
+    You�can�implement�missing�steps�with�the�snippets�below:
+
+
+    @Given(“^I�am�on�the�www\.softpost\.org�home�page$”)
+
+
+    public�void�i_am_on_the_www_softpost_org_home_page()�throws�Throwable�{
+
+
+    //�Write�code�here�that�turns�the�phrase�above�into�concrete�actions
+
+
+    throw�new�PendingException();
+
+
+    }
+
+
+    @Then(“^I�verify�that�title�contains�tutorials$”)
+
+
+    public�void�i_verify_that_title_contains_tutorials()�throws�Throwable�{
+
+
+    //�Write�code�here�that�turns�the�phrase�above�into�concrete�actions
+
+
+    throw�new�PendingException();
+
+
+    }
+
+
+    Undefined�step:�Given�I�am�on�the�www.softpost.org�home�page
+
+
+    Undefined�step:�Then�I�verify�that�title�contains�tutorials
+
+
+    **�**
+
+
+    **Writing�the�step�definitions�**
+
+
+    You�can�copy�above�method�snippets�and�write�your�own�code�inside�it.�Alternatively,�if
+
+
+    you�have�cucumber�for�Java�and�Gherkin�plugin�installed�in�IntelliJ�IDEA,�then�you�can
+
+
+    create�the�step�definitions�by�pressing�alt�+�enter�on�the�steps�in�Feature�file�as�shown�in
+
+
+    below�image.'
+  - '[PAGE 22]
+
+
+    ![](img/01a02959ac67a9cb80992ea769fa586c_22_0.png)
+
+
+    *Creating�cucumber�step�definitions�in�IntelliJ�IDEA*
+
+
+    Here�is�the�class�with�step�definitions.
+
+
+    **package**�org.softpost;
+
+
+    **import**�cucumber.api.java.After;
+
+
+    **import**�cucumber.api.java.Before;
+
+
+    **import**�cucumber.api.java.en.Given;
+
+
+    **import**�cucumber.api.java.en.Then;
+
+
+    import�junit.framework.Assert;
+
+
+    import�org.openqa.selenium.WebDriver;
+
+
+    import�org.openqa.selenium.firefox.FirefoxDriver;
+
+
+    /**
+
+
+    �*****�Created�by�Sagar�on�12**-**07**-**2016.
+
+
+    �*/
+
+
+    @SuppressWarnings(“ALL”)
+
+
+    **public**�**class**�seleniumsteps
+
+
+    {
+
+
+    WebDriver�driver;
+
+
+    @Before
+
+
+    **public**�**void**�launchBrowser(){
+
+
+    driver�=�**new**�FirefoxDriver();
+
+
+    }
+
+
+    @Given(“^I�am�on�the�www\.softpost\.org�home�page$”)
+
+
+    **public**�**void**�i_am_on_the_www_softpost_org_home_page()�**throws**�**Throwable**
+
+
+    {
+
+
+    driver.get(“http://www.softpost.org”);
+
+
+    }
+
+
+    @Then(“^I�verify�that�title�contains�tutorials$”)
+
+
+    **public**�**void**�i_verify_that_title_contains_tutorials()�**throws**�**Throwable**
+
+
+    {'
+  - '[PAGE 23]
+
+
+    Assert.assertTrue(driver.getTitle().toLowerCase().contains(“tutorials”));
+
+
+    }
+
+
+    @After
+
+
+    **public**�**void**�killBrowser()
+
+
+    {
+
+
+    driver.close();
+
+
+    driver.quit();
+
+
+    }
+
+
+    }
+
+
+    After�writing�the�step�definitions,�you�can�create�the�run�configuration�for�feature�file�as
+
+
+    shown�in�below�image.�Note�that�Glue�property�is�very�important.�You�should�specify�the
+
+
+    package�name�that�contains�step�definitions�in�the�Glue.
+
+
+    ![](img/01a02959ac67a9cb80992ea769fa586c_23_0.png)
+
+
+    *glue�in�Cucumber�run�configuration*
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    Then�you�can�right�click�on�feature�file�and�run�the�test�as�shown�in�below�image.'
+  - '[PAGE 24]
+
+
+    ![](img/01a02959ac67a9cb80992ea769fa586c_24_0.png)
+
+
+    *Running�cucumber�feature�file*
+
+
+    *in�IntelliJ�IDEA*
+
+
+    If�everything�is�ok,�tests�will�run�successfully.
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    **Cucumber�Reports�in�IntelliJ�IDEA**
+
+
+    You�can�view�report�of�execution�as�shown�in�below�images.'
+  - '[PAGE 25]
+
+
+    ![](img/01a02959ac67a9cb80992ea769fa586c_25_0.png)
+
+
+    *Viewing�cucumber�execution�report�in�IntelliJ�IDEA*
+
+
+    �
+
+
+    ![](img/01a02959ac67a9cb80992ea769fa586c_25_1.png)
+
+
+    *HTML�report�of�cucumber�tests*
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �'
+  - '[PAGE 26]
+
+
+    '
+  - '[PAGE 27]
+
+
+    **6.�Executing�Cucumber�tests�using�Cucumber�class**
+
+
+    To�write�the�tests�using�JUnit�@RunWith�annotation,�we�need�below�dependencies.
+
+
+    cucumber.api.junit.Cucumber�-�This�class�is�present�in�the�cucumber-junit�artifact�library.
+
+
+    <dependency>
+
+
+    <groupId>junit</groupId>
+
+
+    <artifactId>junit</artifactId>
+
+
+    <version>4.12</version>
+
+
+    <scope>test</scope>
+
+
+    </dependency>
+
+
+    �
+
+
+    <dependency>
+
+
+    <groupId>info.cukes</groupId>
+
+
+    <artifactId>cucumber-junit</artifactId>
+
+
+    <version>1.2.4</version>
+
+
+    </dependency>
+
+
+    Then�you�can�add�below�test�class.�After�running�the�below�test,�cucumber�generates�the
+
+
+    report�at�target/selenium-reports.�Cucumber.class�contains�main�method�that�reads�the
+
+
+    feature�file�and�executes�scenario�in�it.
+
+
+    �
+
+
+    **package**�org.softpost;
+
+
+    **import**�cucumber.api.CucumberOptions;
+
+
+    **import**�cucumber.api.junit.Cucumber;
+
+
+    **import**�org.junit.runner.RunWith;
+
+
+    �
+
+
+    @RunWith(Cucumber.class)
+
+
+    @CucumberOptions(
+
+
+    features�=�“classpath:abc.feature”,
+
+
+    glue�=�“classpath:org.softpost”,
+
+
+    plugin�=�“html:target/selenium-reports”
+
+
+    )
+
+
+    �
+
+
+    **public**�**class**�MyTests
+
+
+    {
+
+
+    }
+
+
+    �'
+  - '[PAGE 28]
+
+
+    '
+  - '[PAGE 29]
+
+
+    **7.�Cucumber�options�**
+
+
+    �
+
+
+    When�executing�the�cucumber�scenarios,�we�can�pass�various�options�as�mentioned�below.
+
+
+    1.� features�-�path�of�the�features�files
+
+
+    2.� glue�-�path�of�the�step�definition�classes
+
+
+    3.� dry�run�-�used�to�check�that�all�step�definitions�are�desinged
+
+
+    4.� monochrome�-�true/false�It�controls�the�readability�of�the�output
+
+
+    5.� strict�-�false�means�that�undefined�steps�are�skipped.�Test�does�not�fail
+
+
+    6.� name�-�used�to�filter�the�features�and�scenarios
+
+
+    7.� plugin�-�json,�html,�junit,�pretty
+
+
+    8.� snippets�-�Snippet�style�can�be�Camel�case�or�Underscore
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    Here�is�the�sample�test�class�showing�all�these�options.
+
+
+    **package**�org.softpost;
+
+
+    **import**�cucumber.api.CucumberOptions;
+
+
+    **import**�cucumber.api.SnippetType;
+
+
+    **import**�cucumber.api.junit.Cucumber;
+
+
+    **import**�org.junit.runner.RunWith;
+
+
+    �
+
+
+    @RunWith(Cucumber.class)
+
+
+    @CucumberOptions(
+
+
+    features�=�“classpath:abc.feature”,
+
+
+    glue�=�“classpath:org.softpost”,
+
+
+    tags�=�“~@blocked”,
+
+
+    plugin�=�“html:target/selenium-reports”,
+
+
+    dryRun�=�false,
+
+
+    monochrome�=�true,
+
+
+    strict�=�true,
+
+
+    snippets�=�SnippetType.CAMELCASE'
+  - '[PAGE 30]
+
+
+    )
+
+
+    �
+
+
+    **public**�**class**�MyTests
+
+
+    {
+
+
+    }
+
+
+    �'
+  - '[PAGE 31]
+
+
+    '
+  - '[PAGE 32]
+
+
+    **8.�Filtering�scenarios**
+
+
+    **8.1�Tagging�the�scenarios**
+
+
+    We�can�tag�scenarios�using�@�symbol�in�Feature�files�as�shown�in�below�example.�Note
+
+
+    that�we�can�also�tag�all�the�scenarios�in�a�feature�file�by�writing�the�tag�at�the�beginning�of
+
+
+    the�feature�file.�We�can�also�associate�multiple�tags�with�the�same�scenario�as�well.�In
+
+
+    below�example,�we�have�tagged�the�scenario�with�4�tags�-�selenium,�regression,�sanity�and
+
+
+    critical.
+
+
+    �
+
+
+    @selenium
+
+
+    Feature:�My�feature
+
+
+    ��@regression�@sanity�@critical
+
+
+    ��Scenario:�Verify�title
+
+
+    Given�I�am�on�the�www.softpost.org�home�page
+
+
+    Then�I�verify�that�title�contains�tutorials
+
+
+    To�execute�the�scenarios�with�2�tags�say�regression�and�critical,�we�can�use�below�syntax.
+
+
+    **tags�=�[“@regression”,”@critical”]**
+
+
+    To�execute�the�scenarios�with�2�tags�say�regression�or�critical,�we�can�use�below�syntax
+
+
+    **tags�=�[“@regression,@critical”]**
+
+
+    To�skip�the�scenarios�tagged�with�tag�say�sanity,�we�can�use�below�syntax
+
+
+    **Negative�tags�=�[“~@sanity”]**
+
+
+    We�can�also�tie�the�@Before�and�@After�methods�with�scenarios�tagged�with�specific
+
+
+    names.
+
+
+    For�example,�below�before�method�will�be�executed�only�before�the�scenarios�tagged�with
+
+
+    selenium
+
+
+    **@Before(“@selenium”)**
+
+
+    Here�is�the�example�showing�the�usage�of�tags�in�Cucumber.
+
+
+    Consider�below�feature�file.
+
+
+    @selenium
+
+
+    Feature:�My�feature
+
+
+    @regression�@sanity�@critical
+
+
+    Scenario:�Verify�softpost�title
+
+
+    Given�I�am�on�the�www.softpost.org�home�page
+
+
+    Then�I�verify�that�title�contains�tutorials
+
+
+    @sanity
+
+
+    Scenario:�Verify�yahoo�title
+
+
+    Given�I�am�on�the�www.yahoo.com�home�page
+
+
+    Then�I�verify�that�title�contains�tutorials'
+- md: "\nNow take a look at below Test Class. After executing below test class, only\
+    \ first scenario will be executed because that scenario is tagged with @sanity\
+    \ and @regression.\n\n**package** org.softpost;\n\nimport cucumber.api.CucumberOptions;\n\
+    import cucumber.api.SnippetType;\nimport cucumber.api.junit.Cucumber;\nimport\
+    \ org.junit.runner.RunWith;\n\n@RunWith(Cucumber.class)\n@CucumberOptions(\n \
+    \ features=\"classpath:abc.feature\",\n  glue=\"classpath:org.softpost\",\n  tags={\"\
+    @sanity\",\"@regression\"},\n  plugin=\"html:target/selenium-reports\",\n  dryRun=false,\n\
+    \  monochrome=true,\n  strict=true,\n  snippets=SnippetType.CAMELCASE\n)\n\npublic\
+    \ class MyTest\n{\n\n}\n\nNow take a look at below test class. After executing\
+    \ below test, both scenarios will be executed as both are tagged with @sanity\
+    \ tag.\n\n**package** org.softpost;\nimport cucumber.api.CucumberOptions;\nimport\
+    \ cucumber.api.SnippetType;\nimport cucumber.api.junit.Cucumber;\nimport org.junit.runner.RunWith;\n\
+    \n@RunWith(Cucumber.class)\n@CucumberOptions(\n  features=\"classpath:abc.feature\"\
+    ,\n  glue=\"classpath:org.softpost\",\n  tags={\"@sanity,@regression\"},\n  plugin=\"\
+    html:target/selenium-reports\",\n  dryRun=false,\n  monochrome=true,\n  strict=true,\n\
+    \  snippets=SnippetType.CAMELCASE\n)\n\npublic class MyTest\n{\n\n}\n\nNow take\
+    \ a look at below test class. After executing below test class, none of the scenarios\
+    \ will be executed as tag is prefixed with ~..\n\n**package** org.softpost;\n\
+    import cucumber.api.CucumberOptions;\nimport cucumber.api.junit.Cucumber;\nimport\
+    \ org.junit.runner.RunWith;\n\n@RunWith(Cucumber.class)\n@CucumberOptions(\n \
+    \ features=\"classpath:abc.feature\",\n  glue=\"classpath:org.softpost\",\n  tags={\"\
+    ~@sanity\"},\n  plugin=\"html:target/selenium-reports\"\n)\n\npublic class MyTest\n\
+    {\n\n}\n\n## 8.2 Using name option\n\nWe can execute the specific scenarios with\
+    \ their names matching typical pattern. For example - Consider below feature file.\n\
+    \n@selenium\nFeature: My feature\n@regression @sanity @critical\nScenario: Verify\
+    \ softpost title\n  Given I am on the www.softpost.org home page\n  Then I verify\
+    \ that title contains tutorials\n\n@sanity\nScenario: Verify yahoo title\n  Given\
+    \ I am on the www.yahoo.com home page\n  Then I verify that title contains tutorials\n\
+    \nTo execute only those scenarios with name containing \"softpost\", we can use\
+    \ below test class. Note that we can also use regular expression as well to specify\
+    \ the value of scenario name.\n\n**package** org.softpost;\nimport cucumber.api.CucumberOptions;\n\
+    import cucumber.api.junit.Cucumber;\nimport org.junit.runner.RunWith;\n\n@RunWith(Cucumber.class)\n\
+    @CucumberOptions(\n  features=\"classpath:abc.feature\",\n  glue=\"classpath:org.softpost\"\
+    ,\n  name={\"softpost\"},\n  plugin=\"html:target/selenium-reports\"\n)\n\npublic\
+    \ class MyTest\n{\n\n}\n\n## 9. Passing parameters to steps\n\nWe can pass the\
+    \ parameters to the step methods from feature file as shown in below scenario.\
+    \ In below scenario, we have passed the name of website in Given step. The main\
+    \ advantage of passing the parameters is that we can re-use same step method in\
+    \ different scenarios with different parameters.\n\n@selenium\nFeature: Simple\
+    \ feature\n\nScenario: Test web title\n  Given I am on \"www.yahoo.com\" page\n\
+    \  Then I verify that the title is \"yahoo\"\n\nScenario: Test web title\n  Given\
+    \ I am on \"www.softpost.org\" page\n  Then I verify that the title is \"tutorials\"\
+    \n\nHere are the step definitions for above steps. Note that both scenarios re-use\
+    \ same step definitions with different parameters.\n\n**package** org.softpost;\n\
+    \nimport com.google.common.primitives.Bytes;\nimport cucumber.api.Scenario;\n\
+    import cucumber.api.java.After;\nimport cucumber.api.java.Before;\nimport cucumber.api.java.en.Given;\n\
+    import cucumber.api.java.en.Then;\nimport org.junit.framework.Assert;\nimport\
+    \ org.openqa.selenium.OutputType;\nimport org.openqa.selenium.TakesScreenshot;\n\
+    import org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.firefox.FirefoxDriver;\n\
+    \npublic class seleniumsteps\n{\n  WebDriver driver;\n  Scenario scenario;\n\n\
+    \  @Before(\"@selenium\")\n  public void launchBrowser(Scenario scenario)\n  {\n\
+    \    driver = new FirefoxDriver();\n    this.scenario = scenario;\n    System.out.println(\"\
+    Executing scenario \" + scenario.getName());\n  }\n\n  @After(\"@selenium\")\n\
+    \  public void killBrowser()\n  {\n    scenario.write(\"Finished scenario\");\n\
+    \    if (scenario.isFailed())\n    {\n      scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),\
+    \ \"image/png\");\n    }\n    driver.close();\n    driver.quit();\n  }\n\n  @Given(\"\
+    ^I am on \\\"([^\"]*)\\\" page$\")\n  public void i_am_on_page(String arg1) throws\
+    \ Throwable\n  {\n    driver.get(\"http://\" + arg1);\n  }\n\n  @Then(\"^I verify\
+    \ that the title is \\\"([^\"]*)\\$\"\")\n  public void i_verify_that_the_title_is(String\
+    \ arg1) throws Throwable\n  {\n    Assert.assertTrue(driver.getTitle().contains(arg1));\n\
+    \  }\n}\n\n## 10. Passing data table to steps\n\n### 10.1 Key-Value Datatable\n\
+    \nWe can pass the data table with key and value as shown in below.\n\nFeature:\
+    \ Simple datatable\nScenario: Test web title\n  Given I am on home page of site\n\
+    \  And I submit the form with below\n    | name | sagar |\n    | id | 989 |\n\
+    \    | address | mumbai |\n  Then I see that form is successful\n\nHere is the\
+    \ step definition for above. Note how we have converted the table.\n\n**package**\
+    \ org.softpost;\n\nimport cucumber.api.DataTable;\nimport cucumber.api.java.en.Given;\n\
+    import cucumber.api.java.en.Then;\nimport java.util.List;\nimport java.util.Map;\n\
+    \n/**\n * Created by Sagar on 13-07-2016\n */\npublic class DatatableSteps\n{\n\
+    \  @Given(\"^I am on home page of site$\")\n  public void i_am_on_page_of_site()\n\
+    \  {\n    System.out.println(\"Navigate to home page\");\n  }\n\n  @Given(\"^I\
+    \ submit the form with below$\")\n  public void i_submit_the_form_with_below(DataTable\
+    \ arg1) throws Throwable\n  {\n    Map<String, String> m = arg1.asMap(String.class,\
+    \ String.class);\n    System.out.println(\"Filling with data\");\n    for (String\
+    \ k : m.keySet())\n    {\n      System.out.println(\"Key->\" + k + \" Value->\"\
+    \ + m.get(k));\n    }\n  }\n\n  @Then(\"^I see that form is successful$\")\n \
+    \ public void i_see_that_form_is_successful() throws Throwable\n  {\n    System.out.println(\"\
+    Verify form message\");\n  }\n}\n\nHere is the output of execution of file.\n\
+    Navigate home page\nFilling with data\nKey->name Value->sagar\nKey->id Value->989\n\
+    Key->address Value->mumbai\nVerify form message\nScenarios (1 passed)\nSteps (3\
+    \ passed)\n0.525s\n\n## 10.2 Multiple column datatable in Cucumber\n\nNow let\
+    \ us look at how to pass the data table with multiple columns in Cucumber.\n\n\
+    Feature: Multiple column table\nScenario: Create student records\n  Given We have\
+    \ below list of students\n    | name | id | address |\n    | sagar | 28834 | Brisbane\
+    \ |\n    | watson | 38829 | London |\n    | paul | 34223 | Chicago |\n\nNow take\
+    \ a look at below Student Class. This class is mapped with the data table.\n\n\
+    **package** org.softpost;\n\n/**\n * Created by Sagar on 13-07-2016\n */\npublic\
+    \ class Student\n{\n  private String name;\n  private String address;\n  private\
+    \ int id;\n\n  public Student(String name, int id, String address)\n  {\n    this.name\
+    \ = name;\n    this.id = id;\n    this.address = address;\n  }\n\n  public void\
+    \ printStudent()\n  {\n    System.out.println(\"\\nStudent->\" + name + \", \"\
+    \ + id + \", \" + address);\n  }\n}\n\nHere is the step definition class. Note\
+    \ how we have converted the Data table to the list of student objects.\n"
+  mdcn: "\n现在看下面的测试类（Test Class）。执行该测试类后，只有第一个场景会被执行，因为该场景被标记了 @sanity 和 @regression。\n\
+    \n\n\n**package** org.softpost;\n\nimport cucumber.api.CucumberOptions;\nimport\
+    \ cucumber.api.SnippetType;\nimport cucumber.api.junit.Cucumber;\nimport org.junit.runner.RunWith;\n\
+    \n@RunWith(Cucumber.class)\n@CucumberOptions(\n  features=\"classpath:abc.feature\"\
+    ,\n  glue=\"classpath:org.softpost\",\n  tags={\"@sanity\",\"@regression\"},\n\
+    \  plugin=\"html:target/selenium-reports\",\n  dryRun=false,\n  monochrome=true,\n\
+    \  strict=true,\n  snippets=SnippetType.CAMELCASE\n)\n\npublic class MyTest\n\
+    {\n\n}\n\n现在看下面的测试类。执行该测试类后，两个场景都将被执行，因为它们都标记了 @sanity 标签。\n\n**package** org.softpost;\n\
+    import cucumber.api.CucumberOptions;\nimport cucumber.api.SnippetType;\nimport\
+    \ cucumber.api.junit.Cucumber;\nimport org.junit.runner.RunWith;\n\n@RunWith(Cucumber.class)\n\
+    @CucumberOptions(\n  features=\"classpath:abc.feature\",\n  glue=\"classpath:org.softpost\"\
+    ,\n  tags={\"@sanity,@regression\"},\n  plugin=\"html:target/selenium-reports\"\
+    ,\n  dryRun=false,\n  monochrome=true,\n  strict=true,\n  snippets=SnippetType.CAMELCASE\n\
+    )\n\npublic class MyTest\n{\n\n}\n\n现在看下面的测试类。执行该测试类后，没有任何场景会被执行，因为标签以 ~ 带有前缀。\n\
+    \n**package** org.softpost;\nimport cucumber.api.CucumberOptions;\nimport cucumber.api.junit.Cucumber;\n\
+    import org.junit.runner.RunWith;\n\n@RunWith(Cucumber.class)\n@CucumberOptions(\n\
+    \  features=\"classpath:abc.feature\",\n  glue=\"classpath:org.softpost\",\n \
+    \ tags={\"~@sanity\"},\n  plugin=\"html:target/selenium-reports\"\n)\n\npublic\
+    \ class MyTest\n{\n\n}\n\n## 8.2 使用 name 选项\n\n我们可以通过匹配典型模式的名称来执行特定的场景。例如 - 考虑下面的特性文件（feature\
+    \ file）。\n\n@selenium\nFeature: My feature\n@regression @sanity @critical\nScenario:\
+    \ Verify softpost title\n  Given I am on the www.softpost.org home page\n  Then\
+    \ I verify that title contains tutorials\n\n@sanity\nScenario: Verify yahoo title\n\
+    \  Given I am on the www.yahoo.com home page\n  Then I verify that title contains\
+    \ tutorials\n\n为了只执行名称包含 \"softpost\" 的场景，我们可以使用下面的测试类。注意，我们也可以使用正则表达式来指定场景名称的值。\n\
+    \n**package** org.softpost;\nimport cucumber.api.CucumberOptions;\nimport cucumber.api.junit.Cucumber;\n\
+    import org.junit.runner.RunWith;\n\n@RunWith(Cucumber.class)\n@CucumberOptions(\n\
+    \  features=\"classpath:abc.feature\",\n  glue=\"classpath:org.softpost\",\n \
+    \ name={\"softpost\"},\n  plugin=\"html:target/selenium-reports\"\n)\n\npublic\
+    \ class MyTest\n{\n\n}\n\n## 9. 向步骤（steps）传递参数\n\n我们可以像下面的场景所示，从特性文件中将参数传递给步骤方法。在下面的场景中，我们在\
+    \ Given 步骤中传递了网站名称。传递参数的主要优势是我们可以在不同的场景中使用不同的参数复用同一个步骤方法。\n\n@selenium\nFeature:\
+    \ Simple feature\n\nScenario: Test web title\n  Given I am on \"www.yahoo.com\"\
+    \ page\n  Then I verify that the title is \"yahoo\"\n\nScenario: Test web title\n\
+    \  Given I am on \"www.softpost.org\" page\n  Then I verify that the title is\
+    \ \"tutorials\"\n\n这里是上述步骤的步骤定义（step definitions）。注意，两个场景通过不同的参数复用了了相同的步骤定义。\n\
+    \n**package** org.softpost;\n\nimport com.google.common.primitives.Bytes;\nimport\
+    \ cucumber.api.Scenario;\nimport cucumber.api.java.After;\nimport cucumber.api.java.Before;\n\
+    import cucumber.api.java.en.Given;\nimport cucumber.api.java.en.Then;\nimport\
+    \ org.junit.framework.Assert;\nimport org.openqa.selenium.OutputType;\nimport\
+    \ org.openqa.selenium.TakesScreenshot;\nimport org.openqa.selenium.WebDriver;\n\
+    import org.openqa.selenium.firefox.FirefoxDriver;\n\npublic class seleniumsteps\n\
+    {\n  WebDriver driver;\n  Scenario scenario;\n\n  @Before(\"@selenium\")\n  public\
+    \ void launchBrowser(Scenario scenario)\n  {\n    driver = new FirefoxDriver();\n\
+    \    this.scenario = scenario;\n    System.out.println(\"Executing scenario \"\
+    \ + scenario.getName());\n  }\n\n  @After(\"@selenium\")\n  public void killBrowser()\n\
+    \  {\n    scenario.write(\"Finished scenario\");\n    if (scenario.isFailed())\n\
+    \    {\n      scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),\
+    \ \"image/png\");\n    }\n    driver.close();\n    driver.quit();\n  }\n\n  @Given(\"\
+    ^I am on \\\"([^\"]*)\\\" page$\")\n  public void i_am_on_page(String arg1) throws\
+    \ Throwable\n  {\n    driver.get(\"http://\" + arg1);\n  }\n\n  @Then(\"^I verify\
+    \ that the title is \\\"([^\"]*)\\$\"\")\n  public void i_verify_that_the_title_is(String\
+    \ arg1) throws Throwable\n  {\n    Assert.assertTrue(driver.getTitle().contains(arg1));\n\
+    \  }\n}\n\n## 10. 向步骤传递数据表格\n\n### 10.1 键值数据表 (Datatable)\n\n我们可以像下面所示传递带有键和值的数据表格。\n\
+    \nFeature: Simple datatable\nScenario: Test web title\n  Given I am on home page\
+    \ of site\n  And I submit the form with below\n    | name | sagar |\n    | id\
+    \ | 989 |\n    | address | mumbai |\n  Then I see that form is successful\n\n\
+    这里是上述步骤的步骤定义。注意我们是如何转换表格的。\n\n**package** org.softpost;\n\nimport cucumber.api.DataTable;\n\
+    import cucumber.api.java.en.Given;\nimport cucumber.api.java.en.Then;\nimport\
+    \ java.util.List;\nimport java.util.Map;\n\n/**\n * Created by Sagar on 13-07-2016\n\
+    \ */\npublic class DatatableSteps\n{\n  @Given(\"^I am on home page of site$\"\
+    )\n  public void i_am_on_page_of_site()\n  {\n    System.out.println(\"Navigate\
+    \ to home page\");\n  }\n\n  @Given(\"^I submit the form with below$\")\n  public\
+    \ void i_submit_the_form_with_below(DataTable arg1) throws Throwable\n  {\n  \
+    \  Map<String, String> m = arg1.asMap(String.class, String.class);\n    System.out.println(\"\
+    Filling with data\");\n    for (String k : m.keySet())\n    {\n      System.out.println(\"\
+    Key->\" + k + \" Value->\" + m.get(k));\n    }\n  }\n\n  @Then(\"^I see that form\
+    \ is successful$\")\n  public void i_see_that_form_is_successful() throws Throwable\n\
+    \  {\n    System.out.println(\"Verify form message\");\n  }\n}\n\n这里是执行文件的输出：\n\
+    Navigate home page\nFilling with data\nKey->name Value->sagar\nKey->id Value->989\n\
+    Key->address Value->mumbai\nVerify form message\nScenarios (1 passed)\nSteps (3\
+    \ passed)\n0.525s\n\n## 10.2 Cucumber 中的多列数据表\n\n现在让我们看看如何在 Cucumber 中传递具有多列的数据表。\n\
+    \nFeature: Multiple column table\nScenario: Create student records\n  Given We\
+    \ have below list of students\n    | name | id | address |\n    | sagar | 28834\
+    \ | Brisbane |\n    | watson | 38829 | London |\n    | paul | 34223 | Chicago\
+    \ |\n\n现在看下面的 Student 类。该类与数据表格映射。\n\n**package** org.softpost;\n\n/**\n * Created\
+    \ by Sagar on 13-07-2016\n */\npublic class Student\n{\n  private String name;\n\
+    \  private String address;\n  private int id;\n\n  public Student(String name,\
+    \ int id, String address)\n  {\n    this.name = name;\n    this.id = id;\n   \
+    \ this.address = address;\n  }\n\n  public void printStudent()\n  {\n    System.out.println(\"\
+    \\nStudent->\" + name + \", \" + id + \", \" + address);\n  }\n}\n\n这里是步骤定义类。注意我们是如何将数据表转换为学生对象列表的。\n\
+    \n"
+  merge: 0
+  raw:
+  - '[PAGE 33]
+
+
+    Now�take�a�look�at�below�Test�Class.��After�executing�below�test�class,�only�first�scenario
+
+
+    will�be�executed�because�that�scenario�is�tagged�with�@sanity�and�@regression
+
+
+    **package**�org.softpost;
+
+
+    import�cucumber.api.CucumberOptions;
+
+
+    import�cucumber.api.SnippetType;
+
+
+    import�cucumber.api.junit.Cucumber;
+
+
+    import�org.junit.runner.RunWith;
+
+
+    �
+
+
+    @RunWith(Cucumber.**class**)
+
+
+    @CucumberOptions(
+
+
+    features�=�“classpath:abc.feature”,
+
+
+    glue�=�“classpath:org.softpost”,
+
+
+    tags�=�{“@sanity”,”@regression”},
+
+
+    plugin�=�“html:target/selenium-reports”,
+
+
+    dryRun�=�**false**,
+
+
+    monochrome�=�**true**,
+
+
+    strict�=�**true**,
+
+
+    snippets�=�SnippetType.CAMELCASE
+
+
+    )
+
+
+    �
+
+
+    public�**class**�MyTest
+
+
+    {
+
+
+    }
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    Now�take�a�look�at�below�test�class.�After�executing�below�test,�both�scenarios�will�be
+
+
+    executed�as�both�are�tagged�with�@sanity�tag.
+
+
+    **package**�org.softpost;
+
+
+    import�cucumber.api.CucumberOptions;
+
+
+    import�cucumber.api.SnippetType;
+
+
+    import�cucumber.api.junit.Cucumber;
+
+
+    import�org.junit.runner.RunWith;
+
+
+    �
+
+
+    @RunWith(Cucumber.**class**)
+
+
+    @CucumberOptions(
+
+
+    features�=�“classpath:abc.feature”,'
+  - '[PAGE 34]
+
+
+    glue�=�“classpath:org.softpost”,
+
+
+    tags�=�{“@sanity,@regression”},
+
+
+    plugin�=�“html:target/selenium-reports”,
+
+
+    dryRun�=�**false**,
+
+
+    monochrome�=�**true**,
+
+
+    strict�=�**true**,
+
+
+    snippets�=�SnippetType.CAMELCASE
+
+
+    )
+
+
+    �
+
+
+    public�**class**�MyTest
+
+
+    {
+
+
+    }
+
+
+    �
+
+
+    Now�take�a�look�at�below�test�class.�After�executing�below�test�class,�none�of�the�scenarios
+
+
+    will�be�executed�as�tag�is�prefixed�with�~.
+
+
+    **package**�org.softpost;
+
+
+    import�cucumber.api.CucumberOptions;
+
+
+    import�cucumber.api.junit.Cucumber;
+
+
+    import�org.junit.runner.RunWith;
+
+
+    �
+
+
+    @RunWith(Cucumber.**class**)
+
+
+    @CucumberOptions(
+
+
+    features�=�“classpath:abc.feature”,
+
+
+    glue�=�“classpath:org.softpost”,
+
+
+    tags�=�{“~@sanity”},
+
+
+    plugin�=�“html:target/selenium-reports”
+
+
+    )
+
+
+    �
+
+
+    public�**class**�MyTest
+
+
+    {
+
+
+    }
+
+
+    �'
+  - '[PAGE 35]
+
+
+    **8.2�Using�name�option**
+
+
+    We�can�execute�the�specific�scenarios�with�their�names�matching�typical�pattern.
+
+
+    For�example�-�Consider�below�feature�file.
+
+
+    @selenium
+
+
+    Feature:�My�feature
+
+
+    @regression�@sanity�@critical
+
+
+    Scenario:�Verify�softpost�title
+
+
+    Given�I�am�on�the�www.softpost.org�home�page
+
+
+    Then�I�verify�that�title�contains�tutorials
+
+
+    @sanity
+
+
+    Scenario:�Verify�yahoo�title
+
+
+    Given�I�am�on�the�www.yahoo.com�home�page
+
+
+    Then�I�verify�that�title�contains�tutorials
+
+
+    To�execute�only�those�scenarios�with�name�containing�“softpost”,�we�can�use�below�test
+
+
+    class.�Note�that�we�can�also�use�regular�expression�as�well�to�specify�the�value�of�scenario
+
+
+    name.
+
+
+    **package**�org.softpost;
+
+
+    import�cucumber.api.CucumberOptions;
+
+
+    import�cucumber.api.junit.Cucumber;
+
+
+    import�org.junit.runner.RunWith;
+
+
+    �
+
+
+    @RunWith(Cucumber.**class**)
+
+
+    @CucumberOptions(
+
+
+    features�=�“classpath:abc.feature”,
+
+
+    glue�=�“classpath:org.softpost”,
+
+
+    name�=�{“softpost”},
+
+
+    plugin�=�“html:target/selenium-reports”
+
+
+    )
+
+
+    �
+
+
+    public�**class**�MyTest
+
+
+    {
+
+
+    }
+
+
+    �'
+  - '[PAGE 36]
+
+
+    '
+  - '[PAGE 37]
+
+
+    **9.�Passing�parameters�to�steps**
+
+
+    We�can�pass�the�parameters�to�the�step�methods�from�feature�file�as�shown�in�below
+
+
+    scenario.�In�below�scenario,�we�have�passed�the�name�of�website�in�Given�step.
+
+
+    The�main�advantage�of�passing�the�parameters�is�that�we�can�re-use�same�step�method�in
+
+
+    different�scenarios�with�different�parameters.
+
+
+    @selenium
+
+
+    Feature:�Simple�feature
+
+
+    �
+
+
+    ��Scenario:�Test�web�title
+
+
+    Given�I�am�on�“www.yahoo.com”�page
+
+
+    Then�I�verify�that�the�title�is�“yahoo”
+
+
+    �
+
+
+    ��Scenario:�Test�web�title
+
+
+    Given�I�am�on�“www.softpost.org”�page
+
+
+    Then�I�verify�that�the�title�is�“tutorials”
+
+
+    �
+
+
+    Here�are�the�step�definitions�for�above�steps.�Note�that�both�scenarios�re-use�same�step
+
+
+    definitions�with�different�parameters.
+
+
+    **package**�org.softpost;
+
+
+    �
+
+
+    **import**�com.google.common.primitives.Bytes;
+
+
+    **import**�cucumber.api.Scenario;
+
+
+    **import**�cucumber.api.java.After;
+
+
+    **import**�cucumber.api.java.Before;
+
+
+    **import**�cucumber.api.java.en.Given;
+
+
+    **import**�cucumber.api.java.en.Then;
+
+
+    **import**�junit.framework.Assert;
+
+
+    **import**�org.openqa.selenium.OutputType;
+
+
+    **import**�org.openqa.selenium.TakesScreenshot;
+
+
+    **import**�org.openqa.selenium.WebDriver;
+
+
+    **import**�org.openqa.selenium.firefox.FirefoxDriver;
+
+
+    �
+
+
+    �
+
+
+    **public**�**class**�seleniumsteps
+
+
+    {
+
+
+    WebDriver�driver;'
+  - '[PAGE 38]
+
+
+    Scenario�scenario;
+
+
+    �
+
+
+    @Before(“@selenium”)
+
+
+    **public**�**void**�launchBrowser(Scenario�scenario)
+
+
+    {
+
+
+    driver�=�**new**�FirefoxDriver();
+
+
+    **this**.scenario�=�scenario;
+
+
+    **System**.out.println(“Executing�scenario�“�+�scenario.getName());
+
+
+    }
+
+
+    �
+
+
+    @After(“@selenium”)
+
+
+    **public**�**void**�killBrowser()
+
+
+    {
+
+
+    scenario.write(“Finished�scenario”);
+
+
+    **if**�(scenario.isFailed())
+
+
+    {
+
+
+    scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),�“image/png”);
+
+
+    }
+
+
+    driver.close();
+
+
+    driver.quit();
+
+
+    }
+
+
+    �
+
+
+    @Given(“^I�am�on�\”([^\”]*)\”�page$”)
+
+
+    **public**�**void**�i_am_on_page(**String**�arg1)�**throws**�**Throwable**
+
+
+    {
+
+
+    driver.get(“http://”�+�arg1);
+
+
+    }
+
+
+    �
+
+
+    @Then(“^I�verify�that�the�title�is�\”([^\”]*)\”$”)
+
+
+    **public**�**void**�i_verify_that_the_title_is(**String**�arg1)�**throws**�**Throwable**
+
+
+    {
+
+
+    Assert.assertTrue(driver.getTitle().toLowerCase().contains(arg1));
+
+
+    �
+
+
+    }
+
+
+    }
+
+
+    �'
+  - '[PAGE 39]
+
+
+    '
+  - '[PAGE 40]
+
+
+    **10.�Passing�the�data�table�to�steps**
+
+
+    **10.1�Key�-�Value�pair�Datatable**
+
+
+    We�can�pass�the�Data�table�with�key�and�value�as�shown�in�below�example.
+
+
+    Feature:�Simple�Datatable�feature
+
+
+    ��Scenario:�Test�web�title
+
+
+    Given�I�am�on�home�page�of�xyz�site
+
+
+    And�I�submit�the�form�with�below�details
+
+
+    |name������|�sagar��|
+
+
+    |id��������|�98989��|
+
+
+    |address���|�mumbai�|
+
+
+    Then�I�see�that�form�submission�is�successful
+
+
+    Here�is�the�step�definition�class�for�above�scenario.�Note�how�we�have�converted�the�data
+
+
+    table�to�map�and�accessed�the�keys�and�values.
+
+
+    **package**�org.softpost;
+
+
+    �
+
+
+    **import**�cucumber.api.DataTable;
+
+
+    **import**�cucumber.api.java.en.Given;
+
+
+    **import**�cucumber.api.java.en.Then;
+
+
+    **import**�java.util.List;
+
+
+    **import**�java.util.Map;
+
+
+    �
+
+
+    /**
+
+
+    �*****�Created�by�Sagar�on�13**-**07**-**2016.
+
+
+    �*/
+
+
+    **public**�**class**�DatatableSteps
+
+
+    {
+
+
+    �
+
+
+    �
+
+
+    @Given(“^I�am�on�home�page�of�xyz�site$”)
+
+
+    **public**�**void**�i_am_on_home_page_of_xyz_site()�**throws**�**Throwable**
+
+
+    {
+
+
+    **System**.out.println(“Navigate�to�home�page�\n”);
+
+
+    }
+
+
+    �
+
+
+    @Given(“^I�submit�the�form�with�below�details$”)
+
+
+    **public**�**void**�i_submit_the_form_with_below_details(DataTable�arg1)�**throws**�**Throwable**
+
+
+    {'
+  - '[PAGE 41]
+
+
+    Map<**String**,**String**>�m�=��arg1.asMap(**String**.class,**String**.class);
+
+
+    **System**.out.println(“\nFilling�form�with�below�data\n”);
+
+
+    **for**(�**String**�k�:�m.keySet())
+
+
+    {
+
+
+    **System**.out.println(“Key�->�“�+�k�+�”�Value�->�“�+�m.get(k));
+
+
+    }
+
+
+    }
+
+
+    �
+
+
+    @Then(“^I�see�that�form�submission�is�successful$”)
+
+
+    **public**�**void**�i_see_that_form_submission_is_successful()�**throws**�**Throwable**
+
+
+    {
+
+
+    **System**.out.println(“\nVerify�form�success�message”);
+
+
+    }
+
+
+    }
+
+
+    **Here�is�the�output�of�execution�of�above�feature�file.**
+
+
+    Navigate�to�home�page
+
+
+    Filling�form�with�below�data
+
+
+    Key�->�name�Value�->�sagar
+
+
+    Key�->�id�Value�->�98989
+
+
+    Key�->�address�Value�->�mumbai
+
+
+    Verify�form�success�message
+
+
+    1�Scenarios�(1�passed)
+
+
+    3�Steps�(3�passed)
+
+
+    0m0.525s
+
+
+    �'
+  - '[PAGE 42]
+
+
+    **10.2�Multiple�column�datatable�in�Cucumber**
+
+
+    Now�let�us�look�at�how�to�pass�the�data�table�with�multiple�columns�in�Cucumber.
+
+
+    Feature:�Multiple�column�data�table
+
+
+    ��Scenario:�Create�new�student�records
+
+
+    ��Given�We�have�below�list�of�students
+
+
+    ��|�name����������|�id��������|�address�|
+
+
+    ��|�sagar���������|�288345����|Brisbane�|
+
+
+    ��|�watson��������|�38829�����|�London��|
+
+
+    ��|�paul����������|�34223�����|Chicago��|
+
+
+    Now�take�a�look�at�below�Student�Class.�This�class�is�mapped�with�the�data�table.
+
+
+    **package**�org.softpost;
+
+
+    �
+
+
+    /**
+
+
+    �*****�Created�by�Sagar�on�13**-**07**-**2016.
+
+
+    �*/
+
+
+    **public**�**class**�Student
+
+
+    {
+
+
+    **private**�**String**�name;
+
+
+    **private**�**String**�address;
+
+
+    **private**�**int**�id;
+
+
+    �
+
+
+    **public**�Student(**String**�name,�**int**�id,�**String**�address)
+
+
+    {
+
+
+    **this**.name�=�name;
+
+
+    **this**.id�=�id;
+
+
+    **this**.address�=�address;
+
+
+    }
+
+
+    �
+
+
+    **public**�**void**�printStudent()
+
+
+    {
+
+
+    **System**.out.println(“\nStudent�->�“�+�name�+“,�“�+�id�+�“,�“�+�address);
+
+
+    }
+
+
+    }
+
+
+    �
+
+
+    Now�look�at�the�step�definition�class.�Note�how�we�have�converted�the�Data�table�to�the
+
+
+    list�of�student�objects.
+
+
+    **package**�org.softpost;'
+- md: "\nimport cucumber.api.DataTable;\nimport cucumber.api.java.en.Given;\nimport\
+    \ cucumber.api.java.en.Then;\n\nimport java.util.List;\nimport java.util.Map;\n\
+    \n/**\n***** Created by Sagar on 13-07-2016.\n */\npublic class DatatableSteps\
+    \ {\n\n    @Given(\"^We have below list of students$\")\n    public void we_have_below_list_of_students(DataTable\
+    \ arg1) throws Throwable {\n        List<Student> students = arg1.asList(Student.class);\n\
+    \n        for (Student s : students) {\n            s.printStudent();\n      \
+    \  }\n    }\n}\n\nHere is the output of above code.\nTesting started at 19:48…\n\
+    Student -> sagar, 288345, Brisbane\nStudent -> watson, 38829, London\nStudent\
+    \ -> paul, 34223, Chicago\n1 Scenarios (1 passed)\n1 Steps (1 passed)\n0m0.635s\n\
+    \n## 11. Feature file variations\n\n### 11.1 Scenario Background\nSometimes, we\
+    \ need to execute certain steps, before every scenario in the same feature file.\
+    \ Backgrounds allow you to reuse same steps across multiple scenarios. For example\
+    \ - to test some feature, we might need to filter records before every scenario.\
+    \ So we can put the steps required to filter the records inside Background. These\
+    \ steps would be executed every time each scenario in the same feature file is\
+    \ executed.\n\nIn below feature file, we have one step in the background (Given\
+    \ I filter some records). This step will be executed before every scenario in\
+    \ this feature file.\n\nFeature: Simple background feature\n\n  Background: Execute\
+    \ before every scenario\n    Given I filter some records\n\n    Scenario: Verify\
+    \ delete functionality\n      Given I click on the delete button of the first\
+    \ record\n      Then I verify that record is removed from the table\n\n    Scenario:\
+    \ Verify Update functionality\n      Given I click on update button of the first\
+    \ record\n      Then I verify that record opens in new window and we can modify\
+    \ it\n\nHere is the step definition class.\n```java\npackage org.softpost;\n\n\
+    import cucumber.api.java.en.Given;\nimport cucumber.api.java.en.Then;\n\n/**\n\
+    ***** Created by Sagar on 13-07-2016.\n */\npublic class backgroundsteps {\n\n\
+    \    @Given(\"^I filter some records$\")\n    public void i_filter_some_records()\
+    \ throws Throwable {\n        System.out.println(\"\\n\\nBackground - Filtering\
+    \ some records\\n\");\n    }\n\n    @Given(\"^I click on the delete button of\
+    \ the first record$\")\n    public void i_click_on_the_delete_button_of_the_first_record()\
+    \ throws Throwable {\n        System.out.println(\"Click delete button\\n\");\n\
+    \    }\n\n    @Then(\"^I verify that record is removed from the table$\")\n  \
+    \  public void i_verify_that_record_is_removed_from_the_table() throws Throwable\
+    \ {\n        System.out.println(\"Verify deleted record\\n\");\n    }\n\n    @Given(\"\
+    ^I click on update button of the first record$\")\n    public void i_click_on_update_button_of_the_first_record()\
+    \ throws Throwable {\n        System.out.println(\"Click update button\\n\");\n\
+    \    }\n\n    @Then(\"^I verify that record opens in new window and we can modify\
+    \ it$\")\n    public void i_verify_that_record_opens_in_new_window_and_we_can_modify_it()\
+    \ throws Throwable {\n        System.out.println(\"Verify modified record\\n\"\
+    );\n    }\n\n}\n```\n\nHere is the output of execution of above feature file.\n\
+    Background - Filtering some records\nClick delete button\nVerify deleted record\n\
+    Background - Filtering some records\nClick update button\nVerify modified record\n\
+    2 Scenarios (2 passed)\n6 Steps (6 passed)\n0m0.578s\n\n## 11.2 Scenario outline\n\
+    Sometimes, we need to execute the same scenario but with different test data.\
+    \ In such cases, we can use the concept called as scenario outline. In below example,\
+    \ same scenario will be executed twice. First time with 99 and 100. Second time\
+    \ with 11 and 200.\n\nFeature: Outline feature\n\n  Scenario Outline: Addition\
+    \ of numbers\n    When I add integers <i1> and <i2>\n    Then I see the result\
+    \ as <sum>\n    Examples:\n      | i1 | i2 | sum |\n      | 99 | 100 | 199 |\n\
+    \      | 11 | 200 | 211 |\n\nHere is the step definitions class.\n```java\npackage\
+    \ org.softpost;\n\nimport cucumber.api.java.en.Then;\nimport cucumber.api.java.en.When;\n\
+    import org.junit.Assert;\n\n/**\n***** Created by Sagar on 13-07-2016.\n */\n\
+    public class outlinesteps {\n    int result = 0;\n\n    @When(\"^add integers\
+    \ (d+) and (d+)$\")\n    public void add_integers_and(int arg1, int arg2) throws\
+    \ Throwable {\n        result = arg1 + arg2;\n        System.out.println(\"Adding\
+    \ \" + arg1 + \" and \" + arg2 + \"\\n\");\n    }\n\n    @Then(\"^see the result\
+    \ as (d+)$\")\n    public void see_the_result_as(int arg1) throws Throwable {\n\
+    \        Assert.assertEquals(result, arg1);\n    }\n}\n```\n\nHere is the output\
+    \ of execution of above feature file.\nTesting started at 19:18…\nAdding 99 and\
+    \ 100\nAdding 11 and 200\n2 Scenarios (2 passed)\n4 Steps (4 passed)\n0m0.59s\n\
+    \n## 12. Running multiple files in Cucumber\nWe can execute scenarios in multiple\
+    \ files as shown below. Note that to execute all files we can also use operator.\n\
+    \n```java\npackage org.softpost;\n\nimport cucumber.api.junit.CucumberOptions;\n\
+    import org.junit.runner.RunWith;\n\n@RunWith(Cucumber.class)\n@CucumberOptions(\n\
+    \    features = {\"feature\",\"outline.feature\"},\n    glue = {\"softpost\"},\n\
+    \    plugin = {\"html:target/cucumber-reports\"}\n)\npublic class MultipleTest\
+    \ {\n}\n```\nHere is the HTML report generated after execution.\n\n## 13. Sharing\
+    \ driver instance using PicoContainer\nIn Selenium automation we create a driver\
+    \ instance. But we can use the same driver in different step classes in two ways:\n\
+    1. By creating a static field\n2. By using PicoContainer (Dependency Injection)\n\
+    \nFirst method is very simple. Just create a class with static field. Now let\
+    \ us take a look at how we can share the driver using Dependency Injection. For\
+    \ this you will need below dependencies.\n\n```xml\n<dependency>\n    <groupId>org.selenium</groupId>\n\
+    \    <artifactId>selenium-java</artifactId>\n    <version>2.42.2</version>\n</dependency>\n\
+    \n<dependency>\n    <groupId>info.cukes</groupId>\n    <artifactId>picocontainer</artifactId>\n\
+    \    <version>1.2</version>\n    <scope>test</scope>\n</dependency>\n```\n\nNext\
+    \ we need to create a class where we will create driver as shown in below example.\
+    \ Note that we instantiate the driver only once. We have got method getDriver()\
+    \ to get the driver.\n\n```java\npackage org.softpost;\n\nimport cucumber.api.java.After;\n\
+    import cucumber.api.java.Before;\nimport org.openqa.selenium.WebDriver;\nimport\
+    \ org.openqa.selenium.firefox.FirefoxDriver;\n\npublic class SharedClass {\n\n\
+    \    private static boolean startBrowser = false;\n    private WebDriver driver;\n\
+    \    public String title = \"\";\n\n    @Before(\"@sharedselenium\")\n    public\
+    \ void init() throws Exception {\n        if (!startBrowser) {\n            driver\
+    \ = new FirefoxDriver();\n            // To stop launching browser after every\
+    \ scenario, assign below variable with true value\n            startBrowser =\
+    \ false;\n        }\n    }\n\n    public WebDriver getDriver() {\n        return\
+    \ driver;\n    }\n\n    @After(\"@sharedselenium\")\n    public void cleanUp()\
+    \ {\n        driver.close();\n        driver.quit();\n    }\n}\n```\n"
+  mdcn: "\n\nimport cucumber.api.DataTable;\nimport cucumber.api.java.en.Given;\n\
+    import cucumber.api.java.en.Then;\n\nimport java.util.List;\nimport java.util.Map;\n\
+    \n/**\n***** Created by Sagar on 13-07-2016.\n */\npublic class DatatableSteps\
+    \ {\n\n    @Given(\"^We have below list of students$\")\n    public void we_have_below_list_of_students(DataTable\
+    \ arg1) throws Throwable {\n        List<Student> students = arg1.asList(Student.class);\n\
+    \n        for (Student s : students) {\n            s.printStudent();\n      \
+    \  }\n    }\n}\n\n这里是上述代码的输出。\nTesting started at 19:48…\nStudent -> sagar, 288345,\
+    \ Brisbane\nStudent -> watson, 38829, London\nStudent -> paul, 34223, Chicago\n\
+    1 Scenarios (1 passed)\n1 Steps (1 passed)\n0m0.635s\n\n## 11. Feature 文件变体\n\n\
+    ### 11.1 Scenario Background（场景背景）\n有时，我们需要在同一个 feature 文件的每个场景（scenario）执行之前执行某些步骤。Background\
+    \ 允许你在多个场景之间复用相同的步骤。例如 - 为了测试某些功能，我们可能需要在每个场景执行之前对记录进行过滤。因此，我们可以将过滤记录所需的步骤放在 Background\
+    \ 内部。这些步骤会在同一个 feature 文件中的每个场景执行时被重复执行。\n\n在下方的 feature 文件中，我们在背景中有一个步骤（Given\
+    \ I filter some records）。该步骤将在此 feature 文件的每个场景执行之前执行。\n\nFeature: 简单的背景功能\n\n\
+    \  Background: 在每个场景执行前执行\n    Given 我过滤了一些记录\n\n    Scenario: 验证删除功能\n      Given\
+    \ 我点击第一条记录的删除按钮\n      Then 我验证该记录已从表格中删除\n\n    Scenario: 验证更新功能\n      Given\
+    \ 我点击第一条记录的更新按钮\n      Then 我验证该记录在新窗口中打开，并且我们可以对其进行修改\n\n这里是步骤定义类。\n```java\n\
+    package org.softpost;\n\nimport cucumber.api.java.en.Given;\nimport cucumber.api.java.en.Then;\n\
+    \n/**\n***** Created by Sagar on 13-07-2016.\n */\npublic class backgroundsteps\
+    \ {\n\n    @Given(\"^I filter some records$\")\n    public void i_filter_some_records()\
+    \ throws Throwable {\n        System.out.println(\"\\n\\nBackground - Filtering\
+    \ some records\\n\");\n    }\n\n    @Given(\"^I click on the delete button of\
+    \ the first record$\")\n    public void i_click_on_the_delete_button_of_the_first_record()\
+    \ throws Throwable {\n        System.out.println(\"Click delete button\\n\");\n\
+    \    }\n\n    @Then(\"^I verify that record is removed from the table$\")\n  \
+    \  public void i_verify_that_record_is_removed_from_the_table() throws Throwable\
+    \ {\n        System.out.println(\"Verify deleted record\\n\");\n    }\n\n    @Given(\"\
+    ^I click on update button of the first record$\")\n    public void i_click_on_update_button_of_the_first_record()\
+    \ throws Throwable {\n        System.out.println(\"Click update button\\n\");\n\
+    \    }\n\n    @Then(\"^I verify that record opens in new window and we can modify\
+    \ it$\")\n    public void i_verify_that_record_opens_in_new_window_and_we_can_modify_it()\
+    \ throws Throwable {\n        System.out.println(\"Verify modified record\\n\"\
+    );\n    }\n\n}\n```\n\n这里是上述 feature 文件执行的输出。\nBackground - Filtering some records\n\
+    Click delete button\nVerify deleted record\nBackground - Filtering some records\n\
+    Click update button\nVerify modified record\n2 Scenarios (2 passed)\n6 Steps (6\
+    \ passed)\n0m0.578s\n\n## 11.2 Scenario outline（场景大纲）\n有时，我们需要使用不同的测试数据执行相同的场景。在这种情况下，我们可以使用名为\
+    \ scenario outline 的概念。在下方的示例中，相同的场景将执行两次。第一次使用 99 和 100；第二次使用 11 和 200。\n\nFeature:\
+    \ 大纲功能\n\n  Scenario Outline: 数字的加法\n    When 我相加整数 <i1> 和 <i2>\n    Then 我看到结果为\
+    \ <sum>\n    Examples:\n      | i1 | i2 | sum |\n      | 99 | 100 | 199 |\n  \
+    \    | 11 | 200 | 211 |\n\n这里是步骤定义类。\n```java\npackage org.softpost;\n\nimport\
+    \ cucumber.api.java.en.Then;\nimport cucumber.api.java.en.When;\nimport org.junit.Assert;\n\
+    \n/**\n***** Created by Sagar on 13-07-2016.\n */\npublic class outlinesteps {\n\
+    \    int result = 0;\n\n    @When(\"^add integers (d+) and (d+)$\")\n    public\
+    \ void add_integers_and(int arg1, int arg2) throws Throwable {\n        result\
+    \ = arg1 + arg2;\n        System.out.println(\"Adding \" + arg1 + \" and \" +\
+    \ arg2 + \"\\n\");\n    }\n\n    @Then(\"^see the result as (d+)$\")\n    public\
+    \ void see_the_result_as(int arg1) throws Throwable {\n        Assert.assertEquals(result,\
+    \ arg1);\n    }\n}\n```\n\n这里是上述 feature 文件执行的输出。\nTesting started at 19:18…\n\
+    Adding 99 and 100\nAdding 11 and 200\n2 Scenarios (2 passed)\n4 Steps (4 passed)\n\
+    0m0.59s\n\n## 12. 在 Cucumber 中运行多个文件\n我们可以像下面所示在多个文件中执行场景。注意，要执行所有文件，我们使用操作符。\n\
+    \n```java\npackage org.softpost;\n\nimport cucumber.api.junit.CucumberOptions;\n\
+    import org.junit.runner.RunWith;\n\n@RunWith(Cucumber.class)\n@CucumberOptions(\n\
+    \    features = {\"feature\",\"outline.feature\"},\n    glue = {\"softpost\"},\n\
+    \    plugin = {\"html:target/cucumber-reports\"}\n)\npublic class MultipleTest\
+    \ {\n}\n```\n这里是执行后生成的 HTML 报告。\n\n## 13. 使用 PicoContainer 共享 driver 实例\n在 Selenium\
+    \ 自动化中，我们创建一个 driver 实例。但我们可以通过两种方式在不同的步骤类中使用同一个 driver：\n1. 通过创建静态字段\n2. 使用 PicoContainer（依赖注入）\n\
+    \n第一种方法非常简单。只需创建一个带有静态字段的类即可。现在让我们来看看如何使用依赖注入共享 driver。对于这一点，你需要下面的依赖项。\n\n```xml\n\
+    <dependency>\n    <groupId>org.selenium</groupId>\n    <artifactId>selenium-java</artifactId>\n\
+    \    <version>2.42.2</version>\n</dependency>\n\n<dependency>\n    <groupId>info.cukes</groupId>\n\
+    \    <artifactId>picocontainer</artifactId>\n    <version>1.2</version>\n    <scope>test</scope>\n\
+    </dependency>\n```\n\n接下来，我们需要创建一个类，并在其中如示例所示创建 driver。注意我们只实例化一次 driver。我们得到了\
+    \ getDriver() 方法来获取 driver。\n\n```java\npackage org.softpost;\n\nimport cucumber.api.java.After;\n\
+    import cucumber.api.java.Before;\nimport org.openqa.selenium.WebDriver;\nimport\
+    \ org.openqa.selenium.firefox.FirefoxDriver;\n\npublic class SharedClass {\n\n\
+    \    private static boolean startBrowser = false;\n    private WebDriver driver;\n\
+    \    public String title = \"\";\n\n    @Before(\"@sharedselenium\")\n    public\
+    \ void init() throws Exception {\n        if (!startBrowser) {\n            driver\
+    \ = new FirefoxDriver();\n            // 如果要在每个场景后停止启动浏览器，将下方变量赋值为 true\n    \
+    \        startBrowser = false;\n        }\n    }\n\n    public WebDriver getDriver()\
+    \ {\n        return driver;\n    }\n\n    @After(\"@sharedselenium\")\n    public\
+    \ void cleanUp() {\n        driver.close();\n        driver.quit();\n    }\n}\n\
+    ```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 43]
+
+
+    �
+
+
+    **import**�cucumber.api.DataTable;
+
+
+    **import**�cucumber.api.java.en.Given;
+
+
+    **import**�cucumber.api.java.en.Then;
+
+
+    �
+
+
+    **import**�java.util.List;
+
+
+    **import**�java.util.Map;
+
+
+    �
+
+
+    /**
+
+
+    �*****�Created�by�Sagar�on�13**-**07**-**2016.
+
+
+    �*/
+
+
+    **public**�**class**�DatatableSteps
+
+
+    {
+
+
+    �
+
+
+    @Given(“^We�have�below�list�of�students$”)
+
+
+    **public**�**void**�we_have_below_list_of_students(DataTable�arg1)�**throws**�**Throwable**
+
+
+    {
+
+
+    **List**<Student>�students�=�arg1.asList(Student.class);
+
+
+    �
+
+
+    **for**(Student�s�:�students)
+
+
+    {
+
+
+    s.printStudent();
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    **�**
+
+
+    **Here�is�the�output�of�above�code.**
+
+
+    Testing�started�at�19:48�…
+
+
+    Student�->�sagar,�288345,�Brisbane
+
+
+    Student�->�watson,�38829,�London
+
+
+    Student�->�paul,�34223,�Chicago
+
+
+    1�Scenarios�(1�passed)
+
+
+    1�Steps�(1�passed)
+
+
+    0m0.635s
+
+
+    �'
+  - '[PAGE 44]
+
+
+    '
+  - '[PAGE 45]
+
+
+    **11.�Feature�file�variations**
+
+
+    **11.1�Scenario�Background**
+
+
+    Sometimes,�we�need�to�execute�certain�steps,�before�every�scenario�in�the�same�feature
+
+
+    file.�Backgrounds�allow�you�to�reuse�same�steps�across�multiple�scenarios.
+
+
+    For�example�-�to�test�some�feature,�we�might�need�to�filter�records�before�every�scenario.
+
+
+    So�we�can�put�the�steps�required�to�filter�the�records�inside
+
+
+    Background.�These�steps�would�be�executed�every�time�each�scenario�in�the�same�feature
+
+
+    file�is�executed.
+
+
+    In�below�feature�file,�we�have�one�step�in�the�background�(Given�I�filter�some�records).
+
+
+    This�step�will�be�executed�before�every�scenario�in�this�feature�file.
+
+
+    �
+
+
+    Feature:�Simple�background�feature
+
+
+    ��Background:�Execute�before�every�scenario
+
+
+    Given�I�filter�some�records
+
+
+    ��Scenario:�Verify�delete�functionality
+
+
+    Given�I�click�on�the�delete�button�of�the�first�record
+
+
+    Then�I�verify�that�record�is�removed�from�the�table
+
+
+    ��Scenario:�Verify�Update�functionality
+
+
+    Given�I�click�on�update�button�of�the�first�record
+
+
+    Then�I�verify�that�record�opens�in�new�window�and�we�can�modify�it
+
+
+    �
+
+
+    Here�is�the�step�definition�class.
+
+
+    **package**�org.softpost;
+
+
+    �
+
+
+    **import**�cucumber.api.java.en.Given;
+
+
+    **import**�cucumber.api.java.en.Then;
+
+
+    �
+
+
+    /**
+
+
+    �*****�Created�by�Sagar�on�13**-**07**-**2016.
+
+
+    �*/
+
+
+    **public**�**class**�backgroundsteps�{
+
+
+    �
+
+
+    �
+
+
+    @Given(“^I�filter�some�records$”)
+
+
+    **public**�**void**�i_filter_some_records()�**throws**�**Throwable**�{'
+  - '[PAGE 46]
+
+
+    **System**.out.println(“\n\nBackground�-�Filtering�some�records\n”);
+
+
+    }
+
+
+    �
+
+
+    @Given(“^I�click�on�the�delete�button�of�the�first�record$”)
+
+
+    **public**�**void**�i_click_on_the_delete_button_of_the_first_record()�**throws**�**Throwable**�{
+
+
+    **System**.out.println(“Click�delete�button\n”);
+
+
+    }
+
+
+    �
+
+
+    @Then(“^I�verify�that�record�is�removed�from�the�table$”)
+
+
+    **public**�**void**�i_verify_that_record_is_removed_from_the_table()�**throws**�**Throwable**�{
+
+
+    **System**.out.println(“Verify�deleted�record\n”);
+
+
+    }
+
+
+    �
+
+
+    @Given(“^I�click�on�update�button�of�the�first�record$”)
+
+
+    **public**�**void**�i_click_on_update_button_of_the_first_record()�**throws**�**Throwable**�{
+
+
+    **System**.out.println(“Click�update�button\n”);
+
+
+    }
+
+
+    �
+
+
+    @Then(“^I�verify�that�record�opens�in�new�window�and�we�can�modify�it$”)
+
+
+    **public**�**void**�i_verify_that_record_opens_in_new_window_and_we_can_modify_it()�**throws**�**Throwable**�{
+
+
+    **System**.out.println(“Verify�modified�record\n”);
+
+
+    }
+
+
+    �
+
+
+    �
+
+
+    }
+
+
+    **Here�is�the�output�of�execution�of�above�feature�file.**
+
+
+    Background�-�Filtering�some�records
+
+
+    Click�delete�button
+
+
+    Verify�deleted�record
+
+
+    Background�-�Filtering�some�records
+
+
+    Click�update�button
+
+
+    Verify�modified�record
+
+
+    2�Scenarios�(2�passed)
+
+
+    6�Steps�(6�passed)
+
+
+    0m0.578s
+
+
+    �'
+  - '[PAGE 47]
+
+
+    **11.2�Scenario�outline**
+
+
+    Sometimes,�we�need�to�execute�the�same�scenario�but�with�different�test�data.�In�such
+
+
+    cases,�we�can�use�the�concept�called�as�scenario�outline.�In�below�example,�same�scenario
+
+
+    will�be�executed�twice.�First�time�with�99�and�100.�Second�time�with�11�and�200.
+
+
+    Feature:�Outline�feature
+
+
+    ��Scenario�Outline:�Addition�of�numbers
+
+
+    When�I�add�integers�<i1>�and�<i2>
+
+
+    Then�I�see�the�result�as�<sum>
+
+
+    Examples:
+
+
+    |�i1�����|�i2�����|�sum�����|
+
+
+    |����99��|��100���|�����199�|
+
+
+    |����11��|�200����|�����211�|
+
+
+    Here�is�the�step�definitions�class.
+
+
+    **package**�org.softpost;
+
+
+    �
+
+
+    **import**�cucumber.api.java.en.Then;
+
+
+    **import**�cucumber.api.java.en.When;
+
+
+    **import**�junit.framework.Assert;
+
+
+    �
+
+
+    /**
+
+
+    �*****�Created�by�Sagar�on�13**-**07**-**2016.
+
+
+    �*/
+
+
+    **public**�**class**�outlinesteps
+
+
+    {
+
+
+    **int**�result�=�0;
+
+
+    @When(“^I�add�integers�(\d+)�and�(\d+)$”)
+
+
+    **public**�**void**�i_add_integers_and(**int**�arg1,�**int**�arg2)�**throws**�**Throwable**
+
+
+    {
+
+
+    result�=�arg1�+�arg2;
+
+
+    **System**.out.println(“Adding�“�+�arg1�+�”�and�“�+�arg2�+�“\n\n”);
+
+
+    }
+
+
+    �
+
+
+    @Then(“^I�see�the�result�as�(\d+)$”)
+
+
+    **public**�**void**�i_see_the_result_as(**int**�arg1)�**throws**�**Throwable**
+
+
+    {
+
+
+    Assert.assertEquals(result,arg1);'
+  - '[PAGE 48]
+
+
+    }
+
+
+    �
+
+
+    }
+
+
+    **Here�is�the�output�of�execution�of�above�feature�file.**
+
+
+    Testing�started�at�19:18�…
+
+
+    Adding�99�and�100
+
+
+    Adding�11�and�200
+
+
+    2�Scenarios�(2�passed)
+
+
+    4�Steps�(4�passed)
+
+
+    0m0.595s
+
+
+    �'
+  - '[PAGE 49]
+
+
+    '
+  - '[PAGE 50]
+
+
+    **12.�Running�multiple�feature�files�in�Cucumber**
+
+
+    We�can�execute�scenarios�in�multiple�feature�files�as�shown�in�below�example.�We�are
+
+
+    running�2�feature�files��-�multicolumn�and�outline.�Note�that�to�execute�all�feature�files,�we
+
+
+    can�also�use�*�operator.
+
+
+    **package**�org.softpost;
+
+
+    **import**�cucumber.api.CucumberOptions;
+
+
+    **import**�cucumber.api.junit.Cucumber;
+
+
+    **import**�org.junit.runner.RunWith;
+
+
+    �
+
+
+    @RunWith(Cucumber.class)
+
+
+    @CucumberOptions(
+
+
+    features�=�{“classpath:multicolumn.feature”,“classpath:outline.feature”},
+
+
+    glue�=�“classpath:org.softpost”,
+
+
+    plugin�=�“html:target/selenium-reports”
+
+
+    )
+
+
+    �
+
+
+    **public**�**class**�MultipleFeatureTest
+
+
+    {
+
+
+    }
+
+
+    Here�is�the�HTML�report�generated�after�execution�of�above�test�class.
+
+
+    ![](img/01a02959ac67a9cb80992ea769fa586c_50_0.png)
+
+
+    *Multiple�feature�files�in�Cucumber*
+
+
+    �'
+  - '[PAGE 51]
+
+
+    '
+  - '[PAGE 52]
+
+
+    **13.�Sharing�selenium�Webdriver�instance�using�PicoContainer**
+
+
+    In�Selenium�automation,�we�create�a�WebDriver�instance.�But�we�can�not�use�the�same
+
+
+    driver�instance�in�different�step�definition�classes�in�Cucumber.
+
+
+    We�can�share�the�same�Webdriver�instance�in�2�ways.
+
+
+    1.� By�creating�a�static�Webdriver
+
+
+    2.� By�using�PicoContainer�(Dependency�Injection)
+
+
+    First�method�is�very�simple.�Just�create�a�class�with�Static�WebDriver�field.
+
+
+    Now�let�us�take�a�look�at�how�we�can�share�the�same�driver�using�Dependency�Injection.
+
+
+    For�this,�you�will�need�below�dependencies.
+
+
+    <dependency>
+
+
+    <groupId>org.seleniumhq.selenium</groupId>
+
+
+    <artifactId>selenium-java</artifactId>
+
+
+    <version>2.42.2</version>
+
+
+    </dependency>
+
+
+    �
+
+
+    �
+
+
+    <dependency>
+
+
+    <groupId>info.cukes</groupId>
+
+
+    <artifactId>cucumber-picocontainer</artifactId>
+
+
+    <version>1.2.4</version>
+
+
+    <scope>test</scope>
+
+
+    </dependency>
+
+
+    Next,�we�need�to�create�a�class�where�we�will�create�a�Webdriver�instance�as�shown�in
+
+
+    below�example.�Note�that�we�instantiates�the�driver�only�once.�We�have�got�a�method
+
+
+    getDriver�to�get�the�driver.
+
+
+    **package**�org.softpost;
+
+
+    �
+
+
+    **import**�cucumber.api.java.After;
+
+
+    **import**�cucumber.api.java.Before;
+
+
+    **import**�org.openqa.selenium.WebDriver;
+
+
+    **import**�org.openqa.selenium.firefox.FirefoxDriver;
+
+
+    �
+
+
+    **public**�**class**�SharedClass
+
+
+    {
+
+
+    �
+
+
+    **private**�**static**�**boolean**�startBrowser�=�**false**;
+
+
+    �'
+  - '[PAGE 53]
+
+
+    **private**�WebDriver�driver;
+
+
+    **public**�**String**�title�=�””;
+
+
+    �
+
+
+    @Before(“@sharedselenium”)
+
+
+    **public**�**void**�init()�**throws**�**Exception**
+
+
+    {
+
+
+    **if**�(!startBrowser)
+
+
+    {
+
+
+    �
+
+
+    driver�=�**new**�FirefoxDriver();
+
+
+    �
+
+
+    //To�stop�launching�browser�after�every�scenario,�assign�below�variable�with�true�value
+
+
+    startBrowser�=�**false**;
+
+
+    }
+
+
+    }
+
+
+    �
+
+
+    **public**�WebDriver�getDriver()
+
+
+    {
+
+
+    **return**�driver;
+
+
+    }
+
+
+    �
+
+
+    @After(“@sharedselenium”)
+
+
+    **public**�**void**�cleanUp()
+
+
+    {
+
+
+    driver.close();
+
+
+    driver.quit();
+
+
+    �
+
+
+    }
+
+
+    }
+
+
+    �
+
+
+    Next�in�the�step�definition�classes,�we�can�pass�the�instance�of�above�class�as�shown�in
+
+
+    below�example.�Note�that�we�are�using�getDriver()�method�to�access�the�driver�instance.
+
+
+    So�similarly�you�can�pass�the�instance�of�SharedClass�to�any�step�definition�class�that
+
+
+    wants�to�use�the�driver.�PicoContainer�is�used�internally�to�wire�up�dependent�classes.
+
+
+    �
+
+
+    �
+
+
+    �'
+- md: "\n```java\npackage org.softpost;\n\nimport cucumber.api.java.en.Given;\nimport\
+    \ cucumber.api.java.en.Then;\nimport junit.framework.Assert;\n\npublic class ShareSeleniumSteps\
+    \ {\n\n    SharedClass sharedClass;\n\n    public ShareSeleniumSteps(SharedClass\
+    \ sharedClass) {\n        this.sharedClass = sharedClass;\n    }\n\n    @Given(\"\
+    ^I am on_the_www\\.softpost\\.org_home_page$\")\n    public void i_am_on_the_www_softpost_org_home_page()\
+    \ throws Throwable {\n        sharedClass.getDriver().get(\"http://www.softpost.org\"\
+    );\n    }\n\n    @Then(\"^I verify_that_title_contains_tutorials$\")\n    public\
+    \ void i_verify_that_title_contains_tutorials() throws Throwable {\n        Assert.assertTrue(sharedClass.getDriver().getTitle().toLowerCase().contains(\"\
+    tutorials\"));\n    }\n\n    @Then(\"^I verify_that_title_contains_tutooorials$\"\
+    )\n    public void i_verify_that_title_contains_tutooorials() throws Throwable\
+    \ {\n        Assert.assertTrue(sharedClass.getDriver().getTitle().toLowerCase().contains(\"\
+    tutooorials\"));\n    }\n}\n```\n\n## 14. Reports in Cucumber\n\n### 14.1 Embedding\
+    \ the screenshot\n\nWhen working in a selenium automation project, we often need\
+    \ to take a screenshot on test failure. Selenium API provides a way to take screenshot\
+    \ with the help of takesScreenshot interface.\n\nCucumber allows you to embed\
+    \ that screenshot in the Cucumber reports. Here is the simple code.\n\n```java\n\
+    @After(\"@selenium\")\npublic void killBrowser(Scenario scenario) {\n    if (scenario.isFailed())\
+    \ {\n        scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),\
+    \ \"image/png\");\n    }\n    driver.close();\n    driver.quit();\n}\n```\n\n\
+    Below image shows where to find the HTML report in Maven project.\n\n![](img/01a02959ac67a9cb80992ea769fa586c_57_0.png)\n\
+    *Cucumber report location in Maven project*\n\nHere is the sample HTML report\
+    \ showing the captured screenshot.\n\n![](img/01a02959ac67a9cb80992ea769fa586c_58_0.png)\n\
+    *Embeding the screenshot in Cucumber report*\n\n### 14.2 Writing to Cucumber HTML\
+    \ reports\n\nWe can write to Cucumber HTML report using write method of Scenario\
+    \ class. Below step definition class illustrates how to write to HTML report.\
+    \ Note how we have passed scenario object to Before method.\n\n```java\npackage\
+    \ org.softpost;\n\nimport com.google.common.primitives.Bytes;\nimport cucumber.api.Scenario;\n\
+    import cucumber.api.java.After;\nimport cucumber.api.java.Before;\nimport cucumber.api.java.en.Given;\n\
+    import cucumber.api.java.en.Then;\nimport junit.framework.Assert;\nimport org.openqa.selenium.OutputType;\n\
+    import org.openqa.selenium.TakesScreenshot;\nimport org.openqa.selenium.WebDriver;\n\
+    import org.openqa.selenium.firefox.FirefoxDriver;\n\n/**\n * Created by Sagar\
+    \ on 12-07-2016.\n */\n@SuppressWarnings(\"ALL\")\npublic class seleniumsteps\
+    \ {\n\n    WebDriver driver;\n    Scenario scenario;\n\n    @Before(\"@selenium\"\
+    )\n    public void launchBrowser(Scenario scenario) {\n        driver = new FirefoxDriver();\n\
+    \        this.scenario = scenario;\n    }\n\n    @Given(\"^I am on_the_www\\.softpost\\\
+    .org_home_page$\")\n    public void i_am_on_the_www_softpost_org_home_page() throws\
+    \ Throwable {\n        driver.get(\"http://www.softpost.org\");\n        scenario.write(\"\
+    Navigated to www.softpost.org\");\n    }\n\n    @Then(\"^I verify_that_title_contains_tutorials$\"\
+    )\n    public void i_verify_that_title_contains_tutorials() throws Throwable {\n\
+    \        Assert.assertTrue(driver.getTitle().toLowerCase().contains(\"tutorials\"\
+    ));\n    }\n\n    @Then(\"^I verify_that_title_contains_tutooorials$\")\n    public\
+    \ void i_verify_that_title_contains_tutooorials() throws Throwable {\n       \
+    \ Assert.assertTrue(driver.getTitle().toLowerCase().contains(\"tutooorials\"));\n\
+    \    }\n\n    @After(\"@selenium\")\n    public void killBrowser() {\n       \
+    \ scenario.write(\"Finished scenario\");\n        if (scenario.isFailed()) {\n\
+    \            scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),\
+    \ \"image/png\");\n        }\n        driver.close();\n        driver.quit();\n\
+    \    }\n}\n```\n\nHere is the sample HTML report.\n\n![](img/01a02959ac67a9cb80992ea769fa586c_60_0.png)\n\
+    *Writing to cucumber HTML report*\n\n## 15. Cucumber using Lambda Expressions\n\
+    \n### 15.1 Cucumber dependency for using Lambda expressions in Java 8\n\nIn Java\
+    \ 8, Lambda expressions were introduced. Cucumber allows you to write step definitions\
+    \ using Lambda expressions. You need to add below dependency to write tests using\
+    \ Lambda expressions.\n\n```xml\n<dependency>\n    <groupId>info.cukes</groupId>\n\
+    \    <artifactId>cucumber-java8</artifactId>\n    <version>1.2.4</version>\n \
+    \   <scope>test</scope>\n</dependency>\n```\n\nEnsure that JDK version is 1.8.0_51.\
+    \ Otherwise you will get below error.\n\nException in thread \"main\" cucumber.runtime.CucumberException:\
+    \ Failed to instantiate class …….CucumberException: java.lang.IllegalArgumentException:\
+    \ Wrong type at constant pool index\n\n### 15.2 Cucumber test using Lambda expressions\n\
+    \nNow let us write sample step definitions using Lambda expressions. Here is the\
+    \ sample feature file.\n\n```gherkin\nFeature: Lambda feature\nScenario: Verify\
+    \ sum\n  Given I add 1 and 2\n  Then I verify that sum is 3\n```\n\nHere is the\
+    \ sample Test Class using Lambda expressions to write the step definitions. Note\
+    \ that StepClass must implement cucumber.api.java8.En interface and step methods\
+    \ should be inside the constructor of test class. You also need to ensure Java\
+    \ language level should be 1.8.\n\n```java\npackage org.softpost;\n\nimport cucumber.api.java8.En;\n\
+    \npublic class StepClass8 implements En {\n\n    public StepClass8() {\n     \
+    \   Given(\"^I add 1 and 2$\", () -> {\n            System.out.println(\"Adding\
+    \ 1 and 2\");\n        });\n\n        Then(\"^I verify that sum is 3$\", () ->\
+    \ {\n            System.out.println(\"Checking that sum is 3\");\n        });\n\
+    \    }\n}\n```\n\nIf you are using Maven, you can specify the Java language level\
+    \ using below XML section in POM.XML:\n\n```xml\n<build>\n    <plugins>\n    \
+    \    <plugin>\n            <groupId>org.apache.maven.plugins</groupId>\n     \
+    \       <artifactId>maven-compiler-plugin</artifactId>\n            <version>2.3.2</version>\n\
+    \            <configuration>\n                <source>1.8</source>\n         \
+    \       <target>1.8</target>\n                <encoding>UTF-8</encoding>\n   \
+    \         </configuration>\n        </plugin>\n    </plugins>\n</build>\n```\n"
+  mdcn: "\n\n## 14. Cucumber 中的报告\n\n### 14.1 嵌入截图\n\n在进行 Selenium 自动化项目时，我们经常需要在测试失败时进行截图。Selenium\
+    \ API 通过 `takesScreenshot` 接口提供了截图的方法。\n\nCucumber 允许你将该截图嵌入 Cucumber 报告中。以下是简单的代码。\n\
+    \n```java\n@After(\"@selenium\")\npublic void killBrowser(Scenario scenario) {\n\
+    \    if (scenario.isFailed()) {\n        scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),\
+    \ \"image/png\");\n    }\n    driver.close();\n    driver.quit();\n}\n```\n\n\
+    下面的图片显示了在 Maven 项目中查找 HTML 报告的位置。\n\n![](img/01a02959ac67a9cb80992ea769fa586c_57_0.png)\n\
+    *Maven 项目中的 Cucumber 报告位置*\n\n这里是显示已捕截图的示例 HTML 报告。\n\n![](img/01a02959ac67a9cb80992ea769fa586c_58_0.png)\n\
+    *在 Cucumber 报告中嵌入截图*\n\n### 14.2 写入 Cucumber HTML 报告\n\n我们可以使用 `Scenario` 类的 `write`\
+    \ 方法写入 Cucumber HTML 报告。下面的步骤定义类说明了如何写入 HTML 报告。请注意我们是如何将 `scenario` 对象传递给 `Before`\
+    \ 方法的。\n\n```java\npackage org.softpost;\n\nimport com.google.common.primitives.Bytes;\n\
+    import cucumber.api.Scenario;\nimport cucumber.api.java.After;\nimport cucumber.api.java.Before;\n\
+    import cucumber.api.java.en.Given;\nimport cucumber.api.java.en.Then;\nimport\
+    \ junit.framework.Assert;\nimport org.openqa.selenium.OutputType;\nimport org.openqa.selenium.TakesScreenshot;\n\
+    import org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.firefox.FirefoxDriver;\n\
+    \n/**\n * Created by Sagar on 12-07-2016.\n */\n@SuppressWarnings(\"ALL\")\npublic\
+    \ class seleniumsteps {\n\n    WebDriver driver;\n    Scenario scenario;\n\n \
+    \   @Before(\"@selenium\")\n    public void launchBrowser(Scenario scenario) {\n\
+    \        driver = new FirefoxDriver();\n        this.scenario = scenario;\n  \
+    \  }\n\n    @Given(\"^I am on_the_www\\.softpost\\.org_home_page$\")\n    public\
+    \ void i_am_on_the_www_softpost_org_home_page() throws Throwable {\n        driver.get(\"\
+    http://www.softpost.org\");\n        scenario.write(\"Navigated to www.softpost.org\"\
+    );\n    }\n\n    @Then(\"^I verify_that_title_contains_tutorials$\")\n    public\
+    \ void i_verify_that_title_contains_tutorials() throws Throwable {\n        Assert.assertTrue(driver.getTitle().toLowerCase().contains(\"\
+    tutorials\"));\n    }\n\n    @Then(\"^I verify_that_title_contains_tutooorials$\"\
+    )\n    public void i_verify_that_title_contains_tutooorials() throws Throwable\
+    \ {\n        Assert.assertTrue(driver.getTitle().toLowerCase().contains(\"tutooorials\"\
+    ));\n    }\n\n    @After(\"@selenium\")\n    public void killBrowser() {\n   \
+    \     scenario.write(\"Finished scenario\");\n        if (scenario.isFailed())\
+    \ {\n            scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),\
+    \ \"image/png\");\n        }\n        driver.close();\n        driver.quit();\n\
+    \    }\n}\n```\n\n这里是示例 HTML 报告。\n\n![](img/01a02959ac67a9cb80992ea769fa586c_60_0.png)\n\
+    *写入 Cucumber HTML 报告*\n\n## 15. 使用 Lambda 表达式的 Cucumber\n\n### 15.1 在 Java 8 中使用\
+    \ Lambda 表达式 Cucumber 依赖\n\nJava 8 引入了 Lambda 表达式。Cucumber 允许你使用 Lambda 表达式编写步骤定义。你需要添加以下依赖来使用\
+    \ Lambda 表达式编写测试。\n\n```xml\n<dependency>\n    <groupId>info.cukes</groupId>\n\
+    \    <artifactId>cucumber-java8</artifactId>\n    <version>1.2.4</version>\n \
+    \   <scope>test</scope>\n</dependency>\n```\n\n确保 JDK 版本为 1.8.0_51。否则你将获得下面的错误。\n\
+    \nException in thread \"main\" cucumber.runtime.CucumberException: Failed to instantiate\
+    \ class …….CucumberException: java.lang.IllegalArgumentException: Wrong type at\
+    \ constant pool index\n\n### 15.2 使用 Lambda 表达式的 Cucumber 测试\n\n现在让我们使用 Lambda\
+    \ 表达式编写示例步骤定义。这里是示例的 feature 文件。\n\n```gherkin\nFeature: Lambda feature\nScenario:\
+    \ Verify sum\n  Given I add 1 and 2\n  Then I verify that sum is 3\n```\n\n这里是使用\
+    \ Lambda 表达式编写步骤定义的示例测试类。注意 `StepClass` 必须实现 `cucumber.api.java8.En` 接口，且步骤方法应该位于测试类的构造函数内部。你还需要确保\
+    \ Java 语言级别为 1.8。\n\n```java\npackage org.softpost;\n\nimport cucumber.api.java8.En;\n\
+    \npublic class StepClass8 implements En {\n\n    public StepClass8() {\n     \
+    \   Given(\"^I add 1 and 2$\", () -> {\n            System.out.println(\"Adding\
+    \ 1 and 2\");\n        });\n\n        Then(\"^I verify that sum is 3$\", () ->\
+    \ {\n            System.out.println(\"Checking that sum is 3\");\n        });\n\
+    \    }\n}\n```\n\n如果你使用 Maven，可以使用 POM.XML 中的以下 XML 部分来指定 Java 语言级别：\n\n```xml\n\
+    <build>\n    <plugins>\n        <plugin>\n            <groupId>org.apache.maven.plugins</groupId>\n\
+    \            <artifactId>maven-compiler-plugin</artifactId>\n            <version>2.3.2</version>\n\
+    \            <configuration>\n                <source>1.8</source>\n         \
+    \       <target>1.8</target>\n                <encoding>UTF-8</encoding>\n   \
+    \         </configuration>\n        </plugin>\n    </plugins>\n</build>\n```\n\
+    \n"
+  merge: 0
+  raw:
+  - '[PAGE 54]
+
+
+    **package**�org.softpost;
+
+
+    �
+
+
+    **import**�cucumber.api.java.en.Given;
+
+
+    **import**�cucumber.api.java.en.Then;
+
+
+    **import**�junit.framework.Assert;
+
+
+    �
+
+
+    **public**�**class**�ShareSeleniumSteps
+
+
+    {
+
+
+    �
+
+
+    SharedClass�sharedClass;
+
+
+    �
+
+
+    **public**�ShareSeleniumSteps(SharedClass�sharedClass)
+
+
+    {
+
+
+    **this**.sharedClass�=�sharedClass;
+
+
+    }
+
+
+    �
+
+
+    @Given(“^I�am�on�the�www\.softpost\.org�home�page$”)
+
+
+    **public**�**void**�i_am_on_the_www_softpost_org_home_page()�**throws**�**Throwable**
+
+
+    {
+
+
+    sharedClass.getDriver().get(“http://www.softpost.org”);
+
+
+    �
+
+
+    }
+
+
+    �
+
+
+    @Then(“^I�verify�that�title�contains�tutorials$”)
+
+
+    **public**�**void**�i_verify_that_title_contains_tutorials()�**throws**�**Throwable**
+
+
+    {
+
+
+    Assert.assertTrue(��sharedClass.getDriver().getTitle().toLowerCase().contains(“tutorials”));
+
+
+    }
+
+
+    �
+
+
+    @Then(“^I�verify�that�title�contains�tutooorials$”)
+
+
+    **public**�**void**�i_verify_that_title_contains_tutooorials()�**throws**�**Throwable**
+
+
+    {
+
+
+    Assert.assertTrue(��sharedClass.getDriver().getTitle().toLowerCase().contains(“tutooorials”));
+
+
+    }
+
+
+    �
+
+
+    }
+
+
+    �'
+  - '[PAGE 55]
+
+
+    '
+  - '[PAGE 56]
+
+
+    **14.�Reports�in�Cucumber**
+
+
+    **14.1�Embedding�the�screenshot**
+
+
+    When�working�in�a�selenium�automation�project,�we�often�need�to�take�a�screenshot�on
+
+
+    test�failure.�Selenium�API�provides�a�way�to�take�screenshot�with�the�help�of
+
+
+    takesScreenshot�interface.
+
+
+    Cucumber�allows�you�to�embed�that�screenshot�in�the�Cucumber�reports.
+
+
+    Here�is�the�simple�code.
+
+
+    @After(“@selenium”)
+
+
+    **public**�void�killBrowser(Scenario�scenario)
+
+
+    {
+
+
+    **if**�(scenario.isFailed())
+
+
+    {
+
+
+    scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),�“image/png”);
+
+
+    }
+
+
+    driver.close();
+
+
+    driver.quit();
+
+
+    }
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    Below�image�shows�where�to�find�the�HTML�report�in�Maven�project.'
+  - '[PAGE 57]
+
+
+    ![](img/01a02959ac67a9cb80992ea769fa586c_57_0.png)
+
+
+    *Cucumber�report�location�in�Maven�project*
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    �
+
+
+    **Here�is�the�sample�HTML�report**�showing�the�captured�screenshot.'
+  - '[PAGE 58]
+
+
+    ![](img/01a02959ac67a9cb80992ea769fa586c_58_0.png)
+
+
+    *Embeding�the�screenshot�in�Cucumber�report*
+
+
+    �'
+  - '[PAGE 59]
+
+
+    **14.2�Writing�to�Cucumber�HTML�reports**
+
+
+    We�can�write�to�Cucumber�HTML�report�using��write�method�of�Scenario�class.
+
+
+    Below�step�definition�class�illustrates�how�to�write�to�HTML�report.�Note�how�we�have
+
+
+    passed�scenario�object�to�Before�method.
+
+
+    **package**�org.softpost;
+
+
+    �
+
+
+    **import**�com.google.common.primitives.Bytes;
+
+
+    **import**�cucumber.api.Scenario;
+
+
+    **import**�cucumber.api.java.After;
+
+
+    **import**�cucumber.api.java.Before;
+
+
+    **import**�cucumber.api.java.en.Given;
+
+
+    **import**�cucumber.api.java.en.Then;
+
+
+    **import**�junit.framework.Assert;
+
+
+    **import**�org.openqa.selenium.OutputType;
+
+
+    **import**�org.openqa.selenium.TakesScreenshot;
+
+
+    **import**�org.openqa.selenium.WebDriver;
+
+
+    **import**�org.openqa.selenium.firefox.FirefoxDriver;
+
+
+    �
+
+
+    /**
+
+
+    �*****�Created�by�Sagar�on�12**-**07**-**2016.
+
+
+    �*/
+
+
+    @SuppressWarnings(“ALL”)
+
+
+    **public**�**class**�seleniumsteps
+
+
+    {
+
+
+    WebDriver�driver;
+
+
+    Scenario�scenario;
+
+
+    �
+
+
+    @Before(“@selenium”)
+
+
+    **public**�**void**�launchBrowser(Scenario�scenario)
+
+
+    {
+
+
+    driver�=�**new**�FirefoxDriver();
+
+
+    **this**.scenario�=�scenario;
+
+
+    }
+
+
+    �
+
+
+    @Given(“^I�am�on�the�www\.softpost\.org�home�page$”)
+
+
+    **public**�**void**�i_am_on_the_www_softpost_org_home_page()�**throws**�**Throwable**
+
+
+    {
+
+
+    driver.get(“http://www.softpost.org”);'
+  - '[PAGE 60]
+
+
+    scenario.write(“Navigated�to�www.softpost.org”);
+
+
+    }
+
+
+    �
+
+
+    @Then(“^I�verify�that�title�contains�tutorials$”)
+
+
+    **public**�**void**�i_verify_that_title_contains_tutorials()�**throws**�**Throwable**
+
+
+    {
+
+
+    Assert.assertTrue(driver.getTitle().toLowerCase().contains(“tutorials”));
+
+
+    }
+
+
+    �
+
+
+    @Then(“^I�verify�that�title�contains�tutooorials$”)
+
+
+    **public**�**void**�i_verify_that_title_contains_tutooorials()�**throws**�**Throwable**
+
+
+    {
+
+
+    Assert.assertTrue(driver.getTitle().toLowerCase().contains(“tutooorials”));
+
+
+    }
+
+
+    �
+
+
+    @After(“@selenium”)
+
+
+    **public**�**void**�killBrowser()
+
+
+    {
+
+
+    scenario.write(“Finished�scenario”);
+
+
+    **if**�(scenario.isFailed())
+
+
+    {
+
+
+    scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),�“image/png”);
+
+
+    }
+
+
+    driver.close();
+
+
+    driver.quit();
+
+
+    }
+
+
+    }
+
+
+    �
+
+
+    �
+
+
+    **Here�is�the�sample�HTML�report.**
+
+
+    ![](img/01a02959ac67a9cb80992ea769fa586c_60_0.png)
+
+
+    *Writing�to�cucumber�HTML�report*'
+  - '[PAGE 61]
+
+
+    �'
+  - '[PAGE 62]
+
+
+    '
+  - '[PAGE 63]
+
+
+    **15.�Cucumber�using�Lambda�Expressions**
+
+
+    **15.1�Cucumber�dependency�for�using�Lambda�expressions�in�Java�8**
+
+
+    In�Java�8,�Lambda�expressions�were�introduced.�Cucumber�allows�you�to�write�step
+
+
+    definitions�using�Lambda�expressions.
+
+
+    You�need�to�add�below�dependency�to�write�tests�using�Lambda�expressions.
+
+
+    <dependency>
+
+
+    <groupId>info.cukes</groupId>
+
+
+    <artifactId>cucumber-java8</artifactId>
+
+
+    <version>1.2.4</version>
+
+
+    <scope>test</scope>
+
+
+    </dependency>
+
+
+    Ensure�that�JDK�version�is�1.8.0_51.�Otherwise�you�will�get�below�error.
+
+
+    Exception�in�thread�“main”�cucumber.runtime.CucumberException:�Failed�to�instantiate
+
+
+    class�…….CucumberException:�java.lang.IllegalArgumentException:�Wrong�type�at
+
+
+    constant�pool�index
+
+
+    �'
+  - '[PAGE 64]
+
+
+    **15.2�Cucumber�test�using�Lambda�expressions**
+
+
+    Now�let�us�write�sample�cucumber�step�definitions�using�Lambda�expressions.
+
+
+    Here�is�the�sample�feature�file.
+
+
+    Feature:�Lambda�feature
+
+
+    ��Scenario:�Verify�sum
+
+
+    Given�I�add�1�and�2
+
+
+    Then�I�verify�that�sum�is�3
+
+
+    Here�is�the�sample�Test�Class�using�Lambda�expressions�to�write�the�step�definitions.�Note
+
+
+    that�StepClass�must�implement�cucmber.api.java8.En�interface�and�step�methods�should�be
+
+
+    inside�the�constructor�of�test�class.��You�also�need�to�ensure�that�Java�language�level
+
+
+    should�be�1.8.
+
+
+    **package**�org.softpost;
+
+
+    �
+
+
+    **import**�cucumber.api.java8.En;
+
+
+    �
+
+
+    **public**�**class**�StepClass8�**implements**�En
+
+
+    {
+
+
+    **public**�StepClass8()
+
+
+    {
+
+
+    Given(“^I�add�1�and�2$”,�()�->�{
+
+
+    **System**.out.println(“Adding�1�and�2”);
+
+
+    });
+
+
+    �
+
+
+    Then(“^I�verify�that�sum�is�3$”,�()�->����������{
+
+
+    **System**.out.println(“Checking�that�sum�is�3”);
+
+
+    });
+
+
+    }
+
+
+    }
+
+
+    If�you�are�using�Maven,�you�can�specify�the�Java�language�level�using�below�XML�section
+
+
+    in�POM.XML
+
+
+    <build>
+
+
+    <plugins>
+
+
+    <plugin>
+
+
+    <groupId>org.apache.maven.plugins</groupId>
+
+
+    <artifactId>maven-compiler-plugin</artifactId>
+
+
+    <version>2.3.2</version>
+
+
+    <configuration>
+
+
+    <source>1.8</source>'
+  - '[PAGE 65]
+
+
+    <target>1.8</target>
+
+
+    <encoding>UTF-8</encoding>
+
+
+    </configuration>
+
+
+    </plugin>
+
+
+    </plugins>
+
+
+    </build>'
