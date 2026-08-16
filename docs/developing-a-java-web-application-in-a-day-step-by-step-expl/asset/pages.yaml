@@ -1,0 +1,3874 @@
+- img_proc: true
+  md: '# Developing a Java Web Application in a Day
+
+
+    Step by step explanations with Eclipse Mars, Tomcat and MySQL
+
+
+    Luciano Manelli
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Developing a Java Web Application in a Day
+
+
+    Step by step explanations with Eclipse Mars, Tomcat and MySQL
+
+
+    Luciano Manelli'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Copyright – 2016 Luciano Manelli
+
+    All rights reserved'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Author
+
+
+    Luciano Manelli was born in 1975 in Taranto (Italy). He graduated in Electronic
+    Engineering at the Polytechnic of Bari at 24 years of age and then he served as
+    an officer in the Navy. In 2012, he received a PhD in Computer Science from the
+    Department of Informatics, University of Bari - Aldo Moro. In the PhD, he analyzed
+    Grid Computing and published the results in international publications. He is
+    contract Professor at the Polytechnic of Bari (Course: Foundations of Computer
+    Science), and at the University of Bari - Aldo Moro (Course: Programming for Web).
+    The author has fifteen years'' experience, working in the field of computer science
+    and information systems and he has also experiences about the subject at Polytechnic
+    of Bari, at University of Bari – Aldo Moro and at professional courses. He is
+    professionally certified engineer, and in 2014 he started working for the Taranto
+    Port Authority, after working for 13 years for InfoCamare SCPA. He wrote the book
+    “Fundamentals of Modern Information Technology” (Italian Edition – “Fondamenti
+    di Informatica Moderna” – publisher ARACNE) in 2014 and the book “Web Programming
+    in Java” (Italian Edition – “Programmazione per il Web” – publisher ARACNE) in
+    2015.
+
+
+    Contacts:
+
+
+    moderninformatics75@gmail.com
+
+
+    it.linkedin.com/in/lucianomanelli'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Preface
+
+
+    This is a condensed version of Chapter VI (Web Application with Java and Eclipse)
+    from the book “Web Programming in Java” (Italian Edition – “Programmazione per
+    il Web” – publisher ARACNE.
+
+
+    This book has been written for students and for the professional, and it can serve
+    as a starting point for anyone who is beginning the study of Web Application in
+    Java for the first time. In the following text, Servlet, JSP, JavaBean and simple
+    DAO are accurately analyzed and implemented in Java, with a clear project evolution:
+    from the configuration of Eclipse Mars, JDK, MySQL and Tomcat to the execution
+    and the testing on a browser and the creation of the final package for the distribution
+    on other machines. Everything is integrated with explanations, java codes and
+    screenshots to have a step by step evolution of the web application. Let us try
+    to do this in a day!
+
+
+    I think that everyone has to always follow their own dreams and fight for them
+
+
+    Luciano Manelli, “Fondamenti di Informatica Moderna”, ARACNE, 2014.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# 1. Index
+
+
+    +   Index
+
+    2. Introduction
+
+    2.1 MVC – Model View Controller
+
+    2.2 Web Application, Servlet and JSP
+
+    3. How to install and configure MySQL 5.6 Community
+
+    4. Database Analysis, Design and Implementation for Web Application
+
+    4.1 How to create a MySQL Data Base for Web Application
+
+    4.2 MySQL Logical Schema and Reverse Engineer DataBase
+
+    5. How to configure Eclipse MARS (JDK and Tomcat)
+
+    5.1 How to configure JDK in Eclipse
+
+    5.2 How to configure Tomcat 8.0 in Eclipse
+
+    6. How to create a Dynamic Web Project in Eclipse
+
+    6.1 How to create a Servlet 3.X and run a project in Eclipse
+
+    6.2 How to create a Servlet 3.X in Eclipse
+
+    6.3 How to create a Class in Eclipse
+
+    7. Implementation of the Java Project for Web Application
+
+    7.1 How to write and manage forms; the Eclipse Java Project runs on a browser
+
+    7.2. JavaBean
+
+    7.3 Request Redirect vs Dispatcher
+
+    7.4. Request vs Session
+
+    7.5 Connection to MySQLDataBase, Commit and Roll-Back
+
+    7.6 Examples of error handling in java Web Application
+
+    8. Web Application ready for the distribution on Tomcat
+
+    9. Conclusion
+
+    10. Bibliography
+
+    11. Index of Figures'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# 2 Introduction
+
+
+    The study of web application plays the most important role in web programming
+    and it can be considered the cornerstone of companies’ technology. In fact, all
+    the modern technology both in private and government companies is based on automation
+    systems, both in terms of lower costs (one application on a server costs less
+    than n applications on individual PCs) and in terms of sharing information in
+    internet, intranet and extranet companies’ web site.
+
+
+    The aim of this text is to learn how to set up a web project in Java technology.
+    We shall use Java because it is free, standard and there are many (free) libraries
+    on the web. We shall create the database in MySQL, and implement all the procedures
+    to develop a web application using Eclipse, analyzing many issues in a clear and
+    simple way, providing the principles for developing complex applications. We first
+    need to download the necessary (free) software:
+
+
+    +   * Eclipse MARS;
+
+    * MySQL;
+
+    * Driver MySQL;
+
+    * Tomcat 8.0.
+
+
+    To follow this dissertation is only necessary to have minimum skills on algorithms,
+    programming, java, html and database.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# 2.1 MVC – Model View Controller
+
+
+    The more used pattern in application development is the MVC (Model-View-Controller).
+    This pattern was described by Xerox, for the first time, in several publications
+    in the late late''. The most important aspect is the separation into three distinct
+    components:
+
+
+    +   - Model: it is related to the application logic and persistence of data manipulation;
+
+    - View: it is related to the presentation, that is the interface with the end
+    user;
+
+    - Controller: it is related to the processing of requests.
+
+
+    This level of separation is important both for reasons of stability and security
+    of the application.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 2.2 Web Application Servlet and JSP
+
+
+    A Web Application consists of a Servlet, pages html/xhtml and jsp, classes, and
+    other components, which can be installed and run inside a container (Application
+    Server), which presents a JVM (Java Virtual Machine). A web application is mapped
+    through a hierarchy of directories on the file system and usually exported as
+    jar or ear. Assuming that the root folder of our project is company_management,
+    it will be deployed to the webapps directory of Tomcat. In the root may be other
+    directories, including the WEB-INF directory (accessible only by the application
+    server), which contains the web.xml, the compiled classes folder, and the libraries
+    folder.
+
+
+    We shall use Tomcat as Web Application Server: it is able to handle the latest
+    versions of the Servlet (from 2.5 to 3.1) and JSP pages (also EJB, or frameworks
+    as Struts and Web Services Axis).
+
+
+    JSP (Java Server Page) technology allows us to easily create html/xhtml pages,
+    which have both static and dynamic components (abstraction of servlets). The dynamic
+    code in Java is contained in <% and precompiled before sending the response to
+    the client.
+
+
+    Servlets are Java classes, which run in Servlet Container (e.g. Tomcat or JBoss)
+    and are exposed as web resources. These classes process data from the html form
+    and handle requests and responses for one or more clients. The 3.x standard (in
+    Java EE standard) is the latest version of the Servlet specifications (JSR 315).
+    A servlet corresponds to the Controller in the MVC architecture, and it implements
+    many complex functionality. We can use a single servlet to handle different behaviors
+    or many servlet for each behavior. We shall use in the text a single Servlet,
+    which presents different behaviors.
+
+
+    Briefly, a client sends a request to a servlet (in a web application server),
+    the Servlet gets instantiated (only the first time), starts a thread to handle
+    the communication and builds the response which is forwarded to the client; if
+    the Servlet has already been loaded, it will create an additional thread associated
+    to the client. The Servlet has no algorithmic code inside, but it is delegated
+    to other classes. Request and Response are managed by the interfaces javax.servlet.HttpServletRequest
+    (which obtains information from the client environment) and javax.servlet.HttpServletResponse
+    (which sends response to the client). Another component (javax.servlet.ServletContext)
+    allows to find the reference to the context of an application.
+
+
+    Servlets have a life-cycle characterized by the following elements and methods:
+
+
+    +   - initialization of the servlet (method init()), called, only the first time,
+    from the Servlet Engine;
+
+    - response to POST requests (method doPost(HttpServletRequest req, HttpServletResponse
+    response));
+
+    - response to GET requests (method doGet(HttpServletRequest req, HttpServletResponse
+    response));
+
+    - destruction of the servlet context (method destroy()).'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'Servlet 3.X represents the state of the art of the Servlet technology. The
+    use of annotations is one of the most important innovation within a web application:
+    it is a way of adding metadata in the servlet source code as an alternative to
+    XML technology contained in web.xml.
+
+
+    We shall create a single servlet, which will have different behaviors depending
+    on parameters from data entry forms. The actions will be consequences of method
+    calls (method doGet or doPost).
+
+
+    After a preliminary analysis of the hypothetical requirements of a customer, for
+    example, we suppose to develop a web application (called Company_Management) with
+    the aim to save and manage a number of companies and their employees.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# 3. How to install and configure MySQL 5.6 Community
+
+
+    Let us start! It is about nine am!
+
+    MySQL (now Oracle MySQL) is a powerful relational database (RDBMS), which works
+    on both Linux/Unix and Windows. It is very useful for the creation and the management
+    of Database dor web applications. It is a free software and, therefore, is used
+    both as a database for simple sites and for professional applications (for example
+    Literay). The following steps explain the installation and the configuration of
+    MySQL on Windows OS.
+
+
+    Now, we shall install MySQL!
+
+    Go to the Oracle site http://www.mysql.it/, and download these two main elements:
+
+
+    +   - MySQL Community Server (http://dev.mysql.com/downloads/mysql/): open source
+    DB;
+
+    - MySQL Workbench (http://dev.mysql.com/downloads/bench/): open source environment
+    used for the creation and management of the DB (schemas, tables, etc.).
+
+
+    We shall choose the download installations for Windows!
+
+    The downloaded files are:
+
+
+    +   - server: mysql-installer-community-5.6.21.1.msi;
+
+    - workbench: mysql-workbench-community-6.2.3-winx64.msi.
+
+
+    Now, step by step, we shall install the server and the workbench (I tested them
+    on Windows 8 and Windows 7)!
+
+
+    First, Licence.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_11_0.png)'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# # License Agreement
+
+
+    To proceed you must accept the Oracle Software License Terms.
+
+
+    > GNU GENERAL PUBLIC LICENSE
+
+    Version 2, June 1991
+
+
+    Copyright (C) 1988, 1991 Free Software Foundation, Inc.
+
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+
+    Everyone is permitted to copy and distribute verbatim copies
+
+    of this document, but that it is not allowed.
+
+
+    The licenses for most software are designed to take away your freedom to share
+    and change. By contrast, the GNU General Public License is intended to guarantee
+    your freedom to share and change freedom—to make sure the software is free for
+    all its users. The General Public License applies to most of the Free Software
+    Foundation''s software and to any other program whose authors commit to using
+    it. (Some other Free Software software is covered by the GNU Library Lesser Public
+    License instead.) You can also apply it to your programs,
+
+
+    When we speak of free software, we are referring to freedom, not price. Our General
+    Public Licenses are designed to make sure that you have the freedom to redistribute
+    or modify free software for this
+
+
+    +   - I accept the license terms
+
+
+    Figure 2. MySQL Server Installation, license.
+
+
+    # # Choosing a Setup Type
+
+
+    Please select the Setup Type that suits your use case.
+
+
+    +   - Developer Default: Installs all products needed for MySQL development purposes.
+
+    - Server only: Installs only the MySQL Server products.
+
+    - Client only: Installs only the MySQL Client products, without a server.
+
+    - Full: Installs all included MySQL products and features.
+
+    - Custom: Manually select the products that should be installed on the system.
+
+
+    Setup Type Description: Installs the MySQL Server and the tools required for MySQL
+    application development. This is useful if you intend to develop applications
+    for an existing server.
+
+    This Setup Type includes:
+
+    * MySQL Server
+
+    * MySQL Workbench
+
+    The GUI application to develop for and manage the service.
+
+    * MySQL for Excel
+
+    Excel plug-in to easily access and manipulate MySQL data.
+
+    * MySQL for Visual Studio
+
+    To work with the MySQL Server from VS.
+
+    * MySQL Connections
+
+    Connector/Net, Java, C/C++, ODBC and others.
+
+
+    Figure 3. MySQL Server Installation – setup type.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Then the installation starts.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_13_0.png)
+
+
+    The last step.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_13_1.png)'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Figure 5. MySQL Server Installation – installed.
+
+
+    Now we shall configure some parameters (i.e. port number 3306).
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_14_0.png)
+
+
+    # Figure 6. MySQL Server Installation – configuration.
+
+
+    The wizard asks for the administrator password setting. We shall use simply “root”
+    for development environment.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# MySQL Installer
+
+
+    # Accounts and Roles
+
+
+    Root Account Password
+
+    Enter the password for the root account. Please remember to store this password
+    in a secure place.
+
+
+    MySQL Root Password:
+
+
+    Repeat Root Password:
+
+
+    Password Strength: Weak
+
+
+    # MySQL User Accounts
+
+
+    Create MySQL user accounts for your users and applications. Assign a role to the
+    user that consists of a set of privileges.
+
+
+    | MySQL Username | User Role | |
+
+    |---|---||
+
+    | | | Add User |
+
+    | | | Delete |
+
+
+    Figure 7. MySQL Server Installation – password setting.
+
+
+    Then we shall set MySQL as Windows Service.
+
+
+    # MySQL Installer
+
+
+    # Windows Service
+
+
+    +   - Configure MySQL Server as a Windows Service
+
+
+    Windows Service Details
+
+    Please specify a Windows Service to be used for this MySQL Server instance. A
+    unique name is required for each instance.
+
+
+    Windows Service Name: MySQL
+
+
+    +   - Start the MySQL Server at System Startup
+
+
+    Run Windows Service as...
+
+    MySQL Server needs to run under a user account. Based on the security requirements
+    of your system you need to pick one of the options below.
+
+
+    +   - Standard System Account
+
+    Recommended for most scenarios.
+
+    - Custom User
+
+    An existing user account can be selected for advanced scenarios.
+
+
+    Figure 8. MySQL Server Installation – Windows Service.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'Al last, the previous configurations are applied.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_16_0.png)
+
+
+    The wizard tests the server connection.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_16_1.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'Figure 10. MySQL Server Installation – test server connection.
+
+
+    Last installation steps.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_17_0.png)
+
+
+    Figure 11. MySQL Server Installation – last steps.
+
+
+    The end.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_17_1.png)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'Figure 12. MySQL Server Installation – end.
+
+
+    Now, we shall install the workbench, with the Wizard.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_18_0.png)
+
+
+    Figure 13. MySQL Workbench Installation.
+
+
+    We shall choose the complete installation.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_18_1.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_19_0.png)
+
+
+    The installation starts.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_19_1.png)
+
+
+    The end.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_20_0.png)
+
+
+    Figure 16. MySQL Workbench Installation - end.
+
+
+    Finally, the workbench is running.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_20_1.png)
+
+
+    Figure 17. Workbench environment.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# 4. Database Analysis, Design and Implementation for Web Application
+
+
+    Now, we shall design the DB “Company_Management”, in order to save on DB and manage
+    a set of companies and their employees.
+
+
+    The preliminary analysis leads us to define two entities: Company and Employee:
+    a company can have from 0 to n employees and an employee may be employed to only
+    one company. A company has the following (simple) fields:
+
+
+    +   - idcompany: identification number (for example number) of the company (key);
+
+    - company_name: name of the company;
+
+    - phone: phone number;
+
+    - email: company email;
+
+    - insert date.
+
+
+    The employee (Employee) will instead have the following fields:
+
+
+    +   - idemployee: identification number (for example Social Security Number (SSN))
+    of the employee (key);
+
+    - surname;
+
+    - name;
+
+    - badge or serial number;
+
+    - insert date.
+
+
+    Moreover, we also need to have relationships between these two tables: in fact
+    an employee works for a company and a company has many employees. So, the Employee
+    entity will have a foreign key linked to the attribute idcompany of the the Company
+    entity.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 4.1. How to create a MySQL Data Base for Web Application
+
+
+    Now it is possible to create our Data Base. We shall connect to the Server using
+    the Workbench.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_22_0.png)
+
+
+    Figure 18. Connection to the Server using the Workbench.
+
+
+    Afterwards, the screen will show the standard parameters for connection. Click
+    okay!
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_22_1.png)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'Figure 19. Parameters for connection.
+
+
+    Now, set to “root” the password and confirm!
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_23_0.png)
+
+
+    Figure 20. Connection to the Server – password setting.
+
+
+    Now the workbench environment is ready, and we can start.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_23_1.png)
+
+
+    Figure 21. Workbench environment.
+
+
+    Now we shall create a new schema. Go to “SCHEMAS” area, and click the right mouse
+    button.
+
+
+    Now, we shall select “Create Schema…” on the context menu.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_24_0.png)
+
+
+    Figure 22. Workbench, how to create a new Schema.
+
+
+    Now we shall create the Schema: “company_management”.
+
+
+    Insert “company_management” in the name and click OK!
+
+
+    Then, the script is executed.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# MySQL Workbench
+
+
+    Query 1 company_management - Schema
+
+
+    The name of the schema. It is recommended to use should be avoided and be replaced
+    by _
+
+
+    Name: company_management
+
+
+    Refactor model, changing all references found in view functions from the old schema
+    to new one.
+
+
+    Collation: Server Default
+
+
+    Specifies which charset/collations the schema''s tables setting. Common choices
+    are Latin1 or UTF8.
+
+
+    # Apply SQL Script to Database
+
+
+    Review SQL Script Apply SQL Script
+
+
+    Review the SQL Script to be Applied on the Database
+
+
+    Online DDL Algorithm: Default Lock Type: Default
+
+
+    ```
+
+    CREATE SCHEMA `company_management`;
+
+    ```
+
+
+    Back Apply Cancel'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "![](img/112513ff21bfadb0111c509b6257bbec_26_0.png)\n\nFigure 23. Workbench,\
+    \ how to create a new Schema – creation script execution.\n\nOnce we create the\
+    \ DB, we shall create the tables, which are:\n\n+   - Company table;\n- Employee\
+    \ table.\n\nThe simplified design will be done in tabular form according to the\
+    \ conceptual and logical design (not detailed in the text).\n\nSchema: company_management\n\
+    \n| Field Name | Lenght | Type | Constraints |\n| --- | --- | --- | --- |\n| idcompany\
+    \ | 16 | VARCHAR | Primary Key\n Not null |\n| company_name | 45 | VARCHAR | Not\
+    \ Null |\n| phone | 16 | VARCHAR | Not Null |\n| email | 45 | VARCHAR | Not Null\
+    \ |\n| date_ins | - | DATE | Not Null |"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Table: Employee
+
+
+    | Field Name | Lenght | Type | Constraints |
+
+    |---|---|---|--|
+
+    | idemployee | 16 | VARCHAR | Primary Key Not null |
+
+    | name | 45 | VARCHAR | Not Null |
+
+    | surname | 45 | VARCHAR | Not Null |
+
+    | badge | - | INT(10) | Not Null |
+
+    | FK_company | 16 | VARCHAR | Not Null Foreign Key: idcompany |
+
+    | date_ins | - | DATE | Not Null |
+
+
+    Now we shall create the tables.
+
+
+    Select our schema, then click the right mouse button on the tables.
+
+
+    Now, we shall select “Create Table...” on the context menu.
+
+
+    Insert “company” in the Table Name!
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_27_0.png)
+
+
+    > Figure 24. Workbench, how to create a table.
+
+
+    Now, we shall create fields and define key fields (PK) and non-zero fields (NN).
+    At first, we can create the key field “idcompany” and the field “company_name”.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_28_0.png)
+
+
+    Finally, the script is executed.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_28_1.png)'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Apply SQL Script to Database
+
+
+    Review SQL Script
+
+
+    Apply SQL Script
+
+
+    Applying SQL script to the database...
+
+
+    The following tasks will now be executed. Please monitor the execution. Press
+    Show Logs to see the execution logs.
+
+
+    +   - Execute SQL Statements
+
+
+    SQL script was successfully applied to the database.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_29_0.png)
+
+
+    Once the table is created, we can edit it using the “screwdriver” right icon from
+    the left menu of the table.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_29_1.png)
+
+
+    You can also display a table with its values and run queries, using the “table”
+    right icon from the left menu of the table.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# AGEMENT\n\nServer Status\nClient Connections\nUsers and Privileges\nStatus\
+    \ and System Variables\nData Export\nData Import/Restore\n\n# INCE\n\nStartup\
+    \ / Shutdown\nServer Logs\nOptions File\n\n# ORMANCE\n\nDashboard\nPerformance\
+    \ Reports\nPerformance Schema Setup\n\n# MAS\n\nter objects\n\n+   - company_management\n\
+    \  company\n    Columns\n    Indexes\n    Foreign Keys\n\nnation\n: company_management\n\
+    \n![](img/112513ff21bfadb0111c509b6257bbec_30_0.png)\n\nNow, we can complete the\
+    \ table defining all fields (idcompany, company_name, email, phone, date_ins).\
+    \ The following figure shows the table “company”.\n\nAGEMENT\nServer Status\n\
+    Client Connections\nUsers and Privileges\nStatus and System Variables\nData Export\n\
+    Data Import/Restore\n\n# INCE\n\nStartup / Shutdown\nServer Logs\nOptions File\n\
+    \n# ORMANCE\n\nPerformance Reports\nPerformance Schema Setup\n\n# MAS\n\nter objects\n\
+    \n+   - company_management\n  company\n    Columns\n\n| Column Name | Datatype\
+    \ | PK | UK | NN | U | BI | AI | Default |\n|---|---|---|---|---|---|---|---|---||\n\
+    | idcompany | VARCHAR(45) | | | | | | | |\n| company_name | VARCHAR(45) | | |\
+    \ | | | | |\n| phone | VARCHAR(45) | | | | | | | |\n| email | VARCHAR(45) | |\
+    \ | | | | | |\n| date_ins | DATE | | | | | | | |\n\n![](img/112513ff21bfadb0111c509b6257bbec_30_1.png)\n\
+    \nNow, we can create the table “employee” (idemployee, name, surname, badge, date_ins\
+    \ and the foreign key to the FK_company). The following figure shows the table\
+    \ “employee”."
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_31_0.png)
+
+
+    Now, it is necessary to define constraints between the employee and his company.
+    Define then the FK_company as a foreign key, setting the tab “Foreign Keys!”
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_31_1.png)'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "Table Name: employee Schema: company_management\nCollation: utf8 - default\
+    \ collation Engine: InnoDB\n\n| Foreign Key Name | Referenced Table | Column |\
+    \ Referenced Column | Foreign Key Options |\n|---|---|---|---|---||\n| FK_company\
+    \ | company_management | employee | | On Update: NC |\n| | | name | | |\n| | |\
+    \ surname | | |\n| | | FK_company | idcompany | On Delete: NC |\n| | | date_ins\
+    \ | | Skip in SC |\n\n| Columns | Indexes | Foreign Keys | Triggers | Partitioning\
+    \ | Options |\n\nFigure 32. Workbench, definition of foreign key.\n\nApply SQL\
+    \ Script to Database\n\n| Review SQL Script \nApply SQL Script | | Review the\
+    \ SQL Script to be Applied on the Database |\n|---|---||\n| | Online DDL: Default\
+    \ | Lock Type: Default |\n| | Algorithm: | |\n| ALTER TABLE 'company_management',\
+    \ 'employee'; |\n| ADD INDEX FK_company_idx (FK_company, ASC); |\n| ALTER TABLE\
+    \ 'company_management', 'employee' |\n| ADD CONSTRAINT 'FK_company' |\n| FOREIGN\
+    \ KEY (FK_company) |\n| REFERENCES 'company_management', 'company' ('idcompany')\
+    \ |\n| ON DELETE NO ACTION; |\n| ON UPDATE NO ACTION; |\n\nFigure 33. Workbench,\
+    \ how to create a Foreign Key – creation script execution.\n\nIf we wanted, we\
+    \ could also export scripts for creating diagrams and tables with a simple operation\
+    \ (right click on the schema or table, Copy to Clipboard, Create Statement)."
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_33_0.png)
+
+
+    The exported script of DATABASE `company_management`
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_33_1.png)
+
+
+    The exported scripts of tables are:
+
+
+    ```
+
+    CREATE TABLE `company` (
+
+    `idcompany` varchar(16) NOT NULL,
+
+    `company_name` varchar(45) NOT NULL,
+
+    `phone` varchar(16) NOT NULL,
+
+    `email` varchar(45) NOT NULL,
+
+    `date_ins` date NOT NULL,
+
+    PRIMARY KEY (`idcompany`)
+
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+    ```
+
+
+    ```
+
+    CREATE TABLE `employee` (`
+
+    ```'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '```
+
+    `employee` varchar(16) NOT NULL,
+
+    `name` varchar(45) NOT NULL,
+
+    `surname` varchar(45) NOT NULL,
+
+    `code` varchar(16) NOT NULL,
+
+    `FK_company` varchar(16) NOT NULL,
+
+    `date_ins` date NOT NULL,
+
+    PRIMARY KEY (`employee`),
+
+    KEY `FK_company_id` (`FK_company`),
+
+    CONSTRAINT `FK_company` FOREIGN KEY (`FK_company`) REFERENCES `company` (`idcompany`)
+    ON DELETE NO ACTION ON UPDATE NO ACTION
+
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+    ```'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# 4.2 MySQL Logical Schema and Reverse Engineer DataBase
+
+
+    Finally, with Workbench we can start from the definition of the tables (after
+    the conceptual and logical analysis), or we can start from the definition of the
+    entity-relationship diagram and then get the tables. Finally, we can obtain the
+    graphic design of the DB from existing tables with the reverse engineer tool.
+    In the last case, we can simply go to the main page of the Workbench and start
+    from the tab "Database" of the "Reverse Engineer ..." option.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_35_0.png)
+
+
+    Figure 36. Workbench, reverse engineer.
+
+
+    Then just follow the instructions of the wizard.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_35_1.png)'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'Figure 37. Workbench, reverse engineer: connection to the DB.
+
+
+    After selecting the DB, enter user / password, and, finally select the scheme.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_36_0.png)
+
+
+    Figure 38. Workbench, reverse engineer: user/password.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Reverse Engineer Database
+
+
+    # Connect to DBMS and fetch Information
+
+
+    The following tasks will now be executed. Please monitor the execution.
+
+    Show Logs to see the execution logs.
+
+
+    +   - Connect to DBMS
+
+    - Retrieve Schema List from Database
+
+    - Check Common Server Configuration Issues
+
+
+    Execution Completed Successfully
+
+    Fetch finished.
+
+
+    # Reverse Engineer Database
+
+
+    # Select Schemas to Reverse Engineer
+
+
+    Select the schemas below you want to include:
+
+
+    +   - company_management
+
+
+    # Reverse Engineer Database
+
+
+    # Retrieve and Reverse Engineer Schema Objects
+
+
+    The following tasks will now be executed. Please monitor the execution.
+
+    Show Logs to see the execution logs.
+
+
+    +   - Retrieve Objects from Selected Schemata
+
+    - Check Results
+
+
+    Retrieval Completed Successfully
+
+    Finished.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Reverse Engineer Database
+
+
+    Select Objects to Reverse Engineer
+
+
+    | Import MySQL Table Objects | Show Filter |
+
+    | 2 Total Objects, 2 Selected |
+
+
+    # Reverse Engineer Database
+
+
+    Reverse Engineering Progress
+
+
+    The following tasks will now be executed. Please monitor the execution. Press
+    Show Logs to see the execution logs.
+
+
+    +   - Reverse Engineer Selected Objects
+
+    - Place Objects on Diagram
+
+
+    Operation Completed Successfully
+
+    Finished parsing MySQL SQL script.
+
+
+    # Reverse Engineer Database
+
+
+    Reverse Engineering Results
+
+
+    Summary of Reverse Engineered Objects:
+
+    - 2 tables from schema ''company_management''
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_38_0.png)
+
+
+    Therefore, we can then get the logical schema, to print or save.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_39_0.png)
+
+
+    Figure 40. Workbench, tables'' schema of reverse engineering.
+
+
+    The system also automatically inserts the default indexes (primary and foreign
+    keys).'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_40_0.png)
+
+
+    Figure 41. Workbench, Workbench, tables'' schema of reverse engineering with indexes.
+
+
+    We have just finished! It is about ten am!'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# 5. How to configure Eclipse MARS (JDK and Tomcat)
+
+
+    We need to download the appropriate IDE for working in Java. The most popular
+    and free IDE is Eclipse: its latest version (Mars) is available at https://www.eclipse.org.
+
+
+    Now, we shall download the following zipped file: eclipse-mars-win32-x86_64.zip.
+    After downloading it, we do not need to install Eclipse, but it is only necessary
+    to unzip the compressed file (I usually choose the directory C:/). The unzipped
+    files are present in the extracted folder “eclipse”, which we can rename into
+    “mars” (the name is irrelevant, but may be useful to distinguish Eclipse versions,
+    we can have many versions of Eclipse on our machines). This will be our working
+    folder of the IDE. Eclipse simply run by simply double-clicking the eclipse.exe
+    executable file.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_41_0.png)
+
+
+    Figure 42. Eclipse, files in the extracted folder Mars.
+
+
+    As soon as we start the executable file, the IDE asks what is the workspace (i.e.
+    the project folder): I usually change the standard directory and choose the directory
+    C: /.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_41_1.png)
+
+
+    Figure 43. Eclipse, workspace.
+
+
+    The initial screen is the following one.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_42_0.png)
+
+
+    Figure 44. Eclipse, initial screen.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# 5.1. How to configure JDK in Eclipse environment, but we have to install
+    and configure the JDK - Java SE Development Kit. So, download the latest version
+    from:
+
+
+    We can work with Java in Java
+
+    http://www.oracle.com/technnetwork/java/javase/downloads/index.html
+
+
+    I choose to download the executable file for Windows: jdk-8u65-windows-x64.exe.
+
+
+    So we shall click the download button and accept the license, and we start to
+    download the chosen version of JDK.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_43_0.png)
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_43_1.png)
+
+
+    Figure 45, JDK Download,'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'Now, install the executable file! Then we shall configure the IDE, from window
+    - preferences - JAVA / Installed jre and select (or search on the PC) the downloaded
+    jdk.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_44_0.png)
+
+
+    Figure 46. Eclipse, JDK configuration.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# 5.2 How to configure Tomcat 8.0 in Eclipse
+
+
+    All applications “run” on a server. In this case, we shall use Tomcat, which is
+    one of the most volatile server. So, download the latest version from:
+
+
+    http://tomcat.apache.org/
+
+
+    I choose to download the following zipped file for Windows: apache-tomcat-8.0.14-windows-x86.zip.
+    After downloading it, we do not need to install Tomcat, but it is only necessary
+    to unzip the compressed file (I usually choose the directory C:/). The unzipped
+    files are present in the extracted folder “apache-tomcat-8.0.14”, which will be
+    the distribution/ operation /delivery folder. We shall also use this folder of
+    Tomcat and its instances for the development of our web application. A very business
+    situation includes different environments (such as development, test and distribution/operation/delivery),
+    so it is always necessary to maintain consistency between the server versions
+    to prevent bugs or different behaviors.
+
+
+    It is necessary to configure the server in the Eclipse IDE. To go to tab “server”,
+    automatically it asks the configuration of a new server. We can click on that
+    link, select the Tomcat server 8, and follow the wizard required.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_45_0.png)
+
+
+    Figure 47. Eclipse, new server configuration.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_46_0.png)
+
+
+    Figure 48. Eclipse, Tomcat selection.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_47_0.png)
+
+
+    Figure 49. Eclipse, Tomcat server and installed JRE.
+
+
+    We can configure a server from File – New – Server.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_48_0.png)
+
+
+    After configuring the server, we can go on the tab “server”, the server will appear
+    just configured. We shall now click the right mouse button, open the context menu
+    and start the server.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_49_0.png)
+
+
+    Figure 51. Eclipse, how to start the server.
+
+
+    If we go on the browser, we can see the Tomcat server that is activated by typing
+    the following URL in the address bar (URL of the server followed by the name of
+    the application):
+
+
+    http://localhost:8080/ Web_Application_name'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# 6. How to create a Dynamic Web Project in Eclipse
+
+
+    It is about ten thirty am!
+
+
+    Now we shall start the steps for creating a Java web application.
+
+    Go on the File menu and select “New” and then “Dynamic Web Project”.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_50_0.png)
+
+
+    Figure 52. Eclipse, how to create a web project.
+
+
+    The related wizard starts. We shall enter the name of the project “company_management”
+    and leave unchanged the other parameters.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_51_0.png)
+
+
+    Figure 53. Eclipse, configuration of a web project.
+
+
+    In particular:
+
+
+    Project name: it must be a valid identifier for the project for cross-platforms,
+    so it is
+
+    advisable to using “lower-case” name, with alphanumeric elements;
+
+
+    +   - Use default location: it defines a directory where creating the web project
+    (we
+
+    can leave to default, or specify a new folder);
+
+    - Target Runtime: defines the application server to be used where deploying the
+
+    application (e.g. Tomcat);
+
+    - Configuration: select the configuration to use, which usually is the used
+
+    application server (e.g. Tomcat). The Servlet 3.X uses @WebServlet deployment,
+
+    while the Servlet 2.5 uses web.xml deployment.
+
+
+    Then, we shall define the folders for source files (src) and compiled files (classes).'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_52_0.png)
+
+
+    Finally, we shall define the “context root” of the application and the “context
+    directory”. For simplicity, we associate the same name in all the elements of
+    configuration.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_53_0.png)
+
+
+    In particular:
+
+
+    +   - Context Root: it identifies access URL of the web application. In this case
+    it will be http://localhost:8080/company_management.
+
+    - Context Directory: it is the directory that contains all components of the Web
+    Application, which will be deployed into the server, and it is the root of the
+    project.
+
+
+    Note that in this passage the creation of web.xml is checked. The automatic creation
+    of the deployment descriptor is deprecated because the descriptor is no longer
+    necessary for the latest applications (Servlet 3.X). The issue is related to the
+    ability of working with “legacy” applications developed with Servlet 2.X. never.
+
+
+    Below, the created project.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_54_0.png)
+
+
+    Figure 56. Eclipse, created web project.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# 6.1. How to create a JSP and run a project in Eclipse
+
+
+    The first step for working with Java and Eclipse is the creation of a JSP (Java
+    Server Page). We can just go to the File menu - New - JSP files.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_55_0.png)
+
+
+    We can enter the name of the JSP.
+
+
+    Set the name “hello.jsp”.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_56_0.png)
+
+
+    Eclipse creates the following jsp page, automatically inserted in the created
+    project.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_56_1.png)
+
+
+    Now we shall get to work by inserting the text “HELLO WORLD!” in the body and
+    in the title of the created JSP.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_57_0.png)
+
+
+    Figure 60. Eclipse, how to modify a JS script.
+
+
+    In order to see the results of the web page it is enough to start the server.
+    We can select the server, click the right mouse button and, at last, click the
+    green play button located on the context-menu.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_57_1.png)
+
+
+    Figure 61. Eclipse, how to run the server.
+
+
+    The server state passes from “Stopped” to “Started”.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_57_2.png)
+
+
+    Figure 62. Eclipse, started server.
+
+
+    We can also select “run” from the menu, then select “Run As” and then “Run on'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'Server” from the context-menu.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_58_0.png)
+
+
+    Further
+
+
+    Figure 63. Eclipse, run from menu.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_58_1.png)
+
+
+    Figure 64. Eclipse, run from play button of menu.
+
+
+    Finally'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_59_0.png)
+
+
+    If the server is yet not set, we can choose it from the context-menu.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_60_0.png)
+
+
+    Run On Server Select which server to use
+
+    How do you want to select the server?
+
+    Choose an existing server
+
+    Manually define a new server
+
+    Select the server that you want to use:
+
+    type filter text
+
+    Server | State
+
+    localhost | Tomcat v8.0 Server at localhost | Stopped
+
+    Apache Tomcat v8.0 supports J2EE 1.2, 1.3, 1.4, and Java EE 5, 6, and 7 Web modules.
+    Columns...
+
+    Always use this server when running this project
+
+    < Back Next > Finish Cancel
+
+
+    Figure 66. Eclipse, selection of the server.
+
+
+    The last step is the configuration of the project company_management on the selected
+    server.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_61_0.png)
+
+
+    Figure 67. Eclipse, web application configuration on the server.
+
+
+    Now we shall view the web page on Eclipse!
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_61_1.png)
+
+
+    Figure 68. Eclipse, hello.jsp web page.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'We can also view the web page through browser. For example Chrome.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_62_0.png)
+
+
+    Figure 69. Chrome, hello,jsp web page.
+
+
+    If we see the web.xml file, the first page, we can fill the hello.jsp between
+    the welcome-file-list: in this way, and that we see when we open the application,
+    it is one of those for the list of the welcome-file-list.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_62_1.png)
+
+
+    Figure 70. Eclipse, welcome file list.
+
+
+    Now, we shall consider index.jsp the “welcome page”, and every time we open the
+    application at its URL (http://localhost:8080/company_management/) the index.jsp
+    page will be called.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# 6.2. How to create a Servlet 3.X in Eclipse
+
+
+    Now, we shall create a new Servlet! We can just go to the File menu - New - Servlet.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_63_0.png)
+
+
+    Figure 71. Eclipse, how to create a Servlet.
+
+
+    Then, we can define the package company_management.Servlet (it is possible to
+    insert different folders). We shall call our Servlet: FirstServlet (conventionally
+    Class and Servlet names are capitalized).'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_64_0.png)
+
+
+    Figure 72. Eclipse servlet name and package configuration.
+
+
+    Finally, it is important to check the methods init and destroy in a Servlet.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: We can see the just created Servlet with the main methods in the following screen.
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: 'Figure 74. Eclipse, Servlet script.
+
+
+    We can immediately see that Eclipse generates the following annotation:
+
+
+    ```
+
+    @WebServlet("/FirstServlet")
+
+    ```'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# 6.3. How to create a Class in Eclipse
+
+
+    Now, we shall create a new Class! We can just go to the File menu - New - Class.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_67_0.png)
+
+
+    Figure 75. Eclipse, how to create a class.
+
+
+    Then, we can define the package company_management.utility (it is possible to
+    insert different folders). We shall call our Class: FirstClass (conventionally
+    Class and Servlet names are capitalized).'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_68_0.png)
+
+
+    Figure 76. Eclipse, class name e e package configuration.
+
+
+    We can see the just created empty Class in the following screen.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_69_0.png)
+
+
+    Figure 77. Eclipse, Class script.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# 7. Implementation of the Java Project for Web Application
+
+
+    It is about eleven am!'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# 7.1. How to write and manage forms: the Eclipse Project runs on a browser!
+
+
+    We shall start to manage a form, and then, its control in a Servlet. Now, we create
+    the jsp page with the following fields: name and employee. We shall create the
+    formExample.jsp by clicking the right mouse button on our project, then "New",
+    and "JSP File".
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_71_0.png)
+
+
+    Figure 78. Eclipse, how to create a JSP for our web application.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "![](img/112513ff21bfadb0111c509b6257bbec_72_0.png)\n\nThe Java code is:\n\n\
+    ```\n<%@ page language=\"java\" content=\"text/html; charset=ISO-8859-1\" pageEncoding=\"\
+    ISO-8859-1\" %>\n<!DOCTYPE html PUBLIC \"-//W3C/DTD HTML 4.01 Transitional/EN\"\
+    \ \"http://www.w3.org/TR/html4/loose.dtd\">\n<html>\n<head>\n  <meta http-eq=\"\
+    Content-Type\" content=\"text/html; charset=ISO-8859-1\">\n  <title>Form Example</title>\n\
+    </head>\n<body>\n<form action=\"/company_management/FirstServlet\" method=\"post\"\
+    >\nname:<input type=\"text\" value=\"\" name=\"name\"/>\n<input type=\"submit\"\
+    \ value=\"POST SUBMIT\">\n</form>\n<form action=\"/company_management/FirstServlet\"\
+    \ method=\"get\">\nidemployee:<input type=\"text\" value=\"\" name=\"idemployee\"\
+    />\n<input type=\"submit\" value=\"GET SUBMIT\">\n</form>\n</body>\n</html>\"\
+    ,\n```"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '```
+
+    <body>
+
+
+    </html>
+
+    ```
+
+
+    There are two forms, characterized by two methods (POST and GET), with different
+    input fields and two submit buttons.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_73_0.png)
+
+
+    Figure 80. Eclipse, or, JSP code.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_73_1.png)
+
+
+    Figure 81. Browser, Chrome, form.
+
+
+    The Servlet works with two methods: doGet and doPost, which manage messages coming
+    from the request (HttpServletRequest), using the method: request.getParameter("employee").
+    If we want to see the data successfully processed by the Servlet, we can simply
+    use the command System.out.println, allows us to view data on the Eclipse console.
+    In the following example we also used a method of the Response to display on the
+    browser the parameters: response.getWriter(). See the following Java code of FirstServlet.java.
+
+
+    ```
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+
+    throws ServletException, IOException (
+
+    ```
+
+
+    ```
+
+    System.out.println("GET");
+
+    String employee = request.getParameter("employee");
+
+    System.out.println("GET:"+employee);
+
+
+    ```
+
+
+    ```
+
+    PrintWriter out = response.getWriter();
+
+    java.util.Date today = new java.util.Date();
+
+    out.println("<html><body>" + today + +
+
+    ```'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "\" GET parameter: \" + idemplee + \"</</body></html>\";\n\n```\nprotected void\
+    \ doDoPost(HttpServletRequest request, HttpServletResponse response)\n ServletException,\
+    \ IOException {\nSystem.out.println(\"SONO IN POST\");\nString name = request.getParameter(\"\
+    name\");\nSystem.out.println(\"name POST:\"+name);\n```\n\n```\nPrintWriter out\
+    \ = response.getWriter();\njava.util.Date today = new java.util.Date();\nout.println(\"\
+    <html><body>\" + name + \"</</body></html>\");\n```\n\n![](img/112513ff21bfadb0111c509b6257bbec_74_0.png)\n\
+    \nFigure 82, doGet and doPost in a Servlet.\n\nIf we click the first submit button\
+    \ “POST SUBMIT” – Figure 81 (which sends a POST message to the servlet), we get\
+    \ the following result on the Eclipse browser and on the browser."
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "```\nSystem.out.println(\"idemployee:\"+idemployee);\n```\n\n```\nPrintWriter\
+    \ out = request.getWriter();\njava.util.Date date = new java.util.Date();\nSystem.out.println(\"\
+    idemployee:\" + date + \"</</body></html>\");\n```\n\n```\nprotected void doPost(HttpServletRequest\
+    \ request, HttpServletResponse response) throws ServletException, IOException\
+    \ {\n  string name = request.getParameter(\"name\");\n  PrintWriter out = request.getWriter();\n\
+    \  java.util.Date date = new java.util.Date();\n  System.out.println(\"name:\"\
+    \ + date + \"</</body></html>\");\n}\n```\n\n![](img/112513ff21bfadb0111c509b6257bbec_75_0.png)\n\
+    \nFigure 83. Post result on the Eclipse browser and on hover.\n\nIf we click the\
+    \ second submit button \"GET SUBMIT” – Figure 81 (which sends a GET message to\
+    \ the servlet), we get the following result on the Eclipse browser and on the\
+    \ browser.\n\n```\nprotected void doGet(HttpServletRequest request, HttpServletResponse\
+    \ response) throws ServletException, IOException {\n  string idemployee = request.getParameter(\"\
+    idemployee\");\n  PrintWriter out = request.getWriter();\n  java.util.Date date\
+    \ = new java.util.Date();\n  System.out.println(\"idemployee:\" + date + \"</</body></html>\"\
+    );\n}\n```\n\n![](img/112513ff21bfadb0111c509b6257bbec_75_1.png)\n\nFigure 84.\
+    \ Eclipse, GET result on the Eclipse browser and on the browser.\n\nNow we shall\
+    \ create the two JSP form (without considering the layout of the html page)!\n\
+    \nThe company fields are:\n\n+   - idcompany[varchar(16)]\n- company_name[varchar(45)]\n\
+    - phone[varchar(16)]\n- email[varchar(45)]"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '+   - date_ins [date].
+
+
+    The employee fields are:
+
+
+    +   - idemployee [varchar(16)];
+
+    - name [varchar(45)];
+
+    - surname [varchar(45)];
+
+    - badge [int(10)];
+
+    - FK_company [varchar(16)];
+
+    - date_ins [date].
+
+
+    Note that the date is important for the system administrator and it is not present
+    in the form!
+
+
+    Moreover, the maximum length of strings requires a control, which can be done
+    in the html form through the use of maxlength attribute. This attribute specifies
+    the maximum number of characters which can be filled in an form input field.
+
+
+    Finally, we shall use the POST method to send the form.
+
+
+    Now create two new jsp pages and the Servlet (we know how to do it!):
+
+
+    +   - formCompany.jsp;
+
+    - formEmployee.jsp;
+
+    - CompanyManagement.java.
+
+
+    The following screenshot is for the Eclipse form of the Company.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "```\n<html>\n<head>\n  <meta http-equiv=\"Content-Type\" content=\"text/html;charset=ISO-8859-1\"\
+    >\n  <title>Form</title>\n</head>\n<body>\n<table>\n  <tr>\n    <td>\n      <form\
+    \ name=\"companyForm\" action=\"/company_management/CompanyManagementServlet\"\
+    \ method=\"post\">\n        <tr>\n          <td>ID (*):</td>\n          <td><input\
+    \ name=\"id\" type=\"text\" maxlength=\"16\">\n        </td>\n        </tr>\n\
+    \        <tr>\n          <td>Company Name (*):</td>\n          <td><input name=\"\
+    company_name\" type=\"text\" maxlength=\"45\">\n        </td>\n        </tr>\n\
+    \        <tr>\n          <td>Phone (*):</td>\n          <td><input name=\"phone\"\
+    \ type=\"text\" maxlength=\"45\">\n        </td>\n        </tr>\n        <tr>\n\
+    \          <td>Email (*):</td>\n          <td><input name=\"email\" type=\"text\"\
+    \ maxlength=\"45\">\n        </td>\n        </tr>\n        <tr>\n          <td\
+    \ colspan=\"2\">Mandatory field</td>\n        </tr>\n        <tr>\n          <input\
+    \ name=\"whatsend\" type=\"hidden\">\n          <input type=\"submit\" value=\"\
+    Insert Company\">\n        </form>\n      </form>\n    </td>\n  </tr>\n</table>\n\
+    </body>\n</html>\n```\n\nFigure 85. Eclipse, form for the browser form of the\
+    \ Company (empty and filled\n\nThe following screenshots are for the browser form\
+    \ of the Company (empty and filled in).\n\n![](img/112513ff21bfadb0111c509b6257bbec_77_0.png)\n\
+    \nFigure 86. Browser, empty formcompanyForm.jsp."
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Company Form
+
+
+    localhost:8080/company_management/formCompany.jsp
+
+
+    | Company ID (*): | 123123123 |
+
+    | Company Name (*): | Manelli & CO |
+
+    | Phone (*): | +3909923423423 |
+
+    | Email (*): | moderninformatics75@gmail... |
+
+    | (*) Mandatory field [Insert Company] |
+
+
+    Figure 87. Browser, filled in form companyForm.jsp.
+
+
+    The following screenshot is for the form of the Employee.
+
+
+    ```
+
+    <html>
+
+    <title>Employee Form</title>
+
+    <head>
+
+    <body>
+
+    <table>
+
+    <tr>
+
+    <td>
+
+    <form name="employeeForm" action="/company_management/CompanyManagementsServlet"
+    method="post">
+
+    <table>
+
+    <tr>
+
+    <td>Employee ID (*):</td>
+
+    <td>
+
+    <input name="id" value="" type="text" maxlength="16">
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>
+
+    <input name="name" value="" type="text" maxlength="45">
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>Surname (*):</td>
+
+    <td>
+
+    <input name="surname" value="" type="text" maxlength="45">
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>Company Badge (*):</td>
+
+    <td>
+
+    <input name="badge" value="" type="text" maxlength="65">
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td colspan="2">(*) Mandatory field</</td>
+
+    </tr>
+
+    </table>
+
+    <input name="FK_company" value="*********" type="hidden">
+
+    <input name="whatensd" value="employee" type="hidden">
+
+    <input type="submit" value="Insert Employee">
+
+    </form>
+
+    </td>
+
+    </tr>
+
+    </table>
+
+    n</td>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Figure 88. Eclipse, form employeeForm.jsp.
+
+
+    The following screenshot is for the browser form of the Employee.
+
+
+    *'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# Employee Form
+
+
+    localhost:8080/company_management/formEmployee.jsp
+
+
+    Employee ID (*):
+
+    Name (*):
+
+    Surname (*):
+
+    Company Badge (*):
+
+    (*) Mandatory field
+
+    Insert Employee
+
+
+    Figure 89. Browser, empty form a hidden field FK_company. This field is filled
+    in by the idcompany of Company Entity once inserted the company. We shall fill
+    in this value when the company form is completed and sent to the servlet.
+
+
+    We shall do this with implementing a system of sessions.
+
+
+    We see the following piece of Java code of the Servlet: in console, we can view
+    the parameters.
+
+
+    In order to distinguish the two entries from two different forms, from server
+    side it is possible to insert a hidden field (in a very simple way!) to understand
+    if the submit form comes from the company form or from the employee form and then
+    manage it accordingly by saving its fields. This operation is clear observing
+    the console results!
+
+
+    We shall use the field whatsend, which helps us to establish the behavior in the
+    servlet, as we decided to use a single servlet. So, we shall have several whatsend
+    hidden fields, in our case:
+
+
+    +   - company;
+
+    - employee;
+
+    - savecompany.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\n } else if (whatsend.equals(\"company\")) {\n    String idcompany = request.getParameter(\"\
+    idcompany\");\n    System.out.println(\"idcompany :: \"+idcompany);\nn    String\
+    \ company_name = request.getParameter(\"company_name\");\n    System.out.println(\"\
+    company_name :: \"+company_name);\nn    String phone = request.getParameter(\"\
+    phone\");\n    System.out.println(\"phone :: \"+phone);\nn    String email = request.getParameter(\"\
+    email\");\n    System.out.println(\"email :: \"+email);\n}\n```\n\nMarkers Properties\
+    \ Servers Data Source Explorer Snippets Console\nTomcat v8.0 Server at localhost\
+    \ [Apache Tomcat] C:\\Program Files\\Java\\jdk1.0.71\\bin\\javaw.exe (19 ott 2015,\
+    \ 14:15:34)\nwhatsend POST: company\nidcompany :: 12313123\ncompany_name :: Manelli\
+    \ & CO.\nphone :: +3909923423423\nemail :: moderninformatics75@gmail.com\n\nFigure\
+    \ 90. ServletCompanyManagement.java and console."
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# 7.2. JavaBean
+
+
+    It is twelve o''clock!
+
+
+    Once we have taken values from the form, we need to manage saving them into Database.
+    Therefore, according to the MVC pattern, it is necessary to create and use an
+    "object" which will be passed to a DAO (Data Access Object) class for saving data
+    into Database. This object can encapsulate many objects into a single object,
+    which can be serialized.
+
+
+    Now, we need to create and instantiate a new object (JavaBean), which sets and
+    maintains the status of its variables during the time of use. This class presents
+    only the *get and set methods* of its variables (*pattern of data encapsulation*).
+
+
+    We shall start with the creation of a new class.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_81_0.png)
+
+
+    Figure 91. JavaBean class creation.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: 'Once we a new class, we shall implement the java.io.Serializable. Then, the
+    IDE content assist shows automatically a suggestion, which suggests to enter an
+    ID (Java (TM) Object Serialization Specification) to allow serialization and de-serialization
+    of persistence. Therefore, it is useful to use the Eclipse suggestion and to create
+    automatically an an ID serialization.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_82_0.png)
+
+
+    Figure 92. JavaBean Version ID creation.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_82_1.png)
+
+
+    ```
+
+    1 /*
+
+    2 4 package company_management.bean;
+
+    5
+
+    6 /**
+
+    7  * @author manelli
+
+    8 *
+
+    9  */
+
+    10 public class CompanyBean implements java.io.Serializable {
+
+    11
+
+    12     /*
+
+    13      */
+
+    14
+
+    15     private static final long serialVersionUID = -8405457781559423830L;
+
+    16
+
+    17
+
+    18
+
+    19
+
+    20 }
+
+    ```
+
+
+    Figure 93. JavaBean Version ID created.
+
+
+    Now, we shall enter all fields of the company and the Eclipse IDE helps us to
+    automatically generate the get and set methods (click the right mouse button,
+    then Source, and Generate Getters and Setters).'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: Figure 94. How to Generate Bean Getters and Setters – step 1.
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "![](img/112513ff21bfadb0111c509b6257bbec_84_0.png)\n\nThen, we shall get the\
+    \ class with the get and set methods showing in the following Java class and screenshot:\n\
+    \npackage company_management.bean;\n\n```\n/**\n * @author manelli\n *\n */\n\
+    public class EmployeeBean implements java.io.Serializable {\n\n/**\n *\n */\n\
+    \    private static final long serialVersionUID = -15492508852333838087L;\n\n\
+    \    private String idemployee;\n    private String name;\n    private String\
+    \ surname;\n```"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "```\nprivate String badge;\nprivate String fk_company;\n\npublic String getEmployee()\
+    \ {\n    return employee;\n}\n\npublic void setEmployee(String employee) {\n \
+    \   this.employee = employee;\n}\n\npublic String getName() {\n    return name;\n\
+    }\n\npublic void setName(String name) {\n    this.name = name;\n}\n\npublic String\
+    \ getSurname() {\n    return surname;\n}\n\npublic void setSurname(String surname)\
+    \ {\n    this.surname = surname;\n}\n\npublic String getBadge() {\n    return\
+    \ badge;\n}\n\npublic void setBadge(String badge) {\n    this.badge = badge;\n\
+    }\n\npublic String getFk_company() {\n    return fk_company;\n}\n\npublic void\
+    \ setFk_company(String fk_company) {\n    this.fk_company = fk_company;\n}\n```"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "# Now, we do the same operation for the employee Bean.\n\n```\npublic class\
+    \ CompanyBean implements java.io.Serializable {\n    /** 1L */\n    private static\
+    \ final long serialVersionID = -8405457815592433808L;\n    private String id;\n\
+    \    private String company_name;\n    private String phone;\n    public String\
+    \ getId() {\n        return id;\n    }\n    public void setId(String id) {\n \
+    \       this.id = id;\n    }\n    public String getCompanyName() {\n        return\
+    \ company_name;\n    }\n    public void setCompanyName(String company_name) {\n\
+    \        this.company_name = company_name;\n    }\n    public String getPhone()\
+    \ {\n        return phone;\n    }\n    public void setPhone(String phone) {\n\
+    \        this.phone = phone;\n    }\n    public String getEmail() {\n        return\
+    \ email;\n    }\n    public void setEmail(String email) {\n        this.email\
+    \ = email;\n    }\n}\n```\n\n```\npublic class EmployeeBean implements java.io.Serializable\
+    \ {\n    private static final long serialVersionID = -1492580852233308007L;\n\
+    \    private String id;\n    private String name;\n    private String badge;\n\
+    \    private String company;\n    public String getId() {\n        return id;\n\
+    \    }\n    public void setId(String id) {\n        this.id = id;\n    }\n   \
+    \ public String getName() {\n        return name;\n    }\n    public void setName(String\
+    \ name) {\n        this.name = name;\n    }\n    public String getBadge() {\n\
+    \        return badge;\n    }\n    public void setBadge(String badge) {\n    \
+    \    this.badge = badge;\n    }\n    public String getCompany() {\n        return\
+    \ company;\n    }\n    public void setCompany(String company) {\n        this.company\
+    \ = company;\n    }\n    public String getFk() {\n        return fk_company;\n\
+    \    }\n    public void setFk(String fk_company) {\n        this.fk_company =\
+    \ fk_company;\n    }\n}\n```"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: 'Figure 97. Eclispe, EmployeeBean.java.
+
+
+    Now we need to link the two beans. The employee is part of the company and the
+    company can have from 1 to n employees.
+
+
+    How can they be related each other?
+
+
+    Obviously, it is sufficient adding an additional variable to the company bean,
+    which identifies the set of employees!
+
+
+    We shall use an ArrayList of EmployeeBean objects in the Company bean as shown
+    below:
+
+
+    ```
+
+    private ArrayList< EmployeeBean> companyEmployees;
+
+    ```
+
+
+    Then, it is necessary to generate the get and set method.
+
+
+    The java code into quotation marks (<>) represents the use of java generics.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# 7.3. Request Redirect vs Dispatcher
+
+
+    It is about ten past one! Five minute for a sandwich!
+
+
+    We use another object to return and maintain an object (with state!) from the
+    Servlet to the JSP. The server side presents two main method: redirect and dispatch.
+    The first is the following code:
+
+
+    ```
+
+    response.sendRedirect("http://www.arnereetrice.it/");
+
+    ```
+
+
+    In this case, the Servlet does a redirect to a specific URL without taking memory
+    of the current state of its parameters (an example is the return to the home page
+    of a site).
+
+
+    In the case of dispatch, it is assumed that the server does something else; in
+    fact, the browser displays a particular JSP and passes some parameters (such as
+    those in session or request); and the end-user does not know the content of a
+    JSP page is rendered in his. In this case, the standard syntax is:
+
+
+    ```
+
+    ServletContext sc = request.getSession().getContext();
+
+    RequestDispatcher rd = sc.getRequestDispatcher("/company.jsp");
+
+    rd.forward(request, response);
+
+    ```
+
+
+    The servlet uses the application context and then transfers control to the JSP.
+    In the following text, we shall use mainly the dispatching method.
+
+
+    For example, we shall insert two links: to the home page and the other to the
+    employee page. We shall link the home page with a redirect and the JSP employee
+    page as a dispatcher. In the following screenshot, it is possible to see the two
+    links.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_88_0.png)
+
+
+    Figure 98. JSP links — company.jsp.
+
+
+    In the Servlet we shall use the doGet to manage the request, as the Servlet is
+    called via a direct link (the html form GET method) and not via the submit form
+    (the html POST method).'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "```\nprotected void doGet(HttpServletRequest request, HttpServletResponse response)\
+    \ throws ServletException, IOException {\n    String whatsend = request.getParameter(\"\
+    whatsend\");\n    System.out.println(\"whatsend: \" + whatsend);\nn    if (whatsend.equals(\"\
+    employeeInsert\")) {\n        HttpSession session = request.getSession();\n  \
+    \      RequestDispatcher rd = request.getRequestDispatcher(\"/FormEmployee.jsp\"\
+    );\n        rd.forward(request, response);\n    } else if (whatsend.equals(\"\
+    homepage\")) {\n        response.sendRedirect(\"/company_management/\");\n   \
+    \ }\n}\n```\n\n![](img/112513ff21bfadb0111c509b6257bbec_89_0.png)\n\nFigure 09.\
+    \ JSP links - employeeForm.jsp.\n\n```\nprotected void doGet(HttpServletRequest\
+    \ request, HttpServletResponse response) throws ServletException, IOException\
+    \ {\n    String whatsend = request.getParameter(\"whatsend\");\n    System.out.println(\"\
+    whatsend: \" + whatsend);\n    if (whatsend.equals(\"employeeInsert\")) {\n  \
+    \      HttpSession session = request.getSession();\n        RequestDispatcher\
+    \ rd = request.getRequestDispatcher(\"/FormEmployee.jsp\");\n        rd.forward(request,\
+    \ response);\n    } else if (whatsend.equals(\"homepage\")) {\n        response.sendRedirect(\"\
+    /company_management/\");\n    }\n}\n```\n\n![](img/112513ff21bfadb0111c509b6257bbec_89_1.png)\n\
+    \nFigure 100. JSP links – homepage.jsp."
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# 7.4. Request vs Session
+
+
+    It is about ten to two!
+
+
+    Now we can connect the two elements, but we also need to maintain the state of
+    the two analyzed bean. This is possible using request or session. The difference
+    between request and session is based on the scope of the attributes. The request
+    is canceled as soon as the response is committed to the client, while the session
+    ends with the end of the session (for example, the browser is closed). We will
+    study and use the session. In fact, the request can generate the possibility of
+    losing data in the event that we work with frameworks where different layers of
+    software are present.
+
+
+    When we create a new session, the server allocates a memory location, which will
+    contain data, which the user’s browser knows. Practically, a cookie is set in
+    the browser with an identification number of the session (Session Id). In JSP
+    pages, a “session” is an implicit object, which can be accessed in servlet by
+    request. By the Servlet, it is invoked by method getSession() with the following
+    Java code:
+
+
+    ```
+
+    HttpSession session = request.getSession();
+
+    ```
+
+
+    The request is necessary to obtain a reference to an object of HttpSession type.
+    The method getSession() returns an HttpSession type. Then, the Servlet identifies
+    the client (browser), if an HttpSession Object is already instantiated, it is
+    used, otherwise a new session object is created. This behavior allows the maintenance
+    of the state in applications pages (it is not possible for simple request!)
+
+
+    The three standard methods used to work with attributes of a session object are
+    the following:
+
+
+    +   - public void setAttribute(String name, Object value): it sets an object in
+    session with a name
+
+    - public Object getAttribute(String name): it gets an object from session with
+    a name
+
+    - public void removeAttribute(String name): it removes an object in session with
+    a name
+
+
+    Now, we shall fill the beans and set them in session, before saving them in the
+    DB. Proceed to walk. So, step by step, we shall manage the company bean, and set
+    it in session before dispatching to the JSP page (controller and view in MVC pattern).
+
+
+    The company jsp page is initially empty. Then, after submitting, the saved bean
+    in session (CompanyBean.java) is returned to and processed by the JSP, which fills
+    values in the form fields. We shall see the filled in form and can go to the employee
+    page.
+
+
+    First, change the bean CompanyBean.java, adding the list of employees'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "# (companyEmployees ArrayList!)\n\n```\npackage com.companyWit;\nimport com.companyBean.*;\n\
+    import com.companyFull.*;\nimport com.companyManage.*;\n/**\npackage company_management.t.bean\n\
+    import java.util.ArrayList;\n */\n/**\n * @author manelli\n */\npublic class class\
+    \ CompanyBean implements java.io.Serializable {\n    /**\n     * static final\
+    \ long serialVersionUID = -8045477815559423830L;\n     */\n    private String\
+    \ id;\n    private String company_name;\n    private String phone;\n    private\
+    \ String email;\n}\n\npublic String getIdcompany() {\n    return id;\n}\n```\n\
+    \nFigure 101. ArrayList companyEmployees. it will use the session.\n\nThen, change\
+    \ the jsp name in formCompanyFull.jsp;\n\nAs as we arrive at the page of the company,\
+    \ for the first time, the boolean variable (companyFilled) is not used, since\
+    \ the session object “COMPANY” is empty, so we can not see the link to the employee\
+    \ JSP page. The companyid field is also empty!\n\n![](img/112513ff21bfadb0111c509b6257bbec_91_0.png)"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: 'Figure 102. Browser, empty formCompanyFull.jsp.
+
+
+    If the session is not null, the bean fields are taken from the session bean and
+    set into JSP variables, which dynamically pre-populate form elements with the
+    data originally entered in the form by the user, using the following java code
+    (for example, for to the idcompany
+
+
+    Fof idcompany variable:
+
+
+    ```
+
+    String idcompany="";
+
+    ```
+
+
+    Bean:
+
+
+    ```
+
+    CompanyBean company = new CompanyBean();
+
+    ```
+
+
+    Test of session:
+
+
+    ```
+
+    if (request.getSession()!=null && \
+
+    request.getSession().getAttribute("COMPANY")!=null){
+
+    ```
+
+
+    idcompany is filled in by the bean value:
+
+
+    ```
+
+    idcompany = company.getIdIdcompany();
+
+    ```
+
+
+    Input idcompany value of the JSP page:
+
+
+    ```
+
+    <input name="idcompany" value="<%=idcompany %>" type="text"
+
+    maxlength="11">
+
+    ```
+
+
+    The idcompany field will be also used to enhance the hidden field of formEmployeeFull.jsp.
+
+
+    The following screenshot shows the formCompanyFull.jsp JSP.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_93_0.png)
+
+
+    ```
+
+    <%@ import="company.management,company.bean.CompanyBean%>
+
+    <@ language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1">
+
+    <!DOCTYPE html PUBLIC "-//W3C//HTML 4.1 Transitional//EN" "http://www.w3.org/TR/html41/loose.d
+
+    n{
+
+    String company_name="="";
+
+    String idcompany="="";
+
+    String phone="="";
+
+    String email="="";
+
+
+    if (session != null && session.isNew()) {
+
+    CompanyBean companyBean = new CompanyBean();
+
+    boolean companyFilled=false;
+
+    if (request.getSession().getAttribute("COMPANY")!=null) {
+
+    company = (CompanyBean)request.getSession().getAttribute("COMPANY");
+
+    company_name = company.getName()+="";
+
+    idcompany = company.getIdcompany()+="";
+
+    phone = company.getPhone()+="";
+
+    email = company.getEmail()+="";
+
+    }
+
+    companyFilled=true;
+
+
+    ```
+
+
+    103. formCompanyFull.jsp and use of session.
+
+
+    Below you can see the changed links and input fields.
+
+
+    ```
+
+    <tr>
+
+    <td><a href="/company_management/CompanyManagementServlet/whatsend-homepage" target="_top">Home
+    Page <a></a>
+
+    &nbsp;</td>
+
+    <td><% if(companyFilled) { %>
+
+    <a href="/company_management/CompanyManagementServlet/whatsendEmployee" target="_top">Insert
+    Employee <a></a>
+
+    <% } %></td>
+
+    </tr>
+
+    <tr>
+
+    <td><form name="companyForm" action="/company_management/CompanyManagementServlet"
+    method="post">
+
+    <table>
+
+    <tr>
+
+    <td>Company ID ("*")</td>
+
+    <td>
+
+    <% if(companyFilled) { %>
+
+    <input name="idcompany" name="<%=idcompany" value="<%=idcompany%>" type="text"
+    maxlength="15">
+
+    <% }%
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>Company Name ("*")</td>
+
+    <td>
+
+    <% if(companyFilled) { %>
+
+    <input name="company_name" name="<%=company_name" value="<%=company_name%>" type="text"
+    maxlength="50">
+
+    <% }%
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>Phone ("*")</td>
+
+    <td>
+
+    <% if(companyFilled) { %>
+
+    <input name="phone" value="<%=phone%>" type="text" maxlength="15">
+
+    <% }%
+
+    </td>
+
+    </tr>
+
+    <tr>
+
+    <td>Email ("*")</td>
+
+    <td>
+
+    <% if(companyFilled) { %>
+
+    <input name="email" value="<%=email%>" type="text" maxlength="50">
+
+    <% }%
+
+    </td>
+
+    </tr>
+
+    </table>
+
+    </form>
+
+    </tr>
+
+    ```
+
+
+    104. formCompanyFull.jsp - changed links and input fields.
+
+
+    We shall populate the form input fields and submit the form of formCompanyFull.jsp
+    JSP page!
+
+
+    After populated and submitted the company form, in the Servlet, the company bean'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: 'populated (with sets) and is put in the session with the attribute "COMPANY".
+    Servet manages the fields, and dispatches to the formCompanyFull.jsp page.
+
+
+    ```
+
+    System.out.println("badge :: "+badge");
+
+    String fk_company = request.getParameter("FK_company");
+
+    System.out.println("fk_company :: "+fk_company");
+
+
+    else if (whatsnd.equals("company")) {
+
+    String idcompany = request.getParameter("idcompany");
+
+    System.out.println("idcompany :: "+idcompany");
+
+    String company_name = request.getParameter("company_name");
+
+    System.out.println("company_name :: "+company_name");
+
+    String phone = request.getParameter("phone");
+
+    System.out.println("phone :: "+phone");
+
+    String email = request.getParameter("email");
+
+    System.out.println("email :: "+email");
+
+
+    ArrayList<EmployeeBean> companyEmployees = new ArrayList<EmployeeBean>();
+
+
+    company.setIdcompany(idcompany);
+
+    company.setCompany_name(company_name);
+
+    company.setEmail(email);
+
+    company.setPhone(phone);
+
+    company.setCompanyEmployees(companyEmployees);
+
+
+    } else {
+
+
+    ServletContext sc = request.getSession().getContext();
+
+    request.getSession().removeAttribute("COMPANY");
+
+    request.getSession().setAttribute("COMPANY", company);
+
+
+    RequestDispatcher rd = sc.getRequestDispatcher("/formCompanyFull.jsp");
+
+    rd.forward(request, response);
+
+    -}
+
+    ```
+
+
+    Figure 105. Server, company bean and session.
+
+
+    Now, we can find that the (idcompany) field is no longer editable (key field with
+    Company and foreign key for Employee).
+
+
+    It is possible to note the activation of the employee link!
+
+
+    | Page | Insert Employee |
+
+    |---|---|
+
+    | Company ID (*): | 12312313 |
+
+    | Company Name (*): | Manelli & CO. |
+
+    | Phone (*): | +3909923323423 |
+
+    | Email (*): | moderninformatics75@gmail |
+
+    | (*) Mandatory field | Insert Company |
+
+
+    Figure 106. formCompanyFull.jsp, pre-populated form.
+
+
+    Now just connect the employees to the company!
+
+
+    After populated the company form, click on "Insert Employee" link and populate
+    the'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: 'employee form!
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_95_0.png)
+
+
+    Figure 107. Browser, empty formEmployeeFull.jsp.
+
+
+    We need to set the company foreign key of the employee. We can choose to:
+
+    - use a Request variable (from company JSP to employee JSP through Servlet), which
+    fill in the hidden field of employee JSP;
+
+    - use a Session variable (from company JSP to employee JSP through Servlet), which
+    fill in the hidden field of employee JSP;
+
+    - use the company Session bean (already set in session through Servlet), which
+    fill in the hidden field of employee JSP;
+
+    - use no hidden field for employee, and set the foreign key only in Servlet.
+
+
+    Now, we shall use the companyid field of the company Session bean!
+
+    By clicking on the button “Insert Employee”, we get to the page of the employee,
+    also managed by the sessions, as we can show in the following screenshot.'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# formCompany... formEmployee... CompanyBean... formCompanyF... CompanyMana...
+
+
+    ```
+
+    <page import="company.management.CompanyBean">
+
+    <page import="company.management.EmployeeBean">
+
+    <page language="text/html" charset="ISO-8859-1">
+
+    <pageEncoding="ISO-8859-1">
+
+    <!DOCTYPE HTML HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loos
+
+
+    String employeeId="";
+
+    String name="";
+
+    String surname="";
+
+    String badge="";
+
+    String fk_company="";
+
+
+    EmployeeBean employee = new EmployeeBean();
+
+    boolean employeeFilled=false;
+
+
+    if (request.getSession()==null && request.getSession().getAttribute("EMPLOYEE")!=null)
+    {
+
+    employee = employee.getEmployeeId();
+
+    name = employee.getName();
+
+    surname = employee.getSurname()+";
+
+    badge = employee.getBadge()+";
+
+    fk_company = employee.getFk_company()+";
+
+    nemployeeFilled=true;
+
+    }
+
+    CompanyBean company = new CompanyBean();
+
+    if (request.getSession()==null && request.getSession().getAttribute("COMPANY")!=null)
+    {
+
+    company = (CompanyBean)request.getSession().getAttribute("COMPANY");
+
+    fk_company = company.getCompanyId()+";
+
+    }
+
+    ```
+
+
+    We shall manage the employeeid field as the companyid.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_96_0.png)
+
+
+    ```
+
+    <a href="/company/management/ManagementServlet?whatpage=home" target="_top"> Home
+    Page</a>
+
+    &amp;
+
+    <a href="/company/management/ManagementServlet?whatpage=company" target="_top">
+    Company</a>
+
+    &amp;
+
+
+    if(employeeFilled) {
+
+    <a href="/company/management/ManagementServlet?whatpage=employee">Insert another
+    employee</a>
+
+    }
+
+    ```
+
+
+    Figure 108. employeeid field - formEmployeeFull.jsp.
+
+
+    The thing is for other employee fields.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "```\n<form name=\"employeeForm\" action=\"/company_management/Company/ManagementServlet\"\
+    \ method=\"post\">\n  <tr>\n    <td>Employee ID (*):</td>\n    <td>\n      <?\
+    \ if ($employeeID) {\n        $employeeID\n      } else {\n        <input name=\"\
+    employeeID\" value=\"$employeeID\" type=\"text\" maxlength=\"16\">\n}\n    </td>\n\
+    \  </tr>\n  <tr>\n    <td>Name (*):</td>\n    <td><input name=\"name\" value=\"\
+    $name\" type=\"text\" maxlength=\"45\"></td>\n  </tr>\n  <tr>\n    <td>Company\
+    \ Badge (*):</td>\n    <td><input name=\"badge\" value=\"$badge\" type=\"text\"\
+    \ maxlength=\"45\"></td>\n  </tr>\n  <tr>\n    <td colspan=\"2\"> Mandatory field:</td>\n\
+    \  </tr>\n  <tr>\n    <td><input name=\"fk_company\" value=\"$fk_company\" type=\"\
+    hidden\"></td>\n    <td><input name=\"whatsend\" value=\"$employee\" type=\"hidden\"\
+    ></td>\n    <td><input type=\"submit\" value=\"Insert Employee\"></td>\n  </tr>\n\
+    </form>\n```\n\nFigure 10. formEmployeeFull.jsp - changed input fields.\n\nAfter\
+    \ populated and submitted the employee form, the employee field is no longer modifiable\
+    \ and the link appears for the insertion of a further employee.\n\n![](img/112513ff21bfadb0111c509b6257bbec_97_0.png)\n\
+    \nFigure 11. formCompanyFull.jsp - links.\n\nFinally, we shall manage the servlet\
+    \ side linking the company to the employee (using the command whatsend) with GET\
+    \ method. If we decide to enter an additional employee, the Servlet retrieves\
+    \ the attribute \"EMPLOYEE\" from session."
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "```\n/**\n * @See HttpServletGet(HttpServletRequest, HttpServletResponse) throws\n\
+    \ */\nprotected void doGet(HttpServletRequest request, HttpServletResponse response)\
+    \ throws Servlet {\n    String whatsapp = request.getParameter(\"whatsend\");\n\
+    \    System.out.println(\"POST: \" + whatsapp\");\n    if (whatsapp.equals(\"\
+    insertEmployee\")) {\n        ServletContext context = request.getSession().getContext();\n\
+    \        RequestDispatcher rd = context.getRequestDispatcher(\"/formEmployeeFull.jsp\"\
+    );\n        rd.forward(request, response);\n    }\n    else if (whatsapp.equals(\"\
+    employee\")) {\n        request.removeAttribute(\"EMPLOYEE\");\n        ServletContext\
+    \ context = request.getSession().getContext();\n        RequestDispatcher rd =\
+    \ context.getRequestDispatcher(\"/formCompanyFull.jsp\");\n        rd.forward(request,\
+    \ response);\n    }\n    else if (whatsapp.equals(\"company\")) {\n        ServletContext\
+    \ context = request.getSession().getContext();\n        RequestDispatcher rd =\
+    \ context.getRequestDispatcher(\"/formCompanyFull.jsp\");\n        rd.forward(request,\
+    \ response);\n    }\n    else if (whatsapp.equals(\"homepage\")) {\n        response.sendRedirect(\"\
+    /company_management/\");\n    }\n}\n```\n\n```\n/**\n * @See HttpServletPost(HttpServletRequest\
+    \ request, HttpServletResponse response) throws Servlet\n */\nprotected void doPost(HttpServletRequest\
+    \ request, HttpServletResponse response) throws Servlet\n```\n\n| Markers | Properties\
+    \ | Servers | Data Source Explorer | Snippets | Console |\n|---|---|---|---|---|---|\n\
+    | Tomcat v8.0 Server at localhost [Apache Tomcat] C:\\Program Files\\Java\\jdk1.7.0_71\\\
+    bin\\jav.exe (exe 20 oct 2015, 11:43:22) |\n|employee : 403450\nname : luciano\n\
+    surname : Manelli\nbage : 789\nFK_company : 123123123\nwhatsend POST: employee\n\
+    \n![](img/112513ff21bfadb0111c509b6257bbec_98_0.png)\n\nIf we click on \"Insert\
+    \ Employee\", we view the same empty page again, we can insert and save a new\
+    \ employee; this operation will lead to the increase of the employees arraylist\
+    \ associated with the company.\n\nWe must modify the Java code to increase employees’\
+    \ ArrayList, as shown below."
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "```\nif (whatsnd.equals(employee)) {\n    String idemployee = request.getParameter(\"\
+    idemployee\");\n    System.out.println(\"idemployee: \" + idemployee);\n    String\
+    \ name = request.getParameter(\"name\");\n    System.out.println(\"name: \" +\
+    \ name);\n    String surname = request.getParameter(\"surname\");\n    System.out.println(\"\
+    surname: \" + surname);\n    String badge = request.getParameter(\"badge\");\n\
+    \    System.out.println(\"badge: \" + badge);\n    String fk_company = request.getParameter(\"\
+    FK_company\");\n    System.out.println(\"FK_company: \" + fk_company);\n    \n\
+    \    EmployeeBean employee = new EmployeeBean();\n    employee.setIdemployee(idemployee);\n\
+    \    employee.setSurname(surname);\n    employee.setBadge(badge);\n    employee.setName(name);\n\
+    \    employee.setFk_company(fk_company);\n\n    ServletContext sc = request.getSession().getContext();\n\
+    \    request.getSession().setAttribute(\"EMPLOYEE\", employee);\n    if (request.getSession()\
+    \ != null && request.getSession().getAttribute(\"COMPANY\") != null) {\n     \
+    \   List<EmployeeBean> companyEmployees = (List<EmployeeBean>)request.getSession().getAttribute(\"\
+    COMPANY\");n        request.getSession().setAttribute(\"COMPANY\", companyEmployees);\n\
+    \    }\n    rd.forward(request, response);\n}\n```\n\n![](img/112513ff21bfadb0111c509b6257bbec_99_0.png)\n\
+    \nNow the company object (with its employees) is ready to be stored on the just\
+    \ created database.\n\nNow try to insert an additional employee!\n\n| Employee\
+    \ ID (*): | D876546 |\n| Name (*): | Sara |\n| Surname (*): | Manelli |\n| Company\
+    \ Badge (*): | 31 |\n| (*) Mandatory field | |\n| Insert Employee |\n\n![](img/112513ff21bfadb0111c509b6257bbec_99_1.png)\n\
+    \nIf we want to see employees, we can use a “for each” loop that displays the\
+    \ employees"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "to console.\n\n```\n// Employee to Company\nif (request.getSession()!=null\
+    \ && request.getSession().getAttribute(\"COMPANY\")!=null) {\n    company = (Company)\
+    \ request.getSession().getAttribute(\"COMPANY\");\n    Array<Employee> employees\
+    \ = company.getEmployees();\n    employees.add(employee);\n    request.getSession().removeAttribute(\"\
+    COMPANY\");\n    request.getSession().setAttribute(\"COMPANY\", company);\n}\n\
+    \ncompany = (Company) request.getSession().getAttribute(\"COMPANY\");\nArrayList<Employee>\
+    \ employeesList = company.getEmployees();\nfor (Employee cl : employeesList) {\n\
+    \    System.out.println(\"cl: \" +cl.getName() + \" Employee Name: \" +cl.getName());\n\
+    }\n```\n\n![](img/112513ff21bfadb0111c509b6257bbec_100_0.png)\n\nMarket Properties\
+    \ Servers Data Explorer Snippets Console\nTomcat v8.0 Server localhost [Apache\
+    \ Tomcat] C:\\Program Files\\Java\\jdk1.8.0_71\\bin.exe (20 Oct 2015, 12:16:10)\n\
+    whatsend POST: employee\nIdemployee: 123123123\nname: Manelli & Co.\nphone: +399982342423\n\
+    email: manelliformatics@gmail.com\nwhatsend POST: employeeInsert\nwhatsend POST:\
+    \ employee\nIdemployee: PP46456\nname: Manelli\nsurname: Manelli\nbadge: 29\n\
+    FK_company: 123123123\nEmployee Name: Manelli Employee Name: Luciano\nwhatsend\
+    \ POST: employee\nwhatsend POST: employee\nIdemployee: OR95656\nname: Sara\nsurname:\
+    \ Manelli\nbadge: 31\nFK_company: 123123123\nEmployee Surname: Manelli Employee\
+    \ Name: Luciano\nEmployee Surname: Manelli Employee Name: Sara\n\nFigure 15. Servlet,\
+    \ employees arraylist on console.\n\nWe shall call on “home page” in this way,\
+    \ we return the jsp corresponding to the insertion of a new empty company. The\
+    \ Servlet java code is shown below.\n\n```\nru.forward(request, response);\n\n\
+    else if (request.equals(\"home page\")) {\n    request.getSession().removeAttribute(\"\
+    COMPANY\");\n    request.getSession().removeAttribute(\"EMPLOYEE\");\n    response.sendRedirect(\"\
+    /company_management/formCompanyFull.jsp\");\n}\n```\n\nFigure 16. Servlet, how\
+    \ to remove session objects."
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# 7.5. Connection to MySQLDataBase, Commit and Roll-Back
+
+
+    It is four o''clock!
+
+
+    Now we have the object company with its employees.
+
+
+    Let us save to the DataBase!
+
+
+    The following paragraph illustrates a very simple method of saving!
+
+
+    The first thing to do is download the Java Connector to DB at the URL http://dev.mysql.com/downloads/connector/,
+    which contains a list of connectors to work with different programming languages.
+    Now, simply download the library for independent platform!
+
+
+    This library can move from the windows environment of development in any testing
+    or delivery/ operation /distribution environment (also Unix-like).
+
+
+    We shall extract from the zip library the mysql-connector-java-5.1.34-bin.jar
+    file and save it in the lib folder created within the project.
+
+
+    We can put in one of two JSP pages (company o employee) a button “Save Company
+    on DB”, which suggests the user the possibility to store and persist data on DB.
+
+
+    We need to create the DAO (Data Access Objects) class, named SaveMySQL.java, to
+    manage the CRUD with the database.
+
+
+    Initially, we shall define final String DB_DRIVER with the DB:
+
+
+    ```
+
+    private static final String DB_DRIVER = "com.mysql.jdbc.Driver";nprivate static
+    final String DB_CONNECTION = "jdbc:mysql://localhost:3306/gestione_imprese";nprivate
+    static final String DB_USER = "root";nprivate static final String DB_PASSWORD
+    = "root";
+
+    ```
+
+
+    The driver is related to the Java Connector. The other parameters specify the
+    host credentials to access DataBase.
+
+
+    Within a try considering the SQLException error in the DB, we are now connected
+    to the DB:
+
+
+    ```
+
+    conn = getDBConnection();
+
+    ```
+
+
+    Then set AutoCommit to false (so, we shall set when commit!):
+
+
+    ```
+
+    conn.setAutoCommit(false);
+
+    ```'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "This setting allows the final commit, only if all operations were successful.\n\
+    \nconn.commit();\n\nIf any transaction does not go well, it will be made a rollback\
+    \ with error (which in this case is returned to the Servlet, using the element\
+    \ throw):\n\n```\nconn.rollback();\nSystem.out.println(\" INSERT ERROR:Transaction\
+    \ is being rolled back\");\nthrow new SQLException(sql.getErrorCode() + \":\"\
+    +sql.getMessage());\n```\n\nNow, it is possible to insert the SQL script for the\
+    \ company:\n\n```\nString insertCompany = \"INSERT INTO COMPANY\n(idcompany,company_name,phone,email,date_ins)\
+    \ \";\ninsertCompany += \" VALUES (\\n+ company.getIdCompany() + \",\",\n+ company.getCompanyName()\
+    \ + \",\",\n+ company.getPhone() + \",\",\n+ company.getEmail() + \",\",\n+ \"\
+    \ SYSDATE())\";\nSystem.out.println(\" INSERT QUERY:\"+ insertCompany);\nint resultInsertCompany\
+    \ = stmt.executeUpdate(insertCompany);\nSystem.out.println(\"resultInsertCompany:\
+    \ \"+ resultInsertCompany);\n```\n\nWe can use a simple log-like with the System.out.println\
+    \ command, which write on console.\n\nThen, it is possible to insert the SQL script\
+    \ for the employees (if present):\n\n```\nArrayList<EmployeeBean> employees =\
+    \ company.getEmployees();\nfor (EmployeeBean employee:employees) \n{\nString insertEmployee\
+    \ = \"INSERT INTO EMPLOEE\n(idemployee,surname,name,badge,FK_company,date_ins)\
+    \ \";\ninsertEmployee +== \" VALUES (\",\n```"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "```\n+ employee.getIdEmployee() + \" \",\"\n+ employee.getSurname() + \" \"\
+    ,\"\n+ employee.getName() + \" \",\"\n+ employee.getBadge() + \" \",\"\n+ employee.getFk_company()\
+    \ + \" \",\"\n+ \" SYSDATE())\";\nSystem.out.println(\"INSERT EMPLOYEE:\"+insertEmployee);\n\
+    int resultInsertEmployee = stmt.executeUpdate(insertEmployee);\nSystem.out.println(\"\
+    result Insert QUERY: \"+resultInsertEmployee);\n}\n```\n\nIn this case, employees\
+    \ are gotten from the company bean and cycled in a for-each loop.\nAt the end,\
+    \ the connection is closed:\n\n```\nfinally {\nif (stmt != null ) stmt.close();\n\
+    if (conn != null ) conn.close();\n}\n```\n\nThe following screenshot shows the\
+    \ java code.\nThe Connection String.\n\n```\npublic class SaveMySQL {\n    private\
+    \ static final String DB_DRIVER = \"com.mysql.jdbc.Driver\";\n    private static\
+    \ final String DB_CONNECTION = \"jdbc:mysql://localhost:3306/company_management\"\
+    ;\n    private static final String DB_USER = \"root\";\n    private static final\
+    \ String DB_PASSWORD = \"root\";\n```\n\nFigure 117. DAO SaveMySQL.java – Connection\
+    \ String.\n\nThe Connection Method."
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "```\nprivate static Connection getConnection() {\n    System.out.println(\"\
+    ------- MySQL JDBC Connection ------\");\n    Connection dbConnection = null;\n\
+    ```\n\n```\n\ntry {\n    Class.forName(DB_DRIVER);\n    System.out.println(e.getMessage());\n\
+    } catch (ClassNotFoundException e) {\n    System.out.println(\"ERROR: MySQL JDBC\
+    \ driver not found!\");\n}\n```\n\n```\n\ntry {\n    Connection dbConnection =\
+    \ DriverManager.getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);\n    System.out.println(\"\
+    SQL Connection to Company_Management database established!\");\n    return dbConnection;\n\
+    } catch (SQLException e) {\n    System.out.println(e.getMessage());\n    System.out.println(\"\
+    Connection to Company_Management database failed!\");\n}\n    return dbConnection;\n\
+    ```\n\nFigure 118. DAOSaveMySQL.java – Connection method.\n\n# The Insert Method.\n\
+    \n```\npublic void insertCompany(CompanyBean company) throws SQLException {\n\
+    \    Statement stmt = null;\n    try {\n        Connection conn = getConnection();\n\
+    \        conn.setAutoCommit(false);\n        stmt = conn.createStatement();\n\n\
+    \        String insertQuery = \"INSERT INTO company (id,name,phone,email,date_ins)\
+    \ VALUES (?,?,?,?,?)\";\n        PreparedStatement pstmt = conn.prepareStatement(insertQuery);\n\
+    \        pstmt.setInt(1, company.getId());\n        pstmt.setString(2, company.getName());\n\
+    \        pstmt.setString(3, company.getPhone());\n        pstmt.setString(4, company.getEmail());\n\
+    \        pstmt.setDate(5, company.getDateIns());\n        System.out.println(\"\
+    INSERT QUERY: \" + insertQuery);\n        int result = pstmt.executeUpdate();\n\
+    \n        String insertEmployee = \"INSERT INTO EMPLOYEE (id,surname,name,badge,fk,date_ins)\
+    \ VALUES (?,?,?,?,?,?)\";\n        PreparedStatement pstmt2 = conn.prepareStatement(insertEmployee);\n\
+    \        pstmt2.setInt(1, employee.getId());\n        pstmt2.setString(2, employee.getSurname());\n\
+    \        pstmt2.setString(3, employee.getName());\n        pstmt2.setString(4,\
+    \ employee.getBadge());\n        pstmt2.setInt(5, employee.getFk());\n       \
+    \ pstmt2.setDate(6, employee.getDateIns());\n        System.out.println(\"INSERT\
+    \ EMPLOYEE: \" + insertEmployee);\n        int result2 = pstmt2.executeUpdate();\n\
+    \n        conn.commit();\n    } catch (SQLException e) {\n        conn.rollback();\n\
+    \        throw new SQLException(e.getCode(), e.getMessage());\n    } catch (Exception\
+    \ e) {\n        conn.rollback();\n        System.out.println(\"GENERIC ERROR :\
+    \ Transaction is rolled back\");\n        e.printStackTrace();\n        throw\
+    \ new Exception(e.getMessage());\n    }\n    if (stmt != null) stmt.close();\n\
+    \    if (conn != null) conn.close();\n}\n```\n\nFigure 119. DAOSaveMySQL.java\
+    \ –insert method.\n\n* Note"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '```
+
+    SaveMySQL.java CompanyManagementService.java listCompany.jsp formEmployeeFull.jsp
+
+    71
+
+    72    ArrayList<Company> searchCompanies(Company company) throws SQLException,
+    IOException {
+
+    73        Statement stmt = null;
+
+    74        Connection conn = null;
+
+    75
+
+    76        try {
+
+    77
+
+    78            conn = getConnection();
+
+    79
+
+    80            stmt = conn.createStatement();
+
+    81            String searchQuery = "SELECT * FROM COMPANY WHERE ";
+
+    82
+
+    83
+
+    84            System.out.println("QUERY: "+searchCompany);\n85            ResultSet
+    resultList = stmt.executeQuery(searchQuery);
+
+    86
+
+    87
+
+    88            ArrayList<Company> listInDB = new ArrayList<Company>();
+
+    89
+
+    90            while (productList.next()) {
+
+    91                Company company = new Company();
+
+    92
+
+    93                String idcompany = companyList.getString("idcompany");
+
+    94                String company_name = companyList.getString("company_name");
+
+    95                company.setIdcompany(idcompany);
+
+    96                company.setName(company_name);
+
+    97                listInDB.add(company);
+
+    98            }
+
+    99
+
+    100            return listInDB;
+
+    101
+
+    102        } catch (SQLException sql) {
+
+    103            throw new SQLException(sql.getErrorCode()+":"+sql.getMessage());
+
+    104                } catch (Exception err) {
+
+    105            throw new SQLException(err.getMessage());
+
+    106        } finally {
+
+    107            if (stmt != null) stmt.close();
+
+    108            if (conn != null) conn.close();
+
+    109        }
+
+    110    }
+
+    ```
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_105_0.png)
+
+
+    We have to change the Servlet for saving data to the DB (SaveMySQL.java) and then
+    dispatching to the search page.'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "# SaveMySQL.java CompanyManagementServlet.java listCompany.js formEmployeeFull.js\n\
+    \n```\nSaveMySQL.java\n200\n201\n202\n203\n204\n205\n206\n207\n208\n209\nelse\
+    \ if (whatsend.equalsIgnoreCase(\"savecompany\")) {\n    company = (Company) request.getSession().getAttribute(\"\
+    COMPANY\");\n    SaveMySQL savecompany = new SaveMySQL();\n}\ntry {\n    savecompany.insertCompany(company);\n\
+    } catch (SQLException e) {\n    System.out.println(\"ERROR:\" + e.errorCode()\
+    \ + \":\" + e.getMessage());\n    e.printTrace();\n}\nArrayList<Company> companyInDB\
+    \ = new ArrayList<Company>();\ncompanyInDB = savecompany.searchCompanies();\n\
+    \ catch (SQLException e) {\n    System.out.println(\"ERROR:\" + e.errorCode()\
+    \ + \":\" + e.getMessage());\n    e.printTrace();\n}\nServletContext sc = request.getSession().getContext();\n\
+    request.removeAttribute(\"COMPANIES\");\nrequest.setAttribute(\"COMPANIES\", companyInDB);\n\
+    RequestDispatcher rd = sc.getRequestDispatcher(\"/listcompany.jsp\");\nrd.forward(request,\
+    \ response);\n```\n\nFigure 121. Servlet for saving on Database.\n\n![](img/112513ff21bfadb0111c509b6257bbec_106_0.png)\n\
+    \n```\nSaveMSQL.java CompanyManagementServlet.java listEmployee.js formCompanyFull.js\n\
+    else if (whatsend.equalsIgnoreCase(\"savecompany\")) {\n    company = (Company)\
+    \ request.getSession().getAttribute(\"COMPANY\");\n    SaveMySQL savecompany =\
+    \ new SaveMySQL();\ntry {\n    savecompany.insertCompany(company);\n} catch (SQLException\
+    \ e) {\n    System.out.println(\"ERROR:\" + e.errorCode() + \":\" + e.getMessage());\n\
+    \    e.printTrace();\n}\nArrayList<Company> companyInDB = new ArrayList<Company>();\n\
+    companyInDB = savecompany.searchCompanies();\n catch (SQLException e) {\n    System.out.println(\"\
+    ERROR:\" + e.errorCode() + \":\" + e.getMessage());\n    e.printTrace();\n}\n\
+    ServletContext sc = request.getSession().getContext();\nrequest.removeAttribute(\"\
+    COMPANIES\");\nrequest.setAttribute(\"COMPANIES\", companyInDB);\nRequestDispatcher\
+    \ rd = sc.getRequestDispatcher(\"/listcompany.jsp\");\nrd.forward(request, response);\n\
+    ```\n\nWe can see the console on the Database.\n\n```\nProject Pro - New Data\
+    \ Source Connection Console\nTomcat at localhost (Apache Tomcat) is running on\
+    \ C:\\apache-tomcat-7.0.81\\webapp (port 8080) (Jan 21, 2015 10:51:23)\nMySQL\
+    \ Connection\nConnection to database established\nSQL: create table employee (id\
+    \ int, surname varchar(45), name varchar(45), bd varchar(10), company_date date)\n\
+    INSERT: insert into employee\ninsert into employee (id, surname, name, bd, company_date)\
+    \ VALUES (1, 'Manelli', 'Gianni', '76809932334223', SYDATE())\nINSERT: insert\
+    \ into employee\ninsert into employee (id, surname, name, bd, company_date) VALUES\
+    \ (2, 'Rossi', 'Mario', '789', '123123123', SYDATE())\nINSERT: insert into employee\n\
+    insert into employee (id, surname, name, bd, company_date) VALUES (3, 'Rossi',\
+    \ 'Sara', '31', '1231231223', SYDATE())\n```\n\nFigure 122. Eclipse, console for\
+    \ saving on DB.\n\nWe can see the saved companies on the listCompany.jsp."
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "# SaveMySQL CompanyManagementService.java listCompany.js formEmployeeFull.js\
+    \ formCompany\n\n```\n1 <page id=\"java.util.ArrayList.js\">\n2 <page id=\"company_management.bean.CompanyBean\"\
+    >\n3 <page id=\"company_management.bean.Text/html; charset=\"ISO-8859-1\" pageEncoding=\"\
+    ISO-8859-1\">\n4 <!!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/html40/loose.dtd\"\
+    >\n5 \n6 ArrayList-listCompany.CompanyBean();\n7 ArrayList<CompanyBean> companies\
+    \ = new ArrayList<CompanyBean>();\n8 if (request.getAttribute(\"COMPANIES\") !=\
+    \ null) {\n9 companiesList = (ArrayList)request.getAttribute(\"COMPANIES\");\n\
+    10 }\n11 \n12 <html>\n13 <head>\n14 <meta http-equiv=\"Content-Type\" content=\"\
+    text/html; charset=ISO-8859-1\">\n15 <title>Companies List</title>\n16 </head>\n\
+    17 <body>\n18 <table>\n19 <tr>\n20 <th id=\"company\">company</th>\n21 <th>company\
+    \ name</th>\n22 </tr>\n23 \n24 \n25 \n26 for (CompanyBean company:companiesList)\
+    \ {\n27 String id=company.getId();\n28 String company_name=company.getName();\n\
+    29 \n30 <tr>\n31 <td><%=id%></td>\n32 <td><%=company_name%></td>\n33 </tr>\n34\
+    \ }\n35 \n36 </table>\n37 </body>\n38 </html>\n```\n\nFigure 123. listCompany.js\n\
+    \n![](img/112513ff21bfadb0111c509b6257bbec_107_0.png)\n\n| id company company\
+    \ name |\n|---|---|---|\n| 12312313 Manelli & CO. |\n| 123123333 Company Test\
+    \ |\n| 324432 Luciano and CO |\n| 365736736 World Company |\n\nFigure 124. Browser\
+    \ - listCompany.jsp page.\n\nWe, now shall also see the DB, and check the inclusion\
+    \ of the company and employees into the DB.\n\n| idcompany | company_name | phone\
+    \ | email | date_ins |\n|---|---|---|---|---|\n| 123123123 | Manelli & CO. | +390992334234223\
+    \ | modeminformatics75@gmail.com | 2015-10-21 |\n\nFigure 125. MySQL – Company\
+    \ DB.\n\n| idemployee | name | surname | badge | FK_company | date_ins |\n|---|---|---|---|---|---|\n\
+    | D876546 | Sara | Manelli | 31 | 123123123 | 2015-10-21 |\n| PP456456 | Luciano\
+    \ | Manelli | 789 | 123123123 | 2015-10-21 |\n\nFigure 126. MySQL – Employee DB."
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# 7.6. Examples of error handling in java Web Application
+
+
+    It is about five thirty!
+
+
+    In this paragraph, we shall try to manage the errors of the Servlet. First, we
+    shall generate a simple "error", changing the company insert query. Change the
+    name of a field: company_name in companyname The query cannot be execute, because
+    a field is incorrect.
+
+
+    In the next screenshot, we can see the error is caught.
+
+
+    The stacktrace on console helps us to see the errors.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_108_0.png)
+
+
+    Figure 127. DAO error management.
+
+
+    Where in the class SaveMySQL to INSERT QUERY:
+
+
+    INSERT INTO COMPANY (idcompany, companyname,phone,email,date_ins)
+
+
+    VALUES (''2341324134'',''Manelli,+3923423423'',''moderninformatics75@gmail.com'',
+    SYSDATE())
+
+
+    We can see the ERROR:
+
+
+    Row 55 of SaveMySQL.java (SQLException):
+
+
+    INSERT ERROR: Transaction is being rolled back'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# We can see how class leave the error management to the Servlet (throw):
+
+
+    Row 58 of SaveMySQL.java:
+
+    throw SQLException(sql.getErrorCode() + ": " + sql.getMessage());
+
+
+    Console Log of SaveMySQL.class:
+
+    ERROR:0:1054:Unknown column ''companyname'' in ''field list''
+
+
+    Row 210 of CompanyManagement.java:
+
+    System.out.println("ERROR:" + e.getErrorCode() + ":" + e.getMessage());
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_109_0.png)
+
+
+    Figure 128. Servlet error management.
+
+
+    The error of SQLException type is "caught" in the block of competence, and the
+    DAO class operation is rolled back. In such a case it can be without an elementary
+    manage of the error with a simple jsp. The servlet redirects, in case of error,
+    the request on an error page. We will create a boolean variable inside the cache:
+    according to this variable value, we can display the error page or continue with
+    the execution of the servlet.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_109_1.png)'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "```\nelse if (whatsnd.equalsIgnoreCase(\"saveCompany\")) {\n    company = (Company)\
+    \ request.getSession().getAttribute(\"COMPANY\");\n    MySQL saveCompany = new\
+    \ MySQL();\n    boolean error=false;\n    try {\n        saveCompany.insertCompany(company);\n\
+    \    } catch (SQLException e) {\n        System.out.println(\"ERROR:\"+e.getErrorCode()+\"\
+    :\"+e.getMessage());\n        error=true;\n        e.printStackTrace();\n    }\n\
+    }\nServletContext sc = request.getSession().getServletContext();\nrequest.removeAttribute(\"\
+    COMPANIES\");\nif (error) {\n    RequestDispatcher rd = sc.getRequestDispatcher(\"\
+    /error.jsp\");\n    rd.forward(request, response);\n}\\else\nelse {\n    ArrayList<Company>\
+    \ companyIndB = new ArrayList<Company>();\n    try {\n        companyIndB=saveCompany.searchCompanies();\n\
+    \    } catch (SQLException e) {\n        System.out.println(\"ERROR:\"+e.getErrorCode()+\"\
+    :\"+e.getMessage());\n        e.printStackTrace();\n    }\n    request.setAttribute(\"\
+    COMPANIES\",companyIndB);\n    RequestDispatcher rd = sc.getRequestDispatcher(\"\
+    /listCompany.jsp\");\n    rd.forward(request, response);\n}\n```\n\nIn the following\
+    \ screenshot, we can see the simple error.jsp JSP page.\n\n![](img/112513ff21bfadb0111c509b6257bbec_110_0.png)\n\
+    \nFigure 129. Boolean variable in Servlet management."
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# 8. Web Application ready for the distribution on Tomcat
+
+
+    It is about six thirty!
+
+
+    We have just finished the project!
+
+
+    Now, we shall to deploy our project on a server in a distribution/ operation /delivery
+    environment, in fact if we want to use the software we do not need Eclipse!
+
+
+    Click the right mouse button on the project, Export, then for war file.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_111_0.png)
+
+
+    A name is given to the project and then exported the war.'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_112_0.png)
+
+
+    If we open the zipped file, we can see the “company_management” folder tree project.
+    In the WEB-INF folder, there is the “classes” folder with compiled java files
+    (.class). We shall insert the war project under the server, Tomcat 8, in the webapps
+    folder (C:\apache-tomcat-8.0.14\webapps).
+
+
+    Tomcat starts from the bin folder (C:\apache-tomcat-8.0.14\bin): startup.bat/shutdown.bat
+    under Windows environment.'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '| bootstrap.jar | 24/09/2014 22:03 | Executable File | 28 KB |
+
+    | catalina.bat | 25/03/2015 16:22 | File batches | 14 KB |
+
+    | catalina.sh | 24/09/2014 22:03 | File SH | 21 KB |
+
+    | catalina-tasks.xml | 24/09/2014 22:03 | Document XML | 3 KB |
+
+    | commons-daemon.jar | 24/09/2014 22:03 | Executable Jar | 24 KB |
+
+    | commons-daemon-native.tar.gz | 24/09/2014 22:03 | WinRAR archive | 201 KB |
+
+    | configest.bat | 24/09/2014 22:03 | File batches | 2 KB |
+
+    | configest.sh | 24/09/2014 22:03 | File SH | 2 KB |
+
+    | daemon.sh | 24/09/2014 22:03 | File batches | 8 KB |
+
+    | digest.bat | 24/09/2014 22:03 | File batches | 3 KB |
+
+    | digest.sh | 24/09/2014 22:03 | File SH | 2 KB |
+
+    | service.bat | 24/09/2014 22:03 | File batches | 7 KB |
+
+    | setclasspath.bat | 24/09/2014 22:03 | File batches | 4 KB |
+
+    | setclasspath.sh | 24/09/2014 22:03 | File SH | 4 KB |
+
+    | shutdown.bat | 24/09/2014 22:03 | File batches | 2 KB |
+
+    | shutdown.sh | 24/09/2014 22:03 | File SH | 2 KB |
+
+    | startup.bat | 24/09/2014 22:03 | File batches | 2 KB |
+
+    | startup.sh | 24/09/2014 22:03 | File SH | 2 KB |
+
+    | tcnative-1.dll | 24/09/2014 22:03 | Estensione dell''app... | 1116 KB |
+
+    | tomcat8.exe | 24/09/2014 22:03 | Applicazione | 85 KB |
+
+    | tomcat8we.exe | 24/09/2014 22:03 | Applicazione | 108 KB |
+
+    | tomcat-uli.jar | 24/09/2014 22:03 | Executable Jar File | 40 KB |
+
+    | tomcat-native.tar.gz | 24/09/2014 22:03 | WinRAR archive | 379 KB |
+
+
+    Figure 133. Tomcat - bin folder.
+
+
+    Attention! Set the JAVA_HOME Tomcat in the catalina.bat file, indicating the JDK
+    used for application development. We will add the line:
+
+
+    ```
+
+    JAVA_HOME=C:\Program Files\jdk1.8_065
+
+    ```
+
+
+    # The Tomcat "startup" opens a DOS window.
+
+
+    ![](img/112513ff21bfadb0111c509b6257bbec_113_0.png)
+
+
+    Figure 134. Tomcat DOS window.
+
+
+    Finally, you can see that the web application will be unzipped in the webapps
+    folder (C:\apache-tomcat-8.0.14\webapps).'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '![](img/112513ff21bfadb0111c509b6257bbec_114_0.png)
+
+
+    The URL is:
+
+
+    ```
+
+    http://localhost:8080/company_management/formCompanyFull.jsp
+
+    ```'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# 9. Conclusion
+
+
+    It is about seven! We have definitely finished, so please do not worry!
+
+    It has been a good experience working with you!
+
+
+    We have just created and distributed our first web application (not so far from
+    real professional applications!). It consists of 4 JSP (formCompanyFull.jsp, formEmployeeFull.jsp,
+    error.jsp, listCompany.jsp); 1 access class to the DB (SaveMyMySQL.java); 2 bean
+    class (CompanyBean.java and EmployeeBean.java); 1 servlet (CompanyManagementServlet).
+
+
+    Simple, isn''t it?
+
+    I this dissertation has been helpful and useful...I look forward to your feedback!'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# 10. Bibliography
+
+
+    Luciano Manelli, “Programmazione per il Web”, Italian Edition - Publisher ARACNE,
+    2015.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# 11. Index of Figures
+
+
+    +   Figure 1. MySQL Server Installation.
+
+    Figure 2. MySQL Server Installation, licence.
+
+    Figure 3. MySQL Server Installation – setup guide.
+
+    Figure 4. MySQL Server Installation - Installation.
+
+    Figure 5. MySQL Server Installation – installed.
+
+    Figure 6. MySQL Server Installation – configuration.
+
+    Figure 7. MySQL Server Installation – password setting.
+
+    Figure 8. MySQL Server Installation – Windows Service.
+
+    Figure 9. MySQL Server Installation – Server configuration.
+
+    Figure 10. MySQL Server Installation – test server connection.
+
+    Figure 11. MySQL Server Installation – last steps.
+
+    Figure 12. MySQL Server Installation – end.
+
+    Figure 13. MySQL Workbench Installation.
+
+    Figure 14. MySQL Workbench Installation - setup.
+
+    Figure 15. MySQL Workbench Installation - installation.
+
+    Figure 16. MySQL Workbench Installation - end.
+
+    Figure 17. Workbench environment.
+
+    Figure 18. Connection to the Server using the Workbench.
+
+    Figure 19. Parameters for connection.
+
+    Figure 20. Connection to the Server – password setting.
+
+    Figure 21. Workbench environment.
+
+    Figure 22. Workbench, how to create a new Schema.
+
+    Figure 23. Workbench, how to create a new Schema – creation script execution.
+
+    Figure 24. Workbench, how to create a table.
+
+    Figure 25. Workbench, Table name e insertion.
+
+    Figure 26. Workbench, how to create a Table – creation script execution.
+
+    Figure 27. Workbench, how to modify a Table.
+
+    Figure 28. Workbench, how to analyze a Table (query).
+
+    Figure 29. Workbench, company table.
+
+    Figure 30. Workbench, employee table.
+
+    Figure 31. Workbench, how to define a foreign key.
+
+    Figure 32. Workbench, definition of foreign key.
+
+    Figure 33. Workbench, how to create a Foreign Key – creation script execution.'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '+   Figure 34. Workbench, how to export a creation schema.
+
+    Figure 35. Workbench, how to export a creation table script.
+
+    Figure 36. Workbench, reverse engineer.
+
+    Figure 37. Workbench, reverse engineer: connection to the DB.
+
+    Figure 38. Workbench, reverse engineer: user/password.
+
+    Figure 39. Workbench, reverse engineer: script execution.
+
+    Figure 40. Workbench, tables'' schema of reverse engineering.
+
+    Figure 41. Workbench, Workbench, tables'' schema of reverse engineering with indexes.
+
+    Figure 42. Eclipse, files in the extracted folder eclipse Mars.
+
+    Figure 43. Eclipse, workspace.
+
+    Figure 44. Eclipse, initial screen.
+
+    Figure 45. JDK Download.
+
+    Figure 46. Eclipse, JDK configuration.
+
+    Figure 47. Eclipse, new server configuration.
+
+    Figure 48. Eclipse, Tomcat server and installed JRE.
+
+    Figure 49. Eclipse, another way to configure a server in Eclipse.
+
+    Figure 51. Eclipse, how to start the selected server.
+
+    Figure 52. Eclipse, how to create a web project.
+
+    Figure 53. Eclipse, configuration of a web project.
+
+    Figure 54. Eclipse, configuration of src e classes folder for a web project.
+
+    Figure 55. Eclipse, “context root” and “context directory” configuration.
+
+    Figure 56. Eclipse, created web project.
+
+    Figure 57. Eclipse, how to create a JSP.
+
+    Figure 58. Eclipse, JSP configuration.
+
+    Figure 59. Eclipse, JSP script.
+
+    Figure 60. Eclipse, how to modify a JSP script.
+
+    Figure 61. Eclipse, how to run the server.
+
+    Figure 62. Eclipse, started server.
+
+    Figure 63. Eclipse, run from menu.
+
+    Figure 64. Eclipse, run from play button of menu.
+
+    Figure 65. Eclipse, Run from project.
+
+    Figure 66. Eclipse, selection of the server.
+
+    Figure 67. Eclipse, web application configuration on the server.'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: 'Figure 68. Eclipse, hello.jsp web page.
+
+
+    Figure 69. Chrome, hello.jsp web page.
+
+
+    Figure 70. Eclipse, welcome file list.
+
+
+    Figure 71. Eclipse, how to create a Servlet
+
+
+    Figure 72. Eclipse, servlet name and package configuration.
+
+
+    Figure 73. Eclipse, servlet methods definitions.
+
+
+    Figure 74. Eclipse, Servlet script.
+
+
+    Figure 75. Eclipse, how to create a class.
+
+
+    Figure 76. Eclipse, class name e package configuration.
+
+
+    Figure 77. Eclipse, Class script.
+
+
+    Figure 78. Eclipse, how to create a JSP for our application.
+
+
+    Figure 79. Eclipse, name of JSP.
+
+
+    Figure 80. Eclipse, form JSP Java code.
+
+
+    Figure 81. Browser Chrome, form.
+
+
+    Figure 82. Eclipse, doGet and doPost in a Servlet
+
+
+    Figure 83. Eclipse, POST result on the Eclipse browser and on the browser.
+
+
+    Figure 84. Eclipse, GET result on the Eclipse browser and on the browser.
+
+
+    Figure 85. Eclipse, form companyForm.jsp.
+
+
+    Figure 86. Browser, filled in form companyForm.jsp.
+
+
+    Figure 87. Eclipse, form employeeForm.jsp.
+
+
+    Figure 88. Eclipse, empty form employeeForm.jsp.
+
+
+    Figure 89. Browser, empty form employeeForm.jsp.
+
+
+    Figure 90. Servlet CompanyManagement.java and console.
+
+
+    Figure 91. JavaBean class creation.
+
+
+    Figure 92. JavaBean Version ID creation.
+
+
+    Figure 93. JavaBean Version ID created.
+
+
+    Figure 94. How to Generate Getters and Setters – step 1.
+
+
+    Figure 95. How to Generate Getters and Setters – step 2.
+
+
+    Figure 96. Eclis, CompanyBean.java.
+
+
+    Figure 97. Eclipse, EmployeeBean.java.
+
+
+    Figure 98. JSP links – employeeForm.jsp.
+
+
+    Figure 99. JSP links – homepage.jsp.
+
+
+    Figure 100. ArrayList companyEmployees.
+
+
+    Figure 101. ArrayList companyEmployees.'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '+   Figure 102. Browser, empty formCompanyFull.jsp.
+
+
+    +   Figure 103, formCompanyFull.jsp and use of session.
+
+
+    +   Figure 104, formCompanyFull.jsp – changed links and input fields.
+
+
+    +   Figure 105. Servlet, company bean and session.
+
+
+    +   Figure 106, formCompanyFull.jsp, pre-populated form.
+
+
+    +   Figure 107. Browser, emptyEmployeeFull.jsp.
+
+
+    +   Figure 108. JSP - formEmployeeFull.jsp.
+
+
+    +   Figure 109. employeeyeid – formEmployeeFull.jsp.
+
+
+    +   Figure 110, formEmployeeFull.jsp – changed input fields.
+
+
+    +   Figure 111, formCompanyFull.jsp - links.
+
+
+    +   Figure 112. Servlet, link GET.
+
+
+    +   Figure 113. Servlet, employees ArrayList.
+
+
+    +   Figure 114. Browser, additional employee.
+
+
+    +   Figure 115. Servlet, employees arraylist on console.
+
+
+    +   Figure 116. Servlet, how to remove session objects.
+
+
+    +   Figure 117. DAO SaveMySQL.java – Connection String.
+
+
+    +   Figure 118. DAO SaveMySQL.java – Connection method.
+
+
+    +   Figure 119. DAO SaveMySQL.java –insert method.
+
+
+    +   Figure 120. DAO SaveMySQL.java – saving on DataBase.
+
+
+    +   Figure 121. Servlet for saving on DataBase.
+
+
+    +   Figure 122. Eclipse, console for saving on DB.
+
+
+    +   Figure 123. listCompany.jsp
+
+
+    +   Figure 124. Browser - listCompany.jsp page.
+
+
+    +   Figure 125. MySQL – Company DB.
+
+
+    +   Figure 126. MySQL – Employee DB.
+
+
+    +   Figure 127. DAO error management.
+
+
+    +   Figure 128. Servlet error management.
+
+
+    +   Figure 129. Boolean variable in Servlet error management.
+
+
+    +   Figure 130. Error JSP.
+
+
+    +   Figure 131. Eclipse, how to export a war file.
+
+
+    +   Figure 132. Eclipse, war file generation.
+
+
+    +   Figure 133. Tomcat – bin folder.
+
+
+    +   Figure 134. Tomcat DOS window.
+
+
+    +   Figure 135. Tomcat webapps folder.'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 121
