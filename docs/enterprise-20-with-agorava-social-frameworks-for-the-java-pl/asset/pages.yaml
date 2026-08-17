@@ -1,0 +1,2392 @@
+- img_proc: true
+  md: "# Werner Keil\n\n# Enterprise 2.0\n Agorava\n\nSocial Frameworks for the Java\
+    \ Platform\n\n![](img/0b9ef25bba76e41e13d568c065fdf1e4_0_0.png)"
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Enterprise 2.0 with Agorava
+
+
+    Social Frameworks for the Java Platform
+
+
+    Werner Keil
+
+
+    This book is for sale at http://leanpub.com/agorava
+
+
+    This version was published on 2020-11-09
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_1_0.png)
+
+
+    This is a Leanpub book. Leanpub empowers authors and publishers with the Lean
+    Publishing process. Lean Publishing is the act of publishing an in-progress ebook
+    using lightweight tools and many iterations to get reader feedback, pivot until
+    you have the right book and build traction once you do.
+
+
+    © 2016 - 2020 Werner Keil'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # Contents
+
+
+    Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+
+
+    +   Standardisation (#standardisation .DPHeading1) . . . . . . . . . . . . . .
+    . 4
+
+    - Early Approaches . . . . . . . . . . . . . . . . . . . . . . . . . 4
+
+    - Mashup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+
+    - Types of Standards (#types-of-standards .DPHeading2) . . . . . . . . . . . .
+    7
+
+    - Java Social (#java-social .DPHeading2) . . . . . . . . . . . . . . . . . 13
+
+
+    +   Social Security (#social-security .DPHeading1) . . . . . . . . . . . . . .
+    . 19
+
+    - Authorisation (#authorisation .DPHeading2) . . . . . . . . . . . . . . . . .
+    . 19
+
+    - Authentication (#authentication .DPHeading2) . . . . . . . . . . . . . . . 25
+
+    - Security Frameworks (#security-frameworks .DPHeading2) . . . . . . . 28
+
+    - Digital Identity (#digital-identity .DPHeading2) . . . . . . . . . 31
+
+    - Privacy (#privacy .DPHeading2) . . . . . . . . . . . . . . . . . . . . . . .
+    31
+
+
+    +   Agorava (#agorava .DPHeading1) . . . . . . . . . . . . . . . . . . . . . 34
+
+    - Overview (#overview .DPHeading2) . . . . . . . . . . . . . . . . . . . . . .
+    . . . . 34
+
+    - Core (#core .DPHeading2) . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . 36
+
+    - Connectors (#connectors .DPHeading2) . . . . . . . . . . . . . . . . . . . .
+    39
+
+    - Socializer (#socializer .DPHeading2) . . . . . . . . . . . . . . . . . . . .
+    39
+
+
+    +   Enterprise Social (#enterprise-social .DPHeading1) . . . . . . . . . . . .
+    . . . . 42
+
+    - Advertising and Analytics (#advertising-and-analytics .DPHeading2) . . . . 42
+
+    - Location (#location .DPHeading2) . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . 42
+
+    - Media (#media .DPHeading2) . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . 42
+
+    - Products & Services (#products-services .DPHeading2) . . . . . . . . . 42
+
+    - Profiles (#profiles .DPHeading2) . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . 42
+
+    - Specialties (#specialties .DPHeading2) . . . . . . . . . . . . . . . . . . .
+    . . 42'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# CONTENTS
+
+
+    [#_Ref363514689.anchor]Two things form the bedrock of any open society - freedom
+    of expression and rule of law. If you don''t have those things, you don''t have
+    a free country.\ - Sir Salman Rushdie
+
+
+    Freedom of expression, when inspired by innocent intent, is the defining force
+    behind openness. This powerful force now has new wings to social media. Social
+    media grants voice to the unheard all around this divergent little planet of ours
+    and we are still beginning to see what it can do - be in Kiev, Moscow, Ferguson,
+    Baltimore, Tunis, Cairo, Istanbul, Riyadh, Tehran or Gaza. You would be fooling
+    yourself if you don''t think these in the legacy halls of power would not love
+    to suppress, subvert and abuse this grassroots force. You need not look much further
+    to find evidence of this gritty documentary named Citizenfour and a meek young
+    named Edward Snowden.
+
+
+    One of the many things that pose a serious risk to the openness of social media
+    is its far proprietary nature. It would be shocking to deny anyone that there
+    are few or no open technical standards in the social media space. There are some
+    good reasons for such immunity and a very rapid pace of innovation. There are
+    also not very good reasons for such cutthroat competition to monetize social media
+    and a resulting lack of interest in mutual cooperation towards openness.
+
+
+    Hopefully things will change as the social media industry standardizes a bit and
+    is more ready for standardization. In the meanwhile community projects like Agora
+    have a very important part play. In absence of any real open stores, Agora can
+    provide some level of interoperability through a common interface for the divergent
+    social media APIs of today - at least for Java and Java EE developers. The project
+    is also very significant to the Java EE ecosystem on its own. It demonstrates
+    first-hand how CDI extensions can effectively build upon the stable core of the
+    Java EE platform where needed while still adhering as closely as possible to the
+    principles of interoperability and vendor-neutrality.
+
+
+    This book is critically important to the project. It provides great background
+    of the social media industry, explains the core concepts for Java social media
+    developers, describes the so far efforts towards standardization, covers the other
+    social media projects, shares the motivation for the project as well as of providing
+    a technical overview and deep dive of the Agoraova API. Given the volatility,
+    depth and complexity of the topic, this book was no doubt a very tough to write.
+
+
+    To boot I can''t think of a better person than Werner to write the book. He has
+    demonstrated his personal commitment to openness, standardization, Java and Java
+    EE over many years as well as his clear command of the social media industry and
+    Agoraova.
+
+
+    Reza Rahman
+
+
+    Founder Java EE Guardians Former Java EE Evangelist @ Oracle'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Ancient History
+
+
+    Ancient History
+
+
+    Most people assume social media to be a modern-day invention of companies like
+    Yahoo!, Google, MySpace, Facebook and Twitter. In actual fact, social media has
+    a history that reaches back over thousands of years.
+
+
+    To some the postal service was one of the earliest forms of social media. From
+    the days of the ancient Persian postal service to the Greek Agora [1] and Roman
+    Forum [2], the postal service served as a medium for social and political discussion.
+    The first recorded equivalents to Wiki or "Forum posts" were literally carved
+    into the walls of Roman Forums [3] Recording events like the destruction of Pompeii
+    by Mt. Vesuvius or several parts of Rome under Nero.
+
+
+    The Ancient Agora of Athens acted as incubator to democracy being a favorite venue
+    for social and political debate while doing business in ancient Greece. Until
+    today, this worked in similar ways the forums turned digital. From Tunisia to
+    Ukraine opposition movements used social media to bring democracy to places where
+    it''s often been surprised and uncommon for a long time. [4]
+
+
+    Modern History
+
+
+    In 1975, shortly before the American military out of Vietnam, the libertarian
+    Samuel Edward Konkin III introduced a philosophy called Agora, a social philosophy
+    of counter-economics and the ideas associated with that practice [5]. In a market
+    anarchist society, law and security would be provided by market actors instead
+    of political institutions. Agorists recognise situation cannot develop through
+    political reform. Instead, it will arise as a result of market processes. Its
+    social values can be found today the Occupy Movement, its primary goal being to
+    make the economic and political relations in all societies less hierarchical and
+    more flatly distributed. Or in protest parties like Beppe Grillo in Italy, Syria
+    in Greece (where it even took government), Podemus in Spain or the Pirate Parties.
+    Agora also put forth the idea of using currencies, something modern social media
+    and online communities are adopting with digital currencies like Bitcoin.
+
+
+    In 1966, the email was invented, followed by the arrival of CompuServe in 1969.
+    CompuServe launched its email service in the 80s and expanded into early 90s,
+    before finally dissolving original CompuServe in 2009 after several takeovers.
+
+
+    Usenet started up in 1979 and provided its users with forums and newsgroups. Surprisingly,
+    most of their functions have changed very little and still exist today.
+
+
+    Internet Relay Chat (IRC) began in 1988 and was widely used across academic networks
+    before emerging into what is now the Internet. IRC remains quite active today,
+    although it is largely'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Introduction
+
+
+    overshadowed by short messaging services like Twitter. There are still around
+    3200 IRC servers around the world with hundreds of thousands of channels available.
+
+
+    Based on the notion of Six Degrees of Separation [6], the first modern social
+    network, sixdegrees.com, was founded in 1997. It allowed members to link to other
+    members as friends, write messages or post on bulletin boards. After being sold
+    to another company, it was shut down in 2001 with roughly one million users. When
+    services like Amazon, Yahoo! and 1998 Google first came into existence, they were
+    not considered social networks.
+
+
+    In 1995, Microsoft picked up on the emerging trends by launching the Microsoft
+    Network (MSN). MSN became known as a ''portal'', another word for personalised
+    online commerce. It wasn''t surprising when many portal products, services and
+    vendors joined the social bandwagon a few years later.
+
+
+    Both Microsoft and Yahoo! had fallen behind of social media''s new kids on the
+    block and became a rather brilliant and fast move with YouTube, most other aspects
+    of social media were also underestimated by Google, it returned via Google+ and
+    is certainly here to see if it may not lead every aspect of it. Yahoo! also offers
+    plenty of social features and has since its recent recovery over smaller vendors
+    in the networking space like Flickr or Tumblr. 1993. Brad Fitzpatrick, now also
+    working at Google Livejournal.
+
+
+    At the start of the 2000s, MySpace and LinkedIn(and their somewhat different standing
+    today years later) to the middle of that decade, when current giants Twitter or
+    Facebook were founded, already Google acquired YouTube. In the last few years,
+    we have seen several take-overs, most notably Facebook buying Instagram for close
+    to a billion dollars or its gigantic takeover bid for mobile messaging provider
+    WhatsApp.
+
+
+    Social networks have always existed, since people first started to communicate.
+    Technical means changed over time, and are are likely to change even faster in
+    the near future. Some services will be merged; others might become irrelevant
+    and vanish sooner or later. Using vendor-neutral standards and frameworks, that
+    wont tie you into the offerings of just single provider is crucial, unless you
+    want to spend more time on rapidly changing APIs than using it for something productive.
+    Or worse, having to switch over to another provider, proprietary API and framework
+    offered by a particular vendor is no longer available. While not a Social Network
+    in the sense of Twitter of Facebook, the recently closed Bitcoin trading site
+    Mt.Gox [7] was a good example for dilemma. It used to be market leader in this
+    area for a long time, applications and e-commerce solutions offering Bitcoin may
+    have used its API directly, now forced to throw these apps away and rewrite them.
+
+
+    If a vendor-neutral abstraction is created on top of such API, then it is much
+    easier to cope with problems and changes like those caused a vendor going out
+    of business or being taken over by others.
+
+
+    This is where Agora comes into play.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# # Standardisation {#standardisation .DPHeading1}
+
+
+    # ## Early Approaches
+
+
+    The theories we encountered in the introduction, such as Six Degrees of Separation
+    [6], influenced later concepts got Friend of a Friend (FOAF) [8]. Aspect of both
+    can be found in most "Friend" mechanisms used by social networks today.
+
+
+    Rich Site Summary (RSS) [9] is an early example of a digital form of social media.
+    Among the developers involved in the design and standardisation of RSS was Aaron
+    Swartz, before his untimely death in early 2013, had worked on a book A Programmable
+    Web [10] a rather down-to-earth, street-smart could academic papers in this field.
+
+
+    Portable Contacts was created by Plaxo, a Social Address book service founded
+    in 2002 by a group of entrepreneurs around Sean Parker. Parker had legal troubles
+    everyone one couldn''t call Aaron Swartz after his Napster media exchange portal
+    was forced out of business, but fortunately talking for more than one Social Media
+    household name of today had to cope with it differently. The idea of a portable
+    address book or "Digital Business Cards" was well-integrated and makes sense especially
+    from a user''s point of view, but commercial interests of competing players each
+    of them greedy to share date even with those who created it many roadblocks to
+    an otherwise good idea. Plaxo while in still business after all years was not
+    necessarily his greatest hit and investors kicked him out in ways not so different
+    from what had happened to co-founder Eduardo Verin when Facebook got involved.
+    Financially this made him rich and put behind other services, e. Spotify. Little
+    coincidence, it seems quite a bit like Napster, but in a more commercially accepted
+    way, also thanks to his fame and fortune after Facebook. Portable Contacts have
+    been a significant part of the social media movement but are no longer used. This
+    is because of the API''s used within larger companies are no longer compatible
+    with Portable Contacts. The only remainder still in use is vCard, used by many
+    companies and applications.
+
+
+    # ## Mashup
+
+
+    The Java language played a more and more important role first on the desktop (mostly
+    Java Applets in the early days, or AWT/Swing standalone applications) then around
+    the turn of the century also on the server, Sun and other companies (of those
+    at least HP and IBM are still active, plus Sun now part of Oracle) began to standardize
+    parts of the Java Platform in the so called Java Community Process (founded 1998)
+    or JCP.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Standardisation #standardisation DPHeading1
+
+
+    After being turned down or withdrawn a notice, notable standards for Social Networks,
+    then often called "Portal" (by MSN earlier) was JSR 168 the Java Portal Specification
+    [11] In an ideal world it allowed portal applications to be deployed into multiple
+    portal servers regardless of the vendor and with other standards, the OASIS-defined
+    WSRP (Web Services for Remote Portlets) raised hopes for interoperability between
+    these applications across different ports. After 10 years, with other technologies
+    and languages, especially "light weight containers" on the rise, the Java Portal
+    standard is currently about to get a version 3.0 update (JSR 362) Planning to
+    incorporate some of the later Social standards where possible.
+
+
+    While Portlets and related standards are still mostly the dream of large scale
+    Enterprise Application served by music or copies and remixes in a large language
+    and platform approach called Mash [12] started shortly after the first Portal
+    standard. Whether it was Yahoo Pipes, Microsoft Popfly, Google Mash Editor, IBM
+    Mash Center or BEALogic [13] all of them promised interoperability and personalised
+    widgets, with an experience similar to Google. A service, which mostly due to
+    Google+ taking personalisation and a more "Integrated Social Media" to the next
+    level, was shut down on November 1 2013.
+
+
+    So RSS, was only a few months after Aaron Swartz''s death. Google Swartz as discontinued
+    his unfinished book [10] advocated an open API based programmable web, most of
+    the big providers have different plans, as numerous articles around Google Reader''s
+    end like this one [14] express.
+
+
+    Another social standard has been affected by this development most since its inception:
+    OpenSocial [15] Developed by Google with a handful initial supporters, MySpace
+    still the most popular social network at the time, Ning or Plaxo. At this time
+    Portal Contacts mentioned earlier would also fit into the ideal idea of use Widgets
+    and Services across a variety of social networking providers. As opposed to e.g.
+    Version 2.0 of the Java Portal standard which released its Public Draft around
+    the same time.
+
+
+    While seemingly easier to use, so were exploits and security issues, often demonstrated
+    by "script kids" or less of primary using schools to break or compromise these
+    services and widgets. Full scale Java enterprises and Portlets are still and much
+    harder to break into, if system administrators do their homework and all the fuzz
+    about Java Security or it being used to transport malware usually affects the
+    client side.
+
+
+    Exactly where a vast majority of OpenSocial code runs it more exposed than a mostly
+    server-side or carefully used mix of server (Java EE or other environments) and
+    client tier (JavaScript.), See Figure N—Tier Enterprise Application for different
+    types of the webbased Enterprise Application. Java EE, but it may replace it by
+    other languages like Python, PHP, Ruby or Scala with the layers being the same.
+
+
+    While Google began to use OpenSocial in its Orkut service (popular in Latin America
+    and a few other countries like India, but really picked up others vendors initially
+    planning to support it abandoned those plans one after the other. The likes of
+    LinkedIn and XING especially did so for security reasons. XING as we''ll hear
+    more about Security and Privacy about the latter, too. Neither Facebook nor Twitter,
+    the two dominators from the second half of the last decade'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Standardisation #standardisation DPHeading1
+
+
+    ever cared about OpenSocial. And more importantly, Google killed its own creation
+    when it became obvious. Google+ would never support it either. A few vendors mainly
+    from the server and large Enterprise fraction like IBM, SAP or Confluence author
+    Atlassian still back OpenSocial.
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_8_0.png)
+
+
+    [[#_Ref363567312_anchor][#_Ref363567178_anchor]]Figure 1 – N-tier Enterprise Application
+
+
+    Dachs Group, recently acquired by Sprinklr, sort of a “Think Tank” for Social
+    Media and Enterprise Data Analysis is also strongly involved, though its focus
+    goes more in directions like Big Data and NoSQL systems, and it openly admits
+    like remaining OpenSocial backers (or ThoughtWorks in their regular survey called
+    “Radar” about technologies to watch or reach over time) the only place for it
+    to be the Enterprise and Intranet after. Data can be seen as a Mashup, but it
+    takes primarily on the EIS or DB tier (see Figure 1) so I won''t discuss this
+    out much here. These technologies would also deserve their own book and exceed
+    the scope of this one ;-)
+
+
+    Instead of seamless Mashup of e.Google, Facebook, Twitter, LinkedIn, Microsoft
+    or Yahoo! the only value of OpenSocial is now connecting HR, Sales or Accounting
+    with each other and provide the management with some nifty “Social” Mashup of
+    all departments and subsidiaries of a large enterprise. Making it practically
+    useless to those who wish to see let’s say from their Twitter feed next to the
+    Facebook timeline. The purpose, OpenSocial was originally created for.
+
+
+    The latest twist in the OpenSocial story is an effort to create a W3C standard
+    based on OpenSocial'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'What has been a hard and thorny path in the case of the Semantic Web seems
+    almost impossible here; especially given a majority of players prefer their “walled
+    garden” as we found earlier [14]
+
+
+    While W3C defined an interesting standard called semantic web, which sounds synergetic
+    to some OpenSocial’s ideas, semantic web is so far used only in a few isolated
+    sectors like biology or healthcare.
+
+
+    Work at W3C happens at rather slow pace, similar to (or even slower than) HTML5,
+    for example, which started in 2008. Today it is still in candidate state (despite
+    many vendors already proposing solutions and products being based on it). A final
+    recommendation is expected by the end of 2014 with further updates and improvements
+    to come two years after that, and so on. That will make it well over a decade
+    before something standardised this way.
+
+
+    # Types of Standards
+
+
+    Aside from their lobbying of “Basic Standards” like OpenSocial [15], Figure 2
+    provides a decent overview of Social Standards by Dachis Group from a series of
+    articles [16]'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# WHAT’S MISSING IN SOCIAL BUSINESS STANDARDS?
+
+
+    # HIGHER-ORDER STANDARDS
+
+
+    +   UNIVERSAL CURRENCY FOR...
+
+    Social Engagement
+
+    - Likes
+
+    - Retweets
+
+    - Comments
+
+    - Posts
+
+    - Etc.
+
+
+    +   TRACKING DATA MODELS FOR...
+
+    Social Behavior
+
+    - Views
+
+    - Participation
+
+    - Recommendations
+
+    - Activity
+
+    - Etc.
+
+
+    +   DOMAIN SPECIFIC MEASURES FOR...
+
+    Social Metrics
+
+    - Net Promoter Score
+
+    - Social Business Index
+
+    - OSAT
+
+    - LTR
+
+
+    # BASIC STANDARDS
+
+    (formal and ad hoc)
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_10_0.png)
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_10_1.png)
+
+
+    +   Social Identity/Graph
+
+    - LDAP/Activity directory
+
+    - Facebook Graph API
+
+    - Twitter Friends/Followers API
+
+    - Portable Contacts
+
+    - Google Contacts API
+
+
+    +   Social Activity
+
+    - Activity streams
+
+    - RSS
+
+    - ATOM
+
+    - Pubsubhubbub
+
+    - Salmon
+
+    - OSStatus
+
+
+    +   Social Integration
+
+    - OpenSocial
+
+    - Open Graph
+
+    - OAuth/xAuth
+
+
+    +   Security/Privacy/Policy
+
+    - SAML
+
+    - OpenID
+
+    -OAuth
+
+    - P2P
+
+    - DNT
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_10_2.png)
+
+
+    > A continuing discussion of socialbusinessbydesign.com
+
+    Visual by Dion Hincliffe & Bill Keaggy
+
+
+    [#_Ref63567186.._anchor]Figure 2 – What is missing in Social Business Standards?
+
+
+    Two main categories are
+
+
+    +   1. Higher-Order Standards: Behaviour and Domain-Driven business oriented standards
+    and APIs. Most of them are not clearly fleshed out by the authors of [16]
+
+    2. Basic Standards: Some were mentioned before, here grouped into 4 sub-categories
+
+
+    +   a. Contacts
+
+    b. Activity/Messaging
+
+    c. Integration/Interoperability
+
+    d. Security
+
+
+    Then you may look at the way, Social, standards, frameworks and libraries communicate.
+    By either'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Standardisation #standardisation _DPHeading1
+
+
+    +   * Consuming information
+
+    * Analysing information
+
+    * Transforming information
+
+    * Providing example information
+
+
+    A typical example for consuming information would be showing your status in your
+    favourite social networks inside another application, e.g. your blog or corporate
+    website.
+
+
+    Another one is if you include a map to service to show directions to an event
+    you host or participate in.
+
+
+    Analysing information involves some sort of calculation, ranking or benchmarking.
+    Often consuming more than one source of information, so you can get a better picture.
+    An example of such a service would be Klout. Where activities across multiple
+    social networks influence your overall ranking.
+
+
+    Transforming information can be either by merging and combining several data streams,
+    a simple sum of two numbers, or if e.g. your booking site predicts the cost of
+    a trip in your local currency based on conversion rates. Translation services
+    like Google Translate would be another, more sophisticated example of transforming
+    information.
+
+
+    Last not least providing information is any service or sometimes just content
+    your application available to others. Ideally via an API allowing others to consume,
+    analyse or transform it based on their needs.
+
+
+    Another way of looking at Enterprise Social Networks, related standards or products
+    according to IDC [Figure 3] would be
+
+
+    +   * Stand-a-Lone Products or services with social aspect that can be installed
+    and used on their own. Though by the nature some, e.g those embracing OpenSocial
+    aim to be interoperable with others, ideally across multiple vendors
+
+    * Embedded Social facts or features within a larger product or suite. A classical
+    examples would be Oracle Fusion Middleware, containing social functionality in
+    the footsteps of BEA AquaLogic [13] or several other Oracle acquisitions [23]
+    in the Social sector since then
+
+    * Specialty often Domain-specific Social Networks, e.g. for Healthcare, Fashion,
+    Pets or any other area of interest to a significant community. You''ll hear about
+    a range of these later in 4 Enterprise Social.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# Standardisation #standardisation _DPHeading1\n\n![](img/0b9ef25bba76e41e13d568c065fdf1e4_12_0.png)\n\
+    \n[[#_Ref36557869.anchorFigure 3 – Categories of Enterprise Social Networks\n\n\
+    OPENI (a Social Media research group funded by the European Union) [17] tries\
+    \ to group social standards and APIs in a somewhat context-related manner:\n\n\
+    +   - Activity API enabling multiple cloud-based services ranging from Social,\
+    \ Photo and Video Sharing to Health and Location-based Services. In essence, it\
+    \ includes all the social and personal activities of a user, and is related to\
+    \ the logging activity of a device. Relevant Categories: Gaming, Health. Location-based\
+    \ Services, Music, Photo, Shopping, Social, Video\n- Advertising and Analytics\
+    \ API Enabling the collection, aggregation and analysis of end-user/customer needs,\
+    \ interests and preferences based on\n  - Their interaction with advertising/marketing\
+    \ content\n  - Application behavioural data\n- Social network interactions towards\
+    \ enabling personalised advertising services with enhanced user used. Relevant\
+    \ Categories: Analytics, Advertising\n- Location API Enabling location awareness\
+    \ through Check-ins, Direction, Events, Reviews and Tips. It is a strong contextual\
+    \ API with location, which can be extracted by a GPS sensor and can be mapped\
+    \ on a map. Relevant Categories: Mapping, Location-based Services, Social, Music"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '+   Media API Bringing together photo, music and video sharing services with
+    file transfer and syncing functionalities. It is related with the Gallery Application
+    and the file system of a device. Relevant Categories: File Transfer & Syncing,
+    Location-based Services, Music, News, Photo, Social, Video
+
+
+    +   Products & Services API Embracing Payments and Shopping services. This special
+    case of commercialization-relevant objects, requires a strong API with transactional
+    capabilities, and enhanced security. It is related to the store application of
+    a phone. Relevant Categories: Location-based Services, Payments, Shopping.
+
+
+    +   Profiles API Extrapolating information about people based on Analytics, Advertising,
+    Con-acts, Gaming, Health, Location-based Services, Messaging & Chat, Music, Social,
+    etc. services. Typically, people can be represented in various ways, with multiple
+    profiles. This API brings all that information: avatars, profiles, contacts and
+    accounts, relating different profiles, in different services. It is directly related
+    to the Agenda application of a smartphone. Some relevant Categories: Analytics,
+    Advertising, Contacts, Gaming, Health, Location-based Services, Messaging & Chat,
+    Music, Film...
+
+
+    +   Search API In order to find and retrieve information from the cloud-based
+    services. It brings together get search engines with distributed search functionalities
+    among various platforms, and is related to the search functionality found in a
+    desktop or phone OS.
+
+
+    While OpenNI has not made any of their API available on GitHub (as their site
+    promised in 2013;-) its work caught attention of e.g. W3C OpenSocial [15] is now
+    further discussed. So if not APIs of its own, OpenNI and its concepts may help
+    there. We''ll highlight OpenSocial in more detail when looking at 1.4.2 Apache
+    Shindig.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Standardisation [#standardisation .DPHeading1]
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'Standardisation #standardisation_DPHeading1
+
+
+    Figure 4 - OPENiI concept
+
+
+    Apart from dissecting and categorising Social Media standards as above, these
+    are the 3 most important things APIs and related standards have in common:
+
+
+    +   - Practically all Social Media services use REST as transmission protocol
+
+    - Most of them transmit data in JSON format, some in XML or other
+
+    - Identification & Authentication are almost always based on the OAuth protocol
+
+
+    You''ll notice "trivial" basic standards like REST, XML, or JSON missing from
+    Figure 2 as the authors of [16] believe must be known by now. Along those lines
+    I also consider the reader familiar with them.
+
+
+    We''ll take a closer look at Security, Authorization, Authentication or Digital
+    Identity in chapter 2, as well as aspects of Privacy or Data Protection. First
+    let''s have a look at relevant Social Media APIs and Frameworks before and learning
+    to Agorava.
+
+
+    # Java Social {#java-social .DPHeading2}
+
+
+    Following Java standards like Portlet API or various parts of Java Enterprise
+    there have several Java frameworks and libraries for Social Media.
+
+
+    +   1. 1. 1.
+
+    2.
+
+
+    # Twitter4j{#twitter4j .DPHeading3}
+
+
+    Twitter4j is an unofficial Java library for the Twitter API. Twitter4j, you can
+    easily integrate Twitter calls in your Java application.
+
+
+    Its author, Yuki Yamamoto used to use for Twitter in 2012. While he did, he was
+    briefly mentioned to represent Twitter in the Social JSR Expert Group. More on
+    that later...
+
+
+    Its lightweight, mostly backward-compatible with Java 1.4, making it also easy
+    to integrate into Mobile apps for instance. Not very surprising or less official
+    classes of forks or projects inspired by it are available anywhere from JME to
+    Android. Twitter4j is an API Binding Library, primarily for consuming information.
+    While extensions or your application could analyse or transform it, the framework
+    doesn''t provide support beyond that Twitter itself. Based on Hinchcliffe''s categorization
+    Twitter4j could possibly be seen as a Basic API, but with aspects of Higher-Order.
+
+
+    At the time of writing, the official Twitter4j website (twitter4j.org) was temporarily
+    unable to service requests due to maintenance downtime or capacity problems. Whether
+    or not it is a signal for lack of maintenance by the author and contributors I
+    point to the GitHub project page [18] Twitter itself shouldn''t contest or force
+    GitHub to turn down, is likely to remain. The last update was a month ago, some
+    other modules have been updated within the past 3-8 months, so it may not see
+    high activity, but seems well-maintained at least.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Apache Shindid #apache-shindid.DPHeading3
+
+
+    **Apache Shindid** [19] was started relatively soon after the OpenSocial [15]
+    efforts began. Mainly driven by Google and its Orkut for first obvious reasons,
+    other contributors especially IBM joined later. Due to the refocus of OpenSocial
+    towards a "Social Intranet" none of the sites or software claimed to use are sure
+    to do so. In fact, Google Partuza points to a non-existing page, hence it was
+    shut-down like others that we heard of.
+
+
+    LinkedIn and most other social media providers have gradually or completely abandoned
+    OpenSocial from its sites, too.
+
+
+    An interesting approach by Google to develop OpenSocial applications is WYSIWYG
+    environment of Eclipse IDE OpenSocial Development (OSDE) [20]. It is safe to assume
+    some was taken over by IBM and integrated into Social editions of Eclipse based
+    development tools like RAD, etc. while the Google Code project was last updated
+    in June 2010.
+
+
+    OpenSocial specifications pointed by Apache are no longer hosted by OpenSocial
+    supporter Atlassian it seems, the link points to an error page. Whether or not
+    means Atlassian doesn''t believe in OpenSocial and won''t use it in later versions
+    of its products or it''s simply a process of reviving the whole OpenSocial movement
+    on W3C be seen. In the meantime all versions of OpenSocial, especially 1.0 or
+    2.0 have been failures and sites like Orkut at most used 0.7 or 0.8 versions.
+
+
+    According to OpenSocial supporting Dachis Group [16] Shindid as manifestation
+    represents a Basic standard (2c). It has means of **providing** and **consuming**
+    information.
+
+
+    On September 30th, 2014 Google has **shut down** Orkut, making Google+ the only
+    remaining Google reference.
+
+
+    Of course, Google had already stopped using Shindid in favour of its own Google
+    Code projects. Most of them were also closed and either point to the OpenSocial
+    page, or no longer exist. A year later, on October 23, 2015 Apache Foundation
+    has **retired** the Shindid project. It remains to be seen, if OpenSocial will
+    follow its fate, having the de facto Reference Implementation of OpenSocial, it
+    certainly looks like another big nail to its coffin.
+
+
+    # Efforts by Sun/Oracle {#efforts-by-sunorable.DPHeading
+
+
+    Around 2008, Enterprise Social launched driver BEA Systems [13] had just acquired
+    by Oracle, Java creator Sun Microsystems did not give quite a similar face was
+    also around the corner for it. Based on OpenSocial, Sun created a fork or derived
+    project from Apache Shindid named **SocialSite** [21
+
+
+    SocialSite still counts 231 members on Java.net, but the project is **inactive**.
+    One of the commits was by Kohsuke Kawaguchi, Sun’s creator of Hudson CI server
+    and later Jenkins after he hired by CloudBees.
+
+
+    Following the acquisition of RightNow Technologies (see [23] end of 2011) maker
+    of SaaS CRM software with Open aspects – a move clearly targeting the likes of
+    Salesforce.com or SAP, some'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Standardisation {#standardisation DPHeading1}
+
+
+    the former RightNow teams and products were incorporated into Oracle''s Social
+    Enabled Enterprise department.
+
+
+    JavaOne 2012 featured a Social Day I also attended with speakers like Facebook''s
+    Developer Manager James Pearce. Oracle itself presented a "one man" project written
+    by freelance contractor for RightNow under the codename "Project Sneaker" which
+    just after JavaOne 2012 was published as Oracle SocialLink on Java.net [24]
+
+
+    It never attracted followers outside Oracle and must be considered more dead than
+    even SocialSite
+
+
+    # DaliCore{#dalicore .DPHeading3}
+
+
+    After Oracle took sun, the abandoned SocialSite found its best equivalent and
+    successor in DaliCore [22].
+
+
+    It was originally based on a CMS made by a Belgian start-up, mainly around BeUG
+    (DevXX conferences) members like Johan Vos. DaliCMS (2006) was called a "Web 2.0
+    CMS
+
+
+    Mostly an Open Source project with community features. 2008, around the same time
+    Sun did with SocialSite,CMS got integration with Shindig. Mostly JavaScript code
+    from Shindig and Java code was used by DaliCMS.
+
+
+    Eventually it became more than a CMS, and the underlying modules turned into DaliCore.
+    During his talk at JavaOne 2013 John unveiled the origin of the "Dali" part of
+    projects originally stood for "Dutch Lovers Initiative". A tribute to Internet
+    and Cloud pioneer Amazon.
+
+
+    DaliCore adds functionality to user management, content or permissions on top
+    of Java EE 6. With a strong focus on users and permissions. In about every project
+    that uses DaliCore, users should be able to login with existing credentials (Facebook,
+    Twitter, Google, LinkedIn...) So Dali modules extend DaliCore. While certain connectivity
+    to social providers like Facebook, these mainly serve as authentication providers
+    for DaliCore SSO (Single Sign-On) functionality. Aside from DaliCore aims at providing
+    information.
+
+
+    Important aspects of DaliCore:
+
+
+    +   - Mostly Social Container and CMS support with Paypal Social features
+
+    - Java Persistence support with EJB, IPA or similar standards
+
+    - No separation of modules, especially API/Spec and Implementation, in most cases
+    shares the same module and even package space. Making reuse and extension harder
+    the attempt for that via Dali Module
+
+    - Currently sits a bit heavy, strong dependencies on the Full Java EE stack, i.e.
+    using only its Web Profile seems at the moment
+
+    - GlassFish support and integration is positive where it is the preferred application
+    server. To the Java EE standard it is impossible, but could be harder to use with
+    other containers'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Standardisation #standardisation_DPHeading1
+
+
+    +   * It demonstrated scalability also under heavy usage with some customers,
+    e.g. an e-Voting site in Belgium Apache Shindir or Sun SocialSite(which DaliCore
+    seems like a natural successor in most cases) it is used by actual customers at
+    least in Benux countries as of now
+
+
+    After Oracle announced, it will no longer provide commercial support for GlassFish
+    or enhanced features like Clustering (beyond Poc quality provided by a Java EE
+    Implementation, it will remain), Performance tuning, a major argument for DaliCore
+    announced. Oracle recommends its WebLogic/Fusion Middleware products, or current
+    GlassFish users will be forced to migrate to others if they need commercial support.
+
+
+    DaliCore author Johan Vos and his Belgian start-up claim, they''ll offer commercial
+    support for their customers, may prefer even to extend to that, but DaliCore has
+    become a victim of this. Since early 2013 there has been no activity in the java.net
+    repository, so in many cases, it may not work with API by leading social providers.
+    Hosting a site may be less critical, but with the those who want to plan more
+    than a small, private Blog may prefer to look elsewhere.
+
+
+    While Johan Vos recently told us, he is still working on it, and he confirmed,
+    this is now down in a private repository at BitBucket. Thus his statement can
+    be verified that way, nor DaliCore will be considered "Open Source". At least
+    the source is not accessible, and clients therefore at the mercy of Johan''s company.
+    A risk that does not exist for most examples here, even if those are only maintained
+    by a single person or company. The website of Johan''s company, LodQN seems like
+    it currently uses DaliCMS under the hood, but it does not mention DaliCore or
+    suggests it could become Open Source again.
+
+
+    # Spring Social {#spring-social_DPHeading3}
+
+
+    SpringSource, recently rebranded by its parent companies Pivotal has a long history
+    of jumping on trends and providing libraries or extensions to its Spring Framework
+    for just about everything it seems.
+
+
+    Spring Social [25] is a binding library for consuming information. Although integrating
+    OAuth with Spring Security and other parts are symptomatic of a Basic API it shows
+    many aspects of a Higher-Order API than it is very well supported and updates
+    or blog posts by Pivotal staff 6 to 9 months or longer after a change was made
+    or a feature announced at a conference. This is not the strongest signal to the
+    community, but Spring Social can be considered reasonably mature. There is evidence
+    of some commercial adoption in products or solutions, but vendors also worry aboutVMware
+    stop it in favor of more strategic parts of their big ২০১০.
+
+
+    Open Source ecosystems like GitHub show various extensions or plugins, but not
+    all of them implement enough of a social network or API to be useful. Some are
+    merely a PoC and most of them have not been actively maintained for some time
+    either.
+
+
+    Important aspects of Spring Social are:'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'Standardisation {#standardisation_DPHeading1}
+
+
+    +   * It works primarily with Spring Framework or other parts of the Spring landscape
+    for obvious reasons
+
+    * UI frameworks other than Spring MVC are relatively harder to integrate
+
+    * Official Spring Social connects focus mostly on Facebook, so far examples only
+    show Single Service approach. No straightforward support of multiple services
+    or providers
+
+    * Despite an ever lively Spring community, even inside Pivotal/VMware there is
+    doubt about support and activity, especially after some people left both companies.
+    This has been confirmed by top level architects who said priorities lie elsewhere,
+    although there are no immediate plans to abandon completely
+
+    * However, this has the fact of one, of most active commenters and drivers behind
+    Spring Social. Employed by a single company.
+
+
+    Spring Social currently supports .NET as well. I cannot say, if there is portability
+    of any code, but those who need to support more than one platform may appreciate
+    a familiar API for both Java and .NET. The fact, that Pivotal announced recently
+    (Q1/2015) it''ll drop commercial support for even larger Open Source projects
+    like the popular Groovy / Grails ecosystem for itself. There is no evidence that
+    Pivotal plans to invest its further resources in much smaller "fish" like Spring
+    Social.
+
+
+    # Seam Social {#seam-social .DPHeading3}
+
+
+    Seam Social was part of the JBoss Seam 3 project offering social connectivity
+    on top of Java standards like CDI [28]. Seam Social is a binding library for consuming
+    information. While OAuth on top of CDI and Java Events can be considered a Basic
+    API, Seam Social is the richest Higher-Order API by providing CDI events for Seam
+    Behavior such as Likes, CheckIns to a user''s Timeline. Common API bindings in
+    most cases dictated by a provider''s API definition or something generated directly
+    from were inspired by Spring Social, but Seam was never a clone or fork, as it
+    stands to Spring like CDI and extensions to Spring Framework.
+
+
+    In early 2012, Seam was stopped to be merged with Apache DeltaSpike. Which was
+    a reason for Seam Social to move on all well...becoming Agora [26].
+
+
+    # JSR 357 {#jsr-357 .DPHeading3}
+
+
+    Between JavaOne 2011 and further conferences like DevOps in Antwerp I initiated
+    a series of discussions with CDI Spec Lead Peter Muir, Twitterj Yusuke Yamamoto
+    or Seam Social creator Antoine Sabot-Durand to explore a possible standardisation
+    of Social Media APIs for the Java Platform in the Java Community Process.
+
+
+    They thought it was an idea worth pursuing. While other APIs and projects, like
+    DaliCore were considered possibly relevant to the especially providing information
+    under Java EE the strong use of CDI and well-structured separation of API and
+    implementation made Seam Social the best candidate for initial codebase.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Standardisation #standardisation DPHeading1
+
+
+    The JSR was proposed by me and Antoine as co Specs Leeds, joined by companies
+    like Red Hat/JBoss, eXO Platform or Twitter (represented by Yusuke Yamamoto) as
+    well as JSR Chennai, DaliCore from BeUG or Java EE 7 EG Member and Oracle ACE
+    director Markus Eisele (now working at Red Hat, let Antoine). A healthy mix of
+    corporate, individuals and JUGs one might say.
+
+
+    However, after IBM first proposed the JSR other members like SAP followed, one
+    JUG (SouJava) voted in favor, the other (the LJ) voted against it, and the creation
+    battle ended 8 against 5 stopping the creation of JSR 357. Sadly, although we
+    heard earlier about big vendors preferring "walled gardens" [14] over open standards
+    not entirely surprising, even interested party and EG member candidate Twitter
+    absent. Not against it, but with a difference of 3 votes not voting either. [26]
+    for an article on the subject.
+
+
+    IBM feels but as some of its supporters like Adjuvi''s Hinchcliffe [16] explained
+    (a bit later though) OpenSocial is a Basic Standard for the main goal of JSR357
+    following Social was to offer a Higher-Order API and binding to the Java Platform.
+    Take WebSockets, among the JSR 355 having potential for synergies. The W3C standard
+    just along the lines of OpenSocial hopes to have those plans successful were defined
+    as part of the HTML5 umbrella, while Oracle creates a Java implementation. Even
+    on the Java Platform there have been existing, well-adopted Open Projects for
+    WebSockets, nevertheless it was found worth a JSR, too. For similar for JSON and
+    maybe even more striking as de facto Reference JSON "father" Douglas Crockford
+    inspired the JSON JSR, but Crockford initially "Supporting this JSR" told me personally
+    at Dutch Mobile Conference last year, he no longer intended to be involved. And
+    has never stopped supporting and promoting his own libraries around it.
+
+
+    The fact, that first opposing IBM Hundreds, while thousands of Social Media Software
+    Patents to Facebook the week JSR 357 was voted down did not present a bad optic.
+    It also makes IBM''s own support of OpenSocial bit questionable if Social Media
+    patents and proprietary technologies are sold to Facebook bolstering its arsenal
+    against competitors like Twitter and others. Could be a reason behind that Twitter|4
+    Yusuke Yamamoto left Twitter after some. Whether or not mood swing" at the last
+    moment of the ballot. Maybe a coincidence, but EC Members like IBM or SAP didn''t
+    want Red Hat in an influential role in key Open Source projects after Hibernate,
+    CDI/Seam or Arquillian just to name a few it could have been another reason, too.
+    Especially on that one I''d say if it was among many intentions, it backfired
+    with the creation and active development of Agorava, not just by one company (like
+    DaliCore or Social Link;) but a variety of contributors around the world, most
+    of them proposed EG Members.
+
+
+    Murdering the heir to the Java Social "throne", specifically with a French partition
+    may create a "French Revolution" of Java Frameworks named Agora.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Social Security {#social-security
+
+    DPHeading1}
+
+
+    # Authorisation {#authorisation .DPHeading2}
+
+
+    Authorization, also known as access control, is the process of managing access
+    to resources. In other words, controlling who has access to what in an application.
+
+
+    More formally, to authorize is to define an access policy. Examples of authorization:
+    Is a user allowed to look at this webpage, read or edit this information, view
+    this form, or use this printer? Those are all decisions determining what a user
+    may access.
+
+
+    +   1. 1. 1. Java Authorization {#java-authorization .DPHeading3}
+
+
+    Java has a security architecture that protects systems from unauthorized access
+    by mobile/dynamic or static code. The problem is in determining the set of security
+    access rights required to execute a library or application. The commonly used
+    strategy is to execute the code, note authorization failures, allocate additional
+    access rights, and test again. This process iterates until the code successfully
+    runs for the used cases. Those cases may not always cover all paths through the
+    code, so failures can occur in deployed systems. On the other hand, a broad set
+    of access rights may be allowed to the code to prevent authorization failures
+    from occurring. However, this often leads to a violation of the Least Privilege
+    design principle [27].
+
+
+    The Least Privilege principle represents a minimalistic approach to granting access
+    rights to specific information and tools. Additionally, access rights should be
+    time based to limit resources access to the time needed to complete necessary
+    tasks. The implications of granting access beyond this scope will allow for unnecessary
+    access and the potential for data to be updated out of the approved context. The
+    assigning of rights will limit system damaging from users whether they are intentional
+    or not.
+
+
+    Basic SE Security relies on permissions, e.g. FilePermission to access the file
+    system or AWTPermission to use resources like the clipboard in AWT/Swing applications.
+
+
+    If someone wants to allow a new type of permission for specific applications,
+    this can be done by adding an entry in a policy file.
+
+
+    An example of a policy file granting code from "http://mysocialtv.com/" permission
+    to watch Sky Sports 3 would be:
+
+
+    grant codeBase "http://mytvstation.com/" {'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'Social Security [#social-security .DPHeading1]
+
+
+    permission com.sky.TVPermission “sky-sports-3”, “watch";
+
+
+    ```
+
+    }
+
+    ```
+
+
+    # Java Enterprise Edition {#java-enterprise-edition .DPHeading3}
+
+
+    Security in Java EE is based on some essential terms:
+
+
+    +   * User is an identity defined in the identity storage. The storage can be
+    a database, flat file or LDAP server.
+
+    * Group is a set of users with the same needs or access levels.
+
+    * Security Realm is the access channel for the application server to user and
+    group information.
+
+    * Role is a Java EE concept of access levels. A Java EE developer specifies which
+    roles can access set of application functionalities. These roles are then mapped
+    to users and groups via vendor specific configuration data.
+
+    * Principal is an identity with known credentials which can be authenticated using
+    an authentication protocol.
+
+    * Credential contain or references information used to authenticate a principal
+    for Java EE applications. e.g. by entering a password, or calling external services.
+    More in “2.2 Authentication-
+
+
+    Agora rivals over CDI, a Java standard called “Context and Dependency Injection,
+    like several other parts of Java EE from version 6 on. We consider the reader
+    somewhat familiar with the CDI standard, if you need to learn about it, please
+    see [28]
+
+
+    You''ll remember from chapter 1,3, that almost every social service or similar
+    API uses RESTful Web Services. REST stands for “Representational State Transfer”.
+    JAX-RS is the Java API for RESTful Web Services (current version 2 or JSR 339)
+
+
+    Here a brief example, how authorization can be done by injecting a JAX-RS SecurityContext
+    instance using a @Context annotation. The injected security context works on top
+    of lower HttpServletRequest API. The injected security context depends on the
+    actual JAX-RS application deployment.
+
+
+    SecurityContext can be used with sub-resource locators to return different resources
+    based on the specific roles a user principal is included in. For example, a sub-resource
+    locator could return a different resource if the user is a “preferred customer"
+
+
+    ```
+
+    @Path("basket")
+
+    public ShoppingBasketResource get(@Context SecurityContext sc) {
+
+    if (sc.isUserInRole("PreferredCustomer")) {
+
+    return new PreferredCustomerShoppingBasketResource();
+
+    } else {
+
+    ```'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Social Security [#social-security .DPHeading[1]\n\n```\nreturn new ShoppingBasketResource();\n\
+    }\n}\n```\n\nUsing SecurityContext for a Resource Selection\n\n```\n@Path(\"resource\"\
+    )\n\n@Singleton\n\npublic static class MyResource {\n\n// Jersey will inject proxy\
+    \ of Security Context\n\n@Context\nSecurityContext securityContext;\n\n@GET\n\
+    public String getUserPrincipal() {\n    return securityContext.getUserPrincipal().getName();\n\
+    }\n}\n```\n\n[][#_Ref387947684.anchor]ing SecurityContext into a singleton resource\n\
+    \nWhere a JAX-RS application is deployed in a Servlet container you can rely on\
+    \ the standard Java EE: Web application security offered by the Servlet container\
+    \ and configurable via the web.xml descriptor.\n\nBy defining <security-constraint>\
+    \ elements in web.xml and assigning roles which are able to access these resources.\
+    \ You can also define HTTP methods that are allowed to be executed. See the following\
+    \ example:\n\n```\n<security-constraint>\n<web-resource-collection>\n  <url-pattern>/rest/admin/*</url-pattern>\n\
+    </web-resource-collection>\n<auth-constraint>\n  <role-name>admin</role-name>\n\
+    </auth-constraint>\n</security-constraint>\n<security-constraint>\n<web-resource-collection>\n\
+    ```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'Social Security #social-security .DPHeading1
+
+
+    ```
+
+    <url-pattern>/rest/orders/*</url-pattern>
+
+    </web-resource-collection>
+
+    <auth-constraint>
+
+    <role-name>customer</role-name>
+
+    </auth-constraint>
+
+    </security-constraint>
+
+    <login-config>
+
+    <auth-method>BASIC</auth-method>
+
+    <realm-name>my-default-realm</realm-name>
+
+    </login-config>
+
+    ```
+
+
+    # # OAuth #DPHeading3
+
+
+    **OAuth** is an authorization protocol to delegate rights for an application to
+    act on the behalf of a user who granted their rights without giving away login
+    credentials like username or password.
+
+
+    It was developed by Twitter, Magnolia and Google and registered as IETF standard
+    in April 2010 under RFC 5849.
+
+
+    OAuth version 2.0 is simpler to use but often criticised for having too many flavours
+    and implementations. OAuth 2 was standardized again by IETF in October 2012 under
+    RFC 6749 and 6750. It is not backward compatible with OAuth 1.0a.
+
+
+    Some notable adopters are Facebook, Amazon, Google, Salesforce.com or Microsoft.
+
+
+    All relevant social media APIs are based on either OAuth 1.0a or 2.0.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '![](img/0b9ef25bba76e41e13d568c065fdf1e4_25_0.png)
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_25_1.png)
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_25_2.png)
+
+
+    [][#_Ref387963722 .anchor]Figure 5 – OAuth parties
+
+
+    Figure 5 shows the actors of the OAuth flow, often also called the “OAuth Dance”.
+
+
+    +   * Resource Owner
+
+    * Client
+
+    * Server
+
+
+    To use OAuth, one has to create an application on the target service to have an
+    entry point for the consumer or resource owner. Allowing access tokens to be issued
+    to third-party clients by an authorization server, with the approval of the resource
+    owner, or end-user. The client then uses the access token to access the protected
+    resources hosted by the resource server.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Social Security [#social-security .DPHeading1]
+
+
+    The OAuth "Dance" has 3 major steps:
+
+
+    +   - **Creation**: Creating an application in the OAuth Social Media service
+
+    - **Initialization**: the right granting phase also called the OAuth Dance. At
+    the end of the dance we obtain an access token (formed by a public and secret
+    part) use in next step
+
+    - **Signature**: each request is signed with access token and token identifying
+    the OAuth application that was granted the rights
+
+
+    Figure 6 shows the steps and authentication flow in detail for OAuth 1.0a.
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_26_0.png)
+
+
+    [][#_Ref387965123 .anchor]Figure 6 - OAuth 1.0a "Dance"'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Social Security [#social-security .DPHeading1]
+
+
+    25
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_27_0.png)
+
+
+    [#_Ref387965276.anchor]Figure 7 - OAuth 2 “Dance"
+
+    Figure 7 shows the flow for OAuth 2. You can see the communication has been simplified,
+    plus each exchange must be SSL encrypted. With OAuth 1.0 this was optional and
+    most implementing cases therefore left it out. Bearing a greater risk of interception
+    or tampering with OAuth 2.
+
+
+    # Authentication {#authentication .DPHeading2}
+
+
+    +   1.
+
+
+    The word “Agora”, authentication is also derived from Greek terms. Originally
+    from Greek “aftentikos”, it was a derivative of the noun “authentes”, “doer, master”,
+    which was formed from “autos”, “self” and the base -hentes, “doer, being”.
+
+    While by far the most popular authentication for social media and APIs, OAuth
+    is not a genuine authentication, “pseudo-authentication”, where the application
+    specifically requests a limited access OAuth Token (“valet key”) rather than actual
+    credentials (like a “passport”) see Figure 8 and Figure 9.
+
+
+    # OpenID {#openid .DPHeading3}
+
+
+    The initial OpenID protocol was created 2005 by Brad Fitzpatrick at Six Apart,
+    after he had sold his social network LiveJournal to this blog software company.
+    The name of the company did not refer to Six Degrees of Separation [6] as it may
+    seem, but a 6 day difference between its married co-founders.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'Social Security [#social-security .DPHeading1] 26
+
+
+    It was code-named Yadis (acronym for "Yet another distributed identity system")
+    but was then officially called OpenID after David Cohn, who had also considered
+    a similar Single Sign-On project, but lacked time donated the domain "openid.net"
+    [29] to Six Apart.
+
+
+    +   1.
+
+
+    # Fig.2 Pseudo-Authentication using OAuth
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_28_0.png)
+
+
+    [][#_Ref391235490 .anchor]Figure 8 - Pseudo-Authentication using OAuth
+
+
+    +   1.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Social Security [#social-security .DPHeading1]
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_29_0.png)
+
+
+    +   1. Who are you. Get me a referral letter. Do not forget about Your email!
+
+    2. Here is the certificate.
+
+
+    +   2. Piz write me a referral letter.
+
+    3. Here you are
+
+
+    Alice
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_29_1.png)
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_29_2.png)
+
+
+    [#_Ref391235500 .anchor]Figure 9 - OpenID Authentication
+
+
+    Figure 10 shows the OpenID flow and its actors
+
+
+    +   * Browser
+
+    * User
+
+    * Relying Party
+
+    * Identity Provider
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_29_3.png)
+
+
+    [#_Ref391228199 .anchor]Figure 10 - OpenID Flow'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'Social Security {#social-security .DPHeading1} 28
+
+
+    Although OpenID has so far not been standardised by an organisation IETF, many
+    large Internet, Social and Telex players like it, AOL, Flickr, Blogger, France
+    Telecom, Google, Ives, LiveJournal, Microsoft, Mixi, Myspace, Novell, Orange,
+    Sun, Telecom Italia, Telefonica O2, Universal Music Group, VerisSign, WordPress
+    or Yahoo!
+
+
+    Over times like SourceForge, PayPal or Facebook joined supporters of OpenID under
+    the OpenID Foundation. However, in the last 2-3 years there''s a steady decline
+    in OpenID supporters. Facebook left OpenID, SourceForge also stopped offering
+    an OpenID login (at the very after Dice took it from Geeknet) and in September
+    2013 Social Login SaaS provider Janran announced that its service MyOpenID.com
+    would be shut down on February 1, 2014.
+
+
+    So does mean OpenID is dead? More or less in its original form, but at least still
+    Google has hopes for it. Strange coincidence, the initial creator of OpenID, Brad
+    Fitzpatrick now works at Google, possibly a main reason why the remained remained
+    OpenID, when most former supporters abandoned it. OpenID Connect, Google''s new
+    approach has however not that much in common with the old version of OpenID. It
+    adds improved authentication and Identity Management on top of the otherwise winning
+    combination of Oauth 2, JSON and RESTful Web Services.
+
+
+    OpenID Connect was released just at the end of February 2014. Beside Google, Microsoft,
+    Sales-force.com or Deutsche Telekom adopted it so far. At Mobile World Congress
+    2014 in Barcelona GSMA announced plans for a mobile version "Mobile Connect".
+    Even suggesting this "flavour of OAuth" may also stay for some time.
+
+
+    # Security Frameworks {#security-frameworks .DPHeading2}
+
+
+    There are several Java-based security frameworks aside from base technologies
+    like JAAS (Java Authentication and Authorization Service) supporting authorisation,
+    authentication or both:
+
+
+    +   - Scribe
+
+    - PickettLink (by JBoss)
+
+    - Apache Shiro
+
+    - Spring Security (formerly Acegi)
+
+    - Google OAuth for Java
+
+    - Socialauth
+
+    - JSR 375
+
+
+    # Scribe
+
+
+    The Scribe project has built-in support for many popular services that use OAuth,
+    such as Facebook, Twitter, Google or LinkedIn. It has very few external dependencies,
+    mainly Apache Common Code,'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Social Security [#social-security_DPHeading1]
+
+
+    allowing seamless integration into solutions without risk of dependency clash
+    many larger and more complex solutions bear.
+
+
+    Calling an OAuth provider in Scribe can be as easy as the following one-liner
+    shows:
+
+
+    ```
+
+    OAuthService = new ServiceBuilder()
+
+    .provider(LinkedInApi.class)
+
+    .apiKey(YOUR_API_KEY)
+
+    .apiSecret(YOUR_API_SECRET)
+
+    build();
+
+    ```
+
+
+    Until version 0.6 of Agora, was at the heart of its OAuth functionality. From
+    Agora 0.7 on it has been replaced by JBoss PicketLink.
+
+
+    # PicketLink
+
+
+    PicketLink is an umbrella for several related projects in the Red Hat/JBoss Middleware
+    ecosystem. While Agora is not a project officially created by Red Hat, it was
+    created for this ecosystem and standards used like CLI. Before supporting OAuth
+    and Java EE Security through the means of PicketLink seemed a logical step for
+    Agora.
+
+
+    PicketLink is an Application Security Framework for Java EE applications. It provides
+    features for authenticating users, authorizing access to business methods of your
+    application, managing the application''s users, groups, roles and permissions,
+    etc.
+
+
+    These are the Top 8 Java Application Security Problems Solved by PicketLink:
+
+
+    +   1. What’s the best way to add security to the application?
+
+    2. How do I authenticate and authorize users?
+
+    3. How can I control access to classes and methods?
+
+    4. How do I add Identity and Access Management (IAM) to my application?
+
+    5. How can I create a secure multi-tenancy architecture for my SaaS (Software
+    as a Service) application?
+
+    6. How can I enable Single Sign-On based on SAML (Security Assertion Markup Language)
+    in my application?
+
+    7. How do I add authentication and authorization to my REST layer and API?
+
+    8. How can my application authenticate users using their Facebook, Twitter or
+    Google accounts?
+
+
+    Figure 11 shows an overview of PicketLink, its key components and technologies
+    it supports. Some marked “Coming Soon” are already under development, but do not
+    come with the GA (Generally Available or “Stable”) version of PicketLink yet.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# PicketLink
+
+
+    # Base Module
+
+
+    Authentication API
+
+    Permissions API
+
+    Session-based Identity
+
+    CDI Integration
+
+
+    # Federation
+
+
+    # IDM
+
+
+    # SCIM
+
+
+    SAML v1.1
+
+    SAML 2.0
+
+    WS-Trust
+
+    OpenID
+
+
+    User, Group, and
+
+    Role management
+
+    Credential management
+
+    and validation
+
+
+    SCIM-based
+
+    Coming Soon
+
+    for IDM
+
+
+    # Social
+
+
+    Social network
+
+    Coming Soon
+
+    Twitter, Facebook
+
+
+    # Identity Stores
+
+
+    # OAuth
+
+
+    Support for OAuth
+
+    Coming Soon
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_32_0.png)
+
+
+    # Common
+
+
+    Common utility classes, Logging
+
+
+    [#_Ref391256715.anchor]Figure 11 - PicketLink Overview
+
+
+    Agora does however use many base functionality of PicketLink, like Authentication
+    API or CDI Integration. Adding specified OAuth and Social connectivity of its.
+
+
+    The "dance" through the authentication flow is conducted by the PicketLink element
+    Authenticator. Here an an example of how to extend BaseAuthenticator
+
+
+    @PicketLink
+
+
+    ```
+
+    public class SimpleAuthenticator extends BaseAuthenticator {
+
+    @Inject DefaultLoginCredentials credentials;
+
+    @Override
+
+    public void authenticate() {
+
+    if ("agentsmith".equals(credentials.getUserId())) &&&
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Social Security #social-security .DPHeading1
+
+
+    “matrix123”.equals(credentials.getPassword())) {
+
+    setStatus(AuthenticationStatus.SUCCESS);
+
+    setAccount(new User("agentsmith"));
+
+    } else
+
+
+    setStatus(AuthenticationStatus.FAILURE);
+
+    FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Authentication
+    Failure - The username or password you provided were invalid."));
+
+
+    }
+
+    }
+
+
+    “3.2.1 Agoraava PicketLink will show in more detail how this is applied by Agoraava
+    Core and its PicketLink module.
+
+
+    # JSR 375
+
+
+    No, this is not a non-twister of "1.4.7 JSR 375", although many security aspects
+    357 had been planned, especially a tight integration with CDI so quite familiar
+    [30].
+
+
+    # Digital Identity #digital-identity .DPHeading2
+
+
+    # Who is No.6? #who-is-no.6 .DPHeading3
+
+
+    A question from the famous 1960s Sci-Fi series "The Prisoner" where No.6 tries
+    to find out his identity and that of others holding him captive both users of
+    social media services and the systems often stumble into identity crisis.
+
+
+    Especially the biggest players in Social Media often face major problems when
+    it comes to authentication and the true identity of their users.
+
+
+    # Privacy #privacy .DPHeading2
+
+
+    The term privacy comes from "private" and has Latin origin "privatus", literally
+    taken away from public affairs.
+
+
+    While ancient Romans may have been able to hide some of their affairs from public
+    audience and famous writers of their time, and the time from something actually
+    happening to being written down and consumed by readers was at least days, more
+    months or even years, it can sometimes be just the blink of an eye or click of
+    a mouse-button today.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Social Security [#social-security .DPHeading1]
+
+
+    The revelations bywhistleblower Edward Snowden were the most extensive, but certainly
+    not first case of privacy concerns brought into public light with regards to Social
+    Networks or similar Online Services [32]. The ability to combine data from various
+    sources and everyday life aspects into a digital picture and footprint of users
+    was in prior decades mostly the domain of privacy and secret service tools like
+    "Dragnet" (not so the movie, though it referred to the system in a humorous way).
+
+
+    Not just Snowden and his skills now available to his hosts in Russia is a clear
+    indicator, Western countries and agencies aren the only ones interested in such
+    information. Many try to control simply block or restrict entries, if they are
+    not provided the same access to vital information by the social networks intelligence
+    agencies in their home country, usually the United States. China, Russia or Turkey,
+    the list keeps growing of countries temporarily or permanently blocking providers.
+    If ownership or hosting is outsourced, not for tax but cheap workforce reasons,
+    then some services can be practiced by these countries, too. One of the most popular
+    we heard about, because OpenID1.0 once created there is LiveJournal. In 2007 it
+    was sold by Six Apart Russian media group SUP in December 2007.
+
+
+    After 2009 most of its production was also moved to Russia and employees hired
+    in Silicon Valley. Although privately owned, SUP Media is clearly controlled and
+    also censored by Russian secret services. For example in 2007 Russian blogger
+    Savva Terentyev was accused of fostering social hatred to the staff of Internal
+    Affairs and sentenced to one year probation due to his comment in the log of a
+    local journalist. Not to mention recent murders like that of regime-critical Boris
+    Nemsov in Moscow only after he had announced to disclose information on Russia''s
+    involvement in Ukraine. Ironically, even in one of the most censored countries
+    like Russia, there is a tiny glimpse of hope, Social media if not bring real reforms
+    may yet help finding clues to to his murder [33]
+
+
+    While the effort of "National Security" and trying to catch terrorists or severe
+    criminals online was used to justify mass surveillance on a global scale, critical
+    bloggers or journalists often risk not just their privacy if their lives are unveiled
+    to people and agencies they criticise.
+
+
+    While efforts like the "Vorratsdatensicherung" by European hosting providers and
+    other mobile companies, there isn''t total privacy in Europe either, most EU countries,
+    Germany have strong privacy and data protection laws compared to the United States
+    and many other parts of the world. A few countries like Iceland (not currently
+    in EU, but EFTA) have even stronger data protection laws, as well as Scandinavian
+    countries.
+
+
+    Social networks genuinely based in these countries, e.g. German XING, also Deutsche
+    Telekom and other internet companies from Germany GMX/1&1, their data is safe
+    from direct access by NSA or other spies. Although local and international inquiries
+    will be executed by these if probable cause exists against a user of serious offences
+    like murder, terror, organised crime or pornography, neither of these services
+    are likely to conduct mass-screening of every single user on a daily basis like
+    NSA and other agencies do in the US and other countries. Without a warrant to
+    access records or pre-emptively sniff into communication most European users should
+    feel safe if the provider and their servers are genuinely based in Europe and
+    data isn''t safe via connections.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: 'Social Security [#social-security .DPHeading1] 33
+
+
+    In addition to that, services like XING also offer much finer grained levels of
+    access permissions and control by its users. Where it is possible to sometimes
+    restrict e.g. who can see each individual data item. Let''s say you want to show
+    your name and day of birth, but not the year or your age to everyone visiting
+    your profile, or allow only your friends to see your phone number, and this and
+    more can be controlled by systems like XING.
+
+
+    This was also among the main reasons, why XING abandoned OpenSocial, because it
+    cannot offer such fine grained access control or in some cases won''t provide
+    any, but instead show everything to everyone or at least data to all of your friends.
+
+
+    As opposed to that, Agorava can leverage security mechanisms and access control
+    by individual social networks. And being able to connect to selected services,
+    even multiple of them in a single session, you can decide where you place what
+    information and access it from the provider you best trust to handle it with the
+    necessary care.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Agorava {#agorava .DPHeading1}
+
+
+    # Overview {##overview .DPHeading2}
+
+
+    Agorava [34] is a Social Framework, providing CDI modules, contexts and extensions
+    to interact with major social networks or similar services exposing APIs. It offers
+    these services to Java and Java Enterprise applications and eases mixing them
+    in the spirit of mashups [12]
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_36_0.png)
+
+
+    Figure 12 - Agorava Macro Architecture
+
+
+    These are the key characteristics and features of Agorava
+
+
+    +   - A generic portable REST client API
+
+    - A generic API to handle OAuth 1.0a and 2.0 services
+
+    - A generic API to work with JSON serialization and de-serialization'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Agorar #agorava.DPHeading1 35
+
+
+    +   * A generic identification API to retrieve basic user information from a Social
+    Service (as Identity Provider)
+
+    * A Multis manager API allowing to deal with multiple OAuth applications and sessions
+    in the same application
+
+    * Currently out of the box, Agorar connects to:
+
+
+    +   * Twitter
+
+    * Facebook
+
+    * LinkedIn
+
+
+    +   * And offers an easy way to extend it by creating a new modules for any other
+    service or API required
+
+
+    Agorar is independent of CDI implementation and fully portable between Java EE
+    6 (minimum) and Servlet environments enhanced by CDI. It can also be used with
+    CDI in Java SE in a Desktop or SE Embedded/Mobile application. It has been fully
+    tested with the CDI RI implementation (JBoss Weld). Open Web Beans and Caucho
+    Resin are also supported since the 0.5 release.
+
+
+    Agorar is often explained as a sort of "Java Connector Architecture for Social".
+    And indeed, there are striking similarities between the idea behind Agorar and
+    what **Java Connector Architecture (JCA)** does under the Java EE umbrella.
+
+
+    Java EE Connector Architecture defines a standard architecture for connecting
+    the Java EE platform to heterogeneous Enterprise Information Systems (EIS) including
+    transaction processing systems such as CICS Transaction Server and Enterprise
+    Resource Planning (ERP) systems like SAP.
+
+
+    Especially so called Common Client Interface (CCI), which defined a standard client
+    API allowing applications to access multiple resource adapters.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# Agora [#agorava .DPHeading1]\n\n# Common\nClient Interface\n\n![](img/0b9ef25bba76e41e13d568c065fdf1e4_38_0.png)\n\
+    \nFigure 13- JCA Common Interface\n\nOne must add, JCA is a fairly old part of\
+    \ the Java EE umbrella, last updated with EE 6. It received a Maintenance Release\
+    \ about a year ago, also with CDI support, but compared to some of the new, Cloud\
+    \ and API based ERP solutions along the lines of Salesforce, it seems a bit outdated\
+    \ and is also among the lesser known and used parts of the Java EE ecosystem.\n\
+    \nThough the JSR 357 proposal did not explicitly phrase it \"JCA way\", it is\
+    \ also possible, some of the supporters and JCA Experts (beside Oracle that was\
+    \ mostly IBM or SAP, most other companies dominating in the Cloud didn't even\
+    \ exist when JCA was originally designed) felt the little \"dinosaur\" they fostered\
+    \ could be threatened by a new standard like a Java Social Connector API.\n\n\
+    # Core #core .DPHeading2\n\nAgor Core includes common, social networking services\
+    \ that are independent of a particular provider. Offering features such as:\n\n\
+    +   - OAuth connectors to authenticate against OAuth providers\n- Support for\
+    \ generic authentication and user profile management\n- A Social Multi-Account\
+    \ Service supporting\n  - Multiple Social Network Connections\n  - Multiple Sessions\
+    \ for the same Social Network provider, e.g. connected to multiple accounts or\
+    \ queries at the same time"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Agorava #agorava_DPHeading1
+
+
+    Agora Core also provides implementations to these services. The main implementation
+    is based on CDI and DeltaSpike right now, but most services have been generalised
+    using JSR 330 (Dependency Injection) which allows lightweight Java SE alternatives
+    like Google Guice, Dagger or the SE version of the CDI Implementation.
+
+
+    ![](img/0b9ef25bba76e41e13d568c065fdf1e4_39_0.png)
+
+
+    Figure 14 - Agora Core API Architecture
+
+
+    +   1. 1. 1.
+
+
+    # Agora PicketLink #agorava-picketlink .DPHeading3
+
+
+    Working together with OAuth functionality and user profile management, Agora Core
+    contains a secure sub-system based on PicketLink.
+
+
+    As promised in 2.3.2, the specialised Agora version of the PicketLinkBaseAuthenticator:@Generic
+
+
+    ```
+
+    public class AgoraAuthenticator extends BaseAuthenticator { @InjectWithQualifier
+
+    ```
+
+
+    OAuthAppSettings settings; @Inject'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Agora [#agorava.DPHeading1]
+
+
+    ```
+
+    DefaultLoginCredentials credentials;
+
+    @Inject
+
+    @DeltaSpike
+
+    Instance-<HttpServletResponse> response;
+
+    @Inject
+
+    OAuthLifeCycleService lifeCycleService;
+
+    @Override
+
+    public void authenticate() {
+
+    if (lifeCycleService.getCurrentSession().isConnected()) {
+
+    OAuthSession session = lifeCycleService.getCurrentSession();
+
+    UserProfile userProfile = session.getUserProfile();
+
+    credentials.setCredential(session.getToken());
+
+    setStatus(AuthenticationStatus.SUCCESS);
+
+    User user = new User(userProfile.getId());
+
+    user.setFirstName(userProfile.getFullName());
+
+    setAccount(user);
+
+    } else {
+
+    String authorizationUrl = lifeCycleService.startDanceFor(settings.getQualifier());
+
+    try {
+
+    response.get().sendRedirect(authorizationUrl);
+
+    } catch (IOException e) {
+
+    e.printStackTrace();
+
+    }
+
+    credentials.setStatus(Status.IN_PROGRESS);
+
+    setStatus(AuthenticationStatus.DEFERRED);
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Connectors {#connectors .DPHeading2}
+
+
+    Agorava currently comes with default connectors to:
+
+
+    +   - Facebook
+
+    - LinkedIn
+
+    - Twitter
+
+
+    In addition to, 3rd party Agoraava Connectors were created for services like:
+
+
+    +   - EmpireAvenue
+
+    - GitHub
+
+    - Google+
+
+    - Instagram
+
+    - Meetup
+
+    - StackOverflow
+
+    - Triplit
+
+    - WordPress
+
+    - XING
+
+    - Yammer
+
+    - 1.
+
+
+    # Anatomy of a Connector {#anatomy-of-a-connector .DPHeading3}
+
+
+    # Socializer {#socializer .DPHeading2}
+
+
+    Socializer is a real life demonstration Web App for Agorava.
+
+
+    It allows you to connect to various social Media, and see your timeline and post
+    update.
+
+
+    Socializer was since ported from Java Server Faces to the Apache Wicket Web Framework
+    and more recently AngularJS.
+
+
+    Both ports are currently still rather experimental and therefore not official
+    parts of the Agorava ecosystem.
+
+
+    +   1.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# Integrating a connector #integrating-a-connector .DPHeading3}\n\nAdding a\
+    \ new connector to Socializer is quite easy. We'll take the XING connector as\
+    \ example how to do it.\n\nAfter cloning https://github.com/agorava/agorava-socializer\
+    \ the following lines in the Socializer pom.xml\n\n```\n<!-- XING -->\n<dependency>\n\
+    \  <groupId>org.agorava</groupId><artifactId>agorava-xing-api</artifactId>\n \
+    \ <version>0.3.0-SNAPSHOT</version>\n  <scope>compile</scope>\n</dependency>\n\
+    <dependency>\n  <groupId>org.agorava</groupId><artifactId>agorava-xing-cdi</artifactId>\n\
+    \  <version>0.3.0-SNAPSHOT</version>\n  <scope>runtime</scope>\n</dependency>\n\
+    ```\n\nDefine dependencies for XING API and CDI Implementation.\nNext we add the\
+    \ app settings for XING to CDI producer class\norg.agorava.socializer.SettingsProducer.java\n\
+    \n```\n@ApplicationScoped\n@Produces\n@Xing\n@OAuthApplication(params = {@Param(name\
+    \ = OAuthAppSettingsBuilder.PREFIX, value = \"xing\")})\npublic OAuthAppSettings\
+    \ settings;\n```\n\nBacked by the properties file\nsrc/main/resources/local/agorava.properties\n\
+    xing.apiKey=<your API Key>\nxing.apiSecret=<your API Secret>\n\nBoth API key and\
+    \ API secret have to be defined for a local Socializer application in the social\
+    \ media account of your choice, see https://dev.xing.com/applications/dashboard\
+    \ for XING. Most proper services offer a \"Test key\" or development key like\
+    \ XING does."
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Agorava #agorava.DPHeading1
+
+
+    Unfortunately some, most notably Facebook ignore the need of developers right
+    now. Facebook''s Graph API in the recent version (v2.5) also contains a bug still
+    requesting a deprecated call.
+
+
+    ```
+
+    <ui:composition xmlns="http://www.w3.org/1999/xhtml"
+
+    xmlnsui="http://java.sun.com/jsf/facelets"
+
+    xmlnsf="http://java.sun.com/jsf/core"
+
+    xmlnsh="http://java.sun.com/jsf/html"
+
+    xmlnsp="http://primefaces.org/ui"
+
+    <h:panelGroup id="xingtli" layout="block">
+
+    <div class="well">
+
+    <h6>What''s on your mind?</h6>
+
+    <p>
+
+    <p:inputTextarea value="#{socialClient.status}" styleClass="post-area" />
+
+    </p>
+
+    </div>
+
+    </h:panelGroup>
+
+    </ui:composition>
+
+    ```'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Enterprise Social {#enterprise-social.DPHeading1}
+
+
+    There are numerous social media websites either for general purpose or focus groups
+    and special communities, including former alcoholics, music fans, developers,
+    expats, mothers, students, teachers, government employees, people who are into
+    knitting or BDSM. The "Fifty Shades of Grey" books and films will probably add
+    even more "shades" to such a list; - [35]
+
+
+    # Advertising and Analytics {#advertising-and-analytics.DPHeading2}
+
+
+    # Location {#location.DPHeading2}
+
+
+    # Media {#media.DPHeading2}
+
+
+    # Products & Services {#products-services.DPHeading2}
+
+
+    # Profiles {#profiles.DPHeading2}
+
+
+    # Specialties {#specialties.DPHeading2}
+
+
+    +   1.
+
+    1. 1.
+
+    2.
+
+    3.
+
+    4.
+
+
+    # Software Development {#software-development.DPHeading3}
+
+
+    # Health and Fitness {#health-and-fitness.DPHeading3}
+
+
+    # Bibliography {#bibliography.DPHeading4ParagraphHeading}
+
+
+    +   1. [#_Ref362799550.anchor]Agora - Wikipedia: http://en.wikipedia.org/wiki/Agora'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Enterprise Social [#enterprise-social.JHeading1]
+
+
+    +   1. [#_Ref362799594_anchor]Forum - Wikipedia: http://en.wikipedia.org/wiki/Forum_(Roman)
+
+    2. [#_Ref36280113_anchor]History of Information – Wikis / Forum Posts: http://www.historyofinformation.com/expanded.php?category=Social+Media+%2FSocial+Networks+
+
+    3. The Role of Social Media in Political Mobilisation, delineation by Madeline
+    Storck, 2020 December: http://www.culturaldiplomacy.org/academy/content/pdf/participating-papers/2012-02-bief/The_Role_of_Social_Media_in_Political_Mobilisation_-Madeline_Storck.pdf
+
+    4. [#_Ref36280179_anchor]Agorism – Wikipedia: http://en.wikipedia.org/wiki/Agorism
+
+    5. [#_Ref36280432]Six Degrees – Wikipedia: http://en.wikipedia.org/wiki/Six_degrees
+
+    6. [#_Ref37077168_anchor][#_Ref36349758_anchor]Reuters: Mt. Go foxes for http://www.bankreport.com/article/2014/02/28-us-bitcoin-mtgos-bankruptcy-uDSBREI1AFX2014028
+
+    7. [#_Ref370823506_anchor]Friend of a Friend – Wikipedia: http://en.wikipedia.org/wiki/FOAF_-
+
+    8. [#_Ref36506741_anchor]RSS – Wikipedia: http://en.wikipedia.org/wiki/RSS
+
+    9. [#_Ref36507155_anchor]Programmable Web: An Unfinished World by Aaron Swartz,
+    Copyright 2013 by Morgan & Clay http://www.wikimedia.org/commons/3/3af/Swartz_S_A_Programmable_Web_An_Unfinished_Work.pdf
+
+    10. [#_Ref365131313]JSR168 Portlet Specification: http://www.jcp.org/en/jsr/detail?id-168
+
+    11. [#_Ref36514695_anchor]Mashup – Wikipedia: http://en.wikipedia.org/wiki/Mashup
+    (web_application_hybrid)
+
+    12. [#_Ref365151513]BEA Logical: blog http://blog.programmableweb.com/2007/07/17/beaquogical-targets-enterprise-mashups/
+
+    13. [#_Ref365555213_anchor]Google Reader’s shutdown, the rise of walled gardens
+    and the future of the open web – GIGAOM: http://gigaom.com/2013/07/03/google-readers-shutdown-the-rise-of-walled-gardens-and-the-future-of-the-open-web/
+
+    14. [#_Ref36556205_anchor]OpenSocial – Wikipedia: http://en.wikipedia.org/wiki/OpenSocial
+
+    15. [#_Ref36556740_anchor]Are Universal Social Engagement Standards? – Information
+    by Dean von Hinch: http://www.informationweek.com/social-business/social-analytics/universal-social-engagement-standard/24041772?pgno=1
+
+    16. [#_Ref36499116_anchor][#_Ref4150651]OPENI: http://www.open-i.cu/
+
+    17. [#_Ref47480313]Twitter4 – GitHub: http://github.com/users/twitterjay
+
+    18. [#_Ref36470065_anchor]Apache Shining: http://apache.org/
+
+    19. [#_Ref364700971_anchor]OSDE – Google: http://code.google.com/p/social-development-environment/
+
+    20. [#_Ref36482276]SocialSite – Java: http://socialsite.java.net
+
+    21. [#_Ref36472168]Dalicore – Java: http://dalicore.java.net
+
+    22. [#_Ref364781843]Acquisitions by Oracle – Wikipedia: http://en.wikipedia.org/wiki/List_of_acquisitions_by_Oracle
+
+    23. [#_Ref36472477]Oracle Social Link – Java: http://socialallink.java.net
+
+    24. [#_Ref365513696_anchor]Spring Social: http://springsource.com/source
+
+    25. [#_Ref36557465_anchor]The Social Media API is dead: Long Live Agorava: http://jaxenter.com/the-java-social-media-api-is-dead-long-live-agorava-43362.html'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Enterprise Social [#enterprise-social .DPHeading1]
+
+
+    26. [#_Ref387619760.anchor]Principle of least privilege - Wikipedia:://en.wikipedia.org/wiki/Principle_of_least_privilege
+
+
+    27. [#_Ref387945646.anchor]Context and Dependency Injection for EE: http://cdi-spec/org/
+
+
+    28. [#_Ref3891253065.anchor]Context and OpenID: http://openid.net/
+
+
+    29. [#_Ref38812287.anchor][#_Ref42393499.anchor]JSR 35 - JavaTME EE API: http://www.jcp.org/e/
+
+    30. TechCrunch - Sutter Sidney Locks Thousands of 2015: http://techcrunch.com/2015/10/02/account-locked/
+
+
+    31. [#_Ref423191521.anchor][#_Ref39160039.anchor]Privacy concerns with social
+    networking - Wikipedia: http://en.wikipedia.org/wiki/Privacy_concerns_with_social_networking_services
+
+
+    32. [#_Ref423511373.anchor]Can Social Media Solve Boris Nevmtov''s Murder? http://medianyum.wordpress/social-media-solve-boris-nevsov-murder/
+
+
+    33. [#_Ref423511264.anchor]Agora Project: http://agorava.org
+
+
+    34. [#_Ref423150062.anchor]List of social networking websites - Wikipedia: http://en.wikipedia.org/wiki/List_of_social_networking_websites
+
+    35.
+
+
+    # About the Author [#the-author .DPline4ParagraphHeading]
+
+
+    Werner Keil is DevOps Build Manager, Java and NET expert at a prime and media
+    world leader working as Scrum Master and Eclipse/Java Consultant for a leading
+    vendor of Real-time/Embedded systems, DevOps Build Managers at Merck, Agile Coach,
+    Principal Consultant and District Architect for a Financial Services company and
+    as an agile consultancy. Helping Global 500 Enterprises across industries like
+    Mobile/Telco, Web 2.0, Finance, Travel/Logistics, Automotive, Healthcare, Environment
+    & Public Services, as well as IT vendors like Oracle or IBM. Among his early clients
+    was Sony where he designed and implemented micro-format based tags in online mobile
+    ports.
+
+
+    He has worked for more 25 years as developer, project manager, software architect,
+    analyst and consultant on leading-edge technologies for Banking, Insurance, Telco/Mobile,
+    Media and Public sector. Werner developed enterprise systems using Java/JEE, Oracle,
+    IBM or Microsoft, does Web design and development using Adobe, Ajax/JavaScript,
+    dynamic or functional languages.
+
+
+    Besides working for major companies, he runs his own creative and talent agency
+    Creative Arts & Technologies in his spare time, runs and supports open-source
+    projects, writes lyrics, novels, screenplays, technical books and articles.
+
+
+    Werner was one of the first commit to Sysdeo Tomcat Launcher, a predecessor of
+    Eclipse WTP, especially designing his UI. He is Committee at Apache Foundation,
+    Eclipse Foundation, Baseline Language own, Momo Project Lead an active member
+    of the Java Community Process, in JSRs 321 (Trusted Java), 331 (CP), 344 (JSR
+    2.2), 358/364 (JCP.next), 350 (Java State), 351 (Java Identity), 354 (Money and
+    Currency), 360/361 (ME Embedded), 363 (Portlet 3), 366 (Unit-API, also Spec Led),
+    367 (Desktop/Embedded Application Framework) and the only Individual Member of
+    the Executive Committee outside the United States.'
+  merge: -1
+  pgno: 46
