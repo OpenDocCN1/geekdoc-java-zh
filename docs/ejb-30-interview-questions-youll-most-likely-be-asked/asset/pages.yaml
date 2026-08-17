@@ -1,0 +1,4078 @@
+- img_proc: true
+  md: '# Job Interview Questions Series
+
+
+    # 2015 Edition
+
+
+    # EJB 3.0
+
+
+    # Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    ![](img/6bc27d61dd2e29843d67d7f356186584_0_0.png)
+
+
+    200 EJB Questions | 51 HR Interview Questions | FREE 2 Aptitude Tests, download
+    available on website
+
+
+    # Vibrant Publishers'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# EJB 3.0
+
+
+    # Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    Job Interview Questions Series
+
+
+    ![](img/6bc27d61dd2e29843d67d7f356186584_2_0.png)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# EJB 3.0 Interview Questions
+
+    You''ll Most Likely Be Asked
+
+
+    © 2014, By Vibrant Publishers, USA. All rights reserved. No part of this publication
+    may be reproduced or distributed in any form or by any means, or stored in a database
+    or retrieval system, without the prior permission of the publisher.
+
+
+    ISBN-10: 1456518402.
+
+    ISBN-13: 978-14-56518-40-0
+
+
+    Library of Congress Control Number: 2011920204
+
+
+    This publication is designed to provide accurate and authoritative information
+    in regard to the subject covered. The author has made every effort in the preparation
+    of this book to ensure the accuracy of the information. However, information in
+    this book is sold without warranty either expressed or implied. The Author or
+    the Publisher will not be liable for any damages caused or alleged to be caused
+    either directly or indirectly by this book.
+
+
+    Vibrant Publishers books are available at special quantity discount for sales,
+    or for use in corporate training programs. For more information please write to
+    bulkorders@vibrantpublishers.com
+
+
+    Please email feedback / corrections (technical, grammatical or spelling) to spellerrors@vibrantpublishers.com
+
+
+    To access the complete catalogue of Vibrant Publishers, visit www.vibrantpublishers.com'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Table of Contents
+
+
+    | 1 | EJB Environment | 7 |
+
+    | 2 | Enterprise Beans | 11 |
+
+    | 3 | Session Beans | 21 |
+
+    | 4 | JPA(Java Persistence API) | 31 |
+
+    | 5 | EJB 3.0 Entities & Persistence | 33 |
+
+    | 6 | MDB (Message Driven Bean) | 69 |
+
+    | 7 | HR Questions | 73 |
+
+
+    INDEX 98'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# EJB Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# EJB Environment'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 1: What is an EJB container?
+
+
+    Answer:
+
+
+    An EJB container can be defined as a program that runs on the application server
+    and implements EJB specifications.
+
+
+    # 2: What is an application server?
+
+
+    Answer:
+
+
+    An application server can be defined as an application program that provides an
+    environment to run enterprise applications.
+
+
+    # 3: Why application server is popular for enterprise application development?
+
+
+    Answer:
+
+
+    Application servers provide all environmental support like transaction, security,
+    persistence etc readily to an enterprise application. So the enterprise application
+    development is much easier while application server is used for implementation.
+
+
+    # 4: Name two popular application servers used nowadays?
+
+
+    Answer:'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'Weblogic and websphere application server.
+
+
+    # 5: Where does an application server run?
+
+
+    **Answer:**
+
+
+    Application server can run both remotely and on the client machine.
+
+
+    # 6: What is the difference between application server and EJB server?
+
+
+    **Answer:**
+
+
+    Application server provides support for an enterprise application and EJB server
+    provides support for enterprise beans only.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Enterprise Beans'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# 7: What is an enterprise bean?
+
+
+    Answer:
+
+
+    Enterprise beans are designed to encapsulate the Business Logic of an enterprise
+    application. It is a Java EE server side component and runs inside EJB container.
+
+
+    # 8: When do you use enterprise bean?
+
+
+    Answer:
+
+
+    Enterprise beans are used for large scale enterprise application development.
+    So if an enterprise application requires transaction, integrity, scalability,
+    etc. then enterprise beans are the best fit.
+
+
+    # 9: What are the types of beans available in EJB3.0?
+
+
+    Answer:
+
+
+    In EJB3.0 there are two types of enterprise beans available
+
+
+    +   a) Session bean
+
+    b) Message driven bean
+
+
+    # 10: Which interfaces are eliminated in EJB3.0?
+
+
+    Answer:
+
+
+    Home and remote interfaces are eliminated in EJB3.0 version.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# 11: EJB3.0 is developed on ________ model?
+
+
+    Answer:
+
+
+    EJB3.0 is developed based on Plain Old Java Object (POJO) programming model.
+
+
+    # 12: What is a Business Logic layer in EJB?
+
+
+    Answer:
+
+
+    Session beans and message-driven beans together constitute the Business Logic
+    layer in EJB.
+
+
+    # 13: What is Persistence layer?
+
+
+    Answer:
+
+
+    This is the layer responsible for persisting the application data in a relational
+    database. Entity beans are used in this layer.
+
+
+    # 14: What are the negative sides of EJB2.x specification?
+
+
+    Answer:
+
+
+    Following are some negative sides of EJB2.x specification:
+
+
+    +   a) Component interface to implement interfaces from EJB framework package.
+    So the components are tightly coupled.
+
+    b) EJB deployment descriptors are very complex and error prone.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'c) Testing of components is hard.
+
+
+    d) Persistence model is not well defined.
+
+
+    # 15: Describe some features of EJB3.0 model.
+
+
+    Answer:
+
+
+    Following are some important features introduced in EJB3.0 model:
+
+
+    +   a) Entity beans are replaced by POJO.
+
+
+    +   b) Deployment descriptor information is replaced by annotations
+
+
+    +   c) JPA is used for persistence model
+
+
+    # 16: What types of annotations are used in EJB3.0 specification?
+
+
+    Answer:
+
+
+    Metadata based annotations are used by EJB3.0 specification.
+
+
+    # 17: How do you define a POJO class as an EJB component?
+
+
+    Answer:
+
+
+    By using special type of annotations a POJO class can be defined as an EJB component.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'EJB 3.0 Interview Questions You''ll Most Likely Be Asked
+
+
+    # 18: What are the types of session beans available in EJB3.0?
+
+
+    Answer:
+
+
+    There are two types of session beans:
+
+
+    +   a) stateful &
+
+
+    +   b) stateless.
+
+
+    # 19: When do you use a stateless session bean?
+
+
+    Answer:
+
+
+    A stateless session bean is used when the conversational state is not required
+    to maintain.
+
+
+    # 20: What are the components defined in EJB2.x stateless session bean?
+
+
+    Answer:
+
+
+    There are three main components:
+
+
+    +   a) EJB component interface
+
+
+    +   b) EJB home interface
+
+
+    +   c) EJB bean class
+
+
+    # 21: What annotation is used to indicate a stateless session bean?
+
+
+    Answer:
+
+
+    @Stateless annotation is used to define a stateless session'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'bean.
+
+
+    # 22: What is the function of the annotation?
+
+
+    Answer:
+
+
+    The annotation tells the container that the POJO is session bean and enforces
+    the life cycle and runtime semantics.
+
+
+    # 23: What annotation is used to indicate a remote interface implementation?
+
+
+    Answer:
+
+
+    The ‘@Remote’ annotation is used to refer a remote interface.
+
+
+    # 24: When do you use a stateful session bean?
+
+
+    Answer:
+
+
+    A stateful session bean is used when the state of a business process needs to
+    be retained.
+
+
+    # 25: What annotation is used to indicate a stateless session bean?
+
+
+    Answer:
+
+
+    The ‘@Stateful’ annotation is used to indicate a stateless session bean.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# 26: Can a session be abstract or final POJO?
+
+
+    Answer:
+
+
+    The session bean must be a concrete POJO.
+
+
+    # 27: Can a session EJB subclass another session EJB?
+
+
+    Answer:
+
+
+    No, a session EJB cannot subclass another session EJB. It can only sub class a
+    POJO.
+
+
+    # 28: Why a message driven bean is used?
+
+
+    Answer:
+
+
+    Message driven beans are used to process asynchronous messages within a J2EE based
+    application.
+
+
+    # 29: Who is responsible for invoking a message driven bean?
+
+
+    Answer:
+
+
+    Message driven beans are invoked by the container. They are never invoked by a
+    client or another bean.
+
+
+    # 30: What annotation is used for a message driven bean?
+
+
+    Answer:
+
+
+    The ‘@MessageDriven’ annotation is used for a message driven bean.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# 31: What is the name of the interface implemented by a message driven bean?
+
+
+    Answer:
+
+
+    The ‘MessageListener’ interface is implemented by message driven bean. There is
+    only one method defined inside it known as ‘onMessage’.
+
+
+    # 32: What is the name of the property used in message driven bean for configuration
+    related information?
+
+
+    Answer:
+
+
+    The name is ‘ActivationConfigProperty’. It contains all configuration information.
+
+
+    # 33: What is the impact of annotations on call back methods?
+
+
+    Answer:
+
+
+    Annotations are used to mark call back methods which are required for life cycle
+    management.
+
+
+    # 34: Are the life cycle methods mandatory in EJB 3.0 specification?
+
+
+    Answer:
+
+
+    No, implementation of life cycle methods are optional in EJB 3.0 specification.
+    But they are mandatory in EJB 2.x'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: specification even if you do not use it.
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Session Beans'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# 35: Describe the life cycle of a stateful session bean.
+
+
+    Answer:
+
+
+    Following are the life cycle stages of a stateful session bean
+
+
+    +   a) Create
+
+    b) Dependency injection
+
+    c) PostConstruct call back
+
+    d) Remove
+
+    e) PreDestruct call back
+
+
+    # 36: What are the two other life cycle stages available for stateful session
+    bean
+
+
+    Answer:
+
+
+    Two other life cycle stages are
+
+
+    +   a) PrePassivate callback
+
+    b) PostActivate callback
+
+
+    # 37: Is there any time out value for stateful session beans?
+
+
+    Answer:
+
+
+    Yes, there is a time out value for stateful session beans. The bean is not used
+    during the time out value then it is deleted by the container itself. But it is
+    always advisable to remove the bean after its use without relying on the'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'time out mechanism.
+
+
+    # 38: What is the usage of interceptors in session beans or MDBs?
+
+
+    Answer:
+
+
+    Interceptors are generally used to check validation, security checks before the
+    invocation of Business Logic methods.
+
+
+    # 39: What is a default interceptor?
+
+
+    Answer:
+
+
+    Default interceptor is a concept provided by the EJB 3.0 specification. It is
+    not defined by any annotation rather it has to be written explicitly in the deployment
+    descriptor of the EJB module.
+
+
+    # 40: What is the order of execution of different interceptors?
+
+
+    Answer:
+
+
+    They are invoked in the following order:
+
+
+    +   a) Default interceptor
+
+    b) Class interceptor
+
+    c) Method interceptor'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# 41: Is it possible to disable invocation of any interceptor?
+
+
+    Answer:
+
+
+    Yes, Annotations like @ExcludeDefaultInterceptors and @ExcludeClassInterceptors
+    can be used to disable invocation.
+
+
+    # 42: What is dependency injection in EJB 3.0 specification?
+
+
+    Answer:
+
+
+    Dependency injection is a powerful way of obtaining Java EE resources without
+    any JNDI look up. It makes the application loosely coupled.
+
+
+    # 43: What is the annotation used for EJB injection into a client code?
+
+
+    Answer:
+
+
+    The ‘@EJB annotation’ is used to inject session beans into a client.
+
+
+    # 44: What is the annotation used for resource injection?
+
+
+    Answer:
+
+
+    The ‘@Resource’ annotation is used for injecting resources.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# 45: Why setter injection is used?
+
+
+    Answer:
+
+
+    The resources should not be directly injected into application code. The resources
+    should be separated in a different component and it will make the code more flexible.
+    The setter injection is used to serve this purpose.
+
+
+    # 46: What is the usage of deployment descriptor?
+
+
+    Answer:
+
+
+    All the tasks in EJB 3.0 are done by annotations. But the same can be performed
+    by using deployment descriptor also.
+
+
+    # 47: What are the two name spaces available in EJB 3.0 feature pack.
+
+
+    Answer:
+
+
+    Following are the two name spaces available:
+
+
+    +   - JVM-scoped EJBlocal: name space
+
+    - Global JNDI name space
+
+
+    # 48: What is the name of the format used for packaging java enterprise applications?
+
+
+    Answer:
+
+
+    The name of the format is Enterprise Application Archive'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '(EAR). It contains all other modules like WAR, RAR etc.
+
+
+    # 49: What is the name of the deployment descriptor used for deploying java enterprise
+    application?
+
+
+    Answer:
+
+
+    The name of the deployment descriptor is EJB-jar.xml.
+
+
+    # 50: What are the two default bindings used by the container?
+
+
+    Answer:
+
+
+    The two default bindings are:
+
+
+    +   a) Short binding
+
+    b) Long binding
+
+
+    # 51: What is short binding?
+
+
+    Answer:
+
+
+    In short binding, package-qualified Java class name of the interface is only used.
+
+
+    # 52: How the long binding is performed?
+
+
+    Answer:
+
+
+    In long binding, bean''s component ID is used as an extra qualifier along with
+    the package-qualified interface class name.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# 53: What are the different parts of a component ID?
+
+
+    Answer:
+
+
+    The component ID for EJB is formed using the enterprise bean''s application name,
+    module name and component name.
+
+
+    # 54: Where do you bind local interfaces?
+
+
+    Answer:
+
+
+    All local interfaces are bound into the EJBLocal: name space, which is accessible
+    only within the same JVM.
+
+
+    # 55: Where do you bind the remote interfaces and why?
+
+
+    Answer:
+
+
+    All the remote interfaces are bound into the global-scoped name space so that
+    they are accessible from anywhere in the WebSphere product cell.
+
+
+    # 56: What is the best practice for all EJB related bindings?
+
+
+    Answer:
+
+
+    The best practice is to group all the EJB-related bindings under the EJB context.
+
+
+    # 57: Where do you provide user defined binding information?'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# Answer:\n\nThe user defined binding information is provided in a newly created\
+    \ file called META-INF/ibm-EJB-jar-bnd.xml.\n\n# 58: What are the two packaging\
+    \ options available?\n\n# Answer:\n\nTwo available options are as follows:\n\n\
+    +   a) Using a Java project or Java Utility project\nb) Using an EJB project\n\
+    \n# 59: What is to be edited in the deployment descriptor when using the java\
+    \ packaging option?\n\n# Answer:\n\nThe following lines need to be added in the\
+    \ application.xml file\n\n```\n<module>\n  <EJB>MyEJB3Module.jar</EJB>\n</module>\n\
+    ```\n\n# 60: Do we need to add anything if we use EJB packaging option?\n\n# Answer:\n\
+    \nNo, if we are using the EJB project option then the IDE automatically updates\
+    \ the application, xml file and set a"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'EJB-jar.xml file.
+
+
+    # 61: What is the usage of EJB-jar.xml file in EJB3.0 specification?
+
+
+    Answer:
+
+
+    According to the EJB3.0 specification it is not required to write anything in
+    the EJB-jar.xml file because everything is mentioned through annotations. So the
+    main usage of EJB-jar.xml file is to override the annotations or complete the
+    details provided by the annotations.
+
+
+    # 62: What persistence model is used in EJB3.0 specification?
+
+
+    Answer:
+
+
+    The Java Persistence API (JPA) is used in EJB3.0 specification.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# JPA (Java Persistence API)'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# 63: What is the advantage of JPA?
+
+
+    Answer:
+
+    JPA uses a pluggable service interface model. So it is easy to use with different
+    provider implementations.
+
+
+    # 64: What are the three major parts of JPA?
+
+
+    Answer:
+
+    Following are the three major parts of JPA:
+
+    a) The Java Persistence API
+
+    b) Object relational mapping metadata
+
+    c) Query language
+
+
+    # 65: What is entity in JPA?
+
+
+    Answer:
+
+    The main object used for persistence in JPA is called entity.
+
+
+    # 66: Does entity extend/implement any class or interface?
+
+
+    Answer:
+
+    No, the entity is a plain old java object and it does not extend or implement
+    any classes or interfaces.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# EJB3.0 Entities & Persistence'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# 67: What annotation is used for referring an entity?
+
+
+    Answer:
+
+
+    The ‘@Entity’ annotation is used.
+
+
+    # 68: Can an entity be an abstract or concrete class?
+
+
+    Answer:
+
+
+    Yes, an entity can be an abstract or concrete class. Even an entity can also extend
+    non-entity classes.
+
+
+    # 69: What limitation of EJB2.x has been overcome by the entities?
+
+
+    Answer:
+
+
+    The entities can be serialized over RMI-IIOP but entity beans cannot be serialized.
+
+
+    # 70: What is the name of the JPA descriptor file?
+
+
+    Answer:
+
+
+    The name of the file is orm.xml JPA descriptor.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# 71: Which annotation is used to refer primary key?
+
+
+    Answer:
+
+
+    The @Id annotation is used in the entity to refer the primary key in the table.
+
+
+    # 72: What specification is followed for creating an entity?
+
+
+    Answer:
+
+
+    JavaBean specification is used for creating an entity.
+
+
+    # 73: What does @Table annotation contain?
+
+
+    Answer:
+
+
+    The @Table annotation contains the schema and table name while an entity is mapped
+    with a table.
+
+
+    # 74: Which annotation is used to map a column of a table and entity property?
+
+
+    Answer:
+
+
+    The @Column annotation is used to map table columns with entity property.
+
+
+    # 75: What are the persistence mechanisms available for entities?
+
+
+    Answer:
+
+
+    The two persistence mechanisms are:'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '+   a) Field-based persistence
+
+
+    +   b) Property-based persistence
+
+
+    # 76: Can you describe field-based persistence?
+
+
+    Answer:
+
+
+    In field-based persistence, the getter/setter methods are not used. Entity properties
+    are declared as public or protected and the JPA provider is instructed not to
+    use getter/setter.
+
+
+    # 77: Can you describe property-based persistence?
+
+
+    Answer:
+
+
+    In property-based persistence, getter and setter methods are used for persisting
+    the data.
+
+
+    # 78: Which persistence mechanism is recommended and why?
+
+
+    Answer:
+
+
+    Property-based persistence mechanism is always recommended because it adheres
+    to java programming practices.
+
+
+    # 79: Can one entity extend another entity?
+
+
+    Answer:'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'EJB 3.0 Interview Questions You''ll Most Likely Be Asked 37
+
+
+    Yes, one entity can extend another entity. In that case the properties are automatically
+    persisted.
+
+
+    # 80: Can entity extend a class?
+
+
+    Answer:
+
+
+    Yes, an entity can also extend a class. But in that case the properties of that
+    class will not be persisted as it is not declared as entity.
+
+
+    # 81: When do you use @Basic annotation?
+
+
+    Answer:
+
+
+    If you want to persist any standard value as-is in the data store then the annotation
+    @Basic is used.
+
+
+    # 82: When do you use @Transient annotation?
+
+
+    Answer:
+
+
+    The @Transient annotation is used if you do not want to persist a field in an
+    entity.
+
+
+    # 83: What are the ways of specifying entity identities?
+
+
+    Answer:
+
+
+    There are three different ways for identifying entity identities:
+
+
+    +   a) @Id annotation'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: 'b) @ID Class annotation
+
+
+    c) EmbeddedId annotation
+
+
+    # 84: When do you use @Id annotation?
+
+
+    Answer:
+
+
+    The @Id annotation is suitable when:
+
+
+    +   a) A natural primary key is available
+
+
+    +   b) When a surrogate key is available
+
+
+    # 85: How do you manage composite primary key?
+
+
+    Answer:
+
+
+    Composite primary key is defined by using @IdClass or @EmbeddedId annotation.
+
+
+    # 86: What methods are overridden to make composite primary key?
+
+
+    Answer:
+
+
+    The ‘equals’ and ‘hashCode’ methods are overridden while making a composite primary
+    key.
+
+
+    # 87: Why setter method is not available while making a composite primary key?
+
+
+    Answer:
+
+
+    There is no setter method because after constructing it'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'using primary key values, it can not be changed anymore.
+
+
+    # 88: When do you use @EmbeddedId annotation?
+
+
+    Answer:
+
+
+    This annotation is used to model persistent objects that have no identity of their
+    own because they are nested inside another entity.
+
+
+    # 89: What annotation is used for generating automatic identity?
+
+
+    Answer:
+
+
+    The @GeneratedValue annotation is used for automatic Id generation.
+
+
+    # 90: What are the four automatic generation types available in JPA?
+
+
+    Answer:
+
+
+    The four types are as follows:
+
+
+    +   a) GenerationType.IDENTITY
+
+    b) GenerationType.SEQUENCE
+
+    c) GenerationType.AUTO
+
+    d) GenerationType.TABLE
+
+
+    # 91: When do you use generation type as identity and'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# sequence?
+
+
+    Answer:
+
+
+    ''IDENTITY'' generation type is used when the persistence provider uses database
+    identity column for generating identity,
+
+    ''SEQUENCE'' generation type is used when the persistence provider uses database
+    sequence for generating identity.
+
+
+    # 92: When do you use ‘AUTO’ generation type?
+
+
+    Answer:
+
+    ''AUTO'' is used when the persistence provider selects a primary key generator
+    that is most appropriate for the underlying database.
+
+
+    # 93: What is the meaning of ‘TABLE’ generation type?
+
+
+    Answer:
+
+    The ''TABLE'' generation type is used to specify that the persistence provider
+    assigns primary keys for the entity using an underlying database table.
+
+
+    # 94: Which generator type is portable?
+
+
+    Answer:
+
+    The ''TABLE'' generator type is the most portable solution.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'It only uses a regular database table which can be used on any RDBMS.
+
+
+    # 95: What are the transaction mechanisms available when a primary key is created
+    during an active transaction?
+
+
+    Answer:
+
+
+    Following are the two mechanisms available:
+
+
+    +   a) Suspend the current transaction
+
+
+    +   b) Use a separate transaction
+
+
+    # 96: What are the call back methods available in JPA?
+
+
+    Answer:
+
+
+    Following are the call back methods available in JPA:
+
+
+    +   a) @PostLoad
+
+
+    +   b) @PrePersist
+
+
+    +   c) @PostPersist
+
+
+    +   d) @PreUpdate
+
+
+    +   e) @PostUpdate
+
+
+    +   f) @PreRemove
+
+
+    +   g) @PostRemove
+
+
+    # 97: When do you use @PostLoad call back method?
+
+
+    Answer:
+
+
+    The @PostLoad callback method is invoked after the'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'entity has been loaded into the current persistence context and also when a
+    refresh operation has been applied to it.
+
+
+    # 98: When do you call @PrePersist and @PreRemove?
+
+
+    Answer:
+
+
+    The @PrePersist and @PreRemove callback methods are invoked for a given entity
+    just before the respective persist and remove operations for that entity are performed.
+
+
+    # 99: When do you use @PreUpdate and @PostUpdate callbacks?
+
+
+    Answer:
+
+
+    The @PreUpdate and @PostUpdate callbacks are used before and after the database
+    update operations.
+
+
+    # 100: When do you use @PostPersist and @PostRemove callback methods?
+
+
+    Answer:
+
+
+    The @PostPersist and @PostRemove callback methods are invoked for an entity just
+    after the entity has been made persistent or removed.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# 101: Which are the two ways of using call back methods for an entity?
+
+
+    Answer:
+
+
+    The call back methods can be directly inserted in the entity class or they can
+    be kept in a separate class and referred it.
+
+
+    # 102: Which annotation is used while the call backs are kept in a separate class?
+
+
+    Answer:
+
+
+    The @EntityListeners annotation is used in the entity class to refer the call
+    backs.
+
+
+    # 103: How do you define relationship in JPA?
+
+
+    Answer:
+
+
+    In JPA relationships are defined through object references from a source object
+    to a destination object.
+
+
+    # 104: What do you mean by unidirectional relationship between objects?
+
+
+    Answer:
+
+
+    The relationship is unidirectional means the source object has a reference to
+    the target object but it is not guaranteed that the target object also has a reference
+    to the source'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'object.
+
+
+    # 105: What are the different types of relationships available in JPA?
+
+
+    Answer:
+
+
+    The relationships in JPA are:
+
+
+    +   a) one-to-one
+
+    b) many-to-one
+
+    c) one-to-many
+
+    d) many-to-many.
+
+
+    # 106: What annotations are used for mapping one to one relationship?
+
+
+    Answer:
+
+
+    The following annotations are used
+
+
+    +   a) @OneToOne
+
+    b) @JoinColumn
+
+
+    # 107: What is bidirectional one to one relationship?
+
+
+    Answer:
+
+
+    In bidirectional relationship, the target object has a reference back to the source
+    object. The ''mappedBy'' element is used to implement this type of relationship.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# 108: How do you define one to many relationships in JPA entities?
+
+
+    Answer:
+
+
+    This type of relationship is implemented by using the @ToOne annotation on the
+    entity that owns the relationship (contains the foreign key)and the @ToMany annotation
+    signed with mappedBy in the entity that is the target entity.
+
+
+    # 109: What is Join column in JPA?
+
+
+    Answer:
+
+
+    Join columns in JPA are similar to primary and foreign columns in database relationship.
+    JPA uses these Join columns to make the relationship.
+
+
+    # 110: Is there any default mechanism to create Join column?
+
+
+    Answer:
+
+
+    If you do not specify @JoinColumn, then a default column name is assumed. The
+    default join column name is based on a combination of both the source and target
+    entities.
+
+
+    # 111: What is many to many relationships?
+
+
+    Answer:'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'When there is a relationship between two sets of entities, it is know as many
+    to many relationship.
+
+
+    # 112: How do you implement many to many relationships?
+
+    Answer:
+
+    Many to many relationship is implemented by using a distinct join/association
+    table where the mapping is maintained.
+
+
+    # 113: What are the annotations used in many to many relationship?
+
+    Answer:
+
+    @ManyToMany and @JoinTable annotations are used to implement many to many relationship.
+
+
+    # 114: What does @JoinTable annotation do?
+
+    Answer:
+
+    The @JoinTable annotation is used to specify a table in the database that associates
+    both the entities to be joined.
+
+
+    # 115: How do you identify the owner of a relationship?
+
+    Answer:
+
+    The entity that contains @JoinTable is the owner of the'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'relationship.
+
+
+    # 116: What is inverseJoinColumn?
+
+
+    Answer:
+
+
+    The join column pointing to the inverse side of the relationship is known as inverseJoinColumn.
+
+
+    # 117: Where do you keep the foreign key values in case of a many to many relationship?
+
+
+    Answer:
+
+
+    In many to many relationship, foreign key values are generally kept in the association
+    table.
+
+
+    # 118: Who is responsible for loading the entity from the underlying database?
+
+
+    Answer:
+
+
+    Entity manager is responsible for loading the entity form from the underlying
+    database.
+
+
+    # 119: What are the strategies of loading entities?
+
+
+    Answer:
+
+
+    There are two strategies of loading data from underlying database:
+
+
+    +   a) Eager mode'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# b) Lazy mode
+
+
+    # 120: Describe Eager mode of loading?
+
+
+    Answer:
+
+
+    The Eager mode is used when you want to load all the fields of an entity along
+    with its relationships at once.
+
+
+    # 121: Describe lazy mode of loading?
+
+
+    Answer:
+
+
+    This type of loading is used when you want to load the data of a field at the
+    time of its access.
+
+
+    # 122: What is the impact on performance of eager and lazy loading?
+
+
+    Answer:
+
+
+    The eager loading has a negative impact over the performance if there are many
+    to many and recursive relationship among entities. As you are loading the entire
+    set of data, the performance of the application will be affected. On the other
+    hand in case of lazy loading, the field data is loaded when it is accessed so
+    performance will be better. But at the same time the decision should be taken
+    based on the requirement.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# 123: What is the default strategy used to select the type of loading?
+
+
+    Answer:
+
+
+    The default strategy is:
+
+
+    +   a) Use eager loading when context is basic or many to one
+
+    b) Use lazy loading when the context is one to many or many to many
+
+
+    # 124: What is cascade type?
+
+
+    Answer:
+
+
+    When the entity manager is reading, updating or deleting an entity, one can instruct
+    it to automatically cascade the operation to the entities held in a persistent
+    field by using cascade property.
+
+
+    # 125: What are the available cascade rules?
+
+
+    Answer:
+
+
+    Following are the different available cascade rules:
+
+
+    +   a) CascadeType.PERSIST
+
+    b) CascadeType.REMOVE
+
+    c) CascadeType.REFRESH
+
+    d) CascadeType.MERGE
+
+    e) CascadeType.ALL'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# 126: Can you please describe when do you use
+
+    \‘PERSIST’ cascade type?
+
+
+    Answer:
+
+    This is used when we want to persist an entity along with
+
+    the entities held in this field.
+
+
+    # 127: Could you describe any other cascade type in brief?
+
+
+    Answer:
+
+    The other types like remove, refresh or merge are used for
+
+    removing, refreshing or merging entities along with the
+
+    values held in these fields.
+
+
+    # 128: When do you use cascade type as ‘ALL’?
+
+
+    Answer:
+
+    The‘ALL’ is used when we want to implement all the
+
+    types.
+
+
+    # 129: What is Impedance Mismatch?
+
+
+    Answer:
+
+    As we know there is always a mismatch between the
+
+    object relational world. We have taken different
+
+    strategies for persisting objects in relational database but
+
+    the mismatch still persists. This is known as Impedance
+
+    Mismatch.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# 130: What are the strategies used in JPA for supporting inheritance?
+
+
+    Answer:
+
+
+    Three strategies supported by JPA are:
+
+
+    +   a) Single table
+
+    b) Joined tables
+
+    c) Table per class
+
+
+    # 131: What is single table inheritance?
+
+
+    Answer:
+
+
+    In single table inheritance, the complete class hierarchy is mapped in a single
+    base table.
+
+
+    # 132: Where do you use the @Inheritance annotation?
+
+
+    Answer:
+
+
+    The super root class is signed with the @Inheritance annotation.
+
+
+    # 133: What is @DiscriminatorColumn and @DiscriminatorValue annotation?
+
+
+    Answer:
+
+
+    The super root class is signed with @DiscriminatorColumn to indicate which column
+    in the table is used to store the discriminator value. The @DiscriminatorValue
+    annotation'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'is used with the inherited classes to indicate which column is mapped with
+    which entity.
+
+
+    # 134: What is the advantage of single table inheritance model?
+
+
+    Answer:
+
+
+    In single table inheritance, as all the entities are stored in a single table
+    no Join is required to retrieve the entities. Insert and update is also easy to
+    perform.
+
+
+    # 135: Will you use single table hierarchy if the hierarchy model is wide?
+
+
+    Answer:
+
+
+    You can always use single table hierarchy model. But in case of a wide hierarchy
+    all the columns need to be stored in a single table and in that case there may
+    be many columns with null values.
+
+
+    # 136: Describe the strategy used in joined table hierarchy?
+
+
+    Answer:
+
+
+    In this strategy the top level entity is mapped with a table that contains all
+    the fields common to all the entities and the inherited entities are mapped to
+    a table specific to that'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'entity only. So at the time of reassemble, Join is performed to retrieve the
+    entire hierarchy.
+
+
+    # 137: Which annotation is used to indicate primary key?
+
+    Answer:
+
+
+    The @PrimaryKeyJoinColumn annotation is used to indicate primary key.
+
+
+    # 138: What are the advantages of joined table strategy?
+
+    Answer:
+
+
+    This strategy is advantageous because we are not disturbing the existing table
+    in the database. Rather we are creating tables for new entities and they are related
+    with the parent entity by primary-foreign key relationship.
+
+
+    # 139: Can we use normalization in joined table strategy?
+
+    Answer:
+
+
+    Yes, we can use normalized schema while using joined table strategy without any
+    redundant data.
+
+
+    # 140: Does joined table strategy have any impact on the performance?
+
+    Answer:'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'For retrieving entity hierarchy, we need to join tables which might take long
+    time and complex query if the hierarchy is complex itself.
+
+
+    # 141: If you have a complex data model, which strategy should be used?
+
+
+    Answer:
+
+
+    In a complex data model with complex relationship, joined table strategy is best
+    fit.
+
+
+    # 142: What is table per class inheritance?
+
+
+    Answer:
+
+
+    In this strategy super class and subclasses are stored in their own tables without
+    any relationship.
+
+
+    # 143: Why @Table annotation is used with all the tables in table per class inheritance?
+
+
+    Answer:
+
+
+    The @Table annotation is used with all the entities because each entity is mapped
+    with a separate table.
+
+
+    # 144: When do you use table per class strategy?
+
+
+    Answer:
+
+
+    This strategy is helpful when you are operating on a'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'known class.
+
+
+    # 145: What is the disadvantage of per class strategy?
+
+
+    Answer:
+
+
+    If you do not know the subclass then it is difficult to implement this strategy
+    because there is no join available between tables.
+
+
+    # 146: How do you identify subclass when it is not known to you?
+
+
+    Answer:
+
+
+    The identification is done by implementing look up strategy and multiple SQL queries
+    one per class basis.
+
+
+    # 147: What is persistence unit?
+
+
+    Answer:
+
+
+    Persistence unit can be defined as a set of entity classes managed by the persistence
+    manager in an application. A persistence unit represents data of a single data
+    store.
+
+
+    # 148: What xml file is used t define a persistence unit?
+
+
+    Answer:
+
+
+    The ‘persistence.xml’ file is used to define a persistence unit.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# 149: What is the root of a persistence unit?
+
+
+    Answer:
+
+
+    The JAR file or directory whose META-INF directory contains persistence.xml file
+    is known as the root of the persistence unit.
+
+
+    # 150: What do you mean by the scope of a persistence unit?
+
+
+    Answer:
+
+
+    The scope of a persistence unit is determined by the root of the unit itself.
+    And each unit is having a unique name related to the root of the unit.
+
+
+    # 151: How is the persistence unit packaged?
+
+
+    Answer:
+
+
+    Persistence units are packaged as a part of the WAR or EJB jar file. The ‘persistence.xml’
+    file is kept under META-INF directory of the EJB JAR.
+
+
+    # 152: What do you mean by the transaction type mentioned in ‘persistence.xml’
+    file?
+
+
+    Answer:
+
+
+    The transaction type specifies the type of transaction (JTA or any other) in which
+    the persistence unit will with'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'participate.
+
+
+    # 153: What is mapping-file in the scope of persistence unit?
+
+
+    Answer:
+
+
+    The mapping file contains the persistence information to be included in the persistence
+    unit.
+
+
+    # 154: Can you substitute ‘persistence.xml’ file by annotations?
+
+
+    Answer:
+
+
+    This file is mandatory and it can not be replaced by annotations.
+
+
+    # 155: Can we use any xml file for O-R mapping information?
+
+
+    Answer:
+
+
+    Yes, O-R mapping can also be done in an xml file know ‘orm.xml’ instead of annotations.
+
+
+    # 156: Who is responsible for persisting entities in the database?
+
+
+    Answer:
+
+
+    Annotations are only used to define a POJO as an entity'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: 'and its mapping with the database table. But the persistence in done by the
+    EntityEntityManager interface defined by the JPA.
+
+
+    # 157: Describe the tasks performed by the entity manager?
+
+
+    Answer:
+
+
+    Following are the tasks performed by the entity manager
+
+
+    +   a) It manages the lifecycle of each entity instances
+
+    b) It manages persistence units
+
+
+    # 158: What is persistence context?
+
+
+    Answer:
+
+
+    Persistence context can be defined as the scope in which the entities are created,
+    persisted or removed.
+
+
+    # 159: What will happen when a persistence context is closed?
+
+
+    Answer:
+
+
+    All the entities and the entity manager will be detached when a persistence context
+    is closed. As a result any changes performed on the entity will not be reflected
+    in the database.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# 160: What do you mean by unmanaged entities?
+
+
+    Answer:
+
+
+    When an entity is detached from persistence context it is known as unmanaged entity.
+
+
+    # 161: What do you mean by “merging operation performed by the persistence manager”?
+
+
+    Answer:
+
+
+    It means merging the state of a detached entity to its managed copy.
+
+
+    # 162: What is the function of flush operation performed by the persistence manager?
+
+
+    Answer:
+
+
+    The flush operation synchronizes the state of an entity to its database part.
+
+
+    # 163: Two types of entity managers available are?
+
+
+    Answer:
+
+
+    The two types are:
+
+
+    +   a) Container managed entity manager
+
+    b) Application managed entity manager'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# 164: What is the main function of a container managed entity manager?
+
+
+    Answer:
+
+
+    It manages the life cycle of the persistence context.
+
+
+    # 165: How do you get reference of a container managed entity manager?
+
+
+    Answer:
+
+
+    The reference is obtained by JNDI look up or dependency injection.
+
+
+    # 166: What type of transaction is used by the container managed entity manager?
+
+
+    Answer:
+
+
+    Container managed entity manager uses JTA transaction.
+
+
+    # 167: Name the two scopes available in container managed persistence context?
+
+
+    Answer:
+
+
+    The two scopes are:
+
+
+    +   a) Transaction persistence scope
+
+    b) Extended persistence scope'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# 168: What is the life time of a context that exists in a transaction persistence
+    scope?
+
+
+    Answer:
+
+
+    The context lives as long as the transaction lives and closes when the transaction
+    ends.
+
+
+    # 169: What annotation is used to inject an entity manager in EJB3 session bean?
+
+
+    Answer:
+
+
+    The ''@PersistenceContext'' annotation is used to inject entity manager in a session
+    bean.
+
+
+    # 170: Is an entity manager thread safe?
+
+
+    Answer:
+
+
+    No entity manager instances are not thread safe. So a JNDI look up is used to
+    get results and assign it in a local variable.
+
+
+    # 171: What is extended persistence context?
+
+
+    Answer:
+
+
+    Persistence context can be extended to live even after the transaction is complete
+    and it is known as extended persistence context.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# 172: What is the limitation of container managed extended persistence context?
+
+
+    Answer:
+
+
+    The limitation is only a stateful session bean can have a container managed extended
+    persistence context.
+
+
+    # 173: When do you use extended persistence context?
+
+
+    Answer:
+
+
+    This is used when the work flow spans multiple transactions.
+
+
+    # 174: What do you mean by application managed entity manager?
+
+
+    Answer:
+
+
+    In this type of entity manager, the entity management is done through application
+    code.
+
+
+    # 175: What are the fundamental aspects of application managed entity manager?
+
+
+    Answer:
+
+
+    The fundamental aspects are:
+
+
+    +   a) The life cycle of entity manager instance is managed by the application
+    code.
+
+
+    +   b) Persistence context is not propagated'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'c) The associated persistence context is created and destroyed by the application
+    code.
+
+
+    # 176: What are the situations when you use application managed entity manager?
+
+
+    Answer:
+
+
+    Following are the two scenarios when we should use it:
+
+
+    +   a) In java SE environment where the persistence context is stand alone.
+
+
+    +   b) In java EE environment where we want to have more control on the entity
+    manager life cycle.
+
+
+    # 177: What is the API used to retrieve entity manager?
+
+
+    Answer:
+
+
+    The EntityManagerFactory API is used to retrieve entity manager.
+
+
+    # 178: What should be used to manage transaction in case of application managed
+    entity manager in java SE environment?
+
+
+    Answer:
+
+
+    The EntityTransaction interface should be used as JTA is not available.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# 179: When do entity instances become unmanaged?
+
+
+    Answer:
+
+
+    They are unmanaged and detached when a transaction scope or extended persistence
+    context ends.
+
+
+    # 180: Can we send a detached entity to a remote client?
+
+
+    Answer:
+
+
+    Yes, it can be sent to a remote client and the client can update it and send it
+    back to the server for merging with the database.
+
+
+    # 181: What is the difference between an entity in EJB2.x and EJB3.0 model?
+
+
+    Answer:
+
+
+    The difference is, in EJB2.x model, entities are always managed by the container
+    but in EJB3.0 they can be managed by both container or the application.
+
+
+    # 182: What are the two fundamental approaches used to model java EE applications?
+
+
+    Answer:
+
+
+    The two fundamental models are
+
+
+    +   a Use EJB session beans as façade and coordinate with back end EIS.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '+   b) Use POJO as façade and remote access,
+
+    transactions are managed by frameworks like
+
+    spring.
+
+
+    # 183: What are the two persistence providers available in websphere application
+    server?
+
+
+    Answer:
+
+
+    The two providers are:
+
+
+    +   a) IBM WebSphere JPA persistence provider
+
+    b) Apache OpenJPA persistence provider
+
+
+    # 184: Which is the default persistence provider?
+
+
+    Answer:
+
+
+    The WebSphere JPA persistence provider is the default one.
+
+
+    # 185: What are the enhancements available in websphere JPA persistence provider?
+
+
+    Answer:
+
+
+    The enhancements are as follows:
+
+
+    +   a) Statement batching support
+
+    b) WebSphere product-specific commands and scripts
+
+    c) Translated message files
+
+    d) Version ID generation
+
+    e) ObjectGrid cache plug-in support'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# 186: What is JPA query language?
+
+
+    Answer:
+
+    The Java Persistence Query Language (JPQL) is used to define searches queries
+    against persistent entities independent of the mechanism of storing those entities.
+
+
+    # 187: What does JPQL extend?
+
+
+    Answer:
+
+    JPQL extends EJB QL
+
+
+    # 188: What are the two type of queries offered by JPQL?
+
+
+    Answer:
+
+    The two types are:
+
+
+    +   a) Dynamic queries
+
+    b) Named queries
+
+
+    # 189: What is the main difference in dynamic and named queries?
+
+
+    Answer:
+
+    The dynamic queries are built on the fly. But named queries are used in the context.
+    Named queries are mainly used when same query is invoked several times.
+
+
+    # 190: What is relationship navigation?'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# Answer:
+
+
+    Relationship navigation means traversing relationship between objects.
+
+
+    # 191: What is query paging?
+
+
+    # Answer:
+
+
+    Query paging is limiting the maximum number of retrieved results.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# MDB(Message Driven Bean)'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# 192: What is a Message Driven Bean in EJB3.0 specification?
+
+
+    Answer:
+
+
+    According to EJB3.0 specification a message-driven bean is an asynchronous message
+    consumer.
+
+
+    # 193: MDB is used as \_\_\_\_\_\_\_\_?
+
+
+    Answer:
+
+
+    A Message Driven Bean can be a listener of a JMS destination or a web service
+    end point.
+
+
+    # 194: Which interface does a MDB implements?
+
+
+    Answer:
+
+
+    A message driven bean does not implement a business interface but implements a
+    listener interface.
+
+
+    # 195: What annotation is used to indicate a MDB?
+
+
+    Answer:
+
+
+    The ''@MessageDriven'' annotation is used to indicate a MDB.
+
+
+    # 196: Where do you refer EJB references?
+
+
+    Answer:
+
+
+    The EJB references are defined in web.xml file'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# 197: What specification is used to make EJB3.0 enterprise beans as web services?
+
+
+    Answer:
+
+
+    The JAX-WS specification is used for this purpose.
+
+
+    # 198: What annotation is used at class level to indicate web service?
+
+
+    Answer:
+
+
+    The ‘@WebService’ at class level is used to describe the Web service.
+
+
+    # 199: What is JTS?
+
+
+    Answer:
+
+
+    Java Transaction Service (JTS) defines a low-level API as is meant to be used
+    by the application server provider.
+
+
+    # 200: Which method is used for error handling in EJB3.0?
+
+
+    Answer:
+
+
+    Dependency injection strategy is used for error handling in EJB3.0 specification.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# HR Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# 1: Why did you choose your college major?
+
+
+    Answer:
+
+    It''s important to display interest in your work, and if your major is related
+    to your current field, it will be simple for you to relate the two. Perhaps you
+    even know while in college that you wanted to do a job similar to this position,
+    and so you chose the major so as to receive the education and training you needed
+    to succeed. If your major doesn''t relate clearly, it''s still important to express
+    a sense of passion for your choice, and to specify the importance of pursuing
+    something that matters to you – which is how you made the decision to come to
+    your current career field instead.
+
+
+    # 2: Tell me about your college experience.
+
+
+    Answer:
+
+    It''s best to keep this answer positive – don''t focus on parties, pizza, or procrastinating.
+    Instead, offer a general summary of the benefits you received in college, followed
+    by an anecdote of a favorite professor or course that opened up your way of thinking
+    about the field you''re in. This is a great opportunity for you to show your passion
+    for your career, make sure to answer enthusiastically and confidently.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# 3: What is the most unique thing about yourself that you would bring to this
+    position?
+
+
+    Answer:
+
+
+    This question is often asked as a close to an interview, and it gives you a final
+    chance to highlight your best qualities to the employer. Treat the question like
+    a sort of review, and explain why your specific mix of education, experience,
+    and passions will be the ideal combination for the employer. Remain confident
+    but humble, and keep your answer to about two minutes.
+
+
+    # 4: How did your last job stand up to your previous expectations of it?
+
+
+    Answer:
+
+
+    While it''s okay to discuss what you learned if you expected too much out of a
+    previous job, it''s best to keep this question away from negative statements or
+    portrayals. Focus your answer around what your previous job did hold that you
+    had expected, and how much you enjoyed those aspects of the position.
+
+
+    # 5: How did you become interested in this field?
+
+
+    Answer:'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: 'This is the chance for you to show your passion for your career – and the interviewer
+    will be assured that you are a great candidate if it''s obvious that you enjoy
+    your job. You can include a brief anecdote in here to make your interest personal,
+    but be sure that it is brief. Offer specific names of mentors or professors who
+    aided in your discovery, and make it clear that you love what you do.
+
+
+    # 6: What was the greatest thing you learned while in school?
+
+
+    Answer:
+
+
+    By offering a lesson you learned outside of the classroom, you can show the interviewer
+    your capacity for creativity, learning, and reflection. The practical lessons
+    you learned in the classroom are certainly invaluable in their own right and may
+    pertain closely to the position, but showing the mastery of a concept that you
+    had to learn on your own will highlight your growth potential.
+
+
+    # 7: Tell me about a time when you had to learn a different skill set for a new
+    position.
+
+
+    Answer:'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: 'Use a specific example to describe what you had to learn and how you set about
+    outlining goals and tasks for yourself. It''s important to show that you have
+    mastered the skill largely from your dedication to learning it, and because of
+    the systematic approach you took to developing and honing your individual education.
+    Additionally, draw connections between the skill you learned and the new position,
+    and show how well prepared you are for the job.
+
+
+    # 8: Tell me about a person who has been a great influence in your career.
+
+
+    Answer:
+
+
+    It''s important to make this answer easy to relate to – your story should remind
+    the interviewer of the person who was most influential in his or her own career.
+    Explain what you learned from this person and why they inspired you, and how you
+    hope to model them later in your career with future successes.
+
+
+    # 9: What would this person tell me about you?
+
+
+    Answer:
+
+
+    Most importantly, if this person is one of your references – they had better know
+    who you are! There are all too'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'many horror stories of professors or past employers being called for a reference,
+    and not being able to recall when they knew you or why you were remarkable, which
+    doesn''t send a very positive message to potential employers. This person should
+    remember you as being enthusiastic, passionate, and motivated to learn and succeed.
+
+
+    # 10: What is the most productive time of day for you?
+
+
+    Answer:
+
+    This is a trick question – you should be equally productive all day! While it''s
+    normal to become extra motivated for certain projects, and also true that some
+    tasks will require additional work, be sure to emphasize to the interviewer that
+    working diligently throughout the entirety of the day comes naturally to you.
+
+
+    # 11: What was the most responsibility you were given at your previous job?
+
+
+    Answer:
+
+    This question provides you with an opportunity to elaborate on responsibilities
+    that may or may not be on your resume. For instance, your resume may not have
+    allowed room to discuss individual projects you worked'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'on that were really outside the scope of your job responsibilities, but you
+    can tell the interviewer about the additional work you did and how it translated
+    into new skills and a richer career experience for you.
+
+
+    # 12: Do you believe you were compensated fairly at your last job?
+
+
+    Answer:
+
+
+    Remember to stay positive, and to avoid making negative comments about your previous
+    employer. If you were not compensated fairly, simply state that you believe your
+    qualities and experience were outside the compensation limitations of the old
+    job, and that you''re looking forward to an opportunity that is more in line with
+    the place you''re at in your career.
+
+
+    # 13: Tell me about a time when you received feedback on your work, and enacted
+    it.
+
+
+    Answer:
+
+
+    Try to give an example of feedback your received early in your career, and the
+    steps you took to incorporate it with your work. The most important part of this
+    question is to display the way you learned from the feedback, as well as your
+    willingness to accept suggestions from your'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'superiors. Be sure to offer reflection and understanding of how the feedback
+    helped your work to improve.
+
+
+    # 14: Tell me about a time when you received feedback on your work that you did
+    not agree with, or thought was unfair. How did you handle it?
+
+
+    Answer:
+
+
+    When explaining that you did not agree with particular feedback or felt it was
+    unfair, you''ll need to justify tactfully why the feedback was inaccurate. Then,
+    explain how you communicated directly with the person who offered the feedback,
+    and, most importantly, how you listened to their response, analyzed it, and then
+    came to a mutual agreement.
+
+
+    # 15: What was your favorite job, and why?
+
+
+    Answer:
+
+
+    It''s best if your favorite job relates to the position you''re currently applying
+    for, as you can then easily draw connections between why you enjoyed that job
+    and why you are interested in the current position. Additionally, it is extremely
+    important to explain why you''ve qualified the particular job as your favorite,
+    and what aspects of it'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: 'you would look for in another job, so that the interviewer can determine whether
+    or not you are a good fit.
+
+
+    # 16: Tell me about an opportunity that your last position did not allow you to
+    achieve.
+
+
+    Answer:
+
+
+    Stay focused on the positive, and be understanding of the limitations of your
+    previous position. Give a specific example of a goal or career objective that
+    you were not able to achieve, but rather than expressing disappointment over the
+    missed opportunity, discuss the ways you''re looking forward to the chance to
+    grow in a new position.
+
+
+    # 17: Tell me about the worst boss you ever had.
+
+
+    Answer:
+
+
+    It''s important to keep this answer brief, and positively focused. While you may
+    offer a couple of short, critical assessments of your boss, focus on the things
+    you learned from working with such an individual, and remain sympathetic to challenges
+    the boss may have faced.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# 18: What are the three most important things you''re\looking for in a position?
+
+
+    Answer:
+
+
+    The top three things you want in a position should be
+
+    similar to the top three things the employer wants from
+
+    an employee, so that it is clear that you are well-matched
+
+    to job. For example, the employer wants a candidate
+
+    who is well-qualified for and has practical experience –
+
+    and you want a position that allows you to use your
+
+    education and skills to their best applications. The
+
+    employer wants a candidate who is willing to take on
+
+    new challenges and develop new systems to increase sales
+
+    or productivity – and you want a position that pushes you
+
+    offers opportunities to develop, create, and lead new
+
+    initiatives. The employer wants a candidate who will
+
+    grow into and stay with the company for a long time –
+
+    and you want a position that offers stability and believes
+
+    in building a strong team. Research what the employer is
+
+    looking for beforehand, and match your objectives to
+
+    theirs.
+
+
+    # 19: How are you evaluating the companies you''re
+
+    looking to work with?
+
+
+    Answer:'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "While you may feel uncomfortable exerting your own requirements during the\
+    \ interview, the employer wants to see that you are thinking critically about\
+    \ the companies you're applying with, just as they are critically looking at you.\
+    \ Don't be afraid to specify what your needs from a company are (but do try to\
+    \ make sure they match up well with the company – preferably before you apply\
+    \ there), and show confidence and decisiveness in your answer. The interviewer\
+    \ wants to know that you're the kind of person who knows what they want, and how\
+    \ to get it.\n\n# 20: Are you comfortable working for ________ salary?\n\nAnswer:\n\
+    \ the answer to this question is no, it may be a bit of a deal-breaker in a first\
+    \ interview, as you are unlikely to have much room to negotiate. You can try to\
+    \ leverage a bit by highlighting specific experience you have, and how that makes\
+    \ you qualified for more, but be aware that this is very difficult to navigate\
+    \ at this step of the process. To avoid this situation, be aware of industry standards\
+    \ and, if possible, company standards, prior to your application.\n\n# 21: Why\
+    \ did you choose your last job?\n\nAnswer:"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: 'In learning what led you to your last job, the interviewer is able to get a
+    feel for the types of things that motivate you. Keep these professionally-focused,
+    and remain passionate about the early points of your career, and how excited you
+    were to get started in the field.
+
+
+    # 22: How long has it been since your last job and why?
+
+
+    **Answer:**
+
+
+    Be sure to have an explanation prepared for all gaps in employment, and make sure
+    it''s a professional reason. Don''t mention difficulties you may have had in finding
+    a job, and instead focus on positive things such as pursuing outside interests
+    or perhaps returning to school for additional education.
+
+
+    # 23: What other types of jobs have you been looking for?
+
+
+    **Answer:**
+
+
+    The answer to this question can show the interviewer that you''re both on the
+    market and in demand. Mention jobs you''ve applied for or looked at that are closely
+    related to your field, or similar to the position you''re interviewing for. Don''t
+    bring up last-ditch efforts that you found applying for a part-time job completely
+    unrelated to your field.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# 24: Have you ever been disciplined at work?
+
+
+    Answer:
+
+
+    Hopefully the answer here is no – but if you have been disciplined for something
+    at work though, absolutely sure that you can explain it thoroughly. Detail what
+    you learned from the situation, and reflect on how you grew after the process.
+
+
+    # 25: What is your availability like?
+
+
+    Answer:
+
+
+    Your availability should obviously be as open as possible, and any gaps in availability
+    should be explained and accounted for. Avoid asking about vacation or personal
+    days (as well as other benefits), and convey to the interviewer how serious you
+    are about your work.
+
+
+    # 26: May I contact your current employer?
+
+
+    Answer:
+
+
+    If possible, it is best to allow an interviewer to contact your current employer
+    as a reference. However, if it''s important that your employer is not contacted,
+    explain your reason tactfully, such as you just started job searching and you
+    haven''t had the opportunity yet to'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: 'inform them that you are looking for other employment. Be careful of this reasoning
+    though, as employers may wonder if you''ll start shopping for something better
+    while employed with them as well.
+
+
+    # 27: Do you have any valuable contacts you could bring to our business?
+
+
+    Answer:
+
+
+    It''s great if you can bring knowledge, references, or other contacts that your
+    new employer may be able to network with. However, be sure that you aren''t offering
+    any of your previous employer''s clients, or in any way violating contractual
+    agreements.
+
+
+    # 28: How soon would you be available to start working?
+
+
+    Answer:
+
+
+    While you want to be sure that you''re available to start as soon as possible
+    if the company is interested in hiring you, if you still have another job, be
+    sure to give them at least two weeks'' notice. Though your new employer may be
+    anxious for you to start, they will want to hire a worker whom they can respect
+    for giving adequate notice, so that they won''t have to worry if you''ll eventually
+    leave them in the lurch.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# 29: Why would your last employer say that you left?
+
+
+    Answer:
+
+
+    The key to this question is that your employer''s answer must be the same as your
+    own answer about why you left. For instance, if you''ve told your employer that
+    you left to find a position with greater opportunities for career advancement,
+    your employer had better not say that you were let go for missing too many days
+    of work. Honesty is key in your job application process.
+
+
+    # 30: How long have you been actively looking for a job?
+
+
+    Answer:
+
+
+    It''s best if you haven''t been actively looking for a job for very long, as a
+    long period of time may make the interviewer wonder why no one else has hired
+    you. If it has been awhile, make sure to explain why, and keep it positive. Perhaps
+    you haven''t come across many opportunities that provide you with enough of a
+    challenge or that are adequately matched to someone of your education and experience.
+
+
+    # 31: When don''t you show up to work?
+
+
+    Answer:'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: 'Clearly, the only time acceptable to miss work is for a real emergency or when
+    you''re truly sick – so don''t start bringing up times now that you plan to miss
+    work due to vacations or family birthdays. Alternatively, you can tell the interviewer
+    how dedicated to your work you are, and how you always strive to be fully present
+    and to put in the same amount of work every time you come in, even when you''re
+    feeling slightly under the weather.
+
+
+    # 32: What is the most common reason you miss work?
+
+
+    Answer:
+
+
+    If there is a reason that you will miss work routinely, this is the time to disclose
+    it – but doing so during an interview will reflect negatively on you. Ideally,
+    you will only miss work during cases of extreme illness or other emergencies.
+
+
+    # 33: What is your attendance record like?
+
+
+    Answer:
+
+
+    Be sure to answer this question honestly, but ideally you will have already put
+    in the work to back up the fact that you rarely miss days or arrive late. However,
+    if there are gaps in your attendance, explain them briefly with'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'appropriate reasons, and make sure to emphasize your dedication to your work,
+    and reliability.
+
+
+    # 34: Where did you hear about this position?
+
+
+    Answer:
+
+
+    This may seem like a simple question, but the answer can actually speak volumes
+    about you. If you were referred by a friend or another employee who works for
+    the company, this is a great chance to mention your connection (if the person
+    is in good standing!). However, if you heard about it from somewhere like a career
+    fair or a work placement agency, you may want to focus on how pleased you were
+    to come across such a wonderful opportunity.
+
+
+    # 35: Tell me anything else you''d like me to know when making a hiring decision.
+
+
+    Answer:
+
+
+    This is a great opportunity for you to give a final sell of yourself to the interviewer
+    – use this time to remind the interviewer of why you are qualified for the position,
+    and what you can bring to the company that no one else can. Express your excitement
+    for the opportunity to work with a company pursuing X mission.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# 36: Where do you find ideas?
+
+
+    Answer:
+
+
+    Ideas can come from all places, and an interviewer wants to see that your ideas
+    are just as varied. Mention multiple places that you gain ideas from, or settings
+    in which you find yourself brainstorming. Additionally, elaborate on how you record
+    ideas or expand upon them later.
+
+
+    # 37: How do you achieve creativity in the workplace?
+
+
+    Answer:
+
+
+    It''s important to show the interviewer that you''re capable of being resourceful
+    and innovative in the workplace, without stepping outside the lines of company
+    values. Explain where ideas normally stem from for you (examples may include an
+    exercise such as list-making or a mind map), and connect this to a particular
+    task in your job that it would be helpful to be creative in.
+
+
+    # 38: How do you push others to create ideas?
+
+
+    Answer:
+
+
+    If you''re in a supervisory position, this may be requiring employees to submit
+    a particular number of ideas, or to complete regular idea-generating exercises,
+    in order to'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: 'work their creative muscles. However, you can also push others around you to
+    create ideas simply by creating more of your own. Additionally, discuss with the
+    interviewer the importance of questioning people as a way to inspire ideas and
+    change.
+
+
+    # 39: Describe your creativity.
+
+
+    Answer:
+
+
+    Try to keep this answer within the professional realm, but if you have an impressive
+    background in something creative outside of your employment history, don''t be
+    afraid to include it in your answer also. The best answers about creativity will
+    relate problem-solving skills, goal-setting, and finding innovative ways to tackle
+    a project or make a sale in the workplace. However, passions outside of the office
+    are great, too (so long as they don''t cut into your work time or mental space).
+
+
+    # 40: How would you handle a negative coworker?
+
+
+    Answer:
+
+
+    Everyone has to deal with negative coworkers – and the single best way to do so
+    is to remain positive. You may try to build a relationship with the coworker or
+    relate to them in some way, but even if your efforts are met with a'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: 'cold shoulder, you must retain your positive attitude. Above all, stress that
+    you would never allow a coworker negativity to impact your own work or productivity.
+
+
+    # 41: What would you do if you witnessed a coworker surfing the web, reading a
+    book, etc, wasting company time?
+
+
+    Answer:
+
+
+    The interviewer will want to see that you realize how detrimental it is for employees
+    to waste company time, and that it is not something you take lightly. Explain
+    the way you would adhere to company policy, whether that includes talking to the
+    coworker yourself, reporting the behavior straight to a supervisor, or talking
+    to someone in HR.
+
+
+    # 42: How do you handle competition among yourself and other employees?
+
+
+    Answer:
+
+
+    Healthy competition can be a great thing, and it is best to stay focused on the
+    positive aspects of this here. Don''t bring up conflict among yourself and other
+    coworkers, and instead focus on the motivation to keep up with the great work
+    of others, and the ways in which coworkers'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: 'may be a great support network in helping to push you to new successes.
+
+
+    # 43: When is it okay to socialize with coworkers?
+
+
+    This question has two extreme answers (all the time, or never), and your interviewer,
+    in most cases, will want to see that you fall somewhere in the middle. It''s important
+    to establish solid relationships with your coworkers, but never at the expense
+    of getting work done. Ideally, relationship-building can happen with exercises
+    of teamwork and special projects, as well as in the break room.
+
+
+    # 44: Tell me about a time when a major change was made at your last job, and
+    how you handled it.
+
+
+    Provide a set-up for the situation including the old system, what the change was,
+    how it was implemented, and the results of the change, and include how you felt
+    about each step of the way. Be sure that your initial thoughts on the old system
+    are neutral, and that your excitement level grows with each step of the new change,
+    as an interviewer will be pleased to see your adaptability.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# 45: When delegating tasks, how do you choose which tasks go to which team
+    members?
+
+
+    Answer:
+
+
+    The interviewer is looking to gain insight into your thought process with this
+    question, so be sure to offer thorough reasoning behind your choice. Explain that
+    you delegate tasks based on each individual''s personal strengths, or that you
+    look at how many other projects each person is working on at the time, in order
+    to create the best fit possible.
+
+
+    # 46: Tell me about a time when you had to stand up for something you believed
+    strongly about to coworkers or a supervisor.
+
+
+    Answer:
+
+
+    While it may be difficult to explain a situation of conflict to an interviewer,
+    this is a great opportunity to display your passions and convictions, and your
+    dedication to your beliefs. Explain not just the situation to the interviewer,
+    but also elaborate on why it was so important to stand up for the issue, and how
+    your coworker or supervisor responded to you afterward –'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: 'were they more respectful? Unreceptive? Open-minded?
+
+    Apologetic?
+
+
+    # 47: Tell me about a time when you helped someone finish their work, even though
+    it wasn’t “your job.\nAnswer:
+
+
+    Though you may be frustrated when required to pick up someone else''s slack, it’s
+    important that you remain positive about lending a hand. The interviewer will
+    be looking to see if you''re a team player, and by helping someone else finish
+    a task that he or she couldn''t manage alone, you show both your willingness to
+    help the team succeed, and your own competence.
+
+
+    # 48: What are the challenges of working on a team? How do you handle this?\nAnswer:
+
+
+    There are many obvious challenges to working on a team, such as handling different
+    perspectives, navigating individual schedules, or accommodating difficult workers.
+    It''s best to focus on one challenge, such as individual team members missing
+    deadlines or failing to keep commitments, and then offer a solution that clearly
+    addresses the problem. For example, you could organize'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: 'weekly status meetings for your team to discuss progress, or assign shorter
+    deadlines in order to keep the long-term deadline on schedule.
+
+
+    # 49: Do you value diversity in the workplace?
+
+
+    Answer:
+
+
+    Diversity is important in the workplace in order to foster an environment that
+    is accepting, equalizing, and full of different perspectives and backgrounds.
+    Be sure to show your awareness of these issues, and stress the importance of learning
+    from others'' experiences.
+
+
+    # 50: How would you handle a situation in which a coworker was not accepting of
+    someone else''s diversity?
+
+
+    Answer:
+
+
+    Explain that it is important to adhere to company policies regarding diversity,
+    and that you would talk to the relevant supervisors or management team. When it
+    is appropriate, it could also be best to talk to the coworker in question about
+    the benefits of alternate perspectives – if you can handle the situation yourself,
+    it''s best not to bring resolvable issues to management.'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# 51: Are you rewarded more from working on a team, or accomplishing a task
+    on your own?
+
+
+    Answer:
+
+
+    It''s best to show a balance between these two aspects – your employer wants to
+    see that you''re comfortable working on your own, and that you can complete tasks
+    efficiently and well without assistance. However, it''s also important for your
+    employer to see that you can be a team player, and that you understand the value
+    that multiple perspectives and efforts can bring to a project.
+
+
+    And Finally Good Luck!'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# INDEX
+
+
+    # EJB Questions
+
+
+    # EJB Environment
+
+
+    +   1: What is an EJB container?
+
+    2: What is an application server?
+
+    3: Why application server is popular for enterprise application development?
+
+    4: Name two popular application servers used nowadays?
+
+    5: Where does an application server run?
+
+    6: What is the difference between application server and EJB server?
+
+
+    # Enterprise Beans
+
+
+    +   7: What is an enterprise bean?
+
+    8: When do you use enterprise bean?
+
+    9: What are the types of beans available in EJB3.0?
+
+    10: Which interfaces are eliminated in EJB3.0?
+
+    11: EJB3.0 is developed on ________ model?
+
+    12: What is a Business Logic layer in EJB?
+
+    13: What is a Persistence layer?
+
+    14: What are the negative sides of EJB2.x specification?
+
+    15: Describe some features of EJB3.0 model.
+
+    16: What types of annotations are used in EJB3.0 specification?
+
+    17: How do you define a POJO class as an EJB component?
+
+    18: What are the types of session beans available in EJB3.0?
+
+    19: When do you use a stateless session bean?'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: 'EJB 3.0 Interview Questions You''ll Most Be Asked 99
+
+
+    +   20: What are the components defined in EJB2.x stateless session bean?
+
+    21: What annotation is used to indicate a stateless session bean?
+
+    22: What is the function of the annotation?
+
+    23: What annotation is used to indicate a remote interface implementation?
+
+    24: When do you use a stateful session bean?
+
+    25: What annotation is used to indicate a stateless session bean?
+
+    26: Can a session be abstract or final POJO?
+
+    27: Can a session EJB subclass another session EJB?
+
+    28: Why a message driven bean is used?
+
+    29: Who is responsible for invoking a message driven bean?
+
+    30: What annotation is used for a message driven bean?
+
+    31: What is the name of the interface implemented by a message driven bean?
+
+    32: What is the name of the property used in message driven bean for configuration
+    related information?
+
+    33: What is the impact of annotations mandatory on call back methods?
+
+    34: Are the life cycle methods mandatory in EJB 3.0 specification?
+
+
+    # Session Beans
+
+
+    +   35: Describe the life cycle of a stateful session bean.
+
+    36: What are the two other life cycle stages available for stateful session bean
+
+    37: Is there any time out value for stateful session beans?
+
+    38: What is the usage of interceptors in session beans or MDBs?
+
+    39: What is a default interceptor?'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "40: What is the order of execution of different interceptors?\n\n41: Is it\
+    \ possible to disable invocation of any interceptor?\n\n42: What is dependency\
+    \ injection in EJB 3.0 specification?\n\n43: What is the annotation used for EJB\
+    \ injection into a client code?\n\n44: What is the annotation used for resource\
+    \ injection?\n\n45: Why setter injection is used?\n\n46: What is the usage of\
+    \ deployment descriptor?\n\n47: What are the two name spaces available in EJB\
+    \ 3.0 feature pack.\n\n48: What is the name of the format used for packaging java\
+    \ enterprise applications?\n\n49: What is the name of the deployment descriptor\
+    \ used for deploying java enterprise application?\n\n50: What are the two default\
+    \ bindings used by the container?\n\n51: What is short binding?\n\n52: How the\
+    \ long binding is performed? \n\n53: What are the different parts of a component\
+    \ ID?\n\n54: Where do you bind local interfaces?\n\n55: Where do you bind the\
+    \ remote interfaces and why?\n\n56: What is the best practice for all EJB related\
+    \ bindings?\n\n57: Where do you provide user defined information?\n\n58: What\
+    \ are the two packaging options available?\n\n59: What is to be edited in the\
+    \ deployment descriptor when using the java packaging option?\n\n60: Do we need\
+    \ to add anything if we use EJB packaging option?\n\n61: What is the usage of\
+    \ EJB-jar.xml file in EJB3.0 specification?"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: 'EJB 3.0 Interview Questions You''ll Most Likely Be Asked 101
+
+
+    62: What persistence model is used in EJB3.0 specification?
+
+
+    # JPA (Java Persistence API)
+
+
+    +   63: What is the advantage of JPA?
+
+    64: What are the three major parts of JPA?
+
+    65: What is entity in JPA?
+
+    66: Does entity extend/implement any class or interface?
+
+    EJB3.0 Entities & Persistence
+
+    67: What annotation is used for referring to an entity?
+
+    68: Can an entity be an abstract or concrete class?
+
+    69: What limitation of EJB2.x has been overcome by the entities?
+
+    70: What is the name of the JPA descriptor file?
+
+    71: Which annotation is used to refer primary key?
+
+    72: What specification is followed for creating an entity?
+
+    73: What does @Table annotation contain?
+
+    74: Which annotation is used to map a column of a table and entity property?
+
+    75: What are the persistence mechanisms available for entities?
+
+    76: Can you describe field-based persistence?
+
+    77: Can you describe property-based persistence?
+
+    78: Which persistence mechanism is recommended and why?
+
+    79: Can one entity extend another entity?
+
+    80: Can entity extend a class?
+
+    81: When do you use @Basic annotation?
+
+    82: When do you use @Transient annotation?
+
+    83: What are the ways of specifying entity identities?'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '84: When do you use @Id annotation?
+
+
+    85: How do you manage composite primary key?
+
+
+    86: What methods are overridden to make composite primary key?
+
+
+    87: Why setter method is not available while making a composite primary key?
+
+
+    88: When do you use @EmbeddedId annotation?
+
+
+    89: What annotation is used for generating automatic identity?
+
+
+    90: What are the four automatic generation types available in JPA?
+
+
+    91: When do you use generation type as identity and sequence?
+
+
+    92: When do you use ‘AUTO’ generation type?
+
+
+    93: What is the meaning of ‘TABLE’ generation type?
+
+
+    94: Which generator type is portable?
+
+
+    95: What are the transaction mechanisms available when a primary key is created
+    during an active transaction?
+
+
+    96: What are the call back methods available in JPA?
+
+
+    97: When do you use @PostLoad call back method?
+
+
+    98: When do you call @PrePersist and @PreRemove?
+
+
+    99: When do you use @PreUpdate and @PostUpdate callbacks?
+
+
+    100: When do you use @PostPersist and @PostRemove callback?
+
+
+    101: Which are the two ways of using call back methods for an entity?
+
+
+    102: Which annotation is used while the call backs are kept in a separate class?
+
+
+    103: How do you define relationship in JPA?
+
+
+    104: What do you mean by unidirectional relationship between'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'objects?
+
+
+    105: What are the different types of relationships available in JPA?
+
+
+    106: What annotations are used for mapping one to one relationship?
+
+
+    107: What is bidirectional one to one relationship?
+
+
+    108: How do you define one to many relationships in JPA entities?
+
+
+    109: What do you Join column in JPA?
+
+
+    110: Is there any default mechanism to create Join column?
+
+
+    111: What is many to many relationships?
+
+
+    112: How do you implement many to many relationships?
+
+
+    113: What are the annotations used in many to many relationship?
+
+
+    114: What does @JoinTable annotation do?
+
+
+    115: How do you identify the owner of a relationship?
+
+
+    116: What is inverseJoinColumn?
+
+
+    117: Where do you keep the foreign key values in case of a many to many relationships?
+
+
+    118: Who is responsible for loading the entity from the underlying database?
+
+
+    119: What are the strategies of loading entities?
+
+
+    120: Describe Eager mode of loading?
+
+
+    121: Describe lazy mode of loading?
+
+
+    122: What is the impact on performance of eager and lazy loading?
+
+
+    123: What is the default strategy used to select the type of loading?
+
+
+    124: What is cascade type?
+
+
+    125: What are the available cascade rules?
+
+
+    126: Can you please describe when you do use ‘PERSIST’ cascade'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'type?
+
+
+    127: Could you describe any other cascade type in brief?
+
+
+    128: When do you use cascade type as ‘ALL’?
+
+
+    129: What is Impedance Mismatch?
+
+
+    130: What are the strategies used in JPA for supporting inheritance?
+
+
+    131: What is single table inheritance?
+
+
+    132: Where do you use the @Inheritance annotation?
+
+
+    133: What is @DiscriminatorColumn and @DiscriminatorValue annotation?
+
+
+    134: What is the advantage of single table inheritance model?
+
+
+    135: Will you use single table hierarchy if the hierarchy model is wide?
+
+
+    136: Describe the strategy used in joined table hierarchy?
+
+
+    137: Which annotation is used to indicate primary key?
+
+
+    138: What are the advantages of joined table strategy?
+
+
+    139: Can we use normalization in joined table strategy?
+
+
+    140: Does joined table strategy have any impact on the performance?
+
+
+    141: If you have a complex data model model, which strategy should be used?
+
+
+    142: What is table per class inheritance?
+
+
+    143: Why @Table annotation is used with all the tables in table per class inheritance?
+
+
+    144: When do you use table per class strategy?
+
+
+    145: What is the disadvantage of per class strategy?
+
+
+    146: How do you identify subclass when it is not known to you?'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '147: What is persistence unit?
+
+
+    148: What xml file is used t define a persistence unit?
+
+
+    149: What is the root of a persistence unit?
+
+
+    150: What do you mean by the scope of a persistence unit?
+
+
+    151: How is the persistence unit packaged?
+
+
+    152: What do you mean by the transaction type mentioned in
+
+    ‘persistence.xml’ file?
+
+
+    153: What is mapping-file in the scope of persistence unit?
+
+
+    154: Can you substitute ‘persistence.xml’ file by annotations?
+
+
+    155: Can we use any xml file for O-R mapping information?
+
+
+    156: Who is responsible for persisting entities in the database?
+
+
+    157: Describe the tasks performed by the entity manager?
+
+
+    158: What is persistence context?
+
+
+    159: What will happen when a persistence context is closed?
+
+
+    160: What do you mean by unmanaged entities?
+
+
+    161: What do you mean by “merging operation performed by the
+
+    persistence manager”?
+
+
+    162: What is the function of flush operation performed by the
+
+    persistence manager?
+
+
+    163: Two types of entity managers are available?
+
+
+    164: What is the main function of a container managed entity
+
+    manager?
+
+
+    165: How do you get reference of a container managed entity
+
+    manager?
+
+
+    166: What type of transaction is used by the container managed entity'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: 'manager?
+
+
+    167: Name the two scopes available in container managed persistence context?
+
+
+    168: What is the life time of a context that exists in a transaction persistence
+    scope?
+
+
+    169: What annotation is used to inject an entity manager in EJB3 session bean?
+
+
+    170: Is an entity manager thread safe?
+
+
+    171: What is we extended persistence context?
+
+
+    172: What is the limitation of container managed extended persistence context?
+
+
+    173: When do you use extended persistence context?
+
+
+    174: What do you mean by application managed entity manager?
+
+
+    175: What are the fundamental aspects of application managed entity manager?
+
+
+    176: What are the situations when you use application managed entity manager?
+
+
+    177: What is the API used to retrieve entity manager?
+
+
+    178: What should be used to manage transaction in case of application managed
+    entity manager in java SE environment?
+
+
+    179: When do entity instances become unmanaged?
+
+
+    180: Can we send a detached entity to a remote client?
+
+
+    181: What is the difference between an entity in EJB2.x and EJB3.0 model?
+
+
+    182: What are the two fundamental approaches used to model java EE'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: 'EJB 3.0 Interview Questions You''ll Most Likely Be Asked
+
+
+    applications?
+
+
+    183: What are the two persistence providers available in websphere application
+    server?
+
+
+    184: Which is the default persistence provider?
+
+
+    185: What are the enhancements available in websphere JPA persistence provider?
+
+
+    186: What is JPA query language?
+
+
+    187: What does JPQL extend?
+
+
+    188: What are the two type of queries offered by JPQL?
+
+
+    189: What is the main difference in dynamic and named queries?
+
+
+    190: What is relationship navigation?
+
+
+    191: What is query paging?
+
+
+    # MDB(Message Driven Bean)
+
+
+    192: What is a Message Driven Bean in EJB3.0 specification?
+
+
+    193: MDB is used as ________?
+
+
+    194: What interface does a MDB implements?
+
+
+    195: What annotation is used to indicate a MDB?
+
+
+    196: Where do you refer EJB references?
+
+
+    197: What specification is used to make EJB3.0 enterprise beans as web services?
+
+
+    198: What annotation is used at class level to indicate web service?
+
+
+    199: What is JTS?
+
+
+    200: Which method is used for error handling in EJB3.0?'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# HR Questions
+
+
+    +   1: Why did you choose your college major?
+
+    2: Tell me about your college experience.
+
+    3: What is the most unique thing about yourself that you would bring to this position?
+
+    4: How did your last job stand up to your previous expectations of it?
+
+    5: How did you become interested in this field?
+
+    6: What was the greatest thing you learned while in school?\7: Tell me about a
+    time when you had to learn a different skill set for a new position.
+
+    8: Tell me about a person who has been a great influence in your career.
+
+    9: What would this person tell me about you?
+
+    10: What is the most productive time of day for you?
+
+    11: What was the most responsibility you were given at your previous job?
+
+    12: Do you believe you were compensated fairly at your last job?
+
+    13: Tell me about a time when you received feedback on your work, and enacted
+    it.
+
+    14: Tell me about a time when you received feedback on your work that did not
+    agree with, or thought was unfair. How did you handle it?
+
+    15: What was your favorite job, and why?
+
+    16: Tell me about an opportunity that your last position did not allow you to
+    achieve.
+
+    17: Tell me about the worst boss you ever had.
+
+    18: What are the three most important things you''re looking for in a position?
+
+    19: How are you evaluating the companies you''re looking to work with?'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '20: Are you comfortable working for __________ salary?
+
+
+    21: Why did you choose your last job?
+
+
+    22: How long has it been since your last job and why?
+
+
+    23: What other types of jobs have you been looking for?
+
+
+    24: Have you ever been disciplined at work?
+
+
+    25: What is your availability like?
+
+
+    26: May I contact your current employer?
+
+
+    27: Do you have any valuable contacts you could bring to your business?
+
+
+    28: How soon would you be available to start working?
+
+
+    29: Why would your last employer say that you left?
+
+
+    30: How long have you been actively looking for a job?
+
+
+    32: What is the most common reason you miss work?
+
+
+    33: What is your attendance record like?
+
+
+    34: Where did you hear about this position?
+
+
+    36: Tell me anything else you''d like me to know when making a hiring decision.
+
+
+    37: Where do you find ideas?
+
+
+    38: How do you achieve creativity in the workplace?
+
+
+    39: How do you push others to create ideas?
+
+
+    40: Describe your creativity.
+
+
+    41: How would you handle a negative coworker?
+
+
+    42: What would you do if you witnessed a coworker surfing the web, reading a book,
+    etc, wasting company time?
+
+
+    43: How do you handle competition among yourself and other employees?
+
+
+    44: When is it okay to socialize with coworkers?
+
+
+    45: Tell me about a time when a major change was made at your last job, and how
+    you handled it.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '45: When delegating tasks, how do you choose which tasks go to which team members?
+
+
+    46: Tell me about a time when you had to stand up for something you believed strongly
+    about to coworkers or a supervisor.
+
+
+    47: Tell me about a time when you helped someone finish their work, even though
+    it wasn''t “your job.”
+
+
+    48: What are the challenges of working on a team? How do you handle this?
+
+
+    49: Do you value diversity in the workplace?
+
+
+    50: How would you handle a situation in which a coworker was not accepting someone
+    else''s diversity?
+
+
+    51: Are you rewarded more from working on a team, or accomplishing a task on your
+    own?'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: 'EJB 3.0 Intelligence Questions You''ll Most Be Asked
+
+
+    # Some of the following titles might also be handy:
+
+
+    +   1. .NET Interview Questions You''ll Most Be Asked
+
+    2. 200 Interview Questions You''ll Most Be Asked
+
+    3. Access VBA Programming Interview Questions You''ll Most Be Asked
+
+    4. Adobe ColdFusion Interview You''ll Most Be Asked
+
+    5. Advanced Excel Interview Questions You''ll Most Be Asked
+
+    6. Advanced JAVA Interview Questions You''ll Most Be Asked
+
+    7. Advanced SAS Interview Questions You''ll Most Be Asked
+
+    8. AJAX Interview Questions You''ll Most Be Asked
+
+    9. Algorithms Interview Questions You''ll Most Be Asked
+
+    10. Android Development Interview Questions You''ll Most Be Asked
+
+    11. Ant & Web Interview Questions You''ll Most Be Asked
+
+    12. Apache Web Server Questions You''ll Most Be Asked
+
+    13. Artificial Intelligence Interview Questions You''ll Most Be Asked
+
+    14. ASPNET Questions You''ll Most Be Asked
+
+    15. Automated Software Testing Interview Questions You''ll Most Be Asked
+
+    16. Base SAS Questions You''ll Most Be Asked
+
+    17. BEA WebLogic Server Questions You''ll Most Be Asked
+
+    18. C & C++ Interview Questions You''ll Most Be Asked
+
+    19. C# Interview Questions You''ll Most Be Asked
+
+    20. C++s Questions You''ll Most Be Asked
+
+    21. CCNA Interview Questions You''ll Most Be Asked
+
+    22. Cloud Computing Interview Questions You''ll Most Be Asked
+
+    23. Computer Architecture Interview Questions You''ll Most Be Asked
+
+    24. Network Interview Questions You''ll Most Be Asked
+
+    25. Core Java Interview Questions You''ll Most Be Asked
+
+    26. Data Structures & Algorithms Interview Questions You''ll Most Be Asked
+
+    27. Data Warehousing Interview Questions You''ll Most Be Asked
+
+    28. EJB 3.0 Interview Questions You''ll Most Be Asked
+
+    29. Entity Framework Interview Questions You''ll Most Be Asked
+
+    30. Fedora & RHEL Interview Questions You''ll Most Be Asked
+
+    31. GNU Development Interview Questions You''ll Most Be Asked
+
+    32. Hibernate, Spring & Struts Interview Questions You''ll Most Be Asked
+
+    33. HTML, XML and CSS Questions You''ll Most Be Asked
+
+    34. HRF Interview Questions You''ll Most Be Asked
+
+    35. IBM WebSphere Application Server Questions You''ll Most Be Asked
+
+    36. JS SDK Interview Questions You''ll Most Be Asked
+
+    37. Java / JEE Design Pattern Questions You''ll Most Be Asked
+
+    38. Java / JEE Interview Questions You''ll Most Be Asked
+
+    39. Java Messaging Service Interview Questions You''ll Most Be Asked
+
+    40. JavaScript Interview Questions You''ll Most Be Asked
+
+    41. JavaServer Faces Questions You''ll Most Be Asked
+
+    42. JDBC Interview Questions You''ll Most Be Asked
+
+    43. jQuery Interview Questions You''ll Most Be Asked
+
+    44. JSP-Servlet Interview Questions You''ll Most Be Asked
+
+    45. JUnit Interview Questions You''ll Most Be Asked
+
+    46. Linux Commands Interview Questions You''ll Most Be Asked
+
+    47. Linux Interview Questions You''ll Most Be Asked
+
+    48. Linux System Administrator Interview Questions You''ll Most Be Asked
+
+    49. Mac OS X Lion Interview Questions You''ll Most Be Asked
+
+    50. Mac OS X Leopard Interview Questions You''ll Most Be Asked
+
+    51. Microsoft Access Interview Questions You''ll Most Be Asked'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# 112 EJB 3.0 Interview Questions You''ll Most Likely Be Asked
+
+
+    +   52. Microsoft Excel Interview Questions You''ll Most Likely Be Asked
+
+    53. Microsoft Powerpoint Interview Questions You''ll Most Likely Be Asked
+
+    54. Microsoft Word Interview Questions You''ll Most Likely Be Asked
+
+    55. MySQL Interview Questions You''ll Most Likely Be Asked
+
+    56. NetSuite Interview Questions You''ll Most Likely Be Asked
+
+    57. Networking Interview Questions You''ll Most Likely Be Asked
+
+    58. OOPS Interview Questions You''ll Most Likely Be Asked
+
+    59. Operating Systems Interview Questions You''ll Most Likely Be Asked
+
+    60. Oracle DBA Interview Questions You''ll Most Likely Be Asked
+
+    61. Oracle E-Business Suite Interview Questions You''ll Most Likely Be Asked
+
+    62. ORACLE PL/SQL Interview Questions You''ll Most Likely Be Asked
+
+    63. Perl Programming Interview Questions You''ll Most Likely Be Asked
+
+    64. PHP Interview Questions You''ll Most Likely Be Asked
+
+    65. PMP Interview Questions You''ll Most Likely Be Asked
+
+    66. Python Interview Questions You''ll Most Likely Be Asked
+
+    67. RESTful Java Web Services Interview Questions You''ll Most Likely Be Asked
+
+    68. Ruby Interview Questions You''ll Most Likely Be Asked
+
+    69. Ruby on Rails Interview Questions You''ll Most Likely Be Asked
+
+    70. SAP ABAP Interview Questions You''ll Most Likely Be Asked
+
+    71. SAP HANA Questions You''ll Most Likely Be Asked
+
+    72. Software Testing Guidelines Interview Questions You''ll Most Likely Be Asked
+
+    73. Selenium Testing Tools Interview Questions You''ll Most Likely Be Asked
+
+    74. Silverlight Interview Questions You''ll Most Likely Be Asked
+
+    75. Software Repositories Interview Questions You''ll Most Likely Be Asked
+
+    76. Software Testing Interview Questions You''ll Most Likely Be Asked
+
+    77. SQL Server Interview Questions You''ll Most Likely Be Asked
+
+    78. Tomcat Interview Questions You''ll Most Likely Be Asked
+
+    79. UML Interview Questions You''ll Most Likely Be Asked
+
+    80. Unix Interview Questions You''ll Most Likely Be Asked
+
+    81. UNIX Shell Programming Interview Questions You''ll Most Likely Be Asked
+
+    82. VB.NET Interview Questions You''ll Most Likely Be Asked
+
+    83. Windows Server 2008 R2 Interview Questions You''ll Most Likely Be Asked
+
+    84. XLKP, XSLT, XPath, XFORMS & XQuery Interview Questions You''ll Most Likely
+    Be Asked
+
+    85. XML Interview Questions You''ll Most Likely Be Asked
+
+
+    # For complete list visit
+
+
+    # www.vibrantpublishers.com'
+  merge: -1
+  pgno: 113
