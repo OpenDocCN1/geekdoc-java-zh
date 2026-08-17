@@ -1,0 +1,482 @@
+- - '#'
+  - 精通 Java 开发者面试：助你攻克 Java、Spring、SpringBoot 及 Hibernate 面试的200 多道题
+- - '#'
+  - 前言
+- - '#'
+  - 这本书适合谁读？
+- - '#'
+  - 这本书不适合谁读？
+- - '#'
+  - 联系信息
+- - '#'
+  - 致谢
+- - '##'
+  - '问题 1: 面向对象的四大支柱是什么？'
+- - '##'
+  - '问题 2: 什么是抽象类？'
+- - '###'
+  - In print method
+- - '##'
+  - '问题 3: 抽象类有构造函数吗？'
+- - '###'
+  - inside MyAbstractClass constructor
+- - '##'
+  - '问题 4: 什么是接口？'
+- - '##'
+  - '问题 5: 抽象类和接口的区别'
+- - '##'
+  - '问题 6: 如何选择——接口还是抽象类 答案：考虑这些'
+- - '##'
+  - 问题 7：为什么 Java 8 引入了默认方法（default methods）？
+- - '###'
+  - inside Child class hello method
+- - '##'
+  - 问题 8：为什么 Java 8 引入了静态方法（static methods）？
+- - '##'
+  - 问题 9：为什么 Java 不允许多重继承？
+- - '##'
+  - 问题 10：重载（Overloading）和重写（Overriding）的规则是什么？
+- - '##'
+  - 问题 11：我们可以重写 final 方法吗？
+- - '##'
+  - 问题 12：构造函数和私有方法可以重写吗？
+- - '##'
+  - 问题 13：什么是 final 关键字，它用在哪里？
+- - '##'
+  - 问题 14：什么是异常（exception），异常处理？
+- - '###'
+  - Program Started
+- - '##'
+  - 问题 15：错误（error）和异常（exception）的区别
+- - '##'
+  - 问题 16：异常的类型是什么？
+- - '##'
+  - 问题 17：Java 中是如何处理异常的？
+- - '##'
+  - 问题 18：我们可以写不带 catch 块的 try 吗？
+- - '##'
+  - 问题 19：如何同时处理多个异常？
+- - '##'
+  - 问题 20：finally 块什么时候不会被执行？答案：
+- - '##'
+  - 问题 21：throw 和 throws 关键字的区别。并讨论异常传播。答案：
+- - '###'
+  - 异常传播
+- - '##'
+  - 问题 22：方法重写时的异常处理的区别。答案：
+- - '###'
+  - Child class hello method
+- - '###'
+  - 程序 1：
+- - '##'
+  - 问题 29：为什么 String 是不可变的？
+- - '##'
+  - 问题 30：String 类的 equals() 方法的作用是什么？
+- - '###'
+  - 's1.equals(s2): false'
+- - '##'
+  - 问题 31：解释 StringBuffer 和 StringBuilder
+- - '##'
+  - 问题 32：解释下面程序与 StringBuilder 的 equals() 方法相关的输出
+- - '###'
+  - Not Equal
+- - '##'
+  - 问题 33：何时使用 String/StringBuilder/StringBuilder
+- - '##'
+  - 问题 34：解释 equals 和 hashCode 约定
+- - '##'
+  - 问题 35：什么是标记接口 (Marker Interface)？
+- - '##'
+  - 问题 36：你可以编写自定义的标记接口吗？
+- - '##'
+  - 问题 37：什么是 Comparable 和 Comparator？
+- - '###'
+  - ComparableDemo.java
+- - '###'
+  - NameComparator.java
+- - '###'
+  - 'ComparatorDemo.java :'
+- - '###'
+  - 输出：
+- - '###'
+  - SalaryComparator.java
+- - '###'
+  - 'ComparatorDemo.java :'
+- - '##'
+  - 问题 44：找出下方程序的输出
+- - '##'
+  - 问题 45：你可以在 switch 语句中传递原始 long 值吗？
+- - '##'
+  - 问题 46：解释 Java 中的 static 关键字
+- - '###'
+  - 静态嵌套类：
+- - '###'
+  - 'Outer class variable b : 20'
+- - '###'
+  - 'Outer x : 20 30'
+- - '###'
+  - 匿名内部类：
+- - '###'
+  - 使用时机：
+- - '###'
+  - AnonymousInnerDemo.java
+- - '###'
+  - 输出：
+- - '###'
+  - Main Thread
+- - '###'
+  - display method in parent class
+- - '###'
+  - this() 示例：
+- - '###'
+  - ABC Company
+- - '##'
+  - 问题 49：什么是 init 块？
+- - '##'
+  - 示例 1：
+- - '##'
+  - 示例 2：
+- - '##'
+  - 示例 3：
+- - '###'
+  - Child's x
+- - '##'
+  - '问题 52: 什么是常量？在 Java 中如何创建常量？'
+- - '##'
+  - '问题 53: 解释 enum'
+- - '###'
+  - '示例 1:'
+- - '##'
+  - '问题 54: 什么是 Cloneable？'
+- - '###'
+  - '未实现 Cloneable 接口的示例:'
+- - '###'
+  - '在上面的示例中，我们只有基本数据类型，如果我们有一个对象引用呢？参见下例示例：程序 2:'
+- - '##'
+  - '问题 55: 什么是浅拷贝和深拷贝？'
+- - '###'
+  - 程序 1：
+- - '###'
+  - '程序 2:'
+- - '##'
+  - '问题 56: 什么是序列化和反序列化？'
+- - '##'
+  - '问题 57: 什么是 SerialVersionUID?'
+- - '###'
+  - 带有 serialVersionUID 的示例：程序 2：
+- - '###'
+  - SerializationDemo.java
+- - '###'
+  - DeserializationTest.java
+- - '##'
+  - 当父类中存在无参构造函数时
+- - '###'
+  - 问题 59：停止序列化和反序列化
+- - '###'
+  - TestExternalizable.java
+- - '###'
+  - 输出：
+- - '###'
+  - 注释 Employee.java 中的公共无参构造函数：
+- - '##'
+  - 问题 61：带有继承的 Externalizable
+- - '###'
+  - Student.java：
+- - '###'
+  - ExternalizableDemo.java：
+- - '##'
+  - 'Case 2 : 当只有子类实现了 Externalizable 接口时 Department.java:'
+- - '###'
+  - 'Student.java:'
+- - '###'
+  - 'ExternalizableDemo.java:'
+- - '##'
+  - '问题 62: Serializable 和 Externalizable 的区别'
+- - '##'
+  - '问题 63: 如何使一个类变为变的（Immutable）？'
+- - '###'
+  - 为什么要在构造函数中执行深拷贝：
+- - '###'
+  - 'Employee.java:'
+- - '###'
+  - 'TestImmutable.java:'
+- - '##'
+  - '问题 64: 解释类加载器 (Class loaders)'
+- - '###'
+  - 静态块：
+- - '###'
+  - Pugh 单例实现程序：
+- - '##'
+  - 问题 66：单例模式有哪些方式会被破坏？
+- - '###'
+  - print 方法内部
+- - '###'
+  - 'Test.java:'
+- - '##'
+  - Java 中的垃圾回收器类型
+- - '###'
+  - Serial GC（串行回收器）：
+- - '###'
+  - CMS（并发标记收集器）：
+- - '###'
+  - G1 垃圾收集器：
+- - '###'
+  - 总结：
+- - '###'
+  - Mark
+- - '##'
+  - '问题 71: 什么是线程？'
+- - '##'
+  - '问题 72: 如何在 Java 中创建线程？'
+- - '###'
+  - 通过扩展 类：
+- - '###'
+  - 'Test.java:'
+- - '###'
+  - Thread is running
+- - '###'
+  - 通过实现 Runnable：
+- - '##'
+  - '问题 73: 哪种创建线程更好：Thread 类还是 Runnable 接口？实现 Runnable 总是首选：'
+- - '##'
+  - '问题 74: 如果直接调用 run() 方法而不是 start() 方法，会发生什么？答案：当前线程（即主线程）上运行。调用 start 方法才会创建线程。'
+- - '##'
+  - '问题 75: 线程一旦启动，还能启动吗？答案：这也是常见的面试题。如果你的答案是将列表设为 "final"，请看下面的代码：程序 1：'
+- - '##'
+  - '问题 76: 为什么 wait、notify、notifyAll 方法在 Object 类中？答案：这些方法用于线程间的通信。因此，wait() 方法在存在
+    notify 方法时才有意义。'
+- - '##'
+  - 问题 79：join() 方法。答案：join() 方法导致当前线程暂停，直到调用了 join() 方法线程死亡。
+- - '##'
+  - 问题 80：yield() 方法。答案：yield() 方法临时暂停执行，为相同优先级的线程提供机会。
+- - '##'
+  - 问题 81：谈谈 synchronized 关键字。答案：Java 中的 synchronized 关键字用于控制线程对共享资源的访问，避免任何一致性问题。
+- - '##'
+  - 问题 82：什么是静态同步？
+- - '##'
+  - 问题 83：下面程序的输出？其中一个同步方法是：
+- - '##'
+  - 问题 84：关于同步方法的，面试官可能会问：
+- - '##'
+  - 问题 85：什么是 Callable 接口？
+- - '###'
+  - 'Result: 25'
+- - '###'
+  - 'ScheduledExecutor:'
+- - '###'
+  - 核心池和最大池大小：ThreadPoolExecutor 会根据 corePoolSize 和 maximumPoolSize 设置的边界自动调整的大小。当新任务提交到执行器时：
+- - '###'
+  - 存活时间和 TimeUnit：当线程数大于核心大，这是余空闲线程在终止之前。
+- - '###'
+  - BlockingQueue：用于执行任务前持有队列。该队列只持有 Runnable 任务，你可以使用 ArrayBlockingQueue 或 LinkedBlockingQueue<Runnable>
+    queue = new ArrayBlockingQueue<>(100);
+- - '###'
+  - ThreadFactory：执行器创建线程时使用的工厂。使用线程工厂可以消除对 new Thread 用的硬编码，允许应用程序使用特殊的子类、优先级等。
+- - '###'
+  - RejectedExecutionHandler：当任务被执行（因为所有线程忙且队列满）时：使用此处理器。
+- - '##'
+  - 问题 89：介绍一下执行器 awaitTermination() 方法
+- - '##'
+  - 问题 90：执行器中 shutdown() 和 shutdownNow 方法之间的区别
+- - '##'
+  - 问题 91：Java 中的 CountDownLatch 是什么？
+- - '##'
+  - '问题 92: 什么是 CyclicBarrier？'
+- - '##'
+  - '问题 93: 原子类'
+- - '##'
+  - '问题 94: 什么是集合框架（Collection Framework）？'
+- - '##'
+  - '问题 95: 什么是 Collections？'
+- - '##'
+  - '问题 96: 什么是 ArrayList？'
+- - '###'
+  - ArrayList 类的一些要点：
+- - '##'
+  - '问题 97: ArrayList 的默认大小是多少？'
+- - '##'
+  - '问题 98: ArrayList 内部使用了哪种数据结构？'
+- - '##'
+  - '问题 99: add() 方法在内部是如何工作的，或者说 ArrayList 在运行时是如何增长的'
+- - '##'
+  - '问题 100: 如何让 ArrayList 变为不可变（Immutable）？答案：这也是目前常见的面试题。如果你的答案是将列表设为 "final"，请看下面的代码：程序
+    1：'
+- - '##'
+  - '问题 101: 什么是 LinkedList？'
+- - '##'
+  - '问题 102: 什么时候使用 ArrayList / LinkedList？'
+- - '##'
+  - '问题 103: 什么是 HashMap？'
+- - '##'
+  - '问题 104: 解释 HashMap 的 put() 和 get 方法的内部原理'
+- - '###'
+  - '显示默认容量的程序：hashmap capacity: 16'
+- - '###'
+  - 显示负载因子阈值突破后 hashmap 的容量翻倍的程序：
+- - '###'
+  - 'hashmap capacity: 16'
+- - '##'
+  - 问题 105：当键为自定义类时，HashMap 中 equals 和 hashCode 方法的场景
+- - '###'
+  - 场景 1：自定义类没有实现 equals() 和 hashCode 方法
+- - '###'
+  - 场景 2：Employee 类仅实现了 equals 方法
+- - '###'
+  - 场景 3：当只实现了 hashCode() 方法时：
+- - '###'
+  - 场景 4：当 equals 和 hashCode 都被正确实现时：
+- - '##'
+  - 问题 106：如何让 HashMap 同步化？
+- - '##'
+  - '问题 107: 什么是 Concurrent HashMap？'
+- - '##'
+  - '问题 108: 什么是 HashSet？'
+- - '##'
+  - 问题 109：解释 TreeMap
+- - '###'
+  - 输出:Employee [name=John, age=10]:500
+- - '##'
+  - 问题 10：解释 TreeSet
+- - '##'
+  - 问题 11：快速安全（fail-safe）和快速失败（fail-fast）迭代器的区别
+- - '###'
+  - 程序 1：
+- - '###'
+  - 程序 2：
+- - '###'
+  - Itr.next() 方法：@SuppressWarnings("unchecked")
+- - '###'
+  - '程序 1: ConcurrentHashMap 示例'
+- - '###'
+  - '程序 2: CopyOnWriteArrayList 示例'
+- - '##'
+  - '问题 112: Iterator 和 ListIterator 的区别 答案：'
+- - '###'
+  - 'Iterator 113: Iterator.remove() 和 Collection.remove() 的区别：Iterator.remove() 在遍历集合时不会抛出
+    ConcurrentModificationException，但 Collection.remove() 方法会抛出异常。'
+- - '##'
+  - '问题 14: 单体架构和微服务架构有什么区别？'
+- - '##'
+  - '问题 15: 什么是依赖注入？'
+- - '##'
+  - '问题 16: 依赖注入的各种类型？'
+- - '###'
+  - Java 类 B
+- - '##'
+  - '问题 17: 构造函数注入和 Setter注入有什么区别'
+- - '##'
+  - '问题 18: @Autowired 注解是什么？'
+- - '##'
+  - '问题 19: BeanFactory 和 ApplicationContext 有区别？'
+- - '##'
+  - '问题 20: 解释 Spring Bean 的生命周期答案：Spring Bean 是由容器 管理的。'
+- - '##'
+  - '问题 21: 支持不同的作用范围？支持 5 种范围，单例 (singleton) - 一个实例？'
+- - '##'
+  - '问题 22: Bean 的默认范围是什么？'
+- - '##'
+  - '问题 23: 在原型范围中注入发生什么？'
+- - '##'
+  - '问题 24: 如何在单例范围中注入？'
+- - '###'
+  - 注入 ApplicationContext
+- - '###'
+  - Lookup 方法
+- - '###'
+  - 使用范围
+- - '##'
+  - 问题 25：解释 Spring MVC 流程
+- - '##'
+  - '问题 26: <context:config> 和 <context:scan> 有区别？'
+- - '##'
+  - 问题 27：Spring 和 SpringBoot 之间有什么？
+- - '##'
+  - 问题 28：SpringBoot 中的自动配置（auto-configuration）是什么？
+- - '##'
+  - 问题 29：什么是 SpringBoot starters？
+- - '##'
+  - 问题 30：@SpringBootApplication 注解是什么？
+- - '##'
+  - 问题 31：Spring Boot 从哪里启动？
+- - '##'
+  - 问题 32：如何防止某些类参与自动配置？
+- - '##'
+  - 问题 33：如何注入一个不在 SpringBoot 应用所在包或任何子包中的类？
+- - '##'
+  - 问题 34：SpringBoot 应用中的 application.properties 文件是什么？
+- - '##'
+  - 问题 35：如何配置 SpringBoot 端口？
+- - '##'
+  - 问题 36：哪个包在我们更改代码时会自动构建，就像 node.js 应用一样？
+- - '##'
+  - 问题 37：html 文件应该放在哪里？
+- - '##'
+  - 问题 38：有哪些类型注解（stereotype）？
+- - '##'
+  - 问题 39：@Component、@Controller、@Service、@Repository 有区别
+- - '##'
+  - 问题 40：@Controller 和 @RestController 区别
+- - '##'
+  - 问题 41：什么是RequestMapping 和RequestParam 注解？
+- - '##'
+  - 问题 42：如何定义 Get 或 Post 端点？
+- - '##'
+  - 问题 43：使用哪个注解将传入的 json绑定到 pojo 类中？
+- - '##'
+  - 问题 44:什么是 @Qualifier 注解？
+- - '##'
+  - '问题 45: 什么是 @Transactional 注解'
+- - '##'
+  - '问题 46: 什么是 @ControllerAdvice 注解？'
+- - '##'
+  - '问题 47: 什么是 @Bean 注解'
+- - '##'
+  - '问题 48: @Component 和 @Bean 区别'
+- - '##'
+  - '问题 49: 如何在 SpringBoot 应用中配置管理（Profiling）'
+- - '##'
+  - '问题 50: 什么是 RestTemplate？'
+- - '##'
+  - '问题 51: 什么是 Spring Data JPA？'
+- - '##'
+  - '问题 52: JpaRepository、CRUDRepository、PagingSortingRepository 区别以及你在中使用哪一个？'
+- - '##'
+  - '问题 53: 什么是 Spring AOP？'
+- - '##'
+  - 问题 54：你曾在应用程序中使用 Spring Security 吗？
+- - '##'
+  - 问题 55：你对 Spring Batch 框架了解多少？
+- - '##'
+  - 问题 56：SOAP 和 REST 区别
+- - '##'
+  - 问题 57：什么是无状态对象（stateless object）？
+- - '##'
+  - 问题 58：Web 服务器（Web Server）和应用服务器（Application Server）的区别？
+- - '##'
+  - 问题 59：你对 CommandLineRunner 和 ApplicationRunner 了解多少？
+- - '##'
+  - 问题 60：关于 Eureka Naming Server 了解什么？
+- - '##'
+  - 问题 61：关于 Zuul 了解什么？
+- - '##'
+  - 问题 62：关于 Zipkin 了解什么？
+- - '##'
+  - 问题 63：关于 Hystrix 了解什么？
+- - '##'
+  - 问题 64：什么是 JPA？
+- - '##'
+  - 问题 65：什么是 Hibernate？
+- - '##'
+  - 问题 66：JPA 和 Hibernate 的区别答案：JPA只是一个规范，它定义了一组可以由任何工具或框架实现的，而 Hibernate 是 JPA 的实现之一。
+- - '##'
+  - 问题 67：什么是 @Entity？
+- - '##'
+  - 问题 68：在 JPA 中为表命名？
+- - '##'
+  - 问题 69：什么是 @Id, @GeneratedValue？
+- - '##'
+  - 问题 70：如何在 Hibernate 中自定义数据库生成主键值？
+- - '##'
+  - 问题 71：如何为 JPA 实体中的列命名？答案：使用 @Column 注解可以为列命名
+- - '##'
+  - 问题 72：如何在实体之间定义 @OneToMany 关系答案：面试官会问你语法问题，为了定义一对多关系，考虑一个可以的 Cart 类
