@@ -1,0 +1,3010 @@
+- img_proc: true
+  md: '# # GITHUB COPILOT FOR JAVA DEVELOPERS
+
+
+    PRITESH MISTRY'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# GITHUB COPILOT OR
+
+    JAVA DEVELOPERS
+
+
+    GitHub Copilot for Java Developers" is an indispensable guide exploring the revolutionary
+    integration of AI in software development. This book delves into the transformative
+    capabilities of GitHub Copilot, an AI-powered coding assistant that streamlines
+    Java development workflows. From its inception to its evolution, readers will
+    uncover the history and features of Copilot, gaining insights into its seamless
+    integration with Java development environments. With practical tips, case studies,
+    and best practices, this'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'comprehensive resource empowers Java developers to harness the full potential
+    of GitHub Copilot, enhancing productivity, code quality, and innovation in their
+    projects
+
+
+    # # What is GitHub Copilot
+
+
+    GitHub Copilot is an AI-powered code completion tool developed by GitHub in collaboration
+    with OpenAI. It is built on the GPT (Generative Pre-trained Transformer) architecture,
+    the same technology behind ChatGPT, and is designed to assist developers in writing
+    code more efficiently.
+
+
+    GitHub Copilot is designed to assist developers by suggesting lines of code and
+    entire functions in real-time. It acts as a virtual pair programmer, understanding
+    the context of your code and offering suggestions based on your project and coding
+    style'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# History and Evolution
+
+
+    On June 29, 2021, GitHub introduced GitHub Copilot for an initial preview within
+    the Visual Studio Code development environment. GitHub Copilot became accessible
+    as a plugin on the JetBrains marketplace on October 29, 2021. Additionally, on
+    October 27, 2021, GitHub unveiled the GitHub Copilot Neovim plugin as an open-source
+    repository. The availability of Copilot for the Visual Studio 2022 IDE was announced
+    by GitHub on March 29, 2022. Furthermore, on June 21, 2022, GitHub announced the
+    transition of Copilot from its initial preview stage to a subscription-based service
+    for individual developers
+
+
+    # Notepad to AI'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_4_0.png)
+
+
+    The progression from Notepad to IntelliJ IDEA with GitHub Copilot represents a
+    significant evolution in the tools available to programmers, offering increasingly
+    sophisticated features and capabilities:
+
+
+    Notepad: Notepad is a basic text editor that provides minimal functionality for
+    writing code. While it can be used for simple tasks, it lacks features tailored
+    for programming, such as syntax highlighting, code'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'completion, and debugging tools. Programmers using Notepad often face challenges
+    in managing larger projects and debugging errors efficiently.
+
+
+    Notepad++: Notepad++ is an improvement over Notepad, offering enhanced features
+    like syntax highlighting, code folding, and customizable themes. It provides a
+    more comfortable environment for coding compared to Notepad, but it still lacks
+    advanced features found in dedicated integrated development environments (IDEs),
+    such as project management and version control integration.
+
+
+    Eclipse: Eclipse is a popular Java IDE known for its comprehensive set of features,
+    including syntax highlighting, code completion, debugging, refactoring tools,
+    and support for various programming languages through plugins. Eclipse significantly
+    improves productivity for programmers, offering an integrated environment for
+    writing, testing, and debugging code. However, it can be resource-intensive and
+    complex for beginners.
+
+
+    IntelliJ IDEA: IntelliJ IDEA is a powerful and user-friendly IDE that builds upon
+    the features of Eclipse while providing additional enhancements such as better
+    performance, smarter code completion, advanced refactoring tools, and seamless
+    integration with build systems and version control. IntelliJ IDEA streamlines
+    development workflows, improves code quality, and offers a more intuitive user
+    experience compared to Eclipse.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'IntelliJ IDEA with GitHub Copilot: Integrating GitHub Copilot with IntelliJ
+    IDEA further enhances the development experience by leveraging artificial intelligence
+    to assist programmers in writing code. GitHub Copilot provides intelligent code
+    suggestions, autocompletions, and even generates entire code snippets based on
+    context, significantly reducing manual effort, and accelerating development tasks.
+    This integration augments the capabilities of IntelliJ IDEA, empowering programmers
+    to write code more efficiently, explore innovative solutions, and improve productivity.
+
+
+    In summary, the progression from Notepad to IntelliJ IDEA with GitHub Copilot
+    represents a journey of increasing sophistication and efficiency in the tools
+    available to programmers, enabling them to write high-quality code more effectively
+    and tackle complex programming tasks with greater ease
+
+
+    # How Copilot Works
+
+
+    Below diagram shows how copilot works'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Open AI Codex MODEL
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_7_0.png)
+
+
+    Your editor
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_7_1.png)
+
+
+    +   - Provide context
+
+    - Provide Suggestions
+
+    - Ask Questions
+
+
+    ```
+
+    ```
+
+    </>
+
+    ```
+
+    GitHub Copilot Service
+
+
+    Public code (e.g github repo)
+
+    ```
+
+
+    OpenAI Codex is an AI model developed by OpenAI. Codex was trained on a vast amount
+    of code from various sources, including open-source repositories, to understand
+    and generate code in multiple programming languages. It was built on the GPT (Generative
+    Pre-trained Transformer) architecture, similar to the one used in models like
+    GPT-3.
+
+
+    Codex was particularly notable for its ability to understand and generate code
+    based on natural language prompts. It could be used for tasks such as code completion,
+    code generation, and even assisting developers in writing software.
+
+
+    So basically, on right side when you try to write code and give any actions like
+    providing context, suggestions or asking questions then request goes to Github
+    Copilot Service which indirectly calls codex model and based on the training model
+    it gives the response...'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# # Setup and Installation
+
+
+    # ## Installation of IntelliJ Idea
+
+
+    Here are the steps to install IntelliJ IDEA Community Edition on Windows:
+
+
+    **Download IntelliJ IDEA Community Edition :
+
+
+    Go to the JetBrains website: JetBrains IntelliJ IDEA Community Edition Download
+
+
+    Click on the "Download" button for the Community edition.
+
+
+    **Run the Installer :
+
+
+    Once the download is complete, locate the downloaded installer file (usually in
+    your Downloads folder).'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Double-click the installer (e.g., ideaIC-<version>.exe) to start the installation
+    process.
+
+
+    # Choose Installation Options:
+
+
+    In the installation wizard, you''ll be prompted to choose the installation options.
+
+
+    You can choose the installation location, create a desktop shortcut, and associate
+    IntelliJ IDEA with relevant file types.
+
+
+    Follow the prompts and choose your preferred options.
+
+
+    # Install IntelliJ IDEA Community Edition:
+
+
+    After selecting the installation options, click on the "Install" button to begin
+    the installation process.
+
+
+    The installer will extract and install IntelliJ IDEA Community Edition on your
+    system. This may take a few minutes depending on your system''s speed.
+
+
+    # Launch IntelliJ IDEA:
+
+
+    Once the installation is complete, you''ll see an option to launch IntelliJ IDEA.
+
+
+    Check the box to launch IntelliJ IDEA immediately after installation and click
+    "Finish" or launch it manually from the Start menu or desktop shortcut.
+
+
+    # Set Up IntelliJ IDEA:
+
+
+    On the first launch, IntelliJ IDEA Community Edition will prompt you to customize
+    the settings according to your preferences.
+
+
+    You may also be prompted to select the UI theme and keymap settings.
+
+
+    # Start Using IntelliJ IDEA Community Edition:
+
+
+    Once IntelliJ IDEA Community Edition is set up, you can start creating new projects,
+    opening existing ones, and writing code in your preferred programming language.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'That''s it! You''ve successfully installed IntelliJ IDEA Community Edition
+    on your Windows system. You can now start coding and exploring the features of
+    IntelliJ IDEA Community Edition.
+
+
+    # Setup/Configure Github Copilot in IDE
+
+
+    Here are steps to set up and configure GitHub Copilot in IntelliJ IDEA:
+
+
+    Installation:
+
+
+    +   Open Settings (Windows) or Preferences (Mac) from the File menu.
+
+    In the left-hand panel, click Plugins.
+
+    Click the Marketplace tab at the top.
+
+    Search for " Copilot " in the search bar.
+
+    Click Install next to the GitHub Copilot plugin.
+
+    Restart IntelliJ IDEA for the changes to take effect.
+
+
+    Activation:
+
+
+    After restarting, you''ll see the GitHub Copilot icon in the top left corner of
+    your IDE.
+
+    Click the icon and choose Sign in to GitHub.
+
+    Follow the on-screen instructions to complete the sign-in process and activate
+    Copilot.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'Optional Configuration:
+
+
+    While Copilot works out of the box, you can further configure its behavior:
+
+
+    **Keyboard Shortcuts:** Go to Settings/Preferences > Keymap and search for "Copilot"
+    to manage keyboard shortcuts for various Copilot actions.
+
+
+    **Settings:** Click the Gear icon next to the Copilot icon and explore settings
+    like disabling suggestions or adjusting their display style.
+
+
+    Additional Resources:
+
+
+    You can find the official guide for setting up Copilot in IntelliJ IDEA here:
+    https://docs.github.com/copilot
+
+
+    For deeper configuration options and troubleshooting, refer to the GitHub Copilot
+    documentation: https://docs.github.com/copilot
+
+
+    # Creating a New Project
+
+
+    Creating a new project in IntelliJ IDEA is straightforward. Here''s a step-by-step
+    guide:'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Open IntelliJ IDEA : Launch IntelliJ IDEA on your computer. You can do this
+    by double-clicking the IntelliJ IDEA icon on your desktop or finding it in your
+    Start menu.
+
+
+    Open the Welcome Screen : Once IntelliJ IDEA is launched, you''ll see the Welcome
+    screen. If you''re already working on a project, you can close it to get back
+    to the Welcome screen. If the Welcome screen is not visible, you can access it
+    by clicking on "File" > "Close Project".
+
+
+    # Create a New Project :
+
+
+    On the Welcome screen, click on the "New Project" button. Alternatively, you can
+    also go to "File" > "New" > "Project..." from the menu bar.
+
+
+    This will open the New Project wizard.
+
+
+    # Choose Project Type :
+
+
+    In the New Project wizard, you''ll be prompted to select the type of project you
+    want to create. Choose the appropriate project type based on your requirements.
+    For example, you can select "Java" for a Java project, "Maven" for a Maven project,
+    "Gradle" for a Gradle project, etc.
+
+
+    After selecting the project type, click "Next".
+
+
+    # Configure Project :
+
+
+    In the next step, you''ll need to configure your project settings such as project
+    name, project location, project SDK (Java version), and any additional settings
+    specific to the chosen project type.
+
+
+    Make sure to provide meaningful names and appropriate locations for your project.
+    Once you''ve configured the project settings, click "Next".
+
+
+    # Finish :
+
+
+    Review the project summary to ensure all settings are correct.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Click "Finish" to create the project.
+
+
+    Wait for Project Creation :
+
+
+    IntelliJ IDEA will create the project based on the specified settings. This might
+    take a few moments depending on your system''s speed and the complexity of the
+    project.
+
+
+    Start Coding :
+
+
+    Once the project is created, you''ll be taken to the IntelliJ IDEA workspace with
+    your new project loaded.
+
+
+    You can start coding by creating new classes, packages, or files within your project.
+
+
+    That''s it! You have successfully created a new project in IntelliJ IDEA. You
+    can now start working on your project and building your application.
+
+
+    For example, while creating new Project e.g GithubCopilotExamples will have below
+    windows
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_13_0.png)'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_14_0.png)
+
+
+    Click on New Window if you want it as separate window.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_15_0.png)
+
+
+    To confirm whether Github Copilot is installed click in file-> settings,(search
+    for plugin) and you can get below window where where github copilot will appear
+    in plugins.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'After clicking the OK all options from Github copilot as shown in below screenshot
+
+    You will get all options'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_17_0.png)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Hello World Using Github Copilot
+
+
+    Open Github Copilot Chat from Right side panel and try the prompt question as
+    shown in below picture
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_18_0.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# The press Enter and you can see answer as below\n\n```\npublic class Main\
+    \ {\n    public static void main(String[] args) {\n        System.out.println(\"\
+    Hello World!\");\n    }\n}\n```"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Creating variables in Java
+
+
+    What are Variables in java?
+
+
+    In Java, a variable is a named memory location that holds a value of a specific
+    data type. Variables are used to store data that can be manipulated and accessed
+    throughout the program''s execution. They are declared with a specific data type
+    and may be assigned a value during declaration or later in the program.
+
+
+    Java variables can be divided into several categories based on their scope, lifetime,
+    and accessibility:'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Variables Types in Java
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_21_0.png)
+
+
+    LOCAL VARIABLES
+
+
+    STATIC VARIABLES
+
+
+    INSTANCE VARIABLES
+
+
+    Local Variables are also referred to as stack variables. Since they are stored
+    in stack memory, initializing the local variable is necessary
+
+
+    When a class is loaded into the JVM, they are loaded and initialized. The class
+    variable only exists once
+
+
+    Instance are heap-based. These are connected to the production of objects. Instance
+    variables are also created as the object is formed'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "Local Variables : Variables declared within a method, constructor, or block\
+    \ are called local variables. They are accessible only within the block in which\
+    \ they are declared.\n\n```\nvoid exampleMethod() {\n  int localVar = 10; // localVar\
+    \ is a local variable\n}\n```\n\nInstance Variables (Non-Static Fields): These\
+    \ variables are declared within a class but outside any method, constructor, or\
+    \ block. They are instantiated when an object of the class is created and exist\
+    \ as long as the object exists. Each object of the class has its own copy of instance\
+    \ variables.\n\n```\npublic class ExampleClass {\n  int instanceVar; // instanceVar\
+    \ is an instance variable\n}\n```\n\nClass Variables (Static Fields): These are\
+    \ declared with the static keyword within a class but outside any method, constructor,\
+    \ or block. They are shared among all instances of the class and exist for the\
+    \ entire duration of the program's execution.\n\n```\npublic class ExampleClass\
+    \ {\n  static int classVar; // classVar is a class variable\n}\n```\n\nVariables\
+    \ in Java are strongly typed, which means you must declare the type of data a\
+    \ a variable can hold. Additionally, Java follows static typing, where the type\
+    \ of a variable is checked at compile time, and dynamic binding, where the method\
+    \ to be invoked is decided at runtime based on the object's type."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_23_0.png)
+
+
+    The above diagram illustrates variable declaration and memory allocation in Java.
+
+
+    In Java, there are two main memory areas used for variable storage: the stack
+    and the heap.
+
+
+    Stack: The stack is a last-in-first-out (LIFO) data structure that is used to
+    store method calls, local variables, and reference variables for objects on the
+    heap. Primitive data types, such as int, double, and boolean, are directly stored
+    in the stack when a variable is declared.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'Heap: The heap is a dynamic memory allocation area that is used to store objects
+    and arrays. Objects are created using the new keyword and reference variables
+    that point to the objects on the heap are stored on the stack.
+
+
+    The image shows two examples of variable declarations:
+
+
+    ```
+
+    boolean isOk = false;
+
+    ```
+
+
+    ```
+
+    int count = 20;
+
+    ```
+
+
+    In this case, both isOk and count are primitive data types and are stored on the
+    stack. The variable name is shown on the left and the data type is shown above
+    it. An arrow points from the variable name to a reserved memory area that shows
+    the value that is stored.
+
+
+    Here are some added points to consider about variable declaration and memory allocation
+    in Java:
+
+
+    Static variables are also stored in a special part of the memory called the Method
+    Area (sometimes referred to as PermGen space).
+
+
+    Reference variables do not store the object itself, but rather a reference (or
+    memory address) to the location of the object in the heap'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Creating Variables Using copilot
+
+
+    Using comments, you can create whatever you want, e.g just type
+
+
+    ```
+
+    // create an integer variable and assign a value
+
+    ```
+
+
+    in Main method and press enter and you will get suggestions and if you like suggestions
+    then press tab.
+
+
+    And you will get result like below'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_26_0.png)
+
+
+    Another example is to get the size of variable in memory in terms of byte
+
+
+    Just after the variable declaration put a comment // bytes , then you will get
+    information about byte size of the variable as per below example'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "```\npublic class Main {\n    public static void main(String[] args) {\n  \
+    \      // create an integer variables and assign a value\n        int a = 5; //\
+    \ bytes = 4, range = -2,147,483,648 to 2,147,483,647\n        \n        // create\
+    \ a double variables and assign a value\n        double b = 5.5; // bytes = 8,\
+    \ range = 4.9e-324 to 1.8e+308\n\n        // create a boolean variables and assign\
+    \ a value\n        boolean c = true; // bytes = 1, range = true or false\n   \
+    \ }\n}\n```\n\nAnother example is to get the out of System.out.println without\
+    \ compilation\n\nLike below\n\nSystem.out.println(\"The value of a is: \" + a);\
+    \ // The value of a is: 5"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\npackage org.example;\n\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        // create an integer variables and assign a value\n       \
+    \ int a = 5; // bytes = 4, range = -2,147,483,648 to 2,147,483,647\n\n       \
+    \ // create a double variables and assign a value\n        double b = 5.5; //\
+    \ bytes = 8, range = -4.9e-324 to 1.8e308\n\n        // create a boolean variables\
+    \ and assign a value\n        boolean c = true; // bytes = 1, Range = true or\
+    \ false\n\n        System.out.println(\"The value of a is: \" + a); // The value\
+    \ of a is: 5\n    }\n}\n```\n\nFor reference below is the table for datatype,\
+    \ their size and range\n\n| Datatype | Size (in bytes) | Range |\n|---|---|--|\n\
+    | byte | 1 | -128 to 127 |\n| short | 2 | -32,768 to 32,767 |\n| int | 4 | -2,147,483,648\
+    \ to 2,147,483,647 |\n| long | 8 | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807\
+    \ |\n| float | 4 | Approximately ±3.40282347E+38 (6-7 significant decimal digits)\
+    \ |\n| double | 8 | Approximately ±1.7976931348623157E+308 (15 significant digits)\
+    \ |\n| char | 2 | 0 to 65,535 |\n| boolean | 1 | true or false |"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Datatypes In java
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_29_0.png)'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'The above diagram shows the two main categories of data types in Java: primitive
+    data types and non-primitive data types.
+
+
+    **Primitive data types** are the basic building blocks for storing data in Java.
+    They are predefined by the language and represent simple values. In the image,
+    primitive data types are further divided into numeric types and character types.
+
+
+    Numeric types can store numbers. They are divided into integral and floating-point
+    types.
+
+
+    Integral types represent whole numbers, with no decimal places. Examples of integral
+    types include byte, short, int, and long.
+
+
+    Floating-point types represent numbers with decimal places. Examples of floating-point
+    types include float and double.
+
+
+    The character type, char, is used to store a single character.
+
+
+    **Non-primitive data types** are more complex than primitive data types. They
+    are created by programmers and can store collections of data or user-defined objects.
+    Examples of non-primitive data types include String, arrays, and classes.
+
+
+    Again start writing into comments and see the result for all data types , if you
+    don''t get that start writing e.g int and copilot will start giving suggestion
+    , if you are ok with suggestion then press tag else try giving another hint to
+    copilot.
+
+
+    Example below.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "```\npackage org.example;\n\npublic class MainApp {\n    public static void\
+    \ main(String[] args) {\n        // example 1: if else statement example\n   \
+    \     if (true) {\n            System.out.println(\"true\");\n        } else {\n\
+    \            System.out.println(\"false\");\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_32_0.png)
+
+
+    # # Flow Control In java
+
+
+    Flow control in Java refers to the ability to control the order in which statements
+    are executed in a program. Java provides several control flow statements that
+    allow developers to control the flow of execution based on certain conditions
+    or loops. Here are the main flow control statements in Java:'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Conditional Statements :
+
+
+    if statement: Executes a block of code if a specified condition is true.
+
+    if-else statement: Executes one block of code if a condition is true, and another
+    block if the condition is false.
+
+    if-else-if statement: Executes different blocks of code based on different conditions.
+
+    switch statement: Executes different blocks of code based on different values
+    of an expression.
+
+
+    # Looping Statements :
+
+
+    for loop: Executes a block of code a specified number of times.
+
+    while loop: Executes a block of code as long as a specified condition is true.
+
+    do-while loop: Executes a block of code at least once, and then continues executing
+    as long as a specified condition is true.
+
+    for-each loop (enhanced for loop): Iterates over each element of an array or collection.
+
+
+    # Branching Statements :
+
+
+    break statement: Terminates the loop or switch statement and transfers control
+    to the next statement after the loop or switch.
+
+    continue statement: Skips the current iteration of a loop and moves to the next
+    iteration.
+
+
+    # Other Control Flow Statements :
+
+
+    return statement: Exits the method and returns control to the calling method.
+
+    try-catch-finally block: Handles exceptions and provides a way to execute code
+    regardless of whether an exception occurs or not'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "Below is the example of all control flow in IntelliJ Idea. We will see Try,\
+    \ catch and finally later on\n\n```\npackage org.example;\n\npublic class FlowControlExample\
+    \ {\n    public static void main(String[] args) {\n        int score = 85;\n\n\
+    \        // if-else statement\n        if (score >= 90) {\n            System.out.println(\"\
+    Excellent!\");\n        } else if (score >= 80) {\n            System.out.println(\"\
+    Great job!\");\n        } else {\n            System.out.println(\"Try harder\
+    \ next time.\");\n        }\n\n        // switch statement\n        char grade\
+    \ = 'B';\n        switch (grade) {\n            case 'A':\n                System.out.println(\"\
+    Outstanding performance!\");\n                break;\n            case 'B':\n\
+    \                System.out.println(\"Good job!\");\n                break;\n\
+    \            default:\n                System.out.println(\"Keep working hard.\"\
+    );\n        }\n\n        // for loop\n        for (int i = 1; i <= 5; i++) {\n\
+    \            System.out.println(\"Iteration: \" + i);\n        }\n\n        //\
+    \ while loop\n        int count = 1;\n        while (count <= 3) {\n         \
+    \   System.out.println(\"count: \" + count);\n            count++;\n        }\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '. To get the explanation of code selecting main method and in chat using /explain
+    chat copilot command as showing in next picture.
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_35_0.png)
+
+
+    # Java Collections Framework'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# What is collection ?
+
+
+    In computer programming, a collection is a grouping of data items that have some
+    shared significance to the problem being solved and need to be operated upon together
+    in some controlled fashion.
+
+
+    e.g item collection, number collection, product collection etc
+
+
+    # Types of collection
+
+
+    +   * **Sequential collections** - The elements of a sequential collection are
+    stored in a linear order. Examples of sequential collections include arrays, linked
+    lists, and queues.
+
+    * **Associative collections** - The elements of an associative collection are
+    stored in a key-value format. Examples of associative collections include maps
+    and hash tables.
+
+
+    In Java, a collection is a group of individual objects represented as a single
+    unit. The Java Collections Framework (java.util package) provides several classes
+    and interfaces that implement different types of collections for storing and manipulating
+    groups of objects.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# java.util package
+
+
+    Sequential collections
+
+
+    Associative collections
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_37_0.png)
+
+
+    The Java Collections Framework consists of the following main components:
+
+
+    Interfaces:
+
+
+    +   - Collection (root interface): Represents a group of objects as a single unit.
+
+    - List: Represents an ordered collection of elements that allows duplicates.
+
+    - Set: Represents an unordered collection of unique elements.
+
+    - Queue: Represents a collection designed for holding elements prior to processing.
+
+    - Map (not a true collection): Represents a mapping between keys and values.
+
+
+    Implementations:
+
+
+    +   - ArrayList: An implementation of the List interface that uses a resizable-array
+    data structure.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'LinkedList: An implementation of the List and Queue interfaces that uses a
+    doubly-linked list structure.
+
+
+    HashSet: An implementation of the Set interface that uses a hash table for storage.
+
+
+    TreeSet: An implementation of the Set interface that uses a tree for storage (sorted
+    by elements).
+
+
+    HashMap: An implementation of the Map interface that uses a hash table for storage.
+
+
+    TreeMap: An implementation of the Map interface that uses a tree for storage (sorted
+    by keys).
+
+
+    Algorithms:
+
+
+    +   - Collections class: Provides static methods for operating on collections,
+    such as sorting, searching, and shuffling.
+
+
+    Here are some key features and advantages of using collections in Java:
+
+
+    +   - Reusability: The collections framework provides a standard way to work with
+    groups of objects, reducing the need to write custom data structure implementations.
+
+
+    +   - Performance: The implementations of collections are highly optimized for
+    common operations.
+
+
+    +   - Thread-Safety: Some collections, like Vector and Hashtable, are thread-safe,
+    making them suitable for concurrent programming.
+
+
+    +   - Generics: Collections can work with generic types, providing type safety
+    and avoiding casting issues.
+
+
+    +   - Algorithms: The Collections class provides various utility methods for sorting,
+    searching, and manipulating collections.
+
+
+    Below is the Java Collection Hierarchy in Picture'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_39_0.png)
+
+
+    And Here is Map hierarchy in Picture'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_40_0.png)
+
+
+    Let''s see major collections in a brief
+
+
+    # Array List'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'ArrayList is a resizable-array implementation of the List interface. It provides
+    us with dynamic arrays that can grow and shrink as needed, allowing us to store
+    and manipulate a collection of elements. Here are some key points about ArrayList:
+
+
+    +   **Ordered Collection**: ArrayList maintains the insertion order of elements,
+    meaning that the elements are stored in the order in which they were added.
+
+
+    +   **Allows Duplicates**: ArrayList allows duplicate elements, meaning that you
+    can add multiple instances of the element to the list.
+
+
+    +   **Resizable Array**: The size of an ArrayList is not fixed, and it can grow
+    or shrink dynamically as elements are added or removed. This is different from
+    traditional arrays in Java, which have a fixed size.
+
+
+    +   **Random Access**: ArrayList provides constant-time performance for random
+    access of elements, meaning that you can retrieve an element at any index in constant
+    time.
+
+
+    +   **Null Elements**: ArrayList allows null elements, meaning that you can store
+    null values in the list.
+
+
+    +   **Thread-Safe**: ArrayList is not thread-safe by default. If you need to use
+    an ArrayList in a multi-threaded environment, you should synchronize access to
+    it or use a thread-safe alternative like Vector or CopyOnWriteArrayList.
+
+
+    +   **Implements List Interface**: ArrayList implements the List interface, which
+    provides methods for manipulating the elements in the list, such as add(), remove(),
+    set(), and others.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# ArrayList\n\n+   * java.util package\n* implements List interface\n* most\
+    \ commonly used datructure\n* used for storing and managing objects\n\n# Adding\
+    \ Elements\n\n```\nstringList.add(\"apple\");\nstringList.add(\"banana\");\nstringList.add(\"\
+    orange\")\n```\n\n# Creating an ArrayList\n\n```\nArrayList<String> stringList\
+    \ = new ArrayList<>();\n```\n\n# Accessing Elements\n\n# ArrayList Methods\n\n\
+    ```\nString firstfruit = stringList.get(0); // \"apple\"\n```\n\n+   size()\n\
+    isEmpty()\nclear()\ncontains()\nindexOf()\naddAll()\n\n# Iterating Through ArrayList\n\
+    \n```\nfor (String fruit : stringList) {\n    System.out.println(fruit);\n}\n\
+    ```\n\nNow use github copilot to make comments //ArrayList example with basic\
+    \ operations and you will get answers as per below screenshot"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "```\nimport java.util.*;\n\npublic class ArrayListExample {\n    public static\
+    \ void main(String[] args) {\n        ArrayList<Integer> list = new ArrayList<>();\n\
+    \        list.add(10);\n        list.add(20);\n        list.add(30);\n\n     \
+    \   // print the size of the list\n        System.out.println(list.size());\n\n\
+    \        // print the elements of the list\n        for (Integer i : list) {\n\
+    \            System.out.println(i);\n        }\n\n        // check the element\
+    \ of the list\n        System.out.println(list.contains(20));\n\n        // check\
+    \ if the list contains an element\n        System.out.println(list.contains(40));\n\
+    \    }\n}\n```\n\n![](img/dbebbe5e20d39743ff28c8dae042defc_43_0.png)"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\npublic class ListExample {\n    public static void main(String[] args)\
+    \ {\n        // Iterate over list\n        List<String> list = new ArrayList<>();\n\
+    \        list.add(\"one\");\n        list.add(\"two\");\n        for (String item\
+    \ : list) {\n            System.out.println(item);\n        }\n\n        // get\
+    \ the size of the list\n        System.out.println(\"Size of the list: \" + list.size());\n\
+    \n        // check if the list contains an item\n        System.out.println(\"\
+    List contains two: \" + list.contains(\"two\"));\n\n        // get the index of\
+    \ an item\n        System.out.println(\"Index of two: \" + list.indexOf(\"two\"\
+    ));\n\n        // get the element at a specific index\n    }\n}\n```\n\n\"C:\\\
+    Program Files\\Java\\jdk-11\\bin\\java.exe\" - -.agent.C:ListExample -fileencoding=UTF-8\
+    \ -classpath \"C:\\Program Files\\JetBrains\\IntelliJ\\IDEA Community Edition\
+    \ 2022.3.1\\lib\\idea.jar;rt=6999;C:\\Program Files\\JetBrains\\IntelliJ\\ IDEA\
+    \ Community\n\nProcess finished with exit code 0\n\n# Another example using comments\
+    \ highlighted in below screenshot"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# # Linked List
+
+
+    LinkedList is a doubly-linked list implementation of the List and Deque (Double-Ended
+    Queue) interfaces. It is a linear data structure where the elements are not stored
+    in contiguous memory locations, but rather each element is a separate object that
+    holds a reference to the next and previous elements in the sequence. Here are
+    some key points about LinkedList :
+
+
+    **Ordered Collection** : LinkedList maintains the insertion order of elements,
+    similar to ArrayList.
+
+
+    **Allows Duplicates** : Like ArrayList, LinkedList allows duplicate elements.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '**Dynamic Size:** The size of a LinkedList is not fixed, and it can grow or
+    shrink dynamically as elements are added or removed.
+
+
+    **Non-Random Access:** LinkedList does not provide constant-time performance for
+    random access of elements. To access an element at a specific index, it needs
+    to traverse the list from the beginning or the end, resulting in a time complexity
+    of O(n), where n is the size of the list.
+
+
+    **Efficient Insertion and Deletion:** LinkedList excels at inserting and removing
+    elements from the beginning or the middle of the list. These operations have a
+    time complexity of O(1), making them more efficient than ArrayList for frequent
+    insertions and deletions at arbitrary positions.
+
+
+    **Implements Deque Interface:** LinkedList implements the Deque interface, which
+    allows it to be used as a double-ended queue, where elements can be added or removed
+    from both ends.
+
+
+    **Thread-Safe:** Like ArrayList, LinkedList is not thread-safe by default. If
+    you need to use a LinkedList in a multi-threaded environment, you should synchronize
+    access to it or use a thread-safe alternative.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# # LinkedList\n\n+   * java.util package\n* implements the List and Deque\
+    \ interfaces\n* represents a doubly-linked list data structure\n* used for storing\
+    \ and managing objects\n\n# Adding Elements\n\n```\n```\nstringList.add(\"apple\"\
+    );\nstringList.add(\"banana\");\nstringList.add(\"orange\");\n```\n```\n\n# Creating\
+    \ a LinkedList\n\n```\n```\nLinkedList stringList = new LinkedList<>();\n```\n\
+    ```\n\n# Accessing Elements\n\n```\n```\nString firstFruit = stringList.get(0);\
+    \ // \"apple\"\n```\n```\n\n# ArrayList Methods\n\n```\n```\nsize()\nisEmpty()\n\
+    clear()\ncontains()\nindexOf()\naddAll()\n```\n```\n\n# Iterating Through LinkedList\n\
+    \n```\n```\nfor (String fruit : stringList) {\n    System.out.println(fruit);\n\
+    }\n```\n```\n\nNow try to put text \"Give me example of LinkedList with all major\
+    \ operations\" In github copilot chatbox as showing below."
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "```\npackage org.example;\n\npublic class LinkedListExamples {\n    public\
+    \ static void main(String[] args) {\n        // Create a LinkedList\n        LinkedList<String>\
+    \ list = new LinkedList<>();\n\n        // Add elements to the LinkedList\n  \
+    \      list.add(\"element 1\");\n        list.add(\"element 2\");\n        list.add(\"\
+    element 3\");\n\n        // Print the list\n        System.out.println(\"LinkedList:\
+    \ \" + list);\n\n        // Remove elements from the list\n        list.remove(\"\
+    element 2\");\n\n        // Print the list after removal\n        System.out.println(\"\
+    LinkedList after removal: \" + list);\n\n        // Set elements by index\n  \
+    \      // How can insert an element at the beginning of the LinkedList?\n    }\n\
+    }\n```\n\nAfter Getting result try to click symbol as per below screenshot"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "```\nimport java.util.LinkedList;\n\npublic class LinkedListExamples {\n  \
+    \  public static void main(String[] args) {\n        // Create a linkedlist\n\
+    \        LinkedList<String> list = new LinkedList<>();\n\n        // Add elements\
+    \ to the linkedlist\n        list.add(\"element 1\");\n        list.add(\"element\
+    \ 2\");\n        list.add(\"element 3\");\n\n        // Print the list\n     \
+    \   System.out.println(\"LinkedList: \" + list);\n\n        // Remove elements\
+    \ from the LinkedList\n        list.remove(\"element 2\");\n        System.out.println(\"\
+    LinkedList after removal: \" + list);\n\n        // Get elements by index\n  \
+    \      System.out.println(\"First element: \" + list.get(0));\n        System.out.println(\"\
+    Second element: \" + list.get(1));\n\n        // Remove elements from the LinkedList\n\
+    \        list.remove(\"element 3\");\n    }\n}\n```\n\nYou can ask follow up question\
+    \ showing in below picture highlighted"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# LinkedList Examples\n\n```\npublic static void main(String[] args) {\n  \
+    \  // Create a LinkedList\n    LinkedList<String> list = new LinkedList<>();\n\
+    \n    // Add elements to the linkedlist\n    list.add(\"Element 1\");\n    list.add(\"\
+    Element 2\");\n    list.add(\"Element 3\");\n\n    // Print the list\n    System.out.println(\"\
+    LinkedList: \" + list);\n\n    // Remove elements from the LinkedList\n    list.remove(\"\
+    Element 2\");\n\n    // Print the list after removal\n    System.out.println(\"\
+    LinkedList: \" + list);\n\n    // Get elements by index\n    System.out.println(\"\
+    First element: \" + list.get(0));\n    System.out.println(\"Second element: \"\
+    \ + list.get(1));\n\n    // Iterate over the LinkedList\n    for (String element\
+    \ : list) {\n        System.out.println(\"Element: \" + element);\n    }\n}\n\
+    ```\n\n![](img/dbebbe5e20d39743ff28c8dae042defc_50_0.png)\n\nAnd answer will be\
+    \ live below"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "```\npackage org.example;\n\nimport java.util.LinkedList;\n\npublic class LinkedListExamples\
+    \ {\n    public static void main(String[] args) {\n        // Create a LinkedList\n\
+    \        LinkedList<String> list = new LinkedList<>();\n\n        // Add elements\
+    \ to the LinkedList\n        list.add(\"Element 1\");\n        list.add(\"Element\
+    \ 2\");\n        list.add(\"Element 3\");\n\n        // Insert an element at the\
+    \ beginning of the LinkedList\n        list.addFirst(\"Element 0\");\n\n     \
+    \   // Print the list\n        System.out.println(\"LinkedList: \" + list);\n\
+    \    }\n}\n```\n\nIn this code, \"Element 0\" is inserted at the beginning of\
+    \ the LinkedList.\n\n+   - Using 3 References"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# HashSet
+
+
+    HashSet is an implementation of the Set interface and is part of the Java Collections
+    Framework. A Set is a collection that does not allow duplicate elements. The HashSet
+    class uses a hash table for storage, which provides constant-time performance
+    for basic operations such as add(), remove(), contains()
+
+
+    +   - **Data Structure**: HashSet is an implementation of the Set interface and
+    is part of the Java Collections Framework. It provides a way to store a collection
+    of elements without allowing duplicates.
+
+    - **Unordered**: Unlike some other data structures, HashSet does **not maintain
+    any specific order** of elements. The elements are stored based on their **hash
+    codes**, and their retrieval order is arbitrary.
+
+    - **Unique Elements**: HashSet ensures that **duplicate elements are not allowed**.
+    If you attempt to add a duplicate element to the set, it will simply be ignored.
+
+    - **Null Values**: HashSet allows at most one **null value**. If you try to add
+    a second null value, it will be ignored.
+
+    - **Non-Synchronized**: By default, HashSet is **not thread-safe**. If you plan
+    to use a HashSet in a multi-threaded environment, consider synchronizing access
+    to it or using a thread-safe alternative like ConcurrentHashMap.
+
+    - **Performance**: HashSet provides **constant-time performance** for basic operations
+    such as add(), remove(), and contains(). However, this assumes that the **hash
+    function** used to compute the hash codes of the elements distributes them properly
+    among the buckets in the hash table.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "Implements Set Interface: HashSet implements the Set interface, which means\
+    \ it provides methods for adding, removing, and checking the presence of elements\
+    \ in the set. Additionally, it supports operations like union, intersection, and\
+    \ difference.\n\n# HashSet\n\nIterating Through HashSet\n\n+   * java.util package\n\
+    * implements the Set Interface\n* represents a collection of unique elements\n\
+    * uses a hash table to store its elements\n\n```\nfor (String fruit : stringSet)\
+    \ {\n    System.out.println(fruit);\n}\n```\n\n# Creating a HashSet\n\n# HashSet\
+    \ Method\n\n```\nHashSet<String> stringSet = new HashSet<>();\n```\n\n+   * size()\
+    \ - Returns the number of elements in the set.\n* isEmpty() - Checks if the set\
+    \ is empty.\n* clear() - Removes all elements from the set.\n* add(E e) - Adds\
+    \ an element to the set.\n* remove(Object o) - Removes an element from the set.\n\
+    * addAll(Collection<? extends E> c) - Adds all elements from another collection\n\
+    \n# Adding Elements\n\n```\nstringSet.add(\"apple\");\nstringSet.add(\"banana\"\
+    );\nstringSet.add(\"orange\");\n```\n\n# HashSet and Hashing\n\nHashSet relies\
+    \ on the concept of hashing for efficient element management. Each element is\
+    \ associated with a hash code, which is used to quickly locate the element within\
+    \ the hash table. When you add an element to a 'HashSet', the hash code of the\
+    \ element is calculated and used to determine its storage location in the hash\
+    \ table. This allows for fast insertion, retrieval, and removal of elements.\n\
+    \n# Removing Elements\n\n```\nstringSet.remove(\"banana\");\n```\n\nLet's see\
+    \ example using GitHub Copilot. Let's Ask the question as shown in the below screenshot\
+    \ and then if you are ok then click the insert code button and your code will\
+    \ be ready."
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# LinkedHashSet
+
+
+    LinkedHashSet is an implementation of the Set interface and is part of the Java
+    Collections Framework .
+
+    It combines features from both HashSet and LinkedList, offering the benefits of
+    both data structures.
+
+
+    Key points about LinkedHashSet :
+
+
+    +   * Insertion Order
+
+
+    Insertion in a LinkedHashSet are stored in a hash table for efficient retrieval.
+
+    They are also maintained in a doubly-linked list , ensuring that the insertion
+    order is preserved.
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_54_0.png)'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "When you iterate over the elements, they will be retrieved in the same order\
+    \ in which they were inserted.\n\n# Unique Elements :\n\nLike other Set implementations,\
+    \ LinkedHashSet does not allow duplicate elements.\n you try to add a duplicate\
+    \ element, it will be ignored.\n\n# Null Values :\n\nLinkedHashSet permits at\
+    \ most one null element.\nIf you attempt to add a second null value, it will be\
+    \ ignored.\n\n# Non-Synchronized :\n\nBy default, LinkedHashSet is not thread-safe.\n\
+    In a multi-threaded environment, consider synchronizing access to it or using\
+    \ a thread-safe alternative like ConcurrentLinkedHashMap from the ConcurrentLinkedHashMap\
+    \ class.\n\n# Performance :\n\nLinkedHashSet provides constant-time performance\
+    \ for basic operations such as add(), remove(), and contains(), similar to HashSet.\n\
+    However, iterating over the elements in insertion order has a linear time complexity\
+    \ (O(n)),\\where n is the number of elements.\n\n# Implements Set Interface :\n\
+    \nLinkedHashSet implements the Set interface, which includes methods for adding,\
+    \ removing, and checking the presence of elements.\nIt also supports set operations\
+    \ like union, intersection, and difference."
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# LinkedHashSet\n\n+   * java.util package\n* extends the HashSet class and\
+    \ implements the Set interface\n* combines the features of a hash table and a\
+    \ linked list\n\n# Iterating Through LinkedHashSet\n\n# Creating a LinkedHashSet:\n\
+    \n```\nfor (String color : colorSet) {\n  System.out.println(color);\n}\n```\n\
+    \n```\nLinkedHashSet<String> colorSet = new LinkedHashSet<>();\n```\n\n# Adding\
+    \ Elements\n\n# TreeSet Methods:\n\n```\ncolorSet.add(\"red\");\ncolSet.add(\"\
+    green\");\ncolSet.add(\"blue\");\n```\n\nLinkedHashSet provides methods similar\
+    \ to those of other set classes for manipulating and working with the set. The\
+    \ main advantage of 'LinkedHashSet' is its ability to maintain insertion order\
+    \ while still providing constant-time performance for basic operations like adding,\
+    \ removing, and checking for existence.\n\n# Removing Elements\n\n```\ncolorSet.remove(\"\
+    green\");\n```\n\nLet's see example using GitHub Copilot. Let's Ask the question\
+    \ as shown in the below screenshot and then if you are ok then click the insert\
+    \ code button and your code will be ready."
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# # TreeSet
+
+
+    Let''s explore the fascinating world of TreeSet. . Here are some key points about
+    this versatile data structure:
+
+
+    **Data Structure:** TreeSet is an implementation of the Set interface and is part
+    of the Java Collections Framework . It provides a way to store a collection of
+    elements without allowing duplicates.
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_57_0.png)'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'Sorted Collection : TreeSet automatically sorts its elements in ascending order
+    . When you add elements to a TreeSet, they are arranged based on their natural
+    ordering (if they implement the Comparable interface) or according to a custom
+    Comparator provided during creation.
+
+
+    Unique Elements : Like other Set implementations, TreeSet ensures that duplicate
+    elements are not allowed . If you attempt to add an element that already exists
+    in the set, it will be ignored.
+
+
+    Null Values : TreeSet does not allow null elements . If you try to add a null
+    value, it will throw a NullPointerException .
+
+
+    Non-Synchronized : By default, TreeSet is not thread-safe . If you plan to use
+    a TreeSet in a multi-threaded environment, consider synchronizing access to it
+    or using a thread-safe alternative like ConcurrentSkipListSet.
+
+
+    Performance : TreeSet provides logarithmic time complexity (O(log n)) for basic
+    operations such as add(), remove(), and contains() . However, if you need to iterate
+    over the elements in sorted order, it offers constant-time performance.
+
+
+    Implements NavigableSet Interface : TreeSet implements the NavigableSet interface,
+    which extends the SortedSet interface. This extension provides additional methods
+    for navigating and retrieving elements from the set on their order.
+
+
+    Custom Comparator : You can provide a custom Comparator when creating a TreeSet
+    to define the sorting order of its elements. If no Comparator is provided, the
+    elements must implement the Comparable interface to define their natural ordering.
+
+
+    In summary, TreeSet combines the benefits of sorted ordering, uniqueness, and
+    efficient performance, making it a valuable tool for managing collections of elements
+    in Java!'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# TreeSet\n\n+   * java.util package\n* implements the NavigableSet interface\
+    \ and is part of the SortedSet hierarchy\n* uses a red-black tree data structure\
+    \ to store its elements\n\n# Iterating Through TreeSet:\n\n```\nfor (int number\
+    \ : numberSet) {\n  System.out.println(number);\n}\n```\n\n# Creating a TreeSet:\n\
+    \n```\nTreeSet<Integer> numberSet = new TreeSet<>();\n```\n\n# TreeSet Methods:\n\
+    \n# Adding Elements\n\n```\nnumberSet.add(10);\nnumberSet.add(5);\nnumberSet.add(8);\n\
+    ```\n\n> > TreeSet Methods\n> > TreeSet provides methods similar to those of other\
+    \ set classes for manipulating and working with the set. Additionally, it provides\
+    \ methods for retrieving elements that are greater than or equal to a given element:\
+    \ `ceiling()`, and elements that are less than or equal to a given element: `floor()`,\
+    \ and more.\n\n# Removing Elements\n\n```\nnumberSet.remove(8);\n```\n\nLet's\
+    \ see example using GitHub Copilot. Let's Ask the question as shown in the below\
+    \ screenshot and then if you are ok then click the insert code button and your\
+    \ code will be ready.\n\n![](img/dbebbe5e20d39743ff28c8dae042defc_59_0.png)"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "```\npackage pom.util;\nimport java.util.HashSet;\n\npublic class HashSetExamples\
+    \ {\n    public static void main(String[] args) {\n        // Create a HashSet\n\
+    \        HashSet<String> set = new HashSet<>();\n\n        // Add elements to\
+    \ the HashSet\n        set.add(\"element 1\");\n        set.add(\"element 2\"\
+    );\n        set.add(\"element 1\"); // element 1 will not be added\n\n       \
+    \ // Print the set\n        System.out.println(\"HashSet: \" + set);\n\n     \
+    \   // Remove an element from the HashSet\n        set.remove(\"element 2\");\n\
+    \n        // Print the set after removal\n        System.out.println(\"HashSet\
+    \ after removal: \" + set);\n\n        // Check if an element exists\n       \
+    \ boolean exists = set.contains(\"element 1\");\n        System.out.println(\"\
+    element 1 exists: \" + exists);\n\n        // Iterate over the HashSet\n     \
+    \   for (String element : set) {\n            System.out.println(\"element: \"\
+    \ + element);\n        }\n    }\n}\n```\n\n# # HashMap\n\nHashMap is an implementation\
+    \ of the Map interface and is part of the Java Collections Framework. It is a\
+    \ widely used data structure that stores key-value pairs and provides efficient\
+    \ retrieval and storage of these pairs. Here are some key points about HashMap:"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# Key points about HashMap:
+
+
+    # Key-Value Pairs:
+
+
+    HashMap stores data in the form of key-value pairs.
+
+
+    Each key in the map is associated with a value, and keys are used to access their
+    corresponding values.
+
+
+    # Unique Keys:
+
+
+    In a HashMap, the keys must be unique.
+
+
+    If you try to insert a duplicate key, it will replace the value associated with
+    the existing key.
+
+
+    # Null Keys and Values:
+
+
+    HashMap allows at most one null key, but it can have multiple null values.
+
+
+    If you try to add a second null key, it will replace the value associated with
+    the existing null key.
+
+
+    # Unordered Collection:
+
+
+    HashMap does not maintain any specific order of its elements.
+
+
+    The elements are stored based on their hash codes, and the iteration order is
+    not guaranteed to be the same across different iterations.
+
+
+    # Non-Synchronized:
+
+
+    By default, HashMap is not thread-safe.
+
+
+    In a multi-threaded environment, consider synchronizing access to it or using
+    a thread-safe alternative like ConcurrentHashMap.
+
+
+    # Performance:
+
+
+    HashMap provides constant-time performance (O(1)) for basic operations like get(),
+    put(), and remove() in the average case.
+
+
+    This assumes a good hash function and proper load factor management.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# Implements Map Interface :\n\nHashMap implements the Map interface, which\
+    \ provides methods for adding, removing, and retrieving key-value pairs.\n\nIt\
+    \ also supports methods for working with keys and values separately.\n\n# HashMap\n\
+    \nIterating Through HashMap:\n\n+   * java.util package\n* implements the Map\
+    \ interface\n* represents a collection of key-value pairs\n* each key is associated\
+    \ with a corresponding value\n* HashMap uses a hash table to store its entries\n\
+    \n```\nfor (String country : populationMap.keySet()) {\n    int population = populationMap.get(country);\n\
+    \    System.out.println(country + \" : \" + population);\n}\n\n```\n\nCreating\
+    \ a HashMap\n\n```\nHashMap<String, Integer> populationMap = new HashMap<>();\n\
+    ```\n\nAdding Key-Value Pairs\n\n```\npopulationMap.put(\"USA\", 331000000);\n\
+    populationMap.put(\"China\", 1440000000);\npopulationMap.put(\"India\", 1380000000);\n\
+    ```\n\nHashMap Methods:\n\n+   * size() Returns the number of mappings in this\
+    \ map\n* isEmpty() Checks if the map is empty\n* containsKey(Object key) Checks\
+    \ if the map contains a specific key\n* containsValue(Object value) Checks if\
+    \ the map contains a specific value\n* get(Object key) Returns the value to which\
+    \ the specified key is mapped\n* remove(Object key) Removes the mapping for the\
+    \ key from this map\n\nAccessing Values\n\n```\nint usPopulation = populationMap.get(\"\
+    USA\"); // 331000000\n```\n\nHashing and Efficiency:\n\nHashMap uses hashing to\
+    \ efficiently manage key-value pairs. Each key is associated with a hash code,\
+    \ which is used within the hash table. This allows for fast insertion, retrieval,\
+    \ and deletion of key-value pairs.\n\nRemoving Key-Value Pairs\n\n```\npopulationMap.remove(\"\
+    China\");\n```\n\nLet's see example using GitHub Copilot. Ask the question as\
+    \ shown in the below screenshot and then if you are ok then click the insert code\
+    \ block and your code will be ready."
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_63_0.png)
+
+
+    # # LinkedHashMap
+
+
+    Here''s the details about **HashMap**:
+
+
+    **LinkedHashMap** is an implementation of the **Map** interface and is part of
+    the **Java Collections Framework**.'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Key points about LinkedHashMap:
+
+
+    # Insertion Order:
+
+
+    LinkedHashMap maintains the insertion order of key-value pairs.
+
+
+    When you iterate over the elements of a LinkedHashMap, they will be retrieved
+    in the order in which they were inserted.
+
+
+    # Key-Value Pairs:
+
+
+    Like HashMap, LinkedHashMap stores data in the form of key-value pairs.
+
+
+    Each key in the map is associated with a value, and keys are used to access their
+    corresponding values.
+
+
+    # Unique Keys:
+
+
+    In a LinkedHashMap, the keys must be unique.
+
+
+    If you try to insert a duplicate key, it will replace the value associated with
+    the existing key.
+
+
+    # Null Keys and Values:
+
+
+    LinkedHashMap allows at most one null key, but it can have multiple null values.
+
+
+    If you try to add a second null key, it will replace the value associated with
+    the existing null key.
+
+
+    # Access Order:
+
+
+    In addition to maintaining the insertion order, LinkedHashMap can also maintain
+    the access order of key-value pairs.
+
+
+    When you retrieve or modify the value associated with a key, that key-value pair
+    is moved to the end of the linked list, allowing you to track the most recently
+    accessed or modified entries.
+
+
+    # Non-Synchronized:
+
+
+    By default, LinkedHashMap is not thread-safe.
+
+
+    In a multi-threaded environment, consider synchronizing access to it or using
+    a thread-safe alternative like ConcurrentHashMap.
+
+
+    # Performance:'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "HashMap provides constant-time performance (O(1)) for basic operations like\
+    \ get(), put(), and remove() in the average case, similar to HashMap.\n\nHowever,\
+    \ iterating over the elements in insertion order has a linear time complexity\
+    \ (O(n)), where n is the number of elements.\n\n# # LinkedHashMap\n\n+   - java.util\
+    \ package\n- extends the HashMap\n- represents a collection of key-value pairs\n\
+    - each key is associated with a corresponding value\n- LinkedHashMap uses a hash\
+    \ table to store its entries\n\nCreating a LinkedHashMap:\n\n```\n```java\nLinkedHashMap<String,\
+    \ Integer> scoreMap = new LinkedHashMap<String, Integer>();\n```\n```\n\n# ##\
+    \ Adding Key-Value Pairs\n\n```\n```java\nscoreMap.put('Alice', 90);\nscoreMap.put('Bob',\
+    \ 87);\nscoreMap.put('Charlie', 92);\n```\n```\n\nAccessing Values by Key:\n\n\
+    ```\n```java\nint aliceScore = scoreMap.get('Alice'); // 90\n```\n```\n\nRemoving\
+    \ Key-Value Pairs\n\n```\n```java\nscoreMap.remove('Bob');\n```\n```\n\n![](img/dbebbe5e20d39743ff28c8dae042defc_65_0.png)\n\
+    \n```\n```java\nfor (String name : scoreMap.keySet()) {\n    int score = scoreMap.get(name);\n\
+    \    System.out.println(name + \" : \" + score);\n}\n```\n```\n\nLet's see example\
+    \ using GitHub Copilot. Let's Ask the question as shown in the below screenshot\
+    \ and then if you are ok then click the insert code button and your code will\
+    \ be ready."
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# java.org.util.LinkedHashMap\n\n```\nimport java.util.*;\npublic class LinkedHashMapExamples\
+    \ {\n    public static void main(String[] args) {\n        LinkedHashMap<String,\
+    \ String> map = new LinkedHashMap<>();\n\n        // Add elements to the HashMap\n\
+    \        map.put(\"key1\", \"element 1\");\n        map.put(\"key2\", \"element\
+    \ 2\");\n        map.put(\"key3\", \"element 3\");\n\n        // Print the map\n\
+    \        System.out.println(\"LinkedHashMap: \" + map);\n\n        // Remove an\
+    \ element from the LinkedHashMap\n        map.remove(\"key2\");\n\n        //\
+    \ Print the map after removal\n        System.out.println(\"LinkedHashMap after\
+    \ removal: \" + map);\n\n        // Check if a key exists\n        boolean exists\
+    \ = map.containsKey(\"key1\");\n        System.out.println(\"Does key1 exist?\
+    \ \" + exists);\n\n        // Iterate over the LinkedHashMap\n        for (Map.Entry<String,\
+    \ String> entry : map.entrySet()) {\n            System.out.println(\"Key: \"\
+    \ + entry.getKey() + \", Value: \" + entry.getValue());\n        }\n    }\n}\n\
+    ```\n\n# Examples of Java Collections Implementation\n\n 91365\nime example of\
+    \ LinkedHashMap using basic operations\n\nGitHub Copilot\nSo, I can provide an\
+    \ example of a LinkedHashMap in Java with basic operations such as adding elements,\
+    \ removing elements, checking if an element exists, and traversing the map.\n\
+    Here's the code:\n\n```\n// Create a LinkedHashMap\npublic class LinkedHashMapExample\
+    \ {\n    public static void main(String[] args) {\n        LinkedHashMap<String,\
+    \ String> map = new LinkedHashMap<>();\n\n        // Add elements to the LinkedHashMap\n\
+    \        map.put(\"key1\", \"element 1\");\n        map.put(\"key2\", \"element\
+    \ 2\");\n        map.put(\"key3\", \"element 3\");\n\n        // Print the map\n\
+    \        System.out.println(\"LinkedHashMap: \" + map);\n\n        // Remove an\
+    \ element from the LinkedHashMap\n        map.remove(\"key2\");\n\n        //\
+    \ Print the map after removal\n        System.out.println(\"LinkedHashMap after\
+    \ removal: \" + map);\n    }\n}\n```\n\n# TreeMap\n\nIn Java, TreeMap is an implementation\
+    \ of the Map interface and is part of the Java Collections Framework. It is a\
+    \ sorted map that stores its key-value pairs in ascending order based on the keys.\
+    \ The keys in a TreeMap must implement the Comparable interface or a custom Comparator\
+    \ must be provided at the time of creation."
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# Key points about TreeMap :
+
+
+    # Sorted Keys :
+
+
+    TreeMap stores its key-value pairs in sorted order based on the natural ordering
+    of the keys or a custom Comparator.
+
+
+    When you iterate over the entries in the map, they will be retrieved in sorted
+    order of the keys.
+
+
+    # Key-Value Pairs :
+
+
+    Like other Map implementations, TreeMap stores data in the form of key-value pairs.
+    Each key in the map is associated with a value, and keys are used to access their
+    corresponding values.
+
+
+    # Unique Keys :
+
+
+    In a TreeMap, the keys must be unique. If you try to insert a duplicate key, it
+    will replace the value associated with the existing key.
+
+
+    # Null Keys and Values :
+
+
+    TreeMap does not allow null keys, but it can have multiple null values. If you
+    try to add a null key, it will throw a NullPointerException.
+
+
+    # Non-Synchronized :
+
+
+    By default, TreeMap is not thread-safe. In a multi-threaded environment, consider
+    synchronizing access to it or using a thread-safe alternative like ConcurrentSkipListMap.
+
+
+    # Performance :
+
+
+    TreeMap provides logarithmic time complexity (O(log n)) for basic operations like
+    get(), put(), and remove().
+
+
+    However, if you need to iterate over the entries in sorted order, it provides
+    constant-time performance.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# Implements NavigableMap Interface:\n\nTreeMap implements the NavigableMap\
+    \ interface, which extends the SortedMap interface.\nIt provides additional methods\
+    \ for navigating and retrieving entries from the map based on their order.\n\n\
+    # Comparator:\n\nYou can provide a custom Comparator at the time of creating a\
+    \ TreeMap to define the sorting order of its keys.\n\nIf no Comparator is provided,\
+    \ the keys must implement the Comparable interface.\n\n# TreeMap\n\n+   * java.util\
+    \ package\n* implements the NavigableMap interface and is part of the SortedMap\
+    \ hierarchy\n* represents a collection of key-value pairs in a sorted manner\n\
+    * each key is associated with a corresponding value\n* red-black tree data structure\
+    \ to store its entries\n\n# Iterating Through LinkedHashMap\n\n# Creating a LinkedHashMap:\n\
+    \n```\nTreeMap<String, Integer> scoreMap = new TreeMap<>();\n```\n\n```\nfor (String\
+    \ name : scoreMap.keySet()) {\n    int score = scoreMap.get(name);\n    System.out.println(name\
+    \ + \" :\" + score);\n}\n```\n\n# Adding Key-Value Pairs\n\n```\nscoreMap.put(\"\
+    Alice\", 90);\nscoreMap.put(\"Bob\", 87);\nscoreMap.put(\"Charlie\", 90);\n```\n\
+    \n# Accessing Values by Key:\n\n```\nint aliceScore = scoreMap.get(\"Alice\");\
+    \ // 90\n```\n\n# Removing Key-Value Pairs\n\n```\nscoreMap.remove(\"Bob\");\n\
+    ```\n\nTreeMap Methods:\n\n'TreeMap' provides methods similar to those of other\
+    \ map classes for manipulating and working with the map. Additionally, it provides\
+    \ methods for retrieving the first and last keys, finding entries with keys greater\
+    \ than equal to a given key (\"ceilingEntry\\), and more.\n\nLet's see example\
+    \ using GitHub Copilot. Let's Ask the question as shown in the below screenshot\
+    \ and then if you are ok then click the insert code button and your code will\
+    \ be ready\n\n![](img/dbebbe5e20d39743ff28c8dae042defc_68_0.png)"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "```\nimport java.util.TreeMap;\n\npublic class Treemap {\n    public static\
+    \ void main(String[] args) {\n        TreeMap<String, String> map = new TreeMap<>();\n\
+    \n        // Add elements to the TreeMap\n        map.put(\"key1\", \"Element\
+    \ 1\");\n        map.put(\"key2\", \"Element 2\");\n        map.put(\"key3\",\
+    \ \"Element 3\");\n\n        // Print the map\n        System.out.println(\"TreeMap:\
+    \ \" + map);\n\n        // Remove an element from the TreeMap\n        map.remove(\"\
+    key2\");\n        System.out.println(\"After removal: \" + map);\n\n        //\
+    \ Check if a key exists\n        boolean exists = map.containsKey(\"key1\");\n\
+    \        System.out.println(\"Does key1 exist? \" + exists);\n\n        // Iterate\
+    \ through the map\n        for (String key : map.keySet()) {\n            System.out.println(\"\
+    Key: \" + key + \" Value: \" + map.get(key));\n        }\n    }\n}\n```\n\n![](img/dbebbe5e20d39743ff28c8dae042defc_69_0.png)\n\
+    \n# # Exception Handling In Java\n\nException handling is a mechanism in Java\
+    \ that allows you to handle runtime errors or exceptional situations that may\
+    \ occur during the execution of a program. It provides a way to gracefully handle\
+    \ exceptional conditions and prevent the program from terminating abruptly."
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: 'Java, exceptions are objects that represent an exceptional condition. When
+    an exceptional situation occurs, an exception object is created and thrown. If
+    this exception is not caught and handled properly, the program will terminate
+    with an error message
+
+
+    # What is an Exception in Java?
+
+
+    An exception is an abnormal condition that disrupts the normal flow of a Java
+    program.
+
+    It represents an unexpected event that occurs during program execution.
+
+    Exceptions are objects that are thrown at runtime when certain conditions are
+    met.
+
+
+    # What is Exception Handling?
+
+
+    Exception handling is a mechanism to manage runtime errors in Java.
+
+    It allows you to gracefully handle exceptions, ensuring that the program doesn''t
+    abruptly terminate.
+
+    Common exceptions include ClassNotFoundException, IOException, SQLException, and
+    RemoteException.
+
+
+    # Advantages of Exception Handling:
+
+
+    Maintains Normal Flow: Exception handling ensures that the normal flow of the
+    application is maintained even when exceptions occur.
+
+
+    # Example Scenario:
+
+
+    +   Suppose you have a sequence of statements in your Java program:
+
+    statement 1;
+
+    statement 2;
+
+    statement 3;
+
+    statement 4;
+
+    statement 5; // Exception occurs here
+
+    statement 6;
+
+    statement 7;
+
+    statement 8;'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'statement 9;
+
+
+    statement 10;
+
+
+    Without exception handling, statements 6 to 10 would not be executed after an
+    exception at statement 5.
+
+
+    With exception handling, the remaining statements continue execution.
+
+
+    # Hierarchy of Java Exception Classes:
+
+
+    The root class of Java''s exception hierarchy is java.lang.Throwable.
+
+
+    It has two main subclasses:
+
+
+    +   - Exception : Represents checked exceptions (e.g., IOException, SQLException
+    ).
+
+
+    +   - Error : Represents unchecked exceptions (e.g., OutOfMemoryError, StackOverflowError
+    ).
+
+
+    # Types of Java Exceptions:
+
+
+    Checked Exceptions:
+
+
+    Direct subclasses of Throwableable except RuntimeException and Error.
+
+
+    Checked at compile-time.
+
+
+    Examples: IOException, SQLException.
+
+
+    Unchecked Exceptions:
+
+
+    Subclasses of RuntimeException.
+
+
+    Not checked at compile-time; detected at runtime
+
+
+    Examples: ArithmeticException, NullPointerException.
+
+
+    # Exception Handling Keywords:
+
+
+    try...catch block: Used to catch exceptions and handle them.
+
+
+    finally block: Executes regardless of whether an exception occurs or not.
+
+
+    throw keyword: Explicitly throws an exception.
+
+
+    throws keyword: Declares that a method may throw a specific exception.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# A simple example of exception handling using Github Copilot\n\nPut a comment\
+    \ at the start of class and press enter and tab to get the code as showing below\n\
+    \n```\nimport java.util.Scanner;\n\npublic class SimpleException {\n    public\
+    \ static void main(String[] args) {\n        try {\n            Scanner scanner\
+    \ = new Scanner(System.in);\n            System.out.print(\"Enter first number:\
+    \ \");\n            int num1 = scanner.nextInt();\n            System.out.print(\"\
+    Enter second number: \");\n            int num2 = scanner.nextInt();\n       \
+    \     int result = num1 / num2;\n            System.out.println(\"Result: \" +\
+    \ result);\n        } catch (ArithmeticException e) {\n            System.out.println(\"\
+    Cannot divide by zero!\");\n        } catch (Exception e) {\n            System.out.println(\"\
+    Invalid input!\");\n        }\n    }\n}\n```\n\nChecked Exception Example using\
+    \ file not found GitHub copilot"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_73_0.png)
+
+
+    Exercise : Design a program that prompts the user to enter their age. It mentions
+    using a try-catch block to handle exceptions that may occur if the user enters
+    a non-numeric value. Additionally, it suggests creating a custom exception (e.g.,
+    InvalidAgeException) to handle the case where the user enters a negative age.
+
+
+    (Use github copilot in-editor comment and not GitHub Copilot chat to have in editor
+    practice)
+
+
+    Answer :'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# Finally Block
+
+
+    Let''s explore the finally block in Java.
+
+
+    # What is the finally Block?
+
+
+    The finally block is a crucial part of exception handling in Java.
+
+
+    It follows either a try block or a catch block.
+
+
+    Regardless of whether an exception occurs or not, the code inside the finally
+    block always executes.
+
+
+    Purpose of the finally Block:
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_74_0.png)'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "The primary purpose of the finally block is to ensure that certain actions\
+    \ are taken, no matter what happens in the protected code (inside the try block).\n\
+    \nIt allows you to run cleanup-type statements or perform necessary tasks, even\
+    \ if an exception is thrown.\n\n# Scenarios for Using the finally Block:\n\nLet's\
+    \ explore different cases where the finally block can be useful:\n\n+   a. When\
+    \ No Exception Occurs:\n\nIn this scenario, the Java program does not throw any\
+    \ exception.\n\nThe finally block is executed after the try block.\n\nExample:\n\
+    \n```\nclass TestFinallyBlock {\n    public static void main(String[] args) {\n\
+    \        try {\n            // Code that does not throw any exception\n      \
+    \      int data = 25 / 5;\n            System.out.println(data);\n        } catch\
+    \ (NullPointerException e) {\n            // Catch block won't be executed\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\nSystem.out.println(e);\n\n} finally {\n\n    System.out.println(\"finally\
+    \ block is always executed\");\n\n    System.out.println(\"Rest of the code...\"\
+    );\n\n}\n```\n\nOutput:\n\n5\n\nfinally block is always executed\n\nRest of the\
+    \ code...\n\n# b. When an Exception Occurs but Is Not Handled by the catch Block:\n\
+    \nIn this case, the code throws an exception, but the catch block cannot handle\
+    \ it.\n\nDespite this, the finally block is executed after the try block, and\
+    \ then the program terminates abnormally.\n\nExample:"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "```\npublic class TestFinally1 {\n    public static void main(String[] args)\
+    \ {\n        try {\n            System.out.println(\"Inside the try block\");\n\
+    \            // Code that throws a divide by zero exception\n            int data\
+    \ = 25 / 0;\n            System.out.println(data);\n        } catch (NullPointerException\
+    \ e) {\n            // Can only accept Null Pointer type exception\n         \
+    \   System.out.println(e);\n        } finally {\n            System.out.println(\"\
+    finally block is always executed\");\n        }\n        System.out.println(\"\
+    Rest of the code...\");\n    }\n}\n```\n\nOutput:\n\nInside the try block\n\n\
+    finally block is always executed\n\nException in thread \"main\" java.lang.ArithmeticException:\
+    \ / by zero\nat TestFinally1.main(TestFinallyBlock1.java:8)\n\n# c. When an Exception\
+    \ Occurs and Is Handled by the catch Block:"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "In this example, the Java code throws an exception, and the catch block handles\
+    \ it.\n\nLater, the finally block is executed after the try-catch block, and the\
+    \ rest of the code executes normally.\n\nExample:\n\n```\npublic class TestFinallyBlock2\
+    \ {\n    public static void main(String[] args) {\n        try {\n           \
+    \ System.out.println(\"Inside try block\");\n            // Code that throws a\
+    \ divide by zero exception\n            int data = 25 / 0;\n            System.out.println(data);\n\
+    \        } catch (ArithmeticException e) {\n            System.out.println(\"\
+    Exception handled\");\n            System.out.println(e);\n        } finally {\n\
+    \            System.out.println(\"finally block is always executed\");\n     \
+    \       System.out.println(\"Rest of the code...\");\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'Output:
+
+
+    Inside try block
+
+
+    Exception handled
+
+
+    finally block is always executed
+
+
+    Rest of the code...
+
+
+    Remember, the finally block ensures that essential cleanup or resource management
+    tasks are performed, regardless of exceptions!
+
+
+    # Lets see example of finally block using GitHub Copilot
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_79_0.png)'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "# # Multithreading in Java\n\nWhat is Multithreading?\n\nMultithreading is\
+    \ a Java feature that allows concurrent execution of two or more parts of a program.\n\
+    Each part of the program is called a thread.\nThreads are lightweight processes\
+    \ within a single process.\nThe goal is to maximize CPU utilization by running\
+    \ multiple threads simultaneously.\n\nCreating Threads:\n\n+   Threads can be\
+    \ created using two mechanisms:\nExtending the Thread class:\n\n+   We create\
+    \ a class that extends java.lang.Thread.\nOverride the run() method in this class.\n\
+    A thread begins its life inside the run() method.\nCreate an object of our new\
+    \ class and call start() to begin thread execution.\nExample:\n\nJava\n\n```\n\
+    class MultithreadingDemo extends Thread {\n    public void run() {\n```"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "```\nSystem.out.println(\"Thread \" + Thread.currentThread().getId() + \" is\
+    \ running\");\n}\n\n```\n\n```\npublic class Multithread {\n    public static\
+    \ void main(String[] args) {\n        int n = 8;\n        for (int i = 0; i <\
+    \ n; i++) {\n            MultithreadingDemo object = new MultithreadingDemo();\n\
+    \            object.start();\n        }\n    }\n}\n```\n\n# Implementing the Runnable\
+    \ interface :\n\nCreate a new class that implements java.lang.Runnable.\nOverride\
+    \ the run() method in this class.\nInstantiate a Thread object and call start()\
+    \ on it.\nExample:\n\n# Java\n\n```\nclass MultithreadingDemo implements Runnable\
+    \ {\n    public void run() {\n```"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "```\nSystem.out.println(\"Thread \" + Thread.currentThread().getId() + \" is\
+    \ running\");\n}\n}\n```\n\n```\npublic class Multithread {\n    public static\
+    \ void main(String[] args) {\n        int n = 8;\n        for (int i = 0; i <\
+    \ n; i++) {\n            Thread object = new Thread(new MultithreadingDemo());\n\
+    \            object.start();\n        }\n    }\n}\n```\n\n# Thread Class vs. Runnable\
+    \ Interface:\n\nExtending Thread:\n\nCannot extend any other class due to Java's\
+    \ lack of multiple inheritance.\nProvides inbuilt methods like yield(), interrupt(),\
+    \ etc.\n\nImplementing Runnable:\n\nAllows extending other base classes.\nProvides\
+    \ a shared object that can be used by multiple threads.\n\n# Advantages of Multithreading:\n\
+    \n+   - concurrency : Multiple threads execute concurrently.\n\n+   - Memory Efficiency\
+    \ : Threads share memory, saving memory space.\n\n+   - Faster Context Switching\
+    \ : Switching between threads is faster than processes."
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'Remember, multithreading is essential for efficient utilization of system resources
+    and responsive applications!
+
+
+    Examples using GitHub Copilot
+
+
+    # Creating Thread using extending thread class user as asking GitHub Copilot in
+    chat
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_83_0.png)
+
+
+    Then in the next screenshot you use start method to start the thread'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: Let's ask the follow up up question as highlighted below
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_85_0.png)
+
+
+    And the answer by Github Copilot is as below'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "In Java, you cannot directly pass parameters to the run method of a Thread\
+    \ because it's a method defined in the Thread class without any parameters. However,\
+    \ you can pass parameters to the Thread by passing them to the constructor of\
+    \ your class that extends Thread and then using those parameters in your run method.\
+    \ Here's how you can do it:\n\nFirst, modify your Thread class to include a constructor\
+    \ that accepts the parameters you want to. Store these parameters as instance\
+    \ variables, and then use them in your run method.\n\n```\npackage org.example.multithreading;\n\
+    \nclass MyThread extends Thread {\n    private int param;\n\n    public MyThread(int\
+    \ param) {\n        this.param = param;\n    }\n\n    @Override\n    public void\
+    \ run() {\n        for (int i = 0; i < this.param; i++) {\n            System.out.println(Thread.currentThread().getId()\
+    \ + \" Value: \" + param);\n        }\n    }\n}\n```\n\nHow can I handle exceptions\
+    \ in the 'run' method of the 'Thread' class?"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "```\npackage org.example.multithreading;\n\npublic class ThreadExampleUsingThreadClass\
+    \ {\n    public static void main(String[] args) {\n        MyThread t1 = new MyThread(5);\n\
+    \        t1.start();\n\n        MyThread t2 = new MyThread(7);\n        t2.start();\n\
+    \    }\n}\n```\n\nIn this example, 5 and 7 are the parameters passed to the MyThread\
+    \ instances t1 and t2 respectively. These values are then used in the run method\
+    \ of each thread.\n\n+   > Using 1 Reference\n> How can I handle exceptions in\
+    \ the `run` method of the `Thread` class?\n\nLet's go by another follow up question\
+    \ as shown in blue in above figure and answer is as below"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_88_0.png)
+
+
+    # # Creating a Thread using implementing Runnable interface
+
+
+    If you see in the last picture GitHub Copilot as already given a a follow up suggestion
+    and question for creat- thread using Runnable interface
+
+
+    How can I implement multithreading using the Runnable interface instead of extending
+    the Thread class?
+
+
+    And the answer given by GitHub Copilot is as below and then run the program'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Exercise: Write a thread program using GitHub Copilot to print basic states
+    of Thread
+
+
+    # Solution : Try below prompt
+
+
+    Write a Java program that demonstrates the different thread states.
+
+
+    // Create a thread that goes through all the states (NEW, RUNNABLE, AND TERMINATED)
+
+    with a small delay between each state transion. Print the current state at each.
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_89_0.png)'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# # Github copilot for java and basics of spring boot
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_90_0.png)
+
+
+    # # Synchronization in Java
+
+
+    **Synchronization in Java** is a crucial concept for managing concurrent access
+    to shared resources in a multi-threaded environment.
+
+    Let''s explore what it entails:
+
+
+    **Purpose of Synchronization:**'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: 'The goal of synchronization is to ensure that only one thread can access a
+    shared-source (such as a variable, object, or method) at a time.
+
+
+    By preventing multiple threads from simultaneously modifying the same data, synchronization
+    helps avoid data corruption and ensures consistent results.
+
+
+    # Types of Synchronization:
+
+
+    In Java, there are two main types of synchronization:
+
+
+    +   - Process Synchronization : Deals with synchronization across different processes.
+
+
+    +   - Thread Synchronization : Focuses on synchronization within a single process
+    (between threads).
+
+
+    # Thread Synchronization:
+
+
+    Within thread synchronization, we have two primary concepts:
+
+
+    +   - Mutual Exclusion : Ensures that threads do not interfere with each other
+    while sharing data.
+
+
+    Achieved through:
+
+
+    +   - Synchronized methods : Locks an object for a shared resource.
+
+
+    +   - Synchronized blocks : Allows fine-grained control over synchronization.
+
+
+    +   - Static synchronization : Applies to static methods.
+
+
+    Inter-thread Communication (Cooperation) : Facilitates communication between threads.
+
+
+    Examples include using wait(), notify(), and notifyAll().'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "# Concept of Lock in Java:\n\nSynchronization revolves around an internal entity\
+    \ called a lock or monitor.\nEvery object in Java has an associated lock.\nThreads\
+    \ must acquire an object's lock before accessing its fields and release it afterward.\n\
+    Java 5 introduced the java.util.concurrent.locks package with various lock implementations.\n\
+    Example Without Synchronization:\n\nConsider the following example without synchronization:\n\
+    \n```\nclass Table {\n    void printTable(int n) {\n        for (int i = 1; i\
+    \ <= 5; i++) {\n            System.out.println(n * i);\n            try {\n  \
+    \              Thread.sleep(400);\n            } catch (Exception e) {\n     \
+    \           System.out.println(e);\n            }\n        }\n    }\n}\n\nclass\
+    \ Thread1 extends Thread {\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "```\nTable t;\n\nMyThread(Table t) {\n    this.t = t;\n}\npublic void run()\
+    \ {\n    t.printTable(5);\n}\n\n```\n\n```\nclass MyThread2 extends Thread {\n\
+    \    Table t;\n\n    MyThread2(Table t) {\n        this.t = t;\n    }\n    public\
+    \ void run() {\n        t.printTable(100);\n    }\n}\n```\n\n```\npublic class\
+    \ TestSynchronization1 {\n    public static void main(String[] args) {\n     \
+    \   Table obj = new Table();\n        MyThread1 t1 = new MyThread1(obj);\n   \
+    \     MyThread2 t2 = new MyThread2(obj);\n        t1.start();\n        t2.start();\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '```
+
+    Output (inconsistent due to lack of synchronization):
+
+    5
+
+    100
+
+    10
+
+    200
+
+    15
+
+    300
+
+    20
+
+    400
+
+    25
+
+    500
+
+    ```
+
+
+    # Java Synchronized Method:
+
+
+    When you declare a method as synchronized , it becomes a synchronized method.
+
+
+    A thread automatically acquires the lock for the object when invoking a synchronized
+    method.
+
+
+    The lock is released when the thread completes its task.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# Example:\n\n```\nclass Table {\n    synchronized void printTable(int n) {\n\
+    \    // Synchronized method\n    for (int i = 1; i <= 5; i+i) {\n        System.out.println(\"\
+    n * i\");\n    }\n    try {\n        Thread.sleep(400);\n    } catch (Exception\
+    \ e) {\n        System.out.println(e);\n    }\n    }\n}\n```\n\nRemember, synchronization\
+    \ ensures thread safety and prevents data inconsistencies in multi-threaded applications\n\
+    \nExercise: Try with GitHub copilot to create using below Prompt\n\n//Deston program\
+    \ with the threads the stentaneously incresent a shared counter variable.\n//\
+    \ Inplent synchronization using the synchronized keyword or a Lack object to ensure\
+    \ that tor counter is incremented correctly without without date corruption or\
+    \ rece conditions.\n\nAnswer:In next two screenshots"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "```\npackage org.example;\n\n/**\n * Design a program with two threads that\
+    \ simultaneously increment a shared counter variable.\n * Thread synchronization\
+    \ must be implemented properly, or a lock object should be used.\n * Ensure that\
+    \ the counter is incremented correctly without data corruption or race conditions.\n\
+    \ */\nimport org.example.Counter;\n\npublic class SyncExample {\n    public static\
+    \ void main(String[] args) {\n        Counter counter = new Counter();\n     \
+    \   Thread thread1 = new Thread(counter);\n        Thread thread2 = new Thread(counter);\n\
+    \n        thread1.start();\n        thread2.start();\n\n        try {\n      \
+    \      thread1.join();\n            thread2.join();\n        } catch (InterruptedException\
+    \ e) {\n            e.printStackTrace();\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '![](img/dbebbe5e20d39743ff28c8dae042defc_97_0.png)
+
+
+    # # Executor Framework in Java
+
+
+    Certainly! Let''s dive into the Java Executor Framework, a powerful tool for managing
+    concurrent tasks efficiently:
+
+
+    # ### What is the Java Executor Framework?
+
+
+    The Java Executor Framework is part of the java.util.concurrent package.'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: 'It provides a way to manage and execute tasks concurrently without creating
+    new threads every time.
+
+
+    By using thread pools, it reuses existing threads, improving performance and resource
+    utilization.
+
+
+    # Why Use the Executor Framework?
+
+
+    With the increasing number of processor cores, multithreading is essential for
+    achieving higher throughput.
+
+
+    The Executor Framework simplifies thread management and enhances code readability.
+
+
+    It separates task execution logic from application code, allowing developers to
+    focus on business logic.
+
+
+    # Types of Executors:
+
+
+    Let''s explore some common types of executors:'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# # Types of thread pools
+
+
+    ## Fixed thread pool
+
+    A fixed thread pool has a fixed number of threads that are created when the pool
+    starts. The fixed thread pool is a good choice for applications that have a predictable
+    workload.
+
+
+    ## Cached thread pool
+
+    A cached thread pool creates new threads as needed and reclaims them when idle.
+    This type of thread pool is a good choice for applications that have unpredictable
+    workloads.
+
+
+    ## Scheduled thread pool
+
+    A scheduled thread pool executes tasks at a specified interval. It is a good choice
+    for applications that need to execute tasks on a regular basis.
+
+
+    Classes that can be used to create and manage thread pool
+
+
+    +   * **Executors**: This class provides static methods for creating common types
+    of thread pools.
+
+    * **ThreadPoolExecutor**: This class provides a flexible way to create and manage
+    thread pools.
+
+
+    a. SingleThreadExecutor
+
+
+    Creates a thread pool with a single thread.
+
+    Executes tasks **sequentially** (one after another).
+
+    Syntax:
+
+
+    ```
+
+    ExecutorService executor = Executors.newSingleThreadExecutor();
+
+    ```
+
+
+    b. FixedThreadPool (n):
+
+
+    Maintains a fixed number of threads (specified by n).
+
+    Tasks are executed concurrently by these threads.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "Excess tasks are stored in a queue.\nSyntax:\n\n```\nExecutorService fixedPool\
+    \ = Executors.newFixedThreadPool(2);\n```\n\n# c. CachedThreadPool:\n\nCreates\
+    \ threads as needed and reuses existing ones.\nIf no thread is available, a new\
+    \ one is created.\nUses a SynchronousQueue.\nSyntax:\n\n```\nExecutorService executorService\
+    \ = Executors.newCachedThreadPool();\n```\n\n# d. ScheduledExecutor:\n\nUsed for\
+    \ tasks that run at regular intervals or with delays.\nBased on the ScheduledExecutorService\
+    \ interface.\nTwo scheduling methods:\n\n+   - scheduleAtFixedRate: Executes tasks\
+    \ with a fixed interval.\n- scheduleWithFixedDelay: Starts the delay countdown\
+    \ after the current task completes.\n\nSyntax:\n\n```\nScheduledExecutorService\
+    \ scheduledExecutor = Executors.newScheduledThreadPool(1);\n```\n\n# Example Usage:\n\
+    \nSuppose we have a task class MyTask:\n\n```\nclass MyTask implements Runnable\
+    \ {\n    public void run() {\n        // Task logic here\n        System.out.println(\"\
+    Task executed by thread \" + Thread.currentThread().getId());\n    }\n}\n```"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "```\n}\nwe can create an executor and submit tasks:\npublic class ExecutorExample\
+    \ {\n    public static void main(String[] args) {\n        ExecutorService executor\
+    \ = Executors.newFixedThreadPool(3);\n        for (int i = 0; i < 5; i++) {\n\
+    \            executor.submit(new MyTask());\n        }\n        executor.shutdown();\n\
+    \    }\n}\n```\n\n# Benefits:\n\n+   - Efficient thread reuse.\n- Simplified thread\
+    \ management.\n- Improved performance and responsiveness.\n\nRemember, the Java\
+    \ Executor Framework is a valuable tool for managing concurrent tasks effectively!\n\
+    \n# Thread Pool and Executors"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: 'Thread pools and executors are part of the java.util.concurrent package and
+    provide a powerful and flexible way to manage and execute tasks concurrently.
+    They help you create, schedule, and manage threads efficiently, reducing the overhead
+    associated with creating and managing individual threads.
+
+
+    Thread Pool: A thread pool is a collection of worker threads that are pre-created
+    and ready to execute tasks. Instead of creating a new thread for each task, you
+    can submit tasks to the thread pool, and one of the available worker threads will
+    be assigned to execute the task. When the task is completed, the worker thread
+    goes back into the pool and becomes available for executing another task.
+
+
+    Thread pools are useful because:They reduce the overhead of creating and tearing
+    down threads for short-lived tasks.They provide a means of bounding the number
+    of threads created, preventing resource exhaustion.They can help manage thread
+    lifecycles more efficiently
+
+
+    Fixed Thread Pool example
+
+
+    The fixed thread pool is created using Executors.newThreadPool(n) where n is the
+    number of threads you want in the pool.'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "```\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\n\
+    \npublic class FixedThreadPoolExecutor implements Runnable {\n    // create a\
+    \ task class that implements Runnable interface\n    private String task;\n\n\
+    \    // create a constructor that takes a string parameter as name\n    public\
+    \ FixedThreadPoolExecutor(String task) {\n        this.task = task;\n    }\n\n\
+    \    // create a method that runs the task\n    public void run() {\n        System.out.println(\"\
+    Executing task: \" + task);\n    }\n}\n```\n\nAfter running the program"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "```\npackage org.example;\n\nimport java.util.concurrent.ExecutorService;\n\
+    import java.util.concurrent.Executors;\n\npublic class ThreadPoolExample {\n \
+    \   public static void main(String[] args) {\n        ExecutorService executor\
+    \ = Executors.newFixedThreadPool(5);\n        for (int i = 0; i < 10; i++) {\n\
+    \            executor.submit(() -> {\n                System.out.println(\"task\
+    \ is completed\");\n            });\n        }\n        executor.shutdown();\n\
+    \    }\n\n    // create a task class that implements runnable\n    // Task task\
+    \ = new Task(\"task-1\");\n    // task.run();\n    // print the thread name and\
+    \ task completed\nclass Task implements Runnable {\n    String name;\n    Task(String\
+    \ name) {\n        this.name = name;\n    }\n    @Override\n    public void run()\
+    \ {\n        System.out.println(Thread.currentThread().getName() + \" - \" + name\
+    \ + \" completed\");\n    }\n}\n```\n\n# Cache Thread Pool Example\n\nThe Executors.newCachedThreadPool()\
+    \ method provides a thread pool that creates new threads as needed, but will reuse\
+    \ previously constructed threads when they are available. These are ideal for\
+    \ programs that execute many short-lived asynchronous tasks.\n\nJust try with\
+    \ below comment on the class and use enter and space and tab to complete the program"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '```
+
+    // file downloader using executor service using cached thread pool
+
+    ```
+
+
+    # Answers:
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_105_0.png)
+
+
+    # Functional Programming in Java'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# Let''s explore Functional Programming (FP) in Java.
+
+
+    # Overview:
+
+
+    Functional Programming is a programming paradigm that emphasizes treating computations
+    as evaluating mathematical functions.
+
+
+    In mathematics, a function relates an input set to an output set, and its output
+    depends solely on its input. FP allows us to compose functions to create new ones,
+    promoting code modularity and expressiveness.
+
+
+    # Lambda Calculus:
+
+
+    In the 1930s, mathematician Alonzo Church developed lambda calculus, a formal
+    system for expressing computations based on function abstraction.
+
+
+    Lambda calculus significantly influenced the theory of programming languages and
+    functional programming.
+
+
+    Functional programming languages often implement lambda calculus concepts.
+
+
+    # Categorization of Programming Paradigms:
+
+
+    Programming paradigms can be broadly categorized into:
+
+
+    +   **Imperative**: Programs as sequences of statements that change state.
+
+
+    +   **Declarative**: Expresses logic without specifying control flow.
+
+
+    FP is a subset of declarative programming.
+
+
+    # Categorization of Programming Languages:
+
+
+    Based on functional programming support:
+
+
+    +   **Pure Functional Languages** (e.g., Haskell): Allow only pure functional
+    programs.
+
+
+    +   **Functional Languages** (e.g., Scala, Cloj): Support functional programming
+    alongside other paradigms.'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "# Java (with FP features) : Supports functional programming through Java 8+\
+    \ features.\n\nKey Concepts in Java Functional Programming:\n\n+   - Lambda Expressions\
+    \ : Anonymous functions that allow concise code.\n\n+   - Method References :\
+    \ Referring to methods as first-class citizens.\n\n+   - Functional Interfaces\
+    \ : Interfaces with a single abstract method (e.g., Runnable, Predicate).\n\n\
+    +   - Higher-Order Functions : Functions that take other functions as arguments.\n\
+    \n+   - Immutability : Avoiding mutable state.\n\n+   - Stream API : Enables functional-style\
+    \ operations on collections.\n\nExample (Lambda Expressions):\n\n# Java\n\n```\n\
+    List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nnumbers.stream()\n  .filter(n\
+    \ -> n % 2 == 0) // Lambda expression\n  .map(n -> n * n)\n  .forEach(System.out::println);\
+    \ // Method reference\n```\n\nBenefits of Functional Programming in Java:\n\n\
+    +   - Conciseness : Express complex operations with less code.\n\n+   - Readability\
+    \ : Focus on what, not how.\n\n+   - Parallelism : Easier to parallelize tasks.\n\
+    \n+   - Testability : Pure functions are easier to test."
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: 'Remember, functional programming in Java enhances code quality and maintainability!
+
+
+    # Lambda expressions Using GitHub Copilot
+
+
+    Lambda expressions were introduced in Java 8 and provide a concise way to express
+    instances of single-method interfaces (functional interfaces). They are particularly
+    useful when you need to pass behavior as an argument to a method or create small,
+    anonymous functions
+
+
+    The syntax of a lambda expression is:
+
+
+    ```
+
+    (parameters) -> { statements; }
+
+    ```
+
+
+    Parameters:
+
+
+    The parameters of a lambda expression are defined within parentheses, similar
+    to a method declaration. If there is only one parameter, the parentheses can be
+    omitted.
+
+
+    If there are no parameters, you must use empty parentheses.
+
+
+    Example:
+
+
+    Java
+
+
+    ```
+
+    (int x) -> ...
+
+    ```'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '(String name) -> ...
+
+    0) -> ...
+
+
+    # Arrow Operator (->):
+
+
+    The arrow operator separates the parameters from the lambda body.
+
+    It indicates that the following code represents the implementation of the lambda.
+
+    Example:
+
+
+    # Java
+
+
+    (x, y) -> x + y
+
+
+    # Lambda Body:
+
+
+    The lambda body specifies the code to be executed when the lambda expression is
+    invoked.
+
+    If the lambda body contains only a single expression, the curly braces {} can
+    be omitted, and the expression will be the result of the lambda expression.
+
+    Example:
+
+
+    # Java
+
+
+    (x, y) -> x * y
+
+    (name) -> "Hello, " + name
+
+
+    # Functional Interfaces:
+
+
+    Lambda expressions are often used in conjunction with functional interfaces.
+
+    A functional interface is an interface that has a single abstract method.'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "Lambda expressions provide a more concise way to implement these interfaces\
+    \ without creating an anonymous inner class.\n\nExample:\n\n# Java\n\n```\ninterface\
+    \ MyFunction {\n    int apply(int x, int y);\n}\nMyFunction add = (x, y) -> x\
+    \ + y;\n```\n\nWe already seen Runnable interface example without lambda expression,\
+    \ now let's see using lambda expression with the help of GitHub Copilot.\n\nAnswer:"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "```\npackage org.example;\n\npublic class RunnableExample implements Runnable\
+    \ {\n    public static void main(String[] args) {\n        Runnable runnable =\
+    \ new RunnableExample();\n        for (int i = 0; i < 3; i++) {\n            System.out.println(Thread.currentThread().getName()\
+    \ + \" : \" + i);\n        }\n\n        Thread t1 = new Thread(runnable);\n  \
+    \      t1.start();\n        Thread t2 = new Thread(runnable);\n        t2.start();\n\
+    \        Thread t3 = new Thread(runnable);\n        t3.start();\n    }\n}\n```\n\
+    \n### GitHub Copilot Chat\nCreating a Runnable using lambda expression in Java\n\
+    that we can learn and improve.\n\n```\n// Runnable interface example using lambda\
+    \ expression\npublic class LambdaRunnable {\n    public static void main(String[]\
+    \ args) {\n        Runnable runnable = () -> {\n            for (int i = 0; i\
+    \ < 3; i++) {\n                System.out.println(Thread.currentThread().getName()\
+    \ + \" : \" + i);\n            }\n        };\n\n        Thread t1 = new Thread(runnable);\n\
+    \        t1.start();\n\n        Thread t2 = new Thread(runnable);\n        t2.start();\n\
+    \    }\n}\n```\n\nIn this example, the lambda expression { ... } is used to define\n\
+    the implementation of the Runnable interface. The Runnable is passed\nto the Thread\
+    \ constructor.\n\n+   - Using 4 References\n- Can you explain how lambda expressions\
+    \ simplify the creation of\n  Runnable instances in Java?\n\nIf you want to understand\
+    \ line by line selected portion of code then like like above select the code and\
+    \ in the github copilot tr “/explain”"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "```\npackage com.example;\n\npublic class LambdaRunnableExample {\n    public\
+    \ static void main(String[] args) {\n        Runnable runnable = () -> {\n   \
+    \         for (int i = 0; i < 3; i++) {\n                System.out.println(Thread.current().getId()\
+    \ + \" : \" + i);\n            }\n        };\n\n        Thread thread1 = new Thread(runnable);\n\
+    \        thread1.start();\n\n        Thread thread2 = new Thread(runnable);\n\
+    \        thread2.start();\n    }\n}\n\n\nExploring the use of Lambda expression\
+    \ in thread.\n\nA lambda expression is a functional interface in Java that represents\
+    \ a command that can be executed. It has a single method (run) that contains the\
+    \ code body.\n\nIn the code, a runnable object is created using a lambda expression:\n\
+    Runnable runnable = () -> {\n    for (int i = 0; i < 3; i++) {\n        System.out.println(Thread.current().getId()\
+    \ + \" : \" + i);\n    }\n};\n\nTwo thread objects are, and they are created,\
+    \ each with its own runnable. This means when each thread is started, it will\
+    \ execute the code defined in the runnable object.\n\nThread thread1 = new Thread(runnable);\n\
+    thread1.start();\n\nThread thread2 = new Thread(runnable);\nthread2.start();\n\
+    ```\n\nLet's see another example of lambda expression using comparator interface\n\
+    \nTry below in GitHub Copilot Chat\n\n// Write a program for Comparator Interface\
+    \ (for sorting) using lamda expression\n\nand you can get answer like below"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "```\npackage org.example.functionalprogramming;\n\nimport java.util.Arrays;\n\
+    import java.util.Collections;\nimport java.util.List;\n\npublic class LambdaComparatorExample\
+    \ {\n    public static void main(String[] args) {\n        List<Integer> numbers\
+    \ = Arrays.asList(1, 5, 3, 2, 4);\n\n        Collections.sort(numbers, (Integer\
+    \ a, Integer b) -> b - a);\n\n        System.out.println(numbers);\n    }\n}\n\
+    ```\n\n![](img/dbebbe5e20d39743ff28c8dae042defc_113_0.png)\n\n# # Functional Interface\
+    \ In Java\n\n**Functional interface** is an interface that contains **only one\
+    \ abstract method**. Let's break down the key points:\n\n**Definition :**\n\n\
+    A functional interface is an interface that has precisely **one unimplemented\
+    \ method** . It can also include any number of **default methods** (methods with\
+    \ implementations) and **static methods**."
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# The single abstract method is the core feature of a functional interface.
+
+
+    Purpose :
+
+    Functional interfaces are designed to facilitate the use of lambda expressions
+    and method references.
+
+
+    They allow you to represent a piece of code (a function) as an instance of an
+    interface.
+
+
+    # Lambda Expressions and Functional Interfaces :
+
+
+    Starting from Java 8, you can use lambda expressions to create instances of functional
+    interfaces. This makes code more readable, clean, and concise.
+
+
+    # @FunctionalInterface Annotation :
+
+
+    To explicitly declare an interface as a functional interface, you can use the
+    @FunctionalInterface annotation. This annotation ensures that the interface has
+    only one abstract method. If more than one abstract method is present, the compiler
+    will flag an error.
+
+
+    # Examples of Functional Interfaces :
+
+
+    Some built-in functional interfaces in Java SE 8 include:
+
+
+    +   - Runnable : Represents a task that can be executed asynchronously.
+
+    - ActionListener : Used for handling GUI events.
+
+    - Comparable : Used for comparing objects.
+
+    - Callable : Represents a task that returns a result or throws an exception.
+
+
+    Here''s an example of using a functional interface with a lambda expression:
+
+
+    ```
+
+    Java // Before Java 8
+
+    ```'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "```\nnew Thread(new Runnable() {\n    @Override\n    public void run() {\n\
+    \        System.out.println(\"New thread created\");\n    }\n}).start();\n```\n\
+    \n```\n// Java 8 onwards\nnew Thread(() -> {\n    System.out.println(\"New thread\
+    \ created\");\n}).start();\n```\n\nRemember that functional interfaces play a\
+    \ crucial role in enabling functional programming features in Java\n\nExercise:\n\
+    \n```\n// create a functional interface called MathOperation with operate method\n\
+    ```"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "# Solution:\n\nThe provided code in the above figure is a simple example of\
+    \ using functional interfaces and lambda expressions in Java.\n\nAt the top, a\
+    \ functional interface named `MathOperation` is declared. A functional interface\
+    \ is an interface that contains only one abstract method. In this case, the method\
+    \ is `operate(int a, int b)`. This method takes two integers as parameters and\
+    \ returns an integer.\n\n```\n```java\n@FunctionalInterface\ninterface MathOperation\
+    \ {\n  int operate(int a, int b);\n}\n```\n```"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: 'In the `main` method of the `FunctionalInterfaceExample` class, four instances
+    of `MathOperation` are created using lambda expressions. A lambda expression is
+    a short block of code which takes in parameters and returns a value. Lambda expressions
+    are similar to methods, but they do not need a name and they can be implemented
+    right in the body of a method.
+
+
+    ```
+
+    ```java
+
+    MathOperation addition = (a, b) -> a + b;
+
+    MathOperation subtraction = (a, b) -> a - b;
+
+    MathOperation multiplication = (a, b) -> a * b;
+
+    MathOperation division = (a, b) -> a / b;
+
+    ```
+
+    ```
+
+
+    Each lambda expression implements the `operate` method of the `MathOperation`
+    interface. The `addition` instance adds its parameters, the `subtraction` instance
+    subtracts them, the `multiplication` instance multiplies them, and the `division`
+    instance divides them.
+
+
+    Finally, the `operate` method of each `MathOperation` instance is called with
+    the numbers 10 and 5 as arguments, and the results are printed to the console.
+
+
+    ```
+
+    ```java
+
+    System.out.println("Addition: " + addition.operate(10, 5));
+
+    System.out.println("Subtraction: " + subtraction.operate(10, 5));
+
+    System.out.println("Multiplication: " + multiplication.operate(10, 5));
+
+    System.out.println("Division: " + division.operate(10, 5));
+
+    ```
+
+    ```'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: 'This code demonstrates how functional interfaces and lambda expressions can
+    be used to create simple, reusable pieces of code in Java.
+
+
+    # Streams in Java
+
+
+    In Java, a Stream is a sequence of elements from a source that supports data operation
+    methods that can be pipelined to obtain the desired result. Streams were introduced
+    in Java 8 as part of the java.util.stream package. They are designed to make data
+    operations more declarative and functional in nature.
+
+
+    Key features of Streams in Java:
+
+
+    Pipelining : Streams support pipelining, which means that multiple operations
+    can be chained together in a single expression. This makes the code readable and
+    concise.
+
+
+    Laziness : Intermediate operations on a Stream are lazy, meaning they are not
+    executed until a terminal operation is invoked. This allows for optimization and
+    efficient use of memory.
+
+
+    Immutable : Streams are immutable, meaning that once created, they cannot be modified.
+    Any operation on a Stream produces a new Stream instance.
+
+
+    Parallelization : Streams can be executed in parallel, which can significantly
+    improve performance on modern multi-core systems.
+
+
+    Reusability : Streams are consumed once they are used. If you need to perform
+    the same operation multiple times, you need to create a new Stream instance.'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "# Common Stream Operations:\n\n**Intermediate Operations** : These operations\
+    \ transform the Stream into another Stream. Examples include filter(), map(),\
+    \ sorted(), distinct(), etc.\n\n**Terminal Operations** : These operations produce\
+    \ a result or side-effect from a Stream. Examples include forEach(), collect(),\
+    \ reduce(), count(), any-Match(), etc.\n\n**Short-circuiting Operations** : These\
+    \ are terminal operations that allow computations on infinite streams to complete\
+    \ in finite time. Examples include findFirst(), findAny(), limit(), etc.\n\n```\n\
+    import java.util.Arrays;\nimport java.util.List;\nimport java.util.stream.Collectors;\n\
+    \npublic class StreamExample {\n    public static void main (String[] args) {\n\
+    \        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n\
+    \n        // Filter even numbers and square them\n        List<Integer> squaredEvens\
+    \ = numbers.stream()\n            .filter(n -> n % 2 == 0)\n            .map(n\
+    \ -> n * n)\n            .collect(Collectors.toList());\n    }\n}\n```"
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '```
+
+    System .out . println ( squaredEvens ); // Output: [4, 16, 36, 64, 100]
+
+    }
+
+    ```
+
+
+    In the example above, we first create a list of integers from 1 to 10. We then
+    create a Stream from this list using stream(). Next, we use the filter() intermediate
+    operation to keep only even numbers, followed by the map() operation to square
+    each number. Finally, we use the terminal operation collect(Collectors.toList())
+    to collect the resulting Stream into a new List.
+
+
+    Streams in Java provide a powerful and expressive way to perform data operations,
+    making code concise, readable, and often more efficient than traditional imperative
+    approaches.
+
+
+    Exercise: // create 10 student records and print the student with 3rd highest
+    marks using stream Api
+
+
+    Solution: Create a class (any name ) and try commenting above statements like
+    below'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# Method references in Java
+
+
+    Method references in Java were introduced in Java 8, and they allow you to directly
+    refer to a method instead of providing a lambda expression. They provide a more
+    concise and readable way to write lambda expressions for methods that already
+    exist.
+
+
+    There are four kinds of method references in Java:'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "# Static Method Reference : Syntax: ClassName::staticMethodName Example: Integer::parseInt\
+    \ (equivalent to x -> Integer::parseInt(x))\n\nInstance Method Reference on a\
+    \ Particular Object : Syntax: objectReference::instancMethodName Example: str::length\
+    \ (for a String str, equivalent to x -> x.length())\n\nInstance Method Reference\
+    \ on an Object of a Particular Type : Syntax: ClassName::instancMethodName Example:\
+    \ String::length (equivalent to x -> x.length())\n\nConstructor Reference : Syntax:\
+    \ ClassName::new Example: ArrayList::new (equivalent to () -> new ArrayList<>())\n\
+    \n```\nimport java.util.Arrays;\nimport java.util.List;\nimport java.util.stream.Collectors;\n\
+    \npublic class MethodReferenceExample {\n    public static void main (String []\
+    \ args ) {\n        List<String> strings = Arrays.asList(\"apple\", \"banana\"\
+    , \"cat\", \"dog\");\n\n        // Static method reference\n        List<Integer>\
+    \ lengths = strings.stream()\n            .map(String ::length)\n            .collect(Collectors\
+    \ .toList());\n    }\n}\n```"
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "```\nSystem . out . println ( lengths ); // [5, 6, 3, 3]\n\n// Instance method\
+    \ reference on a particular object\nString str = \"hello\";\nint str = printer\
+    \ ( str :: length );\nSystem . out . println (str); // 5\n\n// Constructor reference\n\
+    List < StringBuilder > builders = strings . stream ()\n    .map ( StringBuilder\
+    \ ::new )\n    .collect ( Collectors .toList ());\nSystem . out . println ( builders\
+    \ ); //[StringBuilder@1db9742, StringBuilder@106d69c, StringBuilder@52e922, StringBuilder@4aa298b7]\n\
+    }\n\nprivate static int printer ( StringFunction f) {\n    return f.getLength();\n\
+    }\n\ninterface StringFunction {\n    int getLength();\n}\n```\n\nIn the example\
+    \ above:"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: 'The map(String::length) uses a method reference to the length() method of the
+    String class to get the length of each string in the list.
+
+
+    The printer(str::length) uses a method reference on a particular object str to
+    call the length() method. The map(StringBuilder::new) uses a constructor reference
+    to create a new StringBuilder instance for each string in the list.
+
+
+    Method references provide a more concise and readable way to write lambda expressions,
+    especially when working with existing methods or constructors. They help reduce
+    code verbosity and improve code readability.
+
+
+    Example: // using static method reference to create a list of String with the
+    length of each string
+
+
+    Solution : Try as below using GitHub Copilot'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "```\npackage org.example.functionalprogramming;\n\nimport java.util.List;\n\
+    \npublic class MethodReferenceExample {\n    public static void main(String[]\
+    \ args) {\n        // create a list of strings with days of week\n        String[]\
+    \ days = {\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"\
+    Friday\", \"Saturday\"};\n\n        // using static method reference to create\
+    \ a list of Integer with the length of each string\n        List<Integer> lengths\
+    \ = List.of(days).stream().map(String::length).toList();\n\n        // print the\
+    \ list\n        System.out.println(\"Lengths: \" + lengths);\n    }\n}\n```\n\n\
+    # Instance method reference and constructor method reference"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# Higher-order functions
+
+
+    In Java, higher-order functions are functions that can either:
+
+
+    Take one or more functions as arguments, or
+
+
+    ![](img/dbebbe5e20d39743ff28c8dae042defc_126_0.png)'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "Return a function as a result.\n\nAlthough Java is an object-oriented language\
+    \ and doesn't have first-class functions like functional programming languages,\
+    \ the introduction of lambda expressions and functional interfaces in Java 8 brought\
+    \ the capability of treating functions as values, enabling higher-order functions.\n\
+    \n```\nimport java.util.function.Function;\n\npublic class HigherOrderExample\
+    \ {\n    public static void main(String[] args) {\n        Function<Integer, Integer>\
+    \ square = x -> x * x;\n        int result = applyOperation(3, square);\n    \
+    \    System.out.println(result); //Output: 9\n    }\n\n    private static int\
+    \ applyOperation(int x, Function<Integer, Integer> operation) {\n        return\
+    \ operation.apply(x);\n    }\n}\n```\n\nIn this example, applyOperation is a higher-order\
+    \ function that takes an integer x and a Function<Integer, Integer> (a functional\
+    \ interface) as arguments. The Function parameter represents a function that takes\
+    \ an integer and returns an integer."
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: "Inside applyOperation, the provided function operation (in this case, square)\
+    \ is called with the argument x, and the result is returned.\n\nNow here's an\
+    \ example of a higher-order function that returns a function:\n\n```\npublic class\
+    \ HigherOrderExample {\n    public static void main(String [] args) {\n      \
+    \  Function <Integer, Function<Integer, Integer>> makePower = x -> y -> (int)\
+    \ Math.pow(y, x);\n        Function <Integer, Integer> square = makePower.apply\
+    \ (2);\n        int result = square.apply (3);\n        System.out.println (result);\
+    \ // Output: 9\n    }\n}\n```\n\nIn this example, makePower is a higher-order\
+    \ function that takes an integer x and returns a Function<Integer, Integer>. The\
+    \ returned function is a lambda expression that takes an integer y and raises\
+    \ it to the power of x using Math.pow.\n\nIn the main method, we call makePower.apply(2),\
+    \ which returns a function that squares its argument (raises it to the power of\
+    \ 2). We store this function in the square variable and then call square.apply(3)\
+    \ to get the result 9."
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: "Higher-order functions enable powerful functional programming techniques in\
+    \ Java, such as function composition, currying, and partial function application.\
+    \ They allow for more expressive and concise code by treating functions as first-class\
+    \ citizens.\n\nUsing Github Copilot in IntelliJ Idea try below\n\n```\npackage\
+    \ org.example.functionalprogramming;\nimport java.util.function.Function;\npublic\
+    \ class HigherOrderFunctionsExample {\n    // Create higher-order function that\
+    \ takes a function as an argument\n    public static Integer apply(Integer input,\
+    \ Function<Integer, Integer> function) {\n        return function.apply(input);\n\
+    \    }\n    public static void main(String[] args) {\n        // Define a function\
+    \ that doubles an integer\n        Function<Integer, Integer> double = x -> x\
+    \ * 2;\n        // Define an input value\n        int input = 5;\n        // Call\
+    \ the higher-order function and pass the function as an argument\n        int\
+    \ result = apply(input, double);\n        // Output the result\n        System.out.println(\"\
+    Result: \" + result);\n    }\n}\n```\n\n# Thank you"
+  merge: -1
+  pgno: 129

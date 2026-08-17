@@ -1,0 +1,343 @@
+- - '#'
+  - Java 开发者 GitHub Copilot 指南
+- - '##'
+  - 什么是 GitHub Copilot
+- - '##'
+  - 历史与演变
+- - '##'
+  - 从记事本到 AI
+- - '##'
+  - Copilot 如何工作
+- - '##'
+  - OpenAI Codex 模型
+- - '##'
+  - 设置与安装
+- - '###'
+  - 安装 IntelliJ IDEA
+- - '##'
+  - 在 IDE 中设置/配置 GitHub Copilot
+- - '###'
+  - 启动 IntelliJ IDEA
+- - '###'
+  - 打开欢迎界面
+- - '###'
+  - 创建新项目
+- - '###'
+  - 选择项目类型
+- - '###'
+  - 配置项目
+- - '###'
+  - 完成
+- - '###'
+  - 等待项目创建
+- - '###'
+  - 开始编码
+- - '##'
+  - Java 中的变量
+- - '##'
+  - Hello World
+- - '##'
+  - 使用 Copilot 创建变量
+- - '###'
+  - 条件语句 (Conditional Statements)
+- - '###'
+  - 循环语句 (Looping Statements)
+- - '###'
+  - 分支语句 (Branching Statements)
+- - '###'
+  - 其他控制流语句 (Other Control Flow Statements)
+- - '##'
+  - java.util 包
+- - '##'
+  - Array List
+- - '###'
+  - ArrayList
+- - '###'
+  - 添加元素
+- - '###'
+  - 创建 ArrayList
+- - '###'
+  - 元素
+- - '###'
+  - ArrayList 方法
+- - '###'
+  - 另一个使用下方屏幕所示高亮注释的示例
+- - '###'
+  - 添加元素
+- - '###'
+  - 创建 ArrayList
+- - '###'
+  - 元素
+- - '###'
+  - 遍历 ArrayList
+- - '##'
+  - HashSet 方法
+- - '###'
+  - HashSet 与哈希
+- - '###'
+  - 移除元素
+- - '##'
+  - LinkedHashSet
+- - '###'
+  - 唯一元素：
+- - '###'
+  - 非同步性：
+- - '###'
+  - TreeSet 方法
+- - '###'
+  - 移除元素
+- - '##'
+  - TreeSet
+- - '###'
+  - '遍历 TreeSet:'
+- - '###'
+  - '创建 TreeSet:'
+- - '###'
+  - 'TreeSet 方法:'
+- - '###'
+  - 添加元素
+- - '###'
+  - 移除元素
+- - '##'
+  - HashMap
+- - '##'
+  - 关于 HashMap 的关键点：
+- - '###'
+  - 键值对：
+- - '###'
+  - 唯一键：
+- - '###'
+  - Null 键和值：
+- - '###'
+  - 无序集合：
+- - '###'
+  - 非同步：
+- - '###'
+  - 性能：
+- - '##'
+  - 实现 Map 接口：
+- - '##'
+  - HashMap
+- - '###'
+  - 'HashMap 方法:'
+- - '##'
+  - LinkedHashMap
+- - '###'
+  - 插入顺序：
+- - '###'
+  - 键值对：
+- - '###'
+  - 唯一键：
+- - '###'
+  - Null 键和值：
+- - '###'
+  - 访问顺序：
+- - '###'
+  - 非同步：
+- - '###'
+  - 性能：
+- - '##'
+  - LinkedHashMap
+- - '##'
+  - 添加键值对
+- - '##'
+  - 键值对
+- - '##'
+  - java.util.LinkedHashMap
+- - '##'
+  - Java 集合实现示例
+- - '##'
+  - TreeMap
+- - '##'
+  - 关于 TreeMap 的关键点：
+- - '###'
+  - 排序的键：
+- - '###'
+  - 键值对：
+- - '###'
+  - 唯一键：
+- - '###'
+  - Null 键和值：
+- - '###'
+  - 非同步：
+- - '###'
+  - 性能：
+- - '###'
+  - 实现 NavigableMap 接口：
+- - '###'
+  - Comparator：
+- - '##'
+  - TreeMap
+- - '##'
+  - 遍历 LinkedHashMap
+- - '##'
+  - 创建 TreeMap：
+- - '##'
+  - 添加键值对
+- - '##'
+  - 通过键访问值：
+- - '##'
+  - 删除键值对
+- - '##'
+  - Java 异常处理
+- - '##'
+  - 什么是 Java 异常？
+- - '##'
+  - 什么是异常处理？
+- - '##'
+  - Java 异常类的层次结构：
+- - '##'
+  - Java 异常的类型：
+- - '###'
+  - 检查异常（Checked Exceptions）：
+- - '###'
+  - 未检查异常（Unchecked Exceptions）：
+- - '##'
+  - 异常处理关键字：
+- - '##'
+  - 使用 Github Copilot 进行异常处理的简单示例
+- - '##'
+  - Finally 块
+- - '###'
+  - 什么是 finally 块？
+- - '###'
+  - 使用 finally 块的场景：
+- - '###'
+  - 让我们通过 GitHub Copilot 查看 finally 块示例
+- - '##'
+  - Java 中的多线程
+- - '###'
+  - 什么是多线程？
+- - '###'
+  - 创建线程：
+- - '####'
+  - 继承 Thread 类：
+- - '####'
+  - 实现 Runnable 接口：
+- - '##'
+  - Thread 类与 Runnable 接口：
+- - '##'
+  - 多线程的优势：
+- - '##'
+  - 通过扩展 Thread 类并在在聊天框中询问 GitHub Copilot 创建线程
+- - '##'
+  - 通过实现 Runnable 接口创建线程
+- - '##'
+  - 练习：使用 GitHub Copilot 编写线程程序以打印线程的基本状态
+- - '##'
+  - 解决方案：尝试以下提示词
+- - '##'
+  - 用于 Java 的 Github copilot 和 Spring Boot 基础
+- - '##'
+  - Java 中的同步
+- - '###'
+  - 同步的目的：
+- - '###'
+  - 同步的类型：
+- - '###'
+  - 线程同步：
+- - '##'
+  - Java 中锁的概念：
+- - '##'
+  - Java Synchronized 方法：
+- - '##'
+  - 示例：
+- - '##'
+  - Java 中的 Executor Framework
+- - '###'
+  - 什么是 Java Executor Framework？
+- - '##'
+  - 为什么要使用 Executor 框架？
+- - '##'
+  - Executor 的类型：
+- - '###'
+  - 线程池的类型
+- - '###'
+  - 固定线程池
+- - '##'
+  - 缓存线程池
+- - '##'
+  - 定时线程池
+- - '###'
+  - a. SingleThreadExecutor
+- - '###'
+  - 'b. FixedThreadPool (n):'
+- - '###'
+  - 'c. CachedThreadPool:'
+- - '###'
+  - 'd. ScheduledExecutor:'
+- - '##'
+  - 使用示例：
+- - '##'
+  - 优势：
+- - '##'
+  - 线程池和 Executor
+- - '##'
+  - 缓存线程池示例
+- - '##'
+  - 回答：
+- - '##'
+  - Java 中的函数式编程
+- - '##'
+  - 让我们探索 Java 中的函数式编程 (FP)。
+- - '##'
+  - 概述：函数式编程是一种将计算视为评估函数的编程范式。
+- - '##'
+  - Lambda 演算
+- - '##'
+  - 编程范式的分类：编程范式大致可分为：
+- - '##'
+  - 编程语言的分类：基于对函数式编程的支持：
+- - '##'
+  - Java（带有 FP 特性）：通过 Java 8+ 特性支持函数式编程
+- - '##'
+  - Java
+- - '###'
+  - 使用 GitHub Copilot 使用 Lambda 表达式
+- - '###'
+  - '箭头运算符 (->):'
+- - '##'
+  - Java
+- - '###'
+  - Lambda 体：
+- - '##'
+  - Java
+- - '###'
+  - 函数式接口：
+- - '##'
+  - Java
+- - '###'
+  - GitHub Copilot Chat
+- - '##'
+  - Java 中的函数式接口
+- - '##'
+  - 单抽象方法是函数式接口的核心特征。
+- - '##'
+  - Lambda 表达式与函数式接口：
+- - '##'
+  - '@FunctionalInterface 注解：'
+- - '##'
+  - 函数式接口的示例：
+- - '##'
+  - 解决方案：
+- - '##'
+  - Java 中的 Streams
+- - '##'
+  - Common Stream 操作：
+- - '##'
+  - Java 中的方法引用（Method references）
+- - '###'
+  - 静态方法引用：语法：`ClassName::staticMethodName` 示例：`Integer::parseInt`（等于 `x -> Integer.parseInt(x)`）
+- - '###'
+  - 特定对象的实例方法引用：语法：`objectReference::instMethodName` 示例：`str::length`（对于一个字符串 `str`，等于
+    `x -> x.length()`）
+- - '###'
+  - 特定类型对象的实例方法引用：语法：`ClassName::instMethodName` 示例：`String::length`（等于 `x -> x.length()`）
+- - '###'
+  - 构造方法引用：语法：`ClassName::new` 示例：`ArrayList::new`（等于 `() -> new ArrayList<>()`
+- - '##'
+  - 实例方法引用和构造方法引用
+- - '##'
+  - 高阶函数（Higher-order functions）
+- - '##'
+  - 感谢
