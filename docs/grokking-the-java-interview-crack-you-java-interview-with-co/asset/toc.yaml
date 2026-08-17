@@ -1,0 +1,476 @@
+- - '#'
+  - Java 面试精要：通过这些问题进行充分准备，自信地通过 Java 面试
+- - '#'
+  - 面向对象编程面试题
+- - '##'
+  - OOP 或 Java 中的什么是方法重载（method overloading）？
+- - '##'
+  - OOP 或 Java 中的什么是方法重写（method overriding）？
+- - '##'
+  - Java 中的方法隐藏（method of hiding）是什么？
+- - '##'
+  - Java 是纯面向对象语言吗？如果不是，为什么？
+- - '##'
+  - Java 中方法重载和重写的规则是什么？
+- - '##'
+  - 方法重载和重写的区别？
+- - '###'
+  - 可以在 Java 中重载所有的静态方法吗？
+- - '###'
+  - 可以在 Java 中重写静态方法吗？
+- - '###'
+  - 可以在不使用 final 修饰符的情况下防止方法重写吗？
+- - '###'
+  - 可以在 Java 中重写私 方法吗？
+- - '##'
+  - Java 中的什么是协变方法重写（covariant method overriding）？
+- - '###'
+  - 在重写时可以将方法的返回类型更改为子类吗？
+- - '###'
+  - 可以更改重写方法的参数列表吗？
+- - '###'
+  - 可以在不使用 throws 子句的情况下重写抛出运行时异常的方法吗？
+- - '###'
+  - 如何调用父类的重写方法版本？
+- - '###'
+  - 在 Java 中可以将非静态方法重写为静态方法吗？
+- - '###'
+  - 可以重写 Java 中的 final 方法吗？
+- - '##'
+  - 接口内部可以有非抽象方法吗？
+- - '##'
+  - Java 8 的默认方法（default method）是什么？
+- - '##'
+  - Java 中什么是抽象类（abstract class）？
+- - '##'
+  - Java 中什么是接口（interface）？接口的真实用途是什么？
+- - '##'
+  - 抽象类和接口的区别是什么？
+- - '##'
+  - 可以在没有抽象方法的情况下让类变成抽象的吗？
+- - '##'
+  - 我们可以让一个类同时是 final 和 abstract 的吗？
+- - '##'
+  - 可以在 Java 中重载或重写 main 方法吗？
+- - '##'
+  - 多态性（Polymorphism）、重载（Overloading）和重写（Overriding）的区别是什么？
+- - '##'
+  - 在 Java 中接口可以扩展多个接口吗？
+- - '##'
+  - 在 Java 中一个类可以扩展多个类吗？
+- - '##'
+  - Java 中抽象（abstraction）和多态性（polymorphism）的区别是什么？
+- - '#'
+  - 面向对象设计原则和模式面试题
+- - '##'
+  - 装饰器模式（Decorator design Pattern）基于什么 OOP 概念？
+- - '##'
+  - 在 Java 中何时使用单例模式（Singleton design pattern）？
+- - '##'
+  - 状态模式（State）和策略模式（Strategy）的区别是什么？
+- - '##'
+  - OOP 中关联（Association）、聚合（Aggregation）和组合（Composition）的区别是什么？
+- - '##'
+  - Java 中装饰器模式（Decorator）、代理模式（Proxy）和适配器模式（Adapter）的区别是什么？
+- - '##'
+  - SOLID 中的 5 个面向对象的设计原则是什么？
+- - '##'
+  - OOP 中组合（Composition）和继承（Inheritance）的区别是什么？
+- - '###'
+  - 1) Java 中 String、StringBuffer 和 StringBuilder 的区别是什么？
+- - '###'
+  - 2) Java 中 extends Thread 和 implements Runnable 有什么区别？
+- - '###'
+  - 3) Java 中 Runnable 接口和 Callable 接口的区别？
+- - '###'
+  - 4) Java 中 ArrayList 和 LinkedList 的区别？
+- - '###'
+  - 5) Java 中 wait 和 notify 的区别是什么？
+- - '###'
+  - 6) Java 中 HashMap 和 Hashtable 的区别？
+- - '###'
+  - 7) Java 中 TreeSet 和 TreeMap 的区别？
+- - '###'
+  - 8) 编写一个 Java 程序打印斐波那契数列？
+- - '###'
+  - 9) 编写一个 Java 程序检查一个数字是否为质数？
+- - '###'
+  - 10) 如何在不使用临时变量的情况下交换数字？
+- - '###'
+  - 11) 如何在 Java 中检查链表是否包含循环？
+- - '###'
+  - 12) 编写 Java 程序在不使用 API 的情况下反转字符串？
+- - '###'
+  - 13) Java 中 Serializable 和 Externalizable 的区别？
+- - '###'
+  - 14) Java 中 transient 和 volatile 的区别？
+- - '###'
+  - 15) 抽象类和接口的区别？
+- - '###'
+  - 16) 关联（Association）、组合（Composition）和聚合（Aggregation）的区别？
+- - '###'
+  - 17) Java 中 FileInputStream 和 FileReader 的区别是什么？
+- - '###'
+  - 18) 在 Java 中如何将字节转换为字符？
+- - '###'
+  - 19) finally 句中可以使用 return 语句吗？会发生什么？
+- - '###'
+  - 20) 在 Java 中可以重写静态方法吗？
+- - '###'
+  - 21) Java 中 private、public、package 和 protected 有什么区别？
+- - '###'
+  - 22) 你在 Java 中学到的 5 个编码最佳实践是什么？
+- - '###'
+  - 23) 编写一个程序找到数组中的最大值最小值？
+- - '###'
+  - 24) 编写一个程序原地反转数组？
+- - '###'
+  - 25) 编写一个程序在 Java 中反转一个数字？
+- - '###'
+  - 26) 编写一个程序在 Java 中计算阶乘？
+- - '###'
+  - 27) 调用 Thread 的 `start()` 方法和 `run()` 方法的区别是什么？
+- - '###'
+  - 28) 编写一个程序在 Java 中解决生产者消费者问题？
+- - '###'
+  - 29) 如何一次遍历找到链表的中间元素？
+- - '###'
+  - 30) Java 中 `equals()` 和 `hashCode()` 有什么区别？
+- - '###'
+  - 31) 为什么 Java 中的 String 是不可变的？
+- - '###'
+  - 32) Java 中的 HashSet 是如何工作的？
+- - '###'
+  - 33) Java 中 `synchronize` 和并发集合（concurrent Collection）有什么区别？
+- - '###'
+  - 34) Java 中 `Iterator` 和 `Enumeration` 有什么区别？
+- - '###'
+  - 35) Java 中重载（Overloading）和重写（Overriding）有什么区别？
+- - '###'
+  - 36) Java 中静态绑定和动态绑定的区别？
+- - '###'
+  - 37) Java 中 Comparator 和 Comparable 的区别是什么？
+- - '###'
+  - 38) 如何按降序排序 ArrayList？
+- - '###'
+  - 39) Java 中 PATH 和 CLSPATH 有什么区别？
+- - '###'
+  - 40) Java 中受检异常（Checked Exception）和未检异常（Unchecked Exception）的区别是什么？
+- - '#'
+  - 多线程与并发面试题
+- - '###'
+  - 1) Java 中的线程（Thread）是什么？
+- - '###'
+  - 2) Java 中线程（Thread）和进程（Process）有什么区别？
+- - '###'
+  - 3) 如何在 Java 中实现线程？
+- - '###'
+  - 4) 在 Java 中何时使用 Runnable 而不是 Thread？
+- - '###'
+  - 6) Thread 类中 start() 方法和 run() 方法有什么区别？
+- - '###'
+  - 7) Java 中 Runnable 和 Callable 有什么区别？
+- - '###'
+  - 8) Java 中 CyclicBarrier 和 CountDownLatch 的区别是什么？
+- - '###'
+  - 9) 什么是 Java 内存模型？
+- - '###'
+  - 10) Java 中的 volatile 变量是什么？
+- - '###'
+  - 11) 什么是线程安全？Vector 是线程安全的类吗？
+- - '###'
+  - 12) Java 中的竞态条件（race condition）是什么？请举一个例子。
+- - '###'
+  - 13) 如何在 Java 中停止线程？
+- - '###'
+  - 14) 当线程发生异常时会发生什么？
+- - '###'
+  - 15) 如何在 Java 两个线程之间共享数据？
+- - '###'
+  - 16) Java 中 notify 和 notifyAll 有什么区别？
+- - '###'
+  - 17) 为什么 wait、notify 和 notifyAll 不在 Thread 类中？
+- - '###'
+  - 18) Java 中的 ThreadLocal 变量是什么？
+- - '###'
+  - 19) Java 中的 FutureTask 是什么？
+- - '###'
+  - 20) Java 中 interrupted() 方法和 isInterrupted() 方法有什么区别？
+- - '###'
+  - 21) 为什么 wait 和 notify 方法要在 synchronized 块（同步块）中调用？
+- - '###'
+  - 22) 为什么你应该在循环中检查等待条件？
+- - '###'
+  - 23) Java 中同步集合（synchronized collection）和并发集合（concurrent collection）有什么区别？
+- - '###'
+  - 24) Java 中栈（Stack）和堆（Heap）有什么区别？
+- - '###'
+  - 25) 什么是线程池？为什么在 Java 中你应该使用线程池？
+- - '###'
+  - 26) 编写代码解决 Java 中的生产者-消费者问题？
+- - '###'
+  - 27) 如何在 Java 中避免死锁？编写代码？
+- - '###'
+  - 28) Java 中活锁（livelock）和死锁（deadlock）有什么区别？
+- - '###'
+  - 29) 如何检查一个线程是否持有锁？
+- - '###'
+  - 32) Java 中 synchronized 和 ReentrantLock 有什么区别？
+- - '###'
+  - 33) 有三个线程 T1、T2 和 T3？如何在 Java 中确保 T1, T2, T3 的执行顺序？
+- - '###'
+  - 34) Thread 类的 yield 方法的作用是什么？
+- - '###'
+  - 35) Java 中 ConcurrentHashMap 的并发级别（concurrency level）是多少？
+- - '###'
+  - 36) Java 中的 Semaphore（信号量）是什么？
+- - '###'
+  - 37) 当线程池队列已满时提交任务会发生什么？
+- - '###'
+  - 38) Java 线程池中 submit() 方法和 execute() 方法有什么区别？
+- - '###'
+  - 40) Swing 是线程安全的？
+- - '###'
+  - 41) Java 中 invoke 和 invokeLater 有区别？
+- - '###'
+  - 42) Java API 的哪些方法是线程安全的？
+- - '###'
+  - 43) 如何在 Java 中创建不可变对象？
+- - '###'
+  - 44) Java 中的 ReadWriteLock 是什么？
+- - '###'
+  - 45) 多线程中的忙旋（busy spin）？
+- - '###'
+  - 46) Java 中 volatile 变量和原子变量（atomic variable）有什么区别？
+- - '###'
+  - 48) 什么是单例的双重锁定（Double Checked Locking）？
+- - '###'
+  - 49) 如何在 Java 中创建单例？
+- - '###'
+  - 50) 请遵循的 3 条线程最佳实践？
+- - '###'
+  - 51) 如何在 Java 中启动一个线程？
+- - '###'
+  - 52) 什么是 fork-join 框架？
+- - '###'
+  - 53) Java 多线程调用 wait() 和 sleep() 方法有什么区别？
+- - '#'
+  - 集合框架（COLLECTION FRAMEWORK）
+- - '###'
+  - 4. 从 Collection 中移除元素？
+- - '###'
+  - 此外，Collection 的 remove() 方法有什么区别？
+- - '###'
+  - 5. 同步集合（Synchronized Collection）和并发集合（Concurrent Collection）有什么区别？
+- - '###'
+  - 6. Iterator（迭代器）和 Enumeration（枚举器）有什么区别？
+- - '###'
+  - 7. Java 中的 HashSet 是如何实现的？
+- - '###'
+  - 8. 如果要在 Map 或 Set 等集合类中自定义对象作为键？
+- - '###'
+  - 9. HashMap 和 Hashtable 有区别？
+- - '###'
+  - 10. 在 Java 中何时使用 ConcurrentHashMap？
+- - '###'
+  - 11. Java 中 Set 和 List 有区别？
+- - '###'
+  - 12. 如何对对象进行排序？
+- - '###'
+  - 13. 什么是 ConcurrentModificationException？
+- - '###'
+  - 14. 为什么 Iterator 有 add() 方法没有？
+- - '###'
+  - 15. Java 中的 NavigableMap 是什么？
+- - '###'
+  - 16. CopyOnWriteArrayList 和 Vector 有区别？
+- - '###'
+  - 17. 我们可以用 ConcurrentHashMap 替换 Hashtable 吗？
+- - '###'
+  - 18. 存储对象时，你会偏向哪个？
+- - '###'
+  - 19. 为什么 List 有 add() 方法没有？
+- - '###'
+  - 20. 迭代时会发生 ConcurrentModificationException？
+- - '###'
+  - 21. Set、List 集合类之间的区别？
+- - '###'
+  - 22. 什么是 BlockingQueue，它有什么区别？
+- - '###'
+  - 23. Java LinkedList 是如何实现的，它是单链还是双链表？
+- - '###'
+  - 24. 你需要加锁吗？
+- - '###'
+  - 25. 什么是 Deque？什么时候使用它？
+- - '#'
+  - 序列化
+- - '###'
+  - 1. 什么是 Serializable 接口？它的目的是？
+- - '###'
+  - 2. Serializable 和 Externalizable 接口有什么区别？
+- - '###'
+  - 3. 什么是 transient 变量？
+- - '###'
+  - 4. 什么是 Java 中的 serialVersionUID？为什么重要？
+- - '###'
+  - 5. Serializable 接口中有多少方法？
+- - '###'
+  - 6. 什么是 Java 中的标记接口？
+- - '###'
+  - 7. 可以在类中添加一个没有实现接口的字段吗？
+- - '###'
+  - 8. 在 Java 中如何序列化对象？
+- - '###'
+  - 9. 序列化是如何工作的？
+- - '###'
+  - 10. 静态变量会被序列化吗？
+- - '###'
+  - 11. Java 中 transient 和 volatile 变量有什么区别？
+- - '###'
+  - 12. 如果父类是序列化的，你可以让子类变为不可序列吗？
+- - '###'
+  - 13. 序列化的其他替代方案？
+- - '#'
+  - JDBC 面题
+- - '###'
+  - 1. 什么是 JDBC？
+- - '###'
+  - 2. Java 中建立 JDBC 连接的主要步骤是什么？
+- - '###'
+  - 3. 数据库中的“脏读（dirty read）”是什么意思？
+- - '###'
+  - 4. 什么是两阶段提交（2 phase commit）？
+- - '###'
+  - 5. Statement 有哪些类型？
+- - '###'
+  - 6. 游标在可滚动结果集（scrollable result set）中是如何工作的？
+- - '###'
+  - 7. 什么是连接池（connection pooling）？
+- - '###'
+  - 8. 冷备份（cold backup）和热备份（hot backup）是指什么？
+- - '###'
+  - 9. JDBC 中的锁定机制（locking system）是什么？
+- - '###'
+  - 10. JDBC-ODBC 桥是否支持多个打开的 Statement？
+- - '#'
+  - Stream
+- - '###'
+  - 2. map() 函数是做什么？为什么要用它？
+- - '###'
+  - 3. filter() 方法是做什么的？什么时候用它？
+- - '###'
+  - 4. flatmap() 函数是做什么的？为什么需要它？
+- - '###'
+  - 5. flatMap() 和 map() 函数之间有什么区别？
+- - '###'
+  - 6. Stream 的中间操作和终端操作之间有什么区别？
+- - '###'
+  - 7. peek() 方法是做什么的？什么时候应该使用它？
+- - '###'
+  - 8. 你说 Stream 是懒的（lazy）是什么意思？
+- - '###'
+  - 9. 什么是 Java 8 中的函数式接口？
+- - '###'
+  - 10. Java 中普通接口和函数式接口的区别是什么？
+- - '###'
+  - 11. findFirst 和 findAny() 方法之间有什么区别？
+- - '###'
+  - 12. 什么是 Predicate 接口？
+- - '###'
+  - 13. 什么是 Supplier 和 Consumer 函数式接口？
+- - '###'
+  - 14. 你可以将数组转换为 Stream 吗？怎么做？
+- - '###'
+  - 15. 什么是并行流（parallel Stream）？如何从 List 获取并行流？
+- - '#'
+  - 设计模式
+- - '###'
+  - 1. 什么是装饰器模式？给出一个示例吗？
+- - '###'
+  - 2. 什么是策略模式？
+- - '###'
+  - 3. 什么是观察者模式？
+- - '###'
+  - 4. 什么是状态模式？
+- - '###'
+  - 5. 什么是组合模式？
+- - '###'
+  - 6. 什么是单例模式？
+- - '###'
+  - 7. 什么是工厂模式？
+- - '###'
+  - 8. 什么是模板模式？
+- - '###'
+  - 9. 什么是工厂模式？
+- - '###'
+  - 10. 什么是装饰器模式？
+- - '###'
+  - 11. 依赖注入模式和构造函数注入？
+- - '###'
+  - 12. 什么是工厂模式？
+- - '###'
+  - 13. 适配器模式？
+- - '###'
+  - 14. 你能写生产者消费者模式吗？
+- - '###'
+  - 15. 什么是 Builder模式？
+- - '###'
+  - 16. 什么是开闭原则？
+- - '###'
+  - 17. 你提供 SOLID 原则的示例吗？
+- - '###'
+  - 18. 抽象（Abstraction）和封装（Encapsulation）有什么区别？
+- - '#'
+  - 垃圾回收
+- - '###'
+  - 1. Java 堆的结构是什么？
+- - '###'
+  - 2. 如何在 Java 中识别 Minor GC 和 Major GC？
+- - '###'
+  - 3. ParNew 新代垃圾器有什么区别？
+- - '###'
+  - 4. 如何调用 `System.gc()` 导致的 GC？
+- - '###'
+  - 5. Serial 和 Throughput 垃圾器有什么区别？
+- - '###'
+  - 6. 对象在 Java 中何时符合垃圾回收？
+- - '###'
+  - 7. Java 中的 finalize 方法是什么？垃圾回收何时调用？
+- - '###'
+  - 8. 如果对象 A 引用对象 B，且对象 B 引用 A 的存活引用，它们符合垃圾回收吗？
+- - '###'
+  - 9. 我们可以随时强制垃圾回收吗？
+- - '###'
+  - 10. JVM 的永久代（permanent generation space）空间会发生回收吗？
+- - '###'
+  - 11. 如何监控回收活动？
+- - '###'
+  - 12. 查看下方的回收输出并回答以下问题
+- - '#'
+  - 泛型
+- - '###'
+  - 4. List<? extends T> 和 List<? super T 有什么区别？
+- - '###'
+  - 5. 如何编写一个接受泛型参数并返回泛类型的方法？
+- - '###'
+  - 6. 如何在 Java 中使用泛型编写类？
+- - '###'
+  - 7. 写一个程序使用泛型实现 LRU 缓存？
+- - '###'
+  - 8. 能否将 List<String> 传递给一个接受 List<Object> 的方法？
+- - '###'
+  - 9. 可以在数组上使用泛型吗？
+- - '###'
+  - 10. 如何在 Java 中抑制未警告（unchecked warning）？
+- - '###'
+  - Java 中 List<Object> 和原始类型 List 的区别？
+- - '###'
+  - Java 中 List<?> 和 List<Object> 的区别？
+- - '###'
+  - List<String> 和原始类型 List 的区别。
+- - '#'
+  - 附录
+- - '##'
+  - 我破解 Java 面试的最爱技巧
+- - '#'
+  - 索引
