@@ -1,0 +1,902 @@
+- - '#'
+  - 企业级 Java
+- - '#'
+  - 献词
+- - '#'
+  - 前言
+- - '#'
+  - 致谢
+- - '##'
+  - 1.1.2 企业级应用开发的挑战
+- - '##'
+  - 1.2 什么是企业级 Java (JEE)？
+- - '##'
+  - 1.3 Java EE 技术
+- - '###'
+  - 1.3.1 Java Servlet API
+- - '##'
+  - 2. JavaServer Pages 技术
+- - '##'
+  - 3. JavaServer Pages Tag Library
+- - '#'
+  - 理解 Java EE
+- - '###'
+  - '5. 元元素 (Facets) '
+- - '##'
+  - 1.3.2 企业级应用技术
+- - '##'
+  - Java 事务 API (JTA)
+- - '##'
+  - J2EE 连接器架构 (J2EE Connector Architecture)
+- - '##'
+  - 1.3.3 Web 服务技术
+- - '###'
+  - 1. SOAP 和 RESTful
+- - '###'
+  - 2. Java XML 处理 API (JAXP)
+- - '###'
+  - 3. Java XML 注册表 API (JAXR)
+- - '##'
+  - 1.3.4 安全技术
+- - '##'
+  - 1.4 EE 演进
+- - '##'
+  - '1.4.1 Java EE 8: 关键特性、规范'
+- - '##'
+  - Java EE 8 平台
+- - '##'
+  - MVC 1.0
+- - '##'
+  - JSON Binding 1.0
+- - '##'
+  - 了解 Java EE
+- - '##'
+  - Java EE Security API 1.0
+- - '##'
+  - Java EE Management API 2.0
+- - '##'
+  - JAX-RS 2.1
+- - '##'
+  - Enterprise Java (T.Y.B.Sc.-I.T.) (Sem-I.T.)
+- - '###'
+  - JSF 2.3
+- - '##'
+  - JMS 2.1
+- - '##'
+  - Java API for JSON Processing 1.1
+- - '##'
+  - Java API for WebServlet 1.1
+- - '##'
+  - GlassFish 5.0
+- - '##'
+  - 1.5.1 GlassFish 服务器特性
+- - '##'
+  - 题目
+- - '#'
+  - 第一单元
+- - '#'
+  - JAVA EE 架构、服务器与容器
+- - '##'
+  - 2.1 体系架构的类型
+- - '###'
+  - 2.1.1 单层架构
+- - '###'
+  - 优点
+- - '###'
+  - 缺点
+- - '###'
+  - 2.1.2 两层架构
+- - '###'
+  - 优点
+- - '###'
+  - 缺点
+- - '###'
+  - 2.1.3 三层架构
+- - '###'
+  - 优点
+- - '###'
+  - 缺点
+- - '###'
+  - 2.1.4 多层架构
+- - '###'
+  - 缺点
+- - '###'
+  - Web 客户端 (Web Clients)：Web 客户端包含
+- - '###'
+  - 2.1.5.2 Web 节点 (The Web Tier)
+- - '###'
+  - 2.1.5.3 业务层 (The Business Tier)
+- - '###'
+  - 2.1.5.4 企业信息系统层 (The Enterprise Information Systems Tier)
+- - '##'
+  - 2.3 Java EE 容器 (Java EE Containers)
+- - '##'
+  - 2.3.1 容器服务 (Container Services)
+- - '##'
+  - 2.3.2 容器类型 (Container Types)
+- - '###'
+  - 2.3.2.1 企业级容器 (EJB) 容器
+- - '###'
+  - 2.3.2.2 Web 容器 (Web Container)
+- - '###'
+  - 2.3.2.3 应用程序客户端容器 (Application Client Container)
+- - '###'
+  - 2.3.2.4 Applet 容器 (Applet Container)
+- - '#'
+  - 问题
+- - '#'
+  - 章节
+- - '#'
+  - 第一单元
+- - '#'
+  - JAVA Servlet 导论
+- - '##'
+  - 3.1 什么是 Web 设计？
+- - '##'
+  - 3.2 什么是 Web 应用程序？
+- - '##'
+  - 3.3 什么是客户端？
+- - '##'
+  - 3.4 Web 应用程序的类型和优点？
+- - '###'
+  - 3.4.1 静态网站
+- - '###'
+  - 3.4.2 静态网站的应用领域
+- - '###'
+  - 3.4.3 动态网站 / 动态内容的需求
+- - '###'
+  - 3.4.4 动态网站的应用领域
+- - '##'
+  - 3.5 通用网接口 (CGI)
+- - '#'
+  - 缺点
+- - '#'
+  - CGI 的替代
+- - '##'
+  - 3.6 Java Servlet 技术
+- - '###'
+  - 3.6.1 什么是 Servlet？
+- - '##'
+  - 3.6.2 Servlet 服务器
+- - '##'
+  - 3.6.3 Servlet 客户端
+- - '##'
+  - 3.6.4 Servlet 容器
+- - '##'
+  - 3.6.5 Servlet 收益 / 优势
+- - '##'
+  - 3.6.6 Servlet 如何工作
+- - '##'
+  - 4.2 javax.servlet 包
+- - '###'
+  - 4.2.1 Servlet 接口 (javax.servlet.Servlet)
+- - '####'
+  - 方法
+- - '###'
+  - 4.2.2 ServletContext 接口 (javax.servlet.ServletContext)
+- - '####'
+  - 方法
+- - '###'
+  - 4.2.3 ServletConfig 接口
+- - '####'
+  - Servlet API 与生命周期
+- - '####'
+  - 方法
+- - '###'
+  - 4.2.4 HttpServletRequest 接口 (javax.servlet.http)
+- - '####'
+  - 方法
+- - '###'
+  - 4.2.5 ServletResponse 接口 (javax.servlet.ServletResponse)
+- - '###'
+  - 方法
+- - '###'
+  - 4.2.6 GenericServlet (javax.servlet.GenericServlet)
+- - '###'
+  - 构造函数
+- - '###'
+  - 方法
+- - '###'
+  - 4.2.7 ServletInputStream 类 (javax.servlet.ServletInputStream)
+- - '###'
+  - 构造函数
+- - '###'
+  - 方法
+- - '###'
+  - 4.2.8 ServletOutputStream 类 (javax.servlet.ServletOutputStream)
+- - '###'
+  - 构造函数
+- - '###'
+  - 方法
+- - '###'
+  - 4.2.9 RequestDispatcher 接口
+- - '###'
+  - 方法
+- - '###'
+  - 4.2.10 Filter 接口 (javax.servlet.Filter)
+- - '###'
+  - 方法
+- - '##'
+  - Servlet API 生命周期
+- - '###'
+  - 4.2.11 FilterChain 接口 (javax.servlet.FilterChain)
+- - '###'
+  - 方法
+- - '###'
+  - 4.2.12 FilterConfig 接口 (javax.servlet.FilterConfig)
+- - '###'
+  - 方法
+- - '###'
+  - 4.2.13 ReadListener 接口 (javax.servlet.ReadListener)
+- - '###'
+  - 方法
+- - '###'
+  - 4.2.14 WriteListener 接口 (javax.servlet.WriteListener)
+- - '###'
+  - 方法
+- - '##'
+  - 4.3 javax.servlet.http
+- - '###'
+  - 4.3.1 HttpServlet 类 (javax.servlet.http)
+- - '###'
+  - 构造函数
+- - '###'
+  - 方法
+- - '###'
+  - 4.3.2 HttpServletRequest 接口 (javax.servlet.http.HttpServletRequest)
+- - '###'
+  - 方法
+- - '###'
+  - 4.3.3 HttpServletResponse 接口 (javax.servlet.http.HttpServletResponse)
+- - '###'
+  - 方法
+- - '###'
+  - 4.3.4 HttpSession Interface (javax.servlet.http.HttpSession)
+- - '###'
+  - 方法
+- - '###'
+  - 4.3.5 Cookie (javax.servlet.http.Cookie)
+- - '###'
+  - Constructor
+- - '###'
+  - 方法
+- - '###'
+  - 4.3.6 Part Interface (javax.servlet.http.Part)
+- - '###'
+  - 方法
+- - '###'
+  - 4.3.7 WebConnection 接口 (javax.servlet.http.WebConnection)
+- - '###'
+  - 方法
+- - '##'
+  - 4.4 javax.servlet.annotation
+- - '###'
+  - '**什么是注解？**'
+- - '###'
+  - 4.4.1 WebServlet 注解 (javax.servlet.annotation.WebServlet)
+- - '###'
+  - 注解
+- - '###'
+  - 4.4.2 WebFilter 注解 (javax.servlet.annotation.WebFilter)
+- - '###'
+  - 注解
+- - '###'
+  - 4.4.3 WebListener 注解 (javax.servlet.annotation.WebListener)
+- - '###'
+  - 注解
+- - '###'
+  - 4.4.4 WebInitParam 注解 (javax.servlet.annotation.WebInitParam)
+- - '###'
+  - 注解
+- - '###'
+  - 4.4.5 MultipartConfig 注解 (javax.servlet.annotation.MultipartConfig)
+- - '###'
+  - 注解
+- - '##'
+  - 4.5 SERVLET 骨架
+- - '##'
+  - 4.6 SERVLET 生命周期
+- - '###'
+  - 4.6.1 init()
+- - '###'
+  - 4.6.2 service()
+- - '###'
+  - 4.6.3 destroy()
+- - '#'
+  - 章节
+- - '#'
+  - 第一单元
+- - '#'
+  - SERVLET 的使用
+- - '##'
+  - 5.1 什么是 Web 应用程序？
+- - '##'
+  - 5.2 Web 应用程序的结构（目录结构）
+- - '##'
+  - 5.3 使用 GlassFish 创建
+- - '##'
+  - 5.4 创建 Servlet
+- - '##'
+  - 5.5 部署符文件
+- - '##'
+  - 使用 Servlets
+- - '##'
+  - 5.6 使用注解代替部署符
+- - '##'
+  - 问题
+- - '#'
+  - 第 6 章 第一单元
+- - '##'
+  - 数据库操作
+- - '##'
+  - 6.1 什么是 JDBC?
+- - '###'
+  - 6.1.1 JDBC 驱动程序
+- - '###'
+  - 缺点
+- - '###'
+  - 优点
+- - '###'
+  - 6.1.2 JDBC 的优势
+- - '###'
+  - 6.1.3 理解 JDBC 架构
+- - '###'
+  - 6.1.4 数据库连接步骤（配置）
+- - '###'
+  - 6.1.7 RowSet
+- - '##'
+  - 6.8 JDBC 元数据 (Metadata)
+- - '##'
+  - 6.2 JDBC - 事务 (Transactions)
+- - '###'
+  - 6.2.1 提交与回滚 (Commit & Rollback)
+- - '###'
+  - 6.2.2 使用保存点 (Savepoints)
+- - '#'
+  - 企业级 Java (T.B.S.-I.T.) (五学期)
+- - '##'
+  - 7.2.1 Include()
+- - '##'
+  - 7.2.2 forward()
+- - '##'
+  - 7.2.3 forward() 与 include() 方法的区别
+- - '##'
+  - 7.2.4 RequestDispatcher 应用
+- - '##'
+  - 问题
+- - '#'
+  - 第 8 章
+- - '#'
+  - 第二单元 - COOKIES（Cookie）
+- - '##'
+  - 8.1 简介
+- - '##'
+  - 8.2 Cookies 的种类
+- - '###'
+  - 8.2.1 Session（会话）/ Persistent（持久性）Cookies
+- - '###'
+  - 8.2.2 Persistent Cookies（持久性 Cookie）
+- - '###'
+  - 8.2.3 Third Party Cookies（第三方 Cookie）
+- - '##'
+  - 8.3 Cookie 在哪里使用？
+- - '##'
+  - Cookie 存放在哪里？
+- - '##'
+  - 8.4 使用 servlet 创建 Cookie
+- - '###'
+  - 8.4.1 使用 Cookie
+- - '###'
+  - I. 创建 Cookie 构造函数
+- - '###'
+  - II. 设置并发送 Cookie
+- - '###'
+  - III. 从浏览器读取 Cookie
+- - '###'
+  - IV. Cookie 过期
+- - '###'
+  - V. 移除 Cookie
+- - '#'
+  - 第 9 章
+- - '#'
+  - 第二单元
+- - '#'
+  - 章节
+- - '##'
+  - 9.1 什么是会话（Session）？
+- - '##'
+  - 9.1 如何 HTTP 会话是如何过期的？
+- - '##'
+  - 9.1.2 什么是会话 ID（Session ID）？
+- - '##'
+  - 9.1.3 HTTP 会话的生命周期
+- - '##'
+  - 9.1.4 会话管理规则
+- - '##'
+  - 9.2 使用 Servlet API 进行会话跟踪
+- - '###'
+  - 9.2.1 会话跟踪方法
+- - '###'
+  - I. Cookies
+- - '###'
+  - 优点
+- - '###'
+  - 缺点
+- - '###'
+  - II. 隐藏表单 (Hidden form)
+- - '###'
+  - 隐藏表单的优缺点
+- - '###'
+  - III. URL 重写 (URL Rewriting)
+- - '###'
+  - URL 重写的优点
+- - '###'
+  - URL 重写的缺点
+- - '###'
+  - IV. HttpSession
+- - '###'
+  - 9.2.2 理解 JESSIONID Cookie
+- - '###'
+  - 9.2.3 安全层 (SSL)
+- - '###'
+  - 9.2.4 会话操作
+- - '##'
+  - 创建会话
+- - '##'
+  - 使会话失效
+- - '##'
+  - 问题
+- - '##'
+  - 章节
+- - '##'
+  - 第二单元
+- - '##'
+  - 文件操作
+- - '##'
+  - 10.1 上传文件
+- - '#'
+  - 处理文件
+- - '##'
+  - 10.2 下载文件
+- - '###'
+  - 10.2.1 直接链接
+- - '###'
+  - 10.2.2 间接链接
+- - '#'
+  - 第 11 章
+- - '#'
+  - 非阻塞 I/O
+- - '##'
+  - 11.1 引入
+- - '##'
+  - 11.2 它是工作的？
+- - '##'
+  - 11.3 设置 Listener
+- - '##'
+  - 问题
+- - '#'
+  - 第 12 章
+- - '#'
+  - 第三单元
+- - '#'
+  - Java 服务器页面 (JAVASER PAGES)
+- - '##'
+  - 12.1 简介
+- - '##'
+  - 12.2 为什么要使用 Javaserver Pages？
+- - '###'
+  - 12.2.1 JSP 相比 servlet 的优势
+- - '##'
+  - JSP 相比 Servlets 的缺点
+- - '##'
+  - JSP vs. Servlets
+- - '##'
+  - 12.4 JSP 页生命周期
+- - '##'
+  - 12.5 JSP 是如何工作的？
+- - '##'
+  - 12.6 JSP 是如何执行的？
+- - '##'
+  - 12.7 关于 JavaServer Pages 2.3
+- - '#'
+  - 第 13 章
+- - '#'
+  - 第三单元
+- - '#'
+  - 上手 JAVASER PAGES
+- - '##'
+  - 13.1 注释
+- - '##'
+  - 13.2 文档
+- - '##'
+  - 13.3 元素
+- - '###'
+  - 13.3.1 指令
+- - '###'
+  - 13.3.2 include 指令
+- - '###'
+  - 13.3.3 taglib 指令
+- - '###'
+  - 13.3.2 脚本元素
+- - '##'
+  - 入门 JavaServer Pages
+- - '##'
+  - II. 脚本段 (Scriptlets)
+- - '###'
+  - III. 声明 (Declarations)
+- - '##'
+  - 13.4 基于 XML 的 JSP
+- - '#'
+  - 第 14 章
+- - '#'
+  - 第三单元
+- - '#'
+  - 动作元素 (ACTION ELEMENTS)
+- - '##'
+  - 14.1 介绍
+- - '##'
+  - 14.2 包含文件
+- - '##'
+  - 14.3 将 JSP 页面转发到另一个页面
+- - '##'
+  - 14.4 为动作传递参数
+- - '##'
+  - 14.5 加载 JavaBean
+- - '###'
+  - 14.5.1 向 JSP 页面添加 Bean
+- - '###'
+  - 14.5.2 设置 Bean 的属性
+- - '###'
+  - 14.5.3 访问 Bean 的属性
+- - '##'
+  - 14.6 JSP:plugin 动作
+- - '##'
+  - 14.7 JSP:text 动作
+- - '##'
+  - 习 (QUESTIONS)
+- - '#'
+  - 第 15 章
+- - '#'
+  - 第三单元
+- - '##'
+  - 隐式对象、作用域与 EL表达式
+- - '##'
+  - 15.1 隐式对象
+- - '###'
+  - 15.1.2 响应对象 (Response Object)
+- - '###'
+  - 15.1.3 对象 (The Object)
+- - '###'
+  - 15.1.4 Session 对象 (The session Object)
+- - '###'
+  - 15.1.5 应用对象 (The Application Object)
+- - '###'
+  - 15.1.6 Config 对象 (The Config object)
+- - '###'
+  - 15.1.7 pageContext 对象
+- - '###'
+  - 15.1.8 page 对象
+- - '###'
+  - 15.1.9 Exception 对象
+- - '##'
+  - 15.2 作用范围 (Scope)
+- - '###'
+  - 15.2.1 页面作用范围 (Page Scope)
+- - '###'
+  - 15.2.2 请求作用范围 (Request Scope)
+- - '###'
+  - 15.2.3 会话作用范围 (Session Scope)
+- - '###'
+  - 15.2.4 应用作用范围 (Application Scope)
+- - '##'
+  - 15.3 字符转义约定
+- - '##'
+  - 15.4 统一表达式语言 [EL]
+- - '###'
+  - 15.4.1 统一 EL 语法
+- - '###'
+  - 15.4.1.1 立即评估
+- - '###'
+  - 15.4.1.2 延迟评估
+- - '##'
+  - 15.4.2 表达式类型
+- - '###'
+  - 15.4.2.1 值表达式
+- - '###'
+  - 15.4.2.2 方法表达式
+- - '##'
+  - 15.4.3 使用 EL 表达式
+- - '##'
+  - 15.4.4 字面量
+- - '###'
+  - 15.4.5.3 关系运算符
+- - '###'
+  - 15.4.5.4 条件运算符
+- - '###'
+  - 15.4.5.5 . [点] 和 [ ] 运算符
+- - '###'
+  - 15.4.4.5 Empty 运算符
+- - '###'
+  - 15.4.4.6 隐式对象
+- - '##'
+  - EL 隐式对象
+- - '##'
+  - 15.5 表达式语言 3.0
+- - '###'
+  - 15.5.1 Lambda 表达式
+- - '###'
+  - 15.5.2 集合
+- - '###'
+  - 15.5.3 使用方法进行集合操作
+- - '###'
+  - 15.5.1 运算符表示法
+- - '##'
+  - 2. 投影运算符 (Projection Operators)
+- - '##'
+  - 3. 分区运算符 (Partitioning Operators)
+- - '##'
+  - 4. 拼接运算符 (Concatenation Operator)
+- - '##'
+  - 5. 集合运算符 (Set Operators)
+- - '##'
+  - 隐式对象、作用域与 EL 表达式
+- - '##'
+  - 15.5.4 静态字段和方法
+- - '##'
+  - 15.5.5 独立 EL
+- - '###'
+  - 15.5.1 定义 Bean
+- - '###'
+  - 15.5.2 变量
+- - '###'
+  - 15.5.3 评估表达式
+- - '#'
+  - 第 16 章
+- - '##'
+  - 16.1 绪言
+- - '##'
+  - 16.2 企业 Bean架构
+- - '###'
+  - 16.2.1 请求与响应
+- - '###'
+  - 16.2.2 企业 Bean 服务器
+- - '###'
+  - 16.2.3 企业 Bean
+- - '###'
+  - 16.2.4 容器
+- - '###'
+  - 16.2.5 Enterprise Bean 客户端
+- - '##'
+  - 16.3 Enterprise Bean 的优势
+- - '##'
+  - 16.4 Enterprise Bean 的类型
+- - '###'
+  - 16.4.1 Session Bean
+- - '###'
+  - 16.4.1.1 Session Bean 的类型
+- - '###'
+  - 16.4.2 消息驱动 Bean (Message Driven Beans)
+- - '##'
+  - 16.5 访问 Enterprise Bean
+- - '###'
+  - 16.5.1 Enterprise Bean 客户端
+- - '##'
+  - 16.6 Enterprise Bean 应用程序
+- - '##'
+  - 16.7 打包 Enterprise Beans
+- - '###'
+  - 16.7.1 在 EJB JAR 模块中打包 Enterprise Beans
+- - '###'
+  - 16.7.2 在 WAR 模块中打包 Enterprise Beans
+- - '##'
+  - QUESTIONS
+- - '#'
+  - 第 18 章
+- - '##'
+  - 第四单元 - SESSION BEANS 的使用
+- - '##'
+  - 18.1 引言
+- - '###'
+  - 18.1.1 何时使用会话豆
+- - '##'
+  - 18.2 会话豆的类型
+- - '###'
+  - 18.2.1 无状态会话豆
+- - '###'
+  - 18.2.2 有状态会话豆
+- - '###'
+  - 18.2.3 单例会话豆
+- - '##'
+  - 18.3 远程和本地接口
+- - '###'
+  - 18.3.1 无接口视图 [本地接口]
+- - '##'
+  - 18.4 访问无接口视图
+- - '###'
+  - 18.4.2 访问本地业务接口
+- - '###'
+  - 18.4.3 访问远程业务接口
+- - '##'
+  - 18.5 企业级 Bean 的生命周期
+- - '###'
+  - 18.5.1 有状态会话 Bean
+- - '###'
+  - 18.5.2 无状态会话 Bean
+- - '###'
+  - 18.5.3 单例会话 Bean
+- - '##'
+  - 18.6 打包企业级 Bean
+- - '###'
+  - 18.6.1 在 EJB JAR 模块中
+- - '###'
+  - 18.6.2 在 WAR 模块中
+- - '##'
+  - 18.7 使用会话 Bean
+- - '###'
+  - 18.7.1 消息驱动 Bean 的生命周期
+- - '###'
+  - 18.7.2 onMessage(Message) 方法
+- - '##'
+  - 与 Session Bean 操作
+- - '##'
+  - 18.7.3 消息驱动 bean 的用途
+- - '#'
+  - 第 17 章
+- - '##'
+  - 第四单元：企业级 JavaBeans（Enterprise JavaBeans）
+- - '##'
+  - 17.1 引言
+- - '##'
+  - 17.2 企业 Bean架构
+- - '###'
+  - 17.2.1 请求与响应
+- - '###'
+  - 17.2.2 企业 Bean 服务器
+- - '###'
+  - 17.2.3 企业 Bean
+- - '###'
+  - 17.2.4 容器
+- - '###'
+  - 17.2.5 Enterprise Bean 客户端
+- - '##'
+  - 17.3 Enterprise Bean 的优势
+- - '##'
+  - 17.4 Enterprise Bean 的类型
+- - '###'
+  - 17.4.1 Session Bean
+- - '###'
+  - 17.4.1.1 Session Bean 的类型
+- - '###'
+  - 17.4.2 消息驱动 Bean (Message Driven Beans)
+- - '##'
+  - 17.5 访问 Enterprise Bean
+- - '###'
+  - 17.5.1 Enterprise Bean 客户端
+- - '##'
+  - 17.6 Enterprise Bean 应用程序
+- - '##'
+  - 17.7 打包 Enterprise Beans
+- - '#'
+  - 第 19 章
+- - '##'
+  - 第四单元 - 拦截器 (INTERCEPTORS)
+- - '##'
+  - 19.1 简介
+- - '##'
+  - 19.2 请求
+- - '##'
+  - 19.3 定义拦截器
+- - '##'
+  - 19.4 AroundInvoke
+- - '##'
+  - 19.5 拦截器的生命周期
+- - '##'
+  - 19.6 命名服务 (JNDI)
+- - '##'
+  - 19.7 命名服务？
+- - '##'
+  - 19.8 命名服务？
+- - '##'
+  - 19.9 命名接口 (JNDI)
+- - '###'
+  - 19.9.1 查找
+- - '##'
+  - 19.10 资源
+- - '###'
+  - 19.10.1 资源注入
+- - '##'
+  - 19.11 Java EE 7 中的资源
+- - '#'
+  - 第 20 章
+- - '##'
+  - V单元
+- - '##'
+  - 20.1 引言
+- - '##'
+  - 20.2 什么是持久化？
+- - '##'
+  - 20.3 Java持久化
+- - '##'
+  - 20.4 实体（Beans）
+- - '##'
+  - 20.5 为什么需要持久化？
+- - '##'
+  - 20.6 对象/关系映射
+- - '###'
+  - 20.6.1 阻抗差异（Impedance Mismatch）
+- - '###'
+  - 20.6.2 如何一个映射到另一个？
+- - '###'
+  - 20.6.3 阻抗差异的解决方案
+- - '##'
+  - 20.6.4 什么是对象映射 (ORM)?
+- - '##'
+  - 20.6.5 Java持久化 API (JPA)
+- - '#'
+  - 第二十一章
+- - '##'
+  - 第五单元
+- - '##'
+  - Java Persistence API 简介
+- - '##'
+  - 21.1 Java持久化 API
+- - '##'
+  - 21.2 JPA、ORM、数据库与应用程序
+- - '##'
+  - 21.3 持久化
+- - '###'
+  - 21.3.1 持久化
+- - '###'
+  - 21.3.2 EntityManagerFactory
+- - '###'
+  - 21.3.3 EntityManager
+- - '###'
+  - 21.3.4 Entity
+- - '###'
+  - 21.3.5 EntityTransaction
+- - '###'
+  - 21.3.5 Query
+- - '###'
+  - 21.3.6 Criteria
+- - '##'
+  - 21.4 JPA 是如何工作的？
+- - '###'
+  - 一个 ORM 工具
+- - '###'
+  - JPA
+- - '##'
+  - 21.5 持久化
+- - '###'
+  - 21.5.3 Schema 生成 (Schema Generation)
+- - '###'
+  - 21.5.4 使用 Criteria 进行批量更新 (Bulk Updates)
+- - '###'
+  - 21.5.5 JPQL 中的函数 (Functions)
+- - '###'
+  - 21.5.6 JPQL 中的向下转换 (Downcasting)
+- - '###'
+  - 21.5.7 使用 ON JOIN 条件
+- - '###'
+  - 21.5.8 使用 CDI 的实体监听器 (Entity Listeners)
+- - '###'
+  - 21.5.9 动态定义的命名查询
+- - '#'
+  - 第 22 章
+- - '##'
+  - 单元 - V Hibernate导论
+- - '##'
+  - 22.1 什么是 Hibernate？
+- - '###'
+  - 特性
+- - '##'
+  - 22.2 为什么选择 Hibernate?
+- - '##'
+  - 22.3 Hibernate、数据库与应用程序
+- - '##'
+  - 22.4 Hibernate 的组件
+- - '##'
+  - 22.5 Hibernate 架构
+- - '##'
+  - 22.6 Hibernate 如何工作？
+- - '##'
+  - 22.7 Hibernate.cfg.xml
