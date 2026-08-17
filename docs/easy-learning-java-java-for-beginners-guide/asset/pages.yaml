@@ -1,0 +1,4025 @@
+- img_proc: true
+  md: '# # Easy Learning
+
+
+    # # Java
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_0_0.png)
+
+
+    Java for Beginner''s Guide'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Easy Learning Java
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_1_0.png)
+
+
+    YANG HU
+
+
+    The complexity of life, because they do not understand to simplify the complex,
+    to simplify the complexity, simple is the beginning of wisdom.
+
+
+    From the essence of practice, to briefly explain the concept, and vividly cultivate
+    programming interest, this book deeply analyzes Java object-oriented programming,
+    combined with the use of scene interpretation in practice, to experience the fun
+    of programming.
+
+
+    http://en.verejava.com
+
+
+    Copyright © 2019 Yang Hu
+
+    All rights reserved.
+
+    ISBN: 9781091940338
+
+
+    # CONTENTS
+
+
+    +   1. Java JDK installation
+
+    2. Eclipse installation
+
+    3. Basic concepts of Java'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '+   3.1 HelloWorld detailed explanation
+
+
+    +   3.2 Identifier
+
+
+    +   3.3 Variable
+
+
+    +   3.4 Basic data types
+
+
+    +   3.5 Constant
+
+
+    +   3.6 Data type conversion
+
+
+    +   4. Java Operators
+
+
+    +   4.1 Arithmetic operator
+
+
+    +   4.2 Assignment operator
+
+
+    +   4.3 Relational operator
+
+
+    +   4.4 Logical Operators
+
+
+    +   4.5 Trinocular Operator
+
+
+    +   5. Java Statement
+
+
+    +   5.1 If statements
+
+
+    +   5.2 Switch statement
+
+
+    +   5.3 While loop statement
+
+
+    +   5.4 Do while loop
+
+
+    +   5.5 For loop statement
+
+
+    +   6. Java array
+
+
+    +   6.1 One-dimensional array
+
+
+    +   6.2 One-dimensional array append element
+
+
+    +   6.3 One-dimensional array remove elements
+
+
+    +   6.4 Bubble sort algorithm
+
+
+    +   6.5 Two-dimensional array
+
+
+    +   6.6 Examples: Minesweeper
+
+
+    +   7. Java Object-Oriented
+
+
+    +   7.1 Encapsulation'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '+   7.2 Methods Encapsulation
+
+
+    +   7.3 Construction method
+
+
+    +   7.4 Method overload
+
+
+    +   7.5 Passed by reference
+
+
+    +   7.6 Static keyword
+
+
+    +   7.7 Code block
+
+
+    +   7.8 Inheritance
+
+
+    +   7.9 Method override
+
+
+    +   7.10 abstract class
+
+
+    +   7.11 instanceof
+
+
+    +   7.12 interface
+
+
+    +   7.13 final
+
+
+    +   7.14 enum
+
+
+    +   7.15 Polymorphism
+
+
+    +   7.16 Polymorphic Example
+
+
+    +   7.17 Internal class
+
+
+    +   7.18 Static internal class
+
+
+    +   7.19 Basic data wrap class
+
+
+    +   7.20 Anonymous inner class
+
+
+    +   7.21 package
+
+
+    +   8. Multithreading
+
+
+    +   8.1 Thread
+
+
+    +   8.2 Runnable
+
+
+    +   9. Exception
+
+
+    +   9.1 Runtime exception
+
+
+    +   9.2 Compile-time exception
+
+
+    +   9.3 finally'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '+   10. String
+
+    10.1 String assignment and comparison
+
+    10.2 Byte and string conversion
+
+    10.3 String judgment operation
+
+    10.4 String replacement
+
+    10.5 String search and cut
+
+    10.6 String split'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   10.7 StringBuffer and StringBuilder
+
+
+    +   11. Common class library
+
+
+    +   11.1 Arrays
+
+
+    +   11.2 Calandar
+
+
+    +   11.3 Date
+
+
+    +   11.4 Math
+
+
+    +   11.5 Comparable
+
+
+    +   11.6 Comparator
+
+
+    +   11.7 Random
+
+
+    +   11.8 Timer TimerTask
+
+
+    +   12. Collection data structure
+
+
+    +   12.1 List and ArrayList
+
+
+    +   12.2 LinkedList
+
+
+    +   12.3 Iterator
+
+
+    +   12.4 Vector
+
+
+    +   12.5 Collections
+
+
+    +   12.6 Set HashSet TreeSet
+
+
+    +   12.7 Map HashMap Hashtable
+
+
+    +   12.8 Map user login example
+
+
+    +   12.9 Stack
+
+
+    +   12.10 Generic
+
+
+    +   12.11 Generic Housing rental example
+
+
+    +   12.12 Generic about school examples
+
+
+    +   13. File IO
+
+
+    +   13.1 File
+
+
+    +   13.2 File and Folder'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '+   13.3 FileInputStream reads a file
+
+
+    +   13.4 FileOutputStream writes to a file
+
+
+    +   13.5 FileWriter writes characters
+
+
+    +   13.6 FileReader reads files as characters
+
+
+    +   13.7 InputStreamReader byte to character stream
+
+
+    +   13.8 File copy
+
+
+    +   14. Java network programming
+
+
+    +   14.1 TCP protocol
+
+
+    +   14.2 UDP protocol
+
+
+    # Java JDK installation
+
+
+    +   1. Download the JDK ( Java development kit )
+
+
+    https://drive.google.com/open?id=181nylTxnl0o2TmBTQ4I7ndDaa-HFFe
+
+
+    There are 3 JDK versions. We use jdk-6u45-windows-i586.zip as an example.
+
+
+    jdk-6u45-windows-i586.zip
+
+
+    jdk-7u79-windows-x64.zip
+
+
+    jdk-8u91-windows-x64.zip
+
+
+    +   2. Install the JDK development kit
+
+
+    Unzip jdk-6u45-windows-i586.zip
+
+
+    Click jdk-6u45-windows-i586.exe all to the next step to complete the installation.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Java(TM) SE Development Kit 6 Update 45 - Setup
+
+
+    Welcome to the Installation Wizard for Java™ SE Development Kit 6 Update 45
+
+
+    This wizard will guide you through the installation process for the Java SE Development
+    Kit 6 Update 45.
+
+
+    Installation path: C:\Program Files (x86)\Java\jdk1.6.0_45_
+
+
+    # Java(TM) SE Development Kit 6 Update 45 - Custom Setup
+
+
+    Custom Setup
+
+    Select the program features you want installed.
+
+
+    Select optional features to install from the list below. You can change your choice
+    of features after installation by using the Add/Remove Programs utility in the
+    Control Panel
+
+
+    | Feature Description |
+
+    | Java(TM) SE Development Kit 6 Update 45, including private JRE 6 Update 45.
+    This will require 300MB on your hard drive. |
+
+
+    | Development Tools |
+
+    | Source Code |
+
+    | Public JRE |
+
+
+    Install to:
+
+    C:\Program Files (x86)\Java\jdk1.6.0_45\'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Configuring environment variables in window 7:
+
+
+    Right click -> My Computer -> Properties
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_8_0.png)
+
+
+    Click Advanced System Settings'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_9_0.png)
+
+
+    Click Advanced -> Environment Variables'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_10_0.png)
+
+
+    Click the New button to create 3 environment variables.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_11_0.png)
+
+
+    JAVA_HOME=C:\Program Files (x86)\Java\jdk1.6.0_24
+
+
+    CLASSP=%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
+
+
+    PATH=%JAVA_HOME%\bin
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_11_1.png)'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_12_0.png)
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_12_1.png)
+
+
+    Click OK to exit.
+
+
+    Then open the Command Window and test if the installation is successful.
+
+
+    Click the Start menu -> Search box -> Enter cmd'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_13_0.png)
+
+
+    Input **java -version** The installation is successful. bellow picture:'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '```
+
+    C:\Windows\system32\cmd.exe
+
+    Microsoft Windows [Version 6.1.7601]
+
+    Copyright (c) 2009 Microsoft Corporation. All rights reserved.
+
+    C:\Users\Tim>java -version
+
+    java version "1.6.0_45"
+
+    Java(TM) SE Runtime Environment (build 1.6.0_45-b06)
+
+    Java HotSpot(TM) Client VM (build 20.45-b01, mixed mode, sharing)
+
+    C:\Users\Tim>
+
+    ```
+
+
+    # # Eclipse installation'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 1. Download the Eclipse development tools
+
+
+    https://drive.google.com/open?id=181nylbTxn10o2TmBTQ4I7ndDaa-HfFFE
+
+
+    eclipse-jee-juno-SR2-win32.zip
+
+
+    # 2. Install eclipse development tools
+
+
+    Unzip eclipse-jee-juno-SR2-win32.zip to D:\eclipse
+
+
+    Click D:\eclipse\eclipse.exe to run
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'Create a new Java project
+
+    Click Eclipse -> File -> New -> Project
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_16_0.png)
+
+
+    Select Java Project -> next'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_17_0.png)
+
+
+    Enter the Project name helloworld -> Finish'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_18_0.png)
+
+
+    Right click on the src of the helloworld project -> New -> Class'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_19_0.png)
+
+
+    Enter the program Class name HelloWorld -> Finish'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_20_0.png)
+
+
+    src -> HelloWorld class code:'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "```\npublic class HelloWorld {\n    public static void main(String[] args)\
+    \ {\n        System.out.println(\"Hello world\");\n    }\n}\n```\n\nIn the HelloWorld\
+    \ code editing window\nRight click -> Run As -> Java Application"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_22_0.png)
+
+
+    HelloWorld output in Console Panel running successfully'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_23_0.png)'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# HelloWorld Detailed Explanation\n\n```\n/**\n1. // : double slashes represent\
+    \ comments\n2. public : is the keyword of java\n3. class : each java file must\
+    \ contain a class\n4. HelloWorld : is called the class name\n5. static : the main\
+    \ method must be written to the static virtual machine to find\n6. void : no return\
+    \ value\n7. main : is called the main method, the entry of the java program.\n\
+    8. String : is a series of combinations of numeric characters enclosed in double\
+    \ quotes\n9. String[] : string array\n10. args : is the parameter of the main\
+    \ method\n\nCoding Standards:\n1. Class name The first word is capitalized. If\
+    \ there are multiple words, the first letter of each is capitalized.\n2. java\
+    \ is a case-sensitive language\n3. When writing a class body {} parenthesis must\
+    \ appear in pairs\n4. When writing the method body {} brackets should appear in\
+    \ pairs\n5. The method is written in the class body. Leave a tab space in front\
+    \ of each method.\n6. Each execution statement leaves a tab space before the method,\
+    \ each statement is written with a semicolon; it indicates the end of the statement\
+    \ execution.\n*/\n```\n\n```\npublic class HelloWorld {\n    public static void\
+    \ main(String[] args) {\n        // Print the Hello World message to the console\
+    \ and change the line\n        System.out.println(\"\n        System.out.println(\"\
+    Hello Word\");\n        // Print input information to the console, but do not\
+    \ wrap\n        System.out.print(\"Good beginning \\t\");\n```"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '```
+
+    System.out.print("is the half of the success");
+
+    }
+
+    ```
+
+
+    # Output Result:
+
+
+    | Hello Word |
+
+    | Good beginning is the half of the success |'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# Identifier\n\n> /**\nThe naming rules for identifiers:\n1. It consists of\
+    \ letters, numbers, descending lines _ and dollar signs $\n2. Can't start with\
+    \ a number\n3. Case sensitive\n4. Cannot be a reserved keyword for java\n*/\n\n\
+    ```\npublic class TestIdentifier{\n    public static void main(String[] args){\n\
+    \        // can not start with a number\n        int 1number=1;\n\n        //\
+    \ identifier is case sensitive\n        int var1=2;\n        int VAR1=3;\n   \
+    \     System.out.println(var1);\n        System.out.println(VAR1);\n        //Cannot\
+    \ be a reserved keyword for java\n        //int class=4;\n\n        int salary=20000;\n\
+    \        //Two strings are concatenated with a plus sign +\n        System.out.println(\"\
+    Your salary is:\"+salary);\n    }\n}\n```\n\n# Output Result:\n\n2\n3\nYour salary\
+    \ is:20000"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# Variable\n\n> \n1. Variable naming does not allow repetition\n2. The naming\
+    \ rules for variables: consisting of characters, underscores, $,nnumbers,\nand\
+    \ the beginning of the first letter must be a character, the descending\nor $,\
+    \ can not be a number\n*/\n\n```\npublic class TestVariable {\n    public static\
+    \ void main(String[] args) {\n        // Variable definition: a memory area allocated\
+    \ by the system to store data\n        //String:\n            character enclosed\
+    \ in double quotes \"\"\n        //cup:\n            variable name.\n        //\
+    \ =;\n            the \"mineral water\" data is stored in the memory area\nnamed\
+    \ cup.\n        String cup = \"mineral water\";\n\n        // Print the data of\
+    \ the variable cup memory area to the console\n        System.out.println(cup);\n\
+    \n        // Modify the value of the variable\n        cup = \"cola\";\n     \
+    \   System.out.println(cup);\n\n        // Empty the variable, empty the cup's\
+    \ memory data\n        cup = \"\";\n        System.out.println(cup);\n\n     \
+    \   // Assign a value to the null to delete the variable\n        //cup variable\
+    \ will automatically reclaim allocated memory space\n        cup = null;\n   \
+    \     System.out.println(cup);\n\n        //variable name cannot be defined repeatedly.\n\
+    \        //String cup=\"ice black tea\";\n        //System.out.println(cup);\n\
+    \    }\n```"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\n// Variable naming rules: consists of characters, underscores, $, numbers,\n\
+    //and the beginning of the first letter must be a character, the down line or\n\
+    $\n  //can not be a number\n  //String 1var=\"a\"\n  //System.out.println(1var);\n\
+    \  String $var = \"b\"\n  System.out.println($var);\n  String _var = \"_var\"\
+    ;\n  System.out.println(_var);\n}\n}\n```\n\n# Output Result:\n\nmineral water\n\
+    cola\nnull\nb\n_var"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# Basic Data Types\n\n```\n/**\nJava has 8 basic data types.\n1. Integer (byte,\
+    \ short, int, long)\n2. Floating point (float, double)\n3. Character type (char)\n\
+    4. Boolean (boolean)\n*/\n```\n\n```\npublic class BaseDataType {\n    public\
+    \ static void main(String[] args){\n        byte a1=1; //byte occupies 1 byte\
+    \ = 8 -2^7~2^7-1(-128~127)\n        short a2=10; //short occupies 16 bytes = -2^15~2^15\n\
+    \        int a3=1000; //int 4 bytes = 32 -2^31~2^31\n        long a4=10000; //long\
+    \ occupies 8 bytes = 64 bits -2^63~2^63\n        System.out.println(a1);\n   \
+    \     System.out.println(a2);\n        System.out.println(a3);\n        System.out.println(a4);\n\
+    \        //1. If the integer is out of the storage range, compile the error,\n\
+    \        // lose the precision.\n```\n\n```\n//float type , double\n        double\
+    \ b1=10.1; //double occupies 8 bytes = 64 bits\n        float b2=12.2f; //float\
+    \ occupies 4 bytes = 32 bits\n        float b3=(float)13.3;\n        System.out.println(b1);\n\
+    \        System.out.println(b2);\n        System.out.println(b3);\n        //1.\
+    \ Floating-point data defaults to double type. If you want to assign a\n     \
+    \   // value to float, you must cast it.\n        // There are two ways to force\
+    \ type conversion for floating point numbers.\n        // One is: Add f directly\
+    \ to back. One is: add (float) in front.\n\n//char is a single character enclosed\
+    \ in single quotes\n        char c1='a'; // char takes 2 bytes = 16 bits\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '```
+
+    char c2=''1'';
+
+    System.out.println(c1);
+
+    System.out.println(c2);
+
+
+    //boolean
+
+    boolean d1=true; // boolean occupies 1 byte = 8 bits
+
+    boolean d2=false;
+
+    System.out.println(d1);
+
+    System.out.println(d2);
+
+    //1. The boolean type of true cannot be equal to 1, and false is not equal to
+    0. This is different from the c language.
+
+    }
+
+    }
+
+    ```
+
+
+    ```
+
+    /**
+
+    Review summary:
+
+    1. Basic data type variables: 8 basic data types (byte, short, int, long, float,
+    double, boolean, char)
+
+    2. String is not a basic data type. It is a reference data type.
+
+    */
+
+    ```
+
+
+    # Output Result:
+
+
+    ```
+
+    1
+
+    10
+
+    100
+
+    1000
+
+    10.1
+
+    12.2
+
+    13.3
+
+    a
+
+    1
+
+    True
+
+    false
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# Constant\n\n```\n/*\nThe constants in java:\n1. Integer constant\n2. Floating\
+    \ point constants\n3. Character constants\n4. Boolean constants\n5. String constants\n\
+    */\n```\n\n```\npublic class FinalVariable {\n    public static void main(String[]\
+    \ args) {\n        // variables that cannot be changed\n        //1. Integer constant\n\
+    \        final int UP = 0;\n        final int DOWN = 1;\n        final int LEFT\
+    \ = 2;\n        final int RIGHT = 3;\n        System.out.println(UP);\n      \
+    \  System.out.println(DOWN);\n        System.out.println(LEFT);\n        System.out.println(RIGHT);\n\
+    \        //1. The definition of a constant is generally capitalized.\n\n     \
+    \   //2. Floating point constant\n        final float PI = 3.14f;\n        System.out.println(PI);\n\
+    ```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '```
+
+    //3. Boolean constant
+
+    final boolean RUN = true;
+
+    System.out.println(RUN);
+
+    ```
+
+
+    ```
+
+    //4. Character constants
+
+    final char A = ''A'';
+
+    System.out.println(A);
+
+    System.out.println("r");
+
+    System.out.println("\");
+
+    System.out.println("\"");
+
+    System.out.println("\\");
+
+    ```
+
+
+    ```
+
+    //5. String constants
+
+    final String CONST = "love for forever";
+
+    System.out.println(CONST);
+
+    }
+
+    ```
+
+
+    ```
+
+    /**
+
+    Summary:
+
+    1. The naming rules for constants are the same as variables
+
+    2. Constants are generally uppercase
+
+    3. Add a final keyword before the constant
+
+    4. Constants cannot change values
+
+    */
+
+    ```
+
+
+    # Output Result:
+
+
+    ```
+
+    0
+
+    1
+
+    2
+
+    3
+
+    3.14
+
+    true
+
+    A
+
+    ''
+
+    "
+
+    \
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# Data Type Conversion\n\n```\n/**\nData type conversion :\n1. Integer type\
+    \ conversion\n2. Floating point type conversion\n3. Boolean type conversion\n\
+    4. Character type conversion\n*/\n```\n\n```\npublic class TypeConvert {\n   \
+    \ public static void main(String[] args) {\n        byte varByte = 1;\n      \
+    \  int varInt = 2;\n        // Small integer type converted to a large integer,\
+    \ direct conversion\n        varInt = varByte;\n        System.out.println(varInt);\n\
+    \n        byte varByte2 = 1;\n        int varInt2 = 2;\n        int varInt3 =\
+    \ 128;\n        // Large integer types are converted to small integer types, which\
+    \ require a cast,\n        // and may lose precision. The high bits will be cut.\n\
+    \        varByte2 = (byte) varInt2;\n        varByte2 = (byte) varInt3;\n    \
+    \    System.out.println(varByte2);\n\n        byte c1 = 1;\n        float c2 =\
+    \ 10.3f;\n        //Integer to floating point type, direct conversion\n      \
+    \  c2 = c1;\n        System.out.println(c2);\n\n        byte d1 = 1;\n       \
+    \ float d2 = 10.3f;\n        float d3 = 128.2f;\n    }\n}\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '```
+
+    // Floating point type rounding directly removes the fractional part,
+
+    requires cast, and may lose precision
+
+    d1 = (byte) d2;
+
+    d1 = (byte) d3;
+
+    System.out.println(d1);
+
+    ```
+
+
+    ```
+
+    // Boolean can''t be converted to other types, other types can'' be converted
+
+    to Boolean
+
+    boolean e1 = true;
+
+    //e1=(boolean)1;
+
+    ```
+
+
+    ```
+
+    char f1 = ''a'';
+
+    int f2 = 1;
+
+    char f3 = ''b'';
+
+    int f4 = ''b'' + 1;
+
+    char f5 = ''b'' + 1;
+
+    ```
+
+
+    ```
+
+    //Integer can be converted to a character type, which requires a cast,
+
+    and an integer can be converted to a character. The conversion rule by
+
+    f1 = (char) f2;
+
+    f2 = f3;
+
+    System.out.println(f1);
+
+    System.out.println(f2);
+
+    System.out.println(f4);
+
+    System.out.println(f5);
+
+    ```
+
+
+    ```
+
+    //string connection + conversion
+
+    String str = "Perseverance in the ordinary";
+
+    String str2 = str + 1;
+
+    String str3 = str + 2.5;
+
+    String str4 = str + true;
+
+    String str5 = str + ''F'';
+
+    // String is added to other basic types Other types are automatically
+
+    converted to string connections
+
+    System.out.println(str2);
+
+    System.out.println(str3);
+
+    System.out.println(str4);
+
+    System.out.println(str5);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '```
+
+    }
+
+    /**
+
+    Summary:
+
+    1. Type conversion small value to large value conversion
+
+    byte<short<int<float<long<double
+
+    */
+
+    ```
+
+
+    Output Result:
+
+
+    ```
+
+    1
+
+    -128
+
+    1.0
+
+    -128
+
+    98
+
+    99
+
+    c
+
+    Perseverance in the ordinary1
+
+    Perseverance in the ordinary2.5
+
+    Perseverance in the ordinarytrue
+
+    Perseverance in the ordinaryF
+
+    ```
+
+
+    # Arithmetic operator'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "![](img/7bed215b1d3800688250023ed87bfd24_37_0.png)\n\n```\n/**\n* Arithmetic\
+    \ operation:\n* add +, minus -, multiply *, divisible /, take modulo %, decrement\
+    \ ---\n* increase ++\n */\n```\n\n```\npublic class ArithmeticOperator {\n   \
+    \ public static void main(String[] args) {\n    int a = 1;\n    int b = 2;\n \
+    \   int c = 3;\n    int d = 4;\n    System.out.println(a + b);\n    System.out.println(a\
+    \ - b);\n    System.out.println(a * b);\n    System.out.println(b / a);\n    System.out.println(a\
+    \ / b);\n    // modulo is the remaining number after the division\n    System.out.println(c\
+    \ % b);\n    System.out.println(d % b);\n    System.out.println(4 % -3);\n   \
+    \ System.out.println(-4 % -3);\n    System.out.println(4 % 3);\n    System.out.println(d++);\n\
+    \    System.out.println(++d);\n    System.out.println(d--);\n}\n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "```\nSystem.out.println(--d);\n}\n```\n\n/**Summary:\n\n+   1. The decimal\
+    \ part is automatically cut off when divisible\n2. When the modulo is taken, the\
+    \ positive and negative result values depend on the numerator symbol.\n3. ++ after\
+    \ the variable is output first then plus 1,\n\t\tif if · is placed in front of\
+    \ the variable, then add + first then output.\n4. -- after the variable, it is\
+    \ output first and then decremented by 1.\n\tif it is placed in front of the variable,\
+    \ it is first reduced by 1 and then output./\n\n# Output Result:\n\n```\n3\n-1\n\
+    2\n2\n0\n1\n0\n1\n-1\n-1\n4\n6\n6\n4\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# Assignment operator\n\n```\npublic class AssignmentOperator {\n  public static\
+    \ void main(String[] args) {\n    int var = 10;\n    var = var + 1;\n    var++;\n\
+    \    var += 1;\n    var /= 2;\n    var %= 2;\n    var *= 2;\n    System.out.println(var);\n\
+    \n    short s = 10;\n    s = (short) (s + 5);\n    s += 5;\n    System.out.println(s);\n\
+    \  }\n}\n```\n\nOutput Result:\n\n0\n20"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# Relational operator\n\n```\n/** Relational operator There are only two results:\
+    \ true , false\nIncludes:\nGreater than >, greater than equal to >=\nLess than\
+    \ <, less than equal to <=\nEqual to ==, not equal to !=\n*/\n```\n\n```\npublic\
+    \ class RelationalOperator {\n    public static void main(String[] args) {\n \
+    \       System.out.println(100 > 200);\n        System.out.println(100 >= 100);\n\
+    \        System.out.println(100 < 200);\n        System.out.println(100 <= 200);\n\
+    \        System.out.println(100 == 100);\n        System.out.println(100 != 200);\n\
+    \        System.out.println(100 == 100.0);\n        System.out.println('A' ==\
+    \ 65);\n\n        //true cannot be equal to 1 and false cannot be equal to 0\n\
+    \        System.out.println(true==1);\n    }\n}\n```\n\n# Output Result:\n\n```\n\
+    false\ntrue\ntrue\ntrue\ntrue\ntrue\ntrue\n```"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# Logical Operators\n\n```\n/**\ninclude:\nand &&, or ||, not !\n1. && returns\
+    \ true if both sides of the operation are true, otherwise false\n2. || The Result\
+    \ is false when both sides of the operation are false, otherwise\n3. ! the operation\
+    \ returns true, the result is false, otherwise it is true\n```\n\n```\npublic\
+    \ class LogicalOperator {\n    public static void main(String[] args) {\n    \
+    \    System.out.println(true && false);\n        System.out.println(false && true);\n\
+    \        System.out.println(false && false);\n        System.out.println(true\
+    \ && true);\n\n        System.out.println(\"--------------------\");\n\n     \
+    \   System.out.println(true || false);\n        System.out.println(false || true);\n\
+    \        System.out.println(true || true);\n        System.out.println(false ||\
+    \ false);\n\n        System.out.println(\"--------------------\");\n\n       \
+    \ System.out.println(!true);\n        System.out.println(!false);\n\n        System.out.println(\"\
+    --------------------\");\n\n        boolean b = true;\n        System.out.println(b);\n\
+    \        System.out.println(1 > 2 && (b = 3 > 4));\n        System.out.println(b);\n\
+    \        System.out.println(2 > 1 && (b = 3 > 4));\n    }\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '```
+
+    System.out.println(b);
+
+    //Short circuit characteristics of &&: Because the program is executed
+
+    from top to bottom, from left to right, when the left side is judged to be false
+
+    //The result of && is already destined to be false, so the subsequent
+
+    judgment computer will not be executed.
+
+    ```
+
+
+    ```
+
+    System.out.println("----------");
+
+
+    boolean b1 = true;
+
+    System.out.println(b1);
+
+    System.out.println(2 > 1 || 3 > 4);
+
+    System.out.println(2 > 1 || (b1 = 3 > 4));
+
+    System.out.println(b1);
+
+    System.out.println(1 > 2 || (b1 = 3 > 4));
+
+    System.out.println(b1);
+
+    //Short circuit characteristics of ||: Because the program is executed
+
+    left to right, when the left side is judged to be true,
+
+    //the return result is already destined to be true, so the subsequent
+
+    judgment computer does not execute.
+
+    }
+
+    ```
+
+
+    # Output Result:
+
+
+    ```
+
+    false
+
+    false
+
+    false
+
+    true
+
+    ----------------
+
+    true
+
+    true
+
+    true
+
+    false
+
+    ----------------
+
+    false
+
+    true
+
+    ----------------
+
+    true
+
+    false
+
+    ```'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\ntrue\nfalse\nfalse\n----------\ntrue\ntrue\ntrue\ntrue\nfalse\nfalse\n\
+    ```\n\n# Trinocular Operator\n\n```\npublic class TrinocularOperator {\n    public\
+    \ static void main(String[] args) {\n        int score = 90;\n        String result\
+    \ = score >= 60 ? \"Pass\" : \"Fail\";\n        System.out.println(result);\n\
+    \    }\n}\n```\n\nOutput Result:\n\nPass"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# If Conditional statements\n\n```\n/**\nConditional statement\ninclude:\n\
+    1. if(expression){statement}\n2. if (expression) { statement } else { statement\
+    \ }\n3. if (expression) { statement } else if { statement }\n\nTopic:\ntax amount\
+    \ = (basic salary -3500) * tax rate\nlevel:\n-- 2000 $: 10% tax rate\n2000--5000\
+    \ $: tax rate 15%\n5000-- 20000 $: tax rate 20%\nMore than 20000 : tax rate 30%\n\
+    */\npublic class IfStatement {\n\n    public static void main(String[] args) {\n\
+    \n        int salary = 23500;// basic salary\n        int extra = salary - 3500;\
+    \ // Excessive tax is required\n        double tax = 0; //tax amount\n       \
+    \ if (extra >= 500 && extra < 2000) {\n            tax = extra * 0.1;\n      \
+    \  } else if (extra >= 2000 && extra < 5000) {\n            tax = extra * 0.15;\n\
+    \        } else if (extra >= 5000 && extra < 20000) {\n            tax = extra\
+    \ * 0.2;\n        } else {\n            tax = extra * 0.3;\n        }\n      \
+    \  System.out.println(\"tax amount=\" + tax);\n    }\n}\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'Output Result:
+
+
+    ```
+
+    tax amount=6000.0
+
+    ```'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Switch statement\n\n![](img/7bed215b1d3800688250023ed87bfd24_47_0.png)\n\n\
+    ```\n/**\nKeyboard input a number 0, 1 , 2, 3\n0 : Output The airplane moves up\n\
+    1 : Output The airplane moves down\n2 : Output The airplane moves to the left\n\
+    3 : Output The airplane moves to the right\nOtherwise the output does not move\n\
+    \ */\nimport java.util.Scanner;\n\npublic class SwitchStatement {\n    public\
+    \ static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.println(\"Keyboard enters a number 0: up, 1: down, 2: left,\
+    \ 3:\");\n        int num = in.nextInt();\n\n        switch (num) {\n        \
+    \    case 0:\n                System.out.println(\"Airplane moves up\");\n   \
+    \             break; // terminate the code to continue execution\n           \
+    \ case 1:\n```"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '```
+
+    System.out.println("Airplane moves down");
+
+    break;
+
+    case 2:
+
+    System.out.println("Airplane moves to the left");
+
+    break;
+
+    case 3:
+
+    System.out.println("Airplane moves to the right");
+
+    break;
+
+    def:
+
+    System.out.println("Airplane does not move");
+
+    }
+
+    ```
+
+
+    **
+
+    Summary:
+
+    1. default: is the default execution when there is no matching condition
+
+    2. break: the switch is terminated. If there is no break statement, the program
+    will continue to execute.
+
+    3. The switch (expression) expression can only be a byte, short, int, char type
+    constant
+
+    String jdk1.6 version is not working, but after jdk1.7 version String can be used
+    in switch
+
+    */
+
+
+    Output Result:
+
+
+    Keyboard enters a number 0: up, 1: down, 2: left, 3: right
+
+    2
+
+    Airplane moves to the left'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# While loop statement\n\n```\n/**\nWhile(expression){\n    statement;\n}\\\
+    continues execution if the expression is true, otherwise exits the loop\n```\n\
+    \nTopic :\nIn 2006, 80,000 students were trained, an annual increase of 25%.\n\
+    According to this growth rate, how many years the total number of students\\will\
+    \ reach 200,000\n\n```\n2006 year : sum=8(1+0.25)^0\n2007 year : sum=8*1.25=8(1+0.25)^1;\n\
+    2008 year : sum=8(1+0.25) + 8(1+0.25)*0.25=8(1+0.25)\n(1+0.25)=8(1+0.25)^2\nn\
+    \ year : sum=8(1+0.25)^n*/\n```\n\n```\npublic class WhileStatement {\n    public\
+    \ static void main(String[] args) {\n        int sum = 8;\n        int n = 0;\
+    \ //The total number will reach 200,000\n        while (n < 20) //condition is\
+    \ to execute, otherwise the loop is terminated\n{\n            sum = (int) (sum\
+    \ * (1 + 0.25));\n            n++;\n            System.out.println(\"After \"\
+    \ + n + \" years the total of students will reach 200,000\");\n        }\n   \
+    \ }\n```\n\nOutput Result:\n\nAfter 5 years the total of students will reach 200,000"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# Do while loop\n\n![](img/7bed215b1d3800688250023ed87bfd24_51_0.png)\n\n```\n\
+    /**\ndo{\n  statements;\n  while (expression):\n    until the while expression\
+    \ evaluates to false exit loop\n*/\n```\n\nimport java.util.Scanner;\n\npublic\
+    \ class DoWhileStatement {\n  public static void main(String[] args) {\n\n```\n\
+    /*\n  Cut fruit game:\n  keyboard input 1: watermelon, 2: banana, 3: peach, -1:\
+    \ thunder\n  Enter the number to print the corresponding fruit, if enter -1 to\n\
+    \  terminate the game\n*/\nSystem.out.println(\"Keyboard Input 1: Watermelon,\
+    \ 2: Banana, 3: Peach, -1: Thunder\");\nScanner in = new Scanner(System.in);\n\
+    int num = 0; //defined a variable\ndo {\n  num = in.nextInt();//the life cycle\
+    \ of the variable\n  if (num == 1) {\n    System.out.println(\"You cut the watermelon\"\
+    );\n  } else if (num == 2) {\n```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "```\nSystem.out.println(\"You cut the banana\");\n} else if (num == 3) {\n\
+    System.out.println(\"You cut the peach\");\n} else if (num == -1) {\nSystem.out.println(\"\
+    You cut the thunder game termination\");\n}\n} while (num != -1); //If you enter\
+    \ -1 to terminate the game\n}\n```\n\n# Output Result:\n\nKeyboard Input 1: Watermelon,\
+    \ 2: Banana, 3: Peach, -1: Thunder\nnYou cut the banana\nYou cut the watermelon\n\
+    3\nYou cut the peach\n-1\nYou cut the thunder game termination\n\n# Do while loop\
+    \ 2\n\n```\n/**\n * Enter the student's name continuously, enter \"q\" to exit\
+    \ the system\n */\nimport java.util.Scanner;\n\npublic class DoWhileStatement2\
+    \ {\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.println(\"Please enter the student name until enter q to quit\
+    \ the system\");\n        String name = \"\";\n        do {\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\nname = in.nextLine();\n} while (!name.equals(\"q\")) {\n    System.out.println(\"\
+    Exit System\");\n}\n```\n\n# Output Result:\n\nPlease enter the student name until\
+    \ until enter q to quit the system\ngrace\nq\nExit System\n\n# For loop statement\n\
+    \n```\n/**\nFor Loop Definition:\nfor (initialization variable; judgment condition;\
+    \ update loop variable{\nstatement;\n}\n\nImplementation process:\n1. Initialization\
+    \ variable\n2. Execute the judgment condition. If true continues to execute,\n\
+    after execution, update the loop variable and then judge the condition.\nExit\
+    \ the loop until the condition is false\n*/\npublic class ForStatement {\n   \
+    \ public static void main(String[] args) {\n        // Print 0-9\n        /*\n\
+    Implementation process:\n1. Initialize i=0;\n2. Execute i<10 if true, execute\
+    \ System.out.println(inAfter the execution, i++ and then i<10 judge this cycle\
+    \ until i>=10 exits the loop.\n        */\n        for (int i = 0; i < 10; i++)\
+    \ {\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '```
+
+    System.out.print(i + ", ");
+
+    }
+
+    }
+
+    ```
+
+
+    # Output Result:
+
+
+    0,1,2,3,4,5,6,7,8,9,'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# For loop statement 2\n\n![](img/7bed215b1d3800688250023ed87bfd24_55_0.png)\n\
+    \n```\npublic class ForStatement {\n    public static void main(String[] args)\
+    \ {\n/*\n    In the bubble game,\n    the game starts with 64 balls, requiring\
+    \ 8 balls per line. *\nRepresentative ball\n    Print (1 -- 64)\n*/\n    for (int\
+    \ i = 1; i <= 64; i++) {\n        System.out.print(\"*\");\n        if (i % 8\
+    \ == 0) // 8%8==0, 16%8==0, 24%8==0, 32%8==0, 48%8==0, 64%8==0 {\n           \
+    \ System.out.println(\"\");//wrap one line\n        }\n    }\n}\n```\n\nOutput\
+    \ Result:\n\n```\n*****\\*\\*\\*\\*\\*\n*\\*\\*\\*\\*\\*\\*\n*\\*\\*\\*\\*\\*\\\
+    *\n```"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# One-dimensional array\n\n| 0 | 1 | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|--|\n\
+    | 90 | 70 | 50 | 80 | 60 | 85 |\n\n```\npublic class oneArray {\n    public static\
+    \ void main(String[] args) {\n    // One-dimensional array definition and initialization\n\
+    \    // Statically define a one-dimensional array\n    int[] scores = { 90, 70,\
+    \ 50, 80, 60, 85 };\n    // Dynamically define a one-dimensional array\n    int[]\
+    \ arr = new int[6];\n    arr[0] = 90;\n    arr[1] = 70;\n    arr[2] = 50;\n  \
+    \  arr[3] = 80;\n    arr[4] = 60;\n    arr[5] = 85;\n\n    //print out the score\
+    \ of the array scores\n    for (int i = 0; i < scores.length; i++) {\n       \
+    \ System.out.print(scores[i] + \" , \");\n    }\n    System.out.println(\"\\n------------------------------------\"\
+    );\n\n    //print out the arr of the array scores\n    for (int i = 0; i < arr.length;\
+    \ i++) {\n        System.out.print(arr[i] + \" , \");\n    }\n}\n```"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "```\n}\n}\n```\n\nOutput Result:\n\n90,70,50,80,60,85,\n----------\n90,70,50,80,60,85,\n\
+    \n# # One-dimensional array append element\n\nAdd a student's grade to the end\
+    \ of the one-dimensional array scores.\n\n![](img/7bed215b1d3800688250023ed87bfd24_57_0.png)\n\
+    \n> /*Step:\n1. First create a temporary array larger than the original scores\
+    \ array length tempArray\n2. Copy each value of the scores array to tempArray\n\
+    3. Then assign a score of 75 to the new last index position of tempArray\n4. Finally\
+    \ assign the tempArray address pointer reference to the scores;\n*/\n\n```\npublic\
+    \ class ArrayAppend{\n    public static void main(String[] args) {\n        int[]\
+    \ scores = {90, 70, 50, 80, 60, 85 };\n\n        int[] tempArray = new int[scores.length\
+    \ + 1];\n        for (int i = 0; i < scores.length; i++) {\n            tempArray[i]\
+    \ = scores[i];\n        }\n        tempArray[scores.length] = 75;\n    }\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "```\nscores = tempArray;\n\n//Print outs scores\nfor (int i = 0; i < scores.length;\
+    \ i++) {\n    System.out.print(scores[i] + \", \");\n}\n\n```\n\nOutput Result:\n\
+    \n90,70,80,60,85,75,\n\n# One-dimensional array remove elements\n\nDeleting the\
+    \ value of the index position of the scores array\n\n![](img/7bed215b1d3800688250023ed87bfd24_58_0.png)\n\
+    \n/**\nTitle:\nDeleting the value of the index position of the scores array\n\
+    Step:\n1. Create a temporary array tempArray that is temporarily smaller than\
+    \ scores by 1.\n2. Copy the data in front of index to the front of tempArray\n\
+    3. Copy the array after index to the end of tempArray\n4. Assign the tempArray\
+    \ address pointer reference to the scores\n5. Printout scores"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "```\n/*\nimport java.util.Scanner;\n\npublic class ArrayDelete {\n    public\
+    \ static void main(String[] args) {\n        int[] scores = { 90, 70, 50, 80,\
+    \ 60, 85 };\n        System.out.println(\"Please enter the index to be deleted:\"\
+    );\n        Scanner scanner = new Scanner(System.in);\n        int index = in.nextInt();\n\
+    \n        //1. Create a temporary array tempArray that is temporarily smaller\
+    \ than\n        scores by 1.\n        int[] tempArray = new int[scores.length\
+    \ - 1];\n        for (int i = 0; i < scores.length; i++) {\n            if (i\
+    \ < index) //2. Copy the data in front of index to the front of the\n        \
+    \    tempArray\n                tempArray[i] = scores[i];\n            if (i >\
+    \ index) //3. Copy the array after index to the end of tempArray\n           \
+    \     tempArray[i - 1] = scores[i];\n        }\n\n        //4. Assign the tempArray\
+    \ address pointer reference to the scores\n        scores = tempArray;\n     \
+    \   for (int i = 0; i < scores.length; i++) {\n            System.out.print(scores[i]\
+    \ + \",\");\n        }\n    }\nn\n```\n\n# Output Result:\n\nPlease enter the\
+    \ index to be deleted:\n2\n90,70,80,60,85,"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# # One-dimensional array search element\n\nPlease enter the value you want\
+    \ to search: 70\n\nindex=1\n\n| 90 | 70 | 50 | 80 | 60 | 85 |\n\n```\n/**\nTitle:\n\
+    Finding the value of the given value from the scores\nStep:\n1. Traverse the value\
+    \ in the array scores,\nif there is a value equal to the given value, print out\
+    \ the current index\nOtherwise print -1 not found\n*/\nimport java.util.Scanner;\n\
+    public class ArraySearch {\n    public static void main(String[] args) {\n   \
+    \ int[] scores = { 90, 70, 50, 80, 60, 85 };\n    System.out.println(\"Please\
+    \ enter the value you want to find value:\");\n    Scanner in = new Scanner(System.in);\n\
+    \    int value = in.nextInt();\n    /*\n    Traverse the value in the array scores,\n\
+    \    if there is a value equal to the given value, print out the current index\n\
+    \    Other print-1 not found\n    */\n    boolean isSearch = false;\n    for (int\
+    \ i = 0; i < scores.length; i++) {\n        if (scores[i] == value) {\n      \
+    \      isSearch = true;\n        }\n    }\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\nSystem.out.println(\"Found value: \" + value + \" the index is: \" + i);\n\
+    \    break;\n}\nif (!isSearch) {\n    System.out.println(\"The value was not found\
+    \ in the array scores: \" + value);\n}\n\n```\n\n# Output Result:\n\nPlease enter\
+    \ the value you want to find value:\n70\nFound value: 70 the index in the array\
+    \ scores is: 1\n\n# Bubble sorting algorithm\n\n+   First time sort:\n1. Start\
+    \ from the first element.\n2. If the previous data is larger than the latter data\
+    \ then two swap positions until the end of the loop, then the largest data will\
+    \ be placed in the last position of the array."
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "![](img/7bed215b1d3800688250023ed87bfd24_62_0.png)\n\n/**\nBubble sorting algorithm:\n\
+    sort the output of the results arrays from small to large\nStep:\nFirst sort\n\
+    1. Start from the first element.\n2. If the previous data is larger than the latter\
+    \ data then swap positions until the end of the loop, the largest data will be\
+    \ placed in the last position of the array.\n3. By analogy, the unsorted n-i elements\
+    \ will be similar to the 1,2 process again,\nso that after the end of the loop\
+    \ n times, the elements are sorted from small to large.\n*/\n\n```\npublic class\
+    \ BubbleSort {\n    public static void sort(int[] arrays) {\n    // The first\
+    \ loop n-1 times\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\nfor (int i = 0; i < arrays.length - 1; i++) {\n  // The second loop the\
+    \ number of elements to be compared each time n\n  for (int j = 0; j < arrays.length\
+    \ - i - 1; j++) {\n    if (arrays[j] > arrays[j + 1]) {\n      int flag = arrays[j];\n\
+    \      arrays[j] = arrays[j + 1];\n      arrays[j + 1] = flag;\n    }\n  }\n}\n\
+    ```\n\n```\npublic static void main(String[] args) {\nint[] scores = { 90, 70,\
+    \ 50, 80, 60, 85 };\n\nsort(scores);\n\n// Output sorted scores\nfor (int i =\
+    \ 0; i < scores.length; i++) {\n  System.out.print(scores[i] + \",\");\n}\n```\n\
+    \n# Output Result:\n\n50,60,70,80,85,90,"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# Two-dimensional array\n\n| | 0 | 1 | 2 |\n|---|---|---||}{\n| 0 | 10 | 20\
+    \ | 30 |\n| 1 | 40 | 50 | 60 |\n| 2 | 70 | 80 | 90 |\n\n```\npublic class BinaryArray\
+    \ {\n    public static void main(String[] args) {\n        // Two-dimensional\
+    \ array definition and initialization\n        int[][] arr = {\n            {\
+    \ 10, 20, 30 },\n            { 40, 50, 60 },\n            { 70, 80, 90 }\n   \
+    \     };\n\n        // i: row index, j: column index\n        for (int i = 0;\
+    \ i < arr.length; i++) {\n            for (int j = 0; j < arr[i].length; j++)\
+    \ {\n                System.out.print(arr[i][j]);\n            }\n           \
+    \ System.out.println(\"\");\n        }\n\n        //Enhanced for loop is a new\
+    \ feature that is only available after jdk 5.0\n        String[] names = { \"\
+    Joseph\", \"James\", \"Grace\" };\n        for (String name : names) {\n     \
+    \       System.out.print(name + \" \",\");\n        }\n    }\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\n// Define a two-dimensional table structure of the course\nString[][]\
+    \ courses = {\n    { \"C001\", \"English\" },\n    { \"C002\", \"Mathematics\"\
+    \ },\n    { \"C003\", \"Java Programming\" }\n};\n\nSystem.out.println(\"\\n----------------------------\"\
+    );\n\n//output\nfor (String[] rows : courses) {\n    for (String col : rows) {\n\
+    \        System.out.print(col + \", \");\n    }\n    System.out.println(\"\");\n\
+    \  }\n}\n```\n\n# Output Result:\n\n10 20 30\n40 50 60\n70 80 90\nDavid,James,Grace,\n\
+    \nC001,English,\nC002,Mathematics,\nC003,Java Programming,"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# Examples: Minesweeper\n\n![](img/7bed215b1d3800688250023ed87bfd24_66_0.png)\n\
+    \n```\n/**\n Mine-sweeping game:\n 1: no thunder 2: there are thunder\n keyboard\
+    \ input row number and column number, to determine whether it has swept to thunder.\n\
+    \ */\n```\n\n```\nimport java.util.Scanner;\n\npublic class BinaryArrayMine {\n\
+    \n    public static void main(String[] args) {\n        int[] thunders = {\n \
+    \           { 1, 1, 1, 1},\n            { 1, 1, 1, 1},\n            { 1, 2, 1,\
+    \ 1},\n            { 1, 1, 1, 1}\n        };\n        Scanner in = new Scanner(System.in);\n\
+    \        System.out.println(\"Please enter the line number:\");\n        int row\
+    \ = in.nextInt();\n        System.out.println(\"Please enter the column number:\"\
+    );\n        int col = in.nextInt();\n        int value = thunders[row][col];/values\
+    \ obtained from the array\n```"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "```\n// Determine whether it has swept the thunder\nfor (int i = 0; i < thunders.length;\
+    \ i++) {\n  for (int j = 0; j < thunders[i].length; j++) {\n    // If value exists\
+    \ in the array and equal to 2\n    if (value == thunders[i][j] && value == 2)\
+    \ {\n      System.out.print(\" * 雷 \");\n    } else {\n      System.out.print(\"\
+    * \");\n    }\n  }\n  System.out.println(\"\");\n}\n}\n```\n\n# Output Result:\n\
+    \nPlease enter the line number:\n2\nPlease enter the column number:\n1\n\n****\n\
+    ****\n* 雷 **\n****\","
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# Encapsulation\n\n| Person |\n| name :String |\n| age :integer |\n| say()\
+    \ |\n\n```\n/**\n**\nSteps:\n1. If you want to access the Person class\n```\n\n\
+    ```\npublic class TestEncapsulation {\n    public static void main(String[] args)\
+    \ {\n        //Object instantiation: p is a reference name to the object generated\
+    \ by new Person()\n        Person p = new Person();\n        // Use the p access\
+    \ attributes and methods\n        p.name = \"Joseph\";\n        p.age = 22;\n\
+    \        p.say();\n\n        Person p2 = new Person();\n        p2.name = \"David\"\
+    ;\n        p2.age = 23;\n        p2.say();\n\n        //Assign p2 to p, this time\
+    \ p points to the object of p2\n        p = p2;\n        p.say();\n    }\n}\n\
+    /* *\n```"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'If you declare an empty Person object without instantiation, this time accessing
+    attributes and methods
+
+    The compile time can pass, but the NullPointerException will be reported at runtime.
+
+
+    ```
+
+    Person p3=null;
+
+    P3.name="Renia"
+
+    P3.age=24;
+
+    P3.say();
+
+    */
+
+    ```
+
+
+    ```
+
+    /**
+
+    1. Define a Person class The class consists of attributes and methods
+
+    2. There are two attributes in the Person class: name, age
+
+    */
+
+    ```
+
+
+    ```
+
+    class Person {
+
+    String name;
+
+    int age;
+
+
+    public void say(){
+
+    System.out.println("My name is: "+name+", this year: "+age+" years old");
+
+    }
+
+    }",
+
+    ```
+
+
+    # Output Result:
+
+
+    My name is: Joseph, this year: 22 years old
+
+    My name is: David, this year: 23 years old
+
+    My name is: David, this year: 23 years old'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# Methods Encapsulation\n\n| Person |\n| --- |\n| name : String |\n| age :\
+    \ Integer |\n| say() |\n| setName(name : String) |\n| getName() : String |\n|\
+    \ setAge(age : integer) |\n| getAge() : String |\n\n```\npackage com.test;\n\n\
+    /**\n The encapsulation attribute:\n privatize the attributes of the class and\
+    \ then provide a public method to access it.\n */\n\npublic class TestEncapsulationMethod\
+    \ {\n    public static void main(String[] args) {\n        /*\n         1. The\
+    \ reference object cannot access the private attribute of the class\n        \
+    \ 2. If you want to access private attribute, you should provide a public method.\n\
+    \        */\n        Person p = new Person();\n        p.setName(\"Joseph\");\n\
+    \        p.setAge(22);\n        p.say();\n        System.out.println(p);\n   \
+    \     System.out.println(p.getName() + \" \" \" + p.getAge());\n    }\n}\n\nclass\
+    \ Person {\n    //private attribute\n```"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "```\nprivate String name;\nprivate int age;\n```\n\n```\n// Define a public\
+    \ method to set private attribute\npublic void setName(String name) {\n  //this\
+    \ represents a reference to the current object\n  System.out.println(this);\n\
+    \  this.name = name;\n}\n```\n\n```\n// Define a public method to get private\
+    \ attribute\npublic String getName() {\n  return this.name;\n}\n```\n\n```\npublic\
+    \ void setAge(int age) {\n  this.age = age;\n}\n```\n\n```\npublic int getAge()\
+    \ {\n  return this.age;\n}\n```\n\n```\npublic void say() {\n  System.out.println(\"\
+    My name is: \" + name + \", this year \" + age + \" years old\");\n}\n```\n\n\
+    > /**\nReview summary\n1. The variables defined in the class are called member\
+    \ variables.\n2. The variables defined in the method are called local variables\
+    \ and can only be accessed in the defined methods.\nWhen a local variable and\
+    \ a member variable have the same name, the local variable back covers the member\
+    \ variable.\nTo distinguish member variables, you must add this in front of member\
+    \ variables.\n*/"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# Output Result:
+
+
+    ```
+
+    com.test.Person@1d5550d
+
+    My name is: Joseph, this year 22 years old
+
+    com.test.Person@1d5550d
+
+    Joseph 22
+
+    ```'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "# # Construction method\n\n| Person |\n| --- |\n| name : String |\n| age :\
+    \ Integer |\n| say() |\n| Person() |\n| Person(name : String, age : Integer) |\n\
+    \n```\npackage com.test1;\n\n/**\nWhat is the constructor?\nThe method name is\
+    \ the same as the class name, no return value, even no void\n*/\n\npublic class\
+    \ TestConstructor {\n    public static void main(String[] args) {\n        Person\
+    \ p = new Person();\n\n        // Instantiate Person with a constructor with parameters\n\
+    \        Person p2 = new Person(\"Joseph\", 22);\n        p2.say();\n\n      \
+    \  // Anonymous object\n        new Person(\"David\", 23).say();\n    }\n}\n\n\
+    class Person {\n    private String name;\n    private int age;\n\n    // Define\
+    \ the parameter without constructor\n    public Person() {\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "```\nSystem.out.println(\"Person is instantiated\");\n}\n```\n\n```\n// Define\
+    \ the constructor with parameters\npublic Person(String name, int age) {\n  this.name\
+    \ = name;\n  this.age = age;\n}\n```\n\n```\npublic void say() {\n  System.out.println(\"\
+    My name is :\"\" + name + \", this year: \"\" + age + \" years old\");\n}\n```\n\
+    \n> /**\nThe characteristics of the constructor:\n1. When the instantiated object\
+    \ is a constructor, it is called automatically.\n2. When there is no constructor\
+    \ with no parameters defined in the class, the java virtual machine automatically\
+    \ creates a constructor to instantiate it.\n3. When the constructor with parameters,\
+    \ the virtual machine does not automatically generate a constructor with no arguments.\
+    \ It must be manually added.\n\n> Overloading constructor:\nIn the same class,\
+    \ the method name is the same, the number or type of parameters is different\n\
+    */\n\n# Output Result:\n\nMy name is: Joseph, this year 22 years old\nMy name\
+    \ is: David, this year 23 years old"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# Method overload\n\n| Calculator |\n| add(a : integer, b : integer) : integer\
+    \ |\n| add(a : Double, b : Double) : Double |\n\npackage com.test2;\n\n```\npublic\
+    \ class TestOverload {\n    public static void main(String[] args) {\n       \
+    \ Calculator c = new Calculator();\n        int result = c.add(10, 20);\n    \
+    \    System.out.println(result);\n    }\n```\n\n```\n// Call the overload method\
+    \ with different parameter types\ndouble result2 = c.add(30.5, 40.2);\nSystem.out.println(result2);\n\
+    ```\n\n```\n/**\nMethod overload:\n In the same class, there is a method name\
+    \ with the same name, different numbers or parameter types.\n\nMethod overloading\
+    \ feature:\n When calling method, it will automatically call the corresponding\
+    \ overload method.\n*/\n```\n\n```\nclass Calculator {\n    // Enter the two numbers\
+    \ to add, return the sum\n    public double add(double a, double b) {\n      \
+    \  return a + b;\n    }\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\npublic int add(int a, int b) {\n    return a + b;\n}\n```\n\nOutput Result:\n\
+    30\n70.7\n\n# Passed by reference\n\n| Count |\n|---|value : S string |\n| setValue(value\
+    \ : S string) |\n| getValue() : S string |\n\n| Utils |\n| increment(count : Integer)\
+    \ |\n| increment(count : Count) |\n\n```\npackage com.test3;\n\n/**\n* reference\
+    \ delivery:\n1. Method parameter reference passing\n2. Passing a reference between\
+    \ an object and an object\n3. this pointer object reference pass\n */\npublic\
+    \ class Testrefenence {\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "```\npublic static void main(String[] args) {\n\n    Utils utils = new Utils();\n\
+    \n    // Define a counter variable\n    int count = 1;\n    System.out.println(count);\n\
+    \    utils.increment(count);\n    System.out.println(count); // the value not\
+    \ changed\n\n    // Define a counter class variable\n    Count value = new Count();\n\
+    \    value.setValue(1);\n    System.out.println(value.getValue());\n    utils.increment(value);\n\
+    \    System.out.println(value.getValue()); // the value changed\n\n}\n\nclass\
+    \ Utils {\n    public void increment(int count) {\n        count++;\n    }\n\n\
+    \    public void increment(Count count) {\n        count.setValue(count.getValue()\
+    \ + 1);\n    }\n}\n\nclass Count {\n    private int value;\n\n    public int getValue()\
+    \ {\n        return this.value;\n    }\n\n    public void setValue(int value)\
+    \ {\n        this.value = value;\n    }\n}\n```"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    # Output Result:
+
+
+    ```
+
+    1
+
+    1
+
+    2
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Static keyword\n\n| User |\n| <<static>> count : integer |\n\n```\npackage\
+    \ com.test4;\n\npublic class TestStatic {\n    public static void main(String[]\
+    \ args) {\n    //Static variables can be accessed directly through the class name\n\
+    \    User.count++;\n    System.out.println(\"users count: \" + User.count);\n\
+    \    }\n}\n\nclass User {\n    public static int count;\n\n    public User(){\n\
+    \n    }\n}\n/**\nthe difference between normal variables and static variables:\n\
+    1. A normal variable is a dynamically assigned value at runtime.\n2. The static\
+    \ variable is assigned to the initial value at compile time.\n3. Normal variables\
+    \ must be accessed through instance object references\nStatic variables can be\
+    \ accessed directly through the class name\n*/\n```\n\nOutput Result:\n\nusers\
+    \ count: 1"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "# Code block\n\n```\npublic class CodeBlock {\n    //Construct code block\n\
+    \    public CodeBlock() {\n        System.out.println(\"Construct code block Initialization\"\
+    );\n    }\n\n    //Static code block\n    static {\n        System.out.println(\"\
+    Static code block Initialization\");\n    }\n\n    public static void main(String[]\
+    \ args) {\n        new CodeBlock();\n    }\n}\n/**\n Static code blocks are run\
+    \ during program compilation, so static code blocks\n called before the constructor\
+    \ code blocks\n */\n```\n\nOutput Result:\n\nStatic code block Initialization\n\
+    Construct code block Initialization"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# Inheritance\n\n| Person |\n| name : String |\n| age : Integer |\n| say()\
+    \ |\n| Person() |\n| Person(name e : String, age : Integer) |\n\n| Student |\n\
+    | student() |\n| student(name e : String, age : integer) |\n\n```\npackage com.test5;\n\
+    \n/*\nTitle:\n  Students inherit the Person\nStep:\n1.Class: Student, Person\n\
+    2. Relationship: Student extends Person\n3. Attributes: Person characteristics\
+    \ (name , age )\n4. Methods: People's actions (say)\n*/\n\npublic class TestInheritance\
+    \ {\n    public static void main(String[] args) {\n\n    Student s = new Student();\n\
+    \    s.name = \"Sumi\";\n    s.age = 22;\n\n    // Use the constructor with parameters\
+    \ to instantiate the subclass Student\n```"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "```\nStudent s2 = new Student(\"Isacc\", 23);\ns2.say();\n}\n}\n```\n\n```\n\
+    class Person {\n  protected String name;\n  protected int age;\n```\n\n```\n \
+    \ public Person() {\n    System.out.println(\"parent class Person instantiation\"\
+    );\n  }\n```\n\n```\n  public Person(String name, int age) {\n    System.out.println(\"\
+    the parent class of Person instantiated \");\n  }\n```\n\n```\n  public void say()\
+    \ {\n    System.out.println(\"Person can speaking\");\n  }\n```\n\n```\n/**\n\
+    Person is called parent class or super class\nStudent is called a subclass of\
+    \ Person\n*/\n```\n\n```\nclass Student extends Person {\n  public Student() {\n\
+    \    super();\n    System.out.println(\"Subclass Student Instantiation\");\n \
+    \ }\n```\n\n```\n  public Student(String name, int age) {\n    super(name, age);\n\
+    \    System.out.println(\"Subclass Student \" + name + \" instantiated\");\n \
+    \ }\n```\n\nSummary:"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '+   1. The subclass cannot access the private attribute of the parent class
+
+    2. The subclass can access the protected, public attribute of the parent class.
+
+    3. When instantiating a subclass with a constructor with no arguments, first call
+    the constructor of the parent class with no arguments.
+
+    After instantiating the parent class and then instantiating the child class.
+
+    4. When instantiating a subclass with a constructor with parameters, it also defaults
+    to calling the constructor of the parent class without parameters.
+
+    After that, call the constructor of the subclass with parameters.
+
+    5. If you want the constructor of the parent class with parameters to be called,
+    you must use the super called the parent constructor.
+
+    /*
+
+
+    Output Result:
+
+    parent class Person instantiation
+
+    Subclass Student Instantiation
+
+    the parent class of Person instantiated
+
+    Subclass Student Isacc instantiated
+
+    Person can speaking
+
+
+    # Method Override'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "![](img/7bed215b1d3800688250023ed87bfd24_85_0.png)\n\n```\npackage com.test6;\n\
+    /**\n * override:\n  the subclass overwrites the method of the parent class, the\
+    \ instance of the subclass\n  will call the method of subclass replication, and\
+    \ will not call the method of the parent class.\n*/\npublic class TestOverride\
+    \ {\n  public static void main(String[] args) {\n\n    ChineseStudent s = new\
+    \ ChineseStudent();\n    s.say();\n\n    AmericaStudent as = new AmericaStudent();\n\
+    \    as.say();\n  }\n}\n\nclass Person {\n  public void say() {\n    System.out.println(\"\
+    Person speaking\");\n  }\n```"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "```\nclass ChineseStudent extends Person {\n    public void say() {\n     \
+    \   System.out.println(\"Speak Chinese\");\n    }\n}\n\nclass AmericaStudent extends\
+    \ Person {\n    public void say() {\n        System.out.println(\"Speak English\"\
+    );\n    }\n}\n```\n\n# Output Result:\n\nSpeak Chinese\nSpeak English\n\n# abstract\
+    \ class"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "![](img/7bed215b1d3800688250023ed87bfd24_87_0.png)\n\n![](img/7bed215b1d3800688250023ed87bfd24_87_1.png)\n\
+    \n```\npackage com.test7;\n```\n\n```\n/**\nTitle:\nDad told me to buy a pound\
+    \ of fruit\nStep:\n1. Abstract class: Father, Son\n2. Relationship: Son inherits\
+    \ Dad\n3. Method: Buy (buy) is the father called son to buy fruit, means father\
+    \ not buy\n*/\n```\n\n```\npublic class static void main(String[] args) {\n\n\
+    ns = new Son(\"Luke\");\n\ns.buy(\"Fruit\");\n\n    System.out.println(\"Dad,\
+    \ Dad, I bought a pound: \" + s.getFruit());\n}}\n```\n\n```\nabstract class Father\
+    \ {\n    protected String fruit;\n```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "```\npublic String getFruit() {\n    return this.fruit;\n}\n```\n\n```\n//Declare\
+    \ that you want to buy fruit\npublic abstract void buy(String fruit);\n```\n\n\
+    ```\nclass Son extends Father {\n    private String name;\n\n    public Son(String\
+    \ name) {\n        super();\n        this.name = name;\n    }\n\n    //The son\
+    \ fulfills the requirement of his father to buy fruit\n    public void buy(String\
+    \ fruit) {\n        this.fruit = fruit;\n    }\n\n    public String getName()\
+    \ {\n        return this.name;\n    }\n}\n```\n\n> /**\\Summary:\n1. The abstract\
+    \ method can't have a method body implementation, only the method declaration\n\
+    2. When there is an abstract method declared in class, the class must be appended\
+    \ with the abstract indicates that the class is an abstract class\n3. If a subclass\
+    \ inherits an abstract class, the subclass must implement all the abstract methods\
+    \ of the parent class.\n4. Abstract methods can also declare implementation methods.\n\
+    5. Abstract classes cannot be instantiated directly, they must be instantiated\
+    \ by subclasses\n*/"
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Output Result:
+
+
+    Dad, Dad, I bought a pound: Fruit'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "# instanceof\n\n![](img/7bed215b1d3800688250023ed87bfd24_90_0.png)\n\npackage\
+    \ com.test8;\n\n/**\n**/\nTitle:\nExporting People's Classification Information\
+    \ for Oracle Conference Step:\n1. Abstract class: Person {Programmer, Manager}\n\
+    */\npublic class TestInstance {\n    public static void main(String[] args) {\n\
+    \        //The conference can have a capacity of 1,000 people.\n        Person[]\
+    \ persons = new Person[1000];\n\n        //Start registration\n        persons[0]\
+    \ = new Programmer(\"Joseph\");\n        persons[1] = new Programmer(\"james\"\
+    );\n\n        persons[2] = new Manager(\"Page\");\n        persons[3] = new Manager(\"\
+    Joe\");"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "```\n// Pint out\nfor (int i = 0; i < persons.length; i++) {\n    if (persons[i]\
+    \ != null) {\n        if (persons[i] instanceof Programer) {\n            System.out.println(persons[i].getName()\
+    \ + \" belong to the programmer\");\n        }\n        if (persons[i] instanceof\
+    \ Manager) {\n            System.out.println(persons[i].getName() + \" belong\
+    \ to the manager\");\n        }\n    }\n}\n```\n\n```\nabstract class Person {\n\
+    \    protected String name;\n\n    public Person(String name) {\n        this.name\
+    \ = name;\n    }\n\n    public String getName() {\n        return this.name;\n\
+    \    }\n}\n```\n\n```\nclass Programer extends Person {\n    public Programer(String\
+    \ name) {\n        super(name);\n    }\n}\n```\n\n```\nclass Manager extends Person\
+    \ {\n    public Manager(String name) {\n        super(name);\n    }\n}\n```"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    # Output Result:
+
+
+    Joseph belong to the programmer
+
+    james belong to the programmer
+
+    Page belong to the manager
+
+    Joe belong to the manager'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# interface\n\nChairman\nname\n\nPrime Minister\nname : String\n\nbuildHarmonyCommunity(method\
+    \ : String...\n\nserviceForPeople(method : String...\n\nGovernor\nname : String\n\
+    \n```\npackage com.test9;\n/**\ninterface: Interface is a convention\nTitle:\n\
+    \  Chairman says to Establish a Harmonious Society, Prime Minister says to\nServe\
+    \ the People\nStep:\n1. interface: Chairman, Governor\n*/\npublic class TestInterface\n\
+    {\n    public static void main(String[] args)\n{\n        System.out.println(Chairman.name);\n\
+    \n        System.out.println(\"Start conferences...\");\n        Governor g1=new\
+    \ Governor(\"Governor\");\n        g1.buildHarmonyCommunity(\"Education\");\n\
+    \        g1.serviceForPeople(\"Charitable\");\n    }\n}\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "```\ninterface ChairMan {\n    String name=\"ChairMan\";\n\n    public void\
+    \ buildHarmonyCommunity(String method);\n}\n```\n\n```\ninterface PrimeMinister\
+    \ {\n    String name=\"PrimeMinister\";\n\n    public void serviceForPeople(String\
+    \ method);\n}\n```\n\n```\nclass Governer implements ChairMan,PrimeMinister {\n\
+    \    private String name;\n    public Governer(String name) {\n        this.name=name;\n\
+    \    }\n\n    public void buildHarmonyCommunity(String method) {\n        System.out.println(name+\"\
+    \ build harmony community by \"+method);\n    }\n\n    public void serviceForPeople(String\
+    \ method) {\n        System.out.println(name+\" service for people by \"+method);\n\
+    \    }\n\n    public String getName() {\n        return this.name;\n    }\n}\n\
+    ```"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '```
+
+    /**
+
+    Summary:
+
+    1. Declare an interface by interface keyword
+
+    2. The implementation of the defined method is not allowed in the interface.
+
+    3. The declaration of the method in the interface can omit the keyword
+
+    abstract , the abstract method in the abstract class can not be omitted
+
+    4. The methods in the interface are all public by default.
+
+    5. The attributes in the interface are static constants. The static final keyword
+
+    can be omitted.
+
+    does not allow private, protected keyword modifiers.
+
+    6. The implementation class must implement all the declaration methods in
+
+    t interface, just like the abstract class.
+
+    7. Can not instantiate an interface, must have its implementation class
+
+    indirectly instantiated, just like the abstract class
+
+    8. If you want to implement multiple interfaces, separate them by ,
+
+    9. Interfaces can inherit multiple interfaces, abstract classes do not .
+
+    */
+
+    ```
+
+
+    Output Result:
+
+    ChairMan
+
+    Start conferences...
+
+    Governer build harmony community by Education
+
+    Governer service for people by Charitable
+
+
+    # final keyword'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "![](img/7bed215b1d3800688250023ed87bfd24_96_0.png)\n\n```\npackage com.test10;\n\
+    \n/**\nfinal keyword:\n1. The variable of the final keyword modification is a\
+    \ constant. It cannot be modified.\n2. Final keyword modification method, subclass\
+    \ can not be rewritten\n3. The final keyword modified class cannot be inherited\n\
+    */\npublic class TestFinalKeyword {\n    public static void main(String[] args)\
+    \ {\n    //The variable of the final keyword modification is a constant. It cannot\
+    \ be modified.\n    final double PI = 3.14;\n    System.out.println(PI);\n\n \
+    \   Father f = new Father();\n    f.work();\n\n    Son s = new Son();\n    s.study();\n\
+    n}\n```"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "```\n}\n}\nclass Father {\n  //Final keyword modification method, subclass\
+    \ can not be rewritten\n  public final void work() {\n    System.out.println(\"\
+    Do hard work\");\n  }\n}\nclass Son extends Father {\n  public void study() {\n\
+    \    System.out.println(\"study hard, improve every day\");\n  }\n}\nfinal class\
+    \ Daughter extends Father {\n}\n/*\n//The final keyword modified class cannot\
+    \ be inherited\nclass GranDaughter extends Daughter {\n}\n*/\nclass GranSon extends\
+    \ Son {\n}\n```\n\n# **Output Result:**\n\n3.14\nDo hard work\nstudy hard, improve\
+    \ every day"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# enum\n\n![](img/7bed215b1d3800688250023ed87bfd24_98_0.png)\n\n```\npackage\
+    \ com.test11;\n\n/**\nenum: is a special qualified constant type\ns\nTopic:\n\
+    Draw a variety of different circles on the drawing board\n */\npublic class TestEnum\
+    \ {\n    public static void main(String[] args) {\n        // r=5\n        Circle\
+    \ red = new Circle(5, Color.RED);\n    }\n```"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "```\nred.draw();\n\n// r=10\nCircle green = new Circle(10, Color.GREEN);\n\
+    green.draw();\n\n// r=20\nCircle blue = new Circle(20, Color.BLUE);\nblue.draw();\n\
+    }\n\n//Defining enumerated types\nenum Color {\nRED, GREEN, BLUE\n}\n\nclass Circle\
+    \ {\ndouble r; // Radius of the circle\nfinal double PI = 3.14;\nColor color;\
+    \ // Round color (0: red 1: green 2: blue)\n\npublic Circle(double r, Color color)\
+    \ {\n    this.r = r;\n    this.color = color;\n}\n\n//Calculate the area of the\
+    \ circle\npublic double getArea() {\n    return PI * r * r;\n}\n\n//Drawing circle\n\
+    public void draw() {\n    String colorName = \"\";\n    if (color == Color.RED)\
+    \ {\n        colorName = \"Red\";\n    }\n    if (color == Color.GREEN) {\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "```\ncolorName = \"Green\";\n}\nif (color == Color.BLUE) {\n    colorName =\
+    \ \"Blue\";\n}\nSystem.out.println(\"draw circle area: \" + getArea() + \" color:\
+    \ \" + colorName);\n}\n\n```\n\n# Output Result:\n\ndraw circle area: 78.5 color:\
+    \ Red\ndraw circle area: 314.0 color: Green\ndraw circle area: 1256.0 color: Blue\n\
+    \n![](img/7bed215b1d3800688250023ed87bfd24_100_0.png)\n\n```\npackage com.test12;\n\
+    \n/**\n * Polymorphism:\n * Three types: method overload, method override, object\
+    \ up and down\n */\n```"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "transformation\n\nSummary:\n1. Subclass objects can be converted to parent\
+    \ class objects but subclass attributes and methods are not visible after conversion.\n\
+    2. When the subclass overrides the method of the parent class, the child class\
+    \ is converted to the parent class and the subclass is overridden.\n\n```\npublic\
+    \ class TestPolymorphism {\n    public static void main(String[] args) {\n   \
+    \     //Upward transformation subclass attributes and methods are not visible\
+    \ after conversion.\n        Person p = new Student(\"David\");\n        p.say();\n\
+    \n        //Object downcast class\n        Student s = (Student) p;\n        s.say();\n\
+    \        s.study();\n    }\n}\n\nclass Person {\n    public void say() {\n   \
+    \     System.out.println(\"Person speaking\");\n    }\n}\n\nclass Student extends\
+    \ Person {\n    private String name;\n\n    public Student(String name) {\n  \
+    \      this.name = name;\n    }\n\n    public void say() {\n        System.out.println(\"\
+    Student speak english\");\n    }\n}\n```"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "```\npublic void study() {\n    System.out.println(\"study\");\n}\n```\n\n\
+    # **Output Result:**\n\nStudent speak english\nStudent speak english\nstudy\n\n\
+    # Polymorphic Example"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "# Baby\nname :S string\nfruit : Fruit\n\n# Fruit\nname :S string\ngetName()\
+    \ : S string\nFruit(name : S string)\n\n# Apple\nApple(name : S string)\n\n# Grape\n\
+    Grape(name : S string)\n\n```\npackage com.test13;\n\n/**\nTitle:\nChildren Eat\
+    \ Fruits (Apples, Grapes)\n\nStep:\n1. Class: Baby, Fruit (Apple, Grape)\n2. Relationship:\
+    \ Fruit -> Child (apple, grape) is the classification of the fruit\n3. Attributes:\
+    \ Baby (name, fruit reference)\n4. Methods: eat(Fruit fruit)\n*/\npublic class\
+    \ TestPolymorphism {\n    public static void main(String[] args) {\n\n       \
+    \ Baby baby = new Baby(\"Gajia\");\n\n        Apple apple = new Apple(\"Red apple\"\
+    );\n        Grape grape = new Grape(\"Black grape\");\n\n        baby.eat(apple);\n\
+    \        System.out.println(baby.getName() + \" \" eat \" + baby.getFruit().getName());\n\
+    \        baby.eat(grape);\n        System.out.println(grape.getName() + \" \"\
+    \ eat \" + grape.getFruit().getName());\n    }\n```"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "```\nclass Baby {\n    private Fruit fruit;\n    private String name;\n\n \
+    \   public Baby(String name) {\n        this.name = name;\n    }\n\n    public\
+    \ String getName() {\n        return this.name;\n    }\n\n    public Fruit getFruit()\
+    \ {\n        return this.fruit;\n    }\n\n    public void eat(Fruit fruit) {\n\
+    \        this.fruit = fruit;\n    }\n}\n```\n\n```\nclass Fruit {\n    private\
+    \ String name;\n\n    public Fruit(String name) {\n        this.name = name;\n\
+    \    }\n\n    public String getName() {\n        return this.name;\n    }\n}\n\
+    ```\n\n```\nclass Apple extends Fruit {\n    public Apple(String name) {\n   \
+    \     super(name);\n    }\n```"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "```\n}\n}\nclass Grape extends Fruit {\n    public Grape(String name) {\n \
+    \       super(name);\n    }\n}\n```\n\n# Output Result:\n\nGajia eat Red apple\n\
+    Gajia eat Black grape"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "# Internal class\n\n| Mother |\n| name :S string |\n| bod :S string |\n| Mother(name\
+    \ :S string)\n| eat(bod :S string) |\n\n| <<Inner Class>> |\n| Baby |\n| eat()\
+    \ |\n\n```\npackage com.test14;\n\n/**\nTitle:\nMother is pregnant, mother's nutrition\
+    \ determines the healthy growth of baby\nStep:\n1. Class: Mother, Baby\n2. Relationship:\
+    \ Baby in Mother\n3. Method: Mother eats (eat)\n*/\npublic class TestInnerClass\
+    \ {\n    public static void main(String[] args) {\n        Mother mother = new\
+    \ Mother(\"Lucy\");\n        mother.eat(\"Apple\");\n\n        //Baby take nutrition\
+    \ from apples\n        Mother.Baby baby = mother.new Baby();\n        baby.eat();\n\
+    \    }\n```"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "```\nclass Mother {\n    private String name;\n    private String food;\n\n\
+    \    public Mother(String name) {\n        this.name = name;\n    }\n\n    public\
+    \ void eat(String food) {\n        this.food = food;\n        System.out.println(this.name\
+    \ + \" eat \" + this.food);\n    }\n}\n//The child is the inner class of mother\n\
+    class Baby {\n    public void eat() {\n        System.out.println(\"Baby absorb\
+    \ nutrients from the mother's \" + food);\n    }\n}\n```\n\n# Output Result:\n\
+    \nLucy eat Apple\nBaby absorb nutrients from the mother's Apple"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# Static internal class\n\n| Mother |\n| name :S string |\n| bod :S string\
+    \ |\n| Mother(name :S string)\n| eat(bod :S string) |\n\n| <<Static inner class>>\
+    \ |\n| Baby |\n| eat() |\n\n```\npackage com.test15;\n\n/**\nTitle:\n Mother is\
+    \ pregnant, mother's nutrition determines the healthy growth of baby\nStep:\n\
+    1. Class: Mother, Baby\n2. Relationship: Baby in Mother\n3. Method: Mother eats\
+    \ (eat)\n*/\npublic class StaticInnerClass {\n    public static void main(String[]\
+    \ args) {\n\n    Mother mother = new Mother(\"Lucy\");\n    mother.eat(\"Apple\"\
+    );\n\n    //Baby take nutrition from apples\n    Mother.Baby.eat();\n}\n}\n```"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "```\nclass Mother {\n    private String name;\n    private static String food;\n\
+    \n    public Mother(String name) {\n        this.name = name;\n    }\n\n    public\
+    \ String getName() {\n        return this.name;\n    }\n\n    public void setName(String\
+    \ name) {\n        this.name = name;\n    }\n\n    public void eat(String food)\
+    \ {\n        this.food = food;\n        System.out.println(this.name + \" eat\
+    \ \" + this.food);\n    }\n\n    //The child is the inner class of the mother\n\
+    \    static class Baby {\n        public static void eat() {\n            System.out.println(\"\
+    Baby absorb nutrients from the mother's \" + food);\n        }\n    }\n}\n```\n\
+    \n# Output Result:\n\nLucy eat Apple\nBaby absorb nutrients from the mother's\
+    \ Apple"
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "# Basic data Wrap class\n\n```\npackage com.test16;\n\n/**\n * Wrap class:\n\
+    \ * byte -> Byte\n * short -> Short\n * int -> Integer\n * long -> Long\n\n *\
+    \ float -> Float\n * double -> Double\n * char -> Character\n * boolean -> Boolean\n\
+    \ */\npublic class WrapClass {\n    public static void main(String[] args) {\n\
+    \    Byte a = 1;\n    byte b = 10;\n    a = b;\n    System.out.println(a.byteValue());\n\
+    \    System.out.println(Integer.valueOf(b));\n\n    //Integer to double\n    int\
+    \ c = 100;\n    Integer d = new Integer(c);\n    System.out.println(d.doubleValue());\n\
+    \n    //Integer to long\n    System.out.println(d.longValue());\n\n    //Integer\
+    \ to string\n    String str = Integer.toString(d);\n    System.out.println(str);\n\
+    ```"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '```
+
+    //String to integer
+
+    int e = Integer.parseInt(str);
+
+    System.out.println(e);
+
+    }
+
+    }
+
+    ```
+
+
+    # Output Result:
+
+
+    10
+
+    10
+
+    100.0
+
+    100
+
+    100
+
+    100
+
+
+    # Anonymous inner class
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_111_0.png)
+
+
+    ```
+
+    package com.test17;
+
+    /**
+
+    Title:
+
+    ```'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "The motorcycle is equipped with an alarmer. When someone touches the motorcycle,\
+    \ the alarmer sounds an alarm.\nStep:\n\n+   1. Class:\n1.1 Motorcycle (Moto),\
+    \ Alarm (Alarm), Person (Person)\n2. Relationship:\n2.1 Motorcycle with alarm\
+    \ Alarm -> Moto (1 to 1)\n2.2 Alarms have different bands of classification Alarm\n\
+    3. Attributes:\n3.1 Moto (brand, alarm reference)\n3.2 Alarm (brand)\n3.3 Person\n\
+    4. Method:\n\n```\n4.1 Motorcycle with alarm Moto{load(Alarm alarm)}\n4.2 Motorcycles\
+    \ are touched by Moto{tou(Person p)}\n4.3 The alarm sounds Alarm{beep()}\n/*\n\
+    ```\n\n```\npublic class TestMoto{\n    public static void main(String[] args)\
+    \ {\n        Moto moto = new Moto(\"Moto\");\n\n        moto.load(new Alarm()\
+    \ {\n            public void beep(Person p) {\n                System.out.println(p.getName()\
+    \ + \" hit the alarm \");\n            }\n        });\n\n        Person p = new\
+    \ Person(\"John\");\n        //John accidentally bumped into the motorcycle, and\
+    \ the motorcycle sounded an alarm.\n        moto.touched(p);\n    }\n}\n```\n\n\
+    ```\nabstract class Alarm {\n    public abstract void beep(Person p);\n}\n```\n\
+    \n```\nclass Moto {\n```"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "```\nprivate String brand;\nprivate Alarm alarm;\n\npublic Moto(String brand)\
+    \ {\n    this.brand = brand;\n}\n\npublic void load(Alarm alarm) {\n    this.alarm\
+    \ = alarm;\n}\n\npublic void touched(Person p) {\n    alarm.beep(p);\n}\n\nclass\
+    \ Person {\n    private String name;\n\n    public Person(String name) {\n   \
+    \     this.name = name;\n    }\n\n    public String getName() {\n        return\
+    \ this.name;\n    }\n}\n```\n\nOutput Result:\nJohn hit the alarm\n\n# package"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "![](img/7bed215b1d3800688250023ed87bfd24_114_0.png)\n\nThe package is actually\
+    \ a folder\n\n+   1. Create a new package com.pack2 Right click on the Eclipse\
+    \ project -> New -> Package\n2. Then create a new Wallet class under com.pack2\n\
+    \n```\npackage com.pack2;\n\npublic class Wallet {\n    private double money;\n\
+    \n    public void setMoney(double money) {\n        this.money = money;\n    }\n\
+    \n    public double getMoney() {\n        return this.money;\n    }\n}\n```\n\n\
+    +   3. Create a new package com.pack1 Right click on the Eclipse project -> New\
+    \ -> Package\n4. Then create a new Person class under com.pack1"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "```\npackage com.pack1;\n\nimport com.pack2.Wallet;\n\npublic class Person\
+    \ {\n\n    public Person() {\n        Wallet w = new Wallet();\n        System.out.println(w.getMoney());\n\
+    \    }\n\n    public static void main(String[] args) {\n        new Person();\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "# Thread\n\n![](img/7bed215b1d3800688250023ed87bfd24_116_0.png)\n\n```\npackage\
+    \ com.thread;\n/**\n1. If you want to start a thread you must call start() method\n\
+    2. The thread runs at the same time, the CPU allocates to each thread for a period\
+    \ of time to execute each thread sequentially.\n*/\npublic class TestThread {\n\
+    \    public static void main(String[] args) {\n        MyThread t = new MyThread();\n\
+    \        t.start(); // Start the thread, run() will be called automatically\n\n\
+    \        for (int i = 0; i < 10; i++) {\n            System.out.println(\"Main\
+    \ Thread \" + i);\n        }\n    }\n}\n\n//Thread\nclass MyThread extends Thread\
+    \ {\n    public void run() {\n        for (int i = 0; i < 10; i++) {\n       \
+    \     System.out.println(\"MyThread \" + i);\n        }\n    }\n```"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    }
+
+    ```
+
+
+    Output Result:
+
+
+    Main Thread 0
+
+    Main Thread 1
+
+    Main Thread 2
+
+    MyThread 0
+
+    Main Thread 3
+
+    MyThread 1
+
+    Main Thread 4
+
+    Main Thread 5
+
+    Main Thread 6
+
+    Main Thread 7
+
+    MyThread 2
+
+    Main Thread 8
+
+    Main Thread 9
+
+    MyThread 3
+
+    MyThread 4
+
+    MyThread 5
+
+    MyThread 6
+
+    MyThread 7
+
+    MyThread 8
+
+    MyThread 9
+
+
+    # Runnable'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_118_0.png)
+
+
+    ```
+
+    package com.thread;
+
+    ```
+
+
+    ** Because java is a single inheritance, in order to improve scalability, the
+    second implementation Runnable is generally used. */
+
+    public class TestRunnable {
+
+    public static void main(String[] args) {
+
+    MyThread2 t = new MyThread2();
+
+    Thread thread = new Thread("Car thread");
+
+    thread.start(); // Start the thread, run () will be automatically called
+
+
+    Thread thread2 = new Thread("Train thread");
+
+    thread2.start(); // Start the thread, run () will be automatically called
+
+
+    try {
+
+    for (int i = 0; i < 10; i++) {
+
+    System.out.println(Thread.currentThread().getName() + i);
+
+    Thread.sleep(1000); // sleep 1 second = 1000 milliseconds
+
+    }
+
+    } catch (Exception e) {
+
+    e.printStackTrace();
+
+    }
+
+    n}
+
+
+    class MyThread2 implements Runnable {'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "```\n@Override\npublic void run() {\n  try {\n    for (int i = 0; i < 10; i++)\
+    \ {\n      System.out.println(Thread.current().getName() + i);\n      Thread.sleep(1000);\n\
+    \    }\n  } catch (Exception e) {\n    e.printStackTrace();\n  }\n}\n```\n\n#\
+    \ Output Result:\n\nmain0\nCar thread0\nTrain thread0\nTrain thread1\nCar thread1\n\
+    main1\nTrain thread2\nCar thread2\nmain2\nTrain thread3\nmain3\nCar thread3\n\
+    Train thread4\nCar thread4\nmain4\nTrain thread5\nmain5\nCar thread5\nTrain thread6\n\
+    Car thread6\nmain6"
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '```
+
+    Train thread7
+
+    main7
+
+    Car thread7
+
+    Car thread8
+
+    Train thread8
+
+    main8
+
+    Train thread9
+
+    main9
+
+    Car thread9
+
+    ```
+
+
+    # Exception'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "![](img/7bed215b1d3800688250023ed87bfd24_121_0.png)\n\n![](img/7bed215b1d3800688250023ed87bfd24_121_1.png)\n\
+    \n![](img/7bed215b1d3800688250023ed87bfd24_121_2.png)\n\n![](img/7bed215b1d3800688250023ed87bfd24_121_3.png)\n\
+    \n![](img/7bed215b1d3800688250023ed87bfd24_121_4.png)\n\n![](img/7bed215b1d3800688250023ed87bfd24_121_5.png)\n\
+    \n![](img/7bed215b1d3800688250023ed87bfd24_121_6.png)\n\n![](img/7bed215b1d3800688250023ed87bfd24_121_7.png)\n\
+    \n![](img/7bed215b1d3800688250023ed87bfd24_121_8.png)\n\n![](img/7bed215b1d3800688250023ed87bfd24_121_9.png)\n\
+    \n# Runtime exception\n\n```\npublic class TestException {\n    public static\
+    \ void main(String[] args) {\n    // For runtime exceptions, we can capture or\
+    \ not capture\n    int[] scores = { 60, 70, 80 };\n    // java.lang.ArrayIndexOutOfBoundsException\n\
+    \    try {\n        System.out.println(scores[3]);\n    } catch (ArrayIndexOutOfBoundsException\
+    \ e) {\n        System.out.println(\"An array out of bounds exception occurred\"\
+    );\n    }\n    }\n}\n```"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "# Output Result:\n\nAn array out of bounds exception occurred\n\n# Compile-time\
+    \ exception\n\n```\npublic class TestCompileTimeException {\n    public static\
+    \ void main(String[] args) {\n        for (int i = 0; i < 5; i++) {\n        \
+    \    System.out.println(i);\n        }\n\n        //Compile-time exception, we\
+    \ must capture must be placed in\ntry{catch{}}\n        try {\n            Thread.sleep(1000);\
+    \ // sleep 1 second = 1000 milliseconds\n        } catch (InterruptedException\
+    \ e) {\n            e.printStackTrace();\n        }\n    }\n}\n```\n\n# Output\
+    \ Result:\n\n0\n1\n2"
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: "# finally\n\n![](img/7bed215b1d3800688250023ed87bfd24_124_0.png)\n\n```\npackage\
+    \ com.exception;\npublic class TestFinally {\n    public static void main(String[]\
+    \ args) {\n        Calculator c = new Calculator();\n        c.div(10, 2); //\
+    \ Running normally\n        // c.div(10, 0); // Running exception\n        System.out.println(\"\
+    div finished execution\");\n    }\n}\n\nclass Calculator {\n    public int div(int\
+    \ a, int b) {\n```"
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "```\nint result = 0; //Local variables need to be given initial value\ntry\
+    \ {\n    // Local variables defined in try catch cannot be external access\n \
+    \   // When the exception execution occurs in the try, the code behind it, terminate\
+    \ the execution, directly transferred to the catch execution\n    result = a /\
+    \ b;\n    System.out.println(\"Normal execution\");\n    return result;\n} catch\
+    \ (Exception e) {\n    System.out.println(\"Divisor cannot be 0\");\n} finally\
+    \ {\n    System.out.println(\"finally the last free release\");\n    System.out.println(\"\
+    Result return\");\n    return 0;\n}\n```\n\n# Output Result:\n\nNormal execution\n\
+    finally the last free release\ndiv finished execution"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: "# String assignment and comparison\n\n```\npackage com.str;\n\npublic class\
+    \ TestStringEquals {\n    public static void main(String[] args) {\n\n    String\
+    \ str = \"Dreams\";\n    String str1 = new String(\"Dreams\");\n    System.out.println(str);\n\
+    \    System.out.println(str1);\n\n    System.out.println(\"\\n----------------\"\
+    );\n    /*\nString comparison\n    1. == : Reference comparison\n    2.equals:\
+    \ Value comparison\n    */\n    String str3 = \"Dreams\";\n    String str4 = new\
+    \ String(\"Dreams\");\n    String str5 = new String(\"Dreams\");\n    String str6\
+    \ = \"Dreams \";\n    System.out.println(str == str4);\n    System.out.println(str3.equals(str4));\n\
+    \    System.out.println(str4 == str5);\n    System.out.println(str3 == str6);\n\
+    n}\n```\n\nOutput Result:\n\nDreams\nDreams\n----\nfalse"
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "true\nfalse\ntrue\n\n# Byte and string conversion\n\n| String |\n| --- |\n\
+    | getBytes() : byte[] |\n| String(byte[]) : String |\n| String(byte[] bytes, offset\
+    \ : int, length : int) : |\n\n```\npackage com.str;\n/****\n1. byte[] getBytes()\
+    \ Convert a string to a byte array\n2. String new String(byte[]) bytes) Convert\
+    \ a byte array to a string\n3. String new String(byte[],int offset, int length)\
+    \ Convert a byte array to a string\n*/\npublic class TestString {\n    public\
+    \ static void main(String[] args) {\n        String str = \"good\";\n        byte[]\
+    \ bytes = str.getBytes(); //Convert a string to a byte array\n        //Convert\
+    \ each character in the string to an integer corresponding to\n        ASCII a=97\n\
+    \        for (int i = 0; i < bytes.length; i++) {\n            System.out.println((char)\
+    \ bytes[i]);\n        }\n\n        //Define a byte array array\n        byte[]\
+    \ bytes2 = { 103, 111, 111, 100, 0, 0 };\n        String str2 = new String(bytes2);\n\
+    \        System.out.println(str2);\n\n        String str3 = new String(bytes2,\
+    \ 0, 4);\n```"
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '```
+
+    System.out.println(str3);
+
+    }
+
+    ```
+
+
+    # Output Result:
+
+
+    g
+
+    o
+
+    oood
+
+    good'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: "# String judgment operation\n\n| S string |\n| --- |\n| equals(Object obj :\
+    \ 0 b) : boolean |\n| equalsIgnoreCase(String antherString) : boolean |\n| compareTo(String\
+    \ antherString) : int |\n| compareIgnoreCase(String antherString) : int |\n| startsWith(String\
+    \ prefix) : boolean |\n\n```\npackage com.str;\n/**\n * 1. boolean equals(Object\
+    \ addObject) Compare strings for equality\n * 2. boolean equalsIgnoreCase(String\
+    \ antherString) Ignore case comparison\n * 3. int compareTo(String antherString)\
+    \ compares the size of two strings\n * 4. int compareIgnoreCase(String antherString)\
+    \ ignore string case to compare size\n * 5. boolean startsWith(String prefix)\
+    \ to determine whether to start with the specified prefix\n * 6. boolean endsWith(String\
+    \ suffix) to determine whether to end with the specified suffix\n * Note:\n *\
+    \ 1. When comparing strings, if the letters are compared according to the ACSII\
+    \ code of the first letter and then compare the following letters in turn.\n *\
+    \ 2. If the preceding characters are equal, compare the sizes by length\n */\n\
+    public class TestStringCompare {\n    public static void main(String[] args) {\n\
+    \        String str1 = \"hello\";\n        String str2 = \"hello\";\n        String\
+    \ str3 = \"Hello\";\n        System.out.println(str1.equals(str2));\n        System.out.println(str1.equals(str3));\n\
+    \        System.out.println(str1.equalsIgnoreCase(str3));\n    }\n}\n```"
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '```
+
+    String str4 = "hallow";
+
+    String str5 = "zoo";
+
+    String str6 = "zool1";
+
+
+    System.out.println(str1.compareTo(str2)); //If equal, return 0
+
+    System.out.println(str1.compareTo(str3)); //If greater than return positive
+
+    System.out.println(str1.compareTo(str4));
+
+    System.out.println(str1.compareTo(str5)); //If less than return negative
+
+    System.out.println(str1.compareToIgnoreCase(str3));
+
+    System.out.println(str5.compareTo(str6));
+
+
+    String str = "Children''s songs";
+
+    System.out.println(str.startsWith("Children"));
+
+
+    String fileName = "c:/media/amazing.mp3";
+
+    System.out.println(fileName.endsWith(".mp3"));
+
+    }
+
+    }
+
+    ```
+
+
+    # Output Result:
+
+
+    ```
+
+    true
+
+    false
+
+    true
+
+    0
+
+    32
+
+    4
+
+    -18
+
+    0
+
+    -1
+
+    true
+
+    true
+
+    ```'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: "# String replacement\n\n| S tring |\n| replace(oldChar:char, newChar :char)\
+    \ : S string |\n| replaceFirst(regex : String, replacement : String) : S string\
+    \ |\n\n```\npackage com.str;\n\n/**\n1. String replace(char oldChar,char newChar)\
+    \ //Replace old characters with new characters\n2. String replaceFirst(String\
+    \ regex,String replacement); //Replace the first string that satisfies the condition\n\
+    */\npublic class TestStringReplace {\n    public static void main(String[] args)\
+    \ {\n        String article = \"The dog run under the gardenland\";\n        System.out.println(article);\n\
+    \n        article = article.replace(\"dog\", \"horses\");\n        System.out.println(article);\n\
+    \n        article = article.replaceFirst(\"gardenland\", \"grassland\");\n   \
+    \     System.out.println(article);\n    }\n}\n```\n\nOutput Result:\n\nThe dog\
+    \ run under the gardenland\nThe horses run under the gardenland\nThe horses run\
+    \ under the grassland"
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: "# String search and cut\n\n| S string |\n|--- |\n| substring(beginindex : int)\
+    \ : S String |\n| index0 fch(char) : int |\n| lastindex0 fch(char) : int |\n\n\
+    ```\npackage com.str;\n\n/**\n1. String substring(int beginIndex) The string that\
+    \ is Intercepted from the beginIndex index\n2. int indexOf(char ch) Find the index\
+    \ position of the character ch in the string from the begin, if it does not return\
+    \ -1\n3. int lastIndexOf(char ch) Find the index position of the character ch\
+    \ in the string from the end, if it does not return -1\n */\nimport java.util.Scanner;\n\
+    \npublic class TestStringSub {\n    public static void main(String[] args) {\n\
+    \    //Keyboard input file address, intercept file name and extension\n    System.out.println(\"\
+    Please enter the address of the file...\");\n    Scanner in = new Scanner(System.in);\n\
+    \    String filePath = in.nextLine();\n\n    filePath = filePath.trim();//Remove\
+    \ the spaces before and after\n\n    //Intercept file extension\n    String fileExtension\
+    \ = filePath.substring(filePath.indexOf('.'));\n    System.out.println(fileExtension);\n\
+    \n    //Determine the file can only be in .png, .gif, .jpg format.\n    String\
+    \ checks = \".png .gif .jpg\";\n    fileExtension = fileExtension.toLowerCase();\n\
+    \    if (!checks.contains(fileExtension)) {\",\n```"
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: "```\nSystem.out.println(\"You are not entering an image file\");\n}\n\n//Intercept\
+    \ the name of the file\nString fileName = filePath.substring(filePath.lastIndexOf('\\\
+    \\') + 1);\nSystem.out.println(fileName);\n}\n```\n\n# Output Result:\n\nPlease\
+    \ enter the address of the file...\ne:\\book\\music.mp3\n.mp3\nYou are not entering\
+    \ an image file\nmusic.mp3\n\n# String split\n\n| S string |\n| sp split(regex\
+    \ : S string) : String[] |\n\n```\npackage com.str;\n\n/**\n * 1. String[] split(String\
+    \ regex) Split a string into an array with regex\n */\nimport java.util.Scanner;\n\
+    \npublic class TestStringSplit {\n    public static void main(String[] args) {\n\
+    \        //Enter a student's language, mathematics, and physics scores separated\
+    \ by\n```"
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: "```\nsemicolon;\nSystem.out.println(\"Please enter the student name...\");\n\
+    Scanner in = new Scanner(System.in);\nString name = in.nextLine();\n\nSystem.out.println(\"\
+    Enter a student's language, mathematics, and physics\nscores separated by ;\"\
+    );\nString scores = in.nextLine();\n//Split student scores by;\nString[] scoreArray\
+    \ = scores.split(\":\");\n\nSystem.out.println(name + \" language=\" + scoreArray[0]\
+    \ + \" \" \nmathematics=\" + scoreArray[1] + \" \" physics=\" + scoreArray[2]);\n\
+    }\n```\n\n# Output Result:\n\nPlease enter the student name...\nGrace\nter a student's\
+    \ language, mathematics, and physics scores separated by ;\n100;98;95\nGrace language=100\
+    \ mathematics=98 physics=95\n\n# StringBuffer and StringBuilder\n\n```\npackage\
+    \ com.str;\n/**\n* StringBuffer StringBuilder Generally used when many strings\
+    \ are connected\n* StringBuffer Thread safe\n* StringBuilder Thread is not safe\n\
+    */\n```"
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: "```\npublic class TestBufferStringStringBuilder {\n    public static void main(String[]\
+    \ args) {\n        String str = \"\";\n        StringBuilder strBuffer = new StringBuilder();\n\
+    \        for (int i = 0; i < 10; i++) {\n            str += i + \"\";\n      \
+    \      strBuffer.append(i).append(\",\");\n        }\n        System.out.println(strBuffer.toString());\n\
+    \n        //1. String append\n        StringBuilder buffer = new StringBuilder();\n\
+    \        buffer.append(\"How\");\n        buffer.append(\" you\");\n        System.out.println(buffer.toString());\n\
+    \n        //2. String replacement\n        buffer.replace(4, 9, \"you\");\n  \
+    \      System.out.println(buffer.toString());\n\n        //3. insert \"are\" after\
+    \ index 3\n        buffer.insert(3, \" are\");\n        System.out.println(buffer.toString());\n\
+    \n        //4. Intercept of string\n        System.out.println(buffer.substring(0,\
+    \ 4));\n    }\n}\n```\n\n# Output Result:\n\n0,1,2,3,4,5,6,7,8,9,\nHow your\n\
+    How you\nHow are you\nHow"
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: "# Arrays\n\n```\npackage com.test18;\nimport java.util.Arrays;\npublic class\
+    \ TestArrays {\n    public static void main(String[] args) {\n        int[] arr\
+    \ = { 1, 4, 3, 7, 5, 6 };\n        Arrays.sort(arr);\n        System.out.println(Arrays.toString(arr));\n\
+    \n        //Find the specified value in an already ordered array\n        System.out.println(Arrays.binarySearch(arr,\
+    \ 4));\n    }\n}\n```\n\nOutput Result:"
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '[1, 3, 4, 5, 6, 7]
+
+    2'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: "# Calandar\n\n```\npackage com.test18;\n\nimport java.util.Calendar;\nimport\
+    \ java.util.GregorianCalendar;\n\npublic class TestCalendar {\n    public static\
+    \ void main(String[] args) {\n        Calendar c = new GregorianCalendar();\n\
+    \        //Output year, month, day, hour, minute\n        System.out.println(c.get(Calendar.YEAR));\n\
+    \        //Gregorian calendar starts in 0 in January, so add 1\n        System.out.println(c.get(Calendar.MONTH)\
+    \ + 1);\n        System.out.println(c.get(Calendar.DATE));\n        System.out.println(c.get(Calendar.HOUR));\n\
+    \        System.out.println(c.get(Calendar.MINUTE));\n        System.out.println(c.get(Calendar.SECOND));\n\
+    \        System.out.println(c.get(Calendar.MILLISECOND));\n\n        //Get current\
+    \ date\n        System.out.println(DateTime.getDate());\n        //Get datetime\n\
+    \        System.out.println(DateTime.getTime());\n        //Get current timestamp\n\
+    \        System.out.println(DateTime.getTimestamp());\n    }\n\n```\n\nclass DateTime\
+    \ {\n\n```\npublic static String getDate() {\n    Calendar c = new GregorianCalendar();\n\
+    \    StringBuffer buffer = new StringBuilder();\n```"
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: "```\nbuffer.append(addZero(c.get(Calendar.MONTH) + 1)).append(\"--\");\nbuffer.append(addZero(c.get(Calendar.DATE))).append(\"\
+    --\");\nbuffer.append(c.get(Calendar.YEAR));\nreturn buffer.toString();\n```\n\
+    \n```\npublic static String getTime() {\n    Calendar c = new GregorianCalendar();\n\
+    \    StringBuffer buffer = new StringBuffer();\n    buffer.append(addZero(c.get(Calendar.MONTH)\
+    \ + 1)).append(\"--\");\n    buffer.append(addZero(c.get(Calendar.DATE))).append(\"\
+    --\");\n    buffer.append(addZero(c.get(Calendar.YEAR))).append(\":-\");\n   \
+    \ buffer.append(addZero(c.get(Calendar.HOUR))).append(\":-\");\n    buffer.append(addZero(c.get(Calendar.MINUTE))).append(\"\
+    :-\");\n    buffer.append(addZero(c.get(Calendar.SECOND))).append(\":-\");\n \
+    \   return buffer.toString();\n}\n```\n\n```\npublic static long getTimeStamp()\
+    \ {\n    Calendar c = new GregorianCalendar();\n    return c.getTime().getTime();\n\
+    }\n```\n\n```\n//If month, day, hour, minute, second is less than 10, add 0 in\
+    \ front\npublic static String addZero(int value) {\n    String str = Integer.toString(value);\n\
+    \    if (str.length() < 2)\n        return \"0\" + str;\n    return str;\n}\n\
+    ```\n\n# Output Result:\n\n2019\n3\n27\n11"
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '4
+
+    58
+
+    163
+
+    03-27-2019
+
+    03-27-2019 11:04:58
+
+    1553706298165'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: "# Date\n\n```\npackage com.test20;\nimport java.util.Date;\nimport java.text.SimpleDateFormat;\n\
+    \npublic class DateTest {\n    public static void main(String[] args) {\n    \
+    \    //Get the current date of the system\n        Date date = new Date();\n \
+    \       System.out.println(date);\n\n        //Get the current timestamp\n   \
+    \     System.out.println(date.getTime());\n\n        //Get the current datetime\n\
+    \        System.out.println(CDate.getCurrentDateTime());\n\n        System.out.println(CDate.stringToDate(\"\
+    12-12-2019 00:00:00\"));\n    }\n}\nclass CDate {\n    public static String getCurrentDateTime()\
+    \ {\n        Date date = new Date();\n        //Date formatting\n        SimpleDateFormat\
+    \ df = new SimpleDateFormat(\"MM-dd-yyyy HH:mm:ss\")\n        String dateStr =\
+    \ df.format(date).toString();\n        return dateStr;\n    }\n\n    public static\
+    \ String dateToString(Date date) {\n        //Date formatting\n```"
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: "```\nSimpleDateFormat df = new SimpleDateFormat(\"MM-dd-yyyy\\nHH:mm:ss\");\n\
+    \  String dateStr = df.format(date).toString();\n  return dateStr;\n}\n```\n\n\
+    ```\npublic static Date stringTo(String dateStr) {\n  try {\n    SimpleDateFormat\
+    \ df = new SimpleDateFormat(\"MM-dd-yyyy\\nHH:mm:ss\");\n    return df.parse(dateStr);\n\
+    \  } catch (Exception e) {\n    e.printStackTrace();\n    return null;\n  }\n\
+    }\n```\n\n# Math\n\n```\npackage com.test20;\n\npublic class TestMath {\n  public\
+    \ static void main(String[] args) {\n    //Absolute value\n    System.out.println(Math.abs(-2));\n\
+    \n    // the smallest integer greater than the decimal\n    System.out.println(Math.ceil(1.6));\n\
+    \    System.out.println(Math.ceil(1.1));\n\n    //the largest integer less than\
+    \ the decimal\n    System.out.println(Math.floor(1.6));\n    System.out.println(Math.floor(1.1));\n\
+    \  }\n```"
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '```
+
+    //Fractional part rounded off
+
+    System.out.println(Math.round(1.6));
+
+    System.out.println(Math.round(1.1));
+
+
+    //Maximum of two numbers
+
+    System.out.println(Math.max(1, 2));
+
+    //Minimum of two numbers
+
+    System.out.println(Math.min(1, 2));
+
+
+    //Generate a random number between 0.0 and 1.0
+
+    System.out.println(Math.random());
+
+    }
+
+    ```
+
+
+    Output Result:
+
+
+    2
+
+    2.0
+
+    2.0
+
+    1.0
+
+    1.0
+
+    2
+
+    1
+
+    2
+
+    0.36441889007455386
+
+
+    # Comparable'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '![](img/7bed215b1d3800688250023ed87bfd24_144_0.png)
+
+
+    package com.test20;
+
+
+    > /**
+
+    Title:
+
+    Sorting a class of students from small to large in mathematics
+
+    Step:
+
+    1. Class:
+
+    1.1 Class (ClassSet)
+
+    1.2 Student (Student)
+
+    2. Relationship:
+
+    2.1 Students belong to class Student -> ClassSet (multiple to 1)
+
+    3. Attributes:
+
+    3.1 ClassSet (name, size)
+
+    3.2 Student (name, score)
+
+    4. Methods:
+
+    4.1 ClassSet{addStudent(Student s)}
+
+    4.2 ClassSet{sortScore()}
+
+    /
+
+    import java.util.Arrays;'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: "```\npublic class TestComparable {\n    public static void main(String[] args)\
+    \ {\n        ClassSet c = new HashSet(\"HighClass\", 4);\n\n        c.addStudent(new\
+    \ Student(\"Lida\", 90));\n        c.addStudent(new Student(\"Mathew\", 80));\n\
+    \        c.addStudent(new Student(\"Timothy\", 95));\n        c.addStudent(new\
+    \ Student(\"John\", 70));\n\n        Student[] students = c.getStudents();\n \
+    \       for (Student s : students) {\n            if (s != null) {\n         \
+    \       System.out.println(s.getName() + \",\" + s.getMathScore());\n        \
+    \    }\n        }\n\n        System.out.println(\"\\nSort by student grades\"\
+    );\n\n        Arrays.sort(students);\n        for (Student s : students) {\n \
+    \           if (s != null) {\n                System.out.println(s.getName() +\
+    \ \",\" + s.getMathScore());\n            }\n        }\n    }\n```\n\n```\nclass\
+    \ ClassSet {\n    private String className;\n    private int maxSize;\n    private\
+    \ int currentSize;\n    private Student[] students;//Array of all students\n\n\
+    \    public ClassSet(String className, int maxSize) {\n        this.className\
+    \ = className;\n        this.maxSize = maxSize;\n        students = new Student[maxSize];\n\
+    \    }\n```"
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: "```\npublic Student[] getStudents() {\n  return this.students;\n}\n```\n\n\
+    ```\npublic void addStudent(Student s) {\n  for (int i = 0; i < students.length;\
+    \ i++) {\n    if (students[i] == null) {\n      students[i] = s;\n      currentSize++;\n\
+    \      break;\n    }\n  }\n}\n```\n\n```\nclass Student implements Comparable\
+    \ {\n  private String name;\n  private int mathScore;\n\n  public Student(String\
+    \ name, int mathScore) {\n    this.name = name;\n    this.mathScore = mathScore;\n\
+    \  }\n\n  public String getName() {\n    return this.name;\n  }\n\n  public int\
+    \ getMathScore() {\n    return this.mathScore;\n  }\n}\n```\n\n```\n/**\n * Implement\
+    \ the Comparable interface to override the compareTo(T o)\n * If sorted from small\
+    \ to large\n * Greater than return 1\n * Less than return -1\n * Equal to return\
+    \ 0\n */\n```"
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: "If sorted from large to small\nGreater than -1\nLess than 1\nEqual to return\
+    \ 0\n\n```\npublic int compareTo(Object obj) {\n  if (obj instanceof Student)\
+    \ {\n    Student s = (Student) obj;\n    if (this.mathScore > s.getMathScore())\n\
+    \      return 1;\n    if (this.mathScore < s.getMathScore())\n      return -1;\n\
+    \  }\n  return 0;\n}\n```\n\n# Output Result:\n\nLida,90\nMathew,80\nTimothy,95\n\
+    John,70\n\nSort by student grades\nJohn,70\nMathew,80\nLida,90\nTimothy,95"
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# Comparator
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_148_0.png)
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_148_1.png)
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_148_2.png)
+
+
+    | StudentASccComparator | StudentDescCComparator |
+
+
+    ```
+
+    package com.test21;
+
+
+    /**
+
+    Title:
+
+    Sorting a class of students from small to large in mathematics
+
+
+    Step:
+
+    1. Class:
+
+    1.1 Class (ClassSet)
+
+    1.2 Student (Student)
+
+    2. Relationship:
+
+    2.1 Students belong to class Student -> ClassSet (multiple to 1)
+
+    3. Attributes:
+
+    3.1 ClassSet (name, size)
+
+    ```'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: "# 3.2 Student ( name, score)\n\n4. Methods:\n\n4.1 ClassSet{addStudent(Student\
+    \ s)}\n\n4.2 ClassSet{sortByScore()}\n\n/*\n\n```\nimport java.util.Arrays;\n\
+    import java.util.Comparator;\n\npublic class TestComparator {\n    public static\
+    \ void main(String[] args) {\n        ClassSet c = new ClassSet(\"HighClass\"\
+    , 4);\n\n        c.addStudent(new Student(\"Lida\", 90));\n        c.addStudent(new\
+    \ Student(\"Mathew\", 80));\n        c.addStudent(new Student(\"Timothy\", 95));\n\
+    \        c.addStudent(new Student(\"John\", 70));\n\n        Student[] students\
+    \ = c.getStudents();\n        for (Student s : students) {\n            if (s\
+    \ != null)\n                System.out.println(s.getName() + \",\" + s.getMathScore());\n\
+    \        }\n\n        System.out.println(\"\\nSort by student's scores in ascending\
+    \ order\");\n        Array.sort(students, new StudentAscComparator());\n     \
+    \   for (Student s : students) {\n            if (s != null)\n               \
+    \ System.out.println(s.getName() + \",\" + s.getMathScore());\n        }\n\n \
+    \       System.out.println(\"\\nSort by student's scores in descending order\"\
+    );\n        Array.sort(students, new StudentDescComparator());\n        for (Student\
+    \ s : students) {\n            if (s != null)\n                System.out.println(s.getName()\
+    \ + \",\" + s.getMathScore());\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: "```\nclass ClassSet {\n    private String className;\n    private int maxSize;\n\
+    \    private int currentSize;\n    private Student[] students;//Array of all students\n\
+    \n    public ClassSet(String className, int maxSize) {\n        this.className\
+    \ = className;\n        this.maxSize = maxSize;\n        students = new Student[maxSize];\n\
+    \    }\n\n    public Student[] getStudents() {\n        return this.students;\n\
+    \    }\n\n    public void addStudent(Student s) {\n        for (int i = 0; i <\
+    \ students.length; i++) {\n            if (students[i] == null) {\n          \
+    \      students[i] = s;\n                currentSize++;\n                break;\n\
+    \            }\n        }\n    }\n}\n```\n\n```\nclass Student {\n    private\
+    \ String name;\n    private int mathScore;\n\n    public Student(String name,\
+    \ int mathScore) {\n        this.name = name;\n        this.mathScore = mathScore;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: "```\npublic String getName() {\n    return this.name;\n}\n```\n\n```\npublic\
+    \ void setName(String name) {\n    this.name = name;\n}\n```\n\n```\npublic int\
+    \ getMathScore() {\n    return this.mathScore;\n}\n```\n\n```\npublic void setMathScore(int\
+    \ mathScore) {\n    this.mathScore = mathScore;\n}\n```\n\n```\n// 学生排序排列\nclass\
+    \ StudentAscComparator implements Comparator {\n    public int compare(Object\
+    \ o1, Object o2) {\n        if ((o1 instanceof Student) && (o2 instanceof Student))\
+    \ {\n            Student s1 = (Student) o1;\n            Student s2 = (Student)\
+    \ o2;\n            if (s1.getMathScore() > s2.getMathScore()) {\n            \
+    \    return 1;\n            }\n            if (s1.getMathScore() < s2.getMathScore())\
+    \ {\n                return -1;\n            }\n        }\n        return 0;\n\
+    \    }\n}\n```\n\n```\n//Students in descending order\nclass StudentDescComparator\
+    \ implements Comparator {\n    public int compare(Object o1, Object o2) {\n  \
+    \      if ((o1 instanceof Student) && (o2 instanceof Student)) {\n           \
+    \ Student s1 = (Student) o1;\n            Student s2 = (Student) o2;\n       \
+    \     if (s1.getMathScore() > s2.getMathScore())\n```"
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: "```\nreturn -1;\nif (s1.getMathScore() < s2.getMathScore())\n    return 1;\n\
+    }\nreturn 0;\n}\n```\n\n# Output Result:\n\nLida,90\nMathew,80\nTimothy,95\nJohn,70\n\
+    \nSort by student's scores in ascending order\n\nJohn,70\nMathew,80\nLida,90\n\
+    Timothy,95\n\nSort by student's scores in descending order\n\nTimothy,95\nLida,90\n\
+    Mathew,80\nJohn,70\n\n# Random\n\n```\npackage com.test21;\n\nimport java.util.Random;\n\
+    \npublic class TestRandom {\n    public static void main(String[] args) {\n```"
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: "```\nRandom rn = new Random();\nfor (int i = 0; i < 10; i++) {\n    System.out.println(rn.nextInt(10));\n\
+    }\n```\n\n# Output Result:\n\n0\n8\n1\n5\n1\n0\n8\n5\n0\n0\n\n# Timer TimerTask\n\
+    \n![](img/7bed215b1d3800688250023ed87bfd24_153_0.png)\n\n```\npackage com.test21;\n\
+    \nimport java.text.SimpleDateFormat;\nimport java.util.Date;\n```"
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: "```\nimport java.util.Timer;\nimport java.util.TimerTask;\n\npublic class TestTimer\
+    \ {\n    private Timer timer;\n\n    public TestTimer() {\n        timer = new\
+    \ Timer();\n        //Show current time every 1 second\n        timer.schedule(new\
+    \ MyTask(), new Date(), 1000);\n    }\n\n    class MyTask extends TimerTask {\n\
+    \        public void run() {\n        //Print current datetime\n        SimpleDateFormat\
+    \ df = new SimpleDateFormat(\"MM-dd-yyyy HH:mm:ss\");\n        System.out.println(df.format(new\
+    \ Date()));\n    }\n    }\n\n    public static void main(String[] args) {\n  \
+    \      new TestTimer();\n    }\n}\n```\n\nOutput Result:\n\n```\n03-27-2019 23:47:35\n\
+    03-27-2019 23:47:36\n03-27-2019 23:47:37\n03-27-2019 23:47:38\n```"
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: "# List and ArrayList\n\n![](img/7bed215b1d3800688250023ed87bfd24_155_0.png)\n\
+    \nCollection\n\nList\n\n| ArrayList |\n| add(e : 0 b,jct) : boolean |\n| get(index\
+    \ : int) : 0 b,jct |\n| size() : int |\n| contains(obj : 0 b,jct) : boolean |\n\
+    | isEmpty() : boolean |\n\n+   1. ArrayList in order of first-in, first-out.\n\
+    2. ArrayList can add repeating elements\n3. ArrayList can also add null value\n\
+    4. ArrayList is internally implemented as an array of objects\n\n```\n/**\n* 1.\
+    \ ArrayList in order of first-in, first-out.\n* 2. ArrayList can add repeating\
+    \ elements\n* 3. ArrayList can also add null value\n* 4. ArrayList is internally\
+    \ implemented as an array of objects\n */\npackage com.test21;\n\nimport java.util.ArrayList;\n\
+    import java.util.List;\n\npublic class TestArrayList {\n    public static void\
+    \ main(String[] args) {\n```"
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: "```\nList list = new ArrayList();\nlist.add(1);\nlist.add(1);\nlist.add(null);\n\
+    list.add(2.5);\nlist.add(true);\nlist.add(\"David\");\nlist.add('A');\nlist.add(new\
+    \ Cat(\"Persian Cat\"));\n```\n\n```\nObject david = list.get(3);\nSystem.out.println(\"\
+    +get(3): \"+david);\n```\n\n```\nSystem.out.println(\"size: \"+list.size());\n\
+    ```\n\n```\nSystem.out.println(\"contains david: \"+list.contains(\"David\"));\"\
+    );\n```\n\n```\nSystem.out.println(\"isEmpty: \"+list.isEmpty());\n```\n\n```\n\
+    list.set(4, 'B');\nSystem.out.println(\"get(4): \"+list.get(4));\n```\n\n```\n\
+    //Print list all elements\nfor (int i = 0; i < list.size(); i++) {\n    Object\
+    \ obj = list.get(i);\n    System.out.print(obj + \", \");\n}\n```\n\n```\nlist.remove(4);\n\
+    System.out.println(\"nremove(4) ---------------\");\nfor (int i = 0; i < list.size();\
+    \ i++) {\n    Object obj = list.get(i);\n    System.out.print(obj + \", \");\n\
+    }\n```\n\n```\nlist.clear();\nSystem.out.println(\"nclear ---------------\");\n\
+    System.out.println(list.size());\nSystem.out.println(list.isEmpty());\n```"
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: "```\nfor (int i = 0; i < list.size(); i++) {\n    Object obj = list.get(i);\n\
+    \    System.out.print(obj + \", \");\n}\n```\n\n# class Cat {\n\nprivate String\
+    \ name;\n\n```\npublic Cat(String name) {\n    this.name = name;\n```\n\n```\n\
+    public String getName() {\n    return name;\n```\n\n```\npublic void setName(String\
+    \ name) {\n    this.name = name;\n```\n\n```\npublic String toString() {\n   \
+    \ return name;\n```\n\n# Output Result:\n\nget(3): 2.5\nsize: 8\ncontains david:\
+    \ true\nisEmpty: false\nget(4): B\n1,1,null,2,5,B,David,A,Persian Cat,\nremove(4)\
+    \ ----------------------------\n1,1,null,2,5,David,A,Persian Cat,\nclear() --------------------"
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: '# LinkedList
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_158_0.png)
+
+
+    ```
+
+    /**
+
+    Title: There are a lot of cars waiting to enter the gas station.
+
+    Print out the car information that according to the order in which the car
+
+    ```'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: "enters.\n\n/* LinkedList is internally implemented as an link of objects\n\
+    */\n\npackage com.test.21;\n\nimport java.util.LinkedList;\npublic class TestLinkedList\
+    \ {\n\n```\npublic static void main(String[] args) {\n    station = new Station(\"\
+    Gas Station\");\n    station.addCar(new Car(\"Car\", 100));\n    station.addCar(new\
+    \ Car(\"Benz Car\", 200));\n    station.addCar(new Car(\"Bus\", 300));\n```\n\n\
+    ```\nLinkedList carList = station.getCarList();\nSystem.out.println(station.getName()\
+    \ + \" refueling car:\");\nfor (int i = 0; i < carList.size(); i++) {\n    Car\
+    \ car = (Car) carList.get(i);\n    System.out.println(car.getName() + \",\" +\
+    \ car.getVolume());\n}\nSystem.out.println(carList.size());\n```\n\nSystem.out.println(\"\
+    --------------------\");\n\n```\nCar car = (Car) carList.poll(); // Retrieves\
+    \ and removes the head (first\nelement) of this list\nwhile (car != null) {\n\
+    \    System.out.println(car.getName() + \",\" + car.getVolume());\n    car = (Car)\
+    \ carList.poll();\n    System.out.println(carList.size());\n}\n```\n\n```\nclass\
+    \ Station {\n    private String name;\n    private LinkedList carList;\n```"
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: "```\npublic Station(String name) {\n    this.name = name;\n    this.carList\
+    \ = new LinkedList();\n}\n```\n\n```\npublic void addCar(Car car) {\n    carList.addLast(car);\n\
+    }\n```\n\n```\npublic String getName() {\n    return name;\n}\n```\n\n```\npublic\
+    \ void setName(String name) {\n    this.name = name;\n}\n```\n\n```\npublic LinkedList\
+    \ getCarList() {\n    return carList;\n}\n```\n\n```\npublic void setCarList(LinkedList\
+    \ carList) {\n    this.carList = carList;\n}\n```\n\n```\nclass Car {\n    private\
+    \ String name;\n    private double volume;\n```\n\n```\npublic Car(String name,\
+    \ double volume) {\n    this.name = name;\n    this.volume = volume;\n}\n```\n\
+    \n```\npublic String getName() {\n    return name;\n}\n```"
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: "```\npublic void setName(String name) {\n    this.name = name;\n}\n\npublic\
+    \ double getVolume() {\n    return volume;\n}\n\npublic void setVolume(double\
+    \ volume) {\n    this.volume = volume;\n}\n```\n\n# Output Result:\n\nGas Station\
+    \ refueling car:\nCar,100.0\nBenz Car,200.0\nBus,300.0\n3\n------------------------------------------------\n\
+    Car,100.0\nBenz Car,200.0\nBus,300.0\n0"
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: "# Iterator\n\n# Iterator\n\n![](img/7bed215b1d3800688250023ed87bfd24_162_0.png)\n\
+    \nBerkeley University -> Market Street -> Polo Alto -> Cupertino\n\n```\npackage\
+    \ com.test22;\n\n/**\nTitle:\n Printout All site information for the subway\n\
+    \ */\nimport java.util.ArrayList;\nimport java.util.Iterator;\nimport java.util.List;\n\
+    \npublic class TestIterator {\n    public static void main(String[] args) {\n\
+    \        List<Station> list = new ArrayList();\n        stationList.add(new Station(\"\
+    Berkeley University\"));\n        stationList.add(new Station(\"Market Street\"\
+    ));\n        stationList.add(new Station(\"Polo Alto\"));\n        stationList.add(new\
+    \ Station(\"Cuptino\"));\n\n        System.out.println(\"\\nOutput as an list\
+    \ -----------\");\n    }\n\n    for (int i = 0; i < stationList.size(); i++) {\n\
+    \        Station station = (Station) stationList.get(i);\n}\n```"
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: "```\nSystem.out.print(station.getName() + \" -> \");\n}\nSystem.out.println(\"\
+    \\nOutput as an array\");\nObject[] stations = stationList.toArray();\nfor (int\
+    \ i = 0; i < stations.length; i++) {\n    Station station = (Station) stations[i];\n\
+    \    System.out.print(station.getName() + \" -> \");\n}\nSystem.out.println(\"\
+    \\nOutput as an Iterator\");\nIterator iter = stationList.iterator();\nwhile (iter.hasNext())\
+    \ // Returns true if the iteration has more elements\n{\n    Station station =\
+    \ (Station) iter.next(); // Returns the next element in the iteration.\n    System.out.print(station.getName()\
+    \ + \" -> \");\n}\n\nclass Station {\n    private String name;\n\n    public Station(String\
+    \ name) {\n        this.name = name;\n    }\n\n    public String getName() {\n\
+    \        return name;\n    }\n\n    public void setName(String name) {\n     \
+    \   this.name = name;\n    }\n}\n```"
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    Output Result:
+
+    Output as an list -
+
+    Berkeley University -> Market Street -> Polo Alto -> Cuptino ->nOutput as an array
+    -
+
+    Berkeley University -> Market Street -> Polo Alto -> Cuptino ->nOutput as an Iterator
+    -
+
+    Berkeley University -> Market Street -> Polo Alto -> Cuptino
+
+
+    # Vector
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_164_0.png)
+
+
+    ```
+
+    /**
+
+    Title:
+
+    Printout cinema movie name
+
+    Vector: thread safe
+
+    List: thread not safe
+
+    ```'
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: "```\n/* */\npackage com.test22;\n\nimport java.util.ArrayList;\nimport java.util.Enumeration;\n\
+    import java.util.List;\nimport java.util.Vector;\n\npublic class TestVector {\n\
+    \    public static void main(String[] args) {\n        Vector v = new Vector();\n\
+    \n        v.addElement(new Movie(\"Deformed steel\"));\n        v.addElement(new\
+    \ Movie(\"Lion king\"));\n        v.addElement(new Movie(\"Pirates of the Caribbean\"\
+    ));\n\n        for (int i = 0; i < v.size(); i++) {\n            Movie movie =\
+    \ (Movie) v.elementAt(i);\n            System.out.print(movie.getName() + \",\
+    \ \");\n        }\n\n        System.out.println(\"nEnumeration-------------------------------------\"\
+    );\n\n        Enumeration e = v.elements();\n        while (e.hasMoreElements())\
+    \ {\n            Movie movie = (Movie) e.nextElement();\n            System.out.print(movie.getName()\
+    \ + \", \");\n        }\n        }\n}\n\nclass Movie {\n    private String name;\n\
+    \n    public Movie(String name) {\n        this.name = name;\n    }\n}\n```"
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: "```\n}\npublic String getName() {\n    return name;\n}\npublic void setName(String\
+    \ name) {\n    this.name = name;\n}\n}\n```\n\n# Output Result:\n\nDeformed steel,Lion\
+    \ king,Pirates of the Caribbean,\nEnumeration----------------------------\nDeformed\
+    \ steel,Lion king,Pirates of the Caribbean,"
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: "# Collections\n\n| Collections |\n| sort(com parable :Com parable) | \n| Com\
+    \ parable |\n| compareTo(o : O bject) : int |\n| Product |\n\n```\n\nTitle:\n\
+    \ Sort the price of the product of the merchant by price\n/\npackage com.test22;\n\
+    \nimport java.util.ArrayList;\nimport java.util.Collections;\nimport java.util.Comparator;\n\
+    import java.util.List;\n\npublic class TestCollections {\n    public static void\
+    \ main(String[] args) {\n        List list = new ArrayList();\n        list.add(new\
+    \ Product(\"ASUS Computer\", 400));\n        list.add(new Product(\"Toshiba computer\"\
+    , 350));\n        list.add(new Product(\"Lenovo\", 500));\n        for (int i\
+    \ = 0; i < list.size(); i++) {\n            Product p = (Product) list.get(i);\n\
+    \            System.out.println(p.getName() + \" ,\" + p.getPrice());\n      \
+    \  }\n    }\nn\n```"
+  merge: -1
+  pgno: 167
+- img_proc: true
+  md: "```\nCollections.sort(list);\nSystem.out.println(\"After sorting result:-\"\
+    );\nfor (int i = 0; i < list.size(); i++) {\n    Product p = (Product) list.get(i);\n\
+    \    System.out.println(p.getName() + \",\" + p.getPrice());\n}\n```\n\n```\n\
+    class Product implements Comparable {\n    private String name;\n    private double\
+    \ price;\n```\n\n```\npublic Product(String name, double price) {\n    this.name\
+    \ = name;\n    this.price = price;\n```\n\n```\npublic String getName() {\n  \
+    \  return name;\n```\n\n```\npublic void setName(String name) {\n    this.name\
+    \ = name;\n```\n\n```\npublic double getPrice() {\n    return price;\n```\n\n\
+    ```\npublic void set(double price) {\n    this.price = price;\n```\n\n```\n@Override\n\
+    public int compareTo(Object o) {\n```"
+  merge: -1
+  pgno: 168
+- img_proc: true
+  md: "```\nProduct p = (Product) o;\nif (this.price < p.getPrice()) {\n    return\
+    \ 1;\n} else if (this.price > p.getPrice()) {\n    return -1;\n}\nreturn 0;\n\
+    }}\n```\n\n# Output Result:\n\nASUS Computer,400.0\nToshiba computer,350.0\nLenovo,500.0\n\
+    After sorting result:--------------------------------------------\nLenovo,500.0\n\
+    ASUS Computer,400.0\nToshiba computer,350.0\n\n# Set HashSet TreeSet"
+  merge: -1
+  pgno: 169
+- img_proc: true
+  md: "![](img/7bed215b1d3800688250023ed87bfd24_170_0.png)\n\n| HashSet |\n| add(obj\
+    \ : object) : boolean |\n| get(index : int) : object |\n| size() : int |\n| contains(obj:object)\
+    \ : boolean |\n| isEmpty() : boolean |\n| iterator() : iterator |\n\n```\n```java\n\
+    \npublic class TestHashSet {\n    Set set = new HashSet();\n    set.add(new Ticket(\"\
+    The Matrix\", 300));\n    set.add(new Ticket(\"Beautiful Soul\", 100));\n}\n```\n\
+    ```"
+  merge: -1
+  pgno: 170
+- img_proc: true
+  md: "```\nset.add(new Ticket(\"Forrest Gump\", 200));\nset.add(new Ticket(\"Firemen\"\
+    , 200));\n```\n\n```\nIterator iter = set.iterator();\nwhile (iter.hasNext())\
+    \ {\n    Object obj = iter.next();\n    System.out.println(obj + \" , \");\n}\n\
+    ```\n\n```\nclass Ticket {\n    private String name;\n    private double price;\n\
+    \n    public Ticket(String name, double price, double price) {\n        super();\n\
+    \        this.name = name;\n        this.price = price;\n    }\n\n    public String\
+    \ getName() {\n        return name;\n    }\n\n    public void setName(String name)\
+    \ {\n        this.name = name;\n    }\n\n    public double getPrice() {\n    \
+    \    return price;\n    }\n\n    public void setPrice(double price) {\n      \
+    \  this.price = price;\n    }\n\n    public String toString() {\n        return\
+    \ name + \" , \" + price;\n    }\n```"
+  merge: -1
+  pgno: 171
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    Output Result:
+
+
+    Beautiful Soul,100.0,
+
+    Firemen,200.0,
+
+    The Matrix,300.0,
+
+    Forrest Gump,200.0,
+
+
+    # Map HashMap Hashtable
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_172_0.png)
+
+
+    ```
+
+    /**
+
+    Hashtable // thread safe
+
+    HashMap // thread not safe
+
+    */
+
+    package com.test22;
+
+
+    import java.util.HashMap;
+
+    import java.util.Hashtable;
+
+    import java.util.Iterator;
+
+    import java.util.Map;
+
+    ```'
+  merge: -1
+  pgno: 172
+- img_proc: true
+  md: "```\nimport java.util.Set;\npublic class TestHashMap {\n    public static void\
+    \ main(String[] args) {\n\n        Map map = new HashMap();\n        map.put(\"\
+    grace\", new User(\"Grace\", \"111111\"));\n        map.put(\"renia\", new User(\"\
+    Renia\", \"222222\"));\n        map.put(\"david\", new User(\"David\", \"333333\"\
+    ));));\n\n        Set set = map.entrySet();\n        Iterator iter = set.iterator();\n\
+    \        while (iter.hasNext()) {\n            Map.Entry entry = (Map.Entry) iter.next();\n\
+    \            Object key = entry.getKey();\n            Object value = entry.getValue();\n\
+    \            User user = (User)value;\n            System.out.println(user.getUsername()\
+    \ + \" ==\" + user.getPassword());\n        }\n}\n\nclass User {\n    private\
+    \ String username;\n    private String password;\n\n    public User(String username,\
+    \ String password) {\n        super();\n        this.username = username;\n  \
+    \      this.password = password;\n    }\n\n    public String getUsername() {\n\
+    \        return username;\n    }\n\n    public void setUsername(String username)\
+    \ {\n        this.username = username;\n    }\n}\n```"
+  merge: -1
+  pgno: 173
+- img_proc: true
+  md: "```\npublic String getPassword() {\n    return password;\n}\n\npublic void\
+    \ setPassword(String password) {\n    this.password = password;\n}\n```\n\n# Output\
+    \ Result:\n\n| Renia=222222\nGrace=111111\nDavid=333333 |"
+  merge: -1
+  pgno: 174
+- img_proc: true
+  md: "# Map user login example\n\n```\npackage com.test22;\n/**\nTopic:\n  Multiple\
+    \ user (User) login (1: Login 2: Print online user information 3: Print current\
+    \ user -1: Exit\n  Keyboard input username and password\n  Each time a user is\
+    \ logged in, a user is added to a Map called an online user.\n  1.Output all the\
+    \ usernames that have been logged in.\n  2.Print current login user information\n\
+    \nimport java.util.HashMap;\nimport java.util.Iterator;\nimport java.util.Map;\n\
+    import java.util.Scanner;\nimport java.util.Set;\npublic class TestMapLogin {\n\
+    \    private boolean flag = true;\n    private Map map = new HashMap();\n    private\
+    \ String currentUser;\n\npublic void TestMapLogin() {\n    Scanner in = new Scanner(System.in);\n\
+    \    while (flag) {\n        System.out.println(\"Please enter : 1: Login 2: Print\
+    \ online user information 3: Print current user -1: Exit\");\n        String action\
+    \ = in.nextLine();\n        if (\"1\".equals(action)) {\n            System.out.println(\"\
+    Enter username and password\");\n            String str = in.nextLine();\n   \
+    \         String[] strs = str.split(\":\");\n            String username = strs[0];\n\
+    \            String password = strs[1];\n```"
+  merge: -1
+  pgno: 175
+- img_proc: true
+  md: "```\nmap.put(username, password);\ncurrentUser = username;\n}\n```\n\n```\n\
+    if (\"2\".equals(action)) {\n    System.out.println(\"online user : \");\n   \
+    \ Set set = map.keySet();\n    Iterator iter = set.iterator();\n    while (iter.hasNext())\
+    \ {\n        System.out.println(iter.next());\n    }\n}\n```\n\n```\nif (\"3\"\
+    .equals(action)) {\n    System.out.println(\"Current user information\");\n  \
+    \  String password = map.get(currentUser).toString();\n    System.out.println(currentUser\
+    \ + \"=\" + password);\n}\n```\n\n```\nif (\"-1\".equals(action)) {\n    flag\
+    \ = false;\n}\n```\n\n```\npublic static void main(String[] args) {\n    new TestMapLogin();\n\
+    }\n```\n\n# Output Result:\n\nPlease enter : 1: Login 2: Print online user information\
+    \ 3 : Print current user -1:\nExit\n\n1\n\nEnter username and password\nyanghu;1981\n\
+    \nPlease enter : 1: Login 2: Print online user information 3 : Print current user\
+    \ -1:\nExit\n\n2"
+  merge: -1
+  pgno: 176
+- img_proc: true
+  md: 'online user :
+
+    yanghu
+
+    Please enter : 1: Login 2: Print online user information 3 : Print current user
+    -1:
+
+    Exit
+
+
+    3
+
+    Current user information
+
+    yanghu=1981
+
+    Please enter : 1: Login 2: Print online user information 3 : Print current user
+    -1:
+
+    Exit
+
+
+    # # Stack
+
+
+    ![](img/7bed215b1d3800688250023ed87bfd24_177_0.png)
+
+
+    > **
+
+    Stack is advanced and out
+
+    Topic:
+
+    A box can put a lot of books,
+
+    Print out all book information
+
+    */
+
+
+    ```
+
+    package com.test22;
+
+    import java.util.Stack;
+
+    ```'
+  merge: -1
+  pgno: 177
+- img_proc: true
+  md: "```\npublic class TestStack {\n    public static void main(String[] args) {\n\
+    \        Stack stack=new Stack();\n        stack.push(\"Easy Learning Java\");\n\
+    \        stack.push(\"Oracle\");\n        stack.push(\"MySQL\");\n\n        String\
+    \ book=null;\n        while(!stack.empty()) {\n            book=stack.pop().toString();\n\
+    \            System.out.println(book);\n        }\n    }\n}\n```\n\nOutput Result:\n\
+    \nMySQL\nOracle\nEasy Learning Java\n\n# Generic\n\nGeneric : It is to pass various\
+    \ data types\n\n```\npackage com.test23;\nimport java.util.ArrayList;\nimport\
+    \ java.util.HashMap;\n```"
+  merge: -1
+  pgno: 178
+- img_proc: true
+  md: "```\nimport java.util.Iterator;\nimport java.util.List;\nimport java.util.Map;\n\
+    import java.util.Map.Entry;\nimport java.util.Set;\n\npublic class TestGeneric\
+    \ {\n    public static void main(String[] args) {\n        Person<String> p =\
+    \ new Person<>(\"Grace\", \"30\");\n\n        List<String> list = new ArrayList<String>();\n\
+    \        list.add(\"1\");\n        list.add(\"David\");\n\n        Map<String,\
+    \ String> map = new HashMap<String, String>();\n        map.put(\"1\", \"100\"\
+    );\n        map.put(\"John\", \"Baggage\");\n\n        Set<Entry<String, String>>\
+    \ entrySet = map.entrySet();\n        Iterator<Entry<String, String>> iter = entrySet.iterator();\n\
+    \        while (iter.hasNext()) {\n            Entry<String, String> entry = iter.next();\n\
+    \            System.out.println(entry.getKey() + \" = \" + entry.getValue());\n\
+    \        }\n    }\n}\n\n//Generic : It is to pass various data types\nclass Person<T>\
+    \ {\n    private String name;\n    private T age;\n\n    public Person(String\
+    \ name, T age) {\n        this.name = name;\n        this.age = age;\n    }\n\n\
+    \    public String getName() {\n```"
+  merge: -1
+  pgno: 179
+- img_proc: true
+  md: "```\nreturn name;\n}\n\npublic void setName(String name) {\n    this.name =\
+    \ name;\n}\n\npublic T getAge() {\n    return age;\n}\n\npublic void setAge(T\
+    \ age) {\n    this.age = age;\n}\n```\n\n# Output Result:\n\n| 1=100 |\n| John=Baggage\
+    \ |"
+  merge: -1
+  pgno: 180
+- img_proc: true
+  md: "# Generic Housing rental example\n\n| Company | House |\n| --- | --- |\n| name\
+    \ : S String | owner : S String |\n| house : List<House> | price : Double |\n\
+    | add(name : S String) | description : S String |\n| add(House) updateByOwner(House)\
+    \ : boolean | |\n| findByOwner(S String) : House | |\n| deleteByOwner(S String)\
+    \ : boolean |\n\n**\nReal estate company's management of rental housing information\n\
+    (Housing Information: Owner Name, Price, Description)\n\n+   1. Add a house\n\
+    2. List all information about the house\n3. Modify the house according to the\
+    \ name of the owner\n4. Search for the house by the owner's name\n5. Remove the\
+    \ house according to the owner's name\n\n```\n/*\npackage com.test23;\n\nimport\
+    \ java.util.ArrayList;\nimport java.util.List;\n\npublic class TestHouse {\n \
+    \   public static void main(String[] args) {\n        Company company = new Company(\"\
+    Real Estate Agency\");\n        company.add(new House(\"Faith\", 1500, \"Single\
+    \ Room\\));\n        company.add(new House(\"Danie\", 3000, \"One room and one\
+    \ living room\\));\n        company.add(new House(\"Mathew\", 4000, \"Two rooms\
+    \ and one living room\\));\n\n        //Modify the house according to the name\
+    \ of the owner\n        company.updateByOwner(new House(\"Mathew\", 4500, \"Two\
+    \ rooms and\n*/\n```"
+  merge: -1
+  pgno: 181
+- img_proc: true
+  md: "```\n//Search the house by owner name\nHouse house = company.findByOwner(\"\
+    Danie\");\nSystem.out.println(\"Danie's housing information:\" + house.getOwner()\
+    \ + \n\"\" + house.getDescription() + \",\" + house.getPrice());\n```\n\n```\n\
+    //Delete the house according to the owner's name\ncompany.deleteByOwner(\"Faith\"\
+    );\n```\n\n```\n//List all information about the home\nList<House> houseList =\
+    \ company.getHouseList();\nfor (int i = 0; i < houseList.size(); i++) {\n    House\
+    \ h = houseList.get(i);\n    System.out.println(h.getOwner() + \",\" + h.getPrice()\
+    \ + \",\" + \n    h.getDescription());\n}\n```\n\n```\nclass House {\nnprivate\
+    \ String owner;\nprivate double price;\nprivate String description;\n```\n\n```\n\
+    public House(String owner, double price, String description) {\n    this.owner\
+    \ = owner;\n    this.price = price;\n    this.description = description;\n}\n\
+    ```\n\n```\npublic String getOwner() {\n    return owner;\n}\n```\n\n```\npublic\
+    \ void setOwner(String owner) {\n    this.owner = owner;\n}\n```"
+  merge: -1
+  pgno: 182
+- img_proc: true
+  md: "```\n}\npublic double getPrice() {\n    return price;\n}\n```\n\n```\npublic\
+    \ void setPrice(double price) {\n    this.price = price;\n}\n```\n\n```\npublic\
+    \ String getDescription() {\n    return description;\n}\n```\n\n```\npublic void\
+    \ setDescription(String description) {\n    this.description = description;\n\
+    }\n```\n\n```\nclass Company {\n    private String name;\n    private List<House>\
+    \ houseList;\n    public Company(String name) {\n        this.name = name;\n \
+    \       this.houseList = new ArrayList<House>();\n    }\n```\n\n```\n//1. Adding\
+    \ a house\npublic void add(House h) {\n    houseList.add(h);\n}\n```\n\n```\n\
+    //2. List all information about the home\npublic List<House> getHouseList() {\n\
+    \    return houseList;\n}\n```"
+  merge: -1
+  pgno: 183
+- img_proc: true
+  md: "```\n//3 . Modify the house according to the name of the owner\npublic boolean\
+    \ updateByOwner(House h) {\n    for (int i = 0; i < houseList.size(); i++) {\n\
+    \        House house = houseList.get(i);\n        if (house.getOwner().equals(h.getOwner()))\
+    \ {\n            houseList.set(i, h);\n            return true;\n        }\n \
+    \   }\n    return false;\n}\n```\n\n```\n//4 . Search the house by owner name\n\
+    public House findByOwner(String owner) {\n    for (int i = 0; i < houseList.size();\
+    \ i++) {\n        House h = houseList.get(i);\n        if (h.getOwner().equals(owner))\
+    \ {\n            return h;\n        }\n    }\n    return null;\n}\n```\n\n```\n\
+    //5 . Delete the house according to the owner's name\npublic boolean deleteByOwner(String\
+    \ owner) {\n    for (int i = 0; i < houseList.size(); i++) {\n        House h\
+    \ = houseList.get(i);\n        if (h.getOwner().equals(owner)) {\n           \
+    \ houseList.remove(i);\n            return true;\n        }\n    }\n    return\
+    \ false;\n}\n```\n\n```\npublic String getName() {\n    return name;\n}\n```"
+  merge: -1
+  pgno: 184
+- img_proc: true
+  md: "```\npublic void setName(String name) {\n    this.name = name;\n}\n\npublic\
+    \ void setHouseList(List<House> houseList) {\n    this.houseList = houseList;\n\
+    }\n```\n\n# Output Result:\n\nDanie's housing information:Danie,One room and one\
+    \ living room,3000.0\nDanie,3000.0,One room and one living room\nMathew,4500.0,Two\
+    \ rooms and one living room"
+  merge: -1
+  pgno: 185
+- img_proc: true
+  md: "# Generic about school examples\n\n| School | Student |\n| --- | --- |\n| name\
+    \ : String | name : String |\n| schoolMap : Map<String, List<Student>>... | age\
+    \ : int |\n\n```\n/**\n* Topic:\n* Implemented with a collection framework generic:\n\
+    * 1. There are many classes in the school, and there are many students in each\
+    \ class.\n* 2. Output student information corresponding to each class\n*/\npackage\
+    \ com.test23;\n\nimport java.util.ArrayList;\nimport java.util.HashMap;\nimport\
+    \ java.util.Iterator;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.Map.Entry;\n\
+    import java.util.Set;\n\npublic class TestClassStudent {\n    public static void\
+    \ main(String[] args) {\n        School school = new School(\"Primary School\"\
+    );\n        // classes and corresponding students\n        List<Student> student1\
+    \ = new ArrayList<Student>();\n        student1.add(new Student(\"David\", 10));\n\
+    \        student1.add(new Student(\"Grace\", 11));\n        school.add(\"CLASS1\"\
+    , student1);\n\n        List<Student> student2 = new ArrayList<Student>();\n \
+    \       student2.add(new Student(\"Luke\", 9));\n        student2.add(new Student(\"\
+    Sala\", 11));\n```"
+  merge: -1
+  pgno: 186
+- img_proc: true
+  md: "```\nschool.add(\"CLASS2\", studentList2);\n\n//Output student information\
+    \ corresponding to each class\nMap<String, List<Student>> schoolMap = school.getSchoolMap();\n\
+    Set<Entry<String, List<Student>>> set = schoolMap.entrySet();\nIterator<Entry<String,\
+    \ List<Student>>> iter = set.iterator();\nwhile (iter.hasNext()) {\n    Entry<String,\
+    \ List<Student>> entry = iter.next();\n    String className = entry.getKey();\n\
+    \    System.out.println(className + \" \" + student information:\");\n    List<Student>\
+    \ studentList = entry.getValue();\n}\n\nfor (Student student : studentList) {\n\
+    \    System.out.println(student.getName() + \",\" + student.getAge());\n}\n```\n\
+    \nclass School {\n\nprivate String name;\nprivate Map<String, List<Student>> schoolMap\
+    \ = new HashMap<String, List<Student>>();\n\npublic School(String name) {\nthis.name\
+    \ = name;\n}\n\n//Add classes and corresponding student collections\npublic void\
+    \ add(String className, List<Student> studentList) {\nschoolMap.put(className,\
+    \ studentList);\n}\n\npublic String getName() {\nreturn name;\n}\n\npublic void\
+    \ setName(String name) {"
+  merge: -1
+  pgno: 187
+- img_proc: true
+  md: "```\nthis.name = name;\n}\npublic Map<String, List<Student>> getSchoolMap()\
+    \ {\n    return schoolMap;\n}\npublic void setSchoolMap(Map<String, List<Student>>\
+    \ schoolMap) {\n    this.schoolMap = schoolMap;\n}\n\nclass Student {\n    private\
+    \ String name;\n    private int age;\n    public Student(String name, int age)\
+    \ {\n    this.name = name;\n    this.age = age;\n}\n    public String getName()\
+    \ {\n    return name;\n}\n    public void setName(String name) {\n    this.name\
+    \ = name;\n}\n    public int getAge() {\n    return age;\n}\n    public void setAge(int\
+    \ age) {\n    this.age = age;\n}\n}\n```"
+  merge: -1
+  pgno: 188
+- img_proc: true
+  md: '# Output Result:
+
+
+    ```
+
+    CLASS1 student information:
+
+    David,10
+
+    Grace,11
+
+    CLASS2 student information:
+
+    Luke,9
+
+    Sala,11
+
+    ```'
+  merge: -1
+  pgno: 189
+- img_proc: true
+  md: "# File\n\n```\npackage com.test23;\n\nimport java.io.File;\nimport java.io.IOException;\n\
+    \npublic class TestFile {\n    public static void main(String[] args) {\n    \
+    \    File f = new File(\"test.txt\");\n        try {\n            // Create a\
+    \ new empty file if the file does not exist\n            f.createNewFile();\n\n\
+    \            // Get the absolute path to the file\n            System.out.println(f.getAbsolutePath());\n\
+    \n            // Get the file name\n            System.out.println(f.getName());\n\
+    \n            // Get the size of the content in the file\n            System.out.println(f.length());\n\
+    \n            // Rename file\n            f.renameTo(new File(\"rename.txt\"));\n\
+    \n            // Determine if it is a file\n            System.out.println(f.isFile());\n\
+    \n            // Determine if this file exists\n            System.out.println(f.exists());\n\
+    \n            // Delete File\n            System.out.println(f.delete());\n```"
+  merge: -1
+  pgno: 190
+- img_proc: true
+  md: "```\n } catch (IOException ex) {\n    ex.printStackTrace();\n}\n}\n```\n\n\
+    # Output Result:\n\n```\nE:\\Workspace\\test.txt\ntest.txt\n0\nfalse\nfalse\n\
+    false\n```\n\n# # File and Folder\n\n```\npackage com.test.23;\nimport java.io.File;\n\
+    \npublic class TestDirectory {\n    public static void main(String[] args) {\n\
+    \        File dir = new File(\"dir2/test\");// File also indicates the directory\n\
+    \n        dir.mkdir();//Create a directory\n\n        dir.mkdirs();//Can create\
+    \ multiple levels of directories\n\n        System.out.println(dir.getAbsolutePath());//Get\
+    \ absolute path to a directory\n    }\n```"
+  merge: -1
+  pgno: 191
+- img_proc: true
+  md: '```
+
+    System.out.println(dir.getName()); //Get the file name of the directory
+
+
+    dir.renameTo(new File("dir2/newtest")); //Rename a directory
+
+
+    //Determine if it is a directory
+
+    System.out.println(dir.isDirectory());
+
+
+    //Determine if a file or directory exists
+
+    System.out.println(dir.exists());
+
+
+    //Can only delete empty directories
+
+    File dir3 = new File("dir");
+
+    dir3.delete();
+
+    File dir4 = new File("dir2");
+
+    dir4.delete();
+
+    }
+
+    }
+
+    ```
+
+
+    # ### Output Result:
+
+
+    E:\Workspac\dir2\test
+
+    test
+
+    false
+
+    false
+
+
+    # # FileInputStream reads a file'
+  merge: -1
+  pgno: 192
+- img_proc: true
+  md: "![](img/7bed215b1d3800688250023ed87bfd24_193_0.png)\n\n1. Create a text file\n\
+    \nC:/Users/tim/Desktop/english.txt\n\nevery day is good day\n\n2.FileInputStream\
+    \ read the english.txt\n\n```\npackage com.test23;\nimport java.io.*;\npublic\
+    \ class TestInputStream {\n    public static void main(String[] args) {\n    \
+    \    InputStream is = null;\n        try {\n            //Established a connection\
+    \ to the file english.txt\n            is = new FileInputStream(\"C:/Users/tim/Desktop/english.txt\"\
+    );\n            //Read data\n            byte[] data = new byte[1024];\n     \
+    \       //Read all the data from the file into the data array\n            is.read(data);\n\
+    \            System.out.println(new String(data));\n    } catch (Exception e)\
+    \ {\n        e.printStackTrace();\n    }}\n```"
+  merge: -1
+  pgno: 193
+- img_proc: true
+  md: "```\n} finally {\n  //Close file\n  try {\n    is.close();\n  } catch (IOException\
+    \ e) {\n    e.printStackTrace();\n  }\n}\n}\n}\n```\n\n# Output Result:\n\nevery\
+    \ day is good day\n\n# FileOutputStream writes to file"
+  merge: -1
+  pgno: 194
+- img_proc: true
+  md: "![](img/7bed215b1d3800688250023ed87bfd24_195_0.png)\n\n![](img/7bed215b1d3800688250023ed87bfd24_195_1.png)\n\
+    \n```\npackage com.test23;\n\nimport java.io.*;\n\npublic class static TestOutputStream\
+    \ {\n    public static void main(String[] args) {\n        OutputStream os = null;\n\
+    \        try {\n            os = new FileOutputStream(new File(\"c:/res/test.txt\\\
+    ));));//File path\n            directory must exist\n            //Write data\
+    \ to a file\n            String content = \"good morning\";\n            byte[]\
+    \ data = content.getBytes();\n            os.write(data);\n        } catch (Exception\
+    \ e) {\n            e.printStackTrace();\n        } finally {\n            try\
+    \ {\n                os.close();//Close the output stream\n            } catch\
+    \ (IOException e) {\n                e.printStackTrace();\n            }\n   \
+    \     }\n    }\n}\n```"
+  merge: -1
+  pgno: 195
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 196
+- img_proc: true
+  md: "# FileWriter writes characters\n\n![](img/7bed215b1d3800688250023ed87bfd24_197_0.png)\n\
+    \n```\npackage com.test23;\n\nimport java.io.*;\n\npublic class TestFileWriter\
+    \ {\n    public static void main(String[] args) {\n    Writer writer = null;\n\
+    \    try {\n        writer = new FileWriter(new File(\"C:/Users/tim/Desktop/english.txt\"\
+    ));\n        //Directory must exist\n        //Write data to a file\n    String\
+    \ content = \"At this moment, you will dream\";\n\n        writer.write(content);\n\
+    \    } catch (Exception e) {\n        e.printStackTrace();\n    } finally {\n\
+    \    try {\n        writer.close();\n    } catch (IOException e) {\n        e.printStackTrace();\n\
+    \    }\n    }\n}\n```"
+  merge: -1
+  pgno: 197
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 198
+- img_proc: true
+  md: "# FileReader reads files as characters\n\n![](img/7bed215b1d3800688250023ed87bfd24_199_0.png)\n\
+    \n+   1. Create a text file\n\nC:/Users/tim/Desktop/english.txt\nAt this moment,\
+    \ you will dream\n\n+   2. FileReader read the english.txt\n\n```\npackage com.test23;\n\
+    \nimport java.io.*;\npublic class TestFileFileReader {\n    public static void\
+    \ main(String[] args) {\n        Reader reader = null;\n        try {\n      \
+    \      //Established a connection to the file english.txt\n            reader\
+    \ = new FileReader(\"C:/Users/tim/Desktop/english.txt\");\n            // Each\
+    \ time a character is read, the return value is the integer value of the ACSII.\n\
+    \            //if there is still a character in the file, continue reading until\
+    \ read the the end of the file. Return -1\n```"
+  merge: -1
+  pgno: 199
+- img_proc: true
+  md: "```\nint l;\nwhile (l = reader.read()) != -1) {\n  System.out.println((char)\
+    \ l);\n}\n} catch (Exception e) {\n  e.printStackTrace();\n} finally {\n  try\
+    \ {\n    reader.close();\n  } catch (IOException e) {\n    e.printStackTrace();\n\
+    \  }\n}\n}\n```\n\n# Output Result:\n\nA\nt\th\ni\ns\nm\\o\\m\\e\nn\t,\ny\\o\n\
+    u\nw"
+  merge: -1
+  pgno: 200
+- img_proc: true
+  md: 'i
+
+    l
+
+    l
+
+    d
+
+    r
+
+    e
+
+    a
+
+    m'
+  merge: -1
+  pgno: 201
+- img_proc: true
+  md: "# # InputStreamReader byte to character\n\n![](img/7bed215b1d3800688250023ed87bfd24_202_0.png)\n\
+    \n+   1. Create a text file\n\nC:/Users/tim/Desktop/english.txt\n\nAt this moment,\
+    \ you will dream\n\n+   2. FileInputStream read english.txt and then InputStreamReader\
+    \ Convert to Reader\n\n```\npackage com.test23;\n\nimport java.io.*;\n\npublic\
+    \ class TestInputStreamReader {\n    public static void main(String[] args) {\n\
+    \        InputStream is = null;\n        try {\n            is = new FileInputStream(\"\
+    C:/Users/tim/Desktop/english.txt\");\n            //InputStreamInputStreamReader\
+    \ Convert to Reader\n            Reader reader = new InputStreamReader(is);\n\
+    \            int l;\n            while ((l = reader.read()) != -1) {\n       \
+    \         System.out.println((char) l);\n            }\n```"
+  merge: -1
+  pgno: 202
+- img_proc: true
+  md: "```\n}\n} catch (Exception e) {\n  e.printStackTrace();\n} finally {\n  try\
+    \ {\n    is.close();\n  } catch (IOException e) {\n    e.printStackTrace();\n\
+    \  }\n}\n}\n}\n```\n\n# Output Result:\n\nA\nt\nt\\h\ni\ns\nm\\o\\m\\e\nn\t,\n\
+    y\\o\\u"
+  merge: -1
+  pgno: 203
+- img_proc: true
+  md: "# # File copy\n\n![](img/7bed215b1d3800688250023ed87bfd24_204_0.png)\n\n+ \
+    \  1. Prepare an image file 1.png\n\nc:/res/1.png\n\nInputStream read and then\
+    \ OutputStream copy to c:/res/copy.png\n\n```\npackage com.test23;\n\nimport java.io.*;\n\
+    \npublic class TestCopy {\n    public static void main(String[] args) {\n    InputStream\
+    \ is = null;\n    OutputStream os = null;\n    try {\n        //Read file 1.png\n\
+    \        is = new FileInputStream(new File(\"c:/res/1.png\"));\n\n        //Copy\
+    \ 1.png to copy\n        os = new FileOutputStream(new File(\"c:/res/copy.png\"\
+    ));\n        int l;\n        //Write while reading\n        while ((l = is.read())\
+    \ != -1) {\n            os.write(l);\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 204
+- img_proc: true
+  md: "```\n} catch (Exception e) {\n  e.printStackTrace();\n} finally {\n  try {\n\
+    \    is.close();\n    os.close();\n  } catch (IOException e) {\n    e.printStackTrace();\n\
+    \  }\n}\n}\n```\n\n# TCP protocol"
+  merge: -1
+  pgno: 205
+- img_proc: true
+  md: "# Client-side\n\n# Server-side\n\n![](img/7bed215b1d3800688250023ed87bfd24_206_0.png)\n\
+    \n+   1. Server-side\n\n```\npackage com.tcp;\n\nimport java.io.IOException;\n\
+    import java.io.InputStream;\nimport java.io.InputStreamReader;\nimport java.io.PrintWriter;\n\
+    import java.net.ServerSocket;\nimport java.net.Socket;\n```\n\n```\npublic class\
+    \ Browser {\n\n    public static void main(String[] args) {\n        try {\n \
+    \           ServerSocket ss = new ServerSocket(8888);\n            System.out.println(\"\
+    The server is listening on 8888. . . \");\n            while (true) {\n      \
+    \          Socket socket = ss.accept();\n            }\n```"
+  merge: -1
+  pgno: 206
+- img_proc: true
+  md: '```
+
+    InputStream is = socket.getInputStream();
+
+    byte[] b = new byte[1024];
+
+    int l = is.read(b);
+
+    String message = new String(b, 0, l);
+
+    System.out.println(message);
+
+    ```
+
+
+    ```
+
+    PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
+
+    pw.println("<h1>hello</h1>");
+
+    ```
+
+
+    ```
+
+    }
+
+
+    } catch (IOException e) {
+
+    e.printStackTrace();
+
+    }
+
+    }
+
+    ```
+
+
+    +   1. Client-side
+
+
+    ```
+
+    package com.tcp;
+
+    import java.io.BufferedReader;
+
+    import java.io.IOException;
+
+    import java.io.InputStream;
+
+    import java.io.PrintWriter;
+
+    import java.net.Socket;
+
+    import java.net.UnknownHostException;
+
+    ```
+
+
+    ```
+
+    public class IE {
+
+
+    public static void main(String[] args) throws Exception {
+
+    Socket socket = new Socket("localhost", 8888);
+
+    PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
+
+    pw.println("GET /1.html /HTTP/1.1");
+
+    pw.println("Accept: */*");
+
+    pw.println("Host: localhost:8888");
+
+    pw.println("Connection: Keep-Alive");
+
+    pw.println("");
+
+    n}
+
+    ```'
+  merge: -1
+  pgno: 207
+- img_proc: true
+  md: "```\nBufferedReader br = new BufferedReader(new\nInputStreamReader(socket.getInputStream()));\n\
+    String str = null;\nwhile ((str = br.readLine()) != null) {\n    System.out.println(str);\n\
+    }\n\n```\n\n1.First run Browser and then run IE\n\n# Output Result:\n\n<h1>hello</h1>"
+  merge: -1
+  pgno: 208
+- img_proc: true
+  md: "# UDP protocol\n\nClient-side\n\nServer-side\n\n```\nDatagramSocket ds = new\
+    \ DatagramSocket(9000);\nString content = \"hello\";\nbyte[] b = content.getBytes();\n\
+    DatagramPacket dp = new DatagramPacket(b, 0, b.length);\ndp.setPort(9001);\ndp.setAddress(InetAddress.ByName(\"\
+    localhost\"));\nds.send(dp);\nbyte[] b2 = new byte[1024];\nDatagramPacket dp2\
+    \ = new DatagramPacket(b2, 0, b2.length);\ndp.receive(dp2);\n```\n\n```\nlisten\n\
+    DatagramSocket ds = new DatagramSocket(9001);\nbyte[] b = new byte[1024];\nDatagramPacket\
+    \ dp = new DatagramPacket(b, 0, b.length);\nds.receive(dp);\nbyte[] b2 = \"ok\"\
+    .getBytes();\nDatagramPacket dp2 = new DatagramPacket(b2, 0, b2.length);\ndp2.setPort(dp.getPort());\n\
+    dp2.setAddress(dp.getAddress());\nds.send(dp2);\n```\n\n# 1. Server-side\n\n```\n\
+    package com.udp;\n\nimport java.io.IOException;\nimport java.net.DatagramPacket;\n\
+    import java.net.DatagramSocket;\nimport java.net.SocketException;\n\npublic class\
+    \ UDPServer {\n    public static void main(String[] args) throws {\n        try\
+    \ {\n            DatagramSocket ds = new DatagramSocket(9001);\n            System.out.println(\"\
+    The server listens on port 9001...\");\n\n            byte[] b = new byte[1024];\n\
+    \            DatagramPacket dp = new DatagramPacket(b, 0, b.length);\n\n     \
+    \       ds.receive(dp);\n```"
+  merge: -1
+  pgno: 209
+- img_proc: true
+  md: "```\nbyte[] data = dp.getData();\nString content = new String(data, 0, dp.getLength());\n\
+    System.out.println(content);\n```\n\n```\nbyte[] b2 = \"ok\".getBytes();\nDatagramPacket\
+    \ dp2 = new DatagramPacket(b2, 0, b2.length);\ndp2.setPort(dp.getPort());\ndp2.setAddress(dp.getAddress());\n\
+    dp2.send(dp2);\n```\n\n```\nds.close();\n\n} catch (SocketException e) {\n   \
+    \ e.printStackTrace();\n} catch (IOException e) {\n    e.printStackTrace();\n\
+    }\n```\n\n+   1. Client-side\n\n```\npackage com.udp;\n\nimport java.io.IOException;\n\
+    import java.net.DatagramPacket;\nimport java.net.DatagramSocket;\nimport java.net.InetAddress;\n\
+    import java.net.SocketException;\n\npublic class UDPClient {\n    public static\
+    \ void main(String[] args) {\n    try {\n        DatagramSocket ds = new DatagramSocket(9000);\n\
+    \        System.out.println(\"The client listens on port 9000...\");\",\n```"
+  merge: -1
+  pgno: 210
+- img_proc: true
+  md: "```\nString content = \"hello\";nbyte[] b = content.getBytes(b, 0, b.length);\n\
+    DatagramPacket dp = new DatagramPacket(b, 0, b.length);\ndp.setPort(9001);\ndp.setAddress(InetAddress.ByName(\"\
+    localhost\"));\n\nds.send(dp);\n\nbyte[] b2 = new byte[1024];\nDatagramPacket\
+    \ dp2 = new DatagramPacket(b2, 0, b2.length);\nds.receive(dp2);\nbyte[] data2\
+    \ = dp2.getData();\ncontent = new String(data2, 0, dp2.getLength());\nSystem.out.println(content);\n\
+    \nds.close();\n\n catch (SocketException e) {\n    e.printStackTrace();\n} catch\
+    \ (IOException e) {\n    e.printStackTrace();\n}\n```\n\nFirst run UDPServer and\
+    \ then run UDPClient\n\n# Output Result:\n\n| The server listens on port 9001...\n\
+    hello |\n| The client listens on port 9000...\nok |"
+  merge: -1
+  pgno: 211
