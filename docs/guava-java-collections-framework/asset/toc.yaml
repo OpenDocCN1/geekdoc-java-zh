@@ -1,0 +1,366 @@
+- - '#'
+  - GUAVA：Java 集合框架
+- - '#'
+  - 关于教程
+- - '#'
+  - 读者群
+- - '#'
+  - 先决条件
+- - '##'
+  - 1. 概述
+- - '###'
+  - 什么是 Guava?
+- - '###'
+  - Guava 的优势
+- - '###'
+  - Guava
+- - '##'
+  - 2. 环境设置
+- - '###'
+  - 在线尝试选项
+- - '###'
+  - 本地环境设置
+- - '####'
+  - 为 Windows 2000/XP 设置 Path
+- - '####'
+  - 为 Windows 95/98/ME 设置 Path
+- - '####'
+  - 为 Linux, UNIX, Solaris, FreeBSD 设置 Path
+- - '###'
+  - 流行编辑器
+- - '###'
+  - 下载 Guava 存档
+- - '##'
+  - 3. OPTIONAL 类
+- - '###'
+  - 类声明
+- - '###'
+  - 类方法
+- - '###'
+  - Guava
+- - '###'
+  - 继承的方法
+- - '###'
+  - Optional 类示例
+- - '###'
+  - GuavaTester.java
+- - '###'
+  - Guava
+- - '###'
+  - 验证结果
+- - '##'
+  - 4. PRECONDITIONS 类
+- - '###'
+  - 类声明
+- - '###'
+  - Guava
+- - '###'
+  - Preconditions 类示例
+- - '###'
+  - 验证结果
+- - '##'
+  - 5. ORDERING 类
+- - '###'
+  - 类声明
+- - '###'
+  - Guava
+- - '###'
+  - 继承
+- - '###'
+  - Ordering 类示例
+- - '###'
+  - 验证结果
+- - '###'
+  - 继承的方法
+- - '###'
+  - Objects 类示例
+- - '###'
+  - 验证结果
+- - '##'
+  - 6. RANGE 类
+- - '###'
+  - 类声明
+- - '###'
+  - 方法
+- - '###'
+  - Range 类示例
+- - '###'
+  - Guava
+- - '###'
+  - 验证结果
+- - '##'
+  - 7. THROWABLES 类
+- - '###'
+  - 类声明
+- - '###'
+  - 类方法
+- - '###'
+  - 继承的方法
+- - '###'
+  - Throwables 类示例
+- - '###'
+  - 验证结果
+- - '##'
+  - 8. Multiset 示例
+- - '###'
+  - GuavaTester.java
+- - '###'
+  - 验证结果
+- - '##'
+  - 9. Multimap 接口
+- - '###'
+  - 接口声明
+- - '###'
+  - 接口方法
+- - '###'
+  - Guava
+- - '###'
+  - BiMap 接口
+- - '###'
+  - 接口声明
+- - '###'
+  - Guava
+- - '###'
+  - 接口方法
+- - '###'
+  - 继承的方法
+- - '###'
+  - BiMap 示例
+- - '###'
+  - 验证结果
+- - '###'
+  - Table 接口
+- - '###'
+  - 接口声明
+- - '###'
+  - 接口方法
+- - '###'
+  - Table 示例
+- - '###'
+  - 验证结果
+- - '##'
+  - 10. 缓存工具
+- - '###'
+  - 接口声明
+- - '###'
+  - 接口方法
+- - '###'
+  - Guava
+- - '###'
+  - BiMap 接口
+- - '###'
+  - 接口声明
+- - '###'
+  - Guava
+- - '###'
+  - 接口方法
+- - '###'
+  - 继承的方法
+- - '###'
+  - BiMap 示例
+- - '###'
+  - 验证结果
+- - '###'
+  - Table 接口
+- - '###'
+  - 接口声明
+- - '###'
+  - 接口方法
+- - '###'
+  - Table 示例
+- - '###'
+  - LoadingCache 示例
+- - '###'
+  - 验证结果
+- - '##'
+  - 11. 字符串工具类
+- - '###'
+  - Joiner 类
+- - '###'
+  - 类声明
+- - '###'
+  - 类方法
+- - '###'
+  - 继承的方法
+- - '###'
+  - Joiner 类示例
+- - '###'
+  - 类方法
+- - '###'
+  - 继承的方法
+- - '###'
+  - Splitter 类示例
+- - '###'
+  - 验证结果
+- - '###'
+  - CharMatcher 类
+- - '###'
+  - 类声明
+- - '###'
+  - 字段
+- - '###'
+  - 构造函数
+- - '###'
+  - 类方法
+- - '###'
+  - Guava
+- - '###'
+  - 继承的方法
+- - '###'
+  - CharMatcher 类示例
+- - '###'
+  - 验证结果
+- - '###'
+  - CaseFormat 类
+- - '###'
+  - 类声明
+- - '###'
+  - 枚举常量
+- - '###'
+  - 方法
+- - '###'
+  - 继承的方法
+- - '###'
+  - CaseFormat 类示例
+- - '###'
+  - GuavaTester.java
+- - '###'
+  - 验证结果
+- - '##'
+  - 12. 原生类型工具
+- - '###'
+  - Bytes 类
+- - '###'
+  - 类声明
+- - '###'
+  - 方法
+- - '###'
+  - 继承自以下类的方法：
+- - '###'
+  - GuavaTester.java
+- - '###'
+  - 验证结果
+- - '###'
+  - Shorts 类
+- - '###'
+  - 类声明
+- - '###'
+  - 字段
+- - '###'
+  - 方法
+- - '###'
+  - static short fromBytes(byte b1, byte b2)
+- - '###'
+  - static int hashCode(short value)
+- - '###'
+  - static int indexOf(short[] array, short target)
+- - '###'
+  - static int indexOfOf(short[] array, short[] target)
+- - '###'
+  - static String join(String separator, short... array)
+- - '###'
+  - static int lastIndexOf(short[] array, short target)
+- - '###'
+  - static Comparator<short[]> lexicographicalComparator()
+- - '###'
+  - static short max(short... array)
+- - '###'
+  - static short min(short... array)
+- - '###'
+  - static short saturatedCast(long value)
+- - '###'
+  - static Converter<String,Short> stringConverter()
+- - '###'
+  - static short[] toArray(Collection<? extends Number> collection)
+- - '###'
+  - static byte[] toByteArray(short value)
+- - '###'
+  - 继承的方法
+- - '###'
+  - Shorts 类示例
+- - '###'
+  - GuavaTester.java
+- - '###'
+  - 验证结果
+- - '###'
+  - Longs 类
+- - '###'
+  - 类声明
+- - '###'
+  - 字段
+- - '###'
+  - 方法
+- - '###'
+  - 验证结果
+- - '###'
+  - Floats 类
+- - '###'
+  - 类声明
+- - '###'
+  - Guava - 字段
+- - '###'
+  - Guava - 方法
+- - '###'
+  - 继承的方法
+- - '###'
+  - Floats 类示例
+- - '###'
+  - 验证结果
+- - '###'
+  - Chars 类
+- - '###'
+  - 类声明
+- - '###'
+  - Guava - 字段
+- - '###'
+  - 方法
+- - '###'
+  - 继承的方法
+- - '###'
+  - Chars 类示例
+- - '###'
+  - 验证结果
+- - '###'
+  - Booleans 类
+- - '###'
+  - 方法
+- - '###'
+  - Guava
+- - '###'
+  - 继承的方法
+- - '###'
+  - Booleans 类示例
+- - '###'
+  - GuavaTester.java
+- - '###'
+  - 验证结果
+- - '##'
+  - 13. 数学工具
+- - '###'
+  - IntMath 类
+- - '###'
+  - 类声明
+- - '###'
+  - 方法
+- - '###'
+  - 继承的方法
+- - '###'
+  - LongMath 类示例
+- - '###'
+  - GuavaTester.java
+- - '###'
+  - 验证结果
+- - '###'
+  - BigIntegerMath 类
+- - '###'
+  - 类声明
+- - '###'
+  - 方法
+- - '###'
+  - 继承的方法
+- - '###'
+  - BigIntegerMath 类示例
+- - '###'
+  - GuavaTester.java
+- - '###'
+  - 验证结果

@@ -1,0 +1,4938 @@
+- img_proc: true
+  md: '![](img/4935a2238ac80b2a11ee9e7e607ee959_0_0.png)
+
+
+    # GUAVA
+
+
+    java collections framework
+
+
+    # tutorialspoint
+
+    IMPLY EASY LEARNING
+
+
+    www.tutorialspoint.com'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# About the Tutorial
+
+
+    Guava is an open source, Java-based library developed by Google. It facilitates
+    best coding practices and reduces coding errors. It provides utility methods for
+    collections, caching, primitives support, concurrency, common annotations, string
+    processing, I/O, and validations.
+
+
+    This tutorial adopts a simple and intuitive way to describe the basic-to-advanced
+    concepts of Guava and how to use its APIs.
+
+
+    # Audience
+
+
+    This tutorial will be useful for most Java developers, starting from beginners
+    to experts. After completing this tutorial, we are confident you will find it
+    easy to use Guava in your programs.
+
+
+    # Prerequisites
+
+
+    Prior exposure to Java programming is the only requirement to make the most of
+    this tutorial.
+
+
+    # Copyright & Disclaimer
+
+
+    > © 2014 Copyright by Tutorials Point (I) Pvt. Ltd.
+
+
+    All the content and graphics published in this e-book are the property of Tutorials
+    Point (I) Pvt. Ltd. The user of this e-book is prohibited to reuse, retain, copy,
+    distribute or republish any contents or part of contents of this e-book in any
+    manner without written consent of the publisher.
+
+
+    We strive to update the contents of our website and tutorials as timely and as
+    precisely as possible, however, the contents may contain inaccuracies or errors.
+    Tutorials Point (I) Pvt. Ltd. provides no guarantee regarding the accuracy, timeliness
+    or completeness of our website or its contents including this tutorial. If you
+    discover any errors on our website or in this tutorial, please notify us at contact@tutorialspoint.com
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_1_0.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # Table of Contents
+
+
+    +   - About the Tutorial ............................................................................................................
+    i
+
+    - Audience .....................................................................................................................................
+    i
+
+    - Prerequisites ..........................................................................................................................
+    i
+
+    - Copyright & Disclaimer ................................................................................................
+    i
+
+    - Table of Contents ...............................................................................................................
+    ii
+
+    - 1. OVERVIEW.......................................................................................................................
+    1
+
+    - What is Guava? ................................................................................................................
+    1
+
+    - Benefits of Guava................................................................................................................
+    1
+
+    - 2. ENVIRONMENT SETUP................................................................................................
+    4
+
+    - Try it Option Online ........................................................................................................
+    4
+
+    - Local Environment Setup ...............................................................................................
+    4
+
+    - Setting up the Path for Windows 2000/XP..................................................................
+    4
+
+    - Setting up the Path for Windows 95/98/ME.......................................................................
+    5
+
+    - Setting up the Path for Linux, UNIX, Solaris, FreeBSD...............................................
+    5
+
+    - Popular Java Editors.......................................................................................................
+    5
+
+    - Download Guava Archive...............................................................................................
+    5
+
+    - Set Guava Environment...............................................................................................
+    6
+
+    - Set CLASSPATH Variable...........................................................................................
+    6
+
+    - 3. OPTIONAL CLASS...............................................................................................
+    7
+
+    - Class Declaration................................................................................................................
+    7
+
+    - Class Methods....................................................................................................................
+    7
+
+    - Methods Inherited................................................................................................................
+    8
+
+    - Example of Optional Class........................................................................................
+    8
+
+    - 4. PRECONDITIONS CLASS......................................................................................
+    11
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_2_0.png)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '+   Class Declaration...............................................................................................
+    11
+
+
+    +   Class Methods......................................................................................................
+    11
+
+
+    +   Methods Inherited..............................................................................................
+    12
+
+
+    +   Example of Preconditions Class..................................................................
+    13
+
+
+    +   5. ORDERING CLASS.........................................................................................
+    15
+
+
+    +   Class Declaration...............................................................................................
+    15
+
+
+    +   Class Methods......................................................................................................
+    15
+
+
+    +   Methods Inherited..............................................................................................
+    18
+
+
+    +   Example of Ordering Class......................................................................
+    18
+
+
+    +   6. OBJECTS CLASS...........................................................................................
+    22
+
+
+    +   Class Declaration...............................................................................................
+    22
+
+
+    +   Class Methods......................................................................................................
+    22
+
+
+    +   Methods Inherited..............................................................................................
+    23
+
+
+    +   Example of Objects Class......................................................................
+    23
+
+
+    +   7. RANGE CLASS...............................................................................................
+    26
+
+
+    +   Class Declaration...............................................................................................
+    26
+
+
+    +   Methods...............................................................................................................
+    26
+
+
+    +   Methods Inherited..............................................................................................
+    29
+
+
+    +   Example of Range Class......................................................................
+    29
+
+
+    +   8. THROWABLES CLASS.....................................................................................
+    33
+
+
+    +   Class Declaration...............................................................................................
+    33
+
+
+    +   Class Methods......................................................................................................
+    33
+
+
+    +   Methods Inherited..............................................................................................
+    34
+
+
+    +   Example of Throwables Class...............................................................
+    34
+
+
+    +   9. COLLECTIONS UTILITIES..................................................................
+    37
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_3_0.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'Multiset Interface ................................................................................................
+    37
+
+
+    Multimap Interface ..............................................................................................
+    42
+
+
+    BiMap Interface ................................................................................................
+    47
+
+
+    Table Interface ................................................................................................
+    49
+
+
+    # 10. CACHING UTILITIES .......................................................................................
+    54
+
+
+    Interface Declaration ................................................................................
+    54
+
+
+    Interface Methods .......................................................................................
+    54
+
+
+    Example of LoadingCache ............................................................................
+    55
+
+
+    # 11. STRING UTILITIES ...................................................................................
+    59
+
+
+    Joiner Class ................................................................................................
+    59
+
+
+    Splitter Class ...............................................................................................
+    62
+
+
+    CharMatcher Class ......................................................................................
+    65
+
+
+    Fields .......................................................................................................
+    65
+
+
+    CaseFormat Class ................................................................................
+    71
+
+
+    # 12. PRIMITIVE UTILITIES ..........................................................................
+    75
+
+
+    Bytes Class ................................................................................................
+    75
+
+
+    Shorts Class ...............................................................................................
+    78
+
+
+    Ints Class ................................................................................................
+    83
+
+
+    Longs Class ...............................................................................................
+    87
+
+
+    Floats Class ...............................................................................................
+    91
+
+
+    Doubles Class ................................................................................
+    95
+
+
+    Chars Class ............................................................................................
+    99
+
+
+    Booleans Class ................................................................................
+    103
+
+
+    # 13. MATH UTILITIES ...................................................................
+    108
+
+
+    IntMath Class ............................................................................
+    108
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'LongMath Class....................................................................................
+    112
+
+
+    BigIntegerMath Class...............................................................................
+    116'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# 1. OVERVIEW\n\n# What is Guava?\n\nGuava is an open source, Java-based library\
+    \ and contains many core libraries of Google, which are being used in many of\
+    \ their projects. It facilitates best coding practices and helps reducing coding\
+    \ errors. It provides utility methods for collections, caching, primitives support,\
+    \ concurrency, common annotations, string processing, I/O, and validations.\n\n\
+    # Benefits of Guava\n\n+   - Standardized - The Guava library is managed by Google.\n\
+    - Efficient - It is a reliable, fast, and efficient extension to the Java library.\n\
+    - Optimized - The library is highly optimized.\n- Functional Programming - It\
+    \ adds functional processing capability to Java.\n- Utilities - It provides many\
+    \ utility classes which are regularly required in programming application development.\n\
+    - Validation - It provides a standard failsafe validation mechanism.\n- Best Practices\
+    \ - It emphasizes on best practices.\n\nConsider the following code snippet.\n\
+    \n```\npublic class GuavaTester {\n    public static void main(String args[]){\n\
+    \        GuavaTester guavaTester = new GuavaTester();\n        Integer a = null;\n\
+    \        Integer b = new Integer(10);\n        System.out.println(guavaTester.sum(a,b));\n\
+    \    }\n\n    public Integer sum(Integer a, Integer b) {\n        return a + b;\n\
+    \    }\n```"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# Guava\n\nRun the program to get the following result.\n\n```\nException in\
+    \ thread \"main\" java.lang.NullPointerException\natat GuavaTester.sum(GuavaTester.java:13)\n\
+    atat GuavaTester.main(GuavaTester.java:9)\n```\n\nHere are the problems with the\
+    \ code.\n\n+   - sum() is not taking care of any of the parameters to be passed\
+    \ as null.\n- caller function is also not worried about passing a null to the\
+    \ sum method accidentally.\n- When the program runs, NullPointerException occurs.\n\
+    \nIn order to avoid the above problems, null check is to be made in each and every\
+    \ place where such problems are present.\n\nLet's see the use of Optional, a Guava\
+    \ provided Utility class, to solve the above problems in a standardized way.\n\
+    \n```\nimport com.google.common.base.Optional;\n\npublic class GuavaTester {\n\
+    \    public static void main(String args[]){\n        GuavaTester guavaTester\
+    \ = new GuavaTester();\n\n        Integer invalidInput = null;\n        Optional<Integer>\
+    \ a = Optional.of(invalidInput);\n        Optional<Integer> b = Optional.of(new\
+    \ Integer(10));\n        System.out.println(guavaTester.sum(a,b));\n    }\n\n\
+    \    public Integer sum(Optional<Integer> a, Optional<Integer> b){\n        return\
+    \ a.get() + b.get();\n    }\n}\n```"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "Run the program to get the following result.\n\n```\nException in thread \"\
+    main\" java.lang.NullPointerException\nat\n  at com.google.common.base.Preconditions.checkNull(Preconditions.java:210)\n\
+    \  at com.google.common.base.Optional.of(Optional.java:85)\n  at GuavaTester.main(GuavaTester.java:8)\n\
+    ```\n\nLet's understand the important concepts of the above program.\n\n+   **Optional**\
+    \ - A utility class, to make the code use null properly.\n* **Optional.of** -\
+    \ It returns the instance of Optional class to be used as a parameter. It checks\
+    \ the value passed, not to be 'null'.\n* **Optional.get** - It gets the value\
+    \ of the input stored in the Optional class.\n\nUsing the Optional class, you\
+    \ can check whether the caller method is passing a proper parameter or not."
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "# 2. ENVIRONMENT SETUP\n\n# Try it Option Online\n\nWe have setup a Java Programming\
+    \ environment online, so that you can compile and execute all the available examples\
+    \ online at the same time when you are doing your theory work. This gives you\
+    \ confidence in what you are reading and to check the result with different options.\
+    \ Feel free to modify any example and execute it.\n\nTry following example using\
+    \ the Try it (http://compileonline.com/) option available at the top right corner\
+    \ of the code boxes in our website:\n\n```\npublic class MyFirstJavaProgram {\n\
+    \    public static void main(String [args]) {\n        System.out.println(\"Hello\
+    \ World\");\n    }\n}\n```\n\nFor most of the examples given in this tutorial,\
+    \ you will find a Try it option, provided with the sole intention to make your\
+    \ learning more enjoyable.\n\n# Local Environment Setup\n\nIf you are still willing\
+    \ to set up your environment for Java programming language, this section guides\
+    \ you on how to download and set Java on your machine. Please follow the steps\
+    \ mentioned below to set up the environment.\n\nJava SE is freely available from\
+    \ the link http://www.oracle.com/technet/java/javase/downloads/index-jdk5-jsp-142662.html.\
+    \ So you download a version based on your operating system.\n\nFollow the instructions\
+    \ to download Java and run the .exe to install Java on your machine. Once you\
+    \ have installed Java on your machine, you would need to set environment variables\
+    \ to correct installation directories:\n\n# Setting up the Path for Windows 2000/XP\n\
+    \nWe are assuming that you have installed Java in c:\\Program Files\\java\\jdk\
+    \ directory:\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_9_0.png)"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "+   * Right-click on 'My Computer' and select 'Properties'.\n\n+   * Click\
+    \ on the 'Environment variables' button under the 'Advanced' tab.\n\n+   * Now,\
+    \ alter the 'Path' variable so that it also contains the path to the Java executable.\
+    \ Example, if the path is currently set to `C:\\WINDOWS\\SYSTEM32`, then change\
+    \ your path to read `C:\\WINDOWS\\SYSTEM32;c:\\Program Files\\java\\dk\bin`.\n\
+    \n# Setting up the Path for Windows 95/98/ME\n\nWe are assuming that you have\
+    \ installed Java in c:\\Program Files\\dk directory:\n\n+   * Edit the 'C:\\autoexec.bat\
+    \ file and add the following line at the end: `SET PATH=%PATH%%;c:\\Program Files\\\
+    java\\dk\\bin`\n\n# Setting up the Path for Linux, UNIX, Solaris, FreeBSD\n\n\
+    Environment variable PATH should be set to point where the Java binaries have\
+    \ been installed. Refer to your shell documentation if you have trouble doing\
+    \ this.\n\nExample, if you use bash as your shell, then you would add the following\
+    \ line to the end of your '.bashrc: export PATH=/path/to/java:$PATH'\n\n# Popular\
+    \ Java Editors\n\nTo write your Java programs, you need a text editor. There are\
+    \ many sophisticated IDEs in the market. But for now, you can consider one of\
+    \ the following:\n\n+   * Notepad: On Windows you can use any simple text editor\
+    \ Notepad (Recommended for this tutorial), TextPad.\n\n+   * Netbeans: It is a\
+    \ Java IDE that is open-source and free which can be downloaded from http://www.netbeans.org/index.html.\n\
+    \n+   * Eclipse: It is also a Java IDE developed by the eclipse open-source community\
+    \ and can be downloaded from http://www.eclipse.org/.\n\n# Download Guava Archive\n\
+    \nDownload the latest version of Guava jar file `guava-18.0.jar`. At the time\
+    \ of writing this tutorial, we have downloaded guava-18.0.jar and copied it into\
+    \ C:\\Guava folder.\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_10_0.png)"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Guava
+
+
+    | OS | Archive name |
+
+    | Windows | guava-18.0.jar |
+
+    | Linux | guava-18.0.jar |
+
+    | Mac | guava-18.0.jar |
+
+
+    # Set Guava Environment
+
+
+    Set the Guava_HOME environment variable to point to the base directory location
+    where Guava jar is stored on your machine. Assuming, we''ve extracted guava-18.0.jar
+    in Guava folder on various Operating Systems as follows.
+
+
+    | OS | Output |
+
+    | Windows | Set the environment variable Guava_HOME to C:\Guava |
+
+    | Linux | export Guava_HOME=/usr/local/Guava |
+
+    | Mac | export Guava_HOME=/Library/Guava |
+
+
+    # Set CLASSPATH Variable
+
+
+    Set the CLASSPATH variable to point to the Guava jar location. Assuming, you have
+    stored guava-18.0.jar in Guava folder on various Operating Systems as follows.
+
+
+    | OS | Output |
+
+    | Windows | Set the environment variable CLASSPATH to %CLASPATH%;%Guava_HOME%/guava-18.0.jar;;\
+    |
+
+    | Linux | export CLASSPATH=$CLASPATH:$Guava_HOME/guava-18.0.jar:. |
+
+    | Mac | export CLASSPATH=$CLASPATH:$Guava_HOME/guava-18.0.jar:. |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_11_0.png)'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# 3. OPTIONAL CLASS\n\nOptional is an immutable object used to contain a not-null\
+    \ object. Optional object is used to represent null with absent value. This class\
+    \ has various utility methods to facilitate the code to handle values as available\
+    \ or not available instead of checking null values.\n\n# Class Declaration\n\n\
+    Following is the declaration for com.google.common.base.Optional<T> class:\n\n\
+    ```\n@GwtCompatible(serializable=true)\npublic abstract class Optional<T>\n  \
+    \  extends Object\nimplements Serializable\n```\n\n# Class Methods\n\n| S.N. |\
+    \ Method & Description |\n|---|--|\n| 1 | static <T> Optional<T> absent()\nReturns\
+    \ an Optional instance with no contained reference. |\n| 2 | abstract Set<T> asSet()\n\
+    Returns an immutable Set where only element is the contained if it is present;\
+    \ an empty immutable Set otherwise. |\n| 3 | abstract boolean equals(Object object)\n\
+    Returns true if is an Optional instance, and either the contained references are\
+    \ equal to each other or are absent. |\n| 4 | static <T> Optional<T> fromNullable(T\
+    \ nullableReference)\nIf nullableReference is non-null, returns an Optional instance\
+    \ containing that reference; otherwise returns absent(). |\n| 5 | abstract T get()\n\
+    Returns the contained instance, which must be present. |\n| 6 | abstract int hashCode()\n\
+    Returns a hash code for this instance. |\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_12_0.png)"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# Guava\n\n| | |\n|---|-|\n| 7 | abstract boolean isPresent()\n Returns true\
+    \ if this holder contains a (non-null) instance. |\n| 8 | static <T> Optional<T>\
+    \ of(T reference)\n Returns an Optional instance containing the given non-null\
+    \ reference. |\n| 9 | abstract Optional<T> or(Optional<? extends T> secondChoice)\n\
+    \ Returns this Optional if it has a value; secondChoice otherwise. |\n| 10 | abstract\
+    \ T or(Supplier<? extends T> supplier)\n Returns the contained instance if it\
+    \ is present; supplier.get() otherwise. |\n| 11 | abstract T or(T defaultValue)\n\
+    \ Returns the contained instance if it is present; defaultValue otherwise. |\n\
+    | 12 | abstract T orNull()\n Returns the contained instance if it is present;\
+    \ null otherwise. |\n| 13 | static <T> Iterable<T> presentInstances(Iterable<?\
+    \ extends T>> of optionals)\n Returns the value of each present instance from\
+    \ the supplied optionals, in\n order, skipping over occurrences of absent(). |\n\
+    | 14 | abstract String toString()\n Returns a string representation for this instance.\
+    \ |\n| 15 | abstract <V> Optional<V> transform(Function<? super T,V> function)\n\
+    \ If the instance is present, it is transformed with the given Function;\n otherwise,\
+    \ absent() is returned. |\n\n# Methods Inherited\n\nThis class inherits methods\
+    \ from the following class:\n\n+   - java.lang.Object\n\n# Example of Optional\
+    \ Class\n\nCreate the following java program using any editor of your choice in\
+    \ say C:/> Guava.\n\n8\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_13_0.png)"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# GuavaTester.java\n\n```\nimport com.google.common.base.Optional;\n\npublic\
+    \ class GuavaTester {\n    public static void main(String args[]){\n        GuavaTester\
+    \ guavaTester = new GuavaTester();\n\n        Integer value1 = null;\n       \
+    \ Integer value2 = new Integer(10);\n        //Optional.fromNullable - allows\
+    \ passed parameter to be null.\n        Optional<Integer> a = Optional.fromNullable(value1);\n\
+    \        //Optional.of - throws NullPointerException if passed parameter is null\n\
+    \        Optional<Integer> b = Optional.of(value2);\n\n        System.out.println(guavaTester.sum(a,b));\n\
+    \    }\n\n    public Integer sum(Optional<Integer> a, Optional<Integer> b){\n\
+    \        //Optional.isPresent - checks the value is present or not\n        System.out.println(\"\
+    First parameter is present: \" + a.isPresent());\n\n        System.out.println(\"\
+    Second parameter is present: \" + b.isPresent());\n\n        //Optional.or - returns\
+    \ the value if present otherwise passed.\n        ///the default value passed.\n\
+    \        Integer value1 = a.or(new Integer(0));\n\n        //Optional.get - gets\
+    \ the value, value should be present\n        Integer value2 = b.get();\n\n  \
+    \      return value1 + value2;\n    }\n}\n```"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Guava
+
+
+    # Verify the Result
+
+
+    Compile the class using javac compiler as follows:
+
+
+    ```
+
+    C:\Guava>javac GuavaTester.java
+
+    ```
+
+
+    Now run the GuavaTester to see the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    ```
+
+
+    See the result.
+
+
+    ```
+
+    First parameter is present: false
+
+    Second parameter is present: true
+
+    10
+
+    ```'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# 4. PRECONDITIONS CLASS
+
+
+    Preconditions provide static methods to check that a method or a constructor is
+    invoked with proper parameter or not. It checks the pre-conditions. Its methods
+    throw IllegalArgumentException on failure.
+
+
+    # Class Declaration
+
+
+    Following is the declaration for com.google.common.base.Preconditions class:
+
+
+    ```
+
+    @GwtCompatible
+
+    public final class Preconditions
+
+    extends Object
+
+    ```
+
+
+    | S.N. | Method & Description |
+
+    |---|---|n| 1 | **static void checkArgument(boolean expression)**
+
+    ures the truth of an expression involving one or more parameters to the calling
+    method. |
+
+    | 2 | **static void checkArgument(boolean expression, Object errorMessage)**
+
+    ures the truth of an expression involving one or more parameters to the calling
+    method. |
+
+    | 3 | **static void checkArgument(boolean expression, String errorMessageTemplate,
+    Object. errorMessageArgs)**
+
+    ures the truth of an expression involving one or more parameters to the calling
+    method. |
+
+    | 4 | **static int checkElementIndex(int index, int size)**
+
+    ures that index specifies a valid element in an array, list or string of size.
+    |
+
+    | 5 | **static int checkElementIndex(int index, int size, String desc)**
+
+    ures that index specifies a valid element in an array, list, or a string of size.
+    |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '| | |
+
+    |---|---|
+
+    | 6 | **static <T> checkNotNull(T reference)**
+
+    Ensures an object reference passed as a parameter to the calling method is not
+    null. |
+
+    | 7 | **static <T> checkNotNull(T reference, Object errorMessage)**
+
+    Ensures an object reference passed as a parameter to the calling method is not
+    null. |
+
+    | 8 | **static <T> checkNotNull(T reference, String errorMessageTemplate, Object...
+    errorMessageArgs)**
+
+    Ensures an object reference passed as a parameter to the calling method is not
+    null. |
+
+    | 9 | **static int checkPositionIndex(int index, int size)**
+
+    Ensures specifies a valid position in an array, list or a string of size. |
+
+    | 10 | **static int checkPositionIndex(int index, int size, String desc)**
+
+    Ensures specifies a valid position in an array, list or a string of size. |
+
+    | 11 | **static void checkPositionIndexes(int start, int end, int size)**
+
+    Ensures that start and end specify a valid positions in an array, list or of size,
+    and in order. |
+
+    | 12 | **static void checkState(boolean expression)**
+
+    Ensures the truth of an expression involving the state of the calling instance,
+    but not involving any parameters to the calling method. |
+
+    | 13 | **static void checkState(boolean expression, Object errorMessage)**
+
+    Ensures the truth of an expression involving the state of the calling instance,
+    but not involving any parameters to the calling method. |
+
+    | 14 | **static void checkState(boolean expression, String errorMessageTemplate,
+    Object... errorMessageArgs)**
+
+    Ensures the truth of an expression involving the state of the calling instance,
+    but not involving any parameters to the calling method. |
+
+
+    # # Methods Inherited
+
+
+    This class inherits methods from the following class:
+
+
+    +   - java.lang.Object
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_17_0.png)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# Example of Preconditions Class\n\nCreate the following java program using\
+    \ any editor of your choice in say C:/> Guava.\n\nGuavaTester.java\n\n```\nimport\
+    \ com.google.common.base.Preconditions;\n\npublic class GuavaTester {\n\n    public\
+    \ static void main(String args[]){\n        GuavaTester guavaTester = new GuavaTester();\n\
+    \        try {\n            System.out.println(guavaTester.sqrt(-3.0));\n    \
+    \    } catch(IllegalArgumentException e){\n            System.out.println(e.getMessage());\n\
+    \        }\n        try {\n            System.out.println(guavaTester.sum(null,3));\n\
+    \        } catch(NullPointerException e){\n            System.out.println(e.getMessage());\n\
+    \        }\n        try {\n            System.out.println(guavaTester.getValue(6));\n\
+    \        } catch(IndexOutOfBoundsException e){\n            System.out.println(e.getMessage());\n\
+    \        }\n    }\n\n    public double sqrt(double input) throws IllegalArgumentException\
+    \ {\n        Preconditions.checkArgument(input > 0.0, \n            \"Illegal\
+    \ Argument passed: Negative value %s\", input);\n        return Math.sqrt(input);\n\
+    \    }\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_18_0.png)"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "```\npublic int sum(Integer a, Integer b){\n  a = Preconditions.checkNull(a,\n\
+    \  \"Illegal Argument passed: First parameter is Null.\");\n  b = Preconditions.checkNull(b,\n\
+    \  \"Illegal Argument passed: Second parameter is Null.\");\n  return a+b;\n}\n\
+    ```\n\n```\npublic int getValue(int input){\n  int[] data = {1,2,3,4,5};\n  Preconditions.checkElementIndex(input,data.length,\n\
+    \  \"Illegal Argument passed: Invalid index.\");\n  return 0;\n}\n```\n\n# Verify\
+    \ the Result\n\nCompile the class using javac compiler as follows:\n\nC:\\Guava>javac\
+    \ GuavaTester.java\n\nNow run the GuavaTester to see the result.\n\nC:\\Guava>java\
+    \ GuavaTester\n\nSee the result.\n\nIllegal Argument passed: Negative value -3.0.\n\
+    Illegal Argument passed: First parameter is Null.\nIllegal Argument passed: Invalid\
+    \ index. (6) must be less than size (5)"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# 5. ORDERING CLASS\n\nOrdering can be seen as an enriched comparator with\
+    \ enhanced chaining functionality, multiple utility methods, multi-type sorting\
+    \ capability, etc.\n\n# Class Declaration\n\nFollowing is the declaration for\
+    \ com.google.common.collect.Ordering<T> class:\n\n```\n@Gwt abstract class Ordering<T>\n\
+    \    extends Object\nimplements Comparator<T>\n```\n\n# Class Methods\n\n| S.N.\
+    \ | Method & Description |\n| 1 | static Ordering<Object> allEqual()\nReturns\
+    \ an ordering which treats all values as equal, indicating \"no ordering.\" Passing\
+    \ this ordering to any stable sort algorithm results in no change to the order\
+    \ of elements. |\n| 2 | static Ordering<Object> arbitrary()\nReturns an arbitrary\
+    \ ordering over all objects, for which compare(a,b) == 0 implies a == b (identity\
+    \ equality). |\n| 3 | int binarySearch(List<? extends T> sortedList, T key)\n\
+    Searches sortedList for key using the binary search algorithm. |\n| 4 | abstract\
+    \ int compare(T left, T right)\nCompares its two arguments for order. |\n| 5 |\
+    \ <U extends T> Ordering<U> compound(Comparator<? super secondaryComparator)\n\
+    Returns an ordering which first uses the ordering this, but which in the event\
+    \ of a \"tie,\" delegates to secondaryComparator. |\n| 6 | static <T> Ordering<T>\
+    \ compound(Iterable<? extends extends |"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# Guava\n\n| Comparator<? super T>> comparators)\n Returns an ordering which\
+    \ tries each given comparator in order until a non-zero result is found, returning\
+    \ that result, and returning zero only if all comparators return zero |\n\n| 7\
+    \ static <T> Ordering<T> explicit(List<T> valuesInOrder)\n Returns an ordering\
+    \ that compares objects according to the order in which they appear in the given\
+    \ list |\n\n| 8 static <T> Ordering<T> explicit(T leastValue, remainingValuesInOrder)\n\
+    \ Returns an ordering that orders objects according to the order in which they\
+    \ are given to this method. |\n\n| 9 static <T> Ordering<T> from(Comparator<T>\
+    \ comparator)\n Returns an ordering based on an given comparator instance. |\n\
+    \n| 10 <E extends T> List<E> greatestOf(Iterable<E> iterable, int k)\n Returns\
+    \ the k greatest elements of the given iterable according to this ordering, in\
+    \ order from greatest to least. |\n\n| 11 <E extends T> List<E> greatestOf(Iterable<E>\
+    \ iterator, int k)\n Returns the k greatest elements from the given iterator according\
+    \ to this ordering, in order from greatest to least. |\n\n| 12 <E extends T> ImmutableListSortedCopy(Iterable<E>\
+    \ elements)\n Returns an immutable list containing elements sorted by this ordering.\
+    \ |\n\n| 13 boolean isOrdered(Iterable<? extends T> iterable)\n Returns true if\
+    \ each element in iterable after the first is greater than or equal to the element\
+    \ that preceded it, according to this ordering. |\n\n| 14 boolean isStrictOrdered(Iterable<?\
+    \ extends T> iterable)\n Returns true if each element in iterable after the first\
+    \ is strictly greater than the element that preceded it, according to this ordering.\
+    \ |\n\n| 15 <E extends T> List<E> leastOf(Iterable<E> iterable, int k)\n Returns\
+    \ the k least elements of the given iterable according to this ordering, in order\
+    \ from least to greatest. |\n\n| 16 <E extends T> List<E> leastOf(Iterator<E>\
+    \ elements, int k)\n Returns the k least elements from the given iterator according\
+    \ to this |\n\n16\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_21_0.png)"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'ordering, in order from least to greatest.
+
+
+    | 17 | <S extends T> Ordering<Iterable<S>> lexicographical()\nReturns a new ordering
+    which sorts iterables by comparing corresponding elements pairwise until a nonzero
+    result is found; imposes "dictionary order". |
+
+
+    | 18 | <E extends T> max(E a, E b)\nReturns the greater of the two values according
+    to this ordering. |
+
+
+    | 19 | <E extends T> max(E a, E b, E c, E... rest)\nReturns the greatest of the
+    specified values according to this ordering. |
+
+
+    | 20 | <E extends T> max(Iterable<E> iterable)\nReturns the greatest of the specified
+    values according to this ordering. |
+
+
+    | 21 | <E extends T> max(Iterator<E> iterator)\nReturns the greatest of the specified
+    values according to this ordering. |
+
+
+    | 22 | <E extends T> min(E a, E b)\nReturns the lesser of the two values according
+    to this ordering. |
+
+
+    | 23 | <E extends T> min(E a, E b, E c, E... rest)\nReturns the least of the specified
+    values according to this ordering. |
+
+
+    | 24 | <E extends T> min(Iterable<E> iterable)\nReturns the least of the specified
+    values according to this ordering. |
+
+
+    | 25 | <E extends T> min(Iterator<E> iterator)\nReturns the least of the specified
+    values according to this ordering. |
+
+
+    | 26 | static <C extends Comparable> Ordering<C> natural()\nReturns a serializable
+    ordering that uses the natural order of the values. |
+
+
+    | 27 | <S extends T> Ordering<S> nullFirst()\nReturns an ordering that treats
+    null as less than all other values and uses this to compare non-null values. |
+
+
+    | 28 | <S extends T> Ordering<S> nullLast()\nReturns an ordering that treats null
+    as greater than all other values and uses this to compare non-null values. |
+
+
+    | 29 | <F> Ordering<F> onResult(Function<F,? extends T> function)\nReturns a new
+    ordering on F which orders elements by first applying a |'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Guava\n\n| | |\n|---||\n| 30 | <S extends T> Ordering<S> reverse()\nReturns\
+    \ the reverse of this ordering; the Ordering equivalent to Collections.reverse(Comparator).\n\
+    | 31 | <E extends T> List<E> sortedCopy(Iterable<E> elements)\nReturns a mutable\
+    \ list containing elements sorted by this ordering; use this when the resulting\
+    \ list may need further modification, or may contain null.\n| 32 | static Ordering<Object>\
+    \ usingToString()\nReturns an ordering that compares objects by the natural ordering\
+    \ of their string representations as returned by toString().\n\n# Methods Inherited\n\
+    \nThis class inherits methods from the following class:\n\n+   - java.lang.Object\n\
+    \n# Example of Ordering Class\n\nCreate the following java program using any editor\
+    \ of your choice in say C:/Guava.\n\n# GuavaTester.java\n\n```\nimport java.util.ArrayList;\n\
+    import java.util.Collections;\nimport java.util.List;\nimport com.google.common.collect.Ordering;\n\
+    \npublic class GuavaTester {\n    public static void main(String args[]){\n  \
+    \      List<Integer> numbers = new ArrayList<Integer>();\n        numbers.add(new\
+    \ Integer(5));\n        numbers.add(new Integer(2));\n        numbers.add(new\
+    \ Integer(15));\n        numbers.add(new Integer(51));\n    }\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_23_0.png)"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '```
+
+    numbers.add(new Integer(53));
+
+    numbers.add(new Integer(35));
+
+    numbers.add(new Integer(45));
+
+    numbers.add(new Integer(32));
+
+    numbers.add(new Integer(43));
+
+    numbers.add(new Integer(16));
+
+    ```
+
+
+    ```
+
+    Ordering ordering = Ordering.natural();
+
+    System.out.println("Input List: ");
+
+    System.out.println(numbers);
+
+    ```
+
+
+    ```
+
+    Collections.sort(numbers,ordering );
+
+    System.out.println("Sorted List: ");
+
+    System.out.println(numbers);
+
+    ```
+
+
+    ```
+
+    System.out.println("==================================");
+
+    System.out.println("List is sorted: " + ordering.isOrdered(numbers));
+
+    System.out.println("Minimum: " + ordering.min(numbers));
+
+    System.out.println("Maximum: " + ordering.max(numbers));
+
+    ```
+
+
+    ```
+
+    Collections.sort(numbers,ordering.reverse());
+
+    System.out.println("Reverse: " + numbers);
+
+    ```
+
+
+    ```
+
+    numbers.add(null);
+
+    System.out.println("Null added to Sorted List: ");
+
+    System.out.println(numbers);
+
+    ```
+
+
+    ```
+
+    Collections.sort(numbers,ordering.nullsFirst());
+
+    System.out.println("Null first Sorted List: ");
+
+    System.out.println(numbers);
+
+    System.out.println("==================================");
+
+    ```
+
+
+    ```
+
+    List<String> names = new ArrayList<String>();
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '```
+
+    names.add("Ram");
+
+    names.add("Shyam");
+
+    names.add("Mohan");
+
+    names.add("Sohan");
+
+    names.add("Ramesh");
+
+    names.add("Suresh");
+
+    names.add("Naresh");
+
+    names.add("Mahesh");
+
+    names.add(null);
+
+    names.add("Vikas");
+
+    names.add("Deepak");
+
+    ```
+
+
+    ```
+
+    System.out.println("Another List: ");
+
+    System.out.println(names);
+
+
+    Collections.sort(names,ordering.nullsFirst().reverse());
+
+    System.out.println("Null first then reverse sorted list: ");
+
+    System.out.println(names);
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the class using javac compiler as follows:
+
+
+    ```
+
+    C:\Guava>javac GuavaTester.java
+
+    ```
+
+
+    Now run the GuavaTester to see the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    ```
+
+
+    See the result.
+
+
+    Input List:
+
+    [5, 2, 15, 51, 53, 35, 45, 32, 43, 16]
+
+    Sorted List:
+
+    [2, 5, 15, 16, 32, 35, 43, 45, 51, 53]'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '```
+
+    ==================================
+
+    List is sorted: true
+
+    Minimum: 2
+
+    Maximum: 53
+
+    Reverse: [53, 51, 45, 43, 32, 16, 15, 5, 2]
+
+    Null added to Sorted List:
+
+    [53, 51, 45, 43, 32, 16, 15, 5, 2, null]
+
+    Null first Sorted List:
+
+    [null, 2, 5, 15, 16, 32, 35, 43, 45, 51, 53]
+
+    ==================================
+
+    ```
+
+
+    Another List:
+
+
+    [Ram, Shyam, Mohan, Sohan, Ramesh, Suresh, Naresh, Mahesh, null, Vikas, Deepak]
+
+
+    Null first then reverse sorted list:
+
+
+    [Vikas, Suresh, Sohan, Shyam, Ramesh, Ram, Naresh, Mohan, Mahesh, Deepak, null]'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# 6. OBJECTS CLASS\n\nObjects class provides helper functions applicable to\
+    \ all objects such as equals, hashCode, etc.\n\n# Class Declaration\n\nFollowing\
+    \ is the declaration for **com.google.common.base.Objects** class:\n\n```\n@GwtCompatible\n\
+    public final class Objects\n    extends Object\n```\n\n# Class Methods\n\n| S.N.\
+    \ | Method & Description |\n|---|---|\n| 1 | **static boolean equal(Object a,\
+    \ Object b)**\nDetermines whether two-possibly-null objects are equal. |\n| 2\
+    \ | **static <T> T firstNonNull(T first, T second)**\nDeprecated. Use MoreObjects.firstNonNull(T,\
+    \ T) instead. This method is scheduled for removal in June 2016. |\n| 3 | **static\
+    \ int hashCode(Object... objects)**\nGenerates a hash code for multiple values.\
+    \ |\n| 4 | **static Objects.toStringHelper(toStringHelper(Class<?> clazz)**\n\
+    Deprecated. Use MoreObjects.toStringHelper(Class) instead. This method is scheduled\
+    \ for removal in June 2016. |\n| 5 | **static Objects.toStringHelper(toStringHelper(Object\
+    \ self)**\nDeprecated. Use MoreObjects.toStringHelper(Object) instead. This method\
+    \ is scheduled for removal in June 2016. |\n| 6 | **static Objects.toStringHelper(toStringHelper(String\
+    \ className)**\nDeprecated. Use MoreObjects.toStringHelper(String) instead. This\
+    \ method is scheduled for removal in June 2016. |"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# Methods Inherited\n\nThis class inherits methods from the following class:\n\
+    \n+   - java.lang.Object\n\n# Example of Objects Class\n\nCreate the following\
+    \ java program using any editor of your choice in say C:/> Guava.\n\nGuavaTester.java\n\
+    \n```\nimport com.google.common.base.Objects;\n\npublic class GuavaTester {\n\
+    \    public static void main(String args[]){\n        Student s1 = new Student(\"\
+    Mahesh\", \"Parasar\", 1, \"VI\");\n        Student s2 = new Student(\"Suresh\"\
+    , null, 3, null);\n\n        System.out.println(s1.equals(s2));\n        System.out.println(s1.hashCode());\n\
+    \        System.out.println(\n            Objects.toStringHelper(s1)\n       \
+    \         .add(\"Name\", s1.getFirstName() + \" \" + s1.getLastName())\n     \
+    \           .add(\"Class\", s1.getClassName())\n                .add(\"Roll No\"\
+    , s1.getRollNo())\n                .toString())\n        );\n    }\n}\n\nclass\
+    \ Student {\n    private String firstName;\n    private String lastName;\n   \
+    \ private int rollNo;\n    private String className;\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "```\npublic Student(String firstName, String lastName, int rollNo, String\n\
+    className)(){\n    this.firstName = firstName;\n    this.lastName = lastName;\n\
+    \    this.rollNo = rollNo;\n    this.className = className;\n}\n```\n\n```\n@Override\n\
+    public boolean equals(Object object){\n    if(!(object instanceof Student) ||\
+    \ object == null) {\n        return false;\n    }\n    Student student = (Student)object;\n\
+    \    // no need to handle null here\n    // Objects.equal(\"test\", \"test\")\
+    \ == true\n    // Objects.equal(\"test\", null) == false\n    // Objects.equal(null,\
+    \ \"test\") == false\n    // Objects.equal(null, null) == true\n    return Objects.equal(firstName,\
+    \ student.firstName) // first name can be null\n    && Objects.equal(lastName,\
+    \ student.lastName) // last name can be null\n    && Objects.equal(rollNo, student.rollNo)\n\
+    \    && Objects.equal(className, student.className);// class name can be null\n\
+    }\n```\n\n```\n@Override\npublic int hashCode(){\n    // no need to compute hashCode\
+    \ by self\n    return Objects.hashCode(className, rollNo);\n}\n```\n\n```\npublic\
+    \ String getFirstName() {\n    return firstName;\n}\n```\n\n```\npublic void setFirstName(String\
+    \ firstName) {\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "```\nthis.firstName = firstName;\n}\npublic String getLast() {\n    return\
+    \ lastName;\n}\npublic void setLastName(String lastName) {\n    this.lastName\
+    \ = lastName;\n}\npublic int getRollNo() {\n    return rollNo;\n}\npublic void\
+    \ setRollNo(int rollNo) {\n    this.rollNo = rollNo;\n}\npublic String getClassName()\
+    \ {\n    return className;\n}\npublic void setClassName(String className) {\n\
+    \    this.className = className;\n}\n\n```\n\n# Verify the Result\n\nCompile the\
+    \ class using javac compiler as follows:\n\n| C:\\Guava\\javac GuavaTester.java\
+    \ |\n\nNow run the GuavaTester to see the result.\n\n| C:\\Guava>java GuavaTester\
+    \ |\n\nSee the result.\n\n| false\n85871\nStudent(Name=Mahesh Parashar, Class=VI,\
+    \ Roll No=1) |\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_30_0.png)"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# 7. RANGE CLASS
+
+
+    Range represents an interval or a sequence. It is used to get a set of numbers/strings
+    lying in a particular range.
+
+
+    # Class Declaration
+
+
+    Following is the declaration for com.google.common.collect.Range<C> class:
+
+
+    ```
+
+    @GwtCompatible
+
+    public final class Range<C> extends Comparable<
+
+    ends Object>
+
+    nimplements Predicate<C>, Serializable
+
+    ```
+
+
+    # Methods
+
+
+    | S.N. | Method & Description |
+
+    |---|---|
+
+    | 1 | static <C extends Comparable<?>> Range<C> all() Returns a range that contains
+    every value of type. |
+
+    | 2 | boolean apply(C input)Deprecated. Provided only to satisfy the Predicate
+    interface; use contains(C) instead. |
+
+    | 3 | static <C extends Comparable<?>> Range<C> atLeast(endpoint) Returns a range
+    that contains all values greater than or equal to endpoint. |
+
+    | 4 | static <C extends Comparable<?>> Range<C> atMost(endpoint) Returns a range
+    that contains all values less than or equal to endpoint. |
+
+    | 5 | Range<C> canonical(DiscreteDomain<C> domain) Returns the canonical form
+    of this range in the given domain. |
+
+    | 6 | static <C extends Comparable<?>> Range<C> closed(C lower, C upper) Returns
+    a range that contains all values greater than or equal to lower and less than
+    or equal to upper.
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_31_0.png)'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '| 7 | static <C extends Comparable<?>> Range<C> closedOpen(C lower, C upper)
+
+    Returns a range that contains all values greater than or equal to lower and strictly
+    less than upper. |
+
+    | 8 | boolean contains(C value)
+
+    Returns true if value is within the bounds of this range. |
+
+    | 9 | boolean containsAll(Iterable<? extends C> values)
+
+    Returns true if every element is contained in this range. |
+
+    | 10 | static <C extends Comparable<?>> Range<C> downTo(C endpoint, BoundType
+    endpoint)
+
+    Returns a range from the given endpoint, which may be either inclusive (closed)
+    or exclusive (open), with no upper bound. |
+
+    | 11 | static <C extends Comparable<?>> Range<C> encloseAll(Iterable<? extends
+    C> values)
+
+    Returns the minimal range that contains all of the given values. |
+
+    | 12 | boolean encloses(Range<C> other)
+
+    Returns true if the bounds of other do not extend outside the bounds of this range.
+    |
+
+    | 13 | boolean equals(Object object)
+
+    Returns true if object is a range having the same endpoints and bound types as
+    this range. |
+
+    | 14 | static <C extends Comparable<?>> Range<C> greaterThan(C endpoint)
+
+    Returns a range that contains all values strictly greater than endpoint. |
+
+    | 15 | int hashCode()
+
+    Returns a hash code for this range. |
+
+    | 16 | boolean hasLowerBound()
+
+    Returns true if this range has a lower endpoint. |
+
+    | 17 | boolean hasUpperBound()
+
+    Returns true if this range has an upper endpoint. |
+
+    | 18 | Range<C> intersection(Range<C> connectedRange)
+
+    Returns the maximal range enclosed by both this range and connectedRange, if such
+    a range exists. |'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Guava
+
+
+    | 19 | `boolean isConnected(Range<C> other)`
+
+    > Returns true if there exists a (possibly empty) range which is enclosed by both
+    this range and other. |
+
+    | 20 | `boolean isEmpty()`
+
+    > Returns true if this range is of the form [v..v) or (v..v]. |
+
+    | 21 | `static C extends Comparable<??>> Range<C> lessThan(C endpoint)`
+
+    > Returns a range that contains all values strictly less than endpoint. |
+
+    | 22 | `BoundType lowerBoundType()`
+
+    > Returns the type of this range''s lower bound: BoundType.CLOSED if the range
+    includes its lower endpoint, BoundType.OPEN if it does not. |
+
+    | 23 | `C lowerEndpoint()`
+
+    > Returns the lower endpoint of this range. |
+
+    | 24 | `static C extends Comparable<??>> Range<C> open(C lower, C upper)`
+
+    > Returns a range that contains all values strictly greater than lower and strictly
+    less than upper. |
+
+    | 25 | `static C extends Comparable<??>> Range<C> openClosed(C lower, C upper)`
+
+    > Returns a range that contains all values strictly greater than lower and less
+    than or equal to upper. |
+
+    | 26 | `static C extends Comparable<??>> Range<C> range(C lower, BoundType lowerType,
+    C upper, BoundType upperType)`
+
+    > Returns a range that contains any value from lower to upper, where each endpoint
+    may be inclusive (closed) or exclusive (open). |
+
+    | 27 | `static C extends Comparable<?>> Range<C> singleton(C value)`
+
+    > Returns a range that contains only the given value. |
+
+    | 28 | `Range<C> span(Range<C> other)`
+
+    > Returns the minimal range that encloses both this range and other. |
+
+    | 29 | `toString()`
+
+    > Returns a string representation of this range, such as "[3..5)" (other examples
+    are listed in the class documentation). |
+
+    | 30 | `BoundType upperBoundType()`
+
+    > Returns the type of this range''s upper bound: BoundType.CLOSED if the |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_33_0.png)
+
+
+    28'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# Guava\n\n| | |\n|---||\n| | range includes its upper endpoint, BoundType.OPEN\
+    \ if it does not. |\n| 31 | **C upperBound()**\nReturns the upper endpoint of\
+    \ this range |\n| 32 | **static <C extends Comparable<?>> Range<C> upTo(C endpoint,\
+    \ BoundType boundType)**\nReturns a range with no lower bound up to the given\
+    \ endpoint, which may be either inclusive (closed) or exclusive (open). |\n\n\
+    # Methods Inherited\n\nThis class inherits methods from the following class:\n\
+    \n+   - java.lang.Object\n\n# Example of Range Class\n\nCreate the following java\
+    \ program using any editor of your choice in say **C:> Guava.**\n\nGuavaTester.java\n\
+    \n```\nimport com.google.common.collect.ContiguousSet;\nimport com.google.common.collect.DiscreteDomain;\n\
+    import com.google.common.collect.Range;\nimport com.google.common.primitives.Ints;\n\
+    \npublic class GuavaTester {\n\n    public static void main(String args[]){\n\
+    \        GuavaTester tester = new GuavaTester();\n        tester.testRange();\n\
+    \    }\n\n    private void testRange(){\n        // create a range [a,b] = { x\
+    \ | a <= x <= b }\n        Range<Integer> range1 = Range.closed(0, 9);\n\n```\n\
+    \n![](img/4935a2238ac80b2a11ee9e7e607ee959_34_0.png)"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Guava
+
+
+    ```
+
+    System.out.print("[0,9) : ");
+
+    ```
+
+
+    ```
+
+    //create a range (a,b) = { x | a < x < b}
+
+    Range<Integer> range2 = Range.open(0, 9);
+
+    System.out.print("(0,9) : ");");
+
+    printRange(range2);
+
+    ```
+
+
+    ```
+
+    //create a range [a,b] = { x | a < x <= b}
+
+    Range<Integer> range3 = Range.openClosed(0, 9);
+
+    System.out.print("[0,9] : ");");
+
+    printRange(range3);
+
+    ```
+
+
+    ```
+
+    //create a range [a,b) = { x | a <= x < b}
+
+    Range<Integer> range4 = Range.closedOpen(0, 9);
+
+    System.out.print(\(\[0,9) : ");");
+
+    printRange(range4);
+
+    ```
+
+
+    ```
+
+    //create an ended range (9, infinity)
+
+    Range<Integer> range5 = Range.greaterThan(9);
+
+    System.out.println("(9,infinity) : ");
+
+    ```
+
+
+    ```
+
+    Range<Integer> range6 = Range.closed(3, 5);
+
+    printRange(range6);
+
+    ```
+
+
+    ```
+
+    //check a subrange [3,5] in [0,9]
+
+    System.out.println(\(\[0,9] encloses [3,5]: : " + range1.encloses(range6));
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# Guava\n\n```\nRange<Integer> range7 = Range.closed(9, 20);\nprintRange(range7);\n\
+    //check ranges to be connected\nSystem.out.println(\"[0,9] is connected [9,20]:\"\
+    \ + range1.isConnected(range7));\n\nRange<Integer> range8 = Range.closed(5, 15);\n\
+    \n//intersection\nprintRange(range1.intersection(range8));\n\n//span\nprintRange(range1.span(range8));\n\
+    }\n\nprivate void printRange(Range<Integer> range) {\n    System.out.print(\"\
+    { \");\n    for(int grade : ContiguousSet.create(range, DiscreteDomain.integers()))\
+    \ {\n        System.out.print(grade + \" \");\n    }\n    System.out.println(\"\
+    ]\");\n}\n```\n\n# Verify the Result\n\nCompile the class using javac compiler\
+    \ as follows:\n\n```\nC:\\Guava>javac GuavaTester.java\n```\n\nNow run the GuavaTester\
+    \ to see the result.\n\n```\nC:\\Guava>java GuavaTester\n```\n\nSee the result.\n\
+    \n```\n[0,9] : [ 0 1 2 3 4 5 6 7 8 9 ]\n5 is present: true\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_36_0.png)"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '```
+
+    (1,2,3) is present: true
+
+    Lower Bound: 0
+
+    Upper Bound: 9
+
+    (0,9) : [ 1 2 3 4 5 6 7 8 ]
+
+    (0,9) : [ 1 2 3 4 5 6 7 8 9 ]
+
+    [0,9) : [ 0 1 2 3 4 5 6 7 8 ]
+
+    (9,infinity) :
+
+    Lower Bound: 9
+
+    Upper Bound present: false
+
+    [ 3 4 5 ]
+
+    [0,9) encloses [3,5]:true
+
+    [ 9 10 11 12 13 14 15 16 17 18 19 20 ]
+
+    [0,9] is connected [9,20]:true
+
+    [ 5 6 7 8 9 ]
+
+    [ 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 ]
+
+    ```'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# 8. THROWABLES CLASS\n\nThrowables class provides utility methods related\
+    \ to Throwable interface.\n\n# Class Declaration\n\nFollowing is the declaration\
+    \ for com.google.common.base.Throwables class:\n\n```\npublic final class Throwables\n\
+    \    extends Object\n```\n\n# Class Methods\n\n| S.N. | Method & Description |\n\
+    | 1 | static List<Throwable> getCausalChain(Throwable throwable)<br>Gets a Throwable\
+    \ cause chain as a list. |\n| 2 | static Throwable getRootCause(Throwable throwable)<br>Returns\
+    \ the innermost cause of throwable. |\n| 3 | static String getStackTraceAsString(Throwable\
+    \ throwable)<br>Returns a string containing the result of toString(), followed\
+    \ by the full, recursive stack trace of throwable. |\n| 4 | static RuntimeException\
+    \ propagate(Throwable throwable)<br>Propagates as-is, if it is an instance of\
+    \ RuntimeException or Error, or as a last result, wraps it in a RuntimeException\
+    \ then propagates. |\n| 5 | static <X extends Throwable> void propagateInstanceOf(Throwable\
+    \ throwable, Class<X> declaredType)<br>Propagates exactly as-is, if and only if\
+    \ it is an instance of declaredType. |\n| 6 | static void propagateIfPossible(Throwable\
+    \ throwable)<br>Propagates exactly as-is, if and only if it is an instance of\
+    \ RuntimeException or Error. |"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# Guava\n\n| 7 | static <X extends Throwable> void propagateIfPossible(Throwable\
+    \ throwable, Class<X> declaredType) Propagates throwable exactly as-is, if and\
+    \ only if it is an instance of RuntimeException, Error, or declaredType. |\n|\
+    \ 8 | static <X1 extends Throwable,X2 extends Throwable>void propagateIfPossible(Throwable\
+    \ throwable, Class<X1> declaredType1, Class<X2> declaredType2) Propagates throwable\
+    \ exactly as-is, if and only if it is an instance of RuntimeException, Error,\
+    \ or declaredType1, or declaredType2. |\n\n# Methods Inherited\n\nThis class inherits\
+    \ from the following class:\n\n+   * java.lang.Object\n\n# Example of Throwables\
+    \ Class\n\nCreate the following java program using any editor of your choice in\
+    \ say C:/> Guava.\n\nGuavaTester.java\n\n```\nimport java.io.IOException;\nimport\
+    \ com.google.common.base.Objects;\nimport com.google.common.base.Throwables;\n\
+    \npublic class GuavaTester {\n    public static void main(String[] args){\n  \
+    \      GuavaTester tester = new GuavaTester();\n        try {\n            tester.showcaseThrowables();\n\
+    \        } catch (InvalidInputException e) {\n            // get the root cause\n\
+    \            System.out.println(Throwables.getRootCause());\n        } catch (Exception\
+    \ e) {\n            // get the stack trace in string format\n        }\n    }\n\
+    ```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_39_0.png)"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "```\nSystem.out.println(Throwables.getStackTraceAsString(e));\n\ntry {\n  \
+    \  tester.showcaseThrowables1();\n} catch (Exception e) {\n    System.out.println(Throwables.getStackTraceAsString(e));\n\
+    }\n\n```\n\n```\npublic void showcaseThrowables() throws InvalidInputException\
+    \ {\ntry {\n    sqrt(-3.0);\n} catch (Throwable e) {\n    //check the type of\
+    \ exception and throw it\n    Throwables.propagateInstanceOf(e, InvalidInputException.class);\n\
+    \n    Throwables.propagate(e);\n}\n\n```\n\n```\npublic void showcaseThrowables1()\
+    \ {\ntry {\n    int[] data = {1,2,3};\n    getValue(data, 4);\n} catch (Throwable\
+    \ e) {\n    Throwables.propagateInstanceOf(e, IndexOutOfBoundsException.class);\n\
+    \n    Throwables.propagate(e);\n}\n\n```\n\n```\npublic double sqrt(double input)\
+    \ throws InvalidInputException{\n```"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "```\nif(input < 0) throw InvalidInputException();\nreturn Math.sqrt(input);\n\
+    }\n\npublic double getValue(int[] list, int index) throws IndexOfBoundsException\
+    \ {\n    return list[index];\n}\n\npublic void dummyIO() throws IOException {\n\
+    \    throw new IOException();\n}\n\nclass InvalidInputException extends Exception\
+    \ {\n}\n```\n\n# Verify the Result\n\nCompile the class using javac compiler as\
+    \ follows:\n\n```\nC\\Guava>javac GuavaTester.java\n```\n\nNow run the GuavaTester\
+    \ to see the result\n\n```\nC\\Guava>java GuavaTester\n```\n\nSee the result.\n\
+    \n```\nInvalidInputException\njava.lang.ArrayIndexOutOfBoundsException: 4\nat\
+    \ GuavaTester.getValue(GuavaTester.java:52)\nat GuavaTester.showcaseThrowable1(GuavaTester.java:38)\n\
+    at GuavaTester.main(GuavaTester.java:19)\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "Guava introduces many advanced collections based on developers' experience\
+    \ in application development works. Given below is a list of useful collections:\n\
+    \n| S.N. | Collection name & Description |\n|---|---|\n| 1 | Multiset An extension\
+    \ to Set interface to allow duplicate elements. |\n| 2 | Multimap An extension\
+    \ to Map interface so that its keys can be mapped to multiple values at a time.\
+    \ |\n| 3 | BiMap An extension to Map interface to support inverse operations.\
+    \ |\n| 4 | Table Table represents a special map where two keys can be specified\
+    \ in combined fashion to refer to a single value. |\n\n# Multiset Interface\n\n\
+    Multiset interface extends 'Set' to have duplicate elements, and provides various\
+    \ utility methods to deal with the occurrences of such elements in a set.\n\n\
+    # Interface Declaration\n\nFollowing is the declaration for com.google.common.collect.Multiset<E>\
+    \ interface:\n\n```\n@GwtCompatible\npublic interface Multiset<E>\n    extends\
+    \ Collection<E>\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Interface Methods
+
+
+    | S.N. | Method & Description |
+
+    |---|---|
+
+    | 1 | boolean add(E element)<br>Adds a single occurrence of the specified element
+    to this multiset. |
+
+    | 2 | int add(E element, int occurrences)<br>Adds a number of occurrences of an
+    element to this multiset. |
+
+    | 3 | boolean contains(Object element)<br>Determines whether this multiset contains
+    the specified element. |
+
+    | 4 | boolean containsAll(Collection<?> elements)<br>Returns true if this multiset
+    contains at least one occurrence of element in the specified collection. |
+
+    | 5 | int count(Object element)<br>Returns the number of occurrences of an element
+    in this multiset (count of the element). |
+
+    | 6 | Set<E> elementSet()<br>Returns the set of distinct elements contained in
+    this multiset. |
+
+    | 7 | Set<Multiset.Entry<E>> entrySet()<br>Returns a view of the contents of this
+    multiset, grouped into Multiset.Entry instances, each providing an element of
+    the multiset and the count of that element. |
+
+    | 8 | boolean equals(Object object)<br>Compares the specified object with this
+    multiset for equality. |
+
+    | 9 | int hashCode()<br>Returns the hash code for this multiset. |
+
+    | 10 | Iterator<E> iterator()<br>Returns an iterator over the elements in this
+    collection. |
+
+    | 11 | boolean remove(Object element)<br>Removes a single occurrence of the specified
+    element from this multiset, if present. |
+
+    | 12 | int remove(Object element, int occurrences)<br>Removes a number of occurrences
+    of the specified element from this |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_43_0.png)'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'multiset.
+
+
+    boolean removeAll(Collection<? > c)
+
+    Removes all of this collection''s elements that are also contained in the specified
+    collection (optional operation).
+
+
+    boolean retainAll(Collection<? > c)
+
+    Retains only the elements in this collection that are contained in the specified
+    collection (optional operation).
+
+
+    int setCount(E element, int count)
+
+    Adds or removes the necessary occurrences of an element such that the element
+    attains the desired count.
+
+
+    boolean setCount(E element, int oldCount, int newCount)
+
+    Conditionally sets the count of an element to a new value, as described in setCount(Object,
+    int), provided that the element has the expected current count.
+
+
+    String to toString()
+
+    Returns a string representation of the object.
+
+
+    # Methods Inherited
+
+
+    This interface inherits methods from the following interface:
+
+
+    +   - java.util.Collection
+
+
+    # Example of Multiset
+
+
+    Create the following java program using any editor of your choice in say C:/>
+    Guava.
+
+
+    # GuavaTester.java
+
+
+    ```
+
+    import java.util.Iterator;
+
+    import java.util.Set;
+
+
+    import com.google.common.collect.HashMultiset;
+
+    import com.google.common.collect.Multiset;
+
+
+    public class GuavaTester {
+
+    ```
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_44_0.png)'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\npublic static void main(String args[]) {\n  //create a multiset collection\n\
+    Multiset<String> multiset = HashMultiset.create();\n  multiset.add(\"a\");\n \
+    \ multiset.add(\"b\");\n  multiset.add(\"c\");\n  multiset.add(\"d\");\n  multiset.add(\"\
+    a\");\n  multiset.add(\"b\");\n  multiset.add(\"c\");\n  multiset.add(\"b\");\n\
+    \  multiset.add(\"b\");\n  multiset.add(\"b\");\n  //print the occurrence of an\
+    \ element\n  System.out.println(\"Occurrence of \"b\" : \" + multiset.count(\"\
+    b\"));\\n  //print the total size of the multiset\n  System.out.println(\"Total\
+    \ Size : \" + multiset.size());\\n  //get the distinct elements of the multiset\
+    \ as set\n  Set<String> set = multiset.elementSet();\n  //display the elements\
+    \ of the set\n  System.out.println(\"Set [\");\n  for (String s : set) {\n   \
+    \ System.out.println(s);\n  }\n  System.out.println(\"]\");\\n  //display all\
+    \ the elements of the multiset using iterator\n  Iterator<String> iterator = multiset.iterator();\n\
+    \  System.out.println(\"MultiSet [\");\n  while (iterator.hasNext()){\n    System.out.println(iterator.next());\n\
+    \  }\n  System.out.println(\"]\");\",\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "```\n//display the distinct elements of the multiset with their occurrence\
+    \ count\nSystem.out.println(\"MultiSet [\");\nfor (Multiset.Entry<String> entry\
+    \ : multiset.entrySet()) {\n    System.out.println(\"Element: \"+entry.getElement()\
+    \ + \",\n    Occurrence(s): \" + entry.getCount());\n}\nSystem.out.println(\"\"\
+    ]\");\n```\n\n# Verify the Result\n\nCompile the class using javac compiler as\
+    \ follows:\n\n```\nC:\\Guava>javac GuavaTester.java\n```\n\nNow run the GuavaTester\
+    \ to see the result.\n\n```\nC:\\Guava>java GuavaTester\n```\n\nSee the result.\n\
+    \n```\nOccurence of 'b' : 5\nTotal Size : 10\nSet [\nd\nb\nc\na\n]\nMultiSet [\n\
+    d\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_46_0.png)"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '```
+
+    b
+
+    b
+
+    b
+
+    b
+
+    b
+
+    c
+
+    c
+
+    a
+
+    a]
+
+    MultiSet [
+
+    Element: d, Occurrence(s): 1
+
+    Element: b, Occurrence(s): 5
+
+    Element: c, Occurrence(s): 2
+
+    Element: a, Occurrence(s): 2
+
+    ]
+
+    Occurefc of ''b'': 3
+
+    ```
+
+
+    # # Multimap Interface
+
+
+    Multimap interface extends Map so that its keys can be mapped to multiple values
+    at a time.
+
+
+    # # Interface Declaration
+
+
+    Following is the declaration for com.google.common.collect.Multimap<K,V> interface:
+
+
+    ```
+
+    @GwtCompatible
+
+    public interface Multimap<K,V>
+
+    ```
+
+
+    # # Interface Methods
+
+
+    | S.N. | Method & Description |
+
+    |---|---|
+
+    | 1 | **Map<K,Collection<V>> asMap()**
+
+    Returns a view of this multimap as a Map from each distinct key to the |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_47_0.png)'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '| | |
+
+    |---||
+
+    | | nonempty collection of that key''s associated values. |
+
+    | 2 | void clear() Removes all key-value pairs from the multimap, leaving it empty.
+    |
+
+    | 3 | boolean containsEntry(Object key, Object value) Returns true if this multimap
+    contains at least one key-value pair with the key and the value. |
+
+    | 4 | boolean containsKey(Object key) Returns true if this multimap contains at
+    least one key-value pair with the key. |
+
+    | 5 | boolean containsValue(Object value) Returns true if this multimap contains
+    at least one key-value pair with the value. |
+
+    | 6 | Collection<Map.Entry<K,V>> entries() Returns a view collection of all key-value
+    pairs contained in this multimap, as Map.Entry instances. |
+
+    | 7 | boolean equals(Object obj) Compares the specified object with this multimap
+    for equality. |
+
+    | 8 | Collection<V> get(K key) Returns a view collection of the values associated
+    with key in this multimap, if any. |
+
+    | 9 | int hashCode() Returns the hash code for this multimap. |
+
+    | 10 | boolean isEmpty() Returns true if this multimap contains no key-value pairs.
+    |
+
+    | 11 | Multiset<K> keys() Returns a view collection containing the key from each
+    key-value pair in this multimap, without collapsing duplicates. |
+
+    | 12 | Set<K> keySet() Returns a view collection of all distinct keys contained
+    in this multimap. |
+
+    | 13 | boolean put(K key, V value) Stores a key-value pair in this multimap. |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_48_0.png)'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'boolean putAll(K key, Iterable<? extends V> values)
+
+    Stores a key-value pair in this multimap for each of values, all using the same
+    key, key.
+
+
+    boolean putAll(Multimap<? extends K?, extends V> multimap)
+
+    Stores all key-value pairs of multimap in this multimap, in the order returned
+    by multimap.entries().
+
+
+    boolean remove(Object key, Object value)
+
+    Removes a single key-value pair with the key and the value from this multimap,
+    if such exists.
+
+
+    Collection<V> removeAll(Object key)
+
+    Removes all values associated with the key.
+
+
+    Collection<V> replaceValues(K key, Iterable<? extends V> values)
+
+    Stores a collection of values with the same key, replacing any existing values
+    for that key.
+
+
+    int size()
+
+    Returns the number of key-value pairs in this multimap.
+
+
+    Collection<V> values()
+
+    Returns a view collection containing the value from each key-value pair contained
+    in this multimap, without collapsing duplicates (so values().size() == size()).
+
+
+    # Example of Multimap
+
+
+    Create the following java program using any editor of your choice in say C:/>
+    Guava.
+
+
+    GuavaTester.java
+
+
+    ```
+
+    import java.util.Collection;
+
+    import java.util.List;
+
+    import java.util.Map;
+
+    import java.util.Set;
+
+
+    import com.google.common.collect.ArrayListMultimap;
+
+    import com.google.common.collect.Multimap;
+
+    ```'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "```\npublic class GuavaTester {\n    public static void main(String args[]){\n\
+    \        GuavaTester tester = new GuavaTester();\n        Multimap<String,String>\
+    \ multimap = tester.getMultimap();\n\n        List<String> lowerList = (List<String>)multimap.get(\"\
+    lower\");\n        System.out.println(\"Initial lower case list\");\n        System.out.println(lowerList.toString());\n\
+    \        lowerList.add(\"f\");\n        System.out.println(\"Modified lower case\
+    \ list\");\n        System.out.println(lowerList.toString());\n\n        List<String>\
+    \ upperList = (List<String>)multimap.get(\"upper\");\n        System.out.println(\"\
+    Initial upper case list\");\n        System.out.println(upperList.toString());\n\
+    \        upperList.remove(\"D\");\n        System.out.println(\"Modified upper\
+    \ case list\");\n        System.out.println(upperList.toString());\n\n       \
+    \ Map<String, Collection<String>> map = multimap.asMap();\n        System.out.println(\"\
+    Multimap as a map\");\n        for (Map.Entry<String, Collection<String>> entry\
+    \ : map.entrySet()) {\n            String key = entry.getKey();\n            Collection<String>\
+    \ value = multimap.get(\"lower\");\n            System.out.println(key + \":\"\
+    \ + value);\n        }\n\n        System.out.println(\"Keys of Multimap\");\n\
+    \        Set<String> keys = multimap.keySet();\n        for (String key:keys)\
+    \ {\n            System.out.println(key);\n        }\n    }\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "}\n\n```\nSystem.out.println(\"Values of Multimap\");\nCollection<String> values\
+    \ = multimap.values();\nSystem.out.println(\"values\");\n```\n\n}\n\n```\nprivate\
+    \ Multimap<String,String> getMultimap(){\n    //Map<String, List<String>>\n  \
+    \  // lower -> a, b, c, d, e\n    // upper -> A, B, C, D\n```\n\n```\nMultimap<String,String>\
+    \ multimap = ArrayListimap.create();\n```\n\n```\nmultimap.put(\"lower\", \"a\"\
+    );\nmultimap.put(\"lower\", \"b\");\nmultimap.put(\"lower\", \"c\");\nmultimap.put(\"\
+    lower\", \"d\");\nmultimap.put(\"lower\", \"e\");\n```\n\n```\nmultimap.put(\"\
+    upper\", \"A\");\nmultimap.put(\"upper\", \"B\");\nmultimap.put(\"upper\", \"\
+    C\");\nmultimap.put(\"upper\", \"D\");\n```\n\n```\nreturn multimap;\n```\n\n\
+    }\n\n}\n\n# Verify the Result\n\nCompile the class using javac compiler as follows:\n\
+    \n```\nC:\\Guava>javac GuavaTester.java\n```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# Guava
+
+
+    Now run the GuavaTester to see the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    ```
+
+
+    See the result.
+
+
+    Initial lower case list
+
+    [a, b, c, d, e]
+
+    Modified lower case list
+
+    [a, b, c, d, e, f]
+
+    Initial upper case list
+
+    [A, B, C, D]
+
+    Modified upper case list
+
+    [A, B, C]
+
+    Multimap as a map
+
+    upper:[a, b, c, d, e, f]
+
+    lower:[a, b, c, d, e, f]
+
+    Keys of Multimap
+
+    upper
+
+    lower
+
+    Values of Multimap
+
+    [A, B, C, a, b, c, d, e, f]
+
+
+    # BiMap Interface
+
+
+    A BiMap is a special kind of map which maintains an inverse view of the map while
+    ensuring no duplicate values are present in the map and a value can be used safely
+    to get the key back.
+
+
+    # Interface Declaration
+
+
+    Following is the declaration for com.google.common.collect.Bimap<K,V> interface:
+
+
+    ```
+
+    @GwtCompatible
+
+    public interface BiMap<K,V>
+
+    ends Map<K,V>
+
+    ```
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_52_0.png)'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "# Guava\n\n# Interface Methods\n\n| S.N. | Method & Description |\n|---|---|\n\
+    | 1 | **forcePut(K key, V value)**<br>An alternate of 'put' that silently removes\
+    \ any existing entry with the value before proceeding with the put(K, V) operation.\
+    \ |\n| 2 | **BiMap<V,K> inverse()**<br>Returns the inverse of this bimap, which\
+    \ maps each of this bimap's values to its associated key. |\n| 3 | **put(K key,\
+    \ V value)**<br>Associates the specified value with the specified key in this\
+    \ map (optional operation). |\n| 4 | **void putAll(Map<?,?> extends V> map)**<br>Copies\
+    \ all of the mappings from the specified map to this map (optional operation).\
+    \ |\n| 5 | **Set<V> values()**<br>Returns a Collection view of the values contained\
+    \ in this map. |\n\n# Methods Inherited\n\nThis class inherits methods from the\
+    \ following interface:\n\n+   - java.util.Map\n\n# Example of BiMap\n\nCreate\
+    \ the following java program using any editor of your choice in say C:/> Guava.\n\
+    \nGuavaTester.java\n\n```\nimport com.google.common.collect.BiMap;\nimport com.google.common.collect.HashBiMap;\n\
+    \npublic class GuavaTester {\n\n    public static void main(String args[]){\n\
+    \        BiMap<Integer, String> empIDNameMap = HashBiMap.create();\n    }\n}\n\
+    ```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_53_0.png)\n\n48"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '```
+
+    empIDNameMap.put(new Integer(101), "Mahesh");
+
+    empIDNameMap.put(new Integer(102), "Sohan");
+
+    empIDNameMap.put(new Integer(103), "Ramesh");
+
+    ```
+
+
+    ```
+
+    // Emp Id of Employee "Mahesh"
+
+    System.out.println(empIDNameMap.inverse().get("Mahesh"));
+
+    }
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the class using javac compiler as follows:
+
+
+    ```
+
+    C:\Guava>javac GuavaTester.java
+
+    ```
+
+
+    Now run the GuavaTester to see the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    ```
+
+
+    See the result.
+
+
+    101
+
+
+    # Table Interface
+
+
+    Table represents a special map where two keys can be specified in combined fashion
+    to reveal to a single value. It is similar to creating a map of maps.
+
+
+    # Interface Declaration
+
+
+    Following is the declaration for com.google.common.collect.Table<R,C,V> interface:
+
+
+    ```
+
+    @GwtCompatible
+
+    public interface Table<R,C,V>
+
+    ```'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# Interface Methods\n\n| S.N. | Method & Description |\n|---|---|\n| 1 | Set<Table.Cell<R,C,V>>\
+    \ cellSet()\n Returns a set of all row key/column key/value triplets. |\n| 2 |\
+    \ void clear()\n Removes all mappings from the table. |\n| 3 | Map<R,V> columnKey(C\
+    \ columnKey)\n Returns a view of all mappings that have the given column key.\
+    \ |\n| 4 | Set<C> columnKeySet()\n Returns a set of column keys that has one or\
+    \ more values in the table. |\n| 5 | Map<C,Map<R,V>> columnMap()\n Returns a view\
+    \ that associates each column key with the corresponding map from row keys to\
+    \ values. |\n| 6 | boolean contains(Object rowKey, Object columnKey)\n Returns\
+    \ true if the table contains a mapping with the specified row and column keys.\
+    \ |\n| 7 | boolean containsColumn(Object columnKey)\n Returns true if the table\
+    \ contains a mapping with the specified column. |\n| 8 | boolean containsRow(Object\
+    \ rowKey)\n Returns true if the table contains a mapping with the specified row\
+    \ key. |\n| 9 | boolean containsValue(Object value)\n Returns true if the table\
+    \ contains a mapping with the specified value. |\n| 10 | boolean equals(Object\
+    \ obj)\n Compares the specified object with this table for equality. |\n| 11 |\
+    \ V get(Object rowKey, Object columnKey)\n Returns the value corresponding to\
+    \ the given row and column keys, or null if no such mapping exists. |\n| 12 |\
+    \ int hashCode()\n Returns the hash code for this table. |\n| 13 | boolean isEmpty()\
+    \ |"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Guava
+
+
+    | | |
+
+    |---|---|
+
+    | | Returns true if the row contains no mappings. |
+
+    | 14 | **V put(R rowKey, C columnKey, V value)**
+
+    Associates the specified value with the specified keys. |
+
+    | 15 | **void putAll(Table<? extends R?, extends C?, extends V> table)**
+
+    Copies mappings from the specified table to this table. |
+
+    | 16 | **V remove(Object rowKey, Object columnKey)**
+
+    Removes the mapping, if any associated with the given keys. |
+
+    | 17 | **Map<C,V> row(R rowKey)**
+
+    Returns a view of all mappings that have the given row key. |
+
+    | 18 | **Set<R> rowKeys()**
+
+    Returns a set of keys that have one or more values in the table. |
+
+    | 19 | **Map<R,Map<C,V>> rowMap()**
+
+    Returns a view that associates each row key with the corresponding map from column
+    keys to values. |
+
+    | 20 | **int size()**
+
+    Returns the number of row key / column key / value mappings in the table. |
+
+    | 21 | **Collection<V> values()**
+
+    Returns a collection of all values, which may contain duplicates. |
+
+
+    #  Example of Table Interface
+
+
+    Create the following java program using any editor of your choice in say **C:/>
+    Guava.**
+
+
+    **GuavaTester.java**
+
+
+    ```
+
+    import java.util.Map;
+
+    import java.util.Set;
+
+
+    import com.google.common.collect.HashBasedTable;
+
+    import com.google.common.collect.Table;
+
+
+    public class GuavaTester { }
+
+    ```'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "```\npublic static void main(String args[]) {\n//Table<R,C,V> == Map<R,Map<C,V>>\n\
+    /*\n* Company: IBM, Microsoft, TCS\n* IBM -> {101:Mahesh, 102:Ramesh, 103:Suresh}\n\
+    * Microsoft -> {101:Sohan, 102:Mohan, 103:Rohan}\n* TCS -> {101:Ram, 102:Shyam,\
+    \ 103:Sunil}\n* */\n//create a table\nTable<String, String> employeeTable = HashedBasedTable.create();\n\
+    \n//initialize the table with employee details\nemployeeTable.put(\"IBM\", \"\
+    101\", \"Mahesh\");\nemployeeTable.put(\"IBM\", \"102\", \"Ramesh\");\nemployeeTable.put(\"\
+    IBM\", \"103\", \"Suresh\");\n\nemployeeTable.put(\"Microsoft\", \"111\", \"Sohan\"\
+    );\nemployeeTable.put(\"Microsoft\", \"112\", \"Mohan\");\nemployeeTable.put(\"\
+    Microsoft\", \"113\", \"Rohan\");\n\nemployeeTable.put(\"TCS\", \"121\", \"Ram\"\
+    );\nemployeeTable.put(\"TCS\", \"122\", \"Shyam\");\nemployeeTable.put(\"TCS\"\
+    , \"123\", \"Sunil\");\n\n//get Map corresponding to IBM\nMap<String, String>\
+    \ ibmEmployees = employeeTable.row(\"IBM\");\n\nSystem.out.println(\"List of IBM\
+    \ Employees\");\nfor(Map<String, String> entry : ibmEmployees.entrySet()) {\n\
+    \    System.out.println(\"Emp Id: \" + entry.getKey() + \", Name: \" \" + entry.getValue());\n\
+    }\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_57_0.png)"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# Guava\n\n```\n}\n//get all the unique keys of the table\nSet<String> employers\
+    \ = employeeTable.rowkeySet();\nSystem.out.print(\"Employees: \");\nfor(String\
+    \ employer: employers){\n    System.out.print(employer + \" \");\n}\nSystem.out.println(n);\n\
+    ```\n\n```\n//get a Map corresponding to 102\nMap<String, String> EmployerMap\
+    \ = employeeTable.column(\"102\");\nfor(Map.Entry<String, String> entry : EmployerMap.entrySet(){\n\
+    \    System.out.println(\"Employee: \" + entry.getKey() + \" \", Name: \" + entry.getValue());\n\
+    }\n```\n\n# Verify the Result\n\nCompile the class using javac compiler as follows:\n\
+    \n```\nC:\\Guava>javac GuavaTester.java\n```\n\nNow run the GuavaTester to see\
+    \ the result.\n\n```\nC:\\Guava>java GuavaTester\n```\n\nSee the result.\n\n|\
+    \ List of IBM Employees |\n| Emp Id: 102, Name: Ramesh |\n| Emp Id: 101, Name:\
+    \ Mahesh |\n| Emp Id: 103, Name: Suresh |\n| Employers: IBM TCS Microsoft |\n\
+    | Employer: IBM, Name: Ramesh |\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_58_0.png)"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# 10. CACHING UTILITIES
+
+
+    Guava provides a very powerful memory based caching mechanism by an interface
+    LoadingCache<K,V>. Values are automatically loaded in the cache and it provides
+    many utility methods useful for caching needs.
+
+
+    # Interface Declaration
+
+
+    Following is the declaration for com.google.common.cache.LoadingCache<K,V> interface:
+
+
+    ```
+
+    @Beta
+
+    @GwtCompatible
+
+    public interface LoadingCache<K,V>
+
+    extends Cache<K,V>, Function<K,V>>
+
+    ```
+
+
+    # Interface Methods
+
+
+    | S.N. | Method & Description |
+
+    |---|--|
+
+    | 1 | **V apply(K key)**
+
+    >Deprecated. Provided to satisfy the Function interface; use get(K) or getUnchecked(K)
+    instead. |
+
+    | 2 | **ConcurrentMap<K,V> asMap()**
+
+    >Returns a view of the entries stored in this cache as a thread-safe map. |
+
+    | 3 | **V get(K key)**
+
+    >Returns the value associated with key in this cache, first loading that value
+    if necessary. |
+
+    | 4 | **ImmutableMap<K,V> getAll(Iterable<? extends K> keys)**
+
+    >Returns a map of the values associated with keys, creating or retrieving those
+    values if necessary. |
+
+    | 5 | **V getUnchecked(K key)**
+
+    >Returns the value associated with key in this cache, first loading that value
+    if necessary. |
+
+    | 6 | void refresh(K key) |'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "Loads a new value for key, possibly asynchronously.\n\n# Example of LoadingCache\n\
+    \nCreate the following java program using any editor of your choice in say C:/>\
+    \ Guava.\n\nGuavaTester.java\n\n```\nimport java.util.HashMap;\nimport java.util.Map;\n\
+    import java.util.concurrent.ExecutionException;\nimport java.util.concurrent.TimeUnit;\n\
+    \nimport com.google.common.base.MoreObjects;\nimport com.google.common.cache.CacheBuilder;\n\
+    import com.google.common.cache.CacheLoader;\nimport com.google.common.cache.LoadingCache;\n\
+    \npublic class GuavaTester {\n    public static void main(String[] args) {\n \
+    \       // create a cache for employees based on their employee id\n        LoadingCache<String,\
+    \ Employee>employeeCache =\n            CacheBuilder.newBuilder()\n          \
+    \      .maximumSize(100) // 100 records can be cached\n                .expireAfterAccess(30,\
+    \ TimeUnit.MINUTES)\n            // cache will expire after 30 minutes of access\n\
+    \            .build(new CacheLoader<String, Employee>(){\n                // build\
+    \ the cacheloader\n                @Override\n                public Employee\
+    \ load(String employeeId) throws Exception {\n                    // make the\
+    \ expensive call\n                    return getFromDatabase(employeeId);\n  \
+    \              }\n            });\n    }\n}\n```\n\n55"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\ntry {\n    // on first invocation, cache will be populated with\n    corresponding\
+    \ record\n    System.out.println(\"Invocation #1\");\n    System.out.println(employeeCache.get(\"\
+    100\"));\n    System.out.println(employeeCache.get(\"103\"));\n    System.out.println(employeeCache.get(\"\
+    110\"));\n    // second invocation, data will be returned from cache\n    System.out.println(\"\
+    Invocation #2\");\n    System.out.println(employeeCache.get(\"100\"));\n    System.out.println(employeeCache.get(\"\
+    110\"));\n}\n\n catch (ExecutionException e) {\n    e.printStackTrace();\n}\n\
+    ```\n\n```\nprivate static Employee getFromDatabase(String empId){\n    Employee\
+    \ e1 = new Employee(\"Mahesh\", \"Finance\", \"100\");\n    Employee e2 = new\
+    \ Employee(\"Rohan\", \"IT\", \"103\");\n    Employee e3 = new Employee(\"Sohan\"\
+    , \"Admin\", \"110\");\n```\n\n```\nMap<String, Employee> database = new HashMap<String,\
+    \ Employee>();\ndatabaseput(\"100\", e1);\ndat.put(\"103\", e2);\ndat.put(\"110\"\
+    , e3);\nSystem.out.println(\"Database hit for \" + empId);\nreturn database.get(empId);\n\
+    }\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "```\nclass Employee {\n  String name;\n  String dept;\n  String empID;\n\n\
+    \  public Employee(String name, String dept, String empID) {\n    this.name =\
+    \ name;\n    this.dept = dept;\n    this.empID = empID;\n  }\n\n  public String\
+    \ getName() {\n    return name;\n  }\n\n  public void setName(String name) {\n\
+    \    this.name = name;\n  }\n\n  public String getDept() {\n    return dept;\n\
+    \  }\n\n  public void setDept(String dept) {\n    this.dept = dept;\n  }\n\n \
+    \ public String getEmpID() {\n    return empID;\n  }\n\n  public void setEmpID(String\
+    \ empID) {\n    this.empID = empID;\n  }\n\n  @Override\n  public String toString()\
+    \ {\n    return MoreObjects.toStringHelper(Employee.class);\n  }\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '```
+
+    .add("Name", name)
+
+    .add("Department", dept)
+
+
+    .add("Emp Id", empId).toString();
+
+    }
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the class using javac compiler as follows:
+
+
+    ```
+
+    C:\Guava>javac GuavaTester.java
+
+    ```
+
+
+    Now run the GuavaTester to see the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    ```
+
+
+    See the result.
+
+
+    Invocation #1
+
+    Database hit for100
+
+    Employee{Name=Mahesh, Department=Finance, Emp Id=100}
+
+    Database hit for103
+
+    Employee{Name=Rohan, Department=IT, Emp Id=103}
+
+    Database hit for110
+
+    Employee{Name=Sohan, Department=Admin, Emp Id=110}
+
+    Invocation #2
+
+    Employee{Name=Mahesh, Department=Finance, Emp Id=100}
+
+    Employee{Name=Rohan, Department=IT, Emp Id=103}
+
+    Employee{Name=Sohan, Department=Admin, Emp Id=110}'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# 11. STRING UTILITIES\n\nGuava introduces many advanced string utilities based\
+    \ on developers' experience in application development works. Following is the\
+    \ list of useful string based utilities:\n\n| S.N. | Utility name & Description\
+    \ |\n|---||\n| 1 | Joiner<br>Utility to join objects, string etc. |\n| 2 | Splitter<br>Utility\
+    \ to split string. |\n| 3 | CharMatcher<br>Utility for character operations. |\n\
+    | 4 | CaseFormat<br>Utility for changing string formats. |\n\n# Joiner Class\n\
+    \nJoiner provides various methods to handle joining operations on string, objects,\
+    \ etc.\n\n# Class Declaration\n\nFollowing is the declaration for com.google.common.base.Joiner\
+    \ class:\n\n```\n@GwtCompatible\npublic class Joiner\n    extends Object\n```\n\
+    \n# Class Methods\n\n| S.N. | Method & Description |\n|---||\n| 1 | <A extends\
+    \ Appendable> appendTo(A appendable, Iterable<?> parts)<br>Appends the string\
+    \ representation of each of the parts, using the |\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_64_0.png)"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'previously configured separator between each, to appendable.
+
+
+    <<A extends Appendable> appendTo(A appendable, Iterator<?> parts)
+
+    ends the string representation of each of the parts, using the previously configured
+    separator between each, to appendable.
+
+
+    <<A extends Appendable> appendTo(A appendable, Object[] parts)
+
+    ends the string representation of each of the parts, using the previously configured
+    separator between each, to appendable.
+
+
+    <<A extends Appendable> appendTo(A appendable, Object first, Object second, Object...
+    rest)
+
+    ends the string representation of each of the remaining arguments.
+
+
+    StringBuilder appendTo(StringBuilder builder, Iterator<?> parts)
+
+    ends the string representation of each of the parts, using the previously configured
+    separator between each, to builder.
+
+
+    StringBuilder appendTo(StringBuilder builder, Iterator<?> parts)
+
+    ends the string representation of each of the parts, using the previously configured
+    separator between each, to builder.
+
+
+    StringBuilder appendTo(StringBuilder builder, Object[] parts)
+
+    ends the string representation of each of the parts, using the previously configured
+    separator between each, to builder.
+
+
+    StringBuilder appendTo(StringBuilder builder, Object first, Object... rest)
+
+    ends to builder the string representation of each of the remaining arguments.
+
+
+    String join(Iterable<?> parts)
+
+    ends a string containing the string representation of each of the parts, using
+    the previously configured separator between each.
+
+
+    String join(Iterator<?> parts)
+
+    ends a string containing the string representation of each of the parts, using
+    the previously configured separator between each.
+
+
+    String join(Object[] parts)
+
+    ends a string containing the string representation of each of the parts,
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_65_0.png)'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Guava
+
+
+    | | using the previously configured separator between each. |
+
+    | 12 | **String join(Object first, Object second, Object... rest)**
+
+    Returns a string containing the string representation of each argument, using
+    the previously configured separator between each. |
+
+    | 13 | **static Joiner(char separator)**
+
+    Returns a joiner that automatically places separator between consecutive elements.
+    |
+
+    | 14 | **static Joiner(String separator)**
+
+    Returns a joiner that automatically places separator between consecutive elements.
+    |
+
+    | 15 | **Joiner skipNulls()**
+
+    Returns a joiner with the same behavior as this joiner, except automatically skipping
+    over any provided null elements. |
+
+    | 16 | **Joiner forNullText(String nullText)**
+
+    Returns a joiner with the same behavior as this one, except automatically substituting
+    nullText for any provided null elements. |
+
+    | 17 | **Joiner.MapJoiner withKeyValueSeparator(String keyValueSeparator)**
+
+    Returns a MapJoiner using the given key-value separator, and the same configuration
+    as this Joiner otherwise. |
+
+
+    # Methods Inherited
+
+
+    This class inherits methods from the following class:
+
+
+    +   - java.lang.Object
+
+
+    # Example of Joiner Class
+
+
+    Create the following java program using any editor of your choice in **C:/> Guava.**
+
+
+    # GuavaTester.java
+
+
+    ```
+
+    import java.util.Arrays;
+
+    import com.google.common.base.Joiner;
+
+
+    public class GuavaTester {
+
+    ```
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_66_0.png)'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "```\npublic static void main(String args[]){\n    GuavaTester tester = new\
+    \ GuavaTester();\n    tester.testJoiner();\n}\n\nprivate void testJoiner(){\n\
+    \    System.out.println(Joiner.on(\",\\n        .skipNulls()\n        .join(Arrays.asList(1,2,3,4,5,null,6)));\n\
+    }\n```\n\n# Verify the Result\n\nCompile the class using javac compiler as follows:\n\
+    \n```\nC:\\Guava>javac GuavaTester.java\n```\n\nNow run the GuavaTester to see\
+    \ the result.\n\n```\nC:\\Guava>java GuavaTester\n```\n\nSee the result.\n\n```\n\
+    1,2,3,4,5,6\n```\n\n# Splitter Class\n\nSplitter provides various methods to handle\
+    \ splitting operations on string, objects, etc.\n\n# Class Declaration\n\nFollowing\
+    \ is the declaration for com.google.common.base.Splitter class:\n\n```\n@GwtCompatible(emulated=true)\n\
+    public final class Splitter\n    extends Object\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_67_0.png)"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# Class Methods
+
+
+    | S.N. | Method & Description |
+
+    |---|---|
+
+    | 1 | **static Splitter fixedLength(int length)**<br>Returns a splitter that divides
+    strings into pieces of the given length. |
+
+    | 2 | **Splitter limit(int limit)**<br>Returns a splitter that behaves equivalently
+    to this splitter but stops after it reaches the limit. |
+
+    | 3 | **Splitter omitEmptyStrings()**<br>Returns a splitter that behaves equivalently
+    to this splitter, but automatically omits empty strings from the results. |
+
+    | 4 | **static Splitter on(char separator)**<br>Returns a splitter that uses the
+    given single-character separator. |
+
+    | 5 | **static Splitter on(CharMatcher separatorMatcher)**<br>Returns a splitter
+    that considers any single character matched by the given CharMatcher to be a separator.
+    |
+
+    | 6 | **static Splitter on(Pattern separatorPattern)**<br>Returns a splitter that
+    considers any subsequence pattern to be a separator. |
+
+    | 7 | **static Splitter on(String separator)**<br>Returns a splitter that uses
+    the given fixed string as a separator. |
+
+    | 8 | **static Splitter onPattern(String separatorPattern)**<br>Returns a splitter
+    that considers any subsequence matching a given pattern (regular expression) to
+    be a separator. |
+
+    | 9 | **Iterable<String> split(CharSequence sequence)**<br>Splits sequence into
+    string components and makes them available through an Iterator, which may be lazily
+    evaluated. |
+
+    | 10 | **List<String> splitToList(CharSequence sequence)**<br>Splits sequence
+    into string components and returns them as an immutable list. |
+
+    | 11 | **Splitter trimResults()**<br>Returns a splitter that behaves equivalently
+    to this splitter, but automatically removes leading and trailing whitespace from
+    each returned |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_68_0.png)'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "# Guava\n\n| substring; equivalent to trimResults(CharMatcher.WHITESPACE).\
+    \ |\n| 12 | **Splitter.trimResults(CharMatcher trimmer)** Returns a splitter that\
+    \ behaves equivalently to this splitter, but removes all leading or trailing characters\
+    \ matching the CharMatcher from each returned substring. |\n| 13 | **Splitter.MapSplitterwithKeyValueSeparator(char\
+    \ separator)** Returns a MapSplitter that splits entries based on this splitter,\
+    \ and splits entries into keys and values using the specified separator. |\n|\
+    \ 14 | **Splitter.MapSplitterwithKeyValueSeparator(Splitter keyValueSplitter)**\
+    \ Returns a MapSplitter that splits entries based on this splitter, and splits\
+    \ entries into keys and values using the specified key-value splitter. |\n| 15\
+    \ | **Splitter.MapSplitterwithKeyValueSeparator(String separator)** Returns a\
+    \ MapSplitter that splits entries based on this splitter, and splits entries into\
+    \ keys and values using the specified separator. |\n\n# Methods Inherited\n\n\
+    This class inherits methods from the following class:\n\n+   - java.lang.Object\n\
+    \n# Example of Splitter Class\n\nCreate the following java program using any editor\
+    \ of your choice in say C:/> Guava.\n\nGuavaTester.java\n\n```\nimport com.google.common.base.Splitter;\n\
+    \npublic class GuavaTester {\n    public static void main(String args[]){\n  \
+    \      GuavaTester tester = new GuavaTester();\n        tester.testSplitter();\n\
+    \    }\n\n    private void testSplitter(){\n}\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_69_0.png)"
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "```\nSystem.out.println(Splitter.on('','\n.trimResults()\n.omitEmptyStrings()\n\
+    .split(\"the,quick, , brown , fox, jumps,\nover, the, lazy, little dog.\");\n\
+    )\n```\n\n# Verify the Result\n\nCompile the class using **javac compiler** as\
+    \ follows:\n\n```\nC:\\Guava>javac GuavaTester.java\n```\n\nNow run the GuavaTester\
+    \ to see the result.\n\n```\nC:\\Guava>java GuavaTester\n```\n\nSee the result.\n\
+    \n```\n[the, quick, brown, fox, jumps, over, the, lazy, little dog.]\n```\n\n\
+    # CharMatcher Class\n\nCharMatcher provides various methods to handle JAVA types\
+    \ for char values.\n\n# Class Declaration\n\nFollowing is the declaration for\
+    \ **com.google.common.base.CharMatcher** class:\n\n```\n@GwtCompatible(emulated=true)\n\
+    public final class CharMatcher\n    extends Object\n```\n\n# Fields\n\n| S.N.\
+    \ | Field & Description |\n|---|---|\n| 1 | static CharMatcher ANY <br> Matches\
+    \ any character. |\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_70_0.png)"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '| | | |
+
+    ---|---||
+
+    | 2 | **staticCharMatcher ASCII** | Determines whether a character is ASCII, meaning
+    that its code point is less than 128. |
+
+    | 3 | **staticCharMatcher BREAKING_WHITESPACE** | Determines whether a character
+    is a breaking whitespace (that is, a whitespace which can be interpreted as a
+    break between words for formatting purposes). |
+
+    | 4 | **staticCharMatcher DIGIT** | Determines whether a character is a digit
+    according to Unicode. |
+
+    | 5 | **staticCharMatcher INVISIBLE** | Determines whether a character is invisible;
+    that is, its Unicode category is any of SPACE_SEPARATOR, LINE_SEPARATOR, PARAGRAPH_SEPARATOR,
+    CONTROL, FORMAT, SURROGATE, and PRIVATE_USE using ICU4. |
+
+    | 6 | **staticCharMatcher JAVA_DIGIT** | Determines whether a character is a digit
+    according to Java''s definition. |
+
+    | 7 | **staticCharMatcher JAVA_ISO_CONTROL** | Determines whether a character
+    is an ISO control character as specified by Char.isControl(char). |
+
+    | 8 | **staticCharMatcher JAVA_LETTER** | Determines whether a character is a
+    letter according to Java''s definition. |
+
+    | 9 | **staticCharMatcher JAVA_LETTER_OR_DIGIT** | Determines whether a character
+    is a letter or digit according to Java''s definition. |
+
+    | 10 | **staticCharMatcher JAVA_LOWER_CASE** | Determines whether a character
+    is a lower case according to Java''s definition. |
+
+    | 11 | **staticCharMatcher JAVA_UPPER_CASE** | Determines whether a character
+    is an upper case according to Java''s definition. |
+
+    | 12 | **staticCharMatcher NONE** | Matches no characters. |
+
+    | 13 | **staticCharMatcher SINGLE_WIDTH** | |'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# Guava
+
+
+    | | |
+
+    |---|---|
+
+    | | Determines whether a character is a single-width (not double-width). |
+
+    | 14 | **static CharMatcher WHITESPACE**
+
+    Determines whether a character is a whitespace according to the latest Unicode
+    standard, as illustrated here. |
+
+
+    # ## Constructor(s)
+
+
+    | S.N. | Constructor & Description |
+
+    |---|---|
+
+    | 1 | **protected CharMatcher()**
+
+    Constructor for use by subclasses. |
+
+
+    # ## Class Methods
+
+
+    | S.N. | Methods & Description |
+
+    |---|---|
+
+    | 1 | **CharMatcher and(CharMatcher other)**
+
+    Returns a matcher that matches any character matched by both matcher and other.
+    |
+
+    | 2 | **static CharMatcher anyOf(CharSequence sequence)**
+
+    Returns a matcher that matches any character present in the given character sequence.
+    |
+
+    | 3 | **boolean apply(Character character)**
+
+    Deprecated. Provided only to satisfy the Predicate interface; use matches(char)
+    instead. |
+
+    | 4 | **String collapseFrom(CharSequence sequence, char replacement)**
+
+    Returns a copy of the input character sequence, with each group of consecutive
+    characters that match this matcher replaced by a single replacement character.
+    |
+
+    | 5 | **int countIn(CharSequence sequence)**
+
+    Returns the number of matching characters found in a character sequence. |
+
+    | 6 | **static CharMatcher forPredicate(Predicate<? super Character> predicate)**
+
+    Returns a matcher with identical behavior to the given Character-based predicate,
+    but which operates on primitive char instances instead. |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_72_0.png)'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '| 7 | **int indexIn(CharSequence sequence)**<br>Returns the index of the first
+    matching character in a character sequence, or -1 if no matching character is
+    present. |
+
+    | 8 | **int indexIn(CharSequence sequence, int start)**<br>Returns the index of
+    the first matching character in a character sequence, starting from a given position,
+    or -1 if no character matches after that position. |
+
+    | 9 | **static CharMatcher inRange(char startInclusive, char endInclusive)**<br>Returns
+    a matcher that matches any character in a given range (both endpoints are inclusive).
+    |
+
+    | 10 | **static CharMatcher is(char match)**<br>Returns a matcher that matches
+    only one specified character. |
+
+    | 11 | **static CharMatcher isNot(char match)**<br>Returns a matcher that matches
+    any character except the one specified. |
+
+    | 12 | **int lastIndexOf(CharSequence sequence)**<br>Returns the index of the
+    last matching character in a character sequence, or -1 if no matching character
+    is present. |
+
+    | 13 | **abstract boolean matches(char c)**<br>Determines a true or false for
+    the given character. |
+
+    | 14 | **boolean matchesAllOf(CharSequence sequence)**<br>Returns true if a character
+    sequence contains only matching characters. |
+
+    | 15 | **boolean matchesAnyOf(CharSequence sequence)**<br>Returns true if a character
+    sequence contains at least one matching character. |
+
+    | 16 | **boolean matchesNoneOf(CharSequence sequence)**<br>Returns true if a character
+    sequence contains no matching characters. |
+
+    | 17 | **CharMatcher negate()**<br>Returns a matcher that matches any character
+    not matched by this matcher. |
+
+    | 18 | **static CharMatcher noneOf(CharSequence sequence)**<br>Returns a matcher
+    that matches any character not present in the |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_73_0.png)'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# Guava
+
+
+    | | given character sequence. |
+
+    |19 | **CharMatcher or(CharMatcher other)** Returns a matcher that matches any
+    character matched by either matcher or other. |
+
+    |20 | **CharMatcher precomputed()** Returns a char matcher functionally equivalent
+    to this one, but which may be faster to query the original; your mileage may vary.
+    |
+
+    |21 | **String removeFrom(CharSequence sequence)** Returns a string containing
+    all non-matching characters of a character sequence, in order. |
+
+    |22 | **String replaceFrom(CharSequence sequence, char replacement)** Returns
+    a copy of the input character sequence, with each character that matches this
+    matcher replaced by a given replacement character. |
+
+    |23 | **String replaceFrom(CharSequence sequence, CharSequence replacement)**
+    Returns a copy of the input character sequence, with each character that matches
+    this matcher replaced by a given replacement sequence. |
+
+    |24 | **String retainFrom(CharSequence sequence)** Returns a string containing
+    all matching characters of a character sequence, in order. |
+
+    |25 | **String toString()** Returns a string representation of this CharMatcher,
+    such as CharMatcher.or(WHITESPACE, JAVA_DIGIT). |
+
+    |26 | **String trimAndCollapseFrom(CharSequence sequence, char replacement)**
+    Collapses groups of matching characters exactly as collapseFrom(Java.lang.CharSequence,
+    char), except that groups of matching characters at the start or end of the sequence
+    are removed without replacement. |
+
+    |27 | **String trimFrom(CharSequence sequence)** Returns a substring of the input
+    character sequence that omits all characters this matcher matches from the beginning
+    and from the end of the string |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_74_0.png)
+
+
+    69'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "| 28 | String trimLeadingFrom(CharSequence sequence)\n> Returns a substring\
+    \ of the input character sequence that omits all characters this matcher matches\
+    \ from the beginning of the string. |\n| 29 | String trimTrailingFrom(CharSequence\
+    \ sequence)\n> Returns a substring of the input character sequence that omits\
+    \ all characters this matcher matches from the end of the string. |\n\n# # Methods\
+    \ Inherited\n\nThis class inherits methods from the following classes:\n\n+  \
+    \ - java.lang.Object\n\n# # Example of CharMatcher Class\n\nCreate the following\
+    \ java program using any editor of your choice in say C:/> Guava.\n\nGuavaTester.java\n\
+    \n```\nimport com.google.common.base.CharMatcher;\nimport com.google.common.base.Splitter;\n\
+    \npublic class GuavaTester {\n    public static void main(String[] args){\n  \
+    \      GuavaTester tester = new GuavaTester();\n        tester.testCharMatcher();\n\
+    \    }\n\n    private void testCharMatcher(){\n        System.out.println(CharMatcher.DIGIT.retainFrom(\"\
+    mahesh123\")); // \n        only the digits\n        System.out.println(CharMatcher.WHITESPACE.trimAndCollapseFrom(\n\
+    \        Mahesh Parassar , ' '));\n        // trim whitespace at ends, and replace/collapse\
+    \ whitespace into\n        single spaces\n        System.out.println(CharMatcher.JAVA_DIGIT.replaceFrom(\"\
+    mahesh123\",\n        \"**\"));\\ // star out all digits\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_75_0.png)"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '```
+
+    System.out.println(CharMatcher.JAVA_DIGIT.or(CharMatcher.JAVA_LOWER_CASE).retainFrom("mahesh123"));
+
+
+    // eliminate all characters that aren''t digits or lowercase
+
+    }
+
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the class using javac compiler as follows:
+
+
+    ```
+
+    C:\Guava\javac GuavaTester.java
+
+    ```
+
+
+    Now run the GuavaTester to see the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    ```
+
+
+    See the result.
+
+
+    | 123 |
+
+    | Mahesh Parashar |
+
+    | mahesh*** |
+
+    | mahesh123 |
+
+
+    # CaseFormat Class
+
+
+    CaseFormat is a utility class to provide conversion between various ASCII char
+    formats.
+
+
+    # Class Declaration
+
+
+    Following is the declaration for com.google.common.base.CaseFormat class:
+
+
+    ```
+
+    @GwtCompatible
+
+    public enum CaseFormat
+
+    nextends Enum<CaseFormat>
+
+    ```
+
+
+    # Enum Constants
+
+
+    | S.N. | Enum Constant & Description |
+
+
+    71
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_76_0.png)'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# Guava
+
+
+    | | | |
+
+    | 1 | LOWER_CAMEL Java variable naming convention, e.g., "lowerCamel". |
+
+    | 2 | LOWER_HYPHEN Hyphenated variable naming convention, e.g., "lower-hyphen".
+    |
+
+    | 3 | LOWER_UNDERSCORE C++ variable naming convention, e.g., "lower_underscore".
+    |
+
+    | 4 | UPPER_CAMEL Java and C++ class naming convention, e.g., "UpperCamel". |
+
+    | 5 | UPPER_UNDERSCORE Java and C++ constant naming convention, e.g., "UPPER_UNDERSCORE".
+    |
+
+
+    # Methods
+
+
+    | S.N. | Method & Description |
+
+    | 1 | Converter<String,String> converterTo(CaseFormat targetFormat) Returns a
+    Converter that converts strings from this format to targetFormat. |
+
+    | 2 | String to(CaseFormat format, String str) Converts the specified String str
+    from this format to the specified format. |
+
+    | 3 | static CaseFormat valueOf(String name) Returns the enum constant of this
+    type with the specified name. |
+
+    | 4 | static CaseFormat[] values() Returns an array containing the constants of
+    this enum type, in the order they are declared. |
+
+
+    # Methods Inherited
+
+
+    This class inherits methods from the following classes:
+
+
+    +   * java.lang.Enum
+
+    * java.lang.Object
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_77_0.png)'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# Example of CaseFormat Class\n\nCreate the following java program using any\
+    \ editor of your choice say C:/> Guava.\n\n# GuavaTester.java\n\n```\nimport com.google.common.base.CaseFormat;\n\
+    \npublic class GuavaTester {\n    public static void main(String args[]) {\n \
+    \       GuavaTester tester = new GuavaTester();\n        tester.testCaseFormat();\n\
+    \    }\n\n    private void testCaseFormat() {\n        String data = \"test-data\"\
+    ;\n\n        System.out.println(CaseFormat.LOWER_HYPHEN.to(CaseFormat.LOWER_CAMEL,\
+    \ \"test-data\"));\n\n        System.out.println(CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL,\
+    \ \"test-data\"));\n\n        System.out.println(CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL,\
+    \ \"test-data\"));\n    }\n}\n```\n\n# Verify the Result\n\nCompile the class\
+    \ using javac compiler as follows:\n\n```\nC:\\Guava>javac GuavaTester.java\n\
+    ```\n\nNow run the GuavaTester to see the result.\n\n```\nC:\\Guava>java GuavaTester\n\
+    ```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_78_0.png)"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'See the result.
+
+
+    | testData |
+
+    | testData |
+
+    | ImageData |'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# 12. PRIMITIVE UTILITIES
+
+
+    As primitive types of Java cannot be used to pass in generics or in collections
+    as input, Guava provided a lot of Wrapper Utilities classes to handle primitive
+    types as Objects. Following is the list of useful primitive processing utilities:
+
+
+    | S.N. | Utility name & Description |
+
+    | --- | --- |
+
+    | 1 | **Bytes**
+
+    Utility for primitive byte. |
+
+    | 2 | **Shorts**
+
+    Utility for primitive short. |
+
+    | 3 | **Ints**
+
+    Utility for primitive int. |
+
+    | 4 | **Longs**
+
+    Utility for primitive long. |
+
+    | 5 | **Floats**
+
+    Utility for primitive float. |
+
+    | 6 | **Doubles**
+
+    Utility for primitive double. |
+
+    | 7 | **Chars**
+
+    Utility for primitive char. |
+
+    | 8 | **Booleans**
+
+    Utility for primitive boolean. |
+
+
+    # Bytes Class
+
+
+    Bytes is a utility class for primitive type byte.
+
+
+    # Class Declaration
+
+
+    Following is the declaration for **com.google.common.primitives.Bytes** class:
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_80_0.png)'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "```\n@GwtCompatible\npublic final class Bytes\n    extends Object\n```\n\n\
+    # Methods\n\n| S.N. | Method & Description |\n| 1 | static List<Byte> asList(byte...\
+    \ backingArray) Returns a fixed-size list backed by the specified array, similar\
+    \ to Arrays.asList(Object[]). |\n| 2 | static byte[] concat(byte[]... arrays)\
+    \ Returns the values from each provided array combined into a single array. |\n\
+    | 3 | static boolean contains(byte[] array, byte target) Returns true if the target\
+    \ is present as element anywhere in array. |\n| 4 | static byte[] ensureCapacity(byte[]\
+    \ array, int minLength, int padding) Returns an array containing the same values\
+    \ as the array, but guaranteed to be of a specific minimum length. |\n| 5 | static\
+    \ int hashCode(byte value) Returns a hash code for value; equal to the result\
+    \ of invoking ((Byte value).hashCode()). |\n| 6 | static int indexOf(byte[] array,\
+    \ byte target) Returns the index of the first appearance of the value target in\
+    \ array. |\n| 7 | static int indexOf(byte[] array, byte target) Returns the start\
+    \ position of the first occurrence of the specified target within the array, or\
+    \ -1 if there is no such occurrence. |\n| 8 | static int lastIndexOf(byte[] array,\
+    \ byte target) Returns the index of the last appearance of the value target in\
+    \ array. |\n| 9 | static byte[] toArray(Collection<? extends Number> collection)\
+    \ Returns an array containing each value of collection, converted to a byte value\
+    \ in the manner of Number.byteValue(). |"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# Guava\n\n# Methods inherits methods from the following class:\n\nThis class\
+    \ inherits methods from the following class:\n\n+   - java.lang.Object\n\n# Example\
+    \ of Bytes Class\n\nCreate the following java program using any editor of your\
+    \ choice in say C:/> Guava.\n\n# GuavaTester.java\n\n```\nimport java.util.List;\n\
+    import com.google.common.primitives.Bytes;\n\npublic class GuavaTester {\n   \
+    \ public static void main(String args[]) {\n        GuavaTester tester = new GuavaTester();\n\
+    \        tester.testBytes();\n    }\n\n    private void testBytes(){\n       \
+    \ byte[] byteArray = {1,2,3,4,5,5,7,9,9};\n\n        //convert array of primitives\
+    \ to array of objects\n        List<Bytes> objectArray = Bytes.asList(byteArray);\n\
+    \        System.out.println(objectArray.toString());\n\n        //convert array\
+    \ of objects to array of primitives\n        byteArray byteArray = Bytes.toArray(objectArray);\n\
+    \        System.out.print(\"[\");\n        for(int i = 0; i<byteArray.length ;\
+    \ i++){\n            System.out.print(byteArray[i] + \" \");\n        }\n    \
+    \    System.out.println(\"]\");\n    }\n    //check if element is present in the\
+    \ list of primitives or not\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_82_0.png)"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '```
+
+    System.out.println("5 is in list? " + Bytes.contains(byteArray data));
+
+    ```
+
+
+    ```
+
+    //Returns the index
+
+    System.out.println("Index of 5: " + Bytes.indexOf(byteArray,data));
+
+
+    //Returns the last index maximum
+
+    System.out.println("Last index of 5: " + Bytes.lastIndexOf(byteArray,data));
+
+    }
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the class using javac compiler as follows:
+
+
+    ```
+
+    C:\Guava>javac GuavaTester.java
+
+    ```
+
+
+    Now run the GuavaTester to see the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    ```
+
+
+    See the result.
+
+
+    ```
+
+    [1, 2, 3, 4, 5, 5, 7, 9, 9]
+
+    [ 1 2 3 4 5 5 7 9 9 ]
+
+    5 is in list? true
+
+    Index of 5: 4
+
+    Last index of 5: 5
+
+    ```
+
+
+    # Shorts Class
+
+
+    Shorts is a utility class for primitive type short.
+
+
+    # Class Declaration
+
+
+    Following is the declaration for com.google.common.primitives.Shorts class:
+
+
+    ```
+
+    @GwtCompatible
+
+    ```
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_83_0.png)'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "```\npublic final class Shorts\n    extends Object\n```\n\n# Fields\n\n| S.N.\
+    \ | Field & Description |\n|---|---|\n| 1 | static int BYTES\nThe number of bytes\
+    \ required to represent a primitive short value. |\n| 2 | static short MAX_POWER_OF_TWO\n\
+    The largest power of two that can be represented as a short. |\n\n# Methods\n\n\
+    | S.N. | Method & Description |\n|---|---|\n| 1 | static List<Short> asList(short...\
+    \ backingArray)\nReturns a fixed-size list backed by the specified array, similar\
+    \ to Arrays.asList(Object[]). |\n| 2 | static short checkedCast(long value)\n\
+    Returns the short value that is equal to value, if possible. |\n| 3 | static int\
+    \ compare(short a, short b)\nCompares the two specified short values. |\n| 4 |\
+    \ static short[] concat(short... arrays)\nReturns the values from each provided\
+    \ array combined into a single array. |\n| 5 | static boolean contains(short[]\
+    \ array, short target)\nReturns true if target is present as an element anywhere\
+    \ in array. |\n| 6 | static short[] ensureCapacity(short[] array, int minLength,\
+    \ int padding)\nReturns an array containing the same values as array, but guaranteed\
+    \ to be of a specified minimum length. |\n| 7 | static short fromByteArray(byte[]\
+    \ bytes)\nReturns the short value whose big-endian representation is stored in\
+    \ the first 2 bytes of bytes; equivalent to ByteBuffer.wrap(bytes).getShort().\
+    \ |\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_84_0.png)"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# static shortFromBytes(byte b1, byte b2)
+
+
+    Returns the short value whose byte representation is the given 2 bytes, in big-endian
+    order; equivalent to Shorts.fromByteArray(new byte[] {b1, b2}).
+
+
+    # static int hashCode(short value)
+
+
+    Returns a hash code for value; equal to the result of invoking ((Short)value).hashCode().
+
+
+    # static int indexOf(short[] array, short target)
+
+
+    Returns the index of the first appearance of the value target in array.
+
+
+    # static int indexOfOf(short[] array, short[] target)
+
+
+    Returns the start position of the first occurrence of the specified target within
+    array, or -1 if there is no such occurrence.
+
+
+    # static String join(String separator, short... array)
+
+
+    Returns a string containing the supplied short values separated by separator.
+
+
+    # static int lastIndexOf(short[] array, short target)
+
+
+    Returns the index of the last appearance of the value target in array.
+
+
+    # static Comparator<short[]> lexicographicalComparator()
+
+
+    Returns a comparator that compares two short arrays lexicographically.
+
+
+    # static short max(short... array)
+
+
+    Returns the greatest value present in array.
+
+
+    # static short min(short... array)
+
+
+    Returns the least value present in array.
+
+
+    # static short saturatedCast(long value)
+
+
+    Returns the short nearest in value to value.
+
+
+    # static Converter<String,Short> stringConverter()
+
+
+    Returns a serializable converter object that converts between strings and shorts
+    using Short.decode(java.lang.String) and Short.toString().
+
+
+    # static short[] toArray(Collection<? extends Number> collection)
+
+
+    Returns an array containing each value of collection, converted to a short in
+    the manner of Number.shortValue().
+
+
+    # static byte[] toByteArray(short value)'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "# Guava\n\nReturns a big-endian representation of value in a 2-element byte\
+    \ array; equivalent to ByteBuffer.allocate(2).putShort(value).array().\n\n# Methods\
+    \ Inherited\n\nThis class inherits methods from the following class:\n\n+   *\
+    \ java.lang.Object\n\n# Example of Shorts Class\n\nCreate the following java program\
+    \ using any editor of your choice in say C:/> Guava.\n\n# GuavaTester.java\n\n\
+    ```\nimport java.util.List;\n\nimport com.google.common.primitives.Shorts;\n\n\
+    public class GuavaTester {\n\n    public static void main(String args[]){\n  \
+    \      GuavaTester tester = new GuavaTester();\n        tester.testShorts();\n\
+    \    }\n\n    private void testShorts(){\n        short[] shortArray = {1,2,3,4,5,6,7,8,9};\n\
+    \n        //convert array of primitives to array of objects\n        List<Short>\
+    \ objectArray = Shorts.asList(shortArray);\n        System.out.println(objectArray.toString());\n\
+    \n        //convert array of objects to array of primitives\n        short shortArray\
+    \ = Shorts.toArray(objectArray);\n        System.out.print(\"[ \");\n        for(int\
+    \ i = 0; i< shortArray.length; i++) {\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_86_0.png)"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "```\nSystem.out.print(shortArray[i] + \" \");\n}\nSystem.out.println(\"]\"\
+    );\nshort data = 5;\n//check if element is present in the list of primitives or\
+    \ not\nSystem.out.println(\"5 is in list? \" + Shorts.contains(shortArray,\ndata));\n\
+    \n//Returns the minimum\nSystem.out.println(\"Min: \" + Shorts.min(shortArray));\n\
+    \n//Returns the maximum\nSystem.out.println(\"Max: \" + Shorts.max(shortArray));\n\
+    data = 2400;\n//get the byte array from integer\nbyte[] byteArray = Shorts.toByteArray(data);\n\
+    for(int i = 0; i<byteArray.length ; i++){\n    System.out.print(byteArray[i] +\
+    \ \" \");\n}\n}\n```\n\n# Verify the Result\n\nCompile the class using **javac**\
+    \ compiler as follows:\n\n```\nC:\\Guava>javac GuavaTester.java\n```\n\nNow run\
+    \ the GuavaTester to see the result.\n\n```\nC:\\Guava>java GuavaTester\n```\n\
+    \nSee the result.\n\n+   [1, 2, 3, 4, 5, 6, 7, 8, 9]\n[ 1 2 3 4 5 6 7 8 9 ]\n\
+    5 is in list? true\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_87_0.png)"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '```
+
+    Min: 1
+
+    Max: 9
+
+    9 96
+
+    ```
+
+
+    # Ints Class
+
+
+    Ints is a utility class for primitive type int.
+
+
+    # Class Declaration
+
+
+    Following is the declaration for com.google.common.primitives.Ints class:
+
+
+    ```
+
+    @GwtCompatible
+
+    public final class Ints
+
+    extends Object
+
+    ```
+
+
+    # Fields
+
+
+    | S.N. | Field & Description |
+
+    |---|---|
+
+    | 1 | **static int BYTES**
+
+    The number of bytes required to represent a primitive int value. |
+
+    | 2 | **static int MAX_POWER_OF_TWO**
+
+    The largest power of two that can be represented as a int. |
+
+
+    # Methods
+
+
+    | S.N. | Method & Description |
+
+    |---|---|
+
+    | 1 | **static List<Integer> asList(int... backingArray)**
+
+    Returns a fixed-size list backed by the specified array, similar to Arrays.asList(Object[])
+    |
+
+    | 2 | **static int checkedCast(long value)**
+
+    Returns the int value that is equal to value, if possible. |
+
+    | 3 | **static int compare(int a, int b)**
+
+    Compares the two specified int values. |'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Guava
+
+
+    | | |
+
+    |---|-|
+
+    | 4 | `static int[] concat(int[]... arrays)`
+
+    Returns the values from each provided array combined into a single array. |
+
+    | 5 | `static boolean contains(int[] array, int target)`
+
+    Returns true if target is present as an element anywhere in array. |
+
+    | 6 | `static int[] ensureCapacity(int[] array, int minLength, int padding)`
+
+    Returns an array containing the same values as array, but guaranteed to be of
+    a specified minimum length. |
+
+    | 7 | `static int fromByteArray(byte[] bytes)`
+
+    Returns the int whose big-endian representation is stored in the first 4 bytes
+    of bytes; equivalent to ByteBuffer.wrap(bytes).getInt().| |
+
+    | 8 | `static int fromBytes(byte b1, byte b2, byte b3, byte b4)`
+
+    Returns the int whose value represented is the given 4 bytes, in big-endian order;
+    equivalent to Ints.toByteArray(new byte[] {b1, b2, b3, b4}).| |
+
+    | 9 | `static int hashCode(int value)`
+
+    Returns a hash code for value; equal to the result of invoking ((Integer)value).hashCode().|
+    |
+
+    | 10 | `static int indexOf(int[] array, int target)`
+
+    Returns the index of the first appearance of the value target in array.| |
+
+    | 11 | `static int indexOf(int[] array, int[] target)`
+
+    Returns the start position of the first occurrence of the specified target within
+    array, or -1 if there is no such occurrence.| |
+
+    | 12 | `static String join(String separator, int... array)`
+
+    Returns a string containing the supplied ints separated by separator.| |
+
+    | 13 | `static int lastIndexOf(int[] array, int target)`
+
+    Returns the index of the last appearance of the value target in array.| |
+
+    | 14 | `static Comparator<int[]> lexicographicalComparator()`
+
+    Returns a comparator that compares two arrays lexicographically.| |
+
+    | 15 | `static int max(int... array)`
+
+    Returns the greatest value present in array.| |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_89_0.png)
+
+
+    84'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "# Guava\n\n| | |\n|---|---|\n| 16 | **static int min(int... array)** Returns\
+    \ the least value present in array. |\n| 17 | **static int saturatedCast(long\
+    \ value)** Returns the nearest in value to value. |\n| 18 | **static Converter<String,Integer>\
+    \ stringConverter()** Returns a serializable object that converts strings and\
+    \ integers using Integer.decode(java.lang.String) and Integer.toString(). |\n\
+    | 19 | **static int[] toArray(Collection<? extends Number> collection)** Returns\
+    \ an array containing each value of collection, converted to an int value of Number.intValue().\
+    \ |\n| 20 | **static byte[] toByteArray(int value)** Returns a big-ian representation\
+    \ of value in a 4-element byte array; equivalent to ByteBuffer.allocate(4).putInt(value).array().\
+    \ |\n| 21 | **static int tryParse(String string)** Parses the specified string\
+    \ as a signed decimal integer value. |\n\n# Methods Inherited\n\nThis class inherits\
+    \ methods from the following class:\n\n+   - java.lang.Object\n\n# Example of\
+    \ Its Class\n\nCreate the following java program using any editor of your choice\
+    \ in say C:/> Guava.\n\n# GuavaTester.java\n\n```\nimport java.util.List;\n\n\
+    import com.google.common.primitives.Ints;\n\npublic class GuavaTester {\n\n  \
+    \  public static void main(String[] args[]){\n        GuavaTester tester = new\
+    \ GuavaTester();\n    }\n}\n```\n\n85\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_90_0.png)"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "```\ntester.testInts();\n\nprivate void testInts(){\n    int[] intArray = {1,2,3,4,5,6,7,8,9};\n\
+    \n    //convert array of primitives to array of objects\n    List<Integer> objectArray\
+    \ = Ints.asList(intArray);\n    System.out.println(objectArray.toString());\n\n\
+    \    //convert array of objects to array of primitives\n    intArray = Ints.toArray(objectArray);\n\
+    \    System.out.print(\" \");\n    for(int i = 0; i < intArray.length; i++){\n\
+    \        System.out.print(intArray[i] + \" \");\n    }\n    System.out.println(\"\
+    \ \");\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_91_0.png)"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# Verify the Result
+
+
+    Compile the class using javac compiler as follows:
+
+
+    ```
+
+    C:\Guava>javac GuavaTester.java
+
+    ```
+
+
+    Now run the GuavaTester to see the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    ```
+
+
+    See the result.
+
+
+    ```
+
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    [ 1 2 3 4 5 6 7 8 9 ]
+
+    5 is in list? true
+
+    Min: 1
+
+    Max: 9
+
+    0 0 78 32
+
+    ```
+
+
+    # Longs Class
+
+
+    Longs is a utility class for primitive type long.
+
+
+    # Class Declaration
+
+
+    Following the declaration for com.google.common.primitives.Longs class:
+
+
+    ```
+
+    @GwtCompatible
+
+    public final class Longs
+
+    extends Object
+
+    ```
+
+
+    # Fields
+
+
+    | S.N. | Field & Description |
+
+    |---|---|n| 1 | static int BYTES
+
+    The number of bytes required to represent a primitive long value. |
+
+    | 2 | static long MAX_POWER_OF_TWO
+
+    The largest power of two that can be represented as a long. |n
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_92_0.png)'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# Methods\n\n| S.N. | Method & Description |\n|---|---|\n| 1 | **static List<Long>\
+    \ asList(long... backingArray)**n Returns a fixed-size list backed by the specified\
+    \ array, similar to Arrays.Object[]. |\n| 2 | **static int compare(long a, long\
+    \ b)**n Compares the two specified long values. |\n| 3 | **static long[] concat(long[]...\
+    \ arrays)**\n Returns the values from each provided array combined into a single\
+    \ array. |\n| 4 | **static boolean contains(long[] array, long target)**n Returns\
+    \ true if target is an element anywhere in array. |\n| 5 | **static long[] ensureCapacity(long[]\
+    \ array, int minLength, int padding)**\n Returns an array containing the same\
+    \ values as array, but guaranteed to be of a specified minimum length. |\n| 6\
+    \ | **static long fromByteArray(byte[] bytes)**n Returns the long value whose\
+    \ big-endian representation is stored in the first 8 bytes of bytes; equivalent\
+    \ to ByteBuffer.wrap(bytes).getLong(). |\n| 7 | **static long fromBytes(byte b1,\
+    \ byte b2, byte b3, byte b4, byte b5, byte b6, byte b7, byte b8)**n Returns the\
+    \ long value whose big-endian representation is the given 8 bytes, in big-endian\
+    \ order; equivalent to Long.fromByteArray(new byte[] {b1, b2, b3, b4, b5, b6,\
+    \ b7, b8}). |\n| 8 | **static int hashCode(Long value)**n Returns a hash code\
+    \ for value; equal to the result of invoking ((Long)value).hashCode(). |\n| 9\
+    \ | **static int indexOf(long[] array, long target)**n Returns the index of the\
+    \ first appearance of the value target in array. |\n| 10 | **static int indexOf(long[]\
+    \ array, long[] target)**\n Returns the start position of the first occurrence\
+    \ of the specified target within array, or -1 if there is no such occurrence.\
+    \ |"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: 'static String join(String separator, long... array)
+
+    Returns a string containing the supplied long values separated by separator.
+
+
+    static int lastIndexOf(long[]) array, long target)
+
+    Returns the index of the last appearance of the value target in array.
+
+
+    static Comparator<Long> lexicographicalComparator()
+
+    Returns a comparator that compares two arrays lexicographically.
+
+
+    static long max(long... array)
+
+    Returns the greatest value in array.
+
+
+    static long min(long... array)
+
+    Returns the least value present in array.
+
+
+    static Converter<String, Long> stringConverter()
+
+    Returns a serializable convert object that converts between strings and using
+    Long.decode(java.lang.String) and Long.toString().
+
+
+    static Long[] toArray(Collection<? extends Number> collection)
+
+    Returns an array containing each value of collection, converted to a long value
+    in the manner of Number.longValue().
+
+
+    static byte[] toByteArray(long value)
+
+    Returns a big-endian representation of value in an 8-byte byte array; equivalent
+    to ByteBuffer.allocate(8).putLong(value).array().
+
+
+    static Long tryParse(String string)
+
+    Parses the specified string as a signed decimal value.
+
+
+    # Methods Inherited
+
+
+    This class inherits methods from the following class:
+
+
+    +   * java.lang.Object
+
+
+    # Example of Longs Class
+
+
+    Create the following java program using any editor of your choice in say C:\nGuava.
+
+
+    GuavaTester.java
+
+
+    ```
+
+    import java.util.List;
+
+    ```
+
+
+    89
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_94_0.png)'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "```\nimport com.google.common.primitives.Ints;\nimport com.google.common.primitives.Longs;\n\
+    \npublic class GuavaTester {\n    public static void main(String[] args[]){\n\
+    \        GuavaTester tester = new GuavaTester();\n        tester.testLongs();\n\
+    \    }\n\n    private void testLongs(){\n        long[] array = {1,2,3,4,5,6,7,8,9};\n\
+    \n        //convert array of primitives to array of objects\n        List<Long>\
+    \ objectArray = Longs.asList(array);\n        System.out.println(objectArray.toString());\n\
+    \n        //convert array of objects to array of primitives\n        long[] longArray\
+    \ = Longs.toArray(objectArray);\n        System.out.println(\" \");\n        for(int\
+    \ i = 0; i < longArray.length ; i++){\n            System.out.println(longArray[i]\
+    \ + \" \");\n        }\n        System.out.println(\"]\");\n        //check if\
+    \ element is present in the list of primitives or not\n        System.out.println(\"\
+    5 is in list? \" + Longs.contains(longArray));\n\n        //Returns the minimum\n\
+    \        System.out.println(\"Min: \" + Longs.min(longArray));\n\n        //Returns\
+    \ the maximum\n        System.out.println(\"Max: \" + Longs.max(longArray));\n\
+    \    }\n```"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "```\n//get the byte array from an integer\nbyte[] byteArray = Longs.toByteArray(20000);\n\
+    for(int i = 0; i< byteArray.length ; i++) {\n    System.out.print(byteArray[i]\
+    \ + \" \");\n}\n```\n\n# Verify the Result\n\nCompile the class using javac compiler\
+    \ as follows:\n\n```\nC:\\Guava>javac GuavaTester.java\n```\n\nNow the GuavaTester\
+    \ to see the result.\n\n```\nC:\\Guava>java GuavaTester\n```\n\nSee the result.\n\
+    \n+   [1, 2, 3, 4, 5, 6, 7, 8, 9]\n[ 1 2 3 4 5 6 7 8 9 ]\n5 is in list? true\n\
+    Min: 1\nMax: 9\n0 0 0 0 0 0 78 32\n\n# Floats Class\n\nFloats is a utility class\
+    \ for primitive type float.\n\n# Class Declaration\n\nFollowing the declaration\
+    \ for com.google.common.primitives.Floats class:\n\n```\n@GwtCompatible(emulated=true)\n\
+    public final class Floats\nextends Object\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_96_0.png)"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# Guava
+
+
+    # Fields
+
+
+    | S.N. | Field & Description |
+
+    |---|---|
+
+    | 1 | **static int BYTES**<br>The number of bytes required to represent a primitive
+    float value. |
+
+
+    # Methods
+
+
+    | S.N. | Method & Description |
+
+    |---|---|
+
+    | 1 | **static List<Float> asList(float... backingArray)**<br>Returns a fixed-size
+    list backed by the specified array, similar to Arrays.asList([]). | |
+
+    | 2 | **static int compare(float a, float b)**<br>Compares the two specified float
+    values using Float.compare(float,float). |
+
+    | 3 | **static float[] concat(float[] arrays)**<br>Returns the values from each
+    provided array combined into a single array. |
+
+    | 4 | **static boolean contains(float[] array, float target)**<br>Returns true
+    if target is present as an element anywhere in array. |
+
+    | 5 | **static float[] ensureCapacity(float[] array, int minLength, int padding)**<br>Returns
+    an array containing the same values as the array, but guaranteed to be of a specified
+    minimum length. |
+
+    | 6 | **static int hashCode(float value)**<br>Returns a hash code for value; equal
+    to the result of invoking ((Float)value).hashCode(). |
+
+    | 7 | **static int indexOfOf(float[] array, float target)**<br>Returns the index
+    of the first appearance of the target value in array. |
+
+    | 8 | **static int indexOfOf(float[] array, float[] target)**<br>Returns the start
+    position of the first occurrence of the specified target within array, or -1 if
+    there is no such occurrence. |
+
+    | 9 | **static boolean isFinite(float value)**<br>Returns true if value represents
+    a real number. |
+
+
+    92
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_97_0.png)'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# Guava\n\n| 10 | static String join(String separator, float... array) \n Returns\
+    \ a string containing the supplied float values, converted to strings as specified\
+    \ by Float.toString(float), and separated by separator. |\n| 11 | static int lastIndexOf(float[]\
+    \ array, float target) \n Returns the index of the last appearance of the value\
+    \ target in array. |\n| 12 | static Comparator<float[]> lexicographicalComparator()\n\
+    \ Returns a comparator that compares two arrays lexicographically. |\n| 13 | static\
+    \ float max(float... array) \n Returns the greatest value in array, using the\
+    \ same rules of comparison as Math.min(float, float). |\n| 14 | static float min(float...\
+    \ array) \n Returns the least value in array, using the same rules of comparison\
+    \ as Math.min(float, float). |\n| 15 | static Converter<String, Float> stringConverter()\n\
+    \ Returns a serializable converter object that converts between strings and floats\
+    \ using Float.valueOf(java.lang.String) and Float.toString(). |\n| 16 | static\
+    \ float[] toArray(Collection<? extends Number> collection) \n Returns an array\
+    \ containing each value of collection, converted to a float value in the manner\
+    \ of Number.valueOf(). |\n| 17 | static Float tryParse(String string) \n Parses\
+    \ the specified string as a single-precision floating point value. |\n\n# Methods\
+    \ Inherited\n\nThis class inherits methods from the following class:\n\n+   -\
+    \ java.lang.Object\n\n# Example of Floats Class\n\nCreate the following java program\
+    \ using any editor of your choice in say C:/> Guava.\n\nGuavaTester.java\n\n```\n\
+    import java.util.List;\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_98_0.png)"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "```\nimport com.google.common.primitives.Floats;\n\npublic class GuavaTester\
+    \ {\n\n    public static void main(String args[]){\n        GuavaTester tester\
+    \ = new GuavaTester();\n        tester.testFloats();\n    }\n\n    private void\
+    \ testFloats(){\n        float[] floatArray = =\n        {1.0f,2.0f,3.0f,4.0f,5.0f,6.0f,7.0f,8.0f,9.0f};\n\
+    \n        // convert array of primitives to array of objects\n        List<Float>\
+    \ objectArray = Floats.asList(floatArray);\n        System.out.println(objectArray.toString());\n\
+    \n        // convert array of objects to array of primitives\n        floatArray\
+    \ = Floats.toArray(objectArray);\n        System.out.println(\"[\\ \");\n    \
+    \    for (int i = 0; i < floatArray.length ; i++){\n            System.out.println(floatArray[i]\
+    \ + \" \");\n        }\n        System.out.println(\"(\"]\");\n        //check\
+    \ if element is present in the list of primitives or not\n        System.out.println(\"\
+    5.0 is in list? \" + Floats.contains(floatArray,5.0f));\n\n        //return the\
+    \ index of element\n        System.out.println(\"5.0 position in list \"+\n  \
+    \      Floats.indexOf(floatArray, 5.0f));\n\n        //Returns the minimum\n```\n\
+    \n![](img/4935a2238ac80b2a11ee9e7e607ee959_99_0.png)"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '```
+
+    System.out.println("Min: " + Floats.min(floatArray));
+
+
+    //Returns the maximum
+
+    System.out.println("Max: " + Floats.max(floatArray));
+
+    }
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the class using javac compiler as follows:
+
+
+    ```
+
+    C:\Guava>javac GuavaTester.java
+
+    ```
+
+
+    Now run the GuavaTester to see the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    ```
+
+
+    See the result.
+
+
+    [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0]
+
+    [ 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0]
+
+    5.0 is in list? true
+
+    5.0 position in list 4
+
+    Min: 1.0
+
+    Max: 9.0
+
+
+    # Doubles Class
+
+
+    Doubles is a utility class for primitive double.
+
+
+    # Class Declaration
+
+
+    Following is the declaration for com.google.common.primitives.Doubles class:
+
+
+    ```
+
+    @GwtCompatible(emulated=true)
+
+    public final class Doubles
+
+    extends Object
+
+    ```
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_100_0.png)'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Guava
+
+
+    # Fields
+
+
+    | S.N. | Field & Description |
+
+    |---|--|
+
+    | 1 | **static int BYTES**<br>The number of bytes required to represent a primitive
+    double value. |
+
+
+    # Methods
+
+
+    | S.N. | Method & Description |
+
+    |---|--|
+
+    | 1 | **static List<Double> asList(double... backingArray)**<br>Returns a fixed-size
+    list backed by the specified array, similar to Arrays.asList(Object[]). |
+
+    | 2 | **static int compare(double a, double b)**<br>Compares the two specified
+    values. |
+
+    | 3 | **static double[] concat(double... arrays)**<br>Returns the values from
+    each provided array combined into a single array. |
+
+    | 4 | **static boolean contains(double[] array, double target)**<br>Returns true
+    if target is present as an element anywhere in array. |
+
+    | 5 | **static double[] ensureCapacity(double[] array, int minLength, int padding)**<br>Returns
+    an array containing the same values as the array, but guaranteed to be of a specified
+    minimum length. |
+
+    | 6 | **static int hashCode(double value)**<br>Returns hash code for value; equal
+    to the result of invoking ((Double)value).hashCode(). |
+
+    | 7 | **static int indexOf(double[] array, double target)**<br>Returns the index
+    of the first appearance of the value target in array. |
+
+    | 8 | **static int indexOf(double[] array, double[] target)**<br>Returns the start
+    position of the first occurrence of the specified target within array, or -1 if
+    there no such occurrence. |
+
+    | 9 | **static boolean isFinite(double value)**<br>Returns true if value represents
+    a real number. |'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# Guava
+
+
+    | | | |
+
+    | --- | --- | --- |
+
+    | 10 | **static String join(String separator, double... array)** | |
+
+    | | Returns a string containing the supplied double values, converted to strings
+    as specified by Double.toString(double), and separated by separator. | |
+
+    | 11 | **static int lastIndexOf(double[] array, double target)** | |
+
+    | | Returns the index of the last appearance of the value target in array. | |
+
+    | 12 | **static Comparator<double[]> lexicographicalComparator()** | |
+
+    | | Returns a comparator that compares two double arrays lexicographically. |
+    |
+
+    | 13 | **static double max(double... array)** | |
+
+    | | Returns the greatest value present in array, using the rules of comparison
+    as Math.max(double, double). | |
+
+    | 14 | **static double min(double... array)** | |
+
+    | | Returns the least value present in array, using the rules of comparison as
+    Math.min(double, double). | |
+
+    | 15 | **static Converter<String, Double> stringConverter()** | |
+
+    | | Returns a serializable converter object that converts between strings and
+    doubles using Double.valueOf(java.lang.String) and Double.toString(double). |
+    |
+
+    | 16 | **static double[] toArray(Collection<? extends Number> collection)** |
+    |
+
+    | | Returns an array containing each value of collection, converted to a double
+    value in the manner of Number.doubleValue(). | |
+
+    | 17 | **static Double tryParse(String string)** | |
+
+    | | Parses the specified string as a double-precision floating point value. |
+    |
+
+
+    # Methods Inherited
+
+
+    This class inherits methods from the following class:
+
+
+    +   - java.lang.Object
+
+
+    # Examples of Doubles Class
+
+
+    Create the following java program using any editor of your choice in say **C:/>
+    GuavaTester.java**
+
+
+    ```
+
+    import java.util.List;
+
+    ```
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_102_0.png)'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "```\nimport com.google.common.primitives.Doubles;\n\npublic class GuavaTester\
+    \ {\n\n    public static void main(String args[]){\n        GuavaTester tester\
+    \ = new GuavaTester();\n        tester.testDoubles();\n    }\n\n    private void\
+    \ testDoubles(){\n        double[] doubleArray = {1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0};\n\
+    \n        // convert array of primitives to array of objects\n        List<Double>\
+    \ objectArray = Doubles.asList(doubleArray);\n        System.out.println(objectArray.toString());\n\
+    \n        // convert array of objects to array of primitives\n        doubleArray\
+    \ = Doubles.toArray(objectArray, \"{\");\n        System.out.print(\"{ \");\n\
+    \        for(int i = 0; i < doubleArray.length ; i++){\n            System.out.print(doubleArray[i]\
+    \ + \" \");\n        }\n        System.out.println(\"}\");\n        // check if\
+    \ element is present in the list of primitives or not\n        System.out.println(\"\
+    5.0 is in list? \" +\n        Doubles.contains(doubleArray, 5.0f));\n\n      \
+    \  // return the index of element\n        System.out.println(\"5.0 position in\
+    \ list \" +\n        Doubles.indexOf(doubleArray, 5.0f));\n\n        //Returns\
+    \ the minimum\n```"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '```
+
+    System.out.println("Min: " + Doubles.min(doubleArray));
+
+
+    //Returns the maximum
+
+    System.out.println("Max: " + Doubles.max(doubleArray));
+
+    }
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the class using javac compiler as follows:
+
+
+    ```
+
+    C:\Guava>javac GuavaTester.java
+
+    ```
+
+
+    Now run the GuavaTester to see the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    ```
+
+
+    See the result.
+
+
+    ```
+
+    [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0]
+
+    [ 1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0 9.0 ]
+
+    5.0 is in list? true
+
+    5.0 position in list 4
+
+    Min: 1.0
+
+    Max: 9.0
+
+    ```
+
+
+    # Chars Class
+
+
+    Chars is a utility class for primitive type char.
+
+
+    # Class Declaration
+
+
+    Following is the declaration for com.google.common.primitives.Chars class:
+
+
+    ```
+
+    @GwtCompatible(emulated=true)
+
+    public final class Chars
+
+    extends Object
+
+    ```'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# Guava
+
+
+    # Fields
+
+
+    | S.N. | Field & Description |
+
+    |---|---|
+
+    | 1 | **static int BYTES**
+
+    The number of bytes required to represent a primitive char value. |
+
+
+    # Methods
+
+
+    | S.N. | Method & Description |
+
+    |---|---|
+
+    | 1 | **static List<Character> asList(char... backingArray)**
+
+    Returns a fixed-size list backed by the specified array, similar to Arrays.asList(Object[]).
+    |
+
+    | 2 | **static char checkedCast(long value)**
+
+    Returns the char value is equal to value, if possible. |
+
+    | 3 | **static int compare(char a, char b)**
+
+    Compares the two specified char values. |
+
+    | 4 | **static char[] concat(char... arrays)**
+
+    Returns the values from each provided array combined into a single array. |
+
+    | 5 | **static boolean contains(char[] array, char target)**
+
+    Returns true if target is present as an element anywhere in array. |
+
+    | 6 | **static char[] ensureCapacity(char[] array, int minLength, int padding)**
+
+    Returns an array containing the same values as array, but guaranteed to be of
+    a specified minimum length. |
+
+    | 7 | **static char fromByteArray(byte[] bytes)**
+
+    Returns the char value whose big-endian representation is stored in the first
+    2 bytes of bytes; equivalent to ByteBuffer.wrap(bytes).getChar(). |
+
+    | 8 | **static char fromByteBytes(byte b1, byte b2)**
+
+    Returns the char value whose byte representation is the given 2 bytes, in big-endian
+    order; equivalent to Chars.fromByteArray(new byte[] {b1, b2}). |
+
+    | 9 | **static int hashCode(char value)**
+
+    Returns a hash code for value; equal to the result of invoking |'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# Guava
+
+
+    | | |
+
+    |---|-|
+
+    | 10 | static int indexOf(char[] array, char target)
+
+    Returns the index of the first appearance of the value target in array. |
+
+    | 11 | static int indexOf(char[] array, char[] target)
+
+    Returns the start position of the first occurrence of the specified target within
+    array, -1 if there is no such occurrence. |
+
+    | 12 | static String join(String separator, char... array)
+
+    Returns a string containing the supplied char values separated by separator. |
+
+    | 13 | static int lastIndexOf(char[] array, char target)
+
+    Returns the index of the last appearance of the value target in array. |
+
+    | 14 | static Comparator<char[]> lexicographicalComparator()
+
+    Returns a comparator that compares two arrays lexicographically. |
+
+    | 15 | static char max(char... array)
+
+    Returns the greatest value present in array. |
+
+    | 16 | static char min(char... array)
+
+    Returns the least value present in array. |
+
+    | 17 | static char saturatedCast(long value)
+
+    Returns the char nearest in value to value. |
+
+    | 18 | static char[] toArray(Collection<Character> collection)
+
+    Copies a collection of Character instances into a new array of primitive char
+    values. |
+
+    | 19 | static byte[] toByteArray(char value)
+
+    Returns a big-endian representation of value in a 2-element byte array; equivalent
+    to ByteBuffer.allocate(2).putChar(value).array(). |
+
+
+    # Methods Inherited
+
+
+    This class inherits methods from the following class:
+
+
+    +   * java.lang.Object
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_106_0.png)'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "# Guava\n\n# Example of Chars Class\n\nCreate the following java program using\
+    \ any editor of your choice say C:/ Guava.\n\nGuavaTester.java\n\n```\nimport\
+    \ java.util.List;\n\nimport com.google.common.primitives.Chars;\n\npublic class\
+    \ GuavaTester {\n    public static void main(String[] args){\n        GuavaTester\
+    \ tester = new GuavaTester();\n        tester.testChars();\n    }\n\n    private\
+    \ void testChars(){\n        char[] charArray = {'a','b','c','d','e','f','g','h'};\n\
+    \n        //convert array of primitives to array of objects\n        List<Character>\
+    \ objectArray = Chars.asList(charArray);\n        System.out.println(objectArray.toString());\n\
+    \n        //convert array of objects to array of primitives\n        charArray\
+    \ = Chars.toArray(objectArray);\n        System.out.println(\"[ \");\n```\n\n\
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_107_0.png)"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '```
+
+    //Returns the minimum
+
+    System.out.println("Min: " + Chars.min(charArray));
+
+
+    //Returns the maximum
+
+    System.out.println("Max: " + Chars.max(charArray));
+
+    }
+
+    }
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the class using javac compiler as follows:
+
+
+    ```
+
+    C:\Guava>javac GuavaTester.java
+
+    ```
+
+
+    Now run the GuavaTester to see the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    ```
+
+
+    See the result.
+
+
+    +   [a, b, c, d, e, f, g, h]
+
+    [ a b c d e f g h ]
+
+    c is in list? true
+
+    c position in list 2
+
+    Min: a
+
+    Max: h
+
+
+    # Booleans Class
+
+
+    Booleans is a utility class for primitive type Boolean.
+
+
+    # Class Declaration
+
+
+    Following is the declaration for com.google.common.primitives.Booleans class:
+
+
+    ```
+
+    @GwtCompatible(emulated=true)
+
+    public final class Booleans
+
+    extends Object
+
+    ```'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# Methods
+
+
+    | S.N. | Method & Description |
+
+    |---|---|
+
+    |1 | **static List<Boolean> asList(boolean... backingArray)**
+
+    Returns a fixed-size list backed by the specified array, similar to Arrays.asList(Object[]).
+    |
+
+    | 2 | **static int compare(boolean a, boolean b)**
+
+    Compares the two specified boolean values in the standard way (false is less than
+    true). |
+
+    | 3 | **static boolean[] concat(boolean[]... arrays)**
+
+    Returns the values from each provided array combined into a single array. |
+
+    | 4 | **static boolean contains(boolean[] array, boolean target)**
+
+    Returns true if target is present as an element anywhere in array. |
+
+    | 5 | **static int countTrue(boolean... values)**
+
+    Returns the number of values that are true. |
+
+    | 6 | **static boolean[] ensureCapacity(boolean[] array, int minLength, int padding)**
+
+    Returns an array containing the same values as array, guaranteed to be of a specified
+    minimum length. |
+
+    | 7 | **static int hashCode(boolean value)**
+
+    Returns a hash code for value; equal to the result of invoking ((Boolean)value).hashCode().
+    |
+
+    | 8 | **static int indexOf(boolean[] array, boolean target)**
+
+    Returns the index of the first appearance of the value target in array. |
+
+    | 9 | **static int indexOf(boolean[] array, boolean[] target)**
+
+    Returns the start position of the first occurrence of the specified target within
+    array, or -1 if there is no such occurrence. |
+
+    | 10 | **static String join(String separator, boolean... array)**
+
+    Returns a string containing the supplied boolean values separated by separator.
+    |
+
+    | 11 | **static int lastIndexOf(boolean[] array, boolean target)**
+
+    Returns the index of the last appearance of the value target in array. |'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "# Guava\n\n| | static Comparator<boolean[]> lexicographicalComparator() |\n\
+    | 12 | Returns a comparator that compares two boolean arrays lexicographically.\
+    \ |\n| 13 | static boolean[] toArray(Collection<Boolean> collection) Copies a\
+    \ collection of Boolean instances into a new array of primitive boolean values.\
+    \ |\n\n# Methods Inherited\n\nThis class inherits methods from the following class:\n\
+    \n+   * java.lang.Object\n\n# Example of Booleans Class\n\nCreate the following\
+    \ java program using any editor of your choice in say C:/> Guava.\n\n# GuavaTester.java\n\
+    \n```\nimport java.util.List;\nimport com.google.common.primitives.Booleans;\n\
+    \npublic class GuavaTester {\n    public static void main(String args[]){\n  \
+    \      GuavaTester tester = new GuavaTester();\n        tester.testBooleans();\n\
+    \    }\n\n    private void testBooleans(){\n        boolean[] booleanArray = {true,true,false,true,true,false,false};\n\
+    \n        // convert array of primitives to array of objects\n        List<Boolean>\
+    \ objectArray = Booleans.asList(booleanArray);\n        System.out.println(objectArray.toString());\n\
+    \n        // convert array of objects to array of primitives\n        booleanArray\
+    \ = Booleans.toArray(objectArray);\n    }\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_110_0.png)"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "```\nSystem.out.print(\"[ \");\nfor(int i = 0; i< booleanArray.length; i++){\n\
+    \    System.out.print(booleanArray[i] + \" \");\n}\nSystem.out.println(\"]\");\n\
+    //check if element is present in the list of primitives or not\nSystem.out.println(\"\
+    true is in list? \" + \nBooleans.contains(booleanArray, true));\n\n//return the\
+    \ first index of element\nSystem.out.println(\"True position in list \" + \nBooleans.indexOf(booleanArray,\
+    \ true));\n\n//Returns the count of true values\nSystem.out.println(\"true occured:\
+    \ \" + Booleans.countTrue());\n\n//Returns the comparisons\nSystem.out.println(\"\
+    false Vs true: \" + Booleans.compare(false,\ntrue));\nSystem.out.println(\"true\
+    \ Vs false: \" + Booleans.compare(false,\nfalse));\nSystem.out.println(\"true\
+    \ Vs false: \" + Booleans.compare(true,\nfalse));\nSystem.out.println(\"true Vs\
+    \ true: \" + Booleans.compare(true,\ntrue));\n\n```\n\n# Verify the Result\n\n\
+    Compile the class using javac compiler as follows:\n\n```\nC:\\Guava>javac GuavaTester.java\n\
+    ```\n\nNow run the GuavaTester to see the result.\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_111_0.png)"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# Guava
+
+
+    See the result.
+
+
+    ```
+
+    C:\Guava>java GuavaTester
+
+    [true, true, false, true, true, false, false]
+
+    [ true true false true true false false ]
+
+    true is in list? true
+
+    true position in list: 0
+
+    true occured: 0
+
+    false Vs true: -1
+
+    false Vs false: 00
+
+    true Vs false: 1
+
+    true Vs true: 0
+
+    ```'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "# 13. MATH UTILITIES\n\nGuava provides binomial Mathematics related Utilities\
+    \ classes to handle int, long and BigInteger. Following is the list of useful\
+    \ utilities:\n\n| S.N. | Utility name & Description |\n|---|---|\n| 1 | **IntMath**<br>Math\
+    \ utility for int. |\n| 2 | **LongMath**<br>Math utility for long. |\n| 3 | **BigIntegerMath**<br>Math\
+    \ utility for BigInteger. |\n\n# IntMath Class\n\nIntMath provides utility methods\
+    \ on int.\n\n# Class Declaration\n\nFollowing is the declaration for **com.google.common.math.IntMath**\
+    \ class:\n\n```\n@GwtCompatible(emulated=true)\npublic final class IntMath\n \
+    \   extends Object\n```\n\n# Methods\n\n| S.N. | Method & Description |\n|---|---|\n\
+    | 1 | **static int binomial(int n, int k)**<br>Returns n choose, also known as\
+    \ the binomial coefficient of n and k, or Integer.MAX_VALUE if the result does\
+    \ not fit in an int. |\n| 2 | **static int checkedAdd(int a, int b)**<br>Returns\
+    \ the sum of a and b, provided it does not overflow. |\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_113_0.png)"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '| static int checkedMultiply(int a, int b) |
+
+    | Returns the product of a and b, provided it does not overflow. |
+
+    | static int checkedPow(int b, int k) |
+
+    | Returns the b to the kth power, provided it does not overflow. |
+
+    | static int checkedSubtract(int a, int b) |
+
+    | Returns the difference of a and b, provided it does not overflow. |
+
+    | static int divide(int p, int q, RoundingMode mode) |
+
+    | Returns the result of dividing p by q, rounding using the specified RoundingMode.
+    |
+
+    | static int factorial(int n) |
+
+    | Returns the product of the first n positive integers, 1 if n = 0, or Integer.MAX_VALUE
+    if the result does not fit in an int. |
+
+    | static int gcd(int a, int b) |
+
+    | Returns the greatest common divisor of a, b. |
+
+    | static boolean isPowerOfTwo(int x) |
+
+    | Returns true if x represents a power of two. |
+
+    | static int log10(int x, RoundingMode mode) |
+
+    | Returns the base-10 logarithm of x, rounded according to the specified rounding
+    mode. |
+
+    | static int log2(int x, RoundingMode mode) |
+
+    | Returns the base-2 logarithm of x, rounded according to the specified rounding
+    mode. |
+
+    | static int mean(int x, int y) |
+
+    | Returns the arithmetic mean of x and y, rounded towards negative infinity. |
+
+    | static int mod(int x, int m) |
+
+    | Returns x mod m, a non-negative value less than m. |
+
+    | static int pow(int b, int k) |
+
+    | Returns b to the kth power. |
+
+    | static int sqrt(int x, RoundingMode mode) |
+
+    | Returns the square root of x, rounded with the specified rounding mode. |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_114_0.png)'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "# Guava\n\n# Methods Inherited\n\nThis class inherits methods from the following\
+    \ class:\n\n+   - java.lang.Object\n\n# Example of IntMath Class\n\nCreate the\
+    \ following java program using any editor of your choice in say C:/Guava.\n\n\
+    # GuavaTester.java\n\n```\nimport java.math.RoundingMode;\nimport com.google.common.math.IntMath;\n\
+    \npublic class GuavaTester {\n\n    public static void main(String[] args[]){\n\
+    \        GuavaTester tester = new GuavaTester();\n        tester.testIntMath();\n\
+    \    }\n\n    private void testIntMath(){\n        try{\n            System.out.println(IntMath.checkedAdd(Integer.MAX_VALUE,\
+    \ Integer.MAX_VALUE));\n        }catch(ArithmeticException e) {\n            System.out.println(\"\
+    Error: \" + e.getMessage());\n        }\n\n        System.out.println(IntMath.divide(100,\
+    \ 5, RoundingMode.UNNECARY));\n        try{\n            //exception will be thrown\
+    \ as 100 is not completely divisible\n            3 throws rounding\n        \
+    \    // is required, and RoundingMode is set as UNNECARY\n```\n\n110"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "```\nSystem.out.println(IntMath.divide(100, 3, \nRoundingMode.UNNECESSARY));\n\
+    catch(ArithmeticException e{\nSystem.out.println(\"Error: \" + e.getMessage());\n\
+    }\n```\n\n```\nSystem.out.println(\"Log2(2): \"+IntMath.log2(2, \nRoundingMode.HALF_EVEN));\n\
+    ```\n\n```\nSystem.out.println(\"Log10(10): \"+IntMath.log10(10, \nRoundingMode.HALF_EVEN));\n\
+    ```\n\n```\nSystem.out.println(\"sqrt(100): \"+IntMath.sqrt(IntMath.pow(10,2),\
+    \ \nRoundingMode.HALF_EVEN));\n```\n\n```\nSystem.out.println(\"gcd(100,50): \"\
+    +IntMath.gcd(100,50));\n```\n\n```\nSystem.out.println(\"modulus(100,50): \"+IntMath.mod(100,50));\n\
+    ```\n\n```\nSystem.out.println(\"factorial(5): \"+IntMath.factorial(5));\n}\n\
+    ```\n\n# Verify the Result\n\nCompile the class using javac compiler as follows:\n\
+    \n```\nC:\\Guava>javac GuavaTester.java\n```\n\nNow run the GuavaTester to see\
+    \ the result.\n\n```\nC:\\Guava>java GuavaTester\n```\n\nSee the result.\n\n```\n\
+    Error: overflow\n20\n```"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# Guava
+
+
+    ```
+
+    Error: mode was UNNECESSARY, but rounding was necessary
+
+    Log2(2): 1
+
+    Log10(10): 1
+
+    sqrt(100): 10
+
+    gcd(100,50): 50
+
+    modulus(100,50): 0
+
+    factorial(5): 120
+
+    ```
+
+
+    # # LongMath Class
+
+
+    LongMath provides utility methods on long.
+
+
+    # # Class Declaration
+
+
+    Following is the declaration for com.google.common.math.LongMath class:
+
+
+    ```
+
+    @GwtCompatible(emulated=true)
+
+    public final class LongMath
+
+    extends Object
+
+    ```
+
+
+    # # Methods
+
+
+    | S.N. | Method & Description |
+
+    | 1 | static long binomial(int n, int k)<br>Returns n choose k, also known as
+    the binomial coefficient of n and k, Long.MAX_VALUE if the result does not fit
+    in a long. |
+
+    | 2 | static long checkedAdd(long a, long b)<br>Returns the sum of a and b, provided
+    it does not overflow. |
+
+    | 3 | static long checkedMultiply(long a, long b)<br>Returns the product of a
+    and b, provided it does not overflow. |
+
+    | 4 | static long checkedPow(long b, int k)<br>Returns the b to the kth power,
+    provided it does not overflow. |
+
+    | 5 | static long checkedSubtract(long a, long b)<br>Returns the difference of
+    a and b, provided it does not overflow. |
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_117_0.png)'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '| | |
+
+    | 6 | static long divide(long p, long q, RoundingMode mode) Returns the result
+    of dividing p by q, rounding using the specified RoundingMode |
+
+    | 7 | static long factorial(int n) Returns nl, that is, the product of the first
+    n integers, 1 if n = 0, or Long.MAX_VALUE if the result does not fit in a long.
+    |
+
+    | 8 | static long gcd(long a, long b) Returns the greatest common divisor of a,
+    b. |
+
+    | 9 | static boolean isPowerTwo(long x) Returns true if x represents a power of
+    two. |
+
+    | 10 | static int log10(long x, RoundingMode mode) Returns the base-10 logarithm
+    of x, rounded according to the specified rounding mode. |
+
+    | 11 | static int log2(long x, RoundingMode mode) Returns the base-2 logarithm
+    of x, rounded according to the specified rounding mode. |
+
+    | 12 | static long mean(long x, long y) Returns the arithmetic mean of x and y,
+    rounded toward negative infinity. |
+
+    | 13 | static int mod(long x, int m) Returns x mod m, a non-negative value less
+    than m. |
+
+    | 14 | static long mod(long x, long m) Returns x mod m, a non-negative value less
+    than m. |
+
+    | 15 | static long pow(long b, int k) Returns b to the kth power. |
+
+    | 16 | static long sqrt(long x, RoundingMode mode) Returns the square root of
+    x, rounded with the specified rounding mode. |
+
+
+    # Methods Inherited
+
+
+    This class inherits methods from the following class:
+
+
+    +   * java.lang.Object'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "# Example of LongMath Class\n\nCreate the following java program using any\
+    \ editor of your choice say C:/> Guava.\n\n# GuavaTester.java\n\n```\nimport java.math.RoundingMode;\n\
+    import com.google.math.common.LongMath;\n\npublic class GuavaTester {\n\n    public\
+    \ static void main(String args[]){\n        GuavaTester tester = new GuavaTester();\n\
+    \        tester.testLongMath();\n    }\n\n    private void testLongMath(){\n \
+    \       try{\n            System.out.println(LongMath.checkedAdd(Long.MAX_VALUE,\n\
+    Long.MAX_VALUE));\n        }catch(ArithmeticException e){\n            System.out.println(\"\
+    Error: \" + e.getMessage());\n        }\n\n        System.out.println(LongMath.divide(100,\
+    \ 5,\nRoundingMode.UNNECESSARY));\n        try{\n            //exception will\
+    \ be thrown as 100 is not completely divisible\n            // 3, thus rounding\
+    \ is required, and\n            // RoundingMode is set as UNNECESSARY\n      \
+    \      System.out.println(LongMath.divide(100, 3,\nRoundingMode.UNNECESSARY));\n\
+    \        }catch(ArithmeticException e){\",\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_119_0.png)"
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '```
+
+    System.out.println("Error: " + e.getMessage());
+
+    }
+
+    System.out.println("Log2(2): "+LongMath.log2(2,
+
+    RoundingMode.HALF_EVEN));
+
+
+    System.out.println("Log10(10): "+LongMath.log10(10,
+
+    RoundingMode.HALF_EVEN));
+
+
+    System.out.println("sqrt(100): "+LongMath.pow(10,2),
+
+    RoundingMode.HALF_EVEN));
+
+
+    System.out.println("gcd(100,50): "+LongMath.gcd(100,50));\n
+
+    System.out.println("modulus(100,50): "+LongMath.mod(100,50));\n
+
+    System.out.println("factorial(5): "+LongMath.factorial(5));\n}
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the class using javac javac compiler as follows:
+
+
+    C:\Guava>javac GuavaTester.java
+
+
+    Now run the GuavaTester to see the result.
+
+
+    C:\Guava>java GuavaTester
+
+
+    See the result.
+
+
+    Error: overflow
+
+    20
+
+    Error: mode was UNNECARY, but rounding was necessary
+
+    Log2(2): 1
+
+    Log10(10): 1
+
+    sqrt(100): 10
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_120_0.png)'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "```\ngcd(100,50): 50\nmodulus(100,50): 0\nfactorial(5): 120\n```\n\n# # BigIntegerMath\
+    \ Class\n\nBigIntegerMath provides utility methods on BigInteger.\n\n# ## Class\
+    \ Declaration\n\nFollowing is the declaration for com.google.common.math.BigIntegerMath\
+    \ class:\n\n```\n@GwtCompatible(emulated=true)\npublic final class BigIntegerMath\n\
+    \    extends Object\n```\n\n# ## Methods\n\n| S.N. | Method & Description |\n\
+    | --- | --- |\n| 1 | **static BigInteger binomial(int n, int k)**<br>Returns n\
+    \ choose q, also known as the binomial coefficient of n and k, that is, n! / (k!\
+    \ (n - k)!) |\n| 2 | **static BigInteger divide(BigInteger p, BigInteger q, RoundingMode\
+    \ mode)**<br>Returns the result of dividing p by q, using the specified RoundingMode.\
+    \ |\n| 3 | **static BigInteger factorial(int n)**<br>Returns n!, that is, the\
+    \ product of the first n positive integers, or 1 if n==0. |\n| 4 | **static boolean\
+    \ isPowerTwo(BigInteger x)**<br>Returns true if x represents a power of two. |\n\
+    | 5 | **static int log10(BigInteger x, RoundingMode mode)**<br>Returns the base-10\
+    \ logarithm of x, rounded according to the specified |\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_121_0.png)"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "# Guava\n\n| | rounding mode. |\n|---|---|\n| 6 | **static int log2(BigInteger\
+    \ x, RoundingMode mode)**nReturns the base-2 logarithm of x, rounded according\
+    \ to the specified rounding mode. |\n| 7 | **static BigInteger sqrt(BigInteger\
+    \ x, RoundingMode mode)**nReturns the square root of x, rounded with the specified\
+    \ rounding mode. |\n\n# Methods Inherited\n\nThis class inherits methods from\
+    \ the following class:\n\n+   * java.lang.Object\n\n# Example of BigIntegerMath\
+    \ Class\n\nCreate the following java program using any editor of your choice in\
+    \ say **C:/> Guava.**\n\n# GuavaTester.java\n\n```\nimport java.math.BigInteger;\n\
+    import java.math.RoundingMode;\n\nimport com.google.common.math.BigIntegerMath;\n\
+    \npublic class GuavaTester {\n\n    public static void main(String args[]){\n\
+    \        GuavaTester tester = new GuavaTester();\n        tester.testBigInteger();\n\
+    \    }\n    private void testBigInteger(){\n        System.out.println(BigIntegerMath.divide(BigInteger.TEN,\
+    \ new BigInteger(\"2\"), RoundingMode.UNNECESSARY));\n        try{\n         \
+    \   //exception will be thrown as 100 is not completely divisible\n          \
+    \  // 3, thus rounding is required, and\n```\n\n![](img/4935a2238ac80b2a11ee9e7e607ee959_122_0.png)"
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# Guava
+
+
+    ```
+
+    // RoundingMode is set as UNESSARY
+
+    System.out.println(BigIntegerMath.divide(BigInteger.TEN, new
+
+    BigInteger("3"), RoundingMode.UNESSARY));
+
+    }catch(Arithmetic e) {
+
+    System.out.println("Error: " + e.getMessage());
+
+    }
+
+
+    System.out.println("Log2(2): "+BigIntegerMath.log2(new
+
+    BigInteger("2"), RoundingMode.HALF_EVEN));
+
+
+    System.out.println("Log10(10):
+
+    "+BigIntegerMath.log10(BigInteger.TEN, RoundingMode.HALF_EVEN));
+
+
+    System.out.println("sqrt(100):
+
+    "+BigIntegerMath.sqrt(BigInteger.TEN).multiply(BigInteger.TEN),
+
+    RoundingMode.HALF_EVEN));
+
+
+    System.out.println("factorial(5): "+BigIntegerMath.factorial(5));
+
+    }
+
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the class using javac compiler as follows:
+
+
+    C:\Guava>javac GuavaTester.java
+
+
+    Now run the GuavaTester to see the result.
+
+
+    C:\Guava>java GuavaTester
+
+
+    See the result.
+
+
+    5
+
+    Error: Rounding necessary
+
+    Log2(2): 1
+
+    Log10(10): 1
+
+    sqrt(100): 10
+
+
+    ![](img/4935a2238ac80b2a11ee9e7e607ee959_123_0.png)'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '```
+
+    factorial(5): 120
+
+    ```'
+  merge: -1
+  pgno: 124
