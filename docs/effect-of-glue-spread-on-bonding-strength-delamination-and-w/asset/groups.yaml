@@ -1,0 +1,2193 @@
+- md: '
+
+    ## Effect of Glue Spread on Bonding Strength, Delamination, and Wood Failure of
+    Jabon Wood-Based Cross-Laminated Timber Using Cold-Setting Melamine-Based Adhesive
+
+
+    Yusup Amin<sup>1,2,*</sup>, Renaldi Prummo Adji<sup>2</sup>, Muhammad Rahadi Rahulis<sup>1</sup>,
+    Nareswo Nugroho<sup>2</sup>, Effendi Bakhtri<sup>2</sup>, Wahyu Diwanto<sup>1</sup>
+    and Lina Karlinasari<sup>2,*</sup>
+
+
+    **Affiliations and Correspondeence:**
+
+    *   <sup>1</sup>Research Center for Biomass and Bioproduction, National Research
+    and Innovation Agency, Cibubong 16911, West Java, Indonesia
+
+    *   <sup>2</sup>Department of Forest Products, Faculty of Forestry and Environment,
+    IPB University Bogor 1648, West Java, Indonesia
+
+    *   Correspondence: yusuf07@brin.go.id (Y.A.); karlinasari@apps.ipb.ac.id (L.K.)
+
+
+    **Abstract:** Cross-laminated timber (CLT) has become a popular engineered wood
+    due to its innovative properties and rapid development, which involves the use
+    of various species and adhesives. This study aims to evaluate the effect of glue
+    application on bonding strength, delamination, and wood failure of CLT made from
+    jabon wood and a cold-setting melamine-based adhesive at three different rates:
+    250, 280, and 300 g/m². The adhesive composed of melamine-formaldehyde adding
+    5% citric acid, 3% polymeric 4,4''-methylene diphenylisocyanate (pMDI), and 10%
+    wheat flour. Adding these ingredients increased the viscosity and decreased the
+    strength. The CLT samples, made using glue pressing in the melamine-based adhesive,
+    were evaluated in 16531/2021. The results reveal that a higher glue spread resulted
+    in a greater bonding strength, less delamination, and higher wood failure. The
+    glue spread showed more influence on wood failure compared with density and bonding
+    strength. The application of 300 g/m² glue spread on the CLT led to a product
+    that meets the required standards. The use of modified MDF produced a sustainable
+    product that could be a feasible option for CLT production in terms of its lower
+    heat energy consumption.
+
+
+    **Keywords:** bonding strength; citric acid; jabon wood; melamine-formaldehyde;
+    pMDI
+
+
+    Article
+
+
+    Citation: Amin, Y.; Adji, R.P.; Rahulis, M.A.R.; Nugroho, N.; Bakhtri, E.; Diwanto,
+    W.; Karlinasari, L. Effect of Glue Spread on Bonding Strength, Delamination, and
+    Wood Failure of Jabon Wood-Based Cross-Laminated Timber. 2023, *15*, 2349. https://doi.org/10.3390/polym1552349
+
+
+    Academic Editor: Hiroshi Yoshihara
+
+
+    Received: 20 February 2023
+
+    Revised: 13 March 2023
+
+    Accepted: 16 May 2023
+
+    Published: 17 May 2023
+
+
+    Copyright: 2023 by the authors. MDPI License, Basel, Switzerland. This article
+    is open access article distributed under the terms and conditions of the Creative
+    Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).
+
+
+    # 1. Introduction
+
+
+    Engineered wood products have gained popularity due to the increasing demand for
+    environmentally friendly building material and the growth of global development
+    [1–4]. Cross-laminated timber (CLT) is an example of this type of product, which
+    has emerged as a viable building material produced by laminating glued wood, with
+    each layer orthogonally and bonded with structural adhesives [5,6]. As a building
+    material for structural applications [7,8], it has high mechanical and physical
+    characteristics of cross-laminated timber (CLT) that are better than those other
+    types of manufactured products, such as glued lumber, oriented strand board.
+
+
+    Recently, CLT has gained increased interest in the local market, particularly
+    outside of Europe [4,9–11]. Even Japan and China have started CLT production,
+    whereas such as Malaysia and Indonesia, are in the early stages of development
+    [10,12]. Extensive research and development are required to produce CLT wood local
+    high-quality product. It is necessary to take into account factors such as raw
+    materials is a crucial prerequisite for ensuring quality availability, strength
+    properties, bonding characteristics, and durability when manufacturing CLT with
+    local wood species [12].
+
+
+    The production process can differ between countries owing to variations in tree
+    species and available adhesives. Therefore, the parameters involved in the production
+    from local tree species, including the type of adhesive, glue consumption, and
+    pressure, should be explored [7].
+
+
+    CLT production uses layers from wood species to enhance efficiency and improve
+    quality. The selection of adhesives is a crucial factor that requires careful
+    consideration. Types of adhesives used to fabricate CLT include phenol-rescinol,
+    melamine formaldehyde (MF), polymer cyanate, and polyurethane [13], while phenol-rescinol
+    and isocyanate are used in European production [2], and in Japan MF are extensively
+    used in the production of semi-exterior and exterior-grade wood [14]. The adhesive
+    is widely selected for CLT production because of its relatively low cost, bonding
+    lines, and moisture resistance [15]. However, the adhesives must be capable of
+    transferring loads and maintaining their strength and durability over the life
+    of the structure.
+
+
+    As a thermosetting adhesive, MF is generally applied with the use of hot presses
+    which involves additional energy costs. Marine et al. [18] showed that the curing
+    temperature of MF adhesive is 140–160 °C. Heat treatment during wood composite
+    produces formaldehyde emissions from raw material [19]. Innovation is needed to
+    modify MF-based adhesives to allow cold-pressing applications without degrading
+    the mechanical strength of CLT products. In this research, japon (Artocarpus đìnhophyllus
+    Rox.) and modified MF-based adhesive were used to manufacture CLT through cold-pressing
+    application [20].
+
+
+    To improve the production of cross-laminated timber (CLT), a new cold-setting
+    adhesive formula was developed by incorporating methylene formaldehyde (MF)-4,4''-methylene
+    diphenylisocyanate (PDI). PDI resin has demonstrated its effectiveness in producing
+    medium-density particle boards [23]. The optimal amount of adhesive used in CLT
+    manufacturing should also be considered a variable that determines mechanical
+    performance and cost [24]. This study aims to evaluate delamination, bonding strength,
+    and wood failure of CLT products made from jabon wood using cold-setting adhesive
+    based on MF and PDI spreads of 250 g/m², 280 g/m², and 300 g/m².
+
+
+    # 2. Materials and Methods
+
+
+    ### 2.1. Materials
+
+
+    The commercial melamine adhesive (MF-0) was supplied by PTolite, Proboling, East
+    Java. Wheat flour, technical-grade citric acid, and polymeric 4,4''-methylene
+    diphenylisocyanate (PDI) were obtained from the commercial market and provided
+    by the Laboratory National Research and Innovation Agency (BRIN), Cibubong, Indonesia.
+    The raw material for producing CLT was obtained from jabon wood in the Bogor area,
+    West Java. The wood had a density of 0.44 g/cm³ and moisture content of 12%. To
+    create CLT lumber, dimensions of 300 mm × 110 mm × 20 mm for length, width, and
+    thickness were prepared.
+
+
+    ### 2.2. Preparation of Melamine-Based Adhesive
+
+
+    Two types of melamine-based adhesive were prepared: a commercial adhesive as control
+    (MF-0) and the modified (MF-1). To modify the chemical adhesive (MF-1), several
+    components were added: wheat flour as filler, citric acid as catalyst, and PDI
+    as a cross-linker. Citric acid and PDI were added based on the solid content of
+    the adhesive: 5% and 3%, respectively. Wheat flour comprised 10% of the total
+    mixture. The resulting mixture was manually stirred for 1-2 min at 27 ± °C, yielding
+    a suitable cold-setting melamine-based adhesive.
+
+
+    ### 2.3. Characterization of Adhesive
+
+
+    A digital pH meter from Horiba, Kyoto, Japan was used to measure the pH levels
+    of MF-0 and MF-1. About 50 g of the adhesive sample was placed in a 100 ml glass
+    beaker, and the pH value was recorded 3-5 min after the measurement was repeated
+    3 times [26].
+
+
+    To determine the nonvolatile solids content of MF-0 and MF-1, 2 g of each adhesive
+    was placed in a disposable foil and dried for three hours at a temperature of
+    105 °C. Following the drying process, the weight of the oven-dried adhesive was
+    measured by its initial weight, and the solids content was measured in triplicate
+    [27].
+
+
+    To measure the viscosity of adhesive, around 20 ml of each adhesive was placed
+    in a measuring cup (Anton Paar, Austria) and placed onto a rotational rheometer
+    (RheoQC, Anton Paar). The average viscosity of the adhesive was measured using
+    a spindle-type cylinder, at a shear rate of 15 s/s and a temperature of 25 °C.
+    The viscosity value was obtained using Rheocom software (Version 1.30, Anton Paar,
+    Austria); the dynamic viscosity and cohesion of strength-based adhesives were
+    measured at a constant shear rate of 150 s/s for a duration of 200 min.
+
+
+    To determine the gel time of the melamine-based adhesives, a gel meter (Tech GT-6,
+    Colevern, Franklin Hills, IL, USA) was utilized. A sample of the adhesive was
+    placed in a tube, and a needle was submerged in it. The time for the adhesive
+    to solidify at 100 ± 3 °C was measured and recorded in triplicate. The gel times
+    of MF-0 and MF-1 were also verified using the same method. In case, approximately
+    50 g of adhesive was placed in the test tube with the needle submerged in the
+    sample, and the time for the adhesive to solidify at 100 ± 3 °C was recorded.
+
+
+    The functional groups present in the melamine-based adhesives were analyzed using
+    Fourier-infrared spectroscopy (FTIR) with the Spectrum6 instrument from PerkinElmer,
+    Hopkins, MA, USA. The MF-0 and MF-1 samples were measured at wavenumbers of 4200
+    and 400 cm⁻¹ with a resolution of 4 cm⁻¹ and 16 scans per sample. The adhesive
+    spectrum was corrected using baseline-normalization with Ter 10.3 software from
+    PerkinElmer, Hopkins, MA, USA [27].
+
+
+    To investigate the thermo-mechanical properties of the melamine-based adhesives,
+    a dynamic mechanical analysis (DMA 8000, Perkin Elmer Inc.) was conducted. The
+    adhesives were used to bond two Whatman fiber papers with a glue spread of 300
+    g/m² to create a specimen with dimensions of 50 mm × 8 mm × 0.2 mm. Before the
+    DMA analysis, the specimens were pre-cured in an oven at 50 °C for 5 min. The
+    storage modulus (E''), 1 Hz, a strain level of 0.01%, and tan delta of each specimen
+    were measured using a frequency of 1 Hz and a heating rate of 5 °C/min within
+    a scanning range of 20-60 °C [28].
+
+    '
+  mdcn: '
+
+
+    ## 冷固型三胺类胶剂涂布量对Jabon木基胶层木材粘接强度、分层及木材失效的影响
+
+
+    Yusup Amin<sup>1,2,*</sup>, Renaldi Prummo Adji<sup>2</sup>, Muhammad Rahadi Rahulis<sup>1</sup>,
+    Nareswo Nugroho<sup>2</sup>, Effendi Bakhtri<sup>2</sup>, Wahyu Diwanto<sup>1</sup>
+    和 Lina Karlinasari<sup>2,*</sup>
+
+
+    **单位与联系方式：**
+
+    *   <sup>1</sup>生物质与生物生产研究中心，国家研究与创新机构，Cibubong 16911, West Java, Indonesia
+
+    *   <sup>2</sup>林产品系，森林与环境学院，IPB大学，Bogor 1648, West Java, Indonesia
+
+    *   联系邮箱：yusuf07@brin.go.id (Y.A.); karlinasari@apps.ipb.ac.id (L.K.)
+
+
+    **摘要：** 交叉层积材（CLT）因其创新特性和快速发展已成为一种流行的工程木材，涉及多种木材种类和胶剂的使用。本研究旨在评估在使用Jabon木和冷固型三胺类胶剂时，在三种不同涂布率（250、280和300
+    g/m²）下，胶水应用对CLT粘接强度、分层和木材失效的影响。该胶剂由三胺甲醛、添加5%柠檬酸、3%聚聚型4,4''-亚甲基二苯异氰酸酯（pMDI）和10%小麦粉组成。这些成分的加入增加了粘度并降低了强度。根据16531/2021标准对使用三胺类胶剂压胶工艺制成的CLT样品进行评估。结果显示，较高的胶涂布量会导致更大的粘接强度、更少的分层和更高的木材失效。与密度和粘接强度相比，胶涂布量对木材失效的影响更大。在CLT上应用300
+    g/m²的胶涂布量使其产品符合标准。使用改性MDF生产了一种可持续产品，从较低的热能消耗来看，它是CLT生产的一种种可行方案。
+
+
+    **关键词：** 粘接强度；柠檬酸；Jabon木；三胺甲醛；pMDI
+
+
+    文章
+
+
+    引用：Amin, Y.; Adji, R.P.; Rahulis, M.A.R.; Nugroho, N.; Bakhtri, E.; Diwanto, W.;
+    Karlinasari, L Effect of Glue Spread on Bonding Strength, Delamination, and Wood
+    Failure of Jabon Wood-Based Cross-Laminated Timber. 2023, *15*, 2349. https://doi.org/10.3390/polym1552349
+
+
+    学术编辑：Hiroshi Yoshihara
+
+
+    收稿：2023年2月20日
+
+    修回：2023年3月13日
+
+    接收：2023年5月16日
+
+    发表：2023年5月17日
+
+
+    版权：2023由作者所有。MDPI许可，瑞士巴塞尔。本文是根据知识共享署名许可（CC BY）协议（https://creativecommons.org/licenses/by/4.0/）分发的开放获取文章。
+
+
+    # 1. 引言
+
+
+    由于对环保建筑材料的需求日益增加以及全球发展的发展[1–4]，工程木制品已变得流行。交叉层积材（CLT）是这类产品的一种示例，它是一种通过胶合木材层压生产的可行建筑材料，每层相互正交排列并用结构胶水粘合[5,6]。作为结构应用的建筑材料[7,8]，其具有的交叉层积材（CLT）机械和物理学特性优于胶合木材、定向刨板等其他类型。
+
+
+    最近，CLT在欧洲以外的市场引起了关注[4,9–11]。即使日本已开始生产CLT，而马来西亚和印度尼西亚等国处于发展早期[10]。需要大量的研究和开发来生产高质量的本地CLT产品。必须考虑原材料等因素，以确保质量、强度、粘接特性和耐久性[12]。
+
+
+    由于树种种类和可用胶剂的不同，各国的生产工艺可能有所不同。因此，应探索本地树种生产CLT的参数，包括胶剂类型、胶水消耗量和压力[7]。
+
+
+    使用木材层生产CLT以提高效率并改善质量。胶剂的选择是一个关键的因素。用于制造CLT的胶剂包括酚醛、三胺甲醛（MF）、聚氰酸盐和聚氨酯[13]，而在欧洲，酚醛和异氰酸盐被广泛使用[2]。胶剂被广泛用于CLT生产是因为其成本相对较低、粘接良好且耐湿性[14]。然而，作为热固性胶剂，MF通常采用热压，这涉及额外的能源成本。Marine等[18]显示三胺胶剂的固化温度为140–160
+    °C。热处理期间会产生甲醛释放[19]。需要改性三胺类胶剂以在不降低CLT产品机械强度的情况下进行冷压应用。在本研究中，使用了Artocarpus Rox.
+    japon和改性三胺类胶剂来制造CLT[20]。
+
+
+    为了提高交叉层积材（CLT）的生产，开发了一种含有亚甲基甲醛（MF）4,4''-亚甲基二苯异氰酸酯（PDI）的新冷固型胶剂配方。PDI树脂在生产中密度密度板方面证明了其有效性[23]。制造CLT时使用的胶剂量也应是决定机械性能和成本的变量。本研究旨在评估基于MF和PDI的冷固型胶剂制成的Jabon木CLT产品的分层、粘接强度和木材失效，涂布量分别为250
+    g/m²、280 g/m²和300 g/m²。
+
+
+    # 2. 材料与方法
+
+
+    ### 2.1. 材料
+
+
+    商业三胺胶（MF-0）由PTolite, Proboling, East Java供应。小麦粉、工业级柠檬酸和聚型4,4''-亚甲基二苯异氰酸酯（PDI）从市场上获得并由国家研究与创新机构（BRIN），Cibubong,
+    Indonesia提供。生产CLT的原材料来自西爪Bogor地区的Jabon木。木材密度为0.44 g/cm³，含水量为12%。为了制作CLT木材，准备了长度300
+    mm × 宽度110 mm × 厚度20 mm的尺寸。
+
+
+    ### 2.2. 三胺类胶剂的制备
+
+
+    准备了两种三胺类胶剂：作为对照的商业胶（MF-0）和改性胶（MF-1）。为了改性化学胶剂（MF-1），添加了多种成分：小麦粉作为填充剂、柠檬酸作为催化剂以及PDI作为交联剂。柠檬酸和PDI的5%和3%。小麦粉占总混合物的10%。混合物在27
+    ± °C下手动搅拌1-2分钟，得到合适的冷固型三胺类胶剂。
+
+
+    ### 2.3. 胶剂的表征
+
+
+    使用日本京都Horiba数字pH计测量MF-0和MF-1的pH水平。将约50 g胶剂样品放在100 ml玻璃杯中，3-5分钟后记录pH值，重复3次[26]。
+
+
+    为了确定MF-0和MF-1的非挥发性固体含量，将每种胶剂2 g放在箔纸并在105 °C下干燥3小时。干燥后，通过初始重量测量烘干胶剂的重量，并三次测量固体含量[27]。
+
+
+    为了测量胶剂的粘度，将每种胶剂的约20 ml放在量杯（德国Anton Paar）中并放在旋转黏度计（RheoQC, Anton Paar）上。使用桨型圆柱在剪切速率15
+    s/s和温度25 °C下测量胶剂的平均粘度。使用Rheocom软件（版本1.30, Anton Paar）获得粘度值；在150 s/s的恒定剪切速率下持续200分钟测量强度型胶剂的动态粘度和内聚力。
+
+
+    为了确定三胺类胶剂的凝胶时间，利用凝胶计（Tech GT-6, Colevern, Franklin Hills, IL, USA）。将胶剂样品放在管中，并将针浸入。测量胶剂在100
+    ± 3 °C下固化的时间并记录三次。MF-0和MF-1的凝胶时间也使用相同的方法进行了验证。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # Effect of Glue Spread on Bonding Strength, Delamination, and Wood Failure
+    of Jabon Wood-Based Cross-Laminated Timber Using Cold-Setting Melamine-Based Adhesive
+
+
+    Yusup Amin<sup>1,2,*</sup> Renaldi Prummo Adji<sup>2</sup>, Muhammad Rahadi Rahulis<sup>1</sup>,
+    Nareswo Nugroho<sup>2</sup> Effendi Bakhtri<sup>2}, Wahyu Diwanto<sup>1</sup>
+    and Lina Karlinasari<sup>2,*</sup>
+
+
+    +   1 Research Center for Biomass and Bioproduction, National Research and Innovation
+    Agency, Cibubong 16911, West Java, Indonesia
+
+    2 Department of Forest Products, Faculty of Forestry and Environment, IPB University
+    Bogor 1648, West Java, Indonesia
+
+    Correspondence: yusuf07@brin.go.id (Y.A.); karlinasari@apps.ipb.ac.id (L.K.)
+
+
+    Abstract: Cross-laminated timber (CLT) has become a popular engineered wood due
+    to its innovative properties and rapid development, which involves the use of
+    various species and adhesives. This study aims to evaluate the effect of glue
+    application on bonding strength, delamination, and wood failure of CLT made from
+    jabon wood and a cold-setting melamine-based adhesive at three different rates:
+    25, 280, and 300 g/m². The adhesive composed of melamine-formaldehyde adding 5%
+    citric acid, 3% polymeric 4,4''-methylene diphenylisocyanate (pMDI), and 10% wheat
+    flour. Adding these ingredients increased the viscosity and decreased the strength.
+    The CLT samples, made using glue pressing in the melamine-based adhesive, were
+    evaluated in 16531/2021. The results reveal that a higher glue spread resulted
+    in a greater bonding strength, less delamination, and higher wood failure. The
+    glue spread showed more influence on wood failure compared with density and bonding
+    strength. The application of 300 g/m² glue spread on the CLT led to a product
+    that meets the required standards. The use of modified MDF produced a sustainable
+    product that could be feasible option for CLT production in terms of its lower
+    heat energy consumption.
+
+
+    **Keywords:** bonding strength; citric acid; jabon wood; melamine-formaldehyde;
+    pMDI
+
+
+    Article
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_0_0.png)
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_0_1.png)
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_0_2.png)
+
+
+    Citation: Amin, Y.; Adji, R.P.; Rahulis, M.A.R.; Nugroho, N.; Bakhtri, E.; Diwanto,
+    W.; Karlinasari, L. Effect of Glue Spread on Bonding Strength, Delamination, and
+    Wood Failure of Jabon Wood-Based Cross-Laminated Timber. 2023, *15*, 2349. https://doi.org/10.3390/polym1552349
+
+
+    Academic Editor: Hiroshi Yoshihara
+
+
+    Received: 20 February 2023
+
+    Revised: 13 March 2023
+
+    Accepted: 16 May 2023
+
+    Published: 17 May 2023
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_0_3.png)
+
+
+    Copyright: 2023 by the authors. MDPI License, Basel, Switzerland. This article
+    is open access article distributed under the terms and conditions of the Creative
+    Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).
+
+
+    # 1. Introduction
+
+
+    Engineered wood products have gained popularity due to the increasing demand for
+    environmentally friendly building material and the growth of global development
+    [1–4]. Cross-laminated timber (CLT) is an example of this type of product, which
+    has emerged as a viable building material produced by laminating glued wood, with
+    each layer orthogonally and bonded with structural adhesives [5,6]. As a building
+    material for structural applications [7,8], it has high mechanical and physical
+    characteristics of cross-laminated timber (CLT) are better than those other types
+    of manufactured products, such as glued lumber, oriented strand board
+
+
+    Recently, CLT has gained increased interest in the local market, particularly
+    outside of Europe [4,9–11]. Even Japan and China have started CLT production,
+    whereas such as Malaysia and Indonesia, are in the early stages of development
+    [10,12]. Extensive research, and development are required to produce CLT wood
+    local high-quality product. It is necessary to take into account factors such
+    as raw materials is a crucial prerequisite for ensuring quality
+
+
+    Polymers, 2023, 15, 2349. https://doi.org/10.3390/polym1552349
+
+
+    https://www.mdpi.com/journal/polymers'
+  - '[PAGE 1]
+
+
+    Polymers 2023, 15, 2349
+
+
+    2 of 13
+
+
+    availability, strength properties, bonding characteristics, and durability when
+    manufacturing CLT with local wood species [12]. The production process can differ
+    between countries owing to variations in tree species and available adhesives.
+    Therefore, the parameters involved in the production from local tree species,
+    including the type of adhesive, glue consumption, and pressure, should be explored
+    [7]
+
+
+    CLT production uses layers from wood species to enhance efficiency and improve
+    quality. The selection of adhesives is a crucial factor that requires careful
+    consideration. The types of adhesives used to fabricate CLT include phenol-resorcinol,
+    melamine formaldehyde (MF), emulsion polymer cyanate, and polyurethane [13], while
+    phenol-resorcinol and isocyanate adhesives are used in European production [2,11],
+    and in Japan [2]. MF are extensively used in the production of semi-exterior and
+    exterior-grade wood-based panels [14]. The adhesive is widely selected by glue
+    or CLT production because of its relatively low cost, transparent bonding lines,
+    heat resistance and moisture [15,16]. However, the adhesives must be capable of
+    transferring loads and maintaining their strength and durability over the life
+    of the structure [17].
+
+
+    As a thermosetting adhesive, MF is generally applied with the use of hot presses,
+    which involves additional costs due to heat energy. Marine et al. [18] showed
+    that the curing temperature of MF adhesive is 140–160 °C. Heat treatment during
+    wood composite produces formaldehyde, which is from adhesives or raw material
+    [19,20].
+
+
+    Innovation is needed to modify MF-based adhesives to allow cold-pressing applications
+    with reduced formaldehyde emissions without degrading the mechanical strength
+    of the CLT products. In this research, japon (Antholocarpus Rox. Mix.), and a
+    modified MF-based adhesive were used to manufacture CLT through a cold-pressing
+    application process. Japon wood is a promising candidate for engineered wood products
+    with high uniformity within local communities [22]. In order to improve the production
+    of cross-laminated timber (CLT), a new cold-setting adhesive formula was developed
+    by incorporating methylene formaldehyde (MF) polymer-4,4-methylene diphenyl diisocyanate
+    (PDI). The PDI resin has demonstrated its effectiveness in producing panel products,
+    particle boards and medium-density fiber [23,24]. The optimal amount of adhesive
+    used in CLT manufacturing should also be a considered variable that determines
+    the mechanical performance and production cost [25]. This study aims to evaluate
+    the delamination, bonding strength, and wood failure of CLT products made from
+    japon wood using the cold-setting adhesive based on MF and PDI spreads of 250
+    g/m², 280 g/m², and 300 g/m².
+
+
+    # 2. Materials and Methods
+
+
+    # 2.1. Materials
+
+
+    The commercial melamine adhesive (MA-04) was supplied by PT Pamolite Adhesive,
+    Proboling, East Java, Indonesia. Wheat flour, technical-grade citric acid bond,
+    and polymeric 4,4-methylene diphenyl diisocyanate (DI) were obtained from the
+    commercial market and provided by the Integrated Laboratory of Bioproducts (libs),
+    National Research and Innovation Agency (BRIN), Cibinong, Indonesia. The raw material
+    for producing CLT was obtained from japon wood, which was obtained from a community
+    forest in the Bogor area of West Java. The wood had a density of 0.44 g/cm³ and
+    a moisture content of 12 ± 2%. To create the CLT, lumber samples with dimensions
+    of 300 mm × 110 mm × 20 mm and 110 mm × 110 mm × 20 mm for the length, width,
+    and thickness were prepared.'
+  - '[PAGE 2]
+
+
+    # 2.2. Preparation of Melamine-Based Adhesive
+
+
+    Two types of melamine-based adhesive were prepared,, i.e., a commercial adhesive
+    as the control (MF-0) and the modified (MF-1) formulation. To modify the chemical
+    melamine adhesive (MF-0), several components were added (MF-1), including wheat
+    flour as a filler, citric acid (20 wt%) as a catalyst, and PMDI (96.2 wt%) as
+    a cross-linker. Citric acid and PMDI were added based on the solid content of
+    the adhesive: 5% and 3%, respectively. Wheat flour comprised as much as 10% of
+    the total mixture. The resulting mixture was manually stirred for 1-2 min at 27
+    ± 2 °C, yielding a cold-setting melamine-based adhesive suitable for LTE.
+
+
+    # 2.3. Characterization of Adhesive
+
+
+    A digital pH meter from Laqua, Horiba, Kyoto, Japan was used to measure the pH
+    levels of MF-0 and MF-1. About 50 g of the adhesive sample was placed in a 100
+    ml glass beaker, and the pH value was recorded 3-5 min after, the measurement
+    was repeated 3 times [26].
+
+
+    To determine the nonvolatile solids content of MF-0 and MF-1, the weight 2 g of
+    each adhesive was placed in a disposable foil container and dried for three hours
+    at a temperature of 105 °C. Following the drying process, the weight of the oven-dried
+    adhesive was measured by its initial weight [27], and the solids content was measured
+    in triplicate.
+
+
+    To measure the viscosity of adhesive, around 20 ml of each adhesive was placed
+    in a measuring cup (Anton Paar Gra., Austria) and placed onto a rotational rheometer
+    (RheoQC, Anton Paar Gra.). The average viscosity of the adhesive was measured
+    using a spindle-type cylinder (CC, number), at a shear rate of 15 s/s and a temperature
+    of 25 °C. The viscosity value was obtained using Rho-Compa software (Version 1.30,
+    Anton Paar Gra., Austria), the dynamic viscosity and cohesion of strength-based
+    adhesives were measured at a constant shear rate of 150 s/s for a duration of
+    200 min.
+
+
+    To determine the gel time of the melamine-based adhesives, a gel meter (Tech GT-6,
+    Colevern, Franklin Hills, IL, USA) was utilized. A sample of the adhesive was
+    placed in a tube, and a needle was submerged in it. The time for the adhesive
+    to solidify at 100 ± 3 °C was measured and recorded in triplicate. The gel times
+    of MF-0 and MF-1 were also verified using the same method. In case, approximately
+    50 g of adhesive was placed in the test tube with the needle submerged in the
+    sample, and the time for the adhesive to solidify at 100 ± 3 °C was recorded and
+    recorded in.
+
+
+    The functional groups present in the melamine-based adhesives were analyzed using
+    Fourier-infrared spectroscopy (FTIR) with the Spectrum6 instrument from PerkinElmer,
+    Hopkins, MA, USA. The MF-0 and MF-1 samples were measured at wavenumbers of 4200
+    and 400 cm⁻¹ with a resolution of 4 cm⁻¹ and 16 cm per sample. The adhesive spectrum
+    was corrected using baseline-normalization for it. Ter 10.3 software from PerkinElmer,
+    Hopkins, MA, USA [27].
+
+
+    To investigate the thermo-mechanical properties of the melamine-based adhesives,
+    a dynamic mechanical analysis (DMA 8000, Perkin Elmer Inc.) was conducted. The
+    adhesives were used to bond two Whatman fiber papers with a glue spread of 300
+    g/m² to create a specimen with dimensions of 50 mm × 8 mm × 0.2 mm. Before the
+    DMA analysis, the specimens were pre-cured in an oven at 50 °C for 5 min. The
+    storage modulus (E''), 1 Hz, a strain level of 0.01%, and tan delta of each specimen
+    were measured using a frequency of 1 Hz and a heating rate of 5 °C/min within
+    a scanning range of 20-60 °C [28].'
+- md: '
+
+    ## 2.4. Preparation of CLT
+
+
+    The fabrication of CLT was based on EN 16531:2021 for Timber Structures—CLT Requirements
+    [29]. The three-layer jabon CLT was manufactured using melamine-based adhesives.
+    In this research, longitudinal laminations were constructed from beech wood measuring
+    330 mm × 110 mm × 20 mm, with a total of 18 lumbers used. Transverse laminations,
+    consisting of 27 lumbers of 110 mm × 110 mm in size were also employed. Control
+    CLT bonded with commercial MF adhesive—was prepared under different glue spreads
+    of 250, 280, and 300 g/m² cold pressing at 1 MPa under clamping for 2-4 h and
+    heat treatment at 100 °C (Figure 1). The MF-0 itself could not be used as a cold-setting
+    adhesive; therefore, the CLT had to be prepared using hot-pressing (heat treatment).
+    In contrast, CLT-bonded MF-1 was prepared using a cold press at 1 MPa for 2 h,
+    based on preliminary trials and following previous research [12,30]. As with the
+    MF-0 adhesive, different glue spreads were applied for MF-1 bonded CLT, namely
+    250, 280, and 300 g/m². The preparation of CLT bonded with cold-setting melamine-based
+    adhesives (MF-1) is illustrated in Figure 2.
+
+
+    (img/6decd15101152cf788f8cb0286b2f312_3_0.png)
+
+
+    - Commercial MF adhesive (MF-0)
+
+    - Preparation of Jabon lumber
+
+    - Glue spreading (250, 280, 300 g/m²)
+
+    - Layering of lumber (3 layers, perpendicular to adjacent layers)
+
+    - MF-0 bonded CLT
+
+    - Heat treatment (100 °C, 2h)
+
+    - Pressing and Clamping (1 MPa)
+
+    Figure 1. The preparation of CLT bonded with MF-0 using heat treatment.
+
+
+    (img/6decd15101152cf788f8cb0286b2f312_3_1.png)
+
+
+    - Cold-setting melamine-based adhesive (MF-1): MF-0 + citric acid + pMDI + wheat
+    flour
+
+    - Preparation of Jabon lumber
+
+    - Glue spread (250, 280, 300 g/m²)
+
+    - Cold-setting melamine-based CLT
+
+    - Cold-pressing of CLT (1 MPa, 2 h)
+
+    - Layering of lumber (3 layers, perpendicular to adjacent layers)
+
+    Figure 2. The preparation of CLT bonded with MF-1 using cold pressing.
+
+
+    ## 2.5. Evaluation of CLT Properties
+
+
+    To conduct delamination tests in accordance with EN 16531:2021 [29], the CLT samples
+    were cut into 100 mm × 100 mm × 60 mm dimensions. Three specimens were tested
+    for each glue application, and they were submerged in ambient-temperature water
+    within a pressure vessel. A vacuum of 85 kPa was applied and maintained for 30
+    min before releasing it applying a pressure of 600–700 kPa, which was held for
+    2 h. After that, the test pieces were dried for approximately 12–20 min at a temperature
+    of 65 °C. For each specimen, the total delamination and maximum delamination were
+    recorded, and the percentage of delamination was calculated using Equations (1)
+    and (2) [12].
+
+
+    $$Delamination_{tot} = 100 \frac{tot_{delam}}{tot_{glue\_line}} (1)$$
+
+
+    $$Delamination_{max} = 100 \frac{max_{delam}}{glue\_line} (2)$$
+
+
+    where $tot_{delam}$ is the total delamination length, $tot_{glue\_line}$ is the
+    sum of all glue lines in a delamination specimen, $max_{delam}$ is the maximum
+    delamination length, and $glue\_line$ is the perimeter of one glue line in a delamination
+    specimen.
+
+
+    An assessment of the bonding strength of cross-laminated timber (CLT) was conducted
+    by performing a block-shear stress analysis using a previously published method
+    [31]. The CLT was cut into a block-shear sample, as demonstrated in Figure 3,
+    and the blockshear shear strength was tested utilizing a 50 kN universal testing
+    machine (UTM 50 kN, Shimadzu, Kyoto) at a crosshead speed of 2 mm/min. Additionally,
+    in accordance with the EN 16531 standard [29], the bonding strength was evaluated,
+    and three blockshear samples were tested for each glue spread.
+
+
+    (img/6decd15101152cf788f8cb0286b2f312_4_0.png)
+
+
+    Figure 3. Illustration of the block-shear test of CLT based on Zhou et al. [31]
+    (a), and block shear testing (b).
+
+
+    ## 2.6. Statistical Analysis
+
+
+    The study compared the average values of delamination, bonding strength, and width
+    of failure of cross-laminated timber (CLT) produced from MF-1 using analysis of
+    variance (ANOVA). The Duncan range test at a significance level of $\alpha=0.05$
+    was performed to identify the effect of glue spread on delamination and bonding
+    strength. The statistical analysis was carried out with SPSS software (SPSS Inc.,
+    Chicago, USA).
+
+
+    ## 3. Results and Discussion
+
+
+    ### 3.1. Properties of Cold-Setting Melamine-Based Adhesives
+
+
+    Table 1 shows the characteristics of adhesives made from melamine. The nonvolatile
+    solids content of MF-0 and MF-1 was about 51 and 48, respectively. This represents
+    the total solids that contribute to the bonded products. According to a previously
+    published study [32], the nonvolatile solids content of melamine-based adhesives
+    increases with a higher concentration of melamine. The inclusion of citric acid,
+    pMDI, and wheat flour in MF-1 resulted in a reduction of the solids content. This
+    outcome aligns with a previous study, which reported a decrease in the solids
+    content of melamine-based adhesives when mixed with NH4Cl as a hardener.
+
+
+    Table 1. Properties of cold-setting melamine-based adhesives.
+
+
+    | Type of Adhesive | Solids Content (%) | Gelation Time (min, T=100 °C) | Viscosity
+    (mPa·s, T=25 °C) | pH |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | MF-0 | 51.89 ± 0.36 | 30.27 ± 0.13 | 484.51 ± 3.69 | 7.67 ± 0.58 |
+
+    | MF-1 | 48.58 ± 0.08 | 6.90 ± 0.10 | 570.45 ± 14.80 | 6.67 ± 0.58 |
+
+
+    The gelation time in wood adhesives refers to the duration for the adhesive to
+    form a gel. This gel formation creates stronger connections between the molecules,
+    resulting in stronger adhesion. As the gel forms, the viscosity of the adhesive
+    increases, and the adhesive becomes less mobile. This point, where the viscosity
+    is exceptionally high and the adhesive forms a gel, is known as the gel point.
+    The gelation time of MF-0 was found to be five times longer than that of MF-1,
+    while this difference was attributed to the use of citric acid catalyst or pMDI
+    cross-linker. MF-1 was formed by adding citric acid and pMDI. The addition of
+    these catalysts and cross-linkers promotes the formation of longer chains. This
+    finding is in line with a previous study that reported a reduction in the gelation
+    time of melamine-based adhesives when mixed with NH4Cl as a hardener. A study
+    by [31] reported that incorporating 1–2% pMDI can reduce the gel time of melamine-based
+    adhesives.
+
+
+    The inclusion of 5% citric acid and 3% pMDI in MF-1 resulted in a lower pH for
+    MF-1 compared to that of MF-0, with values of 6.67 and 7.67, respectively. This
+    difference can be attributed to the presence of the carboxylic acid group (–COOH)
+    in citric acid and the isocyanate group (–NCO) in pMDI, which can react with formaldehyde
+    (HCHO) and the methyl group (–CH2OH) to form a cross-linked polymer in melamine-based
+    adhesives.
+
+
+    The average viscosity is a measure of the resistance to pressure. In the case
+    of liquid adhesives, the average viscosity is related to the thickness of the
+    liquid. The control adhesive, MF-0, had a viscosity of 484.51 mPa·s, while the
+    viscosity was higher for MF-1 due to the formation of a larger molecular chain
+    from the interactions of citric acid and pMDI. A recent study [35] reported that
+    the viscosity of MF-based adhesives increased by adding 2% pMDI.
+
+
+    The dynamic viscosity and cohesion strength of melamine-based adhesives were analyzed
+    using a rotational rheometer, as depicted in Figure 4a. In line with the average
+    viscosity, dynamic viscosity of MF-1 was higher than that of MF-0. The dynamic
+    was in the range of 545–587 mPa·s during 200 min while MF-0 was around 473–489
+    mPa·s. This result shows that the viscosity of MF-1 increased remarkably compared
+    with that of MF-0 in 200 min. Furthermore, the molecules of MF-0 were relatively
+    stable for 200 min. The cohesion strength of an adhesive relates to
+
+    '
+  mdcn: '
+
+
+    ## 2.4. CLT 的制备
+
+
+    CLT 的制造基于木结构标准 EN 16531:2021—CLT 要求 [29]。三层皂木（jabon）CLT 使用甲醛树胶剂制造。在研究中，纵向层胶由尺寸为
+    330 mm × 110 mm × 20 mm 的山毛木组成，总共使用了 18 根木材。还使用了由 27 根尺寸为 110 mm × 110 mm 的木材组成的横向层胶。用用
+    MF 胶剂粘接的 CLT 在 250、280 和 300 g/m² 的不同胶涂量下，在 1 MPa 压力下冷压 2-4 小时，并在 100 °C 下进行热处理制备（图
+    1）。MF-0 本身不能作为冷固胶剂；因此，CLT 必须通过热压（热处理）来制备。相比之下，根据初步试验和之前的研究 [12,30]，粘接 MF-1 的 CLT
+    是在 1 MPa 下冷压 2 小时制的。与 MF-0 胶剂一样，MF-1 粘接 CLT 使用了不同的胶涂量，分别为 250、280 和 300 g/m²。用冷固甲醛树胶剂（MF-1）粘接的
+    CLT 制备过程如图 2 所示。
+
+
+    (img/6decd15101152cf788f8cb0286b2f312_3_0.png)
+
+
+    - 商用 MF 胶剂 (MF-0)
+
+    - 皂木材的制备
+
+    - 胶涂量 (250, 280, 300 g/m²)
+
+    - 木材层层（3 层，与相邻层垂直）
+
+    - MF-0 粘接 CLT
+
+    - 热处理 (100 °C, 2h)
+
+    - 压力与夹紧 (1 MPa)
+
+    图 1. 使用热处理制备 MF-0 粘接的 CLT。
+
+
+    (img/6decd15101152cf788f8cb0286b2f312_3_1.png)
+
+
+    - 冷固甲醛树胶剂 (MF-1): MF-0 + 柠檬酸 + pMDI + 小麦粉
+
+    - 皂木材的制备
+
+    - 胶涂量 (250, 280, 300 g/m²)
+
+    - 冷固甲醛树胶 CLT
+
+    - CLT 的冷压 (1 MPa, 2 h)
+
+    - 木材层层（3 层，与相邻层垂直）
+
+    图 2. 使用冷压制备 MF-1 粘接的 CLT。
+
+
+    ## 2.5. CLT 性能评估
+
+
+    为了根据 EN 16531:2021 [29] 进行层间剥离测试，将 CLT 样本切割成 100 mm × 100 mm × 60 mm。每种胶涂量测试三个试样，并将其浸没在压力容器内的常温水中。应用
+    85 kPa 的真空并保持 30 分钟，然后释放并施加 600–700 kPa 的压力，保持 2 小时。之后，测试试件在 65 °C 温度下干燥约 12–20
+    分钟。对于每个试样，记录了总剥离和最大剥离量，并使用公式 (1) 和 (2) 计算剥离百分比 [12]。
+
+
+    $$Delamination_{tot} = 100 \frac{tot_{delam}}{tot_{glue\_line}} (1)$$
+
+
+    $$Delamination_{max} = 100 \frac{max_{delam}}{glue\_line} (2)$$
+
+
+    其中 $tot_{delam}$ 是总剥离长度，$tot_{glue\_line}$ 是剥离试样中所有胶线的和，$max_{delam}$ 是最大剥离长度，$glue\_line$
+    是剥离试样中一条胶线的周长。
+
+
+    通过之前发表的方法 [31] 对交叉层胶木 (CLT) 的粘接强度进行评估。将 CLT 切成剪切试样（如图 3 所示），使用 50 kN 万用试验机（50
+    kN, Shimadzu, Kyoto）在 2 mm/min 的横跨速度下进行剪切测试。此外，根据 EN 16531 标准，评估了三个剪切试样的粘接强度。
+
+
+    (img/6decd15101152cf788f8cb0286b2f312_4_0.png)
+
+
+    图 3. 基于 Zhou 等 [31] 的 CLT 剪切测试图 (a) 和 (b)。
+
+
+    ## 2.6. 统计分析
+
+
+    该研究使用方差分析 (ANOVA) 比较了 MF-1 生成的交叉层胶木 (CLT) 的剥离平均值、粘接强度和失效宽度。在 $\alpha=0.05$ 的显著水平下进行
+    Duncan 测试，以确定胶涂量对剥离和粘接强度的影响。使用 SPSS 软件（SPSS Inc., Chicago）进行统计分析。
+
+
+    ## 3. 结果与讨论
+
+
+    ### 3.1. 冷固甲醛胶剂的性能
+
+
+    表 1 显示了胶剂的特性。MF-0 和 MF-1 的固体含量分别为 51 和 48。这代表了粘接产品的总固体。根据之前发表的研究 [32]，甲醛胶剂的固体含量随甲醛浓度的增加而增加。MF-1
+    中加入柠檬酸、pMDI 和小麦粉导致了固体含量的减少。这一结果与之前的研究一致，即加入 NH4Cl 作为固化时甲醛胶剂的固体含量减少。
+
+
+    表 1. 冷固甲醛胶剂的性能。
+
+
+    | 胶剂类型 | 固体含量 (%) | 凝胶时间 (min, T=100 °C) | 粘度 (mPa·s, T=25 °C) | pH |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | MF-0 | 51.89 ± 0.36 | 30.27 ± 0.13 | 484.51 ± 3.69 | 7.67 ± 0.58 |
+
+    | MF-1 | 48.58 ± 0.08 | 6.90 ± 0.10 | 570.45 ± 14.80 | 6.67 ± 0.58 |
+
+
+    木胶剂中的凝胶时间是指胶剂形成胶的时间。这种胶的形成建立了分子间更强的连接，导致更强的粘接。随着胶的形成，胶剂的粘度增加，流动性变差。这种粘度极高且胶剂形成胶的点被称为凝胶点。发现
+    MF-0 的凝胶时间是 MF-1 的五倍，这种差异归于使用柠檬酸催化剂或 pMDI 交联剂。MF-1 通过添加柠檬酸和 pMDI 。这些催化剂和交联剂的加入促进了长链的形成。这一发现与之前的研究一致，即加入
+    NH4Cl 时甲醛胶剂的凝胶时间会减少。[31] 的一项研究报道加入 1–2% 的 pMDI 可以缩短甲醛胶剂的凝胶时间。
+
+
+    MF-1 中加入 5% 的柠檬酸和 3% 的 pMDI 导致其 pH 低于 MF-0，分别为 6.67 和 7.67。这种差异可归于柠檬酸中的羧基 (–COOH)
+    和 pMDI 中的异氰酸基 (–NCO)，它们可以与甲醛 (HCHO) 和甲基基 (–CH2OH) 反应形成甲醛胶剂中的交联聚合物。
+
+
+    平均粘度是抗压能力的衡量。对于液体胶剂，平均粘度与液体的厚度有关。对照胶剂 MF-0 的粘度为 484.51 mPa·s，而 MF-1 的粘度更高，这是由于柠檬酸和
+    pMDI 的作用形成了更大的分子链。最近的研究 [35] 报道加入 2% pMDI 后甲醛胶剂的粘度增加。
+
+
+    使用旋转粘度计分析了甲醛胶剂的动态粘度和凝聚强度，如图 4a 所示。与平均粘度一致，MF-1 的动态粘度高于 MF-0。在 200 分钟内，动态粘度处于 545–587
+    mPa·s 范围内，而 MF-0 约为 473–489 mPa·s。这一结果显示 MF-1 的粘度在 200 分钟内与 MF-0 相比显著增加。此外，MF-0
+    的分子在 200 分钟内相对稳定。胶剂的凝聚力与
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 3]
+
+
+    Polymers 2023, 15, 2349
+
+
+    4 of 13
+
+
+    # 2.4. Preparation of CLT
+
+
+    The fabrication of CLT was based on EN 16531:2021 for Timber Structures—CLT Requirements
+    [29]. The three-layer jabon CLT was manufactured using melamine-based adhesives.
+    In this research, longitudinal laminations were constructed from been wood measuring
+    330 mm × 110 mm × 20 mm, with a total of 18 lumbers used. Transverse laminations,
+    consisting of 27 lumbers of 110 mm × 110 mm in size were also employed. Control
+    CLT bonded with commercial MF adhesive—was prepared under different glue spreads
+    of 250, 280, and 300 g/m² cold pressing at 1 MPa under clamping for 2-4 h and
+    heat treatment at 100 °C (Figure 1). The MF-0 itself could not be used as cold-setting
+    adhesive; therefore, the CLT had to be prepared using hot-pressing (heat treatment).
+    In contrast, CLT-bonded MF-1 was prepared using a cold press at 1 MPa for 2 h,
+    based on preliminary trials and following previous research [12,30]. As with the
+    MF-0 adhesive, different glue spreads were applied for MF-1 bonded CLT, namely
+    250, 280, and 300 g/m². The preparation of CLT bonded with cold-setting melamine-based
+    adhesives (MF-1) is illustrated in Figure 2.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_3_0.png)
+
+
+    Commercial MF adhesive (MF-0)
+
+
+    Preparation of Jabon lumber
+
+
+    Glue spreading (250, 280, 300 g/m²)
+
+
+    Layering of lumber (3 layers, perpendicular to adjacent layers)
+
+
+    MF-0 bonded CLT
+
+
+    Heat treatment (100 °C, 2h)
+
+
+    Pressing and Clamping (1 MPa)
+
+
+    Figure 1. The preparation of CLT bonded with MF-0 using heat treatment.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_3_1.png)
+
+
+    Cold-setting melamine-based adhesive (MF-1): MF-0 + citric acid + pMDI + wheat
+    flour
+
+
+    Preperation of Jabon lumber
+
+
+    Glue spread (250, 280, 300 g/m²)
+
+
+    Cold-setting melamine-based CLT
+
+
+    Cold-pressing of CLT (1 MPa, 2 h)
+
+
+    Layering of lumber (3 layers, perpendicular to adjacent layers)
+
+
+    Figure 2. The preparation of CLT bonded with MF-1 using cold pressing.'
+  - '[PAGE 4]
+
+
+    Polymers 2023, 15, 2349
+
+
+    5 of 13
+
+
+    # 2.5. Evaluation of CLT Properties
+
+
+    To conduct delamination tests in accordance with EN 16531:2021 [29], the CLT samples
+    were cut into 100 mm × 100 mm × 60 mm dimensions. Three specimens were tested
+    for each glue application, and they were submerged in ambient-temperature water
+    within a pressure vessel. A vacuum of 85 kPa was applied and maintained for 30
+    min before releasing it applying a pressure of 600–700 kPa, which was held for
+    2 h. After that, the test pieces were dried for approximately 12–20 min at a temperature
+    of 65 °C. For each specimen, the total delamination and maximum delamination were
+    recorded, and the percentage of delamination was calculated using Equations (1)
+    and (2) [12].
+
+
+    ```
+
+    $Delamination_{tot} = 100 \frac{tot_{delam}}{tot_{glue\line}}$ (1)
+
+    ```
+
+
+    ```
+
+    $Delamination_{max} = 100 \frac{max_{delam}}{glue\line}$ (2)
+
+    ```
+
+
+    where $tot_{delam}$ is the total delamination length, $tot_{glue\line}$ is the
+    sum of all glue lines in a delamination specimen, $max_{delam}$ is the maximum
+    delamination length, and $glue\line$ is the perimeter of one glue line in a delamination
+    specimen.
+
+
+    An assessment of the bonding strength of cross-laminated timber (CLT) was conducted
+    by performing a block-shear stress analysis using a previously published method
+    [31]. The CLT was cut into a block-shear sample, as demonstrated in Figure 3,
+    and the blockshear shear strength was tested utilizing a 50 kN universal testing
+    machine (UTM AG-IS 50 kN, Shimadzu, Kyoto, Japan) at a crosshead speed of 2 mm/min.
+    Additionally, in accordance with the EN 16351 standard [29], the bonding strength
+    was evaluated, and three blockshear samples were tested for each glue spread.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_4_0.png)
+
+
+    **Figure 3.** Illustration of the block-shear test of CLT based on the Zhou et
+    al. [31] (a), and the block shear testing (b); the arrow line points out the glue
+    line.
+
+
+    # 2.6. Statistical Analysis
+
+
+    The study compared the average values of delamination, bonding strength, and width
+    of failure of cross-laminated timber (CLT) produced from MF-1 adhesive using an
+    analysis of variance (ANOVA). The Duncan multiple range test at a significance
+    level of $\alpha = 0.05$ was performed to identify the significant effect of glue
+    spread on the delamination and bonding strength. The statistical analysis was
+    carried out with SPSS 21 software (SPSS Inc., Chicago, IL, USA).'
+  - '[PAGE 5]
+
+
+    # 3. Results and Discussion
+
+
+    # 3.1. Properties of Cold-Setting Melamine-Based Adhesives
+
+
+    Table 1 shows the characteristics of adhesives made from melamine. The nonvolatile
+    solids content of MF-0 and MF-1 was about 51 and 48, respectively. This content
+    represents the total solids that contribute to the adhesive coverage on the bonded
+    products. According to a previously published study [32], the nonvolatile solids
+    content of melamine-based adhesives increases with a higher concentration of melamine.
+    The inclusion of citric acid, pMDI, and wheat flour in the melamine resin led
+    to a balance of the thickness of the resin. For the physical and chemical properties
+    of the adhesive, resulting in a reduction of the solids content of citric acid,
+    pMDI, and wheat flour to MF, the solids content of MF-1 decreased. This outcome
+    aligns with a previous study, which reported a decrease in the solids content
+    of melamine-based adhesives when mixed with NH4Cl as a hardener [32].
+
+
+    Table 1. Properties of cold-setting melamine-based adhesives.
+
+
+    | Type of Adhesive | Solids Content (%) | Gelation Time (min, T=100 °C) | Viscosity
+    (mPa·s, T=25 °C) | pH |
+
+    |---|---|---|---|---|
+
+    | MF-0 | 51.89 ± 0.36 | 30.27 ± 0.13 | 484.51 ± 3.69 | 7.67 ± 0.58 |
+
+    | MF-1 | 48.58 ± 0.08 | 6.90 ± 0.10 | 570.45 ± 14.80 | 6.67 ± 0.58 |
+
+
+    The gelation time in wood adhesives refers to the duration for the adhesive to
+    form a gel. This gel formation creates stronger connections between the molecules,
+    resulting in stronger adhesion. As the gel forms, the viscosity of the adhesive
+    increases, and the adhesive becomes less mobile. This point, where the viscosity
+    is exceptionally high and the adhesive forms a gel, is known as the gel point.
+    The gelation time of MF-0 was found to be five times longer than that of MF-1,
+    while this difference was attributed to the use of a citric acid catalyst or pMDI
+    cross-linker in MF. MF-0 was formed by adding citric acid and pMDI to MF. The
+    addition of these catalysts and cross-linkers promotes the formation of longer
+    chains. This finding is in line with a previous study that reported a reduction
+    in the gelation time of melamine-based adhesives when mixed with NH4Cl as a hardener.
+    A study by [31] reported that incorporating 1–2% pMDI can reduce the gel time
+    of MF-based adhesives.
+
+
+    The inclusion of 5% citric acid and 3% pMDI in MF-0 resulted in a lower pH for
+    MF-1 compared to that of MF-0, with values of 6.67 and 7.67, respectively. This
+    difference can be attributed to the presence of the carboxylic acid group (–COOH)
+    in citric acid and the isocyanate group (–NCO) in pMDI, which can react with free-formaldehyde
+    (HCHO2) and the methyl group (–CH2OH) to form a cross-linked polymer in melamine-based
+    adhesives.
+
+
+    The average viscosity is a measure of the resistance to pressure. In the case
+    of liquid adhesives, the average viscosity is related to the thickness of the
+    liquid. The control adhesive, MF-0, had a viscosity of 484.51 mPa·s while the
+    viscosity was higher than that of MF-0 due to the formation of a larger molecular
+    chain from the interactions of citric acid and pMDI. A recent study [35] reported
+    that the viscosity of MF-based adhesives increased by adding 2% pMDI.
+
+
+    The dynamic viscosity and cohesion strength of melamine-based adhesives were analyzed
+    using a rotational rheometer, as depicted in Figure 4a. In line with the average
+    viscosity, dynamic viscosity of MF-1 was higher than that of MF-0. The dynamic
+    was in the range of 545–587 mPa·s during 200 min while MF-0 was around 473–489
+    mPa·s. This result shows that the viscosity of MF-1 increased remarkably compared
+    with that of MF-0 in 200 min. Furthermore, the molecules of MF-0 were relatively
+    stable for 200 min. The cohesion strength of an adhesive relates to'
+- md: '
+
+    Polymers 2023, 15, 2349
+
+
+    viscosity, as a higher viscosity indicates a greater resistance to deformation,
+    which can lead to stronger internal bonds within the adhesive. In this study,
+    the higher viscosity of MF-1 resulted in a cohesion strength compared with that
+    of MF-0. 82-89 Pa, which was higher than that of MF-0 at about 71-73 Pa (Figure
+    4b). Therefore, CLT bonded with MF-1 is expected to have better properties than
+    MF-0.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_6_0.png)
+
+
+    Figure 4. Dynamic viscosity (a) and cohesion strength (b) of cold-setting melamine-based
+    adhesives.
+
+
+    Variations in the type of adhesive, the functional groups in primary amines, such
+    as –N-H$_2$, C-H, C=O, and –N-H, were identified through their spectral wavenumbers
+    of 3235, 2960, 1640, and 1565 cm$^{-1}$. The FTIR spectra detected no any differences
+    between the melamine-based adhesives (Figure 5). However, following the curing
+    process, the functional groups were slightly shifted due to the formation of a
+    three-dimensional network resulting from the reaction between the melamine-based
+    adhesive, catalyst, and cross-linker. A lower intensity of –N-H$_2$ was observed
+    at 3225 cm$^{-1}$ while the C-H, C=O and N-H functional groups of the primary
+    amine were detected at 2960, 1640, and 1566 cm$^{-1}$ after curing. Theoretically,
+    the cross-linked polymer in melamine-based adhesives was formed by the reaction
+    with –COOH in citric acid and –NCO in pMDI with HCHO$_{free}$ and the –CH$_2$OH
+    group [26,27].
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_6_1.png)
+
+
+    Figure 5. FTIR spectra of the cold-setting melamine-based adhesives.
+
+
+    DMA was carried out in order to explore the thermo-mechanical characteristics
+    of the melamine-based adhesives, as presented in Figure 6. This method assesses
+    the mechanical responses of viscoelastic substances subjected to oscillation at
+    different temperatures. In addition, a comparison was made between storage modulus
+    (E''), loss modulus (E''''), and tan delta (the ratio of E'''' to E'') of the
+    adhesives. The E'' parameter measures the amount of energy stored in the material,
+    which is dependent on the type of temperature, and oscillation frequency. On the
+    other hand, E'''' evaluates the amount of energy dissipated in the viscous flow
+    of the specimen as a result of the molecular fraction [28]. The maximum E'' of
+    467.9 GPa was detected in MF-1 at 38.4 °C tending to increase as a function of
+    an increasing temperature. The initial decrease in E'' is attributed to the relaxation
+    as the temperature decreases. Additionally, E'' increased towards its peak, which
+    could be attributed to the adhesive gel process in which an extensive molecular
+    network was formed. Furthermore, E'' increased after reaching its maximum value,
+    and this finding also reflected the gelation process, as indicated by the tan
+    delta. This reaction led to the formation of a network, in turn, resulted in efficient
+    dissipation. However, the maximum E'' of MF-0 could not be detected, probably
+    due to the absence of hardening and the cross-linking reaction that occurred without
+    the presence of a catalyst and a cross-linker.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_7_0.png)
+
+
+    Figure 6. DMA curve of the cost-gelating-melamine-adhesives (a) (MF-0) and (b)
+    (MF-1).
+
+
+    ## 3.2. Bonding Strength and Delamination of CLT
+
+
+    For CLT manufacturers and consumers, the most important factor is the bond integrity,
+    which involves bonding strength and delamination [5,34-36]. The bond integrity
+    refers to the adhesive strength between two layers and is influenced by the type
+    of adhesive, the wood species, and the surface treatment [1.3]. The bonding strength
+    can be determined through block-shear strength testing using specialized machines.
+
+
+    A new adhesive format had to be developed, since commercial MF cannot be directly
+    applied for CLT pressing. Our trial revealed that commercial MF was not glued
+    well as CLT. As a result, CLT (MF-0) was manufactured using a melamine-based adhesive,
+    which was glued at 1 MPa, and heat-treated at 100 °C for 2 h to cure the adhesive,
+    as shown in Figure 1. The properties of CLT bonded with MF-1 were successfully
+    tested using the cold-pressing method (Figure 2). The block-shear test showed
+    that the bonding strength of MF-0 with glue of 300 g/m² was 2.13 MPa, 1.94 MPa,
+    and 1.03 MPa, respectively (Figure 7a).
+
+
+    The highest bonding strength of CLT bonded with MF-1 was 3.14 MPa, which was achieved
+    with glue strength of 300 g/m² and 250 g/m². Figure 7b shows the load-displacement
+    curve and block-shear strength of CLT bonded with MF-1. A greater maximum load
+    was observed at a greater displacement as the glue strength increased. A maximum
+    load of approximately 9750 N at a displacement of 8.3 mm was achieved using 300
+    g/m² of adhesive with MF-1, while 280 g/m² of glue spread led to a maximum load
+    of 5506 N at a displacement of 5.9 mm, and 250 g/m² of glue spread resulted in
+    a maximum load of approximately 3400 N at a displacement of 3.6 mm.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_8_0.png)
+
+
+    **Figure 7.** Block-shear strength of CLT bonded with melamine-based adhesive
+    at different glue spreads in the control (MF-0) and modified MF (MF-1) (a) and
+    the load-displacement curve of block-shear strength of MF-1 (b).
+
+
+    The bonding of CLT can be increased by 5% citric acid and 3% PMDI, which leads
+    to the formation of a larger molecular chain through interactions of MF, citric
+    acid, and PMDI. The bonding strength of CLT with MF-1 adhesive is greater than
+    that of CLT with MF-0 due to the extensive molecular chain of MF-1 and the formation
+    of high cohesion strength. A glue spread of 300 g/m² and pressure of 1 MPa resulted
+    in a better block-shear strength value for CLT bonded with MF-1 (3.14 MPa) than
+    that of cross-laminated bamboo and timber (CLT) bonded from laminated bamboo and
+    Chinese fir with reinforcement (2 MPa). Yang et al. [34] also reported that the
+    block-shear strength of CLT with 200 g/m² glue spread and bonding pressure of
+    1 MPa was 2.47 MPa in the major direction. The block-shear strength values of
+    CLT bonded with MF-1 at 280 and 300 g/m² were those of CLT made from spruce-pine-fir
+    bonded with polyurethane, emulsion isocyanate, and phenol resorcinol formaldehyde
+    for glue spreads of 200, 270, and 250 g/m², respectively.
+
+
+    The shear performance of CLT panels is a critical factor in panel failure, as
+    the stress experienced in the layers is perpendicular to the major axis of the
+    panel [8]. In CLT block-shear testing, the leading mode of failure is perpendicular
+    to the grain, resulting in a lower block-shear strength compared with that of
+    laminated timber from the same wood material. The research conducted that the
+    block-shear strength of CLT bonded with MF-0 and MF-1 did not meet the requirements
+    stipulated in EN 16531:2021 [25], which states that the bonding strength should
+    be at least 6 MPa.
+
+
+    **Figure 8** shows the delamination values of CLT bonded with MF-0 and MF-1 adhesives
+    at different glue spreads, Figure 8b shows the wood failure pattern of the block-shear
+    samples after testing. The delamination of MF-0 for three different glue spreads
+    (250, 280, and 300 g/m²) was 26.30–13.07%. In terms of bonding strength, delamination
+    decreased as the wood failure percentage increased with more glue spreads [25].
+    The delamination percentage and wood failure percentage of MF-0 had a value lower
+    than 20%. The values did not meet the values stipulated in the EN 16531:2021 standard
+    [29]. The block-shear testing samples of CLT bonded with MF-0 adhesive revealed
+    that only one glue damage was found, as shown in Figure 9a. Meanwhile, the delamination
+    and wood failure percentage of MF-1 were better than those of MF-0. The damage
+    after block-shear testing identified as wood failure (Figure 9b), with the percentage
+    of CLT bonded with MF-1 being nearly 3–5 times higher than that of MF-0, as shown
+    in Figure 8b. Application of 300 g/m² of glue spread (MF-1) resulted in the lowest
+    and highest delamination and wood failure percentage at 5.70% and 98.33%, respectively.
+    The delamination and wood failure percentage of japon CLT with MF-1 (300 g/m²)
+    met the requirements of the EN 16531:2021 standard. The standard specifies that
+    delamination should be at least 90%. Meanwhile, glue spreads of 280 g/m² and 250
+    g/m² produced CLT with 13.91% and 19.42% delamination and 66.67% and 33.33% wood
+    failure.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_9_0.png)
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_9_1.png)
+
+
+    **Figure 8.** Delamination (a) and wood failure (b) percentage of CLT bonded with
+    MF-0 and MF-1 at different glue spreads.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_9_2.png)
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_9_3.png)
+
+
+    **Figure 9.** Images of wood failure after the block-shear test of CLT bonded
+    with MF-0 (a) and MF-1 (b) at different glue spreads.
+
+    '
+  mdcn: '
+
+    Polymers 2023, 15, 2349
+
+
+    粘度，粘度越高意味着抗变形能力越强，这会导致粘剂内部形成更强的内键。在这项研究中，MF-1 较高的粘度导致其内聚强度达到 82-89 Pa，高于 MF-0
+    的 71-73 Pa（图 4b）。因此，预计使用 MF-1 粘接的 CLT 具有比 MF-0 更好的性能。
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_6_0.png)
+
+
+    图 4. 冷固三聚甲胶剂的 (a) 动态粘度和 (b) 内聚强度。
+
+
+    粘胶剂类型以及伯级胺中官能团（如 –N-H$_2$、C-H、C=O 和 –N-H）的变化通过其 3235、2960、1640 和 1565 cm$^{-1}$
+    的光谱波数被识别。FTIR 光谱未检测到三聚甲胶剂之间的任何差异（图 5）。然而，固化过程中，由于三聚甲胶剂、催化剂和交联剂之间的反应形成了三维网络，官能团发生了微移。固化后，在
+    3225 cm$^{-1}$ 观察到 –N-H$_2$ 强度降低，而伯级胺的 C-H、C=O 和 N-H 官能团在 2960、1640 和 1566 cm$^{-1}$
+    被检测到。理论上，三聚甲胶剂中的交联聚合物是通过柠檬酸中的 –COOH 和 pMDI 中的 –NCO 与 HCHO$_{free}$ 以及 –CH$_2$OH
+    基团反应形成的 [26,27]。
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_6_1.png)
+
+
+    图 5. 冷固三聚甲胶剂的 FTIR 光谱。
+
+
+    进行 DMA 测试是为了探索三聚甲胶剂的热力学特性，如图 6 所示。该方法评估了粘弹性物质在不同温度下振荡时的机械响应。此外，比较了粘剂的储能模量 (E'')、损耗模量
+    (E'''') 和 tan delta（E'''' 与 E'' 的比值）。E'' 参数衡量材料中储存的能量量，它取决于温度类型和振荡频率。另一方面，E''''
+    评估了由于分子部分在粘性流中耗散的能量量 [28]。MF-1 在 38.4 °C 时检测到最大 E'' 为 467.9 GPa，并随温度升高而增加。E''
+    的初始下降归于温度降低时的弛豫。此外，E'' 向峰值增加，这可能归于粘剂的胶凝过程，在该过程中形成了广泛的分子网络。此外，E'' 在达到最大值后增加，这一发现也通过
+    tan delta 反映了胶化过程。这种反应导致了网络的形成，从而导致了有效的耗散。然而，未能检测到 MF-0 的最大 E''，可能是由于没有催化剂和交联剂的情况下没有发生硬化和交联反应。
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_7_0.png)
+
+
+    图 6. 冷胶化三聚甲胶剂的 DMA 曲线 (a) (MF-0) 和 (b) (MF-1)。
+
+
+    ## 3.2. 粘接强度与分层
+
+
+    对于 CLT 制造商和消费者，最重要的因素是结合完整性，涉及粘接强度和分层 [5,34]。结合完整性是指两层之间的粘接强度，受粘剂类型、木材种类和表面处理的影响。粘接强度可以通过抗剪强度测试来确定。需要开发一种新的粘剂格式，因为商业
+    MF 无法直接应用于 CLT 压。我们的试验表明商业 MF 的粘接效果良好。作为结果，使用三聚甲胶剂制造的 CLT (MF-0) 在 1 MPa 下粘接并在
+    100 °C 下固化 2 小时，如图 1 所示。通过冷压成功测试了使用 MF-1 的 CLT 性能。抗剪测试显示 MF-0 在 300 g/m² 涂胶量下的粘接强度分别为
+    2.13 MPa、1.94 MPa 和 1.03 MPa（图 7）。
+
+
+    使用 MF-1 的 CLT 的最高粘接强度为 3.14 MPa，分别在 300 g/m² 和 250 g/m² 的涂胶量下实现。图 7b 显示了 MF-1
+    的抗剪强度和负载-位移曲线。随着涂胶量的增加，在更大的位移处观察到更大的载荷。使用 300 g/m² 涂胶量的 MF-1 在 8.3 mm 位移处达到约 9750
+    N 的最大载荷，280 g/m² 涂胶量在 5.9 mm 位移处产生最大载荷 5506 N，250 g/m² 涂胶量在 3.6 mm 位移处产生最大载荷 3400
+    N。
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_8_0.png)
+
+
+    **图 7.** 不同涂胶量下使用三聚甲胶剂粘接的 CLT 抗剪强度 (a) 对照 (MF-0) 和改性 MF (MF-1)，以及 MF-1 的抗剪强度负载-位移曲线
+    (b)。
+
+
+    CLT 的粘接可以通过 5% 柠檬酸和 3% PMDI 增强，这通过 MF、柠檬酸和 PMDI 的相互作用形成了较大的分子链。使用 MF-1 粘剂的 CLT
+    粘接强度大于 MF-0，由于 MF-1 广泛的分子链和高内聚强度的形成。300 g/m² 的涂胶量和 1 MPa 的压力使 MF-1 的 CLT 抗剪强度值
+    (3.14 MPa) 优于层压竹和木材 (CLT) (2 MPa)。Yang 等人 [34] 也报告说，200 g/m² 涂胶量和 1 MPa 粘接压力下
+    CLT 在主方向上的抗剪强度为 2.47 MPa。MF-1 在 280 和 300 g/m² 涂胶量下的 CLT 抗剪强度分别为由云杉-松-冷杉木的聚氨酯、异氰酸乳酯和甲酚树脂胶制成的
+    CLT 数值。
+
+
+    CLT 板的剪切性能是板材失效的关键因素，因为层之间承受的应力垂直于板的主轴 [8]。在 CLT 抗剪测试中，主要的失效模式是垂直于纹理的，导致与相同层压木材相比抗剪强度较低。研究表明，MF-0
+    和 MF-1 粘接的 CLT 抗剪强度不符合 EN 16531:2021 的规定 [25]，该标准规定粘接强度至少为 6 MPa。
+
+
+    **图 8** 显示了不同涂胶量下使用 MF-0 和 MF-1 粘剂粘接的 CLT 分层值，图 8b 显示了测试后抗剪样本的木材失效模式。MF-0 的三种不同涂胶量（250、280
+    和 300 g/m²）分别为 26.30–13.07%。在粘接强度方面，随着涂胶量的增加，分层随之减少 [25]。MF-0 的分层百分比和木材失效百分比低于
+    20%。这些值不符合 EN 16531:2021 标准规定的值 [29]。MF-0 粘剂粘接的 CLT 抗剪测试样本仅发现了一个胶损坏，如图 9a 所示。同时，MF-1
+    的分层百分比和木材失效百分比优于 MF-0。抗剪测试后的损坏被鉴定为木材失效（图 9b），MF-1 粘接的 CLT 百比几乎是 MF-0 的 3–5 倍，如图
+    8b 所示。应用 300 g/m² 的涂胶量 (MF-1) 导致最低和最高的分层和木材失效百分比，分别为 5.70% 和 98.33%。MF-1 粘接的日本
+    CLT (300 g/m²) 分层和木材失效百分比符合 EN 16531:2021 标准。该标准规定分层至少为 90%。同时，280 g/m² 和 250
+    g/m² 的涂胶量产生的 CLT 分别具有 13.91% 和 19.42% 的分层以及 66.67% 和 33.33% 的木材失效。
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_9_0.png)
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_9_1.png)
+
+
+    **图 9.** 不同涂胶量下使用 MF-0 和 MF-1 粘剂粘接的 CLT 分层 (a) 和 MF-1 的抗剪强度 (b)。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 6]
+
+
+    Polymers 2023, 15, 2349
+
+
+    viscosity, as a higher viscosity indicates a greater resistance to deformation,
+    which can lead to stronger internal bonds within the adhesive. In this study,
+    the higher viscosity of MF-1 resulted in a cohesion strength compared with that
+    of MF-0. 82-89 Pa, which was higher than that of MF-0 at about 71-73 Pa (Figure
+    4b). Therefore, CLT bonded with MF-1 is expected to have better properties than
+    MF-0.
+
+
+    7 of 13
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_6_0.png)
+
+
+    Figure 4. Dynamic viscosity (a) and cohesion strength (b) of cold-setting melamine-based
+    adhesives.
+
+
+    Variations in the type of adhesive, the functional groups in primary amines, such
+    as –N-H$_2$, C-H, C=O, and –N-H, were identified through their spectral wavenumbers
+    of 3235, 2960, 1640, and 1565 cm$^{-1}$. The FTIR spectra detected no any differences
+    between the melamine-based adhesives (Figure 5). However, following the curing
+    process, the functional groups were slightly shifted due to the formation of a
+    three-dimensional network resulting from the reaction between the melamine-based
+    adhesive, catalyst, and cross-linker. A lower intensity of –N-H$_2$ was observed
+    at 3225 cm$^{-1}$ while the C-H, C=O and N-H functional groups of the primary
+    amine were detected at 2960, 1640, and 1566 cm$^{-1}$ after curing. Theoretically,
+    the cross-linked polymer in melamine-based adhesives was formed by the reaction
+    with –COOH in citric acid and –NCO in pMDI with HCHO$_{free}$ and the –CH$_2$OH
+    group [26,27].
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_6_1.png)
+
+
+    Figure 5. FTIR spectra of the cold-setting melamine-based adhesives.
+
+
+    DMA was carried out in order to explore the thermo-mechanical characteristics
+    of the melamine-based adhesives, as presented in Figure 6. This method assesses
+    the mechanical'
+  - '[PAGE 7]
+
+
+    Polymers 2023, 15, 2349
+
+
+    8 of 13
+
+
+    responses of viscoelastic substances subjected to oscillation at different temperatures.
+    In addition, a comparison was made between storage modulus (E''), loss modulus
+    (E''''), and tan delta (the ratio of E'''' to E'') of the adhesives. The E'' parameter
+    measures the amount of energy stored in the material, which is dependent on the
+    type of temperature, and oscillation frequency. On the other hand, E'''' evaluates
+    the amount of energy dissipated in the viscous flow of the specimen as a result
+    of the molecular fraction [28]. The maximum E'' of 467.9 GPa was detected in MF-1
+    at 38.4 °C tending to increase as a function of an increasing temperature. The
+    initial decrease in E'' is attributed to the relaxation as the temperature decreases.
+    Additionally, E'' increased towards its peak, which could be attributed to the
+    adhesive gel process in which an extensive molecular network was formed. Furthermore,
+    E'' increased after reaching its maximum value, and this finding also reflected
+    the gelation process, as indicated by the tan delta. This reaction led to the
+    formation of a network, in turn, resulted in efficient dissipation. However, the
+    maximum E'' of MF-0 could not be detected, probably due to the absence of hardening
+    and the cross-linking reaction that occurred without the presence of a catalyst
+    and a cross-linker.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_7_0.png)
+
+
+    Figure 6. DMA curve of the cost-gelating-melamine-adhesives (a) (MF-0) and (b)
+    (MF-1).
+
+
+    # 3.2. Bonding Strength and Delamination of CLT
+
+
+    For CLT manufacturers and consumers, the most important factor is the bond integrity,
+    which involves bonding strength and delamination [5,34-36]. The bond integrity
+    refers to the adhesive strength between two layers and is influenced by the type
+    of adhesive, the wood species, and the surface treatment [1.3]. The bonding strength
+    can be determined through block-shear strength testing using specialized machines.
+
+
+    A new adhesive format had to be developed, since commercial MF cannot be directly
+    applied for CLT pressing. Our trial revealed that commercial MF was not glued
+    well as CLT. As a result, CLT (MF-0) was manufactured using a melamine-based adhesive,
+    which was glued at 1 MPa, and heat-treated at 100 °C for 2 h to cure the adhesive,
+    as shown in Figure 1. The properties of CLT bonded with MF-1 were successfully
+    tested using the cold-pressing method (Figure 2). The block test showed that the
+    bonding strength of MF-0 with glue of 300 g/m² was 2.13 MPa, 1.94 MPa, and 1.03
+    MPa, respectively. Some of MF-0 values found 30% lower than those of the MF-1
+    samples (Figure 7a). The highest bonding strength of CLT bonded with MF-1 was
+    3.14 MPa, which was achieved with a glue strength of 300 g/m² and 250 g/m², respectively.
+    Figure 7b shows the load-displacement curve and block-shear strength of CLT bonded
+    with MF-1. A greater maximum load was observed at a greater displacement as the
+    glue strength increased. A maximum load of approximately 9750 N at a displacement
+    of 8.3 mm was achieved using 300 g/m² of adhesive with MF-1, while'
+  - '[PAGE 8]
+
+
+    Polymers 2023, 15, 2349
+
+
+    9 of 13
+
+
+    280 g/m² of glue spread led to a maximum load of 5506 N at a maximum displacement
+    of 5.9 mm, and 250 g/m² of glue spread resulted in a maximum load of approximately
+    3400 N at a displacement of 3.6 mm.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_8_0.png)
+
+
+    **Figure 7.** Block-shear strength of CLT bonded with melamine-based adhesive
+    at different glue spreads in the control (MF-0) and modified MF (MF-1) (a) and
+    the typical load displacement curve of the block-shear strength of MF-1 (b).
+
+
+    The bonding of CLT can be increased by 5% citric acid and 3% PMDI, which leads
+    to the formation of a larger molecular chain through the interactions of MF, citric
+    acid, and PMDI. The bonding strength of CLT with MF-1 adhesive is greater than
+    that of CLT with MF-0 adhesive due to the extensive molecular chain of MF-1 and
+    the formation of high cohesion strength. A glue spread of 300 g/m² and a pressure
+    of 1 MPa resulted in a better block-shear strength value for CLT bonded with MF-1
+    (3.14 MPa) than that of cross-laminated bamboo and timber (CLT) bonded from laminated
+    bamboo and Chinese fir with reinforcement (2 MPa). Yang et al. [34] also reported
+    that the block-shear strength of CLT with 200 g/m² glue spread and a bonding pressure
+    of 1 MPa was 2.47 MPa in the major direction. The block-shear strength values
+    of CLT bonded with MF-1 at 280 and 300 g/m² were those of CLT made from spruce-pine-fir
+    bonded with polyurethane, emulsion polymer isocyanate, and phenol resorcinol formaldehyde
+    for glue spreads of 200 g/m², 270 g/m², and 250 g/m².
+
+
+    The shear performance of CLT panels is a critical factor in panel failure, as
+    the experienced stress in the layers is perpendicular to the major axis of the
+    panel [8]. In CLT block-shear testing, the leading mode of failure perpendicular
+    to the grain, resulting in a lower block-shear strength compared with that of
+    laminated timber from the same wood material. The research conducted that the
+    block-shear strength of CLT bonded with MF-0 and MF-1 did not meet the requirements
+    stipulated in EN 16531:2021 [25], which states that the bonding-strength should
+    be at least 6 MPa.
+
+
+    **Figure 8** shows the delamination values of CLT bonded with MF-0 and MF-1 adhesives
+    at different glue spreads, Figure 8b shows the wood failure pattern of the block-shear
+    samples after testing. The delamination of MF-0 for three different glue spreads
+    (250, 280, and 300 g/m²) was 26.30-13.07%. In terms of the bonding strength, delamination
+    decreased as the wood failure percentage increased with more glue spreads [25].
+    The delamination percentage and wood failure percentage of MF-0 had a value of
+    lower than 20%. The values did not meet the values stipulated in the EN 16531:2021
+    standard [29]. The block-shear testing samples of CLT bonded with MF-0 adhesive
+    revealed that only one glue'
+  - '[PAGE 9]
+
+
+    Polymers 2023, 15, 2349
+
+
+    10 of 13
+
+
+    damage was found, as shown in Figure 9a. Meanwhile, the delamination and wood
+    failure percentage of MF-1 were better than those of MF-0. The damage after block-shear
+    testing identified as wood failure (Figure 9b), with the percentage of CLT bonded
+    with MF-1 being nearly 3–5 times higher than that of MF-0, as shown in Figure
+    8b. Application of 300 g/m² of glue spread (MF-1) resulted in the lowest and highest
+    delamination and wood failure percentage at 5.70% and 98.33%, respectively. The
+    delamination and wood failure percentage of japon CLT with MF-1 (300 g/m²) met
+    the requirements of the EN 16531:2021 standard. The standard specifies that delamination
+    should be at least 90%. Meanwhile, glue spreads of 280 g/m² and 250 g/m² produced
+    CLT with 13.91% and 19.42% delamination and 66.67% and 33.33% wood failure.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_9_0.png)
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_9_1.png)
+
+
+    **Figure 8.** Delamination (a) and wood failure (b) percentage of CLT bonded with
+    MF-0 and MF-1 at different glue spreads.
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_9_2.png)
+
+
+    ![](img/6decd15101152cf788f8cb0286b2f312_9_3.png)
+
+
+    **Figure 9.** Images of wood failure after the block-shear test of CLT bonded
+    with MF-0 (a) and MF-1 (b) at different glue spreads.'
+- md: "\nPolymers 2023, 15, 2349\n11 of 13\n\nThe statistical analysis is presented\
+    \ in Table 2, aimed to evaluate how glue spread affects the bonding strength,\
+    \ delamination, and wood failure of cold-setting melamine-based adhesives (MF-1)\
+    \ applied to jabon wood CLT. The statistical analysis revealed that the wood failure\
+    \ was considerably impacted by the glue spread, with a higher $R^2$ of 0.8729,\
+    \ a lower $p$-value of 0.0002, and a higher F-value of 48.0947 compared with the\
+    \ bonding strength and delamination. Conversely, the bonding strength was less\
+    \ affected because of the higher standard deviation, $R^2$ of 0.4728. A multiple\
+    \ range testing using Duncan's posthoc test demonstrated that CLT with an improved\
+    \ bonding strength, delamination, and wood failure produced using 300 $g/m^2$\
+    \ compared with values of 250 $g/m^2$ and 280 $g/m^2$.\n\n**Table 2.** Analysis\
+    \ of variance (ANOVA) and Duncan's multiple range test of CLT with MF-1 adhesives\
+    \ with different properties.\n\n| Properties | SS | MS | F-Value | p-Value | $R^2$\
+    \ |\n|---|---|---|---|---|---|\n| Bonding strength | 1796750 | 1 | 1796754 | 6.2785\
+    \ | 0.0406 | 0.4728 |\n| Delamination | 2944840 | 1 | 2944840 | 24.1056 | 0.0017\
+    \ | 0.0779 |\n| Wood failure | 3317150 | 1 | 3317150 | 48.0947 | 0.0002 | 0.8729\
+    \ |\n\nThe specimen exhibited a high level of glue load and a low delamination\
+    \ percentage, indicating the development of bond integrity, which relies on the\
+    \ integrity of wood adhesive bonds [13]. A study by Libus et al. [33] found that\
+    \ the properties and reactivity of a modified MF-based adhesive could be enhanced\
+    \ by the addition of citric acid and pMDI. Our study of a modified MF adhesive\
+    \ with the addition of 5% citric acid and 3% pMDI in a cold-setting application\
+    \ provides a prospective method in terms of producing high-performance products\
+    \ and supporting eco-friendly programs through the efficient consumption of heat\
+    \ energy in the CLT process.\n\n## 4. Conclusions\n\nThis developed CLT from jabon\
+    \ wood with a modified MF adhesive by adding 5% citric acid and 3% pMDI in a cold-setting\
+    \ application. This addition increased the viscosity and cohesion strength of\
+    \ the melamine-based adhesive and decreased the solids content, gel length, and\
+    \ pH CLT with various glue spreads of 250, 280, and 300 $g/m^2$ were investigated\
+    \ to characterize the bonding strength, delamination, and wood failure percentage.\
+    \ The findings indicate that a higher glue spread leads to an increased bonding\
+    \ strength, lower delamination value, and higher wood failure percentage. The\
+    \ statistical analysis found that the glue spread has a more significant impact\
+    \ on wood failure than the bonding strength and delamination. Through our study,\
+    \ citric acid and pMDI was a promising cold-setting adhesive that conserves heat\
+    \ energy used in CLT.\n\n**Author Contributions:** Conceptualization, drafting,\
+    \ writing, Y.A., and L.K.; review, editing, supervision, L.K., M.A.R.L., E.T.B.\
+    \ and W.D.; and laboratory and work, data curation, Y.A., and R.P.A.; original\
+    \ draft preparation, Y.A., L.K. and M.A.R.L.; supervision, L.K., W.D., N.S and\
+    \ E.T.B.; final analysis, Y.A., L.K. and M.A.R.L. All authors have read and agreed\
+    \ to the published version of the manuscript.\n\n**Funding:** The Ministry of\
+    \ Education, Culture, Research, and Technology (KEMENDIKBU-DRISTEK) and IPB University\
+    \ supported this research through the Doctoral Research Grant, FY 2022 (contract\
+    \ number: 3798/IT3.L1/PT.01.03/B/2022).\n\n**Institutional Review Board Statement:**\
+    \ Not applicable.\n\n**Data Availability Statement:** The authors confirm that\
+    \ the data underlying the research are included in the article. The raw data that\
+    \ supports the results are available upon reasonable request from the corresponding\
+    \ author.\n\nPolymers 2023, 15, 2349\n12 of 13\n\n**Acknowledgments:** The authors\
+    \ are grateful to the Ministry of Education, Culture, Research, and funding provided\
+    \ through the Doctoral Research Grant for Fiscal Year 2022 (contract number: 3798/IT3.L1/PT.01.03/B/2022).\
+    \ The authors are also grateful to the National Research and Innovation Agency\
+    \ (BRIN) and the Science Agency (JSPS) through the JSPS Nusantara Association\
+    \ (JAA) for their assistance. Furthermore, the authors are grateful to Sudamarto\
+    \ and Nastisa for the laboratory work.\n\n**Conflicts of Interest:** The authors\
+    \ declared no potential conflict of interest.\n\n## References\n\n1. Lestari,\
+    \ RY CLT (Class Laminated Timber): Karakteristik dan Production, Characteristics\
+    \ and Development. J. Ind. 2017, 91–95.\n2. Wiener, F; Kippel, M; Dagenais, C.;\
+    \ Dunn, A.; Östman, A.; Jansens, M.: Requirements for Wood Products and Their\
+    \ Influence on the Structural Performance. Proceedings of the World Conference\
+    \ on Engineering, Seoul, Republic of Korea, 2003.\n3. Fontani, G.; O’Zario, D.;\
+    \ Barbares, L.: Acoustic Comfort in a Workspace Made of Laminated Timber. Build.\
+    \ Acoust. 2019, 26, 12.\n4. Espinoza, O.; Trujillo, Y.; Lagualdo, M.F.; Buchholm,\
+    \ U.: Strength and Research Needs in Europe. Bioresources 2016, 11, 281–295. \n\
+    5. Li, H.; Wang, L.; Wei, Y.; Wang, J.: Bonding and Shear Performance of Class\
+    \ Laminated Timber and Glued-Laminated Timber Beams: A Comprehensive Investigation.\
+    \ J. Build. Eng. 2022, 45, 04327.\n6. Zhang, J.; Sun, Y.: The Influence of Performance-Rating\
+    \ on APA Engineered Wood Association: Tacoma, USA. Available online: https://www.apawood.org\
+    \ (accessed on May 12, 2023).\n7. Gong, Y.; Yu, G.; Ren, H.: Predicting the Average\
+    \ Compression Strength of CLT Using the Average Density or Composite Strength\
+    \ of Lamina. Bioresources 2022, 13, 591.\n8. Ceallagh, O.; Sikora, K.; Harte,\
+    \ A.: The Influence of Lay-Up on the Building Performance and Rolling Shear Strength\
+    \ of CLT. 2018, 38(8), 10240–10250.\n9. Li, H.; Bai, Y.; Wei, P.; Wang, L.: Class\
+    \ Laminated Timber (CLT) in China: a State-of-the-Art. Bioresources 2019, 14,\
+    \ 8098.\n10. Brandlner, F.; Gaster, P.; Ringinger, A.; Schholz, G.; Thiel, A.\
+    \ Class Laminated Timber (CLT): Overview and Development. Eur. J. Wood Prod. 2007,\
+    \ 74, 331–355.\n11. Yusuf, M.; Sci, Y.; Yusuf, N.; Tah, P.; Lee, S.H.; Khan, M.A.;\
+    \ Muhammad, R.; James, S.: Mechanical and Physical Properties of Melamine-Resins\
+    \ Using Wood Extract from Various Types of Wood. J. Sci. 2019, 65, 20.\n12. Li,\
+    \ M.; Zhang, S.; Yang, Y.; Zheng, H.: Bonding Techniques on Performance and Mechanical\
+    \ Properties of Class Laminated Timber (CLT) Made from Lauli Merkamies. 2021,\
+    \ 13, 733.\n13. Lan, P.; Yang, R.; Mao, H-Y; Cui, J.; B.: Production of Melamine-Formaldehyde\
+    \ Resins using Impregnation of Ethylene Glycol and Camphor with High Hydrophobicity,\
+    \ Stability, and Longevity. Composite Build. Mater. 2015, 65, 4–8.\n14. Santos,\
+    \ J.; Pereira, J.; Paiva, N.; Ferreira, J.G.; Martins, M.;J.; de Carvalho, L.H.\
+    \ Influence of Condensation Degree of Melamine-Formaldehyde Resins on Their and\
+    \ the Final Properties of High-Performance Laminates. Proc. Ind. Mech. Eng. Part\
+    \ A J. Chem. 2021, 432, 446–496.\n15. Ku, S.H.; Sulaiman, S.H.: Evaluation of\
+    \ Naturally Produced Class Laminated Timber (CLT) in Delamination Tests. Build.\
+    \ Mater. 2017, 133, 219–225.\n16. Merline, D.J.; Vukusic, S.; Abdalla, A.A. Melamine-Formaldehyde\
+    \ Curing: Strength and Reaction Mechanism. Polym. 2013, 45, 413–419.\n17. Ferdosian,\
+    \ F.; Pan, Z.; Gao, G.; Zhao, B.: Bio-Based Adhesives and Evaluation for Wood\
+    \ Composite Applications. Polymaterials 2017, 7, 90.\n18. Anggrani, R.; Nadiyo,\
+    \ S.; Sus Yusuf Massaya, M.: Mengenal Teknik dan Orientasi Sudut Laminah Terhadap\
+    \ Karakteristik Class Timber Kayu Sengon Dan Kayon; Jurnal Universitas Jambi:\
+    \ Seri Sains: Seni Jambi, Jambi, Indonesia, 2015; Volume 17.\n19. Abdurrahman,\
+    \ I.N.; Gultom, H.J.; Desmaliana, A. Kajian Eksifimen Spesifik Mekanik Panel Class\
+    \ Laminated Kayu Sengon Dan Kayon. Recacana J. Teknik, 2018, 4, 78-82.\n20. Papadopoulos,\
+    \ A.N.; Hill, C.A.; Traubolos, E.; Hague, J.R. Isoocyanate Resins for Particleboard:\
+    \ PMI vs EMD. Holz und Holz-Werk 2002, 66, 81–83.\n"
+  mdcn: '
+
+
+    Polymers 2023, 15, 2349
+
+    11/13
+
+
+    表2展示了统计分析，旨在评估胶水涂布量如何影响应用于 jabon 木交叉胶层木材（CLT）的冷固性树胶（MF-1）的结合强度、分层和木材失效。统计分析显示，木材失效受胶水涂布的影响的影响，与结合强度和分层相比，其
+    $R^2$ 值较高（0.8729），$p$ 值较低（0.0002），F 值较高（48.0947）。相反，结合强度受影响较小，因为标准差较大，$R^2$ 值为
+    0.4728。使用邓肯（Duncan''s）事后多重检验表明，使用 300 $g/m^2$ 涂布量产生的 CLT 在结合强度、分层和木材失效方面优于 250
+    $g/m^2$ 和 280 $g/m^2$ 的值。
+
+
+    **表2.** 具有不同性能的 MF-1 粘胶 CLT 的方差分析（ANOVA）和邓肯多重范围检验。
+
+
+    | 属性 | SS | MS | F-Value | p-Value | $R^2$ |
+
+    |---|---|---|---|---|---|
+
+    | 结合强度 | 1796750 | 1 | 1796754 | 6.2785 | 0.0406 | 0.4728 |
+
+    | 分层 | 2944840 | 1 | 2944840 | 24.1056 | 0.0017 | 0.0779 |
+
+    | 木材失效 | 3317150 | 1 | 3317150 | 48.0947 | 0.0002 | 0.8729 |
+
+
+    试件表现出高胶胶载量和较低的分层比例，表明了结合完整性的形成，这取决于木材与粘胶结合的完整性 [13]。Libus 等人 [33] 的一项研究发现，通过添加柠檬酸和
+    pMDI，可以增强改性 MF 基粘胶的性能和反应活性。我们在冷固性应用中添加 5% 柠檬酸和 3% pMDI 对改性 MF 粘胶的研究，为生产高性能产品以及通过在
+    CLT 过程中高效消耗热能来支持环保计划提供了一种有前景的方法。
+
+
+    ## 4. 结论
+
+
+    本研究开发了在冷固性应用中添加 5% 柠檬酸和 3% pMDI 的改性 MF 粘胶的 jabon 木 CLT。这种添加增加了树胶胶的粘度和凝聚强度，并降低了固体含量、凝胶长度和
+    pH 值。研究了涂布量分别为 250、280 和 300 $g/m^2$ 的各种 CLT，以表征其结合强度、分层和木材失效百分比。研究结果表明，较高的胶水涂布量会导致结合强度增加、分层值降低以及木材失效百分比提高。统计分析发现，胶水涂布量对木材失效的影响比结合强度分层更为显著。通过我们的研究，柠檬酸和
+    pMDI 是一种很有前景的冷固性粘胶，能够节省 CLT 过程中使用的热能。
+
+
+    **作者贡献：** 概念化、起草、撰写，Y.A. 和 L.K.；评审、编辑、监督，L.K., M.A.R.L., E.T.B. 和 W.D.；实验室和工作、数据整理，Y.A.
+    和 R.P.A.；初稿准备，Y.A., L.K. 和 M.A.R.L.；监督，L.K., W.D., N.S 和 E.T.B.；最终分析，Y.A., L.K.
+    和 M.A.R.L.。所有作者均已阅读发表的版本。
+
+
+    **资助：** 教育、文化、研究和技术部（KEMENDIKBU-RISTEK）和 IPB 大学通过2022 财年博士研究资助支持本研究（合同号：3798/IT3.L1/PT.03/B2）。
+
+
+    **机构委员会声明：** 不适用。
+
+
+    **数据可用性声明：** 作者确认研究数据包含在文中。原始数据可根据作者的要求提供。
+
+
+    Polymers 2023, 15, 2349
+
+    12/13
+
+
+    **致谢：** 作者感谢教育、文化、研究和部通过博士研究资助提供的支持（合同号：3798/IT3.L1/PT.03/B2022）。作者还感谢国家研究创新机构（BRIN）和科学协会（JSPS）通过
+    JSPS 提供的帮助。此外，作者感谢 Sudamarto 和 Nastisa 提供的实验室工作。
+
+
+    **利益冲突：** 作者声明无利益冲突。
+
+
+    ## 参考文献
+
+
+    1. Lestari, RY CLT（交叉胶层木材）：特性与生产。J. Ind. 2017, 91–95.
+
+    2. Wiener, F; Kippel, M; Dagenais, C.; Dunn, A.; Östman, A.; Jansens, M.: 木制品的要求及其对结构的影响。工程会议，首尔，韩国，2003。
+
+    3. Fontani, G.; O’Zario, D.; Barbares, L.: 胶层木空间的声学舒适度。Build. Acoust. 2019, 26,
+    12.
+
+    4. Espinoza, O.; Trujillo, Y.; Lagualdo, M.F.; Buchholm, U.: 欧洲的研究与需求。Bioresources
+    2016, 11, 281–295.
+
+    5. Li, H.; Wang, L.; Wei, Y.; Wang, J.: 胶层木材和胶接梁的结合性能：综合调查。J. Build. Eng. 2022,
+    45, 04327.
+
+    6. Zhang, J.; Sun, Y.: APA 工程木材协会性能等级的影响。塔科马，美国。https://www.apawood.org（2023年5月12访问）。
+
+    7. Gong, Y.; Yu, G.; Ren, H.: 使用平均密度或胶层复合强度预测 CLT 的平均压缩强度。Bioresources 2022, 13,
+    591.
+
+    8. Ceallagh, O.; Sikora, K.; Harte, A.: 叠层对 CLT 建筑性能和滚剪切强度的影响。2018, 38(8), 10240–10250.
+
+    9. Li, H.; Bai, Y.; Wei, P.; Wang, L.: 中国交叉胶层木材（CLT）：现状。Bioresources 2019, 14,
+    8098.
+
+    10. Brandlner, F.; Gaster, P.; Ringinger, A.; Schholz, G.; Thiel, A. 交叉胶层木材（CLT）：概述与开发。Eur.
+    J. Wood Prod. 2007, 74, 331–355.
+
+    11. Yusuf, M.; Sci, Y.; Yusuf, N.; Tah, P.; Lee, S.H.; Khan, M.A.; Muhammad, R.;
+    James, S.: 使用不同类型木材提取物的树胶的机械和物理性能。J. Sci. 2019, 65, 20.
+
+    12. Li, M.; Zhang, S.; Yang, Y.; Zheng, H.: Lauli Merkamies 制交叉胶层木材（CLT）的结合技术对性能和机械性能的影响。2021,
+    13, 133.
+
+    13. Lan, P.; Yang, R.; Mao, H-Y; Cui, J.; B.: 利用乙二醇和樟脑浸渍生产高疏水性、稳定性和长寿命甲醛树脂。Composite
+    Build. Mater. 2015, 65, 4–8.
+
+    14. Santos, J.; Pereira, J.; Paiva, N.; Ferreira, J.G.; Martins, M.;J.; de Carvalho,
+    L.H. 甲醛树脂固化程度对自身及高性能胶层板最终性能的影响。Proc. Ind. Mech. Eng. Part A J. Chem. 2021, 432,
+    446–496.
+
+    15. Ku, S.H.; Sulaiman, S.H.: 天然产交叉胶层木材（CLT）在分层测试中的评估。Build. Mater. 2017, 133,
+    219–225.
+
+    16. Merline, D.J.; Vukusic, S.; Abdalla, A.A. 甲醛树脂固化：强度与反应机制。Polym. 2013, 45,
+    413–419.
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 10]
+
+
+    Polymers 2023, 15, 2349
+
+
+    11 of 13
+
+
+    The statistical analysis is presented in Table 2. aimed to evaluate how glue spread
+    affects the bonding strength, delamination, and wood failure of cold-setting melamine-based
+    adhesives (MF-1) applied to jabon wood CLT. The statistical analysis revealed
+    that the wood failure was considerably impacted by the glue spread, with a higher
+    $R^2$ of 0.8729, a lower $p$-value of 0.0002, and a higher F-value of 48.0947
+    compared with the bonding strength and delamination. Conversely, the bonding strength
+    was less affected because of the higher standard deviation, $R^2$ of 0.4728. A
+    multiple range testing using Duncan''s posthoc test demonstrated that CLT with
+    an improved bonding strength, delamination, and wood failure produced using 300
+    $g/m^2$ compared with values of 250 $g/m^2$ and 280 $g/m^2$.
+
+
+    **Table 2.** Analysis of variance (ANOVA) and Duncan''s multiple range test of
+    CLT with MF-1 adhesives with different properties.
+
+
+    | Properties | SS | MS | F-Value | p-Value | R^2 |
+
+    |---|---|---|---|---|--|
+
+    | Bonding strength | 1796750 | 1 | 1796754 | 6.2785 | 0.0406 | 0.4728 |
+
+    | Delamination | 2944840 | 1 | 2944840 | 24.1056 | 0.0017 | 0.0779 |
+
+    | Wood failure | 3317150 | 1 | 3317150 | 48.0947 | 0.0002 | 0.8729 |
+
+
+    The specimen exhibited a high level of glue load and a low delamination percentage,
+    indicating the development of bond integrity, which relies on the integrity of
+    wood adhesive bonds [13]. A study by Libus et al. [33] found that the properties
+    and reactivity of a modified MF-based adhesive could be enhanced by the addition
+    of citric acid and pMDI. Our study of a modified MF adhesive with the addition
+    of 5% citric acid and 3% pMDI in a cold-setting application provides a prospective
+    method in terms of producing high-performance products and supporting eco-friendly
+    programs through the efficient consumption of heat energy in the CLT process.
+
+
+    # 4. Conclusions
+
+
+    This developed CLT from jabon wood with a modified MF adhesive by adding 5% citric
+    acid and 3% pMDI in a cold-setting application. This addition increased the viscosity
+    and cohesion strength of the melamine-based adhesive and decreased the solids
+    content, gel length, and pH CLT with various glue spreads of 250, 280, and 300
+    $g/m^2$ were investigated to characterize the bonding strength, delamination,
+    and wood failure percentage. The findings indicate that a higher glue spread leads
+    to an increased bonding strength, lower delamination value, and higher wood failure
+    percentage. The statistical analysis found that the glue spread has a more significant
+    impact on wood failure than the bonding strength and delamination. Through our
+    study, citric acid and pMDI was a promising cold-setting adhesive that conserves
+    heat energy used in CLT.
+
+
+    **Author Contributions:** Conceptualization, drafting, writing, Y.A., and L.K.;
+    review, editing, supervision, L.K., M.A.R.L., E.T.B. and W.D.; and laboratory
+    and work, data curation, Y.A., and R.P.A.; original draft preparation, Y.A., L.K.
+    and M.A.R.L.; supervision, L.K., W.D., N.S and E.T.B.; final analysis, Y.A., L.K.
+    and M.A.R.L. All authors have read and agreed to the published version of the
+    manuscript.
+
+
+    **Funding:** The Ministry of Education, Culture, Research, and Technology (KEMENDIKBU-DRISTEK)
+    and IPB University supported this research through the Doctoral Research Grant,
+    FY 2022 (contract number: 3798/IT3.L1/PT.01.03/B/2022).
+
+
+    **Institutional Review Board Statement:** Not applicable.
+
+
+    **Data Availability Statement:** The authors confirm that the data underlying
+    the research are included in the article. The raw data that supports the results
+    are available upon reasonable request from the corresponding author.'
+  - '[PAGE 11]
+
+
+    Polymers 2023, 15, 2349
+
+
+    12 of 13
+
+
+    Acknowledgments: The authors are grateful to the Ministry of Education, Culture,
+    Research, and funding provided through the Doctoral Dissertation Research Grant
+    for the Fiscal Year 2022 (contract number: 3798/L3.L1/PT.01/03/P/B/2022). The
+    authors are also grateful to the National Research and Innovation Agency (BRIN)
+    and the Jakarta Science Agency (BR) for the Promotion of Scientists (JSPS) through
+    the JSPS Nusantara Association Indonesia (JAA) for their assistance in this project.
+    Furthermore, the authors are grateful to Sudamarto and Nastisa for the assistance
+    with the laboratory work.
+
+
+    Conflicts of Interest: The authors declared there is no potential conflict of
+    interest.
+
+
+    # References
+
+
+    +   1. Lestari, RY CLT (Class Laminated Timber): Karakteristik dan Perkannya (CLT
+    Class Laminated Timber): Production, Characteristics and Development). J. Rin.
+    Ind. Huat 2017, 91–95. [Ref]
+
+    2. Wiener, F; Kippel, M; Dagenais, C; Dunn, A.; Östman, A.; Jansens, M.; Kajiya,
+    K.: Requirements for Engineered Wood Products and Their Influence on the Structural
+    Performance. Proceedings of the World Conference on Timber Engineering, Seoul,
+    Republic of Korea, 2002–23 August 2003.
+
+    3. Fontani, G.; O’Zario, D.; Barbares, L.: Acoustic Comfort in a Workspace Made
+    of Class-Laminated Timber. Build. Acoust. 2019, 26, 12. [Ref]
+
+    4. Espinoza, O.; Trujillo, Y.; Lagualdo, M.F.; Buchholm, U.: Class Laminated Timber:
+    Strength and Research Needs in Europe. Bioresources 2016, 11, 281–295. [Ref]
+
+    5. Li, H.; Wang, L.; Wei, Y.; Wang, J.; Bonding and Shear Performance of Class-Laminated
+    Timber and Glued-Laminated Timber Beams: A Comprehensive Investigation. J. Build.
+    Eng. 2022, 45, 043027. [Ref]
+
+    6. Zhang, J.; Sun, Y.: The Influence of Performance-Rating on Class-Laminated
+    Timber. APA The Engineered Wood Association: Tacoma, WA, USA, 2012. Available
+    online: https://www.apawood.org (accessed on May 12, 2023).
+
+    7. Gong, Y.; Yu, G.; Ren, H.: Shear Strength and Delamination of Laminated T:
+    Predicting the Average Compression Strength of CLT Using the Average Density or
+    Composite Strength of Lamina. Bioresources 2022, 13, 591. [Ref]
+
+    8. Ceallagh, O.; Sikora, K.; Harte, A. M.: The Influence of Lay-Up on the Building
+    Performance and Rolling Shear Strength of CLT. 2018, 38(8), 10240–10250. [Ref]
+
+    9. Li, H.; Bai, Y.; Wei, P.; Wang, L.: Class-Laminated Timber (CLT) in China:
+    a State-of-the-Art. Bioresources 2019, 14, 8098. [Ref]
+
+    10. Brandlner, F.; Gaster, P.; Ringinger, A.; Schholz, G.; Thiel, A. Class Laminated
+    Timber (CLT): Overview and Development. Eur. J. Wood Prod. 2007, 74, 331–355.
+    [Ref]
+
+    11. Yusuf, M.; Sci, Y.; Yusuf, N.; Tah, P.; Lee, S.H.; Khan, M.A.; Muhammad, R.;
+    James, S.: Mechanical and Physical Properties of Melamine-Resins Using Wood Extract
+    from Various Types of Wood. J. Sci. 2019, 65, 20. [Ref]
+
+    12. Li, M.; Zhang, S.; Yang, Y.; Zheng, H.: Bonding Techniques on Performance
+    and Mechanical Properties of Class Laminated Timber (CLT) Made from Lauli Merkamies.
+    2021, 13, 733. [Ref]
+
+    13. Lan, P.; Yang, R.; Mao, H-Y; Cui, J.; B.: Production of Melamine-Formaldehyde
+    Resins using Impregnation of Ethylene Glycol and Canphor with High Hydrophobicity,
+    Stability, and Longevity. Composite Build. Mater. 2015, 65, 4–8. [Ref]
+
+    14. Santos, J.; Pereira, J.; Paiva, N.; Ferreira, J.G.; Martins, M.;J.; de Carvalho,
+    L.H. Influence of Condensation Degree of Melamine-Formaldehyde Resins on Their
+    and the Final Properties of High-Performance Laminates. Proc. Ind. Mech. Eng.
+    Part A J. Chem. 2021, 432, 446–496. [Ref]
+
+    15. Ku, S.H.; Sulaiman, S.H.: Evaluation of Naturally Produced Class Laminated
+    Timber (CLT) in Delamination Tests. Build. Mater. 2017, 133, 219–225. [Ref]
+
+    16. Merline, D.J.; Vukusic, S.; Abdalla, A.A. Melamine-Formaldehyde Curing: Strength
+    and Reaction Mechanism. Polym. 2013, 45, 413–419. [Ref]
+
+    17. Ferdosian, F.; Pan, Z.; Gao, G.; Zhao, B.: Bio-Based Adhesives and Evaluation
+    for Wood Composite Applications. Polymaterials 2017, 7, 90. [Ref]
+
+    18. Anggrani, R.; Nadiyo, S.; Sus Yusuf Massaya, M.: Mengenal Teknik dan Orientasi
+    Sudut Laminah Terhadap Karakteristik Class Timber Kayu; Jurnal Universitas Jambi:
+    Seri Sains: Seni Jambi, Jambi, Indonesia, 2015; Volume 17.
+
+    19. Abdurrahman, I.N.; Gultom, H.J.; Desmaliana, A. Kajian Eksifimen Spesifik
+    Mekanik Panel Class Laminated Kayu Sengon Dan Kayon (78-82). Recacana J. Teknik,
+    2018, 4, 78. [Ref]
+
+    20. Papadopoulos, A.N.; Hill, C.A.; Traubolos, E.; Hague, J.R. Isoocyanate Resins
+    for Particleboard: PMI vs EMD. Holz und Holz-Werk 2002, 66, 81–83. [Ref]'
+- md: '
+
+    Ganesh Gopal, M.T.; Nath, S.K.; Sujatha, D.; Rangaraju, T.S. Based PMDI (Polymeric
+    Methyl Diphenyl Diisocyanate) Adhesives for Plywood. IOSR J. Appl. Chem. 2016,
+    59-61. [CrossRef]
+
+
+    Wong, G.; Cheng, Y.; Mae, J.; Jun, L.E.; Kim, H. A Study on the Bond Shear Strength
+    Under the Layer Composition and Adhesive Type of Ply-Lam CLT 1. K. Korean Wood
+    Sci. Technol. 2020, 48, 791-806.
+
+
+    Yadav, S.M.; A, Y.; Malik, Park, R. Performance of Lamination with Different Methods
+    and Its Application in Urea-Formaldehyde Based Plywood. Wood Mater Sci. Eng. 2021,
+    17, 734-743.
+
+
+    Hidayat, A.; Priyanka, A.; Asmar, Bakri, S.; Hidayati, S.; Munawan, I.; Iswanto,
+    A.H. Performance of Eco-Friendly Particleboard from Agro-Industrial Residues with
+    Formaldehyde-Free Natural Rubber Adhesives in Interior Applications. Polymers,
+    2022, 42, 23222-23233. [CrossRef]
+
+
+    EN 16351; Timber Structures-Class Laminated Timber-European Standards. Lisbon,
+    Czech, 2021.
+
+
+    Yosuf, N.; Timur, P.; Lee, S.H.; Saburuddin, F.A.; James, R.M.; Aswanto, M.; Lee-Cheng,
+    H.; Rosmael, A. Thermal Properties of plywood bonded with two structural adhesives.
+    Modern. Sci. Technol. 2021, 23, 1-10.
+
+
+    Zhou, J.; Liu, K.; Wu, C.; Chen, Z.; Xu, L. Bonding Performance of Melamine-Udehyde
+    and Phenol-Resorcinol Adhesives in Interior Board Grade. Jon. Acad. Sci. 2017,
+    36, 2630-2639.
+
+
+    Sia, M.J.; Jeong, B.; Park, B.D.; Lee, S.M.; Kang, E.C. Effect of Synthesis Method
+    and Content of Melamine-Urea-Formaldehyde Resins on Plywood. J. Korean Wood Sci.
+    Technol. 2019, 47, 579-586. [CrossRef]
+
+
+    Lubis, M.A.R.; Park, B. Performance of Hybrid Adhesives of Blocked-PMDI/Melamine-Urea-Formaldehyde
+    Resins for the Surface Lamination on Plywood. J. Korean Wood Sci. Technol. 2019,
+    47, 203-209. [CrossRef]
+
+
+    Yang, S.; Li, J. Bond Quality and Bonding of Cross-Laminated Bamboo Timber and
+    CLT. Forests, 2023, 12, 12721. [CrossRef]
+
+
+    Song, D.; Kim, K. Manufacturing of Environmentally Delamination of Mixed Cross
+    Laminated Timber using Polyurethane Adhesive. J. Korean Wood Sci. Technol. 2022,
+    50, 167-178. [CrossRef]
+
+
+    White, S.; Khan, P.; Arup, Y.; Lee, S.H.; Hussain, K.; Khalider, M.O. Effect of
+    Wood Species, Clamping and Spread Rate on the Bonding Properties of Cross-Laminated
+    Timber (CLT) Manufactured from Tropical Hardwoods. Const. Build. Mater. 2021,
+    273, 121721. [CrossRef]
+
+
+    Liang, Z.; Chen, G.; Wang, Y.; Wang, G. T. Dimensional Stability and Bonding Performance
+    of Hybrid CLT fabricated with Lumber and OSB. Building Materials, 2022, 16, 10689.
+    [CrossRef]
+
+
+    Lin, H.; Tang, S.; Wang, J. Performance of Adhesive Systems for Cross-Laminated
+    Timber Treated with Mineral Copper Alkali Type C (MCA-C). Const. Build. Mater.
+    2020, 232, 117208. [CrossRef]
+
+
+    Han, Y.; Park, Y.; Wang, C.; Chung, H. Influence of Shear Strength, Wood Failure
+    Percentage and Wet Delamination of Cross-Laminated Timber (CLT) Panels Made with
+    Steamed Heat Treatment (SST) Layers of Larch Holzforstung 2017, 7. [CrossRef]
+
+
+    Disclaimer/Publisher''s Note: The statements, opinions and data contained in all
+    articles are sole responsibility of the individual author(s) and contributor(s)
+    and not of MPDI and/or the editor(s). MPDI and/or the editor(s) disclaims any
+    responsibility for any injury to person or property resulting from their use
+
+    '
+  mdcn: '
+
+
+    Ganesh Gopal, M.T.; Nath, S.K.; Sujatha, D.; Rangaraju, T.S. 用于胶合板的PMDI（聚聚甲基二苯异氰酸酯）胶粘剂。IOSR
+    J. Appl. Chem. 2016, 59-61. [CrossRef]
+
+
+    Wong, G.; Cheng, Y.; Mae, J.; Jun, L.E.; Kim, H. 胶层组成和胶粘剂类型对 Ply-Lam CLT 1 粘接剪切强度的研究。K.
+    Korean Wood Sci. Technol. 2020, 48, 791-806.
+
+
+    Yadav, S.M.; A, Y.; Malik, Park, R. 不同方法的胶合性能及其在脲-甲醛胶合板中的应用。Wood Mater Sci. Eng.
+    2021, 17, 734-743.
+
+
+    Hidayat, A.; Priyanka, A.; Asmar, Bakri, S.; Hidayati, S.; Munawan, I.; Iswanto,
+    A.H. 室内应用中采用无甲醛天然橡胶胶剂的农业工业残渣制环保颗粒板性能。Polymers, 2022, 42, 23222-23233. [CrossRef]
+
+
+    EN 16351; 木结构-胶层胶合木-欧洲标准。利斯本，捷克，2021。
+
+
+    Yosuf, N.; Timur, P.; Lee, S.H.; Saburuddin, F.A.; James, R.M.; Aswanto, M.; Lee-Cheng,
+    H.; Rosmael, A. 两种结构胶粘接的胶合板的热性能。Modern. Sci. Technol. 2021, 23, 1-10.
+
+
+    Zhou, J.; Liu, K.; Wu, C.; Chen, Z.; Xu, L. 室内级板材中三胺-醛和酚-间苯酚胶剂的粘接性能。Jon. Acad.
+    Sci. 2017, 36, 2630-2639.
+
+
+    Sia, M.J.; Jeong, B.; Park, B.D.; Lee, S.M.; Kang, E.C. 三胺-脲-甲醛树脂合成方法和含量对胶合板的影响。J.
+    Korean Wood Sci. Technol. 2019, 47, 579-586. [CrossRef]
+
+
+    Lubis, M.A.R.; Park, B. 封堵PMDI/三胺-脲-甲醛树脂复合胶剂用于胶合板表面胶层的性能。J. Korean Wood Sci. Technol.
+    2019, 47, 203-209. [CrossRef]
+
+
+    Yang, S.; Li, J. 交叉胶合竹材与 CLT 的粘接质量和粘接。Forests, 2023, 12, 12721. [CrossRef]
+
+
+    Song, D.; Kim, K. 使用聚氨酯胶粘剂制造混合交叉胶合木的环保脱层研究。J. Korean Wood Sci. Technol. 2022,
+    50, 167-178. [CrossRef]
+
+
+    White, S.; Khan, P.; Arup, Y.; Lee, S.H.; Hussain, K.; Khalider, M.O. 木材种类、夹紧和涂布率对热带硬木制造的交叉胶合木（CLT）粘接性能的影响。Const.
+    Build. Mater. 2021, 273, 121721. [CrossRef]
+
+
+    Liang, Z.; Chen, G.; Wang, Y.; Wang, G. T. 用材和 OSB 制造的复合 CLT 的尺寸稳定性和粘接性能。Building
+    Materials, 2022, 16, 10689. [CrossRef]
+
+
+    Lin, H.; Tang, S.; Wang, J. 经矿铜碱 C 型（MCA-C）处理的交叉胶合木胶粘剂系统性能。Const. Build. Mater.
+    2020, 232, 117208. [CrossRef]
+
+
+    Han, Y.; Park, Y.; Wang, C.; Chung, H. 蒸蒸热处理（SST）层落松制成的交叉胶合木（CLT）板的剪切强度、木材失效百分比和湿脱层的影响。Holzforstung
+    2017, 7. [CrossRef]
+
+
+    免责声明/出版者注：所有文章中包含的声明、观点和数据由个人作者和贡献者自行负责，而非 MPDI 和/或编辑的责任。MPDI 和/或编辑对使用这些内容可能导致的任何人员伤害或财产损失不承担任何责任。
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 12]
+
+
+    Ganesh Gopal, M.T.; Nath, S.K.; Sujatha, D.; Rangaraju, T.S. Based PMDI (Polymeric
+    Methyl Diphenyl Diisocyanate) Adhesives for Plywood. IOSR J. Appl. Chem. 2016,
+    59-61. [CrossRef]
+
+
+    Wong, G.; Cheng, Y.; Mae, J.; Jun, L.E.; Kim, H. A Study on the Bond Shear Strength
+    Under the Layer Composition and Adhesive Type of Ply-Lam CLT 1. K. Korean Wood
+    Sci. Technol. 2020, 48, 791-806.
+
+
+    Yadav, S.M.; A, Y.; Malik, Park, R. Performance of Lamination with Different Methods
+    and Its Application in Urea-Formaldehyde Based Plywood. Wood Mater Sci. Eng. 2021,
+    17, 734-743.
+
+
+    Hidayat, A.; Priyanka, A.; Asmar, Bakri, S.; Hidayati, S.; Munawan, I.; Iswanto,
+    A.H. Performance of Eco-Friendly Particleboard from Agro-Industrial Residues with
+    Formaldehyde-Free Natural Rubber Adhesives in Interior Applications. Polymers,
+    2022, 42, 23222-23233. [CrossRef]
+
+
+    EN 16351; Timber Structures-Class Laminated Timber-European Standards. Lisbon,
+    Czech, 2021.
+
+
+    Yosuf, N.; Timur, P.; Lee, S.H.; Saburuddin, F.A.; James, R.M.; Aswanto, M.; Lee-Cheng,
+    H.; Rosmael, A. Thermal Properties of plywood bonded with two structural adhesives.
+    Modern. Sci. Technol. 2021, 23, 1-10.
+
+
+    Zhou, J.; Liu, K.; Wu, C.; Chen, Z.; Xu, L. Bonding Performance of Melamine-Udehyde
+    and Phenol-Resorcinol Adhesives in Interior Board Grade. Jon. Acad. Sci. 2017,
+    36, 2630-2639.
+
+
+    Sia, M.J.; Jeong, B.; Park, B.D.; Lee, S.M.; Kang, E.C. Effect of Synthesis Method
+    and Content of Melamine-Urea-Formaldehyde Resins on Plywood. J. Korean Wood Sci.
+    Technol. 2019, 47, 579-586. [CrossRef]
+
+
+    Lubis, M.A.R.; Park, B. Performance of Hybrid Adhesives of Blocked-PMDI/Melamine-Urea-Formaldehyde
+    Resins for the Surface Lamination on Plywood Performance of Hybrid Adhesives of
+    Blocked-PMDI/Melamine-Urea-Formaldehyde Resins on J. Korean Wood Sci. Technol.
+    2019, 47, 203-209. [CrossRef]
+
+
+    Yang, S.; Li, J. Bond Quality and Bonding of Cross-Laminated Bamboo Timber and
+    CLT. Forests, 2023, 12, 12721. [CrossRef]
+
+
+    Song, D.; Kim, K. Manufacturing of Environmentally Delamination of Mixed Cross
+    Laminated Timber using Polyurethane Adhesive. J. Korean Wood Sci. Technol. 2022,
+    50, 167-178. [CrossRef]
+
+
+    White, S.; Khan, P.; Arup, Y.; Lee, S.H.; Hussain, K.; Khalider, M.O. Effect of
+    Wood Species, Clamping and Spread Rate on the Bonding Properties of Cross-Laminated
+    Timber (CLT) Manufactured from Tropical Hardwoods. Const. Build. Mater. 2021,
+    273, 121721. [CrossRef]
+
+
+    Liang, Z.; Chen, G.; Wang, Y.; Wang, G. T. Dimensional Stability and Bonding Performance
+    of Hybrid CLT fabricated with Lumber and OSB. Building Materials, 2022, 16, 10689.
+    [CrossRef]
+
+
+    Lin, H.; Tang, S.; Wang, J. Performance of Adhesive Systems for Cross-Laminated
+    Timber Treated with Mineral Copper Alkali Type C (MCA-C). Const. Build. Mater.
+    2020, 232, 117208. [CrossRef]
+
+
+    Han, Y.; Park, Y.; Wang, C.; Chung, H. Influence of Shear Strength, Wood Failure
+    Percentage and Wet Delamination of Cross-Laminated Timber (CLT) Panels Made with
+    Steamed Heat Treatment (SST) Layers of Larch Holzforstung 2017, 7. [CrossRef]
+
+
+    Disclaimer/Publisher''s Note: The statements, opinions and data contained in all
+    articles are sole responsibility of the individual author(s) and contributor(s)
+    and not of MPDI and/or the editor(s). MPDI and/or the editor(s) disclaims any
+    responsibility for any injury to person or property resulting from their use'
