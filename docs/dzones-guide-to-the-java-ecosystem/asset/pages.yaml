@@ -1,0 +1,3579 @@
+- img_proc: true
+  md: '![](img/c97b6bcb34115f65b8d120b6c31e94a7_0_0.png)
+
+
+    # ## THE DZONE GUIDE TO
+
+
+    # # THE JAVA nECOSYSTEM
+
+
+    2015 EDITION
+
+
+    BROUGHT TO YOU IN PARTNERSHIP WITH
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_0_1.png)
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_0_2.png)
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_0_3.png)
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_0_4.png)
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_0_5.png)
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_0_6.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Dear Reader,
+
+
+    20 years—a lifetime for a programming language, never a whole platform. This year,
+    we celebrate Java''s 20th birthday, and what better way to celebrate than release
+    DZone''s First Guide to the Ecosystem.
+
+
+    I can remember the 10th JavaOne. There was energy and a belief that Java would
+    fulfill its mission to give developers a true chance to "Write Once, Run Anywhere."
+    While all this Sun Micros struggled to find a place in the market amid a changing
+    economy and a rapidly evolving Internet. Today, Java is everywhere, and it is
+    the workforce of enterprises and independent developers alike. It is open more
+    than just a language. And after all this time, Java remains the most popular language
+    for developers (Toodle) and one of the most active for job hunters (Indeed).
+
+
+    Long before Dzone, we saw javalobby: an independent group of Java developers eager
+    to talk about this new language that required memory management and the backing
+    of such powerful organizations. We observed our vision of java over the years
+    (near our Java topic), but it remains one of the largest sections of our site
+    and one of the primary destinations for Java developers on the web. Because of
+    Java''s role in the world choosing the focus for this guide was one of the hardest
+    decisions our editorial team had to make this year.
+
+
+    This guide, which you''re hopefully enjoying today, focuses on trying to understand
+    the trends about how developers are using the Java platform. What version of the
+    platform are you using? Are you using full EE or just using tools like Spring?
+    What do developers prefer over WebSphere? Statistics these—along with expert analysis
+    and articles from industry leaders—await you in the 2015 Guide to the Ecosystem.
+
+
+    Thanks, as always, for your support, and please continue to visit DZone daily.
+
+
+    P.S. We are always getting in touch with you to help build the platform that DZone.com
+    and communities like LinkedIn, Microsoft, and a variety of other organizations
+    need.
+
+
+    MAT SCHMIDT
+
+    PRESIDENT AND CTO
+
+    MATT@DZONE.COM
+
+
+    # TABLE OF CONTENTS
+
+
+    +   3 EXECUTIVE SUMMARY
+
+
+    +   4 KEY RESEARCH FINDINGS
+
+
+    +   6 WHY JAVA BT
+
+    BY TRISHA GEE
+
+
+    +   9 DIVE DEEP INTO THE JAVA ECOSYSTEM
+
+
+    +   12 FIRST STEPS IN JAVA MICROSERVICES
+
+    BY IVAR GRIMSTAD
+
+
+    +   16 PRODUCTION DEBUGGING IS NOT A CRIME
+
+    BY ALEX ZMITNITSKY
+
+
+    +   18 JAVA POPULARITY: BY THE NUMBERS INFOGRAPHIC
+
+
+    +   20 REACTIVE TRENDS ON THE JVM
+
+    BY JONAS BONER
+
+
+    +   24 JAVA ECOSYSTEM EXECUTIVE INSIGHTS
+
+    BY TOM SMITH
+
+
+    +   28 THE POWER, PATTERNS, AND PAINS OF MICROSERVICES
+
+    BY JOSH LONG
+
+
+    +   32 BEST PRACTICES CHECKLIST
+
+
+    +   33 SOLUTIONS DIRECTORY
+
+
+    +   36 DIVE DEEP INTO FEATURED JAVA ECOSYSTEM
+
+    SOLUTIONS
+
+
+    +   37 GLOSSARY
+
+
+    | EDITORIAL | BUSINESS |
+
+    |---|---|
+
+    | John Esposito<br>research@dzone.com<br>EDITOR-IN-CH | Chris Smith<br>PRODUCTION
+    ADVISOR |
+
+    | Ryan Spain<br>DIRECTOR OF PUBLICATIONS | Jim Ward<br>SALES ASSOCIATE |
+
+    | Mitch Ponsinski<br>VP & OPERATIONS | Chris Brunswick<br>CUSTOMER SERVICE |
+
+    | Matt Schmidt<br>PRESIDENT & CTO | Kallet Atkinson<br>VP |
+
+    | Matt Werner<br>MARKET RESEARCH | Ashley Slate<br>DESIGN DIRECTOR |
+
+    | Moe Lee<br>MARKET MANAGER | Matt O''Brien<br>DIRECTOR OF BUSINESS DEVELOPMENT
+    |
+
+    | John Walter<br>EDITOR | Alex Kraafds<br>DIRECTOR OF MAJOR ACCOUNTS |
+
+    | Allen Coin | Chelsea Booth<br>MARKETING ASSOCIATE |
+
+
+    WANT YOUR FEATURE TO BE IN COMING GUIDES?
+
+    Please contact research@dzone.com for submission information.
+
+
+    LIKE TO CONTRIBUTE TO COMING GUIDES?
+
+    Please contact research@dzone.com for consideration.
+
+
+    INTERESTED IN BECOMING A JAVA RESOURCE PARTNER?
+
+    Please contact sales@dzone.com for information.
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_1_0.png)
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_1_1.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # Executive Summary
+
+
+    DZone surveyed more than 600 IT professionals and produced several experts for
+    our 2015 Guide to the Java Ecosystem to give Java organizations insight into the
+    effects of major trends on the larger Java development community and to discover
+    common patterns and technology stacks currently in use across the industry. In
+    this summary you will learn about the current state of the Java platform and the
+    ecosystem of turning around the language.
+
+
+    for microservices, 46% per container. 21% want to implement microservices (12%)
+    always and 15% want to implement microservices in containers—or actually using—there
+    are more respondents interested in containers than those that aren''t (22% not
+    interested) and the same for microservices (20% not interested).
+
+
+    Implications: These trends have made a significant impact in the Java community
+    over the last 2-3 years, but it will still take several years for containers or
+    microservices to maintain adoption in many of the organizations where they could
+    be beneficial. Many of the most successful web projects previously (Google, Netflix,
+    Twitter, etc.) have implemented containers and microservices appropriately. These
+    companies are driving trends by sharing some of their implementations.
+
+
+    Recommendations: Developers, architects, and executives need to start researching
+    the potential benefits of containers and microservices before to them to their
+    applications. Some may decide that they are not mature or enough for their systems,
+    but more robust research must be done before a decision can be made. Several technologies
+    have already moved to support microservices—such as Spring, Wildswarm, and Akka.
+    Docker has a dominant position in the container space. A good place to start is
+    reading "Docker and Kubernetes in the Java Ecosystem" by Paul Baker on Docker.
+    For building microservices you should read Ivan Girard''s guide, "Building Microservices
+    With Java."
+
+
+    # RESEARCH TAKEWAYS
+
+
+    +   01 DEVELOPERS ARE MOVING TO NEW VERSIONS OF JAVA MORE QUICKLY
+
+
+    Data: 53% of respondents say their new apps will use Java 8 in the next six months
+    and 55% are going to start converting existing apps to Java 8 in that time frame.
+    62% of respondents say apps are in Java 7 and 20% already have apps in Java 8.
+
+
+    Implications: A large majority of Java organizations are moving to the latest
+    version of Java for new applications. This shows a bit forward momentum in the
+    Java community that has been in years. Large swaths of Java organizations have
+    legacy codebase due to their organization''s age and the constant pressure of
+    the language, which has left some of them behind. There will be a large number
+    of organizations where there isn''t enough risk or resources to motivate them
+    to upgrade their legacy code, but it''s likely to see significant numbers of Java
+    companies moving their apps to the newest version.
+
+
+    Recommendations: The fact that Oracle has declared Java SE 7 end-of-life is a
+    significant contributor to this trends towards faster. To maintain a high level
+    of security and take advantage of new features that other programming languages
+    have for a long time, to move to the latest version is always the best option
+    if you can afford it. Try it with "Java 8" to see the positive impact Java 8 has
+    on your applications. Some key things expecting toward Java 8 are functional programming
+    features and performance improvements.
+
+
+    +   02 INTEREST IN CONTAINERS & MICROSERVICES IS GROWING IN THE JAVA WORLD
+
+
+    Data: While nearly half of respondents haven''t responded about containers or
+    microservices on comment with (43%
+
+
+    # 03 JAVA IS ONE OF THE MOST POPULAR PROGRAMMING LANGUAGES
+
+
+    Data: There are several indexes in tech which uses various metrics to measure
+    programming language popularity, including TIOBE, Rank, and IEEE. Java is ranked
+    #1 or #2 in all of these indexes. No other has rankings that are as consistently
+    as Java across all these indices. On the TIOBE index, one of the most recognized
+    languages, Java has the number one language for the last 14 years, and it''s currently
+    number one by a significant margin. 83% of respondents in our ecosystem survey
+    say they are concerned about the future of Java.
+
+
+    Recommendations: Java has reached a point where its popularity far further. More
+    developers are using, open-source utilizing around it, and there is more maturity
+    and reliability around the platform and its ecosystem of tools. As a result, more
+    organizations and developers choose to build apps in Java.
+
+
+    Recommendations: While many think Java would decline after the announcement of
+    Acquisition of Sun Micros in 2009, it will take a few years to establish itself.
+    With the release of Java 8, Java is finally catching up with the expectations
+    that it had its ability to be written better than ever before. Before people are
+    even thinking about the future of Java, and it''s being used in many of the well-respected
+    tech companies. Its popularity in the software industry is expected to continue
+    and even grow due to its advantages in data analysis and embedded systems, which
+    will likely make Java a significant programming language in the Era of Internet
+    Things.
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_2_0.png)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Key Research Findings
+
+
+    More than 600 professionals responded to DZone''s 2015 Java Ecosystem Survey.
+    Here are the demographics for this study:
+
+
+    +   - Developers (42%) and Development Leads (25%) were the most common roles.
+
+    - 63% of respondents come from large organizations (100 or more employees) and
+    37% from small organizations (under 100).
+
+    - The majority of respondents are headquartered in Europe (44%) or the US (32%).
+
+    - Over half of respondents (61%) have over 10 years of experience as IT professionals.
+
+    - We surveyed developers who use Java in their organization. Other large ecosystems
+    for these include C# (31%), C/C++ (29%), Universal Script (28%), PHP (26%), Python
+    (26), and Groovy (23%).
+
+
+    the use of Java 6 or lower for any new apps, and a minuscule 1% of new apps used
+    Java 5 or lower. As far as existing apps concerned, Java 8 has not caught up to
+    Java 7; most organizations (62%) still have apps built on Java 7, and almost half
+    (47%) still have apps on Java 6. respondents said that many developers are eager
+    to move forward with Java as it evolves, they are hesitant to retrofit applications
+    already built on a previous platform (18% of users have not moved to Java 8 and
+    have no plans to using Java 8 in the next 6 months, for neither new or existing
+    apps.
+
+
+    02. JAVA EE AND SPRING US IS ALMOST EQUAL
+
+    One of the significant fights in the Enterprise Java community is using Spring
+    and those use Java EE. Our survey shows that the use of components of the platform
+    is pretty close, with Java EE having a slight edge. Overall, 58% use Spring and
+    67% use Java EE or lower, or Spring 2x or lower. The breakdown of each version
+    can be found in the charts, but what''s interesting is that almost one-third (32%)
+    of respondents use.
+
+
+    03. JVM LANGUAGES HAVE A STRONG SHARE OF JAVA DEVELOPERS
+
+    57% of respondents have written code in a non-Java, JVM-based language. Groovy
+    (60% of all respondents is the language they have most used, with Scala (39%)
+    also close behind. The next largest were Ruby and Cloojure, which over 80% said
+    they enjoyed using. However 6% of the groups who had tried a specific JVM language.
+    Only Groovy and Scala had enough users to make significant observation over user
+    opinions. When they asked if they would like to use these languages at their job;
+    45% of Groovy users said they would, and 55% of Scala users said they would.
+
+
+    01. MOST DEVELOPERS ARE KEEPING UP FAIRLY WITH JAVA VERSIONS
+
+    A majority of respondents (58%) said their organization was using Java 8—the latest
+    version of Java—in least most of their new applications. 48% said of new of their
+    applications would be built on Java 7. Only 10% of respondents indicated
+
+
+    01. WHAT VERSIONS OF JAVA ARE BEING USED AT YOUR ORGANIZATION?
+
+
+    | VERSION | FOR NEW APPS | EXISTING APPS |
+
+    |---|---|--|
+
+    | Java 5 or lower | 1% | 11% |
+
+    | Java 6 | 10% | 47% |
+
+    | Java 7 | 48% | 62% |
+
+    | Java 8 | 58% | 20% |
+
+
+    02. WHICH OF THE FOLLOWING JAVA PLATFORMS DO YOU USE?
+
+    We asked respondents what their primary IDE, build tools, and CI engines were.
+    For IDEs, Eclipse is still king with 54% of respondents using it. 30% use IntelliJ
+    (most respondents [23%] actually use, with only 7% using the community edition).
+    13% use NetBeans, Maven,
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_3_0.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '(66%) is much more than other competitors like CI (18%) and Gradle (11%). Jenkins
+    dominates the CI space, with 62%. The next CI server has more than 10% share of
+    respondents. 20% don''t use a CI server. We also asked respondents to list all
+    the Java tools they use and found that JUnit is the most common solution for Java
+    developers (64%), while a few others (DRC—38%) or Spring (DbTest 24%).
+
+
+    their applications on the cloud development phase, 43% run some of their tests/QA
+    on the cloud, and 42% are using cloud infrastructure in their production environment.
+    When we asked about most recent trends towards microservices, only 10% were using
+    microservices and 12% were using containers (specifically, 9% were using Docker).
+    Most respondents have researched these two enough to think about using them (43%
+    for microservices, 64% for containers), and some are considering them for future
+    (20% for microservices, 12% for containers). The interest in these two is significant
+    with 15% wanting to implement microservices and 21% wanting to implement Docker
+    containers.
+
+
+    # 05. JSF AND SPRING MVC NECK-AND-NEC IN JAVA FRAMEWORKS RACE
+
+
+    The Java framework battle is much closer than the previously mentioned competitions.
+    In August 2015, 52% respondents used Spring, 39% respondents showed MVC (94.2%)
+    and Java Faces (35%) as a viable tie. However, more Java developers are looking
+    for front-end development tools outside of the Java. When asked in the 2015 Java
+    Ecosystem Survey about the tools they use for application front-end, respondents
+    chose more than Spring MVC (39%) and JSF (30%). All of direct competitors—React-js,
+    Ember, Backbone—were under 10%.
+
+
+    # 06. FULL JAVA APP SERVERS ARE NOT COMMON
+
+
+    Lightweight application servers like Tomcat (68%) and Jetty (27%) have been dominant
+    in Java development for some time. For several years, the trend in Java development
+    has been moving towards use of only the components that you need, and [1]. We
+    also found that most of these app servers are used in development more often than
+    they are used in production. Only WebLogic and WebSphere were deployed in production
+    more often than development.
+
+
+    # 08. NEW SERVER TECHNOLOGIES ARE STILL BLEEDING-EDGE AND RACE
+
+
+    We asked respondents about the server technologies they use, and while were still
+    using Java EE or Spring framework, we found some groups using the new server technologies
+    in the Java space. 11% say they are using a serverless with Spring Boot and Dropwizard.
+    However, Spring Boot and Dropwizard are used for more than just countless deployment,
+    so it''s not an indicator of the tools'' overall performance. 9% say they are
+    using Skalla and Akka, and 2% are using Vert.x.
+
+
+    > [1] bit.ly/JNYB77
+
+
+    # 04. WHICH SERVER DO YOU USE?
+
+
+    # 07. JAVA DEVS SLOWLY ADOPTING CLOUD, MICROSERVICES AND CONTAINERS ARE FURTHER
+    OFF
+
+
+    The adoption of cloud infrastructure is still modest in Java organizations, with
+    only 37% running some percentage of
+
+
+    | 03. WHAT FRAMEWORKS DO YOU USE FOR JAVA APPLICATIONS? |
+
+    | CLIENT SIDE |
+
+    | 43% ANGULARIS |
+
+    | 8% 8% BACKONEJS REACTJS EMBERJS |
+
+    | SERVER SIDE |
+
+    | 34% SPRING MVC |
+
+    | 30% JSF |
+
+    | 16% STRUTS |
+
+
+    | 68% TOMCAT |
+
+    | 35% WILDDFLY/JOSS |
+
+    | 27% JETTY |
+
+    | 18% WEBLOGIC |
+
+    | 15% GLASSFISH/PAYARA |
+
+    | 15% WEBSHERE |
+
+    | 6% NONE |
+
+    | TOMEE |
+
+
+    # 05. WHICH OF THE FOLLOWING SERVER TECHNOLOGIES DO YOU USE?
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Why Java 8?
+
+
+    01
+
+    In cases, Java 8 will improve application performance without any specific work
+    or tuning.
+
+
+    02
+
+    Lambda expressions, the Streams API, and new methods on existing classes are some
+    of the key productivity improvements.
+
+
+    03
+
+    Java 8''s Optional type gives developers significant flexibility when dealing
+    with null values, reducing the likelihood of NullPointerException
+
+
+    BY TRISHA GEE
+
+
+    Java 8 came out last year—and Java 7 is now end of life—making Java 8 the only
+    Oracle-supported option until Java 9 comes at the end of next year. However, since
+    organizations value stability over trendiness, many of us are still working with
+    Java 7, or even 6.
+
+
+    Streams API or lambda syntax or even change your existing code to get speed improvements
+    in your application.
+
+
+    Garbage Collector Improvements: Often "Performance" is synonymous with "Garbage
+    Collection," and it is certainly that poor garbage collection will impact your
+    application performance. Java 8 has substantial changes to GC that improve performance
+    and simplify tuning. The well-known of these is the removal of PermGen and the
+    introduction of Metaspace.
+
+
+    Let''s look at some features of Java 8, and provide some arguments to persuade
+    your organization to upgrade.
+
+
+    Fork/Join Improvements: The fork/join framework was new in Java 7, and was the
+    latest effort to simplify concurrent programming using the JVM. A lot of work
+    went into improving it for Java 8. Fork/join is now the framework that''s used
+    under the covers for parallel operations in Streams API (on this later).
+
+
+    # IT FASTER
+
+
+    Here''s a point that may please your business, or the operations: you''ll probably
+    find Java 8 runs your application faster. Generally speaking, applications that
+    have moved to Java 8 see some sort of improvement without any specific work or
+    tuning. This might not apply to an application that has been highly tuned to a
+    specific JVM, but there are many reasons why Java 8 performs better:
+
+
+    In addition, there are changes in Java 8 to support concurrency, and Oracle has
+    summarized some of the performance improvements in JDK 8.
+
+
+    # FEWER LINES OF CODE
+
+
+    Java is regularly accused of heavy use on boilerplate. Java 8 addresses some sorts
+    of these by embracing a more functional style for the new APIs, focusing on what
+    you want to achieve and how to do.
+
+
+    Performance Improvements in Common Data Structures:
+
+    Benchmarks of the ever-popular HashMap show that performance in Java 8 is better.
+    These sorts of improvements are compelling—you don''t need to learn the
+
+
+    # LAMBDA EXPRESSIONS
+
+
+    Lambda expressions in Java 8 are not just syntactic sugar over''s ever anonymous
+    inner classes—the'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "Java 8 method of passing behavior around. Lambdas take advantage of Java 7's\
+    \ under-the-hood changes, which they perform well. To see examples of using lambdas\
+    \ expressions can simply simplify your code, read on\n\nMap and List have new\
+    \ methods in Java 8. It's worth checking them out to see how many lines of code\
+    \ they can save you.\n\n# NEW METHODS ON OUR FAVORITE COLLECTIONS\n\nWhile Lambdas\
+    \ and Streams (which we'll cover next) are arguably the top two features of Java\
+    \ 8, what is well known that changes in Java 8 have allowed the developers to\
+    \ create new methods to excluding classes without compromising readability. The\
+    \ new methods, combined with lambda expressions, allow us to drastically simplify\
+    \ your code. Take, for example the case of figuring out if an element already\
+    \ exists in Map and creating a new one if not. Before Java 8, you might write\
+    \ something like:\n\n> Generally speaking, applications that have moved to Java\
+    \ 8 see some sort of improvement without any specific work or tuning.\n\n# STREAMS\
+    \ API\n\nThe Streams API gives you a powerful tool to query and manipulate your\
+    \ data. Check out some of the articles or books on the subject for a more complete\
+    \ view. Building fluent queries for Big Data is just as useful as for common operations.\
+    \ Let's say, if you have a list of books and want to get a list of authors for\
+    \ these books, in alphabetical order:\n\n```\nprivate final Map<Customer, Customer>\
+    \ customers = new HashMap<>();\n\npublic void incrementCustomerOrders(Customer\
+    \ customerID) {\n    Customer customer = customers.get(customerID);\n    if (customer\
+    \ == null) {\n        customer = new Customer(customerID);\n        customers.put(customerID,\
+    \ customer);\n    }\n    customer.incrementOrders();\n}\n```\n\n```\npublic List<Author>\
+    \ getAllAuthorsAlphabetically(List<Book> books) {\n    List<Author> authors =\
+    \ new ArrayList<>();\n    for (Book book : books) {\n        Author author = book.getAuthor();\n\
+    \        if (!authors.contains(author)) {\n            Collections.sort(authors,\
+    \ Comparator<Author>() {\n                public int compare(Author o1, Author\
+    \ o2) {\n                    return o1.getSurname().compareTo(o2.getSurname());\n\
+    \                }\n            });\n        }\n    }\n    return authors;\n}\n\
+    ```\n\nThis operation of \"check if an element is in the map: if not, create it\"\
+    \ is so common that Map now supports it: computeAbsent. This method takes its\
+    \ second argument as a lambda that states how to create the missing item:\n\n\
+    ```\npublic void incrementCustomerOrders(Customer customerID) {\n    Customer\
+    \ customer = customers.computeIfAbsent(customerID, id -> new Customer(id));\n\
+    \    customer.incrementOrders();\n}\n```\n\nIn fact, there is another feature\
+    \ in Java 8 called method references that makes this shorter:\n\n```\npublic void\
+    \ incrementCustomerOrders(Customer customerID) {\n    Customer customer = customers.computeIfAbsent(customerID,\
+    \ Customer::new);\n    customer.incrementOrders();\n}\n```\n\nIn the code below,\
+    \ we first iterate through the list of books, adding the book to the author list\
+    \ if it hasn't seen it before; then we sort the authors alphabetically by surname.\
+    \ This is exactly the sort of operation that streams have been designed to solve\
+    \ elegantly:"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "```\npublic List<Author>\ngeallAuthorsAlphabetically(List<Book> books) {\n\
+    \    return books.stream()\n        .map(book -> book.getAuthor())\n        .distinct()\n\
+    \        .sorted((o1, o2) -> \n            o1.getSurname().compareTo(o2.getSurname()))\n\
+    \        .collect(Collectors.toList());\n}\n```\n\nNot only is this fewer lines\
+    \ of code, it's arguably more descriptive—a developer coming to this code can\
+    \ easily read and understand that (1) it's getting authors from the books, (2)\
+    \ it's only interested in unique authors, and (3) the list that is returned by\
+    \ author surname. Combine the Streams API with other features—method references\
+    \ and new methods on Comparator—and you get even more concise version:\n\n```\n\
+    public List<Author>\ngeallAuthorsAlphabetically(List<Book> books) {\n    return\
+    \ books.stream()\n        .map(Book::getAuthor)\n        .distinct()\n       \
+    \ .sorted(Comparator.\n            comparing(Author::getSurname))\n        .collect(Collectors.toList());\n\
+    }\n```\n\nHere's even more obvious than the sorted order methods by the author's\
+    \ surname.\n\n> New methods, combined with lambda expressions, allow us to drastically\
+    \ simplify our code.\n\n# EASY TO PARALLELIZE\n\nWe speak about out-of-the-box\
+    \ performance, and in addition to those earlier mentioned features, Java 8 can\
+    \ easily use more of CPU cores by replacing the method with parallelStream, the\
+    \ JVM will split the operation into separate jobs and use fork/join to run them\
+    \ on multiple cores. However, parallelism is not a magic that makes everything.\
+    \ Operating in parallel always requires more work—splitting operations and combining\
+    \ results—and will not therefore take\n\nless time. But this option is very interesting\
+    \ for areas that are suitable for parallelization.\n\n# MINIMIZE NULL POINTER\n\
+    \nAnother feature of Java 8 is the Optional type. This type is a way of explicitly\
+    \ stating 'I might have a value, or I might be null.' Which means an API can now\
+    \ be returning values that might be null, which will always be non-null, minimizing\
+    \ the cost of running into a NullPointerException.\n\nWhat's about Optional is\
+    \ the way you tell it with fools. For example, if you're looking for a book in\
+    \ a list, the new findFirst() method returns an Optional which tells us it's not\
+    \ guaranteed to find a value. If you find one, then you can decide whether it\
+    \ is null. If you want to throw a Exception, you can use orElse:\n\n```\npublic\
+    \ Book findByTitle(List<Book> books,\n    String title) {\n    Optional<Book>\
+    \ book = books.stream()\n        .filter(book -> book.getTitle())\n        .findFirst();\n\
+    \    return book.orElseThrow(() -> new\n        BookNotFoundException(\"ID did\
+    \ not find book with\n        \"title: \" + title + \"));\n}\n```\n\nor you could\
+    \ return another book:\n\n```\nreturn book.orElseGet(() -> \n    getRecommendedAlternativeBook(title));\n\
+    ```\n\nOr we could return an Optional so that callers of the method can make their\
+    \ own decision on what to do if the book is not found.\n\n# IN SUMMARY\n\nJava\
+    \ 8 was a big release, with syntax changes, new methods and types, and under-cover\
+    \ changes that will help your application even if you don't use the new language\
+    \ features. Java 7 is no longer supported by Oracle, so organizations are better\
+    \ to migrate to Java 8. The good news is that Java 8 has many benefits for your\
+    \ business, your existing application, and for developers to improving their productivity."
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# # diving deeper
+
+
+    INTO THE JAVA ECOSYSTEM
+
+
+    # ## TOP 10 #JAVA TWITTER FEEDS
+
+
+    +   - @MREINHOLD
+
+    - @SPRINGROD
+
+    - @LUKASEDER
+
+    - @PETERLAWREY
+
+    - @REZA_RAHMAN
+
+    - @TRISHA_GEE
+
+    - @ADAMBIEN
+
+    - @JODASTEPHEN
+
+    - @JBONER
+
+    - @JSTRACHAN
+
+
+    # ## DZONE JAVA ZONES
+
+
+    # ### Java
+
+    dzone.com/java
+
+
+    # ### Web Dev
+
+    dzone.com/webdev
+
+
+    # ### DevOps
+
+    dzone.com/devops
+
+
+    The largest, most active Java developer community on the web. With news and tutorials
+    on Java tools, performance tricks, and new standards and strategies that keep
+    your skills razor-sharp.
+
+
+    Web professionals make up one of the largest sections of IT audiences; we are
+    collecting content that helps web professionals navigate in a world of quickly
+    changing language protocols, new standards for user experience. The Web Dev Zone
+    is devoted to all web development—and includes everything from front-end user
+    experience to optimization, JavaScript Frameworks, and web design. Popular web
+    news and releases will be covered alongside many languages.
+
+
+    DevOps is a cultural movement, supported by exciting new tools, that aimed at
+    encouraging close cooperation across cross-disciplinary teams of developers and
+    operations professionals. The DevOps Zone is your hot spot for news and resources
+    about Continuous Delivery, Puppet, Chef, Jenkins, and much more.
+
+
+    # ## TOP JAVA REFCARDZ
+
+
+    # ## TOP JAVA WEBSITES
+
+
+    # ## TOP JAVA TUTORIALS
+
+
+    ### Core Java
+
+    gives us an overview of key aspects of the Java language and references on the
+    core library as well as the most commonly used tools.
+
+
+    ### ProgramCreek
+
+    programgeek.com
+
+
+    ### Vogella
+
+    vogella.com
+
+
+    ### Java Performance Optimization
+
+    Covers JVM internals, class loading, garbage collection, troubleshooting, concurrency,
+    and more.
+
+
+    ### IBM DeveloperWorks
+
+    ibm.com/developerworks/java
+
+
+    ### Programming By Doing
+
+    programmingbydoing.com
+
+
+    ### Getting Started with Scala
+
+    Covers a new Scala project, a tour of Scala''s features, introduction to classes
+    and objects within Scala, and much more.
+
+
+    ### Baeldung
+
+    baeldung.com
+
+
+    ### Java (Beginner)
+
+    Programming Tutorials
+
+    bit.ly/YouTube
+
+
+    DZONE 2015 GUIDE TO THE JAVA ECOSYSTEM'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# IntelliJ IDEA
+
+
+    # The most intelligent Java IDE
+
+
+    for web, mobile and enterprise
+
+
+    Free and open-source edition included
+
+
+    WARNING: PROLONGED USE MAY CAUSE ADDICTION
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_9_0.png)
+
+
+    # JetBrains'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# Getting the Most Out of Code Review\n\ntests, use static analysis, formatter,\
+    \ etc.\nDon't waste your review on bugs that your IDE can find or be automated.\n\
+    \n+   - Distraction is the archemy of code review; to be able to focus. Pick a\
+    \ code tool that doesn't spam your mailbox with notifications, and a decluttered\
+    \ UI.\n\n+   - Code changes are best understood in context. Try to provide meaningful\
+    \ comments in your own code for your reviewers, use a tool that lets reviewers\
+    \ inspect as if they were working in their IDEs.\n\n+   - Look for particular\
+    \ as you review, it helps logic, security issues, SOLID principles, or something\
+    \ else. Scanning for problems is surely helpful, but when given a chance to apply\
+    \ your expertise, take it.\n\nGenerations of developers have created multiple\
+    \ tools to automatically ensure code quality, yet none of these tools can guarantee\
+    \ bug-free code. Whatever programming language you use, how small or large your\
+    \ project, problems of severity pop up there and that can only be spotted by a\
+    \ human. It is becoming clearer than ever of us that building peer review into\
+    \ the development process is crucial to having better code quality.\n\n# Don't\
+    \ waste your reviewer's time on bugs that your IDE can find or be otherwise automated.\n\
+    \nTo get the most value out of code review, there are four key aspects one needs\
+    \ to have in mind:\n\nThe code review itself is half the job. The rest is up to\
+    \ you!\n\n+   - Code review does not mean that anything about code quality should\
+    \ be neglected. You still need to write\n\n> WRITTEN BY MARIA KHALUSOVA\nPRODUCT\
+    \ MARKETING MANAGER, JETBRAINS\n\n# Upsource by JetBrains\n\nUpsource is a smart,\
+    \ lightweight code review and collaboration tool that provides unique IDE-level\
+    \ Java insight.\n\n| CATEGORY | NEW RELEASES | OPEN SOURCE? |\n| :--- | :--- |\
+    \ :--- |\n| Code Review | Semi-Annual | No |\n\n| STRENGTHS |\n| Major VCSs are\
+    \ supported: Git, Mercurial, Subversion, and Perforce |\n\n+   - Upsource features\
+    \ code insight that helps you conduct code review faster and more easily\n\n+\
+    \   - With the IDE integration, you do not have to leave your IDE to perform a\
+    \ review\n\n+   - Comprehensive repository boost and powerful search\n\nCASE STUDY\n\
+    \ team at Zando.co.za implemented a code review culture to improve the way we\
+    \ developed and maintained an eCommerce platform, and we were looking for the\
+    \ right tool after seeing the demos for Upsource on the day of its release, we\
+    \ installed it away. As we've come to know the JetBrains brand and were excited\
+    \ with this new shiny tool! Installation was extremely simple, and we were up\
+    \ and running quickly. JetBrains put a lot of thought into waiting for us to begin\
+    \ code review intently. Thanks to JetBrains and the Upsource team for a great\
+    \ piece of software that gets done, instead of getting in our way!\n\nNOTABLE\
+    \ CUSTOMERS\n Companies all over the world, large and small, trust team collaborations\
+    \ from JetBrains.\n\n| BLOG jetbrains.com/upsource | TWITTER @upsource_jb | WEBSITE\
+    \ jetbrains.com/upsource |"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# # First Steps in Java Microservices
+
+
+    BY IVAR GRIMSTAD
+
+
+    # ## QUICK VIEW
+
+
+    +   01 Strategies for building microservices in the Java ecosystem include container-less,
+    self-contained, and in-container.
+
+
+    +   02 Container-less microservices package the application, with all its dependencies,
+    into a single "fat" JAR file.
+
+
+    +   03 Self-contained microservices also package a single fat JAR, but these also
+    include an embedded framework with optional third-party libraries that will be
+    compatible.
+
+
+    +   04 In-container microservices package an entire Java EE container and its
+    service implementation in a Docker image.
+
+
+    Architectures based on microservices introduce new challenges for architects and
+    developers. An ever-increasing list of languages and tools brings with it the
+    capabilities to conquer this challenge. Java is no exception. This article explore
+    different approaches to building microservices using the Java ecosystem.
+
+
+    | APPLICATION | SECURITY | PERSISTENCE | MESSAGING | TRANSACTIONS | INTEGRATION
+    | PRESENTATION |
+
+    |---|---|---|---|---|---||
+
+    | JVM | | | | | |
+
+    | HARDWARE | | | | | |
+
+
+    the application, with all its dependencies, is packaged as a single $ java -jar
+    myservice.jar as a standalone Java file.
+
+
+    # INTRODUCTION
+
+
+    This article does not discuss whether microservices are good or evil, nor whether
+    you should design your app for microservices upfront or as they emerge from your
+    monolithic application.
+
+
+    One advantage of this approach is that it is extremely easy to start and stop
+    services when scaling up or down. Another advantage is convenience. You just need
+    to pass one JAR file.
+
+
+    The approaches described are not the only ones available, but they should give
+    you a pretty good overview of possibilities. Even though the Java ecosystem is
+    the main focus in this article, the concepts should be transferable to other languages
+    and technologies.
+
+
+    A downside of this approach is compatibility. One on your own for like transaction
+    support, or you need to bring in a third party library that provides support for
+    this scenario. Later-if you need support for something, say persistence—you may
+    need to fight compatibility issues between the libraries.
+
+
+    I have noticed in this article container-less, self-contained, and in-container.
+    These terms may not be entirely accurate, but they fulfill their purpose here
+    to differentiate the approaches. I will describe what each of these means in the
+    sections that follow.
+
+
+    # CONTAINER-LESS
+
+
+    # SELF-CONTAINED
+
+
+    In the container-less approach, the developer treats everything on the JVM as
+    a part of the application.
+
+
+    Another variant of single JAR deployment is building your services with an embedded
+    framework. In this approach, the framework provides implementations of the services
+    needed and the developer can choose to include in the service.
+
+
+    The container-less approach enables single JAR deployment (also called a "fat
+    JAR deployment"). This means
+
+
+    You may argue that this is exactly the same as the container-'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# APPLICATION
+
+
+    less solution, but I like to distinguish them here since the self-contained approach
+    actually gives you set of third party libraries that you can know.
+
+
+    | SECURITY | PERSISTENCE | MESSAGING | INTEGRATION | PRESENTATION |
+
+    |---|---|---|---|--|
+
+    | JVM | | | | |
+
+    | OPERATING SYSTEM | | | | |
+
+    | HARDWARE | | | | |
+
+
+    This approach can involve tools like Spring Boot and Wildfly Swarm.
+
+
+    The implementation of the service is the same as the Wildfly Swarm above. See
+    it here:
+
+
+    > > SNIPPET: bit.ly/3b187f9
+
+
+    The advantage of this approach is that the container provides tested and verified
+    implementations of standard functionality through APIs. Thus, as a developer you
+    can focus entirely on the business functionality and leaving the plumbing out
+    of the application source. Another advantage of this approach is that the actual
+    code does not depend on the Java EE application server it is deployed to, with
+    GlassFish, Wildfly, WebLogic, WebSphere, or any other Java EE compatible implementations.
+
+
+    The disadvantage is that you need to deploy the service inside container and increase
+    the complexity of the deployment.
+
+
+    # DOCKER
+
+
+    Spring Boot and the Spring Cloud projects have excellent support for building
+    microservices in Java. Spring Boot allows you to pick and choose parts of the
+    Spring ecosystem, as well as popular tools and then pack them with your application
+    in a JAR file. Spring Initializr allows you to create projects with a simple checklist
+    list. A sample Hello World example looks like this:
+
+
+    > > SNIPPET: bit.ly/3tg1g2e
+
+
+    This is where Docker comes in. By packaging the EE Container and the service implementation
+    inside a Docker image, you can achieve more or the same result as you would with
+    a single JAR deployment. The difference is that now is contained in a Docker image
+    and not a JAR file.
+
+
+    # Dockerfile
+
+
+    ```
+
+    FROM jboss/wildfly:9.0.1.Final
+
+    ADD myservice /opt/jboss/wildfly/standalone/
+
+    deployments
+
+    ```
+
+
+    The service is started by running the Docker image in container.
+
+
+    ```
+
+    $ docker run -it -p 8080:8080 organization/myservice
+
+    ```
+
+
+    # SNOOP
+
+
+    The observer reader may notice that
+
+    @EnableE("DiscoveryClient annotation in the Spring Boot code
+
+    from before. This annotation registers the service with
+
+    Eureka, making it discoverable by other consumers. Eureka is a part of the Spring
+    Cloud bundle and is an extremely easy-to-use and configure service discovery tool.
+
+
+    Java EE does not have this functionality out of the box, but there are several
+    open-source solutions available. One solution is Snoop, which functions in a similar
+    way to Eureka. The only thing needed is to make a Java EE application available
+    for lookup by the @EnableSnoop annotation shown in this example:
+
+
+    A Java EE container for Spring is Wildfly. It enables you to pick and choose parts
+    of the EE specification you need and deploy your application in a JAR file. The
+    Hello World example looks like this:
+
+
+    > > SNIPPET: bit.ly/3kZ2PP1
+
+
+    While it seems like a lot of overhead to require an entire EE container to be
+    able to deploy a microservice, keep in mind that some developers argue that the
+    ''micro'' in microservices does not necessarily mean the service is small or simple.
+
+
+    # WILDFY SWARM
+
+
+    The advantage of the self-contained approach is that it is a little less complex
+    than the deliverable JAR file but a bit bigger since it fits in the required containers
+    of the actual service. One disadvantage of this configuration is that you have
+    to select what you need in order for the service to run.
+
+
+    # IN-CONTAINER
+
+
+    # APPLICATION
+
+
+    | JAVA EE CONTAINER |
+
+    |---|
+
+    | JVM |
+
+    | OPERATING SYSTEM |
+
+    | HARDWARE |
+
+
+    In these cases it may be appropriate to treat the Java EE container as the required
+    platform. Thus, the only dependency you need is the Java EE API. That dependency
+    is provided since the implementation is provided by the container. What means
+    that the Wildfly service is extremely lean.
+
+
+    # CONCLUSION
+
+
+    Java is an excellent choice when building microservices. All of the approaches
+    described in this article will get things done. The most appropriate method for
+    your particular case depends on the requirements of the service. For smaller services,
+    self-contained or self-hosted container is the better, but advanced services may
+    be easier and faster to implement with the power of an EE container implementation.
+    Java is a very convenient and powerful framework.
+
+
+    # MAR CRISTAND
+
+
+    an experienced software architect and conference speaker focused on Eureka. He
+    is a member of JCP and currently works for JSR 371 (MCI.1), JSR 375 (Java EE Security
+    API), and JSR 368. Working as a developer since the language''s very infancy,
+    he has built applications using everything from Java EE and a variety of other
+    open-source projects.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# # How to detect & fix problems 10x faster
+
+
+    # Challenges
+
+
+    Take control of app performance with SteelCentralAppInternals
+
+
+    +   - 75% of IT organizations suffer from slow apps
+
+    - 70% learn about problems from end users
+
+    - 31% performance issues take more than a month to resolve
+
+
+    IDG, 2013
+
+    Gartner, 2012
+
+    Forrester, 2013
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_13_0.png)
+
+
+    > We are now able to look inside of the developers’ code – without having to modify
+    the code – while it’s running in our production environment. That’s fantastic.
+    I can’t imagine someone running a site of any real size without this capability.
+
+    > Eric McCain, Google Web Systems Manager for IT, National Instruments
+
+
+    > AppInternals has drastically reduced the amount of time required to pinpoint
+    issues and allowed us to pinpoint where the problems exist.
+
+    > Eric Saxe, IT Manager, Asurion
+
+
+    # Top 5 benefits cited by users
+
+
+    +   - 1 Improved performance
+
+    - 2 Reduced time spent in ''rooms''
+
+    - 5 Faster development of new apps and features
+
+    - 4 Improved user satisfaction
+
+    - 3 Reduced cost of fixing apps
+
+
+    TechValidate ID: 958-DAB-SCA
+
+
+    # # Try AppInternals today at www.appinternals.com
+
+
+    The Application Performance Company™
+
+
+    ©2015 Riverbed Technology. All rights reserved. Riverbed and any Riverbed product
+    or service name used here are trademarks of Riverbed Technology. All other trademarks
+    used herein belong to their respective owners. The trademarks and logos displayed
+    herein may not be used without the prior written consent of Riverbed Technology
+    or their respective owners.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Developing and Delivering High-Performing Applications
+
+
+    ENSURE RELEASE PRIORITY TO RELEASE
+
+    Identifying all erroneous code during testing developers fix issues early. Detailed
+    tracing can help expose bottlenecks so that developers have the information they
+    need to resolve them quickly. This makes releases production ready.
+
+
+    RESOLVE ERRORS IN PRODUCTION ADAPT
+
+    Monitoring applications ensures that you are first to know when problems arise.
+    Recording every transaction from user to back-end—along with its associated system
+    metrics and trace details—helps reconstruct and identify the root cause quickly.
+
+
+    Application performance equals business performance. Apps have transformed how
+    businesses operate, have increased productivity, and enabled innovative markets.
+    Developers make this possible.
+
+
+    WE''RE NOW TO LOOK INSIDE OF THE DEVELOPERS CODE–WITHOUT TO MODIFY THE CODE–WHILE
+    IT IS RUNNING IN PRODUCTION ENVIRONMENT, THAT FANTASTIC. I CAN''T IMAGINE RUNNING
+    A SITE OF ANY REAL SIZE WITHOUT THIS CAPABILITY.
+
+
+    +   - GLOBAL WEB SYSTEMS MANAGER, NATIONAL INSTRUMENTS
+
+
+    As indispensable as applications become, users expect more features and depend
+    on developers to deliver them frequently without compromising reliability or around-the-clock
+    availability. Failure to do so will drive users to competitors or alternatives.
+
+
+    Helping developers stay on new features is important for businesses to stay competitive.
+    Application performance monitoring apps with the diagnostics need to minimize
+    the time spent fixing bugs, maximize release quality, and keep them focused on
+    delivering business-impacting applications.
+
+
+    How do developers expedite release cycles and maximize time on new features to
+    avoid maintaining existing code? It comes down to two practices:
+
+
+    > WRITTEN BY KRISHNAN BADRINARANAYAN
+
+    SR. PRODUCT MANAGER, RIVERBED TECHNOLOGY
+
+
+    # SteelCentral by Riverbed
+
+
+    | Trace all transactions from user device to back-end. Get comprehensive visibility
+    and analytics across apps, networks and infrastructure |
+
+
+    | CATEGORY APM |
+
+    | NEW RELEASES Quarterly |
+
+    | OPEN SOURCE? No |
+
+
+    | STRENGTHS |
+
+    - Major VCs are supported: Git, Mercury, Subversion, and Performance
+
+    - Upsfeature Java code insight helps code review faster and easier
+
+    - With IDE integration plugin, you do not have to leave your IDE to perform a
+    review |
+
+
+    CASE STUDY
+
+    The web teams at National Instruments are tasked with ensuring that their web
+    systems run optimally. They spent 1000s of each year troubleshooting issues caused
+    by newly released apps. Their inability to quickly find cause of performance problems
+    created tension between teams and the developers, and hurt user experience. The
+    web systems now use Instruments to quickly find root cause of performance problems.
+    Developers use Instruments to verify test code resulting in 20%, down to 30% fewer
+    issues introduced into production. Updates are now from 6 to 120 per year. ni.com
+    is now more stable and delivers better user experience.
+
+
+    | NOTABLE CUSTOMERS |
+
+    - Aurion - Shell
+
+    - National Instruments - Visa |
+
+
+    BLOG riverbed.com/blogs/ | TWITTER @riverbed | WEBSITE appinternals.com'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Production
+
+    Debugging Is
+
+    Not a Crime
+
+
+    BY ALEX ZHITNITSKY
+
+
+    # QUICK VIEW
+
+
+    01
+
+    Developers need as much information as possible in their logs debugging in production.
+    The data extraction needs to be planned and built before deployment to production
+    so that context data is not lost in the stack frames collab.
+
+
+    02
+
+    For bugs deadlocks or heavy performance bottlenecks, jstack is a debugging tool,
+    but developers need to modify for preemptive execution if they want to collect
+    information at the exact time the bug occurs.
+
+
+    03
+
+    Java agents are an important debugging tool. They retrieve data from the source
+    in a lightweight way, allowing access to the exact values that caused each error.
+
+
+    04
+
+    Successful testing strategies can include duplicating live traffic into new apps
+    versions or creating a canary server with varying degrees of features and controls.
+
+
+    Today more than ever, speed plays a larger role in the software development lifecycle.
+    We need ReD teams who want to push code faster to environments with rising complexity,
+    and this implies a vulnerability that must be addressed.
+
+
+    This is why, for every log line printed out, we need to be able to extract the
+    full context to understand what happened. Some data might come from the itself
+    and the log located in; other data needs to be extracted at the moment of the
+    event. A good way to trace such errors to their origin would be generating UUIDs
+    for every thread''s application context.
+
+
+    Those few hours after a new deployment set the tone for your success. Once in
+    a while, things go wrong, no matter how strict your code is out in production
+    and meets the real-world architecture and scale of your system, with real data
+    flowing through the application, things can go so quickly. In order to be resilient
+    and stay on top of things, a strategy needs to be implemented that:
+
+
+    A useful yet overlooked feature is thread names to provide a window for this previous
+    context, right before the stack collapses and the data is lost. You can format
+    your name to something like:
+
+
+    +   - Identify when there is an error happening
+
+    - Assess the error''s severity to prioritize it
+
+    - Draw out the state that caused the error
+
+    - Trace back and solve the root cause
+
+    - Deploy a hotfix
+
+
+    ```
+
+    Thread.currentThread()
+
+    setName(prettyFormat(threadName, getUUID()), message.
+
+    MsgType(type), message.getMsgID(id), currentTimeMillis());
+
+    ```
+
+
+    So as an anomaly occurs like ''pool-1-17'' your application now produces stack
+    traces that show this with: ''threadName:pool-1-17, UUID:ABCD, MsgType:AnalyzeGraph,
+    MDC: 5679856, 2013-08-15 17:237''
+
+
+    In this article we will cover some of the best practices to allow you to assemble
+    time-critical response and "weaponize" your application.
+
+
+    This works when handling exceptions, unless there''s an unexpected exception handler.
+    A good practice is to set a default exception handler, both to cover and help
+    extract any useful data you need.
+
+
+    # THE CASE FOR DISTRIBUTED LOGGING
+
+
+    With production environments across multiple nodes and clusters, it''s easy for
+    a transaction that starts on one machine or service to incur an error somewhere.
+    When an exception happens, there''s a need to trace back that type of distributed
+    logging, and the logs are often the first place to look for.
+
+
+    thread names, additional places we can use to store hints about what happened
+    the TLS (Thread Local Storage) and the MDC (Mapped Diagnostic Context, which is
+    provided by your logging framework). All data gets lost as the stack frames collapse.
+
+
+    # LEANING ON THE JVM TOOLSET
+
+
+    Some complex bugs like deadlocks or heavy performance'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'bottlenecks require a different approach. Take jstack, for instance: a powerful
+    tool that stitches together them. You are probably already familiar with it in
+    some way. Basically, just hook into a running process and output all the threads
+    that are running in it. It will print each thread''s stack trace; either Java
+    or native; locks they are holding; and all sorts of other metadata. You can also
+    analyze heap dumps or core dumps of processes that already ended. It''s a long-standing
+    and very useful tool.
+
+
+    The problem is that jstack is mostly used in respect. The condition you''re looking
+    to debug has already happened, and you''re left searching through the debris.
+    The server is not responding, the thread is blocking, database queries are taking
+    forever: a typical output would be a few stack traces on some nasty data dump,
+    with no clue of how we got there. A nice tool would allow you to get the jstack
+    output where it matters to activate it when things start tumbling down. For example,
+    you can set a certain threshold and get jstack to run at the moment it drops.
+
+
+    Combined with smart frames, we can now know exactly which caused us to get stuck,
+    and how to retract our steps, reproduce the error, isolate it, and solve it.
+
+
+    > Unless we prepare our applications and environment in advance, there will not
+    be much to recover after getting errors and performance issues.
+
+
+    # USING JAVA AGENTS TO SKIP LOGGING ALTLOGGER
+
+
+    The next step in this process is gaining visibility into your application runtime.
+    Logs are inspected in respect and include only the information that you''ve decided
+    to put there in advance. We well know how to enrich them with state data, but
+    we also need a way to access the exact values that each changed to get down to
+    the root cause. Java agents give us the ability to get the data we need without
+    writing to disk and using log files, so we can extract only the data we''ll actually
+    be using.
+
+
+    One interesting approach is using BTrace, an open-source Java agent that hooks
+    into a JVM and opens a stack trace that lets you query your instrumentation. For
+    instance, you can get access to ClassLoaders and their subclasses, and load them
+    when some troubled class is instantiated. It is a useful tool for investigating
+    specific issues and requires you to write scripts for each case you want to cover.
+
+
+    You could also write your own canary agent, just like the FAINT-TRACE. We also
+    had a test in Takip where a certain class was initializing many of new objects
+    for some reason. We used an agent that hooks to the constructor of that object.
+    The object we allocated would extract its stack trace. We then analyzed the results
+    and understood where the problem was coming from. Our day-to-day we''re using
+    a production grace agent that knows to extract the variable values that each exception
+    or logged error, all as the stack trace, and across different machines.
+
+
+    # TESTING IN PRODUCTION: FOR THE FAINT-HEARTED
+
+
+    Joking in production is a serious practice that many companies are taking part
+    in. They can''t cancel the testing phase completely, but they understand that
+    staging environments are not enough to mimic build environments, no matter how
+    time and effort you put into them. The only real place is testing taking place
+    in production, with real data flowing through the system and unexpected cases
+    being thrown at it.
+
+
+    There are several approaches you can adopt for performing controlled testing,
+    depending on what kind of functionality you''re testing. One option is duplicating
+    and routing live traffic through both the system and through the new version of
+    the component you''re testing. This way you can see how the new component behaves
+    and compare directly to the current version without risking the delivery of wrong
+    results back to the user for, if it''s some data crunching.
+
+
+    Another option is segmenting the traffic and revealing new features. One way to
+    do this is to use a canary server, which is a single node in your system with
+    the new version you''ve decided to roll out (just like a canary in a coal mine).
+    It is also helpful to add monitoring and logging to the canary server. Another
+    option is to add monitoring on this canary setup, implementing and making use
+    of rollout rollout switches, or A/B testing some changes in your application to
+    see how they impact performance.
+
+
+    # FINAL THOUGHTS
+
+
+    Debugging applications in production requires a creative and forward-thinking
+    mindset. Unless we prepare our applications and environments in advance, there
+    will not be much to recover after getting errors and performance issues.
+
+
+    > https://github.com/takip/jstack
+
+
+    ALEX ZINTHTHI is an engineer at Takip on a mission to help Java and Scala developers
+    solve bugs in production and reduce the risk of software buggy. Passionate about
+    all things tech, he is the co-founder & leader of Gog Haf, a local developer group.
+    Alex has a B.Sc from Technology, Ireland''s Institute of Technology.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# # Java Popularity: By the Numbers
+
+
+    Anyone who''s spent a little time in the software industry knows how popular Java
+    is, but how exactly? There are multiple places where we can look to help answer
+    this question. Google searches, job postings, open source repositories, Stack
+    Overflow, and social media all give a clear picture of Java popularity. Here are
+    some charts to show how much popular Java is.
+
+
+    # ## TIOBE Programming Community Index
+
+
+    Methodology: Language search trends on Google, Google Bing, Amazon, Yahoo, Baku,
+    Wikipedia, and YouTube.
+
+
+    | Rank | 2003 | 2004 | 2005 | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 | 2012 |
+    2013 | 2014 | 2015 |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | 1 | | | | | | | | | | | | | | |
+
+    | 2 | | | | | | | | | | | | | | |
+
+    | 3 | | | | | | | | | | | | | | |
+
+    | 4 | | | | | | | | | | | | | | |
+
+    | 5 | | | | | | | | | | | | | | |
+
+    | 6 | | | | | | | | | | | | | | |
+
+    | 7 | | | | | | | | | | | | | | |
+
+    | 8 | | | | | | | | | | | | | | |
+
+    | 9 | | | | | | | | | | | | | | |
+
+    | 10 | | | | | | | | | | | | | | |
+
+
+    Java''s Current Rank: #1
+
+
+    SOURCE: tiorbe.com/tiorbe.php?rank_index.php
+
+
+    # ## GitHub Language Rankings
+
+
+    Methodology: Measures the number of public and private GitHub repositories using
+    each language (including forks) as defined.
+
+
+    | Rank | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 | 2014 | 2015 |
+
+    |---|---|---|---|---|---|---|---||
+
+    | 1 | | | | | | | | |
+
+    | 2 | | | | | | | | |
+
+    | 3 | | | | | | | | |
+
+    | 4 | | | | | | | | |
+
+    | 5 | | | | | | | | |
+
+    | 6 | | | | | | | | |
+
+    | 7 | | | | | | | | |
+
+    | 8 | | | | | | | | |
+
+    | 9 | | | | | | | |
+
+
+    Java''s Current Rank: #2
+
+
+    SOURCE: github.com/blog/2014-language-trends-on-github
+
+
+    # ## Indeed Job Key Trends
+
+
+    Methodology: Indeed.com job posting keyword search results for selected languages.
+    C was not included because there were many false positives.
+
+
+    | Rank | 2006 | 2007 | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 | 2014 | 2015 |
+
+    |---|---|---|---|---|---|---|---|---|---|---||
+
+    | 1 | | | | | | | | | | | |
+
+    | 2 | | | | | | | | | | | |
+
+    | 3 | | | | | | | | | | | |
+
+    | 4 | | | | | | | | | | | |
+
+    | 5 | | | | | | | | | | | |
+
+
+    Java''s Current Rank: #1
+
+
+    SOURCE: bit.ly/indeed-rankings
+
+
+    # ## Stack Overflow Language Rankings
+
+
+    Methodology: Measures the number of questions on Stack Overflow with each language
+    tag.
+
+
+    | Rank | 2008 | 2009 | 2010 | 2011 | 2012 | 2013 | 2014 | 2015 |
+
+    |---|---|---|---|---|---|---|---|---|n| 1 | | | | | | | | | |
+
+    | 2 | | | | | | | | | |
+
+    | 3 | | | | | | | | | |
+
+    | 4 | | | | | | | | | |
+
+    | 5 | | | | | | | | | | |
+
+    | 6 | | | | | | | | | | |
+
+    | 7 | | | | | | | | | | |
+
+    | 8 | | | | | | | | | | |
+
+    | 9 | | | | | | | | | |
+
+
+    Java''s Current Rank: #2
+
+
+    SOURCE: makingatstackoverflow.com/stackoverflow-flow-trends
+
+
+    # ## IEEE Language Rankings 2015
+
+
+    Methodology: Google searches, social media trends, GitHub and source projects/tags
+    activity, and most job postings on Career Builder and Dice.
+
+
+    | Rank | Language | Score |
+
+    |---|---|---||
+
+    | 1 JAVA | 100 | C | 99.9 |
+
+    | 3 PYTHON | 99.5 | C++ | 99.4 |
+
+    | 5 C# | 91.3 | 6 R | 84.8 |
+
+    | 7 PHP | 84.5 | 8 JAVCRIPT | 83.0 |
+
+    | 9 RUBY | 76.2 | 10 MATLAB | 72.4
+
+
+    Java''s Current Rank: #1
+
+
+    SOURCE: stackoverflow.com/help/ieee.tpl/methods.html
+
+
+    # ## RedMon/15 Program. Language Rankings
+
+
+    Methodology: Measures the number of repositories on GitHub using each language
+    and the number of questions on Stack Overflow with each language tag.
+
+
+    | Rank | Language | Score |
+
+    |---|---|---||
+
+    | JAVA | JAVASCRIPT |
+
+    | C++ | PHP |
+
+    | OBJECTIVE-C | |
+
+    | PERL | |
+
+    | RUBY | |
+
+    | SHELL | |
+
+
+    Java''s Current Rank: #2
+
+
+    SOURCE: bit.ly/redmon-rankings'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# # Reactive Trends on the JVM
+
+
+    JONAS BONÉ
+
+
+    # QUICK VIEW
+
+
+    +   01 Reactive Systems rely on a foundation of asynchronous message-passing to
+    create loosely-coupled systems that are responsive, resilient, and elastic.
+
+
+    +   02 Analytics are being pushed into the stream (via Spark), which is emerging
+    as the de facto approach for sub-second query response times across billions of
+    rows of data.
+
+
+    +   03 Fast Data, or streaming data, makes systems more responsive. Reactive Streams
+    can make Data manageable by intelligently controlling the rate of data consumption.
+
+
+    +   04 Systems become very resilient when they are backed by a database with the
+    full history of an application, which is built by event logging that is using
+    the "Service Record."
+
+
+    Two years ago, I collaborated with a few developers to define a new set of architectural
+    principles in the enterprise. It was clear that everything emerging from emergent
+    deployment environments to user expectations to the size of datasets had outgrown
+    previous patterns for building software. Basically what was typically "breaking"
+    tied to most software having synchronous call requests and pool isolation, yielding
+    single points of failure and touch much
+
+
+    # SO WHAT IS REACTIVE?
+
+
+    The Reactive Manifesto''s goal is to consolidate the knowledge around designing
+    highly-scalable and reliable applications into a set of four architecture traits:
+
+
+    # RESPONSIVE
+
+
+    The system responds in a timely manner if at all possible. Responsiveness is the
+    cornerstone of usability and utility, but more than that, responsiveness means
+    problems can be detected quickly and dealt with effectively. Reactive systems
+    focus on providing rapid and consistent response times to deliver a consistent
+    quality of service. This behavior in turn minimizes error handling, builds end
+    confidence, and encourages further interaction.
+
+
+    # RESILIENT
+
+
+    The system remains responsive in the face of failure. This applies not to highly-available,
+    mission critical systems—any system that is not resilient remains unresponsive
+    after failure. Resilience is ensured by replication, isolation, and delegation.
+    Failures are contained within each component, isolation ensures that parts of
+    the system can fail and recover without affecting the rest. Recovery of a component
+    is delegated to an other (external) component and high-availability is ensured
+    by replication where necessary. The client of a component is not burdened with
+    handling failures.
+
+
+    # ELASTIC
+
+
+    The system remains elastic under varying workload. Reactive Systems can react
+    to changes in the input rate by increasing or decreasing the resources allocated
+    to serve these inputs. This implies designs that no contention points or correct
+
+
+    In the Reactive Manifesto we created a new set of principles that described the
+    responsiveness, resilience, elasticity, and message-driven characteristics that
+    we believed effective application applications in the modern era of applications,
+    running everything from mobile devices to cloud-based clusters with multi-core
+    processors.
+
+
+    Over the last two years, the response from the community has been enthusiastic
+    support (12,000+ signatures on the Reactive Manifesto) to re-rolling (my eye,
+    in a Slack commitment). "We want a machine that makes things easy. We don''t know
+    how to build it. We will call this: The Reactive Manifesto." Some of the encapsulated
+    attributes that had been long embraced in their internal development, in the same
+    way that some Agile did software development before it was "Agile." Some Reactive
+    were prescriptive, while others felt it was too generic.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# DZONE/GUIDES
+
+    DZONE''S 2015 GUIDE TO THE REACTIVE ECOSYSTEM
+
+
+    bottlenecks, resulting in the ability to shard or replicate
+
+    components and distribute inputs among them. Reactive
+
+    Systems support productivity, as well as Reactive, scaling
+
+    algebras by providing live performance measures.
+
+    They achieve elasticity in a cost-effective way on commodity
+
+    hardware and software platforms.
+
+
+    requires closed feedback loops for getting data out of
+
+    the system. The benefit of Data is that systems are
+
+    more responsive and adaptive, allowing you to use the
+
+    real-time data processing back into the reactive
+
+    system, which allows it to react. This capability
+
+    be used to make these systems more robust andnscalable, with reduced complexity.
+
+
+    # MESSAGE-DRIVEN
+
+
+    As the foundation to the three traits above, Reactive
+
+    Systems use asynchronous messaging to establish a
+
+    boundary between components without loose coupling,
+
+    isolation, concurrency; and provides the means to
+
+    refine and delegate failures as messages. Efficient
+
+    message-passing enables load management, elasticity,
+
+    and flow control by sharing and monitoring the message
+
+    queues in the system and applying back-pressure when
+
+    memory becomes transient. This transparency of
+
+    communication makes it possible for the management of
+
+    failure to work with the same contracts across
+
+    a cluster or within a single host. Non-blocking
+
+    communication allows recipients to consume resources
+
+    while active, leading to more efficient system utilization.
+
+
+    One of the early pitfalls for streaming data in Data
+
+    enarios, was the lack of back-pressure. If one
+
+    processing stage produces faster than the next stage can
+
+    consume data, that leads to a failure in the consumer,
+
+    where cascading failures occur. Reactive Streams allow
+
+    them to bring back-pressure to control the rate of data
+
+    consumption. In general, the back-end systems that make Big
+
+    Data and IoT are fit for Reactive architectures.
+
+
+    # EVENT LOGGING AS THE SERVICE OF RECORD
+
+
+    > What was typically “breaking"
+
+    tied back to most software having
+
+    synchronous call requests and
+
+    poor isolation, yielding single points
+
+    of failure and too much contention.
+
+
+    Another area in which we see a lot of Reactive innovation,
+
+    sspecifically on the JVM, is when event being logged
+
+    the the ''Service Record.'' Each event logged as
+
+    tohe history—materialized as events in the log. What
+
+    you get is a database with the full history of the
+
+    application, a database of facts, rather than the
+
+    titional SQL database that operates with a ''cube of the
+
+    fact,'' as Pat Hall actually put it. If your durable state
+
+    is absent it can be easily replayed by moving
+
+    tewhere else or by the system to bring up
+
+    where it is. This is a great pattern for handling in
+
+    distributed streaming processing—if one things can be
+
+    brought back to speed and continue. Architectural
+
+    patterns like this include Event CQRS. This way
+
+    of thinking about durable architecture works well with
+
+    Microservices, where each service has its own isolation
+
+    consistently event, event-loaded storage that handles
+
+    consistency between the services and for
+
+    availability. Data is the foundation for durable
+
+    architecture.
+
+
+    # NEW PATTERNS DRIVING REACTIVE INNOVATION
+
+
+    Over the last few years, I believe the three most
+
+    trends are driving Reactive innovation
+
+
+    # MICROSERVICES
+
+
+    In traditional EE apps, services are written in a
+
+    monolithic way. That means there is tightly coupled
+
+    tween the components and services in that. App
+
+    servers, like Bean, Tomcat, are or encouraging
+
+    this monolithic model. We assume that you are bringing
+
+    services into an EAR just as a file of wrapping your
+
+    services into JARs, not as you deploy-then-all of your
+
+    applications and services to the app server, which makes
+
+    single running instance of the service “isolation"
+
+    through difficult. Fault tolerance strategy.
+
+
+    # REACTIVE EVOLUTION FROM PRINCIPLES TO
+
+    IMPLEMENTATION PATTERS
+
+
+    We have a more evolved foundation for
+
+    isolation—from the group up-starting with, for each
+
+    Docker container, isolates all the way up through
+
+    hardware and communication protocols. I’m excited to
+
+    about first class, which is a necessity for resilience. You can''t
+
+    build a Reactive system without isolation-handling
+
+    failures and having a separate
+
+    context outside the failed component to prevent the
+
+    failure. You need isolation in order to avoid cascading
+
+
+    I believe Reactive is a similar actor to the Agile
+
+    methodology. Many of companies were using Agile
+
+    methods without calling Agile years before the
+
+    was coined. But calling Agile made it easier to talk about
+
+    communicate the philosophy, so the Agile Manifesto
+
+    was created. When these principles became more familiar
+
+    the community, you started to see the adoption of Scrum
+
+    first, then the process frameworks like XP for supporting
+
+    programming principles and practices like Team Scrum
+
+    development, and continuous integration.
+
+
+    Today we’re seeing the same shift for the Reactive.
+
+    agement of message is achieved through reactive rather than
+
+    tools and techniques. But Microservices, Fast Data, and Event
+
+    Logging are examples of how implementation patterns
+
+    within the Reactive are starting to get more
+
+    defefinition and momentum.
+
+
+    # FAST-DATA IS GOING STREAMING
+
+
+    The whole movement towards Real-time data and data time
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_19_0.png)
+
+
+    JON BONAS is the co-founder and CTO of Typesafe. He is the author
+
+    of Java, Akka-based toolkit and runtime that uses the actor
+
+    model to build concurrent, distributed applications. Jonas is a Java
+
+    and a champion of the Reactive architecture.
+
+
+    # DZONE''S 2015 GUIDE TO THE REACTIVE ECOSYSTEM
+
+
+    21
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_19_1.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# # Constantly monitoring your applications so you don’t have to.
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_20_0.png)
+
+
+    New Relic''s SaaS-based Application Performance Monitoring helps you build, deploy,
+    and maintain great web and mobile software.
+
+
+    # ## Start your free trial now.
+
+    newrelic.com/java
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_20_1.png)
+
+
+    +   - Application Response Times
+
+    - Error Tracking & Analytics
+
+
+    +   - Transaction Tracing
+
+    - Thread Profiling
+
+
+    +   - JVM Performance Analysis
+
+    - Deployment Comparisons
+
+
+    ©2008-15 New Relic, Inc. All rights reserved.
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_20_2.png)'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# # Interoperability Tools Help Cure Developer Fatigue
+
+
+    "Developer fatigue" that frustrated exhaustion you feel trying to keep up with
+    the constant flow of new languages, libraries, frameworks, platforms and programming
+    models is a real problem. While there''s nothing wrong with trying to stay up-to-date,
+    low demands on work without lack of productivity, cycles spent on immature tools,
+    half-life and the cost of making bad bets.
+
+
+    This problem has risen since the dawn of computers, but it''s getting worse. Always
+    cause the pause for "full stack" developers who must "do more with less", the
+    rising number of open source projects, the proliferation of new technologies of
+    hardware and the pressure to introduce the new in order to stay ahead of the competition.
+
+
+    How can you keep up? Perhaps the best way is to take it slowly: integrate the
+    features of new technologies as you need them. In my experience, the need to use
+    a technology
+
+
+    the best way to start learning about it — the best way to retain the skills once
+    learned. Jumping in and learning a new technology for your own sake ("warehousing")
+    is popular, much less effective.
+
+
+    With gradual introduction to new technologies and a focus on the aspects that
+    can help solve immediate problems, you can stay productive while using familiar
+    tools and introduce new stuff at a time. While not possible in all cases, if your
+    platform is Java or .NET, and the new technology is Java-based, JNBridgePro can
+    help.
+
+
+    Developer fatigue is rising and costly. Stay productive using familiar tools and
+    seamless integration with new technologies needed.
+
+
+    JNBridge has examples that show how Java can be integrated with a new technology
+    like Hadoop, Groovy, Python orst. The examples focus on how you can bring in new
+    technologies at your own pace, without having to assimilate the entirety of a
+    new language, API, or platform. Our goal is to help you avoid developer fatigue
+    while keeping current on the increasing number of new technologies being introduced.
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_21_0.png)
+
+
+    > Exceptionally faster than than web services, JNBridgePro can fully expose any
+    Java or .NET API or binary—services-enabled or not.
+
+
+    Customers use JNBridgePro to connect Java and .NET in all kinds of applications.
+    Adobe .NET integration services into Java-based Fusion. Swing reduces a standardized
+    numerical analysis API for their actuaries to code Excel. A media company calls
+    Apache Phones, a relational database uses over Base, from an IIS application.
+    ShapeTech uses the Java-based NASA World Wind API in their defense training teams.
+    Ebiexperts integrates Java-based BusinessObjects into their .NET BI. A financial
+    services firm serves EJClients for data pools into their client''s .NET desktop
+    display. An aerospace company embeds .NET-based video controls into a GUI user
+    control.
+
+
+    | CATEGORY | NEW RELEASES | OPEN SOURCE? | STRENGTHS |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Java and .NET Interoperability | Semi-Annual | | Access Java calls from .NET
+    as if Java was a .NET language (C#, VB, etc) |
+
+    | CASE STUDY | | | Access .NET calls (written in C#, VB, F#) from Java as if they
+    were calls; Gain access to any API on the other side, whether it is service-enabled
+    or not; expose any Java or .NET binary, no code required |
+
+
+    More than 600 global enterprises and software development houses rely on JNBridge
+    products in a variety of applications, including aerospace, financial services,
+    healthcare, manufacturing, retail, telecommunications, and more.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# # Java Ecosystem Executive Insights
+
+
+    # QUICK VIEW
+
+
+    01
+
+    The Ecosystem is massive. Don''t build from scratch unless you''ve searched the
+    open-source communities. If you don''t see what you''re looking for, ask the community.
+
+
+    02
+
+    The Java community thrives based on the contributions of others. By sharing your
+    code, you''re ensuring the future of Java.
+
+
+    03
+
+    Even if you think you know Java, look again. The open-source community is adding
+    new elements daily to enable Java to remain relevant in all applications.
+
+
+    BY TOM SMITH
+
+
+    In order to more thoroughly understand the state of the Java ecosystem today,
+    and where it''s going, we interviewed 11 executives with diverse backgrounds and
+    experience with Java technologies, projects, and clients.
+
+
+    were mentioned most frequently as benefits and reasons why Java is the platform
+    of choice for large, well-established enterprises. The object-oriented nature
+    of the platform allows large teams to work on multiple layers. Platform independence
+    enables it with other JVM languages. The JVM serves as a platform for new languages
+    outside of Java like Scala, Clojure, Groovy, and many others.
+
+
+    Specifically, we spoke to:
+
+
+    Fred Simon, Co-Founder and Chief Architect, iFrog Brandon Allog, PhD, CTO, Numarate,
+    Dr. Andrew Piper, CTO, Josh President of Operations, Gil Tene, CTO, Azul Systems
+    Anthony Kilman, Tech Lead, Dynamics, Bartendu Sharma, Vice President of Software
+    Architecture, Lifijent, Jonas Boner, Founder and Typesafe, Tommer Kramer, CTO
+    and Founder, Michael Hunger, Lead Developer Advocate, Neo Technology, Charles
+    Kendrick, CTO and Chief Architect, Ismomorphic Software
+
+
+    The transparency of the JDK source community to make innovative additions to the
+    ecosystem, making Java more interesting and relevant. The ICP is vibrant and active
+    with participants sharing contributions that ensure usefulness and improve runtime
+    performance.
+
+
+    02
+
+    Oracle is clearly the most important player in the ecosystem, producing the "official"
+    elements of the platform. In fact, it is not the only one. There are at least
+    60 Java developers. The Android Committee is overseeing the evolution of Java
+    and ensuring standards and best practices are being maintained. Java is driving
+    innovation in every sector.
+
+
+    Java ecosystem is massive. Everyone we spoke to has worked in the ecosystem throughout
+    their careers, and have positive feelings about how the platform has evolved to
+    meet today. Even Java has not been described as a "bright and shiny object," it
+    can have a very bright future—Oracle and Google can resolve their differences.
+
+
+    Google is important because of Android. IBM is committed to leading development
+    and standards while serving on the governing board for OpenDK. Pro-source-organizations
+    like Paypal/Spring, Apache, Typesafe, and Red Hat are all contributing to innovation
+    around Java development while Java is staying involved in development as well.
+    Open-source communities around Java languages like Ruby, Groovy, Clojure, and
+    Scala are driving additional innovation.
+
+
+    Here''s what we learned from the conversations:
+
+
+    01
+
+
+    There''s no agreement on the most important part of the Java ecosystem. Perhaps
+    this is a function of the age, diversity, and of the ecosystem.
+
+
+    03
+
+
+    Twitter is the most popular for respondents to stay up-to-date on the deluge of
+    ecosystem trends, with most following specific thought leaders and using
+
+
+    Ubiquity, and performance of the core platform
+
+
+    ZONE''S 2015 GUIDE TO THE JAVA ECOSYSTEM'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'Twitter for the most relevant and timely blog posts. Java community and elements
+    thereof, as well as developer communities—like Java''s Zone (formerly javlobby),
+    InfoQ, Hacker News, and StackExchange—were also many great sources of knowledge
+    and information.
+
+
+    The great value of the Java ecosystem is its ubiquity. Java can be used for services,
+    Big Data, and large websites. You can use the same language for mobile on the
+    client and Big Data server-side. This makes it easy to integrate between multiple
+    services, platforms, and distributed transactions to get done quickly. It is the
+    fastest, most stable enterprise software that can scale. It has a tremendous legacy
+    and a strong open-source community built around it.
+
+
+    The recent changes have brought us into the Java ecosystem through the involvement
+    of Java 8 and the open-source community. Java 8 enables faster parallel computations,
+    better concurrency, and new features like Lambda expressions—a powerful tool in
+    a developer''s toolkit. Open source has led to tremendous innovation, more libraries,
+    and opportunities which are also being open source.
+
+
+    One concerned developer expressed concern about Java''s lack of leadership and
+    mastery principles (citing Java and JSF) have led to a number of conflicting approaches
+    in basics of the platform like UI and data.
+
+
+    While it may seem contradictory, the biggest obstacle to Java is its success.
+    The members of the IT community have an inherent bias against anything that''s
+    been around for a few years. Java has been around for 20 years and it is the leader
+    platform no longer. That''s why it''s getting secure, it''s scalable, it''s flexible,
+    and it''s returning to relevance with the additional elements built by the open-source
+    community.
+
+
+    A more specific concern is the expressiveness of the Java language, which can
+    result in code that takes longer to be written, read, and tends to bend in the
+    face of evolving requirements. Java struggles similar to DLL hell, .NET solved
+    years ago. Various solutions to this issue have been kept out. Project Ignite,
+    which for JSF would have addressed the problem; however, a definitive solution
+    has not been found yet.
+
+
+    Understand the software and its architecture. Standard design patterns, like Lightweight
+    and Observer, down pat.
+
+
+    Master parallelism and be knowable about how to interact with threads.
+
+
+    Be a team player who is patient, empathetic and stays abreast of how the ecosystem
+    is evolving. There''s already so much written in Java that is available to the
+    Java community; you can speed up development time by building on top of what''s
+    already been built and proven to work.
+
+
+    Concerns with the Java ecosystem revolve around the omnipresent tension between
+    Oracle and Java. Java will benefit greatly when these technologies bring their
+    users together and begin collaborating to improve Java. If Oracle does not differ
+    with Java, this could cause many people to look for other solutions, causing Java
+    to stagnate.
+
+
+    Most of the skepticism around Oracle Java following its acquisition of Sun in
+    2009 has dissipated as users use open source Java community while providing free
+    access. Some even commented that Java is being run professionally with Oracle
+    Java.
+
+
+    The future of the Java ecosystem is in IoT, mobile, and enterprise development.
+    Java is the best solution for building cloud-distributed applications, and it
+    can help manage these evolving environments. Additionally, as the importance of
+    performance, privacy, and security become even greater around IoT and Big Data,
+    more enterprises will find these the fundamental elements upon which Java is built.
+
+
+    Some points for developers: Java ecosystem is massive, and the community has already
+    solved a lot of problems. Do not create pre-existing solutions from scratch which
+    will reduce rework, speed up development, and increase your knowledge of the platform
+    and the ecosystem.
+
+
+    There are 60 million developers using Java. Make sure to know what you learn and
+    what you produce. The more developers are participating in the community, the
+    deeper and richer the experience.
+
+
+    You can always learn. As one respondent said "If you know Java very well, you
+    will have looked deep enough.
+
+
+    The executives we work with have their products and serving clients. We''re interested
+    in helping with developers, and other IT professionals, to see if these insights
+    offer real value. It is helpful to see what other companies are working from a
+    more industry-level perspective? We welcome your feedback at research@dzone.com.
+
+
+    TOM SMITH is a Researcher at Dzone who excels at gathering insights from analytics—quantitative
+    and qualitative—to drive business. His passion is sharing knowledge to help people
+    succeed. In his spare time, you can find him either eating or chopping out of
+    the way.
+
+
+    We asked respondents what value they see in Java developers, and like everyone
+    else in the Java ecosystem—there is a diverse group of:'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Continuous Delivery\nIs Eating DevOps as\nSoftware Is Eating\nthe Business\n\
+    \nWhat if you could release dozens of tested software\nimprovements to production?\
+    \ Could your business respond\nto market pressures more quickly? The answer is—yes—and\
+    \ continuous delivery makes it possible.\n\nContinuous delivery involves automation\
+    \ of software delivery\npelines—from code to production. With automation, are\n\
+    delivered more quickly than is possible with legacy\nprocesses. Delivery can occur\
+    \ as fast as several times each\nhour, day or week. Deployment becomes a non-event.\n\
+    \nWHETHER YOU DEVELOP IN JAVA OR NOT, THE TREND\nCALLED CONTINUOUS DELIVERY IS\
+    \ OCCURING ALL\nAROUND YOU. YOU NEED TO LEARN ABOUT IT.\n\nTHE VALUE OF CONTINUOUS\
+    \ DELIVERY\nSoftware is at the heart of everything we do. As software\beats the\
+    \ world, business must deliver new capabilities\nand faster. Continuous delivery\
+    \ empowers organizations to\nrespond to market opportunities more swiftly—with\
+    \ the\nagility to learn what works and what doesn't.\n\nA common misconception\
+    \ associated with automation is\nrisk increases and quality decreases. On the\
+    \ contrary,\ntesting is inherent in continuous delivery practices.\nYou're actually\
+    \ building quality using effective\\continuous delivery practices produce higher\n\
+    quality software.\n\nBOTTOM LINE: WHY YOU SHOULD CARE\nCONTINUOUS DELIVERY\\As\
+    \ software beats the world, continuous delivery eats\nsoftware development and\
+    \ deployment. By moving from legacy\ndevelopment processes to continuous delivery\
+    \ is not easy. Small\ndip their toes in the water, trying continuous delivery\\\
+    mall. Lessons learned from initial project are\nthen applied to better initiatives.\
+    \ Initial apprehensions\nabout quality are solved with automation. Fears\ndisappear\
+    \ as speed, transparency, and cross-team\ncollaboration actually reduce risk,\
+    \ spare the enterprise new\nrisks, and caught application delivery forward. In\
+    \ the first,\napplications are optimized—and so is the business.\n\n> WRITTEN\
+    \ BY SASHA LACHBURY\nCEO AND FOUNDER, CLOUDBES, INC\n\n# Jenkins Platform by CloudBees\n\
+    \nBased on the time-tested, proven, and popular Jenkins automation platform.\n\
+    Advanced CD Pipeline execution and management.\n\n| CATEGORY | NEW RELEASES |\
+    \ OPEN SOURCE | STRENGTHS |\n| --- | --- | --- | --- |\n| Continuous Deployment\
+    \ and CI Platform | As Needed | Yes | • Proven CI/CD platform\n| • Built-in high\
+    \ availability\n| • Role-based access control\n| • Advanced analytics\n| • Enterprise-scale\
+    \ out features |\n\nCASE STUDY\nChallenge: Ortiziz needed to shorten delivery\
+    \ times for more than 180\napplications that power 13 different websites.\n\n\
+    Solution: Refine software delivery processes and implement\ns Jenkins and CloudBees\
+    \ for continuous delivery to\nto automate, ensure reliable builds, and build consistency\n\
+    across the organization.\n\nBenefits: Release cycles cut by more than 75% teams\
+    \ focused on\nhigh-value tasks; user experience enhanced through increased\nmultivariate\
+    \ testing.\n\n+   NOTABLE CUSTOMERS\n• Netflix\n• Nokia\n• TD Bank\n• Orbitz\n\
+    • Lufthansa\n• Apple\n\n![](img/c97b6bcb34115f65b8d120b6c31e94a7_24_0.png)"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Microservices and Cloud Native Java
+
+
+    When coding to use these services, developers can use a familiar Spring programming
+    to implement common patterns in distributed systems (e.g. configuration management,
+    service discovery, circuit breakers, intelligent routing, micro-proxy, and control
+    bus). Microservices can wield NetflixOSS (and more) with the productivity of Spring.
+    Taking advantage of these battle-tested microservices, and of the libraries that
+    implement them, can be as simple as a starter POM in your application''s dependencies
+    and applying the appropriate annotation.
+
+
+    Spring Cloud Services for Pivotal Foundry 1.0 beta packages server-side components
+    of Spring Cloud, found in projects as Spring Cloud Netflix and Spring Cloud Config,
+    and them available as native services inside Pivotal Foundry. (projects.spring.io/spring-cloud)
+    provides tools for Spring developers to quickly apply some of the common patterns
+    found in distributed systems (e configuration management, service discovery, circuit
+    breakers, intelligent routing, micro-proxy, control bus). For DevOps teams working
+    with microservices, this means simple install, configuration and production lifecycle
+    management for critical microservice server infrastructure from NetflixOSS and
+    Pivotal.
+
+
+    # Spring Cloud provides tools for Spring developers to quickly apply some of the
+    common patterns found in distributed systems
+
+
+    This is the first and only Native Java end-to-end solution - solution where microservices
+    are deeply integrated into the application framework, runtime platform, and multicloud
+    IaaS infrastructure automation.
+
+
+    > WRITTEN BY PIETER HUMPHREY\ PRODUCT MARKETER. PIVOTAL
+
+
+    # Spring Cloud by Pivotal
+
+
+    Spring Cloud Services for Pivotal Foundry 1.0 beta packages server-side components
+    of Spring Cloud projects and makes them available inside Pivotal Cloud.
+
+
+    CATEGORY
+
+    Java Framework for Distributed Computing
+
+    NEW RELE
+
+    As Needed
+
+    OPEN SOURCE?
+
+    Yes
+
+    STRENGTHS
+
+    Full Cloud Foundry service broker
+
+    Threat modeling, requires OAuth2, HTTPS, and CFA UAA
+
+    Simple implementation and configuration with NetflixOSS
+
+    Includes built-in event messaging, and configuration management
+
+
+    Spring Cloud provides Netflix OSS integrations for Spring Boot through autfiguration
+    and binding to the Spring Environment and other Spring programming idioms. With
+    a few annotations you can quickly enable and configure the common patterns inside
+    your application and build large systems with battle-tested Netflix components.
+    The patterns provided include Service Discovery (Eureka), Circuit Breaker (Hystrix),
+    Intelligent Routing (Zuul) and Client Load Balancing (Ribbon). These instances
+    can be registered and discover the instances using Spring-managed beans, and an
+    embedded eureka can be created with declarative java.
+
+
+    PROMINENT TEAM MEMBERS
+
+    Matt Stein
+
+    Chris Schafer
+
+    Will Tran
+
+    Ben Hale
+
+    Craig Walls
+
+    Mike Heath
+
+    Scott Frederic
+
+    Roy Clarkson
+
+
+    ```
+
+    BLOG spring.io/blog
+
+    TITTER @SpringCloudOSS
+
+    BSITE cloud.spring.io
+
+    ```'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# # The Power,\nPatterns,\nand Pains of\nMicroservices\n\n### QUICK VIEW\n\
+    01\nMicroservices make software faster\nto release and easier to maintain, but\n\
+    also invite the complexity inherent in\ndributed systems.\n\n02\nDistributed computing\
+    \ problems are\nextremely hard; but many have been\nsolved already.\n\n03\nUse\
+    \ known distributed systems\npatterns to make your microservices-\nbased applications\
+    \ more resilient and\n robust.\n\nBY JOSH LONG\n\n### SURVIVAL IS NOT MANDATORY\n\
+    It is not necessary to change. Survival is not\nmandatory. - W. Edwards Deming\n\
+    \nThe principles of The Agile Manifesto, now non-\nroversial and well accepted,\
+    \ speak of how to both\nwrite and deploy software more quickly and more\nsaf—to\
+    \ production. The very measure\nof success is defined by how quickly software\
+    \ is\ndivered to customers working—and working\nIt is easy to get this right,\
+    \ but unless\nc use it; it's not shipped. Software in\nproduction provides a vital\
+    \ feedback loop that helps\nbusiness better than market forces. Software in\n\
+    production is the only differentiator for software\nbusiness and—by my friend\
+    \ Andrew Clay Shader\nreminds us—that you are building a software\nbusiness, or\
+    \ you will be losing to who is.\n\nand clarifying servers and infrastructure with\
+    \ operations\ninstead of deploying software work. They collapsed\nt divide and\
+    \ created what we now know as Amazon\nWeb Services (AWS). AWS provides a set of\
+    \ well-known\nimitives, cloud that any developer can use to deploy\nsoftware faster,\
+    \ cheaper. The cloud of movement\nis about breaking the invisible wall between\
+    \ what we\nkneww as developers and operations to remove the cost of\nthis-and-forth.\n\
+    \nAnother company realized that Netflix is. They rectified\nthat while developers\
+    \ were using TDD and agile\nmethodologies, went far too in line, queuing\nfrom\
+    \ isolations—product management, AWS\ndevelopers, QA, various admins,—until it\
+    \ was\ndeployed into production. While each workday may\nprocessed its efficiently,\
+    \ the time associated with\nal queuing meant it could be weeks (or\ngulp, months).\n\
+    \nIn Netflix met to what they described the cloud-\nnative architecture. They\
+    \ decomposed their applications and\nthem terms of features; small enough to be\
+    \ fed\nwith two pizza-boxes! connected teams of product managers,\nUX, developers\
+    \ architects, or tasked with delivering\nof one feature or one independently useful\
+    \ product. Because\neach team delivered a set of free-standing services and\n\
+    applications, individual teams could iterate and deliver as\nthey cases and business\
+    \ drivers needed, requiring\nof other. What were in-process methodology\ncame\
+    \ became independently deployed network services.\n\nIs this News? No, of course.\
+    \ A full-throttle advocate of\nwinning that one is constant in business is. The\n\
+    winners's ecosystem learned early and quickly.\n\nOne example is Amazon. They\
+    \ realized early on\nthey were spending entirely too much specifying"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# DZCON''S 2015 GUIDE TO THE JAVA ECOSYSTEM
+
+
+    Microservices, done correctly, Conway''s law and refactor organizations to optimize
+    for the continuous and safe delivery of microservices. Independently deployed
+    software can be more easily read at runtime. Independently deployed software boundaries
+    and domains are forced to be internally consistent, though Dr. Eric Evans framed
+    as a bounded context in his epic tome, Domain Driven Design.
+
+
+    and application server 15 years ago are since gone for most of us, and most environments
+    do not process concurrency and isolation. What this means, in practice, is self-contained
+    fails, which all of the aforementioned web frameworks will easily create for you.
+
+
+    Independ independence brings agility but also complexity: as soon as network hops
+    you involve you have a distributed systems problem!
+
+
+    You can''t fix what without measuring: how quickly can service expose state—metrics
+    (meters, gauges, histograms, and counters), health checks, etc.—how easy is it
+    to report microservice state in a joined-view or analysis tool (like Grafana,
+    Graphs/Elastic/Logstash/Kibana stack, or OpenTSDB)? The Driftforward microservice
+    framework, Spring Boot''s Activator module provides many of the same capabilities
+    and transparently integrates with the Driftforward Metrics library if it''s on
+    the CLASSPATH. A good platform library will also help manage centralized log configuration
+    and analysis deep itself.
+
+
+    # RIDE THE ROAD
+
+
+    Thankfully, we do not have to solve the common distributed problems ourselves!
+    The giants of the web who''ve come before and have shared a lot of what they''ve
+    done, and the rest of us-fear of the concurrency of the next free mobile app or
+    social-network runner—can learn from and lean on what they''ve proved. Let''s
+    look at some of the common patterns and practices used to use them.
+
+
+    # CONSISTENCY OVER MOBILITY
+
+
+    My friend and colleague Dave McCrory coined the idea of data gravity—the inclination
+    for pools of data to attract more and attract data. The same—monolith-gravity
+    exists when you scale monolithic applications: as you add teams, each new team
+    will face friction in adding new endpoints and tables in a large SQL database
+    if the cost associated with setting up new services is significant. For many organizations,
+    standing up new services can be a daunting task! Many organizations have wiki
+    pages with dozens of steps that must be carried out before a service can be deployed,
+    most of which have little or no to do with the services'' business value and drivers!
+
+
+    Getting out of all this is a good start, but there is much more to do before a
+    service can get to production. Spring Boot uses-called auto-configuration that
+    lets developers configure mechanisms, frameworks, infrastructure effortlessly,
+    literally anything—and has stood up as part of the Spring application if the auto-configuration
+    conditions are met by the CLASSPATH. If conditions can be met, then Spring Boot
+    provides with many options and reusable conditions: is a bean of a certain type
+    (or not defined)? Is an environment property specified?
+
+
+    Starting a new service is not more complex than a public.static void main entry-point
+    and a library in the CLASSPATH if you use the right technology.
+
+
+    # CENTRALIZED CONFIGURATION
+
+
+    > Thankfully, we do not have to solve the common distributed systems ourselves
+
+
+    The 12 Factor Method provides a set of guidelines for building applications with
+    cloud hygiene. The goal is to externalize configuration from the build so that
+    one final build can be deployed from development, QA, testing, and finally to
+    a production environment. Variables and—arguments, external.properties, and .yml
+    files—Spring Boot Cloud Configuration all support this—a good start, but even
+    this can become tedious if you need to manage more than a few types of services.
+    This approach also fails several key use cases: How do you change configuration
+    centrally and propagate those changes support encryption and decryption of things
+    like connection credentials? How do you use feature flags, which toggle configuration
+    values at runtime, without restarting the service?
+
+
+    Microservices are APIs, typically REST APIs. How quickly can you stand up a new
+    REST service? Microframeworks like Spring Boot, Grails, Droovy Play framework,
+    and Wildfly are optimized for setting up REST with minimum fuss. Extra points
+    go to technologies that make it easy to build smart, self-deploying hypermedia
+    APIs as Spring Boot does with HATEOAS.
+
+
+    Services are timely, ephemeral, and numerous. The economics is that deploying
+    lots of applications into the same JVM
+
+
+    Spring Cloud provides the Spring Boot Config Server, which stands up a REST API
+    in front of a version control repository of configuration files. Spring Cloud
+    also provides support for Apache Zookeeper and HashiCorp Consul
+
+
+    # DZCON
+
+
+    # DZONE''S 2015 GUIDE TO THE JAVA ECOSYSTEM
+
+
+    # 29'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'as configuration source, as well as various clients for all of those as properties—whether
+    they come from the Config Server, Consul, or an environment variable—the same
+    way for Spring. Netflix provides a solution called Archaus, which acts as a client
+    to a configuration service. This is a bit too low for many organizations and lacks
+    supported, open-source configuration startup. Spring Cloud builds the Archaus
+    properties with Spring as a
+
+
+    Edge services are intermediaries, and an ideal place to implement API translation
+    or routing. For example an HTML5 application. An HTML5 application can''t run
+    because of CORS restrictions; it needs to request to the host and port. A robust
+    way might be to add a backend microservice that lets the client make requests.
+    This is de and unscalable as you add more microservices. If organizations like
+    Netflix use Zuul, Zuul simply wraps all services at the edge of the backend and
+    aggregates them. If it is an HTML5 application, it might need HTTP Basic or OAuth
+    security, hence to use HTTPS, and be done with it.
+
+
+    # SERVICE REGISTRATION AND DISCOVERY
+
+
+    Applications spin up and down, and their locations may change by day. This discovery—with
+    time-to-live expiration—may be a bit too much for service discovery and location.
+    It''s important to decouple the client from the location. A little bit induction
+    is necessary. A service registry adds them. An inductive registry is a phonebook,
+    that keeps track of service by their names. There are many such technologies out
+    there—some examples include Netflix''s Eureka, Apache Zookeeper, and HashiCorp
+    Consul. Modern platforms like Cloud Foundry dont need a service registry because
+    they take care of where services live and how to find them a given time. At very
+    least, all clients will read from a service registry to identify where services
+    live. Spring Cloud Discovery provides client implementations for working with
+    all types of service registries, be they Apache, Eureka, HashiCorp Consul, Cloud
+    Foundry, Lattice. It''s easy enough to plug these implementations into simple
+    projects because Spring is a framework and the barrier is the Effort definition
+    for "extension".
+
+
+    Sometimes the client needs a coarser-grained view of the data coming from these
+    services. This implies API induction. An edge service, just using something like
+    Spring Boot, might use reactive programming like Netflix''s RxJava, Typesafe''s
+    Akka, RedHat''s Vert, or Project Reactor to compose requests and transformations,
+    and multiple services into a single response. All of these implement a API called
+    the reactive streams API to solve all the problems that are common.
+
+
+    # CLUSTERING PRIMITIVE
+
+
+    In distributed systems, there are many actors with roles to play. Cluster coordination
+    and cluster consensus is the most difficult problem to solve. How do you handle
+    leadership election, active/passive heartbeat, or global locks? Many technologies
+    provide the primitives required to support this sort of coordination, including
+    Apache Zookeeper, Redis, and Hazelcast. Spring Cloud''s cluster provides a clean
+    integration with all these
+
+
+    # CLIENT-SIDE LOAD BALANCING
+
+
+    A big benefit of using a service registry is client-side balancing. Client-side
+    balancing lets the client find all the relevant instances of a service—if there
+    are 10 or a thousand, they all discovered through the registry and then choose
+    from the candidate instances which one routes to. The client can programmatically
+    decide, based on whether it—capacity, round-robin, cloud-provider availability-awareness,
+    tolerance—to which node request should be sent. Netflix provides a great client-side
+    load balancer Ribbon. Spring Cloud integrates Ribbon at all layers of the framework
+    so that when you''re using the RestTemplate, the REST clients are powered by Netflix,
+    the Zuul proxy, or anything else, the provided load balancing strategy is in place.
+
+
+    > Transactions are a stop-the-world approach to synchronization and slow the system
+    as a
+
+
+    # MESSAGING, CORS, AND STREAM PROCESSING
+
+
+    When you move into the world of microservices, state synchronization much more
+    difficult. The reflected effect of inherited transactions, a JTA might be reach
+    for distributed transactions. This urge at all clients for synchronization and
+    slow the system as a-stop-world approach to synchronization, services today use
+    eventual consistency through messaging to ensure that state eventually reaches
+    the correct system world. REST is a fine technology for reading data but it doesn''t
+    provide any guarantees about the propagation and-
+
+
+    # EDGE SERVICES: MICROPROXIES AND API GATEWAYS
+
+
+    Client-side load balancing is only used within the data from one service to another,
+    when the client makes requests. All of these services live behind the firewall.
+    Services that live at the edge of the data, publicly by, are exposed using JSON.
+    An HTML5, Android, or iPhone application will not use Ribbon. Services exposed
+    at the edge have more defensive; they cannot propagate, options to the'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# DZONE''S 2015 GUIDE TO THE JAVA ECOSYSTEM
+
+
+    eventual processing of a transaction. Actors like Typeseka and message brokers
+    Apache ActiveMQ, Apache Kafka, RabbitMQ, or even Redis help the norm. A supervisory
+    system that guarantees a message is processed before it leaves; there are many
+    APIs that can simplify the chore—using Apache Camel, Spring Integration, and at
+    a higher abstraction level focusing specifically on the aforementioned Kafka,
+    RabbitMQ, and Redis—Spring Cloud messaging by using REST for reads prepares simply
+    from Command Query Segregation, or design pattern specifically describes this.
+
+
+    web, OAuth and OpenID Connect are popular. In the enterprises, technologies like
+    SAML are very popular. OAuth 2 provides integration with API gateways like Apogee
+    and Spring Security can act as a security hub, outfacing OAuth (for example) and
+    connecting to more traditional frameworks like ActiveDirectory, LDAP, or LDAP.
+    Spring Security provides an identity service, which can tell you any identity
+    in the backend. Whatever your choice of identity, it should be to protect services
+    based on some sort of token. Spring Cloud REST with any oauth provider—Google,
+    Spring Security OAuth, Apache Spring can also act as a client using the Stripe
+    OAuth client.
+
+
+    # CIRCUIT BREAKERS
+
+
+    In a microservice it''s critical that services are designed to be fault-tolerant;
+    if something happens, the services will gracefully degrade. Services are complex,
+    having dependencies. One failure in service can trigger a domino effect across
+    others if we isn''t isolate them. A circuit breaker prevents a failing component
+    from overwhelming itself—when something goes wrong—the circuit will stop allow
+    traffic until the path is cleared. Netflix''s Hystrix circuit-breaker is a very
+    popular option, complete with dashboards which helps you visualize potentially
+    open circuits in a system. Wildflam, as of this writing in Q3 2015, has support
+    for Hystrix in master, and the Play Framework provides support for circuits. Netflix
+    also has support, and we''re investigating a potential issue with Rugged.
+
+
+    > Independently deployed software services boundaries and domain models
+
+
+    # DON''T REINVENT THE RIDE WHEELS
+
+
+    We''ve looked at an extensive list of concerns that we are using unique building-class
+    architectures. Trust me you do not want to reinvent this yourself. If you''ve
+    got Netflix''s DZone Net and large landmark, you''re not going to get them appear
+    soon. Building many microservices is hard, but how to fit them into one coherent
+    framework? What''s that other kind of fish and pull will not work out. Even, with
+    the lines of Netflix, Alibaba, and TicketMaster are using Spring Cloud (which
+    builds on Spring Boot) it removes so much complexity and lets developers focus
+    on the essence of the business problem.
+
+
+    A microservice with REST, messaging, and ingress and egress points can be heavy
+    to load. In the aggregate how do you trace—correct requests across services and
+    understand where may have failed? It without a sufficient investment in a trace
+    strategy. Google''s Dapper paper was the way for many such stories, including
+    one at Netflix, which they have not sourced. Fault-tolerance is also needed. Twitter''s
+    Twitter is open and available. It provides the infrastructure and a visually available
+    dashboard on which you can view waterfall of calls across services. Spring Cloud
+    is a widely called Spring Sleuth provides correlation IDs and instrumentation
+    across services. Spring Elements supports Twitter Zinc in terms of the Spring
+    Cloud API. Added to a Spring Cloud module, request across endpoints using Spring
+    Cloud. REST calls using theRestTemplate, and HTTP requests processed by Spring
+    MVC are all transparent and automatically traced.
+
+
+    In a sufficiently distributed system, it is increasingly difficult to optimize
+    for high availability and parametrize for reduced-remediation. Services will fail/fall
+    down the question is how quickly can you stand them up? This is why microservices
+    and cloud-computing platforms are high-land: the software needs to be smart enough
+    to adapt the landscape, and to gracefully when when unexpected hardships.
+
+
+    # DISTRIBUTED TRACING
+
+
+    # SINGLE SIGN-ON
+
+
+    Security is hard. In a distributed system, it is critical to ascertain the provenance
+    and authenticity of a user on a consistent way across all nodes. The one on
+
+
+    JOSH LONG (@jlongberg) is the Spring Developer Advocate at Pivotal. He is a Java
+    Champion, author of O''Reilly''s Building Cloud Native Designing Systems with
+    Spring Boot, Spring Cloud, and 3 best-selling video tutorials (Building Microservices
+    with Spring Boot Lifters) with Phil Web, and an open-source contributor (Spring,
+    Boot, Spring Integration, Spring Cloud, Actin, and Vaadin). Josh has been a keynote
+    presenter at dozens
+
+
+    # DZONE''S 2015 GUIDE TO THE JAVA ECOSYSTEM
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_29_0.png)
+
+
+    31'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# JAVA BEST PRACTICES
+
+
+    This checklist includes a mix of general advice and specific pitfalls that you
+    need to look out for when developing Java applications.
+
+
+    # GENERAL
+
+
+    +   - USE ENCAPSULATION
+
+
+    +   - CLOSE STREAMS
+
+
+    +   - USE EQUALITY OPERATORS
+
+
+    None of the instance fields in your class should be public. Utilize getters to
+    access to the fields, and when appropriate, add setters to allow writing.
+
+
+    Any time you open a stream to read or write data, ensure that that stream afterwards
+    afterwards. If you''re using Java 7 or later, you can use the "try with resources"
+    mechanism.
+
+
+    When comparing strings you should use the .equals method rather than the == operator,
+    which compares the addresses of objects rather than the contents.
+
+
+    If you''re using String.intern() you can use the == operator, but only use .intern()
+    spangingly since it can increase overhead garbage collection.
+
+
+    # PERFORMANCE
+
+
+    +   - USE PRIMITIVE TYPES
+
+
+    +   - CONCATENATE STRINGBUILDER
+
+
+    +   - CONSTRUCT OBJECT LAZILY
+
+
+    Java has a number of wrapper classes available for dealing with primitives, but
+    use these only if they are absolutely necessary for your application. Wrapper
+    classes are slow, while primitive types are simple values.
+
+
+    When building a string in your program, use StringBuilder rather than concatenation
+    (with the + operator), which would create a new String object each time it is
+    used.
+
+
+    Almost all the time, you prefer lazy initialization of your objects. If your object
+    is constructed with an external system, initialization will be slowed, delaying
+    construction until it is required to result in faster execution overall.
+
+
+    # EXCEPTION HANDLING
+
+
+    +   - BE SPECIFIC WITH EXCEPTIONS
+
+
+    +   - ELIMINATE EMPTY CATCH BLOCKS
+
+
+    +   - NEVER THROW EXCEPT FOR NORMAL FLOW
+
+
+    As you create methods that throw exceptions, think of yourself as an API developer,
+    and make the throws as specific as possible. It''s better to list three potential
+    exceptions rather than having one generic exception.
+
+
+    Empty catch blocks are useless for the readability of your code. You should always
+    attempt to do something in your catch blocks. The very least this should include
+    the exception and properly inform the user.
+
+
+    +   - "TRY WITH RESOURCES"
+
+
+    In-catch blocks that include work with I/O resources, use the "try with resources"
+    to ensure that all resources are closed when the block has completed. If you are
+    using a version of Java SE 7, then use the finally block to clean up resources.
+
+
+    You should never rely on exceptions to catch such as an array of bounds, when
+    you are using defensive programming in your code to check if the index is within
+    the size of the array. Exception checks run slower than the checks you do within
+    your own code.
+
+
+    WRITTEN BY James Suggue is the CIO at Carma, and is also a Leader at Drone since
+    2008. This list was compiled from James'' experiences with Java over a 14 year
+    career, both using Java and reading countless books and articles on the language.
+    He recommends that every Java developer should read Effective Java by Joshua.
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_30_0.png)'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Solutions Directory
+
+
+    This directory contains Java web frameworks, build automation/repository tools,
+    in-memory data grids, Java monitoring tools, application servers, and portals/CMS.
+    It provides free trial data and product category information gathered from vendor
+    and project pages. Solutions are selected for inclusion based on several criteria,
+    including solution maturity, technical innovativeness, relevance, and data availability.
+
+
+    | PRODUCT | CATEGORY | FREE TRIAL | WEBSITE |
+
+    |---|---|---|--|
+
+    | AngularFaces | AngularJS + JS Framework | Open Source | angularfaces.com |
+
+    | Apache Ant | Build Automation | Open Source | ant.apache.org |
+
+    | Apache Ignite | In-memory Data Grid | Open Source | ignite.apache.org |
+
+    | Apache Ivy | Dependency Manager | Open Source | ant.apache.org/ivy |
+
+    | Apache Maven | Build, Reporting and Documentation | Open Source | maven.apache.org
+    |
+
+    | Apache MyFaces | JSF Framework | Open Source | myfaces.apache.org |
+
+    | Apache Struts | Java Web Framework | Open Source | struts.apache.org |
+
+    | Apache Tapestry | Component-oriented Java Web Framework | Open Source | tapestry.apache.org
+    |
+
+    | Apache Tomcat | Java Web Server | Open Source | tomcat.apache.org |
+
+    | Apache Wicked | Java Web Framework | Open Source | wicket.apache.org |
+
+    | AppDynamics | APM | Free Tier Available | appdynamics.com |
+
+    | Artfactory by JFrog | Binary/Artifact Repository | Open Source | jfrog.com/open-source
+    |
+
+    | Big Memory by Terracotta | In-memory Data Grid | 90 Days | terracotta.org/products/bigmemory
+    |
+
+    | CA Application Monitoring | APM | 30 Days | ca.com |
+
+    | Censum by Clarity | GC Analysis | 7 Days | jclarity.com |
+
+    | Codemy IDE | SaaS IDE | Free Tier Available | codemy.com |
+
+    | CUBA Platform by Haulmont Technologies | Java Framework | Free Tier Available
+    | cuba-platform.com |
+
+    | DCHQ | Cloud Automation Platform for Container-based Applications | Free Tier
+    Available | dchq.io |
+
+    | DripStat | Java + Scala APM | Free Tier Available | dripstat.com |
+
+    | Dropwizard | Java REST Web Services Framework | Open Source | dropwizard.io
+    |
+
+    | Dynatrace Application Monitoring | APM | 30 Days | dynatrace.com |
+
+    | Eclipse | IDE | Open Source | eclipse.org |'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# PRODUCT | CATEGORY | FREE TRIAL | WEBSITE
+
+
+    | | | | | |
+
+    | Finatra | Scala HTTP services built on Twitter-Server and Finagale | Open Source
+    | twitter.github.io/finatra |
+
+    | GemFire by Pivotal | In-memory Data Grid | Open Source | pivotal.io/big-data/pivotal-gemfire
+    |
+
+    | Google Web Toolkit | Single-page Web Framework | Open Source | gwtproject.org
+    |
+
+    | Gradle | Build Automation | Open Source | gradle.org |
+
+    | Grails | Groovy Web Framework | Open Source | grails.org |
+
+    | GridGain | In-memory Data Grid | Free Tier Available | gridgan.com |
+
+    | Hazelcast Enterprise Platform | In-memory Data Grid | 30 Days | hazelcast.com
+    |
+
+    | Heroku Platform | PaaS | Free Tier Available | heroku.com |
+
+    | IceFaces by IceSoft | JS Framework | Open Source | cesoft.org |
+
+    | Illuminate by jClarity | Java Performance Monitoring | 14 Days | clarity.com
+    |
+
+    | Infinispan by Red Hat | In-memory Data Grid and Cache | Open Source | infinispan.org
+    |
+
+    | IntelliJ IDEA by JetBrains | IDE | Free Tier Available | jetbrains.com/idea
+    |
+
+    | ItsNat | Component-oriented Java Web Framework | Open Source | itsnat.sourceforge.org
+    |
+
+    | Java Server Faces by Oracle | Java Web Framework | Open Source | oracle.com
+    |
+
+    | JBoss Data Grid by Red Hat | In-memory Data Grid | Free Tier Available | redhat.com
+    |
+
+    | JDeveloper by Oracle | IDE | Free Product | oracle.com |
+
+    | Jenkins Platform by CloudBees | Continuous Integration Platform | 2 Weeks |
+    cloudbees.com |
+
+    | Hiccup by Azul Systems | Java Performance Monitoring | Open Source | azulisystems.com
+    |
+
+    | JMS Adapters for .NET or BizTalk by JBridge | JMS Integration with .NET or BizTalk
+    | 30 Days | jbridge.com |
+
+    | JBridgePro | Java and .NET Interoperability | 30 Days | jbridge.com |
+
+    | JRebel by ZeroTurnaround | Java Class Reloader | Free Tier Available | zeroturnaround.com/jre
+    |
+
+    | Lift | Scala Web Framework | Open Source | liftweb.net |
+
+    | MyEclipse by Genitec | IDE | 30 Days | genitec.com/products/myeclipse |
+
+    | NetBeans by Oracle | IDE | Open Source | netbeans.org |
+
+    | New Relic | APM | 14 Days | newrelic.com |
+
+    | Nexus by Sonatype | Binary/Artifact Repository | Open Source | sonatype.com/nexus
+    |
+
+    | Oracle Coherence | In-memory Data Grid | Open Source | oracle.com'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# DZONE.COM/GUIDES
+
+
+    # DZONE''S 2015 GUIDE TO THE JAVA ECOSYSTEM
+
+
+    | PRODUCT | CATEGORY | FREE TRIAL | WEBSITE |
+
+    | --- | --- | --- | --- |
+
+    | Payara Micro | Java EE Deployment Container | Open Source | payara.fish/home
+    |
+
+    | Play! Framework | Java + Scala Web Framework | Open Source | playframework.com
+    |
+
+    | Plumber | Memory Leak Detection, GC Analysis, Thread & Query Monitoring | Available
+    Upon Request | plumber.eu |
+
+    | PrimeFaces | JSF Framework | Open Source | primefaces.org |
+
+    | Race Catcher by Thinking Software | Race Condition Debugger | N/A | thinkingsoftware.com
+    |
+
+    | RichFaces by Red Hat | JSF Framework | Open Source | richfaces.jboss.org |
+
+    | Ring | Clojure Web Framework | Open Source | github.com/ring-clojure/ring |
+
+    | Ruxit APM | APM | 30 Days | ruxit.com |
+
+    | Scalatra | Minimalistic Scala Web Framework | Open Source | scalatra.org |
+
+    | SmartGW by Isomorphic Software | Single-page Web Framework + Prototyping Tools
+    | 60 Days | smartclient.com |
+
+    | Spray | Akka/Scala Web Framework | Open Source | spray.io |
+
+    | Spring Boot | Minimalistic Spring Bootstrapping Framework | Open Source | projects.spring.io/spring-boot
+    |
+
+    | Spring Cloud by Pivotal | PaaS | Open Source | cloud.spring.io |
+
+    | Spring MVC | Spring Web Framework | Open Source | spring.io |
+
+    | SteelCentral by Rivered Technologies | APM | 14 Days | riverbed.com |
+
+    | Takipi | Large-scale Java/Scala Production Debugging | Free Tier Available |
+    takipi.com |
+
+    | Tasktop Dev | IDE Task Manager | 30 Days | tasktop.com/tasktop-dev |
+
+    | Tazgrid by Alachisoft | In-memory Data Grid | Open Source | tayzgrid.com |
+
+    | Upsource by JetBrains | Code Review | Free 10-User Plan | jetbrains.com/upsource
+    |
+
+    | Vaadin | JVM Single-page Web Framework | Open Source | vaadin.com |
+
+    | Vert.x | Event-driven, non-blocking JVM Framework | Open Source | vert.io |
+
+    | VisualVM by Oracle | JVM Monitoring | Open Source | visualvm.java.net |
+
+    | WebSphere Extreme Scale by IBM | In-memory Data Grid | 8 Hours | ibm.com |
+
+    | WildFly Swarm by Red Hat | Minimalistic Application Server | Open Source | wildflyswarm.org
+    |
+
+    | XRebel by ZeroTurnaround | Java Profiler | 14 Days | zeroturnaround.com |
+
+    | YourKit | Java & .NET Profiler | 15 Days | yourkit.com |
+
+    | Zing by Azul Systems | JVM Platform | Free Tier Available | azulisystems.com
+    |
+
+    | ZK Framework by ZKoss | Java Web Framework | Open Source | zkoss.org |
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_33_0.png)
+
+
+    DZONE''S 2015 GUIDE TO THE JAVA ECOSYSTEM
+
+
+    35'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# # diving deeper
+
+
+    # ## FEATURED JAVA ECOSYSTEM SOLUTIONS
+
+
+    Looking for more information on individual Java Ecosystem solutions providers?
+
+
+    Nine of our partners have shared additional details about their offerings, and
+    we''ve summarized this data below.
+
+
+    If you''d like to share data about these or other related solutions, please email
+    us at researchzone.com.
+
+
+    # CloudBees Jenkins Platform
+
+
+    BY CLOUDBEES
+
+
+    DESCRIPTION The CloudBees Jenkins Platform is a solution from CloudBees Inc. based
+    on the Jenkins automation engine to easily adapt the Continuous Delivery model
+    for development and delivery lifecycle. Continuous Delivery is a DevOps transformation.
+    The CloudBees Jenkins Platform enables CD at enterprise scale.
+
+
+    OPEN SOURCE: Yes
+
+
+    PRICING jenkins.com/products/pricing
+
+
+    # Heroku Platform
+
+
+    BY SALESFORCE
+
+
+    DESCRIPTION Heroku is a cloud platform based on a managed system, with integrated
+    data and powerful services for deploying and scaling apps. Heroku experience is
+    an app-centric approach for software delivery, integrated with most popular developer
+    tools and workflows.
+
+
+    FREE Tier Free trial available
+
+
+    PRICING heroku.com/pricing
+
+
+    # jHiccup
+
+
+    BY AZUL SYSTEMS
+
+
+    DESCRIPTION jHiccup is an Open Source tool provided by Azure Git Team that provides
+    a quick picture of your applications as they run in production. jHiccup quickly
+    shows the latency inherent in your tests, up to 99.9999 milliseconds. Hiccup also
+    shows latency across the entire test interval. jHiccup has minimal overhead, is
+    written in Java, and it is free.
+
+
+    FREE Tier Free trial available
+
+
+    PRICING azulsystems.com/product/jiccup
+
+
+    # JMS Adapters for .NET and BizTalk
+
+
+    BY INBRODE
+
+
+    DESCRIPTION JMS create .NET-based apps in C#, VB, etc that integrate messaging
+    with your existing JMS infrastructure using the JMS Adapter for .NET.
+
+
+    Quickly integrate BizTalk Server into your existing JMS infrastructure using the
+    JMS Adapter for BizTalk. The Adapter works with any JMS implementation, including
+    WebSphere, ActiveMQ, GlassFish and OpenMQ.
+
+
+    FREE TRIAL 30 day trial, full-featured
+
+
+    PRICING jbridge.com/purchase
+
+
+    # JRe
+
+
+    BY TURNAROUND
+
+
+    DESCRIPTION JRe is a Java Agent that integrates with application services, making
+    classes with existing classes. Newly changed classes are re and instantly reloaded
+    into IDEs and binds. Classes and resources are loaded from the workspace and over
+    100 frameworks.
+
+
+    FREE TRIAL 14 day trial, full-featured
+
+
+    PRICING turnaround.com/software/jre/pricing
+
+
+    # New Relic
+
+
+    BY NEW REL
+
+
+    DESCRIPTION New Relic APM senses applications that cannot be seen, helping you
+    reduce response times and focus on what matters. With new tools troubleshooting
+    becomes easier. New Relic gives teams visibility across application architectures,
+    transactions, and code. The tool is secure and features features that integrate
+    with popular tools as well as SLA monitoring.
+
+
+    FREE Tier available, with a 14 day trial
+
+
+    PRICING newrelic.com/application-monitoring/pricing
+
+
+    # Spring Cloud
+
+
+    BY PISTON
+
+
+    DESCRIPTION Spring Cloud provides tools for developers to build complex systems
+    in distributed patterns (e.g. configuration management, service discovery, circuit
+    breakers, integration tools, control bus, one-time tokens, global locks, leadership
+    election, distributed clusters, cluster state).
+
+
+    FREE Tier Open source
+
+
+    PRICING cloud.spring.io
+
+
+    # SteelCentral
+
+
+    BY RIVERSIDE TECHNOLOGIES
+
+
+    DESCRIPTION SteelCentral is the only end-to-end solution that combines user experience,
+    comprehensive application, infrastructure, and network monitoring for visibility
+    and diagnostics, and intelligent automation. It supports teams on SteelCentral
+    to quickly expose, diagnose, and fix problems throughout the application lifecycle.
+
+
+    FREE Tier 14 day trial, full-featured
+
+
+    PRICING riverbed.com/appennetals/buy
+
+
+    # Upsource
+
+
+    BY JETBRAINS
+
+
+    DESCRIPTION Upsource is an on-premises code review tool that supports Git, Mercury,
+    and Perforce. It helps teams improve code quality and velocity and build collective
+    code ownership through effective lightweight code reviews and collaboration. It
+    integrates with JetBrains and provides Java insight to drastically simplify the
+    code review process.
+
+
+    FREE Tier for up to 10 users, 60 days evaluation available on request for number
+    of users
+
+
+    PRICING jetbrains.com/upsource/buy
+
+
+    36 2015 GUIDE TO THE JAVA ECOSYSTEM'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# glossary
+
+
+    JAVA COMPATIBILITY KIT (JCK) A bundle of tools, resources, and a test suite used
+    to certify a java platform implementation.
+
+
+    JAVA VIRTUAL MACHINE (JVM) The runtime engine of the java platform takes programs
+    written in Java and compiles them to bytecode. The JVM provides a way for developers
+    to write code that is platform independent.
+
+
+    JAVA DATABASE CONNECTIVITY (JDBC) A Java standard that provides a call-level API
+    that can access SQL-based databases.
+
+
+    APPLET A program written in java for the web, usually embedded in an HTML page.
+
+
+    JAVA DEVELOPMENT KIT (JDK) The complete set of binaries that includes the JRE
+    for developing, debugging, and monitoring applications.
+
+
+    LAMBDA EXPRESSION In Java 8: an anonymous method for replacing a class with lightweight,
+    more readable code. Making functional programming in java much easier.
+
+
+    BEAN Also known as JavaBeans, these are objects that conform to some simple operations
+    with property naming and data encapsulation.
+
+
+    JAVA ENTERPRISE EDITION (EE) An API and runtime for developing and running enterprise
+    software, including web services and large scale networks.
+
+
+    ENTERPRISE JAVABEANS (JB) A key annotation-based Java API that provides components
+    to POJOs.
+
+
+    JAVA MESSAGING SERVICE (JMS) A Java API and messaging standard that facilitates
+    middleware-oriented functionality between components based on Java EE.
+
+
+    MICROSERVICES A system or application consisting of small, lightweight services
+    that perform a single function according to your domain''s bounded contexts. These
+    are independently deployable and loosely coupled.
+
+
+    GARBAGE COLLECTION An automatic memory management system used by the JVM to free
+    space occupied by unused objects
+
+
+    OBJECT-RELATIONAL MAPPING (ORM) An object-oriented programming technique for converting
+    data between incompatible types. An ORM lets developers work with relational databases
+    without writing language code for the database.
+
+
+    INTEGRATED ENVIRONMENT (IDE) An application that provides a code editor, debugger,
+    compiler, and many other features that make developers more productive and less
+    to create errors when building software.
+
+
+    JAVA EDITION (ME) A solution for java apps that run on mobile devices and devices
+    in the Internet, including micro-controllers, sensors, set-top boxes, and printers.
+
+
+    OPENJDK The official open-source java implementation.
+
+
+    JAVA API FOR RESTFUL SERVICES (JAX-RS) A Java API that uses annotations to map
+    help resources classes (POJOs) to SOAP-based web services.
+
+
+    JAVA NAMING AND INTERFACE (NDI) A set of APIs that help manage object and data
+    discovery and lookup for java software clients.
+
+
+    PLAIN OBJECT (POJO) A term used to explain that a given java object is not a special
+    object but just one defined by the EJB framework. A simple object that does not
+    implement a framework interface or extend a framework class. Java beans are annotated
+    POJOs.
+
+
+    JAVA ARCHIVE (JAR) A package that formats multiple Java class files with embedded
+    metadata in order to distribute and libraries on the java platform.
+
+
+    JAVA PERSISTENCE API (JPA) A standard specification for the management of relational
+    data in terms of object-relation mapping.
+
+
+    JAVA RUNTIME ENVIRONMENT (JRE) A set of binaries that allows you to execute java
+    programs on your machine.
+
+
+    Servlet A java program that runs within a web server and provides the capabilities
+    of a server.
+
+
+    JAVA ARCHITECTURE FOR XML BINDING (JAXB) A Java API for marshalling and unmarshalling
+    objects into and out of XML
+
+
+    JAVA SERVER PAGES (JSP) A tool in the java platform that allows developers to
+    develop and build HTML, XML, and other documents. JSPs are translated into servlets
+    at runtime.
+
+
+    STREAM API A new Java 8 API for declaratively, parallelatively processing data
+    on Collections. Massively SQL-like data query and manipulation.
+
+
+    JAVA CARD Provides a secure environment for applications that run on smart cards
+    and other limited-memory devices.
+
+
+    JAVA REQUEST SERVICE (JSR) Writing specifications proposing and final specifications
+    for features of the java platform.
+
+
+    TECHNOLOGY COMPUTATION KIT (TCK) A set of suites that are built and submitted
+    in order to certify a JSR for compliance.
+
+
+    JAVA COMMUNITY PROCESS (JCP) A process by which java community members propose,
+    discuss, and finalize features to improve and expand the java platform.
+
+
+    JAVA STANDARD EDITION (SE) The most common platform used for development and deployment
+    of java environments for desktop and server.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '![](img/c97b6bcb34115f65b8d120b6c31e94a7_36_0.png)
+
+
+    # # Continuous DeliverynPPowered by Jenkins
+
+
+    Your DevOps Foundation
+
+
+    +   - Build
+
+    - Test
+
+    - Stage
+
+    - Deploy
+
+
+    The Enterprise Jenkins Company
+
+
+    ![](img/c97b6bcb34115f65b8d120b6c31e94a7_36_1.png)
+
+
+    Learn more: https://www.cloudbees.com/jenkins-workflow'
+  merge: -1
+  pgno: 36
