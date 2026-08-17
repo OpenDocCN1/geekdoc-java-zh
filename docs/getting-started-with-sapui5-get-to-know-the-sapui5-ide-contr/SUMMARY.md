@@ -1,0 +1,2 @@
++   [SAPUI5 入门指南：[熟悉 SAPUI5 IDE、控件库、模型类型等；学习如何设计和扩展现代用户界面；将编程模型、控件和 UI 元素应用于现实场景]](README.md)
++   [SAPUI5 入门指南：[熟悉 SAPUI5 IDE、控件库、模型类型等；学习如何设计和扩展现代用户界面；将编程模型、控件和 UI 元素应用于现实场景]](getting-started-with-sapui5-get-to-know-the-sapui5-ide-contr.md)
