@@ -1,0 +1,7113 @@
+- img_proc: true
+  md: '# # Hands-on MuleSoft Anypoint Platform
+
+
+    Implement various connectors including Database, File, SOAP, Email, VM, JMS, AMQP,
+    Scripting, SFTP, LDAP, Java and ObjectStore
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_0_0.png)
+
+
+    NANDA NACHIMUTHU'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Hands-on
+
+    MuleSoft
+
+    Anypoint Platform
+
+    Volume 3",
+
+
+    Implement various Connectors including
+
+    Database, File, SOAP, Email, VM,
+
+    JMS, AMQP, Scripting, SFTP,
+
+    LDAP, Java and ObjectStore
+
+
+    Nanda Nachimuthu
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_1_0.png)
+
+
+    www.bpbonline.com'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'FIRST EDITION 2022
+
+
+    Copyright © BPB Publications, India
+
+
+    ISBN: 978-93-55510-006
+
+
+    All Rights Reserved. No part of this publication may be reproduced, distributed
+    or transmitted in any form or by any means or stored in a database or retrieval
+    system, without the prior written permission of the publisher with the exception
+    to the program listings which may be entered, stored and executed in a computer
+    system, but they can not be reproduced by the means of publication, photocopy,
+    recording, or by any electronic and mechanical means.
+
+
+    # LIMITS OF LIABILITY AND DISCLAIMER OF WARRANTY
+
+
+    The information contained in this book is true to correct and the best of author''s
+    and publisher''s knowledge. The author has made every effort to ensure the accuracy
+    of these publications, but publisher cannot be held responsible for any loss or
+    damage arising from any information in this book.
+
+
+    All trademarks referred to in the book are acknowledged as properties of their
+    respective owners but BPB Publications cannot guarantee the accuracy of this information.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_3_0.png)
+
+
+    www.bpbonline.com'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Dedicated to
+
+
+    Rathi Shravanti Shashank'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# About the Author
+
+
+    Nanda Nachimuthu is an Engineering graduate from Tamil Nadu Agricultural University,
+    Coimbatore, Tamil Nadu, and has done Advanced Diploma from the Indian Institute
+    of Technology, Kharagpur in the field of Java and Internet Computing. He has also
+    completed an Advanced Diploma from the Indian Institute of International Trading,
+    Delhi which specializes in Strategies for International Business. Also, he is
+    a WHRPC honorary Doctorate awardee in the Computer Science field.
+
+
+    He 25 years of experience comes from various domains like Banking, Healthcare,
+    Government, and Airlines. He is, into the technologies like Java, Big Data, Cloud,
+    ESB, Security, and IoT. He played various roles like Technical Architect, Solutions
+    Architect, Cloud Architect, and Enterprise Integration Architect and wanted to
+    be in an Individual Contributor role always with hands-on coding experience.
+
+
+    He is passionate about Social Entrepreneurship and Pro Bono consultations in multiple
+    fields like Information Technology, Manufacturing, Trading, Agriculture, and the
+    Internet of Things.
+
+
+    He is the founder of some social platforms and he owns a few trademarks under
+    his kitty.
+
+
+    Presently, he is focusing on Integration Technology Platforms like MuleSoft where
+    he finds lots of scope in the future for Digital'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: Marketing and Machine to Machine Communications.
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# About the Reviewers
+
+
+    With over 24 years of experience in the IT industry, Vinoth Kumar is an Enterprise
+    Architect specializing in Cloud, AI/ML, Robotics, Blockchain, SOA, and Web technologies.
+    He is an IBM-certified Websphere integration developer and provides solutions
+    for IBM, Oracle, and Mule SOA platform products. Vinoth Kumar has experience in
+    Cloud migrations, Enterprise application integration, Data analytics using Artificial
+    Intelligence/Machine Learning, and Blockchain solutions using Web3, Ethereum,
+    and Hyperledger. With his rich experience in Cloud, IoT, Artificial Intelligence,
+    and Robotics, he is focusing on Industry 4.0 framework to build smart factories.
+
+
+    Arul ChristhruRaj Alphonse is an Integration Architect, Consultant, and Integration
+    Developer, who has particular interest in all topics related to Integration, Cloud
+    & API. He has also been the best seller instructor on Udemy for his courses on
+    MuleSoft and SoftwareAG webMethods many times.
+
+
+    He is recognized as a MuleSoft Mentor and is a MuleSoft Certified Developer -
+    Level1, MuleSoft Certified Integration Architect & MuleSoft Certified Platform
+    Architect. He loves teaching MuleSoft, to get learners ready for their MuleSoft
+    certifications and most importantly for solving real-time problems. He is recognized
+    recognized as a top Mule community contributor more than five times in a row.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'He also has a passion for SoftwareAG webMethods. He has been working on webMethods
+    since 2006. He is also an active member of the webMethods tech community, sharing
+    technical videos on YouTube in his Techlightning channel.
+
+
+    During his spare time, he enjoys cooking, watching TV shows, and traveling to
+    awesome destinations!'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Acknowledgement
+
+
+    Even though I too came from a rich technical background and am with MuleSoft since
+    its inception, when the API Led Connectivity paradigm shift started it was difficult
+    for me to cope up with the mission and vision of the entire Platform Architecture.
+    I too have struggled to understand the futuristic implementation approaches of
+    the MuleSoft team.
+
+
+    Then I started taking a deep dive into the entire MuleSoft ecosystem to find out
+    some of the key technical aspects of MuleSoft. I understood after 2-3 years how
+    the MuleSoft Integration Platform will become the most sought after Integration
+    approach after thoroughly studying the Centre for Enablement, Machine to Machine
+    communications, IoT implementations and even more.
+
+
+    When I started following the MuleSoft updates provided in the form of Meetups
+    or LinkedIn tutorials, I felt that there must be a book available for the audience
+    who are not much aware of the Enterprise Integration Practices but they can become
+    an API designer or Business Analyst, given a chance, provided if they have some
+    initial rudimentary knowledge, and this book.
+
+
+    So at this point in time, when beginning the Mastering MuleSoft Series, I would
+    like to thank the active MuleSoft community, be it the meet-ups, blogs, LinkedIn
+    materials, independent tutorial providers, and many other MuleSoft activists.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'Without their contributions and web presence, it would have been practically
+    difficult for me to design and write this Mastering MuleSoft series.
+
+
+    Thanks again Muleys!'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Preface
+
+
+    According to my opinion, it is not so easy for an upcoming technical or business
+    candidate to get a chance to work with advanced system integration scenarios.
+    Imagine a financial integration scenario where information like sales invoices
+    is flowing across the SaaS systems like SAP and Financial Force. It is difficult
+    or practically not possible for many of the freshers to get a chance to work on
+    these applications set up. Especially when most of the cloud-based SaaS applications
+    are securely deployed, licensed and community-based.
+
+
+    So, system integration and enterprise architecture are still new to many of the
+    fresh and averagely experienced candidates. The exposure to many of these SaaS
+    applications and understanding of their API models will be playing an important
+    role in the future if you want to get into the roles like API Designer and API
+    Developers.
+
+
+    It is important to get to know the concepts like web services before trying to
+    read about the APIs exposed by SaaS systems. We need to have a strong understanding
+    of web services like REST and SOAP because we will be defining the specifications
+    for web services in the future as API designers. Moreover, the API specifications
+    developed by our team will be for handshaking SaaS applications, Legacy applications,
+    Mobile devices, machine-to-machine communications, etc.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'So it is important for the audience of this book to understand that they will
+    become an integral part of a larger enterprise architecture rather than working
+    on a particular project, product, or service layer.
+
+
+    Over the 10 chapters in this book, you will learn the following:",
+
+
+    +   - Chapter 1 application API details, MuleSoft Connectors, Connectors provided
+    by MuleSoft through Anypoint platform, Adding Connectors to Project.
+
+
+    +   - Chapter 2 Apache Netbeans, Derby, DB connector, DB operations, DDL, Cache,
+    On Table Row
+
+
+    +   - Chapter 3 File Connector Module, File Connector Configuration, File Read
+    Component, File Write Component, File List Component, File Attributes, Delete
+    Component, Move Component, Copy Component, Create Directory Component, Rename
+    Component, New or Updated File
+
+
+    +   - Chapter 4 Basic Web Application Project, Server Settings, Getting the Netbeans
+    Response From Anypoint Studio, HTML5 application, Web Services from Netbeans,
+    Web services project, WSDL, Webservice Consumer component, Invoking WSDL, input
+    parameters, Invoking web services, multiple web service operations.
+
+
+    +   - Chapter 5 EMail SMTP, EMail SMTP starttls enabling, Less security option
+    in Gmail settings, File Attachment, Enabling IMAP and POP3 access, SMTP IMAP and
+    POP3 Configurations, Mozilla'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'ThunderBird Configuration, SSL IMAP and POP3 settings, NON SSL IMAP and POP3
+    settings, IMAP in action.
+
+
+    Chapter 6 VM Queue, publish and consume component, Listener, and Consuming and
+    listening.
+
+
+    Chapter 7 ApacheMQ, ActiveMQ Web Interface, Queue Creation, ApacheMQ connector,
+    Publish and Consume components, and Listener Component.
+
+
+    Chapter 8 Scripting Engine and Groovy
+
+
+    Chapter 9 RabbitMQ Installation, Enabling management plugins, RabbitMQ web management
+    interface, AMQP connector, and Publish and Listener components.
+
+
+    Chapter 10 SFTP Connector
+
+
+    Chapter 11 LDAP connector, LDAP operations, ApacheDS, new LDAP connection through
+    LDAP Studio, authentication details, Anypoint Studio LDAP connector, object details
+    of LDAP directory, LDAP lookup component, Apache DS LDAP directory details
+
+
+    Chapter 12 Static methods of Java program, public methods of Java program and
+    new and invoke components.
+
+
+    Chapter 13 ObjectStore Connector, basics and DB Cache scenario'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Code Bundle and Coloured Images
+
+
+    Please follow the link to download the
+
+    **Code Bundle** and the **Coloured Images** of the book:
+
+
+    https://rebrand.ly/6ca4e1
+
+
+    The code bundle for the book is also hosted on GitHub In
+
+    case there''s an update to the code, it will be updated on the
+
+    existing GitHub repository.
+
+
+    We have code bundles from our rich catalogue of books and
+
+    videos available at Check them out!
+
+
+    # Errata
+
+
+    We take immense pride in our work at BPB Publications and
+
+    follow best practices to ensure the accuracy of our content to
+
+    provide with an indulgent reading experience to our subscribers.
+
+    Our readers are our mirrors, and we use their inputs to reflect
+
+    and improve upon human errors, if any, that may have occurred
+
+    during the publishing processes involved. To let us maintain the
+
+    quality and help us reach out to any readers who might be
+
+    having difficulties due to any unforeseen errors, please write to us
+
+    at :
+
+
+    errata@bpbononline.com'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'Your support, suggestions and feedbacks are highly appreciated by the BPB Publications’
+    Family.
+
+
+    Did you know that BPB offers eBook versions of every book published, with PDF
+    and ePub files available? You can upgrade to the eBook version at www.bpbonline.com
+    and as a print book customer, you are entitled to a discount on the eBook copy.
+    Get in touch with us at: business@bpbonline.com for more details.
+
+
+    At you can also read a collection of free technical articles, sign up for a range
+    of free newsletters, and receive exclusive discounts and offers on BPB books and
+    eBooks.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# PIRACY
+
+
+    If you come across any illegal copies of our works in any form on the internet,
+    we would be grateful if you would provide us with the location address or website
+    name. Please contact us at business@bpbononline.com with a link to the material.
+
+
+    # IF YOU ARE INTERESTED IN BECOMING AN AUTHOR
+
+
+    If there is a topic that you have expertise in, and you are interested in either
+    writing or contributing to a book, please visit We have worked with thousands
+    of developers and tech professionals, just like you, to help them share their
+    insights with the global tech community. You can make a general application, apply
+    for a specific hot topic that we are recruiting an author for, or submit your
+    own idea.
+
+
+    # REVIEWS
+
+
+    Please leave a review. Once you have read and used this book, why not leave a
+    review on the site that you purchased it? Potential readers can see and use your
+    unbiased opinion to make purchase decisions. We at BPB can understand what you
+    think about our products, and our authors can see your feedback on their book.
+    Thank you!
+
+
+    For more information about BPB, please visit'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   1. MuleSoft Connectors Introduction
+
+    Structure
+
+    Objectives
+
+    Introduction
+
+    RAML and Anypoint Studio concepts
+
+    Business domains and applications
+
+    APIs exposed by SaaS applications on cloud
+
+    Mock_project wireframe and endpoints design
+
+    DIY
+
+    Conclusion
+
+    Point to remember
+
+    Key terms to explore
+
+
+    +   2. Database Connector
+
+    Structure
+
+    Objectives
+
+    Introduction
+
+    Database set up and DB connection properties
+
+    Understanding Derby database
+
+    Understanding_MuleSoft connector configuration and basic DB operation
+
+    Modules and connectors revisit
+
+    Passing_dynamic_parameters to SQL query and iterating_results
+
+    Understanding_cache scope implementation
+
+    Database operations such as insert, update, DDL, script, and stored procedure
+
+    Conclusion'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Points to remember
+
+
+    # Key terms to explore
+
+
+    # 3. File Connector
+
+    Structure
+
+    Objectives
+
+    Introduction
+
+    Conclusion
+
+    Points to remember
+
+    Key terms to explore
+
+
+    # 4. SOAP WebService Connector
+
+    Structure
+
+    Objectives
+
+    Introduction
+
+    Basics of SOAP Web services
+
+    Conclusion
+
+    Points to remember
+
+    Key terms to explore
+
+
+    # 5. E-mail Connector
+
+    Structure
+
+    Objectives
+
+    Introduction
+
+    E-mail_connector_practical usage
+
+    Conclusion
+
+    Point to remember
+
+    Key terms to explore
+
+
+    # 6. VM Connector'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Structure
+
+
+    # Objective
+
+
+    Introduction
+
+
+    Starting the VM queue implementation
+
+
+    Conclusion
+
+
+    Point to remember
+
+
+    Key terms to explore
+
+
+    # 7. JMS Connector
+
+
+    Structure
+
+
+    Objectives
+
+
+    Introduction
+
+
+    Getting started with ApacheMQ
+
+
+    Conclusion
+
+
+    Point to remember
+
+
+    Key terms to explore
+
+
+    # 8. AMQP Connector
+
+
+    Structure
+
+
+    Objectives
+
+
+    Introduction
+
+
+    Install and run RabbitMQ
+
+
+    Access RabbitMQ_Web management interface
+
+
+    Connect AMQP with MuleSoft
+
+
+    Publish and consume messages
+
+
+    Conclusion
+
+
+    Points to remember
+
+
+    Key terms to explore
+
+
+    # 9. Script Engine Connector'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Structure
+
+
+    Objectives
+
+
+    Introduction
+
+
+    # Scripting_engine
+
+
+    Execute ECMA scripts
+
+
+    Execute Groovy, Python, and Ruby scripts
+
+
+    Conclusion
+
+
+    Points to remember
+
+
+    Key terms to explore
+
+
+    # 10. SFTP Connector
+
+
+    Structure
+
+
+    Introduction
+
+
+    SFTP connector
+
+
+    Conclusion
+
+
+    Points to remember
+
+
+    Key terms to explore
+
+
+    # 11. LDAP Connector
+
+
+    Structure
+
+
+    Objective
+
+
+    Introduction
+
+
+    LDAP connector from Anypoint exchange
+
+
+    Conclusion
+
+
+    Points to remember
+
+
+    Key terms to explore
+
+
+    # 12. Java Connector
+
+
+    Structure
+
+
+    Objective'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'Introduction
+
+
+    Invoking static methods of Java_program
+
+
+    Conclusion
+
+
+    Points to remember
+
+
+    Key terms to explore
+
+
+    # 13. Object Store
+
+
+    Structure
+
+
+    Objective
+
+
+    Configuring object store
+
+
+    Object store testing
+
+
+    Conclusion
+
+
+    Points to remember
+
+
+    Key terms to explore
+
+
+    Index'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# MuleSoft Connectors Introduction'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will cover the following topics:
+
+
+    RAML and Anypoint Studio concepts
+
+
+    Understanding business domains and applications
+
+
+    APIs exposed by SaaS applications on cloud
+
+
+    Developing mock project wireframe and endpoints design'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Objectives
+
+
+    After studying this unit, you will able to understand:
+
+
+    Mock project requirement capturing
+
+
+    Endpoint''s design
+
+
+    SaaS application APIs
+
+
+    Basic connector concepts'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Introduction
+
+
+    After studying Volumes 1 and 2, we have now reached Volume 3. The following pages
+    will talk about what we have covered in Volumes 1 and 2 and what is the intention
+    of Volume 3. Volume 3 will deal mainly with application connectors such as database,
+    file, e-mail, and so on. Using which the developers can access the corporate systems
+    and handle the secured data. Let us see these concepts now.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# RAML and Anypoint Studio concepts
+
+
+    You are already aware of the RAML concepts such as resources, query parameters,
+    HTTP request, HTTP response, example outputs, mocking REST APIs before implementation,
+    and so on. These concepts will give you a fair idea of what is an API, the basic
+    structure of the API, and how to define an API specification RAML standards.
+
+
+    Also, by this time, you will have a clear understanding of Anypoint Studio components,
+    exception handling, MUnit, message structure, and payload component. We also did
+    a mini project in which we have created API specifications, and we have implemented
+    the specifications by integrating them into Anypoint Studio. We have also understood
+    the concepts like modularization, using which we have introduced multiple XML
+    config files into a single project, and we have created various sub-flows and
+    merged everything into the main config file.
+
+
+    But now we have come to a stage where we will start using MuleSoft connectors
+    for connecting various core applications and SaaS applications as database, file,
+    JMS, e-mail, box, slack, stripe, Workday, salesforce, SAP, and so on.
+
+
+    So, it is important for us to understand some more important aspects of an integration
+    project, and we need to create a mock'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: business environment to understand the complete business ecosystem.
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Business domains and applications
+
+
+    So far, we have covered the concepts like RAML API design, Anypoint Studio components.
+    By this time, you will be familiar with the ecosystem of MuleSoft. The next important
+    area to be explored is The API-led connectivity architecture is possible only
+    if we have connectors for various applications such as database JMS, file, and
+    so on. The complete available connectors list can be seen in this link.
+
+
+    In this link, you can see readily available certified connectors for industry''
+    popular applications. When the applications expose data through APIs, native libraries,
+    JARs, then an integration platform like MuleSoft can access the data through connectors.
+
+
+    We have to understand the type of applications available for various domains;
+    say, Workday is a popular human capital management application hosted on the cloud.
+
+
+    Apart from this, you should know how these applications are developed, using what
+    technology and how they have been deployed, their license models, and so on. It
+    is not practically for a fresher or non-technical team member to understand all
+    the internals of all applications. But doing a small search on the internet about
+    the application development, company, licensing model, technology involved, most
+    importantly'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'you should know about the application domain and business requirements.
+
+
+    Let us do small research over the internet, say we would like to know about a
+    spend analysis software. So please try to search over the internet using the keywords
+    Similarly, try to search using keywords Capital Then you may be finding a popular
+    HCM application called Workday. Refer to figure
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_30_0.png)
+
+
+    Figure 1.1: Popular HCM application Workday'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# APIs exposed by SaaS applications on cloud
+
+
+    You have to understand now there are so many applications developed to address
+    various business requirements. So, it is important to understand industry business
+    domains areas, which means business domains that are important to manage the business
+    process. A list of business domains is given below; try to search as much as possible
+    to understand the existing applications. You can search 5 domains for business
+    find the various domains available, and top 5 or 10 applications used in those
+    domains.
+
+
+    Now, we have understood there is an HCM application used by the HR department
+    called Workday, and we found a connector (refer to figure also available for MuleSoft
+    integrations. If any application wants to share their information in a secured
+    way through APIs for the rest of the world, then they have to implement Web services
+    like REST or SOAP for all the operations. So, the next question is how we can
+    explore the APIs provided by an application like Workday. The answer is simple,
+    again search using the keywords API you can reach the page where Workday provides
+    all API information.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Workday Web Services (WWS) Directory (v34.2 / 2020R1)
+
+
+    The following directory provides (v34.2) WWS API Documentation for our SOAP-based
+    web services with corresponding WSDL and XML
+
+    Click Version Directory to access other versions.
+
+
+    +   - Click on this icon to display the Web Service Description Language (WSDL)
+    for a service.
+
+    - Click on this icon to display the XML Schema (XSD) for a service.
+
+
+    Click a web service for a directory of operations in that service.
+
+
+    | Service | Description |
+
+    |---|---|
+
+    | Absence_Management | The Absence Management Web Service contains operations
+    that expose absence-related data, inclu and overrides, and Leave Requests, in
+    Workday Human Capital Management Business Services. |
+
+    | Academic_Advising | Web Service for retrieving objects related to Academic Advising,
+    such as Student Academic Require |
+
+    | Academic_Foundation | Public Web Service for creating, editing and retrieving
+    the foundational objects for the Student Syster cross-module uses. |
+
+    | Admissions | Web Service for creating, editing and retrieving objects related
+    to Admissions, such as Applicants. |
+
+    | Adoption | Adoption Web Service Operations. |
+
+    | Benefits_Administration | The Benefits Administration Web Service contains operations
+    that expose Workday Human Capital M |
+
+
+    Figure 1.2: HCM application Workday API details
+
+
+    Try to search other API documentation by using the application names; for example,
+    search for API'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# API Documentation - SAP Help\n\n# Table of Contents\n\n+   - What Is SAP\
+    \ Cloud Platform, Neo Environment\n- Get an Enterprise Account\n- Get a Trial\
+    \ Account\n- Getting Started, Neo Environment\n- Development. Neo Environment\n\
+    \  - Deploy Business Applications in the Neo Environment\n  - Developing Java\
+    \ in the Neo Environment\n  - Developing SAP HANA in the Neo\n\n# SAP Cloud Platform\
+    \ SDK for iOS\n\n# REST APIs\n\n+   - Lifecycle Management API\n- Alerting Channels\
+    \ API\n- Monitoring API v2\n- Audit Log Retrieval API for the Neo Environment\n\
+    - Audit Log Retention API for the Neo Environment\n- Audit Log Retrieval API for\
+    \ the Cloud Foundry Environment\n- Authorization Management API\n\nFigure 1.3:\
+    \ ERP application SAP API details"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Mock project wireframe and endpoints design
+
+
+    Before drilling down into connectors in detail, let us try to mock an imaginary
+    banking application. Let us assume we have a virtual bank as our client; the bank
+    provides loans for its customers based on their credit score. The wireframe of
+    the project will normally show the process involved in disbursing the loan.
+
+
+    Let us list the process flow involved in the banking loan application as follows:
+
+
+    Customer applies for a loan by providing his personal/ finance kind of details.
+
+
+    Bank should verify his personal details and finances details, and the bank should
+    calculate his credit score based on the details verified.
+
+
+    If verification is successful, the loan approver can finalize the approval limit
+    of the loan.
+
+
+    Next will be the dispersal process if the customer agrees to the bank’s conditions.
+
+
+    Once the amount is disbursed, the repayment schedule will start on that loan.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: 'If repayment is not happening as per banks’ norms, a collection process will
+    be initiated.
+
+
+    If the collection process also fails, then a legal process will be initiated.
+
+
+    By initiating a legal process, some financial settlements may happen. This settlement
+    results in the closure of the entire loan process.
+
+
+    The following block diagram shows the overall view of the processes involved.
+    The next step will be designing the endpoints for this loan'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_36_0.png)
+
+
+    Figure 1.4: Bank loan application process
+
+
+    Here are some of the endpoints designed to cater to the banking process. The RAML
+    team will be responsible for designing the RAML specifications for these endpoints.
+
+
+    Customers will use this endpoint for entering their personal information
+
+
+    Financial details—enter data—so it is post method
+
+
+    https://mybank.com/homeloan/approve/verify
+
+
+    https://mybank.com/homeloan/approve/creditscore'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'https://mybank.com/homeloan/coreapis/creditscorelogicAPI
+
+
+    https://mybank.com/homeloan/approve/loanlimit
+
+
+    https://mybank.com/homeloan/coreapis/loanlimitAPI
+
+
+    https://mybank.com/homeloan/disbursal/bankbarns
+
+
+    https://mybank.com/homeloan/disbursal/release
+
+
+    https://mybank.com/homeloan/repayment/checkhistory
+
+
+    https://mybank.com/homeloan/collection/bucket
+
+
+    https://mybank.com/homeloan/legal/action
+
+
+    https://mybank.com/homeloan/settlement/agreement
+
+
+    https://mybank.com/homeloan/closure/closed
+
+
+    https://mybank.com/customer/financial
+
+
+    But our aim is not to get into designing part of the RAML specification, but we
+    would like to concentrate more on the connector configurations.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'For example, personal details may be stored and retrieved from a CRM system,
+    and financial information will be stored in the Fintech system, and so on. We
+    may have to invoke various APIs for credit score calculation and Loan Limit as
+    well. With this understanding, let us move on to explore the real-time connectors
+    provided by MuleSoft.
+
+
+    Visit https://docs.mulesoft.com/connectors/_ page to explore multiple connectors
+    available off the shelf from MuleSoft.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_38_0.png)
+
+
+    # Figure 1.5: MuleSoft connectors
+
+
+    Open Anypoint Studio, create a sample project, and in the Mule Palette, you can
+    see the default modules added and additional modules available for your projects.
+    You can drag and drop the required modules from the featured modules list to your
+    project.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_39_0.png)
+
+
+    The following screenshot shows that we have added connectors such as and so on.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_39_1.png)'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Figure 1.7: Adding connectors to project
+
+
+    The following screenshot shows the added connectors in the available package explorer.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_40_0.png)
+
+
+    # Figure 1.8: Checking added connectors
+
+
+    Apart from the featured modules, you can include many modules and connectors from
+    Anypoint Exchange. To do so, click the Search in Exchange option and provide your
+    Anypoint Exchange credentials.
+
+
+    After logging in, you can type your required connector keywords such as LDAP,
+    SharePoint, SalesForce, Box, and so on, so that the available connectors will
+    be listed and you can include them in your project.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_41_0.png)
+
+
+    # Figure 1.9: Adding connectors from Anypoint Exchange
+
+
+    Login to your Anypoint Platform, and you can find the Assets provided by MuleSoft
+    option as shown in the following figure, click it, and you can browse all assets
+    provided by MuleSoft; you can filter the assets by selecting Connectors as an
+    option.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_42_0.png)
+
+
+    # Figure 1.10: Checking Connectors provided by MuleSoft through Anypoint Platform
+
+
+    Visit https://docs.mulesoft.com/anypoint-devkit/3.9/anypoint-connector-development
+    to understand more about custom connector development; this is not mandatory at
+    this juncture, though.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# # Anypoint Connector Development
+
+
+    This document quickly walks you through the decisions to make and the steps to
+    get an Anypoint Connector development project started, get the connector working,
+    and enhance it with the functionality you need. You can use this as a roadmap
+    for your connector development effort.
+
+
+    # ## Prerequisites
+
+
+    This document assumes you are familiar with the Anypoint Connector Development
+    and have installed the appropriate versions of DevKit, the Anypoint Connector
+    Plugin and Maven as specified in Setting Up Your Environment.
+
+
+    # ## Outline of the Connector Development Process
+
+
+    When you develop a connector using DevKit, your use cases drive a series of decisions
+    about what the connector will do, how it will receive and send data to the external
+    application or other resource. These choices, in turns, drive what you develop.
+    Where a choice exists, this document provides information to help you make a decision
+    and provides links to the process details.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_43_0.png)'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# DIY
+
+
+    Develop business process flows, process diagrams, and endpoint design for different
+    domains, say logistics, health care, and so on.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Conclusion
+
+
+    In this chapter, we have gone through the connector and business process basics.
+    The industry standard SaaS applications like Workday and SAP APIs have been explored
+    for a better understanding. We also tried to define the business process of a
+    bank loan application, and we have done with the process flow diagram and designed
+    the corresponding endpoints for each process. In our upcoming chapters, we will
+    be implementing core applications such as database, JMS, and so on and will see
+    how to connect with them through MuleSoft connectors. In our upcoming chapter,
+    we are going to start exploring available system connectors for MuleSoft. Our
+    first connector will be a database connector using which we can perform database
+    operations from MuleSoft applications.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Point to remember
+
+
+    Connectors may come from the MuleSoft, SaaS application company itself, or by
+    a third-party connector development company or from the developer community. There
+    may be scenarios like no connectors available for an application also.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    MuleSoft connectors
+
+
+    SaaS
+
+
+    Custom connectors
+
+
+    Business process definition
+
+
+    Business process diagram
+
+
+    Endpoint design'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will cover the following topics:
+
+
+    Database (DB) set up and DB connection properties
+
+
+    Downloading Apache NetBeans
+
+
+    Understanding Derby database
+
+
+    Adding database module to project
+
+
+    Adding Select component
+
+
+    Configuring Derby database properties
+
+
+    Checking Derby DB installation in local system
+
+
+    Installing external Derby client jar
+
+
+    Checking Derby tables through NetBeans
+
+
+    Testing Derby connectivity from Anypoint Studio'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: 'Understanding MuleSoft connector configuration and basic DB operation
+
+
+    Inspecting Config XML entries
+
+
+    Including transformer component
+
+
+    Running the project and checking DB table values in console
+
+
+    Modules and connectors revisit
+
+
+    Understanding other modules and connectors
+
+
+    Fetching non listed modules from exchange
+
+
+    Choosing and downloading required modules
+
+
+    Checking the added modules in the project structure
+
+
+    Checking the added modules in the Pallet
+
+
+    Checking the DropBox configuration details
+
+
+    Final Config XML contents
+
+
+    Passing dynamic parameters to SQL query and iterating results
+
+
+    Config XML file for HTTP listener'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: 'Fetching records through HTTP listener through PostMan
+
+
+    Posting dynamic parameters to SQL script
+
+
+    PostMan call by posting dynamic value
+
+
+    Config XML after setting the dynamic value
+
+
+    Iterating the specific values using transformer
+
+
+    Config file for iterating records using for each component
+
+
+    Understanding cache scope implementation
+
+
+    Creating caching strategy
+
+
+    Completed flow after referring to the caching strategy
+
+
+    Checking cache scope results in console output
+
+
+    Invalidating caching strategy
+
+
+    Checking the invalidate caching results
+
+
+    DB operations such as insert, update, DDL, script, and stored procedure'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'Adding a row through NetBeans IDE
+
+
+    Fetching the insert script from NetBeans IDE
+
+
+    Executing insert script through MuleFlow and checking the result
+
+
+    Checking the inserted value in table
+
+
+    Executing update statement in NetBeans IDE
+
+
+    Updating records through MuleFlow
+
+
+    DDL data definition language execution in NetBeans IDE
+
+
+    Executing DDL through MuleFlow
+
+
+    Execute script example
+
+
+    Sample script file
+
+
+    Checking the bulk rows inserted through MuleFlow in NetBeans IDE
+
+
+    Creating dummy stored procedure in Derby DB
+
+
+    Invoking the dummy stored procedure from MuleFlow'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'Creating sample table using NetBeans IDE
+
+
+    Inserting bulk data from MuleFlow
+
+
+    Updating bulk data from MuleFlow
+
+
+    Deleting bulk records from MuleFlow
+
+
+    Logger result of bulk insertion and OnTableRow listener
+
+
+    OnTableRow final look'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Objectives
+
+
+    After studying this unit, you will be able to:
+
+
+    Perform DB connectivity and invoke DB operation
+
+
+    Implement cache scope for repeated or duplicate DB calls
+
+
+    Invoke on table listener'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Introduction
+
+
+    In this chapter, we can see the step-by-step procedures to set up a database in
+    your local machine, creating tables in that DB, connecting DB through the MuleSoft
+    database connector, and performing a basic select operation.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Database set up and DB connection_properties
+
+
+    Search for NetBeans download and download the NetBeans suite and install with
+    all basic setup values. We prefer to use NetBeans IDE because it comes with a
+    default Derby database builtin.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_56_0.png)
+
+
+    # Downloading Apache NetBeans 12.0
+
+
+    +   * Apache NetBeans 12.0 was released on June 4, 2020. See Apache NetBeans 12.0
+    Features for a full list of features.
+
+    * Apache NetBeans 12.0 is available for download from your closest Apache mirror.
+
+    * Binaries: netbeans-12.0-bin.zip (SHA-512, PGP ASC)
+
+    * Source: netbeans-12.0-source.zip (SHA-512, PGP ASC)
+
+    * Installers:
+
+    * ApacheNetBeans-12.0-bin-windows-x64.exe (SHA-512, PGP ASC)
+
+    * ApacheNetBeans-12.0-bin-linux-x64.sh (SHA-512, PGP ASC)
+
+    * ApacheNetBeans-12.0-macos.dmg (SHA-512, PGP ASC)
+
+    * Javadoc for this release is available at https://bits.netbeans.org/12.0/javadoc
+
+
+    > Officially, it is important that you verify the integrity of the downloaded
+    files using the PGP signatures (.asc file files). The PGP signatures should be
+    matched against the KEYS file which contains the PGP keys used to sign them Apache
+    NetBeans can also be installed as a self-contained snap package on Linux.
+
+
+    Figure 2.1: Downloading Apache NetBeans
+
+
+    Please follow these steps to check your NetBeans installation.
+
+
+    If you are already familiar with Oracle or MySQL and you have installed in your
+    machine you can continue or try with that also. The following parameters must
+    be seen in your about NetBeans dialogue:'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'Product NetBeans IDE 8.2 (Build 201610071157)
+
+
+    NetBeans IDE is updated to version NetBeans 8.2 Patch 2
+
+
+    1.8.0_181; Java HotSpot(TM) 64-Bit Server VM 25.181-b13
+
+
+    Java (TM) SE Runtime Environment 1.8.0_181-b13
+
+
+    Windows 10 version 10.0 running on amd64; Cp1252; en_IN (nb)
+
+
+    User C:\Users\Admin\AppData\Roaming\NetBeans\8.2
+
+
+    Cache C:\Users\Admin\AppData\Local\NetBeans\Cache\8.2'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# # Understanding Derby_database
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_58_0.png)
+
+
+    Figure 2.2: Understanding Derby database
+
+
+    Now go to the Services tab, as shown in figure and check if you have any Derby
+    preinstalled along with your NetBeans installation.
+
+
+    If not, you can install separately and provide the installation path of Derby.
+
+
+    Once this is done, you can see the Derby DB running on localhost:1527 with a default
+    schema named sample with sample tables pre-built with sample data.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_59_0.png)
+
+
+    Create a new MuleSoft project and go to Palette to check the DB connector available.
+
+
+    Click Add modules button that is on top of the core and favorite buttons. You
+    can see all available favorite modules and database modules in that.
+
+
+    Drag and drop into your modules panel, and you can see a new module called database
+    added to your Pallet and project.
+
+
+    You can see all operations related to DB such as insert, select, update, and so
+    on.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_60_0.png)
+
+
+    Create a scheduler with basic parameters and drag a Select component next to that.
+
+
+    In the Select component properties, you can see a text area for entering the query
+    you want to execute; provide the same as follows:
+
+
+    ```
+
+    SELECT * FROM APP.CUSTOMER FETCH FIRST 1000 ROWS ONLY
+
+    ```'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_61_0.png)
+
+
+    # Figure 2.5: Configuring Derby database properties
+
+
+    Click the connection configuration add button to see the preceding database config
+    dialogue and provide the values as follows:
+
+
+    url="jdbc:derby://localhost:1527/sample" driverClassName="org.apache.derby.jdbc.ClientDriver"
+    user="app" password="app" /'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_62_0.png)
+
+
+    # ### Figure 2.6: Checking Derby DB installation in the local system
+
+
+    There is one more step left that is providing the required JDBC driver to your
+    project settings. Check your file system, as shown in figure to understand where
+    our Derby Client jar file is located.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_63_0.png)
+
+
+    Even if you are unable to find the derby client jar, you can search the internet
+    and download it in a local folder, and you can provide that.
+
+
+    In the Database Config dialogue, go to the general tab, select the required libraries,
+    configure and choose the local file option and provide this Derby client jar file.
+
+
+    Before clicking the test connection button to check the DB availability, we may
+    may have to verify if the DB is running or not.'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Figure 2.8: Checking Derby tables through NetBeans
+
+
+    Go to NetBeans, services, databases, jdbc_derby_localhost, then right-click to
+    choose to to connect option.
+
+
+    Once connected, you can see all sample tables available in that schema.
+
+
+    Right-click table customers and choose view you can see the table structure with
+    all available data in the right-side panel, now your DB is up and Window running.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_64_0.png)'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_65_0.png)
+
+
+    Come back to Anypoint Studio and click the Test Connection button, and you can
+    find the connection is established.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Understanding MuleSoft connector configuration and basic DB operation
+
+
+    Let us try to understand how the connectors are designed to get the connection
+    from the respective applications and will perform a rudimentary DB operation to
+    start with.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_66_0.png)
+
+
+    Figure 2.10: Inspecting Config XML entries
+
+
+    Inspect the config XML file, and you can see the preceding entries.
+
+
+    ```
+
+    name="dbSelectFlow" doc:id="c1560de2-3f36-422a-8aa3-4409fec31be`
+
+    doc:name="Scheduler" doc:id="1b146f79-443c-4e57-8f14-8b7a7f8baad >
+
+    ```'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '```
+
+    > frequency="10" timeUnit="SECONDS"/>
+
+    ```
+
+
+    ```
+
+    >* FROM APP.CUSTOMER FETCH FIRST 1000 ROWS ONLY]]
+
+    ```
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_67_0.png)
+
+
+    # Figure 2.11: Including transformer component
+
+
+    Introduce a transformation component to read the results in JSON format, as shown
+    in figure
+
+
+    doc:name="Transform Message" doc:id="1f286513-6beb-4f47-a585-82326e6e8a7a" >
+
+
+    ```
+
+    >2.0
+
+    output application/json
+
+    ```
+
+
+    ---'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'payload
+
+    ]]>
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_68_0.png)
+
+
+    # Figure 2.12: Running the project and checking DB table values in console
+
+
+    You are all set to run, make sure you have a scheduler, select component, transformer,
+    and a logger with payload as message, run the project and experience the result
+    as shown in the figure'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Modules and connectors revisit
+
+
+    Having understood a connector configuration design with a working example, let
+    us revisit the available connectors and modules and how to browse through the
+    various connectors now. We can also try to examine the module operations and connector
+    configurations pertaining to that.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_69_0.png)
+
+
+    **Figure 2.13: Understanding other modules and connectors**
+
+
+    Browse multiple modules, add to your project, drag and drop the operations into
+    your flows just to understand how they are designed.
+
+
+    Check your project structure and POM file for affected changes.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_70_0.png)
+
+
+    Click search in exchange to browse more modules that do not come by default.
+
+
+    You need to provide your Anypoint Exchange credentials.
+
+
+    We can search for a Box module to be added, and we found the same.
+
+
+    You can similarly search for SharePoint, Kafka, JIRA, and so on.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# Figure 2.15: Choosing and downloading required modules
+
+
+    You can see the downloading box connector status, as shown in figure'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: 'Figure 2.16: Checking the added modules in the project structure
+
+
+    Read a file of your choice.
+
+
+    You can see from the preceding screen that we have added SalesForce Netuite, Workday,
+    DropBox connectors for testing purposes, and we can inspect and find these dependencies
+    added to the project in the project explorer.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_72_0.png)
+
+
+    Figure 2.17: Checking the added modules in the Pallet
+
+
+    You can select the DropBox module to understand the operations you can perform.
+
+
+    Choose a sample operation called file copy and add it to canvas.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'You can examine the properties of that component.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_73_0.png)
+
+
+    # Figure 2.18: Checking the DropBox configuration details
+
+
+    Check the connection parameters required.
+
+
+    Access Token and App name must be provided to establish a connection with the
+    DropBox app.
+
+
+    These connection parameters will vary among the rest of the apps.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "```\n<scheduler doc:name=\"Scheduler\" doc:id=\"78be7e7-724c-4a9b-a119-1bd0a471964\"\
+    >\n  <db-strategy frequency=\"10\" timeUnit=\"SECONDS\"/>\n</db-strategy>\n</scheduler>\n\
+    <dbselect doc:name=\"Select\" doc:id=\"21189b0f-5c80-470f-ab90-2b6297e5e4c2\"\
+    \ config-ref=\"Database_Config\">\n  <dbsql><![CDATA[SELECT * FROM APP_CUSTOMER\
+    \ FETCH FIRST 100 ROWS ONLY]]></dbsql>\n</dbselect>\n<ee:transform doc:name=\"\
+    Transform Message\" doc:id=\"c323b4be-2880-4c93-ad83-f29fa08483ee4\">\n  <ee:message>\n\
+    \    <ee:set-payload><![CDATA[%dv 2.0\n  output application/json\n  payload]]></ee:set-payload>\n\
+    \  </ee:message>\n</ee:transform>\n<logger level=\"INFO\" doc:name=\"Logger\"\
+    \ doc:id=\"ad8c3e11-ccf0-4e47-9272-81f474b44d34\" message=\"#[payload]\"/>\n```\n\
+    \n# Figure 2.19: Final Config XML contents\n\nHave a look at your final config\
+    \ file. This selection is done using a dynamic scheduler."
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# Passing dynamic parameters to sql query and iterating results\n\nWe need\
+    \ to pass values to our flow using a query parameter or post method, so let us\
+    \ convert this flow as an HTTP listener flow.\n\n```\n<dbconfig name=\"Database_Config\"\
+    \ docname=\"Database_Config\" docid=\"d0938818-e513-4a76-9253-b8da064294d7\">\n\
+    \  <dbjdbcconnection url=\"jdbc:dbry://localhost:3306/client\" classname=\"org.apache.db.jdbc.ClientDriver\"\
+    \ user=\"app\" password=\"app\"/>\n  <config name=\"HTTP_listener_Config\" docname=\"\
+    HTTP_listener_Config\" docid=\"62f910d3-f9d3-48f5-b8f5-a4b5ed9b4a9\">\n    <listener\
+    \ connectionUrl=\"http://localhost:8085\"/>\n    <flow name=\"DBInload\" docid=\"\
+    52f7b0d0-a6e4-4256-b536-72f9732777\" config-ref=\"HTTP_listener_Config\" path=\"\
+    /db\">\n      <db:select name=\"Select_City\" docname=\"Select_City\" docid=\"\
+    c7a1a3b0-3075-4ef1-92d1-c635411b2c7\" config-ref=\"Database_Config\">\n      \
+    \  <query>SELECT CITY, EMAIL FROM APP_CUSTOMER FETCH 1000 ROWS ONLY</query>\n\
+    \      </db:select>\n    </flow>\n  </config>\n  <db:sets>\n    <messages>\n \
+    \     <transform name=\"JSON_Transform\" docid=\"d57a00b2-3675-4788-a821-e3d4f516394\"\
+    >\n        <payload>application/json</payload>\n        <output>application/json</output>\n\
+    \      </transform>\n      <set-payload>\n        <content><![CDATA[{\"payload\"\
+    :$message.payload[0]\"}]]></content>\n      </set-payload>\n    </messages>\n\
+    \    <logger>\n      <logger level=\"INFO\" name=\"Logger\" docid=\"d57a00b2-3675-4788-a821-e3d4f516394\"\
+    \ message=\"${payload}\"/>\n    </logger>\n  </db:sets>\n</dbconfig>\n```\n\n\
+    Figure 2.20: Config XML file for HTTP listener\n\nWe have introduced an HTTP listener\
+    \ with port number 8085, and the endpoint is DB.\n\nAlso, we are fetching only\
+    \ two values like city and e-mail.\n\nRun this project and call the endpoints\
+    \ from the postman."
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_76_0.png)
+
+
+    **Figure 2.21:** Fetching records through HTTP listener through PostMan
+
+
+    Here is the result of the select statement call through the PostMan.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_77_0.png)
+
+
+    # Figure 2.22: Posting dynamic parameters to SQL script
+
+
+    The next important requirement is passing a where condition value dynamically
+    from HTTP call to MuleSoft flow.
+
+
+    The preceding screen shows how to assign dynamic values to SQL queries.
+
+
+    In the input parameters we have to define the payload variable and query variable
+    assignment as follows:
+
+
+    > * FROM APP.CUSTOMER where customer_id=: payload_id]]'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# #[{{''payload_id'' : payload.id/db}]
+
+
+    | POST | http://localhost:8081/ | Pre-request Script | Tests | Settings |
+
+    |---|---|---|---|---||
+
+    | Params | Authorization | Headers (9) | Body . | | |
+
+    | none | form-data | x-www-form-urlencoded | raw | binary | GraphQL JSON |
+
+
+    ```
+
+    ```json
+
+    Body Cookies (3) Test Results
+
+    Pretty Raw Preview Visualize JSON
+
+    1 {
+
+    2   "firstName": [
+
+    3     "N"
+
+    4   ],
+
+    5   "lastName": [
+
+    6     "95117"
+
+    7   ],
+
+    8   "age": [
+
+    9     100000
+
+    10  ]
+
+    11 }
+
+    ```
+
+    ```
+
+
+    **Figure 2.23:** PostMan call by posting dynamic value
+
+
+    The result of passing dynamic value through HTTP call is shown in figure'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# Figure 2.24: Config XML file after setting the dynamic value
+
+
+    The complete config file for setting the dynamic value to SQL script is shown
+    in figure
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_79_0.png)
+
+
+    You can also introduce a "for-each-scope" for each of the payloads that you are
+    getting from a select query, and you can iterate each row as shown in figure'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\n<dbconfig name=\"Database_Config\" docname=\"DatabaseConfig\" id=\"cd91018-e13d-4a76-9fb3-0bd6d4d2e947\"\
+    >\n  <dbgeneric-listener name=\"HTTP_listener\" listenerconfig=\"Database_Config\"\
+    \ url=\"jdbc:postgresql://localhost:5432/sample\" driverClassName=\"postgresql.ClientDriver\"\
+    \ user=\"pass\">\n    <http:listener name=\"HTTP_listener\" listenerconfig=\"\
+    Database_Config\" driverClassName=\"org.apache.commons.dbcp4\" id=\"d1899-dc641-4040-89f5-a4b15b6394d\"\
+    >\n      <http:connection-pool name=\"HTTP_pool\" dbname=\"5d2f08b2-a06e-4a56-b2d9-e2109772727\"\
+    >\n        <listener:config name=\"listener\" docid=\"e3d60db5-f315-4a00-82ce-f93112b8\"\
+    \ config-ref=\"HTTP_config\" path=\"/db\">\n          <db:sql id=\"CODATA\">SELECT\
+    \ * FROM APP_CUSTOMER_FETCH FIRST 1000 ROWS ONLY</db:sql>\n        </listener:config>\n\
+    \        <ee:foreach name=\"For Each\" docid=\"c52e7780-b5f1-41d0-ae71-c75261526c3\"\
+    \ collection=\"#payload\">\n            <ee:process name=\"Transform Message\"\
+    \ docid=\"5d60a5b3-81e8-4097-ae81-c35b4892c2\">\n              <ee:message>\n\
+    \                <output application/json>\n                  <ee:set payload=\"\
+    {\n                    firstname: payload.DISCOUNT_CODE,\n                   \
+    \ lastname: payload.ZIP,\n                    age: payload.CRED_LIMIT\n      \
+    \            }\"/>\n                </output>\n              </ee:message>\n \
+    \           </ee:process>\n          </ee:foreach>\n        </ee:message>\n  \
+    \      <logger level=\"INFO\" docname=\"logger\" docid=\"057a00b2-5075-4a78-a01-e228bf6516394\"\
+    \ message=\"#payload\" />\n      </http:listener>\n```\n\nFigure 2.26: Config\
+    \ file for iterating records using for each\n\nThe complete config file for for-each\
+    \ component figure"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# Understanding cache scope implementation
+
+
+    In our previous volumes, we have not spoken about cache scope because the cache
+    scope can be understood using a single array list, or this can be better understood
+    using a proper DB call. Moreover, in practical scenarios, cache scope will be
+    tightly depend on the object store component. So, it is better to understand cache
+    behavior along with a real-time DB example.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_81_0.png)
+
+
+    Figure 2.27: Creating a caching strategy
+
+
+    Now, let us create a caching strategy by specifying the payload id as the key
+    expression to be cached.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: 'When given a key expression, the caching mechanism will not fetch the values
+    directly from DB for all queries having the same payload id.
+
+
+    Let us assign this caching strategy to our select values using dynamic flow.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_82_0.png)
+
+
+    Figure 2.28: Completed flow after referring to the caching strategy
+
+
+    Now, in the preceding canvas, you can see two logger components and one select
+    statement inside the cache scope.
+
+
+    This means you can pass a payload id the first time, then that will get processed
+    inside the cache scope, and no logger output can be seen in the console.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "Whereas if you call the select query one more time using the same payload id,\
+    \ then the query will not get executed by hitting the DB; instead, the values\
+    \ will be printed from the cache.\n\nYou can refer to the following screenshot\
+    \ to check the caching action:\n\n```\nINFO 2021-03-09 12:25:43,119 [[MuleRuntime].uber.01:cachingStrategy\
+    \ null #7693046c] [processor: dbcacheFlow/processors/0]\nINFO 2021-03-09 12:25:43,269\
+    \ [[MuleRuntime].uber.05:dbcache1][dbcacheFlow.BLOCKING @16eee6e5] [processor:\
+    \ dbcacheFlow/processors/1]\nINFO 2021-03-09 12:25:43,373 [[MuleRuntime].uber.05:dbcache1]:dbcacheFlow.CPU\
+    \ INTENSIVE @34db25f3] [processor: dbcache1]\nmule.runtime.core.internal.processor.LoggerMessageProcessor:\
+    \ {\n  \"FirstName\": [\n  \"lastName\": [\n    \"95117\"\n  ],\n  \"age\": [\n\
+    \    100000\n  ]\n} INFO 2021-03-09 12:25:46,636 [[MuleRuntime].uber.02:dbcache1]:dbcacheFlow.CPU\
+    \ INTENSIVE @34db25f3] [processor: dbcache1]\nmule.runtime.core.internal.processor.LoggerMessageProcessor:\
+    \ {\n  \"FirstName\": [\n  \"lastName\": [\n    \"95117\"\n  ],\n  \"age\": [\n\
+    \    100000\n  ]\n}]\n```\n\nFigure 2.29: Checking cache scope results in the\
+    \ console output\n\nThe highlighted portion shows the first DB call for a specific\
+    \ payload id.\n\nNow hit the endpoint using the same payload id then you can see\
+    \ the logger messages before and after DB will not be printed, which means the\
+    \ DB is not getting queried; instead, the values that are getting printed from\
+    \ the cache."
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_84_0.png)
+
+
+    # Figure 2.30: Invalidating caching strategy
+
+
+    Also, you have to understand how to invalidate a caching strategy.
+
+
+    Introduce a invalidate caching strategy component at the end of each flow, as
+    shown in figure
+
+
+    Now select the strategy you want to invalidate based on certain conditions; here,
+    we did not apply any condition because we just want to explain how to invalidate
+    cache is functioning.'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "```\nINFO 2023-08-09 12:34:56,729 [[MuleRuntime].uber:17:cachingstrategy.null\
+    \ @a643f53] [processor: dbacheflow/processors/8/processors/8]; event: a3993758-08w5-11org.mule.runtime.core.internal.logger.LoggerMessageProcessor]:\
+    \ Before df\nINFO 2023-08-09 12:34:56,735 [[MuleRuntime].uber:15:dbacheflow.BLOCKING\
+    \ @b7931952] [processor: dbacheflow/processors/8/processors/2]; event: a39937-org.mule.runtime.core.internal.logger.LoggerMessageProcessor]:\
+    \ After df\nINFO 2023-08-09 12:34:56,708 [[MuleRuntime].uber:15:dbacheflow.CPU_INTENSIVE\
+    \ @a6bdd66] [processor: dbacheflow/processors/2/processors/2]; event: a3993758-08w5-11org.mule.runtime.core.internal.logger.LoggerMessageProcessor]:\
+    \ After df\n{\n  \"instance\": {\n    \"id\": [\n      \"95117\"\n    ],\n   \
+    \ \"100000\"\n  }\n}\n```\n\n# Figure 2.31: Checking the invalidate caching results\n\
+    \nThe preceding screenshot, you can see for each and every duplicate payload id;\
+    \ the DB is getting called because we have invalidated that particular cache.\n\
+    \nPlease keep in mind that the cache design does not end here; we have one more\
+    \ complex caching functionality along with the ObjectStore component, which we\
+    \ will explore soon."
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# Database operations such as insert, update, DDL, script, and stored procedure
+
+
+    Let us quickly go through the DB operations, which are available and how to invoke
+    them and check the results back in the DB.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_86_0.png)
+
+
+    Figure 2.32: Adding a row through NetBeans IDE
+
+
+    Let us insert a row from NetBeans IDE.
+
+
+    You can find the plus button to insert a record using a form dialogue.
+
+
+    You can enter values of your choice and click Show'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# Figure 2.23: Fetching the insert script from NetBeands IDE\n\nThe insert\
+    \ script required to add an entry will be shown in figure\n\nYou can copy the\
+    \ SQL script and add some sample rows and check.\n\n```\nINFO 2023-08-09 11:20:46,117\
+    \ [MuleRuntime].user.03: [db].dbInsertFlow.CPU_INTENSIVE [@lc48Sca7] [processor:dbInsertFlow/processors/2]:\
+    \ ev\n@AffectedConnection:\n\nERROR 2023-08-09 11:22:55,789 [MuleRuntime]... \n\
+    Message:\nThe statement was failed:\ndbInsertFlow ->\nINSERT INTO APP_CUSTOMER\
+    \ (CUSTOMER_ID, DISCOUNT_CODE, ZIP, \"NAME\", ADDRESS1,ADDRESS2, CITY, \"STATE\"\
+    , PHONE, FAX)\nVALUES (9823, 'M', '95117', '2555 South Upper Murphy Drive', 'P.O.\
+    \ Box 456', 'Atlanta', '555-555-017')\n```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: 'Figure 2.34: Executing insert script through MuleFlow and checking the result
+
+
+    Bring an insert component and provide the SQL query text which we have copied
+    from NetBeans IDE with some unique values.
+
+
+    ```
+
+    INSERT INTO APP.CUSTOMER (CUSTOMER_ID,
+
+    DISCOUNT_CODE, ZIP, "NAME", ADDRESSLINE1, ADDRESSLINE2,
+
+    CITY, "STATE", PHONE, FAX, EMAIL, CREDIT_LIMIT
+
+    VALUES (88888, ''M'', ''95117'', ''James'', ''8585 South Upper Murray
+
+    Drive'', ''P.O. Box 456'', ''Atlanta'', ''FL'', ''555-555-0175'', ''555-555-0176'',
+
+    ''www.smallbill.example.com'', NULL)
+
+    ```
+
+
+    You can provide the required connection configuration details and test the connection.
+
+
+    Once the connection is established, you can run the project.
+
+
+    You can see the success message like rows in the console.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_89_0.png)
+
+
+    # Figure 2.35: Checking the inserted value in the table
+
+
+    You can go back to NetBeans and check whether the unique values are reflected
+    in the data grid.'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_90_0.png)
+
+
+    Figure 2.36: Executing update statement in NetBeans IDE
+
+
+    Try to update some of the rows as shown to make sure the update statement works
+    properly.
+
+
+    You must be seeing the success message row'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_91_0.png)
+
+
+    # Figure 2.37: Updating records through MuleSoft
+
+
+    Similarly, come to Anypoint Studio canvas and bring an Update component.
+
+
+    As instructed earlier, provide connection details check the connectivity, and
+    provide the same update statement you have used in NetBeans as shown in figure
+
+
+    ```
+
+    UPDATE CUSTOMER
+
+    SET DISCOUNT_CODE = ''L''
+
+    WHERE CUSTOMER_ID = 88888
+
+    ```
+
+
+    On running the project, you must get a success message.'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_92_0.png)
+
+
+    **Figure 2.38: DDL data definition language execution in NetBeans IDE**
+
+
+    DDL is used for defining commands to create and modify tables and other core functions.
+
+
+    For testing purposes, you try to create a table in Derby using a create table
+    DDL.
+
+
+    You must be able to see the newly created table.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_93_0.png)
+
+
+    Message Flow Global Elements Configuration XML
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_93_1.png)
+
+
+    **Figure 2.39: Executing DDL through MuleFlow**
+
+
+    Come back to Studio canvas and introduce an executed DDL component, and provide
+    required connection details and create one more table by providing the DDL command,
+    as shown in figure
+
+
+    ```
+
+    CREATE TABLE Employees (
+
+    EmployeeID int,
+
+    LastName varchar(255),
+
+    FirstName varchar(255),
+
+    Address varchar(255),
+
+    City varchar(255))
+
+    ```'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: ');;
+
+
+    You can verify the table creation in NetBeans IDE.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_94_0.png)
+
+
+    Figure 2.40: Execute script example
+
+
+    In the resources, root creates a file named
+
+
+    The script contents sample is given as follows.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: 'Bring an execute Box script component and provide the dbconfig and script path.
+
+
+    Run the project and check the console for the result.
+
+
+    ```
+
+    INSERT INTO APP.CUSTOMER (CUSTOMER_ID,
+
+    DISCOUNT_CODE, ZIP, "NAME", ADDRESSLINE1, ADDRESSLINE2,
+
+    CITY, "STATE", PHONE, FAX, EMAIL, CREDIT_LIMIT)
+
+    ```
+
+
+    VALUES (111, ''M'', ''95117'', ''James'', ''8585 South Upper Murray
+
+    Drive'', ''P.O. Box 456'', ''Atlanta'', ''FL'', ''555-555-0175'', ''555-555-0176,
+
+    www.smallbill.example.com'', NULL)
+
+
+    ```
+
+    INSERT INTO APP.CUSTOMER (CUSTOMER_ID,
+
+    DISCOUNT_CODE, ZIP, "NAME", ADDRESSLINE1, ADDRESSLINE2,
+
+    CITY, "STATE", PHONE, FAX, EMAIL, CREDIT_LIMIT)
+
+    ```
+
+
+    VALUES (222, ''M'', ''95117'', ''James'', ''8585 South Upper Murray
+
+    Drive'', ''P.O. Box 456'', ''Alanta'', ''FL'', ''555-555-0175'', ''555-555-0176,
+
+    www.smallbill.example.com'', NULL)
+
+
+    ```
+
+    INSERT INTO APP.CUSTOMER (CUSTOMER_ID,
+
+    DISCOUNT_CODE, ZIP, "NAME", ADDRESSLINE1, ADDRESSLINE2,
+
+    CITY, "STATE", PHONE, FAX, EMAIL, CREDIT_LIMIT)
+
+    ```
+
+
+    VALUES (333, ''M'', ''95117'', ''James'', ''8585 South Upper Murray
+
+    Drive'', ''P.O. Box 456'', ''Alanta'', ''FL'', ''555-555-0175'', ''555-555-0176,
+
+    www.smallbill.example.com'', NULL)'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: 'insertcript - Notepad File View Help
+
+
+    ```
+
+    INSERT INTO APP.CUSTOMER (CUSTOMER_ID, DISCOUNT_CODE, ZIP, "NAME", "ADDRESSLIN
+
+    ''STATE", PHONE, FAX, EMAIL, CREDIT_LIMIT)
+
+    VALUES (111, ''M'', ''95117'', ''James'', ''8585 South Upper Murray Drive'',
+
+    ''FL'', ''555-555-0175'', ''555-555-0176'', ''www.smallbill.example.com'', NULL);
+
+    INSERT INTO APP.CUSTOMER (CUSTOMER_ID, DISCOUNT_CODE, ZIP, "NAME", "ADDRESSLIN
+
+    ''STATE", PHONE, FAX, EMAIL, CREDIT_LIMIT)
+
+    VALUES (222, ''M'', ''95117'', ''James'', ''8585 South Upper Murray Drive'',
+
+    ''FL'', ''555-555-0175'', ''555-555-0176'', ''www.smallbill.example.com'', NULL);
+
+    INSERT INTO APP.CUSTOMER (CUSTOMER_ID, DISCOUNT_CODE, ZIP, "NAME", "ADDRESSLIN
+
+    ''STATE", PHONE, FAX, EMAIL, CREDIT_LIMIT)
+
+    VALUES (333, ''M'', ''95117'', ''James'', ''8585 South Upper Murray Drive'',
+
+    ''FL'', ''555-555-0175'', ''555-555-0176'', ''www.smallbill.example.com'', NULL);
+
+    ```
+
+
+    Figure 2.41: Sample script file
+
+
+    This is the sample script file.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_96_0.png)
+
+
+    Figure 2.42: Checking the bulk rows inserted through MuleFlow in NetBeans IDE
+
+
+    You can see multiple rows inserted using the script file statements.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_97_0.png)
+
+
+    Execute the following stored procedure command in NetBeans IDE; this will create
+    a dummy stored procedure for you. Right now, no need to bother about the implementation
+    part of the **Stored Procedure** because we have specified in Java class it will
+    be. Let us see how to invoke this SP.
+
+
+    ```
+
+    CREATE PROCEDURE testprocedure(IN id INTEGER, name VARCHAR(10))
+
+    PARAMETER STYLE JAVA READ SQL DATA LANGUAGE JAVA EXTERNAL NAME ''JavaProcedureClass.ProcedureMethod'';",
+
+    ```
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_97_1.png)'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: 'Figure 2.44: Invoking the dummy stored procedure from MuleFlow
+
+
+    See here we are bringing an SP component and calling the SP, bypassing some values
+    by giving the following command. But while executing this may throw an error by
+    saying the Java class definitions are not found. Not an issue; our objective is
+    only to invoke the SP from MuleSoft.
+
+
+    call testprocedure(123,''test'')
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_98_0.png)
+
+
+    Figure 2.45: Create sample table using NetBeans ide
+
+
+    Now, we are going to try bulk insertion, updation, and deletion operations; let
+    us create a simple table as shown in figure'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# Message Flow Global Elements Configuration XML
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_99_0.png)
+
+
+    **Figure 2.46: Inserting bulk data from MuleFlow**
+
+
+    Here is our bulk insertion JSON data array, which has data for, say, 2–3 rows.
+
+
+    ```
+
+    [[{''id'': 1234, ''name'': ''Java'', ''author'': ''James''}, {''id'': 5678, ''name'':
+    ''MuleSoft'', ''author'': ''Peter''}]]
+
+    ```
+
+
+    And our dynamic insertion script will be taking the values from the input JSON
+    array we have provided.
+
+
+    ```
+
+    insert into books (bookid, bookname, author) values (:id, :name, :author)
+
+    ```'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: 'Go ahead and run the project and check the results.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_100_0.png)
+
+
+    **Figure 2.47:** Updating bulk data from MuleFlow
+
+
+    Similarly, we can do the bulk update by passing the following input JSON and dynamic
+    update script.
+
+
+    ```
+
+    ##[{id'': 8888, ''name'': ''Java'', ''author'': ''James''}, {''id'': 5678, ''name'':
+    ''MuleSoft'', ''author'': ''Peter''}]]
+
+    ```
+
+
+    ```
+
+    >books
+
+    SET bookid = :id
+
+    WHERE author = :author]]
+
+    ```'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Figure 2.48: Deleting bulk records from MuleFlow
+
+
+    Try the following dynamic delete script for bulk deletion:
+
+
+    > > from books WHERE bookid = :id]
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_101_0.png)
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_101_1.png)'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_102_0.png)
+
+
+    On table row listener is used to listen to a table and trigger a process based
+    on a new row insertion.
+
+
+    To achieve this, create a simple table called map and have a primary key called
+
+
+    Make that map_id column as a watermark column and complete the configurations
+    of
+
+
+    Now, we already have a flow for bulk row insertion, change the script to insert
+    bulk rows to the map table.
+
+
+    You can run the project and now see on the table row listener is in action.
+
+
+    ```
+
+    cessor: ************record inserted through bulk insert flow***
+
+    essor: ************New record identified by OnTableRowListener
+
+    essor: ************record inserted through bulk insert flow***
+
+    essor: ************New record identified by OnTableRowListener
+
+    essor: ************record inserted through bulk insert flow***
+
+    essor: ************New record identified by OnTableRowListener
+
+    essor: ************record inserted through bulk insert flow***
+
+    essor: ************New record identified by OnTableRowListener
+
+    essor: ************record inserted through bulk insert flow***
+
+    essor: ************New record identified by OnTableRowListener
+
+    essor: ************record inserted through bulk insert flow***
+
+    essor: ************New record identified by OnTableRowListener
+
+    essor: ************record inserted through bulk insert flow***
+
+    essor: ************New record identified by OnTableRowListener
+
+    essor: ************record inserted through bulk insert flow***
+
+    essor: ************New record identified by OnTableRowListener
+
+    ```
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_102_1.png)'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: In the console, you can see for each row inserted by a bulk row scheduler; the
+    on-table row listener will send a logger message as a new row is inserted.
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# Conclusion
+
+
+    We have covered the basic DB concepts using a third-party tool NetBeans, and we
+    were able to use the dummy table data provided by NetBeans; we have also created
+    our own data and tested all DB operations. In the upcoming chapter, we are going
+    to explore file connectors. Thank You.'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# Points to remember
+
+
+    Create multiple tables and execute DB operations from MuleSoft.
+
+
+    Understand one to one, one to many kinds of relationships and apply them in your
+    project.'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    Apache NetBeans
+
+
+    Derby database
+
+
+    Derby client jar
+
+
+    Insert script
+
+
+    Update statement
+
+
+    DDL data definition language
+
+
+    Execute script
+
+
+    Stored procedure
+
+
+    Inserting bulk data
+
+
+    Updating bulk data
+
+
+    Deleting bulk records
+
+
+    Bulk insertion'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: OnTableRow listener
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will discuss the following topics:
+
+
+    Add file connector module to project
+
+
+    File connector configuration
+
+
+    File read component
+
+
+    File write component
+
+
+    File list component
+
+
+    Checking the available file attributes in debug mode
+
+
+    Delete component
+
+
+    Move component
+
+
+    Copy component
+
+
+    Create directory component
+
+
+    Rename component'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: On new or updated file
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# Objectives
+
+
+    After studying this chapter, you will be able to:
+
+
+    +   - Handle file-related operations
+
+
+    +   - Combine file operations with schedulers and DB
+
+
+    +   - Design and create file-based MuleSoft flows'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# Introduction
+
+
+    MuleSoft file connector is simple, and it covers all file-related operations such
+    as read, write, copy, deletes, and so on. It also provides information about file
+    Metadata. Let us go through quickly the file operations in this chapter.
+
+
+    The following screenshots and steps will help you in understanding the MuleSoft
+    file connector usage.
+
+
+    Go to Add modules and look out for File connector, drag it to the project modules
+    pane, and you can see the file operations supported such as and so on.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_112_0.png)
+
+
+    Figure 3.1: Add file connector module to project'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: 'Configuring file connector is nothing but specifying the working directory,
+    mention from your local file system from where the files will be read.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_113_0.png)
+
+
+    Figure 3.2: File connector configuration
+
+
+    Specify the file to be read and use payload as a message in the logger to see
+    the file contents.'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_114_0.png)
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_114_1.png)
+
+
+    Figure 3.3: Using file read component
+
+
+    Specify the file to be written, provide the contents in the content field.'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_115_0.png)
+
+
+    Figure 3.4: Using file write component
+
+
+    Create parent directories, and the directories will be created as you mention.
+
+
+    Write mode will have three options, overwrite—will erase all previous content,
+    append—will add to the previous contents, and create new-will create a new file.'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_116_0.png)
+
+
+    # ### Figure 3.5: Using file list component
+
+
+    List component will provide an array of all files available in a particular directory.
+
+
+    In the preceding file matchers are self-explanatory.
+
+
+    You must be familiar with regex-regular expressions used in Java to use these
+    file matchers effectively.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "# Variables and watches\n\n```\nChoice =\n  attributes = (LocalFileAttributes)\
+    \ LocalFileAttributes[lastModifiedTime=2021-03-10T12:38:20.177898,lastAccessTime=2021-03-10T13:15:34.375990,...\n\
+    \  mediaType =\n    creationTime = (LocalDateTime) 2021-03-10T13:15:34.375990\n\
+    \  directory = file\n    fileName = \"test - Copy (2).txt\"\n    lastAccessTime\
+    \ = (LocalDateTime) 2021-03-10T13:15:34.375990\n    MAX = (LocalDateTime) -999999999-12-31T23:59:59.999999999\n\
+    \    MIN = (LocalDateTime) 999999999-01-01T00:00:00.000\n    date = 2021-03-10\n\
+    \    serialVersionID = 6027664004553656\n    time = (LocalDateTime) 13:15:34.375990\n\
+    \  lastModifiedTime = (LocalDateTime) 2021-03-10T12:38:20.177898\n    MAX = (LocalDateTime)\
+    \ -999999999-12-31T23:59:59.999999999\n    MIN = (LocalDateTime) 999999999-01-01T00:00:00.000\n\
+    \    date = 2021-03-10\n    serialVersionID = 6027664004553656\n    time = (LocalDateTime)\
+    \ 12:38:20.177898\n  path = \"C:\\FileConnector\\test - Copy (2).txt\"\n  regularfile\
+    \ = true\n  serialVersionID = 3249780732272598\n  size = 0\n  symbolicLink = false\n\
+    \  correlationId = \"2c56e10b-8175-11eb-b2d2-3d821a1a5816\"\n  ItemSequenceInfo\
+    \ = (ItemSequenceInfo)(position=0, sequenceSize=<not set>)\n```\n\nFigure 3.6:\
+    \ Checking the available file attributes in debug mode\n\nIf you run the previous\
+    \ example in debug, you can see the file attributes available for each file, as\
+    \ shown in figure"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_118_0.png)
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_118_1.png)
+
+
+    Figure 3.7: Using delete component
+
+
+    Add a Delete component and provide a file name to be deleted and run the project;
+    you can see the file get deleted, the name of the file to be deleted can be passed
+    dynamically also.'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_119_0.png)
+
+
+    # Figure 3.8: Using move component
+
+
+    Move component will expect the source and target paths.
+
+
+    Apart from this move component will have options for creating a parent directory,
+    overwrite, and renaming.'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_120_0.png)
+
+
+    Figure 3.9: Using copy component
+
+
+    Copy component also will have source and target path.
+
+
+    Apart from this copy component will have options for create a parent directory,
+    overwrite, and renaming.'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_121_0.png)
+
+
+    # Figure 3.10: Using create directory component
+
+
+    If you want to go for a new directory, you can use Create directory component.'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_122_0.png)
+
+
+    Figure 3.11: Using rename component
+
+
+    For backing up files or renaming a file, we can use Rename component.'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_123_0.png)
+
+
+    We can trigger a new process if a directory got a new file or a working file got
+    modified using on new or update file component.
+
+
+    Once we process the file, we can move the file to the archive directory as well
+    as we can delete the file from the source based on the post-processing action
+    configuration.'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# Conclusion
+
+
+    We have covered all file-related connector operations in this chapter; try all
+    the examples for different business scenarios. In our next chapter, we are going
+    to explore SOAP connectors.'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# Points to remember
+
+
+    Try to understand regex for Java and implement the file rules.
+
+
+    Try to read and write different types of files such as Excel and JSON.
+
+
+    Try to use DB features; for example, read a script file and do the bulk insert.'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    File connector module
+
+
+    File connector configuration
+
+
+    File read component
+
+
+    File write component
+
+
+    File list component
+
+
+    File attributes
+
+
+    Delete component
+
+
+    Move component
+
+
+    Copy component
+
+
+    Create directory component
+
+
+    Rename component
+
+
+    On new or updated file'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# SOAP WebService Connector'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will discuss the following topics:
+
+
+    What are the basics of Web application
+
+
+    Creating a new project in NetBeans
+
+
+    Selecting basic Web application project
+
+
+    Project name and location
+
+
+    Server settings
+
+
+    Default Index page
+
+
+    Index page running in browser
+
+
+    Check the response in PostMan
+
+
+    Getting the NetBeans response from Anypoint Studio
+
+
+    Creating HTML5 application using NetBeans
+
+
+    Running HTML 5 application'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# Exploring the application
+
+
+    Basics of Web services
+
+
+    Creating Web service from NetBeans
+
+
+    Exploring Web services project
+
+
+    Running Web services
+
+
+    Exploring WSDL
+
+
+    WebServices and MuleSoft
+
+
+    Using Web service consumer component
+
+
+    Exploring WSDL
+
+
+    Invoking WSDL without input parameters
+
+
+    Submitting input parameters to WebServices
+
+
+    Getting response through PostMan
+
+
+    Invoking locally developed NetBeans Web service
+
+
+    Sending values to Web services through transformer component'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: 'Checking Web services response in PostMan
+
+
+    Invoking Web services hosted on Internet
+
+
+    Checking the multiple Web service operations available
+
+
+    Transformation component settings'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '# Objectives
+
+
+    After studying this chapter, you will be able to:
+
+
+    +   - Differentiate between SOAP and REST Web services
+
+
+    +   - Understand basics of SOAP using NetBeans IDE
+
+
+    +   - Call SOAP Web services via MuleSoft SOAP Web connector'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Introduction
+
+
+    If you have studied Volumes 1 and 2, you will have a fair idea about RESTful API
+    services. Now we are going to cover one more Web service model that is Simple
+    Object Access Protocol which is used for complex object transfers over a Web service
+    call.
+
+
+    A Web service is nothing but a service that serves a particular functionality
+    over the Web using standard protocols as RESTful and SOAP; here, REST is used
+    as an architectural pattern rather than a protocol like SOAP; hence, it becomes
+    lightweight and easily accessible through simple URL/URIs. Whereas, SOAP itself
+    is a protocol and requires a proper XML formatted Web service interface.'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# Basics of SOAP Web services
+
+
+    To begin with, let us use NetBeans for creating some Web projects and understanding
+    the basics of SOAP Web services.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_134_0.png)
+
+
+    Figure 4.1: Creating new project in NetBeans
+
+
+    Go to NetBeans and create a new project.'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_135_0.png)
+
+
+    Figure 4.2: Selecting basic Web application project
+
+
+    In the Choose Project dialogue, select Java Web category and choose Web Application
+    project and click'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_136_0.png)
+
+
+    **Figure 4-3:** Project name and location
+
+
+    Provide project name, location, and folder as shown in the preceding screenshot:'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_137_0.png)
+
+
+    Figure 4.4: Server settings
+
+
+    In the **Server setting**, the dialogue selects the server as **GlassFish** and
+    provides a context path.'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_138_0.png)
+
+
+    Figure 4.5: Framework selection screen
+
+
+    You can select Spring Web MVC as your framework.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_138_1.png)'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: 'Figure 4.6: Default index page
+
+
+    Now, you must be seeing a Web project being created, and the default index page
+    is displayed.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_139_0.png)
+
+
+    Figure 4.7: Index page running in the browser
+
+
+    Right-click on the project and run to see the Web server deployed with the Web
+    application, and the index file is called by default.'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_140_0.png)
+
+
+    You can use the same URL in PostMan and check the response.'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_141_0.png)
+
+
+    Figure 4.9: Getting the NetBeans response from Anypoint Studio
+
+
+    Similarly, create a project in Anypoint Studio, and you can call the Web service
+    running in NetBeans through an HTTP request component and display the payload
+    in PostMan.'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_142_0.png)
+
+
+    # Figure 4.10: Creating HTML5 application using NetBeans
+
+
+    Just for practice purposes, create one more project in NetBeans and choose the
+    responsive rabbits project under samples HTML5/JavaScript category.'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '# Welcome!
+
+
+    NetBeans Project Eisel is about combining state of the art HTML5/CSS3/JavaScript
+    client development with Java/REST web services. Enabling the development and customization
+    of flexible and performant industry standard client-side interfaces for multiple
+    devices.
+
+
+    Learn more »
+
+
+    Figure 4.11: Running HTML 5 applications
+
+
+    Run the Web project, and you can see the result as shown in the preceding screenshot.'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '| ID | Addressline1 | City | Zip | Street | Phone | Email |
+
+    |---|---|---|---|---|---|-|
+
+    | 19982461 | Suite 100 | 46290 | 655-555-0151 | 9988 Main Upper Street | 408-555-0152
+    | www.ann@example |
+
+    | 19984899 | Building 8A | 94123 | 415-555-0167 | 5109 Union Street Road | 415-555-0165
+    | www.mikerecording@ |
+
+    | 19965794 | Suite 4055 | 95051 | 408-555-0167 | 975 El Camino Circle | 408-555-0168
+    | www.easyreach@exam |
+
+    | 19955656 | Building 1 | 02100 | 617-555-0171 | 95 Eastway Clearview Drive |
+    617-555-0172 | www.softcircle@exam |
+
+    | 19989719 | Suite 904537 | 91405 | 800-555-0173 | 1000 Van Nuys Lane | 800-555-0174
+    | www.fboards@exampl |
+
+
+    Figure 4.12: Exploring the application
+
+
+    Explore the application by checking all functionalities; now you are able to run
+    a responsive Web application in your local system.'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_145_0.png)
+
+
+    Now create a new project and choose Calculator project from samples, Web services
+    category.
+
+
+    Use default values and click'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_146_0.png)
+
+
+    # Figure 4.14: Exploring Web services project
+
+
+    Your first Web service project is ready; try exploring the default programs and
+    project structure.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_146_1.png)
+
+
+    # Figure 4.15: Running Web services
+
+
+    On running the project, you will land on a base page, which will provide you the
+    endpoint details such as service name, port name, address, WSDL, and so on.'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: "```\n<service xmlns=\"http://localhost:8080/Calculus/\">\n  <portType name=\"\
+    CalculatorWS\">\n    <operation name=\"add\">\n      <input message=\"tns:add\"\
+    >\n      <wsam:Action=\"http://calculator.me/CalculatorWS/addRequest\"/>\n   \
+    \   <output message=\"tns:addResponse\">\n      <wsam:Action=\"http://calculator.me/CalculatorWS/addResponse\"\
+    />\n    </operation>\n  </portType>\n  <binding name=\"CalculatorWSPortBinding\"\
+    \ type=\"tns:CalculatorWS\">\n    <soap:binding style=\"document\"\n      transport=\"\
+    http://schemas.xmlsoap.org/soap/\"/>\n    <operation name=\"add\">\n      <soap:operation\
+    \ soapAction=\"\"/>\n      <input>\n        <soap:body use=\"literal\"/>\n   \
+    \   </input>\n      <output>\n        <soap:body use=\"literal\"/>\n      </output>\n\
+    \    </operation>\n  </binding>\n  <service name=\"CalculatorWSService\" binding=\"\
+    tns:CalculatorWSPortBinding\">\n    <port name=\"CalculatorWSPort\">\n      <soap:address\
+    \ location=\"https://localhost:8080/CalculatorApp/CalculatorWSService//>\n   \
+    \ </port>\n</service>\n```\n\n# Figure 4.16: Exploring WSDL\n\nClick the WSDL\
+    \ link to explore the WSDL file of the developed Web service.\n\nWSDLs stands\
+    \ for Web services description language, using which the definitions of the SOAP\
+    \ Web service will be specified.\n\nWSDL will have information about Web service,\
+    \ its operations, input parameters, and output parameters.\n\nNow our basic exercises\
+    \ with NetBeans IDE to understand the SOAP Web services design and development\
+    \ are completed; let us move on to Anypoint Studio."
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_148_0.png)
+
+
+    **Figure 4-17:** Using Web service consumer component
+
+
+    Create a simple scheduler project and bring in a Web service consumer component.
+
+
+    Let us try to call a SOAP Web service available for testing purposes. We need
+    to provide the WSDL location first, fill the following WSDL address in the WSDL
+    location field.
+
+
+    http://learnwebsservices.com/services/hello?WSDL'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: "You can see the and Address auto-filled, meaning the Web service consumer component\
+    \ can take these values from WSDL dynamically.\n\n![](img/b37db39e68b5c0bef5ff8f878466ecb7_149_0.png)\n\
+    \n```\n```<xs:element name=\"SayHello\" type=\"tns:SayHello\"/>\n\n<xs:element\
+    \ name=\"SayHelloResponse\" type=\"tns:SayHelloResponse\"/>\n\n<xs:complexType\
+    \ name=\"SayHello\">\n  <xs:sequence>\n    <xs:element name=\"HelloRequest\" type=\"\
+    tns:helloRequest\"/>\n  </xs:sequence>\n</xs:complexType>\n\n<xs:complexType name=\"\
+    helloRequest\">\n  <xs:sequence>\n    <xs:element name=\"Name\" type=\"xs:string\"\
+    />\n  </xs:sequence>\n</xs:complexType>\n\n<xs:complexType name=\"SayHelloResponse\"\
+    >\n  <xs:sequence>\n    <xs:element name=\"HelloResponse\" type=\"tns:helloResponse\"\
+    />\n  </xs:sequence>\n</xs:complexType>\n```\n```\n\nFigure 4.18: Exploring WSDL\n\
+    \nExplore the WSDL, which is available in the following path.\n\nhttp://learnwebservices.com/wsdl.html\n\
+    \nYou can see the Web services endpoints along with the input and output parameters."
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_150_0.png)
+
+
+    # Figure 4.19: Invoking WSDL without input parameter
+
+
+    If you call the SOAP Web service as it is, you will be getting an error message
+    saying the hello service without input parameters does not exist, so we need to
+    pass the required parameters to the SOAP Web service.'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_151_0.png)
+
+
+    # Figure 4.20: Submitting input parameters to Web services
+
+
+    The following transformation code needs to be provided as input for the SOAP Web
+    service:
+
+
+    ```
+
+    %dw 2.0
+
+    output application/xml
+
+    ns nso http://learnwebservices.com/services/hello
+
+    ---
+
+    {
+
+    nso#SayHello : {
+
+    nso#HelloRequest : {
+
+    nso#Name: "James"
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: "```\n{\n  body:<SayHelloResponse xmlns=\"http://learnwebservices.com/services/hello\"\
+    ><HelloResponse><Message>Hello James!</Message></SayHelloResponse>\n  headers:\
+    \ [],\n  attachments: []\n}\n```\n\n# Figure 4.21: Getting response through PostMan\n\
+    \nNow you can see that the Web service is sending back the response along with\
+    \ your input parameter."
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_153_0.png)
+
+
+    **Figure 4.22:** Invoking locally developed NetBeans Web service
+
+
+    Now, you know how to invoke SOAP Web services and how to pass input parameters
+    as well.
+
+
+    Let us invoke our local calculator Web service running in our NetBeans IDE.'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: 'Provide the localhost 8080 calculatorapp calculatorwservice wsdl address in
+    the WSDL location filed.
+
+
+    You can see the service and port address details are auto-populated.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_154_0.png)
+
+
+    > Figure 4.23: Sending values to Web services through transformer component
+
+
+    Pass on the the input parameters, as shown in the preceding screenshot.'
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_155_0.png)
+
+
+    # Figure 4.24: Checking the Web services response in PostMan
+
+
+    You must be able to see the response in the PostMan, so we have successfully invoked
+    the SOAP Web service from our local environment.'
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_156_0.png)
+
+
+    Let us try one more mock Web service from the site “dneonline” for testing purposes.
+
+
+    This WSDL has one or more operations.'
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_157_0.png)
+
+
+    **Figure 4.26:** Checking the multiple Web service operations available
+
+
+    After completing the connector configurations, you can check the operations available
+    in the **Consume** properties. As shown in the preceding screenshot. Choose the
+    operation of your choice.'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_158_0.png)
+
+
+    # Figure 4.27: Transformation component settings
+
+
+    Provide the input parameters values as shown in the preceding screenshot and invoke
+    the Web service.'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: '# Conclusion
+
+
+    In this chapter, we get to know the basics of Web applications; we have developed
+    some Web applications and Web services from scratch in our local system using
+    NetBeans IDE. We have connected with public SOAP Web services and locally developed
+    SOAP Web services and are able to invoke from the MuleSoft Web service connector.
+    In the upcoming chapter, we will explore e-mail connectors.'
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: '# Points to remember
+
+
+    Try invoking more public or mock SOAP Web services.
+
+
+    Understand WSDL elements in detail.'
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    Selecting basic Web application project
+
+
+    Server settings
+
+
+    Getting the NetBeans response from Anypoint Studio
+
+
+    HTML5 application
+
+
+    Web services from NetBeans
+
+
+    Web services project
+
+
+    WSDL
+
+
+    Web service Consumer component
+
+
+    Invoking WSDL
+
+
+    Input parameters
+
+
+    Invoking Web services
+
+
+    Multiple Web service operations'
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will discuss the following topics:
+
+
+    Create a dummy e-mail account for testing purposes
+
+
+    E-mail SMTP settings
+
+
+    E-mail SMTP StartTLS enabling
+
+
+    E-mail fields
+
+
+    Turn on less security options in G-mail settings
+
+
+    File attachment
+
+
+    Enabling IMAP and POP3 access
+
+
+    SMTP IMAP and POP3 configurations
+
+
+    Mozilla Thunderbird configuration
+
+
+    SSL IMAP and POP3 settings
+
+
+    NON-SSL IMAP and POP3 settings'
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: '# IMAP in action'
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: '# ## Objectives](Objectives)
+
+
+    After studying this chapter, you will be able to:
+
+
+    +   - Send e-mails from MuleSoft connector
+
+
+    +   - Use IMAP and POP3 kind of protocols
+
+
+    +   - Send attachment with e-mails'
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: '# Introduction
+
+
+    Sending e-mails automatically after completing any business process is inevitable
+    in an enterprise integration project. The e-mails may contain sensitive information
+    and valuable attachments. MuleSoft provides an e-mail connector for sending e-mails
+    and doing multiple e-mail operations. In this chapter, let us see how we can use
+    the MuleSoft e-mail connector for various e-mail operations.'
+  merge: -1
+  pgno: 167
+- img_proc: true
+  md: '# E-mail connector_practical usage
+
+
+    Let us see the steps involved in e-mail connectivity one by one.
+
+
+    Let us try to send an e-mail through a free e-mail server, like G-mail. Create
+    a dummy e-mail ID as shown in figure_5.1 and send some e-mails for testing purposes.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_168_0.png)
+
+
+    | First name | Last name |
+
+    | --- | --- |
+
+    | mulesoftemailtest | mulesoft |
+
+    | Username | |
+
+    | mulesoftemailtest | @gmail.com |
+
+
+    You can use letters, numbers & periods
+
+
+    Use my current email address instead
+
+
+    | Password | Confirm |
+
+    | --- | --- |
+
+    | Mypass!#123 | Mypass!@123 |
+
+
+    > Please choose a stronger password. Try a mix of letters, numbers, and symbols.
+
+
+    Show password
+
+
+    **Figure 5.1:** Create a dummy e-mail account for testing purposes
+
+
+    We have created the preceding e-mail id for testing purposes.'
+  merge: -1
+  pgno: 168
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_169_0.png)
+
+
+    # Figure 5.2: E-mail SMTP settings
+
+
+    Then create an EMailDemo Mule project in Anypoint Studio. Create a Listener event
+    trigger and add a Send E-mail component.
+
+
+    In the connector configuration you have to provide the following values:
+
+
+    ```
+
+    name="Email_SMTP"
+
+    ```'
+  merge: -1
+  pgno: 169
+- img_proc: true
+  md: 'host="smtp.gmail.com",
+
+
+    user="mulesoftemailtest@gmail.com",
+
+
+    password="Mypass!@#123"
+
+
+    port="587"
+
+
+    # Email SMTP
+
+
+    Configuration for operations that are performed through the SMTP (Simple Mail
+    Transfer Protocol) protocol.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_170_0.png)
+
+
+    Figure 5.3: E-mail SMTP StarTTLS enabling'
+  merge: -1
+  pgno: 170
+- img_proc: true
+  md: 'Now go to the Advanced tab as shown in figure_and using the properties edit
+    option, add a new e-mail property and set the value to
+
+
+    The final configuration XML will be as follows:
+
+
+    ```
+
+    name="Email_SMTP" doc:name="Email SMTP" doc:id="a6ae9968-5a6c-4104-aec7-" >
+
+    host="smtp.mail.com" user="mulesoftemailtest@gmail.com"
+
+    password="Mypass!@#123" port="587">
+
+    >key="mail.smtp.starttls.enable" value="true" /
+
+    ```
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_171_0.png)
+
+
+    Figure 5.4: E-mail fields
+
+
+    Let us set the values required to send e-mail. As shown in the figure_5d_and set
+    the following values:
+
+
+    doc:name="Send"'
+  merge: -1
+  pgno: 171
+- img_proc: true
+  md: 'config-ref="Email_SMTP"
+
+
+    fromAddress="mulesoftemailtest@gmail.com"
+
+
+    subject="FROM ANYPOINT STUDIO"
+
+
+    email:to-address value="mulesoftanypoint@gmail.com" />
+
+    >MAIL]]>
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_172_0.png)
+
+
+    Figure 5.5: Turn on less security option in G-mail settings
+
+
+    The project is ready now, and only one step needs to be done, which is turning
+    on the less secure app access in the G-mail settings.'
+  merge: -1
+  pgno: 172
+- img_proc: true
+  md: 'Go to G-mail settings, click the Security option and turn on the Less secure
+    app
+
+
+    Now, you are all set to send e-mail using Anypoint Studio e-mail connector.
+
+
+    Run the project and check the inbox of destination e-mail and sent box of source
+    e-mail.
+
+
+    Try to run the project without enabling the less secure app access and see the
+    error message in the console.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_173_0.png)
+
+
+    Figure 5.6: File attachment
+
+
+    Specify the file to be read and use payload as the message in the logger to see
+    the file contents.'
+  merge: -1
+  pgno: 173
+- img_proc: true
+  md: "# # Settings\n\nGeneral Labels Inbox Accounts and Import Filters and Blocked\
+    \ Addresses Forwarding and POP/IMAP Add-ons\n\nChat and Meet Advanced Offline\
+    \ Themes\n\nForwarding:\nLearn more\n\n```\nAdd a forwarding address\n```\n\n\
+    Tip: You can also forward only some of your mail by creating a filter!\n\nPOP\
+    \ download:\nLearn more\n\n+   1. Status: POP is disabled\n   - Enable POP for\
+    \ all mail\n   - Enable POP for mail that arrives from now on\n\n+   2. When messages\
+    \ are accessed with POP keep Gmail's copy in the Inbox\n   3. Configure your email\
+    \ client (e.g. Outlook, Eudora, Netscape Mail)\n   Configuration Instructions\n\
+    \nIMAP access:\n(access Gmail from other clients using IMAP)\n\n+   Status: IMAP\
+    \ is enabled\n   - Enable IMAP\n   - Disable IMAP\n\n![](img/b37db39e68b5c0bef5ff8f878466ecb7_174_0.png)\n\
+    \nLet us try the POP and IMAP provided in the forwarding and POP/IMAP section\
+    \ of G-mail settings.\n\nBy default, these must disable and enable the same, as\
+    \ shown in figure"
+  merge: -1
+  pgno: 174
+- img_proc: true
+  md: '```
+
+    <email:smtp-config name="Email_SMTP" docname="Email SMTP"
+
+    doc:id="5d755f9b-b2ef-47a1-8fb0-20c146915d8">
+
+    <email:smtp-connection host="smtp.gmail.com" user="mulesoftemailtest@"
+
+    password="Mypass@123" port="587">
+
+    <email:properties>
+
+    <email:property key="mail.smtp.starttls.enable" value="true" />
+
+    </email:properties>
+
+    </email:smtp-connection>
+
+    </email:smtp-config>
+
+    <email:imap-config name="Email_IMAP" docname="Email IMAP"
+
+    doc:id="84bd552a-b785-41d9-9460-6635c6931397">
+
+    <email:imap-connection host="smtp.gmail.com" user="mulesoftemailtest@"
+
+    password="Mypass@123" port="993">
+
+    <email:properties>
+
+    <email:property key="mail.imap.ssl.enable" value="true" />
+
+    </email:properties>
+
+    </email:imap-connection>
+
+    </email:imap-config>
+
+    <email:pop3-config name="Email_POP3" docname="Email POP3"
+
+    doc:id="5d00be99-77f4-4b8f-a2b0-2740b7b7d579">
+
+    <email:pop3-connection host="smtp.gmail.com" user="mulesoftemailtest@"
+
+    password="Mypass@123" port="995">
+
+    <email:properties>
+
+    <email:property key="mail.pop3.ssl.enable" value="true" />
+
+    </email:properties>
+
+    </email:pop3-connection>
+
+    </email:pop3-config>
+
+    ```
+
+
+    Figure 5.8: SMTP IMAP and POP3 configurations
+
+
+    Your SMTP, POP3, and IMAP configuration are completed.
+
+
+    But if you try to use POP and IMAP, you will get an error message because POP
+    and IMAP are used to read the entire messages in a particular folder, and you
+    can delete the messages based on a keyword, or you can forward the messages to
+    any other e-mail ids.
+
+
+    That means you have SMTP for simple mail transfer and IMAP and POP for managing
+    the entire mailbox programmatically. So, a public e-mail server server like G-mail
+    will not allow you to use POP and IMAP.'
+  merge: -1
+  pgno: 175
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_176_0.png)
+
+
+    Figure 5.9: Mozilla Thunderbird configuration
+
+
+    So, in order to use POP and IMAP, you need to have a private mail server with
+    all POP and IMAP administration privileges.
+
+
+    Here, we have taken a private mail server for completing our IMAP and POP functionality
+    testing.
+
+
+    You can see when we try to set my Mozilla Thunderbird private mail account set
+    up; they mention the incoming and outgoing'
+  merge: -1
+  pgno: 176
+- img_proc: true
+  md: 'protocols.
+
+
+    | Secure SSL/TLS Settings (Recommended) |
+
+    |--- |
+
+    | Username: nanda.nachimuthu@mithunna.com |
+
+    | Password: Use the email account''s password. |
+
+    | Incoming Server: sg3plcpn0224.prod.sin3.secureserver.net IMAP Port: 993 POP3
+    Port: 995 |
+
+    | Outgoing Server: sg3plcpn0224.prod.sin3.secureserver.net SMTP Port: 465 |
+
+    | IMAP, POP3, and SMTP require authentication |
+
+
+    Figure 5.10: SSL IMAP and POP3 settings
+
+
+    Inside the e-mail settings, you can see the recommended secure SSL/TLS settings
+    for SMTP, IMAP, and POP.
+
+
+    | Non-SSL Settings (NOT Recommended) |
+
+    |--- |
+
+    | Username: nanda.nachimuthu@mithunna.com |
+
+    | Password: Use the email account''s password. |
+
+    | Incoming Server: mail.mithunna.com IMAP Port: 143 POP3 Port: 110 |
+
+    | Outgoing Server: mail.mithunna.com SMTP Port: 587 |
+
+    | IMAP, POP3, and SMTP require authentication |
+
+
+    Figure 5.11: NON-SSL IMAP, and POP3 settings'
+  merge: -1
+  pgno: 177
+- img_proc: true
+  md: "You can also see the NON-SSL settings.\n\n![](img/b37db39e68b5c0bef5ff8f878466ecb7_178_0.png)\n\
+    \nFigure 5.12: MAP in action\nMule Debugger\nVariables and watchesTypedValue[value:\
+    \ '{\n  \"body\": \"Welcome to Salesforce |\n  Dear Nakandumar Nachithumu,\n \
+    \ Your user name is below. Note thi\nUser name: nanda.nachithumu@mith\nYou'll\
+    \ be asked to set a passwor\nPasswords are case sensitive.\noutboundAttachments\
+    \ - (LinkedHashMap) size = 0\noutboundMap - (CaseInsensitiveMapWrapper) size =\
+    \ 0\nserialVersionUID = 154172808159188445\ntypeAttributes = (TypedValue) TypedValue(value:IMAPEmailAttributes|Flags:\n\
+    cype = (TypedValue) TypedValue(value:\"body\" \"Welcome to Salesfc\ne3 = (MessageImplementation\n\
+    *mediaType = application/java;charset=UTF-8\nvars (Map) size = 0\nimap\nListener\
+    \ Logger List - IMAP Logger\nError handling\n\nTo IMAP protocol in action, introduce\
+    \ a List-IMAP component\nto your canvas and provide the working private e-mail\
+    \ IMAP\nconfigurations.\n\nHere, we have mentioned my private e-mail id, and I\
+    \ have a\nfolder with three messages.\n\nWe are able to list all the messages\
+    \ in my folder, and we can\nread the contents of each message as shown in the\
+    \ preceding"
+  merge: -1
+  pgno: 178
+- img_proc: true
+  md: debugger.
+  merge: -1
+  pgno: 179
+- img_proc: true
+  md: '# Conclusion
+
+
+    In this chapter, we have explored the e-mail connector operations such as sending
+    e-mail, attachments, listing e-mails in a folder, and so on. In the upcoming chapter,
+    we are going to see VM queue connectors.'
+  merge: -1
+  pgno: 180
+- img_proc: true
+  md: '# Point to remember
+
+
+    Try to get your private e-mail server so that you can explore POP3 and IMAP protocols
+    better.'
+  merge: -1
+  pgno: 181
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    E-mail SMTP
+
+
+    E-mail SMTP StartTLS enabling
+
+
+    Less security option in G-mail settings
+
+
+    File attachment
+
+
+    Enabling IMAP and POP3 access
+
+
+    SMTP IMAP and POP3 configurations
+
+
+    Mozilla Thunderbird configuration
+
+
+    SSL IMAP and POP3 settings
+
+
+    NON-SSL IMAP and POP3 settings
+
+
+    IMAP in action'
+  merge: -1
+  pgno: 182
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 183
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will discuss the following topics:
+
+
+    VM queue configurations
+
+
+    Integrating publish and consume component
+
+
+    Checking the logger results to understand publish and consume pattern
+
+
+    Checking publish consume pattern after changing consumer duration
+
+
+    Introducing Listener in the same queue
+
+
+    Consuming and listening from two different publishers'
+  merge: -1
+  pgno: 184
+- img_proc: true
+  md: '# Objective
+
+
+    After studying this unit, you will be able to learn about Virtual Machine Queue
+    configurations and how to use them.'
+  merge: -1
+  pgno: 185
+- img_proc: true
+  md: '# Introduction
+
+
+    **Virtual Machine Queue** is provided for developers to store their data which
+    can be used anywhere in the entire MuleSoft flow by referring to the queue details.
+    Let us see the steps involved in this.'
+  merge: -1
+  pgno: 186
+- img_proc: true
+  md: '# Starting the VM queue implementation
+
+
+    Let us start implementing the VM queue for a MuleSoft project by configuring the
+    VM and using the publish and consume future. The steps are given as follows:
+
+
+    # VM Config
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_187_0.png)
+
+
+    Figure 6.1: VM queue configuration'
+  merge: -1
+  pgno: 187
+- img_proc: true
+  md: 'Create a project and bring in a scheduler, then add the VM module to the project
+    and add a publish component.
+
+
+    In the connector configuration, choose general, queues, queues edit inline options.
+
+
+    Enter a new queue name, and transient must be the default option for queue type;
+    leave it as it is.
+
+
+    Max outstanding messages can be 100.
+
+
+    ```
+
+    name="VM_Config" doc:name="VM Config" doc:id="78001dfe-41d7-43c2-9fod-7f6c6fb6do6"
+    />
+
+    queueName="test" maxOutstandingMessages="100" />
+
+    queueName="test1" maxOutstandingMessages="100" />
+
+    queueName="test2" maxOutstandingMessages="100" />
+
+    ```'
+  merge: -1
+  pgno: 188
+- img_proc: true
+  md: '# Figure 6.2: Integrating publish and consume component
+
+
+    Add a new scheduler and bring in a consumer component, and specify the queue name
+    used by the publisher.
+
+
+    # Figure 6.3: Checking the logger results to understand publish and consume pattern
+
+
+    You can run the project and can see the preceding output.'
+  merge: -1
+  pgno: 189
+- img_proc: true
+  md: '```
+
+    name="vmconnectorFlow" doc:id="5683ab6-dce7-41ba-9b82-bf958ceo16eg" >
+
+    doc:name="Scheduler" doc:id="9634a62f-7744-4a6e-9115-6da169428a6e" >
+
+    frequency="2" timeUnit="SECONDS"
+
+    value="#[random() * 789]" doc:name="Set Payload"
+
+    doc:id="d1f6aa32-d646-439d-92af-486a822403cb" />
+
+    doc:name="Publish" doc:id="dba7ec07-6164-4a6f-9911-9c569f17d88
+
+    config-ref="VM_Config" queueName="test"
+
+    sendCorrelationId="ALWAYS" correlationId="#[correlationId]"/>
+
+    ```
+
+
+    ```
+
+    level="INFO" doc:name="Logger" doc:id="79c1a7e7-f616-4e11-a980-3c8a9b3a0199" message="#[''
+    published to test---- ++ payload'']"
+
+    name="vmconnectorFlow" doc:id="b7d27470-c4ba-479f-afcb-b366addff4f54 >
+
+    doc:name="Scheduler" doc:id="104d3dac-5a6a-48e1-92e6-3aa6e7748c8a >
+
+    frequency="4" timeUnit="SECONDS"/>
+
+    queueName="test2" doc:name="Consume" doc:id="0oc45548-2a05-451b-bc44-a717866d02f5"
+    config-ref="VM_Config"/>
+
+    level="INFO" doc:name="Logger" doc:id="995d745-b277-4269-9bfb8-ab871910d97e" message="#[''consumed----
+    ++ payload'']"/>
+
+    ```'
+  merge: -1
+  pgno: 190
+- img_proc: true
+  md: '```
+
+    ore.internal.processor.LoggerMessageProcessor: published---625.50990123441
+
+    ore.internal.processor.LoggerMessageProcessor: published---734.18852456111
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---625.685586742664
+
+    ore.internal.processor.LoggerMessageProcessor: published---781.45762742621
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---734.18852456111
+
+    ore.internal.processor.LoggerMessageProcessor: published---415.188538752967
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---131.39773314452
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---270.65038833333
+
+    ore.internal.processor.LoggerMessageProcessor: published---445.24811574353
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---781.45762742621
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---680.89425188284
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---546.538232170863
+
+    ore.internal.processor.LoggerMessageProcessor: published---415.188538752967
+
+    ore.internal.processor.LoggerMessageProcessor: published---409.020886188284
+
+    ore.internal.processor.LoggerMessageProcessor: published---412.994588331327
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---131.39773314452
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---133.90425842649
+
+    ore.internal.processor.LoggerMessageProcessor: published---756.698556431703
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---342.180745826552
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---238.63435933333
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---260.301762267931
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---445.24811574353
+
+    ore.internal.processor.LoggerMessageProcessor: published---770.364365935964
+
+    ore.internal.processor.LoggerMessageProcessor: published---471.923932712767
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---283.587441544298
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---546.538232170863
+
+    ore.internal.processor.LoggerMessageProcessor: consumed---678.975642228411
+
+    ore.internal.processor.LoggerMessageProcessor: published---188.474592690417
+
+    ore.internal.processor.LoggerMessageProcessor: published---337.6320037513403
+
+    ```
+
+
+    # Figure 6.4: Checking publish and consume pattern after changing consumer duration
+
+
+    You can modify the intervals of publishers and consumer to understand the behavior.'
+  merge: -1
+  pgno: 191
+- img_proc: true
+  md: 'Figure 6.5: Introducing listener in the same queue
+
+
+    You can introduce a listener and consumer with different frequencies in the queue.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_192_0.png)
+
+
+    Figure 6.6: Consuming and listening from two different publishers'
+  merge: -1
+  pgno: 192
+- img_proc: true
+  md: 'Finally, the preceding flow shows how to introduce different publishers to
+    post messages in different queues and how to assign a consumer and a listener
+    for different queues.
+
+
+    ```
+
+    name="vmconnectorFlow" doc:id="5e17f1ao-6937-4022-aaca-b81a7b467fie" >docname="Scheduler"
+    doc:id="38baa7a-b770-4bd8-ae9f-22bf91b79952" >frequency="1" timeUnit="SECONDS"/>value="#[random()
+    * 789]" doc:name="Set Payload" doc:id="58e7479f-90e5-49b3-90f7-44a782af5079"/
+
+    ```
+
+
+    ```
+
+    queueName="test2" doc:name="Publish" doc:id="5a272082-40ec-4123-af4a-b1159a82dd14"
+    config-ref="VM_Config"/level="INFO" doc:name="Logger" doc:id="8b5f8660-0366-4f6d-b656-31acdd93e021"
+    message="#[''published to test2---- ++ payload'']/name="vmconnectorFlow" doc:id="78038b23-ed47-4869-9b38-8d648fb1e6d"
+    >queueName="test2" doc:name="Listener" doc:id="9b80667d-8483-415c-b093-e6139bec106"
+    config-ref="VM_Config"/level="INFO" doc:name="Logger" doc:id="2e258fe2-73fe-4896-a196-coc7cf6a341a"
+    message="#[''Listening'' ++ payload'']"/
+
+    ```'
+  merge: -1
+  pgno: 193
+- img_proc: true
+  md: '# Conclusion
+
+
+    In this chapter, we learned about VM connectors and usage scenarios. In the upcoming
+    chapter, we will study about JMS connectors.'
+  merge: -1
+  pgno: 194
+- img_proc: true
+  md: '# Point to remember
+
+
+    Apply practical examples to use VM connectors for different business scenarios
+    such as banking, logistics, and so on.'
+  merge: -1
+  pgno: 195
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    VM queue
+
+
+    Publish and consume component
+
+
+    Listener
+
+
+    Consuming and listening'
+  merge: -1
+  pgno: 196
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 197
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will discuss the following topics:
+
+
+    Downloading ApacheMQ
+
+
+    Checking the ApacheMQ installation
+
+
+    ActiveMQ Web interface
+
+
+    Queue creation
+
+
+    Checking the created queues
+
+
+    Checking the created topics
+
+
+    Configuring ApacheMQ connector
+
+
+    Using publish and consume components
+
+
+    Result of publish and consume flow
+
+
+    Understanding listener component
+
+
+    Listener component in action'
+  merge: -1
+  pgno: 198
+- img_proc: true
+  md: Result of listener and consumer combination
+  merge: -1
+  pgno: 199
+- img_proc: true
+  md: '# Objectives
+
+
+    After studying this unit, you will be able to:
+
+
+    Install ActiveMQ in your local machine
+
+
+    Create queues and topics
+
+
+    Publish and consume messages to queues through MuleSoft connectors'
+  merge: -1
+  pgno: 200
+- img_proc: true
+  md: '# Introduction
+
+
+    ActiveMQ is a popular open-source Java-based messaging server. In the ActiveMQ
+    server, queues and topics can be created, and publishers and consumers can publish
+    and consume their messages.
+
+
+    Let us see the steps involved in installing ActiveMQ, MuleSoft connector configuration,
+    and publish and consume through MuleSoft connector.'
+  merge: -1
+  pgno: 201
+- img_proc: true
+  md: '# Getting started with ApacheMQ
+
+
+    Have some basic understanding of messaging systems and their practical usage in
+    projects. Follow the steps involved in installing ApacheMQ, and integrate with
+    the MuleSoft MQ connector and test the ApacheMQ features.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_202_0.png)
+
+
+    These are the current releases. For prior releases, please see the past releases
+    page.
+
+
+    ActiveMQ 5.16.1 (Jan 20, 2021)
+
+
+    Release Notes | Release Page | Documentation
+
+
+    | | | | |
+
+    |---|---|---|---|
+
+    | Windows | apache-activemq-5.16.1-bin.zip | SHAS12 | GPG Signature |
+
+    | Unix/Linux/Cygwin | apache-activemq-5.16.1-bin.tar.gz | SHAS12 | GPG Signature
+    |
+
+    | Source Code Distribution | activemq-parent-5.16.1-source-release.zip | SHAS12
+    | GPG Signature |
+
+
+    **Figure 7.1:** Downloading ApacheMQ
+
+
+    You can download the ActiveMQ open-source message broker from the site https://activemq.apache.org/
+
+
+    We have downloaded'
+  merge: -1
+  pgno: 202
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_203_0.png)
+
+
+    # Figure 7.2: Checking the ApacheMQ installation
+
+
+    The zip file can be extracted from your local machine, as shown in figure
+
+
+    Get into win64** folder and run the ActiveMQ batch file from the command line.
+
+
+    You can see the following success message:
+
+
+    jvm 1 | INFO | ActiveMQ WebConsole available at http://127.0.0.1:8161/
+
+    jvm 1 | INFO | ActiveMQ Jolokia REST API available at http://127.0.0.1:8161/api/jolokia/'
+  merge: -1
+  pgno: 203
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_204_0.png)
+
+
+    # Figure 7.3: ActiveMQ Web interface
+
+
+    You can access the ActiveMQ WebConsole available at **http://127.0.0.1:8161/**
+
+
+    The ActiveMQ Web console/admin page will be opened as shown in [figure](#)'
+  merge: -1
+  pgno: 204
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_205_0.png)
+
+
+    # Figure 7.4: Queue creation
+
+
+    By clicking the manage ActiveMQ broker link, you can reach the admin home page.
+
+
+    You can see the options for creating a queue, topics, and so on.'
+  merge: -1
+  pgno: 205
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_206_0.png)
+
+
+    Figure 7.5: Checking the created queues
+
+
+    Create queue names of your choice and check them out.'
+  merge: -1
+  pgno: 206
+- img_proc: true
+  md: '# ActiveMQ
+
+
+    Home | Queues | Topics | Subscribers | Connections | Network | Scheduled | Send
+
+
+    Topic Name [ ] Create
+
+
+    # Topics
+
+
+    | Name | Number Of Consumers | Messages Enqueued | Mer |
+
+    |---|---|---|--|
+
+    | ActiveMQ.Advisory.MasterBroker | 0 | 1 | 0 |
+
+    | ActiveMQ.Advisory.Queue | 0 | 3 | 0 |
+
+    | ActiveMQ.Advisory.Topic | 0 | 2 | 0 |
+
+    | topic1 | 0 | 0 | 0 |
+
+    | topic2 | 0 | 0 | 0 |
+
+
+    Figure 7.6: Checking the created topics
+
+
+    Create a topics name of your choice and check it out.'
+  merge: -1
+  pgno: 207
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_208_0.png)
+
+
+    Create a new flow to introduce a scheduler and add a publish component next to
+    that after adding the generic JMS module to your project.
+
+
+    In the connector, configuration adds a new connector choose connection as ActiveMQ
+    connection.
+
+
+    For the required libraries, click the **Configure** button and choose to add recommended
+    libraries option.
+
+
+    Then in the and **Client id** fields, provide the values as admin, admin, and
+    respectively.'
+  merge: -1
+  pgno: 208
+- img_proc: true
+  md: 'Your test connection must be a success now.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_209_0.png)
+
+
+    **Figure 7.8: Using publish and consume components**
+
+
+    In the publish component destination, specify the queue name you have created
+    in the ActiveMQ Web console.
+
+
+    The destination type must be a queue.
+
+
+    In the message body, provide the function value as * 1789"; this will generate
+    random numbers for you.
+
+
+    Add a **Consumer** component next to publish, then choose the **JMS_config** and
+    queue.
+
+
+    Next to add a **Logger** and use payload as the message.'
+  merge: -1
+  pgno: 209
+- img_proc: true
+  md: 'Now, you can run the project.
+
+
+    ```
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****751.882116405329
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****650.139860500953
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****102.735542452181
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****898.2559336117087
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****117.2418246859161
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****141.2834333333338
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****139.8069411495904
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****192.4576322133595
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****1816.790273521017
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****1169.297035847672
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****27.3847022923614
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****356.9305513333333
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****17.0266533755437
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****134.894724020123
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****150.3333333333333
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****829.904273908777
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****146.1415558716415
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****160.5333333333333
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****133.016183106216
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****222.1427720682606
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****184.5333333333333
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****557.0378372429568
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****1655.0483525122187
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****560.5333333333334
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****1024.9070411202687
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****1189.0085609591703
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****1298.1933333333333
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****1181.9834885089858
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****82.48794163542404
+
+    .core.internal.processor.LoggerMessageProcessor: ****message consumed****188.77112356409123
+
+    ```
+
+
+    # Figure 7.9: Result of publish and consume flow
+
+
+    For each message published into the queue, the consumer will consume the same,
+    and the logger will print the message in the console, as shown in figure'
+  merge: -1
+  pgno: 210
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_211_0.png)
+
+
+    Figure 7.10: Understanding listener component
+
+
+    In the same canvases, bring in an On New Message listener and provide the listening
+    queue name as
+
+
+    Add a publisher at the end and pass some messages to
+
+
+    Run the project, and the listener will ping a log message for each message published.'
+  merge: -1
+  pgno: 211
+- img_proc: true
+  md: '```
+
+    .LoggerMessageProcessor: ****new message arrived******659.688416050732
+
+    .LoggerMessageProcessor: ****new message consumed******514.450144232319
+
+    .LoggerMessageProcessor: ****new message arrived******
+
+    .LoggerMessageProcessor: ****new message consumed******1991.7271046460898
+
+    .LoggerMessageProcessor: ****new message arrived******1586.143823721816
+
+    .LoggerMessageProcessor: ****new message consumed******401.7822275856324
+
+    .LoggerMessageProcessor: ****new message arrived******342.228663785224
+
+    .LoggerMessageProcessor: ****new message consumed******1114.1697312746371
+
+    .LoggerMessageProcessor: ****new message arrived******090.118628650866
+
+    .LoggerMessageProcessor: ****new message consumed******1748.3910252850594
+
+    .LoggerMessageProcessor: ****new message arrived******104.616557363112882
+
+    .LoggerMessageProcessor: ****new message consumed******001.83837611132
+
+    .LoggerMessageProcessor: ****new message arrived******
+
+    .LoggerMessageProcessor: ****new message consumed******429.9505923466089
+
+    .LoggerMessageProcessor: ****new message arrived******402.6537982058644
+
+    .LoggerMessageProcessor: ****new message consumed******313.877592766388
+
+    ```
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_212_0.png)
+
+
+    This is the result of introducing an On New Message component; the process can
+    be anything after listening to a new message.'
+  merge: -1
+  pgno: 212
+- img_proc: true
+  md: '# Figure 7.12: Result of listener and consumer combination
+
+
+    Here, we are putting payloads consumed through a
+
+    consumer and a listener.
+
+
+    The entire configuration XML contents are given as follows:
+
+
+    name="JMS_Config" doc:name="JMS Config" doc:id="31fc8b44-7156-
+
+    4ab1-aff30-fo436530of16" >
+
+
+    username="admin" password="admin" clientID="127.0.0.1:8161" />
+
+    name="jmsFlow" doc:id="7bcaceee7-b823-4876-847a-7bod9902b632" >
+
+    doc:name="Scheduler" doc:id="2016c222-d8d7-46c3-9314-
+
+    f61bo0811c4f7" >
+
+
+    />'
+  merge: -1
+  pgno: 213
+- img_proc: true
+  md: '```
+
+    value="#[random() * 2000"] doc:name="Set Payload"
+
+    doc:id="f76718d5-4200-45a0-72d9d51a1910" /
+
+    doc:name="Publish" doc:id="f37014dc-6a60-46be-97a9-1d2f99cff90"
+
+    config-ref="JMS_Config" destination="queue1"/
+
+    doc:name="Consume" doc:id="aade19c4-3965-45fb-ba24-4fsea214cdf2"
+
+    config-ref="JMS_Config" destination="queue1"/
+
+    level="INFO" doc:name="Logger" doc:id="626f7f70-f7a3-4a07-94e5-
+
+    e6c6c851cba8" message="#[''*****message consumed*****''] ++
+
+    payload" / /
+
+    doc:name="Publish" doc:id="ff42981a-bd3f-478c-8f51-a6c8a2848d24"
+
+    destination="queue2" config-ref="JMS_Config"/
+
+    name="jmsFlow" doc:id="3b53d96d-1dba-4019-bc5b-18fdb76186bc" >
+
+    doc:name="On Message" doc:id="70421b6f-0418-486d-a4a5-
+
+    0218fe467e9" config-ref="JMS_Config" destination="queue2"/
+
+    level="INFO" doc:name="Logger" doc:id="a345d991-ab48-4ed7-b590-
+
+    2boe29e851375" message="#[''************new message
+
+    arrived*********''] ++ payload" />
+
+    ```'
+  merge: -1
+  pgno: 214
+- img_proc: true
+  md: '# Conclusion
+
+
+    We hope you have have understood the ApacheMQ installation, queue creation, MuleSoft
+    Connectivity procedures, and publish and consume operations. In the upcoming chapter,
+    we will study about AMQP connectors.'
+  merge: -1
+  pgno: 215
+- img_proc: true
+  md: '# Point to remember
+
+
+    Try the JMS connectivity with other JMS providers as well; you can try some of
+    the cloud-based JMS providers also.'
+  merge: -1
+  pgno: 216
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    ApacheMQ
+
+
+    ActiveMQ Web interface
+
+
+    Queue creation
+
+
+    ApacheMQ connector
+
+
+    Publish and consume components
+
+
+    Listener component'
+  merge: -1
+  pgno: 217
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 218
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will discuss the following topics:
+
+
+    RabbitMQ installation and enabling management plugins and running
+
+
+    Accessing RabbitMQ Web management interface
+
+
+    AMQP connector configurations
+
+
+    Using publish and listener components
+
+
+    Publish and listener components in action'
+  merge: -1
+  pgno: 219
+- img_proc: true
+  md: '# Objectives
+
+
+    After studying this unit, you will be able to:
+
+
+    +   Install and run RabbitMQ
+
+
+    +   Access RabbitMQ Web management interface
+
+
+    +   Connect AMQP with MuleSoft
+
+
+    +   Publish and consume messages'
+  merge: -1
+  pgno: 220
+- img_proc: true
+  md: '# Introduction
+
+
+    We have seen VM queue in our previous chapters, which is an in-built messaging
+    platform that comes with MuleSoft as a component. Then we have seen a Java messaging
+    platform called Apache MQ which will act as an external JMS platform. In this
+    chapter, let us explore one more messaging middleware called RabbitMQ, which is
+    supporting AMQ protocol, i.e., advanced message queuing protocol. We are not going
+    to explore the AMQP specific functionalities, and that is not our intention here;
+    rather, we understanding the software installation and connecting the AMQP server
+    using the MuleSoft AMQP connector. Let us see the steps involved to do so.'
+  merge: -1
+  pgno: 221
+- img_proc: true
+  md: '# Install and run RabbitMQ
+
+
+    ```
+
+    C:\Windows\System32\cmd.exe - rabbitmq-server
+
+    Microsoft Windows [Version 10.0.19045]
+
+    (C)2015 Microsoft Corporation. All rights reserved.
+
+    C:\Program Files\RabbitMQ\Server\rabbitmq-server-3.8.14\bin\rabbitmq-plugins enable
+    rabbitmq_management
+
+    (enabled all plugins for rabbit@DESKTOP-9U7EE0:)
+
+    The following plugins have been configured:
+
+    rabbitmq_management
+
+    rabbitmq_agent
+
+    rabbitmq_web_dispatch
+
+    -configuration to rabbit@DESKTOP-9U7EE0:
+
+    Plugin configuration unchanged.
+
+    C:\Program Files\RabbitMQ\Server\rabbitmq-server-3.8.14\bin\rabbitmq-plugins
+
+    Configuring logger redirection
+
+    11:21:36.770 (warning) Using RABBITMQ_ADVANCED_CONFIG_FILE: C:/Users/Admin/AppData/Roaming/RabbitMQ/advanced.config
+
+    ```
+
+
+    **Figure 8.1:** RabbitMQ installation and enabling management plugins and running
+
+
+    Download rabbitmq_server-3.8.14 binary and unzip the file to your local directory.
+
+
+    Get into the sbin directory and execute the following commands.
+
+
+    rabbitmq-plugins enable rabbitmq_management
+
+
+    rabbitmq-server
+
+
+    These procedures will enable RabbitMQ management console and the server to be
+    started now.'
+  merge: -1
+  pgno: 222
+- img_proc: true
+  md: '# Access RabbitMQ Web management interface
+
+
+    Access the following URL. And use guest, guest as the username and password, respectively.
+
+
+    http://localhost:15672/
+
+
+    You can visit the RabbitMQ management console, as shown in figure
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_223_0.png)
+
+
+    Figure 8.2: Accessing RabbitMQ Web management interface'
+  merge: -1
+  pgno: 223
+- img_proc: true
+  md: "# Connect AMQP with MuleSoft\n\nCreate a Mule project and bring in a scheduler\
+    \ component.\n\nAdd the AMQP module to the project and add a Publish component\
+    \ next to the scheduler.\n\nIn the publish component property panel, you can see\
+    \ the option to create an AMQP connector.\n\nOpen the connector configuration\
+    \ and provide the server, username and password details as shown in figure\n\n\
+    Your connector configuration in the config XML file must be looking like this.\n\
+    \n```\nname=\"AMQP_Config\" docname=\"AMQP Config\" doc:id=\"5c39b16-81a6-41d7-a293-fe470971e2c7\"\
+    \ \nhost=\"localhost\" username=\"guest\" password=\"guest\" />\n```"
+  merge: -1
+  pgno: 224
+- img_proc: true
+  md: "# AMQP Config\n\nBase configuration for AmqpConnector\n\n| General | Consumer\
+    \ | Publisher | Quality of Service | Advanced | Notes | Help |\n\nName: AMQP_Config\n\
+    \nConnection\n\n| General | Socket Configuration | TLS | Advanced |\n\nConnection\n\
+    \nHost: localhost\n\nPort: /\n\nVirtual host: \n\nUsername: guest\n\nPassword:\
+    \ guest [Show password]\n\n+   - Use tls\n- Use snii\n\nHeartbeat timeout: 60\n\
+    \nFallback addresses: None\n\nGeneral\n\nTest Connection... OK Cancel\n\nFigure\
+    \ 8.3: AMQP connector configurations"
+  merge: -1
+  pgno: 225
+- img_proc: true
+  md: '# Publish and consume messages
+
+
+    Create a publish component in the first flow after the scheduler and provide the
+    queue details and pass the payload to the queue. Once you have done this, your
+    config file flow will look like the following:
+
+
+    ```
+
+    doc-name="Publish" doc:id="91e07840-3249-4efa-8da6-c02116855826"
+
+    config-ref="AMQP_Config" exchangeName="amq.topic">
+
+    {
+
+    signment_number: randomInt(10000),
+
+    items: "Cosmetics"
+
+    ]]>
+
+    priority="3"
+
+    ```
+
+
+    Now bring in a AMQP listener and point it to the message published queue. So that
+    your amqp listener config XML will look like the following:
+
+
+    ```
+
+    doc-name="Listener" config-ref="AMQP_Config"
+
+    queueName="test"//>
+
+    doc-name="Transform Message" >
+
+    >2.0
+
+    output application/xml
+
+    ---
+
+    ```'
+  merge: -1
+  pgno: 226
+- img_proc: true
+  md: '```
+
+    {
+
+    items: payload
+
+    ]]>
+
+    level="INFO" docName="Logger" message="#[payload.items]" />
+
+    ```
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_227_0.png)
+
+
+    **Figure 8.4:** Using publish and listener components
+
+
+    Here is the completed AMQP flow with publish and listener components.
+
+
+    On running the project, the following illustrated logger results can be obtained.'
+  merge: -1
+  pgno: 227
+- img_proc: true
+  md: '```
+
+    INFO 2023-03-12 15:46:27,042 [[MuleRuntime].uber.28: [sftp].sftpFlow.BLOCKING
+    @67f24050
+
+    org.mule.runtime.core.internal.processor.LoggerProcessor: message published
+
+    INFO 2023-03-12 15:46:27,844 [[MuleRuntime].uber.22: [sftp].sftpFlow1.CPU_INTENSIVE
+    @196
+
+    org.mule.runtime.core.internal.processor.LoggerProcessor: message consumed
+
+    INFO 2023-03-12 15:46:27,844 [[MuleRuntime].uber.22: [sftp].sftpFlow1.CPU_INTENSIVE
+    @196
+
+    org.mule.runtime.core.internal.processor.LoggerProcessor: message consumed {
+
+    consignment_number: "5576'',
+
+    supplier: "Alliance",nitems: "Cosmetics"
+
+    }
+
+    INFO 2023-03-12 15:46:30,841 [[MuleRuntime].uber.23: [sftp].sftpFlow.BLOCKING
+    @67f24050
+
+    org.mule.runtime.core.internal.processor.LoggerProcessor: message published
+
+    INFO 2023-03-12 15:46:30,844 [[MuleRuntime].uber.22: [sftp].sftpFlow1.CPU_INTENSIVE
+    @196
+
+    org.mule.runtime.core.internal.processor.LoggerProcessor: message consumed
+
+    INFO 2023-03-12 15:46:30,844 [[MuleRuntime].uber.22: [sftp].sftpFlow1.CPU_INTENSIVE
+    @196
+
+    org.mule.runtime.core.internal.processor.LoggerProcessor: message consumed {
+
+    consignment_number: "1564'',
+
+    supplier: "Alliance",nitems: "Cosmetics"
+
+    }
+
+    INFO 2023-03-12 15:46:33,846 [[MuleRuntime].uber.23: [sftp].sftpFlow.BLOCKING
+    @67f24050
+
+    org.mule.runtime.core.internal.processor.LoggerProcessor: message published
+
+    INFO 2023-03-12 15:46:33,858 [[MuleRuntime].uber.22: [sftp].sftpFlow1.CPU_INTENSIVE
+    @196
+
+    org.mule.runtime.core.internal.processor.LoggerProcessor: message consumed
+
+    INFO 2023-03-12 15:46:33,858 [[MuleRuntime].uber.22: [sftp].sftpFlow1.CPU_INTENSIVE
+    @196
+
+    org.mule.runtime.core.internal.processor.LoggerProcessor: message consumed {
+
+    INFO 2023-03-12 15:46:33,852 [[MuleRuntime].uber.22: [sftp].sftpFlow1.CPU_INTENSIVE
+    @196
+
+    org.mule.runtime.core.internal.processor.LoggerProcessor: message consumed {
+
+    consignment_number: "8160'',
+
+    supplier: "Alliance",nitems: "Cosmetics"
+
+    }
+
+    ```
+
+
+    # Figure 8.5: Publish and listener components in action'
+  merge: -1
+  pgno: 228
+- img_proc: true
+  md: '# Conclusion
+
+
+    In this chapter, we have installed, run, and tested the RabbitMQ AMQP messaging
+    broker. We have connected the AMQP server with our MuleSoft AMQP server, and we
+    have published and consumed messages from the server. In the upcoming chapter,
+    we are going to study about scripting engine connectors to connect and execute
+    other scripting programs such as Groovy and Python from the MuleSoft scripting
+    connector.'
+  merge: -1
+  pgno: 229
+- img_proc: true
+  md: '# Points to remember
+
+
+    You can explore more real-time use cases for AMQP protocol and integrate with
+    MuleSoft.
+
+
+    You can try some of the cloud-based AMQP messaging brokers also.'
+  merge: -1
+  pgno: 230
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    RabbitMQ installation
+
+
+    Enabling management plugins
+
+
+    RabbitMQ Web management interface
+
+
+    AMQP connector
+
+
+    Publish and listener components'
+  merge: -1
+  pgno: 231
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 232
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will discuss the following topics:
+
+
+    Script engine basics
+
+
+    Groovy, Python, Ruby, and ECMAScript engines'
+  merge: -1
+  pgno: 233
+- img_proc: true
+  md: '# Objectives
+
+
+    After studying this unit, you will be able to learn:
+
+
+    What scripting engine is
+
+
+    How to integrate with script engines
+
+
+    How to execute Groovy, Python, Ruby, and ECMAScript engines from MuleSoft'
+  merge: -1
+  pgno: 234
+- img_proc: true
+  md: '# Introduction
+
+
+    Other than the routine MuleSoft programming, there may be a need for custom code
+    creation via different script engines for various business needs such as asynchronous
+    executions of larger batch jobs, file reads, logger monitoring, MuleSoft directory
+    access, and so on. MuleSoft comes out with a scripting component using which we
+    can link the scripting engines such as Groovy, Python, Ruby, and ECMAScript into
+    our flow to achieve specific business paradigms. Let us see how to execute these
+    kinds of script codes from MuleSoft flows.'
+  merge: -1
+  pgno: 235
+- img_proc: true
+  md: '# Scripting engine
+
+
+    There are a lot of differences between programming language and scripting languages,
+    the way it is written and executed and the purpose they solve. For example, the
+    JavaScript language need not have a compiler; you write a series of commands,
+    and an in-built JavaScript engine that is embedded into your browser can start
+    executing the commands you have written. This is the same in the case of scripting
+    languages such as Jython, Groovy, and Ruby. Whereas a programming language like
+    Java needs a compiler and an interpreter for compiling and executing the binaries.
+
+
+    When it comes to usage, the scripting languages will be used for larger non-transactional
+    activities where there is no need of applying a lot of efforts such as memory
+    management, object storage, transactions, acknowledements, persisting object states,
+    and so on.
+
+
+    Imagine a practical scenario like a project handling larger file collection that
+    means, from various parts of the world, the files are generated and dumped in
+    a file system in a larger volume, say a million of tiny files per second. In this
+    case, the architecture design of the project is not demanding maintenance of transactional
+    details like from where the file is written into the system or should the file
+    any transactional ID so that when reading the file, the transaction IDs must be
+    carried inside the database.'
+  merge: -1
+  pgno: 236
+- img_proc: true
+  md: Instead, the design may insist on just reading the file, inserting the contents
+    in a database and deleting the files. In this case, there is no need of using
+    an object-oriented or memory and resource-hungry programming language because
+    the heap memory of that programming language may go for a toss. So, in this case,
+    if that programming language delegates these kinds of “do and forget” tasks to
+    a scripting programming script, then the efficiency also will be improved, and
+    complex transactional and memory-related situations can be avoided.
+  merge: -1
+  pgno: 237
+- img_proc: true
+  md: '# Execute ECMA scripts
+
+
+    Oracle Nashhorn ECMA script comes by default with MuleSoft, so there is no need
+    to make any additional set-up; let us see the steps involved in executing ECMA
+    scripts.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_238_0.png)
+
+
+    **Figure 9.1:** Create MuleSoft flows and bring in the scripting component
+
+
+    Create a Mule flow as shown in figure_ and add the **Scripting** module and bring
+    it to the canvas as shown.'
+  merge: -1
+  pgno: 238
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_239_0.png)
+
+
+    Figure 9.2: Configuring ECMA scripting engine
+
+
+    Select the **Engine** from the canvas in the properties panel, choose the Engine
+    as **Oracle Nashorn** and provide the **print** statement, as shown in figure
+
+
+    Your completed flow code must look like this. Call this from browser or postman
+    using the endpoint localhost:8081/Nashorn, and you can see the engine got invoked,
+    and the corresponding values are printed in browser and console.
+
+
+    name="nashornFlow" doc:id="af7474c9-b833-4482-93d1-acoe2752c5b4"
+
+    doc:name="Listener" doc:id="05452d74-b3be-402a-be3c-4bb9da52872b2" config-ref="HTTP_Listener_config"
+    path="nashorn"/
+
+    engine="ECMAScript" doc:name="Execute" doc:id="cb698e1e-64fe-4064-8e30-9990e8eb2f89"
+    >'
+  merge: -1
+  pgno: 239
+- img_proc: true
+  md: '```
+
+    >ORACLE NASHORN ECMASCRIPT SCRIPTING
+
+    ENGINE********************'');]]>
+
+    value="ORACLE NASHORN ECMASCRIPT ENGINE CALLED"
+
+    doc:name="Set Payload" doc:id="e555334d-442d-4a5b-bda6-ac271df11e5" />
+
+    ```'
+  merge: -1
+  pgno: 240
+- img_proc: true
+  md: "# Execute Groovy, Python, and Ruby scripts\n\nFor Groovy, Python, and Ruby,\
+    \ we need to do the following entries in the POM file.\n\nAdd the following entries\
+    \ in your POM dependency section.\n\n```\norg.codehaus.groovy\ngroovy-all\n2.4.16\n\
+    indy\norg.ruby\njyruby-core\n9.2.11.1\norg.python\njnython-standalone\n2.7.2\n\
+    ```\n\n<dependency>\n  <groupId>org.mule</groupId>\n  <artifactId>mule-plugin</artifactId>\n\
+    \  <version>2.0.0</version>\n</dependency>\n<dependency>\n  <groupId>org.codehaus.groovy</groupId>\n\
+    \  <artifactId>groovy-all</artifactId>\n  <version>2.4.16</version>\n  <type>indy</type>\n\
+    </dependency>\n<dependency>\n  <groupId>org.ruby</groupId>\n  <artifactId>jyruby-core</artifactId>\n\
+    \  <version>9.2.11.1</version>\n</dependency>\n<dependency>\n  <groupId>org.python</groupId>\n\
+    \  <artifactId>jnython-standalone</artifactId>\n  <version>2.7.2</version>\n</dependency>"
+  merge: -1
+  pgno: 241
+- img_proc: true
+  md: 'Figure 9.3: POM file entries for Groovy, Python, and Ruby dependencies
+
+
+    Open the POM file and check in the design tab; your entries must be reflected,
+    as shown in figure
+
+
+    Add the following shared libraries entries to your POM build section:
+
+
+    ```
+
+    org.apache.maven.plugins
+
+    maven-clean-plugin
+
+    3.0.0
+
+    org.mule.tools.maven
+
+    mule-maven-plugin
+
+    ${mule.maven.plugin.version}
+
+    true
+
+    org.codehaus.groovy
+
+    groovy-all
+
+    org.python
+
+    jython-standalone
+
+    ```
+
+
+    ```
+
+    org.jruby
+
+    jruby-core
+
+    ```'
+  merge: -1
+  pgno: 242
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_243_0.png)
+
+
+    Figure 9.4: Adding shared libraries entries for Groovy, Python, and Ruby in build
+    sections
+
+
+    After adding the shared libraries entries, your POM should reflect as shown in
+    figure
+
+
+    Go to the project, and create another three flows and follow the same three steps
+    we have used for the ECMA script.'
+  merge: -1
+  pgno: 243
+- img_proc: true
+  md: "```\n<http:listener name=\"nashorn\" config-ref=\"HTTP_Listener_config\" path=\"\
+    nashorn\"/>\n<script:execute engine=\"ECMAScript\" doc:name=\"Execute\">\n  <script:code><![CDATA[print('FROM\
+    \ ECMASCRIPT SCRIPTING ENGIN;')]]></]></script:code>\n</script:execute>\n<set-payload\
+    \ value=\"ORACLE NAS ECMASCRIPT ENGINE CALLED\" doc:name=\"Set Payload\" />\n\
+    </flow>\n<flow name=\"Groovy\">\n  <http:listener name=\"Listener\" config-ref=\"\
+    HTTP_listener_config\" path=\"groovy\"/>\n  <script:execute engine=\"Groovy\"\
+    \ doc:name=\"Execute\">\n  <script:code><![CDATA[println('FROM GROOVY SCRIPTING\
+    \ ENGIN;')]]></]></script:code>\n  </script:execute>\n  <set-payload value=\"\
+    GROOVY ENGINE CALLED\" doc:name=\"Set Payload\" />\n</flow>\n<flow name=\"Pyton\"\
+    >\n  <http:listener name=\"Listener\" config-ref=\"HTTP_listener_config\" path=\"\
+    python\"/>\n  <script:execute engine=\"Execute\" doc:name=\"python\">\n  <script:code><![CDATA[print('FROM\
+    \ PYTHON SCRIPTING ENGIN')]]]]></]></script:code>\n  </script:execute>\n  <set-payload\
+    \ value=\"PYTHON ENGINE CALLED\" doc:name=\"Set Payload\" />\n</flow>\n<flow name=\"\
+    Ruby\">\n  <http:listener name=\"Listener\" config-ref=\"HTTP_listener_config\"\
+    \ path=\"ruby\"/>\n  <script:execute engine=\"ruby\" doc:name=\"Execute\">\n \
+    \ <script:code><![CDATA[puts('FROM Ruby SCRIPTING ENGIN;]]]]></]></script:code>\n\
+    \  </script:execute>\n  <set-payload value=\"RUBY ENGINE CALLED\" doc:name=\"\
+    Set Payload\" />\n</flow>\n```\n\n# Figure 9.5: Setting up MuleSoft flows for\
+    \ Groovy, Python, and Ruby script engines\n\nAfter creating another three different\
+    \ flows for Groovy, Python, and Ruby, your script will look like this.\n\nNow\
+    \ call all engines triggering the following endpoints and check the result in\
+    \ browser and console. The results are shown in\n\nhttp://localhost:8081/groovy\n\
+    http://localhost:8081/nashorn\nhttp://localhost:8081/jyton\nhttp://localhost:8081/ruby"
+  merge: -1
+  pgno: 244
+- img_proc: true
+  md: '```
+
+    ****From GROOVY SCRIPTING ENGINE******
+
+    INFO 2021-05-09 21:13:18,123 [http-03 SelectorRunner] org.mule.service.impl.util.DefaultReque:
+
+    INFO 2021-05-09 21:13:18,245 [http-03 SelectorRunner] org.mule.service.impl.util.DefaultReque:
+
+    ***From ORACLE NASHORN ECMASCRIPT SCRIPTING ENGINE******
+
+    ***From PYTHON JYTHON SCRIPTING ENGINE******
+
+    ***From RUBY SCRIPTING ENGINE******
+
+    ```
+
+
+    Figure 9.6: Invoking all ECMA Groovy, Python, and Ruby scripts result'
+  merge: -1
+  pgno: 245
+- img_proc: true
+  md: '# Conclusion
+
+
+    We have covered the basics of scripting engines and were able to integrate and
+    execute ECMAScript, Groovy, Python, and Ruby scripts using the MuleSoft scripting
+    component. In this chapter, we get to know the key concepts of MuleSoft, like
+    how it started, the background and the resources available to make you take a
+    deep dive. We covered the concepts like ESB and system integrations as well. The
+    upcoming chapter will explain you the internals of MuleSoft, like how it has been
+    designed to address various technical segments and audiences.'
+  merge: -1
+  pgno: 246
+- img_proc: true
+  md: '# Points to remember
+
+
+    We are not getting detailed into the programming aspects of scripting because,
+    in real-time scenarios, the MuleSoft developers will be invoking the existing
+    scripts rather developing the same.
+
+
+    Try to explore some more scripting engines and understand various usage of the
+    asynchronous programming model.'
+  merge: -1
+  pgno: 247
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    Scripting engine
+
+
+    Groovy
+
+
+    ECMA script
+
+
+    Python
+
+
+    Ruby'
+  merge: -1
+  pgno: 248
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 249
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will discuss the following topic:
+
+
+    SFTP connector'
+  merge: -1
+  pgno: 250
+- img_proc: true
+  md: '# Introduction
+
+
+    In MuleSoft connectors, the operations performed using the File, FTP, and SFTP
+    connectors are the same. So, in this chapter, we are going to just connect to
+    a Web-based SFTP demo server to make sure the SFTP connection is established.
+    Before that, the difference between FTP and SFTP is, for security reasons, the
+    **Secured File Transfer Protocol** is using a mechanism called SSH. There are
+    a lot of open-source SFTP servers available in the market, and right now, our
+    aim is to not getting deep into the SFTP concepts, so let us see the steps involved
+    in using an SFTP connector quickly. This means in real-time, you will be provided
+    with all SFTP server details, username and passwords so that you can simply establish
+    the connection and use all file-related operations we have done in [Chapter 3,
+    File]'
+  merge: -1
+  pgno: 251
+- img_proc: true
+  md: '# SFTP connector
+
+
+    Let us start exploring the Secured File Transfer Protocol with some practical
+    examples.
+
+
+    SFTP Config
+
+    Default configuration
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_252_0.png)
+
+
+    Figure 10.1: SFTP connector'
+  merge: -1
+  pgno: 252
+- img_proc: true
+  md: 'Please follow the following steps to configure the SFTP server.
+
+
+    Create a basic Mule project and bring in a scheduler endpoint.
+
+
+    Add SFTP connector to your project, and you can see all file operations.
+
+
+    Add file read component and check the SFTP connector configurations.
+
+
+    It will be asking for SFTP server details, username and password, and file path
+    to be accessed.
+
+
+    Provide the details as shown in the preceding figure.
+
+
+    Your SFTP configuration XML will be looking like the following:
+
+
+    ```
+
+    name="SFTP_Config" doc:name="SFTP Config" >nworkingDir="#[/pub/example/'']" host="test.rebex.net"
+
+    username="demo" password="password" />
+
+    ```'
+  merge: -1
+  pgno: 253
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_254_0.png)
+
+
+    # Figure 10.2: SFTP MuleSoft flow
+
+
+    After entering the SFTP connector details, provide the readme.txt demo file in
+    the path field.
+
+
+    Your completed flow will look like the following:
+
+
+    ```
+
+    name="sftpFlow" > docname="Listener" config-ref="HTTP_Listener_config" path="sftp//>
+    docname="Read" config-ref="SFTP_Config" path="readme.txt"/> level="INFO" docname="Logger"
+    message="#[payload]"/>
+
+    ```'
+  merge: -1
+  pgno: 254
+- img_proc: true
+  md: 'INFO 2021-04-25 14:49:56,983 [FullRuntime]:u.ber.071: [ssss]ssssFlow-BLOCKING
+    @i56d570a] [processor: sssflow/processors/1]: event:
+
+    org.module.runtime.core.internal.processor.LoggerMessageProcessor: Welcome,
+
+
+    you are connected using an FTP account for testing purposes by Reex FTP for .NET
+    and Reex FTP/SSL for .NET sample code.
+
+    Only read access is allowed and download speed is limited to 16kb/s.
+
+
+    For information about Reex FTP, Reex FTP/SSL and other Reex .NET components, please
+    visit our website at http://www.reex.net/
+
+
+    For feedback and support, contact support@reex.cz
+
+
+    INFO 2021-04-25 14:49:56,220 [FullRuntime]:u.ber.071: [ssss]ssssFlow-BLOCKING
+    @i56d570a] [processor: sssflow/processors/1]: event:
+
+    org.module.runtime.core.internal.processor.LoggerMessageProcessor: Welcome,
+
+
+    you are connected using an FTP account for testing purposes by Reex FTP for .NET
+    and Reex FTP/SSL for .NET sample code.
+
+    Only read access is allowed and download speed is limited to 16kb/s.
+
+
+    For information about Reex FTP, Reex FTP/SSL and other Reex .NET components, please
+    visit our website at http://www.reex.net/
+
+
+    For feedback and support, contact support@reex.cz
+
+
+    Thanks!
+
+
+    # Figure 10.3: SFTP in action
+
+
+    On running the project and triggering the endpoint, you can see the SFTP server
+    picked up the file, and the contents are printed in the console.'
+  merge: -1
+  pgno: 255
+- img_proc: true
+  md: '# Conclusion
+
+
+    We have touched little on the SFTP connector in this chapter just to see how the
+    connectivity is getting established. The upcoming chapter will explain you about
+    the LDAP connector details.'
+  merge: -1
+  pgno: 256
+- img_proc: true
+  md: '# Points to remember
+
+
+    If you want, go ahead and install an open-source SFTP server in your local machine
+    and try all file operations.
+
+
+    You can also try some other cloud-based SFTP servers for testing.'
+  merge: -1
+  pgno: 257
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    SFTP connector
+
+
+    FTP connector
+
+
+    Cloud-based SFTP
+
+
+    File operations'
+  merge: -1
+  pgno: 258
+- img_proc: true
+  md: '# CHAPTER 11
+
+
+    # LDAP Connector'
+  merge: -1
+  pgno: 259
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will cover the following topics:
+
+
+    Downloading LDAP connector from Anypoint exchange
+
+
+    Inspecting the LDAP operations
+
+
+    Installing and running ApacheDS
+
+
+    Creating a new LDAP connection through LDAP studio
+
+
+    Providing authentication details
+
+
+    Establishing LDAP connection to LDAP studio
+
+
+    Providing LDAP server details to Anypoint Studio LDAP connector
+
+
+    Inspecting the object details of the LDAP directory
+
+
+    Using LDAP, lookup component
+
+
+    Fetching Apache DS LDAP directory details from MuleFlow'
+  merge: -1
+  pgno: 260
+- img_proc: true
+  md: '# Objective
+
+
+    After studying this chapter, you will be able to understand:
+
+
+    LDAP basics
+
+
+    Installing and connecting with an LDAP server
+
+
+    MuleSoft LDAP connector configurations
+
+
+    Invoking LDAP operations from MuleSoft flow'
+  merge: -1
+  pgno: 261
+- img_proc: true
+  md: '# Introduction
+
+
+    The information about the enterprise users, passwords, systems, and networks will
+    be stored in a distributed directory information service. These directory services
+    must follow an industry-standard protocol called Lightweight Directory Access
+    Protocol Some of the famous open-source LDAPs are OpenLDAP, Apache-DS, and 389
+    Directory Server. Some of the proprietary LDAP servers are IBM Tivoli, Oracle
+    Directory Server, and PingDirectory. Any enterprise may use any one of the above
+    stated LDAP directory services. In this chapter, let us explore ApacheDS open-source
+    LDAP server, ApacheDS LDAP studio, and MuleSoft connector for LDAP.'
+  merge: -1
+  pgno: 262
+- img_proc: true
+  md: '# LDAP connector from Anypoint exchange
+
+
+    MuleSoft comes with a default LDAP connector which is available in Anypoint exchange.
+    Let us see how to download and explore the LDAP connector. Follow the steps given
+    as follows and refer to the screenshots for configuring the LDAP server:
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_263_0.png)
+
+
+    **Figure 11.1:** Downloading LDAP connector from Anypoint exchange'
+  merge: -1
+  pgno: 263
+- img_proc: true
+  md: 'Use your Anypoint credentials to access the exchange using the in option given
+    in the pallet.
+
+
+    You search by giving the keyword, and LDAP connector 3.3.0 will appear, as shown
+    in figure
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_264_0.png)
+
+
+    # Figure 11.2: Inspecting the LDAP operations
+
+
+    After adding the LDAP connector to your modules, you can further explore the possible
+    operations that can be triggered from a MuleFlow.'
+  merge: -1
+  pgno: 264
+- img_proc: true
+  md: 'The above screenshot depicts the LDAP operations available, and hovering over
+    the operation, it provides you with a description of that operation for better
+    understanding.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_265_0.png)
+
+
+    **Figure 11.3:** Installing and running ApacheDS
+
+
+    Go to the URL and you can see various installable of ApacheDS for different OS.
+
+
+    Choose the desired installed and extract it to your local folder.
+
+
+    Use the command **apacheds** in your command prompt, as shown for [figure](#).'
+  merge: -1
+  pgno: 265
+- img_proc: true
+  md: 'You can see the default ApacheDS instance started, as shown in the preceding
+    screenshot.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_266_0.png)
+
+
+    **Figure 11.4:** Creating a new LDAP connection through LDAP studio
+
+
+    Similarly, visit https://directory.apache.org/studio/downloads.html and download
+    ApacheDS studio.
+
+
+    Install in your local system and provide the network parameters as shown in figure'
+  merge: -1
+  pgno: 266
+- img_proc: true
+  md: 'The hostname must be localhost, and the port must be 10389.
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_267_0.png)
+
+
+    **Figure 11.5:** Providing authentication details
+
+
+    You have to provide the authentication details as follows.
+
+
+    **BindDN** or **Bind secret**
+
+
+    You can check authentication and get the success message.'
+  merge: -1
+  pgno: 267
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_268_0.png)
+
+
+    # Figure 11.6: LDAP connection established to LDAP studio
+
+
+    On successful authentication the ApacheDS studio allows you to access all the
+    directory information.'
+  merge: -1
+  pgno: 268
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_269_0.png)
+
+
+    **Figure 11.7:** Providing LDAP server details to Anypoint studio LDAP connector
+
+
+    Drag and drop a LDAP LookUp element from Palette and provide the LDAP connector
+    configuration.
+
+
+    authPassword="secret" url="ldap://localhost:10389" />
+
+
+    Test the connection and click'
+  merge: -1
+  pgno: 269
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_270_0.png)
+
+
+    On a successful connection, you can see various lookup details provided by the
+    LDAP server.
+
+
+    ```
+
+    <xml version="1.0" encoding="UTF-8"?>
+
+    <mule xmlns="http://www.mulesoft.org/schema/ldap" xmlns:doc="http://www.mulesoft.org/schema/core"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configuration="http://www.mulesoft.org/schema/ldap"
+    xsi:schemaLocation="http://www.mulesoft.org/schema/ldap http://www.mulesoft.org/schema/ldap/current/ldap.xsd">
+
+    <config name="LDAP Configuration" doc:id="6d73d049-b6e8-416b-b87d-c733acf54c5">
+
+    <flow name="ldapLookup" doc:id="53bc684a-92e4-4af7-b911-da3368804c7">
+
+    <scheduler name="scheduler" doc:id="a5e66470-9954-47f6-b899-26655829902" />
+
+    </scheduler>
+
+    <ldap:lookup docname="lookup" doc:id="d7f5c9c3-b7f1-456d-a568-22f752c1c2a" config-ref="LDAP
+    Configuration" d="uid=admin,ou=system" />
+
+    <logger level="INFO" name="logger" doc:id="627098a4-80c5-4981-9771-efc75231c2ca
+    message="#[payload]" />
+
+    </flow>
+
+    </mule>
+
+    ```
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_270_1.png)'
+  merge: -1
+  pgno: 270
+- img_proc: true
+  md: 'The final configuration output is shown in the preceding screenshot.
+
+
+    ```
+
+    Mule Server 4.1.0 (Terminated 14 May 2021 11:13:17 AM)
+
+    ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person,
+    organizational] closed.
+
+    ni: TLS has been set to null after connection closed
+
+    error: (id=[localhost],assertion=000083df03fc7,e2)
+
+    ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
+    ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person,
+    organizational] closed.
+
+    ni: TLS has been set to null after connection closed
+
+    error: (id=[localhost],assertion=000083df03fc7,e2)
+
+    ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
+    ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person,
+    organizational] closed.
+
+    ni: TLS has been set to null after connection closed
+
+    error: (id=[localhost],assertion=000083df03fc7,e2)
+
+    ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
+    ni: TLS has been set to null after connection closed
+
+    ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+    closed.
+
+    ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person,
+    organizational] closed.
+
+    ni: TLS has been set to null after connection closed
+
+    error: (id=[localhost],assertion=000083df03fc7,e2)
+
+    ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
+    ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person,
+    organizational] closed.
+
+    ni: TLS has been set to null after connection closed
+
+    error: (id=[localhost],assertion=000083df03fc7,e2)
+
+    ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
+    ni: Connection to http://localhost:10389/ldap-Directory-objectClass=[top, person,
+    organizational] closed.
+
+    ni: TLS has been set to null after connection closed
+
+    error: (id=[localhost],assertion=000083df03fc7,e2)
+
+    ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+
+    ni: TLS has been set to null after connection closed
+
+    ni: Bounded to ldap://localhost:10389 with simple authentication as uid=admin,ou=system
+    closed.
+
+    ```
+
+
+    # Figure 11.20: Fetch Apache DS LDAP directory details from MuleFlow
+
+
+    Select details from the structural object class list and execute the LDAP flow.
+
+
+    The object class details are pulled out from LDAP and logged in to the console.
+
+
+    The complete code is given as follows for your reference:
+
+
+    ```
+
+    name="LDAP_Configuration" doc:name="LDAP Configuration"
+
+    doc:id="dfd73b40-06b8-45b7-baoc-c873ac9af5ac" >
+
+    AuthDn="uid=admin,ou=system" password="secret"
+
+    url="ldap://localhost:10389" />
+
+    ```'
+  merge: -1
+  pgno: 271
+- img_proc: true
+  md: '```
+
+    name="IdapFlow" doc:id="2b8c6484-9244-471c-a1d7-oc943060d47c"
+
+    doc:name="Scheduler" doc:id="41ee6487-9954-4706-bf89-
+
+    026655029502" >
+
+    />
+
+    ```
+
+
+    ```
+
+    r> doc:name="Lookup" doc:id="dd75c9a3-6f93-436d-8508-2d6875foba26"
+
+    config-ref="LDAP_Configuration" dn="uid=admin,ou=system"/
+
+    level="INFO" doc:name="Logger" doc:id="2d78d48d-80e5-4981-9777-
+
+    ofec7526c12a" message="#[payload]"/>
+
+    ```'
+  merge: -1
+  pgno: 272
+- img_proc: true
+  md: '# Conclusion
+
+
+    In this chapter, we get to know the key concepts of LDAP Server, LDAP studio and
+    MuleSoft LDAP Connector. We have downloaded and installed the ApacheDS server
+    and ApacheDS studio, and integrated the studio with the ApacheDS server and explored
+    the ApacheDS directory information. Then we added an LDAP connector from the exchange
+    into Our Anypoint studio, and provided the required configuration parameter, and
+    tested the ApacheDS server connectivity. Then we have invoked a basic lookup operation
+    to fetch the account information, and we were able to successfully achieve the
+    results. In our upcoming chapter, we can study more about Java connectivity.'
+  merge: -1
+  pgno: 273
+- img_proc: true
+  md: '# Points to remember
+
+
+    Try to understand the open-source and proprietary LDAP servers available in the
+    market.
+
+
+    Study about all operations provided by the LDAP connector.
+
+
+    Try to invoke more operations for practical purposes.'
+  merge: -1
+  pgno: 274
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    LDAP connector
+
+
+    LDAP operations
+
+
+    ApacheDS
+
+
+    New LDAP connection through LDAP studio
+
+
+    Authentication details
+
+
+    Anypoint studio LDAP connector
+
+
+    Object details of LDAP directory
+
+
+    LDAP lookup component
+
+
+    Apache DS LDAP directory details'
+  merge: -1
+  pgno: 275
+- img_proc: true
+  md: '# CHAPTER 12
+
+
+    # Java Connector'
+  merge: -1
+  pgno: 276
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will discuss the following topics:
+
+
+    Invoking static methods of Java program
+
+
+    Using invoke-static against non-static methods of Java program
+
+
+    Invoking public methods of Java program using new and invoke components'
+  merge: -1
+  pgno: 277
+- img_proc: true
+  md: '# Objective
+
+
+    After studying this chapter, you will be able to:
+
+
+    Connect your Java programs via Java connectors
+
+
+    Move the complex business logic into Java programs'
+  merge: -1
+  pgno: 278
+- img_proc: true
+  md: '# Introduction
+
+
+    There are many scenarios where we need to do some business logic in a separate
+    Java program. Then, we must pass the payload to that Java program for completing
+    the business process with complex logic, which may be difficult with the MuleSoft
+    flow. Also, because Java is a better solution for reusable artifacts for many
+    cross-cutting features like logging and other utilities such as date format, validations,
+    and so on. It is very easy for us to create separate java programs and plugins
+    into our MuleSoft flow as required. In complex projects such as ETL and Microservices,
+    the contribution of Java programs is significant. There may be scenarios where
+    the enterprise projects will already have some implementations in Java, and MuleSoft
+    may have invoked the existing Java implementations. So, in those scenarios, MuleSoft
+    developers must know how to integrate the existing Java programs with the green
+    field MuleSoft flows. Let us see how we can invoke Java methods in our MuleSoft
+    flows.'
+  merge: -1
+  pgno: 279
+- img_proc: true
+  md: "# Invoking static methods of Java_program\n\nLet us go through the steps involved\
+    \ in calling a Java program with static and non-static methods; try to repeat\
+    \ the procedures in your local machine.\n\nTo begin,\n\nCreate a Mule project\
+    \ with a HTTP Listener, and add a Java module to your project. You can see invoke-static,\
+    \ new and invoke kinds of operations available.\n\nIn the project folder, create\
+    \ a Java program as shown in the following code snippet:\n\n```\npackage com.invokestaticjavamethod;\n\
+    public class InvokeStaticDemo {\n  // TODO Auto-generated constructor stub\n}\n\
+    public int getResult(int num1, int num2) // declare the method non-static\nint\
+    \ result = num1+ num2;\nreturn result;\n}\npublic void sayHello() {\n  System.out.println(\"\
+    HELLO MULESOFT\"); }\n```"
+  merge: -1
+  pgno: 280
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    Bring in an Invoke Static method after the Listener and provide the class to be
+    used and method to be invoked and pass two arguments, as shown in the following
+    figure
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_281_0.png)
+
+
+    Figure 12.1: Invoking static methods of Java program
+
+
+    While running in debugging mode, you can see the error message saying the method
+    with static signature is not found (refer to Figure)
+
+
+    Now add a static keyword to the method and recall through invoke static component,
+    and this will be working fine (refer to Figure)'
+  merge: -1
+  pgno: 281
+- img_proc: true
+  md: '# Variables and methods
+
+
+    +   - attributes (HttpRequestAttributes)org.mule.utils
+
+    - Invoke static static
+
+    - correlationId "d8b4bc00-9682-11eb-b72c-34de61a1"
+
+    - description "No public static method found wi"
+
+    - detailedDescription "No public static method f"
+
+    - type (UnmodifiableRandomAccessList) size = =
+
+    - errors (UnmodifiableRandomAccessList) size = =
+
+    - exception (NoSuchMethodModuleException) t =
+
+
+    > "No public static Method with signature ''getResult(int,int)''
+
+    There are no public static Methods declared in Class.invokest
+
+    Public instance methods are declared {getResult(int,int), watt(long),
+
+    hashCode(), getClassName(), notify(Object), notifyAll(Object)"
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_282_0.png)
+
+
+    ```
+
+    Console X
+
+    invokestaticjavamethod [Mule
+
+    INFO 2021-04-08 21:25:
+
+    ************************
+
+    * Mule is up and kicking!
+
+    INFO 2021-04-08 21:25:
+
+    ************************
+
+    * + DC
+
+    * default
+
+    ```
+
+
+    Figure 12.2: Using invoke static against non-static methods of Java program
+
+
+    In the same program, we have a non-static method, and we need
+
+    to create an instance for calling that method which can be done
+
+    as follows:
+
+
+    Use New component and specify the class name.
+
+
+    Use invoke the method to call the method.
+
+
+    In the following figure you can see that we have successfully
+
+    called the non-static method. The following is the code reference:
+
+
+    ```
+
+    doc:name="New"
+
+    class="com.invokestaticjavamethod.InvokeStaticDemo"
+
+    constructor="InvokeStaticDemo()" target="a"/>
+
+    ```'
+  merge: -1
+  pgno: 282
+- img_proc: true
+  md: 'doc:name="Invoke" class="com.invokestaticjavamethod.InvokeStaticDemo" method="sayHello()"
+    instance="#[vars.a]" >
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_283_0.png)
+
+
+    Figure 12.3: Invoking public methods of Java program using new and invoke components'
+  merge: -1
+  pgno: 283
+- img_proc: true
+  md: '# Conclusion
+
+
+    In this chapter, we have connected to our external Java programs using the MuleSoft
+    Java connectors. After connecting, we have used invoke-static components to call
+    the static Java methods and new and invoke components to call the non-static methods.
+    The last chapter of this volume will be the object store.'
+  merge: -1
+  pgno: 284
+- img_proc: true
+  md: '# Points to remember
+
+
+    Create different static and non-static methods in your own Java programs and try
+    calling them.
+
+
+    Try to develop an e-mail sending program in Java and integrate in the MuleSoft
+    flow, and see why we have to introduce a separate Java mail program and what are
+    the limitations when we are using a MuleSoft provided e-mail connector.
+
+
+    Try to implement some Groovy scripts in the local system and create a Java program
+    for executing them in a multi-threaded approach and see how this solves some of
+    the ETL related performance issues.'
+  merge: -1
+  pgno: 285
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    Static methods of Java program
+
+
+    Public methods of Java program
+
+
+    New and invoke components'
+  merge: -1
+  pgno: 286
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 287
+- img_proc: true
+  md: '# Structure
+
+
+    In this chapter, we will discuss the following topics:
+
+
+    Object store configuration
+
+
+    Store operation for adding key values into object store
+
+
+    operation for fetching values from object store
+
+
+    operation to get all values from object store
+
+
+    Remove a particular value from object store
+
+
+    Get all keys from object store
+
+
+    Checking object store for a key presence
+
+
+    Clearing an object store contents'
+  merge: -1
+  pgno: 288
+- img_proc: true
+  md: '# Objective
+
+
+    After studying this unit, you will be able to:
+
+
+    Usage patterns of caching and object stores
+
+
+    Implementing object store in MuleFlow'
+  merge: -1
+  pgno: 289
+- img_proc: true
+  md: '# Configuring object store
+
+
+    Object store is used for storing large size centrally distributed cluster environment
+    payloads by implementing a key and value pair mechanism, whereas cache scope is
+    only a technique used for storing repeatable static payload requests like SQL
+    queries or file requests. The object store is a module that comes along with MuleSoft,
+    and it is available as a SaaS version in CloudHub. This means object store can
+    be treated as a separate cloud-based payload distribution storage where all applications
+    of enterprise can get the shared payload via CloudHub object store version 2.
+
+
+    Let us see the integration aspects and operations available in object store module.
+
+
+    Create an HTTP listener endpoint and add object store module to the project.
+
+
+    Bring in a store component and provide the preceding details in object store connector.
+
+
+    In the following configuration, as shown in figure we have configured 100 entries
+    to live up to a day time.'
+  merge: -1
+  pgno: 290
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_291_0.png)
+
+
+    # Figure 13.1: Object store configuration
+
+
+    The persistent check box is used to denote local drive storage of object store
+    entries; unchecking will result in an in-memory storage, meaning the stored data
+    will not be available on a restart.
+
+
+    ```
+
+    name="BankLoan_HTTP_Listener_config" doc:name="HTTP Listener config" > host="o.o.o.o"
+    port="8081" />
+
+    ```'
+  merge: -1
+  pgno: 291
+- img_proc: true
+  md: '```
+
+    name="BankLoanStore doc:name="Object store" entryTtl="1" entryTtlUnit="DAYS" maxEntries="50"
+    />
+
+    ```
+
+
+    Once the configuration is done, provide the Key values source as and Value as
+    shown in the following figure
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_292_0.png)
+
+
+    # Figure 13.2: Store operation for adding key values into object store
+
+
+    The listener configuration will end up in a URL like
+
+
+    ```
+
+    name="loanStoreFlow" >
+
+    doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config"
+
+    path="store"/
+
+    doc:name="BankLoanStore" key="#[attributes.queryParams.loanID"
+
+    objectStore="Object_store">
+
+    ```
+
+
+    Create a new flow called loanRetrievalFlow and have a http listener with a path
+    and introduce a Retrieve component from object store module, as shown in the figure.
+    The key can be'
+  merge: -1
+  pgno: 292
+- img_proc: true
+  md: "```\nname=\"loanRetrieveFlow\" > \ndoc:name=\"Listener\" config-ref=\"BankLoan_HTTP_Listener_config\"\
+    \npath=\"retrieve\"/ \ndoc:name=\"Retrieve\" key=\"#[attributes.queryParams.loanID\"\
+    \nobjectStore=\"BankLoanStore\"/> \ndoc:name=\"Transform Message\" > \n>2.0\n\
+    output application/json\n---\npayload\n]]>\\value=\"#[payload]\" doc:name=\"Set\
+    \ Payload\" /\n```\n\n![](img/b37db39e68b5c0bef5ff8f878466ecb7_293_0.png)\n\n\
+    Figure 13.3: Retrieve operation for fetching values from object store\n\nCreate\
+    \ the allLoanFlow with a path name Retrieve all and add the Retrieve all component\
+    \ and choose the corresponding object store, as shown in the figure"
+  merge: -1
+  pgno: 293
+- img_proc: true
+  md: '```
+
+    name="allLoanFlow" >
+
+    doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config"
+
+    path="retrieval2"/>
+
+    doc:name="Retrieve all" objectStore="BankLoanStore"/>
+
+    doc:name="Transform Message" >
+
+    2.0
+
+    output application/json
+
+    ---
+
+    payload
+
+    ]]>
+
+    value="#[payload]" doc:name="Set Payload" /
+
+    ```
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_294_0.png)
+
+
+    Figure 13.4: Retrieve all operations to get all values from object store
+
+
+    Create the LoanRemoveFlow with a path name remove and add the Remove component
+    and choose the corresponding object store, as shown in the figure_The key can
+    be'
+  merge: -1
+  pgno: 294
+- img_proc: true
+  md: 'name="loanRemoveFlow" >
+
+    doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config"
+
+    path="remove"/
+
+    doc:name="Remove key="#[attributes.queryParams.loanID]"
+
+    objectStore="BankLoanStore/"
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_295_0.png)
+
+
+    **Figure 13.5:** Remove a particular value from object store
+
+
+    Create the allLoanIdsFlow with a path name Retrieve all keys and add the retrieve
+    all keys component and choose the corresponding object store, as shown in [figure]
+
+
+    name="allLoanIdsFlow" >
+
+    doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config"
+
+    path="retrieveallkeys/"
+
+    doc:name="Retrieve all keys" objectStore="BankLoanStore/"
+
+    doc:name="Transform Message" >
+
+    >
+
+    >2.0
+
+    output application/json
+
+    ---
+
+    payload'
+  merge: -1
+  pgno: 295
+- img_proc: true
+  md: '```
+
+    value="#[payload] doc:name=Set Payload" " //>
+
+    ```
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_296_0.png)
+
+
+    # Figure 13.6: Get all keys from object store
+
+
+    Create the loanContainsFlow with a path name contains and add the contains component
+    and choose the corresponding object store, as shown in figure_The key can be
+
+
+    name="loanContainsFlow" doc:name="Listener" config-ref="BankLoan_HTTP_Listener_config"
+    path="contains" /> doc:name="Contains" key="#[attributes.queryParams.loanID" objectStore="BankLoanStore"
+    /> doc:name="Transform Message"
+
+
+    2.0
+
+    output application/json
+
+    ---'
+  merge: -1
+  pgno: 296
+- img_proc: true
+  md: 'payload
+
+    ]]># [payload] docname="Set Payload" />
+
+
+    ![](img/b37db39e68b5c0bef5ff8f878466ecb7_297_0.png)
+
+
+    # Figure 13.7: Checking object store for a particular key
+
+
+    Create the clearLoansFlow with a pathname clear and add the Clear component and
+    choose the corresponding object store, as shown in figure
+
+
+    name="clearLoansFlow" >
+
+    docname="Listener" config-ref="BankLoan_HTTP_Listener_config path="clear"/>
+
+    docname="Clear" objectStore="BankLoanStore"/>'
+  merge: -1
+  pgno: 297
+- img_proc: true
+  md: '![](img/b37db39e68b5c0bef5ff8f878466ecb7_298_0.png)
+
+
+    Figure 13.8: Clearing an object store contents'
+  merge: -1
+  pgno: 298
+- img_proc: true
+  md: '# Object store testing
+
+
+    Follow these instructions to test the bank loan object store project we have developed.
+    Run the project now.
+
+
+    Hit the following URLs:
+
+
+    http://localhost:8081/store?loanID=1234&&loanStatus=Success
+
+
+    http://localhost:8081/store?loanID=1235&&loanStatus=Pending
+
+
+    http://localhost:8081/store?loanID=1236&&loanStatus=Success
+
+
+    http://localhost:8081/store?loanID=1237&&loanStatus=Processing
+
+
+    http://localhost:8081/store?loanID=1238&&loanStatus=Rejected
+
+
+    These keys and values will be added to the object store.
+
+
+    http://localhost:8081/retrieve?loanID=1234.—get the status of loan ID.
+
+
+    http://localhost:8081/retrieveall.—get all keys and values.
+
+
+    http://localhost:8081/remove?loanID=1238.—remove key 1238.'
+  merge: -1
+  pgno: 299
+- img_proc: true
+  md: 'http://localhost:8081/contains?loanID=1236.—you will get a yes or no.
+
+
+    http://localhost:8081/clear.—removes all values from object store.'
+  merge: -1
+  pgno: 300
+- img_proc: true
+  md: '# Conclusion
+
+
+    We have seen all operations related to object store in this chapter. This is our
+    last chapter in the Hands-on MuleSoft Anypoint Platform Volume-III. Our upcoming
+    fourth volume will talk about SaaS connectors for MuleSoft such as Google Drive,
+    Google Sheets, Google Calendar, Google Maps, Google Analytics, Google Ad Manager,
+    Box, FB, Linkedin, Twitter, Slack, Stripe, Quartz, PayPal, Hadoop, MongoDB, Cassandra,
+    Kafka, and so on. After completing the fourth volume assignments, you will be
+    getting thorough knowledge about all flavors of MuleSoft connectors.'
+  merge: -1
+  pgno: 301
+- img_proc: true
+  md: '# Points to remember
+
+
+    Repeat the caching solution that we have discussed in Chapter 2 Database Connector
+    and try to understand the difference between cache scope and object store.
+
+
+    Try to revisit or explore the Mule Palette for more application connectors that
+    may not be covered in this book.
+
+
+    Try to apply multiple connectors in a single flow or sub-flow and create different
+    business scenarios.'
+  merge: -1
+  pgno: 302
+- img_proc: true
+  md: '# Key terms to explore
+
+
+    Object store
+
+
+    Store
+
+
+    Retrieve
+
+
+    Retrieve all
+
+
+    Remove
+
+
+    All keys
+
+
+    Clearing object store'
+  merge: -1
+  pgno: 303
+- img_proc: true
+  md: '# Index
+
+
+    # A
+
+
+    +   ActiveMQ connector
+
+    configuring 104
+
+    AMQP connector
+
+    configuration 114
+
+    public and consume messages 115
+
+    public and listener components, using 116
+
+    with MuleSoft 113
+
+    Anypoint Studio concepts 2
+
+    Apache ActiveMQ 100
+
+    installation, checking 101
+
+    installing 101
+
+    queue creation 102
+
+    queues, checking 103
+
+    topics, checking 103
+
+    Web interface 102
+
+
+    # B
+
+
+    +   banking application
+
+    endpoints, designing 7
+
+    process flow 6
+
+    wireframe 5
+
+    business domains
+
+    applications 3'
+  merge: -1
+  pgno: 304
+- img_proc: true
+  md: '# C
+
+
+    cache scope implementation
+
+    connectors 3
+
+
+    # D
+
+
+    +   DB operations 35
+
+    bulk deletion 47
+
+    bulk insertion 44
+
+    bulk updation 46
+
+    DDL 40
+
+    insert
+
+    script 42
+
+    stored procedure 43
+
+    update 39
+
+    Derby database
+
+    configuring 19
+
+    connectivity, testing 21
+
+    external client jar, installing 20
+
+    installing 17
+
+    select component, adding 18
+
+    dynamic parameters
+
+    passing to SQL query
+
+
+    # E
+
+
+    ECMA scripting engine'
+  merge: -1
+  pgno: 305
+- img_proc: true
+  md: 'configuring 122
+
+    ECMA scripts
+
+    executing 121
+
+    e-mail connector
+
+    dummy e-mail account, creating for testing purposes 80
+
+    e-mail fields 83
+
+    e-mail SMTP settings 81
+
+    e-mail SMTP StarTTLS enabling 82
+
+    file attachment 84
+
+
+    IMAP and POP3 access, enabling 85
+
+    less security option in Gmail settings, enabling 84
+
+    MAP in action 88
+
+    Mozilla Thunderbird configuration 86
+
+    NON-SSL IMAP, and POP3 settings 87
+
+    practical usage 80
+
+    SMTP IMAP and POP3 configurations 85
+
+    SSL IMAP and POP3 settings 87
+
+
+    # F
+
+
+    file connector 50
+
+    adding, to project 50
+
+    configuration 51
+
+    copy component, using 54
+
+    create directory component, using 55
+
+    delete attributes in debug mode, checking 53
+
+    file list component, using 52
+
+    file read component, using 51
+
+    file write component, using 52'
+  merge: -1
+  pgno: 306
+- img_proc: true
+  md: 'move component, using 54
+
+    row or updated file component, using 56
+
+    rename component, using 55
+
+    usage 50
+
+
+    # G
+
+
+    Groovy scripts
+
+    executing
+
+
+    # H
+
+
+    HCM application Workday 3
+
+
+    APIs 5
+
+
+    # J
+
+
+    Java connector
+
+    static methods of Java Program, invoking
+
+    JMS connector
+
+    adding, to ApacheMQ 104
+
+    listener and consume combination result 108
+
+    listener component, using 107
+
+    publish and consume components, using 105
+
+    publish and consume flow result 106
+
+
+    # L'
+  merge: -1
+  pgno: 307
+- img_proc: true
+  md: 'LDAP connector Apache DS LDAP directory details, fetching from MuleFlow 141
+    authentication details, providing 138 connection, establishing to LDAP studio
+    138 from Anypoint exchange 135 lookup components, using 140 new connection, creating
+    through LDAP studio 137 object details, inspecting 140 operations, inspecting
+    136 server details, providing to Anypoint studio LDAP connector 139 Lightweight
+    Directory Access Protocol (LDAP) 134
+
+
+    # M
+
+
+    MuleSoft connectors adding, from Anypoint Exchange 10 adding, to project 9 configuring
+
+
+    connector development primer 11 examples exploring 8
+
+
+    # N
+
+
+    NetBeans downloading 16 installing 16
+
+
+    # O'
+  merge: -1
+  pgno: 308
+- img_proc: true
+  md: 'object store 150
+
+    all keys, obtaining from 155
+
+    checking, for particular key 156
+
+    configuring 151
+
+    particular value, removing 154
+
+    retrieve all operation, for fetching all values 153
+
+    retrieve operation, for fetching values 152
+
+    store operation, for adding key values 151
+
+    testing 157.
+
+    OnTableRow Listener 47
+
+
+    # P
+
+
+    POM file entries
+
+    for Groovy 123
+
+    for Python 123
+
+    for Ruby 123
+
+    Python scripts
+
+    executing
+
+
+    # R
+
+
+    RabbitMQ 112
+
+
+    installing 112
+
+    Web management interface, accessing 113
+
+    RAML concepts 2
+
+    REST 61
+
+    Ruby scripts'
+  merge: -1
+  pgno: 309
+- img_proc: true
+  md: 'executing
+
+
+    # s
+
+
+    scripting engine 12Q
+
+    Secured File Transfer Protocol (SFTP) 129
+
+    SFTP connector
+
+    configuring
+
+    examples 13Q
+
+    Simple Object Access Protocol (SOAP) 61
+
+    SOAP Web services
+
+    application, exploring 67
+
+    basis 61
+
+    basic Web application project, selecting 62
+
+    default index page 64
+
+    framework selection screen 63
+
+    HTML application, creating with NetBeans 66
+
+    HTML applications, running 66
+
+    index page running, browser 64
+
+    NetBeans response, obtaining from Anypoint Studio 65
+
+    new project, creating in NetBeans 61
+
+    project name and location 62
+
+    response, checking in PostMan 65
+
+    server settings 63
+
+    spend analysis 3
+
+    SQL query
+
+
+    dynamic parameters, passing to
+
+    results, iterating 32
+
+    static methods of Java Program
+
+    invoking'
+  merge: -1
+  pgno: 310
+- img_proc: true
+  md: '# v
+
+
+    Virtual Machine Queue (VMQ) 92
+
+    VM connector
+
+    consuming, from different publishers 96
+
+    lister, introducing in same queue 96
+
+    listening, from different publishers 96
+
+    logger results, checking 94
+
+    publish and consume component, integrating 93
+
+    publish consume pattern, checking after changing consumer
+
+    duration 94
+
+    VM queue configuration 93
+
+    VM queue implementation 92
+
+
+    # w
+
+
+    Web services 61
+
+    creating, from NetBeans 67
+
+    project, exploring 68
+
+    running 68
+
+    WSDL, exploring 69
+
+    Web services and MuleSoft
+
+    input parameters, submitting to Web services 72
+
+    locally developed NetBeans Web service, invoking 73
+
+    multiple Web service operations, checking 75
+
+    response, getting through PostMan 73
+
+    transformation component settings 76
+
+
+    values, sending to Web services through transformer component
+
+    74'
+  merge: -1
+  pgno: 311
+- img_proc: true
+  md: 'Web service consumer component, using 70
+
+    Web services hosted on Internet, invoking 75
+
+    Web services response, checking in PostMan 74
+
+    WSDL, exploring 71
+
+    WSDL, invoking without input parameter 71
+
+    Workday API documentation 4'
+  merge: -1
+  pgno: 312
+- img_proc: true
+  md: '```
+
+    application/json ---
+
+    ```'
+  merge: -1
+  pgno: 313
