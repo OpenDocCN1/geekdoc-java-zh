@@ -1,0 +1,3097 @@
+- img_proc: true
+  md: '# # JACKSON
+
+
+    data-processing tools for java
+
+
+    # # tutorialspoint
+
+    ## SIMPLE EASY LEAR
+
+
+    www.tutorialspoint.com
+
+
+    https://www.facebook.com/tutorialspointindia | https://twitter.com/tutorialspoint'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# About the Tutorial
+
+
+    Jackson is a very popular and efficient Java-based library to serialize or map
+    Java objects to JSON and vice versa.
+
+
+    This tutorial uses a simple and intuitive way to explain the basic features of
+    Jackson library API and how to use them in practice.
+
+
+    # Audience
+
+
+    This tutorial will be useful for most Java developers, regardless of whether they
+    are beginners or experts.
+
+
+    # Prerequisites
+
+
+    Jackson is a Java-based library and it is imperative that you should have a thorough
+    knowledge of Java programming language before proceeding with this tutorial.
+
+
+    # Copyright & Disclaimer
+
+
+    © Copyright 2015 by Tutorials Point (I) Pvt. Ltd.
+
+
+    All the contents and graphics published in this e-book are the property of Tutorials
+    Point (I) Pvt. Ltd. The user of this e-book is prohibited to reuse, retain, copy,
+    distribute or publish any contents or a part of contents of this e-book in any
+    manner without written consent of the publisher.
+
+
+    We strive to update the contents of our website and tutorials as timely and as
+    precisely as possible, however, the contents may contain inaccuracies or errors.
+    Tutorials Point (I) Pvt. Ltd. provides no guarantee regarding the accuracy, timeliness
+    or completeness of our website or its contents including this tutorial. If you
+    discover any errors on our website or in this tutorial, please notify us at contact@tutorialspoint.com
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_1_0.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: "# # Table of Contents\n\nAbout the Tutorial ............................................................................................................................i\n\
+    Audience................................................................................................................................i\n\
+    Prerequisites................................................................................................................i\n\
+    Copyright & Disclaimer................................................................................................i\n\
+    Table of Contents................................................................................................................ii\n\
+    \n+   1. OVERVIEW ................................................................................................................1\n\
+    \   Features of Jackson.............................................................................................................1\n\
+    \   Process JSON using Jackson...............................................................................................1\n\
+    2. ENVIRONMENT SETUP ................................................................................................3\n\
+    \   Try-It Online Option...........................................................................................................3\n\
+    \   Local Environment Setup..................................................................................................3\n\
+    \   Setting up the Path for Windows 2000/XP ................................................................4\n\
+    \   Setting up the Path for Windows 95/98/ME..................................................................4\n\
+    \   Setting up the Path for Linux, UNIX, Solaris, and FreeBSD...........................................4\n\
+    \   Popular Java Editors.........................................................................................................4\n\
+    \   Download Jackson Archive...............................................................................................4\n\
+    \   Set up Jackson Environment...............................................................................................5\n\
+    \   Set CLSPATH Variable................................................................................................5\n\
+    3. FIRST APPLICATION...............................................................................................6\n\
+    \   Jackson – Example......................................................................................................6\n\
+    \   Steps to Remember........................................................................................................8\n\
+    4. OBJECTMAPPER CLASS................................................................................................9\n\
+    \   ObjectMapper – Class Declaration................................................................................9\n\
+    \   ObjectMapper – Nested Classes.......................................................................................9\n\
+    \   ObjectMapper Class – Constructors...............................................................................9\n\
+    \n![](img/abf38b9a96498be10686313ae639d832_2_0.png)"
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'ObjectMapper – Methods....................................................................................10
+
+
+    ObjectMapper Example ................................................................................27
+
+
+    # 5. OBJECT SERIALIZATION ................................................................................30
+
+
+    Object Serialization – Example ................................................................30
+
+
+    # 6. DATA BINDING .......................................................................................33
+
+
+    Simple Data Binding ................................................................................33
+
+
+    Simple Data Binding – Example ........................................................33
+
+
+    # 7. FULL DATA BINDING..................................................................................37
+
+
+    Full Data Binding – Example ................................................................37
+
+
+    # 8. GENERIC DATA BINDING ................................................................40
+
+
+    # 9. TREE MODEL..................................................................................................45
+
+
+    Create a Tree from JSON ................................................................45
+
+
+    Traversing a Tree ................................................................................45
+
+
+    Tree Model – Example .......................................................................46
+
+
+    Tree to JSON Conversion ................................................................47
+
+
+    Tree to Java Objects ................................................................50
+
+
+    # 10. STREAMING API ................................................................................54
+
+
+    JsonGenerator ................................................................................54
+
+
+    JsonParser......................................................................................63
+
+
+    Write to JSON using JsonGenerator ................................................72
+
+
+    Reading JSON using JsonParser ................................................75'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "# # 1. OVERVIEW\n\nJackson is a simple Java-based library to serialize Java\
+    \ objects to JSON and vice versa.\n\n# ## Features of Jackson\n\n+   - **Easy\
+    \ to use** – Jackson API provides a high-level facade to simplify commonly used\
+    \ use-cases.\n- **No need to create mapping** – Jackson API provides default mapping\
+    \ for most of the objects to be serialized.\n- **Performance** – Jackson is quite\
+    \ fast, consumes less memory space, and is suitable for large object graphs or\
+    \ systems.\n- **Clean JSON** – Jackson creates clean and compact JSON results\
+    \ which are easy to read.\n- **No Dependency** – Jackson library does not require\
+    \ any other library apart from JDK.\n- **Open Source** – Jackson library is open\
+    \ source and free to use.\n\n# ## Process using Jackson\n\nJackson provides three\
+    \ different ways to process JSON:\n\n+   - **Streaming API** – It reads and writes\
+    \ JSON content as discrete events. JsonParser reads the data,\n  - It is the most\
+    \ powerful approach among the three.\n  - It has the lowest overhead and provides\
+    \ the fastest way to perform read/write operations.\n  - It is analogous to Stax\
+    \ parser for XML.\n- **Tree Model** – It prepares an in-memory tree representation\
+    \ of the JSON document. ObjectMapper build tree of JsonNode nodes. It is most\
+    \ flexible approach. It is analogous to DOM parser for XML.\n\n![](img/abf38b9a96498be10686313ae639d832_5_0.png)"
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '+   * Data Binding – It converts JSON to and from Plain Old Java Object (POJO)
+    using property accessor or using annotations. ObjectMapper reads/writes JSON for
+    both types of data bindings. Data binding is analogous to JAXB parser for XML.
+    Data binding is of two types:
+
+
+    +   * Simple Data Binding – It converts JSON to and from Java Maps, Lists, Strings,
+    Numbers, Booleans, and null objects.
+
+
+    +   * Full Data Binding – It converts JSON to and from any Java type.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# 2. ENVIRONMENT SETUP\n\nThis chapter describes how to set up the Jackson\
+    \ environment on your system.\n\n# Try-It Online Option\n\nYou do not need to\
+    \ set up your own environment to start learning Jackson. We have set up an online\
+    \ Java Programming environment online, so that you can compile and execute all\
+    \ the available examples online. Feel free to modify any example and check the\
+    \ result with different options.\n\nTry the following code example using the Try\
+    \ it option available at the top right corner of the sample code on our website:\n\
+    \n```\npublic class MyFirstJavaProgram {\n    public static void main(String [args])\
+    \ {\n        System.out.println(\"Hello World\");\n    }\n}\n```\n\nFor most of\
+    \ the examples given in this tutorial, you will find a Try it option to help you\
+    \ learn quickly through practice.\n\n# Local Environment Setup\n\nIf you still\
+    \ wish to set up your environment for Java programming language, then this section\
+    \ guides you on how to download and set up Java on your machine. Follow the given\
+    \ steps to set up the environment.\n\nJava SE is freely available from the link\
+    \ Download Java. You can download a version based on your operating system.\n\n\
+    Follow the instructions to download Java and run the .exe to install Java on your\
+    \ machine. Once you have installed Java, you would need to set the environment\
+    \ variables to point to the correct installation directories.\n\n# Setting up\
+    \ the Path for Windows 2000/XP\n\nAssuming you have installed Java in c:\\Program\
+    \ Files\\java\\jdk directory,\n\n+   - Right-click on 'My Computer'.\n- Select\
+    \ 'Properties'.\n\n![](img/abf38b9a96498be10686313ae639d832_7_0.png)"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Jackson
+
+
+    +   * Click on the ''Environment variables'' button under the ''Advanced'' tab.
+
+    * Alter the ''Path'' variable so that it also contains the path to the Java executable.
+    For example, if the path is currently set to ''C:\WINDOWS\SYSTEM32'', then change
+    your path to read ''C:\WINDOWS\SYSTEM32;C:\Program Files\java\jdk\bin''
+
+
+    # Setting up the Path for Windows 95/98/ME
+
+
+    Assuming you have installed Java in c:\Program Files\java\jdk directory,
+
+
+    +   * Edit the ''C:\autoexec.bat'' file
+
+    * Add the following line at the end:
+
+    * ''SET PATH=%PATH%%;C:\Program Files\java\jdk\bin''
+
+
+    # Setting up the Path for Linux, UNIX, Solaris, and FreeBSD
+
+
+    Environment variable PATH should be set to point to where the Java binaries have
+    been installed. Refer to your shell documentation if you have trouble doing this.
+
+
+    For example, if you use bash as your shell, you need to add the following line
+    at the end of your .bashrc: export PATH=/path/to/java:$PATH
+
+
+    # Popular Java Editors
+
+
+    To write Java programs, you need a text editor. There are sophisticated IDEs available
+    in the market to write Java programs, but for now, you can consider one of the
+    following:
+
+
+    +   * Notepad: On Windows platform, you can use any simple text editor such as
+    Notepad (recommended for this tutorial) or TextPad.
+
+    * Netbeans: It is an open-source Java IDE. It can be downloaded from http://www.netbeans.org/index.html.
+
+    * Eclipse: It is also a Java IDE developed by the Eclipse open-source community.
+    It can be downloaded from http://www.eclipse.org/
+
+
+    # Download Jackson Archive
+
+
+    Download the latest version of Jackson jar file from jackson-all-1.9.0.jar.zip.
+    In this tutorial, jackson-1.9.0.jar is downloaded and copied into C:\jackson folder.
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_8_0.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Jackson
+
+
+    | OS | Archive name |
+
+    | Windows | jackson-all-1.9.0.jar |
+
+    | Linux | jackson-all-1.9.0.jar |
+
+    | Mac | jackson-all-1.9.0.jar |
+
+
+    # Set up Jackson Environment
+
+
+    Set the jackson_HOME environment variable to point to the base directory location
+    where Jackson jar is stored on your machine. Depending on the platform you are
+    working on, the process varies as shown in the following table:
+
+
+    | OS | Output |
+
+    | Windows | Set the environment variable jackson_HOME=C:\jackson |
+
+    | Linux | export jackson_HOME=/usr/local/jackson |
+
+    | Mac | export jackson_HOME=/Library/jackson |
+
+
+    # Set CLSPATH Variable
+
+
+    Set the CLSPATH environment variable to point to the Jackson jar location.
+
+
+    | OS | Output |
+
+    | Windows | Set the environment variable CLSPATH to %CLASSPATH%;%jackson_HOME%%jackson-all-1.9.0.jar;;-
+    |
+
+    | Linux | export CLSPATH=$CLASSPATH:$jackson_HOME/jackson-all-1.9.0.jar:: |
+
+    | Mac | export CLSPATH=$CLASSPATH:$jackson_HOME/jackson-all-1.9.0.jar:: |
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_9_0.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# 3. FIRST APPLICATION\n\nBefore going into the details of the Jackson library,\
+    \ let us see an application in action.\n\n# Jackson – Example\n\nIn the following\
+    \ example, we will create a Student class. Thereafter, we will create a JSON string\
+    \ with Student details and deserialize it to Student object and then serialize\
+    \ it back to a JSON string.\n\nCreate a Java class file named JacksonTester in\
+    \ C:\\>Jackson_WORKSPACE.\n\nFile: JacksonTester.java\n\n```\nimport java.io.IOException;\n\
+    import org.codehaus.jackson.JsonParseException;\nimport org.codehaus.jackson.map.JsonMappingException;\n\
+    import org.codehaus.jackson.map.ObjectMapper;\nimport org.codehaus.jackson.map.SerializationConfig;\n\
+    \npublic class JacksonTester {\n    public static void main(String[] args[]) {\n\
+    \        ObjectMapper mapper = new ObjectMapper();\n        String jsonString\
+    \ = \"{\\\"name\\\":\\\"Mahesh\\\", \\\"age\\\":21}\";\n\n        // map json\
+    \ to student\n        try {\n            Student student = mapper.readValue(jsonString,\
+    \ Student.class);\n            System.out.println(student);\n\n            mapper.enable(SerializationConfig.Feature.INDENT_OUTPUT);\n\
+    \            jsonString = mapper.writeValueAsString(student);\n            System.out.println(jsonString);\n\
+    \n    } catch (JsonParseException e) {\n        e.printStackTrace();\n    }\n\
+    ```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "```\n} catch (JsonMappingException e) {\n    e.printTrace();\n} catch (IOException\
+    \ e) {\n    e.printTrace();\n}\n\nclass Student {\n  private String name;\n  private\
+    \ int age;\n  public Student(){\\}\n  public String getName() {\n    return name;\n\
+    \  }\n  public void setName(String name) {\n    this.name = name;\n  }\n  public\
+    \ int getAge() {\n    return age;\n  }\n  public void setAge(int age) {\n    this.age\
+    \ = age;\n  }\n  public String toString(){\n    return \"Student [ name: \"+name+\"\
+    , age: \"+age+\" ]\";\n  }\n}\n```\n\n# Verify the Result\n\nCompile the classes\
+    \ using javac compiler as follows:\n\n```\nC:\\Jackson_WORKSPACE\\javac JacksonTester.java\n\
+    ```\n\n![](img/abf38b9a96498be10686313ae639d832_11_0.png)"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "Execute the jacksonTester to see the result.\n\n```\nC:\\Jackson_WORKSPACE>java\
+    \ JacksonTester\n```\n\nVerify the Output:\n\n```\nStudent [ name: Mahesh, age:\
+    \ 21 ]\n{\n  \"name\" : \"Mahesh\",\n  \"age\" : 21\n}\n```\n\n# Steps to Remember\n\
+    \nFollowing are the important steps to be considered here.\n\n# Step 1: Create\
+    \ ObjectMapper Object\n\nCreate ObjectMapper object. It is a reusable object.\n\
+    \n```\nObjectMapper mapper = new ObjectMapper();\n```\n\n# Step 2: Deserialialize\
+    \ JSON to Object\n\nUse readValue() method to get the Object from the JSON. Pass\
+    \ the JSON string or the source of the JSON string and the object type as parameters.\n\
+    \n```\n//Object to JSON Conversion\nStudent student = mapper.readValue(jsonString,\
+    \ Student.class);\n```\n\n# Step 3: Serialize JSON to Object\n\nUse valueAsAsString()\
+    \ method to get the JSON string representation of an object.\n\n```\n//Object\
+    \ to JSON Conversion\njsonString = mapper.writeValueAsString(student);\n```\n\n\
+    ![](img/abf38b9a96498be10686313ae639d832_12_0.png)"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "ObjectMapper is the main actor class of Jackson library. ObjectMapper class\
+    \ provides functionalities to convert Java objects to matching JSON constructs\
+    \ and vice versa. It uses instances of JsonParser and JsonGenerator for implementing\
+    \ actual reading/writing of JSON.\n\n# ObjectMapper – Class Declaration\n\nFollowing\
+    \ is the declaration for org.codehaus.jackson.map.ObjectMapper class:\n\n```\n\
+    public class ObjectMapper\n    extends ObjectCodec\n    implements Versioned\n\
+    ```\n\n# ObjectMapper – Nested Classes\n\n| Sr. No. | Class and Description |\n\
+    | 1 | static class ObjectMapper.DefaultTypeResolverBuilder Customized TypeResolverBuilder\
+    \ provides type resolver builders with so-called \"default typing\" (see enableDefaultTyping()\
+    \ for details). |\n| 2 | static class ObjectMapper.DefaultTyping Enumeration use\
+    \ with enableDefaultTyping() to specify what kind of types (classes) default typing\
+    \ should be used for. |\n\n# ObjectMapper Class – Constructors\n\n| Sr. No. |\
+    \ Constructor and Description |\n| 1 | ObjectMapper() It is the default constructor,\
+    \ which constructs the default JsonFactory as necessary. Use SerialProvider as\
+    \ its SerializerProvider, and BeanSerializerFactory as its SerializerFactory.\
+    \ |\n\n![](img/abf38b9a96498be10686313ae639d832_13_0.png)"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Jackson
+
+
+    |  |  |
+
+    |---|---|
+
+    | 2 | **ObjectMapper(JsonFactory jf)**<br>Construct mapper that uses specified
+    JsonFactory for constructing necessary JsonParsers and/or JsonGenerators. |
+
+    | 3 | **ObjectMapper(JsonFactory jf, SerializerProvider sp, DeserializerProvider
+    dp)** |
+
+    | 4 | **ObjectMapper(JsonFactory jf, SerializerProvider sp, DeserializerProvider
+    dp, SerializationConfig sconfig, DeserializationConfig dconfig)** |
+
+    | 5 | **ObjectMapper(SerializerFactory sf)**<br>Deprecated. Use other constructors
+    instead; note that you can set the serializer factory with `setSerializerFactory(org.codehaus.jackson.map.SerializerFactory)`
+    |
+
+
+    # ObjectMapper – Methods
+
+
+    | Sr. No. | Method and Description |
+
+    |---|---|
+
+    | 1 | **protected void_configAndWriteValue(JsonGenerator jgen, Object value)**<br>Method
+    called to configure the generator as necessary and then call functionality |
+
+    | 2 | **protected void_configAndWriteValue(JsonGenerator jgen, value, Class<?>)**
+    |
+
+    | 3 | **protected Object _convert(Object fromValue, JavaType toValue)** |
+
+    | 4 | **protected DeserializationContext_createDeserializationContext(JsonParser
+    jp, DeserializationConfig cfg)** |
+
+    | 5 | **protected PrettyPrinter_defaultPrettyPrinter()**<br>Helper method that
+    should return default pretty-printer to use for generators constructed by this
+    mapper, when instructed to use default pretty printer. |
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '| 6 | protected JsonSerializer<Object> _findRootDeserializer(DeserializationConfig
+    cfg, JavaType valueType)<br>Method called to locate deserializer for the passed-root-level
+    value. |
+
+    | 7 | protected JsonToken _initForReading(JsonParser jp)<br>Method called to ensure
+    that given parser is ready for reading content data binding. |
+
+    | 8 | protected Object _readMapAndClose(JsonParser jp, JavaType valueType)
+
+    9 | protected Object _readValue(DeserializationConfig cfg, JsonParser jp, JavaType
+    valueType)<br>Actual implementation of value reading+binding operation. |
+
+    | 10 | protected Object _unwrapAndDeserialize(JsonParser jp, JavaType rootType,
+    DeserializationContext cxt, JsonSerializer<Object> deser)<br>boolean canDeserialize(JavaType
+    type)<br>Method that can be called to check whether mapper thinks it could deserialize
+    an Object of given type. |
+
+    | 12 | boolean canSerialize(Class<?> type)<br>Method that can be called to check
+    whether mapper thinks it could serialize an instance of given Class. |
+
+    | 13 | ObjectMapper configure(DeserializationConfig.Feature f, boolean state)<br>Method
+    for changing state of an on/off deserialization feature for this object mapper.
+    |
+
+    | 14 | ObjectMapper configure(JsonGenerator.Feature f, boolean state) |
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'Method for changing state of an on/off JsonSerializer feature for JsonFactory
+    instance object mapper uses.
+
+
+    | ObjectMapper configure(JsonParser.Feature f, boolean state) |
+
+    | 15 | Method for changing state of an on/off JsonParser feature for JsonFactory
+    instance object mapper uses. |
+
+    | 16 | ObjectMapper configure(SerializationConfig.Feature f, boolean state)
+
+    > Method for changing state of an on/off serialization feature for this object
+    mapper. |
+
+
+    | JavaType constructType(Type t) |
+
+    | 17 | Convenience method for constructing JavaType out of given type (typically
+    java.lang.Class), but without explicit context. |
+
+
+    | <T> T convertValue(Object fromValue, Class<T> toValue) |
+
+    | 18 | Convenience method for doing two-step conversion from given value, into
+    instance of given value type. |
+
+
+    | <T> T convertValue(Object fromValue, JavaType toTypeValue) |
+
+    | 19 | <T> T convertValue(Object fromValue, TypeReference toTypeRef) |
+
+
+    | DeserializationConfig copyDeserializationConfig() |
+
+    | 21 | Method that creates a copy of the shared default DeserializationConfig
+    object that defines configuration settings for deserialization. |
+
+
+    | SerializationConfig copySerializationConfig() |
+
+    | 22 | Method that creates a copy of the shared default SerializationConfig object
+    that defines configuration settings for serialization. |
+
+
+    | ArrayNode createArrayNode() |
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'Note: return type is co-variant, as basic ObjectCodec abstraction cannot refer
+    to concrete node types (as it is a part of core package, whereas impls are of
+    mapper package).
+
+
+    # ObjectNode createObjectNode()
+
+
+    Note: return type is co-variant, as basic ObjectCodec abstraction cannot refer
+    to concrete node types (as it is part of core package, whereas impls are of mapper
+    package).
+
+
+    # ObjectWriter defaultPrettyPrintingWriter()
+
+
+    Deprecated. Since 1.9, use writerWithDefaultPrettyPrinter() instead.
+
+
+    # ObjectMapper disable(DeserializationConfig.Feature... f)
+
+
+    Method for enabling specified DeserializationConfig features.
+
+
+    # ObjectMapper disable(SerializationConfig.Feature... f)
+
+
+    Method for enabling specified DeserializationConfig features.
+
+
+    # ObjectMapper disableDefaultTyping()
+
+
+    Method for disabling automatic inclusion of type information; if so, only explicitly
+    annotated types (with JsonTypeInfo) has additional embedded type information.
+
+
+    # ObjectMapper enable(DeserializationConfig.Feature... f)
+
+
+    Method for enabling specified DeserializationConfig features.
+
+
+    # ObjectMapper enable(SerializationConfig.Feature... f)
+
+
+    Method for enabling specified SerializationConfig features.
+
+
+    # ObjectMapper enableDefaultTyping()
+
+
+    Convenience method that is equivalent to calling.
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_17_0.png)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '| ObjectMapper enableDefaultTyping(ObjectMapper.DefaultTyping dti) |
+
+    |---||
+
+    | 32 | Convenience method that is equivalent to calling. |
+
+    | ObjectMapper enableDefaultTyping(ObjectMapper.DefaultTyping applicability, JsonTypeInfo.As
+    include) |
+
+    | 33 | Method for enabling automatic inclusion of type information, needed for
+    proper deserialization of polymorphic types (unless types are annotated with JsonTypeInfo).
+    |
+
+    | ObjectMapper enableDefaultTypingAsProperty(ObjectMapper.DefaultTyping applicability,
+    String propertyName) |
+
+    | 34 | Method for enabling automatic inclusion of type information - needed for
+    proper deserialization of polymorphic types (unless types have been annotated
+    with JsonTypeInfo) -- using "As.PROPERTY" inclusion mechanism and specified property
+    name to use for inclusion (default being "@class" since default type information
+    always uses class name as type identifier) |
+
+    | ObjectWriter filteredWriter(FilterProvider filterProvider) |
+
+    | 35 | Deprecated. From 1.9, use writer(FilterProvider) instead. |
+
+    | JsonSchema generateJsonSchema(Class<?> t) |
+
+    | 36 | Generate Json-schema instance for specified class. |
+
+    | JsonSchema generateJsonSchema(Class<?> t, SerializationConfig cfg) |
+
+    | 37 | Generate Json-schema instance for specified class, using specific serialization
+    configuration |
+
+    | DeserializationConfig getDeserializationConfig()() |
+
+    | 38 | Method that returns the shared default DeserializationConfig object that
+    defines configuration settings for deserialization. |'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '| 39 | DeserializerProvider getDeserializerProvider() |
+
+    | 40 | JsonFactory getJsonFactory() Method that can be used to get hold of JsonFactory
+    that this mapper uses if it needs to construct JsonParsers and/or JsonGenerators.
+    |
+
+    | 41 | JsonNodeFactory getNodeFactory() Method that can be used to get hold of
+    JsonNodeFactory that this mapper will use when directly constructing root JsonNode
+    instances for Trees. |
+
+    | 42 | SerializationConfig getSerializationConfig() Method that returns the shared
+    default SerializationConfig object that defines configuration settings for serialization.
+    |
+
+    | 43 | SerializerProvider getSerializerProvider() |
+
+    | 44 | SubtypeResolver getSubtypeResolver() Method for accessing subtype resolver
+    in use. |
+
+    | 45 | TypeFactory getTypeFactory() Accessor for getting currently configured
+    TypeFactory instance. |
+
+    | 46 | VisibilityChecker&lt;?&gt; getChecker() for accessing currently configured
+    visibility checker; object used for determining whether given property element
+    (method, field, constructor) can be auto-detected or not. |
+
+    | 47 | boolean isEnabled(DeserializationConfig.Feature f) |
+
+    | 48 | boolean isEnabled(JsonGenerator.Feature f) |
+
+    | 49 | boolean isEnabled(JsonParser.Feature f) |
+
+    | 50 | boolean isEnabled(SerializationConfig.Feature f) |'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '| | |
+
+    |---|-|
+
+    | 51 | ObjectWriter prettyPrintingWriter(PrettyPrinter pp)|
+
+    | 52 | ObjectReader reader() <br>Factory method for constructing ObjectReader
+    with default settings. |
+
+    | 53 | ObjectReader reader(Class<?> type) <br>Factory method for constructing
+    ObjectReader that reads or updates instances of specified type. |
+
+    | 54 | ObjectReader(FormatSchema schema) <br>Factory method for constructing ObjectReader
+    that will pass specific schema object to JsonParser used for reading content.
+    |
+
+    | 55 | ObjectReader(InjectableValues injectableValues) <br>Factory method for
+    constructing ObjectReader that will use specified injectable values. |
+
+    | 56 | ObjectReader(JavaType type) <br>Factory method for constructing ObjectReader
+    that will read or update instances of specified type |
+
+    | 57 | ObjectReader reader(JsonNodeFactory f) <br>Factory method for constructing
+    ObjectReader that will use specified JsonNodeFactory for constructing JSON trees.
+    |
+
+    | 58 | ObjectReader reader(TypeReference<?> type) <br>Factory method for constructing
+    ObjectReader that will read or update instances of specified type |
+
+    | 59 | ObjectReader readerForUpdating(Object valueToUpdate) |'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '| Factory Method for constructing ObjectReader that will update given Object
+    (usually Bean, but can be a Collection or Map as well, but NOT an array) with
+    JSON data. |
+
+    | 60 | JsonNode readTree(byte[]) content Method to deserialize JSON content as
+    tree expressed using set of JsonNode instances. |
+
+    | 61 | JsonNode readTree(File file) Method to deserialize JSON content as tree
+    expressed using set of JsonNode instances. |
+
+    | 62 | JsonNode readTree(InputStream in) Method to deserialize JSON content as
+    tree expressed using set of JsonNode instances. |
+
+    | 63 | JsonNode readTree(JsonParser jp) Method to deserialize JSON content as
+    tree expressed using set of JsonNode instances. |
+
+    | 64 | JsonNode readTree(JsonParser jp, DeserializationConfig cfg) Method to deserialize
+    JSON content as tree expressed using set of JsonNode instances. |
+
+    | 65 | JsonNode readTree(Reader r) Method to deserialize JSON content as tree
+    expressed using set of JsonNode instances. |
+
+    | 66 | JsonNode readTree(String content) Method to deserialize JSON content as
+    tree expressed using set of JsonNode instances. |
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_21_0.png)'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# JsonNode readTree(URL source)
+
+
+    Method to deserialize JSON content as tree expressed using set of JsonNode instances.
+
+
+    ```
+
+    <T> T readValue(byte[]) src, Class<T> valueType
+
+    ```
+
+
+    ```
+
+    <T> T readValue(byte[]) src, int offset, int len, Class<T> valueType
+
+    ```
+
+
+    ```
+
+    <T> T readValue(byte[]) src, int offset, int len, JavaType valueType
+
+    ```
+
+
+    ```
+
+    <T> T readValue(byte[]) src, int offset, int len, TypeReference valueTypeRef
+
+    ```
+
+
+    ```
+
+    <T> T readValue(byte[]) src, JavaType valueType
+
+    ```
+
+
+    ```
+
+    <T> T readValue(byte[]) src, TypeReference valueTypeRef
+
+    ```
+
+
+    ```
+
+    <T> T readValue(File src, Class<T> valueType
+
+    ```
+
+
+    ```
+
+    <T> T readValue(File src, JavaType valueType
+
+    ```
+
+
+    ```
+
+    <T> T readValue(File src, TypeReference valueTypeRef
+
+    ```
+
+
+    ```
+
+    <T> T readValue(InputStream src, Class<T> valueType
+
+    ```
+
+
+    ```
+
+    <T> T readValue(InputStream src, JavaType valueType
+
+    ```
+
+
+    ```
+
+    <T> T readValue(InputStream src, TypeReference valueTypeRef
+
+    ```
+
+
+    ```
+
+    <T> T readValue(JsonNode root, Class<T> valueType
+
+    ```
+
+
+    Convenience method for converting results from given JSON tree into given value
+    type.
+
+
+    ```
+
+    <T> T readValue(JsonNode root, JavaType valueType)
+
+    ```
+
+
+    Convenience method for converting results from given JSON tree into given value
+    type.
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_22_0.png)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '| <T> readValue(JsonNode root, TypeReference valueType) |
+
+    | 82 | Convenience method for converting results from given JSON tree into given
+    value type. |
+
+    | <T> readValue(JsonParser jp, Class<T> valueType) |
+
+    | 83 | Method to deserialize JSON content into a non-container type (it can be
+    an array type, however): typically a bean, array or a wrapper type (like Boolean).
+    |
+
+    | <T> readValue(JsonParser jp, Class<T> valueType, DeserializationConfig cfg)
+    |
+
+    | 84 | Method to deserialize JSON content into a non-container type (it can be
+    an array type, however): typically a bean, array or a wrapper type (like Boolean).
+    |
+
+    | <T> readValue(JsonParser jp, Java valueType) |
+
+    | 85 | Method to deserialize JSON content into a Java type, reference to which
+    is passed as argument. |
+
+    | <T> readValue(JsonParser jp, Java valueType, DeserializationConfig cfg) |
+
+    | 86 | Method to deserialize JSON content into a Java type, reference to which
+    is passed as argument. |
+
+    | <T> readValue(JsonParser jp, TypeReference<?> valueType) |
+
+    | 87 | Method to deserialize JSON content into a Java type, reference to which
+    is passed as argument. |
+
+    | <T> readValue(JsonParser jp, TypeReference<?> valueType, DeserializationConfig
+    cfg) |
+
+    | 88 | Method to deserialize JSON content into a Java type, reference to which
+    is passed as argument. |
+
+    | <T> readValue(Reader src, Class<T> valueType) |'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '| 90 | <T> T read(Reader src, JavaType valueType) |
+
+    | 91 | <T> T read(Reader src, TypeReference valueRef) |
+
+    | 92 | <T> T read(String content, Class<T> valueType) |
+
+    | 93 | <T> T read(String content, JavaType valueType) |
+
+    | 94 | <T> T read(String content, TypeReference valueRef) |
+
+    | 95 | <T> T read(URL src, Class<T> valueType) |
+
+    | 96 | <T> T read(URL src, JavaType valueType) |
+
+    | 97 | <T> T read(URL src, TypeReference valueRef) |
+
+    | 98 | <T> MappingIterator<T> readValues(JsonParser jp, Class<T> valueType)
+
+
+    Method for reading sequence of Objects from parser stream. |
+
+    | 99 | <T> MappingIterator<T> readValues(JsonParser jp, JavaType valueType)
+
+
+    Method for reading sequence of Objects from parser stream. |
+
+    | 100 | <T> MappingIterator<T> readValues(JsonParser jp, TypeReference<?> valueTypeRef)
+
+
+    Method for reading sequence of Objects from parser stream. |
+
+    | 101 | void registerModule(Module module)
+
+
+    Method for registering a module that can extend functionality provided by this
+    mapper; for example, adding providers for custom serializers and deserializers.
+    |
+
+    | 102 | void registerSubtypes(Class<?>... classes) |'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'Method for registering specified class as a subtype, so that typename-based
+    resolution can link supertypes to subtypes (as an alternative to using annotations).
+
+
+    # void registerSubtypes(NamedType... types)
+
+
+    Method for registering specified class as a subtype, so that typename-based resolution
+    can link supertypes to subtypes (as an alternative to using annotations).
+
+
+    # ObjectReader schemaBasedReader(FormatSchema)
+
+
+    # ObjectWriter schemaBasedWriter(FormatSchema)
+
+
+    # ObjectMapper setAnnotationIntrospector(AnnotationIntrospector ai)
+
+
+    Method for changing AnnotationIntrospector used by this mapper instance for both
+    serialization and deserialization
+
+
+    # void setDateFormat(DateFormat)
+
+
+    Method for configuring the default Format to use when serializing values as Strings,
+    and deserializing from JSON Strings.
+
+
+    # ObjectMapper setDefaultTyping(TypeResolverBuilder<?> typer)
+
+
+    Method for enabling automatic inclusion of type information, using specified handler
+    object for determining which types this affects, as well as details of how information
+    is embedded.
+
+
+    # ObjectMapper setDeserializationConfig(DeserializationConfig cfg)
+
+
+    Method for replacing the default deserialization configuration object.
+
+
+    # ObjectMapper setDeserializerProvider(DeserializerProvider p)
+
+
+    Method for setting specific DeserializerProvider to use for handling the caching
+    of JsonDeserial instances.
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_25_0.png)'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '```
+
+    void setFilters(FilterProvider filterProvider)
+
+    ```
+
+
+    ```
+
+    void setHandlerInstantiator(HandlerInstantiator hi)
+
+    ```
+
+
+    Method for configuring HandlerInstantiator to use for creating instances of handlers
+    (such as serializers, deserializers, type and id resolvers),
+
+
+    ```
+
+    ObjectMapper setInjectableValues(InjectableValues)
+
+    ```
+
+
+    ```
+
+    ObjectMapper getNodeFactory(JsonNodeFactory f)
+
+    ```
+
+
+    Method for specifying JsonFactory to use for constructing root level tree nodes
+    (via method createObjectNode())
+
+
+    ```
+
+    ObjectMapper setPropertyNameStrategy(PropertyNamingStrategy s)
+
+    ```
+
+
+    Method for setting custom property naming strategy to use.
+
+
+    ```
+
+    ObjectMapper setSerializationConfig(SerializationConfig cfg)
+
+    ```
+
+
+    Method for replacing the shared default serialization configuration object.
+
+
+    ```
+
+    ObjectMapper setSerializationInclusion(JsonSerialize.Inclusion incl)
+
+    ```
+
+
+    Method for setting defalt POJO property inclusion strategy for serialization.
+
+
+    ```
+
+    ObjectMapper setSerializerFactory(SerializerFactory f)
+
+    ```
+
+
+    Method for setting specific SerializerFactory to use for constructing (bean) serializers.
+
+
+    ```
+
+    ObjectMapper setSerializerProvider(SerializerProvider p)
+
+    ```
+
+
+    Method for setting specific SerializerProvider to use for handling caching of
+    JsonSerializer instances.
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_26_0.png)'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '```
+
+    void setSubtypeResolver(SubtypeResolver r)
+
+    ```
+
+
+    Method for setting custom subtype resolver to use.
+
+
+    ```
+
+    ObjectMapper setTypeFactory(TypeFactory f)
+
+    ```
+
+
+    Method that can be used to override TypeFactory instance used by this mapper.
+
+
+    ```
+
+    ObjectMapper setVisibility(JsonMethod forMethod, JsonAutoDetect.Visibility visibility)
+
+    ```
+
+
+    Convenience method that allows changing configuration for underlying VisibilityChecks,
+    to change details of what kinds of properties are detected.
+
+
+    ```
+
+    void setVisibility(VisibilityChecker<?> vc)
+
+    ```
+
+
+    Method for setting currently configured visibility checker; object used to determine
+    whether given property element (method, field, constructor) can be auto-detected
+    or not.
+
+
+    ```
+
+    JsonParser treeAsTokens(JsonNode n)
+
+    ```
+
+
+    Method for constructing a JsonParser out of JSON tree representation.
+
+
+    ```
+
+    <T> T treeValue(JsonNode n, Class<T> valueType)
+
+    ```
+
+
+    Convenience conversion method that binds data provided the JSON tree contains
+    (usually bean) type.
+
+
+    ```
+
+    ObjectWriter typedWriter(Class<?> rootType)
+
+    ```
+
+
+    Deprecated. Since 1.9, use writerWithType(Class) instead.
+
+
+    ```
+
+    ObjectWriter typedWriter(JavaType rootType)
+
+    ```
+
+
+    Deprecated. Since 1.9, use writerWithType(JavaType) instead.
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_27_0.png)'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# ObjectWriter typedWriter(TypeReference<?> rootType)
+
+
+    Deprecated. Since 1.9, use writerWithType(TypeReference) instead.
+
+
+    # ObjectReader updatingReader(Object valueToUpdate)
+
+
+    Deprecated. Since 1.9, use readerForUpdating(java.lang.Object) instead.
+
+
+    # <T extends JsonNode> T valueToTree(Object fromValue)
+
+
+    Reverse of treeToValue(org.codehaus.jackson.JsonNode, java.lang.Class); given
+    a value (usually bean), constructs equivalent Json Tree representation.
+
+
+    # Version version()
+
+
+    Method that will return version information stored and reads from jar that contains
+    this class.
+
+
+    # ObjectWriter viewWriter(Class<?> serializationView)
+
+
+    Deprecated. Since 1.9, useWithView(Class) instead.
+
+
+    # ObjectMapper withModule(Module module) Fluent-style alternative to registerModule(org.codehaus.jackson.map.Module);
+
+
+    # ObjectWriter writer()
+
+
+    Convenience method for constructing ObjectWriter with default settings.
+
+
+    # ObjectWriter writer(DateFormat df)
+
+
+    Factory method for constructing ObjectWriter that serializes objects by specified
+    DateFormat; or if null passed, using timestamp (64-bit number).
+
+
+    # ObjectWriter writer(FilterProvider filterProvider)
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_28_0.png)'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '| | |
+
+    |---||
+
+    | | Factory method for constructing ObjectWriter that serializes objects using
+    specified filter provider. |
+
+    | 138 | **ObjectWriter writer(FormatSchema)**<br>Factory method for constructing
+    ObjectWriter that passes specific schema object used for JsonGenerator for writing
+    content. |
+
+    | 139 | **ObjectWriter writer(PrettyPrinter pp)**<br>Factory method for constructing
+    ObjectWriter that serializes objects using specified printer for indentation (or
+    if null, no pretty printer) |
+
+    | 140 | **ObjectWriterWithDefaultPrettyPrinter()**<br>Factory method for constructing
+    ObjectWriter that serializes objects using the default printer for indentation
+    |
+
+    | 141 | **ObjectWriterWithType(Class<?> rootType)**<br>Factory method for constructing
+    ObjectWriter that serializes objects using specified root type, instead of actual
+    runtime type of value. |
+
+    | 142 | **ObjectWriterWithType(JavaType rootType)**<br>Factory method for constructing
+    ObjectWriter that serializes objects using specified root type, instead of actual
+    runtime type of value. |
+
+    | 143 | **ObjectWriterWithType(TypeReference<?> rootType)**<br>Factory method
+    for constructing ObjectWriter that serializes objects using specified root type,
+    instead of actual runtime type of value. |
+
+    | 144 | **ObjectWriterWithView(Class<?> serializationView)**<br>Factory method
+    for constructing ObjectWriter that serializes objects using specified JSON View
+    (filter). |
+
+    | 145 | `void writerTree(JsonGenerator jgen, JsonNode rootNode)` |'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '| | |
+
+    |---|---|
+
+    | | Method to serialize given JSON Tree, using generator provided. |
+
+    | 146 | **void writeTree(JsonGenerator jgen, JsonNode rootNode, SerializationConfig
+    cfg)**<br>Method to serialize given JSON Tree, using generator provided. |
+
+    | 147 | **void writeValue(File resultFile, Object value)**<br>Method that can
+    be used to serialize any Java value as JSON output, written to File provided.
+    |
+
+    | 148 | **void writeValue(JsonGenerator jgen, Object value)**<br>Method that can
+    be used to serialize any Java value as JSON output, using provided JsonGenerator.
+    |
+
+    | 149 | **void writeValue(JsonGenerator jgen, Object value, SerializationConfig
+    config)**<br>Method that can be used to serialize any Java value as JSON output,
+    using provided JsonGenerator, configured as per passed configuration object. |
+
+    | 150 | **void writeValue(OutputStream out, Object value)**<br>Method that can
+    be used to serialize any Java value as JSON output, using output stream provided
+    (using encoding JsonEncoding.UTF8). |
+
+    | 151 | **void writeValue(Writer w, Object value)**<br>Method that can be used
+    to serialize any Java value as JSON output, using Writer provided. |
+
+    | 152 | **byte[] writeValueAsBytes(Object value)**<br>Method that can be used
+    to serialize any Java value as a byte array. |
+
+    | 153 | **String writeValueAsString(Object value)**<br>Method that can be used
+    to serialize any Java value as a String. |'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "ObjectMapper class inherits methods from java.lang.Object.\n\n# ObjectMapper\
+    \ Example\n\nCreate the Java program using any editor of your choice and save\
+    \ it in the folder C:/> Jackson_WORKSPACE\n\n# File: JacksonTester.java\n\n```\n\
+    import java.io.IOException;\nimport org.codehaus.jackson.JsonParseException;\n\
+    import org.codehaus.jackson.map.JsonMappingException;\nimport org.codehaus.jackson.map.ObjectMapper;\n\
+    import org.codehaus.jackson.map.SerializationConfig;\n\npublic class JacksonTester\
+    \ {\n    public static void main(String[] args[]) {\n        ObjectMapper mapper\
+    \ = new ObjectMapper();\n        String jsonString = \"{\\\"name\\\":\\\"Mahesh\\\
+    \", \\\"age\\\":21}\";\n\n        // map json to student\n        try {\n    \
+    \        Student student = mapper.readValue(jsonString, Student.class);\n    \
+    \        System.out.println(student);\n            mapper.enable(SerializationConfig.Feature.INDENT_OUTPUT);\n\
+    \            jsonString = mapper.writeValueAsString(student);\n            System.out.println(jsonString);\n\
+    \n        } catch (JsonParseException e) {\n            e.printStackTrace();\n\
+    \        } catch (JsonMappingException e) {\n            e.printStackTrace();\n\
+    \        } catch (IOException e) {\n            e.printStackTrace();\n       \
+    \ }\n    }\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "```\n}\n\nclass Student {\n    private String name;\n    private int age;\n\
+    \    public Student(){}\n    public String getName() {\n        return name;\n\
+    \    }\n    public void setName(String name) {\n        this.name = name;\n  \
+    \  }\n    public int getAge() {\n        return age;\n    }\n    public void setAge(int\
+    \ age) {\n        this.age = age;\n    }\n    public String toString() {\n   \
+    \     return \"Student [ name: \"+name+\", age: \"+age+\\ ]\";\n    }\n}\n```\n\
+    \n# Verify the Result\n\nCompile the classes using javac compiler as follows:\n\
+    \n```\nC:\\Jackson_WORKSPACE>javac JacksonTester.java\n```\n\nNow execute the\
+    \ JacksonTester to see the result.\n\n```\nC:\\Jackson_WORKSPACE>java JacksonTester\n\
+    ```\n\nVerify the output:\n\nStudent [ name: Mahesh, age: 21 ]\n\n![](img/abf38b9a96498be10686313ae639d832_32_0.png)"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\n{\n  \"name\" : \"Mahesh\",\n  \"age\" : 21\n}\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# 5. OBJECT SERIALIZATION\n\nTo understand object serialization in detail,\
+    \ let us serialize a Java object to a JSON file and then read that JSON file to\
+    \ get the object back.\n\n# Object Serialization – Example\n\nIn the following\
+    \ example, we will create a Student class. Thereafter we will create a.json file\
+    \ which will have a JSON representation of Student object.\n\nFirst of all, create\
+    \ a Java class file named JacksonTester in C:\\>Jackson_WORKSPACE.\n\nFile: JacksonTester.java\n\
+    \n```\nimport java.io.File;\nimport java.io.IOException;\n\nimport org.codehaus.jackson.JsonGenerationException;\n\
+    import org.codehaus.jackson.JsonParseException;\nimport org.codehaus.jackson.map.JsonMappingException;\n\
+    import org.codehaus.jackson.map.ObjectMapper;\n\npublic class JacksonTester {\n\
+    \    public static void main(String args[]) {\n        JacksonTester tester =\
+    \ new JacksonTester();\n        try {\n            Student student = new Student();\n\
+    \            student.setAge(10);\n            student.setName(\"Mahesh\");\n \
+    \           tester.writeJSON(student);\n\n            Student student1 = tester.readJSON(student);\n\
+    \            System.out.println(student1);\n\n        } catch (JsonParseException\
+    \ e) {\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "```\ne.printStackTrace();\n} catch (JsonMappingException e) {\n    e.printStackTrace();\n\
+    } catch (IOException e) {\n    e.printStackTrace();\n}\n```\n\n```\nprivate void\
+    \ writeJSON(Student student) throws JsonGenerationException,\nJsonMappingException,\
+    \ IOException {\n    ObjectMapper mapper = new ObjectMapper();\n    mapper.writeValue(new\
+    \ File(\"student.json\"), student);\n}\n```\n\n```\nprivate Student readJSON()\
+    \ throws JsonParseException,\nJsonMappingException, IOException {\n    ObjectMapper\
+    \ mapper = new ObjectMapper();\n    Student student = mapper.readValue(new File(\"\
+    student.json\"),\\Student.class);\n    return student;\n}\n```\n\n```\nclass Student\
+    \ {\n    private String name;\n    private int age;\n    public Student(){}\n\
+    \    public String getName() {\n        return name;\n    }\n    public void setName(String\
+    \ name) {\n        this.name = name;\n    }\n    public int getAge() {\n```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "```\nreturn age;\n}\npublic void setAge(int age) {\n    this.age = age;\n}\n\
+    public String toString(){\n    return \"Student [ name: \"+name+\", age: \"+ age+\\\
+    \ \" ]\";\n}\n```\n\n# Verify the result\n\nCompile the classes using javac compiler\
+    \ as follows:\n\n| C:\\Jackson_WORKSPACE>javac JacksonTester.java |\n\nNow execute\
+    \ the jacksonTester to see the result.\n\n| C:\\Jackson_WORKSPACE>java JacksonTester\
+    \ |\n\nVerify the Output:\n\n| Student [ name: Mahesh, age: 10 ] |"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# #6. DATA BINDING
+
+
+    Data Binding API is used to convert JSON to and from Plain Old Java Object (POJO)
+    using property accessor or using annotations. It is one of two types:
+
+
+    +   - Simple Data Binding – It converts JSON to and from Java Maps, Lists, Strings,
+    Numbers, Booleans, and null objects.
+
+    - Full Data Binding – It converts JSON to and from any Java type.
+
+
+    ObjectMapper reads/writes JSON for both types of data bindings. Data binding is
+    analogous to JAXB parser for XML.
+
+
+    We will cover simple data binding in this chapter. Full data binding is discussed
+    separately in the next chapter.
+
+
+    # ## Simple Data Binding
+
+
+    Simple data binding refers to mapping of JSON to JAVA core data types. The table
+    illustrates the relationship between JSON types versus Java types.
+
+
+    | S. No. | JSON Type | Java Type |
+
+    |---|---|--|
+
+    | 1 | object | LinkedHashMap<String,Object> |
+
+    | 2 | array | ArrayList<Object> |
+
+    | 3 | string | String |
+
+    | 4 | complete number | Integer, Long or BigInteger |
+
+    | 5 | fractional number | Double / BigDecimal |
+
+    | 6 | true | false | Boolean |
+
+    | 7 | null | null |
+
+
+    # ## Simple Data Binding – Example
+
+
+    Let us take a simple example to understand simple data binding in detail. Here,
+    we''ll map Java basic types directly to JSON and vice versa.
+
+
+    Create a Java class named JacksonTester in C:\>Jackson_WORKSPACE.
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_37_0.png)'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# File: JacksonTester.java\n\n```\nimport java.io.File;\nimport java.io.IOException;\n\
+    import java.util.HashMap;\nimport java.util.Map;\n\nimport org.codehaus.jackson.JsonGenerationException;\n\
+    import org.codehaus.jackson.JsonParseException;\nimport org.codehaus.jackson.map.JsonMappingException;\n\
+    import org.codehaus.jackson.map.ObjectMapper;\n\npublic class JacksonTester {\n\
+    \    public static void main(String[] args) {\n        JacksonTester tester =\
+    \ new JacksonTester();\n        try {\n            ObjectMapper mapper = new ObjectMapper();\n\
+    \n            Map<String, Object> studentDataMap = new HashMap<String, Object>();\n\
+    \\int[] marks = {1,2,3};\n\n            Student student = new Student();\n   \
+    \         student.setAge(10);\n            student.setName(\"Mahesh\");\n    \
+    \        // JAVA Object\n            studentDataMap.put(\"student\", student);\n\
+    \            // JAVA String\n            studentDataMap.put(\"name\", \"Mahesh\
+    \ Kumar\");\n            // JAVA Boolean\n            studentDataMap.put(\"verified\"\
+    , Boolean.FALSE);\n            // Array\n            studentDataMap.put(\"marks\"\
+    , marks);\n\n            mapper.writeValue(new File(\"student.json\"), studentDataMap);\n\
+    ```\n\n![](img/abf38b9a96498be10686313ae639d832_38_0.png)"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "```\n//result student.json\n// {{\n// // \"student\":{\"name\":\"Mahesh\",\"\
+    age\":10},\n// // \"marks\":[1,2,3],\n// // \"verified\":false,\n// // \"name\"\
+    :\"Mahesh Kumar\"\n// }\nstudentDataMap = mapper.readValue(new File(\"student.json\"\
+    ),nMap.class);\n\nSystem.out.println(studentDataMap.get(\"student\"));\nSystem.out.println(studentDataMap.get(\"\
+    name\"));\nSystem.out.println(studentDataMap.get(\"verified\"));\nSystem.out.println(studentDataMap.get(\"\
+    marks\"));\n\n catch (JsonParseException e) {\n    e.printStackTrace();\n} catch\
+    \ (JsonMappingException e) {\n    e.printStackTrace();\n} catch (IOException e)\
+    \ {\n    e.printStackTrace();\n}\n}\n\nclass Student {\n    private String name;\n\
+    \    private int age;\n    public Student(){\n}\n    public String getName() {\n\
+    \        return name;\n    }\n\n    public void setName(String name) {\n     \
+    \   this.name = name;\n    }\n}\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# Jackson\n\n```\npublic int getAge() {\n    return age;\n}\npublic void setAge(int\
+    \ age) {\n    this.age = age;\n}\npublic String toString() {\n    return \"Student\
+    \ [ name: \"+name+\", age: \"+age+\\ \" ]\";\n}\n```\n\n# Verify the Result\n\n\
+    Compile the classes using javac compiler as follows:\n\n| C:\\Jackson_WORKSPACE>javac\
+    \ JacksonTester.java |\n\nNow run the java jacksonTester to see the result:\n\n\
+    | C:\\Jackson_WORKSPACE>java JacksonTester |\n\nVerify the Output\n\n| {name=Mahesh,\
+    \ age=10}\nMahesh Kumar\nfalse\n[1, 2, 3] |"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# 7. FULL DATA BINDING\n\nFull data binding refers to mapping of JSON to any\
+    \ Java Object.\n\n```\n//Create an ObjectMapper instance\nObjectMapper mapper\
+    \ = new ObjectMapper();\n\n// map JSON content to Student object\nStudent student\
+    \ = mapper.readValue(new File(\"student.json\"), Student.class);\n\nmapper.writeValue(new\
+    \ File(\"student.json\"), student);\n```\n\n# Full Data Binding – Example\nLet\
+    \ us take a simple example to understand full data binding in detail. In the example,\
+    \ we will map a Java Object directly to JSON and vice versa.\n\nCreate a Java\
+    \ class named JacksonTester in C:\\>Jackson_WORKSPACE.\n\n# File: JacksonTester\n\
+    \n```\nimport java.io.File;\nimport java.io.IOException;\n\nimport org.codehaus.jackson.JsonGenerationException;\n\
+    import org.codehaus.jackson.JsonParseException;\nimport org.codehaus.jackson.map.JsonMappingException;\n\
+    import org.codehaus.jackson.map.ObjectMapper;\n\npublic class JacksonTester {\n\
+    \    public static void main(String[] args){\n        JacksonTester tester = new\
+    \ JacksonTester();\n        try {\n            Student student = new Student();\n\
+    \            student.setAge(10);\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "```\nstudent.setName(\"Mahesh\");\nntester.writeJSON(student);\n\nStudent student1\
+    \ = tester.readJSON();\nSystem.out.println(student1);\n```\n\n```\n} catch (JsonParseException\
+    \ e) {\n  e.printStackTrace();\n} catch (JsonMappingException e) {\n  e.printStackTrace();\n\
+    } catch (IOException e) {\n  e.printStackTrace();\n}\n\n```\n\n```\nprivate void\
+    \ writeJSON(Student student) throws JsonGenerationException,\nJsonMappingException,\
+    \ IOException{\nObjectMapper mapper = new ObjectMapper();\nmapper.writeValueValue(new\
+    \ File(\"student.json\"), student);\n\n```\n\n```\nprivate Student readJSON()\
+    \ throws JsonParseException,\nJsonMappingException, IOException{\nObjectMapper\
+    \ mapper = new ObjectMapper();\nStudent student = mapper.readValue(new File(\"\
+    student.json\"),\nStudent.class);\n\nreturn student;\n\n```\n\n```\nclass Student\
+    \ {\n  private String name;\n  private int age;\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "```\npublic Student(){\n    public String getName() {\n        return name;\n\
+    \    }\n    public void setName(String name) {\n        this.name = name;\n  \
+    \  }\n    public int getAge() {\n        return age;\n    }\n    public void setAge(int\
+    \ age) {\n        this.age = age;\n    }\n    public String toString(){\n    \
+    \    return \"Student [ name: \"+name+\", age: \"+age+\\ \" ]\";\n    }\n}\n```\n\
+    \n# Verify the Result\n\nCompile the classes using javac compiler as follows:\n\
+    \nC:\\Jackson_WORKSPACE\\javac JacksonTester.java\n\nNow execute the jacksonTester\
+    \ to see the result.\n\nC:\\Jackson_WORKSPACE>java JacksonTester\n\nVerify the\
+    \ Output:\n\nStudent [ name: Mahesh, age: 10 ]"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# 8. GENERICS DATA BINDING\n\nIn simple data binding, we have used Map class\
+    \ which uses String as key and Object as a value object. Instead, we can have\
+    \ a concrete Java object and type cast it to use it in JSON binding.\n\nConsider\
+    \ the following example with a class UserData, a class to hold user-specific data.\n\
+    \nCreate a Java class file named JacksonTester in C:\\Jackson_WORKSPACE.\n\n#\
+    \ File: JacksonTester.java\n\n```\nimport java.io.File;\nimport java.io.IOException;\n\
+    import java.util.Arrays;\nimport java.util.HashMap;\nimport java.util.List;\n\
+    import java.util.Map;\n\nimport org.codehaus.jackson.JsonGenerationException;\n\
+    import org.codehaus.jackson.JsonParserException;\nimport org.codehaus.jackson.map.JsonMappingException;\n\
+    import org.codehaus.jackson.map.ObjectMapper;\nimport org.codehaus.jackson.type.TypeReference;\n\
+    \npublic class JacksonTester {\n    public static void main(String args[]){\n\
+    \        JacksonTester tester = new JacksonTester();\n        try {\n        \
+    \    ObjectMapper mapper = new ObjectMapper();\n\n            Map userDataMap\
+    \ = new HashMap();\n            UserData studentData = new UserData();\n     \
+    \       int[] marks = {1,2,3}\n```\n\n![](img/abf38b9a96498be10686313ae639d832_44_0.png)"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '```
+
+    Student student = new Student();
+
+
+    student.setAge(10);
+
+    student.setName("Mahesh");
+
+
+    // JAVA Object
+
+    studentData.setStudent(student);
+
+
+    // JAVA String
+
+    studentData.setName("Mahesh Kumar");
+
+
+    // JAVA Boolean
+
+    studentData.setVerified(Boolean.FALSE);
+
+
+    // Array
+
+    studentData.setMarks(marks);
+
+    TypeReference ref = new TypeReference<map>() { };\userDataMap.put("studentData1",
+    studentData);
+
+    mapper.writeValue(new File("student.json"), userDataMap);
+
+    // {
+
+    //   "studentData1":
+
+    //   {
+
+    //     "student":
+
+    //     {
+
+    //       "name":"Mahesh",
+
+    //       "age":10
+
+    //     }
+
+    //     "name":"Mahesh Kumar",
+
+    //     "verified":false,
+
+    //     "marks":[1,2,3]
+
+    //     }
+
+    //   }
+
+    // }
+
+    userDataMap = mapper.readValue(new File("student.json"), ref);
+
+    ```'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# Jackson\n\n```\nSystem.out.println(userDataMap.get(\"studentData1\").getStudent());\n\
+    System.out.println(userDataMap.get(\"studentData1\").getName());\n\nSystem.out.println(userDataMap.get(\"\
+    studentData1\").getVerified());\nSystem.out.println(Arrays.toString(userDataMap.get(\"\
+    studentData1\")).getMarks()));n} catch (JsonParseException e) {\n    e.printStackTrace();\n\
+    } catch (JsonMappingException e) {\n    e.printStackTrace();\n} catch (IOException\
+    \ e) {\n    e.printStackTrace();\n}\n}\n\nclass Student {\n    private String\
+    \ name;\n    private int age;\n    public Student(){}\n    public String getName()\
+    \ {\n        return name;\n    }\n    public void setName(String name) {\n   \
+    \     this.name = name;\n    }\n    public int getAge() {\n        return age;\n\
+    \    }\n    public void setAge(int age) {\n        this.age = age;\n    }\n  \
+    \  public String toString({\n        return \"Student [ name: \"+name+\", age:\
+    \ \"+age+\\ ]\";\n    }\n}\n```\n\n![](img/abf38b9a96498be10686313ae639d832_46_0.png)"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "```\n}\n\nclass UserData {\n    private Student student;\n    private String\
+    \ name;\n    private Boolean verified;\n    private int[] marks;\n\n    public\
+    \ UserData(){}\n\n    public Student getStudent() {\n        return student;\n\
+    \    }\n\n    public void setStudent(Student student) {\n        this.student\
+    \ = student;\n    }\n\n    public String getName() {\n        return name;\n \
+    \   }\n\n    public void setName(String name) {\n        this.name = name;\n \
+    \   }\n\n    public Boolean getVerified() {\n        return verified;\n    }\n\
+    \n    public void setVerified(Boolean verified) {\n        this.verified = verified;\n\
+    \    }\n\n    public int[] getMarks() {\n        return marks;\n    }\n\n    public\
+    \ void setMarks(int[] marks) {\n        this.marks = marks;\n    }\n```\n\n![](img/abf38b9a96498be10686313ae639d832_47_0.png)"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '```
+
+    }
+
+    }</map
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the classes using **javac** compiler as follows:
+
+
+    ```
+
+    C:\Jackson_WORKSPACE>javac JacksonTester.java
+
+    ```
+
+
+    Now run the jacksonTester to see the result:
+
+
+    ```
+
+    C:\Jackson_WORKSPACE>java JacksonTester
+
+    ```
+
+
+    Verify the Output:
+
+
+    | Student [ name: Mahesh, age: 10 ] |
+
+    | Mahesh Kumar
+
+    false
+
+    [1, 2, 3] |'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# 9. TREE MODEL
+
+
+    The Tree Model prepares an in-memory tree representation of a JSON document. It
+    is the most flexible approach among the three processing modes that Jackson supports.
+    It is quite similar to DOM parser in XML.
+
+
+    # Create a Tree from JSON
+
+
+    ObjectMapper provides a pointer to root node of the tree after reading the JSON.
+    Root Node can be used to traverse the complete tree. Consider the following code
+    snippet to get the root node of a provided JSON String.
+
+
+    ```
+
+    // create an ObjectMapper instance
+
+    ObjectMapper mapper = new ObjectMapper();
+
+    String jsonString = "\name":"Mahesh Kumar\",\"age":21,\verified":false,\"marks":[100,90,85]"
+
+
+    // create tree from JSON
+
+    JsonNode rootNode = mapper.readTree(jsonString);
+
+    ```
+
+
+    # Traversing a Tree
+
+
+    Get each node using the relative path to the root node while traversing the tree
+    and process the data. The following code snippet shows how to traverse a tree,
+    provided you have information regarding the root node.
+
+
+    | JsonNode nameNode = rootNode.path("name");
+
+    System.out.println("Name: " + nameNode.getTextValue());
+
+
+    JsonNode marksNode = rootNode.path("marks");
+
+    Iterator iterator = marksNode.getElements(); |
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_49_0.png)'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# Tree Model – Example\n\nCreate a Java class file named JacksonTester in C:\\\
+    >Jackson_WORKSPACE.\n\n# File: JacksonTester.java\n\n```\nimport java.io.IOException;\n\
+    import java.util.Iterator;\n\nimport org.codehaus.jackson.JsonNode;\nimport org.codehaus.jackson.JsonParseException;\n\
+    import org.codehaus.jackson.map.JsonMappingException;\nimport org.codehaus.jackson.map.ObjectMapper;\n\
+    \npublic class JacksonTester {\n    public static void main(String[] args[]){\n\
+    \        JacksonTester tester = new JacksonTester();\n        try {\n        \
+    \    ObjectMapper mapper = new ObjectMapper();\n            String jsonString\
+    \ = \"{\"name\":\"Mahesh Kumar\\\",\"age\":21,\\verified\":false,\\marks\":[100,90,85]}\"\
+    ;\n            JsonNode rootNode = mapper.readTree(jsonString);\n\n          \
+    \  JsonNode nameNode = rootNode.path(\"name\");\n            System.out.println(\"\
+    Name: \" + nameNode.getValue());\n\n            JsonNode ageNode = rootNode.path(\"\
+    age\");\n            System.out.println(\"Age: \" + ageNode.getIntValue());\n\n\
+    \            JsonNode verifiedNode = rootNode.path(\"verified\");\n          \
+    \  System.out.println(\"Verified: \" + (verifiedNode.asBoolean() ? \"Yes\":\"\
+    No\"));\n\n            JsonNode marksNode = rootNode.path(\"marks\");\n      \
+    \      Iterator<JsonNode> iterator = marksNode.getElements();\n```\n\n![](img/abf38b9a96498be10686313ae639d832_50_0.png)"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "```\nSystem.out.print(\"Marks: [ \");\nwhile (iterator.hasNext()) {\n    JsonNode\
+    \ marks = iterator.next();\n    System.out.print(marks.getIntValue() + \" \");\n\
+    }\nSystem.out.println(\"]\");\n} catch (JsonParseException e) {\n    e.printStackTrace();\n\
+    } catch (JsonMappingException e) {\n    e.printStackTrace();\n} catch (IOException\
+    \ e) {\n    e.printStackTrace();\n}\n```\n\n# # Verify the Result\n\nCompile the\
+    \ classes using **javac** compiler as follows:\n\n```\nC:\\Jackson_WORKSPACE>javac\
+    \ JacksonTester.java\n```\n\nNow execute the jacksonTester to see the result.\n\
+    \n```\nC:\\Jackson_WORKSPACE>java JacksonTester\n```\n\nVerify the Output:\n\n\
+    | Name: Mahesh Kumar |\n Age: 21 |\n Verified: No |\n Marks: [ 100 90 85 ] |\n\
+    \n# # Tree to JSON Conversion\n\nIn the following example, we will create a Tree\
+    \ using JsonNode and write it to a JSON file and read it back.\n\nCreate a Java\
+    \ class named JacksonTester in **C:\\>Jackson_WORKSPACE.**\n\n![](img/abf38b9a96498be10686313ae639d832_51_0.png)"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# File: JacksonTester.java\n\n```\nimport java.io.File;\nimport java.io.IOException;\n\
+    import java.util.Iterator;\n\nimport org.codehaus.jackson.JsonNode;\nimport org.codehaus.jackson.JsonParseException;\n\
+    import org.codehaus.jackson.map.JsonMappingException;\nimport org.codehaus.jackson.map.ObjectMapper;\n\
+    import org.codehaus.jackson.node.ArrayNode;\nimport org.codehaus.jackson.node.ObjectNode;\n\
+    \npublic class JacksonTester {\n    public static void main(String[] args[]) {\n\
+    \        JacksonTester tester = new JacksonTester();\n        try {\n        \
+    \    ObjectMapper mapper = new ObjectMapper();\n\n            JsonNode rootNode\
+    \ = mapper.createObjectNode();\n            JsonNode marksNode = mapper.createArrayNode();\n\
+    \            ((ArrayNode)marksNode).add(100);\n            ((ArrayNode)marksNode).add(90);\n\
+    \            ((ArrayNode)marksNode).add(85);\n            ((ObjectNode)rootNode).put(\"\
+    name\", \"Mahesh Kumar\");\n            ((ObjectNode)rootNode).put(\"age\", 21);\n\
+    \            ((ObjectNode)rootNode).put(\"verified\", false);\n            ((ObjectNode)rootNode).put(\"\
+    marks\", marksNode);\n\n            mapper.writeValue(new File(\"student.json\"\
+    ), rootNode);\n\n            rootNode = mapper.readTree(new File(\"student.json\"\
+    ));\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '```
+
+    JsonNode out = rootNode.path("name");
+
+    System.out.println("Name: " + nameNode.getTextValue());
+
+    ```
+
+
+    ```
+
+    JsonNode ageNode = rootNode.path("age");
+
+    System.out.println("Age: " + ageNode.getIntValue());
+
+    ```
+
+
+    ```
+
+    JsonNode verifiedNode = rootNode.path("verified");
+
+    System.out.println("Verified: " + (verifiedNode.getBooleanValue() ? "Yes"::"No"));
+
+    ```
+
+
+    ```
+
+    JsonNode marksNode1 = rootNode.path("marks");
+
+    Iterator<JsonNode> iterator = marksNode1.getElements();
+
+    System.out.print("Marks: " + " ",
+
+    ```
+
+
+    # Verify the Result
+
+
+    Compile the classes using javac compiler as follows:
+
+
+    ```
+
+    C:\Jackson_WORKSPACE>javac JacksonTester.java
+
+    ```
+
+
+    Now run the jacksonTester to see the result.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "```\nC:\\Jackson_WORKSPACE>java JacksonTester\n```\n\nVerify the Output:\n\n\
+    ```\nName: Mahesh Kumar\nAge: 21\nVerified: No\nMarks: [ 100 90 85 ]\n```\n\n\
+    # Tree to Java Objects\n\nIn the following example, we will perform the following\
+    \ operations:\n\n+   * Create a Tree using JsonNode\n* Write it to a JSON file\n\
+    * Read back the tree and convert it to a Student object.\n\nFirst of all, create\
+    \ a Java class named JacksonTester in C:\\Jackson_WORKSPACE.\n\n# File: JacksonTester.java\n\
+    \n```\nimport java.io.File;\nimport java.io.IOException;\nimport java.util.Arrays;\n\
+    \nimport org.codehaus.jackson.JsonNode;\nimport org.codehaus.jackson.JsonParseException;\n\
+    import org.codehaus.jackson.map.JsonMappingException;\nimport org.codehaus.jackson.map.ObjectMapper;\n\
+    import org.codehaus.jackson.node.ArrayNode;\nimport org.codehaus.jackson.node.ObjectNode;\n\
+    \npublic class JacksonTester {\n    public static void main(String[] args[]){\n\
+    \        JacksonTester tester = new JacksonTester();\n```\n\n![](img/abf38b9a96498be10686313ae639d832_54_0.png)"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\ntry {\n    ObjectMapper mapper = new ObjectMapper();\n\n    JsonNode rootNode\
+    \ = mapper.createObjectNode();\n    JsonNode marksNode = mapper.createArrayNode();\n\
+    \    ((ArrayNode)marksNode).add(100);\n    ((ArrayNode)marksNode).add(90);\n \
+    \   ((ArrayNode)marksNode).add(85);\n    ((ObjectNode) rootNode).put(\"name\"\
+    , \"Mahesh Kumar\");\n    ((ObjectNode) rootNode).put(\"age\", 21);\n    ((ObjectNode)\
+    \ rootNode).put(\"verified\", false);\n    ((ObjectNode) rootNode).put(\"marks\"\
+    ,marksNode);\n\n    mapper.writeValue(new File(\"student.json\"), rootNode);\n\
+    \n    rootNode = mapper.readTree(new File(\"student.json\"));\n\n    Student student\
+    \ = mapper.treeValue(rootNode, Student.class);\n\\n    System.out.println(\"Name:\
+    \ \" + student.getName());\n    System.out.println(\"Age: \" + student.getAge());\n\
+    \    System.out.println(\"Verified: \" + (student.isVerified() ? \"Yes\"::\"No\"\
+    ));\n    System.out.println(\"Marks: \"+Arrays.toString(student.getMarks()));\n\
+    } catch (JsonParseException e) {\n    e.printStackTrace();\n} catch (JsonMappingException\
+    \ e) {\n    e.printStackTrace();\n} catch (IOException e) {\n    e.printStackTrace();\n\
+    }\n}\n```"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "```\nclass Student {\n    String name;\n    int age;\n    boolean verified;\n\
+    \    int[] marks;\n    public String getName() {\n        return name;\n    }\n\
+    \    public void setName(String name) {\n        this.name = name;\n    }\n  \
+    \  public int getAge() {\n        return age;\n    }\n    public void setAge(int\
+    \ age) {\n        this.age = age;\n    }\n    public boolean isVerified() {\n\
+    \        return verified;\n    }\n    public void setVerified(boolean verified)\
+    \ {\n        this.verified = verified;\n    }\n    public int[] getMarks() {\n\
+    \        return marks;\n    }\n    public void setMarks(int[] marks) {\n     \
+    \   this.marks = marks;\n    }\n}\n```"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Verify the Result
+
+
+    Compile the classes using javac compiler as follows:
+
+
+    ```
+
+    C:\>Jackson_WORKSPACE>javac JacksonTester.java
+
+    ```
+
+
+    Now execute the jacksonTester to see the result.
+
+
+    ```
+
+    C:\>Jackson_WORKSPACE>java JacksonTester
+
+    ```
+
+
+    Verify the Output:
+
+
+    ```
+
+    Name: Mahesh Kumar
+
+    Age: 21
+
+    Verified: No
+
+    Marks: [ 100 90 85 ]
+
+    ```'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# 10. STREAMING API\n\nStreaming API reads and writes JSON content as discrete\
+    \ events. JsonParser reads the data, whereas JsonGenerator writes the data.\n\n\
+    +   - It is the most powerful approach among the three processing modes Jackson\
+    \ supports.\n- It has the lowest overhead and it provides the fastest way to perform\
+    \ read/write operations.\n- It is analogous to Stax parser for XML.\n\nIn this\
+    \ chapter, we will discuss how to read and write JSON data using Jackson streaming\
+    \ APIs. Streaming API works with the concept of token and every details of JSON\
+    \ is to be handled carefully. Following are the two classes which we will use\
+    \ in this chapter:\n\n+   - JsonGenerator - Write to JSON String.\n- JsonParser\
+    \ - Parse JSON String.\n\n# JsonGenerator\n\nJsonGenerator is the base class to\
+    \ define public API for writing JSON content. Instances are created using factory\
+    \ methods of a JsonFactory instance.\n\n# Class Declaration\n\nFollowing is the\
+    \ declaration for org.fasterxml.jackson.JsonGenerator class:\n\n```\npublic abstract\
+    \ class JsonGenerator\n  extends Object\n  implements Closeable\n```\n\n# Nested\
+    \ Class\n\n| S.N. | Class & Description |\n| 1 | static class JsonGenerator.Feature\
+    \ Enumeration that defines all togglable features for generators. |\n\n![](img/abf38b9a96498be10686313ae639d832_58_0.png)"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# Fields
+
+
+    **protected PrettyPrinter_cfgPrettyPrinter** - Object that handles pretty-printing
+    (usually additional whitespace to make results more human-readable) during output.
+
+
+    # Constructors
+
+
+    | S.N. | Constructor & Description |
+
+    |---|---|
+
+    | 1 | `&lt;"&quot;&quot; b=\&quot;"&quot; style=\&quot;box-sizing:border-box;&quot;&gt;`
+    Default constructor |
+
+
+    # Class Methods
+
+
+    | S.N. | Method & Description |
+
+    |---|---|
+
+    | 1 | **boolean canUseSchema(FormatSchema schema)** Method that can be used to
+    verify that a given schema can be used with this generator (using setSchema(org.codehaus.jackson.FormatSchema)).
+    |
+
+    | 2 | **abstract void close()** Method called to close this generator, so that
+    no more content can be written. |
+
+    | 3 | **JsonGenerator configure(JsonGenerator.Feature f, boolean state)** Method
+    for enabling or disabling a specified feature: check JsonGenerator.Feature for
+    a list of available features. |
+
+    | 4 | **abstract void copyCurrentEvent(JsonParser jp)** Method for copying the
+    contents of the current event that the given parser instance points to. |
+
+    | 5 | **abstract void copyCurrentStructure(JsonParser jp)** Method for copying
+    the contents of the current event and its following events that it encloses the
+    given parser instance points to. |
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_59_0.png)'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '| 6 | abstract JsonGenerator disable(JsonGenerator.Feature f)
+
+    Method for disabling the specified features (check JsonGenerator.Feature for list
+    of features) |
+
+    | 7 | void disableFeature(JsonGenerator.Feature f)
+
+    Deprecated. Use disable(org.codehaus.jackson.JsonGenerator.Feature) instead |
+
+    | 8 | abstract JsonGenerator enable(JsonGenerator.Feature f)
+
+    Method for enabling specified parser features: check JsonGenerator.Feature for
+    list of available features. |
+
+    | 9 | void enableFeature(JsonGenerator.Feature f)
+
+    Deprecated. Use enable(org.codehaus.jackson.JsonGenerator.Feature) instead |
+
+    | 10 | abstract void flush()
+
+    Method to flush any buffered content to the underlying target (output stream,
+    writer), and to flush the target itself as well. |
+
+    | 11 | CharacterEscapes getCharacterEscapes()
+
+    Method for accessing custom escapes factory for JsonGenerators it creates. |
+
+    | 12 | abstract ObjectCodec getCodec()
+
+    Method for accessing the object used for writing Java object as Json content (using
+    method writeObject(java.lang.Object)). |
+
+    | 13 | int getHighestEscapedChar()
+
+    Accessor method for testing what is the highest unescaped character configured
+    for this generator. |
+
+    | 14 | abstract JsonStreamContext getgetContext() |
+
+    | 15 | Object getOutputTarget()
+
+    Method that can be used to get access to object that is used as target for |'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'generated output; this is usually either OutputStream or Writer, depending
+    on what generator was constructed with.
+
+
+    | | | |
+
+    |---|---||
+
+    | 16 | **abstract boolean isClosed()**
+
+    Method that can be called to determine whether this generator is closed or not.
+    |
+
+    | 17 | **abstract boolean isEnabled(JsonGenerator.Feature f)**
+
+    Method for checking whether a given feature is enabled. |
+
+    | 18 | **boolean isEnabled(JsonGenerator.Feature f)**
+
+    Deprecated. Use isEnabled(org.codehaus.jackson.JsonGenerator.Feature) instead.
+    |
+
+    | 19 | **JsonGenerator setCharacterEscapes(CharacterEscapes esc)**
+
+    Method for defining custom escapes factory for JsonGenerator it creates. |
+
+    | 20 | **abstract JsonGenerator setCodec(Codec oc)**
+
+    Method that can be called to set or reset the object to for writing Java objects
+    as JsonContent (using method JSONObject(java.lang.Object)). |
+
+    | 21 | **void setFeature(JsonGenerator.Feature f, boolean state)**
+
+    Deprecated. Use configure(org.codehaus.jackson.JsonGenerator.Feature, boolean)
+    |
+
+    | 22 | **JsonGenerator setHighestNonEscapedChar(int charCode)**
+
+    Method that can be called to request that the generator escapes all the character
+    codes above a specified code point (if positive value); or not escape any characters
+    except for ones that must be escaped for the data format (if -1). |
+
+    | 23 | **JsonGenerator setPrettyPrinter(PrettyPrinter pp)**
+
+    Method for setting a custom pretty printer, which is usually used to add indentation
+    for human readability. |
+
+    | 24 | **void setSchema(FormatSchema schema)**
+
+    Method to call to make this generator use a specified schema. |
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_61_0.png)'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '```
+
+    abstract JsonGenerator useDefaultPrettyPrinter()
+
+    ```
+
+
+    Convenience method for enabling pretty-printing using the default pretty printer
+    (DefaultPrettyPrinter).
+
+
+    # Version version()
+
+
+    Method to detect the version of the component that implements this interface;
+    returned version should never be null, but may return specific "not available"
+    (see Version for details).
+
+
+    ```
+
+    void writeArrayFieldStart(String fieldName)
+
+    ```
+
+
+    Convenience method for outputting a field entry ("member") (that will contain
+    a JSON array value), and the START_ARRAY marker.
+
+
+    ```
+
+    abstract void writeBinary(Base64Variant b6variant, byte[] data, int offset, int
+    len)
+
+    ```
+
+
+    Method that will output given chunk of binary data as base64 encoded, as a complete
+    String value (surrounded by double quotes).
+
+
+    ```
+
+    void writeBinary(byte[]) data
+
+    ```
+
+
+    Similar to writeBinary(Base64Variant,byte[][],int,int), but assumes default to
+    using the Jackson default Base64 variant (which is Base64Variants.MIME_NO_LINEFEEDS).
+
+
+    ```
+
+    void writeBinary(byte[]) data, int offset, int len
+
+    ```
+
+
+    Similar to writeBinary(Base64Variant,byte[][],int,int), but defaults to using
+    the Jackson default Base64 variant (which is Base64Variants.MIME_NO_LINEFEEDS).
+
+
+    ```
+
+    void writeBinaryField(String fieldName, byte[]) data
+
+    ```
+
+
+    Convenience method for outputting a field entry ("member") that contains the specified
+    data in base64-encoded form.
+
+
+    ```
+
+    abstract void writeBoolean(boolean state)
+
+    ```
+
+
+    Method for outputting literal Json boolean value (one of Strings ''true'' and
+    ''false'').
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_62_0.png)'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: 'void writeBooleanField(String fieldName, boolean value)
+
+    Convenience method for outputting a field entry ("member") that has a boolean
+    value.
+
+
+    abstract void writeEndArray()
+
+    Method for writing the closing marker of a JSON Array value (character '']'');
+    plus possible whitespace decoration if pretty-printing is enabled.
+
+
+    abstract void writeEndObject()
+
+    Method for writing the closing marker of a JSON Object value (character ''}'');
+    plus possible whitespace decoration if pretty-printing is enabled.
+
+
+    void writeFieldName(SerializableString)
+
+    Method similar to writeFieldName(String), main difference being that it may perform
+    some of processing (such as quoting of certain characters, or encoding into external
+    encoding supported by generator) can be done just once and reused for later calls.
+
+
+    void writeFieldName(SerializedString)
+
+    Method similar to writeFieldName(String), main difference being that it may perform
+    some of processing (such as quoting of certain characters, or encoding into external
+    encoding supported by generator) can be done just once and reused for later calls.
+
+
+    abstract void writeFieldName(String)
+
+    Method for writing a field name (JSON String surrounded by double quotes: syntactically
+    identical to a JSON String value, possibly decorated by whitespace if pretty-printing
+    is enabled.
+
+
+    abstract void writeNull()
+
+    Method for outputting literal Json null value.
+
+
+    void writeNullField(String fieldName)
+
+    Convenience method for outputting a field entry ("member") that has JSON literal
+    value null.
+
+
+    abstract void writeNumber(BigDecimal dec)
+
+    Method for outputting indicate Json numeric value.'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '| 42 | abstract void writeNumber(BigInteger v)<br>Method for outputting a given
+    value as a Json number. |
+
+    | 43 | abstract void writeNumber(double d)<br>Method for outputting indicate Json
+    numeric value. |
+
+    | 44 | abstract void writeNumber(float f)<br>Method for outputting indicate Json
+    numeric value. |
+
+    | 45 | abstract void writeNumber(int v)<br>Method for outputting a given value
+    as a Json number. |
+
+    | 46 | abstract void writeNumber(long v)<br>Method for outputting a given value
+    as a Json number. |
+
+    | 47 | abstract void writeNumber(String encodedValue)<br>Write method that can
+    be used for custom numeric types that can not be (easily?) converted to "standard"
+    Java number types. |
+
+    | 48 | void writeNumberField(String fieldName, BigDecimal value)<br>Convenience
+    method for outputting a field entry("member") that has the specified numeric value.
+    |
+
+    | 49 | void writeNumberField(String fieldName, double value)<br>Convenience method
+    for outputting a field entry("member") that has the specified numeric value. |
+
+    | 50 | void writeNumberField(String fieldName, float value)<br>Convenience method
+    for outputting a field entry("member") that has the specified numeric value. |
+
+    | 51 | void writeNumberField(String fieldName, int value)<br>Convenience method
+    for outputting a field entry("member") that has the specified numeric value. |'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '```
+
+    void writeNumberField(String fieldName, long value)
+
+    Convenience method for outputting a field entry ("member") that has the specified
+    numeric value.
+
+    ```
+
+
+    ```
+
+    abstract writeObject(Object pojo)
+
+    Method for writing a given Java object (POJO) as Json.
+
+    ```
+
+
+    ```
+
+    void writeObjectField(String fieldName, Object pojo)
+
+    Convenience method for outputting a field entry ("member") that has contents of
+    a specific Java object as its value.
+
+    ```
+
+
+    ```
+
+    abstract writeObjectFieldStart(String fieldName)
+
+    Convenience method for outputting a field entry ("member") (that will contain
+    a JSON object value), and the START_OBJECT marker.
+
+    ```
+
+
+    ```
+
+    abstract writeRaw(char c)
+
+    Method that will force the generator to copy input text verbatim without modifications
+    (including that no escaping is done and no separators are added even if context
+    [array, object] would otherwise require.
+
+    ```
+
+
+    ```
+
+    abstract writeRaw(char[] text, int offset, int len)
+
+    Method that will force the generator to copy input text verbatim without modifications
+    (including that no escaping is done and no separators are added even if context
+    [array, object] would otherwise require.
+
+    ```
+
+
+    ```
+
+    abstract writeRaw(String text)
+
+    Method that will force the generator to copy input text verbatim without modifications
+    (including that no escaping is done and no separators are added even if context
+    [array, object] would otherwise require.
+
+    ```
+
+
+    ```
+
+    abstract writeRaw(String text, int offset, int len)
+
+    Method that will force the generator to copy input text verbatim without modifications
+    (including that no escaping is done and no separators are added even if context
+    [array, object] would otherwise require.
+
+    ```
+
+
+    ```
+
+    abstract writeRawUTF8String(byte[]) text, int offset, int length)
+
+    Method similar to writeString(String) but that takes as its input a UTF-8
+
+    ```
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_65_0.png)'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: 'encoded String that is to output as-is, without additional escaping (type of
+    which depends on data format; backslashes for JSON).
+
+
+    ```
+
+    abstract void writeRawValue(char[] text, int offset, int len)
+
+    ```
+
+
+    ```
+
+    abstract void writeRawValue(String text)
+
+    Method that will force the generator to copy input text verbatim without any modifications,
+    assuming it must constitute a single legal JSON value (number, string, boolean,
+    Array or List).
+
+    ```
+
+
+    ```
+
+    abstract void writeStartArray(String text, int offset, int len)
+
+    Method for writing the starting marker of a JSON Array value (character ''['';
+    plus possible whitespace decoration for pre-printing is enabled).
+
+    ```
+
+
+    ```
+
+    abstract void writeStartObject()
+
+    Method for writing the starting marker of a JSON Object value (character ''{'';
+    plus possible whitespace decoration for pre-printing is enabled).
+
+    ```
+
+
+    ```
+
+    abstract void writeString(char[] text, int offset, int len)
+
+    Method for outputting a String value.
+
+    ```
+
+
+    ```
+
+    void writeString(SerializableString text)
+
+    Method similar to writeString(String), but that takes SerializableString which
+    can make this potentially more efficient to call as generator may be able to reuse
+    quoted and/or encoded representation.
+
+    ```
+
+
+    ```
+
+    abstract void writeString(String text)
+
+    Method for outputting a String value.
+
+    ```
+
+
+    ```
+
+    void writeStringField(String fieldName, String value)
+
+    Convenience method for outputting a field entry ("member") that has a String value.
+
+    ```'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "abstract void writeTree(JsonNode rootNode)\nMethod for writing given JSON tree\
+    \ (expressed as a tree where given JsonNode is the root) using this generator.\n\
+    \nabstract void writeUTF8String(byte[] text, int offset, int length)\nMethod similar\
+    \ to writeString(String) but that takes as its input a UTF-8 encoded String that\
+    \ has not been escaped whatever scheme data format requires (for JSON) backslash-escaping\
+    \ for control characters and double-quotes; for other formats something else).\n\
+    \n# Methods Inherited\n\nThis class inherits methods from the following class:\n\
+    \n+   - java.lang.Object\n\n# JsonParser\n\nJsonParser is the base class to define\
+    \ public API for reading Json content. Instances are created using factory methods\
+    \ of a JsonFactory instance.\n\n# Class Declaration\n\nFollowing is the declaration\
+    \ for org.codehaus.jackson.JsonParser class:\n\n```\npublic abstract class JsonParser\n\
+    \  extends Object\n  implements Closeable, Versioned\n```\n\n# Nested Classes\n\
+    \n| S.N. | Class & Description |\n| 1 | static class JsonParser.Feature\nEnumeration\
+    \ that defines all togglable features for parsers. |\n|2 | static class JsonParser.NumberType\n\
+    Enumeration of possible \"native\" (optional) types that can be used for numbers.\
+    \ |\n\n![](img/abf38b9a96498be10686313ae639d832_67_0.png)"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# Jackson
+
+
+    # Fields
+
+
+    +   * protected PrettyPrinter _cfgPrettyPrinter - Object that handles printing
+    (usually additional whitespace to make results more human-readable) during output.
+
+    * protected JsonToken _currToken - Last token retrieved via nextToken(), any.
+
+    * protected int _features - Bit flag composed of bits that indicate which JsonParser.Features
+    are enabled.
+
+    * protected JsonToken _lastClearedToken - Last cleared token, if any: that is,
+    the value that was in effect when clearCurrentToken() was called.
+
+
+    # Constructors
+
+
+    | S.N. | Constructor & Description |
+
+    | 1 | protected JsonParser() Default constructor |
+
+    | 2 | protected JsonParser(int features) |
+
+
+    # Class Methods
+
+
+    | S.N. | Method & Description |
+
+    | 1 | protected JsonParseException _constructError(String msg) Helper method for
+    constructing JsonParseExceptions based on current state of the parser |
+
+    | 2 | boolean canUseSchema(FormatSchema) Method that can be used to verify that
+    given schema can be used with this parser (using setSchema(org.codehaus.jackson.FormatSchema)).
+    |
+
+    | 3 | void clearCurrentToken() Method called to "consume" the current token by
+    effectively removing it so that hasCurrentToken() returns false, and getCurrentToken()
+    null.
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_68_0.png)'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'abstract void close())
+
+    Closes the parser so that no further iteration or data access can be made;
+
+    will also close the underlying input source if parser either owns the input source,
+    or feature JsonParser.Feature.AUTO_CLOSE_SOURCE is enabled.
+
+
+    JsonParser configure(JsonParser.Feature f, boolean state)
+
+    Method for enabling or disabling specified feature (check JsonParser.Feature for
+    list of features)
+
+
+    JsonParser disable(JsonParser.Feature f)
+
+    Method for disabling specified feature (check JsonParser.Feature for list of features)
+
+
+    void disableFeature(JsonParser.Feature f)
+
+    Deprecated. Use disable(Feature) instead
+
+
+    JsonParser enable(JsonParser.Feature f)
+
+    Method for enabling specified parser feature (check JsonParser.Feature for list
+    of features)
+
+
+    void enableFeature(JsonParser.Feature f)
+
+    Deprecated. Use enable(Feature) instead
+
+
+    abstract BigInteger getBigIntegerValue()
+
+    Numeric accessor that can be called when the current token is of type
+
+    JsonToken.VALUE_NUMBER_INT and it cannot be used as a Java long primitive type
+    to its magnitude.
+
+
+    byte[] getBinaryValue()
+
+    Convenience alternative to getBinaryValue(Base64Variant) that defaults to
+
+    using Base64Variants.getDefaultVariant() as the default encoding.
+
+
+    abstract byte[] getBinaryValue(Base64Variant b6variant)
+
+    Method that can be used to read (and consume -- results may not be
+
+    accessible using other methods after the call) base64-encoded binary data included
+    in the current textual JSON value.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# boolean getBooleanValue()
+
+
+    Convenience accessor that can be called when the current token is JsonToken.VALUE_TRUE
+    or JsonToken.VALUE_FALSE.
+
+
+    # byte getByteValue()
+
+
+    Numeric accessor that can be called when the current token is of type JsonToken.VALUE_NUMBER_INT
+    and it can be expressed as a value of Java primitive type.
+
+
+    # abstract ObjectCodec getCodec()
+
+
+    Accessor for ObjectCodec associated with this parser, if any.
+
+
+    # abstract JsonLocation getCurrentLocation()
+
+
+    Method that returns location of the last processed character; usually for reporting
+    purposes.
+
+
+    # abstract String getCurrentName()
+
+
+    Method to be called to get the name associated with the current token: for JsonToken.FIELD_NAMES
+    it will be the same as getText() returns; for field values it will be preceding
+    field name; and for others (array values, root-level values) null.
+
+
+    # JsonToken getCurrentToken()
+
+
+    Accessor to find which token parser currently points to, if any; null will be
+    returned if none.
+
+
+    # abstract BigDecimal getDecimalValue()
+
+
+    Numeric accessor that can be called when the current token is of type JsonToken.VALUE_FLOAT
+    or JsonToken.VALUE_NUMBER_INT.
+
+
+    # abstract double getDoubleValue()
+
+
+    Numeric accessor that can be called when the current token is of type JsonToken.VALUE_NUMBER_FLOAT
+    and it can be expressed as a Java primitive type.
+
+
+    # Object getEmbeddedObject()
+
+
+    Accessor that can be called if (and only if) the current token is JsonToken.VALUE_EMBEDDED_OBJECT.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "# Jackson\n\n| 22 | abstract getFloatValue() \n Numeric accessor that can be\
+    \ called when the current token is of type JsonToken.VALUE_NUMBER_FLOAT and it\
+    \ can be expressed as a Java float primitive type. |\n\n| 23 | Object getInputSource()\
+    \ \n Method that can be used to get access to object that is used to access input\
+    \ being parsed; this is usually either InputStream or Reader, depending on what\
+    \ parser was constructed with. |\n\n| 24 | abstract int getIntValue() \n Numeric\
+    \ accessor that can be called when the current token is of type JsonToken.VALUE_NUMBER_INT\
+    \ and it can be expressed as a value of Java int primitive type. |\n\n| 25 | JsonToken\
+    \ getLastClearedToken() \n Method that can be called to get the last token that\
+    \ was cleared setCurrentToken(). |\n\n| 26 | abstract long getLong() \n Numeric\
+    \ accessor that can be called when the current token is of type JsonToken.VALUE_NUMBER_INT\
+    \ and it can be expressed as a Java long primitive type. |\n\n| 27 | abstract\
+    \ JsonParser.NumberType getNumber() \n If current token is of type JsonToken.VALUE_NUMBER_FLOAT,\
+    \ returns one of JsonParser.NumberType constants; otherwise returns null. |\n\n\
+    | 28 | abstract Number getNumber() \n Generic number value accessor method that\
+    \ will work for all kinds of numeric values. |\n\n| 29 | abstract JsonStreamContext\
+    \ getParsingContext() \n Method that can be used to access current parsing context\
+    \ reader in. |\n\n| 30 | short getShortValue() \n Numeric accessor that can be\
+    \ called when the current token is of type |\n\n![](img/abf38b9a96498be10686313ae639d832_71_0.png)"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: 'JsonToken.VALUE_NUMBER_INT and it can be expressed as a value of Java short
+    primitive type.
+
+
+    abstract String getText()
+
+    Method for accessing textual representation of the current token; if no current
+    token (before first call to nextToken()), or after encountering end-of-input,
+    returns null.
+
+
+    abstract char[] getTextCharacters()\Method similar to getText(), but that will
+    return underlying (unmodifiable) character array that contains textual value,
+    instead of constructing a String object to contain this information.
+
+
+    abstract int getTextLength()
+
+    Accessor used with getTextCharacters(), to know length of String stored in returned
+    buffer.
+
+
+    abstract int getTextOffset()
+
+    Accessor used with getTextCharacters(), to know offset of the first text character
+    within buffer.
+
+
+    abstract JsonLocation getTokenLocation()
+
+    Method that return the starting location of the current token; that is, position
+    of the first character from input that starts the current token.
+
+
+    boolean getValueAsBoolean()
+
+    Method that will try to convert value of current token to a boolean.
+
+
+    boolean getValueAsBoolean(boolean defaultValue)
+
+    Method that will try to convert value of current token to a boolean.
+
+
+    double getValueAsDouble()
+
+    Method that will try to convert value of current token to a Java double.
+
+
+    double getValueAsDouble(double defaultValue)
+
+    Method that will try to convert value of current token to a Java double.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '| 40 | **int getValueAsInt()**
+
+    Method that will try to convert value of current token to a int. |
+
+    | 41 | **int getValueAsInt(int defaultValue)**
+
+    nMethod that will try to convert value of current token to a int. |
+
+    | 42 | **long getValueAsLong()**
+
+    Method that will try to convert value of current token to a long. |
+
+    | 43 | **long getValueAsLong(long defaultValue)**
+
+    nMethod that will try to convert value of current token to a long. |
+
+    | 44 | **boolean hasCurrentToken()**
+
+    Method for checking whether parser points to a token (and data that token is available).
+    |
+
+    | 45 | **boolean hasTextCharacters()**
+
+    Method can be used to determine whether calling of getTextCharacters() would be
+    the most efficient way to access textual content for the event parser currently
+    points to. |
+
+    | 46 | **abstract boolean isClosed()**
+
+    Method that can be used to determine whether this parser is closed or not. |
+
+    | 47 | **boolean isEnabled(JsonParser.Feature f)**
+
+    Method for checking whether specified JsonParser.Feature is enabled. |
+
+    | 48 | **boolean isExpectedStartArrayToken()**
+
+    Specialized accessor that can be used to verify that the current token indicates
+    start array (usually meaning that current token is Json.START_ARRAY) when start
+    array is expected. |
+
+    | 49 | **boolean isEnabled(JsonParser.Feature f)**
+
+    Deprecated. Use isEnabled(Feature) instead |
+
+    | 50 | **Boolean nextBooleanValue()**
+
+    Method fetches next token (as if calling nextToken()) and if it is |'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: 'JsonToken.VALUE_TRUE or JsonToken.VALUE_FALSE returns matching Boolean value;
+    otherwise return null.
+
+
+    boolean nextFieldName(SerializableString str)
+
+    Method fetches next token (as calling nextToken()) and verifies whether it is
+    JsonToken.FIELD_NAME with specified name and returns result of that comparison.
+
+
+    int nextIntValue(int defaultValue)
+
+    Method fetches next token (as calling nextToken()) and if it is JsonToken.VALUE_NUMBER_INT
+    returns 32-bit int value; otherwise returns specified default it is functionally
+    equivalent to:
+
+
+    long nextLong(long defaultValue)
+
+    Method fetches next token (as calling nextToken()) and if it is JsonToken.VALUE_NUMBER_INT
+    returns 64-bit int value; otherwise returns specified default it is functionally
+    equivalent to:
+
+
+    String nextText()
+
+    Method fetches next token (as calling nextToken()) and if it is JsonToken.VALUE_STRING
+    returns contained String value; otherwise returns null.
+
+
+    abstract JsonToken nextToken()
+
+    Main iteration method, which will advance stream enough to determine type of the
+    next token, if any.
+
+
+    JsonToken next()
+
+    Iteration method that will advance stream enough to determine type of the next
+    token that is a value type (including JSON Array and Object start/end markers).
+
+
+    <T> T readAs(Class<T> valueType)
+
+    Method to deserialize JSON content into a non-container type (it can be an array
+    type, however): typically a bean, array or a wrapper type (like Boolean).'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '| 58 | <T> T readAs(TypeReference<?> valueRef)
+
+    Method to deserialize JSON content into a Java type, reference to which is passed
+    as argument. |
+
+
+    | 59 | JsonNode readAsTree()
+
+    Method to deserialize JSON content into equivalent "tree model", represented by
+    root JsonNode of resulting model. |
+
+
+    | 60 | <T> Iterator<T> readValuesAs(Class<T> valueType)
+
+    Method for reading sequence of Objects from parser, all with same specified value
+    type. |
+
+
+    | 61 | <T> Iterator<T> readValuesAs(TypeReference<?> valueType)
+
+    Method for reading sequence of Objects from parser, all with same specified value
+    type. |
+
+
+    | 62 | int releaseBuffered(OutputStream out)
+
+    Method that can be called to push back any content that has been read but not
+    consumed by the parser. |
+
+
+    | 63 | int releaseBuffered(Writer w)
+
+    Method that can be called to push back any content that has been read but not
+    consumed by the parser. |
+
+
+    | 64 | abstract void codec(ObjectCodec c)
+
+    Setter that allows defining ObjectCodec associated with this parser, if any. |
+
+
+    | 65 | void setFeature(JsonParser.Feature f, boolean state)
+
+    Deprecated. Use configure(org.codehaus.jackson.JsonParser.Feature, boolean) instead
+    |
+
+
+    | 66 | void setSchema(FormatSchema schema)
+
+    Method to call to make this parser use specified schema. |
+
+
+    | 67 | abstract JsonParser skipChildren(())
+
+    Method that will skip all child tokens of an array or object token that the |'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: 'parser currently points to, iff stream points to JsonToken.START_OBJECT or
+    JsonToken.START_ARRAY.
+
+
+    Version version()
+
+    Method called to detect version of the component that implements this interface;
+    returned version should never be null, but may return specific "not available"
+    instance (see Version for details).
+
+
+    # Methods Inherited
+
+
+    This class inherits methods from the following class:
+
+
+    +   - java.lang.Object
+
+
+    # Write to JSON using JsonGenerator
+
+
+    It is pretty simple to use JsonGenerator. First, create the JsonGenerator using''.createJsonGenerator()
+    method and use its***() methods to write each JSON value.
+
+
+    ```
+
+    JsonFactory jsonFactory = new JsonFactory();
+
+    JsonGenerator jsonGenerator = jsonFactory.createJsonGenerator(new File(
+
+    "student.json", JsonEncoding.UTF8);
+
+    // {
+
+    jsonGenerator.writeStartObject();
+
+    // "name" : "Mahesh Kumar"
+
+    jsonGenerator.writeFieldError("name", "Mahesh Kumar");
+
+    ```
+
+
+    Let us use JsonGenerator in action. Create a Java class named JacksonTester in
+    C:\>Jackson_WORKSPACE.
+
+
+    # File: JacksonTester.java
+
+
+    ```
+
+    import java.io.File;
+
+    import java.io.IOException;
+
+    import java.util.Map;
+
+
+    import org.codehaus.jackson.JsonEncoding;
+
+    import org.codehaus.jackson.JsonFactory;
+
+    ```
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_76_0.png)'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "```\nimport org.codehaus.jackson.JsonGenerator;\nimport org.codehaus.jackson.JsonParseException;\n\
+    import org.codehaus.jackson.map.JsonMappingException;\nimport org.codehaus.jackson.map.ObjectMapper;\n\
+    \npublic class JacksonTester {\n    public static void main(String[] args[]) {\n\
+    \        JacksonTester tester = new JacksonTester();\n        try {\n        \
+    \    JsonFactory jsonFactory = new JsonFactory();\n            JsonGenerator jsonGenerator\
+    \ = jsonFactory.createJsonGenerator(new File(\"student.json\"), JsonEncoding.UTF8);\n\
+    \            // /\n            jsonGenerator.writeStartObject();\n           \
+    \ // \"name\" : \"Mahesh Kumar\"\n            jsonGenerator.writeField(\"name\"\
+    , \"Mahesh Kumar\");\n            // \"age\" : 21\n            jsonGenerator.writeNumberField(\"\
+    age\", 21);\n            // \"verified\" : false\n            jsonGenerator.writeBooleanField(\"\
+    verified\", false);\n            // \"marks\" : [100, 90, 85]\n            jsonGenerator.writeFieldName(\"\
+    marks\");\n            // [/\n            jsonGenerator.writeStartArray();\n \
+    \           // 100, 90, 85\n            jsonGenerator.writeNumber(100);\n    \
+    \        jsonGenerator.writeNumber(90);\n            jsonGenerator.writeNumber(85);\n\
+    \            // ]\n            jsonGenerator.writeEndArray();\n        // }\n\
+    \        jsonGenerator.writeEndObject();\n```"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "```\njsonGenerator.close();\n\n//result student.json\n//{\n // \"name\":\"\
+    Mahesh Kumar\",\n // \"age\":21,\n // \"verified\":false,\n // \"marks\":[100,90,85]\n\
+    }\nObjectMapper mapper = new ObjectMapper();\nMap<String,Object> dataMap = mapper.readValue(File(\"\
+    student.json\"), Map.class);\n\nSystem.out.println(dataMap.get(\"name\"));\nSystem.out.println(dataMap.get(\"\
+    age\"));\nSystem.out.println(dataMap.get(\"verified\"));\nSystem.out.println(dataMap.get(\"\
+    marks\"));\n} catch (ParseException e) {\n e.printStackTrace();\n} catch (JsonMappingException\
+    \ e) {\n e.printStackTrace();\n} catch (IOException e) {\n e.printStackTrace();\n\
+    }\n\n```\n\n# Verify the Result\n\nCompile the classes using javac compiler as\
+    \ follows:\n\n```\nC:\\Jackson_WORKSPACE>javac JacksonTester.java\n```\n\nNow\
+    \ execute the jacksonTester to see the result.\n\n```\nC:\\Jackson_WORKSPACE>java\
+    \ JacksonTester\n```\n\n![](img/abf38b9a96498be10686313ae639d832_78_0.png)"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# Jackson
+
+
+    Verify the output:
+
+
+    | Mahesh Kumar |
+
+    | 21 |
+
+    | false |
+
+    | [100, 90, 85] |
+
+
+    # # Reading JSON using JsonParser
+
+
+    Using JsonParser is again pretty simple. First, create the JsonParser using JsonFactory.createJsonParser()
+    method and use its nextToken() method to read each JSON string as token. Check
+    each token and process accordingly.
+
+
+    ```
+
+    JsonFactory jsonFactory = new JsonFactory();
+
+    JsonParser jsonParser = jsonFactory.createJsonParser(new File("student.json"));
+
+    while (jsonParser.nextToken() != JsonToken.END_OBJECT) {
+
+    // get the current token
+
+    String fieldname = jsonParser.getCurrentName();
+
+    if ("name".equals(fieldname)) {
+
+    // move to next token
+
+    jsonParser.nextToken();
+
+    System.out.println(jsonParser.getText());
+
+    }
+
+    }
+
+    ```
+
+
+    Let us see JsonParser in action. Create a Java class named JacksonTester in C:\>Jackson_WORKSPACE.
+
+
+    # File: JacksonTester.java
+
+
+    ```
+
+    import java.io.File;
+
+    import java.io.IOException;
+
+
+    import org.codehaus.jackson.JsonEncoding;
+
+    import org.codehaus.jackson.JsonFactory;
+
+    import org.codehaus.jackson.JsonGenerator;
+
+    import org.codehaus.jackson.JsonParserException;
+
+    ```
+
+
+    ![](img/abf38b9a96498be10686313ae639d832_79_0.png)'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\nimport org.codehaus.jackson.JsonParser;\nimport org.codehaus.jackson.JsonToken;\n\
+    import org.codehaus.jackson.map.JsonMappingException;\n\npublic class JacksonTester\
+    \ {\n    public static void main(String args[]) {\n        JacksonTester tester\
+    \ = new JacksonTester();\n        try {\n            JsonFactory jsonFactory =\
+    \ new JsonFactory();\n            JsonGenerator jsonGenerator = jsonFactory.createJsonGenerator(new\
+    \ File(\"student.json\"), JsonEncoding.UTF8);\n            jsonGenerator.writeStartObject();\n\
+    \            jsonGenerator.writeString(\"name\", \"Mahesh Kumar\");\n        \
+    \    jsonGenerator.writeNumberField(\"age\", 21);\n            jsonGenerator.writeBooleanField(\"\
+    verified\", false);\n            jsonGenerator.familyName(\"marks\");\n      \
+    \      jsonGenerator.writeStartArray(); // [\n            jsonGenerator.writeNumber(100);\n\
+    \            jsonGenerator.writeNumber(90);\n            jsonGenerator.writeEndArray();\n\
+    \            jsonGenerator.writeEndObject();\n            jsonGenerator.close();\n\
+    \n            //result student.json\n//{\n// // \"name\":\"Mahesh Kumar\",\n//\
+    \ // \"age\":21,\n// // \"verified\":false,\n// // \"marks\":[100,90,85]\n// //}\n\
+    \            JsonParser jsonParser = jsonFactory.createJsonParser(new\n```"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "```\nFile(\"student.json\\));\nwhile (jsonParser.nextToken() != JsonToken.END_OBJECT)\
+    \ {\n  //get the current token\n  String fieldname = jsonParser.getCurrentName();\n\
+    \  if (\"name\".equals(fieldname)) {\n    //move to next token\n    jsonParser.nextToken();\n\
+    \    System.out.println(jsonParser.getText());\n  }\n  if (\"age\".equals(fieldname)){\n\
+    \    // move to next token\n    jsonParser.nextToken();\n    System.out.println(jsonParser.getNumberValue());\n\
+    \  }\n  if (\"verified\".equals(fieldname)){\n    // move to next token\n    jsonParser.nextToken();\n\
+    \    System.out.println(jsonParser.getBooleanValue());\n  }\n  if (\"marks\".equals(fieldname)){\n\
+    \    // move to [\n    jsonParser.nextToken();\n    // loop till token equal to\
+    \ \"\"\n    while (jsonParser.nextToken() != JsonToken.END_ARRAY) {\n      System.out.println(jsonParser.getNumberValue());\n\
+    \    }\n  }\n} catch (JsonParseException e) {\n  e.printStackTrace();\n} catch\
+    \ (JsonMappingException e) {\n  e.printStackTrace();\n}\n```\n\n![](img/abf38b9a96498be10686313ae639d832_81_0.png)"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "```\n} catch (IOException e) {\n    e.printStackTrace();\n}\n}\n```\n\n# Verify\
+    \ the Result\n\nCompile the classes using javac compiler as follows:\n\n```\n\
+    C:\\Jackson_WORKSPACE>javac JacksonTester.java\n```\n\nNow run the jacksonTester\
+    \ to see the result.\n\n```\nC:\\Jackson_WORKSPACE>java JacksonTester\n```\n\n\
+    Verify the Output:\n\n```\nMahesh Kumar\n21\nfalse\n[100, 90, 85]\n```"
+  merge: -1
+  pgno: 82
