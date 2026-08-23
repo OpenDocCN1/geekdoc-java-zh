@@ -1,0 +1,1500 @@
+- img_proc: true
+  md: '# Java™ 8 Exception Handling
+
+
+    Develop Reliable Java Applications
+
+
+    # Mahavir DS Rathore'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Black Book Series
+
+
+    # JavaTM 8
+
+    Exception Exception
+
+    Handling
+
+
+    Mahavir DS Rathore'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Copyright
+
+
+    Java™ 8 Exception Handling by Mahavir DS Rathore. While every precaution has been
+    taken in the preparation of this book the author assume No responsibility for
+    errors or omissions, or for damages resulting from the use of the information
+    contained herein.
+
+
+    # About the author
+
+
+    I have been programming & teaching Java for last 18 years. This book is an effort
+    to document my knowledge to share with everyone across the world. I am available
+    to do training Java anywhere in the world. My email is gurumahaveer@gmail.com.
+
+
+    # Who should read the book?
+
+
+    This book is for programmers who already know Core Java (Java Standard Edition)
+    and interested to acquire better understanding of exception handling.
+
+
+    # Acknowledgement
+
+
+    Java is owned by Oracle and trademark is acknowledged.
+
+
+    # Dedication
+
+
+    To the inventors of the Java Language.
+
+
+    # Source Code
+
+
+    For source code of this book please send me a mail at gurumahaveer@gmail.com.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # Table of Content
+
+
+    | Sl.No | Chapter | HyperLink |
+
+    |---| 1 | Java Setup | Go |
+
+    | 2 | What is Exception? | Go |
+
+    | 3 | What is Exception Handling? | Go |
+
+    | 4 | Java Exception Hierarchy | Go |
+
+    | 5 | Try and Catch Block | Go |
+
+    | 6 | Exception Handling API | Go |
+
+    | 7 | Multiple Catch | Go |
+
+    | 8 | Multiple Exceptions | Go |
+
+    | 9 | Finally Block | Go |
+
+    | 10 | Finally and return keyword | Go |
+
+    | 11 | Checked and | Go |'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '| | Unchecked Exception |
+
+    | 12 | Nested Exception | Go |
+
+    | 13 | Throw Keyword | Go |
+
+    | 14 | Exception Chaining | Go |
+
+    | 15 | Try with Resource | Go |
+
+    | 16 | Overriding Exception | Go |
+
+    | 17 | User Defined Exception | Go |
+
+
+    # # Chapter 1:
+
+    Software Setup
+
+
+    +   - Introduction
+
+    - Software Required
+
+    - Verifying Installation
+
+    - Summary
+
+
+    **Introduction**
+
+    in this chapter I will show how to get and install the required software needed
+    for learning exception handling using Java. There are many options available to
+    have the required setup based upon operating system.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Java is free to download technology platform from oracle, many languages are
+    supported on Java platform. Wikipedia has an exhaustive list of all JVM languages
+    which can be seen by visiting https://en.wikipedia.org/wiki/List_of_JVM_languages
+    .
+
+
+    # Software Required
+
+
+    To develop Java programs you would need at the minimum
+
+
+    +   a. Java SE Development Kit (Java 8)
+
+    b. Code editor
+
+
+    This is irrespective of the operating system.
+
+    In this book I will be using Java on Windows OS.
+
+
+    Let''s look at various software that are needed and from where we can get them.
+
+
+    +   a. Java SE Development Kit – http://www.oracle.com/technwork/java/javase/downloads/jdk8-downloads-2133511.html
+
+
+    This is Java Standard Edition. Ensure you choose the correct JDK i.e. after identifying
+    operating system and architecture (32 bit or 64 bit). The latest version is 8.
+    It is very important to be cautious when downloading and installing Java, many
+    programmers make mistake of just downloading JRE and installing it. JRE is the
+    minimum environment required by a Java program to run where JDK is the minimum
+    environment to compile and execute Java program, ensure you download JDK not JRE.
+
+
+    +   b. Code editor – I prefer to use Notepad++. Notepad++ is a great code editor,
+    it has support for over 24 languages and it is open source.The latest version
+    can be downloaded from: https://notepad-plus-plus.org/download/v6.8.8.html. You
+    can also use other code editors or IDE such as eclipse, netbeans etc.
+
+
+    # Verifying Installation
+
+
+    On 32 bit Windows the Java SE is installed in “C:\Program Files (x86)\Java" by
+    default. On 64 bit Windows it is installed in “C:\Program Files\Java” by default.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "To check if JDK is installed on your PC go to command line and run\na. Java\
+    \ Compiler by typing \"javac.exe\"\na. Java Interpreted by typing \"java.exe\"\
+    \n\nIf for any of the above command you get a message \"is not recognized as an\
+    \ internal or external command\" then set the PATH environment variable using\
+    \ control panel. The steps are as follows\n\n+   a. Start panel\nb. Click System\
+    \ applet\nc. Click Advanced system settings\nd. Choose advanced tab\ne. Choose\
+    \ Environment variables button\nf. Set PATH variable to location of javac.exe\n\
+    \nVerify the setup by running a \"HelloWorld\" program.\n\n```\n// Program 1\n\
+    // Description: HelloWorld program\nclass Program {\n    public static void main(String\
+    \ args[]) {\n        System.out.println(\"Helloworld - Java Exception\nHandling\"\
+    );\n    }\n}\n```\n\n# Summary\n\nTo develop Java programs a programmer require\
+    \ JDK. JDK can be downloaded from oracle website. To code out Java programs programmer\
+    \ can use a code editor such as notepad++.\n\n![](img/82490df1c0b44475c1a824453ea9473e_7_0.png)"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# Chapter 2\nWhat is Exception?\n\n# Topics\n\n+   - What is an Error?\n- Cause\
+    \ of an Exception?\n- Why to do Exception Handling?\n- Summary\n\n# What is an\
+    \ Error?\n\nError is an unexpected situation within a program at compile or runtime.\
+    \ In a Java error can occur at compile time or runtime. Let's understand compile\
+    \ time error with the help of an example\n\n```\n// Program 1\n// Description:\
+    \ Compile time error\nclass Program {\n    public static void Main(String[] args)\
+    \ { // 'M' of Main is upper case -\n        compiler error\n        System.out.println(\"\
+    Namaskara Java\") // There is no semi colon -\n        compiler error\n    }\n\
+    }\n```\n\nWhen the above program is compiled, compiler will give compiler errors.\n\
+    This is first kind of error that Java gives.\n\nThe second kind of error is generated\
+    \ when the program is running. This kind of error is called an Exception. In other\
+    \ words Exception is an error that occur at runtime. When an Exception occur it\
+    \ will stop the program abruptly.\nThis would be disastrous for mission critical\
+    \ applications such as Banking, Military, Ticketing et. Hence increasing the reliability\
+    \ of an application is very important and that is why Exception handling is of\
+    \ highest importance.\n\nLet's write a program that would stop (crash) abruptly.\n\
+    \n```\n// Program 2\n// Description : Runtime error i.e Exception\n```"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "```\nclass Program {\n  public static void main(String args[]) {\n    int i=0;\n\
+    \    int j=10/i; // yields in Arithmetic Exception\n  }\n}\n```\n\nIn the above\
+    \ program when the integer is divided by zero program abruptly crashes. We don't\
+    \ want this to happen hence so we perform Exception handling.\n\nLet's look at\
+    \ another program which crashes abruptly.\n\n```\n// Program 3\n// Description:\
+    \ Runtime Exception – Array out of bounds\n\nclass Program {\n  public static\
+    \ void main(String args[]) {\n    args = new String[1];\n    args[0]=\"Ram\";\
+    \ // ArrayOfBounds exception if no argument is passed\n    System.out.println(args[0]);\n\
+    \  }\n```\n\nIn the above program I show you another instance of an Exception.\
+    \ As we can infer that this program will also crash. When faced with situation\
+    \ like this we perform Exception handling.\n\n# Causes of an Exception\n\nAn Exception\
+    \ may occur in one of the three ways.\n\n+   a. The programmer can raise an exception\
+    \ using \"throw\" keyword. This is mainly done to raise user defined exception.\n\
+    b. Abnormal code execution yields into an exception. These exceptions are mainly\
+    \ predefined such as IOException, ArithmeticException, SocketException etc.\n\
+    c. When a program is out of memory or the JVM finds byte code is corrupt the application\
+    \ will certainly going to crash. These types of"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'exceptions are called as Asynchronous exception. Programmer cannot handle an
+    asynchronous exception.
+
+
+    # Why to Handle Exception?
+
+
+    In a single sentence it can say “software is very pervasive”. Today software directly
+    or indirectly impacts many domains such as banking, healthcare, business, military,
+    education, government etc. Hence software reliability if of highest importance
+    and exception handling help to enhance software reliability.
+
+
+    There have been many examples of software crashing the business. Some of the recent
+    example are
+
+
+    +   - Tokyo stock exchange crashes
+
+    - Amazon Christmas Glitch
+
+    - Microsoft Azure Crashes
+
+    - UK border immigration system
+
+
+    # Summary
+
+
+    Error is of two types i.e. compiler and runtime. Exception occur at runtime. exception
+    is not handled it will crash the program. Exception can occur in one the 3 ways.
+    Exception handling increases the reliability of an application.
+
+
+    # Chapter 3
+
+    What is Exception Handling?'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Topics
+
+
+    +   - What is Exception Handling?
+
+    - Need for Exception Handling.
+
+    - Performing Exception Handling
+
+    - Summary
+
+
+    # What is Exception Handling?
+
+
+    Exception handling is the process of responding to runtime error that happen during
+    program execution. It is a mechanism to capture and identify runtime error to
+    avoid abrupt crash of a program. Exception handling helps in avoiding sudden crash
+    of a program, using it programmer can provide a diagnosis of the runtime error.
+    Exception handling changes the flow of the program, using it user can recover
+    exceptional situation in an application. In simple words it is a plan ‘B’ when
+    something goes wrong within the program at runtime.
+
+
+    Not all runtime errors are recoverable certain exceptions which are called as
+    Asynchronous exceptions cannot be recovered e.g. Out of memory error.
+
+
+    # Need for Exception Handling
+
+
+    Using Exception handling programmer can propagate exception on the call stack,
+    which help in identifying the cause of the exception. Java has support for nested
+    exception handling up to any depth. Exception handling is used for identifying
+    and grouping the runtime error which yields quicker diagnosis. All the above efforts
+    help in improving the reliability and quality of the Java program hence reducing
+    the mean time between failure of an application and this is the prime objective
+    of exception handling i.e. increasing the reliability of a program.
+
+
+    # Performing Exception Handling
+
+
+    Exception handling in Java is done with the help of exception handling keywords.
+    There are five keyword that are used for performing exception in java. These keywords
+    are listed below.
+
+
+    +   a. Try block – It identifies the code area which encapsulate the vulnerable
+    code.
+
+
+    +   b. Catch block– It is used for identifying the unique exception which is might
+    occur.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "c. Catch block help in grouping providing diagnosis for the occurred exception.\n\
+    \n+   - Finally block – It used for performing housing keeping jobs.\n- Throw\
+    \ keyword – It is used for raising an exception.\n\n+   - Throws keyword – It\
+    \ is used for declaring an exception for a method.\n\nLet's now see a program\
+    \ that throw keyword.\n\n```\n// Program 1\n// Description: How to use ‘throw’\
+    \ keyword\n\nclass Program {\n    public static void main(String[] args) {\n \
+    \       throw new ArithmeticException();\n    }\n}\n```\n\n![](img/82490df1c0b44475c1a824453ea9473e_12_0.png)\n\
+    \nIn above program I demo how to raise an exception using throw keyword.\n\n#\
+    \ Summary\n\nException handling is principally done to enhance reliability of\
+    \ application. Exception handing in Java is accomplished using five keywords i.e.\
+    \ try, catch, finally, throw and throws.\n\n# Chapter 4\nJava Exception Hierarchy"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '+   - What is Exception Hierarchy?
+
+    - Throwable Class
+
+    - Exception Class
+
+    - RuntimeException Class
+
+    - Error Class
+
+    - Summary
+
+
+    # # What is Exception Hierarchy?
+
+
+    Java has specific class hierarchy within its API when accommodates the Exception
+    classes.
+
+    The Throwable class is the mother class of all exception classes in Java. Below
+    is schematic diagram that represents Java exception hierarchy.
+
+
+    ![](img/82490df1c0b44475c1a824453ea9473e_13_0.png)
+
+
+    Basically there are four classes that are of vital importance i.e Throwable,Error,Exception
+    and RuntimeException. In later sections I will discuss each one of them.
+
+
+    # # Throwable Class'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "It mother class of all exception classes i.e. even if programmer has to create\
+    \ a user defined exception he has to inherit from Throwable class directly or\
+    \ indirectly. An exception that is not inherited from Throwable class directly\
+    \ or indirectly cannot be thrown (raised).\n\nThe Signature of Thorable class\
+    \ is:\n\n```\npublic class Throwable extends Object implements Serializable\n\
+    ```\n\nThe Throwable class inherits from Object class and it implements Serializable\
+    \ interface. Only objects that are instances of Throwable class (or one of its\
+    \ subclasses) are thrown by the Java Virtual Machine or can be thrown by the Java\
+    \ throw statement. Throwable class (exception) is compiler checked.\n\n```\n//\
+    \ Program 1\n// Understanding Throwable class\nclass Program {\n    public static\
+    \ void main(String args[]) {\n        throw new Throwable();\n    }\n}\n```\n\n\
+    The Program gives compiler error. To overcome compiler error add \"throws Throwable\"\
+    \ as part main method definition.\n\n```\n// Program 2.\n// Understanding Throwable\
+    \ class\nclass MyException {}\nclass Program {\n    public static void main(String\
+    \ args[]) {\n        // throw new MyException(); // compiler error\n    }\n}\n\
+    ```"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "This program will give compiler error when code \"throw new MyException\" is\
+    \ uncommented.\nThis is because only exception that is directly or indirectly\
+    \ derived from\nThrowable class can be raised.\n\n# Error class\n\nIt is a child\
+    \ of Throwable class. Error class represents all exceptions\nthat are non-recoverable.\
+    \ A program can encounter a serious problem such\nas OutMemoryError, StackflowError,\
+    \ VirtualMachineError etc. When a\nprogram encounter such situation the program\
+    \ crashes even if exception\nhanding is done because these are non-recoverable\
+    \ exceptions. Let's\nunderstand this better with the help of a program. Error\
+    \ class is not compiler\nchecked.\n\n```\n// Program 3\n// Program to demonstrate\
+    \ Error class (Stackoverflow)\nclass Program {\n    static void display(int i)\
+    \ {\n        System.out.println(\"Display called:\"+ i + \"time\");\n\n      \
+    \  //\n        display(++i);\n    }\n\n    public static void main(String args[])\
+    \ {\n        display(0);\n    }\n```\n\nIn this program at some stage JVM will\
+    \ raise an un-recoverable\nStackflowError Exception.\nError class (and subclasses)\
+    \ are also called as asynchronous exceptions.\n\n# Exception Class\n\nIt derives\
+    \ from Throwable class. Exception class (and subclasses) are\nrecoverable exceptions.\n\
+    Normally Exception acts as mother class of user defined exceptions.\nException\
+    \ class is compiler checked i.e. if it is not handled programmer will\nget a compiler\
+    \ error. The signature of Exception class is"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "```\npublic class Exception extends Throwable\n```\n\nLet's understand Exception\
+    \ class better with help of a program.\n\n```\n// Program 4\n// Description: Exception\
+    \ class behavior\nclass Program {\n    public static void main(String[] args)\
+    \ {\n        throw new Exception();\n    }\n}\n```\n\nThis program will give compiler\
+    \ error because Exception class is compiler checked. To overcome compiler error\
+    \ either handle the exception or declare it with the main method.\n\n# RuntimeException\
+    \ class\n\nIt is derived from Exception class. RuntimeException(and subclasses)\
+    \ are not compiler checked. The signature of the Runtime class is\n\n```\npublic\
+    \ class RuntimeException extends Exception\n```\n\nGenerally RuntimeExceptions\
+    \ are exceptions that can be prevented programmatically. E.g. NullPointerException,\
+    \ ArithmeticException, ArrayIndexOutOfBoundsException etc.\nIf programmer can\
+    \ check for null before calling any method, NullPointerException would never occur.\
+    \ Similarly\nArrayIndexOutOfBoundsException would never occur if you check the\
+    \ index first.\n\nLet's understand RuntimeException better with the help of an\
+    \ example.\n\n```\n// Program 5\n// RuntimeException is not compiler checked\n\
+    // RuntimeException(and child class) exceptions are not compiler checked\nclass\
+    \ Program {\n    public static void main(String[] args[]) {\n        throw new\
+    \ RuntimeException();\n}\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    When this program is compiled it won’t give any error. When executed it would
+    crash the program.
+
+
+    # ## Summary
+
+
+    The Throwable class is the mother class of all classes in Java Exception hierarchy.Throwable
+    and Exception classes are compiler checked. Error class represents non-recoverable
+    exception and it is also non-recoverable. RuntimeException class is not compiler
+    checked but is recoverable.
+
+
+    # ## Chapter 5
+
+    # Try and Catch Blocks
+
+
+    # ## Topics
+
+
+    +   - Life cycle of an unhandled exception
+
+    - Try block
+
+    - Catch block
+
+    - Summary
+
+
+    # ## Life cycle of an unhandled exception'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "When an exception is not handled then it will propagate in the call stack and\
+    \ ultimately it will be handled by JVM which will stop the program. Below I have\
+    \ illustrated the above steps in greater detail.\n\nStep 1 -> After an exception\
+    \ object is created, it is handed to the runtime system (thrown)\n\nStep 2 ->\
+    \ The runtime system attempts to find a handler for the exception.\n\nStep 3 ->\
+    \ If a handler is found, the exception is caught.\n\nStep 4 -> If the handler\
+    \ is not found (the runtime backtracks all the way to the main() method), the\
+    \ exception stack trace is printed and the application aborts execution(Handled\
+    \ by JVM).\n\nLet's understand the above process better with the help of an example.\n\
+    \n```\n// Program 1\n// Description: Understanding life cycle of an unhandled\
+    \ exception\nclass Program {\n    static void Method3() {\n        System.out.println(\"\
+    Method3\");\n        int i=0;\n        int j=10/i;\n    }\n    static void Method2()\
+    \ {\n        System.out.println(\"Method2\");\n        Method3();\n    }\n   \
+    \ static void Method1() {\n        System.out.println(\"Method1\");\n        Method2();\n\
+    \    }\n    public static void main(String arg[]) {\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '```
+
+    Method1();
+
+    }
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    ```
+
+    Method1
+
+    Method2
+
+    Method3
+
+    Exception in thread "main" java.lang.ArithmeticException: / by zero
+
+    at Program.Method3(Prg.java:6)
+
+    at Program.Method2(Prg.java:10)
+
+    at Program.Method1(Prg.java:15)
+
+    at Program.main(Prg.java:19)
+
+    ```
+
+
+    We can see that if an exception is not handled then program crashes and display
+    the call stack.
+
+
+    # Try Block
+
+
+    It is a code block that identifies an area of code which has a probability of
+    failure. Try block can be put inside
+
+
+    +   * Method
+
+    * Constructor
+
+    * Static block
+
+
+    # Catch Block
+
+
+    It follows a try block. Catch block provide a mechanism for diagnosis and remedial
+    steps to be taken for the occurred exception.
+
+
+    Following are the characteristics of catch block.
+
+
+    +   * It only exists if there is a try block.
+
+    * It immediately follows the try block.
+
+    * It is used to handle the exception.
+
+    * If the appropriate exception is not found the program crashes.
+
+
+    # Syntax:
+
+
+    ```
+
+    try {
+
+    ....
+
+    } catch (Exception name) {
+
+    ```'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "```\n} catch (ExceptionType name) {\n    ............\n}\n```\n\n// Program\
+    \ 2\n// Description: Handling Exception in constructor and Method\n\n```\nclass\
+    \ Shape {\n    void display() {\n        System.out.println(\"Display of Shape\
+    \ Class\");\n    }\n}\nclass Program {\n    Shape obj;\n    Program(String args[])\
+    \ {\n    int i=7;\n    try {\n        i= Integer.parseInt(args[0]); // NumberFormatException\n\
+    \    }catch(Exception e) {\n        System.out.println(\"Exception happened :\"\
+    \ + e);\n    }\n}\nvoid CallMethod() {\n    try {\n        obj.display(); // NullPointerException\n\
+    \    } catch(Exception e) {\n        System.out.println(\"Exception Happened :\"\
+    \ + e);\n    }\n}\npublic static void main(String args[]) {\n    Program obj =\
+    \ new Program(args);\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "```\nobj.CallMethod();\n}\n}\n```\n\nabove program when executed yields into\n\
+    \n+   a. NullPointerException when valid integer is passed at command line\nb.\
+    \ NumberFormatException when one of the argument is a character/string.\n\nThe\
+    \ above program demonstrate how to use try and catch blocks in method and constructor.\n\
+    \nLet's learn how to use try and catch inside a static block.\n\n```\n// Program\
+    \ 3\n// Description : Using try and catch inside a static block.\nclass Program\
+    \ {\n    static int ar[] = new int[1];\n    try {\n        System.out.println(\"\
+    In Static Block:1\");\n        ar[0]=1;\n        ar[1]=2; // ArrayIndexOutOfBoundsException\n\
+    \    } catch(Exception e) {\n        System.out.println(\"Message is:\"+e);\n\
+    \    }\n}\n    static {\n        int a=0,j=10;\n        try {\n            System.out.println(\"\
+    In Static Block:2\");\n            a=j/0; //ArithmeticException\n        } catch(Exception\
+    \ e) {\n            System.out.println(\"Message is:\"+ e);\n        }\n    }\n\
+    ```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "```\npublic static void main(String args[]) {\n    System.out.println(\"In\
+    \ main method\");\n}\n```\n\nIn the above program we can see how to use try and\
+    \ catch block in multiple static blocks.\n\n# Summary\n\nTry block is a code block\
+    \ that identifies a code area that can possibly yield into an exception.\nCatch\
+    \ block is used for diagnosis of exception. Catch block follows try block.\nA\
+    \ try block can be put inside a method, constructor or static block.\n\n![](img/82490df1c0b44475c1a824453ea9473e_22_0.png)\n\
+    \n# # Chapter 6\n Exception Handling API\n\n# Topics\n\n+   - What is Call Stack?\n\
+    - Using printStackTrace() Method\n- Summary\n\nWhat is Call Stack?"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "It is a stack data structure that store information about the active functions\
+    \ of a program. If Exception is not handled call stack is printed. Knowing Call\
+    \ Stack information helps in identifying exceptions and troubleshooting them.\
+    \ Let's understand this with the help of an example.\n\n```\n// Program 1\n//\
+    \ Understanding call stack\n\nclass Program {\n    static void Method3() {\n \
+    \       System.out.println(\"Method3\");\n        int i=0;\n        int j = 10/i;\n\
+    \    }\n    static void Method2() {\n        System.out.println(\"Method2\");\n\
+    \        Method3();\n    }\n\n    static void Method1() {\n        System.out.println(\"\
+    Method1\");\n        Method2();\n    }\n\n    public static void main(String[]\
+    \ arg) {\n        Method1();\n    }\n}\n```\n\nWhen control executes method3 yields\
+    \ into a ArithmeticException which prints call stack info the screen.\n**Using\
+    \ printStackTrace() Method**nprintStackTrace method is available from Throwable\
+    \ class.It gives details of call stack until the exception occurred. toString()\
+    \ method is overridden by Throwable class return generic message for the exception\
+    \ occurred. Let's understand this better with help of an example.\n\n```\n//Program\
+    \ 2\n//Description : Demonstration of printStackTrace() method\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "```\nclass Program {\n  static void Method3() {\n    try {\n      System.out.println(\"\
+    Method3\");\n      int i=0;\n      int j=10/i;\n    } catch(ArithmeticException\
+    \ e) {\n      System.out.println(\"The Stack trace information is:\");\n     \
+    \ e.printStackTrace();\n    }\n  }\n  static void Method2() {\n    System.out.println(\"\
+    Method2\");\n    Method3();\n  }\n\n  static void Method1() {\n    System.out.println(\"\
+    Method1\");\n    Method2();\n  }\n\n  public static void main(String arg[]) {\n\
+    \    Method1();\n  }\n}\n```\n\n# Output:\n\n![](img/82490df1c0b44475c1a824453ea9473e_24_0.png)"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'As it can be inferred from output printStackTrace() method display call stack
+    info before thread that encountered an exception.
+
+
+    # Summary
+
+
+    Call stack is a stack data structure that store information about the active functions
+    of a program. printStackTrace() method is defined in Throwableable class, it prints
+    call stack info of the exceptional thread.
+
+
+    # Chapter 7
+
+    Multiple Catch
+
+
+    # Topics
+
+
+    +   - Multiple Catch Blocks
+
+    - Order of Catch Blocks
+
+    - Using Try Block Carefully
+
+    - Summary
+
+
+    # Multiple Catch Blocks
+
+
+    A ''try'' block can have more than one catch blocks. At any given point of time
+    only one exception can happen and the first best matching catch block is executed
+    on the current thread.
+
+
+    # Syntax'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "```\ntry {\n    //code\n}catch (SomeException e) { ....}\n    catch (SomeException\
+    \ e) { ....}\n    catch (SomeException e) { ..... }\n```\n\nLet's understand how\
+    \ to have multiple catch blocks for a try block with the help of an example\n\n\
+    // Program 1\n// Description: Multiple catch Exception\n\n```\nclass Program {\n\
+    \    public static void main(String[] args) {\n        try {\n            int\
+    \ i = Integer.parseInt(args[0]);\n            int j = Integer.parseInt(args[1]);\n\
+    \            int k = i/j;\n        } catch (ArrayIndexOutOfBoundsException e)\
+    \ {\n            System.out.println(\"ArrayIndexOutOfBoundsException message is:\"\
+    +e);\n        } catch (ArithmeticException e) {\n            System.out.println(\"\
+    The ArithmeticException message is:\"+e);\n        } catch(Exception e) {\n  \
+    \          System.out.println(\"The Exception message is:\"+e);\n        }\n \
+    \   }\n}\n```\n\nExecute the above program by passing different types of arguments\
+    \ at command line.\nAt any given point in time only one catch block will be executed\
+    \ if there is an exception.\n\n# Order of Catch Blocks"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "When a programmer has multiple catch blocks for a try block then the exceptions\
+    \ have to be handled in the reverse order(bottom-up) of the inheritance hierarchy.\
+    \ Let's understand this with an example if a programmer has to catch Throwable,\
+    \ RuntimeException and Exception (exceptions) since Throwable is the mother class\
+    \ of all exception classes it should be caught at the last, Exception is the mother\
+    \ class of RuntimeException it would be caught 2nd last and RuntimeException class\
+    \ is at the bottom of the hierarchy it would appear in the first catch block.\
+    \ If the above rule is not followed Java compiler gives an error. Let's understand\
+    \ this better with the help of an example\n\n```\n// Program 2\n// Understanding\
+    \ order of catch blocks\nclass Program {\n    public static void main(String args[])\
+    \ {\n        try {\n            int i = Integer.parseInt(args[0]);\n         \
+    \   int j = Integer.parseInt(args[1]);\n            int k = i/j;\n        } catch\
+    \ (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"ArrayOutOfBoundsException\
+    \ Message :\"+e);\n        } catch (ArithmeticException e) {\n            System.out.println(\"\
+    The ArithmeticException message is\":+e);\n        } catch (Exception e) {\n \
+    \           System.out.println(\"The Exception message is:\"+e);\n        } catch\
+    \ (Throwable e) {\n            System.out.println(\"The Throwable message is \"\
+    \ + e);\n        }\n    }\n}\n```\n\nAs we can see the exceptions are caught in\
+    \ the reverse order of the inheritance hierarchy.\nThrowable class is the mother\
+    \ class it is caught at the end.\n\n# Using Try Block Carefully"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "Try block can only be put inside a method, constructor or a static block. Try\
+    \ block cannot encapsulate a method, constructor, class or an interface. The below\
+    \ program which will yield to in compiler error.\n\n// Program 3\n// Description:\
+    \ Illegal try block\n// Compiler error\n\n```\nclass Program {\n    Program()\
+    \ {\n        System.out.println(\"Program constructor\");\n    }\n    try {\n\
+    \        public static void main(String args[]) {\n            int i = Integer.parseInt(args[0]);\n\
+    \            int j = Integer.parseInt(args[1]);\n            int k = i/j;\n  \
+    \      }\n    } catch (Exception e) {\n        System.out.println(\"The message\
+    \ is \" + e);\n    }\n}\n```\n\n# Summary\n\nA try block can have multiple catch\
+    \ blocks, these catch blocks have placed in the reverse order of the inheritance\
+    \ hierarchy. Try block cannot encapsulate class, constructor, method or an interface."
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# # Chapter 8
+
+    Multiple Exceptions
+
+
+    Topics
+
+
+    +   - Catching Multiple Exception in a Single Catch
+
+    - Summary
+
+
+    # ### Catching Multiple Exception in a Single Catch
+
+
+    This feature was added to Java in version 7. Using this capability programmer
+    can specify multiple exception in a single catch block.
+
+
+    Syntax:
+
+
+    ```
+
+    try {
+
+    ...
+
+    } catch( IOException | SQLException ex ) {
+
+    ...
+
+    }
+
+    ```
+
+
+    The catch block is executed when any of the exception occur. The exception object
+    is instantiated only once i.e. after the last exception in the sequence. It is
+    important to note that both mother and child exception cannot be handled in the
+    same catch. The below code will give error.
+
+
+    Syntax:
+
+
+    ```
+
+    try {
+
+    ...
+
+    } catch( Throwable | Exception ex ) {
+
+    ...
+
+    }
+
+    ```
+
+
+    // Program 1
+
+    // Description: Using multiple exceptions in a single catch'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "```\nclass Program {\n    public static void main(String args[]) {\n      \
+    \  try {\n            int i = Integer.parseInt(args[0]);\n            int j =\
+    \ Integer.parseInt(args[1]);\n            int k = i/j;\n        } catch (ArrayIndexOutOfBoundsException\
+    \ | ArithmeticException e) {\n            // Object is created only once\n   \
+    \         System.out.println(\"The message is:\"+e);\n        }\n        // Requires\
+    \ another program - Alternatives in subclassing\n        catch(ArrayIndexOutOfBoundsException\
+    \ | Exception e) {\n            System.out.println(\"The message is:\"+e);\n \
+    \       }\n\n        catch(Throwable e) {\n            System.out.println(\"The\
+    \ Throwable message is \" + e);\n        }\n    }\nn\n```\n\nThe above will yield\
+    \ into a compiler error.\n\nOutput:\n\n| | \n|---| \n| ^n | \n| Prg.java:13: error:\
+    \ Alternatives in a multi-catch statement cannot be related by subclassing\ncatch(ArrayIndexOutOfBoundsException\
+    \ | ArithmeticException | Exception e) {\nAlternative ArrayIndexOutOfBoundsException\
+    \ is a subclass of alternative Exception |\n\nIf the second catch block is removed\
+    \ from the above program it will compile well. Let's see the changed program.\n\
+    \n+   - // Program 2\n- // Description: Demo of multiple exceptions in a single\
+    \ catch\n\n```\nclass Program {\n    public static void main(String args[]) {\n\
+    ```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "```\ntry {\n    int i = Integer.parseInt(args[0]);\n    int j = Integer.parseInt(args[1]);\n\
+    \    int k = i/j;\n} catch (ArrayIndexOutOfBoundsException | ArithmeticException\
+    \ e) {\n    // Object is created only once\n    System.out.println(\"The message\
+    \ is:\"+e);\n}\ncatch(Throwable e) {\n    System.out.println(\"The Throwable message\
+    \ is \" + e);\n}\n```\n\nThis program will yield into an exception(ArrayIndexOutOfBoundsException)\
+    \ if command line argument in not passed.\n\nOutput:\n\nThe message is:java.lang.ArrayIndexOutOfBoundsException:\
+    \ 0\n\n# Summary\n\nFrom Java 7 onwards programmer can handle multiple exceptions\
+    \ in a single catch.\n\n# Chapter 9"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Finally Block\n\n# Topics\n\n+   - What is 'Finally' Block?\n- Using 'Finally'\
+    \ Block.\n- Advanced Try Block.\n- Summary\n\n# What is 'Finally' Block?\n\nIt\
+    \ is placed after the catch block (only when the catch block exists). The finally\
+    \ block is executed if there is an exception and also when there is no exception.\
+    \ This make finally block confusing to use. A very important attribute of finally\
+    \ block is that it guaranteed to be executed except when it is abruptly terminated.\n\
+    \n# Using Finally Block\n\nFor a given try block there can only be one finally\
+    \ block but there can be many catch blocks. It is principally used for executing\
+    \ housekeeping code. Housekeeping code performs initialization and closing of\
+    \ resources. Finally block is also used for performing logging of exceptions.\
+    \ Program below explain execution behavior of finally block.\n\n```\n// Program\
+    \ 1\n// Description: Finally block is executed irrespective of exception\noccurrence.\n\
+    ```\n\n```\nclass Program {\n    public static void main(String args[]) {\n  \
+    \      boolean isException = false;\n\n        try {\n            int i = Integer.parseInt(args[0]);\n\
+    \            int j = Integer.parseInt(args[1]);\n            int k = i/j;\n  \
+    \      } catch(ArrayIndexOutOfBoundsException e) {\n```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\nSystem.out.println(\" ArrayIndexOfOutOfBoundsException\nMessage is :\"\
+    +e);\nisException= true;\n}catch (ArithmeticException e) {\n    System.out.println(\"\
+    The ArithmeticException message\nis:\"+e);\n    isException= true;\n}\ncatch (Exception\
+    \ e) {\n    System.out.println(\"The Exception message is:\"+e);\n    isException=\
+    \ true;\n}\nfinally {\n    if(isException) {\n        System.out.println(\"The\
+    \ finally block is executed when\nthere is exception\");\n    else\n        System.out.println(\"\
+    The finally block is also executed when\nthere is no exception\");\n    }\n}\n\
+    ```\n\nThe output of the program\n\n+   a. When there is an exception (Pass 10\
+    \ 0 at command line).\n\n> The ArithmeticException message is:java.lang.ArithmeticException:\
+    \ / by zero\nThe finally block is executed when there is exception\n\nas it can\
+    \ see that finally block is executed when there is exception in\nthe program.\n\
+    \n+   b. When there is no exception\n\n> The finally block is also executed when\
+    \ there is no exception\n\nThe finally block is exuteled when there is no exception\
+    \ in the program."
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "```\n//Program 2\n//Description : There can only be one finally block per try\
+    \ block.\n// finally block behaviour\n\nclass Program {\n    public static void\
+    \ main(String args[]) {\n        boolean isException = false;\n\n        try {\n\
+    \            int i = Integer.parseInt(args[0]);\n            int j = Integer.parseInt(args[1]);\n\
+    \            int k = i/j;\n        } catch (ArrayIndexOutOfBoundsException e)\
+    \ {\n            System.out.println(\"ArrayIndexOutOfBoundsException message is:\"\
+    +e);\n            isException = true;\n        } catch (ArithmeticException e)\
+    \ {\n            System.out.println(\"The ArithmeticException message is:\"+e);\n\
+    \            isException = true;\n        } catch (Exception e) {\n          \
+    \  System.out.println(\"The Exception message is:\"+e);\n            isException\
+    \ = true;\n        }\n\n        finally {\n            if(isException) {\n   \
+    \             System.out.println(\"The finally block executed when there is exception\"\
+    );\n            } else {\n                System.out.println(\"The finally block\
+    \ is also executed when there is no exception\");\n            }\n        }\n\
+    \        finally { //error }\n    }\n}\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "Output : The above program will give compiler error (finally without try).\n\
+    \n# Advanced Try Block\n\nIt is mandatory to have catch or finally block together\
+    \ for the given try block.Try block can have either catch or finally block. If\
+    \ both catch and finally blocks are present for a try block then catch block is\
+    \ added first followed by finally block.\n\nIf the try block only has finally\
+    \ block then if an exception occur the program will crash. Let's understand this\
+    \ better with help of a program.\n\n```\n// Program 3\n// Description : try block\
+    \ with only finally block\n\nclass Program {\n    public static void main(String\
+    \ args[]) {\n        boolean isException = false;\n        try {\n           \
+    \ int i = Integer.parseInt(args[0]);\n            int j = Integer.parseInt(args[1]);\n\
+    \            int k = i/j;\n        }\n        finally {\n            System.out.println(\"\
+    The finally block is executed\");\n        }\n    }\n}\n```\n\nIf an exception\
+    \ occur in the above program it will crash. To perform diagnosis catch block is\
+    \ needed.\n\n# Summary\n\nFinally block is used for executing housekeeping code.\
+    \ It is executed irrespective of exception occurrence. Optionally Try block can\
+    \ just have either catch or finally blocks."
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# # Chapter 10\nFinally block & Return keyword\n\nTopics\n\n+   - Using Finally\
+    \ Block and Return keyword.\n- Summary.\n\nUsing Finally Block and Return Keyword\n\
+    Finally block will be executed even if return keyword instruction is executed\
+    \ from within the try block. Finally block will also be executed even if return\
+    \ keyword instruction is executed from a catch block. It won't be executed if\
+    \ control encounter System.exit() function anywhere.\n\n```\n// Program 1\n//\
+    \ Description: Finally block is executed even when control encounter\nreturn keyword\n\
+    \nclass Program {\n    public static void main(String args[]) {\n        boolean\
+    \ isException = false;\n\n        try {\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "```\nint i = Integer.parseInt(args[0]);\nint j = Integer.parseInt(args[1]);\n\
+    \nint k = i/j;\nreturn;\n} catch (ArrayIndexOutOfBoundsException e) {\n    System.out.println(\"\
+    ArrayIndexOutOfBoundsException\nMessage is :\"+e);\n    isException=true;\n  \
+    \  return;\n} catch (ArithmeticException e) {\n    System.out.println(\"The ArithmeticException\
+    \ message\nis:\"+e);\n    isException= true;\n    return;\n}\n} catch(Exception\
+    \ e) {\n    System.out.println(\"The Exception message is:\"+e);\n    isException=true;\n\
+    \    return;\n}\n```\n\n```\nfinally {\n    if(!isException) {\n        System.out.println(\"\
+    The finally block is\nexecuted when there is return from method\");\n    } else\
+    \ {\n        System.out.println(\"The finally block is also\nexecuted when there\
+    \ return from catch\");\n    }\n}\n```\n\nOutput: The finally block is executed\n\
+    \n```\nArrayIndexOutOfBoundsException Message :java.lang.ArrayIndexOutOfBoundsException:\
+    \ 0\nThe finally block is also executed when there return from catch\n```\n\n\
+    // Program 2"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "```\n//Description: The finally block is not executed when control encounter\n\
+    System.exit() function.\n\nclass Program {\n    public static void main(String\
+    \ args[]) {\n        boolean isException = false;\n        try {\n           \
+    \ int i = Integer.parseInt(args[0]);\n            int j = Integer.parseInt(args[1]);\n\
+    \            System.exit(0);\n            int k = i/j;\n        } catch (ArrayOutOfBoundsException\
+    \ e) {\n            System.out.println(\"ArrayOutOfBoundsException Message is:\"\
+    +e);\n            isException= true;\n            return;\n        } catch (ArithmeticException\
+    \ e) {\n            System.out.println(\"The ArithmeticException message is:\"\
+    +e);\n            isException= true;\n            return;\n        } catch (Exception\
+    \ e) {\n            System.out.println(\"The Exception message is:\"+e);\n   \
+    \         isException= true;\n            return;\n        }\n\n        finally\
+    \ { // finally block is not executed when the program aborts.\n            if(isException)\n\
+    \                System.out.println(\"The finally block is executed when there\
+    \ is return from method\");\n            else\n                System.out.println(\"\
+    The finally block is also executed when there return from catch\");\n        }\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '```
+
+    Output: The finally block is not executed.
+
+    ```
+
+
+    # ### Summary
+
+    The finally block is guaranteed to be executed even if return keyword is encountered.
+    The finally block will not be executed if System.exit() function is executed.
+
+
+    # # Chapter 11
+
+    Checked and Unchecked Exception
+
+
+    +   Topics
+
+    - Throws Keyword
+
+    - Checked Exception
+
+    - Unchecked Exception
+
+
+    ### Throws Keyword
+
+    It is used for declaring an exception for a method. It help in pre-empting an
+    exception for a given method. A method can ‘throws’ multiple exception. Exception
+    that is ‘throws’ from a method has to be handled else compiler will prompt an
+    error.
+
+
+    ### Syntax:
+
+    void PerformIO() throws IOException { .... }
+
+
+    Let''s understand “throws” keyword with the help of an example.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "```\n//Program 1\n//Description: Understanding throws keyword usage\n\nimport\
+    \ java.io.*;\nclass Program {\n    static void AcceptData() throws IOException\
+    \ {\n        int i = System.in.read();\n    }\n    public static void main(String\
+    \ args[]) throws Throwable {\n        throw new Throwable();\n    }\n}\n```\n\n\
+    In the program above it is mandatory to handle IOException for AcceptData method.\
+    \ One way to handle it would be to declare the exception using throws. The same\
+    \ would apply for main method.\n\n# Checked Exception\n\nThese are those exceptions\
+    \ that identified by the compiler. All classes that inherit from Throwable or\
+    \ Exception class are checked exceptions. The compiler will flag if a checked\
+    \ exception is not handled. Checked exception have to be handled. It is an excellent\
+    \ way to enhance reliability of an exception. Let's understand checked exception\
+    \ better with an example.\n\n```\n//Program 2\n// Understanding checked exception\n\
+    \nimport java.io.*;\nclass Program {\n    static void AcceptData() {\n       \
+    \ int i = System.in.read();\n    }\n    public static void main(String args[])\
+    \ {\n        throw new Throwable();\n    }\n}\n```\n\nOutput: A checked exception\
+    \ has to be handled."
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "```\nPrg.java:7: error: unreported exception IOException; must be caught or\
+    \ declared to be thrown\nint i = System.in.read();\n    ^\nPrg.java:10: error:\
+    \ unreported exception Throwableable; must be caught or declared to be thrown\n\
+    \    throw new Throwableable();\n    ^^\n2 errors\n```\n\nA checked exception\
+    \ can be handled in two ways\n\n+   a. Try... Catch blocks\nb. Throws keyword\n\
+    \n# Unchecked Exception\n\nIt is not identified by the compiler. They are also\
+    \ called as runtime exception. All classes that inherit from RuntimeException\
+    \ class are Checked. Some examples of unchecked exception are NullPointerException,\
+    \ ArithmeticException and ClassCastException.\n\n```\n//Program 3\n// Description:\
+    \ Understanding unchecked exceptions\nimport java.io.*;\nclass Program {\n   \
+    \ public static void main(String[] args) {\n        throw new RuntimeException();\
+    \ // Can be avoided by\n        performing a check.\n    }\n}\n```\n\nIn above\
+    \ program compiler will not report any error hence it is unchecked exception.\n\
+    \n# Summary\n\nChecked exceptions are captured by compiler. Unchecked exceptions\
+    \ are identified at runtime.\n'throws' keyword is used to declare exception as\
+    \ part of method definition."
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# # Chapter 12\nNested Exception\n\nTopics\n\n+   - Implementing Nested Exception\n\
+    - Life Cycle of Nested Exception Handling\n- Summary\n\n# ## Implementing Nested\
+    \ Exception\n\nWhen try blocks are nested it is called as nesting of exception\
+    \ i.e. When a try block is within within another try block it is called as nesting\
+    \ of exception. Java supports nesting of exception up to any depth. Let's understand\
+    \ this with the help of an example.\n\n```\n// Program 1\n// Description : Nesting\
+    \ of Exception\n\nclass Program {\n    static void Sum(String ar[]) {\n      \
+    \  try {\n            int i = Integer.parseInt(ar[0]);\n            int j = Integer.parseInt(ar[1]);\n\
+    \            int sum = i+j;\n            System.out.println(\"The sum is :\"++sum);\n\
+    \        } catch (NumberFormatException e) {\n            System.out.println(\"\
+    Numberformatexception message\"+e.getMessage());\n        }\n    }\n    public\
+    \ static void main(String args[]) {\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "```\ntry\n{\n    Sum(args);\n} catch(ArrayOutOfBoundsException e) {\n    System.out.println(\"\
+    ArrayOutOfBoundsException message is :\"+e);\n}\n\n```\n\nOutput: If the user\
+    \ doesn't pass any argument then program is going to fail in the Sum method during\
+    \ type conversion. The exception ArrayOutOfBoundsException generated will not\
+    \ be caught by the inner catch but will be caught by the outer catch.\n\n![](img/82490df1c0b44475c1a824453ea9473e_43_0.png)\n\
+    \n# Life Cycle of Nested Exception Handling\n\nThe working of nested exception\
+    \ handling can be identified in three steps i.e.\n\n+   1. When an exception occur\
+    \ within a nested try the inner most's 'catch+finally' get an opportunity first.\n\
+    2. If the inner try cannot handle the exception the outer try's catch/finally\
+    \ gets an opportunity.\n3. If the outer try cannot handle then program crashes.\n\
+    4. If an exception is handled in inner catch then it won't bubble to the outer\
+    \ try. An exception is caught only once even in nested exceptions.\n\nBehavior:\n\
+    \n+   a. Finally block of all try blocks will be executed irrespective of exception\
+    \ occurrence.\nb. If an exception is caught in inner try it won't bubble but finally\
+    \ block if it is available in the outer try will be executed."
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "Let's understand the handling of nested exception with the help of a program.\n\
+    \n// Program 2\n// Description: Life Cycle of Nested Exception Handling\n\n```\n\
+    class Program {\n    static void Sum(String[] ar[]) {\n        try {\n       \
+    \     int i = Integer.parseInt(ar[0]);\n            int j = Integer.parseInt(ar[1]);\n\
+    \            int Sum = i+j;\n            System.out.println(\"The result is :\"\
+    +Sum);\n        }catch (NumberFormatException e) {\n            System.out.println(\"\
+    Numberformateception message is\"+e);\n        }\n        finally {\n        \
+    \    System.out.println(\"Finally of inner try\");\n        }\n    }\n\n    public\
+    \ static void main(String args[]) {\n        try {\n            Sum(args);\n \
+    \       }catch(ArrayOutOfBoundsException e) {\n            System.out.println(\"\
+    ArrayOutOfBoundsException message is :\"+e);\n        }\n        finally {\n \
+    \           System.out.println(\"Finally of outer try\");\n        }\n    }\n\
+    ```\n\nOutput 1: When user passes one of the argument to be string. Inner exception\
+    \ is handled and both the finally blocks are executed"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '```
+
+    Numberformatexception message isjava.lang.NumberFormatException: For input string:
+    "b"
+
+    Finally of inner try
+
+    Finally of outer try
+
+    ```
+
+
+    Output 2: When the user passes both arguments as integers. There are no exceptions
+    but both finally blocks are executed.
+
+
+    ```
+
+    The result is :20
+
+    Finally of inner try
+
+    Finally of outer try
+
+    ```
+
+
+    Output 3: When user does not not pass any argument. The outer catch is executed
+    and both the finally blocks are executed.
+
+
+    ```
+
+    Finally of inner try
+
+    ArrayIndexOutOfBoundsException message is :java.lang.ArrayIndexOutOfBoundsException:
+    1
+
+    Finally of outer try
+
+    ```
+
+
+    # Summary
+
+
+    Java allows nesting of exception. Inner most try gets first chance to handle the
+    exception.
+
+    If all try do not handle the exception then JVM handles hence program crashes.
+
+
+    # Chapter 13
+
+    ''Throw'' Keyword'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# Topics\n\n+   - Using ‘throw’ Keyword\n- Summary\n\n# Using ‘throw’ Keyword\n\
+    \nThe ‘throw’ keyword is used for raising an exception. Only classes that inherit\
+    \ from Throwable class can be raised (thrown).\n\n# Syntax:\n\nThrow object or\
+    \ new “classname\"\ne.g. throw myobj or  throw new Exception()\n\nLet'us understand\
+    \ usage of throw keyword with help of an example.\n\n```\n// Program 1\n// Description:\
+    \ Understanding usage of throw keyword\n\nclass Test {}\nclass Program {\n   \
+    \ public static void main(String args[]) throws Exception{\n        throw new\
+    \ IOException();\n        throw new Test(); // Compiler error\n    }\n}\n```\n\
+    \nSome observation on the above program:\n- Only Object derived from Throwable\
+    \ can be thrown.\n- If a checked exception is thrown then it has to handled.\n\
+    \n# Summary\n\nThrow keyword is used to raise exception."
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# # Chapter 14\n Exception Chaining\n\n+   **Topics**\n* What is Exception\
+    \ Chaining?\n* Implementing Exception Chaining\n* Summary\n\n### What is Exception\
+    \ Chaining?\nWhen the first exception raises the second exception, second has\
+    \ information about the first hence first and second exceptions are in a chain.\
+    \ It is mainly used to enhance diagnosis when performing nested exceptionhandling.\
+    \ This way programmer can relate one exception to the next one hence creating\
+    \ a chain.\n\n### Implementing Exception Chaining\nThe capability for Exception\
+    \ chaining is provided by Throwable class. The Throwable class has constructors\
+    \ and methods to help in creating exception chain.\n\n+   Let's look at the API\
+    \ provided by Throwable class\n a. Constructors\n    i. Throwable(String, Throwable)\n\
+    \    ii. Throwable(Throwable)\nb. Methods\n    i. Throwable getCause()\n    ii.\
+    \ Throwable initCause(Throwable)"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "The 'Throwable' argument to constructors and initCause() method is the exception\
+    \ that caused the current exception. Exceptions can be chained upto any depth.\n\
+    \nLet's understand how exception chaining is implemented with the help of constructors.\n\
+    \n```\n// Program 1\n// Description: Creating exception chain\nclass NegativeNumberException\
+    \ extends ArithmeticException {\n    public NegativeNumberException(String str)\
+    \ {\n        super(str);\n    }\n}\nclass ZeroNumberException extends ArithmeticException\
+    \ {\n    public ZeroNumberException(String str) {\n        super(str);\n    }\n\
+    }\nclass Program {\n    static int Divide(int i, int j) throws Throwable {\n \
+    \       try {\n            if (i < 0 || j < 0)\n                throw new\n  \
+    \              NegativeNumberException(\"One of the numbers is negative\");\n\
+    \            else if (j==0)\n                throw new\n                ZeroNumberException(\"\
+    Divisor is zero\");\n            int res = i/j;\n            return res;\n   \
+    \     } catch (ArithmeticException e) {\n            throw new Throwable(e);\n\
+    \        }\n    }\n    public static void main(String[] args[]) {\n        try\
+    \ {\n```"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "```\nint i = Integer.parseInt(args[0]);\nint j = Integer.parseInt(args[1]);\n\
+    Divide(i,j);\n} catch (Throwable e) {\n    System.out.println(\"The Message is\
+    \ \"+e);\n}\n}\n}\n```\n\nIn the above program I have created 2 user defined exceptions.\
+    \ Pass a negative number at command line that would create an exception chain.\
+    \ The chain created in the above program has 2 exceptions in chain i.e.\nNegativeNumberException\
+    \ ->Throwable.\n\nLet's understand how to use initCause() and getCause() methods.\n\
+    \n```\n//Program 2\n//Description: Using initCause and getCause methods\nimport\
+    \ java.io.*;\n```\n\n```\nclass NegativeNumberException extends ArithmeticException\n\
+    \    public NegativeNumberException(String str) {\n        super(str);\n    }\n\
+    ```\n\n```\nclass ZeroNumberException extends ArithmeticException\n    public\
+    \ ZeroNumberException(String str) {\n        super(str);\n    }\n```\n\n```\n\
+    class Program {\n    static void Divide(int i, int j)throws Exception {\n    \
+    \    try {\n            if (i < 0 || j < 0) {\n                NegativeNumberException\
+    \ obj = new NegativeNumberException(\"One of the numbers is negative\");\n   \
+    \             throw obj;\n            }\n```"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "```\n}\nelse if (j==0) {\n    ZeroNumberException obj2 = new\n    ZeroNumberException(\"\
+    Divisor is zero\");\n    throw obj2;\n}\n    int res = i/j;\n    System.out.println(res);\n\
+    } catch (ArithmeticException e) {\n    try {\n        FileInputStream fin = new\n\
+    \        FileInputStream(\"MyFile.txt\");\n    } catch (IOException e2) {\n  \
+    \      e2.initCause(e);\n        throw e2;\n    }\n}\npublic static void main(String[]\
+    \ args) {\n    try {\n        int i = Integer.parseInt(args[0]);\n        int\
+    \ j = Integer.parseInt(args[1]);\n        Divide(i,j);\n    } catch (Exception\
+    \ e) {\n        System.out.println(\"The Message is \" +\n        e.getCause());\n\
+    \        System.out.println(\"\\n\\n Stack Trace info\n```\n\nThe above program\
+    \ can be broken up into four steps when user passes negative numbers at command\
+    \ line."
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "a. NegativeNumberException is thrown from divide method, which is caught in\
+    \ divide method.\n\nb. The catch of the divide method raises FileInputStream exception\
+    \ which identifies NegativeNumberException as the cause.\n\nc. The catch of the\
+    \ main method captures FileInputStream Exception and display stack trace info.\
+    \ The details of inner exception is extracted using getCause().\n\nThe chain that\
+    \ is created is:\n\nNegativeNumberException(Inner) -> FileInputStream (Outer)\n\
+    \nOutput:\n\n```\nThe Message is NegativeNumberException: One of the numbers is\
+    \ negative\n\nStackTrace info\njava.io.FileNotFoundException: MyFile.txt (The\
+    \ system cannot find the file specified)\n  at java.io.FileInputStream.open(Native\
+    \ Method)\n  at java.io.FileInputStream.<init>(Unknown Source)\n  at java.io.FileInputStream.<init>(Unknown\
+    \ Source)\n  at Program.Divide(Prg.java:34)\n  at Program.main(Prg.java:46)\n\
+    Caused by: NegativeNumberException: One of the numbers is negative\n  at Program.Divide(Prg.java:23)\n\
+    \  ... 1 more\nStackTrace info : inner exception\nNegativeNumberException: One\
+    \ of the numbers is negative\n  at Program.Divide(Prg.java:23)\n  at Program.main(Prg.java:46)\n\
+    ```\n\n# Summary\n\nException chaining is accomplished using Throwable class constructor,\
+    \ initCause() and getCause() methods. Exception chaining help in easy diagnosis\
+    \ of nested exceptions."
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# Chapter 15\nTry with Resource\n\n+   Topics\n- What is Try with Resource?\n\
+    - Implementing Try with Resource\n- Summary\n\nWhat is Try with Resource?\nThis\
+    \ feature was introduced in Java 7. Using this feature programmer can perform\
+    \ automatic resource management. A resource is an object that is used in program\
+    \ and must be closed after the program is finished. The try-with-resources statement\
+    \ ensures each resource is closed at the end of the statement. Programmer need\
+    \ not have to explicitly close the resources.\n\nSyntax:\n\n```\ntry(resource-specification)\n\
+    {\n    //use the resource\n} catch(e){\n    ...\n}\n```\n\nThis try statement\
+    \ contains a parenthesis in which one or more resources are declared.\n\nImplementing\
+    \ Try with Resource\n\nAny object that implements java.lang.AutoCloseable or java.io.Closeable,\
+    \ can be passed as a parameter to try statement. Autocloseable/Closeable"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "interface has only close method. It is called automatically when the try block\
+    \ finishes. Multiple resources can be instantiated inside try i.e they are separated\
+    \ by a semi-colon. The resources are closed in the reverse order of creation.\n\
+    \nLet's see how to use try with resource.\n\n```\n// Program 1\n// Description\
+    \ : Without using Try with resource\nimport java.io.*;\n\nclass Shape implements\
+    \ Closeable {\n    public void close() {\n        System.out.println(\"Shape object\
+    \ close is closed\");\n    }\n}\nclass Program {\n    public static void main(String\
+    \ args[]){\n        try {\n            Shape obj = new Shape();\n        } catch(Exception\
+    \ e) {\n            System.out.println(\"Exception happened\" + e);\n        }\n\
+    \    }\n}\n```\n\nIn the above program the object of shape does not call close\
+    \ method automatically but it has to be called manually.\n\n```\n//Program 2\n\
+    //Description : Using try with resource\nimport java.io.*;\n\nclass Shape implements\
+    \ Closeable {\n    public void close() {\n        System.out.println(\"Shape object\
+    \ close is closed\");\n    }\n    public void display() {\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "```\nSystem.out.println(\"Display of shape\");\n}\nclass Program {\n    public\
+    \ static void main(String[] args[]){\n        try{\n            Shape obj = new\
+    \ Shape();\n            obj.display();\n        }catch(Exception e) {\n      \
+    \      System.out.println(\"Exception happened\" + e);\n        }\n    }\n}\n\
+    ```\n\nIn this program the object of shape is called automatically. As it can\
+    \ be seen in the output.\n\nOutput:\nDisplay of shape\nShape object close is closed\n\
+    \n```\n// Program 3\n// Description : Creating multiple objects in try with resource\
+    \ statement\n\nimport java.io.*;\n\nclass Shape implements Closeable {\n    public\
+    \ void close() {\n        System.out.println(\"Shape object is closed\");\n  \
+    \  }\n    public void display() {\n        System.out.println(\"Display of shape\"\
+    );\n    }\n}\nclass Circle extends Shape {\n}\n\nclass Ellipse extends Shape {\n\
+    \    public void close() {\n```"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\nSystem.out.println(\"Ellipse object is closed\");\n}\npublic void show()\
+    \ {\n    System.out.println(\"Show of ellipse\");\n}\n}\nclass Program {\n   \
+    \ public static void main(String args[]){\n        try(Shape obj = new Shape();\
+    \ Circle obj2 = new\n        Circle();Ellipse obj3 = new Ellipse()) {\n      \
+    \      obj.display();\n            obj2.display();\n            obj3.show();\n\
+    \        }catch(Exception e) {\n            System.out.println(\"Exception happened\
+    \ \" +\n        e);\n        }\n    }\n```\n\nThe above program demonstrate that\
+    \ objects are closed in the reverse order of creation. The circle class does not\
+    \ implement close() method hence close() method of Shape class is called.\n\n\
+    Output:\nDisplay of shape\nDisplay of shape\nShow of ellipse\nEllipse object is\
+    \ closed\nShape object is closed\nShape object is closed\n\n# Summary\n\nIt is\
+    \ a way to perform automatic resource management. The object has to implement\
+    \ AutoCloseable or Closeable interface. More than one object can be created in\
+    \ the 'try' block."
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# # Chapter 16
+
+    Exception Handling and Method Overriding
+
+
+    +   - Topics
+
+    - Rules for Exception Handling for Overridden methods.
+
+    - Summary
+
+
+    **Rules for Exception Handling for Overridden methods.**
+
+    Special care has to be taken when performing exception handling for overridden
+    methods. There are certain conditions that have to be satisfied or else compiler
+    report an error. Let''s understand the rules that have to be followed.
+
+
+    **Rule 1:** If mother class method does not ''throws'' any exception then
+
+
+    +   - The child class overridden method cannot ''throws'' checked exception.
+
+    - The child class overridden method can ''throws'' unchecked exception.
+
+
+    Let''s verify rule1 with help of an example
+
+
+    ```
+
+    // Program 1
+
+    // Description: Verifying Rule 1
+
+    ```'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "```\nimport java.io.*;\n\nclass Shape {\n    void draw() {\n        System.out.println(\"\
+    Drawing Shape\");\n    }\n\n    void draw3d() {\n        System.out.println(\"\
+    Drawing 3D Shape\");\n    }\n}\n\nclass Circle extends Shape {\n    void draw()\
+    \ throws RuntimeException {\n        System.out.println(\"Drawing Circle\");\n\
+    \    }\n\n    void draw3d() throws IOException {\n        System.out.println(\"\
+    Drawing 3D Circle\");\n    }\n}\n\nclass Program {\n    public static void main(String[]\
+    \ args[]) {\n        Circle obj = new Circle();\n        obj.draw();\n    }\n\
+    }\n```\n\nIn the above program draw() method of Shape class does not \"throws\"\
+    \ any exception and it is overridden by draw() method of Circle class. \"throws\"\
+    \ RuntimeException which is an unchecked exception hence compiler does not report\
+    \ any error.\nWhereas draw3d() method when overridden \"throws\" IOException which\
+    \ is a checked exception hence it is reported by the compiler.\n\nOutput:\n\n\
+    ```\nPrg.java:18: error: draw3d() in Circle cannot override draw3d() in Shape\n\
+    void draw3d() throws IOException {\n^overridden method does not throw IOException\n\
+    1 error\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# Rule 2: If the mother class “throws” an exception then\n\n+   a. Child class\
+    \ method need not 'throws' any exception.\nb. The Child class can 'throws' the\
+    \ same exception or child class of that exception.\n\nLet's verify the above rule\
+    \ with help of a program.\n\n```\n//Program 2\n//Description: Verifying Rule 2\n\
+    import java.io.*;\n\nclass Shape {\n    void draw() throws Exception {\n     \
+    \   System.out.println(\"Drawing shape\");\n    }\n    void draw3d() throws Exception\
+    \ {\n        System.out.println(\"Drawing 3D shape\");\n    }\n    void show()\
+    \ throws Exception {\n        System.out.println(\"This is show method\");\n \
+    \   }\n}\n\nclass Circle extends Shape{\n    void draw() throws Throwable {\n\
+    \        System.out.println(\"Drawing Circle\");\n    }\n    void draw3d() {\n\
+    \        System.out.println(\"Drawing 3D circle\");\n    }\n    void show() throws\
+    \ IOException {\n        System.out.println(\"Show method of circle\");\n    }\n\
+    }\n\nclass Program {\n    public static void main(String args[]) throws Exception{\n\
+    \        Circle obj = new Circle();\n}\n```"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "```\n}\nobj.draw();\n}\n```\n\nIn the above program\n\n+   a. Shape class draw()\
+    \ method \"throws\" Exception class and child class draw() method \"throws\" Throwable\
+    \ class which will yield into a compiler error. This is because the Child class\
+    \ can \"throws\" the same exception or child class of that exception.\nb. Shape\
+    \ class draw3d() method \"throws\" Exception class and child class Circle draw3d()\
+    \ method does not \"throws\" any exception hence compiler does not report any\
+    \ exception.\nc. Shape class show() method \"throws\" Exception class and child\
+    \ class Circle show() method \"throws\" IOException which will not yield into\
+    \ any compiler error. This because IOException class is a child class of Exception\
+    \ class.\n\nOutput:\n\n```\nPrg2.java:16: error: draw() in Circle cannot override\
+    \ draw() in Shape\nvoid draw() throws Throwable {\n    overridden method does\
+    \ not throw Throwable\n1 error\n```\n\nSummary\nRules for overridden method when\
+    \ using 'throws' keyword. If the super class method 'throws' an exception then\
+    \ child class can 'throws' the same exception or child class of that exception.\
+    \ If super class method does not 'throws' any exception then the child class overridden\
+    \ method can 'throws' unchecked exception."
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# # Chapter 17
+
+    User Defined Exception
+
+
+    Topics
+
+
+    +   - Creating User Defined Exception
+
+    - Summary
+
+
+    ### Creating User Defined Exception
+
+    User defined exception represent a business rule violation. In a typical software
+    application maximum exceptions that are raised and handled are user defined. Some
+    of the examples of user defined exception in an ATM application could.
+
+
+    +   - a. ATMException
+
+    - b. OutOfFundsException
+
+    - c. AuthenticationFailure
+
+
+    User defined exception is created by inheriting from Throwable or Exception class,
+    it is better to inherit from Exception class because it offer enhanced functionality.
+
+    A User defined exception is initialized by using mother class constructor. UDE(user
+    defined exception) can override toString() method to provide custom message.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "Let's understand UDE with help of examples\n\n//Program 1\n//Description: Creating\
+    \ user define exception\n\n```\nclass PositiveNumberException extends Exception\
+    \ {\n    int n;\n    PositiveNumberException(String msg,int num) {\n        super(msg);\n\
+    \        n = num;\n    }\n    public String toString () {\n        return \"The\
+    \ number \"+n + \" is not positive\";\n    }\n}\n\nclass Program {\n    public\
+    \ static void main(String args[]) {\n        try {\n            int i = Integer.parseInt(args[0]);\n\
+    \            if (i < 0)\n                throw new PositiveNumberException(\"\
+    The number is not positive\",i);\n        } catch(PositiveNumberException e) {\n\
+    \            System.out.println(e.toString());\n        }\n    }\n}\n```\n\nWhen\
+    \ the user passes a negative number at command line UDE\nPositiveNumberException\
+    \ is raised. The UDE PositiveNumberException is derived from Exception class.\n\
+    \nOutput:\n\nThe number -10 is not positive\n\n```\n// Program 2\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "```\n// Description: Using UDE with \"throws\" keyword\nclass PositiveNumberException\
+    \ extends Exception {\n    int n;\n    PositiveNumberException(String msg, int\
+    \ num) {\n        super(msg);\n        n = num;\n    }\n    public String toString()\
+    \ {\n        return \" Throws keyword with UDE ->The number \"+n + \" is positive\"\
+    ;\n    }\n}\n\nclass Program {\n    static void check(String args[]) throws PositiveNumberException\
+    \ {\n        int i = Integer.parseInt(args[0]);\n        if (i < 0) {\n      \
+    \      throw new PositiveNumberException(\"The number is not positive\",i);\n\
+    \        }\n    }\n    public static void main(String args[]) {\n        try {\n\
+    \            check(args);\n        }catch(PositiveNumberException e) {\n     \
+    \       System.out.println(e.toString());\n        }\n    }\n}\n```\n\nIn above\
+    \ program check method throws PositiveNumberException.\n\nOutput:\n\nThrows keyword\
+    \ with UDE -> The number -19 is not positive"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# Summary
+
+
+    UDE is a business rule violation. UDE is created by inheriting from Exception
+    or Throwable class. UDE can be used with “throws” keyword.'
+  merge: -1
+  pgno: 63
