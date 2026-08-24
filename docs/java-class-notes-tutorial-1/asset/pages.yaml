@@ -1,0 +1,4029 @@
+- img_proc: true
+  md: '# Java
+
+
+    +   * Java is a high level programning language
+
+    * Programming Language is a medium to interact with s/m
+
+    * Highlevel language is a language in a nonmal English
+
+    ice Human Understandable
+
+    * James Gosling was a person who introduced Java
+
+    * The company which started java is SunMicros/m(system)
+
+    * Cumntly Java is owned by oracle
+
+
+    Working of a Java Program / How java platform independent nt/ WORA
+
+
+    ![](img/c7c1d07c55f63dc1b96f816c41bc4141_0_0.png)
+
+
+    JVM : Java virtual Machine (Platform-dependent)
+
+    WORA : Write Once Run Any Where
+
+
+    Bytecode is an intermediate Which is neither low - level non
+
+    highlevel language so it uses jvm -> (1) convert to machinelevel
+
+    (2) Execute lineby line
+
+
+    +   * Firstly we build the java program using editons and save
+
+    it it with the extension -java
+
+
+    +   * once we are done developing the program we need to
+
+    Compile it'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '* compilation is a process in order to check if there are any ennons in my
+    java program or not
+
+
+    * If compilation is unsuccessful we get error report based on error report we
+    need to debug the program
+
+
+    * If compilation is Successful we generate bytecode which is intermediate code
+    /platform independent code
+
+
+    * Extension of all bytecode can be executed on all platform i.c all operating
+    system
+
+
+    * This bytecode can be executed on all platform i.c all operating system
+
+
+    # Variables
+
+
+    * Variables are contains in order to store some data/information Initialization
+    / Assign of values happen from RHS to LHS
+
+
+    * Variables are categorized into 2
+
+
+    Global variables Local variables
+
+    (Member)
+
+
+    Static Nonstatic
+
+    Variable Variable
+
+
+    ![](img/c7c1d07c55f63dc1b96f816c41bc4141_1_0.png)
+
+
+    Example : Age = 25
+
+    LHS RHS 25
+
+    Age
+
+
+    Height = 5.5 5.5
+
+    Height'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: "# Datatypes\n\n+   * Datatypes are used to indicate the type of data\nstored\
+    \ into a variables\n\n+   * Datatypes categorized into 2\n1) primitive Datatype\n\
+    2) Nonprimitive Datatype\n\n+   * In order to store non decimal numeric values\
+    \ we have the\following datatypes\n\n+   * The difference between those datatypes\
+    \ is MemorySize\n\n| data types | MemorySize |\n| --- | Bytes | Bits |\n| byte\
+    \ | 1 | 8 |\n| short | 2 | 16 |\n| Int | 4 | 32 |\n| long | 8 | 64 |\n\n+   *\
+    \ In order to store decimal numeric values we have the\nfollowing datatypes\n\n\
+    | Data-T | MemorySize |\n| --- | --- |\n| float | 4 | 32 |\n| double | 8 | 64\
+    \ |\n\nwidely used and default datatype for decimal.\n\n+   * In order to store\
+    \ true/false we have following datatypes\n\n| Data-T | MemorySize |\n| --- | Bytes\
+    \ | Bits |\n| Boolean | 1 | 8 |\n\n+   * In order to store a single character\
+    \ we make use of char,\n\n+   * chan data should be enclosed within 'singlequote'\
+    \ (' )\n\n+   * The memory size of char is 2 bytes : 16bits"
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Note All the above mentioned 8 data types are together called as primitive
+    data types
+
+
+    String It is a datatype to store a sequence of characters
+
+    * String data has to be enclosed within "double quotes"
+
+
+    Note Java is CaseSensitive When in lowercase letters are not equivalent to uppercase
+    letters values (a≠A)
+
+
+    # 32/01/2020 Variable Declaration
+
+
+    Syntax:
+
+    datatype VariableName;
+
+    int age;
+
+    double salary;
+
+
+    Syntax ; Variable Initialisation
+
+    VariableName = value;
+
+
+    | age = 20; | 20 Age |
+
+    | salary = 5000-69 | 5000-69 Salary |
+
+
+    Variable Declaration & Initialization
+
+    Syntax : Initialization
+
+
+    ```
+
+    datatype VariableName = Value;
+
+    Declaration
+
+    boolean x = true;
+
+    false;
+
+    ```'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "String Subject = \"Java\",\nString count = \"jsp2020\",\nchar gender = 'M';\"\
+    ,\n\n# Structure of a java program\n\n+   1) Class\n2) Main method\n3) Print Statement\n\
+    \n```\nclass className {\n    Scope of class {\n        public static void main(String[]\
+    \ args) {\n            System.out.println(\"-----\");\n        }\n    }\n}\n```\n\
+    \nThe filename should be same as className during file\nSaving className.java\n\
+    \n```\nEx:1 Class Firstprogram\n{\n    public static void main(String[] args)\
+    \ {\n        System.out.println(\"Hello world\");\n    }\n}\n```\n\n```\nOutput:\
+    \ Open cmd\ncd desktop\ncd java programs\njavac Firstprogram.java (compiling)\n\
+    java Firstprogram (printing)\nHello world!!!\n// cd: change directory to center\
+    \ save tiles\n```"
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "# Ex:2) Class Demo\n\n```\n{\npublic static void main(String[] args) {\n  System.out.println(10);\n\
+    \  System.out.println(45.67);\n  System.out.println(true);\n  System.out.println('2');\n\
+    \  System.out.println(\"jsp@2020\");\n}\n```\n\nOutput : javac Demo.java\njava\
+    \ Demo\n\n|10\n45.67\ntrue\n2\nljsp@2020|\n\n# Ex 3) Write a java program to follow\
+    \ the below statement\nScenarios\n\n+   i) Create class called as student\nii)\
+    \ Define main method\niii) Under main method initialize 2 variables called as\n\
+    name and age entering those respective values\n\n```\nClass student {\npublic\
+    \ static void main(String[] args) {\n  String name=\"Bhagya\";\n  int age = 23;\n\
+    \  System.out.println(name);\n  System.out.println(age);\n}\n```\n\n|O/P\nBhagya\n\
+    23|"
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "Note: In java , in order to perform concatenation while\nmake use of '+' operator\n\
+    \n```\nclass Employee {\n    public static void main(String[] args) {\n      \
+    \  int id = 101;\n        String name = \"Jary\";\n        double salary = 123.45;\n\
+    \        System.out.println(\"Employee Id: \" + id);\n        System.out.println(\"\
+    Employee name is: \" + name);\n        System.out.println(\"Employee Salary: \"\
+    \ + salary);\n        System.out.println(id + \" \" + name + \" \" + salary);\n\
+    \    }\n}\n```\n\nOutput\njavac Employee-Java\njava Employee\nEmployee Id: 101\n\
+    Employee Name is: Jary\nEmployee Salary: 123.45\n101 Jary 123.45\n\n# Operators\n\
+    \n+   1) Arithmetic Operators\n2) Assignment Operators\n3) Relational / Conditional\
+    \ Operators\n4) Logical Operators\n5) Unary Operators"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# Arithmetic Operators\n\n+   + Addition\n- Subtraction\n* Multiplication\n\
+    / Division\n% Modulus\n\n5->division 2/90\n10 0->modulus\n\nEx: 10/2=5 100/2=0\n\
+    \nExample:\n\n```\nClass Arithmetic Operators\n{\npublic static void main(String[]\
+    \ args)\n{\n    int x=10;\n    int y=20;\n    int sum=x+y;\n    int diff=x-y;\n\
+    \    System.out.println(\"Sum = \" + sum);\n    System.out.println(\"Difference\
+    \ is \" + diff);\n    System.out.println(y*5);\n    System.out.println(30/3);\n\
+    \    System.out.println(30%3);\n}\n```\n\nOutput:\n\nSum=30\nDifference is = -60\n\
+    100\n10\n0"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# 2) Assignment Operators
+
+
+    =
+
+    +=
+
+    -
+
+    *=
+
+    /
+
+
+    ```
+
+    int a=5;
+
+    a=a+10 or at=10;
+
+    a=a=15;
+
+    ```
+
+
+    ```
+
+    int x=30
+
+    x-=20
+
+    x=x-20
+
+    x=30-20
+
+    x=10
+
+    ```
+
+
+    ```
+
+    Ex Class Assignment Operators
+
+    {
+
+    public static void main (String[] args) {
+
+    int x=10;
+
+    System.out.println("value of x is: " + x);
+
+    x+=20;
+
+    System.out.println("value of x is: " + x);
+
+    System.out.println("a = " + a);
+
+    int a=6;
+
+    system.out.println("value of a is: " + a);
+
+    a*=5;
+
+    system.out.println("value of a is: " + a);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Oatpat
+
+
+    Value of x is 10
+
+    value of x is 30
+
+
+    Value of a is 6
+
+    value of a is 30
+
+
+    +   Relational/conditional/comparison Operators
+
+    < : less than
+
+    > : Greater than
+
+    <= : less than equal to
+
+    >= : Greater than equal to
+
+    == : Equals to
+
+    != : not equal to
+
+
+    Note: Comparison Operators will always return boolean values ice (true/false)
+
+
+    ```
+
+    Class Comparison Operator
+
+    {
+
+    public static void main(String[] args) {
+
+    int x=10;
+
+    int y=20;
+
+    }
+
+    ```
+
+
+    ```
+
+    boolean result1 = x<y;
+
+    boolean result2 = y>x;
+
+    System.out.println(result1 + "\t" + result2);
+
+    System.out.println("x == y: " + (x == y));
+
+    System.out.println("x<=10: " + (x<=10));
+
+    System.out.println("3>=4: " + (3>=4));
+
+    System.out.println("-- == --: " + ("-- == --\));
+
+    System.out.println("x==10: " + (x==10));
+
+    System.out.println("y==30: " + (y==30));
+
+    System.out.println("-- != --: " + ("-- != --\));
+
+    System.out.println("x!=10: " + (x!=10));
+
+    System.out.println("y!=30: " + (y!=30));
+
+    ```'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "```\n4) logical operators\nAND => &&      true = 1\nOR => ||       return =>\
+    \ boolean false = 0\nNOT => !\n\nAND     OR      NOT!!\nT T T     T T     T F\n\
+    T F F     F T T     F F\nF F F     F F     F F\n```\n\n```\nEx: Class logical\
+    \ operators\n{\n    public static void main(String[] args) {\n    int x = 10;\n\
+    \    int y = 20;\n    boolean result1 = x<y && y>x;\n    boolean result2 = x<y\
+    \ && x==y;\n\n    System.out.println(result1);\n    System.out.println(result2);\n\
+    \    System.out.println(\"-\\-\\-\");\n    System.out.println(1<2||12>10);\n \
+    \   System.out.println(2<1||2==3);\n    System.out.println(\"-\\-\\-\");\n   \
+    \ System.out.println(!true);\n    System.out.println(!false);\n    System.out.println(\"\
+    -\\-\\-\");\n    System.out.println(!(1<2));\n}\nntrue\nfalse\ntrue\nfalse\n```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# 5) Unary Operators
+
+
+    ++ (increment by 1)
+
+    -- (decrement by 1)
+
+    ++ pre increment
+
+    ++ post increment
+
+
+    pre decrement
+
+    post decrement
+
+
+    # EX: Class Unary
+
+
+    ```
+
+    {
+
+    public static void main(String[] args) {
+
+    int x = 5;
+
+    System.out.println("x:" + x);
+
+    ++;
+
+    System.out.println("x:" + x);
+
+    ++;
+
+    System.out.println("x:" + x);
+
+    --;
+
+    System.out.println("x:" + x);
+
+    --;
+
+    System.out.println("x:" + x);
+
+    }
+
+    n
+
+    ```
+
+
+    Output => x:5
+
+    x:6
+
+    x:7
+
+    x:6
+
+    x:5
+
+
+    int x = 10;
+
+    int y = ++x;
+
+    post increment
+
+    First assign, then increment
+
+
+    int a = 5;
+
+    int b = --a;
+
+    pre increment
+
+    First increment, then assign
+
+
+    ```
+
+    x = y / 10
+
+    a = 6
+
+    b = 6
+
+    ```'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "```\nint i = 2;\nj = i --;\npost-decrement;\nFirst assign, then decrement;\n\
+    if (i < j)\n```\n\n```\nint a = 5;\nint beta = a++;\nincrement;\nFirst increment,\
+    \ then assign;\n```\n\n```\nint p = 50;\nint q = --p;\ndeincrement;\nFirst decrement,\
+    \ then assign;\nif (p >= 56 && q <= 49)\n```\n\n```\nclass Unary {\n    void psm(String[]\
+    \ args) {\n        int q = 123;\n        int w = q++;\n        system.out.println(q\
+    \ + \" \" + w);\n\n        int o = 444;\n        int p = --o;\n        system.out.println(o\
+    \ + \" \" + p);\n    }\n}\n```"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# Decision / conditional statements\n\nThese statements are used to take some\
+    \ decision based on the condition specify. The different decision statements are\
+    \ as follows:\n\n+   1) Simple if\n2) if else\n3) if else if\n4) Nested if\n5)\
+    \ Switch\n\nSimple if is a decision making statements wherein we execute a set\
+    \ of instructions only if the condition is true\n\nEx: Flow chart\n\nSyntax :\n\
+    \n![](img/c7c1d07c55f63dc1b96f816c41bc4141_13_0.png)\n\nEx: Class SimpleIfDemo\n\
+    \n```\n{\npublic void main(String[] args) {\n    System.out.println(\"START\"\
+    );\n    int a=10;\n    int b=10;\nn}\n```"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# if (a<=b)
+
+
+    system.out.println("at " is less than or equal to" + b);
+
+
+    system.out.println("end");
+
+
+    # if else:-
+
+
+    if else is a decision making statement Wherein, if the condition is true we execute
+    if block. Otherwise if the condition is false execute else block.
+
+
+    ![](img/c7c1d07c55f63dc1b96f816c41bc4141_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "```\nclass IfElseDemo\n{\n    public void main(String[] args)\n    {\n    \
+    \  System.out.println(\"START\");\n      int x = 100;\n\n      if (x<=10)\n  \
+    \    {\n        System.out.println(x+\" is lesser than or equal to 10\");\n  \
+    \    }\n      else\n{\n        System.out.println(x+\" is greater than 10\");\n\
+    \      }\n\n      if(true)\n      {\n        System.out.println(\"HI\");\n   \
+    \   }\n      else\n{\n        System.out.println(\"BYE\");\n      }\n\n      if(false)\n\
+    \      {\n        System.out.println(\"WELCOME\");\n      }\n    }\n}\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "```\nelse\n{\n    s.out.println(\"Thank you\");\n    s.out.println(\"END\"\
+    );\n}\n```\n\n```\nif: START\n    100 is greater than 10\n    Hi\n    Thank you\n\
+    \    END\n```\n\nq) Write a java program to find if a number is sve or -ve\n\n\
+    ```\nclass Number\n{\n    public void main(String[] args)\n    {\n        int\
+    \ x = 5;\n        if(x > 0){\n            s.out.println(\"x is a positive number\"\
+    );\n        }\n        else{\n            s.out.println(\"x is a negative number\"\
+    );\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "```\n1) Write a java program to find a number is even or odd\nclass Number\
+    \ {\n    public static void main(String[] args) {\n        int num=4;\n      \
+    \  if (num % 2 == 0) {\n            System.out.println(num+\" is an even number\"\
+    );\n        } else {\n            System.out.println(num+\" is an odd number\"\
+    );\n        }\n    }\n}\n```\n\n```\n2) Write a java program to find maximum of\
+    \ 2 numbers\nclass Number2 {\n    public static void main(String[] args) {\n \
+    \       int x=5;\n        int y=10;\n        if(x>y) {\n            System.out.println(x+\"\
+    \ is a larger than \"+y);\n        } else {\n            System.out.println(x+\"\
+    \ is a lesser than \"+y);\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "22/1/2020\n\nif-else-if\nif-else-if is a decision making statement When we\
+    \ canncheck multiple conditions\n\n```\nsyntax: if (condition) {\n  ---\n}\nelse\
+    \ if (condition) {\n  ---\n}\nelse if (condition) {\n  ---\n}\nelse {\n  ---\n\
+    }\n```\n\n```\nEx: class IfElseIf Demo {\npublic static void main(String[] args)\
+    \ {\n  int num = 250;\n  if (num<10) {\n    System.out.println(num+\" is lessen\
+    \ than equal to 10\");\n  }\n}\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "```\nelse if (num<=20) {\n  S.out.println(num+\" is lesser than or equal to\
+    \ 20\");\n}else if (num<=30) {\n  S.out.println(num+\" is lesser than or equal\
+    \ to 30\");\n}else {\n  S.out.println(\"Above conditions did not match\");\n}\n\
+    ```\n\nOutput: Above Condition did not match\n\n```\nclass ElIfDemo {\n  public\
+    \ static void main(String[] args) {\n    int marks=25;\n    if(marks>=0 && marks<=34)\
+    \ {\n      S.out.println(\"fail\");\n    }else if (marks>=35 && marks<=59) {\n\
+    \      S.out.println(\"First class\");\n    }\n  }\n}\n```\n\n| 0-34-F |\n| 35-59-C\
+    \ |\n| 60-100-A |"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "```\nelse if (marks >= 60 && marks <= 100)\n{\n    s.out.println(\"FCD\");\n\
+    }\nelse\n{\n    s.out.println(\"Invalid Marks\");\n}\n```\n\nO/P: Fail\n\nNested\
+    \ if:\nNested if is a decision making statement wherein one if is presented inside\
+    \ another if condition\n\n```\nSyntax: if (condition)\n{\n    if (condition)\n\
+    \    {\n        --\n    }\n    else\n    {\n        --\n    }\n}\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# class NestedIf Demo\n\n```\npublic static void main(String[] args) {\n  \
+    \  char id = 'b';\n    int password = 123;\n    if (id=='a') {\n        System.out.println(\"\
+    user id is valid\");\n        if (password==123) {\n            System.out.println(\"\
+    password is valid\");\n            System.out.println(\"login is Successful\"\
+    );\n        }\n    } else {\n        System.out.println(\"password is invalid\"\
+    );\n        System.out.println(\"login is Unsuccessful\");\n    }\n    else {\n\
+    \        System.out.println(\"user id is Invalid\");\n        System.out.println(\"\
+    login is Unsuccessful\");\n    }\n}\n```\n\nOutput (1) User id is Invalid login\
+    \ is Unsuccessful\n(2) User id is valid password is valid login is Unsuccessful"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'Ex
+
+
+    male 21 -> got married
+
+    Female 21 -> got married
+
+    Female 18
+
+
+    # class NestedIfDemo
+
+
+    ```
+
+    {
+
+    public void main(String[] args) {
+
+    Char gender = ''M'';
+
+    int age = 24;
+
+    if (gender == ''M'') {
+
+    System.out.println("Male");
+
+    if (age >= 21) {
+
+    System.out.println("Age is : "+age);
+
+    System.out.println("Get married & hopefully stay happy");
+
+    } else {
+
+    System.out.println("Age is : "+age);
+
+    System.out.println("Have patience");
+
+    }\}
+
+    } else if (gender == ''F'') {
+
+    if (age >= 18) {
+
+    System.out.println("Female");
+
+    System.out.println("Age is : "+age);
+
+    }
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "```\nelse {\n  s.o.println(\"Age is \"+age);\\n}\nelse {\n  s.o.println(\"\
+    Gender is Invalid\");\n}\n```\n\no/p: - Gender is Male\nage: 21\nGet married &\
+    \ hopefully stay happy\nstay happy\n\n+   8) Write a java program to find largest\
+    \ of 3 numbers\nclass largest of threeNumbers {\n  public static void main(String[]\
+    \ args) {\n    int a = 10;\n    int b = 5;\n    int c = 3;\n    s.o.println(\"\
+    a:\"+a+\" b:\"+b+\" c:\"+c);\n    if (a>b) {\n    } else if (a>c) {\n      s.o.println(\"\
+    a rs largest\");\n    }\n  }\n}"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "```\nelse\n{\n    s.o.println(\"c is largest\");\n}\nelse if (b>c)\n{\n   \
+    \ s.o.println(\"b is largest\");\n}\nelse if (c>b)\n{\n    s.o.println(\"c is\
+    \ largest\");\n}\nelse\n{\n    s.o.println(\"Invalid\");\n}\ns.o.println(\"-----\"\
+    );\nif (a>b && a>c)\n{\n    s.o.println(\"a is largest\");\n}\nelse if (b>a &&\
+    \ b>c)\n{\n    s.o.println(\"b is largest\");\n}\nelse if (c>a && c>b)\n{\n  \
+    \  s.o.println(\"c is largest\");\n}\n```"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# Switch statement *\n\nSwitch is a conditional statement generally used for\
+    \ character comparison\n\n# Syntax:-\n\n```\nswitch (choice/input) {\n  case 1:\n\
+    \    break;\n  case 2:\n    break;\n  case n:\n    default;\n}\n```\n\n# Ex:-\n\
+    \n```\nclass switch Demo {\n  public void main(String[] args) {\n    int choice=3;\n\
+    \    switch (choice) {\n      case 1:\n        System.out.println(\"In case 1\"\
+    );\n        break;\n      case 2:\n        System.out.println(\"In case 2\");\n\
+    \        break;\n      case 3:\n        System.out.println(\"In case 3\");\n \
+    \       break;\n      default:\n        System.out.println(\"Invalid choice\"\
+    );\n    }\n  }\n  Output: In case 3\n}\n```"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "Note Break: is a keyword Which is used to transfer the control outside the\
+    \ currently executing block\n\nEx class monthvalidation\n\n```\nvoid psvm(String[]\
+    \ args) {\n    s.o.println(\"start\");\n    char month = 'Z';\n    switch (month)\
+    \ {\n        case 'J': s.o.println(\"In January\");\n            break;\n    \
+    \    case 'F': s.o.println(\"In February\");\n            break;\n        case\
+    \ 'M': s.o.println(\"In March\");\n            break;\n        default: s.o.println(\"\
+    Invalid month\");\n    }\n    s.o.println(\"End\");\n}\n```\n\nOutput: start\n\
+    Invalid Month\nEnd"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# Looping Statements\n\nLooping statements are generally used to repeat a specific\
+    \ task\n\n+   looping statements are generally used to traverse the data as well\n\
+    \n+   the different looping statements are as follows:\n1) for loop\n2) While\
+    \ loop\n3) do while loop\n4) nested loop\n\nfor loop is a looping statement is\
+    \ used to repeat a task for the specified number of times\n\n+   we use for loop\
+    \ when we know the logical start and the logical end\n\n```\nSyntax: for (initialisation;\
+    \ condition; updation)\n{\n set of instructions to be repeated;\n}\n```\n\n```\n\
+    Ex: print Hello world 5 times\nfor (int i=1; i<=5; i++)\n{\n System.out.println(\"\
+    Hello world\");\n}\n```\n\n| Tracking | i | O/p |\n|---|---|---|\n| 1 | i<=5 ->\
+    \ T | HW |\n| 2 | i<=5 -> T | HW |\n| 3 | i<=5 -> T | HW |\n| 4 | i<=5 -> T |\
+    \ HW |\n| 5 | i<=5 -> T | HW |\n| 6 | i<=5 | P |"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\nclass FonloopDemo\n{\n    public static void main (String[] args)\n  \
+    \  {\n        for (int i=1; i<=5; i++)\n        {\n            System.out.println(i=1\
+    \ ; i<=5 ; i++)\n        }\n        S.out.println(\"Hello world\");\n    }\n \
+    \   for (int i=1; i<=5; i++)\n    {\n        S.out.print(\"i: \" + i);\n    }\n\
+    \    for (int i=2-156; 2<=160; 21+i) //(int i=256; 2<161; 2++i)\n    {\n     \
+    \   S.out.print(\"2\");\n    }\n    S.out.print(\" - - - - \");\n    }\n\n   \
+    \ for (int event=2; event<=10; event=event+2)\n    {\n        System.out.println(event);\n\
+    \    }\n    System.out.println(\" - - - - \");\n    }\n\n    for (int i=2-156;\
+    \ 2<161; 2++i) // for (int i=156; 2<=256; 2H)\n    {\n        S.out.p(2);\n  \
+    \  }\n    S.out.print(\" - - - - \");\n    }\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# papergrid\nDate: / /\n\n```\nfor (int i=1; i<9; i+=2)\n{\n  s.o.p(i);\n}\n\
+    s.o.p(\"\" \" \" \");\nfor (int i=2;3; i<=15; i+=3)\n{\n  s.o.p(i);\n}\n\n```\n\
+    \nQ) Write a program to print numbers from 1 to 10 in reverse order\n\n```\nClass\
+    \ Reverseorder\n{\n  public static void main (String args)\n{\n    for (int i=10;\
+    \ i>=1; i--)\n    {\n      System.out.println(i);\n    }\n  }\n}\n```\n\n5>4>3>2>1\n\
+    \n```\nfor (int i=5; i>=1; i-=2)\n{\n  s.o.p(i);\n}\nInfinite loop\nfor (int i=5;\
+    \ i>=0; i++)\n{\n  s.o.p(i);\n}\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "```\nEx) Class ForLoopDemo\n{\n  public static void main (String[] args) {\n\
+    \    for (int i=1; i<=10; i++) {\n      if (i%2 == 0) {\n        system.out.println(i);\
+    \ // i%2==0\n      }\n    }\n    s.out.print(\"...\");\n  }\n}\n```\n\n```\nfor\
+    \ (int i=1; i<=10; i++) {\n  if (i%2 == 1) {\n    system.out.println(i);\n  }\n\
+    }\n```\n\n```\nfor (int i=1; i<=30; i++) {\n  if (i%3 == 0) // if (i%5 == 0) multiples\
+    \ of 5 {\n    system.out.println(i);\n  }\n}\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "a) print the sum of 'n' natural numbers.\n\n```\nClass NaturalNumbers {\n \
+    \   public void main(String[] args) {\n        int sum=0;\n        for (int i=1;\
+    \ i<=n; i++) {\n            sum=sum+i;\n        }\n        System.out.println(sum);\n\
+    \    }\n}\n```\n\nb) Write a program to find the sum of even numbers from 1 to\
+    \ 10\n\n```\nClass EvenNum {\n    public void main(String[] args) {\n        for\
+    \ (int i=1; i<=10; i+=2) {\n            int result=result+i;\n            System.out.println(\"\
+    sum of Even nums: \"+result);\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '```
+
+    While loop
+
+    While loop is a looping statement which is used to
+
+    execute a set of instructions until the condition is false
+
+    In other words while loop keeps on executing if the
+
+    Condition is true & stops when condition is false
+
+    ```
+
+
+    ```
+
+    Syntax :: While (condition)
+
+    {
+
+    Implementation
+
+    }
+
+    ```
+
+
+    ```
+
+    Ex) int i=1;
+
+    while(i<=5)
+
+    {
+
+    System.out.println(i);
+
+    ++
+
+    }
+
+    ```
+
+
+    ```
+
+    O/P
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    ```
+
+
+    ```
+
+    Ex) int n=5;
+
+    While(n>=1)
+
+    {
+
+    S.out.println(n);
+
+    --
+
+    }
+
+    ```
+
+
+    ```
+
+    O/P
+
+    5
+
+    4
+
+    3
+
+    2
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\ndo while loop\ndo while loop is a looping statement similar to While loop\n\
+    ie it keeps on executing until the condition is false\nthe difference between\
+    \ While and do While is\n-> While checks the condition & then executes set of\
+    \ instructions\n->DoWhile loop executes set of instructions & then checks the\n\
+    Condition.\n\nSyntax: do\n{\n  -- task\n}\nWhile (Condition)*\n\nex) int i=1;\n\
+    do\n{\n  s.o.print(i);\n  i++;\n}\nWhile (i<=5);\n\nEx) int x=5;\ndo\n{\n  s.o.println(x);\n\
+    \  x--;\n}\nWhile (x>=1);\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# Difference between While & do loop\n\nWhile loop do\n\n+   * While loop checks\
+    \ the condition first and then executes set of instructions\n* do loop executes\
+    \ set of instructions first and then condition\n\n+   * If the condition is false\
+    \ While loop does not execute\n* If the condition is false do loop executes at\
+    \ least once\n\n```\nWhile(i) {\n  int i=10;\n  while(i<5) {\n    s.op(i);\n \
+    \ }\n}\n```\n\n```\nEx) {\n  do {\n    s.op(n);\n  } while(n<5);\n}\n```\n\nNested\
+    \ for loop is a combination of for for loop within another for loop.\n\n> For\
+    \ 1 outer value, all the values of inner for loop get executed\n\n```\nfor (int\
+    \ i=1; i<3; i++) {\n  s.op(\"HI\");\n  for (int j=5; j<=6; j++) {\n    s.op(j\
+    \ + \" \" + \"tj\");\n  }\n  s.op(\"bye\");\n}\n```\n\n| Hi 25 36 |\n| 15 26 bye\
+    \ |\n| 16 bye |\n| bye Hi |\n| 35 |"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "```\nclass nestedforloopdemo\n{\n    public static void main(String[] args)\
+    \ {\n        for (int i=1; i<=2; i++) {\n            System.out.println(\"outer\
+    \ for loop start\");\n            for (int j=1; j<=2; j++) {\n               \
+    \ System.out.println(\"inside inner for loop \" + i + \": \" + j);\n         \
+    \   }\n            System.out.println(\"outer for loop end\");\n        }\n  \
+    \  }\nn\n```\n\noutput Java nestedforloopdemo.java\nJava nestedforloop\nouter\
+    \ for loop start\nInside inner for loop i:1 j:1\nInside inner for loop i:1 j:2\n\
+    Outer for loop end\nouter for loop start\ninside inner for loop i:2 j:1\ninside\
+    \ inner for loop i:2 j:2\nouter for loop end"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "Write a java program to print even numbers from 16 to 10 in reverse order using\
+    \ for loop, while loop, do while loop.\n\n```\nfor (int i=16; i>=10; i-=2) {\n\
+    \    s.out.println(i);\n}\n```\n\n```\nint n=16;\nwhile (n>=10) {\n    s.out.println(n);\n\
+    \    n-=2;\n}\n```\n\n```\nint n=10;\ndo {\n    s.out.println(n);\n    n-=2;\n\
+    } while (n>=10);\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# Object - Oriented Programming\n\nObject : Object is a Real World Entity\n\
+    \n+   - Anything Which is present in the real world & has some physical existence\
+    \ can be termed as an object\nEx: pen, human being\n\n+   - The properties of\
+    \ an object generally categorized into 2 types\n1) States\n2) Behaviour\n\n+ \
+    \  - States are the properties which is used to store some value of the object\n\
+    - Behaviour are the properties which is used to perform some task/action\n- Ex:\
+    \ When we consider a car as an object following are and the states and behaviour\n\
+    \n| Starting States | Behaviour (performing task) |\n| data | Brand | Start the\
+    \ car |\n| color | Stop the car |\n| model | Shift gears |\n\n+   - In programming\
+    \ perspective, object name is considered as class name, states are referred as\
+    \ variables, Behaviour are referred as methods/Functions\n\n+   - Class is a blueprint\
+    \ of an object\n- Class also provides a platform to store the states & behaviour\
+    \ of a particular object\n\n+   - Class is a logical entity\n- Class has to indicate\
+    \ using a keyword called class\n- Class can also act as a datatype\n\n```\nSyntax\
+    \ of Class - class className {\n  Scope of a class {\n    //variables\n    //methods/functions\n\
+    \    //constructors\n    //blocks\n  }\n}\n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Object Creation
+
+
+    +   * object creation is a process of storing or loading the non static properties
+    within the memory
+
+    * objects are created inside a memory location called as Heap Area
+
+
+    +   * We can create any number of objects for a specific class
+
+    * In Simple words object is a copy or instance of a class
+
+
+    ```
+
+    Syntax:- Object creation
+
+    className Objectreference=new className();
+
+    ```
+
+
+    ```
+
+    Ex: Class pen { pen pl = new pen(); }
+
+    Ex: Class Boy { boy bl = new Boy(); }
+
+    ```
+
+
+    +   * In order to access nonstatic properties present within the object we make
+    use of dotoperator();
+
+
+    ```
+
+    Syntax: Objectname=VariableName
+
+    dotoperator
+
+    ```
+
+
+    +   Q) How do we differentiate between a static variable & non static variable?
+
+
+    +   * If a variable is declared using static keyword we refer it as a static variable
+    otherwise we refer it as non static variable
+
+
+    ```
+
+    Variable
+
+    Static nonstatic
+
+    ```
+
+
+    ```
+
+    Ex: Static int a=10; int a=5;
+
+    ```'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "```\nProgram to access non static Variables present within\nthe same class\
+    \ Class car {\n    String Brand = \"Suzuki\";\n    int cost = 5000;\n}\n\npublic\
+    \ static void main(String[] args) {\n    car c = new car();\n    c.objectname\
+    \ = operator c();\n    System.out.println(c.brand);\n    System.out.println(c.cost);\n\
+    }\n\nClass student {\n    int id = 101;\n    String name = \"Tom\";\n    int marks\
+    \ = 45;\n}\n\npublic static void main(String[] args) {\n    System.out.println(\"\
+    Stant\");\n    student s = new Student();\n    System.out.println(s.id);\n   \
+    \ System.out.println(s.name);\n    System.out.println(s.marks);\n    System.out.println(s.id\
+    \ + \" \" + s.marks);\n    System.out.println(s.name + \" of \" + s.id + \" has\
+    \ scored \" + s.marks);\n    System.out.println(\"end\");\n}\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "Note: Non static properties either in the same class or another class can be\
+    \ access with the help of object creation\n\nQ) program in order to access non\
+    \ static properties in another class.\n\n```\nclass Employee {\n    String name\
+    \ = \"Jerry\";\n    int salary = 12000;\n}\n```\n\n```\n// creating an object\
+    \ of class employee\nclass Test {\n    public static void main(String[] args)\
+    \ {\n        Employee emp = new Employee();\n        System.out.println(emp.name\
+    \ + \" earns \" + emp.salary);\n    }\n}\n```\n\nOutput\njava TestEmployee.java\n\
+    java TestEmployee\nJerry earns: $12000\n\nNote: We can create any number of objects\
+    \ for a specific class & changes made to 1 object will not reflect to another"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "```\nclass pen {\n  int cost=100; //nonstatic variable\n}\n```\n\n```\npublic\
+    \ static void main(String[] args) {\n  // 2 copies of instances created for pen\
+    \ class\n  pen p1 = new pen();\n  pen p2 = new pen();\n  System.out.println(p1.cost\
+    \ + \" \" + p2.cost);\n  p1.cost=300; // re-initializing_cost to 300 for pen obj\
+    \ p1;\n}\n}\n```\n\n# Output\n\njavapen.java\njava pen\n\n100 100\n300 100"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "```\nIf a variable just declared & not initialized to\nany values, then the\
+    \ compiler will automatically\ninitialize it to its default value\n```\n\n| Datatypes\
+    \ | Memory size | Default values |\n| --- | --- | --- |\n| Non-decimal byte |\
+    \ Bytes Bits 1 8 | |\n| Numeric short | 2 16 | |\n| values int | 4 32 | |\n| long\
+    \ | 8 64 | 0.0 |\n| Decimal float | 8 32 | |\n| values double | 8 64 | |\n| truefalse\
+    \ boolean | 1 8 | |\n| Singleton char | 2 16 | false unicode value '\\0' |\n|\
+    \ sequence string | X X | emptyspace, null |\n\nDefault values are applicable\
+    \ for both static & non-static variables:\n\n```\nCLASS defaultValuesDemo\n{\n\
+    int a;\nfloat b;\nboolean c;\nchar j;\nstring i;\n}\n```\n\n```\npublic static\
+    \ void main(String[] args)\n{\n  defaultValuesDemo dvd = new defaultValuesDemo();\n\
+    \  System.out.println(dvd.a);\n  System.out.println(dvd.b);\n  System.out.println(dvd.c);\n\
+    \  System.out.println(dvd.i);\n  System.out.println(dvd.j);\n}\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'Write a java program to store student details wherein each student will have
+    attributes called name & age Class student
+
+
+    ```
+
+    {
+
+    int age = 25;
+
+    String name = "Tom";
+
+
+    public static void main(String[] args) {
+
+    student std1 = new student(();
+
+    ```
+
+
+    System.out.println();
+
+
+    ```
+
+    Class student {
+
+    String name;
+
+    int age;
+
+
+    public static void main(String[] args) {
+
+    String s1 student1 = new student();
+
+    Student s2 = new student()
+
+
+    System.out.println(s1.name + " " + s1.age);
+
+    System.out.println(s2.name + " " + s2.age);
+
+    ```
+
+
+    ```
+
+    //reinitializing in s1 object
+
+    s1.name = "Tom";
+
+    s1.age = 20;
+
+    //reinitializing in s2 object
+
+    s2.name = "jerry";
+
+    s2.age = 15;
+
+    ```'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '```
+
+    System.out.println(s1.name + " is " + s1.age + " years old");
+
+    ```
+
+
+    ```
+
+    System.out.println(s2.name + " is " + s2.age + " years old");
+
+    ```
+
+
+    ```
+
+    output
+
+    null o
+
+    null o
+
+    Tom is 20 years old
+
+    Jerry is 15 years old
+
+    ```
+
+
+    # 31/1/2020 Methods/functions
+
+
+    +   * Method is a block of code which is used to perform a specific task
+
+    * In other words, method is a set of instructions to represent the behaviour of
+    an object
+
+    * Methods can also be referred as Functions
+
+
+    Different ways of writing a method are as follows
+
+
+    +   i) Method without arguments without return statements
+
+    ii) Method with arguments without return statements
+
+    iii) Method without arguments with return statements
+
+    iv) Method with arguments with return statements
+
+
+    ```
+
+    Syntax; Access specifier returntype methodName() {
+
+    Statement 1;
+
+    Statement n;
+
+    return value;
+
+    }
+
+    ```
+
+
+    Note: A method gets executed only when we call it or invoke it'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\nSyntax : objectname.methodName();\n\nQ) program to demonstrate a method\
+    \ without arguments\n   without return statements\n   class Demo {\n       void\
+    \ display() {\n           System.out.println(\"HelloWorld\");\n       }\n    \
+    \   public static void main(String[] args) {\n           System.out.println(\"\
+    Start\");\n           Demo d = new Demo();\n           d.display(); // (calling\
+    \ method)\n           System.out.println(\"End\");\n       }\n   }\n\nStart\n\
+    HelloWorld\nEnd\nP) Method with Arguments & without return statements\n   class\
+    \ Addition {\n       //method with arguments & without return statement\n    \
+    \   void add(int a, int b) { // Arguments\n           System.out.println(a + b);\n\
+    \       }\n   }\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "```\npublic static void main(String[] args)\n{\n    Addition obj = new Addition();\n\
+    \    obj.add(10,20); // parameters\n    obj.add(5,7); // (int tuple)\n}\n```\n\
+    \nolp\n30\n12\n\nQ). Create a method called as multiply which accepts the 3 arguments\
+    \ and prints the products of them 3 numbers\n\n```\nclass multiply\n{\n    public\
+    \ static void multi(int a, int b, int c)\n    {\n        system.out.println(a*b*c);\n\
+    \    }\n}\n```\n\n```\npublic static void main(String[] args)\n{\n    Multiply\
+    \ obj = new multiply();\n    obj.multi(10,20,30);\n}\n```\n\nolp\n6000"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# class Test\n\n```\nclass Test {\n    int display() {\n        System.out(\"\
+    start\");\n        Test t = new Test();\n        int result = t.display();\n \
+    \       System.out(result);\n        System.out(t.display());\n        System.out(\"\
+    end\");\n    }\n}\n```\n\n# Method With No Arguments & with return statements\n\
+    \n```\nclass Test {\n    // Method with no arguments & with return statement\n\
+    \    String display() {\n        return \"Hello\";\n    }\n\n    public static\
+    \ void main(String[] args) {\n        System.out.println(\"start\");\n       \
+    \ Test t = new Test();\n        String result = t.display();\n        System.out.println(result);\n\
+    \        System.out.println(t.display());\n        System.out.println(\"End\"\
+    );\n    }\n}\n\n\n```"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# Method with arguments & with return statement\n\n```\nclass calculation {\n\
+    \    int test(int a) {\n        return a;\n    }\n}\n```\n\n```\npublic static\
+    \ void main(String[] args) {\n    Calculation c = new Calculation();\n    int\
+    \ res = c.test(2);\n    System.out.println(res);\n    System.out.println(\"5 power\
+    \ 5 \" + t.test(2));\n}\n```\n\n0/\n4\n25\n\nWhich return type to use\n\n```\n\
+    int test() {\n    return 10;\n}\n```\n\n```\nboolean test() {\n    return false;\n\
+    }\n```\n\n```\nString test() {\n    return \"Dinga\";\n}\nString name = \"tom\"\
+    ;\n\n```\n\nOop\nName: tom"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# papergrid\n\n```\ndouble test() {\n  return 10.5;\n}\n```\n\n```\nString\
+    \ test(int age) {\n  return \"Age: \" + age;\n}\n```\n\n```\nString test(double\
+    \ age) {\n  int a = 5+5;\n  return \"weight: \" + a;\n}\n```"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "```\nwrite a pgm to check even or odd\n\nclass solution {\n    String checkEvenorodd(int\
+    \ num) {\n        if (num%2==0) {\n            return num+\" is a Even num\";\n\
+    \        } else {\n            return num+\" is a odd num\";\n        }\n    }\n\
+    }\n\npublic static void main(String[] args) {\n    Solution sol= new Solution();\n\
+    \    system.out.println(sol.checkEvenorodd(num));\n}\n```\n\n# # Method Overloading\n\
+    \n+   - Method overloading is a process of having multiple methods with the same\
+    \ name but with difference in arguments\n- In Other words, in a class having multiple\
+    \ methods functions with same name but change in the argument\n- In order to achieve\
+    \ method overloading we have to satisfy at least one of the following rules\n\n\
+    +   Rule1: There should be a change in the number of arguments i-length of the\
+    \ arguments\n\n+   Rule2: There Should be a change in the datatype of the arguments\n\
+    \n+   Rule3: There should be a change in the order on the sequence of the datatypes\n\
+    \n+   Note: Variable names must be same on different\nNote: Compile time polymorphism\
+    \ can be achieved with the help\nof method overloading"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# Class Mo\n\n```\n{\n  void display(int a) {\n    s.out.println(a);\n  }\n\
+    ```\n\n```\nvoid display(int a double b) {\n    s.out.println(at \"\\t\" + b);\n\
+    \  }\n```\n\n```\nvoid display (string a, string b) {\n    s.o.p(at \"\\t\" +\
+    \ b);\n  }\n```\n\n```\nvoid display (int a, string b ) {\n    s.o.p(at \"\\t\"\
+    \ + b);\n  }\n```\n\n```\nvoid display (string a ) {\n    s.o.p(a);\n  }\n```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# Another class\n\n```\nclass TestMO {\n    public static void main (String[]\
+    \ args) {\n        MO m = new MO();\n        m.display(10);\n        m.display(\"\
+    Hello\");\n        m.display(10, \"Hello\");\n        m.display(\"Hi\", 50);\n\
+    \        m.display(10, 10.5);\n    }\n}\n```\n\nOutput:\n10Hello\n\n10 Hello\n\
+    Hi 50\n10 10.5\n\n> Note: During method overloading return type can be same different\n\
+    \n+   * We can Overload static methods and non static methods as well\n\n+   *\
+    \ Even main methods can be overloaded but the execution will always begin from\
+    \ the method which accepts a string[] (string[]) as the data types\n\n```\np s\
+    \ vm(double[] a)\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '```
+
+    ps vm(string[] a) -> execution starts from this
+
+    {
+
+    }
+
+    ```
+
+
+    ```
+
+    ps vm(int[] a)
+
+    {
+
+    }
+
+    ```
+
+
+    In java we cannot have nested methods but a method can call on invoke another
+    method
+
+
+    # Static keyword
+
+
+    +   * Static is a Keyword Which can be used for Variables & methods
+
+    * Static propenties will have 1 copy per class
+
+    * All the static propenties are loaded into memory location called as class Area
+    / static pool / static variable
+
+    * In ononden to define a static variable we have to make use of static keyword
+
+    * If we have any static propenties then we should always access it with the help
+    of classname
+
+
+    ```
+
+    class student
+
+    {
+
+    static int age = 20;
+
+    static void study()
+
+    {
+
+    system.out.println("studying");
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "```\npublic static void main(String[] args) {\n    System.out.println(\"start\"\
+    );\n    System.out.println(\"student age\" + lastname.method);\n    Student.study();\n\
+    \    System.out.println(\"End\");\n}\n```\n\n```\nStudent {\n    int age = 20;\n\
+    \    void study() {\n        System.out.println(\"studying\");\n    }\n}\nstatic\
+    \ class Area {\n```\n\nOutput\nStart\n20\nstudying\nEnd.\n\nNote: static properties\
+    \ can be accessed directly or with the help of lastname within the sameclass\n\
+    \n```\nclass Employee {\n    static double salary = 102;\n    static void work()\
+    \ {\n        System.out.println(\"Employee is working\");\n    }\n}\n```"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\npublic static void main(String[] args) \n{\n    System.out.println(Employee.salary);\n\
+    \    Employee.work();\n    // className salary -> Employee.salary\n    System.out.println(salary);\n\
+    \    work(); // internally its like className works() -> Employee.work()\n}\n\
+    }\n```\n\noutput\nEmp sal : 1.2\nEmployee is working\n1.2\nEmployee is working\n\
+    \n```\nclass car \n{\n    static int price = 12000;\n    static void stunt() {\n\
+    \        System.out.println(\"car started\");\n    }\n}\n```\n\n```\nclass TestCar\
+    \ \n{\n    public static void main(String[] args) {\n    }\n}\n```"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'System.out.println(can.price);
+
+    car.stant();
+
+
+    ```
+
+    /* ERROR
+
+    so.println(price);
+
+    Slant();*/
+
+    ```
+
+
+    internally its Testcanprice & Testcarstant
+
+    wherein Testcan has no variable called price
+
+    & no method called as stant SO ERROR
+
+
+    Y
+
+    Y
+
+
+    Output
+
+    javac Testcan.java
+
+    java Testcan
+
+    12000
+
+    carstatic
+
+
+    Class Pen
+
+    $ static int cost = 50; // Static variable
+
+    public static void main(String[] args) //
+
+
+    ```
+
+    {\ystem.out.println(cost); // pen.cost
+
+    cost = 70; // pen-cost = 70;
+
+    system.out.println(pen.cost); //hp
+
+    ```
+
+
+    Y
+
+    Y
+
+
+    Output
+
+    50
+
+    70
+
+
+    | Pen |
+
+    | cost | 50 70 |'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "| | Accessing | Accessing | Memory location | No of copies |\n| --- | --- |\
+    \ --- | --- | --- |\n| Static | in same class | outside the class | class | only\
+    \ |\n| Variable | (1) Directly or | (1) With the className | Area / | copy |\n\
+    | & Method | (2) With className | | Static pool | | |\n| Non-static properties\
+    \ | Object Creation | Object Creation | Heap Area | Dependence |\n| Variables\
+    \ | | | | NO of objects created |\n\n```\nclass person {\n    int age=10;\n  \
+    \  person p1 = new person(\n        p2 - new,\nn        p3 - new\n    );\n}\n\n\
+    3 copies / 30objects /instances\n\nP1 P2 P3\n\nage=10 age=10 age=10\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "Can we access static properties with class Name?\n\nYES\n\nCan we access non\
+    \ static Variables with the help of objectReferenceName?\n\nyes\n\nCan we access\
+    \ static properties with the help of ObjectReferenceName?\n\nyes, Each & every\
+    \ object will implicitly point to the static pool\n\nCan we access non static\
+    \ properties with the help of className?\n\nNO because non static properties are\
+    \ loaded only when we create an object\n\n```\nclass pen {\n  static int a=10;\
+    \ // static Variable\n  int b=20; // non static variable\n}\n```\n\n```\npublic\
+    \ static void main(String[] args) {\n  system.out.println(pen.a);\n  //system.out.println(pen.b);\n\
+    \  pen p = new pen();\n  system.out.println(p.b); // accessing both static & non\
+    \ static using object reference\n  system.out.println(p.a); // accessing static\
+    \ variable using object name\n}\n```\n\n```\npen {\n  10\n  20\n}\n```"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# paper g
+
+
+    | ClassName | object reference name |
+
+    |---|---|---|
+
+    | static properties (Variables & Methods) | ✓ | i.e (Afterobj create) ✓ |
+
+    | non-static properties (V&M) | X | ✓ |'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Java Development Kit (JDK)
+
+
+    +   * JDK stands for Java Development Kit
+
+    * JDK is a kit which contains all the resources
+
+    for developing & executing java progs
+
+
+    # Java Runtime Environment (JRE)
+
+
+    +   * JRE stands for Java Runtime Environment
+
+    * JRE is a kit which provides a platform for
+
+    executing java progs
+
+    * It is possible to install only JRE but if only JRE
+
+    is installed we can execute the java progs but
+
+    cannot develop it
+
+
+    # JIT (Just In Time)
+
+
+    +   * JIT stands for Just In Time Compiles,
+
+    * JIT is responsible for (converting the
+
+    bytecode into machine level language)
+
+
+    # ClassLoader
+
+
+    +   * Class loader is the one who loads the class
+
+    from secondary storage to the executable\area
+
+
+    # Interpreter
+
+
+    +   * Interpreter is used to execute java program by line
+
+    * JVM stands for v
+
+
+    # JVM
+
+
+    +   * JVM stands for Java Virtual Machine,
+
+    * JVM is the Smartness on management on the
+
+    implementation of JRE'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# JVM Architecture
+
+
+    The memory locations are categorized into follows:
+
+
+    +   1) Heap Area: All the objects are stored inside heap area i.e non static properties
+
+
+    +   2) Class Area/static pool: All the static properties are loaded inside class
+    area
+
+
+    +   3) Method Area: The method def / implementation is always stored inside method
+    area
+
+
+    +   4) stack: The execution of a java program always happens inside the stack
+
+
+    | JRE | Development Tools |
+
+    |---|---|
+
+    | 1) JIT | Interpreter, compiler |
+
+    | 2) class loader | Debugger |
+
+    | 3) Interpreter | |
+
+    | 4) JVM |
+
+
+    - Heap Area
+
+    - Class Area
+
+    - Method Area
+
+    - stack'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# Blocks\n\n+   * Blocks are a set of instructions used for initialization\n\
+    \n+   * Blocks are generally categorized into 2 types:\n  i) Static Blocks\n \
+    \ ii) Nonstatic Blocks\n\ni) Static Blocks\n\n+   * Static Blocks is a set of\
+    \ instructions used for initializing static variable\n\n+   * Static blocks gets\
+    \ executed at the time of class loading\non just before main method.\n\n+   *\
+    \ We can have multiple static blocks & execution will happen in sequential manner\n\
+    \n```\nSyntax: static\n{\n\n}\n```\n\n+   * Difference between blocks of static\
+    \ & nonstatic\n\n+   * ii) Non-static Blocks\n\n+   * Non static Block is a set\
+    \ of instructions used for Initialising static variables & nonstatic Variable\n\
+    \n+   * Non static Blocks always get executed at the time of object creation.\n\
+    \n+   * In case of multiple non static Blocks the execution will happen in a sequential\
+    \ manner\n\n```\nSyntax :\n{\n\nBlocks\n}\n```\n\n(Blocks without static keyword\
+    \ is nonstatic Block)"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\npackage Com;\n\npublic class Demo {\n    static {\n        System.out.println(\"\
+    In static block-1\");\n    }\n\n    static {\n        System.out.println(\"In\
+    \ static block-2\");\n    }\n\n    public static void main(String[] args) {\n\
+    \        System.out.println(\"Hello\");\n    }\n\n    static {\n        System.out.println(\"\
+    In static block-3\");\n    }\n}\n\npublic class StaticBlock1 {\n    int i = 2;\n\
+    \    int j = 3;\n    Hello\n}\n```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "```\npackage com;\n\npublic class Demo {\n    static int x=10;\n    static\
+    \ {\n        system.out.println(\"initializing to 20\");\n        x=20;\n    }\n\
+    \n    public static void main(String[] args) {\n        system.out.println(\"\
+    start\");\n        system.out.println(x);\n        system.out.println(\"End\"\
+    );\n    }\n\n    static {\n        system.out.println(\"initializing to 30\");\n\
+    \        x=30;\n    }\n\n    output\nInitializing to 20 30\nStart\nEnd\n```\n\n\
+    | I | -- 20 |\n|---|---|\n| J | -- 30 |\n| | 20 |\n| | 30 |\n\nDemo\nClausrea/\
+    \ static\npow"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# Example for non static Blocks\n\n```\npackage com;\n\npublic class Test {\n\
+    \    System.out.println(\"In Non-static Block-1\");\n    public static void main(String[]\
+    \ args) {\n        System.out.println(\"start\");\n        Test t = new Test();\
+    \ // obj created\n        System.out.println(\"End\");\n    }\n}\n```\n\n```\n\
+    static {\n    System.out.println(\"In Non-static Blocks-2\");\n}\n```\n\nOutput\
+    \ : start\nIn non static Blocks-1\nIn Non static Blocks-2\nstart End\n\n```\n\
+    package com;\n\npublic class student {\n    int age;\n    System.out.println(\"\
+    Initializing to 20\");\n    age=20;\n}\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "```\npublic static void main(String[] args) {\n    system.out.println(\"start\"\
+    );\n    student s = new student();\n    s.out.println(\"Age: \" + age);\n    s.out.println(\"\
+    end\");\n}\n```\n\n```\n{\n    s.out.println(\"initializing to 30\");\n    age=30;\n\
+    }\n```\n\n```\noutput\nstart\ninitializing to 20\ninitializing to 30\nAge:30\n\
+    end\n```\n\n+   * static variable ; static blocks\n\n+   * nonstatic variable,\
+    \ nonstatic block\n\n```\nQ public class car {\n    static int x=10; //1\n   \
+    \ int y=20; //2\n```\n\n```\nstatic //2\ns.out.println(\"in SB-1\");\n```"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "// 115\nSystem.out.println(\"NSB-1\");\n\n```\npublic static void main(String[]\
+    \ args) {\n    System.out.println(\"Hello\");\n    System.out.println(can);\n\
+    \    Scanner c = new Scanner();\n    System.out.println(c.next);\n}\n```\n\nOutput\n\
+    in NSB-1\nHello\n10\nin NSB-1\n20\n\nScanner is a predefined class present in\
+    \ java.util package\n\nScanner class is used to dynamically accept the inputs\
+    \ from the user.\n\n+   Rules for using Scanner class\n1) create an object of\
+    \ scanner class\n2) pass system.in to the constructor call of the scanner object\
+    \ (to accept input)\n   syntax: Scanner sc = new Scanner(System.in);\n3) import\
+    \ the scanner class using below syntax\n   import java.util.Scanner;"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "Make use of predefined methods in order to accent\nspecific types of inputs\n\
+    \npackage org;\nimport java.util.Scanner;\n\n```\npublic class Demo {\n    public\
+    \ static void main(String[] args) {\n        System.out.println(\"start\");\n\
+    \        Scanner scan = new Scanner(System.in);\n\n        System.out.println(\"\
+    Enter a:\");\n        int a = scan.nextInt();\n        System.out.println(\"value\
+    \ of a is: \" + a);\n\n        System.out.println(\"Enter b:\");\n        int\
+    \ b = scan.nextInt();\n        System.out.println(\"value of b is: \" + b);\n\n\
+    \        int sum = a + b;\n        System.out.println(\"Sum: \" + sum);\n    \
+    \    System.out.println(\"End\");\n    }\n}\n```\n\nol\nstart\nEnter a\n10\nValue\
+    \ of a is: 10\nEnter b\n20\nvalue of b is 20\nSum: 30\nEnd"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '1) byte - nextByte()
+
+
+    2) short - nextShort()
+
+
+    3) int - nextInt()
+
+
+    4) long - nextLong()
+
+
+    5) float - nextFloat()
+
+
+    6) double - nextDouble()
+
+
+    7) boolean - nextBoolean()
+
+
+    8) string - nextChar() or
+
+    nextLine()
+
+
+    a) char -> next(Q) - charAt(Q) index value at pos(th)
+
+    "Java".charAt(0)'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Constructors :=
+
+
+    +   - Constructors are special set of instructions used for initialisation & instantiation
+
+
+    +   - Initialisation means assigning the values
+
+
+    +   - Instantiation means object creation
+
+
+    +   - Constructor name & class Name should always be the same
+
+
+    +   - Constructors will never have return type
+
+
+    +   - Constructors get executed at the time of object creation
+
+
+    Syntax := Optional Inputs / Arguments
+
+
+    ```
+
+    Access Specifier ClassName ( { )
+
+    ```
+
+
+    ```
+
+    Scope of Constructor
+
+    ```'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "+   * Constructors are generally classified into 2 types\ni) Default constructor\n\
+    ii) Custom/user defined constructor\n\nDefault Constructor\n* If a class does\
+    \ not have any explicit constructor, then the compiler would automatically generate\
+    \ a constructor & therefore this constructor is referred as default constructor\n\
+    \n+   * Default constructor neither accepts any arguments\nnor have any implementation\n\
+    \nCustom Constructor\n* If a constructor explicitly defined by a user on programmer,\
+    \ then it is referred as custom constructor\n\n+   * Custom constructor can further\
+    \ categorized into 2 types\nni) Non-parameterized constructor\nii) parameterized\
+    \ constructor\n\nNote if there is default constructor, custom constructor cannot\
+    \ be present & vice versa if there is custom constructor, default constructor\
+    \ cannot be present\n\n```\npublic class pen {\n    // non-parameterized or non\
+    \ argument constructor\n    pen() {}\n\n    // custom constructor\n    pen(\"\
+    in pen class constructor\") {}\n}\n```"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "```\npvsm(String[] args) {\n  System.out.println(\"start\");\n  Pen p = new\
+    \ Pen();\n  System.out.println(\"end\");\n}\n```\n\n```\nolp\nStart\nin pen constructor()\n\
+    End\n```\n\n# Example for parameterized/with argument construction\n\n```\nclass\
+    \ Can {\n  Can(int a) {\n    System.out.println(a);\n  }\n```\n\n```\n=> pvsm(--)\n\
+    -> System.out.println(\"start\");\n  Can c = new Can(50);\n  System.out.println(\"\
+    end\");\n```\n\nConstructor call\nolp\nStart\n50\nEnd in invoking a constructor"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "# Global Member Variable\n\n# Local Variables\n\n+   - If a variable is declared\
+    \ within a class directly then we refer it as global variable on member variable\n\
+    \n+   - Member Variable can be access globally for everyone\n\n+   - If a variable\
+    \ is declared within a specific scope like method construction etc we refer it\
+    \ as local variable\n\n+   - Local variables are accessible only within a specific\
+    \ scope\n\nDefault values are applicable only for global/Member Variables. it\
+    \ either static on nonstatic\n\n```\npublic class Demo {\n    int as // global\
+    \ or Member variable;\n\n    void display(int b) // b & c are local variables\
+    \ {\n        int c=20;\n        System.out.println(\"bt\" + c);\n    }\n\n```\n\
+    \n```\nDemo(int x) // x by y are local variable {\n    int y=40;\n    S.out.println(\"\
+    xt\" + y);\n}\n\n```\n\n```\npublic static void main(String[] args) {\n    Demo\
+    \ obj=new demo(50);\n    obj.display(30);\n    S.out.println(obj.a);\n}\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# this Keyword\n\n+   * this is a keyword which is used to point comment\n\
+    * In java it is possible to have member variable & local variable name same; Always\
+    \ the local variables will dominate over member variables\n* Hence in order to\
+    \ point to the current object we make use of this keyword\n\n```\npublic class\
+    \ Kangaroo {\n    double height = 5.5;\n}\n```\n\n```\nvoid display() {\n    double\
+    \ height = 4.4;\n    System.out.println(height);\n    System.out.println(this.height);\n\
+    }\n```\n\n```\npublic void main(String[] args) {\n    Kangaroo k = new Kangaroo();\n\
+    \    k.display();\n}\n```\n\n```\nint output = 44;\nSystem.out.println(output);\n\
+    ```"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "```\nClass person {\n  int age;\n  String name;\n}\n```\n\n```\nperson (int\
+    \ age, String name) {\n  this.age = age; // dingo\n  this.name = name; // \"dinga\"\
+    \n}\n```\n\n```\nVSM (----) {\n  person p = new person(25, \"dinga\");\n  System.out.println(p.age\
+    \ + \" \" + p.name); // 25 dingo\n}\n```\n\nQ) Write a program to print follow\
+    \ below scenario:\n\n+   - create a class called as Company\n- Define Variables\
+    \ as Company name, no of employee\n- initialize with the help of a constructor\n\
+    - create a method in order to display company detail of employee\n- under main\
+    \ method create 2 objects of employee\n & call display method in order to display\
+    \ respective data"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\npublic class company {\n    int num;\n    String name;\n    Company(int\
+    \ num, string name) {\n        this.num = num;\n        this.name = name;\n  \
+    \  }\n\n```\n\n```\nvoid display( ) {\n    s.out.println(\"Employee name is \"\
+    \ + name + \"\\n Employee id: \" + num);\n}\n\n```\n\n```\npublic void main(String[]\
+    \ args) {\n    company c1 = new company(1, \"intel\");\n    c1.display();\n  \
+    \  company c2 = new company(2, \"philips\");\n    c2.display();\n}\n\n```\n\n\
+    ![](img/c7c1d07c55f63dc1b96f816c41bc4141_76_0.png)"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "```\npublic class Employee {\n    int empid;\n    string empName;\n    double\
+    \ emsalary;\n\n    Employee(int empid, string empName, double salary) {\n    \
+    \    this.empid = empid;\n        this.empName = empName;\n        this.emsalary\
+    \ = salary;\n    }\n\n    void display() {\n        System.println(\"Employee\
+    \ Id: \" + this.empid);\n        System.println(\"Employee Name: \" + this.empName);\n\
+    \        System.println(\"Employee Salary: \" + this.emsalary);\n    }\n}\n\n\
+    static void main(String[] args) {\n    Employee e1 = new Employee(1, \"A\", 12);\n\
+    \    Employee e2 = new Employee(2, \"B\", 23);\n    Employee e3 = new Employee(3,\
+    \ \"C\", 33);\n    e1.display();\n    e2.display();\n    e3.display();\n\n   \
+    \ Employee detail = new Employee(2, \"B\", 22);\n    System.println(\"Employee\
+    \ details\");\n    System.println(\"-\\-\");\n}\n```"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "```\nimport java.util.Scanner;\n```\n\n```\npublic class car {\n    String\
+    \ brand;\n    car(String brand) {\n        this.brand = brand;\n    }\n    public\
+    \ void main(String[] args) {\n        Scanner s = new Scanner(System.in);\n  \
+    \      s.out.println(\"Enter brand:\");\n        string brand = s.next();\n  \
+    \      car c = new car(brand);\n        s.out.println(\"Brand Name is \" + c.brand);\n\
+    \    }\n}\n```\n\nEnter brand\nBMW\n\nBrand Name is BMW"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Constructor Overloading\n\n+   * Constructor Overloading defining more than\
+    \ one constructor in a class known overloading\n\n+   * Constructor should differ\
+    \ in parameter list either in parameter type or parameter length\n\n+   * Any\
+    \ two constructions in the class should not match the parameter type\n\n+   *\
+    \ The overloaded are called based on arguments / parameter type\n\n```\nConstructor\
+    \ Overloading\nclass program {\n  int x;\n  int y;\n```\n\n```\nprogram(int ang1)\
+    \ {\n  x = ang1;\n}\n```\n\n```\nprogram(double ang2) {\n  y = ang2;\n}\n```\n\
+    \n```\nprogram(int ang1, double ang2) {\n  x = ang1;\n  y = ang2;\n}\n```"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "papergrid\nDate: / /\n\n```\nvoid display() {\n  S.out.p(\"x value\" + x);\n\
+    \  S.out.p(\"y value\" + y);\n}\n\n```\n\n```\nclass Main {\n  public static void\
+    \ main(String args[]) {\n    program p1=new program(2);\n    p1.display();\n \
+    \   program p2=new program(3.4);\n    p2 display();\n    program p3=new program(12,3.4);\n\
+    \    p3 display();\n  }\nn\n```\n\n8/5/2020 Constructor chaining:-\n\n+   * Constructor\
+    \ chaining is a process of one constructor calling another constructor.\n* Constructor\
+    \ chaining can be achieved with the help of calling statement (this()).\n* In\
+    \ order to achieve constructor chaining we need to have constructor overloading.\n\
+    * this() calling statement should be the first executable line within the constructor.\n\
+    * this() calling statement is used to invoke another constructor in the same class\n\
+    \nScanned with CamScanner"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "# Ex) class Demo\n\n```\n{\n  Demo()\n  {\n    this(10);\n    System.out.println(1);\n\
+    \  }\n```\n\n```\nDemo(int a)\n{\n    System.out.println(2);\n  }\n```\n\n```\n\
+    public static void main(String[] args) {\n    System.out.println(\"start\");\n\
+    \    Demo d = new Demo();\n    System.out.println(\"End\");\n}\n```\n\nDemo :\
+    \ start\n\n2\nend\n\n> NOTE: Recursive chaining is not possible in java. If there\
+    \ are n constructors we can have maximum of n-1 calling statements\n\n# Ex) class\
+    \ Demo\n\n```\n{\n  Demo()\n  {\n    this(10);\n    System.out.println(1);\n \
+    \ }\n```\n\n```\nDemo(int a)\n{\n    this();\n    System.out.println(2);\n  }\n\
+    ```"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# pVSM(String[] args) \n\no/p\n\n{\n\nInfinite\n\nDemo d - new Demo();\n\n\
+    y\n\ny\n\nEX Package chaining\n\nclass student\n\n{\n\nStudent(int id)\n\n↓\n\n\
+    s.o.println(\"Id\":+id);\n\ny\n\nstudent(int age marks)\n\n↓\n\nthis(\"Tom\");\n\
+    \ns.o.println(\"Age\":+age+\" Marks\":+marks);\n\ny\n\npVSM(---)\n\n{\n\nstudent\
+    \ s = new student(25, 67);\n\ny\n\ny\n\nstudent(string name)\n\n{\n\nthis(101);\n\
+    \ns.o.println(\"Name\":+name+\");\n\ny\n\n| o/p |\n| Id:101 |\n| Name:Tom |\n\
+    | Age:25 |\n| Marks:1 |"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "# papergrid\n\nDate: / /\n\n```\npackage chaining;\n    public class student\
+    \ {\n        int id;\n        String name;\n        student(int id) {\n      \
+    \      this.id = id; // current object id=101;\n        }\n        student(int\
+    \ id, String name) {\n            this(id); // this(101);\n            this.name\
+    \ = name;\n        }\n        void prSM( -- -- ) {\n            student s = new\
+    \ student(101, \"Jerry\");\n            System.out.println(s.id + \" \" + s.name);\n\
+    \        }\n    }\\}\n```\n\no/p\n101 Jerry\n\ns --> 111\n\n| id | null |\n| ---\
+    \ | --- |\n| name | Jerry |"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# Datatypes
+
+
+    +   * Datatypes are an indication on specification of what type of data is assigned
+    to variable
+
+
+    +   * Datatypes are typically categorized into
+
+    i) primitive Mass keyword
+
+    ii) Non-primitive class
+
+
+    i) primitive datatypes
+
+    If a keyword is behaving as a datatype, then it is a primitive data type
+
+
+    +   * All primitive data types have fixed size
+
+    Java supports only 8 primitive datatypes, they are
+
+    i) int float
+
+    ii) byte vi) double
+
+    iii) Short vii) Boolean
+
+    iv) long viii) Char
+
+
+    +   ii) Non primitive datatypes
+
+    * If a class is behaving as a datatype, then it is a non primitive datatype
+
+    * Non primitive datatype does not have fixed size
+
+    * We can have any number of non primitive datatype
+
+    * And best example is string
+
+
+    Note: The default value for any non primitive or class type on interface type
+    is null'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# Arrays
+
+
+    +   * Array is a container in order to store group of data objects
+
+
+    +   * Arrays are always fixed size objects
+
+
+    +   * Arrays are of homogeneous type i.e only similar type of data can be stored
+
+
+    +   * Arrays are indexed based & the indexed position starts from 0
+
+
+    Annay Declaration - { }
+
+
+    ```
+
+    Syntax : datatype[ ] annayName;
+
+    { annayName;
+
+    datatype [ ]annayName;
+
+    ```
+
+
+    Annay Creation annayName = new datatype[size];
+
+
+    ```
+
+    marks = new int[5];
+
+    ames = new string[3];
+
+    ```
+
+
+    | marks | 0 | 0 | 0 | 0 | 0 |
+
+    | | 0 | 1 | 2 | 3 | 4 |
+
+    | names | null | null | null |
+
+
+    Annay Declantation & creation together
+
+
+    ```
+
+    Array declaration
+
+    Syntax ; datatype[ ] annayName = new datatype[size];
+
+    ```
+
+
+    Array Creation'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'double [] Salary = new double[3];
+
+
+    Salany = 0.0 / 10.56 = 12.34
+
+
+    # iv) Array Initialisation
+
+
+    ```
+
+    syntax :- arrayName[Index] = value;
+
+    Salany [1] = 10.56;
+
+    Salary [2] = 12.34;
+
+    ```
+
+
+    ```
+
+    int [] a = new int[3];
+
+    a(0) a(1) a(2)
+
+    a = 500 300 100
+
+    ```
+
+
+    a(0) = 500;
+
+    a(1) = 300;
+
+    a(2) = 100
+
+
+    # v) Array Initialisation Directly
+
+
+    ```
+
+    Syntax :- datatype[] arrayName = {v1, v2, v3};
+
+    Int [] a = {10, 20, 30};
+
+    a(0) a(1) a(2)
+
+    10 20 30
+
+    ```'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# papergrid\nDate: / /\n\nPackage com;\n\n```\npublic class Demo {\n    public\
+    \ static void main(String[] args) {\n        // Array Declaration\n        int[]\
+    \ a;\n\n        // Array creation\n        a = new int[3];\n\n        // printing\
+    \ Array Elements\n        System.out.println(a[0]);\n        System.out.println(a[1]);\n\
+    \        System.out.println(a[2]);\n\n        System.out.println(\"= = =\");\n\
+    \n        // Initialising Array Using Index function\n        a[0] = 10;\n   \
+    \     a[1] = 20;\n        a[2] = 30;\n\n        System.out.println(a[0]);\n  \
+    \      System.out.println(a[1]);\n        System.out.println(a[2]);\n    }\n```\n\
+    \nint[] a = new int[3];"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "# Write a java pgm to traverse the array elements both\nforward direction &\
+    \ reverse direction\n\ni <= 2 => i < a.length-1\ni < 3 => i < a.length\nint[]\
+    \ a={10, 20, 30};\n\n```\nfor (int i = 0; i < a.length; i++) {\n    if (i < 3)\
+    \ {\n        System.out.println(a[i]);\n    }\n}\n```\n\nforward traverse\n\n\
+    S.out.println(a[i]);\n\nReverse traverse\n\n| a | 10 | 20 | 30 |\n|---|---|---||}{\n\
+    | | 0 | 1 | 2 |\n\n```\nfor (int i = a.length-1; i >= 0; i--) {\n    if (i >=\
+    \ 0) {\n        System.out.println(a[i]);\n    }\n}\n```"
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "```\npublic class test {\n    pvsm(String[] args) {\n        int[] a = {10,\
+    \ 20, 30};\n        s.out.println(a[0]);\n        s.out.println(a[1]);\n     \
+    \   s.out.println(a[2]);\n    }\n    int len = a.length;\n    s.out.println(len);\n\
+    }\n// s.out.println(\"Array length: \" + len);\n```\n\nolp\n10\n20\n20\n\n3\n\
+    Array Length: 3"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "Q) Write a java program to find sum & Average\nof array elements\n\n```\npublic\
+    \ class Dmo {\n    public static void main (String[] args) {\n        int sum\
+    \ = 0;\n        int a[] = {10, 22, 32};\n        for (int i = 0; i < a.length;\
+    \ i++) {\n            sum = sum + a[i]; // sum=a[i]\n        }\n        System.out.println(\"\
+    sum: \" + sum);\n        int avg = sum/a.length;\n        System.out.println(\"\
+    Avg: \" + avg);\n    }\n}\n```\n\nSum: 64\nAvg: 21\n\nQ) Write a program to dynamically\
+    \ accept array elements\n& find the no of occurrences of a specific element"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "```\nimport java.util.Scanner;\nclass Demo {\n    public static void main(String[]\
+    \ args) {\n        Scanner scan = new Scanner(System.in);\n        System.out.println(\"\
+    Enter no of elements to be inserted\");\n        int size = scan.nextInt();\n\
+    \        int[] a = new int[size];\n    }\n}\n```"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "```\nSystem.out.println(\"Enter \"+length+\" Elements\");\n```\n\n```\nfor(int\
+    \ i=0; i<length; i++) {\n  arr[i].scan.nextInt();\n}\n```\n\n```\nSystem.out.println(\"\
+    Array elements are as follows:\");\n```\n\n```\nfor(int i=0; i<length; i++) {\n\
+    \  System.out.println(arr[i]);\n}\n```\n\nEnter No of elements to be Inserted\n\
+    \n5\n\nEnter 5 elements\n\n+   10\n20\n30\n40\n50\n\nArray Elements are as follows:\n\
+    \n+   10\n20\n30\n40\n50"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# No of Occurrence\n\nSystem.out.println(\"Enter element to be searched\")\n\
+    int ele = scan.nextInt();\n\n```\nint count=0;\n```\n\n```\nfor (int i=0; i<a.length;\
+    \ i++) {\n    if (ele==a[i]) {\n        count++;\n    }\n}\n```\n\nSystem.out.println(ele+\"\
+    \ has occurred \"+count+\" times\");\n\nOP\nEnter element to be searched\n10\n\
+    10 has occured 3 times\n\n```\nint count=0;\nint[] a = {10, 20, 30, 10};\nint\
+    \ ele=10;\nfor (int i=0; i<a.length; i++) {\n    if (a[i]==ele) {\n        count++;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "# Stoning Objects Inside an Array\n\nint[] a = new int[3];\n\na can store multiple\
+    \ values of int\n\n# Class Car\n\n```\nCar[] c;\nc = new Car[3];\nc[0] = {null,\
+    \ null, null};\n      0 1 2\n```\n\n# Class Cam\n\n```\nint cost;\nstring brand;\n\
+    ```\n\n```\nvoid can(int cost, string brand) {\n  this.cost = cost;\n  this.brand\
+    \ = brand;\n}\n```\n\n```\npublic static void main(string[] args) {\n```\n\n```\n\
+    Car c1 = new Car(\"BMW\", 100);\nCar c2 = new Car(\"Suzuki\", 200);\n```\n\n```\n\
+    Car[] c = new Car[2];\n  c[0] = c1;\n  c[1] = c2;\ncan[] c = {c1, c2};\n```"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '```
+
+    for (int i=0; i<length; i++) {
+
+    ```
+
+
+    ```
+
+    system.out.println(brand + " " " + cost);
+
+    ```
+
+
+    ```
+
+    system.out.println(" = = "" + cost);
+
+    ```
+
+
+    ```
+
+    3
+
+    ```
+
+
+    ```
+
+    O/P
+
+    ```
+
+
+    ```
+
+    org.car@7852c922
+
+    ```
+
+
+    ```
+
+    BMK 100
+
+    ```
+
+
+    ```
+
+    org.car@4e251548
+
+    ```
+
+
+    ```
+
+    Suzuki 200
+
+    ```
+
+
+    ```
+
+    C[0] = C1
+
+    ```
+
+
+    ```
+
+    C C[1] = C2 222
+
+    ```
+
+
+    ```
+
+    for (int i=0; i<length; i++) {
+
+    ```
+
+
+    ```
+
+    C[1] = C2
+
+    ```
+
+
+    ```
+
+    SOP (C[i].brand " " + C[i].cost);
+
+    ```
+
+
+    ```
+
+    111-brand 111-cost "Bmw"
+
+    ```
+
+
+    ```
+
+    BYW
+
+    ```
+
+
+    ```
+
+    Cost 100
+
+    ```
+
+
+    ```
+
+    C2 -> 222
+
+    ```
+
+
+    ```
+
+    brand "SOU 52"
+
+    ```
+
+
+    ```
+
+    Cost 2004
+
+    ```'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '```
+
+    class student {
+
+    int id;
+
+    String name;
+
+    int marks;
+
+
+    ```
+
+
+    ```
+
+    Student(int id, string name, int marks) {
+
+    this.id=id;
+
+    this.name=name;
+
+    this.marks=marks;
+
+    }
+
+    ```
+
+
+    ```
+
+    public static void main(String[] args) {
+
+    student s1 = new Student(1, "Bhagya", 100);
+
+    student s2 = new student(2, "Rekha", 200);
+
+    student s3 = new student(3, "Nivi", 300);
+
+    students[] s = {s1, s2, s3};
+
+    for(int i=0; i<s.length; i++) {
+
+    System.out.println(s[i]);
+
+    System.out.println(s[i].id + " " + s[i].name);
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "```\nfor (int i=0; i<std::length; i++) {\n    //student s = std[i];\n    //s.o.pln(s.id\
+    \ + \" \" + s.name + \" \" + std[i].id + \" \" + std[i].marks);\n}\n```\n\norg-123\n\
+    1 Bhagya 100\norg-222\n2 Rekha 200\norg-333\n3 Nivi 300"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# Inheritance :
+
+
+    Inheritance is a process wherein one class acquiring properties from another class
+
+
+    A class which shares the property is called a superclass /parent class /base class
+
+
+    A class which acquires the properties is referred as subclass/child class /derived
+    class
+
+
+    Inheritance in java is achieved using extends keyword Inheritance is also referred
+    to as Is-A Relationship
+
+
+    In java only variables & methods are not Inherited Where as blocks & constructors
+    are not Inherited
+
+
+    +   Different ways of Inheritance are as follows
+
+    1) Single Inheritance
+
+    2) Multilevel Inheritance
+
+    3) Hierarchical Inheritance
+
+    4) Multiple Inheritance
+
+    5) Hybrid Inheritance
+
+
+    Single level Inheritance
+
+    A combination of 1 super class & 1 subclass class IS called as Singlelevel Inheritance
+
+
+    ![](img/c7c1d07c55f63dc1b96f816c41bc4141_98_0.png)
+
+
+    Multilevel Inheritance
+
+    A combination of Multiple super classes & multiple- subclasses in a sequential
+    order
+
+    B is a superclass & subclass of A'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# Hierarchical Inheritance
+
+
+    A combo of 1 superclass & multiple subclasses called Hierarchical Inheritance
+
+
+    ![](img/c7c1d07c55f63dc1b96f816c41bc4141_99_0.png)
+
+
+    # Multiple Inheritance
+
+
+    A combo of 1 subclass & Multiple superclasses is called Multiple Inheritance
+
+
+    ![](img/c7c1d07c55f63dc1b96f816c41bc4141_99_1.png)
+
+
+    # Hybrid Inheritance
+
+
+    It is a combination of 2 or more types of inheritance
+
+
+    In java hybrid inheritance is supported upto some extent not completely
+
+
+    ** Note: Java Does Not Support Multiple Inheritance
+
+
+    ![](img/c7c1d07c55f63dc1b96f816c41bc4141_99_2.png)'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "# Example of Singlelevel Inheritance\n\n```\nclass Father {\n    int x = 10;\n\
+    }\n```\n\n```\nclass Son extends Father {\n    int y = 20;\n}\n```\n\n```\npublic\
+    \ static void main(String[] args) {\n    Son s = new Son();\n    s.o.p(s.x + \"\
+    \ \" + s.y);\n}\n```\n\n| Father |\n|---||\n| x = 10 |\n| Son |\n| y = 20 |\n\n\
+    Son is implicitly expecting property of father\n\n# Example for Multilevel Inheritance\n\
+    \n```\nclass University {\n    String universityName = \"VTU\";\n}\n```\n\n```\n\
+    class College extends University {\n    int noOfcollege;\n    S.o.p(\"NO of college\
+    \ or \" + noOfcollege);\n}\n```"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "```\npublic class college extends University {\n    String collegeName = \"\
+    Jspiders\";\n    void noofstudents() {\n        System.out.println(\"No of students\
+    \ are 400\");\n    }\n}\n```\n\n```\npublic class Department extends college {\n\
+    \    String departmentName = \"CSE\";\n    void favsubject() {\n        System.out.println(\"\
+    Fav subject is JAVA\");\n    }\n}\n```\n\n```\npublic class solution {\n    public\
+    \ static void main(String args) {\n        Department d = new Department();\n\
+    \        System.out.println(\"university Name: \"td.UniversityName\");\n     \
+    \   System.out.println(\"collegeName: \"td.collegeName\");\n        System.out.println(\"\
+    departmentName: \"td.departmentName\");\n    }\n}\n```"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: 's.opn( "...");
+
+
+    d.noofcollege();
+
+    d.noofstudents();
+
+    d.forsubject();
+
+
+    ?
+
+
+    ?
+
+
+    output
+
+
+    University Name : VTU
+
+    College Name : Jspiders
+
+    Department Name : CSE
+
+
+    NO of colleges are 120
+
+    NO of students are 400
+
+    Fav subject is JAVA
+
+
+    # Class diagram
+
+
+    | University | creation |
+
+    |--- | --- |
+
+    | UN:String | 2 |
+
+    | os():void |
+
+
+    | college | 4 |
+
+    |--- | --- |
+
+    | EN:String | |
+
+    | os():void |
+
+
+    | Department | 6 |
+
+    |--- | --- |
+
+    | DN:String | |
+
+    | fs():void |'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# vehicle
+
+
+    brand:
+
+    String
+
+
+    | car | bike |
+
+    | --- | --- |
+
+    | cost+int | color+string |
+
+    | driving | ride() void |
+
+
+    runner
+
+    means
+
+    &
+
+    4 wheels
+
+
+    vehicle.java
+
+
+    ```
+
+    public class vehicle
+
+    {
+
+    String brand: "BMW";
+
+    n}
+
+    ```
+
+
+    ```
+
+    car.java
+
+    public class car extends vehicle
+
+    {
+
+    int cost = 1000;
+
+    ```
+
+
+    ```
+
+    void driver()
+
+    {
+
+    S.out.println("BMW can cost is 1000");
+
+    }
+
+    ```
+
+
+    ```
+
+    bike.java
+
+    public class bike extends vehicle
+
+    {
+
+    String color: "Black";
+
+    ```
+
+
+    ```
+
+    void ride()
+
+    {
+
+    S.out.println("BMW COLOR is black");
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "```\npublic class runner {\n    public static void main(String[] args) {\n\
+    \        Car c = new Car();\n        Bike b = new Bike();\n        System.out.println(cost);\n\
+    \        System.out.println(b.cost);\n        System.out.println(\"-----\");\n\
+    \        c.drive();\n        b.ride();\n    }\n}\n```"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "# Super keyword\n\nSuper is a keyword which is used to point to\nor access\
+    \ superclass properties\nSuper keyword can be used with variables & methods\n\n\
+    ```\nSyntax:\nSuper.variableName\nsuper.methodName();\n```\n\nNote: In order to\
+    \ use super keyword inheritance is mandatory\n\n```\nEx\nFather.java\npackage\
+    \ com;\npublic class Father {\n    int x=10;\n}\n```\n\n```\nSon.java\npackage\
+    \ com;\npublic class Son extends Father {\n    int x=20;\n    void display() {\n\
+    \        int x=10;\n        System.out.println(x);\n        System.out.println(this.x);\n\
+    \        System.out.println(super.x);\n    }\n}\n```"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "# papergrid\n\n```\npublic static void main(String[] args)\n{\n    Son s =\
+    \ new Son();\n    s.display();\n}\n```\n\n| O/P |\n| 10 |\n| 20 |\n| 30 |\n\n\
+    # Method chaining\n\nMethod chaining is a process of method calling another method.\n\
+    \n```\nFather.java\npublic class Father {\n    void work() {\n        System.out.println(\"\
+    Father is working\");\n    }\n}\n```\n\n// this keyword same class methods\npublic\
+    \ // super keyword another class method is super class method\n\n// in order to\
+    \ use super keyword is a relationship mandatory"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "```\npublic class Son extends Father {\n    void eat() {\n        this.play();\n\
+    \        super.work();\n        System.out.println(\"eating\");\n        play();\n\
+    \    }\n    void play() {\n        System.out.println(\"playing\");\n    }\n \
+    \   public static void main(String[] args) {\n        Son s = new Son();\n   \
+    \     s.eat();\n    }\n}\n```\n\nplaying\nfather is working\neating\nplaying"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# Method Overriding\n\n| Method | Description |\n| --- | --- |\n| Method Overriding\
+    \ | is process of inheriting the method & changing the implementation on definition\
+    \ of the inherited method |\n| The following rules must be followed in order to\
+    \ achieve method overriding |\n| Rules | |\n| Rule1 | MethodName should be same\
+    \ |\n| Rule2 | Arguments should be same |\n| Rule3 | Return type should be same\
+    \ |\n\nAccess modifier should be same or of higher visibility\n\nIn order to achieve\
+    \ method overriding, inheritance is necessary\n\noptionally, while overriding\
+    \ we can make use of annotation @override, @Override\n\n> @Override is an indication\
+    \ to the programmer & JVM that this method is inherited & overridden\n\n> @Override\
+    \ was introduced from jdk 1.5\n\n```\npublic class Father {\n    public void bike()\
+    \ {\n        System.out.println(\"Father's Bike\");\n    }\n}\n```"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "# son.java\n\npublic class son extends Father {\n\n```\n@Override\nvoid bike()\
+    \ {\n    s.out.println(\"Son's Bike\");\n}\n```\n\n```\nvoid eat() {\n    s.out.println(\"\
+    son is Eating\");\n}\n```\n\n# Solution.java\n\n```\npublic class solution {\n\
+    \    public static void main(String[] args) {\n        Son s = new Son();\n  \
+    \      s.bike();\n        s.eat();\n    }\n}\n```\n\nSon's Bike\nSon is Eating"
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "# papergrid\n\nDate: / / /\n\n```\nvoid mic() -> Method Declaration / Head\
+    \ - understood\n{}\n```\n\n```\n-> Method implement / Defn / Body\n```\n\n```\n\
+    }\n```\n\n```\n3 -> ... dereference\nvoid bike() {\nOX1 -> FSBike\nOX2 -> S S\
+    \ Bike\n}\n```\n\n# Bank java\n\n```\npublic class Bank {\n    void RateOfInterest()\
+    \ {\n        s.out.println(\"ROI IS 10%\");\n    }\n}\n```\n\n```\npublic class\
+    \ ICICI extends Bank {\n    @Override\n    void RateOfInterest() {\n        s.out.println(\"\
+    ROI IS 6%\");\n    }\n}\n```"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "```\npublic class SBI extends Banks {\n    Void RateOfInterest() {\n      \
+    \  String s-plan = \"ROI is 9%\";\n        Super-RateOfInterest(double x);\n \
+    \   }\n}\n```\n\n```\npublic class test {\n    public static void main (String[]\
+    \ args) {\n```\n\n```\nICICI i = new ICICI();\ni.rateOfInterest();\nns-plan(\"\
+    \ = = \"\");\n\n```\n\n```\nSBI s = new SBI();\ns.rateOfInterest();\n```\n\nolp\n\
+    \n```\nROI is 0%;\nROI is 6.%;\ne = =\nROI is 9%;\nROI is 0.\n```"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "# papergrid\nDate: / /\n\n```\nWAI\nmessage(): void\n```\n\n```\nWAZ\nmessage():\
+    \ void ST\ncall(): void DT\nvoice call\n```\n\n```\nWA3\nmessage(): void ST, DT,\
+    \ BT\ncall(): void voice, videoCall\npayment(): void\n```\n\n+   1) post-image\
+    \ single\n2) GIFs single\n3) videos 3\n\n```\npublic class WhatsApp {\n    void\
+    \ message() {\n        System.out.println(\"Supports singleTicks\");\n    }\n\n\
+    }\n```\n\n```\npublic class WhatsApp2 extends WhatsApp {\n    @Override\n    void\
+    \ message() {\n        super.message();\n        System.out.println(\"Supports\
+    \ DoubleTicks\");\n    }\n}\n```"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "```\nvoid call()\n```\n\n```\n{\n  so-println(\"supports voice call\");\n```\n\
+    \n```\n}\n\npublic class WhatsApp extends WhatsApp {\n```\n\n```\n  @Override\n\
+    \  void message() {\n    super.message();\n```\n\n```\n    so-println(\"we can\
+    \ pay through WhatsApp\");\n```\n\n```\n  }\n  @Override\n  void call() {\n```\n\
+    \n```\n    super.call();\n    so-println(\"supports video call\");\n```\n\n```\n\
+    \  }\n  void payment() {\n    so-println(\"can pay through whatsapp\");\n```\n\
+    \n```\n  }\n\npublic class user {\n  void main(String[] args) {\n```\n\n```\n\
+    \    WhatsAppApp a = new WhatsAppApp(c);\n    a.message();\n    a.call();\n  \
+    \  a.payment();\n```\n\n```\n  }\n```"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "# papergrid\nDate: / /\n\n![](img/c7c1d07c55f63dc1b96f816c41bc4141_114_0.png)\n\
+    \nvideo\n\n+   - Constructor chaining wert Inheritance\n- The process of subclasses\
+    \ constructor calling super class constructor is constructor chaining wert Inheritance.\n\
+    - In order to achieve constructor chaining in another Class Inheritance is mandatory.\n\
+    - We make use of super calling statements.\n- In order to achieve constructor\
+    \ chaining in another class.\n- Constructor chaining amis divided into 2 ways\n\
+    \n+   - implicit constructor chaining\n- Explicit Constructor chaining\n\nImplicit\
+    \ Constructor chaining\n\n+   - When we create an object of a class, if that class\
+    \ has a superclass & if that superclass has a non-parameterized constructor that\
+    \ gets executed implicity\n\nFather java\n\n```\npublic class Father {\n    Father()\
+    \ {\n        System.out.println(1);\n    }\n}\n```\n\nScanned with CamScanner"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "# Son.java\n\n```\npublic class Son extends Father {\n    Son() {\n       \
+    \ // implicitly super();\n        S.out.println(\"java\");\n    }\n}\npublic class\
+    \ Test {\n    public static void main(String[] args) {\n        S.out.println(\"\
+    start\");\n        Son s = new Son();\n        s.out.println(\"end\");\n     \
+    \   int output;\n        int start = 1;\n        int end = 2;\n    }\n}\n```"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "# papergrid\n\nDate: / /\n\n# Explicitly constructor chaining\n\nWhen we create\
+    \ an object of a class, if that class has a superclass and that super class has\
+    \ a parameterized constructor then subclass constructor has to invoke superclass\
+    \ constructor explicitly else we get compile time error\n\n# Father.java\n\n```\n\
+    public class Father {\n    Father(int x) {\n        System.out.println(1);\n \
+    \   }\n}\n```\n\n# Son.java\n\n```\npublic class Son extends Father {\n    Son()\
+    \ {\n        super(100);\n        System.out.println(2);\n    }\n}\n```\n\n# Test.java\n\
+    \n```\npublic class Test {\n    public static void main(String[] args) {\n   \
+    \     System.out.println(\"start\");\n        Son s = new Son();\n        System.out.println(\"\
+    End\");\n    }\n}\n```"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "# Class A Class B extends A Class Test\n\n```\nClass A {\n    A() {\n     \
+    \   this(5);\n        s=op+in(1);\n    }\n    A(int x) {\n        s=op+in(n);\n\
+    \    }\n}\n```\n\n```\nClass B extends A {\n    B(string j) : A(j) {\n       \
+    \ this(10,2d);\n        s=op+in(3);\n    }\n    B(int a, int b) {\n        super(a);\n\
+    \        s=op+in(b);\n    }\n}\n```\n\n```\nTest {\n    B obj = new B[1];\n}\n\
+    ```"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# papergrid
+
+    Date: / /
+
+
+    Constructor chaining class
+
+
+    In Same(this)
+
+
+    In Another(super())
+
+
+    chaining
+
+
+    class
+
+
+    Implicit
+
+
+    Explicit
+
+
+    Inheritance
+
+
+    +   - Recursive chaining X (Not possible in java)
+
+
+    +   - ''n'' constructor => n-1 calling statements
+
+
+    +   - First executable stmt: this(c)
+
+
+    super() & this() cannot be present in same Constructors
+
+
+    super()
+
+
+    # Advantages of Inheritance
+
+
+    +   - code Reusability is increased
+
+
+    +   - code Redundancy / Repetition is avoided
+
+
+    # problem statement
+
+
+    | Employee id | Student id |
+
+    |---|---|
+
+    | name salary | marks |
+
+
+    solution
+
+
+    | P id |
+
+    | name |
+
+
+    | E Salary | S money |
+
+    |---|---|'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "# Problem Statement\n\nP\ni, id\n\n| E | S |\n|---|---|\n| E(id, s) | S(id,\
+    \ m) |\n| this-id | this-id |\n\nperson.java\n\n```\npublic class person {\n \
+    \   int id;\n    string name;\n    person(int id, string name) {\n        this.id\
+    \ = id;\n        this.name = name;\n    }\n}\n```\n\nEmployee.java\n\n```\npublic\
+    \ class Employee extends person {\n    double salary;\n    Employee(int id, string\
+    \ name, double salary) {\n        super(id, name);\n        this.salary = salary;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: "# Student.java\n\n```\nPublic class student extends person {\n    int marks\n\
+    }\n```\n\n```\nstudent(int id, string name, int marks) {\n    super(id, name);\n\
+    \    this.marks = marks;\n}\n```\n\n# Runner.java\n\n```\npublic class Runner\
+    \ {\n    public static void main(String[] args) {\n        Employee e = new Employee(1,\
+    \ \"D\", 124);\n        System.out.println(e.id + \" \" + e.name + \" \" +- e.salary);\n\
+    \        student s = new student(2, \"A\", 122);\n        System.out.println(s.id\
+    \ + \" \" + s.name + \" \" +- s.marks);\n    }\n}\n```\n\n```\noutput\n1 D 124\n\
+    2 A 122\n```"
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "# 20/2/2020\n\n# Access Specifiers\n\n+   * Access specifier is used to specify\
+    \ the accessibility of a member\n* In other words, it is used to indicate the\
+    \ boundary of a member\n\nDifferent access specifiers are as follows:\n1) public\n\
+    2) protected\n3) default\n4) private\n\n| outer Class | Inner/Nested Class | Variable\
+    \ | Method | Constructor |\n|---|---|---|---|--|\n| public | | | | |\n| private\
+    \ | X | | | | |\n| default | | | | | |\n| protected | X | | | | |\n\n+   Packages\
+    \ : - \n* packages are a folder on directory\n* no, packages are a folder on directory\n\
+    * Maintainance becomes easy when we create packages\n* Searching also becomes\
+    \ easy\n\nStructure of a package\n\n![](img/c7c1d07c55f63dc1b96f816c41bc4141_121_0.png)"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# # Example
+
+
+    com.google.gmail
+
+
+    Gmail Application
+
+
+    Com
+
+
+    google
+
+
+    Gmail
+
+
+    Inbox . java
+
+
+    Trash . java
+
+
+    Outbox . java
+
+
+    | In same class | Different class same package | Different class different package
+    |
+
+    | --- | --- | --- |
+
+    | public | ✓ | ✓ | ✓ import is-A relationship |
+
+    | protected | ✓ | ✓ | ✓ |
+
+    | default | ✓ | ✓ | X |
+
+    | private | ✓ | X | X |
+
+
+    > NOTE public is an access specifier where it can be accessed globally'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "# Accessing Public properties in same class\n\n```\npackage com.spiders;\n\
+    public class person {\n    public int age=10;\n    public void work() {\n    \
+    \    s.out.println(\"working\");\n    }\n    public person() {\n        s.out.println(\"\
+    In person constructor\");\n    }\n    public void prsm() {\n        person p =\
+    \ new person();\n        s.out.p(p.age);\n        p.work();\n    }\n}\n```\n\n\
+    Output: In person constructor\n10\nworking\n\n```\nAccessing public properties\
+    \ in another class, same package\n com;\npublic class Employee {\n    public int\
+    \ age=30;\n    public void work() {\n        s.out.p(\"working\");\n    }\n}\n\
+    ```"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# Accessing public properties in another class Same part
+
+
+    ```
+
+    package com;
+
+    public class Employee
+
+    {
+
+    public int age=30;
+
+    }
+
+    ```
+
+
+    ```
+
+    package org;
+
+    import com.Employee;
+
+    public class Test
+
+    {
+
+    pvsM( -- -- -- )
+
+    Employee emp=new Employee();
+
+    ns.o.p(emp.age);
+
+    }
+
+    ```
+
+
+    Importing all the classes from a specific Package
+
+
+    ```
+
+    public class Demo
+
+    {
+
+    package com.spiders.example;
+
+    public class Runner
+
+    }
+
+    ```
+
+
+    ```
+
+    package org;
+
+    import com.spiders.example;
+
+    // import com.spiders.example.Demo;
+
+    // import com.spiders.example.Runner;
+
+    public class Test
+
+    {
+
+    pvsM(---)}
+
+    ```'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "```\n{\n  Demo d= new Demo();\n  Runner r= new Runner();\n}\n```\n\n# Private\n\
+    \nprivate is an access specifier where private properties can be accessed only\
+    \ within the same class\n\n```\npackage com.spider.example\n  public class Demo\
+    \ {\n    private static int x = 10;\n    public PSVM (--) {\n      sop(x); //\
+    \ Demo.x\n    }\n  }\n```\n\n```\npackage com.spiders.example\n  public class\
+    \ solution {\n    public PSVM (--) {\n      sOP(Demo.x) // Demo.x error\n    }\n\
+    \  }\n```"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: "# 21/2/2020\n\nDefault\n\nDefault is an access specifier wherein it can be\
+    \ access\nwithin the same class same package\n\nWhen we don't use any of the access\
+    \ specifier then it is\na automatically default\n\nDefault means package level\n\
+    \n```\n//Accessing default properties in same class\npackage com {\nclass Mobile\n\
+    {\n  int cost=2000;\n  psvm (----) // op: 200\n  Mobile m = new Mobile();\n  s.o.p(m.cost);\n\
+    }\n```\n\n```\n//Accessing Default properties in another class same package\n\
+    package com {\nclass student\n{\n  static int rollNO=123;\n  void study()\n{\n\
+    \    s.o.p(\"studying\");\n  }\n```"
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "```\npackage com;\npublic class solution {\n    PVSM(- ---) {\n        s.o.p(student.mollNO);\n\
+    \        Student s = new student();\n        s.study();\n    }\n}\n```\n\nop :-\
+    \ 123\nstudying"
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: "# Fully Qualified Class Name.\n\nFully qualified class name is considering\
+    \ the class name from its packagelevel\n\n```\nimport java.util.Scanner;\njava.util.Scanner\
+    \ java;\n```\n\n```\npackage Demo.java\na.b.c.Demo.java\n```\n\n```\npackage.com;\n\
+    public class Pen {\n    public static int cost=20;\n    public int x=10;\n}\n\
+    ```\n\n```\npackage org;\n//import java.util.Scanner;\npublic class Runner {\n\
+    \    public void main(String[] args) {\n        s.o.p(com.pen.cost);\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '```
+
+    com.pen = new com.pen();
+
+    s.o.p(p.x);
+
+    ```
+
+
+    ```
+
+    java.util.Scanner s=new java.util.Scanner(system.in);
+
+    ;
+
+    ```
+
+
+    O/P 20
+
+    10
+
+
+    +   * protected is an access specifier where in same class, same package & outside
+    the package , & another package in case of Is-A relationship.
+
+
+    ```
+
+    -> Accessing protected members outside the package package com;
+
+    public class Father
+
+    {
+
+    protected int age=40;
+
+    }
+
+    package com2;
+
+    import com.Father;
+
+    ```
+
+
+    ```
+
+    public class son extends Father
+
+    {
+
+    psvm (----)
+
+    {
+
+    Son s = new Son();
+
+    ns.o.p(s.age);
+
+    ```
+
+
+    O/P: 40'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# Final keyword
+
+
+    +   * Final is a keyword Which can be used with a variable method, class
+
+
+    +   * Final Variables cannot reinitialized ie it acts as constant
+
+
+    +   * Final method can be inherited but cannot be Overridden
+
+
+    +   * Final class cannot be inherited at all
+
+
+    # -> Coding standards / Naming Conventions By Oracle
+
+
+    +   1) Class => Can, Audican, SortStudentsById
+
+
+    +   2) variable => age, employeeSalary, noOfStudents
+
+
+    +   3) method => test() , checkEvenOnOdd()
+
+
+    +   4) Constants => PI, Exp
+
+
+    +   5) packages => lowercase com, org'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: "# # Encapsulation\n\n+   * Encapsulation is a process of binding & protecting\
+    \ data members & member function in a single entity called class\n* Binding can\
+    \ also be referred as Grouping / Wrapping\n* Data members are also referred as\
+    \ states / Variables\n* Member Functions are usually referred as the Behaviour\
+    \ / Methods\n* Best example for encapsulation is Java Bean\n\n+   Specifications\
+    \ for Creating Java Bean class\n1) Create a public non abstract class\n2) Declare\
+    \ private Data Members\n3) Define public setter method & getter method\n\n+  \
+    \ * Not important\n4) Class has to implement serializable interface\n5) Class\
+    \ should have a public non paramaterized Constructor\n\n```\nProblem Statement\n\
+    public class person {\n    private int age;\n    public static void main(String[]\
+    \ args) {\n        person p = new person();\n        p.age=60;\n        // age\
+    \ cannot be accessed as it is private\n        // (We cannot modify the value)\n\
+    \    }\n```"
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: "Setter method sets the value\n\nGetter method returns the value.\n\n```\npublic\
+    \ class person {\n    private int age;\n    public void setAge(int age) {\n  \
+    \      this.age = age;\n    }\n    public int getAge() {\n        return this.age;\n\
+    \    }\n}\n```\n\nClass Test {\n    public static void main(String[] args) {\n\
+    \        person p = new person();\n        p.setAge(25);\n        int age = p.getAge();\n\
+    \        System.out.println(age);\n    }\n}\n\n+   i) Create a public non abstract\
+    \ class called as employee\nii) Declare to private variables as id, name\niii)\
+    \ Have public getter & setter method respectively\niv) Create another class called\
+    \ as solution & cinder main method to invoke those respective method\n\n```\n\
+    public class employee {\n    private int id;\n    private string name;\n    public\
+    \ void setId(int id) {\n        this.id = id;\n    }\n}\n```"
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: "```\npublic int getId() {\n    return this.id;\n}\n```\n\n```\npublic void\
+    \ setName(string Name) {\n    this.name = name;\n}\n```\n\n```\npublic string\
+    \ getName() {\n    return name;\n}\n```\n\n# Class solution\n\n```\nprVSM ( --\
+    \ {\n    Employee e = new employee()\n    p.setId(100);\n    p.setName(Bhagya);\n\
+    \    System.out.println(p.getId());\n    System.out.println(p.getName());\n}\n\
+    ```\n\n```\no/p\n100\nName\n```\n\nsolution.java\n\nlogical facilitate"
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: "# Advantages for encapsulation on Java Class,\n\n+   1) Variables can be made\
+    \ read only by having only getter\nmethod & the data can be made write only by\
+    \ having\nonly setter method\n\n+   2) The data can be made read & write by having\
+    \ both the\nseller & getter method.\n\n```\npublic class Employee {\n    private\
+    \ int id;\n    private String designation;\n    private double salary;\n\n   \
+    \ public Employee(int id, String designation, double salary) {\n        this.id\
+    \ = id;\n        this.designation = designation;\n        this.salary = salary;\n\
+    \    }\n\n    public int getId() {\n        return id;\n    }\n\n    public void\
+    \ setSalary(double salary) {\n        this.salary = salary;\n        System.out.println(\"\
+    salary got updated\");\n    }\n```"
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: "```\npublic void setDesignation(String designation) {\n    this.designation\
+    \ = designation;\n}\n```\n\n```\npublic string getDesignation() {\n    return\
+    \ designation;\n}\n```\n\n//Since we have only getId() we can only get the id\
+    \ but\n// cannot modify this\n//since we have only setSalary(c) we can only set\
+    \ the\n// Salary but cannot get the salary\n// we can get & set designation it\
+    \ is read and write both\n\n# Test.java\n\n```\npublic class Test {\n    public\
+    \ static void main(String args) {\n        Employee e = new Employee(101, \"Developer\"\
+    , 200.34);\n        e.setId(\"id\":\" + e.getId());\n        e.setSalary(500.56);\n\
+    \        System.out.println(e.getDesignation(\"project Manager\"));\n        System.out.println(e.getDesignation());\n\
+    \    }\n}\n```\n\n+   - Id:101\n- Salary got\n- updated\n- Developer\n- project\
+    \ managers"
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: "3) We can protect the data from illogical initialization\n\n4) person-java\n\
+    \n```\npublic class person {\n    private int age;\n    private string email;\n\
+    \n    public void setEmail(String email) {\n        if(email.contains(\"@\"))\
+    \ {\n            this.email = email;\n            s.out.println(\"Email is updated\"\
+    );\n        } else {\n            s.out.println(\"invalid email\");\n        }\n\
+    \    }\n\n    public string getEmail() {\n        return email;\n    }\n\n   \
+    \ public void setAge(int age) {\n        if(age > 0) {\n    }\n}\n```"
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: "this.age = age;\ns.out.println(\"Age is valid\");\nz\n\nelse {\n  s.out.println(\"\
+    Age is invalid\");\n}\n\npublic int getAge() {\n  return age;\n}\n\n# Testperson.java\n\
+    \n```\npublic class testperson {\n  public static void main(String[] args) {\n\
+    \    person p = new person();\n```\n\n```\np.setAge(-30);\ns.out.println(p.getAge());\
+    \ // -30\n```\n\n```\np.setAge(30);\ns.out.println(p.getAge()); // 30\n```\n\n\
+    ```\np.setEmail(\"xyz@gmail.com\");\ns.out.println(p.getEmail());\n```"
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: "```\npseudmail(\"tom@gmail.com\");\ns-o-pln(p getEmail());\nny\n```\n\n# olp\n\
+    \n```\npublic class uscm {\n    private long MNO;\n    \n    public void setMobileNo(long\
+    \ mno) {\n        if (length>=10) {\n            the-mno=mno;\n            s-o-pln(\"\
+    Mobile No is valid\");\n        }\n        else {\n            s-o-pln(\"Mobile\
+    \ No is invalid\");\n        }\n    }\n\n    public long getMobileNo() {\n   \
+    \     return mno;\n    }\n```"
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: "# Solution java\n\n```\nimport java.util.Scanner;\n```\n\n```\nclass Solution\
+    \ {\n    public static void main(String[] args) {\n        Scanner s = new Scanner(System.in);\n\
+    \        System.out.println(\"enter a mNO\");\n        long n = s.nextLong();\n\
+    \    }\n}\n```\n\n# Abstract\n\nAbstract is a keyword which can be used with class\
+    \ & Method\n\nConcrete class: A class which is not declared using abstract keyword\
+    \ is called concrete class\n\nConcrete class can allow only concrete methods\n\
+    \nConcrete class/Non Abstract class\n\n```\nclass A {\n    // concrete Methods\n\
+    }\n```\n\nAbstract class is declared using abstract keyword which is called as\
+    \ Abstract class\n\nAbstract class can allow both Abstract methods & concrete\
+    \ methods\n\n```\nabstract class B {\n    // Both abstract & concrete methods\n\
+    }\n```"
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: "# Concrete Method: A method which has both declaration & implementation is\
+    \ called as concrete method\n\n```\nvoid test() -> Method Declaration\n{\n   \
+    \ \n}\nMethod implementation / Definition\n```\n\nAbstract Method: A method which\
+    \ has only declaration & no implementation is referred as Abstract method. Abstract\
+    \ method has to be declared using abstract keyword\n\nSyntax : accessifier abstract\
+    \ return type methodName();\n\n```\nEx :- 1) public abstract void display();\n\
+    2) abstract void test();\n```\n\nRules which has to be followed when a class inherits\
+    \ abstract class (or) contract of abstract\n\n+   1) When a class inherits an\
+    \ abstract class, it is mandatory to override all abstract methods"
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: "# Example for Rule 1\n\nEx abstract class person Class student extends person\n\
+    \n```\n{\n  abstract void cat();\n}\n```\n\n```\n@Override\nvoid cat() {\n  s.o.p(\"\
+    fleating\");\n}\n```\n\n```\nPrSM ( -- ) {\n  Student s = new Student();\n  s.cat();\n\
+    }\n```\n\nRule 2: If the abstract method cannot be overridden make the subclass\
+    \ abstract.\n\nProjectManager.java\npublic abstract class projectManager\n\n```\n\
+    {\n  abstract void createTask();\n}\n```\n\nDeveloper.java\npublic abstract class\
+    \ Developer extends projectManager\n\n```\n{\n  abstract void developAp();\n \
+    \ void display() {\n    s.o.p(\"HELLO\");\n  }\n}\n```"
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: "# Intern.java\n\n```\npublic class Intern extends Developer {\n    @Override\n\
+    \    void getTask() {\n        s.out.println(\"study java\");\n    }\n```\n\n\
+    ```\n@Override\nvoid developApp() {\n    s.out.println(\"Develop some\" + \"mini\
+    \ project\");\n}\n```\n\n# Solution.java\n\n```\npublic class solution {\n   \
+    \ public static void main(String[] args) {\n        Intern i = new Intern();\n\
+    \        i.developApp();\n        i.getTask();\n        i.display();\n    }\n\
+    }\n```\n\n// Develop some mini project\nstudy.java\nHello o"
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: "# NOTE: We cannot create an object of abstract class (but it is an\n\n2) Abstract\
+    \ Methods cannot be private\n\n3) Abstract Methods cannot be static incomplete\n\
+    \n4) Abstract Methods cannot be final\n\nAbstract class can have constructions\
+    \ & those constructors, public are invoked either implicitly or explicitly using\
+    \ Super calling statement\n\nSubclass should be a concrete class\n\n```\nfather.java\n\
+    public abstract class Father {\n    Father(int x) {\n        System.out.println(1);\n\
+    \    }\n}\n```\n\n```\nson.java\npublic class son extends Father {\n    son()\
+    \ {\n        super(10);\n        System.out.println(2);\n    }\n}\n```"
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: "# Test.java\n\n```\npublic class Test {\n    public static void main(String[]\
+    \ args) {\n        Son s = new Son();\n    }\n}\n```\n\n# OOP\n1\n\nInterface\
+    \ is a Java Type Definition Which has to be declared using interface keyword\n\
+    Interface can also be referred as a medium b/n 2-5/ms\nUlbercin, 1/m will behave\
+    \ as client & another system will behave as system with resource\n\nIt is possible\
+    \ to have a variable in an interface & those Variables are automatically public,\
+    \ static Final\nInterface can allow only abstract methods & those methods are\
+    \ automatically public & abstract\n\n```\ninterface Test {\n    public static\
+    \ Final int x = 50;\n    public abstract void display(int y);\n}\n}\n```"
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: "Interface does not contain any constructor therefore we cannot create an object\
+    \ of interface.\n\nA class can achieve Is-a-relationship (Inheritance) with an\
+    \ interface implements keyword\n\nNote: When a class implements an interface,\
+    \ it is mandatory to Override abstract method\n\nNote: The Access specification\
+    \ should be same or of higher visibility\n\n```\ninterface College \n{\n  public\
+    \ void enjoy();\n}\n```\n\n```\nClass Student implements College {\n  @Override\n\
+    \  public void enjoy() {\n    System.out.println(\"enjoyed\");\n  }\nn}\n```\n\
+    \n```\npVSM() {\n  Student s = new Student();\n  s.enjoy();\n}\n```"
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: "# IS-A Class Interface\n\n| IS-A | Class | Interface |\n|---|---|---|n| Class\
+    \ | extends | implements |\n| Interface | X | |\n\n# Father.java\n\n```\npackage\
+    \ org;\npublic interface Father {\n    int age=40; //public, static, final int\
+    \ public static final int age=40;\n    void work(); //public and abstract i public\
+    \ abstract void work();\n}\n```\n\n# Son.java\n\n```\npackage org;\npublic interface\
+    \ Son extends Father {\n    void enjoy();\n}\n```\n\n# Grandson.java\n\n```\n\
+    package org;\npublic class Grandson implements Son {\n    @Override\n    public\
+    \ void work() {\n        System.out.println(\"working\");\n    }\n    @Override\n\
+    \    public void enjoy() {\n        System.out.println(\"enjoying\");\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: "# Runner java\n\n```\npackage org;\n\npublic class Runner {\n    public static\
+    \ void main (String[] args) {\n        System.out.println(\"Father-age\");\n \
+    \       Grandson gs = new Grandson();\n        gs.work();\n        gs.enjoy();\n\
+    \    }\n}\n\n```\n\nolp\n4o\nWorking\nenjoying\n\n+   * A class can implement\
+    \ any number of interfaces\n* A class can inherit extend another class & implement\
+    \ any number of interfaces\n\n```\ninterface A\npackage org;\n\npublic interface\
+    \ A {\n    void m1();\n}\n\ninterface B\npackage org;\n\npublic interface B {\n\
+    \    void m2();\n}\n```"
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: "# person.java\n\n```\npackage org;\n\npublic class person {\n    void eat()\
+    \ {\n        s.o.p.in(\"Guldu is eating\");\n    }\n}\n```\n\n# solution.java\n\
+    \n```\npackage org;\n\npublic class solution extends person implements A, B {\n\
+    \    @Override\n    public void m1() {\n        s.o.p.in(\"in m1\");\n    }\n\n\
+    \    @Override\n    public void m2() {\n        s.o.p.in(\"in m2\");\n    }\n\
+    }\n```\n\noutput\nin m1\nin m2\nGuil-u is eating"
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: "# Mainclass: Java\n\n```\npublic class MainClass {\n    public static void\
+    \ main(String[] args) {\n        Solution s = new Solution();\n        s.m1();\n\
+    \        s.m2();\n        s.cat1();\n    }\n}\n```\n\n| Person (C) | << A >> |\
+    \ << B >> |\n| --- | --- | --- |\n| ant():void | m1():void | m2():void |\n\n|\
+    \ Solution (C) m1&m2() overridden |\n\n<< >> => Stereotypes used to indicate Interface\n\
+    \n+   - => Class\n- => extends\n- => implements"
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: "# A: java\n\n# B: java\n\npackage org;\n\npackage org;\n\n```\npublic interface\
+    \ A {\n  void m1();\n}\n```\n\n```\npublic interface B {\n  void m1();\n}\n```\n\
+    \n# solution:java\n\n```\npublic class solution implements A, B {\n  @Override\n\
+    \  public void m1() {\n\n```\n\n// Overrides only once as declarations are same\n\
+    \n# A: java\n\n# B: java\n\n```\npublic interface A {\n  void m1();\n}\n```\n\n\
+    ```\npublic interface B {\n  void m1();\n}\n```\n\n```\npublic class solution\
+    \ implements A, B {\n  @Override\n  public void m1() {\n\n```"
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: '# solution java
+
+
+    ```
+
+    public void m(int a)
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    // Override both as there is change in declaration
+
+
+    | Instantiation | Construct | Abstract | Concrete |
+
+    |---|---|---|--|
+
+    | | - ors | Methods | Methods |
+
+    | Object creation | | |
+
+
+    Non-abstract class/concrete
+
+
+    Abstract class
+
+
+    Interface'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: '# Type Casting
+
+
+    * Type casting is a process of converting 1 type of data into another
+
+    type of data
+
+
+    * Type casting / Type conversion is divided into 2 types
+
+
+    +   i Widening
+
+    ii Narrowmowing
+
+
+    * Widening is a process of converting smaller type of data into a
+
+    biggen type of data
+
+
+    * We also called Widening as implicit / automatic casting
+
+
+    ```
+
+    byte -> short -> int -> float -> long -> double
+
+    1 2 4 4 8
+
+    ```
+
+
+    | Short a=5; | a | 5 |
+
+    float b=a; | b | 5.0 |
+
+
+    | Int x=10; | x | 10 |
+
+    double y=x^10; | y | 100 |
+
+
+    * Narrowing
+
+    * Narrowing is a process of converting biggen type of data into
+
+    smaller type of data
+
+
+    * Narrowing is also called as Explicit Typecasting
+
+
+    | int i=10; | i | 10 |
+
+    byte j=(byte)*10; | j | 10 |
+
+
+    | double a=5.75; | a | 5.75 |
+
+    int b=int(a); | b | 5 |'
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: "# public class casting\n\n```\n{\n  pVSM(String[] args) {\n    s.out.println(\"\
+    Implicit Casting\");\n```\n\n```\nint a=10;\ndouble b=a;\ns.out.println(at \"\
+    \ \"+b\");\n```\n\n```\nchar c='a';\nint d=c;\ns.out.println(\"-\\-\\-\\-\");\n\
+    s.out.println(\"Explicit Casting\");\n```\n\n```\ndouble e=5.67;\nint f=(int)e;\n\
+    s.out.println(\"et \" \"+f\");\n```\n\n```\nint x=66;\nchan y=(char)x;\ns.out.println(\"\
+    xt \" \"+y\");\n```\n\n```\ns.out.println(\"-\\-\\-\\-\");\n```\n\n```\ns.out.println((char)65);\n\
+    s.out.println(\"-\\-\\-\\-\");\n```\n\n```\ns.out.println(\"a\"+10);\ns.out.println(\"\
+    b\"+20);\ns.out.println('A'+'B\");\n```\n\n# Implicit Casting\n\n```\n10  10.0\n\
+    ```\n\n```\na  97\n```\n\n# Explicit Casting\n\n```\n5.67  5\n```\n\n```\n66 \
+    \ B\n```\n\n```\nA\n```\n\n```\na10\n```\n\n```\n117\n```\n\n```\n131\n```"
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: "# ASCII : (American Standard Code Information Interchange)\n\nInterview (Imp**)\n\
+    \n+   Write a program to print alphabets from a to z & their respective ASCII\
+    \ values\n\n```\nclass Ascii {\n    void psm(String[] args) {\n        for (int\
+    \ i=65; i<96; i++) {\n            System.out.println(\"The ASCII value of \" +\
+    \ (char)i + \" is \" + i);\n        }\n    }\n}\n```\n\n```\nfor (char i='A';\
+    \ i<='z'; i++) {\n    System.out.println((int)(i));\n}\n```\n\nInterview (Imp**)\n\
+    \n+   Why do we specify float the last When we initialize float Variable\n\nIn\
+    \ java, whenever the compiler comes across a decimal numeric value it assumes\
+    \ as double i ec 8 bytes\n- When we try to store it in float we are casting it\
+    \ to 4 bytes i e Converting double to float"
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: "# classmate Date Page\n\n```\npublic class Solution {\n    void pvsm(String[]\
+    \ args) {\n        byte a=5;\n        short b=55;\n        int c=555;\n      \
+    \  long mobNo=9739070632; // long mobNo=9739070632\n        s.out.println(\"=\
+    \ = =\");\n\nfloat x=6.7f; // float x=6.7f or float x=(float)6.7f\n        double\
+    \ y=5.5;\n    }\n}\n```\n\n+   Q) Why java does not support multiple Inheritance?\n\
+    Ambiguity during Constructor chaining\n\n| Father | Mother |\n| --- | --- |\n\
+    | Father() | mother() |\n| { | { |\n\nSon\n\n```\nson() {\n    super();\n}Son\
+    \ s = new Son();\n```\n\nIt does not understand which superclass constructor to\
+    \ be invoked i.e confusion/ambiguity"
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: '# 2) Diamond problem
+
+
+    There is a problem created / Ambiguity Created When
+
+    Superclasses has same Variables on methods
+
+    :: Java does not support multiple Inheritance
+
+
+    | A |
+
+    | x=10 |
+
+
+    | B | C |
+
+    | x=10 | x=10 |
+
+
+    | D |
+
+    | ? |
+
+
+    | A | B |
+
+    | x=10 | x=10 |
+
+
+    | C |
+
+    | x=? |
+
+
+    C obj = new C();
+
+    s.out.println(obj.x);'
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: '# # Upcasting & Downcasting
+
+
+    +   * Upcasting is a process of creating an object of subclass
+
+    oning its address into reference of type superclass.
+
+
+    +   * In order to achieve upcasting Is-A relationship is mandatory
+
+    for inheritance
+
+
+    +   * Upcasting always happens implicitly
+
+    with the upcasted reference we can access only Super
+
+    class properties but not subclass properties
+
+
+    Downcasting
+
+    he process of converting the upcasted reference
+
+    back to subclass type reference is called as
+
+    Downcasting
+
+
+    +   * Downcasting has to be done explicitly
+
+    * Downcasting can be achieved only after upcasting
+
+    * With the downcasted reference / subclass type
+
+    reference we can access whole superclass &
+
+    subclass properties
+
+
+    ![](img/c7c1d07c55f63dc1b96f816c41bc4141_157_0.png)
+
+
+    ```
+
+    Father = new Son();
+
+    Son = (Son);
+
+    ```'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: "# Example\n\n| vehicle | downcasting |\n| --- | --- |\n| upcasting brand =\
+    \ \"suzuki\" | |\n| Bike cost = 200 | |\n\n# upcasting\n\nvehicle v = new Bike();\n\
+    \n| brand cost |\n\nBike b = new Bike;\nvehicle v = b;\n\nBike b = (Bike) v;\n\
+    \n| brand cost |\n\n# Ex Developer.java\n\npackage classypecasting;\n\n```\npublic\
+    \ class Developer {\n    string domain = \"Java\";\n\n    void work() {\n    \
+    \    System.out.println(\"Developer is working\");\n    }\n}\n```"
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: "# J2Engineer-Java\n\n```\npackage classypecasting;\n```\n\n```\npublic class\
+    \ J2Engineer extends Developer {\n    String name = \"Tom\";\n    void task()\
+    \ {\n        s.o.pin(\"learn Java\");\n    }\n}\n```\n\n# Solution.java\n\n```\n\
+    package classypecasting;\npublic class solution {\n    public static void main(String[]\
+    \ args) {\n        Developer d = new J2Engineer(); //UP-CASTING\n        J2Engineer\
+    \ je = new J2Engineer();\n        Developer d=je;\n        s.o.pin(d.domain);\n\
+    \        d.work();\n        s.o.pin(d.name); // Error\n        d.task();\n   \
+    \ }\n    s.o.pin(\"\" = \"\");\n}\n```"
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: 'JrEngineer jn = (JrEngineer);
+
+    S.op.lin(jr.domain = " + jr.name);
+
+    jr.work();
+
+    jr.task();
+
+
+    Output
+
+    Java
+
+    Developer is working
+
+    = = =
+
+    Java Tom
+
+    Developer is working
+
+    Learn java
+
+
+    +   * Interview(fmp)
+
+    * static methods can be overloaded but cannot be overridden
+
+    * Non static methods can be both overloaded & overridden
+
+    aswell
+
+
+    Note: If a method has been overridden & if we invoke a method with the upcasted
+    reference or downcasted reference always overridden implementation will get executed.
+
+
+    ```
+
+    Fatherjava
+
+    package classtype casting;
+
+    public class Father
+
+    {
+
+    void bike()
+
+    {
+
+    so.op.lin("old fashioned bike");
+
+    ```
+
+
+    y y'
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: "# public class Son extends Father {\n\n```\n@Override\nvoid bike() {\n    s.out.println(\"\
+    Modified Bike\");\n}\n```\n\n```\nTestJava\npublic class Test {\n    public static\
+    \ void main(String[] args) {\n        Father f = new Son();\n        f.bike();\n\
+    \        \n        Son s = (Son) f;\n        s.bike();\n    }\n}\n```\n\nQ) why\
+    \ do we get ClassCastException? If 1 class type has been upcasted, we have to\
+    \ downcast to the same class type otherwise we get ClassCastException ie if 1\
+    \ class type has been upcasted & downcast to some other class type\n\n+   * We\
+    \ also get ClassCastException When we downcast without upcasting : In order to\
+    \ avoid it we make use of instance of operators"
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: "# # Instanceof Operator\n\nInstanceof is an operator which is used to check\
+    \ if an object is an instance of specific class or not. In other words, Instanceof\
+    \ is used to check if an object is having the properties of specific class or\
+    \ not. Instanceof always returns boolean values.\n\nSyntax: object instanceof\
+    \ className\n\n# # Father.java\n\n```\npublic class Father {\n    String name\
+    \ = \"Tom\";\n}\n```\n\n# # Son.java\n\n```\npublic class Son extends Father {\n\
+    \    int age = 25;\n}\n```\n\n# # Daughter.java\n\n```\npublic class Daughter\
+    \ extends Father {\n    String hobbies = \"Tik Tok, Dancing\";\n}\n```"
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: "# Test_java\n\n```\npublic class Test {\n    public void main(String[] args)\
+    \ {\n        System.out.println(new Son() instanceof Son);\n        System.out.println(new\
+    \ Son() instanceof Father);\n        System.out.println(\"-\\-\\-\");\n\n    \
+    \    Son s = new Son();\n        System.out.println(s instanceof Son);\n     \
+    \   System.out.println(s instanceof Father);\n\n        System.out.println(\"\
+    -\\-\\-\");\n\n        Daughter d = new Daughter();\n        System.out.println(d\
+    \ instanceof Father);\n        System.out.println(d instanceof Daughter);\n\n\
+    \        System.out.println(\"-\\-\\-\");\n\n        Father f = new Father();\n\
+    \        System.out.println(f instanceof Father);\n        System.out.println(f\
+    \ instanceof Son);\n        System.out.println(f instanceof Daughter);\n\n   \
+    \     boolean a = true;\n        boolean b = true;\n        System.out.println(a);\n\
+    \        System.out.println(b);\n\n        boolean c = true;\n        boolean\
+    \ d_bool = false;\n        System.out.println(c);\n        System.out.println(d_bool);\n\
+    ```"
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: "# Mainclass.java\n\n```\npublic class Mainclass {\n    PVSM(String[] args)\
+    \ {\n        Father obj = new Son();\n        if (obj instanceof Son) {\n    \
+    \        System.out.println(\"Downcasting to son\");\n            Son s = (Son)obj;\n\
+    \            System.out.println(s.name + \" \" + s.age);\n        }\n        else\
+    \ if (obj instanceof Daughter) {\n            System.out.println(\"Downcasting\
+    \ to Daughter\");\n            Daughter d = (Daughter)obj;\n            System.out.println(d.name\
+    \ + \" \" + d.hobby);\n        }\n    }\n}}\n```\n\nDowncasting to son\nTom 25\n\
+    \n+   Write a java program in order to count the no of object created for a specific\
+    \ class"
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: "# classmate Page\n\n# public class Test\n\n```\npublic class Test {\n    void\
+    \ Test() {\n        int count = 0;\n        Test(C) {\n            count++;\n\
+    \            System.out.println(\"No of times object created: \" + count);\n \
+    \       }\n    }\n}\n```\n\n```\npublic static void main(String[] args) {\n  \
+    \  car c = new car();\n    System.out.println(\"No of objects created: \" + 1);\n\
+    \    car c2 = new car();\n}\n```\n\nHR Syed Aqeb / vignesb\nPNO-: 77608669666\n\
+    PNO-: 7022889639\n\n+   Widening\nDatatype (casting)\n    primitive casting Narrowing\n\
+    \        (is int) upcasting\nType Casting\nType Conversion\n    Class Type Casting\n\
+    \    Non-primitive casting downcasting\n\n11/3/2020"
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: "# Polymorphism\n\nPolymorphism means many forms,\nIn java the ability of a\
+    \ method to behave differently\nWhen different objects are acting upon it it is\
+    \ called\n\nPolymorphism is a method exhibiting different forms when\ndifferent\
+    \ objects are acting upon it is called polymorphism\n\npolymorphism is categorized\
+    \ into 2 types\n\n+   1) Compile Time polymorphism\n2) Run Time polymorphism\n\
+    \nCompile Time Polymorphism\nCompile Time polymorphism is achieved with the help\n\
+    of method overloading\n\nCompile Time polymorphism is also referned as static\n\
+    Binding / Early Binding\n\nThe decision of Which method has to be executed is\n\
+    decided by compiler during compile Tim\nis so many overloaded method the decision\
+    \ of which\nmethod implementation has to be executed is taken by\nthe compiler\
+    \ during compile time\n\nIn simple words method binding happens during\ncompile\
+    \ time by the compiler\n\n```\npublic class Demo {\n    void display(int a) {\n\
+    \        System.out.println(a);\n    }\n    void display(String a, int b) {\n\
+    \        System.out.println(a + \" \" + b);\n    }\n}\n```"
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: "# classmate\n\nDate\nPage\n\n```\nvoid display (double a) {\n s.println(a);\n\
+    }\nOutput\n23-45\n10 hai\nbye 1234\n```\n\n```\nvoid display (int a, String b)\
+    \ {\n s.println(at \" \"+b);\n}\n```\n\n```\npVSM (String[] args) {\n Demo d =\
+    \ new Demo();\nd.display(23-45);\nd.display(100);\nd.display(10, \"hai\");\nd.display(\"\
+    bye\", 1234);\n}\n\n```\n\n# Method Binding\n\nMethod Binding is a process of\
+    \ associating a method call to its method implementation (called method Binding)\n\
+    \n```\nMethod Declaration -> method caller\nvoid display() {\n -> Method implementation\
+    \ -> mapping -> method binding\nm1(), mapping, (10)\nm(), ()\nm1(int ay);\n```"
+  merge: -1
+  pgno: 167
+- img_proc: true
+  md: "# Run Time Polymorphism\n\nRuntime polymorphism can be achieved with the help\n\
+    of) IS - A - Relationship\n2) Method Overriding\n3) Upcasting\n\n+   * Runtime\
+    \ polymorphism is also referred as late Binding\nor dynamic binding.\n* During\
+    \ Runtime polymorphism, method binding always happens at runtime done by JVM\n\
+    * When you call an overridden method on the superclass reference, the method implementation\
+    \ Which gets executed depended on the subclass acting upon it\n* The decision\
+    \ of which method has to get executed taken by JVM at runtime\n\n```\nClass Vehicle\
+    \ {\n  void start() {\n    S.out.println(\"VS\");\n  }\n}\nClass Bike extends\
+    \ Vehicle {\n```\n\n```\nClass Test {\n  void psm() {\n    Vehicle v1 = new Bike();\n\
+    \    v1.start();\n    Vehicle v2 = new Car();\n    v2.start();\n  }\n}\n```\n\n\
+    ```\n@Override\nvoid start() {\n  S.out.println(\"B-S\");\n}\n```\n\n![](img/c7c1d07c55f63dc1b96f816c41bc4141_168_0.png)"
+  merge: -1
+  pgno: 168
+- img_proc: true
+  md: "# classmate\nDate\nPage\n\n3) class can extends Vehicle\n\n```\n{\n  @Override\n\
+    \  void start() {\n    v2 -> 222\n    void start(Ox3) {\n      OxU\n      Ox 4\n\
+    \      CS\n    }\n    s.o.p(\"CS\");\n    vehicle\n    v1 -> 111\n    void start(Ox1)\
+    \ {\n      Ox2\n      Ox1\n      BS\n    }\n  }\n}\nBike Can\n```\n\nEX) Another\
+    \ way of doing\n\n```\nclass Test\n{\n  void display (vehicle v) {\n    s.o.p\
+    \ v.start();\n  }\n}\n```\n\n```\npvsM(\n{\n  t = new Test(1);\n  t.display(new\
+    \ Bike(C)); // BS\n  t.display(new Car(C)); // CS\n  Car c = new Car('C');\n}\n\
+    t.display(c); \nFather s\n```"
+  merge: -1
+  pgno: 169
+- img_proc: true
+  md: "# Bank-java\n\nPublic class Banks public class\n\n```\n{\n  void rate@Interf()\
+    \ {\n    s.out.println(\"ROI is 8%\");\n  }\n}\n```\n\n```\npublic class SBI extends\
+    \ Bank {\n  @Override\n  void rateOfInterest() {\n    s.out.println(\"ROI is 6%\"\
+    );\n  }\n}\n```\n\n```\nICICI-java public class ICICI extends Banks {\n  @Override\n\
+    \  void rateOfInterest() {\n    s.out.println(\"ROI is 7%\");\n  }\n}\n```"
+  merge: -1
+  pgno: 170
+- img_proc: true
+  md: "```\npublic class customer {\n    pvsm(string[] args) {\n        Bank b1 =\
+    \ new SBI();\n        b1.rateOfInterest();\n    }\n    Bank b2 = new ICICI();\n\
+    \    b2.rateOfInterest();\n    // ROI IN ICICI is 8.7%;\n}\n```\n\n```\npublic\
+    \ class AccountHolder {\n    void checkROI(Bank b) {\n        b.rateOfInterest();\n\
+    \    }\n    pvsm(string[] args) {\n        AccountHolder a = new AccountHolder();\n\
+    \        a.checkROI(new ICICI());\n        a.checkROI(new SBI());\n        s.out.println(\"\
+    \ = == \");\n        SBI s = new SBI();\n        a.checkROI(S);\n    }\n```"
+  merge: -1
+  pgno: 171
+- img_proc: true
+  md: 'ICICI = new ICICI(1);
+
+    a-check ROI(i);
+
+
+    3
+
+
+    # OLP
+
+
+    ROI in ICICI is 8%.
+
+    ROI in SBI is 6%.
+
+
+    = = Method Binding
+
+
+    ROI in SBI is 6%.
+
+    ICICI is 8%.
+
+
+    polymorphism
+
+
+    +   - Compile Time
+
+    - Early Binding
+
+    - Static Binding
+
+    - Runtime
+
+    - Late Binding
+
+    - Dynamic Binding
+
+
+    Method Overloading
+
+    Is A method Overriding
+
+    Upcasting
+
+
+    method Binding at runtime'
+  merge: -1
+  pgno: 172
+- img_proc: true
+  md: "# Abstraction:\n\nAbstraction is a process of hiding the implementation details\
+    \ & showing only the behaviour or the functional details using abstract class/\
+    \ Interface\n\n+   1 Abstraction can be achieved using following rules abstract\
+    \ class / Interface\n\n+   2 IS-A Relationship (Inheritance)\n\n+   3 Method Overriding\n\
+    \n+   4 Upcasting\n\n5) person-java abstract class person\n\n```\nabstract void\
+    \ work();\n```\n\nEmployee-java class employee extends person\n\n```\n@Override\n\
+    void work() \n{\n so.out.println(\"person is working\");\n}\n```\n\nTest-java\
+    \ public class Test\n\n```\n{\n static void main(String[] args) {\n Employee e=new\
+    \ Employee();\n e.work();\n}\n```"
+  merge: -1
+  pgno: 173
+- img_proc: true
+  md: "person p = new Employee();\np.work();();\n\n {\n\n }\n\nEx)\n\n# Bank.java\n\
+    \npublic class Bank\n\n {\n\n```\nvoid deposit(int amount);\nvoid withdraw(int\
+    \ amount);\nvoid check Balance(int amount);\n```\n\n }\n\n# ATM.java\n\npublic\
+    \ class ATM implements Bank\n\n {\n\n```\nint balance = 5000;\n```\n\n@Override\n\
+    \npublic void deposit(int amount)\n\n {\n\n```\ns.out.println(\"Depositing \"\
+    \ + amount);\nbalance = balance amount; // balance = amount;\ns.out.println(amount\
+    \ + \" Deposited successfully\");\n```\n\n }\n\n@Override\n\npublic void withdraw(int\
+    \ amount)\n\n {\n\n```\ns.out.println(\"Withdrawing \" + amount);\nbalance = balance\
+    \ - amount; // balance = amount;\ns.out.println(amount + \" Withdrawn successfully\"\
+    );\n```\n\n }"
+  merge: -1
+  pgno: 174
+- img_proc: true
+  md: "# @Override\n\n```\nvoid checkBalance() {\n    System.out.println(\"Available\
+    \ Balance is \"+balance);\n}\n```\n\n// AccountHolder.java\n\n```\npublic class\
+    \ AccountHolder {\n    public static void main(String[] args) {\n        ATM a\
+    \ = new ATM();\n        a.checkBalance();\n        System.out.println(\" = \"\
+    +balance\");\n        a.deposit(500);\n        a.checkBalance();\n        System.out.println(\"\
+    \ = \"+balance\");\n        a.withdraw(500);\n        a.checkBalance();\n    \
+    \    System.out.println(\" = \"+balance\");\n        a.depositing(500);\n    \
+    \    System.out.println(\"500 Deposited successfully\");\n        System.out.println(\"\
+    Available Balance is 500\");\n    }\n}\n```"
+  merge: -1
+  pgno: 175
+- img_proc: true
+  md: "```\npackage banking;\nimport java.util.Scanner;\n\npublic class Demo {\n \
+    \   public void pvsm(String[] args) {\n        Scanner s = new Scanner(system.in);\n\
+    \        while (true) {\n            S.out.println(\"1.Hello|2.Bye|3.Exit\");\n\
+    \            s.out.println(\"Enter choice:\");\n            int choice = s.nextInt();\n\
+    \            switch (choice) {\n                case 1:\n                    s.out.println(\"\
+    Hello\");\n                    break;\n                case 2:\n             \
+    \       s.out.println(\"Bye\");\n                    break;\n                case\
+    \ 3:\n                    s.out.println(\"Thank you!\");\n                   \
+    \ System.exit(0); //Terminates execution\n                default:\n         \
+    \           s.out.println(\"Invalid choice\");\n            }\n            s.out.println(\"\
+    -----------------\");\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 176
+- img_proc: true
+  md: '# Output
+
+
+    1: Hello 2: Bye 3: Exit
+
+
+    Enter choice
+
+
+    1
+
+
+    Hello
+
+
+    1. Hello 2. Bye 3: Exit
+
+
+    Enter choice
+
+
+    2
+
+
+    Bye
+
+
+    1. Hello 2. Bye 3. Exit.
+
+
+    Enter choice
+
+
+    4
+
+
+    Invalid choice
+
+
+    1. Hello 2: Bye 3: Exit
+
+
+    Enter choice
+
+
+    3
+
+
+    Thank you !!!'
+  merge: -1
+  pgno: 177
+- img_proc: true
+  md: "# Abstraction using factory design pattern.\nRules:\n\n+   1) Generalize all\
+    \ the behaviours of implementation classes & store them\nit into an interface\n\
+    2) Create an object of implementation classes & store its\naddress into an interface\
+    \ reference variable.\n3) Use the interface reference variable in order to access\
+    \ the\nmethods of the implementation classes\n\n```\nEx: Factory_Taxi.java\npackage\
+    \ factorydesign;\n\npublic interface Taxi\n{\n    void startTrip();\n    void\
+    \ endTrip();\n}\n\nola.java\npublic class ola implements Taxi\n{\n    @Override\n\
+    \    public void startTrip() {\n        System.out.println(\"started a Trip using\
+    \ ola App\");\n    }\n\n    public void endTrip() {\n        System.out.println(\"\
+    started a Trip using ola cancelled\");\n    }\n}\n```"
+  merge: -1
+  pgno: 178
+- img_proc: true
+  md: "```\npublic class ubern implements Taxi {\n    @Override\n    public void startTrip()\
+    \ {\n        System.out.println(\"started a Trip using uber App\");\n    }\n\n\
+    ```\n\n```\n@Override\n    public void endTrip() {\n        System.out.println(\"\
+    Canceled a Trip using uber App\");\n    }\n\n```\n\n```\npublic class person {\n\
+    \    Taxi t;\n    if (t Taxi decideApp(int choice)) {\n        if (choice == 1)\
+    \ {\n            t = new ola();\n        } else if (choice == 2) {\n         \
+    \   t = new uber();\n        }\n        return t;\n    }\n}\n\n```"
+  merge: -1
+  pgno: 179
+- img_proc: true
+  md: "# Solution: Java\n\n```\npublic class solution {\n    public static void main(String[]\
+    \ args) {\n        person p = new person();\n        Taxi t = p.decideApp(1);\n\
+    \        s.o.println(t);\n        if (!t == null) {\n            to avoid null\
+    \ pointer Exception\n        }\n        t.startTrip();\n        t.endTrip();\n\
+    \    }\n}\n```\n\nOutput\n\nfactory design.ola@7852ca92\nStarted a Trip using\
+    \ ola App\nCancelled a trip Using uber App\n\n| <<Taxi>> |\n| startTrip(); |\n\
+    | EndTrip(); |\n\n| ola | uber |\n| StartTrip(); | StartTrip(); |\n| EndTrip();\
+    \ | EndTrip(); |"
+  merge: -1
+  pgno: 180
+- img_proc: true
+  md: "# Food Delivery App Java\n\n```\npublic interface FoodDeliveryApp {\n    void\
+    \ orderFood();\n    void cancelFood();\n}\n```\n\n# Swiggy java\n\n```\npublic\
+    \ class Swiggy implements FoodDeliveryApp {\n    @Override\n    public void orderFood()\
+    \ {\n        System.out.println(\"ordering food using swiggy App\");\n    }\n\n\
+    \    @Override\n    public void cancelFood() {\n        System.out.println(\"\
+    Canceled Food in swiggy APP\");\n    }\n}\n```\n\n# Zomato java\n\n```\npublic\
+    \ class Zomato implements FoodDeliveryApp {\n    @Override\n    public void orderFood()\
+    \ {\n        System.out.println(\"ordering food using Zomato APP\");\n    }\n\n\
+    \    @Override\n    public void cancelFood() {\n        System.out.println(\"\
+    canceling food using Zomato APP\");\n    }\n}\n```"
+  merge: -1
+  pgno: 181
+- img_proc: true
+  md: "# foodpanda java\n\n```\npublic class foodpanda implements FoodDelivery\n{\n\
+    \    @Override\n    public void orderfood(c)\n    {\n```\n\n```\n@Override\n \
+    \   public void cancelFood(c)\n    }\n```\n\n```\npublic class\n{\n    FoodDelivery\
+    \ App F;\n    FoodDelivery decideApp(int choice)\n    {\n        if (choice ==\
+    \ 1)\n        {\n            F = new swiggy(c);\n    \n```\n\n```\nelse if (choice\
+    \ == 2)\n    {\n        F = new zomato(c);\n    }\n```"
+  merge: -1
+  pgno: 182
+- img_proc: true
+  md: "```\nmobile.java\npublic class mobile {\n    FoodDeliveryApp(char f);\n   \
+    \ public FoodDeliveryApp(char choice) {\n        if (choice == 's') {\n      \
+    \      f = new swiggy();\n        }\n        else if (choice == 'z') {\n     \
+    \       f = new zomato();\n        }\n        else if (choice == 'f') {\n    \
+    \        f = new foodpanda();\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 183
+- img_proc: true
+  md: "```\nelse {\n    s.out.println(\"Invalid choice\");\n}\nreturn f;\n}\n```\n\
+    \n```\npublic class user {\n    public static void prSM(string[] args) {\n   \
+    \     Scanner s = new Scanner(System.in);\n        Mobile m = new Mobile(System.in);\n\
+    \        s.out.println(\"Enter choice\\n1: swiggy 2: foodpanda\");\n        char\
+    \ choice = s.next().charAt(0);\n        FoodDeliveryApp f = m.decideApp(choice);\n\
+    \        if (f!=null) {\n            f.orderFood();\n            f.cancelFood();\n\
+    \        }\n    }\n}\n```"
+  merge: -1
+  pgno: 184
+- img_proc: true
+  md: '# Output
+
+
+    Enter your choice
+
+    1: Zomato
+
+    2: Swiggy
+
+    3: Foodpanda
+
+
+    order a food by zomato
+
+    cancel " " ""'
+  merge: -1
+  pgno: 185
