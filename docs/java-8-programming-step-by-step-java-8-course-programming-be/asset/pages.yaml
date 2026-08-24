@@ -1,0 +1,2339 @@
+- img_proc: true
+  md: '# JAVA 8 Programming
+
+
+    Daniel Perkins
+
+
+    # BECOME AN EXPERT'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Digitized by the Internet Archive
+
+    in 2022 with funding from
+
+    Kahle/Austin Foundation
+
+
+    https://archive.org/details/java8programming0000perk'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# JAVA 8 PROGRAMMING:
+
+    Step by Step Java 8
+
+    Course Programming
+
+
+    # BECOME AN EXPERT
+
+
+    By Daniel Perkins
+
+
+    Copyright©2015 Daniel Perkins
+
+
+    All Rights Reserved'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   Introduction
+
+    Chapter 1 - Definition
+
+    Chapter 2 - Setting up the Environment
+
+    Setting up the environment locally
+
+    Chapter 3 - Default methods in Java 8
+
+    Multiple defaults
+
+    Static Default methods
+
+    Default method example
+
+    Chapter 4 - Method References
+
+    Chapter 5 - Optional class in Java 8
+
+    Chapter 6 - Nashorn Javascript engine
+
+    Jjs
+
+    Using jjs in an interactive mode
+
+    How to pass arguments
+
+    How to call Javascript in Java
+
+    How to call Java from Javascript
+
+    Chapter 7 - Functional Interfaces in Java 8
+
+    Chapter 8 - Date Time API
+
+    Local! DateTime API
+
+    Zoned DateTime API
+
+    ChronoUnits Enum
+
+    Period and Duration
+
+    Temporal Adjusters
+
+    Backwards Compatibility
+
+    Chapter 9 - Lambda Expressions
+
+    Variable Scope
+
+    Chapter 10 - Streams
+
+    How to generate streams
+
+    Map'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'Filter
+
+
+    Limit
+
+
+    Parallel Processing
+
+
+    Collectors
+
+
+    Statistics
+
+
+    # Conclusion'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Disclaimer
+
+
+    While all attempts have been made to verify the information provided in this book,
+    the author does assume any responsibility for errors, omissions, or contrary interpretations
+    of the subject matter contained within. The information provided in this book
+    is for educational and entertainment purposes only. The reader is responsible
+    for his or her own actions and the author does not accept any responsibilities
+    for any liabilities or damages, real or perceived, resulting from the use of this
+    information.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Introduction
+
+
+    The introduction of Java 8 programming language marked a point of change and improvement
+    in the experience for programmers. The language brought numerous new features
+    which were not available or supported in the previous versions of the language
+    and this led to an improved product and greater satisfaction on the part of the
+    programmers. The language has solved many problems which were experienced when
+    using the previous versions of Java such as in the use of Date-Time API.
+
+
+    Lambda expression is the core of Java 8 programming. Once you understand how to
+    use lambda expressions in your program, you will have become an expert in Java
+    8 programming. However, this doesn''t mean that this is the only feature introduced
+    by the programming language as there are numerous features of the language which
+    will be discussed in this book.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Chapter 1 - Definition
+
+
+    The initial version of Java 8 programming language was released on 18th March
+    2014. This version of the programming language brought a great change and improvement
+    to the historical versions of Java. It introduced a number of features which were
+    not supported in the previous versions of Java programming language. You might
+    know, or have heard of, the “lambda” expression which was first introduced in
+    Java 8.
+
+
+    With this language, you can create programs which support pipeline processing.
+    This version of the language also introduced the “Nashorn engine”, which makes
+    it possible for Java developers to execute Javascript code while programming in
+    Java. To invoke or call a function you can do it by the use of its name, this
+    is in contrast to invoking directly.
+
+
+    The function itself can be used as a parameter, most programmers are used to invoking
+    functions by use of the real arguments or the parameters but this is not a necessity
+    in Java 8 programming language. The date API was'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'also greatly improved in Java 8, meaning programmers get improved functionality
+    for their applications.
+
+
+    The interface for Java 8 applications now has a default method through which it
+    can be implemented. The language also introduced new tools into the Java programming
+    language, examples of these tools are the ones for the compiler and “jdeps” which
+    is used for figuring out the dependencies.
+
+
+    The above are some of the features which we will explore in this book. The language
+    has many features and you will meet these as you continue with your reading.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "For now, consider the following example:\n\n```\nimport java.util.ArrayList;\n\
+    import java.util.Collections;\nimport java.util.Comparator;\nimport java.util.List;\n\
+    public class TesterProgram {\n    public static void main(String[] args[]) {\n\
+    \    List<String> ns1 = new ArrayList<String>();\n    ns1.add(\"Kira \");\n  \
+    \  ns1.add(\"Life \");\n    ns1.add(\"Nicholas \");\n    ns1.add(\"Samuel \");\n\
+    \    ns1.add(\"John \");\n    List<String> ns2 = new ArrayList<String>();\n  \
+    \  ns2.add(\"Kira \");\n    ns2.add(\"Life \");\n    ns2.add(\"Nicholas \");\n\
+    \    ns2.add(\"Samuel \");\n    ns2.add(\"John \");\n    }\n```"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '```
+
+    TesterProgram test = new TesterProgram();
+
+
+    System.out.println("We are now performing a sort in Java 7: ");
+
+
+    test.sortUsingJava7(ns1);
+
+
+    System.out.println(ns1);
+
+
+    System.out.println("we are now performing a sort in Java 8: ");
+
+
+    test.sortUsingJava8(ns2);
+
+
+    System.out.println(ns2);
+
+    }
+
+    private void sortUsingJava7(List<String> ns) {
+
+    //sorting using java 7 syntax
+
+    Collections.sort(ns, new Comparator<String>()() {
+
+    @Override
+
+    public int compare(String string1, String string2) {
+
+    return string1.compareTo(string2);
+
+    }
+
+    });
+
+    }
+
+
+    private void sortUsingJava8(List<String> ns) {
+
+    //sorting using java 8 syntax
+
+    ```'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "```\nCollections.sort(ns, (string1, string2) ->\n  string1.compareTo(string2));\n\
+    }\n```\n\nThe program is now ready. Run it and then observe the output."
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'It should be as follows:
+
+
+    We are now performing a sort in Java 7:
+
+
+    [ John Kira Life Nicholas Samuel ]
+
+
+    We are now performing a sort in Java 8:
+
+
+    [ John Kira Life Nicholas Samuel ]
+
+
+    In this program we have performed a simple sort in both Java 7 and Java 8.
+
+    You will have noticed that we have had to use much more coding in the Java 7 part
+    than for the Java 8 part. For the Java 8 section there is less coding and the
+    code we have written is easy to understand.
+
+
+    We have provided our names in an array. To denote array, we use the square brackets,
+    that is, “[[ ]”, shown in our program above. The names have been sorted in ascending
+    alphabetical order.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Chapter 2 - Setting up the Environment
+
+
+    You can choose to execute your code online or on your local machine. There are
+    numerous websites online which provide you with coding grounds for various programming
+    languages, including Java 8. You can choose to visit these sites and then run
+    your Java code from there.
+
+
+    # Setting up the environment locally
+
+
+    If you are not interested in running your code online, then you can install the
+    Java 8 development environment on your local machine. You need to download Java
+    Development Kit (JDK) or Java Runtime Environment (JRE) and then install it on
+    your machine. Once you have installed this, you can then download the Integrated
+    Development Environment (IDE), which in this case is “Netbeans” and then install
+    it.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'Note that the two files will be downloaded in an “.exe” format, so you just
+    have to double click on them after downloading and they will run effectively.
+    JDK and JRE serve the same purpose, so you can choose to install either of them
+    on your computer.
+
+
+    These must be installed before installing the IDE. You will get an error if you
+    try to install the IDE without having either of the previous two on your computer.
+    Other than the “Netbeans” IDE, you can also choose to use the “Eclipse” IDE and
+    you will achieve the same result.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Chapter 3 - Default methods in Java 8
+
+
+    Java 8 introduced a new feature in which a default method can be implemented in
+    the interface. The idea was introduced for the purpose of backward compatibility,
+    meaning that the old interfaces can be used for leveraging the capability of lambda
+    expressions in Java 8. A good example is an interface made from collections or
+    a list.
+
+
+    These do not allow the declaration of the “forEach” method, if you add such a
+    method, within the implementations of the collections framework. With the introduction
+    of Java 8 programming language, this problem has been solved. This language provides
+    a default implementation of the method so that the collection/list interface can
+    be implemented by default for the method “forEach”. This means that the class
+    in which this is supposed will not have to implement the same.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "It takes the following syntax:\n\n```\npublic interface Person {\n    default\
+    \ void print(){\n        System.out.println(\"My name is Kira!\");\n    }\n}\n\
+    ```\n```\n\nIf you write the above program as it is and then run it. You will\
+    \ get the\nfollowing result as the output:\n\n# My name is Kira!"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# Multiple defaults\n\nIf default functions are implemented in interfaces then\
+    \ a class will implement two interfaces, which have the same default methods,\
+    \ will be able to solve any ambiguities which arise. Consider the program given\
+    \ below:\n\n```\npublic interface Person {\n  default void print(){\n    System.out.println(\"\
+    My name is Kira!\");\n  }\n}\npublic interface male {\n  default void print(){\n\
+    \    System.out.println(\"I am a male!\");\n  }\n}\n```"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "To solve the problem, we will create a method which will override the default\
+    \ implementation. This is shown in the code below:\n\n```\npublic class car implements\
+    \ person, male {\n    default void print(){\n        System.out.println(\"I am\
+    \ a male person named Kira!\");\n    }\n}\n```\n\nWe can also solve this by use\
+    \ of the \"super\" keyword so as to call the default method of the interface which\
+    \ has been specified.\n\nThe code for this is shown below:\n\n```\npublic class\
+    \ human implements person, male {\n    default void print(){\n        person.super.print();\n\
+    \    }\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# Static Default methods\n\nIn Java 8, static helper methods can be used in\
+    \ the interface. This feature was not available before the introduction of Java\
+    \ 8. Consider the example given below:\n\n```\npublic interface person {\n   \
+    \ default void print(){\n        System.out.println(\"I am a person!\");\n   \
+    \ }\n\n    static void run(){\n        System.out.println(\"I am now running!!!\"\
+    );\n    }\n}\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# Default method example\n\nOpen your editor, either “Notepad”, “Netbeans”\
+    \ or “Eclipse” and write the following program:\n\n```\npublic class TesterProgram\
+    \ {\n    public static void main(String args[]){\n        Person person = new\
+    \ Human();\n        person.print();\n    }\n}\n\ninterface Person {\n    default\
+    \ void print(){\n        System.out.println(\"I am a person!\");\n    }\n    static\
+    \ void run(){\n        System.out.println(\"I am now running!!!\");\n    }\n}\n\
+    ```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "```\ninterface Male {\n    default void print(){\n        System.out.println(\"\
+    I am a male person!\");\n    }\n}\n\nclass Human implements Person, Male {\n \
+    \   public void print(){\n        Person.super.print();\n        Male.super.print();\n\
+    \        Person.run();\n        System.out.println(\"I am a human!\");\n    }\n\
+    }\n```\n\nYou can compile the class and then execute it. Observe the result that\
+    \ you get. It should be as follows:"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'I am a person!
+
+
+    I am a male person!
+
+
+    I am now running!!!
+
+
+    I am a human!'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Chapter 4 - Method References
+
+
+    With method references, we can easily point to a particular method by its name.
+    The following are the types of methods which can be pointed at:
+
+
+    +   - Instance methods
+
+    - Static methods
+
+    - Constructors using the “new” operator
+
+
+    We will now give an example of a method reference in Java 8. Open your editor
+    of choice and write the following program:
+
+
+    ```
+
+    import java.util.ArrayList;
+
+    import java.util.List;
+
+    public class TesterProgram {
+
+    public static void main(String args[]){
+
+    List ns = new ArrayList();
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '```
+
+    ns.add("Kira ");
+
+    ns.add("Life ");
+
+    ns.add("Nicholas ");
+
+    ns.add("Samuel ");
+
+    ns.add("John ");
+
+    ns.forEach(System::out::println);
+
+    }
+
+    }
+
+    ```
+
+
+    The method "System::out::println" has been passed as a static method reference.
+
+
+    Once you have written the program, run it and then observe the result. It should
+    be as follows:'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'Kira
+
+
+    Life
+
+
+    Nicholas
+
+
+    Samuel
+
+
+    John'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Chapter 5 - Optional class in Java 8
+
+
+    The Optional class in Java 8 represents a container object which contains objects
+    which are not null. In other words, it represents null having absent value. It
+    provides various utility methods which can be used to check for values which are
+    available or not available, rather than checking for the null ones. This class
+    is another new addition in Java 8.
+
+
+    The class is declared using the following syntax:
+
+
+    ```
+
+    public final class Optional<T>
+
+    extends Object
+
+    ```
+
+
+    The class has the following methods:
+
+
+    +   - boolean equals(Object obj) - Checks on whether the other object is "equal
+    to" this option.
+
+    - Optional<T> filter(Predicate<? super T> predicate)'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'Checks on whether the present value matches the given predicate. If true, it
+    returns an Optional which is describing the value, otherwise, it returns an empty
+    Optional.
+
+
+    +   - <U> Optional<U> flatMap(Function<? super T,Optional<U>> mapper)
+
+
+    It checks whether a value is present. If true, it applies the provided Optional-bearing
+    mapping function to the value and then it returns the result. Otherwise, it returns
+    an empty Optional.
+
+
+    +   - T get() - It checks on whether a value is present in this Optional. If true,
+    it returns the value. Otherwise it throws a “NoSuchElementException” Exception.
+
+
+    +   - int hashCode() - It looks for the hash code of the present value and then
+    it returns it. A zero (0) is returned if no value is present.
+
+
+    +   - void ifPresent(Consumer<? super T> consumer) - If a value is provided, it
+    invokes the specified consumer having the value, otherwise it does nothing.
+
+
+    +   - boolean isPresent() - It returns “true” if a value is provided, otherwise
+    it returns “false”.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '+   - <U> Optional<U> map(Function<? super T,? extends U> mapper - If there
+    is a provided value, the provided mapping function is applied to it. If the result
+    is not null, an Optional describing the result is returned.
+
+
+    +   - static <T> Optional<T> of(T value) - An Optional having the specified present
+    not null value is returned.
+
+
+    +   - static <T> Optional<T> nullable(T value) - An Optional which describes the
+    specified value if not null is returned. Otherwise, an empty Optional is returned.
+
+
+    +   - T orElse(T other) - Returns the value which is present, otherwise it returns
+    other.
+
+
+    +   - TElseGet(Supplier<? extends T> other) - It returns the present value, otherwise,
+    it invokes other and returns the result of the invocation.
+
+
+    +   - <X extends Throwable> T orElseThrow(Supplier<? extends X> exceptionSupplier)
+    - It returns the present value, otherwise, it throws an exception which is to
+    be created by the supplier which has been provided.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '+   - String toString() - A non-empty string representation of the Optional
+    which is suitable for debugging is returned.
+
+
+    The Optional class has inherited methods from the class "java.lang.Object" from
+    previous versions of Java.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "We now need to demonstrate this by the use of a program. Just open your editor\
+    \ and then write the following code:\n\n```\nimport java.util.Optional;\npublic\
+    \ class TesterProgram {\n    public static void main(String args[]){\n       \
+    \ TesterProgramtester = new TesterProgram();\n        Integer v1 = null;\n   \
+    \     Integer v2 = new Integer(20);\n        //Optional.ofNullable - the passed\
+    \ parameters can be null.\n        Optional<Integer> in = Optional.Nullable(v1);\n\
+    \        //Optional.of - it will throw \"NullPointerException\" if the parameter\
+    \ passed is null\n        Optional<Integer> in2 = Optional.of(v2);\n\n       \
+    \ System.out.println(tester.sum(in,in2));\n    }\n    public Integer sum(Optional<Integer>\
+    \ in, Optional<Integer> in2){\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "```\n//Optional.isPresent – checks on whether the value is present or\nnot\
+    \ //present\nSystem.out.println(\"The first parameter has been provided: \" +\n\
+    in.isPresent());\nSystem.out.println(\"The second parameter has been provided:\
+    \ \" \n+ in2.isPresent());\n//Optional.orElse – the value will be returned if\
+    \ it is present,\notherwise\n//a default value will be passed.\nInteger v1 = in2.orElse(new\
+    \ Integer(0));\n//Optional.get – this will get the value and it must be available\n\
+    Integer v2 = in2.get();\nreturn v1 + v2;\n}\n}\n```\n\nOnce you have written the\
+    \ program, run it and then observe the output or\nthe result that you get. It\
+    \ should be as follows:"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '```
+
+    The first parameter has been provided: false
+
+    nThe second parameter has been provided: true
+
+    ```
+
+
+    20
+
+
+    We have not provided the value of the first parameter or integer. The compiler
+    will check for it and realize this, the result will then be “false”. This explains
+    the source of the first line of the output.
+
+
+    We have provided the value of the second parameter. The value is 20. The method
+    will check and then realize this. This explains the source of the rest of the
+    output. You have now learnt how to use some of the new methods introduced in Java
+    8, which is a great first step.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Chapter 6 - Nashorn Javascript engine
+
+
+    When Java 8 was introduced, it came with the Nashorn engine which was meant to
+    replace the Rhino Javascript that was already in us. The performance of the new
+    engine is better as it offers almost twice what was offered in the previous engine.
+
+
+    The Nashorn engine performs a direct compilation of the programmer''s code. The
+    compilation is done in the memory of the machine and the resulting bytecode is
+    then passed to the Java Virtual Machine (JVM). The improved performance shown
+    by this engine is due to use of “invokokedynamics” which is a feature which was
+    introduced for the first time in Java 7.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Jjs
+
+
+    The Nashorn engine introduced in Java 8 comes with a new command line tool. This
+    command line is known as “jjs” and is used for direct execution of Javascript
+    code.
+
+
+    We now need to demonstrate how the Javascript can be interpreted using this command
+    line. Create a new file and give it a name with a “.js” extension. I have given
+    you my file the name “test.js”. The extension implies that the file contains Javascript
+    code.
+
+
+    Once you have saved the file, add the following code to it:
+
+
+    ```
+
+    print(''Hello there!'');
+
+    ```
+
+
+    Once you have added the code, save the file for the second time. Open the console
+    and then execute the following command:'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# jjs test.js
+
+
+    Notice that the last name of the command is the name that I gave to my Javascript
+    file. Make sure that it matches the name of your file without forgetting the “js”
+    extension.
+
+
+    After executing the command, you should get the following output:
+
+
+    ```
+
+    Hello there!
+
+    ```'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Using jjs in an interactive mode
+
+
+    In the previous example, we saved our code in a file and then used "jjs" to navigate
+    to the location of the file and we then executed it. However, the coding and the
+    execution can both be done on the "jjs" console. Just open the "jjs" console and
+    then execute the following commands:
+
+
+    ```
+
+    C:\JAVA>jjs
+
+    jjs> print("Hello there!")
+
+    ```
+
+
+    Once you have written the last command shown above, press the "Enter" key and
+    then observe what happens on the console. You will observe the following output
+    displayed on the console:'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Hello there!
+
+
+    We have achieved the same result to the previous example but in a very simple
+    and much faster way. To quit the “jjs” console, just type the following command
+    and then hit the “Enter” key:
+
+
+    ```
+
+    quit()
+
+    ```
+
+
+    After pressing the “Enter” key, you will notice that the console will disappear.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# How to pass arguments
+
+
+    It is possible for you to pass arguments or parameters within your function in
+    the “jjs” console. Open the prompt and then execute the following commands:
+
+
+    ```
+
+    C:\JAVA> jjs -- x y
+
+    jjs> print("The letters are: ''" +arguments.join(", " "))
+
+    ```
+
+
+    After typing the last command shown above, hit the “Enter” key and then observe
+    the effect. The following output will be observed on the console:
+
+
+    The letters are: x, y, z
+
+
+    We have provided the console with three letters of the alphabet, that is, “x",
+    “y" and “z". These are the arguments in our example. We have then'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'commanded the console to concatenate the three arguments by use of the "join()"
+    method. The three arguments have been joined and then displayed on the console
+    as the result.
+
+
+    This shows that the console is powerful and can be used to perform some complex
+    tasks as well as the basic ones.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# How to call Javascript in Java
+
+
+    In Java 8, it is possible for programmers to invoke or call Javascript code and
+    then the interpretation will be done in Java. This is done by use of the "ScriptEngineManager".
+
+
+    Let us demonstrate this by use of an example.
+
+
+    Open the text editor of choice and then create a new file. Save the file and then
+    add the following code to it:
+
+
+    ```
+
+    import javax.script.ScriptEngine;
+
+    import javax.script.ScriptEngineManager;
+
+    import javax.script.ScriptException;
+
+
+    public class TesterProgram {
+
+    public static void main(String args[]){
+
+    ScriptEngineManager sEManager = new
+
+    ScriptEngineManager();
+
+    ```'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '```
+
+    ScriptEngine nashorn = sManager.getEngineByName("nashorn");
+
+    String nm = "Kira";
+
+    Integer rs = null;
+
+    try {
+
+    nashorn.eval("print(" + nm + ")");
+
+    rs = (Integer) nashorn.eval("20 + 5");
+
+    }catch(ScriptException ex) {
+
+    System.out.println("Error occurred while executing the script: " + ex.getMessage());
+
+    }
+
+    System.out.println(rs.toString());
+
+
+    ```
+
+
+    After writing the program, save the file again and then execute it. You can choose
+    to use the "javac" compiler.
+
+
+    In this case, compile the program by typing the following command on the prompt:'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '```
+
+    javac TesterProgram.java
+
+    ```
+
+
+    Notice the name which I have used. It should be the name of the file not the class
+    name.
+
+
+    After compiling the source code, execute it using the following command:
+
+
+    ```
+
+    java TesterProgram
+
+    ```
+
+
+    After executing the above command, observe the resulting output. It will be as
+    follows:
+
+
+    # Kira
+
+
+    # 25
+
+
+    The value 25 is the result of adding 5 to 20.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# How to call Java from Javascript
+
+
+    It is also possible for programmers to import and use classes which belong to
+    Java while in Javascript. Open your text editor and then create a new file.
+
+    Give it a name and then save it. I have given my file the name "example.js".nAfter
+    saving, add the following code to it:
+
+
+    ```
+
+    var BigDecimalNumber = Java.type(''java.math.BigDecimal'');
+
+
+    function compute(size, percentage) {
+
+    var rs = new BigDecimalNumber(size).multiply(
+
+    new BigDecimalNumber(percentage)).divide(
+
+    new BigDecimalNumber("100"),
+
+    BigDecimal.ROUND_HALF_EVEN);
+
+    return rs.toPlainString();
+
+    }
+
+
+    var rs = compute(79200000000000000035,14.9);
+
+
+    print(rs);
+
+    ```'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'Again, save the program and then execute it. Observe the resultant output.
+
+    The number will be rounded off.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Chapter 7 - Functional Interfaces in Java 8
+
+
+    Functional interfaces are a kind of interface that exhibits only a single functionality.
+    An example of this is an interface which uses the method “compareToTo” so as to
+    compare the values of two variables. There are numerous functional interfaces
+    in Java 8 which are mostly used in Lambda expressions.
+
+
+    These functional interfaces are defined in the package “java.util.Function” and
+    they include the following:
+
+
+    +   - LongBinaryOperator - It represents the operation between two operands which
+    are long-valued and which give a long-valued result.
+
+
+    +   - BiFunction<T,U,R> - It represents the function which accepts two arguments
+    and then produces some result from the arguments.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '+   - BiPredicate<T,U> - It represents the predicate (boolean-valued function)
+    having two arguments.
+
+
+    +   - Consumer<T> - It represents the operation which accepts a single argument
+    and then returns no result.
+
+
+    +   - BiConsumer<T,U> - It represents the operation which accepts two input arguments
+    and then returns no result.
+
+
+    +   - BooleanSupplier - It represents the supplier of results which are boolean-valued.
+
+
+    +   - Consumer<T> - It represents the operation which accepts a single input argument
+    and then returns no result.
+
+
+    +   - DoubleBinaryOperator - It represents the operation between two double-valued
+    operands which produces a double-valued result.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '+   - **DoubleConsumer** - It represents the operation which takes a single
+    double-valued argument and then returns no result.
+
+
+    +   - **DoubleFunction<R>** - It represents the function which takes a double-valued
+    argument and then produces a result.
+
+
+    +   - **DoubleSupplier** - It represents a supplier which is of double-valued
+    results.
+
+
+    +   - **DoubleToIntFunction** - It represents a function which accepts an argument
+    which is double-valued and then produces a result which is int-valued.
+
+
+    +   - **DoublePredicate** - It represents the predicate (boolean-valued function)
+    which has a single double-valued argument.
+
+
+    +   - **DoubleToLongFunction** - It represents the function which takes a double-valued
+    argument and then produces a long-valued result.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '+   **DoubleUnaryOperator** - It represents the operation on an operand which
+    is single double-valued and which produces a double-valued result.
+
+
+    +   **Function<T,R>** - It represents the function which takes a single argument
+    and then produces a result.
+
+
+    +   **IntConsumer** - It represents the operation which takes an argument which
+    is single int-valued and returns no result.
+
+
+    +   **IntFunction<R>** - It represents the function which takes an argument which
+    is int-valued and produces a result.
+
+
+    +   **IntBinaryOperator** - It represents the operation between two operands which
+    are int-valued and produces an int-valued result.
+
+
+    +   **ToDoubleBiFunction<T,U>** - It represents the function which takes two arguments
+    and then gives a double-valued result.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '+   - IntToLongFunction - It represents the function which takes an argument
+    which is int-valued and then gives a long-valued result.
+
+
+    +   - IntPredicate - It represents the predicate “boolean-valued function” of
+    one argument which is int-valued.
+
+
+    +   - IntSupplier - It represents the supplier of results which are int-valued.
+
+
+    +   - IntToDoubleFunction - It represents the function which takes an argument
+    which is int-valued and gives a double-valued result.
+
+
+    +   - IntUnaryOperator - It represents the operation on a single operand which
+    is int-valued which produces a result which is int-valued.
+
+
+    +   - LongConsumer - It represents the operation which takes an argument which
+    is single long-valued and then returns no result.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '+   - LongFunction<R> - It represents the function which takes an argument
+    which is long-valued and then produces a result.
+
+
+    +   - LongPredicate - It represents the predicate “boolean-valued function” of
+    one argument which is long-valued.
+
+
+    +   - BinaryOperator<T> - It represents the operation between two operands of
+    the same type and the produced result is of the same type as the operands.
+
+
+    +   - ObjDoubleConsumer<T> - It represents the operation which takes an argument
+    which is object-valued and double-valued and then gives no result.
+
+
+    +   - LongUnaryOperator - It represents the operation on an operand which is single
+    long-valued and which gives a long-valued result.
+
+
+    +   - UnaryOperator<T> - It represents the operation on an operand which gives
+    a result which is of the same type as the operand.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'We will now demonstrate a function interface with an example in Java 8.
+
+
+    The interface "Predicate<T>" is a functional interface and it has the method "test(Object)"
+    whose return value is a Boolean. The tested object should have a "true" or "false"
+    result.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'Open your editor and then create a new file.
+
+
+    Add the following code to the file:
+
+
+    ```
+
+    import java.util.List;
+
+    import java.util.Arrays;
+
+    import java.util.function.Predicate;
+
+    public class TesterProgram {
+
+    public static void main(String[] args[]) {
+
+    List<Integer> mylist = Arrays.asList(11, 12, 13, 14, 15, 16, 17, 18, 19);
+
+    Predicate<Integer> mypredicate = k -> true
+
+    // k is the parameter passed for testing the method of Predicate interface
+
+    // the method will always return a “true” regardless of what the value “k” //has.
+
+    System.out.println("Printing all the specified numbers:");
+
+    //let us pass the parameter “k"
+
+    eval(list, k->true);
+
+    Predicate<Integer> p1 = k -> k%2 == 0
+
+    ```'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "```\n// k has been passed as the parameter to the test method of the\nPredicate\
+    \ //interface\n// if k%2 results into a zero, then test method will return a\n\
+    \"true\".\nSystem.out.println(\"Printing all the even numbers:\");\neval(list,\
+    \ k-> k%2 == 0); \n\nPredicate<Integer> p2 = k -> k > 3\n// k has been passed\
+    \ as the parameter to the test method of the\nPredicate\n// the test method will\
+    \ give a \"true\" if \"k\" is greater than 13.\nSystem.out.println(\"Printing\
+    \ numbers greater than 13:\");\neval(list, k-> k > 13 );\n}\npublic static void\
+    \ eval(List<Integer> mylist, Predicate<Integer>\nmypredicate) {\n  for(Integer\
+    \ k: mylist) {\n    if(mypredicate.test(k)) {\n      System.out.println(k + \"\
+    \ \");\n    }\n  }\n  System.out.println();\n}\n```"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    Once you have written the above code, save the file. You can then begin to execute
+    it. You will observe the following as the result:
+
+
+    # Printing all the specified numbers:
+
+
+    +   11
+
+    12
+
+    13
+
+    14
+
+    15
+
+    16
+
+    17
+
+    18
+
+    19
+
+
+    The figure shows the first part of the output. We are getting all the numbers
+    which we specified.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'The second part of the output will be as follows:
+
+
+    Printing all the even numbers:
+
+
+    +   - 12
+
+    - 14
+
+    - 16
+
+    - 18
+
+
+    The second part of the output is shown in the above figure and it is made up of
+    even numbers only. The numbers have been selected from our list of specified numbers.
+    We have used a formula to determine whether or not a number is even.
+
+
+    The last part of the output will be as follows:'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'Printing numbers greater than 13:
+
+
+    +   - 14
+
+
+    +   - 15
+
+
+    +   - 16
+
+
+    +   - 17
+
+
+    +   - 18
+
+
+    +   - 19
+
+
+    The last part of the output is made up of numbers which are greater than 13. The
+    numbers have also been selected from the list which we had provided to the program.
+    Note the formula we have used to check whether a number is even or not. If it
+    can be divided by 2 without a remainder, then it is even, otherwise, it is not
+    an even number.
+
+
+    You have seen how the function interface is very important in programming and
+    how it can be implemented. It is a new feature introduced in Java 8.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Chapter 8 - Date Time API
+
+
+    Java 8 introduced a new Date API which brought a solution to the problems experienced
+    by use of Date time APIs in the previous versions of Java. The old date API had
+    the following issues:
+
+
+    +   - Poorly designed – It had a Default Date beginning in 1900, months starting
+    from 1 and days starting from 0, meaning that there is absence of uniformity.
+    Direct methods for operations on a date were very few. With new APIs, there are
+    multiple utility functions which can be used for such operations.
+
+
+    +   - No safety for threads – “java.util.Date” has no safety for threads. This
+    meant that the developer had to implement a mechanism for handling concurrency
+    when implementing date in his or her application. Current date time APIs had no
+    setter methods and were immutable.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '+   - Difficulty of handling time zones - When dealing with issues related
+    to time zones, the developer had to write a lot of code. When developing a new
+    API, you had to adhere to a domain specific design.
+
+
+    The Java date API is contained in the package “java.time”. The following classes
+    were introduced:
+
+
+    +   - Local - It provides a simplified method on how the developer can handle
+    time zone related issues.
+
+
+    +   - Zoned - This is a new API that deals with various time zones.
+
+
+    Let us explore some of the methods and classes which are associated with this
+    API.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# Local DateTime API\n\nThis is used in cases where the time zones are not\
+    \ required because they are not necessary. It makes the work of development very\
+    \ simple. We now need to create a new program to demonstrate how this works.\n\
+    \nOpen your editor and then create a new file. Add the following code to it:\n\
+    \n```\nimport java.time.LocalDateTime;\nimport java.time.LocalTime;\nimport java.time.LocalDate;\n\
+    import java.time.Month;\npublic class TesterProgram {\n    public static void\
+    \ main(String args[]){\n        TesterProgram tp = new TesterProgram();\n    \
+    \    tp.testLocalDateTime();\n    }\n    public void testLocalDateTime(){}\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '```
+
+    // Getting the date and time as at the current
+
+    LocalDateTime cTime = LocalDateTime.now();
+
+    System.out.println("The Current DateTime is: " + cTime);
+
+    LocalDate d1 = cTime.toLocalDate();
+
+    System.out.println("d1: " + d1);
+
+    Month m = cTime.getMonth();
+
+    int d = cTime.getDayOfMonth();
+
+    int secs = cTime.getSeconds();
+
+    System.out.println("Month: " + m
+
+    + "day: " + d
+
+    + "seconds: " + secs);
+
+
+    LocalDate d2 = cTime.withDayOfMonth(9).withYear(2014);
+
+    System.out.println("d2: " + d2);
+
+    //11 November 2014
+
+    LocalDate d3 = LocalDate.of(2014, Month.NOVEMBER, 11);
+
+    System.out.println("d3: " + d3);
+
+    //21 hour 45 minutes
+
+    LocalTime d4 = LocalTime.of(21, 45);
+
+    System.out.println("d4: " + d4);
+
+    ```'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '```
+
+    //parsing a string
+
+    LocalTime d5 = LocalTime.parse("21:45:30");
+
+    System.out.println("d5: " + d5);
+
+    }
+
+    }
+
+    ```
+
+
+    You can then run the program either directly or by use of the console discussed
+    previously. You will observe the following as the result:
+
+
+    The Current Date Time is: 2015-06-25T12:00:15.448
+
+
+    d1: 2015-06-25
+
+    M: JUNEd: 25secs: 48
+
+    d2: 2014-06-09T11:00:15.448
+
+    d3: 2014-11-11
+
+    d4: 21:45
+
+    d5: 21:45:30
+
+
+    You should now be familiar with how to use this class.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# ZonedDateTime API\n\nThis is applied or used whenever we need to know the\
+    \ time zone.\n\nLet us demonstrate this by use of an example. Open your text editor\
+    \ and then write the following program:\n\n```\nimport java.time.ZoneId;\nimport\
+    \ java.time.ZonedDateTime;\npublic class TesterProgram {\n    public static void\
+    \ main(String args[]){\n        TesterProgram tp = new TesterProgram();\n    \
+    \    tp.testZonedDateTime();\n    }\n\n    public void testZonedDateTime(){\n\
+    \        // Getting the date and time as per the current\n        ZonedDateTime\
+    \ d1 = ZonedDateTime.parse(\"2012-11-04T11:45:30+06:30[Asia/Karachi]\");\n   \
+    \ }\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '```
+
+    System.out.println("d1: " + d1);
+
+    ZoneId zld = ZoneId.of("Europe/Paris");
+
+    System.out.println("zld: " + zld);
+
+    ZoneId cZone = ZoneId.systemDefault();
+
+    System.out.println("cZone: " + cZone);
+
+    }
+
+    ```
+
+
+    You can then save the program and run or execute it. You will notice the following
+    result:
+
+
+    The Current DateTime is: 2015-06-25T12:00:15.448
+
+    d1: 2012-11-04T11:45:30+06:30[Asia/Karachi]
+
+    zld: Europe/Paris
+
+    cZone: Etc/UTC'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# ChronoUnits Enum\n\nThis was first introduced in Java 8. It replaces the\
+    \ integers which were used\nin old APIs for representation of day, month and other\
+    \ values. We will\ndemonstrate the use of this by use of a program.\n\nCreate\
+    \ a new file and then save it. Add the following code to it:\n\n```\nimport java.time.temporal.ChronoUnit;\n\
+    \nimport java.time.LocalDate;\npublic class TesterProgram {\n\npublic static void\
+    \ main(String args[]){\n    TesterProgram tp = new TesterProgram();\n    tp.testChromoUnits();\n\
+    }\n\npublic void testChronoUnits(){\n    //Getting the date as per the current\n\
+    \    LocalDate tday = LocalDate.now();\n```"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "```\nSystem.out.println(\" The current date is: \" + tday);\n// adding 1 week\
+    \ to the above date\nLocalDate nWeek = tday.plus(1, ChronoUnit.WEEKS);\nSystem.out.println(\"\
+    Next week: \" + nWeek);\n// adding 1 month to the above date\nLocalDate nMonth\
+    \ = tday.plus(1, ChronoUnit.MONTHS);\nSystem.out.println(\"Next month: \" + nMonth);\n\
+    // adding 1 year to the above date\nLocalDate nYear = tday.plus(1, ChronoUnit.YEARS);\n\
+    System.out.println(\"Next year: \" + nYear);\n// adding 10 years to the above\
+    \ date\nLocalDate nDecade = tday.plus(1, ChronoUnit.DECADES);\nSystem.out.println(\"\
+    The date after ten year will be: \" + \nnDecade);\n}\n```\n\nSave the program\
+    \ and then run it. The following result will be observed:"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'The current date is: 2015-06-25
+
+
+    Next week: 2015-07-02
+
+
+    Next month: 2015-07-25
+
+
+    The date after ten year will be: 2025-06-25'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Period and Duration
+
+
+    For the purpose of dealing or handling time differences, Java 8 introduced two
+    classes. These are the following:
+
+
+    +   - **Period** – deals with time based on date
+
+    - **Duration** – deal with time based on the amount of time
+
+
+    We want to demonstrate this by an example.
+
+
+    Create a new file in your text editor and then add the following code:
+
+
+    ```
+
+    import java.time.temporal.ChronoUnit;
+
+    import java.time.Period;
+
+    import java.time.LocalDate;
+
+    import java.time.Duration;
+
+    ```'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "```\nimport java.time.LocalTime;\npublic class Testerprogram {\n    public\
+    \ static void main(String args[]){\n        TesterProgram tp = new TesterProgram();\n\
+    \        tp.testPeriod();\n        tp.testDuration();\n    }\n\n    public void\
+    \ testPeriod(){\n        //Getting the current date\n        LocalDate d1 = LocalDate.now();\n\
+    \        System.out.println(\"The current date is: \" + d1);\n        //adding\
+    \ 1 month to the above date\n        LocalDate d2 = d1.plus(1, ChronoUnit.MONTHS);\n\
+    \        System.out.println(\"Next month: \" + d2);\n        Period p = Period.between(d2,\
+    \ d1);\n        System.out.println(\"Period: \" + p);\n    }\n\n    public void\
+    \ testDuration(){\n        LocalTime t1 = LocalTime.now();\n        Duration twoHrs\
+    \ = Duration.ofHours(2);\n    }\n```"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '```
+
+    LocalTime t2 = t1.plus(twoHrs);
+
+    Duration d = Duration.between(t1, t2);
+
+    System.out.println("Duration: " + d);
+
+    }
+
+    }
+
+    ```
+
+
+    Write the program as it is above and then save it. Run it either directly or via
+    the console as we did previously.
+
+
+    You will observe the following output:
+
+
+    The current date is: 2015-06-25
+
+    Next week: 2015-07-02
+
+    Period: P-1N
+
+    Duration: PT2H'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# Temporal Adjusters
+
+
+    With this class, you can perform mathematics associated with date. A good example
+    is when you want to obtain the third Tuesday of a particular month. This feature
+    was introduced into programming by Java 8. We will demonstrate this by use of
+    a Java 8 program.
+
+
+    Open the text editor of choice and then create a new file. Give the file name
+    and then save it.
+
+
+    Add the following code to the file:
+
+
+    ```
+
+    import java.time.temporal.TemporalAdjusters;
+
+    import java.time.DayOfWeek;
+
+    import java.time.LocalDate;
+
+    public class TesterProgram {
+
+    public static void main(String args[]) {
+
+    ```'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '```
+
+    TesterProgram tp = new TesterProgram();
+
+
+    tp.testAdjusters();
+
+    }
+
+    public void testAdjusters(){
+
+    //Getting the date as at the current.
+
+
+    LocalDate d1 = LocalDate.now();
+
+
+    System.out.println("The Current date is: " + d1);
+
+    //getting the next Friday
+
+
+    LocalDate nextFriday = d1.with(TemporalAdjusters.next(DayOfWeek.FRIDAY));
+
+    System.out.println("Next Friday on : " + nextFriday);
+
+    //getting the second Sunday of the next month
+
+
+    LocalDate finYear = LocalDate.of(d1.getYear(),d1.getMonth(), 1);
+
+
+    LocalDate secondSunday = finYear.with(
+
+    TemporalAdjusters.nextOrSame(DayOfWeek.SUNDAY)).with(
+
+    TemporalAdjusters.next(DayOfWeek.SUNDAY));
+
+
+    System.out.println("Second Sunday on : " + secondSunday);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: 'The current date is: 2015-06-26
+
+
+    Next Friday on: 2015-07-03
+
+
+    Second Sunday on: 2015-07-12'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# Backwards Compatibility
+
+
+    We can apply the method “toInstant()”. With this method, we can be in a position
+    to convert the original date and time to a format similar to the one provided
+    by the new date API. Let us demonstrate this by use of a program.
+
+
+    Create a new file in your editor and save it. After that, add the following code
+    to the file:
+
+
+    ```
+
+    import java.time.Instant;
+
+    import java.util.Date;
+
+    import java.time.LocalTime;
+
+    import java.time.ZonedDateTime;import java.time.ZoneId;
+
+    public class TesterProgram {
+
+    public static void main(String args[]){
+
+    TesterProgram tp = new TesterProgram();ntp.testBackwardCompatibility();
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '```
+
+    public void testBackwardCompatatility(){
+
+    //Getting the date as per the current
+
+    Date cDate = new Date();
+
+    System.out.println("The Current date is: " + cDate);
+
+    //Getting the instant of the current date in milliseconds
+
+    Instant current = cDate.toInstant();
+
+    ZoneId cZone = ZoneId.systemDefault();
+
+    LocalDateTime lDT = LocalDateTime.ofInstant(current, cZone);
+
+    System.out.println("The Local date is: " + lDT);
+
+    ZonedDateTime zDTime = ZonedDateTime.ofInstant(current, cZone);
+
+    System.out.println("The zoned date is: " + zDTime);
+
+    }
+
+    ```
+
+
+    Save the program in the file and then run it. You can choose to run it directly
+    from the IDE or by use of “javac” which will provide you with a console. If you
+    do not know how to do this, consult from the previous sections of this book.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: 'You will observe the following result from the program:
+
+
+    The Current date is: Fri June 26 11:17:06 UTC 2015
+
+
+    The Local date is: 2015-26-06T05:11:17.635
+
+
+    The Zoned date is: 2015-12-10T06:42:07.620Z[Etc/UTC]'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Chapter 9 - Lambda Expressions
+
+
+    These were introduced into programming for the first time in Java 8. In fact,
+    it is the greatest and most important feature of this language. With lambda expressions,
+    functional programming has been made easier and the process of software development
+    has been made very simple.
+
+
+    A lambda expression takes the following syntax:
+
+
+    ```
+
+    parameter -> expression body
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'In Java 8, lambda expressions have the following characteristics:
+
+
+    +   - Optional type declaration ** – The type of the parameter does not need to
+    be declared. This is because the compiler can know the type of the parameter from
+    its value.
+
+
+    +   - Optional curly brackets ** – In case the body has only a single statement,
+    then you do not have to use curly brackets in the body of the expression.
+
+
+    +   - Optional parenthesis around the parameter ** – If the parameter is a single
+    one, then you do not have to place it inside the parenthesis. However, if you
+    are having multiple or more than one parameters, then you will have to place them
+    inside parenthesis.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: +   Optional return keyword – If the program body has an expression or expressions
+    which are expected to return some value, then this will be done automatically.
+    If you intend to have an expression which should return a value, then you should
+    use curly brackets.
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "We need to demonstrate how lambda expressions are used in Java 8.\nOpen your\
+    \ text editor of choice and create a new file. Give it a name and thenhen save\
+    \ it.\n\nAdd the following code to the file:\n\n```\npublic class TesterProgram\
+    \ {\n    public static void main(String[] args[]){\n        TesterProgram tp =\
+    \ new TesterProgram();\n        //having a type declaration\n        MathOperation\
+    \ add = (int x, int y) -> x + y;\n        //having no type declaration\n     \
+    \   MathOperation sub = (x, y) -> x - y;\n        //having a return statement\
+    \ along with the curly braces\n        MathOperation multiply = (int x, int b)\
+    \ -> return x * y;\n        //having no return statement and no curly braces\n\
+    \        MathOperation div = (int x, int y) -> x / y;\n        System.out.println(\"\
+    20 + 5 = \" + tp.operate(20, 5, add));\n        System.out.println(\"20 - 5 =\
+    \ \" + tp.operate(20, 5, sub));\n        System.out.println(\"20 x 5 = \" + tp.operate(20,\
+    \ 5, multiply));\n    }\\}\n```"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "```\nSystem.out.println(\"20 / 5 = \" + tp.operate(20, 5, div));\n//having\
+    \ parenthesis\nGreetingService gService1 = msg -> System.out.println(\"Hello \"\
+    \ + msg);\n//having no parenthesis\nGreetingService gService2 = (msg) -> System.out.println(\"\
+    Hello \" + msg);\ngService1.sayMessage(\"Kira\");\ngService2.sayMessage(\"Samuel\"\
+    );\n}\n\ninterface MathOperation {\n int operation(int x, int y);\n}\ninterface\
+    \ GreetingService {\n void sayMessage(String msg);\n}\n private int operate(int\
+    \ x, int y, MathOperation mOperation){\n return mOperation.operation(x, y);\n\
+    }\n}\n}\",\n```"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'Save the program and then execute it. Again, execute it directly from the IDE
+    or using the compiler "javac" and you will get the same result. The following
+    output should be observed from the program:
+
+
+    ```
+
+    20 + 5 = 25
+
+    ```
+
+
+    ```
+
+    20 - 5 = 15
+
+    ```
+
+
+    ```
+
+    20 * 5 = 100
+
+    ```
+
+
+    ```
+
+    20 / 5 = 4
+
+    ```
+
+
+    ```
+
+    Hello Kira
+
+    ```
+
+
+    ```
+
+    Hello Samuel
+
+    ```
+
+
+    The program has shown how to use lambda expressions in Java 8 programming.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: 'However, there are some points that you need to note regarding the use of lambda
+    expressions in Java 8.
+
+
+    These include the following:
+
+
+    +   - Lambda expressions are used in definition of inline implementation of an
+    interface for a program, that is, is an interface having only a single body. In
+    our program above, the Math operations have been defined by use of different lambda
+    expressions. We have also implemented the method "sayMessage" by use of a lambda
+    expression.
+
+
+    +   - With lambda expressions, you do not have to use anonymous classes. However,
+    lambda expressions makes functional programming very powerful and yet very easy.'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "# Variable Scope\n\nIt is possible for you to call or refer to any of the variables\
+    \ in your program by use of lambda expressions. If a variable is assigned a value\
+    \ more than once, then the lambda expression will throw an error or exception\
+    \ to the compiler. Let us demonstrate this by use of a program.\n\nOpen your text\
+    \ editor of choice and then create a new file. Give it a name and then save it.\
+    \ Add the following code to the file:\n\n```\npublic class TesterProgram {\n \
+    \   final static String hello = \"Hi !\";\n    public static void main(String[]\
+    \ args){\n        GreetingService gService1 = msg -> System.out.println(hello\
+    \ + msg);\n        gService1.sayMessage(\"Kira\");\n    }\n}\ninterface GreetingService\
+    \ {\n```"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '```
+
+    void sayMessage(String msg);
+
+    }
+
+    }
+
+    ```
+
+
+    Once you have added the above code to the file, save it and then run it.
+
+    Observe the result or output that you will get from the program. It should be
+    as follows:
+
+
+    # Hi! Kira'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# Chapter 10 - Streams
+
+
+    Java 8 introduced a new layer called stream. Streams make it possible for programmers
+    to process their data in a declarative manner, similar to what happens in SQL.
+
+
+    Consider the example SQL statement shown below:
+
+
+    ```
+
+    SELECT max(age),student_id,student_name FROM Student
+
+    ```
+
+
+    The query returns the student with the maximum or highest age in the “Student”
+    table of the particular database. Notice that the developer needs to perform no
+    computation on his or her end. For the case of Java collections framework, the
+    developer would have to perform the check repeatedly by use of loops.
+
+
+    We should be concerned about efficiency when programming. Due to the use of multi-core
+    processors, the developer has to come up with a parallel code and this is prone
+    to more errors.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: 'This issue is the reason why Java 8 introduced the concept of streams, as it
+    solves the above problems. Streams make it possible for programmers to process
+    their data and leverage multiple architectures in a declarative manner without
+    having to write a specific code for doing so.
+
+
+    They have the following characteristics:
+
+
+    +   - **Made up of a Sequence of elements** - It provides a group of elements
+    arranged sequentially and they are all of the same type. The stream only computes
+    the elements when needed, without storing them.
+
+
+    +   - **They perform automatic Iterations** - The iterations over the elements
+    are internally done collections where explicit iteration is required. This is
+    done up to the collections in which the explicit iterations are done.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '+   - Source – The input source for the stream is either the arrays, collections
+    or I/O resources.
+
+
+    **Pipelining** – After stream operations are done, the result is always a stream
+    for pipelining purpose. This is an intermediate operation in which an input is
+    taken, processed and then the output is returned to the target. The method “collect()”
+    is a terminal operation available at the end of the pipelining function and it
+    marks the end of a stream.'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# How to generate streams
+
+
+    The Java 8 collection framework provides two ways on how streams can be generated.
+    These include the following:
+
+
+    +   - parallelStream() - This will return a parallel Stream and it considers collection
+    as the source.
+
+
+    +   - stream() - It will return a sequential stream and it uses a collection as
+    its source.
+
+
+    The following example illustrates this:
+
+
+    ```
+
+    List<String> st = Arrays.asList("pqr", "", "qr", "uvw", "pqrs", "", "xyz");
+
+    ```
+
+
+    ```
+
+    List<String> fSt = st.stream().filter(string ->
+
+    !string.isEmpty()).collect(Collectors.toList());
+
+    ```'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# “forEach” method
+
+
+    This method is provided in Java 8 streams and enables the programmer to iterate
+    through each of the elements of the stream. Consider the example given below:
+
+
+    ```
+
+    Random r = new Random();
+
+
+    r.ints().limit(10).forEach(System.out::println);
+
+    ```
+
+
+    The program is intended to print a maximum of 10 numbers which it picks randomly.
+    After running it on my computer, I got the following result:
+
+
+    8 10 2 5 89 37 12 24 67 59
+
+
+    Run it on your system and observe the result that you get.'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# Map
+
+
+    This method is used when we want to map a particular element to a corresponding
+    result. We will demonstrate this by use of a program.
+
+
+    Open your editor and create a new file. Give the file a new name and then save
+    it. Add the following code to the file:
+
+
+    ```
+
+    List<Integer> nums = Arrays.asList(2, 3, 4, 5, 6, 7, 8);
+
+    //getting the unique squares for the above elements
+
+    List<Integer> sqList = nums.stream().map(j ->
+
+    j*).distinct().collect(Collectors.toList());
+
+    ```
+
+
+    Write the program and then save it. Run it and then observe the output. It will
+    be as follows:'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '4 9 16 25 36 49 64
+
+
+    The program has calculated the squares of the numbers which we specified.
+
+    The squares have formed the output.'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# Filter
+
+
+    This method is used to select or eliminate some elements depending on the criteria
+    that you choose. This is demonstrated by the example shown:
+
+
+    ```
+
+    List<String>sts = Arrays.asList("xyz", "", "yz", "abc", "pqrst", " "uvw");
+
+    //counting the number of empty strings
+
+    int c = sts.stream().filter(string -> string.isEmpty()).count();
+
+    ```
+
+
+    Write the program as it is and then save it. Run it and then observe the output
+    that it gives. It should be as follows:
+
+
+    2'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: The output as shown in the figure above is 2. These are number of empty strings
+    which we have in our program.
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Limit
+
+
+    This is used whenever the programmer wants to perform a reduction of the stream.
+    Suppose that we need to print 10 numbers which the system picks at random, this
+    can be implemented as follows:
+
+
+    ```
+
+    Random r = new Random();
+
+    r.ints().limit(10).forEach(System.out::println);
+
+    ```
+
+
+    Write the program as it is and then run it. The following is the output from my
+    system:
+
+
+    8 10 2 5 89 37 12 24 67 59
+
+
+    As you have noticed from the output shown in the figure above, the numbers have
+    just been picked randomly. However, the program has obeyed the imposed limit whereby
+    the amount of numbers generated should not exceed 10. It has only displayed 10
+    numbers.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# Sorted
+
+
+    This method is used for sorting the elements specified in a particular stream.
+    We will demonstrate how this can be done by use of a program.
+
+
+    Open your text editor and create a new file. Give it a name and then save it.
+    Add the following code to the file:
+
+
+    ```
+
+    Random r = new Random();
+
+    r.ints().limit(5).sorted().forEach(System.out::println);
+
+    ```
+
+
+    Write the program as it is shown above and then run it. In my case, I get the
+    following output:
+
+
+    2 5 8 9 10'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: The above figure shows the output from the previous program. The output is made
+    up of 5 numbers which have been sorted in an ascending order. Notice that the
+    numbers have been picked randomly and then sorted. This is what we had ordered
+    the compiler to do.
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# Parallel Processing
+
+
+    “parallelStream” offers a mechanism for parallel processing in Java 8.
+
+    Consider the program shown below:
+
+
+    ```
+
+    List<String> sts = Arrays.asList("xyz", "", "yz", "pqr", "ghij", "klm");
+
+    //counting the number of empty strings
+
+    int c = sts.parallelStream().filter(string -> string.isEmpty()).count();
+
+    ```
+
+
+    We want our program to print the number of empty strings that we have in it. Write
+    it as it is, save it and then run the program. You will observe the following
+    as the output:
+
+
+    2'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: 'The 2 represents the number of empty strings that we have in our program.
+
+
+    You need to note that switching between sequential and parallel streams is very
+    easy.'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Collectors
+
+
+    Once the elements of a particular stream have been processed, they are combined
+    together into a collector. Collectors can be used to return either a list or a
+    string. An example of this is given below:
+
+
+    ```
+
+    List<String>sts = Arrays.asList("xyz", "", "yz", "jkl", "pqrs", "", "abc");
+
+    List<String> f = sts.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
+
+    System.out.println("Filtered List: " + f);
+
+    String mString = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.joining(",
+    " \));
+
+    System.out.println("Merged String: " + mString);
+
+    ```
+
+
+    Write the program, save it and then run it. The following result should be observed:'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: 'xyzyzjkjkpqrsabc
+
+
+    As shown in the above figure, the program has merged all the strings which we
+    had specified together.'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# Statistics
+
+
+    These types of collectors were introduced in Java 8 so as to calculate the statistics
+    as the stream processing is being done. Consider the following example:
+
+
+    ```
+
+    List<Integer> nums = Arrays.asList(3, 5, 8, 1, 4, 9, 0, 2);
+
+    ```
+
+
+    ```
+
+    IntSummaryStatistics st = integers.stream().mapToInt((x) -> x).summaryStatistics();
+
+    ```
+
+
+    ```
+
+    System.out.println("The largest number in the list is : " + st.getMax());
+
+    nSystem.out.println("The least number in the list is : " + st.getMin());
+
+    nSystem.out.println("The sum of the numbers is : " + st.getSum());
+
+    ```'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "```\nSystem.out.println(\"The average of all the numbers is : \" + \nst.getAverage());\n\
+    ```\n\nWrite the program, save it and then run it. You will observe the following\
+    \ as\nthe output:\n\n+   - The largest number in the list is : 9\nThe least number\
+    \ in the list is : 0\nThe sum of the numbers is : 32\nThe average of all the numbers\
+    \ is : 4\n\nAs shown in the above figure, we have calculated various statistics\
+    \ in the\nprogram."
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# Conclusion
+
+
+    It can be concluded that Java 8 is a programming language which was introduced
+    so as to solve the common problems in the previous versions of Java. The version
+    brought great change and improvement in the history of Java programming language.
+    For you to program in Java 8, you need to begin by setting up the programming
+    environment.
+
+
+    You need to download and install "JDK" or "JRE" on your machine. You should then
+    download the IDE which will provide you with the editor. This can be either "Netbeans"
+    or "Eclipse". There are also online sites which provide you with development environments
+    for Java 8. To execute Java 8 programs, you can do it directly within the IDE
+    or by the use of the console which will provide you with the "javac" compiler.
+
+
+    The features introduced by this programming language are very useful to programmers.
+    For instance, it is now possible for programmers to execute'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: 'Javascript codes while in Java. This can be done by use of the “Nashorn” engine.
+
+
+    The concept of “lambda expressions” was first introduced in Java 8. With this,
+    the concept of functional programming has been made very easy and programmers
+    can now write their code much more quickly. Pipeline processing, in which output
+    from a certain program is made the input for another program, is now fully supported
+    in Java. Default methods, which can be implemented in interfaces have been introduced
+    in Java 8, and this has also simplified programming.
+
+
+    The API (Application Programming Interface) for both Date and Time for the previous
+    versions of Java was prone to numerous problems, especially when it comes to dealing
+    with time zones. However, Java 8 solved this problem by introducing a new Date
+    and Time API with an improved functionality. Programmers are now able to handle
+    different time zones with ease.'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: 'The introduction of Java 8 programming language marked a point of change and
+    improvement in the experience for programmers. The language brought numerous new
+    features which were not available or supported in the previous versions of the
+    language and this led to an improved product and greater satisfaction on the part
+    of the programmers. The language has solved many problems which were experienced
+    when using the previous versions of Java such as in the use of Date-Time API.
+
+
+    # Step by Step Java 8 Course Programming
+
+
+    Lambda expression is the core of Java 8 programming. Once you understand how to
+    use lambda expressions in your program, you will become an expert in Java 8 programming.
+    However, this doesn''t mean that this is the only feature introduced by the programming
+    language as there are numerous features of language which will be discussed in
+    this book.
+
+
+    ![](img/c8fac915e12d88ee413f77be51bbbc61_111_0.png)'
+  merge: -1
+  pgno: 111
