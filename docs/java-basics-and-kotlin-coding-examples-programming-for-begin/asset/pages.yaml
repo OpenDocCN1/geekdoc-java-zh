@@ -1,0 +1,2765 @@
+- img_proc: true
+  md: '![](img/be4ff60adbb55f4a0f24c7da99a5899a_0_0.png)
+
+
+    ![](img/be4ff60adbb55f4a0f24c7da99a5899a_0_1.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# JAVA BASICS
+
+    AND
+
+    KOTLIN CODING EXAMPLES
+
+
+    # PROGRAMMING FOR BEGINNERS
+
+    J KING'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# JAVA INTRODUCTION
+
+
+    C++ VS JAVA
+
+
+    JAVA HELLO WORLD
+
+
+    JDK | JAVA DEVELOPMENT KIT
+
+
+    JRE (JAVA RUNTIME ENVIRONMENT)
+
+
+    DIFFERENCE BETWEEN JDK, JRE, JVM
+
+
+    OPERATORS IN JAVA
+
+
+    JAVA KEYWORDS
+
+
+    DATA TYPES IN JAVA
+
+
+    JAVA VARIABLES
+
+
+    CONTROL STATEMENTS
+
+
+    JAVA IF-ELSE STATEMENT
+
+
+    JAVA SWITCH STATEMENT
+
+
+    # KOTLIN CODING EXAMPLES
+
+
+    +   - BASIC PROGRAMS IN KOTLIN
+
+
+    +   - KOTLIN PROGRAM TO PERFORM ARITHMETIC OPERATIONS ON TWO NUMBERS
+
+
+    +   - PROGRAM TO PERFORM SIMPLE CALCULATION
+
+
+    +   - PROGRAM TO INPUT NUMBERS (INTEGER, FLOAT, DOUBLE) AT RUN TIME
+
+
+    +   - KOTLIN PROGRAM TO FIND LARGEST OF THREE NUMBERS
+
+
+    +   - KOTLIN PROGRAM TO SWAP TWO NUMBERS
+
+
+    +   - KOTLIN PROGRAM TO CHECK WHETHER A NUMBER IS EVEN OR ODD
+
+
+    +   - KOTLIN PROGRAM TO PRINT THE MULTIPLICATION TABLE
+
+
+    +   - PROGRAM TO CALCULATE AND DISPLAY STUDENT GRADES
+
+
+    +   - KOTLIN PROGRAM TO CONVERT TEMPERATURE
+
+
+    +   - KOTLIN PROGRAM TO DISPLAY FIBONACCI SERIES
+
+
+    +   - KOTLIN PROGRAM TO FIND AREA OF CIRCLE
+
+
+    +   - KOTLIN PROGRAM TO FIND AREA OF SQUARE
+
+
+    +   - PROGRAM TO FIND AREA OF A CYLINDER
+
+
+    +   - KOTLIN PROGRAM TO GENERATE 4 DIGITS OTP
+
+
+    +   - KOTLIN PROGRAM TO FIND AREA OF PENTAGON'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# KOTLIN PROGRAM TO FIND PRIME NUMBERS
+
+
+    # KOTLIN PROGRAM TO CONVERT DECIMAL TO BINARY
+
+
+    # OUR OTHER PUBLISHING'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# JAVA
+
+
+    # BASICS
+
+
+    # PROGRAMMING FOR BEGINNERS
+
+
+    # J KING'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# JAVA INTRODUCTION
+
+
+    The Java programming language was designed with portability, stability, and simplicity
+    in mind.
+
+
+    Despite this, Java has a range of features that make it a common programming language.
+
+
+    We structure our application as a set of different types of objects that contain
+    both data and actions, which is known as object-oriented programming.
+
+
+    Java is a WORA (Write Once, Run Anywhere) programming language because of this.
+
+
+    Java is architecture-neutral because it has no implementation-dependent aspects,
+    making the compiled code executable on a wide range of processors using JRE.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Evolution of Java:
+
+
+    | Version | Release Date | Features |
+
+    | --- | --- | --- |
+
+    | JDK Beta | 1995 | — |
+
+    | JDK 1.0 | January 1996 | This is the first stable version. |
+
+    | JDK 1.1 | February 1997 | In this version, added many new library elements,
+    redefined the way of handling events, and reconfigured most of the libraries of
+    1.0 and deprecated some features defined by 1.0. Added inner class, JavaBeans,
+    JDBC, RMI, JIT (Just In time) compiler. |
+
+    | J2SE 1.2 | December 1998 | Added support for many features, such as Swing and
+    Collection Framework. The methods suspend(), resume() and stop() of Thread class
+    were deprecated. |
+
+    | J2SE 1.3 | May 2000 | A very small improvement, as it just improved the development
+    environment. |'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '| J2SE 1.4 | February 2002 | It added some upgrades such as the new keyword
+    assert, chained exception and a channel-based I/O subsystem. Also added some feature
+    to the collection framework and the Networking classes. |
+
+    | J2SE 5.0 | September 2004 | The significant new features added to this version
+    are - Generics, Annotation, Autoboxing and Autoboxing, for-each, Enumeration,
+    variable-length argument, Static import, Formatted I/O, Concurrency utilities.
+    |
+
+    | Java SE 6 | December 2006 | In this version the API libraries and several packages
+    enhanced and offered improvements to the run time. It supports JDBC 4.0. |
+
+    | Java SE 7 | July 2011 | Added JVM support for dynamic language, String in the
+    switch, Automatic resource management in try-statement, support for underscore
+    in integers, binary integer literals etc... |
+
+    | Java SE 8 | March 2014 | Added Date and time API, Repeating annotation, JavaFX.
+    |
+
+    | Java SE 9 | September 2017 | Added Java platform module system update, jshell,
+    XML Catalog, link, and the JavaDB was removed from JDK. |
+
+    | Java SE 10 | March 2018 | Added features are local variable type interface,
+    Application class data sharing, Garbage collector interface, etc... |
+
+    | Java SE 11 | September 2018 | Feature added: Dynamic class file loader, HTTP
+    client, and Transport layer security. JavaFX, Java EE, and CORBA modules have
+    been removed from JDK. |
+
+    | Java SE 12 | March 2019 | Added Microbenchmark Suite, JVM Constant API, One
+    AArch64 Port, Default CDS Archives etc. |'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# C++ vs Java
+
+
+    | C++ | Java | C |
+
+    | --- | --- | --- |
+
+    | C++ is a general programming language created by Bjarne Stroustrup as an extension
+    of c language | Java is class-based, object-based, and designed to have as few
+    dependencies as possible. | C is considered all programming language father, and
+    It is general-purpose, procedural programming language supporting structured programming,
+    lexical variable scope, and recursion. |
+
+
+    | Developer | | |
+
+    | --- | --- | --- |
+
+    | | C++ programming language was invented by Bjarne Stroustrup in 1979 | Java
+    language was invented by James Gosling in 1991 | C language was invented by Dennis
+    Ritchie in 1972 |
+
+
+    | Programming | | |
+
+    | --- | --- | --- |
+
+    | | In C++ the programming paradigm follows the | The programming supports pure
+    | C is entirely a procedural |'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '| Paradigm | Object-Oriented programming | Object-Oriented Programming | language.
+    |
+
+    |---|---|---|---|n| Origin | The C++ programming language is based upon C language.
+    | Java is based on both C++ and the C language. | C language is based on assembly
+    level language. |
+
+    | Translator | C++ follows compiler to translate the code into binary-level code.
+    | Java uses an interpreter to translate the code in binary codes. | C also uses
+    a compiler to translate the code into binary level code. |
+
+    | Platform dependency | C++ programming language is platform dependent. | Java
+    is platform-independent the code written on one platform can run on any platform.
+    | C is also platform dependent. |
+
+    | Code Execution | C++ supports direct code execution. | Java follows JVM Which
+    Is Java Virtual Machine. Code will be sent to JVM for translation and code execution.
+    | C language follows direct code execution. |
+
+    | | Java also | C language |'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '| Approach | C++ supports the bottom-up approach. | supports bottom up approach.
+    | supports top down approach. |
+
+    |---|---|---|---|n| File generation | It generates a .exe file after compiling
+    the program. | It generates a .class file after compilation of a program | It
+    also creates a .exe file. |
+
+    | Pre-processor directives | C++ follows #header and #define to include the pre-processor
+    directives. | Java uses the import option to import the packages it needs to compile
+    the program it is running | C being the predecessor of CPP it also follows #header
+    and #define to include |
+
+    | Key words | C++ language has 63 defined keywords. | Java language has 50 defined
+    keywords. | C language has the support for 52 keywords. |
+
+    | Data Types | Data types like union and structure are supported in C++ programming.
+    | Structure and Union are not supported in Java. | Data types like union and structure
+    are supported in C language also. |
+
+    | In inheritance | Cpp and Java both support inheritance | But Java does not support
+    multiple inheritances. To support Java has to use | Does not support inheritance
+    |'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '| | | | |
+
+    | --- | --- | --- | --- |
+
+    | | | a unique feature called interface |
+
+    | Overloading | C++ support overloading through polymorphism. | Operator overloading
+    is not supported by Java. | Overloading is not supported by C language. |
+
+    | Pointers | C++ supports pointers. | Java does not support pointers. | C supports
+    pointers. |
+
+    | Memory Allocation | Cpp uses the new keyword to allocate memory to a program
+    and to delete it uses “delete” keyword | Java uses the new keyword to allocate
+    memory and uses a unique feature called garbage collector to remove unwanted memory
+    space. | When comes to C language we calloc(), malloc() and realloc() function
+    to allocate the memory to a particular program and we use the free() function
+    if we wanted to delete or free the memory space from the individual application.
+    |
+
+    | Exception Handling | C++ supports exception | Java also supports | C does not
+    support |'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '| | handling. | exception handling. | exception handling. |
+
+    |---|---|---|---||
+
+    | Templates | C++ supports templates. | Java does not support templates. | C does
+    not support templates. |
+
+    | Destructors | Supported by C++ | Not endorsed by Java | C does not support the
+    constructor nor destructors. |
+
+    | Multi-threading/ Interfaces | Multi-threading is not supported by C++ programming
+    language. | Java supports multithreading to overcome the multiple inheritance
+    problem. | Being the predecessor of C++, it also does not support multithreading.
+    |
+
+    | Database connectivity | C++ do not supportDataBase connectivity. | Java supports
+    DataBase connectivity. | C language does not support database connectivity. |
+
+    | Storage classes | C++ supports the storage class | Java does not supports storage
+    class | C supports storage class. |'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# Java Hello World\n\nTo begin, write a simple program that prints \"Hello\
+    \ World\" to the output window.\n\nWrite the software in any text editor or integrated\
+    \ development environment (IDE) (Eclipse, Netbeans, etc.) and save it as a.java\
+    \ file.\n\nYou can compile the file by typing \"javac filename.java>\" in the\
+    \ command prompt or terminal in Linux, or by clicking the play button on the toolbar\
+    \ you're using an IDE.\n\nRun your program by typing \"java filename>\" in the\
+    \ terminal/command prompt.\n\n```\npublic class MyClass //class\n{\n    //this\
+    \ is the main method\n    public static void main(String[] args)\n    {\n    \
+    \    //displaying Hello World\n        System.out.println(\"Hello World\");\n\
+    \    }\n}\n```\n\nEvery line of code that runs in Java must be written within\
+    \ the class. In our example, we named the class MyClass and wrote the code within\
+    \ it.\n\nThe entry point or starting point is the key method in the above program.\
+    \ The following is an overview of the keywords used in the main method:"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '+   - Public - This approach is available to everyone.
+
+    - Static - The method will run without having to build an instance of the class
+    that contains the main method.
+
+    - Void - There is no value returned by the system.
+
+    - Main - The process is known as Primary.
+
+    - String [] - The method only takes one argument: an array of String elements.
+
+
+    Comments : In the program, there are two ways to compose comments. It can be a
+    single-line or multiple-line statement.
+
+
+    Single line comment : The double forward slash ( // ) at the beginning of any
+    line defines it.
+
+
+    Multiline Comment: At both ends of the pargraph, a single forward slash and an
+    asterisk (/* comment */) characterize it.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# JDK | Java Development Kit
+
+
+    The Java Development Kit is a software environment for developing Java applications.
+
+
+    JRE (Java Runtime Environment), java (interpreter), javac (compiler), archiver,
+    documentation generator, and other tools for java application development are
+    all included in the JDK.
+
+
+    Oracle Corporation is making the platform available as a binary product for Java
+    developers operating on Solaris, Linux, Windows, or macOS.
+
+
+    # JDK(Java Development Kit)
+
+
+    ![](img/be4ff60adbb55f4a0f24c7da99a5899a_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# # JRE (Java Runtime Environment)
+
+
+    JRE is a Installation package that installs on any operating system and allows
+    you to run Java programs. It has little to do with the application creation process.
+
+
+    It''s included in the Java Development Kit (JDK).
+
+
+    It''s a software kit that includes the Java Class Library, tools, and a standalone
+    JVM.
+
+
+    ![](img/be4ff60adbb55f4a0f24c7da99a5899a_16_0.png)
+
+
+    JRE is the most popular environment for running Java programs on mobile devices.
+
+
+    The source code is compiled and then converted into Java bytecode.
+
+
+    If we want to run this bytecode on any Operating System, we simply need a JRE
+    for that OS, which is freely available on the Oracle website.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: The JRE fetches classes, verifies memory access, and retrieves system resources
+    that the generated program needs.
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Working of JRE
+
+
+    All source code that we write must be saved with the.java extension.
+
+
+    Next, we use the "javac" command in the command prompt to compile our software
+    (no need in IDE). It converts the code to bytecode, which is platform-agnostic.
+
+
+    When we compile our software, it produces a.class file that contains the bytecode
+    for the equivalent java file.
+
+
+    And that bytecode can be run on any device that has the JRE enabled.
+
+
+    The procedure is outlined below.
+
+
+    ClassLoader-
+
+
+    It dynamically loads the various classes needed for program execution in the JVM
+    (Java Virtual Machine). Following are the three class loaders that are used after
+    JVM starts:
+
+
+    +   * Bootstrap class loader
+
+    * Extension class loader
+
+    * System class loader
+
+
+    Byte code verifier –
+
+
+    It verifies the bytecode during execution to ensure that the code does not cause
+    the interpreter any problems. Only if the codes pass the bytecode verifier''s
+    checks, which search for formatting and illegal code, are they interpreted.
+
+
+    Interpreter-
+
+
+    When the class is loaded and the code is tested, it reads the assembly code'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'line by line and executes the two functions below:
+
+
+    It is responsible for executing the Byte Code.
+
+
+    Make the requisite calls to the built-in hardware.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Difference between JDK, JRE, JVM
+
+
+    | JDK | JRE | JVM |
+
+    |---|---|--|
+
+    | JDK stands for Java Development Kit. It provides development tools and execution
+    environment. | JRE stands for Java Runtime Environment. It provides the set of
+    tools only to execute our program. | JVM stands for Java Virtual Machine. It is
+    responsible for the program to execute line by line.
+
+    | JDK is the superset of the JRE. It contains JRE with Java compiler, debugger,
+    and core classes. | JRE contains a set of libraries and other files that JVM uses
+    at runtime. | It contains JIT (Just in Time Compiler), interpreter, and set of
+    APIs. JIT optimizes bytecode to machine specific language compilation by compiling
+    similar bytecodes. |'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '| JVM, Uses a set of libraries, other jar files, and set of API to run the
+    program. it doesn''t play any role during development. It only works to run the
+    program. | JVM works to Load code, Verifies code, and Execute code and provides
+    a runtime environment. |
+
+    | Interpreter/loader, a compiler, an archiver, a documentation generator (Javadoc),
+    and set of APIs to complete the development of Java application. | it physically
+    exits | It doesn''t physically exist. |
+
+    | physically exits | it physically exits |'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Operators in Java
+
+
+    In Java, an operator is a symbol that performs operations. For instance, +, -,
+    *, /, and so on.
+
+
+    In Java, there are several different types of operators, which are described below:
+
+
+    +   - Unary Operator,
+
+    - Arithmetic Operator,
+
+    - Shift Operator,
+
+    - Relational Operator,
+
+    - Bitwise Operator,
+
+    - Logical Operator,
+
+    - Ternary Operator and
+
+    - Assignment Operator.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Java Operator Precedence
+
+
+    | Operator Type | Category | Precedence |
+
+    | --- | --- | --- |
+
+    | Unary | postfix | expr++ expr-- |
+
+    | | prefix | ++expr --expr +expr -expr ~ ! |
+
+    | Arithmetic | multiplicative | * / % |
+
+    | | additive | + - |
+
+    | Shift | shift | << >>> |
+
+    | Relational | comparison | < <= >= instanceof |
+
+    | | equality | == != |
+
+    | Bitwise | bitwise AND | & |
+
+    | | bitwise exclusive OR | ^ |
+
+    | | bitwise inclusive OR | | |
+
+    | Logical | logical AND | && |
+
+    | | logical OR | || |
+
+    | Ternary | ternary | ? : |
+
+    | Assignment | assignment | += -= *= /= %= &= ^= |= << >> >>>=| |'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Java Unary Operator\n\nOnly one operand is necessary for the Java unary operators.\
+    \ Unary operators are used to perform a variety of functions, for example:\n\n\
+    +   - by one incrementing/decrementing a value\n- negating a statement\n- a boolean's\
+    \ value is inverted\n\n# Java Unary Operator Example: ++ and\n\n```\nclass OperatorExample{\n\
+    \  public static void main(String args[]){\n    int x = 10 ;\n    System.out.println(x++);\
+    \ //10 (11)\n    System.out.println(++x); //12\n    System.out.println(x--); //12\
+    \ (11)\n    System.out.println(--x); //10\n  }\n}\n```\n\n# Output:\n\n10\n\n\
+    12\n\n12\n\n10\n\n# Java Unary Operator Example: ~ and !"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "```\nclass OperatorExample{\n    public static void main(String args[]){\n\
+    \        int a= 10;\n        int b-= 10;\n        boolean c= true;\n        boolean\
+    \ d= false;\n        System.out.println(~a); //-11 (minus of total positive value\
+    \ which starts from c)\n        System.out.println(~b); //9 (positive of total\
+    \ minus, positive starts from 0)\n        System.out.println(~c); //false (opposite\
+    \ of boolean value)\n        System.out.println(~d); //true\n    }\n```\n\n# Output:\n\
+    \n-11\n\n9\n\nfalse\n\ntrue\n\n# Java Arithmetic Operators\n\nAddition, subtraction,\
+    \ multiplication, and division are all done using Java arithmetic operators.\n\
+    \nThey work as fundamental mathematical operations.\n\n# Java Arithmetic Operator\
+    \ Example\n\n```\nclass OperatorExample{\n```"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "```\npublic static void main(String args[]){\n    int a = 10;\n    int b =\
+    \ 5;\n    System.out.println(a+b); //15\n    System.out.println(a-b); //5\n  \
+    \  System.out.println(a*b); //50\n    System.out.println(a/b); //2\n    System.out.println(a%b);\
+    \ //0\n}\n```\n\n# Output:\n\n15\n\n5\n\n50\n\n2\n\n0\n\n# Java Arithmetic Operator\
+    \ Example: Expression\n\n```\nclass OperatorExample{\n    public static void main(String\
+    \ args[]){\n        System.out.println(10 * 10 / 5 + 3 - 1 * 4 / 2);\n    }\n\
+    ```\n\n# Output:\n\n21"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# Java Left Shift Operator\n\nThe Java left shift operator << moves all the\
+    \ bits in a value to the left by a given number of times.\n\n# EXAMPLE\n\n```\n\
+    class OperatorExample{\n    public static void main(String args[]){\n        System.out.println(10<<2);//10*2^2=10*4\n\
+    \        System.out.println(10<<3);//10*2^3=10*8\n        System.out.println(20<<2);//20*2^2=20*4\n\
+    \        System.out.println(15<<4);//15*2^4=15*16\n    }\n}\n```\n\nOutput:\n\n\
+    40\n80\n240\n\n# Java Right Shift Operator\n\nThe Java right shift operator >>\
+    \ shifts the value of the left operand by the number of bits defined by the right\
+    \ operand to the right.\n\n# EXAMPLE\n\n```\nclass OperatorExample{\n```"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\npublic static void main(String args[]){\n    System.out.println(10>>2);//10/2^2=10/4=2\n\
+    \    System.out.println(20>>2);//20/2^2=20/4=5\n    System.out.println(20>>>3);//20/2^3=20/8=2\n\
+    }\n```\n\nOutput:\n\n2\n\n5\n\n2\n\n# Java AND Operator Example: Logical && and\
+    \ Bitwise &\n\nIf the first condition is false, the logical && operator does not\
+    \ verify the second condition. It only tests the second condition if the first\
+    \ is true.\n\nIf the first condition is true or false, the bitwise & operator\
+    \ always tests both conditions.\n\n```\nclass OperatorExample{\n    public static\
+    \ void main(String args[]){\n    int a = 10;\n    int b = 5;\n    int c = 20;\n\
+    \    System.out.println(a<b&&a<c); //false && true = false\n    System.out.println(a<b&a<c);\
+    \ //false & true = false\n}\n```\n\nOutput:"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "false\n\nfalse\n\n# Java Operator Example: Logical && & vs Bitwise &\n\n```\n\
+    class OperatorExample{\n    public static void main(String[] args){\\{\n     \
+    \   int a = 10 ;\n        int b = 5 ;\n        int c = 20;\n        System.out.println(a<b&&a++c);\
+    \ //false && true = false\n        System.out.println(a); //10 because second\
+    \ condition is not checked\n        System.out.println(a<b&&a++c); //false &&\
+    \ true = false\n        System.out.println(a); //11 because second condition is\
+    \ checked\n    }\n}\n```\n\nOutput:\n\nfalse\n\n10\n\nfalse\n\n11"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# Java OR Operator Example: Logical || and Bitwise |\n\nIf the first condition\
+    \ is true, the logical || operator does not verify the second condition. It only\
+    \ tests the second condition if the first is false.\n\nIf the first condition\
+    \ is true or false, the bitwise | operator always tests both conditions.\n\n```\n\
+    class OperatorExample{\n    public static void main(String args[]){\n        int\
+    \ a=10;\n        int b=5;\n        int c=20;\n        System.out.println(a>b||a<c);//true\
+    \ || true = true\n        System.out.println(a>b|a<c);//true | true = true\n \
+    \       //| vs |\n        System.out.println(a>b||a++c);//true || true = true\n\
+    \        System.out.println(a>b|a++c);//10 because second condition is not checked\n\
+    \        System.out.println(a>b|a++c);//true | true = true\n        System.out.println(a);//11\
+    \ second condition is checked\n    }}\n```\n\nOutput:\n\ntrue\n\ntrue\n\ntrue\n\
+    \n10"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "```\ntrue\n11\n```\n\n# Java Ternary Operator\n\nIn Java programming, the Ternary\
+    \ operator is a one-liner substitute for the if-then-else argument. It's the only\
+    \ conditional operator that accepts three operands.\n\n# EXAMPLE 1\n\n```\nclass\
+    \ OperatorExample{\n  public static void main(String args[]){\n    int a=2;\n\
+    \    int b=5;\n    int min=(a<b)?a:b;\n    System.out.println(min);\n  }\n```\n\
+    \nOutput:\n\n2\n\n# EXAMPLE 2\n\n```\nclass OperatorExample{\n  public static\
+    \ void main(String args[]){\n    int a=10;\n    int b=5;\n    int min=(a<b)?a:b;\n\
+    \    System.out.println(min);\n  }\n```\n\nOutput:"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '5
+
+
+    # Java Assignment Operator
+
+
+    One of the most common operators in Java is the assignment operator. It''s used
+    to allocate the operand on the left to the value on the right.
+
+
+    # EXAMPLE
+
+
+    ```
+
+    class OperatorExample{
+
+    public static void main(String args[]){
+
+    int a=10;
+
+    int b=20;
+
+    a+=4;//a=a+4 (a=10+4)
+
+    b-=4;//b=b-4 (b=20-4)
+
+    System.out.println(a);
+
+    System.out.println(b);
+
+    }
+
+    }}
+
+    ```
+
+
+    # Output:
+
+
+    14
+
+
+    16
+
+
+    # Java Assignment Operator Example: Adding short
+
+
+    ```
+
+    class OperatorExample{
+
+    public static void main(String args[]){
+
+    short a = 10 ;
+
+    short b = 10 ;
+
+    //a+=b;//a=a+b internally so fine
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\na=a+b; //Compile time error because 10+10=20 now int\nSystem.out.println(a);\n\
+    }}\n```\n\n# Output:\n\nCompile time error\n\n# After type cast:\n\n```\nclass\
+    \ OperatorExample{\n  public static void main(String args[]){\n    short a = 10\
+    \ ;\n    short b = 10;\n    a=(short)(a+b); //20 which is int now converted to\
+    \ short\n    System.out.println(a);\n  }}\n```\n\n# Output:\n\n20"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Java Keywords
+
+
+    In the Java programming language, there are 50 specific keywords that are used
+    for internal processes or to describe predefined actions.
+
+
+    These java keywords are case sensitive and have special definitions.
+
+
+    Keywords aren''t allowed to be used as identifiers, such as names for variables,
+    classes, or methods.
+
+
+    True, wrong, null, const, and goto are all reserved keywords in Java.
+
+
+    These keywords should not be included in the names of variables, classes, or other
+    objects.
+
+
+    | Keywords | Description |
+
+    | --- | --- |
+
+    | abstract | It is used to declare an abstract class that provides the implementation
+    of the interface. |
+
+    | boolean | It is used to declare a variable as a boolean type. It only holds
+    true and false values. |
+
+    | break | It breaks the current flow of the code (loop or switch statement). |
+
+    | byte | This keyword declares a variable that can hold 8-bit data values. |'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '| case | It is used with the switch statement to define different cases. |
+
+    | catch | This keyword is used to catch the exceptions generated by try statements.
+    |
+
+    | char | It declares a variable that can hold unsigned 16-bit Unicode characters
+    |
+
+    | class | It is used to declare a class. |
+
+    | continue | This keyword is used to continue the loop (current flow of the program
+    and skips the remaining code at the specified condition). |
+
+    | default | The default keyword is used to define the default block of code in
+    a switch statement. |
+
+    | do | This keyword is used in the control statement to declare a loop. |
+
+    | double | This keyword declares a variable that can hold a 64-bit floating-point
+    number. |
+
+    | else | It is used to indicate the alternative branches in an “if” statement.
+    |'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '| enum | This keyword defines a fixed set of constants. This constructor is
+    always private or default. |
+
+    | extends | It indicates that a class is derived from another class or interface.
+    |
+
+    | final | It is used to indicate that a variable holds a constant value. The value
+    of the variable remains constant if we declare it with the final keyword. |
+
+    | finally | It indicates a block of code in a try-catch structure. It is always
+    executed whether an exception is handled or not. |
+
+    | float | This keyword declares a variable that can hold a 32-bit floating-point
+    number. |
+
+    | for | It executes a set of instructions or functions repeatedly when some conditions
+    become true. If the number of iteration is fixed, it is recommended to use “for
+    loop”. |
+
+    | if | It tests the condition and executes the “if block” if the condition is
+    true. |'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '| implements | It is used to implement an interface. |
+
+    | import | This keyword makes classes and interfaces available and accessible
+    to the current source code. |
+
+    | instanceof | It tests whether the object is an instance of the specified class
+    or implements an interface. |
+
+    | int | It is used to declare a variable that can hold a 32-bit signed integer.
+    |
+
+    | interface | It declares an interface. It can have only abstract methods. |
+
+    | long | It declares a variable that holds a 64-bit integer. |
+
+    | native | This keyword specifies that a method is implemented in native code
+    using JNI (Java Native Interface). |
+
+    | new | It creates a new object. |'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '| null | This keyword indicates that a reference does not refer to anything.
+    It removes the garbage value. |
+
+    | package | It declares a Java package that includes the classes. |
+
+    | private | It is an access modifier that indicates that a method or variable
+    may be accessed only in the class where it was declared. |
+
+    | protected | It is an access modifier that can be accessed within the package
+    and outside the package but through inheritance only. It can''t be applied to
+    the class. |
+
+    | public | It is an access modifier that is used to indicate that an item can
+    be accessed anywhere. It has the widest scope among other modifiers. |
+
+    | return | This keyword is used to return from a method when its execution is
+    complete. |
+
+    | short | This keyword declares a variable that can hold a 16-bit integer. |'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '| static | This keyword indicates that a variable or method is a class method.
+    It is used for memory management mainly. |
+
+    | strictfp | It is used to restrict the floating-point calculations to ensure
+    the portability of the code. |
+
+    | super | This keyword is a reference variable that is used to refer to the parent
+    class object. It can also be used to invoke an immediate parent class method.
+    |
+
+    | switch | It contains a switch statement which executes code based on test value.
+    It tests the equality of a variable against multiple values. |
+
+    | synchronized | This keyword is used to specify the critical sections or methods
+    in a multithreaded code. |
+
+    | this | It refers to the current object in a method or constructor. |
+
+    | throw | It explicitly throws an exception. The "throw" keyword is used to throw
+    a custom |'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '| | exception, followed by an instance. |
+
+    | throws | It declares an exception. A checked exception can be piped with throws.
+    |
+
+    | transient | This keyword is used in serialization. If we define any data member
+    as transient, then it can''t be serialized. |
+
+    | try | It starts a block of code that will be tested for exceptions. It must
+    be followed by either catch or finally block. |
+
+    | void | The void keyword specifies that a method does not have a return value.
+    |
+
+    | volatile | This keyword is used to indicate that a variable may change asynchronously.
+    |
+
+    | while | It starts a loop that iterates a part of the program number of times.
+    |'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Data Types in Java
+
+
+    The different sizes and values that can be stored in the variable are described
+    by data types. In Java, there are two kinds of data types:
+
+
+    **Primitive data types**: Boolean, char, byte, short, int, long, float, and double
+    are examples of primitive data types.
+
+
+    **Non-primitive data types**: Classes, Interfaces, and Arrays are examples of
+    non-primitive data forms.
+
+
+    ![](img/be4ff60adbb55f4a0f24c7da99a5899a_41_0.png)
+
+
+    # Java Primitive Data Types
+
+
+    Primitive data types are the building blocks of data manipulation in the Java
+    programming language. These are the most basic data types in the Java programming
+    language.
+
+
+    +   - boolean data type
+
+    - byte data type
+
+    - char data type'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '+   - short data type
+
+    - int data type
+
+    - long data type
+
+    - float data type
+
+    - double data type
+
+
+    | Data Type | Default Value | Default size |
+
+    |---|---|---|
+
+    | boolean | false | 1 bit |
+
+    | char | "\u0000" | 2 byte |
+
+    | byte | 0 | 1 byte |
+
+    | short | 0 | 2 byte |
+
+    | int | 0 | 4 byte |
+
+    | long | 0L | 8 byte |
+
+    | float | 0.0f | 4 byte |
+
+    | double | 0.0d | 8 byte |
+
+
+    # Boolean Data Type
+
+
+    Only two possible values are stored in the Boolean data type: true and false.
+    Simple flags that track true/false conditions are stored in this data form.
+
+
+    The Boolean data type type defines a single bit of data, but its "size" cannot
+    be precisely specified.
+
+
+    # EXAMPLE :
+
+
+    Boolean one = false'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Byte Data Type
+
+
+    The primitive data form byte is an example of this. It''s an 8-bit two-s complement
+    signed integer. It has a value range of -128 to 127. (inclusive).
+
+
+    It has a minimum of -128 and a maximum of 127. It has a value of 0 by default.
+
+
+    The byte data form is used to conserve memory in wide arrays where space is at
+    a premium.
+
+
+    Since a byte is four times smaller than an integer, it saves space. It can also
+    be substituted for the "int" data sort.
+
+
+    # Example,
+
+
+    byte a = 10 and
+
+
+    byte b = -20.
+
+
+    # Short Data Type
+
+
+    A 16-bit signed two''s complement integer is the short data form. It has a value
+    range of -32,768 to 32,767. (inclusive). It has a minimum of -32,768 and a maximum
+    of 32,767. It has a value of 0 by default.
+
+
+    The short data type, like the byte data type, can be used to save memory. A short
+    data form is twice the size of an integer.
+
+
+    # EXAMPLE
+
+
+    short s = 10000,
+
+
+    short r = -5000'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Int Data Type
+
+
+    A 32-bit signed two''s complement integer is represented by the int data form.
+
+
+    Its range of values is - 2,147,483,648 (-231 -1) to 2,147,483,647 (231 -1).
+
+    (inclusive).
+
+
+    It has a minimum of 2,147,483,648 and a limit of 2,147,483,647.
+
+
+    It has a value of 0 by default.
+
+
+    If there is a memory limit, the int data type is commonly used as the default
+
+    data type for integral values.
+
+
+    # EXAMPLE
+
+
+    ```
+
+    int a = 100000,
+
+    int b = -200000
+
+    ```
+
+
+    # Long Data Type
+
+
+    A 64-bit two''s complement integer is the long data form. It has a value range
+
+    of -9,223,372,036,854,775,808(-263 -1) to 9,223,372,036,854,775,807(263
+
+    -1). (inclusive).
+
+
+    Its minimum and maximum values are 9,223,372,036,854,775,808 and
+
+    9,223,372,036,854,775,807.
+
+
+    It has a value of 0 by default. When you need a wider set of values than int
+
+    can provide, you can use the long data form.
+
+
+    # EXAMPLE
+
+
+    ```
+
+    long a = 100000L,
+
+    long b = -200000L
+
+    ```'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Float Data Type
+
+
+    The float data form is a 32-bit IEEE 754 floating point with single precision.
+
+
+    It has an infinite value set. If you need to conserve memory in huge arrays of
+    floating point numbers, use a float (rather than a double).
+
+
+    For precise values, such as money, the float data form can never be used. 0.0F
+    is the default value.
+
+
+    # EXAMPLE
+
+
+    ```
+
+    float f1 = 234.5f
+
+    ```
+
+
+    # Double Data Type
+
+
+    A double data form is a 64-bit IEEE 754 floating point with double precision.
+
+
+    It has an infinite value set. Like float, the double data form is commonly used
+    for decimal values.
+
+
+    For precise values, such as money, the double data form can never be used. 0.0d
+    is the default value.
+
+
+    # EXAMPLE
+
+
+    ```
+
+    double d1 = 12.3
+
+    ```
+
+
+    # Char Data Type
+
+
+    A single 16-bit Unicode character is represented by the char data type. It has
+    a meaning range of ''u0000'' (or 0) to ''ffff'' (or 65,535 inclusive).
+
+
+    Characters are stored using the char data form.
+
+
+    # EXAMPLE'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '```
+
+    char letterA = ''A''
+
+    ```'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Java Variables
+
+
+    A variable is a container that contains the value during the execution of a Java
+    program.
+
+
+    A data type is allocated to a variable.
+
+
+    The word "variable" refers to the name of a memory spot. Local, instance, and
+    static variables are the three types of variables in Java.
+
+
+    The variable is the name of a memory-allocated reserved field.
+
+
+    To put it another way, it''s the name of a memory place.
+
+
+    It is made up of the words "variy + able," which means that its meaning can be
+    modified.
+
+
+    ```
+
+    int data=50;//Here data is variable
+
+    ```'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Types of Variables
+
+
+    +   * local variable
+
+    * instance variable
+
+    * static variable
+
+
+    # 1) Local Variable
+
+
+    A local variable is a variable declared within the method''s body.
+
+
+    This variable can only be used within that method, and the other methods in the
+    class are unaware that it exists.
+
+
+    The keyword "static" cannot be used to describe a local variable.
+
+
+    # 2) Instance Variable
+
+
+    An instance variable is a variable declared within the class but outside the method
+    body.
+
+
+    It hasn''t been declared static.
+
+
+    It''s called an instance variable because its value is exclusive to each instance
+    and isn''t shared across them.
+
+
+    # 3) Static variable
+
+
+    A static variable is one that has been declared as such.
+
+
+    It''s not possible for it to be local.
+
+
+    You may make a single copy of a static variable and share it across all of the
+    class''s instances.
+
+
+    When the class is loaded into memory, memory allocation for static variables'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: occurs only once.
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# Example to understand\n\n# the types of variables in java\n\n```\nclass A{\n\
+    \    int data= 50; //instance variable\n    static int m= 100; //static variable\n\
+    \    void method(){\n        int n= 90; //local variable\n    }\n}//end of class\n\
+    ```\n\n# Java Variable Example: Add Two Numbers\n\n```\nclass Simple{\n    public\
+    \ static void main(String[] args){\n        int a= 10 ;\n        int b= 10 ;\n\
+    \        int c=a+b;\n        System.out.println(c);\n    }\n```\n\n# Output:\n\
+    \n20\n\n# Java Variable Example: Widening\n\n```\nclass Simple{\n    public static\
+    \ void main(String[] args){\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '```
+
+    int a= 10 ;
+
+    float f=a;
+
+    System.out.println(a);
+
+    System.out.println(f);
+
+    }
+
+
+
+    ```
+
+
+    Output:
+
+
+    10
+
+
+    10.0
+
+
+    # Java Variable Example: Narrowing (Typecasting)
+
+
+    ```
+
+    class Simple{
+
+    public static void main(String[] args){
+
+    float f= 10.5;
+
+    //int a=f;//Compile time error
+
+    int a=(int) f;
+
+    System.out.println(f);
+
+    System.out.println(a);
+
+    }}
+
+    ```
+
+
+    Output:
+
+
+    10.5
+
+
+    10
+
+
+    # Java Variable Example: Overflow
+
+
+    ```
+
+    class Simple{
+
+    public static void main(String[] args){
+
+    //Overflow
+
+    int a= 130 ;
+
+    ```'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "```\nbyte b=( byte )a;\nSystem.out.println(a);\nSystem.out.println(b);\n}}\n\
+    ```\n\n# Output:\n\n130\n-126\n\n# Java Variable Example: Adding Lower Type\n\n\
+    ```\nclass Simple{\n  public static void main(String[] args{\n    byte a = 10\
+    \ ;\n    byte b = 10 ;\n    //byte c=a+b;//Compile Time Error: because a+b=20\
+    \ will be in int\n    byte c=( byte )(a+b);\n    System.out.println(c);\n}}\n\
+    ```\n\n# Output:\n\n20"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Control Statements
+
+
+    # Java If-else Statement
+
+
+    The condition is evaluated using the Java if statement.
+
+
+    It determines whether a boolean condition is true or false.
+
+
+    In Java, there are several types of if statements.
+
+
+    +   * if statement
+
+    * if-else statement
+
+    * if-else-if ladder
+
+    * nested if statement'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# Java if Statement\n\nThe if statement in Java is used to evaluate the condition.\n\
+    If the condition is valid, the if block is executed.\n\n# Syntax:\n\n```\nif(condition){\n\
+    \  //code to be executed\n}\n```\n\n![](img/be4ff60adbb55f4a0f24c7da99a5899a_54_0.png)\n\
+    \n# Example:"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\n//Java Program to demonstrate the use of if statement.\npublic class IfExample\
+    \ {\n  public static void main(String[] args) {\n    //defining an 'age' variable\n\
+    \    int age=20;\n    //checking the age\n    if(age>18{\n        System.out.print(\"\
+    Age is greater than 18\");\n    }\n  }\n}\n```\n\n# Output:\n\nAge is greater\
+    \ than 18"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Java if-else Statement
+
+
+    The condition is also evaluated by the Java if-else argument.
+
+
+    If the condition is true, the if block is executed; otherwise, the else block
+    is executed.
+
+
+    # Syntax:
+
+
+    ```
+
+    if(condition){
+
+    //code if condition is true
+
+    } else{
+
+    //code if condition is false
+
+    }
+
+    ```
+
+
+    ![](img/be4ff60adbb55f4a0f24c7da99a5899a_56_0.png)'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# Example:\n\n//A Java Program to demonstrate the use of if-else statement.\n\
+    //It is a program of odd and even number.\n\n```\npublic class IfElseExample {\n\
+    \    public static void main(String[] args) {\n        //defining a variable\n\
+    \        int number=13;\n        //Check if the number is divisible by 2 or not\n\
+    \        if(number%2==0){\n            System.out.println(\"even number\");\n\
+    \        } else {\n            System.out.println(\"odd number\");\n        }\n\
+    \    }\n}\n```\n\n# Output:\n\nodd number\n\n# Using Ternary Operator\n\nThe ternary\
+    \ operator (? :) can also be used to execute the if...else expression.\nIt's a\
+    \ fast way to evaluate the situation.\nThe outcome of? is returned if the condition\
+    \ is true.\nThe consequence of : is returned if the condition is incorrect.\n\n\
+    # Example:"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "```\npublic class IfElseTernaryExample {\n    public static void main(String[]\
+    \ args) {\n        int number=13;\n        //Using ternary operator\n        String\
+    \ output=(number%2==0)?\"even number\":\"odd number\";\n        System.out.println(output);\n\
+    \    }\n}\n```\n\n# **Output:**\n\nodd number"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# Java if-else ladder Statement\n\nThe if-else ladder statement incorporates\
+    \ several statements into one condition.\n\nSyntax:\n\n```\nif(condition1){\n\
+    \  //code to be executed if condition1 is true\n} else if(condition2){\n  //code\
+    \ to be executed if condition2 is true\n} else if(condition3){\n  //code to be\
+    \ executed if condition3 is true\n}\n...\nelse{\n  //code to be executed if all\
+    \ the conditions are false\n}\n```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "![](img/be4ff60adbb55f4a0f24c7da99a5899a_60_0.png)\n\n# Example:\n\n//Java\
+    \ Program to demonstrate the use of If else-if ladder.\n//It is a program of grading\
+    \ system for fail, D grade, C grade, B grade, A grade\n\n```\npublic class IfElseIfExample\
+    \ {\n    public static void main(String[] args) {\n        int marks=65;\n\n \
+    \       if(marks<50){\n            System.out.println(\"fail\");\n        }\n\
+    \        else if(marks>=50 && marks<60){\n            System.out.println(\"D grade\"\
+    );\n        }\n    }\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\nelse if(marks>=60 && marks<70){\n    System.out.println(\"C grade\");\n\
+    }\nelse if(marks>=70 && marks<80){\n    System.out.println(\"B grade\");\n}\n\
+    else if(marks>=80 && marks<90){\n    System.out.println(\"A grade\");\n}else if(marks>=90\
+    \ && marks<100){\n    System.out.println(\"A+ grade\");\n}else{\n    System.out.println(\"\
+    Invalid!\");\n}\nn}\n```\n\n# Output:\n\nC grade\n\n# Program to check POSITIVE,\
+    \ NEGATIVE or ZERO:\n\n```\npublic class PositiveNegativeExample {\n    public\
+    \ static void main(String[] args) {\n    int number=13;\n    if(number>0){\n \
+    \       System.out.println(\"POSITIVE\");\n    }else if(number<0){\n        System.out.println(\"\
+    NEGATIVE\");\n    }\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "```\n}else{\n    System.out.println(\"ZERO\");\n}\n}\n```\n\n# **Output:**\n\
+    \nNEGATIVE"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# Java Nested if statement\n\nThe if block inside another block is represented\
+    \ by the nested if statement.\n\nOnly when the outer if block condition is valid\
+    \ does the inner block condition execute.\n\nSyntax:\n\n```\nif(condition){\n\
+    \    //code to be executed\n    if(condition){\n        //code to be executed\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "![](img/be4ff60adbb55f4a0f24c7da99a5899a_64_0.png)\n\n# Example:\n\n//Java\
+    \ Program to demonstrate the use of Nested If Statement.\n\n```\npublic class\
+    \ JavaNestedIfExample {\npublic static void main(String[] args) {\n  //Creating\
+    \ two variables for age and weight\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\nint age=20;\nint weight=80;\n//applying condition on age and weight\n\
+    if(age>=18){\n    if(weight>50){\n        System.out.println(\"You are eligible\
+    \ to donate blood\");\n    }\n}\n\n```\n\n# Output:\n\nYou are eligible to donate\
+    \ blood\n\n# Example 2:\n\n//Java Program to demonstrate the use of Nested If\
+    \ Statement.\n\n```\npublic class NestedIfExample2 {\npublic static void main(String[]\
+    \ args) {\n    //Creating two variables for age and weight\n    int age=25;\n\
+    \    int weight=48;\n    //applying condition on age and weight\n    if(age>=18){\n\
+    \        if(weight>50){\n            System.out.println(\"You are eligible to\
+    \ donate blood\");\n        } else {\n            System.out.println(\"You are\
+    \ not eligible to donate blood\");\n        }\n    } else {\n        System.out.println(\"\
+    Age must be greater than 18\");\n    }\nn}\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    # **Output:**
+
+
+    You are not eligible to donate blood'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "# Java Switch Statement\n\nThe Java switch statement incorporates several conditions\
+    \ into a single statement.\n\nIt's similar to an if-else-if conditional sentence.\n\
+    \nByte, short, int, long, enum types, String, and some wrapper types including\
+    \ Byte, Short, Int, and Long are all supported by the switch argument.\n\nStrings\
+    \ can be included in the switch statement since Java 7.\n\nIn other words, the\
+    \ switch statement compares different values to see if they are equal.\n\n# Syntax:\n\
+    \n```\nswitch(expression){\n    case value1:\n        //code to be executed;\n\
+    \        break; //optional\n    case value2:\n        //code to be executed;\n\
+    \        break; //optional\n    ......\n```\n\n```\ndefault:\n    code to be executed\
+    \ if all cases are not matched;\n}\n```"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '![](img/be4ff60adbb55f4a0f24c7da99a5899a_68_0.png)
+
+
+    # Example:
+
+
+    public class SwitchExample {
+
+    public static void main(String[] args) {
+
+
+    ```
+
+    //Declaring a variable for switch expression
+
+    int number=20;
+
+    //Switch expression
+
+    switch(number){
+
+    //Case statements
+
+    case 10: System.out.println("10");
+
+    ```'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '```
+
+    break;
+
+    case 20: System.out.println("20");
+
+    break;
+
+    case 30: System.out.println("30");
+
+    break;
+
+    //Default case statement
+
+    default:System.out.println("Not in 10, 20 or 30");
+
+    }
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    20'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# # KOTLIN CODING EXAMPLES
+
+
+    # # PROGRAMMING FOR BEGINNERS
+
+
+    J KING'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# KOTLIN CODING EXAMPLES
+
+
+    # Basic Programs in Kotlin
+
+
+    # Kotlin program to perform arithmetic operations on two numbers
+
+
+    Example:
+
+
+    Input:
+
+
+    a = 13
+
+    b = 5
+
+
+    Output:
+
+
+    a + b = 18
+
+    a - b = 8
+
+    a * b = 65
+
+    a / b = 2
+
+    a % b = 3
+
+
+    # PROGRAM
+
+
+    ```
+
+    // Main Method Entry Point of Program
+
+    ```'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "```\nfun main(args:Array<String>{\n    val a = 13\n    val b = 5\n\n    val\
+    \ sum = a + b // Perform Addition\n    val sub = a - b // Perform Subtraction\n\
+    \    val muti = a * b // Perform Multiplication\n    val div = a / b // Perform\
+    \ Division\n    val rem = a % b // Perform remainder\n\n```\n\n// Print Console\n\
+    println(\"Addison of $a and $b is : $sum\")\nprintln(\"Subtraction of $a and $b\
+    \ is : $sub\")\nprintln(\"Multiplication of $a and $b is : $muti\")\nprintln(\"\
+    Division of $a and $b is : $div\")\nprintln(\"Remainder of $a and $b is : $rem\"\
+    )\n\n\n}\n\n# Output\n\nAddison of 13 and 5 is : 18\n\nSubtraction of 13 and 5\
+    \ is : 8\n\nMultiplication of 13 and 5 is: : 65\n\nDivision of 13 and 5 is : 2\n\
+    \nRemainder of 13 and 5 is : 3"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "# Program to perform simple calculation\n\nExample:\n\nInput:\n\nfirst = 30\n\
+    \nsecond = 15\n\nchoice = '+'\n\nOutput:\n\n30 + 15 = 45\n\n# PROGRAM\n\n> /**\n\
+    \ * Kotlin Program to Perform Simple Calculation on Two integer numbers\n * User\
+    \ have to (+, -, *, /, % ) put any choice to perform operation\n */\n\n```\npackage\
+    \ com.includehelp.basic\n\nimport java.util.*\n\n// Main Method Entry Point of\
+    \ Program\nfun main(args: Array<String>) {\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "```\n// InputStream to get Input\nval reader = Scanner(System.`in` )\n```\n\
+    \n```\n//Input First Integer Value\nprint(\"Enter Integer Value : \")\nvar first\
+    \ = reader.nextInt()\n```\n\n```\n//Input Second Integer Value\nprint(\"Enter\
+    \ Integer Value : \")\nvar second = reader.nextInt()\n```\n\n```\n//Input Any\
+    \ Character as Choice\nprint(\"Enter any Action(+, -, *, /, %) : \")\nval choice\
+    \ = reader.next()[0]\n```\n\n```\ntry{\n  var result = when(choice){\n    '+'\
+    \ -> first+second\n    '-' -> first-second\n    '*' -> first*second\n    '/' ->\
+    \ first/second\n    %' -> first%second\n  else -> {\n    System.err.println(\"\
+    Not a Valid Operation choice\")\n    return\n  }\n}\n```"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "```\n//Print Result\nprintln(\"Result is : $result\")\ncatch (E:Exception){\n\
+    \    System.err.println(\"Exception : ${E.toString()}\")\n}\n```\n\n# Output\n\
+    \nRUN 1:\n\nEnter Integer Value : 35\n\nEnter Integer Value : 8\n\nEnter any Action(+,\
+    \ -, *, /, % ) : %\n\nResult is : 3\n\n---\n\nRUN 2:\n\nEnter Integer Value :\
+    \ 456\n\nEnter Integer Value : 67\n\nEnter any Action(+, -, *, /, % ) : /\n\n\
+    Result is : 6"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "# Program to input numbers (integer, float, double) at run time\n\n# PROGRAM\n\
+    \n```\nimport java.util.*\n\n// Main Method Entry Point of Program\nfun main(args:\
+    \ Array<String>) {\n    // InputStream to get Input\n    var reader = Scanner(System.`in`)\n\
+    \n    // Input Integer Value\n    println(\"Enter Integer Value : \")\n    val\
+    \ intValue = reader.nextInt()\n    println(\"Integer Number is : \\$intValue\"\
+    )\n\n    // Input Long Value\n    println(\"Enter Long Value : \")\n    val longValue\
+    \ = reader.nextLong()\n    println(\"Long Number is : \\$longValue\")\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '```
+
+    // Input Float Value
+
+    println("Enter Float Value : ")
+
+    val floatValue = reader.nextFloat()
+
+    println("Float Number is : $floatValue")
+
+    ```
+
+
+    ```
+
+    // Input Double Value
+
+    println("Enter Double Value : ")
+
+    val doubleValue = reader.nextDouble()
+
+    println("Double Number is : $doubleValue")
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    Run 1:
+
+
+    Enter Integer Value :
+
+
+    123
+
+
+    Integer Number is : 123
+
+
+    Enter Long Value :
+
+
+    34355566
+
+
+    Long Number is : 34355566
+
+
+    Enter Float Value :
+
+
+    45.34
+
+
+    Float Number is : 45.34
+
+
+    Enter Double Value :'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '456.78
+
+
+    Double Number is : 456.78'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Kotlin program to find largest of three numbers\n\nExample:\n\nInput:\n\n\
+    First number: 10\n\nSecond number: 20\n\nThird number: 30\n\nOutput:\n\nLargest\
+    \ number: 30\n\n# PROGRAM\n\n```\npackage com.includehelp.basic\n\nimport java.util.*\n\
+    \n// Main Method Entry Point of Program\nfun main(args: Array<String>) {\n   \
+    \ // InputStream to get Input\n    val reader = Scanner(System.\\`in`)\n\n   \
+    \ // Input Integer values\n    println(\"Enter First Value: \")\n    var first\
+    \ = reader.nextInt()\n```"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\nprintln(\"Enter Second Value : \")\nvar second = reader.nextInt()\nprintln(\"\
+    Enter Third Value : \")\nvar third = reader.nextInt();\n\n// condition to find\
+    \ largest of three numbers\nval largest = if(first>second && first>third)\n  \
+    \  first\nelse if(second>third)\n    second\nelse\n    third\n\nprintln(\"Largest\
+    \ Number is: $largest\")\n}\n```\n\n# Output\n\nEnter First Value :\n\n23\n\n\
+    Enter Second Value :\n\n45\n\nEnter Third Value :\n\n89\n\nLargest Number is:\
+    \ 89"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "# Kotlin program to swap two numbers\n\nExample:\n\nInput:\n\nFirst number:\
+    \ 10\n\nSecond number: 20\n\nOutput:\n\nFirst number: 20\n\nSecond number: 10\n\
+    \n# PROGRAM\n\n```\nimport java.util.*\n\n// Main Method Entry Point of Program\n\
+    fun main(arg: Array<String>) {\n  // InputStream to get Input\n  var reader =\
+    \ Scanner(System.\\`in\\`)\n\n  // Input two values\n  println(\"Enter First Value\
+    \ : \")\n  var first = reader.nextInt();\n  println(\"Enter Second Value : \"\
+    )\n  var second = reader.nextInt();\n```"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '```
+
+    println("Numbers Before Swap : \n first = $first \n second = $second")
+
+    //Code for Swap Numbers
+
+    var temp = first
+
+    first=second
+
+    second=temp
+
+    ```
+
+
+    ```
+
+    println("Numbers After Swap : \n first = $first \n second = $second")
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    Run 1:
+
+    ter First Value :
+
+    45
+
+    Enter Second Value :
+
+    12
+
+    Numbers Before Swap :
+
+    first = 45
+
+    second = 12
+
+    Numbers After Swap :
+
+    first = 12
+
+    second = 45'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "# Kotlin program to check whether a number is EVEN or ODD\n\nExample:\n\nInput:\n\
+    \nN = 13\n\nOutput:\n\n\"ODD\"\n\nInput:\n\nN = 24\n\nOutput:\n\n\"EVEN\"\n\n\
+    # PROGRAM\n\n```\n/*\n * Kotlin program to Input Integer\n * Numbers and check\
+    \ Number is Even or ODD\n */\n```"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "```\nimport java.util.*\n\n// Main Method Entry Point of Program\n\nfun main(args:\
+    \ Array<String>) {\n    // InputStream to get Input\n    val reader = Scanner(System.\\\
+    `in\\`)\n\n    //Input Integer Value\n    println(\"Enter Integer Value : \")\n\
+    \    var number = reader.nextInt();\\n\n    val str = if(number%2==0) \"EVEN\"\
+    \ else \"ODD\"\n\n    println(\"Number is $str\")\n}\n```\n\n# Output\n\nRUN 1:\n\
+    \nEnter Integer Value :\n\n34\n\nNumber is EVEN\n\n---\n\nRun 2:"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: 'Enter Integer Value :
+
+    15
+
+    Number is ODD'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "# Kotlin program to print the Multiplication table\n\n# PROGRAM\n\n```\nimport\
+    \ java.util.*\n\n// Main function entry point of program\nfun main(args: Array<String>)\
+    \ {\n    val sc = Scanner(System.``in`)\n    println(\"Enter Number: \")\n   \
+    \ val num: Int = sc.nextInt()\n\n    // loop to print multiplication table of\
+    \ given number\n    for (i in 1..10) {\n        val result = num * i\n       \
+    \ println(\"$num*$i = $result\")\n    }\n}\n```\n\n# Output\n\nEnter Number:\n\
+    \n5\n\n5*1 = 5\n\n5*2 = 10"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '5*3 = 15
+
+
+    5*4 = 20
+
+
+    5*5 = 25
+
+
+    5*6 = 30
+
+
+    5*7 = 35
+
+
+    5*8 = 40
+
+
+    5*9 = 45
+
+
+    5*10 = 50'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# Program to calculate and display student grades
+
+
+    Percentage >=80 -> A
+
+
+    Percentage >=60 -> B
+
+
+    Percentage r>=40 -> C
+
+
+    else D
+
+
+    Note: Maximum Marks 100 in Each Subject
+
+
+    # Example:
+
+
+    Input:
+
+
+    English = 98
+
+
+    Physics = 34
+
+
+    Chemistry = 67
+
+
+    Maths = 90
+
+
+    Output:
+
+
+    Total Marks = 356.0
+
+
+    Percentage = 71.2
+
+
+    Grade = B
+
+
+    # PROGRAM'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "```\nimport java.util.*\n\n//Main Function , Entry point of Program\nfun main(args:\
+    \ Array<String>) {\n\n  //array of subjects Names\n  val subjectName = arrayOf<String>(\"\
+    English\",\"Physics\",\"Chemistry\",\"Maths\")\n\n  //Input Stream\n  val scanner\
+    \ = Scanner(System.`in`)\n\n  //Declare Array to Contain Subjects marks\n  val\
+    \ marksArray = DoubleArray(5)\n\n  //Start Input Subjects Marks\n  println(\"\
+    Input Marks->\")\n  for(i in marksArray.indices){\n    print(\"${subjectName[i]}\
+    \ : \")\n    marksArray[i] = scanner.nextDouble()\n  }\n}\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "```\n//Calculate Total Marks in All Subjects\nval total = marksArray.sum()\n\
+    ```\n\n```\n//Calculate Percentage\nval percentage = marksArray.average()\n```\n\
+    \n```\n//Print Total and Percentage\nprintln(\"Total of All subjects Marks : $total\"\
+    )\nprintln(\"Percentage : $percentage\")\n```\n\n```\n//To find out Grade based\
+    \ on Percentage\nwhen{\n  percentage>80 -> println(\"Grade : A\")\n  percentage>60\
+    \ -> println(\"Grade : B\")\n  percentage>40 -> println(\"Grade : C\")\n  else\
+    \ -> println(\"Grade : D\")\n}\n```\n\n# Output\n\nRun 1:\n\nEnglish : 98"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: 'Physics : 42
+
+
+    Chemistry : 67
+
+
+    Maths : 90
+
+
+    Total of All subjects Marks : 297
+
+
+    Percentage : 74.25
+
+
+    Grade : B'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "# Kotlin program to convert temperature\n\nExample:\n\nInput:\n\nFahrenheit\
+    \ = 67\n\nOutput:\n\nCelsius = 19.44444444444443\n\n# PROGRAM\n\n```\npackage\
+    \ com.includehelp\n\nimport java.util.*\n\n//Main Function , Entry point of Program\n\
+    fun main(args: Array<String>) {\n\n    //Input Stream\n    val scanner = Scanner(System.`in`)\n\
+    \n    //Input temperature in Fahrenheit\n    print(\"Enter temperature into Fahrenheit\
+    \ : \")\n    val fahrenheit = scanner.nextDouble()\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '```
+
+    //Convert Fahrenheit to Celsius
+
+    val celsius = ((fahrenheit - 32 ) * 5)/9
+
+
+    //Print temperature in Celsius
+
+    println("Temperature in Fahrenheit ($fahrenheit) = Celsius ($celsius))")
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    Output will be:
+
+
+    Run 1:
+
+
+    Enter temperature into Fahrenheit : 67
+
+
+    Temperature in Fahrenheit (67.0) = Celsius (19.444444444444443)
+
+
+    ---
+
+
+    Run 2:
+
+
+    Enter temperature into Fahrenheit : 78
+
+
+    Temperature in Fahrenheit (78.0) = Celsius (25.555555555555557)'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# Kotlin program to display Fibonacci series
+
+
+    Example:
+
+
+    Input:
+
+
+    term1 = 0
+
+
+    term2 = 1
+
+
+    N = 10
+
+
+    Output:
+
+
+    Fibonacci series: 0 1 1 2 3 5 8 13 21 34
+
+
+    Input:
+
+
+    term1 = 0
+
+
+    term2 = 1
+
+
+    N = 5
+
+
+    Output:
+
+
+    Fibonacci series: 0 1 1 2 3
+
+
+    # PROGRAM'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "```\n/**\n* Display Fibonacci Series up to a Given number of terms\n* e.g.\
+    \ 0 1 1 2 3 5 8 13....n\n */\n```\n\n```\nimport java.util.*\n```\n\n```\n//Main\
+    \ Function entry Point of Program\nfun main(args: Array<String>) {\n    // Input\
+    \ Stream\n    val scanner = Scanner(System.\\`in\\`)\n\n    // input total number\
+    \ of terms\n    println(\"Enter terms : \")\n    val n: Int = scanner.nextInt()\n\
+    \n    var term1 = 0\n    var term2 = 1\n    var count = 1\n\n    // Iterate Loop\
+    \ to print fibonacci Series upto given terms\n    while (count <= n){\n      \
+    \  print(\"$term1\")\n        val s = term1+term2\n        term1 = term2;\n  \
+    \      term2 = s\n        count++\n    }\n}\n```"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    RUN 1:
+
+
+    Enter terms :
+
+
+    10
+
+
+    0 1 2 3 5 8 13 21 34
+
+
+    ---
+
+
+    Run 2:
+
+
+    Enter terms :
+
+
+    5
+
+
+    0 1 2 3'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "# Kotlin program to find area of circle\n\nExample:\n\nInput:\n\nRadius: 3\n\
+    \nOutput:\n\nArea of circle: 28.259999999999998\n\n# PROGRAM\n\n```\nimport java.util.*\n\
+    \n// PI Constant Value\nval PI = 3.14\n\n/* function to calculate area of circle\
+    \ of given radius */\nfun getAreaOfCirce(radius: Double): Double {\n    return\
+    \ PI * radius * radius\n}\n\n// Main Method Entry Point of Program\nfun main(args:Array<String>){\n\
+    \    val sc = Scanner(System.`in`)\n}\n```"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '```
+
+    // Input Radius
+
+    println("Enter Circle Radius : ")
+
+    val radius = sc.nextDouble()
+
+
+    // Call function to get Area of Circle
+
+    val areaOfCircle = getAreaOfCirce(radius)
+
+    ```
+
+
+    Print Area of Circle
+
+
+    println("Area of Circle : \$areaOfCircle")
+
+    }
+
+
+    # Output
+
+
+    Run 1:
+
+
+    Enter Circle Radius :
+
+
+    3
+
+
+    Area of Circle : 28.259999999999998
+
+
+    ----
+
+
+    Run 2:
+
+
+    Enter Circle Radius :
+
+
+    8
+
+
+    Area of Circle : 200.96'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "# Kotlin program to find area of Square\n\nExample:\n\nInput:\n\nside = 6\n\
+    \nOutput:\n\narea = 36.0\n\n# PROGRAM\n\n```\nimport java.util.*\n\n//Main Function\
+    \ , Entry point of Program\nfun main(args: Array<String>) {\n\n    //Input Stream\n\
+    \    val scanner = Scanner(System.`in`)\n\n    //Input Side of Square\n    print(\"\
+    Enter Side of Square : \")\n    val side = scanner.nextDouble()\n\n    //Calculate\
+    \ Area of square\n    val squareArea = side*side;\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '```
+
+    //Print Area
+
+    println("Area of Square is : $squareArea")
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    Run 1:
+
+
+    Enter Side of Square : 6
+
+
+    Area of Square is : 36.0
+
+
+    ---
+
+
+    Run 2:
+
+
+    Enter Side of Square : 4.5
+
+
+    Area of Square is : 20.25'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Program to find area of a cylinder
+
+
+    Example:
+
+
+    Input:
+
+
+    Radius = 5
+
+
+    Height = 7
+
+
+    Output:
+
+
+    Surface Area of Cylinder is :75.39822368615503
+
+
+    # PROGRAM
+
+
+    ```
+
+    package com.includehelp
+
+    import java.util.*
+
+    //Main Function, Entry point of Program
+
+    fun main(args: Array<String>) {
+
+    //Input Stream
+
+    val scanner = Scanner(System.`in`)
+
+    //Input Radius
+
+    print("Enter Radius of Cylinder : ")
+
+    val radius = scanner.nextDouble()
+
+    //Input Height
+
+    ```'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '```
+
+    print("Enter Height of Cylinder : ")
+
+    val height = scanner.nextDouble()
+
+
+    //Cylinder Surface Area
+
+    val areaCylinder = 2*Math.PI*(radius+height)
+
+
+    //Print Area
+
+    println("Surface Area of Cylinder is :$areaCylinder")
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    Run 1:
+
+
+    Enter Radius of Cylinder : 5
+
+
+    Enter Height of Cylinder : 7
+
+
+    Surface Area of Cylinder is :75.39822368615503
+
+
+    ---
+
+
+    Run 2:
+
+
+    Enter Radius of Cylinder : 29
+
+
+    Enter Height of Cylinder : 4
+
+
+    Surface Area of Cylinder is :207.34511513692635'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "# Kotlin program to generate 4 digits\nOTP\n\n# PROGRAM\n\n```\n/**\n * Kotlin\
+    \ Program to Generate 4 digit OTP\n */\n/**\n * Function for Generate 4 digit\
+    \ OTP String\n * @return\n */\nfun generateOTP(): String {\n    val randomPin\
+    \ = (Math.random() * 9000).toInt() + 1000\n    return randomPin.toString()\n}\n\
+    \n// Main Method Entry Point of Program\nfun main(args: Array<String>) {\n   \
+    \ // Call function for Generate OTP\n    val otp1 = generateOTP()\n    // Print\
+    \ OTP\n    println(\"OTP : $otp1\")\n}\n```\n\n# Output\n\nRun 1:"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'OTP : 7997
+
+
+    -----
+
+
+    Run 2:
+
+
+    OTP : 7682
+
+
+    -----
+
+
+    Run 3:
+
+
+    OTP : 6934
+
+
+    -----
+
+
+    Run 4:
+
+
+    OTP : 4189'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "# Kotlin program to find area of Pentagon\n\nFormula to find area of Pentagon:\
+    \ = (5/2)sa, where\n\n+   - Side of Pentagon\n- Apothem of Pentagon\n\nExample:\n\
+    \nInput:\nside= 5\napothem = 6\n\nOutput:\narea = 75.0\n\n# PROGRAM\n\n```\nimport\
+    \ java.util.*\n\n//Main Function , Entry point of Program\nfun main(args: Array<String>)\
+    \ {\n\n    //Input Stream\n    val scanner = Scanner(System.`in`)\n```"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '```
+
+    //Input Side
+
+    print("Enter Side of Pentagon : ")
+
+    val s = scanner.nextDouble()
+
+    ```
+
+
+    ```
+
+    //Input Apothem
+
+    print("Enter Apothem of Pentagon : ")
+
+    val a = scanner.nextDouble()
+
+    ```
+
+
+    ```
+
+    //Area of Pentagon
+
+    val areaPentagon = (5.0/2.0)*s*a
+
+    ```
+
+
+    ```
+
+    //Print Area
+
+    println("Pentagon Area is :$areaPentagon")
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    Run 1:
+
+
+    Run 1:
+
+
+    Enter Side of Pentagon : 5
+
+
+    Enter Apothem of Pentagon : 6
+
+
+    Pentagon Area is :75.0
+
+
+    ---
+
+
+    Run 2:
+
+
+    Enter Side of Pentagon : 8
+
+
+    Enter Apothem of Pentagon : 6
+
+
+    Pentagon Area is :120.0'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "# Kotlin program to find prime numbers\n\nExample:\n\nInput:\n\nstart = 1\n\
+    \nend = 100\n\nOutput:\n\n[2, 3, 5, 7, 11, 13, 17, 19, 23, 29,\n31, 37, 41, 43,\
+    \ 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]\n\n# PROGRAM\n\n```\n/**\n * Kotlin\
+    \ Program to find out Prime Numbers between\n * given Range(include START and\
+    \ END)\n * A prime number is a whole number greater than 1\n * whose only factors\
+    \ are 1 and itself.\n * e.g 7, 11, 13, 17\n */\n```\n\n```\nimport java.util.*\n\
+    ```\n\n```\n//Function to check Prime Number\n```"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "```\nfun findPrimeNo(number: Long): Boolean {\n  if(number<2) return false\n\
+    \  for (i in 2.toLong().number/2) {\n    if (number % i == 0.toLong()) {\n   \
+    \   return false\n    }\n  }\n  return true\n}\n```\n\n```\n//Main Function, Entry\
+    \ Point of Program\nfun main(arg: Array<String>) {\n  //Input Stream\nval sc =\
+    \ Scanner(System.`in`)\n```\n\n```\n//Input Start of Range\nprint(\"Enter Start\
+    \ of Range : \")\nval start: Long = sc.nextLong()\n```\n\n```\n//Input End of\
+    \ Range\nprint(\"Enter End of Range : \")\nval end: Long = sc.nextLong()\n```\n\
+    \n```\n//Declare Mutable List to hold factors\nval list: MutableList<Long> = ArrayList()\n\
+    ```\n\n```\n//iterate through loop start to end to find Prime number in Range\n\
+    for (i in start..end) {\n```"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "```\nif (findPrimeNo(i)) {\n    list.add(i)\n}\n}\nprintln(\"Prime Numbers\
+    \ from $start to $end : $list\")\n```"
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# Kotlin program to convert decimal to binary
+
+
+    Example:
+
+
+    Input:
+
+    Decimal number = 12
+
+
+    Recursive division:
+
+
+    | Number | Quotient | Remainder |
+
+    | 12 | 6 | 0 |
+
+    | 6 | 3 | 0 |
+
+    | 3 | 1 | 1 |
+
+    | 1 | 0 | 1 |
+
+
+    Read the remainders in reverse order
+
+    1100 is the binary conversion for 12.
+
+
+    # PROGRAM
+
+
+    import java.util.*
+
+
+    ```
+
+    /* function to convert given decimal number into Binary */
+
+    fun getBinaryNumber(decimalNumber: Int): String {
+
+    var decimalNumber = decimalNumber
+
+    ```'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "```\nval binaryStr = StringBuilder()\n\nwhile (decimalNumber > 0) {\n    val\
+    \ r = decimalNumber % 2\n    decimalNumber /= 2\n    binaryStr.append(r)\n}\n\
+    ```\n\n```\nreturn binaryStr.reverse().toString()\n}\n```\n\n```\n// Main Method\
+    \ Entry Point of Program\nfun main(arg: Array<String>) {\n    val sc = Scanner(System.`in`)\n\
+    \n    println(\"Enter Decimal Number : \")\n    //Input Decimal Number\n    val\
+    \ decimalNumber: Int = sc.nextInt()\n\n    // Call function to Convert Decimal\
+    \ into binary\n    val binaryNumber = getBinaryNumber(decimalNumber)\n    // Print\
+    \ Binary Number\n    println(\"Binary Number : $binaryNumber\")\n}\n```\n\n# Output\n\
+    \nRun 1:\n\nEnter Decimal Number :"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '15
+
+
+    Binary Number : 1111
+
+
+    -----
+
+
+    Run 2:
+
+
+    Enter Decimal Number :
+
+
+    12345
+
+
+    Binary Number : 1100000111001
+
+
+    ----
+
+
+    Run 3:
+
+
+    Enter Decimal Number :
+
+
+    545654
+
+
+    Binary Number : 10000101001101110110'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# OUR OTHER PUBLISHING TAM SEL
+
+
+    APACHE SPARK AND SCALA FOR BEGINNERS: 2 BOOKS IN 1 - Learn Coding Fast!
+
+
+    PYTHON AND JAVASCRIPT CODING BASICS: FOR ABSOLUTE BEGINNERS
+
+
+    LARAVEL FOR BEGINNERS: Learn Coding Fast
+
+
+    HTML FOR BEGINNERS: Html CSS Programming Language Crash Course, Web Design Quick
+    Start Script Tutorial Book in Easy Steps
+
+
+    DART PROGRAMMING BASICS: FOR ABSOLUTE BEGINNERS
+
+
+    RUST AND GOLANG FOR BEGINNERS: 2 BOOKS IN 1 - Learn Coding Fast! RUST AND GOLANG
+
+
+    APACHE SPARK AND HADOOP FOR BEGINNERS: 2 BOOKS IN 1 - Learn Coding Fast!
+
+
+    TENSORFLOW FOR BEGINNERS: LEARN CODING FAST'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# DJANGO AND PYTHON FOR BEGINNERS: 2 BOOKS IN 1 - Learn Coding Fast!
+
+
+    # JAVASCRIPT AND DART CODING BASICS: FOR ABSOLUTE BEGINNER
+
+
+    # TENSORFLOW FOR BEGINNERS AND PYTHON CODING BASICS: FOR ABSOLUTE BEGINNERS
+
+
+    # RUST Programming Language: For Beginners, Learn Coding Fast!
+
+
+    # HADOOP AND PYTHON FOR BEGINNERS: 2 BOOKS IN 1 - Learn Coding Fast!
+
+
+    # SELENIUM AND JAVA FOR BEGINNERS: 2 BOOKS IN 1 - Learn Coding Fast!
+
+
+    # ANDROID AND JAVA FOR BEGINNERS: 2 BOOKS IN 1 - Learn Coding Fast!'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# J KING
+
+
+    PYTHON AND HADOOP BASICS
+
+
+    PYTHON BASICS AND PYTHON CODING EXAMPLES
+
+
+    C# AND C++ CODING EXAMPLES
+
+
+    PYTHON CODING AND C PROGRAMMING EXAMPLES
+
+
+    C++ AND JAVA CODING EXAMPLES
+
+
+    ANDROID BASICS AND PYTHON CODING EXAMPLES
+
+
+    C# BASICS AND PYTHON CODING EXAMPLES
+
+
+    ANGULAR AND PYTHON BASICS
+
+
+    PYTHON BASICS AND SCALA CODING EXAMPLES
+
+
+    JAVA BASICS AND PYTHON CODING EXAMPLES
+
+
+    PYTHON BASICS AND C# CODING EXAMPLES
+
+
+    ANDROID BASICS AND JAVA CODING EXAMPLES'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# C# BASICS AND C# CODING EXAMPLES
+
+
+    # JAVASCRIPT AND HTML BASICS
+
+
+    # HTML AND JAVASCRIPT CODING EXAMPLES'
+  merge: -1
+  pgno: 116
