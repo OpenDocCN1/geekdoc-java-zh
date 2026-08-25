@@ -1,0 +1,502 @@
+- - '#'
+  - Unreal Engine 5 游戏编程设计模式：C++、Java、C# 和蓝图
+- - '#'
+  - 引言
+- - '#'
+  - 如何阅读此书
+- - '#'
+  - 错误
+- - '#'
+  - 本书中包含什么？
+- - '#'
+  - 本书中不包含什么？
+- - '#'
+  - 蓝图的怪异与非传统方法论
+- - '##'
+  - 蓝图接口
+- - '##'
+  - 不能在构造脚本中生成
+- - '##'
+  - 序列化节点（Sequence Node）用法
+- - '##'
+  - 折叠节点（Collapse Node）
+- - '##'
+  - 黄色接口检查（Yellow Interface check）
+- - '#'
+  - 创建模式（Creational Patterns）
+- - '##'
+  - 酒店、旅馆、假日庄园……建造者模式（Builder Pattern）
+- - '###'
+  - 优点
+- - '###'
+  - 不足之处
+- - '###'
+  - 建造者模式实现
+- - '####'
+  - FloorPlan.cpp
+- - '####'
+  - LodgingBuilder.h
+- - '####'
+  - LodgingBuilder.cpp
+- - '####'
+  - Lodging.h
+- - '####'
+  - Lodging.cpp
+- - '####'
+  - HotelLodgingBuilder.h
+- - '####'
+  - HotelLodgingBuilder.cpp
+- - '####'
+  - ArchitecturalEngineer.h
+- - '####'
+  - ArchitecturalEngineer.cpp
+- - '##'
+  - 沸腾与泡沫，酿造与装瓶...
+- - '###'
+  - 工厂方法 (Factory Method)
+- - '####'
+  - 优点
+- - '####'
+  - 不足之处
+- - '####'
+  - 工厂方法实现
+- - '####'
+  - FactoryMethod_Main.h
+- - '####'
+  - FactoryMethod_Main.cpp
+- - '####'
+  - Create Outer HP 的蓝图：
+- - '####'
+  - Create Inner HP 的蓝图：
+- - '####'
+  - Create Outer PP 的蓝图：
+- - '####'
+  - Create Inner PP 的蓝图：
+- - '####'
+  - Create Outer SP 的蓝图：
+- - '####'
+  - Create Inner SP 的蓝图：
+- - '####'
+  - PotionShop.h
+- - '####'
+  - PotionShop.cpp
+- - '####'
+  - Potion.h
+- - '####'
+  - Potion.cpp
+- - '####'
+  - InnerRealmPotionShop.h
+- - '####'
+  - InnerRealmPotionShop.cpp
+- - '####'
+  - InnerRealmHealthPotion.h
+- - '####'
+  - InnerRealmHealthPotion.cpp
+- - '####'
+  - InnerRealmPowerPotion.h
+- - '####'
+  - InnerRealmSkillPotion.cpp
+- - '####'
+  - OuterRealmPotion.h
+- - '####'
+  - OuterRealmPotion.cpp
+- - '##'
+  - 编程纯洁者的噩梦……单例模式
+- - '###'
+  - 优点
+- - '###'
+  - 不完美
+- - '###'
+  - 单例模式实现
+- - '####'
+  - Singleton_Main.h
+- - '####'
+  - Singleton_Main.cpp
+- - '####'
+  - Singleton_Main 蓝图事件图：
+- - '####'
+  - Create_Inventory_Instance 折叠图：
+- - '####'
+  - Instance_Created_Message 折叠图：
+- - '####'
+  - Inventory 类（Class）：
+- - '####'
+  - Inventory.h
+- - '####'
+  - Inventory.cpp
+- - '####'
+  - Inventory 蓝图构造脚本：
+- - '####'
+  - is_already_exist 折叠图：
+- - '####'
+  - kill 折叠图：
+- - '####'
+  - Singleton 折叠图：
+- - '#'
+  - 结构模式（Structural Patterns）
+- - '##'
+  - GunAdapter.h
+- - '##'
+  - GunAdapter.cpp
+- - '##'
+  - Gun.h
+- - '##'
+  - Gun.cpp
+- - '##'
+  - Shooter.h
+- - '##'
+  - Shooter.cpp
+- - '##'
+  - 装饰器……模式
+- - '###'
+  - 优点
+- - '###'
+  - 缺点
+- - '###'
+  - 装饰器模式实现
+- - '####'
+  - Decorator_Main.h
+- - '####'
+  - Decorator_Main.cpp
+- - '####'
+  - Create_Projectile_Enemy 折叠图：
+- - '####'
+  - Enemy.h
+- - '####'
+  - Enemy.cpp
+- - '####'
+  - MeleeEnemy.h
+- - '####'
+  - MeleeEnemy.cpp
+- - '####'
+  - ProjectileEnemy.cpp
+- - '##'
+  - 太空旅行看起来简单……外观模式 (Facade Pattern)
+- - '###'
+  - 优点
+- - '###'
+  - 缺点
+- - '###'
+  - 外观模式实现
+- - '####'
+  - StarShipFacade.cpp
+- - '####'
+  - StarShipFacade.h
+- - '####'
+  - StarShipCrewMember.h
+- - '####'
+  - StarShipCrewMember.cpp
+- - '####'
+  - 星际舰导航官
+- - '####'
+  - StarShipNavigationOfficer.cpp
+- - '####'
+  - StarShipOperationsOfficer
+- - '####'
+  - StarShipOperationsOfficer.cpp
+- - '####'
+  - StarShipSupplyOfficer.h
+- - '####'
+  - StarShipSupplyOfficer.cpp
+- - '#'
+  - 行为模式
+- - '##'
+  - 观察者模式
+- - '##'
+  - 观察者模式实现
+- - '####'
+  - Observer_Main 类：
+- - '####'
+  - Observer_Main.h
+- - '####'
+  - Observer_Main.cpp
+- - '####'
+  - Publisher.h
+- - '####'
+  - ClockTower.h
+- - '##'
+  - 让雨下起来……状态模式
+- - '###'
+  - 优点
+- - '###'
+  - 不足之处
+- - '###'
+  - 状态模式实现
+- - '####'
+  - State_Main.h
+- - '####'
+  - State_Main.cpp
+- - '####'
+  - OldSchoolSlotMachine.cpp
+- - '####'
+  - NoDollarsState.h
+- - '####'
+  - NoDollarsState.cpp
+- - '####'
+  - NoCoinState.h
+- - '####'
+  - NoCoinState.cpp
+- - '####'
+  - CoinInsertedState.h
+- - '####'
+  - CoinInsertedState.cpp
+- - '####'
+  - WonDollarsState.cpp
+- - '####'
+  - WonDollarsState 事件图：
+- - '####'
+  - 检查机器是否有美元折叠图：
+- - '####'
+  - 机器有美元的折叠图：
+- - '####'
+  - 机器没美元的折叠图：
+- - '####'
+  - ToString 函数：
+- - '####'
+  - State 接口：
+- - '####'
+  - State.h
+- - '####'
+  - State.cpp
+- - '##'
+  - 策略模式视口打印：
+- - '##'
+  - 策略模式
+- - '###'
+  - 优点
+- - '###'
+  - 不足之处
+- - '###'
+  - 策略模式实现
+- - '####'
+  - 'Strategy_Main:'
+- - '####'
+  - Strategy_Main.cpp
+- - '####'
+  - BattleShip.h
+- - '####'
+  - BattleShip.cpp
+- - '####'
+  - BattleShipStrategy.cpp
+- - '####'
+  - BruteForceStrategy.h
+- - '####'
+  - DivideConquerStrategy.h
+- - '####'
+  - DivideConquerStrategy.cpp
+- - '#'
+  - 建造模式实现
+- - '##'
+  - 沸、泡、酿造、装瓶……
+- - '##'
+  - 工厂方法 (Java)
+- - '###'
+  - 工厂方法 UML 图
+- - '###'
+  - 工厂方法实现
+- - '###'
+  - 工厂方法视图打印：
+- - '##'
+  - 程序员的噩梦……单例模式（Java）
+- - '###'
+  - 单例实现
+- - '####'
+  - Singleton_Main 蓝图事件图：
+- - '####'
+  - '`Create_Inventory_Instance` 折叠图表：'
+- - '####'
+  - '`Instance_Created_Message` 折叠图表：'
+- - '#'
+  - 结构型模式 (Java)
+- - '##'
+  - 适应并克服……适配器模式 (Java)
+- - '###'
+  - 适配器模式实现
+- - '##'
+  - 装饰力敌人……装饰器模式 (Java)
+- - '###'
+  - 装饰器模式实现
+- - '##'
+  - 太空旅行看起来很容易……假象模式 (Java)
+- - '###'
+  - 外观模式实现
+- - '#'
+  - 行为模式 (Java)
+- - '##'
+  - 变人会在深夜出没……
+- - '##'
+  - 观察者模式 (Java)
+- - '##'
+  - 观察者模式实现
+- - '###'
+  - '`ClockTower` 类：'
+- - '##'
+  - 来实现……状态模式 (Java)
+- - '###'
+  - 状态模式实现
+- - '####'
+  - OldSchoolSlotMachine 构造脚本：
+- - '####'
+  - State 的折叠图：
+- - '####'
+  - 'initDollarsState:'
+- - '####'
+  - NoDollarsState 折叠图：
+- - '####'
+  - 'initCoinState:'
+- - '####'
+  - NoCoinState 折叠图：
+- - '####'
+  - 'initInsertedState:'
+- - '####'
+  - CoinInsertedState 折叠图：
+- - '####'
+  - 'initDollarsState:'
+- - '####'
+  - WonDollarsState 折叠图：
+- - '####'
+  - 'insertCoin:'
+- - '####'
+  - 'rejectCoin:'
+- - '####'
+  - 'pullLever:'
+- - '####'
+  - 'emitDollars:'
+- - '####'
+  - 'getCount:'
+- - '####'
+  - 'restockDollars:'
+- - '####'
+  - 'setState:'
+- - '####'
+  - 'getCurrentState:'
+- - '####'
+  - 'getDollarsState:'
+- - '####'
+  - 'getCoinState:'
+- - '####'
+  - 'getInsertedState:'
+- - '####'
+  - 'getDollarsState:'
+- - '####'
+  - NoDollarsState 类：
+- - '####'
+  - NoDollarsState 事件图：
+- - '####'
+  - NoCoinState 类：
+- - '####'
+  - NoCoinState 事件图：
+- - '####'
+  - CoinInsertedState 类：
+- - '####'
+  - WonDollarsState 类折叠图：
+- - '##'
+  - 策略模式视图：
+- - '##'
+  - 你击沉了我的舰……策略模式 (Java)
+- - '###'
+  - 策略模式 UML 图
+- - '###'
+  - 策略模式实现
+- - '####'
+  - Strategy_Main 蓝图事件图：
+- - '####'
+  - Create BrForceStrategy 折叠图：
+- - '####'
+  - Create Battleship 折叠图：
+- - '####'
+  - Execute Brute Force Strategy 折叠图：
+- - '####'
+  - Execute Divide Conquer Strategy 折叠图：
+- - '####'
+  - Execute Retreat Strategy 折叠图：
+- - '####'
+  - BattleShip 类：
+- - '####'
+  - BattleShip 构造脚本：
+- - '####'
+  - alterManuvers 蓝图函数：
+- - '####'
+  - engage 蓝图函数：
+- - '####'
+  - BattleStrategy 接口：
+- - '####'
+  - BruteForceStrategy 类：
+- - '####'
+  - BruteForceStrategy 蓝图事件图：
+- - '####'
+  - DivideConquerStrategy：
+- - '####'
+  - DivideConquerStrategy 蓝图事件图：
+- - '####'
+  - RetreatStrategy 类：
+- - '####'
+  - RetreatStrategy 蓝图事件图：
+- - '##'
+  - 策略模式打印：
+- - '##'
+  - 使用 C# 的模式
+- - '##'
+  - Hotel Holiday...策略模式 (C#)
+- - '###'
+  - 策略模式 UML 图
+- - '###'
+  - 策略模式实现
+- - '####'
+  - Lodging 蓝图：
+- - '####'
+  - HotelLodgingBuilder 蓝图构建事件图：
+- - '####'
+  - Lodging 图谱：
+- - '##'
+  - 编程精英的克星……单例模式 (C#)
+- - '###'
+  - 单例模式实现
+- - '##'
+  - 适应与克服……适配器模式 (C#)
+- - '###'
+  - 适配器模式实现
+- - '##'
+  - 强化敌人……装饰器模式 (C#)
+- - '###'
+  - 装饰器模式实现
+- - '##'
+  - 变异在深夜出没……
+- - '##'
+  - 观察者模式 UML 图 (C#)
+- - '##'
+  - 观察者模式实现
+- - '##'
+  - 你击沉了我的舰……策略模式 (C#)
+- - '###'
+  - 策略模式 UML 图
+- - '###'
+  - 策略模式实现
+- - '####'
+  - Strategy_Main 蓝图事件图：
+- - '####'
+  - Create BruteStrategy 折叠图：
+- - '####'
+  - Create Battleship 折叠图：
+- - '####'
+  - Execute Brute Force Strategy 折叠图：
+- - '####'
+  - Execute Divide Conquer Strategy 折叠图：
+- - '####'
+  - Execute Retreat Strategy 折叠图：
+- - '####'
+  - BattleShip 构造脚本：
+- - '####'
+  - alterManeuvers 蓝图函数：
+- - '####'
+  - engage 蓝图函数：
+- - '####'
+  - 策略模式视图打印：
+- - '#'
+  - 结论
+- - '#'
+  - 来源
+- - '#'
+  - 关于作者
+- - '#'
+  - Sonic영상 创意总监 - Umar Bradshaw
