@@ -1,0 +1,907 @@
+- md: "\n# How Weak Reference is Used in Java Projects?\n\nYoshi H H*, Shinshiro Matsumoto,\
+    \ Taeyung Kim and Shinji Kussumoto\nGraduate School of Information Science and\
+    \ Technology, Osaka University, Japan\n[higo, shinsuke, kim-yang, kusumoto]@.osaka-u.ac.jp\n\
+    \nAbstract—Programming languages have a system of garbage collection to automate\
+    \ memory management but problems may still occur due to the limitation of memory\
+    \ management. Weak reference has been proposed as a solution to such problems.\
+    \ However, the use of weak reference often requires consideration of memory layout\
+    \ for developers. In this paper, we investigate the use of weak reference on open\
+    \ source projects. More concretely, we investigated the domain of Java objects,\
+    \ the timing of the introduction of weak reference, the usage method, the presence\
+    \ or absence of the test code for weak reference. The survey showed that weak\
+    \ references were used in 73 repositories, about 102 reporters, and that weak\
+    \ references were most common in test code.\n\nIndex Terms—Weak Reference, Garbage\
+    \ collection, GitHub\n\n```java\nWeakReference<Socket> ret =\n    new WeakReference<Socket>(socket);\n\
+    \n```\n\nSocket s = ret.get();\nif (s == null) {\n    // in the case that the\
+    \ object has been collected\n} else {\n    // in the case that the object is still\
+    \ in the heap\n}\n```\n\nFig. 1. An example of class WeakReference\n\n## I. INTRODUCTION\n\
+    \nGarbage collection (GC) is a system for automate memory management in many programming\
+    \ languages [1]. GC frees developers from managing memory manually because GC\
+    \ automatically collects unreachable objects. When an object is unreachable or\
+    \ not determined by reachability from other objects, Objects referenced by other\
+    \ objects are reachable and not collected because they are joined to be unreachable.\
+    \ Objects referenced from other objects are unreachable and, unreachable objects\
+    \ are collected automatically.\n\nHowever, there is still problem in the memory\
+    \ management by GC. If an object that will not be used in the future is unreachable\
+    \ from other objects, it will not be collected by GC. As a result, objects remain\
+    \ in memory causing a memory leak.\n\nIn GC, developers cannot specify specific\
+    \ object to instruct collection. As a way of specifying which object to be collected\
+    \ by developers, weak reference (WR) has been proposed from strong reference [2]\
+    \ in the GC mechanism. Objects referenced only by WR are untreated and collected\
+    \ by GC. Consequently, by using an object WR, it can be specified as a GC target.\
+    \ However, there are some considerations for using WR effectively. First, developers\
+    \ need to know the timing at which weakly referenced objects be collected. Having\
+    \ at least one reference from other objects are not collected, and GC objects\
+    \ referenced only by WR. Thus, it is not possible to predict when an object is\
+    \ weakly referenced from strong references and design the object to be collected\
+    \ when it is no longer needed. Next, we need to determine the timing at which\
+    \ GC collects the objects referenced by WRs. Instead of collecting as soon as\
+    \ the object becomes a GC target, a null pointer is inserted in the WR instead.\n\
+    \nVarious studied data on GitHub repositories [3], some research to solve the\
+    \ problem of Java memory leak [4, 5]. However, there is no study of investigation\
+    \ of the use of WR. In open source software we investigated the domain of Java\
+    \ projects where WR was used, the WR's introduction time, method, the existence\
+    \ of the test, and the case of failure.\n\n## II. PRELIMINARIES\n\nThe two classes\
+    \ are provided for WR in the Java language.\n\n- java.lang.WeakReference<T>\n\
+    - java.util.HashMap<K,V>\n\nThe former is a class of WR for type T. I show an\
+    \ example of how to use WeakReference. The latter and normal hash map (java.util.HashMap<K,V>)\
+    \ share the same functions. The difference is when a weakly referenced object\
+    \ is collected, to the value of the pair is lost, and if there is no reference\
+    \ the value object, it is collected together with the key object. Key-value pairs\
+    \ of key objects are no longer necessarily removed from the WeakHashMap. This\
+    \ has the advantage that developers do not have to worry about deleting unnecessary\
+    \ key-value pairs.\n\n## III. RESEARCH QUESTIONS\n\n### RQ1: in which domain is\
+    \ WR used?\nOur aim is to understand domain projects use WR and what features\
+    \ they use.\n\n### RQ2: when is WR introduced?\nWe investigate when WR is introduced\
+    \ in each project to understand the purpose for which WR is introduced. The introduction\
+    \ is classified into two (1) implementing a new function and (2) maintain an existing\
+    \ function.\n\n### RQ3: how is WR used?\nWe try to find out how WR is used. By\
+    \ knowing how we use WR in real-world situations, we can understand WR's primary\
+    \ uses and the typical patterns that use WR.\n\n### RQ4: is code WR tested?\n\
+    Making test is possible in software development. We investigate whether the code\
+    \ using WR is tested sufficiently or not.\n\n### RQ5: do developers stop using\
+    \ WR?\nTo determine whether WR is difficult, we investigate whether there are\
+    \ any cases developers using WR due to unexpected problems.\n\n### RQ6: is using\
+    \ weak reference for performance?\nTo check whether WR is effective for performance,\
+    \ we conducted performance test on open source projects. We investigate whether\
+    \ there is any difference between code using WR and code modified to use WR.\n\
+    \n## IV. EXPERIMENT\n\n### A. RQ1: in what domain WR is used?\nThe procedures\
+    \ are to repeat the 202 projects that were used in the experiment by Borges al.\
+    \ [3]. They classified 202 projects into the following domains:\n\n- Application\
+    \ software (Application)\n- System software (System)\n- Web libraries and frameworks\
+    \ (Web)\n- Non-web libraries and frameworks (Non-web)\n- Tools (Tools)\n- Documentation\
+    \ (Doc.)\n\nWe used GitHub code search API to determine whether WR was used in\
+    \ each project. A code search performed using two keywords 'WeakReference' and\
+    \ 'WeakMap', and if the number of source files in the results was one or more,\
+    \ it was treated as using.\n\nResults: Figure 2 shows the results. ALL is the\
+    \ distribution of all 202 projects, and WEAK is the distribution of the 73 projects\
+    \ using WR. WR is used in 44 projects in the Non-web domain, which is the highest.\
+    \ Regarding the ratio of WEAK/ALL, WR is used in more than half of the projects\
+    \ in the System and Tools domains.\n\n### B. RQ2: when was WR introduced?\nWe\
+    \ analyzed the change history of files in the repositories to find out when WR\
+    \ was first introduced in the source files. The introduction time was classified\
+    \ into two cases: (1) when the source file was created and (2) when it was updated.\
+    \ We assumed that WR was introduced for the following purposes: For the first\
+    \ case, WR was introduced when a new function was introduced. For the second case,\
+    \ WR was introduced when an existing function improved/maintained.\n\n### C. RQ3:\
+    \ how is WR used?\nThe procedures for RQ3 are the projects of all 55 source files\
+    \ used in those repositories. We recorded where and how WR was used. We then classified\
+    \ the usages of WR into the following categories:\n\n- Testing\n- Memory leak\
+    \ prevention\n- Caching\n- API implementation\n- Comment\n- Unnecessary processing\
+    \ avoidance\n\nTesting means that WR is used in time. Memory leak prevention means\
+    \ that unnecessary objects are collected by WR. Caching represents that the results\
+    \ of calculations are stored using WR. API implementation means a case in which\
+    \ the function of WR is provided as an API as it is. For example, a class that\
+    \ inherits WeakReference is a typical case. Comment means not a code, but WeakReference.\n\
+    \n## Our Answer\nWR was mainly introduced when creating new source files, that\
+    \ is, when adding new functions to software.\n\nThe use of WR is an unexpected\
+    \ result for the authors. The most common use of WR in code may be test patterns\
+    \ using WR were already known for developers. Other patterns of WR are described\
+    \ in Subsection IV-C. Such patterns will be useful for developers who are not\
+    \ familiar with WR.\n\nIn some of this, it was necessary to look at the code and\
+    \ change history. We picked up the 10 projects with the highest stars out of the\
+    \ 73 projects that used WR. Table 1 shows project names under the investigation\
+    \ and number of stars at the end of 2018.\n\nCode WR was not tested much. The\
+    \ authors consider that there is no test for WR because the pattern of the code\
+    \ for testing WR is not well known, rather than the difficulty of using WR.\n\n\
+    The 202 projects tested, 73 used WR, which was unexpectedly high. Among them,\
+    \ WR was often in System and Software domains. The authors consider WR is often\
+    \ introduced where there is a strong demand for performance.\n\nThere were some\
+    \ cases developers using WR due to unexpected problems. To avoid such problems,\
+    \ the introduction of WR should be determined with great care.\n\nWe conducted\
+    \ experiments using source software and confirmed that WR was effective for performance.\
+    \ In applications with all references to data, abnormal termination occurred in\
+    \ the original library when WR was used. Still, with processing up to 1 GB of\
+    \ data at once and doing something with it, it is possible to repeat loading and\
+    \ unloading. In such a case, the existing library using WR worked fine, and the\
+    \ modification terminated abnormally. The authors confirmed that WR is an effective\
+    \ way to automatically collect objects and prevent memory leak from them.\n\n\
+    TABLE 1: Top stars projects\n\n| Project | Stars |\n|---|---|\n| Reactive/Rx |\
+    \ 36206 |\n| elasticsearch/elasticsearch | 35955 |\n| spring-projects/spring-boot\
+    \ | 30988 |\n| square/okhttp | 29609 |\n| google/guava | 27988 |\n| filthy/AndroidChart\
+    \ | 26609 |\n| spring-projects/spring-framework | 24612 |\n| bungee/gradle | 23869\
+    \ |\n| square/testframework | 21002 |\n| zxing/zxing | 20623 |\n\n| File creation\
+    \ | File update |\n|---|---|---|\n| WeakReference | 247 | 81 |\n| WeakMap | 75\
+    \ | 29 |\n| Total | | 322 |\n\nFig. 2: Project domains\n\n![](img/5f9b873328e6d5db22a6fa7023ebdf4_20.png)\n"
+  mdcn: "\n\n# Java 项目中如何使用弱引用？\n\nYoshi H H*, Shinshiro Matsumoto, Taeyung Kim 和\
+    \ Shinji Kussumoto\n日本大阪大学信息科学与技术研究科，研究生院\n[higo, shinsuke, kim-yang, kusumoto]@.osaka-u.ac.jp\n\
+    \n摘要—编程语言拥有一垃圾回收系统来自动管理内存，但由于内存管理的局限性，仍可能出现问题。弱引用（Weak reference）被提出作为解决此类问题的方案。然而，开发者在使用弱引用时通常需要考虑内存布局。在本文中，我们调查了开源项目对弱引用的使用。更具体地说，我们调查了\
+    \ Java 对象的领域、弱引用的引入时、使用方法以及是否存在针对引用的测试代码。调查显示，弱引用被 73 个代码库、约 102 个报告者使用，且弱引用在测试代码中最为常见。\n\
+    \n索引术语—弱引用，垃圾回收，GitHub\n\n```java\nWeakReference<Socket> ret =\n    new WeakReference<Socket>(socket);\n\
+    \n```\n\nSocket s = ret.get();\nif (s == null) {\n    // 如果对象已被回收\n} else {\n\
+    \    // 如果对象仍在堆中\n}\n```\n\n图 1. 类 WeakReference 的示例\n\n## I. 引言\n\n垃圾回收（GC）是许多编程语言中用于自动管理内存的系统\
+    \ [1]。GC 将开发者从手动管理内存中解放出来，因为 GC 会自动收集不可达的对象。当一个对象不可达或无法通过其他对象的可达性确定时，被其他对象引用的对象是可达的且不会收集，因为它们被连接为不可达。从其他对象引用的对象是不可达的，不可达的对象会被自动收集。\n\
+    \n然而，通过 GC 进行内存管理仍然存在问题。如果一个未来将不再使用的对象从其他对象不可达，它将不会被 GC 回收。结果导致对象留在内存中，引起内存泄漏。\n\
+    \n在 GC 中，开发者无法指定特定对象来指示回收。作为开发者指定要回收哪个对象的方法，弱引用（WR）在 GC 机制中相对于强引用（strong reference）[2]\
+    \ 被提出。仅被 WR 引用的对象不被处理并被 GC 回收。因此，通过使用一个 WR 对象，可以将其指定为 GC 目标。然而，有效地使用 WR 有一些考虑因素。首先，开发者需要知道被弱引用对象被回收的时机。只要至少有一个来自其他对象的引用，对象就不会被回收，GC\
+    \ 只回收仅被 WR 引用的对象。因此，无法预测一个对象从强引用变为弱引用的何时，并设计该对象在不再需要时被回收。其次，我们需要确定 GC 回收由 WR 引用的对象的时机。GC\
+    \ 并不是在对象成为 GC 目标时立即收集，而是在 WR 中插入一个空指针。\n\n关于 GitHub 代码库的各种研究数据 [3]，以及一些解决 Java\
+    \ 内存泄漏问题的研究 [4, 5]。然而，目前还没有关于 WR 使用情况的调查研究。在开源软件中，我们调查了使用 WR 的 Java 项目领域、WR 的引入时间、方法、测试的存在以及失败的案例。\n\
+    \n## II. 基础知识\n\nJava 语言提供了两个用于 WR 的类。\n\n- java.lang.WeakReference<T>\n- java.util.HashMap<K,V>\n\
+    \n前者是用于类型 T 的 WR 类。我展示了一个如何使用 WeakReference 的示例。后者和普通的哈希映射（java.util.HashMap<K,V>）具有相同的功能。区别在于，当弱引用对象被回收时，键值对的值会丢失；如果没有对值对象的引用，它将与键对象一起被回收。键对象的键值对不再一定会被从\
+    \ WeakHashMap 中移除。这过的优点是开发者不需要担心删除不必要的键值对。\n\n## III. 研究问题\n\n### RQ1: WR 在哪些领域被使用？\n\
+    我们的目标是理解哪些领域的项目使用了 WR，以及它们使用了哪些特性。\n\n### RQ2: WR 是什么时候被引入的？\n我们调查了每个项目引入 WR 的时间，以理解引入\
+    \ WR 的目的。引入被分为两类：(1) 实现新功能和 (2) 维护现有功能。\n\n### RQ3: WR 是如何被使用的？\n我们试图找出 WR 是如何被使用的。通过了解我们在现实世界中如何使用\
+    \ WR，我们可以理解 WR 的主要用途以及使用 WR 的典型模式。\n\n### RQ4: WR 代码是否经过了测试？\n在软件开发中进行测试是可能的。我们调查了使用\
+    \ WR 的代码是否经过充分测试。\n\n### RQ5: 开发者是否停止了使用 WR？\n为了确定 WR 是否困难，我们调查了是否存在开发者因意外问题而停止使用\
+    \ WR 的情况。\n\n### RQ6: 使用弱引用是为了性能吗？\n为了检查 WR 对性能是否有效，我们在开源项目上进行了性能测试。我们调查了使用 WR\
+    \ 的代码与修改为使用 WR 的代码是否存在差异。\n\n## IV. 实验\n\n### A. RQ1: WR 在什么领域使用？\n程序是重复 Borges\
+    \ 等人 [3] 在实验中使用的 202 个项目。他们将 202 个项目分为以下领域：\n\n- 应用程序软件 (Application)\n- 系统软件\
+    \ (System)\n- Web 库和框架 (Web)\n- 非 Web 库和框架 (Non-web)\n- 工具 (Tools)\n- 文档（Doc.）\n\
+    \n我们使用 GitHub 代码搜索 API 来确定每个项目是否使用了 WR。使用 'WeakReference' 和 'WeakMap' 两个关键词执行代码搜索，确定了每个项目是否使用了\
+    \ WR。调查显示，WR 在 73 个代码库、约 102 个报告者中使用，且 WR 在测试代码中最为常见。结果：WR 在 73 个代码库中使用，在 202\
+    \ 个项目中的 44 个项目中使用。在 202 个项目中的，WR 在 Web 领域中最为常见。在 System 领域中，WR 在 73 个项目中的最为常见。\n\
+    \n### B. RQ2: WR 是什么时候被引入的？\n我们调查了每个项目引入 WR 的时间，以理解引入 WR 的目的。引入分为两种：(1) 创建新功能和\
+    \ (2) 维护现有功能。在第一种情况下，WR 是随着功能的引入的；在第二种情况下，WR 是为了维护现有功能。\n\n### C. RQ3: WR 是如何被使用的？\n\
+    我们通过调查 55 个项目，试图找出 WR 是如何被使用的。我们将 WR 的使用归纳为几类：\n\n- 测试\n- 内存泄漏预防\n- 缓存实现\n- 注释\n\
+    \nWR 在测试代码中是常见的。在内存泄漏预防中，WR 是常见的。在缓存实现中，WR 是常见的。在注释中，WR 也是常见的。此外，GC 并不是在对象成为 GC\
+    \ 目标时立即收集，而是在 WR 中插入一个空指针。\n\n## 答复\nWR 主要在创建新文件时引入，在开发者遇到意外问题时引入。为了，WR 应该被谨慎引入。在调查\
+    \ 202 个项目时，WR 在 73 个项目中使用。其中，WR 在 System 领域中最为常见。对于性能，WR 存在很强的需求。\n\n存在一些开发者因意外问题而使用\
+    \ WR 的情况。为了避免此类问题，WR 的引入需要非常谨慎。我们在开源项目上进行了实验，确认 WR 对性能是有效的。在所有引用数据的应用中，原始库在使用\
+    \ WR 时发生了异常。仍然，对于一次性处理 1 GB 数据并对其进行操作，重复加载和卸载是可能的。在这种情况下，使用 WR 的现有库运行良好，而修改后的库则了异常终止。我们调查了使用\
+    \ WR 的代码与修改为使用 WR 的代码是否存在差异。\n\n表 1：高星项目\n\n| 项目 | 星数 |\n|---|---|\n| Reactive/Rx\
+    \ | 36206 |\n| elasticsearch/elasticsearch | 35955 |\n| spring-projects/spring-boot\
+    \ | 30988 |\n| square/okhttp | 29609 |\n| google/guava | 27988 |\n| filthy/AndroidChart\
+    \ | 26609 |\n| spring-projects/spring-framework | 24612 |\n| bungee/gradle | 23869\
+    \ |\n| square/testframework | 21002 |\n| zxing/zxing | 20623 |\n\n| 文件创建 | 文件更新\
+    \ |\n|---|---|---|\n| WeakReference | 247 | 81 |\n| WeakMap | 75 | 29 |\n| 总计\
+    \ | | 322 |\n\n图 2：项目领域\n\n![](img/5f9b873328e6d5db22a6fa7023ebdf4_20.png)\n\n"
+  merge: -1
+  raw:
+  - "[PAGE 0]\n\n# How Weak Reference is Used in Java Projects?\n\nYoshi H H*, Shinshiro\
+    \ Matsumoto, Taeyung Kim and Shinji Kussumoto\nGraduate School of Information\
+    \ Science and Technology, Osaka University, Japan\n[higo, shinsuke, kim-yang,\
+    \ kusumoto]@.osaka-u.ac.jp\n\nAbstract—Programming languages have a system of\
+    \ garbage collection to automate memory management problems may still occur due\
+    \ to the limitation of memory management. Weak reference has been proposed as\
+    \ a solution to such problems. However, the use of weak reference often requires\
+    \ consideration of memory layout for developers. In this paper we investigate\
+    \ the use of weak reference on open source projects. More concretely, we investigated\
+    \ the domain of Java objects, the timing of the introduction of weak reference,\
+    \ the usage method, the presence or absence of the test code for weak reference.\
+    \ The survey showed that weak references were used in 73 repositories, about 102\
+    \ reporters, and that weak references were most common in test code.\n\nIndex\
+    \ Terms—Weak Reference, Garbage collection, GitHub\n\n```\nWeakReference<Socket>\
+    \ ret =\n    new WeakReference<Socket>(socket);\n\n```\nSocket s = ret.get();\n\
+    if (s == null) {\n    // in the case that the object has been collected\n} else\
+    \ {\n    // in the case that the object is still in the heap\n}\n\n```\n\nFig.\
+    \ 1. An example of class WeakReference\n\n# I. INTRODUCTION\n\nGarbage collection\
+    \ (GC) is a system for automate memory management in many programming languages\
+    \ [1]. GC frees developers from managing memory manually because GC automatically\
+    \ collects unreachable objects. When an object is unreachable or not determined\
+    \ by reachability from other objects, Objects referenced by other objects are\
+    \ reachable and not collected because they are joined to be unreachable. Objects\
+    \ referenced from other objects are unreachable and unreachable, unreachable objects\
+    \ are collected automatically.\n\nHowever, there is still problem in the memory\
+    \ management by GC. If an object that will not be used in the future is unreachable\
+    \ from other objects, it will not be collected by GC. As a result, objects remain\
+    \ in memory causing a memory leak.\n\nIn GC, developers cannot specify specific\
+    \ object to instruct collection. As a way of specifying which object to be collected\
+    \ by developers, called weak reference (WR) has been proposed from strong reference\
+    \ [2] in the GC mechanism. Objects referenced only by WR are untreated and collected\
+    \ by GC. Consequently, by using an object WR, it can be specified as a GC target.\
+    \ However, there are some considerations for using WR effectively. First, developers\
+    \ need to know the timing at\n\nweakly referenced objects be collected. Having\
+    \ at least one reference from other objects are not collected, and GC objects\
+    \ referenced only by WR. Thus, it is not possible to predict when an object is\
+    \ weakly referenced from strong references and design the object to be collected\
+    \ when it is no longer needed. Next, we need to determine the timing at which\
+    \ GC collects the objects referenced by WRs. Instead of collecting as soon as\
+    \ the object becomes a GC target, a null pointer is inserted in the WR instead.\n\
+    \nVarious studied data on GitHub repositories [3], Some research to solve the\
+    \ problem of Java memory leak [4, 5]. However, there is no study of investigation\
+    \ of the use of WR. In open source software we investigated the domain of Java\
+    \ projects where WR was used, the WR's introduction time, method, the existence\
+    \ of the test, and the case of failure.\n\n# II. PRELIMINARIES\n\nThe two classes\
+    \ are provided for WR in the Java language.\n\n+   - java.lang.WeakReference<T>\n\
+    - java.util.HashMap<K,V>\n\nThe former is a class of WR for type T. I show an\
+    \ example of how to use WeakReference. The latter and normal hash map (java.util.HashMap<K,V>)\
+    \ share the same functions. The difference is when a weakly referenced object\
+    \ is collected, to the value of the pair is lost, and if there is no"
+  - '[PAGE 1]
+
+
+    reference the value object, it is collected together with the key object. Key-value
+    pairs of key objects are no longer necessarily removed from the WeakHashMap. This
+    has the advantage that developers do not have to worry about deleting unnecessary
+    key-value pairs.
+
+
+    # Our Answer
+
+
+    WR was mainly introduced when creating new source files, that is, when adding
+    new functions to software.
+
+
+    # B. Target Projects
+
+
+    The experimental projects are Java projects on GitHub. In this, to investigate
+    the domains of projects that use WR, we selected 20 Java projects from the targets
+    of experiment. [ Of the 202 projects, 73 used WR.
+
+
+    # RQ3: how is WR used?
+
+
+    We try to find out how WR is used. By knowing how we use WR in real-world situations,
+    we can understand WR''s primary uses and the typical patterns that use WR.
+
+
+    # Our Answer
+
+
+    The use of WR is an unexpected result for the authors. The most common use of
+    WR in code may test patterns using WR were already known for developers. Other
+    patterns of WR are described in Subsection IV-C. Such patterns will be useful
+    for developers who are not familiar with WR.
+
+
+    In some of this, it was necessary to look at the code and change history. We picked
+    up the 10 projects with the highest stars out of the 73 projects that used WR.
+    Table 1 shows project names under the investigation and number of stars at the
+    end of 2018.
+
+
+    # RQ4: is code WR tested?
+
+
+    Making test is possible in software development. We investigate whether the code
+    using WR is tested sufficiently or not.
+
+
+    # III. RESEARCH QUESTIONS
+
+
+    # Our Answer
+
+
+    # RQ1: in which domain is WR used?
+
+
+    Code WR was not tested much. The authors consider that there is no test for WR
+    because the pattern of the code for testing WR is not well known, rather than
+    the difficulty of using WR.
+
+
+    Our aim is to understand domain projects use WR and what features they use.
+
+
+    # Our Answer
+
+
+    The 202 projects tested, 73 repositories used WR, which was unexpectedly high.
+    Among them, WR was often in System software and Software domains. The authors
+    consider WR is often introduced where there is a strong demand for software performance.
+
+
+    # RQ5: do developers stop using WR?
+
+
+    To determine whether WR is difficult, we investigate whether there are any cases
+    developers stopped using WR due to unexpected problems.
+
+
+    # RQ2: when is WR introduced?
+
+
+    # Our Answer
+
+
+    We investigate when WR is introduced in each project to understand the purpose
+    for which WR is introduced. The introduction is classified into two, (1) implementing
+    a new function and (2) maintain/maintain an existing function.
+
+
+    There were some cases developers stopped using WR due to unexpected problems.
+    To avoid such problems, the introduction of WR should be determined with great
+    care.
+
+
+    # TABLE 1: Top stars projects
+
+
+    | Project | Stars |
+
+    | Reactive/Rx | 36.206 |
+
+    | elastic/elasticsearch | 35.955 |
+
+    | spring-projects/spring-boot | 30.988 |
+
+    | square/okhttp | 29.609 |
+
+    | google/guava | 27.988 |
+
+    | filthy/AndroidChart | 26.609 |
+
+    | spring-projects/spring-framework | 24.612 |
+
+    | bungee/gradle | 23.869 |
+
+    | square/testframework | 21.002 |
+
+    | zxing/zxing | 20.623 |
+
+
+    # RQ6: is using weak reference effect for per-formance?
+
+
+    To check whether WR is effective for performance, we conducted a performance test
+    on open source projects. We investigate whether there is any difference between
+    the code using WR and the code modified to use WR.
+
+
+    446'
+  - '[PAGE 2]
+
+
+    # Our Answer
+
+
+    We conducted experiments using open source software and confirmed that WR was
+    effective for software performance. In applications with all references to image
+    data, abnormal termination occurred in the original library when WR was used.
+    Still, with processing up to 1 GB of image data at once and doing something with
+    it, it is possible to repeat loading and unloading for a few images. In such a
+    case, the existing library using WR worked fine, and the modification terminated
+    abnormally. The authors confirmed that WR is an effective way to automatically
+    collect unnecessary objects and prevent a memory leak from them.
+
+
+    ![](img/5f9b873328e6d5db522a6fa7023ebdf4_2_0.png)
+
+
+    Fig. 2: Project domains
+
+
+    We defined introduction when keywords ''ReReference'' and ''WeakMap'' in the change
+    history of the source files. If a keyword is introduced in the change history
+    when the source file was created, we regarded that WR was introduced when the
+    file was generated. Otherwise, if a keyword is introduced in any change history
+    after the file was created, we regarded that WR was introduced into the file.
+
+
+    # IV. EXPERIMENT
+
+
+    # A. RQ1: in what domain WR is used?
+
+
+    The procedures are to repeat the 202 projects that were used in the experiment
+    by Borges et al. [3]. They classified the 202 projects into the following domains.
+
+
+    +   - Application software (short, Application)
+
+    - System software (System)
+
+    - Web libraries and frameworks (Web)
+
+    - Non-web libraries and frameworks (Non-web)
+
+    - Tools (Tools)
+
+    - Documentation (Doc.)
+
+
+    We used GitHub code search API to determine whether WR was used in each project.
+    A code search performed using two keywords ''WeakReference'' and ''WeakMap'',
+    and if the number of source files in the results was one or more, it was treated
+    as using.
+
+
+    Results: Figure 2 shows the results. ALL is the distribution of all 202 projects,
+    and WEAK is the distribution of the 73 projects using WR. WR is used in 44 projects
+    in the Non-web domain, which is the highest. Regarding the ratio of WEAK/ALL,
+    WR is used in more than half of the projects in the System and Tools domains
+
+
+    Results: Table II shows the investigation results on introduction time. Both WeakReference
+    and WeakMap, the number of creating files was as many as the number of updating
+    files. Considering the assumptions, WR is introduced to add new functions to software
+    rather than maintain/improve existing functions.
+
+
+    # B. RQ2: when was WR introduced?
+
+
+    We analyzed the change history of files in the repositories to find out when WR
+    was first introduced in the source files. The introduction time was classified
+    into two cases: (1) when the source file was created and (2) when it was updated.
+    We assumed that WR was introduced for the following purposes. For the first case,
+    WR was introduced when a new function was introduced. For the second case, WR
+    was introduced when an existing function improved/maintained.
+
+
+    # C. RQ3: how is WR used?
+
+
+    The procedures for RQ3 are the projects in Table I of all 55 source files used
+    in those repositories. We recorded where and how WR was used. We then classified
+    the usages of WR into the following categories:
+
+
+    +   - Testing
+
+    - Memory leak prevention,
+
+    - Caching,
+
+    - API implementation,
+
+    - Comment,
+
+    - Unnecessary processing avoidance.
+
+
+    Testing means that WR is used in time. Memory leak prevention means that unnecessary
+    objects are collected by WR. Caching represents that the results of calculations
+    are stored using WR. API implementation means a case in which the function of
+    WR is provided as an API as it is. For example, a class that inherits WeakReference
+    is a typical case. Comment means not a code, but WeakReference (''WeakReference''
+
+
+    | File creation | File update |
+
+    |---|---|
+
+    | WeakReference | 247 | 81 |
+
+    | WeakMap | 75 | 29 |
+
+    | Total | | 322 |
+
+
+    Table II: Introduction time of WR
+
+
+    > https://developer.github.com/v3/search/'
+- md: "\n@public void testDisposeDetaches() {\n    Disposable d = Disposables.empty();\n\
+    \    WeakReference<Disposable> wr = new WeakReference<Disposable>(d);\n    TestObserver\
+    \ to = new TestObserver(d);\n    to.test();\n    d = null;\n    System.gc();\n\
+    \    assertNull(wr.get());\n}\n\nclass LineChartRenderer {\n    WeakReference<Bitmap>\
+    \ mBitmap = null;\n    void draw(Canvas canvas) {\n        Bitmap bitmap = mBitmap?.get();\n\
+    \        if (bitmap == null) {\n            bitmap = Bitmap.create(...);\n   \
+    \         mBitmap = new WeakReference<>(bitmap);\n        }\n        canvas.drawBitmap(bitmap,\
+    \ 0, 0, null);\n    }\n}\n```\n\n(a) Testing\n\nDevelopers can check the existence\
+    \ of memory leak with this test code.\n\nFigure 3(b) shows that a weakly references\
+    \ bitmap as an intermediate product to prevent a memory leak. If the object is\
+    \ collected and the WR creates a new object before starting the process and creates\
+    \ a WR to the new object, the intermediate product can be collected, and if the\
+    \ same performance is performed, if the intermediate product is not collected,\
+    \ the calculation can be saved because the object does not need to be recreated.\n\
+    \n(b) Memory leak\n\nIn the case of Caching, the pattern of the code is a Memory\
+    \ leak. The difference is that the intermediate product is weakly referenced in\
+    \ the case of Memory leak prevention, while the object of calculation is weakly\
+    \ referenced in the case of Caching. By weakly referencing the results, if the\
+    \ object is collected, the calculation can be saved to prevent memory leak, without\
+    \ occurring from objects with the same calculation results.\n\n```\nclass SizeListener\
+    \ implements SizeListener {\n    WeakReference<Size> mSizeRef;\n    SizeListener(Size\
+    \ size) {\n        mSizeRef = new WeakReference<>(size);\n    }\n    boolean onDraw()\
+    \ {\n        Size size = mSizeRef.get();\n        if (size != null) size.check();\n\
+    \        else return true;\n    }\n}\n```\n\n(c) Unnecessary processing avoidance\n\
+    \nFigure 3(c) shows example that avoids unnecessary processing. Referring to object\
+    \ as input, and the object has been collected, GC does not guard the processing\
+    \ on the object (the 9th line in figure 1).\n\nFigure 3: Example of using WR\n\
+    \nD. Is it possible of using WR?\n\nProcedure: for the tasks are RQ4 for the projects\
+    \ in Table 1. Out of the 95 source files found, WRs were not used. We checked\
+    \ whether test code exists for each of the 58 source files. If code exists, we\
+    \ checked whether the test code uses WR or not\n\n'WeakHashMap appears in comments.\
+    \ Unnecessary processing avoidance means a case where a weakly-referenced object\
+    \ is collected, the reference is collected and that object is not needed.\n\n\
+    Results: When WR is used multiple times in a case, each usage is noted manually.\
+    \ Table III shows some typical code examples. Figure 3(a) shows an example of\
+    \ using WR for Testing. The code checks whether the object is referenced by to\
+    \ not cause memory leak after a given input is processed. When the WR contains\
+    \ a pointer after the reference object is collected, GC invoked by System.gc()\
+    \ makes the value of the WR (wr.get()) on line m does not exist.\n\nResults: Test\
+    \ code exists for 38 out of the 58 source files. We checked the test for the 38\
+    \ source files and found WR tests exists for only ten source files, which is about\
+    \ one-sixth of the 58 source files, with WR's usage.\n\nE. RQ: do developers stop\
+    \ using WR?\n\nProcedure: for the RQ are the projects in Table I. We examined\
+    \ the change history including the keywords of 'WeakReference' and 'WeakHashMap'\
+    \ of project to see if there are cases in which the WR was used. In this study,\
+    \ we used the fact that WR classes were no longer used for stopping using WR.\n\
+    \n| Purpose | # of using WR |\n| --- | --- |\n| Testing | 37 |\n| Memory leak\
+    \ | 25 |\n| Caching | 17 |\n| API implementation | 13 |\n| Total of using | 13\
+    \ |\n| Unnecessary processing avoidance | 6 |\n\n| Project name | # of failures\
+    \ |\n| --- | --- |\n| Reactive/RxJava | 1 |\n| spring-projects/spring-framework\
+    \ | 2 |\n| bunch/glide | 2 |\n| Total | 5 |\n\n448\n\nResults: Table IV shows\
+    \ the projects where the cases in\neach project. WR failed and three of ten projects\
+    \ failed to introduce\nWR References, there were five cases where the introduction\n\
+    of WR in the three projects.\n\nRxJava and Glide used to introduce class\nWeakReference.\
+    \ The failure caused the referred object to be cleared earlier than expected,\
+    \ which caused the processing to the object\nin other words, the problem occurred\n\
+    because developers used WR without considering\ncollection of the work.\n\nIn\
+    \ Spring-framework, introduction of HashMap failed.\nThe use of HashMap caused\
+    \ the\nresults to increase the execution speed.\nHowever, it was used in a multi-process\
+    \ system,\nthe execution speed is slower in this case, problem occurred be\ndevelopers\
+    \ do not understand the features of HashMap\ndepth of, in the UI.\n\nwas forcibly\
+    \ terminated immediately after the memory\nexecuted GB. The cause of such termination\
+    \ is considered\nto be the object of the image data referred to by the\napplication\
+    \ was not collected at a proper time, and the\nmemory overflow.\n\n\"completed\"\
+    \ in Table V is a combination of\nor original Glide that uses WR and an application\
+    \ that has\nno reference to image data. Here, \"completed\" the complete\nall\
+    \ images have been successfully loaded. The \"complete\nwas possible because the\
+    \ image data were properly collected,\nand no memory leak did occur because\n\
+    reference to the data were not used in Glide.\n\n# V. THREATS TO VALIDITY\n\n\
+    In this study, the code and history were manually\nwithout not much quantitative\n\
+    interpretation of the experimental results, the answers to\nt research questions\
+    \ are qualitative, such as the\nof WR and the case of introducing WR.\nTherefore,\
+    \ it is sufficient to check the code and\nhistory in this study.\n\n# RQ: performance\
+    \ test\n\nProject \"bumptch/glide\" was selected\nof the object of experiment.\
+    \ Glide is an image\nlibrary for Android. It internally has a\ncache for image\
+    \ data. Original Glide code using\na a release version not used in the same\n\
+    situation. By comparing the performance of the two,\ncheck whether the WR is useful.\
+    \ In the performance\ntest, the two types of Android applications using\nGlide\
+    \ were:\n\nIn this study, we investigated the use of\nJava Projects. We set up\
+    \ RQs, domains where weak\nreference was used, introducing of reference, testing\
+    \ for we\naker reference, cases of weak reference introduction failure,\nands\
+    \ impacts were experienced.\n\n+   1) application with reference to data, and\n\
+    2) application with no reference to data.\n\nThe application 1 has reference to\
+    \ all image\nwhen loading the entire data. The application 2\ndeletes the reference\
+    \ to the image as soon as\nis loaded. That the application has no reference to\n\
+    image data.\n\n# VI. CONCLUSION\n\nThe images were loaded with 400 JPEG images\n\
+    a an average of 4 MB, and the total size was 1.6 GB.\nThe images were loaded via\
+    \ HTTP, and a server was\nt set up to distribute data using software HFS.\nAndroid\
+    \ 8.1 (Core) and OS 1GB RAM.\n\nThe experimental results are shown in Ta-\nble\
+    \ shows that all \"aborted\" were\nthe same. After loading 200 images, the application\n\
+    \nWe want to define code patterns of\nweak reference used. We also try to automate\
+    \ the\nrow of weak reference by developing a mechanism\nsuggesting the use of\
+    \ weak reference to developers by\ndefined patterns.\n\n# REFERENCES\n\n+   [1]\
+    \ P. Wilson, \"Unsafe garbage collection techniques, in\nMemory Management.. Springer,\
+    \ 1992, pp. 1–12.\n[2] \"Reference Objects and Glide collection, http://www.\n\
+    android.com/articles/reference/\n[3] H. Borges, A. Ho, and M. T. Valentin, \"\
+    Understanding\nthe effect of popularity of github repositories, in\nthe 3rd International\
+    \ Conference on Software Maintenance and\nEvolution, 2006, pp. 331–344.\n[4] J.\
+    \ Garcia-Vazquez, G. Bavota, M. D. Data,\nD. German, and Pollard, \"Memory leaks\
+    \ and changes:\ntangling properties of objects in the 15th\nInternational Conference\
+    \ on Program Compilation, 2015, pp.\n218–228.\n[5] W. Power and S. Seifert, \"\
+    Visualization reference patterns\nfor memory leaks in java, in European Conference\
+    \ on Object-\nOriented Programming.. Springer, 1999, pp. 116–134.\n[6] R. Sharma,\
+    \ S. Kumar, and S. Nag, \"Removal of\narray memory leaks in java, in the 9th International\
+    \ Conference\non Compiler Construction, 2000, p. 50–66.\n\n| Application | Original\
+    \ Glide | Modified Glide |\n|---|---|---|\n| with reference | aborted | aborted\
+    \ -- |\n| without reference | completed | |\n\n449\n"
+  mdcn: "\n\n```java\n@public void testDisposeDetaches() {\n    Disposable d = Disposables.empty();\n\
+    \    WeakReference<Disposable> wr = new WeakReference<Disposable>(d);\n    TestObserver\
+    \ to = new TestObserver(d);\n    to.test();\n    d = null;\n    System.gc();\n\
+    \    assertNull(wr.get());\n}\n\nclass LineChartRenderer {\n    WeakReference<Bitmap>\
+    \ mBitmap = null;\n    void draw(Canvas canvas) {\n        Bitmap bitmap = mBitmap?.get();\n\
+    \        if (bitmap == null) {\n            bitmap = Bitmap.create(...);\n   \
+    \         mBitmap = new WeakReference<>(bitmap);\n        }\n        canvas.drawBitmap(bitmap,\
+    \ 0, 0, null);\n    }\n}\n```\n\n(a) 测试\n\n开发者可以使用这段测试代码检查内存泄漏的存在。\n\n图 3(b) 展示了将弱引用位图作为中间产品以防止内存泄漏。如果对象被回收，且\
+    \ WR 在进程开始前创建了新对象并对该新对象创建了 WR，则中间产可以被回收；如果执行相同的性能操作，且中间产未被回收，则可以节省计算，因为对象不需要重新创建。\n\
+    \n(b) 内存泄漏\n\n在缓存用例中，代码模式是内存泄漏。区别在于，在防止内存泄漏的情况下，中间产是被弱引用的；而在缓存的情况下，计算对象是被弱引用的。通过对结果进行弱引用，如果对象被回收，可以保存计算以防止内存泄漏，而不会从具有相同计算结果的对象产生。\n\
+    \n```java\nclass SizeListener implements SizeListener {\n    WeakReference<Size>\
+    \ mSizeRef;\n    SizeListener(Size size) {\n        mSizeRef = new WeakReference<>(size);\n\
+    \    }\n    boolean onDraw() {\n        Size size = mSizeRef.get();\n        if\
+    \ (size != null) size.check();\n        else return true;\n    }\n}\n```\n\n(c)\
+    \ 避免不必要的处理\n\n图 3(c) 展示了避免不必要的处理的示例。以对象作为输入，且对象已被回收，GC 不会对该对象进行处理（图 1 中的第 9 行）。\n\
+    \n图 3：使用 WR 的示例\n\nD. 是否可能使用 WR？\n\n步骤：针对表 1 中项目的任务执行了 RQ4。在发现的 95 个源文件中，没有使用\
+    \ WR。我们检查了 58 个源文件中的每一个是否存在测试代码。如果存在代码，我们检查了测试代码是否使用了 WR。\n\n'WeakHashMap' 出现在注释中。避免不必要的处理意味着当弱引用对象被回收时，引用被回收，且该对象不再需要。\n\
+    \n结果：当 WR 在一个用例中被多次使用时，每次使用都会手动标记。表 III 显示了了一些典型的代码示例。图 3(a) 展示了使用 WR 进行测试的示例。代码检查对象是否被\
+    \ to 引用，以便在处理给定输入后不会引起内存泄漏。当引用对象被回收后 WR 包含指针时，由 `System.gc()` 调用的 GC 使第 m 行 WR\
+    \ 的值 (`wr.get()`) 不存在。\n\n结果：58 个源文件中有 38 个存在测试代码。我们检查了这 38 个源文件的测试，发现只有十个源文件存在\
+    \ WR 测试，这约占 58 个源文件的六分之一，且使用了 WR。\n\nE. RQ：开发者是否停止了使用 WR？\n\n步骤：针对表 I 中的项目执行了\
+    \ RQ。我们检查了包括关键词 'WeakReference' 和 'WeakHashMap' 的项目变更历史，以查看是否存在使用 WR 的情况。在本研究中，我们利用\
+    \ WR 类不再被使用这一事实作为停止使用 WR 的依据。\n\n|self | 使用 WR 的次数 |\n| --- | --- |\n| 测试 | 37\
+    \ |\n| 内存泄漏 | 25 |\n| 缓存 | 17 |\n| API 实现 | 13 |\n| 使用总量 | 13 |\n| 避免不必要的处理 |\
+    \ 6 |\n\n| 项目名称 | 失败次数 |\n| --- | --- |\n| Reactive/RxJava | 1 |\n| spring-projects/spring-framework\
+    \ | 2 |\n| bunch/glide | 2 |\n| 总计 | 5 |\n\n448\n\n结果：表 IV 显示了每个项目中的用例。WR 失败了，十个项目中有三个未能引入\
+    \ WR 引用，在上述三个项目中发生了五次引入 WR 的情况。\n\nRxJava 和 Glide 曾引入 `WeakReference` 类。失败导致被引用对象比预期更早地被清除，导致了对对象的处理；换句话说，问题的发生是因为开发者在使用\
+    \ WR 时没有考虑工作任务的回收。\n\n在 Spring-framework 中，引入 HashMap 失败了。HashMap 的使用导致结果执行速度增加。然而，它被用在一个多进程系统中，在这种情况下执行速度较慢，问题的发生是因为开发者在\
+    \ UI 中没有深入理解 HashMap 的特性。\n\n在内存执行 `GB` 之后立即被强制终止。此类终止的原因被认为是应用程序引用的图像数据对象没有在适当的时间被回收，导致了内存溢出。\n\
+    \n表 V 中的 \"completed\" 是使用 WR 的原始 Glide 与没有图像数据引用的应用程序的结合。在这里，“completed\" 表示所有图像都已成功加载。\"\
+    complete\" 的实现是因为图像数据被妥善回收了，由于 Glide 中没有使用对数据的引用，因此没有发生内存泄漏。\n\n# V. 对有效性的威胁\n\
+    \n在本研究中，代码和历史是手动分析的，没有对实验结果进行过多的定量解释，对研究问题的回答是定性的，例如 WR 的[用例]以及引入 WR 的情况。因此，检查本研究中的代码和历史是充分的。\n\
+    \n# RQ：性能测试\n\n选择项目 \"bumptch/glide\" 作为实验对象。Glide 是一个用于 Android 的图像库。它内部有一个用于图像数据的缓存。原始\
+    \ Glide 代码使用一个在相同情况下未使用的发布版本。通过比较两者的性能，检查 WR 是否有用。在性能测试中，使用 Glide 的两类 Android\
+    \ 应用程序是：\n\n在本研究中，我们调查了 Java 项目的使用。我们设置了 RQ，即弱引用使用的领域、引用的引入、对弱引用的测试、弱引用引入失败的案例以及经历的影响。\n\
+    \n+   1) 具有数据引用的应用程序，以及\n2) 无引用的应用程序。\n\n应用程序 1 对数据有引用。应用程序 2 在加载后立即删除引用。该应用程序没有图像数据。\n\
+    \n# VI. 结论\n\n加载了 400 张 JPEG 图片，平均 4 MB，总大小为 1.6 GB。图像通过 HTTP 加载，并设置了一个使用 HFS\
+    \ 分布数据的服务器。Android 8.1 (Core) 和 1GB RAM。\n\n实验结果如所示，所有的 \"aborted\" 都是相同的。加载 200\
+    \ 张图像后，应用程序\n\n我们要定义弱引用的代码模式。我们还尝试通过开发一种机制，向开发者建议使用定义的模式来自动弱引的使用。\n\n# 参考文献\n\n\
+    +   [1] P. Wilson, \"Unsafe garbage collection techniques, in Memory Management..\
+    \ Springer, 1992, pp. 1–12.\n[2] \"Reference Objects and Glide, http://www.android.com/articles/\n\
+    [3] H. Borges, A. Ho, and M. T. Valentin, \"Understanding the effect of popularity\
+    \ of github repositories, in the 3rd International Conference on Software Maintenance\
+    \ and Evolution, 2006, pp. 331–344.\n[4] J. Garcia-Vazquez, G. Bavota, M. D. Data,\
+    \ D. German, and Pollard, \"Memory leaks and changes: tangling properties of objects\
+    \ in the 15th International Conference on Program Compilation, 2015, pp. 218–228.\n\
+    [5] W. Power and S. Seifert, \"Visualization reference patterns for memory leaks\
+    \ in java, in European Conference on Object- Oriented Programming.. Springer,\
+    \ 1999, pp. 116–134.\n[6] R. Sharma, S. Kumar, and S. Nag, \"Removal of array\
+    \ memory leaks in java, in the 9th International Conference on Compiler Construction,\
+    \ 2000, p. 50–66.\n"
+  merge: 0
+  raw:
+  - "[PAGE 3]\n\n```\n@public void testDisposeDetaches() {\n    Disposable d = Disposables.empty();\n\
+    \    WeakReference<Disposable> wr = new WeakReference<Disposable>(d);\n    TestObserver\
+    \ to = new TestObserver(d);\n    to.test();\n    d = null;\n    System.gc();\n\
+    \    assertNull(wr.get());\n}\n\nclass LineChartRenderer {\n    WeakReference<Bitmap>\
+    \ mBitmap = null;\n    void draw(Canvas canvas) {\n        Bitmap bitmap = mBitmap?.get();\n\
+    \        if (bitmap == null) {\n            bitmap = Bitmap.create(...);\n   \
+    \         mBitmap = new WeakReference<>(bitmap);\n        }\n        canvas.drawBitmap(bitmap,\
+    \ 0, 0, null);\n    }\n}\n```\n\n(a) Testing\n\nDevelopers can check the existence\
+    \ of memory leak with this test code.\n\nFigure 3(b) shows that a weakly references\
+    \ bitmap as an intermediate product to prevent a memory leak. If the object is\
+    \ collected and the WR creates a new object before starting the process and creates\
+    \ a WR to the new object, the intermediate product can be collected, and if the\
+    \ same performance is performed, if the intermediate product is not collected,\
+    \ the calculation can be saved because the object does not need to be recreated.\n\
+    \n(b) Memory leak\n\nIn the case of Caching, the pattern of the code is a Memory\
+    \ leak. The difference is that the intermediate product is weakly referenced in\
+    \ the case of Memory leak prevention, while the object of calculation is weakly\
+    \ referenced in the case of Caching. By weakly referencing the results, if the\
+    \ object is collected, the calculation can be saved to prevent memory leak, without\
+    \ occurring from objects with the same calculation results.\n\n```\nclass SizeListener\
+    \ implements SizeListener {\n    WeakReference<Size> mSizeRef;\n    SizeListener(Size\
+    \ size) {\n        mSizeRef = new WeakReference<>(size);\n    }\n    boolean onDraw()\
+    \ {\n        Size size = mSizeRef.get();\n        if (size != null) size.check();\n\
+    \        else return true;\n    }\n}\n```\n\n(c) Unnecessary processing avoidance\n\
+    \nFigure 3(c) shows example that avoids unnecessary processing. Referring to object\
+    \ as input, and the object has been collected, GC does not guard the processing\
+    \ on the object (the 9th line in figure 1).\n\nFigure 3: Example of using WR\n\
+    \nD. Is it possible of using WR?\n\nProcedure: for the tasks are RQ4 for the projects\
+    \ in Table 1. Out of the 95 source files found, WRs were not used. We checked\
+    \ whether test code exists for each of the 58 source files. If code exists, we\
+    \ checked whether the test code uses WR or not\n\n'WeakHashMap appears in comments.\
+    \ Unnecessary processing avoidance means a case where a weakly-referenced object\
+    \ is collected, the reference is collected and that object is not needed.\n\n\
+    Results: When WR is used multiple times in a case, each usage is noted manually.\
+    \ Table III shows some typical code examples. Figure 3(a) shows an example of\
+    \ using WR for Testing. The code checks whether the object is referenced by to\
+    \ not cause memory leak after a given input is processed. When the WR contains\
+    \ a pointer after the reference object is collected, GC invoked by System.gc()\
+    \ makes the value of the WR (wr.get()) on line m does not exist.\n\nResults: Test\
+    \ code exists for 38 out of the 58 source files. We checked the test for the 38\
+    \ source files and found WR tests exists for only ten source files, which is about\
+    \ one-sixth of the 58 source files, with WR's usage.\n\nE. RQ: do developers stop\
+    \ using WR?\n\nProcedure: for the RQ are the projects in Table I. We examined\
+    \ the change history including the keywords of 'WeakReference' and 'WeakHashMap'\
+    \ of project to see if there are cases in which the WR was used. In this study,\
+    \ we used the fact that WR classes were no longer used for stopping using WR.\n\
+    \n| Purpose | # of using WR |\n| --- | --- |\n| Testing | 37 |\n| Memory leak\
+    \ | 25 |\n| Caching | 17 |\n| API implementation | 13 |\n| Total of using | 13\
+    \ |\n| Unnecessary processing avoidance | 6 |\n\n| Project name | # of failures\
+    \ |\n| --- | --- |\n| Reactive/RxJava | 1 |\n| spring-projects/spring-framework\
+    \ | 2 |\n| bunch/glide | 2 |\n| Total | 5 |\n\n448"
+  - '[PAGE 4]
+
+
+    Results: Table IV shows the projects where the cases in
+
+    each project. WR failed and three of ten projects failed to introduce
+
+    WR References, there were five cases where the introduction
+
+    of WR in the three projects.
+
+
+    RxJava and Glide used to introduce class
+
+    WeakReference. The failure caused the referred object to be cleared earlier than
+    expected, which caused the processing to the object
+
+    in other words, the problem occurred
+
+    because developers used WR without considering
+
+    collection of the work.
+
+
+    In Spring-framework, introduction of HashMap failed.
+
+    The use of HashMap caused the
+
+    results to increase the execution speed.
+
+    However, it was used in a multi-process system,
+
+    the execution speed is slower in this case, problem occurred be
+
+    developers do not understand the features of HashMap
+
+    depth of, in the UI.
+
+
+    was forcibly terminated immediately after the memory
+
+    executed GB. The cause of such termination is considered
+
+    to be the object of the image data referred to by the
+
+    application was not collected at a proper time, and the
+
+    memory overflow.
+
+
+    "completed" in Table V is a combination of
+
+    or original Glide that uses WR and an application that has
+
+    no reference to image data. Here, "completed" the complete
+
+    all images have been successfully loaded. The "complete
+
+    was possible because the image data were properly collected,
+
+    and no memory leak did occur because
+
+    reference to the data were not used in Glide.
+
+
+    # V. THREATS TO VALIDITY
+
+
+    In this study, the code and history were manually
+
+    without not much quantitative
+
+    interpretation of the experimental results, the answers to
+
+    t research questions are qualitative, such as the
+
+    of WR and the case of introducing WR.
+
+    Therefore, it is sufficient to check the code and
+
+    history in this study.
+
+
+    # RQ: performance test
+
+
+    Project "bumptch/glide" was selected
+
+    of the object of experiment. Glide is an image
+
+    library for Android. It internally has a
+
+    cache for image data. Original Glide code using
+
+    a a release version not used in the same
+
+    situation. By comparing the performance of the two,
+
+    check whether the WR is useful. In the performance
+
+    test, the two types of Android applications using
+
+    Glide were:
+
+
+    In this study, we investigated the use of
+
+    Java Projects. We set up RQs, domains where weak
+
+    reference was used, introducing of reference, testing for we
+
+    aker reference, cases of weak reference introduction failure,
+
+    ands impacts were experienced.
+
+
+    +   1) application with reference to image data, and
+
+    2) application with no reference to image data.
+
+
+    The application 1 has reference to all image
+
+    when loading the entire data. The application 2
+
+    deletes the reference to the image as soon as the
+
+    is loaded. That the application has no reference to the
+
+    image data.
+
+
+    # VI. CONCLUSION
+
+
+    The images were loaded with 400 JPEG images
+
+    a an average of 4 MB, and the total size was 1.6 GB.
+
+    The images were loaded via HTTP, and a server was
+
+    t set up to distribute image data using software HFS.
+
+    Android 8.1 (Core) and OS 1GB RAM.
+
+
+    The experimental results are shown in Ta-
+
+    ble shows that all "aborted" were
+
+    the same. After loading 200 images, the application
+
+
+    We want to define code patterns of
+
+    weak reference used. We also try to automate the
+
+    row of weak reference by developing a mechanism
+
+    suggesting the use of weak reference to developers by
+
+    defined patterns.
+
+
+    # REFERENCES
+
+
+    +   [1] P. Wilson, "Unsafe garbage collection techniques, in
+
+    Memory Management.. Springer, 1992, pp. 1–12.
+
+    [2] "Reference Objects and Glide collection, http://www.
+
+    android.com/articles/reference/
+
+    [3] H. Borges, A. Ho, and M. T. Valentin, "Understanding
+
+    the effect of popularity of github repositories, in
+
+    the 3rd International Conference on Software Maintenance and
+
+    Evolution, 2006, pp. 331–344.
+
+    [4] J. Garcia-Vazquez, G. Bavota, M. D. Data,
+
+    D. German, and Pollard, "Memory leaks and changes:
+
+    tangling properties of objects in the 15th
+
+    International Conference on Program Compilation, 2015, pp.
+
+    218–228.
+
+    [5] W. Power and S. Seifert, "Visualization reference patterns
+
+    for memory leaks in java, in European Conference on Object-
+
+    Oriented Programming.. Springer, 1999, pp. 116–134.
+
+    [6] R. Sharma, S. Kumar, and S. Nag, "Removal of
+
+    array memory leaks in java, in the 9th International Conference
+
+    on Compiler Construction, 2000, p. 50–66.
+
+
+    | Application | Original Glide | Modified Glide |
+
+    |---|---|---|
+
+    | with reference | aborted | aborted -- |
+
+    | without reference | completed | |
+
+
+    449'
