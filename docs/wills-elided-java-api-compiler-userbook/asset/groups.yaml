@@ -1,0 +1,1078 @@
+- md: "\n# WEJAC\n\n# UserBook\n\n![](img/3f127f0d4692a2f206a3e304f384e615_0_0.png)\n\
+    \n# Will’s Elided Java Api Compiler\n\nWilliam Gilreath\n\n# WEJAC\n\n# Will’s\
+    \ Elided Java Api Compiler\n\nJuly 2019\n\n![](img/3f127f0d4692a2f206a3e304f384e615_1_0.png)\n\
+    \n© Copyright 2019 by William F. Gilreath. All Rights Reserved.\n\nLicensed under\
+    \ the Creative Commons Attribution-ShareAlike 4.0 International\n(CC BY-SA 4.0)\n\
+    \n# Table of Contents\n\n- Forward 5\n- Chapter 1. Compiler Installation 6\n-\
+    \ Pre-Installation Steps 6\n- Installation Steps 8\n- Post-Installation Steps\
+    \ 9\n- Chapter 2. Compiler Parameters 11\n- Kinds of Parameters 11\n- Compilation\
+    \ 11\n- Error Reporting 11\n- Help or Information 12\n- javac Parameters 12\n\
+    - Chapter 3. Compiler Options 13\n- brief 13\n- echo 13\n- final 14\n- help 14\n\
+    - hush 15\n- info 15\n- javac 16\n- mute 16\n- time 17\n- Multiple Compiler Options\
+    \ 17\n- Afterword 18\n- Colophon 18\n- Author 18\n- Contributing 18\n- License\
+    \ 19\n\n# Forward\n\nWhy another Java compiler? Simple–for simplicity in use of\
+    \ options and consistency in error reporting.\n\nWEJAC is an acronym for Will's\
+    \ Elided Java Api Compiler. The name explains the compiler purpose; the primary\
+    \ word is ‘elided’ from the word elision, which means “to omit or leave out of\
+    \ consideration.” WEJAC omits the dizzying number of options for the underlying\
+    \ Java compiler accessed through the Java Compiler API as JSR 199. The number\
+    \ of options to use WEJAC to compile Java source code is considerably simpler\
+    \ than the javac compiler.\n\nWEJAC also is consistent in error reporting. Some\
+    \ errors such as deprecation with the java compiler require re-compilation–yet\
+    \ another compiler option. WEJAC always provides an error report, the line and\
+    \ position, and the source code fragment to illustrate where the cause of the\
+    \ error is in the overall Java source code. Thus error message, location, and\
+    \ illustrative cause.\n\nThe jac compiler has many options and features–and WEJAC\
+    \ provides the option to use other javac compiler options. But in general, I have\
+    \ found a simpler option set for compiler parameters best. WEJAC is an example\
+    \ of a software development engineer wanting a simpler tool, so then implementing,\
+    \ deploying, sharing, and here now–documenting it.\n\nHappy Compiling!\n\nWilliam\
+    \ Gilreath\nJuly 2019\n\n# Chapter 1. Compiler Installation\n\nWEJAC is written\
+    \ in Java, and compiled into a .jar file. Thus the compiler is “bootstrapped”\
+    \ in the programming language it compiles using the Java Compiler API. Thus any\
+    \ platform (Windows/Linux/macOS) can download, install, configure, and use WEJAC.\n\
+    \nWEJAC consists of the binary bytecode executable file as a JAR file (a Java\
+    \ Archive file) and a wrapper “kicker” script or batch file that executes the\
+    \ JAR file on the Java Virtual Machine (JVM), passing the command-line arguments\
+    \ to the Java Virtual Machine.\n\n# Pre-Installation Steps\n\n### 1. Checking\
+    \ for the OpenJDK\n\nIn order to use the WEJAC compiler, first the system must\
+    \ have the OpenJDK installed. There are many OpenJDK downloads from different\
+    \ vendors. The simplest way is to open a console or terminal window, and enter\
+    \ the following command:\n\n```\n$java -version\n```\n\nIf the OpenJDK and Java\
+    \ environment are installed the result is:\n\n```\n$java -version\njava version\
+    \ \"12.0.1\" 2019-04-16\nJava(TM) SE Runtime Environment (build 12.0.1+12)\nJava\
+    \ HotSpot(TM) 64-Bit Server VM (build 12.0.1+12, mixed mode, sharing)\n```\n\n\
+    If not, download and install the OpenJDK on your system.\n\nThe WEJAC compiler\
+    \ runs on the JDK 7 and upwards to (currently at the time of writing) JDK 12.\
+    \ Thus it is vital to install a compatible OpenJDK Java environment. Check the\
+    \ Java release version is compatible, greater than or equal to Java release version\
+    \ 1.7.x.\n\n### 2. Download the WEJAC package\n\nThe entire WEJAC package is downloadable\
+    \ from Will’s GitHub repo. The repo is at the link:\n\n```\nhttps://github.com/wgilreath/WEJAC\n\
+    ```\n\nThe ZIP archive is at the specific link of:\n\n```\nhttps://github.com/wgilreath/WEJAC/WEJAC_July_2019.zip\n\
+    ```\n\n### 3. Unzip the WEJAC package.\n\nUse your favorite ZIP utility to unzip\
+    \ and decompress the WEJAC package into a directory.\n\n# Installation Steps\n\
+    \nThe installation is simply install the wejac shell script, the WEJAC.jar binary\
+    \ file, and on macOS/Linux systems the wejac.1 man or manual page.\n\n### 1. Install\
+    \ wejac shell script.\n\nOn my MacBook, the wejac shell script is installed in\
+    \ the directory: /usr/local/bin/\n\nIn a terminal window wejac is installed by\
+    \ the shell commands:\n\n```\n$sudo bash\nPassword:\n#cp Downloads/wejac /usr/local/bin\n\
+    ```\n\n### 2. Install the WEJAC.jar file.\n\nOn my MacBook, the WEJAC.jar file\
+    \ is in the directory: /usr/local/lib/\n\nIn a terminal window WEJAC.jar is installed\
+    \ by the shell commands:\n\n```\n$sudo bash\nPassword:\n#cp Downloads/WEJAC.jar\
+    \ /usr/local/lib\n```\n\n### 3. For Linux/macOS systems, install the manual page.\n\
+    \nOn my MacBook, the wejac.1 man page is in the directory: /usr/local/share/man/man1/\n\
+    \nIn a terminal window wejac.1 is installed by the shell commands:\n\n```\n$sudo\
+    \ bash\nPassword:\n#cp Downloads/wejac.1 /usr/local/share/man/man1\n```\n\n# Post-Installation\
+    \ Steps\n\n1. Verify that the installation successful.\n\nUse the command wejac\
+    \ in a terminal or console window; if successfully installed, the result will\
+    \ be:\n\n```\n$wejac\nWEJAC - Will's Elided Java Api Compiler\n(C) Copyright 2019\
+    \ William F. Gilreath. All Rights Reserved Version 1.3\nReleased July 2019\nLicense\
+    \ is GNU General Public License (GPL) version 3.0\n```\n\nError! No compiler options\
+    \ or files given! Use -help for options.\n\n2. Compile simple if ubiquitous HelloWorld.java\
+    \ source code. In your favorite text editor write the simple Java source:\n\n\
+    ```\npublic final class HelloWorld{\n    public final static void main(String[]\
+    \ args) {\n        System.out.println(\"Hello, World!!!\");\n        System.exit(0);\n\
+    \    }\n}\n```\n\nIn a terminal or console window, compile HelloWorld.java using\
+    \ the WEJAC compiler:\n\n```\n$wejac HelloWorld.java\n$\n```\n\nUse the -echo\
+    \ option to confirm the WEJAC compiler successfully compiled the HelloWorld compiler:\n\
+    \n```\n$wejac -echo HelloWorld.java\n```\n\nJava Compile Options: [-g]\n\nCompiler\
+    \ result for file: 'HelloWorld.java' is: Success.\n$\n\n3. Contribute, and share\
+    \ your experience with WEJAC.\n\nWEJAC is open-source so that motivated, bright,\
+    \ and curious software developers can contribute to the project. Also share your\
+    \ experience with the WEJAC compiler with other developers.\n\n# Chapter 2. Compiler\
+    \ Parameters\n\nWEJAC is designed to have fewer command-line options to use with\
+    \ the compilation of Java source files. These options are organized into different\
+    \ kinds of options. Overall there are only nine options for the WEJAC compiler.\n\
+    \n# Kinds of Parameters\n\nWEJAC has four kinds of options:\n\n- Compilation\n\
+    - Error Reporting\n- Help or Information\n- javac\n\n# Compilation\n\nThe options\
+    \ for compilation are for the compilation of Java source files. The compiler options\
+    \ are:\n\n- -echo - Print Java compiler options and success or failure.\n- -final\
+    \ - Compile final release without debug information.\n- -time - Print total time\
+    \ for success compiling of a source file.\n\n# Error Reporting\n\nThe options\
+    \ for error reporting when compiling Java source files. The error reporting options\
+    \ are:\n\n- -brief - Print only a brief count of compiler messages.\n- -hush -\
+    \ Disable all compiler messages except errors.\n- -mute - Disable all compiler\
+    \ messages.\n\n# Help or Information\n\nThe options for help listing the options\
+    \ or information about the WEJAC Java compiler.\nThere are two options but with\
+    \ different parameters:\n\n- -help – Print list of compiler options and exit.\n\
+    - -info – Print compiler version information and exit.\n\n# javac Parameters\n\
+    \nThe javac option specifies the following parameter is a standard Java compiler\
+    \ option that is passed to the WEJAC compiler as-is. This allows the flexibility\
+    \ of using a javac compiler option without having to check or add the javac option\
+    \ to WEJAC.\n"
+  mdcn: "\n\n# WEJAC\n\n# 用户手册\n\n![](img/3f127f0d4692a2f206a3e304f384e615_0_0.png)\n\
+    \n# Will 的精简 Java API 编译器 (Will’s Elided Java Api Compiler)\n\nWilliam Gilreath\n\
+    \n# WEJAC\n\n# Will 的精简 Java API 编译器\n\n2019年7月\n\n![](img/3f127f0d4692a2f206a3e304f384e615_1_0.png)\n\
+    \n© Copyright 2019 William F. Gilreath. 保留所有权利。\n\n根据知识产权许可署名-相同共享 4.0 国际协议 (CC\
+    \ BY-SA 4.0) 许可。\n\n# 目录\n\n- 前言 5\n- 第 1 章 编译器安装 6\n- 安装前步骤 6\n- 安装步骤 8\n- 安装后步骤\
+    \ 9\n- 第 2 章 编译器参数 11\n- 参数种类 11\n- 编译 11\n- 错误报告 11\n- 帮助或信息 12\n- javac 参数 12\n\
+    - 第 3 章 编译器选项 13\n- brief 13\n- echo 13\n- final 14\n- help 14\n- hush 15\n- info\
+    \ 15\n- javac 16\n- mute 16\n- time 17\n- 多个编译器选项 17\n- 后记 18\n- 版后记 18\n- 作者\
+    \ 18\n- 贡献 18\n- 许可协议 19\n\n# 前言\n\n为什么还需要另一个 Java 编译器？很简单——为了选项使用的简便性以及错误报告的一致性。\n\
+    \nWEJAC 是 Will's Elided Java Api Compiler 的缩写。这个名字解释了编译器的用途；核心词是“elided”（精简的），源自“elision”，意为“省略或不予考虑”。WEJAC\
+    \ 省略了通过 Java 编译器 API (JSR 199) 访问的底层 Java 编译器中数量令人眼花缭乱的选项。使用 WEJAC 编译 Java 源代码的选项数量比\
+    \ `javac` 编译器要简单得多。\n\nWEJAC 在错误报告方面也保持一致。Java 编译器的某些错误（如弃用）需要重新编译——这是另一个编译器选项。WEJAC\
+    \ 始终提供错误报告、行号、位置以及源代码片段，以说明错误原因在整个 Java 源代码中的位置。因此，它包含了错误信息、位置和说明性的原因。\n\n`javac`\
+    \ 编译器有许多选项和功能——而 WEJAC 提供了使用其他 `javac` 编译器选项的选项。但通常，我认为更简单的编译器参数选项集才是。WEJAC 是一个软件开发工程师想要更简单工具的例子，随后对其实现、部署、共享，并在现在——编写了它。\n\
+    \n祝编译愉快！\n\nWilliam Gilreath\n2019年7月\n\n# 第 1 章 编译器安装\n\nWEJAC 用 Java 编写，并编译为\
+    \ .jar 文件。因此，编译器是使用 Java Compiler API 使用其所编译的编程语言进行“自举”的。因此，任何平台（Windows/Linux/macOS）都可以下载、安装、配置和使用\
+    \ WEJAC。\n\nWEJAC 由作为 JAR 文件的二进制字节码执行文件（Java 归档文件）以及一个包装“启动”脚本或批处理文件组成，后者在 Java\
+    \ 虚拟机 (JVM) 上执行 JAR 文件，并将命令行参数传递给 Java 虚拟机。\n\n# 安装前步骤\n\n### 1. 检查 OpenJDK\n\n\
+    为了使用 WEJAC 编译器，系统必须先安装 OpenJDK。不同的供应商提供了许多 OpenJDK 下载。最简单的方法是打开控制台或终端窗口，输入以下命令：\n\
+    \n```\n$java -version\n```\n\n如果已安装 OpenJDK，将显示如下：\n\n```\n$java -version\nopenjdk\
+    \ version \"12.0.x\" ...\nOpenJDK Runtime Environment ...\n```\n\n如果没有安装，则需要安装\
+    \ JDK。WEJAC 运行环境版本大于或等于 7。\n\n### 2. 下载 WEJAC 包\n\nWEJAC 软件包从 GitHub 下载。下载地址如下：\n\
+    \nhttps://github.com/wilreath\n\n### 3. 解压 WEJAC 包\n\n使用你喜欢的 ZIP 工具解压 WEJAC 软件包。\n\
+    \n# 安装步骤\n\nWEJAC 提供了使用其他 `javac` 编译器选项的选项，但通常情况下，我认为更简单的参数选项集是最好的。WEJAC 是一个软件开发工程师想要更简单工具的例子，随后对其实现、部署、共享，并在现在——编写了它。\n\
+    \n### 1. 安装启动脚本\n\n在终端或控制台中，执行以下命令来安装 WEJAC：\n\n```bash\nchmod +x wejac\nsudo\
+    \ mv wejac /usr/local/bin/\n```\n\n### 2. 安装 JAR 文件\n\n将 `wejac.jar` 移动到合适的目录：\n\
+    \n```bash\nsudo cp wejac.jar /usr/local/lib/\n```\n\n### 3. 配置环境变量\n\n为了在任何地方运行\
+    \ WEJAC，可以将其添加到你的 `.bashrc` 或 `.zshrc`：\n\n```bash\nexport PATH=$PATH:/usr/local/bin\n\
+    ```\n\n# 安装后步骤\n\n1. 验证安装是否成功。\n\n在终端或控制台中运行帮助信息：\n\n```bash\nwejac help\n```\n\
+    \n2. 编译简单的 Java 源代码。使用你喜欢的文本编辑器编写 Java 源代码：\n\n```java\npublic class HelloWorld\
+    \ {\n    public static void main(String[] args) {\n        System.out.println(\"\
+    Hello, World!!!\");\n        System.exit(0);\n    }\n}\n```\n\n在终端或控制台中，编译 HelloWorld.java：\n\
+    \n```bash\nwejac HelloWorld.java\n```\n\n使用 `-echo` 选项确认 WEJAC 编译器成功编译：\n\n```bash\n\
+    wejac -echo HelloWorld.java\n```\n\n编译 'HelloWorld.java' 的结果是：成功。\n\n3. 贡献代码。WEJAC\
+    \ 是开源的，充满动力且好奇的软件开发者都可以做出贡献。与其他分享你使用 WEJAC 编译器的经验。\n\n# 第 2 章 编译器参数\n\nWEJAC 设计为为编译\
+    \ Java 源代码提供更少的命令行选项。这些选项被分为不同的种类。总体而言，WEJAC 只有九个选项。\n\n# 参数种类\n\nWEJAC 有四种选项：\n\
+    \n- 编译\n- 错误报告\n- 帮助或信息\n- javac\n\n# 编译\n\n编译选项用于编译 Java 源代码。编译器选项有：\n\n- -echo\
+    \ 打印 Java 编译器选项以及成功或失败结果。\n- -final 编译不带调试信息的最终发布版本。\n- -time 打印编译源文件的总耗时。\n\n\
+    # 错误报告\n\n编译 Java 源代码时的错误报告选项。错误报告选项有：\n\n- -brief 仅打印编译消息的简要计数。\n- -hush 禁用错误以外的所有编译消息。\n\
+    - -mute 禁用所有编译消息。\n\n# 帮助或信息\n\n获取 WEJAC Java 编译器的帮助或信息的选项。有两个选项，但参数不同：\n\n- -help\
+    \ 打印选项列表并退出。\n- -info 打印编译器版本信息并退出。\n\n# javac 参数\n\njavac 选项指定后续参数是标准的 Java 编译器选项，它将原样传递给\
+    \ WEJAC 编译器。这允许在无需检查或向 WEJAC 添加 javac 选项的情况下灵活使用 javac 编译器选项。\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # WEJAC
+
+
+    # UserBook
+
+
+    ![](img/3f127f0d4692a2f206a3e304f384e615_0_0.png)
+
+
+    # Will’s Elided Java Api Compiler'
+  - '[PAGE 1]
+
+
+    William Gilreath
+
+
+    # WEJAC
+
+
+    # Will’s Elided Java Api Compiler
+
+
+    July 2019
+
+
+    ![](img/3f127f0d4692a2f206a3e304f384e615_1_0.png)'
+  - '[PAGE 2]
+
+
+    © Copyright 2019 by William F. Gilreath. All Rights Reserved.
+
+
+    Licensed under the Creative Commons Attribution-ShareAlike 4.0 International
+
+    (CC BY-SA 4.0)'
+  - '[PAGE 3]
+
+
+    # Table of Contents
+
+
+    +   Forward 5
+
+
+    +   Chapter 1. Compiler Installation 6
+
+
+    +   Pre-Installation Steps 6
+
+
+    +   Installation Steps 8
+
+
+    +   Post-Installation Steps 9
+
+
+    +   Chapter 2. Compiler Parameters 11
+
+
+    +   Kinds of Parameters 11
+
+
+    +   Compilation 11
+
+
+    +   Error Reporting 11
+
+
+    +   Help or Information 12
+
+
+    +   javac Parameters 12
+
+
+    +   Chapter 3. Compiler Options 13
+
+
+    +   brief 13
+
+
+    +   echo 13
+
+
+    +   final 14
+
+
+    +   help 14
+
+
+    +   hush 15
+
+
+    +   info 15
+
+
+    +   javac 16
+
+
+    +   mute 16
+
+
+    +   time 17
+
+
+    +   Multiple Compiler Options 17
+
+
+    +   Afterword 18
+
+
+    +   Colophon 18
+
+
+    +   Author 18
+
+
+    +   Contributing 18
+
+
+    +   License 19'
+  - '[PAGE 4]
+
+
+    # Forward
+
+
+    Why another Java compiler? Simple–for simplicity in use of options and consistency
+    in error reporting.
+
+
+    WEJAC is an acronym for Will''s Elided Java Api Compiler. The name explains the
+    compiler purpose; the primary word is ‘elided’ from the word elision, which means
+    “to omit or leave out of consideration.” WEJAC omits the dizzying number of options
+    for the underlying Java compiler accessed through the Java Compiler API as JSR
+    199. The number of options to use WEJAC to compile Java source code is considerably
+    simpler than the javac compiler.
+
+
+    WEJAC also is consistent in error reporting. Some errors such as deprecation with
+    the java compiler require re-compilation–yet another compiler option. WEJAC always
+    provides an error report, the line and position, and the source code fragment
+    to illustrate where the cause of the error is in the overall Java source code.
+    Thus error message, location, and illustrative cause.
+
+
+    The jac compiler has many options and features–and WEJAC provides the option to
+    use other javac compiler options. But in general, I have found a simpler option
+    set for compiler parameters best. WEJAC is an example of a software development
+    engineer wanting a simpler tool, so then implementing, deploying, sharing, and
+    here now–documenting it.
+
+
+    Happy Compiling!
+
+
+    William Gilreath
+
+    July 2019'
+  - '[PAGE 5]
+
+
+    # Chapter 1. Compiler Installation
+
+
+    WEJAC is written in Java, and compiled into a .jar file. Thus the compiler is
+    “bootstrapped” in the programming language it compiles using the Java Compiler
+    API. Thus any platform (Windows/Linux/macOS) can download, install, configure,
+    and use WEJAC.
+
+
+    WEJAC consists of the binary bytecode executable file as a JAR file (a Java Archive
+    file) and a wrapper “kicker” script or batch file that executes the JAR file on
+    the Java Virtual Machine (JVM), passing the command-line arguments to the Java
+    Virtual Machine.
+
+
+    # Pre-Installation Steps
+
+
+    +   1. Checking for the OpenJDK
+
+
+    In order to use the WEJAC compiler, first the system must have the OpenJDK installed.
+    There are many OpenJDK downloads from different vendors. The simplest way is to
+    open a console or terminal window, and enter the following command:
+
+
+    ```
+
+    $java -version
+
+    ```
+
+
+    If the OpenJDK and Java environment are installed the result is:
+
+
+    ```
+
+    $java -version
+
+    java version "12.0.1" 2019-04-16
+
+    Java(TM) SE Runtime Environment (build 12.0.1+12)
+
+    Java HotSpot(TM) 64-Bit Server VM (build 12.0.1+12, mixed mode, sharing)
+
+    ```
+
+
+    If not, download and install the OpenJDK on your system.
+
+
+    The WEJAC compiler runs on the JDK 7 and upwards to (currently at the time of
+    writing) JDK 12. Thus it is vital to install a compatible OpenJDK Java environment.
+    Check the Java release version is compatible, greater than or equal to Java release
+    version 1.7.x.'
+  - '[PAGE 6]
+
+
+    +   2. Download the WEJAC package
+
+
+    The entire WEJAC package is downloadable from Will’s GitHub repo. The repo is
+    at the link:
+
+
+    ```
+
+    https://github.com/wgilreath/WEJAC
+
+    ```
+
+
+    The ZIP archive is at the specific link of:
+
+
+    ```
+
+    https://github.com/wgilreath/WEJAC/WEJAC_July_2019.zip
+
+    ```
+
+
+    +   3. Unzip the WEJAC package.
+
+
+    Use your favorite ZIP utility to unzip and decompress the WEJAC package into a
+    directory.'
+  - '[PAGE 7]
+
+
+    # Installation Steps
+
+
+    The installation is simply install the wejac shell script, the WEJAC.jar binary
+    file, and on macOS/Linux systems the wejac.1 man or manual page.
+
+
+    +   1. Install wejac shell script.
+
+
+    On my MacBook, the wejac shell script is installed in the directory: /usr/local/bin/
+
+
+    In a terminal window wejac is installed by the shell commands:
+
+
+    ```
+
+    $sudo bash
+
+    Password:
+
+    #cp Downloads/wejac /usr/local/bin
+
+    ```
+
+
+    +   2. Install the WEJAC.jar file.
+
+
+    On my MacBook, the WEJAC.jar file is in the directory: /usr/local/lib/
+
+
+    In a terminal window WEJAC.jar is installed by the shell commands:
+
+
+    ```
+
+    $sudo bash
+
+    Password:
+
+    #cp Downloads/WEJAC.jar /usr/local/lib
+
+    ```
+
+
+    +   3. For Linux/macOS systems, install the manual page.
+
+
+    On my MacBook, the wejac.1 man page is in the directory: /usr/local/share/man/man1/
+
+
+    In a terminal window wejac.1 is installed by the shell commands:
+
+
+    ```
+
+    $sudo bash
+
+    Password:
+
+    #cp Downloads/wejac.1 /usr/local/share/man/man1
+
+    ```'
+  - "[PAGE 8]\n\n# Post-Installation Steps\n\n1. Verify that the installation successful.\n\
+    \nUse the command wejac in a terminal or console window; if successfully installed,\
+    \ the result will be:\n\n```\n$wejac\nWEJAC - Will's Elided Java Api Compiler\n\
+    (C) Copyright 2019 William F. Gilreath. All Rights Reserved Version 1.3\nReleased\
+    \ July 2019\nLicense is GNU General Public License (GPL) version 3.0\n```\n\n\
+    Error! No compiler options or files given! Use -help for options.\n\n2. Compile\
+    \ simple if ubiquitous HelloWorld.java source code. In your favorite text editor\
+    \ write the simple Java source:\n\n```\npublic final class HelloWorld{\n    public\
+    \ final static void main(String[] args) {\n        System.out.println(\"Hello,\
+    \ World!!!\");\n        System.exit(0);\n    }\n}\n```\n\nIn a terminal or console\
+    \ window, compile HelloWorld.java using the WEJAC compiler:\n\n```\n$wejac HelloWorld.java\n\
+    $\n```\n\nUse the -echo option to confirm the WEJAC compiler successfully compiled\
+    \ the HelloWorld.java source code:\n\n```\n$wejac -echo HelloWorld.java\n```\n\
+    \nJava Compile Options: [-g]\n\nCompiler result for file: 'HelloWorld.java' is:\
+    \ Success.\n$"
+  - '[PAGE 9]
+
+
+    3. Contribute, and share your experience with WEJAC.
+
+
+    WEJAC is open-source so that motivated, bright, and curious software developers
+    can contribute to the project. Also share your experience with the WEJAC compiler
+    with other developers.'
+  - '[PAGE 10]
+
+
+    # Chapter 2. Compiler Parameters
+
+
+    WEJAC is designed to have fewer command-line options to use with the compilation
+    of Java source files. These options are organized into different kinds of options
+    used with the WEJAC tool. Overall there are only nine options for the WEJAC compiler.
+
+
+    # Kinds of Parameters
+
+
+    WEJAC has four kinds of options:
+
+
+    +   1. Compilation
+
+    2. Error Reporting
+
+    3. Help or Information
+
+    4. javac
+
+
+    # Compilation
+
+
+    The options for compilation are for the compilation of Java source files. The
+    compiler options are:
+
+
+    +   1. -echo - Print Java compiler options and success or failure.
+
+    2. -final - Compile final release without debug information.
+
+    3. -time - Print total time for success compiling of a source file.
+
+
+    # Error Reporting
+
+
+    The options for error reporting when compiling Java source files. The error reporting
+    options are:
+
+
+    +   1. -brief - Print only a brief count of compiler messages.
+
+    2. -hush - Disable all compiler messages except errors.
+
+    3. -mute - Disable all compiler messages.'
+  - '[PAGE 11]
+
+
+    # Help or Information
+
+
+    The options for help listing the options or information about the WEJAC Java compiler.
+
+    There are two options but with different parameters:
+
+
+    +   1. -help – Print list of compiler options and exit.
+
+    2. -info – Print compiler version information and exit.
+
+
+    # javac Parameters
+
+
+    The javac option specifies the following parameter is a standard Java compiler
+    option that is passed to the WEJAC compiler as-is. This allows the flexibility
+    of using a javac compiler option without having to check or add the javac option
+    to WEJAC.'
+- md: "\n## Chapter 3. Compiler Options\n\nThis chapter contains a list of all WEJAC\
+    \ compiler options with a short example to illustrate what the compiler option\
+    \ does in practice.\n\n## brief\n\nThe -brief compiler option specifies a brief,\
+    \ or a summary of the number of error diagnostics.\n\n```\nwejac -brief HelloWorld.java\n\
+    1 Diagnostic messages:\n1 Error\n```\n\n## echo\n\nThe -echo compiler option specifies\
+    \ the compiler \"echo\" the javac compiler parameters passed, and the final result\
+    \ of compiling a Java source file.\n\nWhen HelloWorld.java is compiled using the\
+    \ WEJAC compiler with the -echo option:\n\n```\nwejac -echo HelloWorld.java\n\n\
+    Java Compile Options: [-g]\n\nCompiler result for file: 'HelloWorld.java' is:\
+    \ Success.\n```\n\nWhen HelloWorldBad.java is compiled using the WEJAC compiler\
+    \ with the -echo option:\n\n```\n$wejac -echo HelloWorldBad.java\n\nJava Compile\
+    \ Options: [-g]\n\nError: HelloWorldBad.java.\nLine 4 At 24: unclosed string literal\n\
+    System.out.println(\"Hello, World!!!\");\n\n```\n\nCompiler result for file: 'HelloWorldBad.java'\
+    \ is: Failure!\n\n## final\n\nThe -final compiler option specifies a non-debug,\
+    \ final release compile of the Java source file. Using the -echo compiler option,\
+    \ the javac compiler parameter is shown.\n\nWhen HelloWorld.java is compiled using\
+    \ the WEJAC compiler with the -final option:\n\n```\n$wejac -echo -final HelloWorld.java\n\
+    ```\n\nJava Compile Options: [-g:none]\n\nCompiler result for file: 'HelloWorld.java'\
+    \ is Success.\n\n## help\n\nThe compiler option -help prints the helpful information\
+    \ of the various command-line options to the WEJAC Java compiler, and exits without\
+    \ compiling.\n\n```\n$wejac -help\nUsage: wejac (option)* [ -javac (javac-options)+\
+    \ ] (java-file)+ | ( -help |info )\nWEJAC OPTIONS:\nCompiler Options: [ -echo\
+    \ ] | [ -final ] | [ -time ]\n-echo Print Java compiler options and success or\
+    \ failure.\n-final Compile final release without debug information.\n-time Print\
+    \ total time for success compiling of a source file.\n```\n\nError Reporting Option:\
+    \ [ -brief | -hush | -mute ]\n\n```\n-brief Print only a brief of compiler messages.\n\
+    -hush Disable all compiler messages except errors.\n-mute Disable all compiler\
+    \ messages.\n```\n\nHelp or Version: [ -help | ? ] | ( -info | -v )\n\n```\n-help\
+    \ Print list of compiler options and exit.\n-info Print compiler version information\
+    \ and exit.\n```\n\nNote: All options for -javac are passed as-is to the compiler.\n\
+    \n## hush\n\nThe compiler option -hush \"hush\" all compiler diagnostics, except\
+    \ for compiler errors.\nOther compiler diagnostics such as warnings, notes, and\
+    \ mandatory warnings are suppressed.\n\nWhen Unchecked.java is compiled with the\
+    \ WEJAC compiler, it generates a deprecation warning:\n\n```\n$wejac Unchecked.java\n\
+    Error: Unchecked.java.\nUnchecked.java uses or overrides a deprecated API.\n```\n\
+    \n```\nError: Unchecked.java.\nRecompile with -Xlint:deprecation for details.\n\
+    ```\n\nWhen the -hush option is used, and Unchecked.java is compiled with the\
+    \ WEJAC compiler, there is no warning:\n\n```\n$wejac -hush Unchecked.java\n$\n\
+    ```\n\n## info\n\nThe compiler option -info gives the information about the compiler–such\
+    \ as the release, version, copyright, and software license.\n\n```\n$wejac -info\n\
+    WEJAC - Will's Elided Java Api Compiler\n(C) Copyright 2019 William F. Gilreath.\
+    \ All Rights Reserved\nVersion 1.3 Released July 2019\n```\n\n## javac\n\nThe\
+    \ compiler option -javac allows a Java compiler option to be passed to the underlying\
+    \ Java compiler.\n\nWhen Unchecked.java is compiled with the WEJAC compiler, it\
+    \ generates a deprecation warning:\n\n```\n$wejac Unchecked.java\nError: Unchecked.java.\n\
+    Unchecked.java uses or overrides a deprecated API.\n```\n\n```\nError: Unchecked.java.\n\
+    Recompile with -Xlint:deprecation for details.\n```\n\nWhen Unchecked.java is\
+    \ compiled with the WEJAC compiler and the -javac option of -Xlint:deprecation\
+    \ is used the details are given of the deprecation warning:\n\n```\n$wejac -javac\
+    \ -Xlint:deprecation Unchecked.java\nError: Unchecked.java.\nLine 29 At 18: [deprecation]\
+    \ Date(int,int,int) in java.util.Date has been deprecated\n      Date d = new\
+    \ Date(86, 04, 05);      // May 5, 1986\n                               ^\n```\n\
+    \n## mute\n\nThe compiler option -mute suppresses or “mutes” all compiler diagnostic\
+    \ messages of the WEJAC compiler. When HelloWorldBad.java is compiled with the\
+    \ -mute option:\n\n```\n$wejac -mute HelloWorldBad.java\n$\n```\n\n## time\n\n\
+    The compiler option -time gives the total time in milliseconds to compile a Java\
+    \ source file with the WEJAC compiler. When HelloWorld.java is compiled with the\
+    \ -time option:\n\n```\n$wejac -time HelloWorld.java\nTime: 409-ms for: HelloWorld.java\n\
+    $\n```\n\n## Multiple Compiler Options\n\nThe WEJAC compiler allows the mixing\
+    \ of compiler options, but using only a single error reporting option. Consider\
+    \ compiling HelloWorld.java with the WEJAC compiler using the -echo -time options:\n\
+    \n```\n$wejac -echo -time HelloWorld.java\n\nJava Compile Options: [-g]\n\nTime:\
+    \ 411-ms for: HelloWorld.java\nCompiler result for file: 'HelloWorld.java' is:\
+    \ Success.\n$\n```\n\n## Afterword\n\nThe author and creator of WEJAC welcomes\
+    \ comments, questions, bug reports, and thoughts from users. Please feel free\
+    \ to e-mail (wfgilreath@yahoo.com) with the subject \"WEJAC” to connect.\n\n##\
+    \ Colophon\n\nThe cute animal on the cover is a “Weajack” the Weajack (or more\
+    \ commonly referred to as a Fisher), is a small mammal native to North America.\n\
+    \n## Author\n\nThe WEJAC compiler is created and developed by Will or William\
+    \ F. Gilreath. Will is a software development engineer, computer scientist, mathematician,\
+    \ writer, and poet. Will has been writing code 64 C-BASIC when he was a boy with\
+    \ a Sinclair ZX-81, and then moving on to the Commodore 64 C-BASIC, and later\
+    \ GW-BASIC on a Tandy 1000EX. Java is a favorite programming language, and Will\
+    \ wanted a simpler compiler–hence WEJAC.\n\nVisit Will’s home site:\n\nhttps://gilreath.github.io/WillHome.html\n\
+    \n## Contributing\n\nWEJAC is an open-source front-end to javac compiler API.\
+    \ Hence if the reader wants to contribute and participate with WEJAC–it is most\
+    \ welcome! Test cases, bug fixes, and contributions to the WEJAC source code are\
+    \ encouraged.\n"
+  mdcn: "\n\n## 第 3 章 编译器选项\n\n本章包含了所有 WEJAC 编译器选项的列表，并附有简短示例以说明这些编译器选项在实践中的作用。\n\n\
+    ## brief\n\n-brief 编译器选项用于指定错误诊断信息的简要摘要或数量。\n\n```\nwejac -brief HelloWorld.java\n\
+    1 Diagnostic messages:\n1 Error\n```\n\n## echo\n\n-echo 编译器选项指定编译器“回显”传递的 javac\
+    \ 编译器参数以及 Java 源文件的编译最终结果。\n\n当使用 -echo 选项通过 WEJAC 编译器编译 HelloWorld.java 时：\n\n\
+    ```\nwejac -echo HelloWorld.java\n\nJava Compile Options: [-g]\n\nCompiler result\
+    \ for file: 'HelloWorld.java' is: Success.\n```\n\n当使用 -echo 选项通过 WEJAC 编译器编译\
+    \ HelloWorldBad.java 时：\n\n```\n$wejac -echo HelloWorldBad.java\n\nJava Compile\
+    \ Options: [-g]\n\nError: HelloWorldBad.java.\nLine 4 At 24: unclosed string literal\n\
+    System.out.println(\"Hello, World!!!\");\n\n```\n\nCompiler result for file: 'HelloWorldBad.java'\
+    \ is: Failure!\n\n## final\n\n-final 编译器选项指定对 Java 源文件进行非调试的最终发布版本编译。使用 -echo\
+    \ 选项时会显示 javac 编译器参数。\n\n当使用 -final 选项通过 WEJAC 编译器编译 HelloWorld.java 时：\n\n```\n\
+    $wejac -echo -final HelloWorld.java\n```\n\nJava Compile Options: [-g:none]\n\n\
+    Compiler result for file: 'HelloWorld.java' is Success.\n\n## help\n\n-help 编译器选项会打印\
+    \ WEJAC Java 编译器各种命令行选项的帮助信息，并退出不进行编译。\n\n```\n$wejac -help\nUsage: wejac (option)*\
+    \ [ -javac (javac-options)+ ] (java-file)+ | ( -help |info )\nWEJAC OPTIONS:\n\
+    Compiler Options: [ -echo ] | [ -final ] | [ -time ]\n-echo 打印 Java 编译器选项以及成功或失败。\n\
+    -final 编译不带调试信息的最终发布版本。\n-time 打印编译源文件的总耗时。\n```\n\nError Reporting Option: [\
+    \ -brief | -hush | -mute ]\n\n```\n-brief 仅打印编译信息的简要摘要。\n-hush 禁用错误之外的所有编译信息。\n\
+    -mute 禁用所有编译信息。\n```\n\nHelp or Version: [ -help | ? ] | ( -info | -v )\n\n```\n\
+    -help 打印编译器选项列表并退出。\n-info 打印编译器版本信息并退出。\n```\n\n注意：所有 -javac 选项都会原样传递给编译器。\n\n\
+    ## hush\n\n-hush 编译器选项会“静音”所有的编译器诊断信息，编译器错误除外。\n其他编译器诊断如警告、备注和强制警告将被抑制。\n\n当使用\
+    \ WEJAC 编译器编译 Unchecked.java 时，它会生成一个弃用警告：\n\n```\n$wejac Unchecked.java\nError:\
+    \ Unchecked.java.（注：此处原文显示为 Error，但描述文案提到生成了弃用警告，此处按原文翻译或保持逻辑一致性）\nError: Unchecked.java.\n\
+    Unchecked.java uses or overrides a deprecated API.\n```\n\n```\nError: Unchecked.java.\n\
+    Recompile with -Xlint:deprecation for details.\n```\n\n当使用 -hush 选项并通过 WEJAC 编译器编译\
+    \ Unchecked.java 时，将没有警告：\n\n```\n$wejac -hush Unchecked.java\n$\n```\n\n## info\n\
+    \n-info 编译器选项提供关于编译器的信息——例如发布版本、版本、版权和软件许可。\n\n```\n$wejac -info\nWEJAC - Will's\
+    \ Elided Java Api Compiler\n(C) Copyright 2019 William F. Gilreath. All Rights\
+    \ Reserved\nVersion 1.3 Released July 2019\n```\n\n## javac\n\n-javac 编译器选项允许将\
+    \ Java 编译器选项传递给底层的 Java 编译器。\n\n当使用 WEJAC 编译器编译 Unchecked.java 时，会生成一个弃用警告：\n\n\
+    ```\n$wejac Unchecked.java\nError: Unchecked.java.\nUnchecked.java uses or overrides\
+    \ a deprecated API.\n```\n\n```\nError: Unchecked.java.\nRecompile with -Xlint:deprecation\
+    \ for details.\n```\n\n当使用 WEJAC 编译器编译 Unchecked.java 并使用 -javac -Xlint:deprecation\
+    \ 选项时，会给出弃用警告的详细信息：\n\n```\n$wejac -javac -Xlint:deprecation Unchecked.java\n\
+    Error: Unchecked.java.\nLine 29 At 18: [deprecation] Date(int,int,int) in java.util.Date\
+    \ has been deprecated\n      Date d = new Date(86, 04, 05);      // May 5, 1986\n\
+    \                               ^\n```\n\n## mute\n\n-mute 编译器选项会抑制或“静音”WEJAC\
+    \ 编译器的所有编译器诊断信息。当使用 -mute 选项编译 HelloWorldBad.java 时：\n\n```\n$wejac -mute HelloWorldBad.java\n\
+    $\n```\n\n## time\n\n-time 编译器选项提供使用 WEJAC 编译器编译 Java 源文件的总时间（毫秒级）。当使用 -time 选项编译\
+    \ HelloWorld.java 时：\n\n```\n$wejac -time HelloWorld.java\nTime: 409-ms for: HelloWorld.java\n\
+    $\n```\n\n## 多重编译器选项\n\nWEJAC 编译器允许混合使用编译器选项，但只能使用一种错误报告选项。考虑使用 -echo -time 选项通过\
+    \ WEJAC 编译器编译 HelloWorld.java：\n\n```\n$wejac -echo -time HelloWorld.java\n\n\
+    Java Compile Options: [-g]\n\nTime: 411-ms for: HelloWorld.java\nCompiler result\
+    \ for file: 'HelloWorld.java' is: Success.\n$\n```\n\n## 结语\n\nWEJAC 的作者和创建者欢迎用户的意见、问题、错误报告和想法。请随时通过电子邮件（wfgilreath@yahoo.com）主题写“WEJAC”与我们联系。\n\
+    \n## 后记\n\n封面上的可爱动物是一只“Weajack”，Weajack（或更常被称为 Fisher）是一种原产于北美洲的小型哺乳动物。\n\n##\
+    \ 作者\n\nWEJAC 编译器由 Will 或 William F. Gilreath 创建并开发。Will 是一位软件开发工程师、计算机科学家、数学家、作家和诗人。Will\
+    \ 在孩提时期使用 Sinclair ZX-81 时就开始编写 64 C-BASIC 代码，随后转向 Commodore 64 C-BASIC，并在后来的在\
+    \ Tandy 1000EX 上使用 GW-BASIC。Java 是他喜爱的编程语言，Will 想要一个更简单的编译器——因此有了 WEJAC。\n\n访问\
+    \ Will 的个人主页：\n\nhttps://gilreath.github.io/WillHome.html\n\n## 贡献\n\nWEJAC 是\
+    \ javac 编译器 API 的开源前端。因此，如果读者想为 WEJAC 贡献并参与——我们非常欢迎！鼓励测试用例、错误修复以及对 WEJAC 源代码的贡献。\n\
+    \n"
+  merge: 0
+  raw:
+  - '[PAGE 12]
+
+
+    # Chapter 3. Compiler Options
+
+
+    This chapter contains a list of all WEJAC compiler options with a short example
+    to illustrate with the compiler option does in practice.
+
+
+    # brief
+
+
+    The -brief compiler option specifies a brief, or a summary of the number of error
+    diagnostics.
+
+
+    ```
+
+    wejac -brief HelloWorld.java
+
+    1 Diagnostic messages:
+
+    1 Error
+
+    ```
+
+
+    # echo
+
+
+    The -echo compiler option specifies the compiler "echo" the jacav compiler parameters
+    passed, and the final result of compiling a Java source file.
+
+
+    When HelloWorld.java is compiled using the WEJAC compiler with the -echo option:
+
+
+    ```
+
+    wejac -echo HelloWorld.java
+
+
+    Java Compile Options: [-g]
+
+
+    Compiler result for file: ''HelloWorld.java'' is: Success.
+
+    ```
+
+
+    When HelloWorldBad.java is compiled using the WEJAC compiler with the -echo option:
+
+
+    ```
+
+    $wejac -echo HelloWorldBad.java
+
+
+    Java Compile Options: [-g]
+
+
+    Error: HelloWorldBad.java.
+
+    Line 4 At 24: unclosed string literal
+
+    System.out.println("Hello, World!!!");
+
+
+    ```
+
+
+    Compiler result for file: ''HelloWorldBad.java'' is: Failure!'
+  - '[PAGE 13]
+
+
+    # final
+
+
+    The -final compiler option specifies a non-debug, final release compile of the
+    Java source file. Using the -echo compiler option, the javac compiler parameter
+    is shown.
+
+
+    When HelloWorld.java is compiled using the WEJAC compiler with the -final option:
+
+
+    ```
+
+    $wejac -echo -final HelloWorld.java
+
+    ```
+
+
+    Java Compile Options: [-g:none]
+
+
+    Compiler result for file: ''HelloWorld.java'' is Success.
+
+
+    # help
+
+
+    The compiler option -help prints the helpful information of the various command-line
+    options to the WEJAC Java compiler, and exits without compiling.
+
+
+    ```
+
+    $wejac -help
+
+    Usage: wejac (option)* [ -javac (javac-options)+ ] (java-file)+ | ( -help |info
+    )
+
+    WEJAC OPTIONS:
+
+    Compiler Options: [ -echo ] | [ -final ] | [ -time ]
+
+    -echo Print Java compiler options and success or failure.
+
+    -final Compile final release without debug information.
+
+    -time Print total time for success compiling of a source file.
+
+    ```
+
+
+    Error Reporting Option: [ -brief | -hush | -mute ]
+
+
+    ```
+
+    -brief Print only a brief of compiler messages.
+
+    -hush Disable all compiler messages except errors.
+
+    -mute Disable all compiler messages.
+
+    ```
+
+
+    Help or Version: [ -help | ? ] | ( -info | -v )
+
+
+    ```
+
+    -help Print list of compiler options and exit.
+
+    -info Print compiler version information and exit.
+
+    ```
+
+
+    Note: All options for -javac are passed as-is to the compiler.'
+  - '[PAGE 14]
+
+
+    # hush
+
+
+    The compiler option -hush "hush" all compiler diagnostics, except for compiler
+    errors.
+
+    Other compiler diagnostics such as warnings, notes, and mandatory warnings are
+    suppressed.
+
+
+    When Unchecked.java is compiled with the WEJAC compiler, it generates a deprecation
+    warning:
+
+
+    ```
+
+    $wejac Unchecked.java
+
+    Error: Unchecked.java.
+
+    Unchecked.java uses or overrides a deprecated API.
+
+    ```
+
+
+    ```
+
+    Error: Unchecked.java.
+
+    Recompile with -Xlint:deprecation for details.
+
+    ```
+
+
+    When the -hush option is used, and Unchecked.java is compiled with the WEJAC compiler,
+    there is no warning:
+
+
+    ```
+
+    $wejac -hush Unchecked.java
+
+    $
+
+    ```
+
+
+    # info
+
+
+    The compiler option -info gives the information about the compiler–such as the
+    release, version, copyright, and software license.
+
+
+    ```
+
+    $wejac -info
+
+    WEJAC - Will''s Elided Java Api Compiler
+
+    (C) Copyright 2019 William F. Gilreath. All Rights Reserved
+
+    Version 1.3 Released July 2019
+
+    ```'
+  - "[PAGE 15]\n\n# javac\n\nThe compiler option -javac allows a Java compiler option\
+    \ to be passed to the underlying Java compiler.\n\nWhen Unchecked.java is compiled\
+    \ with the WEJAC compiler, it generates a deprecation warning:\n\n```\n$wejac\
+    \ Unchecked.java\nError: Unchecked.java.\nUnchecked.java uses or overrides a deprecated\
+    \ API.\n```\n\n```\nError: Unchecked.java.\nRecompile with -Xlint:deprecation\
+    \ for details.\n```\n\nWhen Unchecked.java is compiled with the WEJAC compiler\
+    \ and the -javac option of -Xlint:deprecation is used the details are given of\
+    \ the deprecation warning:\n\n```\n$wejac -javac -Xlint:deprecation Unchecked.java\n\
+    Error: Unchecked.java.\nLine 29 At 18: [deprecation] Date(int,int,int) in java.util.Date\
+    \ has been deprecated\n      Date d = new Date(86, 04, 05);      // May 5, 1986\n\
+    \                               ^\n```\n\n# mute\n\nThe compiler option -mute\
+    \ suppresses or “mutes” all compiler diagnostic messages of the WEJAC compiler.\
+    \ When HelloWorldBad.java is compiled with the -mute option:\n\n```\n$wejac -mute\
+    \ HelloWorldBad.java\n$\n```"
+  - '[PAGE 16]
+
+
+    # time
+
+
+    The compiler option -time gives the total time in milliseconds to compile a Java
+    source file with the WEJAC compiler. When HelloWorld.java is compiled with the
+    -time option:
+
+
+    ```
+
+    $wejac -time HelloWorld.java
+
+    Time: 409-ms for: HelloWorld.java
+
+    $
+
+    ```
+
+
+    # Multiple Compiler Options
+
+
+    The WEJAC compiler allows the mixing of compiler options, but using only a single
+    error reporting option. Consider compiling HelloWorld.java with the WEJAC compiler
+    using the -echo -time options:
+
+
+    ```
+
+    $wejac -echo -time HelloWorld.java
+
+
+    Java Compile Options: [-g]
+
+
+    Time: 411-ms for: HelloWorld.java
+
+    Compiler result for file: ''HelloWorld.java'' is: Success.
+
+    $
+
+    ```'
+  - '[PAGE 17]
+
+
+    # Afterword
+
+
+    The author and creator of WEJAC welcomes comments, questions, bug reports, and
+    thoughts from users. Please feel free to e-mail (wfgilreath@yahoo.com) with the
+    subject "WEJAC” to connect.
+
+
+    # Colophon
+
+
+    The cute animal on the cover is a “Weajack” the Weajack (or more commonly referred
+    to as a Fisher), is a small mammal native to North America.
+
+
+    # Author
+
+
+    The WEJAC compiler is created and developed by Will or William F. Gilreath. Will
+    is a software development engineer, computer scientist, mathematician, writer,
+    and poet. Will has been writing code 64 C-BASIC when he was a boy with a Sinclair
+    ZX-81, and then moving on to the Commodore 64 C-BASIC, and later GW-BASIC on a
+    Tandy 1000EX. Java is a favorite programming language, and Will wanted a simpler
+    Java compiler–hence WEJAC.
+
+
+    Visit Will’s home site:
+
+
+    https://wgilreath.github.io/WillHome.html
+
+
+    # Contributing
+
+
+    WEJAC is an open-source front-end to the javac compiler API. Hence if the reader
+    wants to contribute and participate with WEJAC–it is most welcome! Test cases,
+    bug fixes, and contributions to the WEJAC source code are encouraged.'
+  - '[PAGE 18]
+
+
+    # License
+
+
+    # Creative Commons
+
+    Attribution 4.0 International (CC BY 4.0)
+
+
+    You are free to:
+
+
+    **Share** — copy and redistribute the material in any medium or format
+
+
+    **Adapt** — remix, transform, and build upon the material for any purpose, even
+    commercially.
+
+
+    The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+
+    # Under the following terms:
+
+
+    **Attribution** — You must give appropriate credit, provide a link to the license,
+    and indicate if changes were made. You may do so in any reasonable manner, but
+    not in any way that suggests the licensor endorses you or your use.
+
+
+    **No additional restrictions** — You may not apply legal terms or technological
+    measures that legally restrict others from doing anything the license permits.
+
+
+    ```
+
+    https://creativecommons.org/licenses/by/4.0/legalcode
+
+    ```'
+  - '[PAGE 19]
+
+
+    # WEJAC - Will''s Elided Java Api Compiler:
+
+
+    +   * Simplicity with fewer compiler command-line options
+
+    * Java cross-platform bytecode for (macOS/Linux/Windows)
+
+    * Runs with Java Developer Kit 7 and upward
+
+    * Uses underlying Java compiler through Java Compiler API
+
+    * Java source code is open-source on GitHub
+
+    * Licensed under the GNU General Public License (GPL) v. 3.0
+
+    * User manual is free to copy and share with attribution'
