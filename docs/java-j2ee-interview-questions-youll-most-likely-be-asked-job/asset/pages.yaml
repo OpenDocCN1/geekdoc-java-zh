@@ -1,0 +1,6527 @@
+- img_proc: true
+  md: '# Job Interview Questions Series
+
+
+    # 2015 Edition
+
+
+    # JAVA/J2EE
+
+
+    # Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    # Second Edition
+
+
+    ![](img/26e2677696e71b6e0290b1c3d3c83f50_0_0.png)
+
+
+    FREE
+
+    2 Aptitude Tests, download available on website
+
+
+    250 JAVA/J2EE Questions
+
+
+    51 HR Interview Questions
+
+
+    # Vibrant Publishers'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # JAVA/J2EE
+
+
+    #  Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    Second Edition
+
+
+    Job Interview Questions Series
+
+
+    Vibrant Publishers
+
+
+    www.vibrantpublishers.com'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# JAVA/JEE Interview Questions
+
+    You''ll Most Likely Be Asked
+
+
+    # Second Edition
+
+
+    © 2014, By Vibrant Publishers, USA. All rights reserved. No part of this publication
+    may be reproduced or distributed in any form or by any means, stored in a database
+    or retrieval system, without the prior permission of the publisher.
+
+
+    ISBN-10: 1456323555
+
+    ISBN-13: 978-14-56323-55-4
+
+
+    Library of Congress Control Number: 2010940415
+
+
+    This publication is designed to provide accurate and authoritative information
+    in regard to the subject matter covered. The author has made every effort in the
+    preparation of this book to ensure the accuracy of the information. However, information
+    in this book is sold without warranty either expressed or implied. The Author
+    or the Publisher will not be liable for any damages caused or alleged to be caused
+    either directly or indirectly by this book.
+
+
+    Vibrant Publishers books are available at special quantity discount for sales
+    promotions, or for use in corporate training programs. For more information please
+    write to bulkorders@vibrantpublishers.com
+
+
+    Please email feedback / corrections (technical, grammatical or spelling) to spellerrors@vibrantpublishers.com
+
+
+    To access the complete catalogue of Vibrant Publishers, visit www.vibrantpublishers.com'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # Table of Contents
+
+
+    +   1 Architectures and Protocols 7
+
+    2 Applicability and Best Practices 17
+
+    3 Servlets 27
+
+    4 JSP 37
+
+    5 EJB 47
+
+    6 Internationalization and Localization 65
+
+    7 Design Patterns 75
+
+    8 Messaging 85
+
+    9 Security and Legacy Connectivity 95
+
+    10 HR Questions 105
+
+    INDEX 121'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# # Java / J2EE Interview Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Architectures and Protocols'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 1: What are the design goals of J2EE architecture?
+
+
+    The following are the design goals of J2EE architecture:
+
+
+    +   a) Service Availability: The application should be available 24 * 7. The business
+    depends on the application without the need for customer service representatives
+
+    b) Data Connectivity: The application should be able to connect to mainframe systems
+    and other legacy systems to ensure business functions as usual
+
+    c) Accessibility: User should be able to connect the application from anywhere
+    and from any electronic devices
+
+    d) User Interaction: The user should be able to connect the application from desktop,
+    laptop, PDA, and mobile
+
+    e) Flexibility: The architecture should be created in such a way that the developer
+    just concentrates on the business component model (business logic) and the rest
+    of the services are handled by the server
+
+
+    # 2: What are the roles of J2EE Architect?
+
+
+    The following are the roles of J2EE architect:
+
+
+    +   a) Visualizing the behavior of the system blue print
+
+    b) Creating the system blue
+
+    c) Defining the way how the system elements work together
+
+    d) Defining non-functional and functional requirements
+
+    e) Integrating non-functional requirements into the functional system
+
+
+    # 3: What is the difference between architecture and design?
+
+
+    Architecture defines the structural issues, communication protocols, data access,
+    synchronization, and subsystems’ classification. It also defines the architectural
+    design of the component interfaces.
+
+
+    In Design, we define the components to be created for each'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked 9
+
+
+    interface, the inputs, the outputs, algorithms, and data structures. In short,
+    the designers describe each component''s internal details.
+
+
+    # 4: What are the activities performed in Architectural Analysis? Answer:
+
+
+    The following activities will be performed in Architectural Analysis:
+
+
+    +   a) Use case diagram: This is developed to depict the high level system functionality
+
+    b) Class Diagram: This is developed to depict the functionality as classes and
+    methods
+
+    c) Collaboration Diagram: This is developed to depict how each class talk to each
+    other
+
+    d) Sequence Diagram: This is developed to depict the operation sequence
+
+
+    # 5: What are the activities performed in Architectural Design? Answer:
+
+
+    The following activities will be performed in Architectural Design:
+
+
+    +   a) The framework (example: Remote Method Invocation) to be used will be decided
+
+    b) The software and hardware requirements are defined
+
+    c) The performance parameter and the approach to achieve will be defined
+
+    d) Analyze for reusing existing components or technology
+
+    e) Define the business logic, security, and performance of the system
+
+
+    # 6: What are the activities performed in the object oriented design? Answer:
+
+
+    The following activities will be performed in object oriented design:
+
+
+    +   a) Decide on how classes interact with packages
+
+    b) Create dependency diagrams
+
+    c) Create deployment diagrams'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'd) Decide if the components (software) reside in deployment folder
+
+
+    # 7: What are the components of multi-tier architecture?
+
+    Answer:
+
+
+    The following are the components of multi-tier architecture:
+
+
+    +   a) Presentation Tier: The front end component is present in this tier which
+    is used to display the presentation
+
+
+    +   b) Resource Tier: The back end component is present in this tier which is
+    used to communicate with database
+
+
+    +   c) Business Tier: The component present in this tier is used to provide business
+    logic for the system
+
+
+    # 8: What are the advantages of multi-tier client server architecture?
+
+    Answer:
+
+
+    The following are the advantages of multi-tier client server architecture:
+
+
+    +   a) Changes to business logic or user interface can be made independently
+
+
+    +   b) The client accesses data easily without knowing where data comes from and
+    how many servers are available for the system
+
+
+    +   c) The DB (database) connections can be pooled so that the data can be shared
+    for several users without making DB request for each user
+
+
+    +   d) The middle tier component (business logic) can be written in any standard
+    programming languages such as C or Java
+
+
+    # 9: What are the responsibilities of the bean developer?
+
+    Answer:
+
+
+    The following are the responsibilities of the bean developer:
+
+
+    +   a) Write the systems business logic in java
+
+
+    +   b) Integrate java components with third party components
+
+
+    +   c) Control access and set transaction parameters
+
+
+    +   d) Create home interface to find the beans and remote'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'interface to create business logic
+
+
+    e) Create the deployment descriptor xml
+
+
+    # 10: What are the responsibilities of application assembler?
+
+    Answer:
+
+
+    The following are the responsibilities of application assembler:
+
+
+    +   a) Build presentation layer i.e., user interface
+
+    b) Specify the requirements of transaction management
+
+    bc) Set transaction parameters for all the bean’s methods
+
+    d) Define security roles and assign permissions
+
+    e) Specify wild character (\*) to the methods
+
+
+    # 11: What are the responsibilities of bean deployer?
+
+    Answer:
+
+
+    The following are the responsibilities of bean deployer:
+
+
+    +   a) Map fields to DB (database) columns and manage persistence
+
+    b) Define users, groups, roles, and manage security
+
+    c) Use the deployment tools and generate wrapper classes
+
+    d) Map user roles and groups
+
+    e) Ensure all the deployed bean is assigned a transaction parameter
+
+
+    # 12: What are the roles of third party software in EJB framework?
+
+    Answer:
+
+
+    The third party companies that provide the software can play any of the following
+    three roles:
+
+
+    +   a) Component Provider: Responsible for developing object modeling, programming,
+    architecture, and business process
+
+    b) Container Provider: Responsible for proving the environment during runtime
+    to the server
+
+    e) Application Server Provider: Responsible for providing platform to develop
+    distributed applications. It usually contains the container which provides the
+    runtime environment'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# 13: Explain MVC architecture.
+
+
+    Answer:
+
+
+    MVC represents Model View Controller architecture. The activity performed in MVC
+    is explained below:
+
+
+    +   a) In Model, the developer creates the business logic of the system
+
+    b) In View, the developer creates the presentation logic
+
+    c) In Controller, the developer receives the request and transfers the response
+
+
+    # 14: Explain EAR, WAR, and JAR.
+
+
+    Answer:
+
+
+    EAR represents Enterprise Archive file. It contains the components of web, EJB,
+    and client. All the components are packed in a compressed file called .ear.
+
+    WAR represents Web Archive file. It contains all the components related to the
+    web application. All the components are packed in a compressed file called .war.
+
+    JAR represents Java Archive file. It contains all the class files and library
+    files which constitute an API (Application Programming Interface). All the components
+    are packed in a compressed file called .jar file.
+
+
+    # 15: Explain JTA, JNDI, and JMS.
+
+
+    Answer:
+
+
+    JTA represents Java Transaction API. It is used for coordinating and managing
+    transactions across enterprise information system.
+
+    JNDI represents Java Naming Directory Interface. It is used for accessing information
+    from directory services.
+
+    JMS represents Java Messaging Service. It is used for receiving and sending messages
+    through messaging systems.
+
+
+    # 16: Explain EDI.
+
+
+    Answer:
+
+
+    EDI represents Electronic Data Interchange. It is used for exchanging data through
+    Value Added Network (VAN) which'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "acts as the transmission medium.\nEDI is expensive to install and requires\
+    \ customization by the\nexchanging clients. EDI also relies on X12 standards to\n\
+    interchange documents.\n\n# 17: Explain EAI?\n\nEAI represents Enterprise Application\
+    \ Integration. This makes one\nor more applications as single application and\
+    \ requires data to be\transmitted to the appropriate system at the right time.\n\
+    For example, while integrating sales and account systems, it is\nnecessary for\
+    \ sales to send sales order to accounting to generate\ninvoice. Also, accounting\
+    \ must send an invoice to sales to update\ndata for the sales professionals.\n\
+    This system handles transaction automatically across application\neliminates human\
+    \ errors.\n\n# 18: What is the intent for supporting XML in Java?\n\nThe intent\
+    \ to support XML is to:\n\n+   a) Ensure Java developers understand XML easier\
+    \ and use\nXML and XML developers use Java\nb) Provide default standard for Java\
+    \ to ensure consistent and\ncompatible implementations\nc) Ensure java platform\
+    \ can be integrated with high quality\n\n# 19: What are the protocols used for\
+    \ communicating between\nbusiness tier and user interface?\n\nThe following protocols\
+    \ are used for communicating between\nbusiness tier and user interface:\n\n+ \
+    \  a) HTTP: It denotes ‘Hyper Text Transfer Protocol’\nb) JMS: It denotes ‘Java\
+    \ Messaging Service’\nc) RMI: It denotes ‘Remote Method Invocation’\nd) CORBA:\
+    \ It denotes ‘Common Object Request Broker\nArchitecture’"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    e) DCOM: It denotes ‘Distributed Component Object Model’
+
+
+    # 20: What are the advantages and disadvantages of HTTP protocol?
+
+
+    Answer:
+
+
+    The following are the advantages of HTTP protocol:
+
+
+    +   a) Stateless and firewall friendly
+
+    b) Easier to load balance and scale HTTP servers
+
+
+    The following are the disadvantages of HTTP protocol:
+
+
+    +   a) Difficult to maintain user sessions
+
+    b) Limited communication with JSP and servlets
+
+
+    # 21: Explain JRMP.
+
+
+    Answer:
+
+
+    JRMP represents Java Remote Method Object Protocol. This is used by Remote Method
+    Invocation (RMI) to pass java objects as arguments.
+
+
+    Since Java relies on Object Serialization which marshal objects as stream, RMI
+    relies on the protocol JRMP to transfer objects from one JVM (Java Virtual Machine)
+    to another.
+
+
+    # 22: What are the advantages and disadvantages of CORBA?
+
+
+    Answer:
+
+
+    The following are the advantages of CORBA:
+
+
+    +   a) Supports heterogeneous object
+
+    b) Extends the capabilities of ORB (Object Request Broker)
+
+
+    The following are the disadvantages of CORBA:
+
+
+    +   a) Objects cannot be passed, only arguments can be passed
+
+    b) Accepted types of data can only be passed
+
+
+    # 23: Explain DCOM.
+
+
+    Answer:
+
+
+    DCOM represents Distributed Component Object Model. This uses ORPC (Object Remote
+    Procedure Call) protocol to support'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked 15
+
+
+    remote objects.
+
+
+    ORPC is built on top of RPC (Remote Procedure Call) and interact with runtime
+    services. DCOM supports multiple interfaces and the components can be created
+    in various programming languages. Example of languages are: Java, C, Visual Basic,
+    etc. DCOM is widely used in windows platform.
+
+
+    # 24: Explain the capabilities of J2EE architecture.
+
+
+    Answer:
+
+
+    The following are the capabilities of J2EE architecture.
+
+
+    +   a) **Performance**: performs functionality in a short time frame
+
+    b) **Scalability**: Supports even if the load on the server increases
+
+    c) **Availability**: The system is always accessible across 24 * 7
+
+    d) **Flexibility**: Change in hardware or architecture does not impact the system
+
+    e) **Security**: The information cannot be hacked and modified
+
+    f) **Reusability**: The component created for a system can be reused and save
+    development time
+
+
+    # 25: Explain System architecture and Reference architecture.
+
+
+    Answer:
+
+
+    System architecture represents the architecture as product. This comprises the
+    component functions, interfaces of the proposed system, constraints, and interactions.
+    This is the base for application design implementation.
+
+
+    Reference architecture represents architecture as method or style. For a specific
+    domain, reference architecture refers coherent design principle.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Applicability and Best Practices'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# 26: Explain Best Practice.
+
+
+    Answer:
+
+
+    Best Practice can be defined as follows:
+
+
+    +   a) Technique that drives your application design at component level
+
+    b) Process recognized by the fellow team members who work on a similar project
+
+    c) Takes design or system requirement into consideration
+
+    d) Applicable to the entire software development cycle
+
+
+    # 27: Explain the J2EE tiers.
+
+
+    Answer:
+
+
+    J2EE has the following tiers:
+
+
+    +   a) Client Tier: It represents the browser from which request is sent to the
+    server. The interfaces used in this tier are HTML browser, java application, an
+    applet, or a non-java application.
+
+    b) Middle Tier: It comprises of presentation tier, business tier, and integration
+    tier. The user interface is created in the presentation tier using JSP. The business
+    logic is written in the business tier using EJB. The database objects are created
+    in the integration tier.
+
+    c) Backend: This constitutes the Enterprise Information System (EIS) which is
+    used to store data.
+
+
+    # 28: What are the best practices to be followed in the presentation layer?
+
+
+    Answer:
+
+
+    The best practices to be followed in the presentation layer are explained below:
+
+
+    +   a) Separate Hyper Text Markup Language (HTML) from java
+
+    b) Always write business logic in a Bean class
+
+    c) Use JSP templates and comments
+
+    d) Use Model View Controller (MVC) Pattern
+
+    d) Use custom libraries and tag handlers'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# 29: What type of components is used in MVC?
+
+
+    Answer:
+
+    MVC represents Model View Controller. The component used in Model, View, and Controller
+    is explained below:
+
+
+    +   - An application represents the Model which constitutes the system’s state.
+    The systems state is created as business logic in a Bean class
+
+
+    +   - The user interface represents the View which is created using Java Server
+    Pages
+
+
+    +   - The request received from the client is always the controller which is created
+    using Servlets
+
+
+    # 30: What are the requirements that a J2EE system must possess to operate in
+    a global economy?
+
+
+    Answer:
+
+    The J2EE system must possess the following to operate globally:
+
+
+    +   - Financial Considerations: The method of payment to buy an item should contain
+    many forms as not all the visitors will have a credit card. Also, a government
+    has its own taxes, custom restrictions and tariffs.
+
+
+    +   - Language Requirements: The application should support multiple languages
+    and it has to be country specific.
+
+
+    +   - Legal Differences: Customs laws and privacy requirements are different for
+    each country and each government has restrictions on images, ideas, and speeches.
+
+
+    # 31: What are the best practices to be followed in DAO?
+
+
+    Answer:
+
+    DAO represents Data Access Object. The best practices to be followed in DAO should
+    be explained below:
+
+
+    +   - DAO should not be coupled tightly to the business logic
+
+
+    +   - Each enterprise bean should be associated with a DAO class
+
+
+    +   - DAO should be used only to access data from DB
+
+
+    +   - DAO should be written in such a way that it allows cross'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'schema and database capability
+
+
+    +   e) DAO should be written in such a way that it supports portability
+
+
+    # 32: Explain Guideline.
+
+
+    Answer:
+
+
+    Guideline refers to rule or agreement on operations which are developed by the
+    professionally recognized organization or associations. It also includes approved
+    formal proprietary standards to be followed during the project activities. Example
+    for a Guideline is: Analysts attempting to maximize content to reduce network
+    traffic.
+
+
+    # 33: What are the best practices to be followed in VO?
+
+
+    Answer:
+
+
+    VO represents Value Object. The best practices to be followed in Value Objects
+    are explained below:
+
+
+    +   a) VO should contain business objects with get and set methods
+
+
+    +   b) VO should update the model bean object with the respective value
+
+
+    +   c) VO should not reference an object on the server
+
+
+    +   d) VO should represent a value from the server
+
+
+    # 34: What are the best practices to be followed in session bean façade?
+
+
+    Answer:
+
+
+    The following are the best practices to be followed in session bean façade:
+
+
+    +   a) It should reduce remote call to the application server
+
+
+    +   b) Apply transactional scope to methods which calls entity bean group
+
+
+    +   c) Simplify the client tier so that business logic gets executed only on the
+    application server
+
+
+    +   d) Coding should be done in such a way that it identifies permissions and
+    provide flexibility and reusability'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 35: What are the benefits of Model View Controller (MVC)?nAnswer:
+
+
+    The following are the benefits of MVC:
+
+
+    +   a) Separates data model from user interaction and data display and clarifies
+    application design
+
+    b) Allows viewing data in many forms and by large number of users
+
+    c) Enhances reusability by separating functionality from presentation
+
+    d) Increases flexibility and improves extensibility
+
+    e) Encapsulates application functions and facilitates maintenance
+
+    f) Supports incremental updates and divides deployment
+
+
+    # 36: What are the design problems with MVC?
+
+    Answer:
+
+
+    The following are the MVC design problems:
+
+
+    +   a) Components are not aware about the other components'' details of implementation
+
+    b) Latency issues and communication volumes have to be handled carefully which
+    otherwise result in a scalability issue in distributed systems
+
+    c) MVC is difficult to maintain if the Model is unstable because controller is
+    mostly written based on the Model
+
+
+    # 37: Explain the applicability of MVC.
+
+    Answer:
+
+
+    MVC has to be used for the following cases:
+
+
+    +   a) If the application is large enough and distributed
+
+    b) If the application has a longer life time
+
+    c) Portability of interface and back end are most important
+
+    d) For easy maintenance and reusability
+
+    e) Development of application by multiple developers
+
+    f) View data and manipulate them in multiple ways
+
+
+    # 38: Explain the importance of patterns in J2EE framework.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Answer:
+
+
+    Patterns refer to a recurring solution for a business problem in a particular
+    context. Context refers to the situation or environment in which the problem exists.
+    A problem is something that requires investigation and has to be solved and it
+    is specified by cause and effect.
+
+    markdown": "particular context. Context refers to the situation or environment
+    in which the problem exists. A problem is something that requires investigation
+    and has to be solved and it is specified by cause and effect.
+
+
+    # 39: Explain Framework patterns.
+
+
+    # Answer:
+
+
+    The following are called the Framework patterns.
+
+
+    +   a) Proxy pattern: The EJB remote interface is an example of Proxy pattern.
+    It has methods which delegate method calls to objects
+
+
+    +   b) Factory Method: EJB Home Interface is an example of Factory method. It
+    has an independent reusable class which refers objects through a common interface
+
+
+    +   c) Abstract Factory Method: EJB home interface is an example of abstract factory
+    method. It is a procedure to create abstract class instances from concrete subclasses
+
+
+    +   d) Decorator: EJBObject is an example of Decorator pattern. The functionality
+    of the decorator is that it is visible to the clients
+
+
+    # 40: What are the activities of the deployer?
+
+
+    # Answer:
+
+
+    The deployer performs the following activities:
+
+
+    +   a) Stage the Enterprise Archive (EAR) file which is created in the development
+    phase into the J2EE application server
+
+
+    +   b) Modify the deployment descriptor and configure the J2EE application
+
+
+    +   c) Ensure the Enterprise Archive file (EAR) is well formed and complies with
+    J2EE specification
+
+
+    +   d) Install or deploy the Enterprise Archive file in the J2EE application server
+
+
+    # 41: What are the patterns that belong to Integration Tier?'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked 23
+
+
+    # Answer:
+
+
+    The following patterns belong to Integration Tier:
+
+
+    +   a) DAO: The Data Access Object retrieves data sources and delivers transparent
+    data access
+
+
+    +   b) Service Activator: This is utilized for EJB components and supports asynchronous
+    processing
+
+
+    # 42: Explain Presentation Tier patterns.
+
+
+    # Answer:
+
+
+    The following are the Presentation Tier patterns:
+
+
+    +   a) Front Controller: This is used for handling and managing the request from
+    client
+
+
+    +   b) Decorating Filter: This is used for preprocessing and post processing of
+    a particular request
+
+
+    +   c) Composite View: This is used to create a view for sub components
+
+
+    +   d) Dispatch View: This is used in coordination with Front Controller to view
+    helper patterns and defer activities for viewing the processing
+
+
+    +   e) View Helper: This is used to encapsulate the logic and format the presentation
+
+
+    # 43: Explain Business Tier patterns.
+
+
+    # Answer:
+
+
+    The following are the Business Tier patterns:
+
+
+    +   a) Session Facade: This hides the complexity of business object and centralizes
+    the handling of workflow
+
+
+    +   b) Value Object: This is used to exchange data among different tiers
+
+
+    +   c) Service Locator: This is used to hide the business service creation complexity
+    and lookup. It also locates the service factories
+
+
+    +   d) Business delegate: It is used to separate the service tier and presentation
+    tier, and provides a proxy and façade interface to services
+
+
+    +   e) Value Object Assembler: This is used to build value'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# 44: Explain EIS.
+
+
+    Answer:
+
+
+    EIS represents Enterprise Information System. It is present in the Integration
+    tier and supports infrastructure related information for the enterprise.
+
+
+    Accessing EIS is very complex and it requires the following knowledge:
+
+
+    +   a) Information related to Transaction
+
+
+    +   b) Information related to Security, and
+
+
+    +   c) Knowledge on Application Programming Model
+
+
+    # 45: What are the system level contracts of EIS and application server?
+
+
+    Answer:
+
+
+    The following are the system level contracts of EIS and J2EE application server:
+
+
+    +   a) The contract ‘Connection Management’ lets the application and J2EE components
+    to connect to EIS. This leads to a scalable environment and supports many client
+    to get access to EIS
+
+
+    +   b) The contract ‘Transaction Management’ supports transaction related access
+    to EIS. This uses the transaction manager to manage transactions
+
+
+    # 46: Explain the Resource Adapter.
+
+
+    Answer:
+
+
+    The resource adapter is the system level contract for Enterprise Information System
+    (EIS). This is utilized by application client or server to connect with EIS.
+
+
+    It collaborates with application server to support security, transaction, and
+    connection pooling. It is used within the application server’s address space.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# 47: Explain data caching.
+
+
+    Answer:
+
+
+    Data caching features are explained below:
+
+
+    +   a) Caching reduces the network connection trips required for the application
+
+    b) It minimizes the shared memory required for the application
+
+    c) It reduces the data lookup time
+
+    d) It removes memory leaks
+
+    e) It ensures caching implemented in development environment simulates deployment
+    or production environment
+
+
+    # 48: Explain Service locator.
+
+
+    Answer:
+
+
+    To access common services like JMS factories, EJB objects, data sources, etc.,
+    which lies within J2EE, service locator is used. The service locator uses Java
+    Naming Directory Interface (JNDI) API which requires initial context object. This
+    lookup the desired service and transfer the same to the requester.
+
+
+    # 49: Explain how to prevent performance problems.
+
+
+    Answer:
+
+
+    Performance problems can be prevented by the following ways:
+
+
+    +   a) If the service requires only local access, then never use EJB object but
+    just use java object
+
+    b) If you want one bean to access another within the same bean container and Virtual
+    Machine, then use local interfaces
+
+    c) Use single remote call and combine all data instead of multiple remote calls
+
+    d) Modify unnecessary variable and control serialization
+
+    e) To avoid JNDI lookup, cache EJBHome reference
+
+
+    # 50: Explain a security guideline.
+
+
+    Answer:'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'The purpose of a security mechanism is to support end-to-end security by integrating
+    existing environments. This process is called Identity management.
+
+
+    Security is handled by creating user accounts in all the application domains and
+    OS (Operating Systems). Also, the security guideline should support authorization
+    and authentication.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Servlets'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# 51: Explain Servlets.\n\nAnswer:\nServlets are programs which run on a web\
+    \ server. The purpose of servlets is:\n\n+   a) Receive / Read the requests sent\
+    \ by client\nb) Get information for the request and generate the response\nc)\
+    \ Format the response and sent the information to the client\n\nServlets are not\
+    \ restricted to be used only in web server or application server but they can\
+    \ also be embedded in mail and FTP servers.\n\n# 52: Explain GET and POST requests\
+    \ of Servlets.\n\nAnswernThe GET and POST requests are handled by doGet and doPost\
+    \ methods respectively. Both the methods take HttpServletRequest and HttpServletResponse\
+    \ as arguments and throws IOException and ServletException.\n\n```\npublic void\
+    \ doGet(HttpServletRequest myRequest,\n    HttpServletResponse myResnose) throws\
+    \ IOException,\n    ServletException {\n    }\n```\n\n```\npublic void doPost(HttpServletRequest\
+    \ myRequest,\n    HttpServletResponse myResnose) throws IOException,\n    ServletException\
+    \ {\n    }\n```\n\nIn the case of GET request, all the parameters passed to the\
+    \ server are visible in the browser but in the case of POST request, the parameters\
+    \ are not visible.\n\n# 53: Explain Servlet life cycle.\n\nAnswer:\nServlet life\
+    \ cycle can be explained with the following three"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "Java / J2EE Interview Questions You'll Most Likely Be Asked 29\n\n# methods:\n\
+    \n+   a) **init**: This method is invoked when the servlet is triggered by the\
+    \ web browser. This method creates the instance of the servlet only once and for\
+    \ each subsequent request, the instantiated thread serves the request\n\n+   b)\
+    \ **service**: This method gets the response from the server with the help of\
+    \ the instantiated thread which invokes the doGet or doPost method\n\n+   c) **destroy**:\
+    \ This method is invoked when the server unloads the servlet\n\n# 54: Where and\
+    \ how servlets get the initialization parameters?\n\nAnswer:\nWe can define initialization\
+    \ parameters for each servlet in the web.xml file as:\n\n```\n<web-app>\n  <servlet>\n\
+    \    <servlet-name>MyMessageServlet</servlet-name>\n    <servlet-class>com.message.MessageServlet</servlet-class>\n\
+    \    <init-param>\n      <param-name>city</param-name>\n      <param-value>Chennai</param-value>\n\
+    \    </init-param>\n  </servlet>\n</web-app>\n```\n\nIn Servlet, we can retrieve\
+    \ the value using getInitParameter(\"city\").\n\n# 55: How can servlet receive\
+    \ the value of html form data?\n\nAnswer:\nAssume that html form has the following\
+    \ text field:\n  <input type=\"text\" name=\"user_name\"/>\n\nServlet can receive\
+    \ form value with the following method:\nString username = request.getParameter(\"\
+    user_name\");"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# 56: Assume that you don't know the names of the html form fields. Is it possible\
+    \ to retrieve the values in Servlet without knowing the form field names?\n\n\
+    Answer:\n\nYes. It is possible to retrieve all the html form field values knowing\
+    \ the name of the form fields.\nIn Servlet, we can use request.getParameterNames()\
+    \ method to retrieve all the form names and then get the value by one using request.getParameterValues(parameterName)\
+    \ method.\n\n# 57: Is it possible to invoke doGet from doGetPost?\n\nAnswer:\n\
+    \nYes. It is possible to invoke doGet method from doPost.\\ This could be done\
+    \ if the servlet has to handle both GET and POST requests at the same time.\n\
+    Based on the request type (GET / POST), the service method calls the doPost method\
+    \ which then invokes the doGet method.\n\n# 58: Explain the syntax of init method.\n\
+    \nAnswer:\n\nThe init method syntax is shown below:\n\n```\npublic void init()\
+    \ throws ServletException {\n    //Code follows...\n```\n\n```\npublic void init(ServletConfig\
+    \ myConfig) throws ServletException {\n    super.init(myConfig)\n    //Code follows...\n\
+    ```\n\nSo, only from the init method, configuration parameters can be retrieved.\n\
+    \n# 59: What are the advantages of calling doGet method from doPost?"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    The following are the advantages of calling doGet method from doPost method:
+
+
+    +   a) By default, receive HEAD requests support from doGet method
+
+    b) By default, receive OPTIONS requests support from doGet method
+
+    c) By default, receive TRACE requests support from doGet method
+
+
+    # 60: How do you send compressed web pages from Servlet to browser?
+
+
+    # Answer:
+
+
+    To send compressed content, first we have to accept the encoding as below:
+
+
+    ```
+
+    String myEncoding = request.getHeader("Accept-Encoding");
+
+    ```
+
+
+    Then, we have to set the encoding in the browser as below:
+
+    response.setHeader("Content-Encoding", "gzip");
+
+
+    This way of displaying compressed contents results in saving lots of download
+    time.
+
+
+    # 61: Explain status codes.
+
+
+    # Answer:
+
+
+    For each HTTP (Hyper Text Transfer Protocol) request, the servlet sends a status
+    code and a message from the server. The status code is a number which represents
+    whether the response from the server is successful or not.
+
+
+    So, if the servlet gets a response from the server, then, in the header, the server
+    will send the status code as 200 and message as OK.
+
+
+    # 62: Explain the meaning of status code 200 and 404.
+
+
+    # Answer:
+
+
+    If the servlet gets a response from the server, then we will get the'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'status code as 200 from the header. By default, the message will be set as
+    OK for the status code 200.
+
+    If the servlet is not accessible from the browser or if the servlet does not exist,
+    then the server will set the status code 404 in the header. By default, the message
+    will be set as File Not Found.
+
+
+    # 63: Explain sendRedirect method.
+
+
+    Answer:
+
+
+    The sendRedirect method accepts URL (Uniform Resource Locator) as an argument
+    as shown below:
+
+    response.sendRedirect(myURL)
+
+
+    The sendRedirect method forwards the request to the specified URL and is used
+    for redirecting the client from one page to another page.
+
+
+    # 64: How can we display an error message if a particular page or servlet is not
+    available?
+
+
+    Answer:
+
+
+    If the requested page or servlet or parameter is not available in the server,
+    the server returns the status code as 404.
+
+    For example:
+
+    String myName = request.getParameter(“user_name”);
+
+    If(myName == null)
+
+    {}
+
+
+    ```
+
+    response.sendError(response.SC_NOT_FOUND, “user_name is null”);
+
+    ```
+
+
+    In the above code, sendError method is used to send the message to the browser
+    if the value of the parameter is null.
+
+
+    # 65: What are the methods used to set header values?
+
+
+    Answer:
+
+
+    The following are the methods which are used to set value in the headers:'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked 33
+
+
+    +   a) setContentType: This method is used by all the servlets which is used to
+    set the type of content (plain / html) to be displayed in the browser
+
+
+    +   b) addCookie: This method is used to insert a cookie in the browser header
+
+
+    +   c) sendRedirect: This method sets the status code as 302 in the browser when
+    the user is redirected to another page
+
+
+    # 66: What are the values that can be retrieved from the header?
+
+
+    Answer:
+
+    The following are the values that can be retrieved from header:
+
+
+    +   a) Cookie: We can get the cookie value available in the header
+
+
+    +   b) Content-type: We can get the type of content displayed in the browser
+
+
+    +   c) Content-length: We can get the length of the content displayed in the browser
+
+
+    +   d) Cache-control: Using this we can identify the browser content is cached
+    or not
+
+
+    +   e) Host: We can identify the host name and port of the URL from which the
+    response came from
+
+
+    # 67: Explain MIME.
+
+
+    Answer:
+
+    MIME represents Multipurpose Internet Mail Extension. In the header, we will always
+    get the MIME type of the response from the server.
+
+    By default, the content type will be text/html in the header when the server sends
+    the response to the browser / client.
+
+
+    # 68: Explain the most widely used MIME types.
+
+
+    Answer:
+
+    The following are the most widely used MIME types:
+
+
+    +   a) text/html: This is used to load content as html in the browser
+
+
+    +   b) image/png: This is used to load png image file in the browser'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: 'browser
+
+
+    +   c) application/pdf: This is used to load pdf in the browser
+
+
+    +   d) video/mpeg: This is used to load mpeg video file in the browser
+
+
+    +   e) audio/midi: This is used to load midi audio file in the browser
+
+
+    # 69: What is a Cookie?
+
+
+    Answer:
+
+
+    Whenever a visitor browses a web page, some information (textual information such
+    as form field values entered by the visitor, book added in the cart, etc.) gets
+    stored in the web browser.
+
+
+    This is useful in the following scenario: If the same visitor visits the page
+    again, the information is served from the browser rather than the server thereby
+    reducing the server load and time required to load the response.
+
+
+    # 70: What are the advantages of Cookies?
+
+
+    Answer:
+
+
+    The following are the advantages of cookies:
+
+
+    +   a) The visitor has login once and for other subsequent visits, the visitor
+    does not require to login again
+
+
+    +   b) Identifies the particular user and display the items that were added in
+    the cart
+
+
+    +   c) Tracks users'' interest and displays respective advertisements
+
+
+    +   d) Reduces the server load
+
+
+    +   e) Provides faster response to the visitor
+
+
+    # 71: How can you set and get a cookie?
+
+
+    Answer:
+
+
+    We can add a cookie as mentioned below:
+
+
+    ```
+
+    Cookie myCookie = new Cookie("name"),
+
+    request.getParameter("name"));
+
+    response.addCookie(myCookie);
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'The above code will add a cookie in myCookie object.
+
+
+    We can retrieve a cookie as mentioned below:
+
+
+    ```
+
+    Cookie[] myCookies = request.getCookies();
+
+    Cookie myCookie = myCookies[0];
+
+    System.out.println(myCookie.getValue());
+
+    ```
+
+
+    The above code retrieves the cookie from myCookie object.
+
+
+    # 72: What are the disadvantages of Cookies?
+
+    Answer:
+
+
+    The following are the disadvantages of Cookies:
+
+
+    +   a) When browsing websites from a public computer, cookies store the e-mail
+    address of a visitor thereby allowing others to send spam mails
+
+    b) Valuable personal information is stolen by others from cookie objects
+
+    c) The sensitive information like credit card details are preserved by cookie
+    which leads to loss of money
+
+
+    So, cookies should not be used to store sensitive information using servlets.
+
+
+    # 73: What are the options to track visitors browsing a web page?
+
+    Answer:
+
+
+    Visitors browsing a web page can be tracked using the following mechanisms:
+
+
+    +   a) Cookies: cookie can be maintained per each page to track the visitors
+
+    b) Hidden Form Fields: Using the input tag, we can store the value entered by
+    the user
+
+    c) URL Rewriting: In this we can append the data entered by the user to the server
+
+    d) Session: In this, we can store the value entered by the user in Session'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# 74: How can you store and retrieve a value from session?
+
+
+    Answer:
+
+
+    The value can be stored in session as shown below:
+
+
+    ```
+
+    HttpSession mySession = request.getSession(true);
+
+    session.setValue("mobile", request.getParameter("mobile")););
+
+    ```
+
+
+    In the above code, the mobile number is stored in the session object ‘mobile’.
+
+
+    The value can be retrieved from session as shown below:
+
+
+    ```
+
+    session.getValue("mobile");
+
+    ```
+
+
+    In the above code, the mobile number is retrieved from the session object ‘mobile’.
+
+
+    # 75: Explain Session tracking.
+
+
+    Answer:
+
+
+    Session tracking is an excellent technical solution for maintaining user sessions.
+    It uses HttpSession API to look up a session object and create a new session object.
+
+
+    Session tracking is used to store contextual information about the client as the
+    server is not aware about client information. For example, in an online shopping
+    cart, the visitor often adds some items to the shopping cart and, suddenly, because
+    of a network issue, he gets disconnected from the web page. Once the network issue
+    is resolved, the visitor will be able to see the items that were added in the
+    shopping cart with the help of session tracking.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# JSP'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# 76: What is the purpose of JSP?
+
+
+    Answer:
+
+
+    JSP refers to Java Server Pages. It is a server side programming language which
+    enables us to create static html along with dynamic content generation.
+
+    Using JSP, we can create the presentation layer to display the contents in the
+    web page with the help of JSP objects and constructs. JSP is widely supported
+    and it can be used with any web server and works in all the operating system without
+    changing the source code.
+
+    Developers create a .jsp file which when invoked by the end user from the browser
+    is converted to a servlet behind the scenes. But the end user can just view the
+    html presentation of the content in the web page.
+
+
+    # 77: What are JSP constructs?
+
+
+    Answer:
+
+
+    +   To construct a web page, JSP uses the following 3 constructs:
+
+    - Scripting Elements: This allows us to specify java code inside the java server
+    pages code
+
+    - Directives: This allows us to control the structure of the java server pages
+
+    - Actions: This allows us to use the existing components in the java server pages
+
+
+    # 78: What are scripting elements?
+
+
+    Answer:
+
+
+    Scripting elements are used to insert java code inside java server pages. JSP
+    has 3 types of scripting elements. They are:
+
+
+    +   - Expressions: The tag <%%= is used to define the expressions which is used
+    to display the dynamic output in the web page
+
+    - Scriptlets: The tag <% %> is used to declare scriptlet which is used to define
+    the java code through which we can include dynamic content processing
+
+    - Declarations: The tag <%! %> is used to specify'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    declaration which we can use to define java methods
+
+    which could be called from java server pages
+
+
+    # 79: What are the most widely used JSP objects?
+
+
+    Answer:
+
+    The following are the most widely used JSP objects:
+
+
+    +   a) request: This denotes the HttpRequestRequest and is used to create a request
+    to the web server
+
+    b) response: This denotes HttpServletResponse and is used to generate response
+    to the web server
+
+    c) session: This denotes HttpSession which is used to store user data in the browser
+
+    d) out: This denotes PrintWriter which is used to display the content in the browser
+
+
+    # 80: Explain how to get parameter value in JSP.
+
+
+    Answer:
+
+    In JSP, we can get the parameter value by the following line of code:
+
+
+    ```
+
+    <%
+
+    String strValue = request.getParameter("myParam");
+
+    %>
+
+    ```
+
+
+    So, we use scriptlet tag, request object, and getParameter method to get the parameter
+    value.
+
+
+    # 81: How to display the dynamic parameter value in JSP?
+
+
+    Answer:
+
+    In JSP, we can display the dynamic parameter value by the following lines of code:
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    %
+
+    String strValue = request.getParameter("myParam");
+
+    %
+
+    The parameter value is <%= strValue %>.
+
+    ```'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '```
+
+    <body>
+
+    </html>
+
+    ```
+
+
+    So, we used expression tag <% %%> to display the dynamic parameter value in the
+    web browser.
+
+
+    # 82: What are the predefined JSP objects other than request, response, session,
+    and out?
+
+
+    Answer:
+
+
+    The following are the predefined JSP objects other than request, response, session,
+    and out:
+
+
+    +   - application: Using this object, the value of variable is made available
+    to all the servlets (JSP) which exists for an application
+
+    - page: This object is a replacement for ‘this’ and is used to retain the value
+    for a particular page
+
+    - pageContext: This object is used to store shared data across multiple pages
+
+    - config: Using this object, the value of variable is made available to the particular
+    page
+
+
+    # 83: Explain JSP directives.
+
+
+    Answer:
+
+
+    JSP directives are used to modify the overall structure of the servlet that results
+    from the JSP page. There are three types of JSP directives. They are:
+
+
+    +   - page: This is used to import the classes, customize the super class and
+    set the content type
+
+    - include: This is used to insert a file into the java server pages
+
+    - taglib: This is used to define custom tags and import the existing tag libraries
+
+
+    # 84: Explain with an example how to use page directive.
+
+
+    Answer:
+
+
+    The below lines of code depicts how to use page directive :'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    ```
+
+    <%@ page import="java.util.ArrayList" %>
+
+    <%@ page import="com.core.MyList, com.core.MyVector" %>
+
+    <%@ page contentType="text/plain" %>
+
+    ```
+
+
+    In the above code, we have used the page directive to import java class, custom
+    classes and set the display format of the content type in the browser.
+
+
+    # 85: Explain the page directive attributes: import, session, buffer, and extends.
+
+
+    Answer:
+
+
+    The page directive attributes: import, session, buffer, and extends are explained
+    below:
+
+
+    +   a) **import**: This attribute is used to import java class files
+
+    b) **session**: This attribute is used to set the session as true or false
+
+    c) **buffer**: This attribute is used to set the buffer value in kilobytes
+
+    d) **extends**: This attribute is declare the super class in the java server pages
+
+
+    # 86: Explain the page directive attributes: autoflush, info, errorPage, and isErrorPage.
+
+
+    Answer:
+
+
+    The page directive attributes: autoflush, info, errorPage, and isErrorPage are
+    explained below:
+
+
+    +   a) **autoflush**: This attribute is used to specify if the output should be
+    automatically flushed or not
+
+    b) **info**: This attribute is used to set static values in the java server page
+
+    c) **errorPage**: This attribute is used to provide the relative URL of the java
+    server page in case during JSP processing any exception is thrown
+
+    d) **isErrorPage**: This attribute is used to set the value as true or false'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# 87: What is the equivalent XML syntax for page directive?\n\nAnswer:\n\n\
+    The page directive can be declared in XML as below:\n\n```\n<jsp:directive.page\
+    \ import=\"java.util.ArrayList\" />\n```\n\nWe can use the above line of code\
+    \ in java server pages and it is an XML compatible syntax for page directives.\n\
+    \n# 88: How to display the dynamic parameter value in XML syntax?\n\nAnswer:\n\
+    \nIn JSP, we can display the dynamic parameter value with the help of XML syntax\
+    \ by the following lines of code:\n\n```\n<html>\n<body>\n  % String strValue\
+    \ = request.getParameter(\"myParam\");\n%\nThe parameter value is\n<jsp:expression>strValue</jsp:expression>\n\
+    </body>\n</html>\n```\n\nSo, we use <jsp:expression> tag to display the dynamic\
+    \ parameter value in the web browser.\n\n# 89: Explain the 'include' directive\
+    \ with an example.\n\nAnswer:\n\nThe 'include' directive is used to include a\
+    \ file in the java server pages code. The below lines of code depicts how to use\
+    \ include directive.\n\n```\n<@ include file=\"header.jsp\" %>\n```\n\nIn the\
+    \ above code, we have used the include directive to include a file which will\
+    \ be processed during runtime and displayed in the browser."
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    # 90: What is the equivalent XML syntax for include directive?
+
+    Answer:
+
+
+    The ‘include’ directive can be declared in XML as below:
+
+
+    ```
+
+    <jsp:include page="footer.jsp" flush="true" />
+
+    ```
+
+
+    We can use the above line of code in java server pages and it is an XML compatible
+    syntax for include directive.
+
+
+    # 91: What is the use of jsp:plugin element?
+
+    Answer:
+
+
+    The jsp:plugin element is used to include applets in the web page. It is an alternative
+    to applet tag. The jsp:plugin element can be used as below:
+
+
+    ```
+
+    <jsp:plugin type="applet" code="HeaderApplet.class"
+
+    width="900" height="250">
+
+    <jsp:plugin>
+
+    ```
+
+
+    In the above code, we used four attributes: type, code, width, and height. To
+    display an applet, the value of type should be specified as ‘applet’ and the value
+    of code should contain the applet name.
+
+
+    # 92: What is the use of jsp:params element?
+
+    Answer:
+
+
+    The jsp:params element is used to pass parameter values to the applet in the web
+    page. The jsp:params element can be used as below:
+
+
+    ```
+
+    <jsp:plugin type="applet" code="HeaderApplet.class"
+
+    width="900" height="250">
+
+    <jsp:params>
+
+    <jsp:param name="MyParam1" value="MyValue1" />
+
+    <jsp:param name="MyParam2" value="MyValue2" />
+
+    </jsp:params>
+
+    </jsp:plugin>
+
+    ```
+
+
+    In the above code, we used jsp:params inside the jsp:plugin element and jsp:param
+    element is used to specify the parameter'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'name and value.
+
+
+    # 93: What are the important points to be considered while creating a bean class?
+
+
+    Answer:
+
+
+    The following are the important points to be considered while creating a bean
+    class:
+
+
+    +   a) The bean class should have an empty or zero argument constructor
+
+    b) The bean class should not contain public instance variables or fields
+
+    c) The bean class should have getter and setter methods to access persistent values
+
+
+    # 94: How will you include a bean class in JSP?
+
+
+    Answer:
+
+
+    The bean class can be included in JSP as shown below:
+
+
+    ```
+
+    <jsp:useBean id="service" class="com.MyService" />
+
+    ```
+
+
+    In the above code, the ''id'' attribute is used to create an object ''service''
+    for the class ''MyService''. The above line of code can also be written as shown
+    below:
+
+
+    ```
+
+    <% com.MyService service = new com.MyService(); %>
+
+    ```
+
+
+    The class MyService is included in the scriptlet and requires the class to be
+    imported in page directive.
+
+
+    # 95: How will you set the property value for a bean class?
+
+
+    Answer:
+
+
+    The property value for a bean class can be set in JSP as shown below:
+
+
+    ```
+
+    <jsp:useBean id="service" class="com.MyService" />
+
+    <jsp:setProperty name="service" property="serviceName" value="<%= request.getParameter("serviceName")
+    %>" />
+
+    ```'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    In the above code, the jsp:setProperty element is used which contains ''property''
+    attribute to specify the bean property name and the name attribute should contain
+    the object name of the bean class.
+
+
+    # 96: How will you include a tag library in JSP?
+
+
+    Answer:
+
+    The tag library can be included in a JSP as shown below:
+
+
+    ```
+
+    <@ taglib uri="servicejsp-taglib.tld" prefix="servicejsp" />
+
+    ```
+
+
+    In the above line of code, the taglib directive has 2 attributes: uri and prefix.
+    the uri contains the value of the tag library descriptor file in which we specify
+    the class name that will be invoked using the value specified in the prefix attribute.
+    the prefix value denotes the object name of the class that is included in the
+    tag library descriptor.
+
+
+    # 97: How will you include content of one JSP into another?
+
+
+    Answer:
+
+    We have to use the RequestDispatcher class to include the content of one JSP into
+    another. For example, take a look at the below lines of code:
+
+
+    ```
+
+    String myURL = "/service/transfer.jsp";
+
+    RequestDispatcher myDispatcher = getServletContext().getRequestDispatcher(
+
+    myURL);
+
+    ```
+
+
+    In the above line of code, the contents of transfer.jsp can be passed to another
+    page using the RequestDispatcher class and invoking getServletContext.getRequestDispatcher
+    method.
+
+
+    # 98: How will you forward the requests from a JSP page?
+
+
+    Answer:
+
+    From a JSP page, we could forward the request as shown below:
+
+    <jsp:forward page="/service/transfer.jsp" />'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'So, we can use the RequestDispatcher or jsp:forward element to pass the requests
+    from one page to another page.
+
+
+    # 99: How will you interpret relative URLs in the destination page?
+
+
+    Answer:
+
+
+    We can interpret relative URLs in the destination page with the below line of
+    code:
+
+
+    ```
+
+    <link rel=stylesheet href="/css/common.css" type="text/css" >
+
+    ```
+
+
+    In the above code, the style sheet is included in the destination page using the
+    href attribute in the link element.
+
+
+    # 100: How will you associate all the properties in the bean class?
+
+
+    Answer:
+
+
+    All the properties in the bean class can be associated with the below line of
+    code:
+
+
+    ```
+
+    <jsp:setProperty name="service" property="*" />
+
+    ```
+
+
+    In the above code, * has been supplied for the property attribute to associate
+    all the input parameters available in the bean class.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# EJB'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# 101: What are the classes / interfaces that must be created for the EJB component?
+
+
+    Answer:
+
+
+    The following are the classes / interfaces that must be created for the EJB (Enterprise
+    Java Bean) component:
+
+
+    +   - Home interface (EJBHome)
+
+    - Remote interface (EJBObject)
+
+    - Business logic (bean class)
+
+    - Context objects
+
+    - XML deployment descriptor
+
+
+    # 102: What are the types of Enterprise Java Beans?
+
+
+    Answer:
+
+
+    There are two types of Enterprise Java Beans. They are:
+
+
+    +   - Session Beans: This type of bean is created by client and exists for only
+    one client server session
+
+    - Entity Beans: This type of bean is used to represent persistent data which is
+    stored in a database. Each instance of entity bean is identified by the primary
+    key
+
+
+    # 103: Explain EJBHome interface.
+
+
+    Answer:
+
+
+    EJBHome provides the following three methods for an Enterprise Java Bean:
+
+
+    +   - create(): This method is used by client to create bean instance
+
+    - remove(): This method is used by client to destroy bean instance
+
+    - find(): This method is used by client to locate a bean and retrieve data from
+    persistent data store
+
+
+    # 104: Explain EJBObject interface.
+
+
+    Answer:
+
+
+    The access to business methods are provided by the EJBObject interface.
+
+
+    This interface also acts as a wrapper and allows the EJB container'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    to manage and control the object and also intercepts the bean method executions
+    invoked on the Enterprise Java Bean.
+
+
+    # 105: What is deployment descriptor?
+
+
+    Answer:
+
+    Deployment descriptor: It is an XML file (Extensible Markup Language) in which
+    we specify the transactions, security, and persistence details of EJB. In this
+    file, we also specify how each part or component of an application (J2EE) should
+    be deployed. The EJB container, at runtime, invokes automatically the services
+    as per the values specified in the deployment descriptor.
+
+
+    # 106: What is a bean class?
+
+
+    Answer:
+
+    A bean class is a java class created by the bean developer which contains the
+    business logic implementation methods. Based on Enterprise Java Bean requirement,
+    the bean class extends javax.ejb.EntityBean or javax.ejb.SessionBean.
+
+
+    # 107: Explain context object.
+
+
+    Answer:
+
+    The context object consists of information about the current state of an instance.
+    The enterprise java bean container use the context to co-ordinate system services
+    like transactions, security, persistence, etc.
+
+    EJB container generates context object for each EJB instance. SessionBean has
+    SessionContext and the EntityContext.
+
+
+    # 108: What are the types of session beans?
+
+
+    Answer:
+
+    There are two types of session beans. They are
+
+
+    +   a) Stateful session bean: Maintains data state throughout method invocations
+    (business logic), i.e., it maintains session of a particular client
+
+
+    +   b) Stateless session bean: Do not maintain data state'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: 'throughout method invocations (business logic). This type
+
+    bean also utilizes the pooling feature of EJB container
+
+
+    # 109: What are the methods of remote interfaces?
+
+    Answer:
+
+
+    The following are the methods of remote interfaces:
+
+
+    +   a) getEJBHome(): Returns a reference to the home interface of session bean
+
+    b) getPrimaryKey(): This method returns session bean objects primary key
+
+    c) getethandle(): Returns a handle for the EJB object
+
+    d) isIdentical(): This method tests if the passed java bean object is identical
+    to invoked enterprise java bean object
+
+    e) remove(): This method removes a bean (session) object
+
+
+    # 110: What are the methods of home interfaces?
+
+    Answer:
+
+
+    The following are the methods of home interfaces:
+
+
+    +   a) getEJBMetaDetail(): This method enables client to get information about
+    enterprise bean
+
+    b) remove(Handle handle): This removes EJB objects identified by their handles.
+    A handle is retrieved by getHandle() method
+
+    c) remove(Object primaryKey): This removes EJB objects which are identified by
+    their primary key
+
+    d) getHomeHandle(): This obtains a handle of home object. The client uses this
+    object to store a reference to the entity bean''s remote interface
+
+
+    # 111: What are the services provided by the local and remote interfaces?
+
+    Answer:
+
+
+    The following are the services provided by the local and remote interfaces:
+
+
+    +   a) Returns session object''s home interface'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "Java /J2EE Interview Questions You'll Most Likely Be Asked\n\n+   b) Removes\
+    \ session object\nc) Delegates method invocations on session bean instance\nd)\
+    \ Tests if the session object is identical to another session\n   object\n\n#\
+    \ 112: Explain how a session bean is exposed to the client.\n\nAnswer:\n\n+  \
+    \ A session bean is exposed to the client in the following ways:\na) EJBHome creates\
+    \ instances of session bean and EJBObject\nb) EJBObject provides access to methods\
+    \ of session bean\nc) The stub acts as proxies to remote EJBObjects\nd) The call\
+    \ and dispatch mechanisms are provided by the tie\n   class which binds the proxy\
+    \ to EJBObject\n\n# 113: Explain local client.\n\nAnswer:\nThe client of session\
+    \ bean is also called as a local client. This local\nclient access the session\
+    \ bean through local\n(javax.ejb.EJBLocalObject) and local home\n(javax.ejb.EJBLocalHome)\
+    \ interface.\n\nLocal client resides inside the same JVM as session bean and they\n\
+    nare location dependent. This local client has objects passed as\narguments to\
+    \ the methods by reference.\n\n# 114: Explain remote client.\n\nAnswer:\nThe client\
+    \ of session bean is also called as a remote client. This\nremote client access\
+    \ the session bean through remote\n(javax.ejb.EJBObject) and remote home (javax.ejb.EJBHome)\n\
+    interface.\n\nThe remote client access session bean in an EJB container from\n\
+    CORBA based application which uses remote method invocation\nInternet Inter ORB\
+    \ Protocol which is a non-java based program.\n\n# 115: When we have to use EJB.\n\
+    \nAnswer:"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'We have to use EJB (Enterprise Java Beans) - Session and Entity beans in the
+    following scenarios:
+
+
+    +   a) To store client information across method invocations, stateful session
+    bean
+
+
+    +   b) For persistent data, use entity bean
+
+
+    +   c) To communicate the presence of active client to the application server
+    or EJB container, use stateful session bean
+
+
+    +   d) To invoke the pooling feature of EJB container, stateless session bean
+
+
+    # 116: How to manage bean persistence.
+
+
+    There are two ways to manage bean persistence. They are:
+
+
+    +   a) BMP (Bean Managed Persistence): In this, we write a bean class to manage
+    persistence
+
+
+    +   b) CMP (Container Managed Persistence): In this, the container is responsible
+    for managing persistence
+
+
+    # 117: Explain bean managed persistence.
+
+
+    The entity beans implement bean managed persistence. In this scenario, the beans
+    store and retrieve information through direct DB (database) calls.
+
+
+    The entity bean uses JDBC (Java Data Base Connectivity) or SQL for storing and
+    retrieving information from data base.
+
+
+    # 118: Explain container managed persistence.
+
+
+    The entity beans implement container managed persistence. In this scenario, the
+    container provides access to the database using standard API’s.
+
+
+    The usage of container managed persistence makes the application to use any database.
+    The container also provides tool to map instance variable of an entity bean to
+    call to an underlying DB (database).'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "Java / J2EE Interview Questions You'll Most Likely Be Asked 53\n\n# 119: Explain\
+    \ how you will create home interface of a stateless session bean.\n\nAnswer:\n\
+    \nThe stateless session bean home interface can be created as follows:\nimport\
+    \ javax.ejb.*;\nimport java.rmi.*;\n\n```\npublic interface MYSLSRemote extends\
+    \ EJBHome {\n    public MySLSRemote create() throws RemoteException,\n    CreateException;\n\
+    }\n```\n\nThis interface acts as a factory for EJB objects. The create() method\
+    \ in the bean code corresponds to the ejbCreate() method.\n\n# 120: Explain how\
+    \ you will create remote interface of a stateless session bean.\n\nAnswer:\n\n\
+    The remote interface for a stateless session bean can be created as follows:\n\
+    import javax.ejb.*;\nimport java.rmi.*;\n\n```\npublic interface MYSLSRemote extends\
+    \ EJBObject {\n    public String getMessage() throws RemoteException;\n}\n```\n\
+    \nThis interface is used by client when they need to call an EJB object. This\
+    \ interface responsibility is to delegate subsequent calls to the enterprise bean\
+    \ code.\n\n# 121: Explain InitialContext.\n\nAnswer:\n\nInitialContext is a class\
+    \ which acts as a client's interface to JNDI (Java Naming Directory Interface)."
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'InitialContext contains information which allows client to bind naming services
+    like JNDI, CORBA, and DNS. (Domain Naming Service).
+
+
+    If there are problems with InitialContext object or when calling one of its method,
+    then javax.naming.NamingException is thrown.
+
+
+    # 122: What are the benefits of pooling in EJB container?
+
+
+    Answer:
+
+    The following are the benefits of pooling in EJB container:
+
+
+    +   - a) Share resources with multiple users
+
+    - b) We can specify in deployment descriptor the instances for pooling and reusing
+
+    - c) Allows the server (application) to handle multiple requests as the server
+    doesn''t have to create and destroy the EJB objects
+
+
+    # 123: What is the benefit of using DAO between entity bean and data resource?
+
+
+    Answer:
+
+    The following are the benefits of using DAO (Data Access Object) between entity
+    bean and data resource:
+
+
+    +   - a) Writes code (entity bean)
+
+    - b) Ensures migration is easier to CMP (Container Managed Persistence) for entity
+    beans
+
+    - c) It has support for other tools with various vendors
+
+    - d) Provides extra layer for easy communication with data resources
+
+    - e) It allows cross schema and database portability
+
+
+    # 124: Explain the role of EJB container in managing entity bean life cycle.
+
+
+    Answer:
+
+    The following are the roles of EJB container in managing the entity bean life
+    cycle:
+
+
+    +   - a) Populates pooling with the set of bean instances
+
+    - b) From the container, client calls create() method of home'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# 127: What are the drawbacks of CMP?'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    The following are the drawbacks of CMP (Container Managed Persistence):
+
+
+    +   a) Portability: There is a chance that the other EJB container portability
+    may be lost
+
+
+    +   b) Algorithms: Container supported persistence algorithm can be used
+
+
+    +   c) Efficiency: The generated SQL is sometimes not efficient when taking performance
+    into account
+
+
+    +   d) Access: The source code developer has no access to view and he / she will
+    not be able to modify the code
+
+
+    # 128: What are the drawbacks of BMP?
+
+
+    # Answer:
+
+
+    The following are the drawbacks of BMP (Bean Managed Persistence):
+
+
+    +   a) DB (database) specific: Since data base specific entity bean is developed,
+    if multiple database access is required, the bean developer have to rewrite the
+    code accordingly
+
+
+    +   b) SQL knowledge: The bean provider must have SQL knowledge
+
+
+    +   c) Time: It requires 5 times longer development time to develop the beans
+    for bean managed persistence
+
+
+    # 129: How is persistence implemented using BMP?
+
+
+    # Answer:
+
+
+    The Bean Managed Persistence is used to implement persistent data with the help
+    of the following two types of methods. They are:
+
+
+    +   a) ejbLoad: This method is used to initiate database communication with the
+    enterprise java bean container
+
+
+    +   b) ejbStore: This method is used to store data using JDBC API’s through manual
+    coding
+
+
+    # 130: Explain finder methods.
+
+
+    # Answer:'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    The finder methods start with the prefix find and it is created in the entity
+    bean home interface.
+
+    For example, findByPrimaryKey() is a finder method which is used to identify the
+    entity bean object with the unique primary key object from the home interface.
+
+
+    ```
+
+    MyRemoteHome myHome = (MyRemoteHome)
+
+    avax.rmi.PortableRemoteObject;
+
+    narrow(initialContext.lookup("java:obj/book"),
+
+    MYRemoteHome.class);
+
+    ```
+
+
+    Book book = myHome.findByPrimaryKey("91-7822-323-6");
+
+
+    The above example demonstrates how findByPrimaryKey is used by developer to retrieve
+    data.
+
+
+    # 131: What are the states of Entity bean life cycle?
+
+
+    Answer:
+
+    The following are the states of entity bean life cycle:
+
+
+    +   - **Null state**: In this state, the instance of the bean does not exist
+
+    - **Pooled state**: In this state, the instance of the bean exists but it is not
+    associated with any entity bean object
+
+    - **Ready state**: In this state, the instance of the bean is associated with
+    the entity bean object and it has an identity
+
+
+    # 132: What are the methods invoked by the container entity bean life cycle?
+
+
+    Answer:
+
+    The following methods are invoked during the entity bean life cycle:
+
+
+    +   - **ejbActivate()**: This method is invoked when the bean instance is ready
+    and associated with the entity bean object from the pool
+
+    - **ejbLoad()**: The container use this method to invoke'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '58 Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    data from the data source
+
+
+    +   c) ejbStore(): This method is used by the container to store data persistently
+    in the data resource
+
+
+    +   d) ejbRemove(): The instance associated with the bean removed with the help
+    of this method and is invoked by the home interface or remote interface
+
+
+    +   e) ejbPassivate(): This method is used by the EJB container to disassociate
+    the bean instance from the EJB object and send to the pool
+
+
+    # 133: What are the uses of entity beans?
+
+
+    Answer:
+
+
+    The following are the uses of entity beans:
+
+
+    +   a) To model domain objects with unique identity which are shared by multiple
+    clients
+
+
+    +   b) To enforce data integrity and persistence
+
+
+    +   c) To model records in a data source and not to maintain conversations with
+    the client
+
+
+    +   d) Used either in BMP (Bean Managed Persistence) or in CMP (Container Managed
+    Persistence)
+
+
+    +   e) To cache data and thereby reuse data and prevent frequent database connections
+
+
+    # 134: What are the elements specified in the deployment descriptor?
+
+
+    Answer:
+
+
+    The following elements are specified in the deployment descriptor:
+
+
+    +   a) session: Define the bean as session bean instead of entity bean
+
+
+    +   b) session-type: We can define the session as stateless or stateful
+
+
+    +   c) enterprise-beans: Using this, we can declare the bean as session bean or
+    as an entity bean
+
+
+    +   d) ejb-name: This is used to specify the unique name for a session or an entity
+    bean'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# Java / J2EE Interview Questions You'll Most Likely Be Asked\n\n+   e) **ejb-jar:**\
+    \ This is the root element of the deployment descriptor\n\n+   f) **ejb-class:**\
+    \ This is used to specify the enterprise bean class\n\n+   g) **home:** This is\
+    \ used to specify the enterprise bean's interface\n\n+   h) **remote:** This is\
+    \ used to specify the enterprise bean's remote interface\n\n+   i) **transaction-type:**\
+    \ This is used to specify if the transaction is performed by the EJB container\
+    \ or enterprise bean\n\n# 135: Explain how to create home interface for stateful\
+    \ session bean.\n\nAnswer:\n\nWe can create home interface for stateful session\
+    \ bean as follows:\nimport java.rmi.*;\nimport javax.ejb.*;\n\n```\npublic interface\
+    \ MySFSSRemoteHome extends EJBHome {\n    public MySFSSRemote create(int i) throws\
+    \ RemoteException, CreateRemoteException;\n}\n```\n\nThe create() method in the\
+    \ home interface corresponds to the ejbCreate() method of the bean code.\n\n#\
+    \ 136: Explain how to create remote interface for stateful session bean.\n\nAnswer:\n\
+    \nWe can create remote interface for stateful session bean as follows:\nimport\
+    \ java.rmi.*;\nimport javax.ejb.*;\n\n```\npublic interface MySFSSRemote extends\
+    \ EJBObject {\n    public int size() throws RemoteException;\n}\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# Java / J2EE Interview Questions You'll Most Likely Be Asked\n\nWhen the client\
+    \ wants to call an EJB object, they have to use this remote interface. The EJB\
+    \ container is responsible for delegating the call to the actual bean code.\n\n\
+    # 137: Explain how to create a stateful session bean class.\n\nAnswer:\n\nWe can\
+    \ create stateful session bean class as follows:\nimport javax.ejb.*;\n\n```\n\
+    public class MySFSBean implements SessionBean {\n    private SessionContext sContext;\n\
+    \    private int iCount;\n    public void ejbCreate(int myParam) throws CreateException\
+    \ {\n        this.iCount = myParam;\n    public void ejbActivate() {}\n    public\
+    \ void ejbPassivate() {}\n    public void ejbRemove() {}\n    public int size()\
+    \ {\n        return iCount;\n    }\n}\n```\n\nIn the above code, when the bean\
+    \ is created, the counter is assigned with the parameter value. As per the specification,\
+    \ we have to implement all the methods ejbRemove, ejbPassivate along with the\
+    \ business method ‘size'.\n\n# 138: What are accessor methods?\n\nAnswer:\n\n\
+    When we use container managed persistence, in order to make access to data storage,\
+    \ we don’t use direct read and write methods. Instead, we use get and set methods\
+    \ which are called as the accessor methods.\n\nFor example getName() and setName(String\
+    \ name) are accessor method for the field ‘name’.\n\n# 139: Explain Entity."
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+    The entity bean instance is provided by EJB container with the help of EntityContext.
+    The EntityContext provides access to any object reference associated with the
+    entity bean instance including EJB Objects, EJB Local Objects, and primary key
+    objects.
+
+    The access to EJB Objects, EJB Local Objects and primary key objects is provided
+    by getEJBObject(), getEJBLocalObject(), and getPrimaryKey() method.
+
+
+    # 140: Explain getEJBHome, getEJBLocalHome, and getCallerPrinipal methods.
+
+
+    Answer:
+
+    getEJBHome(): The remote home interface of the enterprise bean is returned by
+    this method.
+
+    getEJBLocalHome(): The local home interface of the enterprise entity bean is returned
+    by this method.
+
+    getCallerPrincipal(): This method identifies who invokes the EJB bean instance''s
+    object.
+
+
+    # 141: Explain getRollBack, setRollBack, and getUserTransaction methods.
+
+
+    Answer:
+
+    getRollBack(): Using this method, we can identify whether the existing transaction
+    for a bean instance has been set as rollback.
+
+    setRollBack(): Using this method, we can set the bean instance of a particular
+    transaction outcome as rollback.
+
+    getUserTransaction(): This method should not be called by entity bean instances
+    as this method returns jav.transaction.UserTransaction interface.
+
+
+    # 142: Explain Transaction.
+
+
+    Answer:
+
+    Transaction is a task that executes a single unit of work or atomic operation.
+    If the task is not performed successfully, the transaction will be reverted or
+    rolled back.
+
+    Transactions are often referred as ACID acronym. ACID refers to'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# Atomicity, Consistency, Isolation, and Durability.
+
+
+    # 143: What are the transaction attributes available for container managed transaction?
+
+
+    Answer:
+
+
+    The following are the container managed transaction attributes:
+
+
+    +   a) Required: In this, the container starts a new transaction the transaction
+    does not exist
+
+
+    +   b) RequiresNew: In this, the container creates new transaction for each method
+    call
+
+
+    +   c) Supports: In this, the bean can execute without transaction
+
+
+    +   d) NotSupported: In this, the bean cannot be invoked with in a transaction
+
+
+    +   e) Never: In this, the bean will never execute a transaction
+
+
+    +   f) Mandatory: In this, each method call requires a transaction context
+
+
+    # 144: How does container manage multiple transactions?
+
+
+    Answer:
+
+
+    The EJB container manages multiple transactions by the following two ways:
+
+
+    +   a) The EJB container instantiate instances of enterprise thereby allowing
+    database to handle any issues related to transaction processing
+
+
+    +   b) The EJB container acquires exclusive lock on the enterprise bean instance’s
+    database state thereby serializing access to the instance from multiple transactions
+
+
+    # 145: Explain JTS.
+
+
+    Answer:
+
+
+    JTS refers to Java Transaction Service. It specifies the transaction manager implementation
+    of Java Transaction API (Application Programming Interface).
+
+
+    It supports distributed transactions i.e. multiple database on multiple systems
+    supported by multiple transaction managers. Using JTS, the container makes sure
+    that the transaction can span'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'through multiple containers.
+
+
+    # 146: What are the services provided by EJB container?
+
+    Answer:
+
+
+    EJB container provides the following services:
+
+
+    +   a) Transaction Management: The container manages start, enrollment, rollback,
+    and transaction commitment
+
+    b) Lifecycle Management: It includes bean creation, destroy, activate and passivate
+
+    c) Persistence: The beans do not explicitly retrieve or store data from database
+    but do with the help of container
+
+    d) State Management: The container automatically manages state of the bean object
+
+    b) Remote Access (Distributed): The container supports distributed remote access
+    with the help of RMI and IIOP protocols
+
+    f) Security: The container performs automatically all security checks on behalf
+    of enterprise beans
+
+
+    # 147: What are the benefits of EJB framework as architecture?
+
+    Answer:
+
+
+    The following are the benefits of EJB framework as architecture:
+
+
+    +   a) The EJB architecture is distributed, scalable, portable, transactional,
+    multi-tired, and secure
+
+    b) The server for EJB automatically manages services such as threading, lifecycle,
+    transaction, and persistence for the enterprise bean component
+
+    c) The enterprise bean components are platform independent i.e. they can be executed
+    on any operating system
+
+    d) The EJB components contain only business logic; thereby developers are given
+    freedom to maintain system level code
+
+
+    # 148: Explain the lifecycle of session bean.
+
+    Answer:
+
+
+    The lifecycle of a session bean can be stated as below:'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'a) Using JNDI (Java Naming Directory Interface) services,
+
+    the client calls the home object of the bean
+
+
+    b) The home reference is used to create EJBObject which
+
+    creates the instance of the bean class
+
+
+    c) The bean class called the session bean is allocated a session
+
+    context
+
+
+    d) The home reference is used to invoke methods on the EJB
+
+    Object which pass the method calls to the session bean
+
+
+    e) The session bean then returns result to the EJB Object
+
+    which returns the same to the remote interface
+
+
+    # 149: What information does the abstract persistence schema
+
+    contain?
+
+
+    # Answer:
+
+
+    The abstract persistence schema contains the following
+
+    information:
+
+
+    +   a) For managing each entity bean, it has ejb-name field
+
+    whose value must be unique
+
+
+    +   b) For specifying queries, the abstract-schema-name is used
+
+    for each entity bean whose value must be unique
+
+
+    +   c) The relationship of ejb can be specified using ejb-relation
+
+    field
+
+
+    +   d) To specify the relationship role, we have to use the ejb-
+
+    relationship-role field
+
+
+    # 150: What are the types of EJB clients?
+
+
+    # Answer:
+
+
+    There are two types of Enterprise Java Bean clients. They are:
+
+
+    +   a) Home client: The home client always exists inside the
+
+    enterprise java bean container.
+
+
+    +   b) Remote client: The remote client always exist outside the
+
+    terprise java bean container
+
+
+    The enterprise bean object can be accessed by multiple clients
+
+    from the enterprise java bean container through a transaction
+
+    manager.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# # Internationalization and Localization'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# 151: What is internationalization?
+
+
+    Answer:
+
+
+    Internationalization is the process of making or preparing the code to support
+    multiple languages. Internationalization involves both application that presents
+    output to the client and data that can be converted to the appropriate language
+    and character set. So, internationalization allows an application to adapt to
+    a new language and region.
+
+
+    # 152: What is localization?
+
+
+    Answer:
+
+
+    Localization is adapting to internationalized application which supports a specific
+    language or locale. Localization involves translating the data into a specific
+    language and maintains it in a file so that the application can access it. The
+    file can be a property file. So, localization provides adaption of an internationalized
+    application to a specific country or region.
+
+
+    # 153: What is a locale?
+
+
+    Answer:
+
+
+    Locale is an environment that includes locale-specific and regional information.
+    During localization, the internationalized application is adapted to a specific
+    locale. Each country has its own locale. For example, the US has en_US and Italy
+    has a locale_IT and so on. Here, it represents ‘language’ and IT. Here ‘it’ represents
+    language Italian and ‘IT’ represents ‘Regional variation’ i. name of the country,
+    Italy.
+
+
+    # 154: What are the characteristics of internationalized application?
+
+
+    Answer:
+
+
+    The following are the characteristics of internationalized application:
+
+
+    +   a) The application will have an .ear file (Enterprise Archive file) which
+    can be executed worldwide
+
+
+    +   b) The Graphical User Interface labels and messages are not'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "Java / J2EE Interview Questions You'll Most Likely Be Asked\n\nhard-coded within\
+    \ the program but stored outside and retrieved dynamically\n\n+   - Dates and\
+    \ currencies appear in end users’ region and language\n- To support a new language,\
+    \ re-compilation is not required by the application\n\n# 155: What are the elements\
+    \ through which a locale is identified? Answer:\n\nA locale is identified by the\
+    \ following three elements:\n\n+   - Language: It is the basic identifier for\
+    \ a locale. It contains a valid ISO 639, a 2 letter language code. Each country\
+    \ has one or more language and the language is identified by a two letter word.\
+    \ For example, ‘en’ for English and ‘fr’ for French\n- Regional Variation: It\
+    \ is the identifier for a country. It contains a valid ISO 3166, a 2 letter country\
+    \ code. For example, FR for France and US for United States of America\n- Variant:\
+    \ It is used to create locales with browser specific code. For example, WIN represents\
+    \ Windows and MAC represents Macintosh\n\n# 156: Is it possible to use java.util.\
+    \ package for Localization? Answer:\n\nWe can use java.util.Properties for localization.\
+    \ This class represents a persistent set of properties and it can be saved as\
+    \ a stream. The key name and lookup value in the properties class is a String.\
+    \ For example:\nProperties appProp = new Properties();\nString strProp = \n\n\
+    ```\n\"/usr/MyProp.txt\"\nappProp.load(new BufferedInputStream(\nFileInputStream(strProps));\n\
+    String serviceValue = System.getProperty(\"serviceKey\");\n```\n\nIn the above\
+    \ code, we have used the Properties file, loaded all"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    the properties and get the serviceKey value from the property file.
+
+
+    # 157: Explain ResourceBundle.
+
+
+    Answer:
+
+    ResourceBundle is a class that belongs to java.util package. It defines a naming
+    convention for locales and it should be used for organizing resources by locale.
+
+    Resource Bundle has locale specific objects and it can load the users locale.
+    So, if we create our own class, we have to use the ResourceBundle class and load
+    locale specific objects.
+
+
+    # 158: What are the features of ResourceBundle?
+
+
+    Answer:
+
+    ResourceBundle has the following features:
+
+
+    +   a) The content can be localized i.e. the content can be translated into different
+    languages
+
+    b) Make the application handle multiple locales simultaneously
+
+    c) The application can be modified to support additional locales
+
+
+    # 159: Explain Character Sets.
+
+
+    Answer:
+
+    Character Set is a group of graphical or textual symbols which is mapped to positive
+    integers called code points.
+
+    The American Standard Code for Information Interchange (ASCII) character set is
+    used to represent American English. It has lowercase and uppercase alphabets,
+    punctuation, and symbols. For example, the ASCII code for B is 66.
+
+    ASCII was good only for American English. So, in order to support other languages,
+    ISO 8859 character set was created.
+
+
+    # 160: Explain Unicode.
+
+
+    Answer:
+
+    Unicode defines a universal and standard (ISO 10646) character set. It represents
+    all the character sets that are used around the'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# Java / J2EE Interview Questions You'll Most Likely Be Asked\n\nworld and\
+    \ it can be extended. So, Unicode is a replacement for ISO 8859 character set.\n\
+    Java uses Unicode 2.x for encoding characters. Every character for Unicode uses\
+    \ 2 bytes. Java represents String objects as encoded Unicode. So, programs written\
+    \ in java languages process data in multiple languages.\n\n# 161: Explain UTF.\n\
+    \nAnswer:\nUTF represents Unicode Transformation Format. It is an encoding (multi-byte)\
+    \ format that stores characters in 1 byte, 2 and 3 bytes. Here U also represents\
+    \ Universal Character Set (UCS).\n is compact and more efficient than Unicode\
+    \ and it is the widely used encoding scheme. Java recommends UTF-8 as it is compatible\
+    \ with the existing web content and provides access to Unicode character set.\
+    \ UTF-8 denotes 8-bit form of UTF.\n\n# 162: Explain Collation and Collator.\n\
+    \nAnswer:\nCollation is a process that can sort strings based on locale specific\
+    \ customs. The alphabets are different for different languages and we need a unique\
+    \ way to Sort strings as per the language. Collator is an abstract class that\
+    \ belongs to java.text package. This is used for providing locale sensitive String\
+    \ comparison which does the Collation process in Java programming language.\n\n\
+    # 163: What are the attributes used in JSP to control encoding?\n\nAnswer:\nIn\
+    \ JSP, there are two attributes used in page directive to control encoding. They\
+    \ are:\n\n+   a) contentType: In this, we can specify the character set we are\
+    \ going to use and the format of the content <@page contentType=\"text/html; charset=ISO-8859-1\"\
+    \ %>"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'In the above line of code, we used the html format and ISO-8859 character set
+    of content.
+
+
+    +   b) pageEncoding: In this, we can specify the character set we are going to
+    use for the character display
+
+
+    ```
+
+    <%@ pageEncoding="UTF-8" %>
+
+    ```
+
+
+    In the above line of code, we used UTF-8 type of encoding.
+
+
+    # 164: Explain Format class.
+
+
+    Answer:
+
+
+    Format is a class which belongs to java.text package. It is an abstract class
+    which is used to format locale information: Example messages, dates, and numbers.
+
+
+    Format class uses the format() method:
+
+
+    +   a) To format locale objects to strings and
+
+    b) Parse strings to objects using parseObject()
+
+
+    # 165: What are the aspects of the application that have to be varied if they
+    have to be deployed in different locales?
+
+
+    Answer:
+
+
+    The following are the aspects which have to be varied if they have to be deployed
+    in different locales:
+
+
+    +   a) The presentation of content, numbers, and dates
+
+    b) The labels on the components
+
+    c) Colors, Sounds, and Images
+
+    d) Collation (Ordering) of data presented in the page
+
+    e) Reading and Writing text file content
+
+
+    # 166: What are the font names and font styles supported in Java?
+
+
+    Answer:
+
+
+    The 5 font names supported in java are: Serif, Sans-serif, Monospaced, Dialog,
+    and DialogInput.
+
+
+    The 4 font styles supported in java are: bold, italic, plain, and bolditalic.
+    These are the standard names that are mapped to physical fonts that are installed
+    in the operating system by default. The mapping of font names and styles are handled
+    by'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked 71
+
+
+    font.properties.
+
+
+    # 167: What are the features of java used to create internationalized application?
+
+
+    Answer:
+
+
+    The following are the features of java which are used to create internationalized
+    application:
+
+
+    +   a) The class java.util.Properties is used to get localized values for the
+    specific text (key)
+
+
+    +   b) The class java.util.Collator and CollatorKey are used for ordering data
+    based on localized words
+
+
+    +   c) The class java.text.NumberFormat and DateFormat are used to format currencies,
+    numbers and dates
+
+
+    +   d) The class java.io.InputStreamReader and OutputStreamWriter for writing
+    and reading files
+
+
+    +   e) The contentType, pageEncoding, and java.util.Locale attributes are used
+    in JSP
+
+
+    +   f) The class java.util.ResourceBundle is used for handling localized text
+
+
+    # 168: What are the subclasses of Format class?
+
+
+    Answer:
+
+
+    The class java.text.Format has three subclasses. They are:
+
+
+    +   a) java.text.NumberFormat: It is used to format currencies and numbers
+
+
+    +   b) java.text.DateFormat: It is used to format time and date
+
+
+    +   c) java.text.MessageFormat: It is used to format text messages
+
+
+    # 169: Explain why UTF-8 is considered the best encoding choice?
+
+
+    Answer:
+
+
+    UTF-8 is considered the best encoding choice for the following reasons:
+
+
+    +   a) It is supported by almost all the available web browsers
+
+
+    +   b) It provides the broadest coverage of character sets
+
+
+    +   c) It provides efficient data transmission'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# 170: What are the approaches for localizing JSP pages?
+
+
+    There are two approaches to localize a JSP page. They are:
+
+
+    +   - For each locale, create a JSP file and store it in different directory in
+    the server. Based on the locale of the client request, invoke the respective JSP
+    to display the respective localized content
+
+    - Create one single JSP and use ResourceBundle which has the locale specific custom
+    tags. So, when the client requests a page, the tags access the text from the resource
+    bundle for the respective locale
+
+
+    # 171: What are the advantages of creating JSP for each locale?
+
+
+    The following are the advantages of creating JSP for each locale:
+
+
+    +   - **Customization Support:** This provides full support for customizing the
+    structure and display of content for each locale
+
+    - **Clarity in Source file:** All the properties file, resource bundle, and JSP
+    are kept in one place for each locale
+
+
+    # 172: Explain I18N and L10N.
+
+
+    I18N represents InternationalizationN where ''I'' denotes the starting letter
+    and 18 represents the 18 characters between the starting letter and ending letter
+    ''N'' denotes the ending letter.
+
+    10N represents LocalizationN where ''L'' denotes the starting letter and 10 represents
+    the 10 characters between the starting letter and ending letter ''N'' denotes
+    the ending letter.
+
+
+    # 173: Explain InputStreamReader.
+
+
+    InputStreamReader is a class which belongs to java.io package. It is used to convert
+    byte streams to characters, i.e., it reads bytes and converts them to characters
+    based on the provided encoding. InputStreamReader class accepts encoding argument
+    as String and'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked 73
+
+
+    converts the bytes to characters. We can identify the encoding type used by InputStream
+    class by using getEncoding() method.
+
+
+    # 174: Explain OutputStreamWriter.
+
+
+    Answer:
+
+    OutputStream is a class which belongs to java.io package. It is used to convert
+    data from characters to byte streams, i.e., it converts characters based on the
+    provided character encoding. The write() method calls the encoding converter which
+    converts the available characters. The bytes converted from characters are buffered
+    and written to the output. If the characters do not exist for the particular encoding,
+    then they are substituted with the question mark and displayed in the output.
+
+
+    # 175: What are the advantages and disadvantages of using ResourceBundle in JSP?
+
+
+    Answer:
+
+    The following are the advantages of using ResourceBundle in JSP:
+
+
+    +   a) Easy to Maintain: We need to modify only one JSP to reflect the changes
+    in all the locales
+
+
+    +   b) Consistency in Structure of the page: The page in all the locales follows
+    the same structure and only the data varies for locales
+
+
+    +   c) Easy to Extent: We can easily define a new ResourceBundle which provides
+    support for a new locale
+
+
+    The following are the disadvantages of using ResourceBundle in JSP:
+
+
+    +   a) Difficult to customize: Customizing the page structure for each locale
+    is very difficult
+
+
+    +   b) Compatibility: The page encoding with the encoding of character sets in
+    the application must be compatible'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# Design Patterns'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# 176: What are Design Patterns?
+
+
+    Answer:
+
+    Design Patterns are procedures for designers which provide solution for a specific
+    problem that exists in a particular context. Design patterns are used for solving
+    a common problem that comes out during software engineering. It also explains
+    the reason for the problem, the working solution and the reason it is beneficial.
+    With design patterns, it is easy to identify the new problems.
+
+
+    # 177: What are the benefits of Design Patterns?
+
+
+    +   Answer:
+
+    The following are the benefits of Design Patterns:
+
+    a) Focus quickly on the solution for the specific problem
+
+    b) Inspire software designers to bring unique and new ideas
+
+    c) Real-world problems are solved and provide suggestion for design discussion
+
+    d) Domain specific best practices are documented and, thereby, knowledge is captured
+    in the document
+
+    e) Defines the circumstances, influences, and resolution of a solution
+
+
+    # 178: Explain GoF.
+
+
+    Answer:
+
+    GoF refers to Gang of Four. It refers to the four famous authors: Ralph Johnson,
+    Richard Helm, John Vlissides and Erich Gamma who wrote the book “Design Patterns:
+    Elements of Reusable Object Oriented Architecture” and published the same in the
+    year 1995. From on, Design Patterns became more popular.
+
+
+    # 179: What are the types of Design Patterns?
+
+
+    +   Answer:
+
+    There are three types of Design patterns. They are:
+
+    a) Creational Design Pattern: These are patterns which are used to create objects
+
+    b) Structural Design Pattern: These patterns are related to'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# Java / J2EE Interview Questions You'll Most Likely Be Asked\n\nthe composition\
+    \ of objects and classes\nc) Behavioral Design Pattern: These patterns are related\
+    \ to the responsibility and interaction of objects\n\n# 180: What are the various\
+    \ Creational Design Patterns?\nAnswer:\n\nThe following are the Creational Design\
+    \ Patterns:\n\n+   a) Factory Method: It is the most frequently used pattern\n\
+    b) Abstract Factory: This pattern is used to create a group of more than one type\
+    \ of objects\nc) Builder: This pattern is another approach to create objects similar\
+    \ to Factory and Abstract Factory\nd) Singleton: This pattern is one of the most\
+    \ important patterns used frequently by developers\nd) Prototype: This pattern\
+    \ is comparable to cloning\n\n# 181: Explain Singleton.\nAnswer:\n\nThe intent\
+    \ of the singleton pattern is to make sure that one class has only one instance\
+    \ and it should be the global point of access. It also ensures that the objects\
+    \ that use the singleton instance always use the same single instance.\n\n```\n\
+    final public class Singleton {\n    private Singleton() {\n}\\}\n```\n\nThe above\
+    \ code illustrates how to create a Singleton class.\n\n# 182: Explain Factory\
+    \ Method.\nAnswer:\n\nThe intent of the Factory Method is to specify an interface\
+    \ to create an object but allow the subclass to decide the appropriate class to\
+    \ instantiate.\nIn this pattern, the client will never know the concrete class\
+    \ which"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'is instantiated and which is returned. But the clients need to know only about
+    related to the abstract interfaces. Some of the interfaces and classes related
+    to Factory Method pattern are:
+
+
+    +   a) javax.ejb.EJBHome
+
+    b) javax.ejb.EJBLocalHome
+
+    c) java.text.Collator
+
+    d) java.net.SocketFactory
+
+    e) java.net.ContentHandlerFactoryFactory
+
+
+    The points a) and b) belong to J2EE and the rest belong to J2SE.
+
+
+    # 183: Explain Prototype pattern.
+
+    Answer:
+
+
+    The intent of the prototype pattern is to define the type of object to be created
+    using prototype instance and create new objects by copying this prototype. This
+    concept is same as the java.lang.Object clone() method.
+
+    This pattern allows us to remove or add objects during runtime. It also allows
+    us to define new objects by modifying the existing structure and reduce the need
+    for subclass. This pattern also allows us to configure an application with the
+    classes Abstractically
+
+
+    # 184: What are the scenarios in which you would create Abstract Factory pattern?
+
+    Answer:
+
+
+    The Abstract Factory pattern has to be created for the following scenarios:
+
+
+    +   a) When the proposed system needs to be independent and does not want to know
+    how the objects are represented, created, and composed
+
+    b) When the related objects are intended to be used together by enforcing the
+    constraints
+
+    c) When we just want to provide the users only the interfaces and not its implementations
+
+
+    # 185: What are the various structural design patterns?'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    The following are the various Structural Design Patterns:
+
+
+    +   a) Decorator pattern: This pattern is considered the skin to the guts of Strategy
+
+    b) Composite pattern: This pattern is used along with Iterator and Interpreter
+
+    c) Proxy pattern: This pattern is used when controlled access
+
+    d) Adapter pattern: This pattern is used to get access to an incompatible interface
+
+    f) Bridge pattern: This pattern is used to decouple the main function from implementation
+
+    f) Flyweight pattern: This pattern allows one to utilize objects efficiently
+
+
+    # 186: Explain Proxy pattern.
+
+
+    # Answer:
+
+
+    The proxy pattern provides a placeholder for an object to control access to another
+    object. The common applications are virtual and remote proxy. Surrogate is the
+    other name for proxy pattern. In this pattern, the application exists in another
+    workspace but the remote proxy hides this fact. The virtual proxy can create object
+    on demand.
+
+
+    # 187: What are the benefits of the Facade pattern?
+
+
+    # Answer:
+
+
+    The following are the benefits of the facade pattern:
+
+
+    +   a) Provides simple interface for a complex subsystem and does not minimize
+    the subsystem options
+
+    b) It can shield the clients from the subsystem components complexity
+
+    c) Promotes loose coupling between clients and subsystem
+
+    d) Each subsystem uses its own façade pattern and, thereby, reducing coupling
+    between subsystems'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# 188: What are the scenarios in which you create Adapter pattern?
+
+
+    We use or create the Adapter pattern for the following scenarios:
+
+
+    +   - To a class that is reusable that cooperates with the classes that do not
+    have a compatible interface
+
+
+    +   - The object does not have a compatible interface but it wants to use the
+    existing class
+
+
+    +   - We don''t want to use the interfaces but want to use the existing subclasses
+
+
+    # 189: Explain composite pattern.
+
+
+    The intent of the composite pattern is to allow the clients to execute object
+    that does not represent a hierarchy. This scenario usually appears in a portal
+    application. This pattern defines hierarchy of classes that contains complex and
+    primitive objects. This makes it easier to add new components. This pattern also
+    provides an interface that could be managed which provides a flexible structure.
+
+
+    # 190: What are the benefits of Decorator pattern?
+
+
+    The following are the benefits of Decorator pattern:
+
+
+    +   - This pattern provides more flexibility when compared to static inheritance
+
+
+    +   - Helps the developer to simplify code and target classes to develop functionality
+    without coding all the behavior
+
+
+    +   - In this pattern, changes are done through coding new classes and this enhances
+    the extensibility feature
+
+
+    # 191: What are the various behavioral design patterns?
+
+
+    The following are the various Behavioral Design Patterns:
+
+
+    +   - Strategy: This is one of the most frequently used patterns
+
+
+    +   - Iterator: This pattern explains how to loop through objects
+
+
+    +   - Template Method: This pattern helps us to reinforce'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    # Factory method and strategy pattern understanding
+
+
+    +   d) **Mediator**: This pattern acts as a middle tier component
+
+    e) **Observer**: This pattern is a pub/sub model
+
+    f) **Chain of Responsibility**: This pattern is used to pass messages as a chain
+
+    g) **Memento**: This pattern is used to restore and back up the state of an object
+
+    h) **Command**: This pattern separates the invoker from the performer
+
+    i) **State**: In this pattern, the object changes its class and modifies the behavior
+
+    j) **Visitor**: In this pattern, the objects operate on the structure of the elements
+
+    k) **Interpreter**: In this pattern, grammar is used to interpret the sentence
+
+
+    # 192: Explain Strategy pattern.
+
+
+    **Answer:**
+
+    The intent of Strategy pattern is to create a functionality family, encapsulate
+    them, and create them as interchangeable. Here, the functionality is independent
+    from client which uses it.
+
+    Policy is the other name for Strategy pattern. This pattern provides a substitute
+    for sub classing. This pattern eliminates conditional statements by defining the
+    behavior within its class.
+
+
+    # 193: What are the benefits of Mediator pattern?
+
+
+    **Answer:**
+
+    The following are the benefits of Mediator pattern:
+
+
+    +   a) Provides centralized control
+
+    b) The independent components become easier and simpler to develop as they don''t
+    need to pass the message between
+
+    c) The protocols (object) are simplified
+
+    d) The components are more generic as as they don''t contain logic for intercommunication'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'e) This pattern decouples the other components
+
+
+    # 194: When will you go for Iterator pattern?
+
+
+    Answer:
+
+
+    We have to use Iterator pattern for the following scenarios:
+
+    - To access collection object without needing to know its representation or internal
+    structure
+
+    - When we want multiple traversal object support in collection
+
+    - When we want a universal interface to traverse various structures in the collection
+
+
+    # 195: Explain Interpreter pattern.
+
+
+    Answer:
+
+
+    The intent of interpreter pattern is to define the grammar of a language with
+    an interpreter which is used to interpret the sentence in that language.
+
+    Using this pattern, it is easy to extend and change the grammar, and grammar implementation
+    is straightforward. This pattern is used when the efficiency is a high priority.
+
+
+    # 196: What are the J2EE features associated with the Command pattern?
+
+
+    Answer:
+
+
+    The following are the two J2EE features associated with the Command pattern:
+
+    - Based on the HTTP (Hyper Text Transfer protocol) request type received by the
+    container (web), the JSP or Servlet is invoked
+
+    - Based on the message content dispatched to Message beans, the beans invoke the
+    business logic
+
+
+    # 197: When will you use Visitor pattern?
+
+
+    Answer:
+
+
+    The Visitor pattern is utilized for the following scenarios:
+
+    - To perform operations on many objects with varying'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked 83
+
+
+    interfaces where the objects depends on the concrete classes
+
+
+    +   b) To perform unrelated and distinct operations on objects
+
+    c) To avoid class cluttering with unrelated operations
+
+    d) To define new operations but the structure of the objects rarely changes
+
+
+    # 198: Explain Template Method.
+
+
+    Answer:
+
+
+    The intent of the Template method pattern is to define the function skeleton and
+    defer steps in subclasses. This lets the subclasses to redefine the function without
+    modifying the function structure. This is performed by the HttpServlet. This pattern
+    provides a technique to reuse the code and avoid duplicates. If we want to use
+    the varying algorithm in a subclass and non-varying algorithm in one class, then
+    we have to go for this pattern.
+
+
+    # 199: Explain Chain of Responsibility.
+
+
+    Answer:
+
+
+    The intent of this pattern is to avoid integrating the sender''s request to receiver
+    which is handled by multiple objects. The request is passed as a chain until the
+    object processes the request. This pattern reduces coupling and improves flexibility
+    when responsibilities are assigned to the objects. It also allows the group of
+    classes to behave as a single class. We use this pattern when the request needs
+    to be handled by more than one object and the handler is not known and the request
+    is dynamic.
+
+
+    # 200: What are the benefits of Memento and State patterns?
+
+
+    Answer:
+
+
+    The following are the benefits of Memento pattern:
+
+
+    +   a) This pattern preserves the boundaries of the objects that are encapsulated
+
+    b) This pattern simplifies the object (originator)'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: 'The following are the benefits of State pattern
+
+
+    +   a) The state of the object is local and for each state it partitions the behavior
+
+
+    +   b) The state of the object transition is always explicit'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# Messaging'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# 201: What are Messages?
+
+
+    Answer:
+
+
+    # 202: Explain middle tier.
+
+
+    Answer:
+
+
+    Middle tier consists of an application called middleware provides the following
+    services and business solutions:
+
+
+    +   a) **Messaging**: It is the ability to receive and send data
+
+    b) **Security**: It is the ability to authorize and authenticate users
+
+    c) **Naming**: It is the ability to identify the resource by name
+
+    d) **Database Management**: It is the ability to access a DB (database) server
+
+
+    # 203: Explain MOM.
+
+
+    Answer:
+
+
+    MOM refers to Message Oriented Middleware which is mainly used for messaging.
+    It is the infrastructure which enables applications to receive, send, and create
+    messages inside the enterprise.
+
+    MOM usually exchanges and delivers messages in different formats랴 and quickly.
+    The advantage of MOM is that it is event driven. There are various messaging vendors:
+    Example: HP, IBM, BEA, Oracle, etc.
+
+
+    # 204: Explain synchronous communication.
+
+
+    Answer:
+
+
+    Synchronous communication is the communication method in which the client who
+    made a request is blocked to process any further commands until the requester
+    receives a response.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    This communication happens between two parties: client (browser) and server. An
+    example of this type of communication is authorization of credit card. Here, once
+    the card is swiped, the receiver will wait for the response from the server for
+    approval of transaction.
+
+
+    # 205: Explain asynchronous communication.
+
+
+    Answer:
+
+
+    Asynchronous communication is the communication method in which the client who
+    made a request is never blocked and /she could continue to work on other process
+    or transaction. An example of asynchronous communication is E-mail. People can
+    send e-mail to you even if you switched off your machine. Once you start your
+    machine, the mail client will load your messages.
+
+
+    # 206: Explain JMS.
+
+
+    Answer:
+
+
+    JMS refers to Java Messaging Service. It is a middleware which allows the software
+    developers to loosely couple applications. It provides an API (Application Programming
+    Interface) through which we can receive, send, read, and create enterprise system
+    messages. JMS is a message oriented product which is quite expensive and complex.
+    It provides an interface (Java) to write infrastructure code and allows solutions
+    to be built easily and quickly.
+
+
+    # 207: What are the message models supported by JMS?
+
+
+    Answer:
+
+
+    Java Messaging Service supports two types of message models. They are:
+
+
+    +   a) Publish/subscribe: In this model, the client can publish a message or subscribe
+    any type of message
+
+
+    +   b) PTP: PTP refers to point-to-point model in which the messages are sent
+    on the basis of one to one'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: 'The specification of JMS requires messaging vendor should support any of the
+    above models to be complaint.
+
+
+    # 208: What are the benefits of synchronous messaging?
+
+
+    Answer:
+
+    The following are the benefits of synchronous messaging:
+
+
+    +   ) Synchronous messaging requires two parties (client and server) to be active.
+    If one of the parties is not active, the transaction will not be successful
+
+    b) Before proceeding to the next operation or process, the message has to be acknowledged.
+    If not, the message is not considered as processed
+
+
+    # 209: What are the benefits of asynchronous messaging?
+
+
+    Answer:
+
+    The following are the benefits of asynchronous messaging:
+
+
+    +   a) This type of messaging is not affected much by failures because it does
+    not require or expect acknowledgement
+
+    b) This type of message is not affected at the software, hardware, or at network
+    level
+
+    c) Most often, the message is not lost but it might get delayed
+
+    d) This messaging works better if traffic increases as it keeps the request backlog
+    in queue
+
+
+    # 210: What are the scenarios for which we go for asynchronous messaging?
+
+
+    Answer:
+
+    The following are the scenarios for which we go for asynchronous messaging:
+
+
+    +   a) If we do not require the response immediately
+
+    b) If we require high volume processing of transaction capability
+
+    c) If we want an efficient messaging system to use the hardware system
+
+
+    # 211: What are the advantages of JMS?'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    The following are the advantages of Java Messaging Service:
+
+
+    +   a) It provides a way to integrate the incompatible systems easily
+
+    b) It supports the asynchronous method of communication
+
+    c) It provides support for one or more type of communication
+
+    d) It provides support for transactional type of messaging
+
+    e) It provides support for guaranteed type of messaging
+
+
+    # 212: What are the components of JMS?
+
+
+    # Answer:
+
+
+    The following are the components of JMS:
+
+
+    +   a) **Messages**: It refers to the data that is passed between applications
+    which defines the information type the message contains
+
+    b) **Clients**: It refers to the application which can receive and send messages
+
+    c) **Objects**: It refers to the JMS object which is maintained and created by
+    the admin that are used by the JMS clients
+
+    d) **JMS Provider**: It refers to the host application where the JMS application
+    runs. It provides the underlying appliance which is required for the messaging
+    application
+
+
+    # 213: How are exceptions handled in JMS?
+
+
+    # Answer:
+
+
+    JMS uses ExceptionListener interface through which the application is notified
+    if any problem occurs during execution or runtime. This interface identifies the
+    problem details of JMS provider and communicates to the JMS client.
+
+
+    To handle exception, we have to use the onError method which accepts JMSException
+    as argument. This object should register with setExceptionListener method which
+    accepts Listener as argument in the session.
+
+
+    # 214: How are messages acknowledged in JMS?'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '90 Java / J2EE Interview Questions You''ll Likely Be Asked
+
+
+    # Answer:
+
+
+    Messages are acknowledged in JMS by the following ways:
+
+
+    +   - **CLIENT_ACKNOWLEDGE**: The message is acknowledged by the client by calling
+    the acknowledge method
+
+
+    +   - **DUPS_OK_ACKNOWLEDGE**: If the JMS provider fails, duplication of the messages
+    occur. We have to use this only if consumers could tolerate the duplicate messages
+
+
+    +   - **AUTO_ACKNOWLEDGE**: In this, the session acknowledges the client automatically
+    for each message
+
+
+    # 215: Explain the message headers of JMS.
+
+
+    # Answer:
+
+
+    JMS uses the following message headers:
+
+
+    +   - **JMessageID**: This is used to identify each messages uniquely
+
+
+    +   - **JMPriority**: Priority 9 is highest and 0 is lowest. There is no guarantee
+    that high priority message executes first than the low priority message
+
+
+    +   - **JMSDeliveryMode**: This header is used to define the JMS delivery as Persistent
+    or Non-persistent
+
+
+    +   - **JMSRedelivered**: This is used to inform client that he or she received
+    the message earlier
+
+
+    +   - **JMSExpiration**: This is used to set the message expiration in milliseconds
+
+
+    # 216: What are the body formats of JMS?
+
+
+    # Answer:
+
+
+    The following are the body formats of JMS:
+
+
+    +   - **TextMessage**: This is formatted as String and it is used to exchange
+    XML data
+
+
+    +   - **ByteMessage**: This is used to match legacy messages
+
+
+    +   - **ObjectMessage**: This denotes collection of objects or single serializable
+    object
+
+
+    +   - **MapMessage**: This is similar to a HashMap which has key value pair'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    +   e) StreamMessage: This denotes the stream of primitive values that are used
+    to read sequentially
+
+
+    # 217: What are the types of administered objects in JMS? Answer:
+
+
+    In JMS, there are two types of administered objects. They are related to
+
+
+    +   a) Destination: It contains information that are related to configuration
+    which are supplied by JMS provider. Destination uses queue for PTP and Topic for
+    pub/sub
+
+    b) ConnectionFactory: It provides the physical connection to the Java Messaging
+    Service through JNDI lookup. It contains IP address and enables JMS to create
+    a connection
+
+
+    # 218: What are the objects used to receive and create messages in JMS? Answer:
+
+
+    The following objects are used to receive and create messages in JMS:
+
+
+    +   a) MessageConsumer: This is used to receive messages which are sent to a destination
+
+    b) MessageProducer: This is used to create messages which are sent to a destination
+
+    c) MessageSelector: This is used to filter the message that does not meet the
+    specified criteria
+
+    d) MessageListener: This is used to process and receive messages asynchronously
+
+
+    # 219: Explain Message Consumer. Answer:
+
+
+    MessageConsumer is for receiving messages synchronously and asynchronously to
+    a particular destination which is created by the session object.
+
+
+    In case of synchronous communication, the consumer calls the any one of the methods
+    receiveNoWait and, in the case of asynchronous communication, the client registers
+    MessageListener and starts consumer.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: 'Almost all the messages in Java Messaging Service are exchanged asynchronously
+    among clients the producer never receives acknowledgement from the consumer.
+
+
+    # 220: Explain Message Producer.
+
+
+    Answer:
+
+
+    MessageProducer is for sending messages either via PTP through pub/sub. In PTP
+    (Point-To-Point) model, the destination is known as queue and in pub/sub model,
+    the destination is known as Topic.
+
+
+    In producer, we can set the delivery mode either as NON-PERSISTENT or PERSISTENT
+    using the setDeliveryMode method. Non-Persistent has less overhead as the messages
+    are not logged in the server or database.
+
+
+    We can also use the setPriority to set the message priority. 0 indicates low priority
+    and 9 indicates high priority. We can also use setTimeToLive to mention the life
+    time of the message in milliseconds.
+
+
+    # 221: Explain Message Selector.
+
+
+    Answer:
+
+
+    MessageSelector belongs to String object which is used to filter the message that
+    does not fit into the specified criteria.
+
+
+    The message selector can examine the header and compares an expression which is
+    present in the String. The example for expression comprises of arithmetic operators,
+    relational operators, string literals, and logical operators.
+
+
+    # 222: Explain Message Listener.
+
+
+    Answer:
+
+
+    To process messages asynchronously, we have to instantiate the MessageListener
+    interface. We have to perform the steps to process and receive messages asynchronously:
+
+
+    +   a) Create object which implements MessageListener interface and invoke the
+    onMessage method
+
+
+    +   b) Use setMessageListener method to register with the'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked 93
+
+
+    session object
+
+
+    +   c) Use Connection object''s start method to start receiving messages
+
+
+    # 223: What are the classes, interfaces, and steps required for PTP communication?
+
+
+    Answer:
+
+
+    The following are the classes, interfaces, and steps required for Point-To-Point
+    communication:
+
+
+    +   a) Using JNDI (Java Naming Directory Interface) lookup, obtain QueueConnectionFactory
+    object. JNDI name varies based on the messaging vendor
+
+
+    +   b) Through QueueConnectionFactory object, obtain QueueConnection object. We
+    have to provide username and password if security is enabled
+
+
+    +   c) Through QueueConnection, obtain QueueSession with provider
+
+
+    +   d) Through JNDI lookup, obtain queue.
+
+
+    +   e) Through QueueConnection create QueueSession QueueReceiver or QueueSender
+    for receiving and sending messages
+
+
+    +   f) Close QueueConnection which closes QueueReceiver, QueueSender, and QueueSession
+
+
+    # 224: What are the classes, interfaces, and steps required for Pub/Sub communication?
+
+
+    Answer:
+
+
+    The following are the classes, interfaces, and steps required for Pub/Sub communication:
+
+
+    +   a) Using JNDI (Java Naming Directory Interface) lookup, obtain TopicConnectionFactory
+    object. JNDI name varies based on the messaging vendor
+
+
+    +   b) Through TopicConnectionFactory object, obtain TopicConnection object. We
+    have to provide username and password if security is enabled
+
+
+    +   c) Through TopicConnection, obtain TopicSession with provider'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '+   d) Through JNDI lookup, obtain queue
+
+
+    +   e) Through TopicSession create TopicSubscriber or
+
+    TopicPublisher for subscribing and publishing messages
+
+
+    +   f) Close TopicConnection which closes TopicSubscriber,
+
+    TopicPublisher, and TopicSession
+
+
+    # 225: Explain MDB.
+
+
+    Answer: refers to Message Driven Bean. It is a component (stateless)
+
+    Moked by the container (EJB) whenever the messages arrives in
+
+    the destination (queue or topic).
+
+
+    MDB is a consumer which receives messages because it
+
+    implements the interface javax.jms.MessageListener. Similar to a
+
+    Java Messaging Service, the message driven bean also receives
+
+    messages in the same manner.
+
+
+    In case of MDB, the Enterprise Java Bean Container ensures that
+
+    the bean is registered in the particular destination whenever a
+
+    message is sent.'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# # Security and Legacy Connectivity'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '96 Java / J2EE Interview Questions You''ll Likely Be Asked
+
+
+    # 226: What are the various security threats to enterprise resources?
+
+
+    Answer:
+
+
+    The following are the security threats to enterprise resources:
+
+
+    +   a) Confidential Information Disclosure: Accidentally or intentionally making
+    the information available to someone who has no legal rights
+
+
+    +   b) Information Modification: Accidentally: or intentionally modifying data
+
+
+    +   c) Compromise of Accountability: This is called identity theft
+
+
+    +   d) Misappropriation of Protected Resources: This is called as service theft
+
+
+    +   e) Misappropriation that compromises availability: Data modification causes
+    interruption to the enterprise system
+
+
+    # 227: Explain Authentication and Authorization.
+
+
+    Answer:
+
+
+    Authentication is the process of verifying the credentials of the user who got
+    permission to enter into secured premises or websites. For example, only the registered
+    users are authorized to login in to a website which provides mailing service.
+    Authorization is the process of verifying the role of the user who got permission
+    to visit or receive the requested resource. For example, the user cannot modify
+    a document because he does have the role or not authorized to modify a particular
+    document.
+
+
+    # 228: Explain some of the security packages available in Java.
+
+
+    Answer:
+
+
+    The following are the security packages available in Java:
+
+
+    +   a) java.security: This contains the classes and interfaces for security, authentication,
+    and authorization (access control)
+
+
+    +   b) java.security.interfaces: It contains the interfaces for encryption: Digital
+    Signature Algorithm (DSA) and Rivest, Shamir, Adleman Asymmetric Cipher Algorithm
+    (RSA)
+
+
+    +   c) java.security.cer: It contains the interfaces and classes for'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    managing and parsing certificates
+
+
+    +   d) java.security.spec: It contains the specification interfaces and classes
+    for DSA, RSA, and Certificates
+
+
+    # 229: What are the actions performed by Java Security Manger in Applets?
+
+
+    Answer: The following are the actions performed by Java Security Manager in applets:
+
+
+    +   a) Delete a file, write a file, and read a file
+
+    b) Modify the attribute (Example: priority) of a thread
+
+    c) Update or Access the system properties
+
+    d) Accept, Wait, or Open a socket or network connection
+
+
+    # 230: What are the security restrictions in Java applets?
+
+
+    Answer: The following are the security restrictions in Java applets:
+
+
+    +   a) Applet is not allowed to define native methods or load libraries but can
+    use its own code
+
+    b) It cannot write or read files on the remote or host machine where it executes
+
+    c) Network connection is available only to the host machine where it is downloaded
+
+    d) It cannot start a program in the host machine
+
+    e) It is restricted to read the system properties
+
+
+    # 231: What are the system properties that applet cannot read?
+
+
+    Answer: The following are the system properties that an applet is restricted to
+    read:
+
+
+    +   a) user.name: It refers to the account name of the user
+
+    b) user.home: It refers to the home directory of the user
+
+    c) user.dir: It refers to the current working directory of the user
+
+    d) java.home: It refers to the installation directory of java
+
+    e) java.class.path: It refers to the class path of java'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# 232: What are the policies for access control?
+
+
+    Answer:
+
+
+    The following are the potential policies for access control:
+
+
+    +   a) Once the user is authenticated, all the processes invoked by the user inherit
+    access to authenticated context
+
+    b) Once a component is authenticated, the context is available to all the other
+    trusted components
+
+    c) Once the component is ready to impersonate the caller, the caller authenticates
+    the called component
+
+
+    # 233: What are the authenticated mechanisms supported in J2EE?
+
+
+    Answer:
+
+
+    The web container in J2EE supports the following authentication mechanisms:
+
+
+    +   a) HTTP basic: It contains URL request with parameters
+
+    b) HTTP digest: It contains URL request with encrypted parameters
+
+    c) FORM based: This is validated using user name and password
+
+    d) HTTPS mutual: This allows to perform secured transaction
+
+
+    # 234: Explain encrypted communication.
+
+
+    Answer:
+
+
+    The data can be encrypted by a mechanism called Cryptography. In this mechanism,
+    the data is encrypted and decrypted using a matching key. There are two types
+    of encryption:
+
+
+    +   a) Symmetric: In this, both receiver and sender know the common key for decrypting
+    and encrypting messages
+
+    b) Asymmetric: It is called public key cryptography where a key is split into
+    public and private key. Each key has the ability to decrypt data encrypted by
+    other user
+
+
+    # 235: Explain Digital Certificates.
+
+
+    Answer:
+
+
+    Digital Certificate is the famous solution for private key holder for'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    placing the public key in a package called Digital certificate and sign with a
+    private key of trusted authority called CA (Certificate Authority). Digital Certificates
+    resolves the public key issue which when received by the party is not trustworthy.
+    VerSign is the leader in issuing Digital Certificates and the CA is trusted universally
+    and well known. The public keys of VeriSign are distributed with browsers and
+    web servers.
+
+
+    # 236: Explain Secure Socket Layer.
+
+
+    Answer:
+
+
+    Secured Socket Layer (SSL) is a protocol which ensures privacy on accessing the
+    Internet. These help applications communicate each other so that eavesdropping
+    never occurs. Secure Socket Layer offers authentication of server, encryption
+    for data and integrity of messages. In SSL, all the data are encrypted and then
+    transmitted across network. It uses port 443 for transmitting messages across
+    servers. It also uses server and mutual authentication modes to transmit messages.
+
+
+    # 237: What are the security checks performed by web container?
+
+
+    Answer:
+
+
+    The web container performs the following security checks:
+
+
+    +   a) Ensures that it has to decrypt the request
+
+    b) Ensures that any authorizations constraints are available in the request
+
+    c) Ensures that the request contains authorization or authentication requirements
+
+    d) The application resources are protected by the combination of authentication
+    and authorization constraints
+
+
+    # 238: Explain legacy connectivity using Java.
+
+
+    Answer:
+
+
+    Legacy connectivity approach is based on the client server model'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: 'which uses two-tier architecture. It is not web based and it uses Enterprise
+    Information System to retrieve and process data. Enterprise Information System
+    has an adapter which provides API (Application programming Interface) for processing
+    and accessing data and EIS functions. The client uses the API programmatically
+    to connect and access EIS.
+
+
+    The key to Enterprise Information System adapter is reusability. Independent vendors
+    develop adapters using programming language that has high degree of usability
+    and reusability.
+
+
+    # 239: Explain the authentication in EIS.
+
+
+    Answer:
+
+
+    To access information from Enterprise Information System, the components of J2EE
+    needs to follow a separate security procedure. The information exists in a protected
+    domain and hence Enterprise Information System layer operates in a separate environment.
+    In this scenario, the container tries to invoke J2EE components authentication
+    to get the resource. This mechanism is called container managed resource manager
+    sign.
+
+
+    # 240: Explain CSI.
+
+
+    Answer:
+
+
+    CSI refers to Common Secure Interoperability Protocol. The Enterprise Java Bean
+    containers support this protocol and this protocol belongs to Object Management
+    Group (OMG). CSI v2 is the standard for securing calls over IIOP. IIOP refers
+    to Internet Inter-ORB Protocol. It is the identity assertion mechanism and this
+    feature treats intermediate entity.
+
+
+    # 241: Explain EIS adapter.
+
+
+    Answer:
+
+
+    Enterprise Information System has an adapter which provides API (Application programming
+    Interface) for processing and accessing data and EIS functions. The client uses
+    the API programmatically to connect and access EIS.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: 'The key to Enterprise Information System adapter is reusability. Independent
+    vendors develop adapters using programming language that has high degree of usability
+    and reusability.
+
+
+    # 242: Explain legacy connectivity using J2EE connector.
+
+
+    Developers use JDBC (Java Data Base Connectivity)cci to access data instead of
+    using the approach of the adapters as this is time consuming, Java Connector Architecture
+    is supported in almost all the latest servers of WebLogic and WebSphere.
+
+    By using Java Connector Architecture (JCA), the Enterprise Information System
+    Service (EIS) vendors are not required to customize the adapters for each application
+    server. Also, the application servers need not add code to get connectivity to
+    Enterprise Information System (EIS).
+
+
+    # 243: Explain Resource Adapter.
+
+
+    Resource Adapter refers to implementation of interfaces in javax.resource.spi
+    and javax.resource.cci package. It requires software library in system level when
+    you to access a resource which uses native libraries to access Enterprise Information
+    System.
+
+    Resource adapter by default implements Enterprise Information System adapter of
+    connector systems which includes security and transaction management.
+
+    The resource adapter also has API at the client level which is used to access
+    the EIS applications. It is also used within the server (application) environment.
+
+
+    # 244: Explain System contract.
+
+
+    System contract is defined as the agreement between two parties to support collaborative
+    and mutually beneficial interaction. For example, EIS and server (application)
+    collaborate to support mechanisms like connection management, security, and'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '102 Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    transactions.\Using system contract, the component provider focuses on presentation
+    and business logic development for applications. With this, we get a group of
+    functionality from the provider to perform business tasks.
+
+
+    # 245: Explain the integration strategy of JCA.
+
+
+    Answer:
+
+    The major work for developers nowadays is to integrate the new system with the
+    older system. Integration could be performed with the following ways:
+
+
+    +   a) Inbound Integration Technique: In this, the request is initiated by the
+    outside system to our system
+
+    b) Outbound Integration Technique: In this, the request is initiated by our system
+    to other system system
+
+
+    # 246: What are the types of System Contract?
+
+
+    Answer:
+
+    There are three types of system contracts. They are:
+
+
+    +   a) Security Management: This enables the server (application) to connect with
+    EIS using the security related properties
+
+    b) Transaction Management: This allows propagating transactions from server (application)
+    to EIS
+
+    c) Connection Management: This describes agreement between container (J2EE) and
+    adapter to establish pooling and tearing down connections
+
+
+    # 247: What are the ways to configure security properties?
+
+
+    Answer:
+
+    The following are the ways to configure security properties:
+
+
+    +   a) Principal mapping: This is used when connecting or combining EIS in the
+    server (application)
+
+    b) Configured Identity: In this, the resource adapter uses identity connections
+    when connecting to EIS
+
+    c) Credentials mapping: In this, the credentials of server and'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# EIS are mapped
+
+
+    +   d) Caller Impersonation: This principal used in EIS matches with the application
+    server
+
+
+    # 248: What are the sections of CCI API?
+
+
+    Answer:
+
+
+    CCI refers to Common Client Interface. CCI API has four sections as mentioned
+    below:
+
+
+    +   a) Connection Interface: This creates connection to Enterprise Information
+    System
+
+
+    +   b) Interaction Interface: commanding execution on EIS is referred to as interaction
+    interface
+
+
+    +   c) ResultSet Interface: This encapsulates query results to EIS
+
+    d) Metadata Interface: This allows to examine EIS metadata
+
+
+    # 249: Explain ManagedConnectionFactory and ManagedConnection.
+
+
+    Answer:
+
+
+    ManagedConnectionFactory is an interface which is implemented by the class UCManagedConnectionFactory
+    (Entry point for the server to call adapter) which creates the UCConnectionFactory
+    and UCManagedConnection class.
+
+    ManagedConnection is an interface which is implemented by the UCManagedConnection
+    class. This class encapsulates adapters connection (physical) class UCConnection.
+
+    Both ManagedConnectionFactory and ManagedConnection are used for implanting JCA
+    (Java Connector Architecture) adapter.
+
+
+    # 250: What are the drawbacks of DB integrity constraints?
+
+
+    Answer:
+
+
+    The following are the drawbacks of DB (Data Base) integrity constraints:
+
+
+    +   a) Logic Duplication: The logic duplication is possible when the database
+    integrity rules are changed which requires change in business logic code
+
+
+    +   b) DBMS constraints non-portability: Using procedural'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'triggers often leads to non-portability as each vendor follows their own standards
+
+
+    +   c) **Uncontrolled DB configuration:** Since the constraints exists outside
+    server (J2EE), configurations are performed with the DB vendor tools'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# HR Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# 1: Where do you find ideas?
+
+
+    Answer:
+
+
+    Ideas can come from all places, and an interviewer wants to see that your ideas
+    are just as varied. Mention multiple places that you gain ideas from, or settings
+    in which you find yourself brainstorming. Additionally, elaborate on how you record
+    ideas or expand upon them later.
+
+
+    # 2: How do you achieve creativity in the workplace?
+
+
+    Answer:
+
+
+    It is important to show the interviewer that you''re capable of being resourceful
+    and innovative in the workplace, without stepping outside the lines of company
+    values. Explain where ideas normally stem from you (examples may include an exercise
+    such as list-making or a mind map), and connect this to a particular task in your
+    job that it would be helpful to be creative in.
+
+
+    # 3: How do you push others to create ideas?
+
+
+    Answer:
+
+
+    If you''re in a supervisory position, this may be requiring employees to submit
+    a particular number of ideas, or to complete regular idea-generating exercises,
+    in order to work your creative muscles. However, you can also push others around
+    you to create ideas by creating more of your own. Additionally, discuss with the
+    interviewer the importance of questioning people as a way to inspire ideas and
+    change.
+
+
+    # 4: Describe your creativity.
+
+
+    Answer:
+
+
+    Try to keep this answer within the professional realm, but if you have an impressive
+    background in something creative outside of your employment history, don''t be
+    afraid to include it in your answer also. The best answers about creativity will
+    relate problem-solving skills, goal-setting, and finding innovative ways to tackle
+    a project or make a sale in the workplace. However,'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked 107
+
+
+    passions outside of the office are great, too (so long as they don''t
+
+    cut into your work time or mental space).
+
+
+    +   5: Would you rather receive more authority or responsibility at work?
+
+
+    Answer:
+
+    There are pros and cons to each of these options, and your
+
+    interviewer will be more interested to see that you can provide a
+
+    critical answer to the question. Receiving more authority may
+
+    mean greater decision-making power and may be great for those
+
+    with outstanding leadership skills, while greater responsibility
+
+    be a great opportunity for those looking to advance
+
+    steadily throughout their careers.
+
+
+    +   6: What do you do when someone in a group isn''t contributing their fair share?
+
+
+    Answer:
+
+    This is a particularly important question if you''re interviewing for
+
+    a position in a supervisory role – explain the ways in which you
+
+    would identify the problem, and how you would go about pulling
+
+    aside the individual to discuss their contributions. It is important
+
+    to understand the process of creating a dialogue, so that you can
+
+    communicate your expectations clearly to the individual, give
+
+    them a chance to respond, and to make clear what needs to
+
+    change. After this, create an action plan with the group member
+
+    ensure your contributions are on par with others in the group.
+
+
+    +   7: Tell me about a time when you made a decision that was outside of your
+    authority.
+
+
+    Answer:
+
+    While an answer to this question may portray you as being
+
+    decisive and confident, it could also identify you to an employer
+
+    as a potential problem employee. Instead, it may be best to
+
+    light refocus the question into an example of a time that you
+
+    took on additional responsibilities, and thus had to make
+
+    decisions that were outside of your normal authority (but which)'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: 'had been granted to you in the specific instance). Discuss how the weight of
+    the decision affected your decision-making process, and the outcomes of the situation.
+
+
+    # 8: Are you comfortable going to supervisors with disputes?
+
+
+    If a problem arises, employers want to know that you will handle it in a timely
+    and appropriate manner. Emphasize that you''ve rarely had disputes with supervisors
+    in the past, but if a situation were to arise, you feel perfectly comfortable
+    discussing it with the person in question in order to find a resolution that is
+    satisfactory to both parties.
+
+
+    # 9: If you had been in charge at your last job, what would you have done differently?
+
+
+    No matter how many ideas you have about how things could run better, or opinions
+    on the management at your previous job, remain positive when answering this question.
+    It is okay to show thoughtful reflection on how something could be handled in
+    order to increase efficiency or improve sales, but be sure to keep all of your
+    suggestions focused on making things better, rather than talking about others
+    to eliminate waste or negativity.
+
+
+    # 10: Do you believe employers should praise and reward employees for a job well
+    done?
+
+
+    Recognition is always great after completing a difficult job, but there are many
+    employers who may ask this question as a way to infer whether or not you''ll be
+    a high-maintenance worker. While you may appreciate rewards or praise, it is important
+    to convey to the interviewer that you don''t require accolades to be confident
+    that you''ve done your job well. If you are interviewing for a supervisory position
+    where you would be the one praising other employees, highlight the importance
+    of praise in boosting team morale.'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked 109
+
+
+    # ### 11: What do you believe is the most important quality a leader can have?
+
+
+    **Answer:**
+
+
+    There are many important skills for a leader to have in any business, and the
+    most important component of this question is that you explain why the quality
+    you choose to highlight is important. Try to choose a quality such as communication
+    skills, or an ability to inspire people, and relate it to a specific instance
+    which you displayed the quality among a team of people.
+
+
+    # ### 12: Tell me about a time when an unforeseen problem arose. How did you handle
+    it?
+
+
+    **Answer:**
+
+
+    It is important that you are resourceful, and level-headed under pressure. An
+    interviewer wants to see that you handle problems systematically, and that you
+    can deal with change in an orderly process. Outline the situation clearly, including
+    all solutions and results of the process you implemented.
+
+
+    # ### 13: Can you give me an example of a time when you were able to improve X
+    objective at your previous job?
+
+
+    **Answer:**
+
+
+    It is important here to focus on an improvement you made that created tangible
+    results for your company. Increasing efficiency is certainly a very important
+    element in business, but employers are also looking for concrete results such
+    as increased sales or cut expenses. Explain your process thoroughly, offering
+    specific numbers and evidence wherever possible, particularly in outlining the
+    results.
+
+
+    # ### 14: Tell me about a time when a supervisor did not provide enough direction
+    on a project.
+
+
+    **Answer:**
+
+
+    While many employers want their employees to follow very specific guidelines without
+    much decision-making power, it is important also to be able to pick up a project
+    with vague direction'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: 'and to perform self-sufficiently. Give examples of necessary questions that
+    you asked, and specify how you determined whether a question was something you
+    needed to ask of a supervisor or whether it was something you could determine
+    on your own.
+
+
+    # 15: Tell me about a time when you were in charge of leading a project.
+
+
+    Answer:
+
+
+    Lead the interviewer through the process of the project, just as you would have
+    with any of your team members. Explain the goal of the project, the necessary
+    steps, and how you delegated tasks to your team. Include the results, and what
+    you learned as a result of the leadership opportunity.
+
+
+    # 16: Tell me about a suggestion you made to a former employer that was later
+    implemented.
+
+
+    Answer:
+
+
+    Employers want to see that you''re interested in improving your company and doing
+    your part – offer a specific example of something you did to create a positive
+    change in your previous job. Explain how you thought of the idea, how your supervisors
+    received it, and what other employees thought the idea was put into place.
+
+
+    # 17: Tell me about a time when you thought of a way something in the workplace
+    could be done more efficiently.
+
+
+    Answer:
+
+
+    Focus on the positive aspects of your idea. It is important not toဆောင် your old
+    company or boss negatively, don''t elaborate on how inefficient a particular system
+    was. Rather, explain a situation in which you saw an opportunity to increase productivity
+    or to streamline a process, and explain in a general step-by-step how you implemented
+    a better system.
+
+
+    # 18: Is there a difference between leading and managing people –'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# which is your greater strength?
+
+
+    Answer:
+
+
+    There is a difference – leaders are often great idea people, passionate, charismatic,
+    and with the ability to organize and inspire others, while managers are those
+    who ensure a system runs, facilitate their operations, make authoritative decisions,
+    and who take great responsibility for all aspects of overall success to the finest
+    decisions. Consider which of these is most applicable to the position, and explain
+    how you fit into this role, offering concrete examples of your past experience.
+
+
+    # 19: Do you function better in a leadership role, or as a worker on a team?
+
+
+    Answer:
+
+
+    It is important to consider what qualities the interviewer is looking for in your
+    position, and to express how you embody this role. If you''re a leader, highlight
+    your great ideas, drive and passion, and ability to incite others around you to
+    action. If you work great in teams, focus on your dedication to the task at hand,
+    your cooperation and communication skills, and your ability to keep things running
+    smoothly.
+
+
+    # 20: Tell me about a time when you discovered something in the workplace that
+    was disrupting your (or others) productivity – what did you do about it?
+
+
+    Answer:
+
+
+    Try not to focus on negative aspects of your previous job too much, but instead
+    choose an instance in which you found a positive, and quick, solution to increase
+    productivity. Focus on the way you noticed the opportunity, how you presented
+    a solution to your supervisor, and then how the change was implemented (most importantly,
+    talk about how you led the change initiative). This is a great opportunity for
+    you to display your problem-solving skills, as well as your resourceful nature
+    and leadership skills.'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# 21: How do you perform in a job with clearly-defined objectives and goals?
+
+
+    Answer:
+
+
+    It is important to consider the position when answering this question – clearly,
+    it is best if you can excel in a job with clearlydefined objectives and goals
+    (particularly if you''re in an entry level or sales position). However, if you''re
+    applying for a position with a leadership role or creative asset to, be sure to
+    focus on the ways that you additionally enjoy the challenges of developing and
+    implementing your own ideas.
+
+
+    # 22: How do you perform in a job where you have great decision-making power?
+
+
+    Answer:
+
+
+    The interviewer wants to know that, if hired, you won''t be the type of employee
+    who needs constant supervision or asks for advice, authority, or feedback every
+    step of the way. Explain that you work well in a decisive, productive environment,
+    and that you look forward to taking initiative in your position.
+
+
+    # 23: If you saw another employee doing something dishonest unethical, what would
+    you do?
+
+
+    Answer:
+
+
+    In the case of witnessing another employee doing something dishonest, it is always
+    best to act in accordance with company policies for such a situation – if you
+    don''t know what this company''s specific policies are, feel free to state that
+    you would handle it according to the policy and by reporting it to the appropriate
+    persons in charge. If you are aware of the company''s policies (such as if you
+    are seeking a promotion within your own company), it is best to specifically outline
+    your actions according to the policy.
+
+
+    # 24: Tell me about a time when you learned something on your own that later helped
+    in your professional life.
+
+
+    Answer:'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    This question is important because it allows the interviewer to gain insight into
+    your dedication to learning and advancement. Choose an example solely from your
+    personal life, and provide a brief anecdote noting the lesson you learned. Then,
+    explain in a clear and thorough manner how this lesson has translated into a usable
+    skill or practice in your position.
+
+
+    # 25: Tell me about a time when you developed a project idea at work.
+
+
+    Answer:
+
+    Choose a project idea that you developed that was typical of projects you might
+    complete in the new position. Outline where your idea came from, the type of research
+    you did to ensure its success and relevance, steps that were included in the project,
+    and the end results. Offer specific before and after statistics, to show your
+    success.
+
+
+    # 26: Tell me about a time when you took a risk on a project.
+
+
+    Answer:
+
+    Whether the risk involved something as complex as taking on a major project with
+    limited resources or time, or simply volunteering for a task that was outside
+    your field of experience, show that you are willing to stretch out of your comfort
+    zone and try new things. Offer specific examples of why something you did was
+    risky, and explain what you learned in the process – how this prepared you for
+    a job objective you later faced in your career.
+
+
+    # 27: What would you tell someone who was looking to get into this field?
+
+
+    Answer:
+
+    This question allows you to be the expert – and will show the interviewer that
+    you have the knowledge and experience to go along with any training and education
+    on your resume. Offer your knowledge as advice of unexpected things that someone
+    entering the field may encounter, and be sure to end with positive advice'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "such as the passion or dedication to the work that is required to\ntuly succeed.\n\
+    \n# 28: Tell me about a time when you didn't meet a deadline.\nAnswer:\n\nIdeally,\
+    \ this hasn't happened – if it has, make sure you use a\nminor example to illustrate\
+    \ the situation, emphasize how long ago\nit happened, and be sure that you did\
+    \ as much as you could to\nensure that the deadline was met. Additionally, be\
+    \ sure to include\nwhat you learned about managing time better or prioritizing\
+    \ tasks\nin order to meet all future deadlines.\n\n# 29: How do you eliminate\
+    \ distractions while working?\nAnswer:\n\nWith the increase of technology and\
+    \ the ease of communication,\nnew distractions arise every day. Your interviewer\
+    \ will want to\nsee that you are still to focus on work, and that your\nproductivity\
+    \ has not been affected, by an example showing a\nroutine you employ in order\
+    \ to stay on task.\n\n# 30: Tell me about a time when you worked in a position\
+    \ with a\nweekly or monthly quota to meet. How often were you\nccessful?\nAnswer:\n\
+    \nYour numbers will speak for themselves, and you must answer\nthis question honestly.\
+    \ If you were regularly met your quotas, be\nsure to highlight this in a confident\
+    \ manner and don't be shy in\npointing out your strengths in this area. If your\
+    \ statistics are less\nstellar, try to point out trends in which they increased\
+    \ toward\nthe end of your employment, and show reflection as to ways you\n improve\
+    \ in the future.\n\n# 31: Tell me about a time when you met a tough deadline,\
+    \ and\nhow you were able to complete it.\nAnswer:\n\nExplain how you were able\
+    \ to prioritize tasks, or to delegate"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: 'portions of an assignments to other team members, in order to deal with a tough
+    deadline. It may be beneficial to specify why the deadline was tough – make sure
+    it is clear that it was not a result of procrastination on your part. Finally,
+    explain how you were able to successfully meet the deadline, and what it took
+    to get there in the end.
+
+
+    # 32: How do you stay organized when you have multiple projects on your plate?
+
+
+    The interviewer will be looking to see that you can manage your time and work
+    well – and being able to handle multiple projects at once, and giving each the
+    attention it deserves, is a great mark of a worker’s competence and efficiency.
+    Go through a typical process of goal-setting and prioritizing, and explain the
+    steps to the interviewer, so he or she can see how you manage time.
+
+
+    # 33: How much time during your work day do you spend on “auto-pilot?”
+
+
+    While you may wonder if the employer is looking to see how efficient you are with
+    this question (for example, so good at your job that you don’t have to think about
+    it), but in almost every case, the employer wants to see that you’re constantly
+    thinking, analyzing, and processing what’s going on in the workplace. Even if
+    things are running smoothly, there’s usually an opportunity to make things more
+    efficient or to increase sales or productivity. Stress your dedication to ongoing
+    development, and convey that being on “auto-pilot” is not conducive to that type
+    of success.
+
+
+    # 34: How do you handle deadlines?
+
+
+    The most important part of handling tough deadlines is to prioritize tasks and
+    set goals for completion, as well as to delegate'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: 'or eliminate unnecessary work. Lead the interviewer through a general scenario,
+    and display your competency through your ability to organize and set priorities,
+    and most importantly, remain calm.
+
+
+    # 35: Tell me about your personal problem-solving process.
+
+
+    Answer:
+
+    Your personal problem-solving process should include outlining the problem, coming
+    up with possible ways to fix the problem, and setting a clear action plan that
+    leads to resolution. Keep your answer brief and organized, and explain the steps
+    in a concise, calm manner that shows you are level-headed even under stress.
+
+
+    # 36: What sort of things at work can make you stressed?
+
+
+    Answer:
+
+    As it is best to stay away from negatives, keep this answer brief and simple.
+    While answering that nothing at work makes you stressed will not very believable
+    to the interviewer, keep your answer to one generic principle such when members
+    of a team don''t keep their commitments, and then focus on a solution you generally
+    employ to tackle stress, such as having weekly status meetings or intermittent
+    deadlines along the course of a project.
+
+
+    # 37: What do you look like when you are stressed about something? How do you
+    solve it?
+
+
+    Answer:
+
+    This is a trick question – your interviewer wants to hear that you don''t look
+    any different when you''re stressed, and that you don''t allow negative emotions
+    to interfere with your productivity. As far as how you solve your stress, it is
+    best if you have a simple solution mastered, as simply taking deep breaths and
+    counting to 10 to bring yourself back to the task at hand.
+
+
+    # 38: Can you multi-task?
+
+
+    Answer:'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    Some people can, and some people can''t. The most important part of multi-tasking
+    is to keep a clear head at all times about what needs to be done, and what priority
+    each task falls under. Explain how you evaluate tasks to determine priority, and
+    how you manage your time in order to ensure that all are completed efficiently.
+
+
+    # 39: How many hours per week do you work?
+
+
+    Answer:
+
+
+    Many people get tricked by this question, thinking that more hours is better –
+    however, this may cause an employer to wonder why you have to work so many hours
+    in order to get the work done that other people can do in a shorter amount of
+    time. Give a fair estimate of how that it should take you to complete a job, and
+    explain that you are also willing to work extra whenever needed.
+
+
+    # 40: How many times per day do you check your email?
+
+
+    Answer:
+
+
+    While an employer wants to see that you are plugged into modern technology, it
+    is also important that the number of times you check your email per day is relatively
+    low – perhaps two to three times per day (dependent on the specific field you''re
+    in). Checking email is often a great distraction in the workplace, and while it
+    is important to remain connected, much correspondence can simply be handled together
+    in the morning and afternoon.
+
+
+    # 41: Describe a time when you communicated a difficult or complicated idea to
+    a coworker.
+
+
+    Answer:
+
+
+    Start by explaining the idea briefly to the interviewer, and then give an overview
+    of why it was necessary to break it down further to the coworker. Finally, explain
+    the idea in succinct steps, so the interviewer can see your communication abilities
+    and skill in simplification.'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# 42: What situations do you find it difficult to communicate in?
+
+
+    Answer:
+
+    Even great communicators will often find particular situations that are more difficult
+    to communicate effectively in, so don''t be afraid to answer this question honestly.
+    Be sure to explain why the particular situation you name difficult for you, and
+    try to choose an uncommon answer such as language barrier or in time of hardship,
+    rather than a situation such as speaking to someone of higher authority.
+
+
+    # 43: What are the key components of good communication?
+
+
+    Answer:
+
+    Some of the components of good communication include an environment that is free
+    from distractions, feedback from the listener, and revision or clarification from
+    the speaker when necessary. Refer to basic communication models where necessary,
+    and offer to go through a role-play sample with the interviewer to show your skills.
+
+
+    # 44: Tell me about a time when you solved a problem through communication?
+
+
+    Answer:
+
+    Solving problems through communication is key in the business world, so choose
+    a specific situation from your previous job in which you navigated a messy situation
+    by communicating effectively through the conflict. Explain the basis of the situation,
+    as well as the communication steps you took, and end with a discussion of why
+    communicating through the problem was so important to its resolution.
+
+
+    # 45: Tell me about a time when you had a dispute with another employee. How did
+    you resolve the situation?
+
+
+    Answer:
+
+    Make sure to use a specific instance, and explain step-by-step the scenario, what
+    you did to handle it, and how it was finally resolved. The middle step, how you
+    handled the dispute, is clearly'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: 'the most definitive – describe the types of communication you used, and how
+    you used compromise to reach a decision. Conflict resolution is an important skill
+    for any employee to have, and is one that interviewers will search for to determine
+    how likely you are to be involved in disputes, and how likely they are to be forced
+    to become involved in the dispute if one arises.
+
+
+    # 46: Do you build relationships quickly with people, or take more time to get
+    to know them?
+
+
+    Answer:
+
+    Either of these options can display good qualities, so determine which style is
+    more applicable to you. Emphasize the steps you take in relationship-building
+    over the particular style, and summarize briefly why this works for you.
+
+
+    # 47: Describe a time when you had to work through office politics to solve a
+    problem.
+
+
+    Answer:
+
+    Try to focus on the positives in this question, so that you can use the situation
+    to your advantage. Don''t portray your previous employer negatively, and instead
+    use a minimal instance (such as paperwork or a specific individual), to highlight
+    how you worked through a specific instance resourcefully. Give examples of communication
+    skills or problem-solving you used in order to achieve a resolution.
+
+
+    # 48: Tell me about a time when you persuaded others to take on a difficult task?
+
+
+    Answer:
+
+    This question is an opportunity to highlight both your leadership and communication
+    skills. While the specific situation itself is important to offer as background,
+    focus on how you were able to persuade the others, and what tactics worked the
+    best.
+
+
+    # 49: Tell me about a time when you successfully persuaded a group to accept your
+    proposal.'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# Answer:
+
+
+    This question is designed to determine your resourcefulness and your communication
+    skills. Explain the ways in which you took into account different perspectives
+    within the group, and created a presentation that would be appealing and convincing
+    to all members. Additionally, you can pump up the proposal itself by offering
+    details about it that show how well-executed it was.
+
+
+    # 50: Tell me about a time when you had a problem with another person, that in
+    hindsight, you wished you had handled differently.
+
+
+    # Answer:
+
+
+    The key to this question is to show your capabilities of reflection and your learning
+    process. Explain the situation, how you handled it at the time, what the outcome
+    of the situation was, and finally, how you would handle it now. Most importantly,
+    tell the interviewer why your previous solution create stress on the relationship
+    with the other person, or do you wish that you stood up more for what you wanted?
+    While you shouldn''t elaborate on how poorly you handled the situation before,
+    the most important thing is to show that you''ve grown and reached a deeper level
+    of understanding as a result of the conflict.
+
+
+    # 51: Tell me about a time when you negotiated a conflict between other employees.
+
+
+    # Answer:
+
+
+    An especially important question for those interviewing for a supervisory role
+    – begin with a specific situation, and explain how you communicated effectively
+    to each individual. For example, did you introduce a compromise? Did you make
+    an executive decision? Or, did you perform as a mediator and encourage the employees
+    to reach a conclusion on their own?
+
+
+    And Finally Good Luck!'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# INDEX
+
+
+    # Java / J2EE Interview Questions
+
+
+    # Architectures and Protocols
+
+
+    +   1: What are the design goals of J2EE architecture?
+
+    2: What are the roles of J2EE Architect?
+
+    3: What is the difference between architecture and design?
+
+    4: What are the activities performed in Architectural Analysis?
+
+    5: What are the activities performed in Architectural Design?
+
+    6: What are the activities performed in the object oriented design?
+
+    7: What are the components of multi-tier architecture?
+
+    8: What are the advantages of multi-tier client server architecture?
+
+    9: What are the responsibilities of the bean developer?
+
+    10: What are the responsibilities of application assembler?
+
+    11: What are the responsibilities of third party deployer?
+
+    12: What are the roles of third party software in EJB framework?
+
+    13: Explain MVC architecture.
+
+    14: Explain EAR, WAR, and JAR.
+
+    15: Explain JTA, JNDI, and JMS.
+
+    16: Explain EDI.
+
+    17: Explain EAI?
+
+    18: What is the intent for supporting XML in Java?
+
+    19: What are the protocols used for communicating between business tier and user
+    interface?
+
+    20: What are the advantages and disadvantages of HTTP protocol?
+
+    21: Explain JRMP.
+
+    22: What are the advantages and disadvantages of CORBA?
+
+    23: Explain DCOM.
+
+    24: Explain the capabilities of J2EE architecture.
+
+    25: Explain System architecture and Reference architecture.
+
+
+    # Applicability and Best Practices
+
+
+    +   26: Explain Best Practice.
+
+    27: Explain the J2EE tiers.
+
+    28: What are the best practices to be followed in the presentation layer?
+
+    29: What type of components is used in MVC?
+
+    30: What are the requirements that a J2EE system must possess to operate'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    in a global economy?
+
+
+    +   31: What are the best practices to be followed in DAO?
+
+    32: Explain Guideline.
+
+    33: What are the best practices to be followed in VO?
+
+    34: What are the best practices to be followed in session bean façade?
+
+    35: What are the benefits of Model View Controller (MVC)?
+
+    36: What are the design problems with MVC?
+
+    37: Explain the applicability of MVC.
+
+    38: Explain the importance of patterns in J2EE framework.
+
+    39: Explain Framework patterns.
+
+    40: What are the activities of the deployer?
+
+    41: What are the patterns that belong to Integration Tier?
+
+    42: Explain Presentation Tier patterns.
+
+    43: Explain Business Tier patterns.
+
+    44: Explain EIS.
+
+    45: What are the system level controls of EIS and application server?
+
+    46: Explain the Resource Adapter.
+
+    47: Explain data caching.
+
+    48: Explain Service locator.
+
+    49: Explain how to prevent performance problems.
+
+    50: Explain a security guideline.
+
+
+    # Servlets
+
+
+    +   51: Explain Servlets.
+
+    52: Explain GET and POST requests of Servlets.
+
+    53: Explain Servlet life cycle.
+
+    54: Where and how servlets get the initialization parameters?
+
+    55: How can servlets receive the value of html form data?
+
+    56: Assume that you don''t know the names of the html form fields. Is it possible
+    to retrieve the values in Servlet without knowing the form names?
+
+    57: Is it possible to invoke doGet from doPost?
+
+    58: Explain the syntax of init method.
+
+    59: What are the advantages of calling doGet method from doPost?
+
+    60: How do you send compressed web pages from Servlet to browser?
+
+    61: Explain status codes.
+
+    62: Explain the meaning of status code 200 and 404.
+
+    63: Explain sendRedirect method.
+
+    64: How can we display an error message if a particular page or servlet is not
+    available?'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: 'Java / JEE Interview Questions You''ll Most Likely Be Asked
+
+
+    +   65: What are the methods used to set header values?
+
+    66: What are the values that can be retrieved from the header?
+
+    67: Explain MIME.
+
+    68: Explain the most widely used MIME types.
+
+    69: What is a Cookie?
+
+    70: What are the advantages of Cookies?
+
+    71: How can you set and get a cookie?
+
+    72: What are the options to track visitors browsing a web page?
+
+    73: How can you store and retrieve a value from session?
+
+    74: Explain Session tracking.
+
+
+    # JSP
+
+
+    +   76: What is the purpose of JSP?
+
+    77: What are JSP constructs?
+
+    78: What are scripting elements?
+
+    79: What are the most widely used JSP objects?
+
+    80: How to get parameter value in JSP?
+
+    81: How to display the dynamic parameter value in JSP?
+
+    82: What are the predefined JSP objects other than request, session, and out?
+
+    83: Explain JSP directives.
+
+    84: Explain with an example how to use page directive.
+
+    85: Explain the page directive attributes: import, session, buffer, and extends.
+
+    86: Explain the page directive attributes: autoflush, info, errorPage, and isErrorPage.
+
+    87: What is the equivalent XML syntax for page directive?
+
+    88: How to display the dynamic parameter value in XML syntax?
+
+    89: Explain the ''include'' directive with an example.
+
+    90: What is the equivalent XML syntax for include directive?
+
+    91: What is the use of jsp:plugin element?
+
+    92: What is the use of jsp:params element?
+
+    93: What are the important points to be considered while creating a bean class?
+
+    94: How will you include a bean class in JSP?
+
+    95: How will you set the property value for a bean class?
+
+    96: How will you include a tag library in a JSP?
+
+    97: How will you include content of one JSP into another?
+
+    98: How will you forward the requests from a JSP page?'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '124 Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    +   99: How will you interpret relative URLs in the destination page?
+
+    100: How will you associate all the properties in the bean class?
+
+
+    # EJB
+
+
+    +   101: What are the classes / interfaces that must be created for the EJB component?
+
+    102: What are the types of Enterprise Java Beans?
+
+    103: Explain EJBHome interface.
+
+    104: Explain EJBObject interface.
+
+    105: What is deployment descriptor?
+
+    106: What is a bean class?
+
+    107: Explain context object.
+
+    108: What are the types of session beans?
+
+    109: What are the methods of remote interfaces?
+
+    110: What are the methods of home interfaces?
+
+    111: What are the services provided by the local and remote interfaces?
+
+    112: Explain how a session bean is exposed to the client.
+
+    113: Explain local client.
+
+    114: Explain remote client.
+
+    115: When do we have to use EJB?
+
+    116: How to manage bean persistence?
+
+    117: Explain bean managed persistence.
+
+    118: Explain container managed persistence.
+
+    119: Explain how will you create home interface of a stateless bean.
+
+    120: Explain how will you create remote interface of a stateless bean.
+
+    121: InitialContext.
+
+    122: What are the benefits of pooling in EJB container?
+
+    123: What is the benefit of using DAO between entity bean and data resource?
+
+    124: Explain the role of EJB container in managing entity bean life cycle.
+
+    125: What are the benefits of CMP?
+
+    126: What are the benefits of BMP?
+
+    127: What are the drawbacks of CMP?
+
+    128: What are the drawbacks of BMP?
+
+    129: How is persistence implemented using BMP?
+
+    130: Explain finder methods.
+
+    131: What are the states of Entity bean life cycle?
+
+    132: What are the methods invoked by the container during entity bean'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: 'Java /JEE Interview Questions You''ll Most Likely Be Asked
+
+
+    life cycle?
+
+
+    +   133: What are the uses of entity beans?
+
+
+    +   134: What are the elements specified in the deployment descriptor?
+
+
+    +   135: Explain how to create home interface for stateful session bean.
+
+
+    +   136: Explain how to create remote interface for stateful session bean.
+
+
+    +   137: Explain how to create a stateful session bean class.
+
+
+    +   138: What are accessor methods?
+
+
+    +   139: Explain EntityContext.
+
+
+    +   140: Explain getEJBHome, getEJBLocalHome, and getCallerPrinipal methods.
+
+
+    +   141: Explain getRollBack, setRollBack, and getUserTransaction methods.
+
+
+    +   142: Explain Transaction.
+
+
+    +   143: What are the transaction attributes available for container managed transaction?
+
+
+    +   144: How does container manage multiple transactions?
+
+
+    +   145: Explain JTS.
+
+
+    +   146: What are the services provided by EJB container?
+
+
+    +   147: What are the benefits of EJB framework as architecture?
+
+
+    +   148: Explain the lifecycle of session bean.
+
+
+    +   149: What information does the abstract persistence schema contain?
+
+
+    +   150: What are the types of EJB clients?
+
+
+    # Internationalization and Localization
+
+
+    +   151: What is internationalization?
+
+
+    +   152: What is localization?
+
+
+    +   153: What is a locale?
+
+
+    +   154: What are the characteristics of internationalized application?
+
+
+    +   155: What are the elements through which a locale is identified?
+
+
+    +   156: Is it possible to use java.util package for Localization?
+
+
+    +   157: Explain ResourceBundle.
+
+
+    +   158: What are the features of ResourceBundle?
+
+
+    +   159: Explain Character Sets.
+
+
+    +   160: Explain Unicode.
+
+
+    +   161: Explain UTF.
+
+
+    +   162: Explain Collation and Collator.
+
+
+    +   163: What are the attributes used in JSP to control encoding?
+
+
+    +   164: Explain Format class.
+
+
+    +   165: What are the aspects of the application that have to be varied if they
+    have to be deployed in different locales?
+
+
+    +   166: What are the font names and font styles supported in Java?'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '167: What are the features of java used to create internationalized
+
+    application?
+
+
+    168: What are the subclasses of Format class?
+
+
+    169: Explain why UTF-8 is considered the best encoding choice
+
+
+    170: What are the approaches for localizing JSP pages?
+
+
+    171: What are the advantages of creating JSP for each locale?
+
+
+    172: Explain I18N and L10N.
+
+
+    173: Explain InputStreamReader.
+
+
+    174: Explain OutputStreamWriter.
+
+
+    175: What are the advantages and disadvantages of using
+
+    ResourceBundle in JSP?
+
+
+    # Design Patterns
+
+
+    176: What are Design Patterns?
+
+
+    177: What are the benefits of Design Patterns?
+
+
+    178: Explain GoF.
+
+
+    179: What are the types of Design Patterns?
+
+
+    180: What are the various Creational Design Patterns?
+
+
+    181: Explain Singleton.
+
+
+    182: Explain Factory Method.
+
+
+    183: Explain Prototype pattern.
+
+
+    184: What are the scenarios in which you would create Abstract Factory
+
+    pattern?
+
+
+    185: What are the various structural design patterns?
+
+
+    186: Explain Proxy pattern.
+
+
+    187: What are the benefits of the Facade pattern?
+
+
+    188: What are the scenarios in which you create Adapter pattern?
+
+
+    189: Explain composite pattern.
+
+
+    190: What are the benefits of Decorator pattern?
+
+
+    191: What are the various behavioral design patterns?
+
+
+    192: Explain Strategy pattern.
+
+
+    193: What are the benefits of mediator pattern?
+
+
+    194: When will you go for Iterator pattern?
+
+
+    195: Explain Interpreter pattern.
+
+
+    196: What are the J2EE patterns associated with the command pattern?
+
+
+    197: When will you use Visitor pattern?
+
+
+    198: Explain Template Method.
+
+
+    199: Explain Chain of Responsibility.
+
+
+    200: What are the benefits of Memento and State patterns?'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# Messaging
+
+
+    +   201: What are Messages?
+
+    202: Explain middle tier.
+
+    203: Explain MOM.
+
+    204: Explain synchronous communication.
+
+    205: Explain asynchronous communication.
+
+    206: Explain JMS.
+
+    207: What are the message models supported by JMS?
+
+    208: What are the benefits of synchronous messaging?
+
+    209: What are the benefits of asynchronous messaging?
+
+    210: What are the scenarios for which we go for asynchronous messaging?
+
+    211: What are the advantages of JMS?
+
+    212: What are the components of JMS?
+
+    213: How are exceptions handled in JMS?
+
+    214: How are messages acknowledged in JMS?
+
+    215: Explain the message headers of JMS.
+
+    216: What are the body formats of JMS?
+
+    217: What are the types of administered objects in JMS?
+
+    218: What are the objects used to receive and create messages in JMS?
+
+    219: Explain Message Consumer.
+
+    220: Explain Message Producer.
+
+    221: Explain Message Selector.
+
+    222: Explain Message Listener.
+
+    223: What are the classes, interfaces, and steps required for PTP communication?
+
+    224: What are the classes, interfaces, and steps required for Pub/Sub communication?
+
+    225: Explain MDB.
+
+
+    # Security and Legacy Connectivity
+
+
+    +   226: What are the various security threats to enterprise resources?
+
+    227: Explain Authentication and Authorization.
+
+    228: Explain some of the security packages available in Java.
+
+    229: What are the actions performed by Java Security Manger in Applets?
+
+    230: What are the security restrictions in Java applets?
+
+    231: What are the system properties that applet cannot read?
+
+    232: What are the policies for access control?
+
+    233: What are the authenticated mechanisms supported in J2EE?
+
+    234: Explain encrypted communication.'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '235: Explain Digital Certificates.
+
+    236: Explain Secure Socket Layer.
+
+    237: What are the security checks performed by web container?
+
+    238: Explain legacy connectivity using Java.
+
+    239: Explain the authentication in EIS.
+
+    240: Explain CSI.
+
+    241: Explain EIS adapter.
+
+    242: Explain legacy connectivity using J2EE connector.
+
+    243: Explain Resource Adapter.
+
+    244: Explain System contract.
+
+    245: Explain the integration strategy of JCA.
+
+    246: What are the types of System Contract?
+
+    247: What are the ways to configure security properties?
+
+    248: What are the sections of CCI API?
+
+    249: Explain ManagedConnectionFactory and ManagedConnection.
+
+    250: What are the drawbacks of DB integrity constraints?'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: 'Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+
+    # HR Questions
+
+
+    +   1: Where do you find ideas?
+
+
+    +   2: How do you achieve creativity in the workplace?
+
+
+    +   3: How do you push others to create ideas?
+
+
+    +   4: Describe your creativity.
+
+
+    +   5: Would you rather receive more authority or more responsibility at work?
+
+
+    +   6: What do you do when someone in a group isn''t contributing their share?
+
+
+    +   7: Tell me about a time when you made a decision that was outside of your
+    authority.
+
+
+    +   8: Are you comfortable going to supervisors with disputes?
+
+
+    +   9: If you had been in charge of your last job, what would you have done differently?
+
+
+    +   10: Do you believe employers should praise or reward employees for a job well
+    done?
+
+
+    +   11: What do you believe is the most important quality a leader can have?
+
+
+    +   12: Tell me about a time when an unforeseen problem arose. How do you handle
+    it?
+
+
+    +   13: Can you give me an example of a time when you were able to improve X objective
+    at your previous job?
+
+
+    +   14: Tell me about a time when a supervisor did not provide specific enough
+    direction on a project.
+
+
+    +   15: Tell me about a time when you were in charge of leading a project.
+
+
+    +   16: Tell me about a suggestion you made to a former employer that was later
+    implemented.
+
+
+    +   17: Tell me about a time when you thought of a way something in the workplace
+    could be done more efficiently.
+
+
+    +   18: Is there a difference between leading and managing people – which is your
+    greater strength?
+
+
+    +   19: Do you function better in a leadership role, or as a worker on a team?
+
+
+    +   20: Tell me about a time when you discovered something in the workplace that
+    was disrupting your (or others) productivity – what did you do about it?
+
+
+    +   21: How do you perform in a job with clearly-defined objectives and goals?
+
+
+    +   22: How do you perform in a job where you have great decision-making power?
+
+
+    +   23: If you saw another employee doing something dishonest or unethical, what
+    would you do?'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# Java / JEE Interview Questions You''ll Most Likely Be Asked
+
+
+    +   24: Tell me about a time when you learned something on your own that later
+    helped in your professional life.
+
+    25: Tell me about a time when you developed a project idea at work.
+
+    26: Tell me about a time when you took a risk on a project.
+
+    27: What would you tell someone who was looking to get into this field?
+
+    28: Tell me about a time when you didn''t meet a deadline.
+
+    29: How do you eliminate distractions while working?
+
+    30: Tell me about a time when you worked in a position with a weekly monthly quota
+    to meet. How often were you successful?
+
+    31: Tell me about a time when you met a tough deadline, and how you were able
+    to complete it.
+
+    32: How do you stay organized when you have multiple projects on your plate?
+
+    33: How much time during your work day do you spend on “auto-pilot?”
+
+    34: How do you handle deadlines?
+
+    35: Tell me about your personal problem-solving process.
+
+    36: What sort of things at work can make you stressed?
+
+    37: What do you look like when you are stressed about something? How do you solve
+    it?
+
+    38: Can you multi-task?
+
+    39: How many hours per week do you work?
+
+    40: How many times per day do you check your email?
+
+    41: Describe a time when you communicated a difficult or complicated idea to a
+    coworker.
+
+    42: What situations do you find difficult to communicate in?
+
+    43: What are the key components of good communication?
+
+    44: Tell me about a time when you solved a problem through communication?
+
+    45: Tell me about a time when you had a dispute with another employee. How did
+    you resolve the situation?
+
+    46: Do you build relationships quickly with people, or take more time to get to
+    know them?
+
+    47: Describe a time when you had to work through office politics to solve a problem.
+
+    48: Tell me about a time when you persuaded others to take on a difficult task?
+
+    49: Tell me about a time when you successfully persuaded a group to accept your
+    proposal.
+
+    50: Tell me about a time when you had a problem with another person, that, in
+    hindsight, you wished you had handled differently.'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '51: Tell me about a time when you negotiated a conflict between other employees.'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Some of the following titles might also be handy:
+
+
+    +   1. .NET Interview Questions You''ll Most Likely Be Asked
+
+    2. 200 Interview Questions You''ll Most Likely Be Asked
+
+    3. Access VBA Programming Interview Questions You''ll Most Likely Be Asked
+
+    4. Adobe ColdFusion Interview Questions You''ll Most Likely Be Asked
+
+    5. Advanced Excel Interview Questions You''ll Most Likely Be Asked
+
+    6. Advanced Java Interview Questions You''ll Most Likely Be Asked
+
+    7. Advanced AS4 Interview Questions You''ll Most Likely Be Asked
+
+    8. AJAX Interview Questions You''ll Most Likely Be Asked
+
+    9. Algorithms Interview Questions You''ll Most Likely Be Asked
+
+    10. Android Development Interview Questions You''ll Most Likely Be Asked
+
+    11. Ant & Maven Interview Questions You''ll Most Likely Be Asked
+
+    12. Apache Web Server Interview Questions You''ll Most Likely Be Asked
+
+    13. Artificial Intelligence Interview Questions You''ll Most Likely Be Asked
+
+    14. ASP.NET Interview Questions You''ll Most Likely Be Asked
+
+    15. Automated Software Testing Interview Questions You''ll Most Likely Be Asked
+
+    16. Base SAS Interview Questions You''ll Most Likely Be Asked
+
+    17. BEA WebLogic Server Interview Questions You''ll Most Likely Be Asked
+
+    18. C & C++ Interview Questions You''ll Most Likely Be Asked
+
+    19. C# Interview Questions You''ll Most Likely Be Asked
+
+    20. C++ Internals Interview Questions You''ll Most Likely Be Asked
+
+    21. CCNA Interview Questions You''ll Most Likely Be Asked
+
+    22. Cloud Computing Interview Questions You''ll Most Likely Be Asked
+
+    23. Computer Architecture Interview Questions You''ll Most Likely Be Asked
+
+    24. Computer Networks Interview Questions You''ll Most Likely Be Asked
+
+    25. Core Java Interview Questions You''ll Most Likely Be Asked
+
+    26. Data Structures & Algorithms Interview Questions You''ll Most Likely Be Asked
+
+    27. Data Warehousing Interview Questions You''ll Most Likely Be Asked
+
+    28. EJB 3.0 Interview Questions You''ll Most Likely Be Asked
+
+    29. Entity Framework Interview Questions You''ll Most Likely Be Asked
+
+    30. Fedora & RHEL Interview Questions You''ll Most Likely Be Asked
+
+    31. GNU Development Interview Questions You''ll Most Likely Be Asked
+
+    32. Hibibernate, Spring & Struts Interview Questions You''ll Most Likely Be Asked
+
+    33. HTML, XML and CSS Interview Questions You''ll Most Likely Be Asked
+
+    34. HTML5 Interview Questions You''ll Most Likely Be Asked
+
+    35. IBM WebSphere Application Server Interview Questions You''ll Most Likely Be
+    Asked
+
+    36. iOS SDK Interview Questions You''ll Most Likely Be Asked
+
+    37. Java / J2EE Design Patterns Interview Questions You''ll Likely Be Asked
+
+    38. Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+    39. Java Messaging Service Interview Questions You''ll Most Likely Be Asked
+
+    40. JavaScript Interview Questions You''ll Most Likely Be Asked
+
+    41. JavaFaces Interview Questions You''ll Most Likely Be Asked
+
+    42. JDBC Interview Questions You''ll Most Likely Be Asked
+
+    43. jQuery Interview Questions You''ll Most Likely Be Asked
+
+    44. JSP-Servlet Interview Questions You''ll Most Likely Be Asked
+
+    45. Junit Interview Questions You''ll Most Likely Be Asked'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: 'Java/JEE Interview Questions You''ll Most Likely Be Asked
+
+
+    +   46. Linux Commands Interview Questions You''ll Most Likely Be Asked
+
+    47. Linux Interview Questions You''ll Most Likely Be Asked
+
+    48. Linux System Administrator Interview Questions You''ll Most Likely Be Asked
+
+    49. Mac OS X Snow Leopard Interview Questions You''ll Most Likely Be Asked
+
+    50. Microsoft Access Interview Questions You''ll Most Likely Be Asked
+
+    51. Microsoft Excel Interview Questions You''ll Most Likely Be Asked
+
+    52. Microsoft PowerPoint Interview Questions You''ll Most Likely Be Asked
+
+    53. Microsoft Word Interview Questions You''ll Most Likely Be Asked
+
+    54. MySQL Interview Questions You''ll Most Likely Be Asked
+
+    55. NetSuite Interview Questions You''ll Most Likely Be Asked
+
+    56. Networking Interview Questions You''ll Most Likely Be Asked
+
+    57. OOPS Interview Questions You''ll Most Likely Be Asked
+
+    58. Operating Systems Interview Questions You''ll Most Likely Be Asked
+
+    59. Oracle DBA Interview Questions You''ll Most Likely Be Asked
+
+    60. Oracle E-Business Suite Interview Questions You''ll Most Likely Be Asked
+
+    61. ORACLE PL/SQL Interview Questions You''ll Most Likely Be Asked
+
+    62. Perl Programming Interview Questions You''ll Most Likely Be Asked
+
+    63. PHP Interview Questions You''ll Most Likely Be Asked
+
+    64. PMP Interview Questions You''ll Most Likely Be Asked
+
+    65. Python Interview Questions You''ll Most Likely Be Asked
+
+    66. RESTFUL Java Web Services Questions You''ll Most Likely Be Asked
+
+    67. Ruby Interview Questions You''ll Most Likely Be Asked
+
+    68. Ruby Rails Interview Questions You''ll Most Likely Be Asked
+
+    69. SAP ABAP Interview Questions You''ll Most Likely Be Asked
+
+    70. SAP HANA Interview Questions You''ll Most Likely Be Asked
+
+    71. SAS Programming Guidelines Interview Questions You''ll Most Likely Be Asked
+
+    72. Selenium Testing Tools Interview Questions You''ll Most Likely Be Asked
+
+    73. Silverlight Interview Questions You''ll Most Likely Be Asked
+
+    74. Software Repositories Interview Questions You''ll Most Likely Be Asked
+
+    75. Software Testing Interview Questions You''ll Most Likely Be Asked
+
+    76. SQL Server Interview Questions You''ll Most Likely Be Asked
+
+    77. Tomcat Interview Questions You''ll Most Likely Be Asked
+
+    78. UML Interview Questions You''ll Most Likely Be Asked
+
+    79. Unix Interview Questions You''ll Most Likely Be Asked
+
+    80. Unix Shell Programming Interview Questions You''ll Most Likely Be Asked
+
+    81. VB.NET Interview Questions You''ll Most Likely Be Asked
+
+    82. Windows Server 2008 R2 Interview Questions You''ll Most Likely Be Asked
+
+    83. XLQP, XSLT, XPath, XFORMS &Query Interview Questions You''ll Most Likely Be
+    Asked
+
+    84. XML Interview Questions You''ll Most Likely Be Asked
+
+
+    # For complete list visit
+
+
+    # www.vibrantpublishers.com'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# NOTES'
+  merge: -1
+  pgno: 135
