@@ -1,0 +1,4866 @@
+- img_proc: true
+  md: '# LEARN CORE JAVA
+
+
+    ![](img/bdd382ccd4d5d3945e8ba2af128b8c72_0_0.png)
+
+
+    By Praveen Kumar
+
+
+    # LEARN BASIC CONCEPT OF JAVA
+
+
+    # JAVA FRONT END PROGRAMMING
+
+
+    # JAVA BACK END PROGRAMMING'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Contents
+
+
+    +   - Introduction to Java
+
+    - Features of oops
+
+    - Datatypes
+
+    - Decision Making Statements
+
+    - Classes and Objects
+
+    - String Handling
+
+    - Interface
+
+    - Packages
+
+    - Exception Handling
+
+    - I/O Stream
+
+    - GUI
+
+    - Applet
+
+    - Database Connectivity
+
+    - Thread in Java
+
+    - Socket Programming
+
+    - Collections Framework'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# ACKNOWLEDGEMENT
+
+
+    This book is an outcome of the encouragement, guidance, help, and assistance provided
+    to me by my colleagues, Sr. faculties, Tech-friends, and my family members.
+
+
+    Here, I would like to take this opportunity to express my deep sense of gratitude
+    to everybody whose roles was crucial in the successful completion of this book,
+    especially my students.
+
+
+    The primary goal is to provide a sufficient introduction and details of the Core
+    Java so that the students can have efficient knowledge about Core Java. Any errors
+    and inaccuracies are my responsibility and any suggestions in this regard are
+    warmly welcomed!
+
+
+    Finally, I would like to thank the Kindle Direct Publishing team and Amazon team
+    for their enthusiastic online support and guidance in bringing out this book.
+
+
+    I hope that the readers read this book and finds it useful in learning the concepts
+    of Core Java Programming in a fun loving way.
+
+
+    Thank You!!
+
+
+    # PREFACE
+
+
+    # Knowledge is power. Conquer the Knowledge.
+
+
+    This textbook is intended as a text for an explanatory course on Core Java basics
+    concepts for School students, Graduate (B.Tech, BCA, and BSc), and Post Graduate
+    (MCA, MSc) students of several universities across the world.
+
+
+    This book is an introduction to the core concept of java to learn java in a playful
+    environment. I hope you enjoy this book reading and doing practices as much I
+    enjoyed writing it.
+
+
+    Copyright material
+
+
+    # Play With Java (Learn Core Java)
+
+
+    Copyright © 2022-23 Praveen Kumar, All Right Reserved.
+
+
+    No part of this book may be reproduced, or stored in a retrieval system, or transmitted
+    in any form or by any means, electronic, mechanical, photocopying, recording,
+    or otherwise, without express written permission of the publisher.
+
+
+    For information about this title or to order other books and/or electronic media,
+    contact the publisher:
+
+
+    Praveen Kumar'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# About the Author
+
+
+    Praveen Kumar
+
+    Assistant Professor, Department of MCA,
+
+    Patna Women’s College, Patna University,
+
+    Patna, India'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Introduction to Java
+
+
+    Java is related to C++, which is a direct descendant of C. From C, Java derives
+    its syntax. Since the C language is not platform-independent, we can''t develop
+    applications with the help of it. For application development, we need a language
+    that is platform-independent i.e. runs on different machines having different
+    architectures. In java, both hardware and software coding are independent of each
+    other.
+
+
+    Java was first developed by Microsystem in 1991 and it was named Oak. In 1995,
+    its first version was released and it was named Java. It was in the form of gadgets
+    used in different machines like washing machine etc.
+
+
+    For working on java, we have to install JDK(Java Development Kit) version 1. x
+    i.e. 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8. It is freeware. When JDK is installed,
+    three components are installed i.e. JVM(Java Virtual Machine), JRE(Java Runtime
+    Environment), an API(Application Programming Interface)
+
+
+    JVM is used to compile, execute and run the program.
+
+
+    JRE is used to run a program in different programming environments i.e. on different
+    platforms.
+
+
+    API is the pre-defined library used by the programmer.
+
+
+    # End User
+
+
+    ![](img/bdd382ccd4d5d3945e8ba2af128b8c72_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Figure: Java Interaction
+
+
+    The end-user interacts with the program, the program interacts with the JVM, JRE,
+    and API and these interact with an operating system, and then finally operating
+    system interacts with hardware.
+
+
+    Java is both a compiler and interpreter based language. When Java code is compiled,
+    source code is converted into byte code(a highly optimized set of instructions)
+    and after compiling, byte code is converted to machine code which is done by an
+    JIT(Just-In-Time).
+
+
+    ![](img/bdd382ccd4d5d3945e8ba2af128b8c72_5_0.png)
+
+
+    # Figure: Java Program Compile and Run phases
+
+
+    The java source code has the file extension .java and it is compiled to form byte
+    code with file extension .class and this byte is machine independent and it is
+    changed to machine code(which is machine dependent) by Just-In-Time(JIT) compiler
+    and it is interpreted to generate output. Therefore, because of this executable
+    middle layer code i.e. byte code, java is a platform independent language.
+
+
+    # Features of Java
+
+
+    The main features of java are:-
+
+
+    +   - Easy to code, easy to learn.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '+   - It is platform-independent/portable/architectural-neutral/language i.e.
+    “Write once
+
+
+    +   - It is an Object-oriented Programming Language i.e. based on classes and
+    objects. (Discussed later in detail). It follows the 100% OOPs features.
+
+
+    +   - It provides web-enabled technologies. For this reason, nowadays, java is
+    known as a web-enabled language. Some Web-enabled technologies are java applets,
+    JSP (Java Server Page), Servlets, etc.
+
+
+    +   - An applet is a special kind of program that is designed to be transmitted
+    over the internet and automatically executed by a Java-compatible web browser.
+    An applet is downloaded on demand, without further interaction with the user.
+    If the user clicks the link that contains an applet, the applet will be automatically
+    downloaded and run in the browser.
+
+
+    +   - A servlet is a small program that executes on the server. Just as applets
+    dynamically extend the functionality of a web browser, servlets dynamically extend
+    the functionality of a web server.
+
+
+    +   - It is used for Network Programming/Socket Programming i.e. multiple clients
+    can work on a server. (Discussed later in detail)
+
+
+    +   - It is used for distributed system software i.e. multiple clients can work
+    on multiple servers.
+
+
+    +   - **Multithreading** Java allows us to write programs that do many things
+    simultaneously. The Java run-time system comes with an elegant yet sophisticated
+    solution for multiprocess'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'synchronization that enables us to construct smoothly running interactive systems.
+
+
+    +   * Security- Java achieved protection against viruses by confining an applet
+    to the Java execution environment and not allowing access to other parts of the
+    computer.
+
+
+    +   * Robust Programming Language- It means error handling capabilities. It not
+    only checks the code at compile-time but also at run-time.
+
+
+    +   * Garbage Collection- Java releases unused objects from memory. (Java handles
+    memory with the help of garbage collection).
+
+
+    It is a case-sensitive language.
+
+
+    Java is a type-safe language i.e. there is no involvement of pointer in it.
+
+
+    Despite going through so many processes after compilation, java does not take
+    much time to execute. This is because of the Artificial Intelligence.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Features of oops
+
+
+    Object-oriented programming deals with classes and objects.
+
+
+    Objects are real-world entities that have certain features and functionalities.
+    A class is a factory or template of an object. All the objects which belong to
+    the features defined by any class are the objects of that class.
+
+
+    As java is based on 100% oops features, it eliminates the other features into
+    only three main features i.e. Encapsulation, Polymorphism, and Inheritance.
+
+
+    Encapsulation is defined as the process of enclosing one or more details from
+    the outside world through access rights. It says how much access should be given
+    to particular details. Encapsulation also includes abstraction which says what
+    details are to be visible and encapsulation provides the level of access right
+    to visible details i.e. it implements the desired level of abstraction.
+
+
+    Eg:- When we switch to Bluetooth, we can connect to another mobile but are not
+    able to access the other mobile features like dialing a number, accessing our
+    inbox, etc. This is because the Bluetooth feature is given some level of abstraction.
+
+
+    Polymorphism can be defined as the ability to do the same operation with different
+    types of input. More precisely we can say it as ‘many forms of a single entity.
+    This plays a vital role in the concept of OOPs.(Discussed later in detail)
+
+
+    Eg:- A mobile has a camera to click a picture and the same mobile is having panorama
+    mode available in the camera, so functionality would be the same with mode.
+
+
+    Inheritance means the ability to extend the functionality from the base entity
+    to a new entity belonging to the same group. This will help us to reuse the functionality
+    which is defined before.(Discussed later in detail)
+
+
+    Eg:- Basic mobile functionality is to send a message, dial, and receive a call.
+    So the brands of mobile are the basic functionality and adding their new features
+    to their respective band.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "![](img/bdd382ccd4d5d3945e8ba2af128b8c72_9_0.png)\n\nFigure: Inheritance\n\n\
+    # Basics of Java Programming\n\nBefore working in java, we must set the path.\n\
+    \nSteps:-\n\n+   - Open ‘This PC’ and click on ‘System Properties’.\n- Click on\
+    \ ‘Advanced system settings and click ‘Environment Variables under the ‘Advanced’\
+    \ tab’\n- Click on ‘New’ and type ‘path’ under the variable name and variable\
+    \ value, type the actual path where the java is installed. By default, it is installed\
+    \ in C:\\Program Files (x86), so, change your path to ‘C:\\Program Files (x86)\\\
+    Java\\jdk1.7.0_09\\bin'\n\n# Sample Program\n\n```\nclass first_prog\n{\n    public\
+    \ static void main(String[] arg)\n    {\n        System.out.println(\"Hello\"\
+    );\n    }\n}\n```"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'Write the following code in notepad and save it as first_prog.java. The name
+    of generated byte code is the same as a class name. Therefore to avoid ambiguity,
+    we should save our program with a class name.
+
+
+    Open the command prompt, and go to the location where you have saved your program.
+
+
+    Type javac <filename.java> i.e. javac first_prog.java to compile the program and
+    press enter. If there is an error in the program, it will be listed there.
+
+
+    Now type java <classname> i.e. java first_prog to execute the program and press
+    enter. You will get output as ''Hello''.
+
+
+    Explanation:-
+
+
+    +   * class keyword is used to define a class.
+
+
+    +   * public keyword is used in an access specifier(discussed later in detail)
+    which is used with a function so that it can be called from anywhere.
+
+
+    +   * static keyword is used with function so that there is no need to create
+    an object i.e. it does not require an object for calling.
+
+
+    +   * void keyword is used as a return type. It does not return any value.
+
+
+    +   * keywords are always written in lower case.
+
+
+    +   * main() is a pre-defined method from where the execution of the program starts.
+    An anonymous object is acknowledged by a compiler to call the main function.
+
+
+    +   * String[] is a datatype and also a class. The square bracket indicates that
+    it is an array. It is used for command-line arguments i.e. we can pass arguments
+    during run time.
+
+
+    +   * System is a pre-defined class.
+
+
+    +   * We write pre-defined class as first letter capital and followed by word
+    first letter capital. Eg:- PrintStream
+
+
+    +   * out is a pre-defined object of the class System.
+
+
+    +   * We write pre-defined objects in lower case.
+
+
+    +   * print() and println() are the pre-defined methods of a class system.
+
+
+    +   * We write pre-defined methods as first letter small and followed by word
+    first letter capital. Eg:- getChar()'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# # Datatypes
+
+
+    Datatype refers to the behavior of data elements i.e. what type of data it is
+    i.e. whether integer, string, etc. It also specifies the operations performed
+    on it like we can''t perform mathematical operations on string datatype and we
+    can''t concatenate integer datatypes.
+
+
+    It is of two types:-
+
+
+    +   1. Primitive Datatype
+
+    2. Reference Datatype/Derived Datatype/Abstract Datatype
+
+
+    A primitive data type is of value type and abstract/derived data is of reference
+    type i.e. pointer which means it contains the address of value stored in it.
+
+
+    # In case of primitive,
+
+
+    ```
+
+    int a=5;
+
+    ```
+
+
+    ![](img/bdd382ccd4d5d3945e8ba2af128b8c72_11_0.png)
+
+
+    # In case of reference,
+
+
+    ```
+
+    Integer a=5;
+
+    ```
+
+
+    ![](img/bdd382ccd4d5d3945e8ba2af128b8c72_11_1.png)
+
+
+    | Primitive Datatype | Reference Datatype |
+
+    |---|---|
+
+    | byte | Byte |
+
+    | short | Short |'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '| int | Integer |
+
+    | long | Long |
+
+    | char | Character |
+
+    | float | Float |
+
+    | double | Double |
+
+    | boolean | Boolean |
+
+
+    There is an additional reference datatype called **String.**.
+
+    Conversion of a primitive datatype to its corresponding reference type is called
+    **boxing** whereas conversion of a reference datatype to its corresponding primitive
+    type is called **unboxing**. These reference types of its corresponding primitive
+    datatype are classes. Eg:- int belongs to the Integer class, float belongs to
+    the Float class, and so on. These belong to the java.lang package i.e. java.lang.Integer,
+    java.lang.Float and so on. Packages are the collection of classes. (Discussed
+    later in detail)
+
+
+    These classes are known as the **Wrapper class** and the objects of these classes
+    are needed to be instantiated.
+
+
+    Eg:- Integer a=new Integer(5);
+
+
+    A string is a **special wrapper class.**
+
+
+    If reference data types are used without creating objects i.e. as primitive data
+    types, then these are called **literals.**
+
+
+    Integer a=5; //Integer literal
+
+
+    Integer a=new Integer(5); //Integer wrapper class'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '```
+
+    if<condition>
+
+    {
+
+    if<condition>
+
+    {
+
+    statement(s);
+
+    }
+
+    else
+
+    ```'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "```\n{\n  statement(s);\n}\n```\n\nExample of if statement:-\n\n```\nclass\
+    \ greater {\n  public static void main(String[] arg) {\n    int a=5,b=6;\n   \
+    \ if(a>b) {\n      System.out.println(\"a+\" is greater\");\n    }\n    else if(b>a)\
+    \ {\n      System.out.println(\"b+\" is greater\");\n    }\n    else {\n     \
+    \ System.out.println(\"Both are equal\");\n    }\n  }\n}\n```\n\nOUTPUT:-nE:\\\
+    java\\new_java>javac greater.java\nE:\\java\\new_java>java greater\n6 is greater\n\
+    \n# Switch case\n\nswitch case is used when multiple conditions are needed to\
+    \ be evaluated. An integer or character constant is matched with multiple possible\
+    \ ones. For each condition, we define one case with an integer or character constant.\
+    \ The case with the constant matches are executed. The last statement of every\
+    \ case is a break. The moment a program encounters a break statement, it exits\
+    \ from the witch case body. It also follows the same syntax as the C language."
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "Syntax:-\n\n```\nswitch(<variable/expression>)\n{\n    case <constant-1>:\n\
+    \        statement(s);\n        break;\n    case <constant-2>:\n        statement(s);\n\
+    \        break;\n    -\n    -\n    case <constant-n>:\n        statement(s);\n\
+    \        break;\n    default:\n        statement(s);\n}\n```\n\nExample of switch\
+    \ case:-\n\n```\nclass exswitch\n{\n    public static void main(String[] arg)\n\
+    \    {\n        int day=3;\n        switch(day)\n        {\n            case 1:System.out.println(\"\
+    Sunday\");\n                break;\n            case 2:System.out.println(\"Monday\"\
+    );\n                break;\n            case 3:System.out.println(\"Tuesday\"\
+    );\n                break;\n            case 4:System.out.println(\"Wednesday\"\
+    );\n                break;\n            case 5:System.out.println(\"Thursday\"\
+    );\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '```
+
+    break;
+
+    case 6:System.out.println("Friday");
+
+    break;
+
+    case 7:System.out.println("Saturday");
+
+    break;
+
+    default:System.out.println("Invalid Choice");
+
+    }
+
+    }
+
+    ```
+
+
+    OUTPUT:
+
+    :\java\new_java->javacexsswitch.java
+
+    :\java\new_java->javaexsswitch
+
+
+    Tuesday
+
+
+    # Looping
+
+
+    There may be cases when we need to execute one or a set of statements multiple
+    times as per the given condition. In such cases, we can use loops to execute the
+    statements as many times as required. Java includes for, while, do-while, and
+    for each....in loops.
+
+
+    +   - for loop:-
+
+
+    ```
+
+    for(<initialization>;<condition><step value>)
+
+    {
+
+    //body
+
+    }
+
+    ```
+
+
+    +   - while loop:-
+
+
+    ```
+
+    while(<condition>)
+
+    {
+
+    //body
+
+    }
+
+    ```
+
+
+    +   - do-while loop:-
+
+
+    ```
+
+    do
+
+    {
+
+    //body
+
+    while(<condition>);
+
+    ```
+
+
+    +   - foreach...in loop:-
+
+
+    This loop is mostly used in array(discussed later in detail)
+
+    foreach(&<localvariable>::&&;Arrayname">)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "```\n{\n  //body\n  Loops can also be nested.\n  Example of looping:-\n  class\
+    \ exLoop {\n    public static void main(String[] arg) {\n      for(int i=1;i<=5;i++)\
+    \ {\n        for(int j=1;j<=i;j++) {\n          System.out.print(\"*\");\n   \
+    \     }\n        System.out.println();\n      }\n    }\n  }\n}\nOUTPUT:-nE:\\\
+    java\\new_java>javac exLoop.java\nE:\\java\\new_java>java exLoop\n```\n\n* **\n\
+    \n***\n\n****\n\n*****"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# Classes and Objects\n\nWe have already discussed the theory of classes and\
+    \ objects. Let us illustrate it with the help of a program.\n\nA class is declared\
+    \ by the use of the class keyword.\n\nSyntax-\n\n```\nclass <classname>\n{\n \
+    \ <type> <instance-variable1>;\n  <type> <instance-variable2>;\n  .\n  <type>\
+    \ <instance-variableN>\n  <access-specifier><returnt><method1>([parameter-list])\n\
+    \  {\n    //body\n  }\n  <access-specifier><returnt><method2>([parameter-list])\n\
+    \  {\n    //body\n  }\n  .\n  <access-specifier><returnt><methodN>([parameter-list])\n\
+    \  {\n    //body\n  }\n```\n\nThe variables are referred to as instance variables\
+    \ because each instance of the class contains its copy and unique of these variables.\
+    \ Therefore, the data for one object is separate and unique from the data for\
+    \ another. The instance variables are acted upon and accessed by the methods defined\
+    \ for that class. We can say that it is the methods that determine how a class'\
+    \ data can be used. The methods and variables defined within a class are members\
+    \ of the class.\n\n# Creating Objects:"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# We need to create an object to access the members of the class.
+
+    The process of the creation of an object is called instantiation.
+
+
+    Syntax:-
+
+
+    ```
+
+    <classname><objectname>=new <classname>();
+
+    ```
+
+
+    Here, the class name is the name of the class, object name is the name of the
+    object. A **new** keyword is used to instantiate the object i.e. space is allocated
+    in memory and returns a reference to it. class name() is the default constructor
+    that is used to initialize the instance of the object. The default constructor
+    is created and is automatically called.
+
+
+    # Methods:
+
+
+    We have used many pre-defined methods till now. Methods can also be user-defined
+    i.e. functionality is defined by the users.
+
+
+    # The syntax for defining a method:-
+
+
+    ```
+
+    <access-specifier> <returntype> <methodN>([{parameter-list}]) //Function Signature
+
+    {
+
+    //definition(process area)
+
+    }
+
+    ```
+
+
+    **access-specifier** can be **public, private, or protected** which determines
+    where the method can be accessed(discussed later in detail). Return type determines
+    whether the method is returning a value or not. method name can be any valid identifier
+    and the parameter list is optional. This whole line is called function signature.
+
+
+    Different ways of function signature:
+
+
+    +   - no parameter no return
+
+    - no parameter with return
+
+    - with parameter with return
+
+    - with parameter no return
+
+
+    # **Examples:**
+
+
+    +   - no parameter no return
+
+    - no parameter with return
+
+    - with parameter with return
+
+    - with parameter no return
+
+
+    # **static keyword:**'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'When member is declared static, it can be accessed before any object of a class
+    is created, and without any reference to any object. We can declare methods and
+    variables to be static. The most common example of a static member is the main().
+
+
+    Instance variables declared as static, essentially, global variables. When objects
+    of its class are declared, no copy of the static variable is made. all instances
+    of the class share the same static variable.
+
+
+    The static method can access only static data and it can call other static variables.
+    Static block can also be declared to initialize static variables. It gets executed
+    once when the class is first loaded.
+
+
+    Example:
+
+
+    ```
+
+    class exstatic
+
+    {
+
+    static int a=3; //static variables are used as global variable
+
+    static int b;
+
+    int c;
+
+    static void method1(int x)
+
+    {
+
+    System.out.println("x="+x); //local variable can be used
+
+    System.out.println("a="+a);
+
+    System.out.println("b="+b);
+
+    }
+
+    //System.out.println("c="+c); //Error, c is an instance variable, therefore can''t
+    be used here
+
+    }
+
+    static
+
+    {
+
+    System.out.println("Inside static block");
+
+    b=4; //static variable b got initialized
+
+    }
+
+    public static void main(String[] arg)
+
+    {
+
+    method1(45);
+
+    }
+
+    OUTPUT:
+
+    E:\java\new_java>javac exstatic.java
+
+    ```'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "```\nE:\\java\\new_java>java exstatic\n```\n\n```\nInside static block\n```\n\
+    \n```\nx=45\n```\n\n```\na=3\n```\n\n```\nb=12\n```\n\nOutside of the class in\
+    \ which static members are defined, static methods and variables can be used independently\
+    \ of any object. This is done by specifying the name of their class followed by\
+    \ the dot operator. i.e. class name.method()\n\nExample:\n\n```\nclass exst1\n\
+    {\n    static int a=42;\n    static int b=49;\n    static void callme() {\n  \
+    \      System.out.println(\"a=\"+a);\n    }\n}\n```\n\n```\nclass exst2\n{\n \
+    \   public static void main(String[] arg) {\n        exst1.callme();\n       \
+    \ System.out.println(\"b=\"+exst1.b);\n    }\n}\n```\n\n```\nOUTPUT:\nE:\\java\\\
+    new_java>javac exst2.java\nE:\\java\\new_java>java exst2\na=42\nb=49\n```\n\n\
+    # Nested and Inner Class:\n\nWhen a class is defined within another class, such\
+    \ classes are known as nested classes. The scope of a nested class is bounded\
+    \ by the scope of its enclosing class."
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'There are two types of nested classes: static and non-static. A static nested
+    class has the static modifier applied. Because it is static, it must access the
+    members of its enclosing class directly. Because of this restriction, static nested
+    classes are seldom used.
+
+
+    The most important type of nested class is the inner class. An inner class is
+    a non-static nested class. It has access to all of the variables and methods of
+    its outer class and may refer to them directly in the same way that other non-static
+    members of the outer class do. Thus, an inner class is fully within the scope
+    of its enclosing class.
+
+
+    The java compiler will give an error message if any code outside of class outer
+    attempts to instantiate inner class.
+
+
+    Example:
+
+
+    ```
+
+    class outer {
+
+    int o_var=100;
+
+    void test() {
+
+    inner=new inner();
+
+    in.display(); //Members of inner class can be accessed through object, but not
+    directly
+
+    show_y();
+
+    }
+
+    class inner {
+
+    y y=10;
+
+    void display() {
+
+    System.out.println("Outer variable="+o_var); //Members of outer class can be used
+    directly in inner class
+
+    }
+
+    void show_y() {
+
+    inner i1=new inner();
+
+    System.out.println("y="+i1.y);
+
+    ///System.out.println("y="+y); // y is a member of inner class, therefore, this
+    statement gives error
+
+    ```'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "```\n}\n}\nclass exnested\n{\n    public static void main(String[] arg)\n{\n\
+    \        outer o=new outer();\n        o.test();\n        //inner i=new inner();\
+    \ //inner class can't be instantiated outside its outer class\n    }\n```\n\n\
+    OUTPUT:\n:\\java\\new_java\\javac exnested.java\nE:\\java\\new_java\\java exnested\n\
+    Outer variable=100\ny=10\n\n# Encapsulation\n\nIt is generally wrapping of data\
+    \ or packaging of data. It is the mechanism that binds together code and the data\
+    \ it manipulates and keeps safes from outside interference and misuse. It only\
+    \ shows the relevant and hides the irrelevant information. In Java, the basis\
+    \ of encapsulation is the class.\nWe consider the program discussed in the previous\
+    \ section i.e.\n\n```\nclass exfun1\n{\n    public void add() //Non-static function,\
+    \ object is needed to call\n    {\n        int num1=5,num2=6; //input\n      \
+    \  int sum=num1+num2;\n        System.out.println(\"Sum=\"+sum); //output\n  \
+    \  }\n    public static void main(String[] arg)\n    {\n        exfun1 ob=new\
+    \ exfun1(); //creation of object\n        ob.add(); //invocation of function,\
+    \ dot is a referential operator used to call members of class\n    }\\}\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "OUTPUT:\n\n```\nE:\\java\\new_java>javac exfun1.java\n```\n\n```\nE:\\java\\\
+    new_java>java exfun1\n```\n\nSum=11\n\nIn the above program, we can see that there\
+    \ is no code written inside a main() method. Only the creation of object and invocation\
+    \ of the method is inside main method i.e. the functionality of add() is hidden\
+    \ from the user. Therefore, it increases the level of security. The level of security\
+    \ also be increased by increasing the level of abstraction which is shown below\
+    \ as an example:-\n\n```\nclass encaps {\n    public void fun() \n{\n        encaps\
+    \ ob=new encaps();\n        ob.add();\n    }\n    public void add() \n{\n    \
+    \    int num1=5,num2=6;\n        int sum=num1+num2;\n        System.out.println(\"\
+    Sum=\"+sum);\n    }\n    public static void main(String[] arg) \n{\n        encaps\
+    \ ob=new encaps();\n        ob.fun();\n    }\n}\n```\n\nOUTPUT:\n\n```\nE:\\java\\\
+    new_java>javac encaps.java\n```\n\n```\nE:\\java\\new_java>java encaps\n```\n\n\
+    Sum=11"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "Moreover, we can also separate the classes i.e. the functionality is defined\
+    \ in a class but the method is called from a different class i.e. main() is defined\
+    \ in a different class. In this case, we have to declare a class as public. It\
+    \ is illustrated below:\n\n```\npublic class encaps {\n{\npublic void add() {\n\
+    {\n    int num1=5,num2=6;\n    int sum=num1+num2;\n    System.out.println(\"Sum\"\
+    +sum);\n}\n}\nclass encaps_call {\n{\npublic static void main(String[] arg) {\n\
+    {\nencaps ob=new encaps();\nob.fun();\n}\n}\\}\n}\n```\n\nIn this case, we need\
+    \ to compile only the class containing main(), all the related classes will automatically\
+    \ be compiled.\n\n```\nOUTPUT:\nE:\\new\\java>javac encaps_call,java\nE:\\new\\\
+    java>javac encaps_class\nSum=11\n```\n\nNote-: Since java follows 100% OOP features,\
+    \ therefore, we have to ensure that no code logic should be written main() function.\
+    \ It must be encapsulated inside another class. It enhances security.\n\n# Polymorphism\n\
+    \nIt is a Greek term that means “ability to take more than one form”. It is a\
+    \ concept in which the same object behaves differently according to the environment(argument/parameter).\
+    \ This concept is implemented with the help of a method/constructor. It is implemented\
+    \ either by overloading or overriding."
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'In java, it is possible to define more than one function with the same name
+    more than one time in a program but with a different signature. This phenomenon
+    is called method overloading. When we say different signatures, it means different
+    return types or a different number of arguments or different types of arguments
+    or different order of arguments. When java encounters a call to an overloaded
+    method, it simply executes the version of the method whose parameters match the
+    arguments used in the call.
+
+
+    An example to illustrate function overloading:-
+
+
+    | class overload |
+
+    | public int add(int num1
+
+
+    OUTPUT:-nE:\java\new_java>javac overload.java
+
+    E:\java\new_java>java overload
+
+    Sum=10'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'Sum=19.5
+
+
+    Sum=10.8
+
+
+    It is decided at compile time itself which function to call, therefore, it is
+    called early binding or compile-time polymorphism.
+
+
+    In java, it is also to use the same function more than one having the same name
+    with the same signature but having a different definition. This phenomenon is
+    called method overriding. It cannot be implemented in a single class, at least
+    two classes are needed for it. The concept of inheritance is involved in it. It
+    is decided during the run time which to call, therefore, it is called late binding
+    or run-time polymorphism. Since the concept of overriding is completely dependent
+    on inheritance, therefore, it is discussed in the inheritance section in detail.
+
+
+    # Constructor
+
+
+    A constructor initializes an object immediately upon creation. It has the same
+    name as the class in it resides and is syntactically similar to a method. Once
+    defined, the constructor is automatically called after the object is created,
+    before the new operator completes. Constructors have no return type, not even
+    void. This is because the implicit return type of the class constructor is the
+    class type itself.
+
+
+    Example to illustrate constructor:-
+
+
+    | class area |
+
+    | { |
+
+    | double len,wid; |
+
+    | area() |
+
+    | { |
+
+    | len=4; |
+
+    | wid=5; |
+
+    | double res=len*wid; |
+
+    | System.out.println("Area="+res); |
+
+    | { |
+
+    | public static void main(String[] arg) |
+
+    | { |
+
+    | area ob=new area(); //area(0) gets called |
+
+    | } |
+
+    | } |
+
+
+    OUTPUT:'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "E:\\java\\new_java>javac area.java\n\nE:\\java\\new_java>java area\n\nConstructors\
+    \ can be parameterized or non-parameterized. The above example was an example\
+    \ of a non-parameterized constructor. In parameterized constructor, parameters\
+    \ are passed.\n\nExample:-\n\n```\nclass area1\n{\narea(double len,double wid)\n\
+    {\n    double res=len*wid;\n    System.out.println(\"Area=\"+res);\n}\npublic\
+    \ static void main(String[] arg)\n{\narea1 ob=new area1(4,5); //area1(double len,double\
+    \ wid) gets called\n}\n}\n```\n\nOUTPUT:\nE:\\java\\new_java>javac area1.java\n\
+    E:\\java\\new_java>java area1\nArea=20.0\n\nUsing object as parameters:\n\n```\n\
+    class area2\n{\nint len,wid;\narea2(int len,int w)\n{\nlen=len;\nwid=w;\n    System.out.println(\"\
+    +\"+wid);\n}\narea2(area2 ob)\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '```
+
+    {
+
+    len=ob.len;
+
+    wid=ob.wid;
+
+    System.out.println(len+" "+wid);
+
+    }
+
+    public static void main(String[] arg)
+
+    {
+
+    area2 a1=new area2(4,5); //area2(int l,int w) gets called
+
+    area2 a2=new area2(a1); //area2(area2) obj gets called
+
+
+    }
+
+    ```
+
+
+    # Types of argument passing:-
+
+
+    Arguments are passed in two ways i.e. call by value and call by reference. By
+    value copies copies the value of the argument into the formal parameter of the
+    subroutine. Therefore, changes made to the parameter of the subroutine do not
+    affect the argument. In by reference, a reference is passed to the parameter.
+    Inside the subroutine, this is used to access the actual argument specified in
+    the call. This means that the changes made to the parameter will affect the argument
+    used to call the subroutine.
+
+
+    Example of call by value:-
+
+
+    ```
+
+    class value
+
+    {
+
+    void meth(int i,int j)
+
+    {
+
+    i*=2;
+
+    j*=2;
+
+    System.out.println("Changed value of i and j:"+i+" "+j);
+
+    }
+
+    public static void void main(String[] arg)
+
+    {}
+
+    ```'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '```
+
+    value ob=new value();
+
+    ```
+
+
+    ```
+
+    int i=5,j=10;
+
+    ```
+
+
+    ```
+
+    ob.meth(i,j);
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    OUTPUT:
+
+
+    E:\java\new_java\-javac value.java
+
+
+    E:\java\new_java\-java value
+
+
+    i and j before call:5 10
+
+
+    Changed value of i and j:10 20
+
+
+    i and j after call:5 10
+
+
+    Example of call by reference:-
+
+
+    ```
+
+    class reference
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    int i,j;
+
+    ```
+
+
+    ```
+
+    reference(int a,int b)
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    i=a;
+
+    ```
+
+
+    ```
+
+    j=b;
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    void meth(reference ob)
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    ob.i*=2;
+
+    ```
+
+
+    ```
+
+    ob.j*=2;
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    public static void main(String[] arg)
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    reference ob=new reference(5,10);
+
+    ```
+
+
+    ```
+
+    ob.meth(ob);
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '```
+
+    System.out.println("i and j after call:"+ob.i+" "+ob.j);
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    OUTPUT:
+
+
+    E:\java_new_java-javac reference.java
+
+
+    E:\java_new_java>java reference
+
+
+    i and j before call:5 10
+
+
+    Changed value of i and j:10 20
+
+
+    i and j after call:10 20
+
+
+    # this keyword:
+
+
+    This keyword can be used to refer current class instance variable. If the instance
+    variables and parameters are ambiguous, this keyword resolves the problem of ambiguity.
+
+
+    Consider the following program:-
+
+
+    ```
+
+    class prog
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    int a=7,b=9;
+
+    ```
+
+
+    ```
+
+    prog(int a,int b)
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    a=a; //value of parameter is assigned to ''a'' of the constructor itself, no changes
+    is made on global variable
+
+    ```
+
+
+    ```
+
+    b=b;
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    public void display()
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    System.out.println("a+" "+b);
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    public static void main(String[] arg)
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    prog ob=new prog(6,4);
+
+    ```
+
+
+    ```
+
+    ob.display();
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    OUTPUT:
+
+
+    E:\java_new_java-javac prog.java
+
+
+    E:\java_new_java>java prog'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'In the above example, parameters(formal arguments) and instance variables are
+    the same. So, we have to use this keyword to distinguish between local variables
+    and instance variable.
+
+
+    ```
+
+    class exthis
+
+    {
+
+    int a=7,b=9;
+
+    exthis(int a,int b)
+
+    {
+
+    this.a=a;      //value of parameter ''a'' is assigned to global variable ''a''
+
+    this.b=b;
+
+    }
+
+    public void display()
+
+    {
+
+    System.out.println("a+" "+b);
+
+    }
+
+    npublic static void main(String[] arg)
+
+    {
+
+    exthis ob=new exthis(6,4);
+
+    ob.display();
+
+    }
+
+    ```
+
+
+    OUTPUT:
+
+    E:\java\new_java>javac exthis.java
+
+    E:\java\new_java>java exthis
+
+
+    **Note:-** This keyword is also used to invoke the current class method or constructor.
+
+
+    # Inheritance
+
+
+    Using inheritance, we can create a general class that defines traits common to
+    a set of related items. This class can then be inherited by other, more specific
+    classes, each adding those things that are unique to it. The class that is inherited
+    is called a **superclass** or **parent class** and the class that does the inheriting
+    is called a **subclass**. Thus, a subclass is a specialized version of a superclass
+    that inherits all the instance variables and methods defined by the subclass and
+    its unique elements. We can'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'say that inheritance refers to the sharing of characteristics from parent to
+    child.
+
+
+    # Advantages:-
+
+
+    +   - It reduces redundancy i.e. sharing of data.
+
+    - Maintainability becomes easier.
+
+    - Dynamic execution can be done.
+
+
+    Disadvantage: Complexity is increased if there are many levels.
+
+
+    ![](img/bdd382ccd4d5d3945e8ba2af128b8c72_33_0.png)
+
+
+    Types of inheritance: In java, inheritance is only hierarchical which includes
+    single and multilevel. Java doesn''t support multiple inheritances.
+
+
+    Note:- Private members of a superclass can''t be inherited by sub-class i.e. it
+    is not accessible to sub-class.
+
+
+    The child class is inherited from the parent class using extends keyword. We can
+    define both parent and child classes either in the same file or in a different
+    file, we have to save the filename with the class name having main() defined in
+    it ite. the lowest child class. Byte code is generated for both parent and child
+    classes separately. There is no need to compile parent classes. Its byte code
+    is generated automatically.
+
+
+    # Syntax:-
+
+
+    ```
+
+    class <parent-class>
+
+    {
+
+    //body
+
+    }
+
+    class <child-class> extends <parent-class>
+
+    {
+
+    //body
+
+    }
+
+    class parent //parent class
+
+    ```'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "```\n{\nint i=1,j=2;\nvoid show() \n{\nSystem.out.println(\"i=\"+i);\nSystem.out.println(\"\
+    j=\"+j);\n}\nnclass child extends parent //child class\n{\nint k=3;\nvoid showk()\
+    \ \n{\nSystem.out.println(\"k=\"+k);\n}\nnvoid sum() \n{\nint s;\ns=i+j+k;\nSystem.out.println(\"\
+    s=\"+s);\n}\npublic static void void main(String[] arg) \n{\nparent p=new parent();\n\
+    child c=new child();\np.show();\nc.show(); //object of child class can access\
+    \ the members of parent class\nc.showk();\nc.sum();\n//p.sum(this); this is not\
+    \ allowed i.e. members of sub class can't be accessed using object of super class\n\
+    }\n}\nnOUTPUT:\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '```
+
+    E:\java\new_java\javac child.java
+
+    ```
+
+
+    ```
+
+    E:\java\new_java\java child
+
+    ```
+
+
+    ```
+
+    i=1
+
+    ```
+
+
+    ```
+
+    i=1
+
+    ```
+
+
+    ```
+
+    j=2
+
+    ```
+
+
+    ```
+
+    j=2
+
+    ```
+
+
+    ```
+
+    k=3
+
+    ```
+
+
+    ```
+
+    s=6
+
+    ```
+
+
+    # super keyword:-
+
+
+    Whenever a subclass needs to refer to its immediate superclass, it can do so by
+    the use of the keyword super. super has two general forms. The first calls the
+    super class'' constructor i.e. a subclass can call a constructor method defined
+    by its use of the super keyword. super must be the first statement executed inside
+    the subclass constructor. The second is used to access a member of the superclass
+    that has been hidden by a member of a subclass.
+
+
+    Example of a super keyword when used as a constructor:-
+
+
+    | class first //parent class |
+
+    | { |
+
+    | int i,j,k; |
+
+    | first(int a,int b,int c) |
+
+    | { |
+
+    | i=a; |
+
+    | j=b; |
+
+    | k=c; |
+
+    | System.out.println(i+"+"+j+"+"+k); |
+
+    | } |
+
+    | first(int x) |
+
+    | { |
+
+    | i=j=k=x; |
+
+    | System.out.println(i+"+"+j+"+"+k); |
+
+    | } |
+
+    | class second extends first //child class |
+
+    | { |
+
+    | int l; |'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "```\nsecond(int a,int b,int c,int d)\n{\n    super(a,b,c);\n    l=d;\n    System.out.println(l);\n\
+    }\nnsecond(int x)\n{\n    super(x);\n    l=x;\n    System.out.println(l);\n}\n\
+    \\ublic static void main(String[] arg)\n{\n    first f1=new first(5);\n    first\
+    \ f2=new first(2,4,6);\n    second s1=new second(10);\n    second s2=new second(2,4,6,10);\n\
+    }\n```\n\nOUTPUT:\n:\\java\\new_java->javac second.java\n:\\java\\new_java->java\
+    \ second\n5 5\n2 4 6\n10 10 10\n10\n2 4 6\n10\n\nWhenever the constructor of a\
+    \ subclass is called, the constructor of the superclass is called automatically\
+    \ even when a super keyword is not used in that case the empty constructor is\
+    \ called but the constructor of the superclass may have parameters, therefore,\
+    \ it is better to use superclass keyword.\n\nExample:-"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "```\nclass A\n{\n    A()\n    {\n        System.out.print(\"inside A\");\n\
+    \    }\n}\n```\n\n```\nclass B extends A\n{\n    B()\n    {\n        System.out.print(\"\
+    inside B\");\n    }\n    public static void main(String[] arg)\n    {\n      \
+    \  B b=new B();\n    }\n}\n```\n\nOUTPUT:\nE:\\java\\new_java->javac.java\nE:\\\
+    java\\new_java->java B\ninside Ainside B\n\n# The second use of super:-\n\nThe\
+    \ second form of super is most applicable to situations in which member names\
+    \ of a subclass hide members by the same name in the superclass. We can say that\
+    \ in the case of Method Overriding. It refers to the phenomenon in which the signature\
+    \ of the function is the same but the definition is different. It is implemented\
+    \ in at least two classes when inheritance is involved. It supports late binding.\n\
+    \nExample:\n\n```\nclass parent1 //parent class\n{\n    int i=1;\n    public void\
+    \ print()\n    {\n        System.out.println(\"Welcome\");\n    }\n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '```
+
+    }
+
+    {
+
+    class child1 extends parent1 //child class
+
+    {
+
+    int i=2;
+
+    public void print() //overridden method
+
+    {
+
+    super.print(); //print() of super class gets called
+
+    System.out.println("to campusedulive.com");
+
+    System.out.println(i); //i of child class gets printed
+
+    System.out.println(super.i); //i of parent class gets printed
+
+    }
+
+    public static void main(String[] args)
+
+    {
+
+    child1 ob=new child1();
+
+    ob.print(); //print() of child class gets called
+
+    }
+
+    ```
+
+
+    OUTPUT:
+
+    E:\java\java>javac child1.java
+
+    E:\java\java> child1
+
+    Welcome
+
+    to campusedulive.com
+
+    2
+
+    1
+
+
+    # Abstract Class
+
+
+    Abstraction refers to showing only the necessary details to the user. It focuses
+    on the outside view of an object. It is the concept of hiding irrelevant details.
+    In other words, we make a complex system simple by hiding unnecessary detail from
+    the user. In Java, we achieve abstraction by using Interface and Abstract class.
+
+
+    Abstract class: This class is compulsorily inherited. Here, methods are also abstract.
+    There are situations in which we want to define a superclass that declares the
+    structure of a given abstraction without providing a complete implementation of
+    every method. Any class that contains one or more abstract methods must also be
+    declared abstract. We cannot declare abstract constructors (no objects of an abstract
+    class are'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: 'made, so constructors won''t be called) or abstract static methods (static
+    methods can''t be inherited, it is general for all classes). Any subclass of an
+    abstract class must either implement all of the abstract methods of the superclass
+    or be itself declared abstract. Some points are:-
+
+
+    +   1. To make an abstract class, we have to add an abstract key to that class.
+
+
+    +   2. We cannot create the object of abstract classes.
+
+
+    +   3. Any class that contains one or more abstract methods must also be declared
+    abstract.
+
+
+    +   4. We cannot declare the abstract constructor and abstract static methods.
+
+
+    +   5. The subclass of an abstract class has to override all the abstract methods
+    of an abstract class otherwise it has make itself abstract.
+
+
+    +   6. Abstract classes can have constructors, member variables, and concrete
+    or normal methods.
+
+
+    +   7. A method that is declared without body within an abstract class is known
+    as the abstract method. It can never be final and static.
+
+
+    Example:-
+
+
+    ```
+
+    abstract class A {
+
+    abstract void check();
+
+    void show() {
+
+    System.out.println("this is a concrete method");
+
+    }
+
+    }
+
+    class Sum extends A {
+
+    void check() {
+
+    System.out.println("Implementation of abstract method");
+
+    }
+
+    }
+
+    class D1 {
+
+    public static void main(String d[]) {
+
+    Sum c=new Sum();
+
+    c.check();
+
+    c.show();
+
+    }}
+
+    ```'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '```
+
+    }
+
+    nOUTPUT:
+
+    Implementation of abstract method
+
+    this is a concrete method
+
+    ```
+
+
+    **Note:-** Partial abstraction is achieved by Abstract class because it can have
+    concrete methods. **If the Final** keyword is used with the methods then methods
+    won''t be overridden further, if used with variables then it will become constant
+    & should be initialized there only.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# # String Handling
+
+
+    In many other languages that implement strings as characters arrays, Java implements
+    String as an object of type String. When we create a string object, we are creating
+    a string that cannot be changed ie once a string object has been created, we cannot
+    change the characters that comprise that string. When we write any string under
+    double quotes it makes by a literal object in a constant pool. The java.lang.String
+    class provides a lot of methods to work on String. With the help of these methods,
+    we can perform operations on strings such as trimming, concatenating, comparing,
+    replacing, etc. A few of the functions of String are given below:
+
+
+    +   1. **charAt():** It returns the single character at the specified index. It
+    is used in a linked list. The index number starts from 0. Eg: s.charAt(3);
+
+
+    +   2. **getBytes():** It returns the byte array of the string. In other words,
+    it returns the ASCII value of the given string.
+
+
+    +   3. **equals():** It belongs to the String class. It compares two given Strings
+    based on the contents of the string. If all characters are matched, it returns
+    1 or true. It is case-sensitive & is used for reference type comparison. == in
+    java compares primitive datatype & is used for value type comparison, in abstract
+    datatype it compares the address where data is stored. Eg: (a.equals(b))
+
+
+    +   4. **equalsIgnoreCase():** It works the same as equals() function but does
+    a case insensitive comparison.
+
+
+    +   5. **startsWith():** It checks if the string starts with a given prefix. It
+    returns true if this string starts with the given prefix else returning false.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '+   6. endsWith(): It checks if the string ends with the given suffix. It returns
+    true if this string ends with the given suffix else return false.
+
+
+    +   7. getChars(): It is used to extract more than one character at a time.
+
+
+    +   8. getChars(sourcestart, sourceend, target, targetstart);
+
+
+    +   9. substring(): It returns extracted part of the string. We need to pass starting
+    position and ending position in the java substring method where the start index
+    is inclusive and the end index is exclusive. If the end index is not given it
+    will consider the whole string till the end.
+
+
+    +   10. concat(): It combines a specified string at the end of this string and
+    returns a combined string. It is like appending another string. + is also used
+    for concatenation and it can concatenate an infinite number of strings whereas
+    concat() can concatenate only two strings at a time.
+
+
+    +   11. replace(): It returns a string replacing all the old characters with new
+    characters.
+
+
+    +   12. split(): It splits the string against a given regular expression and returns
+    a character array. It is also called a tokenizer.
+
+
+    +   13. toLowerCase(): It converts all the characters of the string into lower
+    case.
+
+
+    +   14. toUpperCase(): It converts all characters of the string into upper case
+    letters.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '+   15. trim(): It eliminates leading and trailing spaces. It doesn’t omit
+    middle spaces. It is used in the coding of the password field.
+
+
+    +   16. toString(): It converts the given object or value to a string.
+
+
+    +   17. contains(): It searches the sequence of characters in the string. It returns
+    true if a sequence of char values is found.
+
+
+    +   18. indexOf(): It returns the first occurrence of a given character or substring.
+    If it is not found, it returns -1. Its return type is an integer.
+
+
+    +   19. isEmpty(): It checks if the string is empty. It returns true if the length
+    of a string is 0.
+
+
+    +   20. lastIndexOf(): It returns the last occurrence of the given character value.
+    If it is not found, it returns -1.
+
+
+    +   21. length(): It returns the count of a total number of characters.
+
+
+    +   22. toCharArray(): It converts the string into a character array. Its length
+    is similar to the string.
+
+
+    +   23. compareTo(): It compares the given string with the current string. It
+    returns a positive number, a negative number, or 0.
+
+
+    +   24. value(): It is used for value conversions. It converts different types
+    of values into String. It is similar to toString() function but toString() is
+    a non-static function (calls with the help of object) whereas, value() is a static
+    function (calls with the help of class) belongs to String class.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\n{\n    public static void main(String[] args) {\n        String s=\"Praveen\"\
+    ;\n        System.out.println(s);\n        char t = s.charAt(4);\n        System.out.println(t);\n\
+    \        byte[] b = s.getBytes();\n        System.out.println(b[3]);\n       \
+    \ String s1 = new String(b);\n        System.out.println(s1);\n        if(s.equals(s1))\
+    \ {\n            System.out.println(\"True\");\n        } else {\n           \
+    \ System.out.println(\"False\");\n        }\n        String empcode=\"hr1001\"\
+    ;\n        System.out.println(empcode.startsWith(\"hr\"));\n        System.out.println(s.substring(2));\n\
+    \        System.out.println(s.substring(2,4));\n    }\n}\n```\n\nOUTPUT-\nPraveen\n\
+    e\n118\nPraveen\nTrue\nTrue\nraveen\nav\n\n**Mutable and Immutable Strings:**\
+    \ The string class is immutable which means its growth is not possible or unchangeable.\
+    \ The string is a special datatype, we can create its literal as well as to object.\
+    \ It is slow & consumes more memory when we concat many strings because every\
+    \ time it creates a new instance (or variable).\n\n**StringBuffer class:** It\
+    \ represents growable and writeable character sequences. It is a peer class of\
+    \ strings that provides much of the functionality of strings. On concatenating\
+    \ the string grows, it is not recreated. Therefore, it is fast and less memory-consuming.\
+    \ It is not a"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'special datatype. In buffer class, we can concatenate in a backward direction
+    also.
+
+
+    Both String and StringBuffer classes are defined in java.lang.*. Thus, they are
+    available to all programs automatically.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Interface
+
+
+    The interface is a 100% incomplete situation (where an only signature is given)
+    i.e. it has non-concrete functions. Definition of the functions will be given
+    by the implements class. for eg: Event handling is a type of interface because
+    when an event is created, then that event will perform is defined by the end-user
+    programmer. Here there be a few functions whose definition as well as a signature
+    will be given in rest will be empty, which will be overridden in the implements
+    class. It is the blueprint of class same as the original. The interface looks
+    like a class but it is not a class. An interface can have methods and variables
+    like the class but the methods declared in the interface are by default abstract
+    (only method signature, nobody). Also, the variables declared in an interface
+    are public, static and final by default.
+
+
+    There are two methods of creating a thread i.e. by extending the Thread class
+    or by implementing a runnable interface. As we know java does not support multiple
+    than one class are there are certain situations where members of more than one
+    class are required. In case, interfaces are useful because more than one interface
+    can be implemented by a class. We can say that interface is the solution for multiple
+    inherits.
+
+
+    +   1. To make an interface, we use the interface keyword instead of class.
+
+    2. Instead of extends, we use the implements keyword.
+
+    3. Interfaces are implicitly abstract which is why we cannot create the object.
+
+    4. Interface variables must be initialized at the time of declaration otherwise
+    compiler will throw an error.
+
+    5. A class can implement any no. of interfaces.
+
+    6. If there are two or more methods in two interfaces and a class implements both
+    interfaces, implementation of the method once is enough.
+
+    7. Variables name conflicts can be resolved by interface name.
+
+    8. If a class includes an interface but does not fully implement the methods defined
+    by that the class must be declared as an abstract.
+
+    9. We cannot instantiate an interface in Java.
+
+    10. It provides complete abstraction as none of its methods can have a body(concrete
+    method).'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '+   11. Without bothering about the implementation part, we can achieve the
+    security of the implementation.
+
+
+    +   12. When u implement an interface method it must be declared as public.
+
+
+    # The general syntax for defining an interface:-
+
+
+    ```
+
+    access specifier interface interface-name{
+
+    return-type method-1(parameter list);
+
+    return-type method-2(parameter list);
+
+    type final variable = value;
+
+    }
+
+    ```
+
+
+    Example:-
+
+
+    ```
+
+    interface C1 {
+
+    void call();
+
+    }
+
+    class C2 implements C1 {
+
+    public void call() {
+
+    System.out.println("Hello Friends");
+
+    }
+
+    public static void main(String s[]) {
+
+    C2 m=new C2();
+
+    m.call();
+
+    }
+
+    }
+
+    ```
+
+
+    OUTPUT:-
+
+
+    Hello Friends'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# # Packages
+
+
+    It is a mechanism to encapsulate a group of classes, interfaces, and sub-packages.
+    It is a way to organize similar class files into packages. A package statement
+    defines a namespace in which classes are stored. If you omit the package statement,
+    the class name is put into the default package which has no name. We can create
+    a hierarchy of packages where each package is denoted as pkg1, pkg2,...and so
+    on. The package hierarchy must be the same as reflected in the file system.
+
+
+    Java has inbuilt packages. Some of them are java.lang.*, java.util.*, java.io.*,
+    java.applet.*, java.awt.* etc. Programmers can define their packages to bundle
+    a group of classes/interfaces etc. A specific location that the java compiler
+    will consider the root of any package hierarchy is controlled by CLSPATH.
+
+
+    Creating a package
+
+
+    For creating a package, you should choose a name for the package, and in the first
+    line of the source code include a package statement along with that name that
+    contains the classes/interfaces, etc that you want to include in the package.
+
+
+    Syntax:-
+
+
+    package package_name;
+
+
+    This statement should be used at the beginning of the program to include in that
+    particular package.
+
+
+    For ex:-
+
+
+    ```
+
+    package expack1;
+
+    class ExBalance{
+
+    String cname;
+
+    double bal;
+
+    ExBalance(String n,double d){
+
+    cname=n;
+
+    bal=b;
+
+    }
+
+    void show(){
+
+    if(bal>150){
+
+    System.out.print("-\>");
+
+    System.out.println("Custoomer Name :"+ cname + ": "+ Rs." + bal);
+
+    }
+
+    }
+
+    class ExAccBalance {
+
+    ```'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "```\npublic static void main(String[] args[]) {\n    ExBalance ca[]=new ExBalance[3];\n\
+    \    ca[0]=new ExBalance(\"Shay Mohan\",125.23);\n    ca[1]=new ExBalance(\"Mahorari\
+    \ Jee\",165.09);\n    ca[2]=new ExBalance(\"Mic Tom\",-680.89);\n    for(int i=0;i<3;i++)\
+    \ {\n        ca[i].show();\n    }\n}\n\n```\n\n# Compiling packages in java\n\n\
+    The java byte code for all the classes (and interfaces) specified in the source\
+    \ files ExAccBalance. Java will be placed in the directory named expack1.\n\n\
+    The import keyword is used to attach package or package files in the program.\
+    \ All the import statement is written above the class definition line.\n\n# Access\
+    \ Specifiers\n\nAccess Protection: Classes and packages are both means of encapsulating\
+    \ and containing the collection & scope of variables and methods. Packages act\
+    \ as containers for classes and other sub-packages. Classes act as containers\
+    \ for data and code. Java addresses four categories of visibility for class members:\n\
+    \n+   a)Subclasses in the same package.\nb)Non-subclasses in the same package.\n\
+    c)Sub-classes in a different package.\nd)Classes that are not in the same package\
+    \ or subclasses.\n\nAccess Specifier: If a class has default access, then it can\
+    \ only be accessed by other code within its same package.\n\nPrivate- within the\
+    \ class.\n\nProtected- Allows elements to be seen outside your current package\
+    \ but only to subclasses of that class in other packages and accessible in any\
+    \ subclass within the same package.\n\nPublic- it is open to all means and can\
+    \ be called from any class."
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# # Exception Handling
+
+
+    There are two types of errors: Compile time errors and Run time errors. To remove
+    the compile-time error, a compiler is best. Exception handling is a way to handle
+    run-time errors (logical errors). An exception is an event that disrupts the normal
+    flow of the diagram. It is an object thrown at runtime. Exception handling up
+    to extent makes our program robust (error-free). The root class of java is **object
+    class** and the root class in error handling is **throwable**. The only disadvantage
+    of this is the more the exception is used the slower the program gets. There are
+    two types of exceptions given as follows:
+
+
+    # **Types of Exception:-
+
+
+    +   1. Checked exception:- Checked Exceptions are also known as a pre-checked
+    exceptions of Java and it handles the critical exceptions by itself. If checked
+    exceptions are not handled, i.e written in the try-catch block the program won''t
+    be compiled.
+
+
+    +   2. Unchecked exception:-The classes that extend RuntimeException are known
+    as unchecked exceptions. It is not checked at compile time, they are checked at
+    run-time. These exceptions are user-handled exceptions such as Arithmetic Exception,
+    NullPointer Exception, etc.
+
+
+    **Advantages of Exception Handling:-** The advantage of exception handling is
+    to maintain the normal flow of the application and make the application robust.
+    Exception disrupts the normal flow of the application.
+
+
+    ![](img/bdd382ccd4d5d3945e8ba2af128b8c72_50_0.png)
+
+
+    # Ways of handling Exceptions'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '1. try-catch & finally block:- In java try block is used to enclose the code
+    that might throw an exception. It throws the exception to the catch block when
+    there is an error, and when there is no error the control doesn''t transfer to
+    the catch block. Here, throw keyword is internally called for throwing the error.
+
+
+    Life cycle of try block:
+
+
+    ```
+
+    1. try{
+
+    catch(Exception_class_name ref){
+
+    2. try{
+
+    finally{}
+
+    3.try{
+
+    #error code
+
+    }
+
+    catch(Exception_class_name ref){
+
+    #Exception msg
+
+    }
+
+    finally{
+
+    }
+
+    ```
+
+
+    There are 3 life cycles of the try catch and finally block:
+
+
+    In the first case, if an error occurs, then code after error won''t be executed.
+    The try throws an exception and the control goes to the catch block & the error
+    is handled in a catch block. If finally{} is not written then codes after catch{}
+    will be executed.
+
+
+    In the second case, every time try{} is executed, that many times finally{} will
+    be executed.
+
+
+    And in the last case, when try{} is executed and it throws an exception to catch{},
+    then after executing catch{}, finally{} will be executed.
+
+
+    Java finally is optional and when it is needed. It is always executed whether
+    an exception occurred or not. There can be 10 lines of code in a try block and
+    an exception occurs on the try block, not 6th line and then it is handled and
+    the cursor goes out of the try block, not completely executing the try block.
+    To execute important code finally is used. The finally block must be followed
+    by a try or catch block. For each try block, there must be one catch block or
+    more catch blocks but only one finally block. It is mainly used to put “clean
+    up” code such as closing a file, closing a connection, etc. We write all the important
+    code in finally.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "If you don't handle an exception, before terminating the program, JVM\nexec\
+    \ finally block.\n\n# Example:-\n\n```\nclass Check{\n    public static void main(String[]\
+    \ args){\n        int a=10,b=0;\n        try{\n            c=a/b;\n        }\n\
+    \        catch(Exception ex){\n            System.out.println(ex.toString());\n\
+    \        }\n        finally{\n            System.out.println(\"Program executed\"\
+    );\n        }\n    }\n    }\n```\n\nOUTPUT:-njava.lang.ArithmeticException: /by\
+    \ zero\nProgram executed\n\n# 2.Multiple catch{} block:-\n\nOne try{} block can\
+    \ have multiple catch{} block. When there are 3 lines in try{} each of which can\
+    \ generate\ninterrupts, there 3 exceptions may be generated and for handling 3\n\
+    weceptions we can write 3 catch{}. But when we are the root class\nof exception,\
+    \ then there is no need of writing multiple catch blocks. At a\ntime only one\
+    \ exception occurred & at a time only one catch block is\nexecuted. of the exception.\
+    \ All catch blocks must be ordered in the sequence of occurrence\ncodes. Multiple\
+    \ catch blocks help in the faster execution of the\n\n```\ntry{\n    #error code\n\
+    }\ncatch(ArithmeticException ex){\n    #Exception msg\n}\ncatch(FileNotFoundException\
+    \ ex){\n    #Exception msg\n}\ncatch(ArrayOutOfBoundsException ex){\n    #Exception\
+    \ msg\n}\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\n}\ncatch(Exception ex) {\n  #Exception msg\n}\n```\n\n3. Nested try{}-\
+    \ The try block within a try block is known as a nested block. Sometimes a situation\
+    \ may arise where a part of a block may cause one error & the entire block itself\
+    \ may cause another error. In such cases, exception handlers have to be nested.\
+    \ But it should have a consecutive catch block. In this method complexity increases.\n\
+    \n```\ntry {\n  #statements;\n  try {\n    statement1;\n  }\n  catch(Exception\
+    \ ex) {\n  }\n}\ncatch (Exception ex) {\n}\n```\n\n4. throws keyword:- It is used\
+    \ for a checked exception. There is no try-catch{} block in it. It can be used\
+    \ only with the main(). It is also used to declare more than one exception at\
+    \ a time by separating them with a comma().\n\n```\npublic static void main(String[]\
+    \ args) throws ArithmeticException, FileNotFoundException {\n  #statements;\n\
+    }\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# I/O Stream
+
+
+    Taking input in Java: There are 4 ways to take input in console mode.
+
+
+    +   1. System.in: It takes input in int and char data type.
+
+
+    +   2. Command Line input: At runtime, we need to provide input separated by space.
+    It will take input in String format.
+
+
+    +   3. I/O Package: InputStream and BufferedReader class of I/O Package takes
+    input in standard format (String).
+
+
+    +   4. util Scanner: It belongs to the Scanner class. It has a specific datatype
+    input methodology.
+
+
+    For example, input a name from the user through Command-Line and display it on
+    the console:
+
+
+    ```
+
+    class cmd{
+
+    public static void main(String args[]){
+
+    try{
+
+    String s = args[0];
+
+    System.out.print("Your name is: " + s);
+
+    } catch(Exception ex){
+
+    System.out.println(ex.toString());
+
+    }
+
+    }
+
+    ```
+
+
+    While executing this file pass an argument, separated by space. For example, on
+    command prompt write java cmd Rahul.
+
+
+    OUTPUT:
+
+
+    E:\java\new_java-java cmd Rahul\Your name is: Rahul
+
+
+    Java performs I/O operations through Streams. A stream is a sequence of data or
+    a continuous flow of bits/bytes like a stream of water, traveling from source
+    to destination. Generally, it is used to transfer data in a network. I/O package
+    has two modes to read and write data. Streams are used because stream means bytes,
+    bytes means ASCII code, ASCII-code means binary, and the computer understands
+    binary.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '![](img/bdd382ccd4d5d3945e8ba2af128b8c72_55_0.png)
+
+
+    java.lang package contains a class called System, which encapsulates several aspects
+    of the run-time environment. System contains 3 defined stream variables: in, out,
+    and err.
+
+
+    System.out refers to Standard Output Stream, by default this is console.
+
+
+    System.in refers to Standard Input Stream, by default this is the keyboard.
+
+
+    System.err refers to Standard Error Stream which is also the console by default.
+
+
+    Java implements streams classes in the java.io package. I/O package is divided
+    into two streams given as:-
+
+
+    +   ByteStream:- It provides a rich environment for handling byte-oriented I/O.
+    It can be used with any type of object, including binary data.
+
+
+    +   CharacterStream:- While the ByteStream classes provide sufficient functionality
+    to handle any type of I/O operation, they cannot work directly with Unicode characters.
+
+
+    The main purpose of Java is to support the "Write Once, Run Anywhere". It is necessary
+    to include direct I/O support for characters.
+
+
+    **Byte Stream Classes:** Byte streams are defined by two-class hierarchies. There
+    are two root abstract classes Input Stream and Output Stream. These abstract classes
+    have several subclasses that handle the various devices, such as disk files, network
+    connections, and even memory buffers.
+
+
+    Some important Byte Stream classes:'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '| Stream class | Description |
+
+    | --- | --- |
+
+    | BufferedInputStream | Used for Buffered Input Stream. |
+
+    | BufferedOutputStream | Used for Buffered Output Stream. |
+
+    | DataInputStream | Contains method for reading java standard datatype |
+
+    | DataOutputStream | Contains method for writing java standard datatype |
+
+    | FileInputStream | Reads from a file |
+
+    | FileOutputStream | Write to a file |
+
+    | InputStream | Abstract class that describe stream input |
+
+    | OutputStream | Abstract class that describes stream output |
+
+    | PrintStream | Output Stream that contain print() and println() method |
+
+
+    **Character Stream Classes:** Character streams are defined by using two class
+    hierarchies. The root abstract classes Reader and Writer. These abstract classes
+    handle Unicode character streams. Java has several concrete subclasses of each
+    of these.
+
+
+    Some important Character Stream classes:
+
+
+    | Stream class | Description |
+
+    | --- | --- |
+
+    | BufferedReader | Handles buffered input stream. |
+
+    | BufferedWriter | Handles buffered output stream. |
+
+    | FileReader | Input stream that reads from file |
+
+    | FileWriter | Output stream that writes to file |
+
+    | InputStreamReader | Input stream that translate byte to character |
+
+    | OutputStreamReader | Output stream that translate character to byte |
+
+    | PrintWriter | Output Stream that contain print() and println() method |
+
+    | Reader | Abstract class that define character stream input |'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "| Writer | Abstract class that define character stream \n|---|---|\n|  | output\
+    \ |\n\n**Reading Console Input:** In java, console input is accomplished by reading\
+    \ from System.in. To obtain a character based stream that is attached to the console,\
+    \ wrap System.in a BufferedReader object. BufferedReader supports a buffered input\
+    \ stream. System.in refers to an object of type InputStream, which can be used\
+    \ with InputStream. For reading characters, `read()` function is used. For reading\
+    \ string, `readLine()` function is used. By using System.in and Command Input,\
+    \ line can be read from one channel, i.e. Keyboard, not anywhere by using classes\
+    \ of I/O package InputStreamReader and BufferedReader, the input can be read from\
+    \ different channels like keyboard, socket, etc. Socket refers to different terminals\
+    \ connected to a server. Therefore, these classes of the I/O package are called\
+    \ Standard I/O. When we write ‘import java.io.*;’ all classes subclasses and interfaces\
+    \ of java.io package are called whereas its packages and sub-packages are not\
+    \ called.\n\n**Note:** It is compulsory to handle exceptions while performing\
+    \ I/O operations.\n\nFor example, input a name from the user and display it on\
+    \ the console:\n\n```\nimport java.io.*;\nclass exRead{\n    public static void\
+    \ main(String[] args){\n        try{\n            InputStreamReader isr = new\
+    \ InputStreamReader(System.in);\n            BufferedReader br = new BufferedReader(isr);\n\
+    \            System.out.println(\"Enter your name:\");\n            String s =\
+    \ br.readLine();\n            System.out.print(\"Your name is: \" + s);\n    \
+    \    } catch (Exception ex){\n            System.out.println(ex.toString());\n\
+    \        }\n    }\n}\n```\n\nOUTPUT:\n:\\java\\new_java>java exRead\nEnter your\
+    \ name:Rahul\nYour name is: Rahul"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# File Handling
+
+
+    File Operations: Two specialized classes perform file read and write operations
+    for text based files.
+
+
+    +   1. FileInputStream: It is a specialized class in reading a text base in a
+    forward direction, i.e. the cursor will point in a forward direction, there is
+    no way to read data in a backward direction. For this we have to import java.io.*;
+
+
+    +   3. FileOutputStream: it is also a specialized class for writing the data into
+    a text-based file. If the file is not created, it will create a new file and if
+    it is already created it will overwrite it. Here data can be written in forward
+    as well as backward directions. For this we also need to import java.io.*;
+
+
+    To read data from a file, read() function is used, its return type is a byte in
+    integer format. 1 byte is read at a time. It will return an ASCII value. After
+    returning the value, it will move the pointer 1 byte forward. The syntax uses
+    System.out.print(fis.read());
+
+
+    Since ASCII value won''t be understood by the user, so it is converted to character
+    form or we can say that parsing will be done. Conversion from byte to String will
+    take place. For this we write System.out.print((char)fis.read()); To reach the
+    end of file available() is used. It counts available data in the file after the
+    pointer. It reads byte. It opens a file in read mode, cursor points in a forward
+    direction.
+
+
+    Example of FileInputStream: Program for reading the contents of a file.
+
+
+    ```
+
+    import java.io.*;nclass exRead {
+
+    public static void main(String[] args) throws Exception {
+
+    FileInputStream fis = new FileInputStream("exRead.java");
+
+    while(fis.available()!=0) {
+
+    System.out.print((char)fis.read());
+
+    fis.close();
+
+    }
+
+    }
+
+    ```
+
+
+    write() function read characters and then stores it in a file. The write() function
+    will also write data in ASCII value again again conversion from String to Byte
+    takes place. For this we'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: 'have getBytes() function, its return type will be array of bytes. So, we need
+    to catch it in array. It is fully dynamic.
+
+
+    Example of FileOutputStream: Program to create a new file and write data to it.
+
+
+    | import java.io.*; |
+
+    | class exRead |
+
+    | { |
+
+    | public static void main(String[] args) throws Exception |
+
+    | { |
+
+    | FileOutputStream fos= new FileOutputStream("abc.txt"); |
+
+    | String s = "this is a file created by the programmer."; |
+
+    | byte[] b = s.getBytes(); |
+
+    | fos.write(b); |
+
+    | { |
+
+    | } |
+
+
+    **Random Access File Class**: When we want to perform read and write operations
+    simultaneously on a file this class is used. It also comes under the IO package
+    only. When we perform a forward operation on a file the text doesn''t move instead
+    they are overwritten. **seek** is used for traveling the pointer within the file
+    from one location to another. **getFD** keeps the description of the file in its
+    pointer along with write permission & index for counting characters in the file
+    **length()** function will count the length of the specified string or file. 4
+    classes are used together to perform read and write operations on a file simultaneously.
+
+
+    +   1. RandomAccessFile Class
+
+    2. FileOutputStream Class
+
+    3. PrintStream Class
+
+    4. PrintWriter Class
+
+
+    Example of **RandomAccessFile**: Program to read and write a character in the
+    same file.
+
+
+    | import java.io.*; |
+
+    | class exRead |
+
+    | { |
+
+    | public static void main(String[] args) throws Exception |
+
+    | { |
+
+    | RandomAccessFile raf = new RandomAccessFile("abc.txt","rw"); |'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '```
+
+    PrintStream ps = new PrintStream(new FileOutputStream(raf.getFD()));
+
+    raf.seek(4); //To move the cursor to 4th position
+
+    ps.println("was");
+
+    raf.close();
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# GUI
+
+
+    Generally, we use Netbeans for designing GUI but Eclipse is for professional use,
+    for designing web applications. We are familiar with HTML, HTML is also used for
+    form designing but it designs only dead forms. Extra coding is needed for the
+    functioning of HTML forms, which can be done in .Net, Java, PHP, etc. GUI includes
+    window applications, and web services.
+
+
+    +   1. Window Application: It can run only on a window. It has several classes
+    which contain several controls used for designing GUI. For windows based applications,
+    java.awt (Abstract Window Toolkit) package is used. This package contains all
+    the classes for creating user interfaces and for painting graphics & images. It
+    has a 2D style, look & feel.
+
+
+    +   2. Web Application: It includes Applet, JSP, and Servlet. Some advanced web
+    applications include MUC, Spring, Strats, Hibernate, and JSF (Java Server Faces).
+    Applet can run on both desktop and web browsers. Its security and functionality
+    are enhanced while working on browsers. Servlets run on web browsers. MUC, Spring,
+    Strats, Hibernate and JSP provides advanced GUI with business logic.
+
+
+    +   3. Mobile Application: The most common mobile application developed in JAVA
+    is Android which is OS. It also provides an environment, tools, and API (Application
+    Programming Interface).
+
+
+    +   4. Web Services: Web Services have no user interface. It only provides services
+    to many applications. For example, Cricket is handled by ICC, ICC has its website
+    and mobile application which provides cricket scores and other information but
+    there are many other website and applications which provides scores. All these
+    websites use the same database which ICC uses means ICC is providing services
+    to all the websites. All booking engines like railway reservations, hotel booking,
+    etc belong to this category.
+
+
+    # Classes of awt package:'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "| Classes | Controls |\n| --- | --- |\n| Label | label |\n| TextField | textbox\
+    \ |\n| Checkbox | checkbox, radiobutton |\n| Button | button |\n| Choice | combobox\
+    \ (single selection) |\n| Select | Multiple Selection combobox |\n| List | listbox\
+    \ |\n\nFrame is also a member of the aft package. It is used to make a blank frame.\
+    \ There is a Component which is an abstract class that encapsulates all of the\
+    \ attributes of a visual component. All user interface elements are displayed\
+    \ on the screen and interact with the user are subclasses of Component. A container\
+    \ class is a subclass of Component. It contains all the control. There is a Panel\
+    \ class and DesktopPane class, which are similar to the Container class. The panel\
+    \ is used to separate the controls on the Frame for designing purposes to make\
+    \ it interactive. DesktopPane class is used for MDI applications.\n\nNote: In\
+    \ MDI applications, a child frame is inserted inside the parent frame and one\
+    \ parent frame can contain multiple child frames. There is add() method with each\
+    \ to add the control to the main container.\n\nProgram to create a frame\n\n```\n\
+    import java.awt.*;\npublic class exSwin extends Frame {\n    public exSwin() {\n\
+    \        super(\"First Frame\");\n        setSize(400,400);\n        setVisible(true);\n\
+    \    }\n    public static void main(String[] args[]) {\n        new exSwin();\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# Using Layout Managers: A layout manager automatically arranges your controls
+    within a window. Every Container object has a layout manager associated with it.
+    A layout manager is an instance of any class that implements the LayoutManager
+    interface. Different types of layouts are as follows:
+
+
+    +   1. Flow Layout: It is the default layout. Components are laid out line by
+    line (i.e. left to right).
+
+
+    +   2. Grid Layout: It lays out components in a two-dimensional grid. Here we
+    define the number of rows & columns. In the constructor of GridLayout, we pass
+    a number of rows & number of columns as arguments. The substitute of GridLayout
+    is GridBagLayout, here we can specify the relative placements of components by
+    specifying their position within cells inside a grid.
+
+
+    +   3. Border Layout: It has four sides (North, South, East, West) and one large
+    area in the center.
+
+
+    +   4. Card Layout: This layout can be thought of as being on a separate index
+    card on a desk that can be shuffled so that any card is on top at a given time.
+    It is hidden before one another. Example: Tab based system.
+
+
+    +   5. Custom / User-defined Layout: We can set the pixel of the screen according
+    to our requirement then we pass null for LayoutObject. Then to determine the shape
+    and position of each component manually setBounds() method is used, inherited
+    from Component. It has 4 arguments, i.e. starting value of x-coordinate, starting
+    value of the y-coordinate, length of control, and width of the control. The standard
+    size of the control is 20.
+
+
+    # Important Terms:
+
+
+    An event is an object that describes a state change in a source where event occurs.
+    The listener listens to which type of event occurred, on which control it occurred
+    & passes it to Master Handler. The interface of'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'a listener is ActionListener and it comes under java.awt.event package.
+
+    The event for buttons is ActionEvent.
+
+
+    Program to enter a name in textfield and print it in a message dialog box:
+
+
+    ```
+
+    import java.awt.*; //For GUI
+
+    import java.awt.event.*; //For event handling
+
+    import javax.swing.*; //For advanced GUI
+
+    public class exwin extends Frame implements ActionListener //Implementation of
+    listener
+
+    {
+
+    Label lb; //Initialization of controls
+
+    TextField tx;
+
+    Button b;
+
+    public exwin() {
+
+    super("Window Example");
+
+    setSize(400,400);
+
+    setLayout(null); //For user-defined layout
+
+    lb=new Label("Your name:");
+
+    tx=new TextField(15);
+
+    b=new Button("OK");
+
+    lb.setBounds(50,50,100,20);
+
+    tx.setBounds(150,50,200,20);
+
+    b.setBounds(90,100,50,20);
+
+    add(lb);
+
+    add(tx);
+
+    add(b);
+
+    b.addActionListener(this); //Event source of button
+
+    }
+
+    public static void main(String[] arg) {
+
+    new exwin();
+
+    }
+
+    public void actionPerformed(ActionEvent e) {
+
+    if(e.getSource()==b) //For comparison of event source {
+
+    String s=tx.getText();
+
+    JOptionPane.showMessageDialog(null,"Welcome "+s,"");
+
+    }
+
+    } //Belongs to javax.swing Package
+
+    ```'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    OUTPUT:
+
+
+    ![](img/bdd382ccd4d5d3945e8ba2af128b8c72_65_0.png)
+
+
+    # Controls
+
+
+    **Check Box:** Checkbox and radio buttons belong to the Checkbox class for using
+    radio buttons we have to use one more class called CheckGroup class, it groups
+    all checkboxes into one group and allows one selection at a time. `getState()`
+    is used to retrieve the current state of a check box. The return type is boolean.
+    `setState()` is used to see the state of the checkbox. `getLabel()` is used to
+    obtain the current level associated with a check box. `setLabel()` is used to
+    set the level. Each time a checkbox is selected or deselected, an item event is
+    generated. This is sent to the ItemListener interface. And its handler is the
+    `stateChanged()` method defined in the ItemListener interface. An ItemEvent object
+    is supplied as the arguments to this method.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "Program to illustrate checkbox:\n\n```\nimport java.awt.*;\nimport java.awt.event.*;\n\
+    import javax.swing.*;\npublic class excheck extends Frame implements ActionListener,ItemListener\n\
+    {\n    Label lb;\n    Button b1,b2;\n    Checkbox c1,c2,c3;\n    public excheck()\n\
+    {\n        super(\"Checkbox Example\");\n        setSize(400,400);\n        setVisible(true);\n\
+    \        setLayout(null);\n        lb=new Label(\"Education Qualification\");\n\
+    \        b1=new Button(\"SUBMIT\");\n        b2=new Button(\"EXIT\");\n      \
+    \  c1=new Checkbox(\"10\");\n        c2=new Checkbox(\"10+2\");\n        c3=new\
+    \ Checkbox(\"BCA\");\n        lb.setBounds(50,50,110,20);\n        c1.setBounds(50,80,110,20);\n\
+    \        c2.setBounds(50,110,110,20);\n        c3.setBounds(50,140,110,20);\n\
+    \        b1.setBounds(50,170,110,20);\n        b2.setBounds(170,170,110,20);\n\
+    \        add(lb);\n        add(b1);\n        add(b2);\n        add(c1);\n    \
+    \    add(c2);\n        add(c3);\n        c1.addItemListener(this);\n        c2.addItemListener(this);\n\
+    \        c3.addItemListener(this);\n        b1.addActionListener(this);\n    \
+    \    b2.addActionListener(this);\n    }\\}\n```"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "```\npublic static void main(String[] arg)\n{\n    new excheck();\n}\npublic\
+    \ void actionPerformed(ActionEvent e)\n{\n    if(e.getSource()==b1) {\n      \
+    \  String s=\"\"\";\n        if(c1.getState()) {\n            s=s+\" \"+c1.getLabel();\n\
+    \        }\n        if(c2.getState()) {\n            s=s+\" \"+c2.getLabel();\n\
+    \        }\n        if(c3.getState()) {\n            s=s+\" \"+c3.getLabel();\n\
+    \            JOptionPane.showMessageDialog(null,\"You have selected \"+s+\"\"\
+    );\\n        }\n    }\n    if(e.getSource()==b2) {\n        System.exit(0);\n\
+    \    }\n}\npublic void itemStateChanged(ItemEvent e)\n{\n    String s=\"\"\";\n\
+    \    if(e.getItemSelectable()==c1) {\n        c1.getLabel();\n    }\n    if(e.getItemSelectable()==c2)\
+    \ {\n        c2.getLabel();\n    }\n    if(e.getItemSelectable()==c3) {\n    \
+    \    c3.getLabel();\n        JOptionPane.showMessageDialog(null,\"You have selected\
+    \ \"+s+\"\");\n    }\n}\n\nOUTPUT:\n```"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# CheckBox Example
+
+
+    Education Qualific
+
+
+    +   - 10
+
+
+    +   - 10+2
+
+
+    +   - BCA
+
+
+    ![](img/bdd382ccd4d5d3945e8ba2af128b8c72_68_0.png)
+
+
+    **Radiobutton:** It is possible to create a set of mutually exclusive radiobutton
+    in which and only one item in the group can be selected at a time. The radiobutton
+    created by use of 2 class called **radiobutton** and **CheckboxGroup**, getSelectedCheckbox()
+    is used to determine which check box in a group is currently selected. setSelectedCheckbox()
+    is used to set a checkbox selected.
+
+
+    Program java.awt. to illustrate radiobutton
+
+
+    ```
+
+    import java.awt.*;
+
+    import java.awt.event.*;
+
+    import javax.swing.*;
+
+    public class extradio extends Frame implements ActionListener,ActionListener
+
+    {
+
+    Label b1;
+
+    Button b1,b2;
+
+    Checkbox r1,r2;
+
+    CheckboxGroup grp;
+
+    public extradio()
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '```
+
+    super("Radio Button Example");
+
+    setSize(400
+
+    ```'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '```
+
+    }
+
+    if(e.getSource()==b2)
+
+    System.exit(0);
+
+    }
+
+    public void itemStateChanged(ItemEvent e)
+
+    {
+
+    String s="";
+
+    if(e.getItemSelectable()==r1)
+
+    s=r1.getLabel();
+
+    if(e.getItemSelectable()==r2)
+
+    s=r2.getLabel();
+
+    JOptionPane.showMessageDialog(null,"You have selected "+s");
+
+    }
+
+    {}
+
+    ```
+
+
+    OUTPUT:
+
+
+    ![](img/bdd382ccd4d5d3945e8ba2af128b8c72_70_0.png)'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'Dropdown (ComboBox): Radiobutton''s substitute control is a dropdown list.
+    It belongs to the Choice class. The Choice class is used to create a pop-up list
+    of items from which the user may choose only defines the default constructor,
+    which creates an empty list. add() is used to add the selection to the list. getSelectedIndex()
+    determine which item is currently selected i.e. it returns the index number of
+    the selected item (starting with 0). getItem() returns a string containing the
+    name of the item. By default, the first item added to the list is selected. itemCount()
+    is used to obtain the no. of items in the list. select() is used to set the selected
+    item. Its parameter can be either a zero-based integer or a string that will match
+    a name in the list. getItem() is used to obtain the name associated with the item
+    at a given index.
+
+
+    Program to illustrate Combobox:*
+
+
+    ```
+
+    import java.awt.*;
+
+    import java.awt.event.*;
+
+    import javax.swing.*;
+
+    ```
+
+
+    ```
+
+    public class exchoice extends Frame implements ActionListener,ItemListener
+
+    {
+
+    Label lb;
+
+    Choice ch;
+
+    Button b;
+
+    public exchoice()
+
+    {
+
+    super("Choice Example");
+
+    setSize(400,400);
+
+    setVisible(true);
+
+    setLayout(null);
+
+    lb=new Label("Select city:");
+
+    nb=new Button("OK");
+
+    ch=new Choice();
+
+    ch.add("Patna");
+
+    ch.add("Gaya");
+
+    ch.add("Ranchi");
+
+    ch.add("Delhi");
+
+    ch.add("Kolkata");
+
+    lb.setBounds(50,50,100,20);
+
+    ch.setBounds(90,100,50,20);
+
+    add(lb);
+
+    ```'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '```
+
+    add(ch);
+
+    add(b);
+
+    b.addActionListener(this);
+
+    ch.addItemListener(this);
+
+    }
+
+    public static void main(String[] arg)
+
+    {
+
+    new exchoice();
+
+    }
+
+    public void itemStateChanged(ItemEvent e)
+
+    {
+
+    String s=ch.getSelectedItem().toString();
+
+    JOptionPane.showMessageDialog(null,"You have selected "+s");
+
+    }
+
+    public void actionPerformed(ActionEvent e)
+
+    {
+
+    if(e.getSource()==b)
+
+    {
+
+    String s=ch.getSelectedItem().toString();
+
+    JOptionPane.showMessageDialog(null,"You have selected "+s");
+
+    }
+
+    }
+
+
+    ```
+
+
+    OUTPUT:'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '![](img/bdd382ccd4d5d3945e8ba2af128b8c72_73_0.png)
+
+
+    **KeyEvent Class:** A KeyEvent is generated when keyboard input occurs. It is
+    handled by **KeyListener**. There are three types of key events which are identified
+    by these integer constants: **Key_Pressed, Key_Released & Key_Typed**. It is a
+    must to override all these events, if not them be empty overridden. It can be
+    captured on form and within control. The **KeyPressed** and **KeyReleased** methods
+    are invoked when a key is pressed and released respectively. The **Typed** method
+    is invoked when a character has been entered. The object of **KeyEvent** class
+    is defined as the parameters of its methods. **getKeyChar** returns the character
+    that was entered and **getKeyCode** returns the key code i.e. its ASCII equivalent.
+    **getKeyChar** does not return any character for some keys like Esc, Ctrl, etc
+    and it is difficult to remember the key codes of all the. For the solution to
+    this, there is a concept of **virtual keys** which are static constants of KeyEvent
+    class and it is bound with every key. For eg: VK_9 and VK_A through VK_1 defines
+    the ASCII equivalents of the numbers and letters. There are some others like VK_ENTER,
+    VK_CANCEL, VK_CONTROL, etc.
+
+
+    Program to illustrate key events:'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "```\nimport java.awt.*;\nimport java.awt.event.*;\npublic class exkey extends\
+    \ Frame implements KeyListener {\n{\n    public exkey() {\n        super(\"Key\
+    \ Example\");\n        setSize(400,400);\n        setVisible(true);\n        setLayout(null);\n\
+    \        addKeyListener(this);\n    }\n    public static void main(String[] args)\
+    \ {\n        new exkey();\n    }\n    public void keyTyped(KeyEvent e) {\n}\n\
+    \    public void keyPressed(KeyEvent e) {\n        if(e.getKeyCode()==e.VK_ENTER)\
+    \ {\n            JOptionPane.showMessageDialog(null,\"You have pressed Enter\"\
+    );\n            JOptionPane.showMessageDialog(null,\"You have pressed shortcut\
+    \ key for save\");\n        }\n    }\n    public void keyReleased(KeyEvent e)\
+    \ {\n}\n}\n```\n\nOUTPUT:\nWhen we press Enter key"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '![](img/bdd382ccd4d5d3945e8ba2af128b8c72_75_0.png)
+
+
+    **MouseEvent Class:** A MouseEvent is handled by **EventListener**. There are
+    5 types of mouse events. Here, also it is must to override these events.
+
+
+    +   1. mouseClicked (MouseEvent e)
+
+    2. mouseEntered (MouseEvent e)
+
+    3. mouseExited (MouseEvent e)
+
+    4. mousePressed (MouseEvent e)
+
+    5. mouseReleased (MouseEvent e)
+
+
+    If the mouse is pressed and released at the same point, the **mouse clicked()
+    a component, **mouseEntered()** method is called. When it leaves, **mouseExited()**
+    is called.
+
+    The **mousePressed()** and **mouseReleased()** methods are invoked when'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "the mouse is pressed and released respectively. The object of MouseEvent class\
+    \ is defined as the parameter of these methods. getX() return the value of the\
+    \ x-coordinate of the component where the mouse event has occurred and getY()\
+    \ returns the value of the y-coordinate.\n\nProgram to illustrate mouse events:\n\
+    \n```\nimport java.awt.*;\nimport java.awt.event.*;\nimport javax.awt.swing.*;\n\
+    public class exouse extends Frame MouseListener\n{\n    int x1,x2,y1,y2;\n   \
+    \ public exouse()\n    {\n        setSize(400,400);\n        setVisible(true);\n\
+    \        setLayout(null);\n        addMouseListener(this);\n    }\n    public\
+    \ static void main(String[] arg)\n    {\n        new exouse();\n    }\n    public\
+    \ void mouseClicked(MouseEvent e)\n    {\n        JOptionPane.showMessageDialog(null,\"\
+    Mouse CLicked\");\n    }\n    public void mouseEntered(MouseEvent e)\n    {\n\
+    \        JOptionPane.showMessageDialog(null,\"Mouse Entered\");\n    }\n    public\
+    \ void mouseExited(MouseEvent e)\n    {\n        JOptionPane.showMessageDialog(null,\"\
+    Mouse Exited\");\n    }\n    public void mousePressed(MouseEvent e)\n    {\n \
+    \       x1=e.getX();\n        y1=e.getY();\n    }\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "```\n//OptionPane.showMessageDialog(null,\"Mouse Pressed at\"+x1+\":\"+y1\"\
+    ;\n}\npublic void mouseReleased(MouseEvent e)\n{\n    x2=e.getX();\n    y2=e.getY();\n\
+    \    repaint();\n    OptionPane.showMessageDialog(null,\"Mouse Released\");\n\
+    }\npublic void paint(Graphics g)\n{\n    g.setColor(new Color(255,100,100));\n\
+    \    // g.drawRect(x1,y1,x2,y2);\n    g.fillRect(x1,y1,x2,y2);\n}\n```\n\nOUTPUT:\n\
+    Draw the rectangle with mouse and then release the mouse\n\n![](img/bdd382ccd4d5d3945e8ba2af128b8c72_77_0.png)"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: 'Menu Bars and Menus: A menubar contains one or more Menu objects. Each Menu
+    object contains a list of MenuItems. Each MenuItem is something that is selected
+    by the user. To create a menubar, first create an instance of MenuBar. A menubar
+    contains one or more Menu objects. Each Menu object represents something that
+    can be selected by the user. Since Menu is a subclass of Menu, a hierarchy of
+    nested submenus can be created. It is also possible to include checkbox menu items.
+    There are menu options of type CheckboxMenuItem and will have a checkmark next
+    to them when they are selected. There is no event of MenuBar and Menu, is selected
+    only when ActionListener and Listener interfaces must be implemented to handle
+    these menu events. Icons with the menu can be implemented using the Swing package.
+
+
+    Program to implement Menus:
+
+
+    ```
+
+    import java.awt.*;
+
+    import java.awt.event.*;
+
+    import javax.swing.*;
+
+    public class exmenu extends Frame implements ActionListener
+
+    {
+
+    MenuBar mb;
+
+    Menu m1,m2;
+
+    MenuItem mi1,mi2,mi3,mi4;
+
+    public exmenu()
+
+    {
+
+    super("Menu Example");
+
+    setSize(400,400);
+
+    setVisible(true);
+
+    setLayout(null);
+
+    nmb=new MenuBar();
+
+    setMenuBar(mb);
+
+    m1=new Menu("File");
+
+    m2=new Menu("Edit");
+
+    mb.add(m1);
+
+    mb.add(m2);
+
+    mi1=new MenuItem("Calculator");
+
+    mi2=new MenuItem("Choice Example");
+
+    mi3=new MenuItem("Mouse Example");
+
+    mi4=new MenuItem("Key Example");
+
+    m1.add(mi1);
+
+    m1.add(mi2);
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "```\nmi1_add(mi3);\nmi1_add(mi4);\nmi1.addActionListener(this);\nmi2.addActionListener(this);\n\
+    mi3.addActionListener(this);\nmi4.addActionListener(this);\n}\npublic static void\
+    \ main(String[] args) {\n    new exmenue();\n}\npublic void actionPerformed(ActionEvent\
+    \ e) {\n    if(e.getSource()==mi1)\n        new exwin1();\n    if(e.getSource()==mi2)\n\
+    \        new exchoice1();\n    if(e.getSource()==mi3)\n        new exmouse();\n\
+    \    if(e.getSource()==mi4)\n        new exkey1();\n}\n```\n\nOUTPUT:\n\n![](img/bdd382ccd4d5d3945e8ba2af128b8c72_79_0.png)"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# Applet
+
+
+    An applet is a type of Java program that runs in a Java enabled web browser (i.e.
+    Internet Explorer, Firefox). Applets are intended to be small programs and can
+    be downloaded on demand. It can be a fully functional Java application because
+    it has the entire Java API at its disposal.
+
+
+    An applet is a subclass of java.applet package. It does not consist of the main
+    method, unlike a Java application. Different states that an applet experience
+    between its object creation and object removal is known as App Life Cycle. Applet
+    are designed to be embedded into an HTML page. The user views an HTML page that
+    contains an applet, the code for the applet is downloaded to the users'' machine.
+    The JVM on the user''s machine creates an instance of the applet class and invokes
+    various methods during the applet life cycle.
+
+
+    # Applet life cycle
+
+
+    +   1 public void init(): This method is intended for whatever initialization
+    is needed for the applet. This is called only once in the life cycle. It instantiates
+    the objects and loads the GUI of the applet. It is the born state of a thread.
+    It is called after the param tags inside the applet tag have been processed.
+
+
+    +   2. public void start(): Even though the applet object is created by the init()
+    method, it remains in an inactive state. The init() method calls start() method
+    & it starts the execution of applet. It is also called whenever the user returns
+    to the page containing the applet after having gone off to the other page.
+
+
+    +   3. public void stop(): This method is automatically called when the user moves
+    off the page on which the applet resides. In this method, the applet becomes temporarily
+    inactive. It is the equivalent of the blocked state of the thread.
+
+
+    +   4. public void paint(): This method takes an object as a parameter of java.awt.Graphics.
+    It helps to create Applet''s GUI. It is invoked immediately after the start()
+    and also at any time the applet needs to repaint itself in the browser. This is
+    equivalent to a runnable state of a thread.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "5. public void destroys(): This destroys the Applet and is also invoked only\
+    \ once when the active browser which contains the page is closed not minimized.\
+    \ It is equivalent to the dead state of the thread.\n\nFor example\n\n```\nimport\
+    \ java.applet.*;\nimport java.awt.*;\n/*applet code=\"applet1\" width=\"400\"\
+    \ height=\"400\">\n<applet> */\npublic class Hello extends Applet{\n    public\
+    \ void paint(Graphics g) {\n        g.drawString(\"Hello Java\",27,50);\n    }\n\
+    }\n```\n\nNote: To run an applet the HTML code must be embedded in the Java program\
+    \ itself within comments."
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Database Connectivity
+
+
+    Connectivity between the front end (GUI) and backend(DBMS/RDBMS) is called Database
+    Connectivity. To connect java with any RDMS, we use JDBC (Java Database Connectivity).
+    It can be done by using either of the following ways:
+
+
+    +   1. Type I DSN
+
+    2. Type II (Thin Server)
+
+    3. Type III (Server)
+
+    4. Type IV (Distributed Server)
+
+
+    Here, we will deal with Type I. DSN (Data Source Name) is a common platform for
+    all drivers. It needs the help of another driver ODBC (Open Database Connectivity).
+    It is written in C language. JDBC is written in java, C & C++.
+
+
+    Steps:
+
+
+    +   1. Open Control Panel and click on Administrative Tools.
+
+    2. Open ODBC Data Sources (32-bit).
+
+    3. A dialog box opens, click on Add.
+
+    4. Select "Oracle in XE" and click on finish.
+
+    5. A dialog box opens, provides a Data Source Name and TNS Service Name as “XE”
+
+
+    +   6. Before proving TNS Service name ensure that Connection is tested by clicking
+    on Test Connection and then providing the user name and password of oracle.
+
+
+    The user id and password of the Oracle server are noted for its use in code. We
+    are using JDBC for java code and ODBC for oracle code.
+
+    GUI+JDBC-ODBC+SQL
+
+
+    JDBC-ODBC is called a bridge. This process is also known as a bridge-based connection.
+
+
+    Steps:
+
+
+    +   1. import package java.sql.*
+
+    2. Create bridge'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '+   3. Class.forName("Sun.jdbc.odbc.JdbcOdbcDriver")
+
+
+    +   4. Establish Connection, Connection class is used for it
+
+
+    +   5. Insert/Update/Delete/Select We use Statement class when a parameter is
+    fixed i.e. query and PreparedStatement when a query is not fixed. When we are
+    using the Statement class, we use executeQuery() to execute the query and when
+    we are using PreparedStatement class, we use executeQuery() to execute the query
+    and executeUpdate() for INSERT and UPDATE.
+
+
+    +   6. We use the ResultSet class to move a particular row & column (Read-only
+    and forward only) with certain parameters, we can make ResultSet backward, hold
+    read and write. For movement of the pointer, next() method is used.
+
+
+    Program to execute SELECT query:
+
+
+    ```
+
+    import java.sql.*;
+
+    class exdata
+
+    {
+
+    public void voidata()
+
+    {
+
+    try{
+
+    Class.forName("sun.jdbc.odbc.JdbcOdbcDriver"); //It internally combines with DriverManager
+
+    Connection con=DriverManager.getConnection("jdbc:odbc:myproject","hr","oracle");
+
+    /In above statement, "myproject" is DSN name, "hr" is user id and "oracle" is
+    password of oracle
+
+    Statement st=con.createStatement();
+
+    ResultSet rs=st.executeQuery("select * from prty_mst");
+
+    while(rs.next())
+
+    {
+
+    System.out.print(rs.getString(1)+"""+rs.getString(5)+"""+rs.getString(7)+"""+rs.getString(8));
+
+    /In above statement, in place of getString(), getInt(), getChar(), getDouble()
+    can be used as per the requirements
+
+    System.out.println();
+
+    }
+
+    catch(Exception ex)
+
+    ```'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "```\n{\n    System.out.println(ex.toString());\n}\n\npublic static void main(String[]\
+    \ arg) {\n    exdata ob=new exdata();\n    ob.data();\n}\n```\n\nAfter executing\
+    \ this program, the data of specified columns of table \"prty_mst\" will be displayed."
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# Thread in Java
+
+
+    A thread is a small snippet of code and each thread defines a separate path of
+    execution.
+
+
+    # Types of Thread:
+
+
+    +   1. User Thread: User threads are threads that are created by the application
+    or user. They are high-priority threads. JVM will not exit until all user threads
+    finish their execution. JVM will wait for these threads to finish their task.
+    These threads are foreground threads.
+
+
+    +   2. Daemon Thread: Daemon threads that are mostly created by the JVM. These
+    threads always run in the background. These threads are used to perform some background
+    tasks like garbage collection tasks. Threads are fewer priority threads. JVM will
+    not wait for these threads to finish their execution. JVM will exit as soon as
+    all user threads finish their execution.
+
+
+    A multithreaded program contains two or more parts that can run concurrently.
+    It enables us to write very efficient programs that make maximum use of the CPU
+    because idle time can be kept to a minimum. In multithreading, multiple threads
+    work at a single instance of time. There is no scheduling in a thread but it has
+    a life cycle. Thread class belongs to default package i.e. java.lang.
+
+
+    # The life cycle of a thread:
+
+
+    ![](img/bdd382ccd4d5d3945e8ba2af128b8c72_85_0.png)
+
+
+    The thread starts its execution by the invocation of the start() method which
+    belongs to Thread class. Then it comes to a runnable state when a run() method
+    is invoked. run() is invoked implicitly as soon as start() is invoked. When start()
+    is called, it starts the execution of the thread which'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'begins from the run() method. After the successful termination of the thread,
+    it stops and exits.
+
+
+    When an interrupt occurs, again run() is invoked and the same process gets repeated.
+    There can also be user interruptions. When suspend() method is invoked, the thread
+    gets suspended and will remain in the CPU until resume() method is invoked. Therefore,
+    this step is deprecated. not in use. By using resume(), again run() method is
+    invoked and the same process gets repeated. When sleep(time in ms) thread gets
+    paused for a certain period as specified in the argument of sleep(in millisecond)
+    and again it is resumed and the thread comes to a normal state and the same process
+    gets repeated.
+
+
+    In the case of multithreading, java includes an elegant interprocess communication
+    mechanism via wait(), notify(), and notifyAll() methods.
+
+
+    wait() tells the calling thread to give up the monitor and go to sleep until some
+    other thread enters the same monitor and calls notify() or notifyAll(). notify()
+    wakes up the first thread that called wait() on the same object and notifyAll()
+    wakes up all the threads that called wait() on the same object. The highest priority
+    thread will run first. Again run() method is invoked and the same process gets
+    repeated.
+
+
+    In multithreading, there is also a join() method which waits until the thread
+    on which it calls terminates. Its names come from the concept of the calling thread
+    waiting until the specified thread joins it. It is inflexible while notify() and
+    notifyAll() are more flexible than join(). So, it''s better to use notify() and
+    notifyAll().
+
+
+    There are two methods of creating a thread i.e. either extending the Thread class
+    or implementing a Runnable interface.
+
+
+    # By extending the Thread class
+
+
+    ```
+
+    public class thread1 extends Thread
+
+    {
+
+    public void run() //All the processing are done in run()
+
+    {
+
+    for(int i=0;i<=10;i++)
+
+    {
+
+    System.out.println(i);
+
+    try
+
+    {
+
+    Thread.sleep(1000); //It will throw InterruptedException
+
+    n}
+
+    ```'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "```\ncatch(InterruptedException ex)\n{\n    System.out.println(ex.toString());\n\
+    }\n\npublic static void main(String[] arg) {\n    thread1 ob=new thread1();\n\
+    \    System.out.println(ob.getName()); //To obtain thread's name\n    ob.setName(\"\
+    T1\"); //To change thread's name\n    System.out.println(ob.getName());\n    ob.start();\
+    \ //start() is called from here run() is automatically called\n}\n```\n\nOUTPUT:\n\
+    E:\\java\\new_java>java exread1\nThread-0\nT1\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n\
+    10\n\nBy implementing Runnable interface\n\n```\npublic class exthread2 implements\
+    \ Runnable\n{\n    public void run()\n}\n```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "```\nfor(int i=0;i<=10;i++)\n{\n    System.out.println(i);\n    try {\n   \
+    \     Thread.sleep(1000);\n    } catch(InterruptedException ex) {\n        System.out.println(ex.toString());\n\
+    \    }\n}\n\npublic static void main(String[] arg) {\n    exthread2 ob=new exthread2();\n\
+    \    Thread t=new Thread(ob);\n    //ob.start(); //start() is not called using\
+    \ the object exthread2 class\n    t.start();      //start() is called using the\
+    \ object of Thread class\n}\n```\n\nOUTPUT:\n:\\java\\new_java>java exthread2\n\
+    0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: 'Since, start() belongs to Thread class, not to Runnable interface, therefore,
+    start() can''t be called directly by using object of class. It is called by using
+    the object of Thread class or object of ethread class must be referenced to Thread
+    object.
+
+
+    # Creating multithread
+
+
+    Given below is the static way of multithreading. Here, instance is created at
+    compile time.
+
+
+    ```
+
+    public class exth implements Runnable
+
+    {
+
+    String tname="";
+
+    Thread t;
+
+    //To make it clear which is the output of which thread, name should be attached
+    to the thread
+
+    public void exth(String tname) //To show the name of thread, constructor is used
+
+    {
+
+    tname=tname;
+
+    t=new Thread(this,name); //Second way to set the name
+
+    t.setPriority(8); //To set the priority of the Thread, when the starts its priority
+    is 5 i.e. the priority
+
+    //Here, the priority of main thread is 5 but that of individual thread is 8
+
+    t.start();
+
+
+    System.out.println(tname+" is started");
+
+
+    public void run()
+
+    {
+
+    for(int i=0;i<=10;i++)
+
+    {
+
+    System.out.println(tname+":"+i);
+
+    try
+
+    {
+
+    Thread.sleep(1000);
+
+    }
+
+    catch(ruptedException ex)
+
+    {
+
+    System.out.println(ex.toString());
+
+    }
+
+    System.out.println(tname+" is exiting");
+
+    ```'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "```\n}\npublic static void main(String[] arg) \n{\nexth t1=new exth(\"one\"\
+    );\nexth t2=new exth(\"two\");\nexth t3=new exth(\"three\");\n}\n```\n\nOUTPUT:\n\
+    E:\\java\\new_java-java exth\none is started\none:0\ntwo is started\ntwo:0\nthree\
+    \ is started\nthree:0\nthree is exiting\ntwo is exiting\none is exiting\ntwo:1\n\
+    three:1\none:1\nthree is exiting\ntwo is exiting\ntwo:2\none is exiting\nthree:2\n\
+    one:2\ntwo is exiting\ntwo:3\nthree is exiting\nthree:3\none is exiting\none:3\n\
+    two is exiting\ntwo:4\nthree is exiting"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: 'three:4
+
+
+    one is exiting
+
+
+    one:4
+
+
+    two is exiting
+
+
+    two:5
+
+
+    three is exiting
+
+
+    three:5
+
+
+    one is exiting
+
+
+    one:5
+
+
+    two is exiting
+
+
+    two:6
+
+
+    three is exiting
+
+
+    one is exiting
+
+
+    three:6
+
+
+    one:6
+
+
+    two is exiting
+
+
+    two:7
+
+
+    three is exiting
+
+
+    three:7
+
+
+    one is exiting
+
+
+    one:7
+
+
+    two is exiting
+
+
+    two:8
+
+
+    three is exiting
+
+
+    three:8
+
+
+    one is exiting
+
+
+    one:8
+
+
+    two is exiting
+
+
+    two:9
+
+
+    three is exiting
+
+
+    one is exiting
+
+
+    three:9
+
+
+    one:9
+
+
+    two is exiting
+
+
+    two:10
+
+
+    three is exiting
+
+
+    one is exiting
+
+
+    one:10
+
+
+    three:10'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: 'two is exiting
+
+
+    one is exiting
+
+
+    In multithreading, inter-thread communication should always be in Synchronized
+    mode. Synchronization can be done through three methods i.e. wait() which is used
+    with read and notify() and notifyAll() are used with write.
+
+
+    # Program for interthread communication using synchronized method
+
+
+    ```
+
+    class shared
+
+    {
+
+    int data=0;
+
+    synchronized void doWork() //synchronized method for writing
+
+    {
+
+    try {
+
+    Thread.sleep(1000);
+
+    data++;
+
+    } catch(Exception ex)
+
+    {
+
+    System.out.println(ex.toString());
+
+    }
+
+    notify(); //wakes up first thread that called wait()
+
+    }
+
+    synchronized int getResult() //synchronized method for reading
+
+    {
+
+    try {
+
+    wait(); //waits until other thread enters and called notify()
+
+    System.out.println("Waiting...");
+
+    } catch(Exception ex)
+
+    {
+
+    System.out.println(ex.toString());
+
+    }
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '```
+
+    return data;
+
+    }
+
+    }
+
+    class th1 extends Thread
+
+    {
+
+    shared sh;
+
+    public th1(shared s1,String st)
+
+    {
+
+    super(st); //Constructor of Thread class gets called
+
+    sh=s1;
+
+    start(); //run() gets called
+
+    }
+
+    public void void run()
+
+    {
+
+    System.out.println("Result is "+sh.getResult()); //getResult() of shared class
+    gets called
+
+    }
+
+    }
+
+    class th2 extends Thread
+
+    {
+
+    shared sh;
+
+    public th2(shared s1,String st)
+
+    {
+
+    super(st); //Constructor of Thread class gets called
+
+    sh=s1;
+
+    start(); //run() gets called
+
+    }
+
+    public void void run()
+
+    {
+
+    sh.doWork(); //doWork() of shared class gets called
+
+    }
+
+    }
+
+    class exrun
+
+    {
+
+    public static void main(String[] arg)
+
+    ```'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "```\n{\n  shared sh=new shared();\nth1 t1=new th1(sh,\"one\"); //constructor\
+    \ of th1 class is called\nth2 t2=new th2(sh,\"two\"); //constructor of th2 class\
+    \ is called\n}\n```\n\nOUTPUT:\nE:\\java\\new_java>java>exrun\nWaiting...\nResult\
+    \ is 1"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# Socket Programming
+
+
+    Socket helps in communication. It works on both, CLI and GUI. The notion of a
+    socket allows a single computer to serve many different clients at once, as well
+    as serving many different types of information. A server is anything that has
+    some resources that can be shared. A client is simply any other entity that wants
+    to gain access to a particular server.
+
+
+    Internet Protocol(IP) is a low-level routing protocol that breaks data into smaller
+    packets and sends them to an address across a network, which does not guarantee
+    delivery of said packets with the help of IP address and port number. A Port is
+    a numbered socket on a particular machine. A server process is said to listen
+    to a port until a client connects to it. A server is allowed to accept multiple
+    clients connected to the same port number, although each session is unique. To
+    manage multiple client connections, a server process must be multithreaded or
+    have some method of multiplexing the simultaneous I/O.
+
+
+    Port numbers can be reserved or non-reserved. Some examples of reserved ports
+    include FTP of 21 (connection-oriented), HTTP of 80 (connectionless), and Telnet
+    of 23 (connection-oriented). From, 1-1024, called a reserved port and from 1025-65355,
+    is called a non-reserved port. These ports are created by us. We can use services
+    which are not occupied by any other.
+
+
+    # Communication Protocol
+
+
+    TCP(Transmission Control Protocol) is a reliable connection-oriented protocol.
+    It uses handshake methodology. In this, packets are sent from source to destination.
+    After receiving the packets, the destination sends an acknowledgment to the source
+    so that source sending i.e. source is notified that the destination has received
+    the data. The mobile calling system uses TCP protocol because when we call, we
+    can hear the tuner when that call has reached the destination. TCP also ensures
+    that not a single packet can be missed. In a banking transaction, not a single
+    packet should be missed, otherwise, a transaction fails, therefore it use TCP.
+    The disadvantage of TCP is that if there are many destinations, then each destination
+    sends an acknowledgment to the source. Therefore data gets flooded. Thus, TCP
+    is not used for a large amount of data.
+
+
+    UDP(User Datagram Protocol) is a connectionless protocol that is not reliable.
+    Here, the source is not notified whether the packets have reached the destination
+    or not. Mobile SMS system uses this protocol because when we send a message, we
+    are not notified whether the SMS is received or not(We are talking about earlier
+    days, nowadays we are'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: 'notified). UDP, packets can be missed. While watching online movies, if one
+    second is missed, there is not much affection. Therefore, it uses UDP. UDP is
+    suitable when a large amount of data is involved.
+
+
+    # Classes of TCP
+
+
+    A Socket can be used to connect java''s I/O system to other programs that may
+    reside either on the local machine or on any other machine on the Internet. These
+    classes belong to java.net package.
+
+
+    # For Server
+
+
+    ServerSocket class is used for creating a server and its services for the server-side.
+    It waits for the client before doing anything.
+
+
+    ```
+
+    ServerSocket ss=newServerSocket(<port-no>); Here, ss is the object created for
+    ServerSocket. Once, its object is created and port no. is passed as an argument,
+    it is ready for accepting client requests on this port number. We can say that
+    service started.
+
+    ```
+
+
+    The socket class is used for data transfer i.e. it is designed to connect server
+    sockets and initialize protocol exchanges.
+
+
+    ```
+
+    Socket sc=newSocket();
+
+    ```
+
+
+    Here sc the object created for Socket. The creation of a socket object implicitly
+    establishes a connection between the client and the server.
+
+
+    ```
+
+    sc.accept(); To establish link with the client, accept() is used.
+
+    sc.getInputStream() - Reading data from socket.
+
+    sc.getOutputStream() - Writing data on socket.
+
+    ```
+
+
+    # For Client
+
+
+    ```
+
+    Socket sc=newSocket(<IP address or name>,<port-no>);
+
+    ```
+
+
+    Here, socket class is not referential. It takes two arguments, IP address or name,
+    and port number. It takes two arguments, IP address or name, and port number.
+    If an IP address has been used, then another is needed to be used. Therefore,
+    we use the name directly. If a connection is to be established to the own system,
+    localhost is written in the first argument. After this, a connection is established.
+
+
+    ```
+
+    sc.getOutputStream() and sc.getInputStream()
+
+    ```
+
+
+    Here also, these two methods are used for writing and reading purposes respectively.
+
+
+    For server:
+
+
+    ```
+
+    import java.net.*;
+
+    ```
+
+
+    ```
+
+    import java.io.*;
+
+    ```
+
+
+    ```
+
+    public class tcpserver
+
+    ```'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "```\n{\n  public void server() {\n    ServerSocket ss=null;\n    Socket sc=null;\n\
+    \    BufferedReader br=null;\n    PrintWriter pw=null;\n    BufferedReader sbr=null;\n\
+    \    try {\n      ss=new ServerSocket(8888);\n      sc=new Socket();\n      sc=ss.accept();\n\
+    \      pw=new PrintWriter(sc.getOutputStream(),true);\n      br=new BufferedReader(new\
+    \ InputStreamReader(System.in));\n      sbr=new BufferedReader(new InputStreamReader(sc.getInputStream()));\n\
+    \      String s1;\n      while((s1=sbr.readLine())!=null) {\n        System.out.println(\"\
+    Client says \"+s1+\"\");\n        pw.println(br.readLine());\n      }\n    } catch\
+    \ (Exception ex) {\n      System.out.println(ex.toString());\n    } finally {\n\
+    \      pw.close();\n    }\n  }\n}\n```"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '```
+
+    sc.close();
+
+
+    ss.close();
+
+
+    sbr.close();
+
+    }
+
+    catch(Exception ex) {
+
+
+    System.out.println(ex.toString());
+
+
+    }
+
+
+    public static void main(String[] arg)throws Exception {
+
+
+    tpserver ob=new tcpserver();
+
+    ob.server();
+
+
+    }
+
+    ```
+
+
+    Now compile this program
+
+    For Client:
+
+
+    ```
+
+    import java.net.*;
+
+    import java.io.*;
+
+    public class tcpclient {
+
+
+    public void client() {
+
+
+    Socket sc=null;
+
+    BufferedReader br=null;
+
+    PrintWriter pw=null;
+
+    BufferedReader sbr=null;
+
+    try {
+
+
+    sc=new Socket("localhost",8888);
+
+    pw=new PrintWriter(sc.getOutputStream(),true);
+
+    br=new BufferedReader(new InputStreamReader(System.in));));
+
+    ```'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "```\nsbr=new BufferedReader(new InputStreamReader(sc.getInputStream()));\n\
+    String s1;\nwhile((s1=br.read.readLine())!=null)\n{\n    pw.println(s1);\n   \
+    \ System.out.println(\"Server says \"+sbr.readLine()\\n}\ncatch(Exception ex)\n\
+    {\n    System.out.println(ex.toString());\n}\nfinally\n{\ntry\n{\n    pw.close();\n\
+    \    sc.close();\n    sbr.close();\n}\ncatch(Exception ex)\n{\n    System.out.println(ex.toString());\n\
+    }\n}\npublic static void main(String[] arg)throws Exception\n{\ntcpclient ob=new\
+    \ tcpclient();\nob.client();\n}\n\n**\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: 'Now, compile this program on second instance of command prompt.
+
+    Then, run both the programs and start chatting.
+
+
+    ```
+
+    E:\java>java>java tcpserver
+
+    Client says Hello
+
+    Hii
+
+    Client says bye
+
+    bye
+
+    E:\java>java>java tcpclient
+
+    Hello
+
+    Server says Hii
+
+    bye
+
+    Server says bye
+
+    ```
+
+
+    # Datagrams
+
+
+    Datagrams are bundles of information passed between machines. Once the datagram
+    has been released to its intended target, there is no assurance that it will arrive
+    or someone will be there to catch it. Therefore, when the datagram is received,
+    there is no assurance that it hasn''t been damaged in transit or that whoever
+    sent it is still there to receive a response.
+
+
+    # Classes of UDP
+
+
+    It uses two classes: DatagramSocket and DatagramPacket. The classes of UDP belong
+    to java.net package. The DatagramPacket is the mechanism used to send or receive
+    the DatagramPacket. While receiving, the constructor of DatagramPacket accepts
+    two parameters i.e. the receiving, the data, the length of data, the IP address
+    of the receiver, and the port number. InetAddress is a class that is used to find
+    the IP address of any incoming packet and store it. getAddress() is used to get
+    the destination address which is used for sending. getPort() is used to find the
+    port number of the sender packet.
+
+
+    For Server:-
+
+
+    ```
+
+    import java.io.*;
+
+    import java.net.*;
+
+    public class udpserver
+
+    {
+
+    public void server()
+
+    {
+
+    DatagramSocket ds=null;
+
+    try
+
+    {}
+
+    ```'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "```\nds=new DatagramSocket(9888);\nwhile(true)\n{\n    byte[] b=new byte[100];\n\
+    \    DatagramPacket rdp=new DatagramPacket(b,b.length);\n    ds.receive(rdp);\n\
+    \    String s=new String(rdp.getData());\n    System.out.println(\"Client says\
+    \ \"+s+\"\");\n    InetAddress inet=rdp.getAddress();\n    int port=rdp.getPort();\n\
+    \    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));\n\
+    \    String s1=br.readLine();\n    byte[] b1=s1.getBytes();\n    DatagramPacket\
+    \ sdp=new DatagramPacket(b1,b1.length,inet,port);\n    ds.send(sdp);\n}\ncatch(Exception\
+    \ ex)\n{\n    System.out.println(ex.toString());\n}\nfinally\n{\ntry\n{\n    ds.close();\n\
+    }\ncatch(Exception ex)\n{\n    System.out.println(ex.toString());\n}\n```"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '```
+
+    }
+
+    public static void main(String[] arg)throws Exception
+
+    {
+
+    udpserver ob=new udpserver();
+
+    ob.server();
+
+    }
+
+    }
+
+    ```
+
+
+    Now, Compile the program.
+
+    For Client:
+
+
+    ```
+
+    import java.io.*;
+
+    import java.net.*;
+
+    public class udpclient
+
+    {
+
+    public void client()
+
+    {
+
+    datagramSocket ds=null;
+
+    try{
+
+    ds=new DatagramSocket();
+
+    while(true)
+
+    {
+
+    InetAddress inet=InetAddress.getByName("localhost");
+
+    int port=9888;
+
+    BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+
+    String s=br.readLine();
+
+    byte[] b=s.getBytes();
+
+    DatagramPacket dp=new DatagramPacket(b,b.length,inet,port);
+
+    ds.send(dp);
+
+    byte[] b1=new byte[100];
+
+    DatagramPacket rdp=new DatagramPacket(b1,b.length);
+
+    ds.receive(rdp);
+
+    String s1=new String(rdp.getData());
+
+    System.out.println("Server says "+s1);
+
+    ```'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "```\n}\n}\ncatch(Exception ex) {\n    System.out.println(ex.toString());\n\
+    }\nfinally\n{\n    try {\n        ds.close();\n    } catch(Exception ex) {\n \
+    \       System.out.println(ex.toString());\n    }\n}\npublic static void main(String[]\
+    \ args)throws Exception\n{\n    udpclient ob=new udpclient();\n    ob.client();\n\
+    }\n}\n```\n\nNow, compile this program on second instance of command prompt.\n\
+    Then, run both the programs and start chatting.\n\n```\nE:\\java\\java->java udpserver\n\
+    Client says hii\nbye\nClient says bye\nE:\\java\\java->java udpclient\nhii\nServer\
+    \ says bye\nbye\n```"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# Collections Framework
+
+
+    The java collections framework standardizes how groups of objects are handled
+    by our programs. The collection framework was designed to meet several goals.
+
+
+    +   - The framework had to be high-performance. The implementations for the fundamental
+    collections are highly efficient.
+
+
+    +   - The framework had to allow different types of collections to work similarly
+    and with a high degree of interoperability.
+
+
+    +   - Extending/or adapting a collection had to be easy.
+
+
+    **Note:** None of the collection classes are synchronized, but all the legacy
+    classes are synchronized.
+
+
+    The legacy classes defined by java.util are **Dictionary, Hashtable, Properties,
+    Stack, Vector**
+
+
+    Legacy interface - **Enumeration**
+
+
+    # **The Enumeration Interface:**
+
+
+    The Enumeration interface defines the methods by which we can enumerate it one
+    at a time, the elements in a collection of objects.
+
+
+    **hasElement()** It must return true while there are still more elements to extract
+    and false when all the elements have been enumerated.
+
+
+    **nextElement-** It returns the next object in the enumeration as a generic object
+    reference i.e. each call to nextElement() obtains the next object in the enumeration.
+
+
+    # **Vector**
+
+
+    Vector implements dynamic array. It is similar to ArrayList but with two differences
+
+
+    +   - Vector is synchronized.
+
+
+    +   - A vector may contain a legacy method that is not the part of collection
+    framework.
+
+
+    Vector proves to be very useful if we don''t know the size of an array in advance
+    or we just need that can be changed over the lifetime of a program.
+
+
+    **Note:-** The enumeration interface or foreach loop is used to traverse the Vector.'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# Syntax:-
+
+
+    Vector <object-name>= new Vector<size,increment-value>;
+
+
+    Here, size is the initial size defined to the Vector, increment-value is the value
+    by which the Vector gets incremented whenever the size of the Vector is full and
+    we add more element to the Vector.
+
+
+    Example:
+
+
+    ```
+
+    import java.util.*;
+
+    class exvector
+
+    {
+
+    public void vec())
+
+    {
+
+    Vector v=new Vector(3,2); // Here, 3 is the size and 2 is the increment value
+
+    v.addElement(new Integer(5)); // To add 1st element
+
+    v.addElement(new Integer(6)); // To add 2nd element
+
+    System.out.println("Size="+v.size()); // To print size
+
+    System.out.println("Capacity="+v.capacity()); // To print capacity
+
+    v.addElement(new Double(5.5)); // To add 3rd element
+
+    v.addElement(new Double(7.6)); // To add 4th element
+
+    v.addElement(new Double(9,3)); // To add 5th element
+
+    System.out.println("Current Size="+v.size()); // To print increased size
+
+    System.out.println("Capacity="+v.capacity()); // To print increased capacity
+
+    Enumeration e=v.elements(); // To enumerate the element of the vector, foreach
+    loop can also be used
+
+    while(e.hasMoreElements()){ // To check next element and move to next if it exists,
+    otherwise return false
+
+    System.out.println(e.nextElement()); // To print the value where the cursor reside
+    i.e. the current pointer
+
+    }
+
+    public static void main(String[] arg)
+
+    {
+
+    exvectoror ob=new exvector();
+
+    ob.vec();
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: 'OUTPUT:
+
+
+    ```
+
+    E:\java\new_java\java vector
+
+    Size=2
+
+    Capacity=3
+
+    Current Size=5
+
+    Capacity=5
+
+    5
+
+    6
+
+    5.5
+
+    7.6
+
+    9.3
+
+    ```
+
+
+    # Stack
+
+
+    Stack is a subclass of Vector that implements a standard last-in, first out stack
+    (LIFO). Stack only defines the default constructor, which creates an empty stack.
+
+
+    push() is used to push an object on the top of the stack and pop() is used to
+    remove and return the top element. Any EmptyStackException is thrown when the
+    invoking Stack is empty.
+
+
+    peek() - Return the top object.
+
+
+    empty() - Returns true if nothing is on the Stack.
+
+
+    search() - It determines whether an object exists on the Stack, and returns the
+    number of pops that are required to bring it to the top of the Stack.
+
+
+    Example:
+
+
+    ```
+
+    import java.util.*;
+
+    class exstack
+
+    {
+
+    public void st() {
+
+    Stack s=new Stack();
+
+    s.push(5);
+
+    System.out.println(s);
+
+    s.push(new Integer(6));
+
+    System.out.println(s);
+
+    s.push(new Double(6.7));
+
+    System.out.println(s);
+
+    ```'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '```
+
+    s.pop();
+
+    System.out.println(s);
+
+    s.push(new Integer(8));
+
+    System.out.println(s);
+
+    }
+
+    public static void main(String[] arg) {
+
+    }
+
+    exstack ob=new exstack();
+
+    ob.st();
+
+    }
+
+    }
+
+    ```
+
+
+    OUTPUT:
+
+    E:\java\new_java->java exstack
+
+
+    +   [5]
+
+    [5, 6]
+
+    [5, 6, 6.7]
+
+    [5, 6]
+
+    [5, 6, 8]
+
+
+    # Hashtable
+
+
+    Hashtable stores key/value pairs in a Hashtable. When using Hashtable, we specify
+    an object that is used as a key and the value that we want to be linked to that
+    key. The key is then hashed, and the resulting Hashcode is used as the index at
+    which the value is stored within the table.
+
+
+    A Hashtable is an array of the list. Each list is known as a bucket. The position
+    of the bucket is identified by calling hashcode method. A Hashtable contains value
+    based on key. It contains unique elements. It is synchronized. It may not have
+    any null key or value.
+
+
+    Example:
+
+
+    ```
+
+    import java.util.*;
+
+    class exhashtable {
+
+    public void ht() {
+
+    Hashtable<Integer,String> h=new Hashtable<Integer,String>();
+
+    h.put(101,"Rahul");}
+
+    ```'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '```
+
+    h.put(102,"Shyam");
+
+    for(Map.Entry m:h.entrySet()) //To traverse the Hashtable, Map is a class and
+    Entry is its
+
+    property
+
+    System.out.println(m.getKey()+"="+m.getValue());
+
+    }
+
+    public static void main(String[] arg) \{
+
+
+    exhashtable ob=new exhashtable();
+
+    nob.ht();
+
+    }
+
+    }
+
+    ```
+
+
+    OUTPUT:
+
+
+    ```
+
+    E:\java''new_java>java exhashtable
+
+    102=Shyam
+
+    101=Rahul
+
+    ```'
+  merge: -1
+  pgno: 108
