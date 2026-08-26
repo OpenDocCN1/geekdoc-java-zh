@@ -1,0 +1,661 @@
+- img_proc: true
+  md: 'Available online at www.sciencedirect.com
+
+
+    # ScienceDirect
+
+
+    # IFAC Papers CONFERENCE PAPER ARCHIVE
+
+
+    IFAC PapersOnline 55-10 (2022) 1798-1803
+
+
+    ELSEVIER
+
+
+    # # Preemptive Demand and Capacity Sharing Protocols Using Long Short-Term Memory
+    (LSTM) Neural Network Autoencoders
+
+
+    Praditya Ajidarma*, Shim N. Hof**, Raditya A. Prada**, Wirawan N. Nugro**, Abdul
+    H. Halim**
+
+
+    *Cprism, Purdue University, West Lafayette, IN 47907 USA
+
+
+    (e-mail: pajiram@purdue.edu)
+
+
+    **Institut Teknologi Bandung, Bandung, West Java 40132 Indonesia**
+
+
+    (e-mail: akhalim@itb.ac.id)
+
+
+    Abstract: This research is conducted to address the challenge of future resilient
+    global supply, subject to disruptions. In a collaborative network of enterprises
+    (CNEs), lately collaborate through capacity sharing and information resources.
+    A common practice of collaborative sharing through demand and capacity sharing
+    (CS), which aims to ensure timely delivery to customers, despite uncertainties
+    in the market and disruptions in supply chain. One key challenge of CNE implementation
+    is to ensure that capacity sharing protocols could lead to coordination failures
+    and backorders, prevent, when actual demand has been presented. This study aims
+    to develop a new preemptive CS, Collaborative CS, which uses machine learning
+    to learn from historical data. Long Short-Term Memory (LSTM) Neural Network Autoencoders
+    are used to detect anomalies in real-time. The detected anomalies become capable
+    of capacity sharing protocol, which could initiate preemptive CS. A case of automobile
+    manufacturers in Indonesia is used to validate the model. On average, for the
+    given study, preemptive protocols on the learning protocols of capacity increase
+    the fulfillment rate to to in the demand-capacity sharing CNEs, compared to the
+    collaborative and non-preemptive capacity sharing protocols (DSP) baseline scenarios.
+    Further research is needed for comprehend.
+
+
+    © 2022 The Authors. This is an open access article under the CC BY-NC-ND license
+    (https://creativecommons.org/licenses/by-nc-nd/4.0).
+
+
+    Keywords: collaborative theory, demand and capacity sharing, learning protocols,
+    preemptive protocols
+
+
+    # ## 1. INTRODUCTION
+
+
+    Demand and Capacity Sharing (CS) Protocol in a collaborative network of enterprises
+    (CNEs) is designed to coordinate demand and capacity sharing and allocation decisions.
+    The protocol, based on collaborative control theory, prevents underutilized and
+    minimizes the latency of capacity sharing in enterprises to improve the multiple
+    objective criteria of CNEs (Yoon and Notof, 2015). The CS protocol has been extended
+    and generalized into a resource-sharing framework for the cyber-physical systems
+    (Nsayal et al., 2014) and bolstered by resilience (R) (Reyes and Lef, 2015) and
+    dynamic lines of collaboration (Zhong and Notof, 2020), the CS protocol aims to
+    ensure the resilience of a collaborative supply network against disruptions.
+
+
+    The dynamic nature of a manufacturing system is represented as a time series,
+    which offers a new dimension of complexity to CNE modeling. Sharing algorithms
+    with heterogeneous batch processors (Hidayat et al., 2016), learning and forgetting
+    effects (Yerselli et al., 2019), and a combination with
+
+
+    maintenance scheduling (Zahed et al., 2016) have been developed to address complexity
+    within a single enterprise, few models have addressed to the dynamism of a supply
+    network. Intelligent CS (ICS) protocol is developed to form a contingent capacity
+    sharing based on a distribution-decision process (Soek et al., 2016). Association/Distribution
+    protocol has also been developed to address the membership issue of reconfigurable
+    CNEs over (Yoon and Notof, 2011).
+
+
+    A few have addressed the dynamic nature of a manufacturing system by accommodating
+    real-time data updates and adaptive solutions to the CS protocol. Adaptive-collaborative
+    CS protocol was developed to determine whether to perform resource allocation
+    based on the history of long-term expected profit (Soek and Notof, 2014). Combined
+    with Best Matching Protocol (PBMP), the CS protocol has been developed to mitigate
+    uncertainty and demand (Moghaddam and Notof, 2014), including another approach
+    to a Real-Time Optimization (RTO) method, which optimizes allocation decisions
+    in real-time (Moghaddam and Notof, 2019).
+
+
+    2405-9962 © 2022 The Authors. This is an open access article under the CC BY-NC-ND
+    license. 10.1016/j.ifac.2022.0.065
+
+
+    * With peer review of the International Federation of Control.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Prajitya Ajjidarma et al. / IFACPapersOnline 55-10 (2022) 1798–1803
+
+
+    Despite the scope, the mentioned of the DSC protocols have 1) utilized historical
+    data to enable a better demand-sharing capacity, in the theory and 2) the capability
+    of initiating capacity preemptively. The original contribution of this research
+    is to investigate a protocol to address the research gap by developing a learning
+    protocol for preemptive and capacity sharing.
+
+
+    The rest of the paper is organized in Section 2. The framework of the proposed
+    study and methodology of preemptive demand-sharing learning protocols are summarized
+    in Section 3. The numerical experiments are conducted and analyzed in Section
+    4. Lastly, the results of numerical experiments are concluded and discussed in
+    Section 5.
+
+
+    of collaborating $e_j$ and the quantity of the available capacity as follows:
+
+
+    $$\Lambda_j = \{e_i, \omega_j(o_k)\}$$
+
+
+    When shared capacity $\omega_j(o_k)$ from the resource-sharing enterprises are
+    received by the demand-sharing enterprise $e_j$, the demand and capacity allocation
+    is calculated. There exists a coordination cost per unit $\beta$, which is translated
+    to the coordination and demand sharing cost. The solution for the optimal demand
+    and capacity allocation is calculated in four steps. First shared capacity $\omega_j(o_k)$
+    is sorted based on the corresponding capacity $\theta_i$ of each enterprise $e_i$.
+
+
+    $$\theta = \omega_j(o_k) < \theta_1 < < \dots, < \theta_n$$
+
+
+    Second, the shared capacity $\omega_j(o_k)$ of enterprise $e_j$ is justified such
+    that $\max\{e_j\} = e_j$. The enterprise is further compared through $\theta$.
+    The third of shared capacity is calculated and compared to the required quantity
+    $r_i(o_k)$ (Eq. 6).
+
+
+    $$\omega_j(o_k) > r_i(o_k)$$$
+
+
+    where $Z^*$ is the set of collaborating enterprises. If equation (6) holds, demand
+    fulfillment is determined, otherwise return to method (Eq. 5). The demand of $e_j$
+    can be calculated as follows:
+
+
+    # 2. BACKGROUND
+
+
+    # 2.1 Demand and Capacity Sharing
+
+
+    Demand and Capacity Sharing was proposed by Yoon and NotF(2010). In a collaborative
+    network of enterprises (CNEs), an order $e_i$ is generated. If a part of the demand,
+    $r_i(o_k)$, is fulfilled then the maximum available local capacity $m_i(o_k)$
+    should be fully assigned to the order $o_k$, the the enterprise $e_j$ will share
+    the demand-sharing proposal $\Delta_i$ which with the CNEs. The enterprise''s
+    identification and the information of order $o_k$.
+
+
+    ```
+
+    $$\Delta_i = \{e_i, q_k, t_k\}$$$
+
+    ```
+
+
+    Once the demand-sharing proposal $\Delta_i$ is shared with the CNEs, potential
+    collaborative enterprises submit $\omega_j$ as a feedback. The network demand-sharing
+    capacity is calculated as (Eq. 2).
+
+
+    ```
+
+    $$\DS_i(o_k) = \begin{cases} q_k & q_k < \omega_j(o_k) \ \omega_j(o_k) & q_k -
+    r_i(o_k) \le \omega_j(o_k) < q_k \ 0 & \text{otherwise} \end{cases}$$$
+
+    ```
+
+
+    If $q_k$ can be fulfilled, the demand is allocated to enterprise $e_j \in Z^*$
+    which has the corresponding shared capacity $\omega_j(o_k)$. Otherwise, the order
+    $o_k$ is rejected.
+
+
+    Furthermore, the capacity-sharing protocol is activated. When the demand-sharing
+    proposal $\Delta_i$ is received by $e_j \in E$, the maximum available capacity
+    $m_i(o_k)$ should be calculated by subtracting the available capacity at time
+    $t$, $CA(t)$, by the capacity for an order $o_k$, $CS_k(t)$, as shown in (Eq.
+    3).
+
+
+    ```
+
+    $$\m_i(o_k) = \sum_{t=1}^{k} CA(t) - \frac{K-1}{2} \sum_{t=1}^{k} CS_s(t)$$$
+
+    ```
+
+
+    After shared capacity $\omega_j(o_k)$ is determined, the capacity-sharing proposal
+    will be sent to the demand sharing enterprise $e_i$. The capacity sharing proposal
+    $\Lambda_i$ includes the identification
+
+
+    # 2.2 Artificial Neural Network and LSTM Encoder
+
+
+    Long-term memory networks (LSTM) are a type of recurrent neural network (RNN)
+    which allows a network to maintain long-term links to data in previous times.
+    A terminology was first introduced in 1997 (Hochreiter and Schmiduber 1997), LSTM
+    from interpreting of variables from neural networks. Each enable consists of three
+    gates: memory gate, forget gate, and output gate. Each gate contains a neural
+    layer and an activation function. The output value of the sigmoid layer is between
+    0 and 1, which represents the probability of the input that must be passed. LSTM
+    reads sequential data in the form of a vector $v = [x_1, x_2, \dots, x_t]$, where
+    $x_t \in \mathbb{R}^m$ represents a vector with $m$ dimensions for a number of
+    variables with $t$ times (Yoon et al., 2021).
+
+
+    LSTM encoder is for unsupervised neural network which aims to learn the encoding-decoding
+    scheme from historical (Yoon et al. 2021). In general, the autoencoder consists
+    of an input layer, an output layer, a neural network encoder, a neural network
+    decoder, and space. When data is entered into the encoder, the encoder will compress
+    the data into latent space, the decoder will'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# 3. METHODOLOGY
+
+
+    decodes the data into output layer. Then, the encoded-output is compared with
+    the initial data, and backpropagation is performed on the resulting error to update
+    the weight value of a metric. Given the input $x \in \mathbb{R}^n$, the encoder
+    will compress $x$ to obtain an encoded representation of $z = g(x) \in \mathbb{R}^m$.
+    The decoder will reconstruct the representation to give output $\hat{x} = f(z)
+    \in \mathbb{R}^n$. The autoencoder is trained by minimizing the reconstruction
+    error.
+
+
+    The general framework of the preventive demand-capacity sharing protocols is shown
+    in Figure 1. This study extends the previously developed demand-capacity sharing
+    (DCS) in the collaborative enterprise network (Yoon and Nof, 2010), by incorporating
+    LSTM Autoencoder-based anomaly detection techniques (Wang et al., 2022) to predict
+    the need to collaborate in advance. Both DCS and the preventive protocol extend
+    the general
+
+
+    # 2. Anomaly Detection in Time Series
+
+
+    Anomaly detection is a data mining process that determines types of anomalies
+    found in a data and certain details about their occurrence (Prostovar et al.,
+    2015). Methods of anomaly detection include clustering-based anomaly detection,
+    isolation forests, forest vector machines, and in addition to these classical
+    methods there are also other methods such as anomaly detection based on signal
+    detection, time series models (exponential models, Holt-Winters, ARIMA) and deep
+    learning (e.g., autoencoder and LSTM neural network) (Su et al., 2019), and dimensionality
+    reduction (robust principal component self-organizing maps), and detectors (Sakakura
+    and Yairi, 2014).
+
+
+    The original contribution of this research is extending the original DCS protocol
+    by accommodating two features: predictive models based on historical data in order
+    to forecast future needs of collaboration and using the predictions to collaborate
+    in advance. Due to the nature of the protocols, two parameters associated with
+    the ratio of shared capacity $c_t$ and the length of sharing period. In the DCS
+    protocol, the shared capacity and length are determined after the order arrives.
+    This is not the case in the preventive DCS protocol. Both parameters are determined
+    after prior adjustment and collaboration along time.
+
+
+    There are classes of anomaly detection techniques related based on their reason
+    for labeling: supervised anomaly detection, and unsupervised anomaly detection
+    (Chandola et al., 2009). In the anomaly detection process, there are several cases
+    that can be used. Among these are classification-based anomaly detection, which
+    include anomaly detection techniques based on near neighbors (Tian, Azarian and
+    Peicht, 2014), anomaly detection based on clustering (Sairaj, Prugel-Wiggles and
+    Wills, 2012), and anomaly detection based on statistical methods (Chandola et
+    al., 2009).
+
+
+    LSTM-based anomaly detection is classified as unsupervised anomaly detection,
+    which aims to solve anomaly problems without labeling. The model incorporates
+    historical time series data and uses it to build a new time series model using
+    the reconstruction function, which measures the quality of the reconstruction.
+    The difference between the original time series data (actual data) and the reconstruction
+    will be in residual. The model is trained using data that does not have an anomaly,
+    reconstruction error that corresponds to anomalous data is of great value (Walsh
+    et al., 2020). The metric is trained as time series $X_t, t=1, 2, \dots, T$ which
+    is the reconstruction of $X$. Reconstruction error, which is the difference between
+    $X$ and $Y$, is an element of $||X_t - \hat{X}_t||, t=1, \dots, T$. The Euclidean
+    distance from the reconstruction error for each time step can be used as a criterion
+    in detecting anomalies (Wang et al., 2022).
+
+
+    ![](img/2e808fcef49f60d76622f167e51d8a4f_2_0.png)
+
+
+    > Figure 1: Conceptual Framework of Preventive Demand-Capacity Sharing Sharing
+    Protocols
+
+
+    The protocols are detailed as follows. First, historical data $q_t = \{q_t^{(i)}\\}$
+    from the previous period is used to train the LSTM autoencoder as it generates
+    an anomaly $a_t$. The second period is used to predict the need to collaborate.
+    The model monitors the demand of order quantity $X_t$, and calculates $e = ||X_t
+    - \hat{X}_t||, t=1, \dots, T$. Once the LSTM autoencoder detects order quantity
+    $X_t$, such that $e \in A$, it will raise its threshold. This threshold activates
+    the preventive DCS, with'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'value of the shared capacity $C_t$ and the length of sharing
+
+    $P_t$.
+
+
+    As the need for collaboration is predicted, the protocols will
+
+    ent a set of $C_t$ and $P_t$ and the optimal parameters
+
+    for the DCS. The optimality of the protocol is
+
+    determined by the objective criteria of the DCS (Yoon
+
+    and No, 2010) on local demand forecast rate $y_t$, and
+
+    base on local demand forecast $y_t$, and collaboration-based
+
+    demand forecast rate $y_t$.
+
+
+    ```
+
+    $Y_t = Y_t + Y_c = \sum_{i \in Y_t} D_i + \sum_{j \in Y_c} D_j \eqno (8)$
+
+    ```
+
+
+    # 4. NUMERICAL EXAMPLES AND ANALYSIS
+
+
+    The methodology presented in research is with a
+
+    numerical example from a dataset of the\automobile industry. The dataset contains
+    a set of
+
+    arrivals are collected as a two-year time series
+
+    between January 2019 and December 2020.
+
+
+    ![](img/2e808fcef49f60d76622f167e51d8a4f_3_0.png)
+
+
+    Figure 2. Order Quantity of The Most-Frequently SKUs
+
+
+    ![](img/2e808fcef49f60d76622f167e51d8a4f_3_1.png)
+
+
+    Figure 4: test loss and threshold of the 31st order of
+
+    88515BZ50; right: visualization of the anomaly (red dot)
+
+
+    Because there is anomaly, the prediction model
+
+    is automatically executed. The prediction will retain and
+
+    update the threshold value in the next iteration, which is the
+
+    32nd order, as shown on Figure (5-left). Furthermore, Figure
+
+    (5-right) is a visualization of test loss vs. threshold on the
+
+    literation or the last order. From both, it appears
+
+    there are several changes in the threshold which indicates
+
+    there are several anomalous points that activate the LSTM
+
+    autoencoder.
+
+
+    ![](img/2e808fcef49f60d76622f167e51d8a4f_3_2.png)
+
+
+    Figure 3. The lead time of The Most-Frequently Ordered SKUs
+
+
+    Out of 9141 stock-keeping units (SKUs) in the dataset,
+
+    parts with the highest number of orders are chosen as input
+
+    for the LSTM autoencoder anomaly detection method. The ten
+
+    SKUs correspond to 82.64% of the total quantities in the
+
+    obile.
+
+
+    # 4.1 Anomaly Detection with LSTM Autoencoders
+
+
+    LSTM autoencoder for anomaly detection model is developed
+
+    with Keras library for the Tensorflow model. The
+
+    testing and datasets are formed into a 3-dimensional array of
+
+    sequential data by combining with the specified time
+
+    required by the LSTM model. There are five timeouts
+
+
+    ![](img/2e808fcef49f60d76622f167e51d8a4f_3_3.png)
+
+
+    Figure 5: test loss and threshold of the 32nd order of
+
+    88515BZ50; right: test loss and threshold of 88515BZ50
+
+    by the end of the prediction period
+
+
+    # 4.2 Predictive DCS with Learning Protocol
+
+
+    Numerical examples representing the implementation of demand
+
+    capacity sharing protocols in the collaborative
+
+    network of enterprises (CNES) are provided here. To illustrate
+
+    t effectiveness of the protocol, three types of
+
+    enterprise collaboration modes are applied in the simulation:
+
+    (1) no collaboration model, (2) demand-capacity sharing
+
+    (DCS) protocol, and (3) and preemptive
+
+    demand-capacity sharing learning protocols.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Table 1. Parameters for the Simulation
+
+
+    The preemptive demand-capacity sharing learning protocols are capable of increasing
+    the fulfillment rate to 92.94%, compared to 88.65% of the baseline scenario collaborative
+    model and 90.58% of the non-preemptive DCSP. The fulfillment rate of the learning
+    protocol is positively correlated with the ratio of shared capacity and the length
+    of the preemptive horizon. On average, the preemptive demand-capacity sharing
+    learning protocols are capable of fulfilling 91.03% of the CEs.
+
+
+    | Parameter (unit) | Value |
+
+    |---|---|n| Available capacity of the collaborative enterprise (unit) | $N(\mu(o_k),\sigma(o_k})$
+    |
+
+    | Ratio of shared capacity | $C_t=(0.1-0.7)$ |
+
+    | Preemptive sharing period (months) | $P_i=(1-t)$ |
+
+    | Simulation time (planning period) | 24 |
+
+    | Replication (times) | 100 |
+
+
+    The quantity and lead time of demand are caused by the order $o_{ij}$ in the Indonesian
+    dataset. The anomalies detected by the LSTM autoencoder (4.1) become for the preemptive
+    demand-capacity sharing (third collaboration model). To validate the performance
+    of the learning protocols, fulfillment rate is defined as performance measure.
+    The simulation experiments are conducted using Python and R with the given parameter
+    setting, as shown in Table 1. The result of the simulations of the three collaboration
+    models are presented in Figure 6 and 7 in terms of the fulfillment rate.
+
+
+    ![](img/2e808fcef49f60d76622f167e51d8a4f_4_0.png)
+
+
+    Figure 6 A comparison of three collaboration models in terms of fulfillment rate
+    over the ratio of shared capacity
+
+
+    # 5. CONCLUSION AND DISCUSSION
+
+
+    In this study, premium demand and capacity sharing learning protocols have been
+    developed, analyzed, and validated. The protocol being developed by this study
+    extends the previously developed demand-capacity sharing (DCS) by preemptive requests
+    for capacity sharing before the actual order arrival. The proposed demand model
+    for production scheduling based on parameters, lead time, order quantity, and
+    duration of processes using the LSTM autoencoder. The LSTM autoencoder predicts
+    a new threshold value of a quantity, which triggers collision.
+
+
+    Based on the numerical analysis of the case study, the preemptive demand-capacity
+    sharing learning protocol achieves a fulfillment rate of CEs by 91.03 and is better
+    compared to the non-collaborative and non-preemptive demand-capacity sharing baseline
+    scenarios. Given the availability of reliable historical data, practical decision-makers
+    in the industry could utilize the proposed model to predict and fulfill future
+    needs of CEs as a result, reducing uncertainty in the market and disruptions in
+    the networks. Further studies are needed to refine and establish robust statistical
+    significance. The objective of the preemptive DCS learning protocol is to enable
+    the CEs in the network to allocate and share their demands and allocate their
+    capacities to achieve a better fulfillment rate.
+
+
+    Future research will also explore the economic perspective of preemptive demand-capacity
+    sharing minimizes the probability of lost sales, it could enable the enterprises
+    with high coordination costs. Furthermore, the interdependencies between the learning
+    protocols, other collaborative protocols, and data availability and reliability
+    are among the questions and challenges to be addressed in future research.
+
+
+    # ACKNOWLEDGEMENTS
+
+
+    This study was supported by the Prism Center at Purdue University, and by NSF
+    Grant #1839791: Pre-Skilling Workers. Understanding Labor Implications and Designing
+    Future Factory Human-Robot Workflow using Physical Simulation Platform. We also
+    have several colleagues who gave valuable comments to improve this study.
+
+
+    ![](img/2e808fcef49f60d76622f167e51d8a4f_4_1.png)
+
+
+    Figure 7 A comparison of three collaboration models in terms of fulfillment rate
+    over the length of the preemptive horizon'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# REFERENCES
+
+
+    Chandola, V., Banerjee, A. and Kumar, Y. (2009) "Anomaly detection," ACM Computing
+    Surveys, 31(3), pp. 1–35. doi:10.1145/1551840.1551848
+
+
+    Hidayat, N.P.A. et al. (2016) "A batch scheduling model for m heterogeneous batch
+    processing," International Journal of Production Research, 54(4), pp. 1170–1185.
+    doi:10.1080/00200743.2015.105622.
+
+
+    Hochreiter, S. and Schubert, J. (1997) "Long Short-Term Memory Neural Network,"
+    9(8), pp. 1735–1780. doi:10.1002/neco.1997.9.1735
+
+
+    Mohaddam, M. and Sof, S.Y. (2014) "Demand capacity sharing with best matching
+    decisions in enterprise collaboration," International Journal of Production Economics,
+    148, pp. 93–109. doi:10.1016/j.ijpe.2013.11.015.
+
+
+    Mohaddam, M. and Sof, S.Y. (2016) "Real-time optimization and control for demand
+    and capacity sharing," International Journal of Production Economics, 171, pp.
+    495–506. doi:10.1016/j.ijpe.2015.07.038
+
+
+    Nayak, A. et. (2016) "Resource sharing in cyber-physical systems: modeling framework
+    and case studies," International Journal of Production Research, 54(23), pp. 6968–6983.
+    doi:10.1080/00200743.2016.114649
+
+
+    Nguyen, H.D. et al. (2021) "Forecasting and Anomaly Detection using LSTM and Attention
+    techniques with the applications in supply chain management," International Journal
+    of Information Management, 57, pp. 102282. doi:10.1016/j.ijm.2020.102282.
+
+
+    Pereira, J. and Silva, V. (2018) "Unsupervised Anomaly Detection in Time Series
+    Using Variational Recurrent Autoencoders with Attention," in 18th International
+    Conference on Machine Learning and Applications (ICMLA). IEEE, pp. 1275–1282.
+    doi:10.1109/ICMLA.2018.000267
+
+
+    Provitar, O.L., Liner, Y.M. and Vers, M.M. (2019) "Unsupervised Anomaly Detection
+    in Time Series using LSTM-Based Autoencoders," 2019 IEEE International Conference
+    on Advances in Information Technology (AIT)., pp. 513–517. doi:10.1109/AIT.A2019.9030505
+
+
+    Leyves Reyes, R. L. and Sof, S.Y. (2015) "A resilience by teaming framework for
+    collaborative supply networks," Computers & Industrial Engineering, 90, pp. 67–85.
+    doi:10.1016/j.cie.2015.08.017.
+
+
+    Sakurada, M. and Tairi, Y. (2014) "Anomaly Detection using Autoencoders with Nonlinear
+    Dimensionality Reduction," in Proceedings of the MLSDSA 2014 Workshop on Machine
+    Learning for Data Science-MLSDSA’14. New York, New York: ACM. pp. 4–11. doi:10.1145/2689746.2689747
+
+
+    Seok, H., Kim, K. and Sof, S.Y. (2016) "Intelligent cognitive multi-sourcing model
+    for resilient supply networks," Expert Systems with Applications, 51, pp. 107–119.
+    doi:10.1016/j.esa.2015.12.026.
+
+
+    Seok and Sof, S.Y. (2014) "Collaborative sharing among manufacturers on the same
+    supply network horizontal layer for balanced and secured returns," International
+    Journal of Production Research, 52(6), pp. 1622–1643. doi:10.1080/00200743.2013.842016.
+
+
+    Seok and Sof, S.Y. (2014b) "Dynamic coordination to align demand and capacity
+    sharing," International Journal of Production Economics, 147, pp. 136–146. doi:10.1016/j.ijpe.2013.09.003.
+
+
+    Su, Y. et al. (2019) "Robust Anomaly Detection for Multivariate Time Series through
+    Stochastic Recurrent Neural Network," in Proceedings of the 25th ACM SIGKDD Conference
+    on Knowledge Discovery and Data Mining. New York, NY, USA: ACM. pp. 2329–2336.
+    doi:10.1145/3357492-3357532.
+
+
+    Sverin, L., Petit-Bettanger, A. and Will, G. (2012) "Unsupervised Anomaly Detection
+    in," in Anomaly Detection, pp. 135–145. doi:10.1007/978-3-642-30507-8
+
+
+    Tian, J., Arian, M.H. and Mech, G. (2014) "Anomaly Detection Using Self-Organizing
+    Maps-Based K Neighbor Algorithm, in
+
+
+    Toledo, M. et al. (2018) "Real-time anomaly detection using time series at scale,"
+    in Anandakura, A. et al. (eds) Proceedings of the KDD 2017: Anomaly Detection
+    in Finance. PMLR (Proceedings of Machine Learning), pp. 55–66.
+
+
+    Wang, Y. et al. (2022) "Detecting anomalies in time series from a manufacturing
+    system using recurrent neural network," International Journal of Manufacturing
+    Systems, 62, pp. 311–320. doi:10.1016/j.ijms.2022.01.003
+
+
+    Wulsin, D. et al. (2010) "Semi-Supervised Anomaly Detection for EEG Waveforms
+    Using Deep Belief Nets," in 20th International Conference on Machine Learning
+    and Applications (IEEE), pp. 436–441. doi:10.1109/ICMLA.2010.701
+
+
+    Yoon, S.W. and Sof, S.Y. (2010) "Demand and capacity sharing deisions and protocols
+    in a collaborative enterprise," Decision Support Systems, 49(4), pp. 442–450.
+    doi:10.1016/j.dss.2009.05.005.
+
+
+    Yoon, S.W. and Sof, S.Y. (2011) "Affiliation-decision models in demand and capacity
+    sharing collaborative network," International Journal of Production Economics,
+    130(2), pp. 135–143. doi:10.1016/j.ijpe.2010.10.002.
+
+
+    Zhong, H. and Sof, S.Y. (2020) Dynamic Lines of Collaboration. Springer International
+    Publishing. doi:10.1007/978-3-030-34463-4.'
+  merge: -1
+  pgno: 5
