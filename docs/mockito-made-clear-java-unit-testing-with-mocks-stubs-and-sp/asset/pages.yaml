@@ -1,0 +1,2764 @@
+- img_proc: true
+  md: '# The Pragmatic Programmers
+
+
+    # Mockito Made Clear
+
+
+    Java Unit Testing with Mocks, Stubs, and Spies
+
+
+    ![](img/8c17bd3ac8631e54c044c56d594fa853_0_0.png)
+
+
+    Ken Kousen
+
+
+    Foreword by Venkat Subramaniam
+
+    Edited by Margaret Eldridge'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Early Praise for Mockito Made Clear
+
+
+    You can avoid mocking in many cases, but it is essential to understand your mocking
+    framework when required. Mockito Made Clear is a valuable source to quickly get
+    the most out of Mockito, from simple mocking to complex interactions and solving
+    difficult-to-do accessibility problems like static and finals.
+
+
+    +   - Daniel Hinojosa
+
+    Consultant, Programmer, Speaker, and Trainer
+
+
+    Since Mockito''s inception in 2007, the library has gained so many features that
+    only few developers keep a full overview. This book summarizes them both neatly
+    and briefly. If you are using Mockito, novice or experienced user, this book is
+    for you!
+
+
+    +   - Rafael Winterhalter
+
+    Software Consultant
+
+
+    Ken did an amazing job of showing exactly what Mockito is, how to use it, and
+    when not to use it. Definitely a must-read for anyone willing to learn how to
+    write good tests.
+
+
+    +   - Marcin Grzejszczak
+
+    Book and Video Course Author and International Speaker'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '![](img/8c17bd3ac8631e54c044c56d594fa853_3_0.png)
+
+
+    We''ve left this page blank to make the page numbers the same in the electronic
+    and paper books.
+
+
+    We tried just leaving it out, but then people wrote us to ask about the missing
+    pages.
+
+
+    Anyway, Eddy the Gerbil wanted to say "hello".'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # Mockito Made Clear
+
+
+    Java Unit Testing with Mocks, Stubs, and Spies
+
+
+    Ken Kousen
+
+
+    The Pragmatic Bookshelf
+
+
+    Raleigh, North Carolina'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '![](img/8c17bd3ac8631e54c044c56d594fa853_5_0.png)
+
+
+    Many of the designations used by manufacturers and sellers to distinguish their
+    products are claimed as trademarks. Where those designations appear in this book,
+    and The Pragmatic Programmers, LLC was aware of a trademark claim. The designations
+    have been printed in initial capital letters or in all capitals. The Pragmatic
+    Starter Kit, The Pragmatic Programmer, Pragmatic Programming, Bookshelf, PragProg
+    and the g device are trademarks of The Pragmatic Programmers, LLC.
+
+
+    Every precaution was taken in the preparation of this book. However, the publisher
+    assumes no responsibility for errors or omissions, or for damages that may result
+    from the use of information (including program listings) contained herein.
+
+
+    For our complete catalog of hands-on, practical, and Pragmatic content for software
+    developers, please visit https://pragprog.com.
+
+
+    The team that produced this book includes:
+
+
+    +   - CEO: Dave Rankin
+
+    - COO: Janet Furlow
+
+    - Managing Editor: Tammy Coron
+
+    - Development Editor: Margaret Eldridge
+
+    - Founders: Andy Hunt and Dave Thomas
+
+
+    For sales, volume licensing, and support, please contact support@pragprog.com.
+
+
+    For international rights, please contact rights@pragprog.com.
+
+
+    Copyright © 2023 The Pragmatic Programmers, LLC.
+
+
+    All rights reserved. No part of this publication may be reproduced, stored in
+    a retrieval system, or transmitted, in any form, or by any means, electronic,
+    mechanical, photocopying, recording, or otherwise, without the prior consent of
+    the publisher.
+
+
+    ISBN-13: 978-1-68050-967-0
+
+    Encoded using the finest acid-free high-entry binary digits.
+
+    Book version: P1.0—January 2023'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '> *To Ginger and Xander, the people that matter most to me in the world.*'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# Contents\n\n+   * Foreword to Mockito Made Clear ............................................................\
+    \ ix\n* Acknowledgments .....................................................................................\
+    \ xi\n* Preface ....................................................................................................................\
+    \ xiii\n* 1. Build a Testing Foundation ................................................................\
+    \ 1\n  * Saying Hello to Mockito ........................................................................\
+    \ 2\n  * Counting Astronauts by Spacehip ................................................................\
+    \ 8\n  * Creating the Basic Classes .......................................................................\
+    \ 9\n  * Adding Unit and Integration (End-to-End) Tests ...............................\
+    \ 12\n  * Wrapping Up ............................................................................................\
+    \ 17\n* 2. Work with the Mockito API .................................................................\
+    \ 19\n  * Selecting Our System to Test ......................................................................\
+    \ 19\n  * Creating Mocks and Stubs .......................................................................\
+    \ 21\n  * Setting Expectations ...................................................................................\
+    \ 25\n  * Using Mocks and Stubs in the Astro Project ......................................\
+    \ 30\n  * Wrapping Up ............................................................................................\
+    \ 32\n* 3. Use Built-in and Custom Matchers .................................................\
+    \ 33\n  * Using the Existing Argument Matchers ...................................................\
+    \ 33\n  * Creating Custom Argument Matchers ........................................................\
+    \ 36\n  * Verifying the Order of Methods Called ................................................\
+    \ 39\n  * Wrapping Up ............................................................................................\
+    \ 40\n* 4. Solve Problems with Mockito ................................................................\
+    \ 43\n  * Deciding Between Mockito and BDDMockito ...............................................\
+    \ 44\n  * Testing void Methods Using Interactions .........................................\
+    \ 46\n  * Capturing Arguments ...................................................................................\
+    \ 50\n  * Setting Outputs Based on Inputs with Custom Answers ...................\
+    \ 51\n  * Spying to Verify Interactions ................................................................\
+    \ 53\n  * Wrapping Up ............................................................................................\
+    \ 55"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "Contents • viii\n\n+   5. Use Mockito in Special Cases . . . . . . . . . .\
+    \ . . . 57\n   Mocking Final Classes and Methods . . . . . . . . . 57\n   Using\
+    \ Mockito with Android . . . . . . . . . . . . 60\n   Mocking Static Methods .\
+    \ . . . . . . . . . . . . . . . 61\n   Mocking Constructors . . . . . . . . .\
+    \ . . . . . . . . . . 63\n   Working with the Spring Framework . . . . . 67\n\
+    \   Deciding When Not to Use Mockito . . . . . . 69\n   Wrapping Up . . . . .\
+    \ . . . . . . . . . . . . . . 70\n\n+   A1. Running Mockito Tests . . . . . .\
+    \ . . . . . . 71\n   Steps Common to All JUnit Versions . . . . 71\n   JUnit 5\
+    \ . . . . . . . . . . . . . . . . . . . . . . 72\n   JUnit 4 . . . . . . . . .\
+    \ . . . . . . . . . . . . 73"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Foreword to Mockito Made Clear
+
+
+    Your ability to write automated tests to verify the behavior of code is an essential
+    skill for sustainable agile development. Writing tests is easy when the unit of
+    code has no dependencies. It gets hard when the code under test is coupled to
+    other prices of code or services. As a first step to deal with the dependencies,
+    we should decouple, move dependencies away, or even remove them where possible.
+    A good design keeps the dependencies low and the code as loosely coupled as possible.
+
+
+    Once we distill the dependencies to the bare minimum, we have to ultimately contend
+    with them to write effective tests. That''s where this books comes in—kudos for
+    picking it up.
+
+
+    You need two things to be able to write tests for code with dependencies. First
+    you need an awesome library to easily create test doubles—the stubs, mocks, and
+    spies—so you can focus on the design instead of fighting the dependen-cies. For
+    Java and most languages on the JVM, Mockito has become a clear winner over the
+    years. Second, along with knowing good ways to write tests, you need to know how
+    to use the library really well.
+
+
+    Just like you''d want a library that has been tried and tested, one that''s around
+    for a while, you''ll want to learn from someone who has a lot of exper-rience
+    teaching, especially the very topic you''re interested in learning. You''ve not
+    only found a book for the topic that you''ll benefit learning but also a wonderful
+    instructor who''s one of the most capable to write on this topic. Sit back, relax,
+    get your favorite drink, fire up your IDEs, and let Ken lead you into this journey
+    of creating tests to deal with dependencies.
+
+
+    Dr. Venkat Subramanian, award-winning author and founder, Agile Devel-oper, Inc.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Acknowledgments
+
+
+    This book took much longer to write than I expected. Although I could say that
+    about every book I''ve worked on, the real reason this book took so long is that
+    I kept discovering interesting capabilities in the Mockito framework I either
+    had not known or had understood. Even though I''d been using Mockito for years,
+    both in practical work and in training classes, I had no idea there was so much
+    to it. That''s the best part of writing a book—digging into the parts of the code
+    you''d not normally encountered, and Mockito turns out to have parts like that
+    in abundance.
+
+
+    I definitely want to thank the Mockito team for building and maintaining such
+    a powerful tool. Let me specifically mention Rafael Winterhalter, who made extensive
+    recommendations on a beta version of the book that improved the final product
+    immeasurably. I need to thank the other reviewers who submitted comments as well,
+    including David Chelminsky, Bauke Scholtz, Ludovico Fischer, Marcin Grzeszczak,
+    Marcin Zajajkowski, and Daniel Hinojosa. I''m very grateful for your contributions
+    and support.
+
+
+    Venkat Subramanian also reviewed the book, and I appreciate that, but I want to
+    especially thank him for writing the Foreword. I''m always glad to have him involved
+    in any project, and we had several "spirited" discussions about Mockito, both
+    in terms of how to use it and how to write about it. I try not to tell him too
+    often this because I don''t want to feed his ego too much, but it''s an honor
+    to consider him as a friend as well as a colleague.
+
+
+    I''ve been training classes and making presentations involving Mockito on both
+    the O''Reilly Learning Platform and the No Fluff, Just Stuff conference tour,
+    and I''m grateful to both for the opportunity. There''s no better way to find
+    the gaps in your knowledge than to present information to a group of intelligent
+    professionals, and I learned a lot about Mockito and testing in general that way.
+    I also want to thank my editor, Margaret Eldridge, for providing just the right
+    combination of feedback, criticism, and support'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'needed to keep the project moving, even as other professional commitments interfered.
+    In fact, the entire team at Pragmatic Programmers has been a pleasure to work
+    with, and I highly recommend them to anyone who is thinking about writing a technical
+    book.
+
+
+    Finally, and most especially, I''d like to thank my wife, Virginia, and my son,
+    Xander, for their patience with me as I navigated my way through yet another writing
+    project. I promise to take a break after this one, and this time I really mean
+    it.
+
+
+    Ken Kousen
+
+
+    ken.kousen@kousenit.com
+
+
+    January, 2023'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Preface
+
+
+    This book is about the Mockito testing framework, but it''s not an exhaustive
+    reference. No books these days try to do that. For any library, the online documentation
+    beats printed books every time because it keeps up with new versions of the software
+    and can be adjusted to show new features and bug fixes. Where books become valuable
+    is a front end to the online docs, that they help you understand what you''re
+    getting into and what to expect when you get there. Books are curated content.
+    They try to show you what''s important and why.
+
+
+    For Mockito, a book like this is especially important, because the online documentation
+    contains significant gaps. The docs were written by developers who understand
+    tools like Mockito that generate mocks, stubs, and spies and help you use them.
+    That''s good, in the fact docs focus exactly how to make the framework do you
+    want. The downside is that you need to understand the problems that Mockito solves
+    ahead of time, and unless you''ve already had experience with similar tools, those
+    concepts are probably not obvious.
+
+
+    This book is intended to fill that gap. It''s about the concepts behind Mockito
+    more than showing the details of how to use it. Those details are included, of
+    course, for a set of representative examples, but the goal is understanding rather
+    than the specific details of the syntax. The online docs are good for syntax (the
+    classes and methods in the API) and to a lesser extent, semantics (how to use
+    the tool to do what you want), but they don''t explain why Mockito is useful in
+    the first place or how it can make your job easier.
+
+
+    This is exactly what the Pragmatic Answers series is all about. Answers books
+    topics that are too big for a simple blog post probably not enough to warrant
+    a 300-page book. Books in this series are short and sweet. The goal is to get
+    you up and running with the tool in a way that you could devour in a weekend if
+    necessary. The end result is to get you started and help you understand the goals,
+    the strategies, and the basic tactics of'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'framework. Then you can find any specific details in the online resources and
+    know how to apply them.
+
+
+    Hopefully you will find this book a helpful addition to your library and it''ll
+    help you write more productive tests in your Java systems, to be sure your code
+    is doing what you want.
+
+
+    One note about software versions: the current version of Mockito at the time of
+    this writing is 4.0.0. You may be using a version from the 2 line or the 3 line.
+    That''s fine, because these are the only differences:
+
+
+    +   - Mockito 3 is just Mockito 2 with a required Java version of 1.8 or above.
+
+
+    +   - Mockito 4 is just Mockito 3 with deprecated items removed.
+
+
+    +   - Mockito 5 (soon to be released) is just Mockito 4 with the inline mock maker
+    included in the core.
+
+
+    In other words, all the code in this book is written for Mockito 4 but should
+    work on any Mockito version 2.* or above. The Java version will be 11 even though
+    the current LTS (Long Term Support) version is 17, not many users in the community
+    have moved to that version. All code in the book will work on all Java versions
+    from 1.8 through 19.
+
+
+    The tests are all based on the JUnit testing framework.¹ Appendix 1, Running Mockito
+    Tests, on page 71, discusses how to set up a project to include Mockito with both
+    JUnit 4 and JUnit 5, using either the Gradle or Maven build tools, and then how
+    to run the associated tests.
+
+
+    Now it''s time to start looking at the types of problems Mockito is designed to
+    solve.
+
+
+    > ¹ https://junit.org/'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# CHAPTER 1
+
+
+    # Build a Testing Foundation
+
+
+    Why do we need a tool like Mockito, and how does it makes our lives as developers
+    easier?
+
+
+    Like many developers, I was a career changer. I came from engineering, where I
+    spent my time with a lot of math and a lot of (shudder) Fortran. Eventually I
+    switched to software, adopted Java in its early years, and retrained for IT. One
+    unexpected benefit of this transition was the next time I visited my parents,
+    my father told me something in the house was broken, and I was able to reply,
+    "Sorry, that''s a hardware problem."
+
+
+    I feel that way most hardware, and to be honest, about most software too. If the
+    code works, I''m happy. If it doesn''t, then I have to narrow down where it''s
+    failing. Since everything is interconnected, it can be challenging to isolate
+    a particular component to verify it''s working correctly.
+
+
+    Mockito is a tool that helps you isolate particular components of software. You
+    use Mockito to replace dependencies of the components you''re testing so that
+    methods in each dependency return known outputs for inputs. That way, if an error
+    occurs when testing the component, you know where and why.
+
+
+    One challenge with using Mockito is that it rests on a foundation of testing principles
+    that you need to know how to use the tool correctly. In this chapter we''ll use
+    an interesting example to illustrate those foundations so that we can focus on
+    how to make Mockito do what you want it to.
+
+
+    If you''re the kind of person who likes definitions, you can read about the differences
+    between mocks, stubs, and spies in Mockito Terminology (Mocks Aren''t Stubs),
+    on page 15. Otherwise, we''ll jump right into a project that we need to test is
+    simple but sufficiently complex that we''s working correctly. The tests will give
+    you confidence that the code is doing its job'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "properly and show where unit testing, integration testing, and functional testing\
+    \ in development. Along the way, we'll highlight a series of steps to take whenever\
+    \ you want to use Mockito in your projects, while still stubbing methods that\
+    \ you don't need to test.\n\n#  Saying Hello to Mockito\n\nEver since the original\
+    \ publication of The C Programming Language by Kernigh and Richie (1978), every\
+    \ programming language and framework is required, by law, to include a Hello,\
+    \ World! example. We'll look at the Mockito version in this section, explain what\
+    \ Mockito does and what it is, and introduce part of a larger system that we'll\
+    \ use for further details later in the book.\n\nFor Java, the Hello, World! program\
+    \ is this of, of course:\n\n```\nHelloWorld\npublic class HelloWorld {\n    public\
+    \ static void main(String[] args) {\n        System.out.println(\"Hello, World!\"\
+    );\n    }\n}\n```\n\nThe HelloWorld class contains a main method, but main returns\
+    \ void, and void methods are tough to test. Mockito is a testing library, so let's\
+    \ modify this to make a class that welcomes the user with a simple String returned\
+    \ from a greet method:\n\n```\nHelloMockito.java\npublic class HelloMockito {\n\
+    \    private String greeting = \"Hello, %s, from Mockito!\"\n    public String\
+    \ greet(String name) {\n        return String.format(greeting, name);\n    }\n\
+    }\n```\n\nThat's easy enough to create a JUnit 5 test for the greet method:\n\n\
+    ```\nHelloMockitoTest.java\nimport org.junit.jupiter.api.Test;\nclass HelloMockitoTest\
+    \ {\n    private HelloMockito helloMockito = new HelloMockito();\n    @Test\n\
+    \    void greetPerson() {\n        String greeting = helloMockito.greet(\"World\"\
+    );\n    }\n}\n```\n\n+   1. https://en.wikipedia.org/wiki/The_C__Language"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "assertEquals(\"Hello, World, from Mockito\", greeting);\n}\n\nSince the HelloMock\
+    \ class has any dependencies, Mockito isn't needed at all. Let's see where Mockito\
+    \ is useful, add a couple of dependencies, look up a person we can get by name\
+    \ and translate the resulting message into different languages:\n\n```\nHelloMockRevised.java\n\
+    public class HelloMock {\n    private String greeting = \"Hello, %s, from Mockito\"\
+    ;\n    // Dependencies\n    private final PersonRepository personRepository;\n\
+    \    private final TranslationService translationService;\n    // Constructor\
+    \ to inject the dependencies\n    public HelloMock(PersonRepository personRepository,\n\
+    \        TranslationService translationService) {\n        this.personRepository\
+    \ = personRepository;\n        this.translationService = translationService;\n\
+    \    }\n```\n\n```\n// Method we want to test\npublic String greet(int id, String\
+    \ sourceLang, String targetLang) {\n    Optional<Person> person = personRepository.findById(id);\n\
+    \    String name = person.map(Person::getFirstName).orElse(\"World\")\n    return\
+    \ translationService.translate(\n        String.format(greeting, name, sourceLang,\
+    \ targetLang));\n}\n```\n\nNow we're getting somewhere. To get the greet method\
+    \ is now intended to be an integer for a Person object (a simple old Java object—or\
+    \ POJO—that wraps a name, a last name, and a date of birth). We retrieve Person\
+    \ from a repository representing some kind of persistent storage. Also, once we\
+    \ form the welcome greeting to be returned, run that string through a translation\
+    \ service and first, the two dependencies as Java interfaces.\n\nHere are the\
+    \ Repository which has a lot more methods than the findById method needed in HelloMock:\n\
+    \n```\nPersonRepository.java\npublic interface PersonRepository {\n    Person\
+    \ save(Person person);\n\n    Optional<Person> findById(int id);\n    List<Person>\
+    \ findAll();\n```"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# Chapter 1. Build a Testing Foundation • 4\n\n```\nlong count();\nvoid delete(Person\
+    \ person);\n}\n```\n\n(If you're familiar with the Spring Data framework, these\
+    \ methods will look familiar. We'll be using this interface, combined with a PersonService,\
+    \ in several upcoming examples. We'll also look at how to use Mockito with Spring\
+    \ in Working with the Spring Framework, on page 67.)\n\nThe method needed by our\
+    \ HelloMockito implementation is findBy, which takes an integer and returns an\
+    \ Optional wrapped around a Person if the id corresponds to an existing row in\
+    \ the database, or an empty Optional. Otherwise the greet method extracts the\
+    \ person's first name if the person exists or defaults to the word World if not.\n\
+    \nNext is the TranslationService, which is also an interface, because there are\
+    \ many publicly available services to choose from, including our own:\n\n```\n\
+    TranslationService.java\npublic interface TranslationService {\n    default String\
+    \ translate(String text,\n                               String sourceLang,\n\
+    \                               String targetLang) {\n        return text;\n \
+    \   }\n}\n```\n\nOur default implementation is to return the input string. If\
+    \ we were to implement this in a real system, it would be a lot harder to test\
+    \ because we have to do something about those two dependencies.\n\nThe HelloMockito\
+    \ class is now a lot harder to test Let's get some help from Mockito. Mockito\
+    \ will generate implementations of our dependencies for us, which we can configure\
+    \ to do what we want. We can inject those dependencies into our class under test\
+    \ and update our tests accordingly.\n\n# Adding Mockito to the Project\n\nFirst,\
+    \ to make Mockito available in our project, we'll update the build file to include\
+    \ Mockito. The following sample uses Gradle as the build tool, but the Maven version\
+    \ uses the same coordinates as the JUnit 5 and Mockito dependencies.\n\nAssume\
+    \ the project is organized in standard Gradle or Maven structure, so application\
+    \ reside under src/main/java and test sources live under src/test/java. Further,\
+    \ assume the project has a Gradle build file called build.gradle in the project\
+    \ root directory. Here's that build file:\n\nreport erratum • discuss"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "```\nbuild.gradle\n// Using Gradle version catalogs -- see gradle/libs.versions.toml\n\
+    plugins {\n    id 'java'\n}\n\ngroup 'com.kousenit'\nversion '1.0'\n\nrepositories\
+    \ {\n    mavenCentral()\n}\n\ndependencies {\n    // JUnit bundle (includes vintage\
+    \ engine)\n    testImplementation libs.bundles.junit\n    // Mockito bundle (inline\
+    \ and JUnit Jupiter engine)\n    testImplementation libs.bundles.mockito\n   \
+    \ // AssertJ\n    testImplementation libs.assertj\n}\ntasks.named('test') {\n\
+    \    useJUnitPlatform()\n}\n```\n\nNote this file relies on the new Gradle Version\
+    \ Catalogs introduced in Gradle 7.4, which means the Gradle folder includes a\
+    \ file called libs.versions.toml, with the following contents:\n\n```\n[versions]\n\
+    assertj = \"3.23.1\"\njunit = \"5.9.1\"\nmockito = \"4.9.0\"\n```\n\n```\n[libraries]\n\
+    assertj = module = \"org.assertj:assertj-core\",\n    version.ref = \"assertj\"\
+    \njunit-jupiter = module = \"org.junit.jupiter:junit-jupiter\",\n    version.ref\
+    \ = \"junit\"\njunit-vintage = module = \"org.junit.vintage:junit-vintage-engine\"\
+    ,\n    version.ref = \"junit\"\nmockito-inline = module = \"org.mockito:mockito-inline\"\
+    ,\n    version.ref = \"mockito\"\nmockito-junit = module = \"org.mockito:mockito-junit-jupiter\"\
+    ,\n    version.ref = \"mockito\"\n```\n\n```\n[bundles]\njunit = [\"junit-jupiter\"\
+    , \"junit-vintage\"]\n```\n\n+   2. https://docs.gradle.org/current/userguide/platforms.html"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "```\nmockito = [\"mockito-inline\", \"mockito-junit\"]\n```\n\nThe TOML file\
+    \ contains the version numbers for each dependency and creates\nlibs reference\
+    \ used in the build.gradle build file.\n\nBecause we're using JUnit 5 for the\
+    \ tests, we included two dependencies for\nMockito:\n\n+   * The mockito-core\
+    \ dependency, and\n* The JUnit 5 extension for Mockito, here called mockito-junit-jupiter.\n\
+    \nYou'll find the two dependencies listed as a bundle in the TOML file because\n\
+    they're used together.\n\nIf this project used Maven instead of Gradle, the two\
+    \ dependencies\nwould be required, just using the Maven XML-based syntax in pom.xml\
+    \ and\nnot including the TOML file.\n\nFinally, we need the method useJUnitPlatform\
+    \ to tell Gradle that we're using\nJUnit 5 for our tests; otherwise, the tests\
+    \ won't be detected during a gradle\nbuild. Now we're ready to bring everything\
+    \ together for a complete test of\nHello, World!\n\n#  A Mockito Test Class with\
+    \ Everything\n\nLet's annotate the resulting test class with @ExtendWith(MockitoExtension.class)\
+    \ and\nupdate the tests to set the expectations on each mock.\n\nDemonstrating\
+    \ Many Mockito Capabilities in One Example\n\n> The following test has all: the\
+    \ Mockito JUnit 5 extension, the\n@Mock and @InjectMocks annotations, setting\
+    \ expectations on the\nstubs using the when/thenReturn syntax, and even verifying\n\
+    that mocked methods were called the right number of times\nin the right order.\n\
+    \n> We haven't discussed any of these features yet, so think of this\nexample\
+    \ as a teaser for what's coming in the rest of the book.\n\nWithout other dared,\
+    \ we complete Hello, World! example:\n\n```\nHelloMockitoTestFull.java\n@ExtendWith(MockitoExtension.class)\n\
+    class HelloMockitoTest {\n  @Mock\n  private PersonRepository repository;\n  @Mock\n\
+    \  private TranslationService translationService;\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "```\n@InjectMocks\nprivate HelloMockito mockito;\n\n@Test\n@DisplayName(\"\
+    Greet Admiral Hopper\")\nvoid greetPersonThatExists() {\n    // set the expectations\
+    \ on the mocks\n    when(repository.findById(anyInt())\n        .thenReturn(Optional.of(new\
+    \ Person(1\n```\n\nOne of the advantages of using a library like Mockito is that\
+    \ we can test a class with dependencies before we've implemented those dependencies.\
+    \ This is the pattern we will use when a class has dependencies:\n\n```\nclass\
+    \ ClassUnderTest {\n    private DependencyOne dependency1;\n    private DependencyTwo\
+    \ dependency2;\n    public Result methodToBeTested(Object... args) {\n```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '```
+
+    // use dependencies and arguments return Result
+
+    return result;
+
+    }
+
+    ```
+
+
+    We can test the methodToBeTested by mocking the two dependencies, injecting them
+    into the class test, and then calling the test method.
+
+
+    # Mockito Test Process
+
+
+    Formally, the process we''re using consists of:
+
+
+    +   1. Creating stubs to stand for the dependencies.
+
+    2. Setting expectations on the stubs to do what you want.
+
+    3. Injecting the stubs into the class you''re planning to test.
+
+    4. Testing the methods in the class under test by invoking its methods, in turn
+    call methods work as expected.
+
+    5. Checking the methods work as expected.
+
+    6. Verifying the methods on the dependencies got invoked the right number of times,
+    in the right order.
+
+
+    You can use these steps every time you want to use Mockito (honestly, any similar
+    tool) for replacing dependencies in the class under test, thereby writing true
+    unit tests.
+
+
+    The rest of this book is about how to use Mockito to implement these steps. To
+    begin, let''s consider a program that uses a RESTful web service to download and
+    transform JSON data into Java objects and post-processes those to answer interesting
+    questions. The problem involves astronauts in space. I chose this project because
+    (1) it''s reasonably small, and (2) astronauts in space are, by definition, cool.
+
+
+    # Counting Astronauts by Spaceship
+
+
+    How many astronauts are on each ship right now? Let''s talk through a modern Java
+    solution that doesn''t require many classes but uses a familiar architecture you''ll
+    find in many applications. We''ll use this problem as an introduction to testing
+    in general and Mockito in particular.
+
+
+    The final product will have three components:
+
+
+    +   1. A classed AstroGateway that accesses a RESTful web service to retrieve
+    the astronaut data in JSON form and then converts the JSON structure to Java POJOs
+    (plain old Java objects).'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '+   2. A class called AstroService that processes the Java POJOs and returns
+    a Map of strings to integers, where the map keys are the spacecraft names and
+    the map values are the number of astronauts aboard each.
+
+
+    +   3. An application class that drives the process, which in our case will be
+    a series of test cases that invoke the right methods and print and verify the
+    results.
+
+
+    # A Note on Java Versions
+
+
+    Mockito requires only Java 8. The current Long Term Support (LTS) version of Java
+    is 17, but as of 2022, the community is split between Java 8 and the previous
+    LTS version, Java 11.
+
+
+    The implementation of this “astro” system uses the HTTP client added to Java in
+    version 11, and 11 is the default version of Java we''ll use throughout the book.
+    None of the code uses records, sealed classes, pattern matching, switch expressions,
+    or any of the other features added since 11.
+
+
+    ![](img/8c17bd3ac8631e54c044c56d594fa853_23_0.png)
+
+
+    For those people still on Java 8, first, you have my condolences, and second,
+    I''ve included an alternative implementation of the gateway that uses the Retrofit
+    library. Hopefully, this way, every-body will feel included.
+
+
+    We''re testing an existing code implementation that we''ll discuss as we go along.
+    If you''re curious about the details and to see them now, take a look at the book''s
+    GitHub repository. The relevant code is in the com.kousen-it.astro package.
+
+
+    As a reminder, to add Mockito to a project, all the dependencies required are
+    mockito-core and when using the Mockito JUnit 5 extension, as here, mockito-junit-jupiter.
+
+
+    With the project configured for testing, let''s add the classes to the job.
+
+
+    # Creating the Basic Classes
+
+
+    The astronaut data comes from the free RESTful web service at Open Notify called
+    People in Space. It supports all HTTP GET requests, but it''s free and doesn''t
+    require registration or any kind of key. It returns a JSON response showing all
+    the astronauts in space at any given moment. If you send an
+
+
+    +   3. https://github.com/kousen/mockitobook
+
+
+    +   4. https://open-notify.org
+
+
+    +   5. http://open-notify.org/Open-Notify-API/People-In-Space/'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Chapter 1. Build a Testing Foundation • 10\n\nHTTP GET request to http://api.open-notify.org/astros.json,\
+    \ you'll get a response similar to this:\n\n```\nastro_data.json\n{\n  \"message\"\
+    : \"success\",\n  \"people\": [\n    {\n      \"name\": \"Bob Hines\",\n     \
+    \ \"craft\": \"ISS\"\n    },\n    {\n      \"name\": \"Oleg Artemyev\",\n    \
+    \  \"craft\": \"ISS\"\n    },\n    ...,\n    {\n      \"name\": \"Cai Xuzhe\"\
+    ,\n      \"craft\": \"Tiangong\"\n    }\n  ],\n  \"number\": 10\n}\n```\n\nAs\
+    \ you can see from the sample, the response includes the total number of astronauts\
+    \ and a collection called people which contains name and craft combinations for\
+    \ each astronaut. Java POJOs make a convenient structure to hold the parsed JSON\
+    \ information. Only two Java classes are needed:\n\n+   - Assignment, representing\
+    \ the astronaut name and craft pair,\n- AstroResponse, shows the total number\
+    \ of people in space, a success message, and the people array or list of the assignments.\n\
+    \nThe Java classes will be implemented as traditional POJOs, meaning they will\
+    \ have attributes that match the JSON properties, with getter and setter methods.\
+    \ Here's the Assignment class:\n\n```\nAssignment.java\npublic class Assignment\
+    \ {\n  private final String name;\n  private final String craft;\n  // constructors,\
+    \ getters and setters, toString\n}\n```\n\nHere's the AstroResponse class:\n\n\
+    ```\nAstroResponse.java\npublic class AstroResponse {\n  private final int number;\n\
+    \  private final String message;\n\n```"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "```\nprivate final List<Assignment> people;\n// constructors, getters and setters,\
+    \ toString\n}\n```\n\nTo access the RESTful web service, we'll use the Gateway\
+    \ design pattern. A gateway is a class that encapsulates access to an external\
+    \ resource. In this particular case, we need only a single gateway, called AstroGateway,\
+    \ that connects to the remote service, downloads the astro data, and converts\
+    \ the JSON response into records. Java is happiest when we use interfaces, and\
+    \ doing so will make testing even easier we'll be to substitute in a fake gateway\
+    \ when we need one. Therefore, add a Gateway interface that contains a single\
+    \ method called getResponse:\n\n```\nGateway.java\npublic interface Gateway<T>\
+    \ {\n    T getResponse();\n}\n```\n\nThe getResponse method returns an instance\
+    \ of its generic type.\nThe concrete class implementing the Gateway interface\
+    \ will be AstroGateway. You'll implement it using either the HttpClient API if\
+    \ you are using Java 11+, or the Retrofit 2 library if you're still on Java 8.\n\
+    \n| Abstraction Theater |\n| Introducing an interface (Gateway) with only a single\
+    \ implementation (AstroGateway) may feel like an unnecessary distraction. In this\
+    \ particular case, there will be two implementations: one that uses the new HttpClient\
+    \ API added in Java 11 and one that uses the external Retrofit library, which\
+    \ you can use if Java 11 isn't available. Only the HttpClient version will be\
+    \ included here, but both are contained in the GitHub repository for the book.\
+    \ |\n\nWe'll get the tests next in Adding Unit and Integration (End-to-End) Tests,\
+    \ on page 12. Here we're defining the basic classes, let's also define the AstroService\
+    \ class, whose job is to convert the records returned by the gateway into a Java\
+    \ Map. The class needs only a single method, called getAstroData, with the following\
+    \ signature:\n\n```\npublic Map<String, Long> getAstroData()\n```\n\nThe AstroService\
+    \ uses the gateway to access the remote web service. The gateway retrieves the\
+    \ data and turns it into a Success instance\n\n+   6. https://martinfowler.com/articles/gateway-pattern.html\n\
+    7. https://square.github.io/retrofit/"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# Chapter 1. Build a Testing Foundation • 12\n\ncontaining an AstroResponse\
+    \ or a Failure instance containing any thrown exception if not. Assuming it's\
+    \ successful, the service then extracts the data we want and converts it to a\
+    \ map, where the keys are spacecraft names and the values are the number of astronauts\
+    \ aboard each one.\n\nIn the end, our application instantiates the AstroService,\
+    \ calls its getAstroData method, and processes the results. The results (based\
+    \ on the JSON data shown earlier) will be as follows:\n\n+   3 astronauts aboard\
+    \ Tiabang\n7 astronauts aboard ISS\n\nNow let's turn the tests necessary to verify\
+    \ the implementation works as desired.\n\n# Adding Unit and Integration (End-to-End)\
+    \ Tests\n\nFor our purposes, an integration test is one that tests a system containing\
+    \ components it interacts with (dependencies), whereas a unit test is one that\
+    \ tests a class in isolation with no interactions or dependencies.\n\nIntegration\
+    \ tests are easier to understand because you are treating the system as it is\
+    \ in practice, with no additional information about its implementation. In this\
+    \ case, the system is driven by the getAstroData method on the AstroService, which\
+    \ uses an AstroGateway. Its integration test looks like this:\n\n```\nAstroServiceTest.java\n\
+    @Test\nvoid getAstroData_usingRealGateway_withHttpClient() {\n    // Create an\
+    \ instance of AstroService using the real Gateway\n    service = new AstroService(new\
+    \ AstroGateway());\n    // Call the method under test\n    Map<String, Long> astroData\
+    \ = service.getAstroData();\n    // Print the results and check that they are\
+    \ reasonable\n    astroData.forEach((craft, number) -> {\n        System.out.println(number\
+    \ + \" \" + astronauts aboard \" \" + craft);\n        assertAll(\n          \
+    \  -> assertThat(number).isPositive(),\n            -> assertThat(craft).isNotBlank()\n\
+    \        );\n    });\n}\n```\n\nWe add the AstroGateway to the AstroService using\
+    \ a constructor argument. If we want to replace the actual AstroGateway with a\
+    \ fake instance, we can use that"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'constructor inject it into our service. The important point is that the gateway
+    is a dependency of the service.
+
+
+    To use Mockito, you first need to determine the dependencies of the class you''re
+    testing. For AstroService, the only dependency is the Gateway.
+
+
+    The test uses the service to call getAstrData method and checks the returned map.
+    The test uses the forEach(Consumer) method added to the Map interface in Java
+    8, which automatically separates the keys from the values, so it''s easy enough
+    to print and check the results. Then the test confirms the returned values using
+    assertions from the AssertJ library. The result checks the combination of AstroService
+    and AstroGateway classes, which is necessary if we want to believe the system
+    is working properly.
+
+
+    # Unit Tests Versus Integration Tests
+
+
+    The concept of a unit originally meant a conceptual part of software that can
+    work independently. The idea was a developer could work on unit and confirm it
+    worked with tests that ignored the rest of the system. Later, you could bring
+    different units back together. The tests that confirmed the entire system were
+    called integration tests. The distinction between unit and integration tests was
+    about testing code in isolation, as opposed to testing code brought together.
+
+
+    Over time, with object-oriented systems, unit tests grew to mean testing a single
+    class in isolation, while integration tests checked a class connected with other
+    classes. That definition is arguably more fine-grained than the original concepts.
+    Since virtually all classes depend on something themselves, you can argue that
+    all tests are actually integration tests.
+
+
+    If you''re interested in reading more, Martin Fowler''s blog post talks about
+    meaning and use of the terms unit and integration testing.
+
+
+    In our integration test, we took a practical approach. The purpose of testing
+    is to isolate problems. If we had a failing integration test, we''d use unit tests
+    to isolate the failure to either the gateway or the service.
+
+
+    +   8. https://assertj.github.io/doc/
+
+
+    +   9. https://martinfowler.com/articles/2021-test-shapes.html'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "Chapter 1. Build a Testing Foundation\n\n# Failed Integration Tests Lead to\
+    \ Unit Tests\nThe key question is always, \"How do you know you're right? If a\
+    \ test fails, you know there's\nproblem, but how easy is it to track down? Successful\
+    \ integration tests are necessary—otherwise,\nyou don't know the system works.\n\
+    \nFailing integration tests are what lead you to unit tests, because if a unit\
+    \ test fails, you'll know\nquickly and why.\n\nLet's say our integration test\
+    \ failed and now we want to build a test for the\nAstroService.\n\n# A Stub for\
+    \ the Gateway\n\nA true unit test for the AstroService needs a stand-in for the\
+    \ gateway—some\n of fake object that will return exactly when we want the service\n\
+    calls its getResponse method. We don't want any problems with the gateway to\n\
+    afect the success or failure of our tests of the service. This stand-in for the\n\
+    gateway is called a fake object. From a Mockito point of view, the fake object\n\
+    is either a mock or a stub, depending on how it's used.\n\nBefore getting to that\
+    \ distinction, we can always provide our own fake object\nto the dependency. In\
+    \ this case, here's a call FakeGateway that hard--\ncodes a response:\n\n```\n\
+    FakeGateway.java\npublic class FakeGateway implements Gateway<AstroResponse> {\n\
+    \    @Override\n    public AstroResponse getResponse() {\n        return new AstroResponse(7,\
+    \ \"Success\",\n            List.of(new Assignment(\"Kathryn Janeway\", \"USS\
+    \ Voyager\"),\n                new Assignment(\"Seven of Nine\", \"USS Voyager\"\
+    ),\n                new Assignment(\"Will Robinson\", \"Jupiter 2\"),\n      \
+    \          new Assignment(\"Lennier\", \"Babylon 5\"),\n                new Assignment(\"\
+    James Holden\", \"Rocinante\"),\n                new Assignment(\"Naomi Nagata\"\
+    , \"Rocinante\"),\n                new Assignment(\"Ellen Ripley\", \"Nostromo\"\
+    )\n            ));\n    }\n}\n```\n\nHere's a unit test for the service that uses\
+    \ the Gateway:\n\n```\nAstroServiceTest.java\n@Test\nvoid testAstroDataUsingOwnMockGateway()\
+    \ {\n    // Create the service using the mock Gateway\n    service = new AstroService(new\
+    \ MockGateway());\n\n// Call the method under test\n    Map<String, Long> astroData\
+    \ = service.getAstroData();\n\n// Check the results from the method under test\n\
+    ```\n\nreport erratum • discuss"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# Adding Unit and Integration (End-to-End) Tests • 15\n\n```\nastroData.forEach((craft,\
+    \ number) => {\n  System.out.println(number + \" astronauts aboard \" + craft);\n\
+    \  assertAll(\n    () -> assertThat(number).isPositive(),\n    () -> assertThat(craft).isNotBlank()\n\
+    \  );\n});n\n```\n\nGiven the response returned by the mock gateway, the service\
+    \ now prints:\n\n+   1 astronauts aboard Babylon 5\n1 astronauts aboard Nostromo\n\
+    1 astronauts aboard Jupiter 2\n2 astronauts aboard USS Voyager\n2 astronauts aboard\
+    \ Roccinante\n\nWhile it was easy enough in this case to write our own mock gateway,\
+    \ points are worth mentioning:\n\n+   1. One job of Mockito is to automate the\
+    \ creation of fake objects like our FakeGateway. Mockito will generate a class\
+    \ that implements the Gateway interface for us. We can then tell it what to return\
+    \ when the getResponse method is called, and the rest happens automatically.\n\
+    2. Our FakeGateway is either a mock or a stub, depending on how it's being used.\n\
+    \n# Mockito Terminology (Mocks Aren't Stubs)\n\nSo an object can be a mock or\
+    \ a stub, depending on use? Yes, and since that statement is potentially confusing,\
+    \ let's define those terms.\n\nIn January 2007, Martin Fowler wrote a blog post\
+    \ entitled \"Mocks Aren't Stubs\"¹⁰ that is highly influential.\n\nSince that\
+    \ article shaped how I think about mocks and stubs, I've based the following definitions\
+    \ on his thinking.\n\nstub\nA stub is an object that stands in for dependencies\
+    \ and returns known outputs for known inputs.\n\nmock\nA mock is an object that\
+    \ does what a stub does, plus it keeps track of interactions performed. By tracking\
+    \ interactions, a mock verifies\n\n+   10. https://martinfowler.com/articles/mocksArentStubs.html"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Chapter 1. Build a Testing Foundation • 16
+
+
+    stubbed methods are called by the class under the right number of times, with
+    the correct parameters, in the right order.
+
+
+    For completeness let''s add the definition of a spy.
+
+
+    spy
+
+
+    A spy is an object that wraps the actual dependent object, allows you to track
+    calls to that object by the class under test. A spy is similar to a mock, in it
+    records which methods were called, but a spy invokes those methods on the actual
+    underlying object instead of on stub.
+
+
+    In a nutshell, that''s how we''ll using the terms mock, stub, and spy throughout
+    this book.
+
+
+    # Why Not Write Your Own Stubs?
+
+
+    In simple cases like our example, it''s easy to create the needed stub yourself,
+    plug an instance into the class under test, and go from there. The GateGateway
+    is a stub. Stubs provide known outputs given known inputs. If you also want to
+    verify that the service calls getResponse on the gateway exactly once, your same
+    object would then be considered a mock. In each case the class is the same. The
+    only difference is how you''re using it in the test.
+
+
+    Writing your own stubs causes problems:
+
+
+    +   - If the interface you are trying to stub has many methods in it, and you
+    plan to call only one or two, you still have to implement all the methods rather
+    than just the ones you care about.
+
+    - If you''re going to write the stub, you''re going to have to maintain it as
+    well, so if the required methods change, you''ll have to update the stub classes.
+
+    - If a class you plan doesn''t implement a convenient interface, you''ll have
+    to create a subclass instead. That may work, but what if the class is marked final
+    and can''t be extended at all?
+
+    - What if the methods you need to stub are static? You can''t override static
+    methods.
+
+    - How do you keep track that the stubbed methods are invoked the right number
+    of times, in the right order, with the right parameters?
+
+
+    These problems are where Mockito helps. Mockito generates mocks and stubs for
+    you. Mockito can generate classes that implement an interface. It can override
+    classes (even, with a bit of help, final classes). You even have the capability
+    to stub static methods. Mockito will implement all the methods in an interface
+    so that they return default values, which you can then override.
+
+
+    report erratum • 16*'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'Now we''ve seen an integration test and a test with our own stubbed object,
+    we''re ready to use Mockito to automate the process. After we tackle the basics
+    of the Mockito API, we''ll return to the Astro project to see how to write true
+    unit tests for the service.
+
+
+    # Wrapping Up
+
+
+    So far, we''ve introduced that Mockito generates fake classes that stand in for
+    actual dependencies so you can isolate the class you''re testing. We''ve talked
+    about using stubs when we need to simply provide known outputs for known inputs.
+    When we want to check that the class under test called the methods on the mock
+    the right number of times in the right order, we know to use a mock. In short,
+    we''ve covered why you''d use the Mockito framework.
+
+
+    Now we''re ready to get into the process of using Mockito in tests. In the next
+    chapter, we''ll create mocks, inject them into class under test, and get them
+    to respond the way we want.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# CHAPTER 2\n\n# Work with the Mockito API\n\nI've always been a good test\
+    \ taker—part of what I call the Game of School, which is very different from getting\
+    \ an education. In the Game of School, your primary task is to figure out what\
+    \ teachers want to hear and how they want to hear it. That knowledge comes in\
+    \ handy when you want to pass a test without studying much. Just like that teacher,\
+    \ Mockito expects certain things, and right now they're a mystery.\n\nThe game\
+    \ begins with the Mockito API. You'll need to know what it does and how it expects\
+    \ to be invoked. We'll start with creating mocks, using either the mock method\
+    \ or using the annotations @Mock and @InjectMocks. Then we'll move on setting\
+    \ expectations on our mocks, and finally to verifying that the class interacted\
+    \ with the mocks in how we wanted.\n\nMockito is a large API, and you have several\
+    \ choices in how you can use it. But don't worry. Once you've finished this chapter,\
+    \ you'll be able to play the Game of Mockito well enough to win without studying—you\
+    \ won't have to spend hours digging into the JavaDocs either.\n\n# Selecting Our\
+    \ System to Test\n\nWe need a class to test that includes a dependency, so we'll\
+    \ use the PersonRepository interface, reproduced here:\n\n```\nPersonRepository.java\n\
+    public interface PersonRepository {\n    Person save(Person person);\n\n    Optional<Person>\
+    \ findById(int id);\n\n    List<Person> findAll();\n\n    long count();\n\n  \
+    \  void delete(Person person);\n```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "In a three-layered architecture typical of modern Java systems, you start with\
+    \ a presentation layer of controllers and views, then access a service layer that\
+    \ contains business logic and transaction boundaries, and finally go through a\
+    \ persistence layer to retrieve data from the database. The PersonRepository is\
+    \ part of that last layer, whose job is to convert rows into Java classes and\
+    \ back again.\n\nThe class to test is called PersonService and uses a PersonRepository\
+    \ as an attribute:\n\n```\nPersonServiceAbbreviated.java\npublic class PersonService\
+    \ {\n    private final PersonRepository repository;\n    public PersonService(PersonRepository\
+    \ repository) {\n        this.repository = repository;\n    }\n    // methods\
+    \ to be tested...\n\n```\n\nTo act as a data source, we use a Java List<Person>\
+    \ as an attribute of the PersonServiceTest:\n\n```\nPersonServiceTest.java\nprivate\
+    \ final List<Person> people = Arrays.asList(\n    new Person(1, \"Grace\", \"\
+    Hopper\", LocalDate.of(1906, Month.DECEMBER, 9)),\n    new Person(2, \"Ada\",\
+    \ \"Lovelace\", LocalDate.of(1815, Month.DECEMBER, 10)),\n    new Person(3, \"\
+    Adelle\", \"Goldberg\", LocalDate.of(1945, Month.JULY, 7)),\n    new Person(14,\
+    \ \"Anita\", \"Borg\", LocalDate.of(1949, Month.JANUARY, 17)),\n    new Person(5,\
+    \ \"Barbara\", \"Liskov\", LocalDate.of(1939, Month.NOVEMBER, 7));\n\n```\n\n\
+    We'll start by adding a method to the service to retrieve all the names of the\
+    \ people in the database. In keeping the principle of Test Driven Development\
+    \ (TDD), we write the test for the getLastNames method.\n\n```\nPersonServiceTest.java\n\
+    @Test\nvoid getLastNamesUsingMockMethod() {\n    // create a stub for mockRepo\
+    \ = new PersonService(mockRepo);\n    PersonRepository mockRepo = mock();\n  \
+    \  // Set the expectations on the mock...\n    when(mockRepo.findAll()).thenReturn(people);\n\
+    \    // Inject the mock into the service\n    PersonService personService = new\
+    \ PersonService(mockRepo);\n    // Get the last names (this is the method to test)\n\
+    \    List<String> lastNames = personService.getLastNames();\n    // Check that\
+    \ the last names are correct (using AssertJ)\n\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "Creating Mocks and Stubs • 21\n\n```\nassertThat(lastNames)\n  .contains(\"\
+    Borg\", \"Goldberg\", \"Hopper\", \"Liskov\", \"Lovelace\");\n// Verify the service\
+    \ called findAll on the mockRepo exactly\nverify(mockRepo).findAll();\n```\n\n\
+    As the tests, to invoke the method to be tested you need an instance of PersonService,\
+    \ and to instantiate that you need a PersonRepository. Now let's see how to create\
+    \ the stub representing the PersonRepository, first by hand and then using automated\
+    \ Mockito.\n\n# Creating Mocks and Stubs\n\nBefore we use Mockito, note that we\
+    \ could write our own stub implementation, called, for example, InMemoryRepository.\
+    \ Here's an abbreviated version of that class (the complete version can be found\
+    \ in the GitHub repository):\n\n```\nInMemoryRepository.java\npublic class InMemoryRepository\
+    \ implements PersonRepository {\n  private final List<Person> people = =\n   \
+    \ Collections.synchronizedList(new ArrayList<>());\n\n  @Override\n  public final\
+    \ Person save(Person person) {\n    synchronized (people) {\n      people.add(person);\n\
+    \    }\n    return person;\n  }\n\n  @Override\n  public final void delete(Person\
+    \ person) {\n    synchronized (people) {\n      people.remove(person);\n    }\n\
+    \  }\n  // ... other methods from PersonRepository ...\n```\n\nYou may have noticed\
+    \ the issues with this approach:\n\n+   - We have to implement all the methods\
+    \ in the interface, though our test requires only one of them.\n- We need to maintain\
+    \ this class, if our repository methods change, the stub will have to be updated\
+    \ as well.\n- If we want to test failure modes, validation, or exceptional cases,\
+    \ we'll need either additional classes or some logic that lets us choose those\
+    \ alternatives."
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# Chapter 2. Work with the Mockito API • 22\n\nNow let's use the Mockito API\
+    \ instead. The first step is to create a mock repository. Mockito has two ways\
+    \ of doing that: using the static mock method on the Mockito class or the static\
+    \ annotations. We'll take each in turn.\n\nFirst, we'll use the Mockito.mock(Class)\
+    \ method to create a stub.\n\n# Using the mock Method\n\nThe mock method in the\
+    \ Mockito class has the following signature:\n\n```\npublic static <T> T mock(Class<T>\
+    \ classMock)\n```\n\nYou tell Mockito which class or interface to mock, and Mockito\
+    \ returns the mock object. Here's the line of code to do that in our test:\n\n\
+    ```\nPersonRepository mockRepo = mock(PersonRepository.class);\n```\n\nThat's\
+    \ enough. Mockito will generate a class that implements this interface, where\
+    \ all the methods will return their default values. If you need more, the following\
+    \ test demonstrates the implementations:\n\n```\nUserServiceTest\n@Test\nvoid\
+    \ defaultImplementations() {\n    PersonRepository mockRepo = mock(PersonRepository.class);\n\
+    \    assertAll(\n        ()-> assertNull(mockRepo.save(any(Person.class))),\n\
+    \        ()-> assertTrue(mockRepo.findById(anyInt()).isEmpty()),\n        ()->\
+    \ assertTrue(mockRepo.findAll().isEmpty()),\n        ()-> assertEquals(0, mockRepo.count())\n\
+    \    );\n}\n\n```\n\n> Smart Nulls\nMockito does better than null returns for\
+    \ mock reference types. For example, if the return type of a method is a list,\
+    \ Mockito will return an empty list. Most of the time you don't need to be concerned\
+    \ with this, but it's good to know that Mockito is trying to be helpful.\n\n![](img/8c17bd3ac8631e54c044c56d594fa853_35_0.png)\n\
+    \nThe static methods any(Class) and anyInt come from the ArgumentMatchers class,\
+    \ which we'll cover in detail in Chapter 3, Use Built-in and Custom Matchers,\
+    \ on page 33. Here, they simply represent invoking a method with an instance of\
+    \ the Person class or any integer,.\n\nThe mock returns a null for the save method,\
+    \ the two finders, and 0 for count. The delete method already returns void, so\
+    \ the mock doesn't change and therefore doesn't need to be tested."
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "Creating Mocks and Stubs • 23\n\nReturning to our mock, for our test of the\
+    \ getLastName method on the service to pass, we need to change the default behavior\
+    \ of the findAll method in the PersonRepository. One way to do that is to use\
+    \ the combination of the static when method along the chained thenReturn method.\
+    \ We need to tell the mock when the service invokes the findAll method, it should\
+    \ return our prepared list of people:\n\n```\nwhen(mockRepo.findAll()).thenReturn(people);\n\
+    ```\n\nWe don't need to set the expectations on any other methods in the interface.\
+    \ That's one of the big advantages of using Mockito.\n\nNow we can run our test,\
+    \ and it should pass. The last line of the test is a verification step:\n\n```\n\
+    verify(mockRepo.findAll());\n```\n\nThis step is optional but does check that\
+    \ the protocol was followed—meaning that our class invoked the findAll method\
+    \ on the mock exactly.\n\nHopefully, you'll find the process intuitive. It does\
+    \ two steps that can get tedious, because they'll appear in every test we write:\n\
+    \n+   1. We need to create the mock every time, and\n2. We need to inject the\
+    \ mock into the class under every time.\nWhile doing so manually, as shown, is\
+    \ fine, Mockito provides a simpler alternative using annotations.\n\n# Using Annotations\
+    \ to Create the Mocks\n\nMockito provides two annotations for mocks: @Mock and\
+    \ @InjectMocks. You add the @Mock annotation to any dependencies in your class\
+    \ that you want Mockito to mock, and add @InjectMocks to the class under test;\
+    \ no changes are needed for the class test. The combination of one or more attributes\
+    \ with @Mock and a single @InjectMocks on the class test tells Mockito to create\
+    \ the necessary mocks and do its best to inject them into the class test.\n\n\
+    An example shows how to use the @Mock and @InjectMocks annotations on the attributes\
+    \ of the PersonServiceTest:\n\n```\nPersonServiceTest.java\n@ExtendWith(MockitoExtension.class)\n\
+    public class PersonServiceTest {\n  @Mock\n  private PersonRepository repository;\n\
+    ```\n\nreport erratum • discuss"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# Chapter 2. Work with the Mockito API • 24\n\n@InjectMocks\nprivate PersonService\
+    \ service;\n\nWe have only one dependency, so we need only a single @Mock annotation\
+    \ on the attribute. That attribute will be instantiated, the expectations on it\
+    \ will be set, and then it will be injected in the class test, annotated with\
+    \ @InjectMocks.\n\nWhenever you use annotations, you need to tell Mockito to process\
+    \ them. JUnit 5 uses the Mockito JUnit 5 Extension, which is the argument to the\
+    \ @ExtendWith annotation on the test class. This extension initializes the mocks,\
+    \ and, as a side note, \"handles strict stubbing.\" That means in your tests you\
+    \ can only mock methods that your method actually calls.\n\nYou no longer have\
+    \ to instantiate the PersonService inside the test. Mockito does all that for\
+    \ you. You still have to set the expectations on the mock list, and you can verify\
+    \ the methods at the end if you want, but also the creation of the mock and its\
+    \ injection into the class test is automated for.\n\nThe test for getLastNamesTest\
+    \ is now simplified:\n\n```\nPersonServiceTest.java\n@Test\npublic void getLastNames_usingAnnotations()\
+    \ {\n  when(repository.findAll()).thenReturn(people);\n  assertThat(service.getLastNames())\n\
+    \    .contains(\"Barg\",\"Goldberg\", \"Hopper\", \"Liskov\", \"Lovelace\");\n\
+    \  verify(repository).findAll();\n}\n```\n\nThis test uses the repository and\
+    \ service attributes rather than local variables of those types.\n\nThe process\
+    \ of instantiating the classes and wiring them together automatically is powerful\
+    \ but has some restrictions, which we'll talk about next.\n\n# Injecting the Mocks\
+    \ into the Class Under Test\n\nOne benefit of the annotation approach is that\
+    \ Mockito tries to inject the mocks into the class test for you. How does it do,\
+    \ exactly? Have a look at the details in the JavaDocs for the @InjectMocks annotation,¹\
+    \ which says Mockito attempts the following sequence of steps:\n\n+   1. Calls\
+    \ the largest constructor on the test class if it takes the right types of arguments.\n\
+    \n+   1. https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/InjectMocks.html"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "2. Calls setter methods of the proper type (and the proper name if there is\
+    \ more than one for a given type).\n3. Sets the fields directly.\n\nSuffice to\
+    \ say Mockito will make a good effort to plug the mocks into the class under test,\
+    \ as the docs say, \"Mockito is not a dependency injection framework; don't expect\
+    \ this shorthand to inject a complex graph of objects, be it mocks/spies or real\
+    \ objects\"\n\nDespite the claim, Mockito will try to do the work for you is a\
+    \ strong argument in favor of the annotation approach.\n\nThis talk of injection\
+    \ may remind you of the Spring framework, which truly is a dependency injection\
+    \ framework. Spring not only includes the Mockito library as a testing dependency,\
+    \ it also provides its own annotation, called @InjectBean, to help Mockito. We'll\
+    \ look at Spring and Mockito in Working with the Spring Framework, on page 67.\n\
+    \nRegardless of whether you use the method or the annotation approach to create\
+    \ the mocks, the next step is to set expectations on them. The tests so far demonstrated,\
+    \ but in its simplest case. Let's look at the process in more detail.\n\n# Setting\
+    \ Expectations\n\nThe Mockito-based example that mocked the PersonRepository dependency\
+    \ of PersonService used the methods when and thenReturn to set the expectations\
+    \ on the findAll method. Here's the signature for when:\n\n```\npublic static\
+    \ <T> OngoingStubbing<T> when(T methodCall)\n```\n\nThe argument to is the declaration\
+    \ of an invocation of the method you want to call on the stub. The return type\
+    \ connects to the various methods, like thenReturn, thenThrow, thenAnswer, which\
+    \ are normally chained to the output. There are a couple of overloads of the thenReturn\
+    \ method:\n\n```\nOngoingStubbing<T> thenReturn(T value)\nOngoingStubbing<T> thenReturn(T\
+    \ value, T... values)\n```\n\nFor example, another method to the PersonService\
+    \ called findById, which takes a var list of ids and returns a List<Person>:\n\
+    \n```\nPersonService.java\npublic List<Person> findByIds(int... ids) {\n  return\
+    \ Arrays.stream(ids)\n```\n\n+   2. https://spring.io"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "```\n.mapToObj(repository::findById)\n.filter(Optional::isPresent)\n.map(Optional::get)\n\
+    .collect(Collectors.toList());\n}\n```\n\nTo test this method on the service,\
+    \ you need to tell the dependent repository\\what to do when findById(int) is\
+    \ called. You can give those instructions in a\nverse fashion, using the thenReturn\
+    \ version that takes a single argument,\nlike this:\n\n```\nPersonServiceTest.java\n\
+    @Test\nvoid findByIdExplicitWhen() {\n    when(repository.findById(0))\n     \
+    \   .thenReturn(Optional.of(people.get(0)));\n    when(repository.findById(1))\n\
+    \        .thenReturn(Optional.of(people.get(1)));\n    when(repository.findById(2))\n\
+    \        .thenReturn(Optional.of(people.get(2)));\n    when(repository.findById(3))\n\
+    \        .thenReturn(Optional.of(people.get(3)));\n    when(repository.findById(4))\n\
+    \        .thenReturn(Optional.of(people.get(4)));\n    when(repository.findById(5))\n\
+    \        .thenReturn(Optional.empty());\n}\n```\n\nList<Person> personList = service.findByIds(0,\
+    \ 1, 2, 3, 4, 5);\nassertThat(personList).containsExactlyOf(people);\n\nThat's\
+    \ a rather mouthful. We can simplify the test like this:\n\n```\nPersonServiceTest.java\n\
+    @Test\nvoid findByIdReturnWithMultipleArgs() {\n    when(repository.findById(anyInt())).thenReturn(\n\
+    \        Optional.of(people.get(0)),\n        Optional.of(people.get(1)),\n  \
+    \      Optional.of(people.get(2)),\n        Optional.of(people.get(3)),\n    \
+    \    Optional.of(people.get(4)),\n        Optional.empty());\n\n    List<Person>\
+    \ personList = service.findByIds(0, 1, 2, 3, 4, 5);\n    assertThat(personList).containsExactlyOf(people);\n\
+    }\n```\n\nThis version uses the anyInt argument matcher as the parameter for findById.\n\
+    The anyInt method is a static method in the ArgumentMatchers (plural) class,"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Setting Expectations • 27
+
+
+    represents, naturally enough, integer. We''ll look at argument matches in detail
+    Chapter 3, Use Built-in and Custom Matchers, on page 33.
+
+
+    The interesting part is the thenReturn method, which this time returns a series
+    of arguments. The first findById called,(wrapped in an Optional). The second invocation
+    returns the second person in that collection, and so on. If the method is called
+    more than five times, an empty Optional is returned on that call and all subsequent
+    calls.
+
+
+    Though it wasn''t needed here, you can mix and match calls to thenReturn, thenThrows,
+    and thenAnswer. The first call could return an instance, the second could throw
+    an exception, the third could return an instance, and so on.
+
+
+    For example, the following code presumes that the class under invokes findByPersonRepository
+    multiple times:
+
+
+    The first call findById returns an Optional containing the first person, the second
+    call throws an IllegalArgumentException,(assuming the exception was caught and
+    the code continues) returns the second person, and the fourth and all subsequent
+    calls return an empty Optional.
+
+
+    After returning, you can take advantage of one more capability of Mockito: verifying
+    that the methods on the mocks were called the right number of times, in the right
+    order.
+
+
+    # Verifying the Multiplicity
+
+
+    The static method in Mockito is overloaded to take an optional second argument.
+    The full signature of this method is:
+
+
+    ```
+
+    public static <T> T verify(mock, org.mockito.verification.VerificationMode mode)
+
+    ```'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'The first argument is the mocked object. The second argument is an interface
+    that you rarely need to implement because it''s already generated by the many
+    factory methods. Those are static methods in the Mockito class, listed here:
+
+
+    +   * times(int)
+
+    * never(int)
+
+    * atLeastOnce(int)
+
+    * atLeast(int)
+
+    * atMostOnce(int)
+
+    * atMost(int)
+
+
+    The default, naturally enough, is times(1), so if you call verify with just one
+    argument, the check is that the mocked method was invoked exactly once.
+
+
+    Note that if you wrote your own mocks, you wouldn''t be able to do this. Java
+    doesn''t provide an easy way to keep track of how many times methods were called.
+    By doing so, Mockito allows you to verify the protocol, which is the interaction
+    between class test and its dependencies.
+
+
+    # No Further Interactions
+
+
+    Use the never method to verify that a particular method is never invoked. More
+    generally, Mockito has a method called verifyNoMoreInteractions(mock), which checks
+    that no methods other than the ones explicitly stated were invoked at.
+
+
+    That method sounds powerful, the JavaDocs contains a caution: A warning of word:
+    Some users who did a lot of classic, expect-run-verify mocking to use verifyNoMoreInteractions()
+    very often, in every test method. verifyNoMoreInteractions is not recommended
+    to use in every test method. verifyNoMoreInteractions() is a handy assertion for
+    the interaction testing toolkit. Use it only when it''s relevant (for example,
+    regression testing of legacy code). Abusing it leads to over-specified, less maintainable
+    tests.
+
+
+    ![](img/8c17bd3ac8631e54c044c56d594fa853_41_0.png)
+
+
+    The when/thenReturn/thenThrow/thenAnswer pattern works well, but you can''t use
+    it in methods that return void (that is, nothing); these require special handling.
+    Fortunately, while the recommended syntax looks different, using it is as easy.
+
+
+    # Mocking Methods That Return void
+
+
+    You need to know one quirk of the Mockito syntax. When you try to set expectations
+    on a method that returns void, you can''t use the when/then syntax.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "In the PersonRepository, the delete method returns void. Say we were testing\
+    \ failure modes and we decided that if the PersonService calls delete with a null\
+    \ argument (which hopefully never happen), the repository should throw a RuntimeException.\n\
+    \nThe way we normally set an expectation like that would be to write\n(Note: this\
+    \ does not compile):\n\n```\nwhen(repository.delete(null)).thenThrow(RuntimeException.class);\n\
+    ```\n\nThis code doesn't work, with the error message \"no instance(s) of type\
+    \ variable(s) T exist so that void conforms to T\". That's a rather confusing\
+    \ message, but fortunately there is a simple fix. Whenever we need to mock a method\
+    \ that returns void, use one of the methods first:\n\n```\ndoThrow(RuntimeException.class).when(repository).delete(null);\n\
+    ```\n\nAs an example, here's the test for deleteAll, using a List<Person> that\
+    \ contains only a null:\n\n```\nPersonService.java\n@Test\npublic void deleteAllWithNulls()\
+    \ {\n    // Set up findAll to return a list containing nulls of type Person\n\
+    \    when(repository.findAll()).thenReturn(Arrays.asList((Person) null));\n\n\
+    \    // This won't compile:\n    // when(repository.delete(null)).thenThrow(RuntimeException.class);\n\
+    \    // But this will:\n    assertThrows(RuntimeException.class, () -> service.deleteAll());\n\
+    \nverify(repository).delete(null);\n}\n```\n\nSometimes using the do methods feels\
+    \ like you're writing the expression backward, but you get used to it. For record,\
+    \ here is the complete list of do methods:\n\n+   * doReturn\n* doThrow\n* doAnswer\n\
+    * doNothing\n* doCallRealMethod\n\nYou can use these anywhere, but most people\
+    \ use them only for methods that return void."
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# Using Mocks and Stubs in the Astro Project\n\nIn Counting Astronauts by Spaceship,\
+    \ on page 8, we introduced a project that processed the number of astronauts in\
+    \ space and returned how many aboard spacecraft. The examples there showed an\
+    \ integration test for the AstroService class and how to create a unit test using\
+    \ our own FakeGateway. Now we can use Mockito to mock the Gateway<T> interface.\n\
+    \nAs a reminder, AstroService retrieves the data from a Gateway<T>, reproduced\
+    \ here:\n\n```\nGateway.java\npublic interface Gateway<T> {\n    T getResponse();\n\
+    }\n```\n\nThe class that implements this interface is called AstroGateway, and\
+    \ returns an AstroResponse that could be null. If we're going to isolate the AstroService,\
+    \ we need to ask Mockito to return either that AstroResponse or throw a RuntimeException\
+    \ if it's null.\n\nLet's use JUnit 5 along with the Mockito annotations. The test\
+    \ class for AstroService now starts with this:\n\n```\nAstroServiceTest.java\n\
+    @ExtendWith(MockitoExtension.class)\nclass AstroServiceTest {\n\n    @Mock\n \
+    \   private Gateway<AstroResponse> gateway;\n    @InjectMocks\n    private AstroService\
+    \ service;\n```\n\nWe'll rely on Mockito to create the mock of the gateway and\
+    \ inject it into the service because we've provided a constructor to the AstroService\
+    \ class that takes a Gateway as an argument.\n\nOne test then looks like this:\n\
+    \n```\nAstroServiceTest.java\n@Test\nvoid testAstroData_usingInjectedMockGateway()\
+    \ {\n    // Mock Gateway created and injected into AstroService using\n    //\
+    \ @Mock and @InjectMock annotations\n    //\n    // Set the expectations on the\
+    \ mock\n    when(gateway.getResponse())\n        .thenReturn(mockAstroResponse);\n\
+    \n    // Call the method under test\n```"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# Using Mocks and Stubs in the Astro Project * 31\n\n```\nMap<String, Long>\
+    \ astroData = service.getAstroData();\n\n// Check the results from the method\
+    \ under test\nasertThat(astroData)\n  .containsEntry(\"Babylon 5\", 2L)\n  .containsEntry(\"\
+    Nostromo\", 1L)\n  .containsEntry(\"USS Cerritos\", 4L)\nastastroData.forEach((craft,\
+    \ number) -> {\n  System.out.println(number + \" astronauts aboard \" + craft);\n\
+    \  assertAll(\n    () -> assertThatThat(number).isPositive(),\n    () -> assertThatThat(craft).isNotBlank()\n\
+    \  );\n});\n\n// Verify the stubbed method was called\nverify(gateway).getResponse();\n\
+    ```\n\nThe annotations we need care of two of our steps: creating the mock and\
+    \ injecting into the service. We still need to set the expectations, which we\
+    \ can do with when/thenReturn pair. After calling the method under test getastroData\
+    \ in AstroService, we can then verify that the results are correct. At the end,\
+    \ we can optionally check that the service did invoke the gateway response method\
+    \ exactly once.\n\nTesting for a failure is similar and uses the thenThrow method:\n\
+    \n```\nAstroServiceTest.java\n// Check network failure\n@Test\nvoid testAstroData_usingFailedGateway()\
+    \ {\n  when(gateway.getResponse()).thenThrow(\n    new RuntimeException(\"Network\
+    \ problems\"));\n\n  assertThatException(ofType(RuntimeException.class)\n    .isThrownBy(()\
+    \ -> service.getAstroData())\n    .withInstanceOf(IOException.class)\n    .withMessageContaining(\"\
+    Network problems\");\n}\n```\n\nSince the getResponse on the gateway returns a\
+    \ Failure that wraps the exception, we don't have to use the doThrow/when construct,\
+    \ which is required when the method we are mocking returns void.\n\nAnother advantage\
+    \ of using Mockito you can test for the case of network failure without disabling\
+    \ the network. But the astronauts would be happy about that.\n\nCongratulations.\
+    \ You've successfully used Mockito to mock the Gateway, and that concludes round\
+    \ of the Mockito API game.\n\nreport erratum • discus"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Wrapping Up
+
+
+    You can create your mocks manually and insert them into your class under test
+    or you can use Mockito''s annotation support to inject them automatically. Mockito
+    doesn''t provide a full injection framework, like Spring or Guice, but it makes
+    a good faith effort to plug in your mocks via either constructor injection, setter
+    injection, or even field injection.
+
+
+    You now have the mechanisms for telling your mocks (stubs, in this case) what
+    to return when methods are called. Chained methods made the process much simpler,
+    and you can use multiple arguments to respond to each invocation with different
+    results. You also now know about the special handling required to mock methods
+    that return void.
+
+
+    In the next chapter, we''ll talk about generalizing the arguments to mocked methods
+    so you don''t have to give explicit values every time. Mockito has a class that
+    contains factory methods for that purpose—we''ll also use Java lambdas to implement
+    custom argument matchers.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Use Built-in and Custom Matchers
+
+
+    I remember long ago, when newspapers (kids, ask your parents) had comics in them.
+    One day I read a Peanuts comic where Charlie Brown was trying to teach his younger
+    sister Sally to count. He showed her a picture of a harbor and asked her, “How
+    many ships do you see?””
+
+
+    She replied, "All of them."
+
+
+    She would have made an excellent software developer. Her answer, while useless,
+    would have passed all the basic unit tests.
+
+
+    In this chapter, we will look at the many methods in the ArgumentMatchers (plural)
+    class, which are static factory methods to produce objects that implement the
+    ArgumentMatcher (singular) interface. We will also see how to implement our own
+    matcher using lambda expressions.
+
+
+    # Using the Existing Argument Matchers
+
+
+    The ProjectService class from Chapter 2, Work with the Mockito API, on page 19,
+    contains a method called findById(int)... That method in turn calls the findById(int)
+    method on the PersonRepository, which we needed to isolate our PersonService for
+    testing. A test of the service method for the requested ID does not exist in the
+    database:
+
+
+    ```
+
+    PersonServiceTest.java
+
+    @Test
+
+    public void findByIdThatDoesNotExist() {
+
+    ```'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Chapter 3. Use Built-in and Custom Matchers • 34\n\n```\nwhen(repository.findById(anyInt())\n\
+    \    .thenReturn(Optional.empty());\nList<Person> personList = service.findByIds(999);\n\
+    assertTrue(personList.isEmpty());\nverify(repository).findById(anyInt());\n}\n\
+    ```\n\nThe anyInt method was used when setting the expectations and when verifying\
+    \ them. The method anyInt is a static method in the ArgumentMatchers class, which,\
+    \ like many of the methods you use in Mockito on a regular basis, the method is\
+    \ static, so you might expect, you'll use a static import to access it. That's\
+    \ why the syntax used in tests is simply anyInt() rather than ArgumentMatchers.anyInt().\n\
+    \n# Where Is the Static Import of ArgumentMatchers?\n\n> The ArgumentMatchers\
+    \ class contains a wide range of useful static methods that return argument matchers.\
+    \ Each of the returned values implements the ArgumentMatcher interface. Generally,\
+    \ you'll find it easier to use static methods before implementing your own custom\
+    \ matchers.\n\nIf you look at tests, however, you'll notice the only static import\
+    \ statement for the Mockito class itself. It turns out that the Mockito class\
+    \ extends ArgumentMatchers (plural) class, so the static import of Mockito covers\
+    \ both. It's an unusual usage of inheritance, but it makes writing the tests simpler.\n\
+    \nHere's a snippet of the ArgumentMatchers methods in the JavaDocs:\n\n![](img/8c17bd3ac8631e54c044c56d594fa853_47_0.png)\n\
+    \nreport erratum - discuss"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'Most of the static methods in the ArgumentMatchers class are intuitive, though
+    there are over forty of them, they fall into a handful of categories:
+
+
+    +   * Methods that match instance of primitive types: anyByte, anyShort, anyInt,
+    anyLong, anyFloat, anyDouble, anyChar, and anyBoolean. These methods work exactly
+    the way you expect.
+
+    * Methods that match collections, like anyCollection, anyList, anySet, and anyMap.
+    These methods match any non-null collection of the specified type.
+
+    * Methods that work on strings, like anyString, startsWith, endsWith, and the
+    two overloads of matches, one that takes a regular expression as a string and
+    the other a Pattern.
+
+    * General-purpose matchers for nulls, which is isNull and isNotNull (and its companion,
+    notNull, which is just an alias), and nullable(Class), which matches either null
+    or a given type.
+
+    * For types, the matcher isClass(Class) matches any argument that is assignable
+    to a of of the class.. That leads any((), matches any instance of the specified
+    type, excluding nulls, and the ultimate matcher, any, which matches anything,
+    including nulls and varargs.
+
+
+    The class includes one set of overloaded matchers called eq, which may seem puzzling.
+    In the next section, we will look at these methods and the reason they exist,
+    uncovering an easy trap to fall into when verifying mocks.
+
+
+    # Using the eq Matchers
+
+
+    The ArgumentMatchers class has one category of methods you might not expect: a
+    series of eq methods, overloaded for all primitive types, as well as eq(T), which
+    matches any instance of class T. Why would you need those methods? To avoid a
+    subtle trap.
+
+
+    If you''re stubbing a method that matches more than one argument and you use an
+    argument matcher for one of the arguments, you have to use argument matchers for
+    all of them.
+
+
+    The docs are very clear about this requirement and include the following example.
+    Say you want to verify that someMethod is called on a mock, and someMethod takes
+    three arguments: an integer, a string, and another string. If you know what the
+    last string to be, you might think you can just provide it, as in the following
+    (Note: this example does not work):
+
+
+    ```
+
+    verify(mock).someMethod(anyInt(), anyString(), "third argument");
+
+    ```
+
+
+    This call will fail because the first two arguments use argument matchers, but
+    the last doesn''t. That''s where the eq matchers come in. If you use'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# Chapter 3. Built-in and Custom Matchers • 36\n\nargument matcher, you have\
+    \ to use argument matchers for all the arguments. Using eq, you can simply rewrite\
+    \ the call as:\n\n```\nverify(mock).someMethod(anyInt(), anyString()), eq(\"third\
+    \ argument\");\n```\n\nNow everything works. Missing an argument matcher is an\
+    \ easy trap to fall into because the compiler doesn't identify it as an error.\
+    \ The code won't fail until you run the actual test. It's an easy fix.\n\nGoing\
+    \ beyond the basic ArgumentMatchers, Mockito includes another class, called AdditionalMatchers,\
+    \ which includes methods like and, and not, for combining values, as well as a\
+    \ comparison relationships, like lt, leg, geq, and various forms of array equality\
+    \ checks. See the JavaDocs for AdditionalMatchers for details.\n\nNow let's look\
+    \ at the last category of methods in ArgumentMatchers—methods that allow you to\
+    \ create custom matchers.\n\n# Creating Custom Argument Matchers\n\nTo create\
+    \ your own matcher, the ArgumentMatchers class has a method called argThat, which\
+    \ takes an ArgumentMatcher (singular) as an argument. ArgumentMatcher is an interface\
+    \ containing a single abstract method, with this signature:\n\n```\nboolean matches(T\
+    \ argument)\n```\n\nThis method should return true if the argument matches whatever\
+    \ condition you implement, and false otherwise.\n\nIn the dark days before lambda\
+    \ expressions were added in Java 8, implementing your own matcher wasn't exactly\
+    \ difficult, but it was verbose. The example given in the documentation is hardly\
+    \ inspiring (comments added):\n\n```\nListCustomMatcher.java\n```\n\n```\n// custom\
+    \ matcher that implements the ArgumentMatcher interface\nclass ListOfTwoElements\
+    \ implements ArgumentMatcher<List> {\n    public boolean matches(List list) {\n\
+    \        return list.size() == 2;\n    }\n\n    public String toString() {\n \
+    \       //printed in verification errors\n        return \"[list of 2 elements]\"\
+    ;\n    }\n}\n\n// create the mock\n```\n\n+   1. https://www.mockito.io/doc/org.mockito/mockito-core/2.2.7/org/mockito/AdditionalMatchers.html"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# Creating Custom Argument Matchers • 37\n\n```\nList mock = mock(List.class);\n\
+    ```\n\n```\n// set the expectation argThat and the custom matcher\nwhen(mock.addAll(argThat(new\
+    \ ListOfTwoElements()))).thenReturn(true);\n```\n\n```\n// somewhere in the actual\
+    \ test, test a method that invokes argAll\nmock.addAll(Arrays.asList(\"one\",\
+    \ \"two\\));\n```\n\n```\n// verify that the test called addAll with the custom\
+    \ matcher\nverify(mock).addAll(argThat(new ListOfTwoElements()));\n```\n\nThat's\
+    \ a fair amount of work to just if the mock had one of its methods invoked by\
+    \ a list of size two. Fortunately, lambda expressions you can write this easily.\
+    \ Simply provide a lambda expression that takes a single argument of the type\
+    \ and returns a Boolean. You can eliminate the class in the example and write\
+    \ the following to the expectation:\n\n```\nverify(mock).addAll(argThat(list ->\
+    \ list.size() == 2));\n```\n\nEasy breezy, lemon squeeze. By removing the friction\
+    \ of implementing your own class and instantiating it when setting the expectations\
+    \ and when verifying them, the whole process becomes much easier.\n\nA working\
+    \ example using lambdas to implement custom matchers is shown in Testing void\
+    \ Methods Using Interactions, on page 46. Here, though, is an example from the\
+    \ PersonService tests, which leads to the subtle (but easy to fix) trap. We want\
+    \ to check for IDs that do not exist. Since we know all the IDs in the sample\
+    \ data set are less than 14, we could use a custom matcher like:\n\n```\nPersonService.java\n\
+    @Test\n@Disabled(\"Do not use argThat with integers\")\npublic void findByIdsThatDoNotExist_argThat()\
+    \ {\n    when(repository.findById(argThat(id -> id > 14)))\n        .thenReturn(Optional.empty());\n\
+    \    List<Person> personList = service.findByIds(15, 42, 78, 999);\n    assertTrue(personList.isEmpty());\n\
+    \n    verify(repository, times(4)).findById(anyInt());\n}\n```\n\nThis leads to\
+    \ a problem, however. The test compiles, but we've fallen into another trap, which\
+    \ involves argThat with primitive types. Fortunately, too, is easy to fix."
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# Using Argument Matchers for Primitive Types\n\nInvoking the findById method\
+    \ on PersonRepository returns an Optional whenever the requested ID was greater\
+    \ than 14. That was expressed using a custom matcher implemented using a lambda\
+    \ expression:\n\n```\nwhen(repository.findById(argThat(id -> id > 14))\n    .thenReturn(Optional.empty()));\n\
+    ```\n\nThat code looks simple enough, the lambda expression is correct. Unfortunately,\
+    \ when you return from the test, you get a NullPointerException.\n\nWhy would\
+    \ the return value from the argThat be null? Even weirder, if you look at the\
+    \ JavaDocs for the argThat method, even though the signature claims it returns\
+    \ T (the class), the docs say it's supposed to return null, again, why is this\
+    \ a problem?\n\nThe answer lies in this warning for argThat:\n\n> NullPointerException\
+    \ auto-boxing caveat. In cases when matching primitive types you must use relevant\
+    \ int(That), float(That), etc. This method you will avoid NullPointerException\
+    \ during auto-boxing. But how Java works doesn't have a clean way of detecting\
+    \ this scenario and protecting the user from this. Hopefully, the Java describes\
+    \ the problem and solution well. If you have an idea how to fix the problem, let\
+    \ us know the mailing list or the issue tracker.\n\nIn other words, the problem\
+    \ is related to unboxing wrapper classes into primitive types, and the doc claims\
+    \ this isn't easily fixable. There is, however, an easy fix: instead of calling\
+    \ the argThat method, call one of its primitive variants: byteThat, shortThat,\
+    \ charThat, intThat, longThat, floatThat, doubleThat, and booleanThat.\n\nSo the\
+    \ right way to add the custom matcher in this case is to use intThat:\n\n```\n\
+    PersonService.java\n@Test\npublic void findByIdThatDoesNotExistNotExist_intThat()\
+    \ {\n    // Custom matcher as lambda argument to intThat:\n    repository.findById(intThat(id\
+    \ -> id > 14))\n        .thenReturn(Optional.empty());\n    List<Person> personList\
+    \ = service.findByIds(15, 42, 78, 999);\n    assertTrue(personList.isEmpty());\n\
+    }\\verify(repository, times(4)).findById(anyInt());\n```\n\n+   2. https://www.javadoc.io/doc/org.mockito/mockito-core/2.7.13/org/mockito/hamcrest/MockitoHamcrest.html"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'Now everything works. That list of methods based on the primitive types is
+    the last category of methods in the ArgumentMatchers class.
+
+
+    # Custom Matchers for Primitives
+
+
+    > When using a custom matcher that is based on primitive types, use the methods
+    designed for that purpose: byteThat, shortThat, intThat, longThat, floatThat,
+    doubleThat, instead of argThat. That approach will avoid potential pointer exceptions
+    due to boxing.
+
+
+    ![](img/8c17bd3ac8631e54c044c56d594fa853_52_0.png)
+
+
+    We''ve covered all the important methods in the ArgumentMatchers class, including
+    how to implement your own custom matcher. We can now verify that methods are called
+    with the proper arguments. But to verify the protocol, we also want to check that
+    the methods on the mocked objects are called in the proper order. Fortunately,
+    Mockito makes that as easy as well, you''ll see next.
+
+
+    # Verifying the Order of Methods Called
+
+
+    One last check we can make is to verify that a particular method on one stub was
+    invoked before another method on a different stub. We''ll need an additional class
+    in Mockito to do that, called org.mockito.Order, and we''ll create an instance
+    of it using another static method from the Mockito class, also called inOrder(but
+    with a lowercase first letter).
+
+
+    Here''s the signature of the inOrder method:
+
+
+    ```
+
+    public static In inOrder(Object... mocks)
+
+    ```
+
+
+    The inOrder method takes a vararg list of mocks, so you create the mocks first.
+    It''s interesting that you can check that different methods were called on different
+    mocks in the order specified. If the object we''re testing multiple dependencies
+    and we mock them, we can verify that methods are called in the proper order even
+    across different mock objects.
+
+
+    The example in code makes this clear:
+
+
+    ```
+
+    inOrder = inOrder(firstMock, secondMock);
+
+    inOrder.verify(firstMock).add("was called first");
+
+    inOrder.verify(secondMock).add("was called second")
+
+    ```
+
+
+    This code checks that the add method was called on the first mock with the string
+    argument "was called first", and then the add method was called on the second
+    mock with argument "was called second". You have to explicitly list the calls
+    in order, but they work.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "In Chapter 1, Build a Testing Foundation, on page 1, we looked at a class\n\
+    called HelloMockito, which contained two dependencies: one for the PersonRepos-\n\
+    tory we've been using throughout the current chapter and one on a Translation-\\\
+    Service that translated the greeting message into whatever we wanted.\nWe can\
+    \ now check that the appropriate methods in these dependencies were\nnot only\
+    \ invoked the proper number of times (once each), but also in the\nproper order,\
+    \ as shown in this excerpt from the greetPersonThatExists test:\n\n```\nHelloMockitoTest.java\n\
+    @Test\n@DisplayName(\"Greet Admiral Hopper\")\nvoid greetPersonThatExists() {\n\
+    \    // set the expectations on the mocks\n    when (repository.findById(anyInt()))\n\
+    \        .thenReturn(Optional.of(new Person(1\n```\n\nIn that test, the mocks\
+    \ were created using the @Mock annotation and @InjectMocks\ninto the class under\
+    \ test using the annotation. We expect the\ntations on the mock, using the any\
+    \ argument matcher, tested the greet\nmethod, and then used the inOrder class\
+    \ to only verify the methods were\ncalled but confirmed that findById was called\
+    \ on the mock repository first,\nfollowed by translate on the mock translation\
+    \ service. Note also the use of eq\nmatcher for the last two String arguments\
+    \ in the translate method.\n\nIn other words, now you know all the features of\
+    \ Mockito shown in that test,\n annotations to setting expectations to verifying\
+    \ method order. Hopefully\nit all makes sense now.\n\n# Wrapping Up\n\nIn this\
+    \ chapter, we covered the topic of argument matchers. We use argument\nmatchers\
+    \ to simplify setting expectations on mock objects and verifying"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'that the expected methods were called the right number of times in the right
+    order.
+
+
+    The Mockito class extends the ArgumentMatchers class, which contains a large number
+    of factory methods, like anyint(), to provide most of the argument matchers we
+    need. It also includes the method argThat, which takes a custom ArgumentMatcher
+    that we can provide as a lambda expression.
+
+
+    Along the way we identified two potential issues that you need to keep in mind.
+    One is that if you use an argument matcher for one argument of a mocked method,
+    you need to use matchers for all of them—thus the eq methods that involves primitives,
+    you should use their associated methods, like intThat or longThat, instead of
+    argThat, to avoid nullability problems associated with unboxing.
+
+
+    Finally, we looked at the inOrder method, which allows you to verify that mocked
+    methods were called in the proper order, even across different mocked dependencies.
+    So our mocks now satisfy the full protocol: the mocked methods not only return
+    the proper values, as stubs would, but also can check that the methods are called
+    the proper number of times, in the expected order.
+
+
+    You can do a lot with Mockito using just the capabilities we''ve covered so far.
+    In the next chapter, however, we''ll move beyond the basics and talk about mocking
+    methods that return void, capturing the arguments used when mocked methods are
+    called, and using spies to verify the protocol of legacy methods.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# CHAPTER 4
+
+
+    # Solve Problems with Mockito
+
+
+    I''ve always preferred chess to poker, partly because I have a terrible poker
+    face. It''s hard for me to keep my emotions out of my expressions, while that''s
+    a good idea in chess, it''s vital in poker, where the other players are constantly
+    trying to judge whether you have a good hand or not and adjusting their bets accordingly.
+    Ideally, when the other players look at me, I should be returning nothing to make
+    the game difficult for them.
+
+
+    Nothingness can also cause difficulties when testing. In Java, all too often developers
+    write methods that return nothing. Those methods are hard to test, because after
+    all, nothing is coming back. Sometimes you also have to mock a method that returns
+    nothing, telling it to throw an exception for certain inputs. In Mocking Methods
+    That Return void, on page 28, we discussed how to mock return nothing but not
+    how to test methods that return nothing. That''s one of the hard problems that
+    Mockito solves easily. In this chapter, we''ll tackle a variety of problems that
+    Mockito can help you:
+
+
+    +   - Testing methods that return void.
+
+    - Capturing the actual arguments of mocked methods.
+
+    - Using custom answers to return values based on invoked arguments.
+
+    - Spying on real objects.
+
+
+    We''ll also look at how Mockito supports the concept of Behavior Driven Development
+    (BDD).¹ Then we''ll look at testing void methods. After that, we''ll see how to
+    capture the actual arguments used when a method on a mock is invoked. We''ll see
+    how to make the mock return a value based on its input argument. Finally, we''ll
+    spy on real objects.
+
+
+    > ¹ https://en.wikipedia.org/wiki/Behavior-driven_development'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "I should mention that I view my lack of a poker face to be more of a feature\
+    \ than a bug. Since I know I can't hide how good or bad my hand is, I don't gamble\
+    \ much, and when I do, it's for very small stakes. Still, it would be nice to\
+    \ be able to bluff once in a while.\n\n# Deciding Between Mockito and BDDMockito\n\
+    \nMockito contains two separate APIs with identical functionality. Normally that's\
+    \ considered a “code smell”, but there's a reason for both, and you'll encounter\
+    \ both APIs in practice.\n\nSo far when using Mockito, we've started with static\
+    \ methods from the Mockito class. You'll find a completely parallel set of methods\
+    \ in a subclass of Mockito called org.mockito.BDDMockito. The developers added\
+    \ the BDDMockito class to support BDD.\n\nWe've been using methods like the when/thenReturn\
+    \ pair to set expectations and the verify method to check methods on stubs were\
+    \ called. The BDDMockito has a different API to accomplish the same tasks. BDD\
+    \ emphasizes writing tests using given, when, and then to represents the setup\
+    \ of the test, invoking it immediately: You can probably see the problem immediately:\
+    \ Mockito class already has a method called when that's not designed to fit the\
+    \ BDD model.\n\nSince the developers of Mockito wanted to support the BDD approach,\
+    \ they added the BDDMockito class. In that class, setting the expectations begins\
+    \ with the method called given, by variations on when to set the return value.\
+    \ This is the signature of the given method in BDDMockito:\n\n```\npublic static\
+    \ <?> BDDMyongingStubbing<T> given(T methodCall)\n```\n\nIn the regular Mockito\
+    \ class, the method is followed in a chain by of thenReturn, thenThrow, or other\
+    \ methods. In BDDMockito, the given method is followed by willReturn, willThrow,\
+    \ or in the same pattern.\n\nFor example, here is a test of the getMaxId of the\
+    \ PersonService, which requires us to mock the findAll method of the PersonRepository:\n\
+    \n```\nPersonServiceTest.java\n@Test\npublic void findMaxId() {\n    when(repository.findAll()).thenReturn(people);\n\
+    \    assertThat(service.getHighestId()).isEqualTo(14);\n    verify(repository.findAll());\n\
+    }\n```"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# Deciding Between Mockito and BDMockito • 45\n\nIf this is written using the\
+    \ corresponding methods in the BDMockito class, the\ntest looks like this:\n\n\
+    ```\nPersonService.java\n@Test\npublic void findMaxIdBDD() {\n    given(repository.findAll()).willReturn(people);\n\
+    \    assertThat(service.getTestId()).isEqualTo(14);\n    then(repository).should().findAll();\n\
+    }\n```\n\nSetting the expectation simply replaces when given and willReturn with\
+    \ will-\nReturn. The verification step is slightly more complicated, because in\
+    \ addition\nfor replacing with then, BDMockito requires you to add a should method\
+    \ call\nbefore specifying the method that was invoked.\n\nWhy is the should method\
+    \ required? The verify method from Mockito is overloaded\nto specify the multiplicity:\n\
+    \n```\nverify(repository, times(1)).findAll()\n```\n\nCalling the findAll method\
+    \ only once is the default, so you can leave it out,\nas the test. The then method\
+    \ in BDMockito doesn't have an overloaded version,\nhover. To specify the multiplicity,\
+    \ you put the argument inside should:\nthen(repository).should(times(1)).findAll();\n\
+    \nIt seems odd to be forced to include even when the multiplicity is\nexactly\
+    \ 1 (the default), but it does read better to a native English speaker.\n\nThe\
+    \ rest of the BDMockito class is simple search-and-replace variations on the\n\
+    Mockito methods. You can also use argument matching, including lambda\nexpressions\
+    \ as custom matchers, in the usual way.\n\nFor methods that return value (discussed\
+    \ in Testing void Using Inter-actions, on page 46). Mockito requires you to start\
+    \ with one of the do methods,\nlikeReturn or doThrow. In BDMockito, the similar\
+    \ methods begin with given, as in\nwillReturn or willThrow, as shown in the example\
+    \ below:\n\n```\n//given\nwillThrow(new RuntimeException(\"boo\")).given(mock).foo();\n\
+    \n//when\nResult result = systemUnderTest.perform();\n\n//then\nassertEquals(failure,\
+    \ result);\n```\n\nNote the usage of \"given/when/then\" comments: the given section\n\
+    is for setting the expectations, the when section invokes the method out"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "test, and the then section checks the return value from the test method. Which\
+    \ verification is done in this example.\n\nWhich API you decide to use, BDD or\
+    \ traditional, is purely a matter of style. Be aware that you'll encounter both\
+    \ in practice.\n\nNext up, let's look at testing (as opposed to mocking) methods\
+    \ that return void, which provides a nice demonstration of why mocks can be so\
+    \ helpful.\n\n# Testing void Methods Using Interactions\n\nAs developers adopt\
+    \ a more test-driven style, they learn to avoid writing methods that return nothing.\
+    \ It's hard to test methods that return void. After all, nothing is coming back,\
+    \ how do you know those methods worked at all? If you're lucky, the methods change\
+    \ the state of the object (that is, its contained attributes) and you can check,\
+    \ but what if it doesn't happen either? Mockito can help by letting you check\
+    \ the interactions between the class you're testing and its mocked dependencies.\n\
+    \nLet's introduce a new example involving a popular architecture these days: a\
+    \ publisher/subscriber system where the publisher sends signals to subscribers\
+    \ that receive them. Publishers and subscribers are often used in asynchronous\
+    \ systems, but here we'll use them as an example of classes that don't return\
+    \ values.\n\n(As an aside, this example was adapted from a similar one used to\
+    \ demonstrate the Spock² testing framework.)\n\nHere's a simple Publisher class:\n\
+    \n```\nPublisher.java\npackage com.kosenit.pubsub;\nimport java.util.ArrayList;\n\
+    import java.util.List;\n\n// Adapted from a similar example in the Spock framework\n\
+    public class Publisher {\n    private final List<Subscriber> subscribers = new\
+    \ ArrayList<>();\n\n    public void addSubscriber(Subscriber sub) {\n        subscribers.add(sub);\n\
+    \    }\n\n    // Want to test this method\n    public void send(String message)\
+    \ {\n        for (Subscriber sub : subscribers) {\n            try (\n```\n\n\
+    +   2. https://spockframework.org/"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "```\nsub.receive(message);\n} catch (Exception ignored) {\n  // evil, but what\
+    \ can you do?\n}\n}\n}\n```\n\nA Publisher maintains a list of Subscriber instances.\
+    \ When the send method is called on the Publisher, it calls the receive method\
+    \ on each subscriber, with a string message argument. The challenge will be to\
+    \ test the send method, which returns nothing. Note also that invoking sending\
+    \ doesn't change anything in the publisher, whose only attribute is the list of\
+    \ subscribers. To make matters worse, if any of the subscribers throws an exception,\
+    \ the publisher catches and ignores it. which is guaranteed to come up on a code\
+    \ review but won't help us. The motivation is that if one or more of the subscribers\
+    \ throws an exception, we still want the publisher to reach the rest of them.\
+    \ Still, it would no doubt be better to log those exceptions somewhere, but that\
+    \ might give us something for test, and we're trying to see what to do when nothing\
+    \ is available.\n\nThe Subscriber will simply be an interface:\n\n```\nSubscriber.java\n\
+    package com.kousen.pubsub;\npublic interface Subscriber {\n  void receive(String\
+    \ message);\n}\n```\n\nThe receive method returns void as well.\n\nHow to test\
+    \ the send method in the Publisher? Since the job of the send method is to invoke\
+    \ a method on each subscriber, you can use Mock to mock the subscribers and verify\
+    \ that each of them had their receive method called with the proper argument.\n\
+    \nTo do this, we'll create an instance of Publisher and add two mock subscribers\
+    \ to it. In the annotation approach (using @Mock and @InjectMocks) isn't helpful,\
+    \ because the publisher doesn't have a constructor or setter method for adding\
+    \ subscribers, and its only attribute is a collection of them. This is a case\
+    \ where the simple mock method works instead of the annotations, even though that\
+    \ means we'll have to instantiate the classes and inject the dependencies ourselves.\n\
+    \nHere's the start of the PublisherTest class:"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# PublisherTest.java\n\n```\nclass PublisherTest {\n    private final Publisher\
+    \ pub = new Publisher();\n    private final Subscriber subl = mock(Subscriber.class);\n\
+    \    private final Subscriber subl2 = mock(Subscriber.class);\n\n    @BeforeEach\n\
+    \    void setUp() {\n        pub.addSubscriber(sub1);\n        pub.addSubscriber(sub2);\n\
+    \    }\n```\n\nThe test creates a publisher and two mock subscribers and adds\
+    \ the subscribers to the publisher in the setUp method.\n\nThe first test checks\
+    \ the send method by verifying the subscribers:\n\n# PublisherTest.java\n\n```\n\
+    @Test\nvoid publisherSendsMessageToAllSubscribers() {\n    pub.send(\"Hello\"\
+    );\n\n    verify(sub1).receive(\"Hello\");\n    verify(sub2).receive(\"Hello\"\
+    );\n}\n```\n\nEven though nothing is coming back from send, and the receive method\
+    \ in the subscribers doesn't return anything, we know the publisher is reaching\
+    \ all the subscribers. We tested a method that returned void, that invoked methods\
+    \ also returned void. Pretty slick.\n\nIf we want, we can even check that the\
+    \ subscribers received the message in the order they were added\n\n# PublisherTest.java\n\
+    \n```\n@Test\nvoid testSendInOrder() {\n    pub.send(\"Hello\");\n\n    InOrder\
+    \ inoder = inOrder(sub1, sub2);\n    inorder.verify(sub1).receive(\"Hello\");\n\
+    \    inorder.verify(sub2).receive(\"Hello\");\n}\n```\n\nThat may or not be necessary,\
+    \ depending on whether the ordering of subscribers is important, but it's easy\
+    \ enough to do.\n\nIf the message string has a pattern, you can use argument matcher\
+    \ to check it. In this test the anyString argument matcher is used, which may\
+    \ be sufficient, or you can use a custom matcher as shown below."
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# Testing void Methods Using Interactions · 49\n\nPublisherTest.java\n\n```\n\
+    @Test\nvoid publisherSendsMessageWithAPat() {\n    pub.send(\"Message 1\");\n\
+    \    pub.send(\"Message 2\");\n\n    // Check for any string\n    verify(sub1,\
+    \ times(2)).receive(anyString());\n    verify(sub2, times(2)).receive(anyString());\n\
+    \n    // Alternatively, check for a specific pattern\n    verify(sub1, times(2)).receive(\n\
+    \        argThat(s -> s.matches(\"Message \\d\")));\n    verify(sub1, times(2)).receive(\n\
+    \        argThat(s -> s.matches(\"Message \\d\")));\n}\n```\n\nYou wouldn't do\
+    \ this in practice (checking for any string and strings with a specific pattern),\
+    \ but the example shows how easy it is to create your own custom matcher using\
+    \ lambda expressions.\n\nWhat about a misbehaving subscriber that throws an exception?\
+    \ Since the publisher is catching and ignoring all exceptions, all subscribers\
+    \ will still receive the messages.\n\nPublisherTest.java\n\n```\n@Test\nvoid handleMisbehavingSubscribers()\
+    \ {\n    // sub throws an exception\n    doThrow(RuntimeException.class).when(sub).receive(anyString());\n\
+    \n    pub.send(\"message 1\");\n    pub.send(\"message 2\");\n\n    // both subscribers\
+    \ still received the messages\n    verify(sub1, times(2)).receive(anyString());\n\
+    \    verify(sub2, times(2)).receive(anyString());\n}\n```\n\n# Methods That Return\
+    \ void\n\n> Recall that for methods return void, you have to use the do methods\
+    \ (doThrow, doNothing, and so on) when setting expectations. That's why doThrow\
+    \ was used here when telling the receive method (which returns void) to throw\
+    \ a RuntimeException.\n\nThe bottom line is that Mockito made it easy to verify\
+    \ that the send method is doing its job, even though neither nor the receive method\
+    \ in Subscriber is returning anything.\n\nIn the next two sections, we'll see\
+    \ how to deal with two more challenges using Mockito: capturing the actual arguments\
+    \ used when a mocked method\n\nreport erratum • discuss"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "is called and how to use a custom Answer to get a method to return a value\
+    \ based on its supplied arguments.\n\n# Capturing Arguments\n\nReturning to the\
+    \ PersonService and its dependency of type PersonRepository, let's add a method\
+    \ to the service that creates a Person from individual arguments.\n\n```\nPersonService.java\n\
+    public Person createPerson(int id, String first,\n    String last, LocalDate dob)\
+    \ {\n    Person person = new Person(id, first, last, dob);\n    return repository.save(person);\n\
+    }\n```\n\nIn this instantiation we instantiate a Person as a local variable before\
+    \ invoking the save method on the repository. In some cases, the input arguments\
+    \ can be modified before instantiating the Person. Here, the date of birth argument\
+    \ is a String that needs to be parsed to call the Person constructor. We would\
+    \ like to capture the instantiated Person instance used as the argument to save.\n\
+    \nTo do this, add @Captor annotation to an instance of Person in the test class,\
+    \ and then, in the verification step, use the captor method to capture it and\
+    \ the getValue method to get the actual value.\n\nThe resulting test looks like\
+    \ this:\n\n```\nPersonServiceTest.java\n@Captor\nprivate Captor<Person> personArg;\n\
+    @Test\npublic void createPersonUsingDateString() {\n    Person person = people.get(0);\n\
+    \    when(repository.save(hopper)).thenReturn(hopper);\n    Person actual = service.createPerson(1,\
+    \ \"Grace\", \"Hopper\", \"1906-12-09\");\n    verify(repository).save(personArg.capture());\n\
+    \    assertThat(personArg.getValue()).isEqualTo(hopper);\n    assertThat(actual).isEqualTo(hopper);\n\
+    }\n```\n\nThe implementation of createPerson extracts a Person from those arguments\
+    \ as a local variable. Since that variable is used as the argument to a mocked\
+    \ method (save), we can capture it, as shown. Then we can extract the Person instance\
+    \ from it using getValue, and we're done."
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# Setting Outputs Based on Inputs with Custom Answers\n\nArgument captures\
+    \ allow you to find out exactly what arguments were supplied to a mocked method,\
+    \ even when that argument is created as a local variable in the implementation.\n\
+    \n# Setting Outputs Based on Inputs with Custom Answers\n\nMockito is a mature\
+    \ library, so it probably provides everything you want to do. But sometimes capabilities\
+    \ aren't obvious, either from the API or from the documentation. One such capability\
+    \ involves using the Answer interface. Custom answers allow you to tell Mockito\
+    \ that the output of a mocked method should be based in some way upon its inputs.\n\
+    \nHere's a simple example. In the PersonService interface, say there's a savePeople\
+    \ method that takes a vararg list of Person instances as arguments and returns\
+    \ a list of their generated primary keys. It implements this by passing each Person\
+    \ to the corresponding save method in PersonRepository:\n\n```\nPersonService.java\n\
+    public List<Integer> savePeople(Person... person) {\n    return Arrays.stream(person)\n\
+    \        .map(repository::save) // generates ids\n        .map(Person::getId)\n\
+    \        .collect(Collectors.toList());\n}\n```\n\nThe PersonService therefore\
+    \ depends on the PersonRepository to do its job. If you want to test the savePeople\
+    \ method in PersonService, you need to mock the save(Person) method in PersonRepository:\n\
+    \n```\npublic interface PersonRepository {\n    // ... other methods ...\n   \
+    \ Person save(Person person);\n}\n```\n\nHere's one attempt to write a test for\
+    \ savePeople:\n\n```\nPersonServiceTest.java\n@Test\npublic void saveAllPeople()\
+    \ {\n    when(repository.save(any(Person.class)))\n        .thenReturn(people.get(0),\n\
+    \        people.get(1),\n        people.get(2),\n        people.get(3),\n    \
+    \    people.get(4));\n\n    // test the service (which uses the mock)\n    assertEquals(List.of(1,\
+    \ 2, 3, 14, 15),\n        service.savePeople(people.toArray(Person[]::new)));\n\
+    ```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "```\n// verify the interaction between the service and the mock\nverify(repository,\
+    \ times(people.size())).save(any(Person.class));\nverify(repository, never()).delete(any(Person.class));\n\
+    \n```\n\nThis example sets up a list of Person ahead of time. The expectation\
+    \ on the save method that the first time it's called, it should return the first\
+    \ element of that collection, the second time it returns the second person, and\
+    \ so on. The thenReturn method explicitly lists each return value, one by one.\
+    \ When calling savePeople, the array method converts the list into an array, which\
+    \ matches the vararg argument.\n\nThe thing is, there should be a way to set the\
+    \ expectations on save without stating return value one by one. After all, we\
+    \ want for the method to return its argument. We can't just say that?\n\nIn fact,\
+    \ that's easy to do, the syntax isn't necessarily intuitive. Instead of using\
+    \ thenReturn, use the thenAnswer method, which takes its argument as an implementation\
+    \ of the Answer<T> interface.\n\nOngoingStubbing<T> thenAnswer(Answer<T>) answer\n\
+    \nThe Answer interface has a single method called answer:\n\n```\nT answer(InvocationMock\
+    \ invocation) throws Throwable\n```\n\nThis code doesn't look terribly at first\
+    \ glance, but the key is the InvocationMock argument. Here are the methods in\
+    \ class:\n\n```\npublic interface InvocationMock extends Serializable {\n    Object\
+    \ getMock();\n    Method getMethod();\n    Object[] getArguments();\n    T getArgument(int\
+    \ index); // return the argument at a given index\n    T getArgument(int index,\
+    \ Class<T> clazz);\n    Object callRealMethod() throws Throwable;\n}\n```\n\n\
+    The method we want is the fourth one: the overload of getArgument that takes an\
+    \ integer index. That allows you to rewrite the expectations line:\n\n```\n.when(repository.save(any(Person.class)))\n\
+    .thenAnswer(invocation -> invocation.getArgument(0));\n```\n\nWhen save is invoked\
+    \ with any Person, reply with its first argument. That's all that's necessary.\
+    \ The only problem (if there is one) is that the names of methods don't necessarily\
+    \ tell you what they do, you can tell a mocked method to return an output based\
+    \ entirely on its input arguments."
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# This is the resulting test:\n\n```\nPersonServiceTest.java\n@Test\npublic\
+    \ void useAnswer() {\n    // Lambda expression implementation of Answer<Person>\n\
+    \    when(repository.save(any(Person.class))\n        .thenAnswer(invocation ->\
+    \ invocation.getArgument(0));\n    List<Integer> ids = service.savePeople(people.toArray(Person[]::new));\n\
+    \    List<Integer> actuals = people.stream()\n        .map(Person::getId)\n  \
+    \      .collect(Collectors.toList());\n    assertEquals(ids, actuals);\n}\n```\n\
+    \nUse an Answer if you need the output of mocked methods to be based on your input\
+    \ arguments.\n\n# Spying to Verify Interactions\n\nFinally, let's talk about spies.\
+    \ A spy is an object that wraps an actual dependent instance, which allows you\
+    \ to track the interactions between the class test and the spies. A spy sits in\
+    \ the class you are testing and its dependencies. This gives you two capabilities:\n\
+    \n+   1. You can intercept method calls to the dependencies for later verification.\n\
+    2. You can mock some methods in the dependencies rather than all of them. This\
+    \ is called a partial mock.\n\nWe'll start with a PersonService that uses an actual\
+    \ implementation of the PersonRepository interface, called InMemoryPersonRepository.\
+    \ The in-memory version internally uses a (synchronized) ArrayList to store the\
+    \ people. (The complete implementation is contained in the GitHub repository for\
+    \ the book.)\n\nYou can certainly test that the repository is working correctly,\
+    \ and you don't need to use Mock to do it.\n\n```\nPersonServiceTest.java\n@Test\n\
+    void testInMemoryPersonRepository() {\n    PersonRepository personRepo = new InMemoryPersonRepository();\n\
+    \    PersonService personService = new PersonService(personRepo);\n\n    personService.savePeople(people.toArray(Person[]::new));\n\
+    \    assertThat(personRepo.findAll()).isEqualTo(people);\n}\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "What you and can't check the expected behavior: verify that the service invokes\
+    \ the save method on the repository the expected number of times. You can, however,\
+    \ wrap the repository in a spy and use that to keep count:\n\nPersonServiceTest.java\n\
+    \n```\n@Test\nvoid spyOnRepository() {\n    // Spy on the in-memory repository\n\
+    \    PersonRepository personRepo = spy(new InMemoryRepository());\n    PersonService\
+    \ personService = new PersonService(personRepo);\n\n    personService.savePeople(people.toArray(Person::new));\n\
+    \    assertThat(repo.findAll()).isEqualTo(people);\n\n    // Verify the method\
+    \ calls on the spy\n    verify(personRepo, times(people.size())).save(any(Person.class));\n\
+    }\n```\n\nThat's useful, and a good reason to use spies.\n\nSpies also have the\
+    \ capability to mock some methods rather than all of them. But that's risky because\
+    \ the internal state of the real object can become inconsistent. For example,\
+    \ if you mock the save method but not the count method in PersonRepository, the\
+    \ internal count won't increment when you save a new Person. Even worse, the documentation\
+    \ points out that Mockito \"does not delegate calls to the passed real instance,\
+    \ instead it creates a copy of it.\" So if you call regular (that is, unstubbed)\
+    \ methods on the spy but not on the real instance, you won't see their effects.\n\
+    \nPartial mocks are therefore much trouble than they're worth. The Mockito documentation\
+    \ discusses a couple of situations where they can be helpful, but the Mockito\
+    \ discourages their use in general.\n\n# Partial Mocks for Subsections\n\n> Normally\
+    \ you don't want to use partial mocks because their state is not maintained between\
+    \ the mocked methods and the non- mocked methods. One place where partial mocks\
+    \ can be useful, therefore, is when the mocked methods do not interact with the\
+    \ others.\n\n> For example, if part of your system involves authentication or\
+    \ authorization, you can use a partial mock to make sure those methods either\
+    \ confirm or deny a user has been processed. As long as the rest of the system\
+    \ only interacts with the security system through the mocked methods, it should\
+    \ work properly.\n\n![](img/8c17bd3ac8631e54c044c56d594fa853_66_0.png)"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# Wrapping Up
+
+
+    We covered a lot of ground in this chapter. First, we discussed the methods in
+    the BDDMockito class, which are mostly a “global search-and-replace” on the analogous
+    methods in the Mockito class. Then we talked about how to set expectations on
+    dependency methods that return void, which is easy enough but take some getting
+    used to.
+
+
+    We also looked at two special situations. Sometimes when a method under test calls
+    a mocked method, you want to know exactly what arguments were supplied. Mockito
+    provides an argument *captor* for that purpose. The other situation is when you''re
+    mocking a method and you want the output to be based on the input in some way.
+    You can use custom answers, implemented as lambda expressions, to handle that.
+
+
+    Finally, we introduced spies, which watch interactions between the class under
+    test and its dependences. Spies are controversial when used as partial mocks,
+    but they''re perfect as a way of monitoring interactions.
+
+
+    In the next chapter, we''ll look at some recent additions to Mockito, like the
+    ability to mock final methods and classes or static methods. We''ll also see how
+    the Spring Framework supports Mockito and consider when *not* to mock objects.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# Use Mockito in Special Cases
+
+
+    I spent several years teaching introductory Java courses to developers coming
+    from procedural languages, and I found certain concepts particularly confusing
+    for students. One is the concept of a static method, because the English word
+    static has nothing to do with class-level methods that can be invoked without
+    an object. The English word static is similar to Java''s keyword final, meaning
+    a method or class that can''t be overridden.
+
+
+    While Mockito has always had the ability to let you mock classes, mocking final
+    classes and methods or mocking static methods requires special care. We''ll look
+    at both in this chapter.
+
+
+    Another special situation we''ll explore is how the Spring Framework—one of the
+    most popular Java frameworks in the open source world—supports Mockito. Specifically,
+    Spring Boot introduced an annotation called @Bean, which combines mocking a class
+    with Spring''s excellent dependency injection capabilities.
+
+
+    Finally, the Mockito team is careful to point out that not every class should
+    be mocked. We''ll review their strong recommendations about when not to use Mockito.
+
+
+    # Mocking Final Classes and Methods
+
+
+    When you mock an interface, Mockito generates an implementation of that interface—not
+    terribly surprising. But Mockito can mock classes too, which requires extending
+    the class and overriding some or all of its methods.
+
+
+    What happens, though, when you ask Mockito to mock a method or a class marked
+    final? Final methods can''t be overridden, and final classes can''t be extended,
+    at least without some help via reflection. What does Mockito do?'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "# Mock finals in Mockito 5\n\nIn this section, we discuss the additional configuration\
+    \ needed to mock final methods and classes. The ability to mock final members\
+    \ was added in Mockito 2.1.0 and simplified later. Mockito 5, however, integrates\
+    \ this capability into Mockito core. When used with Java 17, Mockito 5 uses the\
+    \ inline capability by default and the old-style mock-maker is no longer supported\
+    \ or needed.\n\nBy default, nothing. Without additional configuration, Mockito\
+    \ can't mock final methods or final classes. You can change this behavior in one\
+    \ of two ways:\n\n+   1. Add a directory to your project called mockito-extensions\
+    \ (usually under src/main/resources or src/test/resources). Add a file to directory\
+    \ called org.mockito.plugins.MockMaker and, inside that file, add the single line\
+    \ mock-maker-inline. Seriously.\n2. As a simpler alternative, in your Gradle or\
+    \ Maven build file, replace the artifact \"mockito-core\" with \"mockito-inline\"\
+    .\n\nThe second option is certainly easier, though both options do the same thing.\n\
+    \nTo show how this works, recall the InMemoryRepository class discussed in Creating\
+    \ Mocks and Stubs, on page 21. Because that class used a shared, in-memory database,\
+    \ the underlying data structure had to be protected from multi-threading issues.\
+    \ Meant the save and delete methods needed to be synchronized, as shown in the\
+    \ class:\n\n```\nInMemoryRepository.java\nimport java.util.ArrayList;\nimport\
+    \ java.util.Collections;\nimport java.util.List;\nimport java.util.Optional;\n\
+    \npublic class InMemoryRepository implements PersonRepository {\n    private final\
+    \ List<Person> people =\n        Collections.synchronizedList(new ArrayList<Person>());\n\
+    \n    @Override\n    public final Person save(Person person) {\n        synchronized\
+    \ (people) {\n            people.add(person);\n        }\n        return person;\n\
+    \    }\n\n    @Override\n    public final void delete(Person person) {\n     \
+    \   synchronized (people) {\n```"
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "```\npeople.remove(person);\n}\n// ... other methods from PersonRepository\
+    \ ...\n}\n```\n\nTo avoid anyone accidentally removing the synchronized block,\
+    \ the save and delete methods were marked final. Say you want to test the PersonService\
+    \ with a mock repository, but instead of doing what we've done so far, which is\
+    \ to mock the PersonRepository interface itself, you decide to mock the in-memory\
+    \ implementation class. Normally that wouldn't be a problem, but what about the\
+    \ two final methods?\n\nIf you configure the mock-maker using the steps above,\
+    \ nothing changes. The resulting test looks like this:\n\n```\nPersonServiceTest.java\n\
+    @Test\nvoid testMockFinalMethod() {\n    // Can mock a class containing final\
+    \ methods\n    PersonRepository personRepo = mock(InMemoryPersonRepository.class);\n\
+    \    // Set the expectations on (final) save method in the mock\n    when(personRepo.save(any(Person.class)))\n\
+    \        .thenAnswer(invocation -> invocation.getArgument(0));\n    // Inject\
+    \ the mock\n    PersonService personService = new PersonService(personRepo);\n\
+    \    // Test the service\n    List<Integer> ids = personService.savePeople(people.toArray(Person[]::new));\n\
+    \    assert(ids).containsExactly(1, 2, 3, 14, 5);\\n    // Verify the save method\
+    \ in the mock was invoked five times\n    verify(personRepo, times(5)).save(any(Person.class));\n\
+    }\n```\n\nThe test shows that you can mock the class, set expectations on the\
+    \ final method (save in this example), and verify that the mocked method was marked\
+    \ the proper number of times. You could also mock classes marked the same way.\n\
+    \nAdmittedly, there's nothing gained by mocking the class in this case rather\
+    \ than simply mocking the associated interface, but in many situations you'll\
+    \ have only the class rather than an interface. Assuming you own the class (meaning\
+    \ you can modify it), alternative is to extract an interface from the class and\
+    \ mock that, if that possibility isn't available, you can mock the class directly."
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# Chapter 5. Use Mockito in Special Cases
+
+
+    You can mock classes and even enums in the standard library the same way, though
+    be careful. First, try to avoid mocking code you don''t own (see Deciding When,
+    on page 69). Also, optimizations in the library may take advantage of final methods
+    by inlining the associated code, so the mocked methods may never be called.
+
+
+    A couple of additional restrictions apply as well. Let''s mock a String, for example.
+    We get the following error message:
+
+
+    ```
+
+    org.mockito.exceptions.base.MockitoException: Cannot mock/spy class java.lang.String
+    Mockito cannot mock/spy because : Cannot mock wrapper types. String.class or Class.class
+
+    ```
+
+
+    The message couldn''t be clearer. Don''t try to mock String, Class, or any of
+    the wrapper classes (Byte, Short, Character, Integer, Long, Float, or Boolean).
+
+    The Mockito API includes an annotation called @DoNotMock which you can add to
+    your classes if you want to prevent Mockito from mocking them.
+
+
+    Speaking of final, in this book we''ve been dealing with Java, which allows you
+    to override any method or extend any class as long as it isn''t marked final.
+    The default in Kotlin, however, is the opposite—you can''t override anything unless''s
+    marked open. Kotlin is the recommended language for Android development, so how
+    do Android developers handle mocking? As it turns out, Mockito has a subproject
+    designed for that.
+
+
+    # Mockito with Android
+
+
+    One of the challenges of testing Android applications is that while regular unit
+    tests run on the local machine, any instrumented test and and requires either
+    an actual device or an emulator to run. As discussed on the Android developer
+    website, if you can mock classes from the Android library, you can improve the
+    performance of your tests considerably.
+
+
+    While normally you don''t want to mock classes you don''t own, the Mockito Android
+    library was specifically designed to help you perform unit tests on Android applications
+    without requiring emulators or external devices. Android testing is a topic beyond
+    the scope of this book, but be aware that Mockito knows about it and is able to
+    help. See the online resources for details.
+
+
+    The same inline mock that Mockito uses for final methods also be used to mock
+    static methods, which we cover next.
+
+
+    +   1. https://developer.android.com/training/testing/local-tests#mockable-library'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# Mocking Static Methods\n\nUntil Java 8, you couldn't have static methods\
+    \ in interfaces at all. As for classes, static methods are associated with the\
+    \ class as a whole, rather than an instance, and they can't be overridden. So\
+    \ what does it even mean to mock a static method?\n\nIt’s easy to imagine a system\
+    \ that has a dependency on a static method. For example, consider a class, called\
+    \ BioService, which takes a vararg list of strings in the constructor and grabs\
+    \ a summary of its associated pages at Wikipedia. Wikipedia maintains a MediaWiki\
+    \ Action API, which you can use to access Wikipedia programmatically.\n\n(All\
+    \ the URLs end with php, which tells you how Wikipedia is implemented.)\n\nThe\
+    \ book’s GitHub repository contains a package called com.kousenit.wikipedia that\
+    \ uses this API. The BioService class is very simple:\n\n```\nBioService java\n\
+    package com.kousenit.wikipedia;\nimport java.util.Arrays;\nimport java.util.List;\n\
+    import java.util.stream.Collectors;\npublic class BioService {\n    private final\
+    \ List<String> pageNames;\n    public BioService(String... pageNames) {\n    \
+    \    this.pageNames = Arrays.stream(pageNames)\n            .collect(Collectors.toList());\n\
+    \    }\n    public List<String> getBios() {\n        return pageNames.stream()\n\
+    \            .map(WikiUtil::getWikipediaExtract)\n            .collect(Collectors.toList());\n\
+    \    }\n}\n```\n\nIn this case, the dependency is on a class called WikiUtil,\
+    \ which has a static method called WikipediaExtract. That method takes a string\
+    \ name and returns the page with the name as a string.\n\nFor the BioService,\
+    \ you give the constructor a list of names, and the getBios method gets the Wikipedia\
+    \ “extract” for each one. The WikiUtil class is fairly complicated because it\
+    \ has to formulate the HTTP request from many parameters and parse the results.\n\
+    \n+   2. https://www.mediawikiwiki.org/wiki/API:Main_page"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "Here's an integration test (with Mockito) for this class:\n\n```\nBioServiceTest.java\n\
+    @Test\n// Integration test\nvoid checkBox() {\n    BioService service = new BioService(\"\
+    Anita Borg\", \"Ada Lovelace\",\n        \"Grace Hopper\", \"Barbara Liskov\"\
+    );\n    assertThat(service.getBios()).hasSize(4);\n}\n```\n\nThis test checks\
+    \ only that the right number of bio pages are returned, or you can print them\
+    \ if you like.\n\nThe question is how you create a unit test for the BioService\
+    \ when your dependency is to the static method in WikiUtil?\nTo mock static methods.\
+    \ Mockito provides a method called, naturally enough, mockStatic, which takes\
+    \ a Class<T> reference as an argument. The method returns an interface called\
+    \ MockStatic. The doc say that mockStatic creates a thread-local controller for\
+    \ all static methods in the supplied class or interface and you should call the\
+    \ close method when the test completes. In practice, that advice means you call\
+    \ the mockStatic inside a try-with-resources block.\n\nHere's a unit test for\
+    \ the BioService that mocks the static methods in WikiUtil:\n\n```\nBioServiceTest.java\n\
+    @Test\nvoid testBioWithMocks() {\n    BioService service = new BioService(\"Anita\
+    \ Borg\", \"Ada Lovelace\",\n        \"Grace Hopper\", \"Barbara Liskov\");\n\
+    \    // Use mockStatic in a try-with-resources block\n    try (MockStatic<WikiUtil>\
+    \ mocked = mockStatic(WikiUtil.class)) {\n        // Same when/then methods as\
+    \ a regular mock\n        mocked.when(WikiUtil.getWikipediaExtract(anyString()))\n\
+    \            .thenAnswer(invocation -> \"Bio for \" + \n                invocation.getArgument(0));\n\
+    \        assertThat(service.getBios()).hasSize(4);\n    } finally {\n        //\
+    \ Verify using a MockStatic.Verification argument\n        mocked.verify(() ->\
+    \ WikiUtil.getWikipediaExtract(\n            anyString()), times(4));\n    }\n\
+    }\n```\n\nYou may notice these points of interest:"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# Mocking Constructors\n\n+   1. The Mocked instance is created in a try-with-resources\
+    \ block.\n2. The expectations on the static method use a lambda expression and\
+    \ thenAnswer call because the mocked reply is based on the input argument.\n3.\
+    \ You can call the getBios method in class under test and check the number of\
+    \ results.\n4. Optionally, you can verify that the static method was called the\
+    \ right number of times. This version takes a MockStatic.Verification argument,\
+    \ where single abstract method apply, takes no arguments and returns void. This\
+    \ can call to verify therefore uses a compatible expression lambda, followed by\
+    \ the required multiplicity.\n\nThe test works, but it's a bit involved due to\
+    \ the additional complexity. You can follow this model whenever you need to mock\
+    \ static methods.\n\n# Intics Not Mocked\n\n> Be careful with mocking library\
+    \ methods. In addition to violating the principle “Don’t mock what you don’t own,”\
+    \ some static methods are “intrinsified” by the JVM, meaning they have their own\
+    \ low-level implementations for efficiency. For example, if you try to mock Math.max,\
+    \ your version is likely to be ignored because the intrinsic implementation replaces\
+    \ the method call.\n\n# Mocking Constructors\n\nSo far, we've been lucky because\
+    \ every time we wanted to mock a dependency of a class under test, we had an easy\
+    \ way to insert the mock into the class. Most of the time, we've used constructors\
+    \ for this purpose, like when we injected a mock of the PersonRepository into\
+    \ the PersonService to test the service.\n\nOf course, this wasn't luck at all;\
+    \ the applications were designed with constructors like that in mind. But what\
+    \ if they weren? What if we had a class that instantiated a dependency as a local\
+    \ variable? How would we mock that?\n\nBack in Chapter 1, Build a Testing Foundation,\
+    \ on page 1, we looked at a class called HelloMockito, which had two dependencies:\
+    \ a PersonRepository and a TranslationService. Here's a reminder:\n\n```\nHelloMockitoRevised.java\n\
+    public class HelloMockito {\n    private String greeting = \"Hello, %s, from Mockito!\"\
+    ;\n\n    // Dependencies\n    private final PersonRepository personRepository;\n\
+    \    private final TranslationService translationService;\n\n    // Constructor\
+    \ to inject the dependencies\n```\n\nreport erratum • discuss"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "```\npublic HelloMockito(PersonRepository personRepository,\n    TranslationService\
+    \ translationService) {\n    this.personRepository = personRepository;\n    this.translationService\
+    \ = translationService;\n}\n```\n\n```\n// Method we want to test\npublic String\
+    \ get(int id, String sourceLang, String targetLang)\n    Optional<Person> person\
+    \ = personRepository.findById(id);\n    String name = person.map(Person::getFirst).orElse(\"\
+    World\");\n    return translationService.translate(\n        String.format(greeting,\
+    \ name), sourceLang, targetLang);\n```\n\nWhat, instead of substituting the TranslationService\
+    \ implementation from outside, we included a constructor for HelloMockito that\
+    \ instantiated the service directly?\n\n```\npublic HelloMockito(PersonRepository\
+    \ personRepository)\n    this(personRepository, new DefaultTranslationService());\n\
+    ```\n\nThe DefaultTranslationService is a class that implements the TranslationService\
+    \ interface. It can be simple or complicated, as needed. For example, a trivial\
+    \ implementation could be the following:\n\n```\npublic class DefaultTranslationService\
+    \ implements TranslationService {\n    public String translate(String text,\n\
+    \        String sourceLanguage,\n        String targetLanguage)\n        return\
+    \ text;\n}\n```\n\nThis returns the message without modification.\n\nSince version\
+    \ 3.5, Mockito has had the ability to mock final. As with mocking static, you\
+    \ need to use the mockito-inline dependency to take advantage of it, and you should\
+    \ wrap the mocked object inside a try-with-resources block. So could write a test\
+    \ for HelloMockito that uses the default translation service this way:\n\n```\n\
+    @Test\nvoid greetWithMockedConstructor() {\n    // Mock for repo (needed for HelloMockito\
+    \ constructor)\n    PersonRepository mockRepo = mock(PersonRepository.class);\n\
+    \    when(mockRepo.findById(anyInt))\n        .thenReturn(Optional.of(\n     \
+    \       new Person(\"Grace\", \"Hopper\", LocalDate.now())));\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "# Mocking Constructors • 65\n\n```\n// Mock for translator (instantiated inside\
+    \ HelloMockito)\ntry (MockedConstruction<DefaultTranslationService> ignored =\n\
+    \    mockConstruction(DefaultTranslationService.class,\n        mock, context)\
+    \ ->\n            when(mock.translate(\n                anyString(), anyString(),\
+    \ anyString())\n            .thenAnswer(invocation -> invocation.getArgument(0)\
+    \ +\n                \" (translated))\\))\n```\n\n```\n// Instantiate HelloMockito\
+    \ with mocked repo and\n// locally instantiated translator\nHelloMockito hello\
+    \ = new HelloMockito(mockRepo);\nString greeting = hello.greet(1, \"en\", \"en\"\
+    );\nasert(greeting).isEqualTo(\n    \"Hello, from Mockito! (translated)\");\n\
+    ```\n\nLet's go to test the several methods one by one. Remember, the big picture\
+    \ is to test the HelloMockito class. We first need to look up an individual in\
+    \ the PersonRepository, so test uses the mock with the when/then construct to\
+    \ add Grace Hopper as person with id of 1.\n\nThen comes the part. In a try-with-resources\
+    \ block, the static mockConstruction of Method is invoked and has this signature:\n\
+    \n```\npublic static <T> MockConstruction<T> mockConstruction(Class<T> class,\
+    \ MockedConstruction.Initializer<T> mockInitializer)\n```\n\nThe first argument\
+    \ is class we're mocking, which is DefaultTranslationService. The second argument\
+    \ is an instance of the MockInitializer<T> interface, which is a functional interface\
+    \ (meaning it contains only a single, abstract method). Since it's a functional\
+    \ interface, we can implement it using a lambda expression. The single abstract\
+    \ method has this signature:\n\n```\nvoid prepare(T mock, MockedConstruction.Context\
+    \ context)\n```\n\nThe good news is we don't care about the details. We simply\
+    \ add a lambda of two arguments that uses the Mockito API to arrange what we want,\
+    \ which is in the following test:\n\n```\n(mock, context) -> when(mock.translate(anyString(),\
+    \ anyString(), anyString()))\n.thenAnswer(invocation -> invocation.getArgument(0)\
+    \ + \" (translated)\")\n```\n\nIn other words, we're specifying that if we call\
+    \ the translate on the method with three instances of anyString, it should reply\
+    \ with the first string argument followed by \"(translated)\", just to let us\
+    \ know something.\n\nreport erratum • discuss"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "Then, in the block, we instantiate the HelloMockito class using single-argument\
+    \ constructor, which in turn instantiates the DefaultTranslationService. We then\
+    \ call the greet method and check that the mocked constructor in DefaultTranslationService\
+    \ did what we told it to. When we exit the block, Java will automatically invoke\
+    \ the close method on the MockedConstruction instance because it extends AutoCloseable.\n\
+    \nIt's also odd that in our block, we're not using the MockedConstruction reference\
+    \ directly, which is why we called the variable ignored. We had to assign the\
+    \ result of the mockConstruction method in order to use try-with-resources; but\
+    \ remember, we're not the ones actually instantiating the DefaultTranslationService,\
+    \ the HelloMockito class.\n\nThe process feels involved, but it does the job,\
+    \ which is to mock the instantiation of a class as a local variable. We're basically\
+    \ intercepting the process and providing our own implementation.\n\nOne quirk\
+    \ is that we might have preferred to mock the construction of TranslationService,\
+    \ because that's an interface, and the argument to mockConstruction has to be\
+    \ a non-abstract Java class. That's why we mocked the DefaultTranslationService.\n\
+    \nAny instantiation of DefaultTranslationService inside the try block will return\
+    \ the mocked instance, and any instantiation before or after the try block will\
+    \ give us the original.\n\nBy the way, in this case a simplification is available.\
+    \ Instead of using mockWithAnswer method, which takes a class and a default Answer.\
+    \ So we could reduce our implementation:\n\n```\nHelloMockitoMockedConstructorTest.java\n\
+    @Test\nvoid greetMockedConstructorWithAnswer() {\n    // mock the PersonRepository\
+    \ as before ...\n    try (MockedConstruction<DefaultTranslationService> mockConstructionWithAnswer(DefaultTranslationService.class,\n\
+    \            invocation -> invocation.getArgument(0) + \n                \"(translated)\"\
+    )) {\n\n        Hello hello = new HelloMockito(mockRepo);\n        String greeting\
+    \ = hello.greet(1, \"en\", \"en\");\n        assert(greeting).isEqualTo(\"Hello,\
+    \ Grace, from Mockito! (translated)\");\n    }\n}\n```"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: 'Not a huge simplification, but a useful one nevertheless. In fact, we could
+    add multiple answers, and each would be returned on separate invocations of the
+    great method for different mocks, that''s definitely getting beyond the scope
+    of this discussion.
+
+
+    Mocking constructors shouldn''t come up very often, but when it does, now have
+    a way of doing so.
+
+
+    # Working with the Spring Framework
+
+
+    Earlier in Injecting the Mocks into the Class Under Test, on page 24, we talked
+    about when using the @InjectMocks annotation. Mockito will do its best to plug
+    the mocks into the class under test. The documentation warns you, however, that
+    Mockito is not a true dependency injection framework.
+
+
+    As turns out, almost all Java developers regularly work with a true dependency
+    injection framework, called the Spring Framework. Spring supported Mockito from
+    the beginning, and whenever you create a Spring app, Spring includes the Mockito
+    library. Since a full discussion of the Spring Framework is well beyond the scope
+    of this book, we''ll assume you are familiar with it and are reading this section
+    because Spring apps already include Mockito as a test dependency and you want
+    to use them together.
+
+
+    The Spring Boot project provides an annotation @MockBean that does two things:
+
+
+    +   1 It creates a mock object for you, replacing the Mockito annotation @Mock.
+
+    2 It replaces any instance of the mocked class currently in the ApplicationContext
+    with your mock so that it''s available for autowiring.
+
+
+    So in Spring, rather than using @Mock and @InjectMocks, you use @MockBean and
+    rely on Spring to instantiate the mocked beans and autowire them into your class
+    under test.
+
+
+    Say you have a standard Spring app that involves a RESTful web service. It includes
+    a service class, to do business logic and mark transaction boundaries, and one
+    or more repository classes that convert objects to database tables and back again.
+    The goal is to test the logic in the service class without needing a real database,
+    so to need to mock the repositories and inject them into the service. That''s
+    where the @MockBean annotation comes in.
+
+
+    Returning once again to our PersonService that depends on a PersonRepository,
+    if this was part of a Spring app, the repository would likely be autowired into
+    the service:'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Chapter 5. Use Mockito in Special Cases • 68\n\n```\nPersonServiceSpring.java\n\
+    @Service // Can only autowire into a managed bean\npublic class PersonService\
+    \ {\n    private final PersonRepository repository;\n\n    @Autowired // Not required\
+    \ if one constructor, but doesn't hurt\n    public PersonService(PersonRepository\
+    \ repository) {\n        this.repository = repository;\n    }\n\n    // ... methods\
+    \ that use the repository ...n}\n```\n\nWhen writing a test for the PersonService\
+    \ outside of Spring, we used @Mock on the repository and @InjectMock on the service.\
+    \ That won't work with Spring’s autowiring, however. Instead, you use the @MockBean\
+    \ annotation to make the repository you want.\n\n```\nPersonServiceSpringTest.java\n\
+    @SpringBootTest\nclass PersonServiceTest {\n    @MockBean // Instantiate mock\
+    \ and put into the application context\n    private PersonRepository repository;\n\
+    \n    @Test\n    public void findMaxId() {\n        // Set expectations on mock\n\
+    \        when(repository.findAll()).thenReturn(people);\n\n        // Test service\
+    \ method\n        assertEquals(14, service.getHighestId().intValue());\n\n   \
+    \     // Verify call on mock\n        verify(repository).findAll();\n}\n```\n\n\
+    The @MockBean annotation on the PersonRepository not only creates a mock object,\
+    \ it replaces any existing PersonRepository in the application context with the\
+    \ mock. That makes it available for autowiring, and Spring does the rest.\n\n\
+    Spring also has a similar annotation called @SpyBean. That annotation wraps a\
+    \ Mockito spy around an existing instance of the field. As with spies, they are\
+    \ useful when you want to verify that methods on the dependencies got the right\
+    \ number of times in the right order, but you still want to use real instances\
+    \ of the dependencies themselves.\n\nNext we'll consider another controversial\
+    \ notion—when you should avoid using Mockito at all?"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "# Deciding When Not to Use Mockito\n\nYou likely have a good grasp of cases\
+    \ for which Mockito is useful. But when is it not the best idea to use Mockito?\
+    \ Let's explore that question.\n\nIf you look in the case's GitHub repository,\
+    \ you'll find a test for the AstroResponse-getResponse method in the AstroGateway:\n\
+    \n```\nAstroGatewayTest.java\n@Test\nvoid testDeserializeToRecords() {\n  AstroResponse\
+    \ result = gateway.getResponse();\n  result.getPeople().forEach(System.out::println);\n\
+    \  assertAll(\n    () -> assertTrue(result.getNumber() >= 0),\n    () -> assertEquals(result.getPeople().size(),\
+    \ result.getNumber())\n);\n```\n\nThe test instantiates the class and invokes\
+    \ the getResponse method. The data is checked to confirm the number of the AstroResponse\
+    \ record is non-negative (there cant be a negative number of astronauts) and that\
+    \ the size of the people collection matches number.\n\nThe implementation uses\
+    \ external libraries to do its job:\n\n+   - An HTTP client to call the RESTful\
+    \ web service.\n- A JSON parser to convert the response into Java records.\n\n\
+    Consequently, the test is arguably an integration test. That's fine, but it means\
+    \ that if something goes wrong with either of those features, the test will fail.\
+    \ The network could go down, or the parser might not understand how to work with\
+    \ records, or there could be bugs in either library. If the test passes, you're\
+    \ good, but if not, where is the problem?\n\nOne way to isolate potential problems\
+    \ is to convert to a unit test. The idea would be to mock both the networking\
+    \ library and the parsing library so that the AstroGateway be evaluated as a solitary\
+    \ object. This plan runs into problems very quickly. For one, there is no obvious\
+    \ way to get mocks into the AstroGateway class. Its not designed to allow you\
+    \ to substitute other networking or JSON libraries into it, via setter methods\
+    \ or constructor arguments or anything else. How are you to get a mock HttpClient\
+    \ and HttpRequest the class, and how do you create a mock HttpResponse that will\
+    \ provide the right behavior?\n\nAnother problem—what happens if the libraries\
+    \ change? The tests may still work, because the libraries are mocked, but as soon\
+    \ as you put everything"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'into practice the test suddenly breaks due to new internal changes inside the
+    libraries.
+
+
+    Finally, with mocking the libraries, a single mock might lead to an entire series
+    of mocks if the library itself is complicated. For example, you do need to mock
+    the staticnewBuilder methods on HttpClient and HttpRequest? What about the other
+    methods chained to them? The result would lead to overly specified tests and very
+    complicated cases.
+
+
+    For all these reasons, the recommendation³ of the Mockito team is this:
+
+    Don''t mock
+
+
+    That means, for our AstroGateway, an integration test is appropriate. Mocking
+    everything is an anti-pattern. When evaluating the AstroService, mocking the AstroGateway
+    makes sense. When testing the AstroGateway, stick with an integration test.
+
+
+    # WireMock
+
+
+    > The general principle in this section—do not mock classes you don’t is solid.
+    So, if your specific use case is to replace a network call with a fake one that
+    returns given values, the WireMock⁴ project is a good choice for this purpose.
+
+
+    # Wrapping Up
+
+
+    In this chapter, we covered a few of the capabilities of Mockito, namely, how
+    to mock final classes and methods and static methods. We looked at the @MockBean
+    annotation provided by the Spring Framework that creates a mock and replaces any
+    existing instance in the application context.
+
+
+    Finally, we used our Astro project to uncover reasons for the recommendation from
+    the Mockito team to not mock types you don''t.
+
+
+    Hopefully you now feel ready to use Mockito as it was intended—to make your unit
+    tests more robust, reliable, and helpful.
+
+
+    +   3. https://github.com/mockito/mockito/wiki/How-to-write-good-tests
+
+    4. https://wiremock.org/'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# APPENDIX 1\n\n# # Running Mockito Tests\n\nThis appendix describes the steps\
+    \ needed to run JUnit tests with Mockito. We'll cover both JUnit 5 and the older\
+    \ JUnit 4. The steps used for JUnit 4 will also work for JUnit 3, though the tests\
+    \ themselves use a different API. Here we assume you're using either Maven or\
+    \ Gradle build tool. Steps for running with other tools like Ant or Bazel can\
+    \ be found in the JUnit documentation.\n\n# ## Steps Common to All JUnit Versions\n\
+    \nThe Maven coordinates for Mockito are the same, whether you're using Gradle\
+    \ or Maven as a build tool. Following is the *core* dependency for Mockito in\
+    \ a Maven pom.xml file:\n\n```\n<dependency>\n  <groupId>org.mockito</groupId>\n\
+    \  <artifactId>mockito-core</artifactId>\n  <version>4.8.1</version>\n  <scope>test</scope>\n\
+    </dependency>\n```\n\nAnd for Gradle, here's the short version, using Groovy DSL:\n\
+    \n```\ntestImplementation 'org.mockito:mockito-core:4.8.1'\n```\n\nThe only difference\
+    \ is that the Kotlin DSL is you use double quotes instead of single quotes for\
+    \ the dependency, and the dependency needs to be wrapped in parentheses:\n\n```\n\
+    testImplementation(\"org.mockito:mockito-core:4.8.1\")\n```\n\nIf you plan to\
+    \ mock final methods or classes, constructors, or static methods, you need the\
+    \ *inline mock maker* dependency, which simply replaces mockito-core with mockito-inline.\
+    \ The rest is the same. Though Mockito 5 has not been yet"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "released (an official release is expected very soon), word is that the inline\
+    \ maker will be wrapped into the core and become the default.\n\nIf all you plan\
+    \ to use in Mockito is the static mock method to create your mocks, this dependency\
+    \ is all you need. If, however, you plan to use annotations like @Mock and @InjectMocks,\
+    \ you need an additional dependency if you use JUnit 5, as shown in the next section.\n\
+    \n# JUnit 5\n\nJUnit 5 uses extension classes to add capabilities to JUnit. This\
+    \ is the dependency in Maven:\n\n```\n<dependency>\n  <groupId>org.mockito</groupId>\n\
+    \  <artifactId>mockito-junit-jupiter</artifactId>\n  <version>4.8.1</version>\n\
+    \  <scope>test</scope>\n</dependency>\n```\n\nAnd for Gradle it's:\n\n```\ntestImplementation\
+    \ 'org.mockito:mockito-junit-jupiter:4.8.1'\n```\n\nAgain, add parentheses and\
+    \ double-quotes if you're using the Kotlin DSL for Gradle. In either case, you\
+    \ can now add the following to the test class:\n\n```\n@ExtendWith(MockitoExtension.class)\n\
+    ```\n\nThe extension will work with your annotations to use Mockito for the tests.\n\
+    \nRemember, if you plan to use JUnit 5 with Gradle, you must add the following\
+    \ to your build file:\n\n```\ntasks.named('test') {\n  useJUnitPlatform()\n}\n\
+    ```\n\nThe syntax shown only executes the JUnitPlatform method if you run a test\
+    \ task. To make that, you can replace that line with simply test.\n\nIf you plan\
+    \ to use both JUnit 5 and JUnit 4 tests in the same project, be sure to include\
+    \ the vintage engine with your JUnit dependencies:\n\n```\n<dependency>\n  <groupId>org.junit.vintage</groupId>\n\
+    \  <artifactId>junit-vintage-engine</artifactId>\n  <version>5.9.1</version>\n\
+    \  <scope>test</scope>\n</dependency>\n```"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "Or, for Gradle, use this:\ntestImplementation 'org.junit.vintage:junit-vintage-engine:5.9.1'\n\
+    \nWith both the regular JUnit 5 dependency and the vintage engine, you can choose\
+    \ which version of JUnit to use on each test class.\n\n# JUnit 4\n\nJUnit 4 has\
+    \ three ways to tell Mockito work with annotations. First, a JUnit runner is available.\
+    \ Add the following @With annotation to your class:\n\n```\n@@With(MockitoJUnitRunner.class)\n\
+    ```\n\nAlternatively, you can use the following JUnit Rule:\n\n```\n@Rule\npublic\
+    \ MockitoRule rule = MockitoJUnit.rule(\n    .strictness(Strictness.STRICT_STUBS);\n\
+    ```\n\nIf you don't specify a strictness, as are here, the default for JUnit 4\
+    \ is lenient. The default for JUnit 5 is strict.\n\nThe third way to tell Mockito\
+    \ to use the annotations is to invoke the openMocks method, usually called in\
+    \ a set up method tagged with @Before (which runs before each test):\n\n```\n\
+    @Before\npublic void setUp() {\n    MockitoAnnotations.openMocks(this);\n}\n```\n\
+    \nOnce the dependencies have been added to the build files and the annotation\
+    \ support is configured, you can run the tests the way you would run any JUnit\
+    \ tests, either in your IDE or at the command line. Both Maven and Gradle include\
+    \ test tasks you can execute."
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# Thank you!
+
+
+    We hope you enjoyed this book and that you''re already thinking about what you
+    want to learn next. To help make decision easier, we''re offering you this gift.
+
+
+    Head on over to https://pragprog.com right now, and use the coupon code BUYANOTHER2023
+    to save 30% on your next ebook. Offer is valid where prohibited or restricted.
+    This offer does not apply to any edition of The Pragmatic Programmer ebook.
+
+
+    And if you''d like to share your own expertise with the world, why not propose
+    a writing idea to us? After all, many of our best authors started off as our readers,
+    and a name you trust, there''s nothing to lose. Visit https://pragprog.com/become-an-author/
+    today to learn more and to get started.
+
+
+    We thank you for your continued support, and we hope to hear from you again soon!
+
+
+    The Pragmatic Bookshelf
+
+
+    ![](img/8c17bd3ac8631e54c044c56d594fa853_85_0.png)'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# The Pragmatic Bookshelf
+
+
+    The Pragmatic Bookshelf features books written by professional developers for
+    professional developers. The titles continue the well-known Pragmatic Programmer
+    style and continue to garner awards and rave reviews. As development gets more
+    and more difficult, the Pragmatic Programmers will be there with more titles and
+    products to help you stay on top of your game.
+
+
+    # Visit Us Online
+
+
+    This Book''s Home Page
+
+    https://pragprog.com/book/mockito
+
+    Source code from this book, errata, and other resources. Come give us feedback,
+    too!
+
+
+    Keep Up-to-Date
+
+    https://pragprog.com
+
+    Join our announcement mailing list (low volume) or follow us on Twitter @pragprog
+    for new titles, sales, coupons, and more.
+
+
+    New and Noteworthy
+
+    https://pragprog.com/news
+
+    Check out the latest Pragmatic developments, new titles, and other offerings.
+
+
+    # Buy the Book
+
+
+    If you liked this ebook, perhaps you''d like to have a paper copy of the book.
+    Paperbacks are available from your local independent bookstore and wherever fine
+    books are sold.
+
+
+    # Contact Us
+
+
+    Online Orders: https://pragprog.com/catalog
+
+    Customer Service: support@pragprog.com
+
+    International Rights: translations@pragprog.com
+
+    Academic Use: academic@pragprog.com
+
+    Write for Us: http://write-for-us.pragprog.com
+
+    Or Call: +1 800-699-7764'
+  merge: -1
+  pgno: 86
