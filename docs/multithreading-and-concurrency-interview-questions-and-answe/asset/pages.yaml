@@ -1,0 +1,1137 @@
+- img_proc: true
+  md: '# # MULTITHREADING AND CONCURRENCY
+
+    # INTERVIEW QUESTIONS AND ANSWERS
+
+
+    BOOSTING YOUR JAVA CAREER
+
+
+    ![](img/6f2d33794c6839601da7de4db6e68f41_0_0.png)
+
+
+    # MARTIN MOIS
+
+
+    Java Code Geeks JAVA2 JAVA DEVELOPERS RESOURCE CENTER'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Multithreading and Concurrency Questions'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # Contents
+
+
+    +   1 MultiThreading Questions .................................................
+    1
+
+    1.1 What do we understand by the term concurrency? ................ 1
+
+    1.2 What is the difference between processes and threads? ............ 1
+
+    1.3 In Java, what is a process and a thread? ............................ 1
+
+    1.4 What is a scheduler? ................................................. 1
+
+    1.5 How many threads does a Java program have at least? .............. 1
+
+    1.6 How can a Java application access the current thread? .............. 1
+
+    1.7 What properties does each Java thread have? ........................ 2
+
+    1.8 What is the purpose of thread groups? .......................................
+    2
+
+    1.9 What states a thread can have and what is the meaning of each state? 2
+
+    1.10 How do we set the priority of a thread? ................................
+    2
+
+    1.11 How is a thread created in Java? .......................................
+    3
+
+    1.12 How do we stop a thread in Java? .......................................
+    3
+
+    1.13 Why should a thread not be stopped by calling its method stop()? 4
+
+    1.14 Is it possible to start a thread twice? ...................................
+    4
+
+    1.15 What is the output of the following code? ............................ 4
+
+    1.16 What is a daemon thread? ................................................
+    4
+
+    1.17 Is it possible to convert a normal user thread into a daemon thread after
+    it has been started? 5
+
+    1.18 What do we understand by busy waiting? ............................ 5
+
+    1.19 How can we prevent busy waiting? ................................... 5
+
+    1.20 Can we use Thread.sleep() for real-time processing? ................ 6
+
+    1.21 How can a thread be woken up that has been put to sleep using Thread.sleep()?
+    6
+
+    1.22 How can a thread query if it has been interrupted? ................... 6
+
+    1.23 How should an InterruptedException be handled? ...................... 6
+
+    1.24 After starting a child thread, how do we wait in the parent thread for the
+    termination of the child thread? 7
+
+    1.25 What is the output of the following program? ....................... 7
+
+    1.26 What happens when an uncaught exception leaves the run() method? ........
+    7
+
+    1.27 What is a shutdown hook? ......................................... 8
+
+    1.28 For what purposes is the keyword synchronized used? ................... 8
+
+    1.29 What intrinsic lock does a synchronized method acquire? ............ 8'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Multithreading and Concurrency Questions
+
+
+    1.30 Can a constructor be synchronized? ......................................................................................................
+    8
+
+
+    1.31 Can primitive values be used for intrinsic locks? ...............................................................................
+    8
+
+
+    1.32 Are intrinsic locks reentrant? .......................................................................................................
+    8
+
+
+    1.33 What do we understand by an atomic operation? ......................................................................
+    9
+
+
+    1.34 Is the statement c++ atomic? ................................................................................................
+    9
+
+
+    1.35 What operations are atomic in Java? .......................................................................................
+    9
+
+
+    1.36 Is the following implementation thread-safe? ................................................................
+    9
+
+
+    1.37 What do we understand by a deadlock? ......................................................................
+    9
+
+
+    1.38 What are the requirements for a deadlock situation? ...................................................
+    10
+
+
+    1.39 Is it possible to prevent deadlocks at all? ................................................................
+    10
+
+
+    1.40 Is it possible to implement a deadlock detection? ...........................................
+    10
+
+
+    1.41 What is a livelock? ................................................................................................
+    10
+
+
+    1.42 What do we understand by thread starvation? ......................................................
+    10
+
+
+    1.43 Can a synchronized block cause thread starvation? ...................................
+    10
+
+
+    1.44 What do we understand by the term race condition? ...................................
+    11
+
+
+    1.45 What do we understand by fair locks? .......................................................
+    11
+
+
+    1.46 Which two methods can each object inherits from java.lang.Object be used
+    to implement a simple
+
+    producer/consumer scenario? ............................................................................
+    11
+
+
+    1.47 What is the difference between notify() and notifyAll()? ..................................
+    11
+
+
+    1.48 How is it determined which thread wakes up by calling notify()? .......................
+    11
+
+
+    1.49 Is the following code that retrieves an integer value from some queue implementation
+    correct? .. 12
+
+
+    1.50 Is it possible to check whether a thread holds a lock on some object? ...................
+    12
+
+
+    1.51 What do we understand the Thread.yield() do? ........................................
+    12
+
+
+    1.52 What do you have to consider when passing object instances from one thread
+    to another? .. 12
+
+
+    1.53 Which rules do you have to follow in order to implement an immutable class?
+    .......... 12
+
+
+    1.54 What is the purpose of the class java.lang.ThreadLocal? ........................
+    13
+
+
+    1.55 What are possible cases for java.lang.ThreadLocal? ................................
+    13
+
+
+    1.56 Is it possible to improve the performance of an application by the use of
+    multi-threading? Name examples. .. 13
+
+
+    1.57 What do we understand by the scalability? ..........................................
+    13
+
+
+    1.58 Is it possible to compute the theoretical maximum speed for an application
+    using multiple processors? .. 13
+
+
+    1.59 What do we understand by lock contention? ..........................................
+    13
+
+
+    1.60 Which techniques help to reduce lock contention? ...................................
+    14
+
+
+    1.61 Which technique to reduce lock contention can be applied to the following
+    code? .. 14
+
+
+    1.62 Explain by an example the technique lock splitting. ...................................
+    14
+
+
+    1.63 What kind of technique for reducing lock contention is used by the SDK ReadWriteLock?
+    .. 14
+
+
+    1.64 What do we understand by lock striping? ..........................................
+    15
+
+
+    1.65 What do we understand by a CAS operation? ........................................
+    15
+
+
+    1.66 Which Java classes use the CAS operation? ...................................
+    15'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Multithreading and Concurrency Questions
+
+
+    +   1.67 Provide an example way performance improvements for single-threaded applications
+    can cause degradation for multi-threaded applications. . . . . . . . . . . . .
+    . . . 15
+
+
+    +   1.68 Is object pooling allows a performance improvement for multi-threaded
+    applications? . . . . . . . . . . . . . . . 15
+
+
+    +   1.69 What is the relation between the two interfaces Executor and ExecutorService?
+    . . . . . . . . . . . . . . . 16
+
+
+    +   1.70 What happens when you submit () a new task to an ExecutorService instance
+    whose queue is already full? . . . . . . . 16
+
+
+    +   1.71 What is a ScheduledExecutorService? . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . 16
+
+
+    +   1.72 Do you know an easy way to create a thread pool with 5 threads that executes
+    some tasks that return a value? . . . . . . 16
+
+
+    +   1.73 What is the difference between the two interfaces Runnable and Callable?
+    . . . . . . . . . . . . . . 17
+
+
+    +   1.74 Which are use cases for the class java.util.concurrent.Future? . . .
+    . . . . . . . . . . . . . 17
+
+
+    +   1.75 What is the difference between HashMap and Hashtable particularly with
+    regard to thread-safety? . . . . . . . 17
+
+
+    +   1.76 Is there a simple way to create a synchronized instance of an arbitrary
+    implementation of Collection, List or Map? . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . 17
+
+
+    +   1.77 What is a semaphore? . . . . . . . . . . . . . . . . . . . . . . . .
+    . 17
+
+
+    +   1.78 What is a CountDownLatch? . . . . . . . . . . . . . . . . . . . . . .
+    . . . . 17
+
+
+    +   1.79 What is the difference between a CountDownLatch and a CyclicBarrier?
+    . . . . . . . . . . . . 17
+
+
+    +   1.80 What kind of tasks can be solved by using the Fork/Join framework? .
+    . . . . . . . . . . . . . . 18
+
+
+    +   1.81 Is it possible to find the smallest number within an array of numbers
+    using the Fork/Join-Framework? . . . . 18
+
+
+    +   1.82 What is the difference between the two classes RecursiveTask and RecursiveAction?
+    . . . . . . . . . . . . 18
+
+
+    +   1.83 Is it possible to perform stream operations in Java 8 with a thread pool?
+    . . . . . . . . . . . . . . 18
+
+
+    +   1.84 How can we access the thread pool that is used by parallel stream operations?
+    . . . . . . . . . . . . . 18'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'Copyright (c) Exelix Media P.C., 2014
+
+
+    All rights reserved. Without limiting the rights under copyright reserved above,
+    no part of this publication may be reproduced, stored or introduced into a retrieval
+    system, or transmitted, in any form or by any means (electronic, mechanical, photocopying,
+    recording or otherwise), without the prior written permission of the copyright
+    owner.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Preface
+
+
+    Concurrency is always a challenge for developers and writing concurrent programs
+    can be extremely hard.
+
+
+    There is a number of things that could potentially blow up and the complexity
+    of systems rises considerably when concurrency is introduced.
+
+
+    However, the ability to write robust concurrent programs is a great tool in a
+    developer''s belt and can help build sophisticated, enterprise level applications.
+
+
+    In this guide we will discuss different types of questions that can be used in
+    a programming interview in order to assess a candidate''s understanding of concurrency
+    and multithreading.
+
+
+    The questions are not only Java specific, but revolve around general programming
+    principles.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# About the Author
+
+
+    Martin is a software engineer with more than 10 years of experience in software
+    development. He has been involved in different- positions in application development
+    in a variety of software projects ranging from reusable software components, mobile
+    applications over fat-client GUI projects up to large-scale, clustered enterprise
+    applications with real-time requirements.
+
+
+    After finishing his studies of computer science with a diploma, Martin worked
+    as a Java developer and consultant for international operating insurance companies.
+    Later on he designed and implemented web applications and fat-client applications
+    for companies on the energy market. Currently Martin works for an international
+    operating company in the Java EE domain and is concerned in his day-to-day work
+    with large-scale big data systems.
+
+
+    His current interests include Java EE, web applications with focus on HTML5 and
+    performance optimizations. When time permits, he works on open source projects,
+    some of them can be found at this github account. Martin is blogging at Martin''s
+    Developer World.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# # Chapter 1
+
+
+    # # MultiThreading Questions
+
+
+    # ## 1.1 What do we understand by the term concurrency?
+
+
+    Concurrency is the ability of a program to execute several computations simultaneously.
+    This can be achieved by distributing the computations over the available CPU cores
+    of a machine or over different machines within the same network.
+
+
+    # ## 1.2 What is the difference between processes and threads?
+
+
+    A process is an execution environment provided by the operating system that has
+    its own set of private resources (e.g. memory, open files, etc.). Threads, in
+    contrast, live within a process and share their resources (memory, open files,
+    etc.) with the other threads of the process. The ability to share resources between
+    different threads makes thread more suitable for tasks where performance is a
+    significant requirement.
+
+
+    # ## 1.3 In Java, what is a process and a thread?
+
+
+    In Java, processes correspond to a running Java Virtual Machine (JVM) whereas
+    threads live within the JVM and can be created and stopped by the Java application
+    dynamically at runtime.
+
+
+    # ## 1.4 What is a scheduler?
+
+
+    A scheduler is the implementation of a scheduling algorithm that manages access
+    of processes and threads to some limited resource like the processor or some I/O
+    channel. The goal of most scheduling algorithms is to provide some kind of load
+    balancing for the available processes/threads that guarantees that each process/thread
+    gets an appropriate time frame to access the requested resource exclusively.
+
+
+    # ## 1.5 How many threads does a Java program have at least?
+
+
+    Each Java program is executed within the main thread; hence each Java application
+    has at least one thread.
+
+
+    # ## 1.6 How can a Java application access the current thread?
+
+
+    The current thread can be accessed by calling the static method `currentThread()`
+    of the JDK class `java.lang.Thread:`:'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "```\npublic class MainThread {\n    public static void main(String[] args)\
+    \ {\n        long id = Thread.currentThread().getId();\n        String name =\
+    \ Thread.currentThread().getName();\n    }\n}\n```\n\n# ## 1.7 What properties\
+    \ does each Java thread have?\n\nEach Java thread has the following properties:\n\
+    \n+   * an identifier of type long that is unique within the JVM\n* a name of\
+    \ type String\n* a priority of type int\n* a state of type java.lang.Thread.State\n\
+    * a thread group the thread belongs to\n\n# ## 1.8 What is the purpose of thread\
+    \ groups?\n\nEach thread belongs to a group of threads. The JDK class java.lang.ThreadGroup\
+    \ provides some methods to handle a whole group of Threads. With these methods\
+    \ we can, for example, interrupt all threads of a group or set their maximum priority.\n\
+    \n# ## 1.9 What states can a thread have and what is the meaning of each state?\n\
+    \n+   * NEW: A thread that has not yet started is in this state.\n* RUNNABLE:\
+    \ A thread executing in the Java virtual machine is in this state.\n* BLOCKED:\
+    \ A thread that is waiting for a monitor lock is in this state.\n* WAITING: A\
+    \ thread that is waiting indefinitely for another thread to perform a particular\
+    \ action is in this state.\n* TIMED_WAITING: A thread that is waiting for another\
+    \ thread to perform an action for up to a specified waiting time is in this state.\n\
+    * TERMINATED: A thread that has exited is in this state.\n\n# ## 1.10 How do we\
+    \ set the priority of a thread?\n\nThe priority of a thread is set by the method\
+    \ setPriority(int). To set the priority to the maximum value, we use the constant\
+    \ Thread.MAX_PRIORITY and set it to the minimum value we use the constant Thread.MIN_PRIORITY\
+    \ because these values can differ from different JVM implementations."
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# How is a thread created in Java?\n\nBasically, there are two ways to create\
+    \ a thread in Java.\n\nThe first one is to write a class that extends the JDK\
+    \ class java.lang.Thread and call its method start():\n\n```\npublic class MyThread\
+    \ extends Thread {\n    public MyThread(String name) {\n        super(name);\n\
+    \    }\n\n    @Override\n    public void run() {\n        System.out.println(\"\
+    Executing thread \"+Thread.currentThread().getName());\n    }\n\n    public static\
+    \ void main(String[] args) throws InterruptedException {\n        MyThread myThread\
+    \ = new MyThread(\"myThread\");\n        myThread.start();\n    }\n}\n```\n\n\
+    The second way is to implement the java.lang.Runnable and pass this implementation\
+    \ as a parameter to the constructor of java.lang.Thread:\n\n```\npublic class\
+    \ Runnable implements Runnable {\n    public void run() {\n        System.out.println(\"\
+    Executing thread \"+Thread.currentThread().getName());\n    }\n\n    public static\
+    \ void main(String[] args) throws InterruptedException {\n        Thread myThread\
+    \ = new Thread(new MyRunnable(), \"myRunnable\");\n        myThread.start();\n\
+    \    }\n}\n```\n\n# How do we stop a thread in Java?\n\nTo stop a thread we use\
+    \ a volatile reference pointing to the current thread that can be null by other\
+    \ threads to indicate the current thread should stop its execution:\n\n```\nprivate\
+    \ static class MyStopThread extends Thread {\n    private volatile Thread stopIndicator;\n\
+    \n    public void start() {\n        stopIndicator = new Thread(this);\n     \
+    \   stopIndicator.start();\n    }\n\n    public void stopThread() {\n        stopIndicator\
+    \ = null;\n    }\n\n    @Override\n    public void run() {\n        Thread thisThread\
+    \ = Thread.currentThread();\n        while (thisThread == stopIndicator) {\n \
+    \   }\n}\n```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# Multithreading and Concurrency Questions\n\n```\ntry {\n    Thread.sleep(1000);\n\
+    } catch (InterruptedException e) {\n}\n}\n\n```\n\n# 1.13 Why should a thread\
+    \ not be stopped by calling its method stop () ?\n\nA thread should not be stopped\
+    \ using the deprecated methods stop() of java.lang.Thread, as of this method which\
+    \ causes the thread to unlock all monitors it has acquired. If any object protected\
+    \ by one of the released locks was in an inconsistent state, this state gets visible\
+    \ to all threads. This can cause arbitrary behavior when other threads work this\
+    \ inconsistent object.\n\n# 1.14 Is it possible to start a thread twice?\n\nNo,\
+    \ after started a thread by invoking its start() method, a second invocation of\
+    \ start() will throw an IllegalStateException.\n\n# 1.15 What is the output of\
+    \ the following code?\n\n```\npublic class Multithreading {\n    private static\
+    \ class MyThread extends Thread {\n        public MyThread(String name) {\n  \
+    \          super(name);\n        }\n        @Override\n        public void run()\
+    \ {\n            System.out.println(Thread.currentThread().getName());\n     \
+    \   }\n    }\n    public static void main(String[] args) {\n        MyThread myThread\
+    \ = new MyThread(\"myThread\");\n        myThread.run();\n    }\n}\n```\n\nThe\
+    \ code above produces the output \"main\" and not \"myThread\". As be seen in\
+    \ line two of the main() method, we invoke by the method run() instead of start().\
+    \ Hence, no new thread is started, but the method run() gets executed within the\
+    \ main thread.\n\n# 1.16 What is a daemon thread?\n\nA daemon thread is a thread\
+    \ whose execution state is not evaluated when the JVM decides if it should stop\
+    \ or not. The JVM stops when all user threads (in contrast to the daemon threads)\
+    \ are terminated. Hence daemon threads can be used to implement example monitoring\
+    \ functionality as that the JVM stops as soon as all user threads have stopped:"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# Multithreading and Concurrency Questions\n\n```\nprivate static class MyDaemonThread\
+    \ extends Thread {\n    public MyDaemonThread() {\n        setDaemon(true);\n\
+    \    }\n\n    @Override\n    public void run() {\n        while (true) {\n   \
+    \         try {\n                Thread.sleep(1);\n            } catch (InterruptedException\
+    \ e) {\n                e.printStackTrace();\n            }\n        }\n    }\n\
+    \n    public static void main(String[] args) throws InterruptedException {\n \
+    \       Thread thread = new MyDaemonThread();\n        thread.start();\n    }\n\
+    ```\n\nThe example application demonstrates even the daemon thread is still running\
+    \ in its endless loop.\n\n# 1.17 Is it possible to convert a normal user thread\
+    \ into a daemon after it has been started?\n\nA user thread cannot be converted\
+    \ into a daemon thread once it has started. Invoking the method thread.setDaemon(true)\
+    \ on an already running thread instance causes an IllegalThreadStateException.\n\
+    \n# 1.18 What do we understand by busy waiting?\n\nBusy waiting makes implementations\
+    \ that wait for an event performing some active computations that occupy the processor\
+    \ while it could be removed by the scheduler. An example for busy waiting is to\
+    \ spend the time waiting in a loop that checks the current time until a certain\
+    \ point in time is reached.\n\n```\nThread thread = new Thread(new Runnable()\
+    \ {\n    @Override\n    public void run() {\n        long millisToStop = System.currentTimeMillis()\
+    \ + 5000;\n        long currentMillis = System.currentTimeMillis();\n        while\
+    \ (millisToStop > currentMillis) {\n            currentMillis = System.currentTimeMillis();\n\
+    \        }\n    }\n});\n```\n\n# 1.19 How can we prevent busy waiting?\n\nOne\
+    \ way to prevent busy waiting is to put the current thread to sleep for a given\
+    \ amount of time. This can be done by calling the method java.lang.Thread.sleep(long)\
+    \ by passing the number of milliseconds to sleep as an argument."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# 1.20 Can we use Thread.sleep() for real-time processing?\n\nThe number of\
+    \ milliseconds passed to an invocation of Thread.sleep(long) is only an indication\
+    \ for the scheduler how long the current thread does not need to be executed.\
+    \ It may happen that the scheduler lets the thread execute a few milliseconds\
+    \ earlier or later depending on the actual implementation. Hence an invocation\
+    \ of Thread.sleep() should not be used for real-time processing.\n\n# 1.21 How\
+    \ can a thread be woken up that has been put to sleep using Thread.sleep() ()\n\
+    \nThe method interrupt() of java.lang.Thread interrupts a sleeping thread. The\
+    \ interrupted thread has been put to sleep by calling Thread.sleep().\n\n```\n\
+    public class InterruptExample implements Runnable {\n    public void run() {\n\
+    \        try {\n            Thread.sleep(Long.MAX_VALUE);\n        } catch (InterruptedException\
+    \ e) {\n            System.out.println(\"*\"+Thread.currentThread().getName()+[\"\
+    ] Interrupted by exception\");\n        }\n    }\n    public static void main(String[]\
+    \ args) throws InterruptedException {\n        Thread myThread = new Thread(new\
+    \ InterruptExample(), \"myThread\");\n        myThread.start();\n\n        System.out.println(\"\
+    *\"+Thread.currentThread().getName()+[\"] Sleeping for 5s...\")\\n        Thread.sleep(5000);\n\
+    \n        System.out.println(\"*\"+Thread.currentThread().getName()+[\"] Interrupting\
+    \ myThread\");\n        myThread.interrupt();\n    }\n}\n```\n\n# 1.22 How can\
+    \ a thread query if it has been interrupted?\n\nIf the thread is not within a\
+    \ method like Thread.sleep() that would throw an InterruptedException, the thread\
+    \ can query if it has been interrupted by either calling the static method Thread.interrupted()\
+    \ or the method isInterrupted() that it has inherited from java.lang.Thread.\n\
+    \n# 1.23 How should an InterruptedException be handled?\n\nMethods like sleep()\
+    \ and join() throw an InterruptedException to tell the caller that another thread\
+    \ has interrupted this thread. This is done in order to tell the current thread\
+    \ to stop its computations and finish unexpectedly. Hence ignoring the exception\
+    \ by catching it and only logging it to the console or some log file is not the\
+    \ appropriate way to handle this kind of exception. The problem with this exception\
+    \ is, that the method run() of the Runnable interface does not allow run() throws\
+    \ any exceptions. So rethrowing does not help. This means the implementation of\
+    \ run() has to handle this checked exception itself and this often leads to the\
+    \ fact that it has caught and ignored."
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# 1.24 After having started a child thread, how do we wait in the parent thread\
+    \ for the\ntermination of the child thread?\n\nWaiting for a thread termination\
+    \ is done by invoking the method join() on the thread's instance variable:\n\n\
+    ```\nThread thread = new Thread(new Runnable() {\n    @Override\n    public void\
+    \ run() {\n    }\n});\nthread.start();\nthread.join();\n```\n\n# 1.25 What is\
+    \ the output of the following program?\n\n```\npublic class MyDaemonThreads {\n\
+    \    private static class MyDaemonThread extends Thread {\n        public MyDaemonThread()\
+    \ {\n            setDaemon(true);\n        }\n\n        @Override\n        public\
+    \ void run() {\n            try {\n                Thread.sleep(1000);\n     \
+    \       } catch (InterruptedException e) {}\n        }\n    }\n\n    public static\
+    \ void main(String[] args) throws InterruptedException {\n        Thread thread\
+    \ = new MyDaemonThread();\n        thread.start();\n        thread.join();\n \
+    \       System.out.println(thread.isAlive());\n    }\n}\n```\n\nThe output of\
+    \ the above code is \"false\". Although the instance of MyDaemonThread is a daemon\
+    \ thread, the invocation of join() causes the thread to wait until the execution\
+    \ of the daemon thread has finished. Hence isAlive() on the thread returns that\
+    \ the daemon thread is no longer running.\n\n# 1.26 What happens when an uncaught\
+    \ exception leaves the run() method?\n\nI can happen that an uncaught exception\
+    \ escapes from the run() method. In this case it is possible to catch this by\
+    \ registering an instance that implements the interface UncaughtExceptionHandler\
+    \ as an uncaught handler.\n\nThis is either done by invoking the static method\
+    \ Thread.setDefaultUncaughtExceptionHandler(Thread.UncaughtExceptionHandler),\
+    \ which tells the JVM to use the provided handler in case there is no specific\
+    \ handler registered on the thread, or by invoking setUncaughtExceptionHandler(Thread.UncaughtExceptionHandler)\
+    \ on the thread instance itself."
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# 1.27 What is a shutdown hook?\n\nA shutdown hook is a thread that gets executed\
+    \ when the JVM shuts down. It can be registered by invoking addShutdownDownHook(Runnable)\
+    \ Runtime.getRuntime().addShutdownDownHook(new Thread (\n\n```\n@Override\\addShutdownDownHook(new\
+    \ Thread ( {\n    @Override\n    public void run() {\n\n    }\n});\n```\n\n# 1.28\
+    \ For what purposes is the keyword synchronized used?\n\nWhen you have to implement\
+    \ exclusive access to a resource, like some static value or some file reference,\
+    \ the code that works with the exclusive resource can be embraced in a synchronized\
+    \ block:\n\n```\nsynchronized (SynchronizedCounter.class) {\n    counter++;\n\
+    }\n```\n\n# 1.29 What intrinsic lock acquires a synchronized method acquire?\n\
+    \nA synchronized method acquires the intrinsic lock for that's method and releases\
+    \ it when the method returns. Even if the method throws an exception, the intrinsic\
+    \ lock is released. A synchronized method is equal to the following code:\n\n\
+    ```\npublic void method() {\n    synchronized(this) {\n        ...\n    }\n}\n\
+    ```\n\n# 1.30 Can a constructor be synchronized?\n\nNo, a constructor cannot be\
+    \ synchronized. The reason why this leads to a syntax error is the fact that only\
+    \ the constructing thread should have access to the object being constructed.\n\
+    \n# 1.31 Can primitive values be used for intrinsic locks?\n\nNo, primitive values\
+    \ cannot be used for intrinsic locks.\n\n# 1.32 Are intrinsic locks reentrant?\n\
+    \nYes, intrinsic locks can be accessed by the same thread again and again. Otherwise\
+    \ code that acquires a lock would have to pay attention that it does not accidentally\
+    \ try to acquire a lock it has already acquired."
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# 1.33 What do we understand by an atomic operation?\n\nAn atomic operation\
+    \ is an operation that is either executed completely or not at all.\n\n# 1.34\
+    \ Is the statement c++ atomic?\n\nNo, the incrementation of an integer variable\
+    \ consist of more than one operation. First we have to load the current value\
+    \ of c, increment it and then finally store the new value. The current thread\
+    \ performing this incrementation may be interrupted in-between of these three\
+    \ steps, hence this operation is not atomic.\n\n# 1.35 What operations are atomic\
+    \ in Java?\n\nThe Java language provides some basic operations that are atomic\
+    \ and therefore can be used to make sure that concurrent always see the same value:\n\
+    \n+   * Read and write operations to reference variables and primitive variables\
+    \ (except long and double)\n* Read and write operations for all variables declared\
+    \ as volatile\n\n# 1.36 Is the following implementation thread-safe?\n\n```\n\
+    public class DoubleCheckedSingleton {\n    private DoubleCheckedSingleton instance\
+    \ = null;\n\n    public DoubleCheckedSingleton getInstance() {\n        if (instance\
+    \ == null) {\n            synchronized (DoubleCheckedSingleton.class) {\n    \
+    \            if (instance == null) {\n                    instance = new DoubleCheckedSingleton();\n\
+    \                }\n            }\n        }\n        return instance;\n    }\n\
+    }\n```\n\nThe code is not thread-safe. Although it checks the value of instance\
+    \ once again within the synchronized block (for performance reasons), the JIT\
+    \ compiler can rearrange the bytecode in a way that the reference to instance\
+    \ is set before the constructor has finished its execution. This means the method\
+    \ getInstance() returns an object that may not have been initialized completely.\
+    \ To make code thread-safe, the keyword volatile can be used since Java 5 for\
+    \ the instance variable.\nVariables that are marked as volatile get only visible\
+    \ to other threads after the constructor of the object has finished its execution\
+    \ completely.\n\n# 1.37 What do we understand by a deadlock?\n\nA deadlock is\
+    \ a situation in which two (or more) threads are each waiting on the other thread\
+    \ to free a resource that has locked, while the thread itself has locked a resource\
+    \ the other thread is waiting on: Thread 1: locks resource A, waits for resource\
+    \ B Thread 2: locks resource B, waits for resource A"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# 1.38 What are the requirements for a deadlock situation?
+
+
+    In general the following requirements for a deadlock can be identified:
+
+
+    +   - Mutual exclusion: There is a resource which can be accessed by only one
+    thread at any point in time.
+
+
+    +   - Resource holding: While having locked one resource, the thread tries to
+    acquire another lock on some other exclusive resource.
+
+
+    +   - No preemption: There is no mechanism, which frees the resource one holds
+    the lock for a specific period of time.
+
+
+    +   - Circular wait: During runtime a contention occurs in which two (or more)
+    threads are waiting on the other thread to free a resource that it has locked.
+
+
+    # 1.39 Is it possible to prevent deadlocks at all?
+
+
+    In order to prevent deadlocks (one or more) of the requirements for a deadlock
+    has to be eliminated:
+
+
+    +   - Mutual exclusion: In some situation it is possible to prevent mutual exclusion
+    by using optimistic locking.
+
+
+    +   - Resource holding: A thread may release all its exclusive locks, when it
+    does not succeed in obtaining all exclusive locks.
+
+
+    +   - No preemption: Using a timeout for an exclusive lock frees the lock after
+    a given amount of time.
+
+
+    +   - Circular wait: When all exclusive locks are obtained by all threads in the
+    same sequence, no circular wait occurs.
+
+
+    # 1.40 Is it possible to implement a deadlock detection?
+
+
+    When all exclusive locks are monitored and modelled as a directed graph, a deadlock
+    detection system can search for two threads that are each waiting on the other
+    thread to free a resource that it has locked. The waiting threads can then be
+    forced by some kind of exception to release the lock the other thread is waiting
+    on.
+
+
+    # 1.41 What is a livelock?
+
+
+    A livelock is a situation in which two or more threads block each other by responding
+    to an action that is caused by another. In contrast to a deadlock situation, where
+    two or more threads wait in one specific state, the threads that participate in
+    a livelock change their state in a way that prevents their regular progress. An
+    example would be a situation in which two threads try to acquire locks, but release
+    the lock they have acquired when they cannot acquire the second lock. It may happen
+    that both threads concurrently try to acquire the first. As only one succeeds,
+    Now both threads hold two different locks, but as both want to have both locks,
+    they release their lock and again from the beginning. This situation may now happen
+    again and again.
+
+
+    # 1.42 What do we understand by starvation?
+
+
+    Threads with lower priority get less time for execution than threads with higher
+    priority. When the threads with lower priority performs a long enduring computations,
+    it may happen that these threads do not get enough time to finish their computations
+    in time. They seem to "starve" as threads with higher priority steal their computation
+    time.
+
+
+    # 1.43 Can a synchronized block prevent thread starvation?
+
+
+    The order in which threads enter a synchronized block is not defined. So in theory
+    it may happen in case many threads are waiting for the entrance to a synchronized
+    block, some threads have to wait longer than others. Hence they do not get enough
+    computation time to finish their work in time.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# 1.44 What do we understand by the term race condition?\n\nA race condition\
+    \ describes constellations in which the outcome of some multi-threaded implementation\
+    \ depends on the exact timing behavior of the participating threads. In most cases\
+    \ it is not desirable to have such a kind of behavior, hence the race condition\
+    \ also means that a bug due to missing thread synchronization leads to the difference.\
+    \ A simple example for a race condition is the incrementation of an integer variable\
+    \ by two concurrent threads. As the operation consists of more than one single\
+    \ atomic operation, it may happen that both threads read and increment the same\
+    \ value. After this concurrent increment the amount of the integer variable is\
+    \ not increased by two but only one.\n\n# 1.45 What do we understand by fair locks?\n\
+    \nA fair lock takes the waiting time of the threads into account considering the\
+    \ next thread that passes the barrier to exclusive resource. An example implementation\
+    \ of a fair lock is provided by the Java SDK: java.util.concurrent.locks.ReentrantLock.\
+    \ If the constructor with the boolean flag set to true is used, the ReentrantLock\
+    \ grants access to the longest-waiting thread.\n\n# 1.46 Which two methods that\
+    \ each object inherits from java.lang.Object can be used to implement a simple\
+    \ producer/consumer scenario?\n\nWhen a worker has finished its current task and\
+    \ the queue for new tasks is empty, it frees the processor by acquiring an intrinsic\
+    \ lock on the queue object and calling the method wait(). The thread will be woken\
+    \ by some producer that has put a new task into the queue and again acquires the\
+    \ same intrinsic lock on the queue object and calls notify() on.\n\n# 1.47 What\
+    \ is the difference between notify() and notifyAll()?\n\nBoth methods are used\
+    \ to wake up one or more threads that have themselves to sleep by calling wait().\
+    \ While notify() only wakes up one of the waiting threads, notifyAll() wakes up\
+    \ all threads.\n\n# 1.48 How is it determined which thread wakes up by calling\
+    \ notify()?\n\nIt is not specified which threads will be woken up by calling notify()\
+    \ if more than one thread is waiting. Hence code should not rely on any concurrent\
+    \ JVM implementation.\n\n# 1.49 Is the following code that retrieves an integer\
+    \ value from some queue implementation correct?\n\n```\npublic Integer getNextInt()\
+    \ {\n    Integer retVal = null;\n    synchronized (queue) {\n        try {\n \
+    \           while (queue.isEmpty()) {\n                queue.wait();\n       \
+    \     }\n        } catch (InterruptedException e) {\n            e.printStackTrace();\n\
+    \        }\n    }\n}\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "```\nsynchronized (queue) {\n    retVal = queue.poll();\n    if (retVal ==\
+    \ null) {\n        System.err.println(\"retVal is null\");\n        throw new\
+    \ IllegalStateException();\n    }\n}\nreturn retVal;\n```\n\nAlthough the code\
+    \ uses the queue as monitor, it does not behave correctly in a multi-threaded\
+    \ environment. The reason for this is that it has two synchronized blocks. When\
+    \ two threads are woken up in line 6 by another thread calls notifyAll(), both\
+    \ threads enter one after the other the second synchronized block. This second\
+    \ block the queues has only one new value, then the second thread will poll on\
+    \ an empty queue and get null as return value.\n\n# 1.50 Is it possible to check\
+    \ whether a thread holds a monitor on some given object?\n\nThe class java.lang.Thread\
+    \ provides the method Thread.holdsLock(Object) that returns true if and only the\
+    \ current thread holds the lock on the object as given argument to the method\
+    \ invocation.\n\n# 1.51 What does the method Thread.yield()?\n\nAn invocation\
+    \ of that Thread.yield() gives the scheduler a hint that the current thread is\
+    \ willing to free the processor. The scheduler is free to ignore this. As it is\
+    \ not defined which thread will get the processor after the invocation of Thread.yield(),\
+    \ it may even happen that the current thread becomes the \"next\" thread to be\
+    \ executed.\n\n# 1.52 What do you have to consider when passing object instances\
+    \ from one thread to another?\n\nWhen passing objects between threads, you will\
+    \ have to pay attention that these objects are not manipulated by two threads\
+    \ at the same time. An example would be a Map implementation where key/value pairs\
+    \ are modified by two concurrent threads. In order to avoid problems with concurrent\
+    \ modifications you can design an object to be immutable.\n\n# 1.53 Which rules\
+    \ do you have to follow in order to implement an immutable class?\n\n+   - All\
+    \ fields should be final and private.\n- There should not be setter methods.\n\
+    - The class itself should be declared final in order to prevent subclasses violate\
+    \ the principle of immutability.\n- If fields are not of a primitive type but\
+    \ a reference to another object:\n    - There should not be a getter method that\
+    \ exposes the reference directly to the caller.\n    - Don't change the referenced\
+    \ objects (or at least changing these references is not visible to clients of\
+    \ the object)."
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# 1.54 What is the purpose of the class java.lang.ThreadLocal?
+
+
+    As memory is shared between different threads, ThreadLocal provides a way to store
+    and retrieve values for each thread separately. Implementations of ThreadLocal
+    store and retrieve the values for each thread independently such that when thread
+    stores the value A1 and thread B stores the value B1 in the instance of ThreadLocal,
+    thread A later retrieves value A from this ThreadLocal instance and thread B retrieves
+    B1.
+
+
+    # 1.55 What are possible use cases for java.lang.ThreadLocal?
+
+
+    Instances of ThreadLocal can be used to transport information through the application
+    without the need to pass this from method to method. Examples would be the transportation
+    of security/login information within an instance of ThreadLocal such that it is
+    accessible by each method. Another use case could be to transport information
+    or in general objects that should be accessible in all methods without passing
+    them from method to method.
+
+
+    # 1.56 Is it possible to improve the performance of an application by the usage
+    of multi-threading? Name some examples.
+
+
+    If we have more than one CPU core, the performance of an application can be improved
+    by multi-threading if it is possible to parallelize the computations over the
+    available CPU cores. An example would be an application that scale all matters
+    that are stored in a local directory. Instead of iterating all one after the other,
+    a producer/consumer implementation can use a single thread to scan the directory
+    structure and a bunch of worker threads to perform the actual scaling operation.
+    When n converges in parallel, an application mirrors some page. Instead of loading
+    one HTML page after the other, a producer can parse the first HTML page and issue
+    the links it found into a queue. The worker threads monitor the queue and load
+    the web pages by the parser. While the worker waits for the page to be loaded
+    completely, other threads use the CPU to parse the already loaded pages and issue
+    new requests.
+
+
+    # 1.57 What do we understand by the term scalability?
+
+
+    Scalability means the ability of a program to improve the performance by adding
+    further resources to it.
+
+
+    # 1.58 Is it possible to compute the theoretical maximum speed up for an application
+    by using multiple processors?
+
+
+    Amdahl''s law provides a formula to compute the theoretical maximum speed up by
+    providing multiple processors to an application. The theoretical speedup is computed
+    by S(n)=1/(B+(1-B)/n) where n is the number of processors and B is the fraction
+    of the program that cannot be executed in parallel. When n converges at infinity,
+    (1-B)/n converges against zero. Hence the formula can be reduced in this specific
+    case to 1/B. As we can see, the theoretical maximum speedup is the lower this
+    fraction is, the more theoretical speedup can be achieved.
+
+
+    # 1.59 What do we understand by lock contention?
+
+
+    Lock contention occurs, when two or more threads are competing in the acquisition
+    of a lock. The scheduler has to decide whether it lets the thread, which has to
+    wait sleeping and performs a context switch to another thread occupy the CPU,
+    or by letting the waiting thread busy-waiting is more efficient. Both ways introduce
+    idle time to the inferior thread.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# Which techniques help to reduce lock contention?\n\nIn some cases lock contention\
+    \ can be reduced by applying one of the following techniques:\n\n+   - The scope\
+    \ of the lock is reduced.\n- The number of times a certain lock is acquired is\
+    \ reduced (lock splitting).\n- Using hardware optimistic locking operations instead\
+    \ of synchronization.\n- Avoid synchronization where possible.\n- Avoid object\
+    \ pooling.\n\n# Which technique to reduce lock contention can be applied to the\
+    \ following code?\n\n```\nsynchronized (map) {\n    UUID randomUUID = UUID.randomUUID();\n\
+    \    Integer value = Integer.valueOf(42);\n    String key = randomUUID.toString();\n\
+    \    map.put(key, value);\n}\n```\n\nThe code above performs the computation of\
+    \ the UUID and the conversion of the literal 42 into Integer object within the\
+    \ synchronized block, these two lines are local to the current thread and do not\
+    \ affect others. They can be moved out of the synchronized block:\n\n```\nUUID\
+    \ randomUUID = UUID.randomUUID();\nInteger value = Integer.valueOf(42);\nString\
+    \ key = randomUUID.toString();\nsynchronized (map) {\n    map.put(key, value);\n\
+    }\n```\n\n# Explain by an example the technique lock splitting.\n\nLock splitting\
+    \ may be a way to reduce lock contention when one lock is used to synchronize\
+    \ different aspects of the same application. Suppose we have a class that implements\
+    \ the computation of some statistical data of our application. A first version\
+    \ of this class uses the synchronized keyword in each method signature to guard\
+    \ the internal state before corruption by multiple concurrent threads. This also\
+    \ means that each method may cause lock contention as others threads try to acquire\
+    \ the same lock simultaneously. But it may be possible to split the lock on the\
+    \ object into a few smaller locks for each type of statistical data within each\
+    \ method. Hence T1 tries to increment the statistical data D1 does not have to\
+    \ wait for the lock while T2 simultaneously updates the data D2.\n\n# What kind\
+    \ of technique for reducing lock contention is used by the SDK class ReadWriteLock?\n\
+    \nThe SDK ReadWriteLock ensures that concurrent threads do not have to acquire\
+    \ a lock when they want to read a value when no other thread updates the value.\
+    \ This is implemented by a pair of locks, one for read-only operations and one\
+    \ for writing operations. While the read-only lock may be obtained by more than\
+    \ one thread, the implementation guarantees that all read operation see an updated\
+    \ value once the lock is released."
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# 1.64 What do we understand by lock striping?\n\nIn contrast to lock splitting,\
+    \ we introduce different locks for different aspects of the application, lock\
+    \ striping uses multiple locks to guard different parts of the same data structure.\
+    \ An example for this is the ConcurrentHashMap from JDK's java.util.concurrent\
+    \ package. The Map implementation uses internally buckets to store its values.\
+    \ The bucket is chosen by the value key. ConcurrentHashMap now uses different\
+    \ locks to guard hash buckets. One thread that tries to access the first hash\
+    \ bucket can acquire the lock for this bucket, while another can simultaneously\
+    \ access a second bucket. In contrast to a synchronized version of HashMap this\
+    \ technique can increase the performance when different threads work on different\
+    \ buckets.\n\n# 1.65 What do we understand by a CAS operation?\n\nCAS stands for\
+    \ compare-and-swap and that processor performs a separate instruction that updates\
+    \ a value only if the provided value is equal to the current value. CAS operations\
+    \ can be used to avoid synchronization as the thread try to update a value by\
+    \ comparing its current value and the new value to the CAS operation. If another\
+    \ thread has updated the value, the thread's value is not equal to the current\
+    \ value and the update operation fails. The thread then reads the new value and\
+    \ tries again. That why necessary synchronization is exchanged by an optimistic\
+    \ spin waiting.\n\n# 1.66 Which Java classes use the CAS operation?\n\nThe SDK\
+    \ classes in the package java.util.concurrent.atomic like AtomicInteger or AtomicBoolean\
+    \ use the internally CAS operation to implement concurrent increment.\n\n```\n\
+    public class AtomicCounter {\n    private AtomicLong counter = new AtomicLong();\n\
+    \n    public void increment() {\n        counter.incrementAndGet();\n    }\n\n\
+    \    public long get() {\n        return counter.get();\n    }\n}\n```\n\n# 1.67\
+    \ Provide an example why performance improvements for single-threaded applications\
+    \ can cause performance degradation for multi-threaded applications.\n\nA prominent\
+    \ example for such optimizations is a List implementation that handles the number\
+    \ of elements as a variable. This improves the performance for single-threaded\
+    \ applications as the size() operation does not have to iterate over all elements\
+    \ but can return the current number of elements directly. Within a multi-threaded\
+    \ application the additional counter has to be guarded by a lock as multiple concurrent\
+    \ threads insert elements into the list. This additional lock can cost performance\
+    \ when there are more updates to the list than invocations of the size() operation.\n\
+    \n# 1.68 Is object pooling always a performance improvement for multi-threaded\
+    \ applications?\n\nObject pools that try to avoid the construction of new objects\
+    \ by pooling them can improve the performance of single-threaded applications\
+    \ as the cost of object creation is exchanged by requesting a new object from\
+    \ the pool. In multi-threaded applications such an object pool has to have synchronized\
+    \ access to the pool and the additional costs of lock contention may outweigh"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Multithreading and Concurrency Questions\n\nthe saved costs of the additional\
+    \ construction and garbage collection of the new objects. Here object pooling\
+    \ may not always improve the overall performance of a multi-threaded application.\n\
+    \n# 1.69 What is the relation between the two interfaces Executor and ExecutorService?\n\
+    \nThe interface Executor only defines one method: execute(Runnable). Implementations\
+    \ of this interface will have to execute the given Runnable instance some time\
+    \ in the future. The ExecutorService interface is an extension of the Executor\
+    \ interface and provides additional methods to shut down the underlying implementation,\
+    \ to await the termination of all submitted tasks and it allows submitting instances\
+    \ of Callable.\n\n# 1.70 What happens when you submit() a new task to an ExecutorService\
+    \ queue is full?\n\nAs the method submit() indicates, the ExecutorService implementation\
+    \ is supposed to throw a RejectedExecution.\n\n# 1.71 What is a ScheduledExecutorService?\n\
+    \nThe interface ScheduledExecutorService extends the ExecutorService and adds\
+    \ method that allow to submit new tasks to the underlying implementation that\
+    \ should be executed a given point in time. There are two methods to submit one-shot\
+    \ tasks and two methods to create periodic tasks.\n\n# 1.72 Do you know how to\
+    \ construct a thread pool with 5 threads some tasks that return a value?\n\nThe\
+    \ SDK provides a factory and utility class Executors whose method newFixedThreadPool(int\
+    \ nThreads) allows the creation of a thread pool with a fixed number of threads\
+    \ the MyCallable is omitted:\n\n```\npublic static void main(String[] args) throws\
+    \ InterruptedExceptionException, ExecutionException {\n    ExecutorService executorService\
+    \ = Executors.newFixedThreadPool(5);\n    Future<Integer>[] futures = new Future[5];\n\
+    \    for (int i = 0; i < futures.length; i++) {\n        futures[i] = executorService.submit(new\
+    \ MyCallable());\n    }\n    for (int i = 0; i < futures.length; i++) {\n    \
+    \    Integer retVal = futures[i].get();\n        System.out.println(retVal);\n\
+    \    }\n    executorService.shutdown();\n}\n```\n\n# 1.73 What is the difference\
+    \ between the two interfaces Runnable and Callable?\n\nThe interface Runnable\
+    \ defines the method run() without any return value whereas the interface Callable\
+    \ allows the method run() to return a value and to throw an exception."
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# 1.74 Which are use cases for the class java.util.concurrent.Future?
+
+
+    Instances the class java.util.concurrent.Future are used to represent results
+    of asynchronous computations whose are not immediately available. Hence the class
+    provides methods to check if the asynchronous computation has finished, canceling
+    the task and to retrieve the actual result. The latter can be done with the get()
+    methods provided. Each get() takes no parameter and blocks until the result is
+    available whereas the get() method takes a timeout parameter that lets the invocation
+    return if the result does not available within the given timeframe.
+
+
+    # 1.75 What is the difference between HashMap and Hashtable particularly with
+    regard to thread-safety?
+
+
+    The methods of Hashtable are all synchronized. This is not the case for the HashMap
+    implementation. Donc Hashtable is thread-safe whereas HashMap is not thread-safe.
+    For single-threaded applications it is therefore more efficient to use the "newer"
+    HashMap implementation.
+
+
+    # 1.76 Is there a simple way to create a synchronized instance of an arbitrary
+    implementation of Collection, List or Map?
+
+
+    The utility class provides the methods synchronized(Collection), synchronizedList(List)
+    and synchronizedMap(Map) that return a thread-safe collection/list/map that is
+    backed by the given instance.
+
+
+    # 1.77 What is a semaphore?
+
+
+    A semaphore is a data structure that maintains a set of permits that may be acquired
+    by competing threads. Semaphores can be used to control how many threads access
+    a critical section or resource simultaneously. Hence the constructor of java.util.concurrent.Semaphore
+    takes as first parameter the number of permits the threads compete about. Each
+    invocation of its acquire() tries to obtain one of the available permits. The
+    method acquire() without parameter blocks until the next permits available. Later
+    on, when the thread has finished its work on the critical resource, it can release
+    the permit by using the method release() on an instance of Semaphore.
+
+
+    # 1.78 What is a CountDownLatch?
+
+
+    The SDK CountDownLatch provides a synchronization aid that can be used to implement
+    scenarios in which threads have to wait until some other threads have reached
+    the same state that all thread can start. Reaching zero the CountDownLatch instance
+    lets all threads proceed. This can be used to let all threads start at a given
+    point in time by using the value 1 for the counter or to wait until a number of
+    threads has finished. In the later case the counter is initialized with the number
+    of threads and that thread has finished its work counts down by one.
+
+
+    # 1.79 What is the difference between a CountDownLatch and a CyclicBarrier?
+
+
+    Both classes maintain a counter that is decremented by different threads. The
+    threads wait until the internal counter reaches the zero value and proceed from
+    there. But in contrast to the CountDownLatch class CyclicBarrier resets the internal
+    value back to the initial value once the value reaches zero. As the name indicates
+    of CyclicBarrier can be used to implement cases where threads have to wait on
+    each other and again.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# 1.80 What kind of tasks can be solved by
+
+
+    The base class of Fork/Join framework java.util.concurrent.ForkJoinPool is basically
+    a thread pool that executes instances of java.util.concurrent.ForkJoinTask. The
+    class ForkJoinTask provides the two methods fork() and join(). While fork() is
+    used to start the asynchronous execution of the task, the method join() is used
+    to await the result of the computation. Hence the Fork/Join framework can be implemented
+    to divide-and-conquer algorithms where a more complex problem is divided into
+    a number of smaller and easier to solve problems.
+
+
+    # 1.81 Is it possible to find the smallest number in an array of numbers using
+    the Fork/Join-Framework?
+
+
+    The problem of finding the smallest number in an array of numbers can be solved
+    by a divide-and-conquer algorithm. The smallest problem that can be solved easily
+    is an array of two numbers by comparison. Using a divide-and-conquer approach
+    the initial array is divided into two parts of equal length and both parts are
+    provided to two instances of RecursiveTask that extend the class ForkJoinTask.
+    By forking the two tasks they get either solve the problem, if their slice of
+    the array has length two, or they recursively divide the array into two parts
+    and fork new RecursiveTasks. Each task returns its result (either by having it
+    computed or by waiting for the subtasks). The root tasks return the smallest number
+    in the array.
+
+
+    # 1.82 What is the difference between the two classes RecursiveTask and RecursiveAction?
+
+
+    In contrast RecursiveTask the method compute() of RecursiveAction does not have
+    to return a value. Hence RecursiveAction can be used when the action works directly
+    on some data structure without having to return the computed value.
+
+
+    # 1.83 Is it possible to perform stream operations in Java 8 with a thread pool?
+
+
+    Collections provide the method parallelStream() to create a stream that is processed
+    by a thread pool. Alternatively you can call the intermediate method parallel()
+    on a given stream to convert a sequential stream to a parallel counterpart.
+
+
+    # 1.84 How can we access the thread pool that is used by parallel stream operations?
+
+
+    The thread pool used for parallel stream operations can be accessed by ForkJoinPool.commonPool().
+    This way we query its level of parallelism with commonPool.getParallelism(). The
+    level cannot be changed at runtime but it can be configured by providing the following
+    JVM parameter: -Djava.util.concurrent.ForkJoinPool.common.parallelism=5.'
+  merge: -1
+  pgno: 25
