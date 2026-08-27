@@ -1,0 +1,2546 @@
+- img_proc: true
+  md: '# JAVA PROGRAMMING FOR ABSOLUTE BEGINNERS
+
+
+    A QUICK COURSE FOR MASTERING THE BASICS OF JAVA
+
+
+    ELINDA LARA'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# ELINDA LARA
+
+
+    # JAVA PROGRAMMING
+
+    FOR ABSOLUTE
+
+    BEGINNERS
+
+
+    ![Java Logo and Background Pattern]
+
+
+    A QUICK COURSE FOR MASTERING THE BASICS
+
+    OF JAVA
+
+
+    # ELINDA LARA'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Java Programming for absolute beginners'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Table of Contents
+
+
+    Java Programming for absolute beginners
+
+
+    Table of Contents
+
+
+    Introduction
+
+
+    Chapter 1: getting Started With Java
+
+
+    Chapter 2: Writing Your First Java Program
+
+
+    Chapter 3: data types
+
+
+    Chapter 4: Variables
+
+
+    Chapter 5: operators
+
+
+    Chapter 6: objects and classes
+
+
+    Chapter 7: decision making
+
+
+    Chapter 8: Loop control
+
+
+    Chapter 9: File handling
+
+
+    Chapter 10: Exception handling
+
+
+    Conclusion'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Introduction
+
+
+    Java is a cross-platform, high-level language that was developed by Sun microsystems
+    under the leadership of James Gosling. The first version of this'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Language was released in 1995 in the form of Java 1.0 [J2se]. Since then, java
+    has come a long way and we are presently working on Java 8. besides this, several
+    versions of java like j2me (for mobile applications) and j2ee (Java for enterprise
+    applications) have also been released. java was released as open source software
+    under gnu gpl by Sun in 2006. The process of this transformation was completed
+    in 2007.
+
+
+    This book is a beginner''s course on java fundamentals. Therefore, it has been
+    created keeping in mind that the reader has little to know background knowledge
+    about java. however, a little background of programming languages shall be helpful
+    for better understanding. Through this course, we hope to instill the basics of
+    programming in the reader from the perspective and with special focus on java.
+
+
+    before you, it is good for you to understand that programming concepts are generic
+    and apply well to a range of programming languages. Therefore, if you works building
+    programming concepts instead of learning syntax, you will be able to learn many
+    programming languages with minimal effort. Focus on the concept instead of the
+    syntax
+
+
+    # Copyright 2017 - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    > From a declaration of Principles which was accepted and approved by a committee
+    of the American bar Association and a committee of Publishers and Associations.
+
+
+    In no way is it legal to repeat, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used without any consent, and the publication of the trademark
+    is without permission or backing by the trademark owner. All trademarks and brands
+    within this book are for clarifying purposes only and are the owned by the owners
+    themselves, not affiliated with this document.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Chapter 1: getting Started With Java
+
+
+    before we move on to Java programming, let us give you a brief background of java,
+    the programming language, and the prerequisites of learning this programming language.
+    One of the most important features of this programming language is that it is
+    cross-platform. This is evident from the fact that java was first advertised with
+    the tagline ''Write once, Run Anywhere''. So, all you need to write a code, compile
+    it and then you can run it on any system, be it Windows, Unix, Linux or macintosh.
+
+
+    besides the above-mentioned, other features of java include –
+
+
+    +   - Platform independent
+
+
+    +   - Object oriented
+
+
+    +   - Simple
+
+
+    +   - Secure
+
+
+    +   - Portable
+
+
+    +   - Architecture-independent
+
+
+    +   - Interpreted
+
+
+    +   - Robust
+
+
+    +   - distributed
+
+
+    +   - multithreaded
+
+
+    +   - dynamic'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '+   high Performance
+
+
+    # Requirements to get Started
+
+
+    In order to get started with java programming, you need to first have a working
+    computer with Linux or Windows or macintosh. On this system, you are going to
+    use two tools for java programming. The first of these tools is a text editor.
+    If you are working on Windows, you can use notepad.
+
+
+    For other operating systems, you can try textedit or VI or whichever text editor
+    is locally available. The second requirement for java programming is java 8. You
+    will need to install Java 8 on your system. If you do not wish to'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'Work on a local environment setup, you can also try one of the online options
+    available to compile and run your java programs.
+
+
+    # getting a Local Setup Ready
+
+
+    Assuming that you have the system ready and you already have a text editor installed
+    on the system, we are directly jumping to the installation of java on the system.
+    To start with, you will need to download java. Java SE is the free version that
+    you can download using the link that google Search for the same provides. Be sure
+    to download the version that is developed for your operating system.
+
+
+    Once the download is complete, you will have an executable, which you are required
+    to run for installation. Upon completion of installation, you will get a message
+    stating the same. however, you are not done yet java will not work until you set
+    environment variables. You can set the environment variables on your system using
+    the following instructions –
+
+
+    # Windows
+
+
+    In all probability, the java version that you installed by clicking on the .exe
+    file that came along with the installation package must have installed in the
+    directory: c:\Program Files\java\jdk. Assuming this, you just need to open properties
+    by right clicking on ‘my computer’. In the dialog box that appears, open ‘Advanced’
+    and go to ‘Environment variables’. Append the existing contents of the field by
+    ‘c:\Program Files\java\jdk\bin’.
+
+
+    # Linux/freeBSD/Unix/Solaris
+
+
+    As a rule, the path of the environment variable is the path at which the binaries
+    of the java installation are placed. You can look for these binaries on your system
+    to get the actual path and then edit .bashrc file. When you open this file using
+    any text editor, you need to add the statement:
+
+
+    ```
+
+    Export path = /path/to/java:$path
+
+    ```
+
+
+    While the standard way to run java programs is to create .java files in notepad
+    or any text editor for that matter and then execute the file using command-line
+    commands. however, over all these years, several ideas have also come into exist
+    to make this task hassle-'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: free for the programmer. netbeans and Eclipse are two such popular ideas. You
+    can read about them online to see if they interest you.
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Chapter 2: Writing Your First Java Program
+
+
+    java implements object-oriented programming principles. Therefore, a java program
+    is a class file that upon execution creates a set of objects. These objects communicate
+    with each other by means of methods. Some of the terms that you will commonly
+    encounter in the Java terminology have been explained –
+
+
+    The foundation element of a java program is class . It is simply a template that
+    defines the state and behavior of an object.
+
+
+    +   The state of the object is defined by Variables and the behavior is described
+    by methods. Therefore, a class includes variables and methods. It is important
+    to mention here that each object created using a class has its own set of variables
+    and thus, variables are also called Instance Variables.
+
+
+    +   When we instantiate a class, we create an object , which is the second fundamental
+    element of java programming.
+
+
+    In order to help you understand this concept, let us take an example. Suppose
+    we create a class called Car. Car is a general term for all four-wheeled small
+    vehicles, every car has a different set of specifications like brand, color, engine,
+    transmission type and features. These features can be modified. For example, you
+    may get the color changed or a feature enhanced.
+
+
+    Therefore, car is a template (or in our case a class) but specific cars are objects
+    or instances of this class. The set of specifications are variables and any initialization
+    or manipulations that we perform on these variables are done using methods.
+
+
+    This example can also be best used to understand the object oriented principles
+    of encapsulation and abstraction. The class encapsulates variables and methods
+    into it. So, as the user, you are dealing with only the class car and its implementation
+    is hidden from you. This is how java implements abstraction.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'The best way to learn programming is by writing programs. So, we have given
+    you a sample program below for you to try. We will also use this program to explain
+    the basic syntax of java programming language.
+
+
+    ```
+
+    Public class samplejavaprogramm {
+
+    ```'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "```\n/* this program will print hello World! On the screen */\npublic static\
+    \ void main(String[] args) {\n    System.out.println(\"hello World!\"); // statement\
+    \ for print\n}\n```\n\nIn order to write, compile and run this program, you need\
+    \ to follow the instructions given below -\n\n+   * Using any text editor, create\
+    \ a text file and copy this code into the same. Save the file as samplejavaprogram.java\n\
+    \n+   * Compile and run the code using the ide. For manual execution, you need\
+    \ to type the following commands:\n\n+   - javac samplejavaprogram.java\n\n+ \
+    \  - java samplejavaprogram\n\nThe first command will create a class file from\
+    \ the java file while the second command will execute the program to give the\
+    \ desired result. A sample run of the code has been illustrated in the image shown\
+    \ below."
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '```
+
+    1- public class JavaProgram {
+
+    2-
+
+    3- public static void main(String[] args) {
+
+    4- System.out.println("Hello World");
+
+    5-
+
+    6- }
+
+    ```
+
+
+    Compiling the source code...
+
+    Sjavac SampleProgram.java 2->&1
+
+
+    Executing the program...
+
+    Sjava -Xmx128M -Xmx16M SampleJavaProgram
+
+
+    Hello World!
+
+
+    If you have reached so far, you have successfully executed your first java program.
+    now it is time to inspect the program to see how we wrote it and why'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'It gave the result that it did.
+
+
+    Firstly, writing a program in java requires you to follow some conventions. These
+    are listed below –
+
+
+    Java is a case-sensitive language. In other words, class and class are two different
+    words for Java. be careful when you are using keywords or any other elements in
+    the program.
+
+
+    As a convention, the first letter of every word of the class name is supposed
+    to be capital. For example, if the name of the class is car, the ''c'' is supposed
+    to be capital. On the other hand, if the name of the class is Sportcar, then S
+    and c must be capital as both of them are first letters of the two words that
+    form the name of the class.
+
+
+    method names also follow a capitalization convention according to which the first
+    letter of the method name must be small in case. however, if the name if made
+    from more than one word, except for the first word, every other word''s first
+    letter must be capital. For example, if the method''s name is add, then ''a''
+    must be small, but if the method''s name is addnumbers, then ''a'' will be small
+    and ''n'' will be capital.
+
+
+    The name of the java file must be same as the name of the class, followed by .java
+    extension. For example, if the name of your class is sampleapplication, then the
+    name of the java file must be sampleapplication.java. Also remember that the case
+    of the letter must also match. If you do not fulfill any of these requirements,
+    you will not be able to compile the program.
+
+
+    The execution of a java program begins with the main method. Therefore, every
+    java program must have a main method and the main method in java programming is
+    defined as
+
+
+    ```
+
+    Public static void main(String args[])
+
+    but again, if your program doesn''t have a main method, the
+
+    program will not run.
+
+    ```'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Identifiers
+
+
+    Any programming language is made up of English language words. Some of these words
+    are a part of the syntax of the programming language while others like variable
+    names and the user defines names of classes and methods. The'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'Words that are a part of the syntax are called keywords. On the other hand,
+    user-defined names are called identifiers.
+
+    There are some important things to know and remember about java. These include
+    –
+
+
+    +   - names given to identifiers can begin with alphabets (lower case or upper
+    case) and special characters – underscore (_) and currency ($). This also means
+    that an identifier''s name cannot begin with a number or any special character.
+
+
+    +   - The use of a defined keyword as an identifier is not allowed.
+
+
+    +   - Lastly, always remember that java is case-sensitive and icount and icount
+    are different identifiers.
+
+
+    # Modifiers
+
+
+    Classes, methods and variables can be modified only using modifiers. There are
+    two types of modifiers, which are as follows –
+
+
+    +   **non-access modifiers** - strictfp, abstract, final Access **modifiers**
+    - pualic, default, private, protected
+
+
+    Access modifiers determine how the class, method or variable can be accessed and
+    all who have the permission to access them. Other modifiers, which do not work
+    on similar lines are classified as non-access modifiers.
+
+
+    # Variables
+
+
+    Java supports three types of variables namely class variable, local variables
+    and instance variables. Class variables are also called static variables while
+    instance variables have been termed as non-static variables.
+
+
+    # Arrays
+
+
+    A collection of elements of the same type is called an array. Java supports array
+    objects of different types.
+
+
+    # EnUMs'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: There are some variables that can only hold a few values. As a programmer, you
+    may wish to restrict such variables from taking any other value. One such variable
+    is gender, which can have only a selective number of values. ENUMS
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'Allows you to implement such variables. The use of enums is an error-reduction
+    strategy and it was introduced in java 5.0. It is possible to define enum inside
+    a class or outside it. moreover, enums can have constructors, variables and methods.
+
+
+    # Keywords
+
+
+    The words that are part of the java programming language and cannot be used as
+    identifiers are called keywords. These keywords are –
+
+
+    | Assert | Abstract | break | boolean |
+
+    | Catch | Char | byte | Case |
+
+    | Const | Class | default | Continue |
+
+    | Else | Enum | | double |
+
+    | Final | Extends | Float | Finally |
+
+    | If | Implements | For | goto |
+
+    | Instanceof | Import | Interface | Int |
+
+    | new | Package | Long | native |
+
+    | Protected | Private | Return | Public |
+
+    | Strictfp | Super | Short | Static |
+
+    | Synchronized | Switch | Throw | This |
+
+    | Try | Void | Throws | Transient |
+
+    | While | Volatile | | |
+
+
+    # Comments
+
+
+    In java, there is support for single-line and multi-line comments. Single line
+    comments start with // while multi-line comments start with /* and end with /.
+    You can look for these comments in the sample code given above.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Blank Lines
+
+
+    Any line that has a comment or no characters or whitespace characters is not considered
+    by Java. It is simply ignored.
+
+
+    # Implementing Inheritance
+
+
+    The inheritance characteristic of object-oriented programming is implemented in
+    java using the concept of deriving a new class from an existing class. This allows
+    you to reuse existing code. The existing class is called a superclass while the
+    derived class is referred to as a derived class.
+
+
+    # Interfaces
+
+
+    In case two objects need to communicate with each other, then a protocol of communication
+    needs to be established between these objects. This protocol of communication
+    is called an interface. This concept is usually used in the implementation of
+    the inheritance concept. An interface is used to define the methods that a subclass
+    must have. however, it is the subclass that implements those methods.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Chapter 3: data types
+
+
+    When we declare variables, we basically block space in the memory and give it
+    a reference name so that we can access it later and manipulate its contents. The
+    amount of memory reserved for a variable depends on the data type given at the
+    time of declaration. Therefore, by giving different data types to variables, you
+    can reserve different amounts of memory for the variable in the memory. There
+    are two main types in java, which are primitive datatypes and object datatypes.
+
+
+    # Primitive data types
+
+
+    java supports eight primitive data types and there is a keyword corresponding
+    to each of these data types to allow declaration of variables under this data
+    type. These data types include –
+
+
+    +   byte
+
+    maximum value = 127 (inclusive)(2^7 -1)
+
+    minimum value = -128 (-2^7)
+
+    8-bit signed 2''s complement integer
+
+    default value = 0
+
+    This data type is generally used in cases where memory is to be saved.
+
+    byte data type is used to save space in large arrays, mainly in place of integers,
+    since a byte is four times smaller than an integer.
+
+
+    # Short
+
+
+    +   maximum value = 32,767 (inclusive) (2^15-1)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'default value = 0.
+
+
+    +   - minimum value = -32,768 (-2^15)
+
+
+    +   - 16-bit signed 2''s complement integer
+
+
+    +   - It is another data type that is used when memory saving is desired.
+
+
+    # Int
+
+
+    +   - default value = 0
+
+
+    +   - maximum value = 2,147,483,647(inclusive) (2^31 -1)'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "32-bit signed 2's complement integer.\nMINIMUM value = - 2,147,483,648 (-2^31)\n\
+    \n+   - This is the default data type used for all integral values.\n\n# Long\n\
+    \n+   - default value = 0L\n- MINIMUM value = -9,223,372,036,854,775,808(-2^63)\n\
+    - 64-bit signed 2's complement integer\n- maximum value = 9,223,372,036,854,775,807\
+    \ (inclusive)(2^63-1)\n  this is used when the variable is expected to hold large\
+    \ numbers.\n\n# Float\n\n+   - default value = 0.0f\n- 32-bit IEEE 754 floating\
+    \ point\n- Single-precision\n- This data type is used as the default data type\
+    \ for storing floating point numbers.\n- The use of this data type for storing\
+    \ values that require precise calculations must be avoided.\n\n# double\n\n+ \
+    \  - 64-bit IEEE 754 floating point\n- double-precision"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '+   - default value = 0.0d
+
+
+    +   - This data type is used for variables that need to store decimal values.
+    however, like float, the value of variables stored using double may vary. Thus,
+    these data types are not used for critical calculations like that concerning currency.
+
+
+    # boolean
+
+
+    +   - default value = false
+
+
+    +   - 1 bit
+
+
+    +   - Possible values: true and False
+
+
+    +   - This data type is used for implementing flags.
+
+
+    # Char'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'maximum value = ''\uffff'' (or 65, 535 inclusive)
+
+
+    +   - minimum value = ''\u0000'' (or 0)
+
+
+    +   - 16-bit Unicode character
+
+
+    +   - This data type is specifically used for storing characters.
+
+
+    # Reference data types
+
+
+    As the name suggests, reference variables variables that are used for accessing
+    an object. They are usually created using class constructors and their type, once
+    defined, cannot be changed. Array variables and class objects reference variables.
+    Lastly, the default value in this case is null.
+
+
+    # Java Literals
+
+
+    Literal is used to represent a fixed value. They are declared as variables and
+    have a data type. Sample declaration of a literal is - Char x = ''X'';
+
+
+    You may notice integers and float with different bases. As a rule, any literal
+    value that has 0 prefix is octal numbers while 0x prefix indicates hexadecimal
+    numbers. If you are working with strings, then string literals are always defined
+    as sequence of characters enclosed within double inverted commas. Another set
+    of characters that you will work with is escape characters. A list of escape characters
+    has been given below –
+
+
+    +   - Carriage Return (\r)
+
+
+    +   - NEWLINE (\n)
+
+
+    +   - backspace (\b)
+
+
+    +   - Formfeed (f)
+
+
+    +   - Tab (t)'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '+   - Space (\s)
+
+    - Single quote (\'')
+
+    - double quote (\")
+
+    - hexadecimal character (\uxxxx)
+
+    - Octal character (\ddd)
+
+    - backslash (\\)'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Chapter 4: Variables
+
+
+    The simplest definition of a variable is that it is a name given to some memory
+    area. however, there are many types of variables, which java supports. On the
+    basis of the type of variable, the following parameters are determined –
+
+
+    +   - Size of memory blocked for the variable.
+
+
+    +   - Layout of the blocked memory.
+
+
+    +   - Operations that can be performed on the variable.
+
+
+    +   - Range of values that the variable can hold.
+
+
+    As a rule, every variable needs to be declared before use. The standard statement
+    for variable declaration is data_type variable_name;
+
+
+    here, data_type is the data type of the variable while variable_name is the identifier
+    used for the variable. If you are using multiple variables of the same type, you
+    can club them in the same statement by specifying the name of the variables in
+    a comma-separated manner. As mentioned previously, java supports three types of
+    variables namely, class variable, instance variable and local variables. This
+    chapter explains these variable types in detail.
+
+
+    # Local Variables
+
+
+    Variables that are declared inside a method or block of code are local to the
+    scope and called local variables. The variable is created as and when it is declared
+    and defined in the block. moreover, the variable is destroyed once the scope of
+    the block gets over. Variables of this type cannot make use of access modifiers
+    (described later in this chapter).
+
+
+    Since, this type of variable is alive within the scope of the method or block,
+    it can only be accessed within this block of code. Internally, local variables
+    are created at the stack-level. So, when they are created, they are pushed onto
+    stack and as soon as the block finishes execution, the stack is emptied. Lastly,
+    the default'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: value for local variables is garbage. So, these variables have to be initialized
+    for use.
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "Sample code to illustrate the working of local variables has been given below.\
+    \ It implements a local variable agep in the method is the class, which is accessed\
+    \ from the main method.\n\n```\nPublic class lvdemo {\n    Public void puppyage()\
+    \ {\n        Int agep = 0;\n        Agep = agep + 10;\n        System.out.println(\"\
+    Age of the puppy is : \" + agep\\);\n    }\n\n    Public static void main(String\
+    \ args[]) {\n        Lvdemo testobj = new Lvdemo();\n        Testobj.puppyage();\n\
+    \    }\n}\n```\n\nThe output of this code has been illustrated in the image below.\n\
+    \n![](img/73ee4bf5cc63fca6a92dbd634bd146b7_30_0.png)"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# Instance Variables\n\nVariables that are created as part of the class, but\
+    \ do not lie within the scope of any method or constructor are referred to as\
+    \ instance variable. The reason why these variables are called instance variables\
+    \ is that they are created only once the object is created using class. Therefore,\
+    \ these variables are created for every object instantiated for this class using\
+    \ the new keyword.\n\nmoreover, these variables are destroyed as soon as the object\
+    \ is deleted or the program execution terminates. These variables can be accessed\
+    \ from the method or constructors implemented for this class. It would not be\
+    \ wrong to state that instance variables are class-level variables that can make\
+    \ use of access modifiers.\n\nThese variables have default values. For instance,\
+    \ the default values for all numbers is 0 and that for boolean is false. The object\
+    \ references as reference variables are initialized as null. While declaration\
+    \ of variables is a must, assignment can be done inside the methods or constructors.\
+    \ If you are working inside the same class, you can directly access the variable\
+    \ by its name. however, if you wish to access it from any static method, then\
+    \ you will need to access it using the format –\n\n```\nObject_name.variable_name\n\
+    ```\n\nSample code has been given below to help you understand the concept better.\
+    \ This class implements a class for employees and initializes the variables of\
+    \ the class using initialization methods.\n\n```\nImport java.io.*;\n```\n\n```\n\
+    Public class demoemployee {\n    Public String nameemp;\n    Private double salary;\n\
+    \    Public demoemployee(String initname) {\n        nameemp = initname;\n   \
+    \ }\n\n    Public void initsalary(double inits) {\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '```
+
+    Salaryemp = iinitsal;
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\n}\nPublic void printemployee() {\n    System.out.println(\"Employee name\
+    \ = \" + наемеер \");\n    System.out.println(\"Employee Salary = \" + salaryemp);\n\
+    n\n```\n\n```\n}\nPublic static void main(String args[]) {\n    demoemployee демовроj\
+    \ = new demoemployee(\"жамес\");\n    Демовроj.initsalary(5000);\n    Демовроj.printemployee();\n\
+    }\n```\n\n}\nThe output of this code has been illustrated in the image shown below.\n\
+    \n![](img/73ee4bf5cc63fca6a92dbd634bd146b7_33_0.png)"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Static Variables
+
+
+    Any variable that is declared with the keyword static and is placed within the
+    class, but outside the methods, constructors or any other code block inside the'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "Class. Only one copy of this variable is maintained for the whole class irrespective\
+    \ of the number of objects that may be created for this class. Therefore, these\
+    \ variables are also referred to as class variable.\n\nAs a recommendation, these\
+    \ variables must not be used. however, there may be scenarios that require such\
+    \ an implementation, however, whenever variables are used, you must use them as\
+    \ constants, for which values cannot be changed. These variables are created when\
+    \ the program execution starts. however, they are destroyed only once the program's\
+    \ execution terminates.\n\nClass variables are visible for all elements of the\
+    \ class. Therefore, their visibility is similar to that of instance variables.\
+    \ In fact, the default values for class variables are also same as that of instance\
+    \ variables. The access to these variables can be made using the following statement\
+    \ \\u\n\n```\nClass_name.variable_name\n```\n\nSample code for implementation\
+    \ of static variables is given below.\n\n```\nImport java.io.*;\n\nPublic class\
+    \ svdemo {\n    Private static double salaryemp;\n    Public static final String\
+    \ departmentemp = \"devrd \";\n    Public static void main(String args[]) {\n\
+    \        salaryemp = 1000;\n        System.out.println(departmentemp + \"Salary\
+    \ = \" + salaryemp);\n    }\n}\n```\n\nThe output of the code can be seen in the\
+    \ image shown below."
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# modifier types\n\nThe behavior and access to the variables can be modified\
+    \ using modifiers. There are two main types of modifier types namely access modifiers\
+    \ and non-access modifiers.\n\nAccess control modifiers\n\n+   - Java supports\
+    \ several access levels and each of this level has a corresponding keyword for\
+    \ it. These include \n- Public\n\n+   - Accessible to everyone"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '+   o Private
+
+
+    +   * Accessible to the class
+
+
+    +   o Protected
+
+
+    +   * Accessible to the class and its subclasses
+
+
+    +   o default
+
+
+    +   * If no keyword is mentioned, the variable is accessible to the package.
+
+
+    +   o NON-access modifiers
+
+
+    There are other modifiers, which are also available IN java. These include –'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '+   - Static
+
+    - Final
+
+    - Abstract
+
+    - Volatile and synchronized'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Chapter 5: operators
+
+
+    Variables can be manipulated using operators. There are six classes of operators
+    supported by java. Each of these classes has been discussed in detail below.
+
+
+    # Arithmetic operators
+
+
+    All mathematical operations are performed using operators that fall under the
+    category of arithmetic operators. List of supported operators have been given
+    below.
+
+
+    Addition (+)
+
+
+    This operator performs addition between two numbers. If a and b are two variable
+    holding 5 and 6 respectively. Then, c = a+b, will yield c = 11.
+
+
+    Multiplication (*)
+
+
+    This operator performs multiplication between two numbers. If a and b are two
+    variable holding 5 and 6 respectively. Then, c = a*b, will yield c = 30.
+
+
+    Subtraction (-)
+
+
+    This operator performs subtraction between two numbers. If a and b are two variable
+    holding 5 and 6 respectively. Then, c = a-b, will yield c = -1.
+
+
+    division (/
+
+
+    This operator performs addition between two numbers. If a and b are two variable
+    holding 10 and 5 respectively. Then, c = a/b, will yield c = 2.
+
+
+    modulus (%)
+
+
+    This operator returns the remainder left after dividing the two numbers. If a
+    and b are two variable holding 10 and 5 respectively. Then, c = a%b, will yield
+    c = 0.
+
+
+    Increment (++)'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'This operator adds 1 to the value of the variable. If a is a variable holding
+    the value 1, then a++ will yield the value 2.
+
+
+    decrement (--).
+
+
+    This operator reduces 1 from the value of the variable. If a is a variable holding
+    the value 1, then a-- will yield the value 0.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Relational operators
+
+
+    All operations involving comparison are performed using relational operators.
+    A list of the operators supported by this programming language is given below
+    –
+
+
+    not EQUAL to (=).
+
+
+    This operator is applied on two operands. It checks equality between two operands.
+    If they are equal, it returns FALSE else it return true.
+
+
+    EQUAL to (==).
+
+
+    This operator is applied on two operands. It checks equality between two operands.
+    If they are equal, it returns true else it return FALSE.
+
+
+    greater than (>).
+
+
+    This operator is applied on two operands. It checks equality between two operands.
+    If the first operand is greater than the second operand, it returns true else
+    return FALSE.
+
+
+    LESS than (<).
+
+
+    This operator is applied on two operands. It checks equality between two operands.
+    If the first operand is less than the second operand, it returns true else return
+    FALSE.
+
+
+    greater than or EQUAL to
+
+
+    This operator is applied on two operands. It checks equality between two operands.
+    If the first operand is greater or equal to the second operand, it returns true
+    else return FALSE.
+
+
+    LESS than or EQUAL to
+
+
+    This operator is applied on two operands. It checks equality between two operands.
+    If the first operand is less or equal to the second operand, it returns true else
+    return FALSE.
+
+
+    # bitwise operators
+
+
+    The only difference between normal operators and bitwise operators is that these
+    operators perform operations bit-by-bit. moreover, these'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'operators can be applied on byte, int, short, long and char. The list of bitwise
+    operators supported in java include –
+
+
+    bitwise And (&)'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'This operator works on two operands and the output for each set of input bits
+    is 1 if both the inputs are one else the output is zero.
+
+
+    ```
+
+    bitwise or (|).
+
+    ```
+
+
+    This operator works on two operands and the output for each set of input bits
+    is 1 if one or both of the inputs is one else the output is zero.
+
+
+    ```
+
+    bitwise xor (^).
+
+    ```
+
+
+    This operator works on two operands and the output for each set of input bits
+    is 1 only if one of the inputs is one else the output is zero.
+
+
+    ```
+
+    bitwise complement (~).
+
+    ```
+
+
+    This operator works on a single operand and negates the values from 0 to 1 and
+    from 1 to 0.
+
+
+    ```
+
+    Left shift (<<).
+
+    ```
+
+
+    This operator works on two operands. The bits of the left operand are shifted
+    left. The number of places is equal to the number specified as value for the second
+    operand.
+
+
+    ```
+
+    Right shift (>>).
+
+    ```
+
+
+    This operator works on two operands. The bits of the left operand are shifted
+    right by the number specified as value for the second operand.
+
+
+    ```
+
+    Zero FILL right shift (>>>).
+
+    ```
+
+
+    This operator works on two operands. The bits of the left operand are shifted
+    right by the number specified as value for the second operand. moreover, 0 replaces
+    the bits that are shifted.
+
+
+    In order to understand how bitwise operations take place, let us take an example.
+    Assume two variables, a and b, having the values 60 and 13 respectively. The binary
+    equivalent of a and b are as follows
+
+
+    ```
+
+    A = 00111100
+
+    ```
+
+
+    ```
+
+    b = 00000101
+
+    ```
+
+
+    Using the And truth table according to which the output is 1 only if both the
+    inputs are 1. Correspondingly, the output of a&b ='
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '00001100. Similarly other bitwise operations can also be performed.
+
+
+    # Logical operators'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'All the logical operations in Java are performed using logical operators. The
+    list of
+
+    operators supported by this programming language is given below.
+
+
+    # Logical And
+
+
+    This operator works on two operands. If both the operands are non-
+
+    zero, the expression returns true else it returns FALSE.
+
+
+    # Logical or
+
+
+    This operator works on two operands. If one or both the operands
+
+    are non-zero, the expression returns true else it returns FALSE.
+
+
+    # Logical not
+
+
+    This operator works on one operand. If the operand is zero, this
+
+    expression returns true else it returns FALSE.
+
+
+    # Assignment operators
+
+
+    The list of assignment operators supported by Java
+
+    include – Simple Assignment operator (=)
+
+    This operator assigns the value computed by the right hand side to the variable
+    on
+
+    t left hand side. If a, b and c are three variable and the expression is c = a+b,
+
+    then the value addition of a and b is assigned to c.
+
+
+    # Add And Assignment operator (+=)
+
+
+    This operator assigns the value computed by the addition of right
+
+    hand side and left c to the variable on the left hand side. If
+
+    a and c are two variable and the expression is c += a, then the value
+
+    of addition of a and c is assigned to c.
+
+
+    # Subtract And Assignment operator (-=)
+
+
+    This operator assigns the value computed by the subtraction of right hand
+
+    from left hand side to the left hand side. If a and c are two variable
+
+    and the expression is c -= a, then the value of c-a is assigned to c.
+
+
+    # multiply And Assignment operator (*=)
+
+
+    This operator assigns the value computed by the multiplication of right hand side
+
+    left hand side to the variable on the left hand side. If a and c are two variable
+
+    and the expression is c *=, then the value of c* is assigned to c.
+
+
+    # divide And Assignment operator (/=)'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'This operator assigns the value computed by the division of left hand side
+    with right hand side to the variable on the left hand side. If a and c are two
+    variable variable and the expression is c /= a, then the value of c/a is assigned
+    to c.
+
+
+    # modulus And Assignment operator (%=)
+
+
+    This operator assigns the value computed by the modulus of left hand side with
+    right hand side to the variable on the left hand side. If a and c are two variable
+    and the expression is c %= a, then the value of c%%a is assigned to c.
+
+
+    # Left Shift And Assignment operator (<<)
+
+
+    If a and c are two variable and the expression is c <= a, then the value of c<<a
+    is assigned to c.
+
+
+    # Right Shift And Assignment operator (>=)
+
+
+    If a and c are two variable and the expression is c >= a, then the value of c>>a
+    is assigned to c.
+
+
+    # bitwise And Assignment operator (&=)
+
+
+    If a and c are two variable and the expression is c &= a, then the value of c&a
+    is assigned to c.
+
+
+    # bitwise xor And Assignment operator (^=)
+
+
+    If a and c are two variable and the expression is c ^= a, then the value of c^a
+    is assigned to c.
+
+
+    # bitwise Inclusive or and Assignment operator (|=)
+
+
+    If a and c are two variable and the expression is c |= a, then the value of c|a
+    is assigned to c.
+
+
+    # Operator Precedence
+
+
+    If an expression uses multiple operators, then operator precedence rules are used
+    to determine the order to execution of operations. The precedence of operators
+    in terms of whether they will be evaluated from right to left or left to right
+    is defined for groups of operators in the following manner –
+
+
+    Right to Left
+
+
+    +   - Unary
+
+
+    +   - Conditional'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Assignment'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Left to Right
+
+
+    +   * Postfix
+
+    * multiplicative
+
+    * Additive
+
+    * Shift
+
+    * Relational
+
+    * Equality
+
+    * bitwise And
+
+    * bitwise xor
+
+    * bitwise or
+
+    * Logical And
+
+    * Logical or
+
+
+    For example, if we have to evaluate the expression a = 3 + 5 * 5, then multiplication
+    is performed before addition. Therefore, a = 28 instead of 40.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Chapter 6: objects and classes
+
+
+    To start with, let us understand the concept of classes and objects. Class is
+    a template, which is used to create objects. Objects are real entities that interact
+    and form the core element of the java program. Three types of variables can exist
+    in a class. Firstly, variables are defined inside the class, but outside the method.
+    Such variables are defined for each object and are termed instance variables.
+
+
+    besides this, variables can exist inside the method block of the class. These
+    variables are private to the method and are local variables. Any variable that
+    is declared within a class, outside the method block, using the word static is
+    called class variable.
+
+
+    # Creating objects
+
+
+    Evidently, as the class is a template, you will need to create objects using this
+    template. The keyword ''new'' is used. Creation of an object involves three steps.
+    The first step is to declare a variable for the object. The second step is to
+    create an object using the new. Lastly, the object needs to be initialized using
+    the constructor for the class.
+
+
+    In you omit the third step, java uses the default constructor method for object
+    initialization. All these three steps are combined into one statement for object
+    creation. For example, we have a class democlass and we wish to create object
+    o1, then this can be done using the statement –
+
+
+    ```
+
+    democlass o1 = new democlass
+
+    ```
+
+
+    The variables and methods of the class for which the object can be accessed using
+    ''.'' operator. Therefore, if we have a class democo with the variable x and we
+    create an object o1, then we can access x using the following statement: o1.x.
+
+
+    # Constructors
+
+
+    When you get down to creating classes and objects, the first thing that you need
+    to do is initialize the object. java has a dedicated method implementation for
+    initialization, which is called constructor. These elements are implemented'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "Like methods, but they carry the same name as the class and have no return\
+    \ type.\n\nSo, where can you use a constructor? You can use it whenever you are\
+    \ creating an object of a class and you need to initialize some parameters or\
+    \ perform some function that is common to all the objects of the class. For example,\
+    \ if you create a class called rectangle. You can create a constructor to initialize\
+    \ the length and breadth of the rectangle.\n\nIf you don't define a constructor,\
+    \ java uses the default constructor for your program. This constructor program\
+    \ initializes the value of all the parameters of the class to zero. So, if you\
+    \ have created a class, your program will have an active constructor irrespective\
+    \ of whether you define it explicitly or not.\n\nLet us now create a class with\
+    \ an explicit constructor and see how the concept works.\n\n```\nClass Sampleclass\
+    \ {\n  Int i;\n  Sampleclass() {\n    i = 100;\n  }\n}\nPublic class demosampleclass\
+    \ {\n  Public static void main(String args[]) {\n    Sampleclass c1 = new\n  \
+    \  Sampleclass1(); Sampleclass c2 = new\n    Sampleclass1();\n    System.out.println(c1.i\
+    \ + \"\\n\" + c2.i);\n  }\n}\n```\n\nThe screenshot shown below illustrates the\
+    \ code and the output generated for the code upon execution. In order to run this\
+    \ code,"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: you need to create two files, each with the name of the class it contains.
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# Execute Main File Support Class File
+
+
+    ```
+
+    1- public class DemoSampleClass {
+
+    2    public static void main(String[] args) {
+
+    3      SampleClass c1 = new SampleClass();
+
+    4      SampleClass c2 = new SampleClass();
+
+    5      System.out.println(c1.i + " \n" + c2.i);
+
+    6    }
+
+    7 }
+
+    ```
+
+
+    # Result
+
+
+    Compiling the source code...
+
+    javac DemoSampleClass.java SampleClass1.java 2>&&1
+
+
+    Executing the program...
+
+    java -Xmx128M -Xms16M DemoSampleClass SampleClass1
+
+    100
+
+    100
+
+
+    # Execute Main File Support Class File
+
+
+    ```
+
+    1- class SampleClass1 {
+
+    2    int i;
+
+    3    SampleClass1() {
+
+    4      i = 100;
+
+    5    }
+
+    6 }
+
+    ```
+
+
+    # Result
+
+
+    Compiling the source code...
+
+    javac DemoSampleClass.java SampleClass1.java 2>&&1
+
+
+    Executing the program...
+
+    java -Xmx128M -Xms16M DemoSampleClass SampleClass1
+
+    100
+
+    100'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "IN the example shown above, we gave the parameter static values. however, your\
+    \ program may require dynamic initialization of parameters. For this, you need\
+    \ to implement parameterized constructors. Such constructors accept the value\
+    \ in the form of a parameter to the constructor method. Sample implementation\
+    \ has been given below.\n\n```\nClass Sampleclass2 {\n  Int i;\n}\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "```\nSampleclass2(int x) {\nI = x;\n}\n```\n\nPublic class demosampleclass2\
+    \ {\nPublic static void main(String args[]) {\n\n```\nSampleclass2 c1 = new\n\
+    Sampleclass2(100); Sampleclass2 c2\n= new Sampleclass2(200);\nSystem.out.println(c1.i\
+    \ + \"\\n\" + c2.i); \n}\n```\n\nThe output for this code has been illustrated\
+    \ in the image shown below.\n\n![](img/73ee4bf5cc63fca6a92dbd634bd146b7_54_0.png)"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'IN reference to the implementation of constructors, a keyword is specifically
+    used. This keyword is the ''this'' keyword. It is used to refer to the object
+    of the class under consideration. With the help of this keyword, variables of
+    the class can be accessed inside the constructor or methods. The use of this keyword
+    has been illustrated in the code given below.
+
+
+    ```
+
+    Class Sampleclass3 {
+
+    ```'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "```\nInt i;\nSampleclass3(int i) {\n  This.i = i;\n}\n```\n\n```\nPublic class\
+    \ demosampleclass2\nPublic static void main(String args[]) {\n  Sampleclass3 c1\
+    \ = new Sampleclass3(200);\n  Sampleclass3 c2 = new Sampleclass3(200);\n  System.out.println(c1.i\
+    \ + \"\\n\" + c2.i);\n}\n```\n\n# Upon execution, this code gives the following\
+    \ output -\n\n![](img/73ee4bf5cc63fca6a92dbd634bd146b7_56_0.png)"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Variable Arguments
+
+
+    In some programs, there may be a requirement where you don''t know the exact number
+    of arguments that the main method will give during execution. To allow dynamicity
+    of this level, var-args or variable arguments are used. Var-args are declared
+    in the method parameter using the syntax:'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "<type>...<var_name>\n\nThe var_name given in the variable declaration is an\
+    \ array that contains all the variable values sent by the main method while executing\
+    \ before implementing this concept, you need to remember two things –\n\n+   Only\
+    \ one var-args can be implemented per method.\n\n+   If the method has other arguments\
+    \ (regular in nature), these arguments must appear before the var-args. In other\
+    \ words, var-args must be the last argument in a method.\n\nA sample implementation\
+    \ of this concept is given below.\n\n```\nPublic class demovarargs {\n    Public\
+    \ static void main(String args[]) {\n        Printnum(56.5, 3, 34, 2, 3);\n  \
+    \      Printnum(new double[][]{2, 1, 3});\n    }\n    Public static void printnum(\
+    \ double... number) { if (number.length == 0) {\n        System.out.println(\"\
+    no argument passed\"); return;\n    }\n    double resultnum = number[0];\n   \
+    \ For (int x = 1; x < number.length; x++)\n    If (number[x] > resultnum)\n  \
+    \      Resultnum = number[x];\n    System.out.println(\"the maximum value in the\
+    \ number set is \" + resultnum);\n}\n```"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    The output for the code is illustrated in the image shown below.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Implementing methods
+
+
+    A group of instructions that are used for performing an operation is referred
+    to as a method. You can see that the print statement in most of the programs above
+    calls a method system.out.println(). This method prints the string supplied to
+    it on the screen.
+
+
+    just like this inbuilt method, the developer can also create methods specific
+    to the problem statement. User defined methods may or may not have parameters
+    and may or not return values. The standard statements for creating a method is
+    –
+
+
+    Public static int methoddemo(int i, int j) {
+
+
+    ![](img/73ee4bf5cc63fca6a92dbd634bd146b7_60_0.png)'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '```
+
+    /*Body*/
+
+    }
+
+    here, methoddemo is the name of the method and i j are int parameters that this
+    method accepts. The logic for the method implementation is given inside the curly
+    brackets, besides this, you also notice three words written in the function declaration
+    – public, static and int. here, int is the return type of the method while public
+    static is the modifier. This sample method can be modified to suit the requirements
+    of the developer.
+
+    ```'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "A sample code for method implementation is presented below – public static\
+    \ int minaldemo (int num1, int num2) {\n\n```\nInt minval;\nIf (num1 > num2)\n\
+    \    minval = num2;\n  Else\n    minval = num1;\n  Return minval;\n```\n\n}\n\
+    \ method determines which value is the smallest between the two parametric values\
+    \ supplied to it and returns this to the calling method. now that you have an\
+    \ idea about methods and how they are implemented, it is time we discuss about\
+    \ how these methods are used in the overall code.\n\n# Calling a method\n\nA method\
+    \ needs to be called or invoked for it to be used. As you can see in the sample\
+    \ code given above, the method is performing some computation and returning the\
+    \ result of the computation. Such a method returns a value whose return is already\
+    \ specified in the method declaration. Apart from this, another type of method\
+    \ also exists. Such methods do not return anything and are popularly referred\
+    \ to as methods with no return value.\n\nWhen a program calls a methods, the control\
+    \ moves from the program to the method and the same starts executing. Once a return\
+    \ statement is encountered, the control is transferred back to the calling program.\
+    \ In the absence of a return statement, the control is automatically transferred\
+    \ back once a closing brace of te method is encountered. This is usually the case\
+    \ for methods that have no return value.\n\nFor methods that return a value, the\
+    \ return type is mentioned in the method declaration. On the other hand, for methods\
+    \ that do not return nothing, the return type is void. In order to call the method\
+    \ we implemented above, the following statement needs to appear somewhere in the\
+    \ calling program."
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "Int result;\n\nResult = mincaldememo(5, 6);\n\nSince the method returns an\
+    \ int value, this value needs to be gathered in an int variable (result). The\
+    \ call for the method gives the two parametric values desired by the method. This\
+    \ type of method calling is also called parametric method calling or passing parameters\
+    \ by value.\n\nYou may come across situations where you may have parameters of\
+    \ different types and many parameters in number. In such cases, be sure to give\
+    \ the parameter values in the desired order to avoid any uninvited compilation\
+    \ or runtime errors.\n\n# method overloading\n\nIt is possible to have methods\
+    \ with the same name, but different parameters. When a method is called, the system\
+    \ detects the method with the parameter type and number given in the calling statement\
+    \ and transfers control to the corresponding method. This form of method implementation\
+    \ is called method overloading. do not confuse this concept with overriding. In\
+    \ method overriding, the method name, parameters and number of parameters are\
+    \ also same.\n\nIn order to understand this concept, let us take an example –\n\
+    \n```\nPublic class overloadingdememo {\n    Public static void main(String[]\
+    \ args) {\n    Int x = 34;\n    Int y = 56;\n    double z = 10.5;\n    double\
+    \ u = 7.8;\n    Int resultxy = mincaldememo(x, y);\n    double resultzu = mincaldememo(z,\
+    \ u);\n    System.out.println(\"MIN Value (Integers) = \" + resultxy);\n```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '```
+
+    System.out.println("min Value (double) = " + resultzu);
+
+    ```'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\n}\nPublic static int mincaldemo (int num1, int num2) {\n    Int minval;\n\
+    \    If (num1 > num2)\n        minval = num2;\n    Else\n        minval = num1;\n\
+    \    Return minval;\n}\n```\n\n```\nPublic static double mincaldemo (double num1,\
+    \ double num2) {\n    double minval;\n    If (num1 > num2)\n        minval = num2;\n\
+    \    Else\n        minval = num1;\n    Return minval;\n}\n\n```\n\nThe code implements\
+    \ two methods with the same name mincaldemo with two different parameter types.\
+    \ One of the methods uses two parameters of int type and has the return type int.\
+    \ On the other hand, the other method implementation uses double parameters and\
+    \ returns a double. The output for this code has been illustrated in the image\
+    \ shown below."
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# making Use of command Line Arguments
+
+
+    There are some programs that require you to pass parameters while executing the
+    program at runtime. Such parameters can be passed to the program in the form of
+    command line arguments. These parameters are given to the program along with the
+    name of the program while giving the execution command on the command line. The
+    manner in which these parameters can be accessed inside a program has been shown
+    in the sample code given below.
+
+
+    Public class commandlineargdemo {
+
+
+    ```
+
+    Public static void main(String args[]) {
+
+    For(int x = 0; x<args.length; x++) {
+
+    ```
+
+
+    ![](img/73ee4bf5cc63fca6a92dbd634bd146b7_66_0.png)'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '```
+
+    System.out.println("args[" + x + "]: " + args[x]);
+
+    }
+
+    }
+
+    ```
+
+
+    give the following command from the command line to execute the program and see
+    what result you get.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# $Java commandlineargdemo 200 100 10 8 7 6
+
+
+    this is the finalize() method
+
+
+    You are dealing with a lot of objects in Java programming and all these objects
+    take up their space in the memory. If you are working on a large scale code, you
+    may be required to clear the space occupied by these objects before terminating
+    the program. To facilitate this operation, a garbage collector method is available
+    in Java, which is called finalize()method.
+
+
+    This method can be used to implement all the operations that you would like the
+    program to do before it terminates. Some of these operations include closing all
+    the files opened, deleting all the objects created and releasing any other memory
+    occupied by program elements. This method is implemented in the following manner
+    -
+
+
+    ```
+
+    protected finalize() {
+
+
+    }
+
+    ```
+
+
+    The access modifier ''protected'' is used in the declaration of the finalize()
+    method to prevent any external program from destroying the code even before it
+    executes.
+
+
+    # declaration Rules for Source File
+
+
+    There are some rules that you need to follow while writing import statement, class
+    declarations and package statements in the source file. These rules are as follows
+    –
+
+
+    +   - A source file cannot have more than one public class.
+
+
+    +   - There are MANY NON-public classes in a source file.
+
+
+    +   - The name of the source file should be same as the name of the public class
+    in that file. moreover, the extension of the source file should be .Java.
+
+
+    +   - If you are working on a package and the class being implemented as part
+    of the package, then the first statement in the source file must be a package
+    statement.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: +   * The package statement must be the first statement in the source file.
+    Any other import statements must follow this package statement. Lastly, the class
+    implementation must be present.
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: 'It is important for you to understand that the package and import statements
+    are common to all the classes in the source file. It is not possible to have different
+    package and import statements for different classes in one source file.
+
+
+    +   before we end this discussion, let us give you a closing statement on packages.
+    It is just a form of classification for interfaces and classes. When you work
+    on large java projects, the use of packages helps in organizing the code and making
+    it manageable as well as readable.
+
+
+    When you are using a class in a source file, but the implementation of the class
+    is present in another file, then you will need to tell the compiler the location
+    of this file. This is where import statements get their use. Using import statement,
+    you link source files and classes that are used in the concerned source file,
+    but their implementation is present in other files.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "# Chapter 7: decision making\n\nThe decision making structures are used in\
+    \ situations where a set of instructions have to be executed if the condition\
+    \ is true and another set of instructions have to be executed when the condition\
+    \ is determined to be false. There are several constructs available in java for\
+    \ programming such scenarios. These structures include –\n\n# If statement\n\n\
+    This statement is used in situations where a condition needs to be tested and\
+    \ if the condition is found true, the block of code that follows this statement\
+    \ needs to be executed. The syntax for this construct is –\n\n```\nIf(condition){\n\
+    /*body*/\n}\n```\n\nSample implementation for this construct is given below –\n\
+    \n```\nPublic class demo {\n  Public static void main(String args[]) {\n    Int\
+    \ i = 10;\n    Int j = 1;\n    If(i>j){\n      System.out.print(i);\n    }\n \
+    \ }\n}\n```\n\nThe output of this code upon execution is as follows –"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# If else statement\n\nThis statement is used IN situations where a condition\
+    \ needs to be tested and if the condition is found true, the block of code that\
+    \ follows this statement needs to be executed else the block of code that follows\
+    \ the else statement is executed. The syntax for this construct is –\n\n```\n\
+    If(condition){\n  /*body*/\n}\nElse(\n```\n\n![](img/73ee4bf5cc63fca6a92dbd634bd146b7_72_0.png)"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "```\n/* Body*/ /\n}\nSample implementation for this construct is given below\
+    \ –\nPublic class ifelsedemo {\n    Public static void main(String[] args) {\n\
+    \        Int i = 1;\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "```\nInt j = 0;\nIf(i>j){\n    System.out.print(i);\n}\nElse{\n    System.out.print(j);\n\
+    }\n```\n\nThe output of this code upon execution is as follows –\n\n![](img/73ee4bf5cc63fca6a92dbd634bd146b7_74_0.png)"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# nested if statement
+
+
+    This statement is used in situations where a condition needs to be tested and
+    if the condition is found true, the block of code that follows this statement
+    needs to be executed else the next condition is tested. If this condition is found
+    true, the block of code corresponding to the if statement for this condition is
+    executed. If none of the conditions are found true, the block of code that'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "Follows the else statement is executed. multiple conditions can be tested using\
+    \ the nested if statements. The syntax for this construct is -\n\n```\nIf(condition1)\
+    \ {\n/* Body*/\n}\n```\n\n```\nElse if (condition2) (\n/* Body*/\n}\n```\n\n```\n\
+    Else {\n/* Body*/\n}\n```\n\nSample implementation for this construct is given\
+    \ below –\nPublic class nestedifdemo {\n\n```\nPublic static void main(String\
+    \ args[]) {\n  Int i = 0;\n  Int j = 0;\n  If(i>j){\n    System.out.print(i);\n\
+    \  }\n  Else if(j>i) {\n    System.out.print(j);\n  }\n  Else {\n    System.out.print(\"\
+    Equal\");\n  }\n}\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    The output of this code upon execution is as follows –'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# Switch\n\nIf you have a variable and different blocks of code need to be\
+    \ executed for different values of that variable, the ideal construct that can\
+    \ be used is the switch statement. The syntax for this construct is -\n\n```\n\
+    Switch(variable){\n```\n\n```\nCase <value1>:\n    *body*/\n    break;\nCase <value2>:\n\
+    ```\n\n![](img/73ee4bf5cc63fca6a92dbd634bd146b7_78_0.png)"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '```
+
+    /* Body */
+
+    break;
+
+    case <value3>:
+
+    /* Body */
+
+    break;
+
+    default:
+
+    ```'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\n/* body */\nbreak;\n}\n```\n\nSample implementation for this construct\
+    \ is given below – public class switchdemo {\n\n```\nPublic static void main(String\
+    \ args[]) {\n    Int i = 5;\n    Switch (i) {\n        Case 0:\n            System.out.print(0);\n\
+    \            break;\n        Case 2:\n            System.out.print(2);\n     \
+    \       break;\n        Case 5:\n            System.out.print(5);\n          \
+    \  break;\n        default:\n            System.out.print(999);\n            break;\n\
+    \    }\n}\n```\n\nThe output of this code upon execution is as follows –"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# Conditional operator
+
+
+    Java also supports the conditional operator, which is also KNOWN as the ?: operator.
+    This operator is used to replace the ‘if else’ construct. Its syntax is as follows
+    –
+
+
+    Expression1 ? Expression2 : Expression3
+
+
+    here, Expression1 is the condition that is to be tested. If the condition is true,
+    Expression2 is executed else Expression3 is executed.
+
+
+    ![](img/73ee4bf5cc63fca6a92dbd634bd146b7_81_0.png)'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Chapter 8: Loop control
+
+
+    There are several situations that require you to iterate the same set of instructions
+    a number of times. For instance, if you need to sort a set of numbers, you will
+    need to scan and rearrange the set several times to get the desired arrangement.
+    This flow of execution is known as loop control.
+
+
+    Simply, a loop is a construct that allows execution of a block of code many times.
+    Java supports several constructs that can be used for implementing loops. These
+    include while loop, for loop and do while loop.
+
+
+    +   - A while loop executes a block of code iteratively until the condition specified
+    for the while loop is true. The moment this condition fails, while loop stops.
+
+
+    +   - For loop allows the programmer to manipulate the condition and loop variable
+    in the same construct. Therefore, you can initialize a loop variable, increment/decrement
+    it and run the loop until a condition on this variable is true.
+
+
+    do while loop is similar to while loop, however, in the while loop, the condition
+    is checked before executing the block code. On the other hand, in a do while loop,
+    the block of code is executed and then the condition is checked. If the condition
+    is satisfied, the loop execution is again initiated else the loop is terminated.
+    It would not be wrong to state that the do while loop once implemented will execute
+    at least once.
+
+
+    # Loop statements
+
+
+    There are two keywords that are specifically used in connection with loops and
+    are also termed as control statements as they allow transfer of control from one
+    section of the code to a different section. These keywords are –
+
+
+    break
+
+
+    This keyword is used inside the loop at a point where you want the execution flow
+    to terminate the loop and directly start execution from the first instruction
+    that appears after the loop.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '*Continue*'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "This keyword is used inside the loop at a point where the programmer wants\
+    \ the computer to overlook the rest of the loop and move the control to the first\
+    \ statement of the loop.\n\nIn order to help you understand how loops are executed,\
+    \ let us take an example and implement it using all the three types of loop control.\n\
+    \n# For Loop Implementation\n\n```\nPublic class fordemo {\n    Public static\
+    \ void main(String[] args[]) {\n        Int [] numberarray = {100, 300, 500, 700,\
+    \ 900};\n        For(int i=0; i<5; i++) {\n            System.out.print(numberarray[i]);\n\
+    \            System.out.print(\",\");\n        }\n    }\n}\n```\n\nThe output\
+    \ of this code upon execution is as follows –"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "# While Loop Implementation\n\nPublic class whileledemo {\n\n```\nPublic static\
+    \ void main(String args[]) {\n    Int [] numberarray = {100\n```"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '```
+
+    }
+
+    System.out.print("\n");
+
+    }
+
+    ```
+
+
+    The output of this code upon execution is as follows –'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# do While Loop Implementation\n\nPublic class dowhiledemo {\n\npublic static\
+    \ void main(String args[]) {\n\nInt [] numberarray = {100, 300, 500, 700, \n900);\
+    \ int i = 0;\n\ndo {\n\n```\nSystem.out.print(numberarray[i]);\n```\n\n```\nSystem.out.print(\"\
+    , \");\n```\n\n```\ni++;\n```\n\n![](img/73ee4bf5cc63fca6a92dbd634bd146b7_87_0.png)"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "```\n } while (i<5);\n    System.out.print(\"\\N\");\n}\n```\n\nThe output\
+    \ of this code upon execution is as follows –"
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# # Enhanced For Loop
+
+
+    Java also supports an enhanced loop structure, which can be used for array elements.
+    The syntax for this loop construct is –
+
+
+    For(declaration : expression) {
+
+
+    ```
+
+    * body*/
+
+    }
+
+    ```
+
+
+    The declaration part of the Enhanced for loop is used to declare a variable. This
+    variable shall be local to the ''for loop'' and must have the same type as the
+    type of the array elements. The current value of the variable is always equal
+    to the array element that is being'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "traversed in the loop. The expression is an array or a method call that returns\
+    \ an array.\n\nSample implementation of the enhanced for loop has been given below\
+    \ - public class arraydemo {\n\n```\nPublic static void main(String[] args[])\
+    \ {\n  Int [] numberarray = {100, 300, 500, 700, 900};\n  For(int i : numberarray\
+    \ ) {\n```"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '```
+
+    System.out.print( i );
+
+    System.out.print("
+
+    ```
+
+
+    The output of this code upon execution is as follows -
+
+
+    ![](img/73ee4bf5cc63fca6a92dbd634bd146b7_91_0.png)'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "# # Chapter 9: File handling\n\nAll the file operations are supported by java\
+    \ under the java.io package and the implementation of these functions is based\
+    \ on the concept of streams. Stream is simply a sequence of data, which is of\
+    \ two types namely, inputstream and outputstream. While the former is used to\
+    \ read data, the latter is used to write data.\n\n# ## byte Streams\n\nThe first\
+    \ type of stream supported by java is byte stream. The i/o operations are restricted\
+    \ to 8-bit size under this category. before we get down to coding, you need to\
+    \ realize that the classes used for performing input and output are fileinputstream\
+    \ and fileoutput respectively. Let us now look at an example that copies the contents\
+    \ of one file to the other.\n\nImport java.io*\n\n```\nPublic class copyfilebs\
+    \ {\n    Public static void main(String[] args) throws exception{\n        Fileinputstream\
+    \ inputfile = null;\n        Fileoutput outputfile = null;\n        Try {\n  \
+    \          Inputfile = new fileinputstream(\"in.txt\");\n            Outputfile\
+    \ = new fileoutputstream(\"out.txt\");\n            Int i;\n            While\
+    \ ((i = inputfile.read()) != -1) {\n                Outputfile.write(i);\n   \
+    \         }\n        } finally {\n            If (inputfile != null) {\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '```
+
+    Inputfile.close();
+
+    }
+
+    If (outputfile != null) {
+
+    Outputfile.close();
+
+    }
+
+    }
+
+    }
+
+    ```
+
+
+    Keep an input file named in.txt in the same folder as the class file and execute
+    the code to see what it does.
+
+
+    # Character Streams
+
+
+    moving from 8-bit data operations to 16-bit Unicode data operations, we need to
+    switch from binary Streams to character Streams. The classes used for performing
+    input and output filereader and writer respectively. The code shown above can
+    be modified to use character streams in the following manner.
+
+
+    Import java.io.*;
+
+
+    Public class copyfiles
+
+    Public static void main(String args[]) throws ioexception {
+
+
+    ```
+
+    FileReader inputfile = null;
+
+    FileWriter outputfile = null;
+
+    Try {
+
+    Inputfile = new filereader("in.txt");
+
+    OutputFile = new filwriter("out.txt");
+
+    Int i;
+
+    While ((i = inputfile.read()) != -1) {
+
+    ```'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '```
+
+    Out.write(i);
+
+    ```'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "```\n}\n}finally {\n    If (inputfile != null) {\n        Inputfile.close();\n\
+    \    }\n    If (outputfile != null) {\n        OutputFile.close();\n    }\n}\n\
+    }\n```\n\nKeep an input file named in.txt in the same folder as the class file\
+    \ and execute the code to see what it does.\n\n# Standard Streams\n\nIn order\
+    \ to allow the user to take input from the keyboard and print the output on the\
+    \ screen, java supports the standard streams –\n\nSystem.in represents the standard\
+    \ input stream and allows user to give input via the keyboard.\n\n+   - System.out\
+    \ represents the standard output stream and allows user to get output on the screen.\n\
+    \n+   - System.err represents the standard error stream and allows user to error\
+    \ messages from the system.\n\nThe sample program given below allow the system\
+    \ to take input from the user and print the input given to the screen until the\
+    \ user hits the 'q' key after which the program quits.\n\nImport java.io.*;"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "```\nPublic class ssddemo {\n    Public static void main(String[] args) throws\
+    \ exception{\"\n```"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "```\nInputStreamreader inputc = null;\n\nTry {\n    Inputc = new inputstreamreader(System.in);\n\
+    \    System.out.println(\"Enter characters, 'q' to quit.\");\n    Char charin;\n\
+    \    do {\n        Charin = (char) inputc.read();\n        System.out.print(charin);\n\
+    \    } while(charin != 'q');\n} finally {\n    If (inputc != null) {\n       \
+    \ inputc.close();\n    }\n}\n\n```\n\nThis program can be executed to see what\
+    \ the output is and how the code works."
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# Chapter 10: Exception handling
+
+
+    Exception is any event that is unexpected, usually in manner that cannot be handled
+    by the program concerned. Obviously, the normal flow of execution of the program
+    is hampered in such a situation and the program may either terminate with an error
+    or behave abnormally. This is the reason why exceptions need to be handled by
+    the program only.
+
+
+    So, why do exceptions occur? Exceptions may occur because of a range of reasons.
+    Some of the scenarios that may lead to this inadvertent situation include –
+
+
+    +   Invalid data entry
+
+
+    +   The program is trying to open a file that is not present at the specified
+    location
+
+
+    +   The JVM has fallen short of memory
+
+
+    +   network communication is being carried out and the system loses network connection.
+
+
+    Evidently, exceptions may occur due to problems created by the system, user or
+    issues at the program level. On the basis of this observation, three classes of
+    exceptions have been created. These three classes of exceptions have been discussed
+    in chapter.
+
+
+    # Checked Exceptions
+
+
+    Exceptions that are checked and reported by the compiler at the time of compilation
+    are termed as checked exceptions. They are also called compile time exceptions
+    and need to be handled by the developer during the time he or writes code.
+
+
+    An example of exception handling for such a error is performed is in the sample
+    code given below.
+
+
+    ```
+
+    Import java.io.File;
+
+    ```'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '```
+
+    Import java.io.filereader;
+
+
+    Public class demoeh {
+
+    ```'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "```\nPublic static void main(String args[]) {\n  File filedemo = new File(\"\
+    E://samplefile.txt\");\n  Filereader infile = new Filereader(filedemo);\n}\n\n\
+    ```\n\nIf the filename and location specified while creatingfiledemo handler is\
+    \ not present at the specified location, then the compiler gives the error filenamenotexception.\n\
+    \n# # Unchecked Exceptions\n\nThere are some exceptions that happen at runtime.\
+    \ Such exceptions are called unchecked exceptions or runtime exceptions. Logical\
+    \ errors, programming bugs and wrong usage of api are examples of this type of\
+    \ error. Another important characteristic of this type of errors is that they\
+    \ are not detected at the time of compilation.\n\nTo help you understand what\
+    \ runtime errors are, let us take an example. Consider that you have implemented\
+    \ an array of 5 elements as part of your program. however, part of the code is\
+    \ accessing the 6 th element. This error will be detected at runtime and the system\
+    \ will generate the errorindexoutofboundexceptionexception.\n\n# # Errors\n\n\
+    There are some exceptions, which are beyond the control of the system or the programmer.\
+    \ A common example of such errors is stack overflow. There is hardly anything\
+    \ that you can do about these errors. So, it is best to ignore them. As and when\
+    \ they occur, they will interrupt the execution of your program, but nothing can\
+    \ be done about it.\n\n# # Exception hierarchy"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: Java has an inbuilt class named java.lang.Exception and all the exceptions fall
+    under this class. All the exception classes are subclasses of this class. moreover,
+    throwable class is the superclass of the exception class. Another
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: 'Subclass of the throwable class is the Error class. All the errors like stack
+    overflow described above fall under this Error class.
+
+
+    The Exception class has two subclasses namely runtimeexception class and ioexception
+    class. A list of the methods, for which definitions are available in java, as
+    part of the throwable class, is given below.
+
+
+    Public String.getmessage().
+
+
+    When called, this message returns a detailed description of the exception that
+    has been encountered.
+
+
+    Public throwable getcause().
+
+
+    This method when called returns a message that contains the cause of the exception.
+
+
+    Public String.toString().
+
+
+    This method returns the detailed description of the exception concatenated with
+    the name of the class.
+
+
+    Public void.printstacktrace().
+
+
+    The result of toString() along with a trace of a stack can be printed to the standard
+    error stream, System.err, can be done by calling this method.
+
+
+    Public stacktraceelement([].stacktrace()).
+
+
+    There may be some scenarios where you may need to access different elements of
+    the stack trace. This method returns an array, with each element of the stack
+    trace saved to different elements of the array. The first element of array contains
+    the top element of the stack trace while the bottom of the stack trace is saved
+    to the last element of the array.
+
+
+    Public throwable.fillstacktrace().
+
+
+    Appends the previous information in the stack trace with the current contents
+    of the stack trace and returns the same as an array.
+
+
+    # Catching Exceptions
+
+
+    The standard method to catch an exception is using the ''try and catch'' keywords
+    along with their code implementations. This try and catch block needs to be'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: implemented in such a manner that it encloses the code that is expected to raise
+    an exception. It is also important to mention here that the
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "Code that is expected to raise exception is termed as protected code. The syntax\
+    \ for try and catch block implementation is as follows\n\nTry {\n\n```\n/* Protected\
+    \ code*/\n}catch(Exceptionname exc1) {\n    /* catch code*/\n}\n```\n\nThe code\
+    \ that is expected to raise an exception is expected to be placed inside the try\
+    \ block. If the exception is raised, then the corresponding action to be performed\
+    \ for exception handling in the catch block. It is imperative for every try block\
+    \ to either have a catch block or a finally block.\n\nAs part of the catch statement,\
+    \ the exception, is expected to be raised needs to be declared. In the event that\
+    \ an exception occurs, the execution is transferred to the catch block. If the\
+    \ raised exception matches the exception defined in the catch block, which does\
+    \ not exist. As a result, the catch block is executed.\n\nA sample implementation\
+    \ of the try and catch block is given below. The code implements an array with\
+    \ 2 elements. however, the code tries to access the third element, which does\
+    \ not exist. As a result, an exception is raised.\n\nImport java.io.*;\n\n# Public\
+    \ class demoexception {\n\n```\nPublic static void main(String args[]) {\n   \
+    \ Try {\n        Int arr[] = new int[2];\n        System.out.println(\"Accesing\
+    \ the 3 rd element of the array:\" + arr[3]);\n    }catch(arrayindexoutofboundexception\
+    \ exp) {\n        System.out.println(\"catching Exception:\" + exp);\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '```
+
+    System.out.println("Reached outside catch block");
+
+    ```'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '}
+
+
+    The output of this code is shown in the image below.
+
+
+    ![](img/73ee4bf5cc63fca6a92dbd634bd146b7_106_0.png)
+
+
+    # # Implementing multiple catch blocks
+
+
+    A block of code may lead to multiple exceptions. In order to cater for this requirement,
+    implementation of multiple catch blocks is also allowed. The syntax for such implementation
+    is given below.
+
+
+    Try {
+
+
+    /* Protected code* /'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "```\n}catch(Exptype1 exp1) {\n  /* catch block 1*/\n}catch(Exptype2 exp2) {\n\
+    \  /* catch block 2*/\n}catch(Exptype3 exp3) {\n  /* catch block 3*/\n\n```"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "```\n}\n```\n\nThe syntax shown above has illustrated the implementation of\
+    \ three catch blocks. however, you can implement as many catch blocks as you want.\
+    \ When this code is executed, the protected is executed. If an exception occurs,\
+    \ the type of exception is matched with the exception of the first catch block.\
+    \ however, if the exception type does not match, the catch block 1 is ignored\
+    \ and the exception type for the second catch block is tried for matching. Whichever\
+    \ catch block has the same exception type as that of the raised exception, the\
+    \ corresponding catch block is executed.\n\n# Keywords: throw/throws\n\nThese\
+    \ two keywords are similar words that are used for two entirely different purposes.\
+    \ The keyword throws is used at the end of the method name to declare that the\
+    \ code throws a checked exception, but the method does not handle one exception.\
+    \ In other words, throw keyword is used to literally throw an exception. This\
+    \ exception may be a new one or an exception that has previously occurred.\n\n\
+    Sample code that illustrates the use of throws and throw is given below. In the\
+    \ method declaration, it has been declared that the method throws an exception\
+    \ while the use of throw initiates the throwing of this exception.\n\n```\nImport\
+    \ java.io.*;\n```\n\n```\nPublic class name {\n    Public void depositmethod(double\
+    \ amount) throws exception { /*Implementation*\n        Throw new remoteexception();\n\
+    \    }\n    /*Implementation\n}\n```\n\nIt may happen that a method may throw\
+    \ more than one exception. In order to declare these exceptions in the method\
+    \ declaration"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: statement, you can provide a comma-separated list of exceptions. A sample implementation
+    of this concept has been given below.
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "```\nImport java.io.*;\n\nPublic class scname {\n    Public void withdrawdamemo(double\
+    \ amountdemo) throws reexception, insufficientfundexception {\n        /* Implementation\
+    \ */\n    }\n}\n/* Implementation */\n}\n```\n\n#  Finally block\n\nnow you are\
+    \ thorough with the try and catch block, let us look at the third block used in\
+    \ exception handling, finally block. This is the last block that appears after\
+    \ the 'try' and catch' blocks. moreover, the execution of the catch block may\
+    \ be omitted if the exception is not found, but the finally block is always executed\
+    \ irrespective of whether the exception occurs or not.\n\nThe objective of this\
+    \ block is to perform any cleanup activities that may be deemed necessary by the\
+    \ programmer. This is the code that you want to execute no matter what happens\
+    \ to the code enclosed in the try block. The syntax of this block and how it can\
+    \ be implemented has been shown below.\n\n```\nTry {\n    /* Protected code */\n\
+    \    catch(Exptype1 exp1) {\n        /* catch block 1 */\n        catch(Exptype2\
+    \ exp2) {\n            /* catch block 2 */\n            catch(Exptype3 exp3) {\n\
+    \                /* catch block 3 */\n            }\n        }\n    }\nfinally\
+    \ {\n```"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "```\n/* Finally block implementation */\n}\nSample code that implements this\
+    \ concept is given below to make the concept clearer.\nPublic class demoexcep\
+    \ {\n    Public static void main(String args[]) {\n        Int arr[] = new int[2];\n\
+    \        Try {\n            System.out.println(\"Accessing the 3 rd element:\"\
+    \ + arr[3]);\n        }catch(arrayindexoutofboundsexception exp) {\n         \
+    \   System.out.println(\"catching exception:\" + exp);\n        }finally {\n \
+    \           Arr[0] = 5;\n            System.out.println(\"the first element is:\
+    \ \" + arr[0]);\n            System.out.println(\"Finally block executed\");\n\
+    \        }\n    }\n}\nThe output of the code is shown in the image below.\n```"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: 'While implementing the try/catch/finally blocks, always remember a few things.
+    Firstly, there cannot be a catch block unless you have implemented a try block.
+    Analogously, there cannot be a standalone try block without a catch or finally
+    block. besides this, finally block is an optional construct and your try/catch
+    will work just fine even if you don''t have a finally block in your code.
+
+
+    # User-defined Exceptions
+
+
+    java allows you to define your own exceptions. however, before you can do that,
+    there are a few things that you need to remember. Firstly, any exception needs
+    to be derived or be a child of throwable class. In order to implement a checked
+
+
+    ![](img/73ee4bf5cc63fca6a92dbd634bd146b7_112_0.png)'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: 'exception, you will have to extend the Exception class. however, the implementation
+    of runtime exception has to extend runtimeexception class.
+
+
+    The standard method for defining an exception is –
+
+
+    The following code illustrates the implementation and use of user-defined exceptions.
+
+
+    ```
+
+    Import java.io.*;
+
+    ```
+
+
+    ```
+
+    Public class insufficientexception extends Exception {
+
+    ```'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "```\nPrivate double amo;\n\nPublic insuffundsexception(double amo) {\n    This.amo\
+    \ = amo;\n}\n\nPublic double getamo () {\n    Return amo;\n}\n}\n```\n\n# Conclusion\n\
+    \nThis book gave you a beginner's tutorial on java fundamentals. We have covered\
+    \ all the basic concepts of java programming and everything you need to get started\
+    \ with java programming. now that you have had a run-through of all the basic\
+    \ concepts of java and assuming that you have tried all the codes given in this\
+    \ book, you are all set to jump to advanced java programming.\n\nThe key to becoming\
+    \ an expert at programming, be it any programming language, is practice. The more\
+    \ you will practice, the better your programming skills will become! We hope you\
+    \ enjoyed this book and that this book has helped you gain a basic level expertise\
+    \ in java. We hope to have laid the right foundation for you to hone your skills\
+    \ and become an expert java programmer."
+  merge: -1
+  pgno: 114
