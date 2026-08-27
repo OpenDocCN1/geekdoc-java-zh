@@ -1,0 +1,2038 @@
+- img_proc: true
+  md: '![](img/7d7681224c1536e030055a556b655618_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Javascript
+
+
+    The Ultimate Guide to Javascript Programming and Computer Hacking (javascript
+    for beginners, how to program, hacking exposed, hacking, how to hack)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # JAVASCRIPT
+
+    Ultimate Guide For Javascript Programming
+
+
+    ![](img/7d7681224c1536e030055a556b655618_2_0.png)
+
+
+    STANLEY HOFFMAN'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Javascript
+
+
+    The Ultimate guide for javascript programming (javascript for beginners, how to
+    program, software development, basic javascript, browsers)
+
+
+    STANLEY HOFFMAN'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   - Introduction
+
+    - Chapter 1 – Getting to Know Numbers, Operators, and Strings
+
+    - Chapter 2 – Discovering Variables
+
+    - Chapter 3 –Building and Running JavaScript
+
+    - Conclusion'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'I think next books will also be interesting for you:
+
+
+    C++
+
+
+    ![](img/7d7681224c1536e030055a556b655618_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# C++
+
+
+    ![](img/7d7681224c1536e030055a556b655618_6_0.png)'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Python
+
+
+    ![](img/7d7681224c1536e030055a556b655618_7_0.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Hacking for Dummies
+
+
+    ![](img/7d7681224c1536e030055a556b655618_8_0.png)
+
+
+    # # Introduction
+
+
+    Computers, in this generation, seems to be no longer intimidating. They are now'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'becoming one of our everyday tools – us us to make easier and and.. Although
+    the computer operations today today user-friendly, there are still a lot of hidden
+    complexities. Most people will find them difficult to understand. Hence, this
+    book was written for those who want to discover the maximum potentials of computers
+    in the simplest way possible.
+
+
+    In order to do that, you have to keep in mind that communication is a vital part
+    of computer processes. This is not a process between computers but rather between
+    the user behind the keyboard and the operating machine. The basic element, of
+    course, is language. Learning a language like C will allow you to command the
+    machine in the way you want and how you want it to be.
+
+
+    In this book, you will learn one of the most important languages of computers
+    – the JavaScript.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Programming in a Nutshell
+
+
+    Before moving on to JavaScript, it is vital to understand what is programming
+    first.
+
+
+    A computer program can be anything. The software you''re using to read this eBook
+    is a program. The internet browser you use is a program. The application which
+    plays your music files is a program. The game you are playing is a program. In
+    other words, everything you see and you use in your computer is a program. All
+    these were products of a single process known as programming.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_10_0.png)
+
+
+    Programming is an art. It is where programmers type a piece of text that commands
+    the computer to perform specific operations.Let us take the human body as an analogy.
+
+
+    If you are given a mathematical problem to solve, your brain has to process it.
+    Depending on the scale of the equation, you might find yourself counting your
+    fingers or solving a formula on a sheet of paper. In short, there are several
+    bodily functions at work.
+
+
+    In programming''s perspective, all these bodily functions are programs and your
+    whole body is the machine. The mechanical counterpart of your brain is the machine''s
+    memory. The equation is the data we want to process.
+
+
+    Our primary goal is to process the data. In the scenario above, that is to have
+    the correct answer for the mathematical problem. For our body to be able to do
+    that, your eyes need to see the problem and relay that to your brain. For a machine,
+    you need a program to relay signal to the computer''s memory.
+
+
+    Going back to the human body, you may need to use your fingers or a sheet of paper
+    to solve the equation. To control your fingers, your brain has to send signals
+    for them to operate in a manner that will help you solve the problem at hand.
+    For a machine, you need'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'a separate program to do that.
+
+
+    In other words, a machine and its parts are the irrational versions of a human
+    body and its parts. It is only that a machine can process everything in a split
+    of a second.And to link these parts into the computer''s memory, you need to assert
+    thousands of programs. Hence, programming is the art where we create life within
+    a lifeless body.
+
+
+    By now, you may find the concept of programming easier to grasp. However, the
+    process itself is complex that even programmers get lost in their own creations.
+
+
+    Programs are beautiful when correctly written. Ironically, badly written programs
+    are terrifying.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Introducing JavaScript
+
+
+    ![](img/7d7681224c1536e030055a556b655618_12_0.png)
+
+
+    Before anything else, you might have been familiar with another programming language
+    called Java. Keep in mind that JavaScript and Java have almost nothing to do with
+    each other.
+
+
+    JavaScript was originally named as Mocha and was created in May 1995. It was the
+    product of 10 days of hard work of Brendan Eich who was, at that time, working
+    at Netscape. The name Mocha was picked by the Netscape''s founder, Marc Andreessen.
+
+
+    In September of the same year, the name of the language was changed to JavaScript.
+    In December of the same year, its name changed again once to JavaScript after
+    receiving a trademark license from Sun. Apparently, the name was much more since
+    the Java language was being heavily campaigned and becoming more popular during
+    those times.
+
+
+    Today, JavaScript is one of the programming languages that every beginner can
+    easily learn. It is also a must-learn language for web developers alongside CSS
+    and HTML. Web developers prefer HTML in defining their web content. They use CSS
+    in specifying their web layouts. Lastly, you use JavaScript in programming their
+    website''s behavior. And so, JavaScript is considered to be the programming language
+    of the web.
+
+
+    Even though the idea behind JavaScript was to give easy programming realm for
+    beginners, the flexibilities offered by the language have major advantages to
+    veteran programmers as well. It gives you numerous spaces for programming techniques
+    that are impossible to do in more rigid programming languages. You will see more
+    of these techniques later on this book. So if you are not new in programming but
+    just starting to learn JavaScript, don''t hate it if it usually interprets the
+    codes you give differently. You'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: just need to be patient and be open because JavaScript is not only fun, but
+    it will bring you to a whole new world of programming.
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# What Can You Find In This Book?
+
+
+    This book is the first part of JavaScript in Simple Words series. This part of
+    the series features 3 chapters. The first chapter will introduce you to values
+    and how to process these values in JavaScript language. You will learn how to
+    use operators, comparators, and how to create strings. The second chapter discusses
+    variables. In this chapter, you will learn how to assign values inside variables.
+    You will also learn how to create versatile messages by combining multiple variables.
+    The last chapter discusses the creation of JavaScript source files. In this chapter,
+    you will learn how to write JavaScript codes inside the source file properly.
+    In addition, you will learn how to execute this file inside an HTML file.
+
+
+    The JavaScript in Simple Words book series were divided into several parts to
+    help you master the programming language without being overwhelmed. Many beginners
+    quits because they thought JavaScript is too much to handle. The entire series
+    aims to bring you right to the heart of JavaScript in the simplest way possible.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Chapter 1 – Getting to Know Numbers, Operators, and Strings
+
+
+    Browsing the internet alone gives you access to millions of lines of JavaScript
+    codes. The moment you start your favorite internet browser (e.g. Google Chrome,
+    Mozilla Firefox, and Internet Explorer) began to visit a certain website, you
+    are already communicating using the JavaScript language.
+
+
+    In this chapter, we will be discussing the fundamental building blocks of JavaScript
+    language. This will help you establish a concrete foundation once you move on
+    to advanced frameworks like jQuery.
+
+
+    You will learn more about numbers, operators, and strings. This chapter will also
+    cover the different processes for you to manipulate values using operators and
+    how can you store these values inside variables. Lastly, you will also learn how
+    to create, run, and find JavaScript codes within HTML codes.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# The Console
+
+
+    Before anything else, it is vital for you to have access to the web browser console.
+    The web browser console serves as one of the developer''s tools. It logs information
+    associated with the current web page. The information includes CSS, security errors,
+    and JavaScript. The console will also allow you to engage with the web page by
+    asserting JavaScript expressions.
+
+
+    This is where we will be executing our sample JavaScript codes within the book.
+    You can access it by pressing F12 key on your keyboard. Look for the Console tab
+    and you are now ready to begin.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Basic Numbers and Prompt
+
+
+    There are 2 symbols you need to familiarize as you begin to learn JavaScript:
+
+
+    +   > The greater than symbol; and,
+
+    → The arrow symbol
+
+
+    The symbol represents the JavaScript prompt. All the codes we want to enter into
+    the console will be written after this symbol. The → symbol refers to the result
+    produced by the code we entered.
+
+
+    In JavaScript language, numbers are automatically recognized. Writing the number
+    after the prompt and hitting the Enter key on your keyboard will give you the
+    same value as a result. Try to enter number 13 into the console and it will show
+    the same value in return.
+
+
+    ```
+
+    > 13
+
+    → 13
+
+    ```
+
+
+    The same goes with numbers that have decimal values.
+
+
+    ```
+
+    > 13.29
+
+    → 13.29
+
+    ```'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Operators
+
+
+    In JavaScript, mathematical operations are also acceptable. The operations commonly
+    used in JavaScript syntax are the following:
+
+
+    +   - Addition
+
+    - Subtraction
+
+    - Multiplication
+
+    - Division
+
+    - Modulus
+
+
+    Addition is expressed through the + sign.
+
+
+    ```
+
+    > 1 + 3
+
+    → 4
+
+    ```
+
+
+    Subtraction is expressed through the – sign.
+
+
+    ```
+
+    > 10 – 5
+
+    → 5
+
+    ```
+
+
+    Multiplication is expressed through the * sign.
+
+
+    ```
+
+    > 2 * 9
+
+    → 18
+
+    ```'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'Division is expressed through the / sign.
+
+
+    ```
+
+    > 25 / 5
+
+    → 5
+
+    ```
+
+
+    Modulus, on the other hand, is a special operation in JavaScript language. It
+    is expressed through the % sign. The result you''ll get is the remainder between
+    the two numbers after dividing them.
+
+
+    ```
+
+    > 23 % 2
+
+    → 1
+
+    ```
+
+
+    In the modulus example above, the console divides 23 by 2. Even if it goes 11
+    times in the number 23, the console will only show the remainder as the result
+    which is 1.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# PEMDAS Order
+
+
+    JavaScript programming follows the popular mathematical order of operations: the
+    PEMDAS. This acronym stands for:
+
+
+    +   - P Parentheses
+
+    - E Exponents
+
+    - M Multiplication
+
+    - D Division
+
+    - A Addition
+
+    - S Subtraction
+
+
+    Let us take the following expression for example.
+
+
+    ```
+
+    > (10 + 5) * 3
+
+    ```
+
+
+    Upon pressing Enter, the console will give you this answer in return.
+
+
+    ```
+
+    → 45
+
+    ```
+
+
+    The operation inside the parentheses will be solved first. In our case, it is
+    10 + 5 which gives us 15. After which, the sum will then be multiplied to 3. Hence,
+    the console gives you 45.
+
+
+    Let us try a longer expression.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '```
+
+    > (7 * 2) + 5 - 10/2
+
+    ```
+
+
+    Following the order of PEMDAS, the expression will be solved as follows:
+
+
+    ```
+
+    14 + 5 - 10/2
+
+    14 + 5 - 5
+
+    19 - 5
+
+    ```
+
+
+    Hence, the console will give you this answer in return.
+
+
+    ```
+
+    → 14
+
+    ```
+
+
+    # Comparators
+
+
+    Aside from operators, JavaScript language recognizes logical operators as well
+    which we call comparators. The comparators commonly used in JavaScript are expressed
+    through the following syntax:
+
+
+    +   > Greater than
+
+    < Less than
+
+    == Equal
+
+    != Not equal
+
+    >= Greater than or Equal
+
+    <= Less than or Equal
+
+
+    Sending an expression in JavaScript using these comparators is like asking the
+    console with a logical question. The answer that you will get from the console
+    may either be "true"'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'or “false”. These answers are known to be as Boolean values.
+
+
+    Let us try to send the following expression to the console.
+
+
+    ```
+
+    >10 !==9
+
+    ```
+
+
+    This expression is like asking the console if 10 is not equal to 9 in JavaScript
+    language. And so, the console will give you “true” as an answer since 10 is not
+    numerically equal to 9.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Strings
+
+
+    ```
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <body>
+
+    <script type="text/javascript">
+
+    var str="Split String(" ")" + <br />";
+
+    document.write(str.split(" ") + <br />);\ndocument.write(str.split(",") + <br
+    />\
+
+    document.write(str.split());
+
+    </script>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    JavaScript handles strings, stores, and processes flat text as strings. To inform
+    the console that we want to process flat texts, we need to enclose them within
+    quotation marks. This will allow the console to recognize the texts as a string
+    and will return the string back to us.
+
+
+    > > “The quick brown fox jumps over the lazy dog"
+
+    → “The quick brown fox jumps over the lazy dog"
+
+
+    Multiple strings can be combined using the concatenation method. We concatenate
+    two or more strings by simply adding a + sign in between strings. The console
+    will combine all concatenated strings into a single string.
+
+
+    > > “Lee” + “and” + “Haide"
+
+    → “Lee and Haide"
+
+
+    Did you notice that there is a space at the beginning and at the end of the string
+    and “?” This is because concatenation does not automatically considers the + sign
+    as space. Let us try another example using a combination of strings and numbers.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '> > “I will deliver this at” + 5 + “PM"
+
+    → “I will deliver this at5PM"
+
+
+    There are two things you should notice here. First, there is no need for quotation
+    marks for numbers when concatenating them with strings. Second, the results we
+    received is not how we want it to be. Hence, we should add a space at the end
+    of the first string and at the beginning of the second string. It should go like
+    this.
+
+
+    > > “I will deliver this at “ + 5 + “ PM"
+
+    → “I will deliver this at 5 PM"
+
+
+    Aside from numbers, you can also concatenate strings, numbers, and expressions
+    altogether. Take note, however, that the console automatically evaluates mathematical
+    expressions.
+
+
+    > > “The rooftop needs to be “ + 15 + “ feetand “ + 1/4
+
+    → “The rooftop needs to be 15 feet and 0.25”
+
+
+    The fraction in our JavaScript code was automatically transformed into a value.
+    If you need to keep the expression as it is, then you need to assert them within
+    a string. It should be like this.
+
+
+    > > “The rooftop needs to be “ + 15 + “ feet and 1/4"
+
+    → “The rooftop needs to be 15 feet and 1/4”'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Formatting Strings with Special Characters
+
+
+    You can use special characters to format how strings look. One good example is
+    the special character backslash ( \) followed by the letter “t”.
+
+
+    \t Signals the console to advance to the next tab stop
+
+
+    Writing strings with this additional command and the result you will get should
+    look like this.
+
+
+    > > "Height:\t6 ft.\t\\tWidth:\t26 ft."
+
+    → "Height:  6 ft.Width:  26 ft."
+
+
+    Adding quotation marks within a string should be written with backslash as well.
+
+
+    " Signals the console that the following quotation mark is not the start or the
+    end of a string.
+
+
+    Here is how your string line should look like when asserting quotation marks inside
+    the string and the output you will get in return.
+
+
+    > > "Nicknames:\t"The Geek\" \"Com Wiz\""Backslash\""
+
+    → "Nicknames: "The Geek" "Com Wiz" "Backslash\"'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'The rule applies if you want to assert the backslash symbol in your string
+    output.
+
+
+    \nSignals the console to add thenfollowing backslash as it is in your output.
+
+
+    When writing this command, the string and the output should appear as follows.
+
+
+    ```
+
+    > “Target Folder:\t\C:\Program Files\Directory 1\Directory 2"
+
+    → “Target Folder: “C:\Program Files\Directory 1\Directory 2”
+
+    ```
+
+
+    You can also command the console to put values to a new line by simply adding
+    the lettern“n” after the backslash.
+
+
+    \nSignals the console to assert thennext values in a new line.
+
+
+    This is how your code and the output should look like.
+
+
+    ```
+
+    > “Member 1:\tFebz\nMember 2:\tDonz\nMember 3:\tTaz"
+
+    → “Member 1: Febz
+
+    → Member 2: Donz
+
+    → Member 3: Taz”
+
+    ```'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Comparators and Strings
+
+
+    Aside from numbers, comparators can also be used to compare strings to get Boolean
+    values as an output. Let us try to use the equal comparator.
+
+
+    ```
+
+    > "Obi-Wan Kenobi" == "Obi-Wan Kenobi"
+
+    → true
+
+    ```
+
+
+    Basing from the example above, we got the Boolean value “true” in return because
+    the first string is exactly the same with the second string. Let us try to alter
+    one of these strings.
+
+
+    ```
+
+    > "Obi-Wan Kenobi" == "Obi-Wan Kinobi"
+
+    → false
+
+    ```
+
+
+    Keep in mind that JavaScript language is case sensitive. Hence, if the first string
+    was written with uppercase characters and the second string was completely written
+    in lowercase characters; then the console will treat them as not equal.
+
+
+    ```
+
+    > "Obi-Wan Kenobi" == “obi-wan kenobi"
+
+    → false
+
+    ```'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Counting String Length
+
+
+    In JavaScript language, you can easily access the length of your strings. Doing
+    so will command the console to count all the characters including the spaces and
+    non-alphabet characters between the quotations mark that signify the beginning
+    and end of your string. We do it by adding the following property right after
+    the string.
+
+
+    ```
+
+    .length Commands console to count the characters within the string it follows.
+
+    ```
+
+
+    This is how we write it and what kind of output we will get.
+
+
+    > > “Pneumonoultramicroscopicsilicovolcanoconiosis”.length
+
+    → 45
+
+
+    Now let us try to use a string with spaces and non-alphabet characters.
+
+
+    > > “Pink, Blue, Black, Red, Purple, White, and Green”.length
+
+    → 48'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Chapter 2 – Discovering Variables
+
+
+    Now that you already know how to write, format, and process data in JavaScript
+    language, it is now time for you to learn about variables. In this chapter, you
+    will learn how to store values using variables. You will not be able to do it
+    without learning how to write variables first. Without further due, let us begin
+    our journey to the world of variables.
+
+
+    ```
+
+    <!DOCTYPE HTML>
+
+    <html>
+
+    <head>
+
+    <TITLE>Variables =</TITLE>
+
+    <SCRIPT LANGUAGE="Javascript">
+
+    var number1 = 21;
+
+    var true_or_false = true;
+
+    var firstName = ''Kenny'';
+
+    document.write(number1 + "<BR>");
+
+    document.write(true_or_false + "<BR>");
+
+    document.write(firstName + "<BR>");
+
+    </SCRIPT>
+
+    </head>
+
+    <body>
+
+    </body>
+
+    </html>
+
+    ```'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# The Storage of Values
+
+
+    In order to manage data in JavaScript language, you to store them inside variables.
+    Let me show you a basic assignment syntax for a variable we shall name as “Learn
+    Easy”.
+
+
+    ```
+
+    >varlearnEasy = 6
+
+    ```
+
+
+    The code “var” here refers to the variable keyword. This commands the browser
+    to reserve a specific space for this variable. The next one is “learnEasy” which
+    refers to the variable name. This is the name we will be assigning to this example
+    variable syntax. The equal sign here serves as the assignment operator. Notice
+    that we only use a single equal sign here unlike the double equal signs that we
+    used previously for comparison. Lastly, the number 6 serves as the value which
+    we are storing inside our variable named as learnEasy.
+
+
+    Now that we have a stored value inside a variable, we can now call it using the
+    variable name alone. Asserting the variable name “learnEasy” in the console will
+    give us the assigned value as its output.
+
+
+    ```
+
+    >learnEasy
+
+    → 6
+
+    ```
+
+
+    When assigning names in our variables, there are rules we need to follow in JavaScript
+    language. These rules are as follows:
+
+
+    +   1. No spaces in the variable name. (E.g. var learn easy, var sweet java)
+
+    2. No digits at the beginning of the variable name. (E.g. var 4life, var 1piece)
+
+
+    There are special characters you can use in the variable name. But, it is better
+    to use'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'simple names to make JavaScript langueless complicated.
+
+
+    +   1. You can use underscores ( _) in the variable name. (E.g. varlearn_easy)
+
+    2. You can use the dollar sign ($ ) in the variable name. (E.g. varlearnE$y)
+
+    3. You can use both underscores and dollar signs together. (E.g. varlearn_ea$y)
+
+
+    Here is what a good variable name should be. It is known as the “Camel Case” which
+    begins with lowercase and the first letter of the following words in uppercase.
+
+
+    ```
+
+    >varsimpleAndClean
+
+    ```
+
+
+    If you like to reuse a variable name to store a different value, then you can
+    simplify everything by adding a number at the end like like this.
+
+
+    ```
+
+    >var simpleAndClean2
+
+    ```
+
+
+    # Changing Assigned Value in Variables
+
+
+    Let us go back with our example variable learnEasy. At the moment, we have the
+    numerical value 3 assigned to it. Let us say, for example, you want to change
+    the value assigned to that variable. You can easily do it by entering the variable
+    name, followed by the assignment operator, then followed by the new value you
+    want to assign to the variable.
+
+
+    ```
+
+    >learnEasy = 13
+
+    ```'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'Notice that we no longer use the variable keyword here. This is because the
+    console remembers that the value is already existing in its memory. Once you call
+    for this variable, you will now get get the new value assigned to it.
+
+
+    ```
+
+    >learnEasy
+
+    → 13
+
+    ```
+
+
+    You may also change the value of an existing variable using its own variable name
+    in mathematical expressions. The format should be the variable name followed by
+    the assignment operator. You insert the mathematical expression after the operator.
+    It should go like this.
+
+
+    ```
+
+    >learnEasy = learnEasy + 16
+
+    ```
+
+
+    This will change our store value to 29 since the expression calls for the current
+    variable value, which is 13, plus 16. This makes it 29.
+
+
+    There is another way to do this. We will end up changing the stored value using
+    a different syntax. It goes like this.
+
+
+    ```
+
+    >learnEasy += 2
+
+    ```
+
+
+    += operator here commands the console to add the current value of the variable
+    to the number 2 first. Then it commands the console to store the new value to
+    the same variable afterward. Since our current value is 29, we will now get 31
+    as the new value stored in the variable learnEasy.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: All operators can be used in this case using both formats.
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Storing Strings in Variables
+
+
+    Aside from numerical values, you can also store strings inside variables. The
+    syntax uses the same format. Let us create a variable to welcome our guests.
+
+
+    ```
+
+    >var hello = "Welcome to my website!"
+
+    ```
+
+
+    By storing the string in a variable, you no longer have to type lengthy strings.
+    Just call the name of the variable and the console will give you the stored string.
+    This is how it should appear.
+
+
+    ```
+
+    >hello
+
+    → "Welcome to my website!"
+
+    ```
+
+
+    You can also use the length property using the variable name. The output value
+    you will get is the same with adding the length property after the string. Let
+    us take, for instance, a variable named "fox" which contains the string "The quick
+    brown fox jumped over the lazy dog". We simply add .length after the variable
+    name and we will have the following lines on our console:
+
+
+    ```
+
+    >fox.length
+
+    → 44
+
+    ```'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Finding Characters in Strings
+
+
+    The JavaScript language has its own way to index each character inside the string.
+    Let us take the variable “hello” as an example.
+
+
+    > “ Welcome to my website! ”
+
+    0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+
+
+    When indexing, JavaScript indexes the first character using the numerical value
+    0. This is different from the .length property since JavaScript counts the first
+    character using the numerical value 1. In other words, the last index number is
+    always 1 value less than the length value.
+
+
+    Using the string stored in hello variable, we have 22 for length property and
+    21 as the last index number. Now, why do we need the index number you ask?
+
+
+    We use it to find specific characters within the string. This is done using the
+    charAt() method which we place after the variable just like the .length property.
+    For instance, we want to know which character falls under index number 20 from
+    our variable hello. We simply type the following:
+
+
+    ```
+
+    >hello.charAt(20)
+
+    → “e”
+
+    ```'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Creating Messageswith Variables
+
+
+    Now that you know how to store values inside variables, let us now create messages
+    using variables. Let us create one more variable to combine with our existing
+    variable “hello”.
+
+
+    > >var enjoy = “Please enjoy your visit!"
+
+
+    Now that we have our second variable, let us now combine them and create a new
+    variable that will serve as our welcoming message.
+
+
+    > >varwelcome = hello + enjoy
+
+
+    This will give us the following output whenever we call for the variable welcome.
+
+
+    > > welcome
+
+    → “Welcome to my website! Please enjoy your visit!”'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Chapter 3–Building and Running JavaScript
+
+
+    Learning variables was fun, was it not? However, no one wants to code JavaScript
+    language in a console. In this chapter, you will learn how to build JavaScript
+    files. You will also learn how to run these files inside HTML. So let us begin.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_40_0.png)'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Creating Source Files
+
+
+    Writing JavaScript codes in the console alone will not print out what we want
+    to convey to our user''s web browsers. Hence, we need to find a way to bring what
+    we want to the users. In order to do that, we need to create JavaScript source
+    files and run these files in an HTML file.Here is an example of the most common
+    HTML file known as index.html.
+
+
+    ```
+
+    <html>
+
+    <head>
+
+    <script src="greetings.js"></script>
+
+    </head>
+
+    <body>
+
+    <h1>WELCOME TO JAVASCRIPT!</h1>
+
+    ...
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    As you can see, we have the <script>tag in this file. This tag commands this HTML
+    file to load a specific JavaScript source file so that the web browser of your
+    visitors will let them see your website in the way you want to see it. Notice
+    that we have the “src” keyword inside the <script>tag. This is a command to the
+    HTML file which directs it to load the JavaScript source file.
+
+
+    In this example, we are commanding the index.html file to load all variables and
+    values within inside greetings.js.
+
+
+    In order to create this .js file, all you need to do is open any text editor like
+    Notepad or Text Edit. Write all your JavaScript codes inside and save the file
+    in .js format. Inside this file, we assert all the JavaScript codes we want our
+    visitor’s web browser to execute as soon as they access our website.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Where To Place The Source File
+
+
+    When browsing your website''s file manager, you will never miss seeing a folder
+    named “root”. This is where we can find everything inside our website. This is
+    also the default location of your website''s index.html as well.
+
+
+    Basing from the index.html file we have above, we are directing it to find the
+    JavaScript source file within the same location folder – that is, the root/ folder.
+    Hence, we should place our greetings.js in the same location.
+
+
+    ```
+
+    + root/
+
+    - index.html
+
+    - greetings.js
+
+    ```
+
+
+    There are websites, however, that place all their JavaScript source files in a
+    subfolder. The most common directory for their source files is under scripts/
+    folder. Here is how they look like in your website’s directory.
+
+
+    ```
+
+    + root/
+
+    - index.html
+
+    + scripts/
+
+    - greetings.js
+
+    ```
+
+
+    If this is how you want to organize your source files, then we need to alter the
+    <script> tag in our sample index.html. This is how your HTML codes should look
+    like.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '```
+
+    <html>
+
+    <head>
+
+    <script src="scripts/greetings.js"></script>
+
+    </head>
+
+    <body>
+
+    <h1>WELCOME TO JAVASCRIPT!</h1>
+
+    ...
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Notice that in this code, we are instructing the index.html to load the greetings.js
+    from the scripts/ subfolder.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Writing Codes in the Source File
+
+
+    Writing console-style expressions inside the greetings.js as they are will end
+    up in error. Let us try to write these following lines inside our source file
+    for example.
+
+
+    ```
+
+    var hello = "Welcome to my website! "nvar enjoy = "Please enjoy your visit!"
+
+    hello + enjoy
+
+    ```
+
+
+    Once we open our index.html and go to our browser’s console, we will see nothing
+    but error. This is because we got confused on what you really intend to show.
+    The error comes from our JavaScript source file. Unlike the console, we need to
+    assert our JavaScript codes differently in the source files. We do this by adding
+    a semicolon ( ; ) every after a statement. Hence, we should write our JavaScript
+    codes like this.
+
+
+    ```
+
+    var hello = "Welcome to my website! {}
+
+    var enjoy = "Please enjoy your visit!"
+
+    hello + enjoy;
+
+    ```
+
+
+    With our codes written with semicolons, you will no longer see an error when trying
+    to access the console. However, you will not see anything in the console. This
+    means that our code is not yet being delivered to the browser’s console. The execution
+    of the JavaScript codes only happens within the source file itself. In order to
+    fix this, we need to use the console.log( ) method.
+
+
+    What we want to do is to show the string coming from the concatenation of the
+    variables hello and enjoy. Here is how we are going to that.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '```
+
+    var hello = "Welcome to my website! ";\var enjoy = "Please enjoy your visit!";
+
+    console.log(hello + enjoy);
+
+    ```
+
+
+    By using the console.log( ) method, you will be able to see now the string inside
+    the console. In other words, we now have a working JavaScript programming language
+    being run by our index.html file.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Conclusion
+
+
+    At this point, you now know how to write values in JavaScript language. You just
+    just learned how JavaScript interprets numbers and flat texts, as well as how
+    to transform texts into string values. You also learned how to manipulate these
+    values into expressions and statements with the use of operators and comparators.
+
+
+    In the second chapter, you were introduced to variables. You learned how to store
+    values into variables and the concatenation method where you learned how to process
+    values quickly in the form of variables. A couple of methods were also introduced
+    such as the charAt() method and .length property – tools that can help you analyze
+    values efficiently.
+
+
+    In the third chapter, you learned how to create your own JavaScript source file.
+    Take note that you need to assert JavaScript codes differently in source files
+    compared to the console. You also got to know the console.log() method which allows
+    you to print values in the browser''s console. However, this is not yet the most
+    efficient way to deliver JavaScript codes. Imagine if you are going to deliver
+    hundreds of values into the browser? That would mean repetitive programming and
+    too hassle.
+
+
+    In the next part of the JavaScript in Simple Words series, we will bring you to
+    the loops of JavaScript where you will learn how to manage repetitive coding efficiently.Several
+    topics will also be discussed on the second part of the book series including,
+    but not limited to, the use of conditions and the creation of dialog boxes.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '![](img/7d7681224c1536e030055a556b655618_48_0.png)'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# # Computer Hacking
+
+
+    The Essential Hacking Guide for Beginners
+
+
+    MATT BENTON'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Contents
+
+
+    +   - Introduction – What is Hacking?
+
+    - Chapter 1 – Hacking and the Influence of Cyberpunk
+
+    - Chapter 2 – The Different Types of Hackers
+
+    - Chapter 3 – Computer Security
+
+    - Chapter 4 – Hacking Techniques
+
+    - Conclusion'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Introduction – What is Hacking?
+
+
+    Hacking is the act of gaining unauthorized access to a computer system, and can
+    include viewing or copying data, or even creating new data. Often hacking is understood
+    to be a way of maliciously disrupting a computer system, copying information,
+    or leaving behind a virus that destroys data.
+
+
+    There are many different reasons why hacking takes place, and these reasons range
+    from wanting to disrupt a system due to ideology (so hacking as a means of protesting);
+    wanting to gain profit for example in order to commit credit card fraud; or simply
+    hacking for the sake of enjoyment and amusement.
+
+
+    There is some controversy about the definition of the word ‘hacker’ because those
+    that try to prevent such breaches in security from taking place, or seek to recover
+    lost files, can also be known as hackers. Thus, some people believe that the correct
+    term for malicious security breaches is in fact ‘cracking’ and that ‘hacking’
+    is the correct word to use for those who fight against malicious exploitation
+    of computer weaknesses.
+
+
+    However, in the popular imagination and in general conversation, the word ‘hacker’
+    is mainly understood to refer to the ‘bad’ method of breaking through computer
+    security. The two processes share many common skills, regardless of motivation
+    (whether to steal or protect, in in to or save, computer data) the same understanding
+    of computers is required.
+
+
+    Hacking is more than simply a pastime for those who are interested in technology,
+    and more than simply an illegal activity for personal gain and with malicious
+    intent, although both of these motivations make up much of hacking activity. In
+    fact, hacking is its own subculture, and members of the community feel very strong
+    about their ideologies, techniques and social relationships in the computer world.
+
+
+    There are many hacking groups and conventions, such as SummerCon, DEF CON, HoHoCon,
+    ShmoCon, BlackHat, Chaos Communication and Hacker Halted, and local'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'hacking communities take their entries into hacking competitions very seriously.
+    Unsurprisingly there are also numerous online groups and forums dedicated to the
+    subject of hacking, and there is certainly a strong community spirit felt by those
+    with similar hacking ideologies.
+
+
+    Furthermore, hackers are often passionate about literary depictions of the hacking
+    community, and ardently read fictional Cyberpunk and factual hacker magazines.
+
+
+    This book will serve as an introduction to the world of hacking, and will provide
+    insight into some of the key influences, ideologies, groups, concepts, and techniques
+    of hacking.
+
+
+    The first chapter will consider the beginnings of hacking and the influence of
+    the literary genre, Cyberpunk. The second chapter will look at the different types
+    of hackers, and draw a distinction between ethical and unethical hacking. The
+    third chapter will look at the issue of computer security, which is vital to an
+    understanding of hacking.
+
+
+    The final chapter will provide an overview of the various different techniques
+    for hacking, including automated and manual approaches as well as the importance
+    of the cyber confidence trick known as social engineering.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Chapter 1 – Hacking and the Influence of Cyberpunk
+
+
+    Michael Bruce Sterling, the American science fiction author, helped establish
+    the popular genre of Cyberpunk. Cyberpunk is a subcategory of science fiction
+    that focuses on the role of technology in a future setting. In this literary and
+    cinematic genre, lower-class citizens are depicted, who have access to, and a
+    great understanding of advanced technology.
+
+
+    Cyberpunk often explores the role of technology during the breakdown of social
+    order, in which there is an oppressive government restricting and damaging the
+    lives of the general population. Furthermore, artificial intelligence (such as
+    robots or intelligent computers) also plays a significant part in Cyberpunk stories,
+    and the Earth is depicted in the near future in a post-industrial dystopia (the
+    opposite of utopia, and therefore a bleak world characterized by oppression and
+    often social unrest).
+
+
+    ![](img/7d7681224c1536e030055a556b655618_53_0.png)
+
+
+    The impact of Cyberpunk in the present-day understanding of hacking is considerable.
+    Science fiction is particularly effective when we can recognize our own world
+    within the fictional representation, and with Cyberpunk we can recognize many
+    of the concerns of the contemporary technological age. Lawrence Person (editor
+    of the science fiction magazine Nova Express) describes the typical characters
+    in Cyberpunk:
+
+
+    “Classic cyberpunk characters were marginalized, alienated loners who lived on
+    the edge of society in generally dystopic futures where daily life was impacted
+    by rapid technological change, an ubiquitous data sphere of computerized information,
+    and'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'invasive modification of the human body."
+
+
+    To a contemporary reader, this description of Cyberpunk characters is reminiscent
+    of how hackers are thought of in the popular imagination, and depicted in films.
+    Therefore, the interplay between Cyberpunk characters and how we view real-life
+    hackers is considerable: in many ways our understanding of what a hacker is like
+    is based on how Cyberpunk characters are depicted in fiction. One example of this
+    is how in Cyberpunk characters often live in filthy conditions, work at night
+    and sleep all day, and do not have any social life beyond chat rooms.
+
+
+    In the present-day imagination when we think of hackers we often think of a lonely
+    adolescent boy behind a darkened computer screen. In fact, Michael Bruce Sterling,
+    who was one of the first science-fiction writers who dealt with Cyberpunk, has
+    also shown the most interest in understanding the development of hacking.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_54_0.png)
+
+
+    Sterling has traced the emergence of hacking, and the associated underground computer
+    network, to the Yippies, a counterculture group who were active in the 1960s and
+    published Technological Assistance Program, a newsletter that taught its readership
+    techniques for unauthorized access to telephones, known as phreaking.
+
+
+    Many of the individuals who were involved in the phreaking community are also
+    an active part of the underground hacking community, suggesting that the relationship
+    between the two groups.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Chapter 2 – The Different Types of Hackers
+
+
+    The computer hacking underground contains various different subcategories of hackers.
+    This is mainly due to conflicting ideologies, whereby certain groups calls themselves
+    by a specific name, or call others a specific name, in order to emphasize that
+    they do not agree with the ideologies of others.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_55_0.png)
+
+
+    The generic word ‘hacker’ therefore, although referring to those who have technical
+    knowledge and are able to gain unauthorized access to computer systems, is rather
+    vague and not distinguish those who use different methods or believe certain things.
+
+
+    Instead, separate names have emerged in order to distinguish between groups, and
+    to indicate that not all hackers follow the same rules or ideologies. One way
+    in which this can be seen, as discussed previously, the distinction between hackers
+    and crackers, as advocated by Eric S. Raymond in The New Hacker’s Dictionary.
+
+
+    In this book Raymond compiled a glossary of hackers’ computer programming jargon,
+    but those from the hacking community feel that this book is too biased by Raymond''s
+    own view of hacking as a malicious practice.
+
+
+    Rather than following the dichotomy of hacker/cracker that Raymond suggested,
+    the general hacking community feels that this is too reductive and and instead
+    advocate a wider list of name to reflect the spectrum of beliefs and practices
+    of the large hacking community.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'One subcategory of hackers is known as ''white hat hackers'' and they break
+    through computer security without a malicious motivation. Examples of why this
+    might be done include so to test one''s own security effectiveness, or when doing
+    work developing computer security software.
+
+
+    These breaches of security occur whilst performing vulnerability assessments of
+    computer software as part of a contractual agreement, and is therefore legal.
+    In, the slang term ''white hat'' references an ethical hacker who does so for
+    positive reasons, in order to protect rather than destroy. There are recognized
+    organizations, such as The International Council of Electronic Commerce Consulants,
+    who provide training and certificates for this area of ethical hacking.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_56_0.png)
+
+
+    On the other hand, there are ''black hat hackers'' who breach computer security
+    systems simply to be malicious, or to gain profit. These hackers are the ones
+    who are also referred to as crackers. This subcategory them cliché hackers are
+    often depicted in films and television, and represent the elusive and little-understood
+    computer criminal the public fears.
+
+
+    These types of hackers violate computer security in order to destroy, change or
+    steal information, or to prevent authorized users from being able to access the
+    system. The way they can cause disruption, waste time, and cause distress, but
+    they can also steal significant amounts of money or access confidential information.
+
+
+    Generally a black hat hacker will spend time looking for and discovering faults
+    in programs, or weaknesses in computer systems, rather than alert the public to
+    these problems they exploit for personal gain or simply for fun. Once they have
+    a computer system, they can consequently make adjustments that prevent somebody
+    with authorized access from using the system and thus the black hat hackers retain
+    control.
+
+
+    Lying somewhere between the two, not quite a white hat hacker and not quite a
+    black hacker, is the gray hat hacker. This is somebody without being asked to
+    searches the Internet for systems with a weakness or security flaw, and will then
+    notify the administrator and offer to rectify the problem for a fee.
+
+
+    In this way they are not as good as a white hat hacker (because they are demanding
+    a fee,'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'and their services were never requested) but they are also not as bad as a
+    black hacker because they do not exploit these weaknesses in order to prevent
+    disruption of steal data. Another way in which gray hackers might respond to their
+    discovery of a security weakness is to publish their findings online, so that
+    the general public has access to the information.
+
+
+    In this way they are not performing malicious hacking themselves, but they are
+    publishing the information, which leaves their subject at risk of a security breach.
+    This type of hacking is illegal and also considered unethical, whether or not
+    the gray hacker has breached security for personal gain, because they have gained
+    unauthorized access to data and have left the system susceptible to hacking by
+    malicious blat hacker groups.
+
+
+    As well as these three main classifications for hacking, which differentiate hackers
+    based on their motivation and what they do about the information they discover,
+    there are other specific types of hacker. There is a social hierarchy amongst
+    hackers, who are recognized based on their skill.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_57_0.png)
+
+
+    The highest of statuses are the elite hacker, and sometimes form into elite groups
+    ‘Masters of Deception.’ On the other end of the scale is a script kiddie, who
+    is still learning and has not yet developed their skills with breaching security
+    systems. A script kiddie uses automated tool written by others, and is simply
+    following a code provided by a more skilled, black hacker, and not having to work
+    it out themselves. Usually a script kiddie does not really have any knowledge
+    or understanding of the complicated underlying technological concepts, and simply
+    follows a plan provided by a more experienced hacker.
+
+
+    Even less experience than a script kiddie is a neophyte, who is a completely new
+    hacker who has very little knowledge of computer technologies or the logic and
+    concepts behind hacking. A blue hat refers to somebody who is used by security
+    consulting firms but is not actually a part of the company; the blue hat is used
+    to test a system prior to its launch determine whether it has security or will
+    be susceptible to hacking.
+
+
+    A hackivist (a combination of the words ‘hacker’ and ‘activist’) is a hacker who
+    uses their knowledge of technology and hacking skills in order to broadcast a
+    political, social or religious message. Hacktivism itself has two subcategories:
+    cyber terrorism (where websites are damaged or services cannot be accessed) and
+    freedom of information (making information available to the public that was previously
+    undisclosed or'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'stored in an encrypted format.)
+
+
+    Groups of hackers working collectively can include organized criminal gangs, cyber
+    warfare of nation states. The different subcategories of hackers are indicative
+    of the various ideologies, motivations and techniques that are present in the
+    hacking community.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# Chapter 3 – Computer Security
+
+
+    Before we can begin to explore the key concepts and techniques of hacking, it
+    is helpful to first understand the basics of computer security. As hacking is
+    the act of breaking through security measures of computer systems, an understanding
+    of these systems is vital to any hacker who hopes to penetrate them. Computer
+    security is applied to computers, smartphones, computer networks (public and private)
+    and the entire Internet in order to protect devices, data and services.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_59_0.png)
+
+
+    Digital equipment is protected from unauthorized access by computer security,
+    to ensure that data is not stolen, changed or deleted and to maintain the smooth
+    running of systems. In present-day society, digital culture forever growing, protecting
+    these systems is extremely important and the field of computer security is forever
+    growing and developing. Part of computer security is protecting the physical equipment
+    from theft, whereas the other part of computer security is information security,
+    to protect the data itself (and this is where hacking comes into play.)
+
+
+    However, sometimes these two fields overlap because there is a breach in physical
+    security (e.g. if a laptop is stolen) then it becomes much easier for the individual
+    to succeed in a breach of information security, since they have the piece of equipment
+    and it is therefore easier to access data than it is remotely.
+
+
+    Cyber security encompasses all security measures in place to protect a computer’s
+    data, and includes procedures such as awareness training, penetration testing,
+    and the use of passwords to confirm authorization in order to protect data both
+    when it is in transit and when it is simply stored. The financial cost of being
+    a victim of a computer security'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'breach is considerable and as a consequence there is a lucrative market for
+    anti-virus and computer security protection.
+
+
+    Computer security is a huge field because of our present-day reliance on technology.
+    Almost every industry uses computers to a greater or lesser extent, and therefore
+    the extent and variety of computer security measures is vast. There are some areas,
+    however, where computer security is particularly important because they are especially
+    vulnerable to breaches in security.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_60_0.png)
+
+
+    One of these is the area of financial systems, because hackers can make a profit
+    by stealing data and consequently accessing funds. Any website that requires somebody
+    to enter their credit card numbers are often targeted because a hacker can immediately
+    transfer money to their own account, or spend the victim''s money online.
+
+
+    Even if the hackers themselves do not directly use the person''s bank details,
+    they may also sell the information illegally, in order to distance themselves
+    from the crime and to avoid caught. It is not only online that person''s data
+    can be stolen; in-store card machines and cash points can also be rigged to collect
+    personal information and thus gain access to funds.
+
+
+    People are becoming increasingly aware of this risk when doing online shopping
+    or entering their credit details, and therefore various measures are being put
+    in place including using passwords and answering security questions. The aviation
+    industry is another field in which computer security is of the utmost importance,
+    because the consequences of a breach in security can range from the publication
+    of confidential information, to the loss of expensive equipment and human life.
+
+
+    There are various reasons why the aviation industry may become subject to a computer
+    security attack, depending on the motivation for the crime. These motivations
+    include sabotage and espionage in the military aviation industry, and industrial
+    competition and terrorism in commercial aviation industry. Traffic control is
+    one of the aviation industries most vulnerable systems, because any attack can
+    be difficult to trace, and are relatively simple because it only
+
+
+    ![](img/7d7681224c1536e030055a556b655618_60_1.png)
+
+
+    requires a spoof message on the radio.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'There are those who seek to exploit computer vulnerabilities(either due to
+    thrill seeking, to make a political/social statement or for financial gain) and
+    of course on the other side those who work to uphold computer security against
+    such threats. Somebody with knowledge of technology, and the ability to hack into
+    computer systems, can therefore become involved in the illegal and unethical form
+    of hacking (otherwise known as cracking), or serve the other side by identifying
+    threats, improving security measures and alerting companies to the vulnerabilities
+    in their systems.
+
+
+    For whose aim is to protect computer security, there are various countermeasures
+    against guard hacking, whereby the risk of being vulnerable to a breach of computer
+    security can be minimized or eliminated. These precautions vary in cost and complexity,
+    can include: intrusion detection systems (to detect threats and also analyze attacks
+    after the event), the use of account controls (passwords and encryption of data);
+    and the installation of firewalls (providing either hardware and software package
+    filtering of certain forms of attack.
+
+
+    Precautions against a computer system being compromised by attack include making
+    steps to prevent attack, ensure any potential attacks are detected, and the ability
+    to respond to an attack to prevent further damage.
+
+
+    However, despite being a range of countermeasures available, computer systems
+    still remain vulnerable to attack and it certainly not uncommon for a computer
+    to have its security compromised. The first reason why attempted security violations
+    still occur is that the police are often unfamiliar with computer technology and
+    as a result do not have either the skill or the inclination to solve the crimes
+    and apprehend the criminals responsible.
+
+
+    ```
+
+    User name
+
+    user01
+
+    Password
+
+    ******
+
+    ```
+
+
+    Furthermore, any investigation of such matters requires a search warrant in order
+    for an officer to examine the entry and can make the procedure extremely consuming.
+    Another difficulty in ensuring computer security is that in the age of globalization,
+    which information can be shared throughout the world using the internet, and technology
+    can spread data extremely easily, identifying and apprehending those responsible
+    is particularly difficult.
+
+
+    The reason for this difficulty is that a hacker might be working from one jurisdiction,
+    while the system they are hacking into in a different jurisdiction. Furthermore,
+    hacker can use various techniques (such as a temporary dial-up internet) in order
+    to ensure their anonymity. The third problem is due to the high number of attacks
+    that occur.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: Organizations can be subject to many attacks and therefore are unable to pursue
+    every security threat. A computer user would benefit from taking precautionary
+    measures in order to ensure their computer security, as once a breach of security
+    has occurred there is not much that can be done to rectify it.
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# Chapter 4 – Hacking Techniques
+
+
+    There are various techniques that can be used by hackers in order to gain unauthorized
+    access to a computer system, in order to wreak havoc, steal money or data, or
+    to prevent the system from operating as it is supposed to. The three main methods
+    that are used in order to attack a system that is connected to the Internet are:
+    network enumeration, vulnerability analysis and exploitation.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_63_0.png)
+
+
+    A network enumerator is a program that is used in order to discover the usernames
+    and other information from networked computers. The program discovers any weaknesses
+    in the computer network''s security and the findings are reported to a hacker
+    who may use this information in order to access the network and cause damage (either
+    by stealing data or causing the network).
+
+
+    On the other hand, ethical hackers can use the same process simply to discover
+    any weaknesses in their system to tighten security. Another method used is vulnerability
+    analysis, which identifies any points of vulnerability in a system; this information
+    can be used to attack the system, or to remove the weakness. Vulnerability analysis
+    can lead to exploitation, where the hacker uses the vulnerability information
+    in order to breach a computer or system''s security.
+
+
+    There are many specific techniques that can be used, but they employ the main
+    concepts and methods described above. The first most specific example of a hacking
+    technique is a vulnerability scanner, which is a program used to check a network
+    for susceptibility to attack. A port scanner can also be used, which identifies
+    avenues of access to a computer and can establish how to circumnavigate a firewall.
+
+
+    As well as these mechanized devices, hackers can also find these vulnerabilities'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'themselves, which can be done by manually searching the code of the computer
+    and then testing they are right. Brute-force attack is another method by which
+    a hacker can gain unauthorized entry to a computer network, and this involves
+    for guessing passwords. Password cracking is another hacking technique that uses
+    passwords, but rather than guessing the password, the hacker recovers password
+    information that has been stored in the computer, or transmitted.
+
+
+    # Internet LAN
+
+
+    A spoofing attack (otherwise known as phishing) is an enemy program, system or
+    website that poses as a trusted one. By falsifying data the hacker is able to
+    masquerade as a trusted system and thus fool a program or user into revealing
+    confidential information such as passwords or bank details. Another hacking technique
+    that is commonly used by employing experts hard to detect methods.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_64_0.png)
+
+
+    root kit, which is a program that manages to take over the control of an operating
+    hard to detect methods.
+
+
+    A Trojan horse is yet another technique that is a program which manages to fool
+    systems and users; it works by working in one way seeming to be doing something
+    else. By using this method a hacker is able to gain unauthorized access to a system
+    and create an access point so that they can re-enter via that established route
+    later on. A computer virus is the most widely recognized form of hacking, as it
+    is the computer threat that most of the public is aware of.
+
+
+    The virus work by self-replicating and implanting itself into computer codes and
+    code; while some computer viruses are malicious some are merely irritating or
+    harmless. A computer worm is similar in that it is self-replicating, but it is
+    able to enter a computer program without a user inadvertently letting it in, and
+    it does not need to insert itself into present programs.
+
+
+    Finally, a keylogger is a tool that records every keystroke on a given machine,
+    which can later be accessed and viewed by the hacker. This is usually to enable
+    the hacker to access confidential information that has been typed by the victim.
+    In fact, there are some legitimate uses for such a technique, for example some
+    companies use a keylogger in order to detect any dishonesty or fraud committed
+    by an employee.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'A large area of computer hacking involves the use of social engineering, whereby
+    in order to circumvent information security a person is manipulated in order to
+    reveal confidential information or to grant access to secure networks. This technique
+    (including phishing) is usually only part of a complex routine in a wider scheme,
+    but it is also a dangerous step because human beings are more likely to be won
+    over by a convincing trickster than a machine.
+
+
+    Social engineering relies on the psychological act of decision-making, and can
+    be thought of as one of the most significant vulnerabilities in a computer security
+    system. There are many different ways in which social engineering can be applied
+    in order to gain unauthorized access to a computer system, and this includes criminals
+    posing as technicians who pretend that they are fixing computers while in fact
+    stealing data.
+
+
+    Another example would be a trickster informing a company that the number of the
+    helpdesk has changed, so when employees phone the number they will willingly disclose
+    their account details thinking they are talking to somebody they can trust with
+    the information. These sorts of scenarios come under the category of ''pretexting''
+    because making up a believable scenario allows the criminal to access the required
+    information and this leads the victim to disclose the information.
+
+
+    Other professionals that a hacker involved in social engineering could pose as
+    the police or bank manager, because these are individuals who we believe have
+    the right to be granted any information that they request. Baiting is a subcategory
+    of social engineering because it relies on psychology in order to work. Baiting
+    is when a victim''s computer security is compromised when an infected device,
+    or USB stick is used.
+
+
+    ![](img/7d7681224c1536e030055a556b655618_65_0.png)
+
+
+    An example of baiting would be for the criminal to post a USB through somebody''s
+    door with a tempting sounding label and simply wait for the curious victim to
+    plug it into their laptop, at which point malware would automatically install
+    and infect their computer. This technique makes most of the human tendency towards
+    curiosity and greed, because if a label promises erotic images, money or gossip
+    then a victim may find it it hard to resist taking a look.
+
+
+    Kevin Mitnik, a once computer criminal who later became because a security consultant,
+    has'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: 'pointed out that it is much easier and quicker to trick a person into disclosing
+    confidential information than it is to crack into the system using luck, brute
+    force or technical knowledge. Christopher Hadnagy has written a book titled Social
+    Engineering: The Art of Human Hacking, which emphasizes the way in which humans
+    are the most vulnerable part of any computer system.'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# Conclusion
+
+
+    This book has provided an overview of some of the key concepts to do with hacking.
+    We have considered the beginnings of hacking and how it was influenced by the
+    literary tradition of Cyberpunk. It is interesting to note that what was once
+    depicted in science-fiction as an imagined activity in a dystopian society has
+    become real and has gone on to pose a significant threat to computer security
+    and a central concern of information technology experts.
+
+
+    Here we can see the true beginnings of hacking and what was once a fictional theoretical
+    concept has become a reality with a significant impact on the digital culture.
+    Next we looked at the different types of hackers and noted the distinction between
+    ethical hackers, who perform hacking legally and in order to improve computer
+    security (otherwise known as white hat hackers) and unethical hackers, who use
+    their skills illegally in order to wreak havoc, disrupt services, and steal information
+    (otherwise known as black hat hackers).
+
+
+    With it is interesting to note how technical skill can be used differently depending
+    on motivation, and how the hacking community is not united by a clear and consistent
+    ideology. Subsequently we looked at computer security in order to better understand
+    the conditions within which hacking takes place. By learning about computer security
+    it is possible to understand the challenges faced by hackers who come against
+    security measures, as well as the challenges faced by those seeking to maintain
+    the security of their computer systems.
+
+
+    Any introduction to hacking would not be complete without this examination of
+    computer security because the value of maintaining computer security is what motivates
+    ethical hackers, and what unethical hackers are fighting against. Finally we looked
+    at the different hacking techniques that can be utilized, including both automated
+    software that finds and exploits vulnerabilities in computer systems, as well
+    as manual methods for breaking through security measures such as discovering a
+    password through trial and error.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'In this chapter we also considered the vast area of hacking that is social
+    engineering, by which a hacker is able to access a secure network by illegally
+    obtaining the information needed. In today''s digital culture we are becoming
+    increasingly reliant on technology for everything that we do.
+
+
+    As technology has improved our lives have become easier in many ways, but with
+    this blossoming industry new types of criminals have also been created. A criminal
+    does now not even need to leave the house in order to steal money, but can do
+    so simply by hacking into their victim''s computer and accessing confidential
+    data.
+
+
+    Hacking is not always illegal though, and this book has also looked at the ways
+    in which there is an increasing demand for computer experts to become ethical
+    hackers in order to further promote and protect computer security. This introduction
+    to the world of hacking has revealed that hacking is not a simple activity but
+    a huge spectrum of different behaviors that involve a wide range of techniques
+    and motivations.
+
+
+    Moreover, hacking is shown to be an activity that has a strong sense of cult affiliation,
+    in the sense that hackers strongly feel part of the hacking community. As digital
+    culture continues to grow, it seems that both ethical and unethical hacking will
+    become more and skilled and its impact evermore significant.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: Thank you for reading. I hope you enjoy it. Ask you to leave your honest feedback.
+  merge: -1
+  pgno: 69
