@@ -1,0 +1,3139 @@
+- img_proc: true
+  md: '# LEETCODE
+
+
+    50 COMMON INTERVIEW QUESTIONS
+
+
+    ![](img/172f5d31191b965fe8ccb5a0f5becd9a_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'LEETCODE
+
+
+    # # Clean Code Handbook
+
+
+    © 2014 LeetCode
+
+    admin@leetcode.com'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# CHAPTER 0: FOREWORD....................................................................................4
+
+
+    # CHAPTER 1: ARRAY/STRING ................................................................................5
+
+
+    +   1. Two SUM ...................................................................................................5
+
+    2. Two SUM II – INPUT ARRAY SORTED ........................................................................6
+
+    3. Two SUM III – DATA STRUCTURE DESIGN .................................................................8
+
+    4. VALID PALINDROME .................................................................................................10
+
+    5. IMPLEMENT STRSTR()................................................................................................11
+
+    6. REVERSE WORDS IN A STRING.......................................................................................12
+
+    7. REVERSE WORDS IN A STRING II..................................................................................................13
+
+    8. STRING TO INTEGER (ATOI) .......................................................................................14
+
+    9. VALID NUMBER.................................................................................................................16
+
+    10. LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS...............................................19
+
+    11. LONGEST SUBSTRING WITH AT MOST TWO DISTINCT CHARACTERS..............................21
+
+    12. MISSING RANGES.......................................................................................................23
+
+    13. LONGEST PALINDROMIC SUBSTRING...............................................................................24
+
+    14. ONE EDGE DISTANCE................................................................................................27
+
+    15. READ N CHARACTERS GIVEN READ4...............................................................................29
+
+    16. READ N CHARACTERS GIVEN READ4 – CALL MULTIPLE TIMES...............................................30
+
+
+    # CHAPTER 2: MATH ............................................................................................32
+
+
+    +   17. REVERSE INTEGER ................................................................................................32
+
+    18. Plus One.....................................................................................................................34
+
+    19. PALINDROME NUMBER................................................................................................35
+
+
+    # CHAPTER 3: LINKED LIST ................................................................................37
+
+
+    +   20. MERGE TWO Sorted Lists.........................................................................................37
+
+    21. ADD TWO NUMBERS......................................................................................................38
+
+    22. SWAP NODES IN PAIRS................................................................................................39
+
+    23. MERGE K SORTED Linked Lists...............................................................................................40
+
+    24. COPY LIST WITH RANDOM POINTER...............................................................................43
+
+
+    # CHAPTER 4: BINARY TREE ...................................................................46
+
+
+    +   25. VALIDATE BINARY SEARCH TREE...............................................................................46
+
+    26. MAXIMUM DEPTH OF BINARY TREE...............................................................................49
+
+    27. MINIMUM DEPTH OF BINARY TREE...............................................................................50
+
+    28. BALANCED ARRAY TO BALANCED BINARY SEARCH TREE.......................................................52
+
+    29. CONVERT SORTED ARRAY TO BALANCED BINARY SEARCH TREE...............................................54
+
+    30. CONVERT SORTED LIST TO BALANCED BINARY SEARCH Tree..................................................56
+
+    31. BINARY TREE MAXIMUM PATH SUM...............................................................................58
+
+    32. BINARY TREE UPSIDE DOWN.........................................................................................60
+
+
+    # CHAPTER 5: BIT MANIPULATION...............................................................62
+
+
+    +   33. SINGLE NUMBER..................................................................................................62
+
+    34. SINGLE NUMBER II.....................................................................................................64
+
+
+    # CHAPTER 6: MISC...............................................................................66
+
+
+    2'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '+   35. SPIRAL MATRIX...............................................................................................
+    66
+
+
+    +   36. INTEGER TO ROMAN.......................................................................................
+    68
+
+
+    +   37. ROMAN TO INTEGER......................................................................................
+    70
+
+
+    +   38. CLONE GRAPH...............................................................................................
+    72
+
+
+    # CHAPTER 7: STACK ............................................................................
+    74
+
+
+    +   39. MIN STACK................................................................................................
+    74
+
+
+    +   40. EVALUATE REVERSE POLISH NOTATION......................................................
+    76
+
+
+    +   41. VALID PARENTHESES........................................................................
+    80
+
+
+    # CHAPTER 8: DYNAMIC PROGRAMMING......................................................
+    81
+
+
+    +   42. CLIMB STAIRS.........................................................................................
+    81
+
+
+    +   43. UNIQUE PATHS.........................................................................................
+    83
+
+
+    +   44. UNIQUE PATHS II.........................................................................................
+    86
+
+
+    +   45. MAXIMUM SUM SUBARRAY......................................................................
+    87
+
+
+    +   46. MAXIMUM PRODUCT SUBARRAY...............................................................
+    89
+
+
+    +   47. COINS IN A LINE..............................................................................................
+    90
+
+
+    # CHAPTER 9: BINARY SEARCH...............................................................
+    95
+
+
+    +   48. SEARCH INSERT POSITION..................................................................
+    95
+
+
+    +   49. FIND MINIMUM IN SORTED ROTATED ARRAY...............................................
+    97
+
+
+    +   50. FIND MINIMUM IN ROTATED SORTED ARRAY II - WITH DUPLICATES......... 99'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # Chapter 0: Foreword
+
+
+    Hi, leetCoders:
+
+
+    First, I would like to express thank you for buying this eBook: “Clean Code Handbook:
+    50 Common Interview Questions”. As the title suggested, this is the definitive
+    guide to write clean and concise code for interview questions. You will learn
+    how to write clean code. Then, you will ace the coding interviews.
+
+
+    This eBook is written to serve as perfect companion for LeetCode Online Judge
+    (OJ).
+
+
+    Each problem has a “Code it now” link that redirects to the OJ problem state.
+    You can write the code and submit it to the OJ system, which will get you immediate
+    feedback on whether your solution is correct. If the “Code it now” says “Coming
+    soon”, the problem will be added soon in the future, so stay tuned.
+
+
+    On the right side of each problem are the Difficulty and Frequency ratings. There
+    are three levels of difficulty: Easy, Medium, and Hard. Easy problems are problems
+    that are easy to come up with ideas and the implementation should be pretty straightforward.
+    Most interview questions fall into this level of difficulty.
+
+
+    On the other end, there are hard problems. Hard problems are usually algorithmic
+    in require more thoughts beforehand. There could be some coding questions that
+    fall into Hard, but that is rare.
+
+
+    There are three frequency ratings: Low, Medium, and High. The frequency of a problem
+    being asked in a real interview is based on data collected from the user survey:
+    “Have you met this question in a real interview?” This should give you an idea
+    of what kind of questions is currently being asked in real interviews.
+
+
+    Each question may contain a section called “Example Questions Candidate Might
+    Ask”. These are examples of good questions to ask your interviewer. Asking clarifying
+    questions is important and is a good chance to demonstrate your thought process.
+    Each question is accompanied with as many approaches as possible. Each approach
+    begins with runtime and space complexity so you can quickly compare different
+    approaches. The analysis of the runtime and space complexity is usually provided
+    with the solution. Analyzing complexity is frequently being asked in a technical
+    interview, so you should definitely prepare for it.
+
+
+    You learn best when you solve a problem by yourself. If you get stuck, there are
+    usually hints in the book to help you. If you are still stuck, read the analysis
+    and try to write the code in the Online Judge
+
+
+    Even though you think a problem is easy, writing code that is concise and clean
+    is not as easy as most people think. For example, if you are writing more than
+    30 lines of code during a coding interview, your code is probably not concise
+    enough. Master code in this eBook full between 20 — 30 lines of code.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "# Chapter 1: Array/String\n\n# 1. Two Sum\n\nCode it now: https://oj.leetcode.com/problems/two-sum/\
+    \ Difficulty: Easy, Frequency: High\n\n# Question:\n\nGiven an array of integers,\
+    \ find two numbers that they add up to a specific target number.\n\nThe function\
+    \ twoSum should return indices of the two numbers that they add up to the target,\
+    \ where index1 must be less than index2. Please note that your returned answers\
+    \ (both index1 and index2) are not zero-based.\n\nYou may assume that each input\
+    \ would have exactly one solution.\n\n# Solution:\n\nO(n²) runtime, O(1) space\
+    \ – Brute force:\n\nThe brute force approach is simple. Loop through each element\
+    \ x and find if there is another value that equals to target - x. By finding another\
+    \ value looping through the rest of array, its runtime complexity is O(n²).\n\n\
+    O(n) runtime, O(n) space – Hash table:\n\nWe could reduce the runtime complexity\
+    \ of looking up a value to O(1) using a hash map that maps a value to its index.\n\
+    \n```\npublic int[] twoSum(int[] numbers, int target) {\n  Map<Integer, Integer>\
+    \ map = new HashMap<>();\n  for (int i = 0; i < numbers.length; i++) {\n    int\
+    \ x = numbers[i];\n    if (map.containsKey(target - x)) {\n      return new int[]\
+    \ { map.get(target - x) + 1, i + 1 };\n    }\n    map.put(x, i);\n  }\n  throw\
+    \ new IllegalArgumentException(\"No two sum solution\");\n}\n```\n\n# Follow up:\n\
+    \nWhat if the given input is already sorted in ascending order? See Question [2.\
+    \ Two Sum II – Input array is sorted."
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# 2. Two Sum II – Input array is sorted\n\nCode now: Coming soon! Difficulty:\
+    \ Medium, Frequency: N/A\n\n# Question:\n\nSimilar to Question [1. Two Sum], except\
+    \ the input array is already sorted in ascending order.\n\n# Solution:\n\nOf course\
+    \ we could still apply the [Hash table] approach, but it costs us O(n) extra space,\
+    \ plus it does not make use of the fact that the input is already sorted.\n\n\
+    O(n log) runtime, O(1) space – Binary search:\n\nFor each element x, we could\
+    \ look up if target exists in O(log n) time by applying binary search over the\
+    \ sorted array. Total runtime complexity is O(n log n).\n\n```\npublic int[] twoSum(int[]\
+    \ numbers, int target) {\n    // Assume input is already sorted.\n    for (int\
+    \ i = 0; i < numbers.length; i++) {\n        int j = bsearch(numbers, target -\
+    \ numbers[i], i + 1);\n        if (j != -1)\n            return new int[] {i +\
+    \ 1, j};\n    }\n    throw new IllegalArgumentException(\"No two sum solution\"\
+    );\n}\n\nprivate int bsearch(int[] A, int key, int start) {\n    int L = start,\
+    \ R = A.length - 1;\n    while (L < R) {\n        int M = (L + R) / 2;\n     \
+    \   if (A[M] < key)\n            L = M + 1;\n        } else\n            R = M;\n\
+    \    }\n    return (L <= R && A[L] == key) ? L : -1;\n}\n```\n\n# O(n) runtime,\
+    \ O(1) space – Two pointers:\n\nLet's assume we have two indices pointing to the\
+    \ i^{th} and j^{th} elements, $A_i$ and $A_j$ respectively. The sum of $A_i$ and\
+    \ $A_j$ can only fall into one of these three possibilities:\n\n+   i. $A_i +\
+    \ A_j > target$. Increasing $i$ isn't going to help us, as it makes the sum bigger.\
+    \ Therefore we should decrement $j$.\nii. $A_i + A_j < target$. Decreasing $j$\
+    \ isn't going to help us, as it makes the sum smaller. Therefore we should increment\
+    \ $i$.\niii. $A_i + A_j = target$. We have found the answer."
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "```\npublic int[] twoSum(int[] numbers, int target) {\n    // Assume input\
+    \ is already sorted.\n    int i = 0, j = numbers.length - 1;\n    while (i < j)\
+    \ {\n        int sum = numbers[i] + numbers[j];\n        if (sum < target) {\n\
+    \            i++;\n        } else if (sum > target) {\n            j--;\n    \
+    \    } else {\n            return new int[] { i + 1, j + 1 };\n        }\n   \
+    \ }\n    throw new IllegalArgumentException(\"No two sum solution\");\n}\n```"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# 3. Two Sum III – Data structure design\n\nCode it now: Coming soon! Difficulty:\
+    \ Easy. Frequency: N/A\n\n# Question:\n\nDesign and implement a TwoSum class.\
+    \ It should support the following operations: add and find.\n\nadd(input) – Add\
+    \ the number input to an internal data structure.\nfind(value) – Find if there\
+    \ exists any pair of numbers whose sum is equal to the value.\n\nFor example,\
+    \ add(1); add(3); add(5); find(4) → true; find(7) → false\n\n# Solution:\n\n**add\
+    \ – O(n) runtime, find – O(1) runtime, O(n²) space – Store pair sums in hash table:**\n\
+    \ could store all possible pair sums into a hash table. The extra space needed\
+    \ is in the order of O(n). You would also need the list of added numbers. Each\
+    \ add operation essentially goes through the list and find new pairs that go into\
+    \ the hash table. The find operation involves a single hash table lookup in O(1)\
+    \ runtime.\n\nThis method is useful if the number of find operations exceeds the\
+    \ number of add operations.\n\n**add – O(log n) runtime, find – O(n) runtime,\
+    \ O(n) space – Binary search + Two pointers:**\n\nMaintain a sorted array of numbers.\
+    \ Each add operation would need O(log n) time to insert it at the correct position\
+    \ using a modified binary search (See Question [48. Search Insert Position]).\
+    \ For find operation we then apply the [Two pointers] approach in O(n) runtime.\n\
+    \n**add – O(1) runtime, find – O(n) runtime, O(n) space – Store input in hash\
+    \ table:**\n\nA simpler approach is to store each input into a hash table. To\
+    \ find if a pair exists, just iterate through the hash table in O(n) runtime.\
+    \ Make sure you are able to handle duplicates correctly."
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "```\npublic class TwoSum {\n    private Map<Integer, Integer> table = new HashMap<>();\n\
+    \n    public void add(int input) {\n        int count = table.containsKey(input)\
+    \ ? table.get(input) : 0;\n        table.put(input, count + 1);\n    }\n\n   \
+    \ public boolean find(int val) {\n        for (Map.Entry<Integer, Integer> entry\
+    \ : table.entrySet()) {\n            int num = entry.getKey();\n            int\
+    \ y = val - num;\n            if (y == num) {\n                // For duplicates,\
+    \ ensure there are at least two individual numbers.\n                if (entry.getValue()\
+    \ >= 2) return true;\n            } else if (table.containsKey(y)) {\n       \
+    \         return true;\n            }\n        }\n        return false;\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# 4. Valid Palindrome\n\nCode now: https://oj.leetcode.com/problem/valid-palindrome/\
+    \  Difficulty: Easy, Frequency: Medium\n\n# Question:\n\nGiven a string, determine\
+    \ if it is a palindrome, considering only alphanumeric characters\nignoring cases.\n\
+    \nFor example,\n\n\"A man, a plan, a canal: Panama\" is a palindrome.\n\"race\
+    \ car\" is not a palindrome.\n\n# Example Questions Candidate Might Ask:\n\nQ:\
+    \ What about an empty string? Is it a valid palindrome?\nA: For the purpose of\
+    \ this problem, we define empty string as valid palindrome.\n\n# Solution:\n\n\
+    # O(n) runtime, O(1) space:\n\nThe idea is simple, have two pointers – one at\
+    \ the head while the other one at the tail.\nMove them towards each other until\
+    \ they meet while skipping non-alphanumeric characters.\n\nConsider the case where\
+    \ given string contains only non-alphanumeric characters.\nA valid palindrome\
+    \ because the empty string is also a valid palindrome.\n\n```\npublic boolean\
+    \ isPalindrome(String s) {\n    int i = 0, j = s.length() - 1;\n    while (i <\
+    \ j) {\n        while (i < j && !Character.isLetterOrDigit(s.charAt(i))) i++;\n\
+    \        while (i < j && !Character.isLetterOrDigit(s.charAt(j))) j--;\n     \
+    \   if (Character.toLowerCase(s.charAt(i)) != Character.toLowerCase(s.charAt(j)))\
+    \ {\n            return false;\n        }\n        i++; j--;\n    }\n    return\
+    \ true;\n}\n```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# 5. Implement strstr()\n\nCode now: https://oj.leetcode.com/problems/implement-strstr/\
+    \ Difficulty: Easy, Frequency: High\n\nQuestion:\n\nImplement strstr(). Returns\
+    \ the index of the first occurrence of needle in haystack, or –1 needle is not\
+    \ part of haystack.\n\nSolution:\n\nO(nm) runtime, O(1) space – brute force:\n\
+    \nThere are known efficient algorithms such as Rabin-Karp algorithm, KMP algorithm,\
+    \ or the Boyer-Moore class. Since these algorithms are usually studied in an advanced\
+    \ algorithms class, it is sufficient to solve it using the most direct method\
+    \ in an interview – The brute force method.\n\nThe brute method is straightforward\
+    \ to implement. We can search the needle with the haystack from its first position\
+    \ and start matching all subsequent letters by one. If the letters do not match,\
+    \ we start over with the next position in the haystack.\n\nAssume that n = length\
+    \ of haystack and m = length of needle, the runtime complexity is O(nm).\n\nHave\
+    \ you considered these scenarios?\n\n+   - needle or haystack is empty. If needle\
+    \ is empty, always return 0. If haystack is empty, then there will be no match\
+    \ (return –1) unless needle is also empty which is 0\n\n+   - needle’s length\
+    \ is greater than haystack’s length. Always return –1.\n\n+   - needle is located\
+    \ at the end of haystack. For example, “aaaba” and “ba”. Catch possible-by-one\
+    \ errors.\n\n+   - needle occurs multiple times in haystack. For example, “mississippi”\
+    \ and “issi”. It should return index 2 the first match of “issi”.\n\n+   - Imagine\
+    \ two long strings of equal length = n, haystack = “aaa...aa” and needle = “aaa...ab”.\
+    \ You should not do more than n comparisons, or your code will get Time Limit\
+    \ Exceeded in OJ.\n\nBelow is a simple implementation – no special statements\
+    \ for all the above scenarios.\n\n```\npublic int strStr(String haystack, String\
+    \ needle) {\n  for (int i = 0; i++) {\n    for (int j = 0; j++) {\n      if (j\
+    \ == needle.length()) return i;\n      if (i + j == haystack.length()) return\
+    \ -1;\n      if (needle.charAt(j) != haystack.charAt(i + j)) break;\n    }\n \
+    \ }\n}\n\n```\n\n11"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# 6. Reverse Words in a String\n\nCode it now: https://oj.leetcode.com/problems/reverse-words-in-a-string/\
+    \ Difficulty: Medium, Frequency: High\n\n# Question:\n\nGiven an input string\
+    \ s, reverse the string by word.\nFor example, given s = \"the sky is blue\",\
+    \ return \"blue is the sky\".\n\n# Examples Candidates Might Ask:\n\n+   Q: What\
+    \ constitutes a word?\nA: A sequence of non-space characters constitutes a word.\n\
+    Q: Does tab or newline character count as space characters?\nA: Assume the input\
+    \ does not contain any tabs or newline characters.\nQ: Could the input string\
+    \ contain leading or trailing spaces?\nA: Yes. However, your reversed string should\
+    \ not contain leading or trailing spaces.\nQ: How many spaces between two words?\n\
+    A: Reduce them to a single space in the reversed string.\n\n# Solution\n\n# O(n)\
+    \ runtime, O(n) space:\n\nOne simple approach is a two-pass solution: First to\
+    \ split the string by spaces into an array of words, then second pass to extract\
+    \ the words in reversed order.\nWe can do better in one-pass. While iterating\
+    \ the string in reverse order, we keep track of a word's begin and end position.\
+    \ When we are at the beginning of a word, we append it.\n\n```\npublic String\
+    \ reverseWords(String s) {\n    StringBuilder reversed = new StringBuilder();\n\
+    \    int j = s.length();\n    for (int i = s.length() - 1; i >= 0; i--) {\n  \
+    \      if (s.charAt(i) == ' ') {\n            j = i;\n        } else if (i ==\
+    \ 0 || s.charAt(i - 1) == ' ') {\n            if (reversed.length() != 0) {\n\
+    \                reversed.append(' ');\n            }\n            reversed.append(s.substring(i,\
+    \ j));\n        }\n    }\n    return reversed.toString();\n}\n```\n\n# Follow\
+    \ up:\n\nIf the input string does not contain leading or trailing spaces, could\
+    \ you do it in-place without allocating extra space? See Question [7]. Reverse\
+    \ Words in a String II."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# 7. Reverse Words in a String\n\nCode it now: Coming soon! Difficulty: Medium,\
+    \ Frequency: N/A\n\n# Question:\n\nSimilar to Question [6. Reverse Words in String],\
+    \ but with the following constraints:\n\n“The string does not contain leading\
+    \ or trailing spaces and the words are always separated by a single space.”\n\n\
+    Could you do in-place without allocating extra space?\n\n# Solution:\n\n# O(n)\
+    \ runtime, O(1) space – In-place reverse:\n\nLet us indicate the $i^{th}$ word\
+    \ by $w_i$ and its reversal as $w_i'$. Notice that when you reverse a word, you\
+    \ get back the original word. That is, $(w_i)' = w_i$.\n\nThe input string is\
+    \ $w_1 w_2 ... w_n$. If we reverse the entire string, it becomes $w_n' ... w_2'\
+    \ w_1'$. Finally, we reverse each individual and it becomes $w_n ... w2 w1$. Similarly,\
+    \ the result could be reached by reversing each individual word, and then reverse\
+    \ the entire string.\n\n```\npublic void reverse(char[] s) {\n    reverse(s, 0,\
+    \ s.length);\n    for (int i = 0, j = s.length - 1; j < s.length; j++) {\n   \
+    \     if (s[j] == ' ') {\n            reverse(s, i, j);\n            i = j + 1;\n\
+    \        }\n    }\n}\n\nprivate void reverse(char[] s, int begin, int end) {\n\
+    \    for (int i = 0; i < (end - begin) / 2; i++) {\n        char temp = s[begin\
+    \ + i];\n        s[begin + i] = s[end - i - 1];\n        s[end - i - 1] = temp;\n\
+    \    }\n}\n```\n\n# Challenge 1:\n\nImplement the two-pass solution without using\
+    \ the library’s split function.\n\n# Challenge 2:\n\nRotate an array to the right\
+    \ by k steps in-place without allocating extra space. For instance, with k = 3,\
+    \ the array [0, 1, 2, 3, 4, 5, 6] is rotated to [4, 5, 6, 0, 1, 2, 3]."
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# 8. String to Integer (atoi)
+
+
+    Code it now: https://oj.leetcode.com/problems/string-to-integer-atoi/                                               Difficulty:
+    Easy, Frequency: High
+
+
+    # Question:
+
+
+    Implement atoi to convert a string to an integer.
+
+
+    The atoi function first discards as many whitespace characters as necessary until
+    the first non-whitespace character is found. Then, starting from this character,
+    takes an optional plus or minus sign followed by as many digits as possible, and
+    interprets them as a numerical value.
+
+
+    The string can contain additional characters after those that form the integral
+    number, which are ignored and have no effect on the behavior of this function.
+
+
+    If the first sequence of non-whitespace characters in str is not a valid integral
+    number, or if no such sequence exists because either str is empty or it contains
+    only whitespace characters, no conversion is performed.
+
+
+    If no valid conversion can be performed, a zero value is returned. If the correct
+    value is out of the range of representable values, the maximum value (2147483647)
+    or the minimum integer value (-2147483648) is returned.
+
+
+    # Solution:
+
+
+    The heart of this problem is dealing with overflow. A direct approach is to store
+    the number as a string so we can evaluate at each step the number had indeed overflowed.
+    There are some other ways to detect overflow that requires knowledge about how
+    a specific programming language or operating systems works.
+
+
+    A desirable solution does not require any assumption on how the language works.
+    In each step we are appending a digit to the number by doing a multiplication
+    and addition. On the other hand, if the current number is greater than 214748364,
+    we know it is going to overflow. If the current number is equal to 214748364,
+    we know that it will overflow only when the current digit is greater than or equal
+    to 8. Remember to consider also edge case for the smallest number. -2147483648
+    (-2³¹¹).
+
+
+    14'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "```\nprivate static final int maxDiv10 = Integer.MAX_VALUE / 10;\n\npublic\
+    \ int atoi(String str) {\n    int i = 0, n = str.length();\n    while (i < n &&\
+    \ Character.isWhitespace(str.charAt(i))) i++;\n    int sign = 1;\n    if (i <\
+    \ n && str.charAt(i) == '+') {\n        i++;\n    } else if (i < n && str.charAt(i)\
+    \ == '-') {\n        sign = -1;\n    }\n    int num = 0;\n    while (i < n &&\
+    \ Character.isDigit(str.charAt(i))) {\n        int digit = Character.getNumericValue(str.charAt(i));\n\
+    \        if (num > maxDiv10 || num == maxDiv10 && digit >= 8) {\n            return\
+    \ sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;\n        }\n        num =\
+    \ num * 10 + digit;\n    }\n    i++;\n    return sign * num;\n}\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# 9. Valid Number
+
+
+    Code it now: https://oj.leetcode.com/problem/valid-number/
+
+
+    Difficulty: Easy. Frequency: Low
+
+
+    # Question:
+
+
+    Validate if a given string is numeric.
+
+
+    Some examples:
+
+
+    +   - "0" \rightarrow true
+
+    - "0.1" \rightarrow true
+
+    - "abc" \rightarrow false
+
+
+    # Example Questions Candidate Might Ask:
+
+
+    +   - Q: How to account for whitespaces in the string?
+
+    - A: When deciding if a string is numeric, ignore both leading and trailing whitespaces.
+
+    - Q: Should I ignore spaces between numbers such as "1 1"?
+
+    - A: No, only ignore leading and trailing whitespaces. "1 1" is not numeric.
+
+    - Q: If the string contains additional characters after a number, is it considered
+    valid?
+
+    - A: If the string contains any non-numeric characters (excluding whitespaces
+    and decimal point), it is not numeric.
+
+    - Q: Is valid if a plus or minus sign appears before the number?
+
+    - A: Yes, "+1" and "-1" are both numeric.
+
+    - Q: Should I consider only decimal? How about other bases such as hexadecimal
+    (0xFF)?
+
+    - A: Only consider decimal numbers. "0xFF" is not numeric.
+
+    - Q: Should I consider exponent as "1e10" as numeric?
+
+    - A: No. But free to work on the challenge that takes exponent into consideration.
+    The Online Judge problem does exponent into account.
+
+
+    # Solution:
+
+
+    This problem is very similar to Question [8. String to Integer (atoi)]. Due to
+    corner cases, it is helpful to break the problem down to several components that
+    can be solved individually.
+
+
+    A string could be divided into these four substrings in the order from left to
+    right:
+
+
+    +   - s1. Leading whitespaces (optional).
+
+    - s2. Plus (+) or minus (-) sign (optional).
+
+    - s3. Number.
+
+    - s4. Optional whitespaces (optional).
+
+
+    We ignore $s1, s2, s4$ and evaluate whether $s3$ is a valid number. We realize
+    that a number could either be a whole number or a decimal number. For a whole
+    number, it is easy: We evaluate $s3$ contains only digits and we are done.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "On the other hand, a decimal number could be further divided into three parts:\n\
+    \nThe integer and fractional parts contain only digits. For example, the number\
+    \ “3.64” has integer part (3) and fractional part (64). Both of them are optional,\
+    \ but at least one of them must present. For example, a single dot '.' is not\
+    \ a valid number, but “1.\"; “.1\"; and “1.0” are all valid. Please note that\
+    \ “1.” is valid because it implies “1.0”.\n\nBy now, it is pretty straightforward\
+    \ to translate the requirements into code, where the main logic to determine if\
+    \ x is numeric comes from line 6 to 17.\n\n```\npublic boolean isNumeric(String\
+    \ s) {\nint i = 0, n = s.length();\nwhile (i < n && Character.isWhitespace(s.charAt(i)))\
+    \ i++;\nif (i < n && s.charAt(i) == '+' || s.charAt(i) == '-') i++;\nboolean isNumeric\
+    \ = false;\nwhile (i < n && Character.isDigit(s.charAt(i))) {\n    i++;\n    isNumeric\
+    \ = true;\n}\nif (i < n && s.charAt(i) == '.') {\n    i++;\n    while (i < n &&\
+    \ Character.isDigit(s.charAt(i))) {\n        i++;\n        isNumeric = true;\n\
+    \    }\n}\nwhile (i < n && Character.isWhitespace(s.charAt(i))) i++;\nreturn isNumeric\
+    \ && i == n;\n```"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# Further Thoughts:\n\nA number could contain an optional exponent, which is\
+    \ marked by a character 'e' followed by a whole number (exponent). For example,\
+    \ “1e10” is numeric. Modify the above code to adapt to this requirement.\n\nThis\
+    \ is pretty straightforward to extend from the previous solution. The added block\
+    \ of code is highlighted as below.\n\n```\npublic boolean isNumber(String s) {\n\
+    \    int i = 0, n = s.length();\n    while (i < n && Character.isWhitespace(s.charAt(i)))\
+    \ i++;\n    while (i < n && (s.charAt(i) == '+' || s.charAt(i) == '-')) i++;\n\
+    \    boolean isNumeric = false;\n    while (i < n && Character.isDigit(s.charAt(i)))\
+    \ {\n        i++;\n        isNumeric = true;\n    }\n    if (i < n && s.charAt(i)\
+    \ == '.') {\n        while (i < n && Character.isDigit(s.charAt(i))) {\n     \
+    \       i++;\n            isNumeric = true;\n        }\n    }\n    if (isNumeric\
+    \ && i < n && s.charAt(i) == 'e') {\n        i++;\n        isNumeric = false;\n\
+    \        if (i < n && (s.charAt(i) == '+' || s.charAt(i) == '-')) i++;\n     \
+    \   while (i < n && Character.isDigit(s.charAt(i))) {\n            i++;\n    \
+    \        isNumeric = true;\n        }\n    }\n    while (i < n && Character.isWhitespace(s.charAt(i)))\
+    \ i++;\n    return isNumeric && i == n;\n}\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# 10. Longest Substring Without Repeating Characters
+
+
+    Code it now: Difficulty: Medium, Frequency: Medium
+
+    https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
+
+    # Question:
+
+
+    Given a string, find the length of the longest substring without repeating characters.
+    For example, the longest substring without repeating letters for “abcabcbb” is
+    “abc”, which the longest substring is 3. For “bbbb” the longest substring is “b”,
+    with the length of 1.
+
+
+    # Solution:
+
+
+    O(n) runtime, O(1) space – Two iterations:
+
+
+    How can we look up if a character exists in a substring instantaneously? The answer
+    is to use a simple table to store the characters that have appeared. Make sure
+    you communicate with your interviewer if the string has characters other than
+    ‘a’–z’, (ie, Digits? Upper case letter? Does it contain ASCII characters only?
+    Or even unique character sets?
+
+
+    The next question is to ask yourself what happens when you found a repeated character?
+    For example, if the string is “abcd”, what happens when you reach the second appearance
+    of “c”?
+
+
+    When you have found a repeated character (let''s say at index j), it means the
+    current substring (excluding the repeated character of course) is a potential
+    maximum, so update the maximum if necessary. It also means the repeated character
+    must have appeared before at an index i, where i is less than j.
+
+
+    Since you know that all substrings that start before or at index i would be less
+    than your current maximum, you can safely start to look for the next substring
+    with head starts exactly at index i + 1.
+
+
+    Therefore, you will need two indices to record the head and the tail of the current
+    substring. Since i and j both traverse at most n steps, the worst case would be
+    2n steps, which the runtime complexity must be O(n).
+
+
+    Note that the space complexity is constant O(1), even though we are allocating
+    an array. This is because no matter how long the string is, the size of the array
+    stays the same at 256.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "```\npublic int lengthOfLongestSubstring(String s) {\n    boolean[] exist =\
+    \ new boolean[256];\n    int i = 0, maxlen = 0;\n    for (int j = 0; j < s.length();\
+    \ j++) {\n        while (exist[s.charAt(j)]) {\n            exist[s.charAt(i)]\
+    \ = false;\n            i++;\n        }\n        exist[s.charAt(j)] = true;\n\
+    \        maxlen = Math.max(j - i + 1, maxlen);\n    }\n    return maxlen;\n}\n\
+    ```\n\nWhat if the character set contains unicode characters that is out of ascii?\
+    \ We could modify the above solution by using a Set instead of a simple boolean\
+    \ array of size 256.\n\n# O(n) runtime, O(1) space – Single iteration:\n\nThe\
+    \ above solution requires at most 2n steps. In fact, it could be optimized to\
+    \ require only n steps. Instead of using a table to tell if a character exists\
+    \ or not, we could define a mapping of the characters to its index. Then we can\
+    \ skip the characters immediately when we found a repeated character.\n\n```\n\
+    public int lengthOfLongestSubstring(String s) {\n    int[] charMap = new int[256];\n\
+    \    Arrays.fill(charMap, -1);\n    int i = 0, maxlen = 0;\n    for (int j = 0;\
+    \ j < s.length(); j++) {\n        if (charMap[s.charAt(j)] >= i) {\n         \
+    \   i = charMap[s.charAt(j)] + 1;\n        }\n        charMap[s.charAt(j)] = j;\n\
+    \        maxlen = Math.max(j - i + 1, maxlen);\n    }\n    return maxlen;\n}\n\
+    ```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# 11. Longest Substring with At Most Two Distinct Characters\n\nCode it now:\
+    \ Coming soon! Difficulty: Hard, Frequency: N/A\n\n# ## Question:\n\nGiven a string\
+    \ $S$, find the length of the longest substring $T$ that contains at most two\
+    \ distinct characters.\n\nFor example,\n\nGiven $S = \"ceba\"$,\n\n$T = \"ece\"\
+    $ which has length 3.\n\n# ## Solution:\n\nFirst, we could simplify the problem\
+    \ by assuming that $S$ contains two or more distinct characters, which means $T$\
+    \ must contain exactly two distinct characters.\n\nThe brute force approach $O(n^2)$\
+    \ where $n$ is the length of $S$. We can form every possible substring, and for\
+    \ each substring insert all characters into a Set which the Set's size indicating\
+    \ the number of distinct characters. This could be easily improved to $O(n)$ by\
+    \ reusing the same Set when adding a character to form a new substring.\n\nThe\
+    \ trick is to maintain a sliding window that always satisfies the invariant where\
+    \ there are always at most two distinct characters in it. When we add a new character\
+    \ that breaks this invariant, as above, how can we move the begin pointer to satisfy\
+    \ the invariant? Using the above example, our first window is the string \"abba\"\
+    . When we add the character 'c' into the sliding window, it breaks the invariant.\
+    \ Therefore, we have to readjust the window to satisfy the invariant again. The\
+    \ question is which starting point to choose so the invariant is satisfied.\n\n\
+    Let's look at another example $S = \"abaac\"$. When we add 'c' to the window,\
+    \ the new sliding window should be \"aac\"\n\nThis method iterates $n$ times and\
+    \ therefore its runtime complexity is $O(n)$. We use three pointers: $i$, $j$,\
+    \ and $k$.\n\n```\npublic int longestOfSubstringTwoDistinct(String s) {\n    int\
+    \ i = 0, j = -1, maxLen = 0;\n    for (int k = 0; k < s.length(); k++) {\n   \
+    \     if (s.charAt(k) == s.charAt(k - 1)) continue;\n        if (j > 0 && s.charAt(j)\
+    \ == s.charAt(k)) {\n            maxLen = Math.max(k - i, maxLen);\n         \
+    \   i = j + 1;\n        }\n        j = k - 1;\n    }\n    return Math.max(s.length()\
+    \ - i, maxLen);\n}\n```\n\n21"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# Further Thoughts:\n\nAlthough the above method works fine, it could not be\
+    \ easily generalized to the case where $T$ contains at most $k$ distinct characters.\n\
+    \nThe key is when we adjust the sliding window to satisfy the invariant, we need\
+    \ a counter of the number of times each character appears in the substring.\n\n\
+    ```\npublic int lengthOfLongestSubstringTwoDistinct(String s) {\n    int[] count\
+    \ = new int[256];\n    int i = 0, numDistinct = 0, maxLen = 0;\n    for (int j\
+    \ = 0; j < s.length(); j++) {\n        if (count[s.charAt(j)] == 0) numDistinct++;\n\
+    \        count[s.charAt(j)]++;\n        while (numDistinct > 2) {\n          \
+    \  count[s.charAt(i)]--;\n            if (count[s.charAt(i)] == 0) numDistinct--;\n\
+    \            i++;\n        }\n        maxLen = Math.max(j - i + 1, maxLen);\n\
+    \    }\n    return maxLen;\n}\n```"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# 12. Missing Ranges\n\nCode it now: Coming soon! Difficulty: Medium, Frequency:\
+    \ N/A\n\n# Question:\n\nGiven a sorted integer array where the range of elements\
+    \ are [0, 99] inclusive, return its missing ranges.\n\nFor example, given [0,\
+    \ 1, 3, 50, 75], return [\"2->49\", \"51->74\", \"76->99\"]\n\n# Example Questions\
+    \ Might Ask:\n\n+   Q: What if the given range is empty?\nA: Then you should return\
+    \ \"0->99\" as those ranges are missing.\nQ: What if the given range contains\
+    \ all elements from the ranges?\nA: Return an empty list, which no range is missing.\n\
+    \n# Solution:\n\nCompare the gap between two neighbor elements and output its\
+    \ range, simple as that? This seems deceptively easy, except there are multiple\
+    \ edge cases to consider, such as the first and last element, which does not have\
+    \ previous and next element respectively. Also, what happens when the given range\
+    \ is empty? We should output the range \"0->99\"\\As it turns out, if we could\
+    \ add two \"artificial\" elements, -1 before the first element and 100 after the\
+    \ last element, we could avoid all the above pesky cases.\n\n# Further Thoughts:\n\
+    \n+   i. List out test cases.\ni. You should be able to extend the above cases\
+    \ not only for the range [0, 99], but any arbitrary range [start, end].\n\n```\n\
+    public List<String> findMissingRanges(int[] vals, int start, int end) {\n    List<String>\
+    \ ranges = new ArrayList<>();\n    int prev = start - 1;\n    for (int i = 0;\
+    \ i <= vals.length; i++) {\n        int curr = (i == vals.length) ? end + 1 :\
+    \ vals[i];\n        if (curr - prev > 1) {\n            ranges.add(getRange(prev\
+    \ + 1, curr - 1));\n        }\n        prev = curr;\n    }\n    return ranges;\n\
+    }\n```\n\n```\nprivate String getRange(int from, int to) {\n    return (from ==\
+    \ to) ? String.valueOf(from) : from + \"->\" + to;\n}\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# 13. Longest Palindromic Substring\n\nCode now: https://oj.leetcode.com/problems/longest-palindromic-substring/\
+    \ Difficulty: Medium, Frequency: Medium\n\nQuestion:\n\nGiven a string $S$, find\
+    \ the longest palindromic substring in $S$. You may assume that the maximum length\
+    \ of $S$ is 1000, and there exists one unique palindromic substring.\n\nHint:\n\
+    \nFirst, make sure you understand what a palindrome means. A palindrome is a string\
+    \ which reads the same in both directions. For example, \"aba\" is a palindrome,\
+    \ \"abc\" is not.\n\nA common mistake:\n\nSome will be tempted to come up with\
+    \ a quick solution, which is unfortunately flawed (however can be corrected easily):\n\
+    \n> Reverse S and come S'. Find the longest common substring between S and S',\
+    \ which must also be the longest palindromic substring.\n\nThis seemed to work,\
+    \ let us see some examples below.\n\nFor example, $S = “caba”$, $S' = “abac”$.\n\
+    \nThe longest common substring between S and S' is “aba”, which is the answer.\n\
+    \nLet’s try another example: $S = “abcdaba”$, $S' = “abcddfdcaba”$.\n\nThe longest\
+    \ common substring between S and S' is “abacd”. Clearly, this is not a valid palindrome.\n\
+    \nWe could see that the longest common substring method fails when there exists\
+    \ a reversed copy of a non-palindromic substring in some other part of S. To rectify\
+    \ this, each time we find a common substring candidate, we check if the substring’s\
+    \ indices are the same as the reversed substring’s original indices. If it is,\
+    \ we attempt to update the longest palindromic found found so far; if not, we\
+    \ skip this and find the next candidate.\n\nThis us an $O(n^2)$ DP solution using\
+    \ $O(n)$ space (which could be improved to $O(n)$ space). Please read more about\
+    \ Longest Common Substring here.\n\n$O(n^3)$ runtime, $O(1)$ space – Brute force:\n\
+    \nThe obvious brute force solution is to pick all possible starting and ending\
+    \ positions for a substring, and verify if it is a palindrome. There are a total\
+    \ of $\binom{n}{2}$ substrings (excluding the trivial solution where a character\
+    \ itself is a palindrome).\n\nSince verifying each substring takes $O(n)$ time,\
+    \ the run time complexity is $O(n^3)$."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# O(n²) runtime, O(n) space – Dynamic programming:
+
+
+    To improve the brute force solution from a DP approach, first think how we can
+    avoid unnecessary re-computation in validating palindromes. Consider the case
+    “ababa”. If we already know that “bab” is a palindrome, it is obvious that “ababa”
+    must be a palindrome since the left and right end letters are the same.
+
+
+    Stated more formally below:
+
+
+    Define P[i, j ] ← true if the substring S Si ... Sj is a palindrome, otherwise
+    false.
+
+
+    Therefore,
+
+
+    ```
+
+    P[ i, j ] ← ( P[ i+1, j-1 ] and Si = Sj )
+
+    ```
+
+
+    The base cases are:
+
+
+    ```
+
+    P[ i, i ] ← true
+
+    ```
+
+
+    ```
+
+    P[ i, i+1 ] ← ( Si = Si+1 )
+
+    ```
+
+
+    This yields a straight forward DP solution, which we first initialize the one
+    and two letters palindromes, and work our way up finding all three letters palindromes,
+    and so on...
+
+
+    This gives us a runtime complexity of O(n²) and uses O(n²) space to store the
+    table.
+
+
+    # Additional exercise:
+
+
+    Could you improve the space complexity further and how?'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# O(n²) runtime, O(1) space – Simpler solution:\n\nIn fact, we could solve\
+    \ it in O(n²) time using only constant space.\n\nWe observe that a palindrome\
+    \ mirrors around its center. Therefore, a palindrome can be expanded from its\
+    \ center, and there are only 2n –1 such centers.\n\nYou might be asking why there\
+    \ 2n –1 but not n centers? The reason is the center of a palindrome is between\
+    \ two letters. Palindromes have even number of letters (such as \"abba\") and\
+    \ its center are between the two 'b's.\n\nSince expanding a palindrome around\
+    \ its center can take O(n), the overall complexity is O(n²).\n\n```\npublic String\
+    \ longestPalindrome(String s) {\n    int start = 0, end = 0;\n    for (int i =\
+    \ 0; i < s.length(); i++) {\n        int len = expandAroundCenter(s, i, i);\n\
+    \        int len2 = expandAroundCenter(s, i, i + 1);\n        len = Math.max(len,\
+    \ len2);\n        if (len > start) {\n            start = i - (len - 1) / 2;\n\
+    \            end = i + len / 2;\n        }\n    }\n    return s.substring(start,\
+    \ end + 1);\n}\n```\n\n```\nprivate int expandAroundCenter(String s, int left,\
+    \ int right) {\n    int L = left, R = right;\n    while (L >= 0 && R < s.length()\
+    \ && s.charAt(L) == s.charAt(R)) {\n        L--;\n        R++;\n    }\n    return\
+    \ R - L - 1;\n}\n```\n\n# O(n) runtime, O(n) space – Manacher’s algorithm:\n\n\
+    There is an O(n) algorithm called Manacher's algorithm, explained here in detail.\
+    \ However, it is a non-trivial algorithm, and no one expects you to come up with\
+    \ this algorithm in a 30 minutes coding session. But, please go ahead and understand\
+    \ it, I promise it will be a lot of fun."
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# 14. One Edit Distance\n\nCode it now: Coming soon!\n\n# Question:\n\nGiven\
+    \ two strings $S$ and $T$, determine if they are both one edit distance apart.\n\
+    \n# Hint:\n\n+   1. If $|n - m|$ is greater than 1, we know immediately that both\
+    \ are not one-edit distance apart.\n2. It might help you if you consider these\
+    \ cases separately, $m == n$ and $m \neq n$.\n3. Assume that $m$ is always $\\\
+    leq n$, which greatly simplifies the conditional statements. If $m > n$, we could\
+    \ just swap $S$ and $T$.\n4. If $m == n$, it becomes finding if there is *exactly*\
+    \ one modified operation. If $m \neq n$, you do not have to consider the deletion\
+    \ operation. Just consider the insert operation in $T$.\n\n# Solution:\n\nLet\
+    \ us assume $m =$ length of $S$, $n =$ length of $T$.\nAlthough this problem is\
+    \ solvable by directly applying the famous Edit distance dynamic programming with\
+    \ runtime complexity of $O(mn)$ there exists a simpler and more efficient one-pass\
+    \ algorithm.\n\n# $O(n)$ runtime, $O(1)$ space – Simple one-pass:\n\nFor the case\
+    \ where $m$ is equal to $n$, it becomes finding if there is exactly one modified\
+    \ character. Now let $m \\leq n$ we could just swap them.\n\nAssume $X$ represents\
+    \ the one-edit character. There are *three* one-edit distance operations\n\n+\
+    \   i. Modify operation – Modify a character to $X$ in $S$.\n$S = \"abcde\"\n\
+    T = \"abXde$$\n\n+   ii. Insert operation – $X$ was inserted before a character\
+    \ in $S$.\n$S = \"abcde\"\nT = \"abXcde$$\n\n+   iii. Append operation – $X$ was\
+    \ appended at the end of $S$.\n$S = \"abcde\"\nT = \"abcdeX$$"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "We make a first pass over S and T concurrently and stop at the first non-matching\
+    \ character between S and T.\n\n+   1. If S matches all characters in T, then\
+    \ check if there is an extra character at the end of T. (Modify operation)\n\n\
+    +   2. If |n - m|==1, that means we must skip this non-matching character only\
+    \ in T and make sure the remaining characters between S and T are exactly matching.\
+    \ (Insert operation)\n\n+   3. If |n - m|==0, then we skip both non-matching characters\
+    \ in S and T and make sure the remaining characters between S and T are exactly\
+    \ matching. (Append operation)\n\n```\npublic boolean isOneEditDistance(String\
+    \ s, String t) {\n    int m = s.length(), n = t.length();\n    if (m > n) return\
+    \ isOneEditDistance(t, s);\n    if (n > m) return false;\n    int i = 0, shift\
+    \ = 0;\n    while (i < m && s.charAt(i) == t.charAt(i)) i++;\n    if (i == m)\
+    \ return shift > 0;\n    if (shift == 0) i++;\n    while (i < m && s.charAt(i)\
+    \ == t.charAt(i + shift)) i++;\n    return i == m;\n}\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# 15. Read N Characters Given4\n\nCode it now: Coming soon!               \
+    \                Difficulty: Easy, Frequency: N/A\n\n# Question:\n\nThe API: int\
+    \ read4(char *buf) reads 4 characters at a time from a file.\n\nThe return value\
+    \ is the actual number of characters read. For example, it returns 3 if is only\
+    \ 3 characters left in the file.\n\nBy using the read4 API, implement the function\
+    \ int read(char *buf, int n) that reads n characters from the file.\n\nNote: The\
+    \ read function will only be called once for each test case.\n\n# Solution:\n\n\
+    This seemingly easy coding question has some tricky edges. When read4 returns\
+    \ less than 4, we know it reached the end of the file. However, take note that\
+    \ read4 returning 4 could mean the last 4 bytes of the file.\n\nTo make sure that\
+    \ the buffer is not copied more than n bytes, copy the remaining (n – readBytes)\
+    \ or the number of bytes read, which is smaller.\n\n/ The read4 API is defined\
+    \ in the parent class Reader4.\n\n```\npublic class Solution extends Reader4 {\n\
+    /**\n * @param n Maximum number of characters to read\n * @return The number of\
+    \ characters read\n */\npublic int read(char[] buf, int n) {\nchar[] buffer =\
+    \ new char[4];\nint readBytes = 0;\nboolean eof = false;\nwhile (!eof && readBytes\
+    \ < n) {\nint sz = read4(buffer);\nif (sz < 4) eof = true;\nint bytes = Math.min(n\
+    \ - readBytes, sz);\nSystem.arraycopy(buffer, / * srcPos /, buf, / * destPos /,\
+    \ bytes, / * length * */);\nreadBytes += bytes;\n}\nreturn readBytes;\n}\n}\n\
+    ```\n\n# Follow up:\n\nWhat if read could be called multiple times? See Question\
+    \ [16. Read N Characters Given Read4 – Call multiple times]."
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# 16. Read N Characters Given Read4 – Call multiple times
+
+
+    Code it now: Coming soon! Difficulty: Hard, Frequency: N/A
+
+
+    Question:
+
+
+    Similar to Question [15. Read N Characters Given Read4], but the read function
+    may be called multiple times.
+
+
+    Solution:
+
+
+    This makes the problem a lot more complicated, because it can be called multiple
+    times and involves storing states.
+
+
+    Therefore, we design the following class member variables to store the states:
+
+
+    +   i. buffer – An array of size 4 use to store data returned by read4 temporarily.
+    If the characters were read into the buffer and were not used partially, they
+    will be used in the next call.
+
+
+    +   ii. offset – Use to keep track of the offset index where the data begins in
+    the next read call. The buffer could be read partially (due to constraints of
+    reading up to n bytes) and therefore leaving some data behind.
+
+
+    +   iii. bufsize – The real buffer size that stores the actual data. If bufsize
+    > 0, it means there is partial data left in buffer from the last read call and
+    we should consume it before calling read4 again. On the other hand, if bufsize
+    == 0, it means there is no data left in buffer.
+
+
+    This problem is a very good coding exercise. Coding it correctly is extremely
+    tricky due to the amount of edge cases to consider.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "```\n/* The read4 API is defined in the parent class Reader4.\n * int read4(char[]\
+    \ buf); */\n\npublic class Solution extends Reader4 {\n    private char[] buffer\
+    \ = new char[4];\n    int offset = 0, bufsize = 0;\n    /**\n     * @param buf\
+    \ Destination buffer\n     * @param n Maximum number of characters to read\n \
+    \    * @return The number of characters read\n     */\n    public int read(char[]\
+    \ buf, int n) {\n        int readBytes = 0;\n        boolean eof = false;\n  \
+    \      while (eof && readBytes < n) {\n            int sz = (bufsize > 0) ? bufsize\
+    \ : (buffer);\n            if (buf == 0 && sz < 4) eof = true;\n            int\
+    \ bytes = Math.min(n - readBytes, sz);\n            System.arraycopy(buffer /*\
+    \ src /, offset /* srcPos */, buf /* dest */, offset /* destPos */, bytes /* length\
+    \ */);\n            offset = (offset + bytes) % 4;\n            bufsize = bufsize\
+    \ - bytes;\n            readBytes += bytes;\n        }\n        return readBytes;\n\
+    \    }\n}}\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Chapter 2: Math\n\n# 17. Reverse Integer\n\nCode it now: https://oj.leetcode.com/problems/reverse-integer/\
+    \ Difficulty: Easy, Frequency: High\n\n# Question:\n\nReverse digits of an integer.\
+    \ For example: $x = 123$, return 321.\n\n# Example Questions Candidate Might Ask:\n\
+    \n+   - Q: What about negative integers?\n- A: For input $x = -123$, should return\
+    \ -321.\n- Q: What if the integer's last digit is 0? For example, $x = 10, 100,\
+    \ ...\n- A: Ignoring the zeros of the reversed integer 10 and 100 are both reversed\
+    \ as 1.\n- Q: What if the reversed integer overflows? For example, input $x =\
+    \ 1000000003$.\n- A: In this case, your function should return 0.\n\n# Solution:\n\
+    \nLet's start with a simple implementation. We do not need to handle negative\
+    \ integers separately, as the modulus operator works for negative integers as\
+    \ well (e.g., -43 % 10 = -3).\n\n```\npublic int reverse(int x) {\n    int ret\
+    \ = 0;\n    while (x != 0) {\n        ret = ret * 10 + x % 10;\n        x /= 10;\n\
+    \    }\n    return ret;\n}\n```\n\nThere is a flaw in the above code – the reversed\
+    \ integer could overflow/underflow. Take $x = 1000000003$ for example. To check\
+    \ for overflow/underflow, we could check if $ret > 214748364$ or $ret < -214748364$\
+    \ before multiplying by 10. On the other hand, if $ret == 214748364$, it must\
+    \ not overflow because the last reversed digit is guaranteed to be 1 due to constraint\
+    \ of the input $x$."
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\npublic int reverse(int x) {\n    int ret = 0;\n    while (x != 0) {\n\
+    \        // handle overflow/underflow\n        if (Math.abs(ret) > 2147483646)\
+    \ {\n            return 0;\n        }\n        ret = ret * 10 + x % 10;\n    \
+    \    x /= 10;\n    }\n    return ret;\n}\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# 18. Plus One\n\nCode it now: https://oj.leetcode.com/problems/plus-one/ Difficulty:\
+    \ Easy, Frequency: High\n\n# Question:\n\nGiven a number represented as an array\
+    \ of digits, plus one to the number.\n\nExample Questions Candidate Might Ask:\n\
+    \n+   Q: Could the number be negative?\nA: No. Assume it is a non-negative number.\n\
+    Q: How are the digits ordered in the list? For example, is the number 12 represented\
+    \ by [1,2] or [2,1]?\nA: The digits are stored such that the most significant\
+    \ digit is at the head of the list.\nQ: Could the number contain leading zeros,\
+    \ such as [0,0,1]?\nA: No.\n\n# Solution:\n\nIterate from the least significant\
+    \ digit, and simulate by adding one to it. Adding to a digit less than nine is\
+    \ straightforward — Add one to it and we are done.\nOn the other hand, adding\
+    \ one to a digit of 9 brings it to 10, so we set the digit to 0 and continues\
+    \ with a carry digit of one to its left digit. This recursive behavior? Yes, we\
+    \ are adding one again to its left digit and this behavior continues until the\
+    \ most significant digit.\nFinally, be sure that you handle the edge case where\
+    \ each digit of the number is 9.\n\n```\npublic void plusOne(List<Integer> digits)\
+    \ {\n    for (int i = digits.size() - 1; i >= 0; i--) {\n        int digit = digits.get(i);\n\
+    \        if (digit < 9) {\n            digits.set(i, digit + 1);\n           \
+    \ return;\n        } else {\n            digits.set(i, 0);\n        }\n    }\n\
+    \    digits.add(0);\n    digits.set(0, 1);\n}\n```\n\nWhen all digits are 9, we\
+    \ did something slightly strange (See line 11). We append the digit 0 and modify\
+    \ the most significant digit to 1. Some of you might not insert 1 to the front\
+    \ of list? Assume that the list is implemented as an ArrayList, appending an element\
+    \ is far more efficient than inserting to the front, because all elements have\
+    \ to be shifted one place to the right otherwise."
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# 19. Palindrome Number\n\nCode it now: https://oj.leetcode.com/problems/palindrome-number/\
+    \ Difficulty: Easy, Frequency: Medium\n\n# Question:\n\nDetermine whether an integer\
+    \ is a palindrome. Do this without extra space.\n\nExample Questions Might Ask:\n\
+    \n+   - Q: Does negative integer as -1 qualify as a palindrome?\n- A: For the\
+    \ purpose of discussion here we define negative integers as non-palindrome.\n\n\
+    # Solution:\n\nThe most intuitive approach is to first represent the integer as\
+    \ a string, since it is more convenient to manipulate. Although this dearly works,\
+    \ it violates the restriction of not using extra space. (ie. you have to allocate\
+    \ n characters to store the reversed integer as string, where n is the maximum\
+    \ number of digits). I know, this sound like an unreasonable requirement (since\
+    \ it uses so little space), don't most interview problems have requirements?\n\
+    \nAnother approach is to first reverse the number. If the number is the same as\
+    \ its reversed, then it must be a palindrome. You could reverse a number by doing\
+    \ the following:\n\n```\npublic int reverse(int num) {\n    assert num >= 0; //\
+    \ for non-negative integers only.\n    int rev = 0;\n    while (num != 0) {\n\
+    \        rev = rev * 10 + num % 10;\n        num /= 10;\n    }\n    return rev;\n\
+    }\n```\n\nThis seemed to work, but did you consider the possibility that the reversed\
+    \ number might overflow? If it overflows, the behavior is language specific (For\
+    \ Java the number wraps around on overflow, but in C/C++ its behavior is undefined).\
+    \ Yuck.\n\nOf course, we could avoid overflow by returning a type that has larger\
+    \ size than int (int, long). However, note that this is language specific, and\
+    \ the larger type might not be available on all languages.\n\nWe could construct\
+    \ a better and more generic solution. One pointer is that we must start comparing\
+    \ the digits somewhere. And you know there could only be two ways, expand from\
+    \ the middle or compare the two twos.\n\nIt turns out that comparing from the\
+    \ two ends is easier. First, compare the first and last digit. If they are not\
+    \ the same, it must not be a palindrome. If they are the same, chop off one digit\
+    \ from both ends and continue until you have no digits left, which you conclude\
+    \ that must be a palindrome."
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "Now, getting and chopping the last digit is easy. However, getting and chopping\
+    \ the first digit in a generic way requires some thought. I will leave this to\
+    \ you as an exercise. Please think your solution before you peek on the solution\
+    \ below.\n\n```\npublic boolean isPalindrome(int x) {\n    if (x < 0) return false;\n\
+    \    int div = 1;\n    while (x / div >= 10) {\n        div *= 10;\n    }\n  \
+    \  while (x != 0) {\n        int l = x / div;\n        int r = x % 10;\n     \
+    \   if (l != r) return false;\n        x = (x % div) / 10;\n        div /= 100;\n\
+    \    }\n    return true;\n}\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# # Chapter 3: Linked List\n\n# ## 20. Merge Two Sorted Lists\n\nCode it now:\
+    \ https://oj.leetcode.com/problems/merge-two-sorted-lists/ Difficulty: Easy, Frequency:\
+    \ Medium\n\n**Question:**\n\nMerge two sorted linked lists and return it as a\
+    \ new list. The new list should be made by splicing together the nodes of the\
+    \ first two lists.\n\n**Solution:**\n\nWe insert a dummy head before the new list\
+    \ so we don't have to deal with special cases as initializing the new list's head.\
+    \ Then the new list's head could just easily be returned as dummy head's next.\n\
+    \nUsing dummy head allows you to write simpler code and adds a powerful tool to\
+    \ your interview arsenal. To see more examples of dummy head usage, please see\
+    \ these questions: [21. Add Two Numbers], [22. Swap Nodes in Pairs], and [23.\
+    \ Merge K Sorted Linked Lists].\n\n```\npublic ListNode mergeTwoLists(ListNode\
+    \ l1, ListNode l2) {\n    ListNode dummyHead = new ListNode();\n    ListNode p\
+    \ = dummyHead;\n    while (l1 != null && l2 != null) {\n        if (l1.val < l2.val)\
+    \ {\n            p.next = l1;\n            l1 = l1.next;\n        } else {\n \
+    \           p.next = l2;\n            l2 = l2.next;\n        }\n        p = p.next;\n\
+    \    }\n    if (l1 != null) p.next = l1;\n    if (l2 != null) p.next = l2;\n \
+    \   return dummyHead.next;\n}\n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# 21. Add Two Numbers\n\nCode it now: https://oj.leetcode.com/problems/add-two-numbers/\
+    \   Difficulty: Medium, Frequency: High\n\n# Question:\n\nYou are given linked\
+    \ lists representing two non-negative numbers. The digits are stored in reverse\
+    \ order and each of their nodes contains a single digit. Add the two numbers and\
+    \ return it as a linked list.\n\nInput: (2 → 4 → 3) + (5 → 6 → 4)\n\nOutput: 7\
+    \ → 0 → 8\n\n# Solution:\n\nKeep track of the carry using a variable and simulate\
+    \ digits-by-digits sum from the head of list, which contains the least-significant\
+    \ digit.\n\nTake extra caution of the following cases:\n\n+   - When one list\
+    \ is longer than the other.\n\n+   - The sum could have an extra carry at the\
+    \ end at the end, which is easy to forget. (e.g., (9 → 9) + (1) = (0 → 0 → 1))\n\
+    \n```\npublic ListNode addTwoNumbers(ListNode l1, ListNode l2) {\n    ListNode\
+    \ dummyHead = new ListNode();\n    ListNode p = l1, q = l2, curr = dummyHead;\n\
+    \    int carry = 0;\n    while (p != null || q != null) {\n        int x = (p\
+    \ != null) ? p.val : 0;\n        int y = (q != null) ? q.val : 0;\n        int\
+    \ digit = carry + x + y;\n        carry = digit / 10;\n        curr.next = new\
+    \ ListNode(digit % 10);\n        curr = curr.next;\n        if (p != null) p =\
+    \ p.next;\n        if (q != null) q = q.next;\n    }\n    if (carry > 0) {\n \
+    \       curr.next = new ListNode(carry);\n    }\n    return dummyHead.next;\n\
+    }\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# 22. Swap Nodes in Pairs\n\nCode it now: https://oj.leetcode.com/problems/swap-nodes-in-pairs/\
+    \ | Difficulty: Medium, Frequency: Medium\n\n# Question:\n\nGiven a linked list,\
+    \ swap every two adjacent nodes and return its head.\n\nFor example,\n\nGiven\
+    \ 1 → 2 → 3 → 4, you should return the list as 2 → 1 → 4 → 3.\n\nYour algorithm\
+    \ should use only constant space. You may not modify the values in the list, only\
+    \ nodes itself can be changed.\n\n# Example Candidates Might Ask:\n\n+   Q: What\
+    \ if the number of nodes in the linked list has only odd number of nodes?\nA:\
+    \ The last node should not be swapped.\n\n# Solution:\n\nLet’s assume $p, q, r$\
+    \ are the current, next, and next’s next node.\n\nWe could swap the nodes pairwise\
+    \ by adjusting where it’s pointing next:\n$q.next = p$;n$p.next = r$;\n\nThe above\
+    \ operations transform the list from $\\{ p \rightarrow q \rightarrow r \rightarrow\
+    \ s \\}$ to $\\{ q \rightarrow p \rightarrow r \rightarrow s \\}$.\n\nIf the next\
+    \ pair of nodes exists, we should remember to connect $p$'s next to $s$. Therefore,\
+    \ we should record the current node before advancing to the next pair of nodes.\n\
+    \nTo determine the new list’s head, you should look if the list contains two or\
+    \ more elements. Basically, these extra statements could be avoided by inserting\
+    \ an extra node (also known as the dummy head) to the front of the list.\n\n```\n\
+    public ListNode swapPairs(ListNode head) {\n    ListNode dummy = new ListNode(0);\n\
+    \    dummy.next = head;\n    ListNode p = head;\n    ListNode prev = dummy;\n\
+    \    while (p != null && p.next != null) {\n        ListNode q = p.next, r = p.next.next;\n\
+    \        prev.next = q;\n        q.next = p;\n        p.next = r;\n        prev\
+    \ = q;\n        p = r;\n    }\n    return dummy.next;\n}\n```\n\n39"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# 23. Merge K Sorted Lists
+
+
+    Code it now: https://oj.leetcode.com/merge-k-sorted-lists/ Difficulty: Hard, Frequency:
+    High
+
+
+    # Question:
+
+
+    Merge sorted linked lists and return it as one sorted list. Analyze and describe
+    its complexity.
+
+
+    # Solution:
+
+
+    $O(nk^2)$ runtime, $O(1)$ space — Brute force:
+
+
+    The brute force approach is to merge a list by one. For example, if the lists
+    = $[l1, l2, l3, l4]$, then first merge $l1$ and $l2$, then merge the result with
+    $l3$, and finally $l4$.
+
+
+    To analyze its time complexity, we are going to assume there a total of $k$ lists,
+    and each list is of size n. There will be a total of $k-1$ merge operations. The
+    first merge operation will be two lists of size $n$, therefore in the worst case
+    there could be $n+n$ comparisons. The second merge operation will be two lists
+    of size $2n$ and $n$. Notice that each merge operation increase the size of the
+    merged lists by $n$. Therefore, the total number of comparisons required is $2n
+    + 3n + 4n + \dots + kn = n(\frac{k(k+1)}{2} - 1) = O(nk^2)$.
+
+
+    $O(nk \log k)$ runtime, $O(k)$ space — Heap:
+
+
+    We could use a heap of size $k$. The heap is first initialized with the smallest
+    element from each list. Then as we extract the nodes from the heap, we must remember
+    to insert its next node into the heap. As each insert operation into the heap
+    costs $\log(k)$ and there are a total of $nk$ elements, the total runtime complexity
+    is $O(nk \log k)$.
+
+
+    Ignoring the extra space that is used to store the output list, we only use extra
+    space of $O(k)$ due to the heap.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "```\nprivate static final Comparator<ListNode> listComparator =\n    new Comparator<ListNode>()\
+    \ {\n    @Override\n    public int compare(ListNode x, ListNode y) {\n       \
+    \ return x.val - y.val;\n    }\n};\n\npublic ListNode mergeLists(List<ListNode>\
+    \ lists) {\n    if (lists.isEmpty()) return null;\n    PriorityQueue<ListNode>\
+    \ queue = new PriorityQueue<ListNode>(lists.size(), listComparator);\n    for\
+    \ (ListNode node : lists) {\n        if (node != null) {\n            queue.add(node);\n\
+    \        }\n    }\n    ListNode dummyHead = new ListNode(0);\n    ListNode p =\
+    \ dummyHead;\n    while (!queue.isEmpty()) {\n        ListNode node = queue.poll();\n\
+    \        p.next = node;\n        p = p.next;\n        if (node.next != null) {\n\
+    \            queue.add(node.next);\n        }\n    }\n    return dummyHead.next;\n\
+    }\n```\n\n# ### O(n k) time, O(1) space – Divide and conquer using two way merge:\n\
+    \nIf you still remember how merge sort works, we can use a divide and conquer\
+    \ mechanism to solve this problem. Here, we apply the merge lists algorithm from\
+    \ Question [20. Merge Two Sorted Lists].\n\nBasically, the algorithm merges two\
+    \ lists at a time, so the number of lists reduces from:\n\n$k \\to \\frac{k}{2}\
+    \ \\to \\frac{k}{4} \\to \\dots \\to 2 \\to 1$\n\nSimilarly, the size of the lists\
+    \ increases (Note that the lists could subdivide itself at most log(k) times):\n\
+    \n$n \\to 2n \\to 4n \\to \\dots \\to 2^{\\log k}n$\n\nTherefore the runtime complexity\
+    \ is:\n\n$k \\cdot \\frac{k}{2} \\cdot 2n + \\frac{k}{4} \\cdot 4n + \\dots +\
+    \ 2^{\\log k} \\cdot 1$\n$= nk + nk + nk + \\dots + nk$\n$= nk \\log k$\n\nSince\
+    \ we are implementing this divide and conquer algorithm iteratively, the space\
+    \ complexity is constant at $O(1)$, yay!"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "```\npublic ListNode mergeKLists(List<ListNode> lists) {\n    if (lists.isEmpty())\
+    \ return null;\n    int end = lists.size() - 1;\n    while (end > 0) {\n     \
+    \   int begin = 0;\n        while (begin < end) {\n            lists.set(begin,\
+    \ merge2Lists(lists.get(begin), lists.get(end)));\n            begin++;\n    \
+    \    --}\n    }\n    return lists.get(0);\n}\n\nprivate ListNode merge2Lists(ListNode\
+    \ l1, ListNode l2) {\n    ListNode dummyHead = new ListNode(0);\n    ListNode\
+    \ p = dummyHead;\n    while (l1 != null && l2 != null) {\n        if (l1.val <\
+    \ l2.val) {\n            p.next = l1;\n            l1 = l1.next;\n        } else\
+    \ {\n            p.next = l2;\n            l2 = l2.next;\n        }\n        p\
+    \ = p.next;\n    }\n    if (l1 != null) p.next = l1;\n    if (l2 != null) p.next\
+    \ = l2;\n    return dummyHead.next;\n}\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# 24. Copy List with Random Pointer
+
+
+    Code it now: https://oj.leetcode.com/problems/copy-list-with-random-pointer/  Difficulty:
+    Hard, Frequency: High
+
+
+    # Question:
+
+
+    A linked list is given such that each node contains an additional random pointer
+    that could point to any node in the list or null.
+
+    Return a deep copy of the list.
+
+
+    # Solution:
+
+
+    Cloning a linked list without an additional random pointer is easy to solve. The
+    trickier part however, is to clone the linked list node structure.
+
+
+    ![](img/172f5d31191b965fe8ccb5a0f5becd9a_43_0.png)
+
+
+    $O(n^2)$ runtime, $O(n)$ space – Brute force:
+
+
+    To get started, it is helpful to label each individual node with an index. According
+    to the above list, node 0''s random points to node 1, node 1''s random points
+    to node 0, and node 2''s random points to itself, node 2.
+
+
+    We could rebuild the structure assume we have the above connections. As we know
+    that node 0 random points to node 1, we need to connect the cloned version from
+    node 0'' to node 1''. We would have to iterate over the list each time to link
+    the nodes and it takes $O(n)$, making the overall complexity $O(n^2)$.
+
+
+    How do we represent the connection? We can build a map that maps the original
+    node to its indices. Having this map will allow us to clone the structure. If
+    we have that, we just have to connect them, right? The only issue is connecting
+    them $O(n)$ complexity, because we have to traverse the cloned list to find the
+    node connect.
+
+
+    # $O(n)$ runtime, $O(n)$ space – Hash table:
+
+
+    It is natural to use a mapping so that we can quickly lookup the node to connect.
+    We can easily build the map of indices of cloned nodes. Therefore, we have reduced
+    the complexity to $O(1)$ when connecting the random nodes.
+
+
+    This got us started, although it requires two maps. On closer inspection, it turns
+    out that the two maps could be shortened into one single map. We just need to
+    map the original node to its random node directly.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\npublic RandomListNode copyRandomList(RandomListNode head) {\n    Map<RandomListNode,\
+    \ RandomListNode> map = new HashMap<>();\n    RandomListNode p = head;\n    RandomListNode\
+    \ dummy = new RandomListNode(0);\n    RandomListNode q = dummy;\n    while (p\
+    \ != null) {\n        q.next = new RandomListNode(p.label);\n        map.put(p,\
+    \ q.next);\n        p = p.next;\n        q = q.next;\n    }\n    p = head;\n \
+    \   q = dummy;\n    while (p != null) {\n        q.next.random = map.get(p.random);\n\
+    \        p = p.next;\n        q = q.next;\n    }\n    return dummy.next;\n}\n\
+    ```\n\n# O(n) runtime, O(1) space – Modify original structure:\n\nThe algorithm\
+    \ uses extra space O(n), can not use extra space? What if we eliminate the map?\
+    \ The only way is to modify the original structure. Imagine if we modify the next\
+    \ node of the original node to point to its own copy.\n\n![](img/172f5d31191b965fe8ccb5a0f5becd9a_44_0.png)\n\
+    \nNow, assume we have the above configuration could assign the random node pointers\
+    \ of each copy with the following code:\n\n```\nnode.next.random = node.random.next;\n\
+    ```\n\nTo summarize, we need three iterations over the list:\n\n+   i. Create\
+    \ a copy of each of the original node and insert them between two original nodes\
+    \ in an alternate fashion.\nii. Assign random pointer of each node copy.\niii.\
+    \ Restore the input to its original configuration.\n\nWe achieved O(n) runtime\
+    \ complexity with using only constant extra space."
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\npublic RandomListNode copyRandomList(RandomListNode head) {\n    RandomListNode\
+    \ p = head;\n    while (p != null) {\n        RandomListNode next = p.next;\n\
+    \        RandomListNode copy = new RandomListNode(p.label);\n        p.next =\
+    \ copy;\n        copy.next = next;\n        p = next;\n    }\n    p = head;\n\
+    \    while (p != null) {\n        p.next.random = (p.random != null) ? p.random\
+    \ : null;\n        p = p.next.next;\n    }\n    p = head;\n    RandomListNode\
+    \ headCopy = (p != null) ? p.next : null;\n    while (p != null) {\n        RandomListNode\
+    \ copy = p.next;\n        p.next = copy.next;\n        copy.next = (p.next !=\
+    \ null) ? p.next.next : null;\n        p = copy.next;\n    }\n    return headCopy;\n\
+    }\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# Chapter 4: Binary Tree\n\n# 25. Validate Binary Search Tree\n\nCode it now:\
+    \ https://oj.leetcode.com/problems/validate-binary-search-tree/ Difficulty: Medium,\
+    \ Frequency: High\n\n# Question:\n\nGiven a binary tree, determine if it is a\
+    \ valid Binary Search Tree (BST).\n\n# Solution:\n\nFirst, you must understand\
+    \ the difference between Binary Tree and BST. Binary tree is a tree data structure\
+    \ in which each node has at most two child nodes. A BST is based on binary tree,\
+    \ with the following additional properties:\n\n+   - The left subtree of a node\
+    \ contains only nodes with keys less than the node's key.\n- The right subtree\
+    \ of a node contains only nodes with keys greater than the node's key.\n- Both\
+    \ the left and right subtrees must also be binary search trees.\n\nPeople who\
+    \ do not understand the definition of BST may give the following algorithm:\n\
+    Assume the current node's value is k. For each node, check if the left node's\
+    \ value is less than k and the right node's value is greater than k. If all of\
+    \ the nodes satisfy this property, then it is a BST.\n\nIt sounds correct and\
+    \ convincing, but look at this counter example below: A sample tree that we name\
+    \ it binary tree (1).\n\n```\n10\n / \\\n5 15 ------ binary tree (1)\n / \\\\\n\
+    6 20\n```\n\nIt's obvious that this is not a BST, since (6) could never be on\
+    \ the right of (10).\n\nO(n²) runtime, O(n) stack space - Brute force:\n\nBased\
+    \ on BST's definition, we can easily devise a brute force solution:\n\nAssume\
+    \ the current node's value is k. For each node, check if all nodes of left subtree\
+    \ contain values that are less than k. Also check if all nodes of right subtree\
+    \ contain values that are greater than k. If all of the nodes satisfy this property,\
+    \ then it must be a BST.\n\nBelow is the brute force code that is inefficient:"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "```\npublic boolean isValidBST(TreeNode root) {\n    if (root == null) return\
+    \ true;\n    return isSubtreeLessThan(root.left, root.val)\n    && isSubtreeGreaterThan(root.right,\
+    \ root.val)\n    && isValidBST(root.left) && isValidBST(root.right);\n}\n```\n\
+    \n```\nprivate boolean isSubtreeLessThan(TreeNode p, int val) {\n    if (p ==\
+    \ null) return true;\n    return p.val < val\n    && isSubtreeLessThan(p.left,\
+    \ val)\n    && isSubtreeLessThan(p.right, val);\n}\n```\n\n```\nprivate boolean\
+    \ isSubtreeGreaterThan(TreeNode p, int val) {\n    if (p == null) return true;\n\
+    \    return p.val > val\n    && isSubtreeGreaterThan(p.left, val)\n    && isSubtreeGreaterThan(p.right,\
+    \ val);\n}\n```\n\nThe worst case complexity is O(n^2) for the brute force algorithm,\
+    \ where the tree degenerates into a list with n nodes.\n\n# O(n) runtime, O(n)\
+    \ stack space: Top-down recursion:\n\nHere is the much better solution. We can\
+    \ examine all nodes of subtrees in each pass by passing the low and high limits\
+    \ from the parent to its children.\n\nRefer back to the binary tree (1). As we\
+    \ traverse the tree from node (10) to right node (15), we know for sure that the\
+    \ right node's value fall between 10 and +∞. Then, as we traverse further from\
+    \ node (15) to left node (6), we know for sure that the left node's value fall\
+    \ between 10 and 15. And since (6) does not satisfy the above requirement, we\
+    \ can quickly determine it is not a valid BST.\n\n```\npublic boolean isValidBST(TreeNode\
+    \ root) {\n    return valid(root, Integer.MIN_VALUE, Integer.MAX_VALUE);\n}\n\
+    ```\n\n```\nprivate boolean valid(TreeNode p, int low, int high) {\n    if (p\
+    \ == null) return true;\n    return p.val > low && p.val < high\n    && valid(p.left,\
+    \ low, p.val)\n    && valid(p.right, p.val, high);\n}\n```\n\nThis algorithm runs\
+    \ in O(n) time, where n is the number of nodes of the binary tree.\n\nSharp readers\
+    \ may notice that the above code does not work if the tree contains the smallest\
+    \ or largest integer value. How could we fix this? One way to fix this is to use\
+    \ null to represent the infinity."
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "```\npublic boolean isValidBST(TreeNode root) {\n    return valid(root, null);\n\
+    }\n\nprivate boolean valid(TreeNode p, Integer low, Integer high) {\n    if (p\
+    \ == null) return true;\n    return (low == null || p.val > low) && (high == null\
+    \ || p.val < high)\n        && valid(p.left, low, p.val)\n        && valid(p.right,\
+    \ p.val, high);\n}\n```\n\n# O(n) runtime, O(n) space – In-order traversal:\n\n\
+    Another solution is to do an in-order traversal of the binary tree, and verify\
+    \ that its in-order elements follow a strict monotonic increasing order. During\
+    \ the in-order traversal, we verify that the previous value is less than the current\
+    \ node's value. The runtime complexity is also O(n).\n\n```\nprivate TreeNode\
+    \ prev;\npublic boolean isValidBST(TreeNode root) {\n    prev = null;\n    return\
+    \ isMonotonicIncreasing(root);\n}\n```\n\n```\nprivate boolean isMonotonicIncreasing(TreeNode\
+    \ p) {\n    if (p == null) return true;\n    if (isMonotonicIncreasing(p.left))\
+    \ {\n        if (prev != null && p.val <= prev.val) return false;\n        prev\
+    \ = p;\n        return isMonotonicIncreasing(p.right);\n    }\n    return false;\n\
+    ```"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# 26. Maximum Depth of Binary Tree\n\nCode it now: https://oj.leetcode.com/problems/maximum-depth-of-binary-tree/\
+    \ Difficulty: Easy, Frequency: High\n\n# Question:\n\nGiven a binary tree, find\
+    \ its maximum depth.\n\nThe maximum depth is the number of nodes along the longest\
+    \ path from the root node to the farthest leaf node.\n\n# Solution:\n\nThe maximum\
+    \ height of a binary tree is defined as the number of nodes along the path from\
+    \ the root node to the deepest leaf node. Note that the maximum depth of an empty\
+    \ tree is 0.\n\n# O(n) runtime, O(log n) space – Recursion:\n\nWe could solve\
+    \ this easily using recursion, because each of the left child and right child\
+    \ of a node is a sub-tree itself. We first compute the max height of left sub-tree,\
+    \ and compute the max height of right sub-tree. The maximum depth of the current\
+    \ node is the greater of the two maximus plus one. For the base case, we look\
+    \ at a tree that is empty, which we return 0.\n\nAssume that $n$ is the total\
+    \ number of nodes in the tree. The runtime complexity is O(n) because it traverse\
+    \ each node exactly once. As the maximum depth of a binary tree is O(log n), the\
+    \ extra space cost is O(log n) due to the extra space used by the recursion.\n\
+    \n```\npublic int maxDepth(TreeNode root) {\n    if (root == null) return 0;\n\
+    \    return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;\n}\n```"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# 27. Minimum Depth of Binary Tree\n\nCode it now: https://oj.leetcode.com/problems/minimum-depth-of-binary-tree/\
+    \  Difficulty: Easy, Frequency: High\n\n# Question:\n\nGiven a binary tree, find\
+    \ its minimum depth.\n\nThe minimum depth is the number of nodes along the shortest\
+    \ path from the root node down to the nearest leaf node.\n\nSimilar to [26. Maximum\
+    \ Depth of Binary Tree], here we need to find the minimum depth instead.\n\n#\
+    \ Solution:\n\nO(n) runtime, O(log n) space – Depth-first traversal:\n\nSimilar\
+    \ to the [Recursion] approach to find the maximum depth, but make sure you consider\
+    \ these cases:\n\n+   i. The node is a leaf node. The minimum depth is one.\n\n\
+    +   ii. Node that has one empty subtree while the other is non-empty. Return the\
+    \ minimum depth of that non-empty subtree.\n\n```\npublic int minDepth(TreeNode\
+    \ root) {\n  if (root == null) return 0;\n  if (root.left == null) return minDepth(root.right)\
+    \ + 1;\n  if (root.right == null) return minDepth(root.left) + 1;\n  return Math.min(minDepth(root.left),\
+    \ minDepth(root.right)) + 1;\n}\n```\n\nO(n) runtime, O(n) space – Breadth-first\
+    \ traversal:\n\nNote that this previous approach traverses all the nodes for a\
+    \ highly unbalanced tree. In fact, we could optimize this by doing a breadth-first\
+    \ traversal (also known as level-order traversal). When we encounter the first\
+    \ leaf node, we immediately stop the traversal.\n\nWe also keep track of the current\
+    \ depth and increment it when we reach the end of level. We know that we have\
+    \ reached the end of level when the current node is the right-most node.\n\nCompared\
+    \ to the recursion approach, the breadth-first traversal works well for highly\
+    \ unbalanced tree because it does not need to traverse all nodes. The worst case\
+    \ is when the tree is a full binary tree with a total of n nodes. In this case,\
+    \ we have to traverse all nodes. The worst case space complexity is O(n), due\
+    \ to the extra space needed to store current level nodes in the queue."
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "```\npublic int minDepth(TreeNode root) {\n    if (root == null) return 0;\n\
+    \    Queue<TreeNode> q = new LinkedList<>();\n    q.add(root);\n    TreeNode rightMost\
+    \ = root;\n    int depth = 1;\n    while (!q.isEmpty()) {\n        TreeNode node\
+    \ = q.poll();\n        if (node.left == null && node.right == null) break;\n \
+    \       if (node.left != null) q.add(node.left);\n        if (node.right != null)\
+    \ q.add(node.right);\n        if (node == rightMost) {\n            rightMost\
+    \ = (node.right != null) ? node.right : node.left;\n            depth++;\n   \
+    \     }\n    }\n    return depth;\n}\n```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# 28. Balanced Binary Tree\n\nCode it now: https://oj.leetcode.com/problems/balanced-binary-tree/\
+    \ Difficulty: Easy, Frequency: High\n\n# Question:\n\nGiven a binary tree, determine\
+    \ if it is height-balanced.\n\nFor this problem, a height-balanced binary tree\
+    \ is defined as a binary tree in which the depth of the subtrees of every node\
+    \ never differs by more than 1.\n\n# Solution:\n\nO(n2) runtime, O(n) stack space\
+    \ – Brute force top-down recursion:\n\nWe could devise a brute force algorithm\
+    \ to find the maximum depth of a subtree. We also reused the [Recursion] approach\
+    \ to find the worst case complexity O(n²) when the input tree is degenerated.\n\
+    \n```\npublic boolean isBalanced(TreeNode root) {\n    if (root == null) return\
+    \ true;\n    return Math.abs(maxDepth(root.left) - maxDepth(root.right)) <= 1\n\
+    \    && isBalanced(root.left)\n    && isBalanced(root.right);\n}\n```\n\n```\n\
+    public int maxDepth(TreeNode root) {\n    if (root == null) return 0;\n    return\
+    \ Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;\n}\n```\n\n# O(n) runtime,\
+    \ O(n) stack space – Bottom-up recursion:\n\nIt seems that this approach is recalculating\
+    \ max depth repeatedly for each node. We could avoid the recalculation by passing\
+    \ the depth bottom-up. We use a sentinel value -1 to represent that the tree is\
+    \ unbalanced so we avoid unnecessary calculations.\n\nIn each step, we look at\
+    \ the left subtree's depth (L), and ask: “Is the left subtree unbalanced?” If\
+    \ it is indeed unbalanced, we return -1 right away. Otherwise, L represents the\
+    \ left subtree's depth. We then repeat the same process for the right subtree's\
+    \ depth (R).\n\nWe calculate the absolute difference between L and R. If the subtrees'\
+    \ depth difference is less than one, we could return the height of the current\
+    \ node, otherwise return -1 meaning the current tree is unbalanced."
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\npublic boolean isBalanced(TreeNode root) {\n    return maxDepth(root)\
+    \ != -1;\n}\n\nprivate int maxDepth(TreeNode root) {\n    if (root == null) return\
+    \ 0;\n    int L = maxDepth(root.left);\n    if (L == -1) return -1;\n    int R\
+    \ = maxDepth(root.right);\n    if (R == -1) return -1;\n    return (Math.abs(L\
+    \ - R) <= 1) ? Math.max(L, R) + 1 : -1;\n}\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# 29. Convert Sorted Array to Balanced Binary Search Tree
+
+
+    Code it now: https://oj.leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
+    Difficulty: Medium, Frequency: Low
+
+
+    # Question:
+
+
+    Given an array where elements are sorted in ascending order, convert it to a height
+    balanced BST.
+
+
+    # Hint:
+
+
+    This question is highly recursive in nature. Think of how binary search works.
+
+
+    ![](img/172f5d31191b965fe8ccb5a0f5becd9a_54_0.png)
+
+
+    Figure 2: An example of a height-balanced tree. A height-balanced tree is a tree
+    whose subtrees differ in height by no more than one and the subtrees are height-balanced,
+    too.
+
+
+    # Solution:
+
+
+    O(n) runtime, O(log n) stack space – Divide and conquer:
+
+
+    If you would have to choose an array element to be the root of a balanced BST,
+    which element would you pick? The root of a balanced BST should be the middle
+    element from the sorted array.
+
+
+    You would pick the middle element from the sorted array in each iteration. You
+    then create a node in the tree initialized with this element. After the element
+    is chosen, what is left? Could you identify the sub-problems within the problem?
+
+
+    There are two arrays left – The one on its and the one on its right. These two
+    arrays are the sub-problems of the original problem, since both of them are sorted.
+    Furthermore, they are subtrees of the current node''s left and right child.
+
+
+    The code below creates a balanced BST from the sorted array in O(n) time (n is
+    the number of elements in the array). Compare how similar the code is to a binary
+    search algorithm. Both are using the divide and conquer methodology. Because the
+    input array could be subdivided in at most log(n) times, the extra stack space
+    used by the recursion is in O(log n).'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\npublic TreeNode sortedArrayToBST(int[] num) {\n  return sortedArrayToBST(num,\
+    \ 0, num.length-1);\n}\n\nprivate TreeNode sortedArrayToBST(int[] arr, int start,\
+    \ int end) {\n  if (start > end) return null;\n  int mid = (start + end) / 2;\n\
+    \  TreeNode node = new TreeNode(arr[mid]);\n  node.left = sortedArrayToBST(arr,\
+    \ start, mid-1);\n  node.right = sortedArrayToBST(arr, mid+1, end);\n  return\
+    \ node;\n}\n```\n\n# Further Thoughts:\n\nConsider changing the problem statement\
+    \ to “Converting a singly linked list to a balanced BST”. How would your implementation\
+    \ change from the above? See Question [30. Convert Sorted List to Balanced Binary\
+    \ Search Tree]."
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# 30. Convert Sorted List to Balanced Binary Search Tree
+
+
+    Code it now: https://oj.leetcode.com/problems/convert-sorted-list-to-binary-search-tree/
+    Difficulty: Hard, Frequency: Low
+
+
+    # Question:
+
+
+    Given a singly linked list where elements are sorted in ascending order, convert
+    it to a height balanced BST.
+
+
+    # Hint:
+
+
+    Things get a little complicated when you have a singly linked list instead of
+    an array. Please note that in linked list, you no longer have random access to
+    an element in $O(1)$ time.
+
+
+    How about inserting nodes following the list''s order? If we can achieve this,
+    we no longer need to find the middle element, as we are traverse the list while
+    inserting nodes to the tree.
+
+
+    $O(n \log n)$ runtime, $O(n \log n)$ stack space – Brute force:
+
+
+    A naive way is to apply the previous solution from Question [29. Convert Sorted
+    Array to Balanced Binary Search Tree]. In each recursive call, you would have
+    to traverse half of the list''s length to find the middle element. The run time
+    complexity is clearly $O(n \log n)$, where $n$ is the total number of elements
+    in the list. This is because each level of recursive call requires a total of
+    $\frac{n}{2}$ traversals steps in the list, and there are a total of $O(n \log
+    n)$ level of nodes (ie, the height of the balanced tree).
+
+
+    $O(n)$ runtime, $O(n \log n)$ stack space – Bottom-up recursion:
+
+
+    As usual, the best solution requires you to think from another perspective. In
+    other words, we no longer create nodes in the tree using the top-down approach.
+    We create nodes bottom-up, and assign them to their parents. The bottom-up approach
+    enables us to access the list in their order while creating nodes.
+
+
+    Isn''t the bottom-up approach near? Each time you are stuck with the top-down
+    approach, give-bottom a try. Although bottom-up is not the most natural way we
+    think, it is extremely helpful in some cases. However, you should prefer top-down
+    instead of bottom-up in general, since the latter is more difficult to verify
+    in correctness.
+
+
+    Below is the code for converting a singly linked list to a balanced BST. Please
+    note that the algorithm requires the list''s length to be passed in the function''s
+    parameters. The list''s length could be found in $O(n)$ time by traversing the
+    entire list''s once. The recursive call traverse the list and create tree nodes
+    by the list''s order, which also takes $O(n)$ time. Therefore, the overall run
+    time complexity is still $O(n)$.
+
+
+    56'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "```\nprivate ListNode sortedToListBST(int start, int end) {\n    if (start\
+    \ > end) return null;\n    int mid = (start + end) / 2;\n    TreeNode leftChild\
+    \ = sortedListToBST(start, mid-1);\n    TreeNode parent = new TreeNode(list.val);\n\
+    \    parent.left = leftChild;\n    list = list.next;\n    parent.right = sortedListToBST(mid+1,\
+    \ end);\n    return parent;\n}\n\npublic TreeNode sortedListToBST(ListNode head)\
+    \ {\n    int n = 0;\n    ListNode p = head;\n    while (p != null) {\n       \
+    \ p = p.next;\n        n++;\n    }\n    list = head;\n    return sortedListToBST(0,\
+    \ n - 1);\n}\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# 31. Binary Tree Maximum Path Sum
+
+
+    Code it now: https://oj.leetcode.com/problems/binary-tree-maximum-path-sum/ Difficulty:
+    Hard, Frequency: Medium
+
+
+    # ## Question:
+
+
+    Given a binary tree, find the maximum path sum.
+
+    The path may start and end at any node in the tree.
+
+    For example, given the below binary tree:
+
+
+    ![](img/172f5d31191b965fe8ccb5a0f5becd9a_58_0.png)
+
+
+    The highlighted path sum yields the maximum sum 10.
+
+
+    # ## Example Questions Candidate Might Ask:
+
+
+    +   Q: What if the tree is empty?
+
+    A: Assume the tree is non-empty.
+
+    Q: How about a tree that contains only a single node?
+
+    A: Then the maximum path sum starts and ends at the same node.
+
+    Q: What if every node contains negative value?
+
+    A: Then you should return the single node value that is the least negative.
+
+    Q: Does the maximum path have to go through the root node?
+
+    A: Not necessarily. For example, the below tree 6 as the maximum path sum and
+    does go through root.
+
+
+    ![](img/172f5d31191b965fe8ccb5a0f5becd9a_58_1.png)
+
+
+    # ## Hint:
+
+
+    Anytime when you found that doing top down approach uses a lot of repeated calculation,
+    bottom up approach usually is able to be more efficient.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# Node\nleft subtree right subtree\n\nTry the bottom up approach. At each node,\
+    \ the potential maximum path could be one of these cases:\n\n+   i. max(left subtree)\
+    \ + node\nii. max(right subtree) + node\niii. max(left subtree) + max(right subtree)\
+    \ + node\niv. the node itself\n\nThen, we need to return the maximum path sum\
+    \ that goes through this node and to either one of its left or right subtree to\
+    \ its parent. There’s a little trick here: If maximum happens to be negative,\
+    \ we should return 0, which means: “Do not include this subtree as part of the\
+    \ maximum path of the parent node”, which greatly simplifies our code.\n\n```\n\
+    private int maxSum;\npublic int maxPathSum(TreeNode root) {\n    maxSum = Integer.MIN_VALUE;\n\
+    \    findMax(root);\n    return maxSum;\n}\n```\n\n```\nprivate int findMax(TreeNode\
+    \ p) {\n    if (p == null) return 0;\n    int left = findMax(p.left);\n    int\
+    \ right = findMax(p.right);\n    maxSum = Math.max(p.val + left + right, maxSum);\n\
+    \    int ret = p.val + Math.max(left, right);\n    return ret > 0 ? ret : 0;\n\
+    }\n```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# 32. Binary Tree Upside Down\n\nCode it now: Coming soon!                \
+    \               Difficulty: Medium, Frequency: N/A\n\n# Question:\n\nGiven a binary\
+    \ tree where all the right nodes are either leaf nodes with a sibling (a left\
+    \ node that shares the same parent node) or empty, flip it upside down and turn\
+    \ it into a tree where the original right nodes turned into left leaf nodes. Return\
+    \ the new root.\n\n# Solution:\n\nAt each node you want to assign:\n\n```\np.left\
+    \ = parent.right;\np.right = parent;\n```\n\n# Top approach:\n\nWe need to be\
+    \ careful when reassigning current node’s left and right children. Besides making\
+    \ a copy of the parent node, you would also need to make a copy of the parent’s\
+    \ right child too. The reason is the current node becomes the parent node in the\
+    \ next iteration.\n\n```\npublic TreeNode UpsideDownBinaryTree(TreeNode root)\
+    \ {\n    TreeNode p = root, parent = null, parentRight = null;\n    while (p !=\
+    \ null) {\n        TreeNode left = p.left;\n        p.left = parentRight;\n  \
+    \      parentRight = p.right;\n        p.right = parent;\n        parent = p;\n\
+    \        p = left;\n    }\n    return parent;\n}\n```\n\nThe above code is actually\
+    \ very similar to the algorithm in reversing a linked list."
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# Bottom up approach:\n\nAlthough the code for the top-down approach seems\
+    \ concise, it is actually subtle and there are a lot of hidden traps if you are\
+    \ not careful. The other approach is thinking recursively in a bottom-up fashion.\
+    \ If we reassign the bottom-level nodes before the upper ones, we won't have to\
+    \ make copies and worry about overwriting something. We know the new root will\
+    \ be the left-most leaf node, so we begin the reassignment here.\n\n```\npublic\
+    \ TreeNode UpsideDownTree(TreeNode root) {\n    return dfsBottomUp(root, null);\n\
+    }\nprivate TreeNode dfsBottomUp(TreeNode p, TreeNode parent) {\n    if (p == null)\
+    \ return parent;\n    TreeNode root = dfsBottomUp(p.left, p);\n    p.left = (parent\
+    \ == null) ? parent : parent.right;\n    p.right = parent;\n    return root;\n\
+    }\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# # Chapter 5: Bit Manipulation\n\n# ## 33. Single Number\n\nCode it now: https://oj.leetcode.com/problems/single-number/\
+    \ Difficulty: Medium, Frequency: High\n\n**Question:**\n\nGiven an array of integers,\
+    \ every element appears twice except for one. Find that single one.\n\n**Example\
+    \ Questions Candidate Might Ask:**\n\n+   - Q: Does the array contain both positive\
+    \ and negative integers?\n A: Yes.\n Q: Could any element appear more than twice?\n\
+    \ A: No.\n\n**Solution:**\n\nWe could use a map to keep track of the number of\
+    \ times an element appears. In a second pass, we could extract the single number\
+    \ by consulting the hash map. As a hash map provides constant time lookup, the\
+    \ overall complexity is O(n), where n is the total of elements.\n\n```\npublic\
+    \ int singleNumber(int[] A) {\n    Map<Integer, Integer> map = new HashMap<>();\n\
+    \    for (int x : A) {\n        int count = map.containsKey(x) ? map.get(x) :\
+    \ 0;\n        map.put(x, count + 1);\n    }\n    for (int x : A) {\n        if\
+    \ (map.get(x) == 1) {\n            return x;\n        }\n    }\n    throw new\
+    \ IllegalArgumentException(\"No single element\");\n}\n```\n\nAlthough the approach\
+    \ works, we are not taking advantage of the \"every elements appears twice except\
+    \ one\" property. Could we do better in one pass?\n\nHow about inserting the elements\
+    \ into a set instead? If an element already exists, we discard the element from\
+    \ the set knowing that it will not appear again. After the first pass, the set\
+    \ must contain only the single element."
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\npublic int singleNumber(int[] A) {\n    Set<Integer> set = new HashSet<>();\n\
+    \    for (int x : A) {\n        if (set.contains(x)) {\n            set.remove(x);\n\
+    \        } else {\n            set.add(x);\n        }\n    }\n    return set.iterator().next();\n\
+    }\n```\n\nThe set is pretty efficient and runs in one pass. However, it uses extra\
+    \ space of O(n).\nXORing a number with itself is zero. If we XOR all numbers together,\
+    \ it would effectively cancel out all elements that appear twice leaving us with\
+    \ only the single number. As the XOR operation is both commutative and associative,\
+    \ the order in which you XOR them does not matter.\n\n```\npublic int singleNumber(int[]\
+    \ A) {\n    int num = 0;\n    for (int x : A) {\n        num ^= x;\n    }\n  \
+    \  return num;\n}\n```\n\n# Further Thoughts:\n\nLet us change the question a\
+    \ little: \"If every element appears even number of times except for one element\
+    \ that appears odd number of times, find that one element\", would the XOR approach\
+    \ work? Why?"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# 34. Single Number II\n\nCode it now: https://oj.leetcode.com/problems/single-number-ii/\
+    \  Difficulty: Hard, Frequency: Medium\n\n# Question:\n\nGiven an array of integers,\
+    \ every element appears *three* times except for one. Find that single one.\n\n\
+    Note:\n\nYour algorithm should have a linear runtime complexity. Could you implement\
+    \ it without using extra memory?\n\n# Solution:\n\nTo solve this problem using\
+    \ only constant space, you have to rethink how the numbers are being represented\
+    \ in computers – using bits.\n\nIf you sum the $i^{th}$ bit of all numbers $n$,\
+    \ it must be either 0 or 1 due to the constraint of this problem where each number\
+    \ must appear either three times or once. This will be the $i^{th}$ bit of \"\
+    single number\".\n\nA straightforward implementation is to use an array of size\
+    \ 32 to keep track of the total count of $i^{th}$ bit.\n\n```\nint singleNumber(int\
+    \ A[], int n) {\n  int count[32] = {0};\n  int result = 0;\n  for (int i = 0;\
+    \ i < 32; i++) {\n    for (int j = 0; j < n; j++) {\n      if ((A[j] >> i) & 1)\
+    \ {\n        count[i]++;\n      }\n    }\n    result |= ((count[i] % 3) << i);\n\
+    \  }\n  return result;\n}\n```\n\nWe can improve this based on the previous solution\
+    \ using three bit variables:\n\n+   1. ones as a bitmask to represent the $i^{th}$\
+    \ bit had appeared once.\n2. twos as a bitmask to represent the $i^{th}$ bit had\
+    \ appeared twice.\n3. threes as a bitmask to represent the $i^{th}$ bit had appeared\
+    \ three times.\n\nWhen the $i^{th}$ bit had appeared for the third time, clear\
+    \ the $i^{th}$ bit of both ones and twos to 0. The final answer will be the value\
+    \ of ones."
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\nint singleNumber(int A[], int n) {\n    int ones = 0, twos = 0, threes\
+    \ = 0;\n    for (int i = 0; i < n; i++) {\n        twos |= A[i];\n        ones\
+    \ ^= A[i];\n        threes = ones & twos;\n        ones &= ~threes;\n        twos\
+    \ &= ~threes;\n    }\n    return ones;\n}\n```\n\n# Further Thoughts:\n\nIf we\
+    \ extend the problem to:\n\nGiven an array of integers, every element appears\
+    \ $k$ times except for one. that single one which appears $l$ times.\n\nHow would\
+    \ you solve it?\n\nPlease see the excellent answer by @ranmocy in LeetCode Discuss:\n\
+    https://oj.leetcode.com/discuss/857/constant-space-solution?show=2542#a2542"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Chapter 6: Misc
+
+
+    # 35. Spiral Matrix
+
+
+    Code it now: https://oj.leetcode.com/problems/spiral-matrix/ Difficulty: Medium,
+    Frequency: Medium
+
+
+    Question:
+
+
+    Given a matrix of m × n elements (m rows, columns), return all elements of the
+    matrix in spiral order.
+
+
+    For example, given the following matrix:
+
+
+    ```
+
+    [n[ 1, 2, 3 ],
+
+    [ 4, 5, 6 ],
+
+    [ 7, 8, 9 ]]
+
+    ```
+
+
+    You should return [1,2,3,6,9,8,7,4,5].
+
+
+    Solution:
+
+
+    ![](img/172f5d31191b965fe8ccb5a0f5becd9a_66_0.png)
+
+
+    We simulate walking the matrix from the top left corner in a spiral manner. In
+    the outermost level, we traverse n steps right, m – 1 steps down, n – 1 steps
+    left, and m – 2 steps up, then we continue traverse into its next level.
+
+
+    As the traversal toward the matrix’s center, we stop by determining if we have
+    reached the “center”. However, defining the “center” is difficult since the matrix
+    is not'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "necessarily a square. Think of edge cases such as 1×1, 1×10 and 10×1 matrices,\
+    \ where the \"center\"? These cases had to be dealt separately and were messy.\n\
+    \nA cleaner solution is to keep track of our current position and the number of\
+    \ steps in both horizontal and vertical directions. As we change direction we\
+    \ decrement the steps in that direction. When the number of steps in a direction\
+    \ becomes zero, we know that we have finished traversing the entire matrix.\n\n\
+    ```\npublic List<Integer> spiralOrder(int[][] matrix) {\n    List<Integer> elements\
+    \ = new ArrayList<>();\n    if (matrix.length == 0) return elements;\n    int\
+    \ m = matrix.length, n = matrix[0].length;\n    int row = 0, col = -1;\n    while\
+    \ (true) {\n        for (int i = 0; i < n; i++) {\n            elements.add(matrix[row][++col]);\n\
+    \        }\n        if (--m == 0) break;\n        for (int i = 0; i < m; i++)\
+    \ {\n            elements.add(matrix[++row][col]);\n        }\n        if (--n\
+    \ == 0) break;\n        for (int i = 0; i < n; i++) {\n            elements.add(matrix[row][--col]);\n\
+    \        }\n        if (--m == 0) break;\n        for (int i = 0; i < m; i++)\
+    \ {\n            elements.add(matrix[--row][col]);\n        }\n        if (--n\
+    \ == 0) break;\n    }\n    return elements;\n}\n```"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# 36. Integer to Roman
+
+
+    Code it now: https://oj.leetcode.com/problems/integer-to-roman/ Difficulty: Medium,
+    Frequency: Low
+
+
+    # Question:
+
+
+    Given an integer, convert it to a roman numeral.
+
+
+    Input is guaranteed to be within the range from 1 to 3999.
+
+
+    # Hint:
+
+
+    What is the range of the numbers?
+
+
+    # Solution:
+
+
+    | Roman Literal | Decimal |
+
+    |---|---|
+
+    | I | 1 |
+
+    | V | 5 |
+
+    | X | 10 |
+
+    | L | 50 |
+
+    | C | 100 |
+
+    | D | 500 |
+
+    | M | 1000 |
+
+
+    Table 1: Roman literals and its decimal representations.
+
+
+    First, let''s understand how to read roman numerals. The rule of roman numerals
+    is simple: Symbols are placed from left to right starting with the largest, and
+    we add the values according to the additive notation. However, there is an exception
+    to avoid four symbols being repeated in succession, also known as the subtractive
+    notation.
+
+
+    # The additive notation:
+
+
+    We combine the symbols and add the values. For example, III is three ones, which
+    is 3. Another example XV ten followed by a five, which is 15.
+
+
+    # The subtractive notation:
+
+
+    Four characters are avoided being repeated in succession (such as III). Instead,
+    Using the symbol I could appear before V and X to signify 4 (IV) and 9 (IX) respectively.
+    Using the pattern, we observe that X appears before L and C to signify 40 (XL)
+    and 90 (XC). The same pattern could be applied to C that is placed before D and
+    M.
+
+
+    With our understanding of roman numerals, we have to decide how to extract the
+    digits from the integer. We extract from right to left (the least significant
+    digit) or from left to right (the most significant digit)?
+
+
+    If digits are extracted from right to left, we have to append the symbols in reversed
+    order. Extracting digits from left to right seem more natural. It is also trickier
+    but if we know the maximum number of digits could the number have in advance,
+    which we do – The number is within the range from 1 to 3999.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "Using the additive notation, we convert to roman numerals by breaking it each\
+    \ chunk can be represented by the symbol entity. For example, 11 = 10 + 1 = \"\
+    X\" + \"I\". Similarly, 6 = 5 + 1 = \"V\" + \"I\". Let's take a look at an example\
+    \ where the subtractive notation: 49 = 40 + 9 = \"XL\" + \"IX\". Note that we\
+    \ treat \"XL\" and \"IX\" as one single entity to avoid dealing with these special\
+    \ cases to greatly simplify the code.\n\n```\nprivate static final int[] values\
+    \ = {\n    1000, 900, 500, 400,\n    100, 90, 50, 40,\n    10, 9, 5, 4,\n    1\n\
+    };\nprivate static String[] symbols = {\n    \"M\", \"CM\", \"D\", \"CD\",\n \
+    \   \"C\", \"XC\", \"L\", \"XL\",\n    \"X\", \"IX\", \"V\", \"IV\",\n    \"I\"\
+    \n};\npublic String intToRoman(int num) {\n    StringBuilder roman = new StringBuilder();\n\
+    \    int i = 0;\n    while (num > 0) {\n        int k = num / values[i];\n   \
+    \     for (int j = 0; j < k; j++) {\n            roman.append(symbols[i]);\n \
+    \       }\n        num -= values[i];\n        i++;\n    }\n    return roman.toString();\n\
+    }\n```\n\n# Follow up:\n\nImplement Roman to Integer. See Question [37. Roman\
+    \ to Integer]."
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# 37. Roman to Integer
+
+
+    Code it now: https://oj.leetcode.com/problems/roman-to-integer/  Difficulty: Medium,
+    Frequency: Low
+
+
+    # Question:
+
+
+    Given a roman numeral, convert it to an integer.
+
+    Input is guaranteed to be within the range from 1 to 3999.
+
+
+    # Solution:
+
+
+    | Roman Literal | Decimal |
+
+    | I | 1 |
+
+    | V | 5 |
+
+    | X | 10 |
+
+    | L | 50 |
+
+    | C | 100 |
+
+    | D | 500 |
+
+    | M | 1000 |
+
+
+    Table 2: Roman literals and its decimal representations.
+
+
+    Let’s work through some examples. Assume the input is “VII”, using the [additive
+    notation], we could simply add up each roman literal, ‘V’ + ‘I’ = 5 + 1 + 1 =
+    7,
+
+
+    Now let''s look at another example “IV”. Now we need to use the [subtractive notation].
+    We first look at ‘I’, and add 1 to it. Then we look at ‘V’ and since a smaller
+    roman literal ‘I’ appears before it, we need to subtract ‘I’ from ‘V’. Remember
+    that we already added another ‘I’ before it, so we need to subtract a total of
+    two one’s from it.
+
+
+    Below is a more complex example that involves both additive and subtractive notation:
+    “MXCVI”.
+
+
+    | Roman literals from left to right | Accumulated total |
+
+    | M | 1000 |
+
+    | MX | 1000 + 10 = 1010 |
+
+    | MXC | 1010 + (100 – 2 * 10) = 1010 + 80 = 1090 |
+
+    | MCV | 1090 + 5 = 1095 |
+
+    | MXCVI | 1095 + 1 = 1096 |
+
+
+    Table 3: Step by step calculation of roman number "MXCVI”.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "```\nprivate Map<Character, Integer> map =\n    new HashMap<Character, Integer>()\
+    \ {{\n        put('I', 1); put('V', 5); put('X', 10);\n        put('L', 50); put('C',\
+    \ 100); put('D', 500);\n        put('M', 1000);\n    };\n\npublic int romanToInt(String\
+    \ s) {\n    int prev = 0, total = 0;\n    for (char c : s.toCharArray()) {\n \
+    \       int curr = map.get(c);\n        total += (curr > prev) ? (curr - 2 * prev)\
+    \ : curr;\n        prev = curr;\n    }\n    return total;\n}\n```"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# 38. Clone graph\n\nCode now: https://oj.leetcode.com/problems/clone-graph/\
+    \ Difficulty: Medium, Frequency: Medium\n\n# Question:\n\nClone an undirected\
+    \ graph. Each node in the graph contains a label and a list of its neighbors.\n\
+    \n# Solution:\n\nThere are two main ways to traverse a graph: *breadth-first*\
+    \ or *depth-first*. Let's try the depth-first approach, which is a recursion algorithm.\
+    \ We will then look at the breadth-first approach, which is an iterative algorithm\
+    \ that uses a queue.\n\n# O(n) runtime, O(n) space – Depth-first traversal:\n\n\
+    A graph is simply represented by a graph node that serves as its starting point.\
+    \ In fact, the starting point could be any other graph nodes and it does not affect\
+    \ the cloning algorithm.\n\nAs each of its neighbors is a graph too, we could\
+    \ recursively clone each of its neighbors and assign it to each neighbor of the\
+    \ cloned node. We can easily see that it is doing a depth-first traversal of each\
+    \ node.\n\nNote that the graph could contain cycles, for a node could have a neighbor\
+    \ that points back to it. Therefore, we should use a map that records each node's\
+    \ copy to avoid infinite recursion.\n\n```\npublic UndirectedGraphNode cloneGraph(UndirectedGraphNode\
+    \ graph) {\n    if (graph == null) return null;\n    Map<UndirectedGraphNode,\
+    \ UndirectedGraphNode> map = new HashMap<>();\n    return DFS(graph, map);\n}\n\
+    ```\n\n```\nprivate UndirectedGraphNode DFS(UndirectedGraphNode graph, Map<UndirectedGraphNode,\
+    \ UndirectedGraphNode> map) {\n    if (map.containsKey(graph)) {\n        return\
+    \ map.get(graph);\n    }\n    UndirectedGraphNode graphCopy = new UndirectedGraphNode(graph.label);\n\
+    \    map.put(graph, graphCopy);\n    for (UndirectedGraphNode neighbor : graph.neighbors)\
+    \ {\n        graphCopy.neighbors.add(DFS(neighbor, map));\n    }\n    return graphCopy;\n\
+    }\n```\n\n# O(n) runtime, O(n) space – Breadth-first traversal:\n\nHow does the\
+    \ breadth-first traversal works? Easy, as we pop a node off the queue, we copy\
+    \ each of its neighbors, and push them to the queue."
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "A straight forward breadth-first traversal seemed to work. But some details\
+    \ are still missing. For example, how do we connect the nodes of the cloned graph?\n\
+    \nThe fact that B can traverse back to A implies that the graph may contain a\
+    \ cycle. You must take extra care to handle this case or your code could have\
+    \ an infinite loop.\n\nLet's analyze this further by using the below example:\n\
+    \n![](img/172f5d31191b965fe8ccb5a0f5becd9a_73_0.png)\n\nFigure 4: A simple graph\n\
+    \nAssume that the starting point of graph is A. First, you make a copy of node\
+    \ A (A2), and found that A has only one neighbor B. You make a copy of B (B2)\
+    \ and connect A2→B2 as A2's neighbor. Next, you find that B has as neighbor, which\
+    \ you have already made a copy of. Here, need to be careful not to make a copy\
+    \ of A, but to connect B2→A2 by using A2's neighbor. But, how do we know if a\
+    \ node has been copied?\n\nEasy, we could use a hash table! As we copy a node,\
+    \ we insert it into the table. If we find that one of node's neighbors is already\
+    \ in the table, we do not make a copy of its copy to. Instead, the hash table\
+    \ would need to store a map of key-value pairs, where the key is the node in the\
+    \ original graph and the value is the node's copy.\n\n```\npublic UndirectedGraphNode\
+    \ cloneGraph(UndirectedGraphNode graph) {\n    if (graph == null) return null;\n\
+    \    Map<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();\n  \
+    \  Queue<UndirectedGraphNode> q = new LinkedList<>();\n    q.add(graph);\n   \
+    \ UndirectedGraphNode graphCopy = new UndirectedGraphNode(graph.label);\n    map.put(graph,\
+    \ graphCopy);\n    while (!q.isEmpty()) {\n        UndirectedGraphNode node =\
+    \ q.poll();\n        for (UndirectedGraphNode neighbor : node.neighbors) {\n \
+    \           if (map.containsKey(neighbor)) {\n                map.get(node).neighbors.add(map.get(neighbor));\n\
+    \            } else {\n                UndirectedGraphNode neighborCopy = \n \
+    \                   new UndirectedGraphNode(neighbor.label);\n               \
+    \ map.get(node).neighbors.add(neighborCopy);\n                map.put(neighbor,\
+    \ neighborCopy);\n                q.add(neighbor);\n            }\n        }\n\
+    \    }\n    return graphCopy;\n}\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# Chapter 7: Stack
+
+
+    # 39. Min Stack
+
+
+    Code it now: https://oj.leetcode.com/problems/min-stack/ Difficulty: Easy, Frequency:
+    N/A
+
+
+    # Question:
+
+
+    Design a stack that supports push, pop, pop, top, and retrieving the minimum element
+    in constant time.
+
+
+    +   * push(x) – Push element x onto stack.
+
+    * pop() – Removes the element on top of the stack.
+
+    * top() – Get the top element.
+
+    * getMin() – Retrieve the minimum element in the stack.
+
+
+    # Hints:
+
+
+    +   > Consider space-time tradeoff. How would you keep track of the minimums using
+    extra space?
+
+    > Make sure to consider duplicate elements.
+
+
+    # Solution:
+
+
+    # O(n) runtime, O(n) space – Extra stack:
+
+
+    Using an extra stack to keep track of the current minimum value. During the push
+    operation we choose the new element or the current minimum, whichever is smaller
+    to push onto the stack.
+
+
+    For the pop operation, we would pop from both stacks. getMin() is reflected by
+    the top element of min stack.
+
+
+    To illustrate this idea, we push the elements 1, 4, 3, 0, 3 in that order.
+
+
+    | Main stack | Min stack |
+
+    |---|---|
+
+    | 3 | 0 |
+
+    | 0 | 0 |
+
+    | 3 | 1 |
+
+    | 4 | 1 |
+
+    | 1 | 1 |
+
+
+    After popping two elements from the stack becomes:
+
+
+    | Main stack | Min stack |
+
+    |---|---|
+
+    | 3 | 1 |
+
+    | 4 | 1 |
+
+    | 1 | 1 |
+
+
+    74'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# O(n) runtime, O(n) space – Minor optimization:\n\nIf a new element is larger\
+    \ than the current minimum, we do not need to push it on to the min stack. When\
+    \ we perform the pop operation, check if the popped element is the same as the\
+    \ current minimum. If it is, it pop off the min stack too.\n\n```\nclass MinStack\
+    \ {\n    private Stack<Integer> stack = new Stack<>();\n    private Stack<Integer>\
+    \ minStack = new Stack<>();\n\n    public void push(int x) {\n        stack.push(x);\n\
+    \        if (minStack.isEmpty() || x <= minStack.peek()) {\n            minStack.push(x);\n\
+    \        }\n    }\n\n    public void pop() {\n        if (stack.pop().equals(minStack.peek()))\
+    \ minStack.pop();\n    }\n\n    public int top() {\n        return stack.peek();\n\
+    \    }\n\n    public int getMin() {\n        return minStack.peek();\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# 40. Evaluate Reverse Polish Notation
+
+
+    Code it now: https://oj.leetcode.com/problems/evaluate-reverse-polish-notation/  Difficulty:
+    Medium, Frequency: Low
+
+
+    # Question:
+
+
+    Evaluate the value of an arithmetic expression in Reverse Polish Notation.
+
+    Valid operators are +, -, *, /. Each operand may be an integer or another expression.
+
+    Some examples:
+
+
+    +   - ["2", "1", "+", "3", ""] -> ((2 + 1) * 3) -> 9
+
+    - ["4", "13", "5", "/", "+"] -> (4 + (13 / 5)) -> 6
+
+
+    # Example Candidates Might Ask:
+
+
+    Q: Is an empty array a valid input?
+
+    A: No.
+
+
+    # Solution:
+
+
+    The Reverse Polish Notation (RPN) is also known as the postfix notation, because
+    each operator appears *after* its operands. For the infix notation "3 + 4" is
+    expressed as "3 4 +" in RPN.
+
+
+    # The brute force approach:
+
+
+    We look for the simplest RPN sequence that could be evaluated immediately, that
+    is: Two successive operands followed by an operator such as “4 2 +\”. We replace
+    this sequence with the expression''s value and repeat until there is only one
+    operand left.
+
+
+    For example:
+
+
+    +   - ["4", "13", "5", "/", "+"]
+
+    - ["4", "2", "+"]
+
+    - ["6"]
+
+
+    How would you replace it? Could you do it in-place with the input array, but it
+    would result in quadratic runtime as elements have to be shifted every time a
+    replacement occurs.
+
+
+    A workaround is to copy the input array to a doubly linked list. The replacement
+    is efficient and the next scan begins with the replaced value''s previous element.
+    This results in an algorithm with linear runtime and linear space. Although this
+    works, the implementation is complex and is far from ideal in an interview session.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# The optimal approach:
+
+
+    Observe that every time we see an operator, we need to evaluate the last two operands.
+    Stack fits perfectly as it is a Last-In-First-Out (LIFO) data structure.
+
+
+    We evaluate the expression left-to-right and push operands onto the stack until
+    we encounter an operator, we pop the top two values from the stack. We then evaluate
+    the operator, with the values as arguments and push the result back onto the stack.
+
+
+    For example, the infix “8 – ((1 + 2) * 2)” in RPN is:
+
+
+    | Input | Operation | Stack | Notes |
+
+    | --- | --- | --- | --- |
+
+    | 8 | Push operand | 8 | |
+
+    | 1 | Push operand | 1 | |
+
+    | | | 8 | |
+
+    | 2 | Push operand | 2 | |
+
+    | | | 1 | |
+
+    | | | 8 | |
+
+    | + | Add | 3 | Pop two values 1, 2 and push result 3 |
+
+    | 2 | Push operand | 2 | |
+
+    | | | 3 | |
+
+    | | | 8 | |
+
+    | * | Multiply | 6 | Pop two values 3, 2 and push result 6 |
+
+    | | | 8 | |
+
+    | – | Subtract | 2 | Pop two values 8, 6 and push result 2 |
+
+
+    After the algorithm finishes, the stack contains only one value which is the RPN
+    expression’s result; in this case, 2.'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "```\nprivate static final Set<String> OPERATORS =\n    new HashSet<>(Arrays.asList(\"\
+    +\", \"-\", \"*\", \"/\"));\n\npublic int evalRPN(String[] tokens) {\n    Stack<Integer>\
+    \ stack = new Stack<>();\n    for (String token : tokens) {\n        if (OPERATORS.contains(token))\
+    \ {\n            int y = stack.pop();\n            int x = stack.pop();\n    \
+    \        stack.push(eval(x, y, token));\n        } else {\n            stack.push(Integer.parseInt(token));\n\
+    \        }\n    }\n    return stack.pop();\n}\n\nprivate int eval(int x, int y,\
+    \ String operator) {\n    switch (operator) {\n        case \"+\":: return x +\
+    \ y;\n        case \"-\": return x - y;\n        case \"*\": return x * y;\n \
+    \       default: return x / y;\n    }\n}\n```\n\n# Further Thoughts:\n\nThe above\
+    \ code contains duplication. For example, if we decide to add a new operator,\n\
+    \ would need to update the code in two places – in the set's initialization and\
+    \ the switch\nstatement. would you refactor the code so it is more extensible?\n\
+    \nYou are probably not expected to write this refactored code during an interview\
+    \ session.\nHowever, it will make you a stronger candidate if you could make this\
+    \ observation and\npoint out, as it shows to the interviewer that you care about\
+    \ clean code.\n\nIn Java, create an interface called Operator and map each operator\
+    \ string to an\nplementation of the Operator interface. For other languages such\
+    \ as C++, each operator\nwill be mapped to a function pointer instead."
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "```\ninterface Operator {\n    int eval(int x, int y);\n}\nprivate static final\
+    \ Map<String, Operator> OPERATORS = \n    new HashMap<String, Operator>(){\n \
+    \       put(\"+\", new Operator() {\n            public int eval(int x, int y)\
+    \ { return x + y; }\n        });\n        put(\"-\", new Operator() {\n      \
+    \      public int eval(int x, int y) { return x - y; }\n        });\n        put(\"\
+    *\", new Operator() {\n            public int eval(int x, int y) { return x *\
+    \ y; }\n        });\n        put(\"/\", new Operator() {\n            public int\
+    \ eval(int x, int y) { return x / y; }\n        });\n    };\n\npublic int evalRPN(String[]\
+    \ tokens) {\n    Stack<Integer> stack = new Stack<>();\n    for (String token\
+    \ : tokens) {\n        if (OPERATORS.containsKey(token)) {\n            int y\
+    \ = stack.pop();\n            int x = stack.pop();\n            stack.push(OPERATORS.get(token).eval(x,\
+    \ y));\n        } else {\n            stack.push(Integer.parseInt(token));\n \
+    \       }\n    }\n    return stack.pop();\n}\n```"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "# 41. Valid Parentheses\n\nCode it now: https://oj.leetcode.com/problems/valid-parentheses/\
+    \ Difficulty: Easy, Frequency: High\n\nQuestion:\n\nGiven a string containing\
+    \ just the characters '(', ')', '{', '}', '[' and ']', determine if the input\
+    \ string is valid.\n\nThe brackets must close in the correct order, \"()\" and\
+    \ \"(){}\" are all valid but \"[]\" and \"([)]\" are not.\n\nExample Questions\
+    \ Candidate Might Ask:\n\n+   - Q: Is the empty string valid?\n- A: Yes.\n\nSolution:\n\
+    \nTo validate the parentheses, we need to match each closing parenthesis with\
+    \ its opening counterpart. A Last-In-First-Out (LIFO) data structure such as stack\
+    \ is the perfect fit.\n\nAs we see an opening parenthesis, we push it onto the\
+    \ stack. On the other hand, when we encounter a closing parenthesis, we pop the\
+    \ last inserted parenthesis from the stack and check if the pair is a valid match.\n\
+    \nIt would be wise to avoid writing multiple statements when matching parentheses,\
+    \ your interviewer might think that you are writing sloppy code. You could use\
+    \ a map, which is more maintainable.\n\n```\nprivate static final Map<Character,\
+    \ Character> map =\n    new HashMap<Character, Character>() {\n    put('(', ')');\n\
+    \    put('{', '}');\n    put('[', ']');\n};\n\npublic boolean isValid(String s)\
+    \ {\n    Stack<Character> stack = new Stack<>();\n    for (char c : s.toCharArray())\
+    \ {\n        if (map.containsKey(c)) {\n            stack.push(c);\n        }\
+    \ else if (stack.isEmpty() || map.get(stack.pop()) != c) {\n            return\
+    \ false;\n        }\n    }\n    return stack.isEmpty();\n}\n```\n\n80"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "# # Chapter 8: Dynamic Programming\n\n# ## 42. Climbing Stairs\n\nCode it now:\
+    \ https://oj.leetcode.com/problems/climbing-stairs/ Difficulty: Easy, Frequency:\
+    \ High\n\n**Question:**\n\nYou are climbing a staircase. It takes $n$ steps to\
+    \ reach the top.\n\nEach time you can climb 1 or 2 steps. In how many distinct\
+    \ ways can you climb to the top?\n\n**Solution:**\n\n**O(n) runtime, $O(1)$ space\
+    \ – Dynamic programming:**\n\nThis is a classic Dynamic Programming problem.\n\
+    \nDefine:\n\n$f(n) = \\text{number of ways you can climb to the } n^{\\text{th}}$\
+    \ step.\n\nTo reach one step from the $n-1^{\\text{th}}$ step, you have two choices:\n\
+    \n+   1. Advance one step from the $n-1^{\\text{th}}$ step.\n\n+   2. Advance\
+    \ two steps from the $n-2^{\\text{th}}$ step.\n\nTherefore, $f(n) = f(n-1) + f(n-2)$,\
+    \ which is the exact recurrence formula by the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence)\
+    \ (with different base cases, though).\n\nSet base cases $f(1)=1, f(2)=2$ and\
+    \ you are almost done.\n\nNow, we can calculate $f(n)$ easily by storing previous\
+    \ values in one dimension array and work our way up to n. Here, we even optimize\
+    \ this further by storing just the previous two values.\n\n```\npublic int climbStairs(int\
+    \ n) {\n    int p = 1, q = 1;\n    for (int i = 2; i <= n; i++) {\n        int\
+    \ temp = q;\n        q += p;\n        p = temp;\n    }\n    return q;\n}\n```\n\
+    \n81"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Combinatorics:
+
+
+    Interestingly, this problem could also be solved using combinatorics.
+
+
+    Warning: Math-y stuff ahead, feel free to skip this section if you are not interested.
+
+
+    For example, let''s assume n = 6.
+
+
+    Let:
+
+
+    x = number of 1''s,
+
+    y = number of 2''s.
+
+
+    We could reach the top using one of the four combinations below:
+
+
+    | x | y |
+
+    |---|---||
+
+    | 6 | 0 | => 1) Six single steps. |
+
+    | 4 | 1 | => 2) Four single steps and one double step. |
+
+    | 2 | 2 | => 3) Two single steps and two double steps. |
+
+    | 0 | 3 | => 4) Three double steps. |
+
+
+    For the first combination pair (x,y) = (6,0), there''s obviously only one way
+    of arranging six single steps.
+
+
+    For the second combination pair (4,1), there''s five ways of arranging (think
+    of it as slotting the double step between the single steps).
+
+
+    Similarly, there are six ways C(4,2) $\frac{4}{2}$ of arranging the third and
+    fourth combination pairs respectively.
+
+
+    Generally, for pair (x,y), there are a total of $\frac{(x+y)!}{x!y!}$ ways of
+    arranging the 1''s and 2''s.
+
+
+    The total number of possible ways is the sum of all individual terms,
+
+
+    $f(6) = 1 + 5 + 6 + 1 = 13$.
+
+
+    Generalizing for all n''s (including odd n),
+
+
+    $f(n) = \binom{n}{0} + \binom{n-1}{1} + \binom{n-2}{2} + \dots + \binom{\lceil\frac{n}{2}\rceil}{\lfloor\frac{n}{2}\rfloor}
+    = $
+
+
+    82'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# 43. Unique Paths
+
+
+    Code now: https://oj.leetcode.com/problems/unique-paths/  Difficulty: Medium,
+    Frequency: Low
+
+
+    Question:
+
+
+    A robot is located at the top-left corner of a $m \times n$ grid (marked ''Start''
+    in the diagram below). The robot can only move down or right at any point in time.
+    The robot is trying to reach the bottom-right corner of the grid (marked ''Finish''
+    in the diagram below). How many possible unique paths are there?
+
+
+    ![](img/172f5d31191b965fe8ccb5a0f5becd9a_83_0.png)
+
+
+    # $O((m+n))$ runtime, $O(m+n)$ space - Backtracking:
+
+
+    The most direct way is to write code that traverses each possible path, which
+    can be done using backtracking. When you reach $row = m$ and $col = n$, you know
+    you''ve reached the bottom-right corner, and there is one unique path to it. When
+    you reach $row > m$ or $col > n$, then it''s an invalid path and you should stop
+    traversing. For any grid $row = r$ and $col = c$, you have two choices: Traverse
+    to the right or traverse to the bottom. Therefore, the total unique paths at $(r,
+    c)$ are equal to the sum of total unique paths from the grid to the right and
+    the grid below.
+
+
+    Deriving the runtime complexity is slightly tricky. Observe that the robot must
+    go right exactly $m$ times and goes down $n$ times. Assume that the movement is
+    0 and the down movement is 1. We could represent the robot''s path as a binary
+    string of $length = m+n$, where the string contains $m$ zeros and $n$ ones. Since
+    the backtracking algorithm is just trying to explore all possibilities, its runtime
+    complexity is equivalent to the total permutations of a binary string that contains
+    $m$ zeros and $n$ ones, which is ${m+n \choose m}$.
+
+
+    On the other hand, the space complexity is $O(m+n)$ due to the recursion that
+    goes at most $m+n$ level depth.
+
+
+    Below is the backtracking code in five lines of code:'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "```\nprivate int backtrack(int r, int c, int m, int n) {\n    if (r == m -\
+    \ 1 && c == n - 1)\n        return 1;\n    if (r >= m || c >= n)\n        return\
+    \ 0;\n\n    return backtrack(r + 1, c, m, n) + backtrack(r, c + 1, m, n);\n}\n\
+    \npublic int uniquePaths(int m, int n) {\n    return backtrack(0, 0, m, n);\n\
+    }\n```\n\n# Improved Backtracking Solution using Memoization:\n\nAlthough the\
+    \ above backtracking solution is easy to code, it is very inefficient in the sense\
+    \ that it recalculates the same solution for a grid over and again. By caching\
+    \ the results, we prevent precalculation and only calculate when necessary. Here,\
+    \ we are using a dynamic programming (DP) technique memoized.\n\n```\nprivate\
+    \ int backtrack(int r, int c, int m, int n, int[][] mat) {\n    if (r == m - 1\
+    \ && c == n - 1)\n        return 1;\n    if (r >= m || c >= n)\n        return\
+    \ 0;\n\n    if (mat[r][c] == -1)\n        mat[r][c] = backtrack(r + 1, c, m, n)\
+    \ + backtrack(r, c + 1, m, n);\n    return mat[r][c];\n}\n\nreturn mat[r + 1][c]\
+    \ + mat[r][c + 1];\n\npublic int uniquePaths(int m, int n) {\n    int[][] mat\
+    \ = new int[m + 1][n + 1];\n    for (int i = 0; i < m; i++) {\n        for (int\
+    \ j = 0; j < n; j++) {\n            mat[i][j] = -1;\n        }\n    }\n    return\
+    \ backtrack(0, 0, m, n);\n```\n\n# O(mn) runtime, O(mn) space - Bottom-up dynamic\
+    \ programming:\n\nIf you notice closely, the above DP solution is using a top-down\
+    \ approach. Now let's try a bottom-up approach. This important relationship that\
+    \ is necessary for this DP solution to work:\n\nThe total unique paths at (r,\
+    \ c) are equal to the sum of total unique paths from grid to the right (r, c +\
+    \ 1) and the grid below (r + 1, c).\n\nHow can this relationship solve the problem?\
+    \ We observe that all grids of the bottom edge and right edge must have only one\
+    \ unique path to the bottom-right"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "corner. Using this as the base case, we can build our way up to our solution\
+    \ at grid (1, 1) using the relationship above.\n\n| 21 | 15 | 10 | 6 | 3 | 1 |\n\
+    |---|---|---|---|---|---||\n| 7 | 6 | 5 | 4 | 3 | 2 | 1 |\n| 1 | 1 | 1 | 1 | 1\
+    \ | 1 | Finish |\n\nFigure 6: The total unique paths at grid (r, c) are equal\
+    \ to the total of unique paths from grid to the right (r, c+1) and the grid below\n\
+    \n```\npublic int uniquePaths(int m, int n) {\n    int[][] mat = new int[m+1][n+1];\n\
+    \    mat[m][n] = 1;\n    for (int r = m; r >= 0; r--) {\n        for (int c =\
+    \ n; c >= 0; c--) {\n            mat[r][c] = mat[r+1][c] + mat[r][c+1];\n    \
+    \    }\n    }\n    return mat[0][0];\n}\n```\n\n# Combinatorial Solution:\n\n\
+    It turns out this problem could be solved using combinatorics, which no doubt\
+    \ would be the most efficient solution. In order to see it as a combinatorial\
+    \ problem, there are some observations. Look at the 7x3 sample grid in the picture\
+    \ above. Notice that no matter how you traverse the grids, you always have to\
+    \ choose 6 steps to the right (R) and 2 steps to the bottom (B). Therefore, the\
+    \ problem can be transformed into a question of how many ways can we choose 6\
+    \ R's and 2 B's in these 8 steps. The answer is $\binom{8}{2}$ or $\binom{8}{6}$.\
+    \ Therefore, the general solution for an $m \\times n$ grid is $\binom{m+n-2}{m-1}$.\n\
+    \n# Further Thoughts:\n\nNow consider if some obstacles are added to the grids\
+    \ marked as 'X'. How many unique paths would there be? A combinatorial solution\
+    \ is difficult to obtain, but the DP solution can be modified easily to accommodate\
+    \ this constraint. Question [44]. Unique Paths II."
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "# 44. Unique Paths II\n\nCode it now: https://q.leetcode.com/problems/unique-paths-ii/\
+    \  Difficulty: Medium, Frequency: High\n\n# Question:\n\nSimilar to Question [43.\
+    \ Unique Paths], but now consider if some obstacles are added to the grids. How\
+    \ many unique paths would there be?\n\nAn obstacle and empty space are marked\
+    \ as 1 and 0 respectively in the grid.\n\nFor example,\n\nThere is one obstacle\
+    \ in the middle of a 3x3 grid as illustrated below.\n\n```\n[\n[0,0,0],\n[0,1,0],\n\
+    [0,0,0]\n]\n```\n\nThe total number of unique paths is 2.\n\n# Solution:\n\n#\
+    \ O(mn) runtime, O(mn) space – Dynamic programming:\n\nIt turns out to be really\
+    \ easy to extend from the [Bottom-up dynamic programming] approach above. Just\
+    \ set the total paths to 0 when you encounter an obstacle.\n\n```\npublic int\
+    \ uniquePathsWithObstacles(int[][] obstacleGrid) {\n    int m = obstacleGrid.length;\n\
+    \    if (m == 0) return 0;\n    int n = obstacleGrid[0].length;\n    int[][] mat\
+    \ = new int[m+1][n+1];\n    mat[0][0] = 1;\n    for (int r = 1; r <= m; r++) {\n\
+    \        for (int c = 1; c <= n; c--) {\n            mat[r][c] = (obstacleGrid[r-1][c-1]\
+    \ == 1) ? 0 : mat[r-1][c] + mat[r][c-1];\n        }\n    }\n    return mat[m][n];\n\
+    }\n```\n\n86"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# 45. Maximum Sum Subarray\n\nCode it now: https://oj.leetcode.com/problems/maximum-sum-subarray/\n\
+    \nDifficulty: Medium, Frequency: High\n\n# Question:\n\nFind the contiguous subarray\
+    \ within an array (containing at least one number) that has the largest sum.\n\
+    \nFor example, given the array [2, 1, -3, 4, -1, 2, 1, -5, 4],\n\nThe contiguous\
+    \ array [4, -1, 2] has the largest sum = 6.\n\n# Solution:\n\n# O(n log n) runtime,\
+    \ O(log n) stack space – Divide and Conquer:\n\nAssume we partition the array\
+    \ A into two smaller arrays S and T at the middle index, M. Then, S = A1 ... AM-1,\
+    \ and T = AM+1 ... AN.\n\nThe contiguous subarray that has the largest sum could:\n\
+    \n+   1. Contain the middle element:\n   a. The largest sum is the maximum sum\
+    \ of S + Am + the maximum prefix sum of T.\n2. Does not contain the middle element:\n\
+    \   a. The largest sum is in S, which we could apply the same algorithm to S.\n\
+    \   b. The largest sum is in T, which we could apply the same algorithm to T.\n\
+    \n```\npublic int maxSubArray(int[] A) {\n    return maxSubArrayHelper(A, 0, A.length\
+    \ - 1);\n}\nnprivate int maxSubArrayHelper(int[] A, int L, int R) {\n    if (L\
+    \ > R) return Integer.MIN_VALUE;\n    int M = (L + R) / 2;\n    int leftAns =\
+    \ maxSubArrayHelper(A, L, M - 1);\n    int rightAns = maxSubArrayHelper(A, M +\
+    \ 1, R);\n    int lMax = 0;\n    int sum = 0;\n    for (int i = M; i >= L; i--)\
+    \ {\n        sum += A[i];\n    }\n    lMax = Math.max(sum, leftAns);\n    int\
+    \ rMax = 0;\n    sum = 0;\n    for (int i = M + 1; i <= R; i++) {\n        sum\
+    \ += A[i];\n    }\n    rMax = Math.max(sum, rightAns);\n    return Math.max(lMax\
+    \ + A[M] + rMax, Math.max(leftAns, rightAns));\n}\n```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "The runtime complexity could be expressed as $T(n) = 2T(\\frac{n}{2}) + O(n)$,\
+    \ which is $O(n \\log n)$. We will not attempt to prove it here; you could read\
+    \ up any advanced algorithm textbooks to learn the proof.\n\n# **O(n) runtime,\
+    \ O(1) space – Dynamic programming:**\n\nTo devise a programming formula, let\
+    \ us assume that we are calculating the maximum sum of subarray that ends at a\
+    \ specific index.\n\nLet us denote that:\n\n$f(k) = Maximum$ sum of subarray ending\
+    \ at index $k$.\n\nThen,\n\n$f(k) = max(f(k-1)) + A[k]$.\n\nUsing an array of\
+    \ size $n$, We could deduce the final answer by $f(n-1)$, with the initial state\
+    \ of $f(0) = A[0]$. Since we only need to access its previous element at each\
+    \ step, two variables are sufficient. Notice the difference between the two: $maxEndingHere$\
+    \ and $maxSoFar$, the former is the maximum sum of subarray that must end at index\
+    \ $k$, while the latter is the global maximum subarray sum.\n\n```\npublic int\
+    \ maxSubArray(int[] A) {\n    int maxEndingHere = A[0], maxSoFar = A[0];\n   \
+    \ for (int i = 1; i < A.length; i++) {\n        maxEndingHere = Math.max(maxEndingHere\
+    \ + A[i], A[i]);\n        maxSoFar = Math.max(maxEndingHere, maxSoFar);\n    }\n\
+    \    return maxSoFar;\n```"
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "# 46. Maximum Product Subarray\n\nCode it now: https://oj.leetcode.com/problems/maximum-product-subarray/\
+    \ Difficulty: Medium, Frequency: High\n\n# Question:\n\nFind the contiguous subarray\
+    \ within an array of integers that has the largest product. For example, given\
+    \ the array [2,3,-2,4], the contiguous subarray [2,3] has the largest product\
+    \ = 6.\n\n# Example Questions Candidate Might Ask:\n\n+   Q: Could the subarray\
+    \ be empty?\nnA: No, the subarray must contain at least one number.\n\n# Solution:\n\
+    \nThis problem is very similar to Question [45. Maximum Subarray]. There is a\
+    \ slight twist though. Besides keeping track of the largest product, we also need\
+    \ to keep track of the smallest product. Why the smallest product, which is the\
+    \ largest in the negative sense could be the maximum when multiplied by a negative\
+    \ number.\n\nLet us denote that:\n\nf(k) = Largest product subarray, from index\
+    \ 0 up to k.\n\nSimilarly,\n\ng(k) = Smallest product subarray, from index 0 up\
+    \ to k.\n\nThen,\n\nf(k) = max(f(k-1) * A[k], g(k-1) * A[k])\ng(k) = min(g(k-1)\
+    \ * A[k], f(k-1) * A[k])\n\nWe have a dynamic programming formula. Using two arrays\
+    \ of size n, we could deduce the final answer as f(n-1). Since we need to access\
+    \ its previous elements each step, two variables are sufficient.\n\n```\npublic\
+    \ int maxProduct(int[] A) {\n    assert A.length > 0;\n    int max = A[0], min\
+    \ = A[0], maxAns = A[0];\n    for (int i = 1; i < A.length; i++) {\n        int\
+    \ mx = max, mn = min;\n        max = Math.max(Math.max(A[i], mx * A[i]), mn *\
+    \ A[i]);\n        min = Math.min(Math.min(A[i], mx * A[i]), mn * A[i]);\n    \
+    \    maxAns = Math.max(max, maxAns);\n    }\n    return maxAns;\n}\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# 47. Coins in a Line
+
+
+    Code it now: Coming soon! | Difficulty: Hard, Frequency: N/A
+
+
+    Question:
+
+
+    There are n coins in a line. (Assume n is even). Two players take turns to take
+    a coin from one of the ends of the line until there are no more coins left. The
+    player with the larger amount of money wins.
+
+
+    +   1. Would you go first or second? Does it matter?
+
+    2. Assume that you go first, describe an algorithm to compute the maximum amount
+    of money you can win.
+
+
+    ![](img/172f5d31191b965fe8ccb5a0f5becd9a_90_0.png)
+
+
+    Hints:
+
+
+    If you go first, is there a strategy you can follow prevents you from losing?
+    Try to consider how it matters when the number of coins is odd vs. even.
+
+
+    Solution:
+
+
+    Going first will guarantee that you will not lose. By following the strategy below,
+    will always win the game (or get a possible tie).
+
+
+    +   1. Count the sum of all coins that are odd-numbered. (Call this X)
+
+    2. Count the sum of all coins that are even-numbered. (Call this Y)
+
+    3. If X > Y, take the left-most coin first. Choose all odd-numbered coins in subsequent
+    moves.
+
+    4. If X < Y, take the right-most coin first. Choose all even-numbered coins in
+    subsequent moves.
+
+    5. If X == Y, you will guarantee to get a tie if you stick with taking only evennumbered/odd-numbered
+    coins.
+
+
+    You might be wondering how you can always choose odd-numbered/even-numbered coins.
+    Let me illustrate this with an example where you have 10 coins:
+
+
+    If you take the coin numbered 1 (the left-most coin), your opponent can only have
+    the choice of taking coin numbered 2 or 10 (which are both even-numbered coins).
+    On the other hand, if you choose to take the coin numbered 10 (the right-most
+    coin), your opponent can only take coin numbered 1 or 9 (which are odd-numbered
+    coins).'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: 'Notice the total number of coins change from even to odd and vice-versa when
+    player takes each time. Therefore, by going first and depending on the coin you
+    choose, you are essentially forcing your opponent to take either even-numbered
+    or odd-numbered coins.
+
+
+    Now that you have found a non-losing strategy, could you compute the maximum amount
+    of money you can win?
+
+
+    # Hints:
+
+
+    One misconception is to think that the above non-losing strategy would generate
+    the maximum amount of money as well. This is probably incorrect (You might need
+    at least 6 coins to find a counter example).
+
+
+    Assume that you are finding the maximum amount of money in a certain range (ie,
+    from coins numbered i to j, inclusive). Could you express this as a recursive
+    formula? Find ways to make it as efficient as possible.
+
+
+    # Solution for (2):
+
+
+    Although the simple strategy illustrated in Solution (1) guarantees you not to
+    lose, it not guarantee that it is optimal in any way.
+
+
+    Here, we use a good counter example to see better why this is so. Assume the coins
+    are laid out as:
+
+
+    +   * 3, 2, 2, 3, 1, 2
+
+
+    Following our previous non-losing strategy, we would count the sum of odd-numbered
+    coins, X = 3 + 2 + 1 = 6, and the sum of even-numbered coins, Y = 2 + 3 + 2 =
+    7. As Y > X, we would take the last coin first and end up winning with the total
+    amount of 7 by taking only even-numbered coins.
+
+
+    However, let us try another way by taking the first coin (valued at 3, denote
+    by (3)) instead. The opponent is left with two possible choices, the left coin
+    (2) and the right coin (2), both valued at 2. No matter which coin the opponent
+    chooses, you can always take the other coin (2) and then the configuration of
+    the coins: { 2, 3, 1 }. Now, the coin in the middle (3) would be yours to keep
+    for. Therefore, you win the game by a total amount of 3 + 2 + 3 = 8, which proves
+    that the previous non-losing strategy is not necessarily optimal.
+
+
+    To solve this problem in an optimal way, we need to find efficient methods in
+    enumerating all possibilities. This is when Dynamic Programming (DP) kicks in
+    and become so powerful that you start to feel magical.
+
+
+    First, we would need some observations to establish a recurrence relation, which
+    is essential as our first step in solving DP problems.'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: 'Figure 8: The remaining coins are { Ai ... Aj } and it is your turn. Let P(i,
+    j) denotes the maximum amount of money you get. Should you choose Ai or Aj?
+
+
+    Assume that P(i, j) denotes the maximum amount of money you can win when the remaining
+    coins are { Ai, ..., Aj }, and it is your turn now. You have two choices, either
+    take Ai or Aj. First, let us focus on the case you take Ai, so that the remaining
+    coins become { Ai+1 ... Aj }. Since the opponent is as smart as you, he must choose
+    the best move that yields the maximum for him, where the maximum amount you can
+    get is denoted by P(i+1, j).
+
+
+    Therefore, if you choose Ai, the maximum amount you can get:
+
+
+    ```
+
+    $P_1 = \sum_{k=i}^{j} A_k - P(i+1, j)$
+
+    ```
+
+
+    Similarly, if you choose Aj, the maximum amount you can get:
+
+
+    ```
+
+    $P_2 = \sum_{k=i}^{j} A_k - P(i, j-1)$
+
+    ```
+
+
+    Therefore,
+
+
+    ```
+
+    $P(i, j) = \max(P_1, P_2)$$\n= \max \left( \sum_{k=i}^{j} A_k - P(i+1, j), \sum_{k=i}^{j}
+    A_k - P(i, j-1) \right)$
+
+    ```
+
+
+    In fact, we can simplify the above relation further to (Why?):
+
+
+    ```
+
+    $P(i, j) = \sum_{k=i}^{j} A_k - min(P(i+1, j), P(i, j-1))$
+
+    ```
+
+
+    Although the above recurrence is easy to understand, we need to compute the value
+    of $\sum_{k=i}^{j} A_k$ in each step, which is not very efficient. To avoid this
+    problem, we can store value of $\sum_{k=i}^{j} A_k$ in a table and avoid re-computations
+    by computing in a certain order. Try to figure this out by yourself. (Hint: You
+    would first compute $P(1,1), P(2,2), \dots P(n,n)$ and work your way up).
+
+
+    92'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# A Better Solution:
+
+
+    There is another solution that does not rely on computing and storing results
+    of $\sum_{k=i}^l A_k$, therefore is more efficient in terms of time and space.
+    We rewind back to the case where you take Ai, and the remaining coins become $\{A_{i+1}
+    \dots A_j\}$.
+
+
+    | A1 | ... | Ai | Ai+1 | ... | Aj | ... | An |
+
+
+    Figure 9: You took Ai from the coins { Ai ... Aj }. The opponent will either choose
+    Ai+1 or Aj. Which one would he choose?
+
+
+    Let us consider one extra step ahead by considering the two coins the opponent
+    will possibly take, $A_{i+1}$ and $A_j$. If the opponent takes $A_{i+1}$, the
+    remaining coins are $\{A_{i+2} \dots A_j\}$, whose maximum is denoted by $P(i+2,
+    j)$. On the other hand, if the opponent takes $A_j$, our maximum is $P(i, j-1)$.
+    Since the opponent is as smart as you, would have chosen the choice that yields
+    the minimum amount to you.
+
+
+    Therefore, the maximum amount you can get when you choose Ai is:
+
+
+    ```
+
+    $P_1 = A_i + \min(P(i+2, j), P(i+1, j-1))$
+
+    ```
+
+
+    Similarly, the maximum amount you can get when you choose Aj is:
+
+
+    ```
+
+    $P_2 = A_j + \min(P(i+1, j-1), P(i, j-2))$
+
+    ```
+
+
+    Therefore,
+
+
+    ```
+
+    $P(i, j) = \max(P_1, P_2)
+
+    = \max(A_i + \min(P(i+2, j), P(i+1, j-1)), A_j + \min(P(i+1, j-1), P(i, j-2)))$
+
+    ```
+
+
+    Although the recurrence relation could be implemented in few lines of code, its
+    complexity is exponential. The reason is that each recursive call branches into
+    a total of four separate recursive calls, and it could be $n$ levels deep from
+    the very first call). Memoization provides an efficient way by avoiding re-computations
+    using intermediate results stored in a table. Below is the code which runs in
+    $O(n^2)$ time and takes $O(n^2)$ space.
+
+
+    The code contains a function printMoves which prints out all the moves you and
+    the opponent make (assuming both of you are taking the coins in an optimal way).'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "```\nconst int MAX_N = 100;\n\nvoid printMoves(int P[MAX_N], int A[], int N)\
+    \ {\n    int sum1 = 0, sum2 = 0;\n    int m = 0, n = N-1;\n    bool myTurn = true;\n\
+    \    while (m < n) {\n        int P1 = P[m+1]; // If Take A[m], opponent can get...\n\
+    \        int P2 = P[m-1]; // If Take A[n]\n        cout << (myTurn ? \" I \" :\
+    \ \"You\") << \" take coin no. \" << \"\\n\";\n        if (P1 < P2) {\n      \
+    \      cout << \" \" << m+1 << \" (\" << A[m] << \");\";\n            m++;\n \
+    \       } else {\n            cout << \" \" << n+1 << \" (\" << A[n] << \");\"\
+    ;\n            n--;\n        }\n        cout << (myTurn ? \", \" : \" \") << \"\
+    \\n\";\n        myTurn = !myTurn;\n    }\n    cout << \"\\nt total amount of money\
+    \ (maximum) I gets \" << P[0][N-1] << \" <<\\n\";\n}\n\nint maxMoney(int A[],\
+    \ int N) {\n    int P[MAX_N][MAX_N] = {0};\n    for (int i = 0; i < N; i++) {\n\
+    \        for (int m = 0, n = i; n < N; m++, n++) {\n            assert(m < N);\
+    \ assert(n < N);\n            a = (m+2 < N-1) ? P[m+2][n] : 0;\n            b\
+    \ = (m+1 < N-1 && n-1 >= 0) ? P[m+1][n-1] : 0;\n            c = (n > 0) ? P[m][n-2]\
+    \ : 0;\n            P[m][n] = max(A[m] + min(a,b),\n            A[n] + min(b,c));\n\
+    \        }\n    }\n    printMoves(P, A, N);\n    return P[0][N-1];\n}\n```\n\n\
+    # Further Thoughts:\n\nAssume that your opponent is dumb that you are able to\
+    \ manipulate him into choosing the coins you want him to choose. Now, what is\
+    \ the maximum possible amount of money you can win?"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# Chapter 9: Binary Search\n\n# 48. Search Insert Position\n\nCode it now:\
+    \ https://leetcode.com/problems/search-insert-position/ Difficulty: Medium, Frequency:\
+    \ Low\n\n# Question:\n\nGiven a sorted array and a target value, return the index\
+    \ if the target is found. If not, return the index where it would be if it were\
+    \ inserted in order.\n\nYou may assume no duplicates in the array.\n\nHere are\
+    \ few examples.\n\n+   - [1,3,5,6], 5 → 2\n- [1,3,5,6], 2 → 1\n- [1,3,5,6], 7\
+    \ → 4\n- [1,3,5,6], 0 → 0\n\n# Solution:\n\nThis problem is a direct application\
+    \ of Binary Search, as you can spot it easily by the keywords *sorting* and *finding*\
+    \ target. The requirements seem complex, but let's first start with something\
+    \ we're already familiar with – The raw binary search algorithm.\n\nLet's start\
+    \ with defining two variables, $L$ and $R$ representing its lowest and highest\
+    \ inclusive indices that are searched, which are initialized to 0 and $n-1$ respectively.\n\
+    \n```\nint L = 0, R = A.length - 1;\nwhile (L < R) {\n    int M = (L + R) / 2;\n\
+    \    // TODO: Implement conditional checks.\n}\n```\n\nCode 1: Getting started\
+    \ with a Binary Search template.\n\nNow, the key part of binary search – Look\
+    \ at the middle element, and ask: “Is the middle element smaller than the target\
+    \ element?” If this is true, then it means all elements from $L$ up to $M$ inclusive\
+    \ could be excluded from the search. Otherwise, the middle element is greater\
+    \ or equal to the target element and that means all elements from $M+1$ up to\
+    \ $R$ could be excluded."
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "```\nint L = 0, R = A.length - 1;\nwhile (L < R) {\n  int M = (L + R) / 2;\n\
+    \  if (A[M] < target) {\n    L = M + 1;\n  } else {\n    R = M;\n  }\n}\n```\n\
+    \nCode 2: Filling out the key part of the Binary Search algorithm.\n\nA good thing\
+    \ to verify your binary search does not stuck in an infinite loop is to test with\
+    \ input containing two elements, e.g., [1,3] and test with target = 0 and 1. Here,\
+    \ our binary search works properly, but if we were to define M as the upper middle,\
+    \ that is: M = (L+R+1)/2, then it would be stuck in an infinite loop.\n\nWe've\
+    \ now reached the final step. While the loop ends, L must be equal to R and it\
+    \ is a valid index. Obviously, if A[L] is equal to target, we return L. If A[L]\
+    \ is greater than target, that means we are inserting target before A[L], so we\
+    \ return L. If A[L] is less than target, that means we insert target after A[L],\
+    \ so we return L + 1.\n\n```\npublic int searchInsert(int[] A, int target) {\n\
+    \  int L = 0, R = A.length - 1;\n  while (L < R) {\n    int M = (L + R) / 2;\n\
+    \    if (A[M] < target) {\n      L = M + 1;\n    } else {\n      R = M;\n    }\n\
+    \  }\n  return (A[L] < target) ? L + 1 : L;\n}\n```"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# 49. Find Minimum in Sorted Rotated Array
+
+
+    Code it now: https://oj.leetcode.com/problems/find-minimum-in-rotated-sorted-array/    Difficulty:
+    Medium, Frequency: High
+
+
+    # Question:
+
+
+    Suppose a sorted array is rotated at some pivot unknown to beforehand.
+
+    (i.e., 0 1 2 3 4 5 6 7 might become 4 5 6 7 0 1 2).
+
+    Find the minimum element.
+
+
+    You may assume no duplicate exists in the array.
+
+
+    # Solution:
+
+
+    The minimum is at $A_L$ where $A_{L-1} > A_L$. Notice that if we subdivide the
+    array into two, one will always be sorted, while the other contains the minimum.
+
+
+    ![](img/172f5d31191b965fe8ccb5a0f5becd9a_97_0.png)
+
+
+    We have an array [1,2,3,4,5,6,7] (See graph 1) which was rotated 3 steps to the
+    right [5,6,7,1,2,3,4] (See graph 2). Let''s say we subdivide the array at point
+    $k$ to two subarrays $[A_L, A_{L+1}, \dots, A_k]$. $[A_{k+1} \dots A_R]$.
+
+
+    If the array is not rotated, then $A_L < A_R$ we can return $A_L$ as the minimum
+    immediately.
+
+
+    Otherwise for a sorted array that was rotated at least one step, $A_L$ must always
+    be greater than $A_R$.
+
+
+    Let''s choose $M_1$ as the dividing point. Since $A_{M1} > A_R$, we know that
+    each element in $[A_L \dots AM_1]$ is greater than $A_R$ (Remember that $A_L >
+    A_R$?). Therefore, the minimum value must locate in $[A_{M1+1} \dots A_R]$.
+
+
+    On the other hand, let''s assume we choose $M_2$ as the dividing point. Since
+    $A_{M2} \le A_R$, we know that each element in $[AM_{2+1} \dots A_R]$ is greater
+    than $A_{M2}$. Therefore, the minimum point must locate in $[A_L \dots AM_2]$.
+
+
+    97'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "As we are discarding all the elements at each step, the runtime complexity\
+    \ is O(log n).\n\nTo understand the correct terminating condition, we look at\
+    \ two elements. Let us choose the lower median as M = (L + R) / 2. Therefore,\
+    \ if there are two elements, it will choose A_L as the first element.\n\nThere\
+    \ are two cases for two elements:\n\n+   A = [1,2]\n\n+   B = [2,1]\n\nFor A,\
+    \ I < 2 => A_M < A_R, and therefore it will set R = M => R = 0.\n\nFor B, 2 >\
+    \ 1 => A_M > A_R, and therefore it will set L = M + 1 => L = 1.\n\nTherefore,\
+    \ it is clear that when L == R, we have found the minimum element.\n\n```\npublic\
+    \ int findMin(int A[]) {\n    int L = 0, R = A.length - 1;\n    while (L < R &&\
+    \ A[L] >= A[R]) {\n        int M = (L + R) / 2;\n        if (A[M] > A[R]) {\n\
+    \            L = M + 1;\n        } else {\n            R = M;\n        }\n   \
+    \ }\n    return A[L];\n}\n```\n\n# Further Thoughts:\n\nIf the rotated sorted\
+    \ array could contain duplicates? Is your algorithm still O(log n) in runtime\
+    \ complexity?"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "# 50. Find Minimum in Rotated Sorted Array II – with duplicates\n\nCode it\
+    \ now: https://oj.leetcode.com/problems/find-minimum-in-rotated-sorted-array/\
+    \ Difficulty: Hard, Frequency: Medium\n\n# Question:\n\nIf the rotated array could\
+    \ contain duplicates? Is your algorithm still O(log n) in runtime complexity?\n\
+    \n# Solution:\n\nFor case where A_L == A_M == A_R, the minimum could be on A_M’s\
+    \ left or right side (eg. [1, 1, 1, 0, 1] or [1, 0, 1, 1, 1]). In this case, we\
+    \ could not discard either subarrays and therefore sort worst case degenerates\
+    \ to the O(n).\n\n```\npublic int findMin(int[] A) {\n    int L = 0, R = A.length\
+    \ - 1;\n    while (L < R && A[L] <= A[R]) {\n        int M = (L + R) / 2;\n  \
+    \      if (A[M] > A[R]) {\n            L = M + 1;\n        } else if (A[M] < A[L])\
+    \ {\n            R = M;\n        } else { // A[L] == A[M] == A[R]\n          \
+    \  L = L + 1;\n        }\n    }\n    return A[L];\n}\n```"
+  merge: -1
+  pgno: 99
