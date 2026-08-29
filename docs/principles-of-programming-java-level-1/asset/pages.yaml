@@ -1,0 +1,3942 @@
+- img_proc: true
+  md: '# # PRINCIPLES OF
+
+    PROGRAMMING
+
+
+    JAVA LEVEL 1
+
+
+    JONATHAN FRANK'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Principles of
+
+    Programming
+
+
+    Java Level 1
+
+
+    Jonathan Frank'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'Copyright © 2016 by Jonathan Frank.
+
+
+    Library of Congress Control Number: 2015919764
+
+    ISBN: Hardcover 978-1-5144-3039-2
+
+    Softcover 978-1-5144-3038-5
+
+    eeBook 978-1-5144-3037-8
+
+
+    All rights reserved. No part of this book may be reproduced or transmitted in
+    any form or by any means, electronic or mechanical, including photocopying, recording,
+    or by any information storage and retrieval system, without permission
+
+    in writing from the copyright owner.
+
+
+    Any people depicted in stock imagery provided by Thinkstock are models, and such
+    images are being used for illustrative purposes only.
+
+    Certain stock imagery © Thinkstock.
+
+
+    Rev. date: 12/22/2015
+
+
+    Xlibris
+
+    1-888-795-4274
+
+    www.Xlibris.com
+
+    725930'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   Lesson 0: “Setting Up Your Computer for Software Development"
+
+    0-1: Installing the Necessary Software
+
+
+    +   Lesson 1: “The First Program:‘Hello World’"
+
+    1-1: Getting Something on the Screen
+
+
+    +   Lesson 2: “Anatomy of the First Program"
+
+    2-1: The Whole Program
+
+    2-2: The Print Method
+
+    2-3: The main Method
+
+    2-4: The HelloWorld Class
+
+    2-5: Packages
+
+    2-6: Comments
+
+
+    +   Lesson 3: “Output: Printing Stuff on the Screen"
+
+    3-1: Program: “About Me"
+
+    3-2: Anatomy of a Print Statement
+
+    3-3: Other Kinds of Print Statements
+
+
+    +   Lesson 4: “Information Storage"
+
+    4-1: Program: “Know and Show"
+
+    4-2: Anatomy of an Assignment Statement
+
+    4-3: More Kinds of Print Statements
+
+    4-4: Changing the Value of a Variable
+
+
+    +   Lesson 5: “Calculation"
+
+    5-1: Arithmetic in Java
+
+    5-2: Program: “Count to Three"
+
+    5-3: Formula Translation
+
+
+    +   Lesson 6: “String Concatenation"
+
+    6-1: Program: “Silly Silence"
+
+    6-2: Consolidating Print Statements
+
+
+    +   Lesson 7: “User Input"
+
+    7-1: Allowing the User to Enter a Temperature
+
+    7-2: Program: “My Signature”'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Lesson 8: “Boolean Logic”
+
+
+    8-1: Inside the “Mind” of a Computer
+
+
+    8-2: Questions, Answers, and the Boolean Data Type
+
+
+    # Lesson 9: “Making Decisions Two Choices: If and Else”
+
+
+    9-1: Deciding Between Two Choices: If and Else
+
+
+    9-2: Deciding Between More Than Two Choices: If, Else If, and Else
+
+
+    # Lesson 10: “Advanced Boolean Logic”
+
+
+    10-1: The Logical NOT Operator
+
+
+    10-2: The Logical AND Operator
+
+
+    10-3: The Logical OR Operator
+
+
+    # Lesson 11: “Loops”
+
+
+    11-1: Repeating Actions with While Loops
+
+
+    11-2: Game: “Guess My Number”
+
+
+    # Appendix: “Other Useful Information”
+
+
+    A-1: What to Do If You Need Help
+
+
+    A-2: Naming Things in Java
+
+
+    A-3: Methods of the String Class
+
+
+    A-4: Methods of the Math Class
+
+
+    A-5: How to Get Multi-Word Input, Using the Scanner Class
+
+
+    # Master Vocabulary List for Lessons 0-11 and the Appendix'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "# Lesson 0\n\n“Setting Up Your Computer for Software Development”\n\n# 0-1:\
+    \ Installing the Necessary Software\n\nModern computer systems do not usually\
+    \ come with the software (programs) necessary for software development (the creation\
+    \ of new programs). In order to develop software, you will need to install a few\
+    \ things on your computer.\n\nThe first thing that you will need to install is\
+    \ the Java Runtime Environment (JRE), which allows you to run programs in Java.\
+    \ You will be learning to use the Java programming language. A programming language\
+    \ is a special language that allows a person (a programmer) to tell a computer\
+    \ to do something, by telling it EXACTLY how to do that thing. A programmer writes\
+    \ a program’s source code, and runs a special program, called a compiler, which\
+    \ transforms the source code into something the computer can understand.\n\nTo\
+    \ install the JRE, follow these instructions:\n\n+   * Go to http://www.java.com.\n\
+    * Click the “Free Java Download” button.\n* On the next screen, click the “Agree\
+    \ and Start Free Download” button.\n* Your computer will download a program. Start\
+    \ that once, it has been downloaded.\n* Follow the prompts (that tell you to do\
+    \ something) on the screen:\n  * Click the “Install” button.\n  * If there is\
+    \ any “offer” to install an unrelated and (BAD) piece of software, such as the\
+    \ “Search App by Ask”, UNCHECK THE BOX next to “Add the Search by Ask”, and then\
+    \ click the “Next” button.\n  * Wait.\n  * If the JRE installer detects out-of-date\
+    \ Java versions, click the “Remind Me Later” button.\n  * Click the “Close” button.\n\
+    \  * Your web browser will re-open.\n\nThe JRE only allows you to run (start and\
+    \ up) Java programs, though. The next thing that you will need to install is the\
+    \ Java Development Kit (JDK), which is a collection of tools that will allow you\
+    \ to develop programs in Java. However, to simplify the process of installing\
+    \ the necessary software on your computer, you can combine the installation of\
+    \ the JDK with the installation of an integrated development environment (IDE)\
+    \ called NetBeans. An IDE allows you to write your code, compile it, run your\
+    \ programs, and debug (fixes mistakes in your code), all in one place.\n\nTo install\
+    \ the JDK and the NetBeans IDE, follow these instructions:\n\n+   * Go to http://www.netbeans.org."
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Click the “JDK with NetBeans IDE Java SE bundle” link. It’s in a paragraph
+    of text, near the bottom of the page. You may need to scroll down.
+
+
+    Check the “Accept License Agreement” radio button.
+
+
+    +   Click the red arrow/link next to your operating system.
+
+    * If your computer is from around 2010 or later, choose “x64”
+
+    * Else, choose “x86”
+
+    * If you don’t know, choose “x86”.
+
+
+    Your computer will download a program. Start that program, once it has been downloaded.
+
+
+    Wait.
+
+
+    +   Follow the prompts on the screen.
+
+    * Click the “Next” button.
+
+    * Check the “I accept the terms in the license agreement. Install JUnit.” radio
+    button.
+
+    * Click the “Next” button.
+
+    * Click the “Next” button.
+
+    * Click the “Next” button.
+
+    * Click the “Install” button.
+
+    * Wait.
+
+    * If you get a dialog box on the screen, which asks you to close certain programs
+    before continuing, click the “Close Programs and Continue” button.
+
+    * Click the “Finish” button.
+
+
+    If everything worked, then it’s time to begin the next lesson, in which you will
+    write your first program in Java!'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# Lesson 1\n\n# “The First Program: ‘Hello World”\n\n# 1-1: Getting Something\
+    \ on the Screen\n\nIt's time to start up the NetBeans IDE, and begin writing your\
+    \ first program in Java!\n\nEvery program you make must be contained within a\
+    \ project. A project is basically your program’s home, while it is being written.\
+    \ To set up this project, follow these instructions:\n\n+   * Select \"New Project\"\
+    \ from the File menu.\n* At the prompt:\n  * In the \"Categories\" section, select\
+    \ \"Java\"\n  * In the \"Projects\" section, select \"Java Application\"\n  *\
+    \ Click the \"Next\" button.\n* At the prompt:\n  * Replace the content of the\
+    \ \"Project Name\" field (text box) with Hello World.\n  * Click the \"Finish\"\
+    \ button.\n\nNow, you have a project, called Hello World, which contains one source\
+    \ file: HelloWorld.java. A source file is a text file that contains source code.\
+    \ Source code is text that is written in a programming language (like Java). Source\
+    \ code can be turned into a program by a compiler. HelloWorld.java will contain\
+    \ the code for the simple program Hello World.\n\nIn HelloWorld.java, replace\
+    \ this line of code ...\n\n```\n// TODO code application logic here\n\n... with\
+    \ this:\n```\n\n```\nSystem.out.println(\"Hello World!\");\n```\n\nNow, head over\
+    \ to the Run menu, and select “Run Project”. The program should output the following\
+    \ text:\n\nHello World!\n\nTo output, or print something is to write it on the\
+    \ screen. The output is the text that gets written on the screen.\n\nCongratulations!\
+    \ You have just written your first Java program! Traditionally, when you learn\
+    \ a new programming language, the first program you write is one that prints Hello\
+    \ World! on the screen.\n\nIn the next lesson, you will learn about this program."
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# # Lesson 2
+
+
+    # “Anatomy of the First Program”
+
+
+    # ## 2-1: The Whole Program
+
+
+    Right now, your Hello World program contains about 20 lines of code. Since you
+    are just starting out, you can safely ignore most of it.
+
+
+    # ## 2-2: The Print Statement
+
+
+    Looking at the following line:
+
+    System.out.println("Hello World!");
+
+
+    This is the only part of the Hello World program that actually does anything!
+    It''s called a *print statement*, because it tells the computer to print something
+    on the screen. This print statement tells the computer to print Hello World! on
+    the screen. A *statement* is a piece of code that tells the computer to perform
+    an action.
+
+
+    The semicolon; (;) at the end of the print statement is required. **Try removing
+    that semicolon.** If you remove semicolon, NetBeans will put a red, squiggly underline
+    underneath that line of code, as if it were a spelling error, in Microsoft Word.
+    If you NetBeans give you the following helpful hint: '';'' expected. If you try
+    to run your project, with that mistake in your code, you will get an error message.
+    **Put that semicolon back. Programming requires you to be precise!**
+
+
+    # ## 2-3: The main Method
+
+
+    Look at the following code:
+
+    public static void main(String[] args)
+
+
+    This *declares* the *main method* of your program. To declare is to announce to
+    Java that it exists, what kind of thing it is (here, a method), and what its name
+    is. A method is like a "subprogram", which performs one of the program''s tasks,
+    whenever it is *called* (to run).
+
+
+    This method''s name is main. The main method is a special method, because it''s
+    your *entry point*. Whenever your program is run, the computer starts running
+    its code from here.
+
+
+    In Hello World, the main method contains one statement within its *curly braces*.
+    A method can contain ANY number of statements, even none at all. An opening curly
+    brace {} marks the beginning of the main method''s body, while a closing curly
+    brace {} marks the end of its body. **Make sure that every curly brace in your
+    code is matched by a closing curly brace!**
+
+
+    # ## 2-4: The HelloWorld Class'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Look at the following code:
+
+
+    ```
+
+    public class HelloWorld
+
+    ```
+
+
+    This declares the HelloWorld class of your program. **Classes are tricky to explain!**
+    A class usually defines the concept of a type of object. An object is a “thing”,
+    such as an individual dog or an individual truck, which has state and behaviors.
+
+
+    State describes an object. For example, one part of a dog’s state is its old age:
+    how old is Spot? A behavior is something an object can do. For example, a dog
+    can bark, and a truck can sound its horn.
+
+
+    A type is the “category” into which an object falls. For example, Spot falls into
+    the category of objects known as “dogs”. A type is like a class. **Don’t confuse
+    objects with classes!** The individual dog, Spot, is not the same thing as the
+    CONCEPT OF a dog (the definition of “dogness”).).
+
+
+    Java is an object-oriented programming language. This means that in Java, much
+    of your code will be organized around the use of objects and their classes. However,
+    some classes, like HelloWorld, are not used to define types of objects. Rather,
+    they are used to hold data (information) and methods, since basically every piece
+    of code, in Java, must be contained within scope.
+
+
+    The HelloWorld class’s body is enclosed within curly braces, just like the body
+    of a method. It contains your program’s main method. The main method’s body is
+    said to be nested within the body of the HelloWorld class. This means that the
+    whole body of the main method is located within the body of the HelloWorld class.
+
+
+    # ## 2-5: Packages
+
+
+    Look at the following line:
+
+
+    ```
+
+    package hello.world;
+
+    ```
+
+
+    This statement tells Java that all of the classes in the HelloWorld.java file
+    belong to the hello.world package. A package is like a folder that contains one
+    or more classes.
+
+
+    # ## 2-6: Comments
+
+
+    There is other text in your program, which looks like it’s written in English,
+    rather than in Java. These pieces of text are not code, but comments. A comment
+    is a piece of text in your source code, which does not run, when your program
+    runs.
+
+
+    Some uses for comments:
+
+
+    +   - Comments can be used to describe what code does.
+
+    - Months later, you might forget what a piece of your code does.
+
+    - A comment could help someone else, who needs to use your code, to better understand
+    it.
+
+    - Well-written comments can help programmers’ jobs easier.
+
+    - They can also be used to label code: who wrote it, its purpose, etc.
+
+    - Finally, code can be “commented out”, or prevented from running, by placing
+    it'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'inside of one or more comments.
+
+
+    +   - o This is an important debugging technique.
+
+
+    You should get in the habit of writing good comments, which explain your code.
+    One way of writing a comment is to put text between a /* and a /. This type of
+    comment is called a multi-line comment, because it can span multiple lines. Example:
+
+
+    /* This method is used to reset the game.
+
+
+    The player starts with 3 lives.
+
+
+    */
+
+
+    Another way of writing a comment is to put text after a //. This type of comment
+    is called a single-line comment, because it only continues until the end of that
+    line. Example:
+
+
+    ```
+
+    System.out.println(name); // Print your name.
+
+    ```
+
+
+    # Try commenting out the Hello World program’s print statement. Make this line
+    of code ...
+
+
+    ```
+
+    System.out.println("Hello World!");
+
+    ```
+
+
+    ... look like this:
+
+
+    ```
+
+    //System.out.println("Hello World!");
+
+    ```
+
+
+    Run the program. The program should output nothing. **Why doesn’t the program
+    output anything?**
+
+
+    Since that print statement was commented out, it did not run. Therefore, the program
+    didn''t output anything. **Remove the // from that line.**
+
+
+    In the next lesson, you will learn, in greater detail, how print statements and
+    output work.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# # Lesson 3\n\n# “Output: Printing Stuff on the Screen”\n\nCreate a new project\
+    \ in NetBeans, called About Me. Here are the instructions again:\n\n+   - Select\
+    \ “New Project” from the File menu.\n- At the prompt:\n  - In the “Categories”\
+    \ section, select “Java”.\n  - In the “Projects” section, select “Java Application”.\n\
+    \  - Click the “Next” button.\n- At the prompt:\n  - Replace the content of the\
+    \ “Project Name” field (text box) with About Me.\n  - Click the “Finish” button.\n\
+    \nIn the program's main method, you are going to write two print statements. The\
+    \ first one will print your name, while the second one will print the name of\
+    \ a game that you like on the screen. Here is a sample:\n\n```\nSystem.out.println(\"\
+    My name is Jonathan Frank.\");\nSystem.out.println(\"I like to play Super Mario\
+    \ 64.\");\n```\n\nIn your program, replace Jonathan Frank with your own name.\
+    \ Also, replace Super Mario 64 with the name of a game that you like. To run your\
+    \ program, select “Run Project” from the Run menu. The program should output two\
+    \ lines of text, which resemble the following:\n\nMy name is Jonathan Frank.\n\
+    \nI like to play Super Mario 64.\n\nNotice how each print statement ends with\
+    \ a semicolon. A print statement does not end, until Java sees that semicolon!\
+    \ Also, notice how the statements are executed (run) in order, one after another.\n\
+    \n# ## 3-2: Anatomy of a Print Statement\n\nJava has hundreds of built-in classes.\
+    \ One of these is called System. The System class holds many useful objects and\
+    \ methods. One of these objects is called out. The object is of built-in PrintStream\
+    \ class, and is used for printing text on the screen.\n\nSince out belongs to\
+    \ the System class, to use it, you type System.out in your code, out is member\
+    \ of the System class, and the “dot” operator is used to mean “member of”. The\
+    \ thing on the right side of the dot is a member of the thing on the left side\
+    \ of the dot.\n\nOne behavior of PrintStream objects is called println (pronounced\
+    \ “print line” or “print L N”). Calling the println method causes the text in\
+    \ the parentheses and double quotes (“”) to be printed on the screen. The piece\
+    \ of data that gets passed to the"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'println method is called the argument. After the text is printed, the screen''s
+    cursor is placed at the beginning of the next line, as if the Enter/Return key
+    has been pressed. The cursor marks where the next character (letter, number, symbol,
+    or space) will appear on the screen.
+
+
+    There are quotes around the sentences in the code. Why don''t any quotes appear
+    in the output? The pieces of data that are being printed are called strings. A
+    string is a sequence of characters. Think of the characters as being together,
+    to form words and sentences. The double quote characters, which enclose the text
+    of a string, do not get printed on the screen, because they are not part of that
+    string. They mark piece of data as a string.
+
+
+    If you want to print actual quotation marks on the screen, for now, use single
+    quote ('''') characters in your strings. For example, the string "He said, ''What?''".
+    A string does not have to contain any characters at all. Such a string is called
+    an empty string, and is represented by "".
+
+
+    # 3-3: Other Kinds of Print Statements
+
+
+    Objects of the PrintStream have another method: print. This method also takes
+    a string as its argument, unlike println, it does not move the screen''s cursor
+    to the beginning of the next line, after it prints the text.
+
+
+    Create a new project, called Printing Experiment. In the program''s main method,
+    write the following code:
+
+
+    Run your program. The program should output the following text:
+
+    ABCDEF
+
+    GHJJKL
+
+
+    Before the first print statement gets executed, the screen looks like this (|
+    is the cursor):
+
+    |
+
+
+    Nothing has been printed on the screen yet, so the screen is empty. The cursor
+    is at the beginning of the first line. After the first print statement is executed,
+    the screen looks like this:
+
+    ABC|
+
+
+    Each character in the string was printed on the screen (A, B, C), at the then-current
+    location of the cursor. After each character was printed, the cursor was moved
+    to the right by one position. After the second print statement is executed, the
+    screen looks like this:
+
+    ABCDEF'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Again, each character in the string was printed on the screen. However, this
+    was a call to println, so after the F was printed, the cursor was moved to the
+    beginning of the second line. After the third print statement is executed, the
+    screen looks like this:
+
+
+    ```
+
+    ABCDEF
+
+    ```
+
+
+    ```
+
+    GHI|
+
+    ```
+
+
+    After the fourth print statement is executed, the screen looks like this:
+
+
+    ```
+
+    ABCDEF
+
+    ```
+
+
+    ```
+
+    GHIJKL|
+
+    ```
+
+
+    When the program ends, something like BUILD SUCCESSFUL (total time: 1 second)
+    gets printed on the screen, to show that your program has finished running. It
+    gets printed at the then-current location of the cursor, so your program’s output
+    will actually look like:
+
+
+    ```
+
+    ABCDEF
+
+    ```
+
+
+    ```
+
+    GHIJKLBUILD SUCCESSFUL (total time: 1 second)
+
+    ```
+
+
+    Try experimenting with the print and println methods, on your own. One idea for
+    a project is to make a program that introduces the Mario Brothers: Mario Mario
+    and Luigi Mario. This involves printing their names on the screen.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Lesson 4
+
+
+    # “Information Storage”
+
+
+    #  4-1: Program: “Know and Show”
+
+
+    Create a new project, called Know and Show. In the program’s main method, write
+    the following code:
+
+
+    ```
+
+    int score = 1400;
+
+    System.out.print("Score: ");
+
+    System.out.println(score);
+
+    double temp = 75.2;
+
+    System.out.print("Temperature: ");
+
+    System.out.println(temp);
+
+    String name = "Jonathan";
+
+    System.out.print("Name: ");
+
+    System.out.println(name);
+
+    ```
+
+
+    In your program, replace Jonathan with your own name. Run your program. The program’s
+    output should resemble the following:
+
+
+    Score: 1400
+
+    Temperature: 75.2
+
+    Name: Jonathan
+
+
+    # 4-2: Anatomy of an Assignment Statement
+
+
+    Look at the following line:
+
+
+    ```
+
+    int score = 1400;
+
+    ```
+
+
+    This is called an assignment statement, because it assigns a value (1400) to a
+    variable (score). Computers store information in memory. A variable is a space
+    in memory that has a name. That name is used by Java to refer to that space in
+    memory, whenever your code accesses (makes use of). Give your variables names
+    that briefly describe the data they contain. For example, num_monkeys would be
+    a good name for a variable holding the number of monkeys in a zoo, where nm would
+    be harder to understand, at a glance.
+
+
+    Every variable, in Java, has a data type (for, short). The variable, is of type
+    int An is an integer (whole number that can be positive, negative, or zero). Any
+    information of this kind (an integer) can be stored in a variable of type int.
+    The type, int, is not a class, but is a primitive (simple) data type, which is
+    built in Java.
+
+
+    A variable is used to store a value. However, a variable IS NOT THE SAME THING'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'AS value! The variable is here, and its value is 1400. A value is meaningful
+    in the context of an encyclopedia program, 1400, in a game, could be a player’s
+    score, and to the variable, score. In 1400, in an encyclopedia program, could
+    be a year in history.
+
+
+    The = (assignment) operator tells Java to assign the value, 1400, and in an assignment
+    statement, the variable ALWAYS goes on the left side of the =, and the value ALWAYS
+    goes on the right side of the =. Picture the = operator as an arrow pointing to
+    the left (–):
+
+
+    ```
+
+    int score ← 1400;
+
+    ```
+
+
+    Think of it, and say it as, “int score gets 1400.”
+
+
+    To recap, the assignment statement, int score = 1400; creates a named variable
+    score, of type int, and assigns it the value of 1400.
+
+
+    Two other data types, in Java, are double and String. A variable of type double
+    can store a real number, such as 75.2. The type, double, like int, is a primitive
+    type. A variable of type String can store a string of text, such as “Jonathan”.
+    The String class is a built-in class.
+
+
+    # 4-3: More Kinds of Print Statements
+
+
+    Look at the following lines:
+
+
+    ```
+
+    String name = "Jonathan";
+
+    System.out.print("Name: ");
+
+    System.out.println(name);
+
+    ```
+
+
+    On the second line, a literal is passed to the print method. The string literal,
+    "Name: ”, is like a variable of type String, which has a value of "Name: \ Unlike
+    a variable, however, "Name: " has no name, in your code. On the third line, the
+    variable, is passed to the println method. The println method accesses the value
+    of name, in order to print Jonathan on the screen. The name of a variable, of
+    a given type, can be used anywhere where a literal of that type can be used.
+
+
+    Arguments of type int and double can also be passed to the print and println methods.
+
+
+    # 4-4: Changing the Value of a Variable
+
+
+    After this line ...
+
+
+    ```
+
+    System.out.println(name);
+
+    ... add the following lines to your code:
+
+    score = 1500;
+
+    System.out.print("New Score: ");
+
+    System.out.println(score);
+
+    ```
+
+
+    Run your program. The last line of your program’s output should be:'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# New Score: 1500
+
+
+    The value of a variable can vary (change)! The line, score = 1400;, declared the
+    existence of a variable named score, of type int, and assigned the value of 1400
+    to it. To assign a value to a variable, for the first time, is to initialize variable.
+    You are giving that its initial (first) value.
+
+
+    Later on, another assignment statement, score = 1500;, assigns a new value, 1500,
+    to the variable, score. When the print statement, System.out.println(score); is
+    executed, the number, 1500, gets printed, because the value of score is now 1500,
+    rather than 1400.
+
+
+    The data type of score is not specified again, because Java already knows, from
+    the first assignment statement (int score = 1400;), score''s data type is int.
+    Again, picture the score = operator as an arrow pointing to the left: ← 1500;
+
+
+    The assignment statement is ALWAYS written: score = 1500! It is NEVER written:
+    1500 = score; If you picture the = operator as an arrow pointing to the left:
+
+
+    You can''t assign the value of score to the number, 1500!
+
+
+    To recap, the assignment statement, score = 1500;, assigns the value of 1500 to
+    the variable named score, which already exists.
+
+
+    As you know, the name of a variable, of a given type, can be used anywhere that
+    a literal value of that type can be used. After the SECOND appearance of this
+    line ...
+
+
+    System.out.println(score);
+
+    add the following lines to your code:
+
+
+    ```
+
+    double boiling_point = 212.0;
+
+    temp = boiling_point;
+
+    System.out.print("New Temperature: ");\nSystem.out.println(temp);
+
+    ```
+
+
+    Run your program. The last line of your program''s output should be:
+
+    New Temperature: 212.0
+
+
+    The first new assignment statement,
+
+    double boiling_point = 212.0., creates a variable named boiling_point, of type
+    double, and assigns it the value of 212.0.
+
+
+    The second new assignment statement,
+
+    temp = boiling_point; assigns the VALUE OF boiling_point (212.0) to the variable
+    temp, which already exists. In “arrow form":
+
+
+    ```
+
+    temp ← boiling_point;
+
+    temp ← 212.0;
+
+    ```'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Lesson 5
+
+
+    # “Calculation”
+
+
+    # 5-1: Arithmetic in Java
+
+
+    Create a new project, called Arithmetic in Java. In the program’s main method,
+    write the following code:
+
+
+    ```
+
+    int x = 2 + 3;
+
+    int y = x - 2;
+
+    int z = x;
+
+    x = z + 2;
+
+    System.out.print("x = ");
+
+    System.out.print(x);
+
+    System.out.print(",", y = ");
+
+    System.out.print(y);
+
+    System.out.print(",", z = ");
+
+    System.out.println(z);
+
+    System.out.print("x + y = ");
+
+    System.out.println(x + y);
+
+    System.out.print("x - y = ");
+
+    System.out.println(x - y);
+
+    System.out.print("x * y = ");
+
+    System.out.println(x * y);
+
+    System.out.print("x / y = ");
+
+    System.out.println(x / y);
+
+    System.out.print("x % y = ");
+
+    System.out.println(x % y);
+
+    ```
+
+
+    Run your program. The program should output the following text:
+
+
+    ```
+
+    x = 7, y = 3, z = 5
+
+    x + y = 10
+
+    x - y = 4
+
+    x * y = 21
+
+    x / y = 2
+
+    ```'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'x % y = 1
+
+
+    Look at the following line:
+
+
+    int x = 2 + 3;
+
+
+    This is an assignment statement. A variable of type int, x, is declared. The variable,
+    x gets initialized to the value that is the result of the expression, 2 + 3, which
+    is 5. An expression is a combination of one or more operands (pieces of data)
+    and zero or more operators (+), which yields a result, when it gets evaluated.
+    To evaluate an expression is to calculate its result.
+
+
+    In “arrow form”, step-by-step:
+
+
+    int x ← 2 + 3;
+
+
+    int x ← 5;
+
+
+    Look at the next line:
+
+
+    int y = x - 2;
+
+
+    The value of x is 5, so:
+
+
+    int y ← x - 2;
+
+
+    int y ← 5 - 2;
+
+
+    int y ← 3;
+
+
+    y gets initialized to 3. Look at the next line:
+
+
+    int z = x;
+
+
+    The value of x is 5, so:
+
+
+    int z ← x;
+
+
+    int z ← 5;
+
+
+    z gets initialized to 5. A single operand, like x or 5, can be an expression,
+    too! Look at the next line:
+
+
+    x = z + 2;
+
+
+    The value of z is 5, so:
+
+
+    x ← z + 2;
+
+
+    x ← 5 + 2;
+
+
+    x ← 7;
+
+
+    That statement assigned a new value, 7, to x. The value of z is still 5, even
+    though “x” had previously been assigned to z, by the statement, int z = x;. Assigning
+    the VALUE OF x to z does that. The variables, x and z ARE NOT “LINKED” to each
+    other by the = operator! When an assignment statement is executed, ONLY the value
+    of the variable on the LEFT side of THAT = can change!
+
+
+    An expression that yields a result of a given type, can be used anywhere that
+    a literal value'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'or the value of a variable, of that type, can be used. Look at the following
+    print statement:
+
+    System.out.println(x + y);
+
+
+    Before this statement executes, the expression, x + y, gets evaluated (to a result
+    of 10,
+
+    s the value of x is 7, and the value of y is 3). The statement gets executed,
+    as if it were
+
+    of form, System.out.println(10); since the result of x + y is 10.
+
+
+    By now, you have probably figured out that the + operator is used for addition,
+    and that /
+
+    - operator is used for subtraction. The * operator is used for multiplication,
+    and the /
+
+    operator is used for division.
+
+
+    The % operator, however, is NOT used for calculating percentages! The expression,
+
+    % y, yields the remainder that remains from the division of x by y. For example,
+    the result
+
+    of 35 % 4 is 3, because 35 ÷ 4 yields 8, with a remainder of 3. Four goes into
+    thirty-five
+
+    eights, with yield left over. Often, code like 35 % 4 is read, "3 mod 4". "Mod"
+
+    short for modulus, which is a fancy word for remainder.
+
+
+    Why does x / y yield? In math, 7 ÷ 3 yields 2.333...! If Both operands are of
+    type
+
+    int, then the result will be of type int. Therefore, the / operator performs integer
+
+    div of x by y. To perform integer division, the result of x ÷ y, as a decimal,
+    and
+
+    then remove the part after the decimal point. 7 ÷ 3 = 2.333...c = 2.
+
+
+    To get a result of double (+, -, *, /, %) which may have digits a decimal point),
+    any
+
+    of the arithmetic operators, make sure that AT LEAST one of the
+
+    operands, in the expression, is of double. For example, the result of 7 / 4 is
+    1.75.
+
+    The result of 7.0, is of type double, because it contains a decimal point. Meanwhile,
+    the
+
+    result of 7 / 4 is 1, because both 7 and 4 are of type int. In evaluating 7 /
+    4, integer division
+
+    is performed.
+
+
+    #  5-2: Program: "Count to Three"
+
+
+    Create a new project, called Count to Three. In the program’s main method, write
+    the
+
+    following code:
+
+
+    ```
+
+    int counter = 0;
+
+    counter = counter + 1;
+
+    System.out.print("Counter: ");
+
+    System.out.println(counter);
+
+    counter = counter + 1;
+
+    System.out.print("Counter: ");
+
+    System.out.println(counter);
+
+    counter = counter + 1;
+
+    System.out.print("Counter: ");
+
+    System.out.println(counter);
+
+    ```
+
+
+    Run your program. The program should output the following text:'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'Counter: 1
+
+
+    Counter: 2
+
+
+    Counter: 3
+
+
+    Look at the first and second lines:
+
+
+    ```
+
+    int counter = 0;
+
+    ```
+
+
+    ```
+
+    counter = counter + 1;
+
+    ```
+
+
+    The first assignment statement declares a variable of type int, named counter,
+    and initializes it to 0. The second assignment statement has counter on both sides
+    of the = operator! However, in an assignment statement, the name of a variable
+    can mean different things, depending on which side of the = it’s on! On the left
+    side of the =, it’s the place where the result of the expression on the right
+    side of the = gets stored. On the right side of the =, read it as “VALUE OF counter”.
+
+
+    In “arrow form”, step-by-step:
+
+
+    ```
+
+    int counter ← 0;
+
+    ```
+
+
+    ```
+
+    counter ← counter + 1;
+
+    ```
+
+
+    ```
+
+    counter ← 0 + 1;
+
+    ```
+
+
+    Therefore, after the second assignment statement is executed, the value of counter
+    is 1. Assignment statements, like the second one, are VERY common! For example,
+    in a game, if a player scores 100 points, an assignment statement, like score
+    = score + 100;, exists somewhere in the game’s code, and executes, in order to
+    update the player’s score.
+
+
+    # # 5-3: Formula Translation
+
+
+    Computers are often used to calculate things. Create a new project, called Fahrenheit
+    to Celsius. In the program’s main method, write the following code:
+
+
+    ```
+
+    double temp_fahr = 68.0;
+
+    ```
+
+
+    ```
+
+    double temp_cels = 5.0 / 9.0 * (temp_fahr - 32.0);
+
+    ```
+
+
+    ```
+
+    System.out.print(temp_fahr);
+
+    ```
+
+
+    ```
+
+    System.out.print(temp_cels);
+
+    ```
+
+
+    Run your program. The program should output the following text:
+
+
+    68.0 Fahrenheit is 20.0 degrees Celsius.
+
+
+    This program converts a temperature, in degrees Fahrenheit (°F), to its equivalent
+    temperature on the Celsius scale (°C). The variable, temp_fahr, is used to store
+    the'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Fahrenheit temperature. The variable, temp\_cels, is used to store the Celsius
+    temperature.
+
+
+    The formula for converting degrees Fahrenheit to degrees Celsius is $C=\frac{(F-32)}{5}$.
+    In this formula, $C$ stands for Celsius and $F$ stands for Fahrenheit. This formula
+    can be translated into Java. The letters, in math, are variables. $F$ becomes
+    temp\_fahr, and $C$ becomes temp\_cels. An $an$ can be visualized as an assignment
+    of $(-)$.
+
+
+    After those steps are done, the formula looks like this: $temp\_cels=\frac{(temp\_fahr-32)}{5}$.
+    A fraction bar, in math, is a division sign, so it becomes $5 / 9$. However, temperatures
+    can have digits after a decimal point, so make those integers doubles, by placing
+    $.0$ after them, like $5.0/9.0$. In math, two operands touching each other implies
+    multiplication, so the formula ends up looking like this, in Java: $temp\_cels=5.0/9.0*(temp\_fahr-30)$.
+    Parentheses can be used in Java, just as they can in math, to force certain parts
+    of an expression to be evaluated before others.
+
+
+    Like math, Java also has an order of operations. Expressions in parentheses are
+    evaluated first, from the innermost set of parentheses outward. Then, multiplications
+    (*), divisions (/), and moduli (%) are performed, from left to right. Finally,
+    additions (+) and subtractions (-) are done, from left to right.
+
+
+    The evaluation of the above expression, step-by-step, in “arrow form":
+
+    Note: The value of temp\_fahr is 68.0.
+
+
+    ```
+
+    double temp\_cels $\leftarrow$ 5.0 / 9.0 * (temp\_fahr – 32.0);
+
+    double temp\_cels $\leftarrow$ 5.0 / 9.0 * (68.0 – 32.0);
+
+    double temp\_cels $\leftarrow$ 5.0 / 9.0 * (36.0);
+
+    double temp\_cels $\leftarrow$ 0.5555555555555556 * 36.0;
+
+    double temp\_cels $\leftarrow$ 20.0;
+
+    ```
+
+
+    temp\_cels initialized to 20.0, since 68°F is 20°C.
+
+
+    Test this program, by changing the value of temp\_fahr, on your own. Try the following
+    values of temp\_fahr: -40.0, 0.0, 100.0, and 212.0 °F.
+
+
+    Also, try making a new program, Celsius to Fahrenheit, to convert a temperature,
+    in degrees Celsius (°C), to its equivalent temperature on degrees Fahrenheit (°F).
+    The formula for converting degrees Celsius to degrees Fahrenheit is $F=C\frac{9}{5}+32$.
+    Test that program with temperatures of -40.0, 0.0, 40.0, and 100.0 °C.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# # Lesson 6\n\n# ##String Concatenation”\n\n# ## 6-1: Program: “Silly Sentence”\n\
+    \nCreate a new project, called Silly Sentence. In the program’s main method, write\
+    \ the following code:\n\n```\nString noun1 = “dog\";\nString noun2 = “table\"\
+    ;\nString sentence = “The ” + noun1 + \n” jumped over the ” + noun2 + “.\";\n\
+    System.out.println(sentence);\n```\n\n**The statement that initializes sentence,\
+    \ above, is ONE line of code!** Run your program.\nThe program should output the\
+    \ following:\n\nThe dog jumped over the table.\n\nIn Java, the + operator is also\
+    \ used to *concatenate* strings. To concatenate strings is to put them together,\
+    \ end to end. For example, “mail”, with “box” concatenated to it (“mail” + “box”,\
+    \ in Java), yields the compound word, “mailbox.\".\n\nThis program built the string,\
+    \ by concatenating several strings into one long string, using the + operator.\
+    \ Changing the values of noun1 and noun2. For example, try assigning “cow” to\
+    \ noun1 and “moon” to noun2.\n\n# ## 6-2: Consolidating Print Statements\n\nHaving\
+    \ to use multiple print statements, to print a multi-part sentence, can be annoying.\
+    \ Several print statements can be consolidated into a single print statement,\
+    \ with the + operator. The sentence’s parts can be concatenated into one string,\
+    \ which can be printed like any other string.\n\nGo back to your project from\
+    \ Lesson 5, Fahrenheit to Celsius. In FahrenheitToCelsius.java, replace these\
+    \ lines of code ...\n\n```\nSystem.out.print(“temp_fahr\");\nSystem.out.print(\\\
+    ” degrees Fahrenheit is ”\\);\nSystem.out.print(\"temp_cels\\);\nSystem.out.println(\"\
+    \ degrees Celsius.\"););\n```\n\n... with this:\nSystem.out.println(temp_fahr\
+    \ + \n” degrees Fahrenheit is ” + temp_cels + ” degrees Celsius.\");"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'The above print statement is ONE line of code! Run your program. The program
+    should output the same text as it did, when you last ran it.
+
+
+    Numbers, like temp_fahr, can be concatenated to strings! If AT LEAST ONE of the
+    operands, on either side of the + operator, is of type String, the result of that
+    expression will be of type String.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Lesson 7\n\n# “User Input”\n\n# 7-1: Allowing the User to Enter a Temperature\n\
+    \nIt’s impractical to change the code, and re-compile it, every time the program\
+    \ needs to be run with different data. Frankly, a program can receive data from\
+    \ its user (person who uses a computer or program). This can be done, using Java’s\
+    \ built-in Scanner class.\n\nGo back to your project from Lessons 5 and 6, Fahrenheit\
+    \ to Celsius.\n FahrenheitToCelsius.java, immediately under the line ...\n\npackage\
+    \ fahrenheit.to.celsius;\n\n... add the line:\n\nimport java.util.Scanner;\n\n\
+    Replace this line of code\n\ndouble temp_fahr = 68.0;\n\n... with this:\n\nScanner\
+    \ sc = new Scanner(System.in);\n\nSystem.out.print(\"Enter a temperature, in degrees\
+    \ Fahrenheit: \");\n\ndouble temp_fahr = sc.nextDouble();\n\nRun your program.\
+    \ The program should ask you to enter a temperature, and then wait.\nClick inside\
+    \ of the NetBeans panel labeled, “Output - Fahrenheit to Celsius (run)”. Type\
+    \ a number, and then press the Enter/Return key. The program’s output should resemble\
+    \ the following:\n\nEnter a temperature, in degrees Fahrenheit: 81\n\n81.0 degrees\
+    \ Fahrenheit is 27.22222222222222 degrees Celsius.\n\n**Your output will be on\
+    \ two lines.** The import statement (import java.util.Scanner;) allows you to\
+    \ use the Scanner class, which belongs to the java.util package.\n\nIn order for\
+    \ the program to be able to receive input from the user, a Scanner object is needed.\
+    \ For the assignment statement, Scanner sc = new Scanner(System.in); first creates\
+    \ a new Scanner object, using a built-in object (of the InputStream class) called\
+    \ System.in. Here, read System.in as the “keyboard”. The new Scanner object is\
+    \ assigned to the variable, which is of type Scanner. In “arrow form\":\n\nScanner\
+    \ sc ← [new Scanner object];\n\nWhen a well-designed program needs input from\
+    \ its user, it somehow tells the user to enter that piece of data. This program\
+    \ uses a print statement to tell the user to enter a temperature. Without that\
+    \ print statement, a user might think the program is frozen. If you"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'only saw a blinking cursor on the screen, what you would think you were going
+    on?
+
+    However, that prompt is just an ordinary print statement. The next assignment
+    statement,
+
+    double temp_fahr = sc.nextDouble(); is what actually causes the program to wait
+    for the
+
+    user to enter a temperature. Calling the nextDouble method of sc causes the program
+    to\wait for the user to type a number and then press Enter/Return. The user has
+    done
+
+    that, the nextDouble method will return (give back, as a result) a value of type
+    double,
+
+    the main method, which had called nextDouble. That value will be placed on the
+    right side
+
+    of =. It will then get assigned to temp_fahr, which is on the left side of the
+    =. In “arrow
+
+    form”
+
+
+    double temp_fahr ← [user value];
+
+
+    In summary, each time you run this program, you can enter a different temperature,
+
+    without having to change ANY code!
+
+
+    Try changing your Celsius to Fahrenheit program, from Lesson 5, so that it asks
+    the
+
+    user for a temperature to convert.
+
+
+    # 7-2: Program: “My Signature”
+
+
+    Create a new project, called My Signature. In
+
+    MySignature.java, immediately under the line
+
+    ...
+
+
+    package my.signature;
+
+    ... add the line:
+
+
+    import java.util.Scanner;
+
+
+    In the program’s main method, write the following code:
+
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter your first name: ");
+
+    String first_name = sc.next();
+
+    System.out.print("Enter your age: ");
+
+    int age = sc.nextInt();
+
+    System.out.println("Your signature: " + +
+
+    first_name + \ \, age " + age);
+
+
+    Run your program. The program should ask you to enter your first name, and wait.
+
+    Click inside of the NetBeans panel labeled, “Output - My Signature (run)\”. Type
+    ONE
+
+    WORD, and then press Enter/Return. The program should ask you to enter your age,
+
+    and then wait. Type AN INTEGER, and then press Enter/Return. The program’s output
+
+    should resemble the following:
+
+
+    Enter your first name: Jonathan
+
+
+    Enter your age: 24
+
+
+    Your signature: Jonathan, age 24'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'EVERY program you make, which requires user input, will need the above import
+    statement and the assignment statement which creates a Scanner object.
+
+
+    The next method of sc waits for the user to enter a single word (at least one
+    character, and no spaces), and returns a String. The nextInt method of sc waits
+    for the user to enter an integer, and returns an int. What happens if I enter
+    letters, instead of a number, using nextInt? or nextDouble? Try it, and see! Don''t
+    worry about breaking your computer; the worst thing that can happen is the program
+    (not NetBeans) crashes, and displays an error message.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# # Lesson 8
+
+
+    # ## Boolean Logic”
+
+
+    #  8-1: Inside the “Mind” of a Computer
+
+
+    You may think your computer is “smart”. You may even own a “smart phone”. However,
+    computers actually have no intelligence at all! A computer can only do what it
+    has been programmed to do. It gets its apparent “intelligence” from the cleverness
+    of its programmers.
+
+
+    Computers are actually pretty stupid! They have to be told EXACTLY how to do everything,
+    they do not have the instincts or intuition that animals and humans have. They
+    do not think, although they decide, in a sense, the “thought process” of a computer
+    is quite simplistic: everything is on or off, yes or no, black or white, or zero,
+    true or false.
+
+
+    A computer runs on electricity. Its electrical circuits as containing many tiny
+    light bulbs, which can be either on or off, depending on how light switches are
+    flipped.
+
+
+    # ## 8-2: Questions, Answers, and the Boolean Data Type
+
+
+    Despite their lack of intelligence, computers can answer questions. However, the
+    questions may be yes-or-no questions. For example, “Is the chicken ready?” To
+    a computer, the chicken is ready, or it is not ready. There are no-betweens, “slightly
+    undercooked”. Alternatively, it’s true that the chicken is ready, or it’s false
+    that the chicken is ready.
+
+
+    A value of true or false is a Boolean (pronounced “BOO-lee-in”) value. The values
+    of true and false are the ONLY two Boolean values. In Java, Boolean values can
+    be stored in variables of the primitive data type, boolean. All things are named
+    after the mathematician, George Boolean (1815–1864).
+
+
+    You must remember, though, the computer is stupid. It doesn’t know ANYTHING about
+    what a chicken is, or what readiness means! The computer must do EXACTLY what
+    it means for a chicken to be ready. Let’s say a recipe tells you the chicken for
+    45 minutes. You translate the question, “Is the chicken ready?” to “Has the chicken
+    been cooking for at least 45 minutes?” This new question is more specific, and
+    the computer now “understands” the concept of readiness, for this chicken. It
+    still doesn’t know what a chicken is, but it doesn’t need to here.
+
+
+    In code, the amount of time, in minutes, that the chicken has been cooking for
+    can be stored in a variable; let’s call it_. The value of this variable can be
+    compared with the target value of 45 minutes. IF the chicken has been cooking
+    for at least 45 minutes, THEN the chicken is ready. The result of this comparison
+    (true or false) can be stored in a variable of type boolean; let’s call it. An
+    oven’s program can check the value of ready. If ready is true, the oven can sound
+    an alarm, to indicate that it’s time for the cook to remove the chicken from the
+    oven. In Java code:'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '```
+
+    boolean ready = cook_time >= 45;
+
+    ```
+
+
+    The expression, cook_time >= 45, is called a Boolean expression, because it yields
+    a Boolean value. The >= operator means "greater than or equal to" (or "at least").
+    It is one of the relational operators, because it''s used to relate (compare),
+    in some way, the quantity on its left side is relate to the quantity on its right
+    side. There are six ways in which the quantities can be related to each other,
+    and six relational operators, in Java:
+
+
+    | Relational Operator | Meaning |
+
+    | --- | --- |
+
+    | == | equal to |
+
+    | != | not equal to |
+
+    | < | less than |
+
+    | <= | less than or equal to (at most) |
+
+    | > | greater than |
+
+    | >= | greater than or equal to (at least) |
+
+
+    For another example, let''s say we have a calculator program. Calculators can
+    perform many operations, but they cannot divide by zero. If a user wishes to divide
+    two numbers, the calculator must first check that the divisor (the number that
+    one is dividing by) is not zero. In code, the divisor can be stored in a variable;
+    let''s call it divisor. The value of this variable can be compared with the forbidden
+    value of 0. IF the divisor is not zero, THEN the user can divide the two numbers.
+    The result of this comparison can be stored in a variable of type boolean; let''s
+    call it can_divide. IF can_divide is true, THEN the calculator will divide the
+    two numbers, and display the result on the screen. ELSE, IF can_divide is NOT
+    true (false), THEN the calculator will display an error message on the screen.
+    In Java code:
+
+
+    ```
+
+    boolean can_divide = divisor != 0;
+
+    ```
+
+
+    In the next lesson, you will learn how computers actually make decisions, based
+    on the values of user input and other data, using Boolean logic.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Lesson 9
+
+
+    # 9-1: Deciding Between Two Choices: If and Else
+
+
+    Previously, you learned how computers “think”, using Boolean logic. In this lesson,
+    you will learn how they make decisions, using conditional statements. Conditional
+    statements allow the computer to execute certain pieces of code, based on the
+    values yielded by Boolean expressions.
+
+
+    Create a new project, called Pass-Fail. In PassFail.java, immediately under the
+    line ...
+
+
+    ```
+
+    package pass.fail;
+
+    ```
+
+
+    ... add the line:
+
+
+    ```
+
+    import java.util.Scanner;
+
+    ```
+
+
+    In the program’s main method, write the following code:
+
+
+    Run your program. The program should ask you to enter your grade, and then wait.
+    Click inside of the NetBeans panel labeled, “Output - Pass-Fail (run)\”. Type
+    an integer, and then press Enter/Return. The program’s output should resemble
+    the following:
+
+
+    What was your grade on the test (0-100)? 80
+
+
+    You passed!
+
+
+    Have a nice summer!
+
+
+    The program uses the value of the user’s grade to determine whether the user has
+    passed or failed the test. The value of grade is compared to the passing grade
+    of 65. In order to'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'pass the test, the user must score at least 65. Else, the grade is considered
+    to be a failing one. There are only two choices: pass or fail; there are no in-betweens.
+
+
+    Try entering different grades, passing and failing ones. What happens if you enter
+    a grade which is less than 0 or greater than 100? Is there ANY grade which can
+    make BOTH You passed! and You failed! appear on the screen? How about 65?
+
+
+    Look at the following diagram:
+
+
+    ![](img/28673bba839785116d1e73931d7a4b67_30_0.png)
+
+
+    Upon receiving a value of grade from the user, the program decides which message
+    to print, using the conditional statement. As you can see, IF the value of grade
+    is at least 65, THEN You passed! will be printed. ELSE, meaning that the value
+    of grade is less than 65, You failed! will be printed. NO value of grade will
+    cause both of these messages to be printed on the screen!
+
+
+    This type of conditional statement is called an if statement. If an statement
+    begins with if. A Boolean expression goes in the parentheses. If that expression
+    evaluates to true, then ONLY the statements inside of the if block’s curly braces
+    will be executed. means “if not”. If the Boolean expression evaluates to false,
+    then ONLY the statements inside of the else block’s curly braces will be executed.
+    After all of the statements in the chosen block have been executed, the program
+    continues immediately after the end of the if statement (after the end of last
+    block). Therefore, Have nice summer! gets printed, regardless of whether the user
+    has entered a passing or failing grade.
+
+
+    If an statement does not need an else block. If NOTHING should be done, if the
+    Boolean expression in the parentheses evaluates to false, leave out the else block.
+
+
+    To make your code clearer, indent statements which are in blocks, by placing tabs
+    or spaces to the left of them. NetBeans does this for you. This allows you to
+    see, at a glance, which statements are inside of blocks and which are not.
+
+
+    # 9-2: Deciding Between More Than Two Choices: If, Else If, and Else
+
+
+    Computers can decide between more than two choices! Create a new project, called
+    Letter Grades. In LetterGrades.java, immediately under the line ...
+
+
+    package letter.grades;
+
+    ... add the line:'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '```
+
+    import java.util.Scanner;
+
+    In the program’s main method, write the following code:
+
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("What was your grade on the test (0-100)?");
+
+    int grade = sc.nextInt();
+
+    if (grade >= 90)
+
+    System.out.println("You got an A.");
+
+    else if (grade >= 80)
+
+    System.out.println("You got a B.");
+
+    else if (grade >= 70)
+
+    System.out.println("You got a C.");
+
+    else if (grade >= 65)
+
+    System.out.println("You got a D.");
+
+    else
+
+    System.out.println("You got an F.");
+
+    ```
+
+
+    Run your program. The program should ask you to enter your grade, and then wait.
+    Click inside of the NetBeans panel labeled, "Output - Letter Grades (run)". Type
+    an integer, and then press Enter/Return. The program’s output should resemble
+    the following:
+
+
+    What was your grade on the test (0-100)? 72
+
+
+    You got a C.
+
+
+    The program uses the value of the user’s grade to determine its letter grade equivalent
+    (A, B, C, D, or F). Here, there are FIVE choices! How can a computer, using Boolean
+    expressions (which can only evaluate to true or false), decide between two choices?
+
+
+    By the way, if a block of an if statement contains only ONE statement, that block
+    does not need curly braces. However, if you decide to use this shortcut, be sure
+    to indent your code clearly, to indicate which statements are in blocks, and which
+    are not!
+
+
+    Look at the following diagram:'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '![](img/28673bba839785116d1e73931d7a4b67_32_0.png)
+
+
+    ```
+
+    rest of program
+
+    ```
+
+
+    Upon receiving a value of grade from the user, the program determines its letter
+    grade equivalent, using the conditional statement. IF the value of grade is at
+    least 90, THEN the grade is an A. ELSE, meaning that the value of grade is less
+    than 90, the grade is something else.
+
+
+    So far, it''s a choice between “A” and “something else”. However, within “something
+    else”, the program can get more specific. IF the value of grade is at least 80,
+    THEN the grade is a B. ELSE, meaning that the value of grade is less than 80,
+    the grade is something else.
+
+
+    So far, it''s a choice between “A”, “B”, and “something else”. However, within
+    “something else”, the program can get even more specific. IF the value of grade
+    is at least 70, THEN the grade is a C. ELSE, meaning that the value of grade is
+    less than 70, the grade is something else.
+
+
+    So far, it''s a choice between “A”, “B”, “C”, and “something else”. However, within
+    “something else”, the program can get even more specific. IF the value of grade
+    is at least 65, THEN the grade is a D. ELSE, meaning that the value of grade is
+    less than 65, the grade is an F. The Else block, at the end, is a “catch-all”,
+    which causes the computer to decide that “all other grades” (those less than 65)
+    are F’s.
+
+
+    In summary, this is one way in which a computer can decide between five options,
+    using Boolean logic: by making up to four choices between two options! Java allows
+    allows you to decide between ANY number of options with conditional statements.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Lesson 10
+
+
+    # “Advanced Boolean Logic”
+
+
+    # 10-1: The Logical NOT Operator
+
+
+    More complex Boolean expressions can be constructed, using Java’s logical operators:
+    NOT, AND, and OR.
+
+
+    Create a new project, Sarcastic Pass-Fail. In SarcasticPassFail.java, immediately
+    under the line ...
+
+
+    package sarcastic.pass.fail;
+
+    ... add the line:
+
+
+    import java.util.Scanner;
+
+
+    In the program’s main method, write the following code:
+
+
+    ```
+
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("What was your grade on the test (0-100)?");
+
+    int grade = sc.nextInt();
+
+    if ((grade >= 65)) {
+
+    System.out.println("You passed, NOT!");
+
+    } else {
+
+    System.out.println("You failed, NOT!");
+
+    }
+
+    ```
+
+
+    Run your program. The program asks you to enter your grade, and then wait. Click
+    inside of the NetBeans panel labeled, “Output - Sarcastic Pass-Fail (run)\”. Type
+    an integer, and then press Enter/Return.
+
+
+    The program’s output should resemble the following:
+
+
+    What was your grade on the test (0-100)? 50
+
+    You passed, NOT!
+
+
+    The ! (logical NOT) operator is used to negate a Boolean value. Negating a Boolean
+    value of false makes it true. When something is NOT true, it is false. When something
+    is NOT false, it is true. Negating a Boolean value, therefore, is like flipping
+    a light switch!
+
+
+    Since Boolean expressions yield Boolean values, the logical NOT operator can negate
+    their results, as well. The following is the truth table for the logical NOT operator,
+    where A is a Boolean expression:
+
+
+    | A | NOT A |'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '| false | true |
+
+    | true | false |
+
+
+    A truth table shows the output values of a Boolean expression for every possible
+    combination of its input values. For example, if A is false, NOT A is true. The
+    Boolean expression, NOT A, has one input value: the value of Boolean expression
+    A. For every possible value of A, NOT A yields the opposite Boolean value.
+
+
+    The program uses the user''s grade to decide whether the user has passed or failed
+    the test. The Boolean expression, (grade >= 65), evaluated.
+
+
+    Let''s try this with a grade of 50. Substitute 50 for grade, in the Boolean expression,
+    to (grade >= 65). The 50 is not greater than or equal to 65, so 50 >= 65 yields
+    false. Substitute false for 50 >= 65 makes it !(false). If nothing is false, it
+    is true, so !(false). Therefore, if the user enters the number 50, the message
+    You passed, NOT!, will be printed.
+
+
+    If the grade is NOT at least 65, then the user did not pass the test, so the user,
+    in fact, failed the test. ELSE, if the grade is not at least 65 ..., two negatives
+    (one from the !) can cancel each other out, so this can be read “if the grade
+    is at least 65”. If the grade IS at least 65, then the user did not fail the test,
+    the user, in fact, passed the least.
+
+
+    # # 10-2: The Logical AND Operator
+
+
+    Create a new project, called Weather Report. In WeatherReport.java, immediately
+    after the line ...
+
+
+    else {
+
+    System.out.println("Better stay inside.");
+
+    }
+
+    Run your program. The program should ask you to enter the outside temperature,
+    and then wait. Click inside of the NetBeans panel labeled, “Output - Weather Report
+    (run)\”. Type a *'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: 'number, and then press Enter/Return. The program’s output should resemble the
+    following:
+
+
+    What is the temperature outside (degrees Fahrenheit)? 75
+
+
+    It’s nice outside.
+
+
+    The \&& (logical AND) operator is used to check whether several Boolean values
+    are ALL true. The following is the truth table for the logical AND operator, where
+    **A** and **B** are Boolean expressions:
+
+
+    | A | B | A AND B |
+
+    |---|---|---|
+
+    | false | false | false |
+
+    | false | true | false |
+
+    | true | false | false |
+
+    | true | true | true |
+
+
+    The Boolean expression, **A AND B**, has two input values: the values of Boolean
+    expressions **A** and **B. A AND B** only yields true if BOTH **A AND B** are
+    true. Otherwise, it yields false.
+
+
+    Checking to see whether a number is within a certain range is a common use of
+    the logical AND operator. The program uses the value of the outside temperature
+    to decide whether it is “nice” or whether the user should stay inside. The Boolean
+    expression, 40.0 <= temp && <= 90.0, gets evaluated.
+
+
+    Let’s try with a temperature of 75°F. Substitute 75 for temp, in the Boolean expression,
+    to make 40.0 <= 75.0 \&& 75.0 <= 90.0. The number 40 is less than equal to 75.0,
+    40.0 <= 75.0 yields true. The number 75 is less than or equal to 90.0, 75.0 <=
+    90.0 also yields true. Substitute for 40.0 <= 75 and true for 75.0 <= 90.0 to
+    make true, which yields true. Therefore, if the user enters the number 75, it’s
+    nice outside., or will be printed.
+
+
+    Let’s try with a temperature of 30°C. Substitute 30 for temp, in the Boolean expression,
+    to make 40.0 <= 30.0 \&& 30.0 <= 90.0. The number 40 is NOT than or equal to 30.0,
+    40.0 <= 30.0 yields false. In order for A \&& B \&& to yield true, ALL of its
+    values must be true. If ANY of them are false, the expression will yield false.
+    Therefore, there is no need to evaluate 30.0 <= 90.0. This shortcut is called
+    *lazy evaluation*. If the user enters the number 30, message, Beta stay inside.,
+    will be printed.
+
+
+    Let’s try with a temperature of 100°F. Substitute 100 for temp, in the Boolean
+    expression, to make 40.0 <= 100.0 \&& 100.0 <= 90.0. The number 40 is less than
+    or equal to 100.0, 40.0 <= 100.0 yields true. The number 100.0 is NOT less than
+    or equal'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "90.0, though, so 100.0 <= 90.0 yields false. Substitute for 40.0 <= 100.0 and\
+    \ false\n100.0 <= 90.0 makes true && &, which yields false. Since the first Boolean\n\
+    expression, 40.0 <= 100.0, yielded true, the second one, 100.0 <= 90.0, evaluated.\n\
+    This is because it's still for the A && B && ... expression to yield true, since\
+    \ a\nvalue of false has not been encountered yet (when only 40.0 <= 100.0 has\
+    \ been evaluated).\nIf the user enters the number 100, the message, Better stay\
+    \ inside., will be printed.\n\n# 10-3: The Logical OR Operator\n\nCreate a new\
+    \ project, called Divisibility. In Divisibility.java, immediately under the\n\
+    \ ...\n\npackage divisibility;\n\n... add the line:\n\nimport java.util.Scanner;\n\
+    \nIn the program’s main method, write the following code:\n\nScanner sc = new\
+    \ Scanner(System.in);\n\nSystem.out.print(\"Enter an integer: \");\");\"\n\nint\
+    \ i = sc.nextInt();\n\nif (i % 2 == 0 || i % 3 == 0)\n\nSystem.out.println(i +\
+    \ \" is divisible by 2 or 3.\");\n\nelse\n\nSystem.out.println(i + \" is not divisible\
+    \ by 2 or 3.\");\n\nRun your program. The program should ask you to enter an integer,\
+    \ and then wait. Click\ninside of the NetBeans panel labeled, \"Output - Divisibility\
+    \ (run)\". Type an integer, and\nthen press Enter/Return. The program’s output\
+    \ should resemble the following:\n\nEnter an integer: 8\n\n8 is divisible by 2\
+    \ or 3.\n\nThe || (logical OR) operator is used to check whether AT LEAST ONE\
+    \ of several Boolean\nvalues is true. The following is the truth table for the\
+    \ logical OR operator, where A and B\nare Boolean expressions:\n\n| A | B | A\
+    \ OR B |\n| false | false | false |\n| false | true | true |\n| true | false |\
+    \ true |"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'The Boolean expression, **A OR B**, has two input values: the values of Boolean
+    expressions **A** and **B**. **A OR B** only yields false if **A** AND **B** are
+    false. Otherwise, it yields true.
+
+
+    Checking to see whether a user''s input matches at least one of several choices
+    is a common use of the logical **OR** operator. The program checks whether the
+    user''s integer is evenly divisible by two or three, or whether it is divisible
+    by neither. If **X** is evenly divisible by **Y**, then when **X** is divided
+    by **Y**, the remainder is zero. Also, remember from Lesson 5: an expression,
+    as as `i % 2`, yields a result of type int, can be used anywhere that a literal
+    value or a variable of variable, type int, can be used. The Boolean expression,
+    `i % 2 == 0 || i % 3 == 0`, gets evaluated.
+
+
+    Let''s try with this integer, 8. Substitute 8 for **i**, in the Boolean expression,
+    to make `8 % 2 == 0 || 8 % 3 == 0`. The result of `8 mod 2` is equal to 0, so
+    `8 % 2 == 0` yields true. In order for **A || B** ... to yield false, ALL of its
+    input values must be false. Therefore, there is no need to evaluate `8 % 3 ==
+    0` here. The logical **OR** operator uses lazy evaluation, just like logical **AND**.
+    If the user enters the number 8, the message, 8 is divisible by 2 or 3, will be
+    printed.
+
+
+    Let''s try this with the integer, 5. Substitute 5 for **i**, in the Boolean expression,
+    to make `5 % 2 == 0 || 5 % 3 == 0`. The result of `5 mod 2` is equal to 0, so
+    `5 % 2 == 0` yields false. The result of `5 mod 3` is NOT equal to 0, so `5 %
+    3 == 0` also yields false. Substitute false for `5 % 2 == 0` and for `5 % 3 ==
+    0` to make false || false, which yields false. Since the first Boolean expression,
+    `5 % 2 == 0`, yielded false, the second one, `5 % 3 == 0`, gets evaluated. This
+    is because it''s still possible for the **A || B** ... expression to yield false,
+    since a value of true has not been encountered (yet) `5 % 2 == 0` has been evaluated).
+    If the user enters the number 5, the message, 5 is not divisible by 2 or 3, will
+    be printed.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Lesson 11
+
+
+    # “Loops”
+
+
+    # 11-1: Repeating Actions with While Loops
+
+
+    Sometimes, a computer needs to do something more than once. Sometimes, it also
+    needs to be able to move backwards in the code, rather than only forwards. Loops
+    allow computers to do both of these things!
+
+
+    Create a new project, called Counting Program. In the program’s main method, we
+    write the following code:
+
+
+    ```
+
+    int i = 1;
+
+    while (i <= 5)
+
+    {
+
+    System.out.println("The value of i is " + i + ".");
+
+    i = i + 1;
+
+    }
+
+    System.out.println("Done!");
+
+    ```
+
+
+    Run your program. The program should output the following text:
+
+
+    +   The value of i is 1.
+
+    The value of i is 2.
+
+    The value of i is 3.
+
+    The value of i is 4.
+
+    The value of i is 5.
+
+    Done!
+
+
+    The program counts from 1 to 5. It uses the variable, i, to store the number it’s
+    currently at. When the program is done counting, it tells the user that it’s done.
+    The program uses a loop to repeat the action of counting up by one 5 times.
+
+
+    The following lines of code form this program’s loop:
+
+
+    ```
+
+    while (i <= 5)
+
+    {
+
+    System.out.println("The value of i is " + i + ".");
+
+    i = i + 1;
+
+    }
+
+    ```
+
+
+    This is called a while loop. A while loop begins with while. A Boolean expression
+    (called'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: 'the loop''s condition goes in the parentheses. If the condition evaluates to
+    true, then the statements inside of the loop''s curly braces (which make up the
+    loop''s body) are executed. After those statements have been executed, the program
+    goes BACK to the top of the loop, to check if the condition evaluates to true
+    again. If it evaluates to true, then the body of the loop will be executed AGAIN.
+
+
+    However, if the condition evaluates to false, the program will continue immediately
+    after the end of the loop (after its }). If the condition evaluates to false the
+    FIRST time the program performs test (evaluation of the condition), then the body
+    of the loop will NEVER be executed. In summary, WHILE the condition is true, the
+    statements in the body of the loop will be executed.
+
+
+    Look at the following diagram:
+
+
+    ![](img/28673bba839785116d1e73931d7a4b67_39_0.png)
+
+
+    At the beginning of the program, the value of i is 1. At the beginning of the
+    while loop, the condition, i<= 5, is tested. Since 1 is less than or equal to
+    5, the condition evaluates to true. Therefore, the body of the loop gets executed.
+    This involves printing the current value of i (which is 1) on the screen, and
+    then increasing the value of i by 1. The value of i is now 2. Upon reaching the
+    end of the loop, the program goes back to the beginning of the loop (look at the
+    arrow, in the diagram).
+
+
+    The condition is tested again. The condition ONLY gets at the beginning of the
+    loop! Since 2 is less than or equal to 5, the body of the loop gets executed again.
+    This involves printing the current value of i (which is 2) on the screen, and
+    then increasing the value of i by 1. The value of i is now 3. Upon reaching the
+    end of the loop, the program goes back to the beginning of the loop.
+
+
+    The condition is tested again. Since 3 is less than or equal to 5, the body of
+    the loop gets executed again. This involves printing the current value of i (which
+    is 3) on the screen, and then increasing the value of i by 1. Upon reaching the
+    end of the loop, the program goes back to the beginning of the loop.
+
+
+    The condition is tested again. Since 4 is less than or equal to 5, the body of
+    the loop gets executed again. This involves printing the current value of i (which
+    is 4) on the screen, and then increasing the value of i by 1. The value of i is
+    now 5. Upon reaching the end of the loop, the program goes back to the beginning
+    of the loop.
+
+
+    The condition is tested again. Since 5 is less than or equal to 5, the body of
+    the loop gets'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'executed again. This involves printing the current value of i (which is 5)
+    on the screen, and increasing the value of i is 6. Upon reaching the end of the
+    loop, the program goes back to the beginning of the loop.
+
+
+    The condition is tested again. Since 6 is NOT less than equal to 5, the body of
+    the loop does NOT executed again (look at the ELSE, in the diagram). The program
+    continues immediately after the end of the loop, and prints Done! on the screen.
+
+
+    To make your code clearer, indent statements that are in the bodies of loops,
+    placing tabs or spaces to the left of them. NetBeans does this for you. This allows
+    you to see, at a glance, which statements are in the bodies of loops, and which
+    are not.
+
+
+    Try changing the program, so that it counts from 1 to 100. Also, try changing
+    the program, so that it counts backwards, from 5 to 1. Finally, try changing the
+    program, so that it counts from 1 to a number specified by the user.
+
+
+    If your program does not stop running, and you want it to stop, click the red,
+    square (“Stop”) button. It’s located to the left of the NetBeans panel labeled,
+    “Output - Counting Program”.
+
+
+    # 11-2: Game: “Guess My Number”
+
+
+    Now, you are going to make a simple game, in Java! In this game, the computer
+    picks a number between 1 and 100, and the player tries to guess that number.
+
+
+    Create a new project, called Guess My Number. In GuessMyNumber.java, immediately
+    under the line ...
+
+
+    ```
+
+    package guess.my.number;
+
+    ```
+
+
+    ... add the line:
+
+
+    ```
+
+    import java.util.Scanner;
+
+    ```'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "In the program’s main method, write the following code:\n\n+   1 Scanner sc\
+    \ = new Scanner(System.in);\n2 int my_number = 1 + \n(int)Math.floor(Math.random())\
+    \ * (100 - 1 + 1));\n3 System.out.println(\"I am thinking of a number between\
+    \ 1 and 100.\");\n4 System.out.println(\"Can you guess it?\");\n5 int guess =\
+    \ 0;\n\n```\n6 while (guess != my_number)\n7 {\n8 System.out.print(\"Enter your\
+    \ guess: \");\n9 guess = sc.nextInt();\n\n10 if (guess != my_number)\n11 System.out.println(\"\
+    Too low!\");\n12 else if (guess > my_number)\n13 System.out.println(\"Too high!\"\
+    );\n14 }\n```\n\n```\n15 System.out.println(\"Yes! My number was \" + my_number\
+    \ + \".\");\n```\n\n**The numbers to the left of each line of code are line numbers.\
+    \ Do not type them in your code!** Run your program. Click inside of the NetBeans\
+    \ panel labeled, “Output - Guess My Number (run)”, and play the game.\n\nThe program’s\
+    \ output should resemble the following:\n\nI am thinking of a number between 1\
+    \ and 100.\n\nCan you guess it?\nnEnter your guess: 33\nToo high!\nEnter your\
+    \ guess: 16\nToo low!\nEnter your guess: 24\nToo low!\nEnter your guess: 28\n\
+    Too high!\nEnter your guess: 26\nYes! My number was 26.\n\nIf you get tired of\
+    \ playing the game, before you have guessed the computer’s number, click the “Stop”\
+    \ button, in NetBeans.\n\nOn line 2, the program picks a random integer between\
+    \ 1 and 100, inclusive. The random"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'method of the Math class returns a random number (let''s call it a, even though
+    it does not have a name), of type double, which is greater than or to 0 and less
+    than 1.0.
+
+
+    a is then multiplied by the expression, (100 - 1 + 1). That expression yields
+    100. The resulting number, which we''ll call b, is greater than or equal to 0
+    and less than 100.0.
+
+
+    Next, the floor method of the Math class returns the largest integral value, of
+    type double, that is less than or equal to b (the floor method''s argument). The
+    resulting number, which we''ll call c, is an integer, of type double (so it ends
+    in .0). It is greater than or equal to 0.0 and less than equal to 99.0. **Wait
+    a second! How did you get 99.02?** **We DID NOT 100.0!** because b could only
+    be LESS THAN 100.0, it could only be as high as 99.999 .... The largest integral
+    value that is less than or equal 99.999 .... (the floor of 99.999...) is, NOT
+    100.
+
+
+    Then, c is of type double, gets cast (converted) to type int, with the operator:
+    (int). The expression, (int)c, yields the value, of type int, that is “equivalent”
+    to c. To convert a value of double to a value of type int, remove its decimal
+    point and any digits to the right of that decimal point. For the example, 57.39,
+    becomes the int, 57. The resulting number, which we''ll call d, is an integer,
+    of type, which is greater than equal to 0 and less than equal to 99.
+
+
+    After that, 1 is added to d. The result of the expression, 1 + d, which we''ll
+    call e, is an integer, which is greater than equal to 1 and less than or equal
+    to 0. FINALLY, the value of e, which is the computer''s number, gets assigned
+    to the variable, my_number.
+
+
+    To have a program pick a random integer between MIN and MAX, inclusive, use the
+    following code:
+
+
+    ```
+
+    int n = MIN + (int)Math.floor(Math.random() * (MAX - MIN + 1));
+
+    ```
+
+
+    On line 5, the variable, guess, is declared and initialized to 0. Each time the
+    player enters a guess, on line 9, guess is used to store that guess. It is initialized
+    to 0, to ensure that the body of the program''s loop (lines 7-14) will be executed
+    at least once. This allows the player to make at least one guess. Since my_number
+    can only hold a value between 1 and 100, inclusive, the loop''s condition (tested
+    on line 6), guess!=my_number, will ALWAYS evaluate to true the first time the
+    program reaches line 6. This is because 0 is not equal to any number between 1
+    and 100.
+
+
+    The program''s loop spans 6-14. While the player is incorrect (not equal to the
+    computer''s number), the program allows the player to enter a guess. After the
+    player enters a guess, on line 9, if the guess is incorrect, the program will
+    give the player a hint, using the if statement that spans lines 10-13. Conditional
+    statements can be nested inside loops! If the player''s guess is less than the
+    computer''s number, then the program will tell the player Too low! If the player''s
+    guess is greater than the computer''s number, then the program will tell the player
+    Too high!
+
+
+    However, if the player''s guess is correct (equal to the computer''s number),
+    then neither hint will be displayed. The program, upon reaching line 14, will
+    go back to line 6, to the loop''s condition one last time. Since the player''s
+    guess is equal to the computer''s number, the condition, guess!=my_number, will
+    evaluate to false. The program,'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: therefore, continues on line 15, and congratulates the player for correctly
+    guessing the computer’s number.
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'Try changing the program, so that the computer picks a number between 1 and
+    1000.
+
+    Also, try changing the program, so that it keeps track of how many guesses the
+    player has entered. When the player correctly guesses the computer’s number, the
+    program should tell the player how many guesses the player entered.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# # Appendix
+
+
+    # ## “Other Useful Information”
+
+
+    # ### A-1: What to Do If You Need Help
+
+
+    Often, when you are working on a project, you will get stuck, or will need to
+    look something up. Thanks to the Internet, it''s very easy to find helpful resources
+    on programming matters, for free!
+
+
+    If you need information about one of Java’s built-in classes, try Googling the
+    name of that class. For example, if you needed information about the Scanner class,
+    you would enter the following text into Google:
+
+
+    Java Scanner class
+
+
+    **Which results should I click on?** Results with “Oracle” in them are helpful,
+    if you need information about the details of a class''s methods. Among those results,
+    with “Java Platform SE” in them are more helpful.
+
+
+    Speaking of methods, static means a method that belongs to a class. A static method
+    is called by writing code, call ClassName.method(). For example, Math.random().
+    The random method is a static method of the Math class. Other methods are non-static,
+    and belong to individual objects of that class. A non-static method is called
+    by writing code, call object.name.method(). For example, sc.nextInt(). The nextInt
+    method is a non-static method of the Scanner class, and sc is an object of type
+
+
+    The following built-in classes were mentioned in Lessons 0-11: System, PrintStream,
+    String, Scanner, InputStream, Math.
+
+
+    Other times, you may struggle with programming concepts, such as loops and if
+    statements. Again, Google is your friend. For example, if you needed information
+    about while loops, you would enter the following text into Google:
+
+
+    Java while loop
+
+
+    **Which results should I click on?** Results with “The Java™ Tutorials” in are
+    helpful. However, if you need a more specific question, “How do I check if a number
+    is prime?”, your best bet is to check out forums and message boards, on the Internet.
+
+
+    Over time, you will get a sense of which websites are helpful, and which ones
+    are not. For your search texts, try using “broken” or “robotic” English, rather
+    than perfectly-correct English. For the example, “How do I check if a number is
+    prime?”, could be entered as check prime number Java. If you include Java in your
+    search text, you will get more Java-related websites.
+
+
+    Finally, some useful websites for programmers, any skill level:
+
+
+    +   - Computer Hope: http://www.computerhope.com/ (helpful for computer skills,
+    in general, as well as programming)'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'The Java™ Tutorials, by Oracle:
+
+    http://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html (you will probably
+    want the “New to Java” section)
+
+
+    Java Tutorial: http://www.wideskills.com/technology/java-tutorial [formerly http://www.javabegner.com/)
+    (a good general reference, with much example code)
+
+
+    Stack Overflow: https://stackoverflow.com/ (forums and message boards, to find
+    in your results)
+
+
+    Do I need to buy a textbook? You probably don’t need to buy a textbook, unless
+    you are taking a course, or are interested in a specific area of computer science
+    (as artificial intelligence or game programming). Textbooks vary in price, and
+    so cost more than $100. They vary in quality, and there are so MANY out there;
+    I cannot recommend a specific one for you.
+
+
+    If you are taking a course, your teacher or professor will likely choose one for
+    you. it might not be a good one, but GET IT, ANYWAY (and the specified edition
+    of,,!). Your will probably assign homework problems from it, and design tests
+    around it. If you hate it, you can get back some of the money you spent on it
+    by reselling it. If you buy a book for $100, and then resell it for $40, it’s
+    as if you had only spent $60 on that book!
+
+
+    # # A-2: Naming Things in Java
+
+
+    Variables, symbolic constants, methods, and classes all have names, which are
+    called identifiers. A Symbolic constant is like a variable, except that you can
+    only assign it a value once. Its value can never be changed by your code. You
+    can name these things almost anything like you, provided you obey the following
+    rules:
+
+
+    +   - Only use uppercase letters, lowercase letters, numbers, and underscores
+    (the character) in an identifier.
+
+    - An identifier cannot begin with a number.
+
+    - Avoid making an identifier longer than 32 characters.
+
+    - Do not use a reserved word as an identifier.
+
+    - Reserved words have special meanings in blue for you. Some examples of reserved
+    words are int, public, and class.
+
+
+    What would be an example of a legal (allowed in Java) identifier? How about an
+    illegal (NOT allowed in Java) identifier? Is the identifier, 7_ways_from_sunday,
+    legal? How about John?
+
+
+    Those rules give you a lot of freedom, but good programmers follow various naming
+    conventions (ways of naming things), in order to make their code more readable
+    and understandable by themselves and other programmers:
+
+
+    +   - Make the names of important things easy to remember. For example, num_dogs
+    is easier to understand, at a glance, than nd. “Oh, that’s the number of dogs.”
+    versus “What in world is nd?” A little bit of typing now can save LOTS of frustration!
+
+    - Don’t use names that are too long or too short. For example,'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'the_little_kangaroo_who_lives_in_the_zoo is probably too long, tlkwitz is nearly
+    impossible to understand. Imagine having to repeatedly type the first one! Something
+    like lil_roo_in might be better.
+
+
+    +   - Don''t use names that begin with underscores. Also, don''t use underscores
+    in a row, because it''s hard to tell __ (two of them) and ___ (three of them)
+    apart.
+
+    - For short identifiers, use letters and numbers that can be easily confused with
+    each other. It''s easy to confuse I l (lowercase L or uppercase I) with 1 (number).
+    Likewise, it''s easy to confuse o or O (lowercase o or uppercase O) with 0 (number).
+
+    - Variables are often given all-case identifiers, with words separated by underscores.
+    Examples: link, all_points.
+
+    - Symbolic constants are often given all-uppercase identifiers, with words separated
+    by underscores. Examples: FEET_PER_MILE, PI.
+
+    - Methods are often given in camel case, with the first letter lowercase. An example
+    of camel case: UnderTheSea. There are no underscores; words run into each other,
+    but can be distinguished from each other, because the first letter of each word
+    is capitalized. Examples: main, toString, eraseAllFiles.
+
+    - Classes are often given in camel case, with the first letter uppercase. Examples:
+    String, PrintStream, EvilianMutant.
+
+
+    In a project group, every member of the group should follow the naming conventions!
+
+
+    # A-3: Methods of the String Class
+
+
+    The String class contains many useful methods. The following are a few commonly-used
+    ones.
+
+
+    +   - boolean equals(String s)
+
+
+    Use the equals method to check whether two strings contain the EXACT sequence
+    of characters. The check is case-sensitive, which means uppercase and lowercase
+    letters are considered to be different characters. This method returns true, if
+    the two strings contain the EXACT sequence of characters. Otherwise, it returns
+    false. Use a.equals(b), where a and b are both Strings, rather than a == b. Likewise,
+    use !a.equals(b), rather than a != b. For more information about the ! operator,
+    see Lesson 10-1.
+
+
+    Example Code:
+
+    String a = "frog";
+
+    boolean sample1 = a.equals("frog"); // sample1 = true
+
+    boolean sample2 = a.equals("Frog"); // sample2 = false
+
+
+    +   - boolean equalsIgnoreCaseCase(String s)
+
+
+    Use the equalsIgnoreCase method to check whether two strings contain the EXACT
+    sequence of characters, when the cases of their letters (whether they are uppercase
+    or lowercase) are ignored. This method returns true, if the two strings contain
+    the EXACT'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: 'same sequence of characters, when the cases of their letters are ignored. Otherwise,
+    it returns false.
+
+
+    Example Code:
+
+
+    ```
+
+    String a = "Alex";
+
+    ```
+
+
+    ```
+
+    boolean same1 = a.equalsIgnoreCaseCase("Alex"); // same1 = true
+
+    boolean same2 = a.equalsIgnoreCaseCase("ALEX"); // same2 = true
+
+    boolean same3 = a.equalsIgnoreCaseCase("flex"); // same3 = false
+
+    ```
+
+
+    +   - isEmpty()
+
+
+    Use the isEmpty method to check whether string contains no characters at all.
+    This method returns true, if the string contains no characters at all. Otherwise,
+    it returns false.
+
+
+    Example Code:
+
+
+    ```
+
+    String a = "";
+
+    ```
+
+
+    ```
+
+    String b = "";
+
+    boolean empty1 = a.isEmpty(); // empty1 = true
+
+    boolean empty2 = b.isEmpty(); // empty2 = false
+
+    ```
+
+
+    +   - int length()
+
+
+    This method returns the length of (number of characters in) a string.
+
+
+    Example Code:
+
+
+    ```
+
+    String a = "ABC";
+
+    int len1 = a.length(); // len1 = 3
+
+    int len2 = "Long String".length(); // len2 = 11, The methods of the String class
+    can be called on string literals, just like they can be called on named objects
+    of type String!
+
+    ```
+
+
+    +   - String toLowerCase()
+
+
+    This method returns a version of a string, in which all of that string’s letters
+    are lowercase.
+
+    This method does NOT change that string!
+
+
+    Example Code:
+
+
+    +   - String toUpperCase()
+
+
+    This method returns a version of a string, in which all of that string’s letters
+    are uppercase.
+
+    This method does NOT change that string!
+
+
+    Example Code:
+
+
+    ```
+
+    String a = "Stop";
+
+    ```'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '```
+
+    String upper = a.toUpperCase(); // upper = "STOP",
+
+    a = "Stop"
+
+    ```
+
+
+    # A-4: Methods of the Math Class
+
+
+    The Math Class contains many useful methods. The following are a few commonly-used
+    ones.
+
+
+    +   - static int abs(int n)
+
+    - static double abs(double n)
+
+
+    This method returns the *absolute value* of n. The absolute value of a number
+    is that number''s distance from zero. For example, -3.5 is 3.5 units away from
+    0, so the absolute value of -3.5 is 3.5. The absolute value of 3.5 is also 3.5.
+    The abs method can be called with an argument of type int or double. If an int
+    is passed to it, the method will return an int. If a double is passed to it, the
+    method will return a double.
+
+
+    Example Code:
+
+
+    ```
+
+    int abs1 = Math.abs(-7); // abs1 = 7
+
+    double abs2 = Math.abs(1.25); // abs2 = 1.25
+
+    ```
+
+
+    +   - static double ceil(double n)
+
+
+    This method returns the *ceiling* of n, which is the smallest integral value,
+    of type double, that is greater than or equal to n.
+
+
+    Example Code:
+
+
+    ```
+
+    double ceil1 = Math.ceil(-4.8); // ceil1 = -4.0
+
+    double ceil2 = Math.ceil(1.0); // ceil2 = 1.0
+
+    ```
+
+
+    +   - static int max(int a, int b)
+
+    - static double max(double a, double b)
+
+
+    This method returns the *floor* of n, which is the largest integral value, of
+    type double, that is less than or equal to n.
+
+
+    Example Code:
+
+
+    ```
+
+    double floor1 = Math.floor(-4.8); // floor1 = -5.0
+
+    double floor2 = Math.floor(1.0); // floor2 = 1.0
+
+    ```
+
+
+    If a is larger than b, this method returns a. Otherwise, it returns b. The max
+    method can be called with two arguments of type int or double. If ints are passed
+    to it, the method will return an int. If doubles are passed to it, the method
+    will return a double.
+
+
+    Example Code:
+
+
+    ```
+
+    int larger1 = Math.max(10, 4); // larger1 = 10
+
+    double larger2 = Math.max(1.5, 2.5); // larger2 = 2.5
+
+    ```'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '```
+
+    static int min(int a, int b)
+
+    static double min(double a, double b)
+
+    ```
+
+
+    If a is smaller than b, this method returns a. Otherwise, it returns b. The min
+    method can be called with two arguments of type int or double. If ints are passed
+    to it, the method will return an int. If doubles are passed to it, the method
+    returns a double.
+
+
+    Example Code:
+
+
+    ```
+
+    int smaller1 = Math.min(10, 4); // smaller1 = 4
+
+    double smaller2 = Math.min(1.5, 2.5);
+
+    // smaller2 = 1.5
+
+    ```
+
+
+    +   - static double pow(double a, double b)
+
+
+    This method returns a. If you are squaring something, use a * a, which is faster
+    than calling pow. For cubing, a * a * a is also faster than calling pow.
+
+
+    Example Code:
+
+
+    ```
+
+    double result = Math.pow(3.0, 5.0); // result = 243.0
+
+    ```
+
+
+    +   - static double random()
+
+
+    This method returns a random number, of type, which is greater than or equal to
+    0.0 and 1.0. If you want a random integer between MIN and MAX, inclusive, use
+    the following code:
+
+
+    ```
+
+    int n = MIN + (int)Math.floor(Math.random() * (MAX - MIN + 1));
+
+    ```
+
+
+    For an example of this code in action, see Lesson 11-2.
+
+
+    Example Code:
+
+
+    ```
+
+    double r1 = Math.random(); // r1 = 0.9381625193125773, or some other number, which
+    is greater than equal to 0.0 and LESS THAN 1.0
+
+    ```
+
+
+    ```
+
+    int r2 = 5 + (int)Math.floor(Math.random() * (10 - 5 + 1)); // r2 = 8, or some
+    other integer, which is between 5 and 10, inclusive
+
+    ```
+
+
+    +   - static double sqrt(double n)
+
+
+    This method returns the square root of n.
+
+
+    Example Code:
+
+
+    ```
+
+    double sqrt1 = Math.sqrt(9.0); // sqrt1 = 3.0
+
+    double sqrt2 = Math.sqrt(15.0);
+
+    // sqrt2 = 3.872983334620717
+
+    ```
+
+
+    The Math class also contains a few useful symbolic constants. The following is
+    one of them.
+
+
+    +   - static double PI
+
+
+    This constant is π (pi). The circumference of a circle is π times larger than
+    its diameter.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'The value of PI is approximately 3.14159.
+
+
+    Example Code:
+
+
+    ```
+
+    double radius = 5.0;
+
+    double area = Math.PI * radius * radius;
+
+    // area = 78.53981633974483
+
+    ```
+
+
+    # A-5: How to Get Multi-Word Input, Using the Scanner Class
+
+
+    In Lesson 7, you learned how to get user input with the Scanner class. To get
+    a single word from a user, call the next method of a Scanner object.
+
+
+    How do I get more than one word from a user? Call the nextLine method of a Scanner
+    object as in the following example code:
+
+
+    ```
+
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter a sentence: ");
+
+    String sentence = sc.nextLine();
+
+    System.out.println("You entered: " + sentence);
+
+    ```
+
+
+    The nextLine method of sc waits for the user to enter a single line (at least
+    zero characters, including possible spaces) of text, and returns a String. A line
+    of text ends with a newline. A newline is a special character or sequence of characters,
+    which means "put all after this on the next line" to the computer. In simpler
+    terms, a newline is like a press of the Enter/Return key.
+
+
+    However, the Scanner class was really designed for reading files, not from a user’s
+    keyboard. Therefore, an unexpected and annoying thing can happen, if you call
+    the nextLine AFTER calling one of Scanner’s other methods (like nextInt or next).
+    Create a new project, and write the following code in the main’s method:
+
+
+    +   1. Scanner sc = new Scanner(System.in);
+
+    2. System.out.print("Enter an integer: ");
+
+    3. int a = sc.nextInt();
+
+    4. System.out.println("You entered: " + a + \.");\n5. System.out.print("Enter
+    a sentence: ");
+
+    6. String sentence = sc.nextLine();
+
+    7. System.out.println("You entered: " + sentence + " ");"
+
+
+    The numbers to the left of each line of code are line numbers. Try running your
+    program. Let lousy program didn’t let me enter a sentence! The integer worked
+    fine, but when it was time for me to enter my sentence, I got the following output:
+
+
+    Enter a sentence: You entered
+
+
+    System.in is an InputStream. The Scanner, sc, is "connected to" that InputStream,
+    when sc is created. The methods of the Scanner class all begin with the word,
+    next. What does this'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'all mean?
+
+
+    A stream is a sequence of elements of data. When your program begins, System.in,
+    an input stream, contains no data, because the user has not input anything yet.
+    The nextInt method returns the NEXT token (whole piece of data) in the stream,
+    which must be of the correct type: since the user has not input anything yet,
+    there are no tokens in the input stream ... until the user provides one, by typing
+    an integer, and pressing Enter/Return.
+
+
+    Once the user has entered something, nextInt looks in the stream for it. nextInt
+    ignores any whitespace characters (such as spaces or newlines). It processes any
+    non-whitespace characters into a value of type int (to be returned by nextInt).
+    It stops, when it encounters a space or a newline (just after the end of the token).
+
+
+    Any spaces before the integer are ignored. If the user presses Enter/Return (or
+    types only spaces, and presses Enter/Return), nextInt will not find a token. This
+    will cause the program to keep waiting for the user to enter an integer! If the
+    user enters a token that cannot be processed into an integer, such as abc, the
+    program will crash, and display an error message. This will happen, because nextInt
+    doesn''t know how to process the token, abc, into an integer. The program was
+    EXPECTING a token that could be processed into an integer. If the user enters
+    MORE THAN one integer on the line, such as 10 4 8, the above program''s output
+    will be the following:
+
+
+    Enter an integer: 10 4 8
+
+
+    You entered: 10.
+
+
+    Enter a sentence: You entered ( 4 8
+
+
+    nextInt will only process the VERY NEXT token in the stream (10) into an integer.
+    Once nextInt arrives at the space after the token (10), it will stop there, leaving
+    “ 4 8” in the stream. The newline, which the user''s press of the Enter/Return
+    key has placed after “ 4 8”, will also be left in the stream.
+
+
+    There is still stuff in the stream! If the program called nextAgain, nextInt would
+    not wait for the user to enter another integer. It would immediately return 4,
+    since 4 is the NEXT token in the stream.
+
+
+    When the program reaches line 6, the nextLine method will be called. next returns
+    a String, which contains ALL of the characters in the stream (whitespace and non-whitespace),
+    EXCEPT for the next newline. nextLine ADVANCES PAST the next newline, before stopping.
+
+
+    Since there is still stuff in the stream, the program does not wait for the user
+    to enter input, upon reaching line 6. Instead, the program puts “ 4 8” (nextLine''s
+    token) into the variable, sentence. Then, the program reaches line 7, which prints
+    the value of sentence between parentheses.
+
+
+    The stream is now empty again, but the program has advanced beyond the place where
+    we wanted the user to enter a sentence (6), and has now ended. Even if the user
+    had entered 10, on line 3, a newline would have been left in the stream. nextLine
+    would have advanced past that newline, without waiting for the user to enter a
+    sentence. nextLine'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'would have returned an empty string (containing all zero of the characters
+    before the newline), and the program would still have this problem.
+
+
+    # **How can I fix this problem?** You can fix this problem, by changing the code
+    in the following way:
+
+
+    ```
+
+    3 int a = sc.nextInt();
+
+    4 sc.nextLine();
+
+    5 System.out.println("You entered: " + a + ".");
+
+    6 System.out.print("Enter a sentence: ");
+
+    7 String sentence = sc.nextLine();
+
+    8 System.out.println("You entered (" + sentence + ")");
+
+    ```
+
+
+    When the program reaches line 3, it waits for the user to enter an integer. The
+    stream still contains, at the very least, the newline that was placed in it by
+    the user''s press of the Enter/Return key. If the stream entered other tokens
+    after the integer, before pressing Enter/Return, the stream also contains them.
+    Line 4 causes the program to throw out that data. nextLine returns a String, which
+    contains ALL of the characters in the stream (AFTER the user''s integer), EXCEPT
+    FOR the next newline (which nextLine advances past). However, the String returned
+    by nextLine is not assigned to ANY variable, so it disappears.
+
+
+    The stream is now empty again. Therefore, when the program reaches line 7, it
+    waits for the user to enter a line''s worth of text (at least zero characters,
+    including possible spaces). THIS call to nextLine returns the user''s sentence.
+    That String gets assigned to the variable, sentence. Finally, the program reaches
+    line 8, which prints the value of sentence between the parentheses.
+
+
+    In summary, the simple solution to the aforementioned problem is to insert code
+    line 4 after EVERY call to one of Scanner''s methods (OTHER nextLine). **Do not
+    insert code like line 4 after a call to nextLine**'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# # Master Vocabulary List for Lessons 0-11 and the Appendix
+
+
+    +   **absolute value** – *The absolute value* of a number is that number’s distance
+    from zero. For example, the absolute value of 2 is 2.
+
+
+    +   **access** – To access something is to use it, in some way, in your code.
+
+
+    +   **AND** – See LOGICAL AND.
+
+
+    +   **argument** – An argument is a piece of data that gets passed to a method,
+    when that method is called. For example, in the following print statement:
+
+
+    ```
+
+    System.out.println("Have a nice day!");
+
+    ```
+
+
+    "Have a nice day!" is the argument that gets passed to the println method. See
+    call, data, method, pass.
+
+
+    +   **arithmetic operator** – In Java, the most important arithmetic operators
+    are + (addition), - (subtraction), * (multiplication), / (division), and % (modulus).
+    They are used to perform basic calculations. See **modulus**.
+
+
+    +   **assign** – To assign a value to a variable is to store that value in variable.
+
+
+    +   **assignment statement, value, variable.** An assignment statement is a statement
+    that tells the computer to assign a value to a variable. See **assign, statement,
+    value, variable**. An example of an assignment statement:
+
+
+    ```
+
+    height = 5.875;
+
+    ```
+
+
+    +   **behavior** – A behavior is something an object can do. For example, a car
+    can make a left turn. See **object**.
+
+
+    +   **block** – A block of code consists of zero or more statements
+
+
+    +   **body** – The type of method or loop connects the code from its outermost
+    pair of curly braces. See **curly braces, loop, method**.
+
+
+    +   **Boolean** – A Boolean is a value of true or false. In Java, Boolean values
+    can be stored in variables of the primitive data type, boolean. See **Boolean
+    expression, data type, primitive data type, type, value, variable.**
+
+
+    +   **Boolean expression** – A Boolean expression is an expression that yields
+    a Boolean value. Some examples of Boolean expressions are false, temp > 100.0,
+    and i % 2 == 1 && i % 3 == 0. See **Boolean, expression, logical operator, relational
+    operator, value**.
+
+
+    +   **call** – To call a method is to tell it to run. See **method**.
+
+
+    +   **camel case** – Camel is a style of writing multiple words, in which the
+    end of one word is followed immediately by the beginning of the next word. The
+    next word has no space before it, and is capitalized. For example, “YouTube” is
+    written in camel case. See **identifier**.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '+   case – The case of a letter is its state of being uppercase or lowercase.
+    See case-sensitive.
+
+
+    +   case-sensitive – In a case-sensitive process, uppercase and lowercase letters
+    may be treated differently from each other. In other words, “a” may be treated
+    differently from “A”, in a case-sensitive process. See case.
+
+
+    +   cast – To cast from one data type to another is to find that value''s equivalent,
+    as a value of the other data type. For example, the expression, (double)57, casts
+    the value, 57, to the equivalent double value of 57.0. See data type, expression,
+    type, value.
+
+
+    +   ceiling – The ceiling of a number is the smallest integer that is greater
+    than or equal to that number. For example, the ceiling of 1.4 is 2. See float,
+    integer.
+
+
+    +   character – A character is any letter, or symbol. Spaces and newlines are
+    also characters. Examples of characters are A, 3, and &. See newline, whitespace.
+
+
+    +   class – A class is usually a piece of code that defines the concept of an
+    object. A class proclaims that all objects belonging to this “category” have certain
+    characteristics. These characteristics are defined in that class’s code. For example,
+    a Car class would define the characteristics that all cars (objects of the Car
+    class) have in common. However, some do not define types of objects, but are used
+    to hold data/or methods. These other classes exist, because in Java, basically
+    every piece of code must be contained within some class. See data, method, object,
+    type.
+
+
+    +   closing brace – A closing brace is a }. Curly braces, opening brace.
+
+
+    +   code – See source code.
+
+
+    +   comment – A comment is a piece of text, in a program’s source code, which
+    doesn’t do anything, when that program runs. Comments are often used to describe
+    what pieces of code do. See multi-line comment, single-line comment, source code.
+
+
+    +   compiler – A compiler is a special program, which transforms source code into
+    something a computer can understand. See source code.
+
+
+    +   concatenate – To concatenate strings is to put them together, to end it. For
+    example, “mail”, with “box” concatenated to it (“mail” + “box”, in Java), yields
+    the compound word, “mailbox”. See string.
+
+
+    +   condition – A condition is a Boolean expression, especially one that is used
+    in a conditional statement or loop. See Boolean expression, conditional statement,
+    loop, test.
+
+
+    +   conditional statement – A conditional statement is a statement that allows
+    the computer to execute certain pieces of code, based on the results of Boolean
+    expressions. If a statement is one kind of conditional statement, in Java. See
+    Boolean expression, execute, if statement, result, statement. An example of a
+    conditional statement:
+
+
+    ```
+
+    if (temp < 32.0)
+
+    ```
+
+
+    ```
+
+    System.out.println("It’s freezing outside!\");"
+
+    ```
+
+
+    ```
+
+    else
+
+    ```
+
+
+    ```
+
+    System.out.println("It’s not THAT cold!\");"
+
+    ```'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '+   • curly braces – Certain pieces of code are marked off from the rest of
+    a program’s code
+
+    • curly braces (and {). See closing brace, opening curly brace.
+
+
+    +   • cursor – In a program’s output window, the cursor (a blinking vertical line)
+    marks where the next character will appear on the screen. See character.
+
+
+    +   • data – Data is information. A single piece of data is called a datum.
+
+
+    +   • data type – The data type (type, for short) of a piece of data is a label
+    that says what kind of data it is. Most data types, in Java, are defined by classes.
+    However, a few data types, such as int, double, and boolean, are not defined by
+    classes. See class, primitive data type.
+
+
+    +   • debug – To debug code is to fix mistakes in it. See source code.
+
+
+    +   • declare – To declare (like a variable) is to announce to Java that it exists,
+    what kind of it is, and what its name is. An example of a statement that declares
+    a variable: int score = 0; That statement announces to Java that a variable, of
+    type int, named score. That statement initializes score, by assigning it a value
+    of 0.
+
+
+    +   • See assign, initialize, value, variable.
+
+
+    +   • empty string – An empty string is a string that doesn’t contain ANY characters.
+    It’s represented by the literal, "". See literal, string.
+
+
+    +   • entry point – When a program runs, the place in its code, from which it
+    starts running, is called its entry point. The entry point of a Java program is
+    its main method. See method, run.
+
+
+    +   • evaluate – To evaluate an expression is to calculate its result. See expression,
+    result.
+
+
+    +   • execute – To execute a program or piece of code is to run it in. See run.
+
+
+    +   • expression – An expression is a combination of one or more operands and
+    zero or more operators, which yields a result, when gets evaluated. Some examples
+    of expressions are 5, x + 1, and (a + b) / 7.0. See evaluate, operand, result.
+
+
+    +   • false – “False” is the Boolean value, which corresponds to “no” or a light
+    being off. Some examples of Boolean expressions that evaluate to false are “45
+    is less than 40.\”, “George Washington is alive.\”, and “There are 57 states in
+    the United States of America.\”. See Boolean, expression, evaluate, true.
+
+
+    +   • floor – The floor of a number is the largest integer that is less than or
+    equal to number. For example, the floor of 1.6 is 1. See ceiling, integer.
+
+
+    +   • IDE – See integrated development environment.
+
+
+    +   • identifier – An identifier is the name of a variable, symbolic constant,
+    method, or class. See class, symbolic constant, variable.
+
+
+    +   • statement – An if statement is a kind of conditional statement, in Java.
+    It of one block, followed by zero or more else blocks, by zero or one else blocks.
+    See block, conditional statement, statement. An example of an if statement:
+
+
+    ```
+
+    if (grade >= 90)
+
+    ```
+
+
+    ```
+
+    System.out.println("You got an A.");
+
+    ```
+
+
+    ```
+
+    else if (grade >= 80)
+
+    ```
+
+
+    ```
+
+    System.out.println("You got a B.");
+
+    ```
+
+
+    ```
+
+    else if (grade >= 70)
+
+    ```
+
+
+    ```
+
+    System.out.println("You got a C.");
+
+    ```'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '```
+
+    else if (grade >= 65);
+
+    System.out.println("You got a D.");
+
+    else
+
+    System.out.println("You got an F.");
+
+    ```
+
+
+    +   illegal – If a sequence of characters is illegal, Java DOES NOT allow you
+    to use it as an identifier, in your code. Some examples of illegal identifiers
+    are 2for1, #John, and -). See character, identifier, legal.
+
+
+    +   import statement – An import statement is a statement that allows a Java program
+    to use an "external" class. Here, an "external" class is one that belongs to neither
+    the program’s own package, nor the java.lang package. See class, package, statement.
+    An example of an import statement:
+
+
+    ```
+
+    import java.util.Scanner;
+
+    ```
+
+
+    +   indent – To indent text is to place spaces or tabs to its left.
+
+
+    +   initialize – To assign a value to a variable, the first time, is to initialize
+    a variable: An example of a statement that declares and initializes a variable:
+    int score = 0; That statement initializes the variable, score, by assigning it
+    a value of 0. See assign, declare, value, variable.
+
+
+    +   integer – An integer is a number that can be positive, negative, or zero.
+
+
+    +   integer division – Integer division is the operation of dividing an integer
+    by another integer, the / operator, in the expression, x / y, performs division
+    if BOTH x and y are of type. If EITHER x or y is of type double, then the / operator
+    will perform ordinary division. To perform integer division, get the result of
+    x ÷ y as a decimal, and remove the part after the decimal point. For example,
+    integer division of 11 by 5 yields 2, because 11 ÷ 5 = 2.2 = 2. See expression,
+    integer, result.
+
+
+    +   integrated environment – An integrated development environment is a piece
+    of software that allows you to write your code, compile it, run your programs,
+    and debug it, all in one. Some examples of integrated environments are NetBeans,
+    Eclipse, and Xcode. See compiler, debug, run, software, source code.
+
+
+    +   Java Development Kit – The Java Development Kit is a collection of tools that
+    allows you to develop Java programs. See software development.
+
+
+    +   Java Runtime Environment – The Java Runtime Environment is a piece of software
+    that allows your computer to run Java programs. See run.
+
+
+    +   JDK – See Java Runtime Environment.
+
+
+    +   lazy evaluation – Lazy evaluation is a shortcut Java takes, when evaluating
+    certain expressions. For example, for the Boolean expression, A && B && ..., to
+    yield true, ALL of its input values must be true. If any of them are false, the
+    expression will yield false, NO MATTER WHAT the others are. Therefore, once a
+    false is encountered, Java will not evaluate any more of the input values, since
+    Java knows the expression’s result is false. Also, in order for the Boolean expression,'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'A || B ..., to yield false, ALL of its input values must be false. IF ANY of
+    them are true, the expression will yield true, NO MATTER the other ones are. Therefore,
+    once a true is encountered, Java will not evaluate any of the input values, since
+    Java knows the expression''s result is true. See Boolean expression, evaluate,
+    false, logical AND, logical OR, result, true, value.
+
+
+    +   legal – If a sequence of characters is legal, Java allows you to use it as
+    an identifier, for your code. Some examples of legal identifiers are x, ABC123,
+    and high_quality.
+
+
+    +   length – A’s length is the number of characters it contains. For example,
+    the length of “hot dog” is 7. See character, string.
+
+
+    +   literal – A literal of some type is like a variable of that type, which has
+    that value, but has no name, in your code. Some examples of literals are 42 (an
+    integer literal), 98.6 (a double literal), and “Laura” (a string literal). See
+    data type, identifier, string, type, variable.
+
+
+    +   logical AND – The logical AND operator (&&) is used to check whether several
+    Boolean values are ALL true. See Boolean, Boolean expression, false, true, truth
+    table, value. The truth table for the logical AND operator, where A and B are
+    Boolean expressions:
+
+
+    | A | B | A AND B |
+
+    |---|---|---|
+
+    | false | false | false |
+
+    | false | true | false |
+
+    | true | false | false |
+
+    | true | true | true |
+
+
+    +   logical NOT – The logical NOT operator (!) is used to negate a Boolean value.
+    See Boolean, Boolean expression, false, true, truth table, value. The truth table
+    for the logical NOT operator, where A is a Boolean expression:
+
+
+    | A | NOT A |
+
+    |---|---|
+
+    | false | true |
+
+    | true | false |
+
+
+    +   logical operator – In Java, the most important logical operators are ! (logical
+    NOT), &&& (logical AND), and || (logical OR). They are used to construct complex
+    Boolean expressions. See Boolean expression, logical AND, logical NOT, logical
+    OR.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'logical OR – the logical operator (||) is used to check AT LEAST one of several
+    Boolean values is true. See Boolean, Boolean expression, false, true, truth table,
+    value. The truth table for the logical OR operator, where A and B are Boolean
+    expressions:
+
+
+    | A | B | A OR B |
+
+    |--- |--- |--- |
+
+    | false | false | false |
+
+    | false | true | true |
+
+    | true | false | true |
+
+    | true | true | true |
+
+
+    +   * loop – A loop is a programming construct that allows the computer to execute
+    a piece of code multiple times. With a loop, you can tell the computer to perform
+    an action more than once. However, with a loop, you only have to write the piece
+    of code, which performs that action, once. A loop is one kind of loop, in Java.
+    See execute, while loop. An example of a loop:
+
+
+    ```
+
+    while (i <= 256)
+
+    {
+
+    System.out.println("The value of i is "
+
+    + i + "");
+
+    ni = i * 2;
+
+    }
+
+    ```
+
+
+    +   * member – A member of a class is a variable or method, which belongs to that
+    class. See class, method, variable.
+
+    * method – A method is a “subprogram”, which performs one of a program’s tasks,
+    whenever it is called. See call.
+
+    * mod – Mod is for modulus. “Modulus” is a fancy word for the remainder of a division
+    operation. For example, 35 mod 4 is 3. See modulus.
+
+    * modulus – The modulus of a division operation is its remainder. For example,
+    the modulus of 35 divided by 4 is 3. In Java, the expression, x % y, yields the
+    modulus of x divided by y. See expression, mod.
+
+    * multi-line comment – A multi-line comment is a comment that can span multiple
+    lines of code. Its text is written between-en between a /* and a /. See comment,
+    single-line comment. An example of a multi-line comment:
+
+    /* Program: Name Sorter
+
+    by Andy Rockstone'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'Sorts a list of names in alphabetical order. */
+
+
+    +   naming convention – A naming convention is a way of naming things. For an
+    example of a Java naming convention, see section A-2 of the Appendix. See identifier.
+
+
+    +   negate – To negate a Boolean value is to change it to its opposite Boolean
+    value. The Boolean value, true, when negated, becomes false. See Boolean, false,
+    logical NOT, true, value.
+
+
+    +   nest – The body of a smaller piece of code is nested within the body of a
+    larger piece of code, where the entire body of the smaller piece is located within
+    the body of the larger piece. See body.
+
+
+    +   newline – A newline is a special character or sequence of characters, which
+    means “put all text after the next line” to the computer. A newline is a press
+    of the Enter/Return key. See character, whitespace.
+
+
+    +   NOT – See logical NOT.
+
+
+    +   object – An object is a “thing”, which as an individual defines the concept
+    of a TYPE of object (NOT the same thing as an individual object!). See behavior,
+    class, state, type.
+
+
+    +   object-oriented programming language – An object-oriented programming language
+    is a programming language, in which much of a program’s code is organized around
+    the use of objects and their classes. Some examples of object-oriented programming
+    languages are Java, C#, and Objective-C. See class, object, programming language.
+
+
+    +   opening curly brace – An opening curly brace is a {}. See closing curly brace,
+    curly braces.
+
+
+    +   operand – An operand is a piece of data that acts upon. For example, in the
+    expression, 5 * h, the operands of the * operator are 5 and h. See data, expression.
+
+
+    +   OR – See logical OR.
+
+
+    +   output – To output something is to write it on the screen. A program’s output
+    is the text on the screen. See print.
+
+
+    +   package – A package is like a folder that contains one or more classes. See
+    class.
+
+
+    +   pass – To pass an argument to a method is to call that method with argument.
+    For example, in the following print statement:
+
+
+    ```
+
+    System.out.println("Have a nice day!");
+
+    ```
+
+
+    “Have a nice day!” is the argument that gets passed to the print method. See argument,
+    call, data, method.
+
+
+    +   primitive data type – A primitive data type is a simple data type, which is
+    built into Java. Primitive data types are NOT defined by classes. Individual values
+    and variables of primitive data types are often primitives. Examples of primitive
+    data types are int, double, and boolean. See class, data type, object, type, variable.
+
+
+    +   print – To print something is to write it on the screen. See print, statement.
+
+
+    +   print statement – A statement is a statement that tells the computer to print
+    something on the screen. An example of a print statement:
+
+
+    ```
+
+    System.out.println("Hello!");
+
+    ```'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: 'programming language – A programming language is a special language that allows
+    a person (a programmer) to tell a computer to do something, telling it EXACTLY
+    how to do that. Some examples of programming languages are Java, C++, and Python.
+
+
+    project – A project is a program’s home, while it is being written.
+
+
+    prompt – A prompt is something (like a message on the screen) that indicates that
+    a program is waiting for information from a user. To prompt a user is to somehow
+    tell that user to input some information. See user.
+
+
+    relate – To relate a quantity to another is to compare the two, in some way. See
+    relational operator
+
+
+    relational operator – In Java, the six relational operators are == (equal to),
+    != (not equal to), < (less than), <= (less than or equal), > (greater than), and
+    >= (greater than or equal to). They are used to relate (compare) quantities to
+    each other. See Boolean expression.
+
+
+    reserved word – A reserved word is a “word” with a special meaning in Java. NetBeains
+    has reserved words, in your code, in blue. Some examples of reserved words are
+    int, public, and class.
+
+
+    result – An expression yields its result, when expression gets evaluated. For
+    example, the expression, 7 + 2 yields a result of 9. See evaluate, expression,
+    value.
+
+
+    return – A method returns a value, when it gives that value back to its caller.
+    If the following assignment statement to the main method of the Math class returns
+    a double.
+
+
+    ```
+
+    double result = Math.pow(3.0, 5.0);
+
+    ```
+
+
+    The pow method would return the value, 243.0 (3.0⁵), to the main method. The above
+    statement would act like the statement, double result = 243.0;. The returned value,
+    243.0, would then get assigned to the variable. See assign, assignment statement,
+    call, class, method, value, variable.
+
+
+    to run a program is to start it up and use it. When a program runs a piece of
+    code, the computer performs the actions specified by that code.
+
+
+    semicolon – A semicolon is a; Many, NOT ALL statements, in Java, with semicolons.
+    See statement.
+
+
+    single-line comment – A single-line comment is a comment that exists on one line
+    of code. Its text is written between a // and the end of that line. See comment,
+    multi-line comment. Examples of single-line comments:
+
+
+    ```
+
+    sum = n * (n + 1) / 2; // the sum of numbers 1-n
+
+    ```
+
+
+    ```
+
+    // a handy formula, indeed
+
+    ```
+
+
+    software – A computer program is a piece of software. software development – the
+    process of creating, testing, and improving upon software. See software.
+
+
+    source code – Source code (sometimes called source or code, for short) is text
+    that is written in a programming language. Source code can be turned into a program
+    by a compiler. See compiler, programming language.
+
+
+    source file – A source file is a text file that contains source code. In Java,
+    the names of it'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'source files end in .java. See source code.
+
+
+    +   state – State describes an object. For example, part of a car''s state is
+    its color: what color is the car parked in front of the general store? See object.
+
+
+    +   statement – A statement is a piece of code that tells the computers to perform
+    an action, as printing something on the screen or assigning a value to a variable.
+    A assignment statement, conditional statement, if statement, import statement,
+    print statement.
+
+
+    +   stream – A stream is a sequence of elements of data. These elements can be
+    processed one at a time, in order. See data.
+
+
+    +   string – A string is a sequence of characters. Think of the characters as
+    being string together, to form things like words and sentences. Some examples
+    of strings are "tool", "blue blob", and See Spot.\ See character.
+
+
+    +   symbolic constant – A symbolic constant is like a variable, except that you
+    can only assign it a value once. After that, value can never be changed by your
+    code.
+
+
+    +   test – To test a condition is to evaluate Boolean expression. See Boolean
+    expression, condition, evaluate.
+
+
+    +   token – A token is a string that can be treated as a “whole piece” of data,
+    rather than as a sequence of individual characters. For example, in ordinary speech
+    and writing, words are tokens. Like “box", is very different from the letters,
+    "b", "o", and "x", by themselves. See data, string.
+
+
+    +   true – “True” is the Boolean value, which corresponds to “yes” or a light
+    being on. Some examples of Boolean expressions that evaluate to true are “45 is
+    less than 50.", Francisco Franco is dead.", and “There are 50 states in the United
+    States of America.". See Boolean, Boolean expression, evaluate, false.
+
+
+    +   truth table – A table shows the output values of a Boolean expression for
+    every possible combination of its input values. See Boolean, Boolean expression,
+    false, logical AND, logical NOT, logical OR, true. The truth table for the complex
+    Boolean expression, (NOT A) OR (B AND C), where A, B, and C are Boolean expressions
+    (the input values of complex Boolean expression above):
+
+
+    | A | B | C | NOT A | B AND C | (NOT A) OR (B AND C) |
+
+    |---|---|---|---|---|---|
+
+    | F | F | F | T | F | T |
+
+    | F | F | T | T | F | T |
+
+    | F | T | F | T | F | T |
+
+    | F | T | T | T | T | T |
+
+    | T | F | F | F | F | F |
+
+    | T | F | T | F | F | T |'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '| T | T | F | F | F |
+
+    | T | T | T | F | T |
+
+
+    Note: In the above truth table, F stands for false, and T stands for true.
+
+
+    +   **type** – A type is the “category” into which an object falls. For example,
+    my car falls into the category of objects known as “cars”. Types are kind of like
+    classes. However, not all types, in Java, are classes! See **class, data type,
+    object, primitive data type.**
+
+
+    +   **underscore** – An underscore is a _ Underscores are often used to separate
+    words in identifiers, because identifiers cannot have spaces in them. See **identifier.**
+
+
+    +   **user** – A user is a person who uses a computer or program.
+
+
+    +   **value** – A value is something that can be stored in a variable. EVERY variable
+    has a value. Some examples of values are false, 42, and “Fred”. See **literal,
+    variable.**
+
+
+    +   **variable** – A variable is a named space in memory. A variable is used to
+    store a value. See **identifier, literal, value.**
+
+
+    +   **while loop** – A while loop is a kind of loop in Java. It consists of the
+    reserved word, “WHILE the loop’s condition (a Boolean expression), and its body.
+    The loop’s meaning is, WHILE the loop’s condition is true, execute the statements
+    in the body of the loop.” See **body, Boolean expression, condition, evaluate,
+    execute, loop, word, statement.** An example of a while loop:
+
+
+    +   **whitespace** – The most important whitespace characters are spaces and newlines.
+    See **character, newline.**'
+  merge: -1
+  pgno: 65
