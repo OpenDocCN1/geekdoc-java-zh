@@ -1,0 +1,2 @@
++   [非线性练习手册：混沌、分形、细胞自动机、遗传算法、基因表达编程、支持向量机、小波、隐马尔可夫模型以及基于 CC++、Java 和 Symbolic C++ 程序的模糊逻辑](README.md)
++   [非线性练习手册：混沌、分形、细胞自动机、遗传算法、基因表达编程、支持向量机、小波、隐马尔可夫模型以及基于 CC++、Java 和 Symbolic C++ 程序的模糊逻辑](the-nonlinear-workbook-chaos-fractals-cellular-automata-gene.md)
