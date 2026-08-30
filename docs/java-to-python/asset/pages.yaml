@@ -1,0 +1,4846 @@
+- img_proc: true
+  md: '# # Igor Vishnevskiy
+
+    # Java to Python
+
+    ## Python Learning Guide for Java Programmers'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Java to Python by Igor Vishnevskiy
+
+
+    # Table of Contents
+
+
+    +   1. A FIRST SIMPLE PROGRAM
+
+
+    +   2. COMPILING A PROGRAM
+
+
+    +   3. VARIABLES
+
+
+    +   4. CONTROL STATEMENTS AND LOOPS
+
+
+    +   4.1 if Statements
+
+
+    +   4.2 Nested if Statements
+
+
+    +   4.3 for Loop Statements
+
+
+    +   4.4 loop continue Statements
+
+
+    +   4.5 loop pass Statements
+
+
+    +   4.6 while Loop Statements
+
+
+    +   4.7 do-while Loop Statements
+
+
+    +   4.8 switch Statements
+
+
+    +   5. OPERATORS
+
+
+    +   5.1 Basic Arithmetic Operators
+
+
+    +   5.2 Relational and Boolean Logical Operators
+
+
+    +   5.3 Ternary Operator
+
+
+    +   6. CLASSES
+
+
+    +   6.1 Class Variables VS Instance Variables
+
+
+    +   6.2 Local Variables
+
+
+    +   6.3 Accessing Methods of a Class
+
+
+    +   6.4 Constructor
+
+
+    +   6.5 Nested Classes
+
+
+    +   6.6 Returning from Method
+
+
+    +   6.7 The finalize() Method
+
+
+    +   6.8 Overloading Methods
+
+
+    +   6.9 Overloading Constructor
+
+
+    +   6.10 Using Objects as Parameters
+
+
+    +   6.11 Recursion
+
+
+    +   6.12 Access Control
+
+
+    +   6.13 Static Methods
+
+
+    +   6.14 Final
+
+
+    +   6.15 Command-Line Arguments'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '6.16 Variable-Length Arguments
+
+
+    6.17 Inheritance
+
+
+    6.18 Abstract Classes
+
+
+    6.19 Importing Classes into a Workspace
+
+
+    6.20 Exception Handling
+
+
+    6.21 Throwing Custom Exception
+
+
+    6.22 @Decorators are not @Annotations
+
+
+    # 7. DATA STRUCTURES
+
+
+    7.1 Arrays
+
+
+    7.2 Accessing Values in Arrays
+
+
+    7.3 Updating Values in Arrays
+
+
+    7.4 Getting the Size of an Array
+
+
+    7.5 Sorting Arrays
+
+
+    7.6 Counting Values in an Array
+
+
+    7.7 Inserting a Value under a Certain Index in an Array
+
+
+    7.8 Return the Index of an Element in an Array
+
+
+    7.9 Difference between Appending and Extending to an Array
+
+
+    7.10 Deleting Elements from an Array by Index
+
+
+    7.11 Lists in Python Can Hold Anything
+
+
+    7.12 Multidimensional Arrays
+
+
+    7.13 List Comprehension
+
+
+    7.14 Tuple
+
+
+    7.15 Python''s Dictionary Is Java''s Map
+
+
+    7.16 Update an Existing Entry in a Dictionary
+
+
+    7.17 Add a New Entry to an Existing Dictionary
+
+
+    7.18 Emptying a Dictionary (Removing All Values)
+
+
+    7.19 Delete a Dictionary
+
+
+    7.20 Get the Size of a Dictionary
+
+
+    7.21 Getting Keys and Values of a Dictionary
+
+
+    7.22 Python Dictionary vs. JSON.
+
+
+    7.23 Sets
+
+
+    7.24 Frozen Set
+
+
+    7.25 Stacks
+
+
+    7.26 Queue
+
+
+    7.27 Linked List
+
+
+    7.28 Binary Trees
+
+
+    7.29 Graphs
+
+
+    # 8. MULTITHREADING AND MULTIPROCESSING
+
+
+    8.1 Multithreading'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '8.2 Synchronization in Multithreading
+
+
+    8.3 Multiprocessing
+
+
+    8.4 Synchronization in Multiprocessing
+
+
+    # 9. I/O
+
+
+    +   9.1 Reading Console Input
+
+
+    +   9.2 Reading from Files
+
+
+    +   9.3 How to Avoid Slurping While Reading Content of Large Files
+
+
+    +   9.4 Writing into Files
+
+
+    +   9.5 Appending into Files
+
+
+    +   9.6 Checking Path Existence
+
+
+    +   9.7 Creating a Path to File
+
+
+    +   9.8 Reading JSON Files
+
+
+    +   9.9 Writing JSON Files
+
+
+    +   9.10 Reading CSV Files
+
+
+    +   9.11 Writing CSV Files
+
+
+    +   9.12 Lambda Expressions
+
+
+    # 10. STRINGS
+
+
+    +   10.1 String Concatenation with Other Data Types
+
+
+    +   10.2 Character Extraction
+
+
+    +   10.3 String Comparison
+
+
+    +   10.4 StartsWith() and EndsWith()
+
+
+    +   10.5 Searching Strings
+
+
+    +   10.6 String Replace
+
+
+    +   10.7 String trim() in Python
+
+
+    +   10.8 Changing the Case of Characters
+
+
+    +   10.9 Joining Strings
+
+
+    +   10.10 String Length
+
+
+    +   10.11 Reverse a String
+
+
+    # 11. SORTING AND SEARCHING ALGORITHMS
+
+
+    +   11.1 Insertion Sort
+
+
+    +   11.2 Bubble Sort
+
+
+    +   11.3 Selection Sort
+
+
+    # 12. PYTHON''S MODULES, JAVA’S LIBRARIES
+
+
+    +   12.1 Installing Required Modules
+
+
+    +   12.2 Packaging-Required Modules with Your Project
+
+
+    # 13. RUNNING SHELL COMMANDS FROM PYTHON
+
+
+    +   13.1 Running a Single Shell Command'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# 13.2 Running Multiple Shell Commands as Array
+
+
+    # 14. QUERYING DATABASES
+
+
+    +   14.1 SQLite3
+
+
+    +   14.2 MySQL
+
+
+    +   14.3 Oracle
+
+
+    # 15. BULDING STAND-ALONE APPLICATIONS WITH PYTHON
+
+
+    +   15.1 PyInstaller
+
+
+    +   15.2 py2app
+
+
+    +   15.3 py2exe
+
+
+    # 16. BUILDING WEBSITES WITH PYTHON
+
+
+    +   16.1 Django
+
+
+    +   16.2 Flask
+
+
+    +   16.3 Pyramid'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# FROM THE AUTHOR
+
+
+    Python is much like Java and at times even looks simpler. But Python is just as
+    powerful as Java. If Java is the heavy metal of computer programming, then Python
+    is the jazz that opens doors of freedom in software development. Both Java''s
+    famous features such as encapsulation, inheritance and polymorphism. Both can
+    be used to develop desktop and web-based applications. Both are multi-platform
+    and run on all major platforms as Linux, MS Windows, and Mac OS. Both support
+    graphical user interface development.
+
+
+    Of course, there are also differences between Java and Python. For example, Java
+    programs must be compiled, but in Python you have a choice of compiling your programs
+    into stand-alone applications or running them as interpreted scripts or programs
+    launched by a command from the Command Prompt. There are many other similarities
+    and differences between these two languages, those similarities make it a lot
+    easier than you might think to learn Python, if you already know Java.
+
+
+    Learning Python myself, I realized how fast and easy it was to understand and
+    pick Python’s syntax when I started converting Java’s programming problems into
+    Python. I had already known Java and worked with it professionally for some time,
+    but I found myself having to learn Python fast to advance in my career. It motivated
+    me to find a way to harness my existing knowing to speed up the process of learning
+    a new language. This book is essentially a systematic presentation of the learning
+    process I documented in learning Python using knowledge of Java.
+
+
+    For the engineer who is already proficient in Java, it would be a waste of time
+    to study a'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Python textbook that begins with the basic concept of object-oriented programming,
+    since the concept of OOP software development is identical in all languages. The
+    differences from one language to another are in their syntax. Syntax is best learned
+    by using examples of the programming language that the engineer already knows.
+    That''s exactly the learning model of this book.
+
+
+    This book is for those who are already comfortable with developing using Java
+    programming language and therefore assumes knowledge of Java. Designed for Java
+    engineers who want to learn Python, this book walks you through the differences
+    between Java 8 and Python 2.7 syntax using examples from both languages. Specifically,
+    the book will demonstrate how to perform the same procedures in Java and Python.
+    For each procedure, the class names, method names, and variable names are kept
+    consistent between Java and Python examples. This way you can see clearly the
+    differences in syntax between the two languages. Using this approach, you will
+    be up to speed with Python in no time.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# 1. A FIRST SIMPLE PROGRAM\n\nRight from the first chapter, I will start with\
+    \ an example of a simple program coded in both Java and Python. Throughout this\
+    \ book you will see many similar examples that demonstrate exactly how differently\
+    \ or similarly the procedures are in these two languages.\n\nTake a look at the\
+    \ following simple Java program. It is very straightforward and you know exactly\
+    \ what it does. Then take a look at the Python version of the same program and\
+    \ read the explanation that follows. You will notice that both examples have exactly\
+    \ the same class names and method names. This will be the structure for all examples\
+    \ throughout this book—all exples, in both Java and Python, will have the same\
+    \ class names, method names, and variable names. This is done so you could clearly\
+    \ see the differences in syntax between Java and Python and pick up Python efficiently.\n\
+    \nLet's start conquering Python with Example 1.1.\n\nEXAMPLE 1.1\n\n```\nJava:\n\
+    /*\nThis is a simple Java program. (File name: SimpleProgram.java)\n*/\nclass\
+    \ SimpleProgram {\n    public void main(String args[]) {\n        printHelloWorld();\n\
+    \    }\n\n    public static void printHelloWorld() {\n        System.out.println(\"\
+    Hello World\");\n    }\n}\n```"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "// End of the Java program\n\nIn Python, the same program would be like so:\n\
+    \n# Python:\n\n# This is a simple Java program. (File name: pythonAnything.py)\n\
+    \n```\nclass SimpleProgram:\n    def __init__(self):\n        self.printHelloWorld()\n\
+    \n    def printHelloWorld(self):\n        print \"Hello World\"\n```\n\nrun =\
+    \ SimpleProgram()\n\n# End of the Python program\n\nThe example 1.1 is the same\
+    \ program coded in two languages. As you can see right away, the program starts\
+    \ with comments. In Java, comments are created by placing double forward slash\
+    \ in the front of the text (such as //comments) or slash asterisk slash that surround\
+    \ the text (such as /*comments*/). In Python, to place comments inside of your\
+    \ code, you will need to place the pound sign before the text instead of forward\
+    \ slashes (#comments).\n\nThe next difference is that Java, all code must reside\
+    \ inside the class, but in Python, the code can reside both inside and outside\
+    \ of the class. As you can see in the above example, my if statement is located\
+    \ outside of the class “SimpleProgram.” Similarly, functions can be written outside\
+    \ of the class and in Python. You will see how it's done in later examples.\n\n\
+    Now, what I called a “method” is written inside of the class. I call it a method\
+    \ in the same way I refer to methods in Java. In Python, if a function resides\
+    \ inside of the class, it's called a method. If a function resides outside of\
+    \ a class, it's called a function. Code could also reside outside of the class\
+    \ and outside of the function. Python executes code by line, top to bottom, automatically\
+    \ when the .py file is executed. In my case, if"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "statement is outside of the class and outside of all methods, executed first\
+    \ when\nPython runs the file pythonAnything.py, without calling it explicitly.\
+    \ Inside the if statement I\ncreate an instance of the class “SimpleProgram” what\
+    \ automatically executes the initializer\nmethod that resides inside of class\
+    \ SimpleProgram. In the initializer I make a\ncall to the printHelloWorld() which\
+    \ prints out “Hello World” on the screen.\n\nThe initializer is a method that\
+    \ is executed automatically when an instance of the\nclass is created. It is always\
+    \ written in the same format: def __init__(self): This method is\nvery useful\
+    \ as a setup method that automatically executes some piece of code to the\ncreation\
+    \ of the class's instance before the user can call and run other methods of class.\n\
+    \nIn Java, I explicitly specify that method is public. In contrast, all methods\
+    \ in Python are\nby default, eliminating the need for specification. To make methods\
+    \ private in\nPython, I add double underscore in front of the name of the method.\
+    \ So my initializer\nmethod __init__(self): is a private method. But my def printHelloWorld(self):\
+    \ method\nis public. If I wanted to turn it into a private member of the class,\
+    \ I would add two\\underscores in front of its name just like in the following\
+    \ example:\n\n```\ndef __printHelloWorld(self):\n```\n\nThat would change the\
+    \ way I call that method from initializer to:\n\n```\ndef __init__(self):\n  \
+    \  self.__printHelloWorld()\n```\n\nClass names in Java have the java extension,\
+    \ but in Python, file names come with the\n.py extension. One very important aspect\
+    \ to remember is that in Java, the class file name\nbe the same as a class name,\
+    \ but in Python the class file name can be different from\nt name of the class\
+    \ that resides inside of file.\n\nIn Java all contents of the classes—methods,\
+    \ loops, if statements, switches, etc.—are\nenclosed into blocks surrounded by\
+    \ curly braces {}. In Python curly braces do not exist,\ninstead, all code is\
+    \ denoted by indentation.\n\nIn Java:\n\n```\nif(x>y){\n    x=y++;\n```"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    For the same procedure in Python, simply remove the curly braces but retain the
+    indentation. Use one tab or four spaces for first-level indentation. For second-level
+    indentation, use two tabs or eight spaces; for third-level, three tabs or 12 spaces,
+    and so on.
+
+
+    # In Python:
+
+
+    ```
+
+    if x>y:
+
+    ```
+
+
+    ```
+
+    x = y + 1
+
+    ```
+
+
+    Semicolons is used to close a statement in Java, but in Python that is not necessary.
+
+
+    # In Java:
+
+
+    ```
+
+    System.out.print("Hello World");
+
+    ```
+
+
+    # In Python:
+
+
+    ```
+
+    print "Hello World"
+
+    ```
+
+
+    However, to print a string on a new line in Python, you need to add a new line
+    character \n to the beginning, middle, or end of the string, exactly where you
+    would like to insert a new line break.
+
+
+    # In Java:
+
+
+    ```
+
+    System.out.println("Hello World");
+
+    ```
+
+
+    # In Python:
+
+
+    ```
+
+    print "HelloWorld\n"
+
+    ```
+
+
+    Next, Example 1.2 demonstrates the differences between Java and Python in their
+    syntax of class and method structure.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "EXAMPLE 1.2\n\nIn Java:\n\n```\nclass AnyClass {\n    public void anyMethod()\
+    \ {\n        System.out.println(\"Hello World\");\n    }\n}\n```\n\nIn Python:\n\
+    \n```\nclass AnyClass:\n    def anyMehotd():\n        print(\"Hello World\\n\"\
+    )\n```"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# 2. COMPILING A PROGRAM\n\nBefore you can run a Java program, it first needs\
+    \ to be compiled by a Java compiler and turned into a set of bytecodes that the\
+    \ JVM can understand and execute. In Python, this is not necessary since programs\
+    \ can run as interpreted, although there is a way to compile a Python program\
+    \ into an executable file.\n\nMethod main() is used in Java applications to define\
+    \ the starting point of the application when Java's compiled .jar file is being\
+    \ executed to start a program. In Python, there is no main() method since the\
+    \ program is not compiled and I have access to all files of the program. As such,\
+    \ I can start a program by running the python command along with the file name\
+    \ passed to it as a first argument. Thus, any one of the files of the application\
+    \ could be my starting point for the application to take off running.\n\nIf you\
+    \ have ever taken a look at the code of Python programs, you probably noticed\
+    \ the following line of code:\n\n```\nif __name__ == \"__main__\":\n```\n\nDon't\
+    \ let this confuse you. This is not the main() as the one that exists in Java.\
+    \ Python's if __name__ == \"__main__\": condition is used to prevent a class from\
+    \ being executed when it is imported by another class, but it will execute when\
+    \ called directly by the python command. Examples 2.1 and 2.2 demonstrate the\
+    \ difference in syntax between a Python code with the if __name__ == \"__main__\"\
+    : condition and one without it.\n\nEXAMPLE 2.1\n\n# Start of the program\n\nclass\
+    \ SimpleProgram:\n\n```\ndef __init__(self):\n    self.PrintHelloWorld()\n```\n\
+    \n```\ndef printHelloWorld(self):\n    print \"Hello World\\n\"\n```"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "```\nrun = SimpleProgram()\n```\n\n```\n# End of the program\n```\n\n# EXAMPLE\
+    \ 2.2\n\n```\n# Start of the program\n```\n\n```\nclass SimpleProgram:\n    def\
+    \ __init__(self):\n        self.PrintHelloWorld(self)\n```\n\n```\ndef printHelloWorld(self):\n\
+    \    print \"Hello World\\n\"\n```\n\n```\nif __name__ == \"__main__\":\n    run\
+    \ = SimpleProgram()\n    print \"Program will execute.\"\nelse:\n    print \"\
+    This class was imported and won't execute.\"\n```\n\n```\n# End of the program\n\
+    ```\n\nLet's try Example 2.1 or Example 2.2 in action. For that, let's create\
+    \ a new file and name it pythonAnything.py. Next, paste code from Example 2.1\
+    \ into that file. Then place file into a directory that I name python_programs.\
+    \ Since I am on Mac OS X, I will be running my programs using Terminal. On Windows,\
+    \ you can use the same methods to run Python programs using the Command Prompt\
+    \ (CMD). Let's open a Terminal window and CD to the python_programs directory.\
+    \ Then, type the following command:\npythonAnything.py\n\nWhat I got is a “Hello\
+    \ World” output and a new line break created by \\n new line character. Remember\
+    \ to make sure that your characters in the code are in ASCII format. If you copied\
+    \ code right from the text of this book (its electronic version), the double quotes\
+    \ might paste in an unsupported by Python format. It might cause the following\
+    \ error:"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'File "pythonAnything.py", line 6
+
+
+    SyntaxError: Non-ASCII character ''\xe2'' in file pythonAnything.py on line 6,
+    but no encoding declared; see http://python.org/dev/peps/pe-0263/ for details
+
+
+    To fix it, manually reinsert the double quotes and all other special characters
+    to make sure that all are in the ASCII format. If the program worked correctly,
+    Figure 2.1 is what you can expect to see as an output in your Terminal window.
+
+
+    ![](img/bebc1023146c609f5624d94ba26630d3_14_0.png)
+
+
+    Figure 2.1
+
+
+    As easy as 1, 2, 3—you just ran your first Python program!'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 3. VARIABLES
+
+
+    Variables in Python carry the same definition as they do in Java. A variable is
+    the storage location in virtual memory that could be assigned with some value.
+    The value of a variable may be changed during the execution of the program or
+    could be left unchanged as constant. The next program shows how a variable is
+    declared and how it is assigned with a value in Python.
+
+
+    In Python, a variable acts in the same manner as in Java, but again, simpler.
+    In Java, all variables must be declared with a specific data type, such as integer,
+    string, or boolean. Python again eliminates the need to specify a variable''s
+    data type. You simply give a variable its name and assign it a value. Python automatically
+    detects if the assigned value is an integer, string, or any other data type and
+    automatically assigns variable the correct data type.
+
+
+    When a variable is created with an integer value, it becomes a variable of an
+    integer type. Therefore, if at a later time you wish to convert the variable to
+    a string, you would so explicitly as such: str(integerVariable).
+
+
+    Why would you want to convert an integer variable to a string? A great example
+    would be the concatenation of the integer variable to the string. (Concatenation
+    in Python is done in the same way as in Java, by placing a + sign between a string
+    and the variable that is concatenated to the string.) When concatenation is done
+    in Java, all concatenated variables are automatically converted to a string. Python,
+    however, does not provide the luxury of automatic conversion. To concatenate an
+    integer variable to a string variable, the integer variable has be explicitly
+    converted to the string in the following example:
+
+
+    ```
+
+    strVariable = "String One"
+
+    ```
+
+
+    ```
+
+    intVariable = 123
+
+    ```
+
+
+    ```
+
+    concatenated Variable = strVariable + str(intVariable)
+
+    ```'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'A similar concept is applicable to the rest of variable data types in Python.
+    In Example 3.1 I will go over every data type and demonstrate how Python’s type
+    conversions are done in action.
+
+
+    Let’s create a new file pythonAnythingTwo.py and put in the code from Example
+    3.1:
+
+
+    # EXAMPLE 3.1
+
+
+    # Start of the program
+
+
+    class SimpleProgram:
+
+
+    ```
+
+    def variablesInPython(self):
+
+    strVariableOne = "String One"
+
+    strVariableTwo = "98876"
+
+    strVariableThree = "9999.99"
+
+    intVariable = 0
+
+    booleanVariable = True
+
+    longVariable = long(9223372036854775807)
+
+    floatVariable = 123.123
+
+    ```
+
+
+    # Using Python’s function type(), I can see what
+
+    # data type is assigned to each variable by Python.
+
+    print("Types:")
+
+
+    ```
+
+    print type(strVariableOne)
+
+    print type(strVariableTwo)
+
+    print type(strVariableThree)
+
+    print type(intVariable)
+
+    print type(booleanVariable)
+
+    print type(longVariable)
+
+    print type(floatVariable)
+
+    ```
+
+
+    ```
+
+    print "\nConverting strVariableTwo to an Integer"
+
+    convertedVariable = int(strVariableTwo)
+
+    print convertedVariable
+
+    print type(convertedVariable)
+
+    ```
+
+
+    ```
+
+    print "\nConverting strVariableThree to an Integer"
+
+    ```'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '```
+
+    convertedVariable = int(float(strVariableThree))
+
+    print convertedVariable
+
+    print type(convertedVariable)
+
+    ```
+
+
+    ```
+
+    print "\nConverting strVariableTwo to a Float"
+
+    convertedVariable = float(strVariableTwo)
+
+    print convertedVariable
+
+    print type(convertedVariable)
+
+    ```
+
+
+    ```
+
+    print "\nConverting strVariableTwo to a Float"
+
+    convertedVariable = float(strVariableThree)
+
+    print convertedVariable
+
+    print type(convertedVariable)
+
+    ```
+
+
+    ```
+
+    print "\nConverting intVariable to a Long"
+
+    convertedVariable = long(intVariable)
+
+    print convertedVariable
+
+    print type(convertedVariable)
+
+    ```
+
+
+    ```
+
+    print "\nConverting longVariable to an Int"
+
+    convertedVariable = int(longVariable)
+
+    print convertedVariable
+
+    print type(convertedVariable)
+
+    ```
+
+
+    ```
+
+    print "\nConverting floatVariable to a String"
+
+    convertedVariable = str(floatVariable)
+
+    print convertedVariable
+
+    print type(convertedVariable)
+
+    ```
+
+
+    ```
+
+    print "\nConverting booleanVariable to a String"
+
+    convertedVariable = str(booleanVariable)
+
+    print convertedVariable
+
+    print type(convertedVariable)
+
+    ```
+
+
+    ```
+
+    print "\nConverting booleanVariable to an Integer"
+
+    convertedVariable = int(booleanVariable)
+
+    print convertedVariable
+
+    print type(convertedVariable)
+
+    ```
+
+
+    ```
+
+    print "\nUsing intVariable as a Boolean"
+
+    ```'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "```\nif intVariable:\n    print \"True\"\nelse:\n    print \"False\"\n\nprint\
+    \ \"\\nConcatenating all data types into one string variable\"\nconcatenatedVariable\
+    \ = strVariableOne + \\\n    str(intVariable) + \\\n    str(booleanVariable) +\
+    \ \\\n    str(longVariable) + \\\n    str(floatVariable)\nprint concatenatedVariable\n\
+    ```\n\nrun = SimpleProgram()\nrun.variablesInPython()\n\n# # End of the program\n\
+    \nFrom Example 3.1, it is clear to convert a variable to an integer, I used the\
+    \ Python function int().\n\nTo convert to a string, I used Python’s function str().\n\
+    \nTo convert to a float, or double as many as it can in Java, I used Python’s\
+    \ function float().\n\nTo convert to a long, I used Python’s function long().\n\
+    \nIn the section “Converting strVariableThree to an Integer” in Example 3.1, I\
+    \ first converted the string variable to float and then I converted the variable\
+    \ to integer. This is the way it works in Python. If the string variable has a\
+    \ floating point between digits, it cannot be directly converted to the integer.\
+    \ But with a little trick, I have still achieved my desired result.\n\n```\nconvertedVariable\
+    \ = int(float(strVariableThree))\n```\n\nIn the section “Using intVariable as\
+    \ a Boolean” in Example 3.1, the output that I got was “False.” That’s because\
+    \ my integer variable equaled zero. In Python, 0 will always be False and 1 will\
+    \ always be True. Therefore, in your programs instead of explicit True or"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'False you can return 0 or 1, which can then be used in a Boolean context.
+
+
+    I used Python’s function type() to find out what type was assigned to Python to
+    my variables. It is a very helpful function, since in many cases, especially when
+    debugging, you won’t know the data type of a variable by simply looking at the
+    code. Python 3.x, however, makes it possible to redefine the data type of variables,
+    even in Python 3.x, it is not necessary to redefine data types. Python 2.7 does
+    not support declaring data types for variables; it does automatically.
+
+
+    In the section “Concatenating all data types into one string variable,” I explicitly
+    cast all variables to a string using Python’s function str(). As I have already
+    mentioned, concatenation in Python does not automatically convert other data types
+    to string as in Java. Therefore, all non-string variables need to be explicitly
+    converted to a string before they could be concatenated to the string.
+
+
+    Another great example of casting in Python is this:
+
+
+    ```
+
+    a = "5"
+
+    b = 2
+
+    print(int(a) + b)
+
+    ```
+
+
+    Output will be: 7
+
+
+    The result of my pythonAnythingTwo.py program should look like Figure 3.1.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '```
+
+    python_programs — bash — 80x53
+
+    ivivishnevskyMacBookPython_programs ivishnevsky$ pythonanythingTwo.py
+
+    types are:
+
+    <type ''str''>
+
+    <type ''str''>
+
+    <type ''int''>
+
+    <type ''bool''>
+
+    <type ''long''>
+
+    <type ''float''>
+
+    Converting strVariableTwo to an Integer
+
+    987
+
+    <type ''int''>
+
+    Converting strVariableThree to an Integer
+
+    9999
+
+    <type ''int''>
+
+    Converting strVariableTwo to a Float
+
+    987.6
+
+    <type ''float''>
+
+    Converting strVariableTwo to a Float
+
+    999.29
+
+    <type ''float''>
+
+    Converting intVariable to a Long
+
+    8
+
+    <type ''long''>
+
+    Converting longVariable to an Int
+
+    922337236856475807
+
+    <type ''int''>
+
+    Converting floatVariable to a String
+
+    123.123
+
+    <type ''str''>
+
+    Converting booleanVariable to a String
+
+    True
+
+    <type ''str''>
+
+    Converting booleanVariable to an Integer
+
+    1
+
+    <type ''int''>
+
+    Using intVariable as a Boolean
+
+    False
+
+    Concatenating all data types into one string variable
+
+    String One8True922337236856475807123.123
+
+    ivishnevskyMacBookPython_programs ivishnevsky$ _
+
+    ```
+
+
+    Figure 3.1'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# 4. CONTROL STATEMENTS AND LOOPS\n\n# 4.1  if Statements\n\nIn Python, the\
+    \ concept of if statements is the same as in Java. The only slight difference\
+    \ is syntax. Example 4.1 is a clear demonstration of this difference.\n\nEXAMPLE\
+    \ 4.1\n\nJava:\n\n```\nif (x > y) {\n    System.out.println(\"X is larger than\
+    \ Y\");\n} else if (x == y) {\n    System.out.println(\"X equals to Y\");\n} else\
+    \ if (x < y) {\n    System.out.println(\"X is smaller than Y\");\n} else {\n \
+    \   System.out.println(\"None of the above were true\");\n}\n```\n\nPython:\n\n\
+    ```\nif x > y:\n    print \"X is larger than Y\"\nelif x == y:\n    print \"X\
+    \ equals to Y\"\nelif x < y:\n    print \"X is smaller than Y\"\nelse:\n    print\
+    \ \"None of the above are true\"\n```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# 4.2 Nested if Statements\n\nEXAMPLE 4.2\n\nJava:\n\n```\nif (x > y) {\n \
+    \   if (b < y) {\n        System.out.println(\"B is smaller than Y and X is larger\
+    \ than Y\");\n    }\n}\n```\n\nPython:\n\n```\nif x > y:\n    print(\"B is smaller\
+    \ than y and X is larger than Y\")\n```\n\nThis is all I will cover on if statements,\
+    \ since you as a Java developer are familiar with the concept of conditional statements.\
+    \ Example 4.2 should be a sufficient illustration of the difference in syntax\
+    \ between Java and Python. Everything else about if statements is the same between\
+    \ Java and Python. In the previous program pythonAnythingTwo.py (Example 3.1),\
+    \ the section “Using intVariable as a Boolean” uses if statements to check if\
+    \ “intVariable” contained 0 (False) or 1 (True).\n\n# 4.3 for Loop Statements\n\
+    \nFor loops in Python are written in a way similar to how enhanced for loops are\
+    \ written in Java. Please take a look at the Examples 4.3.1, 4.3.2, and 4.3.3,\
+    \ which are three different situations where for loops could be used.\n\nEXAMPLE\
+    \ 4.3.1"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "Java:\n\n```\nfor(int x=0; x<5; x++){\n    System.out.println(x);\n}\n```\n\
+    \nPython:\n\n```\nfor x in range(0, 5):\n    print x\n```\n\n# EXAMPLE 4.3.2\n\
+    \nJava:\n\n```\nString[] array = {\"one\", \"two\", \"three\"};\nfor(String value\
+    \ : array){\n    System.out.println(value);\n}\n```\n\nPython:\n\n```\narray =\
+    \ [\"one\", \"two\", \"three\"];\nfor value in array:\n    print value\n```\n\n\
+    # EXAMPLE 4.3.3\n\nJava:\n\n```\nString word = \"anyWord\";\nfor (int x = 0; x\
+    \ < word.length(); x++) {\n    System.out.println(word.charAt(x));\n}\n```\n\n\
+    Python:\n\n```\nfor letter in \"anyWord\":\n    print letter\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'In Example 4.3.1, I have printed out the value of the x variable in each iteration
+    of a given loop. In Python, the function range(0, 5) basically creates a list
+    of integers from 0 to 5, and by using a format similar to Java’s enhanced loop,
+    I print out every value of that list and assign them to variable x.
+
+
+    In Example 4.3.2, I created an automatically initialized array containing three
+    string values. Using the example from Java, I used enhanced format to print every
+    value of my array. Again, I see that Python’s for format is very similar to Java’s
+    enhanced loop format. Since Python doesn''t care about data type when running
+    through the loop, the need to specify the data type of each value disappears.
+    The colon sign between the value and the array is replaced with in. Instead of
+    a code block defined by a pair of opening and closing curly braces as in Java,
+    I add a colon sign at the end of the header of a for loop, for value in array.;
+    and with one extra tab of indent following it I specify what should be executed
+    inside the given for loop. In my case, it print value.
+
+
+    Note that the syntax for the automatically initialized array in Python also changed
+    slightly. The values are surrounded by curly braces in Java, but by square braces
+    in Python. I will go over the details of Python’s data structures in chapter 7,
+    which will include all you need to know about Python’s array lists.
+
+
+    In Example 4.3.3, I used for loop to print out every letter of the given string.
+    Python sees all strings as arrays of characters, therefore to iterate through
+    a string you use the same method as iterating through an array:
+
+
+    EXAMPLE 4.3.4
+
+
+    ```
+
+    for letter in "anyWord":
+
+    print letter
+
+    ```
+
+
+    Example 4.3.4 demonstrates the same as if I would have manually broken up a string
+    anyWord into an array of letters and then specified the variable referencing my
+    letterArray in the for loop as in Example 4.3.5:
+
+
+    EXAMPLE 4.3.5'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "```\nletterArray = [\"a\", \"n\", \"y\", \"W\", \"o\", \"r\", \"d\"]\nfor letter\
+    \ in letterArray:\n    print letter\n```\n\n# 4.4 loop continue Statements\n\n\
+    Now, loop continue statements is where it gets a little tricky in Python. In Java,\
+    \ you are allowed to label for loops and then use continue statements to jump\
+    \ from one for loop to another the hierarchy of nested for loops. In Python, that's\
+    \ not possible to even simulate in theory. Continue statement will only take you\
+    \ to the top of the loop where it resides. Example 4.4 demonstrates what is possible\
+    \ with continue statements in Python, but no more than that.\n\nEXAMPLE 4.4\n\n\
+    Java:\n\n```\nint b = 10;\ncurentLoop: for (int number = 0; number < b; number++)\
+    \ {\n    if (number == 8) {\n        continue curentLoop;\n    }\n    System.out.println(number);\n\
+    }\n```\n\nPython:\n\n```\nb = 10\nfor number in b:\n    if number == 8:\n    \
+    \    continue\n    print number\n```\n\nTo summarize, Example 4.4 will print 0\
+    \ to 9, but it will skip digit 8. It is because the continue statement makes the\
+    \ program go back to the beginning of the loop without"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "executing the code located below the *continue* statement.\n\n# 4.5 loop pass\
+    \ Statements\n\nPython has an additional statement, the *pass* statement, that\
+    \ does not exist in Java, but it is very easy to understand because it speaks\
+    \ for itself. In Java, you can simply create an empty method that you would like\
+    \ to come back to and finish later. You can just leave there knowing that it won't\
+    \ hurt your program. In Python, however, the program won't start if there is an\
+    \ empty method in the class. For that reason the *pass* statement was introduced.\
+    \ It lets you create an empty method—an empty statement or empty loop—inside your\
+    \ program. Example 4.5 demonstrates how this is done.\n\nEXAMPLE 4.5\n\n**Python:**\n\
+    \n```\nclass MyPythonClass:\n  def methodOne(self):\n    pass\n\ndef methodTwo(self):\n\
+    \  b = 10\n  for number in b:\n    if number == 8:\n      pass\n    print number\n\
+    \  while b == 10:\n    pass\n```\n\n# 4.6 while Loop Statements\n\nThe concept\
+    \ of *while* loops is another point of similarity between Java and Python. The"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "while loop has a Boolean condition. While that condition is true, the code\
+    \ that resides inside the while loop is executed. When the boolean condition becomes\
+    \ false, the while loop stops and exits to the next step of the program.\n\n#\
+    \ EXAMPLE 4.6.1\n\nJava:\n\n```\nint a = 1;\nint b = 10;\nwhile (a < b) {\n  \
+    \  System.out.println(\"a is smaller than b\");\n}\n```\n\nPython:\n\n```\na =\
+    \ 1\nb = 10\nwhile a < b:\n    print(\"a is smaller than b\")\n```\n\nIn case\
+    \ you need to create an infinite loop, Example 4.6.2 shows exactly how it is done\
+    \ in Python.\n\n# EXAMPLE 4.6.2\n\nJava:\n\n```\nwhile (true) {\n    System.out.println(\"\
+    running infinitely\");\n}\n```\n\nPython:\n\n```\nwhile True:\n    print(\"running\
+    \ infinitely\")\n```"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# 4.7 do-while Loop Statements\n\nThe do-while loop unfortunately does not\
+    \ exist in Python. However, since I am exploring Python step by step and discover\
+    \ how procedures in Java can also be done in Python, I can simulate a do-while\
+    \ loop concept in Python with a bit of savvy thinking. Take a look at Example\
+    \ 4.7. Just as in Java, my Python loop will execute at least once and exit when\
+    \ the condition has been met.\n\nEXAMPLE 4.7\n\nJava:\n\n```\nint a = 1;\nint\
+    \ b = 10;\nd {\n    System.out.println(\"a is smaller than b\");\n    a++;\n}\
+    \ while (a < b);\n```\n\nPython:\n\n```\na = 1\nb = 10\nwhile True:\n    print(\"\
+    a is smaller than b\")\n    a += 1\n    if a > b:\n        break\n```\n\nExample\
+    \ 4.7 also demonstrated the use of a break statement in Python to exit a loop\
+    \ when the condition has been met."
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# 4.8 switch Statements\n\nPython, unlike many other programming languages,\
+    \ does not have a Switch statement. But again, I thought outside the box and found\
+    \ a way to use Python’s dictionary data structure in a similar way as switch statements\
+    \ in Java.\n\nLet's see how I can create my own switches in Python in the following\
+    \ examples (4.8.1 and 4.8.2).\n\nEXAMPLE 4.8.1\n\nJava:\n\n```\nprivate String\
+    \ stringSwitch(String argument) {\n    String valueOut = \"\";\n    switch (argument)\
+    \ {\n        case \"OneIn\": valueOut = \"OneOut\";\n            break;\n    \
+    \    case \"TwoIn\": valueOut = \"TwoOut\";\n            break;\n        case\
+    \ \"ThreeIn\": valueOut = \"ThreeOut \";\n            break;\n        case \"\
+    FourIn\": valueOut = \"FourOut\";\n            break;\n        default: valueOut\
+    \ = \"Invalid Value\";\n            break;\n    }\n    return valueOut;\n}\n```\n\
+    \nPython:\n\n```\ndef __stringSwitch(self, argument):\n    return {\n        \"\
+    OneIn\": \"OneOut\",\n        \"TwoIn\": \"TwoOut\",\n        \"ThreeIn\": \"\
+    ThreeOut\",\n        \"FourIn\": \"FourOut\",\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "[argument]\n\nEXAMPLE 4.8.2\n\nJava:\n\n```\nprivate String integerSwitch(int\
+    \ argument) {\n    String valueOut = \"\";\n    switch (argument) {\n        case\
+    \ 1: valueOut = \"One\";\n            break;\n        case 2: valueOut = \"Two\"\
+    ;\n            break;\n        case 3: valueOut = \"Three\";\n            break;\n\
+    \        case 4: valueOut = \"Four\";\n            break;\n        default: valueOut\
+    \ = \"Invalid Value\";\n            break;\n    }\n    return valueOut;\n}\n```\n\
+    \nPython:\n\n```\ndef __integerSwitch(self, argument):\n    return {\n       \
+    \ 1: \"One\",\n        2: \"Two\",\n        3: \"Three\",\n        4: \"Four\"\
+    ,\n    }\n```\n\nThat is as close as I could get to Java’s Case/Switch concept\
+    \ in Python. I have incorporated Java’s switch examples into separate private\
+    \ methods in Python you would have to build a switch in its own separate method,\
+    \ which would return a value of the dictionary of the specified key. Remember\
+    \ key and value pair in Java? You probably guessed correctly. Dictionary in Python\
+    \ is the same as Map in Java. In chapter 7 I will go"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "over all details, similarities, and differences between the data structures\
+    \ of Java and\nPython.\n\nFor now, let's see the previous examples in action.\
+    \ Let's add one more .py file and call it\npythonAnythingThree.py. Save the code\
+    \ from Example 4.9 in that file and execute it in\nTerminal, just as I executed\
+    \ the first two of my Python programs. Please note how I called\nt first two methods\
+    \ that were public and then last two methods that were private since\nthey had\
+    \ two underscore characters in front of their names. I called all four example\n\
+    methods from within the def functionThree(self): method.\n\n# EXAMPLE 4.9\n\n\
+    # Start of the program\nclass SimpleProgram:\n\n```\ndef functionThree(self):\n\
+    \    self.ourListStatementExamples()\n    self.ourListExamples()\n    print self.__stringSwitch(\"\
+    TwoIn\")\n    print self.__integerSwitch(3)\n\ndef ourListStatementExamples(self):\n\
+    \    x = 3\n    y = 23\n    if x > y:\n        print(\"X is larger than Y\")\n\
+    \    elif x == y:\n        print(\"X equals to Y\")\n    elif x < y:\n       \
+    \ print(\"X is smaller than Y\")\n    else:\n        print(\"None of the above\
+    \ are true\")\n\ndef ourListExamples(self):\n    for x in range(0, 5):\n     \
+    \   print x\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "```\narray = [\"one\", \"two\", \"three\"];\nfor value in array:\n    print\
+    \ value\n```\n\n```\nfor letter in \"anyWord\":\n    print letter\nndef __stringSwitch(self,\
+    \ argument):\n    return {\n        \"OneIn\": \"OneOut\",\n        \"TwoIn\"\
+    : \"TwoOut\",\n        \"ThreeIn\": \"ThreeOut\",\n        \"FourIn\": \"FourOut\"\
+    ,\n    }[argument]\n```\n\n```\ndef __integerSwitch(self, argument):\n    return\
+    \ {\n        1: \"One\",\n        2: \"Two\",\n        3: \"Three\",\n       \
+    \ 4: \"Four\",\n    }[argument]\n```\n\nrun = SimpleProgram()\nrun.functionThree()\n\
+    \nThe output of the pythonAnythingThree.py program should be the same as shown\
+    \ in Figure 4.1 below."
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '```
+
+    python_programs - bash - 82x21
+
+    bash
+
+    ishishnevskiyffacBookPro:python_programs ivishnevskiy$ python pythonanythingThree.py
+
+    X is smaller than Y
+
+    0
+
+    1
+
+    2
+
+    3
+
+    4
+
+    one
+
+    two
+
+    three
+
+    a
+
+    y
+
+    wo
+
+    or
+
+    d
+
+    Two00t
+
+    Three
+
+    ishishnevskiyffacBookPro:python_programs ivishnevskiy$|
+
+    ```
+
+
+    Figure 4.1
+
+
+    In the chapters to follow I will not show the screenshots of the coding results.
+    But I encourage you to run each example and see with your own eyes how things
+    work. Try it on your own, just like I have have done thus far, and you will see
+    how fast you can pick up Python.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# 5. OPERATORS
+
+
+    # 5.1 Basic Arithmetic Operators
+
+
+    The basic arithmetic operators in Java and Python are for the most part the same.
+    I will try to keep this chapter short and only describe a handful of differences.
+
+
+    TABLE 5.1.1
+
+
+    | Operator | Result |
+
+    | --- | --- |
+
+    | + | Addition |
+
+    | - | Subtraction |
+
+    | * | Multiplication |
+
+    | / | Division |
+
+    | % | Modulus |
+
+    | += | Addition assignment |
+
+    | -= | Subtraction assignment |
+
+    | *= | Multiplication assignment |
+
+    | /= | Division assignment |
+
+    | %= | Modulus assignment |
+
+
+    Python does not support the following formats of increment and decrement as in
+    Java:
+
+
+    ```
+
+    x++
+
+    ++x
+
+    x--
+
+    --x
+
+    ```
+
+
+    Instead, in Python you could use the following for increment and decrement:'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '```
+
+    x += 1
+
+    x -= 1
+
+    ```
+
+
+    # 5.2 Relational and Boolean Logical Operators
+
+
+    TABLE 5.2.1
+
+
+    | Operator | Result |
+
+    | --- | --- |
+
+    | = | Equal to |
+
+    | is | Equal to |
+
+    | != | Not equal to |
+
+    | is not | Not equal to |
+
+    | in | Contains |
+
+    | not in | Does not contain |
+
+    | not | Boolean NOT |
+
+    | and | Boolean AND |
+
+    | or | Boolean OR |
+
+    | > | Greater than |
+
+    | < | Less than |
+
+    | >= | Greater than or equal to |
+
+    | <= | Less than or equal to |
+
+
+    Example 5.2.1 demonstrates the use of some of the relational operators that are
+    different in Python compared to Java.
+
+
+    EXAMPLE 5.2.1
+
+
+    Java:
+
+
+    ```
+
+    String stringOne = "Hello World";
+
+    String stringTwo = "Goodbye World";
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "```\nboolean returnValue;\nif (stringOne.contains(\"World\")) {\n    System.out.println(\"\
+    string contains word World\");\n} else if (!stringOne.contains(\"World\")) {\n\
+    \    System.out.println(\"string does not contain word World\");\n}\n```\n\n```\n\
+    if (stringOne == \"Hello World\") {\n    System.out.println(\"String is Hello\
+    \ World\");\n}\n```\n\n```\nif (stringOne != \"Hello World\") {\n    System.out.println(\"\
+    String is not Hello World\");\n}\n```\n\n```\nif (stringOne.contains(\"Hello\"\
+    ) & stringTwo.contains(\"Goodbye\")) {\n    returnValue = true;\n}\n```\n\n```\n\
+    if (stringOne.contains(\"Hello\") || stringTwo.contains(\"Goodbye\")) {\n    returnValue\
+    \ = true;\n}\n```\n\n# Python:\n\n```\nstringOne = \"Hello World\"\nstringTwo\
+    \ = \"Goodbye World\"\nif \"World\" in stringOne:\n    print(\"string contains\
+    \ word World\")\nelif \"World\" not in stringOne:\n    print(\"string does not\
+    \ contain word World\")\n```\n\n```\nif stringOne is \"Hello World\":\n    print(\"\
+    String is Hello World\")\n```\n\n```\nif stringOne is not \"Hello World\":\n \
+    \   print(\"String is not Hello World\")\n```\n\n```\nif \"Hello\" in stringOne\
+    \ and \"Goodbye\" in stringTwo:\n    returnValue = True\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "```\nif \"Hello\" in stringOne or \"Goodbye\" in stringTwo:\n    returnValue\
+    \ = True\n```\n\n# 5.3 Ternary Operator\n\nTernary (three-way) operator ? does\
+    \ not exist in Python as it does in Java, but the ternary condition can be achieved\
+    \ with a slightly different syntax starting from Python's version 2.5. The concept\
+    \ is the same as in Java. See Example 5.3.1 below.\n\nEXAMPLE 5.3.1\n\nJava:\n\
+    \n```\nint b = 8;\nint x = b > 8 ? 4 : 9;\n```\n\nPython:\n\n```\nb = 8\nx = 4\
+    \ if b > 8 else 9\n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# 6. CLASSES\n\nJust as in Java, classes in Python also define a new data type.\
+    \ Once referenced, a new data can be used to create an object of it. Classes in\
+    \ Python are also templates of an object with their functions encapsulated within\
+    \ the form of methods. Once created, objects are also called instances of their\
+    \ classes.\n\nExample 6.0 demonstrates the simple version of the class and method\
+    \ inside of it, in Java and Python:\n\nEXAMPLE 6.0\nJava:\n\n```\npublic class\
+    \ NameOfTheClass {\n    public void nameOfTheMethod() {\n        System.out.println(\"\
+    Hello World\");\n    }\n}\n```\n\nPython:\nclass NameOfTheClass():\n    def nameOfTheMethod(self):\n\
+    \        print(\"Hello World\")\n\n# 6.1 Class Variables VS Instance Variables\n\
+    \nClass variables and instance variables are both declared outside of the methods,\
+    \ but inside of the class right under the header of the class. Initially, both\
+    \ class and instance variables are instantiated as class variables when an instance\
+    \ of the class is created. However, if"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "accessed through the instance of the class rather than through the name of\
+    \ the class, the class variable can be converted into an instance variable. By\
+    \ changing the class variable's initial value through the instance of the class,\
+    \ you create a new instance of that variable that will only belong to that particular\
+    \ instance of that class.\n\nHowever, there is one more way of dealing with it\
+    \ without creating a new instance of the class variable. If the class variable\
+    \ is accessed through the class name and its value is modified, that value will\
+    \ change throughout all instances of that class, even if multiple instances exist.\n\
+    \nLet's see some examples.\n\nI have a class:\nclass NameOfTheClass():\n\n```\n\
+    def nameOfTheMethod(self):\n    print \"Hello World\"\n```\n\nTo make an instance\
+    \ of the class NameOfTheClass, I need to reference it and assign that reference\
+    \ a variable name, just like in Java, but simpler. Example 6.1.1 demonstrates\
+    \ the differences between referencing class in Java and Python. Class, method,\
+    \ and variable names are kept the same between Java and Python examples so you\
+    \ could clearly see the differences in syntax between the two languages.\n\n#\
+    \ EXAMPLE 6.1.1\n\nJava:\n\n```\nclass NameOfTheClass {\n    public String instanceVar\
+    \ = \"Hello Universe\";\n\n    public void void nameOfTheMethod() {\n        System.out.println(\"\
+    Hello World\");\n    }\n}\n\nclass SomeOtherClass {\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "```\npublic void someOtherMethod() {\n    NameOfClass instanceOfClass = new\
+    \ NameOfClass();\n    instanceOfClass.nameOfTheMethod();\n}\n\n```\n\n# Python:\n\
+    \n```\nclass NameOfTheClass:\n    classVar = \"Hello Universe\"\n\ndef nameOfTheMethod(self):\n\
+    \    print \"Hello World\"\n\nclass SomeOtherClass:\n    def someOtherMethod(self):\n\
+    \        instanceOfClassOne = NameOfTheClass()\n        instanceOfClassTwo = NameOfTheClass()\n\
+    ```\n\n# By changing value of the class variable through the class name,\n#value\
+    \ for both, the instanceOfClass.classVar\n#instanceOfClassTwo.classVar changed\
+    \ to a new value.\nNameOfTheClass.classVar = \"Changed Value of Class Variable\"\
+    \n\n# By changing value of the class var through the instance name,\n#you create\
+    \ new instance of that variable that will only belong\n#to that particular instance\
+    \ of the class. Trying to change it's\n#value through the name of the class will\
+    \ not work anymore.\n#The class variable became an instance variable.\ninstanceOfClassOne.classVar\
+    \ = \"Created New Instance of ClassVar With New Value\"\n\nIf you have noticed,\
+    \ in Python, the variable declared outside of the methods, but inside of the class\
+    \ under the class header, is by default a class variable, but it can be changed\
+    \ into an instance variable using the method specified in the second comment in\
+    \ Example 6.1.1 In contrast, in Java the same variable is by default an instance\
+    \ variable. If declared static, the instance variable becomes a class variable."
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "#  6.2 Local Variables\n\nIn Java, local variables can only be accessed inside\
+    \ the method where they were declared. Making them accessible in other methods\
+    \ is the job of the instance variable.\n\nIn Python, local variables are also\
+    \ the variables that are declared inside the methods. Local variables can work\
+    \ as they do in Java and are only accessible inside the method that they were\
+    \ declared in, or they can be made accessible among all methods inside a given\
+    \ class by adding *self* in front of any local variable’s name.\n\nTo access such\
+    \ local variables, you always have to reference them with self.variableName. Example\
+    \ 6.2.1 demonstrates how this is done.\n\nEXAMPLE 6.2.1\n\nJava:\n\n```\nclass\
+    \ NameOfTheClass {\n    public String instance Var = \"Hello Universe\";\n\n \
+    \   public void nameOfTheMethodOne() {\n        System.out.println(instance Var);\n\
+    \    }\n\n    public void nameOfTheMethodTwo() {\n        System.out.println(instance\
+    \ Var);\n    }\n}\n```\n\nPython:\n\n```\nclass NameOfTheClass():\n\n    def __init__(self):\n\
+    \        self.localVar = \"Hello Universe\"\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "```\ndef nameOfTheMethodOne(self):\n    print self.localVar\n```\n\n```\ndef\
+    \ nameOfTheMethodTwo(self):\n    print self.localVar\n```\n\nDefinitely, .self\
+    \ is removed from the variable name, the local variable becomes truly local to\
+    \ the method it was declared in, just like in Java. Example 6.2.2 demonstrates\
+    \ just that.\n\n# EXAMPLE 6.2.2\n\nJava:\n\n```\nclass NameOfTheClass {\n    public\
+    \ void nameOfTheMethodOne() {\n        String trulyLocalVar = \"Hello Universe\"\
+    \n        System.out.println(trulyLocalVar);\n    }\n}\n```\n\nPython:\n\n```\n\
+    class NameOfTheClass():\n```\n\n```\ndef nameOfTheMethodOne(self):\n    trulyLocalVar\
+    \ = \"Hello Universe\"\n    print trulyLocalVar\n```\n\n# 6.3 Accessing Methods\
+    \ of a Class\n\nMethods can be accessed from outside of a class as well as from\
+    \ inside the class where"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "they reside.\n\nIf you have noticed, in Examples 6.2.1 and 6.2.2, Python’s\
+    \ methods have self specified as an argument. That is there for purpose. To make\
+    \ a given method a member of a class, you have to pass self as a first argument\
+    \ for that method. To access any method from within other methods inside that\
+    \ same class where they reside, you have to specify self before the name of that\
+    \ method. Python’s self. acts much more like this. in Java.\n\nEXAMPLE 6.3.1\n\
+    \nJava:\n\n```\nclass NameOfTheClass {\n\n    public void nameOfTestMethodOne()\
+    \ {\n        String trulyLocalVar = \"Hello Universe\";n        System.out.println(trulyLocalVar);\n\
+    \    }\n\n    public void nameOfTestMethodTwo() {\n        nameOfTestMethodOne();\n\
+    \    }\n}\n```\n\nPython:\n\nclass NameOfTheClass():\n\n```\ndef nameOfTestMethodOne(self):\n\
+    \    trulyLocalVar = \"Hello Universe\"\n    print(trulyLocalVar)\n```\n\n```\n\
+    def nameOfTestMethodTwo(self):\n    self.nameOfTestMethodOne()\n```\n\nMethods\
+    \ can also be accessed through an instance of the class from within another class,\
+    \ similar to how it is done in Java. Example 6.3.2 demonstrates those similarities\
+    \ between"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "Java and Python:\n\nEXAMPLE 6.3.2\n\nJava:\n\n```\nclass NameOfTheClass {\n\
+    \    public void nameOfTheMethod() {\n        System.out.println(\"Hello World\"\
+    );\n    }\n}\n\nclass SomeOtherClass {\n    public void someOtherMethod() {\n\
+    \        NameOfTheClass instanceOfTheClass = new NameOfTheClass();\n        instanceOfTheClass.nameOfTheMethod();\n\
+    \    }\n}\n```\n\nPython:\n\n```\nclass NameOfTheClass:\n    def nameOfTheMethod(self):\n\
+    \        print(\"Hello World\")\n\nclass SomeOtherClass:\n    def someOtherMethod(self):\n\
+    \        instanceOfClassOne = NameOfTheClass()\n        instanceOfClassOne.nameOfTheMethod()\n\
+    ```\n\n# 6.4 Constructor\n\nSometimes a program needs some values to be passed\
+    \ to the class at the creation of its object. In Java, constructor is in place\
+    \ for that purpose. Python doesn't have the same constructor concept as Java,\
+    \ but there is a way to mimic it using Python’s initializer."
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "The initializer method in Python will execute logic that is enclosed it at\
+    \ the initialization of the object of its class, hence its name, or shortly __init__().\
+    \ The initializer is basically another method of the class (def __init__(self)):\
+    \ It can contain any logic and/or variables that any other method can have in\
+    \ any class. The initializer, just as any other method, has the ability to accept\
+    \ parameters. And because it executes at the moment when reference to that class\
+    \ is made, before you make a call to any method of that class, the parameters\
+    \ specified for __init__(parameterOne, parameterTwo) become mandatory. That's\
+    \ when the initializer starts to play a role of the constructor in Python. Example\
+    \ 6.4.1 demonstrates the implementation of a constructor in Java as well as in\n\
+    \n# EXAMPLE 6.4.1\n\nJava:\n\n```\nclass NameOfTheClass {\n    String parameterOne;\n\
+    \    int parameterTwo;\n\n    public NameOfTheClass(String parameterOne, int parameterTwo)\
+    \ {\n        this.parameterOne = parameterOne;\n        this.parameterTwo = parameterTwo;\n\
+    \    }\n    public void nameOfMethod() {\n        System.out.println(parameterOne);\n\
+    \    }\n}\n\nclass SomeOtherClass {\n    public void someOtherMethod() {\n   \
+    \     String argOne = \"Hello World\";\n        int argTwo = 1;\n        NameOfTheClass\
+    \ instanceOfTheClass = new NameOfTheClass(argOne, argTwo);\n        instanceOfTheClass.nameOfMethod();\n\
+    \    }\nn\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "Python:\n\n```\nclass NameOfTheClass:\n    def __init__(self, parameterOne,\
+    \ parameterTwo):\n        self.parameterOne = parameterOne\n        self.parameterTwo\
+    \ = parameterTwo\n```\n\n```\ndef nameOfTheMethod(self):\n    print self.parameterOne\n\
+    ```\n\n```\nclass SomeOtherClass():\n    def someOtherMethod(self):\n        argOne\
+    \ = \"Hello World\"\n        argTwo = 1\n        instanceOfClassOne = NameOfTheClass(argOne,\
+    \ argTwo)\n        instanceOfClassName.nameOfTheMethod()\n```\n\nFrom Example\
+    \ 6.4.1 you need to remember two things.\n\n+   1. The __init__() method can simply\
+    \ serve the purpose of a setup method executor of a given sequence of steps before\
+    \ proceeding to execute any method that was called from the class where it resides.\n\
+    \n+   2. If parameters are specified for __init__(parameterOne, parameterTwo)\
+    \ method, it starts playing the role of the constructor as well as the executor\
+    \ of a given sequence of steps before proceeding to execute any method that was\
+    \ called from the class where it resides.\n\n# 6.5 Nested Classes\n\nBoth Java\
+    \ and Python support nested classes. With just some slight differences in the\
+    \ syntax, the same that can be achieved in Java can just as easily be achieved\
+    \ in Python. Example 6.5.1 demonstrate nested classes in both Java and Python.\n\
+    \nEXAMPLE 6.5.1"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "Java:\n\n```\nclass OuterClass {\n    String message = \"Our message\";\n\n\
+    public class InnerClass {\n    public String printMessage() {\n        return\
+    \ message;\n    }\n}\n}\n```\n\n```\nclass SomeClass {\n    public static void\
+    \ main(String args[]){\n        OuterClass outerInstance = new OuterClass();\n\
+    \        OuterClass.Inner innerInstance = outerInstance.new InnerClass();\n  \
+    \      System.out.println(innerInstance.printMessage());\n    }\n}\n```\n\nPython:\n\
+    \n```\nclass OuterClass:\n    message = \"Our message\"\n```\n\n```\ndef __init__(self):\n\
+    \    self.innerInstance = self.InnerClass()\n\nclass InnerClass():\n    def printMessage(self):\n\
+    \        return OuterClass.message\n```\n\n```\nouterInstance = OuterClass()\n\
+    print(outerInstance.innerInstance.printMessage())\n```\n\n# 6.6 Returning from\
+    \ Method"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "Returning from method is done much the same way in Java and Python. The major\
+    \ difference is that in Java, you have to specify what data type method will return\
+    \ at the header of the method. In Python, any method can return any data type\
+    \ without the need to declare it anywhere.\n\n# EXAMPLE 6.6.1\n\nJava:\n\n```\n\
+    public class SomeOtherClass {\n    public String someOtherMethod() {\n       \
+    \ String argOne = \"Hello World\"\n        return argOne;\n    }\n}\n```\n\nPython:\n\
+    \n```\nclass SomeOtherClass():\n    def someOtherMethod(self):\n        argOne\
+    \ = \"Hello World\"\n        return argOne\n```\n\n# 6.7 The finalize() Method\n\
+    \nThe finalize() method exists in Java to perform some actions before an object\
+    \ gets destroyed. Often it is used to unlock locked by the object elements or\
+    \ to complete cleanup before object gets destroyed by the garbage collector. In\
+    \ Python, the finalize() method is called differently but serves exactly the same\
+    \ purpose.\n\nPython’s alternative to Java’s finalize() is __exit__().n\n\nExample\
+    \ 6.7.1 demonstrates the implementation of finalize() in Java and __exit__() in"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "Python.\n\n# EXAMPLE 6.7.1\n\nJava:\n\n```\npublic class NewClass {\n    public\
+    \ String someMethod() {\n        String argOne = \"Hello World\";\n        return\
+    \ argOne;\n    }\n\n    @Override\n    protected void finalize() throws Throwable\
+    \ {\n        try {\n            //clean up logic\n        } finally {\n      \
+    \      super.finalize();\n        }\n    }\n}\n```\n\nPython:\n\n```\nclass SomeClass():\n\
+    \    def someMethod(self):\n        argOne = \"Hello World\"\n        return argOne\n\
+    ```\n\n```\ndef __enter__(self):\n    return self\n```\n\n```\ndef __exit__(self,\
+    \ exc_type, exc_val, tb):\n    #clean up logic\n    return\n```"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# 6.8 Overloading Methods\n\nOverloading of methods is done somewhat differently\
+    \ in Python and Java. Would select which method to run based on the list of arguments\
+    \ given version of the method requests and/or the data type of those arguments.\
+    \ In Python, if you create multiple methods with the same name and try calling\
+    \ one of them, the other methods will throw an exception stating that the number\
+    \ of arguments provided don't match the number of parameters specified for those\
+    \ methods. Basically, Python would try to run all of the methods with the same\
+    \ name every time. But there is still a way to overload methods. When parameters\
+    \ are specified for the method, Python lets you set the default value for the\
+    \ parameters. Once the default value is set, then you do not need to provide value\
+    \ for that parameter when calling that method—it will simply pick up the default\
+    \ value. Inside the method itself, using conditional statements, you can choose\
+    \ what step sequence the method should execute based on what values are set for\
+    \ its parameters. Example 6.8.1 demonstrates how Java-like overloading can be\
+    \ implemented in Python.\n\nEXAMPLE 6.8.1\n\nJava:\n\n```\nclass SomeClass {\n\
+    \    public void someMethod() {\n        System.out.println(\"Running sequence\
+    \ one\");\n    }\n    public void someMethod(String valueOne) {\n        System.out.println(\"\
+    Running sequence two\");\n    }\n\n    public void someMethod(int valueTwo, Boolean\
+    \ valueTree) {\n        System.out.println(\"Running sequence three\");\n    }\n\
+    }\n```\n\nPython:\n\n```\nclass SomeClass():\n    def someMethod(self, valueOne=None,\
+    \ valueTwo=None, valueThree=False):\n        if valueOne != None:\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "```\nprint \"Running sequence two\"\nelif valueTwo != None and valueThree:\n\
+    \    print \"Running sequence three\"\nelse:\n    print \"Running sequence one\"\
+    \n```\n\nFrom the above example, calling some() without any arguments, or with\
+    \ one, or with three arguments will all work. Example 6.8.2 demonstrates the variations\
+    \ of how methodName() could be called with a different set of parameters passed\
+    \ to it.\n\n# EXAMPLE 6.8.2\n\nPython:\n\n```\nrun = SomeClass()\nrun.someMethod()\n\
+    run.someMethod(\"valueOneStr\")\nrun.someMethod(None, \"valueTwoStr\", True)\n\
+    ```\n\n# 6.9 Overloading Constructor\n\nVery similarly to how I overloaded methods,\
+    \ I can overload Python’s constructor, which I mentioned before is called “the\
+    \ initializer” in Python. Remember __init__() method? If not, please refer to\
+    \ section “6.4 Constructor.\"\n\nIn Examples 6.8.1 and 6.82 I set default values\
+    \ to the parameters of the method, I then overloaded. Similarly, __init__() is\
+    \ also a method, therefore the same concept can be applied to it. Inside the initializer-then,\
+    \ using conditional statements, I choose which route to take for the program.\
+    \ Let's take a look at Example 6.9.1, which shows how to overload the initializer\
+    \ in Python.\n\n# EXAMPLE 6.9.1\n\nPython:"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "```\nclass SomeClass():\n\ndef __init__(self, valueOne=None, valueTwo=None,\
+    \ valueThree=False):\n    if valueOne != None:\n        self.methodTwo()\n   \
+    \ elif valueTwo != None and valueThree:\n        self.methodThree()\n    else:\n\
+    \        self.methodOne()\n```\n\n```\ndef methodTwo(self):\n    print \"Running\
+    \ sequence two\"\n```\n\n```\ndef methodThree(self):\n    print \"Running sequence\
+    \ three\"\n```\n\nrunOne = SomeClass()\nrunTwo = SomeClass(\"valueOneStr\")\n\
+    runThree = SomeClass(None, \"valueTwoStr\", True)\n\n# 6.10 Using Objects as Parameters\n\
+    \nSince in Python I do not need to specify data types for the arguments that are\
+    \ expected to be passed to the methods, I can pass any objects of data types as\
+    \ arguments to those methods.(Notice that in most of the previous examples, I\
+    \ did not specify the object's data type, whatever it might be.)\n\nThe example\
+    \ below demonstrates how an object of the class NameOfTheClass() can be passed\
+    \ as an argument from the method someOtherMethod(self): located in the class SomeOtherClass()\
+    \ to the method someMethodTwo(self, objectAsParameter), where using the passed\
+    \ object I call method nameOfTheMethod() from class NameOfTheClass()."
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "In a similar manner, objects can be returned by any method, just as the someMethodTwo(self,\
+    \ objectAsParameter): method returns the object objectAsParameter.\n\n# EXAMPLE\
+    \ 6.10.1\n\nPython:\n\n```\nclass NameOfClass():\n    def __init__(self, parameterOne,\
+    \ parameterTwo):\n        self.parameterOne = parameterOne\n        self.parameterTwo\
+    \ = parameterTwo\n\ndef nameOfTheMethod(self):\n    print self.parameterOne\n\
+    ```\n\n```\nclass SomeOtherClass():\n    def someOtherMethod(self):\n        argOne\
+    \ = \"Hello World\"\n        argTwo = 1\n        instanceOfClass = NameOfClass(argOne,\
+    \ argTwo)\n        self.someMethodTwo(instanceOfClass)\n```\n\n```\ndef someMethodTwo(self,\
+    \ objectAsParameter):\n    objectAsParameter.nameOfTheMethod()\n    return objectAsParameter\n\
+    ```\n\n# 6.11 Recursion\n\nRecursion in Java and Python has the same meaning—method\
+    \ is calling itself to rerun its step sequence. The code from Example 6.11.1,\
+    \ if ran, will run infinitely. It is therefore not the best case when recursion\
+    \ would be usefull in the real life, but it shows the similar technique in Java\
+    \ and Python for a method to call itself.\n\n# EXAMPLE 6.11.1"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "```\nJava:\npublic class SomeClass {\n    public void someMethod() {\n    \
+    \    someMethod();\n    }\n}\n```\n\nPython:\n\n```\nclass SomeClass:\n    def\
+    \ someMethod(self):\n        self.someMethod()\n```\n\n# 6.12 Access Control\n\
+    \nPublic getters and setters access private methods and/or variables of their\
+    \ class, remember? Python also supports the same concept, allowing me to make\
+    \ some vulnerable methods as private, accessible only by other methods of the\
+    \ class where they reside. Java you explicitly type private at the header of the\
+    \ method when declaring the private method, or public when declaring a public\
+    \ method. In Python, by default all methods are public. To make a private method,\
+    \ you need to add two underscore characters before the name of the method, as\
+    \ shown below in Example 6.12.1.\n\n> EXAMPLE 6.12.1\n\nJava:\n\n```\npublic class\
+    \ SomeClass {\n    public void firstMethod() {\n        System.out.println(\"\
+    Hello public method\");\n    }\n    private void secondMethod() {\n        System.out.println(\"\
+    Hello private method\");\n    }\n    public void thirdMethod() {\n```"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\n//Calling public method:\nfirstMethod();\n//Calling private method:\n\
+    secondMethod();\n}\n```\n\nPython:\n\n```\nclass SomeClass:\n    def firstMethod(self):\n\
+    \        print(\"Hello public method\")\n\n    def __secondMethod(self):\n   \
+    \     print(\"Hello private method\")\n\n    def thirdMethod(self):\n        #\
+    \ Calling public method:\n        self.firstMethod()\n        # Calling private\
+    \ method:\n        self.__secondMethod()\n```\n\n# 6.13 Static Methods\n\nStatic\
+    \ methods play the same role in Python as they do in Java. To define a static\
+    \ method in Java, you would use the keyword static. In Python, static methods\
+    \ are defined using the decorator @staticmethod. Python’s decorators in Java are\
+    \ called annotations and are placed at exactly the same static location, right\
+    \ above the method that you would like to declare static. Please note that in\
+    \ Example 6.13.1, the static method does not have a self parameter anymore. For\
+    \ a static method, the self parameter does not need to be specified and cannot\
+    \ be specified. All static methods are accessed from other methods using the name\
+    \ of the class where they reside, much the same as in Java. Example 6.13.1 demonstrates\
+    \ the use of static methods in Java and Python.\n\nEXAMPLE 6.13.1"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "```\nJava:\nclass SomeClass {\n    public static void someStaticMethod() {\n\
+    \        System.out.println(\"Hello static method\");\n    }\n}\n\npublic class\
+    \ SomeOtherClass {\n    public void someOtherMethod() {\n        SomeClass.someStaticMethod();\n\
+    \    }\n}\n```\n\n```\nPython:\nclass SomeClass():\n    @staticmethod\n    def\
+    \ someStaticMethod():\n        print(\"Hello static method\")n\nclass SomeOtherClass():\n\
+    \    def someOtherMethod(self):\n        SomeClass.someStaticMethod()\n```\n\n\
+    # 6.14 Final\n\nIn Java, declaring a variable as final prevents its contents from\
+    \ being modified. In Python, final does not exist, but there are immutable data\
+    \ structures. For example, while you can edit values of the list, you cannot edit\
+    \ the values of the tuple because it is immutable. Section 7.14 will explain the\
+    \ implementation of tuples in greater detail.\n\nThe same concept applies to set\
+    \ (in Java) versus a frozen set (in Python). A frozen set is also immutable, while\
+    \ set is mutable. Section 7.24 discusses the implementation of the frozen set\
+    \ in Python."
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# 6.15 Command-Line Arguments\n\nIn Java, by default the main() method of a\
+    \ program expects arguments to be passed when the java -jar filename.jar command\
+    \ is executed. In Python, the process is different. To pass arguments when executing\
+    \ a .py file using the python filename.py command in the command prompts, that\
+    \ .py file should import module sys, then through the reference to the module\
+    \ you can extract the arguments into the program and use them from inside or outside\
+    \ of the class enclosed in the .py file that is being called. Example 6.15.1 demonstrates\
+    \ exactly how command-line arguments are passed to a Python program.\n\nEXAMPLE\
+    \ 6.15.1\n\nJava:\n\nCommand:\n\n“java -jar filename.jar argumentOne argumentTwo\
+    \ argumentThree\n\n```\npublic class CommandLineArgsExample {\n    public static\
+    \ void main(String[] args[]) {\n        System.out.println(\"Argument 1: \" +\
+    \ args[0]);\n        System.out.println(\"Argument 1: \" + args[1]);\n       \
+    \ System.out.println(\"Argument 1: \" + args[2]);\n    }\n}\n```\n\nPython:\n\n\
+    Command:\n\n“python filename.py argumentOne argumentTwo argumentThree"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "```\nimport sys\nclass CommandLineArgsExample():\n    def __init__(self):\n\
+    \        print(\"Argument 1: \" + str(sys.argv[1])\\n        print(\"Argument\
+    \ 2: \" + str(sys.argv[2])\\n        print(\"Argument 3: \" + str(sys.argv[3])\"\
+    )\n```\n\nNote that in the Python example, the index of the first argument is\
+    \ 1, not 0 as it is in Java. This is because Python places the name of the file\
+    \ that is being executed under index 0, then under 1 and so on. It appends arguments\
+    \ that follow the filename in the same order, from left to right. The rest of\
+    \ the process is very similar to the way command-line arguments work in Java.\n\
+    \n# 6.16 Variable-Length Arguments\n\nJust like in Java, Python lets you pass\
+    \ dynamic numbers of arguments to the method. While concept and purpose stays\
+    \ the same, syntax changes. In Java, you would use three dots before the variable\
+    \ name to turn that variable into a VarArg. In Python, to achieve the same, you\
+    \ would need to place an asterisk in front of the variableArg name for the same\
+    \ result. Example 6.16.1 demonstrates the differences.\n\nEXAMPLE 6.16.1\n\nJava:\n\
+    \n```\nclass VarArgsExample {\n    public void methodName(String ... varName)\
+    \ {\n        for (int counter = 0; counter < varName.length; counter++) {\n  \
+    \          System.out.println(\"Argument\" + counter + \": \" + varName[counter]);\n\
+    \        }\n    }\n}\n```\n\nPython:"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "```\nclass VarArgsExample():\n    def methodName(*varName):\n        for counter,\
+    \ element in enumerate(varName):\n            print(\"Argument\" + counter + \"\
+    : \" + element)\n```\n\n# 6.17 Inheritance\n\nJust as in Java, Python lets inherit\
+    \ each other’s properties. One major difference is that in Java, one class can\
+    \ extend only one other class at a time, whereas Python removes that limitation\
+    \ and allows one class to extend multiple other classes, inheriting properties\
+    \ of multiple classes in one shot. Example 6.17.1 below illustrates this difference.\n\
+    \nEXAMPLE 6.17.1\n\nJava:\n\n```\nclass MainClass {\n    public static void main(String[]\
+    \ args[]) {\n        SomeClass scRef = SomeClass();\n        scRef.someMethod();\n\
+    \    }\n}\n```\n\n```\nclass SomeClass {\n    public void someMethod() {\n   \
+    \     System.out.println(\"Inside SomeClass\");\n    }\n}\n```\n\n```\nclass SomeOtherClass\
+    \ extends SomeClass {\n    public void someMethod() {\n        System.out.println(\"\
+    Inside SomeOtherClass\");\n    }\n}\n```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "Python:\n\n```\nclass MainClass():\n    def __init__(self):\n        scRef\
+    \ = SomeClass()\n        scRef.someMethod()\n        scRef.methodOfClass()\n```\n\
+    \n```\nclass SomeClass():\n    def someMethod(self):\n        print \"Inside Some\
+    \ Class\"\n```\n\n```\nclass ThirdClass():\n    def methodOfThirdClass(self):\n\
+    \        print \"Extended this one too\"\n```\n\n```\nclass SomeOtherClass(SomeClass,\
+    \ ThirdClass):\n    def someOtherMethod(self):\n        print \"Inside SomeOtherClass\"\
+    \n```\n\nAs you can see from Example 6.17.1, in Python, class SomeOtherClass has\
+    \ extended class SomeClass. Although this is the same as inheritance in Java,\
+    \ in this example for Python I added one more class, ThirdClass, which was also\
+    \ extended by SomeOtherClass. This demonstrates how multiple classes can be extended\
+    \ in Python, which is impossible in Java.\n\nSimilarly, as in Java, only the public\
+    \ methods can be inherited. To declare a method as public in Java, I explicitly\
+    \ specify that method as public. In Python, by default methods are public, therefore\
+    \ you don't need to specify that at all. But to make method private, you add double\
+    \ underscore in front of the name of the method. Therefore, to make following\
+    \ method private:\n\n```\ndef printHelloWorld(self):\n```\n\nall that needs to\
+    \ be done is add two underscore characters before the name of the method, as shown\
+    \ below."
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\ndef __printHelloWorld(self):\n```\n\n#  6.18 Abstract Classes\n\nAbstract\
+    \ classes serve a purpose of a blueprint that dictates what methods must be implemented\
+    \ in the classes that extend them. Abstract classes exist in both Java and Python.\
+    \ You are familiar with how it's done in Java, which is straightforward, but in\
+    \ Python the syntax gets a little more confusing.\n\nIn Python, abstract classes\
+    \ are declared using the module abc. This module first be imported into the .py\
+    \ file, where abstract class will reside. Then, below the header of the class,\
+    \ the following needs to be specified for that class to become abstract: metaclass\
+    \ = abc.ABCMeta. Methods are declared abstract with the help of the decorator\
+    \ @abstractmethod, which is placed right above the header of each abstract method.\
+    \ Python's decorators are used in a way similar to how annotations are used in\
+    \ Java. Take a look at Example 6.19.1.\n\nEXAMPLE 6.19.1\n\nJava:\n\n```\nabstract\
+    \ class AbstractClass {\n    abstract String mustHaveMethod();\n}\n```\n\n```\n\
+    public class SomeOtherClass extends AbstractClass {\n    public String mustHaveMethod()\
+    \ {\n        System.out.println(\"mustHaveMethod has been implemented\");\n  \
+    \      return \"String\";\n    }\n}\n```\n\nPython:\n\n```\nimport abc\n```\n\n\
+    ```\nclass AbstractClass(object):\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "```\n__metlass__ = abc.ABCMeta\n\n@abc.abstractmethod\ndef mustHaveMethod(self):\n\
+    \    return\n\nclass SomeOtherClass(AbstrctClass):\n    def mustHaveMethod(self):\n\
+    \        print(\"mustHaveMethod has been implemented\")\n```\n\n# 6.19 Importing\
+    \ Classes into a Workspace\n\n+   1) Let's say you have one .py file that contains\
+    \ multiple classes inside and you need to import all of them at once. All you\
+    \ need to import is a file that contains all of the classes that you would like\
+    \ to use in a separate workspace of the program.\n\nSimilar to Java, in Python\
+    \ different classes could reside in different .py files. In Java, those would\
+    \ be java files. To import a class from one .java file to another, you need to\
+    \ specify its classpath by separating directory names with a dot. In Python, the\
+    \ same can be done in Python 3.x, but in Python 2.7, separating directory names\
+    \ with a dot in a class path would not work. Examples in this section demonstrates\
+    \ how to import classes from other files in Python 2.7.\n\nIn Python 2.7, if a\
+    \ file with the class to be imported is located in a different directory than\
+    \ the file to which import needs to be made, the module sys is used to insert\
+    \ a path into a memory. Python will then be looking for the file from which it\
+    \ is to import the needed class in the provided path. Please take a look at Example\
+    \ 6.19.1.\n\nEXAMPLE 6.19.1\n\n# Python:\n\n```\nimport sys\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\nsys.path.insert(\"/path/to/file/\")\nimport fileName\n```\n\nIf the whole\
+    \ file was imported, as in Example 6.19.1, then all classes of fileName.py will\
+    \ be accessible through the file name itself. Example 6.19.2 demonstrates this.\n\
+    \n# EXAMPLE 6.19.2\n\nPython:\n\n```\nimport sys\nsys.path.insert(\"/path/to/file/\"\
+    )\nimport fileName\nclass SomeClass():\n    def someMethod(self):\n        referenceToClass\
+    \ = fileName.ClassName\n        referenceToClass.methodName()\n```\n\n2) Let's\
+    \ say you have one .py file that contains multiple classes, but you would like\
+    \ to import only one class. Example 6.19.3 shows how you would limit the import\
+    \ to only one class from the given .py file, even if that file contains multiple\
+    \ classes.\n\n# EXAMPLE 6.19.3\n\nPython:\n\n```\nimport sys\nsys.path.insert(\"\
+    /path/to/file/\")\nfrom fileName import ClassName\nclass SomeClass():\n    def\
+    \ someMethod(self):\n        classObj = ClassName()\n        classObj.methodName()\n\
+    ```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "3) What if you would like to import a class and assign it a distinctive variable\
+    \ name at the import? That is also possible in Python. Example 6.19.4 demonstrates\
+    \ how.\n\nEXAMPLE 6.19.4\n\nPython:\n\n```\nimport sys\nsys.path.insert(\"/path/to/file/\"\
+    )\n```\n\n```\nimport fileName as myLibrary\n```\n\n```\nclass SomeClass():\n\
+    \    def someMethod(self):\n        myClass = myLibrary.ClassName\n        myClass.methodName()\n\
+    ```\n\nIn Example 6.19.4 note that reference to class ClassName will have to be\
+    \ made through variable myLibrary.\n\n4) What if the .py file is located two directories\
+    \ back and there is no way to specify a path to them going forward. It could be\
+    \ achieved by telling your working .py file to start looking for the class path\
+    \ two directories back. Again I call for help from the same module, sys, which\
+    \ has to first be imported into the working code base. Then by calling: sys.path.append(\"\
+    .../..\"), I can specify that I would like this particular .py file to start looking\
+    \ for classes to import two directories back from where my working .py file is\
+    \ located.\n\nEXAMPLE 6.19.5\n\nPython:\n\n```\nimport sys\nsys.path.insert(\"\
+    .../..\")\n```\n\n```\nimport fileName\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# 6.20 Exception Handling\n\nExceptions are caught and handled much the same\
+    \ way in Java and Python. A small difference in syntax is easy to understand with\
+    \ the following example (6.20.1). One of the obvious differences is what is called\
+    \ “catch” in Java is referred to as “except” in Python. In Java you would use\
+    \ try/catch and in Python you would use try/except. For the rest of exception\
+    \ handling, the two languages are similar in action.\n\nEXAMPLE 6.20.1\n\nJava:\n\
+    \n```\nclass NameOfTheClass {\n    public void nameOfTheMethod() {\n        System.out.println(\"\
+    Hello World\");\n    }\n}\nclass SomeOtherClass {\n    public void someOtherMethod()\
+    \ {\n        NameOfTheClass instanceOfClass = new NameOfTheClass();\n\n      \
+    \  try {\n            ofTypeClass.nameOfTheMethod();\n        } catch (Exception\
+    \ e) {\n            System.out.println(\"Exception caught\");\n            e.printStackTrace();\n\
+    \        }\n    }\n}\n```\n\nPython:\n\n```\nclass NameOfTheClass():\n    def\
+    \ nameOfMethod(self):\n        print(\"Hello World\")\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "```\nclass SomeOtherClass():\ndef someOtherMethod(self):\n    instanceOfClassOne\
+    \ = NameOfClassName()\n\n  try:\n    instanceOfClassOne.nameOfMethod()\n  except\
+    \ Exception, e:\n    print \"Exception caught\"\n    print e\n```\n\n# 6.21 Throwing\
+    \ Custom Exception\n\nA very common practice in programming is to generate custom\
+    \ exception for exceptional cases related only to your case. This way you can\
+    \ catch only your specific exception and handle it, while leaving the rest of\
+    \ possible exceptions unhandled. This can be done both in Java and Python. Example\
+    \ 6.21.1 demonstrates how custom exception can be created and thrown in both languages.\n\
+    \nEXAMPLE 6.21.1\n\nJava:\n\n```\nclass YourCustomException extends Exception\
+    \ {\n    public YourCustomException(String erroMessage) {\n        super(erroMessage);\n\
+    \    }\n}\n```\n\n```\nclass SomeOtherClass {\n    public static void main(String\
+    \ args[]) {\n        throw new YourCustomException(\"Your custom error message.\"\
+    );\n    }\n}\n```"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "Python:\n\n```\nclass MyException(Exception):\n    def __init__(self, message):\n\
+    \        super(MyException, self).__init__(message)\n\nclass SomeOtherClass():\n\
+    \    def __init__(self):\n        raise MyException(\"Your custom error message.\"\
+    )\n```\n\n# 6.22 @Decorators are not @Annotations\n\nPython has a replace very\
+    \ similar in appearance to Java’s annotations. Annotations in Java are added to\
+    \ replace XML-based meta data files that were used to preserve meta data and access\
+    \ it at the runtime of the Java program. In Python, what looks like annotations\
+    \ are called decorators. Decorators are also specified above the header of the\
+    \ method to they belong and also have a @ in front to distinguish them. Their\
+    \ purpose is slightly different from annotations in Java. In brief, Python lets\
+    \ you pass functions as arguments to other functions. Just like you pass a variable\
+    \ as an argument to method/function, you can also pass a function itself. A decorator\
+    \ basically tells the decorated function to be passed as an argument to the decorator\
+    \ function.\n\nIn Example 6.22.1, I named functions as decoratorFunctionName and\
+    \ decoratedFunctionName to distinguish the two. The first, decoratedFunctionName(),\
+    \ has a nested function inside innerFunctionName. Don't ask me why; it's the syntax\
+    \ is. It grabs the value that decoratedFunctionName() returns, in which case it\
+    \ is 3000, adds 1 to it, and returns the updated result. The decoratorFunctionName()\
+    \ returns the value that innerFunctionName() returns. Note that in the return\
+    \ statement of decoratedFunctionName(), I used only the name of innerFunctionName,\
+    \ without trailing parentheses (). cause exceptions. Next, the decoratedFunctionName()\
+    \ picks up the value returned by"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "decoratorFunctionName() and returns it on the place of x variable. Later, the\
+    \ print statement outputs that updated value into a console.\n\nAlso note that\
+    \ name next to the @ sign is exactly the same name as name of the decorator function:\
+    \ decoratorFunctionName() = @decoratorFunctionName\n\nTake a look at how decorators\
+    \ are implemented in Python in Example 6.22.1.\n\n# EXAMPLE 6.22.1\n\nPython:\n\
+    \n```\ndef decoratorFunctionName(decoratedFunctionAsArg):\ndef innerFunction():\n\
+    \    result = decoratedFunctionPassedAsArgument() + 1\n    return result\nreturn\
+    \ innerFunction\n```\n\n```\n@decoratorFunctionName\ndef decoratedFunctionName(x=3000):\n\
+    \    return x\n```\n\nprint decoratedFunctionName()\n\nNote that in Example 6.23.1,\
+    \ I have two functions running outside of the class. Now let's see Example 6.23.2,\
+    \ which shows how decorators can be implemented and used if my code was enclosed\
+    \ into a class.\n\n# EXAMPLE 6.22.2\n\nPython:\n\n```\nclass SomeClass():\n```"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "```\ndef decoratorFunctionName(decoratedFunctionAsArg):\n    def innerFunction(self):\n\
+    \        result = decoratedFunctionPassedAsArgument(self) + 1\n        return\
+    \ result\n    return innerFunction\n```\n\n```\n@decoratorFunctionName\ndef decoratedFunctionFunctionName(self,\
+    \ x=3000):\n    return x\n```\n\nrun = SomeClass()\nprint(run.decoratedFunctionName())"
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# # 7. DATA STRUCTURES
+
+
+    # ## 7.1 Arrays
+
+
+    In Java, arrays are of a fixed length, but in Python, an array that is called
+    a “list” acts more like ArrayList in Java. It can increase or decrease in size
+    dynamically. Another difference is that in Java, an array has to be initialized
+    with a set data type, but in Python it can hold one or a mix of any data types
+    and even sub lists or any other collection types, which I will talk about later
+    in section 7.11. Examples 7.1.1 and 7.1.2 compare Java’s array data structure
+    to Python’s list structure.
+
+
+    EXAMPLE 7.1.1
+
+
+    Java:
+
+
+    ```
+
+    int[] array = new int[5];narray[0] = 123;
+
+    array[1] = 321;
+
+    array[2] = 999;
+
+    array[3] = 764;
+
+    array[4] = 987;
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    array = []narray.append(123)
+
+    array.append(321)
+
+    array.append(999)
+
+    array.append(764)
+
+    array.append(987)
+
+    ```
+
+
+    EXAMPLE 7.1.2
+
+
+    Java:'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '```
+
+    int array[] = { 123, 321, 999, 764, 987 };
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    array = [123, 321, 999, 764, 987];
+
+    ```
+
+
+    # 7.2 Accessing Values in Arrays
+
+
+    The way values are accessed in arrays is the same in Java and Python, even in
+    syntax.
+
+
+    EXAMPLE 7.2.1
+
+
+    Java:
+
+
+    ```
+
+    int array[] = { 123, 321, 999, 764, 987 };
+
+    System.out.print(array[3]);
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    array = [123, 321, 999, 764, 987]
+
+    print array[3];
+
+    ```
+
+
+    # 7.3 Updating Values in Arrays
+
+
+    Updating values in arrays is also done almost the same way in Java and Python.
+
+
+    EXAMPLE 7.3.1
+
+
+    Java:
+
+
+    ```
+
+    int array[] = { 123, 321, 999, 764, 987 };
+
+    array[3] = 444;
+
+    ```'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: 'Python:
+
+    array = [123, 321, 999, 764, 987]
+
+    array[3] = 444
+
+
+    # 7.4 Getting the Size of an Array
+
+
+    The size of an array in Python is retrieved by function len(). This function could
+    also be used to get the length of all collection types in Python and to calculate
+    the number of charracters in a given string.
+
+
+    EXAMPLE 7.4.1
+
+
+    Java:
+
+    int array[] = { 123, 321, 999, 764, 987 };
+
+    System.out.print(array.length);
+
+
+    Python:
+
+    array = [123, 321, 999, 764, 987]
+
+    print len(array)
+
+
+    # 7.5 Sorting Arrays
+
+
+    The process of sorting arrays in Python is similar to Java. With the exception
+    of a few slight changes in syntax, the process for the most part is almost identical.
+    Example 7.5.1 demonstrates how to sort array in Java and Python in ascending as
+    well as descending orders.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "# EXAMPLE 7.5.1\n\nJava:\n\n```\nint array[] = { 123, 321, 999, 764, 987 };\n\
+    //Sort in Ascending Order\nArrays.sort(array);\n//Sort in Descending Order\nArrays.sort(array,\
+    \ Collections.reverseOrder());\n```\n\nPython:\n\n```\narray = [123, 321, 999,\
+    \ 764, 987]\n#Sort in Ascending Order\narray.sort()\n#Sort in Descending Order\n\
+    array.sort(reverse=True)\n```\n\n# 7.6 Counting Values in an Array\n\nCounting\
+    \ appearances of elements in a given array in Python is simpler than ever. In\
+    \ Java, the simplest way to count the appearance of a given array is done through\
+    \ the loop and the conditional comparison of each element to the value being counted.\
+    \ Python, on the other hand, has a special function just for that: count(). Let's\
+    \ see the count() function in action using the next in Example 7.6.1.\n\n# EXAMPLE\
+    \ 7.6.1\n\nJava:\n\n```\nint array[] = { 123, 321, 999, 764, 987 };\nint count\
+    \ = 0;\nint value = 999;\nfor (int i = 0; i < array.length; i++) {\n  if (array[i]\
+    \ == value) {\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '```
+
+    count++;
+
+    }
+
+    }
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    array = [123, 321, 999, 764, 987]
+
+    count = array.count(999)
+
+    ```
+
+
+    # 7.7 Inserting a Value under a Certain Index in an Array
+
+
+    Let’s say I have an array of five elements. I would like to insert a value under
+    index 3. If I just wanted to update the value under index 3, I would use the method
+    described in section 7.3 (Updating values in Arrays). However, I already have
+    a value under index 3 and would like to preserve it, Example 7.7.1 demonstrates
+    how I could add a new value under index 3 and shift all existing values in the
+    array one index to the right.
+
+
+    EXAMPLE 7.7.1
+
+
+    Java:
+
+
+    ```
+
+    Integer array[] = { 123, 321, 999, 764, 987 };
+
+    ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(array));
+
+    list.add(3, 555);
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    array = [123, 321, 999, 764, 987]
+
+    array.insert(3, 555)
+
+    ```
+
+
+    # 7.8 Return the Index of an Element in an Array'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: 'Returning the index of a desired value in a given Python’s list is very easy.
+    Example 7.8.1 is self-explanatory and demonstrates just that.
+
+
+    # EXAMPLE 7.8.1
+
+
+    Java:
+
+
+    ```
+
+    int array[] = { 123, 321, 999, 764, 987 };nArrays.asList(array).indexOf(321);
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    array = [123, 321, 999, 764, 987]
+
+    array.index(321)
+
+    ```
+
+
+    # 7.9 Difference between Appending and Extending to an Array
+
+
+    Here I have something that doesn’t exist for any data type in Java. As I mentioned
+    earlier, in Python, arrays can hold any data type and even lists. Let’s call the
+    initial array “parent list” and the list element that I want to add it to the
+    “child list.” The child list could be appended/or extended to the parent list.
+    If appended, the child list will be added as its own list element, or if you will,
+    a “child list” of a parent list. If extended, the child list will be broken into
+    its values and each of those values will be separately appended to the parent
+    list, thus making each value the separate element of the parent list. This is
+    illustrated in Example 7.9.1. Since this functionality is specific to Python,
+    the example will only contain code sample from Python.
+
+
+    # EXAMPLE 7.9.1
+
+
+    Python:
+
+
+    ```
+
+    parentList = [123, 321, 999, 764, 987]
+
+    childList = [2, 4, 6, 2, 8]
+
+    parentList.append(childList)
+
+    #parentList will look this way: [123, 321, 999, 764, 987, [2, 4, 6, 2, 8]]
+
+    ```'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '```
+
+    parentList = [123, 321, 999, 764, 987]
+
+    childList = [2, 4, 6, 2, 8]
+
+    parentList.extend(childList)
+
+    #parentList will look this way: [123, 321, 999, 764, 987, 2, 4, 6, 2, 8]
+
+    ```
+
+
+    # 7.10 Deleting Elements from an Array by Index
+
+
+    In Java, for complex array manipulations you would not even use a regular array.
+    Instead, you would use ArrayList. In Python, however, there is one list that acts
+    as everything that you would need in an array. In Example 7.10.1, I first convert
+    a regular integer in Java to ArrayList and then delete an item from ArrayList
+    by index. In Python the function that removes the element by index is named the
+    same as in Java, remove().
+
+
+    EXAMPLE 7.10.1
+
+
+    Java:
+
+
+    ```
+
+    int[] array = { 123, 321, 999, 764, 987 };
+
+    ArrayList<Integer> arraylist = new ArrayList<Integer>(Arrays.asList(array));
+
+    arraylist.remove(2);
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    array = [123, 321, 999, 764, 987]
+
+    array.remove(2)
+
+    ```
+
+
+    Python also provides one more way of deleting values by index from an array, as
+    shown in Example 7.10.2.
+
+
+    EXAMPLE 7.10.2
+
+
+    Python:'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '```
+
+    array = [123, 321, 999, 764, 987]
+
+    del array[2]
+
+    ```
+
+
+    Both methods will do the job. Using del or remove() will delete the specified
+    element from the array, which in Python is called the list.
+
+
+    # 7.11 Lists in Python Can Hold Anything
+
+
+    In Java, arrays are limited to hold elements of only one specific data type. For
+    example, string arrays can hold only strings. Integer arrays can hold only integers.
+    In Python, however, arrays are free to hold any combination of supported data
+    types and even lists, tuples and, dictionaries. Example 7.11.1 demonstrates a
+    working Python list that holds a variety of data types as values.
+
+
+    EXAMPLE 7.11.1
+
+
+    Python:
+
+
+    ```
+
+    array = [123, 2, 4, 6, 2, 8], "testString", {"key": "value", "key": "value"},
+    ("testStringTwo", 123)
+
+    ```
+
+
+    In the above example, the first element of my array is an integer, the second
+    list of integers, the third string, the fourth a dictionary, and the fifth tuple.
+    This array is absolutely valid in Python.
+
+
+    # 7.12 Multidimensional Arrays
+
+
+    Multidimensional arrays are also supported in Python, although working with them
+    in Python can be more confusing than in Java. It is impossible to simply create
+    an empty'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "multidimensional array in Python as you could with an empty Python list. In\
+    \ Python, you need to create a multidimensional array first using list comprehension,\
+    \ which I will get to get in the next paragraph of this chapter (7.13). When an\
+    \ array is created with default ZERO integer values filled into each cell of each\
+    \ row and column combination, then I can replace the ZERO (or any value chosen\
+    \ to be default) values using nested for loops with that are meant to be in multidimensional\
+    \ array. Example 7.12.1 converts a two-dimensional array in Java into a two-dimensional\
+    \ list in Python.\n\n# EXAMPLE 7.12.1\n\nJava:\n\n```\nString[][] twoDimensionalArray\
+    \ = new String[6][5];\nfor (int counter = 0; counter < 6; counter++) {\n    for\
+    \ (int innerCounter = 0; innerCounter < 5; innerCounter++) {\n        twoDimensionalArray[counter][innerCounter]\
+    \ = \"value\";\n    }\n}\n```\n\nPython:\n\n```\ntwoDimensionalArray = [[0 for\
+    \ innerCounter in range(5) for counter in range(6)]\nfor counter in range(6):\n\
+    \    for innerCounter in range(6):\n        twoDimensionalArray[counter][innerCounter]\
+    \ = \"value\";\n```\n\n# 7.13 List Comprehension\n\nList comprehension is a cool\
+    \ feature in Python's data structures and doesn't exist in Java. The concept is\
+    \ very simple to understand. It is basically a way to build an array of values\
+    \ in Python using only one line of code. It might be confusing at first, but with\
+    \ practice, you will realize building arrays using list comprehension in Python\
+    \ is more convenient than using the conventional method, although the latter largely\
+    \ within Python. The choice of which approach to use is entirely yours as a Python\
+    \ software developer. Example 7.13.1 compares the conventional way of bulding\
+    \ an array using for loop and using list"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "comprehension.\n\n# EXAMPLE 7.13.1\n\nPython:\n\n```\nlist = [x**2 for x in\
+    \ range(10)]\n```\n\nis the same as:\n\n```\nlist = []\n```\n\n```\nfor x in range(10):\n\
+    ```\n\n```\n    list[x] = x**2\n```\n\n# 7.14 Tuple\n\nWhat is a tuple? It basically\
+    \ the same thing as a list in Python, but a tuple is immutable, while a list is\
+    \ mutable. A tuple has a fixed size in nature, but a list—as I have mentioned\
+    \ before—can grow and decrease in size dynamically. In Python, you cannot dynamically\
+    \ add elements to tuples, neither do they support append or extend as lists. Tuples\
+    \ also do not support remove or pop as lists.\n\nWith their limitations, tuples\
+    \ have benefits that make them useful in some situations. Tuples are faster than\
+    \ lists, so if you are building a list of constants that you would only need to\
+    \ iterate through, use a tuple instead of a list. Tuples protect your data from\
+    \ being changed since elements in tuple cannot be changed, making your code safer.\n\
+    \nThe difference between initializing a tuple and a list is in the parentheses\
+    \ used to surround the elements. Example 7.14.1 demonstrates a tuple. Just take\
+    \ a Python list from any of the previous examples and change the square parentheses\
+    \ to the rounded parentheses. That’s all—you created a tuple from the list.\n\n\
+    # EXAMPLE 7.14.1"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'Python:
+
+
+    tuple = (123, 321, 999, 764, 987)
+
+
+    A tuple can be converted into a list, and vice versa, as shown in Example 7.14.2.
+
+
+    EXAMPLE 7.14.2
+
+
+    Python:
+
+
+    ```
+
+    tupleOne = (123, 321, 999, 764, 987)
+
+    listOne = [123, 321, 999, 764, 987]
+
+    ```
+
+
+    ```
+
+    listTwo = list(tupleOne)
+
+    tupleTwo = tuple(listOne)
+
+    ```
+
+
+    # 7.15 Python’s Dictionary Is Java’s Map
+
+
+    Dictionaries in Python serve the same purpose as maps in Java. Keys and values
+    pair with each other. Keys must be unique, but if any chance you have specified
+    a duplicate key, don’t worry, the program will still run. When duplicate keys
+    are encountered during assignment, the last assignment overwrites all previous
+    assignments. Keys can only be of immutable types such as integers, strings, or
+    tuples. As you have learned previously, tuples are immutable and can therefore
+    be used as keys in Python’s dictionaries. In Java’s maps, keys can only be of
+    one data type within the same map, for example integer. But in Python, even within
+    the same dictionary, keys can be of different data types. One key could be an
+    integer, another a string, and a third a tuple, as long as they are immutable.
+    Values could be any mutable or immutable of any data types, even lists, tuples,
+    and/or nested dictionaries. Examples 7.15.1 and 7.15.2 demonstrate how Java’s
+    map would look if converted to Python’s dictionary.
+
+
+    EXAMPLE 7.15.1'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '```
+
+    HashMap<Integer, String> dictionary = new HashMap<Integer, String>();
+
+    dictionary.put(1, "One");
+
+    dictionary.put(2, "Two");
+
+    dictionary.put(3, "Three");
+
+    System.out.println(dictionary.get(1));
+
+    System.out.println(dictionary.get(3));
+
+    ```
+
+
+    # Python:
+
+
+    ```
+
+    dictionary = {1: "One", 2: "Two", 3: "Three"}
+
+    print dictionary[1]
+
+    print dictionary[3]
+
+    ```
+
+
+    EXAMPLE 7.15.2
+
+
+    # Python:
+
+
+    ```
+
+    dictionaryTwo = {1 : "ValueOne", "KeyTwo" : [276, "ten"], (1, 2, 3) : "valueThree"}
+
+    print dictionaryTwo[1]
+
+    print dictionaryTwo["KeyTwo"]
+
+    print dictionaryTwo[(1, 2, 3])
+
+    ```
+
+
+    # 7.16 Update an Existing Entry in a Dictionary
+
+
+    Updating values in a Python dictionary is done simiarly to updating values in
+    a Python list, but instead of an index you would provide an existing dictionary
+    key specifying which value to update. Please take a look at Example 7.16.1.
+
+
+    EXAMPLE 7.16.1'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '```
+
+    Java:
+
+
+    HashMap<Integer, String> dictionary = new HashMap<Integer, String>();
+
+    dictionary.put(1, "One");
+
+    System.out.println(dictionary.get(1));
+
+    dictionary.put(1, "UpdatedOne");
+
+    System.out.println(dictionary.get(1));
+
+    ```
+
+
+    # Python:
+
+
+    ```
+
+    dictionary = {1 : "One", 2 : "Two", 3 : "Three"}
+
+    print dictionary[1]
+
+    dictionary[1] = "UpdatedOne"
+
+    print dictionary[1]
+
+    ```
+
+
+    # 7.17 Add a New Entry to an Existing Dictionary
+
+
+    Adding new key/value pairs in Python’s dictionary is also similar to updating
+    values in Python’s list, instead of an index, you would provide a new key and
+    then assign it a new value. Please take a look at Example 7.17.1.
+
+
+    > EXAMPLE 7.17.1
+
+
+    ```
+
+    Java:
+
+
+    HashMap<Integer, String> dictionary = new HashMap<Integer, String>();
+
+    dictionary.put(1, "One");
+
+    dictionary.put(2, "Two");
+
+    dictionary.put(3, "Three");
+
+    System.out.println(dictionary.get(1));
+
+    dictionary.put(4, "Four");
+
+    System.out.println(dictionary.get(4));
+
+    ```
+
+
+    # Python:
+
+
+    ```
+
+    dictionary = {1 : "One", 2 : "Two", 3 : "Three"}
+
+    ```'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '```
+
+    print dictionary[1]
+
+    dictionary[4] = "Four"
+
+    print dictionary[4]
+
+    ```
+
+
+    # 7.18 Emptying a Dictionary (Removing All Its Values)
+
+
+    Emptying a Java map and a Python dictionary uses exactly the same procedure. Both
+    languages provide the method, clear(), that will delete all key/value pairs from
+    a given dictionary data structure. Example 7.18.1 demonstrates how it is done
+    in both languages.
+
+
+    EXAMPLE 7.18.1
+
+
+    Java:
+
+
+    ```
+
+    HashMap<Integer, String> dictionary = new HashMap<Integer, String>();
+
+    dictionary.put(1, "One");
+
+    dictionary.put(2, "Two");
+
+    dictionary.put(3, "Three");
+
+    dictionary.clear();
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    dictionary = {1 : "One", 2 : "Two", 3 : "Three"}
+
+    dictionary.clear();
+
+    ```
+
+
+    # 7.19 Delete an Entire Dictionary
+
+
+    Deleting an entire dictionary in Python requires a different process compared
+    to Java. Whereas in Java you would normally give the map object a null value and
+    garbage collector will pick it up and get rid of it, in Python the del function
+    will delete whole dictionary object. Please take a look at Example 7.19.1.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: 'EXAMPLE 7.19.1
+
+
+    # Java:
+
+
+    ```
+
+    HashMap<Integer, String> dictionary = new HashMap<Integer, String>();
+
+    dictionary = null;
+
+    ```
+
+
+    # Python:
+
+
+    ```
+
+    dictionary = {1 : "One", 2 : "Two", 3 : "Three"}
+
+    del dictionary
+
+    ```
+
+
+    # 7.20 Get the Size of a Dictionary
+
+
+    The size of a dictionary is returned using exactly the same Python function as
+    in getting the size of an array (see 7.4 Getting Size of the Array): len(). Example
+    7.20.1 demonstrates how to calculate the size of a Python dictionary.
+
+
+    EXAMPLE 7.20.1
+
+
+    # Java:
+
+
+    ```
+
+    HashMap<Integer, String> dictionary = new HashMap<Integer, String>();
+
+    dictionary.put(1, "One");
+
+    dictionary.put(2, "Two");
+
+    dictionary.put(3, "Three");
+
+    dictionary.size();
+
+    ```
+
+
+    # Python:
+
+
+    ```
+
+    dictionary = {1 : "One", 2 : "Two", 3 : "Three"}
+
+    len(dictionary)
+
+    ```
+
+
+    # 7.21 Getting Keys and Values of a Dictionary'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: 'There are three ways to get the list of all keys and values, separately or
+    together, that reside in a given dictionary.
+
+
+    +   1. dictionary.items() returns the list of (key, value) pairs of the given
+    dictionary.
+
+    2. dictionary.keys() returns the list of all keys of the given dictionary.
+
+    3. dictionary.values() returns the list of all values of the given dictionary.
+
+
+    Example 7.21.1 demonstrates how all three methods look in practice in both Java
+    and Python.
+
+
+    EXAMPLE 7.21.1
+
+
+    Java:
+
+
+    ```
+
+    HashMap<Integer, String> dictionary = new HashMap<Integer, String>();
+
+    dictionary.put(1, "One");
+
+    dictionary.put(2, "Two");
+
+    dictionary.put(3, "Three");
+
+    dictionary.entrySet();
+
+    dictionary.keySet();
+
+    dictionary.values();
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    dictionary = {1 : "One", 2 : "Two", 3 : "Three"}
+
+    dictionary.items()
+
+    dictionary.keys()
+
+    dictionary.values()
+
+    ```
+
+
+    # 7.22 Python Dictionary vs. JSON.
+
+
+    You may have noticed by now that the format of a Python dictionary is very similar
+    to the JSON format. You are right. In the following example, I created a dictionary.
+    I then converted it to a string, and then if you save that string to a text file
+    filename.json,'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'you will basically get the JSON file. Now, there is a JSON library in Python
+    that is designed for working with data in JSON format, Example 7.22.1 demonstrates
+    one additional trick that could be just as useful.
+
+
+    Although Python''s dictionary is similar to JSON in format, the two aren''t completely
+    identical. One of the differences, for example, is that JSON does not support
+    values such as None but supports values that Python''s dictionary does not support,
+    as null. Example 7.22.1 will help you form associations of Python''s dictionary
+    to something that you are likely already familiar from working in Java. In a later
+    section, 9.8 Writing JSON, I will discuss how to correctly write JSON file in
+    Python.
+
+
+    EXAMPLE 7.22.1
+
+
+    Python:
+
+
+    ```
+
+    dictionary = {1 : "ValueOne", "KeyTwo": [276, "ten"], 3 : "valueThree", 4 : {1
+    : "One", 2 : "Two", 3 : "Three"}}
+
+    jsonString = str(dictionary)
+
+    print jsonString
+
+    ```
+
+
+    # 7.23 Sets
+
+
+    Just as a set data structure in Java, a Python set is also basically an array
+    that doesn''t cannot have any duplicate values. The way sets are created in Python
+    is akin to the conversion of one type of Python''s list into another. An array
+    can be converted into a set by what in part will remove all duplicate values from
+    it, leaving only one of each. A tuple can also be converted into a set, and, just
+    as arrays, all duplicates will be removed, leaving only one of each value. Sets
+    can also be created by replacing the square parentheses of the array with curly
+    parentheses, as those used to create Python''s dictionary. Sets are as free as
+    arrays in Python. They can hold any combination of values of any data types, but
+    without duplicates.
+
+
+    EXAMPLE 7.23.1
+
+
+    Java:
+
+
+    ```
+
+    Set<Integer> set = new HashSet<Integer>();
+
+    ```'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '```
+
+    set.add(1);
+
+    set.add(2);
+
+    set.add(3);
+
+    ```
+
+
+    # Python:
+
+
+    Python’s Set created out of the array:
+
+    setOne = set([1, 2, 3])
+
+
+    Python’s Set created out of a tuple:
+
+    setTwo = set((1, 2, 3))
+
+
+    Python’s Set created with curly parenthesis:
+
+    setThree = {1, 2, 3}
+
+
+    Modification to a set—such as adding, removing, or editing elements—is done in
+    the same way as for a Python list. Therefore, I will skip these details and move
+    on to some cool things that can be done in Python but cannot be done in Java.
+
+
+    The Python function difference() returns the difference of two or more sets as
+    a new set. Please take a look at Example 7.23.2.
+
+
+    # EXAMPLE 7.23.2
+
+
+    # Python:
+
+
+    ```
+
+    setOne = set([1, 2, 3])
+
+    setTwo = set((2, 3, 4))
+
+    setThree = {1, 3, 5}
+
+    ```
+
+
+    # Will return values that exist in setOne but not setTwo.
+
+
+    #whatNotInSetTwo = setOne.difference(setTwo)
+
+
+    # Will return list of values that exist in setThree but not in setTwo or setOne.
+    If, example, value exists in one of the pairs of setTwo or setOne, that value
+    will not be returned.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '```
+
+    setThree.difference(setTwo).difference(setOne)
+
+    ```
+
+
+    The function difference_update() will remove all elements of another set from
+    the first set. Basically, setOne.difference_update(setTwo) is identical to setOne
+    = setOne - setTwo.
+
+
+    # EXAMPLE 7.23.3
+
+
+    Python:
+
+
+    ```
+
+    setOne = set([1, 2, 3])
+
+    setTwo = set((2, 3, 4))
+
+    setThree = {1, 3, 5}
+
+    ```
+
+
+    ```
+
+    #Will remove values 2 and 3
+
+    setOne.difference_update(setTwo)
+
+    ```
+
+
+    The next function, intersection(), will return a set of elements that match between
+    two sets.
+
+
+    # EXAMPLE 7.23.4
+
+
+    Python:
+
+
+    ```
+
+    setOne = set([1, 2, 3])
+
+    setTwo = set((2, 3, 4))
+
+    setThree = {1, 3, 5}
+
+    ```
+
+
+    ```
+
+    #Will return a set with values 2 and 3
+
+    setFour = setOne.intersection(setTwo)
+
+    ```
+
+
+    # 7.24 Frozen Set'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "Frozen set is an immutable version of Python’s set data structure. While elements\
+    \ be be modified in a set, they can not be modified in a frozen set. Frozen set\
+    \ is also iterable, just as a set. Please take a look at Example 7.24.1.\n\n#\
+    \ EXAMPLE 7.24.1\n\nPython:\n\n```\narray = [\"wordOne\", \"wordTwo\", \"wordTree\"\
+    , \"wordOne\"]\nfrozenSet = beenet(array)\n```\n\n# 7.25 Stacks\n\nStacks can\
+    \ be implemented just as well in Python as in Java. In the following example,\
+    \ Example 7.25.1, you can see my implementation of stack using Python. And the\
+    \ rule of the Stack? Last in, first out. I didn’t include the implementation of\
+    \ stack using Java because that would be familiar to you, a seasoned Java programmer.\n\
+    \n# EXAMPLE 7.25.1\n\nPython:\n\n```\nclass Stack():n    def __init__(self):\n\
+    \        self.__stack = []\n\ndef isEmpty(self):\n        return len(self.__stack)\
+    \ == 0\n\ndef push(self, object):\n        self.__stack.append(object)\n\ndef\
+    \ pop(self):\n    if self.isEmpty():\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "```\nreturn 0\nelse:\n    objectToReturn = self__stack[len(self__stack) - 1]\n\
+    \    self__stack.pop(len(self__stack) - 1)\n    return objectToReturn\n```\n\n\
+    ```\ndef peek(self):\n    return self__stack[len(self__stack) - 1]\n```\n\n```\n\
+    def search(self, object):\n    return self__stack.index(object)\n```\n\n```\n\
+    def size(self):\n    return len(self__stack)\n```\n\n# 7.26 Queue\n\nQueue is\
+    \ a very useful data structure not only in Java, but also in Python. I use it\
+    \ often and include my implementation of the queue data structure below in Example\
+    \ 7.26.1. The rule of the queue? First in, first out.\n\nEXAMPLE 7.26.1\n\nPython:\n\
+    \n```\nclass Queue:\n    def __init__(self):\n        self__queue = []\n```\n\n\
+    ```\ndef isEmpty(self):\n    return len(self__queue) == 0\n```\n\n```\ndef push(self,\
+    \ object):\n    self__queue.append(object)\n```"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "```\ndef pop(self):\n    if self.isEmpty():\n        return 0\n    else:\n\
+    \        objectToReturn = self.__queue[0]\n        self.__queue.pop(0)\n     \
+    \   return objectToReturn\n```\n\n```\ndef peek(self):\n    return self.__queue[0]\n\
+    ```\n\n```\ndef search(self, object):\n    return self.__queue.index(object)\n\
+    ```\n\n```\ndef size(self):\n    return len(self.__queue)\n```\n\n# 7.27 Linked\
+    \ List\n\nThere is a little more functionality to the linked list compared to\
+    \ the stack or queue data structures. Linked lists come in two forms, Singly Linked\
+    \ List and Doubly Linked List. In Example 7.27.1 below, I show my implementation\
+    \ of the Singly Linked List using Python, which stretches across five pages of\
+    \ this material. Example covers most of the important features of the Singly Linked\
+    \ List.\n\nEXAMPLE 7.27.1\n\nPython:\n\n#Beginning of Linked List Implementation.\n\
+    \n```\nclass Node():\n```"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "```\ndef __init__(self, data, next):\n    self.data = data\n    self.next =\
+    \ next\n```\n\n```\ndef getData(self):\n    return self.data\n```\n\n```\ndef\
+    \ setData(self, value):\n    self.data = value\n```\n\n```\ndef getNext(self):\n\
+    \    return self.next\n```\n\n```\ndef setNext(self, newNext):\n    self.next\
+    \ = newNext\n```\n\n```\nclass SinglyLinkedList():\n```\n\n```\ndef __init__(self):\n\
+    \    self.head = None\n    self.tail = None\n    self.currentSize = 0\n```\n\n\
+    ```\ndef add(self, value):\n    if(self.isEmpty()):\n        self.head = Node(value,\
+    \ None)\n        self.tail = self.head\n    else:\n        self.tail.setNext(Node(value,\
+    \ None))\n        self.tail = self.tail.getNext()\n    self.currentSize += 1\n\
+    \    return True\n```\n\n```\ndef isEmpty(self):\n    return self.size() == 0\n\
+    ```\n\n```\ndef size(self):\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "```\nreturn self.currentSize\nndef get(self, index):\nif index < 0 or index\
+    \ >= self.currentSize:\n    raise IndexError\n```\n\n```\nif index < self.currentSize\
+    \ - 1:\n    current = self.head\n    for i in xrange(index):\n        current\
+    \ = current.getNext()\n        return current.getData()\nreturn self.tail.getData()\n\
+    ```\n\n```\ndef clear(self):\nself.head = None\nself.tail = None\nself.currentSize\
+    \ = 0\n```\n\n```\ndef removeByIndex(self, index):\nif index < 0 or index >= self.currentSize:\n\
+    \    raise IndexError\n```\n\n```\ncurrent = self.head\nfor i in xrange(0, self.size()-1):\n\
+    \    last = current\n    current = current.getNext()\nif i >= index and i < self.size():\n\
+    \    last.setData(current.getData())\nself.tail = last\nself.currentSize -= 1\n\
+    return True\n```\n\n```\n# Will delete element if part of it\n# contains the provided\
+    \ value.\ndef removeValueContains(self, value):\ncurrent = self.head\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "```\nfor i in range(0, self.size()-1):\n    last = current\n    current = current.getNext()\n\
+    \    if str(last.getData()).lower().__contains__(str(value).lower()):\n      \
+    \  for j in range(i, self.size()-1):\n            last.setData(current.getData())\n\
+    \            last = current\n            current = current.getNext()\n       \
+    \ self.tail = last\n        self.currentSize -= 1\n        return True\nraise\
+    \ ValueNotFound\nreturn False\n```\n\n# Will delete element if it equals\n# to\
+    \ the provided value. Exact match.\ndef removeValueEquals(self, value):\n    current\
+    \ = self.head\n    for i in range(0, self.size()-1):\n        last = current\n\
+    \        current = current.getNext()\n        if last.getData() == value:\n  \
+    \          for j in range(i, self.size()-1):\n                last.setData(current.getData())\n\
+    \                last = current\n                current = current.getNext()\n\
+    \            self.tail = last\n            self.currentSize -= 1\n           \
+    \ return True\nraise ValueNotFound\nreturn False\n\n# Will return True if element\
+    \ in the Linked List\n# equals to contains the provided value. Exact match.\n\
+    def containsExactMatch(self, value):\n    current = self.head\n    for i in range(0,\
+    \ self.size()-1):\n        last = current"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "```\ncurrent = current.getNext()\nif last.getData() == value:\n    return True\n\
+    return False\n```\n\n```\n# Will return True if part of some element in the Linked\
+    \ List\n# contains the provided value.\ndef containsWithin(self, value):\n   \
+    \ current = self.head\nfor i in xrange(0, self.size-1):\n        last = current\n\
+    \        current = current.getNext()\n        if str(last.getData()).lower().__contains__(value.lower()):\n\
+    \            return True\nreturn False\n```\n\n```\ndef toArray(self):\n    list\
+    \ = []\n    current = self.head\n    for i in xrange(self.size):\n        last\
+    \ = current\n        current = current.getNext()\n        list.append(last.getData())\n\
+    \    return list\n```\n\n```\n# To preserve the Pytonic way to iterate through\
+    \ collections,\n# iterate basically converts linked list to array, which does\n\
+    # can iterate through using Python's for loop.\n# Example:\n# \"for item in myList.iterate():\n\
+    #     print item\n```\n\n```\ndef iterate(self):\n    return self.toArray()\n\
+    ```\n\n```\ndef indexOf(self, value):\n    current = self.head\n```"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "```\nfor i in range(self.size()):\n    last = current\n    current = current.getNext()\n\
+    \    if last.getData() == value:\n        return i\nraise ValueNotFound\n```\n\
+    \n```\ndef lastIndexOfOff(self, value):\n    current = self.head\n    toReturn\
+    \ = -1\n    for i in range(self.size()):\n        current = current.getNext()\n\
+    \        if last.getData() == value:\n            toReturn = i\n    if toReturn\
+    \ >= 0:\n        return toReturn\n    else:\n        raise ValueNotFound\n```\n\
+    \n```\ndef set(self, index, value):\n    if index < 0 or index > self.currentSize:\n\
+    \        raise IndexError\n    if index == self.currentSize:\n        self.add(value)\n\
+    \        return\n    current = self.head\n    for i in range(self.size()):\n \
+    \       last = current\n        current = current.getNext()\n        if i == index:\n\
+    \            last.setData(value)\n```\n\n```\nclass ValueNotFound(Exception):\n\
+    \    pass\n```\n\n#End of Linked List Implementation."
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "# 7.28 Binary Trees\n\nAh, the almighty binary tree. As complex as this data\
+    \ structure might seem, it is possible to implement it using Python. What you\
+    \ see below is my implementation of a binary tree, which should provide a good\
+    \ example of how to implement binary trees in Python.\n\nRules of binary tree?\
+    \ The left node should be smaller than the parent node, and the right node should\
+    \ always be larger than the parent node. The very first parent node is the root\
+    \ node. I have also experimented by adding two of my own features: Tree To List,\
+    \ which will return the list of values from the tree, and List To Tree, which\
+    \ will generate a binary tree from the values of the provided list. Example 7.28.1\
+    \ contains my four-page implementation of the binary tree data structure using\
+    \ Python.\n\nEXAMPLE 7.28.1\n\nPython:\n\n#Beginning of Binary Tree Implementation.\n\
+    \n```\nclass Node():\n    def __init__(self, data):\n        self.data = data\n\
+    \        self.leftChild = None\n        self.rightChild = None\n        self.parent\
+    \ = None\n```\n\n```\ndef getLeftChild(self):\n    return self.leftChild\n```\n\
+    \n```\ndef getRightChild(self):\n    return self.rightChild\n```\n\n```\ndef getData(self):\n\
+    \    return self.data\n```\n\n```\ndef getParent(self):\n```"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "```\nreturn self.parent\n\ndef setLeftChild(self, newLeftChild):\n    self.leftChild\
+    \ = newLeftChild\n\ndef setRightChild(self, newRightChild):\n    self.rightChild\
+    \ = newRightChild\n\ndef setData(self):\n    return self.data\n\ndef setParent(self,\
+    \ parent):\n    self.parent = parent\n```\n\n```\nclass Tree():\n    def __init__(self):\n\
+    \        self.root = None\n        self._containsBool = False\n        self._findNodeObj\
+    \ = None\n        self._listObj = []\n```\n\n```\ndef add(self, data):\n    if\
+    \ self.root == None:\n        self.root = Node(data)\n    else:\n        self._traverseAndAdd(self.root,\
+    \ Node(data))\n```\n\n```\ndef traverseAndAdd(self, node, nodeToAdd):\n    if\
+    \ node.getData() >= nodeToAdd.getData():\n        if node.getLeftChild() == None:\n\
+    \            node.setLeftChild(nodeToAdd)\n            node.getLeftChild().parent\
+    \ = node\n        else:\n            self._traverseAndAdd(node.getLeftChild(),\
+    \ nodeToAdd)\n\nif node.getData() < nodeToAdd.getData():\n    if node.getRightChild()\
+    \ == None:\n```"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "```\nnode.setRightChild(nodeToAddTo)\nnode.getRightChild().setParent(node)\n\
+    else:\n    self__traverseAndAdd(node.getRightChild(), nodeToAdd)\n```\n\n```\n\
+    def remove(self, value):\n    if self.root != None:\n        node = self.findNode(value)\n\
+    \    else:\n        return None\n    parentNode = node.getParent()\n    if node.getLeftChild()\
+    \ != None and node.getRightChild() != None:\n        if node.getData() < parentNode.getData():\n\
+    \            parentNode.setLeftChild(node.getRightChild())\n            self__traverseAndAdd(self.root,\
+    \ node.getLeftChild())\n    else:\n        parentNode.setRightChild(node.getLeftChild())\n\
+    \        self__traverseAndAdd(self.root, node.getRightChild())\n    elif node.getLeftChild()\
+    \ != None and node.getRightChild() == None:\n        if node.getData() < parentNode.getData():\n\
+    \            parentNode.setLeftChild(node.getLeftChild())\n        else:\n   \
+    \         parentNode.setRightChild(node.getLeftChild())\n    elif node.getLeftChild()\
+    \ == None and node.getRightChild() != None:\n        if node.getData() < parentNode.getData():\n\
+    \            parentNode.setLeftChild(node.getRightChild())\n        else:\n  \
+    \          parentNode.setRightChild(node.getRightChild())\n    elif node.getLeftChild()\
+    \ == None and node.getRightChild() == None:\n        if node.getData() < parentNode.getData(None):\n\
+    \            parentNode.setLeftChild(None)\n        else:\n            parentNode.setRightChild(None)\n\
+    ```\n\n```\ndef findNode(self, value):\n    if self.root != None:\n        self__getNodeTraversal(self.root,\
+    \ value)\n    else:\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "```\nreturn None\nreturnNodeObj = self.__findNodeObj\nself.__findNodeObj =\
+    \ None\nprint returnNodeObj.getData()\nreturn returnNodeObj\n```\n\n```\ndef __getNodeTraversal(self,\
+    \ node, value):\nif node != None:\n    if node.getData() == value:\n        self.__findNodeObj\
+    \ = node\n        self.__getNodeTraversal(node.getLeftChild(), value)\n      \
+    \  self.__getNodeTraversal(node.getRightChild(), value)\n```\n\n```\ndef contains(self,\
+    \ value):\nif self.root != None:\n    self.__containsTraversal(self.root)\nreturnBool\
+    \ = self.__containsBool\nself.__containsBool = False\nprint returnBool\nreturn\
+    \ returnBool\n```\n\n```\ndef __containsTraversal(self, node, value):\nif node\
+    \ != None:\n    if node.getData() == value:\n        self.__containsBool = True\n\
+    \        self.__containsTraversal(node.getLeftChild(), value)\n        self.__containsTraversal(node.getRightChild(),\
+    \ value)\n```\n\n```\ndef traverse(self, traversalType):\nif self.root != None:\n\
+    \    if traversalType.replace(\" \" \" \"\").lower() == \"preorder\":\n      \
+    \  self.__preOrderTraversal(self.root)\n    elif traversalType.replace(\" \" \"\
+    \ \" \"\").lower() == \"inorder\":\n        self.__inOrderTraversal(self.root)\n\
+    \    elif traversalType.replace(\" \" \" \" \"\").lower() == \"postorder\":\n\
+    \        self.__postOrderTraversal(self.root)\n```"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "```\ndef __preOrderTraverse(self, node):\n    if node != None:\n        print\
+    \ node.getData()\n        self.__preOrderTraverse(node.getLeftChild())\n     \
+    \   self.__preOrderTraverse(node.getRightChild())\n```\n\n```\ndef __inOrderTraverse(self,\
+    \ node):\n    if node != None:\n        self.__inOrderTraverse(node.getLeftChild())\n\
+    \        print node.getData()\n        self.__inOrderTraverse(node.getRightChild())\n\
+    ```\n\n```\ndef __postOrderTraverse(self, node):\n    if node != None:\n     \
+    \   self.__postOrderTraverse(node.getLeftChild())\n        self.__postOrderTraverse(node.getRightChild())\n\
+    \        print node.getData()\n```\n\n```\ndef toList(self):\n    if self.root\
+    \ != None:\n        self.__toListTraversal(self.root)\n    returnObj = self.__listObj\n\
+    \    self.__listObj = []\n    return returnObj\n```\n\n```\ndef __toListTraversal(self,\
+    \ node):\n    if node != None:\n        self.__toListTraversal(node.getLeftChild())\n\
+    \        self.__listObj.append(node.getData())\n        self.__toListTraversal(node.getRightChild())\n\
+    ```\n\n```\ndef listTree(self, list):\n    for item in list:\n```"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "self.add(item)\n\n#End of Binary Tree Implementation.\n\n# 7.29 Graphs\n\n\
+    Graph is the one of the most complex data structures to understand and to implement.\
+    \ Even then, it is very much implementable in Python, a powerful object-oriented\
+    \ programming language. Having worked extensively with Java, I think that out\
+    \ of all newer programming languages out there, only Python can compete with Java\
+    \ and may become a language of choice that would replace Java altogether. My humble\
+    \ opinion in case, my implementation of a Java-like graph data structure is shown\
+    \ in Example 7.29.1.\n\nEXAMPLE 7.29.1\n\nPython:\n\n#Beginning of Graph Implementation.\n\
+    \nclass Node():\n\n```\ndef __init__(self, data=data):\n    self.data = data\n\
+    \    self.next = None\n    self.edges = []\n```\n\n```\ndef setNext(self, next):\n\
+    \    self.next = next\n```\n\n```\ndef getNext(self):\n    return self.next\n\
+    ```\n\n```\ndef setData(self, data=):\n    self.data = data\n```\n\n```\ndef getData(self):\n\
+    \    return self.data\n```\n\n```\ndef addEdge(self, edge):\n```"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "```\nself.edges.append(edge)\n\ndef getEdges(self):\n    return self.edges\n\
+    ```\n\n```\ndef getSelf(self):\n    return self\n```\n\n```\nclass Graph():\n\n\
+    def __init__(self):\n    self.root = None\n```\n\n```\ndef addNode(self, value):\n\
+    \    if self.root == None:\n        print(\"Im insodeeee\"\n        self.root\
+    \ = Node(value)\nelse:\n    self__findLastNode(self.root, value)\n```\n\n```\n\
+    def __findLastNode(self, node, value):\n    if node.getNext() != None:\n     \
+    \   self__findLastNode(node.getNext(), value)\n    else:\n        print(node.getData())\n\
+    \        return node.setNext(Node(value))\n```\n\n```\ndef addEdge(self, valueOfStartNode,\
+    \ valueOfEndNode):\n    startNode = self.__findNode(self.root, valueOfStartNode)\n\
+    \    endNode = self__findNode(self.root, valueOfEndNode)\n    self.foundNode =\
+    \ None\n    if startNode != None and endNode != None:\n        startNode.addEdge(endNode)\n\
+    \        return True\nelse:\n        return False\n```"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "```\ndef __findNode(self, node, value):\n    self.foundNode = None\n    if\
+    \ node.getNext() != None:\n        if str(node.getData()).lower() == str(value).lower():\n\
+    \            self.foundNode = node\n        else:\n            self.parentNode\
+    \ = node\n            self.__findNode(node.getNext(), value)\n    return self.foundNode\n\
+    ```\n\n```\ndef printConnectionsOfALINodes(self):\n    if self.root == None:\n\
+    \        print(\"Nothing to print, first add Root Node\"\n    else:\n        self.__iterateNodes(self.root)\n\
+    ```\n\n```\ndef __iterateNodes(self, node):\n    if node.getNext() != None:\n\
+    \        print(str(node.getData()) + str(node.getEdges))\n        self.__iterateNodes(node.getNext())\n\
+    ```\n\n```\ndef isReachable(self, valueOfStartNode, valueOfEdges=0):\n    self.numOfEdges\
+    \ = 0\n    self.isReachableBool = False\n    self.lookedAt = []\n    startNode\
+    \ = self.__findNode(self.root, valueOfStartNode)\n    endNode = self.__findNode(self.root,\
+    \ valueOfEndNode)\n    if startNode != None:\n        print(\"startNode: \"+startNode.getData())\n\
+    \        print(\"endNode: \"+endNode.getData())\n        self.__isReachable =\
+    \ \"+str(self.isReachableBool)\n        if self.isReachableBool is True:\n   \
+    \         print(\"Took \"+str(self.numOfEdges) + \" edge(s) to reach endNode\"\
+    )\n        return self.isReachableBool\n    else:\n        return self.isReachableBool\n\
+    ```"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "```\ndef __findTheEdgeConnection(self, startNode, endNode):\n    listEdges\
+    \ = startNode.getEdges()\n    if endNode in startNode.getEdges():\n        self.isReachableBool\
+    \ = True\n    else:\n        for item in listEdges:\n            subListOfEdges\
+    \ = item.getEdges()\n            if len(item.getEdges()) > 0:\n              \
+    \  for subItem in subListOfEdges:\n                    self___findTheEdgeConnection(subItem,\
+    \ endNode)\n        self.numOfEdges += 1\n```\n\n```\ndef delete(self, value):\n\
+    \    nodeObj = self.__findNode(self.root, value)\n    print nodeObj.getData()\n\
+    \    print self.parentNode.getData()\n    self.parentNode.setNext(nodeObj.getNext())\n\
+    ```\n\n```\ndef __iterateAndDeleteEdges(self, currentNode, nodeToDelete):\n  \
+    \  if currentNode.getNext() != None:\n        if nodeToDelete in currentNode.getEdges():\n\
+    \            currentNode.getEdges().remove(nodeToDelete)\n        self.__iterateAndDeleteEdges(currentNode.getNext(),\
+    \ nodeToDelete)\n```\n\n#End of Graph Implementation."
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "# 8. MULTITHREADING AND MULTIPROCESSING\n\nJava lets you run separate processes\
+    \ in parallel using Java’s Thread Model. Python also gives you that ability, but\
+    \ in two variations unique to each other: “multithreading” and “multiprocessing.”\
+    \ The difference between the two lies in how separate processes share virtual\
+    \ memory where they run.\n\n# 8.1 Multithreading\n\nMultithreading runs within\
+    \ the same memory and shares it based on availability. For example, if one thread\
+    \ took 80% of available memory, then only 20% is left to run other processes until\
+    \ more memory out of the occupied 80% becomes available. Example 8.1.1 demonstrates\
+    \ the implementation of multithreading in Java and in Python. I kept the class\
+    \ and method names the same between Java and Python examples for you compare how\
+    \ the two languages implement multithreading.\n\nEXAMPLE 8.1.1\n\nJava:\n\n```\n\
+    class SomeClass {\n    public static void main(String args[]) {\n        new ThreadNode(\"\
+    First\");\n        new ThreadNode(\"Second\");\n        new ThreadNode(\"Third\"\
+    );\n        new ThreadNode(\"Fourth\");\n    }\n}\nclass ThreadNode implements\
+    \ Runnable {\n    String threadName;\n    Thread threadObj;\n```"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "```\nThreadNode(String threadName) {\n    String name = threadName;\n    threadObj\
+    \ = new Thread(this, name);\n    threadObj.start();\n}\n```\n\n```\npublic void\
+    \ run() {\n    for (int counter = 5; counter > 0; counter--) {\n        System.out.println(threadName\
+    \ + \": \" \" + counter);\n    }\n}\n```\n\n# Python:\n\n```\nimport threading\n\
+    ```\n\n```\nclass ThreadNode(threading.Thread):\n\n    def __init__(self, threadName):\n\
+    \        threading.Thread.__init__(self)\n        self.threadName = threadName\n\
+    \n    def run(self):\n        for counter in range(5):\n            print(self.threadName\
+    \ + \": \" + str(counter))\n```\n\n```\nclass SomeClass:\n    def __init__(self):\n\
+    \        thread1 = ThreadNode(\"First\")\n        thread1.start()\n        thread2\
+    \ = ThreadNode(\"Second\")\n        thread2.start()\n        thread3 = ThreadNode(\"\
+    Third\")\n        thread3.start()\n        thread4 = ThreadNode(\"Fourth\")\n\
+    \        thread4.start()\n```"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# SomeClass()\n\n# # 8.2 Synchronization in Multithreading\n\nPython’s `threading`\
+    \ module provides the concept that a `Lock()` can lock out the rest of the processes\
+    \ and line them up in the queue. All consequent threads execute only after the\
+    \ current one has completed its execution. Before execution, the thread needs\
+    \ to `acquire()` its reserved spot in the queue. When the execution is completed,\
+    \ the thread has to `release()` itself, opening a pathway for the next thread\
+    \ in line. Example 8.2.1 demonstrates exactly how that is done in Python.\n\n\
+    EXAMPLE 8.2.1\n\n**Python:**\n\n```\n```python\nimport threading\n\nclass ThreadNode(threading.Thread):\n\
+    \    def __init__(self, threadName, lockObj):\n        threading.Thread.__init__(self)\n\
+    \        self.threadName = threadName\n        self.lockObj = lockObj\n    def\
+    \ run(self):\n        self.lockObj.acquire()\n        for counter in range(5):\n\
+    \            print(self.threadName + \": \" + str(counter))\n        self.lockObj.release()\n\
+    ```\n```\n\n```\n```python\nclass SomeClass():\n    def __init__(self):\n```\n\
+    ```"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "```\nlockObj = threading.Lock()\n\nthread1 = ThreadNode(\"First\", lockObj)\n\
+    thread1.start()\nthread2 = ThreadNode(\"Second\", lockObj)\nthread2.start()\n\
+    thread3 = ThreadNode(\"Third\", lockObj)\nthread3.start()\nthread4 = ThreadNode(\"\
+    Fourth\", lockObj)\nthread4.start()\n```\n\nSomeClass()\n\n# 8.3 Multiprocessing\n\
+    \nMultiprocessing splits memory evenly among the processes that are to run in\
+    \ parallel. Each process then runs within its virtual memory and does not take\
+    \ memory away from other processes. If, for example, we run four processes on\
+    \ a quad core CPU, then each process would run on its own core without violating\
+    \ the cores of other processes. In Python, multiprocessing can be implemented\
+    \ using multiple ways. I specified two ways in Examples 8.3.1 and 8.3.2. Both\
+    \ work well and demonstrate the flexibility of Python.\n\nEXAMPLE 8.3.1\n\nPython:\n\
+    \nfrom multiprocessing import Process\n\n```\nclass ThreadNode:\n    def __init__(self,\
+    \ threadName):\n        self.threadName = threadName\n        Process(target=self.run,\
+    \ args=()).start()\n```\n\n```\ndef run(self):\n    for counter in range(5):\n\
+    ```"
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "```\nprint self.threadName + \": \" + str(counter)\n\nclass SomeClass():\n\
+    \    def __init__(self):\n        ThreadNode(\"First\")\n        ThreadNode(\"\
+    Second\")\n        ThreadNode(\"Third\")\n        ThreadNode(\"Fourth\")\n\nSomeClass()\n\
+    ```\n\nEXAMPLE 8.3.2\n\nPython:\n\n```\nfrom multiprocessing import Process\n\n\
+    class ThreadNode:\n    def run(self, threadName):\n        for counter in range(5):\n\
+    \            print threadName + \": \" + str(counter)\n```\n\n```\nclass SomeClass():\n\
+    \    def __init__(self, args):\n        threadObj = ThreadNode()\n        Process(target=threadObj.run,\
+    \ args=(\"First\", )).start()\n        Process(target=threadObj.run, args=(\"\
+    Second\", )).start()\n        Process(target=threadObj.run, args=(\"Third\", )).start()\n\
+    \        Process(target=threadObj.run, args=(\"Fourth\", )).start()\nSomeClass()\n\
+    ```\n\n# 8.4 Synchronization in Multiprocessing"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "Python's multiprocessing module also provides the concept that Lock() works\
+    \ in a similar fashion as the Lock() of the threading module. Lock() can prevent\
+    \ all consequent processes from execution and line them up in the queue for execution\
+    \ only after the current one has completed its execution. Before execution, the\
+    \ process need to acquire() its reserved spot in the queue. When execution is\
+    \ completed, the process has to release() itself, opening a door for the next\
+    \ process in line to enter and start its execution. Example 8.4.1 demonstrates\
+    \ exactly how it is done in Python. Please note that from the multiprocessing\
+    \ module, 1 imported Process and Lock classes.\n\n# EXAMPLE 8.4.1\n\nJava:\n\n\
+    ```\nfrom multiprocessing import Process, Lock\n\nclass SomeClass:\n    def __init__(self):\n\
+    \        lockObj = Lock()\n\n    intVariable = 1000\n    for num in range(10):\n\
+    \        Process(target=self.ourProcess, args=(lockObj,intVariable)).start()\n\
+    \ndefdef ourProcess(self, lockObj, intVariable):\n        lockObj.acquire()\n\
+    \        print 'Printing my Integer: ' + str(intVariable)\n        lockObj.release()\n\
+    \nSomeClass()\n```"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "# # 9. I/O\n\n# ## 9.1 Reading Console Input\n\nReading console input can be\
+    \ handy sometimes, although there may only be rare occasions for it, from my experience.\
+    \ The examples below demonstrate how to achieve this in both Java and Python.\
+    \ Please note that in the Python example I have converted the input into an integer\
+    \ for validation purpose. That demonstrates how the program can validate provided\
+    \ input, and in my case, make sure that the input is indeed an Integer. Java does\
+    \ that automatically, but in Python I have to do a little extra work to achieve\
+    \ that. Please take a look at Example 9.1.1.\n\nEXAMPLE 9.1.1\n\nJava:\n\n```\n\
+    import java.util.Scanner;\n\npublic class SomeClass {\n    public static void\
+    \ main(String[] args) {\n\n    Scanner in = new Scanner(System.in);\n\n    int\
+    \ intVar = in.nextInt();\n    String strVar = in.next();\n    System.out.println(\"\
+    Printing int: \" + intVar);\n    System.out.println(\"Printing string: \" + strVar);\n\
+    \    }\n}\n```\n\nPython:\n\n```\nclass SomeClass():\n    def __init__(self):\n\
+    ```"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "```\ntry:\n    intVar = int(raw_input('Enter Integer Value:'))\nexcept ValueError:\n\
+    \    print(\"Not an Integer.\")\n```\n\nSomeClass()\n\n# 9.2 Reading from Files\n\
+    \nExample 9.2.1 demonstrates the syntax differences between Java and Python when\
+    \ reading content from files. Both examples will grab each line of a text file's\
+    \ content and output it one by one into a console.\n\nEXAMPLE 9.2.1\n\nJava:\n\
+    \n```\nimport java.io.*;\nclass ReadFileContent {\n    public static void main(String[]\
+    \ args) {\n        File fileToRead = new File(\"/path/to/file/filename.txt\");\n\
+    \        BufferedReader reader = new BufferedReader(new FileReader(fileToRead));\n\
+    \        while (reader.readLine() != null) {\n            String data = reader.readLine();\n\
+    \            System.out.println(data);\n        }\n        reader.close();\n \
+    \   }\n}\n```"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "Python:\n\n```\nclass ReadFileContent:\n    def __init__(self):\n        fileToRead\
+    \ = open(\"/path/to/file/filename.txt\", \"r\")\n        for line in fileToRead.readlines():\n\
+    \            print line\n    fileToRead.close()\n```\n\nReadFileContent()\n\n\
+    # 9.3 How to Avoid Slurping While Reading Content of Large Files\n\nLet’s start\
+    \ with defining what slurping. Slurping is reading the content of the whole file\
+    \ at once into virtual memory, working with it out of the virtual memory. It is\
+    \ the fastest way to read the content of a file, but what if the size of this\
+    \ content is larger than the size of your virtual memory? Then slurping will cause\
+    \ an out-of-memory exception.\n\nIn Python, file.read() and file.readlines() both\
+    \ slurp the whole file into memory. In cases when slurping a full file is not\
+    \ an option, Python provides a way to read the file line by line very simply,\
+    \ such as in Example 9.3.1.\n\nEXAMPLE 9.3.1\n\nPython:\n\n```\nclass ReadFileContentWihtoutSlurping():\n\
+    \    def __init__(self):\n        sourceFile = \"/path/to/file/filename.txt\"\n\
+    \        with open(sourceFile, \"r\") as file:\n            for line in file:\n\
+    \                print line\n```\n\nReadFileContentWihtoutSlurping()"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "# 9.4 Writing into Files\n\nWriting into files using Python is accomplished\
+    \ almost the same way as reading from files. Example 9.4.1 shows how it's done.\
+    \ Note that Example 9.4.1 overwrites existing file content every time it is executed.\
+    \ Also note that if a file doesn't exist, the program will create a file, but\
+    \ only if the specified path to the file exists. If one or more directories do\
+    \ not exist, the following program will throw an exception.\n\nEXAMPLE 9.4.1\n\
+    \nJava:\n\n```\nimport java.io.*;\nclass WriteFileContent {\n    public static\
+    \ void main(String args[]) {\n        String fileNameWithPath = \"/path/to/file/filename.txt\"\
+    ;\n        File fileToWrite = new File(fileNameWithPath);\n        if (!fileToWrite.exists())\
+    \ {\n            fileToWrite.createNewFile();\n        }\n        PrintWriter\
+    \ writer = new PrintWriter(fileNameWithPath, \"UTF-8\");\n        writer.println(\"\
+    text to write\");\n        writer.close();\n    }\n}\n```\n\nPython:\n\n```\n\
+    class WriteFileContent():\n    def __init__(self):\n        fileToWrite = open(\"\
+    filename.txt\", \"w\")\n        fileToWrite.writelines(\"text to write\")\n  \
+    \      fileToWrite.close()\n```\n\nWriteFileContent()"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "# 9.5 Appending into Files\n\nWhen writing into files, often you need to append\
+    \ lines of text into the same file while preserving the file’s existing content.\
+    \ Using Example 9.4.1 and changing only one character for the second argument\
+    \ of function `open()`, I can start appending into a file instead of overwriting\
+    \ it every time I access it. Please take a look at Example 9.5.1. the second argument\
+    \ of function `open()` is set to $a$, which in this case stands for “append”.\n\
+    \nEXAMPLE 9.5.1\n\nPython:\n\n```\nclass WriteFileContent():n    def __init__(self):\n\
+    \        fileToRead=open(\"filename.txt\", \"a\")\n        fileToRead.writelines(\"\
+    text to write\")\n        fileToRead.close()\n```\n\nWriteContent()\n\n# 9.6 Checking\
+    \ Path Existence\n\nTo prevent a program from throwing an exception, if the path\
+    \ to a file that is being read from or written into doesn't exist, it's helpful\
+    \ to first perform a check for the existence of the specified path. To make that,\
+    \ I first need to import the `os` module and then use its `path.exists` function,\
+    \ which will return a boolean value, letting me know whether a path exists. Example\
+    \ 9.6.1 demonstrates the implementation of this check."
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "# EXAMPLE 9.6.1\n\nPython:\n\nimport os\n\n```\nclass SomeClass():n    def\
+    \ __init__(self):\n        print os.path.exists(\"/path/to/bla/bla/\")\n```\n\n\
+    SomeClass()\n\nExample 9.6.2 demonstrates how to check for path existence in combination\
+    \ with writing into a file if a path does exist.\n\n# EXAMPLE 9.6.2\n\nPython:\n\
+    \n```\nclass WriteFileContent():n    def __init__(self):\n        pathToFile =\
+    \ \"/path/to/file/\"\n        fileName = \"filename.txt\"\n        if os.path.exists(pathToFile):\n\
+    \            fileToRead = open(os.path.join(pathToFile, fileName), \"w\")\n  \
+    \          fileToRead.writelines(\"text to write\")\n        fileToRead.close()\n\
+    ```\n\nWriteFileContent()\n\n# 9.7 Creating a Path to File\n\nWhen you are trying\
+    \ to write into a file but the path doesn't exist, you can simply create it by\
+    \ adding all missing directories and sub directories of the missing path. It can\
+    \ be easily done in Python using the os module, as shown in Example 9.7.1. You\
+    \ may notice that I"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "moved out the code that writes text to file, into its own method and added\
+    \ an else to my condition, which checks for the existence of the provided path.\
+    \ If the path doesn't exist, it will create all directories that are missing in\
+    \ the path. Function os.makedirs(pathToFile) works perfectly for that and is demonstrated\
+    \ in Example 9.7.1.\n\n# EXAMPLE 9.7.1\n\nPython:\n\n```\nclass WriteFileContent():\n\
+    \    def __init__(self):\n        pathToFile = \"path/to/file/\"\n        fileName\
+    \ = \"filename.txt\"\n        if os.path.exists(pathToFile):\n            self.write(pathToFile,\
+    \ fileName)\n        else:\n            os.makedirs(pathToFile)\n            self.write(pathToFile,\
+    \ fileName)\n```\n\n```\ndef write(self, pathToFile, fileName):\n    fileRead\
+    \ = open(os.path.join(pathToFile, fileName), \"w\")\n    fileRead.writelines(\"\
+    text to write\")\n    fileRead.close()\n```\n\nWriteFileContent()\n\n# 9.8 Reading\
+    \ JSON Files\n\nTo demonstrate the power and simplicity of Python, let's take\
+    \ a look at how to read from and write into a JSON format. First I want to turn\
+    \ your attention to the format of Python’s dictionary data structure and JSON’s\
+    \ format. You are correct—they are almost identical. The only differences are\
+    \ that boolean values in Python start with capital letters (True or False), but\
+    \ in JSON they are lowercase (true or false), and JSON null value is None in Python’s\
+    \ dictionary. Besides those two differences, the format is the same and could\
+    \ be iterated through similarly."
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: "However, convert JSON format data into Python's object you need a module called\
+    \ json. The name is very simple to remember and self-explanatory, just like everything\
+    \ else in Python. Module json needs to be imported into the workspace where the\
+    \ method that is going to use it resides. In Example 9.8.1, method getJsonContent()\
+    \ converts a string in JSON format to a JSON object. JSON string could have been\
+    \ read from a file or passed to the method as an argument. Using json module also\
+    \ fixes the differences by converting Python's None, True and False into JSON's\
+    \ null, true and false.\n\n# EXAMPLE 9.8.1\n\nPython:\n\nimport json\n\nclass\
+    \ WorkingWithJSON():\n\n```\ndef getJsonContent(self, jsonStr):\n    jsonObj =\
+    \ json.loads(jsonStr)\n    return jsonObj\n```\n\nIn my next example, Example,\
+    \ 9.8.2, let's iterate through the keys of the JSON. As you can see, using a method\
+    \ of iteration very similar to how you would iterate through an array in Python,\
+    \ I can extract the list of keys out of the JSON object.\n\n# EXAMPLE 9.8.2\n\n\
+    Python:\n\nimport json\n\nclass WorkingWithJSON():\n\n```\ndef getJsonContent(self,\
+    \ jsonStr):\n    jsonObj = json.loads(jsonStr)\n    for key in jsonObj:\n    \
+    \    print key\n```"
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "And at last, let's extract the values that are attached to the list of keys\
+    \ in my JSON object.\n\n# EXAMPLE 9.8.3\n\nPython:\n\n```\nimport json\n\nclass\
+    \ WorkingWithJSON():\n\n    def getJsonContent(self, jsonStr):\n        jsonObject\
+    \ = json.loads(jsonStr)\n        for key in jsonObject:\n            #print outputs\
+    \ value of a given key\n            print jsonObj[key]\n```\n\nAbove, Example\
+    \ 9.8.3 demonstrates a simple way of iterating a JSON object. In Python there\
+    \ are other modules with powerful features designed specifically for working with\
+    \ JSON formats. Let's take a more complex case as an example.\n\nLet's say I have\
+    \ a list where each element is a JSON string with multiple key and value pairs.\
+    \ I would like to sort the list of elements first by the name key values, then\
+    \ by lastName key values, and lastly by age key values. Example 9.8.4 demonstrates\
+    \ how to achieve this with ease in Python.\n\n# EXAMPLE 9.8.4\n\nPython:\n\nclass\
+    \ WorkingWithContent(self):\n\n```\n    def sortJsonContent(self):\n        ourList\
+    \ = [{'name': 'Alex', 'age': 39, 'lastName': 'Simpson'},\n                   {'name':\
+    \ 'Jack', 'age': 40, 'lastName': 'Johnson'},\n                   {'name': 'Jack',\
+    \ 'age': 21, 'lastName': 'Beatles'}]\n```"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "```\nsortedList = sorted(ourList, key=itemgetter('name', 'lastName', 'age'))\n\
+    \nreturn sortedList\n```\n\n# 9.9 Writing JSON Files\n\nWriting JSON files is\
+    \ as easy as reading them. If you remember, in the previous chapter I mentioned\
+    \ that JSON format is almost identical to the format of Python’s dictionary. The\
+    \ similarity is even more prominent when you are writing JSON files. To do that,\
+    \ first programmatically you need to build a Python dictionary in the format that\
+    \ you would like your JSON to be structured and by fill in values. Then, by simply\
+    \ passing the Python dictionary object to json.dump, you can convert the dictionary\
+    \ into a perfectly JSON string that is later saved into a json file. In the following\
+    \ example, note that I added one value that is boolean and in Python’s format\
+    \ where booleans are all capitalized. The json file is generated, even the Python\
+    \ Boolean True is converted into the JSON format value, true. The same is done\
+    \ for Python’s None, which is converted to JSON’s null. Example 9.9.1 demonstrates\
+    \ how to properly write JSON files in Python.\n\nEXAMPLE 9.9.1\n\nPython:\n\n\
+    ```\nimport json\n```\n\n```\nclass WorkingWithJSON():\n```\n\n```\ndef writeContentToJSON(self):\n\
+    \    jsonFileWithPath = \"/path/to/file/our_csv_file.json\"\n```\n\n```\ndataDictionary\
+    \ = {\"key one\": \"value one\", \"key two\": [1, 2, 3], \"key three\": {\"sub\
+    \ key three\": [\"list\", \"of\", \"values\", True]}\n    with open(jsonFileWithPath,\
+    \ 'w') as jsonWrite:\n        json.dump(dataDictionary, jsonWrite)\n```"
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "# 9.10 Reading CSV Files\n\nCSV format is very popular, especially among big\
+    \ data developers, to use as feed export and injection format. Python has a great\
+    \ library that makes working with CSVs as simple as it can get. In the next example,\
+    \ Example 9.10.1, I demonstrated reading from a CSV file by providing the path\
+    \ to your CSV file and filename, and then return Python’s CSV object that contains\
+    \ all content from the given CSV file. Just as with the json module, the csv module\
+    \ needs to be imported first. Please note that you can specify different delimiters—it\
+    \ could be comma (,), pipe (|), or tab (\t)—depending on what delimiter is used\
+    \ in the CSV file you are trying to read form.\n\nEXAMPLE 9.10.1\n\nPython:\n\n\
+    ```\nimport csv\n\nclass WorkingWithContent:\n    def getCSVContentPath(self=\"\
+    /path/to/file/our_csv_file.csv\")\n        with open(csvFileWithPath, 'rb') as\
+    \ csvFile:\n            csvContent = csv.reader(csvFile, delimiter=',', quotechar='|')\n\
+    \            return csvContent\n```\n\nExample 9.10.2 demonstrates how to extract\
+    \ and read values of the csvContent object. As you can see in Example 9.10.2,\
+    \ I added iteration of csvContent, which outputs each row of the content, then\
+    \ I print it out into a console. If you run the following example, you will see\
+    \ that each row is an array of values from each row of the CSV file. Since each\
+    \ row is a list, you can extract its values just as you would extract elements\
+    \ from any array list by index.\n\nEXAMPLE 9.10.2\n\nPython:"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: "```\nimport csv\n\nclass WorkingWithCSV():\n    def getCSVContent(self):\n\
+    \        csvFileWithPath = \"/path/to/file/our_csv_file.csv\"\n        with open(csvFileWithPath,\
+    \ 'rb') as csvFile:\n            csvContent = csv.reader(csvFile, delimiter=',',\
+    \ quotechar='|')\n            for row in csvContent:\n                print(row)\n\
+    ```\n\nThere is more to it. Just as with JSON, in Python there are multiple powerful\
+    \ modules available to work with CSV format. The next example demonstrates module\
+    \ pandas, which solves a problem of grabbing the list of values of only one column\
+    \ out of a given CSV file. Let's say I have a CSV file that column names specified\
+    \ at the header and I need to extract a list of values of only one specific column.\
+    \ The example below shows exactly how to achieve this in Python. Module pandas\
+    \ also first needs to be imported before it could be referenced and used in a\
+    \ program. Please take a look at Example 9.10.3.\n\n# EXAMPLE 9.10.3\n\nPython:\n\
+    \n```\nimport pandas\n\nclass WorkingWithCSV():\n    def getCSVContent(self):\n\
+    \        csvFileWithPath = \"/path/to/file/our_csv_file.csv\"\n        csvContent\
+    \ = pandas.read_csv(csvFileWithPath)\n        column_values_list = csvContent['column_name']\n\
+    \        return column_values_list\n```\n\n# 9.11 Writing CSV Files"
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "Writing into CSV can also be done with ease in Python using the same csv module.\
+    \ First, you need to aggregate all values into the array list. Pass this array\
+    \ list object to the csv.writer and it will do the rest. It's as simple as it\
+    \ sounds. Please note that you can specify different delimiters, with comma (,),\
+    \ pipe (|), or tab (|). In Example 9.11.1, I specified a comma delimiter for the\
+    \ CSV file that I am trying to generate.\n\n# EXAMPLE 9.11.1\n\nPython:\n\n```\n\
+    class WorkingContentToCSV():\n    def writeContentToCSV(self):\n        csvFileWithPath\
+    \ = \"/path/to/file/our_csv_file.csv\"\n\n        values = [\"value-one\", \"\
+    value-two\", 3, 44:44, \"value five\"]\n\n        with open(csvFileWithPath, 'w')\
+    \ as csvWrite:\n            csvWriter = csv.writer(csvWrite, delimiter=',')\n\
+    \            csvWriter.writerows(values)\n```\n\n# 9.12 Lambda Expressions\n\n\
+    Alighty lambdas, the anonymous functions not bound to the name generated at the\
+    \ runtime. Lambdas are supported in Java starting from Java 8 and also in Python.\
+    \ In both languages the concept of lambda is pretty much the same. Syntax, however\
+    \ is slightly different, but it's easy to understand if you know what lambdas\
+    \ are and how to use them in Java. Lambdas, by the way, can also be passed as\
+    \ arguments to other functions in both languages. Example 9.12.1 demonstrates\
+    \ the differences in syntax between the same lambda implemented in Java and in\
+    \ Python. It's a very simple example that returns a boolean value after comparing\
+    \ two strings.\n\n# EXAMPLE 9.12.1\n\nJava:"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '```
+
+    boolean comparingStrings = (String strOne, String strTwo)->strOne.equals(strTwo);
+
+    ```
+
+
+    # Python:
+
+
+    ```
+
+    comparingStrings = lambda strOne, strTwo: strOne == strTwo
+
+    ```
+
+
+    To run lambda function from Example 9.12.1 after it has been generated, you need
+    to do the following. As part of Example 9.12.2 let''s print out the returned result
+    of above lambdas using Java and Python.
+
+
+    # EXAMPLE 9.12.2
+
+
+    # Java:
+
+
+    ```
+
+    boolean comparingStrings = (String strOne, String strTwo)->strOne.equals(strTwo);
+
+    System.out.println(comparingStrings("Hello", "World"));
+
+    ```
+
+
+    # Python:
+
+
+    ```
+
+    comparingStrings = lambda strOne, strTwo: strOne == strTwo
+
+    print comparingStrings("Hello", "World")
+
+    ```'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# # 10. STRINGS
+
+
+    # ## 10.1 String Concatenation with Other Data Types
+
+
+    I decided to mention string concatenation of strings with other data types because
+    the way this works in Python is completely opposite from how it works in Java.
+    Concatenation itself is done using the same operator (+) in both Java and Python.
+    Now let''s move on to the differences.
+
+
+    In Java, concatenating any data type to string converts that value to a string.
+    In Python, however, automatic conversion does not happen. To concatenate any data
+    type to a string, the other data type needs to be first explicitly converted into
+    a string. Please take a look at Example 10.1.1.
+
+
+    EXAMPLE 10.1.1
+
+
+    Java:
+
+
+    ```
+
+    String strVar = "Hello World" + 9 + true;
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    strVar = "Hello World" + str(9) + str(True)
+
+    ```
+
+
+    You may have noticed that in the Python version of Example 10.1.1, I used the
+    str() function to convert 9 and a boolean value into a string. Without str(),
+    Python will throw an exception.
+
+
+    The data type of the variable in Python can be checked using function type().
+    Example 10.1.2 will print data types of variables into a console. Values do have
+    data types in Python, but Python assigns them automatically. In other words, 9
+    would be assigned the'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: 'integer data type, but “Hello World” would get string type assigned.
+
+
+    EXAMPLE 10.1.2
+
+
+    Python:
+
+
+    ```
+
+    strVar = "Hello World"
+
+    intVar = 9
+
+    boolVar = True
+
+    print type(strVar)
+
+    print type(intVar)
+
+    print type(boolVar)
+
+    ```
+
+
+    # 10.2 Character Extraction
+
+
+    Python sees all strings as arrays of characters. Therefore, to extract a character
+    out of a string you would use the same method as you would extract an element
+    out of an array. Example 10.2.1 demonstrates how I can get a string character
+    by index.
+
+
+    EXAMPLE 10.2.1
+
+
+    Java:
+
+
+    ```
+
+    String strVar = "Hello World";nchar charVar = strVar.charAt(4);
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    strVar = "Hello World"
+
+    charVar = strVar[4]
+
+    ```
+
+
+    To get a part of a string starting from the character at index 4 to the character
+    at index 9, for example, you need to use Python’s so-called ‘slice notation.’
+    Slice notation is basically a :, colon character that separates the range of values
+    from start to end. It will work the same way for any array or string in Python.
+    Please take a look at Example 10.2.2.'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# EXAMPLE 10.2.2
+
+
+    Java:
+
+
+    ```
+
+    String strVar = "Hello World";nString subStr = strVar.substring(4, 9);
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    strVar = "Hello World"
+
+    subStr = strVar[4:9];
+
+    ```
+
+
+    subStr in this case will be assigned the value o Wor.
+
+
+    Example 10.2.3 demonstrates how to get all characters of the string after the
+    character under index 4.
+
+
+    # EXAMPLE 10.2.3
+
+
+    Java:
+
+
+    ```
+
+    String strVar = "Hello World"
+
+    String subStr = strVar.substring(4);
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    strVar = "Hello World"
+
+    subStr = strVar[4:];
+
+    ```
+
+
+    subStr in this case will be assigned the value o World.
+
+
+    Example 10.2.4 demonstrates how to subtract two characters from the end of a string.'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: "# EXAMPLE 10.2.4\n\nPython:\n\n```\nstrVar = \"Hello World\"\nsubStr = strVar[-2]\n\
+    ```\n\nsubStr in this case will be assigned the value Hello Wor.\n\nUsing for\
+    \ loop you can iterate through the characters of the string just as with the elements\
+    \ of any array in Python, such as in Example 10.2.5.\n\n# EXAMPLE 10.2.5\n\nPython:\n\
+    \n```\nstrVar = \"Hello World\"\nfor charElement in strVar:\n    print charElement\n\
+    ```\n\n# 10.3 String Comparison\n\nTo compare two strings in Python, you would\
+    \ double equal sign. Methods equals() and equalsIgnoreCase() do not exist in Python\
+    \ as in Java, but they could easily be replicated. Example 10.3.1 demonstrates\
+    \ how to replicate Java's equal() in Python.\n\n# EXAMPLE 10.3.1\n\nJava:\n\n\
+    ```\nString strOne = \"Hello World\"\nString strTwo = \"Hello World\"\nboolean\
+    \ equalsOrNot = strOne.equals(strTwo);\n```"
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '```
+
+    Python:
+
+    strOne = "Hello World"
+
+    strTwo = "Hello World"
+
+    equalsOrNot = strOne == strTwo
+
+    ```
+
+
+    Java''s equalsIgnoreCase() can be mimicked in Python using the method shown in
+    Example
+
+    10.3.2.
+
+
+    # EXAMPLE 10.3.2
+
+
+    ```
+
+    Java:
+
+    String strOne = "Hello World";nString strTwo = "hello world"
+
+    boolean equalsOrNot = strOne.equalsIgnoreCase(strTwo);
+
+    ```
+
+
+    ```
+
+    Python:
+
+    strOne = "Hello World"
+
+    strTwo = "hello world"
+
+    equalsOrNot = strOne.lower() == strTwo.lower()
+
+    ```
+
+
+    # 10.4 StartsWith() and EndsWith()
+
+
+    These two are almost identical in Java and Python. Example 10.4.1 explains it
+    all.
+
+
+    # EXAMPLE 10.4.1
+
+
+    ```
+
+    Java:
+
+    String strOne = "Hello World";nString strTwo = "hello world"
+
+    boolean startsWithNot = strOne.startsWith("He");
+
+    ```'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '# 10.6 String Replace'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: 'In Java and Python, replace() plays exactly the same role and is even called
+    the same way.
+
+    Example 10.6.1 demonstrates these similarities.
+
+
+    # EXAMPLE 10.6.1
+
+
+    Java:
+
+
+    String strOne = "Hello, Today’s Wonderful World of People’s Happiness.";
+
+    String strTwo = strOne.replace("Today", "Yesterday");
+
+
+    Python:
+
+
+    strOne = "Hello, Today’s Wonderful World of People’s Happiness."
+
+    strTwo = strOne.replace("Today", "Yesterday")
+
+
+    # 10.7 String trim() in Python
+
+
+    Java’s trim() is called strip() in Python. Both serve exactly the same purpose
+    of removing
+
+    preceding and trailing spaces around the string. Example 10.7.1 shows strip()
+    in action.
+
+
+    # EXAMPLE 10.7.1
+
+
+    Java:
+
+
+    String strOne = " Hello, Today’s Wonderful World of People’s Happiness.";
+
+    String strTwo = strOne.trim();
+
+
+    Python:
+
+
+    strOne = " Hello, Today’s Wonderful World of People’s Happiness."
+
+    strTwo = strOne.strip()'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# 10.8 Changing the Case of Characters
+
+
+    Example 10.8.1 demonstrates how to convert all characters to uppercase or lowercase
+    Java and in Python.
+
+
+    EXAMPLE 10.8.1
+
+
+    Java:
+
+
+    ```
+
+    String strOne = "Hello, Today''s Wonderful World of People''s Happiness.";
+
+    String strAllLowerCase = strOne.toLowerCase();
+
+    String strAllUpperCase = strOne.toUpperCase();
+
+    ```
+
+
+    Python:
+
+
+    ```
+
+    strOne = "Hello, Today''s Wonderful World of People''s Happiness."
+
+    strAllLowerCase = strOne.lower();
+
+    strAllUpperCase = strOne.upper();
+
+    ```
+
+
+    # 10.9 Joining Strings
+
+
+    Just as Java, Python also has a join function that serves the same purpose and
+    works in a similar fashion. Syntax is slightly different, but exactly that—only
+    slightly. Please take a look at Examples 10.9.1.
+
+
+    EXAMPLE 10.9.1
+
+
+    Java:
+
+
+    ```
+
+    String[] strArr = {"WordOne", "WordTwo", "WordThree", "WordFour", "WordFive"};
+
+    nString joinedStr = String.join("-", strArr);
+
+    ```'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: 'Python:
+
+    strArr = ["WordOne", "WordTwo", "WordThree", "WordFour", "WordFive"]
+
+    joinedStr = "-".join(strArr)
+
+
+    In both cases, variable joinedStr will contain the value WordOne-WordTwo-WordThree-WordFour-WordFive.
+
+
+    # 10.10 String Length
+
+
+    As I have already mentioned previously, Python sees all strings as arrays of characters.
+    Therefore, to get the length of a string, you would use exactly the same method
+    as you would to get the size of an array: using Python’s function len(). Example
+    10.10.1 demonstrates this.
+
+
+    EXAMPLE 10.10.1
+
+
+    Java:
+
+    String strOne = "Hello, Today’s Wonderful World of People’s Happiness."
+
+    int maxLength = strOne.length();
+
+
+    Python:
+
+    strOne = "Hello, Today’s Wonderful World of People’s Happiness."
+
+    strLength = len(strOne)
+
+
+    # 10.11 Reverse a String
+
+
+    There are two ways to reverse a string in Python, shown in Example 10.11.1, and
+    both are'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: 'unique to Python. Method One uses a double slice notation, which is a very
+    unique syntax in Python that has no equivalent in Java. Method Two reverses an
+    array then joins array of characters back to the single string.
+
+
+    # EXAMPLE 10.11.1
+
+
+    Java:
+
+
+    ```
+
+    String strOne = "Hello, Today’s Wonderful World of People’s Happiness."
+
+    String reversedStr = new StringBuilder(strOne).reverse().toString();
+
+    ```
+
+
+    Python:
+
+
+    Method One:
+
+
+    ```
+
+    strOne = "Hello, Today’s Wonderful World of People’s Happiness."
+
+    reversedStr = strOne[::1]
+
+    ```
+
+
+    Method Two:
+
+
+    ```
+
+    strOne = "Hello, Today’s Wonderful World of People’s Happiness."
+
+    reversedStr = "".join(reversed(strOne))
+
+    ```'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: "# # 11. SORTING AND SEARCHING ALGORITHMS\n\n# ## 11.1 Insertion Sort\n\n```\n\
+    def insertionSort():\n    array = [6, 8, 2, 5, 6, 10, 25, 12, 6, 4, 4, 6]\n  \
+    \  for index, item in enumerate(array):\n        print item\n        print index\n\
+    \        subIndex = index\n        while subIndex > 0 and array[subIndex-1] >\
+    \ item:\n            array[subIndex] = array[subIndex - 1]\n            subIndex\
+    \ = 1\n\n    array[subIndex] = item\n```\n\nprint array\n\n# ## 11.2 Bubble Sort\n\
+    \n```\ndef bubbleSort():\n    array = [6, 8, 2, 5, 6, 10, 25, 12, 6, 4, 4, 6]\n\
+    \    for index, item in reversed(list(enumerate(array))):\n        for num in\
+    \ range(index):\n            if array[num] > array[num+1]:\n                temp\
+    \ = array[num]\n                array[num] = array[num+1]\n                array[num+1]\
+    \ = temp\n```\n\nprint array"
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: "# 11.3 Selection Sort\n\n```\ndef selectionSort():\narray = [6, 8, 2, 5, 6,\
+    \ 10, 25, 12, 6, 4, 6]\nfor index, item in enumerate(array):\n  minimum = index\n\
+    \  for num in range(index, len(array)):\n    if array[minimum] > array[num]:\n\
+    \      minimum = num\ntemp = array[index]\narray[index] = array[minimum]\narray[minimum]\
+    \ = temp\nprint array\n```\n\n# 11.4 Binary Search\n\n```\ndef binarySearch():\n\
+    searchingForValue = 5\narray = [6, 8, 2, 5, 6, 10, 25, 12, 6, 4, 6]\nlowIndex\
+    \ = 0\nhighIndex = len(array)-1\nwhile lowIndex <= highScore:\n  middleIndex =\
+    \ (lowIndex+highIndex) / 2\n  if array[middleIndex] < searchingForValue:\n   \
+    \ lowIndex = middleIndex + 1\n  elif array[middleIndex] > searchingForValue:\n\
+    \    highIndex = middleIndex - 1\n  else:\n    print \"\\nFound a Match for \"\
+    +str(searchingForValue)+\\ at index \"+str(middleIndex)\"\nlowIndex = highScore\
+    \ +1;\n```"
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '# 12. PYTHON’S MODULES, JAVA’S LIBRARIES
+
+
+    # 12.1 Installing Required Modules
+
+
+    Just like with Java, Python software programming engineers have developed and
+    continue to develop a wealth of libraries that are packaged in the form of modules.
+    In Java, libraries are downloaded and imported in the form of jar files. In Python,
+    modules are installed using package manager pip. The command to install a module
+    is very simple: `pip install module_name`. Python’s own website provides a complete
+    Python Package Index that lists most, if not all, available modules for development
+    in Python. Python itself comes prepackaged with lots of useful modules, but if
+    you tried to import a certain module and received the error ImportError: No module
+    named paramiko, means module paramiko is not installed in your Python environment
+    and needs to be installed. You can do so with the command `pip install paramiko`.
+    I randomly chose the paramiko module to use for this example, but it is actually
+    a great SFTP utility with many useful features. You can use the same procedures
+    for other modules that are not installed into your Python environment. After installing
+    them, you’ll be able to use them without issues.
+
+
+    # 12.2 Packaging-Required Modules with Your Project
+
+
+    What makes Java so comfortable to work with is its inclusion of all required libraries
+    with your project in the form of jar files. This way when project is moved from
+    one machine to another, all required libraries move with it. It could be done
+    manually by downloading and storing .jar files with the project or using Maven’s
+    pom.xml.
+
+
+    In Python, modules can be installed what makes them available for all projects
+    running on that environment. Modules can also be packaged and included with the
+    project, so if a project gets moved to an environment where required modules are
+    not installed, they can still be imported without the need to install them.'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: 'To achieve that, a specific sequence of steps needs to be performmaed to package
+    the module and store it with the project in its workspace.
+
+
+    First, you need to locate your installed module(s). When running the pip install
+    command, all modules are installed and their installations are stored somewhere
+    in the environment.
+
+
+    To find out where they are stored, I need to execute Python''s command import
+    to import the module path where I would like it to locate in my environment. Normally,
+    you need to do this for the modules that did not come prepackaged with the distribution
+    of Python you are running on. Let''s use one such module, called paramiko. First,
+    let''s install this module by running the following command:
+
+
+    ```
+
+    >>> pip install paramiko
+
+    ```
+
+
+    Next, import it by running this command:
+
+
+    ```
+
+    >>> import paramiko
+
+    ```
+
+
+    The next command will output the path to the installation of paramiko module in
+    my environment.
+
+
+    ```
+
+    >>> print paramiko.__file__
+
+    ```
+
+
+    Output in my case would look the following way:
+
+    "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/paramiko/__init__.pyc"
+
+
+    Now, let''s zip the directory that contains my installed module. The root directory
+    of paramiko module is:
+
+    /Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: "packages/paramiko/.\n\nI can easily zip it by running the Linux zip command,\
+    \ such as this:\n\n```\n>>> sudo zip -r zipped_matplotlib.zip\n/Library/Frameworks/Python.framework/2.7/lib/python2.7/site-packages/\n\
+    paramiko/\n```\n\nNow I have the paramiko module zipped and stored on my environment's\
+    \ drive under filename zipped_paramiko.zip. This file is exported modue, which\
+    \ I need to store somewhere inside the workspace of my project.\n\nTo import this\
+    \ module into my project and be able to use it, I need to use Python's module\
+    \ sys, which comes prepackaged as part of all Python distributions. Using sys.path.insert(),\
+    \ I can specify a path to the zipped module and then import it just as I would\
+    \ have imported it after installing it into environment. Example 12.2.1 demonstrates\
+    \ how to import a zipped module into a workspace.\n\n# EXAMPLE 12.2.1\n\n# Python:\n\
+    \n```\nimport sys\nsys.path.insert(0, '/path/to/zipped/module/file/paramiko.zip')\n\
+    import paramiko\n```\n\n```\nclass SomeClass():\n```\n\n```\ndef __init__(self):\n\
+    \    port = 22\n    host = \"\"\n    username = \"\"\n    password = \"\"\n  \
+    \  transport = paramiko.Transport(host, port)\n    transport.connect(username=username,\
+    \ password=password)\n    sftp = paramiko.SFTPClient.from_transport(transport)\n\
+    \    sftp.put(\"local_file\", \"sftp_path\")\n```"
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '```
+
+    run = SomeClass()
+
+    ```'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '# 13. RUNNING SHELL COMMANDS FROM PYTHON
+
+
+    # 13.1 Running a Single Shell Command
+
+
+    Very often you might need to execute a shell command out of your Python program,
+    for example to access HDFS commands. Python provides a module, called subprocess,
+    that is designed for that very purpose. The command can be passed as a string
+    and you definitely need to read the logs, and not only stdout, but also stderr.
+    The method in the next example demonstrates exactly that. It executes the shell
+    command, and then redirects both stdout and stderr streams into one stream, which
+    it then captures returns.
+
+
+    EXAMPLE 13.1.1
+
+
+    Python:
+
+
+    ```
+
+    def runShellCommand(self
+
+    ```
+
+
+    # 13.2 Running Multiple Shell Commands as Array'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: "At times you might need to run a sequence of shell commands, one that would\
+    \ set environment variables and one that would start a certain process. For that\
+    \ you will need to pass two or more commands in one shot in the form of an array.\
+    \ Example 13.2.1 demonstrates how to achieve this with features from Example 13.1.1.\n\
+    \n# EXAMPLE 13.2.1\n\nPython:\n\n```\ndef runShellCommandAsArray(commandAsArray):\n\
+    \    logToReturn = \"\"\n    try:\n        popen = subprocess.Popen(commandAsArray,\
+    \ stdout=subprocess.PIPE,\n                                 stderr=subprocess.STDOUT)\n\
+    \        lines_iterator = iter(popen.readline, b\"\")\n        for line in lines_iterator:\n\
+    \            print line\n            logToReturn = logToReturn + str(line)+\"\\\
+    n\"\n    except Exception,e:\n        print e\n    return logToReturn\n```"
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: "# # 14. QUERYING DATABASES\n\n# ## 14.1 SQLite3\n\nTo connect and query a SQLite3\
+    \ database, Python provides a module named exactly the same as the database itself:\
+    \ `sqlite3`. First, the `sqlite3` module needs to be imported into the file where\
+    \ the code base for it will reside. Then, the sequence of steps listed in Example\
+    \ 14.1.1 will connect to it, execute the select statement, and print the first\
+    \ ten selected records.\n\nEXAMPLE 14.1.1\n\nPython:\n\nimport sqlite3\n\nclass\
+    \ QuerySQLite3:\n\n```\ndef __init__(self):\n    conn = sqlite3.connect('path/to/db_file.db')\n\
+    \    dbConnection = conn.cursor()\n    executeQuery = dbConnection.execute('select\
+    \ * from TABLE_NAME limit 10')\n    data = executeQuery.fetchall()\n    print(data)\n\
+    \    dbConnection.close()\n```\n\nQuerySQLite3()\n\n# ## 14.2 MySQL\n\nConnection\
+    \ to MySQL is very similar to how it is done in the case of SQLite3 database.\
+    \ The module"
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: "MySQLdb. After the module is installed, it will need to be imported into a\
+    \ code base and just as in Example 14.2.1 that will connect to MySQL database,\
+    \ execute the select statement, and print the first ten selected records. Do not\
+    \ forget to provide host address, username, password, and the name of your database\
+    \ for the module to connect to your database.\n\n# EXAMPLE 14.2.1\n\nPython:\n\
+    \nimport MySQLdb\n\nclass QueryMySQL:\n\n```\ndef __init__(self):\n    conn =\
+    \ MySQLdb.connect(\"host\",\"username\",\"password\",\"database_name\")\n    dbConnection\
+    \ = conn.cursor()\n    executeQuery = dbConnection.execute('select * from TABLE_NAME\
+    \ limit 10')\n    data = executeQuery.fetchall()\n    print data\n    dbConnection.close()\n\
+    ```\n\nQueryMySQL()\n\n# 14.3 Oracle\n\nWorking with Oracle database is by far\
+    \ the most complex process out of the three databases. Before Python can connect\
+    \ to an Oracle database, even if one is hosted remotely, you would need to set\
+    \ up Oracle SDK. Then, you would need to install and use Python's module cx_Oracle\
+    \ to connect and run commands against the Oracle database.\n\nThe cx_Oracle module\
+    \ depends on the version of the GLIBC installed on your Linux. The latest version\
+    \ of cx_Oracle, as of the time of this writing, required GLIBC 2.14. I brought\
+    \ this up because my distribution of Red Hat Linux ran on GLIBC 2.12 and there\
+    \ was no way"
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: 'for me to update GLIBC to version 2.14 without negatively affecting other processes
+    that ran on my Linux machine. For another solution, I decided to go with the older
+    version of cx_Oracle utility. Below are the steps I performed to set the Oracle
+    environment and install the required module in order to work with Oracle from
+    Python.
+
+
+    # Steps:
+
+
+    First, run the following command and see what version of GLIBC runs on your Linux
+    distribution:
+
+
+    ```
+
+    rpm -qa glibc
+
+    ```
+
+
+    The response you will see should look something like this:
+
+
+    ```
+
+    glibc-2.12-1.192.el6.x86_64
+
+    ```
+
+
+    That tells you that you run on machine x86_64 and GLIBC version 2.12, as in my
+    case. Remember, the latest version at the time of this writing is cx_Oracle version
+    5.2.1, which requires GLIBC version 2.14 or higher.
+
+
+    Next, follow these steps to set up Oracle SDK and install cx_Oracle.
+
+
+    # Step 1:
+
+
+    Download and install the following Oracle packages of Version 11.1.0.7.0:
+
+
+    ```
+
+    http://www.oracle.com/technetwork/topics/linux86-64soft-092277.html
+
+    ```
+
+
+    +   1) oracle-instantclient11.1-basic-11.1.0.7.0-x86_64.rpm
+
+
+    The command to install is:
+
+
+    ```
+
+    sudo rpm -ivh oracle-instantclient11.1-basic-11.1.0.7.0-x86_64.rpm
+
+    ```
+
+
+    +   2) oracle-instantclient11.1-sqlplus-11.1.0.7.0-x86_64.rpm
+
+
+    The command to install is:
+
+
+    ```
+
+    sudo rpm -ivh oracle-instantclient11.1-sqlplus-11.1.0.7.0-x86_64.rpm
+
+    ```
+
+
+    +   3) oracle-instantclient11.1-devel-11.1.0.7.0-x86_64.rpm
+
+
+    The command to install is:'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: 'sudo rpm -ivh oracle-instantclient11.1-devel-11.1.0.7-0-x86_64.rpm
+
+
+    # Step 2:
+
+
+    Run the following exports:
+
+
+    +   1) export LD_LIBRARY_PATH=/usr/lib/oracle/11.1/client64/lib/ >> ~/.bash
+
+
+    +   2) export ORACLE_HOME=/usr/lib/oracle/11.1/client64 >> ~/.bash
+
+
+    +   3) export PATH=$ORACLE_HOME/bin:$PATH >> ~/.bash
+
+
+    # Step 3:
+
+
+    Download and install the following version of cx_Oracle module:
+
+
+    https://sourceforge.net/projects/cx-oracle/files/5.1.2/cx_Oracle-5.1.2-11g-py27-1.x86_64.rpm/download
+
+
+    The command to install is:
+
+
+    ```
+
+    sudo rpm -ivh cx_Oracle-5.1.2-11g-py27-1.x86_64.rpm
+
+    ```
+
+
+    After SDK is setup, all dependencies are installed, and paths are set in the bash_profile,
+    you then need to install Python''s module, cx_Oracle. As explained on its website
+    (http://cx-oracle.sourceforge.net), the module can be installed simply using pip
+    install cx_Oracle. However, from my experience, I could not make the latest version
+    work and ended up installing an older version. Older versions of the cx_Oracle
+    module can be found here https://sourceforge.net/projects/cx-oracle/files/.
+
+
+    When the cx_Oracle module is installed, please make sure that import it works
+    without any errors.
+
+
+    Then example 14.3.1 to run a select statement and print out the first ten records,
+    as I did in SQLite3 and MySQL examples from the previous section.'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: "EXAMPLE 14.3.1\n\nPython:\n\n```\nimport cx_Oracle\n```\n\n```\nclass OracleDB():\n\
+    \    def getConnected(self):\n        conn = cx_Oracle.connect('username/password@host:1251/database_name')\n\
+    \        dbConnection = conn.cursor()\n        dbConnection.execute('select *\
+    \ from TABLE_NAME limit 10')\n        data = dbConnection.fetchall()\n       \
+    \ print data\n        dbConnection.close()\n        conn.close()\n```"
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '# # 15. BULDING STAND-ALONE APPLICATIONS WITH PYTHON
+
+
+    Believe it or not, you can also build a fully functional desktop-based application
+    with great user-friendly interface. Just like Java, Python is also a multi-platform
+    language, therefore the application needs to be developed once and it can run
+    on multiple platforms, such as Mac OS X, MS Windows, and Linux. You probably have
+    read somewhere that Python is an interpreted scripting language. Not for me Python
+    is a fully featured, object-oriented programming language that gives you the ability
+    to run interpreted scripts or programs, as well as the ability to compile programs
+    into a fully featured, stand-alone, multi-platform applications that would run
+    on all major desktop operating systems. As I am writing this book, Python hasn''t
+    yet reached the mobile platform world, but who knows, it might just be around
+    the corner for. For now, I list three resources that will help you build Linux-based,
+    Mac OS-based, or Windows-based applications.
+
+
+    # ## 15.1 PyInstaller
+
+
+    According to developers of PyInstaller, it is a program that freezes (packages)
+    Python programs into stand-alone executables, under Windows, Linux, Mac OS X,
+    FreeBSD, Solaris, and AIX. Its main advantages over similar tools are that PyInstaller
+    works with Python 2.7 and 3.3—it builds smaller executables than transparent compression,
+    it is fully multi-platform, and it uses the OS support to load the dynamic libraries,
+    ensuring full compatibility. The main goal of PyInstaller is to be compatible
+    with third-party packages out of the box. This means that, with PyInstaller, all
+    the required tricks to make external packages work are already integrated within
+    PyInstaller so that there is no user intervention required. You''ll never be required
+    to look for tricks in wikis and apply custom modification to your files or your
+    setup scripts. As an example, libraries like PyQt, Django, and matplotlib are
+    fully supported, without requiring you to handle plugins or external data files
+    manually.'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: 'Please visit PyInstaller’s website for more details and tutorials:
+
+
+    http://www.pyinstaller.org/
+
+
+    # 15.2 py2app
+
+
+    According to developers of py2app, it is a Python setuptools command, which will
+    allow you to make stand-alone application bundles and plugins from Python scripts
+    for Mac OS operating system. The website of py2app offers a great tutorial that
+    explains in the tiniest detail how to install the py2app and compile Python progrms
+    using it.
+
+
+    Please visit py2app’s website for more details and tutorials:
+
+    https://pythonhosted.org/py2app/tutorial.html
+
+
+    # 15.3 py2exe
+
+
+    According to developers of py2exe, it is a Python DistUtils extension, which converts
+    Python scripts into executable Windows programs, able to run without requiring
+    a Python installation. The website of py2exe also has a great tutorial that goes
+    into great detail in explaining how to install py2exe and compile Python progrms
+    using it.
+
+
+    Please visit py2exe’s website for more details and tutorials:
+
+
+    http://www.py2exe.org/index.cgi/Tutorial'
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: '# # 16. BUILDING WEBSITES WITH PYTHON
+
+
+    Python also provides a wealth of platforms for you to develop fully featured,
+    database-driven web applications. Below I list three of the most popular platforms
+    that can be used to build websites with Python.
+
+
+    # ## 16.1 Django
+
+
+    Developers of the Django platform promote it as a high-level Python Web framework
+    that encourages rapid development and clean, pragmatic design. Built by experienced
+    developers, it takes care of much of the hassle of web development, so you can
+    focus on writing your web application without needing to reinvent the wheel. It
+    is free and open source. Django is by far my favorite platform and what I use
+    to develop online. There are extensive free tutorials all over YouTube and Django’s
+    own website.
+
+
+    Please visit Django’s website for more details and tutorials:
+
+
+    https://www.djangoproject.com/
+
+
+    # ## 16.2 Flask
+
+
+    Flask is also very popular in the world of web development with Python. However,
+    Flask is designed for small-scale websites, as opposed to Django, which is designed
+    for building larger and more complex websites.
+
+
+    Please visit Flask’s website for more details and tutorials:
+
+
+    http://flask.pocoo.org'
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: '# 16.3 Pyramid
+
+
+    Pyramid is a very general open source Python web framework. As a framework, its
+    primary job is to make it easier for a developer to create an arbitrary web application.
+    The type of application being created isn’t really important; it could be a spreadsheet,
+    a corporate intranet, or a social networking platform. Pyramid is general enough
+    that it can be used in a wide variety of circumstances.
+
+
+    Please visit Pyramid’s website for more details and tutorials:
+
+
+    http://www.pylonsproject.org/projects/pyramid/about'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: '# Author’s Blog
+
+
+    I hope you have found this book helpful in speeding up your transition from Java
+    to Python. My blog is another resource as you convert to Python, since there is
+    indeed a lot more to Python than is contained here. Python has grown into a very
+    serious competitor for powerful languages such as Java, and it continues to evolve,
+    offering more and more modules that open up doors to the development of more complex
+    systems.
+
+
+    As I deepen my experience as a Python programmer, I take notes in the form of
+    articles and post them to my blog. So on my blog you will find additional tricks
+    that are possible with Python. My online blog is accessible free for all at http://ToProgramInPython.com.
+
+
+    The Contact page on my blog is a communication tool you can use to reach me with
+    your questions, suggestions, and corrections to this book. I hope that in reading
+    this book, you see how much you already know about Python as a Java engineer,
+    and how quickly you can master Python and become an even stronger software developer.'
+  merge: -1
+  pgno: 158
