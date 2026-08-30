@@ -1,0 +1,1491 @@
+- img_proc: true
+  md: '# MARC RAWEN
+
+
+    # PROGRAMMING
+
+
+    LEARN THE FUNDAMENTALS OF COMPUTER PROGRAMMING LANGUAGES
+
+
+    ![](img/f97e4814c16be5603e1e4ca8c632d566_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Programming
+
+
+    Learn The Fundamentals Of Computer Programming Languages
+
+
+    # By: Marc Rawen'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# © Copyright 2016 - All rights reserved.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    # Legal Notice:
+
+
+    This book is copyright protected. This is only for personal use. You cannot amend,
+    distribute, sell, use, quote or paraphrase any part or the content within this
+    book without the consent of the author or copyright owner. Legal action will be
+    pursued if this is breached.
+
+
+    # Disclaimer Notice:
+
+
+    Please note the information contained within this document is for educational
+    and entertainment purposes only. Every attempt has been made to provide accurate,
+    up to date and reliable complete information. No warranties of any kind are expressed
+    or implied. Readers acknowledge that the author is not engaging in the rendering
+    of legal, financial, medical or professional advice.
+
+
+    By reading this document, the reader agrees that under no circumstances we are
+    responsible for any losses, direct or indirect, which are incurred as a result
+    of the use of information contained within this document, including, but not limited
+    to, —errors, omissions, or inaccuracies.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Introduction
+
+
+    Get You Free Bonus !
+
+
+    Chapter 1: An Introduction To Programming
+
+
+    Chapter 2: Go Old School With C And C++
+
+
+    Chapter 3: Enjoy The Versatility Of Java
+
+
+    Chapter 4: Build The Web With JavaScript
+
+
+    Chapter 5: Learn The Incredible Language Of Python
+
+
+    Chapter 6: Enjoy The Ease Of Ruby
+
+
+    Conclusion'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Download your Free bonus Here, and learn how to program with Python Language
+    !
+
+
+    Click here to download you Bonus:
+
+    https://publishfs.leadpages.co/learn-python-language/
+
+
+    EVERYTHING YOU NEED TO KNOW ABOUT PYTHON PROGRAMMING LANGUAGE
+
+
+    +   - Learn the history of Python Programming
+
+    - Learn how to program in python
+
+    - Learn basic and advanced programming skills'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Introduction
+
+
+    Since you have bought this book, I must say, ‘Welcome to the wonderful world of
+    programming! You see, programming is not just an activity but an entire world
+    on its own and by learning a language, you will be taking your first steps into
+    this brave new world. After all, computers and computing technologies are everywhere,
+    and a programming language is a foundation on which all of them are made possible.
+
+
+    Now, you may be interested in learning a programming language for a career in
+    one of the many tech careers or simply as a hobby. Whatever be your reason, the
+    fact is that you need to choose the right programming language to start with.
+    You should learn some of the easiest programming languages to build up a strong
+    base before proceeding further.
+
+
+    As such, this book deals with some of the best programming languages that a beginner
+    should learn first before moving on to to the harder ones. In this book, you will
+    be learning the basics of Java, C, C++, Python, JavaScript and Ruby. You will
+    certainly be discovering the specialties of this language and the areas they excel
+    in. At the same time, you will be getting a comprehensive introduction to them
+    so that you can jump in and start learning the language.
+
+
+    Before proceeding, you should remember that programming, even in the easy languages,
+    can be difficult for the beginner. As such, you need to be patient and be ready
+    to put in some effort so that you can succeed. As you learn, you will start finding
+    it easier and finally make your own unique programs.
+
+
+    Let’s us now start on the journey of programming.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Chapter 1: An Introduction To Programming
+
+
+    Before you start learning a particular language, you should have a proper understanding
+    of programming. The absolute basics of programming are a must. It will help you
+    in understanding the fundamentals of any language better.
+
+
+    # Binary Numbers
+
+
+    Computers and nearly all computer based devices use the binary system in their
+    functioning. This system comprises of only two numbers, 1 and 0. Each of them
+    is referred to as a bit. All computer programs can be simplified down to this
+    system. In fact, the binary system has a key role in how computers store information
+    and data of all kinds.
+
+
+    At the fundamental level, computers simply switch from 1 to 0 for all of their
+    functions, no matter how simple or complex. Any data, including text and images,
+    are stored in the computer in the form of a series of 1s and 0s. You see, computers
+    are electrical circuits. In a circuit, an electrical current either flows in a
+    specific line or it does. Therefore, the state can be defined as either a 1 or
+    a 0. In other words, it is a binary situation.
+
+
+    Once you understand this concept, you will realize why the binary system is such
+    basic computers. In all computer programs and situations, a problem can always
+    be simplified down to a binary choice. As such, all computers process information
+    using the binary system.
+
+
+    # What is a Program?
+
+
+    Let us first analyze the function of a computer. Its primary function is to solve
+    a problem. Now, how does it solve it? It does so with the help of a program. Computer
+    programs are sequences of instructions which perform a specific task when they
+    are executed by the computer.
+
+
+    No matter what the computer is, it will remain completely useless it has the right
+    set of programs. If you are reading this book on a computer-based device, it is
+    only because the device has a program that allows it to do so.
+
+
+    # What is a Programming Language?
+
+
+    As the name suggests, a programming language is a specialized language that is
+    used for programming.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'referred to a native programming language that all computers have and understand.
+    Unfortunately, machine code can be extremely difficult for people to understand.
+    Among other things, machine code is nearly always expressed in the binary system.
+    Moreover, the machine code is unique to specific computer architecture. As a result,
+    it is possible for two computers to use two variants of machine code.
+
+
+    Therefore, you need some way to communicate with the computers. This is why programming
+    languages exist. They act as an interface between people and the computer. With
+    them, programs can be expressed in languages which can be understood by people
+    easily. At the same time, the language will be the common to different computer
+    architectures. More importantly, the programs can be translated to machine code
+    easily.
+
+
+    To make sure that this happens, a computer has to interpret or compile the program
+    written in a programming language so that the program is executed. You need to
+    understand compilation and interpretation with respect to computer programming.
+
+
+    For a compiled program, a compiler has to be used so that the program can be translated
+    into machine code for the computer to use. However, the source code will not be
+    run by the computer in the case of an interpreted program. Instead, an interpreter
+    reads each line of the program as it is running and modifies it into the machine
+    code. Once modified, the computer executes that line of the program.
+
+
+    Programming languages can use either one of these approaches or both. Each of
+    them has its own advantages when it comes to programming and software development.
+    Generally, compiled programs can take longer to develop, but they can run faster.
+    After all, the computer will execute a program that has already been translated.
+    Interpreted programs take longer to run as they need to be translated every time
+    they are executed. However, they can be written faster as the languages are generally
+    simpler. At the same time, the entire program will not be compiled after every
+    modification or bug test.
+
+
+    # Tips for Programming
+
+
+    When you are programming, you will be learning a lot of new things. As such, things
+    can get confusing very quickly unless you can keep a track. In many cases, learners
+    even forget a few basic principles of programming. Remember these details to ensure
+    that you don''t feel that you are getting in way over your head.
+
+
+    +   * When you are trying to develop a program, you should ensure that it can
+    fulfill the need for which it is being created in the first place.
+
+    * You should also make sure that your program can be easily used by other people.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'You must be ready to invest a significant amount of time while learning programming.
+
+
+    On the other hand, you need to make sure that your program can be understood,
+    improved and fixed in a short period of time.
+
+
+    +   - Before starting a program, check out the other programs that are similar
+    to what you want to create. Understand those programs and find out what their
+    strong and weak points are. You should think of ways through which the program
+    can be improved.
+
+
+    +   - You need to plan what you want your program to be capable before you start
+    writing it. You can create a flowchart of the functions and features of the program
+    beforehand.
+
+
+    +   - If possible, try to discover some good source code for programs that are
+    similar to yours. Make sure of the quality of the code.
+
+
+    +   - When writing a program, you need to maximize the functionality while decreasing
+    the complexity. This is the way you create a truly effective program.
+
+
+    +   - You should develop your program in such a way that it is possible to understand
+    what is happening by simply taking a look at the source code.
+
+
+    +   - You should add comments whenever you are attempting the complicated of the
+    program. This can be helpful for you in the long run.
+
+
+    +   - When defining variables, you must always use names that are easily understood
+    and simple. This helps you to keep track of them and the functions that they will
+    be used in.
+
+
+    You should now have an idea of what programming is like. Now, it is time to select
+    which programming language you should try out.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Chapter 2: Go Old School With C And C++
+
+
+    Both C and C++ have a rich history as programming languages. C was developed in
+    the early 1970s, and it has gone from strength to strength while C++ came about
+    later in the 1980s.
+
+
+    You need to remember that both of these languages have been present in the early
+    days of computer programming. As such, they are considered among the most foundational
+    programming languages in the world. Therefore, you are sure to benefit greatly
+    by learning them even if you do not use them later. In fact, learning them is
+    like gaining an invaluable insight into the very beginnings of computer programming.
+
+
+    There are advantages and disadvantages to each language certainly. Nonetheless,
+    you will gain a better understanding of programming in general. In fact, you may
+    find it easier to start learning other programming languages such as Java. After
+    all, the features of C and C++ have served as an inspiration for a few languages.
+
+
+    Of course, there is a question of choice between C and C++. Now, C is the older
+    of the two and C++ is considered to be a subset of the earlier language. C++ is
+    also considered to be the easier of the two by many programmers. On the other
+    hand, knowledge of C can prove to be helpful if you are hoping to become a professional
+    programmer. Nonetheless, it is quite possible to learn C after C++ and vice versa.
+
+
+    # The Design of C
+
+
+    C is a procedural programming language, and it was designed so as to be compiled
+    with a relatively straightforward compiler. Its design also provides language
+    constructs that can be mapped efficiently to machine instructions. The runtime
+    support required is also minimal. These features enabled C to become useful for
+    a variety of applications which had to be coded with assembly language previously.
+
+
+    In spite of the low-level capabilities of C, this programming language was meant
+    to encourage programming on a cross-platform level. It is possible to compile
+    a C program for a range of operating systems and computer platforms along as it
+    is portably written and is standards-compliant.
+
+
+    # A Simple Program in C
+
+
+    In order to illustrate the programming language of C, it helps if you have an
+    example to look at. Here is a simple ‘Hello World!’ program written in this language.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "```\n#include <stdio.h>\n```\n\n```\nint main ()\n{\n    Printf(\"Hello world\\\
+    n\");\n    Return 0;\n}\n```\n\nTo better understand what is happening in the\
+    \ program, it helps to break it up into different sections and tackle them one\
+    \ by one.\n\n# #include <stdio.h>\n\nThis code tells to include a file named 'stdio.h'\
+    \ which stands for Standard Input/ Output header file. With it, it is possible\
+    \ to use specific commands for input or output in the program. In this example,\
+    \ it allows us to output a message and print it on the screen.\n\n# Int main ()\n\
+    \nThe int is known as the return value, and it is of the type integer in this\
+    \ example. The next part is the main () which is the main function. Every program\
+    \ in C has to have only one main function, and it is also the starting point for\
+    \ all programs.\n\n# Printf(\"Hello World\\n\");\n\nThe printf command is used\
+    \ when needs need to be printed on the screen which is 'Hello World' in this program.\
+    \ The data which is going to be have to place inside round brackets. In this case,\
+    \ 'Hello World' is placed inside inverted commas as it is a string and have to\
+    \ be placed inside inverted commas. The last part of the command is \\n and it\
+    \ is known as an escape sequence. The \\n symbolizes a newline character, and\
+    \ it allows the next output to be printed on the next line. There are other kind\
+    \ of escape sequences which you will learn during C programming.\n\n# Return 0;\n\
+    \nIn the second line of the program, 'int main ()' was written to denote that\
+    \ the main function has to return an integer. By using 'return 0' command, the\
+    \ value null will be returned to the operating system. By returning a zero, you\
+    \ are simply telling the OS that no errors occurred when running the program."
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'Based on this example, there are a few things you should know about programming
+    in this language.
+
+
+    +   * All programs written should have a single main function.
+
+    * The execution of the program will always start from the main function.
+
+    * The execution of the program will always start at the opening brace of the function
+    and stop at the closing brace. Braces can be used to group together statements.
+
+    * Typically, all statements are written in lowercase letters in C.
+
+    * Uppercase letters are reserved for messages, output strings, and symbolic names
+
+    * You must declare a variable with the right data type before using it.
+
+    * All statements in C must end with a semicolon.
+
+
+    # Data Types in C
+
+
+    In C, you will find a standard set of fundamental data types. Due to their simplicity,
+    they are often referred as primitive data types. However, it is possible to develop
+    a range of complex data structures from them. There are a total of four basic
+    data types:
+
+
+    +   * Character - char
+
+    * Integer - int
+
+    * Floating-point - float
+
+    * double floating-point - double
+
+
+    The actual range and size of the data types may vary among compiles and processor
+    types. It is possible to modify the behavior of the variable type to which they
+    are applied with the help of data type qualifiers. There are a few qualifiers
+    in C.
+
+
+    Size qualifiers can change the size of the data type. Two size qualifiers are
+    present in C. They are ‘short’ and ‘long’. They simply change the size of the
+    declared variable.
+
+
+    Sign qualifiers determine what kind of numbers that the variable can hold. The
+    ‘signed’ denotes that the variable can contain positive as well as negative numbers.
+    However, an ‘unsigned’ variable can only contain positive numbers. It is not necessary
+    to declare a variable assigned as variables are signed by default. These qualifiers
+    can be applied to the char and int data types.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'The constant qualifier is used to declare that the value of an identifier will
+    remain unchanged in the program. In other words, the keyword for this qualifier
+    is ''const''. If you want the value of a variable to be changed by external sources,
+    you can declare it to be ''volatile''. This is another variable that you should
+    become familiar with.
+
+
+    # Variables
+
+
+    As you know, variables are a specific location in the memory where data is stored
+    by a program. The size of the memory block depends on the type of the variable.
+    For identifying the memory block, you need to assign a unique name to each variable.
+    Before variables can be used, they need to be declared with their data type and
+    name. The syntax for variable declaration in C is given below.
+
+
+    ```
+
+    [Storage-class] type data variable name [= initial value];
+
+    ```
+
+
+    You do not have to define the initial value or the storage class for the variable
+    if they are not required. It is possible to declare multiple variables at the
+    same time as long as you want them to have the same storage class and data type.
+    The syntax to do so is given below.
+
+
+    ```
+
+    [Storage-class] type data variable name [= initial value] variable [= initial
+    value];
+
+    ```
+
+
+    # Statements
+
+
+    In C, statements allow you to control the flow of the execution of your program.
+    The programming language offers you a variety of statements. Some of the most
+    commonly used statements are given below.
+
+
+    +   - If statement
+
+    - go to statement
+
+    - switch statement
+
+    - while statement
+
+    - do-while statement
+
+    - For statement
+
+
+    As you proceed with programming in C, you will come across many other concepts
+    such as input and output functions, arrays, structure, pointers and so on. Once
+    you know about them, you can easily jump into other programming languages such
+    as C++ and Java.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Chapter 3: Enjoy The Versatility Of Java
+
+
+    Java is one of the most influential programming languages in the world. It also
+    remained popular and pervasive in the computing world. You can discover Java being
+    used on all kinds of platforms, from the web to operating systems and even devices.
+    You will find Java to be filled with features. As a programming language, it is
+    class based and object oriented. It has been designed to be portable so that you
+    can work on it on a wide variety of platforms. It is why it is still popular over
+    the world even two decades after its initial release.
+
+
+    On the other hand, Java can be difficult to understand at times and hard to program
+    efficiently and effectively. However, its popularity means that you will not lack
+    for resources to help you understand or avenues to explore as a programmer. Another
+    benefit of learning Java is that it forces you to think analytically and logically.
+    In other words, you will start thinking like a programmer. You can get a better
+    understanding of how computers process information as well. The core concepts
+    and fundamentals that you learn in Java will prove to be useful when you start
+    learning other programming languages.
+
+
+    # The Features of Java
+
+
+    Java was originally developed in 1991 by Sun Microsystems Inc. Now, it is maintained
+    by Oracle Corporation who acquired Sun Microsystems in 2009. Its popularity hinges
+    on its excellent features.
+
+
+    +   **Platform Independence**: Unlike some other programming languages, Java is
+    platform independent. As a result, you can run Java programs on all platforms
+    no matter what you compiled them on.
+
+    * **Object Oriented**: While Java is an object oriented programming language,
+    it lacks some complex features as multiple inheritances, operator overloading,
+    and explicit memory allocation. As a result, it is a simple language to learn.
+
+    * **Strong Language**: Mishandled runtime errors and memory management are two
+    of the main issues that cause program failures. In Java, these issues can be efficiently
+    taken of. Exception handling procedures can resolve mishandled runtime errors
+    while garbage collection can take care of memory management mistakes.
+
+    * **Security**: When writing Java, all codes will remain confined inside the Java
+    Runtime Environment. As a result, unauthorized access to the system resources
+    is not granted.
+
+    * **Multithreading**: Due to its support for multithreading, Java allows your
+    program to perform different tasks at the same time.
+
+
+    # A Simple Program in Java
+
+
+    To gain a better understanding of what Java is like, the following example will
+    be of help.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'a is Hello World program, a simple program that is often used for illustrating
+    the basics of a programming language. You will already have come across such an
+    example in the chapter on C and C++.
+
+
+    # Public class Main
+
+
+    # Public class Main
+
+
+    This is the first line of the program, and it defines a class called Main. If
+    you want a line of code to run in a Java program, you have to place it inside
+    other class. Here the class Main is declared. It has been defined as public. Therefore,
+    other classes can access it. You should also remember that a public class must
+    be declared inside a file which has the same name. In this case, the name of the
+    file should be Main.java. If you do not so, you will get an error during compilation.
+
+
+    # Public static void main (String [] args) {
+
+
+    This is the starting point of the Java program. It is necessary for the main method
+    to have the exact signature so that the program can be run. Here are a few of
+    the keywords that you need to take a look into. You are already familiar with
+    public, and the others will be discussed shortly. ‘Main’ is, of course, the name
+    of the method.
+
+
+    # System.out.println("Hello, World!");
+
+
+    The system is a predefined class in Java, and it contains some variables and methods
+    which are useful while programming. The next keyword is out, and it is a static
+    variable from System. It is representative of the program output. Println is a
+    method found inside out and it is used for printing a line.
+
+
+    # Data types and Variables in Java
+
+
+    In Java, there are three kinds of variables and several data types. Understanding
+    them is vital when you want to write programs in this language.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Data Types
+
+
+    There are kinds of data types in Java, primitive and non-primitive. Primitive
+    data types are predefined and provided by Java. Some examples of these in Java
+    include Boolean, char, int, long, short and float. On the other hand, non-primitive
+    data types are not defined by Java. Instead, they will be created by you, the
+    programmer. They refer to a memory location which is why they are sometimes known
+    as reference variables. String and array are some of the non-primitive data types.
+
+
+    # Variables
+
+
+    In Java, there are three kinds of variables that you can use for your programs.
+    The type depends on how you declare the variable. Local variables are those which
+    are declared inside a method. On the other hand, instance variables are defined
+    outside the method but inside the class. Static variables are simply those variables
+    that are declared with the static keyword, and they cannot be local variables.
+    You will learn about these uses when you start programming in Java in earnest.
+
+
+    As other programming languages, you need to declare a variable before it can be
+    used. The basic syntax for declaring a variable in Java is given below.
+
+
+    ```
+
+    Data type variable [= value];
+
+    ```
+
+
+    You can declare multiple variables of the same datatype in a single statement.
+    You just need to use a comma to separate them.
+
+
+    In Java, you need to take care when you are declaring variables as there are rules
+    in place for it. The names for variables are case-sensitive. Therefore, ‘Hi’ and
+    ‘hi’ will be considered as two separate variables. In fact, it is a good practice
+    to avoid starting variable names with capitals as this format is usually applied
+    to class names. You can use the ‘$’ and ‘’ signs but use them intelligently. Whitespace
+    is not allowed in variable names, and you cannot start a name with a number. Finally,
+    you cannot use a reserved word or keyword as a variable name.
+
+
+    # Loops and Conditional Statements
+
+
+    In a program, statements and lines of codes are executed in a sequential manner.
+    However, it is possible to create complex execution paths to make certain programs
+    and functions possible. This is achieved by means of different control structures
+    such as conditional statements and loops.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'A loop statement is used when block of code needs to be executed multiple times.
+    There are different kinds of loop statements available in Java for specific situations.
+    They are listed as follows.
+
+
+    +   - **While loop**: This will cause a group of statements to be repeated as
+    long as a given condition remains true. Once the condition becomes false, the
+    loop will no longer be executed. The condition will be tested before the loop
+    is executed.
+
+    - **Do-While loop**: This works in a similar manner to the while loop. However,
+    it will check the condition after the code in the loop has been executed.
+
+    - **For loop**: Here, a block of code will be executed a set number of times.
+    It allows the code which manages the variable for the loop to be shortened.
+
+
+    Conditional Statements
+
+    These are actually structures that are accompanied by one or multiple conditions.
+    These conditions are evaluated by the program and the statements executed according
+    to the result of the evaluation. If the condition is true, a specific statement
+    or set of statements will be executed. If false, another set of statements will
+    be executed. In other words, these structures allow the program to make decisions.
+    Java offers a few kinds of conditional structures to be used.
+
+
+    +   - **If statement**: This contains a Boolean expression along with the statements
+    that are to be executed when the condition is true.
+
+    - **If else statement**: This is a regular if statement used alongside an else
+    statement. If the condition is false, the statements listed under the else statement
+    will be executed. The code under the if statement is executed when it returns
+    true.
+
+    - **Nested if statements**: This is a special use of the if statement. It is possible
+    to nest if statements inside one another. It is also applicable for if statements.
+
+    - **Switch statement**: This statement used to test a variable for equality against
+    a specified list of values. Each value will have a statement or block of code
+    that will be executed when the value of the variable matches.
+
+
+    These are some of the basics that you should be familiar with when you are learning
+    to develop programs using the Java language. As mentioned earlier, Java is an
+    excellent stepping stone to the world of programming. Once learned, you will find
+    it easier to learn other languages.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Chapter 4: Build The Web With JavaScript
+
+
+    First of all, you should confuse JavaScript with Java. They are completely separate
+    programming languages with no links to each other. It was originally developed
+    in the 90s. JavaScript is one of the necessary technologies in the development
+    of the web as it is used today. However, this programming language is also used
+    in places other than a web browser such connected services and applications.
+
+
+    As a programming language, JavaScript is dynamic. As a result, you have the flexibility
+    to utilize an object-oriented programming approach or imperative and functional
+    ones although the language is mainly object oriented. If you are already familiar
+    with C, you will find JavaScript easier as of the syntax is derived from the earlier
+    programming language. In fact, it is quite easy to pick up this language. At the
+    same time, knowledge of JavaScript can make it easier to learn Java and C.
+
+
+    Moreover, it is becoming very popular these days. If you are planning to become
+    a professional coder or build things for the internet, JavaScript is one of the
+    best languages to start with. You will be able to start building web programs
+    quickly on learning this language.
+
+
+    # The Features of JavaScript
+
+
+    JavaScript is capable of adding a variety of beautiful effects to a web page among
+    other things. When you are learning this programming language, it helps to understand
+    what its features are. Here are some of the most important ones.
+
+
+    # Browser Support
+
+
+    JavaScript has been accepted by all browsers as a standard scripting language.
+    As a result, there is no need to install any plug-in to start using JavaScript
+    in your browser, unlike Flash. More importantly, browsers provide integrated support
+    to this language.
+
+
+    # Client Side and Server Side Together
+
+
+    JavaScript can access the Document object model of a browser. As a result, it
+    is possible to modify the structure of the WebPages at runtime. As a result, you
+    can use this language for the addition of a variety of effects to the WebPages.
+    At the same time, it is possible to use it on the server side. One such is the
+    creation of web scripts.
+
+
+    # Scripting vs. Programming with JavaScript
+
+
+    JavaScript is often referred to as a scripting language because that is exactly
+    what it is. It is not exactly a programming language per se. After all, the web
+    browser does a lot of the work'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'in the program. Since the browser does the actual work, it is possible to make
+    changes by writing a few lines of code, which is relatively easier. This is why
+    JavaScript is considered to be an easy language for beginners.
+
+
+    Nonetheless, there are some complicated aspects of this language. Even though
+    it is employed as a scripting language, JavaScript is a thorough programming language.
+    You can be certain complex programs with it. Of course, this is rarely required
+    when you are creating WebPages.
+
+
+    # # Writing a Simple Program in JavaScript
+
+
+    To get a better idea of JavaScript as a language, you should start writing your
+    very first program in. The staple ‘Hello World’ example will be used in this case
+    as well. The good thing is that it is very easy to write this program in JavaScript.
+
+
+    Before you can start, you will need to fulfill some basic requirements. One advantage
+    of JavaScript is that it can be easily interpreted by the browser itself. As a
+    result, you do not require any additional software or compilers for writing programs
+    in this language. The only things you need are given below.
+
+
+    +   - **Text Editor:** You can use Notepad for writing the program. However, you
+    should consider getting Notepad++ which is an invaluable text editor for programmers.
+    You can get this application for free.
+
+    - **Web Browser:** You can choose any browser that you are comfortable with all
+    of them support JavaScript.
+
+
+    There is one more thing you need to do before you write the actual program and
+    that is to create the HTML Framework. Generally, JavaScript programs will be embedded
+    in the web page. In other words, they are written alongside the HTML. However,
+    it is possible to include the programs externally. As such, a simply HTML file
+    will have to be created for including the JavaScript.
+
+
+    To do so, open the text editor of your choice and type the following lines in
+    the file.
+
+
+    ```
+
+    <!DOCTYPE HTML>
+
+    <html>
+
+    <Head>
+
+    <Title>JavaScript Hello World</title>
+
+    ```'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# JavaScript Hello Example
+
+
+    Once done, you can save this file with a name of your choice but make sure that
+    the file type has been designated as an HTML file. That means the file’s extension
+    should be .html and nothing else. You now have the basic template ready.
+
+
+    As such, you can insert the JavaScript code into the file now. Open it up and
+    add the following lines to it. Make sure that they have been mentioned after the
+    <h1> tag.
+
+
+    ```
+
+    <Script>
+
+    alert("Hello World!")
+
+    <Script>
+
+    ```
+
+
+    Save the file and your JavaScript program is finally ready. You can now use your
+    web browser to run the program. Open the file in the web browser and you will
+    see the message, ‘Hello World!’ being displayed.
+
+
+    # Understanding the Syntax in JavaScript
+
+
+    Like all programming languages, JavaScript has its own syntax that you need to
+    follow when writing code with it. Here are some of the most important parts of
+    the JavaScript syntax.
+
+
+    When you want to implement statements in JavaScript, you need to apply the above
+    tag. All statements have to be placed between <script> and </script> in a web
+    page for them to be executed. It is possible to place the <script> tags with the
+    JavaScript code anywhere in a web page. However, it is a good practice to place
+    them inside the <head> tags. The function of the <script> tag is to alert the
+    browser to ensure that all the text between tags is interpreted as a script. There
+    are two important attributes to the <script> tag.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'Language: The language attribute will specify scripting language is being used.
+    On the other hand, the latest versions of HTML and XHTML have made it unnecessary
+    to use this attribute.
+
+
+    Type: Nowadays, the type attribute is recommended when you wish to mention which
+    scripting is being used. You should set its value to ''text/JavaScript''.
+
+
+    # Line Breaks and Whitespace
+
+
+    Unlike other programming languages, JavaScript does not pay attention to spaces,
+    newlines, and tabs in its programs. Since they are ignored, you can use these
+    breaks and white spaces as many times as you want without breaking the program.
+    You can freely use them to format the programs to make the code look neat so that
+    it can be read and understood in an easy manner.
+
+
+    # Semicolons are Discretionary
+
+
+    In most programming languages such as Java and C, simple statements end with a
+    semicolon. This is also the case in JavaScript with a major difference. They are
+    optional in JavaScript as long as the statements are placed on separate lines.
+    You must use semicolons when you are placing two statements in one line. Be that
+    as it may, using semicolons is a good practice for beginners.
+
+
+    # Case Sensitivity in JavaScript
+
+
+    JavaScript is sensitive to the cases of the words. In other words, ‘Hi’ and ‘hi’
+    will be treated differently by the language.
+
+
+    # Data types and Variables
+
+
+    Like with other programming languages, it is important to understand data types
+    and variables in JavaScript.
+
+
+    # Data Types
+
+
+    JavaScript offers three different primitive data types. They are Numbers, Strings
+    of text and Boolean. The Numbers data type represents both integers and floating-point.
+    The programming language does not define them as separate data types. Instead,
+    all numbers will be represented as floating-point values.
+
+
+    There are also two other data types in JavaScript. They are undefined and null.
+    Each of these trivial data types defines a single value only. There is a composite
+    data type in JavaScript as well, and it is called object.
+
+
+    # Variables
+
+
+    As is the case with other programming languages, there are variables in JavaScript.
+    They'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'to be declared before they can be used in the program. In JavaScript, the variables
+    have to be declared with the help of the ‘var’ keyword. It is possible to declare
+    multiple variables in a single statement with this keyword. The syntax for declaring
+    a variable is given below.
+
+
+    Var money;
+
+
+    Variable initialization is quite easy in JavaScript. You can store a value in
+    a variable as soon as it has been declared or you can do it in the program when
+    required. You should remember that the ‘var’ keyword can be used only once for
+    a specific variable in a program.
+
+
+    Another thing about JavaScript is that it is an untyped language. Therefore, a
+    variable can contain any value irrespective of its data type in JavaScript. In
+    other words, you do not have to inform the program what kind of data the variable
+    can hold during declaration. Moreover, it is possible to change the value type
+    of any variable later. JavaScript will automatically handle the changes during
+    the execution of the program.
+
+
+    In JavaScript, a variable can have two different scopes. The scope defines the
+    region of the program in which the variable is defined.
+
+
+    +   **Local Variables:** A local variable will remain visible only inside the
+    function where the variable has been defined in. Function parameters are always
+    kept local to that specific function.
+
+    **Global Variables:** These variables have a global scope. In other words, it
+    can be defined anywhere you want in the code of the program.
+
+
+    You should remember that a local variable will be given precedence over a global
+    variable that has the same name. If you declare a local variable with a name inside
+    the body of a function that is shared by a global variable, you will be hiding
+    the global variable for that function.
+
+
+    As you keep learning JavaScript, you will be coming across various functions,
+    loops, and events. Once you can master this programming language, you can seek
+    jobs as a web developer at the very least. Alternatively, you can pick up quite
+    a few other programming languages more easily than before'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# ## Chapter 5: Learn The Incredible Language Of Python
+
+
+    Python is often mentioned as one of the best programming languages for a beginner
+    to start with. If you are an absolute newcomer to programming, this can be an
+    excellent choice for you. Python is quite an old language having been developed
+    in the 80s. Guido van Rossum who developed it later gave away the language as
+    open source. It is currently taken care by the Python Software Foundation. Python
+    can be used freely even for commercial applications
+
+
+    This is generally used as a scripting language with which programmers can compose
+    large amounts of code in a very short period of time. Of course, the code will
+    still remain functional and easily readable. Due to its flexibility, this language
+    is one of the most popular of all the high-level languages in use today.
+
+
+    However, there is one thing you must know about Python. You are not going to be
+    starting at the basic level when you are a beginner. On the other hand, you will
+    be learning a number of useful things such as modularity, naming conventions and
+    indentation, all of which can make it easier for you when you learn other programming
+    languages. Another advantage of this language is that the community is thriving
+    allowing you to get a range of resources to help you learn Python.
+
+
+    # ## Features of Python
+
+
+    Python is quite a powerful object-oriented programming language. It has some excellent
+    features to offer to the programmer
+
+
+    +   - Ease: The ease of using Python showcases itself in multiple ways. There
+    are fewer keywords in this language along with a clear syntax and simple structure.
+    As a result, it is easy to learn it. The code can be read easily as it is clearly
+    defined.
+
+    - Portability: It is possible to run this language on a range of hardware platforms.
+    At the same time, it will have the same interface on all of them.
+
+    - Extensibility: It is possible to add low-level modules to the interpreter in
+    Python. With it, you can customize your tools or add new functions so that the
+    tools become more efficient.
+
+    - GUI Programming: One of the best things about Python is that it can support
+    GUI applications. These can be created and ported to many windows systems and
+    system calls including Macintosh and UNIX''s X window system.
+
+    - Scalability: With Python, you can get a better support and structure for larger
+    programs.
+
+    - Interactive Mode: In Python, you can get an interactive mode. It enables interactive
+    debugging and testing of your code snippets easily.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '**Multiple Approaches:** While Python is mainly an object oriented programming
+    language, it is possible to use other programming approaches as structured and
+    functional.
+
+    **Other Features:** Python offers very high-level data types. Apart from supporting
+    dynamic type checking, it also offers automatic garbage collection. Moreover,
+    you can integrate Python with other programming languages such as Java, C++ and
+    C easily.
+
+
+    # # A Simple Program in Python
+
+
+    Before you can write a Python program, you need to install it on your computer.
+    You will also get a Python program called IDLE. This is short for Integrated Development
+    Environment. This is known as IDE for short in other programming languages. IDLE
+    looks a lot similar to a basic text editor. On opening IDLE, you need to put in
+    the following command at the prompt.
+
+
+    ```
+
+    print("Hello, World!")
+
+    ```
+
+
+    As you can see, the code for a Hello World program in Python is much shorter than
+    the other programming languages that you have seen so far. This is one of the
+    reasons for the popularity of this language. You can even easily understand what
+    is happening in the code.
+
+
+    # # Data Types and Variables
+
+
+    Understanding the variables and data types will certainly help you out when you
+    are learning Python.
+
+
+    # ### Data Types
+
+
+    In Python, all values have a data type. Moreover, everything is considered to
+    be an object in this programming language. Therefore, data types are actually
+    considered to be classes while variables are considered to be instances of the
+    respective classes. Here are some of the most important data types in Python.
+
+
+    +   - **Python Numbers:** In this category, you will find floating point numbers,
+    numbers and integers. In Python, they are defined as a float, complex, and int.
+    It is possible to discover the class of the variable with the type () function.
+    The *instance()* function can be used to check whether an object belongs to a
+    specified class.
+
+
+    +   - **Python List:** As the name suggests, a list is an ordered series of items.
+    It is one of the most widely used data types and is rather flexible. In Python,
+    the items of a list can belong to different types. The value of the items in a
+    list can be changed as per requirements. The list is mutable.
+
+
+    +   - **Python Tuple:** Tuple is similar to a list it also has an ordered series
+    of items. However, a tuple is immutable. Therefore, the values in a tuple cannot
+    be modified once it has been created. They are mainly used for writing-protecting
+    data.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Variables
+
+
+    While the function of variables in Python is the same as the other programming
+    languages, there is a difference in their declaration. In Python, you do not have
+    to declare a variable before using it. You simply need to assign a value to the
+    variable, and it will exist. You do not have to define the data type of the variable
+    as well. Python will define the data type automatically based on the value assigned
+    to the variable.
+
+
+    Naming the variables properly is essential in Python. The names can be a combination
+    of letters in uppercase and smaller case along with digits and underscore. However,
+    a name cannot start with a number. Special symbols cannot be used for naming variables.
+    You cannot use keywords for the names as well. These rules are also applicable
+    when you are writing identifiers.
+
+
+    # Conditional Statements and Loops
+
+
+    Like other programming languages, Python also offers a range of conditional statements
+    to help your program make decisions and loops for executing a code multiple times.
+
+
+    # Conditional Statements
+
+
+    There are a few conditional statements available in Python. In this programming
+    language, a null or zero value is considered to be TRUE while any non-null or
+    non-zero value is taken to be False.
+
+
+    +   * **If statements:** In this conditional statement, the block of code under
+    the statement will be executed if the expression returns TRUE. If FALSE, the execution
+    of that code will be skipped and the statement after it will be executed.
+
+    * **If else statements:** These statements contain an else statement after the
+    if statement. The block of code under the else statement will be executed if the
+    if expression is determined to be FALSE.
+
+    * **If elif statements:** The elif statement is used to check multiple conditions
+    and expressions. When one of the given conditions is determined to TRUE, a block
+    of code associated with that elif statement will be executed. As such, there can
+    be multiple elif statements following an if statement. The block of code executed
+    corresponds to the elif statement which was evaluated to TRUE.
+
+
+    # Loops
+
+
+    Loops in Python are similar to other programming languages.
+
+
+    +   * **While loop:** This loop allows you to repeat the execution of a block
+    of code as long as the specified condition is TRUE. The condition will be tested
+    every time before the body of the loop is executed.
+
+    * **For loop:** The for loop also allows you to execute a block of code. However,
+    it keeps the we'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'code required for managing the loop variable short.
+
+
+    Like other programming languages, it is also possible to create nested loops in
+    Python.
+
+
+    Learning Python can certainly open up a plethora of opportunities. More importantly,
+    once you become adept in Python, you will find programming easier in general.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Chapter 6: Enjoy the Ease of Ruby
+
+
+    Developed in the 90s, Ruby is one of the most recent programming languages in
+    the world. Even so, it is remarkably popular thanks to its dynamic and open-source
+    nature. It is an object-oriented programming language which was designed to possess
+    an easily readable syntax that could be written by a beginner. There is no need
+    to learn and memorize a huge list of commands to get started with Ruby.
+
+
+    Ruby is known to be a programming language that is quite easy to learn. In fact,
+    it is possible to pick up the basics in less than an hour. You can find a quick
+    start guide that will take around 20 minutes to complete by the end of which you
+    will be acquainted with the fundamentals of this programming language. If you
+    are already familiar with Python, Ruby will become less of a challenge.
+
+
+    Another thing you need to keep in mind is the difference between Ruby on Rails
+    and Ruby. You see, Ruby is a programming language. On the other hand, Ruby on
+    Rails is a framework that has been built with Ruby. While Ruby is a general purpose
+    scripting language, Ruby on Rails allows the development of web applications.
+
+
+    # The Features of Ruby
+
+
+    There are some excellent features in Ruby that make it a useful programming language
+    to learn. Here are some of the top features.
+
+
+    **Flexibility:** Although Ruby is an object-oriented programming language, it
+    also provides support for imperative, functional and procedural programming. As
+    a result, it is quite flexible for many programming requirements.
+
+
+    **Objects:** In Ruby, you will find that everything is considered to be an object.
+    This applies to numeric values. This greatly simplifies programming in this language.
+
+
+    **Blocks:** One of the best features of Ruby is the blocks. These are blocks of
+    code which can be used as a parameter in a method. This greatly simplifies Ruby
+    programming allowing you to build code libraries easily. These libraries can be
+    used to provide various functionalities to build code blocks that you build.
+
+
+    **Scalability:** This is another excellent feature in Ruby. You can easily maintain
+    programs written in this language even they are quite big.
+
+
+    # A Simple Program in Ruby
+
+
+    As with other programming languages, here is the basic Hello World example program
+    written in the Ruby language.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '```
+
+    #! /usr/bin/ruby -w
+
+
+    puts "Hello, World!"
+
+    ```
+
+
+    As you can see in the example, the program is incredibly simple with only a single
+    line of actual code. This goes on to show how easy it is to learn and write programs
+    in this language.
+
+
+    # The Syntax in Ruby Programming
+
+
+    In any programming language, you need to pay attention to the syntax of the code.
+    Improper syntax can cause errors during runtime or even break the program and
+    give results that are different from what is expected. In Ruby, the syntax concepts
+    are quite simple and easy to understand. Here is some of the syntax concepts that
+    you need to know when programming in this language.
+
+
+    # Whitespace
+
+
+    In Ruby, whitespace characters such as tabs and spaces are typically ignored by
+    the program. However, they will be taken into account when they are present in
+    strings. That be as it may, there are certain cases in which white spaces are
+    used for interpreting ambiguous statements. These interpretations can produce
+    warnings if the -w option has been enabled.
+
+
+    # Line Endings
+
+
+    In Ruby, newline characters and semicolons are treated as the ending of statements.
+    However, if operators like backslash and + are placed at the end of a line, Ruby
+    will treat them as an indicator that the statement is going to be continued.
+
+
+    # Identifiers
+
+
+    Identifiers are the names given to methods, constants and variables. In Ruby,
+    identifiers are always case sensitive. Therefore, ''Hi'', ''HI'' and ''hi'' will
+    be treated as different identifiers in Ruby. On the other hand, you can make use
+    of alphanumeric characters as well as the underscore character in making your
+    identifiers.
+
+
+    # BEGIN AND END Statements in Ruby
+
+
+    These are two important statements in Ruby. You are certain to come across situations
+    where you need to use these statements as you program in this language.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# The BEGIN Statement
+
+
+    This statement allows the code under it to be declared before the actual program
+    is executed. Therefore, the code in the BEGIN statement will be the first to be
+    executed. You can use multiple BEGIN statements, and they will be executed in
+    the order they appear in the program. The basic syntax of this statement is given
+    below.
+
+
+    ```
+
+    BEGIN {
+
+    #code
+
+    }
+
+    ```
+
+
+    # The END Statement
+
+
+    This is the opposite of the BEGIN statement as the code it declares will be executed
+    at the end of the program. The syntax for this statement is given below.
+
+
+    ```
+
+    END {
+
+    #code
+
+    }
+
+    ```
+
+
+    There are four different kinds of variables in Ruby. Understanding them is vital
+    to Ruby programming. Here is a short introduction to these variables.
+
+
+    **Class Variables:** As the name suggests, these variables belong to a specific
+    class and are available to the different objects in that class. It is also a characteristic
+    of that class. They will be shared among the descendants of the module or the
+    class in which they were defined. You need to initialize them before you can use
+    them in method definitions. If the -w option is used then; warnings will be produced
+    when the class variable is overridden. All class variables have to start with
+    @..
+
+
+    **Instance Variables:** These variables will be available for different methods
+    for a specific object or instance. Therefore, instance variables will be different
+    for different objects. If uninitialized, the instance variable will have the value
+    of nil and it will cause warnings if the -'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'Local Variables: The scope of these variables range from the start of a block
+    of code to its end. In other words, it exists between the braces. They are not
+    available outside the method. If you reference an uninitialized local variable,
+    Ruby will consider it to be a call to a method which has no arguments. It is possible
+    to declare local variables by assigning to uninitialized local variables. All
+    local variables have to start with either an underscore or a lowercase letter.
+
+
+    Global Variables: These are used when you need to have a variable that can exist
+    for all classes. By assigning to global variables, you can change the global status.
+    As such, their usage is not recommended unless absolutely necessary. They can
+    complicate the program. Uninitialized global variables will have the value of
+    nil. With the -w option, they can cause warnings. All global variables need to
+    start with the ''$'' character.
+
+
+    # Conditional Structures in Ruby
+
+
+    There are quite a few conditional structures available in Ruby, most of which
+    are common to other programming languages. Therefore, you should not have a problem
+    if you are familiar with other languages. Even if you do not, it will not be difficult
+    for you to learn.
+
+
+    +   - **If statement**: This statement is used to execute a block of code when
+    a condition is determined to be true. The execution of the code will be skipped
+    when the condition returns false.
+
+    - **Else statement**: The else statement is used with the if statement. It provides
+    an alternate block of code to be executed when the condition is evaluated false.
+
+    - **Elsif statement**: The elsif statement is used with the if and else statements
+    and is between the two. It is possible to add as many elsif statements as required.
+    This statement is used when you need multiple conditions to be checked. The elsif
+    statement returns true for the condition will have its block of code executed.
+
+    - **Unless statement**: The unless statement is the opposite of the if statement.
+    It when you want a block of code to be executed when the condition returns false.
+
+    - **Case when statement**: Using the if-els-else conditional structure can get
+    complicated when you need to evaluate a lot of options. In these situations, you
+    can use the case statement when the condition returns the right value. Multiple
+    code under the when will be executed when multiple statements are applied to a
+    case statement. It is also possible to use the else statement with this conditional
+    structure. The else statement will give a block of code to be executed when the
+    condition does not return any value acceptable to the when statements.
+
+
+    # Loop Statements in Ruby
+
+
+    Loops are also available in Ruby. As you already know, loops allow you to execute
+    a certain block of code several times. Here is a short introduction to the loops
+    available in Ruby.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '+   * **While loop:** The while loop allows the code to be executed as long
+    as the condition is true. Once it turns false, the execution is stopped, and the
+    program heads over to the next statement.
+
+
+    +   * **Until loop:** This is the reverse of the while loop. The until loop will
+    keep being executed as long as the condition is false. It will stop when the condition
+    becomes true.
+
+
+    +   * **For loop:** While Ruby offers a for loop, it is not similar to the for
+    loops available in other programming languages. Instead, the for loop in Ruby
+    functions more like the for loop in other programming languages. As a result,
+    it will execute the code as long as there are elements to consider in a given
+    expression.
+
+
+    You should now be familiar with the basics of programming in Ruby. Of course,
+    there are still a lot left to go, but these details should help you prepare for
+    the difficult parts.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Conclusion
+
+
+    With the end of this book on programming languages, I hope that it has proven
+    to be useful for you. You should now know about the easiest programming languages
+    for beginners to start with.
+
+
+    Of course, the introduction to programming should have familiarized you with the
+    fundamentals of the activity in general. After all, there are quite a few things
+    that are similar to all languages. One of them is that all languages require you
+    to adopt the mentality of a programmer. Once you do so, you will find programming
+    relatively easier.
+
+
+    As you will have noticed in the book, five languages have been chosen: C, Java,
+    JavaScript, Python and Ruby. These were chosen not only because they are easy
+    to learn but also because they introduce you to the world of programming in a
+    way few other languages can. They are versatile, and you will find it easier to
+    learn more advanced programming languages.
+
+
+    You should now be familiar with the features of each of the programming languages
+    and know how to write the basic Hello World program for each. You will have also
+    learned some of the basics for all of these languages.
+
+
+    I wish all the best for your future in programming. With a bit of perseverance
+    and hard work, you will find yourself writing complex code in no time.
+
+
+    Before you jump on your computer, I would like you to post an HONEST REVIEW on
+    [amazon.com](https://www.amazon.com) in order to improve the quality of the book.
+
+    Thank you.
+
+
+    Also, dont forget to download your Free Python Language Ebook here: [https://publishfs.leadpages.co/learn-python-language/](https://publishfs.leadpages.co/learn-python-language/)'
+  merge: -1
+  pgno: 31
