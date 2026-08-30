@@ -1,0 +1,3795 @@
+- img_proc: true
+  md: '# # Java Games Design Patterns
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_0_0.png)
+
+
+    Learning Programming design patterns through games'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Java Games Design Patterns
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_1_0.png)
+
+
+    Learning Programming design patterns through games'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Java Games Design Patterns
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_2_0.png)
+
+
+    # YANG HU
+
+
+    Simple is the beginning of wisdom. This book briefly explain the concept and real
+    practice examples in games, you will learn easy and fun.
+
+
+    http://en.verejava.com
+
+
+    Copyright © 2020 Yang Hu
+
+    All rights reserved.
+
+    ISBN : 979864812538 4
+
+
+    # CONTENTS
+
+
+    +   1. Template Pattern Principle
+
+    2. Template Pattern Game
+
+    3. Singleton Pattern Principle
+
+    4. Singleton Pattern Game
+
+    5. Flyweight Pattern Principle
+
+    6. Flyweight Pattern Game
+
+    7. Builder Pattern Principle'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '+   8. Builder Pattern Game
+
+    9. Command Pattern Principle
+
+    10. Command Pattern Game
+
+    11. Factory Pattern Principle
+
+    12. Factory Pattern Game
+
+    13. Strategy Pattern Principle
+
+    14. Strategy Pattern Game
+
+    15. Bridge Pattern Principle
+
+    16. Bridge Pattern Game
+
+    17. Iterator Pattern Principle
+
+    18. Iterator Pattern Game
+
+    19. Decorator Pattern Principle
+
+    20. Decorator Pattern Game
+
+    21. Composite Pattern Principle
+
+    22. Composite Pattern Game
+
+    23. Chain Pattern Game
+
+    24. Observer Pattern Game
+
+    25. Mediator Pattern Principle
+
+    26. Mediator Pattern Game
+
+    27. State Pattern Game'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'If you want to learn this book, you must have basic knowledge of Java, you
+    can learn our course << Easy Learning Java (3 Editon)>>
+
+    http://en.verejava.com
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_4_0.png)
+
+
+    If you already have basic knowledge of Java skip it, start an exciting journey
+
+
+    Download GameDesignPatternImages.zip all images for this book.
+
+    http://en.verejava.com/download.jsp?id=1'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Template Pattern Principle
+
+
+    Template Pattern : Defer the exact steps of an algorithm to a subclass. Define
+    the skeleton of an algorithm in an operation, deferring some steps to subclasses.
+    Template Method lets subclasses redefine certain steps of an algorithm without
+    changing the algorithm''s structure.
+
+
+    +   1. BluePlane inherit from Sprite Template for reuse.
+
+
+    | Sprite |
+
+    | --- |
+
+    | int x |
+
+    | int y |
+
+    | String name |
+
+    | Sprite(String name, int x, int y) |
+
+    | draw() |
+
+    | move(int distanceX, int distanceY) |
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_5_0.png)
+
+
+    # Sprite:
+
+
+    +   1. x: x coordinate of Canvas
+
+    2. y: y coordinate of Canvas
+
+    3. Sprite(String name, int x, int y): constructor method
+
+    4. draw(): draw sprite on canvas
+
+    5. move( int distanceX, int distanceY): sprite move on canvas'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "![](img/1a3fab3d51f12ead42a519c23c1a64ba_6_0.png)\n\n# Sprite.java in package\
+    \ com.template.principle;\n\n```\nclass Sprite {\n    protected int x; // x coordinate\
+    \ of Canvas\n    protected int y; // y coordinate of Canvas\n    protected String\
+    \ name ;\n\n    public Sprite(String name, int x, int y) {\n        this.name\
+    \ = name;\n        this.x = x;\n        this.y = y;\n    }\n\n    public void\
+    \ draw() {\n        String text = this.name + \" draw on (\" + this.x + \", \"\
+    \ + this y + \")\";\n        System.out.println(text);\n    }\n\n    // distance:\
+    \ moved in the x-axis\n    // distance: moved in the y-axis\n    public void move(int\
+    \ distanceX, int distanceY) {\n        String text = this.name + \" move distance\
+    \ (\" + distanceX + \", \" + distanceY + \")\";\n        System.out.println(text);\n\
+    \    }\n```"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "BluePlane.java in package com.template.principle;\n\n```\npublic class BluePlane\
+    \ extends Sprite{\n    public BluePlane(String name, int x, int y) {\n       \
+    \ super (name, x, y);\n    }\n}\n```\n\n2. Create a Test class : TestTemplate.java\
+    \ in package com.template.principle;\n\n```\npublic class TestTemplate {\n   \
+    \ public static void main(String[] args) {\n        BluePlane bluePlane = new\
+    \ BluePlane(\"BluePlane\", 50,150);\n        bluePlane.draw();\n        bluePlane.move(5,\
+    \ 5);\n    }\n}\n```\n\n# Result:\n\nBluePlane draw on (50 , 150)\nBluePlane move\
+    \ distance (5 , 5)"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "# Template Pattern Game\n\n1. BluePlane draw on canvas, Press the keyboard\
+    \ to move up, down, left, right.\n\n```\npublic void keyPressed(KeyEvent e) {\n\
+    \    int keyCode = e.getKeyCode();\n    if(keyCode == KeyEvent.VK_UP){\n     \
+    \   bluePlane.move(0,-6);\n    } else if(keyCode == KeyEvent.VK_DOWN){\n     \
+    \   bluePlane.move(0,6);\n    } else if(keyCode == KeyEvent.VK_RIGHT){\n     \
+    \   bluePlane.move(6,0);\n    } else if(keyCode == KeyEvent.VK_LEFT){\n      \
+    \  bluePlane.move(-6,0);\n    }\n    Canvas.this.repaint();\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_9_0.png)"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# 2. UML Diagram BluePlane inherit from Sprite Template for reuse.
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_10_0.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# Sprite:\n\n+   1. x: x coordinate of Canvas\n2. y: y coordinate of Canvas\n\
+    3. BufferedImage image : the image of BluePlane\n(blue_plane.png )\n4. Sprite(int\
+    \ x, int y, BufferedImage image): constructor method\n5. draw(Graphics g): draw\
+    \ sprite on canvas\n6. move(int distanceX, int distanceY): sprite move on canvas\n\
+    \n# Sprite.java in package com.template.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\n\nclass Sprite {\n    protected int x; //\
+    \ x coordinate of Canvas\n    protected int y; // y coordinate of Canvas\n   \
+    \ protected BufferedImage image;\n\n    public Sprite(int x, int y, BufferedImage\
+    \ image){\n        this.x = x;\n        this.y = y;\n        this.image = image;\n\
+    \    }\n\n    public void draw(Graphics g){\n        g.drawImage(image, this .x,\
+    \ this .y, null);\n    }\n\n    public void move(int distanceX, int distanceY){\n\
+    \        this.x = this .x + distanceX;\n        this.y = this .y + distanceY;\n\
+    \    }\n}\n```\n\n# BluePlane.java in package com.template.game;"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "```\nimport java.awt.image.BufferedImage;\npublic class BluePlane extends Sprite{\n\
+    \    public BluePlane(int x, int y, BufferedImage image) {\n        super (x,\
+    \ y, image);\n    }\n}\n```"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# Canvas:\n\n+   1. loadImage(String imagePath): load image (blue_plane.png\
+    \ ) to BufferedImage\n2. paintComponent(Graphics g): can draw image and also be\
+    \ called explicitly by the repaint() method defined in Component class. The effect\
+    \ of calling repaint() is that Swing automatically clears the graph on the panel\
+    \ and executes the paintComponent to redraw the graphics on the panel.\n3. this.addKeyListener(new\
+    \ KeyAdapter()): Monitoring and receiving keyboard events to move up, down, right.\n\
+    \n# Canvas.java in package com.template.game;\n\n```\nimport java.awt.*;\nimport\
+    \ java.awt.event.*;\nimport java.awt.image.BufferedImage;\nimport java.io.*;\n\
+    import javax.imageio.ImageIO;\nimport javax.swing.*;\npublic class Canvas extends\
+    \ JPanel {\n    private BufferedImage blueimage;\n    private Sprite bluePlane;\n\
+    \n\n    public Canvas() {\n        this.setLayout(null);\n        this.setBackground(Color.WHITE);\n\
+    \        blueimage=loadImage(\"images/blue_plane.png\");\n        bluePlane =\
+    \ new BluePlane(120, 250, blueimage);\n    }\n\n    this.addKeyListener(new KeyAdapter()\
+    \ {\n        public void keyPressed(KeyEvent e) {\n            int keyCode = e.getKeyCode();\n\
+    \            if (keyCode == KeyEvent.VK_UP) {\n                bluePlane.move(0,-6);\n\
+    \            } else if (keyCode == KeyEvent.VK_DOWN) {\n                bluePlane.move(0,\
+    \ 6);\n            } else if (keyCode == KeyEvent.VK_RIGHT) {\n```"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "```\nbluePlane.move(6, 0);\nelse if (keyCode == KeyEvent.VK_LEFT) {\n    bluePlane.move(-6,\
+    \ 0);\n}\nCanvas.this.repaint();\n}\nprotected void paintComponent(Graphics g)\
+    \ {\n    super.paintComponent(g);\n    bluePlane.draw(g);\n}\n```\n\n```\npublic\
+    \ BufferedImage loadImage(String imagePath) {\n    File file = new File(imagePath);\n\
+    \    BufferedImage bufferedImage = null;\ntry {\n    bufferedImage = Image.read(file);\n\
+    } catch (IOException e) {\n    e.printStackTrace();\n}\n    return bufferedImage;\n\
+    }\n```\n\n3 . Create a Test class : TestTemplate.java in package com.template.game;\n\
+    \ncanvas.setFocusable(true): Set focus to activate keyboard events canvas.requestFocus():\
+    \ Set focus to activate keyboard events\n\n```\nimport java.awt.BorderLayout;\n\
+    import javax.swing.JFrame;\npublic class TestTemplate {\n```"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "```\npublic static void main(String[] args) {\n    JFrame frame = new JFrame(\"\
+    Design Pattern Template\");\n    Canvas canvas = new Canvas();\n    frame.add(canvas,\
+    \ BorderLayout.CENTER );\n    frame.setSize(300, 350);\n    canvas.setFocusable(true);\n\
+    \    frame.setVisible(true);\n    canvas.requestFocus();\n}\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# # Singleton Pattern Principle
+
+
+    Singleton Pattern: A class of which only a single instance can exist. Ensure a
+    class only has one instance, and provide a global point of access to it.
+
+
+    +   - **BluePlane** and **RedPlane** load image by **ImageUtil** Singleton instance.
+
+
+    ImageUtil:
+
+
+    +   1. `private ImageUtil()`: Not allow to create multiple instances
+
+    2. `static String loadImage(String imagePath)`: load image
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# Sprite.java in package com.singleton.principle;\n\n```\n```java\nclass Sprite\
+    \ {\n    protected int x; // x coordinate of Canvas\n    protected int y; // y\
+    \ coordinate of BufferedImage\n    protected String bufferedImage;\n\n    public\
+    \ Sprite(BufferedImage bufferedImage, int x, int y) {\n        this.bufferedImage\
+    \ = bufferedImage;\n        this.x = x;\n        this.y = y;\n    }\n\n    public\
+    \ void draw() {\n        String text = this.bufferedImage + \" draw on (\" + this.x\
+    \ + \",\\\" + this.y + \")\";\n        System.out.println(text);\n    }\n\n  \
+    \  public void move(int distanceX, int distanceY) {\n        String text = this.bufferedImage\
+    \ + \" move distance (\" +distanceX+\",\\\" +distanceY+\")\";\n        System.out.println(text);\n\
+    \    }\n}\n```\n```\n\n# BluePlane.java in package com.singleton.principle;\n\n\
+    ```\n```java\npublic class BluePlane extends Sprite {\n    public BluePlane(BufferedImage\
+    \ bufferedImage, int x, int y) {\n        super(bufferedImage, x, y);\n    }\n\
+    }\n```\n```\n\n# RedPlane.java in package com.singleton.principle;"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "```\npublic class RedPlane extends Sprite{\n    public RedPlane(String bufferedImage,\
+    \ int x, int y) {\n        super (bufferedImage, x, y);\n    }\n}\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# ImageUtil:\n\n1. private ImageUtil(): Not allow to create multiple instances\n\
+    2. static String loadImage(String imagePath): load image\n\nImageUtil.java in\
+    \ package com.singleton.principle;\n\n```\nimport java.io.File;\n\npublic class\
+    \ ImageUtil {\n    private ImageUtil(){\n    }\n    public static String loadImage(String\
+    \ imagePath) {\n        File file = new File(imagePath);\n        return file.getName();\n\
+    \    }\n}\n```\n\n# 2 . Create a Test class : TestSingleton.java in package com.singleton.principle;\n\
+    \n```\npublic class TestSingleton {\n    public static void main(String[] args)\
+    \ {\n        String bufferedImage = ImageUtil.loadImage(\"images/blue_plane.png\"\
+    );\n        BluePlane bluePlane = new BluePlane(bufferedImage, 50, 150);\n   \
+    \     bluePlane.draw();\n        bluePlane.move(5, 5);\n        System.out.println(\"\
+    ------------------------------------------------\");\n        bufferedImage =\
+    \ ImageUtil.loadImage(\"images/red_plane.png\");\n        RedPlane redPlane= new\
+    \ RedPlane(bufferedImage, 50, 0);\n    }\n```"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '```
+
+    redPlane.draw();
+
+    redPlane.move(0, 5);
+
+    }
+
+    ```
+
+
+    # Result:
+
+
+    blue_plane.png draw on (50 , 150)
+
+    blue_plane.png move distance (5 , 5)
+
+
+    red_plane.png draw on (50 , 0)
+
+    red_plane.png move distance (0 , 5)'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# Singleton Pattern Game\n\n+   1. BluePlane and RedPlane load image by ImageUtil\
+    \ singleton instance.\n\n+   2. Draw BluePlane and RedPlane image on canvas\n\n\
+    +   3. Press the up, down, left, right key to move BluePlane .\n4. Press the E,\
+    \ D, S, F key to move RedPlane .\n\n```\npublic void keyPressed(KeyEvent e) {\n\
+    \    int keyCode = getKeyCode();\n    if(keyCode == KeyEvent.VK_E){\n        redPlane.move(0,\
+    \ -6);\n    }else if(keyCode == KeyEvent.VK_D){\n        redPlane.move(6, 0);\n\
+    \    }else if(keyCode == KeyEvent.VK_F){\n        redPlane.move(6, 0);\n    }else\
+    \ if(keyCode == KeyEvent.VK_S){\n        redPlane.move(-6, 0);\n    }\n\n    if(keyCode\
+    \ == KeyEvent.VK_UP){\n        bluePlane.move(0, -6);\n    }else if(keyCode ==\
+    \ KeyEvent.VK_DOWN){\n        bluePlane.move(0, 6);\n    }else if(keyCode == KeyEvent.VK_RIGHT){\n\
+    \        bluePlane.move(6, 0);\n    }else if(keyCode == KeyEvent.VK_LEFT){\n \
+    \       bluePlane.move(-6, 0);\n    }\n\n    Canvas.repaint();\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_21_0.png)"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_22_0.png)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Sprite.java in package com.singleton.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\n\nclass Sprite {\n    protected int x; //\
+    \ x coordinate of Canvas\n    protected int y; // y coordinate of Canvas\n   \
+    \ protected BufferedImage image;\n\n    public Sprite(int x, int y, BufferedImage\
+    \ image){\n        this.x = x;\n        this.y = y;\n        this.image = image;\n\
+    \    }\n\n    public void draw(Graphics g){\n        g.drawImage(image, this.x,\
+    \ this.y, null);\n    }\n\n    public void void move(int distanceX, int distanceY){\n\
+    \        this.x = this.x + distanceX;\n        this.y = this.y + distanceY;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# ImageUtil:\n\n+   1. private ImageUtil(): Not allow to create multiple instances\n\
+    2. static String loadImage(String imagePath): singleton load image\n\nImageUtil.java\
+    \ in package com.singleton.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    import java.io.*;\nimport javax.imageio.ImageIO;\n\npublic class ImageUtil {\n\
+    \    private ImageUtil(){\n}\n    public static BufferedImage loadImage(String\
+    \ imagePath) {\n        File file = new File(imagePath);\n        BufferedImage\
+    \ bufferedImage = null ;\n        try {\n            bufferedImage = ImageIO.read(file);\n\
+    \        } catch (IOException e) {\n            e.printStackTrace();\n       \
+    \ }\n        return bufferedImage;\n    }\n}\n```\n\nBluePlane.java in package\
+    \ com.singleton.game;\n\n```\nimport java.awt.image.BufferedImage;\npublic class\
+    \ BluePlane extends Sprite{\n    public BluePlane(int x, int y, BufferedImage\
+    \ image) {\n        super(x, y, image);\n}\n```"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '```
+
+    ```
+
+    }
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# RedPlane.java in package com.singleton.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class RedPlane extends Sprite{\n    public RedPlane(int x, int y, BufferedImage\
+    \ image) {\n        super(x, y, image);\n    }\n}\n```\n\n# Canvas:\n\n+   1.\
+    \ Canvas(): Initialize images and planes Add key to monitor events\n2. this.addKeyListener\
+    \ new KeyAdapter(): Monitoring and receiving keyboard events to Press the up,\
+    \ down, left, right key to move BluePlane.\nPress the E, D, S, F key to move RedPlane.\n\
+    \n# Canvas.java in package com.singleton.game;\n\n```\nimport java.awt.*;\nimport\
+    \ java.awt.event.*;\nimport java.awt.image.BufferedImage;\nimport java.io.*;\n\
+    import javax.imageio.ImageIO;\nimport javax.swing.swing.*;\n\npublic class Canvas\
+    \ extends JPanel {\n    private BufferedImage blueImage;\n    private Sprite bluePlane;\n\
+    \    private BufferedImage redImage;\n    private Sprite redPlane;\n\n    public\
+    \ Canvas() {\n        this.setLayout(null);\n}\n```"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "```\nthis .setBackground(Color.WHITE );\n\nredImage =ImageUtil.loadImage(\"\
+    images/red_plane.png\");\nredPlane = new BluePlane(80, 250, redImage);\nblueImage\
+    \ =ImageUtil.loadImage(\"images/blue_plane.png\");\nbluePlane = new BluePlane(160,\
+    \ 250, blueImage );\n\nthis.addKeyListener(new KeyAdapter() {\n    public void\
+    \ keyPressed(KeyEvent e) {\n        int keyCode = e.getKeyCode();\n        if\
+    \ (keyCode == KeyEvent.VK_E) {\n            redPlane.move(0, -6);\n        } else\
+    \ if (keyCode == KeyEvent.VK_D) {\n            redPlane.move(0, 6);\n        }\
+    \ else if (keyCode == KeyEvent.VK_F) {\n            redPlane.move(6, 0);\n   \
+    \     } else if (keyCode == KeyEvent.VK_S) {\n            redPlane.move(-6, 0);\n\
+    \        }\n\n        if (keyCode == KeyEvent.VK_UP) {\n            bluePlane.move(0,\
+    \ -6);\n        } else if (keyCode == KeyEvent.VK_DOWN) {\n            bluePlane.move(0,\
+    \ 6);\n        } else if (keyCode == KeyEvent.VK_RIGHT) {\n            bluePlane.move(6,\
+    \ 0);\n        } else if (keyCode == KeyEvent.VK_LEFT) {\n            bluePlane.move(-6,\
+    \ 0);\n        }\n\n        Canvas.this.repaint();\n    }\n}\n});\n```"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\nprotected void paintComponent(Graphics g) {\n    super.paintComponent(g);\n\
+    \    bluePlane.draw(g);\n\n    redPlane.draw(g);\n}\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "3 . Create a Test class : TestSingleton.java in package com.singleton.game\
+    \ ;\n\ncanvas.setFocusable( true) : Set focus to activate keyboard events\ncanvas.requestFocus():\
+    \ Set focus to activate keyboard events\n\n```\nimport java.awt.BorderLayout;\n\
+    import javax.swing.JFrame;\n\npublic class TestSingleton {\n    public static\
+    \ void main(String[] args) {\n        JFrame frame = new JFrame(\"Design Pattern\
+    \ Singleton\");\n        Canvas canvas = new Canvas();\n        frame.add(canvas,\
+    \ BorderLayout.CENTER);\n        frame.setSize(300, 350);\n        canvas.setFocusable(true);\n\
+    \        frame.setVisible(true);\n        canvas.requestFocus();\n    }\n}\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# # Flyweight Pattern Principle\n\nFlyWeight Pattern : A fine-grained instance\
+    \ used for efficient sharing. Using sharing to support large numbers of fine-grained\
+    \ objects efficiently. A flyweight is a shared object that can be used in multiple\
+    \ contexts simultaneously. The flyweight acts as an independent object in each\
+    \ context — it's indistinguishable from instance of the object's not shared.\n\
+    \n+   1. ImageCache e store game images like( Plane, EnemyPlane, Bullet ).\n\n\
+    | ImageCache |\n|Map<String,String> cacheMap |\n|ImageCache()\nstatic void put(String\
+    \ key, String image)|\nstatic String get(String key)|\n\nImageCache:\n\n+   1.\
+    \ Map<String,String> cacheMap : Store data as key-value pairs\n2. static void\
+    \ put(String key, String image): store data\n3. static String get(String key):\
+    \ get value by key\n\nImageCache.java in package com.flyweight.principle;\n\n\
+    ```\nimport java.util.*;\npublic class ImageCache {\n    private static Map<String,String>\
+    \ cacheMap=new HashMap<String,String>();\n    private ImageCache(){\\}\n    public\
+    \ static void put(String key, String image){\n        cacheMap.put(key, image);\n\
+    \    }\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "```\n}\n  public static String get(String key){\n    return cacheMap.get(key);\n\
+    \  }\n}\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# 2 . Create a Test class : TestCache.java in package com.flyweight.principle;\n\
+    \n```\nimport java.awt.Border;\nimport javax.swing.JFrame;\npublic class TestCache\
+    \ {\n    public static void main(String[] args) {\n        ImageCache.put(\"redBulletImage\"\
+    , \"images/red_bullet.png\");\n        ImageCache.put(\"enemyPlaneImage\", \"\
+    images/enemy_plane.png\");\n        ImageCache.put(\"bluePlaneImage\", \"images/blue_plane.png\"\
+    );\n\n        System.out.println(ImageCache.get(\"redBulletImage\"));\n      \
+    \  System.out.println(ImageCache.get(\"enemyPlaneImage\"));\n        System.out.println(ImageCache.get(\"\
+    bluePlaneImage\"));\n    }\n}\n```\n\nResult:\nimages/red_bullet.png\nimages/enemy_plane.png\n\
+    images/blue_plane.png"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# # Flyweight Pattern Game\n\n+   1. ImageCache preload BluePlane and RedBullet\
+    \ image in Canvas.\n2. Create BluePlane and RedBullet.\n3. BluePlane load RedBullet.\n\
+    4. Press the up, down, left, right key to move to BluePlane .\n5. Press the enter\
+    \ key to move RedBullet and then RedBullet move from the top of the plane.\n\n\
+    ```\nstatic {\n    ImageCache.put(\"redBullet\", ImageUtil.loadImage(\"images/red_bullet.png\"\
+    ));\n    ImageCache.put(\"bluePlane\", ImageUtil.loadImage(\"images/blue_plane.png\"\
+    ));\n}\n```\n\n```\npublic void keyPressed(KeyEvent e) {\n    int keyCode = e.getKeyCode();\n\
+    \    if(keyCode == VK_UP) {\n        bluePlane.move(0,-6);\n    } else if(keyCode\
+    \ == VK_DOWN) {\n        bluePlane.move(0,6);\n    } else if(keyCode == VK_RIGHT)\
+    \ {\n        bluePlane.move(6,0);\n    } else if(keyCode == VK_LEFT) {\n     \
+    \   bluePlane.move(-6,0);\n    } else if(keyCode == VK_ENTER) {\n        bluePlane.fireBullet();\n\
+    \    }\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_33_0.png)\n\n```\n\
+    public void fireBullet() {\n    if(!bullet.isVisible()) {\n        int x = this.x+this.bullet.width/2-bullet.getWidth()/2;\n\
+    \        int y = this.y-bullet.getHeight();\n        bullet.setX(x);\n       \
+    \ bullet.setY(y);\n        bullet.setVisible(true);\n    }\n}\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_34_0.png)'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# Sprite:\n\n+   1. **boolean visible** : If sprite visible=true draw and move\
+    \ on the canvas, otherwise disappear\n\n**Sprite.java** in package com.flyweight.game;\n\
+    \n```\nimport java.awt.Graphics;\nimport java.awt.image.BufferedImage;\n\nabstract\
+    \ class Sprite {\n    protected int x ; // x coordinate of Canvas\n    protected\
+    \ int y ; // y coordinate of Canvas\n    protected int width ;\n    protected\
+    \ int height ;\n    protected BufferedImage image ;\n    protected boolean visible\
+    \ ;\n\npublic Sprite(int x, int y, BufferedImage image) {\n    this.x = x;\n \
+    \   this.y = y;\n    this.image = image;\n    this.width = this.image.getWidth();\n\
+    \    this.height = this.image.getHeight();\n}\n\npublic void draw(Graphics g)\
+    \ {\n    if (this.isVisible()){\n        g.drawImage(image, this.x, this.y, null);\n\
+    \    }\n}\n\npublic void move(int distanceX, int distanceY) {\n    this.x = this.x\
+    \ + distanceX;\n    this.y = this.y + distanceY;\n}\n\npublic int getWidth() {\n\
+    ```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "```\nreturn width;\n}\npublic int getHeight() {\n    return height;\n}\npublic\
+    \ int getX() {\n    return x;\n}\npublic void setX(int x) {\n    this.x = x;\n\
+    }\npublic int getY() {\n    return y;\n}\npublic void setY(int y) {\n    this.y\
+    \ = y;\n}\npublic boolean isVisible() {\n    return visible;\n}\npublic void setVisible(boolean\
+    \ visible) {\n    this.visible = visible;\n}\npublic BufferedImage getImage()\
+    \ {\n    return image;\n}\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# ImageCache:\n\n+   1. static Map<String,BufferedImage> cacheMap : Store image\
+    \ as key-value pairs\n2. static void put(String key, BufferedImage image): store\
+    \ image\n3. static BufferedImage get(String key): get image by key\n\nImageCache.java\
+    \ in package com.flyweight.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    import java.util.*;\n\npublic class ImageCache {\n    private static Map<String,BufferedImage>\
+    \ cacheMap=new HashMap<String,BufferedImage>();\n\n    private ImageCache(){\n\
+    \n    public static void put(String key, BufferedImage image){\n        cacheMap\
+    \ .put(key, image);\n    }\n\n    public static BufferedImage get(String key){\n\
+    \        return cacheMap .get(key);\n    }\n}}\n```\n\nRedBullet.java in package\
+    \ com.flyweight.game;\n\n```\nimport java.awt.Graphics;\nimport java.awt.image.BufferedImage;\n\
+    \npublic class RedBullet extends Sprite{\n    public RedBullet(int x, int y) {\n\
+    \        super (x, y, ImageCache.get(\"redBulletImage\"));\n    }\n}\n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "```\n}\npublic void move(int distanceX, int distanceY{\n    this .x = this\
+    \ .x + distanceX;\n    this .y = this .y + distanceY;\n    if (this .y + this\
+    \ .height<=0){\n        this .setVisible(false);\n    }\n}\n}\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "ImageUtil.java in package com.singleton.game; In the previous chapter r\n\n\
+    BluePlane.java in package com.flyweight.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class BluePlane extends Sprite{\n    protected RedBullet bullet;\n\n  \
+    \  public BluePlane(int x, int y) {\n        super (x, y, ImageCache.get(\"bluePlaneImage\\\
+    ));\n    }\n\n    public void loadBullet(RedBullet bullet) {\n        this.bullet\
+    \ = bullet;\n    }\n\n    public void fireIsVisible() {\n        if (this.bullet.isVisible())\
+    \ {\n            int x = this.x + this.width /2-bullet.getWidth()/2;\n       \
+    \     int y = this.y - bullet.getHeight();\n            bullet.setX(x);\n    \
+    \        bullet.setY(y);\n            bullet.setVisible(true);\n        }\n  \
+    \  }\n\n    public void moveBullet() {\n        if (this.bullet.isVisible()) {\n\
+    \            this.bullet.move(0, -3);\n        }\n    }\n\n    public RedBullet\
+    \ getBullet() {\n        return this.bullet;\n    }\n}\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# Canvas:\n\n1. Canvas(): Initialize images and planes Add key to monitor events\n\
+    \n2. this.addKeyListener new KeyAdapter(): Monitoring and receiving keyboard events\
+    \ to move Press the up, down, left, right key to move BluePlane.\n\nPress the\
+    \ enter to fire RedBullet.\n\n3. void run(): Thread loop Continuous repainting\
+    \ to move RedBullet\n\n# Canvas.java in package com.flyweight.game;\n\n```\nimport\
+    \ java.awt.*;\nimport java.awt.event.*;\nimport java.swing.JPanel;\npublic class\
+    \ Canvas extends JPanel implements Runnable{\n    private boolean isRun = true;\n\
+    \    private BluePlane bluePlane;\n    private int canvasWidth;\n    private int\
+    \ canvasHeight;\n\n    static {\n        ImageCache.put(\"redBulletImage\", ImageUtil.loadImage(\"\
+    images/red_bullet.png\")\\));\n        ImageCache.put(\"bluePlaneImage\", ImageUtil.loadImage(\"\
+    images/blue_plane.png\")\\));\n    }\n\n    public Canvas() {\n        this.setLayout(null);\n\
+    \        this.setBackground(Color.WHITE);\n\n        bluePlane = new BluePlane(120,\
+    \ 250);\n        bluePlane.loadBullet(new RedBullet(-100,-100));\n        bluePlane.setVisible(true);\n\
+    \n        new Thread(this).start();\n        this.addKeyListener(new KeyAdapter()\
+    \ {\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "```\npublic void keyPressed(KeyEvent e) {\n    int keyCode = e.getKeyCode();\n\
+    \    if (keyCode == KeyEvent.VK_UP) {\n        bluePlane.move(0,-6);\n    } else\
+    \ if (keyCode == KeyEvent.VK_DOWN) {\n        bluePlane.move(0,6);\n    } else\
+    \ if (keyCode == KeyEvent.VK_RIGHT) {\n        bluePlane.move(6,0);\n    } else\
+    \ if (keyCode == KeyEvent.VK_LEFT) {\n        bluePlane.move(-6,0);\n    } else\
+    \ if (keyCode == KeyEvent.VK_ENTER) {\n        bluePlane.fireBullet();\n    }\n\
+    \  }\n}\n\nprotected void paintComponent(Graphics g) {\n    this.canvasWidth =\
+    \ this.getWidth();\n    this.canvasHeight = this.getHeight();\n    super.paintComponent(g);\n\
+    \    bluePlane.draw(g);\n    bluePlane.bullet().draw(g);\n}\n\n@Override\npublic\
+    \ void run() {\n    while (isRun) {\n        try {\n            bluePlane.bullet();\n\
+    \            Thread.sleep(50);\n            Canvas.this.repaint();\n        }\
+    \ catch (InterruptedException e) {\n            e.printStackTrace();\n       \
+    \ }\n    }\n}\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "3. Create a Test class : TestCache.java in package com.flyweight.game;\n\n\
+    canvas.setFocusable(true): Set focus to activate keyboard events canvas.requestFocus():\
+    \ Set focus to activate keyboard events\n\n```\nimport java.awt.BorderLayout;\n\
+    import javax.swing.JFrame;\n\npublic class TestCache {\n    public static void\
+    \ main(String[] args) {\n        JFrame frame = new JFrame(\"Design Pattern Cache\"\
+    );\n        Canvas canvas = new Canvas();\n        frame.add(canvas, BorderLayout.CENTER);\n\
+    \        frame.setSize(300, 350);\n        canvas.setFocusable(true);\n      \
+    \  frame.setVisible(true);\n        canvas.requestFocus();\n    }\n}\n```"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Builder Pattern Principle
+
+
+    Builder Pattern : Separates object construction from its representation. Separate
+    the construction of a complex object its representation so that the same construction
+    processes can create different representations.
+
+
+    +   1. Create SelectDialog by Builder ,
+
+    2. Builder set title and buttons. And then create dialog to show
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_44_0.png)
+
+
+    | SelectDialog | Button |
+
+    | --- | --- |
+
+    | String title | String name |
+
+    | Button bluePlaneButton | |
+
+    | Button redPlaneButton | Button(String name) |
+
+    | private SelectDialog() | |
+
+    | void showDialog() | |
+
+
+    | <<static>> |
+
+    | Builder |
+
+    | SelectDialog dialog |
+
+    | Builder() |
+
+    | setTitle(String title) |
+
+    | setBluePlaneButton(Button bluePlaneButton) |
+
+    | setRedPlaneButton(Button redPlaneButton)|'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# Button.java in package com.builder.principle;\n\n```\npublic class Button\
+    \ {\n    private String name ;\n\n    public Button(String name) {\n        super\
+    \ ();\n        this.name = name;\n    }\n\n    public String getName() {\n   \
+    \     return name;\n    }\n\n    public void setName(String name) {\n        this.name\
+    \ = name;\n    }\n}\n```\n\n# SelectDialog.java in package com.builder.principle;\n\
+    \n```\nimport java.awt.*;\nimport javax.swing.*;\npublic class SelectDialog{\n\
+    \    private String title;\n    private Button bluePlaneButton;\n    private Button\
+    \ redPlaneButton;\n\n    private SelectDialog() {\n    }\n\n    public String\
+    \ getTitle() {\n        return title;\n    }\n\n    public void setTitle(String\
+    \ title) {\n        this.title = title;\n    }\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "```\n}\npublic Button getBluePlaneButton() {\n    return bluePlaneButton;\n\
+    }\npublic void setBluePlaneButton(Button bluePlaneButton) {\n    this.bluePlaneButton\
+    \ = bluePlaneButton;\n}\n```\n\n```\npublic Button getRedPlaneButton() {\n   \
+    \ return redPlaneButton;\n}\npublic void setRedPlaneButton(Button redPlaneButton)\
+    \ {\n    this.redPlaneButton = redPlaneButton;\n}\n```\n\n```\npublic void showDialog()\
+    \ {\n    System.out.println(\"Popup Select Dialog\");\n    System.out.println(this.title);\n\
+    \    System.out.println(this.bluePlaneButton.getName());\n    System.out.println(this.redPlaneButton.getName());\n\
+    }\n```\n\n```\nstatic class Builder {\n    private SelectDialog dialog;\n    public\
+    \ Builder() {\n        dialog = new SelectDialog();\n    }\n```\n\n```\npublic\
+    \ void setTitle(String title) {\n    dialog.setTitle(title);\n}\n```\n\n```\n\
+    public void setBluePlaneButton(Button bluePlaneButton) {\n    dialog.setBluePlaneButton(bluePlaneButton);\n\
+    }\n```"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "```\npublic void setRedPlaneButton(Button redPlaneButton) {\n    dialog .setRedPlaneButton(redPlaneButton);\n\
+    }\n\npublic SelectDialog create() {\n    return dialog ;\n}\n}\n```"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# 2 . Create a Test class : TestBuilder.java in package com.builder.principle;\n\
+    \n```\npublic class TestBuilder {\n    public static void main(String[] args)\
+    \ {\n        //Build dialog\n        SelectDialog.Builder builder = new SelectDialog.Builder();\n\
+    \        builder.setTitle(\"Please Select Plane\");\n        builder.setBluePlaneButton(new\
+    \ Button(\"Blue Plane\"));));\n        builder.setRedPlaneButton(new Button(\"\
+    Red Plane\"));));\n\n        //Create and pop up a dialog\n        SelectDialog\
+    \ dialog = builder.create();\n        dialog.showDialog();\n    }\n}\n```\n\n\
+    Result:\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_48_0.png)"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# Builder Pattern Game\n\n+   1. Create SelectDialog by Builder ,\n2. Builder\
+    \ set title and buttons. And then create dialog to show\n\n```\nprivate SelectDialog()\
+    \ {\n    this.setModal(true);\n    this.setBackground(Color.WHITE);\n    this.setSize(300,\
+    \ 150);\n    this.setLayout(new FlowLayout());\n\n    bluePlaneButton = new JButton();\n\
+    \    bluePlaneButton.setIcon(new ImageIcon(\"images/blue_plane_big.png\"));\n\
+    \    bluePlaneButton.setBackground(Color.WHITE);\n\n    redPlaneButton = new JButton();\n\
+    \    redPlaneButton.setIcon(new ImageIcon(\"images/red_plane_big.png\"));\n  \
+    \  redPlaneButton.setBackground(Color.WHITE);\n\n    this.add(bluePlaneButton);\n\
+    \    this.add(redPlaneButton);\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_49_0.png)"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# UML Diagram
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_50_0.png)'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# SelectDialog.java in package com.builder.game;\n\n```\nimport java.awt.*;\n\
+    import javax.swing.*;\n\npublic class SelectDialog extends JDialog {\n    private\
+    \ JButton bluePlaneButton;\n    private JButton redPlaneButton;\n\n    public\
+    \ SelectDialog() {\n        this.setModal(true);\n        this.setBackground(Color.WHITE);\n\
+    \        this.setSize(300, 150);\n        this.setLayout(new FlowLayout());\n\
+    \        bluePlaneButton = new JButton();\n        bluePlaneButton.setIcon(new\
+    \ ImageIcon(\"images/blue_plane_big.png\"));\n        bluePlaneButton.setBackground(Color.WHITE);\n\
+    \n        redPlaneButton = new JButton();\n        redPlaneButton.setIcon(new\
+    \ ImageIcon(\"images/red_plane_big.png\"));\n        redPlaneButton.setBackground(Color.WHITE);\n\
+    \n        this.add(bluePlaneButton);\n        this.add(redPlaneButton);\n    }\n\
+    \n    public void showDialog() {\n        this.setVisible(true);\n    }\n\n  \
+    \  public static class Builder {\n        private SelectDialog dialog;\n     \
+    \   public Builder() {\n            dialog = new SelectDialog();\n        }\n\n\
+    \        public void setTitle(String title) {\n```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "```\ndialog .setTitle(title);\n}\npublic SelectDialog create() {\n    return\
+    \ dialog ;\n}\n}\n}\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "3 . Create a Test class : TestBuilder.java in package com.builder.game;\n\n\
+    ```\nimport java.awt.BorderLayout;\nimport javax.swing.JFrame;\n\npublic class\
+    \ TestBuilder {\n    public static void main(String[] args) {\n        JFrame\
+    \ frame = new JFrame(\"Design Pattern Builder\");\n        SelectDialog.Builder\
+    \ builder = new SelectDialog.Builder();\n        builder.setTitle(\"Please Select\
+    \ Pane\");\n\n        SelectDialog dialog = builder.create();\n        dialog.showDialog();\n\
+    \n        frame.setSize(300, 350);\n        frame.setVisible(true);\n    }\n}\n\
+    ```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Command Pattern Principle
+
+
+    **Command Pattern :**nEncapsulate a request as an object, allowing you to parameterize
+    different requests.
+
+
+    +   1. Create two button BluePlaneButton and RedPlaneButton by addActionListener(ActionListener
+    actionListener)
+
+    2. BluePlaneButton and RedPlaneButton add ActionListener by addActionListener(ActionListener
+    actionListener)
+
+    3. Mouse click BluePlaneButton or RedPlaneButton . the actionPerformed(ActionEvent
+    e) will be called automatically.
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_54_0.png)'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# ActionListener.java in package com.command.principle ;\n\nMouse click button.\
+    \ actionPerformed(ActionEvent e) will be called automatically.\n\n```\npublic\
+    \ interface ActionListener {\n    public void actionPerformed(ActionEvent e);\n\
+    }\n```\n\n# ActionEvent.java in package com.command.principle ;\n\nConstruct a\
+    \ new event object from the specified button and action command.\n\n```\npublic\
+    \ class ActionEvent {\n    private String name;\n    private Object source;\n\n\
+    \    public ActionEvent(String name, Object source) {\n        super ();\n   \
+    \     this.name = name;\n        this.source = source;\n    }\n\n    public String\
+    \ getName() {\n        return name;\n    }\n\n    public void setName(String name)\
+    \ {\n        this.name = name;\n    }\n\n    public Object getSource() {\n   \
+    \     return source;\n    }\n\n    public void setSource(Object source) {\n  \
+    \      this.source = source;\n    }\n```"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '```
+
+    ```
+
+    }
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "Button.java a in package com.command.principle;\n\n```\npublic class Button\
+    \ {\n    private ActionListener actionListener;\n    private String text;\n\n\
+    \    public Button(String text) {\n        super();\n        this.text = text;\n\
+    \    }\n\n    public ActionListener getActionListener() {\n        return actionListener;\n\
+    \    }\n\n    public void addActionListener(ActionListener actionListener) {\n\
+    \        this.actionListener = actionListener;\n    }\n\n    public String getText()\
+    \ {\n        return text;\n    }\n\n    public void setText(String text) {\n \
+    \       this.text = text;\n    }\n}\n```\n\nMouse.java a in package com.command.principle;\n\
+    \nMouse click button. actionPerformed(ActionEvent e) will be called automatically.\n\
+    \n```\npublic class Mouse {\n    public void click(Button btn) {\n        ActionEvent\
+    \ e = new ActionEvent(btn.getText(), btn);\n        btn.getActionListener().actionPerformed(e);\n\
+    \    }\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+
+    ```'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# 3 . Create a Test class : TestCommand.java a in package com.command.principle;\n\
+    \npublic class TestCommand {\n\n```\npublic static void main(String[] args) {\n\
+    \    Button bluePlaneButton = new Button(\"BluePlane Button\");\n    Button redPlaneButton\
+    \ = new Button(\"RedPlane Button\");\n\n    bluePlaneButton.addActionListener(new\
+    \ ActionListener() {\n        //Add a listen event\n        @Override\n      \
+    \  public void actionPerformed(ActionEvent e) {\n            Button button = (Button)e.getSource();\n\
+    \            System.out.println(button.getText()+\" is clicked\");\n        }\n\
+    \    });\n\n    redPlaneButton.addActionListener(new ActionListener() {\n    \
+    \    //Add a listen event\n        @Override\n        public void actionPerformed(ActionEvent\
+    \ e) {\n            Button button = (Button)e.getSource();\n            System.out.println(button.getText()+\"\
+    \ is clicked\");\n        }\n    });\n\n    Mouse m = new Mouse();\n    m.click(bluePlaneButton);//Mouse\
+    \ click BluePlane button\n    m.click(redPlaneButton);//Mouse click RedPlane button\n\
+    \n}\n}\n```\n\n# Result:\n\nBluePlane Button is clicked\nRedPlane Button is clicked"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# # Command Pattern Game\n\n+   1. Add JButton BluePlaneButton and RedPlaneButton\n\
+    \   by addActionListener(ActionListener actionListener)\n2. BluePlaneButton and\
+    \ RedPlaneButton add ActionListener\n   by addActionListener(ActionListener actionListener)\n\
+    3. Mouse click BluePlaneButton or RedPlaneButton\n   the actionPerformed(ActionEvent\
+    \ e) will be called automatically.\n4. Close SelectDialog.\n\n```\n```java\nbluePlaneButton\
+    \ = new JButton();\nnbluePlaneButton.setIcon(new ImageIcon(\"images/blue_plane_big.png\"\
+    ));\nbluePlaneButton.setBackground(Color.WHITE);\nbluePlaneButton.addActionListener(new\
+    \ ActionListener() {\n    @Override\n    public void actionPerformed(ActionEvent\
+    \ e) {\n        SelectDialog.dispose();\n    }\n});\n\nredPlaneButton = new JButton();\n\
+    redPlaneButton.setIcon(new ImageIcon(\"images/red_plane_big.png\"));\nredPlaneButton.setBackground(Color.WHITE);\n\
+    redPlaneButton.addActionListener(new ActionListener() {\n    @Override\n    public\
+    \ void actionPerformed(ActionEvent e) {\n        SelectDialog.dispose();\n   \
+    \ }\n});\n```\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_60_0.png)"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_61_0.png)'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# SelectDialog.java in package com.command.game;\n\n```\nimport java.awt.*;\n\
+    import java.awt.event.*;\nimport javax.swing.*;\n\npublic class SelectDialog extends\
+    \ JDialog {\n    private JButton blueButton;\n    private JButton redButton;\n\
+    \n    private SelectDialog() {\n        this.setModal(true);\n        this.setBackground(Color.WHITE);\n\
+    \        this.setSize(300, 150);\n        this.setLayout(new FlowLayout());\n\n\
+    \        blueButton = new JButton();\n        blueButton.setIcon(new ImageIcon(\"\
+    images/blue_plane_big.png\"));\n        blueButton.setBackground(Color.WHITE);\n\
+    \        blueButton.addActionListener(new ActionListener(){\n            @Override\n\
+    \            public void actionPerformed(ActionEvent e) {\n                SelectDialog.this.dispose();\n\
+    \            }\n        });\n\n        redButton = new JButton();\n        redButton.setIcon(new\
+    \ ImageIcon(\"images/red_plane_big.png\"));\n        redButton.setBackground(Color.WHITE);\n\
+    \        redButton.addActionListener(new ActionListener(){\n            @Override\n\
+    \            public void actionPerformed(ActionEvent e) {\n                SelectDialog.this.dispose();\n\
+    \            }\n        });\n}\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\nthis .add(bluePlaneButton);\nthis .add(redPlaneButton);\n}\npublic void\
+    \ showDialog(){\nthis .setVisible(true);\n}\n```\n\n```\npublic static class Builder\
+    \ {\n    private SelectDialog dialog;\n    public Builder() {\n        dialog\
+    \ = new SelectDialog();\n    }\n    public void setTitle(String title) {\n   \
+    \     dialog .setTitle(title);\n    }\n    public SelectDialog create() {\n  \
+    \      return dialog;\n    }\n}\n```\n\n3. Create a Test class : TestCommand.java\
+    \ in package com.command.game;\n\n```\nimport java.awt.Border;\nimport javax.swing.JFrame;\n\
+    public class TestCommand {\n    public static void main(String[] args) {\n   \
+    \     JFrame frame = new JFrame(\"Design Pattern Command\");\n        SelectDialog.Builder\
+    \ builder = new SelectDialog.Builder();\n    }\n}\n```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '```
+
+    builder.setTitle("Please Select Plane" );
+
+    nSelectDialog dialog = builder.create();
+
+    dialog.showDialog();
+
+
+    frame.setSize(300, 350);
+
+    frame.setVisible(true);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# Factory Pattern Principle
+
+
+    Factory Pattern : Creates an instance of several derived classes. Define an interface
+    for creating an object, but let subclasses decide which class to instantiate.
+    Factory Method lets a class defer instantiation to subclasses.
+
+
+    +   1. BluePlane and RedPlane can be created by the SpriteFactory
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_65_0.png)'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# Sprite.java in package com.factory.principle;\n\n```\nclass Sprite {\n  \
+    \  protected int x; // x coordinate of Canvas\n    protected int y; // y coordinate\
+    \ of Canvas\n    protected String name ;\n\n    public Sprite(String name, int\
+    \ x, int y) {\n        this.name = name;\n        this.x = x;\n        this.y\
+    \ = y;\n    }\n\n    public void draw() {\n        String text = this.name + \"\
+    \ draw on (\" + this.x + \", \" + this.y + \")\";\n        System.out.println(text);\n\
+    \    }\n}\n```\n\n# BluePlane.java in package com.factory.principle;\n\n```\n\
+    public class BluePlane extends Sprite{\n    public BluePlane(String name, int\
+    \ x, int y) {\n        super(name, x, y);\n    }\n}\n```\n\n# RedPlane.java in\
+    \ package com.factory.principle;\n\n```\npublic class RedPlane extends Sprite{\n\
+    \    public RedPlane(String name, int x, int y) {\n        super(name, x, y);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '```
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# SpriteFactory:\n\n| Sprite create (int type, int x, int y): create BluePlane\
+    \ and RedPlane |\n\nSpriteFactory.java in package com.factory.principle;\n\n```\n\
+    public class SpriteFactory {\n    public static Sprite create(int type, int x,\
+    \ int y) {\n        if (type == 1) {\n            return new BluePlane(\"BluePlane\"\
+    , x,y);\n        } else if (type == 2) {\n            return new RedPlane(\"RedPlane\"\
+    , x,y);\n        }\n        return null;\n    }\n}\n```\n\n# 2 . Create a Test\
+    \ class : TestFactory.java in package com.factory.principle;\n\n```\npublic class\
+    \ TestFactory {\n    public static void main(String[] args) {\n        Sprite\
+    \ plane = SpriteFactory.create(1, 50, 150);\n        plane.draw();\n\n       \
+    \ System.out.println(\"------------------------------------------------------------\"\
+    );\n\n        plane = SpriteFactory.create(2, 50, 150);\n        plane.draw();\n\
+    \    }\n}\n```\n\nResult:\nBluePlane draw on (50 , 150)"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: RedPlane draw on (50 , 150)
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Factory Pattern Game
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_70_0.png)
+
+
+    Click BluePlaneButton draw on canvas
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_70_1.png)
+
+
+    Click RedPlaneButton draw on canvas'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "```\nbluePlaneButton.setIcon(new ImageIcon('images/blue_plane_big.png'));\n\
+    bluePlaneButton.setBackground(Color.WHITE);\nbluePlaneButton.addActionListener(new\
+    \ ActionListener() {\n    public void actionPerformed(ActionEvent e) {\n     \
+    \   Canvas canvas = new Canvas(\"C1\");\n        SelectDialog.this.dispose();\n\
+    \        CGlobal.frame.repaint();\n        CGlobal.frame.add(canvas, BorderLayout.CENTER);\n\
+    \        canvas.setFocusable(true);\n        canvas.requestFocus();\n    }\n});\n\
+    redPlaneButton = new JButton();\nredPlaneButton.setIcon(new ImageIcon('images/red_plane_big.png'));\n\
+    redPlaneButton.setBackground(Color.WHITE);\nredPlaneButton.addActionListener(new\
+    \ ActionListener() {\n    public void actionPerformed(ActionEvent e) {\n     \
+    \   Canvas canvas = new Canvas(\"C2\");\n        SelectDialog.this.dispose();\n\
+    \        CGlobal.frame.repaint();\n        CGlobal.frame.add(canvas, BorderLayout.CENTER);\n\
+    \        canvas.setFocusable(true);\n        canvas.requestFocus();\n    }\n});\n\
+    ```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_71_0.png)"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "![](img/1a3fab3d51f12ead42a519c23c1a64ba_72_0.png)\n\nClick BluePlaneButton\
+    \ draw on canvas\n\n```\npublic Canvas(String type) {\n    this.type = type;\n\
+    \    this.setLayout(null);\n    this.setBackground(Color.WHITE);\n    plane =\
+    \ SpriteFactory.create(type, 120, 250);\n}\n```"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "```\npublic Canvas(String type) {\n    this.type = type;\n    this.setLayoutLayout(null);\n\
+    \    this.setBackground(Color.WHITE);\n    plane = SpriteFactory.create(type,\
+    \ 120, 250);\n}\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '+   1. First show SelectDialog
+
+    2. Click BluePlane and RedPlane Button, close SelectDialog
+
+    3. SpriteFactory create the selected plane draw on Canvas
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_74_0.png)'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# Sprite.java in package com.factory.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\nclass Sprite {\n    protected int x; //\
+    \ x coordinate of Canvas\n    protected int y; // y coordinate of Canvas\n   \
+    \ protected BufferedImage image;\n\n    public Sprite(int x, int y, BufferedImage\
+    \ image) {\n    this.x = x;\n    this.y = y;\n    this.image = image;\n}\n\n \
+    \   public void draw(Graphics g) {\n    g.drawImage(image, this.x, this.y, null);\n\
+    }\n}\n```\n\n# ImageCache.java in package com.flyweight.game; In the previous\
+    \ chapter\n\n# BluePlane.java in package com.factory.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class BluePlane extends Sprite {\n\n    public BluePlane(int x, int y)\
+    \ {\n    super(x, y, ImageCache.get(\"bluePlaneImage\"));\n}\n}\n```\n\n# RedPlane.java\
+    \ in package com.factory.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    ```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\npublic class RedPlane extends Sprite{\n    public RedPlane(int x, int\
+    \ y) {\n        super(x, y, ImageCache.get(\"redPlaneImage\"));\n    }\n}\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "# SpriteFactory:\n\n| Sprite create(int type, int x, int y): create BluePlane\
+    \ and RedPlane |\n\nSpriteFactory.java in package com.factory.game;\n\n```\nimport\
+    \ java.awt.image.BufferedImage;\nimport java.io.*;\nimport javax.imageio.ImageIO;\n\
+    npublic class SpriteFactory {\n    public static Sprite create(String type, int\
+    \ x, int y){\n        if (\"1\".equals(type)){\n            BufferedImage image=ImageUtil.loadImage(\"\
+    images/blue_plane.png\");\n            return new BluePlane(x, y, image);\n  \
+    \      }else if (\"2\".equals(type)){\n            BufferedImage image=ImageUtil.loadImage(\"\
+    images/red_plane.png\");\n            return new RedPlane(x, y, image);\n    \
+    \    }\n        return null;\n    }\n}\n```\n\nCGlobal.java in package com.factory.game;\n\
+    \n```\nimport javax.swing.JFrame;\npublic class CGlobal {\n    private CGlobal(){\n\
+    }\n    public static JFrame frame ;\n```"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '```
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "```\nSelectDialog.java in package com.factory.game;\nimport java.awt.*;\nimport\
+    \ java.awt.event.*;\nimport javax.swing.*;\npublic class SelectDialog extends\
+    \ JDialog {\n    private JButton bluePlaneButton;\n    private JButton redPlaneButton;\n\
+    \n    private SelectDialog() {\n        this.setModal(true);\n        this.setBackground(Color.WHITE);\n\
+    \        this.setSize(300, 150);\n        this.setLayout(new FlowLayout());\n\n\
+    \        bluePlaneButton = new JButton();\n        bluePlaneButton.setIcon(new\
+    \ ImageIcon(\"images/blue_plane_big.png\\));\n        bluePlaneButton.setBackground(Color.WHITE);\n\
+    \        bluePlaneButton.addActionListener(new ActionListener(){\n           \
+    \ public void actionPerformed(ActionEvent e) {\n                Canvas canvas\
+    \ = new Canvas(\"1\");\n                SelectDialog.this.dispose();\n       \
+    \         CGGlobal.frame.repaint();\n                CGGlobal.frame.add(canvas,\
+    \ BorderLayout.CENTER);\n                canvas.setFocusable(true);\n        \
+    \        canvas.requestFocus();\n            }\n        });\n\n        redPlaneButton\
+    \ = new JButton();\n        redPlaneButton.setIcon(new ImageIcon(\"images/red_plane_big.png\"\
+    ));\n        redPlaneButton.setBackground(Color.WHITE);\n        redPlaneButton.addActionListener(new\
+    \ ActionListener(){\n            public void actionPerformed(ActionEvent e) {\n\
+    \                Canvas canvas = new Canvas(\"2\");\n                SelectDialog.this.dispose();\n\
+    \                CGGlobal.frame.repaint();\n            }\n        });\n}\n```"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '```
+
+    CGlobal.frame.add(canvas, BorderLayout.CENTER);
+
+    canvas.setFocusable(true);
+
+    canvas.requestFocus();
+
+    }
+
+    this.add(bluePlaneButton);
+
+    this.add(redPlaneButton);
+
+    }
+
+    ```
+
+
+    ```
+
+    public void showDialog(){
+
+    this .setVisible(true);
+
+    }
+
+    ```
+
+
+    ```
+
+    public static class Builder {
+
+    private SelectDialog dialog;
+
+    public Builder() {
+
+    dialog = new SelectDialog();
+
+    }
+
+    public void setTitle(String title) {
+
+    dialog .setTitle(title);
+
+    }
+
+    public SelectDialog create() {
+
+    return dialog ;
+
+    }
+
+    }
+
+    ```
+
+
+    **ImageUtil.java** in **package com.singleton.game;** In the previous chapter
+
+
+    **Canvas.java** in **package com.factory.game;**'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "2 . Create a Test class : TestFactory.java in package com.factory.game;\n\n\
+    ```\nimport java.awt.Border;\nimport javax.swing.JFrame;\n\npublic class TestFactory\
+    \ {\n    public static void main(String[] args) {\n        CGGlobal.frame = new\
+    \ JFrame(\"Design Pattern Factory\");\n        SelectDialog.Builder builder =\
+    \ new SelectDialog.Builder();\n        builder.setTitle(\"Please Select Plane\"\
+    );\n\n        SelectDialog dialog = builder.create();\n        dialog.showDialog();\n\
+    \n        CGGlobal.frame.setSize(300, 350);\n        CGGlobal.frame.setVisible(true);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Strategy Pattern Principle
+
+
+    **Strategy Pattern : Encapsulates an algorithm inside a class. Define a family
+    of algorithms, encapsulate each one, and make them interchangeable. Strategy lets
+    the algorithm vary independently from clients that use it.
+
+
+    +   1. **BluePlane loadbullet( BlueBullet, RedBullet, MissileBullet)** and fire
+    the bullet.
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_82_0.png)'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "# Sprite.java in package com.strategy.principle;\n\n```\nclass Sprite {\n \
+    \   protected int x; // x coordinate of Canvas\n    protected int y; // y coordinate\
+    \ of Canvas\n    protected String name;\n\n    public Sprite(String name, int\
+    \ x, int y) {\n        this.name = name;\n        this.x = x;\n        this.y\
+    \ = y;\n    }\n\n    public void draw() {\n        String text = this.name + \"\
+    \ draw on (\" + this.x + \", \" + this.y + \")\";\n        System.out.println(text);\n\
+    \    }\n\n    public String getName() {\n        return name;\n    }\n}\n```\n\
+    \n# Bullet.java in package com.strategy.principle;\n\n```\npublic class Bullet\
+    \ extends Sprite{\n    public Bullet(String name, int x, int y) {\n        super(name,\
+    \ x, y);\n    }\n}\n```\n\n# BlueBullet.java in package com.strategy.principle;\n\
+    \n```\npublic class BlueBullet extends Bullet{}\n```"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "```\npublic BlueBullet(String name, int x, int y) {\n    super (name, x, y);\n\
+    }\n```"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "# RedBullet.java in package com.strategy.principle;\n\n```\npublic class RedBullet\
+    \ extends Bullet{\n    public RedBullet(String name, int x, int y) {\n       \
+    \ super (name, x, y);\n    }\n}\n```\n\n# MissileBullet.java in package com.strategy.principle;\n\
+    \n```\npublic class MissileBullet extends Bullet{\n    public MissileBullet(String\
+    \ name, int x, int y) {\n        super (name, x, y);\n    }\n}\n```\n\n# BluePlane:\n\
+    \nloadBullet(Bullet bullet): load bullet(BlueBullet, RedBullet, MissileBullet\
+    \ )\nfireBullet(): fire the bullet\n\n# BluePlane.java in package com.strategy.principle;\n\
+    \n```\npublic class BluePlane extends Sprite{\n    private Bullet bullet ;\n \
+    \   public BluePlane(String name, int x, int y) {\n        super (name, x, y);\n\
+    \    }\n    public void loadBullet(Bullet bullet) {\n        this .bullet = bullet;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "```\npublic void fireBullet(){\n    System.out.println(this.name + \" fire\
+    \ \" + this.bullet.getName());\n}\n```"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# 2 . Create a Test class : TestStrategy.java in package com.strategy.principle;\n\
+    \n```\nimport java.util.Scanner;\npublic class class TestStrategy {\n    public\
+    \ static void main(String[] args) {\n        BluePlane plane = new BluePlane(\"\
+    Blue Plane\",50,150);\n        plane.draw();\n\n        System.out.println(\"\
+    Please input bullet type: 1: Blue Bullet, Red Bullet, 3: Missile Bullet\");\n\
+    \        Scanner in= new Scanner(System.in);\n        int bulletType = in.nextInt();\n\
+    \n        if (bulletType == 1){\n            Bullet bullet = new BlueBullet(\"\
+    Blue Bullet\" , -100,-100);\n            plane.loadBullet(bullet);\n         \
+    \   plane.fireBullet();\n        }else if (bulletType == 2){\n            Bullet\
+    \ bullet = new RedBullet(\"Red Bullet\" , -100,-100);\n            plane.loadBullet(bullet);\n\
+    \            plane.fireBullet();\n        }else if (bulletType == 3){\n      \
+    \      Bullet bullet = new MissileBullet(\"Missile Bullet\" , -100,-100);\n  \
+    \          plane.loadBullet(bullet);\n            plane.fireBullet();\n      \
+    \  }\n    }\n}\n```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# Result:
+
+
+    Blue Plane draw on (50 , 150)
+
+    Please input bullet type: 1: Blue Bullet, 2: Red Bullet, 3: Missile Bullet
+
+
+    1
+
+
+    Blue Plane fire Blue Bullet
+
+
+    # Run again:
+
+
+    Blue Plane draw on (50 , 150)
+
+    Please input bullet type: 1: Blue Bullet, 2: Red Bullet, 3: Missile Bullet
+
+
+    2
+
+
+    Blue Plane fire Red Bullet
+
+
+    # Run again:
+
+
+    Blue Plane draw on (50 , 150)
+
+    Please input bullet type: 1: Blue Bullet, 2: Red Bullet, 3: Missile Bullet
+
+
+    3
+
+
+    Blue Plane fire Missile Bullet'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Strategy Pattern Game
+
+
+    +   1. First show SelectBulletDialog.
+
+    2. Select bullet(BlueBullet, RedBullet, MissileBullet) Button, close SelectBulletDialog.
+
+    3. BluePlane load the selected bullet and then fire the bullet.
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_89_0.png)'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_90_0.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_90_1.png)
+
+
+    BluePlane fire RedBullet
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_90_2.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_90_3.png)
+
+
+    BluePlane fire MissileBullet'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "![](img/1a3fab3d51f12ead42a519c23c1a64ba_91_0.png)\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_91_1.png)\n\
+    \n![](img/1a3fab3d51f12ead42a519c23c1a64ba_91_2.png)\n\n```\nbluePlane = new BluePlane(120,\
+    \ 250);\n\nif(\"1\".equals(bulletType)) {\n    Bullet bullet = new Bullet(-100,\
+    \ -100);\n    bluePlane.loadBullet(bullet);\n} else if(\"2\".equals(bulletType))\
+    \ {\n    Bullet bullet = new RedBullet(-100, -100);\n    bluePlane.loadBullet(bullet);\n\
+    } else if(\"3\".equals(bulletType)) {\n    Bullet bullet = new MissileBullet(-100,\
+    \ -100);\n    bluePlane.loadBullet(bullet);\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_91_3.png)"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "```\nCGlobal\n  static JFrame frame\n  private CGlobal()\n```\n\n```\nSelectBulletDialog\n\
+    \  JButton blueBulletButton\n  JButton redBulletButton\n  JButton missileBulletButton\n\
+    \  void showDialog()\n  static class Builder\n```\n\n```\nRunnable\n  void run()\n\
+    ```\n\n```\nCanvas\n  boolean isRun = true\n  BufferedImage image\n  BluePlane\
+    \ bluePlane\n  Canvas(String bulletType)\n  paintComponent(Graphics g)\n  bulletMove()\n\
+    ```\n\n```\nSprite\n  BufferedImage image\n  int x\n  int y\n  int width\n  int\
+    \ height\n  boolean visible\n  Sprite(int x, int y, BufferedImage image)\n  draw(Graphics\
+    \ g)\n  move(int distanceX, int distanceY)\n```\n\n```\nBluePlane\n  Bullet bullet\n\
+    \  BluePlane(int x, int y, BufferedImage image)\n  loadBullet(Bullet bullet)\n\
+    \  fireBullet()\n```\n\n```\nBullet\n  Bullet(int x, int y, BufferedImage image)\n\
+    \  move(int distanceX, int distanceY)\n```\n\n```\nBlueBullet\n```\n\n```\nRedBullet\n\
+    ```\n\n```\nMissileBullet\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# Sprite.java in package com.strategy.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\nabstract class Sprite {\n    protected int\
+    \ x; // x coordinate of Canvas\n    protected int y; // y coordinate of Canvas\n\
+    \    protected int width;\n    protected int height;\n    protected BufferedImage\
+    \ image;\n    protected boolean visible;\n\n    public Sprite(int x, int y, BufferedImage\
+    \ image) {\n        this.x = x;\n        this.y = y;\n        this.image = image;\n\
+    \        this.width = this.image.getWidth();\n        this.height = this.image.getHeight();\n\
+    \    }\n\n    public void draw(Graphics g) {\n        g.drawImage(image, this.x,\
+    \ this.y, null);\n    }\n\n    public void move(int distanceX, int distanceY)\
+    \ {\n        this.x = this.x + distanceX;\n        this.y = this.y + distanceY;\n\
+    \    }\n\n    public int getWidth() {\n        return width;\n    }\n\n    public\
+    \ int getHeight() {\n        return height;\n    }\n\n    public int getX() {\n\
+    ```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "```\nreturn x;\n}\npublic void setX(int x) {\n    this.x = x;\n}\npublic int\
+    \ getY() {\n    return y;\n}\npublic void setY(int y) {\n    this.y = y;\n}\n\
+    public boolean isVisible() {\n    return visible;\n}\npublic void setVisible(boolean\
+    \ visible) {\n    this.visible = visible;\n}\n```\n\n**Bullet.java** in package\
+    \ com.strategy.game;"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "ImageCache.java in package com.flyweight.game; In the previous chapte r\n\n\
+    BlueBullet.java in package com.strategy.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class BlueBullet extends Bullet{\n    public BlueBullet(int x, int y) {\n\
+    \        super(x, y, ImageCache.get(\"blueBulletImage\\));\n    }\n}\n```\n\n\
+    RedBullet.java in package com.strategy.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class RedBullet extends Bullet{\n    public RedBullet(int x, int y) {\n\
+    \        super(x, y, ImageCache.get(\"redBulletImage\"));\n    }\n}\n```\n\nMissileBullet.java\
+    \ in package com.strategy.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class MissileBullet extends Bullet{\n    public MissileBullet(int x, int\
+    \ y) {\n        super(x, y, ImageCache.get(\"missileBulletImage\"));\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "# BluePlane:\n\n```\nloadBullet(Bullet bullet): load bullet(BlueBullet, RedBullet,\n\
+    MissileBullet) \nfireBullet(): fire the bullet from the top center of plane\n\
+    ```\n\nBluePlane.java in package com.strategy.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class BluePlane extends Sprite{\n    private Bullet bullet;\n\n    public\
+    \ BluePlane(int x, int y) {\n        super(x, y, ImageCache.get(\"bluePlaneImage\\\
+    ));\n    }\n\n    public void loadBullet(Bullet bullet){\n        this.bullet\
+    \ = bullet;\n    }\n\n    public void fireBullet(){\n        if (lbullet .isVisible()){\n\
+    \            int x = this.x + this.width/2-bullet.getWidth()/2;\n            int\
+    \ y = this.y - bullet.getHeight();\n            bullet.setX(x);\n            bullet.setY(y);\n\
+    \            bullet.setVisible(true );\n        }\n    }\n\n    public Bullet\
+    \ getBullet(){\n        return this.bullet;\n    }\n}\n```\n\nCGlobal.java in\
+    \ package com.strategy.game;"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "```\nimport javax.swing.JFrame;\n\npublic class CGlobal{\n    private CGlobal()\
+    \ { }\n    public static JFrame frame;\n}\n```"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: 'Runnable:
+
+
+    ```
+
+    void run(): Thread loop continuously repaint canvas.
+
+    ```
+
+
+    ImageUtil.java in package com.singleton.game; In the previous chapter
+
+
+    Canvas.java in package com.strategy.game;'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "# SelectBulletDialog.java in package com.strategy.game;\n\n```\nimport java.awt.*;\n\
+    import java.awt.event.*;\nimport javax.swing.*;\n\npublic class SelectBulletDialog\
+    \ extends JDialog {\n    private JButton blueBulletButton;\n    private JButton\
+    \ redBulletButton;\n    private JButton missileBulletButton;\n\n    private SelectBulletDialog()\
+    \ {\n        this.setModal(true);\n        this.setBackground(Color.WHITE);\n\
+    \        this.setSize(300, 150);\n        this.setLayout(new FlowLayout());\n\n\
+    \        blueBulletButton = new JButton();\n        blueBulletButton .setIcon(new\
+    \ ImageIcon(\"images/blue_bullet.png\"));\n        blueBulletButton.setBackground(Color.WHITE);\n\
+    \        blueBulletButton.addActionListener(new ActionListener() {\n         \
+    \   public void actionPerformed(ActionEvent e) {\n                Canvas canvas\
+    \ = new Canvas(\"1\");\n                SelectBulletDialog.this.dispose();\n \
+    \               CGlobal.frame.add(canvas, BorderLayout.CENTER);\n            \
+    \    canvas.setFocusable(true);\n                canvas.requestFocus();\n    \
+    \        }\n        });\n\n        redBulletButton = new JButton();\n        redBulletButton\
+    \ .setIcon(new ImageIcon(\"images/red_bullet.png\"));\n        redBulletButton.setBackground(Color.WHITE);\n\
+    \        redBulletButton.addActionListener(new ActionListener() {\n          \
+    \  public void actionPerformed(ActionEvent e) {\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "```\nCanvas canvas = new Canvas(\"2\\);\nSelectBulletDialog.this.dispose();\n\
+    CGGlobal.frame.repaint();\nCGGlobal.frame.add(canvas, BorderLayout.CENTER);\n\
+    canvas.setFocusable(true);\ncanvas.requestFocus();\n};\n```\n\n```\nmissileBulletButton\
+    \ = new JButton();\nmissileBulletButton.setIcon(new ImageIcon(\"images/missile_bullet.png\"\
+    ));\nmissileBulletButton.setBackground(Color.WHITE);\nmissileBulletButton.addActionListener(new\
+    \ ActionListener() {\n\n    public void actionPerformed(ActionEvent e) {\n   \
+    \     Canvas canvas = new Canvas(\"3\");\n        SelectBulletDialog.this.dispose();\n\
+    \        CGGlobal.frame.repaint();\n        CGGlobal.frame.add(canvas, BorderLayout.CENTER);\n\
+    \        canvas.setFocusable(true);\n        canvas.requestFocus();\n    }\n});\n\
+    \nthis.add(blueBulletButton);\nthis.add(redBulletButton);\nthis.add(missileBulletButton);\n\
+    }\n```\n\n```\npublic void showDialog(){\n    this.setVisible(true);\n}\n```\n\
+    \n```\npublic static class Builder {\n```"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "```\nprivate SelectBulletDialog dialog;\npublic Builder() {\n    dialog = new\
+    \ SelectBulletDialog();\n}\n\npublic void setTitle(String title) {\n    dialog.setTitle(title);\n\
+    }\n\npublic SelectBulletDialog create() {\n    return dialog;\n}\n}\n```"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "# 2 . Create a Test class : TestStrategy.java in package com.strategy.game;\n\
+    \n```\nimport java.awt.BorderLayout;\nimport javax.swing.JFrame;\n\npublic class\
+    \ TestStrategy {\n    public static void main(String[] args) {\n        CGGlobal.frame\
+    \ = new JFrame(\"Design Pattern Strategy\");\n\n        SelectBulletDialog.Builder\
+    \ builder = new SelectBulletDialog.Builder();\n        builder.setTitle(\"Please\
+    \ Select Bullet\");\n\n        SelectBulletDialog dialog = builder.create();\n\
+    \        dialog.show();\n\n        CGGlobal.frame .setSize(300, 350);\n      \
+    \  CGGlobal.frame .setVisible(true);\n    }\n}\n```"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# Bridge Pattern Principle
+
+
+    Bridge Pattern : Separates an object''s interface from its implementation. Decouple
+    an abstraction from its implementation so that the two can vary independently.
+
+
+    +   1. BluePlane and RedPlane , BlueBullet and RedBullet vary independently.
+
+    2. BluePlane can fire BlueBullet.
+
+    3. RedPlane can fire RedBullet.
+
+    4. BluePlane can fire RedBullet.
+
+    5. RedPlane can fire BlueBullet.
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_103_0.png)'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_104_0.png)'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "Sprite.java in package com.bridge.principle;\n\n```\nclass Sprite {\n    protected\
+    \ int x; // x coordinate of Canvas\n    protected int y; // y coordinate of Canvas\n\
+    \    protected String name ;\n\n    public Sprite(String name, int x, int y) {\n\
+    \        this.name = name;\n        this.x = x;\n        this.y = y;\n    }\n\n\
+    \    public void draw() {\n        String text = this.name + \" draw on (\" +\
+    \ this.x + \", \" + this.y + \")\";\n        System.out.println(text);\n    }\n\
+    \n    public String getName() {\n        return name;\n    }\n}\n```\n\nBullet.java\
+    \ in package com.bridge.principle;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class Bullet extends Sprite{\n    public Bullet(String name, int x, int\
+    \ y) {\n        super(name, x, y);\n    }\n}\n```"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "# BlueBullet.java in package com.bridge.principle;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class BlueBullet extends Bullet{\n    public BlueBullet(String name, int\
+    \ x, int y) {\n        super (name, x, y);\n    }\n}\n```\n\n# RedBullet.java\
+    \ in package com.bridge.principle;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class RedBullet extends Bullet{\n    public RedBullet(String name, int\
+    \ x, int y) {\n        super (name, x, y);\n    }\n}\n```\n\n# Plane.java in package\
+    \ com.bridge.principle;\n\n```\nimport java.awt.image.BufferedImage;\npublic class\
+    \ Plane extends Sprite{\n    protected Bullet bullet;\n    public Plane(String\
+    \ name, int x, int y) {\n        super (name, x, y);\n    }\n    public void loadBullet(Bullet\
+    \ bullet) {\n        this .bullet = bullet;\n    }\n    public void fireBullet(){}\n\
+    ```"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "```\nSystem.out.println(this.name + \" fire \" +this.bullet.getName());\n}\n\
+    public Bullet Bullet getBullet(){\n    return this.bullet;\n}\n}\n```"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# 2 . Create a Test class : TestBridge.java in package com.bridge.principle;\n\
+    \n```\nimport java.awt.BorderLayout;\nimport javax.swing.JFrame;\n\npublic class\
+    \ TestBridge {\n    public static void main(String[] args) {\n        Plane redPlane\
+    \ = new RedPlane(\"RedPlane\", 80, 250);\n        redPlane.loadBullet(new RedBullet(\"\
+    RedBullet\", -100));\n        redPlane.fireBullet();\n\n        Plane bluePlane\
+    \ = new BluePlane(\"BluePlane\", 80, 250);\n        bluePlane.loadBullet(new BlueBullet(\"\
+    BlueBullet\", -100));\n        bluePlane.fireBullet();\n\n        System.out.println(\"\
+    ---------------------------------\");\n\n        redPlane.loadBullet(new RedBullet(\"\
+    RedBullet\", -100));\n        redPlane.fireBullet();\n\n        bluePlane.loadBullet(new\
+    \ RedBullet(\"RedBullet\", -100));\n        bluePlane.fireBullet();\n    }\n}\n\
+    ```\n\n# Result:\n\nRedPlane fire RedBullet\nBluePlane fire BlueBullet\n------------------------------------\n\
+    RedPlane fire BlueBullet\nBluePlane fire RedBullet"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "# Bridge Pattern Game\n\n+   1. Create and Draw BluePlane and RedPlane on canvas.\n\
+    2. BluePlane can load and fire BlueBullet .\n3. RedPlane can load and fire RedBullet\
+    \ .\n4. BluePlane can load and fire RedBullet .\n5. RedPlane can load and fire\
+    \ BlueBullet .\n6. Press the up, down, left, right key to move BluePlane .\n7.\
+    \ Press the E, D, S, F key to move RedPlane \n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_109_0.png)"
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_110_0.png)'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "# Sprite.java in package com.bridge.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\n\nabstract class Sprite {\n    protected\
+    \ int x; // x coordinate of Canvas\n    protected int y; // y coordinate of Canvas\n\
+    \    protected int width;\n    protected int height;\n    protected BufferedImage\
+    \ image;\n    protected boolean visible;\n\n    public Sprite(int x, int y, BufferedImage\
+    \ image) {\n        this.x = x;\n        this.y = y;\n        this.image = image;\n\
+    \        this.width = this.image.getWidth();\n        this.height = this.image.getHeight();\n\
+    \    }\n\n    public void draw(Graphics g) {\n        g.drawImage(image, this.x,\
+    \ this.y, null);\n    }\n\n    public void move(int distanceX, int distanceY)\
+    \ {\n        this.x = this.x + distanceX;\n        this.y = this.y + distanceY;\n\
+    \    }\n\n    public int getWidth() {\n        return width;\n    }\n\n    public\
+    \ int getHeight() {\n        return height;\n    }\n\n    public int getX() {\n\
+    ```"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "```\nreturn x;\n}\npublic void setX(int x) {\n    this .x = x;\n}\npublic int\
+    \ getY() {\n    return y;\n}\npublic void setY(int y) {\n    this .y = y;\n}\n\
+    public boolean isVisible() {\n    return visible;\n}\npublic void setVisible(boolean\
+    \ visible) {\n    this.visible = visible;\n}\n```\n\nbullet.java in package com.image.bridge.game;\n\
+    \n```\nimport java.awt.BufferedImage;\npublic class Bullet extends Sprite{\n \
+    \   public Bullet(int x, int y, BufferedImage image) {\n        super (x, y, image);\n\
+    \    }\n    public void move(int distanceX, int distanceY) {\n        this .x\
+    \ = this .x + distanceX;\n        this .y = this .y + distanceY;\n        if (this\
+    \ .y + this .height<=0){\n            this .setVisible(false);\n        }\n  \
+    \  }\n```"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "```\n}\n}\n```\n\nImageCache.java in package com.flyweight.game; In the previous\
+    \ chapter\n\nBlueBullet.java in package com.bridge.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class BlueBullet extends Bullet{\n    public BlueBullet(int x, int y) {\n\
+    \        super (x, y, ImageCache.get(\"blueBulletImage\\));\n    }\n}\n```"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "# RedBullet.java in package com.bridge.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class RedBullet extends Bullet{\n    public RedBullet(int x, int y) {\n\
+    \        super (x, y, ImageCache.get(\"redBulletImage\"));\n    }\n}\n```\n\n\
+    # Plane.java in package com.bridge.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class Plane extends Sprite{\n    protected Bullet bullet;\n    public Plane(int\
+    \ x, int y, Buffered image) {\n        super (x, y, image);\n    }\n    public\
+    \ void loadBullet(Bullet bullet){\n        this .bullet = bullet;\n    }\n   \
+    \ public void fireBullet(){\n        if (!bullet.isVisible(){\n            int\
+    \ x = this.x +bullet.width/2-bullet.getWidth()/2;\n            int y = this.y\
+    \ -bullet.getHeight();\n            bullet .setX(x);\n            bullet .setY(y);\n\
+    \            bullet.setVisible(true);\n        }\n    }\n    public Bullet getBullet(){\n\
+    }\n```"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '```
+
+    return this .bullet;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "BluePlane.java in package com.bridge.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class BluePlane extends Plane{\n    public BluePlane(int x, int y) {\n\
+    \        super (x, y, ImageCache.get(\"bluePlane\"));\n    }\n}\n```\n\nRedPlane.java\
+    \ in package com.bridge.game;\n\n```\nimport java.awt.image.BufferedImage;\npublic\
+    \ class RedPlane extends Plane{\n    public RedPlane(int x, int y) {\n       \
+    \ super (x, y, ImageCache.get(\"redPlane\"));\n    }\n}\n```\n\nImageUtil.java\
+    \ in package com.singleton.game; In the previous chapter\n\nCanvas.java in package\
+    \ com.bridge.game;\n\n```\nimport java.awt.*;\nimport java.awt.event.*;\nimport\
+    \ java.awt.image.BufferedImage;\nimport java.io.*;\nimport javax.imageio.ImageIO;\n\
+    import javax.swing.*;\n\npublic class Canvas extends JPanel implements Runnable{\n\
+    \    private boolean isRun = true;\n    private Plane bluePlane;\n    private\
+    \ Plane redPlane;\n```"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "```\nstatic {\n    ImageCache.put(\"bluePlaneImage\", ImageUtil.loadImage\n\
+    (\"images/blue_plane.png\\));\n    ImageCache.put(\"redPlaneImage\", ImageUtil.loadImage\n\
+    (\"images/red_plane.png\\));\n    ImageCache.put(\"redBulletImage\", ImageUtil.loadImage\n\
+    (\"images/red_bullet.png\\));\n    ImageCache.put(\"blueBulletImage\", ImageUtil.loadImage\n\
+    (\"images/blue_bullet.png\\));\n}\n\npublic voidA() {\n    this.setLayout(null);\n\
+    \    this.setBackground(Color.WHITE);\n    redPlane = new RedPlane(80, 250);\n\
+    \    redPlane.loadBullet(new RedBullet(-100, -100));\n\n    bluePlane = new BluePlane(160,\
+    \ 250);\n    bluePlane.loadBullet(new BlueBullet(-100, -100));\n\n    new Thread(this).start();\n\
+    \n    this.addKeyListener(new KeyAdapter() {\n        public void keyPressed(KeyEvent\
+    \ e) {\n            int keyCode = e.getKeyCode();\n            if (keyCode ==\
+    \ KeyEvent.VK_E) {\n                redPlane.move(0, -3);\n            } else\
+    \ if (keyCode == KeyEvent.VK_D) {\n                redPlane.move(0, 3);\n    \
+    \        } else if (keyCode == KeyEvent.VK_F) {\n                redPlane.move(3,\
+    \ 0);\n            } else if (keyCode == KeyEvent.VK_S) {\n                redPlane.move(-3,\
+    \ 0);\n            } else if (keyCode == KeyEvent.VK_G) {\n                redPlane.fireBullet();\n\
+    \            }\n            if (keyCode == KeyEvent.VK_UP) {\n```"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "```\nbluePlane.move(0, -3);\n}else if (keyCode == KeyEvent.VK_DOWN) {\n   \
+    \ bluePlane.move(0, 3);\n}else if (keyCode == KeyEvent.VK_RIGHT) {\n    bluePlane.move(3,\
+    \ 0);\n}else if (keyCode == KeyEvent.VK_LEFT) {\n    bluePlane.move(-3, 0);\n\
+    }else if (keyCode == KeyEvent.VK_ENTER) {\n    bluePlane.fireBullet();\n}\n}\n\
+    Canvas.this.repaint();\n}\n}\nprotected void paintComponent(Graphics g) {\n  \
+    \  super.paintComponent(g);\n    bluePlane.draw(g);\n    bluePlane.getBullet().draw(g);\n\
+    \    redPlane.draw(g);\n    redPlane.getBullet().draw(g);\n}\nnprivate void bulletMove()\
+    \ {\n    if (bluePlane.getBullet().isVisible()) {\n        bluePlane.getBullet().move(0,\
+    \ -3);\n    }\n\n    if (redPlane.getBullet().isVisible()) {\n        redPlane.getBullet().move(0,\
+    \ -3);\n    }\n}\n\n@Override\npublic void run() {\n    while (isRun) {\n    \
+    \    try {\n            bulletMove();\n```"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "```\nThread.sleep (200);\nCanvas.this.repaint();\n} catch (InterruptedException\
+    \ e) {\n    e.printStackTrace();\n}\n}\n}\n```\n\n# 3. Create a Test class : TestBridge.java\
+    \ in package com.bridge.game;\n\ncanvas.setFocusable(true) : Set focus to activate\
+    \ keyboard events canvas.requestFocus(): Set focus to activate keyboard events\n\
+    \n```\nimport java.awt.BorderLayout;\nimport javax.swing.JFrame;\n\npublic class\
+    \ TestSingleton {\n    public static void main(String[] args) {\n        JFrame\
+    \ frame = new JFrame(\"Design Pattern Bridge\");\n        Canvas canvas = new\
+    \ Canvas();\n        frame.add(canvas, BorderLayout.CENTER);\n        frame.setSize(300,\
+    \ 350);\n        canvas.setFocusable(true);\n        canvas.requestFocus();\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# Iterator Pattern Principle
+
+
+    Iterator Pattern : Sequentially access the elements of a collection. Provide a
+    way to access the elements of an aggregate object sequentially without exposing
+    its underlying representation.
+
+
+    1 . iterator print bullet list
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_120_0.png)'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "# Iterator:\n\n```\nboolean hasNext(): It returns true if Iterator has more\
+    \ element\nObject next(): It returns the next element in the list.\n```\n\nIterator.java\
+    \ a in package com.iterator.principle;\n\n```\npublic interface Iterator {\n \
+    \   public boolean hasNext();\n    public Object next();\n}\n```\n\nIteratorImpl.java\
+    \ a in package com.iterator.principle;\n\n```\npublic class IteratorImpl implements\
+    \ Iterator {\n    private int index ;\n    private List list;\n\n    public IteratorImpl(List\
+    \ list) {\n        this.list = list;\n    }\n\n    public boolean hasNext() {\n\
+    \        return index < list.size();\n    }\n\n    public Object next() {\n  \
+    \      Object element = null;\n        if (index < list.size()) {\n          \
+    \  element = list.get(index);\n            index++;\n        }\n        return\
+    \ element;\n    }\n}\n```"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "List:\n\n```\nvoid add(Object element): Appends the specified element to the\n\
+    \ of this list.\nObject get(int index): It is used for fetching an element from\
+    \ the\nlist.\nint size(): Returns the number of elements in this list.\nIterator\
+    \ iterator(): Return a list iterator over the elements in this\nlist.\n```\n\n\
+    List.java a in package com.iterator.principle;\n\n```\npublic interface List {\n\
+    \  public void add(Object element);\n  public Object get(int index);\n  public\
+    \ int size();\n  public Iterator iterator();\n}\n```\n\n*"
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "```\nimport java.util.Arrays;\npublic class ArrayList implements List {\n \
+    \   private int initCapacity = 20;\n    private int size;\n    private Object[]\
+    \ elementData;\n\n    public ArrayList() {\n        elementData = new Object[initCapacity];\n\
+    \    }\n\n    @Override\n    public void add(Object element) {\n        if (size\
+    \ < initCapacity) {\n            elementData[size] = element;\n            size++;\n\
+    \        } else {\n            elementData = Arrays.copyOf(elementData, size);\n\
+    \            elementData[size] = element;\n            size++;\n        }\n  \
+    \  }\n\n    @Override\n    public Object get(int index) {\n        return elementData[index];\n\
+    \    }\n\n    @Override\n    public int size() {\n        return size;\n    }\n\
+    \n    @Override\n    public Iterator iterator() {\n        return new IteratorImpl(this);\n\
+    \    }\n\n```"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "# Sprite.java a in package com.iterator.principle;\n\n```\nclass Sprite {\n\
+    \    protected int x; // x coordinate of Canvas\n    protected int y; // y coordinate\
+    \ of Canvas\n    protected String name ;\n\n    public Sprite(String name, int\
+    \ x, int y) {\n        this.name = name;\n        this.x = x;\n        this.y\
+    \ = y;\n    }\n\n    public void draw() {\n        String text = this.name + \"\
+    \ draw on (\" + this.x + \", \" + this.y + \")\";\n        System.out.println(text);\n\
+    \    }\n\n    public void move(int distanceX, int distanceY) {\n        String\
+    \ text = this.name + \" move distance (\" +distanceX + \", \" +distanceY + \"\
+    )\";\n        System.out.println(text);\n    }\n}\n```\n\n# Bullet.java a in package\
+    \ com.iterator.principle;\n\n```\npublic class Bullet extends Sprite{\n    public\
+    \ Bullet(String name, int x, int y) {\n        super (name, x, y);\n    }\n}\n\
+    ```"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: "# 3 . Create a Test class : TestIterator.java a in package com.iterator.principle;\n\
+    \n```\npublic class TestIterator {\n    public static void main(String[] args)\
+    \ {\n        List list = new ArrayList();\n        list.add(new Bullet(\"RedBullet\
+    \ 1\", , 0, 10));\n        list.add(new Bullet(\"RedBullet 2\", , 0, 20));\n \
+    \       list.add(new Bullet(\"RedBullet 3\", , 0, 30));\n        list.add(new\
+    \ Bullet(\"RedBullet 4\", , 0, 40));\n\n        Iterator iter = list.iterator();\n\
+    \        while (iter.hasNext()) {\n            Bullet bullet = (Bullet)iter.next();\n\
+    \            bullet.draw();\n        }\n\n        System.out.println(\"----------------------------\"\
+    );\n\n        iter = list.iterator();\n        while (iter.hasNext()) {\n    \
+    \        Bullet bullet = (Bullet)iter.next();\n            bullet.move(0, -6);\n\
+    \        }\n    }\n}\n```\n\n# Result:\n\nRedBullet 1 draw on (0 , 10)\nRedBullet\
+    \ 2 draw on (0 , 20)\nRedBullet 3 draw on (0 , 30)\nRedBullet 4 draw on (0 , 40)\n\
+    \n----------------------------\n\nRedBullet 1 move distance (0 , -6)\nRedBullet\
+    \ 2 move distance (0 , -6)\nRedBullet 3 move distance (0 , -6)"
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: RedBullet 4 move distance (0 , -6)
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: "# Iterator Pattern Game\n\n+   1. Create BluePlane on canvas.\n2. Create less\
+    \ than100 bullets in Thread run() method. And then load to bulletList\n3. Iterator\
+    \ Draw and Move all bullets of bulletList on canvas.\n\n```\npublic void drawBullets(Graphics\
+    \ g) {\n  Iterator<Bullet> iter = this.bulletList.iterator();\n  while (iter.hasNext())\
+    \ {\n    Bullet bullet = iter.next();\n    if (bullet.isVisible()) {\n      bullet.draw(g);\n\
+    \    }\n  }\n}\n\npublic void moveBullet(int distanceX, int distanceY) {\n  Iterator<Bullet>\
+    \ iter = this.bulletList.iterator();\n  while (iter.hasNext()) {\n    Bullet bullet\
+    \ = iter.next();\n    if (bullet.isVisible()) {\n      bullet.move(distanceX,\
+    \ distanceY);\n    }\n  }\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_128_0.png)"
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '```
+
+    <<interface>>
+
+    Runnable
+
+    void run()
+
+    ```
+
+
+    ```
+
+    <<abstract>>
+
+    Sprite
+
+    int x
+
+    int y
+
+    int width
+
+    int height
+
+    BufferedImage image
+
+    boolean visible
+
+    Sprite(int x, int y, BufferedImage image)
+
+    void draw(Graphics g)
+
+    void move(int distanceX, int distanceY)
+
+    ```
+
+
+    ```
+
+    Canvas
+
+    boolean isRun = true
+
+    BufferedImage blueimage
+
+    BluePlane bluePlane
+
+    Canvas()
+
+    paintComponent(Graphics g)
+
+    createBullet()
+
+    ```
+
+
+    ```
+
+    BluePlane
+
+    CopyOnWriteArrayList<Bullet> bulletList
+
+    void loadBullet(Bullet bullet)
+
+    void drawBullets(Graphics g)
+
+    void moveBullet(int distanceX, int distanceY)
+
+    List<Bullet> getBulletList()
+
+    ```
+
+
+    ```
+
+    Bullet
+
+    ```
+
+
+    ```
+
+    RedBullet
+
+    ```'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: "# Sprite.java a in package com.iterator.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\nnabstract class Sprite {\n    protected\
+    \ int x; // x coordinate of Canvas\n    protected int y; // y coordinate of Canvas\n\
+    \    protected int width;\n    protected int height;\n    protected BufferedImage\
+    \ image;\n    protected boolean visible;\n\n    public Sprite(int x, int y, BufferedImage\
+    \ image) {\n    this.x = x;\n    this.y = y;\n    this.image = image;\n    this.width\
+    \ = this.image.getWidth();\n    this.height = this.image.getHeight();\n}\n\n \
+    \   public void draw(Graphics g) {\n    g.drawImage(image, this.x, this.y, null);\n\
+    }\n\n    public void move(int distanceX, int distanceY) {\n    this.x = this.x\
+    \ + distanceX;\n    this.y = this.y + distanceY;\n}\n\n    public int getWidth()\
+    \ {\n    return width;\n}\n\n    public int getHeight() {\n    return height;\n\
+    }\n\n    public int getX() {\n```"
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: "```\nreturn x;\n}\npublic void setX(int x) {\n    this .x = x;\n}\npublic int\
+    \ getY() {\n    return y;\n}\npublic void setY(int y) {\n    this .y = y;\n}\n\
+    public boolean isVisible() {\n    return visible;\n}\npublic void setVisible(boolean\
+    \ visible) {\n    this.visible = visible;\n}\n```\n\nBullet.java a in package\
+    \ com.iterator.BufferedImage;\n\n```\nimport java.awt.BufferedImage\npublic class\
+    \ Bullet extends Sprite{\n    public Bullet(int x, int y, BufferedImage image)\
+    \ {\n        super (x, y, image);\n    }\n```\n\nImageCache.java in package com.flyweight.game;\
+    \ In the previous chapter\n\nRedBullet.java a in package com.iterator.game;"
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: "# BluePlane:\n\n| CopyOnWriteArrayList<Bullet> bulletList : . Thread-safe storage\
+    \ of a list of all bullets |\n| void loadBullet(Bullet bullet): Add bullet to\
+    \ bulletList |\n| void drawBullets(Graphics g): Draw all bullets of bulletList\
+    \ on canvas.\n| void moveBullet(int distanceX, int distanceY): Move all bullets\
+    \ of bulletList on canvas. |\n\nBluePlane.java in package com.iterator.game;\n\
+    \n```\nimport java.awt;\nimport java.awt.image.BufferedImage;\nimport java.util.*;\n\
+    import java.util.concurrent.CopyOnWriteArrayList;\n\npublic class BluePlane extends\
+    \ Sprite {\n    private CopyOnWriteArrayList<Bullet> bulletList = new CopyOnWriteArrayList<Bullet>();\n\
+    \n    public BluePlane(int x, int y) {\n        super(x, y, MyImageCache.get(\"\
+    bluePlaneImage\"));\n    }\n\n    public void createBullets(){\n        if (this.bulletList.size()<100){\n\
+    \            Bullet bullet = new Bullet(-100, -100);\n            int x = this.getX()\
+    \ + this.getWidth() / 2 - bullet.getWidth() / 2;\n            int y = this.getY()\
+    \ - bullet.getHeight();\n            bullet.setX(x);\n            bullet.setY(y);\n\
+    \            bullet.setVisible(true );\n            this.loadBullet(bullet);\n\
+    \        }\n    }\n\n```"
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: "```\npublic void loadBullet(Bullet bullet) {\n    bulletList.add(bullet);\n\
+    }\n\npublic void drawBullets(Graphics g) {\n    Iterator<Bullet> iter = this.bulletList.iterator();\n\
+    \    while (iter.hasNext()) {\n        Bullet bullet = iter.next();\n        if\
+    \ (bullet.isVisible()) {\n            bullet.draw(g);\n        }\n    }\n}\n\n\
+    public void moveBullet(int distanceX, int distanceY) {\n    Iterator<Bullet> iter\
+    \ = this.bulletList.iterator();\n    while (iter.hasNext()) {\n        Bullet\
+    \ bullet = iter.next();\n        if (bullet.isVisible()) {\n            bullet.move(distanceX,\
+    \ distanceY);\n        }\n    }\n\nfor (int i = this.bulletList.size() - 1; i\
+    \ >= 0; i--) {\n    Bullet bullet = this.bulletList.get(i);\n    // if the bullet\
+    \ move out of canvas remove\n    if (bullet.getY() + bullet.getHeight() <= 0)\
+    \ {\n        this.bulletList.remove(bullet);\n    }\n}\n\npublic List<Bullet>\
+    \ getBulletList() {\n    return this.bulletList;\n}\n```"
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: 'ImageUtil.java a in package com.singleton.game; In the previous chapter
+
+
+    Runnable:
+
+
+    ```
+
+    void run(): Thread loop repaint canvas to move planes and bullets
+
+    ```
+
+
+    Canvas:
+
+
+    ```
+
+    paintComponent(Graphics g): can draw image and also repaint all sprite on canvas.
+
+    this .addKeyListener(new KeyAdapter()): Monitoring and receiving keyboard events
+    to move up, down, left, right.
+
+    ```'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: "# Canvas.java a in package com.iterator.game;\n\n```\nimport java.awt.*;\n\
+    import java.awt.event.*;\nimport java.awt.image.BufferedImage;\nimport java.io.*;\n\
+    import javax.imageio.ImageIO;\nimport javax.swing.*;\n\npublic class Canvas extends\
+    \ JPanel Runnable {\n    private boolean isRun = true ;\n    private BluePlane\
+    \ bluePlane;\n\n    static {\n        ImageCache.put(\"bluePlane\", ImageUtil.loadImage(\"\
+    images/blue_plane.png\"));\n        ImageCache.put(\"redBulletImage\", ImageUtil.loadImage(\"\
+    images/red_bullet.png\"));\n    }\n\n    public Canvas() {\n    this.setLayout(null);\n\
+    \    this.setBackground(Color.WHITE);\n\n    bluePlane = new BluePlane(120, 250);\n\
+    \n    new Thread(this).start();\n\n    this.addKeyListener(new KeyAdapter(){\n\
+    \    public void keyPressed(KeyEvent e) {\n        int keyCode = e.getKeyCode();\n\
+    \        if (keyCode == KeyEvent.VK_UP) {\n            bluePlane.move(0, -3);\n\
+    \        }else if (keyCode == KeyEvent.VK_DOWN) {\n            bluePlane.move(0,\
+    \ 3);\n        }else if (keyCode == KeyEvent.VK_RIGHT) {\n            bluePlane.move(3,\
+    \ 0);\n        }else if (keyCode == KeyEvent.VK_LEFT) {\n            bluePlane.move(-3,\
+    \ 0);\n        }\n    }}\n```"
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: "```\n}\n  Canvas.this .repaint();\n}\n}}\\n  protected void paintComponent(Graphics\
+    \ g) {\n    super .paintComponent(g);\n    bluePlane .draw(g);\n    bluePlane\
+    \ .drawBullets(g);\n}\n```\n\n```\n@Override\npublic void run() {\n  while (isRun)\
+    \ {\n    try {\n      bluePlane .createBullets();\n      bluePlane .moveBullet(0,\
+    \ -3);\n      Thread.sleep(50);\n      Canvas.this .repaint();\n    } catch (InterruptedException\
+    \ e) {\n      e.printStackTrace();\n    }\n  }\n}\n}\n```\n\n3 . Create a Test\
+    \ class : TestIterator.java a in package com.iterator.game;\n\n```\nimport java.awt.Border;\n\
+    import javax.swing.JFrame;\n\npublic class TestIterator {\n\n  public static void\
+    \ main(String[] args) {\n    JFrame frame = new JFrame(\"Design Pattern Iterator\"\
+    \ );\n```"
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '```
+
+    Canvas canvas = new Canvas();
+
+    frame.add(canvas, BorderLayout.CENTER );
+
+    frame.setSize(300, 350);
+
+    canvas.setFocusable(true );
+
+    frame.setVisible(true );
+
+    canvas.requestFocus();
+
+    ```'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# Decorator Pattern Principle
+
+
+    Decorator Pattern : Add responsibilities to objects dynamically. Attach additional
+    responsibilities to an object dynamically. Decorators provide a flexible alternative
+    to subclassing for extending functionality.
+
+
+    +   1. Create BluePlane on canvas
+
+    2. BluePlane create many bullets add to bulletList
+
+    3. Draw and move all bullets of bulletList on canvas
+
+    4. Decorate BluePlane by PlaneProps and then decorate some bullets to move down.
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_138_0.png)'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_139_0.png)'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: "# Sprite.java in package com.decorator.principle;\n\n```\nclass Sprite {\n\
+    \    protected int x; // x coordinate of Canvas\n    protected int y; // y coordinate\
+    \ of Canvas\n    protected String name ;\n\n    public Sprite(String name, int\
+    \ x, int y) {\n        this.name = name;\n        this.x = x;\n        this.y\
+    \ = y;\n    }\n\n    public void draw() {\n        String text = this.name + \"\
+    \ draw on (\" + this.x + \",\" + this.y + \")\";\n        System.out.println(text);\n\
+    \    }\n\n    public void move(int distanceX, int distanceY) {\n        String\
+    \ text = this.name + \" move distance (\" + distanceX + \",\" + distanceY + \"\
+    )\";\n        System.out.println(text);\n    }\n\n    public int getX() {\n  \
+    \      return x;\n    }\n\n    public int getY() {\n        return y;\n    }\n\
+    \n    public String getName() {\n        return name ;\n    }\n}\n```"
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: "Bullet.java in package com.decorator.principle;\n\n```\npublic class Bullet\
+    \ extends Sprite {\n    public Bullet(String name, int x, int y) {\n        super\
+    \ (name, x, y);\n    }\n}\n```"
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: "# Plane:\n\n```\nCopyOnWriteArrayList<Bullet> bulletList : Thread safe\nbullets\
+    \ in list.\nvoid createBullets(): Create red bullets to move up.\nvoid drawBullets():\
+    \ Draw red bullets on canvas.\nvoid moveBullet(int distX, int distanceY): Move\
+    \ bullets on\ncanvas.\n```\n\n# Plane.java in package com.decorator.principle;\n\
+    \n```\nimport java.util.*;\nimport java.util.concurrent.CopyOnWriteArrayList;\n\
+    \npublic class Plane extends Sprite {\n    private CopyOnWriteArrayList<Bullet>\
+    \ bulletList = new\nCopyOnWriteArrayList<Bullet>();\n\n    public Plane(String\
+    \ name, int x, int y) {\n        super(name, x, y);\n    }\n\n    public void\
+    \ createBullets(int i = 1; i <= 3; i++) {\n        Bullet bullet = new Bullet(\"\
+    RedBullet Move Up\", this .x ,\nthis .y);\n        bulletList.add(bullet);\n \
+    \   }\n\n    public void drawBullets() {\n        Iterator<Bullet> iter = this\
+    \ .bulletList.iterator();\n        while (iter.hasNext()) {\n            Bullet\
+    \ bullet = iter.next();\n            bullet.draw();\n        }\n    }\n```"
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: "```\npublic void moveBullet(int distanceX, int distanceY) {\n    Iterator<Bullet>\
+    \ iter = this.bulletList.iterator();\n    while (iter.hasNext()) {\n        Bullet\
+    \ bullet = iter.next();\n        bullet.move(distanceX, distanceY);\n    }\n}\n\
+    \npublic List<Bullet> getBulletList() {\n    return this.bulletList;\n}\n```"
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: "# BlueBullet.java in package com.decorator.principle;\n\n```\npublic class\
+    \ BluePlane extends Plane {\n    public BluePlane(String name, int x, int y) {\n\
+    \        super (name, x, y);\n    }\n}\n```\n\n# PlaneDecorator:\n\n```\nCopyOnWriteArrayList<Bullet>\
+    \ bulletList : Thread safe decorator bullets\nvoid createBullets(): Create decorator\
+    \ red bullets to move down.\nvoid drawBullets(): Draw red bullets on canvas.\n\
+    void moveBullet(int distanceX, int distanceY): Move decorator bullets on canvas.\n\
+    ```\n\n# PlaneDecorator.java in package com.decorator.principle;\n\n```\nimport\
+    \ java.util.Iterator;\nimport java.util.concurrent.CopyOnWriteArrayList;\n\npublic\
+    \ class PlaneDecorator extends Plane {\n    private CopyOnWriteArrayList<Bullet>\
+    \ bulletList = new CopyOnWriteArrayList<Bullet>();\n    private Plane plane;\n\
+    \n    public PlaneDecorator(Plane plane) {\n        super (plane.getName(), plane.getX(),\
+    \ plane.getY());\n        this.plane = plane;\n    }\n\n    public void createBullets()\
+    \ {\n        //Create many bullets\n        for (int i = 1; i <= 3; i++) {\n \
+    \           Bullet bullet = new Bullet(\"RedBullet Move Down\", this\n       \
+    \ }\n    }\n```"
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: "```\n.x , this .y);\n  bulletList .add(bullet);\n}\npublicpublic void drawBullets()\
+    \ {\n  plane .drawBullets();\n  Iterator<Bullet> iter = this .bulletList .iterator();\n\
+    \  while (iter.hasNext()) {\n    Bullet bullet = iter.next();\n    bullet.draw();\n\
+    \  }\n}\n```\n\n```\npublic void moveBullet(int distanceX, int distanceY) {\n\
+    \  plane .moveBullet(distanceX, distanceY);\n  Iterator<Bullet> iter = this .bulletList\
+    \ .iterator();\n  while (iter.hasNext()) {\n    Bullet bullet = iter.next();\n\
+    \    bullet.move(distanceX, -distanceY);\n  }\n}\n```\n\n# 2. Create a Test class\
+    \ : TestDecorator.java in package com.decorator.principle;\n\n```\npublic class\
+    \ TestDecorator {\n  public static void main(String[] args) {\n    Plane plane\
+    \ = new BluePlane(\"BluePlane\", 100, 150);\n    plane.createBullets();\n    plane.drawBullets();\n\
+    \    plane.moveBullet(0, -6);\n\n    System.out.println(\"----------------------------\"\
+    );\n    plane = new PlaneDecorator(plane);\n    plane.createBullets();\n  }\n\
+    ```"
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '```
+
+    plane.drawBullets();
+
+    plane.moveBullet(0, -6);
+
+    }
+
+    ```
+
+
+    # Result:
+
+
+    RedBullet Move Up draw on (100 , 150)
+
+    RedBullet Move Up draw on (100 , 150)
+
+    RedBullet Move Up draw on (100 , 150)
+
+    RedBullet Move Up move distance (0 , -6)
+
+    RedBullet Move Up move distance (0 , -6)
+
+    RedBullet Move Up move distance (0 , -6)
+
+
+    RedBullet Move Up draw on (100 , 150)
+
+    RedBullet Move Up draw on (100 , 150)
+
+    RedBullet Move Up draw on (100 , 150)
+
+    RedBullet Move Down draw on (100 , 150)
+
+    RedBullet Move Down draw on (100 , 150)
+
+    RedBullet Move Down draw on (100 , 150)
+
+    RedBullet Move Up move distance (0 , -6)
+
+    RedBullet Move Up move distance (0 , -6)
+
+    RedBullet Move Up move distance (0 , -6)
+
+    RedBullet Move Down move distance (0 , 6)
+
+    RedBullet Move Down move distance (0 , 6)
+
+    RedBullet Move Down move distance (0 , 6)'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: "# Decorator Pattern Game\n\n+   1. Create BluePlane on canvas\n2. BluePlane\
+    \ create many bullets add to bulletList\n3. Draw and move up all bullets of bulletList\
+    \ on canvas\n4. Decorate BluePlane by PlaneProps and then decorate some bullets\
+    \ to move down.\n\n```\npublic void drawBullets(Graphics g) {\n    Iterator<Bullet>\
+    \ iter = this.bulletList.iterator();\n    while (iter.hasNext()) {\n        Bullet\
+    \ bullet = iter.next();\n        if (bullet.isVisible()) {\n            bullet.draw(g);\n\
+    \        }\n    }\n\n```\n\n```\npublic void moveBullet(int distanceX, int distanceY)\
+    \ {\n    Iterator<Bullet> iter = this.bulletList.iterator();\n    while (iter.hasNext())\
+    \ {\n        Bullet bullet = iter.next();\n        if (bullet.isVisible()) {\n\
+    \            bullet.move(distanceX, distanceY);\n        }\n    }\n\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_147_0.png)"
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: "![](img/1a3fab3d51f12ead42a519c23c1a64ba_148_0.png)\n\n```\nprivate void collideCheck(){\n\
+    \    if(plane.collideWith(bulletProps)){\n        bulletProps.setVisible(false);\n\
+    \        plane = new PlaneDecorator(plane,this.canvasHeight);\n        plane.setVisible(true);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: "```\npublic void drawBullets(Graphics g) {\n  plane.drawBullets(g);\n  Iterator<Bullet>\
+    \ iter = this.bulletList.iterator();\n  while (iter.hasNext()) {\n    Bullet bullet\
+    \ = iter.next();\n    if (bullet.isVisible()) {\n      bullet.draw(g);\n    }\n\
+    \  }\n}\n```\n\n```\npublic void moveBullet(int distX, int distanceY) {\n  plane.moveBullet(distanceX,\
+    \ distanceY);\n  Iterator<Bullet> iter = this.bulletList.iterator();\n  while\
+    \ (iter.hasNext()) {\n    Bullet bullet = iter.next();\n    if (bullet.isVisible())\
+    \ {\n      bullet.move(distanceX, -distanceY);\n    }\n  }\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_149_0.png)"
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_150_0.png)'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: "![](img/1a3fab3d51f12ead42a519c23c1a64ba_151_0.png)\n\nSprite:\n\n**boolean\
+    \ collideWith(Sprite sprite):** Check if two sprites collide.\n\n**Sprite.java\
+    \ in package com.decorator.game;;\n\n```\nimport java.awt.Graphics;\nimport java.awt.image.BufferedImage;\n\
+    abstract class Sprite {\n    protected int x; // x coordinate of Canvas\n    protected\
+    \ int y; // y coordinate of Canvas\n    protected int width;\n    protected int\
+    \ height;\n    protected BufferedImage image;\n    protected boolean visible;\n\
+    }\n\npublic Sprite(int x, int y, BufferedImage image) {\n    this.x = x;\n   \
+    \ this.y = y;\n    this.image = image;\n    this.width = this.image.getWidth();\n\
+    \    this.height = this.image.getHeight();n}\n```"
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: "```\n}\npublic void draw(Graphics g){\n    if (this.isVis()) {\n        g.drawImage(image,\
+    \ this .x, this .y, null );\n    }\n}\npublic void move(int distanceX, int distanceY){\n\
+    \    this .x = this .x + distanceX;\n    this .y = this .y + distanceY;\n}\npublic\
+    \ boolean collideWith(Sprite sprite){\n    if (this.isVis() && sprite.isVisible())\n\
+    \        int centerX = this .x + this .getWidth()/2;\n        int centerY = this\
+    \ .y + this .getHeight()/2;\n        int spriteCenterX = sprite.getX() + sprite.getWidth()/2;\n\
+    \        int spriteCenterY = sprite.getY() + sprite.getHeight()/2;\n        if\
+    \ (Math.abs(centerX - spriteCenterX) < (this .width / 2 + sprite.getWidth()/2)\n\
+    \            Math.abs(centerY - spriteCenterY) < (this .height / 2 + sprite.getHeight()/2))\n\
+    \            return true ;\n        else\n            return false;\nreturn false;\n\
+    }\npublic int getWidth({\n    return width;\n}\npublic int getHeight(){\n```"
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: "```\nreturn height;\n}\npublic int getX() {\n    return x;\n}\npublic void\
+    \ setX(int x) {\n    this.x = x;\n}\npublic int getY() {\n    return y;\n}\npublic\
+    \ void setY(int y) {\n    this.y = y;\n}\npublic boolean isVisible() {\n    return\
+    \ visible;\n}\npublic void setVisible(boolean visible) {\n    this.visible = visible;\n\
+    }\npublic BufferedImage getImage() {\n    return image;\n}\n```\n\nBullet.java\
+    \ in package com.decorator.game;\n\nimport java.awt.image.BufferedImage;\npublic\
+    \ class Bullet extends Sprite{\n    public Bullet(int x, int y, BufferedImage\
+    \ image) {\n        super(x, y, image);"
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: "```\n}\n}\n```\n\nImageCache.java in package com.flyweight.game; In the previous\
+    \ chapter\nRedBullet.java in package com.decorator.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class RedBullet extends Bullet{\n    public RedBullet(int x, int y) {\n\
+    \        super (x, y, ImageCache.get(\"redBulletImage\"));\n    }\n}\n```\n\n\
+    BulletProps.java in package com.decorator.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\npublic class BulletProps extends Bullet\
+    \ {\n    public BulletProps(int x, int y) {\n        super (x, y, ImageCache.get(\"\
+    blueDecoratorImage\"));\n    }\n}\n```"
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: "# Plane:\n\n| CopyOnWriteArrayList<Bullet> bulletList : . Thread-safe storage\
+    \ of a list of all bullets |\n void loadBullet(Bullet bullet): Add bullet to bulletList\
+    \ |\n void drawBullets(Graphics g): Draw all bullets of bulletList on canvas.\
+    \ |\n void moveBullet(int distX, int distanceY): Move up all bullets of bulletList\
+    \ on canvas. |\n\n# Plane.java in package com.decorator.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\nimport java.util.*;\nimport java.util.concurrent.CopyOnWriteArrayList;\n\
+    \npublic class Plane extends Sprite {\n    private CopyOnWriteArrayList<Bullet>\
+    \ bulletList = new CopyOnWriteArrayList<Bullet>();\n    \n    public Plane(int\
+    \ x, int y, BufferedImage image) {\n        super (x, y, image);\n    }\n\n  \
+    \  public void createBullets()(){\n        if (this.bulletList.size()<100){\n\
+    \            Bullet bullet = new Bullet(-100, -100);\n            int x = this.getX()\
+    \ + this .getWidth() / 2 - bullet.getWidth() / 2;\n            int y = this.getY()\
+    \ - bullet.getHeight();\n            bullet.setX(x);\n            bullet.setY(y);\n\
+    \            bullet.setVisible(true );\n            bulletList.add(bullet);\n\
+    \        }\n    }\n}\n```"
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: "```\npublic void drawBullets(Graphics g) {\n    Iterator<Bullet> iter = this.bulletList.iterator();\n\
+    \    while (iter.hasNext()) {\n        Bullet bullet = iter.next();\n        if\
+    \ (bullet.isVisible()) {\n            bullet.draw(g);\n        }\n    }\n}\n```\n\
+    \n```\npublic void moveBullet(int distanceX, int distanceY) {\n    Iterator<Bullet>\
+    \ iter = this.bulletList.iterator();\n    while (iter.hasNext()) {\n        Bullet\
+    \ bullet = iter.next();\n        if (bullet.isVisible()) {\n            bullet.move(distanceX,\
+    \ distanceY);\n        }\n    }\n\n    for (int i = this.bulletList.size() - 1;\
+    \ i >= 0; i--) {\n        Bullet bullet = this.bulletList.get(i);\n        //if\
+    \ the bullet move out of canvas remove it\n        if (bullet.getY() + bullet.getHeight()\
+    \ <= 0) {\n            this.bulletList.remove(bullet);\n        }\n    }\n}\n\
+    ```\n\n```\npublic List<Bullet> getBulletList() {\n    return this.bulletList;\n\
+    }\n```"
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: "# BluePlane.java in package com.decorator.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    public class BluePlane extends Plane{\n    public BluePlane(int x, int y) {\n\
+    \        super(x, y, ImageCache.get(\"bluePlaneImage\"));\n    }\n}\n```"
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: "# PlaneDecorator:\n\nvoid moveBullet(int distanceX, int distanceY): Move down\n\
+    bullets of bulletList on canvas.\n\nPlaneDecorator.java in package com.decorator.game;\n\
+    \n```\nimport java.awt.Graphics;\nimport java.awt.image.BufferedImage;\nimport\
+    \ java.util.*;\nimport java.util.concurrent.CopyOnWriteArrayList;\n\npublic class\
+    \ PlaneDecorator extends Plane{\n    private CopyOnWriteArrayList<Bullet> bulletList\
+    \ = new CopyOnWriteArrayList<Bullet>();\n    private BufferedImage bulletImage;\n\
+    \    private Plane plane;\n    private int canvasHeight;\n\n    public PlaneDecorator(Plane\
+    \ plane, int canvasHeight) {\n        super(plane.getX(), plane.getY(), plane.getImage());\n\
+    \        this.plane = plane;\n        this.canvasHeight = canvasHeight;\n    }\n\
+    \n    public void loadBulletImage(BufferedImage bulletImage) {\n        plane.loadBulletImage(bulletImage);\n\
+    \        this.bulletImage = bulletImage;\n    }\n\n    public void move(int distanceX,\
+    \ int distanceY) {\n        plane.move(distanceX, distanceY);\n        super.move(distanceX,\
+    \ distanceY);\n    }\n\n    public void createBullets(){\n        plane.createBullets();\n\
+    \        if (this.bulletList.size()<100){\n```"
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: "```\nBullet bullet = new RedBullet(-100, -100, bulletImage);\nint x = this.getX()\
+    \ + this.getWidth() / 2 -\nbullet.getWidth() / 2;\nint y = this.getY() + this.getHeight();\n\
+    bullet.setX(x);\nbullet.setY(y);\nbullet.setVisible(true);\nbulletList.add(bullet);\n\
+    ```\n\n```\npublic void drawBullets(Graphics g){\n  plane.drawBullets(g);\n  Iterator<Bullet>\
+    \ iter = this.bulletList.iterator();\n  while (iter.hasNext()) {\n    Bullet bullet\
+    \ = iter.next();\n    if (bullet.isVisible()) {\n      bullet.draw(g);\n    }\n\
+    \  }\n```\n\n```\npublic void moveBullet(int distX, int distanceY) {\n  plane.moveBullet(distanceX,\
+    \ distanceY);\n  Iterator<Bullet> iter = this.bulletList.iterator();\n  while\
+    \ (iter.hasNext()) {\n    Bullet bullet = iter.next();\n    if (bullet.isVisible())\
+    \ {\n      bullet.move(distanceX, -distanceY);\n    }\n  }\n```\n\n```\nfor (int\
+    \ i = this.bulletList.size() - 1; i >= 0; i--) {\n  Bullet bullet = this.bulletList.get(i);\n\
+    \  //if the bullet move out of canvas remove it\n  if (bullet.getY() > canvasHeight)\
+    \ { }\n```"
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: "```\n}\n}\n  this.bulletList.remove(bullet);\n}\n}\n```"
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: "ImageUtil.java in package com.singleton.game; In the previous chapter\nCanvas.java\
+    \ in package com.decorator.game;\n\n```\nimport java.awt.*;\nimport java.awt.event.*;\n\
+    import java.awt.image.BufferedImage;\nimport java.io.*;\nimport javax.imageio.ImageIO;\n\
+    import javax.swing.*;\npublic class Canvas extends JPanel implements Runnable{\n\
+    \    private boolean isRun = true;\n    private Plane plane;\n    private BulletProps\
+    \ bulletProps;\n    private int canvasWidth;\n    private int canvasHeight;\n\n\
+    \    static {\n        ImageCache.put(\"redImage\", ImageUtil.loadImage(\"images/red_bullet.png\"\
+    ));\n        ImageCache.put(\"bluePlane\", ImageUtil.loadImage(\"images/blue_plane.png\"\
+    ));\n        ImageCache.put(\"blueDecoratorImage\", ImageUtil.loadImage(\"images/bullet_decorator.png\"\
+    ));\n    }\n\n    public Canvas() {\n        this.setLayout(null);\n        this.setBackground(Color.WHITE);\n\
+    \n        bulletProps = new BulletProps(120, 0);\n        bulletProps.setVisible(true);\n\
+    \n        plane = new BluePlane(120, 250);\n        plane.setVisible(true);\n\n\
+    \        new Thread(this).start();\n        this.addKeyListener(new KeyAdapter()\
+    \ {\n```"
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: "```\npublic void keyPressed(KeyEvent e) {\n    int keyCode = e.getKeyCode();\n\
+    \    if (keyCode == KeyEvent.VK_UP) {\n        plane.move(0, -3);\n    } else\
+    \ if (keyCode == KeyEvent.VK_DOWN) {\n        plane.move(0, 3);\n    } else if\
+    \ (keyCode == KeyEvent.VK_RIGHT) {\n        plane.move(3, 0);\n    } else if (keyCode\
+    \ == KeyEvent.VK_LEFT) {\n        plane.move(-3, 0);\n    }\n}\n}\n```\n\n```\n\
+    protected void paintComponent(Graphics g) {\n    this.canvasWidth = this.getWidth();\n\
+    \    this.canvasHeight = this.getHeight();\n    super.paintComponent(g);\n   \
+    \ plane.draw(g);\n    plane.drawBullets(g);\n    bulletProps.draw(g);\n}\n```\n\
+    \n```\nprivate void collideWith(bulletProps) {\n    bulletProps.setVisible(false);\n\
+    \    plane = new PlaneDecorator(plane, this.canvasHeight);\n    plane.setVisible(true);\n\
+    }\n```\n\n```\npublic void run() {\n    while (isRun) {\n        try {\n     \
+    \       plane.createBullets();\n            plane.moveBullet(0, -3);\n       \
+    \     bulletProps.move(0, 3);\n        }\n    }\n```"
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: "```\ncollideCheck();\nThread.sleep(200);\nCanvas.this.repaint();\n} catch (InterruptedException\
+    \ e) {\n    e.printStackTrace();\n}\n```\n\n# 2 . Create a Test class : TestDecorator.java\
+    \ in package com.decorator.game;\n\n```\nimport java.awt.BorderLayout;\nimport\
+    \ javax.swing.JFrame;\npublic class TestDecorator {\n    public static void main(String[]\
+    \ args) {\n    JFrame frame = new JFrame(\"Design Pattern Decorator\");\n    Canvas\
+    \ canvas = new Canvas();\n    frame.add(canvas, BorderLayout.CENTER);\n    frame.setSize(300,\
+    \ 350);\n    canvas.setFocusable(true);\n    frame.setVisible(true);\n    canvas.requestFocus();\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: '# Composite Pattern Principle
+
+
+    Composition Pattern : A tree structure of simple and composite objects. Compose
+    objects into tree structures to represent part-whole hierarchies. Composite lets
+    clients treat individual objects and compositions of objects uniformly.
+
+
+    ```
+
+    Console
+
+    Menu
+
+    --Game
+
+    ------New
+
+    --------Stop
+
+    --------Resume
+
+    --System
+
+    ----Help
+
+    ------Exit
+
+    ```
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_164_0.png)'
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: "Menu:\n\n| Menultem root : root menu |\n\nMenu.java in package com.composite.principle;\n\
+    \n```\nimport java.util.*;\npublic class Menu {\n    private Menultem root;\n\
+    \    protected String name;\n\n    public Menu(String name) {\n        this.root\
+    \ = new Menultem(name);\n    }\n\n    public Menultem getRoot() {\n        return\
+    \ root;\n    }\n\n    public String getName() {\n        return name;\n    }\n\
+    \n    public void setName(String name) {\n        this.name = name;\n    }\n}\n\
+    ```"
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: "# Menultem:\n\n| List<Menultem> childMenus : child menu list\nvoid add(Menultem\
+    \ menuItem): add child menu |\n\nMenultem.java in package com.composite.principle;\n\
+    \n```\nimport java.util.*;\npublic class Menultem {\n    protected String name\
+    \ ;\n    protected List<Menultem> childMenus ;\n    public Menultem(String name)\
+    \ {\n        super ();\n        this.name = name;\n        this.childMenus = new\
+    \ ArrayList<Menultem>();\n    }\n    public void add(Menultem menuItem) {\n  \
+    \      childMenus .add(menultem);\n    }\n    public String getName() {\n    \
+    \    return name;\n    }\n    public void setName(String name) {\n        this.name\
+    \ = name;\n    }\n    public List<Menultem> getChildMenus() {\n        return\
+    \ childMenus;\n    }\n}\n```"
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: "# 2 . Create a Test class : TestComposite.java in package com.composite.principle;\n\
+    \n```\nimport java.util.List;\npublic class TestComposite {\n    public static\
+    \ void main(String[] args) {\n        Menu tree=new Menu(\"Menu\");\n        MenuItem\
+    \ root = tree.getRoot();\n\n        MenuItem gameFile = new MenuItem(\"Game\"\
+    );\n        MenuItem systemFile = new MenuItem(\"System\");\n        root.add(gameFile);\n\
+    \        root.add(systemFile);\n\n        MenuItem newFile = new MenuItem(\"New\"\
+    );\n        MenuItem stopFile = new MenuItem(\"Stop\");\n        MenuItem resumeFile\
+    \ = new MenuItem(\"Resume\");\n        gameFile.add(newFile);\n        gameFile.add(stopFile);\n\
+    \        gameFile.add(resumeFile);\n\n        MenuItem helpFile = new MenuItem(\"\
+    Help\");\n        MenuItem exitFile = new MenuItem(\"Exit\");\n        systemFile.add(helpFile);\n\
+    \        systemFile.add(exitFile);\n\n        System.out.println(root.getName());\n\
+    \        List<MenuItem> childeMenus = root.getChildMenus();\n        for (MenuItem\
+    \ menuItem : childeMenus) {\n            System.out.println(\"-\\-\\-\" + menuItem.getName());\n\
+    \            List<MenuItem> childMenu2 = menuItem.getChildMenus();\n         \
+    \   for (MenuItem menuItem2 : childMenu2) {\n                System.out.println(\"\
+    ------\" + menuItem2.getName());\n            }\n        }\n    }\n```"
+  merge: -1
+  pgno: 167
+- img_proc: true
+  md: '```
+
+    ```
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  pgno: 168
+- img_proc: true
+  md: "# Composite Pattern Game\n\n1. Right Click Popup Menu.\n\n```\npublic void\
+    \ mouseReleased(MouseEvent e)\n{\n    if(e.isPopUpTrigger())\n        JPopupMenu\
+    \ popupMenu=new JPopupMenu();\n        JMenu fileMenu=new JMenu(\"Game\");\n \
+    \       JMenuItem newFile=new JMenuItem(\"New\");\n        JMenuItem stopFile=new\
+    \ JMenuItem(\"Stop\");\n        JMenuItem resumeFile=new JMenuItem(\"Resume\"\
+    );\n        fileMenu.add(newFile);\n        fileMenu.add(stopFile);\n        fileMenu.add(resumeFile);\n\
+    \        fileMenu.add(exitFile);\n        popupMenu.add(fileMenu);\n        popupMenu.addSeparator();\n\
+    \        JMenuItem exitFile=new JMenuItem(\"Exit\");\n        popupMenu.add(exitFile);\n\
+    \        popupMenu.show(e.getComponent(),e.getX(),e.getY());\n\n    stopFile.setActionCommand(\"\
+    Stop\");\n    stopFile.addActionListener(menuActionListener);\n    resumeFile.setActionCommand(\"\
+    Resume\");\n    resumeFile.addActionListener(menuActionListener);\n    exitFile.setActionCommand(\"\
+    Exit\");\n    exitFile.addActionListener(menuActionListener);\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_169_0.png)"
+  merge: -1
+  pgno: 169
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_170_0.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_170_1.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_170_2.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_170_3.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_170_4.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_170_5.png)'
+  merge: -1
+  pgno: 170
+- img_proc: true
+  md: "# Sprite.java in package com.composite.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\n\nclass Sprite {\n    protected int x; //\
+    \ x coordinate of Canvas\n    protected int y; // y coordinate of Canvas\n   \
+    \ protected BufferedImage image;\n\n    public Sprite(int x, int y, BufferedImage\
+    \ image){\n        this.x = x;\n        this.y = y;\n        this.image = image;\n\
+    \    }\n\n    public void draw(Graphics g){\n        g.drawImage(image, this.x,\
+    \ this.y, null);\n    }\n\n    public void move(int distX, int distanceY){\n \
+    \       this.x = this.x + distX;\n        this.y = this.y + distanceY;\n    }\n\
+    }\n```\n\nImageCache.java in package com.flyweight.game; In the previous chapter\n\
+    \nImageUtil.java in package com.singleton.game; In the previous chapter\n\nBluePlane.java\
+    \ in package com.composite.game;\n\n```\nimport java.awt.image.BufferedImage;\n\
+    \npublic class BluePlane extends Sprite {\n    public BluePlane(int x, int y)\
+    \ {\n```"
+  merge: -1
+  pgno: 171
+- img_proc: true
+  md: '```
+
+    super (x, y, ImageCache.get("bluePlaneImage\));
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 172
+- img_proc: true
+  md: '# Canvas:
+
+
+    ```
+
+    void mouseReleased(MouseEvent e): Create and show popup menu
+
+    ```
+
+
+    Canvas.java in package com.composite.game;'
+  merge: -1
+  pgno: 173
+- img_proc: true
+  md: "3 . Create a Test class : TestComposite.java in package com.composite.game\
+    \ ;\n\ncanvas.setFocusable(true) : Set focus to activate keyboard events\ncanvas.requestFocus():\
+    \ Set focus to activate keyboard events\n\n```\nimport java.awt.BorderLayout;\n\
+    import javax.swing.JFrame;\n\npublic class TestComposite {\n    public static\
+    \ void main(String[] args) {\n        JFrame frame = new Canvas(\"Design Pattern\
+    \ Composite\" );\n        Canvas canvas = new Canvas();\n        frame.add(canvas,\
+    \ BorderLayout.CENTER);\n        frame.setSize(300, 350);\n        canvas.setFocusable(true);\n\
+    \        frame.setVisible(true);\n        canvas.requestFocus();\n    }\n}\n```"
+  merge: -1
+  pgno: 174
+- img_proc: true
+  md: '# Chain Pattern Game
+
+
+    **Chain Pattern :** A way of passing a request between a chain of objects. Avoid
+    coupling the sender of a request to its receiver by giving more than one object
+    a chance to handle the request. Chain the receiving objects and pass the request
+    along the chain until an object handles it.
+
+
+    1. Enemy plane appear from the top of the screen every once in a while
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_175_0.png)'
+  merge: -1
+  pgno: 175
+- img_proc: true
+  md: "# 1. 2 enemy planes appear in 15 seconds\n\n```\npublic class EnemyHandler\
+    \ implements ChainHandler {\n\n    @Override\n    public List<Sprite> create()\
+    \ {\n        Random rm = new Random();\n        List<Sprite> spriteList = new\
+    \ ArrayList<Sprite>();\n        for(int i=0;i<rm.next(canvasWidth - enemyPlaneImage.getWidth());\
+    \ i++){\n            int x = rm.next(canvasWidth - enemyPlaneImage.getWidth());\n\
+    \            int y = -enemyPlaneImage.getHeight();\n            Sprite enemyPlane\
+    \ = new EnemyPlane(x, y, enemyPlaneImage);\n            spriteList.add(enemyPlane);\n\
+    \        }\n        return spriteList;\n    }\n}\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_176_0.png)"
+  merge: -1
+  pgno: 176
+- img_proc: true
+  md: "# 2. 4 enemy planes appear after 15 seconds\n\n```\npublic class Enemy2Handler\
+    \ implements ChainHandler {\n    public List<Sprite> create() {\n        Random\
+    \ r = new Random();\n        List<Sprite> spriteList = new ArrayList<Sprite>();\n\
+    \        for(int i=0;i<4; i++) {\n            int x = r.nextInt(canvasWidth -\
+    \ enemyPlaneImage.getWidth());\n            int y = -enemyPlaneImage.getHeight();\n\
+    \            Sprite enemyPlane = new EnemyPlane(x, y, enemyPlaneImage);\n    \
+    \        spriteList.add(enemyPlane);\n        }\n        return spriteList;\n\
+    \    }\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_177_0.png)"
+  merge: -1
+  pgno: 177
+- img_proc: true
+  md: "# 3. boss enemy planes appear after 15 seconds\n\n```\npublic class EnemyBossHandler\
+    \ implements ChainHandler {\n    public List<Sprite> create() {\n        Random\
+    \ m = new Random();\n        List<Sprite> spriteList = new ArrayList<Sprite>();\n\
+    \        int x = m.nextInt(canvasWidth - enemyPlaneImage.getWidth());\n      \
+    \  int y = -enemyPlaneImage.getHeight();\n        Sprite enemyPlane = new NewEnemyPlane(x,\
+    \ y, enemyPlaneImage);\n        spriteList.add(enemyPlane);\n        return spriteList;\n\
+    \    }\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_178_0.png)"
+  merge: -1
+  pgno: 178
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_179_0.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_179_1.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_179_2.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_179_3.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_179_4.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_179_5.png)'
+  merge: -1
+  pgno: 179
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_180_0.png)'
+  merge: -1
+  pgno: 180
+- img_proc: true
+  md: "# Sprite.java in package com.chain.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\n\nabstract class Sprite {\n    protected\
+    \ int x; // x coordinate of Canvas\n    protected int y; // y coordinate of Canvas\n\
+    \    protected int width;\n    protected int height;\n    protected BufferedImage\
+    \ image;\n    protected boolean visible;\n\n    public Sprite(int x, int y, BufferedImage\
+    \ image) {\n        this.x = x;\n        this.y = y;\n        this.image = image;\n\
+    \        this.width = this.image.getWidth();\n        this.height = this.image.getHeight();\n\
+    \    }\n\n    public void draw(Graphics g) {\n        g.drawImage(image, this.x,\
+    \ this.y, null);\n    }\n\n    public void move(int distanceX, int distanceY)\
+    \ {\n        this.x = this.x + distanceX;\n        this.y = this.y + distanceY;\n\
+    \    }\n\n    public int getWidth() {\n        return width;\n    }\n\n    public\
+    \ int getHeight() {\n        return height;\n    }\n\n    public int getX() {\n\
+    ```"
+  merge: -1
+  pgno: 181
+- img_proc: true
+  md: "```\nreturn x;\n}\n\npublic void setX(int x) {\n    this .x = x;\n}\n\npublic\
+    \ int getY() {\n    return y;\n}\n\npublic void setY(int y) {\n    this .y = y;\n\
+    }\n\npublic boolean isVisible() {\n    return visible;\n}\n\npublic void setVisible(boolean\
+    \ visible) {\n    this.visible = visible;\n}\n\npublic BufferedImage getImage()\
+    \ {\n    return image;\n}\n```\n\nEnemyPlane.java in package com.chain.game;\n\
+    \n```\nimport java.awt.Graphics;\nimport java.awt.image.BufferedImage;\npublic\
+    \ class EnemyPlane extends Sprite {\n    public EnemyPlane(int x, int y, BufferedImage\
+    \ image) {\n        super (x, y, image);\n    }\n}\n```"
+  merge: -1
+  pgno: 182
+- img_proc: true
+  md: 'ImageCache.java in package com.flyweight.game; In the previous chapter
+
+
+    ChainHandler.java in package com.chain.game;'
+  merge: -1
+  pgno: 183
+- img_proc: true
+  md: "# Enemy1Handler:\n\nList<Sprite> create(): Create 2 enemy planes randomly appearing\
+    \ from the top of the screen\n\nEnemy1Handler.java in package com.chain.game;\n\
+    \n```\nimport java.awt.image.BufferedImage;\nimport java.util.*;\npublic class\
+    \ Enemy1Handler implements ChainHandler {\n    private BufferedImage enemyPlaneImage\
+    \ ;\n    private int canvasWidth;\n\n    public Enemy1Handler(int canvasWidth){\n\
+    \        this.enemyPlaneImage = ImageCache.get(\"enemyPlaneImage\");\n       \
+    \ this.canvasWidth = canvasWidth;\n    }\n\n    @Override\n    public List<Sprite>\
+    \ create() {\n        Random n = new Random();\n        List<Sprite> spriteList\
+    \ = new ArrayList<Sprite>();\n        for (int i=0;i<2;i++){\n            int\
+    \ x = n.nextInt(canvasWidth - enemyPlaneImage.getWidth());\n            int y\
+    \ = -enemyPlaneImage.getHeight();\n            Sprite enemyPlane = new EnemyPlane(x,\
+    \ y, enemyPlaneImage);\n            spriteList.add(enemyPlane);\n        }\n \
+    \       return spriteList;\n    }\n}\n```"
+  merge: -1
+  pgno: 184
+- img_proc: true
+  md: "# Enemy2Handler:\n\nList<Sprite> create(): Create 4 enemy planes randomly appearing\
+    \ from the top of the screen\n\nEnemy2Handler.java in package com.chain.game;\n\
+    \n```\nimport java.awt.image.BufferedImage;\nimport java.util.*;\n\npublic class\
+    \ Enemy2Handler implements ChainHandler {\n    private BufferedImage enemyPlaneImage;\n\
+    \    private int canvasWidth;\n\n    public Enemy2Handler(int canvasWidth) {\n\
+    \        this.enemyPlaneImage = ImageCache.get(\"enemyPlane2\");\n        this.canvasWidth\
+    \ = canvasWidth;\n    }\n\n    @Override\n    public List<Sprite> create() {\n\
+    \        Random n = new Random();\n        List<Sprite> spriteList = new ArrayList<Sprite>();\n\
+    \        for (int i=0;i<4;i++) {\n            int x = n.nextInt(canvasWidth -\
+    \ enemyPlaneImage.getWidth());\n            int y = -enemyPlaneImage.getHeight();\n\
+    \            Sprite enemyPlane = new EnemyPlane(x, y, enemyPlaneImage);\n    \
+    \        spriteList.add(enemyPlane);\n        }\n        return spriteList;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 185
+- img_proc: true
+  md: "# Enemy1Handler:\n\nList<Sprite> create(): Create boss enemy planes randomly\
+    \ appearing from the top of the screen\n\nEnemyBossHandler.java in package com.chain.game;\n\
+    \n```\nimport java.awt.image.BufferedImage;\nimport java.util.*;\n\npublic class\
+    \ EnemyBossHandler implements ChainHandler {\n    private BufferedImage enemyPlaneImage;\n\
+    \    private int canvasWidth;\n\n    public EnemyBossHandler(int canvasWidth){\n\
+    \        this.enemyPlaneImage = ImageCache.get(\"bossImage\");\n        this.canvasWidth\
+    \ = canvasWidth;\n    }\n\n    @Override\n    public List<Sprite> create() {\n\
+    \        Random m = new Random();\n        List<Sprite> spriteList = new ArrayList<Sprite>();\n\
+    \        int x = rn.nextInt(canvasWidth - enemyPlaneImage.getWidth());\n     \
+    \   int y = -enemyPlaneImage.getHeight();\n        Sprite enemyPlane = new EnemyPlane(x,\
+    \ y, enemyPlaneImage);\n        spriteList.add(enemyPlane);\n        return spriteList;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 186
+- img_proc: true
+  md: "# EnemyPlaneChain:\n\n```\nLinkedList<ChainHandler> chainList : all enemy plane\
+    \ in the chainList\nvoid add(ChainHandler chainHandler): add enemy plane to the\
+    \ chainList\nint timeline =45: enemy plane show every 45/15=3 second.\nvoid moveEnemyPlanes():\
+    \ move enemy plane\n```\n\n# EnemyPlaneChain.java in package com.chain.game;\n\
+    \n```\nimport java.awt.Graphics;\nimport java.util.*;\n\npublic class EnemyPlaneChain\
+    \ {\n    private LinkedList<ChainHandler> chainList =new LinkedList<ChainHandler>();\n\
+    \    private int timeline =45;\n    private List<Sprite> enemyPlaneList = new\
+    \ ArrayList<Sprite>();\n\n    public void add(ChainHandler chainHandler){\n  \
+    \      chainList.add(chainHandler);\n    }\n\n    public void moveEnemyPlanes(Graphics\
+    \ g){\n        if (enemyList == null) {\n            return ;\n        }\n   \
+    \     if (timeline >0 && timeline % 15 == 0 && chainList.size()>0){\n        \
+    \    ChainHandler currentChainHandler = chainList.poll();\n            List<Sprite>\
+    \ spriteList= currentChainHandler.create();\n            enemyList.addAll(spriteList);\n\
+    \        }\n        for (int i=0;i<enemyList.size();i++)++){\n```"
+  merge: -1
+  pgno: 187
+- img_proc: true
+  md: '```
+
+    Sprite enemyPlane = enemyPlaneList.get(i);
+
+    enemyPlane.draw(g);
+
+    enemyPlane.move(0, 5);
+
+    }
+
+    timeline -- ;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 188
+- img_proc: true
+  md: "ImageUtil.java in package com.singleton.game; In the previous chapter\nCanvas.java\
+    \ in package com.chain.game;\n\n```\nimport java.awt.*;\nimport java.awt.image.BufferedImage;\n\
+    import java.swing.JPanel;\npublic class Canvas extends JPanel implements Runnable{\n\
+    \    private boolean isRun = true;\n    private int canvasWidth;\n    private\
+    \ int canvasHeight;\n    private EnemyPlaneChain enemyPlaneChain;\n    private\
+    \ boolean isInit = false;\nstatic {\n    ImageCache.put(\"enemyPlane1Image\",\n\
+    \    ImageUtil.loadImage(\"images/enemy_plane1.png\\));\n    ImageCache.put(\"\
+    enemyPlane2Image\",\n    ImageUtil.loadImage(\"images/enemy_plane2.png\\));\n\
+    \    ImageCache.put(\"bossImage\", ImageUtil.loadImage(\"images/boss.png\"));\n\
+    }\npublic Canvas(){\n    this.setLayout(null);\n    this.setBackground(Color.WHITE);\n\
+    \    new Thread(this).start();\n}\nprivate void isIsInit(){\n    enemyPlaneChain\
+    \ = new EnemyPlaneChain();\n    enemyPlaneChain.add(new Enemy1Handler(canvasWidth));\n\
+    \    enemyPlaneChain.add(new Enemy2Handler(canvasWidth));\n    enemyPlaneChain.add(new\
+    \ EnemyBossHandler(canvasWidth));\n}\n```"
+  merge: -1
+  pgno: 189
+- img_proc: true
+  md: "```\n}\nprotected void paintComponent(Graphics g) {\n    this .canvasWidth\
+    \ = this .getWidth();\n    this .canvasHeight = this .getHeight();\n\n    if (!\
+    \ isInit) {\n        isInit();\n        isInit = true ;\n    }\n    super .paintComponent(g);\n\
+    \    enemyPlaneChain.moveEnemyPlanes(g);\n}\n```\n\n```\n@Override\npublic void\
+    \ run() {\n    while (isRun) {\n        try {\n            Thread.sleep(200);\n\
+    \            Canvas.this.repaint();\n        } catch (InterruptedException e)\
+    \ {\n            e.printStackTrace();\n        }\n    }\n}\n```\n\n# 3. . Create\
+    \ a Test class : TestChain.java in package com.chain.game;\n\ncanvas.setFocusable\
+    \ (true) : Set focus to activate keyboard events\ncanvas.requestFocus(): Set focus\
+    \ to activate keyboard events"
+  merge: -1
+  pgno: 190
+- img_proc: true
+  md: '# # Observer Pattern Game
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_191_0.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_191_1.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_191_2.png)'
+  merge: -1
+  pgno: 191
+- img_proc: true
+  md: "```\nprivate void collideCheck(){\n    if(bluePlane.getBullet().collideWith(enemyPlane)){\n\
+    \        enemyPlane.setVisible(false);\n        bluePlane.getBullet().setVisible(false);\n\
+    \    }\n}\n```\n\nObserverData data = new ObserverData();\ndata.setNotifyType(Type.INCREMENT_SCORE);\n\
+    data.setScore(100);\nbluePlane.notifyAll(data);\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_192_0.png)\n\
+    \n```\npublic class PlaneScore implements Observer{\n    public void draw(Graphics\
+    \ g) {\n        g.drawString(String.valueOf(score), x, y);\n    }\n    @Override\n\
+    \    public void update(ObserverData data) {\n        if(data.getNotifyType()\
+    \ == Type.INCREMENT_SCORE) {\n            this.score += data.getScore();\n   \
+    \     }\n    }\n}\n```"
+  merge: -1
+  pgno: 192
+- img_proc: true
+  md: "```\nif(bluePlane.collideWith(enemyPlane)){\n    enemyPlane.setVisible(false);\n\
+    \    bluePlane.setVisible(false);\n```\n\n```\nObserverData data = new ObserverData();\n\
+    data.setNotifyType(NotifyType.PLANE_DESTROTRY);\nbluePlane.notifyAll(data);\n\
+    ```\n\n```\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_193_0.png)\n\n\
+    ```\npublic class PlaneLife extends Sprite implements Observer {\n```\n\n```\n\
+    public void draw(Graphics g) {\nfor(int i=0;i<lifeCount;i++){\n    g.drawImage(this.image,\
+    \ i*(this.width+2), this.canvasHeight-20,null);\n}\n```\n\n```\npublic void update(ObserverData\
+    \ data) {\nif(data.getNotifyType() == NotifyType.PLANE_DESTROTRY){\n    this.lifeCount\
+    \ --;\n}\n```"
+  merge: -1
+  pgno: 193
+- img_proc: true
+  md: '# Observer:
+
+
+    ```
+
+    void update(ObserverData data): Shoot down an enemy plane to notify to increase
+    score points by 100. Our plane collided with an enemy plane to destroy a life.
+
+    ```
+
+
+    # BluePlane:
+
+
+    ```
+
+    void registerObserver(Observer observer): register PlaneLife and PlaneScore as
+    observer.
+
+    void notifyAll(ObserverData data): notify all observer to update ObserverData
+
+    ```'
+  merge: -1
+  pgno: 194
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_195_0.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_195_1.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_195_2.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_195_3.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_195_4.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_195_5.png)
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_195_6.png)'
+  merge: -1
+  pgno: 195
+- img_proc: true
+  md: '# Canvas:
+
+    void collideCheck(): check sprite collide with anther sprite.
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_196_0.png)'
+  merge: -1
+  pgno: 196
+- img_proc: true
+  md: "# NotifyType.java in package com.observer.game;\n\n```\npublic enum NotifyType\
+    \ {\n    INCREMENT_SCORE,\n    PLANE_DESTROY\n}\n```\n\n# ObserverData.java in\
+    \ package com.observer.game;\n\n```\npublic class ObserverData {\n    private\
+    \ int score;\n    private NotifyType notifyType;\n\n    public int getScore()\
+    \ {\n        return score;\n    }\n    public void setScore(int score) {\n   \
+    \     this.score = score;\n    }\n    public NotifyType getNotifyType() {\n  \
+    \      return notifyType;\n    }\n    public void setNotifyType(NotifyType notifyType)\
+    \ {\n        this.notifyType = notifyType;\n    }\n}\n```\n\n# Observer:\n\nvoid\
+    \ update(ObserverData data): Shoot down an enemy plane to notify to increase score\
+    \ points by 100. Our plane collided with an enemy plane to destroy a life.\n\n\
+    # Observer.java in package com.observer.game;\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_197_0.png)"
+  merge: -1
+  pgno: 197
+- img_proc: true
+  md: "```\npublic interface Observer {\n    public void update(ObserverData data);\n\
+    }\n```"
+  merge: -1
+  pgno: 198
+- img_proc: true
+  md: "ImageCache.java in package com.flyweight.game; In the previous chapte r\n\n\
+    PlaneLife.java in package com.observer.game;\n\n```\nimport java.awt.Graphics;\n\
+    public class PlaneLife extends Sprite implements Observer{\n    protected int\
+    \ lifeCount = 3;\n    private int canvasWidth;\n    private int canvasHeight;\n\
+    \n    public PlaneLife(int x, int y, int canvasWidth, int canvasHeight) {\n  \
+    \      super(x, y, ImageCache.get(\"bluePlaneLifeImage\"));\n        this.canvasWidth\
+    \ = canvasWidth;\n        this.canvasHeight = canvasHeight;\n    }\n\n    public\
+    \ void draw(Graphics g){\n        for (int i =0;i<lifeCount; i++){\n         \
+    \   g.drawImage(this.image , i*(this.width +2), this.canvasHeight -20,null);\n\
+    \        }\n    }\n\n    @Override\n    public void update(ObserverData data)\
+    \ {\n        if (data.getNotifyType() == NotifyType.PLANE_DESTROY) {\n       \
+    \     this.lifeCount --;\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 199
+- img_proc: true
+  md: "PlaneScore.java in package com.observer.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\npublic class PlaneScore implements Observer{\n\
+    \    protected int x; // x coordinate of Canvas\n    protected int y; // y coordinate\
+    \ of Canvas\n    protected int score;\n    private int canvasWidth;\n    private\
+    \ int canvasHeight;\n\n    public PlaneScore(int x, int y,int canvasWidth, int\
+    \ canvasHeight) {\n        this.canvasWidth = canvasWidth;\n        this.canvasHeight\
+    \ = canvasHeight;\n        this.x = canvasWidth-30;\n        this.y = canvasWidth-10;\n\
+    \    }\n\n    public void draw(Graphics g) {\n        g.drawString(String.valueOf(score),\
+    \ x, y);\n    }\n\n    @Override\n    public void update(ObserverData data) {\n\
+    \        if (data.getType() == NotifyType.INCREMENT_SCORE) {\n            this.score\
+    \ +=data.getScore();\n        }\n    }\n\n    public void setX(int x) {\n    \
+    \    this.x = x;\n    }\n\n    public void setY(int y) {\n        this.y = y;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 200
+- img_proc: true
+  md: '```
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 201
+- img_proc: true
+  md: "# RedBullet.java in package com.observer.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\npublic class RedBullet extends Sprite {\n\
+    \n    public RedBullet(int x, int y) {\n        super(x, y, ImageCache.get(\"\
+    redBulletImage\"));\n    }\n\n    public void draw(Graphics g) {\n        if (this.isVisible())\
+    \ {\n            super.draw(g);\n        }\n    }\n\n    public void move(int\
+    \ distanceX, int distanceY) {\n        this.x = this.x + distanceX;\n        this.y\
+    \ = this.y + distanceY;\n        if (this.y + this.height <=0) {\n           \
+    \ this.setVisible(false);\n        }\n    }\n}\n```\n\n# EnemyPlane.java in package\
+    \ com.observer.game;\n\n```\nimport java.awt.Graphics;\nimport java.awt.image.BufferedImage;\n\
+    public class EnemyPlane extends Sprite {\n\n    public EnemyPlane(int x, int y)\
+    \ {\n        super(x, y, ImageCache.get(\"enemyPlaneImage\"));\n    }\n\n    public\
+    \ void draw(Graphics g) {\n        if (this.isVisible()) {\n    }\n}\n```"
+  merge: -1
+  pgno: 202
+- img_proc: true
+  md: "```\ng.drawImage(image, this .x, this .y, null);\n  }\n}\n```"
+  merge: -1
+  pgno: 203
+- img_proc: true
+  md: '# Sprite.java in package com.observer.game;'
+  merge: -1
+  pgno: 204
+- img_proc: true
+  md: "# BluePlane.java in packageCache com.observer.game;\n\n```\nimport java.util.*;\n\
+    public class BluePlane extends Sprite{\n    protected RedBullet bullet;\n    protected\
+    \ List<Observer> observerList=new\n    ArrayList<Observer>()=();\n    private\
+    \ int canvasWidth;\n    private int canvasHeight;\n\n    public BluePlane(int\
+    \ x, int y) {\n        super (x, y, ImageCache.get(\"bluePlaneImage\\));\n   \
+    \ }\n\n    public void loadBullet(RedBullet bullet){\n        this.bullet = bullet;\n\
+    \    }\n\n    public void fireBullet(){\n        if (bullet.isVisible(){\n   \
+    \         int x = this.x +this.width /2-bullet.getWidth()/2;\n            int\
+    \ y = this.y - bullet.getHeight();\n            bullet.setX(x);\n            bullet.setY(y);\n\
+    \            bullet.setVisible(true );\n        }\n    }\n\n    public void moveBullet(){\n\
+    \        if (this.bullet.isVisible(){\n            this.bullet.move(0,-5);\n \
+    \       }\n    }\n\n    public void registerObserver(Observer observer) {\n  \
+    \      observerList.add(observer);\n    }\n\n    public void notifyAll(ObserverData\
+    \ data){\n```"
+  merge: -1
+  pgno: 205
+- img_proc: true
+  md: "```\nfor (int i=0;i<observerList .size();i++){\n    Observer observer=observerList\
+    \ .get(i);\n    observer.update(data);\n}\n\npublic RedBullet getBullet(){\n \
+    \   return this .bullet ;\n}\n\n```"
+  merge: -1
+  pgno: 206
+- img_proc: true
+  md: "ImageUtil.java in package com.singleton.game; In the previous chapter r\n\n\
+    Canvas.java in package com.observer.game;\n\n```\nimport java.awt.*;\nimport java.awt.event.*;\n\
+    import java.awt.image.BufferedImage;\nimport java.io.*;\nimport javax.imageio.ImageIO;\n\
+    import javax.swing.*;\n\npublic class Canvas extends JPanel implements Runnable\
+    \ {\n    private boolean isRun = true ;\n    private BluePlane bluePlane;\n  \
+    \  private EnemyPlane enemyPlane;\n    private PlaneLife planeLife;\n    private\
+    \ PlaneScore planeScore ;\n    private int canvasWidth ;\n    private int imageHeight;\n\
+    \    private boolean isnit = false ;\n\n    static {\n        ImageCache.put(\"\
+    redBulletImage\", ImageUtil.loadImage(\"images/red_bullet.png\\));\n        ImageCache.put(\"\
+    enemyPlaneImage\", ImageUtil.loadImage(\"images/enemy_plane.png\\));\n       \
+    \ ImageCache.put(\"bluePlaneImage\", ImageUtil.loadImage(\"images/blue_plane.png\\\
+    ));\n        ImageCache.put(\"bluePlaneLifeImage\", ImageUtil.loadImage(\"images/blue_plane_small.png\\\
+    ));\n    }\n\n    public Canvas() {\n        this.setLayout(null);\n        this\
+    \ .setBackground(Color.WHITE);\n    }\n```"
+  merge: -1
+  pgno: 207
+- img_proc: true
+  md: "```\npublic void init(){\n    enemyPlane = new enemyPlane(120, 0);\n    enemyPlane\
+    \ .setVisible(true );\n\n    bluePlane = new BluePlane(0, 0);\n    bluePlane.setX(this.canvasWidth\
+    \ / 2 - bluePlane.getWidth()/2);\n    bluePlane.setY(this.canvasHeight - bluePlane.getHeight()\
+    \ - 30);\n\n    bluePlane.loadBullet(new RedBullet(-100,-100));\n    bluePlane.setVisible(true\
+    \ );\n\n    planeLife = new PlaneLife(0, 0, canvasWidth , canvasHeight);\n   \
+    \ bluePlane.registerObserver(planeLife );\n\n    planeScore=new PlaneScore(0,0,canvasWidth\
+    \ ,canvasHeight);\n    bluePlane.registerObserver(planeScore );\n\n    new Thread(\
+    \ this ).start();\n    this.addKeyListener(new KeyAdapter() {\n        public\
+    \ void keyPressed(KeyEvent e) {\n            int keyCode = e.getKeyCode();\n \
+    \           if (keyCode == KeyEvent.VK_UP) {\n                bluePlane .move(0,\
+    \ -6);\n            } else if (keyCode == KeyEvent.VK_DOWN) {\n              \
+    \  bluePlane.move(0, 6);\n            } else if (keyCode == KeyEvent.VK_RIGHT)\
+    \ {\n                bluePlane .move(0, 6);\n            } else if (keyCode ==\
+    \ KeyEvent.VK_LEFT) {\n                bluePlane.move(-6, 0);\n            } else\
+    \ if (keyCode == KeyEvent.VK_ENTER) {\n                bluePlane .fireBullet();\n\
+    \            }\n        }\n        Canvas.this .repaint();\n    });\n```"
+  merge: -1
+  pgno: 208
+- img_proc: true
+  md: "```\n));\n}protected void paintComponent(Graphics g) {\n    this.canvasWidth\
+    \ = this.getWidth();\n    this.canvasHeight = this.getHeight();\n    if (!isInit)\
+    \ {\n        init();\n        isInit = true;\n    }\n    super.paintComponent(g);\n\
+    \    bluePlane.draw(g);\n    bluePlane.getBullet().draw(g);\n    enemyPlane.draw(g);\n\
+    \    planeLife.draw(g);\n    planeScore.draw(g);\n}\n```\n\n```\nprivate void\
+    \ collideCheck(){\n    if (bluePlane.getBullet().collideWith(enemyPlane )) {\n\
+    \        enemyPlane.setVisible(false);\n        bluePlane.getBullet().setVisible(false);\n\
+    \n        ObserverData data = new ObserverData();\n        data.setNotifyType(NotifyType.INCREMENT_SCORE);\n\
+    \        data.setScore(100);\n        bluePlane.notifyAll(data);\n}\n```\n\n```\n\
+    if (bluePlane.collideWith(enemyPlane )) {\n    enemyPlane.setVisible(false);\n\
+    \    bluePlane.setVisible(false);\n\n    ObserverData data = new ObserverData();\n\
+    \    data.setNotifyType(NotifyType.PLANE_DESTROTRY);\n    bluePlane.notifyAll(data);\n\
+    ```"
+  merge: -1
+  pgno: 209
+- img_proc: true
+  md: "```\nbluePlane.setX(this.canvasWidth /2 - bluePlane\ngetWidth()/2);\nbluePlane.setY(this.canvasHeight\
+    \ - bluePlane\nGetHeight() - 30);\n}\nublic void run() {\n  while (isRun) {\n\
+    \    try {\n      enemyPlane.move(0,5);\n      collideCheck();\n      bluePlane.moveBullet();\n\
+    \      Thread.sleep(200);\n      Canvas.this.repaint();\n    } catch (InterruptedException\
+    \ e) {\n      e.printStackTrace();\n    }\n  }\n}\n```\n\n# 3. Create a Test class\
+    \ : TestObserver.java in package com.observer.game;\n\ncanvas.setFocusable(true)\
+    \ : Set focus to activate keyboard events canvas.requestFocus(); : Set to activate\
+    \ keyboard events\n\n```\nimport java.awt.BorderLayout;\nimport javax.swing.JFrame\n\
+    p class TestObserver {\n  public static void main(String[] args) {\n    JFrame\
+    \ frame = new JFrame(\"Design Pattern Observer \");\n    Canvas canvas = new Canvas();\n\
+    \    frame.add(canvas, BorderLayout.CENTER);\n    frame.setSize(300, 350);\n \
+    \   canvas.setFocusable(true );\n  }\n```"
+  merge: -1
+  pgno: 210
+- img_proc: true
+  md: '```
+
+    frame.setVisible(true );
+
+    canvas.requestFocus();
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 211
+- img_proc: true
+  md: '# Mediator Pattern Principle
+
+
+    Mediator Pattern : Defines simplified communication between classes. Define an
+    object that encapsulates how a set of objects interact. Mediator promotes loose
+    coupling by keeping objects from referring to each other explicitly, and it lets
+    you vary their interaction independently.
+
+
+    +   1. Mediator plays a regulatory role in gaming systems, explosion systems,
+    and media systems
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_212_0.png)'
+  merge: -1
+  pgno: 212
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_213_0.png)'
+  merge: -1
+  pgno: 213
+- img_proc: true
+  md: "Media.java in package com.mediator.principle;\n\n```\nimport java.awt.Graphics;\n\
+    public interface Media {\n    public void action(int x, int y);\n}\n```\n\nBom.java\
+    \ in package com.mediator.principle;\n\n```\nimport java.awt.Graphics;\npublic\
+    \ class Bom implements Media {\n    public Bom() {\n    }\n    @Override\n   \
+    \ public void action(int x, int y) {\n        System.out.println(\"show a bom\
+    \ image in (\" +x+\", \" \" +y+\")\\n    }\n}\n```\n\nBomMusic.java in package\
+    \ com.mediator.principle;\n\n```\npublic class BomMusic implements Runnable, Media\
+    \ {\n    public void run() {\n        System.out.println(\"Play explosion audio\
+    \ sound\");\n    }\n    @Override\n    public void action(int x, int y) {\n  \
+    \      new Thread(this).start();\n    }\n}\n```"
+  merge: -1
+  pgno: 214
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 215
+- img_proc: true
+  md: "# Mediator.java in package com.mediator.principle;\n\n```\npublic interface\
+    \ Mediator{\n    public void handle(int x, int y);\n}\n```\n\n# MediatorImpl.java\
+    \ in package com.mediator.principle;\n\n```\npublic class MediatorImpl implements\
+    \ Mediator{\n    private Media bom ;\n    private Media bomMusic ;\n    public\
+    \ MediatorImpl(){\n        bom = new Bom();\n        bomMusic = new BomMusic();\n\
+    \    }\n    public void handle(int x, int y){\n        bom.action(x, y);\n   \
+    \     bomMusic.action(x, y);\n    }\n```\n\n# 2. Create a Test class : TestMediator.java\
+    \ in package com.mediacor.principle;\n\n```\npublic class TestMediator {\n   \
+    \ public static void main(String[] args) {\n        Mediator mediator = new MediatorImpl();\n\
+    \        mediator.handle(100, 100);\n    }\n```\n\nResult:\nShow a bom image in\
+    \ (100 , 100)"
+  merge: -1
+  pgno: 216
+- img_proc: true
+  md: Play explosion audio sound
+  merge: -1
+  pgno: 217
+- img_proc: true
+  md: "# Mediator Pattern Game\n\n```\nprivate void collideCheck(Graphics g) {\n \
+    \   if(bluePlane.getBullet().collideWith(enemyPlane)){\n        enemyPlane.setVisible(false);\n\
+    \        bluePlane.getBullet().setVisible(false);\n        mediator.handle(g,\
+    \ enemyPlane.getX(), enemyPlane.getY());\n    }\n    if(bluePlane.collideWith(enemyPlane)){\n\
+    \        enemyPlane.setVisible(false);\n        bluePlane.setVisible(false);\n\
+    \        mediator.handle(g, enemyPlane.getX(), enemyPlane.getY());\n    }\n}\n\
+    ```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_218_0.png)"
+  merge: -1
+  pgno: 218
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_219_0.png)'
+  merge: -1
+  pgno: 219
+- img_proc: true
+  md: "```\nclass Runnable {\n  void run()\n}\n```\n\n```\nclass Canvas {\n  boolean\
+    \ isRun = true\n  BluePlane bluePlane\n  EnemyPlane enemyPlane\n  PlaneLife planeLife\n\
+    \  PlaneScore planeScore\n  boolean isInit = false\n  int canvasWidth\n  int canvasHeight\n\
+    \  Canvas()\n  void paintComponent(Graphics g)\n  void init()\n  void collideCheck()\n\
+    }\n```\n\n```\nclass Sprite {\n  String name\n  int x\n  int y\n  Sprite(String\
+    \ name, int x, int y)\n  draw()\n  boolean collideWith(Sprite sprite)\n}\n```\n\
+    \n```\nclass BluePlane {\n  RedBullet bullet\n  void loadBullet(RedBullet bullet)\n\
+    \  void fireBullet()\n  void moveBullet()\n}\n```\n\n```\nclass RedBullet {\n\
+    \  void draw(Graphics g)\n  void move(int distanceX, int distanceY)\n}\n```\n\n\
+    ```\nclass EnemyPlane {\n  void draw(Graphics g)\n}\n```"
+  merge: -1
+  pgno: 220
+- img_proc: true
+  md: '# Sprite.java in **package com.mediator.game**;'
+  merge: -1
+  pgno: 221
+- img_proc: true
+  md: "Media.java in package com.mediator.game;\n\n```\nimport java.awt.Graphics;\n\
+    \npublic interface Media {\n    public void action(Graphics g, int x, int y);\n\
+    }\n```\n\nImageCache.java in package com.flyweight.game; In the previous chapter\n\
+    \nBom.java in package com.mediator.game;\n\n```\nimport java.awt.Graphics;\n\n\
+    public class Bom extends Sprite implements Media {\n    public Bom() {\n     \
+    \   super (0, 0, ImageCache.get(\"bomImage\"));\nn    }\n\n    @Override\n   \
+    \ public void action(Graphics g, int x, int y) {\n        this.x = x;\n      \
+    \  this.y = y;\n        super.draw(g);\n        this.setVisible(false);\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 222
+- img_proc: true
+  md: "# PlayAudio.java in package com.mediator.game;\n\n```\nimport java.io.*;\n\
+    import javax.sound.sampled.*;\nclass PlayAudio {\n    private String filename;\n\
+    \n    public PlayAudio(String wavfile) {\n        filename = wavfile;\n    }\n\
+    \n    public void run() {\n        File soundFile = new File(filename);\n    \
+    \    AudioInputStream audioInputStream = null;\n        SourceDataLine auline\
+    \ = null;\n        try {\n            audioInputStream = AudioSystem.getAudioInputStream(soundFile);\n\
+    \            AudioFormat format = audioInputStream.getFormat();\n            DataLine.Info\
+    \ info = new DataLine.Info(SourceDataLine.class, format);\n            auline\
+    \ = (SourceDataLine) AudioSystem.getLine(info);\n            auline.open(format);\n\
+    \            auline.start();\n            int nBytesRead = 0;\n            byte[]\
+    \ abData = new byte[1024];\n            while (nBytesRead != -1) {\n         \
+    \       nBytesRead = audioInputStream.read(abData, 0, abData.length);\n      \
+    \          if (nBytesRead >= 0)\n                    auline.write(abData, 0, nBytesRead);\n\
+    \            }\n        } catch (Exception e) {\n            e.printStackTrace();\n\
+    \            return;\n        }\n```"
+  merge: -1
+  pgno: 223
+- img_proc: true
+  md: "```\n} finally {\n    auline.drain();\n    auline.close();\n  }\n}\n```"
+  merge: -1
+  pgno: 224
+- img_proc: true
+  md: "# BomMusic.java in package com.mediator.game;\n\n```\nimport java.applet.AudioClip;\n\
+    import java.awt.Graphics;\nimport java.net.URL;\nimport javax.swing.Applet;\n\
+    public class BomMusic implements Runnable, Media\n{\n    public void run()\n \
+    \   {\n        URL url = this .getClass().getResource(\"/media/hit.wav\");\n \
+    \       AudioClip audioClip = Applet.newAudioClip(url);\n        audioClip.play();\n\
+    \    }\n\n    public void action(Graphics g, int x, int y) {\n        new Thread(this).start();\n\
+    \    }\n}\n```\n\n# Mediator.java in package com.mediator.game;\n\n```\nimport\
+    \ java.awt.Graphics;\npublic interface Mediator {\n    public void handle(Graphics\
+    \ g, int x, int y);\n}}\n```\n\n# MediatorImpl.java in package com.mediator.game;\n\
+    \n```\nimport java.awt.Graphics;\npublic class MediatorImpl implements Mediator{\n\
+    \    private Bom bom;\n    private BomMusic bomMusic;\n    public MediatorImpl(){\n\
+    \        bom = new Bom();\n}\n```"
+  merge: -1
+  pgno: 225
+- img_proc: true
+  md: "```\nbomMusic = new BomMusic();\n}\n@Override\npublic void handle(Graphics\
+    \ g, int x, int y) {\n    bom.action(g, x, y);\n    bomMusic.action(g, x, y);\n\
+    }\n}\n```"
+  merge: -1
+  pgno: 226
+- img_proc: true
+  md: "PlaneScore.java in package com.observer.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\npublic class PlaneScore implements Observer{\n\
+    \    protected int x; // x coordinate of Canvas\n    protected int y; // y coordinate\
+    \ of Canvas\n    protected int score;\n    private int canvasWidth;\n    private\
+    \ int canvasHeight;\n\n    public PlaneScore(int x, int y,int canvasWidth, int\
+    \ canvasHeight) {\n        this.canvasWidth = canvasWidth;\n        this.canvasHeight\
+    \ = canvasHeight;\n        this.x = canvasWidth-30;\n        this.y = canvasHeight-10;\n\
+    \    }\n\n    public void draw(Graphics g) {\n        g.drawString(String.valueOf(score),\
+    \ x , y);\n    }\n\n    @Override\n    public void update(ObserverData data) {\n\
+    \        if (data.getNotifyType() == NotifyType.INCREMENT_SCORE) {\n         \
+    \   this.score +=data.getScore();\n        }\n    }\n\n    public void setX(int\
+    \ x) {\n        this.x = x;\n    }\n\n    public void setY(int y) {\n        this.y\
+    \ = y;\n    }\n}\n```"
+  merge: -1
+  pgno: 227
+- img_proc: true
+  md: '```
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 228
+- img_proc: true
+  md: "# RedBullet.java in package com.observer.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\npublic class RedBullet extends Sprite{\n\
+    \n    public RedBullet(int x, int y) {\n        super (x, y, ImageCache.get(\"\
+    redBulletImage\"));\n    }\n\n    public void draw(Graphics g){\n        if (this.isVisible(){\n\
+    \            super.draw();\n        }\n    }\n\n    public void move(int distanceX,\
+    \ int distanceY) {\n        this.x = this.x + distanceX;\n        this.y = this.y\
+    \ . distanceY;\n        if (this.y + this.height <=0){\n            this.setVisible(false);\n\
+    \        }\n    }\n}\n```\n\n# EnemyPlane.java in package com.observer.game;\n\
+    \n```\nimport java.awt.Graphics;\nimport java.awt.image.BufferedImage;\npublic\
+    \ class EnemyPlane extends Sprite {\n\n    public EnemyPlane(int x, int y) {\n\
+    \        super (x, y, ImageCache.get(\"enemyPlaneImage\"));\n    }\n\n    public\
+    \ void draw(Graphics g) {\n```"
+  merge: -1
+  pgno: 229
+- img_proc: true
+  md: "```\nif (this .isVisible()) {\n    g.drawImage(image, this .x, this .y , null\
+    \ );n}\n\n```"
+  merge: -1
+  pgno: 230
+- img_proc: true
+  md: "# RedBullet.java in package com.mediator.game;\n\n```\nimport java.awt.Graphics;\n\
+    import java.awt.image.BufferedImage;\n\npublic class RedBullet extends Sprite{\n\
+    \    public RedBullet(int x, int y) {\n        super (x, y, ImageCache.get(\"\
+    redBulletImage\"));\n    }\n\n    public void draw(Graphics g){\n        if (this.isVisible(){\n\
+    \            super.draw(g);\n        }\n    }\n\n    public void move(int distanceX,\
+    \ int distanceY){\n        this.x = this.x + distanceX;\n        this.y = this.y\
+    \ + distanceY;\n        if (this.y + this.height <=0){\n            this.setVisible(false);\n\
+    \        }\n    }\n}\n```\n\n# EnemyPlane.java in package com.mediator.game;\n\
+    \n```\nimport java.awt.Graphics;\nimport java.awt.image.BufferedImage;\n\npublic\
+    \ class EnemyPlane extends Sprite {\n    public EnemyPlane(int x, int y) {\n \
+    \       super (x, y, ImageCache.get(\"enemyPlaneImage\"));\n    }\n}\n```"
+  merge: -1
+  pgno: 231
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 232
+- img_proc: true
+  md: "# BluePlane.java in package com.mediator.game;\n\n```\nimport java.util.*;\n\
+    public class BluePlane extends Sprite{\n    protected RedBullet bullet;\n    private\
+    \ int canvasWidth;\n    private int canvasHeight;\n\n    public BluePlane(int\
+    \ x, int y) {\n        super(x, y, ImageCache.get(\"bluePlaneImage\"));\n    }\n\
+    \n    public void loadBullet(RedBullet bullet) {\n        this.bullet = bullet;\n\
+    \    }\n\n    public void fireBullet() {\n        if (tbullet.isVisible({\n  \
+    \          int x = this.x + this.width/2-bullet.getWidth()/2;\n            int\
+    \ y = this.y - bullet.getHeight();\n            bullet.setX(x);\n            bullet.setY(y);\n\
+    \            bullet.setVisible(true);\n        });\n    }\n\n    public void moveBullet()\
+    \ {\n        if (this.bullet.isVisible({\n            this.bullet.move(0, -5);\n\
+    \        });\n    }\n\n    public RedBullet getBullet() {\n        return this.bullet;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 233
+- img_proc: true
+  md: "# Canvas.java in package com.mediator.game;\n\n```\nimport java.awt.*;\nimport\
+    \ java.awt.event.*;\nimport java.awt.image.BufferedImage;\nimport java.io.*;\n\
+    import javax.imageio.ImageIO;\nimport javax.swing.*;\n\npublic class Canvas extends\
+    \ JPanel Runnable {\n    private boolean isRun = true ;\n    private BluePlane\
+    \ bluePlane;\n    private EnemyPlane enemyPlane;\n    private int canvasWidth;\n\
+    \    private int canvasHeight;\n    private boolean isInit = false;\n    private\
+    \ Mediator mediator;\n\n    static {\n        ImageCache.put(\"redBulletImage\"\
+    , ImageUtil.loadImage(\"images/red_bullet.png\"));\n        ImageCache.put(\"\
+    enemyPlaneImage\", ImageUtil.loadImage(\"images/enemy_plane.png\"));\n       \
+    \ ImageCache.put(\"bluePlaneImage\", ImageUtil.loadImage(\"images/blue_plane.png\"\
+    ));\n        ImageCache.put(\"bomImage\", ImageUtil.loadImage(\"images/bom.png\"\
+    ));\n    }\n\n    public Canvas() {\n        this .setLayout(null);\n        this\
+    \ .setBackground(Color.WHITE);\n    }\n\n    public void init(){\n        enemyPlane\
+    \ = new EnemyPlane(120, 0);\n        enemyPlane .setVisible(true);\n    }\n}\n\
+    ```"
+  merge: -1
+  pgno: 234
+- img_proc: true
+  md: "```\nbluePlane = new BluePlane(0, 0);\nbluePlane .setX(this.canvasWidth /2\
+    \ - bluePlane.getWidth()/2);\nbluePlane .setY(this.canvasHeight - bluePlane.getHeight()\
+    \ - 30);\nbluePlane.loadBullet(new RedBullet(-100,-100));\nbluePlane.setVisible(true)\
+    \ );\nmediator = new MediatorImpl();\nnew Thread(this ).start();\n```\n\n```\n\
+    this .addKeyListener(new KeyAdapter({\n    public void keyPressed(KeyEvent e)\
+    \ {\n        int keyCode = e.getKeyCode();\n        if (keyCode == KeyEvent.VK_UP){\n\
+    \            bluePlane.move(0, -6);\n        } else if (keyCode == KeyEvent.VK_DOWN){\n\
+    \            bluePlane.move(0, 6);\n        } else if (keyCode == KeyEvent.VK_RIGHT){\n\
+    \            bluePlane.move(6, 0);\n        } else if (keyCode == KeyEvent.VK_LEFT){\n\
+    \            bluePlane.move(-6, 0);\n        } else if (keyCode == KeyEvent.VK_ENTER){\n\
+    \            bluePlane.fireBullet();\n        }\n    }\n});\nprotected void paintComponent(Graphics\
+    \ g) {\n    this.canvasWidth = this.getWidth();\n    this.canvasHeight = this.getHeight();\n\
+    \    if (!isInit) {\n```"
+  merge: -1
+  pgno: 235
+- img_proc: true
+  md: '```
+
+    init();
+
+    islInit = true ;
+
+    }
+
+    super .paintComponent(g);
+
+    collideCheck(g);
+
+    bluePlane .draw(g);
+
+    bluePlane .getBullet().draw(g);
+
+    enemyPlane .draw(g);
+
+    }
+
+    ```
+
+
+    ```
+
+    private void collideCheck(Graphics g){
+
+    if (bluePlane .getBullet().collideWith(enemyPlane )) {
+
+    enemyPlane .setVisible(false);
+
+    bluePlane .getBullet().setVisible(false);
+
+    mediator .handle(g, enemyPlane .getX(), enemyPlane
+
+    getY());
+
+    if (bluePlane .collideWith(enemyPlane )) {
+
+    enemyPlane .setVisible(false);
+
+    bluePlane .setVisible(false);
+
+    mediator.handle(g)}
+
+    ```
+
+
+    ```
+
+    @Override
+
+    public void run() {
+
+    while (isRun) {
+
+    try {
+
+    enemyPlane .move(0, 5);
+
+    bluePlane .moveBullet();nThread.sleep(200);
+
+    Canvas.this .repaint();
+
+    } catch (InterruptedException e) {
+
+    ```'
+  merge: -1
+  pgno: 236
+- img_proc: true
+  md: "```\n    e.printStackTrace();\n  }\n  }\n}\n```\n\n# 3 . Create a Test class\
+    \ : TestMediator.java in package com.mediator.game;\n\ncanvas.setFocusable( true\
+    \ ) : Set focus to activate keyboard events\ncanvas.requestFocus(): Set focus\
+    \ to activate keyboard events\n\n```\nimport java.awt.BorderLayout;\nimport javax.swing.JFrame;\n\
+    \npublic class TestObserver {\n    public static void main(String[] args) {\n\
+    \        JFrame frame = new JFrame(\"Design Pattern Observer\");\n        Canvas\
+    \ canvas = new Canvas();\n        frame.add(canvas, BorderLayout.CENTER);\n  \
+    \      frame.setSize(300, 350);\n        canvas.setFocusable(true);\n        frame.setVisible(true);\n\
+    \        canvas.requestFocus();\n    }\n}\n```"
+  merge: -1
+  pgno: 237
+- img_proc: true
+  md: '# State Pattern Game
+
+
+    State Pattern :
+
+    In a variety of states, a manager determines the different needs of the customer’s
+    needs in different states
+
+
+    +   1. Background scroll on canvas from one state to anther state
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_238_0.png)'
+  merge: -1
+  pgno: 238
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_239_0.png)'
+  merge: -1
+  pgno: 239
+- img_proc: true
+  md: '# TiledLayer:
+
+
+    A TiledLayer is a visual element composed of a grid of cells that can be filled
+    with a set of tile images. This class allows large virtual layers to be created
+    without the need for an extremely large Image. This technique is commonly used
+    in 2D gaming platforms to create very large scrolling backgrounds
+
+
+    # Tiles:
+
+
+    The tiles used to fill the TiledLayer''s cells are provided in a single Image
+    object. The Image is broken up into a series of equally-sized tiles; the tile
+    size is specified along with the Image. As shown in the figure below, the same
+    tile set can be stored in several different arrangements depending on what is
+    the most convenient for the game developer.
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_240_0.png)
+
+
+    Each tile is assigned a unique index number. The tile located in the upper-left
+    corner of the Image is assigned an index of 1. The remaining tiles are then numbered
+    consecutively in row-major order (indices are assigned across the first row, then
+    the second row, and so on).'
+  merge: -1
+  pgno: 240
+- img_proc: true
+  md: "# Cells\n\nThe TiledLayer's grid is made up of equally sized cells; the number\
+    \ of rows and columns in the grid are specified in the constructor, and the physical\
+    \ size of the cells is defined by the size of the tiles.The contents of each cell\
+    \ is specified by means of a tile index;\n\n```\nprivate static int[][][] maps\
+    \ = {\n  {1, 2, 1, 3, 1, 4, 5, 1, 1},\n  {1, 4, 1, 3, 1, 1, 1, 2, 5},\n  {1, 1,\
+    \ 5, 1, 2, 1, 3, 1, 1}\n}\n```\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_241_0.png)"
+  merge: -1
+  pgno: 241
+- img_proc: true
+  md: "```\nprivate static int[][][] maps = {\n  {1, 2, 1, 3, 1, 4, 5, 1, 1},\n  {1,\
+    \ 4, 1, 3, 1, 1, 1, 2, 5},\n  {1, 1, 5, 1, 1, 2, 3, 1, 1}\n}\n```\n\ntiles\n\n\
+    +   1\n2\n3\n4\n5\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_242_0.png)"
+  merge: -1
+  pgno: 242
+- img_proc: true
+  md: "# Use a two-dimensional array to clip the image into tiles and spread it on\
+    \ the background\n\n![](img/1a3fab3d51f12ead42a519c23c1a64ba_243_0.png)\n\n```\n\
+    private static int[][] maps\n\nfor(int i=0;i<maps.length;i++)\n{\n    for(int\
+    \ j=0;j<maps[i].length;j++)\n    {\n        int x=i*tiledWidth;\n        int y=j*tiledHeight;\n\
+    \        g.setClip(x,y,tiledWidth,tiledHeight);\n        g.drawImage(image, x-(maps[i].length-1)*tiledWidth,\
+    \ y, null);\n    }\n}\ng.setClip(0,0,this.canvasWidth,this.canvasHeight - viewY);\n\
+    ```"
+  merge: -1
+  pgno: 243
+- img_proc: true
+  md: '# Scrolling backgrounds:
+
+
+    translate(x, y): Translates the origin of the graphics context to the point (x,
+    y). Modifies this graphics context so that its new origin corresponds to the point
+    (x, y) in this graphics context''s original coordinate system.
+
+
+    ```
+
+    viewY = -this.canvasHeight
+
+    g.translate(0,viewY)
+
+    viewY++
+
+    translate(0,viewY)
+
+    Scroll the backgrounds
+
+    ```
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_244_0.png)'
+  merge: -1
+  pgno: 244
+- img_proc: true
+  md: '![](img/1a3fab3d51f12ead42a519c23c1a64ba_245_0.png)'
+  merge: -1
+  pgno: 245
+- img_proc: true
+  md: "```\nclass Runnable {\n  void run()\n}\n\nclass Canvas extends Runnable {\n\
+    \  boolean isRun = true;\n  BluePlane bluePlane;\n  TiledLayer mapLayer;\n  MapContext\
+    \ mapContext;\n  int screenY;\n  boolean isInit = false;\n  int canvasWidth;\n\
+    \  int canvasHeight;\n\n  Canvas();\n  void paintComponent(Graphics g);\n  void\
+    \ init();\n  void drawMap(Graphics g);\n}\n```"
+  merge: -1
+  pgno: 246
+- img_proc: true
+  md: "# TiledLayer:\n\n| BufferedImage image : the Image to use for creating the\
+    \ tile set. | int tiledWidth : the width in pixels of a single tile. | int tiledHeight\
+    \ : the height in pixels of a single tile. | int row : the height of the TiledLayer,\
+    \ expressed as a number of cells. | int col : the width of the TiledLayer, expressed\
+    \ as a number of cells. |\n\n# TiledLayer.java in package com.state.game;\n\n\
+    ```\nimport java.awt.Graphics;\nimport java.awt.image.BufferedImage;\npublic abstract\
+    \ class TiledLayer {\n\n    protected BufferedImage image;\n    protected int\
+    \ [][] maps;\n    protected int tiledWidth;\n    protected int tiledHeight;\n\
+    \    protected int col,row;\n    protected int viewX,viewY;\n\n    public TiledLayer(BufferedImage\
+    \ image, int[][] maps, int tiledWidth, int col, int row) {\n        this.image\
+    \ = image;\n        this.maps = maps;\n        this.tiledWidth = tiledWidth;\n\
+    \        this.tiledHeight = tiledHeight;\n        this.col = col;\n        this.row\
+    \ = row;\n    }\n\n    public void setViewport(int viewX,int viewY) {\n      \
+    \  this.viewX=viewX;\n        this.viewY=viewY;\n    }\n```"
+  merge: -1
+  pgno: 247
+- img_proc: true
+  md: "```\n}\npublic abstract void draw(Graphics g);\n\npublic int[][] getMaps()\
+    \ {\n    return maps;\n}\n\npublic void setMaps(int[][] maps) {\n    this.maps\
+    \ = maps;\n}\n```\n\n```\npublic int getTiledWidth() {\n    return tiledWidth;\n\
+    }\n\npublic void setTiledWidth(int tiledWidth) {\n    this.tiledWidth = tiledWidth;\n\
+    }\n\npublic int getTiledHeight() {\n    return tiledHeight;\n}\n\npublic void\
+    \ setTiledHeight(int tiledHeight) {\n    this.tiledHeight = tiledHeight;\n}\n\
+    ```\n\n```\npublic int getCol() {\n    return col;\n}\n\npublic void setCol(int\
+    \ col) {\n    this.col = col;\n}\n\npublic int getRow() {\n    return row;\n}\n\
+    ```"
+  merge: -1
+  pgno: 248
+- img_proc: true
+  md: "```\n}\npublic void setRow(int row) {\n    this.row = row;\n}\n\n```\n\n**ImageCache.java**\
+    \ in **package com.flyweight.game;** In the previous chapter"
+  merge: -1
+  pgno: 249
+- img_proc: true
+  md: "# MapLayer.java in package com.state.game;\n\n```\nimport java.awt.*;\nimport\
+    \ java.awt.image.BufferedImage;\n\npublic class MapLayer extends TiledLayer {\n\
+    \    private int canvasWidth ;\n    private int canvasHeight;\n\n    private static\
+    \ int [][] maps = {\n        {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 5, 1, 1, 5,\
+    \ 1, 1, 5},\n        {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 1, 1, 1, 1, 4, 1,\
+    \ 1},\n        {1, 4, 1, 1, 4, 1, 1, 1},\n        {1, 1, 1, 4, 1, 1, 1, 1},\n\
+    \        {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 1, 1, 4, 4, 1, 4, 1},\n      \
+    \  {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 1,\
+    \ 1, 3, 3, 3, 1, 1},\n        {1, 1, 3, 1, 1, 1, 1, 1},\n        {1, 1, 1, 1,\
+    \ 1, 1, 1, 1},\n        {1, 3, 1, 1, 3, 1, 1, 1},\n        {1, 1, 1, 1, 1, 1,\
+    \ 3, 1},\n        {1, 1, 1, 1, 1, 3, 1, 1},\n        {1, 1, 1, 1, 1, 1, 1, 1},\n\
+    \        {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 2, 1, 1, 1, 1, 1, 1},\n      \
+    \  {1, 1, 1, 1, 2, 1, 1, 1},\n        {1, 1, 1, 2, 1, 1, 1, 1},\n        {1, 2,\
+    \ 1, 1, 1, 2, 1, 2},\n        {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 1, 1, 1,\
+    \ 1, 1, 1, 1},\n        {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 1, 1, 1, 1, 1,\
+    \ 1, 1}\n    };\n```"
+  merge: -1
+  pgno: 250
+- img_proc: true
+  md: "```\n{ 1, 1, 1, 1, 1, 1, 1, 1, 1 },\n{ 1, 1, 1, 1, 1, 1, 1, 1, 1 },\n{ 1, 1,\
+    \ 1, 1, 1, 1, 1, 1, 1 }\n;\n```\n\n```\npublic MapLayer(int canvasWidth, int canvasHeight)\
+    \ {\n    super(ImageCache.get(\"mapImage\"), maps, 32, 32, 10, 30);\n    this.canvasWidth\
+    \ = canvasWidth;\n    this.canvasHeight = canvasHeight;\n}\n```\n\n```\n@Override\n\
+    public void draw(Graphics g) {\n    g.translate(viewX, viewY);\n    for (int i=0;i<maps.length;i++)\
+    \ {\n        for (int j=0;j<maps[i].length;j++) {\n            int x=j*tileWidth;\n\
+    \            int y=i*tileHeight;\n            g.setClip(x,y,tileWidth,tileHeight);\n\
+    \            g.drawImage(image, x-(maps[i][j]-1)*tileWidth, y, null);\n      \
+    \  }\n    }\n    g.setClip(0,0,this.canvasWidth,this.canvasHeight - viewY);\n\
+    \    g.translate(-viewX, -viewY);\n}\n```"
+  merge: -1
+  pgno: 251
+- img_proc: true
+  md: "# Map2Layer.java in package com.state.game;\n\n```\nimport java.awt.*;\nimport\
+    \ java.awt.image.BufferedImage;\n\npublic class Map2Layer extends TiledLayer {\n\
+    \    private int canvasWidth;\n    private int imageHeight;\n    private static\
+    \ int[][] maps = {\n        {1, 1, 1, 1, 1, 1, 1},\n        {1, 5, 1, 5, 1, 1,\
+    \ 5, 5},\n        {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 1, 1, 1, 1, 4, 1},\n\
+    \        {1, 4, 1, 1, 4, 1, 5, 1},\n        {1, 1, 1, 4, 1, 1, 1, 1},\n      \
+    \  {1, 1, 5, 4, 1, 1, 1, 1},\n        {1, 1, 1, 1, 1, 5, 1, 1},\n        {1, 1,\
+    \ 5, 1, 4, 1, 4, 1},\n        {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 1, 5, 1,\
+    \ 1, 1, 1, 1},\n        {1, 1, 1, 3, 3, 3, 1, 1},\n        {1, 3, 3, 1, 1, 1,\
+    \ 5, 1},\n        {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 3, 1, 3, 1, 1, 1, 1},\n\
+    \        {1, 1, 1, 1, 1, 1, 3, 1},\n        {1, 1, 5, 1, 1, 3, 1, 1},\n      \
+    \  {1, 1, 1, 1, 1, 1, 1, 1},\n        {1, 1, 1, 1, 1, 5, 1, 1},\n        {1, 2,\
+    \ 1, 1, 1, 1, 1, 1},\n        {1, 1, 1, 2, 1, 1, 2, 1},\n        {1, 1, 1, 2,\
+    \ 1, 1, 1, 1},\n        {1, 2, 1, 1, 1, 2, 1, 2},\n        {1, 1, 1, 1, 1, 1,\
+    \ 1, 1},\n        {1, 1, 5, 1, 1, 1, 1, 1},\n        {1, 1, 1, 1, 1, 5, 5, 1},\n\
+    \        {1, 1, 2, 1, 1, 1, 1, 1},\n        {1, 1, 1, 1, 2, 1, 1, 1}\n```"
+  merge: -1
+  pgno: 252
+- img_proc: true
+  md: "```\n{ 1, 1, 1, 1, 1, 1, 1, 1, 1 },\n{ 1, 1, 1, 2, 1, 1, 1, 1, 1 }\n};\n\n\
+    public Map2Layer(int canvasWidth, int canvasHeight) {\n  super(ImageCache.get(\"\
+    map2Image\"), maps, 32, 32, 10, 30);\n  this.canvasWidth = canvasWidth;\n  this.canvasHeight\
+    \ = canvasHeight;\n}\n```\n\n```\n@Override\npublic void draw(Graphics g) {\n\
+    \  g.translate(viewX, viewY);\n  for (int i=0;i<maps.length;i++) {\n    for (int\
+    \ j=0;j<maps[i].length j++) {\n      int x=j*tiledWidth;\n      int y=i*tiledHeight;\n\
+    \      g.setClip(x,y,tiledWidth, tiledHeight);\n      g.drawImage(image, x-(maps[i]-1)*tiledWidth,\
+    \ y, null);\n    }\n    g.setClip(0,0,this.canvasWidth,this.canvasHeight - viewY);\n\
+    \    g.translate(-viewX, -viewY);\n}\n```\n\nMapContext.java in package com.state.game;\n\
+    \n```\nimport java.util.*;\n```"
+  merge: -1
+  pgno: 253
+- img_proc: true
+  md: "```\npublic class MapContext {\n    private LinkedList<TiledLayer> tiledLayerList=new\
+    \ LinkedList<TiledLayer>();\n    private int index ;\n\n    public MapContext(){\n\
+    \    }\n\n    public void addMap(TiledLayer tiledLayer){\n        tiledLayerList.add(tiledLayer);\n\
+    \    }\n\n    public TiledLayer next(){\n        if (index >= tiledLayerList .size())\
+    \ {\n            index =0;\n        }\n        TiledLayer tiledLayer = tiledLayerList\
+    \ .get(index);\n        index ++;\n        return tiledLayer;\n    }\n}\n```"
+  merge: -1
+  pgno: 254
+- img_proc: true
+  md: "# Canvas.java in package com.state.game;\n\n```\nimport java.awt.*;\nimport\
+    \ java.awt.image.BufferedImage;\nimport javax.swing.JPanel;\npublic class Canvas\
+    \ extends JPanel implements Runnable{\n    private boolean isRun = true ;\n  \
+    \  private boolean isInit = false;\n    private int canvasWidth;\n    private\
+    \ int canvasHeight;\n    private TiledLayer mapLayer;\n    private MapContext\
+    \ mapContext;\n    private int screenY;\n {\n    BufferedImage mapImage=ImageUtil.loadImage(\"\
+    images/map.png\");\n    mapImage = ImageUtil.resizeBufferedImage(mapImage, 160,\
+    \ 32, false);\n    ImageCache.put(\"mapImage\", mapImage);\n    BufferedImage\
+    \ map2Image=ImageUtil.loadImage(\"images/map2.png\");\n    map2Image = ImageUtil.resizeBufferedImage(map2Image,\
+    \ 160, 32, false);\n    ImageCache.put(\"map2Image\", map2Image);\n }\n    public\
+    \ Canvas(){\n    this.setLayout(null);\n    this.setBackground(Color.WHITE);\n\
+    \ }\n    private void init(){\n    mapContext = new MapContext();\n    mapContext\
+    \ .addMap(new MapLayer(this.canvasWidth,this.canvasHeight));\n    mapContext .addMap(new\
+    \ Map2Layer(this.canvasWidth\n```"
+  merge: -1
+  pgno: 255
+- img_proc: true
+  md: '```
+
+    ,this .canvasHeight));
+
+    mapLayer = mapContext.next();
+
+    screenY = -this.canvasHeight;
+
+    new Thread(this).start();
+
+    }
+
+    ```
+
+
+    ```
+
+    protected void paintComponent(Graphics g) {
+
+    this .canvasWidth = this .getWidth();
+
+    this.canvasHeight = this .getHeight();
+
+    if (!isInit) {
+
+    init();
+
+    isInit = true ;
+
+    }
+
+    super .paintComponent(g);
+
+    drawMap(g);
+
+    }
+
+    ```
+
+
+    ```
+
+    public void drawMap(Graphics g){
+
+    mapLayer .setViewport(0, screenY);
+
+    mapLayer .draw(g);
+
+    if (screenY <=0){
+
+    screenY ++;
+
+    }
+
+    if (screenY >=0){
+
+    screenY = -this .canvasHeight;
+
+    mapLayer = mapContext .next();
+
+    }\}
+
+    ```
+
+
+    ```
+
+    public void run() {
+
+    while (isRun) {
+
+    try {
+
+    Thread.sleep(100);
+
+    Canvas.this .repaint();
+
+    } catch (InterruptedException e) {
+
+    e.printStackTrace();
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 256
+- img_proc: true
+  md: "```\n}\n}\n```\n\n3 . Create a Test class : TestState.java in package com.state.game;\n\
+    \ncanvas.setFocusable(true) : Set focus to activate keyboard events canvas.requestFocus():\
+    \ Set focus to activate keyboard events\n\n```\nimport java.awt.BorderLayout;\n\
+    import javax.swing.JFrame;\n\npublic class TestState {\n    public static void\
+    \ main(String[] args) {\n        JFrame frame = new JFrame(\"Design Pattern State\"\
+    );\n        Canvas canvas = new Canvas();\n        frame.add(canvas, BorderLayout.CENTER);\n\
+    \        frame.setSize(300, 350);\n        canvas.setFocusable(true);\n      \
+    \  frame.setVisible(true);\n        canvas.requestFocus();\n    }\n}\n```"
+  merge: -1
+  pgno: 257
+- img_proc: true
+  md: 'Thanks for learning, if you want to learn Web or Application about design pattern
+
+
+    http://en.verejava.com
+
+
+    ![](img/1a3fab3d51f12ead42a519c23c1a64ba_258_0.png)
+
+
+    http://en.verejjava.com/?section_id=1968727605883'
+  merge: -1
+  pgno: 258
+- img_proc: true
+  md: 'If you enjoyed this book and found some benefit in reading this, I''d like
+    to hear from you and hope that you could take some time to post a review on Amazon.
+    Your feedback and support will help us to greatly improve in future and make this
+    book even better.
+
+
+    # You can follow this link now.
+
+
+    http://www.amazon.com/review/create-review?&asin=B0893FJT1J
+
+
+    Different country reviews only need to modify the amazon domain name in the link:
+
+
+    +   - www.amazon.co.uk
+
+    - www.amazon.de
+
+    - www.amazon.fr
+
+    - www.amazon.es
+
+    - www.amazon.it
+
+    - www.amazon.ca
+
+    - www.amazon.nl
+
+    - www.amazon.in
+
+    - www.amazon.co.jp
+
+    - www.amazon.com.br
+
+    - www.amazon.com.mx
+
+    - www.amazon.com.au
+
+
+    I wish you all the best in your future success!'
+  merge: -1
+  pgno: 259

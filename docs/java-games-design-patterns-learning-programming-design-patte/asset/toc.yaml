@@ -1,0 +1,330 @@
+- - '#'
+  - Java 游戏设计模式：通过游戏学习编程设计模式
+- - '#'
+  - 杨华 (Y HU)
+- - '#'
+  - 模板方法模式原理
+- - '##'
+  - 'Sprite:'
+- - '##'
+  - com.template.principle 包下的 Sprite.java
+- - '##'
+  - '结果:'
+- - '##'
+  - 模板方法模式游戏
+- - '###'
+  - 2. UML 图继承 Sprite 模板以实现复用。
+- - '###'
+  - 'Sprite:'
+- - '###'
+  - Canvas.java 在 com.template.game 包
+- - '###'
+  - BluePlane.java 在 com.template.game
+- - '###'
+  - Sprite.java 在 com.template.game
+- - '###'
+  - TestTemplate.java 在 com.template.game
+- - '##'
+  - 单例模式原理
+- - '##'
+  - 包 com.singleton.principle 中的 Sprite.java
+- - '##'
+  - 包 com.singleton.principle 中的 BluePlane.java
+- - '##'
+  - 包 com.singleton.principle 中的 RedPlane.java
+- - '##'
+  - 'ImageUtil:'
+- - '###'
+  - 2. 在包 com.singleton.principle 中创建一个测试类：TestSingleton.java
+- - '##'
+  - '结果:'
+- - '##'
+  - 单例模式游戏
+- - '##'
+  - 包 com.singleton.game 中的 Sprite.java
+- - '##'
+  - 'ImageUtil:'
+- - '#'
+  - 享用模式原理
+- - '##'
+  - 2. 在包 com.flyweight.principle 下创建一个测试类：TestCache.java
+- - '##'
+  - 享用模式游戏
+- - '##'
+  - Sprite（精灵类）：
+- - '#'
+  - Builder 模式原理
+- - '##'
+  - 包 `com.builder.principle` 中的 `Button.java`;
+- - '##'
+  - 包 `com.builder.principle` 中的 `SelectDialog.java`;
+- - '###'
+  - 2. 在包 `com.builder.principle` 中创建一个测试类：`TestBuilder.java`;
+- - '##'
+  - Builder 模式游戏
+- - '##'
+  - UML 图
+- - '##'
+  - 包 `com.builder.game` 中的 `SelectDialog.java`;
+- - '#'
+  - 命令模式原理
+- - '##'
+  - 包 `com.command.principle` 中的 `ActionListener.java`;
+- - '##'
+  - 包 `com.command.principle` 中的 `ActionEvent.java`;
+- - '##'
+  - 包 `com.command.principle` 中的 `Button.java`;
+- - '###'
+  - 3. 在包 com.command.principle 中创建一个测试类：TestCommand.java;
+- - '##'
+  - 结果：
+- - '##'
+  - 命令模式游戏
+- - '##'
+  - 包 com.command.game 中的 SelectDialog.java;
+- - '#'
+  - 工厂模式原理
+- - '##'
+  - 包 com.factory.principle 中的 Sprite.java;
+- - '##'
+  - 包 com.factory.principle 中的 BluePlane.java;
+- - '##'
+  - 包 com.factory.principle 中的 RedPlane.java;
+- - '##'
+  - 'SpriteFactory: create (int type, int x, int y) 创建 BluePlane 或 RedPlane |'
+- - '###'
+  - 2. 在包 com.factory.principle 中创建一个测试类：TestFactory.java;
+- - '##'
+  - 工厂模式游戏
+- - '##'
+  - com.factory.game 包下的 Sprite.java
+- - '##'
+  - com.flyweight.game 包下的 ImageCache.java 在上一章
+- - '##'
+  - com.factory.game 包下的 BluePlane.java
+- - '##'
+  - com.factory.game 包下的 RedPlane.java
+- - '##'
+  - 'SpriteFactory:'
+- - '##'
+  - 结果：
+- - '##'
+  - 再次运行：
+- - '##'
+  - 再次运行：
+- - '#'
+  - 策略模式游戏
+- - '##'
+  - com.strategy.game 包下的 Sprite.java
+- - '###'
+  - 2. 在 `com.strategy.game` 包下创建一个测试类：TestStrategy.java
+- - '#'
+  - 桥接模式原理
+- - '##'
+  - '`com.bridge.principle` 包下的 BlueBullet.java`'
+- - '##'
+  - '`com.bridge.principle` 包下的 RedBullet.java`'
+- - '##'
+  - '`com.bridge.principle` 包下的 Plane.java`'
+- - '###'
+  - 2. 在 `com.bridge.principle` 包下创建一个测试类：TestBridge.java
+- - '##'
+  - '结果:'
+- - '##'
+  - 桥接模式游戏
+- - '###'
+  - 3. 在包 com.bridge.game 中创建一个测试类：TestBridge.java
+- - '#'
+  - 迭代器模式原理
+- - '##'
+  - '迭代器:'
+- - '##'
+  - 迭代器游戏
+- - '##'
+  - Sprite.java in package com.iterator.game
+- - '##'
+  - Bullet.java in package com.iterator.game
+- - '##'
+  - ImageCache.java in package com.flyweight.game
+- - '##'
+  - RedBullet.java in package com.iterator.game
+- - '##'
+  - 'BluePlane:'
+- - '##'
+  - BluePlane.java in package com.iterator.game
+- - '##'
+  - ImageUtil.java in package com.singleton.game
+- - '##'
+  - 'Runnable:'
+- - '##'
+  - 'Canvas:'
+- - '##'
+  - Canvas.java in package com.iterator.game
+- - '##'
+  - TestIterator.java in package com.iterator.game
+- - '#'
+  - Decorator Pattern
+- - '##'
+  - Sprite.java in package com.decorator.principle
+- - '##'
+  - 'Plane:'
+- - '###'
+  - Plane.java 位于 com.decorator.principle 包下；
+- - '###'
+  - BlueBullet.java 位于 com.decorator.principle 包下；
+- - '##'
+  - 'PlaneDecorator:'
+- - '###'
+  - PlaneDecorator.java 位于 com.decorator.principle 包下；
+- - '###'
+  - 2. 创建测试类：TestDecorator.java 位于 com.decorator.principle 包下；
+- - '##'
+  - '结果:'
+- - '##'
+  - 装饰器模式
+- - '##'
+  - 'Plane 类:'
+- - '###'
+  - Plane.java 位于包 com.decorator.game 中；
+- - '###'
+  - BluePlane.java 位于包 com.decorator.game 中；
+- - '##'
+  - 'PlaneDecorator:'
+- - '###'
+  - 2. 创建测试类：TestDecorator.java 位于包 com.decorator.game 中；
+- - '#'
+  - 组合模式原理
+- - '##'
+  - 菜单
+- - '##'
+  - MenuItem
+- - '###'
+  - 2. 创建一个测试类：com.composite.principle 包下的 TestComposite.java;
+- - '##'
+  - 组合模式游戏
+- - '##'
+  - com.composite.game 包下的 Sprite.java;
+- - '##'
+  - 'Canvas:'
+- - '###'
+  - 3. 创建一个测试类：com.composite.game 包下的 TestComposite.java;
+- - '#'
+  - 链式模式：
+- - '##'
+  - 链式模式
+- - '###'
+  - '1.'
+- - '###'
+  - '2.'
+- - '###'
+  - '3.'
+- - '##'
+  - com.chain.game 包下的 Sprite.java
+- - '##'
+  - com.chain.game 包下的 EnemyPlane.java
+- - '##'
+  - com.flyweight.game 包下的 ImageCache.java
+- - '##'
+  - com.chain.game 包下的 ChainHandler.java
+- - '##'
+  - 'Enemy1Handler:'
+- - '##'
+  - com.chain.game 包下的 Enemy1Handler.java
+- - '##'
+  - 'Enemy2Handler:'
+- - '##'
+  - com.chain.game 包下的 Enemy2Handler.java
+- - '##'
+  - 'EnemyBossHandler:'
+- - '##'
+  - com.chain.game 包下的 EnemyBossHandler.java
+- - '##'
+  - 'EnemyPlaneChain:'
+- - '##'
+  - com.chain.game 包下的 EnemyPlaneChain.java
+- - '##'
+  - com.util 包下的 ImageUtil.java
+- - '##'
+  - com.chain.game 包下的 Canvas.java
+- - '###'
+  - 3. 创建测试类：TestChain.java 在 com.chain.game 包
+- - '#'
+  - 观察者模式游戏
+- - '##'
+  - '观察者 (Observer):'
+- - '##'
+  - '蓝色飞机 (BluePlane):'
+- - '##'
+  - '画布 (Canvas):'
+- - '##'
+  - 包 com.observer.game 下的 NotifyType.java
+- - '##'
+  - 包 com.observer.game 下的 ObserverData.java
+- - '##'
+  - '观察者 (Observer):'
+- - '##'
+  - 包 com.observer.game 下的 Observer.java
+- - '##'
+  - 包 com.observer.game 下的 PlaneLife.java
+- - '##'
+  - 包 com.observer.game 下的 RedBullet.java
+- - '##'
+  - 包 com.observer.game 下的 EnemyPlane.java
+- - '##'
+  - 包 com.observer.game 下的 BluePlane.java
+- - '##'
+  - 包 com.observer.game 下的 Sprite.java
+- - '###'
+  - 3. 在包 com.observer.game 中创建一个测试类：TestObserver.java
+- - '#'
+  - 中者模式原理
+- - '##'
+  - 包 com.mediator.principle 下的 Mediator.java
+- - '##'
+  - 包 com.mediator.principle 下的 MediatorImpl.java
+- - '###'
+  - 2. 在包 com.mediacor.principle 中创建一个测试类：TestMediator.java
+- - '##'
+  - 中者模式游戏
+- - '###'
+  - 包 com.observer.game 中的 PlaneScore.java
+- - '###'
+  - 包 com.observer.game 中的 RedBullet.java
+- - '###'
+  - 包 com.observer.game 中的 EnemyPlane.java
+- - '###'
+  - 包 com.mediator.game 中的 RedBullet.java
+- - '###'
+  - 包 com.mediator.game 中的 EnemyPlane.java
+- - '###'
+  - 包 com.mediator.game 中的 BluePlane.java
+- - '###'
+  - 包 com.mediator.game 中的 Canvas.java
+- - '###'
+  - 3. 在包 com.mediator.game 中创建一个类：TestMediator.java
+- - '#'
+  - 状态模式游戏
+- - '##'
+  - 瓦片层：
+- - '##'
+  - 图块：
+- - '###'
+  - 单元 (Cells)
+- - '###'
+  - 使用二维数组将图像裁剪成瓦片并分布在背景上
+- - '##'
+  - 滚动背景：
+- - '##'
+  - 'TiledLayer:'
+- - '###'
+  - 包 com.state.game 下下的 TiledLayer.java
+- - '###'
+  - 包 com.state.game 下下的 MapLayer.java
+- - '###'
+  - 包 com.state.game 下下的 Map2Layer.java
+- - '###'
+  - com.state.game 包包下的 Canvas.java
+- - '###'
+  - 3. 创建一个测试类：com.state.game 包下的 TestState.java
+- - '#'
+  - 现在可以点击此链接。
