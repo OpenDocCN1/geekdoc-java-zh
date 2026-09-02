@@ -1,0 +1,3944 @@
+- img_proc: true
+  md: '# # JAVA
+
+
+    # ## The Definite Beginner’s Guide to Get Started with Java Programming
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_0_0.png)
+
+
+    JOSEPH CONNOR
+
+
+    ITtstarter series'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# LibraryPlus
+
+
+    Weston College LibraryPlus
+
+    Knightstone Road
+
+    Weston super Mare, BS23 2AL
+
+
+    Tel: 01934 411493 Email: library@weston.ac.uk
+
+    TXT 2 RENEW: 07860023339
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_1_0.png)
+
+
+    | CLASS NO. | SUPPLIER | PRICE | DATE |
+
+    |--- | --- | --- | --- |
+
+    | 005. | DAWSON | 5.86 | 17-10 |
+
+    | i33 | LibraryPlus | | |
+
+    | ACC.NO. | 895313 | | |'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# IT Starter Series presents
+
+
+    # JAVA
+
+
+    # The Definite Beginner’s Guide to Get Started with Java Programming
+
+
+    Joseph Conner
+
+
+    © 2018 MJG Publishing OU'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '© Copyright 2018 by MJG Publishing OU - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher isn''t required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practised
+    individual in the profession should be ordered.
+
+
+    The above is from a Declaration of Principles which was accepted and approved
+    equally by a Committee of the American Bar Association and a Committee of Publishers
+    and Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document isn''t allowed unless
+    written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inaction or otherwise, by any usage or abuse of any
+    policies, processes, or directions contained within, is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used without any consent, and the publication of the trademark
+    is without permission or backing by the trademark owner. All trademarks and brands
+    within this book are for clarifying purposes only and are owned by the owners
+    themselves, not affiliated with this document.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# ABOUT IT STARTER SERIES
+
+
+    IT Starter Series is an independent publishing brand by MJG Publishing OU focusing
+    on non-fiction books. Our eBooks and paperback books are targeting to help individuals
+    to upgrade their careers & lifestyle. Learn new skills & abilities. Find the job
+    of your dreams or create your own freelancing opportunity!
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_4_0.png)
+
+
+    # CONTACT:
+
+
+    **Visit our website:** http://www.itstarterseries.com/
+
+    **Email us:** contact@itstarterseries.com
+
+
+    Feel free to contact us at any time and we''ll personally reply to you.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Free Video Course:
+
+    Introduction to JavaScript, SQL & C++
+
+
+    Welcome to the journey into the world of programming. Hi I''m Marco from IT Starter
+    Series, I wanted to thank you for supporting this book.
+
+
+    In it, you''ll learn the 3 most in demand programming languages with step-by-step
+    real examples for
+
+
+    +   - JavaScript;
+
+    - SQL;
+
+    - C++.
+
+
+    If you study only ONE of those you can have a good career in programming.
+
+
+    Study all three of these and you''ll be highly desired and in demand.
+
+
+    But where do you start? We''ve built a video course tailored to help you decide.
+
+
+    The IT Starter Series Free Video Course will:
+
+
+    +   - Show you real world code examples to help you decide which is the best fit
+    for you;
+
+    - Teach you how to set up the different programming environments;
+
+    - Provide step-by-step programming tutorials for immediate action at home.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '![](img/483d00e870a5d3fd0f967c0c44ec94f7_6_0.png)
+
+
+    Follow this link: http://www.itstarterseries.com/free-programming-course NOW and
+    get immediate instant access to your free video series!
+
+
+    Access this FREE video course: http://www.itstarterseries.com/free-programming-course!
+
+
+    Happy coding!'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Want to learn more about programming?
+
+
+    Check out the other books by IT Starter Series:
+
+
+    Newest release (2017): Programming: Computer Programming for Beginners - Learn
+    the Basics of SQL
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_7_0.png)
+
+
+    JOSEPH CONNOR'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# C#: Programming: Computer Programming for Beginners - Learn the Basics of
+    C# - 3rd Edition (2017)
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_8_0.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Programming: Computer Programming for Beginners - Learn the Basics of HTML5,
+    JavaScript and CSS
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_9_0.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Hacking: Hacking for Beginners - Computer Virus, Cracking, Malware, IT Security
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_10_0.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# The Amazon Bestseller: Programming: Computer Programming for Beginners -
+    Learn the Basics of Java, SQL & C++ - 4th Edition (2017)
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_11_0.png)
+
+
+    Check out our Facebook (https://www.facebook.com/itstarter series) and Instagram
+    (https://www.instagram.com/itstarter series.com) to receive updates on the newest
+    releases!'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Table of Contents
+
+
+    INTRODUCTION ............................................................................
+    13
+
+
+    CHAPTER 1:
+
+    ALL ABOUT JAVA ................................................................
+    14
+
+
+    CHAPTER 2:
+
+    SETTING UP YOUR ENVIRONMENT ................................ 20
+
+
+    CHAPTER 3:
+
+    USING THE BASIC BUILDING BLOCKS ................... 24
+
+
+    CHAPTER 4:
+
+    UNDERSTANDING A SIMPLE JAVA PROGRAM....... 31
+
+
+    CHAPTER 5:
+
+    YOUR FIRST PROGRAM.................................................. 40
+
+
+    CHAPTER 6:
+
+    OBJECTS AND CLASSES ................................................ 46
+
+
+    CHAPTER 7:
+
+    JAVA DATA TYPES...................................................... 49
+
+
+    CHAPTER 8:
+
+    JAVA BASIC OPERATORS ............................................ 52
+
+
+    CHAPTER 9:
+
+    LOOP CONTROL AND DECISION MAKING ............... 57
+
+
+    CHAPTER 10:
+
+    NUMBERS CLASS....................................................... 61
+
+
+    CHAPTER 11:
+
+    JAVA STRINGS........................................................... 65'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'CHAPTER 12: JAVA ARRAYS ............................................................
+    69
+
+
+    CHAPTER 13: JAVA METHODS ................................................ 72
+
+
+    CHAPTER 14: JAVA EXCEPTIONS ............................................ 78
+
+
+    CHAPTER 15: TEN WAYS TO AVOID MAKING MISTAKES .......... 84
+
+
+    CHAPTER 16: PROGRAMS ...................................................... 91
+
+
+    CONCLUSION ................................................................ 130'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Introduction
+
+
+    Java is, without a doubt, one of the most popular of all the programming languages,
+    and it''s used for a wide range of applications and environments. Like all computer
+    languages, Java has its own unique structure rules for syntax and paradigms, the
+    latter of which is based on OOP—Object-Oriented Programming.
+
+
+    Java is a derivative of C language, so if you are familiar with C, the syntax
+    rules will look quite similar. In terms of structure, the language begins with
+    packages, within which you''ll find classes. These, in turn, contain methods,
+    constants, variables, and so on. You''ll learn the basics of these in this guide.
+
+
+    First developed in 1991, Java has gone on to become one of the most important
+    of all programming languages, and for those who want to learn the basics of any
+    language, Java should be one of your first stops. This is only a basic guide,
+    but it provides everything you need to know to get started before you can move
+    on to anything more complex.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Chapter 1:
+
+    All About Java
+
+
+    No matter what anybody says about computers, it''s often thought that computers
+    are good for just a few reasons:
+
+
+    +   * Computers are our electronic slaves. You can leave your computer to work
+    on calculations for eternity (albeit the charger connected to it) and it will
+    never complain or tire out.
+
+    * When you wanted to share an idea with someone across the globe in earlier times,
+    you would hire a messenger and send the message written on paper or parchment.
+    This is a wasteful process in this era, however, because we are now in the electronic
+    age. Computers can help you communicate with the world in a matter of seconds.
+
+    * The best thing about computers is that they are efficient. The messages you
+    want to communicate are all transmitted using just a little electrical power,
+    and all of this is done with absolutely no fuss or any extra physical energy.
+    It''s when you start dealing with things efficiently that good things happen.
+    You realize that all the overhead is gone—you don''t have to to use paper or cut
+    down trees any more, you''ll only need to push numbers and concepts through the
+    system.
+
+
+    # What can you do with Java?
+
+
+    It would definitely be amazing if one could remove any complexity in the ideas
+    and instructions that are shared. Unfortunately, that''s not the case. There would
+    be one person who would need to think hard about what the computer would need
+    to do. Once they had thought it through, they would need to'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'write a set of instructions or an algorithm that would help the computer easily
+    perform the task.
+
+
+    You won''t be able to write these instructions in English or any other language.
+    Most science fiction movies and novels portray robots as machines that can understand
+    every single word that''s spoken to them. However, this is not true; a spoken
+    language can''t be used to communicate with a machine for the following reasons:
+
+
+    +   - Sentences can often be misinterpreted.
+
+    - There is no easy way to weave a complex command using any language.
+
+    - Most sentences in English include unnecessary words.
+
+
+    You''ll need to use a different language to communicate with a computer. These
+    languages are called computer programming languages. A set of instructions written
+    using this language is called a program. Multiple programs constitute software
+    (or code).
+
+
+    You can learn to write computer programs or use someone else''s programs. If you
+    prefer the latter, you''ll need to use whatever program that person has coded.
+    However, when you write the program yourself, you''ll be able to tailor it to
+    suit your requirements.
+
+
+    Writing computer code has been popular from the beginning. Large companies have
+    teams, departments and employees in different divisions writing code for them.
+    But you can write code for yourself or for other people for a living or just for
+    fun. It was recently estimated that the number of lines of code being written
+    in the United States exceeds the number of molecules of methane on Jupiter. Now,
+    this might be true, and isn''t. The truth is, however, that you can make your
+    computer do just anything if you spend the right amount of time to write your
+    very own code. Of course, the time spent on writing the code could be a few minutes
+    or maybe even a few years, but don''t let that deter you. You can write some of
+    the most interesting code in just a few minutes!'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Object-oriented programming
+
+
+    Java is an object-oriented language. You may be wondering what that means. Some
+    of the earlier machine languages (like FORTRAN) focused only on giving the computer
+    instructions on what tasks needed to be done. Object-oriented languages, like
+    Java, focus more on the data. Of course, these languages still instruct the computer
+    on what needs to be done. However, before commands are given to the machine, the
+    data is organized.
+
+
+    Java is better than FORTRAN since it organizes data in a way that helps the user
+    perform multiple functions on the data. If you want to change the way the data
+    is organized, you won''t need to start from scratch. You''ll only have to modify
+    the programs being used.
+
+
+    Data is often organized using objects and classes. Let''s assume that you''re
+    writing a program to keep track of the houses being constructed in a new condominium.
+    These houses differ slightly from each other. Each house has different indoor
+    paint, distinctive siding color, a kitchen cabinet style, a bedroom style, and
+    so on. When you write an object-oriented program, each house becomes an object.
+
+
+    The objects don''t constitute the entire story. Though the houses differ from
+    one another slightly, each house has the same set of characteristics. For instance,
+    every house has a characteristic called the siding color, the kitchen cabinet
+    style, the bedroom style, and so on. Your object-oriented program will need a
+    master list that consists of the characteristics that every house can possess.
+    This master list is called a class. There you have it. However, object-oriented
+    programming should have been named “programming with classes and objects.
+
+
+    You may notice that I have used the word “classes” first, and you must be wondering
+    how one could possibly do that. Let''s consider a condominium development. Right
+    in the middle of the construction, there''s probably a rickety trailer that has
+    a list of characteristics called the blueprint. A class in an object-oriented
+    program can be compared to a blueprint. A blueprint has the list of characteristics
+    that every house will have as well as a clear picture of exactly how a house should
+    look. The blueprint will say'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'siding, but the actual house may have a blue or yellow siding. The same goes
+    for every other characteristic of the house.
+
+
+    This analogy doesn''t always end with the list of characteristics. There is another
+    parallel that exists between classes and blueprints. Once the blueprint is created,
+    it''s used to build the houses in the condominium development. There may be close
+    to ten or twelve houses built at the end of a year. The same can be said for classes
+    and objects. The programmer first writes the code to provide a class with its
+    attributes and once the program runs, the computer creates objects using that
+    class.
+
+
+    That''s the relationship that exists between classes and objects. The programmer
+    first defines the class, and based on the definition of that class, the computer
+    creates the individual objects.
+
+
+    # Why is object-oriented language good?
+
+
+    Let''s take the example about the condominium development from the previous section
+    and assume that you have already written a computer program to help you keep track
+    of the instructions for building a house in this new development. The boss then
+    decides to make a change to the plan—he decides that half the buildings will be
+    duplex housing while the other half will have four bedrooms.
+
+
+    If you were to use the old C or FORTRAN style of computer programming, the instructions
+    you would write be as follows:
+
+
+    Dig a ditch for the basement. Lay concrete around the sides of the ditch. Put
+    two-by-fours along the sides for the basement’s frame, etc.
+
+
+    The program above would be a long list of instructions that an architect would
+    create (instead of a blueprint). In order to modify the plan, you would need to
+    go through the series of instructions to identify the right places to make the
+    changes. To make it worse, these instructions could be scattered across a thousand
+    pages. If the builder had to go through all these instructions, the task would
+    become ten times harder.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'Starting with a class is similar to starting with a blueprint. If you have
+    decided to have duplex houses and four-bedroom houses, you can begin using a blueprint
+    called the house blueprint, which has the ground and first floor, without any
+    walls on the first floor. Then you can make two more similar blueprints—one for
+    the penthouse and one for the four-bedroom house—and rename these blueprints.
+    Your colleagues will be amazed at what you have done, but they''ll have concerns.
+    They''ll probably ask the following question: “You have renamed all the blueprints
+    differently. How can you do this if the blueprints being used are almost the same?”
+
+
+    This is when you say, “The duplex house blueprint can say, ''For more information
+    about the lower floors, please take a look at the original blueprint.’ The four-bedroom
+    blueprint can also say the same thing. We can take advantage of the blueprint
+    that we have already made and save tons of money with this setup.
+
+
+    When it comes to object-oriented programming, the duplex house and the four-bedroom
+    house classes inherit the features of the original house class. You can also say
+    that these two classes are an extension of the original house class.
+
+
+    The original class is called the superclass of the other two classes that you
+    currently have set up. The two classes are called the subclasses of the original
+    class since they inherit certain characteristics of the original class or the
+    superclass. The technical terms for these classes are parent and child classes.
+
+
+    Now that your colleagues have agreed to the plan (and they are probably jealous
+    of you!), you drop another bombshell on them: “When you create a subclass, you
+    can always reuse the blueprint of the superclass in the future. If someone wanted
+    only three bedrooms or only five bedrooms in their house, the original house blueprint
+    can be extended to accommodate those requests. You''ll never need to spend money
+    on an original blueprint again!
+
+
+    They will then ask you, “What can be done when someone wants a different floor
+    plan for the ground floor? Do we need to scrap the original house or do we start
+    scribbling over the original blueprint? That would definitely cost a lot of money,
+    would it not?”'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'This is when you can confidently let them know that you''ll never need to mess
+    with the original house blueprint. All you would need to do is create another
+    small blueprint and rename that too. If someone wanted to add a garden on the
+    ground floor level, you could prepare a blueprint for that garden and rename it
+    "Garden-in-living-room" blueprint. You can then use the original blueprint for
+    the rest of the house and use the new blueprint as an extension to the original
+    house blueprint. In the language of object-oriented programming, the garden in
+    the living room plan is an extension of the original house blueprint. The garden-in-living-room
+    blueprint is still a child class of the original class. All the terminology of
+    superclass, parent class and child class still apply to this new blueprint. The
+    only new aspect is that the garden will be a new feature to the original blueprint.
+
+
+    Before object-oriented programming languages were developed, the programming world
+    experienced a major crisis when it came to developing software. Programmers developed
+    new code and then realized that they needed something different. They then had
+    to scrap their code and start writing new code. This problem happened repeatedly
+    and most code that was written could never be reused. Object-oriented programming
+    has changed this for the better.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Chapter 2:
+
+
+    # Setting Up Your Environment
+
+
+    Before you do anything else, the most important thing is to set your environment
+    up and for that, you''ll need the Java Software Development Kit (JDK). It is free
+    and works on Windows and Mac OS.
+
+
+    # Downloading the JDK
+
+
+    To download the JDK, go to Java website (http://www.java.com/java/technologies/downloads/)
+    and then click on the latest version of the JDK for that system. Choose your operating
+    system and that system. Click to accept the license agreement and the download
+    will begin. Follow all the prompts on your screen and make sure to choose a Save
+    location you''ll remember.
+
+
+    # Installing the JDK
+
+
+    Once you have successfully downloaded the JDK, the next step is to install it
+    on your operating system.
+
+
+    # Windows
+
+
+    +   - Locate the file you downloaded and double-click it.
+
+    - Click Allow to let the app makes changes to your computer.
+
+    - If asked for permission to install, click Yes or OK.
+
+    - The Installer screen will appear; click on Next.
+
+    - Follow the instructions on the screen to install Java.
+
+    - Accept the default settings by clicking Next and then wait for the installation
+    to complete.
+
+    - Click on Close and then press the Windows key and X at the same time.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '+   This will open the power menu; click on System from the menu.
+
+
+    +   Click Advanced System Settings.
+
+
+    +   Locate the Advanced tab and click on it.
+
+
+    +   Click Environment Variables and a new box will appear.
+
+
+    +   Under System Variables, click on Path variable. The next few steps must be
+    followed exactly as there is no way of undoing a wrong step.
+
+
+    +   For Windows 10, click on New.
+
+
+    +   Enter c:\Program Files\Java\jdk1.x.x_xx\bin--input the version you installed.
+
+
+    +   Click Move Up until you see that path at the top of the list, and click OK.
+
+
+    +   For all other Windows versions, click on Edit System Variable and then on
+    the variable value field. Do NOT delete what is in this field--just add the following
+    to it, inputting the version number downloaded: C:\Program Files\Java\jdk1.x.x_xx\;
+
+
+    +   The semicolon at the end is very important, so don''t forget it.
+
+
+    +   Click OK until all windows are closed and your installation is finished.
+
+
+    +   The next step is to make sure it installed properly. Press the Windows key
+    and R to open the Run box.
+
+
+    +   Type in cmd and press the Enter key.
+
+
+    +   A terminal window will open. At the command prompt, type path and press Enter.
+    You should now see the path you typed in earlier.
+
+
+    +   Type java -version and press Enter--the Java version you installed should
+    show up on your screen.
+
+
+    +   Note: If either of these commands doesn''t work, shut your computer down and
+    reboot it; this will load the new environment variables. Try again and you should
+    be successful.
+
+
+    # Mac OS
+
+
+    +   Locate the file you downloaded and double-click it.
+
+
+    +   Double-click on the Package icon and the installer will open.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '+   - Click on Continue in the first window.
+
+    - If a window that says “Destination Select” appears, select “Install for all
+    users of this computer.”
+
+    - Click Install and type in your administrator name and password.
+
+    - Click on Install Software and wait for the installation to complete.
+
+    - Open your Mac Applications folder. You are going to test that the installation
+    was successful.
+
+    - Click on Go>Applications>Utilities.
+
+    - A list of system utilities will appear. Double-click on Terminal—the command
+    prompt should open.
+
+    - At the prompt, type in javac -version and press return. If successful, the JDK
+    version number will show up under your command
+
+
+    The next step is to install Eclipse:
+
+
+    # Windows
+
+
+    +   - Go to Eclipse (https://www.eclipse.org/downloads/eclipse-packages/)
+
+    - Click on Getting Started and then on Download Eclipse IDE.
+
+    - Choose the version for your computer and then click on Download.
+
+    - Extract the file, save it to a location you’ll remember, and that’s it. To open
+    it, just double-click on the file and it will open in the IDE—this is where you
+    are going to do all your work.
+
+
+    # Mac OS
+
+
+    +   - Follow the steps above and download the right version for Mac—you’ll be
+    downloading a TAR file.
+
+    - Double-click this file to expand it to a folder named Eclipse.
+
+    - Drag this folder to the Mac Applications folder.
+
+    - To open, click on the Eclipse folder and then on the Eclipse icon.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# How to Write a Program in Eclipse\n\n+   * Launch Eclipse.\n* Pick a directory\
+    \ for your workspace (this is where your files will be saved).\n* Close the Welcome\
+    \ screen if it loads.\n* You must create a new project for each new application—this\
+    \ will ensure all the classes, resources and source files are kept together. To\
+    \ do this:\n    * Click on File>New>Java Project\n    * In Project Name, type\
+    \ in FirstProject\n    * Click the box for Use Default Location\n    * Under JRE,\
+    \ choose Use Default JRE\n    * Under Project Layout, check the box for Use Project\
+    \ Folder as Root for Sources and Class Files\n    * Click Finish and you are good\
+    \ to go"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Chapter 3:
+
+    Using the Basic Building Blocks
+
+
+    You''ll notice that this chapter takes on a multilayered approach. As you read
+    through it, you''ll come across the basic details of Java programming, and you''ll
+    also notice the complexities of Java.
+
+
+    # Speaking the Java language
+
+
+    Before talking about Java, let''s take a closer look at the English language in
+    your mind. By picturing the language in your mind. You''ll most probably see a
+    large number of words because that''s what most languages are made up of. The
+    English language has tons of different words. This idea of the language is very
+    low level in that it''s the most basic interpretation. If you try thinking about
+    English on a slightly higher level, you''ll start to think about the grammar of
+    the language and various phrases and idioms that are used.
+
+
+    The grammar of a language is essentially a set of rules that need to be followed
+    in order to use the language correctly. The second category of idioms and sayings
+    includes various sentences like "Honesty is the best policy" or "Pele is one of
+    the greatest football players of all time
+
+
+    The reason that Java is termed a programming language is that it includes the
+    various aspects of other languages, such as English. Java, like English, has grammar
+    (called syntax), words, stylistic idioms and commonly used names, among other
+    things.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Grammar and common names
+
+
+    Java was developed by Sun Microsystems (now a part of Oracle). The developers
+    at Sun Microsystems looked at Java as a language that has two parts. Similar to
+    how the English language has grammar and commonly used words, Java has a specification
+    (grammar) and an Application Programming Interface (commonly used words). Whenever
+    you are writing Java programs, it''s advisable to keep two pieces of documentation
+    (one for each aspect mentioned above) near you:
+
+
+    # The Java language specification
+
+
+    Ask any programmer about the most annoying errors that can show up when writing
+    programs. Many of them will say syntax errors. These errors arise when the programmer
+    forgets to follow the rules of Java programming such as "All statements must end
+    in a semicolon." This documentation will help you avoid such errors.
+
+
+    # The Application Programming Interface
+
+
+    Every programming language has an application-programming interface (API). The
+    API consists of numerous tools that were added by developers to Java after the
+    syntax was defined. Some of these tools are common to the APIs of almost every
+    programming language and some are unique. For example, the API includes a function
+    called "pow," which allows the programmer to write exponents in his code, like
+    raised to 2 (52). One of the more attractive tools is JFrame, which displays a
+    window on the computer monitor. The API also includes tools that can listen for
+    button clicks by the user and create databases for queries.
+
+
+    Before you start programming, you''ll need to download the tools for Java. You
+    can download the API documents, language specification and all the documentation
+    for Java at Java Language and Virtual Machine Specifications (http://docs.oracle.com/javase/specs).
+    You can also view the documentation online if you don''t want to download it.
+    However, since updates are constantly being made, this link might be outdated
+    by the time you read this book. But don''t worry. You can visit Oracle'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '(http://www.oracle.com/technetwork/java/index.html). From this webpage, click
+    on the relevant links and download the files. documentation and Java SE (where
+    SE stands for Standard Edition).
+
+
+    The Java language specification is relatively small. This doesn''t mean that it
+    will take 10 minutes for you to master the rules of Java. It will still take some
+    time. However, other languages have around double or triple the number of rules.
+
+
+    Java’s Application Programming Interface can be slightly intimidating since it''s
+    huge. The API contains around 4,000 tools. Also, since developers are constantly
+    working to make Java easier to use, more and more tools are added to the API.
+    Even though the API is this big, the good news is that you don''t need to memorize
+    any of it. This is the main idea behind the documentation. At any time, you can
+    simply open the documentation and look up various details about the API. As you
+    keep using the language, the parts of the API that you keep will become familiar
+    to you. You''ll probably forget the parts that you don''t use often, but you can
+    always look them up again.
+
+
+    There are no doubt very few people around the world who are aware of all the details
+    of the Java API. Suppose that you often write code that opens new windows on your
+    computer screen. This means you''ll become familiar with the JFrame. The first
+    few times that you use it, you''ll probably have to open the documentation to
+    read about it. The importance of the documentation can''t be overstated. A programmer
+    without access to the documentation will probably be able to use less than 10
+    percent of the tools that are provided by the Java API. The documentation for
+    the API is concise and precise.
+
+
+    To be honest, there is nothing extraordinary or special about the Java API. Whenever
+    you write a Java program—even a very basic one—you create a class is comparable
+    to the classes that are already defined in the API. The API is simply a set of
+    tools and classes that are created by other programmers. These programmers take
+    part in the Java Community Process (JCP) and the OpenJDK Project. A JDK is a Java
+    Development Kit. The only difference is that the classes created by these programmers
+    are'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'added to the subsequent versions of Java. However, if you want to contribute
+    to the development of Java, you can apply to become a part of the OpenJDK Project.
+
+
+    # Words in a Java program
+
+
+    If you read any book about Java or ask any experienced programmer, you''ll hear
+    that there are two types of words in Java: identifiers and keywords. All used
+    in Java code can be segregated into either of these classes. However, for a beginner,
+    these definitions may be slightly misleading. Let''s instead consider three classes:
+    keywords, identifiers from the Java API, and identifiers created by the programmer
+    (you).
+
+
+    The differences between these three categories are very much like the differences
+    between different categories of words in English. Consider the sentence, "He is
+    a person." The word person can be classified as a keyword. No matter how many
+    times the word "person" is used, the meaning of the word doesn''t change. This
+    is basically the definition of keywords.
+
+
+    Now look at the sentence, "Allison is a woman." The word "Allison" is the name
+    of the person. Words in English such as Allison, Peter, Jessica and Ryan don''t
+    have any meaning to them, i.e., there is no fixed definition or usage. These can
+    be names for anybody—parents select a name for their kids (in most cases). These
+    names can be compared to identifiers created by programmers in Java.
+
+
+    Let''s take a look at one last sentence—“Lionel Messi is a man." When you say
+    this sentence or hear someone saying it, you''ll immediately assume that the person
+    being referred to is the world famous football player. Even though this is not
+    a rule in the English language and there could be another person in the world
+    named Lionel Messi, most people around the world will use it to refer to a single
+    man. These types of names can be compared to identifiers created in the Java API.
+
+
+    Let''s now look at the various categories of words in Java.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Keywords
+
+
+    A keyword is a word that has a special meaning in Java; its meaning doesn''t change
+    no matter how many times it''s used and where it''s used. Some examples of keywords
+    are for, while, if, else and do. All the Java keywords are chosen by members of
+    the Java Community Committee. Look back at the two parts of Java that were defined
+    earlier in the chapter. We talked about the grammar and common names of Java.
+    The keywords come under the language specification (grammar) section.
+
+
+    # Identifiers
+
+
+    Identifiers in Java are essentially just names for things. The meanings for these
+    words can change from one program to another. Some identifiers'' meanings happen
+    to change more frequently than others.
+
+
+    # Identifiers created by programmers like you and me
+
+
+    Every Java programmer creates his own names for classes and variables that are
+    defined in his programs. Even neophytes create their own classes and variables,
+    and hence have to create identifiers. Suppose you name something in your code
+    number, and there is another programmer in your vicinity who names something in
+    his code number. This won''t give rise to an error since there is no fixed definition
+    for the word number in Java. This allows for increased readability of Java programs.
+    For instance, if you are writing code for determining the sum of numbers stored
+    in an array, you can name the array “numbers” so that when someone reads the code,
+    they can interpret that the numbers to be added are stored in the array.
+
+
+    # Identifiers from the API
+
+
+    The members of the JCP committee have devised names for many elements used in
+    Java and have included them in the Java API. Since the API is included in every
+    version of Java, these names are available to everyone who writes a Java program.
+    A few examples of these identifiers are Integer, JWindow, JTextField, String and
+    File.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "Keep in mind that since these are identifiers, their definitions are not set\
+    \ in stone, and you can modify the meanings of these names. However, this is not\
+    \ recommended. Since these names are accepted all around the world, changing the\
+    \ meanings of these words would decrease the readability of those words. Other\
+    \ programmers wouldn't understand the meanings you have given to the words, and\
+    \ this would lead to confusion. A more serious problem than this is that when\
+    \ you modify meanings to words such as Integer, you lose all the computational\
+    \ power that was built into it by the JCP committee.\n\n# Checking code\n\nSometimes,\
+    \ people might ask you to verify and check their Java programs. The first time\
+    \ you look at someone else's code, you are bound to be confused. There will be\
+    \ many statements that you won't be able to understand. Even if you are an experienced\
+    \ programmer, reading someone else's code is never easy.\n\nReading and understanding\
+    \ someone else's Java code can be a lengthy process. First, you'll have to run\
+    \ it to see what it does. After that, you may want to read other people's explanations\
+    \ of the code in order to get a deeper understanding. You may run the code a few\
+    \ more times. In the end, it's best to verify the code by running it using different\
+    \ conditions. It’s always good to take as much as time as needed when working\
+    \ with any programming language.\n\nLet’s now go through the example code shown\
+    \ below:\n\n```\npublic class Example {\n    public static void main(String args[])\
+    \ {\n        System.out.println(\"Java is awesome!\");\n    }\n}\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: When you compile and execute the above program, the statement “Java is awesome!”
+    will be displayed on the screen. This may look like an oversimified example—and
+    it is. It may also seem like a lot of work to go through all the documentation
+    just to write code that says “Java is awesome!” That's true as well. However,
+    this is just a stepping stone. Once you are familiar with the various tools Java
+    has to offer, you can write programs that can perform various useful functions.
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# # Chapter 4:
+
+    Understanding a Simple Java Program
+
+
+    This chapter analyzes and explains the Java program that was shown in the previous
+    chapter.
+
+
+    # ## The Java class
+
+
+    Since Java is an object-oriented programming language, you''ll need to always
+    create and describe classes and objects. If you are not sure about this yet, you''ll
+    need to read through Chapter 1 again.
+
+
+    Java is one of the purest forms of object-oriented programming languages when
+    compared to any other object-oriented programming language. This is because you
+    can do absolutely anything in Java once you have created a class of some kind.
+    This is like when you are on Jeopardy and hear Alex Trebek say, “Let''s go to
+    commercial!" and then interrupt him and say, “I''m sorry, but you can''t issue
+    any instruction that way without adding an instruction to your class."
+
+
+    It''s important to remember that the entire program that you write is a class.
+    When you write a program, you can make the name for your class. It would be best
+    to use a name that depicts the function of the class. The program uses the name
+    Displayer (since the program displays a line on the screen). This is why the program
+    in the previous chapter named the class “Example”
+
+
+    The first two words in the program are public and class, which are the Java keywords.
+    No matter what program you are writing or who is writing the program, the words
+    public and class are always used in the exact same way. On the other hand, the
+    word Displayer is used as an identifier since it identifies a particular'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'class in the program. The word public means that every other program in Java
+    can use the features of the function that have been declared.
+
+
+    The Java PROGRAMMING LANGUAGE IS case-sensitive. If you change a lowercase letter
+    to an uppercase letter in Java, you change the meaning of the entire word. There
+    are times when these words can be rendered useless. In the first line of the program,
+    you can''t replace the word “class” with “Class.” IF YOU DO, THE WHOLE PROGRAM
+    STOPS WORKING. The same holds true for the names of files that contain the particular
+    class. For instance, the class in the program in the previous chapter uses a class
+    whose name starts with an uppercase D. If you were to call this class in any other
+    program, you''ll need to use the exact name—“Displayer.”
+
+
+    If you define any class, its code will go into a file with the name of the class.
+    For example, the code in the Displayer class will go into the following file—Displayer.java.
+    The name of the class will be spelled in the exact same way as the name of the
+    class in the program. This file naming convention is important to remember.
+
+
+    # Java method
+
+
+    You''re working as an auto mechanic in an upscale garage. Your boss, who''s always
+    in a hurry and has a habit of running words together, says, “fixThe Alternator
+    on junkyOldFord.” Mentally, you run through a list of tasks. “Drive the car into
+    the bay, lift the hood, get a wrench, loosen the alternator belt,” and so on.
+    Three things are going on here:
+
+
+    +   - You have a name for the thing you''re supposed to do. The name is fixTheAlternator.
+
+    - In your mind, you have a list of tasks associated with the name fixTheAlternator.
+    The list includes “Drive the car into the bay, lift the hood, get a wrench, loosen
+    the alternator belt,” and so on.
+
+    - You have a grumpy boss who''s telling you to do all this work. Your boss gets
+    you working by saying, “fixTheAlternator.” In other words, your boss gets you
+    working by saying the name of the thing you''re supposed to do.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'In this scenario, using the word “method” wouldn''t be a big stretch. You have
+    a method for doing something with an alternator. Your boss calls method into action
+    and you respond by doing all the things in the list of instructions that you associate
+    with the method.
+
+
+    If you believe all that (and I hope you do), then you''re ready to read about
+    Java methods. In Java, a method is a list of things to do. Every method has a
+    name, and you tell the computer to do the things in the list by using the method''s
+    name in your program.
+
+
+    Don''t scrutinize the code in the examples below too carefully. All the code in
+    the programs is fake! I made up this code so that it looks a like real Java code,
+    but it''s not real. What''s more important, the code in the above examples is
+    not meant to illustrate all the rules about Java. So, if you have a grain of salt
+    handy, take it with the above examples.
+
+
+    Example: A Method Declaration void fixTheAlternator() { driveInto(car, bay); lift(hood);
+    get(wrench); loosen(alternatorBelt); ... }
+
+
+    Somewhere else in my Java code (somewhere outside of Example), I need an instruction
+    to call my fixTheAlternator method into action. The instruction to call the fixTheAlternator
+    method into action may look like the line in Example.
+
+
+    Example: A Method Call fixTheAlternator(junkyOldFord);
+
+
+    Now that you have a basic understanding of what a method is and how it works,
+    you can dig a little deeper into some useful terminology:
+
+
+    +   - If I''m being lazy, I refer to the code in Example as a method. If I''m
+    not being lazy, I refer to this code as a method declaration.
+
+    - The method declaration in Example has two parts. The first line (the part with
+    fixTheAlternator in it, but up to not including the open curly brace) is a method
+    header. The rest of Example (the part surrounded by curly braces) is a method
+    body.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '+   The term method declaration distinguishes the list of instructions in Example
+    from the instruction in the example, which is known as a method call.
+
+
+    A method''s declaration tells the computer what happens if you call the method
+    into action. A method call (a separate piece of code) tells the computer to actually
+    call the method into action. A method''s declaration and the method''s call tend
+    to be in different parts of the Java program.
+
+
+    # Main method in a program
+
+
+    The program in the previous chapter contains a bulk of the code in a method called
+    “main.” At the moment, you don''t need to worry about the other words in the method
+    header—static, public, void, args and string. Let''s first take a look at the
+    word “Main”.
+
+
+    Every Java method can be taken as a recipe.
+
+
+    How to bake biscuits: Preheat the oven. Make and roll the dough. Bake the dough.
+
+
+    or
+
+
+    How to follow the main method instructions for Displayer: Print “You''ll love
+    Java!” on the computer screen.
+
+
+    The word “main” plays a very special role in Java. When you write a program, you
+    can never call the main method using any explicit function. The word “main” is
+    the name of a method that''s automatically called into action when any program
+    running.
+
+
+    Go back to the previous chapter and take a look at the program. When the Displayer
+    section of the program runs, the computer will automatically find the main method
+    of the program and execute any instructions that are in the body of that program.
+    That instruction tells the computer to print “You''ll love Java!” on the computer
+    screen.
+
+
+    The instructions in any method cant be executed unless the main method is called
+    into action by the computer. If you were to give'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'any method name “main,” it would automatically be called into action (which
+    is not what you may always want).
+
+
+    Almost every computer programming language has something akin to Java’s methods.
+    If you have used other languages, you’ll definitely come across procedures, subprograms,
+    functions, subroutines, subprograms, or PERFORM statements. Whatever you call
+    it in your favorite programming language, a method is a bunch of instructions
+    collected and given a new name.
+
+
+    # How do you tell a computer something?
+
+
+    There is one line of code in the program in the previous chapter that issues an
+    instruction directly to the computer. The line tells the computer that it will
+    need to display “You’ll love Java!” This line is a statement. A statement is a
+    direct instruction that asks the computer to perform some function.
+
+
+    Of course, Java has different kinds of statements. A method call, which is later
+    introduced in Chapter 13, “Java Methods,” is one of the many kinds of Java statements.
+    Example shows you what a method call looks like, as does the below code:
+
+
+    ```
+
+    System.out.println("You’ll love Java!");
+
+    ```
+
+
+    When the computer executes this statement, the computer calls a method named System.out.println
+    into action. (Yes, in Java, a name can have dots in it. The dots mean something.)
+
+
+    It was was mentioned earlier, but it’s worth repeating: In System.out.println,
+    the next-to-last character is a lowercase letter “l” (as in the word “line”),
+    not the digit 1 (as in the number “one”). If you use a digit 1, your code won’t
+    work. Just think of println as a way of saying “print line,” and you won’t have
+    any problems.
+
+
+    Actually, two methods play active roles in the running of the Displayer program.
+    Here’s how they work:
+
+
+    +   - There’s a declaration for a main method. I wrote the main method myself.
+    This main method is automatically called whenever I run the Displayer program.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '+   There''s a call to the System.out.println method. The method call for the
+    System.out.println method is the only statement in the body of the main method.
+    In other words, calling the System.out.println method is the only thing on the
+    main method''s to-do list. The declaration for the System.out.println method is
+    buried inside the official Java API. For a refresher on the Java API, see the
+    sections “Grammar and common names” and “Words in a Java program,” earlier in
+    this chapter.
+
+
+    Statements like “System.out.println” are buried inside the API don’t do justice
+    to the API being used. You can always ignore the Java code that’s within the API.
+    You only need to remember that the function “System.out.println” has been defined
+    somewhere in the API. It’s important to note that the API is nothing but a library
+    that contains a bunch of Java code. The statements that are within an API always
+    tell the computer what it would need to do when the function “System.out.println”
+    has been called upon.
+
+
+    In Java, every statement ends with a semicolon. The other lines in the previous
+    example don’t end with semicolons because they can’t be categorized as statements.
+    For example, a method header doesn’t tell a computer what it needs to do. The
+    header will announce, “You can perform the next set of statements if you want
+    to use a main method function.
+
+
+    It’s very important to remember that you need to end every statement in Java using
+    a semicolon.
+
+
+    # Curly braces
+
+
+    You may have learned in art class how important an outline is. When you have an
+    outline, you can ensure that you only color within the outline. The same goes
+    for ideas—when you have an outline, you’ll be able to organize your ideas and
+    thoughts and help people see the whole forest instead of just the trees. The same
+    goes for a Java program––it’s an outline. The program in the previous chapter
+    starts with a line that says “Here is a class named Display.” After that first
+    big header, a subheader announces, “Here comes a method named main.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'A Java program is like an outline, then why does a program never look like
+    an outline? What is it that takes the place of the black ink and the capital letters?
+    The answer that can be given here is twofold:
+
+
+    +   - Curly braces used in Java always enclose units of meaningful code.
+
+    - The programmer can use these to indent lines to help other programmers identify
+    the outline of the code when they glance through it.
+
+
+    In an outline, everything is subordinate to the item in Roman numeral I. In a
+    Java program, everything is subordinate to the top line (the line with “class”
+    in it). To indicate that everything else in the code is subordinate to this class
+    line, you use curly braces. Everything else in the code goes inside these curly
+    braces.
+
+
+    Never lose sight of the fact that a Java program is, first and foremost, an outline.
+
+
+    If you put curly braces in the wrong places where the braces should be, your program
+    probably won’t work at all. If your program does work, though, it’ll probably
+    work incorrectly.
+
+
+    If you don’t indent lines of code in an informative manner, your program will
+    still work correctly, but neither nor any other programmer will be able to figure
+    out what you were thinking when you wrote the code.
+
+
+    If you’re a visual thinker, you can picture outlines of Java programs in your
+    head. One friend of mine visualizes an actual numbered outline morphing into a
+    Java program!
+
+
+    # Adding comments to your code
+
+
+    A comment is a section of the text that is inside a program; its purpose is to
+    help a viewer understand the program. A comment is a good way to document the
+    program. There are three types of comments in Java, and they’re covered in the
+    following sections.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Traditional comments
+
+
+    Comments always begin with /* and end with /. Everything that''s between them
+    is for human eyes only–it''s not read by the computer. You can add more asterisks
+    if you like; this would not affect the comment since these are not read by the
+    computer.
+
+
+    # End-of-line comments
+
+
+    If you were to use //, you are saying that the line has ended. An end-of-the-line
+    comment starts with two backslashes and goes to the end of the line. The compiler
+    and the computer don''t translate the text that''s within the comment.
+
+
+    # Javadoc comments
+
+
+    A Javadoc comment begins with a backslash and two asterisks (**). This is a special
+    kind of traditional comment and is always meant to be read by people who have
+    never made the effort to read the Java code. That doesn''t make sense, does it?
+    How can you see the comments but never read the code?
+
+
+    There is a program called the Javadoc that uses all the Javadoc comments in a
+    program and turns these comments into a webpage.
+
+
+    Javadoc comments are awesome for the following reasons:
+
+
+    +   - The only person who will need to view and write the code is the programmer.
+    Others who are using the code will only need to understand what the code does
+    by looking at the webpage that was automatically generated.
+
+    - Since other people don''t have to look at the Java code, there is no need to
+    make any changes to that code. This way, the programmer can ensure that the code
+    is not altered.
+
+    - People don''t need to decipher the workings of the Java code since they''ll
+    learn everything they need to about the code using the webpage.
+
+    - The programmer doesn''t need to create two separate things: the documentation
+    about the code and the code itself. The programmer only needs to create the piece
+    of'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '+   - code that will embed the documentation in the form of Javadoc comments
+    right inside the code.
+
+    - The best part about using Javadoc comments is that the web pages are automatically
+    generated from them.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# Chapter 5:\nYour First Program\n\nBefore we move on to your first program,\
+    \ we need to look at some of the basic syntax. Each program is considered to be\
+    \ a collection of objects, each communicating with the others by invoking methods.\
+    \ Let's look at what all these are:\n\n+   * **Object:** Each object has behaviors\
+    \ and states. For example, a dog has states, like color, breed, and name, as well\
+    \ as behaviors, like yowling, eating, tail wagging. Each object is an instance\
+    \ of a class\n* **Class:** The class is like a blueprint for describing the behaviors\
+    \ and states of the object that's of the same type as the class.\n* **Methods:**\
+    \ Methods are behaviors. Each class can have many methods, and it's in the methods\
+    \ where the logic is written, the data is manipulated, and all actions are executed.\n\
+    * **Instance variables:** Every object has a set of unique instance variables.\
+    \ The object state is created through the values that have been assigned to the\
+    \ instance variables.\n\nNow let's look at your first program:\n\nOpen Eclipse\
+    \ and set up your first project. In the IDE box, type in the following code:\n\
+    \n```\npublic class HelloJava {\n\n    public static void main(String[] args)\
+    \ {\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '```
+
+    System.out.println("Hello Java!");
+
+    }
+
+    }
+
+    ```
+
+
+    This is absolutely the simplest program to begin with, and the only output is
+    “Hello Java.” Let’s look at this program one line at a time:
+
+
+    +   - Line 1: We have declared a class, which is a data type defined by the user.
+    Unlike other programs, we must always write our Java functions or variables inside
+    the class. This class has been marked as a public class, which means it can be
+    accessed from anywhere, and the name of it is HelloJava. Keep these rules in mind
+    when you’re writing your Java classes—one file may contain multiple classes but
+    only one of those may be public. In cases you have a public class, the file name
+    must be the same as the public class name.
+
+    - Line 2: We used the main() function here and this is where program execution
+    begins. This function is unable to return any type. The parameter, or argument,
+    of the main() function must be an array of strings. you’ll learn more about this
+    later, it’s important to remember that Java strings are not character arrays,
+    unlike other languages. The [ ] are given right after the data type. The name
+    “args” should give you a clue as to the purpose of the strings array—they hold
+    the arguments for the command line.
+
+    - Line 3: The print() command simply prints the output on the console and moves
+    the cursor to the next line.
+
+
+    The output in this case is
+
+
+    Hello Java!
+
+
+    # Basic syntax'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'Where Java programs are concerned, you need to keep a couple of points in mind:
+
+
+    +   - Java is a case-sensitive language. The identifiers Hello and hello have
+    separate meanings.
+
+    - Class names must always begin with an uppercase letter. If there are several
+    words in the name, each word must start with an uppercase letter, i.e., class
+    MyJavaClass.
+
+    - By contrast, the names of the methods must begin with a lowercase letter. If
+    there are several words in the name, the first must begin with a lowercase letter
+    while all subsequent words begin with an uppercase letter, i.e., for example,
+    public void myMethod().
+
+    - Class names and program or file names must match exactly. When you save your
+    file, use the class name to save it and append it with .java. For example, the
+    class is called MyJavaProgram, so you would save it as MyJavaProgram.java—don''t
+    forget the sensitivity! If you don''t save your files like this, your program
+    won''t compile.
+
+    - Processing in every Java program begins with the main() method—this is mandatory
+    and cannot be skipped (for example, public static void main(String args[])).
+
+
+    # Java identifiers
+
+
+    Every component of Java needs a name, and the names used for the classes, methods,
+    and variables are called identifiers. There are special rules to follow with identifiers:
+
+
+    +   - All identifiers must begin with a letter, (a to z or A to Z, underscore
+    (_), or a currency character ($).
+
+    - The rest of the identifier may be made up of any character combination.
+
+    - You may not use key words as identifiers names.
+
+    - All identifiers are case sensitive.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Java modifiers
+
+
+    We will look more closely at these in the next chapter but for now, remember that
+    you can modify a class, a method, etc., by using a modifier, of which there are
+    two categories:
+
+
+    +   - Access: private, default, protected, public
+
+    - Non-access: statisc, transient, synchronised, abstract final
+
+
+    Don''t worry about what all this means just yet, it will become clear!
+
+
+    # Java variables
+
+
+    There are three variable types in Java:
+
+
+    +   - Local variables
+
+    - Class or static variables
+
+    - Instance or non-static variables
+
+
+    # Java arrays
+
+
+    An array is an object that holds multiple variables as long as they are all the
+    same type. An array is called an object “on the heap,” and we will look closer
+    at this later.
+
+
+    # Java keywords
+
+
+    This is a list of all the reserved keywords for Java. You may not use them for
+    any identifier name:
+
+
+    +   - abstract
+
+    - assert
+
+    - Boolean
+
+    - break
+
+    - byte
+
+    - case
+
+    - catch
+
+    - char
+
+    - class
+
+    - const'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '+   * continue
+
+    * default
+
+    * do
+
+    * double
+
+    * else
+
+    * enum
+
+    * extends
+
+    * final
+
+    * finally
+
+    * float
+
+    * for
+
+    * goto
+
+    * if
+
+    * implements
+
+    * import
+
+    * instanceof
+
+    * int
+
+    * interface
+
+    * long
+
+    * native new
+
+    * package
+
+    * private
+
+    * protected
+
+    * public return
+
+    * short
+
+    * static
+
+    * strictfp
+
+    * super
+
+    * switch
+
+    * synchronized
+
+    * this
+
+    * throw
+
+    * throws
+
+    * transient
+
+    * try
+
+    * void
+
+    * volatile
+
+    * while'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Java comments
+
+
+    Java has support for single and multi-line comments. Look at the examples below
+    to see how they work:
+
+
+    ```
+
+    // This would be a single line comment
+
+    /* This would also be a single line comment. */
+
+    /* While this is a good example
+
+    Of a multiline comment. */
+
+    ```
+
+
+    Note the use of the backlash and asterisk characters to indicate the comments
+    that will be ignored by the Java compiler.
+
+
+    # Blank lines
+
+
+    A line may be blank or it may contain just a comment. This is called a blank line
+    and will be ignored by Java.
+
+
+    # Inheritance
+
+
+    Java allows a class to be derived from another class. Basically, if you have a
+    class and you need a new one, if the original one has some of the code you need,
+    you may derive the new class from the old one. This lets you reuse methods and
+    fields that may be in the existing class without the need to rewrite the code.
+    The existing class is known as the superclass while the derived class is the subclass.
+    This is known as an inheritance.
+
+
+    In the next chapter, we are going to be looking at objects and classes.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Chapter 6:
+
+    Objects and Classes
+
+
+    # Objects
+
+
+    Think about the world around you; there are lots of different types of objects,
+    such as dogs, humans, buildings, houses, etc. Each of these objects has its own
+    behavior and state. Consider the dog, for example; it has states of name, color,
+    breed, etc., and behaviors of running, barking and tail wagging. Compare this
+    to a software object and you''ll see that there isn''t much of a difference because
+    a software object also has states and the behaviors. The state is stored in a
+    field and the behavior is indicated through a method.
+
+
+    # Classes
+
+
+    Classes are blueprints and we can create an object from it. Each class may contain
+    one, some or all of these types of variable:
+
+
+    +   - **Local**: A variable that has been defined inside a method, block or constructor
+    is known as a local variable. It''s declared and then initialized inside the method
+    and when the method has completed, the variable is destroyed.
+
+    - **Instance**: This is a variable that has been defined inside a class but outside
+    a method. They are initialized at the time of class instantiation, and they can
+    be accessed within a method, block or constructor of the class.
+
+    - **Class**: These are declared in a class and outside a method using the static
+    keyword.
+
+    - **Class variables**: Class variables are variables declared within a class,
+    outside any method, with the static keyword.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'Classes can have multiple methods for accessing the values of different methods.
+    In the case of a dog, barking() is a method.
+
+
+    # Constructors
+
+
+    Constructors are very important when we talk about classes. Each class has one
+    and if we don''t write one for our class, Java will provide a default constructor.
+    Whenever a new object has been created, one or more constructors will be invoked.
+    The primary rule for a constructor is that it must have an identical name to the
+    class, and a class may have more than one constructor.
+
+
+    Java also provides support for the singleton class, where you can create one instance
+    of the class.
+
+
+    # Creating objects
+
+
+    We know that the object is created from the class and we use the new keyword to
+    do this. These three steps must be followed when you create a class:
+
+
+    +   - **Declaration**: A variable with a variable name and an object type must
+    be declared.
+
+    - **Instantiation**: We use the new keyword to create an object.
+
+    - **Initialization**: A call to a constructor follows the new keyword, and this
+    will initialize the object.
+
+
+    To access an instance variable or a method, we create an object. For the instance
+    variable, you would use this fully qualified path:
+
+
+    ```
+
+    /* First create the object */
+
+    ObjectReference = new Constructor();
+
+    ```
+
+
+    ```
+
+    /* Now call the variable like this */
+
+    ObjectReference.variableName;
+
+    ```
+
+
+    ```
+
+    /* Now you may call the class method like this */
+
+    ```'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '```
+
+    ObjectReference.MethodName();
+
+    ```
+
+
+    # Rules for declaring source files
+
+
+    Source file declaration rules are important when you are declaring a class, an
+    import statement and a package statement in a source file.
+
+
+    +   * You may only have one public class in any source file.
+
+    * A source file may have as many non-public classes as you want.
+
+    * The source file and the public class must have the same name, with the file
+    name appended with .java.
+
+    * In a class that has been defined in a package, the first statement in the source
+    file must be the package statement.
+
+    * If there are import import statements, they should be written in between the
+    class declaration and the package statement. If there is no package statement,
+    the import statement will be the first line of the source file.
+
+    * Package and import statements apply to every class''s present in the source
+    file. You can''t declare different ones or different classes.
+
+
+    A Java package is a categorization of the class and interface—this must be done
+    when you are programming, just to make life easier for yourself.
+
+
+    The import statement provides the right location for the compiler to find a specific
+    class.
+
+
+    In the next chapter, we will look at data types.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# # Chapter 7:
+
+    Java Data Types
+
+
+    A variable is a reserved location in memory used for storing values. When you
+    create a new variable, you are automatically reserving that space in memory. The
+    amount of memory is determined by the type of the variable; the operating system
+    allocates the memory and determines what may be stored in it. By assigning a different
+    type to a variable, you can store decimals, integers or characters. Java has two
+    main data types:
+
+
+    +   * Primitive
+
+    * Reference or object
+
+
+    # Primitive
+
+
+    Java contains eight primitive data types. These are predefined by the Java language
+    and are named with a keyword. The eight types are:
+
+
+    +   * Byte: A byte is a data type with a default value of 0 (zero). The minimum
+    value is -128 and the maximum is 127. It''s usually used for saving space in the
+    larger arrays, and is usually used instead of an integer because an integer is
+    four times larger than a byte.
+
+    * Short: A short is a data type with a default value of 0. The minimum value is
+    -32,768 and the maximum is 32,767. To save memory, it may also be used as a byte
+    data type. The integer is two times bigger than the short.
+
+    * Int: The int has a default of 0. The minimum value is -2,147,483,647 and the
+    maximum is 2,147,483,647. It''s normally used as the default type for integral
+    values unless memory is short.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '+   • Long: The long has a default of oL. The minimum value is -9,223,372,036,854,775,807
+    and the maximum is 9,223,372,036,854,775,808. It''s used when you need a longer
+    range than the int provides.
+
+
+    +   • Float: The float has a default of oof and is generally used to save some
+    memory when you have large arrays containing floating point numbers. It''s never
+    used when you need a precise value, as for currency.
+
+
+    +   • Double: The double has a default value of o.od. It''s used normally as the
+    decimal value type and should never be used for any values that are precise, like
+    currency.
+
+
+    +   • Boolean: The Boolean is used to represent a single piece of information
+    and has just two values: true or false. It''s used when you need to track conditions
+    that are either true or false. Its default value is false.
+
+
+    +   • Char: The char data type may be used for the storage of any character.
+
+
+    # Reference data types
+
+
+    To create a reference variable, we defined constructors of classes. Reference
+    variables are used for accessing an object and are declared as specific types
+    that are known as immutable—this means they can''t be changed once declared. Reference
+    objects include class objects and a variety of array variables. The default value
+    of all reference variables is null, and they may be used to refer to an object
+    of the type declared or any type that''s compatible.
+
+
+    # Java literals
+
+
+    Literals are a source code representation of fixed values, represented in the
+    code directly without the need for any computation. They can be assigned to any
+    of the primitive type variables, for example:
+
+
+    ```
+
+    byte a = 67;
+
+    ```
+
+
+    ```
+
+    char a = ''A''
+
+    ```
+
+
+    Int, byte, short and long may also be expressed in the octal, decimal or hexadecimal
+    number system too. The prefix of o'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'indicates the octal system and ox prefixes the hexadecimal system. For example:
+
+
+    ```
+
+    int decimal = 100;
+
+    int octal = 0144;
+
+    int hexa = 0x64;
+
+    ```
+
+
+    Java string literals are specified pretty much the same way as they are in other
+    languages—a sequence of characters enclosed in a set of double quotes.
+
+
+    Java also supports some escape sequences for use with char and string literals.
+    These are:
+
+
+    | Escape Sequence | Representation |
+
+    | \n | New line |
+
+    | \r | Carriage return |
+
+    | \f | Form feed |
+
+    | \b | Backspace |
+
+    | \s | Space |
+
+    | \t | Tab |
+
+    | \" | Double quote |
+
+    | \'' | Single quote |
+
+    | \\ | Backslash |
+
+    | \ddd | Octal character |
+
+    | \xxxx | Hexadecimal UNCODE character |
+
+
+    In the next chapter, we''ll look at the different Java operators.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Chapter 8:
+
+    Java Basic Operators
+
+
+    Java contains several operators that are used for the manipulation of variables:
+
+
+    # Arithmetic
+
+
+    These are used for mathematical expressions in much the same way you used the
+    same symbols at school:
+
+
+    | Operator | Description |
+
+    | --- | --- |
+
+    | + | Addition, for adding values on the left or right of the operator |
+
+    | - | Subtraction, for subtracting the right operand from the left |
+
+    | * | Multiplication, for multiplying values on the left or right of the operator
+    |
+
+    | / | Division, for dividing the left operand by the right operand |
+
+    | % | Modulus, the remainder of the division of the left operand by the operand
+    |
+
+    | ++ by 1 | Increment, for increasing an operand value |
+
+    | -- by 1 | Decrement, for decreasing an operand value |'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Relational
+
+
+    There are several relational operators in Java:
+
+
+    | Operator | Description |
+
+    | --- | --- |
+
+    | == (equal to) | Checks the values of the operands are equal; evaluates true
+    if they are |
+
+    | != (not equal to) | Checks if the values of the operands are equal; evaluates
+    true if not |
+
+    | > (greater than) | Checks if the left operand is greater than the right; evaluates
+    true if it is |
+
+    | < (less than) | Checks if the left operand is less than the right; evaluates
+    true if it is |
+
+    | >= (greater than or equal to) | Checks if the left operand is greater than or
+    the same as the right; evaluates true if it is |
+
+    | <= (less than or equal to) | Checks if the left operand is less than or the
+    same as the right; evaluates true if it is |
+
+
+    # Logical
+
+
+    | Operator | Description |
+
+    | --- | --- |
+
+    | && (logical and) values | Evaluates true if both operands are non-zero |
+
+    | || (logical or) | Evaluates true if either operand is non-zero |
+
+    | ! (logical not) | Evaluates false if a condition is true because it reverses
+    the logical state of the operand |'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# Assignment\n\n| Operator | Description |\n\n= | Assigns the value from the\
+    \ right operand to the left\n\n+= | Adds the value of the right operand to the\
+    \ left and assigns the result to the left\n\n-= | Subtracts the right from the\
+    \ left operand and assigns the result to the left\n\n*= | Multiplies the right\
+    \ with the left operand and assigns the result to the left\n\n/= | Dividing the\
+    \ left operand with the right and assigns the result to the left\n\n%= | Takes\
+    \ the modulus of two operands and assigns the result to the left\n\n<<= | Left\
+    \ shift and assignment\n\n>>= | Right shift and assignment\n\n# Miscellaneous\n\
+    \nThere are a couple of other operators:\n\n+   * Conditional—(? :): Also called\
+    \ a ternary operator, it has three operands and is used when we want to evaluate\
+    \ a Boolean expression. The operator will decide which of the values will be assigned\
+    \ to the variable. It is written as:\n  variable x = (expression) ? value if true\
+    \ : value if false\n\n+   * Instanceof operator: This is only used for object\
+    \ reference variables. It will check to see if the object is a specific type (either\
+    \ interface or class type). It is written as:"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '(Object reference variable) instanceof
+
+    (class/interface type)
+
+
+    If the object referenced by the variable on the left successfully passes the IS-A
+    check for the type on the right, it will evaluate as true.
+
+
+    The instanceof operator will evaluate true if the object''s being compared is
+    an assignment that''s compatible with the type to the right.
+
+
+    # Operator precedence
+
+
+    Operator precedence is used to determine how expressions are evaluated by looking
+    at the terms inside it. Some operators have a higher precedence than others, such
+    as multiplication over addition. For example:
+
+
+    ```
+
+    x = 6+2*3
+
+    ```
+
+
+    Here, x is given a value of 12 and not, as you may assume, 24. Because multiplication
+    is higher in the precedence order, Java will calculate this as 2*3 and then add
+    the 6. Here, the operators are in order of their precedence from highest to lowest.
+    In any expression, those operators with the highest precedence will be the first
+    ones evaluated:
+
+
+    | Category | Operator | Associativity |
+
+    | --- | --- | --- |
+
+    | Postfix | >() [] . (dot operator) | Left to right |
+
+    | Unary | ++ - - ! ~ | Right to left |
+
+    | Multiplicative | * / | Left to right |
+
+    | Additive | += - | Left to right |
+
+    | Shift | >>> >>> << | Left to right |
+
+    | Relational | >> >= <= | Left to right |
+
+    | Equality | >== !== | Left to right |'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '| Logical AND | >&& | Left to right |
+
+    | Logical OR | >|| | Left to right |
+
+    | Conditional | ?: | Right to left |
+
+    | Assignment | >= += - = * /= / %= >= << <= &= ^= | = | Right to left |
+
+
+    In the next chapter, we are are going to look at loop control and decision making.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Chapter 9:
+
+    Loop Control and Decision Making
+
+
+    On occasion, you may have a piece of code that you want to execute multiple times.
+    Generally, Java executes statements in the sequence they are written—the first
+    statement within a function goes first, then the second, and so on for as as many
+    statements as there are in the function. Like other programming languages, Java
+    gives us a certain amount of control over this, allowing us to carry out more
+    complex executions.
+
+
+    Loop statements are used to execute a single statement or a group of statements
+    several times over, and Java gives us three of these to play with:
+
+
+    | Loop | Description |
+
+    | --- | --- |
+
+    | while loop | Will repeat one or more statements in a group provided a specified
+    condition evaluates true. The condition is tested before the loop body is executed.
+    |
+
+    | for loop | Will execute a statement sequence several times and abbreviates the
+    piece of code responsible for management of the loop variable. |
+
+    | do...while loop | Similar to the while loop with the exception that the loop
+    body is executed before the condition is tested. |
+
+
+    # Loop control statements
+
+
+    Loop control statements are used to change the normal sequence of execution. When
+    the execution leaves its scope, i.e., it finishes'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "what it set out to do, all the objects that were automatically\ncreated in\
+    \ the scope are then destroyed.\n\nThe following control statements are supported\
+    \ in Java:\n\n| Control Statement | Description |\n| --- | --- |\n| break statement\
+    \ | Will terminate the loop\nstatement and transfer the\ncode execution to the\
+    \ first\nstatement that follows the\nloop. |\n| continue statement | Makes the\
+    \ loop skip the rest of\nthe loop body and test the\ncondition again before\n\
+    iterating the sequence again. |\n\n# Enhanced for loop\n\nEnhanced for loop came\
+    \ into play with Java v5. This is used\nmainly to traverse a collection of elements\
+    \ such as arrays. The\nsyntax for the advanced for loop is:\n\n```\nfor(declaration\
+    \ : expression) {\n    // Statements\n}\n```\n\nLet's look at the first line a\
+    \ bit closer:\n\n+   ** Declaration**: You have declared a block variable that\
+    \ has\na type compatible with the array elements that you want to\naccess. The\
+    \ variable is in the for block and will have a value\nthat's the same as the array\
+    \ element.\n** Expression**: This will evaluate to the array that you are\nlooping\
+    \ through. The expression may be a method call or\nan array variable that returns\
+    \ an array as the result."
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Decision making
+
+
+    Decision making is an important part of Java. The structures of decision-making
+    statements include at least one condition that needs evaluating and testing by
+    the program, as well as one or more statements that will be executed provided
+    the condition is true. Optionally, you may also include other statements that
+    will execute if the condition evaluates false. The following are the decision-making
+    statements in Java:
+
+
+    | Statement | Description |
+
+    | --- | --- |
+
+    | if statement | Contains a Boolean expression and then at least one statement.
+    |
+
+    | if...else statement | May be succeeded by an else statement that will execute
+    should the Boolean expression evaluate false. |
+
+    | nested if statement | One or if else statement may be used inside another or
+    if else statement. |
+
+    | switch statement | For use when you want to test a variable for equality against
+    a list of given values. |
+
+
+    # ? : Operator
+
+
+    We already touched on this earlier. The ? : is a conditional operator that may
+    be used instead of an if...else statement, and its format looks something like:
+
+
+    ```
+
+    Exp1 ? Exp2 : Exp3;
+
+    ```
+
+
+    Exp1, Exp 2 and Exp 3 are all expressions—be sure to note the use of the colon
+    and its placement.
+
+
+    To work out the value of the entire expression is, Exp 1 is evaluated first:
+
+
+    +   - If Exp1 has a value of True, the value of Exp2 will then be the value of
+    the entire expression.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '+   * If Exp 1 evaluates to false, then Exp 3 will be evaluated and the value
+    of Exp 3 will be the value of the whole expression.
+
+
+    Next, we are going to delve into the Number class and all its subclasses. This
+    is found in the java.lang package; we are going to look at where these classes
+    may be instantiated in place of a primitive data type, and we are going to look
+    at other classes, like formatting and mathematical functions, that are necessary
+    for working with Numbers.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# Chapter 10:\nNumbers Class\n\nWhen we work with numbers in Java, usually\
+    \ we work with primitive data types like int, byte, double, long, etc. However,\
+    \ occasionally you may need to use an object wrapper instead of these data types\
+    \ and, to do this, Java gives us wrapper classes. The wrapper classes are:\n\n\
+    +   - Integer\n- Long\n- Byte\n- Float\n- Double\n- Short\n\nEach of these is\
+    \ a subclass of the Number class, which is called an abstract class.\n\nThe object\
+    \ of each wrapper class will wrap, or contain, each of its respective primitive\
+    \ data types. Converting the primitive data type into the object is known as boxing,\
+    \ and the compiler does this for you. So all you need to do when you use a wrapper\
+    \ class is pass the value of the relevant data type to the wrapper class' constructor.\
+    \ To convert the wrapper object back into a primitive data type, we use a process\
+    \ called unboxing.\n\nThis is an example of boxing and unboxing:\n\n```\npublic\
+    \ class Test {\n    public static void main(String args[]) {\n        Integer\
+    \ x = 5; // boxes int to an Integer object\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '```
+
+    x = x + 10; // unboxes the Integer to an int
+
+    System.out.println(x);
+
+    }
+
+    ```
+
+
+    The output of this is
+
+    15
+
+
+    When we assign x with an integer value, the compiler will box that integer because
+    x is now an integer object. Later, x gets unboxed so it can be added as the integer.
+
+
+    # Number methods
+
+
+    The following shows the instance methods that can be implemented by the subclasses
+    of the Number class:
+
+
+    | Method | Description |
+
+    |---|---|
+
+    | xxxValue() | Converts the Number object value to a specified data type and return
+    it. |
+
+    | compareTo() | Compares the Number object with the argument. |
+
+    | equals() | Determines if the Number object and the argument are equal. |
+
+    | valueOf() | Returns an Integer object that contains the value of the given data
+    type. |
+
+    | toString() | Returns a String object that’s representative of the value of the
+    given Integer or int. |
+
+    | parseInt() | Gets the data type (primitive) of a specified string. |
+
+    | abs() | Returns an argument’s absolute value. |'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'ceil()
+
+
+    Returns the smallest Integer that''s either greater than or equal to the specified
+    argument, and is returned as Double.
+
+
+    floor()
+
+
+    Returns the biggest Integer that''s less than or equal to the specified argument,
+    and is returned as Double.
+
+
+    rint()
+
+
+    Returns the Integer that''s nearest to the argument in value, and is returned
+    as Double.
+
+
+    round()
+
+
+    Returns the closest int or long, indicated by the return type of the method to
+    the argument.
+
+
+    min()
+
+
+    Returns the smallest of two given arguments.
+
+
+    max()
+
+
+    Returns the larger of two given arguments.
+
+
+    log()
+
+
+    Returns the argument''s natural logarithm.
+
+
+    pow()
+
+
+    Returns the value of argument 1 raised to the power of argument 2.
+
+
+    sqrt()
+
+
+    Returns the square root of the specified argument.
+
+
+    sin()
+
+
+    Returns the sine of the given double value.
+
+
+    cos()
+
+
+    Returns the cosine of the given double value.
+
+
+    tan()
+
+
+    Returns the tangent of the given double value.
+
+
+    asin()
+
+
+    Returns the arcsine of the given double value.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'acos() | Returns the arccosine of the given double value.
+
+
+    atan() | Returns the arctangent of the given double value.
+
+
+    toDegrees() | Converts an argument into degrees.
+
+
+    toRadians() | Converts an argument into radians.
+
+
+    random() | Returns a random number.
+
+
+    Next, we are going to look at Java strings.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Chapter 11:
+
+    Java Strings
+
+
+    Strings are used a lot in Java programming. A string is a sequence of characters
+    that’s treated as an object. The string class is used for the creation and manipulation
+    of strings. The easiest way to create a string is to write something like:
+
+
+    ```
+
+    String greeting = "Hello world!";
+
+    ```
+
+
+    When the compiler comes against a string literal in the code, it automatically
+    creates a string object containing the specified value. In this case, that value
+    is “Hello World!”
+
+
+    Like any object, string objects can be created with the use of the new keyword
+    and a constructor. There are 11 constructors in the string class, allowing for
+    the initial string value to be provided with various sources, like a character
+    array. The string class is immutable —once created, you can’t change it.
+
+
+    # String length
+
+
+    Accessor methods are used to get information about a specified object, and one
+    that you can use with the string is called length(). This will return the number
+    of characters in the string object.
+
+
+    # Concatenating strings
+
+
+    Strings can also be concatenated, which means they can be joined together. The
+    syntax for this is:
+
+
+    ```
+
+    string1.concat(string2);
+
+    ```'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: 'This will return a new string which consists of string1 followed immediately
+    by string2. Normally, we would use the + operator to concatenate strings, for
+    example:
+
+
+    ```
+
+    "Hello" + "Jack"`
+
+    ```
+
+
+    Which would result in
+
+
+    Hello Jack
+
+
+    # Creating format strings
+
+
+    To print using formatted numbers, you can use the format() method and the printf()
+    method. The string class has its own equivalent, the format() class method, and
+    this will return a string and NOT a PrintStream object. By using the static format
+    in the String class, you can create formatted strings that can be used over and
+    over again, rather than a one-off print statement.
+
+
+    These are some of the methods that the String class supports:
+
+
+    | Method | Description |
+
+    | --- | --- |
+
+    | char charAt(int index) | Returns the character at the given index. |
+
+    | int compareTo(Object o) | Compares the string to another object |
+
+    | int compareTo(String anotherString) | Lexicographically compares two strings.
+    |
+
+    | int compareIgnoreCase(String str) | Lexicographically compares two strings but
+    ignores case differences. |
+
+    | String concat(String str) | Concatenates the given string to the end of the
+    existing one. |
+
+    | boolean equals(StringBuffer sb) | Returns true only if the string is representative
+    of |'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'the character sequence in
+
+    given StringBuffer.
+
+
+    static String copyValueOf(char[]) data
+
+
+    Returns a string that''s
+
+    representative of the
+
+    sspecified character array.
+
+
+    boolean equals(Object anObject)
+
+
+    Compares the string to a
+
+    given object.
+
+
+    byte getBytes()
+
+
+    Encodes the string into a
+
+    byte sequence using the
+
+    default charset; the result is
+
+    stored in a byte array.
+
+
+    byte[] getBytes(String charsetName)
+
+
+    Encodes the string into a
+
+    byte sequence using the
+
+    given charset; the result is
+
+    stored in a byte array.
+
+
+    int hashCode()
+
+
+    Returns a hash code for the
+
+    given string.
+
+
+    int indexOf(int ch)
+
+
+    Returns the index that has
+
+    the first occurrence of a
+
+    given character inside the
+
+    sspecified string.
+
+
+    int indexOf(int ch, int fromIndex)
+
+
+    As above, but starts at a
+
+    given index.
+
+
+    int indexOf(String str)
+
+
+    Returns the index in the
+
+    string that contains the first
+
+    occurrence of a given
+
+    substring.
+
+
+    int indexOf(String str, int fromIndex)
+
+
+    As above, but starts at a
+
+    given index.
+
+
+    int length()
+
+
+    Returns the string length.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'boolean matches(String regex) Determines if the string matches a specified
+    regular expression.
+
+
+    There are many more methods—too many to list—but these are the ones you are most
+    likely to come up against off the bat.
+
+
+    In the next chapter, we will look at arrays more closely.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Chapter 12:
+
+    Java Arrays
+
+
+    An array is a data structure that''s used to store fixed-size elements in a sequential
+    collection. An easier way to think of it is that an array stores a data collection
+    (a collection of variables) that are all the same type. Instead of declaring variables
+    individually (like number1, number2, etc.), you can declare a single array variable
+    (like numbers) and then use numbers[1], numbers[2], etc., to represent each of
+    the individual variables.
+
+
+    # Declaring an array variable
+
+
+    If you want to use an array in your program, first you must declare a variable
+    that will reference the array; you also need to specify the array type that the
+    variable may reference. To declare an array variable, use the following syntax:
+
+
+    ```
+
+    dataType[] arrayRefVar; // preferred way
+
+    ```
+
+
+    Or
+
+
+    ```
+
+    dataType arrayRefVar[]; // works but not the best way
+
+    ```
+
+
+    Note: the first example is the preferred method. The second example is one you''ll
+    see sometimes, but it it has been adopted by Java from C language to accommodate
+    those programmers who are used to C or C++.
+
+
+    # Creating an array
+
+
+    Arrays can be created using the following syntax:
+
+
+    ```
+
+    arrayRefVar = new dataType[arraySize];
+
+    ```'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'This statement will do two things:
+
+
+    +   - It will create an array by using "new dataType[arraySize]."
+
+    - It will assign the reference of the new array to the variable named arrayRefVar.
+
+
+    If you want to declare an array variable, create an array, and assign the array
+    reference to the variable in one go, you can use this:
+
+
+    ```
+
+    dataType[] arrayRefVar = new dataType[arraySize];
+
+    ```
+
+
+    Or you can create the array like this:
+
+
+    ```
+
+    dataType[] arrayRefVar = {value0, value1, ..., valuek};
+
+    ```
+
+
+    We use the index to access array elements. Array indices are zero-based; this
+    means the first index is 0, the second is 1 and so on. An array of 10 items will
+    run from 0 to 9.
+
+
+    # Processing an array
+
+
+    When you process the elements in the array, you would normally use the for loop
+    or the foreach loop. This is because all the elements will be the same type and
+    the array size is known. We talked about the foreach loop in a previous chapter
+    (it is otherwise known as the enhanced for loop).
+
+
+    # Passing an array to a method
+
+
+    In the same way that the values of primitive data types can be passed to methods,
+    we can pass an array to a method. It''s invoked by passing the array. For example,
+    this statement is invoking the printArray method to display 4, 2, 3, 7, 1 and
+    5:
+
+
+    ```
+
+    printArray(new int[]{4, 2, 3, 7 1 5});
+
+    ```
+
+
+    # The arrays class
+
+
+    The arrays class has several static methods in it that can be used to sort and
+    search an array, compare arrays and fill in array'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: 'Each method has been overloaded for all of the primitive data types.
+
+
+    +   - public static int binarySearch(Object[] a, Object key): Uses the binary
+    search algorithm to search a given array of objects for a specified value. Before
+    this can be done, the array must be sorted. The return will be the search index
+    (provided it''s in the list). If not, the return will be (-(insertion point +
+    1)).
+
+
+    +   - public static boolean equals(long[] a, long[] a2): Evaluates true if the
+    given arrays of longs are equal. Two arrays will be considered equal if both have
+    the same number of elements and all of the corresponding element pairs in the
+    arrays are also equal. The same method may be used by all primitive data types.
+
+
+    +   - public static void fill(int[] a, int val): Assigns the given int value to
+    each of the elements in the array of ints. This may also be used by all other
+    primitive data types.
+
+
+    +   - public static void sort(Object[] a): Sorts the given object array into ascending
+    order as per the natural order of the elements. This may also be used by other
+    primitive data types.
+
+
+    In the next chapter, we will examine Java methods.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# Chapter 13:
+
+    Java Methods
+
+
+    Java methods are collections of statements in a grouping that perform a specified
+    operation. For example, calling the System.out.println() method would result in
+    the system executing a number of statements to display the output on the console.
+
+
+    Now we are going to look at how to create a method, be it with return values or
+    without without, how to invoke methods, with parameters or without, and how to
+    apply method abstraction.
+
+
+    # Creating a method
+
+
+    The syntax for creating a method is:
+
+
+    ```
+
+    public static int methodName(int a, int b) {
+
+
+    // body
+
+    }
+
+    ```
+
+
+    Let''s look at each part of that means:
+
+
+    +   * public static: this is the modifier
+
+    * int: this is the return type
+
+    * methodName: this is the method name
+
+    * a, b: these are formal parameters
+
+    * int a, int b: this is the list of parameters
+
+
+    A method has a method header and body, as per this syntax:
+
+
+    ```
+
+    modifier returnType nameOfMethod (Parameter List) {
+
+    ```'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '```
+
+    // method body
+
+    }
+
+    ```
+
+
+    This syntax shows:
+
+
+    +   - **modifier**: to define the method access type (this is optional)
+
+    - **returnType**: the method may return a value
+
+    - **nameMethod**: the name of the method—the signature consists of the name and
+    the list of parameters
+
+    - **parameter list**: the parameter list, the order and the number of the parameters
+    to the method; these are all optional as the method doesn''t need to contain any
+    parameters
+
+    - **method body**: the body of the method defines what is done with the statements
+    by the method
+
+
+    # Calling a method
+
+
+    To use a method, you must first call it, and that can be done in two ways: with
+    a returned value or without. Calling a method is actually very simple. When the
+    method is invoked by the program, control is transferred to the method. This,
+    in turn, will return that control back to the caller under two conditions:
+
+
+    +   - the return statement has been executed
+
+    - it gets to the closing brace of the method
+
+
+    If a method returns void, it''s considered as a call to a statement. If we want
+    a method to return no value, we declare it using the void keyword. A Java statement,
+    ending with a semicolon, must be used to call a void method.
+
+
+    # Passing a parameter by value
+
+
+    When we are working under the calling process, arguments may be passed. These
+    arguments should be ordered the same way as their respective parameters in the
+    specification of the method. A parameter may be passed by reference or value.
+    When you pass a parameter by value, you are calling a method that has a parameter,
+    passing the argument value to that parameter.'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# Method overloading
+
+
+    If a class contains two or more methods that have identical names but different
+    parameters, we call it method overloading. This is not to be confused with method
+    overriding, where two or more methods have the same name, parameters, number type,
+    etc. If we wanted, for example, to find the minimum number of a double type, we
+    would introduce the method overloading to create two or methods that have the
+    same name but have different parameters. Method overloading makes your program
+    much easier to read.
+
+
+    # Using command line arguments
+
+
+    You may, at times, want to pass information to a program when it''s run, and we
+    do this by passing main() method some command line arguments. This type of argument
+    is the exact information that''s displayed after the name of the program on the
+    command line at the time it''s executed. Accessing command line arguments in Java
+    is easy because these arguments are stored in the string array that passes to
+    main() (and they are stored as strings).
+
+
+    # Java constructors
+
+
+    Constructors are used to initialize objects when they are created. They have the
+    same name as their class and are similar in syntax to a method. However, the difference
+    is that constructors don''t have an explicit return type.
+
+
+    Generally, constructors are used to provide the initial value to instance variables
+    that have been defined by the class. Or they may be used to carry out any startup
+    procedure that''s required for the creation of a fully formed object.
+
+
+    Every class has constructors regardless of whether you specifically define one
+    or not. This is because Java will automatically provide default constructors to
+    initialize all of the member variables to zero. However, should you define a constructor,
+    the default one will be discarded.
+
+
+    Usually, though, you likely need constructors that will take at least one parameter,
+    known as parameterized constructors. These'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "parameters are added to the constructors the same way that parameters are added\
+    \ to methods—simply declare the parameter inside a set of parentheses that come\
+    \ after the name of the constructor.\n\n# Using the this keyword\n\nThe this keyword\
+    \ is reserved in Java for referencing the objects of current classes, using a\
+    \ constructor or an instance method. With the this keyword, you can reference\
+    \ class members such as variables, constructors, and methods.\n\nNote: The this\
+    \ keyword can ONLY be used within an instance method or a constructor. We generally\
+    \ use the this keyword for:\n\n+   Differentiating an instance variable from a\
+    \ local variable where they have the same names, either in a method or within\
+    \ a constructor.\n\n```\nclass Pupil {\n  int age;\n  Pupil(int age) {\n    this.age\
+    \ = age;\n  }\n}\n```\n\n+   Calling a default or a parameterized constructor\
+    \ from another within a class. This is called explicit constructor innovation.\n\
+    \n```\nclass Pupil {\n  int age;\n  Pupil() {\n    this(15);\n  }\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "```\nPupil(int age) {\n    this.age = age;\n}\n}\n```\n\n# Variable arguments\n\
+    \nOtherwise known as var-args, the ability to pass variable numbers of arguments\
+    \ to a method, as long as they are all of the same type, was introduced with JDK\
+    \ 1.5. We declare that method parameter like this:\n\n```\ntypeName... parameterName\n\
+    ```\n\nWithin the method declaration, you must specify the type and follow it\
+    \ with a set of parentheses. You may only specify a single parameter of variable\
+    \ length within the method, and this must be the final parameter. All regular\
+    \ parameters must be declared first.\n\n# Using the finalize() method\n\nMethods\
+    \ may be defined to be called just before the garbage collector destroys an object,\
+    \ and this is known as the finalize() method. It's used to make sure that an object\
+    \ terminates properly and cleanly. For example, you could use the finalize() method\
+    \ to ensure that an open file that the object owns is properly closed.\n\nTo add\
+    \ the finalizer to your class, all you do is define the finalize() method and\
+    \ Java runtime will call the method whenever it's ready to recycle an object of\
+    \ the specified class.\n\nWithin the finalize() method, we specify the actions\
+    \ that are to be carried out before the object is destroyed. The general syntax\
+    \ of the finalize() method is:\n\n```\nprotected void finalize() {\n    // finalize\
+    \ code here\n```"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    Note the use of the keyword protected—this is a specifier that stops access to
+    the finalize() method.
+
+
+    Here, the keyword protected is a specifier that prevents code that has been defined
+    outside the objects class from accessing the finalize() method. What this means
+    is that you''ll never know when, or if, the finalize() method is going to be executed—if
+    your program were to finish before the garbage collection happened, for example,
+    the finalize() method would not be executed.
+
+
+    For our final chapter, we are going to look at exceptions and how they are handled
+    in Java.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# Chapter 14:
+
+    Java Exceptions
+
+
+    Exceptional events, or, as they are known in computer programming terms, exceptions,
+    are problems that come up when a program is being executed. Whenever one of these
+    exceptions arises, the normal program flow is stopped and it will terminate. Exceptions
+    can happen for any number of reasons, including:
+
+
+    +   * Invalid data has been entered by a user
+
+    * A required file cannot be found
+
+    * Network communication fails or the Java Virtual Machine runs out of memory
+
+
+    Some are user errors, others are programmer error, and yet others may be failed
+    physical resources. This gives three categories of exceptions and to understand
+    exception handling, you must understand these categories:
+
+
+    +   * Checked Exceptions: This happens at compile time and can''t be ignored—the
+    programmer must handle them at the time.
+
+
+    Let''s say, for example, that you use the class called FileReader for reading
+    data from a specified file. If that file doesn''t exist, then you''ll see a FileNotFoundException
+    and you must handle it there and then.
+
+
+    +   * Unchecked exceptions: This happens at execution time (also known as runtime
+    exceptions). These are ignored at compilation time.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'For example, if you declared an array with a size of 6 in your program and
+    you try to call element 7, you would get an ArrayIndexOutOfBoundsException exception.
+
+
+    +   * Errors: These are not exceptions; they are problems out of the control of
+    the programmer or user. These tend to be ignored because there is often nothing
+    you can do about them.
+
+
+    # Hierarchy
+
+
+    Every exception class is a subtype of java.lang.Exception class and this, in turn,
+    is a subclass of the Throwable class. There is one more class, called Error, which
+    is also a subclass of the Throwable class.
+
+
+    The Exception class has IOException and RuntimeException as two of its main subclasses.
+
+
+    # Exception methods
+
+
+    These are the more important methods from the Throwable class:
+
+
+    +   * public String getMessage(): returns a message with details of the error,
+    initialized in the constructor for Throwable
+
+    * public Throwable getCause(): returns the exception cause, represented by an
+    object
+
+    * public String toString(): returns the class name concatenated with the getMessage()
+    result
+
+    * public void printStackTrace(): prints the toString() result with a stack trace
+    to the error output stream
+
+    * public StackTraceElement[] getStackTrace(): returns an array that contains each
+    of the stack trace elements, with index 0 representing the top of the stack and
+    the final index representing the bottom of the call stack
+
+    * public Throwable fillInStackTrace(): fills the Throwable object stack trace
+    with the current trace, adding to the previous information'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "# Catching exceptions\n\nExceptions are caught with a method that uses both\
+    \ the try and the catch keywords. We put a try/catch code block around the code\
+    \ that has the potential to generate the exception. This is then called protected\
+    \ code. The syntax for try/catch is:\n\n```\ntry {\n    // Protected code\n}catch(ExceptionName\
+    \ e1) {\n    // Catch block\n}\n```\n\nAny code that's prone to raising an exception\
+    \ is then put into the try block, and when the exception happens, it will be handled\
+    \ by the catch block. Each try block must be succeeded by a catch or finally block.\n\
+    \nCatch statements are used to declare the exception type that you want to catch.\
+    \ If the exception is in protected code, the catch block will be tested. If the\
+    \ specified exception type is listed in the catch block, it gets passed to the\
+    \ block in the same way as we pass arguments to method parameters.\n\n# Multiple\
+    \ catch blocks\n\nTry blocks may be succeeded by several catch blocks. The syntax\
+    \ for using multiple catch blocks is:\n\n```\ntry {\n    // Protected code\n}catch(ExceptionType1\
+    \ e1) {\n    // Catch block\n}catch(ExceptionType2 e2) {\n```"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "```\n// Catch block\n}catch(ExceptionType3 e3) {\n  // Catch block\n}\n```\n\
+    \nThis shows three blocks, but you can use as many as you want long as they follow\
+    \ one try block. If the exception happens in protected code, it will be passed\
+    \ to the first catch block; if the exception type is matched to ExceptionType,\
+    \ it will be caught; if not, it is passed to the next catch block. This will continue\
+    \ until the exception is caught or all catch blocks are exhausted without success.\
+    \ In this case, the method will cease to execute and the exception is thrown to\
+    \ the previous method listed on the call stack.\n\n# Catching multiple exception\
+    \ types\n\nJava now allows you to catch more than one exception in one catch block,\
+    \ thus simplifying your code. This is the syntax to use:\n\n```\ncatch (IOException|FileNotFoundException\
+    \ ex) {\n  logger.log(ex);\n  throw ex;\n}\n```\n\n# Throws/throw keywords\n\n\
+    If a checked exception is not handled by a method, that method must use the throws\
+    \ keyword to declare it. This shows up at the end of the method signature. Exceptions\
+    \ can be thrown with the throw keyword. It's important that you understand the\
+    \ throws and throw keywords:\n\n+   - **throws**: postpones checked exception\
+    \ handling\n- **throw**: explicitly invokes it throws one or more exceptions;\n\
+    \nMethods may declare that it throws one or more exceptions; if more are declared,\
+    \ these are listed with commas as separators."
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "# The finally block\n\nThe finally block, which must always succeed a try or\
+    \ catch block, will always execute regardless of whether an exception occurs or\
+    \ not. The finally block lets you to run a statement for cleanup purposes that\
+    \ must be executed regardless. The syntax you would use for the finally block\
+    \ is:\n\n```\ntry {\n  // Protected code\n}catch(ExceptionType1 e1) {\n  // Catch\
+    \ block\n}catch(ExceptionType2 e2) {\n  // Catch block\n}catch(ExceptionType3\
+    \ e3) {\n  // Catch block\n}finally {\n  // The finally block always executes.\n\
+    }\n```\n\nBe aware of the following rules:\n\n+   * Catch clauses may not be used\
+    \ without try statements.\n* Finally clauses are not compulsory when you use a\
+    \ try/catch block.\n* You can't have a try block without a catch or a finally\
+    \ clause.\n* There may not be any code in between the try, catch and the finally\
+    \ blocks."
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# User-defined exceptions
+
+
+    A user may create their own Java exceptions. Keep these pointers in mind when
+    you create an exception class:
+
+
+    +   - Every exception must be a child of the parent class Throwable.
+
+    - The Exception class must be extended if you want a checked exception that''s
+    enforced automatically by the Handle or Declare ruling.
+
+    - The Runtime Exception class must be extended if you want a runtime exception.
+
+
+    To define an exception class, use the following syntax:
+
+
+    ```
+
+    class MyException extends Exception {
+
+    \}
+
+    ```
+
+
+    Just ensure that the Exception class already defined is extended when you create
+    an exception. User-defined exceptions are classed as checked exceptions and they
+    are much like any other class in that they contain useful methods and fields.
+
+
+    # Common exceptions
+
+
+    There are two categories of exceptions and errors that you can define in Java:
+
+
+    +   - JVM: JVM exceptions or errors are thrown logically or exclusively by the
+    Java Virtual Machine. Examples include ClassCast Exception, NullPointerException
+    and ArrayIndexOutOfBoundsException.
+
+    - Programmatic: These are explicitly thrown by the API programmer or by the application.
+    Examples include IllegalStateException and IllegalArgumentArgumentException.'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# Chapter 15:
+
+    Ten Ways to Avoid Making Mistakes
+
+
+    The people who don''t make mistakes are those who never do anything at all. This
+    section covers some of the most common mistakes that are made and how you can
+    avoid making them.
+
+
+    # Using incorrect cases for letters
+
+
+    If you put a capital letter where it doesn''t belong when writing a code in Java,
+    you''ll be making a blunder. You have to ensure that you keep track of every character
+    that you''ll be using when writing a Java program. Here are a few things to keep
+    in mind when you''re writing your code:
+
+
+    +   * Every keyword in Java is lowercase. For instance, when you are using the
+    keyword "public," you can''t write it as "Public" or "PUBLIC."
+
+    * If you are using names from the Java API, you have to ensure that the names
+    match what appears in the API.
+
+    * You have to ensure that the names you have used in your code are capitalized
+    and spelled the same way throughout the program. If you have declared a variable
+    called "Myhouse," you can''t refer to it as "myhouse" or "MYHOUSE." If you use
+    the same variable in multiple ways, Java will assume that you have different and
+    distinct variables with the same name.
+
+
+    # Break out of a switch statement
+
+
+    If you forget to break out of a switch statement, your compiler won''t go past
+    the Switch statement. For example,
+
+
+    ```
+
+    switch (verse)
+
+    ```'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "```\n{\ncase 3:\n  out.print(\"Please remember, \");\n  out.println(\"please\
+    \ remember,\");\nncase 2:\n  out.print(\"I am in pain, \");\n  out.println(\"\
+    i am in pain,\");\nncase 1:\n  out.print(\"I need medicine, \");\n  out.println(\"\
+    i need medicine,\");\n}\n```\n\nIf there is no break at the end of each case,\
+    \ the computer will print the first sentence from each case. The code should therefore\
+    \ be:\n\n```\nswitch (verse)\n{\ncase 3:\n  out.print(\"Please remember, \");\n\
+    \  out.println(\"please remember,\");\n  break\ncase 2:\n  out.print(\"I am in\
+    \ pain, \");\n  out.println(\"i am in pain,\");\n  break\n```"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "```\ncase 1:\nout.print(\"I need medicine, \");\nout.println(\"i need medicine,\"\
+    );\nbreak\n}\n```\n\n# Using double equal signs\n\nYou have to remember to use\
+    \ double equal signs in Java. If you were to use single equal signs, you would\
+    \ find that the code you are using doesn't provide the desired results. For example,\
+    \ if you were to write:\n\n```\nif (X=Y), you are saying that the X should be\
+    \ given the value of Y.\n```\n\nHowever, if you were to use the following code:\n\
+    \n```\nif (X == Y), you are asking the compiler to verify if the values of X and\
+    \ Y are the same.\n```\n\n# Adding components to the interface\n\nHere is an example\
+    \ of a constructor that can be used for a Java frame:\n\n```\npublic SimpleFrame()\n\
+    {\n  JButton button = new JButton(\"Thank you...\");\nsetTitle(\"...Connie Santisteban\
+    \ and Brian Walls\");\nsetLayout(new FlowLayout());\nadd(button);\nbutton.addActionListener(this);\n\
+    \n```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "```\nsetSize(300, 100);\nsetVisible(true);\n}\n```\n\nNo matter what you do,\
+    \ you have to remember to add the “add” method. If you don't use this method,\
+    \ all your efforts to add a button to your frame go to waste.\n\n# Adding listeners\n\
+    \nUsing the same example as above, if you forget to add the ActionListener method,\
+    \ you'll find that the button doesn't perform the function that you want it to.\n\
+    \n# Defining the constructors\n\nWhen you define a constructor using parameters,\
+    \ your compiler will never accept it if you define the constructor without that\
+    \ parameter. For example, if you were to define a constructor in the following\
+    \ way:\n\n```\npublic Temperature (double number), you can't call the function\
+    \ Temperature without a parameter.\n```\n\n# Fixing references\n\nConsider the\
+    \ following code:\n\n```\nclass WillNotWork\n{\n    String greeting = \"Hello\"\
+    ;\n    public static void main(String args[])\n{\n        System.out.println(greeting);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "```\n}\n```\n\nWhen you type this code in Java and run it, you'll obtain error\
+    \ since the method \"main\" is static but the method \"greeting\" is not static.\n\
+    \n# Staying within an array’s bounds\n\nWhen you declare an array with ten different\
+    \ components, each component will have indices between 0 and 9. If you declare\
+    \ the following:\n\n```\nint students[] = new int[10];\n```\n\nyou can refer to\
+    \ the \"students\" array's components by writing students[0], students[1], all\
+    \ the way up to students[9]. You can definitely not use the students[10] since\
+    \ there is no component in the array with an index 10.\n\n# Anticipating null\
+    \ pointers\n\nMost of the examples used in this book do not throw the NullPointerException\
+    \ error, but when you're writing new code in Java, you'll probably see this exception\
+    \ most of the time. This exception occurs when you call on a method that is to\
+    \ return an object but doesn't return anything. Consider the following example:\n\
+    \n```\nimport static java.lang.System.out;\nimport java.io.File;\nclass ListMyFiles\n\
+    {\n    public static void main(String args[])\n{\n        File myFile = new File(\"\
+    \\\\windows\\\\\");\n        String dir[] = myFile.list();\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "```\nfor (String fileName : dir) {\n{\n    out.println(fileName);\n}\n}\n}\n\
+    ```\n\nThis program will display the list of files that are present in the windows\
+    \ directory. What happens when you change \\windows to something else? What if\
+    \ you were to use something that did not represent a directory?\n\n```\nFile myFile\
+    \ = new File(\"&*%$$!!\");\n```\n\nThe new File call will return a null, meaning\
+    \ there will be nothing that can be returned, and implying that there will be\
+    \ nothing in the \"myFile\" variable. The variable \"dir,\" later in the code,\
+    \ refers to absolutely nothing and the attempt to use a loop using the \"dir\"\
+    \ fails. You get a big NullPointerException, and the program comes crashing around\
+    \ you.\n\nIn order to avoid this kind of error, you should go through Java’s API\
+    \ Documentation. If you know you'll be using a method that will return a null\
+    \ value, remember to add the exception handling code to your program.\n\n# Helping\
+    \ Java find files\n\nYou are working on your Java code, minding your own business,\
+    \ when your computer throws the following error at you: \"NoClassDefFoundError.\"\
+    \ lot of things could be going wrong, but there is the chance that your computer\
+    \ was unable to find a particular Java file. In order to fix this, you'll need\
+    \ to align your code accurately:\n\n+   - The project directory will need to contain\
+    \ the names of all Java files that are being used in your code."
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '+   * If you have used packages in your code, your project directory will need
+    to have subdirectories with appropriate names.
+
+    * The CLASSP will need to be set properly.'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "# Chapter 16:\nPrograms\n\n# Easy Fibonacci Series\n\n```\nclass FibonacciExample1\n\
+    {\n    public static void main(String args[])\n    {\n        int n1=0,n2=1,n3,i,count=10;\n\
+    \        System.out.print(n1+\" \"+n2); //printing 0 and 1\n\n        for(i=2;i<count;++i)\
+    \ //loop starts from 2 because 0 and 1\n        are already printed\n        {\n\
+    \            n3=n1+n2;\n            System.out.print(\" \"+n3);\n            n1=n2;\n\
+    \            n2=n3;\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "```\n}\nclass PrimeExample{\n    public static void main(String args[]){\n\
+    \    int i,m=0,flag=0;\n    int n=17;//it's the number to be checked\n    m=n/2;\n\
+    \    for(i=2;i<=m;i++){\n        if(n%i==0) {\n            System.out.println(\"\
+    Number is not prime\");\n            flag=1;\n            break;\n        }\n\
+    \    }\n    if(flag==0) {\n        System.out.println(\"Number is prime\");\n\
+    \    }\n}\n}\n```\n\n# Prime Number\n\n# Palindrome\n\n```\nclass PalindromeExample{\n\
+    \    public static void main(String args[]){\n    int r,sum=0,temp;\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '```
+
+    int n=454;//It''s the number variable to be checked for
+
+    palindrome
+
+    ```
+
+
+    ```
+
+    temp=n;
+
+    while(n>0){
+
+    r=n%10; //getting remainder
+
+    sum=(sum*10)+r;
+
+    n=n/10;
+
+    }
+
+    if(temp==sum)
+
+    System.out.println("palindrome number ");
+
+    else
+
+    System.out.println("not palindrome ");
+
+    }
+
+    n
+
+    ```
+
+
+    # # Factorial
+
+
+    ```
+
+    class FactorialExample{
+
+    public static void main(String args[]){
+
+    int i,fact=1;
+
+    int number=5;//It''s the number to calculate factorial
+
+    for(i=1;i<=number;i++){
+
+    fact=fact*i;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "```\nSystem.out.println(\"Factorial of \"+number+\" is: \"+fact\");\n}\n}\n\
+    ```\n\n# Armstrong Number\n\n```\nclass ArmstrongExample{\n    public static void\
+    \ main(String[] args) {\n    int c=0,a,temp;\n    int n=153;//It's the number\
+    \ to check armstrong\n    temp=n;\n    while(n>0)\n    {\n        a=n%10;\n  \
+    \      n=n/10;\n        c=c+(a*a*a);\n    }\n    if(temp==c)\n        System.out.println(\"\
+    armstrong number\");\n    else\n        System.out.println(\"Not armstrong number\"\
+    );\n    }\n}\n```"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "# Bubble Sort\n\n```\npublic class BubbleSortExample {\n    static void bubbleSort(int[]\
+    \ arr) {\n        int n = arr.length;\n        int temp = 0;\n        for(int\
+    \ i=0; i < n; i++){\n            for(int j=1; j < (n-i); j++){\n             \
+    \   if(arr[j-1] > arr[j]){\n                    //swap elements\n            \
+    \        temp = arr[j-1];\n                    arr[j-1] = arr[j];\n          \
+    \          arr[j] = temp;\n                }\n            }\n        }\n    }\n\
+    \    public static void main(String[] args) {\n        int arr[]={3,60,35,2,45,320,5};\n\
+    \        System.out.println(\"Array Before Bubble Sort\");\n```"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "```\nfor(int i=0; i < arr.length; i++){\n    System.out.print(arr[i] + \" \"\
+    );\n}\nSystem.out.println();\n```\n\nbubbleSort(arr);////sorting array elements\
+    \ using bubble sort\n\n```\nSystem.out.println(\"Array After Bubble Sort\");\n\
+    for(int i=0; i < arr.length; i++){\n    System.out.print(arr[i] + \" \");\n}\n\
+    ```\n\n}\n\n# Selection Sort\n\n```\npublic class SelectionSortExample {\npublic\
+    \ static void selectionSort(int[] arr){\n    for (int i = 0; i < arr.length -\
+    \ 1; i++) {\n        int index = i;\n        for (int j = i + 1; j < arr.length;\
+    \ j++){\n            if (arr[j] < arr[index]){\"\n```"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "```\nindex = j;//searching for lowest index\n}\n}\nint smallerNumber = arr[index];\n\
+    arr[index] = arr[i];\narr[i] = smallerNumber;\n}\n\n```\n\n```\npublic static\
+    \ void main(String a[]){\nint[] arr1 = {9,14,3,2,43,11,58,22};\nSystem.out.println(\"\
+    Before Selection Sort\");\nfor(int i:arr1){\n    System.out.print(i+\" \");\n\
+    }\nSystem.out.println();\n```\n\n```\nselectionSort(arr1);//sorting array using\
+    \ selection sort\n\nSystem.out.println(\"After Selection Sort\");\nfor(int i:arr1){\n\
+    \    System.out.print(i+\" \");\n\n```"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "# Insertion Sort\n\n```\npublic class InsertionSortExample {\n    public static\
+    \ void insertionSort(int array[]) {\n        int n = array.length;\n        for\
+    \ (int j = 1; j < n; j++) {\n            int key = array[j];\n            int\
+    \ i = j-1;\n            while ( (i > -1) && ( array[i] > key ) ) {\n         \
+    \       array[i+1] = array[i];\n                i--;\n            }\n        \
+    \    array[i+1] = key;\n        }\n    }\n\n```\n\n```\npublic static void main(String\
+    \ a[]){\n    int[] arr1 = {9,14,3,2,43,11,58,22};\n    System.out.println(\"Before\
+    \ Insertion Sort\");\n    for(int i:arr1){\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "```\nSystem.out.print(i+\" \");\n}\nSystem.out.println();\n```\n\n```\ninsertionSort(arr1);//sorting\
+    \ array using insertion sort\n```\n\n```\nSystem.out.println(\"After Insertion\
+    \ Sort\");\nfor(int i:arr1){\n    System.out.print(i+\" \");\n}\n}\n}\n```\n\n\
+    # Calling Methods\n\n```\n/* CallingMethodsInSameClass.java\n*\n* illustrates\
+    \ how to call static methods a class\n* from a method in the same class\n*/\n\
+    ```\n\n```\npublic class CallingMethodsInSameClass\n{\n    public static void\
+    \ main(String[] args) {\n```"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "```\nprintOne();\n\nprintOne();\n\nprintTwo();\n}\n```\n\n```\npublic static\
+    \ void printOne() {\n    System.out.println(\"Hello World\");\n}\n```\n\n```\n\
+    public static void printTwo() {\n    printOne();\n    printOne();\n}\n\n```\n\n\
+    # Intermediate\n\n# Enhanced for Loop\n\n```\npublic class EnhancedFor\n{\n  \
+    \  public static void main(String[] args)\n    {\n        int[] list = {1, 2,\
+    \ 3, 4, 5, 6, 7, 8, 9, 10};\n        int sum = sumListEnhanced(list);\n      \
+    \  System.out.println(\"Sum of elements in list: \" + sum);\n    }\n```"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "```\nSystem.out.println(\"Original List\");\nprintList(list);\nSystem.out.println(\"\
+    Calling addOne\");\naddOne(list);\nSystem.out.println(\"List after call to addOne\"\
+    );\nprintList(list);\nSystem.out.println(\"Calling addOneError\");\naddOneError(list);\n\
+    System.out.println(\"List after call to addOneError. Note elements of list did\
+    \ not change.\");\nprintList(list);\n}\n// pre: list != null\n// post: return\
+    \ sum of elements\n// uses enhanced for loop\npublic static int sumListEnhanced(int[]\
+    \ list) {\n    int total = 0;\n    for(int val : list) {\n        total += val;\n\
+    \    }\n    return total;\n```"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "```\n// pre: list != null\n// post: return sum of elements\n// use traditional\
+    \ for loop\npublic static int sumListOld(int[] list)\n{\n    int total = 0;\n\
+    \    for(int i = 0; i < list.length; i++)\n    {\n        total += list[i];\n\
+    \        System.out.println( list[i] );\n    }\n    return total;\n}\n```\n\n\
+    ```\n// pre: list != null\n// post: none.\n// The code appears to add one to every\
+    \ element in the\\list, but doesn't\npublic static void addOneError(int[] list)\n\
+    {\n    for(int val : list)\n    {\n        val = val + 1;\n    }\n}\n```"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "```\n// pre: list != null\n// post: adds one to every element of list\npublic\
+    \ static void addOne(int[] list)\n{\n    for(int i = 0; i < list.length; i++)\n\
+    \    {\n        list[i]++;\n    }\n}\n```\n\n```\npublic static void printList(int[]\
+    \ list)\n{\n    System.out.println(\"index, value\");\n    for(int i = 0; i <\
+    \ list.length; i++)\n    {\n        System.out.println(i + \", \" + list[i]);\n\
+    \    }\n}\n```\n\n# Recursion\n\n```\npublic class RecursionExampleDirectory\n\
+    {\n    public int getSize(Directory dir)\n    {\n        int total = 0;\n```"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "```\n//check files\nFile[] files = dir.getFiles();\nfor(int i = 0; i < files.length;\
+    \ i++)\n    total += files[i].getSize();\n```\n\n```\n//get sub directories and\
+    \ check them\nDirectory[] subs = dir.getSubs();\nfor(int i = 0; i < subs.length;\
+    \ i++)\n    total += getSize(subs[i]);\n```\n\n```\nreturn total;\n}\n```\n\n\
+    ```\npublic static void main(String[] args)\n{\\    RecursionExampleDirectory\
+    \ r = new RecursionExampleDirectory();\n    Directory d = new Directory();\n \
+    \   System.out.println( r.getSize(d) );\n}\n```\n\n```\n//pre: n >= 0\npublic\
+    \ static int fact(int n)\n{\\    int result = 0;\n```"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "```\nif(n == 0)\n    result = 1;\nelse\n    result = n * fact(n-1);\n    return\
+    \ result;\n}\n```\n\n```\n//pre: exp >= 0\npublic static int pow(int base, int\
+    \ exp)\n{\n    int result = 0;\n    if(exp == 0)\n        result = 1;\n    else\n\
+    \        result = base * pow(base, exp - 1);\n    return result;\n}\n```\n\n```\n\
+    //slow fib\n//pre: n >= 1\npublic static int fib(int n)\n{\n    int result = 0;\n\
+    \    if(n == 1 || n == 2)\n```"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "```\nresult = 1;\nelse\n    result = fib(n-1) + fib(n-2);\nreturn result;\n\
+    }\n    public static int minWasted(int[] items, int itemNum, int capLeft)\n{\n\
+    \    int result = 0;\n    if(itemNum >= items.length)\n        result = capLeft;\n\
+    \    else if( capLeft == 0)\n        result = 0;\n    else\n        {\n      \
+    \      int minWithout = minWasted(items, itemNum + 1, capLeft);\n            if(capLeft\
+    \ <= items[itemNum])\n                {\n                    int minWith = minWasted(items,\
+    \ itemNum + 1, capLeft - items[itemNum]);\n                    result = Math.min(minWith,\
+    \ minWithout);\n                }\n            else\n                result =\
+    \ minWithout;\n        }\n    }\nelse\n```"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "```\n}\nreturn result;\n}\nclass Directory {\n    private Directory[] mySubs;\n\
+    \    private File[] myFiles;\n\n    public Directory() {\n        int numSubs\
+    \ = (int)(Math.random() * 3);\n        mySubs = new Directory[numSubs];\n    \
+    \    int numFiles = (int)(Math.random() * 10);\n        myFiles = new File[numFiles];\n\
+    \n        for(int i = 0; i < myFiles.length; i++)\n            myFiles[i] = new\
+    \ File((int)(Math.random() * 1000));\n\n        for(int i = 0; i < mySubs.length;\
+    \ i++)\n            mySubs[i] = new Directory();\n    }\n\n    public Directory[]\
+    \ getSubs() {\n}}\n```"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "```\n{\n    return mySubs;\n}\n```\n\n```\npublic File[] getFiles()\n{\n  \
+    \  return myFiles;\n}\n```\n\n```\nclass File\n{\n    private int iMySize;\n\n\
+    ```\n\n```\npublic File(int size)\n{\n    iMySize = size;\n}\n```\n\n```\npublic\
+    \ int getSize()\n{\n    return iMySize;\n}\n```\n\n# Creating a 2D Array\n\n//\
+    \ 2d array manipulation examples\n//import"
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "```\nimport java.awt.Color;\npublic class FilterExample {\n{\n    /*\n    \
+    \ *pre: image != null, image.length > 1, image[o].length > 1\n     *image is a\
+    \ rectangular matrix, neighborhoodSize > 0\n     *post: return a smoothed version\
+    \ of image\n     */\n    public Color[][] smooth(Color[][] image, int neighborhoodSize)\
+    \ {\n        //check precondition\n        assert image != null && image.length\
+    \ > 1 && image[o].length > 1\n            && ( neighborhoodSize > 0 ) && rectangularMatrix(\
+    \ image )\nn            : \"Violation of precondition: smooth\";\n\n        Color[][]\
+    \ result = new Color[image.length][image[o].length];\n\n        for(int row =\
+    \ 0; row < image.length; row++ {\n            for(int col = 0; col < image[o].length;\
+    \ col++\n```"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "```\n{\n  result[row][col] = aveOfNeighbors(image, row, col, neighborhoodSize);\n\
+    }\n```\n\n```\n}\n  return result;\n}\n```\n\n// helper method that determines\
+    \ the average color of a neighborhood\n// around a particular cell.\n\n```\nprivate\
+    \ Color aveOfNeighbors(Color[][] image, int row, int col, int neighborhoodSize)\
+    \ {\n  int numNeighbors = 0;\n  int red = 0;\n  int green = 0;\n  int blue = 0;\n\
+    \  for(int r = row - neighborhoodSize; r <= row + neighborhoodSize; r++) {\n \
+    \   for(int c = col - neighborhoodSize; c <= col + neighborhoodSize; c++) {\n\
+    \      if(inBounds(image, r, c)) {\n        numNeighbors++;\n      }\n    }\n\
+    \  }\n  110\n```"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "red += image[r][c].getRed();\ngreen +=\n\nimage[r][c].getGreen();\n\nblue +=\
+    \ image[r][c].getBlue();\n\n```\n}\n}\nassert numNeighbors > 0;\nreturn new Color(red\
+    \ / numNeighbors, green / \nnumNeighbors, blue / numNeighbors);\n}\n```\n\n```\n\
+    //helper method to determine if given coordinates are in\nbounds\nprivate boolean\
+    \ inBounds(Color[][] image, int row, int\ncol) {\n  return (row >= 0) && (row\
+    \ <= image.length) &&\n&& (col < image[0].length);\n}\n```\n\n```\n//private method\
+    \ to ensure mat is rectangular\nprivate boolean rectangularMatrix(Color[][] mat\
+    \ )\n{\n boolean isRectangular = true;\n111\n```"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "```\nint row = 1;\nfinal int COLUMNS = mat[0].length;\n\nwhile( isRectangular\
+    \ && row < mat.length ) {\n    isRectangular = ( mat[row].length == COLUMNS );\n\
+    \    row++;\n}\n\nreturn isRectangular;\n}\n}\n\n```\n\n# Creating Minesweeper\n\
+    \npublic class MineSweeper\n{\n    private int[][] myTruth;\n    private boolean[][]\
+    \ myShow;\n}\n\n```\npublic void cellPicked(int row, int col)\n{\n    if( inBounds(row,\
+    \ col) && !myShow[row][col]) {\n        myShow[row][col] = true;\n    }\n\n  \
+    \  if( myTruth[row][col] == o) {\n        for(int r = -1; r <= 1; r++) {\n   \
+    \         112\n        }\n    }\n\n```"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "```\nfor(int c = -1; c <= 1; c++) {\n    cellPicked(row + r, col + c);\n}\n\
+    ```\n\n```\npublic boolean inBounds(int row, int col) {\n    return o <= row &&\
+    \ row < myTruth.length && o <= col && col < myTruth[o].length;\n}\n```\n\n# Generating\
+    \ Lists\n\nimport java.util.Collection;\nimport java.util.Iterator;\n\n+   /**\n\
+    * A class to provide a simple list.\n* List resizes automatically. Used to illustrate\n\
+    * various design and implementation details of\n* a class in Java.\n*\n* @author\
+    \ scottm"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "```\n* \n * /\npublic class GenericListVersion2 implements Iterable{\n    //\
+    \ class constant for default size\n    private static final int DEFAULT_CAP =\
+    \ 10;\n\n    //instance variables\n    // iValues store the elements of the list\
+    \ and\n    // may have extra capacity\n    private Object[] iValues;\n    private\
+    \ int iSize;\n\n    private class GenericListIterator implements Iterator{\n \
+    \       private int position;\n        private boolean removeOK;\n\n        private\
+    \ GenericListIterator(){\n            position = 0;\n            removeOK = false;\n\
+    \        }\n    }\n\n    public boolean hasNext()\n```"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "```\nreturn position < iSize;\n}\n```\n\n```\npublic Object next(){\n    Object\
+    \ result = iValues[position];\n    position++;\n    removeOK = true;\n    return\
+    \ result;\n}\n```\n\n```\npublic void remove(){\n    if(!removeOK ) {\n      \
+    \  throw new IllegalStateException();\n    }\n    // which which element should\
+    \ be removed??\n    removeOK = false;\n    GenericListVersion2.this.remove(position\
+    \ - 1);\n    position--;\n}\n```\n\n```\npublic Iterator iterator(){\n    return\
+    \ new GenericListIterator();\n}\n```"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "```\n}\npublic void addAll(Collection c){\n    // for each loop\n    for(Object\
+    \ obj : c){\n        this.add(obj);\n    }\n}\n```\n\n> /**\n* Default add method.\
+    \ Add x to the end of this IntList.\n* Size of the list goes up by 1.\n* @param\
+    \ x The value to add to the end of this list.\n */\n\n```\npublic void add(Object\
+    \ x){\n    insert(iSize, x);\n}\n```\n\n```\npublic Object get(int pos){\n   \
+    \ return iValues[pos];\n}\n```"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "```\n/**\n * Insert obj at position pos.\n * post: get(pos) = x, size() = old\
+    \ size() + 1\n * @param pos o <= pos <= size()\n * @param obj The element to add.\n\
+    \ */\npublic void void insert(int pos, Object obj){\n    ensureCapacity();\n \
+    \   for(int i = iSize; i > pos; i--) {\n        iValues[i] = iValues[i - 1];\n\
+    \    }\n    iValues[pos] = obj;\n    iSize++;\n}\n```\n\n```\npublic Object remove(int\
+    \ pos){\n    Object removedValue = iValues[pos];\n    for(int i = pos; i < iSize\
+    \ - 1; i++) {\n        iValues[i] = iValues[i + 1];\n    }\n    iValues[iSize\
+    \ - 1] = null;\n    iSize--;\n    return removedValue;\n}\n```"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "```\n}\n\nprivate void ensureCapacity(){\n    // is there extra capacity available?\n\
+    \    // if not, resize\n    if(iSize == iValues.length) {\n        resize();\n\
+    \    }\n}\n```\n\n```\npublic int size(){\n    return iSize;\n}\n```\n\n```\n\
+    // resize internal storage container by a factor of 2\nprivate void resize() {\n\
+    \    Object[] temp = new Object[iValues.length * 2];\n    System.arraycopy(iValues,\
+    \ 0, temp, 0, iValues.length);\n    iValues = temp;\n}\n```\n\n```\n/**\n * Return\
+    \ a String version of this list. Size and\n```"
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: "```\n* elements included.\n*/\npublic String toString(){\n    // we could make\
+    \ this more efficent by using a StringBuilder\n    // See alternative version\n\
+    \    String result = \"size: \" + iSize + \", elements: [\";\n    for(int i =\
+    \ 0; i < iSize - 1; i++) {\n        result += iValues[i].toString() + \", \";\n\
+    \    }\n    if(iSize > 0 ) {\n        result += iValues[iSize - 1];\n    }\n \
+    \   result += \"]\";\n    return result;\n}\n\n// Would not really have this and\
+    \ toString available\n// both included just for testing\npublic String toStringUsingStringBuffer(){\n\
+    \    StringBuilder result = new StringBuilder();\n    result.append(\"size: \"\
+    );\n    result.append(iSize);\n    result.append(\", elements: [\");\n    for(int\
+    \ i = 0; i < iSize - 1; i++)\n```"
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "```\n/**\n * Default constructor. Creates an empty list.\n */\npublic GenericListVersion2(){\n\
+    \    //redirect to single int constructor\n    this(DEFAULT_CAP);\n    //other\
+    \ staments could go here.\n}\n```\n\n```\n/**\n * Constructor to allow user of\
+    \ class to specify\n * initial capacity in case they intend to add a lot\n * of\
+    \ elements to new list. Creates an empty list.\n```"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "```\n* @param initialCap > o\n */\npublic GenericListVersion2(int initialCap)\
+    \ {\n    assert initialCap > o : \"Violation of precondition.\n    IntListVer1(int\
+    \ initialCap):\":\n    + \"initialCap must be greater than o. Value of initialCap:\
+    \ \" \n    + initialCap;\n    iValues = new Object[initialCap];\n    iSize = 0;\n\
+    }\n```\n\n```\n/**\n* Return true if this IntList is equal to other.<br>\n* pre:\
+    \ none\n* @param other The object to comapre to this\n* @return true if other\
+    \ is a non null, IntList object\n* that is the same size as this IntList and has\
+    \ the\n* same elements in the same order, false otherwise.\n */\npublic boolean\
+    \ equals(Object other){\n    boolean result;\n    if(other == null) {\n      \
+    \  // we know this is not null so can't be equal\n```"
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "```\nresult = false;\nelse if(this == other) {\n  // quick check if this and\
+    \ other refer to same IntList object\n  result = true;\n} else if( this.getClass()\
+    \ != other.getClass() {\n  // other is not an IntList they can't be equal\n  result\
+    \ = false;\n} else {\n  // other is not null and refers to an IntList\n  GenericListVersion2\
+    \ otherList = (GenericListVersion2)other;\n  result = this.size() == otherList.size();\n\
+    \  int i = 0;\n  while(i < iSize && result) {\n    result = this.iValues[i].equals(\
+    \ otherList.iValues[i]);\n    i++;\n  }\n  return result;\n}\n}\n```"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: "# Linked List\n\n```\npackage Fallo811;\n```\n\n```\nimport java.util.Iterator;\n\
+    ```\n\n```\nimport Summero8.Node;\n```\n\n```\npublic class LinkedList implements\
+    \ Iterable {\n    private Node head;\n    private Node tail;\n    private int\
+    \ size;\n\n    public Iterator iterator(){\n    return new LLIterator();\n}\n\
+    ```\n\n```\nprivate class LLIterator implements Iterator{\n    private Node nextNode;\n\
+    \    private boolean removeOK;\n    private int posToRemove;\n```"
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "```\nprivate LLIterator(){\n    nextNode = head;\n    removeOK = false;\n \
+    \   posToRemove = -1;\n}\n```\n\n```\npublic boolean hasNext(){\n    return nextNode\
+    \ != null;\n}\n```\n\n```\npublic Object next(){\n    assert hasNext();\n\n  \
+    \  Object result = nextNode.getData();\n    nextNode = nextNode.getNext();\n\n\
+    \    removeOK = true;\n    posToRemove++;\n\n    return result;\n}\n```"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: "```\npublic void remove(){\n    assert removeOK;\n    removeOK = false;\n \
+    \   LinkedList.this.remove(posToRemove);\n    posToRemove--;\n}\n```\n\n```\n\
+    public void makeEmpty(){\n    // let GC do its job!!!!!!\n    head = tail = null;\n\
+    \    size = 0;\n}\n```\n\n```\npublic Object remove(int pos){\n    assert pos\
+    \ >= 0 && pos < size;\n    Object result;\n    if( pos == 0 ){\n        result\
+    \ = head.getData();\n        head = head.getNext.Next();\n        if( size ==\
+    \ 1 )\\{\n            tail = null;\n}\n```"
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "```\n}\nelse{\n    Node temp = head;\n    for(int i = 1; i < pos; i++)\n  \
+    \      temp = temp.getNext();\n    result = temp.getNext().getData();\n    temp.setNext(\
+    \ temp.getNext().getNext() );\n    if( pos == size - 1)\n        tail = temp;\n\
+    }\nsize--;\nreturn result;\n}\n```\n\n```\npublic Object get(int pos){\n    assert\
+    \ pos >= 0 && pos < size;\n    // array based list\n    // return myCon[pos]\n\
+    \    Object result;\n    if( pos == size - 1 )\n        result = tail.getData();\
+    \ //O(1)\nelse{\n```"
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: "```\nNode temp = head;\nfor(int i = 0; i < pos; i++)\n    temp = temp.getNext();\n\
+    \    result = temp.getData();\n// average case O(N) :(((\nn}\nreturn result;\n\
+    }\n```\n\n```\npublic void insert(int pos, Object obj){\n    assert pos >= 0 &&\
+    \ pos <= size;\n```\n\n```\n// addFirst?\nif(pos == 0)\n    addFirst(obj); //\
+    \ O(1)\n// add last?\nelse if( pos == size )\n    add(obj); //atat end O(1)\n\
+    ```\n\n```\nelse{\n    // general case\n    Node temp = head;\n    for(int i =\
+    \ 1; i < pos; i++)\n```"
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: "```\ntemp = temp.getNext();\n// I know temp is pointing at the\n// node at\
+    \ position pos - 1\nNode newNode = new Node(obj, temp.getNext());\ntemp.setNext(\
+    \ newNode );\nsize++;\n```\n\n```\n}\n```\n\n```\n}\n```\n\n```\npublic void add(Object\
+    \ obj){\n    Node newNode = new Node(obj, null);\n    if( size == 0 )\n      \
+    \  head = newNode;\n    else\n        tail.setNext(newNode);\n    tail = newNode;\n\
+    \    size++;\n```\n\n```\n}\n```\n\n```\npublic void addFirst(Object obj){\n \
+    \   if(size == 0)\n        add(obj);\n```"
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: "```\nelse{\n    Node newNode = new Node(obj, head);\n    head = newNode;\n\
+    \    size++;\n}\n\n```\n\n```\npublic String toString(){\n    String result =\
+    \ \"\"\\n    Node temp = head;\n    for(int i = 0; i < size; i++){\n        result\
+    \ += temp.getData() + \" \";\n        temp = temp.getNext();\n    }\n    return\
+    \ result;\n}\n```"
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# Conclusion
+
+
+    Thank you for taking the time to work through my guide; I hope that you found
+    it useful. Now that you know the basics of Java programming and the syntax rules
+    that go with it, you can move on and take your learning to the next level.
+
+
+    As you can see, Java isn''t too complicated and once you get the hang of the rules,
+    you''ll be programming like a pro. The rules that surround the syntax and the
+    naming conventions are very important parts to learn; if you can''t grasp these,
+    you won''t be able to grasp the rest of the language, so don''t be afraid to run
+    through this guide as many times as needed. You must be comfortable with the basics—otherwise
+    anything more complex will seem like it''s too difficult to learn.
+
+
+    Good luck, and I wish you well on your journey to becoming a pro Java programmer.'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '# Free Video Course:
+
+    Introduction to JavaScript, SQL & C++
+
+
+    We really hope that you enjoyed the book! You''re now familiar with the first
+    steps on Computer Programming. It’s now time to take action!
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_132_0.png)
+
+
+    Follow this link: http://www.itstarterseries.com/free-programming-course NOW and
+    get immediate access to your free video series!
+
+
+    Happy coding!'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Want to learn more about programming?
+
+
+    Check out the other books by IT Starter Series:
+
+
+    **Newest release (2017):** Programming: Computer Programming for Beginners - Learn
+    the Basics of SQL
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_133_0.png)'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# C#: Programming: Computer Programming for Beginners - Learn the Basics of
+    C# - 3rd Edition (2017)
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_134_0.png)'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# Programming: Computer Programming for Beginners - Learn the Basics of HTML5,
+    JavaScript and CSS
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_135_0.png)'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: 'Hacking: Hacking for Beginners - Computer Virus, Cracking, Malware, IT Security
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_136_0.png)'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '# The Amazon Bestseller: Programming: Computer Programming for Beginners -
+    Learn the Basics of Java, SQL & C++ - 4th Edition (2017)
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_137_0.png)
+
+
+    Check out our Facebook (https://www.facebook.com/itstarter series) and Instagram
+    (https://www.instagram.com/itstarter series.com) to receive updates on the newest
+    releases!'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: 'JAVA IS ONE OF THE MOST POPULAR OF ALL THE PROGRAMMING LANGUAGES WITH A WIDE
+    RANGE OF APPLICATIONS AND ENVIRONMENTS MAKING KNOWLEDGE OF THE PROGRAM AN ESSENTIAL
+    TOOL. THIS GUIDE PROVIDES THE BASIC STARTING POINT TO LEARN THIS IMPORTANT LANGUAGE.
+    BY STARTING HERE, YOU WILL BE WELL ON YOUR WAY TO LAUNCHING A JOURNEY TOWARDS
+    JAVA PROGRAMMING.
+
+
+    Learn everything you need to understand this rule based programming language in
+    Java: The Definite Beginner''s Guide to Get Started with Java Programming, by
+    Joseph Connor. This short guidebook gives you all the necessary basics. Connor
+    breaks down terminology that may otherwise be confusing, offers systematically
+    simple to follow directions, and breaks down a complex programming language into
+    easy to handle and actionable bile sized bits.
+
+
+    With Connor''s easy to follow guidance you will learn:
+
+
+    +   * How to set up your environment
+
+    * How to create your first program
+
+    * How to create objects, and understand classes and constructors
+
+    * The difference between primitive and reference/object data types
+
+    * Different operators within Java and how each is used to manipulate variables
+
+    * How to create loop controls and decision-making statements
+
+    * How to work with numbers, strings, arrays, and methods
+
+    * And what to do with exceptions
+
+
+    By the end of Java: The Definite Beginner''s Guide to Get Started with Java Programming,
+    you will know the basics of Java programming and the syntax rules that go with
+    it. This guide will launch you into programming like a pro in no time by giving
+    you a solid foundation of the rules. You will be able to create your first program
+    and trouble shoot exceptions, guide handy to refer again and again along your
+    programming
+
+
+    Java: The Definite Beginner''s Guide to Get Started with Java Programming is a
+    foundational tool for understanding the rules surrounding the syntax and the naming
+    conventions necessary to grasp the rest of the language.
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_141_0.png)
+
+
+    ![](img/483d00e870a5d3fd0f967c0c44ec94f7_141_1.png)'
+  merge: -1
+  pgno: 141
