@@ -1,0 +1,3375 @@
+- img_proc: true
+  md: 'Iurii Mednikov
+
+
+    Practical Guide to Java Collections Framework
+
+
+    1 st edition'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Published by Iurii Mednikov at Smashwords
+
+    Copyright 2020-2021 Iurii Mednikov
+
+    1 st edition
+
+    ISBN 97804463228524
+
+
+    # Leanpub license notes
+
+
+    This ebook is licensed for your personal enjoyment only. This book may not be
+    re-sold or given away to other people. If you would like to share this book with
+    another person, please purchase an additional copy for each recipient. If you
+    are reading this book and did not purchase it, or it was not purchased for your
+    use only, then please return to your favorite ebook retailer and purchase your
+    own copy. Thank you for respecting the hard work of the author.
+
+
+    # Disclaimer
+
+
+    Every precaution was taken in the preparation of this e book. However, the author
+    assumes responsibility for errors, omissions or for damages, that may result from
+    the use of information (including code listings) contained herein.
+
+
+    # Cover image
+
+
+    The cover has been designed using resources from Pexels.com
+
+
+    For all questions please email to mednikov.iurii@gmail.com'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Contents at a Glance
+
+
+    +   - Foreword
+
+    - Ackcknowledments
+
+    - Chapter 1. Overview of java.util.Collection
+
+    - Chapter 2. How to use streams
+
+    - Chapter 3. Lists
+
+    - Chapter 4. Sets
+
+    - Chapter 5. Queues
+
+    - Chapter 6. Maps
+
+    - Chapter 7. Fluent assertions with AssertJ library
+
+    - Chapter 8. Iterators
+
+    - About the Author'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Contents
+
+
+    +   - Foreword
+
+    - Acknowledgments
+
+    - Chapter 1. Overview of java.util.Collection
+
+    - Which data structures are collections
+
+    - Insert elements into a collection
+
+    - Remove elements from a collection
+
+    - Create streams from a collection
+
+    - Iterate over a collection
+
+    - Access an individual element of a collection
+
+    - Other non-optional methods
+
+    - Chapter 2. How to use streams
+
+    - Initialize a stream
+
+    - From collections
+
+    - From generated data
+
+    - From nullable
+
+    - From one or more elements
+
+    - Iterating
+
+    - Create an empty stream
+
+    - Using builder
+
+    - A concept of a pipeline
+
+    - Intermediate operations
+
+    - Filter
+
+    - Map
+
+    - Distinct
+
+    - Sorting
+
+    - While
+
+    - Limit
+
+    - Peek
+
+    - Terminal operations
+
+    - ForEach'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '+   Collectors
+
+    Find
+
+    Match
+
+    Reduction
+
+    Chapter 3. Lists
+
+    Add new elements
+
+    Remove elements
+
+    Access an individual element
+
+    Create sub lists
+
+    Searching for an element
+
+    Filter
+
+    Replace an element
+
+    Compare two lists
+
+    Copy lists
+
+    Chapter 4. Sets
+
+    Add a new element
+
+    Union operations
+
+    Delete an element
+
+    Intersection operations
+
+    Replace an element
+
+    Get an arbitrary element from a set
+
+    Get the size of a set
+
+    Create a subset
+
+    Difference
+
+    Copy sets
+
+    Chapter 5. Queues
+
+    Queue declaration
+
+    Handling enqueue operations
+
+    Handling dequeue operations
+
+    Return the head element
+
+    Return tail elements
+
+    Chapter 6. Maps
+
+    Insert new elements'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   - Access a value by a key
+
+
+    +   - Delete a value from map
+
+
+    +   - Replace a value for a key
+
+
+    +   - Reverse (invert) a map
+
+
+    +   - Chapter 7. Fluent assertions with AssertJ
+
+
+    +   - Assert that a collection contains an element
+
+
+    +   - Assert that a collection contains elements in any order
+
+
+    +   - Assert that a collection contains elements in the specific order
+
+
+    +   - Assert that a collection does not contain duplicates
+
+
+    +   - Assert that a collection contains the element only once
+
+
+    +   - Chapter 8. Iterators
+
+
+    +   - Access elements of a collection
+
+
+    +   - Consume an element
+
+
+    +   - Remove elements
+
+
+    +   - About the Author'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Foreword
+
+
+    When we say "Java collections", we can actually mean two things. In a general
+    sense, we talk about implementations of common data structures, like array-based
+    lists, sets, queues, maps, vectors etc. In a more narrow understanding, we describe
+    concrete abstractions and implementations, which together make Java Collections
+    Framework. This is a set of most widely used data structures and corresponding
+    algorithms (like sorting, searching or filtering), which inherit the the root
+    java.util.Collection interface.
+
+
+    These classes are provided as a part of Java Development Kit (JDK) to make our
+    lives as developers easier in many ways. For example, a common base reduces a
+    learning curve for novice programmers and protects us from reinventing a wheel,
+    when we deal with data structures and algorithms.
+
+
+    This book is for Java developers of all levels. It can be equally useful for beginners,
+    who just start to study Java Collections. But it can also serve for more advanced
+    software engineers as a reference manual.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Acknowledgments
+
+
+    It is a huge honor for me to publish this book. It gives me a great opportunity
+    to summarize and to reflect my skills. I would like to dedicate this book to my
+    father Andrei: I spent more time to study, and that it should be (I studied international
+    economics as my first major, and only then then I switched to computer science).
+    And without my father’s patience it would not be possible.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Chapter 1. Overview of java.util.Collection
+
+
+    When we talk about Java collections, we consider two things. First, a more wide
+    concept, means implementations of common data structures. An another, narrow understanding,
+    corresponds to concrete interfaces and their implementations, that are contained
+    in Java Collections Framework, and are provided out-of-the-box as part of JDK.
+    In that sense, we need to remember that such collections inherit the root interface
+    java.util.Collection, that defines all common functionality, that sub classes
+    should implement.
+
+
+    # Which data structures are collections
+
+
+    This section provides a helicopter view on Java Collections Framework. This library
+    offers for developers a unified architecture for representing and manipulating
+    collections, enabling collections to be manipulated independently of implementation
+    details. Java programming language defines a collection as an object that represents
+    a group of objects. In other words, Java Collections Framework (from here JCF)
+    includes a number of interfaces and implementations that facilitate data operations
+    like searching, sorting, insertion, manipulation, or deletion of elements.
+
+
+    First, please observe the graph below, which sums up a hierarchy of JCF:
+
+
+    ![](img/a398e64f5a6d595324f5e906ad60a773_8_0.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'One of the common interview questions sounds like "why do we use JCF"? Well
+
+
+    +   - JCF reduces programming efforts, because you don''t need to reinvent these
+    data structures and algorithms
+
+    - JCF offers high-performance implementations of data structures and algorithms,
+    therefore it increases performance
+
+    - JCF establishes interoperability between various unrelated APIs
+
+    - JCF makes it easier to learn collections for developers
+
+
+    Let return to the illustration. The root classes are java.util.Collection and
+    java.util.Map. That is important to remember, as it is common to think that Map
+    is a collection. While maps contain collection-view operations, which enable them
+    to be manipulated as collections, from a technical point of view, maps are not
+    collections in Java.
+
+
+    As it was already mentioned, Java collection is a group of objects, that are known
+    as its elements. Note, that elements in collections have to be unique (for example,
+    sets), while other types permit duplicates (for example, array-based lists). The
+    interface java.util.Collection is not implemented directly, rather Java has implementations
+    of its sub interfaces. This interface is typically used to pass collections around
+    and manipulate them max degree of generality.
+
+
+    # Insert elements into a collection
+
+
+    Generally, there are two ways to insert new elements to collection:
+
+
+    +   - Add a single element
+
+    - Add all elements from the another collection.
+
+
+    Note'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# (Listing 1-1)
+
+
+    ```
+
+    @Test
+
+    void insertTest() {
+
+    // get mock posts
+
+    List<Post> posts = getPosts();
+
+    // Add single element
+
+    Post post = new Post(6, "Phasellus scelerisque", "Phasellus scelerisque eros id
+    lacus auctor");
+
+    posts.add(post);
+
+    assertThat(posts).contains(post).hasSize(6);
+
+    // add multiple elements
+
+    List<Post> newPosts = new ArrayList<>();
+
+    newPosts.addAll(posts);
+
+    assertThat(newPosts).containsAll(posts);
+
+    }
+
+    ```
+
+
+    Note, in the code snippet, I use an array list. and it implements both add() and
+    addAll() methods. Array lists have two overloaded versions of add() method, although
+    we will concentrate here on the Collection''s one.
+
+
+    To sum up, java.util.Collection permits us to insert elements in these ways:
+
+
+    +   * boolean add(Element e) adds a new element E and ensures collection contains
+    the specified element. It returns either true or false if this collection changed
+    as a result of the call.
+
+    * boolean addAll(Collection c) inserts all elements from collection C to the collection.
+    Note, that this method also returns boolean value, which stands true if this collection
+    changed as a result of the call
+
+
+    Several implementations impose restrictions on elements that they may contain,
+    and as the result prohibit certain insertions. For example, if collection does
+    not allow duplicates, you can''t add an element that already exists. Same for
+    null values.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Remove elements from a collection
+
+
+    In contrast with two insertion operations, there are more methods to delete elements
+    from the collection. Let briefly observe them:
+
+
+    +   - void clear() removes all of the elements from the collection
+
+    - boolean remove(Element e) removes a single instance of the specified element
+    e from the collection (if element is presented)
+
+    - boolean removeAll(Collection c) deletes all of the collection''s elements that
+    are also contained in the argument''s collection
+
+    - boolean remove(Predicate filter) deletes all of the elements of this collection
+    that satisfy a given predicate condition
+
+
+    (Listing 1-2)
+
+
+    ```
+
+    @Test
+
+    void removeTest(){
+
+    // get mock posts
+
+    List<Post> posts = getPosts();
+
+
+    Post post = posts.get(2);
+
+    assertThat(posts).contains(post);
+
+
+    // remove object
+
+    posts.remove(post);
+
+    assertThat(posts).doesNotContain(post);
+
+
+    // clear
+
+    posts.clear();
+
+    assertThat(posts).isEmpty();
+
+
+    // delete with predicate
+
+    posts = getPosts();
+
+    // remove posts with ID 2 and 4
+
+    posts.removeIf(p -> p.getId() % 2 == 0);
+
+    assertThat(posts).hasSize(3);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Note, that not all of these methods are optional (which means, that it can
+    be skipped in particular implementations). Such, removeIf() method is not an optional
+    operation, while remove(), removeAll() and clear() are marked as optional operations.
+
+
+    # Create streams from a collection
+
+
+    In Java, stream stands for a sequence of elements supporting sequential and parallel
+    aggregate operations. We will examine them in details in the next chapter. The
+    root contract supplies two methods to initialize streams (both are not optional):
+
+
+    +   - Stream<E> stream() creates a sequential stream with this collection as its
+    source
+
+
+    +   - Stream<E> parallelStream() creates a possibly parallel stream with this
+    collection as its source.
+
+
+    Let have a look on the code snippet below:
+
+
+    (Listing 1-3)
+
+
+    ```
+
+    @Test
+
+    void streamTest(){
+
+    List<Post> posts = getPosts();
+
+    Stream<Post> stream = posts.stream();
+
+    assertThat(stream).isInstanceOf(Stream.class);
+
+    }
+
+    ```
+
+
+    # Iterate over a collection
+
+
+    From a technical point of view, iteration stands for a technique used to sequence
+    through a block of code repeatedly until a specific condition exists or no longer
+    exists. In other words, iterators traverse an abstract data structure in a predictable
+    order. Java provides several approaches to iterate over a collection. Note, that
+    not all collections provide us way to access an element on a base of index (for
+    instance, sets do not).'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "Therefore in this section we will not explore iteration approaches. Rather\
+    \ we will concentrate on approaches, that can be used with any implementation.\
+    \ As the root collection contract also extends the Iterable interface, let explore\
+    \ how it permits us to go through elements of collection:\n\n+   * Using iterators\n\
+    * Using streams\n* Using forEach()\n\n(Listing 1-4)\n\n```\n@Test\nvoid iterationTest(){\n\
+    List<Post> posts = getPosts();\n```\n\n```\n// create iterator\nIterator<Post>\
+    \ iterator = posts.iterator();\n\n// Option 1 with hasNext\nSystem.out.println(\"\
+    Iteration using iterator hasNext\");\nwhile(iterator.hasNext()) {\n  Post post\
+    \ = iterator.next();\n  System.out.println(post);\n}\nIterator<Post> iterator2\
+    \ = posts.iterator();\n\n// Option 2 using forRemaining\nSystem.out.println(\"\
+    Iteration using iterator forRemaining\");\niterator2.forEachRemaining(p -> System.out.println(p));\n\
+    \n// using forEach\nSystem.out.println(\"Iteration using forEach\");\nposts.forEach(p\
+    \ -> System.out::println(p));\n\n// using stream\nSystem.out.println(\"Iteration\
+    \ using stream\");\nposts.stream().forEach(p -> System.out.println(p));\n}\n```"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'Basically, the iterator pattern permits all elements of the collection to be
+    accessed sequentially, with some operation being performed on each element. You
+    can note that iterator has two core methods:
+
+
+    +   - hasNext() returns true value if the iteration has more elements and we use
+    it in the while loop (it works in similar way like next() of result sets)
+
+
+    +   - next() returns an element and we use it to access the current element of
+    iteration
+
+
+    You can also use forRemaining() method. It accepts a consumer function that is
+    executed for each remaining element until all elements have been processed or
+    the action throws an exception. Note, that iterator() method is not optional.
+
+
+    We will discuss iterators deeper in Chapter 8.
+
+
+    # Access an individual element of a collection
+
+
+    I have to mention that java.util.Collection does not specify methods to access
+    individual elements. This means, that each particular implementation has to provide
+    its own. For example, elements of array-based lists can be accessed by their index;
+    however sets do not support such functionality. In other words, there is no unified
+    way to access collection''s elements, as it fully depends on an underlying implementation.
+
+
+    # Other non-optional methods
+
+
+    Besides mentioned operations, there are other methods, defined in the Collection
+    interface and marked as non-optional. They are not big enough to have a separate
+    section for each of them, however they are still important to know by developers.
+    That is why, I allocate them in this subsection. Take a look on these methods:
+
+
+    +   - contains(Element e) returns true if this collection contains the specified
+    element. This method utilizes an implementation of element''s equals() method
+    in order to check an equality
+
+
+    +   - containsAll(Collection c) returns true if this collection contains all of
+    the elements in the specified collection.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '+   - isEmpty() returns true if the collection is empty
+
+    - size() returns an integer value with a number of elements in the collection
+
+    - toArray() creates an array Element[] from elements of the collection
+
+
+    As a summary for this chapter, these methods provide unified interfaces for all
+    types of collections. Of course, each particular sub class has its different underlying
+    implementation of these methods, due to concrete data structure''s logic. But
+    all of them inherit non-optional functionality from the root interface. This,
+    as we mentioned already, ensures better learning curve for developers and promotes
+    interoperability.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# Chapter 2. How to use streams\n\nStreams were first introduced in Java 8\
+    \ and then were updated in next releases. This concept defines a sequence of elements\
+    \ supporting sequential and parallel aggregate operations. Please don't confuse\
+    \ the word \"stream\": before 8th version, Java had InputStream and OutputStream.\
+    \ However, these classes have nothing in common with the hero of this chapter.\
+    \ Streams API, that was introduced in Java 8 is an implementation of a monad pattern:\
+    \ the concept, which was brought from functional languages like Haskell or Clojure.\n\
+    \nThe idea of streams gains its popularity with rise of parallel computations.\
+    \ It is based on principle of lazy evaluation. From a technical point of view,\
+    \ this means, that actual evaluation is suspended until the result is needed.\
+    \ The laziness of operations states, that the actual computation on the source\
+    \ data is performed after the final operation is invoked, and source elements\
+    \ are consumed only as needed.\n\nLet have a look on a simple example. Imagine,\
+    \ that we create a program, which brings all occurrences of a particular name\
+    \ in a console. First, let write it in a traditional (imperative) paradigm:\n\n\
+    (Listing 2-1)\n\n```\nList<String> names = Arrays.asList(\"Anna\", \"Bob\", \"\
+    Carolina\", \"Denis\", \"Anna\", \"Jack\", \"Marketa\", \"Simon\", \"Anna\");\n\
+    \nfor (String name: names){\n  if (name.equalsIgnoreCase(\"Anna\")){n    System.out.println(name);\n\
+    \  }\n}\n```\n\nWhat do we do here is that we find all occurrences of “Anna” in\
+    \ the list and print them. That is a simple operation, it requires to write a\
+    \ lot of code for a small task! With streams, we can rewrite the previous example\
+    \ using the declarative paradigm.\n\n(Listing 2-2)"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'names.stream().filter(name->name.equalsIgnoreCase("Anna")).forEach(System.out::println);"
+
+
+    This is totally different case! This one line code (it is sometimes called one-liner
+    among developers) does same thing, but in a contrasting way. Instead of loop and
+    if-else condition, declarative approach combines functions into pipelines. In
+    our example we have two operations – filter(), which looks for requested entities,
+    and forEach(), which executes some action on each occurrence.
+
+
+    # Initialize a stream
+
+
+    From a technical point of view, stream is a programming abstraction, and it is
+    not the same thing as collection, although it can be created from collections.
+    These concepts are often mixed by developers, that start with functional programming
+    in Java, and we need to distinguish them. In this section we observe different
+    approaches, that are used to initialize streams.
+
+
+    # From collections
+
+
+    As this book is devoted to Java Collections Framework, it may seem logically to
+    start with collections. I mentioned already, that stream is not a collection,
+    but it uses elements from a collection as its data source. In the previous chapter
+    we noted a built-in method stream(), that is brought by the root interface and
+    which creates a sequential stream from the collection''s entities.
+
+
+    (Listing 2-3)
+
+
+    ```
+
+    List<String> names = Arrays.asList("Alejandra", "Beatriz", "Carmen", "Dolores",
+    "Juanita")
+
+    Stream<String> namesStream = names.stream();
+
+    assertThat(namesStream).isInstanceOf(Stream.class);
+
+    ```
+
+
+    # From generated data
+
+
+    If you don''t have a collection with defined data, you can create a stream with
+    generated records. This may be useful for experimenting with streams methods.
+    In such case, you need to define a supplier'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'function, that will be used for generation of a random sequence. The static
+    factory method generate() initializes an infinite sequential unordered stream.
+
+
+    (Listing 2-4)
+
+
+    ```
+
+    IntStream rangeStream = IntStream.range(1, 10);
+
+    assertThat(rangeStream.toArray()).hasSize(9).contains(9).doesNotContain(10);
+
+    ```
+
+
+    Another method to generate a stream is rangeClosed(). The difference between aforesaid
+    methods is if the sequence contain an upper limit number or not. On the other
+    side, the rangeClosed() function returns a range that includes both limits, while
+    range() excludes a second value from results.
+
+
+    # From nullable
+
+
+    This method was initially introduced in JDK 9. It creates a new stream from a
+    single element (that is nullable: a value can be potentially null), which either
+    contains that element or is empty (in the case of null value).
+
+
+    (Listing 2-5)
+
+
+    ```
+
+    Record record = null;
+
+    Stream<Record> nullableStream = Stream.ofNullable(record);
+
+    assertThat(record).isNull();
+
+    assertThat(record).assertInstanceOf(Stream.class);
+
+    ```
+
+
+    # From one or more elements
+
+
+    The static factory method of() creates a stream from one or more elements (in
+    the later situation, it uses varags). There are two overloaded versions:
+
+
+    +   - of(T element)
+
+    - of(T... elements)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'In the first version, of() method returns a sequential stream, which contains
+    a single element T. In the
+
+    second variant, it creates a sequential ordered stream, which has elements, provided
+    in a form of var
+
+    args.
+
+
+    (Listing 2-6)
+
+
+    ```
+
+    Stream<Integer> pointsStream = Stream.of(2, 5, 12, 6, 19);
+
+    asertThat(pointsStream).isInstanceOf(Stream.class);
+
+    ```
+
+
+    # Iterating
+
+
+    The static method iterate() was introduced in Java 9. It takes two arguments:
+    an initial value (also
+
+    called seed) and a unary operator function, which is used to produce a sequence.
+    The method starts with
+
+    the seed value and applies the given function to get the next element.
+
+
+    (Listing 2-7)
+
+
+    ```
+
+    Stream<Integer> iterateStream = Stream.iterate(0, i -> i + 2);
+
+    asertThat(iterateStream).isInstanceOf(Stream.class);
+
+    ```
+
+
+    # Create an empty stream
+
+
+    We have already mentioned ofNullable() method, which could possibly return an
+    empty stream in case
+
+    of null value. Still, is there another approach to get an explicitly empty stream.
+    The static method
+
+    empty() returns as it implied from its name an empty stream.
+
+
+    (Listing 2-8)
+
+
+    ```
+
+    Stream<Integer> emptyStream = Stream.empty();nasertThat(emptyStream.toArray()).isEmpty();
+
+    ```'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Using builder
+
+
+    Until now we observed static factory methods, that are used to initialize a new
+    stream instance. Some programmers tend to rely on a builder pattern to create
+    objects. Stream class has its builder, which can be used as an alternative to
+    factory methods. The static method Stream.builder() allows the creation of streams
+    by generating elements individually and adding them to builder without temporary
+    collections or buffers.
+
+
+    (Listing 2-9)
+
+
+    ```
+
+    // 1. create builder
+
+    Stream.Builder<String> builder = Stream.builder();
+
+
+    // 2. create stream
+
+    Stream<String> nameStreamBuilder =
+
+    builder.add("Alejandra").add("Beatriz").add("Carmen").add("Dolores").add("Juanita").nbuild();
+
+
+    // contains same elements as the first example
+
+    assertThat(namesStream.collect(Collectors.toList())).containsElementsOf(nameStreamBuilder.collect(Collectors.toList()));
+
+    ```
+
+
+    In this code example, we start with a creation of a builder''s instance. Next,
+    with add() method, we populate values. Finally, we transform a builder into a
+    stream with build() method.
+
+
+    # A concept of a pipeline
+
+
+    We took a broad introduction to the stream creation and observed ways to do it.
+    Now, as we obtained a stream instance, we can assemble a pipeline in order to
+    do something useful with the stream. From technical point of view, a pipeline
+    consists of a source (collection, element, generated sequence etc.), followed
+    by zero or more intermediate operations and one terminal operation.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '![](img/a398e64f5a6d595324f5e906ad60a773_21_0.png)
+
+
+    # # Intermediate operations
+
+
+    Intermediate operations return new stream and are lazy. Their laziness means that
+    the actual computation on the source data is performed only after the terminal
+    operation is invoked, and source elements are consumed only as needed. We can
+    chain multiple intermediate operations, as each returns a new stream instance.
+
+
+    ![](img/a398e64f5a6d595324f5e906ad60a773_21_1.png)
+
+
+    # # Filter
+
+
+    In the beginning of this chapter, we did an example with names. There, we filtered
+    a list of names in order to find matching names. This was done using filter().
+    Basically, it returns a new stream consisting of the elements, that match the
+    given predicate (function, that specifies a logical condition).
+
+
+    (Listing 2-10)
+
+
+    ```
+
+    @Test
+
+    void filterTest(){
+
+    Stream<String> stream = names.stream();
+
+    long result = stream.filter(n -> n.startsWith("A")).count();
+
+    assertThat(result).isEqualTo(4);"
+
+    ```'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '}
+
+
+    # Map
+
+
+    The streams API has a number of mapping operations. It is a good idea to group
+    them together under one section. Let start with a general map() function. It returns
+    a new stream, which consists of results of an application mapper function to the
+    elements of the stream.
+
+
+    (Listing 2-11)
+
+
+    ```
+
+    @Test
+
+    void mapTest(){
+
+    Stream<String> stream = names.stream();
+
+    int result = stream.mapToInt(n -> n.length()).sum();
+
+    assertThat(result).isEqualTo(43);
+
+    }
+
+    ```
+
+
+    There are specific mapping methods, that map results of previous computation to
+    numeric values.
+
+
+    +   * mapToInt() produces an IntStream instance, that consists of the results
+    of applying the given mapper function
+
+    * mapToDouble() produces a DoubleStream instance, that consists of the results
+    of applying the given mapper function
+
+    * mapToLong() produces a LongStream instance, that consists of the results of
+    applying the given mapper function
+
+
+    # Distinct
+
+
+    Another commonly used intermediate operation is called distinct(). It produces
+    a stream of unique elements from a source. Technically, the distinct() method
+    relies on equals() implementation of the type class in order to avoid duplicates.
+    For ordered streams, the selection of distinct elements is stable, for unordered
+    ones, Java provides no stability guarantee.
+
+
+    (Listing 2-12)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# @Test
+
+
+    ```
+
+    void distinctTest() {
+
+    List<Integer> numbers = Arrays.asList(1, 1, 2, 3, 4, 5, 5);
+
+    Stream<Integer> stream = numbers.stream();
+
+    long result = stream.distinct().count();
+
+    assertThat(result).isEqualTo(5);
+
+    }
+
+    ```
+
+
+    # Sorting
+
+
+    In many situations, we need to sort elements of a collection in some way, for
+    example in their natural order. The method `sorted()` returns a stream, which
+    elements are sorted in the natural order.
+
+
+    (Listing 2-13)
+
+
+    # @Test
+
+
+    ```
+
+    void sortTest() {
+
+    List<Integer> numbers = Arrays.asList(-9, -18, 0, 25, 4);
+
+    Stream<Integer> stream = numbers.stream();
+
+    List<Integer> result = stream.sorted().collect(Collectors.toList());
+
+    assertThat(result).containsAll(numbers).containsExactly(-18, -9, 0, 4, 25);
+
+    }
+
+    ```
+
+
+    In the 2-13 I used a stream, which elements are numbers. The Integer class implements
+    `Comparable` interface, therefore provides logic to compare values. If you use
+    `sorted()` with own classes, you have to implement `Comparable` and write it yourself.
+    Otherwise, `ClassCastException` will be thrown, when a terminal operation will
+    be executed.
+
+
+    # While
+
+
+    These two methods were also added at Java 9 release: `dropWhile()` and `takeWhile()`.
+    Each of them accepts a predicate function, which specifies the condition.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '+   dropWhile produces a stream consisting of the remaining elements of this
+    stream after dropping the longest prefix of elements that match the given predicate.
+
+
+    +   takeWhile() produces a stream consisting of the longest prefix of elements
+    taken from this stream that match the given predicate.
+
+
+    Note, both methods work with streams, that have elements in order. This means,
+    that you have to sort elements, for example using sorted() method, which was described
+    in the previous section. In the listing 2-14 I use set.
+
+
+    Listing 2-14
+
+
+    ```
+
+    @Test
+
+    void whileTest(){
+
+    Set<Integer> numbers = Set.of(1,2,3,4,5,6,7,8);
+
+    Stream<Integer> stream = numbers.stream();
+
+    Set<Integer> result = stream.takeWhile(x-> x < 5).collect(Collectors.toSet());
+
+    assertThat(result).hasSize(4);
+
+    }
+
+    ```
+
+
+    # Limit
+
+
+    The method limit() produces a stream consisting of the elements, limited to be
+    no longer than specified length. This method accepts one argument, which represents
+    a desired length.
+
+
+    Listing 2-15
+
+
+    ```
+
+    @Test
+
+    void limitTest(){
+
+    Stream<Integer> stream = getNumbers().stream();
+
+    Set<Integer> result = stream.sorted().limit(5).collect(Collectors.toSet());
+
+    System.out.println(result);
+
+    assertThat(result).contains(-75, -18, -9, -5, 0);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Peek
+
+
+    This method is often misunderstood among developers. The reason for this, is that
+    it acts in a similar way as map() method, but only in a small portion. Likewise,
+    peek() method applies modifications on an each element of a stream, but if these
+    modifications exist only inside the method execution. Unlike map(), peek() does
+    not return a modified element to the stream flow. That is a reason, why peek()
+    is often used for debugging. You can think about it as intermediate counterpart
+    forEach().
+
+
+    Let take an example to distinguish peek() and map(). Consider a list of numbers.
+    We apply same modification for both cases – multiply each number on 2. However,
+    when you run this snippet, you will see, that in the first case the result contains
+    same values as the initial sequence:
+
+
+    (Listing 2-16)
+
+
+    ```
+
+    @Test
+
+    void peekTest() {
+
+    List<Integer> numbers = Arrays.asList(5, 2, 12, 20, 9, 8);
+
+    System.out.println("Peek:");
+
+    List<Integer> peekResults = numbers.stream().peek(number -> {
+
+    number = number * 2;
+
+    System.out.println(number);
+
+    }).collect(Collectors.toList());
+
+    System.out.println("Final result:");
+
+    peekResults.stream().forEach(System::println);
+
+    Assertions.assertThat(peekResults).hasSameElementsAs(numbers);
+
+    System.out.println("Map");
+
+    List<Integer> mapResults = numbers.stream().map(number -> {
+
+    number = number * 2;
+
+    System.out.println(number);
+
+    return number;
+
+    }).collect(Collectors.toList());
+
+    System.out.println("Final result:");
+
+    mapResults.stream().forEach(System::println);
+
+    Assertions.assertThat(mapResults).contains(10, 4, 24, 40, 18, 16)
+
+    }
+
+    ```
+
+
+    The final output of running this test case is presented on the screenshot below:'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '```
+
+    Peek:
+
+    10
+
+    4
+
+    24
+
+    40
+
+    18
+
+    16
+
+    Final result:
+
+    5
+
+    2
+
+    12
+
+    20
+
+    9
+
+    8
+
+    Map:
+
+    10
+
+    4
+
+    24
+
+    40
+
+    18
+
+    16
+
+    Final result:
+
+    10
+
+    4
+
+    24
+
+    40
+
+    18
+
+    16
+
+    ```
+
+
+    Note, the result sequence in the first case (after an application of the peek()
+    operation) contains same numbers, as the original list. This is due to the fact,
+    that peek() method does not return modified values. The purpose of this method
+    is to validate elements in a certain point of pipeline. On the other hand, the
+    result of the pipeline 2 (where map() method was applied) is different from the
+    initial sequence.
+
+
+    # Terminal operations
+
+
+    The other group of pipeline operations corresponds to terminal operations. Different
+    from intermediate operations, there may be only one terminal operation that is
+    executed on stream, because as it will be completed, the stream pipeline will
+    be consumed, and can no longer be used. Terminal operations produces some result
+    (can be either Java object or void), not a stream.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# ForEach\n\nWe have already encountered the forEach() method in many examples,\
+    \ that illustrated intermediate operations in the previous section. From a technical\
+    \ point of view, the forEach() function accepts a consumer function, which defines\
+    \ an action to be performed on each element of the stream.\n\n(Listing 2-17)\n\
+    \n```\n@Test\nvoid forEach(){\nStream<String> stream = names.stream();\nstream.filter(n->!n.equalsIgnoreCase(\"\
+    Anna\")).map(n -> n.toUpperCase()).forEach(n -\n System.out.println(n));\n}\n\
+    ```\n\nNote, that for parallel stream pipelines, this operation does not guarantee\
+    \ to respect the encounter order of the stream, as doing so would sacrifice the\
+    \ benefit of parallelism. For any element, the action may be performed at whatever\
+    \ time and in what thread the library chooses. If the action accesses shared state,\
+    \ it is responsible for providing the required synchronization.\n\n# Collectors\n\
+    \nThe forEach() method has no return: it consumes data, but does not provide back\
+    \ result (it is of the void return type). However, we often need to perform some\
+    \ operations with stream on a collection and then get a new collection back. In\
+    \ these situations we use collect() method. It performs a mutable reduction operation\
+    \ on the elements of this stream using collectors.\n\n![](img/a398e64f5a6d595324f5e906ad60a773_27_0.png)"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '```
+
+    (Listing 2-18)
+
+
+    @Test
+
+    void collectTest() {
+
+    Stream<String> stream = names.stream();
+
+    List<Integer> result = stream.filter(n -> n.length() <= 4).map(n -> n.length()).collect(Collectors.toList());
+
+    assertThat(result).hasSize(5);
+
+    }
+
+    ```
+
+
+    In the example code, presented in the program listing 2-18, I use a built-in collector
+    method, which collects elements into a list. There are other collector methods,
+    which Java provides out of the box:
+
+
+    +   - Collectors.toMap()
+
+    - Collectors.toSet()
+
+
+    # Find
+
+
+    Under this section, I list operations, which look for an element and return an
+    Optional container, because the requested element may not be presented (e.g. may
+    be null value):
+
+
+    +   - findAny()
+
+    - findFirst()
+
+
+    Both of these methods do not have any arguments, so you may ask a very reasonable
+    question: how do they actually find the element? The answer is quite straightforward.
+    The condition is specified in filter(), and a terminal find operation returns
+    a single element, which satisfies predicate.
+
+
+    (Listing 2-19)
+
+
+    ```
+
+    @Test
+
+    void findTest() {
+
+    Stream<String> stream = names.stream();}
+
+    ```'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '```
+
+    Optional<String> result = stream.filter(n -> n.length() < 4).findFirst();
+
+    asertThat(result).isPresent();
+
+    asertThat(result.get()).isEqualToIgnoreCase("Bob");
+
+    }
+
+    ```
+
+
+    What is a difference between findFirst() and findAny()? Like it can be figured
+    out from their names, findFirst() returns the first occurrence of the matching
+    element. From other side, findAny() returns any element, which satisfies a predicate.
+    That could be possibly the first one or could not: behavior of this operation
+    is explicitly nondeterministic; in other words, it is free to select any element
+    in the stream.
+
+
+    # Match
+
+
+    An another common scenario to validate, that elements of a sequence satisfy a
+    logical condition. We may need to check that either all elements, some elements,
+    either none of elements are valid according some predicate. Stream API provides
+    for this purpose a group of match methods. There are three functions:
+
+
+    +   - allMatch()
+
+    - noneMatch()
+
+    - anyMatch()
+
+
+    As name imply, match operations accept a predicate (a logical condition) and return
+    a boolean value, that states elements of the stream match all, do not match at
+    all, or just several of them match. We see it on practical examples.
+
+
+    The first candidate is the anyMatch() terminal operation. It returns true if at
+    least one element matches a predicate. This method may not evaluate the predicate
+    on all elements of the stream, if it is not necessary for determining the result.
+    On an empty stream false result is returned. Consider a list of integers. We use
+    anyMatch() to figure out if there are even numbers:
+
+
+    (Listing 2 – 20)'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '```
+
+    @Test
+
+    void anyMatchTest(){
+
+    List<Integer> numbers = Arrays.asList(10, 53, 23, 95, 30);
+
+    boolean hasEven = numbers.stream().anyMatch(n -> n%2 == 0);
+
+    Assertions.assertThat(hasEven).isTrue();
+
+    }
+
+    ```
+
+
+    The other case is to evaluate that all elements satisfy condition. This can be
+    done using the allMatch() operation. The difference with the previous function
+    is that the allMatch() returns true on the empty stream. Let have an example with
+    a list of numbers. We want to assert, that each element is:
+
+
+    (Listing 2 - 21)
+
+
+    ```
+
+    @Test
+
+    void allMatchTest(){
+
+    List<Integer> numbers = Arrays.asList(10, 53, 23, 95, 30);
+
+    boolean hasEven = numbers.stream().anyMatch(n -> n%2 == 0);
+
+    Assertions.assertThat(hasEven).isFalse();
+
+    }
+
+    ```
+
+
+    Finally, we can check, that there is no element in a stream that matches to the
+    predicate. It is performed with the noneMatch() method. Consider a following example:
+    we need to assert, that all integers in a list are negative (less than 0):
+
+
+    (Listing 2 - 22)
+
+
+    ```
+
+    @Test
+
+    void noneMatchTest(){
+
+    List<Integer> numbers = Arrays.asList(-4, -54, -25, -8, -1);
+
+    boolean hasPositives = numbers.stream().noneMatch(n -> n>0);
+
+    Assertions.assertThat(hasPositives).isTrue();
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# Reduction\n\nFrom a technical point of view, reduction is an operation, that\
+    \ allows to produce a single result from a sequence of elements. A good example\
+    \ of a reduction is sum operation: we add each element and return a final result.\
+    \ In other words, reduction is an application of some function (for instance,\
+    \ addition) repeatedly over all members of a sequence.\n\nJava provides its implementation\
+    \ of reduction as the reduce() terminal operation. This method takes two arguments:\
+    \ an identity value and a binary operator, that specifies combining function.\
+    \ Identity is an initial value (for example 0 or empty string) or a default value,\
+    \ in case of an empty stream. The binary operator takes two parameters: a partial\
+    \ result (for instance, subtotal of total) and a next element of a stream.\n\n\
+    Let see how to use the reduce() function on two examples: on a list of numbers\
+    \ (we expect a sum) and on a list of strings (we expect a word):\n\n(Listing 2-23)\n\
+    \n```\n@Test\nvoid reduceTest(){\n    // numbers\n    List<Integer> numbers =\
+    \ Arrays.asList(10, 20, 30, 40, 50);\n    int total = numbers.stream().reduce(0,\
+    \ (subtotal, number) -> subtotal + number);\n    Assertions.assertThat(total).isEqualTo(150);\n\
+    ```\n\nTo sum up, the usage of a reduction operation helps to create a single\
+    \ result from a sequence."
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Chapter 3. Lists
+
+
+    Before we will begin with an overview of list implementations in the Java Collections
+    Framework, let define what a list. In computer programming, list is finite sequence
+    of elements, where each element has its own position. In computer science are
+    contrasted two types of lists: array-based lists and linked lists.
+
+
+    An array-based list is called this way, because behind the scenes it uses a backed
+    array to store values. One of important characteristics of arrays is their fixed
+    size, but array-based lists could add as many elements as we need and extend the
+    size of the underlying array. Here need to introduce concepts of size and capacity.
+    Take a look on the graph below, which demonstrates an array list, which has 5
+    cells and 3 of it have actual values:
+
+
+    ![](img/a398e64f5a6d595324f5e906ad60a773_32_0.png)
+
+
+    Based on this example, we can define these concepts:
+
+
+    +   * Capacity is the total number of cells for data storage
+
+    * Size is the number of cells that actually contain data
+
+
+    Technically, when size becomes equal to capacity, in order to add new elements,
+    Java has to increase a capacity. It is performed with a mechanism, which is called
+    dynamic memory allocation, which reserves memory cells for prospective elements
+    as needed.
+
+
+    All lists in Java implement java.util.List interface as well as have core collection
+    methods. Array-based list implementation is defined in java.util.ArrayList class.
+    The capacity of list''s array is grown automatically, and is always at least large
+    than its size (number of elements).'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '![](img/a398e64f5a6d595324f5e906ad60a773_33_0.png)
+
+
+    It is important to note here, that while Java collections are mutable, there are
+    two ways to initialize a new array list object: the first approach produces a
+    mutable collection and the another one produces an immutable list:
+
+
+    +   - Using constructor, like List<Integer> numbers = new ArrayList<>(); this
+    version creates mutable lists
+
+    - Using the Arrays.asList() static method, which creates immutable lists
+
+
+    Another option is to use the List.of() static method, which accepts arguments
+    as var args. This operation is available since Java 10. It also produces an immutable
+    list.
+
+
+    # # Add new elements
+
+
+    The first operation we will observe is an insertion of new elements. Array lists
+    inherit from the root interface two methods to insert: add(E) and addAll(Collection
+    c), and also provide two own list-specific methods for adding elements to the
+    specified position. Observe all these methods:
+
+
+    +   - add(E e) is the basic method, that inserts a new element to the end of the
+    list
+
+    - addAll(Collection c) is another method from the root java.util.Collection interface,
+    that appends all elements of the collection C to the end of the list
+
+    - add(int position, E e) this method inserts a new element E to the specified
+    position. It shifts the currently element at position and any subsequent elements
+    to the right. This method could throw IndexOutOfBoundsException in a case the
+    position value is higher than the size of list
+
+    - addAll(int position, Collection c) the operation which is similar to the previous
+    one, but adds elements from collection c starting from position position. Can
+    throw IndexOutOfBoundsException with same conditions as the add() function'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "(Listing 3-1)\n\n```\n@Test\n\nvoid addElementsToTest() {\n  // Approach 1.\
+    \ Create new list and use add() MUTABLE!\n  List<Integer> numbers = new ArrayList<>();\n\
+    \  numbers.add(10);\n  numbers.add(15);\n  numbers.add(20);\n  numbers.add(25);\n\
+    \  numbers.add(30);\n  assertThat(numbers.add(66)).isTrue();\n}\n```\n\n```\n\
+    //Approach 2. Use Arrays.asList. IMMUTABLE!\nList<String> names = Arrays.asList(\"\
+    Alejandra\", \"Beatriz\", \"Carmen\", \"Dolores\", \"Juanita\");\nassertExceptionThrownBy(()\
+    \ -> \nnames.add(\"Maria\")).isInstanceOf(UnsupportedOperationException.class);\n\
+    }\n```\n\n# Remove elements\n\nA deletion of elements is another important thing\
+    \ we need to do on the day-to-day basis. There are two overloaded remove methods\
+    \ to remove elements from an array list:\n\n+   * remove(E e) removes a single\
+    \ instance of the specified element e from the list (if that element is presented)\n\
+    * remove(int position) removes an element in index position.\n\nThis is important\
+    \ to distinguish these methods, as it is very common questions in interviews and\
+    \ certifications. For example, you have a list of numbers:\n\n(Listing 3-2)\n\n\
+    ```\n@Test\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '```
+
+    void removeElementFromTest() {
+
+    List<String> names = new ArrayList<>();
+
+    names.add("Alejandra");
+
+    names.add("Beatriz");
+
+    names.add("Carmen");
+
+    names.add("Dolores");
+
+    names.add("Juanita");
+
+    ```
+
+
+    ```
+
+    // Approach 1. Remove by INDEX
+
+    assertThat(names.remove(1)).isEqualToIgnoreCase("Beatriz");
+
+    ```
+
+
+    ```
+
+    // Approach 2. Remove ELEMENT
+
+    assertThat(names.remove("Juanita")).isTrue();
+
+    }
+
+    ```
+
+
+    When you run this code, you will see that the element was removed with index 1,
+    or "Beatriz". To delete element by its value (for example "Juanita"), we pass
+    it as an argument:
+
+
+    (Listing 3-3)
+
+
+    ```
+
+    names.remove("Juanita")
+
+    ```
+
+
+    # Access an individual element
+
+
+    Like arrays, lists allow to access the individual element with its index, which
+    stands in bounds [0; size). This means, the upper limit value is equal to the
+    total number of elements minus one. For that, we use get(index) method, which
+    accepts an integer value of the element''s index:
+
+
+    (Listing 3-4)
+
+
+    ```
+
+    @Test
+
+    void accessElementTest() {
+
+    List<Integer> numbers = Arrays.asList(1, 52, 12, 39, 45, 98, 100, 565, 6, 13);
+
+    int beginning = numbers.get(0);
+
+    int value = numbers.get(5);
+
+    int end = numbers.get(numbers.size()-1)
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '```
+
+    assertThat(beginning).isEqualTo(1);
+
+    assertThat(value).isEqualTo(98);
+
+    assertThat(end).isEqualTo(13);
+
+    }
+
+    ```
+
+
+    # Create sub lists
+
+
+    An another common practical operation is a creation of sub lists. Technically,
+    sub list is part of the original collection in a specific bounds (this operation
+    is sometimes called slicing in some programming languages). In order to obtain
+    a sub list, we use sublist(start, end) method, which returns a portion of the
+    original list between start and end position (a start index is included, while
+    an end index is not included):
+
+
+    (Listing 3-5)
+
+
+    ```
+
+    @Test
+
+    void createSubListTest(){
+
+    List<String> original = Arrays.asList("Alejandra", "Beatriz", "Carmen", "Dolores",
+    "Juanita", "Katarina", "Maria");
+
+    List<String> sublist = original.subList(0, 5);
+
+    assertThat(sublist).contains("Juanita").doesNotContain("Katarina");
+
+    }
+
+    ```
+
+
+    # Searching for an element
+
+
+    By searching, Java understands getting of the element''s index. Array-based lists
+    have two ways to perform this operation:
+
+
+    +   - indexOf(E e) returns an index of the first occurrence of the element E or
+    -1 if nothing found
+
+    - lastIndexOf(E e) returns an index of a last occurrence of the element E or -1
+    if nothing found
+
+
+    (Listing 3-6)
+
+
+    ```
+
+    @Test
+
+    void searchForElementTest(){}
+
+    ```'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'List<Integer> numbers = Arrays.asList(1, 52, 12, 39, 45, 98, 100, 565, 6, 13);
+
+    assertThat(numbers.indexOf(45)).isEqualTo(4);
+
+
+    ```
+
+    // using lastIndexOf
+
+    List<Integer> numbers2 = Arrays.asList(1, 52, 12, 39, 45, 98, 100, 565, 45, 13);
+
+    assertThat(numbers2.lastIndexOf(45)).isEqualTo(8);
+
+    }
+
+    ```
+
+
+    An alternative to JCF operations is ListUtils.select() method from Apache Collections
+    library. This static operation accepts two arguments:
+
+
+    +   - Original list
+
+    - Predicate
+
+
+    It returns the index of the first element, that matches the given predicate. Or
+    -1 the element is not present or a list is empty. This allows to find not only
+    element by value, but also the one that satisfies a condition. Take a look at
+    the example code below:
+
+
+    (Listing 3 - 7)
+
+
+    ```
+
+    @Test
+
+    void searchCommonsTest(){
+
+    List<Integer> numbers = Arrays.asList(1, 52, 12, 39, 45, 98, 100, 565, 6, 13);
+
+    int index = ListUtils.indexOf(numbers, n -> n == 39);
+
+    Assertions.assertThat(index).isEqualTo(3);
+
+    }
+
+    ```
+
+
+    # Filter
+
+
+    When we filter a list, we basically create a new list, which contains all elements
+    from the original list, that satisfy a logical condition (predicate). The List
+    interface does not have a standard filter() method, like in other programming
+    languages (for example, in JavaScript). We can implement it manually by creating
+    a stream, applying a filter() intermediate operation and then collecting results
+    as a list.
+
+
+    (Listing 3 - 8)'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '```
+
+    @Test
+
+    void filterStreamTest() {
+
+    List<Integer> numbers = Arrays.asList(45, 12, 80, 77, 95, 4);
+
+    List<Integer> results = numbers.stream().filter(n -> n%2 ==
+
+    0).collect(Collectors.toList());
+
+    Assertions.assertThat(results).hasSize(3);
+
+    }
+
+    ```
+
+
+    We can also use Apache Commons Collections to achieve this task. It provides a
+    static method select as a part of ListUtils. The idea of this operation similar
+    to filtering: it applies a predicate on each element of an original list and returns
+    a new list, which contains only those elements, that satisfy this condition.
+
+
+    (Listing 3 - 9)
+
+
+    ```
+
+    @Test
+
+    void filterCommonsTest()() numbers = Arrays.asList(45, 12, 80, 77, 95, 4);
+
+    List<Integer> results = ListUtils.select(numbers, n -> n%2 == 0);
+
+    Assertions.assertThat(results).hasSize(3);
+
+    ```
+
+
+    # Replace an element
+
+
+    In this section we observe how to replace (change) a specific element. Recall,
+    that array list stores items in arrays, by replacing we understand changing a
+    value of the cell with concrete index. To do we can use two approaches:
+
+
+    +   - set(int position, E e) replaces the element at the specified position in
+    this list with the value e
+
+    - Using static method Collections.replaceAll(collection, old, new) which accepts
+    three arguments: a list itself, old value and a new element.
+
+
+    Take a look on the code snippet, presented in the listing 3-10, which demonstrates
+    both approaches:'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# (Listing 3 - 10)\n\n```\n@Test\nvoid replaceElementTest() {\n    List<String>\
+    \ names = new ArrayList<>();\n    names.add(\"Alejandra\");\n    names.add(\"\
+    Beatriz\");\n    names.add(\"Carmen\");\n    names.add(\"Dolores\");\n    names.add(\"\
+    Juanita\");\n}\n```\n\n```\n// Approach 1 By index\nnames.set(1, \"Maria\");\n\
+    assertThat(names.get(1)).isEqualToIgnoringCase(\"Maria\");\n```\n\n```\n// Approach\
+    \ 2 With Collections.replaceAll\nCollections.replaceAll(names, \"Carmen\", \"\
+    Sofia\");\nassertThat(names).containsExactly(\"Alejandra\", \"Maria\", \"Sofia\"\
+    , \"Dolores\", \"Juanita\");\n```\n\n# Compare two lists\n\nTechnically, as any\
+    \ Java object, lists override equals() method with own implementation. The lists'\
+    \ contract is following:\n\n+   - Both objects are lists\n- Both lists have same\
+    \ size\n- Both lists contain same elements (equal) in same order\n\nThere are\
+    \ alternative approaches. First way is to use streams. In some situations we want\
+    \ to check that lists contain same elements, but the order of elements is different.\
+    \ Technically, this is out of the equality definition, and these lists are not\
+    \ strictly equal. In that case we can utilize streams to check that elements match."
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "Second approach is use Apache Commons Collections. It provides a static method\
+    \ isEqual(), that takes two lists as an argument and return a boolean value of\
+    \ their equality. It is wrapper method around equals() implementation.\n\n(Listing\
+    \ 3-11)\n\n```\n@Test\nvoid compareListsTest(){\n    List<Integer> list1 = Arrays.asList(1,\
+    \ 52, 12, 39, 45, 98, 100, 565, 6, 13);\n    List<Integer> list2 = Arrays.asList(1,\
+    \ 52, 12, 39, 45, 98, 100, 565, 6, 13);\n\n    // Approach 1. with equals\n  \
+    \  assertThat(list1).isEqualTo(list2);\n\n    // Approach 2. with streams\n  \
+    \  List<Integer> list3 = Arrays.asList(1, 52, 12, 39, 45, 100, 98, 6, 13, 565);\n\
+    \    assertThat(list1).isEqualTo(list3);\n\n    // boolean allMatch = list3.stream().allMatch(number\
+    \ -> list1.contains(number));\n    assertThat(list3.stream().allMatch(number ->\
+    \ list1.contains(number))).isTrue();\n\n    // Approach 3. with Commons\n    assertThat(Utils.isEqual(list1,list2)).isTrue();\n\
+    }\n```\n\n# Copy lists\n\nThere are three ways to copy elements from one array\
+    \ into another:\n\n+   * Using streams\n* Using a static helper method from the\
+    \ Collections utility class\n* Using the List.copyOff() static method (this option\
+    \ is available since Java 10)\n\nThis first approach is based on the usage of\
+    \ streams. It is the most flexible from mentioned approaches, as it allows to\
+    \ run additional assertions, like null checks or duplicate checks. In the simplest\
+    \ form, all elements of streams are collected using the toList() collector."
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# (Listing 3-12)
+
+
+    ```
+
+    List<Integer> numbers = List.of(43, 12, 5, 89, 3);
+
+    List<Integer> result = numbers.stream().collect(Collectors.toList());
+
+    Assertions.assertThat(result).contains(numbers);
+
+    ```
+
+
+    The second option is to use the helper classes. It provides the static method
+    copy(), which has two arguments. This method copies all of the elements from the
+    source list to the destination list which will be identical to its index in the
+    source list. The destination list''s size must be greater than or equal to the
+    source list''s size. If it is greater, the remaining elements in the destination
+    list are unaffected.
+
+
+    # (Listing 3-13)
+
+
+    ```
+
+    List<Integer> source = List.of(43, 12, 5, 89, 3);
+
+    List<Integer> destination = new ArrayList<>();
+
+    Collections.copy(source, destination);
+
+    Assertions.assertThat(destination).contains(source);
+
+    ```
+
+
+    Finally, between two lists can be copied using the static method List.copyOf(),
+    that is available since Java 10. The method returns an immutable list, which contains
+    the elements of the given collection (e.g. can be used with other collections
+    as sources), in its iteration order. The given collection must not be null, and
+    it must not contain any null elements. If the given collection is subsequently
+    modified, the returned list will not reflect such modifications.
+
+
+    # (Listing 3-14)
+
+
+    ```
+
+    List<String> cities = new ArrayList<>();
+
+    cities.add("Madrid");
+
+    cities.add("London");
+
+    cities.add("Moscow");
+
+    cities.add("Lima");
+
+    List<String> result = List.copyOf(cities);
+
+    Assertions.assertThat(result).contains(cities);
+
+    ```'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: Note, that this method does not work, if the source collection is **immutable**.
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Chapter 4. Sets
+
+
+    Set is an implementation of the mathematical concept of a finite set. Generally,
+    a set is defined as a collection of elements with no duplicates and no ordering.
+    In practice, for some particular implementations it is true that they have ordered
+    elements.
+
+
+    Java includes set implementations as a part of Java Collections Framework. The
+    root interface java.util.Set defines a data structure, which contains to duplicates
+    and at most 1 null element. Only one null element is allowed because, from a technical
+    point of view, one presented null value is unique by its nature. You may ask,
+    how Java understands if an element is unique? For a unique element e1 is true,
+    that there is no element e2 in set already that e1.equals(e2) = true.
+
+
+    ![](img/a398e64f5a6d595324f5e906ad60a773_43_0.png)
+
+
+    These implementations differ on a following basis: does the set allow null elements
+    and are its elements sorted? It is important to note, that a behavior of a set
+    is not specified, when the value of an entity (element) was changed in a manner
+    that affects the equals() method comparison logic, while the object is in the
+    set.
+
+
+    # Add a new element
+
+
+    Sets uses the add(E e) method as any other collection. This operation returns
+    a boolean value which is true, when element was inserted successfully, or false
+    if element presents already. To validate a uniqueness of an element, Java uses
+    the equals() implementation of an object.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# (Listing 4-1)\n\n```\n@Test\nvoid addToSetTest() {\n    Set<Integer> numbers\
+    \ = new HashSet<>();\n    numbers.add(1);\n    numbers.add(2);\n    numbers.add(3);\n\
+    \    assertThat(numbers.add(2)).isFalse();\n    assertThat(numbers.size()).isEqualTo(3);\n\
+    }\n```\n\nYou can notice in the listing 4-1, that even we add 4 elements, the\
+    \ size stands of numbers is 3. This is due to the fact, that element with value\
+    \ 2 is already presented. Therefore, an insertion of repeated element returns\
+    \ false boolean value, as it presented in the listing 4-2:\n\n# (Listing 4-2)\n\
+    \n```\nboolean result = numbers.add(2);\nassertThat(result).isFalse();\n```\n\n\
+    # Union operations\n\nIn mathematical definition of sets, the union operation\
+    \ means all elements of two sets. From programming point view, this states a set,\
+    \ that contains values from two lists. There are two ways to implement union in\
+    \ Java:\n\n+   * Using getAll()\n* Using the static method union() from Apache\
+    \ Commons Collections\n\nThere are some aspects. The first approach appends elements\
+    \ from the one set to another and returns a boolean value, which states a success/failure\
+    \ of operation.\n\n# (Listing 4-3)"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\n@Test\nvoid unionJavaTest() {\n    HashSet<Integer> numbers1 = SetUtils.hashSet(20,\
+    \ 12, 35, 40, 19);\n    HashSet<Integer> numbers2 = SetUtils.hashSet(67, 9, 11,\
+    \ 5, 17);\n    boolean result = numbers1.addAll(numbers2);\n    Assertions.assertThat(numbers1).containsAll(numbers2);\n\
+    \    Assertions.assertThat(result).isTrue();\n}\n```\n\nThe drawback of the core\
+    \ Java approach, is that it modifies one sets. To avoid this, Apache Commons Collections,\
+    \ which supplies SetUtils.union() static method. It accepts two sets and return\
+    \ a SetView instance (that can be converted to set setTo() operation), and this\
+    \ protects original collections from modifications.\n\n(Listing 4-4)\n\n```\n\
+    @Test\nvoid unionCommonsTest() {\n    HashSet<Integer> numbers1 = SetUtils.hashSet(20,\
+    \ 12, 35, 40, 19);\n    HashSet<Integer> numbers2 = SetUtils.hashSet(67, 9, 11,\
+    \ 5, 17);\n    Set<Integer> results = SetUtils.union(numbers1, numbers2).toSet();\n\
+    \    Assertions.assertThat(results).containsAll(numbers1).containsAll(numbers2);\n\
+    }\n```\n\n# Delete an element\n\nTo remove an element from a set, we could use\
+    \ a method remove(Object E). As same with the mentioned case of an insertion,\
+    \ delete operation uses the equals() implementation to determine an existence\
+    \ of an element in the set. This method returns boolean value, which is true if\
+    \ the element was removed. In other words, set will not contain the element once\
+    \ the call returns. \n\n(Listing 4-5)\n\n```\n@Test\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "```\nvoid removeFromTest(){\n\tSet<Integer> numbers = new HashSet<>();\nnumbers.add(1);\n\
+    numbers.add(2);\nnumbers.add(3);\nertThat(numbers.remove(3)).isEqualTo();\n}\n\
+    ```\n\nPlease pay attention to the method's signature: it accepts a general Object,\
+    \ rather than a concrete type.\nTherefore, ClassCastException would be thrown\
+    \ in case when the argument does not match its type to the type of the set.\n\n\
+    # Intersection operation\n\nIn a set, intersection is defined as following: set,\
+    \ which contains all elements of set A, that are also elements of set B. In other\
+    \ words, by intersection we understand elements, that present in both sets. In\
+    \ Java we can find an intersection with two main approaches (similarly to union):\n\
+    \n+   * With retainAll()\n* Using Apache Commons Collections\n\nThe native approach\
+    \ is specified as the retainAll() method. Like the addAll() method, it also modifies\
+    \ an original collection, by removing all elements, that are not presented in\
+    \ another set.\n\n(Listing 4-6)\n\n```\n@Test\nvoid intersectionJavaTest(){\n\
+    HashSet<Integer> numbers1 = Utils.hashSet(20, 12, 35, 40, 19);\nHashSet<Integer>\
+    \ numbers2 = Utils.hashSet(35, 17, 12, 95, 3, 19);\nnumbers1.retainAll(numbers2);\n\
+    Assertions.assertThat(numbers1).containsInAnyOrder(35, 19, 12);\n}\n```"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'As it was stated already, the mutability of Java collections affects elements
+    of the original numbers1 set. This can be avoided either by creating an intermediate
+    set (using copy constructor to take all elements from the numbers1 set) or by
+    using Apache Commons Collections utils.
+
+
+    The Apache Commons Collections contain a static method SetUtils.intersection(),
+    which takes two sets as arguments. This method returns the SetView instance, that
+    can be converted to a set by calling setTo().
+
+
+    (Listing 4-7)
+
+
+    ```
+
+    @Test
+
+    void intersectionCommonsTest() {
+
+    HashSet<Integer> numbers1 = SetUtils.hashCode(20, 12, 35, 40, 19);
+
+    HashSet<Integer> numbers2 = SetUtils.hashCode(35, 17, 12, 95, 3, 19);
+
+    Set<Integer> results = SetUtils.intersection(numbers1, numbers2);
+
+    Assertions.assertThat(results).containsExactlyInAnyOrder(35, 19, 12);
+
+    }
+
+    ```
+
+
+    # Replace an element
+
+
+    Unlike lists, which permit to replace an arbitrary element, sets do not allow
+    that functionality. By default, if set already holds an element, new addition
+    will not be added and will not replace the existing one. We can implement this
+    functionality manually. For that, we need to assert, that element does exist in
+    set, then delete it, like it is shown in listing 4-8:
+
+
+    (Listing 4-8)
+
+
+    ```
+
+    if (set.add(e) == false) {
+
+    set.remove(e);
+
+    set.add(e);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'In this snippet, we start with checking, that a set does have an element E.
+    We can do it using the add() method, that, as we observed already, returns false
+    is an element already there. In this case we first remove the existing element
+    and then insert a new element.
+
+
+    # Get an arbitrary element from set
+
+
+    We previously discussed, the root interface does not offer ways to access an arbitrary
+    element, as it is strictly depends on the logic of concrete data structures. For
+    example, lists permit developers to get a value based on numeric index in a range
+    [0; size]. Sets do not have this method. There are two ways, that can be used
+    for manual implementation of the requested functionality:
+
+
+    +   * Using iterators
+
+    * Using streams
+
+
+    (Listing 4-9)
+
+
+    ```
+
+    TreeSet<Integer> numbers = new TreeSet<>();
+
+    numbers.add(50);
+
+    numbers.add(10);
+
+    numbers.add(15);
+
+    numbers.add(8);
+
+    ```
+
+
+    In the listing 4-9, we create a new TreeSet instance, that contains integer numbers.
+    Note, that tree sets store sorted elements. Therefore, by calling the iterator''s
+    next() method, we obtain the first element:
+
+
+    (Listing 4-10)
+
+
+    ```
+
+    Iterator<Integer> iterator = numbers.iterator();
+
+    Integer first = iterator.next();
+
+    assertThat(first).isEqualTo(8);
+
+    ```
+
+
+    This code can be refactored using Apache Commons Utils. It ships a class IteratorUtils,
+    that contains several handy static helpers, which amplify possibilities working
+    with iterators in Java. For instance, get the first element we can use the first()
+    method.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '(Listing 4-11)
+
+
+    ```
+
+    Iterator<Integer> iterator = numbers.iterator();
+
+    int first = IteratorUtils.first(iterator);
+
+    Assertions.assertThat(first).isEqualTo(8);
+
+    ```
+
+
+    It also allows developers to get an arbitrary element from an iterator by specifying
+    its index. It can be done by calling a static method get(), which takes an iterator
+    and an index. The return result is an element or the method can throw an exception,
+    if an index is out of bounds. Take a look on the code
+
+    listing below:
+
+
+    (Listing 4-12)
+
+
+    ```
+
+    int number = IteratorUtils.get(iterator, 3);
+
+    Assertions.assertThat(number).isEqualTo(50);
+
+    ```
+
+
+    The alternative to iterators is stream. We assume, that the initial set has ordered
+    elements. Therefore, we can use the filter() method to determine an element, which
+    satisfies a predicate. Calling the
+
+    findFirst() terminal operation will return that value (as instance of Optional):
+
+
+    (Listing 4-13)
+
+
+    ```
+
+    TreeSet<Person> people = new TreeSet<>();
+
+    people.add(new Person("Alejandra", "Morales"));
+
+    people.add(new Person("Katarina", "Rodriguez"));
+
+    people.add(new Person("Maria", "Sanchez"));
+
+    people.add(new Person("Robreta", "Iglesias"));
+
+    ```
+
+
+    ```
+
+    Optional<Person> person = people.stream().filter(p -> p.equals(new Person("Maria",
+
+    "Sanchez\))).findFirst();
+
+    assertThat(person).isPresent();
+
+    ```'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Get the size of a set
+
+
+    To get a number of elements in set, we use the size() method, which is inherited
+    from the root
+
+    Collection interface.
+
+
+    (Listing 4-14)
+
+
+    ```
+
+    @Test
+
+    void getSizeTest(){
+
+    Set<Integer> numbers = Set.of(1,2, 3, 4, 5);
+
+    numbers.add(1);
+
+    int size = numbers.size();
+
+    assertThat(size).isEqualTo(5);
+
+    }
+
+    ```
+
+
+    # Create a sub set
+
+
+    From a mathematical point of view, subset is a set whose elements are all members
+    of another set. In
+
+    other words, each element of subset B is an element of set A. Java does not provide
+    built-in way to
+
+    create subsets, but it is possible to implement this task using following approaches:
+
+
+    +   - Using streams
+
+    - Using iterators
+
+
+    Take a look on possible implementations, provided in the listing 4-15 below:
+
+
+    (Listing 4-15)
+
+
+    ```
+
+    @Test
+
+    void createSubsetTest(){
+
+    Set<Integer> numbers = Set.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+
+    // approach 1: streams
+
+    Set<Integer> streamSubset = numbers.stream().limit(5).collect(Collectors.toSet());
+
+    assertThat(streamSubset).hasSize(5).contains(1,2,3,4,5);
+
+    ```'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "```\n// approach 2: iterators\nIterator<Integer> iterator = numbers.iterator();\n\
+    Set<Integer> iteratorSubset = new HashSet<>();\nint limit = 5;\nfor (int i = 0;\
+    \ i<limit && iterator.hasNext(); i++) {\n  iteratorSubset.add(iterator.next());\n\
+    }\nassertThat(iteratorSubset).hasSize(5).hasSameElementsAs(streamSubset);\n```\n\
+    \n# Difference\n\nIn a set, a difference between sets is a set of a set of all\
+    \ elements of set A, which are not elements of a set B. Java does not provide\
+    \ built-in solution for this operation, but it can be achieved using the mentioned\
+    \ Commons Collections library. The SetUtils class offers a static difference()\
+    \ method. It returns a SetView (can be converted to a Java set), which contains\
+    \ all elements of set A that are not a member of set B.\n\n(Listing 4-16)\n\n\
+    ```\n@Test\nnHashSet<Integer> numbers1 = SetUtils.hashSet(20, 12, 35, 40, 19);\n\
+    HashSet<Integer> numbers2 = SetUtils.hashSet(35, 17, 12, 95, 3, 19);\nSet<Integer>\
+    \ results = SetUtils.difference(numbers1, numbers2).toSet();\nAssertions.assertThat(results).containsExactlyInAnyOrder(20,\
+    \ 40);\n```\n\n# Copy sets\n\nThere are two general approaches to copy elements\
+    \ from one set to another:\n\n+   - Using streams\n\n+   - Using the static method\
+    \ Set.copyOfOf() (is available since JDK 10"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'The usage of streams to copy elements sets are similar to the one with lists.
+    Like we have observed in the previous chapter, the simplest form is using toSet()
+    collector on elements of the stream.
+
+
+    (Listing 4-17)
+
+
+    ```
+
+    Set<Integer> numbers = Set.of(1, 2, 3, 4, 5);
+
+    Set<Integer> result = numbers.stream().collect(Collectors.toSet());
+
+    assertThat(result).contains(numbers);
+
+    ```
+
+
+    In the Java 10 release was introduced another approach to copy elements. The static
+    Set.copyOf() method returns an immutable set, which contains the elements of the
+    given collection (e.g. this method can be used with any collection type). The
+    given collection must not be null, and it must not contain null elements. If the
+    given collection contains duplicate elements, an arbitrary element of the duplicates
+    is preserved. If the given collection is subsequently modified, the returned Set
+    will not reflect such modifications.
+
+
+    (Listing 4-18)
+
+
+    ```
+
+    HashSet<Integer> numbers = SetUtils.hashSet(1, 2, 3, 4, 5);
+
+    Set<Integer> result = Set.copyOf(numbers);
+
+    assertThat(result).contains(numbers);
+
+    ```
+
+
+    Like the List.copyOf() method, this Set.copyOf() does not permit to have an immutable
+    collection as a source.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Chapter 5. Queues
+
+
+    In computer programming, the queue stands for a linear collection of elements
+    that are inserted and removed based on FIFO principle. FIFO is an abbreviation,
+    which means First-in-First-out. In other words, an element, which was inserted
+    first, will be removed first, unlike stacks, where the first element is removed
+    last. To distinguish these two principles let have an example with a ferry. The
+    first situation is a car embarkation. This is an example of a LIFO order: the
+    first car, that comes into a ferry, will exit last. Another example is a queue
+    in a ticket office to buy tickets for this ferry. Here governs FIFO principle:
+    the person, which came first to the ticket gate, will buy and exit a queue.
+
+
+    In a basic structure, queues support only two operations: enqueue and dequeue:
+
+
+    +   - Enqueue means an insertion of an element into the back of the queue
+
+    - Dequeue means a removing of an element from the front of the queue
+
+
+    The first front element is also called head and elements that are positioned after
+    are called tail. In Java, queues are defined in the java.util.Queue interface.
+    There are two main implementations: ArrayDeque and PriorityQueue:
+
+
+    ![](img/a398e64f5a6d595324f5e906ad60a773_53_0.png)
+
+
+    The important difference between these implementations is an order of elements.
+    The ArrayDeque holds elements on FIFO basis, so head element is the first inserted.
+    The PriorityQueue in its regard holds elements based on their natural ordering
+    (if they implement Comparable interface) or based on a specified comparator function.
+    Therefore, head element in this case will be the least element.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Queue declaration
+
+
+    In order to use a queue you should declare it. Queues can be defined using public
+    constructors that help specify capacity. No args constructors create queues with
+    an initial capacity sufficient to hold 16 elements:
+
+
+    (Listing 5-1)
+
+
+    ```
+
+    // initial capacity = 16
+
+    Queue<Person> people = new ArrayDeque<>()();
+
+    // for the ferry that can transport 50 cars
+
+    Queue<Car> cars = new ArrayDeque<>(50);
+
+    ```
+
+
+    # Handling enqueue operations
+
+
+    There are two main ways to handle enqueue operation. As Java queues are sub classes
+    of the root interface, they inherit common collection methods to insert and remove
+    elements. When it comes to queues, they also provide own methods offer() and poll(),
+    where the first one stands for adding elements. Both of these insertion methods
+    insert an element into the tail.
+
+
+    (Listing 5-2)
+
+
+    ```
+
+    @Test
+
+    void enqueueTest(){
+
+    Queue<Person> people = new ArrayDeque<>();
+
+
+    // people are inserted in the tail, so head is same
+
+
+    people.offer(new Person("Alejandra", "Morales\));
+
+    people.offer(new Person("Beatriz", "Sanchez\));
+
+    people.offer(new Person("Carmen", "Hidalgo\));
+
+
+    // head of queue is Alejandra Morales
+
+    assertThat(people.peek()).isEqualToTo(new Person("Alejandra", "Morales\));
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'What is a difference and when to use one? Java recommends to stick with native
+    queue methods, which means for addition use the offer(i) method. The difference
+    comes when it is not possible to insert a new element:
+
+
+    +   - offer() returns false boolean value
+
+    - add() throws IllegalStateException
+
+
+    Special note must be made in case of the ArrayDeque. This class also inherits
+    the Deque interface. This interface defines a data structure that permits to add
+    and remove elements on both ends in comparing with the classical queue. This class
+    adds some methods that are specific only for this class:
+
+
+    +   - offerFirst() and addFirst() insert an element to the head. A difference
+    between them is the same as between offer(i) and add(i) methods
+
+    - offerLast() and addLast() insert an element to the tail
+
+    - push() is equivalent to the addFirst() method. In case of an insertion of a
+    null element, this method will throw a NullPointerException
+
+
+    # Handling dequeue operations
+
+
+    Removing an element in queue is called dequeue. As with case of insertion, Java
+    queues have two methods to handle a deletion of an element: one is inherited from
+    the root contract’s remove() method and another is the native for queues method
+    poll(). Both remove a head element (based on FIFO principle).
+
+
+    (Listing 5-3)
+
+
+    ```
+
+    @Test
+
+    void dequeueTest(){
+
+    Queue<Car> cars = new ArrayDeque<>();
+
+    Car skoda = new Car(4567, "Skoda Rapid")
+
+    cars.offer(skoda);
+
+    asertThat(cars.peek()).isEqualTo(skoda);
+
+    ```'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'cars.offer(new Car(1234, "Mazda 3"));
+
+    cars.offer(new Car(2345, "Kia Cerato\));
+
+
+    ```
+
+    // remove previous head (Skoda) -> new head = mazda
+
+    ```
+
+
+    ```
+
+    cars.poll();
+
+    asertThat(cars.peek().getLicensePlateNumber()).isEqualTo(1234);
+
+    }
+
+    ```
+
+
+    The difference between both methods is same to use enqueue methods. Similar to
+    the previous situation, Java recommends people to use the native for queues method
+    poll(). We also need to mention here methods, which are inherited by the ArrayDeque
+    from the Deque interface:
+
+
+    +   - pollFirst() and removeFirst() methods handle a deletion of the head element
+
+    - pollLast() and removeLast() methods handle a deletion of the last element
+
+
+    # Return the head element
+
+
+    Queues don''t permit you to have an access to an arbitrary element. You can get
+    only the head element (with an exception with array deque, which allow to retrieve
+    both a first element and a last element).
+
+
+    (Listing 5-4)
+
+
+    ```
+
+    @Test
+
+    void getHeadTest(){
+
+    Queue<Person> people = new ArrayDeque<>();
+
+    people.offer(new Person("Alejandra", "Morales"));
+
+    people.offer(new Person("Beatriz", "Sanchez"));
+
+    people.offer(new Person("Carmen", "Hidalgo"));
+
+    ```
+
+
+    ```
+
+    Person element = people.element();
+
+    Person peek = people.peek();
+
+    asertThat(element).isEqualTo(peek);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'To return the head (first) element you can use either the element() method
+    either the peek() method. The difference between them is shown, when you try to
+    use them on an empty queue (with no elements):
+
+
+    +   - The element() method will throw a NoSuchElementException on an empty queue
+
+    - The peek() method will return a null value if the queue is empty
+
+
+    As it was mentioned already, an array deque permits to get both the first and
+    the last elements. Therefore it provides two custom methods to get the head element:
+    getFirst() and peekFirst(). These methods differ in the aforesaid manner.
+
+
+    # Return tail elements
+
+
+    Tail elements of the deque are all elements after the head element. From a technical
+    point of view, this is a sequence, rather than one single element. However, Java
+    does not provide a method to get a tail of queue, but you can write your own if
+    you need like this:
+
+
+    (Listing 5-5)
+
+
+    ```
+
+    @Test
+
+    void getTailTest(){
+
+    Queue<Person> people = new ArrayDeque<>();
+
+    people.offer(new Person("Alejandra", "Morales\));
+
+    people.offer(new Person("Beatriz", "Sanchez\));
+
+    people.offer(new Person("Carmen", "Hidalgo"));));
+
+    ```
+
+
+    ```
+
+    Queue<Person> tail = new ArrayDeque<>(people);
+
+    tail.poll();
+
+    ```
+
+
+    ```
+
+    assertThat(tail).hasSize(2);
+
+    }
+
+    ```
+
+
+    In this implementation in the listing 5-5 we perform three steps:
+
+
+    +   1. Create new queue from the target one'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '+   2. Remove head
+
+    3. Return tail'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# Chapter 6. Maps
+
+
+    This chapter is devoted to map implementations in Java. We already mentioned,
+    that as maps do not inherit the root collection interface, they are not (in a
+    narrow sense) collections. However, the book about Java data structures would
+    be insufficient without maps.
+
+
+    From a technical point of view, map is a data structure, which stores its elements
+    in a key-value format. In other programming languages such components are called
+    hashes, associative arrays or dictionaries. Maps bring a number of advantages.
+    Such, they are able to maintain an arbitrary number of different objects in a
+    same time and the upper limit of the size is not needed to be known ahead, compare
+    to array structures. In Java maps such identifier is called key. Maps do not allow
+    duplicate keys, however they allow multiple same values for unique keys. Some
+    Java implementations permit a single null key (except for tree maps). Take a look
+    on the graph, that represents hierarchy of Java maps:
+
+
+    ![](img/a398e64f5a6d595324f5e906ad60a773_59_0.png)
+
+
+    The HashMap class, comparing to the HashMap class and the TreeMap class, does
+    not guarantee a sorted order of elements. To have this ordering, keys should be
+    comparable (implement a Comparable interface) or a developer should provide a
+    comparator function during map''s initialization. An important note about Java
+    maps is that they are not synchronized.
+
+
+    # Insert new elements
+
+
+    An element of map is basically a key-value pair (record). As maps don''t allow
+    duplicate keys, the uniqueness of the key is validated at the moment of insertion.
+    When the key is already associated with a value, it is updated for a new value.
+    To add a new element we can use two methods:'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '+   - V put(K key, V value)
+
+    - V putIfAbsent(K key, V value)
+
+
+    The difference between these methods is following. The first method (put()) is
+    an optional operation and in the case of its usage, if the map previously contained
+    a mapping for the key, the old value is replaced by the specified value. The second
+    method(putIfAbsent()) inserts a new value, only if the key is not presented.
+
+
+    (Listing 6-1)
+
+
+    ```
+
+    @Test
+
+    void addToMapTest() {
+
+    HashMap<Integer, Person> people = new HashMap<>();
+
+    people.put(1, new Person("Alejandra", "Gutierrez"));
+
+    people.put(2, new Person("Beatriz", "Gomez"));
+
+    people.put(3, new Person("Carmen", "Hidalgo"));
+
+    people.put(4, new Person("Dolores", "Sanchez"));
+
+    asertThat(people.get(3)).isEqualTo(new Person("Carmen", "Hidalgo"));
+
+    }
+
+    ```
+
+
+    For safe insertion used Apache Commons Collections MapUtils class. It contains
+    a special helper method safeAddToMap(), which protects from adding null values
+    into a map. It checks, that the element is not null, replaces it with an empty
+    string value.
+
+
+    # Access a value by a key
+
+
+    To retrieve an entry''s value from a map, we need to pass the key, associated
+    with it. Usually this is performed using the get(K key) method. Although, in the
+    situation when the record does not present in the map, this method returns a null
+    value. Another option is to use the getOrDefault(K key, V default) method for
+    explicitly specifying to return the specified value in case of an absence of the
+    requested value.
+
+
+    (Listing 6-2)'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\n@Test\nvoid getFromMapTest() {\n  TreeMap<String, String> words = new\
+    \ TreeMap<>();\n  words.put(\"apple\", \"manzana\");\n  words.put(\"orange\",\
+    \ \"naranja\");\n  words.put(\"pineapple\", \"pina\");\n  words.put(\"lemon\"\
+    , \"limon\");\n```\n\n# Delete a value from map\n\nTo remove a value, you need\
+    \ to pass an associated key. The method remove() allows to remove a value using\
+    \ its identifier. There are two versions (one is optional):\n\n+   - remove (K\
+    \ key)\n- boolean remove (K key, V value)\n\nThe first operation is optional.\
+    \ It returns a value or null, if object with such key does not exist. However,\
+    \ if the concrete map implementation permit null values, then null return does\
+    \ not necessarily indicate that the map contained no mapping for the key; it's\
+    \ also possible that the map explicitly mapped the key to null.\n\nThe second\
+    \ method removes the V for the key only if it is currently mapped to the specified\
+    \ value. The return boolean value indicates was the result successful.\n\n(Listing\
+    \ 6-3)\n\n```\n@Test\nvoid removeFromMapTest() {\n  HashMap<Integer, Person> people\
+    \ = new HashMap<>();\n  people.put(1, new Person(\"Alejandra\", \"Gutierrez\"\
+    ));\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '```
+
+    people.put(2, new Person("Beatriz", "Gomez");
+
+    people.put(3, new Person("Carmen", "Hidalgo"));
+
+    assertThat(people).hasSize(3);
+
+    people.remove(3);
+
+    assertThat(people).doesNotContainKey(3);
+
+    }
+
+    ```
+
+
+    # Replace a value for a key
+
+
+    There are two ways to replace a value for the key:
+
+
+    +   - V replace (K key, V value)
+
+    - boolean replace (K key, V oldValue, V newValue)
+
+
+    The difference between both methods is that the first one replaces and returns
+    an old value or null in a case of absence. The second one replaces a value only
+    it is equal to the specified old value and returns a boolean result of a replacement.
+
+
+    (Listing 6-4)
+
+
+    ```
+
+    @Test
+
+    void replaceElementTest(){
+
+    Map<String, String> words = new TreeMap<>();
+
+    words.put("apple", "manzana");
+
+    words.put("orange", "naranja");
+
+    words.put("pineapple", "pina");
+
+    words.put("lemon", "limon");
+
+
+    words.replace("lemon", "limón");
+
+    String limon = words.get("limón");
+
+
+    assertThat(limon).isEqualTo("limón");
+
+
+    boolean result = words.replace("lemon", "limon", "un limon");
+
+    assertThat(result).isFalse();
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# Reverse (invert) a map\n\nBy the map inversion (reversion) we understand\
+    \ swapping between keys and values. We can say that a Map<K,V> pair after inverting\
+    \ becomes a Map<V,K> pair. It is important to remember, that keys should be unique\
+    \ in Java maps. Therefore, when swapping keys and values, you need to be sure,\
+    \ that values (which becomes keys) are unique.\n\nReverse keys/values in map use\
+    \ Apache Collections Commons. This library has a class MapUtils that provides\
+    \ a static method invertMap(), which does the inversion operation. This method\
+    \ assumes that the inverse mapping is well defined. If the input map had multiple\
+    \ entries with the same value mapped to different keys, the returned map will\
+    \ map one of those keys to the value, but the exact key will be mapped to undefined.\n\
+    \nLet have an example with a phone book, where we will swap phone number (key)\
+    \ and a name (value).\n\n(Listing 6-5)\n\n```\n@Test\nvoid invertCommonsTest()\
+    \ {\n    Map<String, String> phones = new HashMap<>();\n    System.out.println(\"\
+    Original map: \");\n    phones.put(\"11222333\", \"Jana Novakova\");\n    phones.put(\"\
+    444555666\", \"Zuzka Dvorakova\");\n    phones.put(\"777889999\", \"Alex Vodicka\"\
+    );\n\n    phones.forEach((key, value) -> System.out.println(\"Key: \" + key +\
+    \ \", value: \" + + value));\n\n    Map<String, String> inverted = MapUtils.invertMap(phones);\n\
+    \n    System.out.println(\"Inverted map: \");\n    inverted.forEach((key, value)\
+    \ -> System.out.println(\"Key: \" + key + \", value: \" + + value));\\n}\n```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'The result of an execution of this code snippet would be a map with inverted
+    key/value pairs, like it is demonstrated using an output console:
+
+
+    ```
+
+    Original map:
+
+    Key: 777888999 , value: Alex Vodicka
+
+    Key: 444555666 , value: Zuzka Dvorakova
+
+    Key: 111222333 , value: Jana Novakova
+
+    Inverted map:
+
+    Key: Alex Vodicka , value: 777888999
+
+    Key: Zuzka Dvorakova , value: 444555666
+
+    Key: Jana Novakova , value: 111222333
+
+    ```'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# Chapter 7. Fluent assertions with AssertJ library
+
+
+    This chapter presents most common types of assertions, that can be used in testing
+    Java collections. In computer programming, an assertion is an assumption, that
+    developers make about the state of a program. We already utilized AssertJ library
+    in most code snippets in previous chapters. Here we will sum up common assertion
+    operations. For program listings in this chapter I use an array list implementation.
+
+
+    # Assert that a collection contains an element
+
+
+    The basic task is to check if the collection contains or does not contain the
+    specific element. AssertJ validates this using contains(), which has two overloaded
+    versions:
+
+
+    +   - contains(E e, int index) checks that the element presents on the specific
+    position
+
+    - contains(E... elements) accepts varargs, c.g. one or more elements and checks
+    for their presence in any order
+
+
+    (Listing 7-1)
+
+
+    ```
+
+    @Test
+
+    void containsElementTest()
+
+    List<Integer> numbers = Lists.newArrayList(1, 52, 12, 39, 45, 98, 100, 565, 6,
+    13);
+
+    assertThat(numbers).contains(12);
+
+    assertThat(numbers).doesNotContain(50);
+
+    }
+
+    ```
+
+
+    Besides the contains() method, AssertJ provides also the doesNotContain() method,
+    which asserts for an absence of entity (s).
+
+
+    # Assert that a collection contains elements in any order
+
+
+    In order to verify, that collection does contain a group of elements, it is possible
+    to use two approaches:
+
+
+    +   - contains(E.. elements) method and pass elements as var args'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '+   • Use contains(Iterable i) method which accepts another collection and
+    validates that all elements are contained inside the original one in any order
+
+
+    (Listing 7-2)
+
+
+    ```
+
+    @Test
+
+    void containsAllElementsNoOrderTest{
+
+    List<Integer> numbers = Lists.asList(1, 52, 12, 39, 45, 98, 100, 565, 6, 13);
+
+    List<Integer> values = Lists.asList(52, 39, 12, 1, 100);
+
+    assertThat(numbers).containsAll(values);
+
+    }
+
+    ```
+
+
+    # Assert that a collection contains elements in the specific order
+
+
+    Another task is to validate, the collection contains not only all specified elements,
+    but also keep the specific order. To do this, it is possible to use the containsExactlyElementsOf()
+    method. It accepts an iterable class and verifies that actual collection contains
+    exactly all the elements of the given iterable class and nothing else in the same
+    order.
+
+
+    (Listing 7-3)
+
+
+    ```
+
+    @Test
+
+    void containsAllElementsInOrderTest{
+
+    List<Integer> numbers = Lists.asList(1, 52, 12, 39, 45, 98, 100, 565, 6, 13);
+
+    List<Integer> values = Lists.asList(numbers);
+
+    assertThat(numbers).containsExactlyElementsOf(values);
+
+    }
+
+    ```
+
+
+    # Assert that a collection does not contain duplicates
+
+
+    Not all Java collections allows duplicates: sets, for example, perform a checking
+    for inserted elements and therefore do not allow duplicate values. Other collections,
+    like lists, do not offer this functionality. In this case, when you need to asserts
+    that the collection does not have duplicate elements, it is advised to use the
+    doesNotHaveDuplicates() method:
+
+
+    (Listing 7-4)'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '```
+
+    @Test
+
+    void noDuplicatesTest(){
+
+    List<Integer> numbers = Lists.newArrayList(1, 52, 12, 39, 45, 98, 100, 565, 6,
+    13);
+
+    assertThat(numbers).doesNotHaveDuplicates();
+
+    }
+
+    ```
+
+
+    # Assert that a collection contains the element only once
+
+
+    The extended case of the last situation is to check that element is presented
+    only once. From a technical point of view, the contains() method allows duplicate
+    entities. Therefore, in order to validate that element does not repeat, it is
+    more suitable for this situation to use the containsOnlyOnce() function.
+
+
+    (Listing 7-5)
+
+
+    ```
+
+    @Test
+
+    void containsOnlyOnceTest(){
+
+    List<Integer> numbers = Lists.newArrayList(1, 1, 52, 12, 12, 45, 45);
+
+    asertThat(numbers).containsOnlyOnce(52);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# Chapter 8. Iterators\n\nThe iterator pattern is one of approaches to access\
+    \ elements of a collection, alongside with streams. From a technical point of\
+    \ view, the iterator traverses elements in a sequential and predictable order.\
+    \ In Java, the behavior of iterators is defined in the java.util.Iterator contract,\
+    \ which is a member of Java Collections Framework.\n\nIterators are similar to\
+    \ enumerators, but there are differences between these concepts too. The enumerator\
+    \ provides direct and iterative access to each element of a data structure exactly\
+    \ once. From the other side, iterators do the same task, but the traversal order\
+    \ is predictable. With this abstraction caller can work with collection elements,\
+    \ without a direct access to them. Also, iterators allow to delete values from\
+    \ a collection during the iteration.\n\n# Access elements of a collection\n\n\
+    As it was mentioned before, the order of accessing elements is predictable, which\
+    \ means that the iterator traverses elements sequentially. Therefore, the general\
+    \ Java contract does not allow to access the particular element (however, that\
+    \ is possible using Commons Collections, even this violates the idea). In order\
+    \ to access the next element, use the next() method. It returns an element or\
+    \ throws NoSuchElementException, when the iterator does not contain more elements.\n\
+    \nIn order to prevent this unchecked exception, you should call the hasNext()\
+    \ method prior to accessing an element.\n\n(Listing 8-1)\n\n```\nList<Integer>\
+    \ numbers = List.of(1, 2, 3, 4, 5, 6);\nIterator<Integer> iterator = numbers.iterator();\n\
+    while (iterator.hasNext()) {\n  int x = iterator.next() * 2;\n  System.out.println(x);\n\
+    }\n```"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "This code snippet demonstrates the usage of the iterator for sequential retrieving\
+    \ of elements and the printing of double value of each element.\n\nOutput - Test\
+    \ (IteratorTest)\n\n```\n2\n4\n6\n8\n10\n12\n```\n\nThe important thing to note\
+    \ here, is that that once elements are consumed, the iterator can not be used.\
+    \ That means, calling the iterator after traversing will lead to an exception:\n\
+    \n(Listing 8-2)\n\n```\nList<Integer> numbers = List.of(1, 2, 3, 4, 5, 6);\nIterator<Integer>\
+    \ iterator = numbers.iterator();\nwhile (iterator.hasNext()) {\nint x = iterator.next()\
+    \ * 2;\nSystem.out.println(x);\n}\nint value = iterator.next();\n```\n\nThe execution\
+    \ of the code snippet will lead to the following result:\n\n```\nOutput - Test\
+    \ (IteratorTest)\nIteratorTest(tech.mednov.jbook.iterators.IteratorTest)    Time\
+    \ elapsed: 0.015 sec <<< FAILURE! \n  java.util.NoSuchElementException\n    at\
+    \ java.base/java.util.ImmutableCollections$ListItr.next(ImmutableCollections.java:243)\n\
+    \    at tech.mednov.jbook.iterators.IteratorTest.iteratorIteratorTest(IteratorTest.java:17)\n\
+    ```\n\nWe have already mentioned Apache Commons Collections. This library contains\
+    \ the helper class IteratorUtils, which has a number of static utility methods\
+    \ to work with iterators. While some of them violate the core pattern, they can\
+    \ be useful. So, alongside with a sequential access, it possible to access a particular\
+    \ element by its index, as well as there is a wrapper method to get the first\
+    \ element."
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '(Listing 8-3)
+
+
+    ```
+
+    List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6);
+
+    Iterator<Integer> iterator = numbers.iterator();
+
+    int first = IteratorUtils.first(iterator);
+
+    Assertions.assertThat(first).isEqualTo(1);
+
+    ```
+
+
+    # Consume an element
+
+
+    Since Java 8 iterators permit also to specify a consumer function, which can be
+    performed on each element. This is a shortcut of what we can do while using a
+    block. Let consider the first example implemented with the forRemaining() method.
+    Take a look on the code snippet below:
+
+
+    (Listing 8-4)
+
+
+    ```
+
+    List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6);
+
+    Iterator<Integer> iterator = numbers.iterator();
+
+    iterator.forEachRemaining(number -> System.out.printf("This is a consumer. Value:
+    %d \n", number*2));
+
+    ```
+
+
+    This program listing produces the following result:
+
+
+    ![](img/a398e64f5a6d595324f5e906ad60a773_70_0.png)
+
+
+    It is possible to achieve a similar result with IteratorUtils. This utility class
+    has static methods:
+
+
+    +   - forEach() = applies the function to each element of the provided iterator.
+
+    - forEachButLast() = executes the defined function on each provided element but
+    the last element in the iterator'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'Both methods accept arguments: an iterator instance and a closure function.
+    The closure is a block of code which is executed from inside some block, function
+    or iteration. Technically, it is a same thing as a consumer functional interface.
+    The example of using this helper method is below:
+
+
+    (Listing 8-5)
+
+
+    ```
+
+    List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6);
+
+    Iterator<Integer> iterator = numbers.iterator();
+
+    IteratorUtils.forEach(iterator, number) -> System.out.printf("This is a closure.\nValue:
+    %d \n", number*2));
+
+    ```
+
+
+    The output of this snippet is:
+
+
+    | Output - Test (IteratorTest) |
+
+    | This is a closure. Value: 2 |
+
+    | This is a closure. Value: 4 |
+
+    | This is a closure. Value: 6 |
+
+    | This is a closure. Value: 8 |
+
+    | This is a closure. Value: 10 |
+
+    | This is a closure. Value: 12 |
+
+
+    # Remove elements
+
+
+    Finally, we need to observe how to use an iterator to delete elements. The `java.util.Iterator`
+    interface contains the `remove()` method. It deletes from the underlying collection
+    the last element returned by the iterator. This method can be called only once
+    per call of the `next()` function. Note, that this operation is optional.
+
+
+    (Listing 8-6)
+
+
+    ```
+
+    List<Integer> numbers = new ArrayList<>();
+
+    numbers.add(1);
+
+    numbers.add(2);
+
+    numbers.add(3);
+
+    numbers.add(4);
+
+    numbers.add(5);
+
+    ```'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "```\nSystem.out.println(\"Initial list: \");\nnumbers.stream().forEach(System.out::println);\n\
+    Iterator<Integer> iterator = numbers.iterator();\nwhile(iterator.hasNext()) {\n\
+    \  iterator.next();\n  iterator.remove();\n}\nSystem.out.println(\"Modified list:\
+    \ \");\nnumbers.stream().forEach(System.out::println);\n```\n\nThis code snippet\
+    \ executes and prints elements of the array list before and after removing elements,\
+    \ like it is shown on the screenshot below:\n\n![](img/a398e64f5a6d595324f5e906ad60a773_72_0.png)\n\
+    \nThere are things to remember, when you use iterator.remove():\n\n+   - This\
+    \ operation is optional, it can throw the UnsupportedOperationException, if a\
+    \ collection does not have an implementation of this method (that is why I used\
+    \ an array list and not a generic list)\n- You must call the next() method BEFORE\
+    \ calling the remove() method, otherwise it will throw the IllegalStateException\
+    \ to be thrown"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '###'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# About the Author
+
+
+    ![](img/a398e64f5a6d595324f5e906ad60a773_74_0.png)
+
+
+    Iurii Mednikov is a certified Java programmer and a certified Linux expert. He
+    stied his bachelor degree in Computing in the Prague College (Czech Republic)
+    and he is now running his own software consulting business in Prague. Iurii Mednikov
+    writes regularly for his own blog, for peer-reviewed academic journals, as well
+    as for platforms as Medium, Dzone and Dev.to. He is a member of the Association
+    for Computing Machinery (ACM). In his free time, Iurii loves to run, to practice
+    karate (shototkan) and to learn [human] languages.
+
+
+    Other books by Iurii Mednikov
+
+
+    Principles Of Vertx (2020)
+
+
+    Connect with Iurii Mednikov
+
+
+    +   - Twitter
+
+
+    +   - Linkedin
+
+
+    +   - Personal blog'
+  merge: -1
+  pgno: 74
