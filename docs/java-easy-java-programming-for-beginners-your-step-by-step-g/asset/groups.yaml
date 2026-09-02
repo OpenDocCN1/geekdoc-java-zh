@@ -1,0 +1,5649 @@
+- md: '
+
+    # JAVA
+
+
+    EASY JAVA PROGRAMMING
+
+    BEGINNERS
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_0_0.png)
+
+
+    YOUR STEP-BY-STEP GUIDE TO LEARNING JAVA PROGRAMMING
+
+
+    FELIX ALVARO
+
+
+    # Easy Java Programming for Beginners, Your Step-By-Step Guide to Learning Java
+    Programming
+
+
+    Felix Alvaro
+
+
+    # Acknowledgments
+
+
+    Firstly, I want to thank God for giving me the knowledge and inspiration to put
+    this informative book together. I also want to thank my parents, my brothers and
+    my partner Silvia for their support.
+
+
+    ## Table of Contents
+
+
+    **Chapter One: The History of Java**
+
+
+    - The Birth of Computers
+
+    - Evolution of Computer Programming Languages
+
+    - Emergence of Java Technology
+
+
+    **Chapter Two: The Java Environment**
+
+
+    - Uses of Java Language
+
+    - The Initial Java Setup
+
+    - Testing the Software Installed
+
+    - Required Java Tools
+
+
+    **Chapter Three: The Basics of Java Code**
+
+
+    - Characteristics of Object-Oriented Programming
+
+    - First Simple Java Program
+
+    - Parts of the Java Program
+
+
+    **Chapter Four: User Input**
+
+
+    - Scanner Class
+
+    - nextLine Method
+
+    - println Method
+
+
+    **Chapter Five: Variable Declaration**
+
+
+    - The Basic Variable Types
+
+    - Declaring Variable Types
+
+
+    **Chapter Six: Operators**
+
+
+    - Arithmetic Operators
+
+    - Increment / Decrement Operators
+
+    - Logical Operators
+
+    - Bit-Wise Operators
+
+
+    ## Chapter Seven: Flow Control
+
+
+    - If-Then-Else
+
+    - Loops
+
+
+    ## Chapter Eight: Access Modifiers
+
+
+    - Default
+
+    - Private
+
+    - Public
+
+    - Protected
+
+
+    ## Chapter Nine: Classes and Objects
+
+
+    - Class
+
+    - Instance
+
+    - Local
+
+    - Relationships
+
+
+    ## Chapter Ten: Constructors
+
+
+    - This
+
+    - Super
+
+
+    ## Exercises + Free Bonus!
+
+
+    - Recap
+
+    - Practice Exercises
+
+    - Practice Exercises Answers
+
+    - Free Video series
+
+
+    © Copyright 2015 by D.A.Alvaro - All rights reserved.
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic covered. It is not legal to reproduce, duplicate, or transmit any
+    part of this document in either electronic means or in a printed format. Recording
+    of this publication is strictly prohibited. The information provided herein is
+    stated to be truthful and consistent. Under no circumstances will any legal responsibility
+    or blame be held against the publisher for reparation, damages, or monetary loss
+    due to the information herein, either directly or indirectly. Respective author
+    owns all copyrights not held by the publisher. The information herein is offered
+    for informational purposes solely, and is universal as so. The presentation of
+    the information is without contract or any type of consent, guarantee assurance.
+    The trademarks that are used without any consent, and the publication of the trademark
+    is without permission or backing by the trademark owner. All trademarks and brands
+    within this book are for clarifying purposes only and the the owned by the owners
+    themselves, not affiliated with this document.
+
+
+    # Introduction
+
+
+    Hi there! Thank you for downloading this eBook. By doing so, you have made a big
+    step in investing in your skills as a computer programmer! This eBook presents
+    useful information on Java language suited for beginners. I am Felix and I also
+    started as an amateur software programmer who has experienced the challenges of
+    understanding basic Java terminologies and programming conventions. This eBook
+    will then serve as an introduction to understanding the Java language and gear
+    you towards your goal of becoming a professional computer programmer. I will be
+    teaching you how to install the required Java tools and create simple programs
+    in a step-by-step way.
+
+
+    At first glance, Java may come across as a language that will be hard to comprehend.
+    After we get started, you will begin to familiarize yourself with the Java language
+    environment and quickly discover that it can be quite simple to learn after all!
+    Regardless of your experience with programming languages, this guide will lead
+    you in a way that is easy to follow and learn. As you expand your knowledge, the
+    more you will appreciate the perks of being a Java programmer.
+
+
+    Java has always been considered as one of the top, in-demand programming languages
+    in the world. If you decide to focus on studying the Java environment, then you
+    are looking at a fast growing career. Such technology has been integrated and
+    adopted widely in flourishing the World Wide Web, developing mobile apps, building
+    websites and more. With its simplicity, readability and flexibility, Java has
+    been one of the sought after programming skills in the recruitment market of Information
+    Technology. Currently, a Java developer/programmer in the United States of America
+    earns an estimated annual salary of $85,000 USD.
+
+
+    This eBook will definitely serve as your jumpstart if you decide to push a career
+    in Java programming. I will provide you a discussion on the characteristics of
+    the said software environment, the different components, terminologies, basic
+    programming styles and sample programs, among others. You will find that Java
+    programming is quite amusing, since it uses the normal English language in coding.
+    So, let us get started!
+
+
+    P.S Don’t forget to download your FREE Bonus video course at the end of this book.
+    Enjoy!
+
+
+    # Chapter One: History of Java
+
+
+    This chapter will give you a brief history of how Java software came into life,
+    starting from the existence of computers. It will also provide you a brief overview
+    of the evolution of the various computer programming languages.
+
+
+    ## The Birth of Computers
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_8_0.png)
+
+
+    It was not long ago, well maybe around two decades, that there were still typewriters
+    to create the documents we need at home, in school or for work. Remember your
+    mother''s recipes on index cards, your thesis in college, your resume for job
+    application and many more. Then here comes the birth of computer systems that
+    made everything a lot easier! Now, with just a click of the mouse or a keystroke
+    you have photos printed out to decorate your home, a YouTube video of your high
+    school ball, or a visually compelling presentation for work.
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_9_0.png)
+
+
+    A computer system consists of all the essential components of a computer and how
+    they are integrated with one another for the device to function. Such components
+    can be classified as hardware or software. Computer hardware pertains to the physical
+    part, such as the central processing unit (CPU), mouse, keyboard and monitor,
+    among others. Software, on the other hand, refers to the different programs that
+    tell the computer what to do. Both hardware and software work hand in hand to
+    produce the user''s desired results.
+
+
+    Since this eBook was written to provide a step-by-step tutorial on Java programming,
+    then we will emphasize the software aspect of the computer system. In addition,
+    the emergence of the World Wide Web or simply known as the Internet had brought
+    forth more innovations in computer programming. The increasing demands of this
+    online superhighway when it comes to sharing and communicating information has
+    forced programmers to explore the potentials of JAVA programming language.
+
+
+    ## Evolution of Computer Programming Languages
+
+
+    - 1954-1957 John Backus with an IBM team developed FORTRAN (considered the first
+    modern computer programming language but definitely not user-friendly).
+
+    - 1959 Grace Hopper at Remington Rand developed COBOL (Letter B stands for Business,
+    which is COBOL''s primary feature included processing records of customers, employees
+    and more).
+
+    - 1972 Dennis Ritchie at AT&T Bell Labs developed the C programming language.
+
+    - 1986 Bjarne Stroustrup at AT&T Bell Labs developed C++ that supported object-oriented
+    programming (OOP).
+
+    - 1995 It was exactly on May 23rd that Sun Microsystems released the first official
+    version of Java programming language that is considered as an improvement of C++.
+    This general-purpose software enables you to build and explore databases, write
+    windowed applications and control handheld devices, among others.
+
+    '
+  mdcn: '
+
+
+    # JAVA
+
+
+    简易 JAVA 编程
+
+    初学者教程
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_0_0.png)
+
+
+    你的 Java 编程学习分步指南
+
+
+    FELIX ALVARO
+
+
+    # 针对初者的简单 Java 编程：你学习 Java 编程的分步指南
+
+
+    Felix Alvaro
+
+
+    # 致谢
+
+
+    首先，我要感谢上帝赋予我知识和灵感，让我汇编了这本充满信息的书。我也想感谢我的父母、兄弟以及我的伴侣 Silvia 的支持。
+
+
+    ## 目录
+
+
+    **第一章：Java 历史**
+
+
+    - 计算机的诞生
+
+    - 计算机编程语言的演变
+
+    - Java 技术的出现
+
+
+    **第二章：Java 环境**
+
+
+    - Java 语言的用途
+
+    - 初始 Java 设置
+
+    - 测试已安装软件
+
+    - 所需的 Java 工具
+
+
+    **第三章：Java 代码基础**
+
+
+    - 面向对象编程的特点
+
+    - 第一个简单的 Java 程序
+
+    - Java 程序的组成部分
+
+
+    **第四章：用户输入**
+
+
+    - Scanner 类
+
+    - nextLine 方法
+
+    - println 方法
+
+
+    **第五章：变量声明**
+
+
+    - 基础变量类型
+
+    - 声明变量类型
+
+
+    **第六章：运算符**
+
+
+    - 算术运算符
+
+    - 增量/减运算符
+
+    - 逻辑运算符
+
+    - 位运算符
+
+
+    ## 第七章：流程控制
+
+
+    - If-Then-Else
+
+    - 循环
+
+
+    ## 第八章：访问修饰符
+
+
+    - 默认 (Default)
+
+    - 私有 (Private)
+
+    - 公有 (Public)
+
+    - 保护 (Protected)
+
+
+    **第九章：类与对象**
+
+
+    - 类 (Class)
+
+    - 实例 (Instance)
+
+    - 局部 (Local)
+
+    - 关系 (Relationships)
+
+
+    **第十章：构造函数**
+
+
+    - this
+
+    - super
+
+
+    ## 练习 + 免费赠送！
+
+
+    - 总结
+
+    - 练习题
+
+    - 练习题答案
+
+    - 免费视频系列
+
+
+    © Copyright 2015 by D.A. Alvaro - 版权所有。
+
+    本文档旨在就所涵盖的主题提供准确可靠的信息。严禁以电子手段或打印格式复制、重复或传输本文档的任何部分。严禁录制本出版物。此处提供的信息被声明是真实且一致的。在任何情况下，出版者均不对由于此处信息直接或间接导致的任何赔偿、损害或资金损失承担任何法律责任或指责。相应作者拥有出版者未持的所有版权。此处的信息仅供参考，且具有通用性。信息的呈现不带有任何合同或任何类型的同意、保证或确认。未经许可使用的商标，以及该商标的发布未经获得商标所有者的许可或支持。书中的所有商标和品牌仅用于说明之目的，并归所有者所有，与本文无关联。
+
+
+    # 引言
+
+
+    你好！感谢你下载本电子书。通过这一行动，你已经在投资自己作为计算机程序员的技能方面迈出了大的一步！本电子书提供了适用于初学者的 Java 语言实用信息。我是
+    Felix，我也从一名业余软件程序员起家，经历过理解基础 Java 术语和编程规范的挑战。本电子书将作为理解 Java 语言的入门，并引导你朝着成为专业计算机程序员的目标努力。我将一步一步教你如何安装所需的
+    Java 工具并创建简单的程序。
+
+
+    初看之下，Java 似乎是一门难以理解的语言。在我们开始之后，你将开始熟悉 Java 语言环境，并很快发现它学起来其实非常简单！无论你的编程语言经验如何如何，本指南都将以易于遵循和学习的方式引导你。随着你知识的扩展，你将越来越欣赏成为
+    Java 程序员的优势。
+
+
+    Java 一直被认为是世界上最需求最大的顶级编程语言之一。如果你决定专注于学习 Java 环境，那么你正面对着一个快速成长的职业。这种技术已广泛集成并应用于蓬勃发展的万维网。由于其简单性、可读性和活性，Java
+    备受青睐。在美国，一名 Java 开发者的年薪估计为 85,000 美元。
+
+
+    本电子书将为你介绍 Java 语言，并帮助你实现成为专业计算机程序员的目标。我将教你如何安装所需的 Java 工具并创建简单的程序。P.S 不要忘记在书末下载免费视频课程。让我们开始吧！
+
+
+    # 第一章：Java 历史
+
+
+    本章将为你简述 Java 产生的历史，并介绍计算机编程语言的演变。
+
+
+    ## 计算机的诞生
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_8_0.png)
+
+
+    在很久以前，也许是二十年前，人们仍然使用打字机来创建家庭文档、学校作业或工作简历。然后，计算机系统的出现让这一切变得简单多。！现在，只需点击鼠标或按下键盘，你就可以打印出装饰家居、学校论文或工作演示的视觉冲击力作品。
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_9_0.png)
+
+
+    计算机系统由计算机的所有基本组件组成，以及它们如何集成以运行设备。这些组件可以分为硬件或软件。计算机硬件指的是物理部分，如中央处理器 (CPU)、鼠标、键盘和显示器等。软件指的是告诉计算机如何做什么的不同程序。
+
+
+    由于本电子书旨在提供 Java 编程的分步教程，因此我们将关注计算机系统的软件方面。此外，万维网（或简称互联网）的出现为计算机编程带来了更多创新。由于这条超级公路在信息共享和通信方面的日益增长的需求，迫使程序员们探索
+    Java 编程语言的潜力。
+
+
+    '
+  merge: -1
+  raw:
+  - "[PAGE 0]\n\n# # JAVA\n\nEASY JAVA PROGRAMMING\n BEGINNERS\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_0_0.png)\n\
+    \nYOUR STEP-BY-STEP GUIDE TO LEARNING\nJAVA PROGRAMMING\n\nFELIX ALVARO"
+  - '[PAGE 1]
+
+
+    # # JAVA
+
+    # Easy Java Programming for Beginners, Your Step-By-Step Guide to Learning Java
+    Programming
+
+
+    Felix Alvaro'
+  - '[PAGE 2]
+
+
+    # Acknowledgments
+
+
+    Firstly, I want to thank God for giving me the knowledge and inspiration to put
+    this informative book together. I also want to thank my parents, my brothers and
+    my partner Silvia for their support.'
+  - '[PAGE 3]
+
+
+    # # Table of Contents
+
+
+    **Chapter One: The History of Java**
+
+
+    +   - The Birth of Computers
+
+    - Evolution of Computer Programming Languages
+
+    - Emergence of Java Technology
+
+
+    **Chapter Two: The Java Environment**
+
+
+    +   - Uses of Java Language
+
+    - The Initial Java Setup
+
+    - Testing the Software Installed
+
+    - Required Java Tools
+
+
+    **Chapter Three: The Basics of Java Code**
+
+
+    +   - Characteristics of Object-Oriented Programming
+
+    - First Simple Java Program
+
+    - Parts of the Java Program
+
+
+    **Chapter Four: User Input**
+
+
+    +   - Scanner Class
+
+    - nextLine Method
+
+    - println Method
+
+
+    **Chapter Five: Variable Declaration**
+
+
+    +   - The Basic Variable Types
+
+    - Declaring Variable Types
+
+
+    **Chapter Six: Operators**'
+  - '[PAGE 4]
+
+
+    +   - Arithmetic Operators
+
+    - Increment / Decrement Operators
+
+    - Logical Operators
+
+    - Bit-Wise Operators
+
+
+    # Chapter Seven: Flow Control
+
+
+    +   - If-Then-Else
+
+    - Loops
+
+
+    # Chapter Eight: Access Modifiers
+
+
+    +   - Default
+
+    - Private
+
+    - Public
+
+    - Protected
+
+
+    # Chapter Nine: Classes and Objects
+
+
+    +   - Class
+
+    - Instance
+
+    - Local
+
+    - Relationships
+
+
+    # Chapter Ten: Constructors
+
+
+    +   - This
+
+    - Super
+
+
+    # Exercises + Free Bonus!
+
+
+    +   - Recap
+
+    - Practice Exercises
+
+    - Practice Exercises Answers
+
+    - Free Video series'
+  - '[PAGE 5]
+
+
+    © Copyright 2015 by D.A.Alvaro - All rights reserved.
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic covered. It is not legal to reproduce, duplicate, or transmit any
+    part of this document in either electronic means or in printed format. Recording
+    of this publication is strictly prohibited. The information provided herein is
+    stated to be truthful and consistent. Under no circumstances will any legal responsibility
+    or blame be held against the publisher for reparation, damages, or monetary loss
+    due to the information herein, either directly or indirectly. Respective author
+    owns all copyrights not held by the publisher. The information herein is offered
+    for informational purposes solely, and is universal as so. The presentation of
+    the information is without contract or any type of consent, guarantee assurance.
+    The trademarks that are used without any consent, and the publication of the trademark
+    is without permission or backing by the trademark owner. All trademarks and brands
+    within this book are for clarifying purposes only and are the owned by the owners
+    themselves, not affiliated with this document.'
+  - '[PAGE 6]
+
+
+    # Introduction
+
+
+    Hi there! Thank you for downloading this eBook. By doing so, you have made a big
+    step in investing in your skills as a computer programmer! This eBook presents
+    useful information on Java language suited for beginners. I am Felix and I also
+    started as an amateur software programmer who has experienced the challenges of
+    understanding basic Java terminologies and programming conventions. This eBook
+    will then serve as an introduction to understanding the Java language and gear
+    you towards your goal of becoming a professional computer programmer. I will be
+    teaching you how to install the required Java tools and create simple programs
+    in a step-by-step way.
+
+
+    At first glance, Java may come across as a language that will be hard to comprehend.
+    After we get started, you will begin to familiarize yourself with the Java language
+    environment and quickly discover that it can be quite simple to learn after all!
+    Regardless of your experience with programming languages, this guide will lead
+    you in a way that is easy to follow and learn. As you expand your knowledge, the
+    more you will appreciate the perks of being a Java programmer.
+
+
+    Java has always been considered as one of the top, in-demand programming languages
+    in the world. If you decide to focus on studying the Java environment, then you
+    are looking at a fast growing career. Such technology has been integrated and
+    adopted widely in flourishing the World Wide Web, developing mobile apps, building
+    websites and more. With its simplicity, readability and flexibility, Java has
+    been one of the sought after programming skills in the recruitment market of Information
+    Technology. Currently, a'
+  - '[PAGE 7]
+
+
+    Java developer/programmer in the United States of America earns an estimated annual
+    salary of $85,000 USD.
+
+
+    This eBook will definitely serve as your jumpstart if you decide to push a career
+    in Java programming. I will provide you a discussion on the characteristics of
+    the said software environment, the different components, terminologies, basic
+    programming styles and sample programs, among others. You will find that Java
+    programming is quite amusing, since it uses the normal English language in coding.
+    So, let us get started!
+
+
+    P.S Don’t forget to download your FREE Bonus video course at the end of this book.
+    Enjoy!'
+  - '[PAGE 8]
+
+
+    # Chapter One: History of Java
+
+
+    This chapter will give you a brief history of how Java software came into life,
+    starting from the existence of computers. It will also provide you a brief overview
+    of the evolution of the various computer programming languages.
+
+
+    # The Birth of Computers
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_8_0.png)
+
+
+    It was not long ago, well maybe around two decades, that there were still typewriters
+    to create the documents we need at home, in school or for work. Remember your
+    mother''s recipes on index cards, your thesis in college, your resume for a job
+    application and many more. Then here comes the birth of computer systems that
+    made everything a whole lot easier! It was a total revolution when these miracle
+    machines were introduced. Now, with just a click of the'
+  - '[PAGE 9]
+
+
+    mouse or a keystroke you have photos printed out to decorate your home, a YouTube
+    video of your high school ball, or a visually compelling marketing presentation
+    for work.
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_9_0.png)
+
+
+    A computer system consists of all the essential components of a computer and how
+    they are integrated with one another for the device to function efficiently and
+    effectively. Such components can be classified as hardware or software. Computer
+    hardware pertains to the physical part, such as the central processing unit (CPU),
+    mouse, keyboard and monitor, among others. Software, on the other hand, refers
+    to the different programs that tell the computer what to do. Both hardware and
+    software components work hand in hand to produce the user''s desired results.
+
+
+    Since this eBook was written to provide a step-by-step tutorial on Java programming,
+    then we will emphasize the software aspect of the computer system. In addition,
+    the emergence of the World Wide Web or simply known as the Internet had brought
+    forth more innovations in computer programming. The increasing demands of this
+    online superhighway when it comes to sharing and'
+  - '[PAGE 10]
+
+
+    communicating information has forced programmers to explore the potentials of
+    JAVA programming language.
+
+
+    # Evolution of Computer Programming Languages
+
+
+    +   - 1954-1957
+
+    John Backus with an IBM team developed FORTRAN (considered the first modern computer
+    programming language but definitely not user-friendly).
+
+
+    +   - 1959
+
+    Grace Hopper at Remington Rand developed COBOL (Letter B stands for Business,
+    which is COBOL''s primary feature included processing records of customers, employees
+    and more)
+
+
+    +   - 1972
+
+    Dennis Ritchie at AT&T Bell Labs developed the C programming language.
+
+
+    +   - 1986
+
+    Bjarne Stroustrup at AT&T Bell Labs developed C++ that supported object-oriented
+    programming (OOP).
+
+
+    +   - 1995
+
+    It was exactly on May 23rd that Sun Microsystems released the first official version
+    of Java programming language that is considered as an improvement of C++. This
+    general-purpose software enables you to build and explore databases, write windowed
+    applications and control handheld devices, among'
+- md: '
+
+    others. Just after five years, Java already had 2.5 million developers worldwide.
+
+
+    - 2000
+
+    The College Board announced in November that Computer Science Advanced Placement
+    exams will be based on Java by 2003.
+
+
+    - 2002
+
+    Microsoft introduced C#, a new language named that inherited most of its programming
+    features from Java. Sys-Con Media reported in June of the same year that there
+    was an increasing demand for Java programmers (it has exceeded by 50% as compared
+    to the demand for C++ programmers).
+
+
+    - 2007
+
+    Google started developing apps on Android mobile devices using the Java language.
+
+
+    - 2010
+
+    Oracle Corporation incorporated Java technology into the Oracle family by purchasing
+    Sun Microsystems in January.
+
+
+    - 2010
+
+    eWeek ranked Java in June as first among its “Top 10 Programming Languages to
+    Keep You Employed” (www.eweek.com/c/a/Application-Development/Top-10-Programming-Languageasto-Keep-You-Employed-719257).
+
+
+    - 2013
+
+    More than 1.1 billion desktop computers and 250 million mobile phones have been
+    using Java platform since August 2013 (www.mobiledevicemanager.com/mobile-devicestatistics/250-million-android-devices-in-use
+    and http://java.com/en/about). Moreover, Blu-ray devices emerged with more interactive
+    capabilities through the new technology. Java was already considered the most
+    popular language by various programming groups and communities, such as TIOBE
+    Community Index (www.tiobe.com/index.php/content/parserinfo/tpci) and PYPL stands
+    for the Popularity of Programming Language Index (http://sites.google.com/site/pydatalag/pypl/PyPL-Popularity-of-Programming-Language),
+    among others.
+
+
+    ## Emergence of Java Technology
+
+
+    When IT experts realized in the early 1990s that there is a big demand in making
+    people''s lives less complicated by introducing intelligence to everyday home
+    appliances, Sun Microsystems collaborated with a team of researchers to start
+    the "Green Project". This is sort of a secretive assignment aimed to develop a
+    portable home-appliance software that will run in embedded processor chips. The
+    program should be flexible enough to adapt to the everchanging appliance processor
+    chips, which were getting smaller, cheaper and yet more powerful. The team planned
+    to use C++ at first, but its portability issue was blocking their path to success.
+    Thus, they decided to develop a whole new computer programming language.
+
+
+    It was in 1991 when Java language was initially conceived by Sun Microsystem through
+    the collaboration of James Gosling, Chris Warth, Patrick Naughton, Mike Sheridan
+    and Ed Frank. Oak was the initial name of the new programming language, which
+    was the tree just outside James Gosling’s window (the team’s project leader).
+
+
+    However, Oak was already being used as the name for another programming language.
+    So in 1995 it was officially renamed to Java, which denotes the coffee that the
+    software developers enjoy whenever they have their breaks. However, when the demand
+    for such home-appliances did not turn out as what Sun Microsystem team has to
+    find another channel to expand Java. Finally, in May 1995, Java was first released
+    at the SunWorld Conference and was immediately followed by Netscape (the world’s
+    #1 browser at that time) announcing that they will incorporate the programming
+    language in their development. With Java-embedded web pages, websites transformed
+    from plain dull into interactive ones. Not only that the Web sends information
+    to its audience, but they are also able to accept user input.
+
+
+    In this chapter you have learned the history of computer programming languages,
+    focusing on the development of Java technology. In the succeeding chapter, Java
+    will be described on how it is used in various programming environments with a
+    clear instruction on how to properly install it in your computer.
+
+
+    ## Chapter Two: The Java Environment
+
+
+    Getting a closer look on Java programming, this chapter will start its discussion
+    on how you can use and deploy the software in various environments. It will also
+    present a step-by-step instruction on how to install, not only the Java program
+    itself but also other required tools on your computer.
+
+
+    With the unstoppable growth of the World Wide Web, developers have found ways
+    on how to incorporate Java programs on every web page. The following is a summary
+    of how the software language is used in different environments:
+
+
+    - Applet - A type of networked Java program embedded in a Web page that is automatically
+    executed by another Java-compatible browser when transmitted over the Internet.
+    Usually this is a small program that can display data from the server, manage
+    user input or even perform simple functions like a calculator. These functionalities
+    are done locally on the client''s computer instead of connecting to the server,
+    which means when you click an applet link it will be automatically downloaded
+    and run in the browser.
+
+
+    - Servlet - A type of small Java program that supports a browser but runs on a
+    different computer or web server to extend its functionality. The introduction
+    of the servlet has upgraded the client/server connection.
+
+
+    - JavaServer Page (JSP) - A Web page that consists of fragments of a Java program
+    (as opposed to an applet that has the complete program).
+
+
+    - Micro Edition (ME) Java Application - A Java program running on a resource device
+    with a limited amount of memory, such as a mobile phone or a television set-top
+    box.
+
+
+    - Standard Edition (SE) Java Application - A Java program that runs on a standard
+    computer, such as a desktop or a laptop.
+
+
+    - JavaFX - A Java program that is integrated with multimedia platforms, such as
+    Flash players.
+
+
+    ## The Initial Java Setup
+
+
+    Before you sit in front of your computer and start coding, you need to make sure
+    that you and your machine are equipped for writing Java codes. It is strongly
+    advised that you check out the following websites and follow the instructions
+    in downloading the required software that is usually for free:
+
+
+    For Java software download and installation follow the following steps:
+
+
+    - 1. Go to the website http://java.com by typing this in the address bar of your
+    web browser. It will take you to the screen below:
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_16_0.png)
+
+
+    - 2. Click on the FREE JAVA DOWNLOAD button. It will take you to this screen:
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_16_1.png)
+
+
+    - 3. Click on the AGREE AND START FREE DOWNLOAD button. When your Java download
+    is complete, you have to close all your browsers and reload them to enable the
+    Java installation.
+
+
+    - 4. Run the downloaded file and you will get the screen. ![](img/a5ade960699c3cf9f5e411120c13cbcc_17_0.png)
+
+
+    - * www.oracle.com/technetwork/java/javase/downloads - Download and install the
+    Java SE documentation (also as the Javadoc pages)
+
+
+    - 1. Go to the website www.oracle.com/technetwork/java/javase/downloads , It will
+    take you to the screen below:
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_18_0.png)
+
+
+    - 2. Click on this option
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_18_1.png)
+
+
+    - 3. The next page will ask you to choose the version of Java SE Development Kit
+    you want to download. Make sure you know exactly what operating system you have
+    in your computer before you start downloading.
+
+    '
+  mdcn: '
+
+    其他。仅仅过了五年，Java 在全球范围内已经拥有 250 万名开发者。
+
+
+    - 2000
+
+    大学理事（College Board）于 11 月宣布，计算机科学高级课程（AP）考试将在 2003 年基于 Java 进行。
+
+
+    - 2002
+
+    微软引入了 C#，一种继承了 Java 大部分编程特性的新语言。Sys-Con Media 在同年 6 月报告说，对 Java 程序员的需求日益增长（比 C++
+    程序员的需求增加了 50% 以上）。
+
+
+    - 2007
+
+    Google 开始使用 Java 语言在 Android 移动设备上开发应用。
+
+
+    - 2010
+
+    甲骨文公司（Oracle Corporation）于 1 月收购了太阳科技公司（Sun Microsystems），将 Java 技术整合进了 Oracle
+    家族。
+
+
+    - 2010
+
+    eWeek 在 6 月将 Java 评为“保持就业的前 10 编程语言”第一（www.eweek.com/c/a/Application-Development/Top-10-Programming-Languageasto-Keep-You-Employed-719257）。
+
+
+    - 2013
+
+    自 2013 年 8 月以来，已有超过 11 亿台台式电脑和 2.5 亿手机在使用 Java平台（www.mobiledevicemanager.com/mobile-devicestatistics/250-million-android-devices-in-use
+    和 http://java.com/en/about）。此外，通过新技术出现了更具交互能力的蓝光设备。Java 已经被各种编程小组和社区认为是最流行的语言，例如
+    TIOBE 社区指数（www.tiobe.com/index.php/content/parserinfo/tpci）和 PYPL 编程语言流行指数（http://sites.google.com/site/pydatalag/pypl/PyPL-Popularity-of-Programming-Language）等。
+
+
+    ## Java 技术的出现
+
+
+    当 IT 专家在 20 世纪 90 年代初意识到通过为日常家电引入智能化使人们的生活变得更简单存在巨大需求时，太阳科技公司与一个研究小组合作启动了“绿色项目”（Green
+    Project）。这是一项秘密任务，旨在开发一种运行在嵌入式处理器芯片上的便携式家电软件。该程序应该足够灵活，以适应不断变化的家电处理器芯片，这些芯片正变得越来越小、越来越廉价且功能越来越强大。团队最初计划使用
+    C++，但其可移植性问题阻碍了他们的成功之路。因此，他们决定开发一种全新的计算机编程语言。
+
+
+    1991 年，太阳科技公司通过 James Gosling、Chris Warth、Patrick Naughton、Mike Sheridan 和 Ed
+    Frank 的合作，最初构思了 Java 语言。Oak 是这种新编程语言的初始名称，灵感源自 James Gosling（团队项目负责人）窗外的一棵树。
+
+
+    然而，Oak 已经被用作另一种编程语言的名称。因此在 1995 年，它被正式重命名为 Java，这代表了软件开发人员休息时经常享用的咖啡。然而，由于对这类家电的需求并没有像太阳科技团队预期的那样，他们必须寻找另一个渠道来扩展
+    Java。最终，在 1995 年 5 月，Java 在 SunWorld 大会上首次发布，随后 Netscape（当时世界上第一大浏览器）立即宣布他们将这种编程语言整合到他们的开发中。通过
+    Java 嵌入网页，网站从单调乏燥转变为交互式。不仅 Web 能够向受众发送信息，它们还能接受用户输入。
+
+
+    在本章中，你已经学习了计算机编程语言的历史，重点是 Java 技术的开发。在接下来的章节中，将描述 Java 如何在各种编程环境中使用，并提供如何在你的计算机上正确安装它的清晰指令。
+
+
+    ## 第二章：Java 环境
+
+
+    为了更深入地了解 Java 编程，本章将开始讨论如何在各种环境中使用和部署软件。它还将提供有关如何安装 Java 程序本身以及计算机上其他所需工具的逐步说明。
+
+
+    随着万维网不可阻挡的增长，开发者已经找到了将 Java 程序整合到每个网页的方法。以下是该语言在不同环境中的用途总结：
+
+
+    - Applet - 一种嵌入网页的网络 Java 程序，通过互联网传输时自动执行。通常这是一个小型程序，可以显示来自服务器的数据、管理用户输入，甚至执行诸如计算器之类的简单功能。这些功能在客户端计算机上本地完成，而不是连接到服务器，这意味着当你点击
+    applet 链接时，它会自动下载并在浏览器中运行。
+
+
+    - Servlet - 一种小型 Java 程序，支持浏览器但运行在不同的计算机或 Web 服务器上以扩展其功能。Servlet 的引入升级了客户端/服务器连接。
+
+
+    - JavaServer Page (JSP) - 一个由 Java 程序片段组成的网页（与具有完整程序的 applet 相反）。
+
+
+    - Micro Edition (ME) Java Application - 运行在内存有限资源设备上的 Java 程序，如手机或电视机顶盒。
+
+
+    - Standard Edition (SE) Java Application - 运行在标准计算机（如台式电脑或笔记本电脑）上的 Java 程序。
+
+
+    - JavaFX - 与多媒体平台（如 Flash 播放器）集成的 Java 程序。
+
+
+    ## 初始 Java 设置
+
+
+    在坐在电脑前开始编写代码之前，你需要确保你和你的机器已准备好编写 Java 代码。强烈建议你查看以下网站并按照说明下载通常免费的软件：
+
+
+    Java 软件下载和安装遵循以下步骤：
+
+
+    - 1. 在浏览器的地址栏输入 http://java.com。它将带你进入以下界面：
+
+
+    ![](img/a5ade960699c3cf9f5e41120c13cbcc_16_0.png)
+
+
+    - 2. 点击 FREE JAVA DOWNLOAD 按钮。它将带你进入此屏幕：
+
+
+    ![](img/a5ade960699c3cf9f5e41120c13cbcc_16_1.png)
+
+
+    - 3. 点击 AGREE AND START FREE DOWNLOAD 按钮。当 Java 下载完成后，你需要关闭所有浏览器并重新加载以启用 Java
+    安装。
+
+
+    - 4. 运行下载的文件，你将看到此界面 ![](img/a5ade960699c3cf9f5e41120c13cbcc_17_0.png)
+
+
+    - * www.oracle.com/technetwork/java/javase/downloads 下载并安装 Java SE 文档（作为 Javadoc
+    页面）
+
+
+    - 1. 访问网站 www.oracle.com/technetwork/java/javase/downloads，它将带你进入以下界面：
+
+
+    ![](img/a5ade960699c3cf9f5e41120c13cbcc_18_0.png)
+
+
+    - 2. 点击此选项
+
+
+    ![](img/a5ade960699c3cf9f5e41120c13cbcc_18_1.png)
+
+
+    - 3. 下一页将要求你选择想要下载的 Java SE 开发包版本。在开始下载之前，请确保你确切计算机使用的是什么操作系统。
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 11]
+
+
+    others. Just after five years, Java already had 2.5 million developers worldwide.
+
+
+    +   - 2000
+
+
+    The College Board announced in November that Computer Science Advanced Placement
+    exams will be based on Java by 2003.
+
+
+    +   - 2002
+
+
+    Microsoft introduced C#, a new language named that inherited most of its programming
+    features from Java. Sys-Con Media reported in June of the same year that there
+    was an increasing demand for Java programmers (it has exceeded by 50% as compared
+    to the demand for C++ programmers).
+
+
+    +   - 2007
+
+
+    Google started developing apps on Android mobile devices using the Java language.
+
+
+    +   - 2010
+
+
+    Oracle Corporation incorporated Java technology into the Oracle family by purchasing
+    Sun Microsystems in January
+
+
+    +   - 2010
+
+
+    eWeek ranked Java in June as first among its “Top 10 Programming Languages to
+    Keep You Employed”(www.eweek.com/c/a/ Application-Development/Top-10-Programming-Languageasto-Keep-You-Employed-719257).
+
+
+    +   - 2013'
+  - '[PAGE 12]
+
+
+    More than 1.1 billion desktop computers and 250 million mobile phones have been
+    using Java platform since August 2013 (www.mobiledevicemanager.com/mobile-devicestatistics/250-million-android-devices-in-use
+    and http://java.com/en/about). Moreover, Blu-ray devices emerged with more interactive
+    capabilities through the new technology. Java was already considered the most
+    popular language by various programming groups and communities, such as TIOBE
+    Community Index (www.tiobe.com/index.php/content/parserinfo/tpci) and PYPL stands
+    for the Popularity of Programming Language Index (http://sites.google.com/site/pydatalag/
+    pypl/PyPL-Popularity-of-Programming-Language), among others.
+
+
+    # Emergence of Java Technology
+
+
+    When IT experts realized in the early 1990s that there is a big demand in making
+    people''s lives less complicated by introducing intelligence to everyday home
+    appliances, Sun Microsystems collaborated with a team of researchers to start
+    the "Green Project". This is sort of a secretive assignment aimed to develop a
+    portable home-appliance software that will run in embedded processor chips. The
+    program should be flexible enough to adapt to the everchanging appliance processor
+    chips, which were getting smaller, cheaper and yet more powerful. The team planned
+    to use C++ at first, but its portability issue was blocking their path to success.
+    Thus, they decided to develop a whole new computer programming language.
+
+
+    It was in 1991 when Java language was initially conceived by Sun Microsystem through
+    the collaboration of James Gosling, Chris Warth, Patrick Naughton, Mike Sheridan
+    and Ed Frank. Oak was the initial name of the new programming language, which
+    was the tree'
+  - '[PAGE 13]
+
+
+    just outside James Gosling’s window (the team’s project leader).
+
+    However, Oak was already being used as the name for another programming language.
+    So in 1995 it was officially renamed to Java, which denotes the coffee that the
+    software developers enjoy whenever they have their breaks. However, when the demand
+    for such home-appliances did not turn out as what Sun Microsystem team has to
+    find another channel to expand Java. Finally, in May 1995, Java was first released
+    at the SunWorld Conference and was immediately followed by Netscape (the world’s
+    #1 browser at that time) announcing that they will incorporate the programming
+    language in their development. With Java-embedded web pages, websites transformed
+    from plain dull into interactive ones. Not only that the Web sends information
+    to its audience, but they are also able to accept user input.
+
+
+    In this chapter you have learned the history of computer programming languages,
+    focusing on the development of Java technology. In the succeeding chapter, Java
+    will be described on how it is used in various programming environments with a
+    clear instruction on how to properly install it in your computer.'
+  - '[PAGE 14]
+
+
+    # Chapter Two: The Java Environment
+
+
+    Getting a closer look on Java programming, this chapter will start its discussion
+    on how you can use and deploy the software in various environments. It will also
+    present a step-by-step instruction on how to install, not only the Java program
+    itself but also other required tools on your computer.
+
+
+    With the unstoppable growth of the World Wide Web, developers have found ways
+    on how to incorporate Java programs on every web page. The following is a summary
+    of how the software language is used in different environments:
+
+
+    +   * Applet - A type of networked Java program embedded in a Web page that is
+    automatically executed by another Java-compatible browser when transmitted over
+    the Internet. Usually this is a small program that can display data from the server,
+    manage user input or even perform simple functions like a calculator. These functionalities
+    are done locally on the client''s computer instead of connecting to the server,
+    which means when you click an applet link it will be automatically downloaded
+    and run in the browser.
+
+
+    +   * Servlet - A type of small Java program that supports a browser but runs
+    on a different computer or web server to extend its functionality. The introduction
+    of the servlet has upgraded the client/server connection.
+
+
+    +   * JavaServer Page (JSP) - A Web page that consists of fragments of a Java
+    program (as opposed to an applet that has the complete program).'
+  - '[PAGE 15]
+
+
+    +   - Micro Edition (ME) Java Application - A Java program running on a resource
+    device with a limited amount of memory, such as a mobile phone or a television
+    set-top box.
+
+
+    +   - Standard Edition (SE) Java Application - A Java program that runs on a standard
+    computer, such as a desktop or a laptop.
+
+
+    +   - JavaFX - A Java program that is integrated with multimedia platforms, such
+    as Flash players.
+
+
+    # The Initial Java Setup
+
+
+    Before you sit in front of your computer and start coding, you need to make sure
+    that you and your machine are equipped for writing Java codes. It is strongly
+    advised that you check out the following websites and follow the instructions
+    in downloading the required software that is usually for free:
+
+
+    For Java software download and installation follow the following steps:
+
+
+    +   1. Go to the website http://java.com by typing this in the address bar of
+    your web browser. It will take you to the screen below:'
+  - '[PAGE 16]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_16_0.png)
+
+
+    2. Click on the FREE JAVA DOWNLOAD button. It will take you to this screen:
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_16_1.png)
+
+
+    3. Click on the AGREE AND START FREE DOWNLOAD button. When your Java download
+    is complete, you have'
+  - '[PAGE 17]
+
+
+    to close all your browsers and reload them to enable the Java installation.
+
+
+    +   4. Run the downloaded file and you will get the screen below. Just click the
+    INSTALL button.
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_17_0.png)
+
+
+    +   * www.oracle.com/technetwork/java/javase/javase/downloads - Download and install
+    the required Java SE documentation (also known as the Javadoc pages or Java SE
+    API Docs)
+
+
+    Next:
+
+
+    +   1. Go to the website www.oracle.com/technetwork/java/javase/downloads , It
+    will take you to the screen below:'
+  - '[PAGE 18]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_18_0.png)
+
+
+    # 2. Click on this option
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_18_1.png)
+
+
+    3. The next page will ask you will to choose the version of Java SE Development
+    Kit you want to download. Make sure you know exactly what operating system you
+    have in your computer or laptop before you start downloading.'
+  - '[PAGE 19]
+
+
+    # Java Development Kit 8 Downloads
+
+
+    Thank you for downloading the Java™ 8 Standard Edition Development Kit. This JDK
+    contains everything needed for building applications, apps, and components using
+    the Java programming language.
+
+
+    The JDK includes tools for developing and testing programs in the Java programming
+    language.
+
+
+    +   - Java Navigator: From your Oracle account, select Sub, e-ppard Technology,
+    and subscribe to Java
+
+    - Java Developer Day: hand-on workshops (free and other events)
+
+    - Java Magazine
+
+    - JDK 8 Checksum
+
+    - JDK 8 Checksum
+
+
+    # Java SE Development Kit Bu65
+
+
+    | Product/Platform | Size | Checksum |
+
+    | --- | --- | --- |
+
+    | Linux x86 HotSpot-AB | 74.4 MB | 2b65-5d9-558-tr-x86-tr.tar.gz |
+
+    | Linux x64 HotSpot-AB | 144.4 MB | 2b65-5d9-558-tr-x64-tr.tar.gz |
+
+    | Linux ARM | 174.4 MB | 2b65-5d9-558-tr-arm.gz |
+
+    | Windows x86 | 152.5 MB | 2b65-5d9-558-tr-x86.exe |
+
+    | Windows x64 | 214.4 MB | 2b65-5d9-558-tr-x64.exe |
+
+
+    4. To check the version of your operating system, you can go to the SYSTEMS or
+    PC INFO settings of your computer/laptop.
+
+
+    5. Open the downloaded program to complete the installation of your Java SE Development
+    Kit. Ensure that you read and follow the steps carefully.'
+- md: "\n![](img/a5ade960699c3cf9f5e411120c13cbcc_20_0.png)\n\nThen;\n\n- 1. Go to\
+    \ the website http://eclipse.org/downloads by typing this in the address bar of\
+    \ your web browser. It will take you to the screen below:\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_21_0.png)\n\
+    \nChoose the appropriate version of Eclipse based on your computer's operating\
+    \ system. For a 64-bit Windows operating system (OS), you will get the screen\
+    \ below:\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_21_1.png)\n\nAfter downloading,\
+    \ opening the program and you will get the screen below:\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_22_0.png)\n\
+    \n- 4. Just choose ECLIPSE IDE FOR JAVA DEVELOPERS option and then click the INSTALL\
+    \ button. Make sure you accept the ECLIPSE FOUNDATION SOFTWARE USER AGREEMENT.\n\
+    \n![](img/a5ade960699c3cf9f5e411120c13cbcc_22_1.png)\n\nAfter downloading the\
+    \ programs, make sure you test your installed software. You can follow these steps\
+    \ to test Eclipse:\n\n- Launch Eclipse. You should be able to see ECLIPSE JAVA\
+    \ MARS icon on the desktop. It will then ask you to SELECT WORKSPACE. Just leave\
+    \ what is inside the box and then click the OK button.\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_23_0.png)\n\
+    \n- Create a new Java project by going to the menu on top: FILE > NEW > JAVA PROJECT\n\
+    \n![](img/a5ade960699c3cf9f5e411120c13cbcc_23_1.png)\n\n- Create a new class named\
+    \ Displayer within the Java project.\n\nModify the new Displayer.java file by\
+    \ entering the following lines of code in the Editor pane.\n\n```java\npublic\
+    \ class Displayer {\n    public static void main(String[] args) {\n        System.out.println(\"\
+    Hello Java!\");\n    }\n}\n```\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_24_0.png)\n\
+    \nExecute Displayer.java by clicking on this button located at the top and check\
+    \ to make sure that the output reads Hello Java! by clicking the figure below.\n\
+    \n![](img/a5ade960699c3cf9f5e411120c13cbcc_25_0.png)\n\nIn the field of computer\
+    \ programming, software developers require existing programs to create new programs.\
+    \ For example, they want to develop a Java program that will handle your company’s\
+    \ employee records. In order to accomplish this, you might use an existing program\
+    \ as an error-checking tool for your Java codes.\n\n# Required Java Tools\n\n\
+    Below are the different tools needed in Java programming that can be downloaded\
+    \ online for free:\n\n- Compiler\nA compiler turns the Java code you write into\
+    \ something that can be understood and run on your computer. Computers do not\
+    \ comprehend instructions same like humans. For example, check the program code\
+    \ below:\n\nLooking for an available rental car:\n\n```java\n// This is part of\
+    \ a Java program\n// (not a complete Java program)\nrentalcarNum = 1;\nwhile (rentalcarNum\
+    \ < 100) {\n    if (client[rentalcarNum] == 0) {\n        out.println(\"Car \"\
+    \ + rentalcarNum + \" is available.\");\n        exit(0);\n    } else {\n    \
+    \    rentalcarNum++;\n    }\n    out.println(\"All cars or vehicles are rented\
+    \ out\");\n}\n```\n\nThis basic Java code searches for any available rental car\
+    \ or vehicle for a certain client, assuming the company has 99 cars in total.\
+    \ You cannot run this code by just typing as it is. However, ignoring the strange\
+    \ punctuations and typing format, human beings are able to grasp what it wants\
+    \ the computer to do:\n\n- Set the rental car number to 1.\n- As long as the rental\
+    \ car number is less than 100,\n- Check the number of clients that rented the\
+    \ car.\n- If the number of clients that rented the car is 0,\n- then report that\
+    \ the car is available, and stop.\n- Otherwise,\n- prepare to check the next car\
+    \ by by adding 1 to rental car number.\n- If you get to the non-existent rental\
+    \ car number 100,\n- report that all cars or vehicles were rented out.\n\nAs for\
+    \ computers, they do not follow English-translated instructions to do a specific\
+    \ task. Instead, they understand cryptic Java bytecode commands. This is where\
+    \ the compiler comes in. After writing your Java source code, it is being translated\
+    \ and written by the compiler into Java bytecode that the computer can execute.\
+    \ Check bytecode counterpart below for the same Java code:\n\n```\naload_0\nicost_1\n\
+    putfield Company/rentalcarNum I\ngoto 32\naload_0\ngetfield Company/client []\n\
+    aload_0\ngetfield Company/rentalcarNum I\niaload\nifne 26\n```\n\n```\ngetstatic\
+    \ java/lang/System/out Ljava/io/PrintStream;\nnew java/lang/StringBuilder\ndup\n\
+    ldc \" Car\"\ninvokespecial java/lang/StringBuilder/<init>\n(Ljava/lang/String;)V\n\
+    aload_0\ngetfield Company/rentalcarNum I\ninvokevirtual\njava/lang/StringBuilder/append(Ljava/lang/StringBuilder);\n\
+    ldc \" is available.\"\ninvokevirtual\n      java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;\n\
+    invokevirtual\njava/lang/StringBuilder/toString()Ljava/lang/String;\ninvokevirtual\n\
+    java/io/PrintStream/println(Ljava/lang/String;)V\niconst_0\ninvestatic java/lang/System/exit(I)V\n\
+    goto 32\naload_0\ndup\n      getfield Company/rentalcarNum I\niconst_0\n```\n"
+  mdcn: "\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_20_0.png)\n\n接着；\n\n- 1. 在浏览器的地址栏中输入网站\
+    \ http://eclipse.org/downloads。它将带你进入下面的屏幕：\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_21_0.png)\n\
+    \n根据你电脑的操作系统选择合适的 Eclipse 版本。对于 64 位 Windows 操作系统 (OS)，你会看到下面的屏幕：\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_21_1.png)\n\
+    \n下载完成后，打开程序，你将看到下面的屏幕：\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_22_0.png)\n\
+    \n- 4. 仅选择 ECLIPSE IDE FOR JAVA DEVELOPERS 选项，然后点击 INSTALL（安装）按钮。确保你接受了 ECLIPSE\
+    \ FOUNDATION SOFTWARE USER AGREEMENT（Eclipse 会软件用户协议）。\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_22_1.png)\n\
+    \n下载程序后，确保测试已安装的软件。你可以按照以下步骤测试 Eclipse：\n\n- 启动 Eclipse。你应该能在桌面上看到 ECLIPSE JAVA\
+    \ MARS 图标。它会提示你 SELECT WORKSPACE（选择工作空间）。保持框内内容不变并点击 OK（确定）按钮。\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_23_0.png)\n\
+    \n- 通过顶部菜单创建新的 Java 项目：FILE > NEW > JAVA PROJECT\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_23_1.png)\n\
+    \n- 在 Java 项目中创建一个名为 Displayer 的新类。\n\n通过在编辑器（Editor）面板中输入以下代码行来修改新的 Displayer.java\
+    \ 文件。\n\n```java\npublic class Displayer {\n    public static void main(String[]\
+    \ args) {\n        System.out.println(\"Hello Java!\");\n    }\n}\n```\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_24_0.png)\n\
+    \n点击顶部的此按钮执行 Displayer.java，并点击下图确认输出显示为 Hello Java!\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_25_0.png)\n\
+    \n在计算机编程领域，软件开发人员需要现有程序来创建新程序。例如，他们想开发一个处理公司员工记录的 Java 程序。为了实现这一点，你可能会使用现有程序作为\
+    \ Java 代码的错误检查工具。\n\n# 必要的 Java 工具\n\n以下是 Java 编程中需要的不同工具，可以在网上免费下载：\n\n- 编译器\n\
+    编译器将你编写的 Java 代码转换为计算机可以理解并运行的内容。计算机并不像人类那样理解理解指令。例如，检查下面的程序代码：\n\n寻找可用的租汽车：\n\
+    \n```java\n// This is part of a Java program\n// (not a complete Java program)\n\
+    rentalcarNum = 1;\nwhile (rentalcarNum < 100) {\n    if (client[rentalcarNum]\
+    \ == 0) {\n        out.println(\"Car \" + rentalcarNum + \" is available.\");\n\
+    \        exit(0);\n    } else {\n        rentalcarNum++;\n    }\n    out.println(\"\
+    All cars or vehicles are rented out\");\n}\n```\n\n这段基础 Java 代码为特定客户寻找任何可租汽车或车辆，假设公司总共有\
+    \ 99 辆车。你不能直接输入并运行这段代码。然而，忽略奇怪的符号和输入格式，人类能够理解它让计算机做什么：\n\n- 将租汽车编号设置为 1。\n- 只要租汽车编号小于\
+    \ 100，\n- 检查租车的人数。\n- 如果租车人数为 0，\n- 则报告该车可用并停止。\n- 否则，\n- 通过将租汽车编号加 1 来准备检查下一辆车。\n\
+    - 如果达到不存在的租汽车编号 100，\n- 报告所有汽车或车辆已租出。\n\n至于计算机，它们并不按照翻译成英文指令来执行特定任务。相反，它们理解的是晦涩的\
+    \ Java 字节码命令。这就是编译器发挥作用的地方。编写 Java 源码后，编译器会将其翻译并写入计算机可以执行的 Java 字节码。查看下方相同 Java\
+    \ 代码的字节码对应项：\n\n```\naload_0\nicost_1\nputfield Company/rentalcarNum I\ngoto 32\n\
+    aload_0\ngetfield Company/client []\naload_0\ngetfield Company/rentalcarNum I\n\
+    iaload\nifne 26\n```\n\n```\ngetstatic java/lang/System/out Ljava/io/PrintStream;\n\
+    new java/lang/StringBuilder\ndup\nldc \" Car\"\ninvokespecial java/lang/StringBuilder/<init>\n\
+    (Ljava/lang/String;)V\naload_0\ngetfield Company/rentalcarNum I\ninvokevirtual\n\
+    java/lang/StringBuilder/append(Ljava/lang/StringBuilder);\nldc \" is available.\"\
+    \ninvokevirtual\n      java/lang/StringBuilder/append(Ljava/lang/String;)Ljava/lang/StringBuilder;\n\
+    invokevirtual\njava/lang/StringBuilder/toString()Ljava/lang/String;\ninvokevirtual\n\
+    java/io/PrintStream/println(Ljava/lang/String;)V\niconst_0\ninvestatic java/lang/System/exit(I)V\n\
+    ```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 20]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_20_0.png)
+
+
+    Then;
+
+
+    +   1. Go to the website http://eclipse.org/downloads by typing this in the address
+    bar of your web browser. It will take you to the screen below:'
+  - '[PAGE 21]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_21_0.png)
+
+
+    Choose the appropriate version of Eclipse based on your computer''s operating
+    system. For a 64-bit Windows operating system (OS), you will get the screen below:
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_21_1.png)
+
+
+    After downloading, opening the program and you will get the screen below:'
+  - '[PAGE 22]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_22_0.png)
+
+
+    4. Just choose ECLIPSE IDE FOR JAVA DEVELOPERS option and then click the INSTALL
+    button. Make sure you accept the ECLIPSE FOUNDATION SOFTWARE USER AGREEMENT.
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_22_1.png)
+
+
+    After downloading the programs, make sure you test your installed software. You
+    can follow these steps to test Eclipse:'
+  - '[PAGE 23]
+
+
+    +   - Launch Eclipse. You should be able to see ECLIPSE JAVA MARS icon on the
+    desktop. It will then ask you to SELECT WORKSPACE. Just leave what is inside the
+    box and then click the OK button.
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_23_0.png)
+
+
+    +   - Create a new Java project by going to the menu on top: FILE > NEW > JAVA
+    PROJECT
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_23_1.png)
+
+
+    +   - Create a new class named Displayer within the Java project.'
+  - "[PAGE 24]\n\nModify the new Displayer.java file by entering the following lines\
+    \ of code in the Editor pane.\n\n```\npublic class Displayer {\n    public static\
+    \ void main(String[] args) {\n        System.out.println(\"Hello Java!\");\n \
+    \   }\n}\n```\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_24_0.png)"
+  - '[PAGE 25]
+
+
+    Execute Displayer.java by clicking on this button located at the top and check
+    to make sure that the output reads Hello Java! by clicking the figure below.
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_25_0.png)
+
+
+    In the field of computer programming, software developers require existing programs
+    to create new programs. For example, they want to develop a Java program that
+    will handle your company’s employee records. In In order to accomplish this, you
+    might use an existing program as an error-checking tool for your Java codes.'
+  - "[PAGE 26]\n\n# Required Java Tools\n\nBelow are the different tools needed in\
+    \ Java programming that can be downloaded online for free:\n\n+   - Compiler\n\
+    \nA compiler turns the Java code you write into something that can be understood\
+    \ and run on your computer. Computers do not comprehend instructions same like\
+    \ humans. For example, check the program code below:\n\nLooking for an available\
+    \ rental car:\n\n```\n// This is part of a Java program\n// (not a complete Java\
+    \ program)\nrentalcarNum = 1;\nwhile (rentalcarNum < 100) {\n    if (client[rentalcarNum]\
+    \ == 0) {\n        out.println(\"Car \" + rentalcarNum + \" is available.\");\n\
+    \        exit(0);\n    } else {\n        rentalcarNum++;\n    }\nout.println(\"\
+    All cars or vehicles are rented out\");\n```\n\nThis basic Java code searches\
+    \ for any available rental car or vehicle for a certain client, assuming the company\
+    \ has 99 cars in total. You cannot run this code by just typing as it is. However,\
+    \ ignoring the strange punctuations and typing format,"
+  - '[PAGE 27]
+
+
+    human beings are able to grasp what it wants the computer to do:
+
+
+    +   Set the rental car number to 1.
+
+    As long as the rental car number is less than 100,
+
+    Check the number of clients that rented the car.
+
+    If the number of clients that rented the car is 0,
+
+    then report that the car is available,
+
+    and stop.
+
+    Otherwise,
+
+    prepare to check the next car by
+
+    adding 1 to rental car number.
+
+    If you get to the non-existent rental car number 100,
+
+    report that all cars or vehicles were rented out.
+
+
+    As for computers, they do not follow English-translated instructions to do a specific
+    task. Instead, they understand cryptic Java bytecode commands. This is where the
+    compiler comes in. After writing your Java source code, it is being translated
+    and written by the compiler into Java bytecode that the computer can execute.
+    Check bytecode counterpart below for the same Java code:
+
+
+    ```
+
+    aload_0
+
+    icost_1
+
+    putfield Company/ rentalcarNum I
+
+    goto 32
+
+    aload_0
+
+    getfield Company/client [|
+
+    aload_0
+
+    getfield Company/rentalcarNum I
+
+    iaload
+
+    ifne 26
+
+    ```'
+  - "[PAGE 28]\n\n```\ngetstatic java/lang/System/out Ljava/io/PrintStream;\nnew java/lang/StringBuilder\n\
+    dup\nldc \" Car\"\ninvokespecial java/lang/StringBuilder/<init>\n(Ljava/lang/String;)V\n\
+    aload_0\ngetfield Company/rentalcarNum I\ninvokevirtual\njava/lang/StringBuilder/append(Ljava/lang/StringBuilder);\n\
+    ldc \" is available.\"\ninvokevirtual\n      java/lang/StringBuilder/append(Ljava/lang/String;)Lja\n\
+    ava/lang/StringBuilder;\ninvokevirtual\njava/lang/StringBuilder/toString()Ljava/lang/String;\n\
+    invokevirtual\njava/io/PrintStream/println(Ljava/lang/String;)V\niconst_0\ninvestatic\
+    \ java/lang/System/exit(I)V\ngoto 32\naload_0\ndup\n      getfield Company/rentalcarNum\
+    \ I\niconst_1\niadd\nputfield Company/rentalcarNum I\naload_0\ngetfield Company/rentalcarNum\
+    \ I\nbipush 100\nif_icmplt 5\ngetstatic java/lang/System/out Ljava/io/PrintStream;\n\
+    ldc \" All cars or vehicles are rented out\"\ninvokevirtual\njava/io/PrintStream/println(Ljava/lang/String;)V\n\
+    return\n```"
+  - '[PAGE 29]
+
+
+    The source code can be saved in a file named Company.java and the compiler probably
+    puts the Java bytecode in another file named Company.class. You even need a tool
+    to display a text-like version of a Java bytecode file (you can use Ando Saabas’s
+    Java Bytecode Editor). If you try open the code of the Company.class file using
+    Notepad or even Microsoft Word, you will only see gibberish characters like dots,
+    squiggles and more.
+
+
+    # Java Virtual Machine (JVM)
+
+
+    If the compiler is responsible for writing the Java bytecode, then the Java Virtual
+    Machine is in-charge of deciphering it. In reality, each kind of computer processor
+    has its own set of executable instructions that are interpreted by each operating
+    system in a slightly different way. Let’s take a look at the two programs below
+    for two different processors but will display the same output on the computer
+    screen – “Hello world!
+
+
+    # Simple Program- Pentium Processor
+
+
+    ```
+
+    .data
+
+    msg:
+
+    .ascii "Hello, world!\n"
+
+    len = . - msg
+
+    .text
+
+    global _start
+
+    _start:
+
+    mov $len,%edx
+
+    mov $msg,%ecx
+
+    mov $1,%ebx
+
+    mov $4,%eax
+
+    int $0x80
+
+    mov $0,%ebx
+
+    ```'
+  - '[PAGE 30]
+
+
+    ```
+
+    movl $1,%eax
+
+    int $0x80
+
+    ```
+
+
+    # Simple Program- Powerpc Processor
+
+
+    .data
+
+
+    msg:
+
+
+    .string "Hello, world!\n"
+
+
+    len = . - msg
+
+
+    .text
+
+
+    .global _start
+
+
+    _start:
+
+
+    ```
+
+    li 0,4
+
+    li 3,1
+
+    ```
+
+
+    ```
+
+    lis 4,msg@ha
+
+    addi 4,4,msg@l
+
+    li 5,len
+
+    sc
+
+    ```
+
+
+    ```
+
+    li 0,1
+
+    li 3,1
+
+    sc
+
+    ```
+
+
+    These two programs ought to display the same results but they cannot be interchanged,
+    for the instructions will mean nothing when they are run by the wrong processor.
+    You will either get notification or'
+  - '[PAGE 31]
+
+
+    error messages like “Not a valid Win32 application” or “Windows can’t open this
+    file.” That is why, with the help of Java Virtual Machine, these Java bytecodes
+    create order in this chaotic world of programming! JVM acts like an interpreter
+    that translates bytecodes for any computer system to comprehend. Thus, you do
+    not have to worry because whether it is your computer or your friend’s one, both
+    will be able to run by the bytecode. Thus, Java language has solved the issue
+    of portability and versatility through JVM.
+
+
+    # Integrated Development Environment
+
+
+    The early days of Java programming involved several windows – one for typing the
+    code, another for running the program, and maybe a third one to keep track of
+    all the codes you have written. What a messy situation! With the emergence of
+    the integrated development environment (IDE) all of the functionalities were seamlessly
+    combined into a single well-organized application.
+
+
+    Below are some of the most popular Java IDEs that can be downloaded online for
+    free (their features may vary but still the language remains exactly the same):
+
+
+    +   1. Eclipse (www.eclipse.org)
+
+
+    Regarded as one of the most popular and best-looking interfaces because of its
+    interactive design and navigation features, Eclipse is characterized as a user-friendly
+    and open source software.
+
+
+    +   2. NetBeans (https://netbeans.org)'
+- md: '
+
+    Just like the previous program, this open source IDE is one of the most recommended
+    Java programming environments for beginners. it is also fast and powerful that
+    can support all Java platforms from Standard Edition (SE) to FX.
+
+
+    - 3. [BlueJ](http://bluej.org/)
+
+
+    BlueJ is described to help the simplest IDE interface and specifically designed
+    to help a novice user understand the fundamental concepts of Java programming.
+
+
+    - 4. [DrJava](www.drjava.org)
+
+
+    DrJava was also designed for amateur programmers who want a simple interface.
+    Despite its simplicity, it is still powerful enough for proficient Java programmers.
+
+
+    - 5. Java Development Kit (JDK)
+
+
+    The Java Development Kit is a tool that acts as both a compiler and an interpreter.
+    The latest JDK version can be downloaded from Oracle’s website - www.oracle.com/technetwork/java/javase/downloads/index.html.
+    Ensure that you download the appropriate version for your computer. If you are
+    using a 32-bit operating system, then download the matching file name affixed
+    with x86. Otherwise, if it is a 64-bit operating system then you download the
+    one with x64.
+
+
+    Now, we have learned that Java can be deployed in a multitude of ways. This chapter
+    also gave you a clear set of instructions on how to install the software and all
+    other required tools for the program to run properly. In the next chapter, you
+    will experience how to start coding in a Java environment.
+
+
+    # Chapter Three: The Basics of Java Code
+
+
+    Before you start writing lines of Java code, this chapter will describe first
+    what object-oriented programming is all about (which is one of the primary characteristics
+    of Java programming). You will also encode your first simple Java program and
+    understand the importance of every part. Also, you will be introduced to classes,
+    objects and instances.
+
+
+    One must understand the heart of the Java language methodology object-oriented
+    programming OOP. Over the years, software developers are progressively trying
+    to find ways on how decrease the complexity of encoding programs. The first generation
+    of programming languages involved toggling of binary machine codes, which are
+    only a few hundred instructions long, into the computer''s front panel. When programs
+    evolved required IT experts to handle more complex instructions through symbolic
+    representations, the assembly language was developed. As programming methodologies
+    were enhanced, more high-level languages were introduced. One example is FORTRAN,
+    however, codes were not easy-to-understand yet.
+
+
+    Structured programming emerged during the 1960s that was used in C and Pascal
+    languages. These programs were characterized by local variables, rich control
+    constructs and stand-alone subroutines, among others. Even if they were considered
+    as power tools, they are still limited when handling very projects.
+
+
+    The demand for breaking through the barriers of encoding extremely large projects
+    paved way to the advent of object-oriented programming. It is a combination of
+    the best methodologies of structured programming plus new organizing concepts.
+    This programming style is characterized by the following:
+
+
+    - Encapsulation
+
+
+    By the name itself, encapsulation is a strategy that binds the programming code
+    and the data it manipulates and keeps them from outside interference. When code
+    and data are linked together, an object is created. This object contains code
+    and data that are either private or public. A private code or data cannot be accessed
+    by any program that exists outside said object. When it is public, then the other
+    parts of the program are able to access even if they are not within the object.
+
+
+    - Polymorphism
+
+
+    This concept is often described as creating a single interface for multiple methods.
+    It means you design a generic interface to a group of related activities. It further
+    reduces the complexity of the program by letting the same interface to be used
+    to specify a general class of action. A clear analogy is the steering wheel. No
+    matter what type of steering wheel, whether a manual steering or a power steering,
+    as long as you know how it works then you can drive any type of car.
+
+
+    - Inheritance
+
+
+    This process involves one object acquiring the properties of another object, which
+    supports the concept of hierarchical classification. To explain this, imagine
+    a red delicious watermelon which belongs to the classification watermelon. The
+    watermelon is further part of the fruit class, which belongs to a larger class
+    called food. The food class has certain qualities such as edible and nutritious,
+    that is further applied to its subclass fruit. The fruit has certain qualities
+    as well, such as juicy and sweet. Now for the watermelon, it also has attributes
+    specific to it, such as a tropical vine-like plant. Now combining all these qualities
+    makes a red delicious watermelon.
+
+
+    Object-oriented programming is characterized by the application and organization
+    of classes, objects and instances. These are actually the components that make
+    up a Java program and are interconnected with one another.
+
+
+    - Class - Considered the highest group, class encompasses everything in object-oriented
+    programming.
+
+
+    - Object - Specifications set by the classes are being applied to the objects
+    that are not loaded into the computer''s memory. They are also instances of a
+    class that act as blueprints ready to be used when needed. Thus, one class can
+    have any number of objects associated with it (can even have zero objects).
+
+
+    - Instance - Can be the same as objects since they describe an individual instantiation.
+
+
+    To understand their relationship with one another, imagine that you are developing
+    a computer program that will keep track of the students enrolling in a school.
+    Each student has a distinctive feature – hair style, eye color, skin complexion,
+    height, weight and many more. In your OOP program, each student is an object.
+    Now, even if the students differ from one another, they share the same list of
+    physical features. These attributes or characteristics need to be compiled into
+    a master list, which we call a class.
+
+
+    # First Simple Java Program
+
+
+    Let us try again to encode a short sample program by following these instructions:
+
+
+    - 1. Launch Eclipse. Click FILE > NEW > JAVA PROJECT. Name your new project as
+    EXAMPLE.
+
+
+    2. Create a new EXAMPLE class. Click FILE > NEW > CLASS > Type EXAMPLE for the
+    class name.
+
+
+    3. Enter, compile and run the following program:
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_37_0.png)
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_37_1.png)
+
+
+    # Encoding the Java program
+
+
+    In Java, a source file is called a compilation unit and the name that you give
+    a source file is very important. By convention, the name of the main class should
+    match the name of the file that holds the program. Note that Java programming
+    is case sensitive, which means the compiler distinguishes between lowercase and
+    uppercase letters. Also, the filename extension required by the compiler is java.
+    Following this programming convention makes it easier to organize and keep track
+    of your lines of code. Also, if you change the capitalization or the naming convention,
+    the whole program becomes meaningless and will stop working. So for this activity,
+    we named it Example.java (since the public class defined by the program is also
+    Example).
+
+
+    # Compiling the Java Program
+
+
+    In this stage, the compiler javac is being executed and creates a file called
+    Example.class that contains the bytecode version of the program. In the previous
+    discussion, the bytecode is executed by the Java Virtual Machine. To actually
+    run the program, use the Java interpreter called java by passing the class name
+    Example as a command-line argument as shown below:
+
+
+    Java Example
+
+
+    The following output is displayed when the program is run:
+
+
+    # Java is essential to the Web
+
+
+    During compilation, each individual class is placed into its own output file named
+    after the class with .class extension. It has been a convention to name your Java
+    source file the same as the class file so that when you execute the Java interpreter,
+    you are actually specifying the name of the class that you want to be executed.
+
+
+    # Parts of the Java Program
+
+
+    - Comments
+
+    '
+  mdcn: '
+
+    与之前的程序一样，这个开源 IDE 是初学者最推荐的 Java 编程环境之一。它既快速又强大，可以支持从标准版 (SE) 到 FX 的所有 Java 平台。
+
+
+    - 3. [BlueJ](http://bluej.org/)
+
+
+    BlueJ 被描述为具有简单的 IDE 界面，专门设计用于帮助初学者理解 Java 编程的基本概念。
+
+
+    - 4. [DrJava](www.drjava.org)
+
+
+    DrJava 也是为想要简单界面的业余程序员设计的。尽管它非常简单，但对于精通 Java 的程序员来说，它仍然足够强大。
+
+
+    - 5. Java 开发包 (JDK)
+
+
+    Java 开发包 (JDK) 是一种既充当编译器又当解释器的工具。可以从 Oracle 网站 - www.oracle.com/technetwork/java/javase/downloads/index.html
+    下载最新的 JDK 版本。请确保您下载了适用于您电脑的版本。如果您使用的是 32 位操作系统，请下载文件名后带有 x86 后缀的文件；否则，如果是 64 位操作系统，则请下载带有
+    x64 后缀的文件。
+
+
+    现在，我们已经了解到 Java 可以通过多种方式进行部署。本章还为您提供了一套关于如何安装软件以及程序正常运行所需的所有工具的清晰说明。在下一章中，您将体验如何在
+    Java 环境中开始编写代码。
+
+
+    # 第三章：Java 代码基础
+
+
+    在开始编写 Java 代码行之前，本章将首先描述什么是面向对象编程（这是 Java 编程的主要特征之一）。你也将将编码你的第一个简单的 Java 程序，并理解每个部分的重要性。此外，你将学习类、对象和实例。
+
+
+    人们必须理解 Java 语言的核心方法论——面向对象编程 OOP。多年来，软件开发人员不断尝试寻找降低程序编码复杂度的方法。第一代编程语言涉及对二进制机器码的切换，这些代码只有几百条指令长，并且需要通过拨码输入到计算机的前面板上。随着程序的演进，需要
+    IT 专家通过符号表示处理更复杂的指令，汇编语言应运而生。随着编程方法论的增强，引入了更多高级语言。例如 FORTRAN，但由于当时的代码还并不易于理解。
+
+
+    结构化编程于 20 世纪 60 年代出现，用于 C 和 Pascal 语言。这些程序的特点是局部变量、丰富的控制结构和独立的子程序等。即使它们被认为是强大的工具，在处理非常大的项目时仍然存在局限性。
+
+
+    突破极大型项目编码障碍的需求为面向对象编程的出现铺平了道路。它是结构化编程的最佳方法论与新组织概念的结合。这种编程风格具有以下特征：
+
+
+    - 封装 (Encapsulation)
+
+
+    从名称本身来看，封装是一种将编程代码与其操作的数据绑定，并防止它们受到外部干扰的策略。当代码和数据链接在一起时，就创建了一个对象。该对象包含私有或公共的代码和数据。私有代码或数据不能被该对象之外的任何程序访问。当它是公共的，程序的其他部分即使不在对象内部也可以进行访问。
+
+
+    - 多态 (Polymorphism)
+
+
+    这个概念通常被描述为为多个方法创建一个单一的接口。这意味着你为一组相关的活动设计了一个通用的接口。它通过让同一个接口被用于指定一类通用的动作，从而进一步降低了程序的复杂度。一个清晰的类比是方向盘。无论什么类型的方向盘，无论是手动转向还是动力转向，只要你知道它是如何工作的，就可以驾驶任何类型的汽车。
+
+
+    - 继承 (Inheritance)
+
+
+    这个过程涉及一个对象获取另一个对象的属性，这支持了层次分类的概念。为了解释这一点，请想象一个红心西瓜，它属于西瓜这一分类。西瓜又是水果类的一部分，而水果类属于一个名为“食物”的更大的类。食物类具有某些属性，如可食用和有营养，这些属性被进一步应用于其子类水果。水果也有某些属性，如多汁和甜。现在，对于西瓜来说，它也有它特定的属性，例如一种热带藤蔓类植物。现在，将所有这些属性结合在一起就了一个红心西瓜。
+
+
+    面向对象编程的特征是类、对象和实例的应用与组织。这些实际上是构成 Java 程序的组件，并且它们之间相互相互连。
+
+
+    - 类 (Class) - 被视为最高层级，类涵盖了面向对象编程中的一切内容。
+
+
+    - 对象 (Object) - 类定义的规范被应用于尚未加载到计算机内存中的对象。它们也是类的实例，充当蓝图，在需要时可以使用。因此，一个类可以关联任意任意数量的对象（甚至可以有零个对象）。
+
+
+    - 实例 (Instance) - 可以与对象相同，因为它们描述的是个体的实例化。
+
+
+    为了理解它们之间的关系，想象你正在开发一个用于跟踪学校入学学生的计算机程序。每个学生都有独特的特征——发型、眼睛颜色、肤色、身高、体重等许多特征。在你的 OOP
+    程序中，每个学生都是一个对象。现在，即使学生们之间相互不同，他们也共享同一份物理特征列表。这些属性或特征需要汇成一个主列表，我们称之为类。
+
+
+    # 第一个简单的 Java 程序
+
+
+    让我们再次尝试按照指令编码一个简短的示例程序：
+
+
+    - 1. 启动 Eclipse。点击 FILE > NEW > JAVA PROJECT。将你的新项目命名为 EXAMPLE。
+
+
+    2. 创建一个新的 EXAMPLE 类。点击 FILE > NEW > CLASS > 为类名输入 EXAMPLE。
+
+
+    3. 输入、编译并运行以下程序：
+
+
+    ![](img/a5ade960699c3f5e41120c13cc_37_0.png)
+
+
+    ![](img/a5ade960699c3f5e41120c13cc_37_1.png)
+
+
+    # 编写 Java 程序
+
+
+    在 Java 中，源代码被称为编译单元，你给源文件命名的名称非常重要。按照惯例，类的名称应与文件的名称匹配。请注意 Java 编程是区分大小写的，这意味着编译器区分大写和小写字母。此外，编译器要求的文件名扩展名是
+    .java。遵循这种编程惯例有助于组织和跟踪你的代码行。此外，如果你更改了大小写或命名规范，整个程序将失去意义并停止工作。因此，对于这次活动，我们将其命名为
+    Example.java（因为程序定义的公共类也是 Example）。
+
+
+    # 编译 Java 程序
+
+
+    在此阶段，执行编译器 javac 并创建一个名为 Example.class 的文件，该文件包含程序的字节码版本。在之前的讨论中，字节码由 Java 虚拟机执行。要实际运行程序，使用名为
+    java 的 Java 解释器并将类名 Example 作为命令行参数传递如下：
+
+
+    Java Example
+
+
+    程序运行时将显示以下输出：
+
+
+    # Java 对 Web 至关重要
+
+
+    在编译期间，每个单独的类都被放在一个以类命名的带有 .class 扩展名的输出文件中。惯例是将你的 Java 源文件与类文件重名，这样当你执行 Java 解释器时，你实际上是在指定你想要执行的类名。
+
+
+    # Java 程序的部分
+
+
+    - 注释 (Comments)
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 32]
+
+
+    Just like the previous program, this open source IDE is one of the most recommended
+    Java programming environments for beginners. it is also fast and powerful that
+    can support all Java platforms from Standard Edition (SE) to FX.
+
+
+    +   3. [BlueJ](http://bluej.org/)
+
+
+    BlueJ is described to help the simplest IDE interface and specifically designed
+    to help a novice user understand the fundamental concepts of Java programming.
+
+
+    +   4. [DrJava](www.drjava.org)
+
+
+    DrJava was also designed for amateur programmers who want a simple interface.
+    Despite its simplicity, it is still powerful enough for proficient Java programmers.
+
+
+    +   5. Jave Development Kit (JDK)
+
+
+    The Java Development Kit is a tool that acts as both a compiler and an interpreter.
+    The latest JDK version can be downloaded from Oracle’s website - www.oracle.com/technetwork/java/javase/downloads/index.html.
+    Ensure that you download the appropriate version for your computer. If you are
+    using a 32-bit operating system, then download the matching file name affixed
+    with x86. Otherwise, if it is a 64-bit operating system then you download the
+    one with x64.
+
+
+    Now, we have learned that Java can be deployed in a multitude of ways. This chapter
+    also gave you a clear set of instructions on how to install the software and all
+    other required tools for the program to'
+  - '[PAGE 33]
+
+
+    run properly. In the next chapter, you will experience how to start coding in
+    a Java environment.'
+  - '[PAGE 34]
+
+
+    # Chapter Three: The Basics of Java Code
+
+
+    Before you start writing lines of Java code, this chapter will describe first
+    what object-oriented programming is all about (which is one of the primary characteristics
+    of Java programming). You will also encode your first simple Java program and
+    understand the importance of every part. Also, you will be introduced to classes,
+    objects and instances.
+
+
+    One must understand the heart of the Java language methodology object-oriented
+    programming OOP. Over the years, software developers are progressively trying
+    to find ways on how decrease the complexity of encoding programs. The first generation
+    of programming languages involved toggling of binary machine codes, which are
+    only a few hundred instructions long, into the computer''s front panel. When programs
+    evolved required IT experts to handle more complex instructions through symbolic
+    representations, the assembly language was developed. As programming methodologies
+    were enhanced, more high-level languages were introduced. One example is FORTRAN,
+    however, codes were not easy-to-understand yet.
+
+
+    Structured programming emerged during the 1960s that was used in C and Pascal
+    languages. These programs were characterized by local variables, rich control
+    constructs and stand-alone subroutines, among others. Even if they were considered
+    as power tools, they are still limited when handling very projects.
+
+
+    The demand for breaking through the barriers of encoding extremely large projects
+    paved way to the advent of object-oriented programming. It is a combination of
+    the best methodologies of structured programming plus new organizing concepts.
+    This programming style is characterized by the following:
+
+
+    +   - Encapsulation
+
+
+    By the name itself, encapsulation is a strategy that binds the programming code
+    and the data it manipulates and keeps them from outside interference. When code
+    and data are linked together, an object is created. This object-contains code
+    and data that are either private or public. A private code or data cannot be accessed
+    by any program that exists'
+  - '[PAGE 35]
+
+
+    outside said object. When it is public, then the other parts of the program are
+    able to access even if they are not within the object.
+
+
+    +   - Polymorphism
+
+
+    This concept is often described as creating a single interface for multiple methods.
+    It means you design a generic interface to a group of related activities. It further
+    reduces the complexity of the program by letting the same interface to be used
+    to specify a general class of action. A clear analogy is the steering wheel. No
+    matter what type of steering wheel, whether a manual steering or a power steering,
+    as long as you know how it works then you can drive any type of car.
+
+
+    +   - Inheritance
+
+
+    This process involves one object acquiring the properties of another object, which
+    supports the concept of hierarchical classification. To explain this, imagine
+    a red delicious watermelon which belongs to the classification watermelon. The
+    watermelon is further part of the fruit class, which belongs to a larger class
+    called food. The food class has certain qualities such as edible and nutritious,
+    that is further applied to its subclass fruit. The fruit has certain qualities
+    as well, such as juicy and sweet. Now for the watermelon, it also has attributes
+    specific to it, such as a tropical vine-like plant. Now combining all these qualities
+    makes a red delicious watermelon.
+
+
+    Object-oriented programming is characterized by the application and organization
+    of classes, objects and instances. These are actually the components that make
+    up a Java program and are interconnected with one another.
+
+
+    +   - Class - Considered the highest group, class encompasses everything in object-oriented
+    programming.
+
+
+    +   - Object - Specifications set by the classes are being applied to the objects
+    that are not loaded into the computer''s memory. They are also instances of a
+    class that act as blueprints ready to be used when'
+  - '[PAGE 36]
+
+
+    needed. Thus, one class can have any number of objects associated with it (can
+    even have zero objects).
+
+
+    +   - Instance - Can be the same as objects since they describe an individual
+    instantiation.
+
+
+    To understand their relationship with one another, imagine that you are developing
+    a computer program that will keep track of the students enrolling in a school.
+    Each student has a distinctive feature – hair style, eye color, skin complexion,
+    height, weight and many more. In your OOP program, each student is an object.
+    Now, even if the students differ from one another, they share the same list of
+    physical features. These attributes or characteristics need to be compiled into
+    a master list, which we call a class.
+
+
+    # First Simple Java Program
+
+
+    Let us try again to encode a short sample program by following these instructions:
+
+
+    +   1. Launch Eclipse. Click FILE > NEW > JAVA PROJECT. Name your new project
+    as EXAMPLE.'
+  - '[PAGE 37]
+
+
+    2. Create a new EXAMPLE class. Click FILE > NEW > CLASS > Type EXAMPLE for the
+    class name.
+
+
+    3. Enter, compile and run the following program:
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_37_0.png)
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_37_1.png)
+
+
+    # Encoding the Java program'
+  - '[PAGE 38]
+
+
+    In Java, a source file is called a compilation unit and the name that you give
+    a source file is very important. By convention, the name of the main class should
+    match the name of the file that holds the program. Note that Java programming
+    is case sensitive, which means the compiler distinguishes between lowercase and
+    uppercase letters. Also, the filename extension required by the compiler is java.
+    Following this programming convention makes it easier to organize and keep track
+    of your lines of code. Also, if you change the capitalization or the naming convention,
+    the whole program becomes meaningless and will stop working. So for this activity,
+    we named it Example.java (since the public class defined by the program is also
+    Example).
+
+
+    # Compiling the Java Program
+
+
+    In this stage, the compiler javac is being executed and creates a file called
+    Example.class that contains the bytecode version of the program. In the previous
+    discussion, the bytecode is executed by the Java Virtual Machine. To actually
+    run the program, use the Java interpreter called java by passing the class name
+    Example as a command-line argument as shown below:
+
+
+    Java Example
+
+
+    The following output is displayed when the program is run:
+
+
+    # Java is essential to the Web
+
+
+    During compilation, each individual class is placed into its own output file named
+    after the class with .class extension. It has been a convention to name your Java
+    source file the same as the class file so that when you execute the Java interpreter,
+    you are actually specifying the name of the class that you want to be executed.
+
+
+    # Parts of the Java Program
+
+
+    +   - Comments'
+- md: '
+
+    Comments are the descriptive parts of the program that explain what the codes
+    are all about. They are special sections of text that improve the program’s readability
+    - helping people understand the operation of the program. Basically, these are
+    the words that humans read but the compiler totally ignores. There are two types
+    of comments, depending on how you write them:
+
+
+    ## 1. One-Line or End-of-Line Comment
+
+
+    Starting with two slashes, this comment text is short enough to fit on one line.
+    It is also written at the end of a line of code. In the previous simple Java program
+    example, the one-line comment that we have is:
+
+
+    ```
+
+    // A Java program begins with a call to main ().
+
+    ```
+
+
+    Everything is ignored by the compiler starting from the first slash up to the
+    end of the line.
+
+
+    ## 2. Block or Multi-Line Comment
+
+
+    This type is characterized by multiple one-line comments (meaning, your comment
+    text is too long to fit in one line). However, the two slashes are replaced with
+    an opening "/*" at the start of the comment and ends with a closing "*/" (to save
+    time in writing "/" for every line). Again, the compiler ignores everything between
+    the two slashes. In the previous simple Java program example, we have:
+
+
+    ```
+
+    /*
+
+    * This is a simple Java program
+
+    *
+
+    * Call this file Example.java
+
+    */
+
+    ```
+
+
+    Prologue is a version of a block comment that is placed at the top or very beginning
+    of your programs. It contains important information about the code so that every
+    programmer will be able to get an idea what the program is all about just merely
+    glancing at it. Usually, the prologue is enclosed in a box of asterisks and includes
+    the following information: filename, programmer’s name and program description.
+    If we are to modify the block comment above, it will look like this:
+
+
+    ```
+
+    /****************************************************************
+
+    * Example.java
+
+    * Felix & Schatz
+
+    *
+
+    * This is a simple program that displays "Java is essential to the Web" on your
+    PC screen
+
+    *****************************************************************/
+
+    ```
+
+
+    ### - Class Heading
+
+
+    We now move to the next line in our first simple Java program:
+
+
+    ```
+
+    public class Example {
+
+    ```
+
+
+    This program line is called the class heading or class declaration, which is composed
+    of 4 parts – the 3 words and the open curly brace (actually the entire program
+    is considered as a class). Let''s discuss each one of them.
+
+
+    The two words, public and class are what we call reserved words or keywords. Such
+    words are used for a particular purpose as defined by the Java language. You cannot
+    redefine or use them to mean something else, like making them as names for your
+    program. Below is a list of the common keywords in Java language:
+
+
+    | abstract | assert | boolean | break | Byte |
+
+    |---|---|---|---|---|
+
+    | case | catch | char | class | const |
+
+    | continue | default | do | double | else |
+
+    | enum | extends | final | finally | float |
+
+    | for | goto | if | implements | import |
+
+    | instanceof | int | interface | long | native |
+
+    | new | package | private | protected | public |
+
+    | return | short | static | strictfp | super |
+
+    | switch | synchronized | this | throw | throws |
+
+    | transient | try | void | volatile | while |
+
+
+    Analyzing each word, **class** is a marker that signifies the start of the class
+    or the beginning of the program. It also states that a new class is being defined.
+    In our first simple program, **Example** is the name of the class. On the other
+    hand, **public** is an access modifier that controls how the class is being accessed
+    (in this case, the information can be accessed by all other classes). If it was
+    set to **private** instead of public, then only the current class has the access
+    to it. Finally, the only curly brace "{" indicates the beginning of the class
+    and has a corresponding closing brace "}" at the end of the entire program. Always
+    coming in pairs, braces identify groupings of code for both the programmer and
+    the computer.
+
+
+    ### - Main Method''s Heading
+
+
+    After the class, the main method heading comes next. Method is a subroutine in
+    Java language that is the line of code which the program will begin executing.
+    It is simply a list of things to do. In our example, the main method has the following
+    form:
+
+
+    ```
+
+    public static void main(String args[]) {
+
+    ```
+
+
+    Again, **public** is an access modifier keyword, which indicates that everyone
+    can access the main method outside the class in which it was defined or declared.
+    **Static**, also another reserved word, denotes that the method can be accessed
+    immediately. The third reserved word is **void** that signifies the main method
+    returns nothing (in some programs it could return a value).
+
+
+    Any information that is needed to pass to a method is received by variables specified
+    within the set of parentheses that follow the name of the method. These variables
+    are also called parameters and in our example it is only (**String args[]**. The
+    declared parameter named args represents the arguments that the main method takes.
+    **String** is the argument''s type that stores sequences of characters. The square
+    brackets "[]" symbolizes that it is an array of objects of type strings. Even
+    if there are no parameters required, you still need to indicate the empty parentheses.
+
+
+    ### - System.out.println
+
+
+    Based on our first simple Java program example, our main method contains the following
+    line:
+
+
+    ```
+
+    System.out.println("Java is essential to the Web");
+
+    ```
+
+
+    **System.out.println** is a programming code that gives instructions to the computer
+    to print something out. Let us discuss every part of it. **System** refers to
+    the computer and when it becomes **System.out** it pertains to the monitor, which
+    is the output device of the computer system. **println** is a built-in method
+    that prints text to the console.
+
+    '
+  mdcn: '
+
+    注释是程序中的描述性部分，用于解释代码的含义。它们是特殊的文本区域，可以提高程序的可读性——帮助人们理解程序的运行。基本上，这些是人类阅读但编译器完全忽略的单词。根据编写方式的不同，注释分为两种：
+
+
+    ## 1. 单行注释或行尾注释
+
+
+    这种注释以两个斜杠开头，其注释内容足够短，可以放在的一行内。它也可以写在代码行的末尾。在之前的简单 Java 程序示例中，我们的单行注释是：
+
+
+    ```
+
+    // A Java program begins with a call to main ().
+
+    ```
+
+
+    编译器从第一个斜杠开始到该行结束的所有内容都会被忽略。
+
+
+    ## 2. 块注释或多行注释
+
+
+    这种类型的特点是包含多个单行注释（这意味着你的注释文本太长，无法放在一行内）。然而，两个斜杠被替换为注释开始时的符号"/*"，并以结束符号"*/"结尾（为了节省每行都写
+    "/" 的时间）。同样，编译器会忽略两个斜杠之间的所有内容。在之前的简单 Java 程序示例中，我们有：
+
+
+    ```
+
+    /*
+
+    * This is a simple Java program
+
+    *
+
+    * Call this file Example.java
+
+    */
+
+    ```
+
+
+    序言（Prologue）是块注释的一种版本，放置在程序的顶部或最开始。它包含了关于代码的重要信息，以便每位程序员都能一眼看出程序的大致内容。通常，序言被包含在一个星号框中，并包含以下信息：文件名、程序员姓名和程序描述。如果我们要修改上面的块注释，它看起来像这样：
+
+
+    ```
+
+    /****************************************************************
+
+    * Example.java
+
+    * Felix & Schatz
+
+    *
+
+    * This is a simple program that displays "Java is essential to the Web" on your
+    PC screen
+
+    *****************************************************************/
+
+    ```
+
+
+    ### - 类头
+
+
+    我们现在移动到第一个 Java 程序的下一行：
+
+
+    ```
+
+    public class Example {
+
+    ```
+
+
+    这行程序代码被称为类头或类声明，它由 4 部分组成—— 3 个单词和左大括号（实际上，整个程序被视为一个类）。让我们讨论一下每一个。
+
+
+    这两个单词 `public` 和 `class` 是我们所说的保留字或关键字。这些单词用于 Java 语言定义的特定用途。你不能重新定义它们，也无法为了用它们来表示其他含义，例如将它们作为程序的名称。以下是
+    Java 语言中常见的关键字列表：
+
+
+    | abstract | assert | boolean | break | Byte |
+
+    |---|---|---|---|---|
+
+    | case | catch | char | class | const |
+
+    | continue | default | do | double | else |
+
+    | enum | extends | final | finally | float |
+
+    | for | goto | if | implements | import |
+
+    | instanceof | int | interface | long | native |
+
+    | new | package | private | protected | public |
+
+    | return | short | static | strictfp | super |
+
+    | switch | synchronized | this | throw | throws |
+
+    | transient | try | void | volatile | while |
+
+
+    分析每个单词，**class** 是一个标记类开始或程序开始的标记。它还表示正在定义一个新类。在我们第一个简单程序中，**Example** 是类的名称。另一方面，**public**
+    是一个访问修饰符，用于控制类的访问方式（在这种情况下，信息可以被所有其他类访问）。如果它被设置为 **private** 而不是 public，那么只有当前类有权访问它。最后，唯一的左大括号
+    "{" 表明了类的开始，并在整个程序的结束处有一个对应的右大括号 "}"。括号总是成对出现，它们为程序员和计算机识别代码分组。
+
+
+    ### - Main 方法头
+
+
+    在类之后，接下来是 main 方法头。方法是 Java 语言中的一个子程序，是程序开始执行的代码行。它简单来说是一份待事项列表。在我们的示例中，main 方法的形式如下：
+
+
+    ```
+
+    public static void main(String args[]) {
+
+    ```
+
+
+    同样，**public** 是一个访问修饰符关键字，表示每个人都可以访问定义或声明该方法的类外部。**Static** 是另一个保留字，表示该方法可以被立即访问。第三个保留字是
+    **void**，表示 main 方法不返回任何内容（在某些程序中它可以返回一个值）。
+
+
+    任何需要传递给方法的信息通过方法名后括号内指定的变量来接收。这些变量也称为参数，在我们的示例中，只有一个 (**String args[]**。声明的名为
+    args 的参数代表 main 方法接收的参数。**String** 是参数的类型，用于存储字符序列。方括号 "[]" 符号表示这是一个字符串类型对象的数组。即使不需要参数，你仍然需要指定空括号。
+
+
+    ### - System.out.println
+
+
+    根据我们的第一个简单 Java 程序示例，我们的 main 方法包含以下行代码：
+
+
+    ```
+
+    System.out.println("Java is essential to the Web");
+
+    ```
+
+
+    **System.out.println** 是一段程序代码，向计算机给出打印指令。让我们讨论它的每一个部分。**System** 指代计算机，当它变成 **System.out**
+    时，指的是显示器，即计算机系统的输出设备。**println** 是一个在控制台打印文本的内置方法。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 39]
+
+
+    Comments are the descriptive parts of the program that explain what the codes
+    are all about. They are special sections of text that improve the program’s readability
+    - helping people understand the operation of the program. Basically, these are
+    the words that humans read but the compiler totally ignores. There are two types
+    of comments, depending on how you write them:
+
+
+    # 1. One-Line or End-of-Line Comment
+
+
+    Starting with two slashes, this comment text is short enough to fit on one line.
+    It is also written at the end of a line of code. In the previous simple Java program
+    example, the one-line comment that we have is:
+
+
+    ```
+
+    // A Java program begins with a call to main ().
+
+    ```
+
+
+    Everything is ignored by the compiler starting from the first slash up to the
+    end of the line.
+
+
+    # 2. Block or Multi-Line Comment
+
+
+    This type is characterized by multiple one-line comments (meaning, your comment
+    text is too long to fit in one line). However, the two slashes are replaced with
+    an opening "/*" at the start of the comment and ends with a closing "*/" (to save
+    time in writing "/" for every line). Again, the compiler ignores everything between
+    the two slashes. In the previous simple Java program example, we have:
+
+
+    ```
+
+    /*
+
+    * This is a simple Java program
+
+    *
+
+    * Call this file Example.java
+
+    */
+
+    ```
+
+
+    Prologue is a version of a block comment that is placed at the top or very beginning
+    of your programs. It contains important information about the code so that every
+    programmer will be able to get an idea what the program is all about just merely
+    glancing at it. Usually, the prologue is enclosed in a box of asterisks and includes
+    the following information: filename, programmer’s name and program description.
+    If we are to modify the block comment above, it will look like this:'
+  - '[PAGE 40]
+
+
+    /****************************************************************
+
+    * Example.java
+
+    * Felix & Schatz
+
+    *
+
+    * This is a simple program that displays "Java is essential to the Web" on your
+    PC screen
+
+    *****************************************************************/
+
+
+    +   - Class Heading
+
+
+    We now move to the next line in our first simple Java program:
+
+
+    ```
+
+    public class Example {
+
+    ```
+
+
+    This program line is called the class heading or class declaration, which is composed
+    of 4 parts – the 3 words and the open curly brace (actually the entire program
+    is considered as a class). Let''s discuss each one of them.
+
+
+    The two words, public and class are what we call reserved words or keywords. Such
+    words are used for a particular purpose as defined by the Java language. You cannot
+    redefine or use them to mean something else, like making them as names for your
+    program. Below is a list of the common keywords in Java language:
+
+
+    | abstract | assert | boolean | break | Byte |
+
+    |---|---|---|---|--|
+
+    | case | catch | char | class | const |
+
+    | continue | default | do | double | else |
+
+    | enum | extends | final | finally | float |
+
+    | for | goto | if | implements | import |
+
+    | instanceof | int | interface | long | native |
+
+    | new | package | private | protected | public |
+
+    | return | short | static | strictfp | super |
+
+    | switch | synchronized | this | throw | throws |'
+  - '[PAGE 41]
+
+
+    | transient | try | void | volatile | while |
+
+
+    Analyzing each word, **class** is a marker that signifies the start of the class
+    or the beginning of the program. It also states that a new class is being defined.
+    In our first simple program, **Example** is the name of the class. On the other
+    hand, **public** is an access modifier that controls how the class is being accessed
+    (in this case, the information can be accessed by all other classes). If it was
+    set to **private** instead of public, then only the current class has the access
+    to it. Finally, the only curly brace“ indicates the beginning of the class and
+    has a corresponding closing brace ”” at the end of the entire program. Always
+    coming in pairs, braces identify groupings of code for both the programmer and
+    the computer.
+
+
+    +   - **Main Method''s Heading**
+
+
+    After the class, the main method heading comes next. Method is a subroutine in
+    Java language that is the line of code which the program will begin executing.
+    It is simply a list of things to do. In our example, the main method has the following
+    form:
+
+
+    ```
+
+    public static void main(String args[]) {
+
+    ```
+
+
+    Again, **public** is an access modifier keyword, which indicates that everyone
+    can access the main method outside the class in which it was defined or declared.
+    **Static**, also another reserved word, denotes that the method can be accessed
+    immediately. The third reserved word is **void** that signifies the main method
+    returns nothing (in some programs it could return a value).
+
+
+    Any information that is needed to pass to a method is received by variables specified
+    within the set of parentheses that follow the name of the method. These variables
+    are also called parameters and in our example it is only (**String args[]**. The
+    declared parameter named args represents the arguments that the main method takes.
+    **String** is the argument''s type that stores sequences of characters. The square
+    brackets “[]” symbolizes that it is an array of objects of type strings. Even
+    if there are no parameters required, you still need to indicate the empty parentheses.'
+  - '[PAGE 42]
+
+
+    +   - System.out.println
+
+
+    Based on our first simple Java program example, our main method contains the following
+    line:
+
+
+    System.out.println("Java is essential to the Web");
+
+
+    **System.out.println** is a programming code that gives instructions to the computer
+    to print something out. Let us discuss every part of it. **System** refers to
+    the computer and when it becomes **System.out** it pertains to the monitor, which
+    is the output device of the computer system. The next word, **println** (read
+    as "print line") is a built-in Java method that is in control of printing computer
+    messages. Overall, the line of code is what it refers to as **println** **method
+    call**. You simply call a method when you want to execute it. Please remember
+    that the first letter of a method call****ll is always in uppercase and the rest
+    will be lowercase.
+
+
+    The text enclosed in double quotation marks inside the parentheses is the message
+    to be printed out to the screen. These double quotes are in charge of grouping
+    the massages together. At the end of the line is a semi-colon that signifies the
+    end of the method call or programming statement (it is like period in the normal
+    English language). All programming statements to be executed in Java end with
+    a semicolon.
+
+
+    This chapter gave you a guide on how to start encoding using the Java programming
+    language. You also have a better picture of what are the different parts of a
+    simple program. In the next chapter, you will take programming to a higher level
+    by incorporating what you call a user input.'
+  - '[PAGE 43]
+
+
+    # Before We Continue, Here Are Other Books Our Readers Loved!
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_43_0.png)
+
+
+    # #1 Best Seller in Mathematical Set Theory
+
+
+    Learn JavaScript Programming Today With This Easy Step-By-Step Guide!
+
+
+    ⭐⭐⭐⭐⭐
+
+
+    Buy now with 1-Click®
+
+
+    http://amzn.to/1mBhUYM
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_43_1.png)
+
+
+    # Best Seller in Popular Counting & Numeration
+
+
+    Learn Python Programming Today With This Easy, Step-By-Step Guide!
+
+
+    ⭐⭐⭐⭐⭐
+
+
+    Buy now with 1-Click®
+
+
+    http://amzn.to/1WOBiy2'
+  - '[PAGE 44]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_44_0.png)
+
+
+    Best Seller in Fiber Optics Engineering
+
+
+    # Learn The Linux Operating System and Command Line Today!
+
+
+    ⭐⭐⭐⭐⭐
+
+
+    Buy now with 1-Click®
+
+
+    http://amzn.to/1QzQPKy
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_44_1.png)
+
+
+    #1 Best Seller in Functional Analysis
+
+
+    # All You Need To Learn To Drive Tons Of Traffic To Your Website Today!
+
+
+    ⭐⭐⭐⭐⭐
+
+
+    Buy now with 1-Click®
+
+
+    http://amzn.to/21HWFWb'
+  - '[PAGE 45]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_45_0.png)
+
+
+    # # 1 Best Seller in Web Site Design
+
+
+    Easily Create Your Own Eye-Catching, Professional Website or Blog Using WordPress
+    Today!
+
+
+    ⭐⭐⭐⭐⭐
+
+
+    Buy now with 1-Click®
+
+
+    http://amzn.to/1VHtxZi
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_45_1.png)
+
+
+    # Best Seller in Business Insurance
+
+
+    Launch Your Own Profitable eBay Business- Learn Everything You Need to Know to
+    Get Started Today!
+
+
+    ⭐⭐⭐⭐⭐
+
+
+    Buy now with 1-Click®
+
+
+    http://amzn.to/1R1vnCP
+
+
+    Thanks for checking out my other books, let''s now move on to Chapter 4 where
+    we you learn about User Input!'
+- md: '
+
+    # Chapter Four: User Input
+
+
+    In this chapter the concept of user input will be introduced and incorporated
+    into your Java programming language.
+
+
+    Based from the first simple Java program that we discussed earlier, you were not
+    asked to provide any form of input for the code execution. The lines of code just
+    displayed the message on the computer screen. In the real world, programming requires
+    a stable communication between the user and the machine. In Java language, this
+    is what we call Input/Output or I/O streams. In this scenario a-way communication
+    is created where the user provides an input for the computer to process and then
+    produces an output in return.
+
+
+    ## Getting the User Input
+
+
+    There is a built-in class called Scanner in Java language to easily get the user
+    input. What it does is acquires information from the input stream, either from
+    the keyboard or a file, and stores in a variable. However, the Scanner class is
+    not part of the core Java language so you need to tell the compiler where to find
+    it. For you to use this, you need to include this line of code at the top of your
+    program, just after the prologue section:
+
+
+    ```
+
+    import java.util.Scanner;
+
+    ```
+
+
+    Because of the additional statement, the Scanner class is being imported from
+    the java.util package. To call or execute this class in the program, you need
+    to use the following statement:
+
+
+    ```
+
+    Scanner InputVariableName = new Scanner(System.in);
+
+    ```
+
+
+    Now, the imported class Scanner was called to initialize a variable called InputVariableName
+    (you can change this name to whatever you like but make sure it is not a Java
+    keyword). This is followed by the assignment operator “=” that is in turn followed
+    by the programming code new Scanner(System.in).. This expression creates an object
+    and commands the program to store the value of the user input to InputVariableName.
+    Please take note of the coding convention in variable naming: first letter of
+    the words are always capitalized.
+
+
+    For us to utilize the output stream to show you what you have typed into the program,
+    we need to include the following print out statement:
+
+
+    ```
+
+    System.out.println(InputVariableName.next());
+
+    ```
+
+
+    The method nextLine() is included here that will instruct the program to return
+    a string value that was inserted into the current line. It also tells the program
+    to wait until it finishes searching for an input, so the program will not advance
+    until you type something and press the Enter key on the keyboard. Let us further
+    modify the println method by including an additive operator:
+
+
+    ```
+
+    System.out.println("You entered “ + InputVariableName.next());
+
+    ```
+
+
+    At this point, the output statement contains a textual information that will be
+    printed out together with the Scanner variable. The messages are combined using
+    the additive operator "+" found inside the parentheses. Now, when the user provides
+    an input, like for example "Johnny", then the program will display "You entered
+    Johnny" on the computer screen.
+
+
+    Our modified program will actually look like this:
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_48_0.png)
+
+
+    From the program above, the message "What is your name?" is displayed to prompt
+    you to enter your name. After you have typed your name and pressed enter (see
+    the text in green located in the Console Section), the program will display your
+    name after the words "You entered " on the screen.
+
+
+    The introduction of user input as described in this chapter had presented Java
+    environment as a two-way form of communication – between the software programmer
+    and the computer. You, as the user, will provide information for the computer
+    to process through the execution of the lines of Java code. The succeeding chapter
+    will now introduce the concept of variable declaration.
+
+
+    ## Chapter Five: Variable Declaration
+
+
+    Previously, we declared a variable to contain a text user input. If you want to
+    create more complex programs then you have to store value in variables. This chapter
+    will now focus on declaring variables as part of your programming style.
+
+
+    Assigning what type of variable to be used is done in a declaration statement
+    with the following syntax:
+
+
+    ```
+
+    <type> <list-of-variables-separated-by-commas>
+
+    ```
+
+
+    Examples:
+
+
+    ```
+
+    int rows, cols;
+
+    String companyName;
+
+    ```
+
+
+    Again, a variable is a placeholder, the thing stored in it is a value and the
+    kind of value that is stored in a variable is its type. Looking at the declaration
+    statements above, the word at the left (int, String) specifies the type for the
+    variable or variables at the right (rows, cols, companyName). By the way, a Java
+    variable can hold only one type of value and its value can change during program
+    execution. So in the examples above, rows and cols variables can hold only integers
+    while the second declaration statement the companyName variable can hold only
+    strings. Below are the basic variable types in Java language:
+
+
+    | Type Name | Description | Range of Values |
+
+    |---|---|---|
+
+    | Whole Number Types | | |
+
+    | int (Integer) | - simplest data type for handling numbers - no decimal points
+    - not ideal for precision data - default value is 0 | -2147483648 to 2147483647
+    |
+
+    | byte | - has the smallest range for number data type - contains an 8-bit signed
+    2s complement integer - default value is 0 | -128 to 127 |
+
+    | short | - contains 16-bit signed 2s integer - default value is 0 | -32768 to
+    32767 |
+
+    | long | - contains 64-bit signed 2s complement integer - default value is 0 |
+    -9223372036854775808 to 9223372036854775807 |
+
+    | Decimal Number Types float | - contains 32-bit IEEE 754 numerical values - contains
+    decimal points - default value is 0.0f | -3.4 x 10^38 to 3.4 x 10^38 |
+
+    | double | - contains 64-bit IEEE 754 numerical values - contains decimal points
+    - more precise than float - default value is 0.0d | -1.8 x 10^308 to 1.8 x 10^308
+    |
+
+    | Character Type string | - contains a sequence of alphanumeric characters - default
+    value is null | | |
+
+    | char | - accepts a single character as data and symbols | thousands of characters
+    |
+
+    | Logical Type | - default value is \u0000 (represents an empty space) | | |
+
+    | boolean | - default value is False | True, False | |
+
+
+    Please take note of the following declaration statements for each variable type:
+
+
+    - int AnyVariable; or int AnyVariable = 0;
+
+    - byte AnyVariable; or byte AnyVariable = 0;
+
+    - short AnyVariable; or short AnyVariable = 0;
+
+    - long AnyVariable; or long AnyVariable = 0L;
+
+    - float AnyVariable; or float AnyVariable = 0.0f;
+
+    - double AnyVariable; or double AnyVariable = 0.0d;
+
+    - String AnyVariable; or String AnyVariable = null;
+
+    - char AnyVariable;
+
+    - Boolean AnyVariable; or Boolean AnyVariable = false;
+
+    '
+  mdcn: '
+
+
+    # 第四章：用户输入
+
+
+    在本章中，我们将引入用户输入的概念并将其整合到 Java 编程语言中。
+
+
+    基于我们之前讨论的第一个简单 Java 程序，你并没有被为代码执行提供任何形式的输入。代码行只是在计算机屏幕上显示消息。在现实世界中，编程需要用户与机器之间建立稳定的通信。在
+    Java 语言中，我们称之为输入/输出或 I/O 流。在这种情况下，创建了一种双向通信，用户为计算机提供输入供其处理，然后产生输出作为反馈。
+
+
+    ## 获取用户输入
+
+
+    Java 语言中内置了一个名为 `Scanner` 的类，可以方便地获取用户输入。它的作用是从输入流（无论是键盘还是文件）中获取信息并将其存储在变量中。然而，`Scanner`
+    类不是 Java 语言的核心组成部分，因此你需要告诉编译器去哪里找到它。为了使用它，你需要在程序的顶部、紧接序言部分之后包含这行代码：
+
+
+    ```
+
+    import java.util.Scanner;
+
+    ```
+
+
+    由于这条额外的语句，`Scanner` 类正从 `java.util` 包中导入。要在程序中调用或执行此类，你需要使用以下语句：
+
+
+    ```
+
+    Scanner InputVariableName = new Scanner(System.in);
+
+    ```
+
+
+    现在，导入的 `Scanner` 类被用来初始化一个名为 `InputVariableName` 的变量（你可以将其更改为任何你，但要确保它不是 Java
+    关键字）。随后是赋值运算符 `=`，紧接着是编程代码 `new Scanner(System.in)`。这个表达式创建了一个对象，并命令程序将用户输入的值存储在
+    `InputVariableName` 中。请注意变量命名的命名规范：单词的首字母始终大写。
+
+
+    为了让我们能够利用输出流向你显示在程序中输入的内容，我们需要包含以下打印语句：
+
+
+    ```
+
+    System.out.println(InputVariableName.next());
+
+    ```
+
+
+    这里包含了 `nextLine()` 方法，它将指示程序返回插入到当前行的字符串值。它还会告诉程序等待直到完成对输入的搜索，因此在你输入某些内容并按下键盘上的
+    Enter 键之前，程序不会继续运行。让我们通过包含一个加运算符来进一步修改 `println` 方法：
+
+
+    ```
+
+    System.out.println("You entered “ + InputVariableName.next());
+
+    ```
+
+
+    此时，输出语句包含文本信息，该信息将与 `Scanner` 变量一起打印出来。消息是通过括号内的加运算符 `"+"` 组合的。现在，当用户提供输入时（例如输入
+    "Johnny"），程序将在计算机屏幕上显示 "You entered Johnny"。
+
+
+    我们修改后的程序实际上看起来如下：
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_48_0.png)
+
+
+    从上面的程序中，显示了消息“What is your name?”来提示你输入名字。当你输入名字并按下回车后（参见控制台部分中的绿色文本），程序将在屏幕上的“You
+    entered ” 之后显示你的名字。
+
+
+    本章所描述的用户输入的引入，将 Java 环境呈现为一种双向通信的形式——在软件程序员和计算机之间。你作为用户，将通过执行 Java 代码行提供信息供计算机处理。接下来的章节现在将介绍变量声明的概念。
+
+
+    ## 第五章：变量声明
+
+
+    之前，我们声明了一个变量来包含文本用户输入。如果你想创建更复杂的程序，就必须将值存储在变量中。本章将重点关注将变量声明作为你编程风格的一部分。
+
+
+    指定使用什么类型的变量是在声明语句中完成的，其语法如下：
+
+
+    ```
+
+    <type> <用逗号分隔的变量列表>
+
+    ```
+
+
+    示例：
+
+
+    ```
+
+    int rows, cols;
+
+    String companyName;
+
+    ```
+
+
+    再次，变量是一个占位符，存储在里面的是值，而存储在变量中的值的类型就是它的类型。查看上面的声明语句，左侧的单词（int, String）指定了右侧变量或多个变量（rows,
+    cols, companyName）的类型。顺便说一下，Java 变量只能持有一种类型的值，且其值可以在程序执行期间更改。因此在上面的示例中，`rows`
+    和 `cols` 变量只能持有整数，而第二个声明语句 `companyName` 变量只能持有字符串。以下是 Java 语言中的基本变量类型：
+
+
+    | 类型名称 | 描述 | 值范围 |
+
+    |---|---|---|
+
+    | 整数类型 | | |
+
+    | int (Integer) | - 处理数字的最简单数据类型 - 无小数点 - 不适合高精度数据 - 默认值为 0 | -2147483648 到 2147483647
+    |
+
+    | byte | - 数字数据类型中范围最小 - 包含一个 8 位符号二进制补码整数 - 默认值为 0 | -128 到 127 |
+
+    | short | - 包含 16 位符号二进制补码整数 - 默认值为 0 | -32768 到 32767 |
+
+    | long | - 包含 64 位符号二进制补码整数 - 默认值为 0 | -9223372036854775808 到 9223372036854775807
+    |
+
+    | 小数类型 float | - 包含 32 位 IEEE 754 数字 - 包含小数点 - 默认值为 0.0f | -3.4 x 10^38 到 3.4
+    x 10^38 |
+
+    | double | - 包含 64 位 IEEE 754 数字 - 包含小数点 - 比 float 更精确 - 默认值为 0.0d | -1.8 x 10^308
+    到 1.8 x 10^308 |
+
+    | 字符类型 string | - 包含字母数字字符序列 - 默认值为 null | | |
+
+    | char | 接受单个字符作为数据和符号 | 数千个字符 |
+
+    | 逻辑类型 | - 默认值为 \u0000（表示空格） | | |
+
+    | boolean | - 默认值为 False | True, False | |
+
+
+    请每个每个类型的以下声明语句：
+
+
+    - int AnyVariable; or int AnyVariable = 0;
+
+    - byte AnyVariable; or byte AnyVariable = 0;
+
+    - short AnyVariable; or short AnyVariable = 0;
+
+    - long AnyVariable; or long AnyVariable = 0L;
+
+    - float AnyVariable; or float AnyVariable = 0.0f;
+
+    - double AnyVariable; or double AnyVariable = 0.0d;
+
+    - String AnyVariable; or String AnyVariable = null;
+
+    - char AnyVariable;
+
+    - Boolean AnyVariable; or Boolean AnyVariable = false;
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 46]
+
+
+    # Chapter Four: User Input
+
+
+    In this chapter the concept of user input will be introduced and incorporated
+    into your Java programming language.
+
+
+    Based from the first simple Java program that we discussed earlier, you were not
+    asked to provide any form of input for the code execution. The lines of code just
+    displayed the message on the computer screen. In the real world, programming requires
+    a stable communication between the user and the machine. In Java language, this
+    is what we call Input/Output or I/O streams. In this scenario a-way communication
+    is created where the user provides an input for the computer to process and then
+    produces an output in return.
+
+
+    # Getting the User Input
+
+
+    There is a built-in class called Scanner in Java language to easily get the user
+    input. What it does is acquires information from the input stream, either from
+    the keyboard or a file, and stores in a variable. However, the Scanner class is
+    not part of the core Java language so you need to tell the compiler where to find
+    it. For you to use this, you need to include this line of code at the top of your
+    program, just after the prologue section:
+
+
+    ```
+
+    import java.util.Scanner;
+
+    ```
+
+
+    Because of the additional statement, the Scanner class is being imported from
+    the java.util package. To call or execute this class in the program, you need
+    to use the following statement:'
+  - '[PAGE 47]
+
+
+    Scanner InputVariableName = new Scanner(System.in);
+
+
+    Now, the imported class Scanner was called to initialize a variable called InputVariableName
+    (you can change this name to whatever you like but make sure it is not a Java
+    keyword). This is followed by the assignment operator “=” that is in turn followed
+    by the programming code new Scanner(System.in).. This expression creates an object
+    and commands the program to store the value of the user input to InputVariableName.
+    Please take note of the coding convention in variable naming: first letter of
+    the words are always capitalized.
+
+
+    For us to utilize the output stream to show you what you have typed into the program,
+    we need to include the following print out statement:
+
+
+    System.out.println(InputVariableName.next());
+
+
+    The method nextLine() is included here that will instruct the program to return
+    a string value that was inserted into the current line. It also tells the program
+    to wait until it finishes searching for an input, so the program will not advance
+    until you type something and press the Enter key on the keyboard. Let us further
+    modify the println method by including an additive operator:
+
+
+    System.out.println("You entered “ + InputVariableName.next());
+
+
+    At this point, the output statement contains a textual information that will be
+    printed out together with the Scanner variable. The'
+  - '[PAGE 48]
+
+
+    messages are combined using the additive operator "+" found inside the parentheses.
+    Now, when the user provides an input, like for example "Johnny", then the program
+    will display "You entered Johnny" on the computer screen.
+
+
+    Our modified program will actually look like this:
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_48_0.png)
+
+
+    From the program above, the message "What is your name?" is displayed to prompt
+    you to enter your name. After you have typed your name and pressed enter (see
+    the text in green located in the Console Section), the program will display your
+    name after the words "You entered " on the screen.
+
+
+    The introduction of user input as described in this chapter had presented Java
+    environment as a two-way form of communication – between the software programmer
+    and the computer. You, as the user, will provide information for the computer
+    to process through the'
+  - '[PAGE 49]
+
+
+    execution of the lines of Java code. The succeeding chapter will now introduce
+    the concept of variable declaration.'
+  - '[PAGE 50]
+
+
+    # Chapter Five: Variable Declaration
+
+
+    Previously, we declared a variable to contain a text user input. If you want to
+    create more complex programs then you have to store value in variables. This chapter
+    will now focus on declaring variables as part of your programming style.
+
+
+    Assigning what type of variable to be used is done in a declaration statement
+    with the following syntax:
+
+
+    ```
+
+    <type> <list-of-variables-separated-by-commas>
+
+    ```
+
+
+    Examples:
+
+
+    ```
+
+    int rows, cols;
+
+    String companyName;
+
+    ```
+
+
+    Again, a variable is a placeholder, the thing stored in it is a value and the
+    kind of value that is stored in a variable is its type. Looking at the declaration
+    statements above, the word at the left (int, String) specifies the type for the
+    variable or variables at the right (rows, cols, companyName). By the way, a Java
+    variable can hold only one type of value and its value can change during program
+    execution. So in the examples above, rows and cols variables can hold only integers
+    while the second declaration statement the companyName variable can hold only
+    strings. Below are the basic variable types in Java language:
+
+
+    | Type Name | Description | Range of Values |
+
+    |---|---|---||
+
+    | Whole Number Types | | | |'
+  - '[PAGE 51]
+
+
+    | int (Integer) | - simplest data type for handling numbers - no decimal points
+    - not ideal for precision data - default value is 0 | -2147483648 to 2147483647
+    |
+
+    | byte | - has the smallest range for number data type - contains an 8-bit signed
+    2s complement integer - default value is 0 | -128 to 127 |
+
+    | short | - contains 16-bit signed 2s integer - default value is 0 | -32768 to
+    32767 |
+
+    | long | - contains 64-bit signed 2s complement integer - default value is 0 |
+    -9223372036854775808 to 9223372036854775807 |
+
+    | Decimal Number Types float | - contains 32-bit IEEE 754 numerical values - contains
+    decimal points - default value is 0.0f | -3.4 x 10^38 to 3.4 x 10^38 |
+
+    | double | - contains 64-bit IEEE 754 numerical values - contains decimal points
+    - more precise than float - default value is 0.0d | -1.8 x 10^308 to 1.8 x 10^308
+    |
+
+    | Character Type string | - contains a sequence of alphanumeric characters - default
+    value is null | |
+
+    | char | - accepts a single character as | thousands of characters |'
+  - '[PAGE 52]
+
+
+    | | data | | and symbols |
+
+    |---|---|---||
+
+    | Logical Type | - default value is \u0000 (represents an empty space) | | |
+
+    | boolean | - default value is False | True, False | |
+
+
+    Please take note of the following declaration statements for each variable type:
+
+
+    +   * int AnyVariable; or int AnyVariable = 0;
+
+    * byte AnyVariable; or byte AnyVariable = 0;
+
+    * short AnyVariable; or short AnyVariable = 0;
+
+    * long AnyVariable; or long AnyVariable = 0L;
+
+    * float AnyVariable; or float AnyVariable = 0.0f;
+
+    * double AnyVariable; or double AnyVariable = 0.0d;
+
+    * String AnyVariable; or String AnyVariable = null;
+
+    * char AnyVariable;
+
+    * Boolean AnyVariable; or Boolean AnyVariable = false;
+
+
+    As you notice, String and Boolean are in uppercase letters. This is because they
+    are data types that happen to be a class names. Therefore, in code and conventional
+    text we will use uppercase S and B.
+
+
+    Previously we Example Java program accepts a string value from the user. This
+    time, we will alter the code so it will ask the user to enter an integer data
+    type. Let us say the program will display the user''s age after entering it. Take
+    a look at the new programming code below:'
+  - '[PAGE 53]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_53_0.png)
+
+
+    In the integer data type. we used nextInt() to instruct the program to save an
+    integer. Other data types that we can scan nextByte(), nextShort(), nextLong(),
+    nextFloat() and nextDouble().
+
+
+    If you need to create more complex operations in your programs that require multiple
+    input, then it is better to save the user input and declare the variable. In this
+    case, it is must that you already have an idea of what the data type of that variable
+    should be. By modifying the program above, we will now have:
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_53_1.png)'
+  - '[PAGE 54]
+
+
+    Based on the new program code, the Scanner variable InputVariableName was first
+    saved into MyVariableName and then was used to display the user-generated input
+    to the screen.
+
+
+    After you have learned the different variable types and how to properly declare
+    them, you will now be able to create programs with additional functionalities
+    and complexities. In the following chapter, another feature will be introduced
+    which is the application of the Java language operator.'
+- md: '
+
+    # Chapter Six: Operators
+
+
+    This chapter will describe the available operators that you can add to your lines
+    of code as you program more complex scenarios. Operators are mainly used to control,
+    modify and compare data in a Java language environment.
+
+
+    Since the beginning of this book, we have already been using the equal sign (=)
+    or the assignment operator, which works by assigning a compatible value into a
+    variable. In addition, arithmetic operators are used to control the value that
+    will be assigned to a variable. If you can remember the mathematical operators
+    you have learned in school, they will be the same operators you will need to perform
+    mathematical computation in Java programming. Gaining the knowledge on how to
+    use operators is an important requirement. All you need to understand are the
+    symbols for each operator and their functions.
+
+
+    # Arithmetic Operators
+
+
+    These are the most basic form of operators apart from the assignment operator.
+
+
+    - Additive Operator (+) – Returns the sum of two values
+
+    - Subtractive Operator (-) – Returns the difference of two values
+
+    - Multiplicative Operator (*) – Returns the product of two values
+
+    - Divisive Operator (/) - Returns the quotient of two values
+
+    - Remainder Operator (%) - Returns the remainder of values being divided
+
+
+    # Increment/Decrement Operators
+
+
+    These operators increase or decrease the value of the variable by 1.
+
+
+    - Increment (++) - Increase the value by 1
+
+    - Decrement (--) - Decrease the value by 1
+
+
+    They can also be used as a prefix or preincrement operator where "++" is placed
+    before the variable. This means that 1 is added to the variable''s value before
+    it being used in any other part of the program (the value will be adjusted immediately
+    when used). When "++" is placed after the variable then it becomes a postfix or
+    postincrement operator. This time, 1 is added to the variable''s value after the
+    variable is used in any other part of the program (the value will be returned
+    first before it is adjusted).
+
+
+    Example:
+
+
+    ```
+
+    MyVariableName = 23; - returned value is still 23
+
+    ```
+
+
+    ```
+
+    MyVariableName++; - returned value is adjusted to 24
+
+    ```
+
+
+    ```
+
+    ++MyVariableName;
+
+    ```
+
+
+    # Logical Operators
+
+
+    These operators, also called comparison operators, permit a degree of flow control
+    by comparing two values or set specific conditions. A Boolean value can be returned,
+    depending on the two values compared, that will determine whether a certain block
+    of code will be executed or not. This is the most basic form of logic in a computer
+    program.
+
+
+    - Is Equal to (==) Checks if two values are equal
+
+    - Is Not Equal to (!=) Checks if two values are not equal
+
+    - Is Greater than (>) Checks if the value to the left of the operator is greater
+    than the value to its right
+
+    - Is Less than (<) Checks if the value to the left of the operator is less than
+    the value to its right
+
+    - Is Greater than or Equal (>=) Checks if the value to the left of the operator
+    is greater than equal to the value to its right
+
+    - Is Less than or Equal (<=) Checks if the value to the left of the operator is
+    less than equal to the value to its right
+
+    - Logical AND (&&) Checks if both values are true
+
+    - Logical OR (||) Checks if at least one of the values is true
+
+
+    # Bit Wise Operators
+
+
+    These operators manipulate variables at the bit level in a primitive yet fast
+    way. Since they analyze binary numerals, which are the smallest unit of addressable
+    memory, they process execution in the quickest way possible.
+
+
+    - And (&) - A 2 equal-length binary operator that performs with the logic operator
+    "AND" and multiplies both elements with bits
+
+    - Not (~) - A unary operator that performs with the goal of logical negation and
+    complements the binary value of ones
+
+    - Or (|) - An operator that takes 2-bit patterns whose lengths are equal and performs
+    with the logic operator "OR" (results are either 0 or 1)
+
+    - Xor (^) - An operator that takes 2-bit patterns whose lengths are equal (results
+    are expected to be defined with a similar digit
+
+
+    Now that you have learned how to manipulate operators, you will be more adept
+    in understanding and automating more complex Java programs. Another programming
+    feature that will be introduced in the next chapter is flow control, which demonstrates
+    non-sequential lines of codes.
+
+
+    # Chapter Seven: Flow Control
+
+
+    This chapter will emphasize on a non-sequential method of Java programming. You
+    will get acquainted with the if-then-else and different loop statements.
+
+
+    With our previous simple program examples, you will get acquainted with the if-then-else
+    and different loop statements.
+
+
+    # If-Then-Else
+
+
+    This is the most basic flow control. The if-then-else statement allows the program
+    to execute different blocks of code based on a condition. If the condition is
+    true, the code inside the if block is executed. If it is false, the code inside
+    the else block (if present) is executed.
+
+
+    # Loops
+
+
+    This flow control allows methods to execute over again as long as a condition
+    is met. In Java, there are several types of loops:
+
+
+    - While loop: Considered the simplest kind of loop, the methods inside the while
+    block execute as long as the condition is true.
+
+    - Do-while loop: The main difference between this and a while loop is that the
+    do-while loop runs at least once before the condition is checked.
+
+    - For loop: This statement is declared with specific parameters control as to
+    when or how many times the methods are to be executed. Variables that can be used
+    to control the loop may be declared simultaneously within the loop itself.
+
+    '
+  mdcn: '
+
+
+    # 第六章：运算符
+
+
+    本章将描述当你在编写更复杂的场景时，可以添加到代码行中的可用运算符。运算符主要用于在 Java 语言环境中控制、修改和比较数据。
+
+
+    从本书的开始开始，我们已经一直在使用等号 (`=`) 或称为赋值运算符，它的工作原理是将兼容的值分配给变量。此外，算术运算符用于控制将赋值给变量的值。如果你能记住在学校学过的数学运算符，那么它们与你在
+    Java 编程中执行数学计算时所需的运算符将是相同的。掌握如何使用运算符的知识是一项重要要求。你只需要理解每个运算符的符号及其功能即可。
+
+
+    # 算术运算符
+
+
+    除了赋值运算符外，这些是最基础形式的运算符。
+
+
+    - 加法运算符 (+) – 返回两个值的之和
+
+    - 减法运算符 (-) – 返回两个值的之差
+
+    - 乘法运算符 (*) – 返回两个值的乘积
+
+    - 除法运算符 (/) - 返回两个值的商
+
+    - 取模运算符 (%) - 返回被除法数值的余数
+
+
+    # 递增/递减运算符
+
+
+    这些运算符将变量的值增加或减小 1。
+
+
+    - 递增 (++) – 将值增加 1
+
+    - 递减 (--) – 将值减小 1
+
+
+    它们也可以作为前缀或前递增运算符使用，即将 "++" 放在变量之前。这意味着在程序的任何其他部分使用之前，1 会先加到变量上（值在使用时会立即进行调整）。当
+    "++" 放在变量之后时，它就变成了后置或后递增运算符。此时，在变量用于程序的任何其他部分之后，1 才会加到变量上（先返回值再进行调整）。
+
+
+    示例：
+
+
+    ```
+
+    MyVariableName = 23; - 返回值仍为 23
+
+    ```
+
+
+    ```
+
+    MyVariableName++; - 返回值调整为 24
+
+    ```
+
+
+    ```
+
+    ++MyVariableName;
+
+    ```
+
+
+    # 逻辑运算符
+
+
+    这些运算符也称为比较运算符，通过比较两个值或设置特定条件来实现某种程度的流程控制。根据所比较的两个值可以返回一个布尔值，这将决定某个代码块是否会被执行。这是计算机程序中最基础的逻辑形式。
+
+
+    - 等于 (==) 检查两个值是否相等
+
+    - 不等于 (!=) 检查两个值是否不等
+
+    - 大于 (>) 检查运算符左侧的值是否大于右侧的值
+
+    - 小于 (<) 检查运算符左侧的值是否小于右侧的值
+
+    - 大于或等于 (>=) 检查运算符左侧的值是否大于等于右侧的值
+
+    - 小于或等于 (<=) 检查运算符左侧的值是否小于等于右侧的值
+
+    - 逻辑与 (&&) 检查两个值是否为真
+
+    - 逻辑或 (||) 检查是否至少有一个值为真
+
+
+    # 位运算符
+
+
+    这些运算符以一种原始但快速的方式在比特位层级上操作变量。由于它们分析的是二进制数字（可寻址内存的最小单位），因此它们以最快的方式处理执行。
+
+
+    - 与 (&) - 一种等长度的二进制运算符，执行逻辑运算符“与 (AND)”，并对两个元素的位进行乘法运算
+
+    - 非 (~) - 一种一元运算符，执行目标是逻辑取反，并补码二进制值中的1
+
+    - 或 (|) - 一种接收两个长度相等的位模式的运算符，执行逻辑运算符“或 (OR)”（结果为 0 或 1）
+
+    - 异或 (^) - 一种接收两个长度相等的位模式的运算符（预期结果由相似的数字定义）
+
+
+    现在你已经学会了如何操作运算符，你将更擅长理解和自动化更复杂的 Java 程序。下一章将引入的另一个编程特性是流程控制，它展示了非顺序的代码。
+
+
+    # 第七章：流程控制
+
+
+    本章将强调 Java 编程的非顺序方法。你将熟悉 if-then-else 以及不同的循环语句。
+
+
+    通过之前的简单程序示例，你将熟悉 if-then-else 和不同的循环语句。
+
+
+    # If-Then-Else
+
+
+    这是最基础的流程控制。if-then-else 允许程序根据条件执行不同的代码块。如果条件为真，则执行 if 块中的代码。如果为假，则执行 else 块中的代码（如果存在）。
+
+
+    # 循环
+
+
+    这种流程控制允许方法在满足条件的情况下重复执行。在 Java 中有几种类型的循环：
+
+
+    - While 循环：被认为是最简单的循环，只要条件为真，while 块中的方法就会执行。
+
+    - Do-while 循环：它与 while 循环的主要区别是 do-while 循环在检查条件之前至少运行一次。
+
+    - For 循环：该语句通过特定的参数来控制执行方法的时间或次数。用于控制循环的变量可以在循环内部同时声明。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 55]
+
+
+    # Chapter Six: Operators
+
+
+    This chapter will describe the available operators that you can add to your lines
+    of code as you program more complex scenarios. Operators are mainly used to control,
+    modify and compare data in a Java language environment.
+
+
+    Since the beginning of this book, we have already been using the equal sign (=)
+    or the assignment operator, which works by assigning a compatible value into a
+    variable. In addition, arithmetic operators are used to control the value that
+    will be assigned to a variable. If you can remember the mathematical operators
+    you have learned in school, they will be the same operators you will need to perform
+    mathematical computation in Java programming. Gaining the knowledge on how to
+    use operators is an important requirement. All you need to understand are the
+    symbols for each operator and their functions.
+
+
+    # Arithmetic Operators
+
+
+    These are the most basic form of operators apart from the assignment operator.
+
+
+    +   - Additive Operator (+) – Returns the sum of two values
+
+
+    +   - Subtractive Operator (-) – Returns the difference of two values
+
+
+    +   - Multiplicative Operator (*) – Returns the product of two values'
+  - '[PAGE 56]
+
+
+    Divisive Operator (/) - Returns the quotient of two values
+
+
+    Remainder Operator (%) - Returns the remainder of values being divided
+
+
+    # Increment/Decrement Operators
+
+
+    These operators increase or decrease the value of the variable by 1.
+
+
+    Increment (++) - Increase the value by 1
+
+
+    Decrement (--) - Decrease the value by 1
+
+
+    They can also be used as a prefix or preincrement operator where "++" is placed
+    before the variable. This means that 1 is added to the variable''s value before
+    it being used in any other part of the program (the value will be adjusted immediately
+    when used). When "++" is placed after the variable then it becomes a postfix or
+    postincrement operator. This time, 1 is added to the variable''s value after the
+    variable is used in any other part of the program (the value will be returned
+    first before it is adjusted).
+
+
+    Example:
+
+
+    ```
+
+    MyVariableName = 23; - returned value is still 23
+
+    ```
+
+
+    ```
+
+    MyVariableName++; - returned value is adjusted to 24
+
+    ```
+
+
+    ```
+
+    ++MyVariableName;
+
+    ```'
+  - '[PAGE 57]
+
+
+    # Logical Operators
+
+
+    These operators, also called comparison operators, permit a degree of flow control
+    by comparing two values or set specific conditions. A Boolean value can be returned,
+    depending on the two values compared, that will determine whether a certain block
+    of code will be executed or not. This is the most basic form of logic in a computer
+    program.
+
+
+    +   - Is Equal to (==) Checks if two values are equal
+
+
+    +   - Is Not Equal to (!= Checks if two values are not equal
+
+
+    +   - Is Greater than (>) Checks if the value to the left of the operator is greater
+    than the value to its right
+
+
+    +   - Is Less than (<) Checks if the value to the left of the operator is less
+    than the value to its right
+
+
+    +   - Is Greater than or Equal (>=) Checks if the value to the left of the operator
+    is greater than equal to the value to its right
+
+
+    +   - Is Less than or Equal (<=) Checks if the value to the left of the operator
+    is less than equal to the value to its right
+
+
+    +   - Logical AND (&&) Checks if both values are true
+
+
+    +   - Logical OR (||) Checks if at least one of the values is true'
+  - '[PAGE 58]
+
+
+    # Bit Wise Operators
+
+
+    These operators manipulate variables at the bit level in a primitive yet fast
+    way. Since they analyze binary numerals, which are the smallest unit of addressable
+    memory, they process execution in the quickest way possible.
+
+
+    +   - And (&) - A 2 equal-length binary operator that performs with the logic
+    operator "AND" and multiplies both elements with bits
+
+    - Not (~) - A unary operator that performs with the goal of logical negation and
+    complements the binary value of ones
+
+    - Or (|) - An operator that takes 2-bit patterns whose lengths are equal and performs
+    with the logic operator "OR" (results are either 0 or 1)
+
+    - Xor (^) - An operator that takes 2-bit patterns whose lengths are equal (results
+    are expected to be defined with a similar digit
+
+
+    Now that you have learned how to manipulate operators, you will be more adept
+    in understanding and automating more complex Java programs. Another programming
+    feature that will be introduced in the next chapter is flow control, which demonstrates
+    non-sequential lines of codes.'
+  - '[PAGE 59]
+
+
+    # Chapter Seven: Flow Control
+
+
+    This chapter will emphasize on a non-sequential method of Java programming. You
+    will get acquainted with the if-then-else and different loop statements.
+
+
+    With our previous simple program examples, we were oriented at a Java class is
+    executed in one direction – from the topmost line of code to the bottom, or what
+    we call sequential programming. However, there will be cases that you will be
+    required to write codes in a non-sequential fashion, especially for those more
+    complicated scenarios. This is accomplished using logical and looping statements,
+    so you can control the flow of your program to perform more complex functions.
+
+
+    # If-Then-Else
+
+
+    This is the most basic flow control statement that uses logical operators to determine
+    whether or not a specific condition is fulfilled. Let us add an if-then-else statement
+    to our first simple java program that will display whether the user is a minor
+    or not based on the age that he has provided. By the way, in this example, one
+    is considered a minor if the age is below 18 years old.'
+  - '[PAGE 60]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_60_0.png)
+
+
+    In this new set of programming codes, the condition tested is **if if** the value
+    of the user input **MyVariableName** provided is less than 18 or not. If it is,
+    then the methods in the **if block** will be executed - displaying a message on
+    the computer screen that the user is a minor (check the figure above). A block
+    is also called a compound statement. Otherwise, the **else block** will be executed
+    – notifying the user that is not a minor anymore (check the figure below). The
+    **else block** is actually optional, meaning without its codes the program will
+    proceed to the rest of the class in case the condition is not met. Please take
+    note that the parentheses around the condition and the braces surrounding the
+    statements that are inside the **if** and **else blocks**, are all required. Also
+    notice the indentation of the statements these symbols enclose.'
+  - '[PAGE 61]
+
+
+    # Loops
+
+
+    This flow control statement allows methods to be executed over and over again
+    as long as the specific conditions are met. In Java programming language, there
+    are three kinds of loops that can perform repetitive tasks. We will also modify
+    the simple program to do a countdown from 10 to 11 just to demonstrate the syntax
+    for these loops. Again, do not forget the parentheses around the conditions, the
+    braces and the indentations.
+
+
+    While loop – Considered as the simplest kind of "event driven" loop, this statement
+    will execute the methods inside the while block as long as the specific conditions
+    are met. Depending on the conditions set, this loop may never run even once.
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_61_0.png)'
+  - '[PAGE 62]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_62_0.png)
+
+
+    In the program example above, the MyVariableName was first set to a value of 10.
+    Next, the loop will check that while the variable is greater than 0, the program
+    will display the value of the MyVariableName in every new line and then decrement
+    it by 1. This will continue to run until MyVariableName is equal to 0. If at the
+    start of program execution, the value of MyVariableName is already equal or less
+    than 0, then the while loop will be bypassed.
+
+
+    Do-while loop – The main difference between this and a while loop is that the
+    methods inside the do-while loop is sure to run at least once before the condition
+    is checked. In contrast with the while loop, the do loop''s condition is indicated
+    at the bottom (this is the primary reason why the loop statement is executed at
+    least one time)'
+  - "[PAGE 63]\n\n# Example.java\n\n```\npublic class Example {\n    public static\
+    \ void main(String[] args) {\n        int myVariable = 10;\n        System.out.println(myVariable\
+    \ + \" is essential to the Web\");\n        while (myVariable > 0) {\n       \
+    \     System.out.println(myVariable);\n            myVariable--;\n        }\n\
+    \    }\n}\n```\n\nIn the program example above, again, the variable MyVariableName\
+    \ was first set to a value of 10. In the succeeding loop statement, no condition\
+    \ is checked yet. Instead, the do block will have to display the value of MyVariableName\
+    \ in every new line and then decrement it by 1 before the while condition is checked.\
+    \ This is what was discussed earlier that loop will run once once or not the conditions\
+    \ are met. Please take note of the semicolon at the right of the condition.\n\n\
+    For loop – This statement is declared with specific parameters control as to when\
+    \ or how many times the methods are to be executed. Variables that can be used\
+    \ to control the loop may be declared simultaneously within the loop itself. The\
+    \ form of the for loop statement is:\n\nfor (initialization; condition; iteration)\
+    \ statement;\n\nThe initialization part sets a loop variable to an initial value.\
+    \ The condition is a Boolean expression that tests the loop control variable whether\
+    \ it is true or false. If the result of that test is true, then the execution\
+    \ of the loop is continuously repeated. If it is false, then the loop stops."
+- md: "\n![](img/a5ade960699c3cf9f5e411120c13cbcc_64_0.png)\n\nIn this final example,\
+    \ you will notice that all the parameters were set at the beginning, when the\
+    \ for loop statement was declared. So in the for loop declaration, MyVariableName\
+    \ was set to a value of 10, the condition whether it is greater than 0 is checked\
+    \ and then its value is decremented by 1. After all these lines of code are performed\
+    \ or executed then the screen, each value of MyVariableName is displayed, each\
+    \ value on a separate line.\n\nIn reality, there are usually a multitude of ways\
+    \ to accomplish a certain programming task. However, a good practice as a programmer\
+    \ is always to code your programs in an elegant way that entails choosing the\
+    \ most appropriate loop. One has the option to be creative and flexible, but this\
+    \ sometimes leads to confusion.\n\nThrough this chapter, you have realized that\
+    \ Java programming is not only one-directional by integrating flow control through\
+    \ various looping statements. In the succeeding chapter, you will have a clearer\
+    \ image of what access modifiers are.\n\n## Chapter Eight: Access Modifiers\n\n\
+    We have already been talking about Java variables, classes, fields and methods.\
+    \ Whenever they are declared you will have to indicate how they are controlled\
+    \ and how they are accessed in the entire program. Whether they are restricted\
+    \ or not, their accessibility feature will be determined by access modifiers that\
+    \ this chapter will take a closer look at.\n\nDeciding on what modifier to use\
+    \ depends on your program’s goal and what you are really trying to achieve. The\
+    \ following are the different types of modifiers:\n\n### Default\n\nThis is the\
+    \ type that is assigned when there is no access modifier specified. Due to its\
+    \ absence, any command or function access a part of the program. However, its\
+    \ availability is only limited to access by fields that belong to a similar package.\
+    \ A program without a modifier can look effective but not quite clean. The level\
+    \ of access is usually open to the public but it is not included in an interface.\n\
+    \nExample:\n\n```\nString version = \" 1.00.1\"\n```\n\n```\nBoolean process_order\
+    \ () {\n    return true\n}\n```\n\nIn this example, the program declared a string\
+    \ order version at the beginning. Since a specific type of access modifier is\
+    \ undefined, any command or function can be used to access the program component.\
+    \ Therefore, **process_order** can be modified easily.\n\n### Private\n\nThis\
+    \ is the type of modifier that accommodates the most restrictive fields in the\
+    \ program. It cannot be accessed, thus, cannot also be used by any command or\
+    \ function. Let's say a particular instruction is from an unlisted source, it\
+    \ cannot be granted recognition.\n\nExample:\n\n```\npublic class arcadia extends\
+    \ bay {\n    private int name_of_residents;\n    private boolean in_city\n\n \
+    \   public arcadia () {\n        name_of_residents = joy;\n        in_city = false;\n\
+    \    }\n\n    private void shrill () {\n        system.out.println(quiet);\n \
+    \   }\n\n    public void action () {\n        system.out.println (talk);\n   \
+    \ }\n}\n```\n\nFor this example, the program defined a public class arcadia, which\
+    \ is allowed an extensive function bay. Although arcadia bay is set to public,\
+    \ some of its internal properties are set to private. In addition, since one of\
+    \ its internal components (action) is set to public, it can be acknowledged by\
+    \ different fields.\n\n### Public\n\nThis is the type of modifier that allows\
+    \ access from any other field. With a public access level, it is less troublesome\
+    \ for a programmer to visit other parts of his work. All the commands, functions\
+    \ and different components of the program belonging to the public class can be\
+    \ accessed through a recognized set of instructions in Java programming language.\
+    \ However, being publicly declared has some drawbacks or limitations. Even if\
+    \ all the commands and functions are set to public, they cannot be accessed by\
+    \ classes that belong to a different package.\n\nExample:\n\n```\npublic static\
+    \ void main(String arguments) {\n}\n```\n\n### Protected\n\nThis type of access\
+    \ modifier belongs to what we call a superclass and is characterized by being\
+    \ less hidden and secure compared to the default type. It also signifies two things:\n\
+    \n- it can only be accessed by the fields that are declared in a particular superclass\n\
+    - it can only be accessed by the subclasses of a similar package\n\nSuch categorization\
+    \ is implemented to improve program structure while limiting the access of an\
+    \ irrelevant element. Protected access modifiers also impose strict protocols\
+    \ and the application is limited (cannot be applied to classes and interfaces).\
+    \ If a field is not connected to any class or interface, then it can be declared\
+    \ as protected.\n\nExample:\n\n```\nclass seven_fields {\n    protected boolean\
+    \ open_fields(field1 sp) {\n        // implementation\n    }\n    Class opening_seven_fields(field1\
+    \ sp) {\n        // implementation\n    }\n}\n```\n\nIn this example, class seven_fields\
+    \ was declared and since it is under the protected access modifier, its Boolean\
+    \ logic open_fields is inaccessible with the use of just any function or command.\
+    \ Unless a new access modifier is declared, this particular part of the program\
+    \ cannot be modified.\n\nYou have learned from this chapter that whatever you\
+    \ want to achieve in developing a Java program will determine the appropriate\
+    \ type of access modifier to be used. Each of the four types of access modifiers\
+    \ has its own characteristic and functionality that will affect how objects are\
+    \ accessed in a given Java program. We will now take a closer look at the possible\
+    \ class variables and objects in the next chapter.\n\n## Chapter Nine: Classes\
+    \ and Objects\n\nYou have already been encountering Java classes and objects at\
+    \ this point in the previous chapters of this eBook. At this point in time, you\
+    \ will gain more knowledge on the available class variables and objects that you\
+    \ can employ to achieve the desired results of why you are programming in a Java\
+    \ environment.\n\n### Classes\n\nActing as blueprints of a Java program, classes\
+    \ are templates that describe the characteristics of an element or method. Basically,\
+    \ they are generic elements in Java programming. They also help a programmer to\
+    \ understand the coding system of another programmer, making its structure clear.\
+    \ Classes exist in the program as long as they desire, meaning they do not have\
+    \ a lifespan.\n\nThe following is a list of possible class variables:\n\n- Class\
+    \ - A class is a variable that needs to be declared before it enters a class,\
+    \ which can be found within any class and outside any method.\n- Instance - Instance\
+    \ is a variable that remains within a particular class but is outside a method.\
+    \ However, it is accessible from any other method once declared.\n- Local - Local\
+    \ is a variable that is defined inside any method in the program and requires\
+    \ initial declaration and acknowledgement. It is omitted after it has executed\
+    \ the command or function.\n\n### Objects\n\nJava objects are elements that possess\
+    \ behaviors and states. When elements are defined, they come with their own unique\
+    \ features that further add value to a program component without having to include\
+    \ an extensive feature. These are what you call instances of classes. Because\
+    \ of the behaviors and states of objects, methods are executed successfully. Furthermore,\
+    \ a particular object is associated with a unique function or command it will\
+    \ adhere to certain instructions. In contrast with a class, an object ceases to\
+    \ exist once the program has been executed.\n\nOne of the characteristics of object-oriented\
+    \ programming is organizing things and concepts. There are three object relationships\
+    \ that defines why elements should or should not be moved to another particular\
+    \ program component:\n\n- Is-a Relationship – this means that a type of object\
+    \ is more specific than its fellows (number 1 is a number)\n- Has-a relationship\
+    \ – this means that a type of object contains or is associated with another object\
+    \ (given number 1 and number 2: number 1 has a succeeding number, number 2)\n\
+    - Uses-a relationship – this means that a type of object will be using another\
+    \ object as a program progresses (given number 1, number 2 and number 3: number\
+    \ 1 uses a number 2 to arrive at the sum of number 3)\n"
+  mdcn: "\n\n![](img/a5ade960699c3cf9f5e411120c13cbcc_64_0.png)\n\n在最后一个示例中，你会注意到所有参数都是在声明\
+    \ `for` 循环语句时就已经设置好了。因此，在 `for` 循环声明中，`MyVariableName` 被设置为值 10，检查它是否大于 0，然后将其值减\
+    \ 1。在执行或运行完这些代码行之后，屏幕上会显示 `MyVariableName` 的每个值，每个值单独占一行显示。\n\n在现实中，通常有多种方法可以完成特定的编程任务。然而，作为一名程序员，良好的做法始终以一种优雅的方式编写程序，这需要选择最合适的循环。你可以选择创造力和灵活性，但有时这会导致困惑。\n\
+    \n通过本章的学习，你已经意识到 Java 编程通过各种循环语句整合了流控制，不仅仅是单向的。在接下来的章节中，你将对什么是访问修饰符有更清晰的认识。\n\n\
+    ## 第八章：访问修饰符\n\n我们已经讨论了 Java 变量、类、字段和方法。每当它们被声明时，你都必须指示它们在整个程序是如何被控制以及如何被访问的。无论它们是否受限，它们的可访问性将由本章将介绍的访问修饰符决定。\n\
+    \n决定使用哪种修饰符取决于程序的目标以及你真正想要实现的内容。以下是不同类型的修饰符：\n\n### 默认 (Default)\n\n这是在没有指定访问修饰符时分配的类型。由于它的缺失，任何命令或函数都可以访问程序的某个部分。然而，它的可用性仅限于访问属于相似包的字段。一个没有修饰符的程序可能看起来有效，但并不整洁。访问级别通常对公众开放，但并不包含在接口中。\n\
+    \n示例：\n\n```\nString version = \" 1.00.1\"\n```\n\n```\nBoolean process_order\
+    \ () {\n    return true\n}\n```\n\n在这个示例中，程序在开始声明了一个字符串订单版本。由于没有定义特定类型的访问修饰符，任何命令或函数都可以用来访问程序组件。因此，**process_order**\
+    \ 可以被轻松修改。\n\n### 私有 (Private)\n\n这种修饰符类型适用于程序中最限制性的字段。它无法被访问，因此也不能被任何命令或函数使用。假设某个特定指令来自未列出的源，它将无法获得识别。\n\
+    \n示例：\n\n```\npublic class arcadia extends bay {\n    private int name_of_residents;\n\
+    \    private boolean in_city\n\n    public arcadia () {\n        name_of_residents\
+    \ = joy;\n        in_city = false;\n    }\n\n    private void shrill () {\n  \
+    \      system.out.println(quiet);\n    }\n\n    public void action () {\n    \
+    \    system.out.println (talk);\n    }\n}\n```\n\n对于这个示例，程序定义了一个公共类 `arcadia`，它允许广泛的功能\
+    \ `bay`。虽然 `arcadia bay` 被设置为公有的，但它的一些内部属性被设置为私有的。此外，由于它的其中一个内部组件（`action`）被设置为公有的，它可以被不同的字段识别。\n\
+    \n### 公共 (Public)\n\n这种修饰符类型允许从任何其他字段访问。具有公有访问级别，程序员访问其工作的其他部分将不那么麻烦。属于公共类的所有命令、函数和不同组件都可以通过\
+    \ Java 编程语言中识别的指令集来访问。然而，声明为公有也有缺点或局限性。即使所有命令和函数都设置为公有，它们无法被属于不同包的类访问。\n\n示例：\n\
+    \n```\npublic static void main(String arguments) {\n}\n```\n\n### 保护 (Protected)\n\
+    \n这种访问修饰符属于我们所说的超类，其特点与默认类型相比，隐藏性和安全性更低一些。它还意味着两点：\n\n- 它只能由在特定超类中声明的字段访问\n- 它只能由相似包的子类访问\n\
+    \n实施这种分类是为了在限制无关元素访问的同时改进程序结构。保护访问修饰符还施加了严格的协议，且应用范围有限（不能应用于类和接口）。如果一个字段没有连接到任何类或接口，可以将其声明为保护的。\n\
+    \n示例：\n\n```\nclass seven_fields {\n    protected boolean open_fields(field1 sp)\
+    \ {\n        // implementation\n    }\n    Class opening_seven_fields(field1 sp)\
+    \ {\n        // implementation\n    }\n}\n```\n\n在这个示例中，声明了类 `seven_fields`，由于它处于保护访问修饰符下，其布尔逻辑\
+    \ `open_fields` 无法通过任何函数或命令访问。除非声明了新的访问修饰符，否则程序的这个特定部分无法被修改。\n\n你从本章中学到，你在开发 Java\
+    \ 程序时想要实现什么将决定使用哪种合适的访问修饰符类型。四种访问修饰符的每种都有其自身的特性和功能，这将影响在给定的 Java 程序中访问对象的方式。我们现在将在下一章更详细查看可能的类变量和对象。\n\
+    \n## 第九章：类和对象\n\n在这部电子书之前的几个章节中，你已经接触了 Java 类和对象。在此时，你将获得更多关于可用的类变量和对象的知识，你可以利用这些内容来实现你在这\
+    \ Java 环境中编程的预期结果。\n\n### 类 (Classes)\n\n类作为 Java 程序的蓝图，是描述元素或方法特征的模板。基本上，它们是\
+    \ Java 编程中的通用元素。它们还帮助程序员理解另一个程序员的编码系统，使其结构清晰。类在程序中一直存在，意味着它们没有寿命。\n\n以下是可能的类变量列表：\n\
+    \n- 类 (Class) - 类是一个在进入类之前就需要声明的变量，可以在任何类内部但在任何方法之外。\n- 实例 (Instance) - 实例是位于特定类内部但在方法之外的。然而，一旦声明，就可以从任何方法访问。\n\
+    - 局部 (Local) - 局部是定义在程序任何方法内部的变量，需要初始化和识别。它在执行命令或函数后会被移除。\n\n### 对象 (Objects)\n\
+    \nJava 对象是拥有行为和状态的元素。当元素定义时，它们带有独特的特征，可以在不包含广泛功能的情况下为程序组件增加价值。这些被称为类的实例。由于对象的行为和状态，方法可以成功执行。此外，特定的对象与特定的函数或命令关联，它将遵循某些指令。与类相反，对象在程序执行后将不再存在。\n\
+    \n"
+  merge: 0
+  raw:
+  - '[PAGE 64]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_64_0.png)
+
+
+    In this final example, you will notice that all the parameters were set at the
+    beginning, when the for loop statement was declared. So in the for loop declaration,
+    MyVariableName was set to a value of 10, the condition whether it is greater than
+    0 is checked and then decrement its value by 1. After all these lines of code
+    are performed or executed then the screen, each value of MyVariableName is displayed,
+    each value on a separate line
+
+
+    In reality, there are usually a multitude of ways to accomplish a certain programming
+    task. However, a good practice as a programmer is always to code your programs
+    in an elegant way that entails choosing the most appropriate loop. One has the
+    option to be creative and flexible, but this sometimes leads to confusion.
+
+
+    Through this chapter, you have realized that Java programming is not only one-directional
+    by integrating flow control through various looping statements. In the succeeding
+    chapter, you will have a clearer image of what access modifiers are.'
+  - '[PAGE 65]
+
+
+    # Chapter Eight: Access Modifiers
+
+
+    We have already been talking about Java variables, classes, fields and methods.
+    Whenever they are declared you will will have to indicate how they are controlled
+    and how they are accessed in the entire program. Whether they are restricted or
+    not, their accessibility feature will be determined by access modifiers that this
+    chapter will take a closer look at.
+
+
+    Deciding on what modifier to use depends on your program’s goal and what you are
+    really trying to achieve. The following are the different types of modifiers:
+
+
+    # Default
+
+
+    This is the type that is assigned when there is no access modifier specified.
+    Due to its absence, any command or function access a part of the program. However,
+    its availability is only limited to access by fields that belong to a similar
+    package. A program without a modifier can look effective but not quite clean.
+    The level of access is usually open to the public but it is not included in an
+    interface.
+
+
+    Example:
+
+
+    ```
+
+    String version = " 1.00.1"
+
+    ```
+
+
+    ```
+
+    Boolean process_order () {
+
+    ```'
+  - "[PAGE 66]\n\n```\nReturn true\n}\n```\n\nIn this example, the program declared\
+    \ a string order version at the beginning. Since a specific type of access modifier\
+    \ is undefined, any command of function can be used to access the program component.\
+    \ Therefore, **process_order** can be modified easily.\n\n# Private\n\nThis is\
+    \ the type of modifier that accommodates the most restrictive fields in the program.\
+    \ It cannot be accessed, thus, cannot also be used by any command or function.\
+    \ Let's say a particular instruction is from an unlisted source, it cannot be\
+    \ granted recognition.\n\nExample:\n\n```\npublic class arcadia extends bay {\n\
+    \    private int name_of_residents\n    private boolean in_city\n\n    public\
+    \ arcadia () {\n        name_of_residents = joy\n        in_city = false\n   \
+    \ }\n\n    private void shrill () {\n        system.out.println(quiet);\n    }\n\
+    \n    public void action ()\n```"
+  - '[PAGE 67]
+
+
+    ```
+
+    system.out.println (talk);
+
+    }
+
+    ```
+
+
+    For this example, the program defined a public class arcadia, which is allowed
+    an extensive function bay. Although arcadia bay is set to public, some of its
+    internal properties are set to private. In addition, since one of its internal
+    components (action) is set to public, it can be acknowledged by different fields.
+
+
+    # Public
+
+
+    This is the type of modifier that allows access from any other field. With a public
+    access level, it is less troublesome for a programmer to visit other parts of
+    his work. All the commands, functions and different components of the program
+    belonging to the public class can be accessed through a recognized set of instructions
+    in Java programming language. However, being publicly declared has some drawbacks
+    or limitations. Even if all the commands and functions are set to public, they
+    cannot be accessed by classes that belong to a different package.
+
+
+    Example:
+
+
+    ```
+
+    public static void (string arguments) {
+
+    }
+
+    ```
+
+
+    # Protected
+
+
+    This type of access modifier belongs to what we call a superclass and is characterized
+    by being less hidden and secure compared to the default type. It also signifies
+    two things:'
+  - "[PAGE 68]\n\n+   * it can only be accessed by the fields that are declared in\
+    \ a particular superclass\n* it can only be accessed by the subclasses of a similar\
+    \ package\n\nSuch categorization is implemented to improve program structure while\
+    \ limiting the access of an irrelevant element. Protected access modifiers also\
+    \ impose strict protocols and the application is limited (cannot be applied to\
+    \ classes and interfaces). If a field is not connected to any class or interface,\
+    \ then it can be declared as protected.\n\nExample:\n\n```\nclass seven_fields\n\
+    \    protected boolean open_fields(field1 sp)\n{\n    // implementation\n    Class\
+    \ opening_seven_fields(field1 sp) {\n    // implementation\n    }\n```\n\nIn this\
+    \ example, class seven_fields was declared and since it is under the protected\
+    \ access modifier, its Boolean logic open_fields is inaccessible with the use\
+    \ of just any function or command. Unless a new access modifier is declared, this\
+    \ particular part of the program cannot be modified."
+  - '[PAGE 69]
+
+
+    You have learned from this chapter that whatever you want to achieve in developing
+    a Java program will determine the appropriate type of access modifier to be used.
+    Each of the four types of access modifiers has its own characteristic and functionality
+    that will affect how objects are accessed in a given Java program. We will now
+    take a closer look at the possible class variables and objects in the next chapter.'
+  - '[PAGE 70]
+
+
+    # Chapter Nine: Classes and Objects
+
+
+    You have already been encountering Java classes and objects at this point in the
+    previous chapters of this eBook. At this point in time, you will gain more knowledge
+    on the available class variables and objects that you can employ to achieve the
+    desired results of why you are programming in a Java environment.
+
+
+    # Classes
+
+
+    Acting as blueprints of a Java program, classes are templates that describe the
+    characteristics of an element or method. Basically, they are generic elements
+    in Java programming. They also help a programmer to understand the coding system
+    of another programmer, making its structure clear. Classes exist in the program
+    as long as they desire, meaning they do not have a lifespan.
+
+
+    The following is a list of possible class variables:
+
+
+    +   - Class - A class is a variable that needs to be declared before it enters
+    a class, which can be found within any class and outside any method.
+
+
+    +   - Instance - Instance is a variable that remains within a particular class
+    but is outside a method. However, it is accessible from any other method once
+    declared.
+
+
+    +   - Local - Local is a variable that is defined inside any method in the program
+    and requires initial declaration and acknowledgement. It is omitted after it has
+    executed the command or function.'
+  - '[PAGE 71]
+
+
+    # Objects
+
+
+    Java objects are elements that possess behaviors and states. When elements are
+    defined, they come with their own unique features that further add value to a
+    program component without having to include an extensive feature. These are what
+    you call instances of classes. Because of the behaviors and states of objects,
+    methods are executed successfully. Furthermore, a particular object is associated
+    with a unique function or command it will adhere to certain instructions. In contrast
+    with a class, an object ceases to exist once the program has been executed.
+
+
+    One of the characteristics of object-oriented programming is organizing things
+    and concepts. There are three object relationships that defines why elements should
+    or should not be moved to another particular program component:
+
+
+    +   Is-a Relationship – this means that a type of object is more specific than
+    its fellows (number 1 is a number)
+
+
+    +   Has-a relationship – this means that a type of object contains or is associated
+    with another object (given number 1 and number 2: number 1 has a succeeding number,
+    number 2)
+
+
+    +   Uses-a relationship – this means that a type of object will be using another
+    object as a program progresses (given number 1, number 2 and number 3: number
+    1 uses a number 2 to arrive at the sum of number 3)'
+- md: "\nIt is important that you know how to work around with classes and objects\
+    \ when programming using the Java language since they are considered as the generic\
+    \ elements of the software. You have also learned how they are organized and their\
+    \ existing relationships with one another. For the last but not the least chapter,\
+    \ you will be given an idea on what constructors are all about.\n\n# Chapter Ten:\
+    \ Constructors\n\nOne of the many Java concepts that this chapter introduces is\
+    \ the importance of constructors. Constructors are one of the many method-like\
+    \ things that allow the declaration of elements or the creation of new objects.\n\
+    \nConstructors work as commands that need to match the other elements in a function\
+    \ whenever they are invoked. They are also either defined or provided by default\
+    \ in Java programming language. Default constructors can set parameters but are\
+    \ not designed to carry out specific tasks nor perform unique actions. They cannot\
+    \ even take any argument. An explicit version of a constructor is required to\
+    \ allow the execution of particular commands and functions.\n\nThe main goal of\
+    \ constructors is to initialize the call to a fellow constructor by declaring\
+    \ **special ()**. Upon the acknowledgement of a new constructor, a programmer\
+    \ is encouraged to create and set a parameter for the introduction of an object.\n\
+    \n## This\n\nThis constructor is used to pertain to a particular program component\
+    \ and most of the time it is used as reference to other constructors in a similar\
+    \ class, but in different parameter list.\n\nExample:\n\n```java\npublic class\
+    \ dolphin {\n  string name;\n  dolphin (string input) {\n\n  dolphin () {\n  \
+    \  this (\"kevin / kim\");\n  }\n\n  public static void main (string arguments\
+    \ []) [] {\n    dolphin p1 = new dolphin(\"abigail\");\n    dolphin p2 = new dolphin();\n\
+    \  }\n}\n```\n\nIn the example above, the constructor use of **this** refers to\
+    \ other constructors named **kevin** and **kim** under the public class dolphin.\
+    \ The strings have declared arguments and two batches of parameters are set –\
+    \ **abigail** for **p1** and default constructor for **p2**.\n\n# Super\n\nThis\
+    \ constructor is usually identified in the first line of the programming code\
+    \ since Java compilers do not return a value if **super** is not declared initially.\
+    \ This keyword invokes a superclass constructor.\n\nExample:\n\n```java\npublic\
+    \ class superclass_penta {\n  super superclass_penta [] {}\n}\nclass tonics extends\
+    \ superclass_penta {\n    tonics () {\n        super [];\n    }\n}\n```\n\nIn\
+    \ this example, **super** was used as a constructor that defines superclass_penta.\
+    \ It is categorized under the class **tonics**. Although a class is already known\
+    \ to be previously defined, the capability of a special constructor performance\
+    \ is possible.\n\nThis chapter has explained to you two constructors that you\
+    \ can use in Java programming – **this** and **super**. It is imperative that\
+    \ you know when to use these constructors for your program to run properly.\n\n\
+    # Here is a quick recap of what we covered in case you need a refresher on a certain\
+    \ step:\n\n- 1. You now have an understanding of how Java technology was developed\n\
+    2. You learnt how to install and setup Java software and other required program\
+    \ tools\n3. You learnt how to create a simple Java program\n4. You learnt how\
+    \ to include a user input feature in your Java program\n5. You learnt how to properly\
+    \ declare and manipulate variables\n6. You learnt how to modify the complexity\
+    \ of your Java program through operators\n7. You learnt how to perform non-sequential\
+    \ programming using flow control statements\n8. You learnt how to differentiate\
+    \ and use appropriately Java access modifiers\n9. You learnt how to work around\
+    \ classes and objects\n10. You also learnt how to correctly employ constructors\
+    \ in your Java program\n\n# Practice Exercises\n\n# Exercise #1:\n\nWrite a program\
+    \ that will display every command-line argument and the total number of arguments.\n\
+    \nCLUE: Use an array variable named *length* to determine the length of the array.\n\
+    \n# Exercise #2:\n\nWrite a program that will round off a series of ten random\
+    \ numbers from 0 to 100. Round each one of them, then display the result to the\
+    \ screen. Take note of the following:\n\n- Create a *class* and a *main()* method\
+    \ for the calculation.\n- Use the *for loop* statement.\n- Use the `Math.random()`\
+    \ to generate the ten random numbers. To get a number between 0 to 100, simply\
+    \ multiply the random number by 100.\n- Round the number using the `Math.round()`\
+    \ method. Rounding off is necessary because the `random()` method always returns\
+    \ a value less than 1.0.\n- Display the rounded number to the screen.\n\n# Exercise\
+    \ #3:\n\nWrite a program that will create a new *Parent* class under a main *Family*\
+    \ class. The objective is also to display the line of text “What a wonderful day!\"\
+    \ on the screen.\n\n# Practice Exercises Answers\n\n# Answer for Exercise #1:\n\
+    \n```java\npublic class MainPractice {\n    public static void main(String []\
+    \ args) {\n        for (int i = 0; i < args.length; i++) {\n            System.out.println(args[i]);\n\
+    \        }\n        System.out.print(\"Total Words: \" + args.length);\n    }\n\
+    }\n```\n\n# Answer for Exercise #2:\n\n```java\npublic class MathRandomRound {\n\
+    \    public static void main(String [] argh) {\n        for (int i = 0; i < 10;\
+    \ i++) {\n            double num = Math.random();\n            System.out.print(\"\
+    The number \" + num);\n            System.out.println(\" rounds to \" + Math.round(num));\n\
+    \        }\n    }\n}\n```\n\n# Answer for Exercise #3:\n\n```java\nclass Parent\
+    \ {\n}\npublic class Family {\n    public static void main(String[] args) {\n\
+    \        System.out.println(\"What a wonderful day!\");\n        Parent parent\
+    \ = new Parent();\n    }\n}\n```\n\n# Before You Go!\n\nI hope that you have enjoyed\
+    \ the basics of Java programming through this eBook and have tremendously benefited\
+    \ from reading it. I have ensured that my goal was met in writing this – to offer\
+    \ great value for your money without cutting corners in educating you what Java\
+    \ is all about. I believe you will now be confident enough in creating your own\
+    \ Java program by following the guidelines I have included in this eBook.\n\n\
+    I would also strongly recommend that you learn other programming languages so\
+    \ that you may be able to take your knowledge to the next and become a top-class\
+    \ programmer and because you have gone through this course, you will be astonished\
+    \ to find that your learning other languages is easier than expected, for JavaScript\
+    \ has strikingly paved the way for you.\n"
+  mdcn: "\n在使用 Java 语言进行编程时，了解如何处理类和对象至关重要，因为它们被视为软件的通用元素。你已经学习了它们是如何组织的，以及它们之间存在的关系。在最后一但同样重要的一章中，你将了解到什么是构造函数。\n\
+    \n# 第十章：构造函数\n\n本章介绍的许多 Java 概念之一是构造函数的重要性。构造函数是许多类似于方法的东西之一，允许声明元素或创建新对象。\n\n\
+    构造函数的作用就像命令，每当它们被调用时都需要与函数中的其他元素匹配。它们在 Java 编程语言中要么被定义，要么默认提供。默认构造函数可以设置参数，但并非旨在执行特定任务或执行独特的操作。它们甚至不能接受任何参数。为了允许执行特定的命令和函数，需要显式的构造函数。\n\
+    \n构造函数的主要目标是通过声明**特殊的 ()** 来初始化对另一个构造函数的调用。在确认了新的构造函数后，鼓励程序员创建并设置一个参数来引入对象。\n\n\
+    ## This\n\n此构造函数用于关联特定的程序组件，大多数情况下它被用作相似类中其他构造引用，但具有不同的参数列表。\n\n示例：\n\n```java\n\
+    public class dolphin {\n  string name;\n  dolphin (string input) {\n\n  dolphin\
+    \ () {\n    this (\"kevin / kim\");\n  }\n\n  public static void main (string\
+    \ arguments []) [] {\n    dolphin p1 = new dolphin(\"abigail\");\n    dolphin\
+    \ p2 = new dolphin();\n  }\n}\n```\n\n在上面的示例中，**this** 构造函数的使用指向公共类 dolphin 下名为\
+    \ **kevin** 和 **kim** 的其他构造函数。字符串声明了参数并设置了两组参数——用于 **p1** 的 **abigail** 和用于 **p2**\
+    \ 的默认构造函数。\n\n# Super\n\n此构造函数通常出现在编程代码的第一行，因为最初没有声明 **super**，Java 编译器将不会返回值。此关键字调用父类的构造函数。\n\
+    \n示例：\n\n```java\npublic class superclass_penta {\n  super superclass_penta []\
+    \ {}\n}\nclass tonics extends superclass_penta {\n    tonics () {\n        super\
+    \ [];\n    }\n}\n```\n\n在这个示例中，**super** 被用作定义 superclass_penta 的构造函数。它属于类 **tonics**。虽然该类已知之前已经定义，但执行特殊构造函数的能力是可能的。\n\
+    \n本章向你解释了在 Java 编程中使用的两种构造函数——**this** 和 **super**。了解在何时使用这些构造函数以确保你的程序正常运行至关重要。\n\
+    \n# 以下是对我们所涵盖内容的快速回顾，以防你需要复习某个步骤：\n\n- 1. 你现在理解了 Java 技术是如何开发的\n2. 你学习了如何安装和设置\
+    \ Java 软件以及所需的其他程序工具\n3. 你学习了如何创建一个简单的 Java 程序\n4. 你学习了如何在你的 Java 程序中包含用户输入功能\n\
+    5. 你学习了如何正确地声明和操作变量\n6. 你学习了如何通过操作符修改 Java 程序的复杂性\n7. 你学习了如何使用流程控制语句进行非顺序编程\n\
+    8. 你学习了如何区分并恰当地使用 Java 访问修饰符\n9. 你学习了如何处理类和对象\n10. 你还学习了如何在 Java 程序中正确地使用构造函数\n\
+    \n# 练习题\n\n# 练习题 #1：\n\n编写一个程序，显示每一个命令行参数以及参数的总数。\n\n提示：使用一个名为 *length* 的数组变量来确定数组的长度。\n\
+    \n# 练习题 #2：\n\n编写一个程序，对一组 0 到 100 的十个随机数进行四入。对每一个进行四入，然后将结果显示在屏幕上。请注意以下几：\n\n\
+    - 为计算创建一个 *class* 和 *main()* 方法。\n- 使用 *for loop* 语句。\n- 使用 `Math.random()` 生成十个随机数。要获取\
+    \ 0 到 100 之间的数字，只需将随机数乘以 100 即可。\n- 使用 `Math.round()` 方法对数字进行四入。四入是必要的，因为 `random()`\
+    \ 方法始终返回小于 1.0 的值。\n- 将四入后的数字显示在屏幕上。\n\n# 练习题 #3：\n\n编写一个程序，在主 *Family* 类下创建一个\
+    \ *Parent* 类。目标是在屏幕上显示文本“What a wonderful day!”\n\n# 练习题答案\n\n# 练习题 #1 的答案：\n\n\
+    ```java\npublic class MainPractice {\n    public static void main(String [] args)\
+    \ {\n        for (int i = 0; i < args.length; i++) {\n            System.out.println(args[i]);\n\
+    \        }\n        System.out.print(\"Total Words: \" + args.length);\n    }\n\
+    }\n```\n\n# 练习题 #2 的答案：\n\n```java\npublic class MathRandomRound {\n    public\
+    \ static void main(String [] argh) {\n        for (int i = 0; i < 10; i++) {\n\
+    \            double num = Math.random();\n            System.out.print(\"The number\
+    \ \" + num);\n            System.out.println(\" rounds to \" + Math.round(num));\n\
+    \        }\n    }\n}\n```\n\n# 练习题 #3 的答案：\n\n```java\nclass Parent {\n}\npublic\
+    \ class Family {\n    public static void main(String[] args) {\n        System.out.println(\"\
+    What a wonderful day!\");\n        Parent parent = new Parent();\n    }\n}\n```\n\
+    \n# 在结束之前！\n\n我希望你通过这本电子书喜欢 Java 编程的基础知识，并从阅读中受益匪浅。我确保了在编写此书时实现了我的目标——为你的金钱提供巨大的价值，同时在教育你什么是\
+    \ Java 时不打折扣。我相信，通过遵循我在本电子书中提供的指南，你现在有足够的信心创建自己的 Java 程序了。\n\n我还强烈建议你学习其他编程语言，以便你将知识提升到下一个水平并成为一名顶尖程序员，由于你学习了这门课程，你会惊讶地发现学习其他语言比预期的要容易，因为\
+    \ JavaScript 已经为你铺平了道路。\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 72]
+
+
+    It is important that you know how to work around with classes and objects when
+    programming using the Java language since they are considered as the generic elements
+    of the software. You have also learned how they are organized and their existing
+    relationships with one another. For the last but not the least chapter, you will
+    be given an idea on what constructors are all about.'
+  - '[PAGE 73]
+
+
+    # # Chapter Ten: Constructors
+
+
+    One of the many Java concepts that this chapter introduces is the importance of
+    constructors. Constructors are one of the many method-like things that allow the
+    declaration of elements or the creation of new objects.
+
+
+    Constructors work as commands that need to match the other elements in a function
+    whenever they are invoked. They are also either defined or provided by default
+    in Java programming language. Default constructors can set parameters but are
+    not designed to carry out specific tasks nor perform unique actions. They cannot
+    even take any argument. An explicit version of a constructor is required to allow
+    the execution of particular commands and functions.
+
+
+    The main goal of constructors is to initialize the call to a fellow constructor
+    by declaring **special ()**. Upon the acknowledgement of a new constructor, a
+    programmer is encouraged to create and set a parameter for the introduction of
+    an object.
+
+
+    # ## This
+
+
+    This constructor is used to pertain to a particular program component and most
+    of the time it is used as reference to other constructors in a similar class,
+    but in different parameter list.
+
+
+    Example:'
+  - "[PAGE 74]\n\n```\npublic class dolphin {\n  string name;\n  dolphin (string input)\
+    \ {\n\n  dolphin () {\n    this (\"kevin / kim\");\n  }\n\n  public static void\
+    \ main (string arguments []) [] {\n    dolphin p1 = new dolphin(\"abigail\");\n\
+    \    dolphin p2 = new dolphin();\n  }\n}\n```\n\nIn the example above, the constructor\
+    \ use of **this** refers to other constructors named **kevin** and **kim** under\
+    \ the public class dolphin. The strings have declared arguments and two batches\
+    \ of parameters are set – **abigail** for **p1** and default constructor for **p2**.\n\
+    \n# Super\n\nThis constructor is usually identified in the first line of the programming\
+    \ code since Java compilers do not return a value if **super** is not declared\
+    \ initially. This keyword invokes a superclass constructor.\n\nExample:\n\n```\n\
+    public class super superclass_penta {\n  super superclass_penta [] {}\n}\nclassics\
+    \ extends superclass_penta\n```"
+  - "[PAGE 75]\n\n```\ntonics () {\n    super [];\n}\n```\n\nIn this example, **super**\
+    \ was used as a constructor that defines superclass_penta. It is categorized under\
+    \ the class **tonics**. Although a class is already known to be previously defined,\
+    \ the capability of a special constructor performance is possible.\n\nThis chapter\
+    \ has explained to you two constructors that you can use in Java programming –\
+    \ **this** and **super**. It is imperative that you know when to use these constructors\
+    \ for your program to run properly."
+  - "[PAGE 76]\n\n# Here is a quick recap of what we covered in case you need a refresher\
+    \ on a certain step:\n\n+   1. You now have an understanding of how Java technology\
+    \ was developed\n2. You learnt how to install and setup Java software and other\
+    \ required program tools\n3. You learnt how to create a simple Java program\n\
+    4. You learnt how to include a user input feature in your Java program\n5. You\
+    \ learnt how to properly declare and manipulate variables\n6. You learnt how to\
+    \ modify the complexity of your Java program through operators\n7. You learnt\
+    \ how to perform non-sequential programming using flow control statements\n8.\
+    \ You learnt how to differentiate and use appropriately Java access modifiers\n\
+    9. You learnt how to work around classes and objects\n   10. You also learnt how\
+    \ to correctly employ constructors in your Java program"
+  - '[PAGE 77]
+
+
+    # Practice Exercises
+
+
+    # Exercise #1:
+
+
+    Write a program that will display every command-line argument and the total number
+    of arguments.
+
+
+    CLUE: Use an array variable named *length* to determine the length of the array.
+
+
+    # Exercise #2:
+
+
+    Write a program that will round off a series of ten random numbers from 0 to 100.
+    Round each one of them, then display the result to the screen. Take note of the
+    following:
+
+
+    +   - Create a *class* and a *main()* method for the calculation.
+
+    - Use the *for loop* statement.
+
+    - Use the `Math.random()` to generate the ten random numbers. To get a number
+    between 0 to 100, simply multiply the random number by 100.
+
+    - Round the number using the `Math.round()` method. Rounding off is necessary
+    because the `random()` method always returns a value less than 1.0.
+
+    - Display the rounded number to the screen.
+
+
+    # Exercise #3:
+
+
+    Write a program that will create a new *Parent* class under a main *Family* class.
+    The objective is also to display the line of text “What a wonderful day!" on the
+    screen.'
+  - '[PAGE 78]
+
+
+    <!-- no content -->'
+  - "[PAGE 79]\n\n# Practice Exercises Answers\n\n# Answer for Exercise #1:\n\n```\n\
+    public class MainPractice {\n    public static void main(String [] args) {\n \
+    \       for (int i = 0; i < args.length; i++) {\n            System.out.println(args[i]);\n\
+    \        }\n        System.out.print(\"Total Words: \" + args.length);\n    }\n\
+    }\n```\n\n# Answer for Exercise #2:\n\n```\npublic class MathRandomRound {\n \
+    \   public static void main(String [] argh) {\n        for (int i = 0; i < 10;\
+    \ i++) {\n            double num = Math.random();\n            System.out.print(\"\
+    The number \" + num);\n            System.out.println(\" rounds to \" + Math.round(num));\n\
+    \        }\n    }\n}\n```\n\n# Answer for Exercise #3:\n\n```\nclass Parent {\n\
+    ```"
+  - "[PAGE 80]\n\n```\n}\npublic class Family {\n    public static void main(String[]\
+    \ args) {\n        System.out.println(\"What a wonderful day!\");\n        Parent\
+    \ parent = new Parent();\n    }\n}\n```"
+  - '[PAGE 81]
+
+
+    # Before You Go!
+
+
+    I hope that you have enjoyed the basics of Java programming through this eBook
+    and have tremendously benefited from reading it. I have ensured that my goal was
+    met in writing this – to offer great value for your money without cutting corners
+    in educating you what Java is all about. I believe you will now be confident enough
+    in creating your own Java program by following the guidelines I have included
+    in this eBook.
+
+
+    I would also strongly recommend that you learn other programming languages so
+    that you may be able to take your knowledge to the next and become a top-class
+    programmer and because you have gone through this course, you will be astonished
+    to find that your learning other languages is easier than expected, for JavaScript
+    has strikingly paved the way for you. I recommend Python JavaScript as the best
+    languages to learn next.
+
+
+    I would now really appreciate your reviews and your feedback. If you really enjoyed
+    this book, then free to share it so other people may also profit from this information.
+
+
+    Please Click Here to... http://amzn.to/1Rob2uH
+
+
+    In case you missed it, here are some of my other awesome, best-selling books!
+
+
+    # #1 Best-Seller in the Set Theory and Mathematical Set Theories categories!'
+  - '[PAGE 82]
+
+
+    Learn how to program with JAVASCRIPT with my step-by-step course for beginners.
+    This book will teach the advanced methods of web design, covering the vital HTML
+    and CSS basics and teaching you of the most high-in-demand skills in the web design
+    job-market.
+
+
+    # "JAVASCRIPT: Easy JavaScript Programming For Beginners- Your Step-By-Step Guide
+    to Learning JavaScript Programming"
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_82_0.png)
+
+
+    Learn JavaScript Programming Today With This Easy Step-By-Step Guide!
+
+
+    You Will Learn The Following:
+
+
+    +   - The history of JavaScript and its uses
+
+    - The vital basics of HTML and CSS
+
+    - How to use jQuery
+
+    - Different ways to run JavaScript
+
+    - Learn the Syntax
+
+    - Understanding Comments
+
+    - Using Variables'
+  - '[PAGE 83]
+
+
+    +   * Data Types
+
+    * Using Operators
+
+    * Designing Flow Control, Loops and Branches
+
+    * Using Functions
+
+    * Using JavaScript Objects
+
+    * Working with Arrays
+
+    * And much more!
+
+
+    [Click-Here](http://amzn.to/1mBhUyM) to Download Now!
+
+
+    # # #1 Best-Seller in the Popular Counting & Numeration category!
+
+
+    Learn how to program with PYTHON with my step-by-step course for beginners. This
+    book will teach the advanced methods of web design, covering all you need to be
+    able to create your first program and grow your skills.
+
+
+    [PYTHON: Easy Python Programming For Beginners, Your Step-By-Step Guide to Learning
+    Python Programming](http://amzn.to/1mBhUyM)
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_83_0.png)
+
+
+    # Learn Python Programming Today With This Easy, Step-By-Guide!
+
+
+    You Will Learn The Following:'
+- md: '
+
+    - The history of Python Programming and its uses
+
+    - What you need to get started
+
+    - How it works in different computer systems
+
+    - Creating your first program
+
+    - Numbers
+
+    - Variables
+
+    - String Values
+
+    - String Methods and Lists
+
+    - Control flow tools- If, If Else and Elif Statements
+
+    - Loops
+
+    - Defining functions- Parameters and Statements
+
+    - And much more!
+
+
+    [Click-Here](http://amzn.to/1WQOBiy2) to Download Now or visit:
+
+
+    # Learn the Linux Command Line and Operating System with this guide!
+
+
+    # “LINUX: Easy Linux For Beginners, Your Step-By-Step Guide To Learning The Linux
+    Operating System And Command Line”
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_84_0.png)
+
+
+    # You Will Learn The Following:
+
+
+    - What is Linux?
+
+    - How does Linux compare to other Operating Systems?
+
+    - Linux Architecture and Distributions
+
+    - Installing Linux in your PC
+
+    - Get to know Shell, your Desktop and Navigating the File Systems
+
+    - Linux Applications- Office, Multimedia and Imaging
+
+    - Managing Hardware and installing additional Software
+
+    - Using the Linux Command Line
+
+    - Vital Administration and Security
+
+    - Introduction to Scripting
+
+    - And much more!
+
+
+    Click-Here to Download Now! or visit: http://amzn.to/1QzQPKy
+
+
+    # #1 Best-Seller in the Functional Analysis and Non-Profit Organizations categories!
+
+
+    Learn how to drive traffic, leads and customers to your website with this best-selling
+    step-by-step course:
+
+
+    > “SEO: Easy Search Engine Optimization, Your Step-By-Step Guide to a Sky-High
+    Ranking and Never Ending Traffic”
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_86_0.png)
+
+
+    # #1 Best Seller in Functional Analysis
+
+
+    # All You Need To Learn To Drive Tons Of Traffic To Your Website Today!
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_86_1.png)
+
+
+    Here is a Preview of What You Will Learn:
+
+
+    - What is SEO and how it really works?
+
+    - How search engines operate
+
+    - Learn the first step to get ranked
+
+    - The importance of keywords and how to do proper keyword research and analyse
+    competitiveness using free tools
+
+    - On-page optimization
+
+    - The use of Header, Meta and Title Tags
+
+    - Tracking your site''s performance for free!
+
+    - Off-page optimization and the use of powerful backlinks
+
+    - 8 strategies to generate high-quality backlinks and boost website traffic
+
+    - Why Indexing and Sitemaps are vital
+
+    - How to generate and submit sitemaps
+
+    - The importance of high-quality content
+
+    - How to create high-quality, engaging and unique content
+
+    - And Much More!
+
+
+    [Click Here]() or Visit: http://amzn.to/21HFWWb to Download Now
+
+
+    # #1 Best Seller in the Web-Design and Computers & Technology categories!
+
+
+    Learn how to create a website using a very popular web design platform, WordPress,
+    with this Number 1 Best-Seller.
+
+
+    “WORDPRESS: Simple WordPress Guide to Create an Attractive Website or Blog from
+    Scratch, Step-By-Step”
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_87_0.png)
+
+
+    You Will Gain The Following Skills:
+
+
+    - Why you made the right decision by choosing WordPress and what they have to
+    offer
+
+    - How to choose the right domain name and how to get your site live on the web
+    with a host server
+
+    - How to easily Synchronize your chosen web-address and Host server with WordPress
+
+    - How to add a touch of your personality through the use of amazing and free themes!
+
+    - How to add pages and astonishing content for your viewers to enjoy
+
+    - Adding high-level features to your site through the use of Plugins
+
+    - And much, much more!!
+
+
+    [Click-Here to Buy Now!](http://amzn.to/1VHtxZi) Or visit this page
+
+
+    # #1 Best-Seller in the Business Insurance category
+
+
+    Learn how to build a profitable online business one of the most popular online
+    retailers in the world. Follow this step-by-step course and learn how to build
+    a side or even full time income.
+
+
+    > “eBay: Find All You Need To Sell on eBay and Build a Profitable Business from
+    Scratch, Step-By-Step”
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_88_0.png)
+
+
+    You Will Gain The Following Skills;
+
+
+    - Why now is the best time to start your online business and why you need to be
+    selling on eBay
+
+    - How the entire process works and what steps you need to take to open-up your
+    store the right way
+
+    - How to know which items are most profitable and where to find the best sources
+    for your products
+
+    - How to effectively Brand & Promote your business for more exposure and higher
+    revenues
+
+    - How to create a high-ranking, eye-catching and lucrative listing?
+
+    - And much more!
+
+
+    [Click-Here](http://amzn.to/1R1vnCP) or visit http://amzn.to/1R1vnCP to buy the
+    book Now!
+
+
+    # Now onto the BONUS!!
+
+
+    As promised, I am giving you free access to 5 videos from my popular course “25
+    Website Traffic Methods”!
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_90_0.png)
+
+
+    Having a beautiful and professional website is great, but what is the point if
+    no-one is visiting it?
+
+
+    That''s why this course has been created!
+
+
+    The program is going to teach you how to drive tons of targeted traffic to your
+    website.
+
+
+    Some of the lessons may be familiar to you already, but I am certain you will
+    get some golden nuggets to give you that extra punch.
+
+
+    To access this course, click the button below or visit this link! >>http://bit.ly/1PtpgK7
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_90_1.png)
+
+
+    Finally, you can also send me an email if you have any questions, feedback or
+    just want to say hello! (I do reply!) My email address is; (Felix_Alvaro@mail.com)
+
+
+    I thank you once again and God bless!
+
+
+    Felix Alvaro
+
+    '
+  mdcn: '
+
+
+    - Python 编程历史及其用途
+
+    - 入门需要准备的内容
+
+    - 它在不同计算机系统中的工作原理
+
+    - 编写你的第一个程序
+
+    - 数字
+
+    - 变量
+
+    - 字符串值
+
+    - 字符串方法与列表
+
+    - 控制流工具- If、If Else 和 Elif 语句
+
+    - 循环
+
+    - 定义函数- 参数与语句
+
+    - 以及更多内容！
+
+
+    [点击此处](http://amzn.to/1WQOBiy2) 立即下载或访问：
+
+
+    # 通过本指南学习 Linux 命令行和操作系统！
+
+
+    # “LINUX：初学者易学 Linux：你学习 Linux 操作系统和命令行的分步指南”
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_84_0.png)
+
+
+    # 你将学习到以下内容：
+
+
+    - 什么是 Linux？
+
+    - Linux 与其它操作系统相比如何
+
+    - Linux 架构与发行版
+
+    - 在你的 PC 上安装 Linux
+
+    - 了解 Shell、你的桌面以及文件系统导航
+
+    - Linux 应用-办公、多媒体和图像
+
+    - 硬件管理与安装额外软件
+
+    - 使用 Linux 命令行
+
+    - 关重要的管理与安全
+
+    - 脚本入门
+
+    - 以及更多内容！
+
+
+    点击此处立即下载！或访问：http://amzn.to/1QzQPKy
+
+
+    # 功能分析与非营利组织类别销量第一畅书！
+
+
+    通过这本畅销的分步课程，学习如何将流量、潜在客户和客户引向你的网站：
+
+
+    > “SEO：易学搜索引擎优化：你通往高排名和源源不断流量的分步指南”
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_86_0.png)
+
+
+    # 功能分析领域销量第一畅书
+
+
+    # 你今天就能为你的网站带来海量流量所需的所有知识！
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_86_1.png)
+
+
+    以下是你将学习的内容预览：
+
+
+    - 什么是 SEO？它究竟是如何运作的？
+
+    - 搜索引擎是如何运行的
+
+    - 学习排名的第一步
+
+    - 关键词的重要性，以及如何使用免费工具进行适当的关键词研究和竞争分析
+
+    - 页面优化
+
+    - Header、Meta 和 Title 标签的使用
+
+    - 免费跟踪你的网站性能！
+
+    - 页面外优化和强大反链的使用
+
+    - 生成高质量反链并提升网站流量的 8 策略
+
+    - 为什么索引和站点地图至关重要
+
+    - 如何生成并提交站点地图
+
+    - 高质量内容的重要性
+
+    - 如何创建高质量、引入胜且独特的内容
+
+    - 以及更多！
+
+
+    [点击此处]()或访问：http://amzn.to/21HFWWb 立即下载
+
+
+    # 网页设计与计算机与技术类别销量第一畅书！
+
+
+    通过这本销量第一的书，学习如何使用非常流行的网页设计平台 WordPress 创建网站。
+
+
+    “WORDPRESS：简易 WordPress 指南，从零开始分步创建极具吸引力的网站或博客”
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_87_0.png)
+
+
+    你将获得以下技能：
+
+
+    - 为什么选择 WordPress 是正确的决定，以及它能提供什么
+
+    - 如何选择正确的域名，以及如何通过托管服务器让你的网站上线
+
+    - 如何轻松地将你选择的网址和托管服务器与 WordPress 同步
+
+    - 如何通过精美且免费的主题增添个性色彩！
+
+    - 如何为你的观众添加页面和令人惊叹的内容
+
+    - 如何通过插件（Plugins）为你的网站添加高级级功能
+
+    - 以及更多，更多更多！！
+
+
+    [点击此处立即购买！](http://amzn.to/1VHtxZi) 或访问此页面
+
+
+    # 商业保险类别销量第一畅书
+
+
+    学习如何建立一个盈利的在线业务——这是全球最流行的在线零售商之一。遵循这门分步课程，学习如何建立兼业甚至全职的收入。
+
+
+    > “eBay：发现你在 eBay 上销售所需的一切，并从零开始分步建立一个盈利的业务”
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_88_0.png)
+
+
+    你将获得以下技能：
+
+
+    - 为什么现在是开始在线业务的最佳时机，以及为什么需要在 eBay 上销售
+
+    - 整个流程是如何运作的，以及你需要哪些步骤来正确地开设商店
+
+    - 如何知道哪些商品最有利可，以及在哪里找到你产品的最佳来源
+
+    - 如何有效地为你的业务品牌化和推广，以获得更多曝光和更高收入
+
+    - 如何创建一个高排名、吸睛且有利的商品列表？
+
+    - 以及更多！
+
+
+    [点击此处](http://amzn.to/1R1vnCP) 或访问 http://amzn.to/1R1vnCP 立即购买书籍！
+
+
+    # 现在进入赠送环节！！
+
+
+    正如承诺的那样，我将为你免费提供我热门课程“25 种网站流量方法”中的 5 段视频！
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_90_0.png)
+
+
+    拥有一个漂亮且专业的网站很棒，但如果没有人访问又有意义何呢？
+
+
+    这就是创建这门课程的原因！
+
+
+    本课程将教你如何为你的网站引入大量的精准流量。
+
+
+    有些课程你可能已经熟悉了，但我确定你将从中获得一些金性的，带给你额外的动力。
+
+
+    要访问这门课程，请点击下方按钮或访问此链接！ >>http://bit.ly/1PtpgK7
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_90_1.png)
+
+
+    最后，如果你有任何问题、反馈或只是想打个招呼，也可以给我发送电子邮件！（我会回复的！）我的邮箱地址是；(Felix_Alvaro@mail.com)
+
+
+    再次感谢你，愿上帝保佑你！
+
+
+    Felix Alvaro
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 84]
+
+
+    +   * The history of Python Programming and its uses
+
+    * What you need to get started
+
+    * How it works in different computer systems
+
+    * Creating your first program
+
+    * Numbers
+
+    * Variables
+
+    * String Values
+
+    * String Methods and Lists
+
+    * Control flow tools- If, If Else and Elif Statements
+
+    * Loops
+
+    * Defining functions- Parameters and Statements
+
+    * And much more!
+
+
+    [Click-Here](http://amzn.to/1WQOBiy2) to Download Now or visit:
+
+
+    # Learn the Linux Command Line and Operating System with this guide!
+
+
+    # “LINUX: Easy Linux For Beginners, Your Step-By-Step Guide To Learning The Linux
+    Operating System And Command Line”
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_84_0.png)'
+  - '[PAGE 85]
+
+
+    # You Will Learn The Following:
+
+
+    +   * What is Linux?
+
+    * How does Linux compare to other Operating Systems?
+
+    * Linux Architecture and Distributions
+
+    * Installing Linux in your PC
+
+    * Get to know Shell, your Desktop and Navigating the File Systems
+
+    * Linux Applications- Office, Multimedia and Imaging
+
+    * Managing Hardware and installing additional Software
+
+    * Using the Linux Command Line
+
+    * Vital Administration and Security
+
+    * Introduction to Scripting
+
+    * And much more!
+
+
+    Click-Here to Download Now! or visit: http://amzn.to/1QzQPKy
+
+
+    # #1 Best-Seller in the Functional Analysis and Non-Profit Organizations categories!
+
+
+    Learn how to drive traffic, leads and customers to your website with this best-selling
+    step-by-step course:
+
+
+    > “SEO: Easy Search Engine Optimization, Your Step-By-Step Guide to a Sky-High
+    Ranking and Never Ending Traffic”'
+  - '[PAGE 86]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_86_0.png)
+
+
+    #1 Best Seller in Functional Analysis
+
+
+    # All You Need To Learn To Drive Tons Of Traffic To Your Website Today!
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_86_1.png)
+
+
+    Here is a Preview of What You Will Learn:
+
+
+    +   * What is SEO and how it really works?
+
+    * How search engines operate
+
+    * Learn the first step to get ranked
+
+    * The importance of keywords and how to do proper keyword research and analyse
+    competitiveness using free tools
+
+    * On-page optimization
+
+    * The use of Header, Meta and Title Tags
+
+    * Tracking your site''s performance for free!
+
+    * Off-page optimization and the use of powerful backlinks
+
+    * 8 strategies to generate high-quality backlinks and boost website traffic
+
+    * Why Indexing and Sitemaps are vital
+
+    * How to generate and submit sitemaps
+
+    * The importance of high-quality content
+
+    * How to create high-quality, engaging and unique content
+
+    * And Much More!
+
+
+    [Click Here]() or Visit: http://amzn.to/21HFWWb to Download Now'
+  - '[PAGE 87]
+
+
+    # #1 Best Seller in the Web-Design and Computers & Technology categories!
+
+
+    Learn how to create a website using a very popular web design platform, WordPress,
+    with this Number 1 Best-Seller.
+
+
+    “WORDPRESS: Simple WordPress Guide to Create an Attractive Website or Blog from
+    Scratch, Step-By-Step”
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_87_0.png)
+
+
+    You Will Gain The Following Skills:
+
+
+    +   - Why you made the right decision by choosing WordPress and what they have
+    to offer
+
+    - How to choose the right domain name and how to get your site live on the web
+    with a host server
+
+    - How to easily Synchronize your chosen web-address and Host server with WordPress'
+  - '[PAGE 88]
+
+
+    +   - How to add a touch of your personality through the use of amazing and free
+    themes!
+
+    - How to add pages and astonishing content for your viewers to enjoy
+
+    - Adding high-level features to your site through the use of Plugins
+
+    - And much, much more!!
+
+
+    [Click-Here to Buy Now!](http://amzn.to/1VHtxZi) Or visit this page
+
+
+    # #1 Best-Seller in the Business Insurance category
+
+
+    Learn how to build a profitable online business one of the most popular online
+    retailers in the world. Follow this step-by-step course and learn how to build
+    a side or even full time income.
+
+
+    > “eBay: Find All You Need To Sell on eBay and Build a Profitable Business from
+    Scratch, Step-By-Step”
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_88_0.png)
+
+
+    You Will Gain The Following Skills;'
+  - '[PAGE 89]
+
+
+    +   Why now is the best time to start your online business and why you \underline{need}
+    to be selling on eBay
+
+
+    +   How the entire process works and what steps you need to take to open-up your
+    store the right way
+
+
+    +   How to know which items are most profitable and where to find the best sources
+    for your products
+
+
+    +   How to effectively Brand & Promote your business for more exposure and higher
+    revenues
+
+
+    +   How to create a high-ranking, eye-catching and lucrative listing?
+
+
+    +   And much more!
+
+
+    [Click-Here](http://amzn.to/1R1vnCP) or visit http://amzn.to/1R1vnCP to buy the
+    book Now!
+
+
+    # Now onto the BONUS!!
+
+
+    As promised, I am giving you free access to 5 videos from my popular course “25
+    Website Traffic Methods”!'
+  - '[PAGE 90]
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_90_0.png)
+
+
+    Having a beautiful and professional website is great, but what is the point if
+    no-one is visiting it?
+
+
+    That''s why this course has been created!
+
+
+    The program is going to teach you how to drive tons of targeted traffic to your
+    website.
+
+
+    Some of the lessons may be familiar to you already, but I am certain you will
+    get some golden nuggets to give you that extra punch.
+
+
+    To access this course, click the button below or visit this link! >>http://bit.ly/1PtpgK7
+
+
+    ![](img/a5ade960699c3cf9f5e411120c13cbcc_90_1.png)
+
+
+    Finally, you can also send me an email if you have any questions, feedback or
+    just want to say hello! (I do reply!) My email address is; (Felix_Alvaro@mail.com)'
+  - '[PAGE 91]
+
+
+    I thank you once again and God bless!
+
+
+    Felix Alvaro'
