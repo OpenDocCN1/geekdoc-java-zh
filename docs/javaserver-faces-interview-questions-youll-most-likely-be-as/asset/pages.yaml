@@ -1,0 +1,4344 @@
+- img_proc: true
+  md: '# Job Interview Questions Series
+
+
+    # 2015 Edition
+
+
+    # JavaServer Faces
+
+
+    # Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    ![](img/25a2d17a91c9c7450b8cfb317e525ee5_0_0.png)
+
+
+    200 JavaServer Faces Questions 51 HR Interview Questions
+
+
+    FREE 2 Aptitude Tests, download available on website
+
+
+    # VP Vibrant Publishers'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # JavaServer Faces
+
+
+    # Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    Job Interview Questions Series
+
+
+    Vibrant Publishers
+
+
+    www.vibrantpublishers.com'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# JavaServer Faces Interview Questions
+
+    You''ll Most Likely Be Asked
+
+
+    © 2014, Vibrant Publishers, USA. All rights reserved. No part of this publication
+    may be reproduced or distributed in any form or by any means, or stored in a database
+    or retrieval system, without the prior permission of the publisher.
+
+
+    ISBN-10: 146016681
+
+    ISBN-13: 978-14-61016-68-7
+
+
+    Library of Congress Control Number: 2011925571
+
+
+    This publication is designed to provide accurate and authoritative information
+    in regard to the subject matter covered. The author has made every effort in the
+    preparation of this book to ensure the accuracy of the information. However, information
+    in this book is sold without warranty either expressed or implied. The Author
+    or the Publisher will not be liable for any damages caused or alleged to be caused
+    either directly or indirectly by this book.
+
+
+    Vibrant Publishers books are available at special quantity discount for sales
+    promotions, or for use in corporate training programs. For more information please
+    write to bulkorders@vibrantpublishers.com
+
+
+    Please email feedback / corrections (technical, grammatical or spelling) to spellerrors@vibrantpublishers.com
+
+
+    To access the complete catalogue of Vibrant Publishers, visit www.vibrantpublishers.com'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   1 Introduction to JSF 7
+
+    2 Beans 13
+
+    3 Attributes, Parameters and Tags 19
+
+    4 Buttons, Links and Facelets 25
+
+    5 Conversion and Validation 33
+
+    6 Event Handling 43
+
+    7 Composite Components 47
+
+    8 Custom Components and Converters 61
+
+    9 How to? 71
+
+    10 HR Questions 83
+
+    INDEX 106'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# JavaServer Faces
+
+    Questions
+
+
+    Review these typical interview questions and think how you would answer them.
+    Read the answers listed; you will find best possible answers along with strategies
+    and suggestions.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Introduction to JSF'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 1: What is JSF and what does it do?
+
+
+    Answer:
+
+
+    JSF stands for JavaServer Faces and it is a component based framework used for
+    the development of user interface of web applications.
+
+
+    # 2: What components can we find in JSF?
+
+
+    Answer:
+
+
+    JSF comprises of three parts, they are:
+
+
+    +   - a) The prefabricated UI,
+
+    - b) The event driven programming model
+
+    - c) A component model which ensures that third party developers are able to supply
+    additional components.
+
+
+    # 3: How many versions of JSF are currently on the market and which we are these?
+
+
+    Answer:
+
+
+    At the moment JSF has three versions: the first one is the 1.0, second is the
+    upgraded 1.2 version and the newer, improved version is 2.0. This version is much
+    easier to use and provides new features such as AJAX integration.
+
+
+    # 4: What is the advantage of using JSF?
+
+
+    Answer:
+
+
+    JSF is mainly used because it is a standard that incorp-'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'JavaServer Faces Interview Questions You''ll Most Likely Be Asked 9
+
+
+    orates multiple implementations. It has been designed from the ground up by a
+    standards committee that ensures the product is constantly improved and updated.
+
+
+    # 5: How can JSF be used for designing web applications?
+
+
+    Answer:
+
+
+    JSF is used by both designers and programmers alike by separating and containing
+    the application code in Beans and the design in web pages.
+
+
+    # 6: What are Beans in JSF?
+
+
+    Answer:
+
+
+    A Bean is a class that exposes properties and also events to a framework, with
+    the property being a named value of a given type that can be either read or written.
+
+
+    # 7: What is a Managed Bean in JSF?
+
+
+    Answer:
+
+
+    A Managed Bean is also a Java Bean, but it can be accessed from a JSF page. It
+    must also have a name and a scope, making the Bean available for one user across
+    multiple pages. More bluntly put, Managed Beans are conduits between the user
+    interface and the back end of the application.
+
+
+    # 8: What are JSF pages?'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Answer:
+
+
+    A JSF page is similar to an HTML Form; each browser screen needs one. There are
+    some differences though: the page must be properly formatted XHTML and instead
+    of head, body and Form the h:head, h:body and h:form tags used.
+
+
+    # 9: What services does JSF offer?
+
+
+    # Answer:
+
+
+    JSF offers a total seven services, they are:
+
+
+    +   a) Model View Controller Architecture,
+
+    b) Data Conversion,
+
+    c) Validation and Error handling,
+
+    d) Custom components,
+
+    e) Internationalization,
+
+    f) Alternative Renderers and
+
+    g) AJAX support.
+
+
+    # 10: Which are the six distinct phases defined by a JSF specification?
+
+
+    # Answer:
+
+
+    The six phases are:
+
+
+    +   a) Restore view,
+
+    b) Apply request values,
+
+    c) Process validation,
+
+    d) Update model values,'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'e) Invoke application and
+
+
+    f) Render response.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# # Beans'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 11: What is the purpose of a Bean in JSF?
+
+
+    Answer:
+
+
+    Beans are similar to objects but serve different purposes. When an object is created
+    and manipulated inside a Java program, the Bean calls constructors and invokes
+    methods
+
+
+    # 12: What is the use of a Java Bean?
+
+
+    Answer:
+
+
+    A Java Bean is used mainly as a user interface builder and it is accessed by a
+    palette window in the builder tool.
+
+
+    # 13: What is the use of a Java Bean in the JSF context?
+
+
+    Answer:
+
+
+    In the JSF context, a Java Bean is used for storing the state of web pages. Thus
+    Bean creation is under the control of JSF implementation.
+
+
+    # 14: What does the JSF implementation process do?
+
+
+    Answer:
+
+
+    The JSF implementation creates and discards Beans when needed, reads Bean properties
+    and sets the Bean properties when a Form is posted.
+
+
+    # 15: What are the properties of a Bean class?
+
+
+    Answer:
+
+
+    A Bean class needs to follow a specific set of programming'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'conventions so that it exposes features that tools can use.
+
+
+    Answer:
+
+
+    The most important features of a Bean are the exposed properties, where properties
+    are any of the attributes that the Bean has.
+
+
+    # 17: Which are the main attributes that define a Bean?
+
+
+    Answer:
+
+
+    The attributes that define a Bean are:
+
+
+    +   a) a name,
+
+    b) a type and
+
+    c) the methods for setting a value.
+
+
+    # 18: What is a Backing Bean in JSF?
+
+
+    Answer:
+
+
+    A Backing Bean is a Bean that contains the component objects of a web Form.
+
+
+    # 19: What are CDI Beans?
+
+
+    Answer:
+
+
+    CDI (Contexts and Dependency Injection) Beans are Beans that are bound to a context
+    by the CDI that specifies mechanisms for injecting, intercepting and decorating
+    method calls.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# 20: How are CDI Beans used in JSF?
+
+
+    Answer:
+
+
+    CDI Beans are used just as managed Beans are but they are declared with the @Named
+    annotation.
+
+
+    # 21: What are Message Bundles in JSF?
+
+
+    Answer:
+
+
+    Message Bundles are message strings collected in a central location, simply localized
+    and organized by JSF.
+
+
+    # 22: What are Bean Scopes in JSF?
+
+
+    Answer:
+
+
+    Bean Scopes are containers that hold Beans and other objects that need to be available
+    in different components.
+
+
+    # 23: How many Scopes can we find in JSF?
+
+
+    Answer:
+
+
+    There are 3 types of Scope that we can find in JSF, they are:
+
+
+    +   a) The Session Scope,
+
+    b) The Request Scope and
+
+    c) The Application Scope.
+
+    JSF 2.0 adds two more scopes:
+
+    d) The View Scope and
+
+    e) The Custom Scope.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# 24: What does a Session Scope do in JSF?
+
+
+    Answer:
+
+
+    A Session Scope keeps track of the HTTP protocol, which is actually a repeated
+    connection made by the client. This is mostly achieved using cookies.
+
+
+    # 25: What does a Request Scope do in JSF?
+
+
+    Answer:
+
+
+    A Request Scope is a short lived session that starts when the HTTP request is
+    submitted and ends after a response sent back to the client. It is often used
+    when the storage scope is of an issue.
+
+
+    # 26: What does an Application Scope do in JSF?
+
+
+    Answer:
+
+
+    An Application Scope is a session that maintains itself for the duration of the
+    web application. It is shared between all the requests and sessions.
+
+
+    # 27: What does a Conversation Scope do in JSF?
+
+
+    Answer:
+
+
+    A Conversation Scope ranges over a predetermined set of related pages by providing
+    data persistence until a key goal has been reached making the storing of data
+    for an entire session unneeded.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# 28: What is the purpose of a View Scope in JSF?
+
+
+    Answer:
+
+
+    The View Scope has been introduced in JSF. 2.0. It represents a Bean in the View
+    Scope that persists as long as a JSF page is redisplayed. It is mainly useful
+    for AJAX applications as it reduces the size of Session Scopes.
+
+
+    # 29: What does a Custom Scope do in JSF?
+
+
+    Answer:
+
+
+    A Custom Scope is a map that is created so that names are bound to an object,
+    with the lifetime of the map being the reason a scope is different from another
+    scope.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Attributes, Parameters and Tags'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# 30: What do we the f:attribute, f: param and f:facet do in JSF?
+
+
+    Answer:
+
+
+    These tags are general purpose tags that add information to a component.
+
+
+    # 31: What is the sole role of the f:attribute tag in JSF?
+
+
+    Answer:
+
+
+    Its role is to allow any component to store an arbitrary name or value pair in
+    its attribute map, by allowing an attribute to be sent to page and later retrieve
+    it programmatically.
+
+
+    # 32: What is the sole role of the f:param tag in JSF?
+
+
+    Answer:
+
+
+    The f:param tag allows for the definition of a name or pair, where the value is
+    instead placed in a separate child component, making it a much bulkier storage
+    mechanism than the f:attribute counterpart.
+
+
+    # 33: What does the f:facet tag do in JSF?
+
+
+    Answer:
+
+
+    This tag adds a named component to a component''s facet map, where the facet components
+    are usually rendered in a special place.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 34: What does the id attribute allow for in JSF?
+
+
+    Answer:
+
+
+    The id attribute allows for accessing the JSF components from other JSF tags,
+    obtaining component references in Java code and accessing HTML elements with scripts.
+
+
+    # 35: What does the Converter Attribute do in JSF?
+
+
+    Answer:
+
+
+    The Converter Attribute allows for the attachment of a Converter Attribute to
+    a component, and in some cases allows for input tags to have a Validator Attribute
+    that can be used to attach a Validator to a component.
+
+
+    # 36: What is the Render Attribute used for in JSF?
+
+
+    Answer:
+
+
+    The Render Attribute is used for the inclusion or exclusion of a component depending
+    on a situation, such as the rendering of a Logout button if a user is logged in.
+
+
+    # 37: What are DHTML events in JSF?
+
+
+    Answer:
+
+
+    DHTML stands for Dynamic HTML event attributes and it represents client scripting
+    used for many types of tasks such as syntax validation or rollover images.
+
+
+    # 38: What does the h:panelGrid tag do in JSF?'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '22 JavaServer Faces Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    The h:panelGrid tag uses HTML tables for layout and it is used for laying components
+    in rows and/or columns.
+
+
+    # 39: What does the Immediate Attribute do in JSF?
+
+
+    # Answer:
+
+
+    The Immediate Attribute is mainly used for value changes that may affect the user
+    interface and its application is render by input components like Menus and Listboxes.
+
+
+    # 40: What does the h:inputHidden tag do in JSF?
+
+
+    # Answer:
+
+
+    The h:inputHidden tag is part of the hidden fields present in JSF and it is used
+    with JavaScript actions to send back data to the server, except that it does not
+    support HTML and DHTML standard tags.
+
+
+    # 41: What does the h:outputText tag do in JSF?
+
+
+    # Answer:
+
+
+    The h:outputText tag is the simplest of JSF tags and it is used to generate simple
+    text with an exception: it generates an HTML span element if the style or style
+    Class attributes are used.
+
+
+    # 42: What is the h:outputText tag used for in JSF?
+
+
+    # Answer:'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'The h:outputText tag is used mainly for producing styled outputs, generating
+    HTML markups and to make sure that the text is considered as a one cell of the
+    grid in a panel grid.
+
+
+    # 43: What does the h:graphicImage tag do in JSF?
+
+
+    Answer:
+
+
+    The h:graphicImage tag is used for generating HTML img elements by specifying
+    the image location with an URL or Value Attribute.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Buttons, Links and Facelets'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# 44: What are the h:commandButton and h:commandLink tags used for JSF?
+
+
+    Answer:
+
+
+    These two tags are used to navigate within a JSF application and represent the
+    main components of JSF navigation.
+
+
+    # 45: What does the h:outputLink tag do in JSF?
+
+
+    Answer:
+
+
+    This tag is used to generate HTML anchor elements to point to a resource such
+    as a web page, with the generated link taking a user to a designated resource
+    without the need to use JSF framework.
+
+
+    # 46: What does the h:selectBooleanCheckbox and h:selectManyCheckbox tags do in
+    JSF?
+
+
+    Answer:
+
+
+    The first tag represents a checkbox that is wired to a Boolean Bean property and
+    the second tag is used to select one or more checkboxes present in a group.
+
+
+    # 47: Which are the attributes that represent the h:selectBooleanCheckbox and
+    h:selectManyCheckbox tags in JSF?
+
+
+    Answer:
+
+
+    There are four attributes that are unique to the two tags:'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'a) borde,
+
+    b) enabledClass,
+
+    c) disabledClass and
+
+    d) layout.
+
+
+    # 48: What does Border Attribute do in JSF?
+
+
+    Answer:
+
+
+    The Border Attribute is used to specify the width of a border, for example, radio
+    boxes or checkboxes of the h:select tags.
+
+
+    # 49: What do the enableClass and disableClass attributes do in JSF?
+
+
+    Answer:
+
+
+    These two attributes are used to specify CSS classes that are used when checkboxes
+    or radio boxes are either Enabled or Disabled.
+
+
+    # 50: What is Facelets in JSF?
+
+
+    Answer:
+
+
+    Facelets was designed to be an alternative to the JSP based view handler in JSF
+    1.1 and as of JSF 2.0 it is used to replace the default JSP view technology.
+
+
+    # 51: What are Facelets Tags used for in JSF?
+
+
+    Answer:'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'Facelets Tags are used in JSF to include content from other XHTML pages, to
+    build pages from templates, to create custom components without the need for writing
+    Java code and for miscellaneous utilities.
+
+
+    # 52: What does the ui:composition Facelet Tag do in JSF?
+
+
+    Answer: The ui:composition tag is(when used without a template attribute) a sequence
+    of elements which can be inserted somewhere else. When used with a template attribute,
+    it simply allows for a template to be loaded and the children of this tag determine
+    the variable parts of the template.
+
+
+    # 53: What does the ui:decoration Facelet tag do in JSF?
+
+
+    Answer: This tag specifies a page where parts can be inserted, if used without
+    a template attribute. If a template attribute is used, the children of this tag
+    determine the variable parts of the template.
+
+
+    # 54: What does the ui:debug Facelet tag do in JSF?
+
+
+    Answer: This tag allows for users to display a debug window, with keyboard shortcuts,
+    that shows the component hierarchy for the currently used page and the scoped
+    variables of the application.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# 55: What does the h:dataTable Tag do in JSF?
+
+
+    Answer:
+
+
+    The h:dataTable Tag is used to iterate over data to create an HTML table with
+    value attributes such as Java Objects, Arrays or Instances of java.util.List and
+    more.
+
+
+    # 56: Which tags are found in the body of a h:dataTable tag in JSF?
+
+
+    Answer:
+
+
+    The body of this tag can only contain h:column tags, with the rest of other component
+    tags being ignored by h:dataTable, with each column containing an unlimited number
+    of components.
+
+
+    # 57: What does the dir attribute of h:dataTable do in JSF?
+
+
+    Answer:
+
+
+    This attribute shows the text direction for the text that does not inherit directionality
+    and provides valid values such as LTR and RTL.
+
+
+    # 58: What does the frame attribute of h:dataTable do in JSF?
+
+
+    Answer:
+
+
+    This attribute provides specifications for sides of the frame that surround the
+    table such as:
+
+
+    +   * none,'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '+   b) above,
+
+    c) below,
+
+    d) hsides,
+
+    e) vsides,
+
+    f) lhs,
+
+    g) rhs,
+
+    h) box,
+
+    i) border.
+
+
+    # 59: What does the row attribute of h:dataTable do in
+
+    JSF?
+
+
+    Answer:
+
+
+    This attribute provides the number of rows that are
+
+    displayed in the table. Starting with the row specified
+
+    with the first attribute; when the value is set to 0 then all
+
+    the rows of the table are displayed.
+
+
+    # 60: What styles does h:dataTable have in JSF?
+
+
+    Answer:
+
+
+    The h:dataTable tag has four attributes that specify CSS
+
+    classes for the table as a whole, individual columns or
+
+    rows and headers and footers.
+
+
+    # 61: What does the ui:repeat tag do in JSF?
+
+
+    Answer:
+
+
+    The ui:repeat tag may be used instead of the h:dataTable tag'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: and it inserts its body into the page repeatedly by using attributes for iteration
+    over a subset of a particular collection.
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Conversion and Validation'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# 62: What is Request Value in JSF?
+
+
+    Answer:
+
+
+    The Request Values represents the process of storing the requested values in component
+    objects resulted when a user clicks the submit button and the browser sends the
+    value to the server through an HTTP request.
+
+
+    # 63: What does the f:convertNumber tag do in JSF?
+
+
+    Answer:
+
+
+    This tag is one of the standard converters supplied by the JSF implementation
+    and it is used by implementing one of the ten attributes it has at its disposal.
+
+
+    # 64: What happens when Conversion Error occurs in JSF?
+
+
+    Answer:
+
+
+    When a Conversion Error occurs, JSF takes two specific actions:
+
+
+    +   a) The component whose conversion failed posts a message and continues to
+    declare itself invalid,
+
+    b) JSF redisplays the current page with values that the user provided.
+
+
+    # 65: How can an error message be displayed in JSF?
+
+
+    Answer:
+
+
+    This can be achieved by adding the h:message tag when converters and validators
+    are used, so that error messages'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'are displayed next to the components that have reported them.
+
+
+    # 66: How can JSF converters (besides DateTimeConverter and NumberConverter) be
+    used?
+
+
+    Answer:
+
+
+    Other converters can be used by making sure that the component that uses the converter
+    has its value bound to a backing Bean; Referring to a converter by class using
+    the component tag’s converter attributes or by its ID using the converterID attribute.
+
+
+    # 67: What does the ConvertDateTime tag do in JSF?
+
+
+    Answer:
+
+
+    This tag is used to convert the data of a component to a java.util.Date by placing
+    it inside the component tag. It has six attributes that allow it to specify the
+    type and format of the data.
+
+
+    # 68: What does the dateStyle attribute do in JSF?|
+
+
+    Answer:
+
+
+    This attribute defines the format specified by the java.text.DateFormat of the
+    date and it is only applied if type is date and the pattern is not defined.
+
+
+    # 69: What does the Locale Attribute do in JSF?'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Answer:
+
+
+    This attribute specifies the locale whose predefined styles for dates and times
+    are used for and during formatting and/or parsing.
+
+
+    # 70: What does the Pattern Attribute do in JSF?
+
+
+    # Answer:
+
+
+    This attribute is used for custom formatting patterns that determine how the date
+    and tie string have to be formatted and parsed. If this attribute is specified,
+    then dateStyle and timeStyle attributes are ignored.
+
+
+    # 71: What does the timeStyle Attribute do in JSF?
+
+
+    # Answer:
+
+
+    The timeStyle Attribute is used to define the format as specified by java.text.DateFormat
+    of a time or time part of a string. It is only applied if type is time and the
+    pattern is undefined.
+
+
+    # 72: What does the Type Attribute do in JSF?
+
+
+    # Answer:
+
+
+    This attribute specifies if the string value contains a date, time or both. The
+    valid values are date, time or both and if no value is specified then date is
+    used as default.
+
+
+    # 73: What does the NumberConverter tag do in JSF?'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Answer:
+
+
+    This tag is used to convert a components data to java.lang.Number by placing the
+    convertNumber tag inside the component tag. It has several attributes used to
+    specify the format and type of data.
+
+
+    # 74: How can a Listener be registered on components in JSF?
+
+
+    # Answer:
+
+
+    A Listener Class can be implemented on a component by placing a ValueChangeListener
+    tag or an ActionListener tag within the component''s page.
+
+
+    # 75: How can an author reference the backing Bean methods in JSF?
+
+
+    # Answer:
+
+
+    An Author can call these methods by using the component tags valuechangerListener
+    and actionListener attributes.
+
+
+    # 76: How can a value-changer listener be registered on a component in JSF?
+
+
+    # Answer:
+
+
+    This can be achieved by having the author register a ValueChangeListener on a
+    UIInput component or a component represented by one of the classes of the UIInput.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# 77: How can an Action Listener be registered on a component in JSF?
+
+
+    Answer:
+
+
+    An Author can register an ActionListener on a UICommand component by nesting an
+    ActionListener tag in the component’s tag of that particular page.
+
+
+    # 78: What is the purpose of the DoubleRangeValidator class in JSF?
+
+
+    Answer:
+
+
+    This class is used to check if the local value of a component is in a certain
+    range, where the value of the component must be in floating point or at least
+    convertible to a floating point.
+
+
+    # 79: What does the LengthValidator class do in JSF?
+
+
+    Answer:
+
+
+    This class checks if the length of a component’s local value is within range and
+    that the value is a java.lang.String.
+
+
+    # 80: What does LongRangeValidator class do in JSF?
+
+
+    Answer:
+
+
+    This class makes sure that the local value of a component is in a certain range
+    and that the value is any Numeric type or String which can be converted to a Long.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# 81: How can a Component Value be bound to a property in JSF?
+
+
+    Answer:
+
+
+    This can be achieved by specifying the name of the Bean and also the name of the
+    property that is using the value attribute, where the name of the Bean in the
+    value-binding expression must match the managed Bean name element.
+
+
+    # 82: How can a Component Instance be bound to a Bean property in JSF?
+
+
+    Answer:
+
+
+    A Component Instance can be bound to a Bean property using a value binding expression
+    with the binding attribute of the component’s tag. Most of the time, a component
+    instance is bound rather than its value to a Bean property.
+
+
+    # 83: How can a backing Bean method be referenced in JSF?
+
+
+    Answer:
+
+
+    This can be done by having a Component Tag that has a set of attributes used for
+    referencing Bean methods that can achieve certain functions for the component
+    associated with the tag.
+
+
+    # 84: How many attributes referencing backing Bean'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# methods exist in JSF?\n\nAnswer:\n\nThere are four methods:\n\n+   a) action\n\
+    \ b) actionListener,\n c) validator &\n d) valueChangeChangeListener.\n\n85: How\
+    \ is a method that performs navigation referenced in JSF?\n\nAnswer:\n\nIf a page\
+    \ includes a component that causes the application to navigate to another page\
+    \ when the component is activated, the tag corresponding to this component must\
+    \ include an Action Attribute.\n\n86: How is a method that handles an Action Event\
+    \ referenced in JSF?\n\nAnswer:\n\nIf a component on a certain page generates\
+    \ an action event, where that event is handled by a backing Bean method, then\
+    \ the method is referred to by using the component's actionListener attribute.\n\
+    \n87: How is a method that performs validation referenced in JSF?"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Answer:
+
+
+    If the input of one of the components on a page is validated by a backing Bean
+    method, then the referencing is done to the method from the component’s tag using
+    the Validation Attribute.
+
+
+    # 88: How is a method that handles a value-change event referenced in JSF?
+
+
+    # Answer:
+
+
+    If the desire is to have a component on a certain page generate value-change events
+    and it is desired for that event to be handled by a backing Bean method, then
+    it is referred to the method by using the component’s valueChangeListener attribute.
+
+
+    # 89: How is a Custom Converter applied in JSF?
+
+
+    # Answer:
+
+
+    A Custom Converter is applied to a component by either nesting a converter tag
+    inside the component’s tag or by using the converter’s tag attribute.
+
+
+    # 90: How is a Custom Validator applied in JSF?
+
+
+    # Answer:
+
+
+    A Custom Validator is applied to a component by nesting a validator tag or the
+    validator’s custom tag inside the component’s tag. A custom tag is used by applying
+    the'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'custom tag associated with the component.
+
+
+    # 91: How can a Custom Component be used in JSF?
+
+
+    Answer:
+
+
+    A Custom Component can be used in page by declaring the custom tag library that
+    defines the custom tag that renders the custom component.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Event Handling'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# 92: How many types of events are supported by JSF?
+
+
+    Answer:
+
+
+    JSF supports four kinds of events, they are:
+
+
+    +   a) Value Change Events,
+
+    b) Action Events,
+
+    c) Phase Events &\nd) System Events (since JSF 2.0).
+
+
+    # 93: How can Event Listeners affect the JSF life cycle?
+
+
+    Answer:
+
+
+    Event Listeners can affect the JSF life cycle in one of three ways:
+
+
+    +   a) By letting the cycle proceed normally,
+
+    b) By calling the render Response Method to skip the rest of the life cycle or
+
+    b) By calling the responseComplete method of the FacesContext class to pass by
+    the rest of the life cycle entirely.
+
+
+    # 94: What do Value Change events do in JSF?
+
+
+    Answer:
+
+
+    Value Change events are summoned to dependent components in sync, by firing input
+    components after their value has been validated.
+
+
+    # 95: How are Action Events activated in JSF?'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Answer:
+
+
+    Action Events are fired by buttons and/or links during the Invoke Application
+    phase when the life cycle is almost at the end.
+
+
+    # 96: What is the use of the f:param tag during event handling?
+
+
+    # Answer:
+
+
+    The f:param tag is used to allow attaching of a parameter to a component, with
+    the parameter interpreted depending on the type of component to which it is attached.
+
+
+    # 97: What is the use of the f:attribute tag during event handling?
+
+
+    # Answer:
+
+
+    The f:attribute tag is used as another way to pass information from the UI to
+    the server, by setting the tag to an attribute or a link or to switch from an
+    action to an action listener.
+
+
+    # 98: What are Phase Events in JSF?
+
+
+    # Answer:
+
+
+    Phase Events are events that are fired before and after each life cycle phase,
+    that are handled by phase listeners and are attached to the view root.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# 99: How are Phase Listeners implemented in JSF?
+
+
+    Answer:
+
+
+    Phase Listeners are implemented by using the PhaseListener interface from the
+    javax.faces.event package and defining three methods:
+
+
+    +   a) PhaseID getPhaseID ( );
+
+    b) void afterPhase (PhaseEvent) and
+
+    c) void beforePhase (PhaseEvent).
+
+
+    # 100: How can a Listener class handle an action event?
+
+
+    Answer:
+
+
+    A Listener Class must implement the javax.faces.event ActionListener interface.
+    It must also include the method known as processAction (ActionEvent ActionEvent),
+    which is the method that is invoked when the Action Event occurs.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Composite Components'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# 101: What does the Interface Component tag do in JSF?
+
+
+    Answer:
+
+
+    The Interface Component tag contains other composite tags that expose a composite
+    component''s attributes, action sources, value holders, facets and more.
+
+
+    # 102: What does the Implementation Component tag do in JSF?
+
+
+    Answer:
+
+
+    The Implementation Tag contains the XHTML markup that defines the component and
+    inside the Implementation Tag the component author can easily access attributes
+    with the expression #{cc.attrs.attributeName}.
+
+
+    # 103: What does the Attribute Component Tag do in JSF?
+
+
+    Answer:
+
+
+    The Attribute Component Tag is used in the interface section of JSF and its sole
+    purpose is to expose an attribute of a component to the page authors.
+
+
+    # 104: What does the valueHolder component tag do in JSF?
+
+
+    Answer:
+
+
+    This tag is used in the interface section of JSF and it is used for exposing a
+    component that holds value to the page authors.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# 105: What does the editableValueHolder component tag do in JSF?
+
+
+    Answer:
+
+
+    The editableValueHolder tag is used to expose a component that holds an editable
+    value to the page authors. It may be accessed in the JSF interface.
+
+
+    # 106: What does the actionSource Component tag do in JSF?
+
+
+    Answer:
+
+
+    This tags purpose is to expose a component that fires action events like buttons
+    and links to the page authors.
+
+
+    # 107: What does Extension Component tag do in JSF?
+
+
+    Answer:
+
+
+    The Extension tag is used by the author who wishes to place this tag inside any
+    element in the interface. It can also contain an arbitrary XML and is used in
+    the JSF interface sub element.
+
+
+    # 108: What do the renderFacet and insertFacet component tags do in JSF?
+
+
+    Answer:
+
+
+    These tags are used to render and insert a facet that is specified by the author,
+    as a facet of the enclosing component. They are used in the JSF implementation.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# 109: What are Facets used for in JSF?
+
+
+    Answer:
+
+
+    Facets are used by page authors to add functionality to their components if these
+    component users need to supply content in addition to the child components.
+
+
+    # 110: What are the requirements for a Backing Component in JSF?
+
+
+    Answer:
+
+
+    A Backing Component has three requirements:
+
+
+    +   a) To be a subclass of the UIComponent,
+
+    b) To implement the NamingContainer marker interface and
+
+    c) To have a family property with a value javax.faces.NamingContainer.
+
+
+    # 111: How are Composite Components packed in JARs and why?
+
+
+    Answer:
+
+
+    Composite Components are placed along with the style sheets, JavaScript and properties
+    files under a META-INF directory in JAR. This is mainly used so that other developers
+    can use these components.
+
+
+    # 112: What is the main purpose of using Composite Components in JSF?'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# Answer:
+
+
+    Composite Components are mostly used to give the JSF developers the ability to
+    implement in a more easy to use manner of custom components that encapsulate AJAX.
+
+
+    # 113: How can AJAX be accessed in JSF?
+
+
+    # Answer:
+
+
+    Since JSF 2.0 AJAX is represented as a built in support feature with JavaScript
+    libraries and it can be accessed in both views and Java code.
+
+
+    # 114: How can AJAX use cases be handled from within JSF?
+
+
+    # Answer:
+
+
+    AJAX use cases can be handled with the f:ajax tag, which attaches a behavior to
+    any components, from the JSF''s core library. Examples include field validations
+    or progress indicators.
+
+
+    # 115: How do AJAX requests differ from other HTTP requests?
+
+
+    # Answer:
+
+
+    AJAX requests differ in two ways:
+
+
+    +   a) The first difference is that AJAX partially processes forms on the server
+    during the AJAX call.
+
+
+    +   b) The second difference is that it partially renders-'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# DOM (Document Object Model) elements on the client after AJAX calls return
+    from the server.
+
+
+    # 116: How can JSF AJAX be defined?
+
+
+    Answer:
+
+
+    JSF AJAX requests partially process components on the server and partially renders
+    components on the client when the request returns.
+
+
+    # 117: How is the JSF life cycle split?
+
+
+    Answer:
+
+
+    As of JSF 2.0 the life cycle is split into 2 parts:
+
+
+    +   a) Execute (which is when components are executed) and
+
+    b) Render (which are the components that are rendered).
+
+
+    The JSF life cycle will always execute components first and then render them.
+
+
+    # 118: What happens when JSF executes components on a server?
+
+
+    Answer:
+
+
+    When JSF executes a component on a server, three processes take place:
+
+
+    +   a) JSF converts and validates the component''s value,
+
+    b) Then pushes valid input values to the model and'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'c) Executes actions and action listeners.
+
+
+    # 119: How can AJAX be used with JSF 2.0?
+
+
+    Answer:
+
+
+    To use AJAX with JSF 2.0 there are three steps that have to be followed:
+
+
+    +   a) To associate a component and an event with an AJAX request,
+
+
+    +   b) To identify components to execute on the server and
+
+
+    +   c) To identify components those are to be rendered after an AJAX request.
+
+
+    # 120: What does the Event Attribute of the f:ajax tag do in JSF?
+
+
+    Answer:
+
+
+    This attribute is used to trigger the AJAX request. Event names are generally
+    JavaScript event names without the on prefix.
+
+
+    # 121: What does the Execute Attribute of the f:ajax tag do in JSF?
+
+
+    Answer:
+
+
+    This attribute enables a separate list of components that JSF executes on the
+    server during the AJAX call with valid keywords such as @this, @form, @none, @all
+    and more. If'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'the execute attribute is not specified, then the @this keyword is used by default.
+
+
+    # 122: What does the Onevent Attribute of the f:ajax tag do in JSF?
+
+
+    Answer:
+
+
+    This is a JavaScript function that JSF calls for AJAX events; it is always called
+    three times during the lifetime of an AJAX call (begin, complete and success).
+
+
+    # 123: What does the Listener Attribute of the f:ajax tag do in JSF:
+
+
+    Answer:
+
+
+    JSF invokes this method once every AJAX call in the Invoke Application phase of
+    the life cycle, which is at the end of the execute portion of the life cycle.
+
+
+    # 124: What does the Render Attribute of the f:ajax tag do in JSF?
+
+
+    Answer:
+
+
+    This attribute is used to generate a space separated list of component that JSF
+    renders on the client after AJAX calls are returned from the server. If the render
+    attribute is not specified then the default is set to @none and JSF will not render
+    any components after the AJAX request completes.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# 125: How are Events named in JSF?
+
+
+    Answer:
+
+
+    JSF strips away the leading *on* from events such as the JavaScript *onblur* event
+    which thus becomes *blur* or *onkeyup* leads to *keyup*, and so on.
+
+
+    # 126: What does the Complete Data Object attribute do in JSF?
+
+
+    Answer:
+
+
+    When a successful call is made, JSF uses the *Data Object Attribute* to execute
+    portions of a life cycle before the render stage of the cycle.
+
+
+    # 127: What does the *responseXML* attribute do in JSF?
+
+
+    Answer:
+
+
+    This attribute is used to find the response to the AJAX request. This object is
+    undefined during the begin phase of the actual AJAX request.
+
+
+    # 128: What does the *responseText* attribute do in JSF?
+
+
+    Answer:
+
+
+    This method is used to have the XML response as a text. This object is always
+    undefined in the begin phase of the AJAX request.
+
+
+    # 129: What does the *reponseCode* attribute do in JSF?'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Answer:
+
+
+    This attribute allows for the numeric response code of the AJAX request to be
+    displayed. This object is undefined during the begin phase of the AJAX request.
+
+
+    # 130: How are AJAX errors handled in JSF?
+
+
+    # Answer:
+
+
+    AJAX errors are handled using the f:ajax onerror attribute which is written like
+    this: <f:ajax onerror="handleAjaxError"/>.
+
+
+    # 131: Which are the properties of the data object charge of errors?
+
+
+    # Answer:
+
+
+    The Data Object has three attributes that are not present for events. They are:
+
+
+    +   a) description,
+
+    b) errorName and
+
+    c) errorMessage.
+
+
+    # 132: What are AJAX responses in JSF?
+
+
+    # Answer:
+
+
+    These responses are related to the JSF AJAX requests in an XML document that instructs
+    JSF on how to update the XHTML page from which the response was launched.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# 133: What does the Insert Response element do in JSF AJAX?
+
+
+    Answer:
+
+
+    This element inserts a DOM element with a specified ID before an existing element.
+    This can be achieved as follows:
+
+
+    ```
+
+    <insert id="insert id" before="before id">
+
+    <![CDATA [...]]>
+
+    </insert>
+
+    ```
+
+
+    # 134: What does the Update Response element do in JSF AJAX?
+
+
+    Answer:
+
+
+    This element is used to update a DOM element and in addition to specifying a client
+    ID of a DOM element to update, it makes sure to either update the whole DOM, update
+    the entire state of a submitting Form or to update the body of a page.
+
+
+    # 135: What does the delete response element do in JSF AJAX?
+
+
+    Answer:
+
+
+    This element is used to delete a DOM element with a specified ID and it is introduced
+    as follows:
+
+
+    ```
+
+    <delete id="delete id">
+
+    <![CDATA [...]]>
+
+    ```'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '58 JavaServer Faces Interview Questions You''ll Most Likely Be Asked
+
+
+    </attribute>
+
+
+    # 136: What does the attributes response element do in JS AJAX?
+
+
+    Answer:
+
+
+    The attributes element is used to update one or more attributes of the DOM element:
+
+    <attributes id="element id">
+
+    <attribute name="attribute name" value="attribute value"/>
+
+    ...
+
+    </attribute>
+
+
+    # 137: What does the error response element do in JS AJAX?
+
+
+    Answer:
+
+
+    This element simply generates a server error with the enclosed name and message.
+
+
+    # 138: What does the addOnError (callback) function do in JSF?
+
+
+    Answer:
+
+
+    This function is a JavaScript function that JSF invokes when an AJAX call results
+    in an error.
+
+
+    # 139: What does the addOnEvent (callback) function do in JSF?'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Answer:
+
+
+    This function is a JavaScript function that JSF calls for AJAX events. It is called
+    three times throughout the lifetime of a successful AJAX call: begin, complete
+    and success.
+
+
+    # 140: What does the request() method do in JSF?
+
+
+    # Answer:
+
+
+    This method is used to send an AJAX requests to the server. The request is always
+    asynchronous, queued with other AJAX requests and it is a POST to the surrounding
+    Form''s action.
+
+
+    # 141: How does JSF handle queuing events?
+
+
+    # Answer:
+
+
+    JSF automatically queues AJAX requests and executes them in a serial manner so
+    that the last AJAX request is always finished before the next one has started.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# # Custom Components and Converters'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# 142: Which are the responsibilities needed for a Component Class?
+
+
+    Answer:
+
+
+    A component class needs to have three responsibilities:
+
+
+    +   a) To maintain the component state,
+
+    b) To encode the user interface by writing markup
+
+    and
+
+    c) To decode HTTP requests.
+
+
+    # 143: What does the UIComponent class manage in JSF?
+
+
+    Answer:
+
+
+    This class manages child components and a map of facet components, attributes,
+    value expressions and a collection of event listeners.
+
+
+    # 144: How do Components Encode Markup in JSF?
+
+
+    Answer:
+
+
+    Components Encode Markup using three methods and these are:
+
+
+    +   a) encodeBegin(),
+
+    b) encodeChildren() and
+
+    c) encodeEnd().
+
+
+    # 145: What does the ResponseWriter class do in JSF?
+
+
+    Answer:
+
+
+    This class is used to Write and Markup. It also has'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'convenience methods used for starting and ending HTML elements and for writing
+    element attributes.
+
+
+    # 146: What do the startElement and endElement methods do in JSF?
+
+
+    Answer:
+
+
+    These methods produce the element delimiters and keep track of child elements
+    so that the author does not have to worry with input distinctions.
+
+
+    # 147: What does the writeAttribute method do in JSF?
+
+
+    Answer:
+
+
+    The writeAttribute method is used to write an attribute name or attribute value
+    pair with the appropriate escape characters.
+
+
+    # 148: What does the String getClientID (FacesContext context) method do in JSF?
+
+
+    Answer:
+
+
+    This method is used to return a client ID for the FaceContext component, where
+    the JSF framework creates the client ID from the ID of the enclosing Form and
+    the ID of this component.
+
+
+    # 149: What is the Map<String, Object> Attributes method used for in JSF?'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# Answer:
+
+
+    This method is used to return a mutable map of component attributes and also properties.
+    It is used to view, add, update and remove attributes from a component.
+
+
+    # 150: What does the ResponseWriter getResponseWriter () method do in JSF?
+
+
+    # Answer:
+
+
+    This method is used to return a reference to the response writer. The author can
+    easily plug his own response writer into the JSF.
+
+
+    # 151: What does the void startElement (String elementName, UIComponent component)
+    method do in JSF?
+
+
+    # Answer:
+
+
+    This method is used to write the start tag for a specified element, with a component
+    parameter that allows tools to associate a component and its markup. At the moment,
+    the JSF reference implementation ignores this attribute.
+
+
+    # 152: What does the void writeAttribute(attributeName, String attributeValue,
+    componentProperty) method do in JSF?
+
+
+    # Answer:
+
+
+    This method is used to write the value of an attribute. It'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: 'JavaServer Faces Interview Questions You''ll Most Likely Be Asked 65
+
+
+    can only be called between calls to startElement() and endElement(). This method
+    is not used by the JSF reference implementation.
+
+
+    # 153: What does the void decode (FacesContext context) method do in JSF?
+
+
+    Answer:
+
+
+    This method is called by JSF at the beginning of the JSF life cycle only if the
+    components renderer type is NULL, which means that component renders itself.
+
+
+    # 154: What does the ExternalContext getExternalContext() method do in JSF?
+
+
+    Answer:
+
+
+    This method is used to return a reference to a context proxy, where the context
+    is servlet or portlet context.
+
+
+    # 155: What does the Map getRequestParameterMap() method do in JSF?
+
+
+    Answer:
+
+
+    This method returns a map of the request parameters. Custom components usually
+    call this method in decode() to check if they were the component that triggered
+    the request.
+
+
+    # 156: What does the void setSubmittedValue(Object'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# submittedValue) method do in JSF?
+
+
+    Answer:
+
+
+    This method is used to set a component''s submitted value and input values. The
+    submit value is a value that the user enters, most of the times in a web page.
+
+
+    # 157: What does the getRendersChildren method do in JSF?
+
+
+    Answer:
+
+
+    This method specifies if a renderer is responsible for the rendition of its component''s
+    children. If it returns as FALSE then JSF will not call that method and the children
+    will always be encoded separately.
+
+
+    # 158: What does the convertClientId method do in JSF?
+
+
+    Answer:
+
+
+    This method is mainly used to convert an ID string in a way that allows for the
+    clients to place restrictions on IDs, like limiting the use of special characters
+    of numbers.
+
+
+    # 159: What does the getConvertedValue method do in JSF?
+
+
+    Answer:
+
+
+    This method converts a component''s submitted value from a string to a simple
+    object, with the default implementation in the Renderer class returning the submitted
+    value.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'JavaServer Faces Interview Questions You''ll Most Likely Be Asked 67
+
+
+    # 160: What does the Converter createConverter(Class targetClass) method do in
+    JSF?
+
+
+    Answer:
+
+
+    This method is used to create a converter by following its given target class;
+    JSF implementations maintain a map of valid converter types that the author has
+    to name in a faces file.
+
+
+    # 161: What does the UIComponent getFacet(String facetName) method do in JSF?
+
+
+    Answer:
+
+
+    This method is used to return references to the facets, but only if these exist.
+    If facets do not exist, then the method is returned as NULL.
+
+
+    # 162: What does the boolean getRendersChildren() method do in JSF?
+
+
+    Answer:
+
+
+    This method returns TRUE if the component renders its children and FALSE if it
+    does not. It is by default set to return this value as FALSE.
+
+
+    # 163: What does the boolean isRendered() method do in JSF?
+
+
+    Answer:
+
+
+    This method simply returns the rendered property that'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '68 JavaServer Faces Interview Questions You''ll Most Likely Be Asked
+
+
+    the author specifies, with the component being rendered
+
+    only if the property is true.
+
+
+    # 164: What does the void restoreState(FacesContext
+
+    context, Object state) method do in JSF?
+
+
+    Answer:
+
+
+    This method restores the state of this object from the
+
+    given state object which is a copy of an object that has
+
+    been previously obtained from calling saveState.
+
+
+    # 165: How is AJAX functionality added to custom
+
+    components?
+
+
+    Answer:
+
+
+    This process can be achieved in two ways:
+
+
+    +   a) By embedding AJAX into a custom component or
+
+    b) By AJAX-enabling custom components to support
+
+    the f:ajax tag.
+
+
+    # 166: What is a Tag Handler and what does it do in JSF?
+
+
+    Answer:
+
+
+    A Tag Handler is used to process tag attributes and their
+
+    values. It uses special rules if the attribute is a special
+
+    value, or, if there is a property setter for the attribute used
+
+    to call it.
+
+
+    # 167: What does the String getRemoteUser() method do in'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# JSF?
+
+
+    Answer:
+
+
+    This method is used to get the name of the user that is logged in at the moment
+    of query and it is returned as NULL if no such user exists.
+
+
+    # 168: What does the Boolean isUserInRole(String role) method do in JSF?
+
+
+    Answer:
+
+
+    This method is mainly used to test if the current user belongs to any of the given
+    role and it is part of javax.servlet.HttpServletRequest string.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# How to?'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# 169: How are files uploaded in JSF?
+
+
+    Answer:
+
+
+    Because JSF does not directly support file encoding, the author needs to install
+    a server filter that intercepts the uploaded files and turns them into request
+    attributes or all other Form data into request parameters.
+
+
+    # 170: How many attributes does the Upload Component support in JSF?
+
+
+    Answer:
+
+
+    The Upload Component supports two attributes in JSF and they are value and target.
+
+
+    The value attribute is used to denote a value expression into which the file contents
+    are stored.
+
+
+    The target attribute is used to specify the target location of the file.
+
+
+    # 171: What does the Decode Method of the upload component do in JSF?
+
+
+    Answer:
+
+
+    This method retrieves file items that the servlet filter places into request attributes
+    and disposes them as directed by the tag attributes.
+
+
+    # 172: How is an Image Map shown in JSF?
+
+
+    Answer:'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: 'JavaServer Faces Interview Questions You''ll Likely Be Asked 73
+
+
+    The author needs to implement a Client Side Image Map that is supplied by the
+    usemap attribute, where the author specifies the map in HTML in the JSF page.
+
+
+    # 173: How is Binary Data produced in JSF?
+
+
+    Answer:
+
+    Because it is difficult to have JSF dynamically produce Binary Data such an image
+    or PDF file, the author needs to provide a JSF tag that gathers customization
+    data that is then sent to a servlet.
+
+
+    # 174: How can binary data be generated in JSF without the use of a servlet?
+
+
+    Answer:
+
+    This can be achieved by having the author pay attention to the timing of servlet
+    output stream grabbing before the JSF implementation begins writing the response.
+
+
+    # 175: When does the Filter Action take place in JSF?
+
+
+    Answer:
+
+    The Filter Action can only take place when view IDs that start with /binary are
+    present and just as servlet solutions, the filter action needs to have a data
+    transfer object included as a GET parameter.
+
+
+    # 176: What is a Pager in JSF?'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# Answer:
+
+
+    A Pager is a standard user interface used to navigate a large table, a set of
+    links to another page of the table, to the next and previous pages and more.
+
+
+    # 177: What does the Encode Method do in JSF?
+
+
+    # Answer:
+
+
+    The Encode Method is used to generate sets of links; similar to the commandLink
+    method. Clicking the links goes to activate JavaScript code that then sets a value
+    in hidden field. and lastly submits the Form.
+
+
+    # 178: How is pop-up window generated in JSF?
+
+
+    # Answer:
+
+
+    To generate pop-up windows the author needs to use JavaScript calls that makes
+    sure the window is displayed when the user clicks a button or a link. The author
+    also has to attach a function to the onclick handler of the button or the link
+    and also to set the function return FALSE so that the browser does not submit
+    the Form or follow the link.
+
+
+    # 179: What does the doPopup function do in JSF?
+
+
+    # Answer:
+
+
+    The doPopup function contains the JavaScript instructions for popping up the window
+    and it is contained in a script'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: 'tag that is inside the page header.
+
+
+    # 180: How can parts of a page be shown or hidden in JSF?
+
+
+    Answer:
+
+    This process can be achieved using JSTL c:if and c:choose construct methods; if
+    the author does not wish to mix JSF and JSTL tags, JSF can be used to achieve
+    the same effect by using the render property.
+
+
+    # 181: What is the getErrorMessage method used in JSF?
+
+
+    Answer:
+
+    This method is used to format an error message that is to be included in the client
+    side JavaScript code with the error code constructed from the message and the
+    arg attributes.
+
+
+    # 182: What does the findValidators method do in JSF?
+
+
+    Answer:
+
+    This method is part of the validatorScript component and is used to scan the component
+    tree, locate all the components, enumerate their validators and then check which
+    one is a certain validator that the author looks for and then gather them in a
+    map object.
+
+
+    # 183: How is an application configured in JSF?'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# Answer:
+
+
+    A good method is to supply configuration parameters in the web.xml files and to
+    provide a set of context param elements inside a web-app element.
+
+
+    # 184: How can JSF expression language be extended?
+
+
+    # Answer:
+
+
+    This can be achieved by adding a resolver that processes an expression such as
+    base, property. Where base is a string view and property may be a Form ID.
+
+
+    # 185: How can a function be added to the JSF expression language?
+
+
+    # Answer:
+
+
+    This can be achieved by having the author add its own function to the JSF expression
+    language by:
+
+
+    +   a) Implementing the function as a static method and/or in the Facelets tag
+    library file,
+
+
+    +   b) Map the function name to the implementation.
+
+
+    # 186: How can traffic between the browser and the server be monitored?
+
+
+    # Answer:
+
+
+    This is usually useful for debugging AJAX based applications and the entire traffic
+    can be monitored using Eclipse or NetBeans. A general purpose TCP/IP sniffer can'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: 'also be used, like WireShark.
+
+
+    # 187: How can a page be debugged in JSF?
+
+
+    Answer:
+
+
+    To do this the author must make sure that the submit button is contained inside
+    a h:form, double check the navigation rules and/or install a phase tracker.
+
+
+    # 188: How are Testing Tools used while developing a JSF application?
+
+
+    Answer:
+
+
+    It can be achieved by testing Beans in isolation and by calling methods that the
+    JSF implementation would have called.
+
+
+    # 189: How can Scala be used with JSF?
+
+
+    Answer:
+
+
+    Scala can be used by implementing a managed Bean, annotate it as in Java, but
+    with the Scala annotation syntax.
+
+
+    # 190: How can Groovy be used with JSF?
+
+
+    Answer:
+
+
+    Because almost all Java code is Groovy legal, it is only needed to change the
+    suffix of the codefrom.java to .groovy and then use the Groovy compiler to compile
+    the'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'code to a .class file
+
+
+    # 191: What are the most common Outcome Strings and what do they mean?
+
+
+    Answer:
+
+
+    The Outcome can be anything the developer chooses, but the most common Outcomes
+    are:
+
+
+    +   a) success meaning everything worked, go on to the next page,
+
+    b) failure meaning something is wrong go on to the error page,
+
+    c) logon meaning the user needs to log on first, go on to the logon page,
+
+    d) no results meaning the search did not find anything, go to the search page
+    again.
+
+
+    # 192: What should the deployment descriptor include for a JavaServer Faces application?
+
+
+    Answer:
+
+
+    The deployment descriptor must include certain configuration about the servlet
+    used to process JSF requests, the servlet mapping for the processing servlet and
+    the path to the configuration resource if it is not located in a default location.
+    It can also specify optional configuration which include the following: verifying
+    custom objects, turning on XML validation or specifying'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'where component state is saved.
+
+
+    # 193: How can you turn on validation of XML files?
+
+
+    Answer:
+
+
+    In case the JSF application contains one or more xml configuration resource files,
+    you can turn on the JSF validation for this xml files by setting the validateXML
+    flag to TRUE. The default value for this flag is FALSE.
+
+
+    # 194: Which are the required JAR files needed by the JSF application in order
+    to run properly?
+
+
+    Answer:
+
+
+    JSF applications need several JAR files to run properly. The following are the
+    required jars:
+
+
+    +   a) jsf-api.jar,
+
+    b) jsf-impl.jar,
+
+    c) jstl.jar,
+
+    d) standard.jar,
+
+    e) commons-BeanUtils.jar,
+
+    f) commons-digester.jar,
+
+    g) commons-collections.jar,
+
+    h) commons-logging.jar.
+
+
+    # 195: What does a character set represent?
+
+
+    Answer:
+
+
+    A character set is a set of textual and graphic symbols, each'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'of which is mapped to a set of non-negative integers.
+
+
+    When the encoding of the Java program source file doesn''t support Unicode, the
+    Unicode characters can be represented as escape sequences using the notation \uXXXX,
+    where XXXX is the character''s 16-bit hexadecimal representation.
+
+
+    # 196: What are some of the cutting edge open-source software that plugs into
+    JSF?
+
+
+    Answer:
+
+
+    JSF is highly extensible and it was very attractive to framework developers. They
+    built open-source software such as Facelets, Ajax4jsf, Seam, RichFaces, ICEFaces,
+    and so on.
+
+
+    # 197: How do you find additional components for your JSF application?
+
+
+    Answer:
+
+
+    The standard JSF defines a minimal set of components. In case you need more complex
+    components, there are several component libraries that are worth investigating:
+    ICEFaces, RichFaces, PrimeFaces, the Apache Trinidad library, the Apache Tomahawk
+    library, and so on.
+
+
+    # 198: How do you customize error pages?
+
+
+    Answer:'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: 'You can substitute an error page, using error-page tag in web.xml file and
+    specifying either a Java exception class or an HTML error code. For example
+
+
+    ```
+
+    <error-page>
+
+    <error-code>500</error-code>
+
+    <location>/faces/error.xhtml</location>
+
+    </error-page>
+
+    ```
+
+
+    In case an exception occurs and an error page matches its type, then that page
+    is displayed, otherwise, an HTTP error 500 is generated.
+
+
+    # 199: How can a JSF application be tested?
+
+
+    Answer:
+
+    Managed Beans can be tested in isolation, by calling the methods that the JSF
+    implementation would have called in different scenarios. For this kind of tests
+    Unit Testing and Back-Box Testing is good. Test automation frameworks as HTMLUnit
+    or Selenium may be used to write scripts that simulate browser sessions.
+
+
+    # 200: What does Request Encoding do in JSF?
+
+
+    Answer:
+
+    Request Encoding is the character encoding in which parameters from an incoming
+    request are processed and then interpreted with the default ISO-8859-1 parse data
+    requester.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# HR Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# 1: How would you handle a negative coworker?
+
+
+    Answer:
+
+
+    Everyone has to deal with negative coworkers – and the single best way to do so
+    is to remain positive. You may try to build a relationship with the coworker or
+    relate to them in some way, but even if your efforts are met with a cold shoulder,
+    you must retain your positive attitude. Above all, stress that you would never
+    allow a coworker''s negativity to impact your own work or productivity.
+
+
+    # 2: What would you do if you witnessed a coworker surfing the web, reading a
+    book, etc, wasting company time?
+
+
+    Answer:
+
+
+    The interviewer will want to see that you realize how detrimental it is for employees
+    to waste company time, and that it is not something you take lightly. Explain
+    the way you would adhere to company policy, whether that includes talking to the
+    coworker yourself, reporting the behavior straight to a supervisor, or talking
+    to someone in HR.
+
+
+    # 3: How do you handle competition among yourself and other employees?
+
+
+    Answer:
+
+
+    Healthy competition can be a great thing, and it is best to'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'stay focused on the positive aspects of this here. Don’t bring up conflict
+    among yourself and other coworkers, and instead focus on the motivation to keep
+    up with the great work of others, and the ways in which coworkers may be a great
+    support network in helping to push you to new successes.
+
+
+    # 4: When is it okay to socialize with coworkers?
+
+
+    Answer:
+
+
+    This question has two extreme answers (all the time, or never), and your interviewer,
+    in most cases, will want to see that you fall somewhere in the middle. It’s important
+    to establish solid relationships with your coworkers, but never at the expense
+    of getting work done. Ideally, relationship-building can happen with exercises
+    of teamwork and special projects, as well as in the break room.
+
+
+    # 5: Tell me about a time when a major change was made at your last job, and how
+    you handled it.
+
+
+    Answer:
+
+
+    Provide a set-up for the situation including the old system, what the change was,
+    how it was implemented, and the results of the change, and include how you felt
+    about each step of the way. Be sure that your initial thoughts on the old system
+    are neutral, and that your'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: 'excitement level grows with each step of the new change, as an interviewer
+    will be pleased to see your adaptability.
+
+
+    # 6: When delegating tasks, how do you choose which tasks go to which team members?
+
+
+    Answer:
+
+
+    The interviewer is looking to gain insight into your thought process with this
+    question, so be sure to offer thorough reasoning behind your choice. Explain that
+    you delegate tasks based on each individual''s personal strengths, or that you
+    look at how many other projects each person is working on at the time, in order
+    to create the best fit possible.
+
+
+    # 7: Tell me about a time when you had to stand up for something you believed
+    strongly to coworkers or a supervisor.
+
+
+    Answer:
+
+
+    While it may be difficult to explain a situation of conflict to an interviewer,
+    this is a great opportunity to display your passions and convictions, and your
+    dedication to your beliefs. Explain not just the situation to the interviewer,
+    but also elaborate on why it was so important to you to stand up for the issue,
+    and how your coworker or supervisor responded to you afterward – were they'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: 'more respectful? Unreceptive? Open-minded?
+
+    apologetic?
+
+
+    # 8: Tell me about a time when you helped someone finish their work, even though
+    it wasn''t “your job."
+
+
+    Answer:
+
+
+    Though you may be frustrated when required to pick up someone else''s slack, it''s
+    important that you remain positive about lending a hand. The interviewer will
+    be looking to see if you''re a team player, and by helping someone else finish
+    a task that he she couldn''t manage alone, you show both your willingness to help
+    the team succeed, and your own competence.
+
+
+    # 9: What are the challenges of working on a team? How do you handle this?
+
+
+    Answer:
+
+
+    There are many obvious challenges to working on a team, such as handling different
+    perspectives, navigating individual schedules, or accommodating difficult workers.
+    It''s best to focus on one challenge, such as individual team members missing
+    deadlines or failing to keep commitments, and then offer a solution that clearly
+    addresses the problem. For example, you could organize weekly status meetings
+    for your team to discuss progress, or assign shorter deadlines in order to keep
+    the long-term'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: 'deadline on schedule.
+
+
+    # 10: Do you value diversity in the workplace?
+
+
+    Answer:
+
+
+    Diversity is important in the workplace in order to foster an environment that
+    is accepting, equalizing, and full of different perspectives and backgrounds.
+    Be sure to show your awareness of these issues, and stress the importance of learning
+    from others’ experiences.
+
+
+    # 11: How would you handle a situation in which a coworker was not accepting of
+    someone else''s diversity?
+
+
+    Answer:
+
+
+    Explain that it is important to adhere to company policies regarding diversity,
+    and that you would talk to the relevant supervisors or management team. When it
+    is appropriate, it could also be best to talk to the coworker in question about
+    the benefits of alternate perspectives – if you can handle the situation yourself,
+    it’s best not to bring resolvable issues to management.
+
+
+    # 12: Are you rewarded more from working on a team, or accomplishing a task on
+    your own?
+
+
+    Answer:
+
+
+    It’s best to show a balance between these two aspects – your employer wants to
+    see that you’re comfortable'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'working on your own, and that you can complete tasks efficiently and without
+    assistance. However, it''s also important for your employer to see that you can
+    be a team player, and that you understand the value that multiple perspectives
+    and efforts can bring to a project.
+
+
+    # 13: Tell me about a time when you worked additional hours to finish a project.
+
+
+    Answer:
+
+
+    It''s important for your employer to see that you are dedicated to your work,
+    and willing to put in extra hours when required or when a job calls for it. However,
+    be careful when explaining why you were called to additional hours – for instance,
+    did you have to stay late because you set goals poorly earlier in the process?
+    Or on a more positive note, were you working additional hours because a client
+    requested for a deadline to be moved up on short notice? Stress your competence
+    and willingness to give 110% every time.
+
+
+    # 14: Tell me about a time when your performance exceeded the duties and requirements
+    of your job.
+
+
+    Answer:
+
+
+    If you''re a great candidate for the position, this should be an easy question
+    to answer – choose a time when you truly went above and beyond the call of duty,
+    and put in'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: 'additional work or voluntarily took on new responsibilities. Remain humble,
+    and express gratitude for the learning opportunity, as well as confidence in your
+    ability to give a repeat performance.
+
+
+    # 15: What is your driving attitude about work?
+
+
+    Answer:
+
+
+    There are many possible good answers to this question, and the interviewer primarily
+    wants to see that you have a great passion for the job and that you will remain
+    motivated in your career if hired. Some specific driving forces behind your success
+    may include hard work, opportunity, growth potential, or success.
+
+
+    # 16: Do you take work home with you?
+
+
+    Answer:
+
+
+    It is important to first clarify that you are always willing to take work home
+    when necessary, but you want to emphasize as well as it has not been an issue
+    for the past. Highlight skills such as time management, goal-setting, and multi-tasking,
+    which can all ensure that work is completed at work.
+
+
+    # 17: Describe a typical work day to me.
+
+
+    Answer:
+
+
+    There are several important components in your typical'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: 'work day, and an interviewer may derive meaning from any or all of them, as
+    well as from your ability to systematically lead him or her through the day. Start
+    at the beginning of your day and proceed chronologically, making sure to emphasize
+    productivity, time for review, goal-setting, and prioritizing, as well as some
+    additional time to account for unexpected things that may arise.
+
+
+    # 18: Tell me about a time when you went out of your way at your previous job.
+
+
+    Answer:
+
+
+    Here it is best to use a specific example of the situation that required you to
+    go out of your way, what your specific position would have required that you did,
+    and how you went above that. Use concrete details, and be sure to include the
+    results, as well as reflection on what you learned in the process.
+
+
+    # 19: Are you open to receiving feedback and criticisms on your job performance,
+    and adjusting as necessary?
+
+
+    Answer:
+
+
+    This question has a pretty clear answer – yes – but you''ll need to display a
+    knowledge as to why this is important. Receiving feedback and criticism is one
+    thing, but the most important part of that process is to then implement'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: 'it into your daily work. Keep a good attitude, and express that you always
+    appreciate constructive feedback.
+
+
+    # 20: What inspires you?
+
+
+    Answer:
+
+
+    You may find inspiration in nature, reading success stories, or mastering a difficult
+    task, but it''s important that your inspiration is positively-based and that you''re
+    able to listen and tune into it when it appears. Keep this answer generally based
+    on the professional world, but where applicable, it may stretch a bit into creative
+    exercises in your personal life that, in turn, help you in achieving career objectives.
+
+
+    # 21: How do you inspire others?
+
+
+    Answer:
+
+
+    This may be a difficult question, as it is often hard to discern the effects of
+    inspiration in others. Instead of offering a specific example of a time when you
+    inspired someone, focus on general principles such as leading by example that
+    you employ in your professional life. If possible, relate this to a quality that
+    someone who inspired you possessed, and discuss the way you have modified or modeled
+    it in your own work.
+
+
+    # 22: How do you make decisions?'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# Answer:
+
+
+    This is a great opportunity for you to wow your interviewer with your decisiveness,
+    confidence, and organizational skills. Make sure that you outline a process for
+    decision-making, and that you stress the importance of weighing your options,
+    as well as in trusting intuition. If you answer this question skillfully and with
+    ease, your interviewer will trust in your capability as a worker.
+
+
+    # 23: What are the most difficult decisions for you to make?
+
+
+    # Answer:
+
+
+    Explain your relationship to decision-making, and a general synopsis of the process
+    you take in making choices. If there is a particular type of decision that you
+    often struggle with, such as those that involve other people, make sure to explain
+    why that type of decision is tough for you, and how you are currently engaged
+    in improving your skills.
+
+
+    # 24: When making a tough decision, how do you gather information?
+
+
+    # Answer:
+
+
+    If you''re making a tough choice, it''s best to gather information from as many
+    sources as possible. Lead the'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: 'interviewer through your process of taking information from different areas,
+    starting first with advice from experts in your field, feedback from coworkers
+    or other clients, and by looking analytically at your own past experiences.
+
+
+    # 25: Tell me about a decision you made that did not turn out well.
+
+
+    Answer:
+
+
+    Honesty and transparency are great values that your interviewer will appreciate
+    – outline the choice you made, why you made it, the results of your poor decision
+    – and finally (and most importantly!) what you learned from the decision. Give
+    the interviewer reason to trust that you wouldn''t make a decision like that again
+    in the future.
+
+
+    # 26: Are you able to make decisions quickly?
+
+
+    Answer:
+
+
+    You may be able to make decisions quickly, but be sure to communicate your skill
+    in making sound, thorough decisions as well. Discuss the importance of making
+    a decision quickly, and how you do so, as well as the necessity for each decision
+    to first be well-informed.
+
+
+    # 27: What is customer service?
+
+
+    Answer:'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: 'JavaServer Faces Interview Questions You''ll Most Likely Be Asked 95
+
+
+    Customer service can be many things – and the most important consideration in
+    this question is that you have a creative answer. Demonstrate your ability to
+    think outside the box by offering a confident answer that goes past a basic definition,
+    and that shows you have truly considered your own individual view of what it means
+    to take care of your customers. The thoughtful consideration you hold for customers
+    will speak for itself.
+
+
+    # 28: Tell me about a time when you went out of your way for a customer.
+
+
+    Answer:
+
+
+    It''s important that you offer an example of a time you truly went out of your
+    way – be careful not to confuse something that felt like a big effort on your
+    part, with something your employer would expect you to do anyway. Offer an example
+    of the customer''s problems, what you did to solve it, and the way the customer
+    responded after you took care of the situation.
+
+
+    # 29: How do you gain confidence from customers?
+
+
+    Answer:
+
+
+    This is a very open-ended question that allows you to show your customer service
+    skills to the interviewer. There are many possible answers, and it is best to
+    choose something that you''ve had great experience with, such as'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# 30: Tell me about a time when a customer was upset agitated – how did you
+    handle the situation?
+
+
+    Answer:
+
+
+    Similarly to handling a dispute with another employee, the most important part
+    to answering this question is to first set up the scenario, a step-by-step guide
+    to your particular conflict resolution style, and end by describing the way the
+    conflict was resolved. Be sure that in answering questions about your own conflict
+    resolution style, that you emphasize the importance of open communication and
+    understanding from both parties, as well as a willingness to reach a compromise
+    or other solution.
+
+
+    # 31: When can you make an exception for a customer?
+
+
+    Answer:
+
+
+    Exceptions for customers can generally be made in accordance with company policy
+    or when directed by a supervisor. Display an understanding of the types of situations
+    in which an exception should be considered, such as when a customer has endured
+    a particular'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: 'hardship, had a complication with an order, or at a request.
+
+
+    Answer:
+
+
+    While both your customer and your boss have different needs of you and are very
+    important to your success as a worker, it is always best to try to attend to your
+    customer first – however, the key is explaining to your boss why you are needed
+    urgently by the customer, and then to assure your boss that you will attend to
+    his or her needs as soon as possible (unless it''s absolutely an urgent matter).
+
+
+    # 33: What is the most important aspect of customer service?
+
+
+    Answer:
+
+
+    While many people would simply state that customer satisfaction is the most important
+    aspect of customer service, it''s important to be able to elaborate on other important
+    techniques in customer service situations. Explain why customer service is such
+    a key part of business, and be sure to expand on the aspect that you deem to be
+    the most important in a way that is reasoned and well-thought out.'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# 34: Is it best to create low or high expectations for a customer?
+
+
+    Answer:
+
+
+    You may answer this question either way (after, of course), determining that the
+    company does not have a clear opinion on the matter. However, no matter which
+    way you answer the question, you must display a thorough thought process, and
+    very clear reasoning for the option you chose. Offer pros and cons of each, and
+    include the ultimate point that tips the scale in favor of your chosen answer.
+
+
+    # 35: What is the best way for a company to advertise?
+
+
+    Answer:
+
+
+    If you''re going for a position in any career other than marketing, this question
+    is probably intended to demonstrate your ability to think critically and to provide
+    reflective support for your answers. As such, the particular method you choose
+    is not so important as why you''ve chosen it. For example, word of mouth advertising
+    is important because customers will inherently trust the source, and social media
+    advertising is important as it reaches new customers quickly and cheaply.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# 36: Is it better to gain a new customer or to keep an old one?
+
+
+    Answer:
+
+
+    In almost every case, it is better to keep an old customer, and it''s important
+    that you are able to articulate why this is. First, new customers generally cost
+    companies more than retaining old ones does, and new customers are more likely
+    to switch to a different company. Additionally, keeping old customers is a great
+    way to provide a stable backbone for the company, as well as also gain new customers
+    as they are likely to recommend your company to friends.
+
+
+    # 37: What is the best way to win clients from competitors?
+
+
+    Answer:
+
+
+    There are many schools of thought on the best way to win clients from competitors,
+    and unless you know that your interviewer adheres to a specific thought or practice,
+    it''s best to keep this question general. Rather than using absolute language,
+    focus on the benefits of one or two strategies and show a clear, critical understanding
+    of how these ways can succeed in a practical application.
+
+
+    # 38: How do you feel about companies monitoring internet usage?'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Answer:
+
+
+    Generally speaking, most companies will monitor some degree of internet usage
+    over their employees – and during an interview is not the best time to rebel against
+    this practice. Instead, focus on positive aspects as the way it can lead to increased
+    productivity for some employees who may be easily lost in the world of resourceful
+    information available to them.
+
+
+    # 39: What is your first impression of our company?
+
+
+    # Answer:
+
+
+    Obviously, this should be a positive answer! Pick out a couple key components
+    of the company’s message or goals that you especially identify with or that pertain
+    to your experience, and discuss why you believe these missions are so important.
+
+
+    # 40: Tell me about your personal philosophy on business.
+
+
+    # Answer:
+
+
+    Your personal philosophy on business should be well-thought out, and in line with
+    the missions and objectives of the company. Stay focused on positive aspects such
+    as the service it can provide, and the lessons people gain in business, and offer
+    insight as to where your philosophy has come from.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# 41: What''s most important in a business model: sales, customer service,
+    marketing, management, etc.?
+
+
+    Answer:
+
+
+    For many positions, it may be a good strategy to tailor this answer to the type
+    of field you''re working in, and to explain why that aspect of business is key.
+    However, by explaining that each aspect is integral to the function as a whole,
+    you can display a greater sense of business savvy to the interviewer and may stand
+    out in his or her mind as a particularly aware candidate.
+
+
+    # 42: How do you keep up with news and emerging trends in the field?
+
+
+    Answer:
+
+
+    The interviewer wants to see that you are aware of what''s currently going on
+    in your field. It is important that your education does not stop after college,
+    and the most successful candidates will have a list of resources they regularly
+    turn to already in place, so that they may stay aware and engaged in developing
+    trends.
+
+
+    # 43: Would you have a problem adhering to company policies on social media?
+
+
+    Answer:
+
+
+    Social media concerns in the workplace have become a greater issue, and many companies
+    now outline policies'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '102 JavaScript Faces Interview Questions You''ll Most Likely Be Asked
+
+
+    for the use of social media. Interviewers will want to be assured that you won''t
+    have a problem adhering to company standards, and that you will maintain a consistent,
+    professional image both in the office and online.
+
+
+    # 44: Tell me about one of the greatest problems facing X industry today.
+
+
+    Answer:
+
+
+    If you''re involved in your career field, and spend time on your own studying
+    trends and new developments, you should be able to display an awareness of both
+    problems and potential solutions coming up in the industry. Research some of the
+    latest news before heading into the interview, and be prepared to discuss current
+    events thoroughly.
+
+
+    # 45: What do you think it takes to be successful in our company?
+
+
+    Answer:
+
+
+    Research the company prior to the interview. Be aware of the company''s mission
+    and main objectives, as well as some of the biggest names in the company, and
+    also keep in mind how they achieved success. Keep your answer focused on specific
+    objectives you could reach in order to help the company achieve its goals.'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# 46: What is your favorite part of working in this career field?
+
+
+    Answer:
+
+
+    This question is an opportunity to discuss some of your favorite aspects of the
+    job, and to highlight why you are a great candidate for the particular position.
+    Choose elements of the work you enjoy that are related to what you would do if
+    hired for the position. Remember to remain enthusiastic and excited for the opportunities
+    you could attain in the job.
+
+
+    # 47: What do you see happening to your career in the next 10 years?
+
+
+    Answer:
+
+
+    If you''re plugged in to what''s happening in your career now, and are making
+    an effort to stay abreast of emerging trends in your field, you should be able
+    to offer the interviewer several predictions as to where your career may be heading.
+    This insight and level of awareness shows a level of dedication and interest that
+    is important to employers.
+
+
+    # 48: Where do you find ideas?
+
+
+    Answer:
+
+
+    Ideas can come from all places, and an interviewer wants'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'to see that your ideas are just as varied. Mention multiple places that you
+    gain ideas from, or settings in which you find yourself brainstorming. Additionally,
+    elaborate on how you record ideas or expand upon them later.
+
+
+    # 49: How do you achieve creativity in the workplace?
+
+
+    Answer:
+
+
+    It''s important to show the interviewer that you''re capable of being resourceful
+    and innovative in the workplace, without stepping outside the lines of company
+    values. Explain where ideas normally stem from you (examples may include an exercise
+    such as list-making or a mind map), and connect this to a particular task in your
+    job that it would be helpful to be creative in.
+
+
+    # 50: How do you push others to create ideas?
+
+
+    Answer:
+
+
+    If you''re in a supervisory position, this may be requiring employees to submit
+    a particular number of ideas, or to complete regular idea-generating exercises,
+    in order to work their creative muscles. However, you can also push others around
+    you to create ideas simply by creating more of your own. Additionally, discuss
+    with the interviewer the importance of questioning people as a way to inspire
+    ideas and change.'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# 51: Describe your creativity.
+
+
+    Answer:
+
+
+    Try to keep this answer within the professional realm, but if you have an impressive
+    background in something creative outside of your employment history, don''t be
+    afraid to include it in your answer also. The best answers about creativity will
+    relate problem-solving skills, goal-setting, and finding innovative ways to tackle
+    a project or make a sale in the workplace. However, passions outside of the office
+    are great, too (so long as they don''t cut into your work time or mental space).
+
+
+    And Finally Good Luck!'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# JavaServer Faces Questions
+
+
+    # Introduction to JSF
+
+
+    +   1: What is JSF and what does it do?
+
+    2: What components can we find in JSF?
+
+    3: How many versions of JSF are currently on the market and which are these?
+
+    4: What is the advantage of using JSF?
+
+    5: How can JSF be used for designing web applications?
+
+    6: What are Beans in JSF?
+
+    7: What is a Managed Bean in JSF?
+
+    8: What are JSF pages?
+
+    9: What services does JSF offer?
+
+    10: Which are the six distinct phases defined by a JSF specification?
+
+
+    # Beans
+
+
+    +   11: What is the purpose of a Bean in JSF?
+
+    12: What is the use of a Java Bean?
+
+    13: What is the use of a Java Bean in the JSF context?
+
+    14: What does the JSF implementation process do?
+
+    15: What are the properties of a Bean class?
+
+    16: Which are the most important features of a Bean?
+
+    17: Which are the main attributes that define a Bean?
+
+    18: What is a Backing Bean in JSF?
+
+    19: What are CDI Beans?
+
+    20: How are CDI Beans used in JSF?
+
+    21: What are Message Bundles in JSF?
+
+    22: What are Bean Scopes in JSF?
+
+    23: How many Scopes can we find in JSF?
+
+    24: What does a Session Scope do in JSF?
+
+    25: What does a Request Scope do in JSF?
+
+    26: What does an Application Scope do in JSF?'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# JavaServer Faces Interview Questions You''ll Likely Be Asked
+
+
+    27: What does a Conversation Scope do in JSF?
+
+
+    28: What is the purpose of a View Scope in JSF?
+
+
+    29: What does a Custom Scope do in JSF?
+
+
+    # Attributes, Parameters and Tags
+
+
+    +   30: What does the f:attribute, f:param and f:facet do in JSF?
+
+
+    +   31: What is the sole role of the f:attribute tag in JSF?
+
+
+    +   32: What is the sole role of the f:param tag in JSF?
+
+
+    +   33: What does the f:facet tag do in JSF?
+
+
+    +   34: What does the id attribute allow for JSF?
+
+
+    +   35: What does the Converter Attribute do in JSF?
+
+
+    +   36: What does the Render Attribute used for JSF?
+
+
+    +   37: What are HTML events in JSF?
+
+
+    +   38: What does the h:panelGrid tag do in JSF?
+
+
+    +   39: What does the Immediate Attribute do in JSF?
+
+
+    +   40: What does the h:inputHidden tag do in JSF?
+
+
+    +   41: What does the h:outputText tag do in JSF?
+
+
+    +   42: What is the h:outputText tag used for JSF?
+
+
+    +   43: What does the h:graphicImage tag do in JSF?
+
+
+    # Buttons, Links and Facets
+
+
+    +   44: What are the h:commandButton and h:commandLink tags used for JSF?
+
+
+    +   45: What does the h:outputLink tag do in JSF?
+
+
+    +   46: What does the h:selectCheckbox and h:selectManyCheckbox tags do in JSF?
+
+
+    +   47: Which are the attributes that represent the h:selectCheckbox and h:selectManyCheckbox
+    tags in JSF?
+
+
+    +   48: What does Border Attribute do in JSF?
+
+
+    +   49: What do the enableClass and disableClass attributes do in JSF?
+
+
+    +   50: What are Facets in JSF?
+
+
+    +   51: What are Facets Tags used for JSF?
+
+
+    +   52: What does the ui:composition Faclet Tag do in JSF?
+
+
+    +   53: What does the ui:decoration Faclet tag do in JSF?
+
+
+    +   54: What does the ui:debug Faclet tag do in JSF?'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '108 JavaServer Faces Interview Questions You''ll Most Likely Be Asked
+
+
+    +   55: What does the h:dataTable Tag do in JSF?
+
+
+    +   56: Which tags are found in the body of a h:dataTable tag in JSF?
+
+
+    +   57: What does the dir attribute of h:dataTable do in JSF?
+
+
+    +   58: What does the frame attribute of h:dataTable do in JSF?
+
+
+    +   59: What does the row attribute of h:dataTable do in JSF?
+
+
+    +   60: What does the styles attribute h:dataTable have in JSF?
+
+
+    +   61: What does the ui:repeat tag do in JSF?
+
+
+    # Conversion and Validation
+
+
+    +   62: What is Request Value in JSF?
+
+
+    +   63: What does the f:convertNumber tag do in JSF?
+
+
+    +   64: What happens when Conversion Error occurs in JSF?
+
+
+    +   65: How can an error message be displayed in JSF?
+
+
+    +   66: How does JSF converters (besides DateTimeConverter and NumberConverter)
+    used?
+
+
+    +   67: What does the ConvertDate tag do in JSF?
+
+
+    +   68: What does the dateStyle attribute do in JSF|
+
+
+    +   69: What does the Locale Attribute do in JSF?
+
+
+    +   70: What does the Pattern Attribute do in JSF?
+
+
+    +   71: What does the timeStyle Attribute do in JSF?
+
+
+    +   72: What does the Type Attribute do in JSF?
+
+
+    +   73: What does the NumberConverter tag do in JSF?
+
+
+    +   74: How can a Listener be registered on components in JSF?
+
+
+    +   75: How can an author reference the backing Bean methods in JSF?
+
+
+    +   76: How can a value-change listener be registered on a component in JSF?
+
+
+    +   78: What is the purpose of the DoubleRangeValidator class in JSF?
+
+
+    +   79: What does the LengthValidator class do in JSF?
+
+
+    +   80: What does LongRangeValidator class do in JSF?
+
+
+    +   81: How can a Component Value bound to a property in JSF?
+
+
+    +   82: How can a Component Instance be bound to a Bean property in JSF?
+
+
+    +   83: How can a backing Bean method referenced in JSF?
+
+
+    +   84: How many attributes referencing backing Bean exist in JSF?
+
+
+    +   85: How is a method that performs navigation referenced in JSF?'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# JavaServer Faces Interview Questions You''ll Likely Be Asked
+
+
+    86: How is a method that handles an Action Event referenced in
+
+    87: How is a method that performs validation referenced in JSF?
+
+    88: How is a method that handles a value-change event referenced in JSF?
+
+    89: How is a Custom Converter applied in JSF?
+
+    90: How is a Custom Validator applied in JSF?
+
+    91: How can a Custom Component be used in JSF?
+
+
+    # Event Handling
+
+
+    92: How many types of events are supported by JSF?
+
+    93: How can Event Listeners affect the JSF life cycle?
+
+    94: What do Value Change events do in JSF?
+
+    95: How are Action Events activated in JSF?
+
+    96: What is the use of the fparam tag during event handling?
+
+    97: What is the use of the fattribute tag during event handling?
+
+    98: What are Phase Events in JSF?
+
+    99: How are Phase Listeners implemented in JSF?
+
+    100: How can a Listener class handle an action event?
+
+
+    # Composite Components
+
+
+    101: What does the Interface Component do in JSF?
+
+    102: What does the Implementation Component do in JSF?
+
+    103: What does the Attribute Component Tag do in JSF?
+
+    104: What does the valueHolder component tag do in JSF?
+
+    105: What does the editableValueHolder component tag do in JSF?
+
+    106: What does the actionSource Component tag do in JSF?
+
+    107: What does the Extension Component do in JSF?
+
+    108: What do the renderFacet and insertFacet component tags do in JSF?
+
+    109: What are Facets used for JSF?
+
+    110: What are the requirements for a Backing Component in JSF?
+
+    111: How are Composite Components packed in JARs and why?
+
+    112: What is the main purpose of using Composite Components in JSF?
+
+    113: How can AJAX be accessed in JSF?
+
+    114: How can AJAX use cases be handled from within JSF?
+
+    115: How do AJAX requests differ from other HTTP requests?'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# JavaServer Faces Interview Questions You''ll Most Likely Be Asked
+
+
+    116: How can JSF AJAX be defined?
+
+
+    117: How is the JSF life cycle split?
+
+
+    118: What happens when JSF executes components on a server?
+
+
+    119: How can AJAX be used with JSF 2.0?
+
+
+    120: What does the Event Attribute of the f:ajax tag do in JSF?
+
+
+    121: What does the Execute Attribute of the f:ajax tag do in JSF?
+
+
+    122: What does the Onevent Attribute of the f:ajax tag do in JSF?
+
+
+    123: What does the Listener Attribute of the f:ajax tag do in JSF?
+
+
+    124: What does the Render Attribute of the f:ajax tag do in JSF?
+
+
+    125: How are Events named in JSF?
+
+
+    126: What does the Complete Data Object attribute do in JSF?
+
+
+    127: What does the responseText attribute do in JSF?
+
+
+    128: What does the responseCode attribute do in JSF?
+
+
+    129: What are AJAX errors handled in JSF?
+
+
+    130: How are the properties of the data object in charge of errors?
+
+
+    131: Which are the AJAX responses in JSF?
+
+
+    132: What does the Insert Response element do in JSF AJAX?
+
+
+    133: What does the Update Response element do in JSF AJAX?
+
+
+    134: What does the delete response element do in JSF AJAX?
+
+
+    135: What does the attributes response element do in JSF AJAX?
+
+
+    136: What does the error response element do in JSF AJAX?
+
+
+    137: What does the error response element do in JSF AJAX?
+
+
+    138: What does the addOnError (callback) function do in JSF?
+
+
+    139: What does the addEvent (callback) function do in JSF?
+
+
+    140: What does the request() method do in JSF?
+
+
+    141: How does JSF handle queuing events?
+
+
+    # Custom Components and Converters
+
+
+    142: Which are the responsibilities needed for a Component Class?
+
+
+    143: What does the UIComponent class manage in JSF?
+
+
+    144: How do Components Encode Markup in JSF?
+
+
+    145: What does the ResponseWriter class do in JSF?
+
+
+    146: What do the startElement and endElement methods do in JSF?
+
+
+    147: What does the writeAttribute method do in JSF?'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# JavaServer Faces Interview Questions You''ll Likely Be Asked
+
+
+    148: What does the String getClientID (FacesContext context) method do in JSF?
+
+
+    149: What is the Map<String, Object> Attributes method used for JSF?
+
+
+    150: What does the ResponseWriter getResponseWriter() method do in JSF?
+
+
+    151: What does the void startElement (String elementName, UIComponent component)
+    method do in JSF?
+
+
+    152: What does the void writeAttribute(String attributeName, attributeValue, String
+    componentProperty) method do in JSF?
+
+
+    153: What does the void decode (FacesContext context) method do in JSF?
+
+
+    154: What does the ExternalContext getOperationContext() method do in JSF?
+
+
+    155: What does the Map getRequestParameterMap() method do in JSF?
+
+
+    156: What does the void setSubmittedValue(Object submittedValue) method do in
+    JSF?
+
+
+    157: What does the getRendersChildren method do in JSF?
+
+
+    158: What does the convertClientId method do in JSF?
+
+
+    159: What does the getConvertedValue method do in JSF?
+
+
+    160: What does the Converter createConverter(Class target) method do in JSF?
+
+
+    161: What does the UIComponent getFacet(String facetName) method do in JSF?
+
+
+    162: What does the boolean getRendersChildren() method do in JSF?
+
+
+    163: What does the boolean isRendered() method do in JSF?
+
+
+    164: What does the void restoreState(FacesContext context, Object state) method
+    do in JSF?
+
+
+    165: How is AJAX functionality adapted to custom components?
+
+
+    166: What is a Tag Handler and what does it do in JSF?
+
+
+    167: What does the StringremoteUser(String role) method do in JSF?
+
+
+    168: What does the Boolean isLoggedInInRole(String role) method do in JSF?
+
+
+    # How to?
+
+
+    169: How are files uploaded in JSF?
+
+
+    170: How many attributes does the Upload Component support in JSF?
+
+
+    171: What does the Decode Method of the upload component do in JSF?
+
+
+    172: How is an Image Map shown in JSF?
+
+
+    173: How is Binary Data produced in JSF?
+
+
+    174: How can binary data be generated in JSF without the use of a servlet?'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# JavaServer Faces Interview Questions You''ll Most Likely Be Asked
+
+
+    +   175: When does the Filter Action take place in JSF?
+
+    176: What is a Pager in JSF?
+
+    177: What does the Encode Method do in JSF?
+
+    178: How is pop-up window generated in JSF?
+
+    179: What does the doPopup function do in JSF?
+
+    180: How can parts of a page be shown or hidden in JSF?
+
+    181: What is the getErrorMessage method used for JSF?
+
+    182: What does the findValidators method do in JSF?
+
+    183: How is an application configured in JSF?
+
+    184: How can JSF expression language be extended?
+
+    185: How can a function be added to the JSF expression language?
+
+    186: How can traffic between the browser and the server be monitored?
+
+    187: How can a page be debugged in JSF?
+
+    188: When are Testing Tools used while developing a JSF application?
+
+    189: How can Scala be used with JSF?
+
+    190: How can Groovy be used with JSF?
+
+    191: What are the most common Outcome Strings and what do they mean?
+
+    192: What should the deployment descriptor include for a JavaFaces application?
+
+    193: How can you turn on validation of XML files?
+
+    194: Which are the required JAR files needed by the JSF application in order to
+    run properly?
+
+    195: What does a character set represent?
+
+    196: What are some of the cutting edge open-source software that plugs into JSF?
+
+    197: How do you find additional components for your JSF application?
+
+    198: How do you customize error pages?
+
+    199: How can a JSF application be tested?
+
+    200: What does Request Encoding do in JSF?'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# HR Questions
+
+
+    +   1: How would you handle a negative coworker?
+
+
+    +   2: What would you do if you witnessed a coworker surfing the web, reading
+    a book, etc, wasting company time?
+
+
+    +   3: How do you handle competition among yourself and other employees?
+
+
+    +   4: When is it okay to socialize with coworkers?
+
+
+    +   5: Tell me about a time when a major change was made at your last job, and
+    how you handled it.
+
+
+    +   6: When delegating tasks, how do you choose which tasks go to which team members?
+
+
+    +   7: Tell me about a time when you had to stand up for something you believed
+    strongly about to coworkers or a supervisor.
+
+
+    +   8: Tell me about a time when you helped someone finish their work, even though
+    it wasn''t “your job."
+
+
+    +   9: What are the challenges of working on a team? How do you handle this?
+
+
+    +   10: Do you value diversity in the workplace?
+
+
+    +   11: How would you handle a situation in which a coworker was not accepting
+    someone''s decisions?
+
+
+    +   12: Are you rewarded for working on a team, or accomplishing a task on your
+    own?
+
+
+    +   13: Tell me about a time when you worked additional hours to finish a project.
+
+
+    +   14: Tell me about a time when your performance exceeded the duties and requirements
+    of your job.
+
+
+    +   15: What is your driving attitude at work?
+
+
+    +   16: Do you work home with you?
+
+
+    +   17: Describe a typical work day to me.
+
+
+    +   18: Tell me about a time when you went out of your way at your previous job.
+
+
+    +   19: Are you open to receiving feedback and criticisms on your job performance,
+    and adjusting as necessary?
+
+
+    +   20: What inspires you?
+
+
+    +   21: How do you inspire others?
+
+
+    +   22: What are the most difficult decisions for you to make?
+
+
+    +   23: When making a tough decision, how do you get gather information?
+
+
+    +   24: Tell me about a decision you made that did not turn out well.
+
+
+    +   25: Are you able to make decisions quickly?
+
+
+    +   26: What is customer service?
+
+
+    +   27: Tell me about a time when you went out of your way for a customer.
+
+
+    +   28: How do you gain confidence from customers?
+
+
+    +   29: Tell me about a time when a customer was upset or agitated – how did you
+    handle the situation?'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# JavaServer Faces Interview Questions You''ll Most Likely Be Asked
+
+
+    +   31: When can you make an exception for a customer?
+
+    32: What would you do in a situation where you were needed by both a customer
+    and your boss?
+
+    33: What is the most important aspect of customer service?
+
+    34: Is it best to create low or high expectations for a customer?
+
+    35: What is the best way for a company to advertise?
+
+    36: Is it better to gain a new customer or keep an old one?
+
+    37: What is the best way to win clients from competitors?
+
+    39: What is your first impression of our company?
+
+    40: Tell me about your personal philosophy on business.
+
+    41: What''s most important in a business model: sales, customer service, marketing,
+    management, etc.?
+
+    42: How do you keep up with news and emerging trends in the field?
+
+    43: Would you have a problem adhering to company policies on social media?
+
+    44: Tell me about one of the greatest problems facing X industry today.
+
+    45: What is your favorite part of working in our company?
+
+    47: What do you see happening to your career in the next 10 years?
+
+    48: Where do you find ideas?
+
+    49: How do you achieve creativity in the workplace?
+
+    50: How do you push others to create ideas?
+
+    51: Describe your creativity.'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# JavaServer Faces Interview Questions You''ll Most Likely Asked
+
+
+    # Some of the following titles might also be handy:
+
+
+    +   1. .NET Interview Questions You''ll Most Likely Asked
+
+    2. 200 Interview Questions You''ll Most Likely Asked
+
+    3. Access VBA Programming Interview Questions You''ll Most Likely Asked
+
+    4. Adobe ColdFusion Interview Questions You''ll Most Likely Asked
+
+    5. Advanced Excel Interview Questions You''ll Most Likely Asked
+
+    6. Advanced JAVA Interview Questions You''ll Most Likely Asked
+
+    7. Advanced SAS Interview Questions You''ll Most Likely Asked
+
+    8. AJAX Interview Questions You''ll Most Likely Asked
+
+    9. Algorithms Interview Questions You''ll Most Likely Asked
+
+    10. Android Development Interview Questions You''ll Most Likely Asked
+
+    11. Ant & Mven Interview Questions You''ll Most Likely Asked
+
+    12. Apache Web Server Interview Questions You''ll Most Likely Asked
+
+    13. Artificial Intelligence Interview Questions You''ll Most Likely Asked
+
+    14. ASPNET Interview Questions You''ll Most Likely Asked
+
+    15. Automated Software Testing Questions You''ll Most Likely Asked
+
+    16. Base SAS Interview Questions You''ll Most Likely Asked
+
+    17. BEA WebLogic Service Interview Questions You''ll Most Likely Asked
+
+    18. C & C++ Interview Questions You''ll Most Likely Asked
+
+    19. C# (C Sharp) Interview Questions You''ll Most Likely Asked
+
+    20. C++ Internals Interview Questions You''ll Most Likely Asked
+
+    21. CCNA Interview Questions You''ll Most Likely Asked
+
+    22. Cloud Computing Interview Questions You''ll Most Likely Asked
+
+    23. Computer Architecture Interview Questions You''ll Most Likely Asked
+
+    24. Computer Networks Interview Questions You''ll Most Likely Asked
+
+    25. Core JAVA Interview Questions You''ll Most Likely Asked
+
+    26. Data Structures & Algorithms Interview Questions You''ll Most Likely Asked
+
+    27. Data Warehousing Interview Questions You''ll Most Likely Asked
+
+    28. EJB 3.0 Interview Questions You''ll Most Likely Asked
+
+    29. Entity Framework Interview Questions You''ll Most Likely Asked
+
+    30. Fedora & RHEL Interview Questions You''ll Most Likely Asked
+
+    31. GNU Development Interview Questions You''ll Most Likely Asked
+
+    32. Hibernate, Spring & Spring Interview Questions You''ll Most Likely Asked
+
+    33. HTML, XML and JavaScript Interview Questions You''ll Most Likely Asked
+
+    34. HTML5 Interview Questions You''ll Most Likely Asked
+
+    35. IBM WebSphere Application Server Questions You''ll Most Likely Asked
+
+    36. iOS SDK Interview Questions You''ll Most Likely Asked
+
+    37. Java / JEE Design Patterns Questions You''ll Most Likely Asked
+
+    38. Java / JEE Interview Questions You''ll Most Likely Asked
+
+    39. Java Messaging Service Interview Questions You''ll Most Likely Asked
+
+    40. JavaScript Interview Questions You''ll Most Likely Asked
+
+    41. JavaServer Faces Interview Questions You''ll Most Likely Asked
+
+    42. PHP Interview Questions You''ll Most Likely Asked
+
+    43. JQuery Interview Questions You''ll Most Likely Asked
+
+    44. JSP-Servlet Interview Questions You''ll Most Likely Asked
+
+    45. Unit Interview Questions You''ll Most Likely Asked
+
+    46. Linux Commands Interview Questions You''ll Most Likely Asked
+
+    47. Linux Interview Interview Questions You''ll Most Likely Asked
+
+    48. Linux System Administrator Interview Questions You''ll Most Likely Asked
+
+    49. Mac OS X Lion Interview Questions You''ll Most Likely Asked
+
+    50. Mac OS X Snow Leopard Interview Questions You''ll Most Likely Asked
+
+    51. Microsoft Access Interview Questions You''ll Most Likely Asked
+
+    52. Microsoft Excel Interview Questions You''ll Most Likely Asked
+
+    53. Microsoft Powerpoint Interview Questions You''ll Most Likely Asked
+
+    54. Microsoft Word Interview Questions You''ll Most Likely Asked
+
+    55. MySQL Interview Questions You''ll Most Likely Asked'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# JavaServer Faces Interview Questions You''ll Most Likely Be Asked
+
+
+    +   56. NetSuite Interview Questions You''ll Most Likely Be Asked
+
+
+    +   57. Networking Interview Questions You''ll Most Likely Be Asked
+
+
+    +   58. OOPS Interview Questions You''ll Most Likely Be Asked
+
+
+    +   59. Operating Systems Interview Questions You''ll Most Likely Be Asked
+
+
+    +   60. Oracle DBA Interview Questions You''ll Most Likely Be Asked
+
+
+    +   61. Oracle E-Business Interview Questions You''ll Most Likely Be Asked
+
+
+    +   62. ORACLE PL/SQL Interview Questions You''ll Most Likely Be Asked
+
+
+    +   63. Perl Programming Interview Questions You''ll Most Likely Be Asked
+
+
+    +   64. PHP Interview Questions You''ll Most Likely Be Asked
+
+
+    +   65. MMP Interview Questions You''ll Most Likely Be Asked
+
+
+    +   66. Python Interview Questions You''ll Most Likely Be Asked
+
+
+    +   67. RESTFUL JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    +   68. Ruby Interview Questions You''ll Most Likely Be Asked
+
+
+    +   69. Rails Rails Interview Questions You''ll Most Likely Be Asked
+
+
+    +   70. SAP ABAP Interview Questions You''ll Most Likely Be Asked
+
+
+    +   71. SAP HANA Programming Guidelines Interview Questions You''ll Most Likely
+    Be Asked
+
+
+    +   72. SAS Statistics Interview Questions You''ll Most Likely Be Asked
+
+
+    +   73. Selenium Testing Tools Interview Questions You''ll Most Likely Be Asked
+
+
+    +   74. Silverlight Interview Questions You''ll Most Likely Be Asked
+
+
+    +   75. Software Repositories Interview Questions You''ll Most Likely Be Asked
+
+
+    +   76. Software Testing Interview Questions You''ll Most Likely Be Asked
+
+
+    +   77. SQL Server Interview Questions You''ll Most Likely Be Asked
+
+
+    +   78. Tomcat Interview Questions You''ll Most Likely Be Asked
+
+
+    +   79. Unity Interview Questions You''ll Most Likely Be Asked
+
+
+    +   80. Unix Interview Questions You''ll Most Likely Be Asked
+
+
+    +   81. UNIX Shell Programming Interview Questions You''ll Most Likely Be Asked
+
+
+    +   82. VB.NET Interview Questions You''ll Most Likely Be Asked
+
+
+    +   83. Windows Server 2008 R2 Interview Questions You''ll Most Likely Be Asked
+
+
+    +   84. XLXP, XSLT, XPath, XFORMS & XQuery Interview Questions You''ll Most Likely
+    Be Asked
+
+
+    +   85. XML Interview Questions You''ll Most Likely Be Asked
+
+
+    For complete list visit
+
+
+    www.vibrantpublishers.com'
+  merge: -1
+  pgno: 117
