@@ -1,0 +1,2 @@
++   [Java 编程初学者指南：快速学习 Java 的权威速成课程。在7 天内通过 Java 代码进行编程并创建第一个程序的秘籍、技巧与窍门](README.md)
++   [Java 编程初学者指南：快速学习 Java 的权威速成课程。在7 天内通过 Java 代码进行编程并创建第一个程序的秘籍、技巧与窍门](java-programming-for-beginners-a-definitive-crash-course-for.md)
