@@ -1,0 +1,4315 @@
+- img_proc: true
+  md: '![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_0_0.png)
+
+
+    # # JAVA
+
+
+    A Step-by-Step Guide for Absolute Beginners
+
+
+    DANIEL BELL'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # JAVA
+
+    ***
+
+    nA Step-by-Step Guide for Absolute Beginners
+
+
+    ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_1_0.png)
+
+
+    Daniel Bell'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'Please note the permission information contained within this document is for
+    educational and entertainment purposes only. No warranties of any kind are expressed
+    or implied. Readers acknowledge that the author is not engaging in the rendering
+    of legal, financial, medical or professional advice. Please consult a licensed
+    professional before attempting any techniques outlined in this book.
+
+
+    By reading this document, the reader agrees that under no circumstances is the
+    author responsible for any losses, direct or indirect, which are incurred as a
+    result of the information contained within this document, but not limited to,
+    errors, omissions, or inaccuracies.
+
+
+    # Java: A Step-by-Step Guide For Absolute Beginners
+
+
+    Copyright © 2019 by Daniel Bell.2nd Edition
+
+
+    All rights reserved. No part of this book may be used or reproduced in any manner
+    whatsoever written permission except in the case of brief quotations em- bodily
+    in critical articles or reviews.
+
+
+    Under no circumstances will any legal responsibility or blame be held against
+    the publisher for any reparation, damages, or monetary loss due to the information
+    herein, either directly or indirectly.
+
+
+    Publisher: Amazon KDP & Guzzler Media LLC
+
+
+    ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_2_0.png)
+
+
+    GUZZLER MEDIA\http://www.guzzlermedia.com
+
+    Contact: contact@guzzlermedia.com
+
+    Book and Cover design by Angela W.T.
+
+    ISBN:
+
+    Imprint: Independently published
+
+    First Edition: April 2019'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "# CONTENTS\n\n+   INTRODUCTION\n\n+   1-GETTING STARTED WITH JAVA\n  - What\
+    \ is Java?\n  - Java Environment\n  - First Java Program\n\n+   2-JAVA CLASSES\
+    \ AND OBJECTS\n  - Constructors\n  - Creating Objects\n  - Accessing Variables\
+    \ and Methods\n\n+   3-VARIABLES IN JAVA\n  - Variable Declaration\n  - Variable\
+    \ Initialization\n  - Variable Types\n\n+   4-JAVA DATA TYPES\n  - Primitive Data\
+    \ Types\n  - Non-Primitive Data Types\n  - Type Casting and Type Conversion\n\n\
+    +   5-ARRAYS IN JAVA\n  - Single Dimensional Arrays\n  - Multi-Dimensional Arrays\n\
+    \n+   6-OPERATORS IN JAVA\n  - Unary Operator\n  - Arithmetic Operators\n  - Logical\
+    \ Operators\n  - Comparison Operators\n\n+   7-DECISION MAKING STATEMENTS\n  -\
+    \ if statement"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'if...else statement
+
+    if...else if...else Statement
+
+    Nested if
+
+    switch statement
+
+
+    # 8-JAVA Loop
+
+
+    +   for Loop
+
+    while Loop
+
+    do...while Loop
+
+    break Statement
+
+    continue Statement
+
+
+    # 9-JAVA METHODS
+
+
+    +   Creating Methods
+
+    Calling Methods
+
+    The void Keyword
+
+    Call by Value
+
+    Abstract Methods
+
+    Method Overloading
+
+    Command-Line Arguments
+
+    The this Keyword
+
+    Variable Arguments
+
+    Method Overriding
+
+    Recursive Functions in Java
+
+
+    # 10-INHERITANCE IN JAVA
+
+
+    +   Single Inheritance
+
+    Multilevel Inheritance
+
+    Hierarchical Inheritance
+
+    Invoking Superclass Constructor
+
+    The instance of Keyword
+
+
+    # 11-ABSTRACTION IN JAVA
+
+
+    # 12-ENCAPSULATION'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# 13-INTERFACES
+
+
+    # 14-PACKAGES
+
+
+    Import Keyword
+
+
+    # 15-JAVA APPLETS
+
+
+    +   - Applets’ Lifecycle
+
+    - Displaying Images
+
+    - Applet Animations
+
+    - Events on Applets
+
+    - Applet Parameters
+
+
+    # 16-JAVA INPUT/ OUTPUT
+
+
+    +   - Byte Streams
+
+    - Character Streams
+
+    - Standard Streams
+
+    - Reading and Writing Files
+
+    - File Navigation
+
+    - Listing Directories
+
+
+    # 17-EXCEPTION HANDLING
+
+
+    +   - Catching Exceptions
+
+    - Multiple Catch Blocks
+
+    - Throw/Throws Keywords
+
+    - Finally Statement
+
+    - Try-with-resources
+
+    - User-defined Exceptions
+
+
+    # 18-JAVA AWT
+
+
+    +   - Handling Events
+
+    - AWT Button
+
+    - AWT Label
+
+    - AWT TextField
+
+    - AWT TextArea
+
+    - AWT Checkbox'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# AWT CheckboxGroup
+
+
+    # AWT Menu and MenuItem
+
+
+    # KeyListener Interface
+
+
+    # CONCLUSION
+
+
+    # ABOUT THE AUTHOR
+
+
+    # ACKNOWLEDGMENTS'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Introduction
+
+
+    Java is a great programming language that can be used for the development of both
+    standalone and distributed applications. These types of applications are on high
+    demand today for both small and large enterprises. Java comes with a feature known
+    as apples which are web pages that can be embedded on web browsers. This means
+    that Java can help you add some functionality to your web applications. You can
+    now tell why Java is a popular programming language with a high demand worldwide.
+    It also has many other features which you can take advantage of when developing
+    your application. For instance, Java is an object-oriented programming language.
+    If are familiar with any other object-oriented programming language, it will be
+    easy for you to learn Java. Java has a simple syntax to grasp, even by beginners.
+
+
+    It is easy to get started with writing and running Java programs. You only need
+    to have the Java compiler installed on your computer and a text editor where you
+    will write your code. With these, you can write your Java programs and get instant
+    results. For the case of the text editor, a basic text editor like Notepad is
+    okay although there are more advanced text editors for Java-like NetBeans and
+    Eclipse. Once you compile your Java code, you get the Java byte-code which is
+    platform independent, meaning you can execute it on a machine running any type
+    of operating system. This book is an excellent guide for you to learn everything
+    about Java. The author takes you'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: from the initial steps of getting started with Java to develop your own Java
+    application. Enjoy reading!
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# # 1-Getting Started with Java
+
+
+    # ## What is Java?
+
+
+    Java is both a platform and a programming language. As a platform, we have the
+    Java runtime environment (JRE) which is a software environment which programs
+    can run. As a language, Java is a high-level, robust and object-oriented programming
+    language. The language was developed by Suns Microsystems in 1995.
+
+
+    Since Java is an object-oriented programming language, it treats everything as
+    an object. The object model nature of the language also makes it easy for us to
+    extend it. Java programs go through two steps to generate results. The first step
+    is compilation which the Java bytecode is generated. The Java bytecode is platform
+    independent, meaning that it can run on any machine. After the compilation, the
+    bytecode is passed through the execution step to generate the results.
+
+
+    Java is known to be an easy language. If you are familiar with the concepts of
+    object-oriented programming, then it will be easy for you to understand Java.
+    Java comes with a secure feature that allows developers to create temper-free
+    and virus-free systems. The public-key encryption is used as a technique for securing
+    the systems.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Java Environment
+
+
+    To write and run your Java programs, you must have the Java compiler and a text
+    editor such as Notepad in Windows. To get the Java compiler, you must install
+    the Java Development (JDK) on your computer. Once this is installed, your computer
+    will have the Java compiler.
+
+
+    Now you have the Java compiler, you must have a text editor in which you will
+    write your programs. You can use either a basic text editor or an advanced text
+    editor. Examples of advanced text editors you can use for Java programming include
+    NetBeans and Eclipse. You can download the JDK from the following
+
+
+    URL:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+
+    Once the download is complete, just double click the setup file and the installation
+    process will begin. You will be taken through a sequence of simple on-screen instructions
+    for the installation to be done. Installation alone is not enough as you have
+    to set the path environment variable. This way, you will be able to invoke the
+    Java compiler from the terminal of your operating system. In most cases, the installation
+    of JDK is done in the c:Program Files\java\jdk directory. On windows, you can
+    set the path environment variable by right clicking “My Computer” then choosing
+    “Properties”. Next, open the “Advanced” tab then choose “Environment variables”.
+    Add the “c:\Program Files\java\jdk\bin” path. Linux users are advised to read
+    the documentation of their shells.
+
+
+    # First Java Program
+
+
+    We need to create the Hello World Java example. To do this, open your text'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "editor such as Notepad and create a new file. Give this file the name Hello.java.\
+    \ Mark the directory where you save this file. Add the following java code to\
+    \ the file and save it:\n\n```\npublic class Hello {\n    /** my first java program\n\
+    \     * the code will print 'Hello World'\n     */\n\n    public static void main(String\
+    \ [args]) {\n        System.out.println(\"Hello World\"); // to print Hello World\n\
+    \    }\n}\n```\n\nOnce you have saved the above code, open the terminal of your\
+    \ operating system and navigate to the directory where you have saved the file.\n\
+    \nRun the following command on the terminal:\navac Hello.java\n\nThe above command\
+    \ should generate the **Hello.class** file. This is the file with the Java byte\
+    \ code, which is platform-independent. You can confirm this by checking the same\
+    \ directory for this file. What we have done is that we have invoked the Java\
+    \ compiler (Jayac) on the file to compile the Java code contained in the file.\n\
+    \nNow that the code has compiled with no error, we can execute it. Just run the\
+    \ following command on the same terminal:\n\njava Hello\n\nThe above command should\
+    \ return results on the terminal as shown below:"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "```\nC:\\Windows\\system32>cd C:\\Users\\admin\nC:\\Users\\admin>javac Hello.java\n\
+    C:\\Users\\admin>java Hello\nHello World\nC:\\Users\\admin>\n```\n\nThe above\
+    \ shows that the code returned **Hello World** as the output.\nConsider the following\
+    \ line which I have extracted from the code:\n\n```\npublic class Hello {\n```\n\
+    \nWhat we are doing in the above line is that we are creating a class named **Hello**.\
+    \ The **H** in the class name has been written in uppercase; hence we must write\
+    \ the class that anytime we are referring to it. Java is a case sensitive language.\
+    \ The public is an access modifier, declaring the class as public, meaning it\
+    \ can be accessed from the rest of the classes contained within the same package.\
+    \ The opening curly brace marks the beginning of the body of the class and to\
+    \ close it, we must use the closing curly brace}.\n\nConsider the following section\
+    \ extracted from the code:\n\n```\n/* my first java program\n * the code will\
+    \ print 'Hello World'\n * /\n```\n\n```\n// my first java program\n```\n\nThe\
+    \ Java compiler does nothing to comment, but it skips them. Comments"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'improve the readability of the code. They are used to give explanations on
+    what the various lines of code should do.
+
+
+    Note that the file was given the name Hello.java, and the class was given the
+    name Hello. If these two don''t match this way, an error will be generated. This
+    should always be the case when you want to run your Java code from the terminal
+    of your operating system.
+
+
+    Here is another line extracted from the code:
+
+
+    ```
+
+    public static void main(String args[]) {
+
+    ```
+
+
+    The above is referred to as the main method. No Java program can run or execute
+    without the main method. Here is another line extracted from the code:
+
+
+    ```
+
+    System.out.println("Hello World");
+
+    ```
+
+
+    We have called a method named println to help us print the text we pass to on
+    the display. You have also noticed that we have used two closing curly braces
+    %>. The first one closes the main method while the second one closes the class.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# 2-Java Classes and Objects\n\nAs we had stated, Java is an object-oriented\
+    \ programming language. This means it can support the various concepts of the\
+    \ object-oriented programming paradigm.\n\nIn Java, objects are characterized\
+    \ by states and behaviors. An example of an object is a dog. Some of its states\
+    \ that characterize it include name, color, and breed. Some behaviors that characterize\
+    \ it include eating, barking and wagging of the tail. An object is an instance\
+    \ of a class.\n\nA class is a template or blueprint that describes the state and\
+    \ behavior that any object of its type should support. Here is an example of a\
+    \ class:\n\n```\npublic class Dog {\n    String name;\n    int breed;\n    String\
+    \ color;\n\n    void eating() {\n}\n\n    void barking() {\n}\n\n    void sleeping()\
+    \ {\n}\n```"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "}\nIn the above example, we have defined a class named Dog. Three variables\
+    \ have been defined inside this class, which are the name, breed, and color. These\
+    \ are the properties of the Dog class. We have also defined 3 methods for the\
+    \ class. These are eating(), barking() and sleeping(). We can define many methods\
+    \ inside a class.\n\n# Constructors\n\nConstructors are important parts of classes.\
+    \ Each class has a constructor. If you don't create a class constructor explicitly,\
+    \ the Java compiler will automatically initialize a default constructor for the\
+    \ class.\n\nEvery time you create a new object, at least a single constructor\
+    \ will be invoked. Note that there is a rule that governs the definition and use\
+    \ of constructors in Java. A constructor must have the same name as a class. A\
+    \ class may have over one constructor.\n\nHere is an example:\n\n```\npublic class\
+    \ Dog {\n    public Dog() {\n}\n\n    public Dog(String breed) {\n        // A\
+    \ constructor with one parameter, breed.\n    }\n}\n```\n\nIn the above class,\
+    \ we have created two constructors, one without arguments and another one with\
+    \ one argument. You should note that the two constructors share the same name\
+    \ with the class.\n\n# Creating Objects"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "The purpose of a class is to provide a template or a blueprint from which we\
+    \ will create objects. This means that objects are created from classes. In Java,\
+    \ objects are created using the new keyword. The following sequence of steps should\
+    \ be followed when creating Java objects:\n\n+   1. Declaration- this should involve\
+    \ declaring a variable with an object type.\n\n+   2. Instantiation- this is the\
+    \ creation of an object using the new keyword.\n\n+   3. Initialization- the new\
+    \ keyword is normally followed by calling the constructor. This will initialize\
+    \ the new object.\n\nThe following example shows how an object can be created:\n\
+    \n```\npublic class Dog {\n    public Dog(String breed) {\n        // A constructor\
+    \ with one parameter, breed\n        System.out.println(\"You passed the breed:\"\
+    \ + breed);\n    }\n\n    public static void main(String[] args) {\n        //\
+    \ Creating an object\n        Dog puppy = new Dog(\"Poodle\");\n    }\n}\n```\n\
+    \nUpon execution, the code will return:\n\n> You passed the breed :Poodle\n\n\
+    From the class Dog, we could create an object named puppy.\n\n# Accessing Variables\
+    \ and Methods\n\nIn classes, one of the best ways for us to access instance variables\
+    \ and"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "methods is by creating objects. An instance variable can be accessed following\
+    \ the sequence of steps given below:\n\n```\n/* Begin creating an object */\n\
+    ObjectReference = new Constructor();\n```\n\n```\n/* Next, call the variable */\n\
+    ObjectReference.variableName;\n```\n\n```\n/* Call a class method */\nObjectReference.MethodName();\n\
+    ```\n\nHere is an example showing this:\n\n```\npublic class Dog {\nString name;\n\
+    \npublic Dog(String breed) {\n  // A constructor with one parameter, breed.\n\
+    \  System.out.println(\"You passed the breed: \" + breed);\n}\n\npublic void setName(String\
+    \ puppyName ) {\n  name = puppyName;\n}\n\npublic String getName() {\n  System.out.println(\"\
+    Puppy's name is: \" + name);\n  return name;\n}\n\npublic static void main(String[]\
+    \ args) {\n  /* Object creation */\n  Dog puppy = new Dog(\"poodle\");\n\n  /*\
+    \ Call class method and set puppy's name */\n  puppy.setName(\"Tommy\");\n\n \
+    \ /* Call another class method and get puppy's name */\n  puppy.getName();\n\n\
+    \  /* Instance variables can also be accessed as follows */\n  System.out.println(\"\
+    Variable Value: \" + puppy.name);\n}\n```"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'The code will return the following output upon execution:
+
+
+    ```
+
+    You passed the breed :poodle
+
+    Puppy''s name is :Tommy
+
+    Variable Value :Tommy
+
+    ```
+
+
+    # 3-Variables in Java
+
+
+    A **variable** can be seen as a container responsible for holding value during
+    the life of a program. Each variable is of a certain data type, designative the
+    value it can hold. There are two steps in using Java variables: **variable declaration**,
+    and **variable initialization.**
+
+
+    # Variable Declaration
+
+
+    The declaration of a variable involves giving it a name and specifying its data'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'type. Below are examples of valid variable declaration:
+
+
+    ```
+
+    int a, x, p;
+
+    ```
+
+
+    ```
+
+    float pi;
+
+    ```
+
+
+    ```
+
+    double p;
+
+    ```
+
+
+    ```
+
+    char c;
+
+    ```
+
+
+    The int, float, double and char are the data types, specifying the value each
+    variable or should hold. To declare several variables in one line, separate them
+    using a comma (,) as in the first example. A variable declaration should end with
+    a semicolon (;).
+
+
+    # Variable Initialization
+
+
+    Variable initializing involves assigning it a valid value. The value to be assigned
+    to the variable is determined by the data type the variable is of. Below are examples
+    of valid variable initializations.
+
+
+    ```
+
+    pi=3.14f;
+
+    ```
+
+
+    ```
+
+    a=10.12768781;
+
+    ```
+
+
+    ```
+
+    c=''s'';
+
+    ```
+
+
+    Both declaration and initialization of a variable can be done at once as shown
+    below:
+
+
+    ```
+
+    int a=1, x=4, p=5;
+
+    ```
+
+
+    ```
+
+    float pi=3.14f;
+
+    ```
+
+
+    ```
+
+    double p=15.23d;
+
+    ```
+
+
+    ```
+
+    char c=''s'';
+
+    ```'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# Variable Types\n\nJava supports three variable types:\n\n+   1. Local Variables\n\
+    2. Static Variables\n3. Instance Variables\n\n# Local Variables\n\nThese are variables\
+    \ declared within a method body. They can only be accessed from within that method.\n\
+    \n# Instance Variables\n\nThese are the variables that have been defined without\
+    \ the use of a STATIC keyword. These variables are specific to an object.\n\n\
+    # Static Variables\n\nThese are variables initialized once and at the beginning\
+    \ of program execution. You should initialize them before instance variables.\n\
+    \nThe following example shows the different Java variables:\n\n```\nclass VariablesExample\
+    \ {\n    int p = 1; //an instance variable\n    static int q = 5; //a static variable\n\
+    \    void methodExample() {\n        int r = 10; //a local variable\n}\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    The variable **integer q** is a static variable since it has been defined with
+    the **static keyword**. The variable **int r** has been declared within the **methodExample**
+    method, making it a local variable. It can only be accessed from within that method.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 4-Java Data Types
+
+
+    In Java, a data type can be primitive or non-primitive.
+
+
+    # Primitive Data Types
+
+
+    These are the pre-defined data types that are already provided by Java. They are
+    **8** in number including **byte, short, long, char, int, float, Boolean** and
+    **double** data types.
+
+
+    Let us now discuss the various primitive data types in Java:
+
+
+    # Boolean
+
+
+    This data type stores only two values, which are **true** and **false**. It is
+    used in simple statements that track only **true/false conditions**. It specifies
+    only one bit of information, but we cannot define its size precisely.
+
+
+    # Byte
+
+
+    This has a default value of **0**, and its minimum value is **-128 (-2^7)**. It
+    helps in saving space in large arrays as it is 4 times smaller than integers.
+
+
+    # Short
+
+
+    It has a default value of **0** and values lying with the range of **-32,768**
+    to'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "32,767. It can also be used for saving on space just like the byte data type.\n\
+    \n# I n t\n\nThis also has a default value of 0 and values ranging between - 2,147,483,648\
+    \ and 2,147,483,647. It has a minimum value of - 2,147,483,648 and a maximum value\
+    \ of 2,147,483,647.\n\n# L o n g\n\nThis data type also has a default value of\
+    \ 0 with its values ranging between -9,223,372,036,854,775,808 and 9,223,372,036,854,775,807.\
+    \ Its minimum value is - 9,223,372,036,854,775,808 while its maximum value is\
+    \ 9,223,372,036,854,775,807. It is the best data type to use when you want to\
+    \ have a long range of values than the ones provided by the int data type.\n\n\
+    # F l o at\n\nThis data type has an unlimited range of values. It can help you\
+    \ save on space compared to the use of a double. Avoid using this data type for\
+    \ precise values like currency. Its default value is 0.0F.\n\n# D o u b l e\n\n\
+    This data type has a default value of 0.0d and it comes with an unlimited range\
+    \ of values. It used to represent values with the decimal part just like the float\
+    \ data type. Avoid using it for precision values like currency.\n\n# C h a r \
+    \ \n\nThis data type is used for storing characters.\n\n# N o n - P r i m i t\
+    \ i v e  D a t a  T y p e s"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "These are defined by the use of the defined class constructors. They help programmers'\
+    \ access objects. They include Strings and arrays.\n\nThe example given below\
+    \ shows the use of variables:\n\n```\npublic class AddVariables{\n    public static\
+    \ void main(String[] args) {\n        int p=10;\n        int q=22;\n        int\
+    \ r=p+q;\n        System.out.println(r);\n    }\n}\n```\n\nWe have defined three\
+    \ integer variables p, q, and r. The values for p and q have been initialized,\
+    \ while the value for r is the addition of the previous two variables. We have\
+    \ then invoked the println function to print the value of r. It should print 32,\
+    \ the result of the addition of 10 and 22. This is shown below:\n\n32\n\n# Type\
+    \ Casting and Type Conversion\n\nIt is possible for a variable of a particular\
+    \ type to get a value of some other type. Type conversion is when a variable of\
+    \ a smaller capacity is assigned a variable of a bigger capacity.\n\nExample:\n\
+    \n```\ndouble p;\nint q=6;\np= (double)q;\n```\n\nTypecasting is when a variable\
+    \ of larger capacity is assigned some other variable of a smaller capacity.\n\n\
+    Example:"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "```\np=G;\nint q;\nq=(int) p;\n```\n\nThe **(int) is known as the type cast\
+    \ operator.** If it is not specified you get an error. Typecasting example:\n\n\
+    ```\npublic class TypecastingExample{\n    public static void main(String[] args){\n\
+    \        float p=19.7f;\n        //int q=p/a compile error\n        int q=(int)p;\n\
+    \        System.out.println(p);\n        System.out.println(q);\n    }\n}\n```\n\
+    \nThe code returns the following upon execution:\n\n19.7\n19"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# 5-Arrays in Java
+
+
+    Arrays are storage structures used for storing same-type elements. An array has
+    a fixed size, which cannot be increased after definition. The first element in
+    an array is at index 0.
+
+
+    # Single Dimensional Arrays
+
+
+    These are arrays in which the elements are stored linearly. The declaration of
+    an array takes the syntax given below:
+
+
+    ```
+
+    <elementDataType>[arrayName>;
+
+    ```
+
+
+    Another syntax:
+
+
+    ```
+
+    <elementDataType> <arrayName>;
+
+    ```
+
+
+    Example:
+
+
+    ```
+
+    int arrayExample[];
+
+    int [arrayExample];
+
+    ```
+
+
+    An array can be initialized as follows
+
+
+    ```
+
+    arrayExample[0]=20;
+
+    ```'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "The line states that the element 1 should be stored at index 0 of the array.\
+    \ An array can also be declared and initialized simultaneously:\n\n```\nint arrayExample[]\
+    \ = {19, 21, 34, 87};\n```\n\nThe value 10 will be stored at index 0 of the array,\
+    \ 21 at index 1 and so on.\n\nExample:\n\n```\npublic class JavaArrayExample{\n\
+    \    public static void main(String args[]){\n        int myarr[] = new int[15];\n\
+    \        for (int p=0;p<15;p++){\n            myarr[p]=p+1;\n        }\n     \
+    \   System.out.println(\"myarr[\"+p+\"] =+myarr[p]);\\n    }\n    System.out.println(\"\
+    The Array Length = \"+myarr.length);\n}\n```\n\nThe array will print the elements\
+    \ contained at different indices as shown below:\n\n```\nmyarr[0] = 1\nmyarr[1]\
+    \ = 2\nmyarr[2] = 3\nmyarr[3] = 4\nmyarr[4] = 5\nmyarr[5] = 6\nmyarr[6] = 7\n\
+    myarr[7] = 8\nmyarr[8] = 9\nmyarr[9] = 10\nmyarr[10] = 11\nmyarr[11] = 12\nmyarr[12]\
+    \ = 13\nmyarr[13] = 14\nmyarr[14] = 15\nThe Array Length = 15\n```"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'We also got the length of the array, which is 15.
+
+
+    # Multi - Dimensional Arrays
+
+
+    These can be seen as arrays of other arrays. In a multi-dimensional array declaration,
+    you only add another set of square brackets to define the other index. Example:
+
+
+    ```
+
+    int arr2[][ ] = new int[12][45];
+
+    ```
+
+
+    You have the authority to control the length of your multi-dimensional array.
+    Example:
+
+
+    ```
+
+    public class JavaArrayExample2 {
+
+    public static void main(String[] args) {
+
+    // Creating a 2-dimensional array.
+
+    int arr2[][ ] = new int[12][45];
+
+    // Assign only three elements
+
+    arr2[0][0] = 0;
+
+    arr2[1][1] = 12;
+
+    arr2[2][3] = 23;
+
+    System.out.println(arr2[0][0] + " " ");
+
+    System.out.println(arr2[1][1] + " " ");
+
+    }
+
+    }
+
+    ```
+
+
+    The program will return the value {0][0] and index [1][1] as shown below:
+
+
+    ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_28_0.png)'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# #6-Operators in Java\n\nOperators are symbols used to perform operations.\
+    \ For example, the + symbol is used for arithmetic operations. Java supports different\
+    \ operators:\n\n# ## Unary Operator\n\nThis is an operator that takes one operand.\
+    \ They increment/decrement a value. They include ++ **(increment)** and - - **(decrement)**.\n\
+    Example:\n\n```\npublic class JavaUnaryOperator{\n    public static void main(String[]\
+    \ args){\n        int p=0;\n        System.out.println(++p);//from 0 to 1\n  \
+    \      System.out.println(++p);//2\n        System.out.println(p--);//1\n    \
+    \    System.out.println(-p);//0\n    }\n}\n```\n\nThe program prints the following\
+    \ after execution:\n\n+   * 0\n* 2\n* 2\n* 0"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "The p++ means that the value of p is read first before the increment is done;\
+    \ hence we got the value of p as 0. If it was ++p, then we would get a 1 as the\
+    \ first value of p. You can try it.\n\n# Arithmetic Operators\n\nThese operators\
+    \ are used for performing mathematical operations like multiplication, addition,\
+    \ division, subtraction, etc. They are used as mathematical operators.\n\nExample:\n\
+    \n```\npublic class ArithmeticOperators{\n    public static void main(String[]\
+    \ args){\n        int p=13;\n        int q=4;\n        System.out.println(p+q);\
+    \ //17\n        System.out.println(p-q); //9\n        System.out.println(p*q);\
+    \ //52\n        System.out.println(p/q); //3\n        System.out.println(p%q);\
+    \ //6\n    }\n}\n```\n\nThe code returns the following result upon execution:\n\
+    \n```\n17\n9\n52\n3\n6\n```\n\nWe have two integer variables p and q with their\
+    \ respective values initialized. We have got the addition, subtraction, multiplication,\
+    \ and division of these variables. The division ignores the decimal part as the\
+    \ variables have been declared as integers rather than floats or doubles. The\
+    \ only operator that may look unfamiliar is the % (modulus operator), which returns\
+    \ the rest after"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "division.\n\n# Logical Operators\n\nThese operators are used together with\
+    \ binary values. They help in the evaluation of conditions in loops and conditional\
+    \ statements. They include ||, &&, !. Suppose we have two Boolean variable a1\
+    \ and a2, the following conditions apply:\n\n+   - a1&&a2 will return true if\
+    \ both a1 and a2 are true, otherwise, false.\n- a1||a2 will return false if both\
+    \ a1 and a2 are false, otherwise false.\n- !a1 will return the opposite of a1.\n\
+    \nExample:\n\n```\npublic class Java.LogicalOperator {\n    public static void\
+    \ main(String[] args) {\n        boolean p = true;\n        boolean q = false;\n\
+    \n        System.out.println(\"p && q: \" + (p && q));\n        System.out.println(\"\
+    p || q: \" + (p || q));\n        System.out.println(\"!(p && q): \" + !(p && q));\n\
+    \    }\n}\n```\n\nThe program will return the following upon execution:\n\n> p\
+    \ && q: false\np || q: true\n!(p && q): true\n\nThe value of variable p has been\
+    \ set to true while that of variable q has been set to false. In the first case,\
+    \ we are using && operator, hence true and false return a false. In the second\
+    \ case, we are using the || operator, hence"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "**true or false give a true.** In the last case, we are negating the result\
+    \ of the && operation.\n\n# Comparison Operators\n\nJava supports 6 types of comparison\
+    \ operators, ==, !=, <, >, >=,:\n\n+   - == will return true if both left and\
+    \ right sides are equal.\n- != will return true if the left and right sides of\
+    \ the operator are not equal.\n- > returns true if the left side is greater than\
+    \ the right side.\n- < returns true if the left side is less than the right side.\n\
+    - >= returns true if the left side is greater/equal to the right.\n\nExample:\n\
+    \n```\npublic class RelationalOperator {\n    public static void main(String[]\
+    \ args[]) {\n    int p = 10;\n    int q = 15;\n    if (p==q) {\n        System.out.println(\"\
+    p and q are equal\");\n    }\n    else{\n        System.out.println(\"p and q\
+    \ aren't equal\");\n    }\n\n    if(p != q) {\n        System.out.println(\"p\
+    \ and q aren't equal\");\n    }\n    else{\n        System.out.println(\"p and\
+    \ q are equal\");\n    }\n\n    if( p > q) {\n        System.out.println(\"p is\
+    \ greater than q\");\n    }\n    else{\n```\n\n+   - <= returns true if the left\
+    \ side is less than the right side."
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\nSystem.out.println('p isn't greater than q');\n}\n\nif (p >= q) {\n  System.out.println('p\
+    \ is equal to or greater than q');\n} else {\n  System.out.println('p is less\
+    \ than q');\n}\n\nif (p < q) {\n  System.out.println('p is less than q');\n} else\
+    \ {\n  System.out.println('p isn't less than q');\n}\n\nif (p <= q) {\n  System.out.println('p\
+    \ is equal to or less than q');\n} else {\n  System.out.println('p is greater\
+    \ than q');\n}\n}\n```\n\nThe code should return the following result after execution:\n\
+    \n```\np and q aren't equal\np and q aren't equal\np p isn't greater than q\n\
+    p p is less than q\np p is less than q\np p is equal to or less than q\n```\n\n\
+    We have used various comparison operators to compare the values of variables **p**\
+    \ and **q**."
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# 7-Decision Making Statements\n\nIn Java, decision making helps us to test\
+    \ conditions and run statements based on the outcome of the condition. Let us\
+    \ discuss the statements for decision making:\n\n# ## if statement\n\nThis statement\
+    \ has a **Boolean expression** and **statement(s)**. Its syntax is given below:\n\
+    \n```\nif(A_boolean_expression) {\n// Statement(s) to be run if true\n}\n```\n\
+    \nThe statements within the body of the expression will run if the condition is\
+    \ true, otherwise, no result from the program.\n\nExample:\n\n```\npublic class\
+    \ JavalffStatement {\n    public static void main(String[] args) {\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "```\nint x = 5;\nif(x < 10) {\n    System.out.print(\"The value of x is below\
+    \ 10\");\n}\n\n```\n\nThe code will return the following result upon execution:\n\
+    \n# The value of x is below 10\n\nWe have declared a variable named x and initialized\
+    \ its value to 5. In the if condition; we are checking whether the value of this\
+    \ variable is below 10. Since this is true, the statement below this condition\
+    \ has been executed.\n\n```\nif...else statement\n```\n\nThis statement combines\
+    \ “if” with “else\", with the latter specifying the statement(s) to run if the\
+    \ expression is false. Syntax:\n\n```\nif(A_boolean_expression) {\n// Statement(S)\
+    \ to run if expression is true\nelse {\n// Statement(S) to run if expression is\
+    \ false\n}\nExample:\npublic class JavaIfElseStatement {\n\npublic static void\
+    \ main(String args[]) {\nint marks = 30;\n\nif(marks < 50) {\n    System.out.print(\"\
+    The marks is below 50\");\n}else {\n    System.out.print(\"The marks is above\
+    \ 50\");\n}\n```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "The first statement will be printed, the marks are below 50. This is because\
+    \ the Boolean expression will be true. If it is false, the other statement will\
+    \ be printed.\n\nExample:\n\n```\npublic class JavalfElseStatement {\n    public\
+    \ static void main(String[] args[]) {\n    int x = 10;\n    if(x < 5) {\n    \
+    \    System.out.print(\"The value of x is below 5\");\n    } else {\n        System.out.print(\"\
+    The value of x is above 5\");\n    }\n    }\n```\n\nThe code returns the following\
+    \ execution:\n\n# The value of x is above 5\n\nThe value of variable, x has been\
+    \ set to 10. In the if condition, we are checking whether this value is below\
+    \ 5. This will test to a false, hence the else part will be executed.\n\n```\n\
+    if...else if...else Statement\n```\n\nIf you have several conditions to test,\
+    \ use this statement. Syntax"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "```\nif(A_boolean_expression a) {\n// Statement(s)\nelse if(A_boolean_expression\
+    \ b) {\n// Statement(s)\n}else if(A_boolean_expression c) {\n// Statement(s)\n\
+    }else {\n// Statement(s)\n}\n```\n\n# Example:\n\n```\npublic class JavaIfElseStatement\
+    \ {\n    public static void main(String[] args) {\n        int x = 15;\n\n   \
+    \     if(x == 10) {\n            System.out.print(\"value of x is 10\");\n   \
+    \     }else if (x == 15) {\n            System.out.print(\"value of x is 15\"\
+    );\n        }else if (x == 20) {\n            System.out.print(\"value of x is\
+    \ 20\");\n        }else {\n            System.out.print(\"None of the above\"\
+    );\n        }\n    }\n}\n```\n\nThe code gives the following result after execution:\n\
+    \nvalue of x is 15\n\nThe value of variable x was initialized to 15, hence the\
+    \ test condition for 15 tested to a true. The statement below was executed to\
+    \ give us the above result.\n\nHere is another example:"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "```\npublic class JavaIfElseStatement {\n  public static void main(String[]\
+    \ args) {\n    int marks=64;\n\n    if(marks<40){\n      System.out.println(\"\
+    You fail\");\n    }\n    else if(marks>=40 && marks<50){\n      System.out.println(\"\
+    You scored D grade\");\n    }\n    else if(marks>=50 && marks<60){\n      System.out.println(\"\
+    You scored C grade\");\n    }\n    else if(marks>=60 && marks<70){\n      System.out.println(\"\
+    You scored B grade\");\n    }\n    else if(marks>=70){\n      System.out.println(\"\
+    You scored A grade\");\n    }\n  }\n}\n```\n\nThe code returns the following upon\
+    \ execution:\n\nYou scored B grade\n\nThe value of variable marks is 64, hence\
+    \ it lies between 60 and 70. The else if the condition for that will test to a\
+    \ true hence the statement within its body will be executed.\n\n# Nested if\n\n\
+    The if...else statements can be nested, meaning that one may use an if inside\
+    \ another or or an if...else inside another if...else.\n\nThe nesting of the syntax\
+    \ is shown below:\n\n```\nif(A_boolean_expression a) {\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "```\n// Statament(s)\nif(A_boolean_expression b) {\n// Statament(s)\n}\n```\n\
+    \nExample:\n\n```\npublic class NestingExample {\n    public static void main(String[]\
+    \ args[]) {\n        int age=32;\n        int weight=77;\n\n        if(age>=18){\n\
+    \            if(weight>=55){\n                System.out.println(\"You can donate\
+    \ blood.\");\n            }\n        }\n    }\n}\n```\n\nThe code prints the following\
+    \ result upon execution:\n\nYou can donate blood.\n\nIf the first condition becomes\
+    \ true, the second condition will test. This is true in our case; hence the println\
+    \ statement was executed. If any of the conditions is false, then the println\
+    \ statement will not be executed. This means that for the println statement to\
+    \ be executed, all the conditions must test to a true.\n\n# switch statement\n\
+    \nThis statement allows us to test a certain variable for equality against some\
+    \ values list. Every value is referred to as a case.\n\nThe following syntax is\
+    \ used:"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "```\nswitch(an_expression) {\n  case value:\n    // Statement(s)\n    break;\
+    \ //optional\n\n  case value:\n    // Statement(s)\n    break; //optional\n\n\
+    \  default : //Optional\n    // Statement(s)\n}\n```\n\nThe switch will end once\
+    \ it has reached the break statement. The flow will then jump to the next line.\
+    \ However, note that there is not an obligation to add a break to every case.\
+    \ A default case may add to the end of the switch, and this will run if none of\
+    \ the cases is true.\n\nExample:\n\n```\npublic class SwitchExample {\n  public\
+    \ static void main(String[] args) {\n    char your_grade = 'A';\n\n    switch(your_grade)\
+    \ {\n      case 'A':\n        System.out.println(\"That is Excellent!\");\n  \
+    \      break;\n      case 'B':\n        System.out.println(\"That is Good!\");\n\
+    \        break;\n      case 'C':\n        System.out.println(\"That is Fair!\"\
+    );\n        break;\n      case 'D':\n        System.out.println(\"That is Poor!\"\
+    );\n        break;\n      case 'F':\n        System.out.println(\"You Failed!\"\
+    );\n        break;\n      default:\n        System.out.println(\"Unknown grade\"\
+    );\n    }\n  }\n}\n```"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '```
+
+    System.out.println("You scored " + your_grade);
+
+    }
+
+    }
+
+    ```
+
+
+    The code returns the result given below:
+
+
+    > That is Excellent!
+
+    You scored A
+
+
+    The **case** for grade **A** tested to a **true**, hence the source of the above
+    output.
+
+
+    The last **println** statement will execute in all cases regardless of the value
+    of the grade.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# 8-Java Loops\n\nJava loops help us do some tasks repeatedly. Loops execute\
+    \ the statements in a sequential manner. The first one is run first, followed\
+    \ by second, etc. Let us discuss the various types of loops supported in Java:\n\
+    \n# for Loop\n\nThe loop is run provided condition tests to true. The execution\
+    \ will stop immediately the condition becomes false. Syntax:\n\n```\nfor(initialization;\
+    \ loop_condition ; Increment/decrement_part)\n  the_statement(s);\n}\n```\n\n\
+    The initialization defines the initial value of the loop condition. The loop_condition\
+    \ specifies the condition that must always be true for loop to run. The loop_increment/decrement\
+    \ defines the amount by which the initialization value will be incremented or\
+    \ decremented after any iteration. Example:"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "```\npublic class LoopExample {\n    public static void main(String args[]){\n\
+    \        for(int p=0; p<10; p++){\n            System.out.println(\"The value\
+    \ of p now is: \"+p);\n        }\n    }\n}\n```\n\nThe program returns the following\
+    \ as the output:\n\nThe value of p now is: 0\nThe value of p now is: 1\nThe value\
+    \ of p now is: 2\nThe value of p now is: 3\nThe value of p now is: 4\nThe value\
+    \ of p now is: 5\nThe value of p now is: 6\nThe value of p now is: 7\nThe value\
+    \ of p now is: 8\nThe value of p now is: 9\n\nThe output shows that the loop returns\
+    \ the values of variable p from **0** to **9**. When the loop increments the **9**\
+    \ to get **10**, it will find that it is violating the loop condition, **p<10**,\
+    \ hence the execution will stop immediately.\n\n# while Loop\n\nThis loop executes\
+    \ the statement(s) as long as the specified condition is **true**. The condition\
+    \ is first tested and if true, the **loop statement(s)** are executed. If the\
+    \ condition becomes **false**, **control** will jump to execute statements that\
+    \ come after the loop. It is recommended you add an increment/decrement to the\
+    \ loop and a **test** condition so that the loop stops execution when the condition\
+    \ becomes **false**. Otherwise, the loop may run indefinitely.\n\nSyntax:"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\nwhile(A_boolean_expression) {\n// Statement(s)\n}\nExample:\npublic class\
+    \ JavaLoopExample {\n\npublic static void main(String[] args) {\n    int p = 5;\n\
+    \n    while(p < 12) {\n        System.out.print(\"The value of p is: \" + p);\n\
+    \        p++;\n        System.out.print(\"\\n\");\n    }\n}\n}\n```\n\nThe code\
+    \ prints the following result:\n\n| The value of p is: 5 |\n| The value of p is:\
+    \ 6 |\n| The value of p is: 7 |\n| The value of p is: 8 |\n| The value of p is:\
+    \ 9 |\n| The value of p is: 10 |\n| The value of p is: 11 |\n\nThe program prints\
+    \ **p’s** value from **5** to **11**. The variable's initial value is **5**. The\
+    \ **test** condition checks whether this value is **less than 12**, which is **true**.\
+    \ This means the loop will run. When it reached **11**, it will check and find\
+    \ the value of **p** is **12**. The execution of the loop stops immediately since\
+    \ continuing to execute it will violate the **loop** condition.\n\n> do... while\
+    \ Loop\n\nThis is closely related to the while loop. In the **while loop** condition,\
+    \ execution is done before loop body execution. This is the opposite in **do...***"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "while loop as the body is executed first before the condition. In while loop,\n\
+    t loop body may never be executed, but in do...while loop, the loop body\nmust\
+    \ be executed for at least once.\n\nSyntax:\n\n```\ndo\n{\n Statement or statements;\n\
+    } while(loop_condition);\nExample:\npublic class JavaDoWhileLoop {\n\npublic static\
+    \ void main(String[] args) {\n    int p = 5;\n\n    do {\n        System.out.print(\"\
+    The value of p is: \" + p);\n        p++;\n        System.out.print(\"\\n\");\n\
+    \    } while(p < 12);\n}\n}\n```\n\nThe code will print the value of p from 5\
+    \ to 11 just as in the previous loop.\nThis is because the condition is true,\
+    \ 5 is less than 12. Suppose we set set loop\ncondition as false, initialize the\
+    \ value of p to 20 as shown\n\n```\npublic class JavaDoWhileLoop {\n\npublic static\
+    \ void main(String[] args) {\n    int p = 20;\n\n    do {\n        System.out.print(\"\
+    The value of p is: \" + p);\n        p++;\n        System.out.print(\"\\n\");\n\
+    \    } while(p < 12);\n}\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "After running the above program, you will get the following output:\n\nThe\
+    \ value of p is: 20\n\nThis means that the while condition is false. This is because\
+    \ the Java compiler first runs through the program for the initial value of p\
+    \ which is 20. That value is printed. Once it moves to loop condition, it violates\
+    \ the condition, $p<20$, hence loop execution stops immediately.\n\nThere are\
+    \ two statements that are used for controlling how Java loops are executed. They\
+    \ are called continue and break statements. They work by changing the normal way\
+    \ of executing a loop.\n\nLet us discuss them.\n\n# break Statement\n\nThis statement\
+    \ causes the execution of a loop to a halt, and control jumps to the statement\
+    \ that comes next after the loop. It also stops a case in a switch statement.\n\
+    \nSyntax:\n\n```\nyour-jump-statement;\nbreak;\nExample:\npublic class BreakStatementExample\
+    \ {\n  public static void main(String[] args) {\n    for(int p=0;p<=10;p++){\n\
+    \      if(p==6){\n        break;\n      }\n      System.out.println(\"The value\
+    \ of p is:\" +p);\n  }\n}\n```"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "```\n}\n}\n```\n\nThe program will print the following after execution:\n\n\
+    ```\nThe value of p is:0\nThe value of p is:1\nThe value of p is:2\nThe value\
+    \ of p is:3\nThe value of p is:4\nThe value of p is:5\n```\n\nThis is because\
+    \ of the following section of our program:\n\n```\nif(p==6){\n  break;\n```\n\n\
+    The increment is done from 0 to 5, and once it notices the value of p is 6, it\
+    \ will halt immediately as it will violate the above condition. For the case of\
+    \ nested loops, the break can be added to the inner loop and will break it. This\
+    \ will cause the inner loop to break once the specified condition is met.\n\n\
+    Example:\n\n```\npublic class BreakStatementExample2 {\n  public static void main(String[]\
+    \ args) {\n    for(int p=1;p<=5;p++){\n      for(int q=1;q<=5;q++){\n        if(p==3&&q==3){\n\
+    \          break;\n        }\n        System.out.println(\"p=\"+q);\n      }\n\
+    \    }\n  }\n}\n```\n\nThe code will print the following as the result:"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '+   1 1
+
+    1 2
+
+    1 3
+
+    1 4
+
+    1 5
+
+    2 1
+
+    2 2
+
+    2 3
+
+    2 4
+
+    2 5
+
+    3 1
+
+    3 2
+
+    4 1
+
+    4 2
+
+    4 3
+
+    4 4
+
+    4 5
+
+    5 1
+
+    5 2
+
+    5 3
+
+    5 4
+
+    5 5
+
+
+    When the Java compiler finds that both the values of **p** and **q** are **3**,
+    it will skip and move to the next values.
+
+
+    # continue Statement
+
+
+    This statement makes the loop jump to next iteration immediately. It helps the
+    loop to continue after a jump. Note that in the previous case, the loop halted
+    immediately. This statement can help it resume execution in the next iteration
+    after the jump.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "Example:\n\n```\n```\nyour_jump_statement;\ncontinue;\n```\n```\n\nExample:\n\
+    \n```\n```\npublic class JavaContinueStatementExample {\n    public static void\
+    \ main(String[] args) {\n        for(int p=10;p<=20; p++){\n            if(p==15)\n\
+    \                continue;\n            }\n            System.out.println(\"The\
+    \ value of p is:\"+p);\n        }\n    }\n}\n```\n```\n\nThe code gives the following\
+    \ result:\n\n```\n```\nThe value of p is:10\nThe value of p is:11\nThe value of\
+    \ p is:12\nThe value of p is:13\nThe value of p is:14\nThe value of p is:16\n\
+    The value of p is:17\nThe value of p is:18\nThe value of p is:19\nThe value of\
+    \ p is:20\n```\n```\n\nAll values between 10 and 20 have been printed except 15.\
+    \ The continue statement may also be used with an inner loop. In such a case,\
+    \ it will only continue your inner loop.\n\nExample:\n\n```\n```\npublic class\
+    \ JavaContinueStatement2 {\n    public static void main(String[] args) {\nn```\n\
+    ```"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "```\nfor(int p=1;p<=3;p++) {\n    for(int q=1;q<=3;q++) {\n        if(p==2\
+    \ && q==2) {\n            continue;\n        }\n        System.out.println(\"\
+    +\" +q);\n    }\n}\n```\n\nThe code returns the following result:\n\n1 1\n1 2\n\
+    1 3\n2 1\n2 3\n3 1\n3 2\n3 3"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# 9-Java Methods\n\nIn Java, **methods** are used for grouping a set of statements\
+    \ for the purpose of performing the same function. A good example of a function\
+    \ is the **System.out.println**. This method is built in Java. When you call the\
+    \ above method, several statements will be executed before you can get the result\
+    \ on the terminal. We can define our own methods in Java. Let us discuss how to\
+    \ work with the methods in Java:\n\n# Creating Methods\n\nTo create Java methods,\
+    \ you should use the following syntax:\n\n```\npublic static int method_Name(int\
+    \ x, int y) {\n  // method body\n}\n```\n\nHere is a description of the above\
+    \ syntax:\n\n+   - **public static-** a modifier defining the accessibility of\
+    \ the method.\n- **int-** the return type of the method.\n- **method_Name-** the\
+    \ name of the method.\n- **x, y-** formal parameters.\n- **int x, int y-** a list\
+    \ of parameters."
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'The definition of a method comprises the tmethod header and the body.
+
+
+    The following syntax best describes this:
+
+
+    ```
+
+    modifier return_Type method_Name (Parameter List) {
+
+    // method body
+
+    }
+
+    ```
+
+
+    Here is a description of the above syntax:
+
+
+    +   * modifier – defines the method''s access type, and it is optional.
+
+    * returnType – the method may return a value.
+
+    * method_Name – the name of the method. The method signature has the method name
+    and parameter list.
+
+    * Parameter List – this is the list of method parameters, with the type, order,
+    and number of parameters for the method. A method may have no parameters, making
+    these optional.
+
+    * method body – this body defines what the method will do with the statements.
+
+
+    Here is an example of a Java method:
+
+
+    ```
+
+    /** a method to return the minimum of two numbers */
+
+    public static int minimumFunction(int p, int q) {
+
+    int min;
+
+    if (p > q)
+
+    min = q;
+
+    else
+
+    min = p;
+
+    return min;
+
+    }
+
+    ```
+
+
+    In the above example, we have defined a method named minimumFunction. This function
+    takes two arguments of an integer data type. The method should compare two integer
+    values you pass to it and return the minimum'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'The code will print the following once executed:'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# The Minimum Value is 10\n\nWe have used the **minimumFunction** that checks\
+    \ and returns the minimum of two numbers. In the above example, we have passed\
+    \ to it the values **10** and **13**. It returned **10** since it is the minimum\
+    \ one.\n\n# The void Keyword\n\nThis is the keyword we used to define a method\
+    \ that should not return a value. Let us show this using an example:\n\n```\n\
+    public class VoidKeywordExample {\npublic static void main(String[] args) {\n\
+    \    totalPoints(71);\n}\npublic static void totalPoints(double points) {\n  \
+    \  if (points >= 62) {\n        System.out.println(\"The government will sponsor\
+    \ your university fee\");\n    } else if (points >= 45) {\n        System.out.println(\"\
+    You may have to sponsor your university fee\");\n    } else {\n        System.out.println(\"\
+    You do not qualify for a chance in the university\");\n    }\n}\n```\n\nThe code\
+    \ gives the output given below:\n\n> The government will sponsor your university\
+    \ fee\n\nAs you have noticed, we have not used the **return** keyword within the\
+    \ body"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'of the method.
+
+
+    # Call by Value
+
+
+    The method call is a way of invoking java functions. Java supports call-by-value.
+    There is no call-by-reference in Java. When calling by-value, the original value
+    isn’t changed.
+
+
+    Example:
+
+
+    ```
+
+    public class MethodCallExample{
+
+    int p=20;
+
+    void changeP(int p){
+
+    p = p + 10;/changes to/in local variable
+
+    }
+
+    public static void main(String[] args){
+
+    MethodCallExample mc=new MethodCallExample();
+
+    System.out.println("The initial is "+mc.p);
+
+    mc.changeP(50);
+
+    System.out.println("the new value is "+mc.p);
+
+    }
+
+    }
+
+
+    ```
+
+
+    The value won’t change as shown in the following output:
+
+
+    ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_55_0.png)
+
+
+    When calling by-reference, the original value will change if changes are made
+    to call method. If an object is passed in place of primitive value, the original
+    value changes.
+
+
+    Example:
+
+
+    ```
+
+    public class MethodCallExample{
+
+    ```'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "```\nint p=20;\nvoid changeP(MethodCallExample meth){\nmeth.p=meth.p+50;//change\
+    \ to instance variable\n}\npublic static void main(String args[]){\n  MethodCallExample\
+    \ mc=new MethodCallExample();\n\n  System.out.println(\"The initial value is \"\
+    +meth.val);\n  meth.changeValue(meth);//passing the object\n  System.out.println(\"\
+    The new value is \"+meth.val\");\n}\n}\n```\n\nThe value has changed from 10 to\
+    \ 60, after adding 50. This is shown in the output given below:\n\n![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_56_0.png)\n\
+    \n# Abstract Methods\n\nYou may declare a method and then need its implementation\
+    \ to be done in child classes. The class can be marked as abstract in the parent\
+    \ class. Add abstract keyword before the method name. Abstract methods don't have\
+    \ method body. You only add a semicolon (;) at its end.\n\nExample:\n\n```\npublic\
+    \ abstract class Worker {\n  private String workerName;\n  private String workerAddress;\n\
+    \  private int workerNumber;\n\n  public abstract double getPay();\n}\n```"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "Note that an abstract method must only be declared in the abstract class. The\
+    \ getPay() method above is abstract. We can have a class inheriting from the Worker\
+    \ class then implement the getPay() method in it:\n\n```\npublic class Wage extends\
+    \ Worker {\n    private double wake;\n\npublic double getWage() {\n    System.out.println(\"\
+    Getting wage for \" + getWorkerName());\n    return wage/52;\n}\n}\n```\n\n# #\
+    \ Method Overloading\n\nThis occurs when we have two or more methods with one\
+    \ name but different parameters. The difference in parameters can be in terms\
+    \ of number or type. Consider the example given below:\n\n```\npublic class MethodOverloading\
+    \ {\n    public static void main(String[] args) {\n        int w = 11;\n     \
+    \   int x = 6;\n        double y = 7.3;\n        double z = 9.4;\n        int\
+    \ output1 = minimumFunction(w, x);\n\n        // same function name but different\
+    \ parameters\n        double output2 = minimumFunction(y, z);\n        System.out.println(\"\
+    The minimum value is \" + output1);\n        System.out.println(\"The minimum\
+    \ value is \" + output2);\n    }\n\n    // for integer\n    public static int\
+    \ minimumFunction(int p, int q) {\n        int min;\n        if (p > q)\n    \
+    \        min = q;\n    }\n}\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '```
+
+    else
+
+    min = p;
+
+    return min;
+
+    }
+
+
+    // for double
+
+    public static double minimumFunction(double p, double q) {
+
+    double min;
+
+    if (p > q)
+
+    min = q;
+
+    else
+
+    min = p;
+
+    return min;
+
+    }
+
+    ```
+
+
+    The code will give the following result after execution:
+
+
+    > The minimum value is 6
+
+    The minimum value is 7.3
+
+
+    We have two functions with the same name: **minimumFunction**. However, the first
+    function takes integer arguments while the second one takes double arguments.
+    We have then achieved method overloading.
+
+
+    # Command-Line Arguments
+
+
+    Sometimes, it is necessary for you to pass information to the program during its
+    execution. The best way to do this is by passing command-line arguments to the
+    `main()` method.
+
+
+    Consider the line of code given below:
+
+
+    ```
+
+    public static void main(String[] args) {
+
+    ```'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "We referred to the above as the **main()** method and no Java program can be\
+    \ executed without this method. It can also be written as follows:\n\n```\npublic\
+    \ static void main(String args[]) {\n```\n\nThe [] denotes an array and we can\
+    \ pass arguments to it. Note that these arguments will begin from index **0**.\n\
+    \nConsider the example given below :\n\n```\npublic class CommandLineArguments\
+    \ {\n    for(int p = 0; p<args.length; p++) {\n        System.out.println(\"args[\"\
+    +p + \"]: \" + args[p]);\n    }\n}\n```\n\nRun the code from the command line.\
+    \ After compiling the code, pass the arguments to the terminal as showed:\n\n\
+    ```\nC:\\Users\\admin>javac CommandLineArguments.java\nC:\\Users\\admin>java CommandLineArguments\
+    \ these are command line arguments in java\nargs[0]: these\nargs[1]: are\nargs[2]:\
+    \ command\nargs[3]: line\nargs[4]: arguments\nargs[5]: in\nargs[6]: java\nargs[7]:\
+    \ -3\nargs[8]: []\nargs[9]: 4\n```\n\n# The this Keyword\n\nThe **this keyword**\
+    \ is used in Java to refer to the object of the current class, within a constructor\
+    \ or instance method. The keyword can be used for"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "referencing the members of a class such as variables, methods, and constructors.\
+    \ It helps in differentiation between local variables and instance variables when\
+    \ they have similar names within a method or constructor.\n\nThe following example\
+    \ shows how this keyword can be used:\n\n```\nclass Person {\n  int age;\n  Person(int\
+    \ age) {\n    this.age = age;\n  }\n}\n```\n\nLet us show how we can use this\
+    \ keyword to access the various members of a class:\n\n```\npublic class This_Class\
+    \ {\n  // an instance variable x\n  int x = 10;\n```\n\n```\nThis_Class() {\n\
+    \  System.out.println(\"Demonstrating the use of this keyword in Java\");\n}\n\
+    ```\n\n```\nThis_Class(int x) {\n  // Invoke the default constructor\n  this();\n\
+    }\n```\n\n```\n// Assign the local variable num to instance variable x\nthis.x\
+    \ = x;\n```\n\n```\npublic void salute() {\n  System.out.println(\"Welcome to\
+    \ Java Programming\");\n}\n```\n\n```\npublic void print() {\n  // Local variable\
+    \ x\n  int x = 20;\n```\n\n```\n// Printing the local variable\nSystem.out.println(\"\
+    value of local variable num is :\"+x);\n```\n\n```\n// Print the instance variable\n\
+    System.out.println(\"The instance variable x has a value of :\"+this.x);\n```\n\
+    \n```\n// Invoke the salute method of a class\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'this.salute();
+
+    }
+
+
+    ```
+
+    public static void main(String[] args) {
+
+    // Instantiate the class
+
+    This_Class object1 = new This_Class();
+
+
+    // Invoke the print method
+
+    object1.print();
+
+
+    // Pass a new variable to x through a parametrized constructor
+
+    This_Class object2 = new This_Class(30);
+
+
+    // Invoke the print method again
+
+    object2.print();
+
+    }
+
+    ```
+
+
+    The code will return the following output once executed:
+
+
+    Demonstrating the use of this keyword in Java
+
+    value of local variable num is : 20
+
+    The instance variable x has a value of : 10
+
+    Welcome to Java Programming
+
+    Demonstrating the use of this keyword in Java
+
+    value of local variable num is : 20
+
+    The instance variable x has a value of : 30
+
+    Welcome to Java Programming
+
+
+    # Variable Arguments
+
+
+    Java allowed passing a variable number of arguments to a method, but these
+
+    must be of similar type.
+
+
+    This can be done by declaring a parameter in the method as shown below:
+
+
+    ```
+
+    type_Name... parameter_Name
+
+    ```'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "When declaring the method, the type is specified then followed by an ellipsis\
+    \ (...). You can only specify one variable-length parameter in a method, and the\
+    \ parameter has to be the last parameter. If there are other regular parameters,\
+    \ they should precede it.\n\nAn example is given below:\n\n```\npublic class VariableArguments\
+    \ {\n    public static void main(String[] args) {\n        // Call a method with\
+    \ variable arguments\n        showMax(new double[]{10, 23, 78.5, 43});\n    }\n\
+    \n    public static void showMax(double... values) {\n        if (values.length\
+    \ == 0) {\n            System.out.println(\"No argument were passed\");\n    \
+    \        return;\n        }\n\n        double output = values[0];\n        for\
+    \ (int x = 1; x < values.length; x++) {\n            output = values[x];\n   \
+    \     }\n        System.out.println(\"The maximum value is \" + output);\n   \
+    \ }\n}\n```\n\nThe code will return the following as the result:\n\n> The maximum\
+    \ value is 87.0\nThe maximum value is 31.0\n\n# Method Overriding\n\nA subclass\
+    \ can override a method defined in the parent class if it was not declared with\
+    \ the final keyword. Overriding means overriding functionality"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "of the existing method.\n\nExample:\n\n```\nclass Mammal {\n    public void\
+    \ run() {\n        System.out.println(\"Mammals can run\");\n    }\n}\n\nclass\
+    \ Cow extends Mammal {\n    public void run() {\n        System.out.println(\"\
+    Cows can run and eat\");\n    }\n}\n\npublic class JavaOverriding {\n    public\
+    \ static void main(String[] args) {\n        Mammal ma = new Mammal(); // Animal\
+    \ reference and object\n        Mammal mb = new Cow(); // Animal reference but\
+    \ Cow object\n\n        ma.run(); // to execute the method of Mammal class\n \
+    \       mb.run(); // to execute the method of Cow class\n    }\n}\n```\n\nThe\
+    \ code returns the output given below:\n\nMammals can run\nCows can run and eat\n\
+    \nHere, mb is a Mammal type, but it can use the method defined in Cow class.\n\
+    \      Another Example:\n      We will take a bank example. Different banks offer\
+    \ different interest rates on loans:\n\n```\nclass LendingInstitution{\n    int\
+    \ getInterestRate(){\n        return 0;\n}\n```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "```\n}\n}\nclass LendingInstitution1 extends LendingInstitution{\nint getInterestRate(){\n\
+    \    return 10;\n}\n\n```\n\n```\nclass LendingInstitution2 extends LendingInstitution{\n\
+    int getInterestRate(){\n    return 11;\n}\n\n```\n\n```\nclass LendingInstitution3\
+    \ extends LendingInstitution{\nint getInterestRate(){\n    return 14;\n}\n\n```\n\
+    \n```\npublic class TestLendingInstitution{\npublic static void main(String args[]){\n\
+    \    LendingInstitution l1=new LendingInstitution1();\n    LendingInstitution\
+    \ l2=new LendingInstitution2();\n    LendingInstitution l3=new LendingInstitution3();\n\
+    \    System.out.println(\"LendingInstitution1 Interest Rate: \"+l1.getInterestRate());\n\
+    \    System.out.println(\"LendingInstitution1 Interest Rate: \"+l2.getInterestRate());\n\
+    \    System.out.println(\"LendingInstitution1 Interest Rate: \"+l3.getInterestRate());\n\
+    }\n\n```\n\nThe code should give the result given below:\n\nLendingInstitution1\
+    \ Interest Rate: 10\nLendingInstitution1 Interest Rate: 11\nLendingInstitution1\
+    \ Interest Rate: 14\n\nThe method **getInterestRate()** has been used differently\
+    \ for different classes.\n\nWe can use the **“super”** keyword to access a method\
+    \ overridden from the **super** class."
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "Example:\n\n```\nclass Mammals {\n    public void run() {\n        System.out.println(\"\
+    Mammals can run\");\n    }\n}\n\nclass Cow extends Mammals {\n    public void\
+    \ run() {\n        super.run(); // to invoke method in super class\n        System.out.println(\"\
+    Cows can run and eat\");\n    }\n}\n\npublic class TestCow {\n    public static\
+    \ void main(String[] args) {\n        Mammals mm = new Cow(); // mammal reference\
+    \ but Cow object\n        mm.run(); // to execute method in Cow class\n    }\n\
+    }\n```\n\nThe code prints the output is given below:\n\n```\nMammals can run\n\
+    Cows can run and eat\n```\n\n# Recursive Functions in Java\n\n**Recursion** is\
+    \ a process by which a method calls itself repeatedly. The method becomes a **recursive**\
+    \ method. With recursive methods, a code will be compact but complicated for understanding.\n\
+    \nRecursion syntax:\n\n```\nreturntype method(){\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "```\n//code to run\nmethod();//call same method\n}\n```\n\nExample:\n\n```\n\
+    public class JavaRecursionExample {\n    static void helloMethod() {\n       \
+    \ System.out.println(\"Hello there\");\n        helloMethod();\n    }\n\n    public\
+    \ static void main(String[] args) {\n        helloMethod();\n    }\n```\n\nIf\
+    \ you run the above code, it will keep on printing the **Hello there** text. The\
+    \ method **helloMethod()** will call itself infinite times because we have not\
+    \ specified the number of times that the method should call itself. The implementation\
+    \ for a method to call itself finite times may be implemented in this way:\n\n\
+    ```\npublic class JavaRecursionExample2 {\n    static int times=0;\n    static\
+    \ void helloMethod(){\n        times++;\n        if(times<=10) {\n           \
+    \ System.out.println(\"Hello there \"+times);\n            helloMethod();\n  \
+    \      }\n    }\n    public static void main(String[] args) {\n        helloMethod();\n\
+    \    }\n```\n\nThe code returns the following output:"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "```\nC:\\Users\\admin>javac JavaRecursionExample2.java\nC:\\Users\\admin>java\
+    \ JavaRecursionExample2\nHello there 1\nHello there 2\nHello there 3\nHello there\
+    \ 4\nHello there 5\nHello there 6\nHello there 7\nHello there 8\nHello there 9\n\
+    Hello there 10\nC:\\Users\\admin>\n```\n\nWe are increasing the value of times\
+    \ variable until it reaches 10. Note <=10 is included. That is why the method\
+    \ prints up to the 10th time. With recursion, we can get the factorial of a number.\n\
+    \nLet us show this with an example:\n\n```\npublic class JavaRecursionExample3\
+    \ {\n    static int numberFactorial(int nm){\n        if (nm == 1)\n         \
+    \   return 1;\n        else\n            return(nm * numberFactorial(nm-1));\n\
+    \    }\n\npublic static void main(String[] args) {\n    System.out.println(\"\
+    The result of 10 factorial is: \"+numberFactorial(10));\n}\n```\n\nThe code will\
+    \ return the following output:\n\nThe result of 10 factorial is: 3628800\n\nFor\
+    \ the factorial, a number is multiplied by its preceding numbers except 0. With\
+    \ recursion, we may get Fibonacci for number.\n\nExample:\n\n```\npublic class\
+    \ JavaRecursionExample4 {\n```"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '```
+
+    static int x=0
+
+    ```
+
+
+    The code will return the result given below:
+
+
+    0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
+
+
+    Note that the **Fibonacci** of a number is the sum of two of its previous numbers.
+    In the above example, we have done the recursion for **18** times.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "# 10-Inheritance in Java\n\nIn inheritance, an object gains the behaviors and\
+    \ properties of another object. The object gaining the behaviors and the properties\
+    \ becomes the child, while the object from which they are inherited is the parent.\
+    \ They can also be referred to as subclass and superclass, respectively. Inheritance\
+    \ makes information manageable in a hierarchical order. The methods that had been\
+    \ defined in the superclass can be reused in the subclass without defining them\
+    \ again.\n\nTo Inherit from a parent class, we use the extends keyword. Inheritance\
+    \ is done using the syntax given below:\n\n```\nclass Child-class extends Parent-class-name\n\
+    {\n  // fields and methods\n}\n```\n\nThe extends keyword is an indication that\
+    \ we are creating some new class from the existing class.\n\nExample:\n\n```\n\
+    class Employee{\n  float employee_salary=60000;\n}\npublic class Developer extends\
+    \ Employee{\n  int commision=20000;\n```"
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "```\npublic static void main(String[] args[]){\n    Developer d=new Developer();\n\
+    \    System.out.println(\"developer salary:\"+d.employee_salary);\n    System.out.println(\"\
+    Commision for Developer:\"+d.commision);\n}\n\n```\n\nThe will return the following\
+    \ when executed:\n\n```\ndeveloper salary is:60000.0\nCommision for Developer\
+    \ is:20000\n```\n\nWe first created a class named Employee. This forms the parent\
+    \ class for an example. We have then created the class named Developer which extends\
+    \ the Employee class. The Developer class becomes the child class. We have created\
+    \ an instance/object of the Developer class and given it the name d. By using\
+    \ this instance; we could access a variable that was defined in the parent class.\n\
+    \nThere are different types of inheritance in Java. Let us discuss them:\n\n#\
+    \ Single Inheritance\n\nHere, a single class inherits from another class. The\
+    \ Worker and DBA classes given previously are an example of this.\n\nExample:\n\
+    \n```\nclass Mammal{\n    void run(){\n        System.out.println(\"Running...\"\
+    );\n    }\n}\nclass Cow extends Mammal{\n```"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "```\nvoid moow(){System.out.println(\"Moowing...\");}\n}\npublic class JavaInheritance{\n\
+    public static void main(String args[]){\n  Cow cw=new Cow();\n  cw.moow();\n \
+    \ cw.run();\n}\n}\n```\n\nThe code will return the following result after execution:\n\
+    \nMoowing...\nRunning...\n\nIn the above example, the run() method has been defined\
+    \ in the Mammal class while the moow() method has been defined in Cow class which\
+    \ extends the Mammal class. In the JavaInheritance class, we have created an instance\
+    \ of Cow class and named it cw. We have then used this instance to access the\
+    \ two methods that have been defined in two different classes.\n\n# Multilevel\
+    \ Inheritance\n\nThis type of inheritance occurs when class B inherits from class\
+    \ A, while class C inherits from class B.\n\nHere is an example:\n\n```\nclass\
+    \ Mammal{\n  void run(){\n    System.out.println(\"Running...\");\n  }\n}\nclass\
+    \ Cow extends Mammal{\n  void moow(){\n    System.out.println(\"Moowing...\");\n\
+    \  }\n}\n```"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "```\n}\n}\nclass BabyCow extends Cow{\nvoid eat(){\n    System.out.println(\"\
+    Eating...\");\n}\npublic class JavaInheritanceTest{\npublic static void main(String[]\
+    \ args){\n    BabyCow bc=new BabyCow();\n    bc.moow();\n    bc.eat();\n    bc.run();\n\
+    }\n}\n}\n```\n\nThe code will return the result given below:\n\n> Moowing...\n\
+    Eating...\nRunning...\n\nThe run() method has been defined in the Mammal class.\
+    \ The moow() method is defined in the Cow class which extends the Mammal class.\
+    \ The eat() method has been defined in the BabyCow class which extends the Cow\
+    \ class. In the InheritanceTest2 class, we have created an instance of the BabyCow\
+    \ class named bc. This instance has been used to access various properties or\
+    \ methods. We can use the instance of the BabyCow class to access methods defined\
+    \ in the Cow and Mammal classes. The methods in various classes can be seen as\
+    \ their properties.\n\n# Hierarchical Inheritance\n\nThis type of inheritance\
+    \ can be demonstrated with this example:\n\n```\nclass Mammal{\nvoid run(){\n\
+    \    System.out.println(\"Running...\");\n}\n```"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "```\n}\n}\nclass Cow extends Mammal{\nvoid moov(){\n  System.out.println(\"\
+    Moowing...\");\n}\n}\nclass Goat extends Mammal{\nvoid meew(){\n  System.out.println(\"\
+    Meowing...\");\n}\n}\npublic class JavaInheritanceTest{\npublic static void main(String[]\
+    \ args){\n  Goat gt=new Goat();\n  gt.meew();\n  gt.run();\n  //gt.moov(); will\
+    \ give an Error\n}\n}\n```\n\nAfter creating an instance of **Goat** class in\
+    \ the **InheritanceTest** class, we canto inherit the properties defined in the\
+    \ **Mammal** class since the **Goat** class inherits from the **Cow** class. However,\
+    \ we cannot to access the properties defined in the **Cow** class since the **Goat**\
+    \ class does not inherit from the **Cow** class. If we attempt to do that, for\
+    \ example, run the `gt.moow();` statement, we will get an error.\n\nSome programming\
+    \ languages support multiple inheritance, in which a single class inherits from\
+    \ the others classes. Java doesn't support that, and the only possibility that\
+    \ let us get to this is by creating an interface, and then use the implements\
+    \ on the interface. Suppose that we have an interface named **Interface1**, and\
+    \ then we create a class named **Class2** that extends **Class1** and implements\
+    \ the interface **Interface1:**\n\n```\npublic class Class2 extends Class1 implements\
+    \ Interface1{\n}\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "That is the closest way by where we can get to the multiple inheritance feature\
+    \ in Java. For the class, keyword “extends”, but this cannot be used for an interface.\
+    \ Instead, we use keyword implements. By this way, we can inherit the features\
+    \ of an interface. Inheritance helps in the reuse of existing properties and methods.\n\
+    \n# Invoking Superclass Constructor\n\nFor a class that is inheriting properties\
+    \ from another class, the child class automatically inherits the default constructor\
+    \ of the superclass. However, when you need to call a parameterized constructor\
+    \ of a superclass, you are required to use super keyword with the syntax given\
+    \ below:\n\nsuper(values);\n\nThe following example demonstrates this:\n\n```\n\
+    class MySuperclass {\n  int x;\n\n  MySuperclass(int x) {\n    this.x = x;\n \
+    \ }\n\n  public void getX() {\n    System.out.println(\"The value of x in super\
+    \ class is: \" +x);\n  }\n}\n\nclass MySubclass extends MySuperclass {\n  MySubclass(int\
+    \ x) {\n    super(x);\n  }\n\n  public static void main(String args[]) {\n   \
+    \ MySubclass sb = new MySubclass(32);\n    sb.getX();\n  }\n}\n```"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: 'The code will give the following output when executed:
+
+
+    The value of x in super class is: 32
+
+
+    In the example given above, we demonstrated how we can use the super keyword to
+    accesses a parameterized constructor defined in the superclass. The program has
+    both a parent class and a child class, with the superclass having a parameterized
+    constructor that takes in an integer value. We have then used the super keyword
+    for the purpose of accessing this constructor.
+
+
+    # The instance of Keyword
+
+
+    This keyword can be used for checking when an object is an instance of another
+    object. Let us show this with an example:
+
+
+    ```
+
+    interface Mammal{
+
+    class Cow implements Mammal{
+
+    public class BabyCow extends Cow {
+
+    public static void main(String[] args) {
+
+    Cow c = new Cow();
+
+    BabyCow bc = new BabyCow();
+
+
+    System.out.println(c instanceof Mammal);
+
+    System.out.println(bc instanceof Cow);
+
+    System.out.println(bc instanceof Mammal);
+
+    }
+
+    }
+
+    ```
+
+
+    The code should return the following result:'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '```
+
+    true
+
+    true
+
+    true
+
+    ```
+
+
+    This screenshot shows that our tests were true. It means that **Cow** is an instance
+    of **Mammal, BabyCow** is an instance of **Cow** and **BabyCow** is an instance
+    of **Mammal**.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "# # 11-Abstraction in Java\n\nAbstraction is a feature that makes a developer\
+    \ present to the user, only what is necessary and hides the rest. The developer\
+    \ must differentiate what is to be presented to the users from what is not. When\
+    \ you send an email, for example, you need to type the content, attach documents\
+    \ and press the “Send” button, without knowing what happens behind the scenes.\
+    \ Also, when you drive a car, you press the accelerator and you see the speed\
+    \ increasing, and when you press the brakes your car stops. You don’t know what\
+    \ happens in the background. This is the abstraction we will talk about, in this\
+    \ chapter.\n\nWith abstraction, users aren’t aware of the implementation details.\
+    \ The developer hides them. The user gets only the functionality of the app. Thus,\
+    \ the user gets information on what app does rather than how it’s. An **abstract**\
+    \ class has the **abstract** keyword. If any class has an abstract method, it\
+    \ must be recognized as an **abstract**. The **abstract** class must also be inherited\
+    \ from some other abstract class.\n\nExample:\n\n```\nabstract class Student {\n\
+    \  abstract void register();\n}\n```\n\n```\npublic class John extends Student\
+    \ {\n  void register() {\n```"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '```
+
+    System.out.println("John is going for registration");
+
+    }
+
+
+    public static void main(String[] args) {
+
+    St st = new John();
+
+    st.register();
+
+    System.out.println("Done");
+
+    }
+
+    ```
+
+
+    The code returns the result given below upon execution:
+
+
+    John is going for registration
+
+    Done
+
+
+    It is unnecessary for an abstract class to have abstract methods in it. You can''t
+    instantiate an abstract class. That is why we instantiated John class as it has
+    inherited a method from an abstract class.
+
+
+    Example:
+
+
+    ```
+
+    public abstract class Worker {
+
+    private String name;
+
+    private String workerAddress;
+
+    private int number;
+
+
+    public Worker(String name, String workerAddress, int number) {
+
+    System.out.println("Worker Construction");
+
+    this.name = name;
+
+    this.workerAddress = workerAddress;
+
+    this.number = number;
+
+    }
+
+
+    public double getWorkerSalary() {
+
+    System.out.println("Inside getWorkerSalary ");
+
+    return 0.00;
+
+    }
+
+
+    public void checkMail() {
+
+    System.out.println("Sending check to " + this.name + " " + this.workerAddress);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "```\npublic String toString() {\n    return name + \" \" + workerAddress +\
+    \ \" \" \" + number;\n}\n```\n\n```\npublic String getWorkerName() {\n    return\
+    \ name;\n}\n```\n\n```\npublic String getWorkerAddress() {\n    return workerAddress;\n\
+    }\n```\n\n```\npublic void setWorkerAddress(String newWorkerAddress) {\n    workerAddress\
+    \ = newWorkerAddress;\n}\n```\n\n```\npublic int getWorkerNumber() {\n    return\
+    \ number;\n}\n```\n\nThe class Worker is like other Java classes except for the\
+    \ use of the abstract keyword. Attempt to instantiate it:\n\n```\npublic class\
+    \ InstantiateAbstract {\n    public static void main(String [] args) {\n     \
+    \   /* This will generate error */\n        Worker wk = new Worker(\"Tony S.\"\
+    , \"Texas, USA\", 35);\n        System.out.println(\"\\n Calling checkMail with\
+    \ Worker reference\\n\");\n        wk.checkMail();\n    }\n}\n```\n\nThe properties\
+    \ of the Worker class must be inherited rather than instantiating the class.\n\
+    \nExample:\n\n```\npublic class Wage extends Worker {\n    private double wage;\
+    \ // Annual salary\nn    public Wage(String name, String workerAddress, int number,\
+    \ double wage) {\n        super(name, workerAddress, number);\n    }\n}\n```"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\nsetWage();\n}\n\npublic void checkMail() {\n    System.out.println(\"\
+    IncheckMail for Wage class \");\n    System.out.println(\"Sending check to \"\
+    \ + getWorkerName() + \" with wage \" + wage);\n}\n\npublic double getWage() {\n\
+    \    return wage;\n}\n\npublic void setWage(double newWage) {\n    if(newWage\
+    \ >= 0.0) {\n        wage = newWage;\n    }\n}\n\npublic double getWorkerPay()\
+    \ {\n    System.out.println(\"Getting wage for \" + getWorkerName());\n    return\
+    \ wage/52;\n}\n```\n\nThe Worker class cannot be instantiated, but Wage class\
+    \ can be instantiated and then we can use its instance to access all fields and\
+    \ methods of Worker\n\nExample:\n\n```\npublic class AbstractInst{\n    public\
+    \ static void main(String[] args) {\n        Wage w = new Wage(\"Don Lilly\",\
+    \ \"New York, USA\", 4, 3400.00);\n        Worker wk = new Worker(\"Lopez Terez\"\
+    , \"Washington, USA\", 3, 3800.00);\n        System.out.println(\"Calling checkMail\
+    \ via Wage reference\");\n        w.checkMail();\n        System.out.println(\"\
+    \\n Calling checkMail via Worker reference\");\n        wk.checkMail();\n    }\n\
+    ```\n\nTo run the above codes, you must create files in different files compile\
+    \ and execute the last class."
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'Then, you will get the results. This is showed below:
+
+
+    ```
+
+    C:\Users\admin>javac Worker.java
+
+    C:\Users\admin>javac Wage.java
+
+    C:\Users\admin>javac AbstractInsta.java
+
+    C:\Users\admin>java AbstractInsta
+
+    Worker Construction
+
+    Worker Construction
+
+    Calling checkMail via Wage reference
+
+    In checkMail for Wage class
+
+    Sending check to Don Lilly with wage 3400.0
+
+
+    Calling checkMail via Worker reference
+
+    In checkMail for Wage class
+
+    Sending check to Lopez Terez with wage 3800.0
+
+    C:\Users\admin>
+
+    ```'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# 12-Encapsulation
+
+
+    Encapsulation is a feature of object-oriented programming that helps grouping
+    data and methods together. The data are the variables methods are the codes that
+    let us act on the data. With encapsulation, class variables can be hidden from
+    other classes and the access to them may only be possible via methods of the class.
+    Encapsulation works as a Data Hiding. It''s achieved by setting class variables
+    as private. The “setter” and “getter” methods for the variables should be set
+    as public and used to change the value of the variables.
+
+
+    Example:
+
+
+    ```
+
+    public class Workers{
+
+    private String name;
+
+
+    public String getWorkerName(){
+
+    return name;
+
+    }
+
+    public void setWorkerName(String name){
+
+    this.name=name;
+
+    }
+
+
+    You can add a new file to same package with this code:
+
+    public class TestWorkers {
+
+    public static void main(String[] args){
+
+    Workers wk=new Workers();
+
+    wk.setWorkerName("Joel");
+
+    System.out.println(wk.getWorkerName());
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "The code gives the following output:\n\n```\nC:\\Users\\admin>javac Workers.java\n\
+    C:\\Users\\admin>javac TestWorkers.java\nC:\\Users\\admin>java TestWorkers\nC:\\\
+    Users\\admin>\n```\n\nThe variable name was marked as private in Workers class.\
+    \ The methods setWorkerName() and getWorkerName()() were set as public in Workers\
+    \ class. We have instantiated Students class in TestWorkers class, then we have\
+    \ used this instance to access its variable and methods.\n\nAnother example:\n\
+    \n```\npublic class MyClass {\n    private String personName;\n    private String\
+    \ personID;\n    private int personAge;\n\npublic int getAge() {\n    return personAge;\n\
+    }\n\npublic String getName() {\n    return personName;\n}\n\npublic String getID()\
+    \ {\n    return personID;\n}\n\npublic void setAge(int newPersonAge) {\n    personAge\
+    \ = newPersonAge;\n}\n\npublic void setName(String newPersonName) {\n    personName\
+    \ = newPersonName;\n}\n```"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "```\npublic void setID( String newPersonID) {\n    personID = newPersonID;\n\
+    }\n```\n\nAny class that needs of accessing private variables must use public\
+    \ methods:\nthe setters and getters.\n\nWe access using methode given below:\n\
+    \n```\npublic class MyClassTest extends MyClass{\n    public static void main(String[]\
+    \ args) {\n        MyClassTest mct = new MyClassTest();\n        mct.setName(\"\
+    Joel\");\n        mct.setAge(\"4458972\");\n        System.out.print(\"Name: \"\
+    \ + mct.getName() + \" \" Age: \" + mct.getAge());\n    }\n}\n```\n\nYou should\
+    \ write the two codes in two separate files. Upon execution, you should get the\
+    \ following result:\n\n```\nC:\\Users\\admin>javac MyClass.java\nC:\\Users\\admin>javac\
+    \ MyClassTest.java\nC:\\Users\\admin>java MyClassTest\nName : Joel Age : 32\n\
+    C:\\Users\\admin>\n```"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "# 13-Interfaces\n\nAn interface is a blueprint for a class. It comes with both\
+    \ abstract methods and static constants. The Interface provides a mechanism for\
+    \ achieving abstraction. An interface must only have abstract methods rather than\
+    \ the method body. It's very important for achieving multiple inheritances. It's\
+    \ similar to a class, but with abstract methods. Any class must implement an interface\
+    \ to use its methods. Other than abstract methods, it may have constants, static\
+    \ methods, default methods, nested types, etc.\n\nAn interface has methods that\
+    \ can be implemented by classes. To implement interface methods, a class must\
+    \ be abstract. Otherwise, all interface methods must be defined in the class.\
+    \ An interface can't be instantiated. It also can't have constructors. All its\
+    \ fields must be final or static, not instance fields.\n\nTo set one, we use the\
+    \ interface keyword.\n\nHere is the Syntax:\n\n```\ninterface <interfaceName>{\n\
+    \  //constant fields\n  // abstract methods\n}\n```\n\nAn interface is an implicit\
+    \ abstract; hence we don't add abstract keyword when declaring it. The methods\
+    \ are implicitly abstract; hence we don't use"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "abstract keyword when declaring them. They are implicitly public.\n\nExample:\n\
+    \n```\ninterface Mammal {\n    public void run();\n    public void eat();\n}\n\
+    ```\n\nAn interface may be implemented using the class:\n\n```\ninterface Mammal\
+    \ {\n    public void run();\n    public void eat();\n}\n\npublic class Cow implements\
+    \ Mammal{\n    public void run(){\n        System.out.println(\"Interface Method\
+    \ run already Implemented\");\n    }\n    public void eat(){\n        System.out.println(\"\
+    Interface Method eat already Implemented\");\n    }\n    public static void main(String\
+    \ args[]){\n        Mammal mm = new Cow();\n        mm.run();\n        mm.eat();\n\
+    \    }\n}\n```\n\nThe code should return the following result after execution:\n\
+    \nInterface Method run already Implemented\nInterface Method eat already Implemented\n\
+    \nWe created interface Mammal which has been implemented by Cow class. Its run()\
+    \ and eat() methods have been used in Cow class.\n\nFor two interfaces, one may\
+    \ extend another one via the extends keyword. The sub-interface (child) will inherit\
+    \ methods of super-interface"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '(parent).
+
+
+    Example:
+
+
+    ```
+
+    public interface Toyotas {
+
+    public void setCarPrice(String carPrice);
+
+    public void setCC(String cc);
+
+    }
+
+    ```
+
+
+    ```
+
+    public interface Harrier extends Toyotas {
+
+    public void maximumMileage(int miles);
+
+    public void seats(int seats);
+
+    public void kilometersPerLiter(int kms);
+
+    }
+
+    ```
+
+
+    ```
+
+    public interface Prado extends Toyotas {
+
+    public void interiorSpace();
+
+    public void carLength();
+
+    public void setCarPrice(String carPrice);
+
+    public void setCC(String cc);
+
+    }
+
+    ```
+
+
+    We defined Toyotas interface. The others, Harrier and Prado are extending the
+    Toyotas interface. The interface Prado has four methods, but two of these have
+    been inherited from Toyotas interface. You may inherit from several interfaces
+    by use of () to separate them.
+
+
+    Example:
+
+
+    ```
+
+    public interface Harrier extends Toyotas, Cars
+
+    ```
+
+
+    Java doesn’t support multiple inheritances, however, we may achieve it via interfaces.
+
+
+    Here is another interface example:
+
+
+    ```
+
+    interface ObjectInterface{
+
+    void drawObject();
+
+    static int cubeObject(int ab){return ab*ab*ab;}
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "```\nclass Cuboid implements ObjectInterface{\n    public void drawObject(){\n\
+    \        System.out.println(\"drawing cuboid\");\n    }\n}\npublic class InterfaceTest{\n\
+    \    public static void main(String[] args[]){\n        ObjectInterface ob=new\
+    \ Cuboid();\n        ob.drawObject();\n        System.out.println(ObjectInterface.cubeObject(3));\n\
+    \    }\n}\n```\n\nA nested interface is the one we can add inside another interface.\
+    \ Example:\n\n```\ninterface Message{\n    void printMessage();\n    interface\
+    \ ShortMessage{\n        void message();\n    }\n}\n```\n\nThe ShortMessage interface\
+    \ has been defined inside the Message interface, making it a nested interface."
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "# 14-Packages\n\nPackages are essentials for grouping related interfaces and\
+    \ classes together. The grouping is determined by functionality. With packages,\
+    \ we can group classes and find the ones we need easily to avoid conflicts. It\
+    \ is recommended that you create a package and then use it to group related classes,\
+    \ interfaces, etc. With packages, it's easy to access variables and methods defined\
+    \ in classes and interfaces in the same package.\n\nA Java package can be user-defined\
+    \ or built-in. Examples of built-in Java packages include lang, awt, java, javafx,\
+    \ net, io, swing, util, sql, and others. To use these packages, use the import\
+    \ statement to be made available in your class. To create packages, use package\
+    \ keyword then create package name.\n\nExample:\n\n```\npackage firstpackage;\n\
+    public class MyPackage{\n    public static void main(String args[]){\n       \
+    \ System.out.println(\"My first package\");\n    }\n}\n```\n\nExecution of the\
+    \ above codes will return the following output:\n\nMy first package"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "The package definition statement is always with a semicolon (; ). When we create\
+    \ packages, we should use lowercase letters for the name to avoid conflicting\
+    \ with the interface/class names.\n\nAnother Example:\n\n```\npackage animal;\n\
+    interface Mammals {\n    public void run();\n    public void eat();\n}\n```\n\n\
+    We have created a package named animal with an interface named Mammals. We can\
+    \ now implement the interface in package animal:\n\n```\npackage animal;\npublic\
+    \ class Cow implements Mammals {\n    public void run() {\n        System.out.println(\"\
+    Cows run\");\n    }\n    public void eat() {\n        System.out.println(\"Cows\
+    \ eat\");\n    }\n    public int legCount() {\n        return 0;\n    }\n    public\
+    \ static void main(String args[]) {\n        Cow c = new Cow();\n        c.run();\n\
+    \        c.eat();\n    }\n}\n```\n\nThe code will return the following result:"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "```\nCows run\nCows eat\n```\n\nIf we do not use a package, the two may be\
+    \ combined into one:\n\n```\ninterface Mammals {\n    public void run();\n   \
+    \ public void eat();\n}\n```\n\n```\npublic class Cow implements Mammals {\n \
+    \   public void run() {\n        System.out.println(\"Cows run\");\n    }\n\n\
+    \    public void eat() {\n        System.out.println(\"Cows eat\");\n    }\n\n\
+    \    public int legCount() {\n        return 0;\n    }\n\n    public static void\
+    \ main(String[] args) {\n        Cow c = new Cow();\n        c.run();\n      \
+    \  c.eat();\n    }\n}\n```\n\n# Import Keyword\n\nYou can access packages outside\
+    \ a certain package. Using the import keyword is one of the possibilities to do\
+    \ it. To access a class in the same package, it is unnecessary for a package to\
+    \ be used. After importing class using the packagename.classname syntax, only\
+    \ methods in imported class will be accessible.\n\nExample:"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "```\npackage hellopackage;\npublic class HelloClass{\n    public void message(){\n\
+    \        System.out.println(\"Hello there!\");\n    }\n}\n```\n\nWe have a class\
+    \ named **HelloClass** defined in a package named **hellopackage** and we save\
+    \ it in the file *HelloClass.java*. We have this class:\n\n```\npackage studentspackage;\n\
+    class HelloStudentsClass{\n    public static void main(String args[]){\n     \
+    \   HelloClass hello = new HelloClass();\n        hello.message();\n    }\n}\n\
+    ```\n\nThe second program will generate an error once executed. We have instantiated\
+    \ the class **HelloClass** to get the instance **hello**. We have used the instance\
+    \ to access **message()** method defined in **HelloClass**. Note that they are\
+    \ not in a single package. This will generate an error. The reason is we instantiate\
+    \ a class not in the same package as the current one. We have to import the class,\
+    \ **HelloClass** from package **hellopackage**. We use `classname.classname` syntax\
+    \ at the top of the class:\n\n```\npackage studentspackage;\nimport hellopackage.HelloClass;\n\
+    class HelloStudentsClass{\n    public static void main(String args[]){\n     \
+    \   HelloClass hello = new HelloClass();\n        hello.message();\n    }\n}\n\
+    ```\n\nA name for **package** and **class** is useful to avoid an error. With\
+    \ this method, we do not need to use the import keyword since the name will direct\
+    \ us to the package and class, and then the method will be accessible from there."
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "Example:\n\n```\npackage hellopackage;\npublic class HelloClass{\n    public\
+    \ void message(){\n        System.out.println('Hello there!');\n    }\n}\n```\n\
+    \nTo use the message() method in a class in another package, we can do it as follows:\n\
+    \n```\npackage studentspacks;\nclass HelloStudentsClass{\n    public static void\
+    \ main(String[] args) {\n        hellopackage.HelloClass hello = new hellopackage.HelloClass();\n\
+    \        hello.message();\n    }\n}\n```\n\nConsider this line:\n\n```\nhellopackage.HelloClass\
+    \ hello = new hellopackage.HelloClass();\n```\n\nThe hellopackage.HelloClass helps\
+    \ access HelloClass class in a package named hellopackage. After that, we can\
+    \ access the message() method defined in the class. Note that you access methods\
+    \ and variables in that class only, not in other classes of the package.\n\nAnother\
+    \ example\n\n```\npackage armory;\ninterface guns {\n    public void pistol();\n\
+    }\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "The guns interface is in armory interface. We can implement the interface in\
+    \ the similar package:\n\n```\npackage armory;\npublic class ceska implements\
+    \ guns {\n    public void bullets() {\n        System.out.println(\"Ceska has\
+    \ bullets\");\n    }\n    public void pistol() {\n        System.out.println(\"\
+    It has 5 bullets\");\n    }\n    public int owner() {\n        return 0;\n   \
+    \ }\n    public static void main(String args[]) {\n        ceska cs = new ceska();\n\
+    \        cs.bullets();\n    }\nn\n```"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# 15-Java Applets
+
+
+    Applets are Java programs that run on web browsers. An applet may act as a fully
+    functional app since it comes with a full Java API. The applet class extends java.applet.Applet.
+    Applets don''t have the main method, hence they don''t invoke main(). They are
+    instead embedded on HTML pages. After an HTML page with an applet is opened, its
+    code is downloaded to the local machine. The JVM (Java Virtual Machine) is mandatory
+    for you to view applets.
+
+
+    Applets are processed on the client side; hence they give users a quick response
+    compared to other apps. Applets offer good security.
+
+
+    # Applets'' Lifecycle
+
+
+    Applets go through these steps:
+
+
+    +   1. **Initialization-** the init() method initializes applets.
+
+    2. **Starting-** the start() method starts applets.
+
+    3. **Painting-** done after calling paint() method.
+
+    4. **Stopping-** we invoke stop() method to stop an applet.
+
+    5. **Destroying-** the applet is destroyed by invoking destroy() method.'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "Applets are viewed by HTML.\n\nExample:\nCreate a new file in text editor with\
+    \ name FirstApplet.java. and add this code\nto it:\n\n```\nimport java.awt.Graphics;\n\
+    import java.applet.Applet;\npublic class FirstApplet extends Applet{\n\npublic\
+    \ void paint(Graphics gc) { \ngc.drawString('Our First Applet!',150,150);\n}\n\
+    }\n```\n\nCreate new file in editor named mycode.html. Add this code to it:\n\n\
+    ```\n<html>\n<body>\n<applet code=\"FirstApplet.class\" width=\"320\" height=\"\
+    320\">\n</applet>\n</body>\n</html>\n```\n\nFirst, we have Java code in which\
+    \ we added code regarding what our applet\nshould do. The class is named MyApplet.\
+    \ Consider this:\n\ngc.drawString('Our First Applet!',150,150);\n\nWe are drawing\
+    \ the “Our First Applet! Text at points 150, 150 of the applet\nwindow. The two\
+    \ libraries added via import statement: Graphics and\nApplet libraries. The paint()\
+    \ method is defined in Graphics library. If we\ndon’t import it, an error will\
+    \ be generated since Java compiler won’t\nunderstand what we mean. We have HTML\
+    \ code in file mycode.html. In this,\nwe created a window on which to draw text.\n\
+    \nNote how we have linked HTML code and Java code:"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '```
+
+    <applet code="FirstApplet.class" width="320" height="320">
+
+    ```
+
+
+    We linked to FirstApplet.class rather than FirstApplet.java. This means Java code
+    should compile first to give the .class file, then HTML code will recognize it.
+
+
+    Open the OS terminal, navigate to the location of the files. Run this command
+    to compile Java code:
+
+
+    javac FirstApplet.java
+
+
+    This will generate FirstApplet.class file. We can use the appletviewer for our
+    applet viewing. Run this command on the console:
+
+
+    appletviewer mycode.html
+
+
+    A window should show popup with the text OurFirstApplet!. That is the Applet.
+
+
+    ```
+
+    C:\Users\admin>javac FirstApplet.java
+
+    C:\Users\admin>appletviewer mycode.html
+
+    ```
+
+
+    ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_97_0.png)'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: 'Change the point where the text is drawn by altering the coordinates. It will
+
+    change the location on the window.
+
+
+    Try this and see the shapes generated:
+
+
+    Create file MyPaint.java with this code:
+
+
+    ```
+
+    import java.applet.Applet;
+
+    import java.awt.*;
+
+    public class Mypaint extends Applet
+
+    {
+
+    public void paint(Graphics gc){
+
+    gc.drawOval(130, 40, 60, 50);
+
+    gc.drawOval(120, 60, 10, 15);
+
+    gc.drawOval(190, 60, 10, 15);
+
+
+    gc.drawOval(160, 50, 10, 10);
+
+    gc.drawOval(140, 50, 10, 10);
+
+    gc.drawOval(150, 75, 15, 10);
+
+    gc.drawRect(145, 90, 30, 30);
+
+    gc.drawRect(120, 120, 80, 120);
+
+    gc.drawRect(130, 240, 20, 120);
+
+    gc.drawRect(170, 240, 20, 120);
+
+
+    gc.drawRect(130, 360, 30, 20);
+
+    gc.drawRect(170, 360, 30, 20);
+
+
+    gc.drawLine(200, 160, 240, 240);
+
+    gc.drawLine(240, 240, 280, 160);
+
+
+    gc.drawRect(280, 130, 120, 30);
+
+    gc.setColor(Color.blue);
+
+    gc.fillRect(280, 130, 120, 30);
+
+
+    gc.drawRect(280, 160, 120, 30);
+
+    gc.setColor(Color.yellow);
+
+    gc.fillRect(280, 160, 120, 30);
+
+
+    gc.drawRect(280, 190, 120, 30);
+
+    gc.setColor(Color.red);
+
+    gc.fillRect(280, 190, 120, 30);
+
+    }
+
+    }
+
+    ```
+
+
+    Create new file mycode.html with this code:
+
+
+    ```
+
+    <HTML>
+
+    ```'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '```
+
+    <TITLE>Hello World</TITLE>
+
+    <HEAD>Our Hello Applet</HEAD>
+
+    <Applet code="MyPaint.class" width=500 height=500>
+
+    </Applet>
+
+    </html>
+
+    ```
+
+
+    Compile MyPaint.java, then run mycode2.html. This is demonstrated below:
+
+    \javac MyPaint.java
+
+    appletviewer mycode2.html
+
+
+    This should give you the following output:
+
+
+    ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_99_0.png)
+
+
+    Graphics library comes with functions/methods that can draw numerous shapes. To
+    draw an oval shape, call drawOval() method. Pass 4 parameters to it, which are
+    the points to be touched by edges of the oval. To draw a rectangle, call drawRect()
+    method and pass 4 coordinates to it which specify its corners. The drawLine()
+    method helps one draw a line. The setColor() method helps in setting object color.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "Example 3:\n\nWrite this code in OurPaintClass.java file:\n\n```\nimport java.applet.Applet;\n\
+    import java.awt.*;\npublic class OurPaintClass extends Applet {\n    public void\
+    \ paint(Graphics g) {\n        g.drawRect(120, 120, 160, 120);\n        g.drawLine(120,\
+    \ 120, 440, 365);\n    }\n}\n```\n\nIts HTML code should be as follows:\n\n```\n\
+    <HTML>\n<TITLE>Hello World</TITLE>\n<HEAD>Our Hello Applet</HEAD>\n<Applet code=\"\
+    OurPaintClass.class\" width=500 height=500>\n</Applet>\n</html>\n```\n\nCompile\
+    \ the OurPaintClass.java class then run OurPaint.html code with appletviewer.\n\
+    \nYou will get the result given below:"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_101_0.png)
+
+
+    # # Displaying Images
+
+
+    Images can be displayed on applets as applets are popular in animations and games.
+    The class java.awt.Graphics has a drawImage() method for image display. The method
+    getImage() returns an image object. The method getCodeBase() returns base URL.
+    The getDocumentBase() returns document URL in which applet has been embedded.
+
+
+    Example:
+
+
+    ```
+
+    import java.awt.*;
+
+    import java.applet.*;
+
+    public class ImageDisplay extends Applet {
+
+    ```
+
+
+    Image img;
+
+
+    ```
+
+    public void init() {
+
+    img = getImage(getDocumentBase(),"imagename.png");
+
+    }
+
+    ```
+
+
+    ```
+
+    public void paint(Graphics gc) {
+
+    gc.drawImage(img, 30,30, this);
+
+    }
+
+    ```
+
+
+    }'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: 'The drawImage() method displays the image. Its 4th parameter is an object for
+    ImageObserver. Save the code in a file named ImageDisplay.java. Add this code
+    to a file named imageddisplay.html:
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    <applet code="ImageDisplay.class" width="350" height="350">
+
+    </applet>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Compile Java class via command javac ImageDisplay.java, then invoke imageddisplay.html
+    file via appletviewer. If you specified a correct image in the same directory
+    with these files, it will be shown on the window.
+
+
+    # Applet Animations
+
+
+    Since applets are common in games, images should be moved. Example: Create file
+    AnimationExample.java. Add this code:
+
+
+    ```
+
+    import java.applet.*;
+
+    import java.awt.*;\public class AnimationExample extends Applet {
+
+
+    Image img;
+
+
+    public void init() {
+
+    img = getImage(getDocumentBase(),"car.gif");
+
+    }
+
+
+    public void paint(Graphics gc) {
+
+    for(int p=0;p<500;p++){
+
+    gc.drawImage(img,p,30,this);
+
+    }
+
+    try{
+
+    Thread.sleep(100);
+
+    }
+
+    catch(Exception ex){
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    The method drawImage() helps us display an image. Create new file named animation.html.
+    and add this code:
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    <applet code="AnimationExample.class" width="350" height="300">
+
+    </applet>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Compile the .java class then run the .html file. Ensure the correct image is specified
+    in the .java class and keep it in the same directory as the files. will move after
+    running the code.
+
+
+    # Events on Applets
+
+
+    Events may be added on applets. Here, we add an event for applet to display a
+    message after clicking button:
+
+
+    Create file Applet.java then add this code:
+
+
+    ```
+
+    import java.applet.*;
+
+    import java.awt.event.*;
+
+    import java.awt.*;
+
+    public class AppletEventExample extends ActionListener{
+
+    Button btn;
+
+    TextField txt;
+
+
+    public void init(){
+
+    txt=new TextField();
+
+    txt.setBounds(30,40,150,20);
+
+
+    btn=new Button("Click");
+
+    btn.setBounds(80,150,60,50);
+
+
+    add(btn);
+
+    ```'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '```
+
+    add(txt);
+
+    btn.addActionListener(this);
+
+    setLayout(null);
+
+    }
+
+    public void actionPerformed(ActionEvent ev) {
+
+    txt.setText("Text on Applet");
+
+    }
+
+    ```
+
+
+    Note the applet class implements an interface named ActionListener. This has methods
+    for listening to action events and responding appropriately. New classes have
+    been introduced: Button and TextField classes. We created instances of these classes,
+    that is, btn and txt respectively to get a button and a textField. The text Click
+    was added to the button, and setBounds() method is for setting the bounds for
+    the two. Consider this:
+
+
+    btn.addActionListener(this);
+
+
+    The command adds action listener event to our button, the button will wait or
+    listen to be clicked. After the click, the action specified in the actionPerformed()
+    method will be performed.
+
+
+    Create new file myapplet.html then add this:
+
+
+    ```
+
+    <html>
+
+    <body>
+
+    <applet class="AppletEventExample.class" width="350" height="350">
+
+    </applet>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Compile your Java code via command javac AppletEventExample.java, then invoke
+    the .html file via appletviewer myapplet.html. The following applet window will
+    pop up:'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_105_0.png)
+
+
+    Click the “Click” button. A new message will be added to *textfield* as shown
+    below:
+
+
+    ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_105_1.png)
+
+
+    # Applet Parameters
+
+
+    Information on HTML file may be used as a parameter to the applet. The parameters
+    may be acquired via the **getParameter()** method of Applet class. Example:
+
+
+    Create a new file, **AppletParameters.java**. Add this code:
+
+
+    ```
+
+    import java.awt.Graphics;
+
+    import java.applet.Applet;
+
+    ```'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "```\npublic class AppletParametersExample extends Applet{\npublic void paint(Graphics\
+    \ g){\n  String st=getParameter(\"message\");\n  g.drawString(st,50,50);\n}\n\
+    }\n```\n\nCreate new file for HTML code, **appletcode.html:**\n\n```\n<html>\n\
+    <body>\n<applet code=\"AppletParameters.class\" width=\"350\" height=\"350\">\n\
+    <param name=\"message\" value=\"Applet Parameters\">\n</applet>\n</body>\n</html>\n\
+    ```\n\nIn the above HTML code, the value for **param name** should much match\
+    \ the value of the argument passed to **getParameter()** in Java class.\n\nNow,\
+    \ compile your Java code via javac **AppletParametersExample.java** command. The\
+    \ **AppletParametersExample.class** file will be generated. Invoke the html code\
+    \ via **appletviewer appletcode.html.**\n\nYou should then get the window given\
+    \ below:\n\n![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_106_0.png)"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: This text was specified in the value attribute of **param name** in HTML code.
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# 16-Java Input/ Output\n\nThe java.io package comes with many classes we can\
+    \ use to perform input/output tasks. The input/output concept in Java is implemented\
+    \ by the use of streams. The stream is provided with the java.io package and it\
+    \ supports different types of data including localized variables, object, primitives,\
+    \ etc.\n\nA stream is simply a sequence of data. There are two types of Streams:\n\
+    \n+   - InputStream – used for reading data from the source.\n- OutPutStream–used\
+    \ for writing data to the destination.\n\n# Byte Streams\n\nJava streams are made\
+    \ up of bytes. The Java byte streams perform input/output operations of 8-bit\
+    \ bytes. There are several classes that are related to the byte streams, but the\
+    \ common ones are FileInputStream OutputStream. Let us use an example which demonstrates\
+    \ how we can use these two classes:\n\n```\nimport java.io.*;\npublic class CopyingFiles\
+    \ {\n\n    public static void main(String[] args) throws IOException {\n     \
+    \   FileInputStream inp = null;\n```"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "```\nFileOutputStream outp = null;\n\ntry {\n  inp = new FileInputStream(\"\
+    colleagues.txt\");\n  outp = new FileOutputStream(\"output.txt\");\n\n  int ch;\n\
+    \  while (ch = inp.read()) != -1) {\n    outp.write(ch);\n  }\n} finally {\n \
+    \ if (inp != null) {\n    inp.close();\n  }\n  if (outp != null) {\n    outp.close();\n\
+    \  }\n}\n```\n\nThe code will read the contents of the file colleagues.txt and\
+    \ copy them into a new file named output.txt. Note that the latter will be created\
+    \ automatically, and the contents copied into it.\n\n# Character Streams\n\nCharacter\
+    \ Streams are used for performing input and output operations of 16-bit Unicode.\
+    \ There are many classes that are associated with character streams. The most\
+    \ popular are the FileReader and FileWriter. Internally, the FileReader uses the\
+    \ FileInputStream while FileOutputStream, but the major difference between them\
+    \ is that the FileReader reads two bytes each time FileWriter writes two bytes\
+    \ each time. Let us use these two classes to rewrite our previous example:\n\n\
+    ```\nimport java.io.*;\npublic class CopyingFiles {\n\npublic static void main(String[]\
+    \ args) throws IOException {\n  FileReader in = null;\n```"
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "```\nFileWriter outp = null;\n\ntry {\n  inp = new FileReader(\"colleagues.txt\"\
+    );\n  outp = new FileWriter(\"output.txt\");\n\n  int ch;\n  while ((ch = inp.read())\
+    \ != -1) {\n    outp.write(ch);\n  }\n} finally {\n  if (inp != null) {\n    inp.close();\n\
+    \  }\n  if (outp != null) {\n    outp.close();\n  }\n}\n```\n\nWhen you compile\
+    \ and run the code, it will copy the contents of the file **colleagues.txt** into\
+    \ a new file named **output.txt.**.\n\n# Standard Streams\n\nIn each programming\
+    \ language, a way is provided through which a user can enter input through the\
+    \ keyboard and the input will be displayed on the computer screen. We have three\
+    \ standard streams we can use for this purpose:\n\n+   **Standard Input** – used\
+    \ for feeding data to the user's program with the keyboard and used as the standard\
+    \ input stream. It is represented using **System.in.**\n\n**Standard Output**\
+    \ – used to output data produced by the user's program with the computer screen\
+    \ and used as the standard output stream. It is represented using **System.out.**"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "+   * Standard Error - used to output error data generated by the user's program\
+    \ with the computer screen and used as the standard error stream. It is represented\
+    \ using **System.err.**\n\nConsider the example given below:\n\n```\nimport java.io.*;\n\
+    public class ReadConsole {\n\npublic static void main(String[] args) throws IOException\
+    \ {\n    InputStreamReader inp = null;\n\n    try {\n        inp = new InputStreamReader(System.in);\n\
+    \        System.out.println('Enter 'q' to quit.');\n        char ch;\n       \
+    \ do {\n            ch = (char) inp.read();\n            System.out.print(ch);\n\
+    \        } while (ch != 'q');\n    } finally {\n        if (inp != null) {\n \
+    \           inp.close();\n        }\n    }\n}\n```\n\nCompile the code from the\
+    \ command line and execute it. When prompted, type the letter **'q'** then hit\
+    \ the **enter** key. See what happens.\n\n```\nC:\\Users\\admin>javac ReadFromConsole.java\n\
+    C:\\Users\\admin>java ReadFromConsole\nEnter 'q' to quit.\nq\nq\nC:\\Users\\admin>\n\
+    ```\n\nYou notice that once you press the letter **'q'** and hit the **enter**\
+    \ key, the program will quit."
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "You can run the code again and keep on pressing other letters and even numbers\
+    \ on the keyboard. Keep on pressing the enter key after every character you type.\
+    \ The program will only exit when you press the letter 'q'. This is showed below:\n\
+    \n```\nC:\\Users\\admin\\javac ReadFromConsole.java\nC:\\Users\\admin\\java ReadFromConsole\n\
+    Enter 'q' to quit.\nh\nh\ne\nr\rr\nr1\n1\n2\n4\n4\nq\nC:\\Users\\admin\\>\n```\n\
+    \n# Reading and Writing Files\n\nWe use the InputStream to read data from a source\
+    \ and OutputStream to write data to a destination. The most important streams\
+    \ for reading and writing files are the FileInputStream and OutputStream.\n\n\
+    The InputStream helps us to read data from files. We can create objects by use\
+    \ of the new keyword and we have access to a wide range of constructors. Consider\
+    \ the example given below:\n\nInputStream f = new FileInputStream(\"F:/java/names\"\
+    );\n\nIn the above example, the constructor takes the name of a file as a string\
+    \ for creation of an input stream object for reading the file. Consider the next"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "example given below:\n\n```\nFile f = new File(\"F:/java/names\");\nInputStream\
+    \ f = new InputStream(f);\n```\n\nIn the above case, we have a constructor taking\
+    \ a file object for creation of an **input stream** object to be used for reading\
+    \ the file. We have first used the **File()** method to create a file object.\n\
+    \nOnce you have created the **InputStreamObject**, you are provided with several\
+    \ helper methods you can use for the purpose of reading the stream or perform\
+    \ other operations on it.\n\nWe use the **FileOutputStream** for the purpose of\
+    \ creating a file then writing some data into it. The stream will create a file\
+    \ if it is not found before it can be opened.\n\nThere are two constructors, we\
+    \ can use for the purpose of creating a **FileOutputStream** object.\n\nThe **first**\
+    \ constructor can be used as shown below:\n\n```\nOutputStream f = new FileOutputStream(\"\
+    F:/java/names\")\n```\n\nThe constructor given takes the name of a file as the\
+    \ string creates an input stream object for writing the file.\n\nThe **second**\
+    \ constructor can be used as shown below:\n\n```\nFile f = new File(\"F:/java/names\"\
+    );\nOutputStream f = new FileOutputStream(f);\n```\n\nThe constructor given above\
+    \ takes a file object for creating an output stream object for writing to a file.\
+    \ We have first called the **File()** method to create a file object. The following\
+    \ example shows how to use these:\n\n```\nimport java.io.*;\npublic class FileStreamExample\
+    \ {\n\n    public static void main(String args[]) {\n```"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "```\ntry {\n    byte bWrite[] = {3\n```\n\nCompile and run the code. It will\
+    \ generate a file named myfile.txt and it will write the specified numbers into\
+    \ that file. Note that the numbers will be written using a binary format. The\
+    \ output you get on the screen will also be in a binary format.\n\n# File Navigation\n\
+    \nThere are several classes in Java that can help us understand the concept of\
+    \ navigation.\n\n# File Class\n\nThis Java class represents both files and the\
+    \ directory pathnames in a hastily manner. It is the class we use for creating\
+    \ files and directory deletion, file searching, etc. We use the file object to\
+    \ represent the real file/directory on the disk. The following example shows how\
+    \ we can create a File object and use it:"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "```\nimport java.io.File;\n\npublic class FileExample {\n    public static\
+    \ void main(String[] args) {\n        File f = null;\n        String[] sstrs =\
+    \ {\"file1.txt\",\"file2.txt\"};\n        try {\n            // for each string\
+    \ in string array\n            for(String s:sstrs) {\n                // create\
+    \ a new file\n                f = new File(s);\n\n                // true for\
+    \ an executable file\n                boolean bool = f.canExecute();\n\n     \
+    \           // finding the absolute path\n                String a = f.getAbsolutePath();\n\
+    n\n                // return the absolute path\n                System.out.println(\"\
+    \ executable: \"+ bool);\n            }\n        } catch (Exception ex) {\n  \
+    \          // in case an I/O error occurs\n            ex.printStackTrace();\n\
+    \        }\n    }\n}\n```\n\nThe code will get the directory of the files and\
+    \ tell you whether or not the files are executable.\n\n# FileReader Class\n\n\
+    This is a Java class that inherits the InputStream class. We use it for reading\
+    \ character streams. The class also comes with many constructors we can use for\
+    \ the creation of the objects we want. Here are the constructors provided with\
+    \ this class:\n\n+   - **FileReader(File file)-** this is a constructor for creating\
+    \ a new reader when it is given the file from which it is read.\n- **FileReader(Descriptor\
+    \ fd)-** a constructor for creating a new"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "FileReader when it has been provided with the FileDescriptor from which it\
+    \ should read.\n\n+   - FileReader(String fileName) - this is a constructor for\
+    \ creating a new FileReader when provided with the file from which to read.\n\n\
+    The following example shows how to use this class:\n\n```\nimport java.io.*;\n\
+    public class ReadExample {\n    public static void main(String[] args) throws\
+    \ IOException {\n        File f = new File('hello.txt');\n\n        // creating\
+    \ the file\n        f.createNewFile();\n\n        // creating a FileWriter Object\n\
+    \        FileWriter wr = new FileWriter(f);\n\n        // Writing the content\
+    \ to the file\n        wr.write('\\nA Java\\n great\\n example!\\nn');\n     \
+    \   wr.flush();\n        wr.close();\n\n        // Creating a FileReader Object\n\
+    \        FileReader fr = new FileReader(f);\n        char [] ch = new char[50];\n\
+    \        fr.read(ch); // read the content to an array\n\n        for(char c :\
+    \ ch) {\n            System.out.print(c); // print the characters\n        }\n\
+    \        fr.close();\n    }\n}\n```\n\nThe code will give the output given below\
+    \ upon execution:"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "```\nC:\\Users\\admin>javac FileReadExample.java\nC:\\Users\\admin>java FileReadExample\n\
+    Java\ngreat\nexample\nC:\\Users\\admin>\n```\n\n# FileWriter Class\n\nThis is\
+    \ a Java class that inherits the OutputStream class. We use this class when we\
+    \ need to write streams of characters. The class comes with many constructors\
+    \ that can be used for the creation of objects. They include:\n\n+   * FileWriter(File\
+    \ file)- this is a constructor for creating a FileWriter when given the File object.\n\
+    \n+   * FileWriter(File file, boolean append)- this is a constructor for creating\
+    \ a FileWriter when given the File object having a Boolean that shows or not the\
+    \ given data should be appended.\n\n+   * FileWriter(FileDescriptor fd)- this\
+    \ is a constructor for creating a FileWriter that is associated with the file\
+    \ descriptor that is given.\n\n+   * FileWriter(String fileName)- this constructor\
+    \ will create a FileWriter when given the file name.\n\n+   * FileWriter(String\
+    \ fileName, boolean append)- this constructor will create a FileWriter when given\
+    \ the file name with a Boolean that shows or not the written data should be appended.\n\
+    \nHere is an example showing how to use this Java class:\n\n```\nimport java.io.*;\n\
+    public class FileReadExample {\n\n    public static void main(String args[]) throws\
+    \ IOException {\n    File f = new File(`hello.txt`);\n```"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "```\n// creating the file\nf.createNewFile();\n```\n\n```\n// creating a FileWriter\
+    \ Object\nFileWriter wr = new FileWriter(f);\n\n// Writing the content to file\n\
+    wr.write(\"nJava\\ngreat\\nexample\\n\");\nwr.flush();\nwr.close();\n```\n\n```\n\
+    // Creating a FileReader\nFileReader fr = new FileReader(f);\nchar[] ch = new\
+    \ char[50];\nfr.read(ch); // read the content to an array\n\nfor(char c : ch)\
+    \ {\n    System.out.print(c); // print the characters\n    fr.close();\n}\n```\n\
+    \n# Listing Directories\n\nTo see all the directories and the files in a particular\
+    \ directory, you can use the `list()` method provided by the File object. This\
+    \ is showed using the following example:\n\n```\nimport java.io.File;\npublic\
+    \ class ReadDirectory {\n\npublic static void main(String[] args) {\n    File\
+    \ f = null;\n    String[] paths;\n\n    try {\n        // creating a new file\
+    \ object\n        f = new File(\"/tmp\");\n\n        // an array of both files\
+    \ and directory\n        paths = f.list();\n\n        // for every name in path\
+    \ array\n        for(String path:paths) {\n```"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '```
+
+    // returns filename and the directory name
+
+    System.out.println(path);
+
+    }
+
+    catch (Exception ex) {
+
+    // in case any error occurs
+
+    ex.printStackTrace();
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: "# 17-Exception Handling\n\nDuring the run-time of a program, an unexpected\
+    \ condition may occur may stop its execution. We need to have a mechanism that\
+    \ will handle such conditions so that our programs will be executed without problems.\n\
+    \nProblems that occur during the program execution are referred to as exceptions.\
+    \ Exceptions disrupt the normal flow of a program, and the program may not work\
+    \ as it was intended. Examples of exceptions that can occur during program execution\
+    \ include a case where the user enters an invalid data, a file that cannot open,\
+    \ loss of network connection during program execution, etc.\n\nConsider the example\
+    \ given below in which we are trying to access a file that is not there:\n\n```\n\
+    import java.io.File;\nimport java.io.FileReader;\n\npublic class ExceptionExample\
+    \ {\n    public static void main(String[] args) {\n        File f = new File(\"\
+    hello.txt\");\n        FileReader fr = new FileReader(f);\n    }\n}\n```\n\nThe\
+    \ code will give the following exception when compiled:"
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "```\nC:\\Users\\admin\\javaExceptionExample.java\nExceptionExample.java:8:\
+    \ error: unexpected exception FileNotFoundException; must\nbe caught or declared\
+    \ to be thrown\nFileReader fr = new FileReader(f);\nerror\nC:\\Users\\admin>\n\
+    ```\n\nThe read() and write() methods have thrown the IOException, but the Java\
+    \ compiler could handle this together with the FileNotFound exception.\n\nAn unchecked\
+    \ exception is a kind of exception that occurs during the program execution time.\
+    \ Such exceptions are also referred to as runtime exceptions. Examples of such\
+    \ exceptions are programming bugs like improper use of APIs and logic errors.\
+    \ A good example of that is when you try to access an array element that is out\
+    \ of bounds as showed below:\n\npublic class ArrayException\n\n```\npublic static\
+    \ void main(String[] args) {\n    int values[] = {10, 25, 38, 46};\n    System.out.println(values[6]);\n\
+    }\n```\n\nIn the above example, we have created an array of 4 elements, but we\
+    \ are trying to access the element at index 6 of the array. This will raise an\
+    \ ArrayIndexOutOfBoundsExceptionexception exception.\n\nThere is a difference\
+    \ between errors and exceptions. Errors are problems that occur and they are beyond\
+    \ the control of the programmer or the user. Errors are normally ignored code\
+    \ since there is nothing you can do about them. A good example of where an error\
+    \ can occur after the occurrence of a stack overflow. Errors are ignored during\
+    \ compile time.\n\n# Catching Exceptions"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "To catch exceptions in Java, we combine the try and catch keywords. The code\
+    \ that is more likely to generate an error is surrounded using the try/catch block.\
+    \ The code placed within the try/catch block is referred to as the protected code.\
+    \ Here is the syntax for this statement:\n\n```\ntry {\n  // the protected code\n\
+    \  catch (ExceptionName ex1) {\n    // the catch block\n}\n```\n\nAfter the occurrence\
+    \ of the exception, it will be handled by the catch block you created. Anytime\
+    \ you create a try block, it must be followed by either the catch or the finally\
+    \ block. If the exception that has occurred has been defined in the catch block,\
+    \ it will be passed to the same way that an argument is passed to a method.\n\n\
+    Here is an example:\n\n```\nimport java.io.*;\n\npublic class ArrayException {\n\
+    \  public static void main(String[] args) {\n    try {\n      int x[] = new int[3];\n\
+    \      System.out.println(\"Access element four : \" + x[4]);\n    } catch (ArrayIndexOutOfBoundsException\
+    \ ex) {\n      System.out.println(\"Exception thrown : \" + ex);\n    }\n    System.out.println(\"\
+    Outside the block\");\n  }\n}\n```\n\nIn the above example, we have defined an\
+    \ array with 3 elements but we are trying to access its 4th element. The code\
+    \ will return the following result upon execution:\n\n```\nException thrown :\
+    \ java.lang.ArrayIndexOutOfBoundsException: 4\nOutside the block\n```"
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "# Multiple Catch Blocks\n\nWe can create a try block followed by many catch\
+    \ blocks. This should be done following the syntax given below:\n\n```\ntry {\n\
+    \  // the protected code\n} catch (ExceptionType1 ex1) {\n  // A Catch block\n\
+    } catch (ExceptionType2 ex2) {\n  // A Catch block\n} catch (ExceptionType3 ex3)\
+    \ {\n  // A Catch block\n}\n```\n\nIn the above syntax, we have created three\
+    \ catch blocks and a single try block. However, it is possible to use any number\
+    \ of catch blocks for a single try block. When an exception has occurred within\
+    \ the protected code, it will be thrown to the first catch block. If the exception's\
+    \ data type matches ExceptionType, then it will be caught there. If this doesn't\
+    \ occur, the exception will be thrown to the second catch block. This will continue\
+    \ for all the catch blocks in the code. If the exception is not caught, the method\
+    \ will halt the execution.\n\nThe following is an example of a code that shows\
+    \ how to use multiple catch statements:\n\n```\ntry {\n  f = new FileInputStream(file_Name);\n\
+    \  x = (byte) f.read();\n} catch (IOException io) {\n  io.printStackTrace();\n\
+    \  return -1;\n} catch (FileNotFoundException ex) // Not valid! {\n  ex.printStackTrace();\n\
+    \  return -1;\n}\n```\n\n# Throw/Throws Keywords"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: "For a method that doesn't handle a checked exception, it must declare by use\
+    \ of the **throws keyword**. This keyword should be added to the end of the signature\
+    \ of the method.\n\nIt is possible to throw an exception, which can be newly instantiated\
+    \ or the one that you have just caught by use of the throw keyword.\n\nIt will\
+    \ be important to know and mark the difference between the **throw** and **throws\
+    \ keywords**. We use **throws keyword** to postpone the handling of an already\
+    \ checked exception while the **throw keyword** is used for explicitly invoking\
+    \ an exception.\n\nHere is an example:\n\n```\nimport java.io.*;\npublic class\
+    \ ExceptionTest {\n    public void save(double val) throws RemoteException {\n\
+    \        // Implement the method\n        throw new RemoteException();\n    }\n\
+    \    // The rest of class definition\n}\n```\n\nIn the above example, we have\
+    \ the method save() which has declared that it **throws a RemoteException**. It\
+    \ is possible for one method to declare that it will **throw** many exceptions,\
+    \ in which you should use commas (,) to separate the exceptions.\n\nConsider the\
+    \ following example that shows how to implement this:\n\n```\nimport java.io.*;\n\
+    public class ExceptionTest {\n    public void save(double val) throws RemoteException,\
+    \ InadequateFundsException {\n        // Implement the method\n    }\n    // The\
+    \ rest of class definition\n}\n```"
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "# Finally Statement\n\nThe **finally** block comes after the **try** or **catch**\
+    \ block. This block will always be executed, regardless of whether or the exception\
+    \ occurred. The final statement provides you with a good way of running your cleanup-type\
+    \ statements you need to be executed regardless of what happens inside your protected\
+    \ code. It should be added at the end of the **catch blocks** as showed in the\
+    \ following syntax:\n\n```\ntry {\n //The protected code\n} catch (Exception1\
+    \ ex1) {\n // A Catch block\n} catch (ExceptionType2 ex2) {\n} catch (ExceptionType3\
+    \ ex3) {\n // A Catch block\n} finally {\n // The finally block to always execute.\n\
+    }\n```\n\nThe following example shows this:\n\n```\npublic class ExceptionTest\
+    \ {\n public static void main(String[] args[]) {\n int x[] = new int[3];\n try\
+    \ {\n System.out.println(\"Access element four :\" + x[4]);\n} catch (ArrayIndexOutOfBoundsException\
+    \ ex) {\n System.out.println(\"Exception thrown :\" + ex);\n} finally {\n x[0]\
+    \ = 10;\n System.out.println(\"Element at index 0 is :\" + x[0]);\n System.out.println(\"\
+    The finally statement has been executed\");\n}\n}\n```\n\nThe code will return\
+    \ the following after execution:"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: "Exception thrown :java.lang.ArrayIndexOutOfBoundsException: 4\nElement at index\
+    \ 0 : 10\nThe finally statement has been executed\n\nNote that java does not allow\
+    \ you to use a catch clause without the try clause. You don't have to add the\
+    \ finally clause to your try/catch block. And, you cannot use the try clause without\
+    \ either the catch clause or the finally clause.\n\n# Try-with-resources\n\nAfter\
+    \ using resources like connections, streams, and others, we have to close them\
+    \ explicitly by using the finally clause. Let us show how you can open a file\
+    \ using the FileReader class and close the file using the finally clause:\n\n\
+    ```\nimport java.io.File;\nimport java.io.IOException;\nimport java.io.FileReader;\n\
+    \npublic class ReadadClose {\n    public static void main(String[] args[]) {\n\
+    \        FileReader fr = null;\n        try {\n            File f = new File(\"\
+    colleagues.txt\");\n            fr = new FileReader(f); char[] c = new char[50];\n\
+    \            fr.read(c); // reads the content to the array\n            for(char\
+    \ c : c) \n                System.out.print(ch); // prints the characters by one\
+    \ one\n        } catch (IOException ex) {\n            ex.printStackTrace();\n\
+    \        } finally {\n            try {\n                fr.close();\n       \
+    \     } catch (IOException ex) {\n                ex.printStackTrace();\n    \
+    \        }\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: 'The try-with-resources is a new way of handling exceptions in java and it automatically
+    closes the resources that have been used within the try and catch block. To use
+    the statement sets the resources that are required within parenthesis and the
+    resources will be closed automatically at the end of the block. It takes the syntax
+    given below:
+
+
+    ```
+
+    FileReader fr = new FileReader("path to the file") {
+
+    // the resource
+
+    } catch (e) {
+
+    // catch body
+
+    }
+
+    ```
+
+
+    Let us show how to use this statement to read data from a file:
+
+
+    ```
+
+    import java.io.FileReader;
+
+    import java.io.IOException;
+
+
+    public class TrywithResources {
+
+
+    public static void main(String args[]) {
+
+    try(FileReader fr = new FileReader("colleagues.txt
+
+    ```
+
+
+    For a class to use the try-with-resources statement, it must implement an AutoCloseable
+    interface and close() method which will be invoked automatically at run-time.
+    Java also allows you to have multiple classes within a try-with-resources statement.
+    If you do this, the classes will have to be declared using a reverse order. The
+    resource you declare in the try block will be instantiated before the beginning
+    of try-block. Other than the'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: "resources you declare within parenthesis, everything is similar to what we\
+    \ have in a normal try/catch block. Any resource that you declare in the try will\
+    \ be instantiated before the beginning of the try-catch block. Any resource declared\
+    \ within the try block will be implicitly declared as final.\n\n# User-defined\
+    \ Exceptions\n\nJava allows you to create your own exceptions. However, any exception\
+    \ that you create should be a child of Throwableable. Anytime you need to create\
+    \ a checked exception to be automatically enforced by the Handle or set the rule,\
+    \ you should extend the Exception class.\n\nTo create our user-defined exceptions,\
+    \ we use the following syntax:\n\n```\nclass NewException extends Exception {\n\
+    }\n```\n\nThe above syntax shows that you are only required to extend the Exception\
+    \ class which is predefined so to create your own exception. These are referred\
+    \ to as checked exceptions. Let us show how to create one in Java:\n\n```\nimport\
+    \ java.io.*;\n\npublic class InadequateFundsException extends Exception {\n  \
+    \  private double deposit;\n\npublic InadequateFundsException(double deposit)\
+    \ {\n    this.deposit = deposit;\n}\n\npublic double getDeposit() {\n    return\
+    \ deposit;\n}\n}\n```\n\nNow that we have defined the above exception, let us\
+    \ demonstrate how we can use it by writing an example:\n\n```\nimport java.io.*;\n\
+    ```"
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: "```\npublic class AccountCheck {\n    private double account_balance;\n   \
+    \ private int number;\n\n    public AccountCheck(int number) {\n        this.number\
+    \ = number;\n    }\n\n    public void save(double deposit) {\n        account_balance\
+    \ += deposit;\n    }\n\n    public void withdraw(double deposit) throws InadequateFundsException\
+    \ {\n        if(deposit <= account_balance) {\n            account_balance = deposit;\n\
+    \        } else {\n            double needs = deposit - account_balance;\n   \
+    \         throw new InadequateFundsException(needs);\n        }\n    }\n\n   \
+    \ public double getAccountBalance() {\n        return account_balance;\n    }\n\
+    \n    public int getNumber() {\n        return number;\n    }\n}\n```\n\nLet us\
+    \ show how we can invoke the save() and withdraw() methods of the AccountCheck\
+    \ class:\n\n```\npublic class BankExample {\n    public static void main(String\
+    \ [] args) {\n        AccountCheck c = new AccountCheck(101);\n        System.out.println(\"\
+    Depositing $1000...\");\n        c.save(1000.00);\n\n        try {\n         \
+    \   System.out.println(\"nWithdrawing $200...\");\n            c.withdraw(200.00);\n\
+    \            System.out.println(\"nWithdrawing $1100...\");\n            c.withdraw(1100.00);\n\
+    \        } catch (inadequateFundsException ex) {\n```"
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '```
+
+    System.out.println("Sorry, your account is short $\$" + ex.getDeposit());
+
+    ex.printStackTrace();
+
+    }
+
+    }
+
+    ```
+
+
+    Compile all the classes and run them. The exception should be raised at last as
+    you will have withdrawn more from the account than what you have.'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# 18-Java AWT
+
+
+    AWT stands for Abstract Window kit is an API that we use to develop window-based
+    or GUI applications in Java. The components of Java AWT are platform-independent,
+    meaning that these components are displayed based on the operating system. This
+    API is heavyweight, meaning that its components use the resources of the operating
+    system.
+
+
+    The java.awt package comes with many classes for the AWT api like TextField, Label,单独,
+    CheckBox, TextArea, Choice, List. Let us discuss some of its important components:
+
+
+    +   - Container- this is an AWT component capable of holding components like textfields,
+    labels, buttons, textareas, etc. it is extended by classes such as Frame, Panel,
+    and Dialog.
+
+    - Window- this is a container with no menu bars and borders. To create a window,
+    use a dialog, a frame or another window.
+
+    - Panel- this is a container with no menu bars and title bar. You can add other
+    components like textfields and buttons to it.
+
+    - Frame- this is a container with a title bar and it may have menu bars. You can
+    add other components like textfields and buttons to it.
+
+
+    This class comes with differs methods, with the most important ones including
+    the following:'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: "• public void add(Component c)- this method adds a component to the component.\n\
+    \n• public void setState(int width, int height)- this method sets the measurements\
+    \ of the component, both the width and the height.\n\n• public void setLayout(LayoutManager\
+    \ m)- this method defines the layout manager of the component.\n\n• public void\
+    \ setVisible(boolean status)- this is the method we use to change the visibility\
+    \ of a component. It has a default setting of false.\n\nWe need to create an avwt\
+    \ frame. We need a frame for this. There are two ways through which we can create:\n\
+    \n+   By extending the Frame class (inheritance).\n\n+   By creating an object\
+    \ of the Frame class (association).\n\nLet us create our first example by inheriting\
+    \ the Frame class. We will add a button to the frame:\n\n```\nimport java.awt.*;\n\
+    public class MyGui extends Frame {\nMyGui() {\n    Button btn=new Button(`click\
+    \ Here`);\n    btn.setBounds(30,100,80,30);// set the button position\n    add(btn);//add\
+    \ the button to the frame\n    setSize(300,300);// set frame size, 300 width,\
+    \ 300 height\n    setLayout(null);//no layout manager\n    setVisible(true);//make\
+    \ the frame visible, by default it is not visible\n}\npublic static void main(String[]\
+    \ args[]) {\n    MyGui mg=new MyGui();\n}\n\n```\n\nThe code will return the following\
+    \ after execution:"
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: "![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_133_0.png)\n\nWe have used the'()\
+    \ method to set the position for our button.\n\nLet us now show how you can create\
+    \ awt by association:\n\n```\nimport java.awt.*;\npublic class MyGui {\n    Frame\
+    \ fr=new Frame();\n    Button btn=new Button(\"click Here\");\n    btn.setBounds(30,50,80,30);\n\
+    \    fr.add(btn);\n    fr.setSize(300,300);\n    fr.setLayout(null);\n    fr.setVisible(true);\n\
+    }\npublic static void main(String[] args[]) {\n    MyGui mg=new MyGui();\n}\n\
+    ```\n\nThe code should return the following graphical user interface:"
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_134_0.png)
+
+
+    # Handling Events
+
+
+    An event refers to the process of changing the state of an object. Examples of
+    events include a drag of the mouse button, a click of a button, etc. The Java
+    package named java.awt.event provides many listerner interfaces and event classes
+    for handling events.
+
+
+    To handle events, you must register the necessary component with the Listener.
+    If it is a button, for example, you want it to respond when clicked. In our previous
+    examples, the button will do nothing when clicked. To register the component with
+    the Listener, we normally call the actionListener method as shown below:
+
+
+    ```
+
+    public void addActionListener(ActionListener a){
+
+    }
+
+    ```
+
+
+    Now we have registered the component with the listener, we can add the event handling
+    code. Consider the example given below:
+
+
+    ```
+
+    import java.awt.*;
+
+    import java.awt.event.*;
+
+    class MyEvent extends Frame implements ActionListener{
+
+    TextField txtf;
+
+    ```'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: "```\nMyEvent(){\n//create the components\ntxtf=new TextField();\ntxtf.setBounds(60,50,170,20);\n\
+    Button btn=new Button('click Here');\nbtn.setBounds(100,120,80,30);\n\n//register\
+    \ the button with listener\nbtn.addActionListener(this);//passing the current\
+    \ instance\n\n//add the components then set their size, layout and visibility\n\
+    add(txtf);\nadd(btn);\nsetSize(300,300);\nsetLayout(null);\nsetVisible(true);\n\
+    }\n\n    public void actionPerformed(ActionEvent event) {\n    txtf.setText('This\
+    \ is a message');\n}\n\n    public static void main(String[] args) {\n    new\
+    \ MyEvent();\n}\n}\n```\n\nOnce you execute the code, you will get the following\
+    \ interface:\n\n![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_135_0.png)"
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: 'The interface consists of a textfield and a button. Click the button and see
+    what will happen. You will get the following:
+
+
+    ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_136_0.png)
+
+
+    When you click the button, some text is added to the textfield. The reason is
+    that we added the code to add that text to the textfield on a click of the button.
+    Let us see how we can handle events by an outer class:
+
+
+    Here is our first class, MyEvent2.java:
+
+
+    ```
+
+    import java.awt.*;
+
+    import java.awt.event.*;
+
+    class MyEvent2 extends Frame{
+
+    TextField txt;
+
+    MyEvent2(){
+
+    //create the components
+
+    txtf=new TextField();
+
+    txtf.setBounds(60,50,170,20);
+
+    Button btn=new Button(''click Here'');
+
+    btn.setBounds(100,120,80,30);
+
+    //register with listener
+
+    OuterClass oc=new OuterClass(this);
+
+    ```'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '```
+
+    btn.addActionListener(oc);//passing an instance of outer class
+
+    //add the components then the set the size, layout and visibility
+
+    add(btn);
+
+    add(txt);
+
+    setSize(300,300);
+
+    setLayout(null);
+
+    setVisible(true);
+
+    }
+
+    public static void main(String args[]){
+
+    new MyEvent2();
+
+    }
+
+    ```
+
+
+    Here is the second class, **OuterClass.java:**
+
+
+    ```
+
+    import java.awt.*;
+
+    public class OuterClass implements ActionListener
+
+    MyEvent2 mev;
+
+    OuterClass(MyEvent2 mev){
+
+    this.mev=mev;
+
+    }
+
+    public void actionPerformed(ActionEvent ev){
+
+    mev.txt.setText("This is a message");
+
+    }
+
+    public static void main(String args[]){
+
+    new MyEvent2();
+
+    }
+
+    ```
+
+
+    Compile the first class, then compile and execute the second class. It will run
+    as our previous example.
+
+
+    We can also handle events by using an anonymous class. Let us show this using
+    an example:
+
+
+    ```
+
+    import java.awt.*;
+
+    import java.awt.event.*;
+
+    class MyEvent3 extends Frame{
+
+    TextField txt;
+
+    MyEvent3({
+
+    txtf=new TextField();
+
+    txtf.setBounds(60,50,170,20);
+
+    Button btn=new Button(\''click Here\'');
+
+    btn.setBounds(50,120,80,30);
+
+    }
+
+    btn.addActionListener(new ActionListener({
+
+    public void actionPerformed()
+
+    ```'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '```
+
+    txtf.setText("This is a message");
+
+    }
+
+    );
+
+    add(btn);
+
+    add(txtf);
+
+    setSize(300,200);
+
+    setLayout(null);
+
+    setVisible(true);
+
+    }
+
+    public static void main(String[] args){
+
+    new MyEvent3();
+
+    }
+
+    }
+
+    ```
+
+
+    # AWT Button
+
+
+    We use the Button class to create a button with a label and this can be implemented
+    on any platform. Action can also be added so that the button does something when
+    clicked. The following shows how to use this class to create a button:
+
+
+    ```
+
+    import java.awt.*;
+
+    public class MyButton {
+
+    public static void main(String[] args) {
+
+    Frame fr=new Frame("My Button");
+
+    Button btn=new Button("Click Here");
+
+    btn.setBounds(50,100,80,30);
+
+    fr.add(btn);
+
+    fr.setSize(300,400);
+
+    fr.setLayout(null);
+
+    fr.setVisible(true);
+
+    }
+
+    ```
+
+
+    The code will return the following upon execution:'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: "![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_139_0.png)\n\nWe can add the ActionListener\
+    \ to the button as follows:\n\n```\nimport java.awt.*;\nimport java.awt.event.*;\n\
+    public class MyButton {\npublic static void main(String[] args) {\n    Frame fr=new\
+    \ Frame('My Button');\n    final TextField txtf=new TextField();\n    txtf.setBounds(50,50,150,20);\n\
+    \    Button btn=new Button('Click Here');\n    btn.setBounds(50,100,60,30);\n\
+    \    btn.addActionListener(new ActionListener(){\n        public void actionPerformed(ActionEvent\
+    \ ev) {\n            txtf.setText(\"This is a message\");\n        }\n    });\n\
+    fr.add(btn);\nfr.add(txtf);\nfr.setSize(400,400);\nfr.setLayout(null);\nfr.setVisible(true);\n\
+    }\n}\n```\n\nRun the code and click the button. The text will be shown in the\
+    \ text field."
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: "![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_140_0.png)\n\n# AWT Label\n\nThe label\
+    \ object provides us with a way of adding text to the container. We use it to\
+    \ display one line of text which is read-only. An application can edit this text\
+    \ but the user may not change it directly. The following example shows how to\
+    \ create a label in Java:\n\n```\nimport java.awt.*;\nclass MyLabel {\n    public\
+    \ static void main(String args[]){\n        Frame fr=new Frame(\"My Label\");\n\
+    \        Label lab1=new Label(\"Label 1\");\n        lab1.setBounds(50,100,100,30);\n\
+    \        lab2=new Label(\"Label 2\");\n        lab2.setBounds(50,150,100,30);\n\
+    \        fr.add(lab1);\n        fr.add(lab2);\n        fr.setSize(400,400);\n\
+    \        fr.setLayout(null);\n        fr.setVisible(true);\n    }\n}\n```\n\n\
+    The code should return the following interface when executed:"
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: "![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_141_0.png)\n\nIt is possible for us\
+    \ to add an action listener to a label. The following example shows this:\n\n\
+    ```\nimport java.awt.*;\nimport java.awt.event.*;\npublic class MyLabel extends\
+    \ Frame implements ActionListener {\nTextField txtf;\nLabel lbl;\nButton btn;\n\
+    MyLabel2(){\ntxtf=new TextField();\ntxtf.setBounds(50,50,150,20);\nlab=new Label();\n\
+    lab.setBounds(50,100,250,20);\nbtn=new Button(\"Find IP\");\nbtn.setBounds(50,150,60,30);\n\
+    btn.addActionListener(this);\nadd(btn);\nadd(txtf);\nadd(lbl);\nsetSize(400,400);\n\
+    setLayout(null);\nsetVisible(true);\n}\npublic void actionPerformed(ActionEvent\
+    \ ev) { \ntry{\nString host=txtf.getText();\nString ip=java.net.Inet.getHostByName(host).getHostAddress();\n\
+    lab.setText(\"IP of host is \"+ip);\n```"
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: "```\n}catch(Exception ex) {\n    System.out.println(ex);\n}\npublic static\
+    \ void main(String[] args) {\n    new MyLabel();\n}\n```\n\nRun the code then\
+    \ click the button. You should get both the name and the IP address of the current\
+    \ host, which is the host from which you are running the code:\n\n![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_142_0.png)\n\
+    \n# A W T TextField\n\nThis is a component that allows a single line of text with\
+    \ the text being editable. It is inherited from the *TComponent* class.\n\nIt\
+    \ can be created as shown below:\n\n```\nimport java.awt.*;\nclass MyTextField\
+    \ {\n```"
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: "```\npublic static void main(String args[]) {\n    Frame fr= new Frame(\"My\
+    \ TextField\");\n    TextField txtf1, txtf2;\n    txtf1=new TextField(\"Welcome\
+    \ to Java Programming\");\n    txtf1.setBounds(50,100,200,30);\n    txtf2=new\
+    \ TextField(\"Java is a great coding Language\");\n    txtf2.setBounds(50,150,200,30);\n\
+    \    fr.add(txtf1);\n    fr.add(txtf2);\n    fr.setSize(400,400);\n    fr.setVisible(true);\n\
+    }\n```\n\nThe code will return the result given below:\n\n![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_143_0.png)\n\
+    \nWe have created two text fields with some text on them. Try and you will find\
+    \ that the text on the text fields can be edited. It is possible for us to add\
+    \ an action listener to a **textField**.\n\nLet us demonstrate this using an example:\n\
+    \n```\nimport java.awt.*;\nimport java.awt.event.*;\npublic class MyTextField2\
+    \ extends ActionListener{\n```"
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '```
+
+    TextField txtf1,txtf2,txtf3;
+
+    Button btn1,btn2;
+
+    MyTextField2(){
+
+    txtf1=new TextField();
+
+    txtf1.setBounds(50,50,150,20);
+
+    txtf2=new TextField();
+
+    txtf2.setBounds(50,100,150,20);
+
+    txtf3=new TextField();
+
+    txtf3.setBounds(50,150,150,20);
+
+    txtf3.setEditable(false);
+
+    btn1=new Button("*+");
+
+    btn1.setBounds(50,200,50,50);
+
+    btn2=new Button("+*");
+
+    btn2.setBounds(120,200,50,50);
+
+    btn1.addActionListener(this);
+
+    btn2.addActionListener(this);
+
+    add(txtf1);
+
+    add(txtf2);
+
+    add(txtf3);
+
+    add(btn1);
+
+    add(btn2);
+
+    setSize(300,300);
+
+    setLayout(null);
+
+    setVisible(true);
+
+    public void void actionPerformed(ActionEvent ev) {
+
+    String s1=txtf1.getText();
+
+    String s2=txtf2.getText();
+
+    int x=Integer.parseInt(s1);
+
+    int y=Integer.parseInt(s2);
+
+    int z=0;
+
+    if(ev.getSource()==btn1){
+
+    z=x*y;
+
+    }else if(ev.getSource()==btn2){
+
+    z=x+y;
+
+    }
+
+    String result=String.valueOf(z);
+
+    txtf3.setText(result);
+
+    }
+
+    public static void main(String[] args) {
+
+    new MyTextField2();
+
+    }
+
+    ```
+
+
+    The code will return the following interface after execution:'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_145_0.png)
+
+
+    An interface is a simple form of a calculator. You can enter numerical values
+    in the first two text fields then choose the operation you need to perform the
+    values from the two buttons at the bottom. In my case, I have entered 4 and 8.
+    When I click the * button, I get the following result:
+
+
+    ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_145_1.png)
+
+
+    When I click the + button, I get the following output:'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: "![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_146_0.png)\n\nWe have successfully\
+    \ added the action listener to the text field.\n\n# A W T TextArea\n\nThis is\
+    \ a multi-line text field used for displaying text. With this, the user may edit\
+    \ the text. It is inherited from the TextComponent class.\n\nIt can be created\
+    \ as showed below:\n\n```\nimport java.awt.*;\npublic class MyTextArea {\n   \
+    \ MyTextArea(){\n        Frame fr=new Frame();\n        TextArea ar=new TextArea(\"\
+    Welcome to Java programming\");\n        fr.setBounds(10,30,300,300);\n      \
+    \  fr.add(ar);\n        fr.setSize(400,400);\n        fr.setLayout(null);\n  \
+    \      fr.setVisible(true);\n    }\n    public static void main(String args[])\
+    \ {\n        new MyTextArea();\n    }\n}\n```\n\nThe code will return the result\
+    \ given below after execution:"
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_147_0.png)
+
+
+    It comes with the text, we added to it within the code. However, it is possible
+    for you to edit this text to what you want to have. We can also add an action
+    listener to the text area. Let us show this:
+
+
+    ```
+
+    import java.awt.*;
+
+    import java.awt.event.*;
+
+    public class MyTextArea2 extends ActionListener {
+
+    Label lab1,lab2;
+
+    TextArea area;
+
+    Button btn;
+
+    MyTextArea2(){
+
+    lab1=new Label();
+
+    lab1.setBounds(50,50,100,30);
+
+    lab2=new Label();
+
+    lab2.setBounds(160,50,100,30);
+
+    area=new TextArea();
+
+    area.setBounds(20,100,300,300);
+
+    btn=new Button("Count Words");
+
+    btn.setBounds(100,100,100,30);
+
+    btn.addActionListener(this);
+
+    add(lab1);
+
+    add(lab2);
+
+    add(area);
+
+    add(btn);
+
+    setSize(400,450);
+
+    setLayout(null);
+
+    setVisible(true);
+
+    }
+
+    public void actionPerformed(ActionEvent ev) {
+
+    String txt=area.getText();
+
+    String words[]=txt.split("\s");
+
+    ```'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: "```\nlab1.setText(\"Total words: \"+words.length);\nlab2.setText(\"Characters:\
+    \ \"+txt.length());\npublic static void main(String[] args) {\n    new MyTextArea2();\n\
+    }\n```\n\nRun the code and enter some text in the text area. After that, click\
+    \ the Count Words button and see what happens. You will get:\n\n![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_148_0.png)\n\
+    \nWe have successfully added an action listener to the button.\n\n# A W T C h\
+    \ e c b o x\n\nTo create a checkbox in Java, we use the CheckBox class. The checkbox\
+    \ is used for turning an option to on (true) or off (false). When the checkbox\
+    \ is"
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: "clicked, its state is changed to either on or off depending on its current\
+    \ state.\nHere is an example:\n\n```\nimport java.awt.*;\npublic class MyCheckbox\
+    \ {\n    Frame fr = new Frame(\"My Checkbox\");\n    Checkbox cb1 = new Checkbox(\"\
+    Yes\");\n    cb1.setBounds(100,100,50,50);\n    Checkbox cb2 = new Checkbox(\"\
+    No\", true);\n    cb2.setBounds(100,150,50,50);\n    fr.add(cb1);\n    fr.add(cb2);\n\
+    \    fr.setSize(450,450);\n    fr.setLayout(null);\n    fr.setVisible(true);\n\
+    }\n    public static void main(String args[]) {\n    new MyCheckbox();\n}\n```\n\
+    \nThe code will return the following result once executed:\n\n![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_149_0.png)\n\
+    \nWe can add an ItemListener to the checkbox as shown below:\n\n```\nMyCheckbox2()\
+    \ {\n    Frame fr = new Frame(\"My Checkbox\");\n    final Label lab = new Label();\n\
+    \    lab.setAlignment(Label.CENTER);\n    lab.setSize(400,100);\n    Checkbox\
+    \ cb1 = new Checkbox(\"yes\");\n```"
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: "```\ncb1.setBounds(100,100,50,50);\nCheckbox cb2 = new Checkbox(\"No\");\n\
+    cb2.setBounds(100,150,50,50);\nfr.add(cb1);\nfr.add(cb2);\nfr.add(lab);\nc1.addItemListener(new\
+    \ ItemListener() {\n    public void itemChanged(ItemEvent ev) {\n        lab.setText(\"\
+    Yes Checkbox: \" + (ev.getStateChange()==1? \"checked\":\"unchecked\"));\n   \
+    \ }\n});\ncb2.addItemListener(new ItemListener() {\n    public void itemChanged(ItemEvent\
+    \ ev) {\n        lab.setText(\"No Checkbox: \" + (ev.getStateChange()==1? \"checked\"\
+    :\"unchecked\"));\n    }\n});\nfr.setSize(400,400);\nfr.setLayout(null);\nfr.setVisible(true);\n\
+    public static void main(String[] args) {\n    new MyCheckbox2();\n}\n```\n\nRun\
+    \ the code and you will get an interface with Yes and No checkboxes.\n\nTry to\
+    \ check and uncheck the different textboxes and see the text you will get on the\
+    \ label:"
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: "![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_151_0.png)\n\n# # AWT CheckboxGroup\n\
+    \nWe usually create an object of the CheckboxGroup class to help us in grouping\
+    \ many checkboxes together. It is inherited from the object class. Only one checkbox\
+    \ should be in “on” state per group with the rest of checkboxes in the group being\
+    \ in “off” state. Here is an example:\n\n```\nimport java.awt.*;\npublic class\
+    \ MyCheckboxGroup\n{\n    Frame fr = new Frame('My Checkbox');\n    CheckboxGroup\
+    \ cg = new CheckboxGroup();\n    Checkbox cb1 = new Checkbox(\"yes\", cg, false);\n\
+    \    cb1.setBounds(100,100, 50,50);\n    Checkbox cb2 = new Checkbox(\"No\", cg,\
+    \ true);\n    cb2.setBounds(100,150, 50,50);\n    fr.add(cb1);\n    fr.add(cb2);\n\
+    \    fr.setSize(400,400);\n    fr.setLayout(null);\n```"
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: "```\nfr.setVisible(true);\n}\npublic static void main(String args[])\n{\n \
+    \   new MyCheckboxGroup();\n}\n}\n```\n\nThe code will return the following Gui:\n\
+    \n![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_152_0.png)\n\nYou will realize that\
+    \ only one checkbox can be checked per time. We can also add an ItemListener to\
+    \ the CheckboxGroup. The following example shows this:\n\n```\nimport java.awt.*;\n\
+    import java.awt.event.*;\npublic class MyCheckbox2\nimport java.awt.*;\nimport\
+    \ java.awt.event.*;\npublic class MyCheckbox2\n```\n\n```\nMyCheckbox2() {\nFrame\
+    \ fr=new Frame(\"My CheckboxGroup\");\nfinal Label lab = new Label();\nlab.setAlignment(Label.CENTER);\n\
+    lab.setSize(400,100);\nCheckboxGroup cg = new CheckboxGroup();\nCheckbox cb1 =\
+    \ new Checkbox(\"yes\", cg, false);\ncb1.setBounds(100,100,50,50);\n```"
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: "```\nCheckbox cb2 = new Checkbox(\"No\", false);\ncb2.setBounds(100,150, 50,50);\n\
+    fr.add(cb1);\nfr.add(cb2);\nfr.add(lab);\nfr.setSize(400,400);\nfr.setLayout(null);\n\
+    fr.setVisible(true);\ncb1.addItemListener(new ItemListener() {\n    public void\
+    \ itemStateChanged(ItemEvent event) {\n        lab.setText('Yes checkbox: Checked');\n\
+    \    }\n});\ncb2.addItemListener(new ItemListener() {\n    public void itemStateChanged(ItemEvent\
+    \ event) {\n        lab.setText('No checkbox: Checked');\n    }\n});\npublic static\
+    \ void main(String[] args[]) {\n    new MyCheckboxGroup2();\n}\n```\n\nRun the\
+    \ code and click any of the checkboxes. You will see some text on the label.\n\
+    \nThe text will change when you click another checkbox:"
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: '![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_154_0.png)
+
+
+    We have successfully added an ItemListener to the cheboxgroup.
+
+
+    # A W T Menu and MenuItem
+
+
+    These are used for adding menus and menu items to the menu. This can be explained
+    by creating an example:
+
+
+    ```
+
+    import java.awt.*;
+
+    class MyMenu{
+
+    MyMenu(){
+
+    Frame fr=new Frame("My Menu and MenuItem");
+
+    MenuBar mnb=new MenuBar();
+
+    Menu mnu=new Menu("File");
+
+    Menu smn=new Menu("Save");
+
+    MenuItem i11=new MenuItem("New");
+
+    MenuItem i2=new MenuItem("Copy");
+
+    MenuItem i3=new MenuItem("Cut");
+
+    MenuItem i4=new MenuItem("Save");
+
+    MenuItem i15=new MenuItem("Save As");
+
+    mnu.add(i1);
+
+    mnu.add(i2);
+
+    mnu.add(i3);
+
+    smn.add(i4);
+
+    } * *
+
+    ```'
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: '```
+
+    smn.add(5);
+
+    mn.add(smn);
+
+    mnb.add(mn);
+
+    fr.setMenuBar(mnb);
+
+    fr.setSize(400,400);
+
+    fr.setLayout(null);
+
+    fr.setVisible(true);
+
+    }
+
+    public static void main(String args[])
+
+    {
+
+    new MyMenu();
+
+    }
+
+    ```
+
+
+    Run the code and you will get a window. Click the File menu at the top left corner
+    of the window. You will see several menu items under it. Click the Save option
+    and the submenus added to it:
+
+
+    ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_155_0.png)
+
+
+    # KeyListener Interface
+
+
+    The KeyListener will be notified after you have changed the state of the key.
+    The notification is done against the KeyEvent. You can find the KeyListener listener
+    in java.awt.event package.'
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: 'The KeyListener interface has three important methods which include:
+
+
+    +   - public abstract void keyPressed(KeyEvent ev);
+
+    - public abstract void keyReleased(KeyEvent ev);
+
+    - public abstract void keyTaped(KeyEvent ev);
+
+
+    Consider the example given below:
+
+
+    ```
+
+    import java.awt.*;
+
+    import java.awt.event.*;
+
+    public class MyKeyListener extends implements KeyListener {
+
+    Label lab;
+
+    TextArea area;
+
+    MyKeyListener() {
+
+    nlab=new Label();
+
+    lab.setBounds(20,50,100,20);
+
+    area=new TextArea();
+
+    area.setBounds(20,80,300,300);
+
+    area.addKeyListener(this);
+
+
+    add(lab);
+
+    add(area);
+
+    setSize(400,400);
+
+    setLayout(null);
+
+    setVisible(true);
+
+    }
+
+
+    public void keyPressed(KeyEvent ev) {
+
+    lab.setText("Key Pressed!");
+
+    }
+
+    public void keyReleased(KeyEvent ev) {
+
+    lab.setText("Key Released!");
+
+    }
+
+    public void keyTaped(KeyEvent ev) {
+
+    lab.setText("Key Taped!");
+
+    }
+
+
+    public static void main(String[] args) {
+
+    new MyKeyListener();
+
+    }
+
+    ```
+
+
+    Execute the code and try to type something with the textarea provided for you.
+    You will see the text on the label change based on your action on the'
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: 'keyboard.
+
+
+    ![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_157_0.png)'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: '# Conclusion
+
+
+    This marks the end of this book. Java is a coding language. It is popular for
+    being one of the wide programming languages. A lot can be achieved with Java.
+    It is good for the development of desktop applications, commonly referred to as
+    standalone applications. It can be added/embedded on web pages. It is easy to
+    learn Java, especially with a background in object-oriented programming. Java
+    supports features of object-oriented programming, encapsulation, etc. To code
+    in Java, you need the Java compiler. This tells you Java is compiled, not interpreted.
+    The compiler is installed automatically after installing JDK (Java Development
+    Kit).
+
+
+    The JDK is open-source software, so get it for free and install it on your computer.
+    A text editor is needed, which is where you will write your Java code. Examples
+    include NetBeans, Notepad, Eclipse, etc. With those, you can write your Java codes
+    and run them from the console/terminal of your OS. You invoke the java compiler
+    (javac) to compile the code and generate a .class file, then execute the .class
+    file. The .class file has byte-code, which is platform-independent, it can be
+    run on any platform, example, Unix, Windows, Mac OS, Solaris, etc.'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: '# ABOUT THE AUTHOR
+
+
+    Daniel Bell was born in the Bronx, New York. When he was nine, he moved with his
+    father Guy Bell to Nice in France. He received his Ph.D. degree in computer science
+    from the University of Nice (France) in 2012. Daniel is conducting research in
+    data management, with an emphasis on topics related to Big Data and data sharing,
+    such as probabilistic data, data pricing, parallel data processing, data security.
+    He spends his free time writing books on computer programming and data science,
+    to help the absolute beginners in computer programming to code easily. He lives
+    in Chatillon, near Paris.'
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: '# # Acknowledgments
+
+
+    Foremost, I would like to express my sincere gratitude to my family, my wife Genevieve
+    and my son Adan for the continuous support in my everyday life, for their patience,
+    motivation, enthusiasm. Besides my family, I would like to thank my friends and
+    colleagues: Prof. Jule Villepreux, Hugo D. and Dr. James Rivera, for their encouragement,
+    insightful comments, and hard questions. I thank my fellow labmates: Gang Yu,
+    Ting Fan, Djibrilla Diallo, Juan Sanchez, for the stimulating discussions, for
+    the sleepless nights we were working together before deadlines, and for all the
+    fun we have had. Last but not least, I would like to thank my parents Guy Bell
+    and Ezra Bell, for giving birth to me at the first place and supporting me spiritually
+    throughout my life'
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: '![](img/ea1f2ffaf9eb812ac57c6338a9bb324a_161_0.png)
+
+
+    www.guzzlermedia.com'
+  merge: -1
+  pgno: 161
