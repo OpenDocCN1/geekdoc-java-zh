@@ -1,0 +1,3624 @@
+- img_proc: true
+  md: '# # JAVA WEB SCRAPING HANDBOOK
+
+
+    Learn advanced Web Scraping techniques
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_0_0.png)
+
+
+    Kevin Sahin'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Java Web Scraping Handbook
+
+
+    Kevin Sahin
+
+
+    This book is for sale at http://leanpub.com/webscrapinghandbook
+
+
+    This version was published on 2018-07-26
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_1_0.png)
+
+
+    This is a Leanpub book. Leanpub empowers authors and publishers with the Lean
+    Publishing process. Lean Publishing is the act of publishing an in-progress ebook
+    using lightweight tools and many iterations to get reader feedback, pivot until
+    you have the right book and build traction once you do.
+
+
+    © 2016 - 2018 Kevin Sahin'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: "# Contents\n\n+   Introduction to Web scraping .................................................................................................................................................................\
+    \ . . . . . . . . . . . 1\n  Web Scraping VS APIs .................................................................................................................................................................\
+    \ . . . . . . . . . . . . . . . . . 1\n  Web scraping use cases .................................................................................................................................................................\
+    \ . . . . . . . . . . . . . . . . . . 3\n  What you will learn in this book .................................................................................................................................................................\
+    \ . . . . . . . . . . . . . . . . 6\nWeb fundamentals .....................................................................................................................................................................................................................................................................\
+    \ 8\n  HyperText Transfer Protocol ....................................................................................................................................................................................................................................................................\
+    \ 8\n  HTML and the Document Object Model .................................................................................................................................................................................................................................................................\
+    \ . . . 11\n  Web extraction process .................................................................................................................................................................................................................................................................................\
+    \ . . . . . 17\n  Xpath ..........................................................................................................................................................................................................................................................................................................................................................................\
+    \ 18\n  Regular Expression ............................................................................................................................................................................................................................................................................................................................\
+    \ 23\nExtracting the data you want .................................................................................................................................................................................................................................................................................\
+    \ 26\n  Tools .................................................................................................................................................................................................................................................................................................................................................................\
+    \ . . . 26\n  Let’s scrape Hacker News .................................................................................................................................................................................................................................................................................\
+    \ . . . . 27\n  Go further ..........................................................................................................................................................................................................................................................................................................................................................................\
+    \ 33\nHandling forms .................................................................................................................................................................................................................................................................................................\
+    \ 34\n  Form Theory .................................................................................................................................................................................................................................................................................................................................................................\
+    \ . . . . . . . 35\n  Case study: Hacker News authentication ....................................................................................................................................................................................................................................................................\
+    \ 47\n  File Upload ..........................................................................................................................................................................................................................................................................................................................................................................\
+    \ 50\n  Other forms .................................................................................................................................................................................................................................................................................................................................................................................\
+    \ . . . 52\nDealing with Javascript ............................................................................................................................................................................................................................................................................................\
+    \ 56\n  Javascript 101 .................................................................................................................................................................................................................................................................................................................\
+    \ 56\n  Headless Chrome ..........................................................................................................................................................................................................................................................................................................................................................................\
+    \ 61"
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   Selenium API .................................................................
+    . . . . . . . . . . . . . . . . . . . . 66
+
+
+    +   Infinite scroll . . . . . . . . . . . . . . . . . . . . . . . . . 67
+
+
+    +   Captcha solving, PDF parsing, and OCR ........................................................
+    77
+
+
+    +   Captcha solving . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+
+
+    +   PDF parsing . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+
+
+    +   Optical Caracter Recognition .................................................................
+    . . . . 90
+
+
+    +   Stay under cover . . . . . ...................................................................................
+    94
+
+
+    +   Headers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
+
+
+    +   Proxies . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+
+
+    +   TOR: The Onion Router ......................................................................................
+    98
+
+
+    +   Tips . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    100
+
+
+    +   Cloud scraping ...................................................................................................
+    102
+
+
+    +   Serverless .......................................................................................................
+    102
+
+
+    +   Deploying an Azure function ..........................................................................
+    103
+
+
+    +   Conclusion .......................................................................................................
+    110'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Introduction to Web scraping
+
+
+    Web scraping or crawling is the act of fetching data from a third party website
+    by downloading and parsing the HTML code to extract the data. It can be done manually,
+    but generally this term refers to the automated process of downloading the HTML
+    content of a page, parsing/extracting the data, and saving it into a database
+    for further analysis or use.
+
+
+    # Web Scraping VS APIs
+
+
+    When a website wants to expose data/features to the developper community, they
+    will generally build an API(Application Programming Interface¹). The API consists
+    of a set of HTTP requests, and generally responds with JSON or XML format. For
+    example, let''s say you want to know the real time price of the Ethereum cryptocurrency
+    in your code. There is no need to scrape a website to fetch this information since
+    there are lots of APIs that can give you a well formatted data :
+
+
+    ```
+
+    curl https://api.coinmarketcap.com/v1/ticker/ethereum/?convert=EUR
+
+    ```
+
+
+    and the response :
+
+
+    > ¹https://en.wikipedia.org/wiki/Application_programming_interface'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "Introduction to Web Scraping\n\n# Coinmarketcap JSON response\n\n```\n{\n \
+    \ id: \"ethereum\",\n  name: \"Ethereum\",\n  symbol: \"ETH\",\n  rank: \"2\"\
+    ,\n  price_usd: \"414.447\",\n  price_btc: \"0.0507206\",\n  24h_volume_usd: \"\
+    1679960000.0\",\n  market_cap_usd: \"39748509988.0\",\n  available_supply: \"\
+    95907342.0\",\n  total_supply: \"95907342.0\",\n  max_supply: null,\n  percent_change_1h:\
+    \ \"0.64\",\n  percent_change_24h: \"13.38\",\n  percent_change_7d: \"25.56\"\
+    ,\n  last_updated: \"1511456952\",\n  price_eur: \"349.84756557\",\n  24h_volume_eur:\
+    \ \"1418106314.76\",\n  market_cap_eur: \"33552949485.0\"\n}\n```\n\nWe could\
+    \ also imagine that an E-commerce website has an API that lists every product\
+    \ through this endpoint:\n\n```\ncurl https://api.e-commerce.com/products\n```\n\
+    \nIt could also expose a product detail (with “123” as id) through :\n\n```\n\
+    curl https://api.e-commerce.com/products/123\n```\n\nSince not every website offers\
+    \ a clean API, or an API at all, web scraping can be the only solution when it\
+    \ comes to extracting website informations."
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Introduction to Web scraping
+
+
+    > > [!INFO](image_url)
+
+    >APIs are generally easier to use, the problem is that lots of websites don''t
+    offer any API. Building an API can be a huge cost for companies, you have to ship
+    it, test it, handle versioning, create the documentation, there are infrastructure
+    costs, engineering costs etc. The second issue with APIs is that sometimes there
+    are rate limits (you are only allowed to call a certain endpoint X times per day/hour),
+    and the third issue is that the data can be incomplete.
+
+
+    # Web scraping use cases
+
+
+    Almost everything can be extracted from HTML, the only information that is “difficult”
+    to extract is inside images or other medias. Here are some industries where webing
+    is being used :
+
+
+    +   - News portals : to aggregate articles from different datasources : Reddit
+    / Forums / Twitter / specific news websites
+
+    - Real Estate Agencies.
+
+    - Search Engine
+
+    - The travel industry (flight/hotels prices comparators)
+
+    - E-commerce, to monitor competitor prices
+
+    - Banks : bank account aggregation (like Mint and other similar apps)
+
+    - Journalism : also called “Data-journalism”
+
+    - SEO
+
+    - Data analysis
+
+    - “Data-driven” online marketing
+
+    - Market research
+
+    - Lead generation ...'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Introduction to Web scraping
+
+
+    As you can see, there are many use cases to web scraping.
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_7_0.png)
+
+
+    Mint.com is a personnal finance management service, it allows you to track the
+    bank accounts you have in a centralized way, and many different things. Mint.com
+    uses web scraping to perform bank account aggregation for its clients. It’s a
+    classic problem we discussed earlier, some banks have an API for this, others
+    do not. So when an API is not available, Mint.com is still able to extract the
+    bank account operations.
+
+
+    A client provides his bank account credentials (user ID and password), and Mint
+    robots use web scraping to do several things :
+
+
+    +   * Go to the banking website
+
+    * Fill the login form with the user’s credentials
+
+    * Go to the bank account overview
+
+    * For each bank account, extract all the bank account operations and save it intothe
+    Mint back-end.
+
+    * Logout
+
+
+    With this process, Mint is able to support any bank, regardless of the existence
+    of an API, and no matter what backend/frontend technology the bank uses. That’s
+    a good example of how useful and powerful web scraping is. The'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Introduction to Web scraping
+
+
+    drawback of course, is that each time a bank changes its website (even a simple
+    change in the HTML), the robots will have to be changed as well.
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_8_0.png)
+
+
+    # Parsely Dashboard
+
+
+    Parsely is a startup analytics for publishers. Its platform crawls the entire
+    publisher website to extract all posts (text, meta-data...) and perform Natural
+    Language Processing to categorize the key topics/metrics. It allows publishers
+    to understand what underlying topics the audience likes or dislikes.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '![](img/cbd5c820756a64b88207a1ea9f1c877b_9_0.png)
+
+
+    # Jobijoba meta-search engine
+
+
+    Jobijoba.com is a French/European startup running a plateform that aggregates
+    job listing from multiple job search engines like Monster, CareerBuilder and multiple
+    “local” job websites. The value proposition here is clear, there are hundreds
+    if not thousands of job plateforms, applicants need to create many profiles on
+    these websites for their job search and Jobijoba provides an easy way to visualize
+    everything in one place. This aggregation problem is common to lots of other industries,
+    as we saw before, Real-estate, Travel, News, Data-analysis...
+
+
+    > > As soon as an industry has a web presence and is really fragmented into tens
+    or hundreds of websites, there is an “aggregation opportunity” in it.
+
+
+    # What will you learn in this book
+
+
+    In 2017, web scraping is becoming more and more important, to deal with the huge
+    amount of data the web has to offer. In this book you will learn how'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'to collect data with web scraping, how to inspect websites with Chrome dev
+    tools, parse HTML and store the data. You will learn how to handle javascript
+    heavy websites, find hidden APIs, break captchas and how to avoid the classic
+    traps and anti-scraping techniques.
+
+
+    Learning web scraping can be challenging, this is why I aim at explaining just
+    enough theory to understand the concepts, and immediatly apply this theory with
+    practical and down to earth examples. We will focus on Java, but all the techniques
+    we will see can be implemented in many other languages, like Python, Javascript,
+    or Go.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Web fundamentals
+
+
+    The internet is **really complex** : there are many underlying technologies and
+    concepts involved to view a simple web page in your browser. I don''t have the
+    pretention to explain everything, but I will show you the most important things
+    you have to understand to extract data from the web.
+
+
+    # HyperText Transfer Protocol
+
+
+    From Wikipedia :
+
+
+    The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed,
+    collaborative, and hypermedia information systems.\[1] HTTP is the foundation
+    of data communication for the World Wide Web. Hypertext is structured text that
+    uses logical links (hyperlinks) between nodes containing text. HTTP is the protocol
+    to exchange or transfer hypertext.
+
+
+    So basically, as in many network protocols, HTTP uses a **client/server** model,
+    where an HTTP client (A browser, your Java program, curl, wget...) opens a connection
+    and sends a **message** (“I want to see that page : /product")to an HTTP server
+    (Nginx, Apache...). Then the server answers with a **response** (The HTML code
+    for example) and closes the connection. HTTP is called a **stateless** protocol,
+    because each transaction (request/response) is independent. FTP for example, is
+    **stateful**.
+
+
+    # Structure of HTTP request
+
+
+    When you type a website address in your browser, it sends and HTTP request like
+    this one :'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Web fundamentals
+
+
+    # Http request
+
+
+    ```
+
+    GET /how-to-log-in-to-almost-any-websites/ HTTP/1.1
+
+    Host: ksah.in
+
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/web\
+
+    /*;q=0.8
+
+    Accept-Encoding: gzip, deflate, sdch, br
+
+    Connection: keep-alive
+
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/
+
+    /537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+
+    ```
+
+
+    In the first line of this request, you can see the GET verb or method being used,
+    meaning we request data from the specific path: /how-to-log-in-to-almost-any-websites/
+    There are other HTTP verbs, you can see the full list here. Then you can see the
+    version of the HTTP protocol, in this book we will focus on HTTP 1. Note that
+    as of Q4 2017, only 20% of the top 10 million websites supports HTTP/2. And finally,
+    it is a key-value list called headers Here is the most important header fields
+    :
+
+
+    +   - Host The domain of the server, if no port number is given, is assumed to
+    be 80.
+
+    - User-Agent Contains information about the client originating the request, including
+    the OS information. In this case, it is my web-browser (Chrome), or OSX. This
+    header is important because it is used for statistics (How many users visit my
+    website on Mobile or Desktop) to prevent any violations by bots. Because these
+    headers are sent by the clients, it can be modified (it is called “Header Spoofing”),
+    and is exactly what we do with our scrapers, to make our scrapers look like a
+    normal web browser.
+
+    - Accept The content types that are acceptable as a response. There are lots of
+    different content types and sub-types: text/plain, text/html, image/jpeg, application/json
+    ...
+
+
+    > https://www.w3schools.com/tags/ref_httpmethods.asp'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# Web fundamentals\n\n+   - **Cookie**: name1=value1;name2=value2... This header\
+    \ field contains a list of name-value pairs. It is called session cookies, these\
+    \ are used to store data. Cookies are what websites use to authenticate users,\
+    \ and/or store data in your browser. For example, when you fill a login form,\
+    \ the server will check if the credentials you entered are correct, if so, it\
+    \ will redirect you inject a session cookie in your browser. Your browser will\
+    \ then send this cookie with every subsequent request to that server.\n- **Referer**:\
+    \ The Referer header contains the URL from which the actual URL has been requested.\
+    \ This header is important because websites use this header to change their behavior\
+    \ based on where the user came from. For example, lots of websites have a paying\
+    \ subscription and let you view 10% of a post, but if the user came from a news\
+    \ aggregator like Reddit, they let you view the full content. They use the referer\
+    \ to check that. Sometimes we will have to spoof this header to get to the content\
+    \ extract.\n\nThe and list goes on...you can find the full header list here³\n\
+    The server responds with a message like this :\n\n# Http response\n\n```\nHTTP/1.1\
+    \ 200 OK\nServer: nginx/1.4.6 (Ubuntu)\nContent-Type: text/html; charset=utf-8\n\
+    <!DOCTYPE html>\n<head>\n  <meta charset=\"utf-8\" />\n  .. [HTML CODE]\n```\n\
+    \nOn the first line, we have a new piece of information, the HTTP code 200 OK.\
+    \ It means the request has succeeded. As for the request headers, there are lots\
+    \ of HTTP codes, split in four common classes :\n\n> ³https://en.wikipedia.org/wiki/List_of_HTTP_header_fields"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '+   • 2XX : Successful, understood, and accepted requests
+
+    • 3XX : This class of status code requires the client to take action to fulfill
+    the request (iele generally request a new URL, found in the response header Location
+    )
+
+    • 4XX : Client Error : 400 Bad Request is due to a malformed syntax in the request,
+    403 Forbidden the server is refusing to fulfill the request, 404 Not Found The
+    most famous HTTP code, the server did not find the resource requested.
+
+    • 5XX : Server errors
+
+
+    Then, in case you are sending this HTTP request with your web browser, the browser
+    will parse the HTML code, fetch all the eventual assets (Javascript files, CSS
+    files, images...) and it will render the result into the main window.
+
+
+    # HTML and the Document Object Model
+
+
+    I am going to assume you already know HTML, so this is just a small reminder.
+
+
+    +   • HyperText Markup Language (HTML) is used to add “meaning” to raw content.
+
+    • Cascading Style Sheet (CSS) is used to format this marked up content.
+
+    • Javascript makes this thing interactive.
+
+
+    As you already know, a web page is a document containing text within tags, that
+    add meaning to the document by describing elements like titles, paragraphs, lists,
+    links etc. Let’s see a basic HTML page, to understand the Document Object Model
+    is.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# Web fundamentals\n\n# HTML page\n\n```\n<!doctype html>\n<html>\n<head>\n\
+    \  <meta charset=\"utf-8\">\n  <title>What is the DOM ?</title>\n</head>\n<body>\n\
+    \  <h1>DOM 101 is awome !</h1>\n  <p>Webscraping is my <a href=\"https://ksah.in\"\
+    >blog</a></p>\n</body>\n</html>\n```\n\nThis HTML code is basically HTML content\
+    \ encapsulated inside other HTML content. The HTML hierarchy can be viewed as\
+    \ a tree through the indentation in the HTML code. When your web browser parses\
+    \ this code, it will create a tree which is an object representation of the HTML\
+    \ document. It is called the Document Object Model. Below is the internal tree\
+    \ structure inside Chrome inspector :\n\n# DOM 101\n\nWebscraping is awesome !\n\
+    \nHere is my blog.\n\n| Elements | Console | Sources | Network | Performance |\
+    \ Memory | Application | Security | Audits | Adblock Plus | Adblock | Styles |\
+    \ Computed | Event Listeners | Properties |\n| --- | --- | --- | --- | --- | ---\
+    \ | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| <html> | | | | |\
+    \ | | | | | | | | | |\n| <head> | | | | | | | | | | | | | | |\n| <body> | | |\
+    \ | | | | | | | | | | | |\n| <h1> | DOM 101 is awome ! | | | | | | | | | | | |\
+    \ | |\n| <p> | Webscraping is my blog | | | | | | | | | | | | | |\n| </body> |\
+    \ | | | | | | | | | | | | | | |\n| </html> | | | | | | | | | | | | | | | |\n|\
+    \ > p |\n| > HTMLParagraphElement |\n| > HTMLElement |\n| > Element |\n| > Node\
+    \ |\n| > EventTarget |\n| > Object\n\n# Chrome Inspector\n\nOn the left we can\
+    \ see the HTML tree, and on the right we have the Javascript"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Web fundamentals
+
+
+    # 13
+
+
+    object representing the currently selected element (in this case, the <p> tag),
+    with all its attributes. And here is the tree structure for this HTML code :
+
+
+    > The important thing to remember is that the DOM you see in your browser, when
+    you right click + inspect can be really different from the actual HTML that was
+    sent. Maybe some Javascript code was executed and dynamically changed the DOM
+    ! For example, when you scroll on your twitter account, a request is sent by your
+    browser to fetch new tweets, and some Javascript code is dynamically adding those
+    new tweets to the DOM.
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_16_0.png)
+
+
+    # Dom Diagram
+
+
+    The root node of this tree is the <html> tag. It contains two children : <head>and
+    <body>. There are lots of node types in the DOM specification⁴ but here is the
+    most important one :
+
+
+    +   - ELEMENT_NODE the most important one, example: <html>, <body>, <a>, it can
+    have a child node.
+
+    - TEXT_NODE like the red ones in the diagram, it cannot have any child node.
+
+
+    ⁴https://www.w3.org/TR/dom/'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Web fundamentals
+
+
+    The Document Object Model provides a programmatic way (API) to add, remove, modify,
+    or attach any event to a HTML document using Javascript. The Node object has many
+    interesting properties and methods to do this, :
+
+
+    +   - Node.childNodes returns a list of all the children for this node.
+
+    - Node.Type returns an unsigned short representing the type of the node (1 for
+    ELEMENT_NODE, 3 for TEXT_NODE ...).
+
+    - Node.appendChild adds the child node argument to the last child of the current
+    node.
+
+    - Node.removeChild removes the child node argument from the current node.
+
+
+    You can see the full list here. Now let''s write some Javascript code to understand
+    all of this :
+
+
+    First let''s see how many child nodes our <head> element has, and show the list.
+    To do so, we will write some Javascript code inside the Chrome console. The document
+    object in Javascript is the owner of all other objects in the web page (including
+    every DOM nodes).
+
+    Want to make sure that we have two child nodes for our head element. It''s simple
+    :
+
+
+    How many child nodes?
+
+
+    ```
+
+    document.head.childNodes.length
+
+    ```
+
+
+    And then show the list :
+
+
+    > 5https://developer.mozilla.org/en-US/docs/Web/API/Node'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# head’s childnode list\n\n```\nfor (var i = 0; i < document.head.childNodes.length;\
+    \ i++) {\n  console.log(document.head.childNodes[i]);\n}\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# DOM 101\n\nWebscraping is awsome !\n\nHere is my blog.\n\n| Elements | Console\
+    \ | Sources | Network | Performance |\n|---|---|---|---|---||\n| top | | | | |\n\
+    \n+   document.head.childNodes.length\n5\nfor (var i = 0; i < document.head.childNodes.length;\
+    \ i++) {\n  console.log(document.head.childNodes[i]);\n}\n\n```\n#text\n<meta\
+    \ charset=\"utf-8\">\n#text\n<title>What is the DOM ?></title>\n#text\n```\n\n\
+    Javascript example\n\nWhat an an unexpected result ! It shows five nodes instead\
+    \ of the expected two."
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'Web fundamentals
+
+
+    17
+
+
+    We can see with for the loop that three text nodes were added. If you click on
+    the this text nodes in the console, you will see that the text content is either
+    a linebreak or tabulation (\n or \t ). In most browsers, a text node is created
+    for each whitespace outside an HTML tags.
+
+
+    > This is something really important to remember when you use the DOM API. So
+    the previous DOM diagram is not exactly true, in reality, there are lots of text
+    nodes containing whitespaces everywhere. I suggest you to read this article from
+    Mozilla : Whitespace in the DOM\6
+
+
+    In the next chapters, we will not use directly the Javascript API to manipulate
+    the DOM, but a similar API directly in Java. I think it is important to know how
+    things works in JavaScript before doing it with other languages.
+
+
+    # Web extraction process
+
+
+    In order to go to a URL in your code, fetch the HTML code and parse it to extract
+    the date we can use different things :
+
+
+    +   - Headless browser
+
+    - Do something "manually" : Use an HTTP library to perform the GET request, then
+    use a library like Jsoup7 to parse the HTML and extract the data you want
+
+
+    Each option has its pros and cons. A headless browser is like a normal browser,
+    without the Graphical User Interface. It is often used for QA reasons, to perform
+    automated testing on websites. There are lots of different headless browsers,
+    like Headless Chrome8, PhantomJS9, HtmlUnit10, we will see this
+
+
+    ^6https://developer.mozilla.org/en-US/Docs/Web/API/DOM_Object_Model/Whitespace_in_the_DOM
+
+
+    ^7https://jsoup.org/
+
+
+    ^8https://chromium.googlesource.com/chromium/src/+/kr/headless/README.md
+
+
+    ^9https://phantomjs.org/
+
+
+    ^10https://htmlunit.sourceforge.net/'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Web fundamentals 18
+
+
+    later. The good thing about a headless browser is that it can take care of lots
+    of things : Parsing the HTML, dealing with authentication cookies, fill in forms,
+    execute Javascript functions, access iFrames... The drawback is that there is
+    of course some overhead compared to using a plain HTTP library and a parsing library.
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_21_0.png)
+
+
+    In the next three sections we will see how to select and extract data inside HTML
+    pages, with XPath, CSS selectors and regular expressions.
+
+
+    # Xpaths
+
+
+    XPath is a technology that uses path expressions to select nodes or nodesets in
+    an XML document (or HTML document). As with the Document Object Model, XPath is
+    a W3C standard since 1999. Even if XPath is not a programming language in itself,
+    it allows you to write expression that can access directly to a specific node,
+    or a specific node set, without having to go through the entire HTML tree (or
+    XML tree).
+
+
+    Entire books has been written on XPath, and as I said before I don''t have the
+    pretension to explain everything in depth, this is an introduction to XPath and
+    we will see through real examples how you can use it for your web scraping needs.
+
+
+    We will use the following HTML document for the examples below:'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# HTML example\n\n```\n<!doctype html>\n<html>\n<head>\n  <meta charset=\"\
+    utf-8\">\n  <title>XPath 101</title>\n</head>\n<body>\n  <div class=\"product\"\
+    >\n    <header>\n      <hgroup>\n        <h1>Amazing product #1</h1>\n       \
+    \ <h3>The best product ever made</h4>\n      </hgroup>\n    </header>\n    <figure>\n\
+    \      <img src=\"http://lorempixel.com/400/200\">\n    </figure>\n    <section>\n\
+    \      <p>Text text</p>\n      <details>\n        <summary>Product Features</summary>\n\
+    \        <ul>\n        <li>Feature 1</li>\n        <li class=\"best-feature\"\
+    >Feature 2</li>\n        <li id=\"best-id\">Feature 3</li>\n        </ul>\n  \
+    \    </details>\n      <button>Buy Now</button>\n    </section>\n  </div>\n</body></html>\n\
+    ```"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '```
+
+    <div>
+
+    ```
+
+
+    ```
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    First let''s look at some Xpath vocabulary :
+
+
+    +   - In Xpath terminology, as with HTML, there are different types of nodes:
+    root nodes, element nodes, attribute nodes, and so called atomic values which
+    is a synonym for text nodes in an HTML document.
+
+    - Each element node have one parent. in this example, the section element is the
+    parent of p, details and button.
+
+    - Element nodes can have any number of children. In our example, li elements are
+    all children of the ul element.
+
+    - Siblings are nodes that have the same parents. p, details and button siblings.
+
+    - Ancestors a node''s parent and parent''s parent...
+
+    - Descendants a node''s children and children''s children...
+
+
+    # Xpath Syntax
+
+
+    There are different types of expressions to select a node in an HTML document,
+    here are the most important ones
+
+
+    | Ebay Expression | Description |
+
+    |---|---|
+
+    | nodename | This is the simplest one, it select all nodes with this nodename
+    |
+
+    | / | Selects from the root node (useful for writing absolute path) |
+
+    | // | Selects nodes from the current node that matches |
+
+    | . | Selects the current node |
+
+    | .. | Selects the current node''s parent |'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Web fundamentals
+
+
+    | | Expression | Description |
+
+    | @ | Selects attribute |
+
+    | * | Matches any node |
+
+    | //@ | Matches any attribute node |
+
+
+    You can also use predicates to find a node that contains a specific value. Predicate
+    are always in square brackets: [predicate] Here are some examples :
+
+
+    | | Expression | Description |
+
+    | //li[last()] | Selects the last li element |
+
+    | //div[@class=''product''] | Selects all div elements that have the class attribute
+    with the product value. |
+
+    | //li[3] | Selects the third li element (the index starts at 1) |
+
+    | //div[@class=''product''] | Selects all div elements that have the class attribute
+    with the product value. |
+
+
+    Now we will see some example of XPath expressions. We can test XPath expressions
+    inside Chrome Dev tools, so it is time to fire up Chrome. To do so, right click
+    on the web page -> inspect and then cmd + f on a Mac or ctrl + f on other systems,
+    you can enter an XPath expression, and the match will be highlighted in the Dev
+    tool.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# Amazing product #1\n\nThe best product ever made\n\n![](img/cbd5c820756a64b88207a1ea9f1c877b_25_0.png)\n\
+    \nText text text\n\n+   - Product Features\n- Feature 1\n- Feature 2\n- Feature\
+    \ 3\n\nBuy Now\n\n```\n<head>...</head>\n<body>\n  <div class=\"product\">\n \
+    \   <header>...</header>\n    <figure>\n      <img src=\"http://lorempxel.com/400/200\"\
+    >\n    </figure>\n    <section>\n      <p>Text text text</p>\n      <details open>\n\
+    \        <summary>Product Features</summary>\n        <ul>\n          <li>Feature\
+    \ 1</li>\n          <li>Feature 2</li>\n          <li>Feature 3</li>\n       \
+    \ </ul>\n      </details>\n    </section>\n  </div>\n  <button>Buy Now</button>\n\
+    </body>\nhtml body div.product section details ul ||\n```"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Web fundamentals
+
+
+    In the dev tools, you can right click on any DOM node, and show its full Xpath
+    expression, that you can later factorize. There is a lot that we could discuss
+    about XPath, but it is out of this book''s scope, I suggest you to read this great
+    W3School tutorial^11 if you want to learn more.
+
+
+    In the next chapter we will see how to use XPath expression inside our Java scraper
+    to select HTML nodes containing the data we want to extract.
+
+
+    # Regular Expression
+
+
+    A regular expression (RE, or Regex) is a search pattern for strings. With regex,
+    you can search for a particular character/word inside a bigger body of text. For
+    example you could identify all phone numbers inside a web page. You can also replace
+    items, for example you could replace uppercase tag in poorly formatted HTML by
+    lowercase ones. You can also validate some inputs ...
+
+
+    The pattern used by the regex is applied from left to right. Each source character
+    is only used once. For example, this regex :oco will match the string ococo only
+    once, because there is only one distinct sub-string that matches.
+
+
+    Here are some common matching symbols, quantifiers and meta-characters :
+
+
+    | Regex | Description |
+
+    | --- | --- |
+
+    | Hello World | Matches exactly "Hello World" Matches any character |
+
+    | [] Matches any character Matches a range of character within the brackets, for
+    example [a-h] matches any character between a and h. [1-5] matches any digit between
+    1 and 5 Negation of the pattern, matches any character except x or y or z |
+
+    | [^xyz | Matches zero or more of the preceding item |
+
+    | + | Matches one or more of the preceding item |
+
+
+    > ^11https://www.w3schools.com/xml/xpath_intro.asp'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Web fundamentals
+
+
+    | Regex | Description |
+
+    | --- | --- |
+
+    | ? | Matches zero or one of the preceding item |
+
+    | [x] | Matches exactly x of the preceding item |
+
+    | \d | Matches any digit |
+
+    | D | Matches any non digit |
+
+    | \s | Matches any whitespace character |
+
+    | S | Matches any non-whitespace character |
+
+    | (expression) | Capture the group matched inside the parenthesis |
+
+
+    You may be wondering why it is important to know about regular expressions when
+    doing web scraping? We saw before that we could select HTML nodes with the DOM
+    API, and Xpath, so why we would need regular expressions? In an ideal semantic
+    world¹², data is easily machine readable, the information is embedded inside relevant
+    HTML element, with meaningful attributes.
+
+
+    But the real world is messy, you will often find huge amounts of text inside a
+    p element. When you want to extract a specific data inside this huge text, for
+    example a price, a date, a name... you will have to use regular expressions.
+
+
+    For example, regular expression can be useful when you have this kind of data
+    :
+
+
+    ```
+
+    <p>Price : 19.99$</p>
+
+    ```
+
+
+    We could select this node with an Xpath expression, and then use this kind of
+    regex to extract the price :
+
+
+    ```
+
+    ^Price\s:\(\d+\.\d{2})\$
+
+    ```
+
+
+    This was a short introduction to the wonderful world of regular expressions, you
+    should now be able to understand this :
+
+
+    > ¹²https://en.wikipedia.org/wiki/Semantic_Web'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Web fundamentals
+
+
+    ```
+
+    (?::[a-z0-9!\$%&''*+\/\=?^_`\{\}\~]|+(?::[a-z0-9!\$%&''*+\/\=?^_`\{\}\~])*)*\/(
+
+    ?::[\x01]\n\x08\x09\x0b\x0e\x1f\x21\x23-\x25b\x5d-\x7f]|\[[\x01-\x09\x0b\x0e\x-\x7f])*@\)(?:?(?::[a-z0-9])?(?::[a-z0-9])?(?::[a-z0-9])?\?(?::[a-z0-9])*\[a-z0-9])?|\\[\?:?(?:25[0-5]|2[0-4][0-9]|1[?[0-9][0-9]?[0-9])(?:[01]?[0-9]))\)\{3}(?:25[0-5]|2[0-4][0-9]|1[?[0-9][0-9]?[0-9])(?:[01]?[0-9])?)?(?::[a-z0-9])*(?:\:\[[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x23\x53-\x7f])\\[[\x01-\x09\x0b\x0c\x0e-\x7f])+\\])
+
+    ```
+
+
+    I am kidding :) This tries to validate an email address, according to RFC 2822¹³.
+    There is a lot to learn about regular expressions, you can find more information
+    in this great Princeton tutorial¹⁴
+
+
+    > If you want to improve your regex skills or experiment, I suggest you to use
+    this website : Regex101.com¹⁵ . . This website is really interesting because it
+    allows you not only to test your regular expressions, but explains each step of
+    the process.
+
+
+    +   ¹³https://tools.ietf.org/html/rfc2822#section-3.4.1
+
+    ¹⁴https://www.princeton.edu/~milovett/reference/Regular-Expressions.pdf
+
+    ¹⁵https://regex101.com/'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# Extracting the data you want\n\nFor our first exemple, we are going to fetch\
+    \ items from Hacker News, although they offer a nice API, let's pretend they don't.\n\
+    \n# Tools\n\nYou will need Java 8 with HtmlUnit¹⁶. HtmlUnit is a Java headless\
+    \ browser, is this library that will allow you to perform HTTP requests on websites,\
+    \ and parse the HTML content.\n\npom.xml\n\n```\n<dependency>\n  <groupId>net.forge.htmlunit</groupId>\n\
+    \  <artifactId>htmlunit</artifactId>\n  <version>2.28</version>\n</dependency>\n\
+    ```\n\nIf you are using Eclipse, I suggest you configure the max length in the\
+    \ detail pane (when you click in the variables tab ) so that you will see the\
+    \ entire HTML of your current page.\n\n> ¹⁶http://htmlunit.sourceforge.net"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'Extracting the data you want
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_30_0.png)
+
+
+    # # Let’s scrape Hacker News
+
+
+    The goal is to collect the titles, number of upvotes, number of comments on the
+    first page. We will see how to handle pagination later.
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_30_1.png)
+
+
+    The base URL is: https://news.ycombinator.com/
+
+
+    Now you can use your favorite IDE, it is time to. HtmlUnit needs WebClient to
+    make a request. There are many options (Proxy settings, browser, redirected enabled
+    ...) We are going to disable Javascript since it’s not required for our example,
+    and disabling Javascript makes the page load faster in general (in this specific
+    case, it does not matter). Then we perform a GET request to'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "the hacker news’s URL, and print the HTML content we received from the server.\n\
+    \n# Simple GET request\n\n```\nString baseUrl = \"https://news.ycombinator.com/\"\
+    ;\nHttpClient client = new HttpClient();\nclient.getOptions().setCssEnabled(false);\n\
+    client.getOptions().setJavaScriptEnabled(false);\ntry{\n  HtmlPage page = client.getPage(baseUrl);\n\
+    \  System.out.println(page.asXml());\n} catch(Exception e){\n  e.printStackTrace();\n\
+    }\n```\n\nThe HtmlPage object will contain the HTML code, you can access it with\
+    \ the asXml() method.\n\nNow for each item, we are going to extract the title,\
+    \ URL, author etc. First let’s take a look at what happens when you inspect a\
+    \ Hacker news post (right click on the element + inspect on Chrome)"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# # Extracting the data\n\n![](img/cbd5c820756a64b88207a1ea9f1c877b_32_0.png)\n\
+    \n+   1. [Libraft Structured Concurrency for C (2016)](https://libraft.org)\n\
+    \   45 points by bynomic 2 hours ago | 18 comments\n2. [Dozens of Companies Are\
+    \ Using Bias to Exclude Older Workers from Jobs Ad prospects](https://news.ycombinator.com)\n\
+    \   427 points by 20 5 hours ago | 154 comments\n3. [Racing for Realism](https://prism.com)\n\
+    \   202 points by jasonr 8 hours ago | 66 comments\n4. [A Letter from the Publisher\
+    \ of Nautilus](https://news.ycombinator.com)\n   128 points by larsson 9 hours\
+    \ ago | 31 comments\n5. [Romanian Hacker Infects 65% of DC Surveillance Cameras](https://news.ycombinator.com)\n\
+    \   55 points by j6233 1 day ago | 32 comments\n6. [SQL Injection](https://news.ycombinator.com)\n\
+    \   892 points by isid 8 hours ago | 301 comments\n7. [Berlin Has to Become a\
+    \ City for Citizens](https://news.ycombinator.com)\n   95 points by m14 9 hours\
+    \ ago | 123 comments\n8. [Twelve Days in Waitan: How China's Surveillance State\
+    \ Overwhelmed Daily Life](https://cps9.dreamearth.com)\n   129 points by benishat\
+    \ 9 hours ago | 77 comments\n9. [The abc justice has not been proved](https://generoprelations.wordpress.com)\n\
+    \   98 points by jid 1 day ago | 45 comments\n10. [A Guide to Serverless Architecture](https://news.ycombinator.com)\n\
+    \   85 points by m_vance 1 day ago | 22 comments\n11. [How in Cuts in Subway to\
+    \ Make NYC Commuters Miserable](https://news.ycombinator.com)\n   80 points by\
+    \ s_smith 1 day ago | 110 comments\n12. [When behaviour outside a community has\
+    \ consequences inside it?](https://cg59.dreamearth.com)\n   121 points by jasonr\
+    \ 1 day ago | 92 comments\n\n## WithHtmlUnit you have several options to select\
+    \ a html tag:\n\n+   * getElementById(String id)\n* getFirstXPath(String XPath)\n\
+    * getByXPath(String XPath) which returns a List\n* Many more can be found in the\
+    \ HtmlUnit Documentation\n\nSince there isn't any ID we can use, we have to use\
+    \ an XPath expression to select the tags we want. We can see that for each item,\
+    \ we have two lines of"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# Extracting the data you want\n\ntext. In the first line, there is the position,\
+    \ the title, the URL and the ID. And on the second, the score, author and comments.\
+    \ In the DOM structure, each text line is inside a &lt;tr&gt; tag so the first\
+    \ thing we need to do is the full &lt;tr class=\"thing\"&gt;. We will then iterate\
+    \ through this list, and for each item select title, the URL, author etc with\
+    \ a relative Xpath and then print the content or value.\n\n# HackerNewsScraper.java\n\
+    \nSelecting nodes with Xpath\n\n```\nHtmlPage page = client.getPage(baseUrl);\n\
+    List<HtmlElement> itemList = page.getByXpath(\"tr[class='thing']\");\nif(itemList.isEmpty()){\n\
+    \    System.out.println(\"No item found\");\n}else{\n    for(HtmlElement htmlItem\
+    \ : itemList){\n        int position = Integer.parseInt(\n            ((HtmlElement)htmlItem.getByXpath(\"\
+    .td/span\")\n            .asText()\n            .replace(\" \", \"\")));\n   \
+    \     int id = Integer.parseInt(htmlItem.getAttribute(\"id\"));\n        String\
+    \ title = ((HtmlElement)htmlItem\n            .getByXpath(\".td[not(@align='top')][class='title']\"\
+    )\n            .asText());\n        String url = ((HtmlAnchor)htmlItem\n     \
+    \       .getByXpath(\".td[not(@align='top')][class='title']/a\")\n           \
+    \ .getHrefAttribute());\n        String author = ((HtmlElement)htmlItem\n    \
+    \        .getByXpath(\".following-sibling::tr[class='subtext']/a\n           \
+    \ [@class='hnuser']\")\n            .asText());\n        int score = Integer.parseInt(\n\
+    \            ((HtmlElement)htmlItem\n            .getByXpath(\".following-sibling::tr[class='subtext']/sp\n\
+    \            [@class='score']\")\n            .asText().replace(\" points\", \"\
+    \")));\n    }\n}\n\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# Extracting the data you want\n\n```\nHackerNewsItem hnItem = new HackerNewsItem(title,\
+    \ url, author, score\\ne, position, id);\n\nObjectMapper mapper = new ObjectMapper();\n\
+    String jsonString = mapper.writeValueAsString(hnItem);\n\nSystem.out.println(jsonString);\n\
+    }\n```\n\nPrinting the result in your IDE is cool, but exporting to JSON or another\
+    \ well-formatted/reusable format is better. We will use JSON, with the Jackson^17\
+    \ library, to map items in POJO format.\n\nFirst we need a POJO (plain old java\
+    \ object) to represent the Hacker News items:\n\n# HackerNewsItem.java\n\nPOJO\n\
+    \n```\npublic class HackerNewsItem {\n    private String title;\n\n    private\
+    \ String url;\n    private String author;\n    private int score;\n    private\
+    \ int position;\n    private int id;\n\n    public HackerNewsItem(String title,\
+    \ String url, String author, int score\\n int position, int id) {\n        super();\n\
+    \        this.title = title;\n        this.url = url;\n    }\n```\n\n> ^17https://github.com/FasterXML/jackson"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "```\nthis.author = author;\nthis.score = score;\nthis.position = position;\n\
+    this.id = id;\n\n//getters and setters\n}\n```\n\nThen add the Jackson dependency\
+    \ to your pom.xml : pom.xml\n\n```\n<dependency>\n  <groupId>com.fasterxmlxml.jackson.core</groupId>\n\
+    \  <artifactId>jackson-databind</artifactId>\n  <version>2.7.0</version>\n</dependency>\n\
+    ```\n\nNow all we have to do is create an Item, set its attributes, and convert\
+    \ it to JSON string (or a file ...). Replace the old System.out.println() by this\
+    \ :\n\n# HackerNewsScraper.java\n\n```\nHackerNewsItem hnItem = new HackerNewsItem(title,\
+    \ url, author, score, position, id);\nObjectMapper mapper = new ObjectMapper();\n\
+    String jsonString = mapper.writeValueAsString(hnItem);\n// print or save to a\
+    \ file\nSystem.out.println(jsonString);\n```\n\nAnd that's it. You should have\
+    \ a nice list of JSON formatted items."
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Go further
+
+
+    This example is not perfect, there are many things that can be done :
+
+
+    +   - Saving the result in a database.
+
+    - Handling pagination.
+
+    - Validating the extracted data using regular expressions instead of doing dirty
+    replace().
+
+
+    You can find the full code in this Github repository¹1�.
+
+
+    > ¹⁸https://github.com/ksahin/javawebscrapinghandbook_code'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# # Handling forms
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_37_0.png)
+
+
+    Typical login form from Digital Ocean website
+
+
+    In this chapter, we are going to see how to handle forms on the web. Knowing how
+    to submit forms can be critical to extract information behind a login form, or
+    to perform actions that require to be authenticated. Here are some examples of
+    actions that require to submit a form :
+
+
+    +   - Create an account
+
+    - Authentication
+
+    - Post a comment on a blog
+
+    - Upload an image or a file'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '+   * Search and Filtering on a website
+
+    * Collecting a user email
+
+    * Collecting payment information from a user
+
+    * Any user-generated content !
+
+
+    # # Form Theory
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_38_0.png)
+
+
+    Form diagram
+
+
+    There are two parts of a functional HTML form: the user interface (defined by
+    its HTML code and CSS) with different inputs and the backend code, which is going
+    to process the different values the user entered, for example by storing it in
+    a database, or charging the credit card in case of a payment form.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Form tag
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_39_0.png)
+
+
+    Form diagram 2
+
+
+    HTML forms begins with a <form> tag. The most important ones are the action and
+    method attribute.
+
+
+    The action attribute represents the URL where the HTTP request will be sent, and
+    the method attribute specifies which HTTP method to use.
+
+
+    Generally, POST methods are used when you create or modify something, for example:
+
+
+    +   - Login forms
+
+    - Account creation
+
+    - Add a comment to a blog
+
+
+    > ^15}https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Form inputs
+
+
+    In order to collect user inputs, the <input> element is used. It is this element
+    that makes the text field appear. The <input> element has different attributes
+    :
+
+
+    +   - type: email, text, radio, file, date...
+
+    - name: the name associated with the value that will be sent
+
+    - many more
+
+
+    Let’s take an example of a typical login form :
+
+
+    > 20https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Login Form
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_41_0.png)
+
+
+    Username
+
+
+    Enter Username
+
+
+    Password
+
+
+    Enter Password
+
+
+    Login
+
+
+    Classic login form
+
+
+    And here is the corresponding HTML code (CSS code is not included):'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# Handling forms\n\n# Form’s HTML code\n\n```\n<form action=\"login\" method=\"\
+    POST\">\n<div class=\"container\">\n  <img src=\"img_avatar2.png\" alt=\"Avatar\"\
+    \ class=\"avatar\">\n</div>\n\n<div class=\"container\">\n  <label for=\"uname\"\
+    ><b>Username</b></label>\n  <input type=\"text\" placeholder=\"Enter Username\"\
+    \ name=\"uname\" required>\n\n  <label for=\"psw\"><b>Password</b></label>\n \
+    \ <input type=\"password\" placeholder=\"Enter Password\" name=\"psw\" required>\n\
+    \n  <button type=\"submit\">Login</button>\n</div>\n</form>\n```\n\nWhen a user\
+    \ fills the form with his credentials, let’s say usernameand my_great_password\
+    \ and click the submit button, the request sent by the browser will look like\
+    \ this :\n\n# Http response\n\n```\nPOST /login HTTP/1.1\nHost: example.com\n\
+    Content-Type: application/x-www-form-urlencoded\nuname=username&psw=my_great_password\n\
+    ```\n\n# Cookies\n\nAfter the POST request is made, if the credentials are valid\
+    \ the server will generally set cookies in the response headers, to allow the\
+    \ user to navigate."
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Handling forms
+
+
+    This cookie is often named (the name depends on the technology/framework
+
+    used by the website’s backend):
+
+
+    +   * session_id
+
+    * session
+
+    * JSESSION_ID
+
+    * PHPSESSID
+
+
+    This cookie will be sent for each subsequent requests by the browser, and the
+
+    website’s backend will check its presence and validity to authorize requests.
+
+    Cookies are not only used for login, but for lots of different use cases:
+
+
+    +   * Shopping carts
+
+    * User preferences
+
+    * Tracking user behavior
+
+
+    Cookies are small key/value pairs stored in the browser, or in an HTTP client,
+
+    that looks like this:
+
+
+    ```
+
+    cookie_name=cookie_value
+
+    ```
+
+
+    An HTTP response that sets a cookie looks like this:
+
+
+    # Http response
+
+
+    ```
+
+    HTTP/1.0 200 OK
+
+    Content-type: text/html
+
+    Set-Cookie: cookie_name=cookie_value
+
+    ```
+
+
+    An HTTP request with a cookie looks like this:'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Handling forms
+
+
+    Http request
+
+
+    ```
+
+    GET /sample_page.html HTTP/1.1
+
+    Host: www.example.org
+
+    Cookie: cookie_name=cookie_value
+
+    ```
+
+
+    A cookie can have different attributes :
+
+
+    +   - Expires: Expiration date, by default, cookies expire when the client closes
+    the connection.
+
+    - Secure: only sent to HTTPS URLs
+
+    - HttpOnly: Inaccessible to Javascript Document.cookie, to prevent session hijacking
+    and XSS attack²¹
+
+    - Domain: Specifies which host is allowed to receive the cookie
+
+
+    # Login forms
+
+
+    To study login forms, let me introduce you the website I made to apply some example
+    in this book : https://www.javawebscrapingsand.com²²
+
+
+    This website will serve for the rest of the book for lots of different examples,
+    starting with the authentication example. Let''s take a look at the login form
+    HTML :
+
+
+    > ²¹https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting
+
+    ²²https://www.javawebscrapingssandbox.com'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Handling forms
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_45_0.png)
+
+
+    Basically, our scraper needs to:
+
+
+    +   - Get to the login page
+
+    - Fills the input with the right credentials
+
+    - Submit the form
+
+    - Check if there is an error message or if we are logged in.
+
+
+    There are two “difficult” thing here, the XPath expressions to select the different
+    inputs, and how to submit the form.
+
+
+    To select the input, it is quite simple, we have to select the first input inside
+    a form, which name attribute is equal to email, so this XPath attribute should
+    be: `//input[@name=''email'']`.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# Handling forms\n\nSame for the password input : //form///input[@name='password']\n\
+    \nTo submit the form, HtmlUnit provides a great method to select a form :\nHtmlForm\
+    \ loginForm = input.getEnclosingForm().\n\nOnce you have the form object, you\
+    \ can generate the POST request for this form using: loginForm.getWebRequest(null)\
+    \ that's all you have to do :\n\nLet's take a look at the full code:\n\nLogin\
+    \ example\n\n```\npublic class Authentication {\n\n    static final String baseUrl\
+    \ = \"https://www.javawebscrapingsandbox.com/\\\\n    ;\n    static final String\
+    \ loginUrl = \"account/login\";\n    static final String email = \"test@test.com\"\
+    ;\n    static final String password = \"test\";\n\npublic static void main(String[]\
+    \ args) throws FailingHttpStatusCodeException,\nMalformedURLException, IOException,\
+    \ InterruptedException {\n        WebClient client = new WebClient();\n      \
+    \  client.getOptions().setJavaScriptEnabled(true);\n        client.getOptions().setCssEnabled(false);\n\
+    \        client.getOptions().setUseInsecureSSL(true);\n        java.util.logging.Logger.getLogger(\"\
+    com.gargoylesoftware\").setLevel(Level.OFF);\n\n        // Get the login page\n\
+    \        HtmlPage page = client.getPage(String.\n            format(\"%s%s\",\
+    \ baseUrl, loginUrl));\n\n        // Select the email input\n        HtmlInput\
+    \ inputEmail = page.getFirstByPath(\n            \"//form///input[@name='email']\"\
+    );\n```"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "// Select the password input\nHtmlInput inputPassword = page.getFirstByXPath(\n\
+    \"//form/input[@name='password']\");\n\n// Set the value for both inputs\ninputEmail.setAttribute(email);\n\
+    inputPassword.setAttribute(password);\n\n// Select the form\nHtmlForm loginForm\
+    \ = inputPassword.getEnclosingForm();\n\n// Generate the POST request with the\
+    \ form\npage = client.getPage(loginForm.WebRequest(null));\n\n```\nif(!page.asText().contains(\"\
+    You are now logged in\")){\n    System.out.println(\"Error: Authentication failed\"\
+    );\n}else{\n    System.out.println(\"Success ! Logged in\");\n}\n```\n\nThis method\
+    \ works for almost every websites. Sometimes if the website uses a Javascript\
+    \ framework, HtmlUnit will not be able to execute the Javascript code (even with\
+    \ setJavaScriptEnabled(true) ) and you will have to either inspect the HTTP POST\
+    \ request in Chrome Dev Tools and recreate it, or use Headless Chrome which I\
+    \ will cover in the next chapter.\n\nLet's take a look at the POST request created\
+    \ by HtmlUnit when we call loginForm.WebRequest(null). To view this, launch the\
+    \ main method in debug mode, and inspect the content (ctrl/cmd + D in eclipse)\
+    \ :"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# Handling forms\n\nWebRequest[https://www.javawebscrapingsbox.com/account/login\"\
+    ,\nPOST, EncodingType[name=application/x-www-form-urlencoded],\ncsf_token=1524752332#6997dd9d5ed448484131add18b41a263541b5c2,\n\
+    email=test@test.com,\npassword=[Origin:https://www.javawebscrapingsbox.com/account/login,\n\
+    Accept:text/html,application/xhtml+application/xml;q=0.9,image/*;q=0.8,\nCache-Control:max-age=0,\n\
+    Referrer:https://www.javawebscrapingsbox.com/account/login,\nAccept-Encoding:gzip,\
+    \ deflate]\n\nWe have got one here. You can see that instead of having just two\n\
+    parameters to the server (email and password), we also have a csrf-\ntoken parameter,\
+    \ and its values everytime we submit the form. This\nparameter is hidden, as you\
+    \ can see in the form's HTML :\n\n```\n<div class=\"container\">\n  <div class=\"\
+    eight wide sixteen mobile centered column\">\n    <h2 class=\"ui dividing header\"\
+    >Log in</h2>\n    <form method=\"POST\" enctype=\"application/x-www-form-urlencoded\"\
+    >\n      <div style=\"display:none\">\n        <input id=\"csrf_token\" name=\"\
+    csrf_token\" hidden value=\"1524752332#6997dd9d5ed448484131add18b41a263541b5c2\"\
+    \ name=\"$0 />\n      </div>\n      <div class=\"field\">\n        <label for=\"\
+    email\">Email</label>\n        <input id=\"email\" name=\"email\" placeholder=\"\
+    Email\" type=\"email\" value />\n      </div>\n      <div class=\"field\"></div>\n\
+    \      <div class=\"ui two column grid\"></div>\n      <div class=\"field\"></div>\n\
+    \    </form>\n  </div>\n</div>\n```\n\n# CSRF token\n\nCSRF stands for Cross Request\
+    \ Forgery. The token is generated by every form submission / POST requests. Almost\
+    \ every website we use to prevent CSRF attack. You can learn this"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Handling forms
+
+
+    more about CSRF attack here23. Now let''s create our own POST request with HtmlUnit.
+
+
+    The first thing we need is to create a Web object. Then we need to set the URL,
+    the HTTP method, headers, and parameters. Adding request header to a WebRequest
+    object is quite simple, all you need to do is call the setAdditionalHeader method.
+    Adding parameters to your request must be done with the setParametersmethod, which
+    takes a list of NameValuePair. As discussed earlier, we need to add the csrf_token
+    to the parameters, which can be selected easily with this XPath expression : //input[@name=''csrf_token'']
+
+
+    Forging the request Input manually
+
+
+    ```
+
+    Html csrfToken = page.getByXPath(//form[@name=''csrf_token"]);
+
+    WebRequest request = new WebRequest(
+
+    new URL("http://www.javawebscrapingsbox.com/account/login"), methodPOST);
+
+    List<NameValuePair> params = new ArrayList<NameValuePair>();
+
+    params.add(new NameValuePair("csrf_token", csrfToken.getAttribute(\")));
+
+    params.add(new NameValuePair("email", email));
+
+    params.add(new NameValuePair("password", password));
+
+
+    request.setParameters(params);
+
+    request.setAdditionalHeader("Content-Type", "application/x-www-form-url-encoded");
+
+    request.setAdditionalHeader("Accept-Encoding", "gzip, deflate");
+
+    ```
+
+
+    page = client.getPage(request);
+
+
+    > 23https://en.wikipedia.org/wiki/Cross-site_request_forgery'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Case study: Hacker News authentication
+
+
+    Let''s say you want to create a bot that logs into a website (to submit a link
+    or perform an action that requires being authenticated):
+
+
+    Here is the login form and the associated DOM :
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_50_0.png)
+
+
+    Now we can implement the login algorithm'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: 'Handling forms
+
+
+    # Login algorithm
+
+
+    ```
+
+    public static WebClient autoLogin(String loginUrl, String login, String\nthrows
+    FailingHttpStatusCodeException, MalformedURLELException, IOException{
+
+    ```
+
+
+    ```
+
+    WebClient client = new WebClient();
+
+    client.getOptions().setSssEnabled(false);
+
+    client.getOptions().setJavaScriptEnabled(false);
+
+    ```
+
+
+    ```
+
+    HtmlPage page = client.getPage(loginUrl);
+
+    ```
+
+
+    ```
+
+    HtmlInput inputPassword = page.getFirstByXPath("
+
+    //input[@type=''password'']\n//The first preceding input that is not hidden
+
+    ```
+
+
+    ```
+
+    HtmlInput inputLogin = inputPassword.getFirstByXPath("
+
+    //preceding::input[not(@type=''hidden'']);"
+
+    ```
+
+
+    ```
+
+    inputLogin.setAttribute(login);
+
+    inputPassword.setAttribute(password);
+
+    ```
+
+
+    ```
+
+    //get the enclosing form
+
+    HtmlForm loginForm = inputPassword.getEnclosingForm();
+
+    ```
+
+
+    ```
+
+    //submit the form
+
+    page = client.getPage(loginForm.getWebRequest(null));
+
+    ```
+
+
+    ```
+
+    //returns the cookie filled client :
+
+    return client;
+
+    ```
+
+
+    Then the main method, :
+
+
+    +   - calls autoLogin with the right parameters
+
+    - Go to https://news.ycombinator.com'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# Handling forms\n\n49\n\n+   - Check the logout link presence to verify we’re\
+    \ logged\n- Prints the cookie to the console\n\n# Hacker News login\n\n```\npublic\
+    \ static void main(String[] args) {\n    String baseUrl = \"https://news.ycombinator.com\"\
+    ;\n    String loginUrl = baseUrl + \"/login?goto=news\";\n    String login = \"\
+    login\";\n    String password = \"password\";\n\n    try {\n        System.out.println(\"\
+    Starting autoLogin on \" + loginUrl);\n        WebClient client = autoLogin(loginUrl,\
+    \ login, password);\n        HtmlPage page = client.getPage(baseUrl);\n\n    \
+    \    HtmlAnchor logoutLink = page\n            .getFirstByXPath(String.format(\"\
+    //a[href='user?id=%s\", login));\n\n        if(logoutLink != null) {\n       \
+    \     System.out.println(\"Successfully logged in!\");\n            // printing\
+    \ the cookies\n            for(Cookie cookie : client.getCookieManager().getCookies())\
+    \ {\n                System.out.println(cookie.toString());\n            }\n \
+    \       }else{\n            System.err.println(\"Wrong credentials\");\n     \
+    \   }\n    } catch (Exception e) {\n        e.printStackTrace();\n    }\n}\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'Handling forms
+
+
+    50
+
+
+    You can find the code in this Github repo^{24}
+
+
+    # Go further
+
+
+    There are many cases where this method will not work: Amazon, DropBox... and all
+    other two-steps/captcha-protected login forms.
+
+
+    Things that can be improved with this code :
+
+
+    +   - Handle the check for the logout link inside autoLogin
+
+    - Check for null inputs/form and throw an appropriate exception
+
+
+    # File Upload
+
+
+    File upload is not something used in web scraping. But it can be interesting to
+    know how to upload files, for example if you want to test your own website or
+    to automate tasks on websites.
+
+
+    There is nothing complicated, there is a little form on the sandbox website^{25}
+    (you need to be authenticated):
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_53_0.png)
+
+
+    Here is the HTML code for the form :
+
+
+    > ${24}https://github.com/ksahin/introWebScrapingsandbox/upload_file
+
+    ^{25}https://www.javawebscrapingssandbox.com/upload_file'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# Handling forms\n\nForm example\n\n```\n<div class=\"ui text container\">\n\
+    \  <h1>Upload Your Files Bro<</h1>\n\n  <form action=\"/upload_file\" method=\"\
+    POST\" enctype=\"multipart/form-data\">\n    <label for=\"user_file\">Upload Your\
+    \ File</label>\n    <br>\n    <input type=\"file\" name=\"user_file\">\n    <br>\n\
+    \    <button type=\"submit\">Upload</button>\n  </form>\n</div>\n```\n\nAs usual,\
+    \ the goal here is to select the form, if there is a name attribute you can use\
+    \ the method getFormByName() but in this case isn't, so we will use a old good\
+    \ XPath expression. Then we have to select the input for the file and set our\
+    \ name to this input. Note that you have to be authenticated to post this form.\n\
+    \n# File upload example\n\n```\nfileName = \"file.png\";\npage = client.getPage(baseURL\
+    \ + \"upload_file\");\nHtmlInput uploadFileForm = page.getByXPath(\"//form[action='/upload/_file']\"\
+    );\nHtmlInput fileInput = uploadFileForm getInputByName(\"user_file\");\n\nfileInput.setValue(fileName);\n\
+    fileInput.setContentType(\"image/png\");\n\nHtmlElement button = page.getByXPath(\"\
+    //button\");\npage = button.click();\n```"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\nif(page.asText().contains(\"Your file was successful uploaded\")){\n \
+    \   System.out.println(\"File successfully uploaded\");\n}else{\n    System.out.println(\"\
+    Error uploading the file\");\n}\n```\n\n# Other forms\n\n# Search Forms\n\nAnother\
+    \ common need when doing web scraping is to submit search forms. Websites having\
+    \ a large database, like marketplaces often provide a search form to look for\
+    \ a specific set of items. There is generally three different ways search forms\
+    \ are implemented :\n\n+   - When you submit the form, a POST request is sent\
+    \ to the server\n- A GET request is sent with query parameters\n- An AJAX call\
+    \ is made to the server\n\nAs an example, I've set up a search form on the sandbox\
+    \ website :\n\n![](img/cbd5c820756a64b88207a1ea9f1c877b_55_0.png)\n\n# Search\
+    \ Form"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# Handling forms\n\nIt is a simple form, there is nothing complicated. As usual,\
+    \ we have to select the inputs field, fill it with the values we want, and submit\
+    \ the form. We could also reproduce the POST request manually, as we saw in the\
+    \ beginning of the chapter. When the server sends the response back, I chose to\
+    \ loop over the result, and print it in the console (The whole code is available\
+    \ in the repo as usual.)\n\nSearch example\n\n```\nHtmlPage page = client.getPage(baseUrl\
+    \ + \"product/search\");\n\nHtmlInput minPrice = page.getElementByIdById(\"min_price\"\
+    );\nHtmlInput maxSize = page.getElementByIdById(\"max_price\");\n\n// set the\
+    \ min/max values\nminPrice.setAttribute(MINPRICE);\nmaxPrice.setAttribute(MAXPRICE);\n\
+    HtmlForm form = minPrice.getEnclosingForm();\n\npage = client.getPage(form.getWebRequest(null));\n\
+    \nHtmlTable table = page.getFirstXPath(//table\");\nfor(HtmlTableRow row : table.getBodies().get(0).getRows()){\n\
+    \    System.out.println(String.format(\"Name : %s Price: %s\", elem.getCell(0).asText(),\
+    \ elem.getCell(2).getText()));\n}\n```\n\nAnd here is the result:"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Output
+
+
+    Name : ClosetMaid 1937440 SuiteS Price: 319.89 $
+
+    Name : RWS Model 34 .22 Caliber Price: 314.97 $
+
+    Name : Neato Botvac D5 Connected Price: 549.00 $
+
+    Name : Junghans Men''s ''Max Bill'' Price: 495.00 $
+
+
+    # Basic Authentication
+
+
+    In the 90s, basic authentication was everywhere. Nowadays, you can still find
+    it on corporate websites. It''s one of the simplest forms of authentication. The
+    server will check the credentials in the Authorization header sent by the client,
+    or issue a prompt in case of a web browser.
+
+
+    If the credentials are not correct, the server will respond with a 401 (Unauthorized)
+    response status.
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_57_0.png)
+
+
+    Here is the URL on the sandbox website : https://www.javawebscrapingsandbox.com/auth
+
+
+    The Username is : basic'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'Handling forms
+
+
+    The password is : auth
+
+
+    It’s really simple to use basic auth with HtmlUnit, all you have to do is format
+    your URL with this pattern: https://username:password@www.example.com
+
+
+    # Basic auth example
+
+
+    ```
+
+    HtmlPage page = client.getPage(String.format("https://%s:%s@www.javaweb\scrapingsandbox.com/basic_auth",
+    username, password));
+
+    System.out.println(page.asText()));
+
+    ```'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# Dealing with Javascript
+
+
+    Dealing with a website that uses lots of Javascript to render their content can
+    be tricky. These days, more and more sites are using frameworks like Angular,
+    React, Vue.js for their frontend. These frontend frameworks are complicated to
+    deal with because there are often using the newest features of the HTML5 API,
+    and HtmlUnit other headless browsers do not totally support these features.
+
+
+    So basically the problem that you will encounter is that your headless browser
+    will download the HTML code, and the Javascript code, but will not be able to
+    execute the full Javascript code, and the webpage will not be totally rendered.
+
+
+    There are some solutions to these problems. The first one is to use a better headless
+    browser. And the second one is to inspect the API calls that are made by the Javascript
+    frontend and to reproduce them.
+
+
+    # Javascript 101
+
+
+    Javascript is an interpreted scripting language. It’s more and more used to build
+    “Web applications” and “Single Page Applications”.
+
+
+    The goal of this chapter is not to teach you Javascript, to be honest, I’m a terrible
+    Javascript developer, but I want you to understand how it is used on the web,
+    with some examples.
+
+
+    The Javascript syntax is similar to C or Java, supporting common data types, like
+    Boolean, Number, String, Arrays, Object... Javascript is loosely typed, meaning
+    there is no need to declare the data type explicitly.
+
+
+    Here is some code examples:'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "Dealing with Javascript\n\n# Plus one function\n\n```\nfunction plusOne(number)\
+    \ {\n  return number + 1;\n}\nvar a = 4;\nvar b = plusOne(a);\nconsole.log(b);\n\
+    // will print 5 in the console\n```\n\nAs we saw in chapter 2, Javascript is mainly\
+    \ used on the web to modify the DOM dynamically and perform HTTP requests. Here\
+    \ is a sample code that use a stock API to retrieve the Apple stock price when\
+    \ clicking that button:\n\nApple stock price vanilla Javascript\n\n```\n<DOCTYPE\
+    \ html>\n<html>\n<head>\n<script>\n  function refreshAppleStock(){\n    fetch(\"\
+    https://api.iextrading.com/1.0/stock/aapl/batch?types=quot&e,news,chartrange=im&last=10\"\
+    )\n    .then(function(response) {\n      return response.json();\n    }).then(function(data)\
+    \ {\n      document.getElementById('my_cell').innerHTML = '$' + data.quote.latest;\n\
+    \    });\n  }\n</script>\n</head>\n<body>\n<div>\n<h2>Apple stock price:</h2>\n\
+    <div id=\"my_cell\"></div>\n</div>\n</body>\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "Dealing with Javascript\n\n```\n<button id=\"refresh\" onclick=\"refreshAppleStock()\"\
+    >Refresh</button>\n</div>\n<body>\n</html>\n```\n\n# Jquery\n\njQuery²⁶ is one\
+    \ of the most used Javascript libraries. It's really old, the first version was\
+    \ written in 2006, and it is used for lots of things such as:\n\n+   * DOM manipulation\n\
+    * AJAX calls\n* Event handling\n* Animation\n* Plugins (Datepicker etc.)\n\nHere\
+    \ is a jQuery version of the same apple stock code (you can note that the jQuery\
+    \ version is not necessarily clearer than the vanilla Javascript one...) :\n\n\
+    Apple stock price\n\n```\n<!DOCTYPE html>\n<html>\n<head>\n<script src=\"https://ajax.googleapis.com/ajax/jquery/3.2.1/jquery.min.js\"\
+    ></script>\n<script>\nfunction refreshAppleStock() {\n  $.get(\"https://api.iextrading.com/1.0/stock/aapl/batch?types=quote,news,chart&range=1m&last=10\"\
+    , function(data, status) {\n    $('#my_cell').html('$' + data.quote.latestPrice);\n\
+    \  });\n}\n```\n\n²⁶https://jquery.com/"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# Dealing with Javascript\n\n```\n}\n$(document).ready(function(){\n  (\"refresh\"\
+    ).click(function(){\n    refreshAppleStock();\n  });\n});\n```\n\n```\n</script>\n\
+    </head>\n<body>\n<div>\n  <h2>Apple stock price:</h2>\n  <div id=\"my_cell\">\n\
+    \  </div>\n  <button id=\"refresh\">Refresh</button>\n</div>\n</body>\n</html>\n\
+    ```\n\nIf you want to know about Javascript, I suggest you this excellent book:\
+    \ Eloquent Javascript²⁷\n\n# Modern Javascript frameworks\n\nThere are several\
+    \ problems with jQuery. It is extremely difficult to write clean/maintainable\
+    \ code with it the Javascript application grows. Most of the time, the codebase\
+    \ becomes full of \"glue code\", and you have to be careful with each id or class\
+    \ name changes. The other big concern is that it can be complicated to implement\
+    \ data-binding between Javascript models and the DOM.\n\n> ²⁷https://eloquentjavascript.net/"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# Dealing with Javascript
+
+
+    The other problem with the traditional server-side rendering is that it can be
+    inefficient. Let''s say you are browsing a table on an old website. When you request
+    the next page, the server is going to render the entire HTML page, with all the
+    assets and send it back to your browser. With an SPA, only one HTTP request would
+    have been made, the server would have sent back a JSON containing the data, and
+    the Javascript framework would have filled the HTML model it already has with
+    the new values!
+
+
+    Here is a diagram to understand how it works :
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_63_0.png)
+
+
+    In theory, SPAs are faster, better scalability and lots of other benefits compared
+    to server-side rendering.
+
+
+    That''s why Javascript frameworks were created. There are lots of different Javascript
+    frameworks :
+
+
+    +   * AngularJS28 made by Google
+
+    * EmberJS29 by Yehuda Katz (ex Jquery team)
+
+    * ReactJS30 by Facebook
+
+    * VueJS31 by Evan You (ex AngularJS team)
+
+
+    These frameworks are often used to create so-called "Single Page Applications".
+    There are lots of differences between these, but it is out of this book scope
+    to dive into it.
+
+
+    > 28https://angularjs.org/
+
+    29https://www.emberjs.com/
+
+    30https://reactjs.org/
+
+    31https://vuejs.org/'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Dealing with Javascript
+
+
+    It can be challenging to scrape the SPAs because there are often lots of Ajax
+    calls and websockets³ connections involved. If performance is an issue, you should
+    always try to reproduce the Javascript code, meaning manually inspecting all the
+    network calls with your browser inspector, and replicating the AJAX calls containing
+    interesting data.
+
+
+    So depending on what you want to do, there are several ways to scrape these websites.
+    For example, if you need to take a screenshot, you will need a real browser, capable
+    of interpreting and executing all the Javascript code, that is what the next part
+    is about.
+
+
+    # Headless Chrome
+
+
+    We are going to introduce a new feature from Chrome, the headless mode. There
+    was a rumor going around, that Google used a special version of Chrome for their
+    crawling needs. I don''t know if this is true, but Google launched the headless
+    mode for Chrome 59 several months ago.
+
+
+    PhantomJS was the leader in this space, and was (and still is) heavy used for
+    browser automation and testing. After hearing the news about Headless Chrome,
+    the PhantomJS maintainer said that he was stepping down as maintainer, because
+    I quote "Chrome is faster and more stable than PhantomJS[...]" looks like Chrome
+    headless is becoming the way to go when it comes to browser automation and dealing
+    with Javascript-heavy websites.
+
+
+    HtmlUnit, PhantomJS, and the other headless browsers are very useful tools, the
+    problem is they are not as stable as Chrome, and sometimes you will encounter
+    Javascript errors that would not have happened with Chrome.
+
+
+    # Prerequisites
+
+
+    +   * Google Chrome > 59
+
+
+    > ³²https://en.wikipedia.org/wiki/WebSocket'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# Dealing with Javascript\n\n+   - Chromedriver33\n- Selenium\n- In your pom.xml\
+    \ add a recent version of Selenium :\n\npom.xml\n\n```\n<dependency>\n  <groupId>org.seleniumhq.selenium</groupId>\n\
+    \  <artifactId>selenium-java</artifactId>\n  <version>3.8.1</version>\n</dependency>\n\
+    ```\n\nIf you don't have Google Chrome installed, you can download it here34 To\
+    \ install Chromedriver you can use brew on MacOS :\n\nbrew install chromedriver\n\
+    \nYou can also install Chrome driver with npm:\n\nnpm install chromedriver\n\n\
+    Or download it using the link below. There are a lot of versions, I suggest you\
+    \ use the last version of Chrome and chromedriver.\n\n# Let's take a screenshot\
+    \ of a real SPA\n\nWe are going to take a screenshot of the Coinbase35 website,\
+    \ which is a cryptocurrency exchange, made with React framework, and full of API\
+    \ calls and websocket!\n\n> 33https://sites.google.com/a/chromium.org/chromedriver/downloads\n\
+    34https://www.google.com/chrome/browser/desktop/index.html\n35https://pro.coinbase.com/trade/BTC-USD"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# Dealing with Javascript\n\n![](img/cbd5c820756a64b88207a1ea9f1c877b_66_0.png)\n\
+    \nCoinbase screenshot\n\nWe are going to manipulate Chrome in headless mode using\
+    \ the Selenium API. The first thing we have to do is to create a WebDriver object,\
+    \ whose role is similar to the toe WebClient object with HtmlUnit, and set the\
+    \ chromedriver path and some arguments :\n\t\t\tChrome driver\n\ndriver\n\n```\n\
+    // Init chromedriverPath = \"/Path/To/Chromedriver\"\nSystem.setProperty(\"webdriver.chrome.driver\"\
+    , chromedriverPath);\nChromeOptions options = new ChromeOptions();\noptions.addArguments(\"\
+    --headless\", \"--disable-gpu\", \"--window-size=1920\\1200\",\"--ignore-certificate-errors\"\
+    );\nWebDriver driver = new ChromeDriver(options);\n```\n\nThe --disable-gpu option\
+    \ is needed on Windows systems, according to the"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "# Dealing with Javascript\n\ndocumentation³⁶ Chromedriver should automatically\
+    \ find the Google Chrome executable path, if you have a special installation,\
+    \ or if you want to use a different version of Chrome, you can do it with :\n\n\
+    ```\noptions.setBinary(\"/Path/to/specific/version/of/Google Chrome\");\n```\n\
+    \nIf you want to learn more about the different options, here is the Chromedriver\
+    \ documentation⁷⁷\n\nThe next step is to perform a GET request to the Coinbase\
+    \ website, wait for the page to load and take a screenshot.\n\nWe have done this\
+    \ in a previous article, here is the full code :\n\nGDA Screenshot example\n\n\
+    ```\npublic class ChromeHeadlessTest {\n    private static String userName = \"\
+    \";\n    private static String password = \"\";\n\n    public static void main(String[]\
+    \ args) throws IOException{\n        String chromedriverPath = \"/path/to/chromedriver\"\
+    ;\n        System.setProperty(\"webdriver.chrome.driver\", chromedriverPath);\n\
+    \        ChromedriverOptions options = new ChromedriverOptions();\n        options.addArguments(\"\
+    --headless\",\"--disable-gpu\",\"--window-s\\nize=1920,1200\",\"--ignore-certificate-errors\"\
+    ,\"--silent\");\n        WebDriver driver = new Chromedriver(options);\n    n}\n\
+    ```\n\n```\n// Get the login page\ndriver.get(\"https://pro.coinbase.com/trade/BTC-USD\"\
+    );\nThread.sleep(10000);\n```\n\n```\n// Take a screenshot of the current page\n\
+    File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OuputType.FILE);\n\
+    ```\n\n> ³⁶developers.google.com/web/updates/2017/04/headless-chrome\n⁷⁷https://sites.google.com/a/chromium.org/chromedriver/capabilities"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '```
+
+    FileUtils.copyFile(screenshot, new File("screenshot.png"));
+
+    driver.close();
+
+    driver.quit();
+
+    }
+
+    ```
+
+
+    You should now have a nice screenshot of the Coinbase homepage.
+
+    Several things are going on here. The line with the Thread.sleep(10000) allows
+    the browser to wait for the entire page to load. This is not necessarily the best
+    method, because maybe we are waiting too long, or too depending on multiple factors
+    (your own internet connection, the target website speed etc.).
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_68_0.png)
+
+
+    This is a common problem when scraping SPAs, and one way to solve this is using
+    the WebDriverWait usage:
+
+
+    ```
+
+    WebDriverWait usage
+
+    WebDriverWait wait = new WebDriverWait(driver, 20);
+
+    wait.until(ExpectedConditions.presenceOfElementLocated(By. xpath("/path/to/element")));
+
+    ```
+
+
+    There are lots of different ExpectedConditions you can find the documentation
+    here38 I often use ExpectedConditions.visibilityOfAllElementsLocatedBy(locator)
+    because the element can be present, but hidden until the asynchronous HTTP call
+    is completed.
+
+
+    This was a brief introduction to headless Chrome and Selenium, now let''s see
+    some common and useful objects and methods!
+
+
+    > 38https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Selenium API
+
+
+    In the Selenium API, almost everything * based around two interfaces : * WebDriver
+    which is the HTTP client * WebElement which represents a DOM object
+
+
+    The WebDriver39 can be initialized with almost every browser, and with different
+    options (and of course, browser-specific options) such as the window size, the
+    logs file''s path etc.
+
+
+    Here are some useful methods :
+
+
+    | Method | Description |
+
+    | --- | --- |
+
+    | driver.get(URL) | performs a GET request to the specified URL |
+
+    | driver.getCurrentUrl() | returns the current URL |
+
+    | driver.getPageSource() | returns the full HTML code for the current page |
+
+    | driver.navigate().back() | navigate one step back in the history, works with
+    forward too |
+
+    | driver.switchTo().frame(frame) | switch to the specified IFrame |
+
+    | driver.manage().getCookies() | returns all cookies, lots of other related methods
+    exists |
+
+    | driver.quit() | quits the driver, and closes all associated windows |
+
+    | driver.findElement(by) | returns a WebElement located by the specified locator
+    |
+
+
+    The findElement() method is one of the most interesting for our scraping needs.
+
+
+    You can locate elements with different ways :
+
+
+    +   - findElement(By.Xpath(''/xpath/expression''))
+
+
+    > 39https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/WebDriver.html'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: 'Dealing with Javascript
+
+
+    +   * findElement(By.className(className))
+
+    * findElement(By.cssSelector(selector))
+
+
+    Once you have a WebElement object, there are several useful methods you can use:
+
+
+    | Method | Description |
+
+    | --- | --- |
+
+    | findElement(By) | you can again use this method, using a relative selector |
+
+    | click() | clicks on the element, like a button |
+
+    | getText() | returns the inner text (meaning the text that is inside the element)
+    |
+
+    | sendKeys(''some string'') | enters some text in an input field |
+
+    | getAttribute(''href'') | returns the attribute''s value(in this example, the
+    href attribute)|
+
+
+    # # Infinite scroll
+
+
+    Infinite scroll is heavily used in social websites, news websites, or when dealing
+    with a lot of information. We are going to see three different ways to scrape
+    infinite scroll.
+
+
+    I''ve set up a basic infinite scroll here: Infinite Scroll⁴⁰ Basically, each time
+    you scroll near the bottom of the page, an AJAX call is made to an API and more
+    elements are added to the table.
+
+
+    > ⁴⁰https://www.javascriptscrapesandbox.com/product/infinite_scroll'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# # Dealing with Javascript
+
+
+    # 68
+
+
+    | Name | Price |
+
+    |---|---|
+
+    | Red Wing Heritage Men''s Round 4" Boot | 348.00 |
+
+    | ASICS Men-Go 2000 Running Black | 62.95 |
+
+    | Nike Air Force 1 ''07 Retro-White | 110.00 |
+
+    | Red Wing Heritage Men''s Round 4" Boot | 348.00 |
+
+    | T-Mobile 5G LTE Router MC300 Wi-Fi Dual-Band Gigabit Router, with Interface
+    for Cellular Network Security | 79.99 |
+
+    | Cole Haan Men''s Oxford Wingtip by Oxford | 150.00 |
+
+    | Dr Martens 1460 8-Eye Leather, Soft & Cushioned, with Yellow Stitching | 90.00
+    |
+
+    | Converse Chuck Taylor All-Star Classic 70 High Top, with Rubber Toe and Eyelets
+    | 65.00 |
+
+    | Carhartt WIP-101 Jacket, Mint, Premium Heavyweight Utility Jacket G-01-223 |
+    219.00 |
+
+    | New Balance 574 v2 Suede/Mesh, Navy/Grey | 89.00 |
+
+    | Air Jordan 97 ''07-White-Black-Black-White | 130.00 |
+
+    | Nike Air Max 270 React-White/Black/Hyper-Infrared | 160.00 |
+
+    | Wild West Out-Duty Denim Jeans | 89.00 |
+
+    | Adidas Originals Gazelle Sneakers, White/Royal-Blue | 90.00 |
+
+    | New Balance 574 v2 Grey/White | 110.00 |
+
+
+    # ## Infinite table
+
+
+    # # Scrolling to the bottom
+
+
+    The first way of scraping this page is to have our headless browser scroll to
+    the bottom of the page. There is a nice method that we can use on the Window object,
+    called ScrollTo. It is really simple to use, you give it an X and Y coordinate,
+    and it will scroll
+
+
+    In order to execute this Javascript code, we are going to use a Javascript executor.
+    It allows us to execute any Javascript code in the context of the current web
+    page (or more specifically, the current tab). We have access to every Javascript
+    function and variables defined in the context.
+
+
+    In this example, the webpage we are scraping has a fixed 20 rows in the first
+    load. So if our browser is too big, we won''t be able to scroll. This "mistake"
+    was made on purpose. To do that, we must use our Chrome instance to operate with
+    a small window size !
+
+
+    > *1 https://developer.mozilla.org/en-US/docs/Web/API/Window
+
+    *2 https://developer.mozilla.org/en-US/docs/Web/API/scrollTo'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# Dealing with Javascript\n\nInfinite scroll with headless Chrome\n\n```\n\
+    String ChromeDriverPath = \"/path/to/chromedriver\";\nSystem.setProperty(\"webdriver.chrome.driver\"\
+    , ChromeDriverPath);\nChromeOptions options = new ChromeOptions();\noptions.addArguments(\"\
+    --headless\", \"--disable-gpu\", \"--ignore-certificate-errors\", \"--silent\"\
+    );\n// REALLY important option here, you must specify a small window size t\\\
+    no be visible\noptions.addArguments(\"window-size=600,400\");\n```\n\n```\nWebDriver\
+    \ driver = new ChromeDriver(options);\nJavascriptExecutor js = (JavascriptExecutor)\
+    \ driver;\nint pageNumber = 5;\n```\n\n```\ndriver.get(\"https://www.javascriptscrapingsbox.com/product/infinite_scroll\"\
+    );\nfor(int i = 0; i < pageNumber; i++){\n    js.executeScript(\"window.scrollTo(0,\
+    \ document.body.scrollHeight)\");\n    // There are better ways to wait, like\
+    \ using the WebDriverWait object\\n    Thread.sleep(1200);\n}\nList<WebElement>\
+    \ rows = driver.findElements(By.xpath(\"//tr\"));\n\n// do something with the\
+    \ row list\nprocessLines(rows);\n```\n\n```\ndriver.quit();\n```\n\n# Executing\
+    \ a Javascript function\n\nThe second way of doing this, is inspecting the Javascript\
+    \ code to understand how the infinite scroll is built, to this, as usual, right\
+    \ click + inspect to open"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "# Dealing with Javascript\n\nthe Chrome Dev tools, and find the <script> tag\
+    \ that contains the Javascript code:\n\nJavascript code\n\n```\n$(document).ready(function()\
+    \ {\n  var win = $(window);\n  var page = 1 ;\n  var apiUrl = '/product/api/'\
+    \ + page ;\n\n// Each time the user scrolls\n\nvar updatePage = function(){\n\
+    \  apiUrl = apiUrl.replace(String(page), \"\");\n  page = page + 1;\n  apiUrl\
+    \ = apiUrl + page;\n}\nnvar drawNextLines = function() {\n  win.data('ajaxready',\
+    \ false);\n  $.ajax({\n    url: url,\n    dataType: 'json',\n    success: function(json)\
+    \ {\n      for(var i = 0; i < json.length; i++){\n        var tr = document.createElement('tr');\n\
+    \        var tdName = document.createElement('td');\n        var tdUrl = document.createElement('td');\n\
+    \        var tdPrice = document.createElement('td');\n\n        tdName.innerText\
+    \ = json[i].name;\n        tdUrl.innerText = json[i].url;\n        tdPrice.innerText\
+    \ = json[i].price;\n\n        tr.appendChild(tdName);\n        tr.appendChild(tdUrl);\n\
+    \        tr.appendChild(tdPrice);\n      }\n    }\n  });\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# Dealing with Javascript\n\n```\nvar table = document.getElementById('table');\n\
+    table.appendChild(tr);\n\n}\nwin.data('ajaxready', true);\nif(url == '/product/api/1'\
+    \ && url != '/product/api/2')\n{\n    updatePage();\n}\n}\n$('#loading').hide();\n\
+    }\ndrawNextLines('/product/api/1');\ndrawNextLines('/product/api/2');\n```\n\n\
+    page = 3 ;\napiUrl = '/product/api/3';\n\n// need to update the \"ajaxready\"\
+    \ variable not to fire multiple ajax calls\nwhen scrolling like crazy\nwin.data('ajaxready',\
+    \ true).scroll(function() {\n// End of the document reached?\nif (win.data('ajaxready')\
+    \ == false) return;\n\n// fire the ajax call when we are about to \"touch\" the\
+    \ bottom of the e page\n// no more data 20 pages\nif (win.scrollTop() + win.height()\
+    \ > $(document).height() - 100 &&\npage < 20) {\n    $('#loading').show();\ndrawNextLines(apiUrl);"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '```
+
+    }
+
+    ));
+
+    ));
+
+    ```
+
+
+    You don''t have to understand everything there, the only information that is interesting
+    is that each time we scroll near the bottom of the page (100 pixels to be precise)
+    the drawNextLines() function is called. It takes one argument, a URL with this
+    pattern /product/api/id which will return 10 more rows.
+
+
+    Let''s say we want 50 more rows on our table. Basically we only have to make a
+    loop and call drawNextLines() five times. If you look closely at the Javascript
+    code, when the AJAX call is loading, we set the variable ajaxready to false. We
+    could check the status of this variable, and wait until it is set to true.
+
+
+    # Calling a Javascript function
+
+
+    ```
+
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+
+    int pageNumber = 5;
+
+    ```
+
+
+    ```
+
+    driver.get("https://www.javawebscrapingsandbox.com/product/infinite_scroll");
+
+    // we start at i=3 because on the first load
+
+    ```
+
+
+    ```
+
+    List<WebElement> rows = driver.findElements(By.xpath("//tr"));
+
+    ```
+
+
+    ```
+
+    // do something with the rows
+
+    processLines(rows);
+
+    ```'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# Dealing with Javascript
+
+
+    # # The "best" way
+
+
+    My favorite way of scraping website using AJAX is to make the HTTP calls to the
+    REST API endpoint directly. In this case, it''s pretty easy to understand what
+    API to call, because the Javascript code is straightforward, and sometimes it
+    can be more complicated. A good method is to open the Chrome Dev tools, and look
+    what''s happening in the "network" tab.
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_76_0.png)
+
+
+    We can clearly see the API URL being called, and what the response looks like.
+    Then we can use HtmlUnit or any other HTTP client to perform the requests we want,
+    and parse the JSON response with the Jackson library for example.
+
+
+    Let''s say we want the first rows :'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "# Dealing with Javascript\n\n# Direct HTTP calls to the API\n\n```\nWebClient\
+    \ client = new WebClient();\nclient.getOptions().setJavaScriptEnabled(false);\n\
+    client.getOptions().setCssEnabled(false);\nclient.getOptions().useInsecureSSL(true);\n\
+    java.util.logging.Logger.getLogger(\"com.gargoyles\").setLevel(Level.OFF);\n```\n\
+    \n```\nfor (int i = 1; i < 5; i++) {\n    Page json = client.getPage(\"https://www.javawebscrapingsbox.com/product/api/\"\
+    \ + i);\n    parseJSON(json.getResponseBody().getContentAsString());\n}\n```\n\
+    \nThe API responds with a JSON array, like this one:\n\n```\nJSON response\n{\n\
+    \    id: 31,\n    name: \"Marmot Drop Line Men's Jacket, Lightweight 100-Weight\
+    \ Eater Fleece\",\n    price: \"74.96\",\n    url: \"https://www.amazon.com/gp/product/B075LC96R2/ref=ox_sc_sf_l_title_39?ie=UTF-8\"\
+    \n},\n{\n    id: 32,\n    name:ASUS ZenPad 3S 10.9 (2048x1536), 4GB RAM, eMMC,\
+    \ 5MP Front / 8MP Rear Camera, Android 6.0, Tablet, Titanium Gray (Z500M-C1-GR)\"\
+    ,\n    price: \"296.07\",\n    url: \"https://www.amazon.com/dp/B01MATMXZV?tag=thewire06-20\"\
+    \n}\n```"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# Dealing with Javascript\n\nid: 33,\nname: \"LG Electronics OLED65C7P 65-Inch\
+    \ 4K Ultra HD Smart OLED \\\nTV (2017 Model)\",\nprice: \"2596.99\",\nurl: \"\
+    https://www.amazon.com/gp/product/B01NAYM1TP/ref=ox_sc_sf_l1_title_35?ie=UTF8\"\
+    \n},\n\nHere is a simple way to parse this JSON array, loop over every element\
+    \ and print it to the console. In general, we don't want to do this, maybe you\
+    \ want to export it to a CSV file, or save it into a database...\n\nParsing the\
+    \ JSON response\n\n```\npublic static void parseJson(String jsonString) throws\
+    \ JsonProcessingException, IOException {\n    ObjectMapper mapper = new ObjectMapper();\n\
+    \    JsonNode rootNode = mapper.readTree(jsonString);\n    Iterator<JsonNode>\
+    \ elements = rootNode.elements();\n    while(elements.hasNext()){\n        JsonNode\
+    \ node = elements.next();\n        Long id = node.get(\"id\").asLong();\n    \
+    \    String name = node.get(\"name\").asText();\n        String price = node.get(\"\
+    price\").asText();\n        System.out.println(String.format(\"Id: %s - Name:\
+    \ %s - Price: %s\", id, name, price));\n    }\\}\n```"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# Dealing with Javascript
+
+
+    Here are some tips when working with JS rendered web pages:
+
+
+    +   - Try to find the hidden API using the network pane in Chrome Dev Tools
+
+    - Try to disable Javascript in your web browser, some websites switch to a server-side
+    rendering in this case.
+
+    - Look for a mobile version of the target website, the UI is generally easier
+    to scrape. You can check this using your own phone. If it works without redirecting
+    to a mobile URL (like https://m.example.com or https://mobile.example.com) try
+    to spoof the “User-Agent” request header in your request
+
+    - If the UI is tough to scrape, with lots of edge cases, look for Javascript variable
+    in the code, and access the data directly using the Selenium Javascript Executor
+    to evaluate this variable, as we saw earlier.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# # Captcha solving, PDF parsing, and OCR
+
+
+    In this chapter we are going to see several things, that can block you from scraping
+    websites / extracting information such as Captchas, data inside PDF and images.
+
+
+    # ## Captcha solving
+
+
+    **Completely Automated Public Turing test to tell Computers and Humans Apart**
+    is what captcha stands for. Captchas are used to prevent bots/scripts from accessing
+    and performing actions on website or applications. There are dozens of different
+    captcha types, but you should have seen at least these two:'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'Captcha solving, PDF parsing, and OCR
+
+
+    78
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_81_0.png)
+
+
+    Old Captcha
+
+
+    And this one:
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_81_1.png)
+
+
+    Gooogle ReCaptcha v2
+
+
+    The last one is the most used captcha mechanism, Google ReCaptcha v2. That’s why
+    we are going to see how to “break” these captchas.
+
+
+    The only thing the user has to do is to click inside the checkbox. The service
+    will then analyze lots of factors to determine if it a real user, or a bot. We
+    don’t know exactly how it is done, Google didn’t disclose this for obvious reasons,
+    but a lot of speculations has been made:'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# Captcha solving, PDF parsing, and OCR\n\n+   * Clicking behavior analysis:\
+    \ where did the user click ? Cursor acceleration\netc.\n* Browser fingerprinting\n\
+    * Click location (do you always click straight on the center, or is it random,\
+    \ like a normal user)\n* Browser history and cookies\n\nOld captchas like the\
+    \ first one, Optical Caracter Recognition and recent machine-learning frameworks\
+    \ offer an excellent solving accuracy (sometimes better than Humans...) but for\
+    \ Recaptcha v2 the easiest and more accurate way is to use third-party services.\n\
+    \nMany companies are offering Captcha Solving API that use real human operators\
+    \ to solve captchas, I don't recommend one in particular, but I have found 2captcha.com^43\
+    \ easy to use, reliable and cheap (it is $2.99 for 1000 captchas).\n\nUnder the\
+    \ hood, 2captcha and other similar APIs need the specific site-key and the target\
+    \ website URL, with this information they are able to get a human operator to\
+    \ solve the captcha.\n\n```\n<div class=\"field\">&gt;</div>\n<div class=\"field\"\
+    > \n<label for=\"recaptcha\">&gt;</label>\n<script src=\"https://www.google.com/recaptcha/api.js\"\
+    &gt;</script>\n<div class=\"g-recaptcha\" data-sitekey=\"6L6degfBUAAAAAAjNA5rk2ZitaXzd0m0ajluYZnXX\"\
+    \ -->\n  <div style=\"width:380px; height:78px;\"&gt;\n    <div>\n<iframe src=\"\
+    https://www.google.com/recaptcha/api2/anchor7ar?k=6L6degfBUAAAAAAjNA5W5nc2FuZi\"\
+    &gt; role=\"78\" frameborder=\"0\" scrolling=\"no\" sandbox=\"allow-forms allow-popups\
+    \ all\" frameid=\"1\"&gt;</iframe>\n    </div>\n  </div>\n</div>\n```\n\nTechnically\
+    \ the Recaptcha challenge is an iframe with some magical Javascript code and some\
+    \ hidden input. When you “solve” the challenge, by clicking or solving an image\
+    \ problem, the hidden input is filled with a valid token.\n\n> ^43https://2captcha.com?from=6028997"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# Captcha solving, PDF parsing, and OCR
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_83_0.png)
+
+
+    It is this token that interests us, and 2captcha API will send it back. We will
+    need to fill the hidden input with this token and submit the form.
+
+
+    The first thing you will need to do is to create an account on 2captcha.com⁴⁴
+    and add some fund.
+
+
+    You will then find your API key on the main dashboard.
+
+
+    As usual, I have set up an example webpage⁵⁵ with a simple form with one input
+    and a Recaptcha to solve:
+
+
+    > ⁴⁴https://2captcha.com?from=6028997
+
+
+    > ⁵⁵https://www.javascriptwebscrapingsandbox.com/captcha'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# Enter your name
+
+
+    Name
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_84_0.png)
+
+
+    Form + captcha
+
+
+    We are going to use Chrome in headless mode to post this form and HtmlUnit to
+    make the API calls to 2captcha (we could use any other HTTP client for this).
+    Now let''s code.
+
+
+    Instantiate WebDriver and WebClient
+
+
+    ```
+
+    final String API_KEY = "YOUR_API_KEY";
+
+    final String API_BASE_URL = "http://2captcha.com/";
+
+    final String BASE_URL = "https://www.javawebscrapingsandsbox.com/captcha/";
+
+
+    WebClient client = new WebClient();
+
+    client.getOptions().setJavaScriptEnabled(false);
+
+    client.getOptions().setCssEnabled(false);
+
+    client.getOptions().setInsecureSSL(true);
+
+    java.util.logging.Logger.getLogger("com.gargoylesoft").setLevel(Level.OFF);
+
+
+    // replace with your own chromedriver path
+
+    final String chromeDriverPath = "/usr/local/bin/chromedriver"
+
+    System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+
+    ```'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "# Captcha solving, PDF parsing, OCR\n\n```\nChromeOptions options = new ChromeOptions();\n\
+    options.addArguments(\"--headless\", \"--disable-gpu\", \"--window-size=1920\\\
+    n1200\",\"ignore-certificate-errors\", \"--silent\");\noptions.addArguments(\"\
+    --user-agent=Mozilla/5.0 (X11; Linux x86_64) App\\nWebKit/537.36 (KHTML, like\
+    \ Gecko) Ubuntu Chromium/60.0.3112.113 Chrome\\n/60.0.3112.113 Safari/537.36\"\
+    );\nWebDriver driver = new ChromeDriver(options);\n\ndriver.get(BASE_URL);\n```\n\
+    \nHere is some boilerplate code to instantiate both WebDriver and WebClient,\n\
+    along with the API URL and key. Then you will have to call the 2captcha API with\n\
+    the site-key, your API key, and the website URL, as documented [here]()..\nThe\
+    \ API is supposed to respond with a strange format, like this one:OK|123456.\n\
+    \nFinding the sitekey getting a job ID\n\n```\nString siteID = \"\";\nWebElement\
+    \ elem = driver.findElement(By.xpath(\"//div[@class='g-recaptcha\\na']\"));\n\
+    ```\n\n```\ntry {\n  siteID = elem.getAttribute(\"data-sitekey\");\n} catch (Exception\
+    \ e) {\n  System.out.println(\"Captcha div cannot be found or missing attrib\\\
+    nute-sitekey\");\n  e.printStackTrace();\n}\nString QUERY = String.format(\"sin.php?key=%s&method=userrecaptcha=goog\\\
+    nlekey=%s&pageurl=%s&here=now\",\n  API_BASE_URL, API_KEY, siteID, BASE_URL);\n\
+    Page response = client.getPage(QUERY);\nString stringResponse = response.getWebResponse().getAsAsString();\n\
+    String jobID = \"\";\nif(!stringResponse.contains(\"OK\"))\n```\n\n> https://2captcha.com/2captcha-api#solving_recaptcha_new"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "# Captcha solving, PDF parsing, and OCR\n\n```\nthrow new Exception(\"Error\
+    \ with 2captcha.com API, received : \" + st\\nringResponse);\nelse{\n  jobId =\
+    \ stringResponse.split(\"\\\")[1]);\n}\n```\n\nNow that we have the job ID, we\
+    \ have to loop over another API route to know when the ReCaptcha is solved and\
+    \ get the token, as explained in the documentation. It returns CAPCHA_NOT_READY\
+    \ and still the weirdly formatted OK|TOKEN when it is ready:\n\n# Solving the\
+    \ Captcha\n\n```\nString captchaToken = response.getWebResponse().getContentAsString().split(\"\
+    \\\")[1];\n```\n\nNote that it can take up to 1mn based on my experience. It could\
+    \ be a good idea to implement a safeguard/timeout in the loop because on occasions\
+    \ the captcha never gets solved. Now that we have the magic token, we just have\
+    \ to find the hidden input, fills it with the token, and submit the form. selenium\
+    \ API cannot fill hidden input, so we have to manipulate the DOM to"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "Captcha solving, PDF parsing, OCR 84\n\nmake the input visible, fills, make\
+    \ it hidden again so that we can click on the\nsubmit button:\n\n# Hidden input\n\
+    \n```\nJavascriptExecutor js = (JavascriptExecutor) driver ;\njs.executeScript(\"\
+    document\n  .getElementById('g-captcha-response').style.display = 'block');\\\
+    nWebWebElement textarea = driver.findElement(By\n  .xpath(\"textarea[@id='g-captcha-response']\"\
+    ));\n\ntextarea.sendKeys(captchaToken);\njs.executeScript(\"document\n  .getElementById('g-captcha-response').style.display\
+    \ = 'none');\\ndriver.findElement(By.id(\"name\")).sendKeys(\"Kevin\");\ndriver.getPageSource();\n\
+    driver.findElement(By.id(\"submit\")).click();\n```\n\n```\nif(driver.getPageSource().contains(\"\
+    your captcha was successfully submitted\")) {\n  System.out.println(\"Captcha\
+    \ successfully submitted !\");\n}else{\n  System.out.println(\"Error while submitting\
+    \ captcha\");\n}\n```\n\nAnd that's :) Generally, websites don't use Recaptcha\
+    \ for each HTTP\nrequests, but only for suspicious ones, or for specific actions\
+    \ like account\ncreation, etc. You should always try to figure out if the website\
+    \ is showing you\na captcha / Recaptcha because you made too many requests with\
+    \ the same IP\naddress or the same user-agent, or maybe you made too many requests\
+    \ per\nsecond.\n\nAs you can see, “Recaptcha solving” is really slow, the best\
+    \ way to “solve\"\nthis problem is by avoiding captchas in the first place !"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# PDF parsing
+
+
+    Adobe created the Portable Document Format in the early 90s. It is still heavily
+    used today for cross-platform document sharing. Lots of websites use PDF export
+    for documents, bills, manuals... And maybe you are reading this eBook in the PDF
+    format. It can be useful to know how to extract pieces of information from PDF
+    files, and that is what we are going to see.
+
+
+    I made a simple page^{47}, with a link to a PDF invoice. The invoice looks like
+    this:
+
+
+    > 47https://www.javawebscrapingsandbox.com/pdf'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: 'Captcha solving, PDF parsing, and OCR
+
+
+    # INVOICE
+
+
+    123-456-7890
+
+    no_reply@example.com
+
+
+    1234 Main Street
+
+    Anytown, State
+
+    ZIP
+
+
+    Attention: Trenz Pruca
+
+    Title
+
+    Company Name
+
+    4321 First invoice
+
+    Anytown, State ZIP
+
+    Date: 22/06/2018
+
+
+    Project Title: Project Name
+
+    Project Description: Description Here
+
+    P.O. Number: 12345
+
+    Invoice Number: 67890
+
+    Terms: 30 Days
+
+
+    | Description | Quantity | Unit Price | Cost |
+
+    | --- | --- | --- | --- |
+
+    | Item 1 | 55 € | 100 € | 5500 |
+
+    | Item 2 | 13 € | 90 € | 1170 |
+
+    | Item 3 | 25 € | 50 € | 1250 |
+
+    | | | | Subtotal € 7920 |
+
+    | | | Tax 8,25 % € 653 |
+
+    | | | | Total € 8573 |
+
+
+    We thank you for your business. It''s a pleasure to work with you on your project.
+
+    Your next order will ship in 30 days.
+
+
+    Sincerely yours,
+
+    Urna Semper
+
+
+    # Invoice
+
+
+    We are going to see how to download this PDF and extract information from it.
+
+
+    # Prerequisites
+
+
+    We will need HtmlUnit to get the webpage and download the PDF, and PDFBox library
+    to parse it.'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "Captcha solving, PDF parsing, and OCR\n\npom.xml\n\n```\n<dependency>\n  <groupId>org.apache.pdfbox</groupId>\n\
+    \  <artifactId>pdfbox</artifactId>\n  <version>2.0.4</version>\n</dependency>\n\
+    ```\n\n# Downloading the PDF\n\nDownloading the PDF is simple, as usual: * Go\
+    \ to the target URL * Find the specific anchor * Extract the download URL from\
+    \ the anchor * Use the Page object to get the PDF, since it is not an HTML page\
+    \ * Check the content type of what we just downloaded, to make sure it is an application/pdf\
+    \ * Copy the InputStream to a File\n\nHere is the code:\n\nDownloading the invoice\n\
+    \n```\nHtmlPage html = client.getPage(\"https://www.javawebscrapingbox.com\\npdf\"\
+    );\n```\n\n```\n// selects the first anchor which contains \"pdf\"\nHtmlAnchor\
+    \ anchor = html.getFirstXPath(\"//a[contains(@href, 'pdf')\");\nString pdfUrl\
+    \ = anchor.getHrefAttribute();\n```\n\n```\nPage pdf = client.getPage(pdfUrl);\n\
+    ```\n\n```\nif(pdf.getWebResponse().getContentType().equals(\"application/pdf\"\
+    )){\n  System.out.println(\"Pdf downloaded\");\n  IOUtils.copy(pdf.getWebResponse().getContentAsStream(),\n\
+    \    new FileOutputStream(\"invoice.pdf\"));\n  System.out.println(\"Pdf file\
+    \ created\");\n}\n```"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# Parsing the PDF
+
+
+    Now that we have the PDF file on disk, we can load it into PDFBox to extract the
+    content as a String. We are going to extract the price from this invoice.
+
+
+    Once we have the text content from the PDF, it is easy to extract anything from
+    it, using a regular expression. The text looks like this:
+
+
+    # Downloading the invoice
+
+
+    ```
+
+    Title
+
+    Company Name
+
+    4321 First Street
+
+    Anyytown, State ZIP
+
+    Date: 22/06/2018
+
+    Project Title: Project Name
+
+    Project Description: Description Here
+
+    P.O. Number: 12345
+
+    Invoice Number: 67890
+
+    Terms: 30 Days
+
+    Thank you for your business. It''s a pleasure to work with you on your p\nject.
+
+    Your next order will ship in 30 days.
+
+    Sincerely yours,
+
+    Urna Semper
+
+    Description Quantity Unit Price Cost
+
+    Item 1 55 € 100 € 5 500
+
+    Item 2 13 € 90 € 1 170
+
+    Item 3 25 € 50 € 1 250
+
+    Subtotal € 7 920
+
+    Tax 8,25 % € 653
+
+    Total € 8 573
+
+    !1
+
+    INVOICE
+
+    123-456-7890
+
+    no_reply@example.com
+
+    1234 Main Street
+
+    ```'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "Captcha solving, PDF parsing, and OCR\n\nAnytown, State\nZIP\nCOMPANY NAME\n\
+    \nWe have to loop over each line, and use a regular expression with a capturing\
+    \ group like this one: \"Total\\\\s+€\\s+(.+)\" to extract the total price. We\
+    \ could extract everything we want with another regex, like the email address,\
+    \ postal address, invoice number...\n\nHere is the full code:\n\n# Scrapping the\
+    \ Invoice\n\n```\nPDDocument document = null;\ntry{\n    document = PDDocument.load(new\
+    \ File(\"invoice.pdf\"));\n\n    PDFTextStripperByArea stripper = new PDFTextStripperByArea();\n\
+    \    stripper.setSortByPosition(true);\n\nPDFTextStripper tStripper = new PDFTextStripper();\n\
+    \n    String stringPdf = tStripper.getText(document);\n    String lines[] = stringPdf.split(\"\
+    \\\\n\");\n    String pattern = \"Total\\\\s+€\\\\s+(.+)\";\n    Pattern p = Pattern.compile(pattern);\n\
+    \    String price = \"\";\n    for (String line : lines) {\n        Matcher m\
+    \ = p.matcher(line);\n        if(m.find(){\n            price = m.group(1);\n\
+    \        }\n    }\n\n    if(!price.isEmpty(){\n        System.out.println(\"Price\
+    \ found: \" + price);\n    }else{\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "```\nSystem.out.println(\"Price not found\");\n}\nfinally{\n  if(document !=\
+    \ null){\n    document.close();\n  }\n}\n```\n\nThere are many methods in the\
+    \ PDFBox library, you can work with password protected PDF, extract specific text\
+    \ area, and many more, here is the [documentation⁴⁸](https://pdfbox.apache.org/docs/2.0.8/javadocs/)\
+    \ .\n\n# # Optical Caracter Recognition\n\nNow that we saw how to deal with PDF,\
+    \ we are going to see how to handle text inside images. Using text inside images\
+    \ is an obfuscation technique aimed to make the extraction difficult for bots.\
+    \ You can often find these techniques on blogs or marketplaces to “hide” an email\
+    \ address/phone number.\n\nExtracting text from an image is called \"Optical Caracter\
+    \ Recognition\" or OCR. There are many OCR library available, but we are going\
+    \ to use [Tesseract⁴⁹](https://github.com/tesseract-ocr/tesseract) which is one\
+    \ of the best open source OCR library.\n\n# # Installation\n\nInstalling Tesseract\
+    \ and all dependencies is really easy, on linux:\n\n⁴⁸https://pdfbox.apache.org/docs/2.0.8/javadocs/\n\
+    ⁴⁹https://github.com/tesseract-ocr/tesseract/"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "Captcha solving, PDF parsing, and OCR\n\n```\nsudo apt install tesseract-ocr\n\
+    sudo apt install libtesseract-dev\n\n```\n\nAnd on macOS:\n\n```\nbrew install\
+    \ tesseract “”\n```\n\nMore information about installing Tesseract with specific\
+    \ tags can be found here^{50}\n\nTesseract is written in C++, so we need some\
+    \ kind of Java bindings. We are going to use the http://bytededco.org/ bindings:\n\
+    \npom.xml\n\n```\n<dependency>\n  <groupId>org.bytedeco.javacpp-presets</groupId>\n\
+    \  <artifactId>tesseract-platform</artifactId>\n  <version>3.05.01-1.4.1</version>\n\
+    </dependency>\n```\n\n# Tesseract example\n\nI took a screenshot of the previous\
+    \ PDF:\n\n> 50}https://github.com/tesseract-ocr/tesseract/wiki"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# Project Title: Project Name\nProject Description: Description Here\nP.O.\
+    \ Number: 12345\nInvoice Number: 67890\nTerms: 30 Days\n\n# OCR example\n\nLet's\
+    \ say we want to extract the invoice number.\nThe first thing is to locate your\
+    \ tessdata folder, it contains everything tesseract needs to recognize language\
+    \ specific characters. The location will vary depending on how you installed tesseract.\n\
+    \nfinal static String TESS_DATA_PATH = \"/path/to/tessdata\" ;\n\nHere is the\
+    \ full code:\n\nOCR example\n\n```\nBytePointer api outText;\nTessBaseAPI api\
+    \ = new TessBaseAPI();\n\nif (api.Init(TESS_DATA_PATH, \"ENG\") != 0) {\n    System.err.println(\"\
+    Could not initialize tesseract.\");\n    System.exit(1);\n}\n```\n\n```\nPIX image\
+    \ = lept.pixRead(\"ocr_exemple.jpg\");\napi.SetImage(image);\n```"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Captcha solving, PDF parsing, and OCR
+
+
+    ```
+
+    // Get OCR result
+
+    outText = api.getUTF8Text();
+
+    String string = outText.getString();
+
+    String invoiceNumber = "";
+
+    for(String lines : string.split("\n
+
+    ```
+
+
+    ```
+
+    // Destroy object used and release memory
+
+    api.End();
+
+    outext.deallocate();
+
+    lept.pixDestroy(image);
+
+    ```
+
+
+    This was just an example on how to use Tesseract for simple OCR, I''m not an expert
+    on OCR and image processing, but here are some tips:
+
+
+    +   *   Initialize Tesseract with the right language. Image processing: image
+    cropping, different contrasts, re-scaling, border removal... can significantly
+    improve the quality of the Tesseract output. You can use some options like api.SetVariable("tessited_char_whitelist",
+    "0123456789,") to only include numerical characters. This will avoid confusion
+    instead of i see the documentation⁵¹ for more informations about this.
+
+
+    > ⁵¹https://github.com/tesseract-ocr/tesseract/wiki'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# Stay under cover
+
+
+    In this chapter, we are going to see how to make our bots look like Humans. For
+    various reasons, there are sometimes anti-bot mechanisms implemented on websites.
+    The most obvious reason to protect sites from bots is to prevent heavy automated
+    traffic to impact a website’s performance. Another reason is to stop bad behavior
+    from bots like spam.
+
+
+    There are various protection mechanisms. Sometimes your bot will be blocked if
+    it does too many requests per second / hour / day. Sometimes there is a rate limit
+    on how many requests per IP address. The most difficult protection is when there
+    is a user behavior analysis. For example, the website could analyze the time between
+    requests, if the same IP is making requests concurrently.
+
+
+    You won’t necessarily need all the advice in this chapter, but it might help you
+    in case your bot is not working, or things don’t work in your Java code the same
+    as it works with a real browser.
+
+
+    # Headers
+
+
+    In Chapter 3 we introduced HTTP headers. Your browser includes systematically
+    6-7 headers, as you can see by inspecting a request in your browser network inspector:'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# Stay under cover
+
+
+    Request Headers
+
+    -authority: www.javascriptwebscrapinghandler.com
+
+    -method: GET
+
+    -path: /
+
+    -scheme: https
+
+    -accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*;q=0.8
+
+    -accept-encoding: gzip, deflate, br
+
+    -accept-language: en-US,q=0.8,fr-FR;q=0.6
+
+    -cache-control: no-cache
+
+    -cookie: _ga_1.252764229.153821755-_Ga_1.2.251756985-_ga_gat_ua_UA_108465012-1
+
+    -pragma: no-cache
+
+    -upgrade-requests: 1
+
+    user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36
+    (KHTML, like Gecko) Safari/537.36
+
+
+    If you don''t send these headers in your request, the target server can easily
+    recognize your request is not sent from a regular web browser. If the server has
+    some kind of anti-bot mechanism, different things can happen: * The HTTP response
+    can change * Your IP address could be blocked * Captcha * Rate limit on your requests
+
+
+    # HttpClient provides a simple way to customize your HTTP client''s headers
+
+
+    InitClient with request headers
+
+
+    ```
+
+    HttpClient = new HttpClient();
+
+    client.addRequestHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*;q=0.8");
+
+    client.addRequestHeader("Accept-Encoding", "gzip, deflate, br");
+
+    client.addRequestHeader("Accept-Language", "en-US,q=0.9,fr-FR;q=0.8,fr;q=0.7,la;q=0.6");
+
+    client.addRequestHeader("Connection", "keep-alive");
+
+    client.addRequestHeader("Host", "ksah.in");
+
+    client.addRequestHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X
+    10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396/99 Safari/537.36");
+
+    client.addRequestHeader("Pragma", "no-cache");
+
+    ```
+
+
+    We could go further, and assign a random User-Agent to our HttpClient. Randomizing
+    user-agents will help to hide your bot. A good solution is to create a list of
+    common User-Agents and pick a one.'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: 'Stay under cover
+
+
+    96
+
+
+    You can find such a list here https://developers.whatismybrowser.com/agents/explore
+
+
+    We could create a file with lot of different user agents:
+
+
+    user-agents.txt
+
+
+    ```
+
+    Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.111
+    Safari/535.1
+
+    Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.111
+    Safari/535.1
+
+    Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64
+    Safari/537.31
+
+    Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116
+    Safari/537.36
+
+    Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116
+    Safari/537.36
+
+    Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89
+    Safari/537.1
+
+    Mozilla/5.0 (Windows; Windows NT 6.1; en-US) AppleWebKit/532.2 (KHTML, like Gecko)
+    Chrome/4.0.221.7 Safari/532.2
+
+    Mozilla/5.0 (Windows; Windows NT 5.1; en-US) AppleWebKit/525.13 (KHTML, like Gecko)
+    Chrome/0.2.149.22 Safari/525.13
+
+    Mozilla/5.0 (Windows NT 5.1; rv:5.0.1) Gecko/20100101 Firefox/5.0
+
+    Mozilla/5.0 (Windows NT 6.1; rv:5.0) Gecko/20100101 Firefox/5.0
+
+    Mozilla/5.0 (Windows NT 6.1; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0
+
+    Mozilla/5.0 (Windows NT 6.1; rv:2.0b7pre) Gecko/20100921 Firefox/4.0b7p
+
+    Mozilla/5.0 (X11; Linux x86; fr-fr) Gecko/20100423 Ubuntu/10.04 (linux) Firefox/3.6.3
+    AppleWebKit/532.4 Safari/532.4
+
+    Mozilla/5.0 (Windows; Windows NT 5.1; rv:1.9.0.11) Gecko/2009060 Firefox/3.0.11
+
+    Mozilla/5.0 (Windows; Windows NT 5.1; en-US; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3
+    GTB
+
+    ```
+
+
+    And then a little helper method that reads this file, and returns a random user
+    agent:'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "Stay under cover\n\n# Random user agent method\n\n```\nprivate static String\
+    \ getRandomUseragent() {\n    List<String> userAgents = new ArrayList<String>();\n\
+    \    Random rand = new Random();\n    try (BufferedReader br = new BufferedReader(new\
+    \ FileReader(FILENAME))) {\n        String sCurrentLine;\n        while ((sCurrentLine\
+    \ = br.readLine()) != null) {\n            userAgents.add(sCurrentLine);\n   \
+    \     }\n    } catch (IOException e) {\n        e.printStackTrace();\n    }\n\
+    \    return userAgents.get(rand.nextInt(userAgents.size()));\n}\n```\n\nWe can\
+    \ then assign a random user agent to the WebClient instance:\n\nSet user-agent\n\
+    \n```\nclient.addRequestHeader(\"User-Agent\", getRandomUseragent());\n```\n\n\
+    # Proxies\n\nThe easiest solution to hide our scrapers is to use proxies. In combination\
+    \ with random user-agent, using a proxy is a powerful method to hide our scrapers,\
+    \ and scrape rate-limited web pages. Of course, it’s better not be blocked in\
+    \ the first place, but sometimes websites allow only a certain amount of request\
+    \ day / hour.\n\nIn these cases, you should use a proxy. There are lots of free\
+    \ proxy list, I don’t recommend using these because there are often slow, unreliable,\
+    \ and"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: 'Stay under cover
+
+
+    websites offering these lists are not always transparent about where the proxies
+    are located. Sometimes the public proxy list is operated by a legit company, offering
+    premium proxies, and sometimes not... What I recommend is using a paid proxy service,
+    or you could build your own.
+
+
+    Setting a proxy to HtmlUnit is easy:
+
+
+    ```
+
+    ProxyConfig proxyConfig = new ProxyConfig("host", myPort);
+
+    client.getOptions().setProxyConfig(proxyConfig);
+
+    ```
+
+
+    Scrapy^52 is a great open source API, allowing you to build a proxy API on top
+    of different cloud providers.
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_101_0.png)
+
+
+    Scrapy creates a proxy pool by creating instances on various cloud providers (AWS,
+    OVH, Digital Ocean). Then you will configure HtmlUnit or any HTTP client with
+    the Scrapy
+
+
+    URL, and it will automatically assign a proxy inside the proxy pool.
+
+
+    You can configure Scrapy to fit your needs, and set a minimum / maximum instance
+    number, manage blacklisting of course, either within the configuration file, for
+    example you could blacklist any proxy receiving a 503 HTTP response or programmatically
+    with the REST API, in case the website blocks you with a Captcha, or a special
+    web page.
+
+
+    # TOR: The Onion Router
+
+
+    > ^52http://scrapoxy.io/'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: 'Stay under cover
+
+
+    TOR, also known as The Onion Router⁵³ is a world-wide computer network designed
+    to route traffic through many different servers to hide its origin. TOR usage
+    makes network surveillance very difficult. There are a lot of use cases for TOR
+    usage, such as privacy, freedom of speech, journalists in dicta-
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_102_0.png)
+
+
+    https://www.torproject.org/
+
+
+    torship regime, and of course, illegal activities.
+
+
+    In the context of web scraping, TOR can hide your IP address, and change your
+    bot''s IP address every 10 minutes. The TOR exit nodes IP addresses are public.
+    Some websites block TOR traffic using a simple rule: if the server receives a
+    request from one of TOR public exit node, it will block it. That''s why in many
+    cases, TOR won''t help you, compared to classic proxies.
+
+
+    Using TOR is really easy, go to the download page, or using your package manager,
+    on macOS:
+
+
+    ```
+
+    brew install tor
+
+    ```
+
+
+    Then you have to launch to TOR daemon, and set the proxy config for the WebClient
+
+
+    > ⁵³https://www.torproject.org/'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: 'Stay under cover
+
+
+    100
+
+
+    Random user agent method
+
+
+    ```
+
+    WebClient webClient = new WebClient();
+
+    ProxyConfig prc = new ProxyConfig("localhost", 9150, true);
+
+    webClient.getOptions().setProxyConfig(prc);
+
+    ```
+
+
+    # Tips
+
+
+    # Cookies
+
+
+    Cookies are used for lots of reasons, as discussed earlier. If you find that the
+    target website is responding differently with your bots, try to analyze the cookies
+    that are set by client-side Javascript code and inject them manually. You could
+    also use Chrome with the headless mode for better cookie handling.
+
+
+    # Timing
+
+
+    If you want to hide your scrapers, you have to behave like a human. Humans don’t
+    click on links 0.2 seconds after arriving to a web page. They don’t click on each
+    link every 5 seconds too. Add some random time between your requests to hide your
+    scrapers.
+
+
+    Fast scraping is not a good practice. You will get blocked, and if you do this
+    on small websites it will put a lot of pressure on the website’s servers, it can
+    even be illegal in some cases, as it can be considered like an attack.
+
+
+    # Invisible elements
+
+
+    Invisible elements is a technique often used to detect bot accessing and crawling
+    a website. Generally, one or more elements are hidden with CSS and there is some
+    code that notifies the website’s server if there is a click on'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "Stay under cover\n\nthe element, or a request to a hidden link. Then the server\
+    \ will block the bot’s IP address.\n\nA good way to avoid this trap is to use\
+    \ the isDisplayed() method with the Selenium API.\n\n# Interacting with visible\
+    \ elements only\n\n```\nWebElement elem = driver.findElement(By.xpath(\"//div[@class='something']\"\
+    ));\nif(elem.isDisplayed()) {\n    // do something\n}\n```\n\nAnother technique\
+    \ is to include hidden inputs in a form. If you have problems submitting a form\
+    \ that contains hidden inputs, make sure you include those inputs in your request,\
+    \ and don’t modify their value.\n\n# Hidden input\n\n```\n<form>\n  <input type=\"\
+    hidden\" name=\"itsatrap\" value=\"value1\"/>\n  <input type=\"text\" name=\"\
+    email\"/>\n  <input type=\"submit\" value=\"Submit\"/>\n</form>\n```"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# Cloud scraping
+
+
+    # Serverless
+
+
+    In this chapter, we are going to introduce serverless deployment for our bots.
+    Serverless is a term referring to the execution of code inside ephemeral containers
+    (Function As A Service, or FaaS). It is a hot topic in 2018, after the “micro-service”
+    hype, here come the “nano-services”!
+
+
+    Cloud functions can be triggered by different things as:
+
+
+    +   - An HTTP call to a REST API
+
+    - A job in message queue
+
+    - A log
+
+    - IOT event
+
+
+    Cloud functions are a really good fit for web scraping for many reasons. Web Scraping
+    is I/O bound, most of the time is spent waiting for HTTP responses, so we don’t
+    need high end CPU servers. Cloud functions are cheap and easy to setup. Cloud
+    function are a good fit for parallel computing, we can create hundreds or thousands
+    of function at the same time for large scale scraping.'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# Deploying an Azure function
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_106_0.png)
+
+
+    We are going to deploy a scraper into Azure cloud function. I don''t have any
+    preferred vendor, AWS Lambda is a great platform too. Google Cloud doesn''t support
+    Java at the moment, only Node.js.
+
+
+    We are going to re-use the Hacker news scraper we built in chapter 3 and implement
+    a little API on top of it, so that we will be able to call this API with a page
+    parameter, and the function will return a JSON array of each hacker news item
+    for this page number.
+
+
+    # Prerequisites
+
+
+    You will need :
+
+
+    +   - JDK 8
+
+    - Maven 3+
+
+    - Azure CLI54
+
+
+    > 54https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: 'Cloud scraping
+
+
+    +   * Azure function tools⁵55
+
+    * Azure Account⁵56
+
+
+    There are platform-specific instructions for each Azure component installation,
+    I suggest you go through instructions carefully.
+
+
+    Once everything is installed on your system, make sure to log in with the Azure
+    CLI:
+
+
+    ```
+
+    az login
+
+    ```
+
+
+    # Creating, running and deploying a project
+
+
+    We are going to use a Maven archetype⁵⁷ to create the project structure:
+
+
+    Maven archetype
+
+
+    ```
+
+    mvn archetype:generate \
+
+    -DarchetypeGroupId=com.microsoft.azure \
+
+    -DarchetypeArtifactId=azure-functions-archetype
+
+    ```
+
+
+    Then Maven will ask you details about the project. The generated code is concise
+    and straightforward:
+
+
+    > ⁵⁵https://docs.microsoft.com/en-us/azure/azure-functions/run-local#v2
+
+    ⁵⁶https://azure.microsoft.com/en-us/free/
+
+    ⁵⁷https://maven.apache.org/guides/introduction/introduction-to-archetypes.html'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# Cloud scraping\n\n# Auto generated function\n\n```\npublic class Function\
+    \ {\n  /**\n   * This function listens at endpoint \"api/hello\". Two ways to\
+    \ invoke it using \"curl\" command in bash:\n   * 1. curl -d \"HTTP Body\" {your\
+    \ host}/api/hello\n   * 2. curl {your host}/api/hello?name=HTTP%20Query\n   */\n\
+    \  @Function(\"hello\")\n  public HttpResponse<String> hello(\n      @HttpTrigger(name\
+    \ = \"req\", methods = {GET}, authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage<Optional<String>>\
+    \ request,\n      final ExecutionContext context) {\n      context.getLogger().info(\"\
+    Java HTTP trigger processed a request!\");\n\n      // Parse query parameter\n\
+    \      String query = request.getParameters().get(\"name\");\n      String name\
+    \ = request.getBody().orElse(query);\n\n      if (name == null) {\n          return\
+    \ request.createResponse(400, \"Please pass a name on the query or in the request\
+    \ body\");\n      } else {\n          return request.createResponse(200, \"Hello,\
+    \ \" + name);\n      }\n  })\n```\n\nThe generated code does not protect the API.\
+    \ The AuthorizationLevel.ANONYMOUS means anyone can call the route. To implement\
+    \ an authorization mechanism in your function, read the Azure documentation on\
+    \ the subject."
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: 'Cloud scraping
+
+
+    You can then test and run the generated code:
+
+
+    ```
+
+    mvn clean package
+
+    mvn azure-functions:run
+
+    ```
+
+
+    There might be some errors if you didn’t correctly install the previous requirements.
+
+    Deploying your Azure Function is as easy as:
+
+
+    ```
+
+    mvn azure-functions:deploy
+
+    ```
+
+
+    Azure will create a new URL for your function each time you deploy your app.
+
+    The first invocation will be very slow, it can sometimes take up to one minute.
+    This “issue” is called cold start. The first time you invoke a function, or when
+    you have’t called a function for a “long” time (i.e several minutes), Azure has
+    to:
+
+
+    +   - spin a server
+
+    - configure it
+
+    - load your function code and all the dependencies
+
+
+    and then it can run your code.
+
+    When the app is warm, it has just to run your code, and it will be much much faster.
+    If the cold start is an issue for you, you can use the dedicated mode.
+
+    More information about this subject can be found here58.
+
+    You can see your function and the logs in your Azure Dashboard:
+
+
+    > 58https://blogs.msdn.microsoft.com/appservicerviceam/2018/02/07/understanding-serverless-cold-start/'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# # Cloud scrapping
+
+
+    107
+
+
+    ![](img/cbd5c820756a64b88207a1ea9f1c877b_110_0.png)
+
+
+    https://azure.microsoft.com/
+
+
+    # # Updating the function
+
+
+    page number parameter, and handle the case where a numeric value is passed.
+
+
+    Basically, we just change the function name from hello to hitknits and the request
+    parameter from name to pageNumber.
+
+
+    The HNSraper class is a slightly modified version of the code in chapter 3. The
+    method scrape takes a pageNumber and returns a JSON Array of all hacker items
+    for this page. You can find the full code in the repository.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "# Cloud scraping\n\n# Function hnitems\n\n```\n@FunctionName(\"hnitemessage\"\
+    )\npublic HttpResponseMessage<String> hnitems(\n    @HttpTrigger(name = \"req\"\
+    , methods = {\"get\"}, authLevel = AuthorizationLevel.ANONYMOUS) HttpRequestMessage<Optional<String>>\
+    \ request,\n    final ExecutionContext context) {\n    context.getLogger().info(\"\
+    Java HTTP trigger processed a request.\");\n\n    // Parse query parameter\n \
+    \   String pageNumber = request.getQueryParameters().get(\"pageNumber\");\n\n\
+    \    if (pageNumber == null) {\n        return request.createResponse(400, \"\
+    Please pass a packageName on the query string\");\n    } else if (!StringUtils.isNumeric(pageNumber))\
+    \ {\n        return request.createResponse(400, \"Please pass a numeric packageName\
+    \ on the query string\");\n    } else {\n        HNScraper scraper = new HNScraper();\n\
+    \        String json;\n        try {\n            json = scraper.scrape(pageNumber);\n\
+    \        } catch (JsonProcessingException e) {\n            e.printStackTrace();\n\
+    \            return request.createResponse(500, \"Internal Server Error while\
+    \ processing HN items: \");\n        }\n        return request.createResponse(200,\
+    \ json);\n    }\n}\n```\n\nYou can now deploy the updated code using:"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "Cloud scraping\n\nmvn clean package\nmvn azure-functions:deploy\n\nYou should\
+    \ have your function URL in the log. It's time to test our modified\nAPI (replace\
+    \ ${function_url} with your own URL)\n\ncurl https://$(function_url)/api/nitems?pageNumber=3\n\
+    \nAnd it should respond with the corresponding JSON Array:\n\n# Json Response\n\
+    \n```\n[\n  {\n    \"title\": \"Nvidia Can Artificially Create Slow Motion That\
+    \ Is Better Than a 300K FPS Camera (vice.com)\",\n    \"url\": \"https://motherboard.vice.com/en_us/article/ywejmy/nvidi-a-ai-slow-motion-better-than-a-30000-fps-camera\"\
+    ,\n    \"author\": \"jedberberg\",\n    \"score\": 27,\n    \"position\": 121,\n\
+    \    \"id\": \"17597105\"\n  },\n  {\n    \"title\": \"Why fundraising is a terrible\
+    \ experience for founders : Lessons learned (kapwing.com)\",\n    \"url\": \"\
+    https://www.kapwing.com/blog/the-terrible-truths-of-fundraising/\",\n    \"author\"\
+    : \"jenthoven\",\n    \"score\": 74,\n    \"position\": 122,\n    \"id\": \"17594807\"\
+    \n  },\n  {\n    \"title\": \"Why No HTTPS? (whynohtttps.com)\",\n    \"url\"\
+    : \"https://whynohtttps.com\"\n  }\n]\n```"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# Cloud scraping
+
+
+    ```
+
+    "author": "iafrikan",
+
+    "score": 62,
+
+    "position": 123,
+
+    "id": 17599022
+
+    }
+
+    ```
+
+
+    This is it. Instead of returning the JSON array, we could store it in the different
+    database systems supported by Azure.
+
+
+    I suggest you experiment, especially around messaging queues. An interesting architecture
+    for your scraping project could be to send jobs into a message queue, let Azure
+    function consume these jobs, and save the results into a database. You can read
+    more about this subject here59
+
+
+    The possibilities of Azure and other Cloud providers like Amazon Web Service are
+    endless and easy to implement, especially serverless architecture, and I really
+    recommend you to experiment with these tools.
+
+
+    # Conclusion
+
+
+    This is the end of this guide. I hope you enjoyed it. You should now be able to
+    write your own scrapers, inspect the DOM and network request, deal with Javascript,
+    reproduce AJAX calls, beat Captcha and Recaptcha, hide your scrapers with different
+    techniques, and deploy your code in the cloud!
+
+
+    This book will never be finished, as I get much feedback from my readers. There
+    are many chapters I would like to add. More case study, a chapter about the legal
+    side of web scraping, a chapter about multithreaded scraping etc. If there is
+    enough people interested, I will maybe create a full video course you ;)
+
+
+    I made a Google Form60 to get feedback from my readers, I would really appreciate
+    if you could answer it !
+
+
+    > 59https://docs.microsoft.com/en-us/azure/functions/functions/create-storage-queue-triggered-function
+
+    60https://docs.microsoft.com/forms/d/e1FALQlSeis42-NHXeFjFeRLQ6L82-YawEb6AlBrOWsN0F4lzZsPpz6ug/view'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: 'You can send me an email at hi@ksah.in and also find me on Twitter$^{61}$!
+
+    Kevin
+
+
+    $^{61}$https://twitter.com/SahinKevin'
+  merge: -1
+  pgno: 114
