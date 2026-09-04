@@ -1,0 +1,522 @@
+- - '#'
+  - Oracle Java Cloud 上的 Java EE 应用：开发、部署、监控与管理你的 Java 云应用
+- - '##'
+  - 在 OraclePressBooks.com 加入 Oracle Press 社区
+- - '##'
+  - 立即加入 Oracle Press 社区并享受以下福利：
+- - '##'
+  - 关于作者
+- - '#'
+  - 索引 ... 253
+- - '#'
+  - 前言
+- - '#'
+  - 引言
+- - '#'
+  - 目标读者
+- - '#'
+  - 第1章：Java EE与云计算 3
+- - '##'
+  - 'Java EE '
+- - '##'
+  - 应用服务器
+- - '##'
+  - 开源 vs 商业
+- - '##'
+  - 注意
+- - '##'
+  - 'Oracle Java Cloud 上的 Java EE '
+- - '##'
+  - Oracle Java Cloud 上的 Java EE 应用
+- - '##'
+  - Java 社区进程 (JCP) 与 Java EE
+- - '###'
+  - 私有云、公有云和混合云
+- - '##'
+  - Oracle Java 云上的 Java EE 应用
+- - '##'
+  - 标准与 Java EE
+- - '##'
+  - Java EE 供应商及替代方案
+- - '#'
+  - 第1章：Java EE 与云计算 21
+- - '##'
+  - NetBeans
+- - '#'
+  - 第 2 章：Oracle Java Cloud 37
+- - '##'
+  - 用户与角色
+- - '##'
+  - Oracle Java Cloud 上的 42 Java EE 应用
+- - '##'
+  - 图 2-15. 用户
+- - '##'
+  - 图 2-16. 用户角色
+- - '#'
+  - 第 3 章：使用 NetBeans 51 构建与部署
+- - '##'
+  - 使用 Java EE 技术进行构建
+- - '##'
+  - 第一个 NetBeans 项目
+- - '##'
+  - Oracle Java Cloud 上的 Java EE 应用程序
+- - '##'
+  - 第 3 章：使用 NetBeans 53 构建与部署
+- - '##'
+  - 发生了什么？
+- - '#'
+  - 第 3 章：使用 NetBeans 57 构建和部署
+- - '##'
+  - 列表 3-2：Oracle Cloud 远程部署日志
+- - '##'
+  - 生成的文件和目录
+- - '##'
+  - 云端部署
+- - '##'
+  - Oracle Java Cloud 62 Java EE 应用程序
+- - '##'
+  - 应用程序打包
+- - '##'
+  - 我们正处于“战争”中
+- - '##'
+  - 第 3 章：使用 NetBeans 构建和部署 63
+- - '##'
+  - 总结
+- - '##'
+  - 第 4 章
+- - '##'
+  - Servlets、过滤器和监听器
+- - '##'
+  - Oracle Java Cloud 66 Java EE 应用程序
+- - '##'
+  - Servlets
+- - '##'
+  - 第 4 章：Servlets、过滤器和监听器 67
+- - '##'
+  - Servlet 接口
+- - '##'
+  - HttpServlet
+- - '##'
+  - Servlet 基础
+- - '##'
+  - Servlet 类
+- - '###'
+  - HttpServletRequest
+- - '###'
+  - HttpServletResponse
+- - '##'
+  - web.xml
+- - '#'
+  - 74 基于 Oracle Cloud 的 Java EE 应用程序
+- - '##'
+  - '列表 4-1: web.xml'
+- - '##'
+  - weblogic.xml
+- - '##'
+  - 共享数据
+- - '###'
+  - '列表 4-2: SetAttributes 中的 processRequest 方法'
+- - '###'
+  - '列表 4-3: GetAttributes 中的 processRequest 方法'
+- - '#'
+  - 会话管理 (Session Management)
+- - '##'
+  - HttpSession
+- - '##'
+  - Oracle Java Cloud 上的 Java EE 应用程序
+- - '##'
+  - RequestDispatcher
+- - '#'
+  - 第 4 章：Servlets、过滤器和监听器 81
+- - '##'
+  - 列表 4-4：RequestDispatcher
+- - '##'
+  - '82 Oracle Cloud 上的 Java EE '
+- - '##'
+  - Web 特定 Servlet 功能
+- - '#'
+  - 第 4 章：Servlets、过滤器和监听器 83
+- - '##'
+  - 过滤器 (Filters)
+- - '##'
+  - Oracle Cloud 84 Java EE 应用
+- - '##'
+  - '列表 4-6: LogFilter.java'
+- - '#'
+  - Oracle Cloud  Java EE 应用
+- - '##'
+  - 监听器（Listeners）
+- - '#'
+  - 第 4 章：Servlets、过滤器和监听器
+- - '##'
+  - 列表 4-8：web.xml 中的监听器标签
+- - '##'
+  - 查看 Java 日志
+- - '##'
+  - 总结
+- - '#'
+  - 第 5 章：JavaServer Pages、JSTL 和表达式语言
+- - '##'
+  - Oracle Cloud  Java EE 应用程序
+- - '##'
+  - JSP 的起源
+- - '#'
+  - 第 5 章：JavaServer Pages、JSTL 和表达式语言 99
+- - '##'
+  - Oracle Java Cloud上的 JSP
+- - '##'
+  - Oracle Java Cloud上的 100 个 Java EE 应用程序
+- - '##'
+  - JSP 内部原理
+- - '##'
+  - JSP 生命周期
+- - '##'
+  - Servlet 代码
+- - '##'
+  - Oracle Java Cloud上的 102 个 Java EE 应用程序
+- - '##'
+  - '列表 5-3: index.jsp 的翻译 Servlet'
+- - '#'
+  - 104 基于 Oracle Cloud 的 Java EE 应用
+- - '##'
+  - 第 5 章：JavaServer Pages、JSTL 和表达式语言 105
+- - '##'
+  - JSP 指令
+- - '##'
+  - page 指令
+- - '#'
+  - 106 基于 Oracle Cloud 的 Java EE 应用
+- - '###'
+  - include 指令
+- - '###'
+  - taglib 指令
+- - '##'
+  - XML 格式的 JSP 指令
+- - '##'
+  - 第 5 章：JavaServer Pages、JSTL 和表达式语言 107
+- - '###'
+  - JSP 声明
+- - '###'
+  - JSP 脚本
+- - '#'
+  - 108 基于 Oracle Cloud 的 Java EE 应用
+- - '##'
+  - JSP 表达式
+- - '##'
+  - 隐式对象
+- - '##'
+  - Oracle Cloud 上的 Java EE 应用
+- - '##'
+  - JSP 注释
+- - '##'
+  - 标签和表达式
+- - '##'
+  - 自定义标签
+- - '#'
+  - 第 5 章：JavaServer Pages、JSTL 和表达式语言 115
+- - '##'
+  - Taglib 指令
+- - '##'
+  - 列表 5-8：JSTL 标签指令
+- - '##'
+  - 核心标签库 (Core Tag Library)
+- - '##'
+  - 'Oracle Cloud 上的 Java EE '
+- - '##'
+  - XML 标签库
+- - '##'
+  - 第 5 章：JavaServer Pages、JSTL 和表达式语言 117
+- - '##'
+  - 格式化标签库 (Formatting Tag Library)
+- - '##'
+  - Oracle Cloud 上的格式化
+- - '##'
+  - SQL 标签库
+- - '#'
+  - 第 5 章：JavaServer Pages、JSTL 和表达式语言 119
+- - '##'
+  - 函数库 (Functions Tag Library)
+- - '##'
+  - 120 Oracle Cloud 上的 Java EE
+- - '##'
+  - 在 JSP 中使用标签
+- - '#'
+  - 第 5 章：JavaServer Pages (JSP)、JSTL 和表达式语言 (EL) 121
+- - '##'
+  - '**列表 5-9：** 参考 JSTL 库'
+- - '##'
+  - '**列表 5-10：** 在 JSTL 标签集 Set、Choose、When 中表达式表达式'
+- - '##'
+  - 列表 5-11：JSTL forEach
+- - '##'
+  - 列表 5-12：表达式和隐式对象
+- - '#'
+  - 总结
+- - '#'
+  - 第 6 章
+- - '##'
+  - 128 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 从 JSP 到 Struts 再到 JSF
+- - '##'
+  - 第 6 章：JavaServer Faces 129
+- - '##'
+  - Oracle Java Cloud 上的 JSF
+- - '##'
+  - Facets
+- - '##'
+  - 130 Oracle Cloud 上的 Java EE 应用
+- - '##'
+  - '列表 6-1: web.xml'
+- - '##'
+  - 第 6 章：JavaServer Faces 133
+- - '##'
+  - '列表 6-2: index.xhtml'
+- - '##'
+  - JSF Managed Beans
+- - '##'
+  - 第 6 章：JavaServer Faces 135
+- - '##'
+  - 第 6 章：JavaServer Faces 137
+- - '##'
+  - '列表 6-4: index.xhtml'
+- - '##'
+  - 第6 章：JavaServer Faces 139
+- - '###'
+  - '列表 6-5: 欢迎页'
+- - '###'
+  - '列表 6-6: WelcomeBean 中的 checkedWelcome 方法'
+- - '###'
+  - '列表 6-7: faces-config.xml'
+- - '##'
+  - 验证
+- - '###'
+  - '列表 6-9: 标签声明'
+- - '###'
+  - '列表 6-10: 验证长度'
+- - '###'
+  - '列表 6-11: 验证消息'
+- - '##'
+  - Ajax
+- - '##'
+  - 列表 6-12：Ajax 时间
+- - '##'
+  - 列表 6-13：托管 Bean 中的 getTime 方法
+- - '##'
+  - Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 模板
+- - '#'
+  - 第6 章：JavaServer Faces 147
+- - '##'
+  - 列表 6-14：模板
+- - '#'
+  - 148 Oracle Java Cloud Java EE 应用
+- - '##'
+  - 列表 6-15：newTemplate.xhtml
+- - '##'
+  - 第6 章：JavaServer Faces 149
+- - '##'
+  - 列表 6-16：使用模板的 Ajax 时间
+- - '##'
+  - 总结
+- - '#'
+  - 第7 章
+- - '##'
+  - Enterprise JavaBeans
+- - '##'
+  - 152 Oracle Java Cloud Java EE 应用
+- - '##'
+  - 容器
+- - '##'
+  - OJC 中的 EJB
+- - '##'
+  - 为什么使用 EJB？
+- - '##'
+  - Oracle Cloud  Java EE 应用
+- - '##'
+  - 会话豆 (Session Beans)
+- - '#'
+  - 第7章：Enterprise JavaBeans (会话豆) 155
+- - '##'
+  - 无状态 (Stateless)
+- - '##'
+  - 有状态 (Stateful)
+- - '##'
+  - 接口：本地
+- - '#'
+  - 156 Oracle Cloud 上的 Java EE
+- - '##'
+  - 使用 EJB 开发
+- - '##'
+  - '列表 7-3: Authenticate'
+- - '##'
+  - 将会话 Bean 注入到
+- - '##'
+  - '列表 7-4: 会话 Bean 的依赖'
+- - '##'
+  - '列表 7-5: 在 Servlet 中访问的会话 Bean'
+- - '##'
+  - 164 Oracle Java Cloud 的 Java EE 应用
+- - '##'
+  - NetBeans 打包并运行
+- - '##'
+  - 使用 Java Cloud 控制台进行部署
+- - '##'
+  - 第 7 章：Enterprise JavaBeans（会话 Bean） 165
+- - '##'
+  - 166 Oracle Java Cloud 的 Java EE 应用
+- - '##'
+  - 第 7 章：Enterprise JavaBeans（会话 Bean） 167
+- - '##'
+  - 168 Oracle Java Cloud 的 Java EE 应用
+- - '##'
+  - 第 7 章：Enterprise JavaBeans（会话 Bean） 169
+- - '##'
+  - 列表 7-7：Stateful Bean
+- - '##'
+  - Session Bean 的生命周期
+- - '##'
+  - Oracle Cloud 上的 Java EE
+- - '##'
+  - 列表 7-8：回调方法
+- - '##'
+  - 事务管理
+- - '##'
+  - 第 7 章：Enterprise JavaBeans (会话 Bean) 176
+- - '##'
+  - 异常
+- - '##'
+  - Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 异常处理
+- - '##'
+  - 列表 7-12：应用程序
+- - '##'
+  - 列表 7-13：不回滚
+- - '##'
+  - 总结
+- - '#'
+  - 第8 章
+- - '##'
+  - Web 服务
+- - '##'
+  - 开发 SOAP 服务
+- - '##'
+  - 列表 8-1：DateTime
+- - '##'
+  - 列表 8-2：DateTime
+- - '##'
+  - 列表 8-3：DateTimeService
+- - '##'
+  - 列表 8-4：web.xml
+- - '##'
+  - 列表 8-5：DateTimeService
+- - '##'
+  - 列表 8-6：Servlet Web客户端
+- - '##'
+  - 列表 8-7：web.xml
+- - '##'
+  - 列表 8-8：Employee
+- - '##'
+  - 列表 8-9：RESTful客户端
+- - '##'
+  - 185 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 186 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 186 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 186 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 186 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 186 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 186 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 186 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 186 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 186 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 194 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 196 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 197 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 199 Oracle Java Cloud  Java EE 应用程序
+- - '##'
+  - 209 Oracle Java Cloud：数据库集成
+- - '##'
+  - 213 Oracle Java Cloud：数据库云
+- - '##'
+  - 215 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 215 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 215 Oracle Java Cloud  Java EE 应用
+- - '#'
+  - 第9章
+- - '##'
+  - 使用 Oracle数据库云进行持久化
+- - '##'
+  - Oracle数据库
+- - '##'
+  - Oracle 云上的持久化
+- - '##'
+  - 数据库云
+- - '##'
+  - 归档
+- - '##'
+  - 锁定
+- - '##'
+  - 解锁
+- - '##'
+  - 实体
+- - '##'
+  - 216 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - '列表 9-1: persistence.xml'
+- - '##'
+  - 217 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - '列表 9-2: Device.java'
+- - '##'
+  - 218 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 219 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 220 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 221 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 222 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 223 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 224 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 225 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 226 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 227 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 228 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 229 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 230 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 231 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 232 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 233 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 234 Oracle Java Cloud  Java EE 应用
+- - '##'
+  - 235 Oracle Java Cloud  Java EE 应用
