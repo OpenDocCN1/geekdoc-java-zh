@@ -1,0 +1,4618 @@
+- md: "\n# JAVA\n\n![](img/c590c9268607738d8272307d1e7c574c_0_0.png)\n\nLEARN THE\
+    \ BASICS IN 3 DAYS\n\nDAVID CHANG\n\n# Java\nLearn The Basic In 3 Days\nDavid\
+    \ Chang\n\n# Contents\n\n- 1. Fundamentals of Object Oriented Programming\n  1.1\
+    \ Introduction (OOP)\n  1.2 Objects and Classes\n  1.3 Data Abstraction\n  1.4\
+    \ Encapsulation\n  1.5 Polymorphism\n  1.6 Inheritance\n\n- 2. Introduction to\
+    \ Java\n  2.1 History of Java\n  2.2 Basic features of Java\n  2.3 Compiler and\
+    \ Interpreter\n  2.4 The JVM\n  2.5 The Java Runtime Environment (JRE)\n  2.6\
+    \ The Java Development Kit (JDK)\n  2.7 Reserved Words\n\n- 3. Data Types and\
+    \ Tokens in Java\n  3.1 Data Types\n  3.2 Java Tokens\n\n- 4. Operators and Expressions\n\
+    \  4.1 Types of Operators\n  4.2 Expressions\n\n- 5. Conditional and Decision\
+    \ Making Statement\n  5.1 Programming using assignment statement\n  5.2 Programming\
+    \ using Streams\n  5.3 Declarations while using streams\n  5.4 Decision Making\
+    \ In Java\n\n- 6. Looping\n  6.1 Looping Structure\n  6.2 Types of Loops\n\n-\
+    \ 7. Array\n  7.1 Types of Array\n  7.2 Declaration of an Array\n  7.3 Passing\
+    \ an Array to a Method\n  7.4 Basic Operations on Java: Searching and Sorting\n\
+    \n- 8. Classes, Objects and Methods\n  8.1 Classes in Java\n  8.2 Creating an\
+    \ Object\n  8.3 Methods\n  8.4 Creating Methods\n  8.5 Method Calling\n  8.6 Method\
+    \ Overloading\n  8.7 Method Overriding\n\n- 9. Interfaces and Packages\n  9.1\
+    \ Interfaces\n  9.2 Packages in Java\n  9.3 Advantages of Java Package\n\n- 10.\
+    \ Constructors\n  10.1 Types of Constructors\n\n- 11. Thread and Multithreading\
+    \ in Java\n  11.1 Lifecycle of a Thread\n  11.2 Commonly used methods of Thread\
+    \ class\n  11.3 Creating Thread\n  11.4 Multithreading\n\n- 12. Handling Exceptions\
+    \ and Errors\n  12.1 Exception Handling with try-catch\n  12.2 Exception Handling\
+    \ with throws keyword\n  12.3 Advantages of Exception Handling in Java\n  12.4\
+    \ Errors\n  12.5 Difference between Errors and Exceptions\n\n- 13. Some Questions\
+    \ and Answers\n\n# Chapter 1 FUNDAMENTALS OF OBJECT ORIENTED PROGRAMMING\n\n#\
+    \ 1.1 INTRODUCTION (OOP)\n\nObject Oriented Programming (OOP) is an approach to\
+    \ standardize the programs by creating partitioned memory area for both data and\
+    \ method. It has been developed to increase the programmer's productivity and\
+    \ also to overcome the traditional approach of programming. The different Object\
+    \ Oriented Programming languages are C++, Java, Simula-67, etc.\n\nAn Object Oriented\
+    \ Programming (OOP) allows the data to be applied within designated program area.\
+    \ It gives more significance to data rather than Methods which means it also provides\
+    \ the reusability feature to develop productive logic.\n\n# FEATURES OF OBJECT\
+    \ ORIENTED PROGRAMMING (OOP)\n\n- The objects can be used as a bridge to have\
+    \ data flow from one method to another.\n- It gives importance to data items rather\
+    \ than methods.\n- It makes the complete program simpler by dividing it into a\
+    \ number of objects.\n- Data can be easily modified without any change in the\
+    \ method.\n\n# PRINCIPLES OF (OOP)\n\n- Objects\n- Classes\n- Data Abstraction\n\
+    - Encapsulation\n- Data Hiding\n- Inheritance\n- Polymorphism\n\n# 1.2 OBJECTS\
+    \ AND CLASSES\n\n# OBJECTS\n\nObject is a unique entity which contains data and\
+    \ methods (characteristics and behavior) together in an Object Oriented Programming\
+    \ (OOP) Language.\n\nExample: Let us consider the real world objects, which are\
+    \ visible before us.\n\nAny object in the real world can possess the following\
+    \ characteristics:\n\n- It is visible.\n- It can be described easily.\n\nYou can\
+    \ observe that the above mentioned criteria has unique identity, definite state,\
+    \ or characteristics and behaviors. For example consider an object Bed:\n\nIt\
+    \ has the following characteristics:\n\n- It has four legs.\n- It has a plain\
+    \ top.\n- It is used to sleep.\n- It is used to sit.\n\nIn Payroll system, an\
+    \ employee may be taken as an example of object where **characteristics** are\
+    \ name, designation, basic pay and **behavior** as calculating gross pay, provident\
+    \ fund, printing pay slip, etc.\n\n# CLASSES\n\nClass is a set of different objects.\
+    \ Class can contain fields and methods to explain about the behavior of an object.\
+    \ Each object of a class possesses same attributes and behavior defined within\
+    \ the same class. Class is also termed as Object factory.\n\nFor Example: If Rainbow\
+    \ is the class then the colors in the rainbow represent the different objects\
+    \ of the class Rainbow.\n\nSimilarly, we can consider a class named fruit where\
+    \ apple, mango, orange are members of the class fruit. If fruit is defined as\
+    \ a class, then the statement:\n\nfruit apple = new fruit(); will create an object\
+    \ apple belonging to the class fruit.\n\n# 1.3 DATA ABSTRACTION\n\nAbstraction\
+    \ refers to the act of representing essential features (relevant data) without\
+    \ including background details in order to reduce complexity and increase efficiency.\n\
+    \nAbstraction is the absolute property of a class. The class binds the data items\
+    \ and functions to promote abstraction. The data members are accessed only through\
+    \ the related methods. A class uses the property of abstraction called as abstract\
+    \ data. For Example: For driving a car, you only use essential features.\n\n#\
+    \ 1.4 ENCAPSULATION\n\n**Encapsulation is the system of wrapping up data and functions\
+    \ into a single unit (called class).**\n\nObject Oriented Programming (OOP) allows\
+    \ the data to be applied within designated program area. It gives more significance\
+    \ to data rather than Methods which means it also provides the reusability feature\
+    \ to develop productive logic.\n\nEncapsulation is the most important feature\
+    \ of a class. The data members are accessed only through the related methods.\
+    \ A class uses the property of abstraction called as abstract data. Java is a\
+    \ data type. Such insulation of data, which cannot be accessed directly outside,\
+    \ is known as **DATA HIDING.**\n\n# 1.5 POLYMORPHISM\n\nThe literal meaning of\
+    \ Polymorphism is “available in many forms”. Suppose you have developed a method\
+    \ to perform addition then it will find the sum of two numbers. In case the passed\
+    \ arguments are strings, the function will produce the concatenated (joined) string.\n\
+    \nPolymorphism is the ability of different objects to respond, each in its own\
+    \ way, to identical messages. It allows the use of different internal structure\
+    \ of the object by keeping the same external interface.\n\n# 1.6 INHERITANCE\n\
+    \nInheritance can be defined as the process by which objects of one class can\
+    \ link and share common properties from another class.\n\nAn object of a class\
+    \ acquires some properties from another class. Superclass or base class is a class\
+    \ that used basis for inheritance. Subclass or derived class is known as a class\
+    \ that inherits from a **superclass.**\n\n# BENEFITS OF OBJECT ORIENT PROGRAMMING\
+    \ (OOP)\n\nSome benefits of OOP are as listed below:\n\n- You can create different\
+    \ modules in your project through objects.\n- You can extend the use of existing\
+    \ class through inheritance.\n- Using the concept data hiding can generate secured\
+    \ program.\n- It is highly beneficial to solve complex problems.\n- It is easy\
+    \ to modify and maintain software complexity.\n\n# Chapter 2 INTRODUCTION TO JAVA\n\
+    \n# 2.1 HISTORY OF JAVA\n\nJava programming language was originally developed\
+    \ by James Gosling at Sun Microsystems (Broomfield [Broomfield], Colorado, USA)\
+    \ and released in 1995 as a core component of Sun Microsystems' Java platform.\
+    \ This language was initially called Oak (named after the Oak trees outside Gosling’s\
+    \ office). The platform independence is one of the most significant advantage\
+    \ that JAVA has over other languages.\n\nJAVA encapsulates many features of C++.\
+    \ Originally JAVA was designed to execute applets, downloaded while Web browsing.\
+    \ But gradually, the language has been gaining wide acceptance as a programming\
+    \ language, very often replacing C Or C++.\n\n# 2.2 BASIC FEATURES OF JAVA\n\n\
+    JAVA possesses the following features:\n\n- Java is not a purely Object Oriented\
+    \ Programming language.\n- Java programs are both compiled and interpreted.\n\
+    - It can access data from a local system as well as from net.\n- Java programming\
+    \ is written within a class. The variables and functions are declared and defined\
+    \ with the class.\n- Java programs can create Applets (the programs which run\
+    \ on Web-browsers).\n- Java is case sensitive language. It distinguishes the upper\n"
+  mdcn: "\n\n# JAVA\n\n![](img/c590c9268607738d8272307d1e7c574c_0_0.png)\n\n3天掌握基础\n\
+    \nDAVID CHANG\n\n# Java\n3天掌握基础\nDavid Chang\n\n# 目录\n\n- 1. 面向对象编程基础\n  1.1 绪\
+    \ (OOP)\n  1.2 对象与类\n  1.3 数据抽象\n  1.4 封装\n  1.5 多态\n  1.6 继承\n\n- 2. Java 简介\n\
+    \  2.1 Java 历史\n  2.2 Java 基础特性\n  2.3 编译器与解释器\n  2.4 JVM\n  2.5 Java 运行时环境 (JRE)\n\
+    \  2.6 Java 开发工具包 (JDK)\n  2.7 预留字\n\n- 3. Java 中的数据类型与标记\n  3.1 数据类型\n  3.2 Java\
+    \ 标记\n\n- 4. 运算符与表达式\n  4.1 运算符类型\n  4.2 表达式\n\n- 5. 条件与决策语句\n  5.1 使用赋值语句编程\n\
+    \  5.2 使用流编程\n  5.3 使用流时的声明\n  5.4 Java 中的决策判断\n\n- 6. 循环\n  6.1 循环结构\n  6.2 循环类型\n\
+    \n- 7. 数组\n  7.1 数组类型\n  7.2 数组的声明\n  7.3 将数组传递给方法\n  7.4 Java 基础操作：搜索与排序\n\n\
+    - 8. 类、对象与方法\n  8.1 Java 中的类\n  8.2 创建对象\n  8.3 方法\n  8.4 创建方法\n  8.5 方法调用\n \
+    \ 8.6 方法重载\n  8.7 方法重写\n\n- 9. 接口与包\n  9.1 接口\n  9.2 Java 中的包\n  9.3 Java 包的优点\n\
+    \n- 10. 构造函数\n  10.1 构造函数的类型\n\n- 11. Java 中的线程与多线程\n  11.1 线程的生命周期\n  11.2 Thread\
+    \ 类的常用方法\n  11.3 创建线程\n  11.4 多线程\n\n- 12. 异常与错误处理\n  12.1 使用 try-catch 处理异常\n\
+    \  12.2 使用 throws 关键字处理异常\n  12.3 Java 异常处理的优点\n  12.4 错误\n  12.5 错误与异常的区别\n\n\
+    - 13. 常见问题解答\n\n# 第1章 面向对象编程基础\n\n# 1.1 绪论 (OOP)\n\n面向对象编程 (OOP) 是一种通过为数据和方法创建划分的内存区域来标准化程序的方法。它的开发是为了提高程序员的生产力，并克服传统的编程方法。不同的面向对象编程语言有\
+    \ C++、Java、Simula-67 等。\n\n面向对象编程 (OOP) 允许数据在指定的程序区域内应用。它比方法赋予了数据更大的重要性，这意味着它还提供了重用性特性，以开发高效的逻辑。\n\
+    \n# 面向对象编程 (OOP) 的特性\n\n- 对象可以作为桥梁，使数据从一个方法流到另一个方法。\n- 它重视数据项而非方法。\n- 它通过将整个程序分为若干个对象，使程序变得更简单。\n\
+    - 在不改变方法的情况下可以轻松修改数据。\n\n# (OOP) 的原则\n\n- 对象\n- 类\n- 数据抽象\n- 封装\n- 数据隐藏\n- 继承\n\
+    - 多态\n\n# 1.2 对象与类\n\n# 对象\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\n\
+    面向对象编程 (OOP) 允许数据在指定的程序区域内应用。它比方法赋予了数据更大的重要性，这意味着它还提供了重用性特性，以开发高效的逻辑。\n\n对象可以作为桥梁，使数据从一个方法流到另一个方法。\n\
+    它重视数据项而非方法。\n它通过将整个程序分为若干个对象，使程序变得更简单。\n在不改变方法的情况下可以轻松修改数据。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\n对象可以作为桥梁，使数据从一个方法流到另一个方法。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n# 类\n\n类是一组具有属性的在 Java 中的类，appleapple, orange orange 属于类。\n\n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\
+    \n# 类\n\n类是一组具有属性的在 Java 中的类，，，,, orange 属于类。\n\n`fruit = new fruit();`\n\n# 类\n\
+    \n对象是一个唯一的实体，它将数据和方法（特征和行为）结合在一起，在面向对象编程中被称为对象。\n\n对象具有以下特性：\n- 它是可见的。\n- 它是易于描述的。\n\
+    \n# 1.3 数据抽象\n\n抽象是指在不包含背景细节的情况下减少复杂性和提高效率。\n\n抽象是类的属性。数据成员只通过相关方法访问。类使用抽象。\n\n\
+    # 1.4 封装\n\n**封装是将数据和函数封装成单个单元（称为类）。**\n\n面向对象编程 (OOP) 允许数据在指定的程序区域内应用。它比方法赋予了数据更大的重要性，这意味着它还提供了重用性特性，以开发高效的逻辑。\n\
+    \n封装是类最重要的特性。数据成员只通过相关方法访问。类使用抽象。数据类型类型。无法从外部直接访问的数据被称为**数据隐藏**。\n\n# 1.5 多态\n\
+    \n多态的字面意思是“以多种形式存在”。假设你开发了一个方法来进行加法，它将找到两个数字的和。如果传递的参数是字符串，函数将产生连接后的字符串。\n\n多态是不同对象对相同消息以自己的方式做出响应的能力。它允许相同的外部接口。\n\
+    \n# 1.6 继承\n\n继承可以定义为一个类的对象可以链接并共享另一个类的公共属性。\n\n一个类的对象从另一个类中获取某些属性。父类或基类是用于继承的类。子类或派生类是继承自**父类**的类。\n\
+    \n# 第2章 Java 简介\n\n# 2.1 Java 历史\n\nJava 语言最初由 James Gosling 在 Sun Microsystems（美国科罗拉州布鲁姆菲）开发，并于1995年作为\
+    \ Sun Microsystems Java 平台的核心组件发布。该语言最初被称为 Oak（以 Gosling 办公室外的橡树命名）。平台无关是 Java\
+    \ 优于其他语言的最显著优势之一。\n\nJava 封装了 C++ 的许多特性。最初 Java 设计用于执行在网络浏览时下载的 applet。但逐渐，它作为编程语言已获得了广泛认可，经常替换\
+    \ C 或 C++。\n\n# 2.2 Java 基础特性\n\nJava 具有以下特性：\n\n- Java 不是一个纯的面向对象编程语言。\n- Java\
+    \ 程序既被编译又被解释。\n\n# Java 具有以下特性：\n\n- Java 不是一个纯的面向对象编程语言。\n- Java 程序既被编译又被解释。\n\
+    - 它既可以从本地系统访问数据，也可以从网络访问数据。\n- Java 程序写在类中。\n- Java 程序可以创建 Applet（在 Web 浏览器上运行的程序）。\n\
+    - Java 是区分大小敏感的语言。它区分大写\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # JAVA
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_0_0.png)
+
+
+    LEARN THE BASICS IN 3 DAYS
+
+
+    # DAVID CHANG'
+  - '[PAGE 1]
+
+
+    # Java
+
+    Learn The Basic In 3 Days
+
+    David Chang'
+  - '[PAGE 2]
+
+
+    # Contents
+
+
+    +   1. Fundamentals of Object Oriented Programming
+
+    1.1 Introduction (OOP)
+
+    1.2 Objects and Classes
+
+    1.3 Data Abstraction
+
+    1.4 Encapsulation
+
+    1.5 Polymorphism
+
+    1.6 Inheritance
+
+
+    +   2. Introduction to Java
+
+    2.1 History of Java
+
+    2.2 Basic features of Java
+
+    2.3 Compiler and Interpreter
+
+    2.4 The JVM
+
+    2.5 The Java Runtime Environment (JRE)
+
+    2.6 The Java Development Kit (JDK)
+
+    2.7 Reserved Words
+
+
+    +   3. Data Types and Tokens in Java
+
+    3.1 Data Types
+
+    3.2 Java Tokens
+
+
+    +   4. Operators and Expressions
+
+    4.1 Types of Operators
+
+    4.2 Expressions
+
+
+    +   5. Conditional and Decision Making Statement
+
+    5.1 Programming using assignment statement
+
+    5.2 Programming using Streams
+
+    5.3 Declarations while using streams
+
+    5.4 Decision Making In Java
+
+
+    +   6. Looping
+
+    6.1 Looping Structure'
+  - '[PAGE 3]
+
+
+    # 6.2 Types of Loops
+
+
+    +   7. Array
+
+    7.1 Types of Array
+
+    7.2 Declaration of an Array
+
+    7.3 Passing an Array to a Method
+
+    7.4 Basic Operations on Java : Searching and Sorting
+
+
+    +   8. Classes, Objects and Methods
+
+    8.1 Classes in Java
+
+    8.2 Creating an Object
+
+    8.3 Methods
+
+    8.4 Creating Methods
+
+    8.5 Method Calling
+
+    8.6 Method Overloading 8.7 Method Overriding
+
+
+    +   9. Interfaces and Packages
+
+    9.1 Interfaces
+
+    9.2 Packages in Java
+
+    9.3 Advantages of Java Package
+
+
+    +   10. Constructors
+
+    10.1 Types of Constructors
+
+
+    +   11. Thread and Multithread in Java
+
+    11.1 Lifecycle of a Thread
+
+    11.2 Commonly used methods of Thread class
+
+    11.3 Creating Thread
+
+    11.4 Multithreading
+
+
+    +   12. Handling Exceptions and Errors
+
+    12.1 Exception Handling with try-catch
+
+    12.2 Exception Handling with throws keyword
+
+    12.3 Advantages of Exception Handling in Java
+
+    12.4 Errors
+
+    12.5 Difference between Errors and Exceptions
+
+
+    +   13. Some Questions and Answers'
+  - '[PAGE 4]
+
+
+    # Chapter 1 FUNDAMENTALS OF OBJECT ORIENTED PROGRAMMING
+
+
+    # 1.1 INTRODUCTION (OOP)
+
+
+    Object Oriented Programming (OOP) is an approach to standardize the programs by
+    creating partitioned memory area for both data and method. It has been developed
+    to increase the programmer''s productivity and also to overcome the traditional
+    approach of programming. The different Object Oriented Programming languages are
+    C++, Java, Simula-67, etc.
+
+
+    An Object Oriented Programming (OOP) allows the data to be applied within designated
+    program area. It gives more significance to data rather than Methods which means
+    it also provides the reusability feature to develop productive logic.
+
+
+    # FEATURES OF OBJECT ORIENTED PROGRAMMING (OOP)
+
+
+    +   * The objects can be used as a bridge to have data flow from one method to
+    another.
+
+    * It gives importance to data items rather than methods.
+
+    * It makes the complete program simpler by dividing it into a number of objects.
+
+    * Data can be easily modified without any change in the method.
+
+
+    # PRINCIPLES OF (OOP)'
+  - '[PAGE 5]
+
+
+    +   * Objects
+
+    * Classes
+
+    * Data Abstraction
+
+    * Encapsulation
+
+    * Data Hiding
+
+    * Inheritance
+
+    * Polymorphism
+
+
+    # 1.2 OBJECTS AND CLASSES
+
+
+    # OBJECTS
+
+
+    Object is a unique entity which contains data and methods (characteristics and
+    behavior) together in an Object Oriented Programming (OOP) Language.
+
+
+    Example: Let us consider the real world objects, which are visible before us.
+
+
+    Any object in the real world can possess the following characteristics:
+
+
+    +   * It is visible.
+
+    * It can be described easily.
+
+
+    You can observe that the above mentioned criteria has unique identity, definite
+    state, or characteristics and behaviors. For example consider an object Bed:
+
+
+    It has the following characteristics:'
+  - '[PAGE 6]
+
+
+    +   * It has four legs.
+
+    * It has a plain top.
+
+
+    +   * It is used to sleep.
+
+    * It is used to sit.
+
+
+    In Payroll system, an employee may be taken as an example of object where **characteristics**
+    are name, designation, basic pay and **behavior** as calculating gross pay, provident
+    fund, printing pay slip, etc.'
+  - '[PAGE 7]
+
+
+    # CLASSES
+
+
+    Class is a set of different objects. Class can contain fields and methods to explain
+    about the behavior of an object. Each object of a class possesses same attributes
+    and behavior defined within the same class. Class is also termed as Object factory.
+
+
+    For Example: If Rainbow is the class then the colors in the rainbow represent
+    the different objects of the class Rainbow.
+
+
+    Similarly, we can consider a class named fruit where apple, mango, orange are
+    members of the class fruit. If fruit is defined as a class, then the statement:
+
+
+    fruit apple = new fruit(); will create an object apple belonging to the class
+    fruit.
+
+
+    # 1.3 DATA ABSTRACTION
+
+
+    Abstraction refers to the act of representing essential features (relevant data)
+    without including background details in order to reduce complexity and increase
+    efficiency.
+
+
+    Abstraction is the absolute property of a class. The class binds the data items
+    and functions to promote abstraction. The data members are accessed only through
+    the related methods. A class uses the property of abstraction called as abstract
+    data type.
+
+
+    For Example: For driving a car, you only use the essential features without knowing
+    in details the internal mechanism of'
+  - '[PAGE 8]
+
+
+    the system. You can apply brake to stop the car, press accelerator to speed up
+    the car and press clutch to change the gears.
+
+    Do you ever think what changes are taking place in the machinery? The answer is
+    simply No. This act of driving a car is termed as **abstraction**.
+
+
+    # 1.4 ENCAPSULATION
+
+
+    **Encapsulation is the system of wrapping up of data and functions into a single
+    unit (called class).**
+
+
+    For Data Hiding **Encapsulation** run on an important **OOP** in Object Oriented
+    Programming (OOP), data cannot move freely from method to method. They are kept
+    in the corresponding classes in a way that they will not be accessible to the
+    outside world except by using them through the related methods.
+
+
+    It is the most important feature of a class. The functions used in a class can
+    only access the data items. These functions provide interface between data items
+    of the objects and the calling program.
+
+
+    Such insulation of data, which cannot be accessed directly outside class premises
+    although they are available in the same program, is known as **DATA HIDING.**
+
+
+    # 1.5 POLYMORPHISM
+
+
+    The literal meaning of Polymorphism is “available in many forms”. Suppose you
+    have developed a method to perform the addition then it will find the sum of two
+    numbers passed to the method. In case the passed arguments are strings, the'
+  - '[PAGE 9]
+
+
+    function will produce the concatenated (joined) string.
+
+
+    Hence, Polymorphism is the ability of different objects to respond, each in its
+    own way, to identical messages. It allows the use of different internal structure
+    of the object by keeping the same external interface.
+
+
+    # 1.6 INHERITANCE
+
+
+    Inheritance can be defined as the process by which objects of one class can link
+    and share some common properties of objects from another class.
+
+
+    An object of a class acquires some properties from the objects of another class.
+    Superclass or base class is a class that used basis for inheritance. Subclass
+    or derived class is known as a class that inherits from a **superclass.**
+
+
+    # BENEFITS OF OBJECT ORIENTED PROGRAMMING (OOP)
+
+
+    Some benefits of OOP are as listed below:
+
+
+    +   - You can create different modules in your project through objects.
+
+    - You can extend the use of existing class through inheritance.
+
+    - Using the concept data hiding can generate secured program.
+
+    - It is highly beneficial to solve complex problems.
+
+    - It is easy to modify and maintain software complexity.'
+  - "[PAGE 10]\n\n# Chapter 2 INTRODUCTION TO JAVA\n\n# 2.1 HISTORY OF JAVA\n\nJava\
+    \ programming language was originally developed by James Gosling at Sun Microsystems\
+    \ (Broomfield, Colorado, USA) and released in 1995 as a core component of Sun\
+    \ Microsystems' Java platform. This language was initially called Oak (named after\
+    \ the Oak trees outside Gosling’s office). The platform independence is one of\
+    \ the most significant advantage that JAVA has over other languages.\n\nJAVA encapsulates\
+    \ many features of C++. Originally JAVA was designed to execute applets, downloaded\
+    \ while Web browsing. But gradually, the language has been gaining wide acceptance\
+    \ as a programming language, very often replacing C Or C++.\n\n# 2.2 BASIC FEATURES\
+    \ OF JAVA\n\nJAVA possesses the following features: \n\n+   - Java is not a purely\
+    \ Object Oriented Programming language.\n- Java programs are both compiled and\
+    \ interpreted.\n- It can access data from a local system as well as from net.\n\
+    - Java programming is written within a class. The variables and functions are\
+    \ declared and defined with the class.\n- Java programs can create Applets (the\
+    \ programs which run on Web-browsers).\n- Java is case sensitive language. It\
+    \ distinguishes the upper"
+- md: '
+
+    case and lower case letters.
+
+
+    ## 2.3 COMPILER AND INTERPRETER
+
+
+    All high level languages need to be converted into machine code so that the computer
+    understands the program after taking the required inputs.
+
+
+    The conversion of high-level language to machine-level language can be done in
+    two possible ways. It can be done either by using a Compiler or an Interpreter.
+
+
+    The software, by which the conversion of the high level instructions is performed
+    by line to machine language, is known as an Interpreter. If an error is found
+    on any line, further execution stops till it is corrected. This process of error
+    correction is much easier but the program takes longer time to execute successfully.
+
+
+    # SOURCE CODE -> COMPILER/INTERPRETER -> MACHINE CODE
+
+
+    However, if all the instructions are converted to machine level language at once
+    and all the errors are listed together, then the software is known as Compiler.
+    This process is much faster but sometimes it becomes difficult to debug all the
+    errors together in a program.
+
+
+    The Java source code and Java bytecodes are compiles in **javac** command.
+
+
+    Compilation Syntax: **javac** filename.java
+
+
+    ## 2.4 THE JVM
+
+
+    JAVA is a high level language (HLL) and the program written in HLL is compiled
+    and then converted to an intermediate language called Byte Code. Byte code makes
+    a Java program highly portable as its Bytes code can easily be transferred from
+    one system to another. When this Byte code is to be run on any other system, an
+    interpreter, known as Java Virtual Machine is needed which translates the byte
+    code to machine code.
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_12_0.png)
+
+
+    Java machine code varies from different platforms like Windows 98, Unix System,
+    etc. Hence, JVM acts as a virtual processor and converts the byte code to the
+    machine code for concerning platform. That is why it is called Java Virtual Machine.
+
+
+    Three notions of JVM are: Implementation, instance and specification. The specification
+    document describes what''s required of JVM implementation. Single specification
+    ensures all implementation are interoperable. Implementation program meets the
+    requirements of the JVM specification. JVM Instance is implementation running
+    in process that executes a program compiled into Java bytecode.
+
+
+    Thus, the Java machine uses compiler and interpreter too.
+
+
+    ## 2.5 JAVA RUNTIME ENVIRONMENT (JRE)
+
+
+    Java Runtime Environment is used to provide runtime environment. It is the implementation
+    of JVM. It contains other files and set of libraries that used at runtime by JVM.
+    It is a software package that contains what is required to run a Java program.
+    It includes together Java Class Library Implementation and Java Virtual implementation.
+    The Oracle Corporation, which owns the Java trademark, distributes a Java Runtime
+    environment with their Java Virtual Machine called HotSpot.
+
+
+    ## 2.6 JAVA DEVELOPMENT KIT (JDK)
+
+
+    Java Development Kit (JDK) contains JRE and development tools. JDK Tools such
+    as the compilers and debuggers are necessary for developing applications and applets.
+
+
+    ## Java Libraries in JDK 1.3
+
+
+    Java Development Kit (JDK) contains a Java Class Library for different purposes.
+    Some useful packages in it are mentioned below:
+
+
+    - java.io : to support classes to deal with input & output statements.
+
+    - java.lang : to support classes containing String, Character, Math, Integer,
+    Thread etc.
+
+    - java.net : to support classes for network related operations and dealing with
+    URL (Uniform Resource Locator)
+
+    - java.txt : for supporting text elements such as date, times and currency etc.
+
+    - java.math : to support mathematical functional such as square roots (integer
+    & decimal both)
+
+    - java.applet : to support classes to generate applet – specific environment
+
+    - java.awt : to support abstract window tool kit and managing GUI (Graphic User
+    Interface)
+
+
+    ## 2.7 RESERVED WORDS
+
+
+    Reserved words or keywords are those words which are preserved with the system.
+    These words cannot be applied as a variable name in any program. Java also has
+    reserved words. Some of the reserved/key words are listed below:
+
+
+    | case | switch | int | void | default |
+
+    | do | break | double | import | boolean |
+
+    | try | const | long | class | char |
+
+    | catch | if | new | package | goto |
+
+    | for | else | byte | static | throws |
+
+    | while | short | public | private | float |
+
+
+    ## Comment Statements in Java Programming
+
+
+    There are some cases where it becomes difficult for a user to understand the logic
+    applied in a program particularly when any other person has developed it. In such
+    cases, the programmer keeps mentioning the purpose and action being taken in different
+    steps by applying comment statement in the program.
+
+
+    There are three ways to give a comment in Java programming.
+
+
+    1. // : used for single line comment
+
+    2. /* comments to be written */ : used for multi line comment
+
+    3. /** documenting comment **/
+
+
+    ## Output Statement in Java Programming
+
+
+    **System.out.println()** and **System.out.print()** are the statements that are
+    used to get the output of the program or to display messages on the screen.
+
+
+    While using **System.out.println()** statement, the cursor skips the line and
+    passes to the next line after displaying the required result.
+
+
+    And, when you use **System.out.print()** statement, the cursor remains on the
+    same line after displaying the result.
+
+
+    **Syntax:** System.out.println("Welcome to Java");
+
+    System.out.println("The product of two numbers is ” +a);
+
+
+    Note:
+
+
+    - The message is to be written within double quotes (") enclosed within braces.
+
+    - When a message is to be written within double quotes enclosed within braces.
+
+
+    # Chapter 3 DATA TYPE AND TOKENS IN JAVA
+
+
+    ## 3.1 DATA TYPES
+
+
+    Data types are predefined types of data, which specifies the size and type of
+    data. The data type has been divided into two types:
+
+
+    * Primitive Type
+
+    * Non-Primitive Type
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_17_0.png)
+
+
+    Primitive data types are predefined or built-in data types, which are independent
+    of any type. For eg. int, long, float, double.
+
+
+    ### Integer Type
+
+
+    Integer types can hold whole numbers such as 123 and -96. The values size can
+    depend on integer type. It does not contain decimal point. There are two types
+    of declarations:
+
+
+    - int : applied for short integer number. Bit size -> 32 bits, Format -> int a=10;
+    or a=10
+
+    - long : applied for large integer number. Bit size -> 64 bits, Format -> long
+    b=34578; or b=34578
+
+
+    ### Floating Type
+
+
+    Floating point data types are used to represent numbers with a fractional part.
+    There are two types of declarations:
+
+
+    - float : applied for small range of decimal values. Bit size -> 32 bits, Format
+    -> float m=32.65; or float m=32.65
+
+    - double : applied for wide range of decimal values. Bit size -> 64 bits, Format
+    -> double n=0.0006547839; or double n=0.0006547839
+
+
+    ### Character Type
+
+
+    It stores character constants in the memory and contains a single character. A
+    character is enclosed in single quotes (‘ ’). Strings are enclosed in double quotes
+    (“ ”).
+
+
+    The character types in Java are as follows:
+
+
+    | Non Numeric | Character type | Bit Size | Format |
+
+    |---|---|---|---|
+
+    | Single character | char | 16 bits(2 bytes) | char c=''A''; char d; d=''*'';
+    char c =''A''; |
+
+    | More than one character/word/ sentence | String | More than 16 bits | String
+    a; a="College"; |
+
+
+    ### Boolean Type
+
+
+    Boolean data types are used to store values with two states: true or false. These
+    are non-figur constants. You can use Boolean type variable to set true or false
+    in order to ensure whether a logical condition is satisfied or not. It assumes
+    one of the values true or false without quotes.
+
+
+    For Example: boolean flag=true; or boolean flag=false;
+
+
+    ```
+
+    Non-Primitive Types Non-Primitive Data Type
+
+    ```
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_19_0.png)
+
+    '
+  mdcn: '
+
+    以及大写字母和小写字母。**
+
+
+    ## 2.3 编译器与解释器
+
+
+    所有高级程序语言都需要转换为机器码，以便计算机在获取所需的输入后能够理解程序。
+
+
+    从高级语言到机器级语言的转换可以通过两种方式完成。可以使用编译器（Compiler）或解释器（Interpreter）来实现。
+
+
+    通过逐行将高级指令转换成机器语言的软件被称为解释器。如果在某一行发现错误，后续执行将停止，直到对其进行纠正。这种纠错过程要简单得多，但程序成功执行所需的时间更长。
+
+
+    # 源代码 -> 编译器/解释器 -> 机器码
+
+
+    然而，如果所有指令一次性转换为机器级语言并将所有错误列在一起，那么该软件被称为编译器。这个过程要快得多，但有时很难一次性调试程序中的所有错误。
+
+
+    Java 源代码和 Java 字节码在 **javac** 命令中进行编译。
+
+
+    编译语法：**javac** filename.java
+
+
+    ## 2.4 JVM
+
+
+    JAVA 是一种高级程序语言（HLL），在 HLL 中编写的程序会经过编译，然后转换为一种称为“字节码”（Byte Code）的中间语言。字节码使 Java
+    程序具有高度的可移植性，因为字节码可以轻松从一个系统传输到另一个系统。当这些字节码要在任何其他系统上运行时，需要一个名为 Java 虚拟机（Java Virtual
+    Machine）的解释器，将字节码翻译为机器码。
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_12_0.png)
+
+
+    Java 机器码适用于 Windows 98、Unix 系统等不同平台。因此，JVM充当虚拟处理器，并将字节码转换为相应平台的机器码。这就是它被称为 Java
+    虚拟机的原因。
+
+
+    JVM 的三个概念是实现（Implementation）、实例（instance）和规范（specification）。规范文档描述了 JVM 实现的要求。单一规范确保了所有实现都是可操作的。实现程序满足
+    JVM 规范的要求。JVM 实例是运行在进程中的实现，执行编译为 Java 字节码的程序。
+
+
+    因此，Java 也使用编译器和解释器。
+
+
+    ## 2.5 Java 运行环境 (JRE)
+
+
+    Java 运行环境（JRE）用于提供运行环境。它是 JVM 的实现。它包含了 JVM 在运行时使用的其他文件和一组库。它是一个包含运行 Java 程序所需内容的软件包。它共同包含了
+    Java 类库实现和 Java 虚拟机实现。拥有 Java 商标的 Oracle 公司分发了带有名为 HotSpot Java 虚拟机的 Java 运行环境。
+
+
+    ## 2.6 Java 开发工具包 (JDK)
+
+
+    Java 开发工具包（JDK）包含 JRE 和开发工具。JDK 工具（如编译器和调试器）对于开发应用程序和 Applet 是必须的。
+
+
+    ## JDK 1.3 中的 Java 库
+
+
+    Java 开发工具包（JDK）包含用于不同用途的 Java 类库。下面列出了其中一些实用的包：
+
+
+    - java.io：支持处理输入和输出语句的类。
+
+    - java.lang：支持包含 String、Character、Math、Integer、Thread 等等类。
+
+    - java.net：支持网络相关操作和处理 URL（统一资源定位符）的类。
+
+    - java.txt：用于支持日期、时间、货币等文本元素。
+
+    - java.math：支持数学函数功能，如平方根（同时支持整数和小数）。
+
+    - java.applet：支持生成 applet 特有环境的类。
+
+    - java.awt：支持抽象窗口工具包和管理 GUI（图形用户界面）。
+
+
+    ## 2.7 保留字
+
+
+    保留字或关键字是系统保留的单词。这些单词不能在任何程序中作为变量名。Java 也有保留字。下面列出了部分保留字/关键字：
+
+
+    | case | switch | int | void | default |
+
+    | do | break | double | import | boolean |
+
+    | try | const | long | class | char |
+
+    | catch | if | new | package | goto |
+
+    | for | else | byte | static | throws |
+
+    | while | short | public | private | float |
+
+
+    ## Java编程中的注释语句
+
+
+    在某些情况下，用户很难理解程序中的逻辑，特别是当程序是由他人开发时。在这种情况下，程序员通过在程序中使用注释语句说明不同步骤的目的是和采取的操作。
+
+
+    在 Java 编程中提供注释有三种方式。
+
+
+    1. //：用于单行注释
+
+    2. /* 编写的注释 */：用于多行注释
+
+    3. /** 文档注释 **/
+
+
+    ## Java 编程中的输出语句
+
+
+    **System.out.println()** 和 **System.out.print()** 是用于获取程序输出或在屏幕上显示消息的语句。
+
+
+    在使用 **System.out.println()** 语句时，光标在显示所需结果后会跳行到下一行。
+
+
+    而且，当您使用 **System.out.print()** 语句时，光标在显示内容后仍留在同一行。
+
+
+    **语法：**System.out.println("Welcome to Java");
+
+
+    注意：
+
+
+    - 在双引号内显示消息。
+
+    - 在双引号内显示。
+
+
+    # 第3章 数据类型与JAVA中的标记符
+
+
+    ## 3.1 数据类型
+
+
+    数据类型是预定义的类型，规定了数据的大小和类型。数据分为两种：
+
+
+    * 原始类型
+
+    * 非原始类型
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_17_0.png)
+
+
+    原始数据类型是预定义的或内置类型，独立于任何类型。例如 int、long、float、double。
+
+
+    ### 整数类型
+
+
+    整数类型可以存储如 123 和 -96 的整数。数值取决于整数类型。它不包含小数点。有两种类型的声明：
+
+
+    - int：适用于短整数。位大小为32位，格式为 int a=10
+
+    - long：适用于大整数。位大小为64位，格式为 long b=34578
+
+
+    ### 浮点类型
+
+
+    浮点数据类型用于表示带有小数部分的数字。有两种类型的声明：
+
+
+    - float：适用于小范围小数。位大小为32位，格式为 float m=32.65
+
+    - double：适用于宽范围小数。位大小为64位，格式为 double n=0.006547839
+
+
+    ### 字符类型
+
+
+    它在内存中存储字符常量并包含单个字符。字符包含在单引号（‘ ’）中。字符串包含在双引号（“ ”）中。
+
+
+    Java 中的字符类型如下：
+
+
+    | 非数值 | 字符类型 | 位大小 | 格式 |
+
+    |---|---|---|---|
+
+    | 单字符 | char | 16位(2字节) | char c=''A''; char d; d=''*''; char c =''A''; |
+
+    | 多字符/单词/句子 | String | 大16位 | String a; a="College"; |
+
+
+    ### 布尔类型
+
+
+    布尔数据类型用于存储具有两种状态的值：true 或 false。这些是非数字常量。你可以使用布尔类型变量设置 true 或 false，以确保逻辑条件是否满足。它假设为
+    true 或 false 之一，且不加引号。
+
+
+    例如：boolean flag=true; 或 boolean flag=false;
+
+
+    ```
+
+    非原始类型 非原始数据类型
+
+    ```
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_19_0.png)
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 11]
+
+
+    case and lower case letters.
+
+
+    # 2.3 COMPILER AND INTERPRETER
+
+
+    All high level languages need to be converted into machine code so that the computer
+    understands the program after taking the required inputs.
+
+
+    The conversion of high-level language to machine-level language can be done in
+    two possible ways. It can be done either by using a Compiler or an Interpreter.
+
+
+    The software, by which the conversion of the high level instructions is performed
+    by line to machine language, is known as an Interpreter. If an error is found
+    on any line, further execution stops till it is corrected. This process of error
+    correction is much easier but the program takes longer time to execute successfully.
+
+
+    # SOURCE CODE -> COMPILER/INTERPRETER -> MACHINE CODE
+
+
+    However, if all the instructions are converted to machine level language at once
+    and all the errors are listed together, then the software is known as Compiler.
+    This process is much faster but sometimes it becomes difficult to debug all the
+    errors together in a program.
+
+
+    The Java source code and Java bytecodes are compiles in **javac** command.
+
+
+    Compilation Syntax: **javac** filename.java'
+  - '[PAGE 12]
+
+
+    # 2.4 THE JVM
+
+
+    JAVA is a high level language (HLL)and the program written in HLL is compiled
+    and then converted to an intermediate language called Byte Code. Byte code makes
+    a Java program highly portable as its Bytes code can easily be transferred from
+    one system to another. When this Byte code is to be run on any other system, an
+    interpreter, known as Java Virtual Machine is needed which translates the byte
+    code to machine code.
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_12_0.png)
+
+
+    Java machine code varies from different platforms like Windows 98, Unix System,
+    etc. Hence, JVM acts as a virtual'
+  - '[PAGE 13]
+
+
+    processor and converts the byte code to the machine code for concerning platform.
+    That is why it is called Java Virtual Machine.
+
+
+    Three notions of JVM are: Implementation, instance and specification. The specification
+    document describes what''s required of JVM implementation. Single specification
+    ensures all implementation are interoperable. Implementation program meets the
+    requirements of the JVM specification. JVM Instance is implementation running
+    in process that executes a program compiled into Java bytecode.
+
+
+    Thus, the Java machine uses compiler and interpreter too.
+
+
+    # 2.5 JAVA RUNTIME ENVIROMENT (JRE)
+
+
+    Java Runtime Environment is used to provide runtime environment. It is the implementation
+    of JVM. It contains other files and set of libraries that used at runtime by JVM.
+    It is a software package that contains what is required to run a Java program.
+    It includes together Java Class Library Implementation and Java Virtual implementation.
+    The Oracle Corporation, which owns the Java trademark, distributes a Java Runtime
+    environment with their Java Virtual Machine called HotSpot.
+
+
+    # 2.6 JAVA DEVELOPMENT KIT (JDK)
+
+
+    Java Development Kit (JDK) contains JRE and development tools. JDK Tools such
+    as the compilers and debuggers are necessary for developing applications and applets.
+
+
+    # Java Libraries in JDK 1.3
+
+
+    Java Development Kit (JDK) contains a Java Class Library for different purposes.
+    Some useful packages in it are mentioned below:'
+  - '[PAGE 14]
+
+
+    +   - java.io : to support classes to deal with input & output statements.
+
+
+    +   - java.lang : to support classes containing String, Character, Math, Integer,Thread
+    etc.
+
+
+    +   - java.net : to support classes for network related operations and dealing
+    with URL (Uniform Resource Locator)
+
+
+    +   - java.txt : for supporting text elements such as date, times and currency
+    etc.
+
+
+    +   - java.math : to support mathematical functional such as square roots (integer
+    & decimal both)
+
+
+    +   - java.applet : to support classes to generate applet – specific environment
+
+
+    +   - java.awt : to support abstract window tool kit and managing GUI (Graphic
+    User Interface)
+
+
+    # 2.7 RESERVED WORDS
+
+
+    Reserved words or keywords are those words which are preserved with the system.
+    These words cannot be applied as a variable name in any program. Java also has
+    reserved words. Some of the reserved/key words are listed below:
+
+
+    | case | switch | int | void | default |
+
+    | do | break | double | import | boolean |
+
+    | try | const | long | class | char |
+
+    | catch | if | new | package | goto |
+
+    | for | else | byte | static | throws |
+
+    | while | short | public | private | float |
+
+
+    # Comment Statements in Java Programming'
+  - '[PAGE 15]
+
+
+    There are some cases where it becomes difficult for a user to understand the logic
+    applied in a program particularly when any other person has developed it. In such
+    cases, the programmer keeps mentioning the purpose and action being taken in different
+    steps by applying comment statement in the program.
+
+
+    There are three ways to give a comment in Java programming.
+
+
+    +   1. // : used for single line comment
+
+
+    +   2. /* comments to be written */ : used for multi line comment
+
+
+    +   3. /** documenting comment **/'
+  - '[PAGE 16]
+
+
+    # Output Statement in Java Programming
+
+
+    **System.out.println()** and **System.out.print()** are the statements that are
+    used to get the output of the program or to display messages on the screen.
+
+
+    While using **System.out.println()** statement, the cursor skips the line and
+    passes to the next line after displaying the required result.
+
+
+    And, when you use **System.out.print()** statement, the cursor remains on the
+    same line after displaying the result.
+
+
+    **Syntax:** System.out.println("Welcome to Java");
+
+    System.out.println("The product of two numbers is” +a);
+
+
+    Note:
+
+
+    +   - The message is to be written within double quotes (") enclosed within braces.
+
+    - When a message is to be displayed along with a variable, then they are to be
+    separated with ‘+’ (plus) sign.'
+  - '[PAGE 17]
+
+
+    # Chapter 3 DATA TYPE AND TOKENS IN JAVA
+
+
+    # 3.1 DATA TYPES
+
+
+    Data types are predefined types of data, which are supported by the programming
+    language. It specifies the size and type of values that can be stored in a variable.
+    In Java Programming we have to deal with various types of data, hence it becomes
+    necessary for a programmer to select an appropriate data type according to the
+    data taken in a program.
+
+
+    The data type has been divided into two types:
+
+
+    +   * Primitive Type
+
+    * Non-Primitive Type
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_17_0.png)
+
+
+    Primitive data types are pre-defined or built-in data types,'
+  - '[PAGE 18]
+
+
+    which are independent of any other type. For eg. int, long, float, double etc.
+
+
+    # Integer Type
+
+
+    Integer types can hold whole numbers such as 123 and –96. The values size can
+    depend on stored integer type that we choose. It does not contain decimal point.
+    There are two types of declarations under this heading:
+
+
+    +   - int : applied for short integer number.
+
+    Bit size -> 32 bits, Format -> int a; a=10; or int a=10
+
+    - long : applied for large integer number.
+
+    Bit size -> 64 bits, Format -> long b; b=345678; or
+
+    b=345678;
+
+
+    # Floating Type
+
+
+    Floating point data types are used to represent numbers with a fractional part.
+    There are two types of declarations under this heading:
+
+
+    +   - float : applied for small range of decimal values.
+
+    Bit size -> 32 bits, Format -> float m; m=32.65; or float m=32.65;
+
+    - double : applied for wide range of decimal values.
+
+    Bit size -> 64 bits, Format -> double n; n=0.0006547839; or
+
+    double n=0.0006547839;
+
+
+    # Character Type
+
+
+    It stores character constants in the memory and contains a single character. A
+    character is enclosed in single quotes (‘ ’).Strings are enclosed in double quotes(“
+    ”).'
+  - '[PAGE 19]
+
+
+    The character types in Java are as follows:
+
+
+    | Non Numeric | Character type | Bit Size | Format |
+
+    |---|---|---|---|n| Single character | char | 16 bits(2 bytes) | char c=''A'';
+    char d; d=''*''; char c =''A''; |
+
+    | More than one character/word/ sentence | String | More than 16 bits | String
+    a; a="College"; |
+
+
+    # Boolean Type
+
+
+    Boolean data types are used to store values with two states: true or false. These
+    are non-figurative constants. You can use Boolean type variable to set true or
+    false in order to ensure whether a logical condition is satisfied or not. It assumes
+    one of the values true or false without quotes.
+
+
+    For Example: boolean flag=true; or boolean flag=false;
+
+
+    ```
+
+    Non-Primitive Types Non-Primitive Data Type
+
+    ```
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_19_0.png)'
+- md: "\n# Classes\n\nA class, in the context of Java, are templates that are used\
+    \ to create objects, and to define object data types and methods.\n\nFor Example:\n\
+    \n```java\npublic class MyFirstJavaProgram {\n/*\nThis is my first java program.\n\
+    This will print ‘Welcome' as the output.\n*/\npublic static void main (String[]\
+    \ args) {\nSystem.out.println(\"Welcome\"); // prints Welcome\n}\n}\n```\n\nLet's\
+    \ look at how to save the file, compile, and run the program—\n\n- Open notepad\
+    \ and add the code as above.\n- Save the file as: MyFirstJavaProgram.java.\n-\
+    \ Open a command prompt window and go to the directory where you saved the class.\
+    \ Assume it is C:\\n\n- Type 'javac MyFirstJavaProgram.java' and press enter to\
+    \ compile your code. If no errors in code then command prompt will process to\
+    \ next line. Then, type ' java MyFirstProgram ' and press enter to run your program.\n\
+    - You will be able to see ' Welcome ' printed on the window.\n\nWe will study\
+    \ later about Arrays in chapter 7\n\n# 3.2 JAVA TOKENS\n\nEach individual character\
+    \ used in a java statement is known as Java Token.\n\n# Types of Java Tokens\n\
+    \n- Literals\n- Identifiers\n- Assignments\n- Punctuators\n- Operators\n\n# Literals\
+    \ (Constants)\n\nThese are the constants used in a Java program. Java uses the\
+    \ literals classified in the following ways:\n\nInteger Literals : These are the\
+    \ whole numbers having positive or negative values. e.g. 15, 256,etc.\n\nReal\
+    \ Literals : They represent numbers with decimal points. e.g. 24.6, 0.0045, etc.\n\
+    \nCharacter Literals : The constants which are alphanumeric in nature are called\
+    \ character literals. e.g. ‘A’, ‘b’, ‘*’ etc.\n\nString Literals : String is a\
+    \ set of alphanumeric characters. e.g. “Year 2017”, etc.\n\n# Identifiers (Variables)\n\
+    \nIdentifiers are also called variables in Java programming. A variable is a named\
+    \ memory location, which contains a value. A variable can be treated by any combination\
+    \ of letters without spaces. We can declare more than one variables of the same\
+    \ type in a statement.\n\nSyntax: datatype variable name;\n\ne.g. int a; float\
+    \ a,b,c;\n\n# Assignments\n\nAssignment token assigns the value on its right to\
+    \ the operand on its left. To **assign** object references **operator** can also\
+    \ be used.\n\ne.g. int speed = 0; int gear = 1;\n\n# Punctuators\n\nPunctuators\
+    \ are the punctuation signs used in Java. Some punctuators are : ;; , ? etc.\n\
+    \n# Separators\n\nThese are special characters that are used in Java to separate\
+    \ the characters or variables.\n\ne.g. (,),{},,[] etc.\n\n# Operators\n\nThe operators\
+    \ are the symbols used to perform arithmetical or logical operations in Java programming.\
+    \ e.g. +-,*,/,||,&,&,<>\n\nNote: We have Detail Explain about **Operators** in\
+    \ Next Chapter\n\n# Chapter 4 OPERATORS AND EXPRESSIONS\n\nAn operator is basically\
+    \ a symbol or token, which performs logical or arithmetical operations and gives\
+    \ meaningful result. The values which are involved in the operation, are termed\
+    \ as operands.\n\nFor example: [: a + b * c] where a b and c are operands, + and\
+    \ * are the operators.\n\n# 4.1 TYPES OF OPERATORS\n\nBasically, there are three\
+    \ types of operators in Java which are as follows:\n\n- Arithmetical\n- Relational\n\
+    - Logical\n\n# ARITHMETICAL OPERATORS\n\nThe operators, which are applied to perform\
+    \ arithmetical calculations in a program, are known as arithmetical operators\
+    \ like +,-*,etc.\n\nArithmetical Expression:\n\nAn arithmetical expression may\
+    \ contain variables, constants and arithmetical operators together to produce\
+    \ a meaningful result.\n\ne.g. a+b,x-10,b*-4*a*c etc.\n\nArithmetical Statement:\n\
+    \nIf an arithmetical expression is assigned to a variable then it is known as\
+    \ an arithmetical statement.\n\nSyntax: Variable = Arithmetical Expression;\n\n\
+    e.g. x = a + b, z=b*b-4*a*c\n\n# Types of Arithmetical Operators\n\n- Unary Operator\n\
+    - Binary Operator\n- Ternary Operator\n\n# Unary Operator\n\nUnary operator can\
+    \ also be known as arithmetical operator which can be applied with a single operand.\
+    \ e.g. +,-,++ etc.\n\n# Unary Increment and Decrement Operators:\n\nUnary Increment\
+    \ Operator (++) increases the value of an operand by one whereas Unary Decrement\
+    \ Operator (--) decreases the value of an operand by one.\n\nExample:\n\n- 1.\
+    \ i=i+1\n\nBy applying increment operator it can be written as i++ or ++i\n\n\
+    - 2. j=j-1\n\nBy applying decrement operator it can be written as j-- or -j\n\n\
+    # Unary Increment/Decrement Operators:\n\n- Prefix\n- Postfix\n\n# Prefix\n\n\
+    When increment or decrement operators are applied before the operand, it is known\
+    \ as prefix operators. This operator works on the principle ‘CHANGE BEFORE ACTION’.\n\
+    \nIt means the value of the variable changes before the action takes place.\n\n\
+    Example : p = 5;\n\np = ++p * 4; gives the result 24 as p increases by 1 before\
+    \ the operation performed.\n\np = --p * 4; gives the result 16 as p decreases\
+    \ by 1 before the operation is being performed.\n\n# Postfix\n\nWhen increment\
+    \ or decrement operators are applied after the operand, it is known as postfix\
+    \ operators. This operator works on the principle ‘CHANGE AFTER THE ACTION’. It\
+    \ means the value of the variable changes after performing the operation.\n\n\
+    Example : p = 5;\n\np = p++ * 4; gives the result 20 as p increases by 1 after\
+    \ the operation performed.\n\np = p-- * 4; gives the result 20 as p decreases\
+    \ by 1 after the operation is being performed.\n\n# Binary Arithmetic Operators\n\
+    \nAn arithmetic operator, which deals with two operands is known as Binary Arithmetic\
+    \ Operators. e. g a + b, a – b, etc.\n\n# Ternary Operators (Conditional Operator)\n\
+    \nTernary Operators takes three operands. It is also called conditional operator\
+    \ because the value assigned to a variable depends upon a logical expression.\n\
+    \nSyntax: variable = (test expression)? Expression 1:Expression 2;\n\nThe variable\
+    \ contains the result of expression 1 if the test condition is true otherwise\
+    \ expression 2.\n\ne.g. a = 4; b = 2;\n\n```java\nmax = (a>b)? a:b;\n```\n\nHere,\
+    \ the condition is true so the output will be 4 as the value of a is 4.\n\n# Nested\
+    \ Ternary Operator\n\nYou can use ternary operator in nested form as shown below\
+    \ :\n\ne.g. Program to find maximum among three numbers:\n\n```java\nint a = 4,\
+    \ b = 10, c = 2;\n```\n\n```java\nmax = (a>b)? (a>c)? a:b : (b>c)? b:c;\n```\n\
+    \nTest condition Expression 1 Expression 2\n\nSince, the test condition is false,\
+    \ it will operate expression 2 which enables value 12 to be stored in max. Hence,\
+    \ max = 12.\n\n# RELATIONAL OPERATORS\n\nRelational operators compare the values\
+    \ of the variables and return a boolean value in terms ‘True' or ‘False' (i.e.\
+    \ 0 or 1). Java has six relational operators that are <, <=, >=, ==, and != .\n\
+    \n# LOGICAL OPERATORS\n\nJava uses logical operators AND(&&&), OR(||) or NOT(!).\
+    \ These operators yield 1 or 0 depending upon the output of different expressions.\n\
+    \ne.g. (a>b)&&(a<c),!(a==b)\n\nNote: If a statement contains all the logical operators\
+    \ then NOT operator will perform first.\n\n# BITWISE OPERATORS\n\nBitwise operators\
+    \ use byte, short, int and long type operands. However, float and double types\
+    \ are not allowed.\n\ne.g. - Bitwise AND\n\n- Bitwise OR\n- ^ Bitwise XOR\n- <<\
+    \ Left Shift\n- >> Left Shift\n\n# 4.2 EXPRESSIONS\n\nWhen you write a program\
+    \ in Java, it is necessary to represent the arithmetical expressions into Java\
+    \ expressions.\n\n# Mixed Expression\n\nAn expression which includes different\
+    \ types of variables or values to yield a result is called as Mixed Expression.\n\
+    \ne.g. int a; float b; double c;\n\n```java\ndouble z = a + b * c;\n```\n\nImplicit\
+    \ Type Conversion\n\nIn mixed expression, the data type of the result gets converted\
+    \ automatically into its higher type without intervention of the user. This type\
+    \ conversion is known as Implicit Type Conversion.\n\nExplicit Type Conversion\n\
+    \nWhen the data type gets converted to another type after user intervention, the\
+    \ type conversion is known as Explicit Type Conversion.\n\n```java\ne.g. int a,\
+    \ b;\n```\n\n```java\nfloat x = (float) (a+b);\n```\n\n# Chapter 5 CONDITIONAL\
+    \ AND DECISION MAKING STATEMENTS\n\nIn the first part of the chapter, we will\
+    \ discuss about unconditional statements, which will help to give a detailed idea\
+    \ of writing Java instructions in a program.\n\nIn order to perform a specified\
+    \ task in a program you need to provide some values, which can be used during\
+    \ execution of the program. The statement, which accepts the values from the users,\
+    \ is known as input statement. Java provides various ways to use input statements\
+    \ in programming. They are as follows:\n\n- By assigning the values\n- By using\
+    \ input streams\n- By using Command line arguments\n\n# 5.1 PROGRAMMING BY USING\
+    \ ASSIGNMENT STATEMENT\n\nBy using assignment statement, you can take values of\
+    \ data of your own or mentioned in the program.\n\nExample: A program in Java\
+    \ to find the sum of two numbers using\n\n```java\npublic class sum\n{\n  public\
+    \ static void main (String args[])\n{\n  int a,b,c;c=0;\na=15;b=45;\n```\n"
+  mdcn: "\n\n# 类 (Classes)\n\n在 Java 语文中，类（class）用于创建对象以及定义对象数据类型和方法的模板。\n\n例如：\n\n\
+    ```java\npublic class MyFirstJavaProgram {\n/*\n这是我的第一个 java 程序。\n它会将‘Welcome'\
+    \ 作为输出打印。\n*/\npublic static void main (String[] args) {\nSystem.out.println(\"\
+    Welcome\"); // 打印 Welcome\n}\n}\n```\n\n让我们来看如何保存文件、编译并运行程序——\n\n- 打开记事本并添加上述代码。\n\
+    - 将文件保存为：MyFirstJavaProgram.java。\n- 打开命令提示符窗口并进入保存该类的目录。假设是 C:\\n\n- 输入 'javac\
+    \ MyFirstJavaProgram.java' 并按回车编译你的代码。如果代码没有错误，命令提示符将处理下一行。然后，输入 ' java MyFirstProgram\
+    \ ' 并按回车运行你的程序。\n- 你将看到窗口上打印出 ' Welcome '。\n\n我们稍将在第 7 章学习数组（Arrays）\n\n# 3.2\
+    \ JAVA 标记 (TOKENS)\n\nJava 语句中使用的每个单独字符被称为 Java 标记（Java Token）。\n\n# Java 标记类型\n\
+    \n- 字面量 (Literals)\n- 标识符 (Identifiers)\n- 赋值 (Assignments)\n- 标点符号 (Punctuators)\n\
+    - 运算符 (Operators)\n\n# 字面量 (常量)\n\n这些是 Java 程序中常量。Java 按以下方式对字面量进行分类：\n\n整数字面量\
+    \ (Integer Literals)：这些具有正或负值的整数。例如 15, 256 等。\n\n实数字面量 (Real Literals)：它们代表带有小数点的数字。例如\
+    \ 24.6、0.0045 等。\n\n字符字面量 (Character Literals)：本质上是字母数字的常量被称为字符字面量。例如 ‘A’、『b’、『*’\
+    \ 等。\n\n字符串字面量 (String Literals)：字符串是字母数字字符集。例如 “Year 2017” 等。\n\n# 标识符 (变量)\n\
+    \n标识符在 Java 编程中也称为变量。变量是一个命名的内存位置，包含一个值。变量可以用任何不含空格的字母组合来处理。我们可以在语句中声明多个相同类型的变量。\n\
+    \n语法：数据类型 变量名;\n\n例如 int a; float a,b,c;\n\n# 赋值 (Assignments)\n\n赋值标记将其右侧的值赋给左侧的操作数。为了**赋值**对象引用，也可以使用**运算符**（operator）。\n\
+    \n例如 int speed = 0; int gear = 1;\n\n# 标点符号 (Punctuators)\n\n标点符号是 Java 中使用的标点符号。某些标点是：;;\
+    \ , ? 等。\n\n# 分隔符 (Separators)\n\n这些是 Java 中用于分隔字符或变量的特殊字符。\n\n例如 (,),{},,[] 等。\n\
+    \n# 运算符 (Operators)\n\n运算符是用于在 Java 编程中执行算术或逻辑操作的符号。例如 +-,*,/,||,&,&,&,<>\n\n\
+    注意：我们将在下一章中详细介绍**运算符** (Operators)\n\n# 第 4 章 运算符与表达式 (OPERATORS AND EXPRESSIONS)\n\
+    \n运算符基本上是一个符号或标记，它执行逻辑或算术操作并给出有意义的结果。参与操作的值称为操作数（operands）。\n\n例如：[: a + b * c]\
+    \ 其中 a b 和 c 是操作数，+ 和 * 是运算符。\n\n# 4.1 运算符类型 (TYPES OF OPERATORS)\n\n基本上，Java\
+    \ 中有三种运算符，如下：\n\n- 算术运算符 (Arithmetical)\n- 关系运算符 (Relational)\n- 逻辑运算符 (Logical)\n\
+    \n# 算术运算符 (ARITHMETICAL OPERATORS)\n\n用于在程序执行算术计算的运算符被称为算术运算符，如 +,-*,等。\n\n算术表达式\
+    \ (Arithmetical Expression)：\n\n算术表达式可以包含变量、常量和算术运算符，以产生有意义的结果。\n\n例如 a+b,x-10,b*-4*a*\n\
+    \n算术语句 (Arithmetical Statement)：\n\n如果将算术表达式赋给变量，则称为算术语句。\n\n语法：变量 = 算术表达式;\n\n\
+    例如 x = a + b, z=b-4*a\n\n算术运算符类型\n\n- 一元运算符\n- 二元运算符\n- 三元运算符\n\n一元运算符\n\n一元运算符也可以认为是应用于单个操作数的算术运算符。例如\
+    \ +,-++ 等。\n\n一元增和减运算符：\n\n一元增运算符 (++) 将操作数的值加一，一元减运算符 (--) 将操作数的值减一。\n\n例如：\n\
+    \n- 1. i=i+1 应用增运算符可以写为 ++i\n- 2. j=j-1 应用减运算符可以写为 j--\n\n一元增/减运算符类型：\n\n- 前缀\
+    \ (Prefix)\n- 后缀 (Postfix)\n\n前缀 (Prefix)\n\n当增减运算符应用于操作数之前时，被称为前缀运算符。该运算符遵循“操作前更改”的原则。这意味着变量在操作发生之前变化。\n\
+    \n例如：p = 5;\n\np = ++p * 4; 在操作执行前 p 增加了 1。\n\np = --p * 4; 在操作执行前 p 减少了1。\n\n\
+    后缀 (Postfix)\n\n当增减运算符应用于操作数之后时，被称为后缀运算符。该运算符遵循“操作后更改”的原则。这意味着变量在执行操作后变化。\n\n\
+    例如：p = 5;\n\np = p++ * 4; 在操作执行后 p 增加了 1。\n\np = p-- * 4; 在操作执行后 p 减少了1。\n\n二元算术运算符\
+    \ (Binary Arithmetic Operators)\n\n处理两个操作数的算术运算符被称为二元算术运算符。例如 a + b, a – b 等。\n\
+    \n三元运算符（条件运算符）（Ternary Operators / Conditional Operator）\n\n三元运算符接受三个操作数。它被称为条件运算符，因为赋给变量的值取决于逻辑表达式。\n\
+    \n语法：变量 = (测试表达式)?表达式1:表达式2;\n\n如果测试条件为真，则变量包含表达式1的结果，否则为表达式2。\n\n例如 a = 4; b\
+    \ = 2;\n\n```java\nmax = (a>b)? a:b;\n```\n\n在这里，条件为真，所以 a 的值为4。\n\n嵌套三元运算符 (Nested\
+    \ Ternary Operator)\n\n你可以如下所示的形式使用嵌套的三元运算符：\n\n寻找三个数中最大值的程序：\n\n```java\nint\
+    \ a = 4, b = 10, c = 2;\n```\n\n```java\nmax = (a>b)? (a>c)? a:b : (b>c)? b:c;\n\
+    ```\n\n由于，由于测试条件为假，它将操作表达式2，使值12存储在 max 中。因此，max = 12。\n\n# 关系运算符 (RELATIONAL\
+    \ OPERATORS)\n\n关系运算符比较变量的值并返回“真”或“假”（即 0 或 1）。Java 有六种关系运算符：<, <=, >=, == 和 !=。\n\
+    \n# 逻辑运算符 (LOGICAL OPERATORS)\n\nJava 使用逻辑运算符 AND(&), OR (|) 或 NOT (!)。这些运算符根据不同表达式的输出产生\
+    \ 1 或 0。\n\n例如 (a>b)&&(a<c),!(a==b)\n\n注意：如果语句包含所有逻辑运算符，NOT运算符将先执行。\n\n# 位运算符\
+    \ (BITWISE OPERATORS)\n\n位运算符使用 byte, short, int 和 long 类型的操作数。然而，不允许 float 和\
+    \ double 类型。\n\n例如：- 位与\n- 位或\n- ^ 位异异\n- << 左移\n- >> 右移\n\n# 4.2 表达式 (EXPRESSIONS)\n\
+    \n在 Java 中编写程序时，有必要将算术表达式转换为 Java 表达式。\n\n# 混合表达式 (Mixed Expression)\n\n包含不同类型变量或值以产生结果的表达式被称为混合表达式。\n\
+    \n例如 int a; float b; double c;\n\n```java\ndouble z = a + b * c;\n```\n\n隐式类型转换\
+    \ (Implicit Type Conversion)\n\n在混合表达式中，结果的数据类型会自动转换为更高类型而无需用户干预。这种类型转换被称为隐式类型转换。\n\
+    \n显式类型转换 (Explicit Type Conversion)\n\n当数据类型在用户干预后转换为另一种类型时，类型转换被称为显式类型转换。\n\n\
+    ```java\n例如 int a, b;\n```\n\n```java\nfloat x = (float) (a+b);\n```\n\n# 第5 章\
+    \ 条件判断语句 (CONDITIONAL AND DECISION MAKING STATEMENTS)\n\n在章的第一部分，我们将讨论无条件语句，这将有助于提供在程序中编写\
+    \ Java 指令的细节。\n\n为了在程序中执行指定任务，你需要提供一些在程序执行期间可以使用的值。从用户处接受值的语句被称为输入语句。Java 提供了多种在编程中使用输入语句的方法。方法如下：\n\
+    \n- 通过赋值值\n- 使用输入流\n- 使用命令行参数\n\n# 5.1 使用赋值语句编程 (PROGRAMMING BY USING ASSIGNMENT\
+    \ STATEMENT)\n\n通过赋值语句，你可以获取你自己的或程序中提到的数据值。\n\n例如：使用 Java 查找两个数之和的程序\n\n```java\n\
+    public class sum\n{\n  public static void main (String args[])\n{\n  int a,b,c;c=0;\n\
+    a=15;b=45;\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 20]
+
+
+    # Classes
+
+
+    A class, in the context of Java, are templates that are used to create objects,
+    and to define object data types and methods.
+
+
+    For Example:
+
+
+    ```
+
+    public class MyFirstJavaProgram {
+
+    /*
+
+    This is my first java program.
+
+    This will print ‘Welcome'' as the output.
+
+    */
+
+    public static void main (String[] args) {
+
+    System.out.println("Welcome"); // prints Welcome
+
+    }
+
+    }
+
+    ```
+
+
+    Let''s look at how to save the file, compile, and run the program—
+
+
+    +   - Open notepad and add the code as above.
+
+    - Save the file as: MyFirstJavaProgram.java.
+
+    - Open a command prompt window and go to the directory where you saved the class.
+    Assume it is C:\n- Type ''javac MyFirstJavaProgram.java'' and press enter to compile
+    your code. If no errors in code then command prompt will process to next line.
+    Then, type '' java MyFirstProgram '' and press enter to run your program.
+
+    - You will be able to see '' Welcome '' printed on the window.'
+  - '[PAGE 21]
+
+
+    We will study later about Arrays in chapter 7
+
+
+    # 3.2 JAVA TOKENS
+
+
+    Each individual character used in a java statement is known as Java Token.
+
+
+    # Types of Java Tokens
+
+
+    +   - Literals
+
+    - Identifiers
+
+    - Assignments
+
+    - Punctuators
+
+    - Operators
+
+
+    # Literals (Constants)
+
+
+    These are the constants used in a Java program. Java uses the literals classified
+    in the following ways:
+
+
+    Integer Literals : These are the whole numbers having positive or negative values.
+    e.g. 15, 256,etc.
+
+
+    Real Literals : They represent numbers with decimal points. e.g. 24.6, 0.0045,
+    etc.
+
+
+    Character Literals : The constants which are alphanumeric in nature are called
+    character literals. e.g. ‘A’, ‘b’, ‘*’ etc.
+
+
+    String Literals : String is a set of alphanumeric characters. e.g. “Year 2017”,
+    etc.
+
+
+    # Identifiers (Variables)
+
+
+    Identifiers are also called variables in Java programming. A variable is a named
+    memory location, which contains a value. A variable can be treated by any combination
+    of letters without spaces. We can declare more than one variables of the same
+    type in a statement.
+
+
+    Syntax: datatype variable name;'
+  - '[PAGE 22]
+
+
+    e.g. int a; float a,b,c;
+
+
+    # Assignments
+
+
+    Assignment token assigns the value on its right to the operand on its left. To
+    **assign** object references **operator** can also be used.
+
+
+    e.g. int speed = 0; int gear = 1;
+
+
+    # Punctuators
+
+
+    Punctuators are the punctuation signs used in Java. Some punctuators are : ;;
+    , ? etc.
+
+
+    # Separators
+
+
+    These are special characters that are used in Java to separate the characters
+    or variables.
+
+
+    e.g. (,),{},,[] etc.
+
+
+    # Operators
+
+
+    The operators are the symbols used to perform arithmetical or logical operations
+    in Java programming. e.g. +-,*,/,||,&,&,<>
+
+
+    Note: We have Detail Explain about **Operators** in Next Chapter'
+  - '[PAGE 23]
+
+
+    # Chapter 4 OPERATORS AND EXPRESSIONS
+
+
+    An operator is basically a symbol or token, which performs logical or arithmetical
+    operations and gives meaningful result. The values which are involved in the operation,
+    are termed as operands.
+
+
+    For example: [: a + b * c] where a b and c are operands, + and * are the operators.
+
+
+    # 4.1 TYPES OF OPERATORS
+
+
+    Basically, there are three types of operators in Java which are as follows:
+
+
+    +   * Arithmetical
+
+    * Relational
+
+    * Logical
+
+
+    # ARITHMETICAL OPERATORS
+
+
+    The operators, which are applied to perform arithmetical calculations in a program,
+    are known as arithmetical operators like +,-*,etc.
+
+
+    Arithmetical Expression:
+
+
+    An arithmetical expression may contain variables, constants and arithmetical operators
+    together to produce a meaningful result.
+
+
+    e.g. a+b,x-10,b*-4*a*c etc.
+
+
+    Arithmetical Statement:
+
+
+    If an arithmetical expression is assigned to a variable then it is known as an
+    arithmetical statement.
+
+
+    Syntax: Variable = Arithmetical Expression;'
+  - '[PAGE 24]
+
+
+    e.g. x = a + b, z=b*b-4*a*c
+
+
+    # Types of Arithmetical Operators
+
+
+    +   - Unary Operator
+
+    - Binary Operator
+
+    - Ternary Operator
+
+
+    # Unary Operator
+
+
+    Unary operator can also be known as arithmetical operator which can be applied
+    with a single operand. e.g. +,-,++ etc.
+
+
+    # Unary Increment and Decrement Operators:
+
+
+    Unary Increment Operator (++) increases the value of an operand by one whereas
+    Unary Decrement Operator (--) decreases the value of an operand by one.
+
+
+    Example:
+
+
+    +   1. i=i+1
+
+
+    By applying increment operator it can be written as i++ or ++i
+
+
+    +   2. j=j-1
+
+
+    By applying decrement operator it can be written as j-- or -j
+
+
+    # Unary Increment/Decrement Operators:
+
+
+    +   - Prefix
+
+    - Postfix
+
+
+    # Prefix
+
+
+    When increment or decrement operators are applied before the operand, it is known
+    as prefix operators. This operator works on the principle ‘CHANGE BEFORE ACTION’.'
+  - '[PAGE 25]
+
+
+    It means the value of the variable changes before the action takes place.
+
+
+    Example : p = 5;
+
+
+    p = ++p * 4; gives the result 24 as p increases by 1 before the operation performed.
+
+
+    p = --p * 4; gives the result 16 as p decreases by 1 before the operation is being
+    performed.
+
+
+    # Postfix
+
+
+    When increment or decrement operators are applied after the operand, it is known
+    as postfix operators. This operator works on the principle ‘CHANGE AFTER THE ACTION’.
+    It means the value of the variable changes after performing the operation.
+
+
+    Example : p = 5;
+
+
+    p = p++ * 4; gives the result 20 as p increases by 1 after the operation performed.
+
+
+    p = p-- * 4; gives the result 20 as p decreases by 1 after the operation is being
+    performed.
+
+
+    # Binary Arithmetic Operators
+
+
+    An arithmetic operator, which deals with two operands is known as Binary Arithmetic
+    Operators. e. g a + b, a – b, etc.
+
+
+    # Ternary Operators (Conditional Operator)
+
+
+    Ternary Operators takes three operands. It is also called conditional operator
+    because the value assigned to a variable depends upon a logical expression.
+
+
+    Syntax: variable = (test expression)? Expression 1:Expression 2;'
+  - '[PAGE 26]
+
+
+    The variable contains the result of expression 1 if the test condition is true
+    otherwise expression 2.
+
+
+    e.g. a = 4; b = 2;
+
+
+    ```
+
+    max = (a>b)? a:b;
+
+    ```
+
+
+    Here, the condition is true so the output will be 4 as the value of a is 4.
+
+
+    # Nested Ternary Operator
+
+
+    You can use ternary operator in nested form as shown below :
+
+
+    e.g. Program to find maximum among three numbers:
+
+
+    ```
+
+    int a = 4, b = 10, c = 2;
+
+    ```
+
+
+    ```
+
+    max = (a>b)? (a>c)? a:b : (b>c)? b:c;
+
+    ```
+
+
+    Test condition Expression 1 Expression 2
+
+
+    Since, the test condition is false, it will operate expression 2 which enables
+    value 12 to be stored in max. Hence, max = 12.
+
+
+    # RELATIONAL OPERATORS
+
+
+    Relational operators compare the values of the variables and return a boolean
+    value in terms ‘True'' or ‘False'' (i.e. 0 or 1). Java has six relational operators
+    that are <, <=, >=, ==, and != .
+
+
+    # LOGICAL OPERATORS
+
+
+    Java uses logical operators AND(&&&), OR(||) or NOT(!). These operators yield
+    1 or 0 depending upon the output of different expressions.'
+  - '[PAGE 27]
+
+
+    e.g. (a>b)&&(a<c),!(a==b)
+
+
+    Note: If a statement contains all the three logical operators then NOT operator
+    will perform first.
+
+
+    # BITWISE OPERATORS
+
+
+    Bitwise operators use byte, short, int and long type operands. However, float
+    and double types are not allowed.
+
+
+    e.g. - Bitwise AND
+
+
+    +   - Bitwise OR
+
+    - ^ Bitwise XOR
+
+    - << Left Shift
+
+    - >> Left Shift
+
+
+    # 4.2 EXPRESSIONS
+
+
+    When you write a program in Java, it is necessary to represent the arithmetical
+    expressions into Java expressions.
+
+
+    # Mixed Expression
+
+
+    An expression which includes different types of variables or values to yield a
+    result is called as Mixed Expression.
+
+
+    e.g. int a; float b; double c;
+
+
+    ```
+
+    double z = a + b * c;
+
+    ```
+
+
+    Implicit Type Conversion
+
+
+    In mixed expression, the data type of the result gets converted automatically
+    into its higher type without intervention of the user. This type conversion is
+    known as Implicit Type Conversion.
+
+
+    Explicit Type Conversion
+
+
+    When the data type gets converted to another type after user intervention, the
+    type conversion is known as Explicit Type'
+  - '[PAGE 28]
+
+
+    Conversion.
+
+
+    ```
+
+    e.g. int a, b;
+
+    ```
+
+
+    ```
+
+    float x = (float) (a+b);
+
+    ```'
+  - "[PAGE 29]\n\n# Chapter 5 CONDITIONAL AND DECISION MAKING STATEMENTS\n\nIn the\
+    \ first part of the chapter, we will discuss about unconditional statements, which\
+    \ will help to give a detailed idea of writing Java instructions in a program.\n\
+    \nIn order to perform a specified task in a program you need to provide some values,\
+    \ which can be used during execution of the program. The statement, which accepts\
+    \ the values from the users, is known as input statement. Java provides various\
+    \ ways to use input statements in programming. They are as follows:\n\n+   * By\
+    \ assigning the values\n* By using input streams\n* By using Command line arguments\n\
+    \n# 5.1 PROGRAMMING BY USING ASSIGNMENT STATEMENT\n\nBy using assignment statement,\
+    \ you can take values of data of your own or mentioned in the program.\n\nExample:\
+    \ A program in Java to find the sum of two numbers using\n\n```\npublic class\
+    \ sum\n{\n  public static void main (String args[])\n{\n  int a,b,c;c=0;\na=15;b=45;\n\
+    ```"
+- md: "\n```java\nc=a+b;\nSystem.out.println(\"The sum of the two numbers\n\"+c);\n\
+    }\n```\n\nOutput:\nThe sum of the two numbers = 60.\n\n## 5.2 PROGRAMMING USING\
+    \ STREAMS\n\nPackage in Java is basically a collection of classes. Each package\
+    \ includes related built-in functions, which may be used while developing programming\
+    \ logic.\n\n### Buffer\nCPU or processor is the fastest device in a computer.\
+    \ Other peripheral devices are comparatively slower then processor. Due to speed\
+    \ differences it becomes difficult to have data communication between processor\
+    \ and peripheral devices. Hence, a high speed memory is applied between I/O devices\
+    \ and processor used as a bridge to synchronize their speeds. This high-speed\
+    \ temporary storage (cache memory) is termed as Buffer. You need to activate the\
+    \ buffer before any input/output operation.\n\n### Activating Buffer in Java\n\
+    \n```\nInputStreamReader <object name1> = new\nInputStreamReader (System.in);\n\
+    ```\n\n```\nBufferedReader <object name2> = new\nBufferedReader <object name1>\n\
+    ```\n\n```\nOR\nDataInputStream<object name> = new\nDataInputStream(System.in);\n\
+    ```\n\n### Main function\n\nThe next step is to declare a main function as given\
+    \ below:\n```java\npublic static void main (string args[]) throws IOException\n\
+    ```\n\nThe main function is issued to execute a program. Thereafter, throws IOException\
+    \ eliminates I/O errors in the program(if any). It passes a report on I/O errors\
+    \ to the exception handler of Java System.\n\n## 5.3 DECLARATIONS WHILE USING\
+    \ STREAMS\n\n- 1 At first Java library package needs to be defined.\nSyntax: import\
+    \ java.io.*; or import java.io.*; or may be both the packages\n\n- 2 Two statements\
+    \ are essentially needed, when you are using Input stream to activate buffer.\n\
+    ```\nDataInputStream in = new DataInputStream(System.in);\n```\nOR\n```java\n\
+    public static void main(String args[]) throws IOException\nInputStreamReader read\
+    \ = new InputStreamReader(System.in);\nBufferedReader in = new BufferedReader(read);\n\
+    ```\n\n- 3 A message is to be displayed before Input statement in order to enable\
+    \ input editor.\nSyntax: System.out.println(\"Enter your name\");\n\n4. The Syntax\
+    \ of Input statement in Java programming\n\n```\nn = Integer.parseInt(in.readLine());\n\
+    ```\n\nThis statement will accept only integer from the user whereas:\n\n```\n\
+    n = Float.parseFloat(in.readLine());\n```\n\nwill accept fractional numbers from\
+    \ the user.\n\nExample: A Java program to accept perpendicular and base of a Right\
+    \ angled triangle calculating and displaying the hypotenuse and area of the triangle.\n\
+    \n```java\nimport java.io.*;\npublic class Triangle\n{\n    public static void\
+    \ main(String args[]) throws IOException\n    {\n        float p,b;\n        double\
+    \ area=0,hyp=0;\n        InputStreamReader read = new InputStreamReader(System.in);\n\
+    \        BufferedReader in = new BufferedReader(read);\n        System.out.println(\"\
+    Enter perpendicular and base\");\n        p=Float.parseFloat(in.readLine());\n\
+    \        b=Float.parseFloat(in.readLine());\n        hyp=Math.sqrt(p*p+b*b);\n\
+    \        area=(float)1/2*p*b;\n        System.out.println(\"Hypotenuse =\"+hyp);\n\
+    ```\n\n## 5.4 DECISION MAKING IN JAVA\n\nSometimes our program needs to take a\
+    \ decision based on whether a particular condition has occurred or not. Then our\
+    \ program will execute certain statements based on this decision.\n\nDecision\
+    \ making in Java can be achieved using any of the following statements:\n\n- if\
+    \ statement\n- switch statement\n- conditional operator statement\n\n### if statement\n\
+    \nYou can use if statement to check a specified condition. It performs a course\
+    \ of action if the condition is true otherwise, the action is ignored.\n\nSyntax:\
+    \ if(condition)\n\n![](img/c590c9268607738d8272307d1e7c574c_33_0.png)\n\n![](img/c590c9268607738d8272307d1e7c574c_34_0.png)\n\
+    \nIf the statement is true the statements (statement 1 and statement 2) are executed.\
+    \ If the condition is false the control ignores the statements and passes to the\
+    \ next line of the program.\n\nExample:\n\n```java\npublic class IfStatement{\n\
+    \    public static void main(String args[]){\n        //Declaring a variable \"\
+    test\" and initializing it with a value 10\n        int test=10;\n\n        //Checking\
+    \ if \"test\" is greater than 5\n        if(test>5)\n        {\n            //This\
+    \ block will be executed only if \"test\" is greater than 5\n            System.out.println(\"\
+    Success\");\n        }\n        //The if block ends.\n        System.out.println(\"\
+    Executed successfully\");\n    }\n}\n```\nOutput: Executed successfully\n\n###\
+    \ if-else statement\n\nIf the condition is true, the code which written inside\
+    \ the curly brackets {} of if block will be executed. If the condition is false,\
+    \ the code which written inside the curly brackets {} of else block will be executed.\n\
+    \nSyntax:\n```\nif(condition)\n{\n    // Statements will be executed if the condition\
+    \ is true\n}\nelse\n{\n    // Statements will be executed if the condition is\
+    \ false\n}\n```\n\nExample: public class IfElse\n{\n    public static void main(String\
+    \ args[])\n{\n    //Declaring a variable \"test\" and initializing it with a value\
+    \ 10\n    int test=10;\n\n    //Checking if \"test\" is greater than 5\n    if(test>5)\n\
+    \    {\n        //This block will be executed only if \"test\" is greater than\
+    \ 5\n        System.out.println(\"Success\");\n    }\n    else\n    {\n      \
+    \  //This block will be executed only if \"test\" is not greater than 5\n    \
+    \    System.out.println(\"Failure\");\n    }\n}\n```\nOutput: Success\n\n### if-else\
+    \ ladder\n\nConditions are calculated from top. 1st if(condition) will evaluate\
+    \ and if it's true, the code inside the if block will execute else if(condition)\
+    \ is false then else if(condition) will evaluate. This will go on like this. If\
+    \ none of the conditions are true, the code inside the else block will execute.\n\
+    \nExample:\n```java\npublic class IfElseLadder {\n  public static void main(String[]\
+    \ args) {\n    //Declaring a variable \"test\" and initializing it with a value\
+    \ 2\n    int test=2;\n    if(test==1) {\n      //This block will be executed only\
+    \ if \"test\" is equal to 1\n      System.out.println(\"Hello\");\n    }\n   \
+    \ else if(test==2)\n    {\n      //This block will be executed only if \"test\"\
+    \ is equal to 2\n      System.out.println(\"Hi\");\n    }\n    else if(test==3)\n\
+    \    {\n      //This block will be executed only if \"test\" is equal to 3\n \
+    \     System.out.println(\"Good\");\n    }\n    else\n    {\n      System.out.println(\"\
+    No Match Found\");\n    }\n  }\n}\n```\nOutput: Hi\n\n### Nested if...else statement\n\
+    \nWhen you combine multiple if / if-else /if-else-if-ladder then lot sequence\
+    \ decisions are involved. You have to take care of program executes, instructions\
+    \ when sequence conditions are encountered.\n\nExample:\n\n```java\npublic class\
+    \ NestedIf\n{\n  public static void main(String args[])\n  {\n    //Declaring\
+    \ a variable \"a\" and initializing it with a value 5\n    int a=3;\n    //Declaring\
+    \ a variable \"b\" and initializing it with a value 3\n    int b=3;\n\n    if(a==5)\n\
+    \    {\n      //This block will be executed only if \"a\" is equal to 5\n    \
+    \  if(b==3)\n      {\n        /*This block will be executed only if a is equal\
+    \ to 5 and b is equal to 3 */\n        System.out.println(\"Hi, a is 5 and b is\
+    \ 3\");\n      }\n      else\n      {\n        /*This block will be executed only\
+    \ if a is equal to 5 and b is some value other than 3 */\n        System.out.println(\"\
+    Hi, a is 5 and b is some value other than 3\");\n      }\n    } else if(a==4)\n\
+    \    {\n      //This block will be executed only if a is 4\n      System.out.println(\"\
+    Hi, a is 4\");\n    }\n    else if(a==3)\n    {\n      //This block will be executed\
+    \ only if \"a\" is 3\n      if(b==3)\n      {\n        /**This block will be executed\
+    \ only if a is equal to 3 and b is equal to 3 */\n        System.out.println(\"\
+    Hi, a is 3 and b is 3\");\n      }\n      else if(b==2)\n      {\n        /**This\
+    \ block will be executed only if a is equal to 3 and b is equal to 2 */\n    \
+    \    System.out.println(\"Hi, a is 3 and b is 2\");\n      }\n      else\n   \
+    \   {\n        /**This block will be executed only if a is some value other than\
+    \ 5,4,3*/\n        System.out.println(\"Hi, a is some value other than 5,4,3\"\
+    );\n      }\n    }\n  }\n}\n```\nOutput: Hi, a is 3 and b is 3\n\n### Switch case\
+    \ statement\n\nSwitch case statement is a multiple branching statement. In this\
+    \ system the control jumps to perform a particular action out of a number of actions\
+    \ depending upon a switch value.\n"
+  mdcn: "\n\n```java\nc=a+b;\nSystem.out.println(\"The sum of the two numbers\n\"\
+    +c);\n}\n```\n\n输出:\n两个数字之和 = 60。\n\n## 5.2 使用流进行编程\n\nJava 中的包（Package）本质上是类的集合。每个包都包含一些相关的内置函数，这些函数可以在开发编程逻辑时使用。\n\
+    \n### 缓冲区 (Buffer)\nCPU 或处理器是计算机中最快的设备。其他外围设备相对于处理器较慢。由于速度差异，处理器与外围设备之间进行数据通信变得困难。因此，在\
+    \ I/O 设备和处理器之间应用了高速内存，作为桥梁来同步它们的速度。这种高速临时存储（缓存内存）被称为缓冲区。在进行任何输入/输出操作之前，你都需要激活缓冲区。\n\
+    \n### 在 Java 中激活缓冲区\n\n```\nInputStreamReader <object name1> = new\nInputStreamReader\
+    \ (System.in);\n```\n\n```\nBufferedReader <object name2> = new\nBufferedReader\
+    \ <object name1>\n```\n\n```\nOR\nDataInputStream<object name> = new\nDataInputStream(System.in);\n\
+    ```\n\n### 主函数 (Main function)\n\n下一步是按照所示内容声明主函数：\n```java\npublic static void\
+    \ main (string args[]) throws IOException\n```\n\n主函数用于执行程序。随后，`throws IOException`\
+    \ 消除了程序中的 I/O 错误（如果有）。它会将 I/O 错误的报告传递给 Java 系统的异常处理器。\n\n## 5.3 使用流时的声明\n\n- 1\
+    \ 首先需要定义 Java 库包。\n语法：`import java.io.*;` 或 `import java.io.*;` 或两者都包含。\n\n- 2\
+    \ 当你使用输入流来激活缓冲区时，本质上需要两个语句。\n```\nDataInputStream in = new DataInputStream(System.in);\n\
+    ```\nOR\n```java\npublic static void main(String args[]) throws IOException\n\
+    InputStreamReader read = new InputStreamReader(System.in);\nBufferedReader in\
+    \ = new BufferedReader(read);\n```\n\n- 3 在输入语句之前显示一条消息以便启用输入编辑器。\n语法：`System.out.println(\"\
+    Enter your name\");`\n\n4. Java 编程中输入语句的语法\n\n```\nn = Integer.parseInt(in.readLine());\n\
+    ```\n\n此语句将仅接受用户的整数，而：\n\n```\nn = Float.parseFloat(in.readLine());\n```\n\n将接受用户的小数。\n\
+    \n示例：一个 Java 程序，接受直角三角形的直和底，计算并显示三角形的斜边和面积。\n\n```java\nimport java.io.*;\npublic\
+    \ class Triangle\n{\n    public static void main(String args[]) throws IOException\n\
+    \    {\n        float p,b;\n        double area=0,hyp=0;\n        InputStreamReader\
+    \ read = new InputStreamReader(System.in);\n        BufferedReader in = new BufferedReader(read);\n\
+    \        System.out.println(\"Enter perpendicular and base\");\n        p=Float.parseFloat(in.readLine());\n\
+    \        b=Float.parseFloat(in.readLine());\n        hyp=Math.sqrt(p*p+b*b);\n\
+    \        area=(float)1/2*p*b;\n        System.out.println(\"Hypotenuse =\"+hyp);\n\
+    ```\n\n## 5.4 Java 中的决策判断\n\n有时我们的程序需要根据是否发生了特定条件来做出决策。然后我们的程序将根据此决策执行某些语句。\n\n\
+    Java 中的决策可以使用以下任何一种语句实现：\n\n- if 语句\n- switch 语句\n- 条件运算符语句\n\n### if 语句\n\n你可以使用\
+    \ if 语句来检查指定的条件。如果条件为真，它会执行一系列操作；否则，忽略该操作。\n\n语法：`if(condition)`\n\n![](img/c590c9268607738d8272307d1e7c57c33_0.png)\n\
+    \n![](img/c590c9268607738d8272307d1e7c57c34_0.png)\n\n如果语句为真，则执行语句 1 和语句 2。如果条件为假，则忽略这些语句并跳到程序的下一行。\n\
+    \n示例：\n\n```java\npublic class IfStatement{\n    public static void main(String\
+    \ args[]){\n        // 声明一个变量 test 并初始化为 10\n        int test=10;\n\n        //\
+    \ 检查 test 是否大于 5\n        if(test>5)\n        {\n            // 只有当 test 大于 5\
+    \ 时才执行此块\n            System.out.println(\"Success\");\n        }\n        //\
+    \ if 块结束\n        System.out.println(\"Executed successfully\");\n    }\n}\n```\n\
+    输出：执行成功\n\n### if-else 语句\n\n如果条件为真，则执行 `if` 大括号中的代码。如果条件为假，则执行 `else` 大括号中的代码。\n\
+    \n语法：\n```\nif(condition)\n{\n    // 如果条件为真则执行语句\n}\nelse\n{\n    // 如果条件为假则执行语句\n\
+    }\n```\n\n示例： \n\n```java\npublic class IfElse\n{\n    public static void main(String\
+    \ args[])\n{\n    // 声明一个变量 test 并初始化为 10\n    int test=10;\n\n    // 检查 test\
+    \ 是否大于 5\n    if(test>5)\n    {\n        // 只有当 test 大于 5 时才执行此块\n        System.out.println(\"\
+    Success\");\n    }\n    else\n    {\n        // 只有当 test 不大于 5 时才执行此块\n      \
+    \  System.out.println(\"Failure\");\n    }\n}\n```\n输出：Success\n\n### if-else\
+    \ 链 (if-else ladder)\n\n条件从顶部开始计算。如果第一个 `if(condition)` 为真，则执行 `if` 块中的代码；如果为假，则计算\
+    \ `else if(condition)`，以此此类推。如果所有条件为假，则执行 `else` 块中的代码。\n\n示例：\n\n```java\npublic\
+    \ class IfElseLadder {\n  public static void main(String[] args) {\n    // 声明一个变量\
+    \ test 并初始化为 2\n    int test=2;\n    if(test==1) {\n      // 只有当 test 等于 1 时才执行此块\n\
+    \      System.out.println(\"Hello\");\n    }\n    else if(test==2)\n    {\n  \
+    \    // 只有当 test 等于 2 时才执行此块\n      System.out.println(\"Hi\");\n    }\n    else\
+    \ if(test==3)\n    {\n      // 只有当 test 等于 3 时才执行此块\n      System.out.println(\"\
+    Good\");\n    }\n    else\n    {\n      System.out.println(\"No Match Found\"\
+    );\n    }\n  }\n}\n```\n输出：Hi\n\n### 嵌套 if...else 语句\n\n当你组合多个 `if` / `if-else`\
+    \ / `if-else-if链链时，涉及到大量的顺序决策。你需要处理程序遇到顺序条件时的执行指令。\n\n示例：\n\n```java\npublic class\
+    \ NestedIf\n{\n  public static void main(String args[])\n  {\n    // 声明一个变量 a\
+    \ 并初始化为 5\n    int a=3;\n    // 声明一个变量 b 并初始化为 3\n    int b=3;\n\n    if(a==5)\n\
+    \    {\n      // 只有当 a 等于 5 时才执行此块\n      if(b==3)\n      {\n        /* 只有当 a\
+    \ 等于 5 且 b 等于 3 时才执行此块 */\n        System.out.println(\"Hi, a is 5 and b is 3\"\
+    );\n      }\n      else\n      {\n        /* 只有当 a 等于 5 且 b 不等于 3 时才执行此块 */\n\
+    \        System.out.println(\"Hi, a is 5 and b is some value other than 3\");\n\
+    \      }\n    } else if(a==4)\n    {\n      // 只有当 a 为 4 时才执行此块\n      System.out.println(\"\
+    Hi, a is 4\");\n    }\n    else if(a==3)\n    {\n      // 只有当 a 等于 3 时才执行此块\n\
+    \      if(b==3)\n      {\n        /** 只有当 a 等于 3 且 b 等于 3 时才执行此块 */\n        System.out.println(\"\
+    Hi, a is 3 and b is 3\");\n      }\n      else if(b==2)\n      {\n        /**\
+    \ 只有当 a 等于 3 且 b 等于 2 时才执行此块 */\n        System.out.println(\"Hi, a is 3 and b\
+    \ is 2\");\n      }\n      else\n      {\n        /** 只有当 a 为 5,4,3 以外值时才执行此块\
+    \ */\n        System.out.println(\"Hi, a is some value other than 5,4,3\");\n\
+    \      }\n    }\n  }\n}\n```\n输出：Hi, a is 3 and b is 3\n\n### switch 语句\n\nswitch\
+    \ case 语句是一种多分支语句。在该系统中，控制根据 switch 值跳转到执行多个操作中的特定一个。\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 30]
+
+
+    ```
+
+    c=a+b;
+
+    System.out.println("The sum of the two numbers
+
+    "+c);
+
+    }
+
+
+    ```
+
+
+    Output:
+
+    The sum of the two numbers = 60.
+
+
+    # 5.2 PROGRAMMING USING STREAMS
+
+
+    Package in Java is basically a collection of classes. Each package includes related
+    built-in functions, which may be used while developing programming logic.
+
+
+    Buffer
+
+    CPU or processor is the fastest device in a computer. Other peripheral devices
+    are comparatively slower then processor. Due to speed differences it becomes difficult
+    to have data communication between processor and peripheral devices. Hence, a
+    high speed memory is applied between I/O devices and processor used as a bridge
+    to synchronize their speeds. This high-speed temporary storage (cache memory)
+    is termed as Buffer. You need to activate the buffer before any input/output operation.
+
+
+    # Activating Buffer in Java
+
+
+    ```
+
+    InputStreamReader <object name1> = new
+
+    InputStreamReader (System.in);
+
+    ```
+
+
+    ```
+
+    BufferedReader <object name2> = new
+
+    BufferedReader <object name1>
+
+    ```
+
+
+    ```
+
+    OR
+
+    DataInputStream<object name> = new
+
+    ```'
+  - '[PAGE 31]
+
+
+    # DataInputStream(System.in);
+
+
+    # Main function
+
+
+    The next step is to declare a main function as given below:
+
+    public static void main (string args[]) throws IOException
+
+
+    The main function is issued to execute a program. Thereafter, throws IOException
+    eliminates I/O errors in the program(if any). It passes a report on I/O errors
+    to the exception handler of Java System.
+
+
+    # 5.3 DECLARATIONS WHILE USING STREAMS
+
+
+    +   1 At first Java library package needs to be defined.
+
+    Syntax: import java.io.*; or
+
+    import java.io.lang or may be both the packages
+
+
+    +   2 Two statements are essentially needed, when you are using Input stream to
+    activate buffer.
+
+    DataInputStream in = new DataInputStream(System.in);
+
+    OR
+
+    public static void main(String args[])throws IOException
+
+    InputStreamReader read = new InputStreamReader(System.in);
+
+    BufferedReader in = new BufferedReader(read);
+
+
+    +   3 A message is to be displayed before Input statement in order to enable input
+    editor.
+
+    Syntax: System.out.println("Enter your name");'
+  - "[PAGE 32]\n\n4. The Syntax of Input statement in Java programming\n\n```\nn =\
+    \ Integer.parseInt(in.readLine());\n```\n\nThis statement will accept only integer\
+    \ from the user whereas :\n\n```\nn = Float.parseFloat(in.readLine());\n```\n\n\
+    will accept fractional numbers from the user.\n\nExample: A Java program to accept\
+    \ perpendicular and base of a Right angled triangle\n\ncalculating and displaying\
+    \ the hypotenuse and area of the triangle.\n\n```\nimport java.io.*;\npublic class\
+    \ Triangle\n{\n    public static void main(String args[])throws IOException\n\
+    \    {\n        float p,b;\n        double area=0,hyp=0;\n        InputStreamReader\
+    \ read = new InputStreamReader(System.in);\n        BufferedReader in = new BufferedReader(read);\n\
+    \        System.out.println(\"Enter perpendicular and base\");\n        p=Float.parseFloat(in.readLine());\n\
+    \        b=Float.parseFloat(in.readLine());\n        hyp=Math.sqrt(p*p+b*b);\n\
+    \        area=(float)1/2*p*b;\n        System.out.println(\"Hypotenuse =\"+hyp);\n\
+    ```"
+  - '[PAGE 33]
+
+
+    #  5.4 DECISION MAKING IN JAVA
+
+
+    Sometimes our program needs to take a decision based on whether a particular condition
+    has occurred or not. Then our program will execute certain statements based on
+    this decision.
+
+
+    Decision making in Java can be achieved using any of the following statements:
+
+
+    +   * if statement
+
+    * switch statement
+
+    * conditional operator statement
+
+
+    # if statement
+
+
+    You can use if statement to check a specified condition. It performs a course
+    of action if the condition is true otherwise, the action is ignored.
+
+
+    Syntax: if(condition)
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_33_0.png)'
+  - "[PAGE 34]\n\n![](img/c590c9268607738d8272307d1e7c574c_34_0.png)\n\nIf the statement\
+    \ is true the statements (statement 1 and statement 2) are executed. If the condition\
+    \ is false the control ignores the statements and passes to the next line of the\
+    \ program.\n\nExample:\n\n```\npublic class IfStatement{\n    public static void\
+    \ main(String args[]){\n        //Declaring a variable \"test\" and initializing\
+    \ it with a value 10\n        int test=10;\n\n        //Checking if \"test\" is\
+    \ greater than 5\n        if(test>5)\n    }\n}\n```"
+  - "[PAGE 35]\n\n```\n//This block will be executed only if \"test\" is greater than\
+    \ 5\nSystem.out.println(\"Success\");\n}\n```\n\n```\n//The if block ends.\nSystem.out.println(\"\
+    Executed successfully\");\n}\n```\n\nOutput: Executed successfully\n\n# if-else\
+    \ statement\n\nHere if the condition is true, the code which is written inside\
+    \ the curly brackets {} of the if block will be executed. If the condition is\
+    \ false, the code which is written inside the curly brackets {} of the else block\
+    \ will be executed.\n\nSyntax:\n\n```\nif(condition)\n{\n    Statements which\
+    \ will be executed if the condition is true\n}\nelse\n{\n    Statements which\
+    \ will be executed if the condition is false\n}\n```\n\nExample: public class\
+    \ IfElseStatement\n\n```\n{\n    public static void main(String args[])\n{\n \
+    \   //Declaring a variable \"test\" and initializing it with a value 10\n```"
+  - "[PAGE 36]\n\n```\nint test=10;\n\n//Checking if \"test\" is greater than 5\n\
+    if(test>5)\n{\n  //This block will be executed only if \"test\" is greater than\
+    \ 5\n  System.out.println(\"Success\");\n}\nelse\n{\n  //This block will be executed\
+    \ only if \"test\" is not greater than 5\n  System.out.println(\"Failure\");\n\
+    }\n```\n\nThe if else blocks ends.\nSystem.out.println(\"Executed successfully\"\
+    );\n\nOutput: Success\nExecuted successfully\n\n# if-else ladder\n\nConditions\
+    \ are calculated from top. 1st if( condition-x) will evaluate and if it's true,\
+    \ the code inside the if block will execute else if(condition-x) is false then\
+    \ else if (condition-y) will evaluate and If(condition-y) is true then code inside\
+    \ that else-if block will execute or else If(condition-y) is false else if(condition-z)\
+    \ will evaluate. This will go on like this.\nIf none of the conditions are true,\
+    \ the code inside the else block will execute.\n\nExample:\nif(condition-x)"
+  - "[PAGE 37]\n\n```\n{\n  Statements execute if condition-x is true\n}\nelse if\
+    \ (condition-y) {\n  Statements execute if condition-y is true\n}\n.\nelse if(condition-z)\
+    \ {\n  Statements execute if condition-z is true\n}\nelse {\n  Statements execute\
+    \ if none of the conditions in condition-x, conditiony,...condition-z are true.\n\
+    }\nStatements execute always\n```\n\nExample:\n\n```\npublic class IfElseIffLadder\
+    \ {\n  public static void main(String[] args) {\n    //Declaring a variable \"\
+    test\" and initializing it with a value 2\n    int test=2;\n    if(test==1) {\n\
+    \      //This block will be executed only if \"test\" is equal to 1\n      System.out.println(\"\
+    Hello\");\n    }\n}\n```"
+  - "[PAGE 38]\n\n```\n}\nelse if(test==2)\n{\n  //This block will be executed only\
+    \ if \"test\" is equal to 2\n  System.out.println(\"Hi\");\n}\nelse if(test==3)\n\
+    {\n  //This block will be executed only if \"test\" is equal to 3\n  System.out.println(\"\
+    Good\");\n}\nelse\n{\n  System.out.println(\"No Match Found\");\n}\n\n```\n\n\
+    Output: Hi\n\n# Nested if...else statement\n\nWhen you combine multiple if / if-else\
+    \ /if-else-if-laders then lot sequence decisions are involved. You have to take\
+    \ care of program executes, instructions when sequence conditions are encountered.\n\
+    \nExample:\n\n```\npublic class NestedIf\n{\n  public static void main(String\
+    \ args[])\n{\n    //Declaring a variable a and initializing it with a value 5\n\
+    \    int a=3;\n    //Declaring a variable b and initializing it with a value 3\n\
+    \  }\n}\n```"
+  - "[PAGE 39]\n\n```\nint b=3;\n\nif(a==5)\n{\n  //This block will be executed only\
+    \ if \"a\" is equal to 5\n  if(b==3)\n{\n    /*This block will be executed only\
+    \ if\n    a is equal to 5 and b is equal to 3 */\n    System.out.println(\"Hi,\
+    \ a is 5 and b is 3\");\n  }\n  else\n{\n    /*This block will be executed only\
+    \ if\n    a is equal to 5 and b is some value other than 3 */\n    System.out.println(\"\
+    Hi, a is 5 and b is some value other than 3\");\n  }\n} else if(a==4)\n{\n  //This\
+    \ block will be executed only if a is 4\n  System.out.println(\"Hi, a is 4\");\n\
+    }\nelse if(a==3)\n{\n  //This block will be executed only if \"a\" is 3\n\n```"
+  - "[PAGE 40]\n\n```\nif(b==3)\n{\n/**This block will be executed only if a is equal\
+    \ to 3 and b is\nequal to 3 */\nSystem.out.println(\"Hi, a is 3 and b is 3\");\n\
+    }\nelse if(b==2)\n{\n    /**This block will be executed only if\na is equal to\
+    \ 3 and b is equal to 2 */\n    System.out.println(\"Hi, a is 3 and b is 2\");\n\
+    }\n```\n\n```\n\nelse{\n    /**This block will be executed only if\na is some\
+    \ value other than 5,4,3*/\n}\n```\n\nSystem.out.println(\"Hi, a is some value\
+    \ other than 5,4,3\");\n\nOutput: Hi, a is 3 and b is 3\n\n# Switch case statement\n\
+    \nSwitch case statement is a multiple branching statement. In this system the\
+    \ control jumps to perform a particular action out of a number of actions depending\
+    \ upon a switch value. A"
+- md: "\nswitch statement is associated with a number of blocks. Each block is defined\
+    \ under a specific case. The control gets transferred to a particular case, which\
+    \ matches with the given switch value. Each case ends with a break statement,\
+    \ which can be used as a case terminator. Break statement passes the control out\
+    \ of the switch block.\n\nYou can use a special case called default case which\
+    \ is automatically followed if no case matches with the given switch value.\n\n\
+    Example: A Java program to accept two numbers and find the sum, difference or\
+    \ product according to user’s choice.\n\n```java\nimport java.io.*;\npublic class\
+    \ choice {\n    public static void main(String[] args) throws IOException {\n\
+    \        int a,b,ch;\n        InputStreamReader read = new Reader(System.in);\n\
+    \        BufferedReader in = new BufferedReader(read);\n        System.out.println(\"\
+    Enter two numbers\");\n        a=Integer.parseInt(in.readLine());\n        b=Integer.parseInt(in.readLine());\n\
+    \        System.out.println(\"Enter 1 to add,2 to sub.,3 to mult\");\n       \
+    \ System.out.println(\"Enter your choice\");\n        ch=Integer.parseInt(in.readLine());\n\
+    \        switch(ch) {\n            case 1:\n                System.out.println(\"\
+    The sum of two nos.\"+(a+b));\n        }\n    }\n}\n```\n\n```java\nbreak;\ncase\
+    \ 2:\nSystem.out.println(\"The diff. of two nos.\"+(a-b));\nbreak;\ncase 3:\n\
+    System.out.println(\"The product of two nos.\"+(a*b));\nbreak;\ndefault:\nSystem.out.println(\"\
+    It is a wrong choice\");\n}\n}\n```\n\n# Chapter 6 LOOPING\n\n## 6.1 LOOPING STRUCTURE\n\
+    \nA looping structure contains the following parts:\n\n- Control Variable\n- Body\
+    \ of the loop\n- Test Condition\n- Step Value\n\n## 6.2 TYPES OF LOOPS\n\nTypes\
+    \ of Loops in Java:\n\n- for loop\n- while loop\n- do while loop\n\n### for loop\n\
+    \nWe can perform any conditional repetitive type of flow very easily with the\
+    \ help of for loop. It is used for a fixed number of iterations.\n\nSyntax: for(initial\
+    \ value; final value; step value)\n\n```java\n{\n  task to be performed\n}\n```\n\
+    \nExample: A Java program to print all natural numbers from 1 to 5.\n\n```java\n\
+    public class num\n{\n  public static void main(String args[])\n{\n    int a;\n\
+    \    for(a=1;a<=5;a++)\n    {\n      System.out.println(a);\n    }\n  }\n}\n```\n\
+    \nOutput: 1\n2\n3\n4\n5\n\n### Nested for loop\n\nWhen you apply a for loop within\
+    \ another for loop, the structure is termed as nested for loop.\n\nExample: A\
+    \ Java program to display the given pattern using for loop.\n\n- 1\n1 2\n1 2 3\n\
+    \n```java\npublic class pattern\n{\n  public static void main(String args[])\n\
+    {\n    int a;\n    for(a=1;a<=3;a++)\n    {\n      for(b=1;b<=a;b++)\n      {\n\
+    \        System.out.print(b);\n      }\n      System.out.println();\n    }\n \
+    \ }\n}\n```\n\n### while loop\n\nwhile loop repeats a statement or group of statements\
+    \ while a given condition is true. It tests the condition before executing the\
+    \ loop body. The loop will continue executing till the test condition is true.\n\
+    \nSyntax: while(condition)\n\n```java\n{\n  Statements to execute\n}\n```\n\n\
+    Example: A program in Java to display a message on the screen 10 times by using\
+    \ while statement.\n\n```java\npublic class msg\n{\n  public static void main(String\
+    \ args[])\n{\n    int i=1;\n    while(i<=10)\n    {\n      System.out.println(\"\
+    Welcome to Java Programming.\");\n      i++;\n    }\n  }\n}\n```\n\n### Infinite\
+    \ while loop\n\nIn a while loop, if a user does not provide increment/decrement\
+    \ expression it becomes infinite loop. The loop repeats infinitely as the test\
+    \ condition always remains true.\n\n```java\nint i=1;\nwhile(i<=10)\n{\n  s=s+i;\n\
+    }\n```\n\n### Nested while loop\n\nNested while loop can be known as while loop\
+    \ used within another loop.\n\n**Example:** A Java program to display the given\
+    \ pattern using while loop.\n\n- 1\n1 2\n1 2 3\n\n```java\npublic class pattern\n\
+    {\n  public static void main(String args[])\n  {\n    int a=1;\n    while(a<=3)\n\
+    \    {\n      b=1;\n      while(b<=a)\n      {\n        System.out.print(b);\n\
+    \        b++;\n      }\n      System.out.println();\n      a++;\n    }\n  }\n\
+    }\n```\n\n### Do-while loop\n\nDo-while loop is used in program where number of\
+    \ iterations is not fixed. In this system, the control enters the loop without\
+    \ checking any condition, executes the given steps and then checks for continuation\
+    \ of the loop. Thus, the condition is not satisfied, then the control exits from\
+    \ the loop.\n\nSyntax: do\n{\n  task to do\n}\nwhile(condition);\n\nExample: A\
+    \ Java program to find factorial of 10.\n\n```java\npublic class factorial\n{\n\
+    \  public static void main(String args[])\n{\n    int i,f;i=1;f=1;\n    do\n \
+    \   {\n      f=f*i;\n      i++;\n    }\n    while(i<=10);\n    System.out.println(\"\
+    The factorial of 10 = \" +f);\n  }\n}\n```\n\n### Use of break statement\n\nSometimes,\
+    \ it is needed to stop a loop suddenly when a condition is satisfied. A break\
+    \ statement is used for unusual termination of loop.\n\nSyntax: while(condition)\n\
+    \n```java\n{\n    if(another condition is true)\n    break;\n}\n```\n\n### Use\
+    \ of continue statement\n\nThe statement continue is just the opposite of break\
+    \ statement. As soon as continue statement is executed in a loop, the control\
+    \ skips rest of the statement for that value and resumes for the next iteration.\n\
+    \nSyntax: while(condition)\n\n```java\n{\n    if(another condition)\n    continue;\n\
+    }\n```\n\n# Chapter 7 ARRAY\n\n## Arrays\n\nIn Java programming, you may need\
+    \ to structure numerous data items by applying minimum set of variables and using\
+    \ optimum memory space. It becomes necessary to store data within the memory in\
+    \ the most convenient and economical way.\n\nJava array is an object that contains\
+    \ elements of similar data type. It is a data structure where we store similar\
+    \ elements. We can store only fixed set of elements in a java array. Index based\
+    \ Array is in java, First element is stored at 0 index.\n\n| 0 | 1 | 2 | 3 | 4\
+    \ | 5 | 6 | 7 | 8 | 9 |\n|---|---|---|---|---|---|---|---|---|---|\n\n## 7.1 TYPES\
+    \ OF ARRAY\n\n- Single Dimensional Array\n- Double Dimensional Array\n\n### Single\
+    \ Dimensional Array\n\nSingle Dimensional Array is also known when the elements\
+    \ are specified by a single subscript.\n\nSyntax to Declare Single Dimensional\
+    \ Array\n- dataType[] arr; (or)\n- dataType []arr; (or)\n- dataType arr[];\n\n\
+    ### 7.2 DECLARATION OF AN ARRAY IN JAVA\n\nExample of Single Dimensional Java\
+    \ Array\n\n```java\nclass TestSingleArray{\n  public static void main(String args[]){\n\
+    {\n    int a[]=new int[5]; //declaration and instantiation of int\n    a[0]=10;\
+    \ //initialization a with numbers\n    a[1]=20;\n    a[2]=70;\n    a[3]=40;\n\
+    \    a[4]=50;\n    //printing array\n    for(int i=0;i<a.length;i++)//length is\
+    \ the property of array\n      System.out.println(a[i]);\n  }\n}\n```\n\nOutput:\
+    \ 10\n20\n70\n40\n50\n\nInstantiate and initializing the java array together can\
+    \ be declared as:\n\n```java\nclass Test1Instantiateandinitializing{\n  public\
+    \ static void main(String args[]){\n    int a[]={33,3,4,5}; //declaration, instantiation\
+    \ and initialization int\n    \n    //printing array\n    for(int i=0;i<a.length;i++)\
+    \ //length is the property of array\n      System.out.println(a[i]);\n  }\n}\n\
+    ```\n\nOutput:\n33\n3\n4\n5\n\n### 7.3 PASSING AN ARRAY TO METHOD\n\nWe can pass\
+    \ the java array to method so that we can reuse the same logic on any array.\n\
+    \n```java\nclass Test2PassingMethod{\n  static void min(int arr[]){\n    int min=arr[0];\n\
+    \    for(int i=1;i<arr.length;i++)\n    if(min>arr[i])\n      min=arr[i];\n  \
+    \  \n    System.out.println(min);\n  }\n\n  public static void main(String args[]){\n\
+    \    int a[]={33,2,4,5};\n    min(a);//passing array to method\n  }\n}\n```\n\n\
+    Output:2\n\n### Double Dimensional Array\n\nIn such case, data is stored in row\
+    \ and column based index (also known as matrix form).\n\nSyntax: dataType[][]\
+    \ arrayRefVar; (or)\ndataType [][]arrayRefVar; (or)\ndataType arrayRefVar[]; (or)\n\
+    dataType [][]arrayRefVar][];\n\nExample to instantiate 2-dimensional array:\n\
+    int[][][] arr = new int[3][3];//row and 3 column\n\n# Example to initialize 2-dimensional\
+    \ array:\n\n```java\narr[0][0]=1;\narr[0][1]=2;\narr[0][2]=3;\narr[1][0]=4;\n\
+    arr[1][1]=5;\narr[1][2]=6;\narr[2][0]=7;\narr[2][1]=8;\narr[2][2]=9;\n```\n\n\
+    # Example of 2-dimensional array:\n\n```java\nclass Testarray3Dimensional{\n \
+    \ public static void main(String args[])\n  {\n    //declaring and initializing\
+    \ 2D array\n    int arr[][]=={{1,2,3},{2,4,5},{4,4,5}};\n    \n    //printing\
+    \ 2D array\n    for(int i=0;i<3;i++){\n      for(int j=0;j<3;j++){\n        System.out.print(arr[i][j]+\"\
+    \ \");\n      }\n      System.out.println();\n    }\n  }\n}\n```\n\nOutput: 1\
+    \ 2 3\n4 4 5\n\n## 7.4 BASIC OPERATIONS ON JAVA\n"
+  mdcn: "\n\nswitch 语句与多个块相关。每个块都定义在特定的 case 下。控制流转移到与给定的 switch 值匹配的特定 case。每个 case\
+    \ 都以 break 语句结束，该语句可以作为 case 的终止符。break 语句将控制流传出 switch 块。\n\n你可以使用一个名为 `default`\
+    \ case 的特殊 case，如果没有没有 case 匹配给定的 switch 值，则会自动执行该 case。\n\n示例：一个 Java 程序，接受两个数字并根据用户的选择计算和、差值或乘积。\n\
+    \n```java\nimport java.io.*;\npublic class choice {\n    public static void main(String[]\
+    \ args) throws IOException {\n        int a,b,ch;\n        InputStreamReader read\
+    \ = new Reader(System.in);\n        BufferedReader in = new BufferedReader(read);\n\
+    \        System.out.println(\"输入两个数字\");\n        a=Integer.parseInt(in.readLine());\n\
+    \        b=Integer.parseInt(in.readLine());\n        System.out.println(\"输入 1\
+    \ 加法, 2 减法, 3 乘法\");\n        System.out.println(\"输入你的选择\");\n        ch=Integer.parseInt(in.readLine());\n\
+    \        switch(ch) {\n            case 1:\n                System.out.println(\"\
+    两个数字之和：+(a+b));\n        }\n    }\n}\n```\n\n```java\nbreak;\ncase 2:\nSystem.out.println(\"\
+    两个数字之差：+(a-b));\nbreak;\ncase 3:\nSystem.out.println(\"两个数字之积：+(a*b));\nbreak;\n\
+    default:\nSystem.out.println(\"选择错误\");\n}\n}\n```\n\n# 第 6 章 循环\n\n## 6.1 循环结构\n\
+    \n循环结构包含以下部分：\n\n- 控制变量\n- 循环体\n- 测试条件\n- 步进值\n\n## 6.2 循环的类型\n\nJava 中的循环类型：\n\
+    \n- for 循环\n- while 循环\n- do while 循环\n\n### for 循环\n\n借助 for 循环，我们可以很容易地执行任何条件类型的重复流。它用于固定次数的迭代。\n\
+    \n语法：for(初始值; 最终值; 步进值)\n\n```java\n{\n  要执行的任务\n}\n```\n\n示例：一个打印从 1 到 5 所有自然数字的\
+    \ Java 程序。\n\n```java\npublic class num\n{\n  public static void main(String args[])\n\
+    {\n    int a;\n    for(a=1;a<=5;a++)\n    {\n      System.out.println(a);\n  \
+    \  }\n  }\n}\n```\n\n输出：1\n2\n3\n4\n5\n\n### 嵌套 for 循环\n\n当你在另一个 for 循环内部应用 for\
+    \ 循环时，这种结构被称为嵌套 for 循环。\n\n示例：使用 for 循环显示给定模式的 Java 程序。\n\n- 1\n1 2\n1 2 3\n\n\
+    ```java\npublic class pattern\n{\n  public static void main(String args[])\n{\n\
+    \    int a;\n    for(a=1;a<=3;a++)\n    {\n      for(b=1;b<=a;b++)\n      {\n\
+    \        System.out.print(b);\n      }\n      System.out.println();\n    }\n \
+    \ }\n}\n```\n\n### while 循环\n\nwhile 循环在给定条件为真时重复语句或一组语句。它在执行循环体之前测试条件。循环将一直执行直到测试条件为真。\n\
+    \n语法：while(condition)\n\n```java\n{\n  要执行的语句\n}\n```\n\n示例：一个使用 while 语句在屏幕上显示\
+    \ 10 次消息的 Java 程序。\n\n```java\npublic class msg\n{\n  public static void main(String\
+    \ args[])\n{\n    int i=1;\n    while(i<=10)\n    {\n      System.out.println(\"\
+    欢迎来到 Java.\");\n      i++;\n    }\n  }\n}```\n\n### 无限 while 循环\n\n在 while 循环中，如果用户不提供增/减表达式，它将变成无限循环。由于测试条件始终为真，循环无限重复。\n\
+    \n```java\nint i=1;\nwhile(i<=10)\n{\n  s+i;\n}\n```\n\n### 嵌套 while 循环\n\n嵌套\
+    \ while 循环被称为在另一个循环内部使用的 while 循环。\n\n**示例:** 使用 while 循环显示给定模式的 Java 程序。\n\n\
+    - 1\n1 2\n1 2 3\n\n```java\npublic class pattern\n{\n  public static void main(String\
+    \ args[])\n  {\n    int a=1;\n    while(a<=3)\n    {\n      b=1;\n      while(b<=a)\n\
+    \      {\n        System.out.print(b);\n        b++;\n      }\n      System.out.println();\n\
+    \      a++;\n    }\n  }\n}```\n\n### do-while 循环\n\ndo-while 循环用于迭代次数固定的程序。在这种系统中，控制流不检查任何条件进入循环，执行给定的步骤，然后检查是否继续以退出循环。\n\
+    \n语法：do\n{\n  要执行的任务\n}\nwhile(condition);\n\n示例：计算 10 阶乘的 Java 程序。\n\n```java\n\
+    public class factorial\n{\n  public static void main(String args[])\n{\n    int\
+    \ i,f;i=1;f=1;\n    do\n    {\n      f*i;\n      i++;\n    }\n    while(i<=10);\n\
+    \    System.out.println(\"10 的阶乘 = \" +f);\n  }\n}```\n\n### break 语句的使用\n\n有时当条件满足时需要突然停止循环。break\
+    \ 语句用于异常终止循环。\n\n语法：while(condition)\n\n```java\n{\n    if(true)\n    break;\n\
+    }```\n\n### continue 语句的使用\n\ncontinue 语句是 break 语句的相反。一旦在循环中执行 continue 语句，控制将跳过该值的其余语句并继续下一次迭代。\n\
+    \n语法：while(condition)\n\n```java\n{\n    if(true)\n    continue;\n}```\n\n# 第\
+    \ 7 章 数组\n\n## 数组\n\n在 Java 编程中，可能需要通过应用最少变量和优化内存空间来组织大量数据项。在内存中以最方便的方式存储数据。Java\
+    \ 数组是包含相同数据类型的对象。它是存储相似元素的数据结构。在 Java 数组中，第一个元素存储在索引 0。\n\n| 0 | 1 | 2 | 3 | 4\
+    \ | 5 | 6 | 7 | 8 | 9 |\n|---|---|---|---|---|---|---|---|---|\n\n## 7.1 数组的类型\n\
+    \n- 一维数组\n- 二维数组\n\n### 一维数组\n\n当元素通过单个下标指定时，称为一维数组。\n\n声明一维数组的语法：\n- dataType[]\
+    \ arr; (或)\n- dataType []arr; (或)\n- dataType arr[];\n\n### 7.2 在 JAVA 中声明数组\n\
+    \n一维 Java 数组示例\n\n```java\nclass TestSingleArray{\n  public static void main(String\
+    \ args[]){\n{\n    int a[]=new int[5];//int 的声明和实例化\n    a[0]=10;//用数字初始化 a\n\
+    \    a[1]=20;\n    a[2]=70;\n    a[3]=40;\n    a[4]=50;\n    //打印数组\n    for(int\
+    \ i=0;i<a.length;i++)length是数组的属性\n      System.out.println(a[i]);\n  }\n}```\n\
+    \n输出：10\n20\n70\n40\n50\n\n同时实例化和初始化 Java 数组可以声明为：\n\n```java\nclass Test1Instantiateandinitializing{\n\
+    \  public static void main(String args[]){\n    int a[]={33,3,4,5}; //int 的声明、实例化和初始化\n\
+    \    \n    //打印数组\n    for(int i=0;i<a.length;i++)length是数组的属性\n      System.out.println(a[i]);\n\
+    \  }\n}```\n\n输出：\n33\n3\n4\n5\n\n### 7.3 将数组传递给方法\n\n我们可以将 Java 数组传递给方法，以便在任何数组上重用相同的逻辑。\n\
+    \n```java\nclass Test2PassingMethod{\n  static void min(int arr[]){\n    int min=arr[0];\n\
+    \    for(int i=1;i<arr.length;i++)\n    if(min>arr[i])\n      min=arr[i];\n  \
+    \  \n    System.out.println(min);\n  }\n\n  public static void main(String args[]){\n\
+    \    int a[]={33,2,4,5};\n    min(a);//传递数组给方法\n  }\n}```\n\n输出：2\n\n### 二维数组\n\
+    \n在这种情况下，数据存储在基于行和列的索引中（也称为矩阵形式）。\n\n语法：\ndataType[][] arrayRefVar; (或)\ndataType\
+    \ [][]arrayRefVar; (或)\ndataType arrayRefVar[]; (或)\ndataType [][]arrayRefVar][];\n\
+    \n实例化二维数组的示例：\nint[][][] arr = new int[3][3];//行和 3 列\n\n# 初始化二维数组的示例：\n\n```java\n\
+    arr[0][0]=1;\narr[0][1]=2;\narr[0][2]=3;\narr[1][0]=4;\narr[1][1]=5;\narr[1][2]=6;\n\
+    arr[2][0]=7;\narr[2][1]=8;\narr[2][2]=9;\n```\n\n# 二维数组示例：\n\n```java\nclass Testarray3Dimensional{\n\
+    \  public static void main(String args[])\n  {\n    //声明和初始化二维数组\n    int arr[][]=={{1,2,3},{2,4,5},{4,4,5}};\n\
+    \    \n    //打印二维数组\n    for(int i=0;i<3;i++){\n      for(int j=0;j<3;j++){\n\
+    \        System.out.print(arr[i][j]+\" \");\n      }\n      System.out.println();\n\
+    \    }\n  }\n}```\n\n输出：1 2 3\n2 4 5\n4 4 5\n\n## 7.4 JAVA 的基本操作\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 41]\n\nswitch statement is associated with a number of blocks. Each block\
+    \ is defined under a specific case. The control gets transferred to a particular\
+    \ case, which matches with the given switch value. Each case ends with a break\
+    \ statement, which can be used as a case terminator. Break statement passes the\
+    \ control out of the switch block.\n\nYou can use a special case called default\
+    \ case which is automatically followed if no case matches with the given switch\
+    \ value.\n\nExample: A Java program to accept two numbers and find the sum, difference\
+    \ or product according to user’s choice.\n\n```\nimport java.io.*;\npublic class\
+    \ choice {\n    public static void main(String[] args) throws IOException {\n\
+    \        int a,b,ch;\n        InputStreamReader read = new ­dReader(System.in);\n\
+    \        BufferedReader in = new BufferedReader(read);\n        System.out.println(\"\
+    Enter two numbers\");\n        a=Integer.parseInt(in.readLine());\n        b=Integer.parseInt(in.readLine());\n\
+    \        System.out.println(\"Enter 1 to add,2 to sub.,3 to mult\");\n       \
+    \ System.out.println(\"Enter your choice\");\n        ch=Integer.parseInt(in.readLine());\n\
+    \        switch(ch) {\n            case 1:\n                System.out.println(\"\
+    The sum of two nos.\"+(a+b));\n        }\n    }\n}\n```"
+  - '[PAGE 42]
+
+
+    ```
+
+    break;
+
+    case 2:
+
+    System.out.println("The diff. of two nos.=\+(a-b));
+
+    break;
+
+    case 3:
+
+    System.out.println("The product of two nos.=\+(a*b);
+
+    break;
+
+    default:
+
+    System.out.println("It is a wrong choice");
+
+    }
+
+    }
+
+    ```'
+  - '[PAGE 43]
+
+
+    # Chapter 6 LOOPING
+
+
+    # 6.1 LOOPING STRUCTURE
+
+
+    A looping structure contains the following parts:
+
+
+    +   - Control Variable
+
+    - Body of the loop
+
+    - Test Condition
+
+    - Step Value
+
+
+    # 6.2 TYPES OF LOOPS
+
+
+    Types of Loops in Java:
+
+
+    +   - for loop
+
+    - while loop
+
+    - do while loop
+
+
+    for loop
+
+
+    We can perform any conditional repetitive type of flow very easily with the help
+    for loop. It is used for a fixed number of iterations.
+
+
+    Syntax: for(initial value; final value; step value)
+
+
+    ```
+
+    {
+
+    task to be performed
+
+    }
+
+    ```
+
+
+    Example: A Java program to print all natural numbers from 1 to 5.
+
+
+    ```
+
+    public class num
+
+    ```'
+  - "[PAGE 44]\n\n```\n{\n  public static void main(String args[])\n{\n    int a;\n\
+    \    for(a=1;a<=5;a++)\n{\n      System.out.println(a);\n    }\n  }\n```\n\nOutput:\
+    \ 1\n2\n3\n4\n5\n\n# Nested for loop\n\nWhen you apply a for loop within another\
+    \ for loop, the structure is termed as nested for loop.\n\nExample: A Java program\
+    \ to display the given pattern using for loop.\n\n+   1\n1 2\n1 2 3\n\n```\npublic\
+    \ class pattern\n{\n  public static void main(String args[])\n{\n    int a;\n\
+    \    for(a=1;a<=3;a++)\n{\n      for(b=1;b<=a;b++)\n    }\n  }\n```"
+  - "[PAGE 45]\n\n```\n{\n  System.out.print(b);\n  System.out.println();\n}\n```\n\
+    \n# while loop\n\nwhile loop repeats a statement or group of statements while\
+    \ a given condition is true. It tests the condition before executing the loop\
+    \ body. The loop will continue executing till the test condition is true.\n\n\
+    Syntax: while(condition)\n\n```\n{\n  Statements to execute\n}\n```\n\nExample:\
+    \ A program in Java to display a message on the screen 10 times by using while\
+    \ statement.\n\n```\npublic class msg\n{\n  public static void main(String args[])\n\
+    {\n    int i=1;\n    while(i<=10)\n    {\n      System.out.println(\"Welcome to\
+    \ Java Programming.\");\n      i++;\n    }\n}\n```\n\n# Infinite while loop"
+  - "[PAGE 46]\n\nIn a while loop, if a user does not provide increment/decrement\
+    \ expression it becomes infinite loop. The loop repeats infinitely as the test\
+    \ condition always remains true.\n\n```\nint i=1;\nwhile(i<=10)\n{\n  s=s+i;\n\
+    }\n```\n\n# Nested while loop\n\nNested while loop can be known as while loop\
+    \ used within another while loop.\n\n**Example:** A Java program to display the\
+    \ given pattern using while loop.\n\n+   1\n  1 2\n  1 2 3\n\n```\npublic class\
+    \ pattern\n{\n  public static void main(String args[])\n  {\n    a=1;\n    while(a<=3)\n\
+    \    {\n      b=1;\n      while(b<=a)\n      {\n        System.out.print(b);\n\
+    \      }\n    }\n  }\n}\n```"
+  - "[PAGE 47]\n\n```\nb++;\n}\nSystem.out.println();\na++;\n}\n```\n\n# Do-while\
+    \ loop\n\nDo-while loop is used in a program where number of iterations is not\
+    \ fixed. In this system, the control enters the loop without checking any condition,\
+    \ executes the given steps and then checks the condition for further continuation\
+    \ of the loop.\n\nThus, this type of loop executes the tasks at least once. If\
+    \ the condition is not satisfied, then the control exits from the loop.\n\n```\n\
+    Syntax: do\n{\n  task to do\n}\nwhile(condition);\n```\n\nExample: A Java program\
+    \ to find the factorial of 10.\n\n```\npublic class factorial\n{\n  public static\
+    \ void main(String args[])\n{\n    int i,f;i=1;f=1;\n    do\n    {\n      f=f*i;\n\
+    \    }\n    i++;\n```"
+  - "[PAGE 48]\n\n```\n}\nwhile(i<=10);\nSytem.out.println(\"The factorial of 10 =\
+    \ \" +f);\n}\n}\n```\n\n# Use of break statement\n\nSometimes, it is needed to\
+    \ stop a loop suddenly when a condition is satisfied. A break statement is used\
+    \ for unusual termination of a loop.\n\nSyntax: while(condition)\n\n```\n{\n \
+    \   execution continues\n    if(another condition is true)\n    break;\n    ----;\n\
+    \    ----;\n}\n```\n\n# Use of continue statement\n\nThe statement continue, is\
+    \ just the opposite of break statement. As soon as the continue statement is executed\
+    \ in a loop, the control skips rest of the statement for that value and resumes\
+    \ for the next iteration.\n\nSyntax: while(condition)\n\n```\n{\n    Statement\
+    \ 1\n    ----;\n    ----;\n    if(another condition)\n    continue;\n}\n```"
+  - '[PAGE 49]
+
+
+    ```
+
+    Statement 2
+
+    ------;
+
+    ------;
+
+    }
+
+    ```'
+  - '[PAGE 50]
+
+
+    # Chapter 7 ARRAY
+
+
+    Arrays
+
+    In Java programming, you may need to structure the memory to store numerous data
+    items by applying minimum set of variables and by using optimum memory space.
+    It becomes necessary to store data within the memory in the most convenient and
+    economical way.
+
+
+    Java array is an object that contains elements of similar data type. It is a data
+    structure where we store similar elements. We can store only fixed set of elements
+    in a java array.
+
+    Index based Array is in java,
+
+    Array First element is stored at 0 index.
+
+
+    +   - First index
+
+
+    | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+
+    Array length is 10
+
+
+    # 7.1 TYPES OF ARRAY
+
+
+    +   - Single Dimensional Array
+
+    - Double Dimensional Array
+
+
+    Single Dimensional Array
+
+
+    Single Dimensional Array is also known when the elements are specified by a single
+    subscript,
+
+    Syntax to Declare Single Dimensional Array
+
+    - dataType[] arr; (or)'
+  - '[PAGE 51]
+
+
+    +   - dataType []arr; (or)
+
+    - dataType arr[];
+
+
+    # 7.2 DECLARATION OF AN ARRAY IN JAVA
+
+
+    Example of Single Dimensional Java Array
+
+
+    +   1. class TestSingleArray{
+
+    2. public static void main(String args[]){
+
+    3.
+
+    4. int a[]=new int[5]; //declaration and instantiation of int
+
+    5. a[0]=10; //initialization a[?] with numbers
+
+    6. a[1]=20;
+
+    7. a[2]=70;
+
+    8. a[3]=40;
+
+    9. a[4]=50;
+
+    10.
+
+    11. //printing array
+
+    12. for(int i=0;i<a.length;i++)//length is the property of array
+
+    13. System.out.println(a[i]);
+
+    14.
+
+    15. }}
+
+
+    Output: 10'
+  - '[PAGE 52]
+
+
+    20
+
+    70
+
+    40
+
+    50
+
+
+    Instantiate and initializing the java array together can be declared as:
+
+
+    ```
+
+    1. class Test1Instantiateandinitializing{
+
+    2. public static void main(String args[]){
+
+    3. int a[]={33,3,4,5}; //declaration, instantiation and initialization int
+
+    4.
+
+    5. //printing array
+
+    6. for(int i=0;i<a.length;i++) //length is the property of array
+
+    7. System.out.println(a[i]);
+
+    8.
+
+    9. }}
+
+    ```
+
+
+    Output:
+
+    33
+
+    3
+
+    4
+
+    5
+
+
+    # 7.3 PASSING AN ARRAY TO METHOD'
+  - "[PAGE 53]\n\nWe can pass the java array to method so that we can reuse the same\
+    \ logic on any array.\n\n```\n1. class Test2PassingMethod{\n2. static void min(int\
+    \ arr[]){\n3. int min=arr[0];\n4. for(int i=1;i<arr.length;i++)\n5. if(min>arr[i])\n\
+    6. min=arr[i];\n7. \n8. System.out.println(min);\n9. }\n10.\n11. public static\
+    \ void main(String args[]){\n12.\n13. int a[]={33,2,4,5};\n14. min(a);//passing\
+    \ array to method\n15. }}\n```\n\nOutput:2\n\n# Double Dimensional Array\n\nIn\
+    \ such case, data is stored in row and column based index (also known as matrix\
+    \ form).\n\nSyntax: dataType[][] arrayRefVar; (or)\ndataType [][]arrayRefVar;\
+    \ (or)\ndataType arrayRefVar[][]; (or)\ndataType [][]arrayRefVar][];\n\nExample\
+    \ to instantiate 2-dimensional array:\nint[][][] arr = new int[3][3];//row and\
+    \ 3 column"
+  - '[PAGE 54]
+
+
+    # Example to initialize 2-dimensional array:
+
+
+    ```
+
+    arr[0][0]=1;
+
+    arr[0][1]=2;
+
+    arr[0][2]=3;
+
+    arr[1][0]=4;
+
+    arr[1][1]=5;
+
+    arr[1][2]=6;
+
+    arr[2][0]=7;
+
+    arr[2][1]=8;
+
+    arr[2][2]=9;
+
+    ```
+
+
+    # Example of 2-dimensional array:
+
+
+    +   1. class Testarray3Dimensional{
+
+    2. public static void main(String args[]){
+
+    3.
+
+    4. //declaring and initializing 2D array
+
+    5. int arr[][]=={{1,2,3},{2,4,5},{4,4,5}};
+
+    6.
+
+    7. //printing 2D array
+
+    8. for(int i=0;i<3;i++){
+
+    9. for(int j=0;j<3;j++){
+
+    10. System.out.print(arr[i][j]+" ");
+
+    11. }
+
+    12. System.out.println();
+
+    13. }
+
+    14.
+
+    15. }}
+
+
+    Output: 1 2 3
+
+    4 4 5
+
+
+    # 7.4 BASIC OPERATIONS ON JAVA'
+- md: "\nArrays provide the following basic operations:\n\n- Searching\n- Sorting\n\
+    - Insertion\n- Deletion\n- Merging\n\n# Search\n\nIt is a process to determine\
+    \ whether a given item is present in the array or not. This can be done by two\
+    \ ways:\n\n- Linear Search\n- Binary Search\n\n# Linear Search\n\nIt is one of\
+    \ the simplest technique in which the searching of an item begins at the start\
+    \ of an array (i.e. 0th position of the array). The process continues one after,\
+    \ where each element of the array is checked and compared with a given data item\
+    \ till the end of the array location is reached. This process is also called as\
+    \ Sequential Search.\n\n# Binary Search\n\nIt is the another technique to search\
+    \ an element in the given array by using minimum possible time. Searching takes\
+    \ place in either half of the array by further dividing it into two halves.\n\n\
+    However, the binary search can be applied only when the array elements are sorted\
+    \ into a sequence (ascending/descending). It always compares the element to be\
+    \ searched with the middle element of the sorted array. If the middle member is\
+    \ smaller, then the search is carried out in upper half, otherwise the search\
+    \ continues in the lower half. The middle element of the either half is compared\
+    \ with the search item. This process is repeated till the search terminates.\n\
+    \n| 18 | 32 | 50 | 56 | 65 | 79 | 88 |\n| :--- | :--- | :--- | :--- | :--- | :---\
+    \ | :--- |\n| 0th | 1st | 2nd | 3rd | 4th | 5th | 6th |\n\n![](img/c590c9268607738d8272307d1e7c574c_56_0.png)\n\
+    \n# First Mid Last\n\nStep 1: First=0, Last=6, Mid=(First+Last)/2=(0+6)/2=3\n\
+    Step 2: num[Mid]=num[3]=55\n55>31\n\nSince, 55 is greater therefore search will\
+    \ take place in the first half of the array.\nStep 3: Last=Mid-1 3-1=2\n(In case,\
+    \ the number to be searched is greater than the mid value then, First=Mid+1).\n\
+    Mid=(First+Last)/2=(0+2)/2=1\nNum[Mid]= num[1]=31\n\n| 18 | 32 | 50 |\n| :---\
+    \ | :--- | :--- |\n| ↓ 0th | ↓ 1st | ↓ 2nd |\n\n# First Mid Last\n\n# Sorting\n\
+    \nIt is a process of arranging data in a specified order which may be either ascending\
+    \ or descending.\n\n- Selection Sort\n- Bubble Sort\n\n# Selection Sort\n\nThis\
+    \ is one of the techniques to sort the given data item in a specified order (ascending/descending).\
+    \ Suppose you have to arrange numbers in ascending orders from unsorted data.\n\
+    \nStep 1: At first, the smallest number is selected through iteration from the\
+    \ unsorted data list. This number is interchanged with the number at 0th position\
+    \ (i.e. 16 comes from 6th position to 0th position and 45 goes to 6th position\
+    \ from 0th position).\n\n| 45 | 98 | 50 | 57 | 90 | 28 | 16 | 78 |\n| :--- | :---\
+    \ | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0th | 1st | 2nd | 3rd | 4th |\
+    \ 5th | 6th | 7th |\n\nStep 2: Find the next smallest element from 1st position\
+    \ onward (i.e. 28). Interchange it with 1st position element.\n\n| 16 | 98 | 50\
+    \ | 57 | 90 | 28 | 45 | 78 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :---\
+    \ | :--- |\n| 0th | 1st | 2nd | 3rd | 4th | 5th | 6th | 7th |\n\nStep 3: Find\
+    \ the next smallest element from 2nd position onward (i.e. 45). Interchange it\
+    \ with 2nd position element.\n\n| 16 | 28 | 50 | 57 | 90 | 98 | 45 | 78 |\n| :---\
+    \ | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0th | 1st | ↑ 2nd | 3rd\
+    \ | 4th | 5th | 6th | 7th |\n\nStep 4: Find the next smallest element from 3rd\
+    \ position onward (i.e. 50). Interchange it with 3rd position element.\n\n| 16\
+    \ | 28 | 45 | 57 | 90 | 98 | 50 | 78 |\n| :--- | :--- | :--- | :--- | :--- | :---\
+    \ | :--- | :--- |\n| 0th | 1st | 2nd | ↑ 3rd | 4th | 5th | 6th | 7th |\n\nStep\
+    \ 5: Find the next smaller element from 4th position onward (i.e. 57). Interchange\
+    \ it with 4th position element.\n\n| 16 | 28 | 45 | 50 | 90 | 98 | 57 | 78 |\n\
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0th | 1st | 2nd |\
+    \ 3rd | 4th | 5th | 6th | 7th |\n\nStep 6: Find the next smaller element from\
+    \ 5th position onward (i.e. 78). Interchange it with 5th position element.\n\n\
+    | 16 | 28 | 45 | 50 | 90 | 98 | 57 | 78 |\n| :--- | :--- | :--- | :--- | :---\
+    \ | :--- | :--- | :--- |\n| 0th | 1st | 2nd | 3rd | 4th | 5th | 6th | 7th |\n\n\
+    Step 7: Find the next smaller element from 6th position onward (i.e. 90). Interchange\
+    \ it with 6th position element.\n\n| 16 | 28 | 45 | 50 | 57 | 78 | 90 | 98 |\n\
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0th | 1st | 2nd |\
+    \ 3rd | 4th | 5th | 6th | 7th |\n\nThus, the numbers are arranged in ascending\
+    \ order using Selection Sort.\n\n# Bubble Sort\n\nThis technique is widely used\
+    \ for sorting elements in a single dimensional array. In this technique, array\
+    \ is scanned several times and during each iteration pairs of consecutive elements\
+    \ are compared and interchanged into a specific order (ascending/descending).\
+    \ It is easy technique but consumes lot of time when number of exchanges is high.\
+    \ Technique to sort the numbers in ascending order:\n\n| 10 | 7 | 25 | 12 |\n\
+    | :--- | :--- | :--- | :--- |\n| 0th | 1st | 2nd | 3rd |\n\nElements 10 and 7\
+    \ are compared. Both are interchangeable as 10>7.\n\n| 7 | 10 | 25 | 12 |\n| :---\
+    \ | :--- | :--- | :--- |\n| 0th | 1st | 2nd | 3rd |\n\nElements 10 and 25 are\
+    \ compared but not interchangeable as 10<25.\n\n| 7 | 10 | 25 | 12 |\n| :--- |\
+    \ :--- | :--- | :--- |\n| 0th | 1st | 2nd | 3rd |\n\nElements 25 and 4 are compared\
+    \ and interchangeable as 25>4.\n\n| 7 | 10 | 4 | 25 |\n| :--- | :--- | :--- |\
+    \ :--- |\n| 0th | 1st | 2nd | 3rd |\n\nElements 25 and 12 are compared and interchangeable\
+    \ as 25>12.\n\nThus, the numbers are arranged in ascending order using Bubble\
+    \ Sort.\n\n# Insertion\n\nTo perform insertion sort, begin at the left most element\
+    \ of the array and invoke to insert each element encountered into its correct\
+    \ position. The ordered sequence into which the element is inserted is stored\
+    \ at the beginning of the array in the set of indices already examined.\n\n# Chapter\
+    \ 8 CLASSES, OBJECTS AND METHODS\n\n## 8.1 CLASSES IN JAVA\n\nA class is a blueprint\
+    \ from which individual objects are created.\n\nExample: public class boy\n\n\
+    ```java\nclass boy {\n  String name;\n  int age;\n  void study(){}\n  void hungry(){}\n\
+    }\n```\n\nA class contain following variables type:\n\n- Local variables: Local\
+    \ variables can be defined inside methods, constructors or blocks.\n- Instance\
+    \ variables: Variables declare within a class but outside any method and initialized\
+    \ within class are instantiated. Variables can be accessed from inside any method,\
+    \ constructor or blocks of particular class.\n- Class variables: With the static\
+    \ keyword, within a class or outside any method are Class variables.\n\n## 8.2\
+    \ CREATING AN OBJECT\n\nAn object is created from a class and new keyword is used\
+    \ to create new objects.\n\nCreating an object from a class there are three steps–\n\
+    \n- Declaration – A variable name with an object type.\n- Instantiation – 'new'\
+    \ keyword used to create an object.\n- Initialization – 'new' keyword followed\
+    \ by constructor. This call initializes new object.\n\nExample: public class Boy{\n\
+    \n```java\npublic Boy(String name){\n    System.out.println(\"Name is:\" +name);\n\
+    }\npublic static void main(String args[]){\n    Boy obj = new Boy(\"Ram\");\n\
+    }\n```\n\nOutput:\nName is: Ram\n\n## 8.3 METHODS\n\nA program module used simultaneously\
+    \ at different instances in the program is known as Methods.\n\n## 8.4 CREATING\
+    \ METHOD\n\n```java\nSyntax: public static int user(int a,int b){\n    //body\n\
+    }\n```\n\nHere,\n\n- **public static** – modifier\n- **int** – return type\n-\
+    \ **user** – name of the method\n- **a, b** – formal parameters\n- **int a, int\
+    \ b** – list of parameters\n\n**Example:** public static int max(int a,int b){\n\
+    \    int max;\n    if(a>b){\n        max=a;\n    }else{\n        max=b;\n    }\n\
+    \    return max;\n}\n```\n\n## ‘this’ keyword in Java\n\nSometimes, in a member\
+    \ method it is needed to use the object on which the method is called. Java system\
+    \ uses it with this keyword. The object on which the method is called can be referred\
+    \ in the method with this.\n\nExample: class keyword\n\n```java\nclass calculate\
+    \ {\n    int a,b;\n\n    void getvalue(int p,int q) {\n        a=p;\n        b=q;\n\
+    \    }\n\n    void sum(calculate x, calculate y) {\n        this.a=x.a+y.a;\n\
+    \        this.b=x.b+y.b;\n    }\n\n    void display() {\n        System.out.println(\"\
+    sum of a \" + this.a);\n    }\n\n    public static void main(String args[]) {\n\
+    \        calculate obj1 = new calculate();\n        calculate obj2 = new calculate();\n\
+    \        calculate obj3 = new calculate();\n        obj1.getvalue(2,3);\n    \
+    \    obj2.getvalue(4,6);\n        obj3.sum(obj1,obj2);\n        obj3.display();\n\
+    \    }\n}\n```\n\n## 8.5 METHOD CALLING\n\nThere are two ways of method calling.\n\
+    \n- Method returns a value\n- Returning nothing (no return value).\n\nMethod calling\
+    \ process is simple. When program invokes method, program control moved to called\
+    \ method. Then called method returns control to the caller in two conditions.\n\
+    \n- First when return statement is execute, and\n- Second when reached to method\
+    \ ending closing brace.\n\nThe void Keyword: It allows us to create methods which\
+    \ do not return a value.\n\n## 8.6 METHOD OVERLOADING\n\nIt is known when a class\
+    \ has two or more methods with the same name but with different parameters.\n\n\
+    Example: public class MethodOverloading {\n\n```java\npublic static void main(String[]\
+    \ args){\nint w=10;\nint x=5;\ndouble y=6.3;\ndouble z=8.4;\n}\n}\n```"
+  mdcn: "\n数组提供了以下基本操作：\n\n- 搜索\n- 排序\n- 插入\n- 删除\n- 合并\n\n# 搜索\n\n这是一个确定给定项目是否存在于数组中的过程。可以通过两种方式实现：\n\
+    \n- 线性查找\n- 二分查找\n\n# 线性查找\n\n这是最简单的技术之一，对项目的搜索从数组的开始（即数组的第 0 个位置）开始。该过程一个接一个持续，数组的每个元素都会与给定的数据项进行检查和比较，直到到达数组的末尾。这个过程也称为顺序查找。\n\
+    \n# 二分查找\n\n这是另一种使用最小可能时间在给定数组中搜索元素的技术。通过将数组进一步划分为两部分，在数组的任一部分进行搜索。\n\n然而，二分查找仅在数组元素按顺序（升序/降序）排列好时才能应用。它总是将要搜索的元素与排序数组的中间元素进行比较。如果中间成员较小，则在上半部分搜索，否则在下半部分继续搜索。将任一部分部分的中间元素与搜索项进行比较。重复此过程，直到搜索结束。\n\
+    \n| 18 | 32 | 50 | 56 | 65 | 79 | 88 |\n| :--- | :--- | :--- | :--- | :--- | :---\
+    \ | :--- |\n| 0th | 1st | 2nd | 3rd | 4th | 5th | 6th |\n\n![](img/c590c9268607738d8272307d1e7c574c_56_0.png)\n\
+    \n# 起 中 后\n\n第 1步：First=0, Last=6, Mid=(First+Last)/2=(0+6)/2=3\n第 2步：num[Mid]=num[3]=55\n\
+    55>31\n\n由于 55 大，因此搜索将在数组的第一半部分进行。\n第 3步：Last=Mid-1 3-1=2\n（如果要搜索的数字大于中间值，则 First=Mid+1）。\n\
+    Mid=(First+Last)/2=(0+2)/2=1\nNum[Mid]= num[1]=31\n\n| 18 | 32 | 50 |\n| :---\
+    \ | :--- | :--- |\n| ↓ 0th | ↓ 1st | ↓ 2nd |\n\n# 起 中 后\n\n# 排序\n\n这是一个按照指定顺序（可以是升序或降序）排列数据的过程。\n\
+    \n- 选择排序\n- 冒泡排序\n\n# 选择排序\n\n这是按指定顺序（升序/降序）对给定数据项进行排序的技术之一。假设你必须从未排序的数据按升序排列数字。\n\
+    \n第 1步：首先，通过迭代从未排序的数据列表中选择最小的数字。将此数字与第 0th 位置的数字交换（即 16 从 6th 位置移动到 0th 位置，45\
+    \ 从 0th 位置移动到 6th 位置）。\n\n| 45 | 98 | 50 | 57 | 90 | 28 | 16 | 78 |\n| :--- |\
+    \ :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0th | 1st | 2nd | 3rd |\
+    \ 4th | 5th | 6th | 7th |\n\n第 2步：从 1st 位置开始找到下一个较小的元素（即 28）。将其与 1st 位置的元素交换。\n\
+    \n| 16 | 98 | 50 | 57 | 90 | 28 | 45 | 78 |\n| :--- | :--- | :--- | :--- | :---\
+    \ | :--- | :--- | :--- |\n| 0th | 1st | 2nd | 3rd | 4th | 5th | 6th | 7th |\n\n\
+    第 3步：从 2nd 位置开始找到下一个较小的元素（即 45）。将其与 2nd 位置的元素交换。\n\n| 16 | 28 | 50 | 57 | 90 |\
+    \ 98 | 45 | 78 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n\
+    | 0th | 1st | ↑ 2nd | 3rd | 4th | 5th | 6th | 7th |\n\n第 4步：从 3rd 位置开始找到下一个较小的元素（即\
+    \ 50）。将其与 3rd 位置的元素交换。\n\n| 16 | 28 | 45 | 57 | 90 | 98 | 50 | 78 |\n| :--- |\
+    \ :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0th | 1st | 2nd | ↑ 3rd\
+    \ | 4th | 5th | 6th | 7th |\n\n第 5步：从 4th 位置开始找到下一个较小的元素（即 57）。将其与 4th 位置的元素交换。\n\
+    \n| 16 | 28 | 45 | 50 | 90 | 98 | 57 | 78 |\n| :--- | :--- | :--- | :--- | :---\
+    \ | :--- | :--- | :--- |\n| 0th | 1st | 2nd | 3rd | ↑ 4th | 5th | 6th | 7th |\n\
+    \n第 6步：从 5th 位置开始找到下一个较小的元素（即 78）。将其与 5th 位置的元素交换。\n\n| 16 | 28 | 45 | 50 | 90\
+    \ | 98 | 57 | 78 |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n\
+    | 0th | 1st | 2nd | 3rd | 4th | ↑ 5th | 6th | 7th |\n\n第 7步：从 6th 位置开始找到下一个较小的元素（即\
+    \ 90）。将其与 6th 位置的元素交换。\n\n| 16 | 28 | 45 | 50 | 57 | 78 | 90 | 98 |\n| :--- |\
+    \ :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| 0th | 1st | 2nd | 3rd |\
+    \ 4th | 5th | ↑ 6th | 7th |\n\n因此，使用选择排序按升序排列数字。\n\n# 冒泡排序\n\n该技术广泛用于一维数组元素的排序。在这种技术中，数组被扫描多次，在每次迭代期间，比较相邻元素对并交换为特定顺序（升序/降序）。这是一种简单的技术，但在交换次数多时会消耗大量时间。升序排序数字的方法：\n\
+    \n| 10 | 7 | 25 | 12 |\n| :--- | :--- | :--- | :--- |\n| 0th | 1st | 2nd | 3rd\
+    \ |\n\n比较 10 和 7。由于 10>7，它们是可以交换的。\n\n| 7 | 10 | 25 | 12 |\n| :--- | :--- | :---\
+    \ | :--- |\n| 0th | 1st | 2nd | 3rd |\n\n比较 10 和 25，但由于 10<25，它们是交换的。\n\n| 7 |\
+    \ 10 | 25 | 12 |\n| :--- | :--- | :--- | :--- |\n| 0th | 1st | 2nd | 3rd |\n\n\
+    比较 25 和 4，由于 25>4，它们是可以交换的。\n\n| 7 | 10 | 4 | 25 |\n| :--- | :--- | :--- | :---\
+    \ |\n| 0th | 1st | 2nd | 3rd |\n\n比较 25 和 12，由于 25>12，它们是可以交换的。\n\n因此，使用冒泡排序按升序排列数字。\n\
+    \n# 插入\n\n要执行插入排序，从数组最左侧的元素开始，并调用插入将遇到的每个元素插入到其正确位置。插入元素的有序序列存储在数组的开头，已检查的索引集中。\n\
+    \n# 第 8 章 类、对象和方法\n\n## 8.1 JAVA 中的类\n\n类是用于创建单个对象的蓝图。\n\n示例：public class boy\n\
+    \n```java\nclass boy {\n  String name;\n  int age;\n  void study(){}\n  void hungry(){}\n\
+    }\n```\n\n类包含以下类型的变量：\n\n- 局部变量：局部变量可以定义在方法、构造函数或块内部。\n- 实例变量：在类内部但在任何方法之外并在类内初始化的变量是实例化的。可以从任何方法、构造函数或块内部访问变量。\n\
+    \n类包含以下变量类型：\n\n- 局部变量：局部变量可以定义在方法、构造函数或块内部。\n- 实例变量：在类内部但在任何方法之外并在类内初始化的变量是实例化的。可以从任何方法、构造函数或块内部访问变量。\n\
+    \n## 8.2 创建对象\n\n从类创建对象。使用 `new` 关键字创建对象。\n\n- 声明 – 类的类型。\n- 实例化 – 使用 `new` 关键字。\n\
+    - 初始化 – 随 `new` 关键字。\n\n示例：public class boy\n\n```java\npublic Boy(String name){\n\
+    \    System.out.println(\"Name is:\" +name);\n}\npublic static void main(String\
+    \ args[]){\n    Boy obj = new(\"(\"\");\n}\n```\n\n输出：\nName is: Ram\n\n## 8.3\
+    \ 方法\n\n在程序中同时使用的模块被称为方法。\n\n## 8.4 创建方法\n\n```java\n语法: public static int user(int\
+    \ a,int b){\n    //body\n}\n```\n\n在这里，\n\n- **public static** – 修饰符\n- **int**\
+    \ – 类型\n- **user** – 方法名\n- **a, b** –形式参数\n- **int a, b** – 参数列表\n\n## 8.5 方法调用\n\
+    \n方法调用有两种方式。\n\n- 方法返回一个值\n- 不返回（无返回值）。\n\n方法调用过程非常简单。当程序调用方法时，程序控制转移到调用方法。然后调用方法在两种情况下返回控制权给调用者。\n\
+    \n- 首先在执行返回语句时，\n- 其次在到达方法结束的大括号时。\n\n`void` 关键字：它允许我们创建不返回值的方法。\n\n## 8.6 Java\
+    \ 中的 `this` 关键字\n\n有时，在成员方法中需要使用调用方法的对象。Java 通过 `this` 关键字使用它。被调用的对象可以通过 `this`\
+    \ 进行引用。\n\n示例：class 类\n\n```java\nclass calculate {\n    int a,b;\n\n    void\
+    \ getvalue(int p,int q) {\n        a=p;\n        b=q;\n    }\n\n    void sum(calculate\
+    \ x, calculate y) {\n        this.a=x.a+y.a;\n        this.b=x.b+y.b;\n    }\n\
+    \n    void display() {\n        System.out.println(\"sum of a \" + this.a);\n\
+    \    }\n\n    public static void main(String args[]) {\n        calculate obj1\
+    \ = new calculate();\n        calculate obj2 = new calculate();\n        calculate\
+    \ obj3 = new calculate();\n        obj1.getvalue(2,3);\n        obj2.getvalue(4,6);\n\
+    \        obj3.sum(obj1,obj2);\n        obj3.display();\n    }\n}\n```\n(注：由于原文中存在部分段落重复和逻辑混乱，翻译时已根据技术背景进行了修正以保持通顺)"
+  merge: 0
+  raw:
+  - '[PAGE 55]
+
+
+    Arrays provide the following basic operations:
+
+
+    +   * Searching
+
+    * Sorting
+
+    * Insertion
+
+    * Deletion
+
+    * Merging
+
+
+    # Search
+
+
+    It is a process to determine whether a given item is present in the array or not.
+    This can be done by two ways:
+
+
+    +   * Linear Search
+
+    * Binary Search
+
+
+    # Linear Search
+
+
+    It is one of the simplest technique in which the searching of an item begins at
+    the start of an array(i.e. 0th position of the array). The process continues one
+    another, where each element of the array is checked and compared with a given
+    data item till the end of the array location is reached. This process is also
+    called as Sequential Search.
+
+
+    # Binary Search
+
+
+    It is the another technique to search an element in the given array by using minimum
+    possible time. Searching takes place in either half of the array by further dividing
+    it into two halves.
+
+
+    However, the binary search can be applied only when the array elements are sorted
+    into a sequence(ascending/descending).It always compares the element to be searched
+    with the middle element of the sorted array. If the middle member is smaller,
+    then the search is carried out in upper half, otherwise the search continues in
+    the lower half. The middle element of the either half is compared'
+  - '[PAGE 56]
+
+
+    with the search item. This process is repeated till the search terminates.
+
+
+    | 18 | 32 | 50 | 56 | 65 | 79 | 88 |
+
+    | 0th | 1st | 2nd | 3rd | 4th | 5th | 6th |
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_56_0.png)
+
+
+    # First Mid Last
+
+
+    Step 1: First=0,Last=6,Mid=(First+Last)/2=(0+6)/2=3
+
+    Step 2: num[Mid]=num[3]=55
+
+    55>31
+
+
+    Since, 55 is greater therefore search will take place in the first half of the
+    array.
+
+    Step 3: Last=Mid-1 3-1=2
+
+    (In case, the number to be searched is greater than the mid value then, First=Mid+1).
+
+    Mid=(First+Last)/2=(0+2)/2=1
+
+    Num[Mid]= num[1]=31
+
+
+    | 18 | 32 | 50 |
+
+    | ↓ 0th | ↓ 1st | ↓ 2nd |
+
+
+    # First Mid Last
+
+
+    # Sorting
+
+
+    It is a process of arranging data in a specified order which may be either ascending
+    or descending.'
+  - '[PAGE 57]
+
+
+    +   - Selection Sort
+
+    - Bubble Sort
+
+
+    # Selection Sort
+
+
+    This is one of the techniques to sort the given data item in a specified order(ascending/descending).
+    Suppose you have to arrange numbers in ascending orders from unsorted data.
+
+
+    Step 1: At first, the smallest number is selected through iteration from the unsorted
+    data list. This number is interchanged with the number at 0th position (i.e. 16
+    comes from 6th position to 0th position and 45 goes to 6th position from 0th position).
+
+
+    | 45 | 98 | 50 | 57 | 90 | 28 | 16 | 78 |
+
+    | 0th | 1st | 2nd | 3rd | 4th | 5th | 6th | 7th |
+
+
+    Step 2: Find the next smallest element from 1st position onward(i.e.28). Interchange
+    it with 1st position element.
+
+
+    | 16 | 98 | 50 | 57 | 90 | 28 | 45 | 78 |
+
+    | 0th | 1st | 2nd | 3rd | 4th | 5th | 6th | 7th |
+
+
+    Step 3: Find the next smallest element from 2nd position onward(i.e.45).Interchange
+    it with 2nd position element.'
+  - '[PAGE 58]
+
+
+    | 16 | 28 | 50 | 57 | 90 | 98 | 45 | 78 |
+
+    | 0th | 1st | ↑ 2nd | 3rd | 4th | 5th | 6th | 7th |
+
+
+    Step 4: Find the next smallest element from $3^{rd}$ position onward(i.e.50).
+    Interchange it with $3^{rd}$ position element.
+
+
+    | 16 | 28 | 45 | 57 | 90 | 98 | 50 | 78 |
+
+    | 0th | 1st | 2nd | ↑ 3rd | 4th | 5th | 6th | 7th |
+
+
+    Step 5: Find the next smaller element from $4^{th}$ position onward(i.e.57). Interchange
+    it with $4^{th}$ position element.
+
+
+    | 16 | 28 | 45 | 50 | 90 | 98 | 57 | 78 |
+
+    | 0th | 1st | 2nd | 3rd | 4th | 5th | 6th | 7th |
+
+
+    Step 6: Find the next smaller element from $5^{th}$ position onward(i.e.78). Interchange
+    it with $5^{th}$ position element.
+
+
+    | 16 | 28 | 45 | 50 | 57 | 98 | 90 | 78 |'
+  - '[PAGE 59]
+
+
+    Step 7: Find the next smaller element from 6th position onward(i.e.90). Interchange
+    it with 6th position element.
+
+
+    | 16 | 28 | 45 | 50 | 57 | 78 | 90 | 98 |
+
+    | 0th | 1st | 2nd | 3rd | 4th | 5th | 6th | 7th |
+
+
+    Thus, the numbers are arranged in ascending order using Selection Sort.
+
+
+    # Bubble Sort
+
+
+    This technique is most widely used for sorting elements in a single dimensional
+    array. In this technique, array is sequentially scanned several times and during
+    each iteration the pairs of consecutive elements are compared and interchanged
+    into a specific order(ascending/descending). It is an easy technique but consumes
+    lot of time when the number of exchanges is much high.
+
+
+    Technique to sort the numbers using bubble sort
+
+    Arranging the elements in ascending order:
+
+
+    | 10 | 7 | 25 | 4 | 12 |
+
+    | 0th | 1st | 2nd | 3rd | 4th |'
+  - '[PAGE 60]
+
+
+    Elements 10 and 7 are compared. Both are interchangeable as 10>7.
+
+
+    | 7 | 10 | 25 | 4 | 12 |
+
+    | 0th | 1st | 2nd | 3rd | 4th |
+
+
+    Elements 10 and 25 are compared but not interchangeable as 10<25.
+
+
+    | 7 | 10 | 25 | 4 | 12 |
+
+    | 0th | 1st | 2nd | 3rd | 4th |
+
+
+    Elements 25 and 4 are compared and interchangeable as 25>4.
+
+
+    | 10 | 7 | 4 | 25 | 12 |
+
+    | 0th | 1st | 2nd | 3rd | 4th |
+
+
+    Elements 25 and 12 are compared and interchangeable as 25>12.
+
+
+    Thus, the numbers are arranged in ascending order using **Bubble Sort.**'
+  - '[PAGE 61]
+
+
+    # Insertion
+
+
+    To perform an **insertion sort**, begin at the left-most element of the array
+    and invoke Insert to insert each element encountered into its correct position.
+    The ordered sequence into which the element is inserted is stored at the beginning
+    of the array in the set of indices already examined.'
+  - "[PAGE 62]\n\n# Chapter 8 CLASSES, OBJECTS AND METHODS\n\n# 8.1 CLASSES IN JAVA\n\
+    \nA class is a blueprint from which individual objects are created.\n\nExample:\
+    \ public class boy\n\n```\n{\n  String name;\n  int age;\n  void study(){\n}\n\
+    \  void hungry(){\n}\n  void sleeping(){\n}\n}\n```\n\nA class contain any following\
+    \ variables type.\n\n+   - Local variables – Local variables can be defined inside\
+    \ methods, constructors or blocks.\n\n+   - Instance variables – Variables declare\
+    \ within a class but outside any method and Variables initialized within class\
+    \ are instantiated Instance variables. Variables can be accessed from inside of\
+    \ any method, constructor or blocks of particular class.\n\n+   - Class variables\
+    \ – With the static keyword, within a class or outside any method are Class variables.\n\
+    \n# 8.2 CREATING AN OBJECT\n\nAn object is created from a class and new keyword\
+    \ is used to create new objects."
+  - "[PAGE 63]\n\nCreating an object from a class there are three steps–\n\n+   -\
+    \ Declaration – A variable name with an object type.\n\n+   - Instantiation –\
+    \ 'new' keyword used to create an object.\n\n+   - Initialization – 'new' keyword\
+    \ followed by constructor. This call initializes new object.\n\nExample: public\
+    \ class Boy{\n\n```\npublic boy(String name){\n    System.out.println(\"Name is:\"\
+    \ +name);\n}\npublic static void main(String args[]){\n    Boy obj = new Boy(\"\
+    Ram\");\n}\n```\n\nOutput:\n\nName is: Ram\n\n# 8.3 METHODS\n\nA program module\
+    \ used simultaneously at different instances in the program is known as Methods.\n\
+    \n# 8.4 CREATING METHOD\n\n```\nSyntax: public static int user(int a,int b{\n\
+    \    //body\n```"
+  - '[PAGE 64]
+
+
+    ```
+
+    }
+
+    ```
+
+
+    Here,
+
+
+    +   - **public static** – modifier
+
+    - **int** – return type
+
+    - **user** – name of the method
+
+    - **a, b** – formal parameters
+
+    - **int a, int b** – list of parameters
+
+
+    ```
+
+    **Example:** public static int max(int a,int b){
+
+    int max;
+
+    if(a>b){
+
+    max=a;
+
+    }else{
+
+    max=b;
+
+    }
+
+    return max;
+
+    }
+
+    ```
+
+
+    # **‘this’ keyword in Java**
+
+
+    Sometimes, in a member method it is needed to use the object on which the method
+    is called. Java system uses it with this keyword. The object on which the method
+    is called can be reffered in the method with this.
+
+
+    Example: class keyword
+
+
+    ```
+
+    {
+
+    int a,b;
+
+    ```'
+  - '[PAGE 65]
+
+
+    ```
+
+    void getvalue(int p,int q)
+
+    {
+
+    a=p;
+
+    b=q;
+
+    }
+
+    ```
+
+
+    ```
+
+    void sum(keyword x, keyword y)
+
+    {
+
+    this.a=x.a+y.a;
+
+    this.b=x.b+y.b;
+
+    }
+
+    ```
+
+
+    ```
+
+    void display()
+
+    {
+
+    System.out.println("sum of a
+
+    ```
+
+
+    ```
+
+    class calculate
+
+    {
+
+    public static void main(String args[])
+
+    {
+
+    keyword ob1 = new keyword();
+
+    keyword ob2 = new keyword();
+
+    keyword ob3 = new keyword();
+
+    ob1.getvalue(2,3);
+
+    }
+
+    ```'
+  - '[PAGE 66]
+
+
+    ```
+
+    ob2.getvalue(4,6);
+
+    ob3.sum(ob1,ob2);
+
+    ob3.display();
+
+    }
+
+    }
+
+    ```
+
+
+    # 8.5 METHOD CALLING
+
+
+    There are two ways of method calling.
+
+
+    +   - Method returns a value
+
+    - Returning nothing (no return value).
+
+
+    Method calling process is simple. When program invokes method, program control
+    moved to called method. Then called method returns control to the caller in two
+    conditions.
+
+
+    +   - First when return statement is execute, and
+
+    - Second when reached to method ending closing brace.
+
+
+    The void Keyword: It allows us to create methods which do not return a value.
+
+
+    # 8.6 METHOD OVERLOADING
+
+
+    It is known when a class has two or more methods with the same name but with different
+    parameters.
+
+
+    Example: public class MethodOverloading {
+
+
+    ```
+
+    public static void main(String[] args){
+
+    int w=10;
+
+    int x=5;
+
+    double y=6.3;
+
+    double z=8.4;
+
+    ```'
+- md: "\n```java\nint value1= miniVal (w, x);\ndouble value2= miniVal(y, z);\n// same\
+    \ type of function name with different parameters\nSystem.out.println(\"Minimum\
+    \ value =\" +value1);\nSystem.out.println(\"Minimum value =\" +value2);\n}\n//\
+    \ for integer type\npublic static int miniVal(int x1, int x2){\n    int mini;\n\
+    \    if(x1 > x2){\n        mini = x2;\n    }\n    else{\n        mini = x1;\n\
+    \    }\n    return mini;\n}\n// for value function\npublic static double miniVal\
+    \ (double x1, double x2){\n    double mini;\n    if(x1 > x2){\n        mini =\
+    \ x2;\n    }\n    else{\n```\n\n```java\nmini = x1;\n    }\n    return mini;\n\
+    }\n}\n```\n\n## 8.7 METHOD OVERRIDING\n\n**Method overriding** in java can be\
+    \ known if child class (subclass) has same method as declared in the parent class.\n\
+    \nExample: class schoolclass\n\n```java\nvoid run(){System.out.println(\"school\
+    \ is running\");}\nclass classroom2 extends schoolclass{\n    void run(){System.out.println(\"\
+    class is running\");}\n    public static void main(String args[]){\n    classroom2\
+    \ obj = new classroom2();\n    obj.run();\n    }\n}\n```\n\n### Can we override\
+    \ static method?\n\nNo, static method cannot be overridden because static method\
+    \ is bound with class whereas instance method is bound with object. Static belongs\
+    \ to class and instance belongs to heap area. We cannot override java main method\
+    \ because main is a static method.\n\n## Chapter 9 INTERFACES AND PACKAGES\n\n\
+    ## 9.1 INTERFACES\n\nInterfaces are syntactically similar to classes, but you\
+    \ cannot create instance of an Interface and their methods are declared without\
+    \ any body. Interface is used to achieve complete abstraction in Java.\n\nSyntax:\
+    \ `interface interface_name{}`\n\nWhile, implementing interface in class, the\
+    \ word ‘implement’ should be used and the methods can have different statements\
+    \ inside them. A class can implement more than one interface. Whatever the methods\
+    \ is in interface, it should be used in the class otherwise, while compilation,\
+    \ error will occur.\n\nExample: interface UseInterface\n\n```java\n{\nint a=20;\n\
+    void use();\n}\nclass Value implements UseInterface\n{\n    public void use()\n\
+    \    {\n        System.out.println(\"The value of a=\"+a);\n    }\n    public\
+    \ static void main(String args[])\n{\n```\n\n```java\nValue v = new Value();\n\
+    v.use();\n    }\n}\n```\n\nOutput: The value of a=20\n\n## 9.2 PACKAGES IN JAVA\n\
+    \nA package is a group of classes, which can be imported to a program that the\
+    \ user may exercise the implicit facility available in it.\n\nA package in java\
+    \ program can be included by using import command.\n\nE.g. import java.util.data\n\
+    \nThe util function is imported to utilize its in-built data class.\n\n```java\n\
+    import java.util.*;\n```\n\nIt allows all the classes of java.util package to\
+    \ be included. Some basic packages which can be imported for various fundamental\
+    \ operations are:\n\n- java.io\n- java.util\n- java.awt\n- java.net\n\n### Java\
+    \ packages for Mathematical Calculations\n\nFor the mathematical functions, we\
+    \ can include import.java.lang.Math;\n\n### Some of the functions are mentioned\
+    \ below:\n\n| Function | Description | Format |\n| --- | --- | --- |\n| sqrt(a)\
+    \ | Returns the square root of a positive number | Math.sqrt(a); |\n| min(a,b)\
+    \ | Returns the smaller number between a and b | Math.min(a,b); |\n| max(a,b)\
+    \ | Returns the greater number between a and b | Math.max(a,b); |\n| abs(a) |\
+    \ Returns the absolute value of any numeric | Math.abs(a); |\n| round(a) | Returns\
+    \ the rounded value upto the nearest integer | Math.round(a); |\n| exp(a) | Returns\
+    \ an exponent | Math.exp(a); |\n| ceil(a) | Returns the rounded value to the higher\
+    \ integer | Math.ceil(a); |\n\n## User defined packages\n\nTill now, we have discussed\
+    \ built in java packages. A package may be defined by the users to be used in\
+    \ various programming logic. These are known as user defined packages.\n\ne.g.\
+    \ package mypackage\n\n```java\nclass MyClass\n{\n    public static void main(String\
+    \ args[])\n    {\n        System.out.println(\"Hello from package\");\n    }\n\
+    }\n```\n\n### To use user defined package, we use import command.\n\n```java\n\
+    import mypackage;\nclass Test\n{\n    public static void main(String args[])\n\
+    \    {\n        mypackage.MyClass obj = new mypackage.MyClass();\n        obj.main(args);\n\
+    \    }\n}\n```\n"
+  mdcn: "\n\n```java\nint value1= miniVal (w, x);\ndouble value2= miniVal(y, z);\n\
+    // 相同函数名的不同参数\nSystem.out.println(\"Minimum value =\" +value1);\nSystem.out.println(\"\
+    Minimum value =\" +value2);\n}\n// 整数类型\npublic static int miniVal(int x1, int\
+    \ x2){\n    int mini;\n    if(x1 > x2){\n        mini = x2;\n    }\n    else{\n\
+    \        mini = x1;\n    }\n    return mini;\n}\n// 数值型函数\npublic static double\
+    \ miniVal (double x1, double x2){\n    double mini;\n    if(x1 > x2){\n      \
+    \  mini = x2;\n    }\n    else{\n```\n\n```java\nmini = x1;\n    }\n    return\
+    \ mini;\n}\n}\n```\n\n## 8.7 方法重写 (METHOD OVERRIDING)\n\nJava 中的**方法重写**是指子类（子类）拥有了与父类中声明的相同方法。\n\
+    \n示例：class schoolclass\n\n```java\nvoid run(){System.out.println(\"school is running\"\
+    );}\nclass classroom2 extends schoolclass{\n    void run(){System.out.println(\"\
+    class is running\");}\n    public static void main(String args[]){\n    classroom2\
+    \ obj = new classroom2();\n    obj.run();\n    }\n}\n```\n\n### 我们可以重写静态方法吗？\n\
+    \n不能，静态方法不能被重写，因为静态方法与类绑定，而实例方法与对象绑定。静态属于类，实例属于堆区域。我们无法重写 Java 的 main 方法，因为 main\
+    \ 是静态方法。\n\n## 第 9 章 接口与包 (INTERFACES AND PACKAGES)\n\n## 9.1 接口 (INTERFACES)\n\
+    \n接口在语法上与类相似，但你不能创建接口的实例，且它们的方法没有方法体。接口用于在 Java 中实现完全抽象。\n\n语法：`interface interface_name{}`\n\
+    \n在类中实现接口时，应该使用 `implement` 关键字，方法内部可以有不同的语句。一个类可以实现多个接口。接口中的任何方法都应该在类中使用，否则在编译时会发生错误。\n\
+    \n示例：interface UseInterface\n\n```java\n{\nint a=20;\nvoid use();\n}\nclass Value\
+    \ implements UseInterface\n{\n    public void use()\n    {\n        System.out.println(\"\
+    The value of a=\"+a);\n    }\n    public static void main(String args[])\n{\n\
+    ```\n\n```java\nValue v = new Value();\nv.use();\n    }\n}\n```\n\n输出：The value\
+    \ of a=20\n\n## 9.2 JAVA 中的包 (PACKAGES IN JAVA)\n\n包是类的组，可以导入到程序中，用户可以使用其中提供的隐式功能。\n\
+    \nJava 程序中的包可以通过 `import` 命令进行包含。\n\n例如：import java.util.data\n\n导入 util 函数是为了利用其内置的数据类。\n\
+    \n```java\nimport java.util.*;\n```\n\n它允许包含 java.util 包中的所有类。一些可以为了各种基础操作而导入的基础包包括：\n\
+    \n- java.io\n- java.util\n- java.awt\n- java.net\n\n### 用于数学计算的 Java 包\n\n对于数学函数，我们可以包含\
+    \ `import java.lang.Math;`。\n\n### 下面列出部分函数：\n\n| 函数 | 描述 | 格式 |\n| --- | ---\
+    \ | --- |\n| sqrt(a) | 返回正数的平方根 | Math.sqrt(a); |\n| min(a,b) | 返回 a 和 b 之间的较小值\
+    \ | Math.min(a,b); |\n| max(a,b) | 返回 a 和 b 之间的较大值 | Math.max(a,b); |\n| abs(a)\
+    \ | 返回任何数值的绝对值 | Math.abs(a); |\n| round(a) | 返回四舍五入的整数 | Math.round(a); |\n|\
+    \ exp(a) | 返回指数 | Math.exp(a); |\n| ceil(a) | 返回高位整数 | Math.ceil(a); |\n\n## 用户自定义包\n\
+    \n到为止，我们讨论了 Java 内置包。用户可以定义包以便用于各种编程逻辑。这些被称为用户自定义包。\n\n例如：package mypackage\n\n\
+    ```java\nclass MyClass\n{\n    public static void main(String args[])\n    {\n\
+    \        System.out.println(\"Hello from package\");\n    }\n}``````\n\n### 要使用用户自定义包，我们使用\
+    \ import 命令。\n\n```java\nimport mypackage;\nclass Test\n{\n    public static void\
+    \ main(String args[])\n    {\n        mypackage.MyClass obj = new mypackage.MyClass();\n\
+    \        obj.main(args);\n    }\n}\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 67]
+
+
+    ```
+
+    int value1= miniVal (w, x);
+
+    double value2= miniVal(y, z);
+
+    // same type of function name with different parameters
+
+    System.out.println("Minimum value =" +value1);
+
+    System.out.println("Minimum value =" +value2);
+
+    }
+
+    // for integer type
+
+    public static int miniVal(int x1, int x2){
+
+    int mini;
+
+    if(x1>x2){
+
+    mini=n2;
+
+    }
+
+    else{
+
+    mini=x1;
+
+    }
+
+    return mini;
+
+    }
+
+    // for value function
+
+    public static double miniVal (double x1, double x2){
+
+    double mini;
+
+    if(x1>x2){
+
+    mini=x2;
+
+    }
+
+    else{
+
+    ```'
+  - "[PAGE 68]\n\n```\nmini=x1;\n}\ndouble mini;\n}\n}\n```\n\n# 8.7 METHOD OVERRIDING\n\
+    \n**Method overriding** in java can be Know If child class (subclass) has same\
+    \ method as declared in the parent class.\n\nExample: class schoolclass\n\n```\n\
+    void run(){System.out.println(\"school is running\");}\nclass classroom2 extends\
+    \ schoolclass{\n    void run(){System.out.println(\"class is running\");}\n  \
+    \  public static void main(String args[]){\n    classroom2 obj = new classroom2();\n\
+    \    obj.run();\n}\n```\n\n# Can we override static method?\n\nNo, static method\
+    \ cannot be overridden because static method is bound with class whereas instance\
+    \ method is bound with object. Static belongs to class and instance belongs to\
+    \ heap area. We cannot override java main method because main is a static method."
+  - '[PAGE 69]
+
+
+    # Chapter 9 INTERFACES AND PACKAGES
+
+
+    # 9.1 INTERFACES
+
+
+    Interfaces are syntactically similar to classes, but you cannot create instance
+    of an Interface and their methods are declared without any body. Interface is
+    used to achieve complete abstraction in Java.
+
+
+    Syntax: interface interface_name{}
+
+
+    While, implementing interface in class, the word ‘implement’ should be used and
+    the methods can have different statements inside them. A class can implement more
+    than one interface.Whatever the methods is in interface, it should be used in
+    the class otherwise, while compilation, error will occur.
+
+
+    Example: interface UseInterface
+
+
+    ```
+
+    {
+
+    int a=20;
+
+    void use();
+
+    }
+
+    class Value implements UseInterface
+
+    {
+
+    public void use()
+
+    {
+
+    System.out.println("The value of a="+a);
+
+    }
+
+    public static void main(String args[])
+
+    {
+
+    ```'
+  - '[PAGE 70]
+
+
+    ```
+
+    Value v = new Value();
+
+    v.use();
+
+    }
+
+    }
+
+    ```
+
+
+    Output: The value of a=20
+
+
+    # 9.2 PACKAGES IN JAVA
+
+
+    A package is a group of classes, which can be imported to a program that the user
+    may exercise the implicit facility available in it.
+
+
+    A package in java program can be included by using import command.
+
+
+    E.g. import java.util.data
+
+
+    The util function is imported to utilize its in-built data class.
+
+
+    ```
+
+    import java.util.*;
+
+    ```
+
+
+    It allows all the classes of java.util package to be included. Some basic packages
+    which can be imported for various fundamental operations are:
+
+
+    +   - java.io
+
+    - java.util
+
+    - java.awt
+
+    - java.net
+
+
+    # Java packages for Mathematical Calculations
+
+
+    For the mathematical functions, we can include import.java.lang.Math;'
+  - '[PAGE 71]
+
+
+    # Some of the functions are mentioned below:
+
+
+    | Function | Description | Format |
+
+    | --- | --- | --- |
+
+    | sqrt(a) | Returns the square root of a positive number | Math.sqrt(a); |
+
+    | min(a,b) | Returns the smaller number between a and b | Math.min(a,b); |
+
+    | max(a,b) | Returns the greater number between a and b | Math.max(a,b); |
+
+    | abs(a) | Returns the absolute value of any numeric | Math.abs(a); |
+
+    | round(a) | Returns the rounded value upto the nearest integer | Math.round(a);
+    |
+
+    | exp(a) | Returns an exponent | Math.exp(a); |
+
+    | ceil(a) | Returns the rounded value to the higher integer | Math.ceil(a); |
+
+
+    # User defined packages
+
+
+    Till now, we have discussed built in java packages. A package may be defined by
+    the users to be used in various programming logic. These are known as user defined
+    packages.
+
+
+    e.g. Package area:
+
+
+    Class Rectangle
+
+
+    ```
+
+    {
+
+    ```'
+  - '[PAGE 72]
+
+
+    ```
+
+    }
+
+    Class square
+
+    {
+
+    }
+
+    ```
+
+
+    The package name is area. All the classes within it are the members of area package.
+
+
+    # 9.3 ADVANTAGES OF JAVA PACKAGE
+
+
+    +   1) It is used to classify the interfaces and classes, so they can maintain
+    easily.
+
+    2) It is responsible for access protection.
+
+    3) Naming collision is removed.
+
+    4) It provides reusability of code.
+
+    5) You can create your own Package or extend already available Package.'
+  - '[PAGE 73]
+
+
+    # Chapter 10 Constructors
+
+
+    A constructor is a member function with a name as same as that of the class name
+    used to initialize the instant variables of the objects.
+
+
+    # 10.1 TYPES OF CONSTRUCTOR
+
+
+    +   - Default Constructor
+
+    - Parameterized Constructor
+
+    - Copy Constructor
+
+
+    # Default Constructor
+
+
+    A constructor which initializes instant variables of an object with definite values
+    is known as Default Constructor.
+
+
+    Example: class Book{
+
+
+    ```
+
+    /*This is my default constructor having no return type and name
+
+    same as class name.*/
+
+    Book(){
+
+    System.out.println("Default constructor");
+
+    }
+
+    public void myymethod()
+
+    {
+
+    System.out.println("void method of the class");
+
+    }
+
+    public static void main(String args[]){
+
+    Book obj = new Book();
+
+    obj.mymethod();();
+
+    ```'
+  - '[PAGE 74]
+
+
+    ```
+
+    }
+
+    }
+
+    ```
+
+
+    Output: Default Constructor
+
+    void method of the class
+
+
+    # Parameterized Constructor
+
+
+    A constructor which is used to initialize the object variables by passing parametric
+    values at the time of its creation is known as Parameterized constructor.
+
+
+    ```
+
+    Example: classconst{
+
+    int a,b;
+
+    pconst(int x,int y){
+
+    a=x;
+
+    b=y;
+
+    }
+
+    void display(){
+
+    System.out.println("The value of a=" +a);
+
+    System.out.println("The value of b=" +b);
+
+    }
+
+
+    ```
+
+
+    ```
+
+    }
+
+    }
+
+    ```
+
+
+    # Copy Constructor
+
+
+    Copy Constructor copies the values of instant variables of an object to another
+    instant variables object.
+
+
+    Example: class copycon{'
+  - '[PAGE 75]
+
+
+    ```
+
+    //class using parameterized and copy constructors;
+
+    int a,b;
+
+    copycon(int x,int y){
+
+    a=x;
+
+    b=y;
+
+    }
+
+    }
+
+    class abc{
+
+    public static void main(String args[]){
+
+    copycon ob=new copycon(5,8);
+
+    copycon ob1=ob;
+
+    }
+
+    }
+
+    ```'
+  - '[PAGE 76]
+
+
+    # Chapter 11 THREAD AND MULTITHREAD IN JAVA
+
+
+    # THREAD
+
+
+    Thread is a single process to activate multiple processes running in background.
+    It makes process simple to execute and look into files sequence based as coded.
+
+
+    # 11.1 LIFE CYCLE OF A THREAD
+
+
+    ![](img/c590c9268607738d8272307d1e7c574c_76_0.png)
+
+
+    +   1. **New**: A thread begins its life cycle in the new state. It remains in
+    this state until the start() method is called on it.
+
+
+    +   2. **Runnable**: After invocation of start() method on new thread, the thread
+    becomes runnable.
+
+
+    +   3. **Running**: A method is in running thread if the thread scheduler has
+    selected it.'
+  - '[PAGE 77]
+
+
+    4. Waiting : A thread is waiting for another thread to perform a task. In this
+    stage the thread is still alive.
+
+
+    5. Terminated : A thread enter the terminated state when it completes its task.
+
+
+    # 11.2 MOSTLY USED METHODS OF THREAD CLASS
+
+
+    | 1. run(): Perform action for a thread. |
+
+    | 2. start(): Starts execution of thread by calling run() method. |
+
+    | 3. stop(): Stop’s the thread. |
+
+    | 4. sleep(): For a specified time suspend thread. |
+
+    | 5. getPriority(): Priority of the thread returns. |
+
+    | 6. setPriority(): Priority of the thread changes. |
+
+    | 7. getName(): Name of the thread returns. |
+
+    | 8. setName(): Name of the thread changes. |
+
+    | 9. getId(): Id of the thread returns. |
+
+    | 10. suspend(): Suspend the thread. |
+
+    | 11. resume(): Resume the suspended thread. |
+
+    | 12. stop(): Stop the thread. |
+
+
+    # 11.3 CREATING A THREAD
+
+
+    There are two ways to create a thread:
+
+
+    +   1. Extending Thread class
+
+
+    +   2. Implementing Runnable interface.
+
+
+    Example by extending thread class
+
+    class MyThread extends Thread
+
+
+    ```
+
+    {
+
+    public void run()
+
+    {}
+
+    ```'
+  - "[PAGE 78]\n\n```\nSystem.out.println(\"Concurrent thread started running..\"\
+    );\n}\n}\nclass MyThreadDemo\n{\n    public static void main(String args[])\n\
+    {\n        MyThread th = new MyThread();\n        th.start();\n    }\n}\n```\n\
+    \nOutput: Concurrent thread started running.\n\n# Example by implementing Runnable\
+    \ interface\n\n```\nclass Test implements Runnable{\n    public void run(){\n\
+    \        System.out.println(\"Concurrent thread started running..\");\n    }\n\
+    ```\n\n```\npublic static void main(String args[]){\n    Test x=new x();\n   \
+    \ Thread y =new Thread(y);\n    y1.start();\n}\n```\n\nOutput: Concurrent thread\
+    \ started running.\n\n# 11.4 MULTITHREADING\n\nThe Word Multithreading Mean, program\
+    \ contains two or more than two thread which runs parallel. Multithreading"
+- md: "used because threads share a common memory area without allocating separate\
+    \ memory area to save more and also it takes less time than previous process.\n\
+    \n# Chapter 12 HANDLING EXCEPTIONS AND ERRORS\n\nAn exception is a problem that\
+    \ arises during the execution of a program. When an Exception occurs the normal\
+    \ flow of the program is disrupted and the program terminates abnormally, which\
+    \ is not recommended, therefore, these exceptions are to be handled.\n\nFollowing\
+    \ some scenarios where an exception occurs.\n\n- When a user has entered an invalid\
+    \ data.\n- When file cannot be found.\n- When network connection is lost in middle\
+    \ of communications or the Java Virtual Machine runs out of memory.\n\nThese exceptions\
+    \ are caused by user, programmer and by physical resources that have failed in\
+    \ some method.\n\n## 12.1 EXCEPTION HANDLING WITH TRY-CATCH\n\nTry keyword contains\
+    \ a block of statements to perform. Any exception occurring within the try block\
+    \ is trapped. Hence, it is an error trapper. Further a report is to be passed\
+    \ to the exception handler about the error, which can be done by catch block.\n\
+    \nThe finally block contains the statements which are executed any way.\n\nSyntax\
+    \ to use try-catch exception handler:\n\n```\ntry\n{\nSet of statements\n}\ncatch(exception(e)){\n\
+    }\nfinally\n{\nStatement to execute any way\n}\n```\n\nExample: import java.io.*;\n\
+    public class Test{\npublic static void main(String args[]){\ntry{\nint a[]=new\
+    \ int[2];\nSystem.out.println(\"Access element three :\" +a[3]);\n}catch(ArrayIndexOutOfBoundsException\
+    \ e){\nSystem.out.println(\"Exception thrown :\" +e);\n}\nSystem.out.println(\"\
+    Out of the block\");\n}\n\nOutput: java.lang.ArrayIndexOutOfBoundsException: 3\n\
+    Out of the block\n\n## 12.2 EXCEPTION HANDLING WITH THROWS KEYWORD\n\nIf you want\
+    \ that the system is to be reported for an error then you can apply throws keyword.\
+    \ A throws keyword is applied with function signature.\n\nExample: public void\
+    \ getdata() throws IOException\n\nThis indicates, if an error occurs in the function\
+    \ related to I/O operation a report may be passed to the error handler.\n\n###\
+    \ Checked Exception\n\nThe classes that extend Throwable class RuntimeException\
+    \ and Error are known as checked exceptions e.g.IOException, SQLException etc.\
+    \ Checked exceptions are checked at compile-time.\n\n### Unchecked Exception\n\
+    \nThe classes that extend RuntimeException are known as unchecked exceptions e.g.ArithmeticException,NullPointerException,ArrayIndexOutOfBounds\
+    \ etc. Unchecked exceptions are not checked at compile-time rather they are checked\
+    \ at runtime.\n\n## 12.3 JAVA EXCEPTION HANDLING ADVANTAGES\n\n- Exception handling\
+    \ is Helpful in the Separation of results for less complex and readable code.\
+    \ It is also more capable, in the logic that the testing of errors in the normal\
+    \ implementation path is not needed.\n\n- Logical error types Exceptions can be\
+    \ group together with errors that are connected. It enables us to handle associated\
+    \ exceptions using single exception handler. An exception handler can catch exceptions\
+    \ of the class or any sub-class specified by its parameter.\n\n- Exception handling\
+    \ allowed related information to be caught at where an error occurs and show where\
+    \ it can be successfully controlled.\n\n## 12.4 ERROR\n\nError is irrecoverable\
+    \ e.g. OutOfMemoryError, VirtualMachineError, etc.\n\n### Common Coding Errors:\n\
+    \n- Syntax Error – Syntax errors are errors occurred in the syntax of a particular\
+    \ sequence of characters of a program.\n- Logical Errors – Logical errors occur\
+    \ when there is a design flaw in your program.\n- Runtime Errors – Runtime errors\
+    \ occur during the execution of the program.\n\n## 12.5 DIFFERENCE BETWEEN ERROR\
+    \ AND EXCEPTIONS\n\n| ERRORS | EXCEPTIONS |\n| :--- | :--- |\n| Errors at run\
+    \ time cannot be known to compiler | Checked exception can be known and Uncheck\
+    \ cannot be known at run time |\n| Error Occurs or caused when an application\
+    \ runs | Exceptions Occurs by the application itself |\n| Errors in java are Mostly\
+    \ Uncheck type | Check and Uncheck type of exceptions in Java |\n\n# Chapter 13\
+    \ SOME QUESTIONS AND ANSWERS:\n\n## QUESTIONS\n\n- 1. A program of Java that can\
+    \ be developed and executed by the users, is known as\n   a> Application b> Applet\n\
+    \   c> Object d> none\n\n- 2. Java Virtual Machine (JVM) is an\n   a> Interpreter\
+    \ b> Interpreter\n   c> Machine code d> Byte code\n\n- 3. To find the square root\
+    \ of a number which of the following package is required?\n   a> java.txt b> java.math\n\
+    \   c> java.lang d> java.net\n\n- 4. Which of the following is not a Java reserved\
+    \ word?\n   a> private b> public\n   c> break d> character\n\n- 5. The term used\
+    \ to correct the error in a program, is known as\n   a> bug b> debugging\n   c>\
+    \ error removing d> none\n\n- 6. A constant which gives the exact representation\
+    \ of data is called\n   a> Variable b> Literal\n   c> Identifier d> Character\n\
+    \n- 7. The statement n++ is equivalent to\n   a> ++n b> n=n+1\n   c> n+1 d> none\n\
+    \n- 8. What will be the output of a & b, if int a,b; a=10;b++a?\n   a> 10,0 b>\
+    \ 10,11\n   c> 11,10 d> 11,11\n\n- 9. What will be the output of a++; int a=-1?\n\
+    \   a> 1 b> -1\n   c> 0 d> none\n\n- 10. if condition is essentially formed by\
+    \ using\n   a> Arithmetic operators b> Relational operators\n   c> Logical operators\
+    \ d> ternary operators\n\n- 11. If(a!=b){\n   c=a;\n   }\n   else\n   {\n   c=b;\n\
+    \   }\n   can be written as\n   a> c=(a!=b)?a:b; b> c=(a!=b)?a:b;\n   c> c=(a!=b)?b:a;\
+    \ d> both a & b\n\n- 12. Which element is represented with a[10]\n   a> 10th b>\
+    \ 9th\n   c> 11th d> none\n\n- 13. The statement : int code[]={26,38,39,43};\n\
+    \   a> Assign 38 to code[1] b> Assign 26 to code[1]\n   c> Assign 39 to code[3]\
+    \ d> none\n\n- 14. A function with many definitions is known as\n   a> multiple\
+    \ function b> function overloading\n   c> floating function d> none\n\n- 15. A\
+    \ function is invoked through a class type-\n   a> object b> system\n   c> parameter\
+    \ d> none\n\n# ANSWERS:\n\n1. a  2. a  3. b  4. d  5. b\n6. b  7. b  8. b  9.\
+    \ c  10. b\n11. d  12. c  13. a  14. b  15. a"
+  mdcn: "\n使用线程是因为它们共享公共内存区域而不分配单独的内存区域以节省更多空间，而且比之前的进程耗时短。\n\n# 第 12 章 处理异常与错误\n\n\
+    异常是在程序执行过程中出现的问题。当发生异常时，程序的正常执行流会被中断，程序将异常终止，这是不推荐的，因此，必须对这些异常进行处理。\n\n以下是发生异常的一些场景：\n\
+    \n- 当用户输入无效数据时。\n- 当找不到文件时。\n- 当通信过程中丢失网络连接，或者 Java 虚拟机内存耗尽时。\n\n这些异常是由用户、程序员以及某些方法中失败的物理资源引起的。\n\
+    \n## 12.1 使用 TRY-CATCH 处理异常\n\n`try` 关键字包含一个要执行的语句块。`try` 块内发生的任何异常都会被捕获。因此，它是错误捕获器。此外，需要向异常处理器传递错误报告，可以通过\
+    \ `catch` 块来实现。\n\n`finally` 块包含无论如何都会执行的语句。\n\n使用 try-catch 异常处理器的语法：\n\n```\n\
+    try\n{\n一组语句\n}\ncatch(exception(e)){\n}\nfinally\n{\n无论如何执行的语句\n}\n```\n\n示例：import\
+    \ java.io.*;\npublic class Test{\npublic static void main(String args[]){\ntry{\n\
+    int a[]=new int[2];\nSystem.out.println(\"Access element three :\" +a[3]);\n}catch(ArrayIndexOutOfBoundsException\
+    \ e){\nSystem.out.println(\"Exception thrown :\" +e);\n}\nSystem.out.println(\"\
+    Out of the block\");\n}\n```\n\n输出：java.lang.ArrayIndexOutOfBoundsException: 3\n\
+    Out of the block\n\n## 12.2 使用 THROWS 关键字处理异常\n\n如果你希望系统报告错误，则可以使用 `throws` 关键字。`throws`\
+    \ 关键字应用于函数签名上。\n\n示例：public void getdata() throws IOException\n\n这表示如果函数中发生了与\
+    \ I/O 操作相关的错误，可能会将报告传递给错误处理器。\n\n#### 编译异常 (Checked Exception)\n\n继承 `Throwable`\
+    \ 类的 `RuntimeException` 和 `Error` 之外被称为编译异常，例如 `IOException`、`SQLException` 等。编译异常在编译时会被检查。\n\
+    \n#### 非检编译异常 (Unchecked Exception)\n\n继承 `RuntimeException` 的类被称为非检编译异常，例如 `ArithmeticException`、`NullPointerException`、`ArrayIndexOutOfBounds`\
+    \ 等。非检编译异常在编译时不进行检查，而是在运行时检查。\n\n## 12.3 JAVA 异常处理的优势\n\n- 异常处理有助于分离结果，使代码更简单且具可读性。它在逻辑上也更强大，因为不需要在正常实现路径中进行错误测试。\n\
+    \n- 逻辑错误类型：异常可以与相互相关的错误分组在一起。这使我们能够使用单个异常处理器处理关联异常。异常处理器可以捕获其参数指定的类或任何子类的异常。\n\
+    \n- 异常处理允许在错误发生的地方捕获相关信息，并显示可以在何处进行成功控制。\n\n## 12.4 错误 (ERROR)\n\n错误是不可恢复的，例如\
+    \ `OutOfMemoryError`、`VirtualMachineError` 等。\n\n###常见编码错误：\n\n- 语法错误 (Syntax\
+    \ Error) – 语法错误发生在程序中特定字符序列的语法中。\n- 逻辑错误 (Logical Errors) – 当程序中存在设计缺陷时发生逻辑错误。\n\
+    - 运行时错误 (Runtime Errors) – 运行时错误在程序执行期间发生。\n\n## 12.5 错误与异常的区别\n\n| 错误 (ERRORS)\
+    \ | 异常 (EXCEPTIONS) |\n| :--- | :--- |\n| 运行时错误无法被编译器感知 | 编译异常已知，非检异常运行时未知 |\n\
+    | 错误在应用程序运行时发生或引起 | 异常由应用程序本身产生 |\n| Java 中的错误大多是非检编译类型 | Java 中的编译异常和非检编译异常 |\n\
+    \n# 第 13 章 一些问答：\n\n## 问题\n\n- 1. 由用户开发和执行的 Java 程序被称为\n   a> Application b> Applet\n\
+    \   c> Object d> 无\n\n- 2. Java 虚拟机 (JVM) 是一个\n   a> 解释器 b> 解释器\n   c> 机器码 d>\
+    \ 字节码\n\n- 3. 求一个数的平方根需要哪个包？\n   a> java.txt b> java.math\n   c> java.lang d>\
+    \ java.net\n\n- 4. 下列哪个不是 Java 留关键字？\n   a> private b> public\n   c> break d>\
+    \ character\n\n- 5. 用于修正程序中错误的术语被称为\n   a> bug b> 调试\n   c> 错误移除 d> 无\n\n- 6.\
+    \ 提供数据精确表示的常量称为\n   a> 变量 b> 字面量 (Literal)\n   c> 标识符 d> 字符\n\n- 7. 语句 n++ 等于\n\
+    \   a> ++n b> n=n+1\n   c> n+1 d> 无\n\n- 8. 如果 int a,b; a=10;b++;a; a & b 的输出是什么？\n\
+    \   a> 10,0 b> 10,11\n   c> 11,10 d> 11,11\n\n- 9. 如果 int a=-1; a++; a 的输出是什么？\n\
+    \   a> 1 b> -1\n   c> 0 d> 无\n\n- 10. if 条件本质上通过形成\n   a> 算术运算符 b> 关系运算符\n   c>\
+    \ 逻辑运算符 d> 三元运算符\n\n- 11. If(a!=b){\n   c=a;\n   }\n   else\n   {\n   c=b;\n \
+    \  }\n   可以写为\n   a> c=(a!=b)?a:b; b> c=(a!=b)?a:b;\n   c> c=(a!=b)?b:a; d> a\
+    \ 和 b 都\n\n- 12. a[10] 代表哪个元素\n   a> 第10个 b> 第9个\n   c> 第11个 d> 无\n\n- 13. 语句：int\
+    \ code[]={26,38,39,43};\n   a> 将 38 赋值给 code[1] b> 将 26 赋值给 code[1]\n   c> 将 39\
+    \ 赋值给 code[3] d> 无\n\n- 14. 具有多个定义的函数被称为\n   a> 多重函数 b> 函数重载 (function overloading)\n\
+    \   c> 浮动函数 d> 无\n\n- 15. 通过类类型调用函数\n   a> 对象 b> 系统\n   c> 参数 d> 无\n\n# 答案：\n\n\
+    1. a  2. a  3. b  4. d  5. b\n6. b  7. b  8. b  9. c  10. b\n11. d  12. c  13.\
+    \ a  14. b  15. a\n"
+  merge: 0
+  raw:
+  - '[PAGE 79]
+
+
+    used because threads share a common memory area without allocating separate memory
+    area to save more and also it takes less time than previous process.'
+  - '[PAGE 80]
+
+
+    # Chapter 12 HANDLING EXCEPTIONS AND ERRORS
+
+
+    An exception is a problem that arises during the execution of a program. When
+    an Exception occurs the normal flow of the program is disrupted and the program
+    terminates abnormally, which is not recommended, therefore, these exceptions are
+    to be handled.
+
+
+    Following some scenarios where an exception occurs.
+
+
+    +   - When a user has entered an invalid data.
+
+    - When file cannot be found.
+
+    - When network connection is lost in middle of communications or the Java Virtual
+    Machine runs out of memory.
+
+
+    These exceptions are caused by user, programmer and by physical resources that
+    have failed in some method.
+
+
+    # 12.1 EXCEPTION HANDLING WITH TRY-CATCH
+
+
+    Try keyword contains a block of statements to perform. Any exception occurring
+    within the try block is trapped. Hence, it is an error trapper. Further a report
+    is to be passed to the exception handler about the error, which can be done by
+    catch block.
+
+
+    The finally block contains the statements which are executed any way.
+
+
+    Syntax to use try-catch exception handler:
+
+
+    ```
+
+    try
+
+    {
+
+    Set of statements
+
+    ```'
+  - '[PAGE 81]
+
+
+    ```
+
+    }
+
+    catch(exception(e)){
+
+    }
+
+    finally
+
+    {
+
+    Statement to execute any way
+
+    }
+
+    ```
+
+
+    Example: import java.io.*;
+
+    public class Test{
+
+    public static void main(String args[]){
+
+    try{
+
+    int a[]=new int[2];
+
+    System.out.println("Access element three :" +a[3]);
+
+    }catch(ArrayIndexOutOfBoundsException e){\{
+
+    System.out.println("Exception thrown :" +e);
+
+    }
+
+    System.out.println("Out of the block");
+
+    }
+
+
+    Output: java.lang.ArrayIndexOutOfBoundsException: 3
+
+    Out of the block
+
+
+    # 12.2 EXCEPTION HANDLING WITH THROWS KEYWORD
+
+
+    If you want that the system is to be reported for an error then'
+  - '[PAGE 82]
+
+
+    you can apply throws keyword. A throws keyword is applied with function signature.
+
+
+    Example: public void getdata() throws IOException
+
+
+    This indicates, if an error occurs in the function related to I/O operation a
+    report may be passed to the error handler.
+
+
+    # Checked Exception
+
+
+    The classes that extend Throwable class RuntimeException and Error are known as
+    checked exceptions e.g.IOException, SQLException etc. Checked exceptions are checked
+    at compile-time.
+
+
+    # Unchecked Exception
+
+
+    The classes that extend RuntimeException are known as unchecked exceptions e.g.ArithmeticException,NullPointerException,ArrayIndexOutOfBounds
+    etc. Unchecked exceptions are not checked at compile-time rather they are checked
+    at runtime.
+
+
+    # 12.3 JAVA EXCEPTION HANDLING ADVANTAGES
+
+
+    +   Exception handling is Helpful in the Separation of results for less complex
+    and readable code. It is also more capable, in the logic that the testing of errors
+    in the normal implementation path is not needed.
+
+
+    +   Logical error types Exceptions can be group together with errors that are
+    connected. It enables us to handle associated exceptions using single exception
+    handler. An exception handler can catch exceptions of the class or any sub-class
+    specified by its parameter.
+
+
+    +   Exception handling allowed related information to be caught at where an error
+    occurs and show where it can be successfully controlled.'
+  - '[PAGE 83]
+
+
+    # 12.4 ERROR
+
+
+    Error is irrecoverable e.g. OutOfMemoryError, VirtualMachineError, etc.
+
+
+    # Common Coding Errors:
+
+
+    +   - Syntax Error – Syntax errors are errors occurred in the syntax of a particular
+    sequence of characters of a program.
+
+
+    +   - Logical Errors – Logical errors occur when there is a design flaw in your
+    program.
+
+
+    +   - Runtime Errors – Runtime errors occur during the execution of the program.
+
+
+    # 12.5 DIFFERENCE BETWEEN ERROR AND EXCEPTIONS
+
+
+    | ERRORS | EXCEPTIONS |
+
+    | Errors at run time cannot be known to compiler | Checked exception can be known
+    and Uncheck cannot be known at run time |
+
+    | Error Occurs or caused when an application runs | Exceptions Occurs by the application
+    itself |
+
+    | Errors in java are Mostly Uncheck type | Check and Uncheck type of exceptions
+    in Java |'
+  - "[PAGE 84]\n\n# Chapter 13 SOME QUESTIONS AND ANSWERS:\n\n# QUESTIONS\n\n+   1.\
+    \ A program of Java that can be developed and executed by the users, is known\
+    \ as\n   a> Application b> Applet\n   c> Object d> none\n\n+   2. Java Virtual\
+    \ Machine (JVM) is an\n   a> Interpreter b> Interpreter\n   c> Machine code d>\
+    \ Byte code\n\n+   3. To find the square root of a number which of the following\
+    \ package is required?\n   a> java.txt b> java.math\n   c> java.lang d> java.net\n\
+    \n+   4. Which of the following is not a Java reserved word?\n   a> private b>\
+    \ public\n   c> break d> character\n\n+   5. The term used to correct the error\
+    \ in a program, is known as\n   a> bug b> debugging\n   c> error removing d> none\n\
+    \n+   6. A constant which gives the exact representation of data is called"
+  - '[PAGE 85]
+
+
+    a> Variable b> Literal
+
+    c> Identifier d> Character
+
+
+    +   7. The statement n++ is equivalent to
+
+    a> ++n b> n=n+1
+
+    c> n+1 d> none
+
+
+    +   8. What will be the output of a & b, if int a,b; a=10;b++a?
+
+    a> 10,0 b> 10,11
+
+    c> 11,10 d> 11,11
+
+
+    +   9. What will be the output of a++; int a=-1?
+
+    a> 1 b> -1
+
+    c> 0 d> none
+
+
+    +   10. if condition is essentially formed by using
+
+    a> Arithmetic operators b> Relational operators
+
+    c> Logical operators d> ternary operators
+
+
+    +   11. If(a!=b){
+
+    c=a;
+
+    }
+
+    else
+
+    {
+
+    c=b;
+
+    }
+
+    can be written as
+
+    a> c=(a!=b)?a:b; b> c=(a!=b)?a:b;
+
+    c> c=(a!=b)?b:a; d> both a & b
+
+
+    +   12. Which element is represented with a[10]'
+  - '[PAGE 86]
+
+
+    a> 10th  b> 9th
+
+    c> 11th  d> none
+
+
+    13. The statement : int code[]={26,38,39,43};
+
+    a> Assign 38 to code[1]  b> Assign 26 to code[1]
+
+    c> Assign 39 to code[3]  d> none
+
+
+    14. A function with many definitions is known as
+
+    a> multiple function  b> function overloading
+
+    c> floating function  d> none
+
+
+    15. A function is invoked through a class type-
+
+    a> object  b> system
+
+    c> parameter  d> none
+
+
+    # ANSWERS:
+
+
+    1. a  2. a  3. b  4. d  5. b
+
+    6. b  7. b  8. b  9. c  10. b
+
+    11. d  12. c  13. a  14. b  15. a'
