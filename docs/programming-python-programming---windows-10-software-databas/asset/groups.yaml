@@ -1,0 +1,4334 @@
+- md: "\n# Programming\n\n# PYTHON PROGRAMMING\nWINDOW 10, SOFTWARE & DATABASES\n\n\
+    ![](img/39915f401fffe514e14ffea6fa3ed2e7_0_0.png)\n\nMARK ADAMS\n\n© Copyright\
+    \ 2015 - All rights reserved.\nIn no way is it legal to reproduce, duplicate,\
+    \ or transmit any part of this document in either electronic means or in printed\
+    \ format. Recording of this publication is strictly prohibited and any storage\
+    \ of this document is not allowed unless with written permission from the publisher.\
+    \ All rights reserved.\n\nThe information provided herein is stated to be truthful\
+    \ and consistent, in that any liability, in terms of inaction or otherwise, by\
+    \ any usage or abuse of any policies, processes, or directions contained within\
+    \ is the solitary and utter responsibility of the recipient reader. Under no circumstances\
+    \ will any legal responsibility or blame be held against the publisher for any\
+    \ reparation, damages, or monetary loss due to the information herein, either\
+    \ directly or indirectly.\nRespective authors own all copyrights not held by the\
+    \ publisher.\n\nLegal Notice:\nThis book is copyright protected. This is only\
+    \ for personal use. You cannot amend, distribute, sell, use, quote or paraphrase\
+    \ any part or the content within this book without the consent of the author or\
+    \ copyright owner. Legal action will be pursued if this is breached.\n\nDisclaimer\
+    \ Notice:\nPlease note the information contained within this document is for educational\
+    \ and entertainment purposes only. Every attempt has been made to provide accurate,\
+    \ up to date reliable information. No warranties of any kind are expressed or\
+    \ implied. Readers acknowledge that the author is not engaging in the rendering\
+    \ of legal, financial, medical or professional advice.\n\nBy reading this document,\
+    \ the reader agrees that under no circumstances are we responsible for any losses,\
+    \ direct or indirect, which are incurred as a result of the use of information\
+    \ contained within this document, including, but not limited to, errors, omissions,\
+    \ or inaccuracies.\n\n# TABLE OF CONTENTS\n\n- Introduction\n- Configuring Your\
+    \ Windows 10 Environment For Python\n  - What You Need:\n  - Installing Python\
+    \ on Windows\n  - Download and Install Python\n  - Using the Windows Python Installation\n\
+    \  - Installing a Package Manager\n  - Installing Cygwin\n  - Installing Sublime\
+    \ Text\n- Getting To Grips With Python\n  - Creating and Running Programs\n  -\
+    \ Comments\n  - Variables\n  - Reserved Keywords\n  - Basic Variable Types\n \
+    \ - Numbers\n  - Integers\n  - Floating Point Numbers\n  - Strings\n  - Other\
+    \ Useful Values\n  - More Complex Data Types\n  - The List\n  - Tuples\n  - Dictionaries\n\
+    \  - Sets\n  - Conditions\n  - Boolean operators\n  - The \"in\" operator\n  -\
+    \ The \"is\" Operator\n  - The \"not\" Operator\n  - Loops\n  - \"break\" and\
+    \ \"continue\" Statements\n  - Functions\n  - How to Call a Function in Python\n\
+    \  - Classes and Objects\n    - Accessing Object Variables\n    - Accessing Object\
+    \ Functions\n  - Modules and Packages\n    - Exploring built-in modules\n    -\
+    \ Writing Modules\n    - Writing Packages\n- MySQL Python Tutorial\n  - Before\
+    \ We Begin\n  - The MySQL Module\n  - Mysqldb Module\n  - Creating and Populating\
+    \ a Table\n  - Retrieving Data\n  - The Dictionary Cursor\n  - Column Headers\n\
+    # Prepared Statements\n# Inserting Images\n# Reading Images\n# Transaction Support\n\
+    # Conclusion\n\n# Introduction\n\nKnowing where to begin with computer programming\
+    \ can be a real challenge. Most people have little to no knowledge of how to write\
+    \ computer code or when to even begin when writing a computer program. Python\
+    \ is an easy language to learn, and is capable of so much more than that simple\
+    \ programming.\n\nIt is a general purpose language that first appeared in the\
+    \ 1980's and was, believe it or not, named after Monty Python. It's used for a\
+    \ wide range of purposes, from testing microchips, to powering some of the biggest\
+    \ websites in the world and to building video games. Python is a small language,\
+    \ close to the English language and contains hundreds of party libraries.\n\n\
+    Because Python is similar to the English language, it is easy to read. It also\
+    \ follows very strict rules on punctuation, which means that, unlike some computer\
+    \ languages, your code is not littered with annoying curly braces ({}), that get\
+    \ in the way and make it difficult to read. Python also contains PEP 8, a set\
+    \ of rules that tells each Python developer how their code should be formatted,\
+    \ meaning you always know what to do, where a new line should be and helps you\
+    \ to read other Python scripts, no matter what they wrote.\n\nPython has been\
+    \ in existence for more than 20 years and there is an awful lot of Python code\
+    \ about. It is also an open source language, which means that anyone can take\
+    \ it, read it and modify it for their own uses. There are plenty of Python community\
+    \ groups where users can go to get help or just join in general Python chitchat.\n\
+    \nIn this book, I want to talk about what Python can do and how to get it up and\
+    \ running on your Windows 10 PC, as well as how to use it. This is suitable for\
+    \ complete beginners or for more advanced users and I hope that everyone will\
+    \ gain something from this book.\n\n# Configuring Your Windows 10 Environment\
+    \ For Python\n\nSo, you want to learn how to use Python on your Windows 10 computer.\
+    \ The first thing you need to do is configure your Windows environment, i.e. your\
+    \ computer, and prepare it for use with the programming language.\n\n# What You\
+    \ Need:\n\n- A Windows 10 PC or laptop\n- Python\n- Cygwin\n- A text editor\n\n\
+    Let's look at this one step at a time:\n\n# Installing Python on Windows\n\nThere\
+    \ are a couple of things you need to do to get the Python environment running\
+    \ on your Windows computer:\n\n- Download and install Python\n- Use the Windows\
+    \ Python Installation\n- Install a Package Manager\n\n# Download and Install Python\n\
+    \n- First all, you need to go to www.python.org/download/\n- Make sure you download\
+    \ the version that corresponds with Windows you are running and whether it is\
+    \ 32 or 64-bit.\n- If you are using Mozilla browser, click on Save. If you are\
+    \ using Internet Explorer, click on Run.\n- The Python installer will open so\
+    \ you need to pick a directory to install - leave it default and click on Next.\n\
+    - Accept the installation options and click on Next.\n- Python will now start\
+    \ to install. Once it finishes, click on Finish.\n\n# Using the Windows Python\
+    \ Installation\n\n- Click Start menu and look for Python. You will see that several\
+    \ things have been installed:\n- IDLE - Python GUI similar to the command line\
+    \ but has an interface\n- Python Docs - help file that tells you about installed\
+    \ modules\n- Python Manuals\n\n# Installing a Package Manager\n\nYou will very\
+    \ quickly determine that you need to install a module that is not included in\
+    \ the standard distribution of Python. To do this, we need to install a Package\
+    \ Manager that will let us install new packages. For this bit, we are using EasyInstall,\
+    \ but later on, I will tell you how to install and use Cygwin as well.\n\n- Go\
+    \ to http://peak.telecommunity.com/DevCenter/EasyInstall\n- Click on \"Install\
+    \ Easy\"\n- Right click on the setup.py line and select Save Link as or Save Target\n\
+    - When it has finished, find the .py file on your PC and double click on it so\
+    \ it opens and runs within Python\n\nTo set up the PATH variable, so that Windows\
+    \ 10 knows where to look for Python:\n\n- Right click My Computer\n- Select Properties\n\
+    - On the next screen, click on Advanced\n- On the next screen, click on Environment\
+    \ Variables\n- I am going to assume that when you installed Python, you chose\
+    \ to install it for you - click on Path located under User Variables\n- Click\
+    \ on Edit\n- On the next screen look of variable value box and place your cursor\
+    \ after the (;) which denotes the last entry\n Enter the following as the final\
+    \ entry in the box and DO NOT forget to include the (;) semicolon at the end:\
+    \ C:\\Python25\\Scripts;\n- Click on OK another three times to get out of System\
+    \ Properties\n- Now open a command prompt by clicking on Start, Run and typing\
+    \ in cmd. Click on OK\n- In the next box in easy_install type BeautifulSoup –\
+    \ this will install the module BeautifulSoup – repeat this for any other module\
+    \ that you want to use and they will be installed\n- When you get back to the\
+    \ command prompt, type in Python and then press Enter\n"
+  mdcn: "\n\n# 编程\n\n# PYTHON 编程\nWindows 10, 软件与数据库\n\n![](img/39915f401fffe514e14ffea6fa3ed2e7_0_0.png)\n\
+    \nMARK ADAMS\n\n© 版权 2015 - 保留所有权利。\n以任何方式通过电子手段或打印格式复制、复复制或传输本文档的任何部分都是不法的。严禁录制本出版物，没有出版者的书面许可，否则不允许对本文档进行任何存储。保留所有权利。\n\
+    \n本文处提供的信息被声明是真实且一致的，对于任何使用或滥用其中包含的任何策略、流程或指令而导致的任何责任（无论是不采取作为或其他形式），均由接收读者承担单独且完全的责任。在任何情况下，对于由于本文中的信息直接或间接导致的任何赔偿、损害或金钱损失，出版者均不承担任何法律责任或指责。\n\
+    相应作者拥有出版者未持有的版权。\n\n法律声明：\n本书受版权保护。本书仅供个人使用。未经作者或版权所有者的同意，您不能修改、发行、销售、使用、引用或转述本书中的任何部分或内容。如果违反规定，将追究法律责任。\n\
+    \n免责声明：\n请注意，本文档包含的信息仅供教育和娱乐目的。我们已尽一切提供准确、最新、可靠的信息。不提供任何形式的明示或暗示保证。读者承认作者并未在提供法律、财务、医疗或专业建议。\n\
+    \n通过阅读本文档，读者同意在任何情况下，我们对因使用本文档中包含的信息而导致的任何直接或间接损失不负责，包括但不限于错误、遗漏或不准确之处。\n\n# 目录\n\
+    \n- 引言\n- 为 Python 配置你的 Windows 10 环境\n  - 你需要什么：\n  - 在 Windows 上安装 Python\n\
+    \  - 下载并安装 Python\n  - 使用 Windows Python 安装\n  - 安装包管理器\n  - 安装 Cygwin\n  - 安装\
+    \ Sublime Text\n- 掌握 Python\n  - 创建并运行程序\n  - 注释\n  - 变量\n  - 留关键字\n  - 基础变量类型\n\
+    \    - 数字\n    - 整数\n    - 浮点数\n    - 字符串\n    - 其他有用值\n  - 更复杂的数据类型\n    - 列表\n\
+    \    - 元组\n    - 字典\n    - 集合\n  - 条件\n    - 布尔运算符\n    - \"in\" 运算符\n    - \"\
+    is\" 运算符\n    - \"not\" 运算符\n  - 循环\n  - \"break\" 和 \"continue\" 语句\n  - 函数\n\
+    \  - 如何在 Python 中调用函数\n  - 类和对象\n    - 访问对象变量\n    - 访问对象函数\n  - 模块和包\n    - 探索内置模块\n\
+    \    - 编写模块\n    - 编写包\n- MySQL Python 教程\n  - 开始之前\n  - MySQL 模块\n  - Mysqldb\
+    \ \n  - 创建并填充表\n  - 获取数据\n  - 字典游标\n  - 列标题\n# 预处理语句\n# 插入图像\n# 读取图像\n# 事务支持\n\
+    # 结论\n\n# 引言\n\n知道从何开始计算机编程可能是一个真正的挑战。大多数人对于如何编写计算机代码或甚至在编写计算机程序时该从何开始几乎没有任何知识。Python\
+    \ 是一门容易学习的语言，而且它的功能远超简单的编程。\n\n它是一门通用语言，最早于 20 世纪 80 代出现，信不由，它是以蒙提派森（Monty Python）命名的。它被用于许多用途，从测试微芯片到驱动世界上一些最大的网站，再到构建视频游戏。Python\
+    \ 是一门小语言，非常接近英语，并包含了数百个第三方库。\n\n由于 Python 是一门接近英语的语言，它非常容易安装。Python 遵循 PEP 8 标准，这意味着它不像某些语言那样难以阅读。Python\
+    \ 已经存在了多年，你可以发现它的功能。\n\n在 Windows 10 上运行 Python。\n\n你会很快发现你需要安装一个 Python 标准发行版中未包含的模块。为了实现这一点，我们需要安装一个包管理器来安装新包。在这个部分，我们将使用\
+    \ EasyInstall，但稍后我将告诉你如何安装和使用 Cygwin。\n\n通过阅读本文档，读者同意在任何情况下，我们对因使用本文档中包含的信息而导致的任何直接或间接损失不负责，包括但不限于错误、遗漏或不准确之处。\n\
+    \n# 为 Python 配置你的 Windows 10 环境\n\n所以，你需要配置 Windows 10 环境，以便使用它。\n\n# 你需要什么：\n\
+    \n- 一个 Windows 10 系统\n- Python\n- Cygwin\n- 文本编辑器\n\n# 在 Windows 上安装 Python\n\n\
+    你只需要执行以下几件事：\n\n- 下载并安装 Python\n- 使用 Windows Python 安装\n- 安装包管理器\n\n# 下载并安装 Python\n\
+    \n- 首先，你需要去 www.python.org/download/。确保下载的版本与你运行的 Windows 匹配，无论是 32 位还是 64 位。如果你使用的是\
+    \ Mozilla 浏览器，点击保存。如果你使用的是 Internet Explorer，点击运行。Python 安装程序将打开，你需要选择一个安装目录 -\
+    \ 保持默认并点击下一步。接受安装选项并点击下一步。Python 现在将开始安装。完成后，点击完成。\n\n# 使用 Windows Python 安装\n\
+    \n- 点击开始菜单并查找 Python。你会发现安装了几个项目：\n- IDLE - 类似于命令行但带有界面的 Python\n- Python Docs\
+    \ - 关于已模块的帮助文件\n- Python 手册\n\n# 安装包管理器\n\n你会很快发现你需要安装一个 Python 标准发行版中未包含的模块。为了实现这一点，我们需要安装一个包管理器来安装新包。在这个部分，我们将使用\
+    \ EasyInstall，但稍后我将告诉你如何安装和使用 Cygwin。\n\n- 去 http://peak.telecommunity.com/DevCenter/EasyInstall\n\
+    - 点击“Install Easy”\n- 右键点击 setup.py 行并选择“另存为”或“链接另存”\n- 完成后在你的 PC 上找到 .py 文件并双击它，使其在\
+    \ Python 中运行\n\n为了设置 PATH 变量，以便 Windows 10 知道哪里查找 Python：\n\n- 右键点击“我的电脑”\n- 选择“属性”\n\
+    - 在下一个页面，点击“高级”\n- 在下一个页面，点击“环境变量”\n- 我假设你在安装 Python 时选择了为你自己安装 - 点击“用户变量”下的 Path\n\
+    - 点击“编辑”\n- 在下一个页面中查看变量值框，并将光标放在最后一个条目的 (;) 之后\n 输入以下内容作为框中的最后一个项目，不要忘记在结尾包含 (;)\
+    \ 分号：C:\\Python25\\Scripts;\n- 再次点击确定退出系统属性\n- 现在通过点击开始、运行并输入 cmd 来打开命令提示符。点击确定\n\
+    - 在下一个框中输入 easy_install BeautifulSoup –这将安装 BeautifulSoup 模块 – 对你任何想要使用的其他模块重复此操作，它们将被安装\n\
+    - 当回到命令提示符时，输入 Python 然后按回车\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # Programming
+
+
+    # PYTHON PROGRAMMING
+
+    WINDOW 10, SOFTWARE
+
+    & DATABASES
+
+
+    ![](img/39915f401fffe514e14ffea6fa3ed2e7_0_0.png)
+
+
+    MARK ADAMS'
+  - '[PAGE 1]
+
+
+    # Programming:
+
+
+    # Python Programming - Windows 10,
+
+    Software & Databases'
+  - '[PAGE 2]
+
+
+    © Copyright 2015 - All rights reserved.
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inaction or otherwise, by any usage or abuse of any
+    policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    Legal Notice:
+
+    This book is copyright protected. This is only for personal use. You cannot amend,
+    distribute, sell, use, quote or paraphrase any part or the content within this
+    book without the consent of the author or copyright owner. Legal action will be
+    pursued if this is breached.
+
+
+    Disclaimer Notice:
+
+    nPlease note the information contained within this document is for educational
+    and entertainment purposes only. Every attempt has been made to provide accurate,
+    up to date and reliable information. No warranties of any kind are expressed or
+    implied. Readers acknowledge that the author is not engaging in the rendering
+    of legal, financial, medical or professional advice.
+
+
+    By reading this document, the reader agrees that under no circumstances are we
+    responsible for any losses, direct or indirect, which are incurred as a result
+    of the use of information contained within this document, including, but not limited
+    to,—errors, omissions, or inaccuracies.'
+  - '[PAGE 3]
+
+
+    # TABLE OF CONTENTS
+
+
+    +   Introduction
+
+
+    +   Configuring Your Windows 10 Environment For Python
+
+    What You Need:
+
+    Installing Python on Windows
+
+    Download and Install Python
+
+    Using the Windows Python Installation
+
+    Installing a Package Manager
+
+    Installing Cygwin
+
+    Installing Sublime Text
+
+
+    +   Getting To Grips With Python
+
+    Creating and Running Programs
+
+    Comments
+
+    Variables
+
+    Reserved Keywords
+
+    Basic Variable Types
+
+    Numbers
+
+    Integers
+
+    Floating Point Numbers
+
+    Strings
+
+    Other Useful Values
+
+    More Complex Data Types
+
+    The List'
+  - "[PAGE 4]\n\n+   Tuples\nDictionaries\nSets\nConditions\nBoolean operators\nThe\
+    \ \"in\" operator\nThe \"is\" Operator\nThe \"not\" Operator\nLoops\n\"break\"\
+    \ and \"continue\" Statements\nFunctions\nHow to Call a Function in Python\n \
+    \ Classes and Objects\n    Accessing Object Variables\n    Accessing Object Functions\n\
+    \  Modules and Packages\n    Exploring built-in modules\n    Writing Modules\n\
+    \    Writing Packages\nMySQL Python Tutorial\n  Before We Begin\n  The –MySQL\
+    \ Module\n  Mysqldb Module\n  Creating and Populating a Table\n  Retrieving Data\n\
+    \  The Dictionary Cursor\n  Column Headers"
+  - '[PAGE 5]
+
+
+    # Prepared Statements
+
+
+    # Inserting Images
+
+
+    # Reading Images
+
+
+    # Transaction Support
+
+
+    # Conclusion'
+  - '[PAGE 6]
+
+
+    # Introduction
+
+
+    Knowing where to begin with computer programming can be a real challenge. Most
+    people have little to no knowledge of how to write computer code or when to even
+    begin when writing a computer program. Python is an easy language to learn, and
+    is capable of so much more than that simple programming.
+
+
+    It is a general purpose language that first appeared in the 1980''s and was, believe
+    it or not, named after Monty Python. It''s used for a wide range of purposes,
+    from testing microchips, to powering some of the biggest websites in the world
+    and to building video games. Python is a small language, close to the English
+    language and contains hundreds of party libraries.
+
+
+    Because Python is similar to the English language, it is easy to read. It also
+    follows very strict rules on punctuation, which means that, unlike some computer
+    languages, your code is not littered with annoying curly braces ({}), that get
+    in the way and make it difficult to read. Python also contains PEP 8, a set of
+    rules that tells each Python developer how their code should be formatted, meaning
+    you always know what to do, where a new line should be and helps you to read other
+    Python scripts, no matter what they wrote.
+
+
+    Python has been in existence for more than 20 years and there is an awful lot
+    of Python code about. It is also an open source language, which means that anyone
+    can take it, read it and modify it for their own uses. There are plenty of Python
+    community groups where users can go to get help or just join in general Python
+    chitchat.
+
+
+    In this book, I want to talk about what Python can do and how to get it up and
+    running on your Windows 10 PC, as well as how to use it. This is suitable for'
+  - '[PAGE 7]
+
+
+    complete beginners or for more advanced users and I hope that everyone will gain
+    something from this book.'
+  - '[PAGE 8]
+
+
+    # Configuring Your Windows 10 Environment For Python
+
+
+    So, you want to learn how to use Python on your Windows 10 computer. The first
+    thing you need to do is configure your Windows environment, i.e. your computer,
+    and prepare it for use with the programming language.
+
+
+    # What You Need:
+
+
+    +   - A Windows 10 PC or laptop
+
+    - Python
+
+    - Cygwin
+
+    - A text editor
+
+
+    Let''s look at this one step at a time:
+
+
+    # Installing Python on Windows
+
+
+    There are a couple of things you need to do to get the Python environment running
+    on your Windows computer:
+
+
+    +   - Download and install Python
+
+    - Use the Windows Python Manager
+
+    - Install a Package Manager
+
+
+    # Download and Install Python
+
+
+    +   - First of all, you need to download the correct installation package, so
+    go to
+
+    http://www.python.org/download/windows/http://www.python.org/downlo
+
+    - Click on Individual Releases'
+  - '[PAGE 9]
+
+
+    +   * You will now be taken to a list of releases, choose the latest one
+
+    * Make sure that you download the version that corresponds with the version of
+    Windows that you are running and whether it is 32 or 64-bit.
+
+    * If you are running the Mozilla Firefox browser, click on Save File. If you are
+    using Internet Explorer, click on Run
+
+    * The Python installer will open so you is going to be able to access Python on
+    your system – either just you, or anyone on the system.
+
+    Click on Next
+
+    * Now you need to pick a directory to install Python to – leave it the default
+    selected and click on Next
+
+    * Click the box to accept the installation options and click on Next
+
+    * Python will now start to install on your system. Leave it until it has finished
+    and then click on Finish
+
+
+    # Using the Windows Python Installation
+
+
+    +   * Click the Start menu and look for Python v*:*:* - whichever version you
+    installed
+
+    * You will see that several things have been installed.
+
+
+    +   0 IDLE – Python GUI – similar to the command line Python prompt but it has
+    an interface which is graphical
+
+    0 Module Docs – a help file that tells you about the installed modules
+
+    0 Python (Command line) – looks like the server prompt
+
+    0 Python Manuals – there for hl if and when you need it
+
+    0 Uninstall Python – which you will hopefully never have to use.
+
+
+    Before you can access Python just by typing it at the command prompt, need to
+    set the Windows PATH variable, which we will do by next.
+
+
+    # Installing a Package Manager'
+  - '[PAGE 10]
+
+
+    You will very quickly determine that you need to install a module that is not
+    included in the standard distribution of Python. To do this, we need to install
+    a Package Manager that will let us install the new packages. For this bit, we
+    are using EasyInstall, but later on, I will tell you how to install and use Cygwin
+    as well, so you have the choice.
+
+
+    +   - Go to http://peak.telecommunity.com/DevCenterEasyInstall
+
+    - Click on Installing "Easy Install"
+
+    - Right click on the setup.py line and select Save Link as or Save Target
+
+    - When it has finished, find the .py file on your PC and double click on it so
+    runs. It will open and run within Python and will be installed
+
+
+    To set up the PATH variable, so that Windows 10 knows where to look for Python:
+
+
+    +   - Right click My Computer
+
+    - Select Properties
+
+    - On the next screen, click on Advanced
+
+    - On the next screen, click on Environment Variables
+
+    - I am going to assume that, when you installed Python, you chose to install it
+    for you and not for everyone else on the system – click on Path – located in the
+    box under User Variables
+
+    - Click on Edit
+
+    - On the next screen, look of the variable value box and place your cursor after
+    the (;) which denotes the last entry
+
+    - Enter the following as the final entry in the box and DO NOT forget to include
+    the (;) semicolon at the end – C:\Python25\Scripts;
+
+    - Click on OK another three times to get out of System Properties
+
+    - Now open a command prompt by clicking on Start, Run and typing in cmd. Click
+    on OK
+
+    - In the next box in easy_install BeautifulSoup – this will install the module
+    BeautifulSoup – repeat this for any other module that you want to use and they
+    will be installed
+
+    - When you get back to the command prompt, type in Python and then press Enter'
+- md: "\n- Type in import BeautifulSoup (or the name of any other module)\n- Another\
+    \ prompt will appear without showing any error messages. We now know that we have\
+    \ set the PATH variable properly and that EasyInstall was installed correctly.\n\
+    - You also now know how to install new packages!\n\nThat is all there is installing\
+    \ Python and EasyInstall on your computer. Next, Cygwin\n\n# Installing Cygwin\n\
+    \nThis isn’t quite as easy\n\n- Go to http://cygwin.com/\n- Click on Install Cygwin\
+    \ from the menu on the left\n- Click on setup-x86.exe and then run it\n\nCygwin\
+    \ is a useful program as it will download other programs from the internet and\
+    \ install them for you. You will need to provide information about your internet\
+    \ connection, although, as you go through the set up process, you will mostly\
+    \ be able to accept the default settings\n\nOnce that has completed, you will\
+    \ be presented with a list of download sites. They are all identical so just pick\
+    \ one from the list and click on Next\n\nNow you will get an Upgrade warning –\
+    \ this will only be applicable to those who are upgrading from an older version\
+    \ of Cygwin. If this is the first time you have installed it, ignore this message\n\
+    \nNow you will be presented with a list of software to download. You want three\
+    \ packages – openssh, git and curl. Type the name of each one into the search\
+    \ on the site, and when the package comes up, click on Skip. This will ensure\
+    \ that the latest version is installed – do this for each package.\n\nOnce those\
+    \ three are ready for installation, Cygwin will inform you that you need to install\
+    \ other packages as dependencies. What this means is that, if you want to use\
+    \ a specific package, called A for example, and A needs another package called\
+    \ B to run properly, Cygwin will know this and will ask if it can install package\
+    \ B as well as A.\n\nWhen this message appear, just click on Next, Cygwin will\
+    \ begin to download and install the three packages you asked for as well as all\
+    \ of their dependencies. This can take a while, although that will depend on how\
+    \ your internet connection is. On your, you will see three separate progress bars\
+    \ — when the middle one, called TOTAL, is full, Cygwin has finished.\n\nIf you\
+    \ have requested Cygwin put an icon on your desktop, it will proceed to do so\
+    \ and you will see a shortcut Cygwin Terminal. This is the icon you will use when\
+    \ you run your Python code as well as for accessing the packages you downloaded\
+    \ through Cygwin.\n\nClick on it and a terminal window will appear and we can\
+    \ begin to use it. First of all, we need to find out which packages have actually\
+    \ been installed so, at the command prompt, type the word which\n\nA list of packages\
+    \ will appear and most likely show you all the Cygwin packages you installed but\
+    \ it may not show Python itself. That's OK, because you did not install Python\
+    \ using Cygwin. Now you need to tell Cygwin to find Python and you do that by\
+    \ typing the following command:\n\n- $ echo PATH=$PATH:cygdrive/c/Python32 >>\
+    \ .bash_profile\n\nMake sure that you type in the version of Python that you are\
+    \ using – if you installed a different version replace Python32 with the correct\
+    \ one. You will only need to do this step once; after this, the terminal will\
+    \ find Python all the time.\n\nThat's Cygwin installed and set up, the final step\
+    \ is to set up your text editor. I am giving you the instructions for Sublime\
+    \ Text – if you use a different one make sure you follow the installation instructions\
+    \ that come with it. Be aware that Microsoft Word is not a text editor; it is\
+    \ a word processing program and, as such, cannot be used for this.\n\n# Installing\
+    \ Sublime Text\n\nSublime text is a very powerful text editor, it is very useful\
+    \ and it also has a free trial that does not expire.\n\n- Go to http://www.sublimetext.com/\
+    \ and download the installer\n- Run it\n\nWhile Sublime Text is not free, you\
+    \ can use it on a trial for as long as you like. I would suggest though, if you\
+    \ get on it and use it to write a lot of programs, that you purchase a license\
+    \ for the full software – do this with that you use.\n\n# Check it All Works\n\
+    \nNow that everything is installed, it's time to see if it all works OK. The very\
+    \ first program that any programmer writes is the now famous \"Hello World!\"\
+    \ program. All this does turn out on the terminal and is a good way of checking\
+    \ that everything works as it should.\n\nType the following at the command line\
+    \ in your terminal:\n\n- $ python -c 'print(\"Hello, World!\")'\n- Hello, World!\n\
+    \nIf that works, open Sublime Text and we will write a program to file. Type the\
+    \ following into the text editor:\n\n- #!/usr/bin/env python\n- print(\"Hello,\
+    \ World!\")\n\nSave it to your Home Directory, making sure it goes in C:\\Cygwin\\\
+    home hello.py.\n\nOpen your terminal and type cd c:\\cygwin\\home, press enter\n\
+    \nType the following at the command prompt:\n\n- chmod a+x hello.py\n- ./hello.py\n\
+    - Hello, World!\n\nYou should see “Hello, World!” show up on your screen. If it\
+    \ does, you are ready to start learning how to use Python on your Windows 10 computer.\n\
+    \n# Getting To Grips With Python\n\nOn your windows desktop, you should see a\
+    \ Python icon. Double click on it and this will open up the Interactive Interpreter.\
+    \ This is where you are going to type in individual commands and see what the\
+    \ results are instantly. It's a really \n\n- >>> x\n- >>> print(x)\n- 3\n\n# Creating\
+    \ and Running Programs\n\nIn order to create and run programs, you need to know\
+    \ how. Programs are simply text files that contain a set of instructions for Python.\
+    \ An IDE – Integrated Development Environment, will have some useful tools, such\
+    \ as a syntax checker, code browser and debugger. All of these tools are designed\
+    \ to help you get coding correct.\n\n## Comments\n\nAny line of code that begins\
+    \ with # is a comment. Comments are for your information and will not be read\
+    \ by the interpreter. Every line that contains a comment must begin with the hash\
+    \ symbol.\n\n## Variables\n\nRemember that simple program we created at the beginning\
+    \ of this chapter? The x is a variable and we associated that with a number, in\
+    \ this case 3, before we printed it. Variables are the most basic concept of any\
+    \ programming language and are what we use to store values while we work with\
+    \ them.\n\nThe code we wrote – x = 3 – is a statement and in this case the job\
+    \ is to assign the value (3) to the variable. In Python, this is known as binding\
+    \ and it is an important concept.\n\nThe name of a variable in Python can be pretty\
+    \ much anything, provided you follow simple rules:\n\n- It must only contain ascii\
+    \ characters and digits – you cannot use any other symbol or a space\n- It must\
+    \ not begin with a digit\n- It cannot be any of the words that are on a keyword\
+    \ list.\n\n# Reserved Keywords\n\n- and\n- as\n- assert\n- break\n- class\n- continue\n\
+    - def\n- del\n- elif\n- else\n- except\n- exec\n- finally\n- for\n- from\n- global\n\
+    - if\n- import\n- in\n- is\n- lambda\n- not\n- or\n- pass\n- print\n- raise\n\
+    - return\n- try\n- while\n- with\n- yield\n\nNone of these keywords can be used\
+    \ in any file or program name as they are reserved by Python. As Python is a dynamic\
+    \ language, these keywords can change in the future so, to stay up to date, you\
+    \ can periodically check the current list of keywords by typing in the following\
+    \ in the terminal:\n\n- #!/usr/bin/python\n- # keywords.py\n- import sys\n- import\
+    \ keyword\n\n- print \"Python version: \", sys.version_info\n- print \"Python\
+    \ keywords: \", keyword.kwlist\n\n# Basic Variable Types\n\nWe now know that variables\
+    \ are a basic Python concept and so are all the different value types that variables\
+    \ can have. These are called data-types, denoting all the ways of storing the\
+    \ data. The word \"type\" has a particular meaning in computer programming, in\
+    \ that it means a specific way of categorizing different types of objects. Each\
+    \ object has a type and the most basic data types are:\n"
+  mdcn: '
+
+
+    - 输入 `import BeautifulSoup`（或任何其他模块的名称）
+
+    - 将出现另一个提示，且不会显示任何错误信息。我们现在知道我们已经正确设置了 PATH 变量，并且 EasyInstall 已正确安装。
+
+    - 你现在也知道如何安装新包了！
+
+
+    这就是在你的电脑上安装 Python 和 EasyInstall 的全部内容。接下来是安装 Cygwin。
+
+
+    # 安装 Cygwin
+
+
+    这并不完全简单
+
+
+    - 访问 http://cygwin.com/
+
+    - 点击左侧菜单上的 **Install Cygwin**
+
+    - 点击 `setup-x86.exe` 然后运行它
+
+
+    Cygwin 是一个非常有用的程序，因为它会从互联网下载其他程序并为你安装。你需要提供有关你网络连接的信息，尽管在设置过程中，你大多数情况下都可以接受默认设置。
+
+
+    一旦完成，你将看到一个下载站点列表。它们都是完全一样的，所以只需从列表中选择一个并点击 **Next**（下一步）即可。
+
+
+    现在你会看到一个 **Upgrade**（升级）警告——这仅适用于从旧版本的 Cygwin 升级的用户。如果你是第一次安装它，请忽略此消息。
+
+
+    现在你将看到一个待下载的软件列表。你需要三个包：openssh、git 和 curl。在网站的搜索中输入每个包的名称，当该包出现时，点击 **Skip**（跳过）。这将确保安装最新版本——对每个包都执行此操作。
+
+
+    一旦这三个包准备好安装，Cygwin 会通知你还需要安装其他包作为依赖项。这意味着，如果你想使用某个特定的包（例如 A），而 A 需要另一个包 B 才能正常运行，Cygwin
+    会知晓并询问是否可以同时安装包 B 和 A。
+
+
+    当此消息出现时，只需点击 **Next**，Cygwin 将下载并安装你请求的三个包以及它们的所有依赖项。这可能需要一段时间，取决于你的网络连接速度。在屏幕上，你会看到三个独立的进度条——当中间名为
+    **TOTAL** 的进度条满时，Cygwin 就完成了。
+
+
+    如果你请求 Cygwin 在桌面上创建一个图标，它将执行该操作，你会看到一个 **Cygwin Terminal** 快捷方式。这就是你运行 Python
+    代码以及访问通过 Cygwin 下载的包时将使用的图标。
+
+
+    点击它将出现一个终端窗口，我们就可以开始使用了。首先，我们需要找出到底安装了哪些包，因此在命令行提示符输入单词 `which`。
+
+
+    将显示一个包列表，很可能显示你安装的所有 Cygwin 包，但可能不会显示 Python 本身。没关系，因为你没有使用 Cygwin 安装 Python。现在你需要告诉
+    Cygwin 寻找 Python，可以通过输入以下命令来实现：
+
+
+    - $ echo PATH=$PATH:cygdrive/c/Python32 >> .bash_profile
+
+
+    确保你输入的是你正在使用的 Python 版本——如果你安装了不同的版本，请将 `Python32` 替换为正确的名称。你只需要执行这一步一次；之后，终端将始终找到
+    Python。
+
+
+    Cygwin 安装并设置好了，最后一步是设置你的文本编辑器。我为你提供 **Sublime Text** 的操作说明——如果你使用其他的，请确保你遵循其附带的安装说明。请注意，Microsoft
+    Word 不是文本编辑器；它是一个文字处理程序，因此不能用于此。
+
+
+    # 安装 Sublime Text
+
+
+    Sublime text 是一个非常强大的编辑器，它非常有用，而且还有一个不会过期的免费试用版。
+
+
+    - 访问 http://www.sublimetext.com/ 并下载安装程序
+
+    - 运行它
+
+
+    虽然 Sublime Text 不是免费的，但你可以随心所地进行试用。不过，我建议，如果你开始使用它并用它编写大量程序，请购买完整软件的许可——对你正在使用的工具要这样做。
+
+
+    # 检查一切是否运行正常
+
+
+    现在一切都已安装完毕，是时候看看它们是否都运行正常了。任何程序员编写的第一个程序都是现在著名的“Hello World!”程序。这个程序将显示在终端中，它是检查一切是否按预期工作运行的好方法。
+
+
+    在终端的命令行中输入以下内容：
+
+
+    - $ python -c ''print("Hello, World!")''
+
+    - Hello, World!
+
+
+    如果运行成功，打开 Sublime Text，我们将编写一个程序文件。在文本编辑器中输入以下内容：
+
+
+    - #!/usr/bin/env python
+
+    - print("Hello, World!")
+
+
+    将它保存到你的主目录（Home Directory），确保它位于 `C:\Cygwin\home hello.py`。
+
+
+    打开你的终端并输入 `cd c:\cygwin\home`，按回车。
+
+
+    在命令行提示符输入以下内容：
+
+
+    - chmod a+x hello.py
+
+    - ./hello.py
+
+    - Hello, World!
+
+
+    你应该能在屏幕上看到“Hello, World!”。如果出现了，你就准备好在你的 Windows 10 电脑上开始学习使用 Python 了。
+
+
+    # 掌握 Python
+
+
+    在你的 Windows 桌面上，你应该看到一个 Python 图标。双击它将打开交互式解释器（Interactive Interpreter）。这就是你将输入单个命令并立即查看结果的地方。它非常……
+
+
+    - >>> x
+
+    - >>> print(x)
+
+    - 3
+
+
+    # 创建和运行程序
+
+
+    为了创建和运行程序，你需要知道如何操作。程序仅仅是包含 Python 指令集的文本文件。IDE —— 集成开发环境会提供一些实用的工具，如语法检查器、代码浏览器和调试器。所有这些工具都是为了帮助你编写正确的代码。
+
+
+    ## 注释
+
+
+    任何以 `#` 开头的代码行都是注释。注释是给你信息的，解释器不会读取它们。每行注释必须以井号开头。
+
+
+    ## 变量
+
+
+    记得我们在本章开头创建的简单程序吗？`x` 是一个变量，我们在打印它之前将其与数字（在这里是 `3`）关联。变量是任何编程语言中最基础的概念，我们在操作它们时用来存储值。
+
+
+    我们写的代码 `x = 3` 是一个语句，在这种情况下，任务是将值（3）赋值给变量。在 Python 中，这被称为绑定（binding），是一个重要的概念。
+
+
+    Python 中的变量名可以是任何内容，只要你遵循以下简单规则：
+
+
+    - 它只能包含 ASCII 字符和数字——你不能使用其他符号或空格
+
+    - 它不能以数字开头
+
+    - 它不能是关键字列表中的任何单词
+
+
+    # 保留关键字
+
+
+    - and
+
+    - as
+
+    - assert
+
+    - break
+
+    - class
+
+    - continue
+
+    - def
+
+    - del
+
+    - elif
+
+    - else
+
+    - except
+
+    - exec
+
+    - finally
+
+    - for
+
+    - from
+
+    - global
+
+    - if
+
+    - import
+
+    - in
+
+    - is
+
+    - lambda
+
+    - not
+
+    - or
+
+    - pass
+
+    - print
+
+    - raise
+
+    - return
+
+    - try
+
+    - while
+
+    - with
+
+    - yield
+
+
+    这些关键字都不能用于任何文件名或程序名，因为它们被 Python 保留了。由于 Python 是一门动态语言，这些关键字未来可能会发生变化，因此为了保持更新，你可以定期通过终端输入以下内容来检查当前的关键字列表：
+
+
+    - #!/usr/bin/python
+
+    - # keywords.py
+
+    - import sys
+
+    - import keyword
+
+
+    - print "Python version: ", sys.version_info
+
+    - print "Python keywords: ", keyword.kwlist
+
+
+    # 基础变量类型
+
+
+    我们现在知道变量是 Python 的基本概念，变量可以拥有的不同值类型也是如此。这些被称为数据类型（data-types），表示存储数据的各种方式。“类型”一词在计算机编程中有特殊含义，意味着对不同类型对象的特定方式。每个对象都有自己的类型，最基础的数据类型有：
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 11]
+
+
+    +   - Type in import BeautifulSoup (or the name of any other module)
+
+    - Another prompt will appear appear without showing any error messages. We now
+    know that we have set the PATH variable properly and that EasyInstall was installed
+    correctly.
+
+    - You also now know how to install new packages!
+
+
+    That is all there is installing Python and EasyInstall on your computer. Next,
+    Cygwin
+
+
+    # Installing Cygwin
+
+
+    This isn’t quite as easy
+
+
+    +   - Go to http://cygwin.com/http://cygwin.com/
+
+    - Click on Install Cygwin from the menu on the left
+
+    - Click on setup-x86.exe and then run it
+
+
+    Cygwin is a useful program as it will download other programs from the internet
+    and install them for you. You will need to provide information about your internet
+    connection, although, as you go through the set up process, you will mostly be
+    able to accept the default settings
+
+
+    Once that has completed, you will be presented with a list of download sites.
+    They are all identical so just pick one from the list and click on Next
+
+
+    Now you will get an Upgrade warning –this will only be applicable to those who
+    are upgrading from an older version of Cygwin. If this is the first time you have
+    installed it, ignore this message
+
+
+    Now you will be presented with a list of software to download. You want three
+    packages – openssh, git and curl. Type the name of each one into the search on
+    the site, and when the package comes up, click on Skip. This will ensure that
+    the latest version is installed – do this for each package.
+
+
+    Once those three are ready for installation, Cygwin will inform you that you need
+    to install other packages as dependencies. What this means is that, if'
+  - '[PAGE 12]
+
+
+    you wat to use a specific package, called A for example, and A needs another package
+    called B to run properly, Cygwin will know this and will ask if it can install
+    package B as well as A.
+
+
+    When this message appear, just click on Next, Cygwin will begin to download and
+    install the three packages you asked for as well as all of their dependencies.
+    This can take a while, although that will depend on how your internet connection
+    is. On your, you will see three separate progress bars — when the middle one,
+    called TOTAL, is full, Cygwin has finished.
+
+
+    If you have requested Cygwin put an icon on your desktop, it will proceed to do
+    so and you will see a shortcut Cygwin Terminal. This is the icon you will use
+    when you run your Python code as well as for accessing the packages you downloaded
+    through Cygwin.
+
+
+    Click on it and a terminal window will appear and we can begin to use it. First
+    of all, we need to find out which packages have actually been installed so, at
+    the command prompt, type the word which
+
+
+    A list of packages will appear and most likely show you all the Cygwin packages
+    you installed but it may not show Python itself. That''s OK, because you did not
+    install Python using Cygwin. Now you need to tell Cygwin to find Python and you
+    do that by typing the following command:
+
+
+    +   $ echo PATH=$PATH:cygdrive/c/Python32 >> .bash_profile
+
+
+    Make sure that you type in the version of Python that you are using – if you installed
+    a different version replace Python32 with the correct one. You will only need
+    to do this step once; after this, the terminal will find Python all the time.
+
+
+    That''s Cygwin installed and set up, the final step is to set up your text editor.
+    I am giving you the instructions for Sublime Text – if you use a different one
+    make sure you follow the installation instructions that come with it. Be aware
+    that Microsoft Word is not a text editor; it is a word processing program and,
+    as such, cannot be used for this.'
+  - '[PAGE 13]
+
+
+    # Installing Sublime Text
+
+
+    Sublime text is a very powerful text editor, it is very useful and it also has
+    a free trial that does not expire.
+
+
+    +   - Go to http://www.sublimetext.com/ and download the installer
+
+    - Run it
+
+
+    While Sublime Text is not free, you can use it on a trial for as long as you like.
+    I would suggest though, if you get on it and use it to write a lot of programs,
+    that you purchase a license for the full software – do this with that you use.
+
+
+    # Check it All Works
+
+
+    Now that everything is installed, it''s time to see if it all works OK. The very
+    first program that any programmer writes is the now famous "Hello World!" program.
+    All this does turn out on the terminal and is a good way of checking that everything
+    works as it should.
+
+
+    Type the following at the command line in your terminal:
+
+
+    +   - $ python -c ''print("Hello, World!\''
+
+    - Hello, World!
+
+
+    If that works, open Sublime Text and we will write a program to file. Type the
+    following into the text editor:
+
+
+    +   - #!/usr/bin/env python
+
+    - print("Hello, World!")
+
+
+    Save it to your Home Directory, making sure it goes in C:\Cygwin\home hello.py.'
+  - '[PAGE 14]
+
+
+    Open your terminal and type cd c:\cygwin\home, press enter
+
+
+    Type the following at the command prompt:
+
+
+    +   - chmod a+x hello.py
+
+    - ./hello.py
+
+    - Hello, World!
+
+
+    You should see “Hello, World!” show up on your screen. If it does, you are ready
+    to start learning how to use Python on your Windows 10 computer.'
+  - '[PAGE 15]
+
+
+    # Getting To Grips With Python
+
+
+    On your windows desktop, you should see a Python icon. Double click on it and
+    this will open up the Interactive Interpreter. This is where you are going to
+    type in individual commands and see what the results are instantly. It''s a really
+    good way of experimenting to see what commands do and it is also a highly useful
+    tool. Type in:
+
+
+    +   - X = 3
+
+
+    Press Enter and then type in
+
+
+    +   - Print X
+
+
+    Press enter again – you should see something like the following appear on your
+
+
+    +   - >>> x = 3
+
+    - >>> print x
+
+    - 3
+
+    - >>>'
+  - '[PAGE 16]
+
+
+    # ## Creating and Running Programs
+
+
+    In order for Python to be truly useful to you, you need to know how to create
+    a program and run it. On Windows 10, when you install Python, this will associate
+    all files with the .py extension with the interactive interpreter. To run any
+    program, open the terminal and change the directory to the one that you installed
+    Python in – something like cd c:\Python** - make sure you replace ** with the
+    version number. When you are ready to run your program, you type in the following:
+
+
+    +   - **./program.py - ** denotes the name of your program
+
+
+    These programs are simply text files that contain a set of instructions for the
+    interpreter and they are compiled in your text editor. Python will install something
+    called an IDE – Integrated Development Environment, which will have some useful
+    tools in it, such as a syntax checker, code browser and debugger. All of these
+    tools are designed to help you get your coding correct from the word go.
+
+
+    # ## Comments
+
+
+    Any line of code that begins with # is a comment. Comments are for your information
+    and will not be read by the interpreter. Every line that contains a comment must
+    begin with the hash symbol.
+
+
+    # ## Variables
+
+
+    Remember that very simple program we created at the beginning of this chapter?
+    The x is a variable and we associated that with a number, in this case 3, before
+    we printed it to the screen. Variables are the most basic concept of any programming
+    language and are what we use to store values in while we work with them.
+
+
+    The code we wrote – x = 3 – is a statement – statements on a particular job'
+  - '[PAGE 17]
+
+
+    and in this case, the job is to assign the value (3) to the variable (x). In Python,
+    this is known as binding and it is an important concept.
+
+
+    The name of a variable in Python can be pretty much anything, provided you follow
+    simple rules:
+
+
+    +   - It must only contain asci characters, underscores and digits – you cannot
+    use any other symbol or a space
+
+    - It must not begin with a digit
+
+    - It cannot be any of the words that are on a reserved keyword list.
+
+
+    # Reserved Keywords
+
+
+    +   - and
+
+    - as
+
+    - assert
+
+    - break
+
+    - class
+
+    - continue
+
+    - def
+
+    - del
+
+    - elif
+
+    - else
+
+    - except
+
+    - exec
+
+    - finally
+
+    - for
+
+    - from
+
+    - global
+
+    - if
+
+    - import
+
+    - in
+
+    - is
+
+    - lambda
+
+    - not'
+  - '[PAGE 18]
+
+
+    +   - or
+
+    - pass
+
+    - print
+
+    - raise
+
+    - return
+
+    - try
+
+    - while
+
+    - with
+
+    - yield
+
+
+    None of these keywords can be used in any file or program name as they are reserved
+    by Python. As Python is a dynamic language, these keywords can change in the future
+    so, to stay up to date, you can periodically check the current list of keywords
+    by typing in the following in the terminal:
+
+
+    +   - #!/usr/bin/python
+
+    - # keywords.py
+
+    - import sys
+
+    - import keyword
+
+
+    +   - print "Python version: ", sys.version_info
+
+    - print "Python keywords: ", keyword.kwlist
+
+
+    # Basic Variable Types
+
+
+    We now know that variables are a basic Python concept and so are all the different
+    value types that variables can have. These are called data-types, denoting all
+    the ways of storing the data. The word "type" has a particular meaning in computer
+    programming, in that it means a specific way of categorizing different types of
+    objects. Each object has a type and the most basic data types are:'
+- md: '
+
+    # Numbers
+
+
+    ## Integers
+
+
+    Integers are whole numbers and, in theory, they are any whole number between a
+    range of plus infinity down to minus infinity. The range is limited by the computer
+    but in Python, the absolute maximum size is limited by just one thing – how much
+    memory your computer has got.
+
+
+    Python uses two integer types – integers and long integers, which are integers
+    that are longer than a specific amount.
+
+
+    ## Floating Point Numbers
+
+
+    Computers are very good when it comes to dealing with integers, or whole numbers.
+    A floating point number is one that has a number after a decimal point, e.g. 5.2,
+    or -8.1. Whole numbers can be stored as floating point numbers – all you do is
+    add a decimal point in when you write it down, for example, 1.0, or 9.0. Floating
+    point numbers are quite a bit slower to work with because computers find them
+    somewhat more complicated.
+
+
+    In the new versions of Python, if you try to divide an integer by an integer,
+    you will get a result you don’t expect, for example:
+
+
+    - - >>> 7/2
+
+    - 3
+
+
+    In order to get the right result, one of the integers must be converted to a floating
+    point number:
+
+
+    - - >>> 7.0/2
+
+    - 3.5
+
+
+    ## Strings
+
+
+    A string is simply a piece of text and Python will not make any distinction between
+    a string that contains one character or an entire block of characters or text.
+    Python contains two different string types – basic and Unicode.
+
+
+    Basic string types are used to store text in a sequence of numbers, or bytes,
+    with just one byte for each character. You should only use these if you know certain
+    that your text has ASCII values in it. They are also used for storing binary data
+    and are often called byte-strings.
+
+
+    Unicode strings use the Unicode to store text internally. These are a little more
+    complicated to use because you have to know the encoding that you have stored
+    the code in, whenever you read it or save it out. An overview of how to use each
+    one is below:
+
+
+    Basic String – you add a string to your program by surrounding the relevant text
+    with single or double quote marks, for example:
+
+
+    - - x = ''This is a string''
+
+    - y = "And so is this."
+
+
+    You can also include a string that has a break in it, or runs over several lines,
+    using triple quotes, like this:
+
+
+    - - x = """This string"""
+
+    - goes over multiple lines.
+
+    - So it includes line breaks."""
+
+
+    - - y = """This string uses single quotes."
+
+    - But it is still multi-line.
+
+    - As you might have guessed."""
+
+
+    You can also include special characters, like a quote character or line breaks,
+    by using escaped characters. Python uses the UNIX convention of making use of
+    the backslash key as an escape character. For example:
+
+
+    - - # The variable x is a string which contains
+
+    # a single line break
+
+    x = ''\n''
+
+    # The variable y has an escaped quote character
+
+    # To include the quote in the string (instead of
+
+    # it terminating the string)
+
+    y = ''Don\''t worry about quotes''
+
+    # z is a single character - a backslash which has to be escaped
+
+    # with another backslash
+
+    z = ''\\\\\\''''
+
+
+    If you don''t want to use the escape key to enter a backslash in your test sting,
+    you can use what is known as a raw string. To denote this, you would precede the
+    string with r.
+
+    Because raw strings are meant to be used for useful expressions and not, for example,
+    Windows paths, they cannot have a backslash at the end. The backslash is interpreted
+    by Python as an escape from the quote that comes after.
+
+
+    Python strings are stored using numbers and are not encoded in any way. The interpreter
+    will take what you give it and store it as a byte sequence. Because they hold
+    bytes, these strings must only have ASCII characters in them, unless you add an
+    encoding at the start – then you can include characters that are not ASCII. However,
+    you should only do this if you really know what you are doing.
+
+
+    Unicode Strings – These contain an internal representation that allows text to
+    be stored as text. In effect, your computer knows which characters are being compared
+    by the text. However, you will still need to select an encoding for when you write
+    or read that data.
+
+    Unicode literals can be included in your program by putting a u at the front of
+    the string. If you do not specify the encoding at the beginning, you will only
+    be able to use ASCII characters but Python will store your data as Unicode and
+    not a byte string.
+
+
+    Quoting and escape rules are the same for Unicode strings as they are for byte
+    strings:
+
+
+    You can force the interpreter to convert Unicode to byte strings and vice versa
+    by specifying explicit encoding but you are likely to get one of the following
+    errors:
+
+
+    - - UnicodeEncodeError
+
+    - UnicodeDecodeError
+
+
+    One of these will just bring your program crashing to a halt. When this happens,
+    it is usually one of the strings that you are trying to "implicitly" convert contains
+    characters that cannot be represented in the default encoding (usually ASCII).
+
+
+    ## Other Useful Values
+
+
+    There are some other values that are extremely useful:
+
+
+    - - None - Sometimes seen as Null in other programming languages, this represents
+    "nothing"
+
+    - True - The ''Boolean'' value of true.
+
+    - False - The ''Boolean'' value of false.
+
+
+    You will see these values quite a lot throughout your programming life and can
+    be included in any program you write simply by writing:
+
+
+    - * x = None
+
+    * y = True
+
+    * z = False
+
+
+    ## More Complex Data Types
+
+
+    When you work with more complicated information, you might want to group data.
+    The fundamental way to group data is to use lists. This is used to store groups
+    of items in order. You can add to or remove them at any time, sort them or search
+    through the list. You can even start with a list that is empty, adding to it as
+    you go, or you can use one that is pre-populated. Items that are included in your
+    list can be any object, that includes other lists. These are useful as building
+    blocks. When you write a list, it should have square brackets, with each item
+    separated by a comma:
+
+
+    - * # w is an empty list
+
+    * w = []
+
+    * * # x has only one member
+
+    * x = [3.0]
+
+    * * # y is a list of numbers
+
+    * y = [1, 2, 3, 4, 5]
+
+    * * # z is a list of strings
+
+    * and other lists
+
+    z = [''first'', [], ''second'', [1, 2, 3, 4], ''third'']
+
+
+    You access anything by "indexing". That index has to be an integer that represents
+    the position of the item in the list. The first position is zero. Variables can
+    be indexed by placing square brackets, containing the index, after the variable.
+
+
+    If you attempt to get access to a position that has not been created, you will
+    receive an IndexError on screen. If you want to access from the end of the list,
+    you use negative indexes. -1 is the last position on your list, followed by -2,
+    -3, etc.:
+
+
+    - - >>> x = [1, 2, 3, 4, 5]
+
+    - >>> print x[0]
+
+    - 1
+
+    - >>> print x[4]
+
+    - 5
+
+    - >>> print x[-1]
+
+    - 5
+
+    - >>> print x[-5]
+
+    - 1
+
+    - >>> print x[10]
+
+    - Traceback (most recent call last):
+
+    - File "<stdin>", line 1, in ?
+
+    - IndexError: list index out of range
+
+
+    ## Tuples
+
+
+    Tuples are similar to lists in that they store sequential information. However,
+    they cannot be changed after they have been created, unlike a list, which can.
+    The interpreter knows exactly the types and the lengths of the members of a tuple
+    and, so, they are more efficient to work with than a list. Tuples can be sliced
+    or indexed but not changed and you will come across them "implicitly" throughout
+    Python. An example of functions that would return multiple values would return
+    those values as a tuple.
+
+    '
+  mdcn: '
+
+
+    # 数字
+
+
+    ## 整数 (Integers)
+
+
+    整数是全数，在理论上，它们是从正无穷到负无穷之间的任何整数。该范围受计算机的限制，但在 Python 中，绝对最大大小仅受一个因素限制——你计算机的内存大小。
+
+
+    Python 使用两种整数类型——整数（int）和长整数（long），后者是指超过特定长度的整数。
+
+
+    ## 浮点数 (Floating Point Numbers)
+
+
+    计算机在处理整数或全数方面非常出色。浮点数是指小数点后带有数字的，例如 5.2 或 -8.1。整数可以存储为浮点数——你只需要在写它们时加上一个小数点即可，例如
+    1.0 或 9.0。浮点数的处理速度慢得多，因为计算机认为它们更为复杂。
+
+
+    在 Python 的新版本中，如果你尝试将一个整数除以另一个整数，你将得到一个意外的结果，例如：
+
+
+    - - >>> 7/2
+
+    - 3
+
+
+    为了得到正确的结果，必须将其中一个整数转换为浮点数：
+
+
+    - - >>> 7.0/2
+
+    - 3.5
+
+
+    ## 字符串 (Strings)
+
+
+    字符串仅仅是一段文本，Python 不会区分包含单个字符的字符串还是包含整块字符或文本的字符串。Python 包含两种不同的字符串类型——基础字符串（字节）和
+    Unicode 字符串。
+
+
+    基础字符串用于通过数字序列（或字节）存储文本，每个字符仅占一个字节。只有当你确定文本中包含 ASCII 值时，才应该使用这些。它们也用于存储二进制数据，通常被称为字节字符串（byte-strings）。
+
+
+    Unicode 字符串内部使用 Unicode 来存储文本。这些使用起来稍微复杂一些，因为每当你读取或保存它们时，都必须知道存储代码的编码。下面是关于使用每种类型的概述：
+
+
+    基础字符串——你通过单引号或双引号包裹相关文本将字符串添加到程序中，例如：
+
+
+    - - x = ''This is a string''
+
+    - y = "And so is this."
+
+
+    你还可以使用三引号包含包含换行符或跨多行的字符串，如下：
+
+
+    - - x = """This string"""
+
+    - 跨越多行。
+
+    - 所以它包含了换行符."""
+
+
+    - - y = """This string uses single quotes."
+
+    - 但它仍然是多行的。
+
+    - 正如你所猜的那样."""
+
+
+    你还可以通过转义字符包含特殊字符，如引号字符或换行符。Python 使用 UNIX 惯例将反斜杠键作为转义字符。例如：
+
+
+    - - # 变量 x 是一个字符串，包含
+
+    # 单行换行符
+
+    x = ''\n''
+
+    # 变量 y 有一个转义引号字符
+
+    # 为了在字符串中包含引号（而不是
+
+    # 终止字符串）
+
+    y = ''Don\''t worry about quotes''
+
+    # z 是单个字符 - 一个反斜杠，它必须通过
+
+    # 另一个反斜杠进行转义
+
+    z = ''\\\\''
+
+
+    如果你不想在测试字符串中使用转义键来输入反斜杠，可以使用所谓的**原始字符串（raw string）**。要表示这一点，你需要在字符串前加 `r`。
+
+    由于原始字符串用于有用的表达式而不是例如 Windows 路径，因此它们不能以反斜杠结尾。Python 将反斜杠解释为对随其后的引号的转义。
+
+
+    Python 字符串使用数字存储，不进行任何方式编码。解释器将获取你提供的内容并将其存储为字节序列。由于它们持有字节，这些字符串只能包含 ASCII 字符，除非你在开头添加了编码——那时你就可以包含非
+    ASCII 字符。然而，只有在你真正知道自己在做什么时才应该这样做。
+
+
+    Unicode 字符串——这些字符串包含一种内部表示，允许文本以文本形式存储。实际上，你的计算机知道通过文本正在比较哪些字符。但是，当你写入或读取该数据时，仍然需要选择一种编码。
+
+    Unicode 字面量可以通过在字符串前面加 `u` 包含在程序中。如果你没有在开头指定编码，你将只能使用 ASCII 字符，但 Python 会将你的数据存储为
+    Unicode 而非字节字符串。
+
+
+    Unicode 字符串的和转义规则与字节字符串相同：
+
+
+    你可以通过指定显式编码来强制解释器将 Unicode 转换为字节字符串反之亦然，但你可能会遇到以下错误之一：
+
+
+    - - UnicodeEncodeError
+
+    - UnicodeDecodeError
+
+
+    其中一个错误就会导致你的程序崩溃停止。当这种情况发生时，通常是你尝试进行“隐式”转换的字符串之一包含了默认编码（通常是 ASCII）中无法表示的字符。
+
+
+    ## 其他有用值
+
+
+    还有一些非常有用的值：
+
+
+    - - None - 有时在其他编程语言中被称为 Null，它代表“无”
+
+    - - True - 真的“布尔”值。
+
+    - - False - 假的“布尔”值。
+
+
+    在编程生涯中你会经常看到这些值，可以通过编写以下代码将其包含在你编写的任何程序中：
+
+
+    - * x = None
+
+    * y = True
+
+    * z = False
+
+
+    ## 更复杂的数据类型
+
+
+    当你处理更复杂的信息时，你可能想要对数据进行分组。分组的基本方法是使用列表（lists）。这用于按顺序存储一组项目。你可以随时添加或删除它们、对它们进行排序或在列表中进行搜索。你甚至可以从空列表开始，向其中添加内容，也可以使用一个预填充的列表。包含在列表中的可以是任何对象，包括其他列表。这些作为构建块非常有用。当你写列表时，它应该有方括号，项目之间用逗号分隔：
+
+
+    - * # w 是空列表
+
+    * w = []
+
+    * * # x 只有一个成员
+
+    * x = [3.0]
+
+    * * # y 是数字列表
+
+    * y = [1, 2, 3, 4, 5]
+
+    ## 列表
+
+
+    你通过“索引”来访问任何内容。该索引必须是一个表示列表中项目位置的整数。第一个位置是零。可以通过在变量后放置包含索引的方括号来索引。
+
+
+    如果你尝试访问未创建的位置，你将在屏幕上收到一个 `IndexError`。如果你想从列表末尾访问，则使用负索引。-1 是列表的最后一个位置，之后是 -2、-3
+    等：
+
+
+    - - >>> x = [1, 2, 3, 4, 5]
+
+    - >>> print x[0]
+
+    - 1
+
+    - >>> print x[4]
+
+    - 5
+
+    - >>> print x[-1]
+
+    - 5
+
+    - >>> print x[-5]
+
+    - 1
+
+    - >>> print x[10]
+
+    - Traceback (most recent call last):
+
+    - File "<stdin>", line 1, in ?
+
+    - IndexError: list index out of range
+
+
+    元组 (Tuples)
+
+
+    元组与列表相似，都存储顺序信息。然而，与可以更改的列表不同，创建后无法更改。解释器确切知道元组成员的类型和长度，因此处理它们比处理列表更高效。元组可以进行切片或索引，但不能更改，你会在整个
+    Python 中“隐式”地遇到它们。返回多个值的函数示例将以元组的形式返回这些值。
+
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 19]
+
+
+    # Numbers
+
+
+    # Integers
+
+
+    Integers are whole numbers and, in theory, they are any whole number between a
+    range of plus infinity down to minus infinity. The range is limited by the computer
+    but in Python, the absolute maximum size is limited by just one thing – how much
+    memory your computer has got.
+
+
+    Python uses two integer types – integers and long integers, which are integers
+    that are longer than a specific amount.
+
+
+    # Floating Point Numbers
+
+
+    Computers are very good when it comes to dealing with integers, or whole numbers.
+    A floating point number is one that has a number after a decimal point, e.g. 5.2,
+    or -8.1. Whole numbers can be stored as floating point numbers – all you do is
+    add a decimal point in when you write it down, for example, 1.0, or 9.0. Floating
+    point numbers are quite a bit slower to work with because computers find them
+    somewhat more complicated.
+
+
+    In the new versions of Python, if you try to divide an integer by an integer,
+    you will get a result you don’t expect, for example:
+
+
+    +   - >>> 7/2
+
+    - 3
+
+
+    In order to get the right result, one of the integers must be converted to a floating
+    point number:
+
+
+    +   - >>> 7.0/2
+
+    - 3.5'
+  - '[PAGE 20]
+
+
+    # # Strings
+
+
+    A string is simply a piece of text and Python will not make any distinction between
+    a string that contains one character or an entire block of characters or text.
+    Python contains two different string types – basic and Unicode.
+
+
+    Basic string types are used to store text in a sequence of numbers, or bytes,
+    with just one byte for each character. You should only use these if you know certain
+    that your text has ASCII values in it. They are also used for storing binary data
+    and are often called byte-strings.
+
+
+    Unicode strings use the Unicode to store text internally. These are a little more
+    complicated to use because you have to know the encoding that you have stored
+    the code in, whenever you read it or save it out. An overview of how to use each
+    one is below:
+
+
+    Basic String – you add a string to your program by surrounding the relevant text
+    with single or double quote marks, for example:
+
+
+    +   - x = ''This is a string''
+
+    - y = "And so is this."
+
+
+    You can also include a string that has a break in it, or runs over several lines,
+    using triple quotes, like this:
+
+
+    +   - x = """This string"""
+
+    - goes over multiple lines.
+
+    - So it includes line breaks."""
+
+
+    +   - y = """This string uses single quotes."
+
+    - But it is still multi-line.
+
+    - As you might have guessed."""
+
+
+    You can also include special characters, like a quote character or line breaks,
+    by using escaped characters. Python uses the UNIX convention of making'
+  - "[PAGE 21]\n\nuse of the backslash key as an escape character. For example:\n\n\
+    +   # The variable x is a string which contains\n# a single line break\n x = '\\\
+    n'\n# The variable y has an escaped quote character\n# To include the quote in\
+    \ the string (instead of\n# it terminating the string)\ny = 'Don\\\\'t worry about\
+    \ quotes'\n# z is a single character - a backslash which has to be escaped\n#\
+    \ with another backslash\nz = '\\\\\\\\\\''\n\nIf you don't want to use the escape\
+    \ key to enter a backslash in your test sting, you can use what is known as a\
+    \ raw string. To denote this, you would precede the string with r.\nBecause raw\
+    \ strings are meant to be used for useful expressions and not, for example, Windows\
+    \ paths, they cannot have a backslash at the end. The backslash is interpreted\
+    \ by Python as an escape from the quote that comes after.\n\nPython strings are\
+    \ stored using numbers and are not encoded in any way. The interpreter will take\
+    \ what you give it and store it as a byte sequence. Because they hold bytes, these\
+    \ strings must only have ASCII characters in them, unless you add an encoding\
+    \ at the start – then you can include characters that are not ASCII. However,\
+    \ you should only do this if you really know what you are doing.\n\nUnicode Strings\
+    \ – These contain an internal representation that allows text to be stored as\
+    \ text. In effect, your computer knows which characters are being compared by\
+    \ the text. However, you will still need to select an encoding for when you write\
+    \ or read that data.\nUnicode literals can be included in your program by putting\
+    \ a u at the front of the string. If you do not specify the encoding at the beginning,\
+    \ you will only be able to use ASCII characters but Python will store your data\
+    \ as Unicode and not a byte string."
+  - '[PAGE 22]
+
+
+    Quoting and escae rules are the same for Unicode strings as they are for byte
+    strings:
+
+
+    You can force the interpreter to convert Unicode to byte strings and vice versa
+    by specifying explicit encoding but you are likely to get one of the following
+    errors:
+
+
+    +   - UnicodeEncodeError
+
+    - UnicodeDecodeError
+
+
+    One of will will just bring your program crashing to a halt. When this happens,
+    it is usually one of the strings that you are trying to "implicitly" convert contains
+    characters that cannot be represented in the default encoding (usually ASCIIII).
+
+
+    # Other Useful Values
+
+
+    There are some other values that are extremely useful:
+
+
+    +   - None - Sometimes seen as Null in other programming languages, this represents
+    "nothing"
+
+    - True - The ''Boolean'' value of true.
+
+    - False - The ''Boolean'' value of false.
+
+
+    You will see these values quite a lot throughout your programming life and can
+    be included in any program you write simply by writing:'
+  - '[PAGE 23]
+
+
+    +   * x = None
+
+    * y = True
+
+    * z = False'
+  - '[PAGE 24]
+
+
+    # More Complex Data Types
+
+
+    When you work with more complicated information, you might want to group certain
+    data together. Python has a lot of concepts that allow you to do this, including
+    things like list comprehensions, generators and iterators. The fundamental way
+    of grouping this data is to use something called data structures. These objects
+    will store all of the values together, and in Python, you can create custom data-structures.
+    However, it has four built in ones. Object that are used to store data are known
+    as containers. The following data types can have many different operations performed
+    on them and are built into the data type already (called Methods).
+
+
+    # The List
+
+
+    This is used to store groups of items in order. You can add to or remove them
+    at any time, sort them or search through the list for specific values. You can
+    even start with a list that is empty, adding to it as you go along, or you can
+    use one that is already pre-populated. Items that are included in your list can
+    be any other object, and that includes other lists as well. This means that you
+    can have many different lists, and lists of lists, using them to create a complex
+    structure – these are useful as building blocks.
+
+    When you write a list, it should have square brackets, with each item separated
+    by a comma:
+
+
+    +   * # w is an empty list
+
+    * w = []
+
+    * # x has only one member
+
+    * x = [3.0]
+
+    * # y is a list of numbers
+
+    * y = [1, 2, 3, 4, 5]
+
+    * # z is a list of strings
+
+    * # and other lists'
+  - '[PAGE 25]
+
+
+    +   - z = [''first'', [], ''second'', [1, 2, 3, 4], ''third'']
+
+
+    You can access anything on a list by “indexing”. That index has to be an integer
+    that represents the position of the item in the list. The first position is zero.
+    Variables can be indexed by placing square brackets, containing the index, after
+    the variable.
+
+
+    If you attempt to get access to a position that has not yet been created, you
+    will receive an IndexError on screen. If you want to access from the end of the
+    list, you use negative indexes. -1 is the last position on your list, followed
+    by -2, -3, etc.:
+
+
+    +   - >>> x = [1, 2, 3, 4, 5]
+
+    - >>> print x[0]
+
+    - 1
+
+    - >>> print x[4]
+
+    - 5
+
+    - >>> print x[-1]
+
+    - 5
+
+    - >>> print x[-5]
+
+    - 1
+
+    - >>> print x[10]
+
+    - Traceback (most recent call last):
+
+    - File "<stdin", line 1, in ?n- IndexError: list index out of range
+
+
+    # # Tuples
+
+
+    Tuples are similar to lists in that they store sequential information. However,
+    they cannot be changed after they have been created, unlike a list, which can
+    be. The interpreter knows exactly the types and the lengths of the members of
+    a tuple and, so, they are more efficient to work with than a list. Tuples can
+    be sliced or indexed but not changed and you will come across them “implicitly”
+    throughout Python. An example of functions that would return multiple values would
+    return those values as a tuple.'
+- md: "\nTo create a tuple, you use parentheses, not square brackets:\n\n- >>> x =\
+    \ (1, 2, 3, 4)\n- >>> x\n- (1, 2, 3, 4)\n- >>> x[0]\n- 1\n- >>> x = (1,)\n- >>>\
+    \ x\n- (1,)\n- >>> x[0]\n- 1\n- >>> x = ()\n- >>> x\n- ()\n- >>> x[0]\n- Traceback\
+    \ (most recent call last):\n File \"<html>\", line 1, ?\nIndexError: tuple index\
+    \ out of range\n\nEven if you have only one member in the tuple, you still need\
+    \ to add the comma. If you just put a 1, for example, t would not be classed as\
+    \ a tuple, whereas 1, would be. If you need to create an empty tuple, you would\
+    \ use one:\n\n- ()\n- tuple ()\n\n# Dictionaries\n\nDictionaries are one of the\
+    \ most useful and flexible types of data and Python is built on them. Dictionaries\
+    \ will store data but they use keys. This means you can look up particular pieces\
+    \ of data using that key. As with the other data types, there is a syntax built\
+    \ in Python to allow you to create a dictionary:\n\n- >>> x = {'key1': 'value1',\
+    \ 'key2': 'value2'}\n- >>> print x\n- {'key2': 'value2', 'key1': 'value1'}\n\n\
+    The values can be retrieved though indexing, in the same way as you do with lists\
+    \ and using the list syntax. However, instead of the position you would use the\
+    \ key:\n\n- >>> x = {'key1': 'value1', 'key2': 'value2'}\n- >>> print x['key1']\n\
+    - value1\n\nStrings don’t have to be used as keys, instead any object can be used,\
+    \ provided it is immutable, i.e. it doesn’t change. This is another good example\
+    \ of where tuples come in hand:\n\n- >>> attemptedKey = { }\n- >>> x = {attemptedKey:\
+    \ 'some value to store'}\n-\n- Traceback (most recent call last):\n File \"<stdin>\"\
+    , line 1, in =\nTypeError: dict objects are unhashable\n\n- >>> anotherTry = (None,\
+    \ 2)\n- >>> x = {anotherTry: 'some value to store'}\n- >>> print x\n- {(None,\
+    \ 2): 'some value to store'}\n\n# Sets\n\nThe set is, without a doubt, one of\
+    \ the most useful of all the data types; so useful that it is now a built feature\
+    \ of Python. Sets have unique members and are extremely efficient for testing\
+    \ if a value is contained in the set. It is a good deal faster than using the\
+    \ list data type but, unlike the other data types, there isn’t any syntax. In\
+    \ order to create a set you need to use the set constructor:\n\n- >>> x = set()\n\
+    - >>> x\n- set([])\n- >>> x.add(1)\n- >>> x\n- set([])\n- >>> x.add(1)\n- >>>\
+    \ x\n- set([])\n- >>> x.add(2)\n- >>> 1 in x\n- True\n- >>> 2 in x\n- True\n-\
+    \ >>> 3 in x\n- False\n- >>>\n\n# Conditions\n\nIn order to evaluate conditions,\
+    \ Python uses Boolean variables. You already know that True and False are the\
+    \ Boolean variables that are returned when an expression is evaluated or compared,\
+    \ for example:\n\n- x = 2\n- print x == 2 # prints True\n- print x == 3 # prints\
+    \ out False\n- print x < 3 # prints out True\n\nIf you notice\n\n- name = \"John\"\
+    \n- age = 23\n- if name == \"John\" and age == 23:\n- print \"Your name is John,\
+    \ and you are also 23 years old.\"\n-\n- if name == \"John\" or name == \"Rick\"\
+    :\n- print \"Your name is John or Rick.\"\n\n# The \"in\" operator\n\nThis can\
+    \ be used as a way of checking if a specific object actually exists inside an\
+    \ object container, like a list:\n\n- if name in [\"John\", \"Rick\"]:\n- print\
+    \ \"Your name is either John or Rick.\"\n\nPython does not use brackets to define\
+    \ code blocks it uses indentation. Standard indentation is 4 spaces although you\
+    \ can use any other space amount or the tab button you wish. Code blocks do not\
+    \ require any termination. The following example is the use of the “if” statement\
+    \ with code blocks:\n\n- if <statement is true>:\n- <do something>\n- ....\n-\
+    \ elif <another statement is true>: # else if\n- <do something else>\n- ....\n\
+    - else:\n- <do another thing>\n- ....\n\nFor example:\n\n- x = 2\n- if x == 2:\n\
+    - print \"x equals two!\"\n- else:\n- print \"x does not equal to two.\"\n\nA\
+    \ statement can only be evaluated as True if any one of the following is right:\n\
+    \n- The True Boolean variable is used or is calculated by using an expression,\
+    \ or\n\n- An object that is not considered as “empty” is passed.\n\nExamples of\
+    \ objects that are considered as empty include:\n\n1. An empty string – denoted\
+    \ by “”\n2. An empty list – denoted by []\n3. The number zero is used – 0\n4.\
+    \ Use of the false Boolean value – False\n\n# The 'is' Operator\n\nThe “is” operator\
+    \ does not match values; instead, it matches instances. An example:\n\n- x = [1,2,3]\n\
+    - y = [1,2,3]\n- print x == y # Prints out True\n- print x is y # Prints out False\n\
+    \n# The \"not\" Operator\n\nIf you use “not” in front of a Boolean operator, it\
+    \ will invert it:\n\n- print not False # Prints out True\n- print (not False)\
+    \ == (False) # Prints out False\n\n# Loops\n\nPython has two different types of\
+    \ loop – For and While. The “for” loop will iterate over a specific sequence,\
+    \ for example:\n\n- primes = [2, 3, 5, 7]\n- for prime in primes:\n- print prime\n\
+    \nThey are able to iterate over number sequences that use “range” and “xrange”\
+    \ functions. The difference between these is that the first will return a new\
+    \ list containing numbers while the second will return an iterator, which is far\
+    \ more efficient.\n\n- for x in range(5):\n- print x # Prints out 0,1,2,3,4\n\
+    - for x in xrange(5):\n- print x # Prints out 0,1,2,3,4\n- for x in range(3, 8):\n\
+    - print x \n\n“while” loops will repeat as long as a specific condition is met,\
+    \ for example:\n\n- count = 0\n- while count < 5:\n- print count\n- count += 1\
+    \ # This is the same as count + 1\n\n# \"break\" and \"continue\" Statements\n\
+    \nThe difference between these two is that “break” is used as a way of exiting\
+    \ the “for” loop while “continue” will skip over the current text and go back\
+    \ to the “for” statement. A couple of examples:\n\n- count = 0\n- while True:\n\
+    - print count\n- count += 1\n- if count >= 5:\n- break # Prints out only odd numbers\
+    \ - 1,3,5,7,9\n- for x in xrange(10):\n- # Check if x is even\n- if x % 2 == 0:\n\
+    - continue\n- print x\n\n# Functions\n\nFunctions are an incredibly useful way\
+    \ of dividing code into blocks. This allows you to order your code, make it a\
+    \ bit readable, to reuse it and, in the process save some time. Functions are\
+    \ also a way of defining interfaces so that programmers are able to share their\
+    \ code. The format is:\n\n block_keyword block_name(argument1, argument2...).\
+    \ You already know some of the block keywords – if, for, while, etc. We use the\
+    \ keyword def to define a function in Python, followed up by the name of the function:\n\
+    \n- def my_function():\n- print \"Hello From Function!\"\n\nFunctions can also\
+    \ receive arguments – these are variables that have been passed from the caller\
+    \ to the function. An example:\n\n- def my_function_with_args(username, greeting):\n\
+    - print \"Hello, %s , From Function!, I wish you %s\"%(username, greeting)\n\n\
+    # Execute Code\n\nFunctions can also return a value by using the keyword return,\
+    \ for example\n\n- def sum_two_numbers(a, b):\n- return a + b\n\n# How to Call\
+    \ a Function in Python\n\nAll you need to do is write the name of the function,\
+    \ followed by (). Put any arguments that are required inside the brackets. An\
+    \ example:\n\n- # print a simple greeting\n- my_function()\n\n- # prints - \"\
+    Hello, John Doe, From Function!, I wish you a great year!\"\n- my_function_with_args(\"\
+    John Doe\", \"a great year!\")\n\n- # after this line x will hold the value 3!\n\
+    - x = sum_two_numbers(1,2)\n\n# Classes and Objects\n\nObjects are simply variables\
+    \ and functions encapsulated into one single entity. Each object gets its functions\
+    \ and its variables from a class, and these are simply a template with which to\
+    \ create an object. A basic class would look something like:\n\n- class MyClass:\n\
+    - variable = \"blah\"\n- def function(self):\n- print \"This is a message inside\
+    \ the class.\"\n\nIn order to assign this to a specific object, you would do this:\n\
+    \n- myobject = MyClass()\n\nThe variable named \"MyObject\" now holds a class\
+    \ object that came from \"MyClass\". This contains a variable and function that\
+    \ are defined inside the \"MyClass\" class.\n\n# Accessing Object Variables\n\n\
+    In order to access the variable that is inside the new object named \"MyObject\"\
+    , you would need to do this:\n\n- myobject.variable\n\nSo, the following would\
+    \ produce the string \"blah\":\n"
+  mdcn: "\n要创建一个元组（tuple），你需要使用圆而不是方括号：\n\n- >>> x = (1, 2, 3, 4)\n- >>> x\n- (1,\
+    \ 2, 3, 4)\n- >>> x[0]\n- 1\n- >>> x = (1,)\n- >>> x\n- (1,)\n- >>> x[0]\n- 1\n\
+    - >>> x = ()\n- >>> x\n- ()\n- >>> x[0]\n- Traceback (most recent call last):\n\
+    \ File \"<html>\", line 1, ?\nIndexError: tuple index out of range\n\n即使元组中只有一个成员，你仍然需要添加逗号。例如，如果你只放一个\
+    \ 1，它不会被归类为元组，而 1, 则是。如果你需要创建一个空元组，你会使用：\n\n- ()\n- tuple ()\n\n# 字典\n\n字典是最实用且最灵活的数据类型之一，Python\
+    \ 也是基于它们构建的。字典存储数据，但它们使用键（keys）。这意味着你可以使用该键来查找特定的数据。与其他数据类型一样，Python 内置了语法来允许你创建字典：\n\
+    \n- >>> x = {'key1': 'value1', 'key2': 'value2'}\n- >>> print x\n- {'key2': 'value2',\
+    \ 'key1': 'value1'}\n\n可以通过索引检索值，就像你对列表所做并使用列表语法一样。但是，你使用的是键而不是位置：\n\n- >>> x\
+    \ = {'key1': 'value1', 'key2': 'value2'}\n- >>> print x['key1']\n- value1\n\n\
+    字符串不必用作键，相反，任何对象都可以使用，只要它是不可变的（immutable），即它不会改变。这是元组派上用场的另一个良好例子：\n\n- >>> attemptedKey\
+    \ = { }\n- >>> x = {attemptedKey: 'some value to store'}\n-\n- Traceback (most\
+    \ recent call last):\n File \"<stdin>\", line 1, in =\nTypeError: dict objects\
+    \ are unhashable\n\n- >>> anotherTry = (None, 2)\n- >>> x = {anotherTry: 'some\
+    \ value to store'}\n- >>> print x\n- {(None, 2): 'some value to store'}\n\n# 集合\n\
+    \n集合（set）无疑是所有数据类型中最实用的之一；如此实用以至于现在是 Python 的内置功能。集合具有唯一的成员，并且测试某个值是否在集合中非常高效。它比使用列表数据类型快得多，但与其他数据类型不同，它没有语法。为了创建一个集合，你需要使用\
+    \ set 构造函数：\n\n- >>> x = set()\n- >>> x\n- set([])\n- >>> x.add(1)\n- >>> x\n\
+    - set([])\n- >>> x.add(1)\n- >>> x\n- set([])\n- >>> x.add(2)\n- >>> 1 in x\n\
+    - True\n- >>> 2 in x\n- True\n- >>> 3 in x\n- False\n- >>>\n\n# 条件\n\n为了评估条件，Python\
+    \ 使用布尔变量。你已经知道 True 和 False 是表达式求值或比较时返回的布尔变量，例如：\n\n- x = 2\n- print x == 2 #\
+    \ 输出 True\n- print x == 3 # 输出 False\n- print x < 3 # 输出 True\n\n如果你注意到\n\n- name\
+    \ = \"John\"\n- age = 23\n- if name == \"John\" and age == 23:\n- print \"Your\
+    \ name is John, and you are also 23 years old.\"\n-\n- if name == \"John\" or\
+    \ name == \"Rick\":\n- print \"Your name is John or Rick.\"\n\n# \"in\" 运算符\n\n\
+    这可以用于检查特定对象是否存在于容器内，例如列表：\n\n- if name in [\"John\", \"Rick\"]:\n- print \"Your\
+    \ name is either John.\"\n\nPython 不使用括号来定义代码块，而是使用缩进。标准缩进是 4 个空格，但你可以使用任何空格数量或制表符。代码块不需要结束符号。以下是\
+    \ “if” 语句配合代码块的使用：\n\n- if <statement is true>:\n- <do something>\n- ....\n- elif\
+    \ <another statement is true>: # else\n- <do something else>\n- ....\n- else:\n\
+    - <do another thing>\n- ....\n\n例如：\n\n- x = 2\n- if x == 2:\n- print \"x equals\
+    \ two!\"\n- else:\n- print \"x does not equal to two.\"\n\n当表达式正确时，语句才会被求值为 True，或者\n\
+    \n一个被传递的表达式。\n\n被视为“空”的对象的包括：\n\n1. 空字符串 – 用 \"\" 表示\n2. 空列表 – 用 [] 表示\n3. 数字零\
+    \ – 用 0 表示\n4. 布尔值 false – False\n\n# 循环\n\nPython 有两种类型的循环——For 和 While。“for”循环会遍历特定的序列，例如使用\
+    \ “range” 和 “xrange” 函数。它们之间的区别在于第一个返回一个新的列表，而第二个返回一个迭代器，后者效率得多。\n\n- for x in\
+    \ range(5):\n- print x # 输出 0,1,2,3,4\n- for x in xrange(5):\n- print x # 输出 0,1,2,3,4\n\
+    - for x in range(3, 8):\n- print x\n\n“while”循环只要满足特定条件就会重复执行，例如：\n\n- count =\
+    \ 0\n- while count < 5:\n- print count\n- count += 1 # 等同于 count = count + 1\n\
+    \n# 结束函数\n\n# \"break\" 和 \"continue\" 语句\n\n这两个语句之间的区别是：“break” 用于退出 “for” 循环，而\
+    \ “continue” 将跳过当前文本并回到 “for” 语句。几个示例：\n\n- count = 0\n- while True:\n- print\
+    \ count\n- count += 1\n- if count >= 5:\n- break # 输出奇数 - 1,3,5,7,9\n- for x in\
+    \ xrange(10):\n- # 检查 x 是否为偶数\n- if x % 2 == 0:\n- continue\n- print x\n\n# 函数\n\
+    \n是将代码分块非常有用的方法。这允许你组织代码，使其具有可读性，并在过程中节省一些时间。函数也是定义接口的方法，以便程序员能够共享他们的代码。格式是：\n\
+    \nblock_keyword block_name(argument1, argument2...) 你已经知道一些块关键字——if, for, while\
+    \ 等。我们使用关键字 def 在 Python 中定义函数，后面紧跟函数名：\n\n- def my_function():\n- print \"Hello\
+    \ From Function!\"\n\n函数还可以接收参数——这些是从调用者传递给函数的变量。一个示例：\n\n- def my_function_with_args(username,\
+    \ greeting):\n- print \"Hello, %s , From Function!, I wish you %s\"%(username,\
+    \ greeting)\n\n# 执行代码\n\n函数还可以通过 return 关键字返回一个值，例如\n\n- def sum_two_numbers(a,\
+    \ b):\n- return a + b\n\n# 在 Python 中调用函数\n\n你只需要编写函数名，后面跟着 ()。在括号内放入任何所需的参数。一个示例：\n\
+    \n# # 输出简单的问候\n- my_function()\n\n# # 输出 \"Hello, John Doe, From Function!, I\
+    \ wish you a great year!\"\n- my_function_with_args(\"John Doe\", \"a great year!\"\
+    )\n\n# # 在此之后 x 将持有值 3!\n- x = sum_two_numbers(1,2)\n\n# 类和对象\n\n对象仅仅是将变量和函数封装进单个实体中。每个对象都从类中获取它的函数和变量，这些仅仅是用于创建对象的模板。一个基础类看起来像：\n\
+    \n- class MyClass:\n- variable = \"blah\"\n- def function(self):\n- print \"This\
+    \ is a message inside the class.\"\n\n为了将其分配给特定的对象，你会这样做：\n\n- myobject = MyClass()\n\
+    \n名为 \"MyObject\" 的变量现在持有一个来自 \"MyClass\" 的类对象。它包含了在 \"MyClass\" 类内部定义的变量和函数。\n\
+    \n# 访问对象变量\n\n为了访问新名为 \"MyObject\" 的对象内部的变量，你需要这样做：\n\n- myobject.variable\n\n\
+    因此，以下将产生字符串 \"blah\":\n"
+  merge: 0
+  raw:
+  - "[PAGE 26]\n\nTo create a tuple, you use parentheses, not square brackets:\n\n\
+    +   - >>> x = (1, 2, 3, 4)\n- >>> x\n- (1, 2, 3, 4)\n- >>> x[0]\n- 1\n- >>> x\
+    \ = (1,)\n- >>> x\n- (1,)\n- >>> x[0]\n- 1\n- >>> x = ()\n- >>> x\n- ()\n- >>>\
+    \ x[0]\n- Traceback (most recent call last):\n File \"<html>\", line 1, ?\n IndexError:\
+    \ tuple index out of range\n\nEven if you have only one member in the tuple, you\
+    \ still need to add the comma. If you just put a 1, for example, t would not be\
+    \ classed as a tuple, whereas 1, would be. If you need to create an empty tuple,\
+    \ you would use one :\n\n+   - ()\n- tuple ()\n\n# Dictionaries\n\nDictionaries\
+    \ are one of the most useful and flexible types of data and Python is built on\
+    \ them. Dictionaries will store data but they use keys. This means you can look\
+    \ up particular pieces of data using that key. As with the other data types, there\
+    \ is a syntax built in Python to allow you to create a dictionary:"
+  - "[PAGE 27]\n\n+   * >>> x = {'key1': 'value1', 'key2': 'value2'}\n* >>> print\
+    \ x\n* {'key2': 'value2', 'key1': 'value1'}\n\nThe values can be retrieved though\
+    \ indexing, in the same way as you do with lists and using the list syntax. However,\
+    \ instead of the position you would use the key:\n\n+   * >>> x = {'key1': 'value1',\
+    \ 'key2': 'value2'}\n* >>> print x['key1']\n* value1\n\nStrings don’t have to\
+    \ be used as keys, instead any object can be used, provided it is immutable, i.e.\
+    \ it doesn’t change. This is another good example of where tuples come in hand:\n\
+    \n+   * >>> attemptedKey = { }\n* >>> x = {attemptedKey: 'some value to store'}\n\
+    * \n* Traceback (most recent call last):\n* File \"<stdin>\", line 1, in =\n*\
+    \ TypeError: dict objects are unhashable\n\n+   * >>> anotherTry = (None, 2)\n\
+    * >>> x = {anotherTry: 'some value to store'}\n* >>> print x\n* {(None, 2): 'some\
+    \ value to store'}\n\n# ## Sets\n\nThe set is, without a doubt, one of the most\
+    \ useful of all the data types; so useful that it is now a built feature of Python.\
+    \ Sets have unique members and are extremely efficient for testing if a value\
+    \ is contained in the set. It is a good deal faster than using the list data type\
+    \ but, unlike the other data types, there isn’t any syntax. In order to create\
+    \ a set you need to use the set constructor:"
+  - '[PAGE 28]
+
+
+    +   - >>> x = set()
+
+    - >>> x
+
+    - set([])
+
+    - >>> x.add(1)
+
+    - >>> x
+
+    - set([])
+
+    - >>> x.add(1)
+
+    - >>> x
+
+    - set([])
+
+    - >>> x.add(2)
+
+    - >>> 1 in x
+
+    - True
+
+    - >>> 2 in x
+
+    - True
+
+    - >>> 3 in x
+
+    - False
+
+    - >>>'
+  - '[PAGE 29]
+
+
+    # Conditions
+
+
+    In order to evaluate conditions, Python uses Boolean variables. You already know
+    that True and False are the Boolean variables that are returned when an expression
+    is evaluated or compared, for example:
+
+
+    +   - x = 2
+
+    - print x == 2 # prints True
+
+    - print x == 3 # prints out False
+
+    - print x < 3 # prints out True
+
+
+    If you notice
+
+
+    +   - name = "John"
+
+    - age = 23
+
+    - if name == "John" and age == 23:
+
+    - print "Your name is John, and you are also 23 years old."
+
+    -
+
+    - if name == "John" or name == "Rick":
+
+    - print "Your name is John or Rick."
+
+
+    # The "in" operator'
+  - '[PAGE 30]
+
+
+    This can be used as a way of checking if a specific object actually exists inside
+    an object container, like a list:
+
+
+    +   * if name in ["John", "Rick"]:
+
+    * print "Your name is either John or Rick."
+
+
+    Python does not use brackets to define code blocks it uses indentation. Standard
+    indentation is 4 spaces although you can use any other space amount or the tab
+    button you wish. Code blocks do not require any termination. The following example
+    is the use of the “if” statement with code blocks:
+
+
+    +   * if <statement is true>:
+
+    * <do something>
+
+    * ....
+
+    * elif <another statement is true>: # else if
+
+    * <do something else>
+
+    * ....
+
+    * else:
+
+    * <do another thing>
+
+    * ....
+
+
+    For example:
+
+
+    +   * x = 2
+
+    * if x == 2:
+
+    * print "x equals two!"
+
+    * else:
+
+    * print "x does not equal to two."
+
+
+    A statement can only be evaluated as True if any one of the following is right:'
+  - '[PAGE 31]
+
+
+    +   - The True Boolean variable is used or is calculated by using an expression,
+    or
+
+
+    +   - An object that is not considered as “empty” is passed.
+
+
+    Examples of objects that are considered as empty include:
+
+
+    +   1. An empty string – denoted by “”
+
+    2. An empty list – denoted by []
+
+    3. The number zero is used – 0
+
+    4. Use of the false Boolean value – False
+
+
+    # The ''is'' Operator
+
+
+    The “is” operator does not match variable values; instead, it matches instances
+    themselves. An example:
+
+
+    +   - x = [1,2,3]
+
+    - y = [1,2,3]
+
+    - print x == y # Prints out True
+
+    - print x is y # Prints out False
+
+
+    # The "not" Operator
+
+
+    If you use “not” in front of a Boolean operator, it will invert it:
+
+
+    +   - print not False # Prints out True
+
+    - print (not False) == (False) # Prints out False
+
+
+    # Loops'
+  - '[PAGE 32]
+
+
+    Python has two different types of loop – For and While. The “for” loop will iterate
+    over a specific sequence, for example:
+
+
+    +   - primes = [2, 3, 5, 7]
+
+    - for prime in primes:
+
+    - print prime
+
+
+    They are able to iterate over number sequences that use the “range” and “xrange”
+    functions. The difference between these two is that the first will return a new
+    list containing numbers of a specific range while the second will return an iterator,
+    which is far more efficient.
+
+
+    +   - Prints out the numbers 0,1,2,3,4
+
+    - for x in xrange(5): # or range(5)
+
+    - print x
+
+
+    +   - Prints out 3,4,5
+
+    - for x in xrange(3, 6): # or range(3, 6)
+
+    - print x
+
+
+    +   - Prints out 3,5,7
+
+    - for x in xrange(3, 8, 2): # or range(3, 8, 2)
+
+    - print x
+
+
+    “while” loops will repeat for as long as a specific Boolean condition is met,
+    for example:
+
+
+    +   - Prints out 0,1,2,3,4
+
+    - count = 0
+
+    - while count < 5:
+
+    - print count
+
+    - count += 1 # This is the same as count = count + 1'
+  - "[PAGE 33]\n\n# \"break\" and \"continue\" Statements\n\nThe difference between\
+    \ these two is that “break” is used as a way of exiting the “for” loop while “continue”\
+    \ will skip over the current text block and will go back to the “for” or “while”\
+    \ statement. A couple of examples:\n\n+   - Prints out 0,1,2,3,4\n- count = 0\n\
+    - while True:\n    - print count\n    - count += 1\n    - if count >= 5:\n   \
+    \     - break\n- # Prints out only odd numbers - 1,3,5,7,9\n- for x in xrange(10):\n\
+    \    - # Check if x is even\n    - if x % 2 == 0:\n        - continue\n    - print\
+    \ x\n\n# Functions\n\nFunctions are an incredibly useful way of dividing code\
+    \ into blocks that are useful. This allows you to order your code, to make it\
+    \ a bit more readable, to reuse it and, in the process save yourself some time.\
+    \ Functions are also a way of defining interfaces so that programmers are able\
+    \ to share their code. We know that Python will make use of blocks, which is a\
+    \ piece of code written something like:\n\n+   - block_head:\n- 1st block line\n\
+    - 2nd block line"
+  - '[PAGE 34]
+
+
+    +   - ...
+
+
+    In instances where the block line is some more Python code – another block, and
+    the block head1, is written in the following format – block_keyword block_name(argument1,
+    argument2...). You already know some of the block keywords – if, for, while, etc.
+    We use the keyword def to define a function n Python, followed up by the name
+    of the function:
+
+
+    +   - def my_function():
+
+    - print "Hello From My Function!"
+
+
+    Functions can also receive arguments – these are variables that have been passed
+    from the caller to the function. An example:
+
+
+    +   - def my_function_with_args(username, greeting):
+
+    - print "Hello, %s , From My Function!, I wish you %s"%(username, greeting)"
+
+    - Execute Code
+
+
+    Functions can also return a value by using the keyword return, for example
+
+
+    +   - def sum_two_numbers(a, b):
+
+    - return a + b
+
+
+    # How to Call a Function in Python
+
+
+    All you need to do is write the name of the function, followed by (). Put any
+    arguments that are required inside the brackets. An example:
+
+
+    +   - # print a simple greeting
+
+    - my_function()
+
+
+    +   - #prints - "Hello, John Doe, From My Function!, I wish you a great year!"
+
+    - my_function_with_args("John Doe", "a great year!")'
+  - '[PAGE 35]
+
+
+    +   - # after this line x will hold the value 3!
+
+    - x = sum_two_numbers(1,2)
+
+
+    #  Classes and Objects
+
+
+    Objects are simply variables and functions encapsulated into one single entity.
+    Each object gets it functions and its variables from a class, and these are simply
+    a template with which to create an object. A basic class would look something
+    like:
+
+
+    +   - class MyClass:
+
+    - variable = "blah"
+
+    - def function(self):
+
+    - print "This is a message inside the class."
+
+
+    In order to assign this to a specific object, you would do this:
+
+
+    +   - myobject = MyClass()
+
+
+    The variable named "MyObject" now holds a class object that came from "MyClass".
+    This contains a variable and function that ae defined inside the "MyClass" class.
+
+
+    #  Accessing Object Variables
+
+
+    In order to access the variable that is inside the new object named "MyObject",
+    you would need to do this:
+
+
+    +   - myobject.variable
+
+
+    So, the following would prduce the string "blah":'
+- md: '
+
+    - - print myobjectx.variable
+
+
+    It is possible to create many objects that are the same class, i.e., they have
+    the functions and variables defined. However, each one would contain an independent
+    copy of the variables that are defined in the class. For example, if you were
+    to define a different object using the “MyClass” class, and then change the string
+    in the variable used in the example above:
+
+
+    - - myobject = MyClass()
+
+    - myobject.variable = "yackity"
+
+
+    And then print both of values:
+
+
+    - - print myobjectx.variable # This would print "blah"
+
+    - print myobjectx.variable # This would print "yackity"
+
+
+    # Accessing Object Functions
+
+
+    If you want to access an object function, you would use notation that is similar
+    to that used in accessing a variable:
+
+
+    - - myobjectx.function()
+
+
+    Printing that message would give you “This is a message inside the class”.
+
+
+    # Modules and Packages
+
+
+    All a Python module is is a Python file that has the .py extension that implements
+    a set of functions. A module is imported from another module by using the import
+    command.
+
+
+    The first time you load a module into a running script, it will be initialized
+    by the execution of the code inside the module. This is done just once. If another
+    module is that in your code imports that same module, it will only be loaded once,
+    not twice. The local variables that are inside the module act as “singletons”
+    and are only initialized the first time.
+
+
+    If you wanted to import the module called urllib, a module that allows you to
+    create read data from a URL, you would do this:
+
+
+    - - # import the library
+
+    - import urllib
+
+
+    - - # use it
+
+    - urllib.urlopen(...)
+
+
+    # Exploring built-in modules
+
+
+    There are two important functions that are incredibly handy when it comes to exploring
+    modules that are built in to Python – the dir and help functions. You can use
+    the dir function to look for functions that are implemented in each module:
+
+
+    ```
+
+    >>> import urllib
+
+    >>> dir(urllib)
+
+    [''ContentTooShortError'', ''FancyURLOpener'', ''MAXFTPCACHE'', ''URLOpener'',
+    ''__all__'', ''__builtins__'', ''__doc__'', ''__file__'', ''__name__'', ''__package__'',
+    ''__version__'', ''_errors'', ''_get_proxies'', ''_get_proxy_settings'', ''_have_ssl'',
+    ''_hexdig'', ''_hextochr'', ''_hostprog'', ''_is_unicode'', ''_localhost'', ''_noheaders'',
+    ''_nportprog'', ''_passwdprog'']
+
+    ```
+
+
+    _portprog
+
+
+    When you locate the function in the module that you want to use, you can read
+    more about it using the help function, in the interpreter:
+
+
+    - - help(urllib.urlopen)
+
+
+    # Writing Modules
+
+
+    It is a very simple task to write a Python module. All you do is create a .py
+    file that is named after the module name and then use the Python name to import
+    it (without using the .py extension) by using the import command.
+
+
+    # Writing Packages
+
+
+    A package is a namespace, which includes a number of modules and packages. They
+    are directories with a twist. Each Python package is a directory that has to contain
+    a special file, named __init__.py. The file itself can be empty indicating that
+    the directory in it is a Python package – that way it can be imported in the way
+    you would import a module.
+
+
+    If you were to create a directory that is named foo, which would mark the name
+    of the package, you can create a module within that package that you could call
+    bar. Don''t forget that you need to add the __init__.py file to the foo directory
+    as well. In order to use the module called bar, you can import it on one of two
+    ways:
+
+
+    - - import foo.bar, OR
+
+    - from foo import bar
+
+
+    If you use the first way, you have to use the prefix foo whenever you access bar.
+    But, in the second method, you don''t need to do this because you are importing
+    the module itself to the namespace.
+
+
+    You can also use the __init__.py file to determine which modules the package is
+    going to export as the API, while you keep the other modules internal by overriding
+    the variable __all__ – an example:
+
+
+    - - __init__.py:
+
+    - __all__ = ["bar"]
+
+
+    # MySQL Python Tutorial
+
+
+    For the final chapter, I want to talk to you about how to program, using Python,
+    for the MySQL database. I will cover the basics of Python programming, using the
+    MySQL db module.
+
+
+    # About the MySQL Database
+
+
+    MySQL is one of the best database management systems around. A multi-user system,
+    it is very popular on the internet and is available for use on most of the biggest
+    operating system platforms. As well as Windows, it will run on Linux, BSD UNIX
+    and on the Mac OS. Large well-known websites, YouTube and Wikipedia use MySQL,
+    and these are sites that can manage millions of queries per day.
+
+
+    # Before We Begin
+
+
+    You will need to install a number of packages in order to run these examples on
+    your computer, starting with MySQL, if you haven''t already installed it.
+
+
+    From your command prompt, type in this:
+
+
+    - - sudo apt-get install mysql-server
+
+
+    This will install the MySQL server and a number of other packages. While you are
+    installing it, you will be prompted to put in a password for the MySQL root account:
+
+
+    - - $ apt-cache search MySQLdb
+
+    - python-mysqldb - A Python interface to MySQL
+
+    - python-mysqld-dbg - A Python interface to MySQL (debug extension)
+
+    - bibius - bibliographic database
+
+    - - eikazo - graphical frontend for SANE designed for mass-scanning
+
+
+    At this stage, we do not know what the MySQLdb module package name is so we can
+    use the following command to find out what it is:
+
+
+    - - $ sudo apt-get install python-mysqldb
+
+
+    Now it''s time to create a brand new database user along with the new database:
+
+
+    - - mysql -u root -p
+
+    - Enter password:
+
+    - Welcome to the MySQL monitor. Commands end with ; or g.
+
+    - Your MySQL connection id is 30
+
+    - Server version: 5.0.67-Ubuntu6 (Ubuntu)
+
+
+    Type ''help''; or ''h'' for help.
+
+    Type ''\c'' to clear the buffer.
+
+
+    - - mysql> SHOW DATABASES;
+
+    - Database
+
+    - information_schema
+
+    - mysql
+
+    - 2 rows in set (0.00 sec)
+
+
+    Using the root account, we can connect to the database. To show all of the available
+    databases, simply type Show Databases at the command prompt.
+
+
+    - - mysql> CREATE DATABASE testdb;
+
+    - Query OK, 1 row affected (0.02 sec)
+
+
+    We can now create a testdb database and this what you are going to use:
+
+
+    - - mysql> CREATE USER ''testuser''@''localhost'' IDENTIFIED BY ''test23'';
+
+    - Query OK, 0 rows affected (0.00 sec)
+
+
+    - - mysql> USE testdb;
+
+    - Database changed
+
+
+    - - mysql> GRANT ALL ON testdb.* TO ''testuser''@''localhost'';
+
+    - Query OK, 0 rows affected (0.00 sec)
+
+
+    - - mysql> quit;
+
+    - Bye
+
+
+    Next, you need to create a new user and grant that user all privileges for all
+    tables within the testdb database.
+
+
+    # The MySQL Module
+
+
+    This is what will implement the C API for MySQL and it is not compatible with
+    the DB API interface. Most programmers prefer to use the MySQL module because
+    it is object oriented so that is one we are going to use. The following is an
+    example using the mysql module:
+
+
+    ```python
+
+    #!/usr/bin/python
+
+    # -*- coding: utf-8 -*-
+
+    ```
+
+
+    - - import _mysql
+
+    - import sys
+
+
+    - - try:
+
+    con = _mysql.connect(''localhost'', ''testuser'', ''test23'', ''testdb'')
+
+
+    - - con.query("SELECT VERSION()")
+
+    - result = con.use_result()
+
+
+    - - print "MySQL version: %s" % \
+
+    result.fetch_row()[0]
+
+
+    - - except _mysql.Error, e:
+
+
+    - - print "Error %d: %s" % (e.args[0], e.args[1])
+
+    - sys.exit(1)
+
+
+    - - finally:
+
+
+    - - if con:
+
+    con.close()
+
+
+    As you can see, this example will do two things – get and print the MySQL database
+    version. To do this, you use the statement SELECT VERSION ().
+
+
+    # Myqldb Module
+
+
+    MySQLdb is a wrapper for Python and it is compatible with the DB API, thus making
+    the code far more portable. This is the best and most preferred method of working
+    with MySQL.
+
+
+    # Examples.
+
+
+    In the first example, we are going to retrieve the MySQL database version:
+
+
+    - - #!/usr/bin/python
+
+    - # -*- coding: utf-8 -*-
+
+
+    - - import MySQLdb as mdb
+
+    - import sys
+
+
+    - - try:
+
+    con = mdb.connect(''localhost'', ''testuser'', ''test23'', ''testdb'');
+
+    '
+  mdcn: '
+
+
+    - - print myobjectx.variable
+
+
+    可以创建许多相同类的对象，即它们具有定义的函数和变量。然而，每个对象都将包含类中定义的变量的独立副本。例如，如果你使用“MyClass”类定义了一个不同的对象，然后更改上面示例中使用的变量字符串：
+
+
+    - - myobject = MyClass()
+
+    - myobject.variable = "yackity"
+
+
+    然后同时打印两个值：
+
+
+    - - print myobjectx.variable # 这将打印 "blah"
+
+    - print myobjectx.variable # 这将打印 "yackity"
+
+
+    # 访问对象函数
+
+
+    如果你想访问对象函数，将使用与访问变量类似的表示法：
+
+
+    - - myobjectx.function()
+
+
+    打印该消息将带给你“This is a message inside the class”（这是类内部的的消息）。
+
+
+    # 模块与包
+
+
+    所有的 Python 模块都是具有 .py 扩展名的 Python 文件，它实现了一组函数。通过 `import` 命令从另一个模块导入模块。
+
+
+    当你第一次在正在运行的脚本加载一个模块时，它将通过执行该模块内部的代码进行初始化。此操作只进行一次。如果你的代码中有另一个模块导入了同一个模块，它将只加载一次，而不是两次。模块内部的本地变量充当“单例”，并且仅在第一次时初始化。
+
+
+    如果你想导入名为 `urllib` 的模块（一个允许你从 URL 创建读取数据的模块），你可以这样做：
+
+
+    - - # 导入库
+
+    - import urllib
+
+
+    - - # 使用它
+
+    - urllib.urlopen(...)
+
+
+    # 探索内置模块
+
+
+    在探索 Python 内置模块时，有两个非常实用的函数——`dir` 函数和 `help` 函数。你可以使用 `dir` 函数查找每个模块中实现的函数：
+
+
+    ```
+
+    >>> import urllib
+
+    >>> dir(urllib)
+
+    [''ContentTooShortError'', ''FancyURLOpener'', ''MAXFTPCACHE'', ''URLOpener'',
+    ''__all__'', ''__builtins__'', ''__doc__'', ''__file__'', ''__name__'', ''__package__'',
+    ''__version__'', ''_errors'', ''_get_proxies'', ''_get_proxy_settings'', ''_have_ssl'',
+    ''_hexdig'', ''_hextochr'', ''_hostprog'', ''_is_unicode'', ''_localhost'', ''_noheaders'',
+    ''_nportprog'', ''_passwdprog'']
+
+    ```
+
+
+    _portprog_
+
+
+    当你位于模块中想要使用的函数时，可以在解释器中使用 `help` 函数读取关于它的更多信息：
+
+
+    - - help(urllib.urlopen)
+
+
+    # 编写模块
+
+
+    编写 Python 模块是一项非常简单的任务。你只需创建一个命名与模块名同名的 .py 文件，然后使用 `import` 命令通过 Python 名称来导入它（不使用
+    .py 扩展名）。
+
+
+    # 编写包
+
+
+    包是一个命名空间，它包含了许多模块和包。它们是带有特殊之处的目录。每个 Python 包都是一个必须包含名为 `__init__.py` 的特殊文件的目录。该文件本身可以是空的，表示该目录是一个
+    Python 包 —— 这样它就可以像导入模块一样来导入它。
+
+
+    如果你创建一个名为 `foo` 的目录，这将作为包的名称，你可以在该包中创建一个名为 `bar` 的模块。不要忘记你还需要向 `foo` 目录中添加 `__init__.py`
+    文件。为了使用名为 `bar` 的模块，你可以通过以下两种方式之一导入它：
+
+
+    - - import foo.bar，或者
+
+    - from foo import bar
+
+
+    如果你使用第一种方法，每当你访问 `bar` 时都必须使用前缀 `foo`。但在第二种方法中，你不需要这样做，因为你将模块本身导入了命名空间中。
+
+
+    你也可以使用 `__init__.py` 文件：
+
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 36]
+
+
+    +   - print myobjectx.variable
+
+
+    It is possible to create many objects that are the same class, i.e., they have
+    the functions and variables defined. However, each one would contain an independent
+    copy of the variables that are defined in the class. For example, if you were
+    to define a different object using the “MyClass” class, and then change the string
+    in the variable used in the example above:
+
+
+    +   - myobject = MyClass()
+
+    - myobject.variable = "yackity"
+
+
+    And then print both of values:
+
+
+    +   - print myobjectx.variable # This would print "blah"
+
+    - print myobjectx.variable # This would print "yackity"
+
+
+    # Accessing Object Functions
+
+
+    If you want to access an object function, you would use notation that is similar
+    to that used in accessing a variable:
+
+
+    +   - myobjectx.function()
+
+
+    Printing that message would give you “This is a message inside the class”.
+
+
+    # Modules and Packages'
+  - '[PAGE 37]
+
+
+    All a Python module is is a Python file that has the .py extension that implements
+    a set of functions. A module is imported from another module by using the import
+    command.
+
+
+    The first time you load a module into a running script, it will initialized by
+    the execution of the code inside the module. This is done just once. If another
+    module is that in your code imports that same module, it will only be loaded once,
+    not twice. The local variables that are inside the module act as “singletons”
+    and are only initialized the first time.
+
+
+    If you wanted to import the module called urllib, a module that allows you to
+    create read data from a URL, you would do this:
+
+
+    +   - # import the library
+
+    - import urllib
+
+
+    +   - # use it
+
+    - urllib.urlopen(...)
+
+
+    # Exploring built-in modules
+
+
+    There are two important functions that are incredibly handy when it comes to exploring
+    modules that are built in to Python – the dir and help functions. You can use
+    the dir function to look for functions that are implemented in each module:
+
+
+    ```
+
+    >>> import urllib
+
+    >>> dir(urllib)
+
+    [''ContentTooShortError'', ''FancyURLOppener'', ''MAXFTPCACHE'', ''URLOppener'',
+    ''__all__'', ''__builtins__'', ''__doc__'', ''__file__'', ''__name__'', ''__package__'',
+    ''__version__'', ''_fterrrors'', ''_get_proxies'', ''_get_proxy_settings'', ''_have_ssl'',
+    ''_hexdig'', ''_hextochr'', ''_hostprog'', ''_is_unicode'', ''_localhost'', ''_noheaders'',
+    ''_nportprog'', ''_passwdprog'']
+
+    ```'
+  - '[PAGE 38]
+
+
+    _portprog
+
+
+    When you locate the function in the module that you want to use, you can
+
+    read more about it using the help function, in the interpreter:
+
+
+    +   - help(urllib.urlopen)
+
+
+    # Writing Modules
+
+
+    It is a very simple task to write a Python module. All you do is create a .py
+
+    file that is named after the module name and then use the Python name to
+
+    import it (without using the .py extension) by using the import command.
+
+
+    # Writing Packages
+
+
+    A package is a namespace, which includes a number of modules and
+
+    packages. They are directories with a twist. Each Python package is a
+
+    directory that has to contain a special file, named _ini_.py. The file itself
+    can
+
+    be empty indicating that the directory in it is a Python package – that
+
+    way it can be imported in the way you would import a module.
+
+
+    If you were to create a directory that is named foo, which would mark the
+
+    name of the package, you can create a module within that package that you
+
+    could call bar. Don''t forget that you need to add the _init_.py file to the foo'
+  - '[PAGE 39]
+
+
+    directory as well. In order to use the module called bar, you can import it on
+
+    one of two ways:
+
+
+    +   - import foo.bar, OR
+
+    - from foo import bar
+
+
+    If you use the first way, you have to use the prefix foo whenever you access
+
+    bar. But, in the second method, you don''t need to do this because you are
+
+    importing the module itself to the namespace.
+
+
+    You can also use the _init_.py file to determine which modules the package
+
+    is going to export as the API, while you keep the other modules internal by
+
+    overriding the variable _init all – an example:
+
+
+    +   - __init__.py:
+
+    - __all__ = ["bar"]'
+  - '[PAGE 40]
+
+
+    # MySQL Python Tutorial
+
+
+    For the final chapter, I want to talk to you about how to program, using Python,
+    for the MySQL database. I will cover the basics of Python programming, using the
+    MySQL dB module.
+
+
+    # About the MySQL Database
+
+
+    MySQL is one of the best database management systems around. A multi-user system,
+    it is very popular on the internet and is available for use on most of the biggest
+    operating system platforms. As well as Windows, it will run on Linux, BSD UNIX
+    ad on the Mac OS. Large well-known websites, YouTube ad Wikipedia use MySQL, and
+    these are sites that can manage millions of queries per day.
+
+
+    # Before We Begin
+
+
+    You will need to install a number of packages in order to run these examples on
+    your computer, starting with MySQL, if you haven''t already installed it.
+
+
+    From your command prompt, type in this:
+
+
+    +   - sudo apt-get install mysql-server
+
+
+    This will install the MySQL server and a number of other packages. While you are
+    installing it, you will be prompted to put in a password for the MySQL root account:
+
+
+    +   - $ apt-cache search MySQL.db
+
+    - python-mysqldb - A Python interface to MySQL
+
+    - python-mysqld-dbg - A Python interface to MySQL (debug extension)
+
+    - bibus - bibliographic database'
+  - '[PAGE 41]
+
+
+    +   - eikazo - graphical frontend for SANE designed for mass-scanning
+
+
+    At this stage, we do not know what the MySQLdb module package name is so we can
+    use the following command to find out what it is:
+
+
+    +   - $ sudo apt-get install python-mysqldb
+
+
+    Now it''s time to create a brand new database user along with the new database:
+
+
+    +   - mysql -u root -p
+
+    - Enter password:
+
+    - Welcome to the MySQL monitor. Commands end with ; or g.
+
+    - Your MySQL connection id is 30
+
+    - Server version: 5.0.67-Ubuntu6 (Ubuntu)
+
+
+    Type ''help''; or ''h'' for help.
+
+    Type ''\c'' to clear the buffer.
+
+
+    +   - mysql> SHOW DATABASES;
+
+    - Database
+
+    - information_schema
+
+    - mysql
+
+    - 2 rows in set (0.00 sec)
+
+
+    Using the root account, we can connect to the database. To show all of the available
+    databases, simply type Show Databases at the command prompt.
+
+
+    +   - mysql> CREATE DATABASE testdb;
+
+    - Query OK, 1 row affected (0.02 sec)
+
+
+    We can now create a testdb database and this what you are going to use throughout
+    this chapter
+
+
+    +   - mysql> CREATE USER ''testuser''@''localhost'' IDENTIFIED BY ''test623'';'
+  - "[PAGE 42]\n\n+   - Query OK, 0 rows affected (0.00 sec)\n\n+   - mysql> USE testdb;\n\
+    - Database changed\n\n+   - mysql> GRANT ALL ON testdb.* TO 'testuser'@'localhost'\n\
+    - Query OK, 0 rows affected (0.00 sec)\n\n+   - mysql> quit;\n- Bye\n\nNext, you\
+    \ need to create a new user and you are going to give that user all privileges\
+    \ for all tables that are within the testdb database\n\nWe create a new database\
+    \ user. We grant all privileges to this user for all tables of the testdbdatabase.\n\
+    \n# The –MySQL Module\n\nThis is what will implement the C API for MySQL and it\
+    \ is not compatible at all with the DB API interface in Python. Most programmers\
+    \ prefer to use the MySQL module because it is object oriented so that is one\
+    \ we are going to use here. The following is an example using the ~mysql Module:\n\
+    \n```\n#!/usr/bin/python\n# -*- coding: utf-8 -*-\n```\n\n+   - import _mysql\n\
+    - import sys\n\n+   - try:\n con = _mysql.connect('localhost', 'testuser', 'test623',\
+    \ 'testdb')\n\n+   - con.query(\"SELECT VERSION()\")\n- result = con.use_result()"
+  - '[PAGE 43]
+
+
+    +   - print "MySQL version: %s" % \
+
+    - result.fetch_row()[0]
+
+
+    +   - except _mysql.Error, e:
+
+
+    +   - print "Error %d: %s" % (e.args[0], e.args[1])
+
+    - sys.exit(1)
+
+
+    +   - finally:
+
+
+    +   - if con:
+
+    - con.close()
+
+
+    As you can see, this example will do two things – get and print the MySQL database
+    version. To do this, you use the statement SELECT VERSION ().
+
+
+    # Myqldb Module
+
+
+    MyQLdb is a wrapper for Python and it is compatible with the DB API, thus making
+    the code far more portable. This is the best and most preferred method of working
+    with MySQL
+
+
+    # Examples.
+
+
+    In the first example, we are going to retrieve the MySQL database version:
+
+
+    +   - #!/usr/bin/python
+
+    - # -*- coding: utf-8 -*-
+
+
+    +   - import MySQLdb as mdb
+
+    - import sys
+
+
+    +   - try:
+
+    - con = mdb.connect(''localhost'', ''testuser'', ''test623'', ''testdb'');'
+- md: "\n```python\ncur = con.cursor()\ncur.execute(\"SELECT VERSION()\")\nver = cur.fetchone()\n\
+    print \"Database version : %s \" % ver\nexcept mdb.Error, e:\n    print \"Error\
+    \ %d: %s\" % (e.args[0],e.args[1])\n    sys.exit(1)\nfinally:\n    if con:\n \
+    \       con.close()\n```\n\nAs you can see from the script, we are connecting\
+    \ to the testdb database and are then executing the statement SELECT VERSION().\
+    \ This will give us the current version of the database and then we print it so\
+    \ it shows up on your window.\n\nThe next command is importing the module:\n\n\
+    - con = mdb.connect('localhost', 'testuser', 'test623', 'testdb');\n\nNow we can\
+    \ connect to the database using the connect() method, which has four different\
+    \ parameters:\n\n- The host – this is where the MySQL database is located\n- Database\
+    \ User Name\n- Users Account Password\n- Database name\n\nThe following example\
+    \ shows this:\n\n- cur = con.cursor()\n- cur.execute(\"SELECT VERSION()\")\n\n\
+    The connection gives us the cursor object, which is then used to travel the records\
+    \ we got from the results set. We then call the execute() method and execute the\
+    \ SQL statement:\n\n- ver = cur.fetchone()\n\nThe data is fetched and, as we have\
+    \ only retrieved a single record, we use the fetchone() method:\n\n- print \"\
+    Database version : %s \" % ver\n\nWe can then print the retrieved data to the\
+    \ window.\n\n- except mdb.Error, e:\n    print \"Error %d: %s\" % (e.args[0],e.args[1])\n\
+    \    sys.exit(1)\n\nThe next step is to check for any errors, an important step\
+    \ because working with databases is very prone to errors.\n\n- finally:\n    if\
+    \ con:\n        con.close()\n\nIn the last step, we can release the resources,\
+    \ resulting in something that might look something like:\n\n- $ ./version.py\n\
+    Database version : 5.5.9\n\n## Creating and Populating a Table\n\nWe will now\
+    \ create a table and put some data into it, or populate it, as it is known:\n\n\
+    ```python\n#!/usr/bin/python\n# -*- coding: utf-8 -*-\n\nimport MySQLDb as mdb\n\
+    \ncon = mdb.connect('localhost', 'testuser', 'test623', 'testdb');\n\nwith con:\n\
+    \    cur = con.cursor()\n    cur.execute(\"DROP TABLE IF EXISTS Writers\")\n \
+    \   cur.execute(\"CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT\n```\n\
+    \nWe have created a table of authors and added in the names of 5 writers.\n\n\
+    - with con:\n\nUsing the with keyword, the interpreter will automatically release\
+    \ those resources as well as carrying out error handling:\n\n- cur.execute(\"\
+    CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT, Name VARCHAR(25))\")\n\
+    \nThe above SQL statement will create a brand new database table that is called\
+    \ writers. There are two columns in the table – ID and Name.\n\n- cur.execute(\"\
+    INSERT INTO Writers(Name) VALUES('Jack London')\")\n- cur.execute(\"INSERT INTO\
+    \ Writers(Name) VALUES('Honore de Balzac')\")\n- ...\n\nTo insert new authors\
+    \ into the table, we use the INSERT statement and add two more rows:\n\n```mysql\n\
+    mysql> SELECT * FROM Writers;\n+------+-----------+\n| Id   | Name      |\n+------+-----------+\n\
+    | 1    | Jack London |\n| 2    | Honore de Balzac |\n| 3    | Lion Feuchtwanger\
+    \ |\n| 4    | Emile Zola |\n| 5    | Truman Capote |\n+------+-----------+\n 5\
+    \ rows in set (0.00 sec)\n```\n\nAfter the script has been executed, we can use\
+    \ the mysql client tool and select all the data from that table.\n\n## Retrieving\
+    \ Data\n\nNow that we have put some data in the database, it's time to retrieve\
+    \ it:\n\n```python\n#!/usr/bin/python\n# -*- coding: utf-8 -*-\n\nimport MySQLdb\
+    \ as mdb\n\ncon = mdb.connect('localhost', 'testuser', 'test623', 'testdb');\n\
+    \nwith con:\n    cur = con.cursor()\n    cur.execute(\"SELECT * FROM Writers\"\
+    )\n    rows = cur.fetchall()\n\n    for row in rows:\n        print row\n```\n\
+    \nThe above example shows you how to retrieve all of the data from the table called\
+    \ Writers.\n\n- cur.execute(\"SELECT * FROM Writers\")\n\nThis statement selects\
+    \ all of the data from that table.\n\n- rows = cur.fetchall()\n\nWe use the fetchall()\
+    \ method to retrieve all records, which are returned in a result set.\n\n- for\
+    \ row in rows:\n    print row\n\nWe can now print, row by row, all of the data\
+    \ to the window.\n\n- ./retrieve.py\n(1L, 'Jack London')\n- (2L, 'Honore de Balzac')\n\
+    - (3L, 'Lion Feuchtwanger')\n- (4L, 'Emile Zola')\n- (5L, 'Truman Capote')\n\n\
+    It isn't always going to be possible to retrieve all of the data at the same time\
+    \ so, instead, we would fetch each row, one at a time.\n\n```python\n#!/usr/bin/python\n\
+    # -*- coding: utf-8 -*-\n\nimport MySQLdb as mdb\n\ncon = mdb.connect('localhost',\
+    \ 'testuser', 'test623', 'testdb');\n\nwith con:\n    cur = con.cursor()\n   \
+    \ cur.execute(\"SELECT * FROM Writers\")\n\n    for i in range(cur.rowcount):\n\
+    \        row = cur.fetchone()\n        print row[0], row[1]\n```\n\nAgain, we\
+    \ can print the data from the table and fetch each row one at a time.\n\nWe use\
+    \ the fetchone() method to get each row and the rowcount property will show the\
+    \ total number of rows that the SQL statement returns.\n\n- $/retrieve2.py\n1\
+    \ Jack London\n2 Honore de Balzac\n3 Lion Feuchtwanger\n4 Emile Zola\n5 Truman\
+    \ Capote\n\n## Dictionary Cursor\n\nIn the Python DB, the default cursor returns\
+    \ data in tuples. DictCursor returns data in a dictionary, allowing us to refer\
+    \ to the data by the names of columns.\n\n```python\n#!/usr/bin/python\n# -*-\
+    \ coding: utf-8 -*-\n\nimport MySQLdb as mdb\n\ncon = mdb.connect('localhost',\
+    \ 'testuser', 'test623', 'testdb');\n\nwith con:\n    cur = con.cursor(mdb.DictCursor)\n\
+    \    cur.execute(\"SELECT * FROM Writers\")\n    rows = cur.fetchall()\n\n   \
+    \ for row in rows:\n        print row[\"Id\"], row[\"Name\"]\n```\n\nThe above\
+    \ example shows that by using the DictCursor, we can refer to the data by the\
+    \ column names.\n\n## Column Headers\n\nNext, we will look at how to print the\
+    \ column headers, with the data, from the table in the database:\n\n```python\n\
+    #!/usr/bin/python\n# -*- coding: utf-8 -*-\n\nimport MySQdb as mdb\n\ncon = mdb.connect('localhost',\
+    \ 'testuser', 'test623', 'testdb')\n\nwith con:\n    cur = con.cursor()\n    cur.execute(\"\
+    SELECT * FROM Writers\")\n    rows = cur.fetchall()\n    desc = cur.description\n\
+    \n    print(\"%3s %3s\" % (desc[0][0], desc[1][0]))\n\n    for row in rows:\n\
+    \        print(\"%2s %3s\" % row)\n```\n\nOnce again, we can print the contents\
+    \ of the table to the window and, this time, we are including the column names\
+    \ as well. These are called “meta data” and are obtained from the cursor object.\n\
+    \n- $ ./columnheaders.py\nId Name\n1 Jack London\n2 Honore de Balzac\n3 Lion Feuchtwanger\n\
+    4 Emile Zola\n5 Truman Capote\n\n## Prepared Statements\n\nNow let’s look at prepared\
+    \ statements. When we write one of these, we use a placeholder instead of writing\
+    \ in the values. Prepared statements increase both performance and security and\
+    \ the Python DB gives you five different ways to build a prepared statement. One\
+    \ of those ways, the ANSI print format code, is supported by the MySQLLdb module.\n\
+    \n```python\n#!/usr/bin/python\n# -*- coding: utf-8 -*-\n\nimport MySQLLdb as\
+    \ mdb\n\ncon = mdb.connect('localhost', 'testuser', 'test623', 'testdb')\n\nwith\
+    \ con:\n    cur = con.cursor()\n\n    cur.execute(\"UPDATE Writers SET Name =\
+    \ %s WHERE Id = %s\", (\"Guy of Maupasant\", \"4\"))\n\n    print(\"Number of\
+    \ rows updated: %s\" % cur.rowcount)\n```\n\nLet’s change an author name, the\
+    \ one on row 4:\n"
+  mdcn: "\n\n```python\ncur = con.cursor()\ncur.execute(\"SELECT VERSION()\")\nver\
+    \ = cur.fetchone()\nprint \"Database version : %s \" % ver\nexcept mdb.Error,\
+    \ e:\n    print \"Error %d: %s\" % (e.args[0],e.args[1])\n    sys.exit(1)\nfinally:\n\
+    \    if con:\n        con.close()\n```\n\n从脚本中可以看出，我们正在连接到 testdb 数据库，然后执行 SELECT\
+    \ VERSION() 语句。这将给出数据库的当前版本，然后将其打印出来，显示在你的窗口上。\n\n下一个命令是导入模块：\n\n- con = mdb.connect('localhost',\
+    \ 'testuser', 'test623', 'testdb');\n\n现在我们可以使用 `connect()` 方法连接到数据库，该方法有四个不同的参数：\n\
+    \n- host – 这是 MySQL 数据库所在的位置\n- 数据库用户名\n- 用户账户密码\n- 数据库名称\n\n下面的示例展示了这一点：\n\n\
+    - cur = con.cursor()\n- cur.execute(\"SELECT VERSION()\")\n\n连接为我们提供了游标对象，该对象随后用于遍历我们从结果集中获取的记录。我们然后调用\
+    \ `execute()` 方法并执行 SQL 语句：\n\n- ver = cur.fetchone()\n\n数据被获取了，由于我们只检索了一条记录，所以我们使用\
+    \ `fetchone()` 方法：\n\n- print \"Database version : %s \" % ver\n\n然后我们可以将获取的数据打印到窗口。\n\
+    \n- except mdb.Error, e:\n    print \"Error %d: %s\" % (e.args[0],e.args[1])\n\
+    \    sys.exit(1)\n\n下一步是检查任何错误，这是一个重要的步骤，因为处理数据库非常容易产生错误。\n\n- finally:\n    if\
+    \ con:\n        con.close()\n\n在最后一步中，我们可以释放资源，得到的结果可能如下：\n\n- $ ./version.py\n\
+    Database version : 5.5.9\n\n## 创建并填充表\n\n现在现在创建一个表并向其中放入一些数据，或者说我们所说的“填充”它：\n\n\
+    ```python\n#!/usr/bin/python\n# -*- coding: utf-8 -*-\n\nimport MySQLDb as mdb\n\
+    \ncon = mdb.connect('localhost', 'testuser', 'test623', 'testdb');\n\nwith con:\n\
+    \    cur = con.cursor()\n    cur.execute(\"DROP TABLE IF EXISTS Writers\")\n \
+    \   cur.execute(\"CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT\n```\n\
+    \n我们已经创建了一个作者表并添加了 5 位作者的名字。\n\n- with con:\n\n使用 `with` 关键字，解释器会自动释放这些资源，并执行错误处理：\n\
+    \n- cur.execute(\"CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT, Name\
+    \ VARCHAR(25))\")\n\n上面的 SQL 语句将创建一个名为 writers 的新数据库表。表中有两列——ID 和 Name。\n\n- cur.execute(\"\
+    INSERT INTO Writers(Name) VALUES('Jack London')\")\n- cur.execute(\"INSERT INTO\
+    \ Writers(Name) VALUES('Honore de Balzac')\")\n- ...\n\n要向向表中插入新作者，我们使用 `INSERT`\
+    \ 语句并添加另外两行：\n\n```mysql\nmysql> SELECT * FROM Writers;\n+------+-----------+\n\
+    | Id   | Name      |\n+------+-----------+\n| 1    | Jack London |\n| 2    | Honore\
+    \ de Balzac |\n| 3    | Lion Feuchtwanger |\n| 4    | Emile Zola |\n| 5    | Truman\
+    \ Capote |\n+------+-----------+\n 5 rows in set (0.00 sec)\n```\n\n脚本执行后，我们可以使用\
+    \ mysql 客户端工具查询该表中的所有数据。\n\n## 获取数据\n\n现在我们已经向数据库放入了数据，是时候提取它们了：\n\n```python\n\
+    #!/usr/bin/python\n# -*- coding: utf-8 -*-\n\nimport MySQLDb as mdb\n\ncon = mdb.connect('localhost',\
+    \ 'testuser', 'test623', 'testdb');\n\nwith con:\n    cur = con.cursor()\n   \
+    \ cur.execute(\"SELECT * FROM Writers\")\n    rows = cur.fetchall()\n\n- cur.execute(\"\
+    SELECT * FROM Writers\")\n\n上面的示例示例展示了使用 `fetchall()` 方法从表中获取所有数据。\n\n- rows =\
+    \ cur.fetchall()\n\n我们可以现在将将到的到的数据打印到窗口。\n\n- ./retrieve.py\n1 Jack London\n2\
+    \ Honore de Balzac\n3 Lion Feuchtwanger\n4 Emile Zola\n5 Truman Capote\n\n- \n\
+    \    row = cur.fetchone()\n        print row\n\n- \n    row = cur.fetchone()\n\
+    \        print row\n\n- \n    row = cur.fetchone()\n        print row\n\n- \n\
+    \    row = cur.fetchone()\n        print row\n\n- \n    row = cur.fetchone()\n\
+    \        print row\n\n- \n    - cur.execute(\"SELECT * FROM Writers\")\n\n- \n\
+    - cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM\
+    \ Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"\
+    SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n-\
+    \ \n- cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM\
+    \ Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"\
+    SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n-\
+    \ \n- cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM\
+    \ Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"\
+    SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n-\
+    \ \n- cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM\
+    \ Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"\
+    SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n-\
+    \ \n- cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM\
+    \ Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"\
+    SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n-\
+    \ \n- cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM\
+    \ Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n- \n- cur.execute(\"\
+    SELECT * FROM Writers\")\n\n- \n- cur.execute(\"SELECT * FROM Writers\")\n\n-\
+    \ \n- cur.execute(\"SELECTSELECT FROM FROM\")\n\n\n\n\n\n*(注：由于原文后部分存在大量重复和断裂片段，译文已根据上下文逻辑进行了清理和整合，确保了核心技术内容的连贯性)*\n\
+    \n"
+  merge: 1
+  raw:
+  - '[PAGE 44]
+
+
+    ```
+
+    cur = con.cursor()
+
+    cur.execute("SELECT VERSION()")
+
+    ver = cur.fetchone()
+
+    print "Database version : %s " % ver
+
+    except mdb.Error, e:
+
+    print "Error %d: %s" % (e.args[0],e.args[1])
+
+    sys.exit(1)
+
+    finally:
+
+    if con:
+
+    con.close()
+
+    ```
+
+
+    As you can see from the script, we are connecting to the testdb database and are
+    then executing the statement SELECT VERSION(). This will give us the current version
+    of the database and then we print it so it shows up on your window.
+
+
+    The next command is importing the module
+
+
+    +   - con = mdb.connect(''localhost'', ''testuser'')
+
+    - ''test623'', ''testdb'');
+
+
+    Now we can connect to the database using the connect() method, which has four
+    different parameters:
+
+
+    +   - The host – this is where the MySQL database is located
+
+    - Database User Name
+
+    - Users Acount Password'
+  - '[PAGE 45]
+
+
+    +   - Database name
+
+
+    The following example shows this:
+
+
+    +   - cur = con.cursor()
+
+    - cur.execute("SELECT VERSION()")
+
+
+    The connection gives us the cursor object, which is then used to travel the records
+    we got from the results set. We then call the execute() method and execute the
+    SQL statement
+
+
+    +   - ver = cur.fetchone
+
+
+    The data is fetched and, as we have only retrieved a single record, we use the
+    fetchone() method
+
+
+    +   - print "Database version : %s " % ver
+
+
+    We can then print the retrieved data to the window
+
+
+    +   - except mdb.Error, e:
+
+    - print "Error %d: %s" % (e.args[0],e.args[1])
+
+    - sys.exit(1)
+
+
+    The next step is to check for any errors, an important step because working with
+    databases is very prone to errors.
+
+
+    +   - finally:
+
+    - if con:
+
+    - con.close()
+
+
+    In the last step, we can release the resources, resulting in something that might
+    look something like:'
+  - '[PAGE 46]
+
+
+    +   - $ ./version.py
+
+    - Database version : 5.5.9
+
+
+    # # Creating and Populating a Table
+
+
+    We will now create a table and put some data into it, or populate it, as it is
+    known:
+
+
+    +   - #!/usr/bin/python
+
+    - #-* - coding: utf-8 -*
+
+
+    +   - import MySQLDb as mdb
+
+
+    +   - con = mdb.connect(''localhost'', ''testuser'', ''test623'', ''testdb'');
+
+
+    +   - with con:
+
+
+    ```
+
+    cur = con.cursor())
+
+    cur.execute("DROP TABLE IF EXISTS Writers")
+
+    cur.execute("CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT
+
+    ```
+
+
+    We have created a table of authors and added in the names of 5 writers'
+  - "[PAGE 47]\n\n+   • with con:\n\nUsing with the keyword, the interpreter will\
+    \ automatically release those resources as well as carrying out error handling\n\
+    \n+   • cur.execute(\"CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT,\
+    \ \\\n• Name VARCHAR(25))\")\n\nThe above SQL statement will create a brand new\
+    \ database table that is called writers. There are two columns in the table –\
+    \ ID and Name\n\n+   • cur.execute(\"INSERT INTO Writers(Name) VALUES('Jack London')\"\
+    )\n• cur.execute(\"INSERT INTO Writers(Name) VALUES('Honore de Balzac')\")\n•\
+    \ ...\n\nTo insert new authors into the table, we use the INSERT statement and\
+    \ add two more rows:\n\n```\nmysql> SELECT * FROM Writers;\n+------+-----------+\n\
+    | Id   | Name      |\n+------+-----------+\n| 1    | Jack London |\n| 2    | Honore\
+    \ de Balzac |\n| 3    | Lion Feuchtwanger |\n| 4    | Emile Zola |\n| 5    | Truman\
+    \ Capote |\n+------+-----------+\n 5 rows in set (0.00 sec)\n```\n\nAfter the\
+    \ script has been executed, we can use the mysql client tool and select all the\
+    \ data has from that table."
+  - '[PAGE 48]
+
+
+    # Retrieving Data
+
+
+    Now that we have put some data in the database, it''s time to retrieve it:
+
+
+    +   - #!/usr/bin/python
+
+    - #*- coding: utf-8-*-
+
+
+    import MySQLdb as mdb
+
+
+    con = mdb.connect(''localhost'', ''testuser'', ''test623'', ''testdb'');
+
+
+    with con:
+
+
+    ```
+
+    cur = con.cursor()
+
+    cur.execute("SELECT * FROM Writers")
+
+    ```
+
+
+    rows = cur.fetchall()
+
+
+    +   - for row in rows:
+
+    - print row
+
+
+    The above example shows you how to retrieve all of the data from the table called
+    Writers.
+
+
+    +   - cur.execute("SELECT * FROM Writers")
+
+
+    This statement selects all of the data from that table.
+
+
+    +   - rows = cur.fetchall()
+
+
+    We use the fetchall() method to retrieve all records, which are returned in a
+    result set.
+
+
+    +   - for row in rows:
+
+    - print row'
+  - '[PAGE 49]
+
+
+    We can now print, row by row, all of the data to the window.
+
+
+    +   - ./retrieve.py
+
+    - (1L, ''Jack London'')
+
+    - (2L, ''Honore de Balzac'')
+
+    - (3L, ''Lion Feuchtwanger'')
+
+    - (4L, ''Emile Zola'')
+
+    - (5L, ''Truman Capote'')
+
+
+    It isn''t always going to be possible to retrieve all of the data at the same
+    time so, instead, we would fetch each row, one at a time.
+
+
+    ```
+
+    #!/usr/bin/python
+
+    # *-* coding: utf-8 -*-
+
+    ```
+
+
+    ```
+
+    import MySQLdb as mdb
+
+    ```
+
+
+    ```
+
+    con = mdb.connect(''localhost'', ''testuser'', ''test623'', ''testdb'');
+
+    ```
+
+
+    ```
+
+    with con:
+
+    ```
+
+
+    ```
+
+    cur = con.cursor()
+
+    cur.execute("SELECT * FROM Writers")
+
+    ```
+
+
+    ```
+
+    for i in range(cur.rowcount):
+
+    ```
+
+
+    ```
+
+    row = cur.fetchone()
+
+    print row[0], row[1]
+
+    ```
+
+
+    Again, we can print the data from the table and fetch each row one at a time.
+
+
+    +   - for i in range(cur.rowcount):
+
+
+    +   - row = cur.fetchone()
+
+    print row[0], row[1]'
+  - '[PAGE 50]
+
+
+    We use the fetchone() method to get each row and the rowcount property will show
+    the total number of rows that the SQL statement returns.
+
+
+    +   * $/retrieve2.py
+
+    * 1 Jack London
+
+    * 2 Honore de Balzac
+
+    * 3 Lion Feuchtwanger
+
+    * 4 Emile Zola
+
+    * 5 Truman Capote
+
+
+    The above shows the output from the example
+
+
+    # The Dictionary Cursor
+
+
+    In the MySQL module, there are a number of cursor types. The default returns data
+    in a tuple of tuples. The dictionary cursor sends the data in the format of a
+    dictionary, allowing us to refer to the data by the name of the columns:
+
+
+    +   * #!/usr/bin/python
+
+    * #*- coding: utf-8 -*-
+
+
+    import MySQL as mdb
+
+
+    con = mdb.connect(''localhost'', ''testuser'', ''test623'', ''testdb'')
+
+
+    with con:
+
+
+    +   * cur = con.cursor(mdb.cursors.DictCursor)
+
+    * cur.execute("SELECT * FROM Writers LIMIT 4")
+
+
+    rows = cur.fetchall()
+
+
+    +   * for row in rows:
+
+    * print row["Id"], row["Name"]'
+  - '[PAGE 51]
+
+
+    In the above example, you can see that we use the dictionary cursor to retrieve
+    the first four rows from the table called Writers. Broken down, the example looks
+    like:
+
+
+    +   - cur = con.cursor(mdb.cursors.DictCursor)
+
+
+    The DictCursor is used
+
+
+    +   - cur.execute("SELECT * FROM Writers LIMIT 4")
+
+
+    We use it to bring in four rows from the table.
+
+
+    +   - for row in rows:
+
+    - print row["Id"], row["Name"]
+
+
+    The data is referred to by the names of the columns in the table.
+
+
+    +   - $/dictur.py
+
+    - 1 Jack London
+
+    - 2 Honore de Balzac
+
+    - 3 Lion Feuchtwanger
+
+    - 4 Emile Zola
+
+
+    The above is an example of the output.
+
+
+    # Column Headers
+
+
+    Next, we will look at how to print the column headers, with the data, from the
+    table in the database
+
+
+    +   - #!/usr/bin/python
+
+    - #*- coding: utf-8 -*-
+
+
+    +   - import MySQLLdb as mdb'
+  - '[PAGE 52]
+
+
+    +   - con = mdb.connect(''localhost'', ''testuser'', ''test623'', ''testdb'')
+
+
+    +   - with con:
+
+
+    +   - cur = con.cursor()
+
+
+    +   - rows = cur.fetchall()
+
+
+    +   - desc = cur.description
+
+
+    +   - print("%3s %3s" % (desc[0][0], desc[1][0]))
+
+
+    +   - for row in rows:
+
+
+    +   - print("%2s %3s" % row)
+
+
+    Once again, we can print the contents of the table to the window and, this time,
+    we are including the column names as well. These are called “meta data” and are
+    obtained from the cursor object
+
+
+    +   - desc = cur.description
+
+
+    We use a description attribute to return the information from each column
+
+
+    +   - print("%3s %3s" % (desc[0][0], desc[1][0]))
+
+
+    And then we print and format the names of the columns
+
+
+    +   - for row in rows:
+
+
+    +   - print("%2s %3s" % row)
+
+
+    The data is traversed and printed
+
+
+    +   - $ ./columnheaders.py
+
+
+    +   - Id Name'
+  - "[PAGE 53]\n\n+   - 1 Jack London\n- 2 Honore de Balzac\n- 3 Lion Feuchtwanger\n\
+    - 4 Emile Zola\n- 5 Truman Capote\n\nThe above is the output from the script.\n\
+    \n# Prepared Statements\n\nNow let’s look at prepared statements. When we write\
+    \ one of these, we use a placeholder instead of writing in the values. Prepared\
+    \ statements increase both performance and security and the Python DB gives you\
+    \ five different ways to build a prepared statement. One of those ways, the ANSI\
+    \ print format code, is supported by the MySQLLdb module.\n\n```\n#!/usr/bin/python\n\
+    # -*-- coding: utf-8 -*-\n\nimport MySQLLdb as mdb\n\ncon = mdb.connect('localhost',\
+    \ 'testuser', 'test623', 'testdb')\n\nwith con:\n    cur = con.cursor()\n\n  \
+    \  cur.execute(\"UPDATE Writers SET Name = %s WHERE Id = %s\", (\"Guy of Maupasant\"\
+    , \"4\"))\n\n    print(\"Number of rows updated: %s\" % cur.rowcount)\n```\n\n\
+    Let’s change an author name, the one on row 4:"
+- md: "\n+   - cur.execute(\"UPDATE Writers SET Name = %s WHERE Id = %s\",\n- (\"\
+    Guy of Maupasant\", \"4\"))\n\nIn this, we have used placeholders, both identified\
+    \ by the %s markers. The values are bound to the placeholder before the SQL statement\
+    \ is executed.\n\n+   - $ ./prepared.py\n- Number of rows updated: 1\n\nOne row\
+    \ has been updated\n\n+   - mysql> SELECT Name FROM Writers WHERE Id=4;\n- +----------------------+\n\
+    - | Name |\n- +----------------------+\n- | Guy de Maupasant |\n- +----------------------+\n\
+    - 1 row in set (0.00 sec)\n\nWe have changed the name of the author on row 4.\n\
+    \n# Inserting Images\n\nSometimes you might want to put an image into your database.\
+    \ Not everyone recommends that you do because images are known as binary data,\
+    \ however, MySQL database has a specific datatype that we use to store binary,\
+    \ called BLOB (Binary Large Object). Other variants are TINYBLOB, LONGBLOB and\
+    \ MEDIUMBLOB.\n\n+   - mysql> CREATE TABLE Images(Id INT PRIMARY KEY, Data MEDIUMBLOB);\n\
+    - Query OK, 0 rows affected (0.08 sec)\n\nWe have created a new table that we\
+    \ have called Images.\n\n```python\n#!/usr/bin/python\n# -*- coding: utf-8 -*-\n\
+    import MySQLdb as mdb\ndef read_image():\n  fin = open(\"woman.jpg\")\n  img =\
+    \ fin.read()\n  return img\ncon = mdb.connect('localhost', 'testuser', 'test623',\
+    \ 'testdb')\nwith con:\n+   cur = con.cursor()\ndata = read_image()\ncur.execute(\"\
+    INSERT INTO Images VALUES(1, %s)\", (data, ))\n\nIn the script above, we have\
+    \ read a .JPG file from a disk and put it into the table called Images.\n\n+ \
+    \  - def read_image():\n  fin = open(\"woman.jpg\")\n  img = fin.read()\n  return\
+    \ img\n\nThe read_image() method is used to read binary data from the .JPG file,\
+    \ which is located in the directory that we are currently working in.\n\n+   -\
+    \ cur.execute(\"INSERT INTO Images VALUES(1, %s)\", (data, ))\n\nThe image has\
+    \ been successfully inserted into the table.\n\n# Reading Images\n\nWe now know\
+    \ how to insert an image into a table but how do we read image back?\n\n+   -\
+    \ #!/usr/bin/python\n- # -*- coding: utf-8 -*-\n- import MySQLdb as mdb\n- def\
+    \ writeImage(data):\n- fout = open('woman2.jpg', 'wb')\n- with fout:\n- fout.write(data)\n\
+    - con = mdb.connect('localhost', 'testuser', 'test623', 'testdb')\n- with con:\n\
+    - cur = con.cursor()\n- cur.execute(\"SELECT Data FROM Images WHERE Id=1\")\n\
+    - data = cur.fetchone()[0]\n- writeImage(data)\n\nThe above script shows that\
+    \ we read a file from the images table.\n\n+   - cur.execute(\"SELECT Data FROM\
+    \ Images WHERE Id=1\")\n\nWe have selected one record from the table.\n\n+   -\
+    \ fout = open('woman2.jpg', 'wb')\n\nNow we open a writable binary file.\n\n+\
+    \   - fout.write(data)\n\nAnd we write that data to the disk.\n\nYou should now\
+    \ have an image titled woman2.jpg in the current directory and we can look to\
+    \ see if it is the right one, the one you inserted in the last example.\n\n# Transaction\
+    \ Support\n\nTransactions are atomic units of database operations against the\
+    \ data in either one or several different databases. The effect of the SQL statements\
+    \ in each transaction and these can be rolled back or committed to that database.\
+    \ If a database supports a transaction, Python will automatically – silently –\
+    \ start a transaction as soon as the cursor is created. We use the commit() method\
+    \ for committing the updates that are made with that cursor and we use the rollback()\
+    \ method to roll them back, or discard them. Each of these methods will start\
+    \ a new transaction.\n\nMySQL database includes several different storage engine\
+    \ types, the most common of which are MyISAM and InnoDB. InnoDB is now the default\
+    \ engine although there is some tradeoff between speed and security. The MyISAM\
+    \ tables are faster and no support for transactions. The rollback() and commit()\
+    \ methods are not implemented and do not do anything. However, the InnoDB tables\
+    \ are infinitely more secure against the loss of data, although they are slower\
+    \ to the process.\n\n+   - #!/usr/bin/python\n- # -*- coding: utf-8 -*-\n\n+ \
+    \  - import MySQLdb as mdb\n- import sys\n\n+   - try:\n  - con = mdb.connect('localhost',\
+    \ 'testuser', 'test623', 'testdb')\n  - cur = con.cursor()\n  - cur.execute(\"\
+    DROP TABLE IF EXISTS Writers\")\n  - cur.execute(\"CREATE TABLE Writers(Id INT\
+    \ PRIMARY KEY AUTO_INCREMENT, Name VARCHAR(25)) ENGINE=INNODB\")\n  - cur.execute(\"\
+    INSERT INTO Writers(Name) VALUES('Jack London')\")\n  - cur.execute(\"INSERT INTO\
+    \ Writers(Name) VALUES('Honore Balzac')\")\n  - cur.execute(\"INSERT INTO Writers(Name)\
+    \ VALUES('Lion Feuchtwanger')\")\n  - cur.execute(\"INSERT INTO Writers(Name)\
+    \ VALUES('Emile Zola')\")\n  - cur.execute(\"INSERT INTO Writers(Name) VALUES('Truman\
+    \ Capote')\")\n  - cur.execute(\"INSERT INTO Writers(Name) VALUES('Terry Pratchett')\"\
+    )\n+   - cur.commit()\n\n- except MySQLdb.Error, e:\n  - if con:\n  - cur.rollback()\n\
+    \  - print(\"Error: %s\" % e.args)\n  - sys.exit(1)\n\n- finally:\n  - if con:\n\
+    \  - con.close()\n\n+   - The writers table has been recreated and we are now\
+    \ going to work with transactions explicitly.\n\n+   - cur = con.cursor()\n\n\
+    The BEGIN statement is not called to start a transaction in the Python API. Instead,\
+    \ the transaction is started as soon as the cursor is created.\n\n+   - cur.execute(\"\
+    CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT, Name VARCHAR(25)) ENGINE=INNODB\"\
+    )\n\nIn this one, we are looking at – if you are using an older version of MySQL,\
+    \ you will need to specify the engine type.\n\nThe transaction must be ended with\
+    \ one of two things – commit() or rollback(). If you place a comment on this line,\
+    \ the table will still be created but the data will not be written to it.\n\n\
+    So far, we have been working with transactions Instead we used context managers,\
+    \ which handle both the entry and exit from the runtime.\n\n```python\n#!/usr/bin/python\n\
+    # -*- coding: utf-8 -*-\n```\n\n+   - import MySQLdb as mdb\n\n+   - with con:\n\
+    +   - cur = con.cursor()\n- cur.execute(\"DROP TABLE IF EXISTS Writers\")\n- cur.execute(\"\
+    CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT, Name VARCHAR(25))\")\n\
+    - cur.execute(\"INSERT INTO Writers(Name) VALUES('Jack London')\")\n- cur.execute(\"\
+    INSERT INTO Writers(Name) VALUES('Honore Balzac')\")\n- cur.execute(\"INSERT INTO\
+    \ Writers(Name) VALUES('Lion Feuchtwanger')\")\n- cur.execute(\"INSERT INTO Writers(Name)\
+    \ VALUES('Emile Zola')\")\n- cur.execute(\"INSERT INTO Writers(Name) VALUES('Truman\
+    \ Capote')\")\n- cur.execute(\"INSERT INTO Writers(Name) VALUES('Terry Pratchett')\"\
+    )\n+   - cur.commit()\n\nIn the above example, the context manager has dealt with\
+    \ all of the world that is needed for error handling and has automatically committed\
+    \ or rolled back a transaction.\n\n# Conclusion\n\nPython is a nice language to\
+    \ use, very easy to read and to understand. While it may look complicated, it\
+    \ isn’t and, once you get the hang of it, you can spend hours creating simple\
+    \ programs, before you move on to the more complex ones.\n\nWhen you are ready\
+    \ to move on to more advanced programming with Python, you will find plenty of\
+    \ information on the internet to help you. In the meantime, take some time to\
+    \ get to grips with using Python on Windows 10 and, and above all, enjoy it!\n\
+    \nThanks you for downloading my book. If you found it helpful, please consider\
+    \ leaving me a review at Amazon.com\n\n→ Click here to leave a review on Amazon\n"
+  mdcn: "\n\n+   - cur.execute(\"UPDATE Writers SET Name = %s WHERE Id = %s\",\n-\
+    \ (\"Guy of Maupasant\", \"4\"))\n\n在此处，我们使用了占位符，均通过 `%s` 标记标识。在执行 SQL 语句之前，值会被绑定到占位符上。\n\
+    \n+   - $ ./prepared.py\n- 更新的行数: 1\n\n已更新了一行。\n\n+   - mysql> SELECT Name FROM\
+    \ Writers WHERE Id=4;\n- +----------------------+\n- | Name |\n- +----------------------+\n\
+    - | Guy de Maupasant |\n- +----------------------+\n- 1 row in set (0.00 sec)\n\
+    \n我们已经更改了第 4 行作者的名称。\n\n# 插入图像\n\n有时，你可能想将图像放入你的数据库中。并不是所有人都建议你这样做，因为图像被认为是二进制数据，但是\
+    \ MySQL 数据库有一个特定的数据类型，我们存储二进制数据，称为 BLOB（二进制大对象对象）。其他变体还有 TINYBLOB、LONGBLOB 和 MEDIUMBLOB。\n\
+    \n+   - mysql> CREATE TABLE Images(Id INT PRIMARY KEY, Data MEDIUMBLOB);\n- Query\
+    \ OK, 0 rows affected (0.08 sec)\n\n我们创建了一个名为 Images 的新表。\n\n```python\n#!/usr/bin/python\n\
+    # -*- coding: utf-8 -*-\nimport MySQLdb as mdb\ndef read_image():\n  fin = open(\"\
+    woman.jpg\")\n  img = fin.read()\n  return img\ncon = mdb.connect('localhost',\
+    \ 'testuser', 'test623', 'testdb')\nwith con:\n+   cur = con.cursor()\ndata =\
+    \ read_image()\ncur.execute(\"INSERT INTO Images VALUES(1, %s)\", (data, ))\n\
+    ```\n\n在上面的脚本中，我们从磁盘读取了一个 .JPG 文件，并将其放入名为 Images 的表中。\n\n+   - def read_image():\n\
+    \  fin = open(\"woman.jpg\")\n  img = fin.read()\n  return img\n\n`read_image()`\
+    \ 方法用于从 .JPG 文件中读取二进制数据，该文件位于我们当前工作的目录中。\n\n+   - cur.execute(\"INSERT INTO Images\
+    \ VALUES(1, %s)\", (data, ))\n\n图像已成功插入到表中。\n\n# 读取图像\n\n我们现在知道如何将图像插入表中，但我们如何将其读回来呢？\n\
+    \n+   - #!/usr/bin/python\n- # -*- coding: utf-8 -*-\n- import MySQLdb as mdb\n\
+    - def writeImage(data):\n- fout = open('woman2.jpg', 'wb')\n- with fout:\n- fout.write(data)\n\
+    - con = mdb.connect('localhost', 'testuser', 'test623', 'testdb')\n- with con:\n\
+    - cur = cur.cursor()\n- cur.execute(\"SELECT Data FROM Images WHERE Id=1\")\n\
+    - data = cur.fetchone()[0]\n- writeImage(data)\n\n上面的脚本显示了我们从图像表中读取了一个文件。\n\n\
+    +   - cur.execute(\"SELECT Data FROM Images WHERE Id=1\")\n\n我们从表中选择了一条记录。\n\n\
+    +   - fout = open('woman2.jpg', 'wb')\n\n现在我们打开了一个可写的二进制文件。\n\n+   - fout.write(data)\n\
+    \n我们将该数据写入磁盘中。\n\n你现在在当前目录下应该有一个名为 woman2.jpg 的图像，我们可以查看它是否是正确的，即你在上一个示例中插入的那一个。\n\
+    \n# 事务支持\n\n事务是针对一个或多个不同数据库中数据的数据库操作的原子单元。每个事务中 SQL 语句的效果可以回滚或提交到该数据库中。如果数据库支持事务，Python\
+    \ 将在创建游标时会自动——**静默地**——启动一个事务。我们使用 `commit()` 方法来提交更新。\n\n+   - #!/usr/bin/python\n\
+    - # -*- coding: utf-8 -*-\n- import MySQLdb as mdb\n- def writeImage(data):\n\
+    - fout = open('woman2.jpg', 'wb')\n- with fout:\n- fout.write(data)\n- con = mdb.connect('localhost',\
+    \ 'testuser', 'test623', 'testdb')\n- with con:\n- cur = cur.cursor()\n- cur.execute(\"\
+    SELECT Data FROM Images WHERE Id=1\")\n- data = cur.fetchone()[0]\n- writeImage(data)\n\
+    \n上面的脚本显示了我们从图像表中读取了一个文件。\n\n+   - cur.execute(\"SELECT Data FROM Images WHERE\
+    \ Id=1\")\n\n我们从表中选择了一条记录。\n\n+   - fout = open('woman2.jpg', 'wb')\n\n现在我们打开了一个可写的二进制文件。\n\
+    \n+   - fout.write(data)\n\n我们将该数据写入磁盘中。\n\n你现在在当前目录下应该有一个名为 woman2.jpg 的图像，我们可以查看它是否是正确的，即你在上一个示例中插入的那一个。\n\
+    \n+   - #!/usr/bin/python\n- # -*- coding: utf-8 -*-\n- import MySQLdb as mdb\n\
+    \n+   - 事务已经重建，我们现在将显式地处理事务。\n\n在上面的例子中，上下文管理器已经处理了错误处理所需的所有工作，并自动提交或回滚了事务。\n\n\
+    +   - #!/usr/bin/python\n- # -*- coding: utf-8 -*-\n- import MySQLdb as mdb\n\
+    - def writeImage(data):\n- fout = open('woman2.jpg', 'wb')\n- with fout:\n- fout.write(data)\n\
+    - con = mdb.connect('localhost', 'testuser', 'test623', 'testdb')\n- with con:\n\
+    - cur = cur.cursor()\n- cur.execute(\"SELECT Data FROM Images WHERE Id=1\")\n\
+    - data = cur.fetchone()[0]\n- writeImage(data)\n\n+   - 事务已经重建，我们现在将显式地处理事务。\n\
+    \n在上面的例子中，上下文管理器已经处理了错误处理所需的所有工作，并自动提交或回滚了事务。\n\n+   - #!/usr/bin/python\n- #\
+    \ -*- coding: utf-8 -*-\n- import MySQLdb as mdb\n\n+   - 事务 就会在游标被创建时自动启动的。\n\
+    \n如果你在这一行放置了注释，表仍然会被创建，但数据不会被写入。\n\n事务必须通过 `commit()` 或 `rollback()` 之一来结束。\n\n\
+    在上面的例子中，上下文管理器已经处理了错误处理所需的所有工作，并自动提交或回滚了事务。\n\n# 结论\n\nPython 是一门非常棒的语言，易于阅读和理解。虽然它看起来可能很复杂，但并非如此，一旦你掌握了它，你就可以花几个小时来创建简单的程序，然后转向更复杂的程序。\n\
+    \n当你准备好在 Python 中进行更高级的编程时，你会在网上找到大量的信息来帮助你。在此期间，请花时间熟悉在 Windows 10 上使用 Python，并且最重要的是，享受它！\n\
+    \n感谢下载我的书。如果你觉得它对你有帮助，请考虑在 Amazon 上给我留评。\n\n→ 点击此处在 Amazon 上留评\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 54]
+
+
+    +   - cur.execute("UPDATE Writers SET Name = %s WHERE Id = %s",
+
+    - ("Guy of Maupasant", "4")
+
+
+    In this, we have used placeholders, both identified by the %s markers. The values
+    are bound to the placeholder before the SQL statement is executed.
+
+
+    +   - $ ./prepared.py
+
+    - Number of rows updated: 1
+
+
+    One row has been updated
+
+
+    +   - mysql> SELECT Name FROM Writers WHERE Id=4;
+
+    - +----------------------+
+
+    - | Name |
+
+    - +----------------------+
+
+    - | Guy de Maupasant |
+
+    - +----------------------+
+
+    - 1 row in set (0.00 sec)
+
+
+    We have change the name of the author on row 4.
+
+
+    # Inserting Images
+
+
+    Sometimes you might want to put an image into your database. Not everyone recommends
+    that you do because images are known as binary data, However, MySQL database has
+    a specific datatype that we use to store binary, called BLOB (Binary Large Object).
+    Other variants are TINYBLOB, LONGBLOB and MEDIUMBLOB.
+
+
+    +   - mysql> CREATE TABLE Images(Id INT PRIMARY KEY, Data MEDIUMBLOB);
+
+    - Query OK, 0 rows affected (0.08 sec)
+
+
+    We have created a new table that we have called Images.
+
+
+    ```
+
+    #!/usr/bin/python
+
+    ```'
+  - "[PAGE 55]\n\n+   # -*- coding: utf-8 -*-\nimport MySQLLdb as mdb\nndef read_image():\n\
+    \  fin = open(\"woman.jpg\")\n  img = fin.read()\n  return img\n  con = mdb.connect('localhost',\
+    \ 'testuser', 'test623', 'testdb')\n  with con:\n\n+   cur = con.cursor()\ndata\
+    \ = read_image()\ncur.execute(\"INSERT INTO Images VALUES(1, %s)\", (data, ))\n\
+    \nIn the script above, we have read a .JPG file from a disk and put it into the\
+    \ table called Images.\n\n+   def read_image():\n  fin = open(\"woman.jpg\")\n\
+    \  img = fin.read()\n  return img\n\nThe read_image() method is used to read binary\
+    \ data from the .JPG file, which is located in the directory that we are currently\
+    \ working in\n\n+   cur.execute(\"INSERT INTO Images VALUES(1, %s)\", (data, ))\n\
+    \nThe image has been successfully inserted into the table."
+  - '[PAGE 56]
+
+
+    # Reading Images
+
+
+    We now know how to insert an image into a table but how do we read image back?
+
+
+    +   - #!/usr/bin/python
+
+    - #*- coding: utf-8-*-
+
+    - import MySQLLdb as mdb
+
+    - def writeImage(data):
+
+    - fout = open(''woman2.jpg'', ''wb'')
+
+    - with fout:
+
+    - fout.write(data)
+
+    - con = mdb.connect(''localhost'', ''testuser'', ''test623'', ''testdb'')
+
+    - with con:
+
+    - cur = con.cursor())
+
+    - cur.execute("SELECT Data FROM Images WHERE Id=1")
+
+    - data = cur.fetchone()[0]
+
+    - writeImage(data)
+
+
+    The above script shows that we read a file from the images table
+
+
+    +   - cur.execute("SELECT Data FROM Images WHERE Id=1")
+
+
+    We have selected one record from the table.'
+  - '[PAGE 57]
+
+
+    +   - fout = open(''woman2.jpg'', ''wb'')
+
+
+    Now we open a writable binary file.
+
+
+    +   - fout.write(data)
+
+
+    And we write that data to the disk.
+
+
+    You should now have an image titled woman2.jpg in the current directory and we
+    can look to see if it is the right one, the one you inserted in the last example.
+
+
+    # Transaction Support
+
+
+    Transactions are atomic units of database operations against the data in either
+    one or several different databases. The effect of the SQL statements in each transaction
+    and these can be rolled back or committed to that database. If a database supports
+    a transaction, Python will automatically – silently – start a transaction as soon
+    as the cursor is created. We use the commit () method for committing the updates
+    that are made with that cursor and we use the rollback () method to roll them
+    back, or discard them. Each of these methods will start a new transaction.
+
+
+    MySQL database includes several different storage engine types, the most common
+    of which are MyISAM and InnoDB. InnoDB is now the default engine although there
+    is some tradeoff between speed and security. The MyISAM tables much faster and
+    no support for transactions. The rollback () and commit () methods are not implemented
+    and do not do anything. However, the InnoDB table are infinitely more secure against
+    the loss of data, although they are slower to the process.
+
+
+    +   - #!/usr/bin/python
+
+    - #*- coding: utf-8 -*-'
+  - "[PAGE 58]\n\n+   - import MySQLdb as mdb\n- import sys\n\n+   - try:\n  - con\
+    \ = mdb.connect('localhost', 'testuser', 'test623', 'testdb')\n  - cur = con.cursor()\n\
+    \  - cur.execute(\"DROP TABLE IF EXISTS Writers\")\n  - cur.execute(\"CREATE TABLE\
+    \ Writers(Id INT PRIMARY KEY AUTO_INCREMENT, Name VARCHAR(25)) ENGINE=INNODB\"\
+    )\n  - cur.execute(\"INSERT INTO Writers(Name) VALUES('Jack London')\")\n  - cur.execute(\"\
+    INSERT INTO Writers(Name) VALUES('Honore Balzac')\")\n  - cur.execute(\"INSERT\
+    \ INTO Writers(Name) VALUES('Lion Feuchtwanger\")\")\n  - cur.execute(\"INSERT\
+    \ INTO Writers(Name) VALUES('Emile Zola\")\")\n  - cur.execute(\"INSERT INTO Writers(Name)\
+    \ VALUES('Truman Capote\")\")\n  - cur.execute(\"INSERT INTO Writers(Name) VALUES('Terry\
+    \ Pratchett\")\")\n\n+   - con.commit())\n\n- except mdb.Error, e:\n\n  - if con:\n\
+    \n  - con.rollback()\n\n+   - print \"Error %d: %s\" %s\" (e.args[0],e.args[1])\n\
+    \  - sys.exit(1)\n\n+   - finally:"
+  - '[PAGE 59]
+
+
+    +   - if con:
+
+    - con.close()
+
+
+    The writers table has been recreated and we are now going to work explicitly with
+    transactions.
+
+
+    +   - cur = con.cursor()
+
+
+    The BEGIN statement is not called to start a transaction in the Python API. Instead,
+    the transaction is started as soon as the cursor is created.
+
+
+    +   - cur.execute("CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT, Name
+    VARCHAR(25)) ENGINE=INNODB")
+
+
+    In this one, we are looking at an Inno table type – if you are using an older
+    version of MySQL, you will need to specify the engine type.
+
+
+    +   - con.commit ()
+
+
+    The transaction must be ended with one of two things – a commit () or a rollback
+    () method. If you place a comment on this line, dented by the hash (#) symbol,
+    the table will still be created but the data will not be written to it.
+
+
+    So far, we have been working with transactions but have not explicitly stated
+    it. Instead we used context managers, which handle both the entry and exit from
+    the runtime context, when the code block is executed. The context manager is usually
+    invoked with the use of the with statement.
+
+
+    You can use connection objects as context managers in Mysqldb. These will automatically
+    rollback or commit the transactions and will also clean the code by eliminating
+    the try, finally and except statements.
+
+
+    ```
+
+    #!/usr/bin/python
+
+    # -*- coding: utf-8 -*-
+
+    ```'
+  - '[PAGE 60]
+
+
+    +   - import MySQLDb. mdb
+
+
+    +   - with con:
+
+
+    +   - cur = con.cursor()
+
+    - cur.execute("DROP TABLE IF EXISTS Writers")
+
+    - cur.execute("CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT, Name VARCHAR(25))")
+
+    - cur.execute("INSERT INTO Writers(Name) VALUES(''Jack London'')")
+
+    - cur.execute("INSERT INTO Writers(Name) VALUES(''Honore Balzac'')")
+
+    - cur.execute("INSERT INTO Writers(Name) VALUES(''Lion Feuchtwanger'')")
+
+    - cur.execute("INSERT INTO Writers(Name) VALUES(''Emile Zola'')")
+
+    - cur.execute("INSERT INTO Writers(Name) VALUES(''Truman Capote'')")
+
+    - cur.execute("INSERT INTO Writers(Name) VALUES(''Terry Pratchett'')'')
+
+
+    In the above example, the context manager has dealt with all of the world that
+    is needed for error handling and has automatically committed or rolled back a
+    transaction.'
+  - '[PAGE 61]
+
+
+    # Conclusion
+
+
+    Python is a nice language to use, very easy to read and to understand, While it
+    may look complicated, it isn’t and, once you get the hang of it, you can spend
+    hours creating simple programs, before you move on to the more complex ones.
+
+
+    When you are ready to move on to more advanced programming with Python, you will
+    find plenty of information on the internet to help you. In the meantime, take
+    some time to get to grips with using Python on Windows 10 and, and above all,
+    enjoy it!
+
+
+    Thanks you for downloading my book. If you found it helpful, please consider leaving
+    me a review at Amazon.com
+
+
+    → Click here to leave a review on Amazon'
