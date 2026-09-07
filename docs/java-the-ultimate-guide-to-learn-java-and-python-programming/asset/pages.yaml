@@ -1,0 +1,2873 @@
+- img_proc: true
+  md: '![](img/1e6b92f696f2143809e63d4be77e665e_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Java
+
+
+    The Ultimate Guide to Learn Java and Python Programming (java for beginners, java
+    for dummies, java apps, how to program, python, computer programming)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # JAVA
+
+
+    THE ULTIMATE GUIDE TO LEARN JAVA PROGRAMMING FAST
+
+
+    ![](img/1e6b92f696f2143809e63d4be77e665e_2_0.png)
+
+
+    Peter Hoffman'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Java
+
+
+    The Ultimate Guide to Learn Java Programming Fast (Java for Beginners, Java for
+    dummies, how to program, java apps, java programming)
+
+
+    PETER HOFFMAN'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "# CONTENTS\n\n+   Introduction\n- Chapter 1 – Writing a Java Program\n  - Software\
+    \ Types\n  - Classes, Instances, and Objects\n  - Project Creation\n  - Main Class\
+    \ Creation\n  - Writing the Package Statement\n  - Writing the Class Declaration\n\
+    \  - Writing the Main Method\n  - Writing the Program Output\n  - Allowing User\
+    \ Input\n- Chapter 2 – Variables\n  - Overview of Data Types\n  - Creation of\
+    \ Variables\n  - Data Type and User Input\n  - Storing User Input into Another\
+    \ Variable\n- Chapter 3 – Operators\n  - Summary in a Single Program\n- Conclusion"
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'I think next books will also be interesting for you:
+
+
+    C++
+
+
+    ![](img/1e6b92f696f2143809e63d4be77e665e_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Javascript
+
+
+    ![](img/1e6b92f696f2143809e63d4be77e665e_6_0.png)'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '![](img/1e6b92f696f2143809e63d4be77e665e_7_0.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '![](img/1e6b92f696f2143809e63d4be77e665e_8_0.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# SQL
+
+
+    ![](img/1e6b92f696f2143809e63d4be77e665e_9_0.png)
+
+
+    Beginner’s Guide For Coding SQL
+
+
+    Stephen Hoffman'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'Amazon Prime and Kindle Lending Library
+
+
+    ![](img/1e6b92f696f2143809e63d4be77e665e_10_0.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '![](img/1e6b92f696f2143809e63d4be77e665e_11_0.png)'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Introduction
+
+
+    The company behind the Java programming language is the Sun Microsystems. The
+    language was initially introduced in the year 1991. It was developed by a team
+    of people consisting Mike Sheridan, Ed Frank, Chris Warth, Patrick Naughton, and
+    James Gosling. Due to its object-oriented nature, the Java language can be reused
+    with regards to data focus, classes creation, written instructions, and the creation
+    of both instances and objects.
+
+
+    # The Four Java Platforms
+
+
+    There are four primary platforms in the Java programming language. They are as:
+
+
+    +   - Java Standard Edition (Java SE)
+
+    - Java Enterprise Edition (Java EE)
+
+    - Java Micro Edition (Java ME)
+
+    - JavaFX
+
+
+    Java-based applications that were being used for computer software were developed
+    on the standard edition of Java. Java-based applications for web servers were
+    developed on the enterprise edition while Java-based applications for multimedia
+    platforms were developed on JavaFX. Most JavaFX-based applications are what we
+    usually call flash players. Lastly, Java-based applications for mobile devices
+    were developed on the micro edition Java'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'platform. The following IDEs that you can use:
+
+
+    # Tools for Beginners
+
+
+    In order to begin your journey to the world of Java programming, you need to choose
+    which IDE to use. IDE, also known as Integrated Development Environment, serves
+    as your workspace in writing Java applications. Imagine it as your notepad in
+    writing HTML codes. However, IDEs were specifically designed for the Java language
+    which means it features all the tools you might need in Java development.
+
+
+    Here are the IDEs you can use:
+
+
+    +   - BlueJ – this is an ideal IDE for beginners. You can easily navigate to its
+    simplistic interface. It was also originally designed to help beginners in familiarizing
+    the primary concepts of the Java language.
+
+    - DrJava – this is a lightweight IDE. Similar to BlueJ, DrJava was also designed
+    for beginners. Although it features a simplistic user interface, DrJava has enough
+    tools that every advanced Java developer can use as well.
+
+    - Eclipse – one of the popular IDEs today, the Eclipse is an open source platform
+    with responsive navigation and design. Apparently, it has the clean user interface
+    compared to other IDEs in this list.
+
+    - NetBeans – this is another popular IDE which is commonly used in Java development
+    nowadays. This is highly recommended for beginners due to its fast and powerful
+    tools that are compatible in all platforms of the Java language.
+
+
+    Each IDE has a unique user interface and ease of navigation. Feel free to use
+    any IDE where you feel most comfortable with. Keep in mind that all of them use
+    the same language although they may appear to be different from one another.
+
+
+    Aside from Java IDEs, another tool you need to begin learning the Java programming
+    language is the JDK. JDK, which stands for the Java Development'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'Kit, serves as your computer''s interpreter and compiler for the Java language.
+    Without this, your computer will not be able to translate Java codes into the
+    universal machine language. All versions of JDK are available from the official
+    website of Oracle.
+
+
+    Take note that you need to choose the JDK version that is most appropriate to
+    your computer''s operating system to avoid future issues when compiling written
+    Java programs.
+
+
+    # Misinterpretations
+
+
+    Before we proceed, I would like to clarify that the Java language is not related
+    to the JavaScript language. These are two different programming languages whereas
+    Java is used for the development of stand-alone applications. On the other hand,
+    the JavaScript language is an integrated language for web development. It is used
+    to assert functions that are not achievable through HTML language alone.
+
+
+    This book is about the Java programming language and not about the JavaScript
+    language.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Chapter 1 – Writing a Java Program
+
+
+    Once you are done from choosing your preferred IDE and from downloading the latest
+    version of JDK, you now have the tools to begin programming using the Java language.
+    However, having the tools does not mean that you are already prepared to jump
+    into writing your very first Java application.
+
+
+    It is also important to understand the structure of a Java program – its primary
+    components and its components in the Java application.
+
+
+    # Software Types
+
+
+    You can create two types of software using the Java programming language – applets
+    and applications.
+
+
+    Applets are smaller pieces of programming codes that were designed to run on web
+    browsers. We can consider the applets as smaller and lighter applications. They
+    are mainly used to provide either navigation enhancements or additional interactivity
+    to the browser. In contrast with standalone Java applications, applets do not
+    need any interpreter to execute.
+
+
+    Another type of software that you can develop through Java is a console application.
+    Console applications are stand-alone programs that run within a console environment.
+    All IDEs feature an integrated console environment in'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "order for you to test these kinds of programs. As a beginner, it is important\
+    \ for you to learn console operations to have a good grasp on the basics of Java\
+    \ language.\n\n```\nwhile(wake == true) {\n    System.out.println(\");\n    if(request.getParameter(\"\
+    age\") < 18) {\n        String name = \"Stringer\";\n        System.out.println(\"\
+    I am \" + name + \" J-\");\n        destination.append(\"You cannot see the bakes!\"\
+    );\n        System.out.println(\"The bakery is closed.\");\n    } else {\n   \
+    \     System.out.println(\"The bakery is open!\");\n        System.out.println(\"\
+    Bring a smile...\");\n    }\n    double aux = 1.0;\n    for(int aux=1; aux<1000;\
+    \ aux++) {\n        System.out.println(\"Ple...\");\n        System.out.println(\"\
+    Bring a winner...\");\n    }\n    while(!weekend) {\n        jumpNextDay();\n\
+    \    }\n} import java.util.*;\nfor(long j=1; j<100000000L; j++) {\n    System.out.println(\"\
+    Repeat... I'm not crazy\");\n}\nLETE FROM DORS ? -\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Classes, Instances, and Objects
+
+
+    The classes, instances, and objects are the three vital elements of a program
+    created using an object-oriented language such as the Java. In order to understand
+    these three, you need to first look at their relationship from one another.
+
+
+    Classes are the highest and they cover everything in Java programming language.
+    Specific elements in a class are called Objects. Once you add the additional specification
+    to an Object, then it becomes an Instance.
+
+
+    In an analogy, for instance, let us say our class here is the animal. Under animal
+    class, we have different kinds of animals like dogs, cats, birds, and so on. These
+    are the objects under animal class. Under the category of dogs, we have different
+    breeds like poodles, golden retrievers, Labradors, and so on. These are the instances
+    of the object dogs.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Project Creation
+
+
+    The first step in writing your Java program is to start a new empty project in
+    your chosen IDE. You can do this by navigating through the top most toolbar as
+    follows:
+
+
+    File -> New Project
+
+
+    After selecting New Project, a new window will appear where you will be able to
+    choose from a list of categories. Under the Categories list, select Java and then
+    select Java Application from the adjacent window panel. Afterward, click on the
+    Next button and you will be asked for the project name and the location where
+    you want to save your project.
+
+
+    Always remember the project name since you will be asked to go back to the same
+    project along the way.
+
+
+    # Main Class Creation
+
+
+    After the creation of a new project, the IDE will automatically create both the
+    package and the main class. Packages, also known as source packages, serves as
+    folders where you can efficiently organize all assets of the Java project such
+    as classes and instances. Take note, however, that packages are simply identifiers
+    for the organization of assets. Consider them as folders in your computer where
+    you organize your files accordingly.
+
+
+    There should be a main class under the package. If the IDE did not automatically
+    create the main class, then you can create it by navigating on the main menu as
+    follows:
+
+
+    File -> New File -> Java Class
+
+
+    The main class has its vital role in a Java program. The main method, which is
+    what initially executed when opening a Java program, is contained in the main
+    class. In other programming languages, the main method is known as the entry point.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Writing the Package Statement
+
+
+    Now that we already have the main class in our Java project, we are now ready
+    to write our first Java programming language line – the package statement. This
+    statement is an optional part of the program and is only introduced to you for
+    learning purposes. This is written using the following syntax:
+
+
+    ```
+
+    package [package name];
+
+    ```
+
+
+    The IDE will automatically look for the default package if this line is not written.
+    In other words, the package statement might come in handy if you are working on
+    a Java project with multiple packages. Keep in mind that package name must match
+    with the name of the package where the class you belongs to. Let us say, for instance,
+    that the name of your package is “javatestproject”. The syntax should look like
+    this in your IDE:'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '```
+
+    1
+
+    2 project javatestproject;
+
+    ```'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Writing the Class Declaration
+
+
+    Next to the package statement is the class declaration. The syntax we need to
+    follow here is this:
+
+
+    ```
+
+    [access modifier] class [class name]
+
+    ```
+
+
+    There are two kinds of access modifiers that you can use: public and private.
+    The private modifier prevents the other classes from accessing the declared class
+    while the public modifier allows other classes to access the declared class. For
+    the meantime, let us focus and use the public as our access modifier for our first
+    Java application.
+
+
+    Class name, as what the name suggests, is the you designated to the main class.
+    Take note that the Java programming language is case sensitive so make sure that
+    you name of the main class with correct upper case and lower case characters.
+    Let us say that the name of our main class is “TestProject”, then this is what
+    should we have right now:'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '```
+
+    1
+
+    2 package javatestproject;
+
+    ```'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# 3
+
+
+    ```
+
+    4 public class JavaTestProject {
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '```
+
+    5
+
+    6 }
+
+    ```'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# 7
+
+
+    The open ( { ) and close ( } ) curly braces refer to the opening and closing of
+    a Java code block. This helps the program in determining where a certain block
+    of code begins and where it ends.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Writing the Main Method
+
+
+    Now that we are done declaring the class, it is now time to declare the main method
+    for our first program. In our main method, we will be using two keywords: void
+    and static.
+
+
+    The void keyword signals the Java Virtual Machine, also known as JVM, that the
+    program successfully ran and finished. The keyword static signals the program
+    that the field refers to the class and neither the objects nor the instances in
+    it. In other words, the program will be able to freely go through the class without
+    creating instances in that class. Due to the nature of the main method to act
+    as the program’s entry point, it is essential to declare it as static. Hence,
+    our syntax for the main method declaration should follow this format:
+
+
+    ```
+
+    [access modifier] static void
+
+    ```
+
+
+    However, this is not a complete declaration for the main method yet. We should
+    also add the parameter “main(String[] args)\” to allow the program in executing
+    command-line arguments. And so, our final code for the main method should look
+    like this:
+
+
+    ```
+
+    public static void main(String[] args)
+
+    ```
+
+
+    If added to our line of codes above, our IDE should look like this:'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '```
+
+    1
+
+    2 package javatestproject;
+
+    ```'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# 3
+
+
+    ```
+
+    public class JavaTestProject {
+
+    ```'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '```
+
+    5
+
+    6 public static void main(String[] args) {
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '```
+
+    7
+
+    8 }
+
+    ```'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# 9
+
+
+    10 }'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '11'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Writing the Program Output
+
+
+    As of now, you already covered the basic parts of our Java program. Unfortunately,
+    we are not yet telling the program what exactly it needs to do.
+
+
+    What we want for the program to execute is to deliver a message. This is what
+    we call as the Program Output or Output Stream. In order for the program to deliver
+    a message, we should use the following syntax:
+
+
+    ```
+
+    System.out.print("[message]\");"
+
+    ```
+
+
+    Instead of the parameter "print", you may replace it with "println". This will
+    print the output to a new line once executed. Hence, the alternative format should
+    look like this:
+
+
+    ```
+
+    System.out.println("[message]\");"
+
+    ```
+
+
+    Let us now tell the program to print the statement "Java is Awesome!" using the
+    command line above. Our syntax should be like this:
+
+
+    ```
+
+    System.out.print("Java is Awesome!");");"
+
+    ```
+
+
+    And so, our IDE should look like this once we insert the output code:'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '```
+
+    1
+
+    2 package javatestproject;
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# 3
+
+
+    ```
+
+    4 public class JavaTestProject {
+
+    ```'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '```
+
+    5
+
+    6 public static void main(String[] args) {
+
+    ```'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '```
+
+    System.out.print("Java is Awesome!");
+
+    ```'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '```
+
+    9
+
+    10 }
+
+    ```'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '```
+
+    11
+
+    12 }
+
+    ```'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '13'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Allowing User Input
+
+
+    The Java programming language allows you to let users communicate with the program
+    by sending inputs. We can do this by using the built-in class known as the Scanner.
+
+
+    The Scanner class collects the user’s input from the computer’s keyboard. It stores
+    the collected data into variables that can also be executed in the program’s output
+    stream. In order to do this, we need to add the following lines right after the
+    package statement:
+
+
+    ```
+
+    import java.util.Scanner;
+
+    ```
+
+
+    This is an example of an import statement which signals the program to import
+    the Scanner class from the built-in Java package known as java.util. This is where
+    we add them in our IDE:'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '```
+
+    package javatestproject;
+
+    import java.util.Scanner;
+
+    ```'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# 4
+
+
+    This, however, does not do anything yet. We need to assign a variable name to
+    the scanner class first in order to call the scanner’s collected data into our
+    output stream. We can assign a variable name to the scanner class by using the
+    following statement:
+
+
+    ```
+
+    Scanner [variable name] = new Scanner(System.in);
+
+    ```
+
+
+    You can assign any name to the variable. It is a common practice to start the
+    name with an uppercase character followed by lowercase characters. It is also
+    a good practice to separate words by using uppercase characters. Let us say we
+    want to name our scanner variable as “userinput”. Instead of writing the entire
+    variable name in lowercases, replace the first letters of the words “user” and
+    “input” to uppercases. Hence, the statement will look like this:
+
+
+    ```
+
+    Scanner UserInput = new Scanner(System.in);
+
+    ```
+
+
+    We should insert the statement within the blocks of code after the declaration
+    of the main method. Hence, IDE should be as follows:'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '```
+
+    package javatestproject;
+
+    import java.util.Scanner;
+
+    ```'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '```
+
+    4
+
+    5 class JavaTestProject {
+
+    ```'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '```
+
+    6
+
+    7 public static void main(String[] args) {
+
+    ```'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '```
+
+    Scanner UserInput = new Scanner(System.in);
+
+    ```'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '```
+
+    10
+
+    11 }
+
+    ```'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '```
+
+    12
+
+    13 }
+
+    ```'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# 14
+
+
+    With this set of Java codes, we are commanding the program to assign the user
+    input to the variable named as “UserInput”. Let us now tell the program to call
+    the input. As an example, let us try to ask the user’s name through our program
+    and let the program itself return the user’s name by delivering another output.
+    Our program should be following this schema:
+
+
+    First Output -> Input -> Second Output
+
+
+    In order to create the first output, we will be using what we have learned from
+    writing an output. Let us ask the user’s name by asserting the following statement
+    above the scanner assigns variable name statement:
+
+
+    ```
+
+    System.out.print("What should we call you?");
+
+    ```
+
+
+    Next, let us return the user’s answer by calling the collected data into the second
+    output. We can do that by writing the second output below the scanner variable
+    name statement. Our second output should be:
+
+
+    ```
+
+    System.out.println("Hello “UserInput.nextLine()());
+
+    ```
+
+
+    With this, we can come up with our final Java program written as follows:'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '```
+
+    package javatestproject;
+
+    import java.util.Scanner;
+
+    ```'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# 4
+
+
+    ```
+
+    5 class JavaTestProject {
+
+    ```'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '```
+
+    6
+
+    7 public static void main(String[] args) {
+
+    ```'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '```
+
+    8
+
+    9 System.out.print("What should we call you?");
+
+    10 Scanner UserInput = new Scanner(System.in);
+
+    11 System.out.println("Hello "+UserInput.nextLine());
+
+    ```'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '12
+
+    13 }'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# 14
+
+
+    15 }'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Chapter 2 – Variables
+
+
+    Due to the introduction to the scanner class above, we are now familiar with variables.
+    However, the full potential of variables was still unknown to us.
+
+
+    Variables serve as containers of data. They allow us to call specific data in
+    a more convenient way. We can also create a new set of data using inconsistent
+    values through the use of variables. Most programming languages use variables
+    and developers were able to solve both arithmetic and logical operations through
+    them.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "In order to utilize a variable, we need to declare it first and then assign\
+    \ a data type upon its declaration. By doing so, the program will be able to recognize\
+    \ what kind of value was stored inside a variable.\n\n```\ntry {\n    Object homeObj\
+    \ = lookup(\"ejb/service/CreditRating\");\n    CreditHome cis = (CreditHome)homeObj;\n\
+    \    session.bean.creditRatingName();\n    CreditRatingService ratingService =\
+    \ (CreditRatingService)homeObj;\n    PortableRatingObject rating = ratingService.narrow(cis.ssn);\n\
+    \    if (rating == null) {\n        addAuditTrailEntry(\"Failed to lookup: \"\
+    \ + session.bean.creditRatingName()\n            + \" - Class does not exist but\
+    \ has been\"\n            + \" - successfully deployed.\");\n    }\n\n    CreditRatingService\
+    \ ratingService = ratingHome.create();\n    Element sm = getFromScope()\n    sm\
+    \ = (Element)variableData(\"output\",\"paid\",\"/ssm\");\n\n    if (ratingService.getRating(sm).booleanValue())\
+    \ {\n        addAuditTrailEntry(\"Rating is \" + rating);\n    }\n    setVariableData(\"\
+    output\",\"payload\",\"rating\", new Integer(rating));));\n} catch (Exception\
+    \ e) {\n    addAuditTrailEntry(\"Error: \" + e.getMessage());\n}\n```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Overview of Data Types
+
+
+    There are different data types and we can use each type in various operations
+    and functions. Before we can learn how to assign a data type to a variable, it
+    is important to first familiarize ourselves with the data types. Here is a table
+    of the data types we can use for variables in the Java programming language and
+    their brief descriptions:
+
+
+    | Data Type | Description |
+
+    |---|---|
+
+    | Boolean | This data type has only two possible values: true or false. |
+
+    | Byte | This data type has the tiniest range compared to all number-based data
+    types. Its value by default is 0 and it may store an 8-bit 2s integer. |
+
+    | Character | This data type only stores a single character. default, the value
+    will always be an empty space. |
+
+    | Double | This data type can store numerical value of 64-bit IEEE 754 and has
+    a value of 0.0d by default. These are numerical values that have decimal points.
+    |
+
+    | Float | This data type stores 32-bit IEEE 754 which is less specific than the
+    Double data type. By default, data is set to 0.0f. |
+
+    | | This data type is the simplest way to handle |'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '| Integer | numerical values. When not specified, it will automatically translate
+    the value into 0. It does not support decimal points which make it inefficient
+    for precise values. |
+
+    | Long | This data type allows you to store numerical value between -9,223,372,036,854,775,808
+    to 9,223,372,036,854,775,807. Its default value is 0. |
+
+    | Short | This data type allows you to store a numerical value between -32,768
+    to 32,767. By default, it is set to 0. |
+
+    | String | This data stores alphanumeric values. Empty string variables will give
+    null values by default. |'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Creation of Variables
+
+
+    We need to write a declaration statement in order to create a variable for a certain
+    data type. Any name can be assigned to a variable which we will also use when
+    calling the stored data in the future block of codes.
+
+
+    Let us create a variable using the integer data type and let us name this variable
+    as "MyAge". Our declaration syntax should be:
+
+
+    ```
+
+    int MyAge;
+
+    ```
+
+
+    By default, the program will assign the zero value to the MyAge variable since
+    we did not specify an integer value. In order to assign a specific value inside
+    the MyAge variable, we will use the equal (=) operator sign. Let us say that we
+    want to assign the value 20 to the variable. Our syntax will now look like this:
+
+
+    ```
+
+    int MyAge = 20;
+
+    ```
+
+
+    The same goes with other data types. Here is the list of examples for each data
+    type when declaring them in our IDE: (Assigned variable name is "TestVar")
+
+
+    | Syntax Formula | Example |
+
+    |---|---|
+
+    | Boolean [variable name] [true or false]; | Boolean TestVar = true; |
+
+    | byte [variable name] [numerical value]; | byte TestVar = 0; |
+
+    | char [variable name] [single character]; | char TestVar = L;'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '| double [variable name] = [numerical value]. [numerical value]d; | double
+    TestVar = 31.13d; |
+
+    | float [variable name] = [numerical value]. [numerical value]f; | float TestVar
+    = 1.3f |
+
+    | int [variable name] = [numerical value] | int TestVar = 5 |
+
+    | long [variable name] = [numerical value] | long TestVar = 0L |
+
+    | short [variable name] = [numerical value] | short TestVar = 32000 |
+
+    | String [variable name] = [alphanumeric value] | String TestVar = null |'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# Data Type and User Input\n\n```\npublic class CreateObjectDemo {\n    public\
+    \ static void main(String[] args) {\n        // create point object and two rectangle\
+    \ objects\n        Point origin = new Point(50, 45);\n        Rectangle rect_one\
+    \ = new Rectangle(origin, 100, 180);\n        Rectangle rect_two = new Rectangle(50,\
+    \ 100);\n        // display rect_one's width, height and area\n        System.out.println(\"\
+    Width of rect_one: \" + rect_one.width());\n        System.out.println(\"Height\
+    \ of rect_one: \" + rect_one.height());\n        System.out.println(\"Area of\
+    \ rect_one: \" + rect_one.area());\n\n        // set rect_two's position\n   \
+    \     rect_two.origin = origin;\n        System.out.println(\"Position of rect_two:\
+    \ \" + rect_two.origin.x());\n        System.out.println(\"Position of rect_two:\
+    \ \" + rect_two.origin.y());\n        // move rect_two and display its new position\n\
+    \        rect_two.move(10, 70);\n    }\n}\n```\n\nWe already know that we can\
+    \ collect input data with the use of Scanner. Now, we will use the Scanner to\
+    \ collect other data types. In this example, we will ask for a numerical value\
+    \ from the user and then ask the program to save the value as an integer value.\n\
+    \nOur first step is to tell the Scanner class that the value it needs to store\
+    \ is a value of the integer data type. We can do it by changing the nextLine()\
+    \ parameter into our output.\n\nLet us create a program where we will ask the\
+    \ user for birth of the user. Afterward, we will return that value to the user\
+    \ as an integer data type. Our IDE should be like this:"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '```
+
+    package javatestproject;
+
+    import java.util.Scanner;
+
+    ```'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# 4
+
+
+    ```
+
+    5 class JavaTestProject {
+
+    ```'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# 6
+
+
+    ```
+
+    7 public static void main(String[] args) {
+
+    ```'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '```
+
+    9   System.out.print("What year were you born?");
+
+    10  Scanner BirthYear = new Scanner(System.in);
+
+    11  System.out.println("You were born in "+BirthYear.nextInt()());
+
+    ```'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '```
+
+    12
+
+    13 }
+
+    ```'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '```
+
+    14
+
+    15 }
+
+    ```'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# Storing User Input into Another Variable
+
+
+    When calling the Scanner class to collect data from user input, we create a variable
+    as well. In our Java program with regards to the birth year, for instance, we
+    have created a new variable named as “BirthYear” and we store the collected data
+    in it. The problem here is that we also write the parameter right after the variable
+    name when executing the Scanner class in our program’s output. Hence, we can store
+    the entire syntax into another variable to simplify our codes. This is too much
+    hassle when you need to call the collected data in multiple statements. Do this
+    by declaring a variable while assigning the Scanner syntax as the variable''s
+    value.
+
+
+    Let us create another program where we calculate the user’s age five years from
+    now. This time, we will also store the Scanner call statement into another variable.
+    This is how it should look like:'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '```
+
+    1 package javatestproject;
+
+    2 import java.util.Scanner;
+
+    ```'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# 4
+
+
+    ```
+
+    5 class JavaTestProject {
+
+    ```'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# 6
+
+
+    ```
+
+    public static void main(String[] args) {
+
+    ```'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '```
+
+    9 System.out.print("How old are you?");
+
+    10 Scanner UserAge = new Scanner(System.in);
+
+    11 Age = UserAge.nextInt();
+
+    12 System.out.println("You will be "+(Age+5)+" five years from now");
+
+    ```'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '```
+
+    13
+
+    14 }
+
+    ```'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '```
+
+    15
+
+    16 }
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# 17
+
+
+    From our example program, we stored the Scanner call statement into a new variable
+    which we named as “Age”. On the next line, we called the user collected integer
+    and wrote a simple arithmetic operation in order to provide how old our users
+    will be after five years from now. Notice that the mathematical expression is
+    enclosed in parentheses. Without the parentheses, the program will connect the
+    stored value in the Age variable with the numerical value 5 instead of adding
+    the two values together.
+
+
+    In addition to integers, you may also use the following parameters to look for
+    other types of data using the Scanner class call statement:
+
+
+    +   * nextByte() for Byte data type values
+
+    * nextShort() for Short data type values
+
+    * nextLong() for Long data type values
+
+    * nextFloat() for Float data type values
+
+    * nextDouble() for Double data type values'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# Chapter 3 – Operators
+
+
+    Since the first chapter, we have been using different operators and the most common
+    operator we have used is the assignment operator. It is defined by the equal (=
+    ) sign and signals the program to designate a certain value to a variable.
+
+
+    Aside from the assignment operator, there are five other operators that you use
+    to manipulate data in the Java programming language. They are as follows and their
+    role as mathematical operators:
+
+
+    +   • Operator for Addition which is represented by the plus sign (+ ). It commands
+    the program to give you the sum of multiple values.
+
+
+    +   • Operator for Subtraction which is represented by the hyphen sign (- ). It
+    commands the program to give you the difference of multiple values.
+
+
+    +   • Operator for Multiplication which is represented by the asterisk sign (*
+    ). It commands the program to give you the product of multiple values.
+
+
+    +   • Operator for Division which is represented by the slash sign ( / ). It commands
+    the program to give you the quotient of multiple values.
+
+
+    +   • Operator for Remainder which is represented by the percentage sign (% ).
+    It commands the program to divide two numerical values and gives you the remainder
+    of the numerical values.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# Summary in a Single Program
+
+
+    The best way to familiarize with the operators is by creating a Java program where
+    we can use at least one of the mathematical operators. We will also integrate
+    what we have learned so far. In other words, we will also use the Scanner class
+    to collect data from the user and then execute an arithmetic expression to provide
+    efficient output back to the user.
+
+
+    In this program, we will ask the user to input two numerical values and we will
+    let the program to provide the sum of the numerical values. Let us begin writing
+    our Java program:'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '```
+
+    package javatestproject;
+
+    import java.util.Scanner;
+
+    ```'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '```
+
+    4
+
+    5 class JavaTestProject {
+
+    ```'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '```
+
+    public static void main(String[] args) {
+
+    ```'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '```
+
+    9 int Value1,Value2, Total;
+
+    10 System.out.print("Please enter the first value");
+
+    11 Scanner FirstValue = next Scanner(System.in);
+
+    12 Value1 = FirstValue.nextInt();
+
+    13 System.out.println("Please enter the second value");
+
+    14 Scanner SecondValue = next Scanner(System.in);
+
+    15 Value2 = SecondValue.nextInt();
+
+    16 Total = Value1 + Value2;
+
+    17 System.out.println("The total of the two values is "+Total);
+
+    ```'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '```
+
+    18
+
+    19 }
+
+    ```'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '20
+
+    21 }'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# 22
+
+
+    In this program, you will notice that we declared three variables as containers
+    for integer values. This was written on line 3 where we used the following syntax:
+
+
+    ```
+
+    int Value1, Value2, Total;
+
+    ```
+
+
+    Because of this, we no longer need to enclose the two variables inside the parentheses
+    as we call them for a mathematical expression on line 16.
+
+
+    We also allow users to enter two numerical values by using two Scanner call statements.
+    Then, we stored these values into two separate variables that added to one another
+    inside another variable. This way, we were able to call the sum of the two values
+    for our final output stream.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# # Conclusion
+
+
+    The Java programming language gives you unlimited tools to achieve different operations.
+    However, it is extremely important to get to know the IDE you chose to use. Beginners
+    should find which IDE they feel most comfortable working on. Although all IDEs
+    use a single programming language, each has its own unique interface that might
+    change your programming pace.
+
+
+    We also learned how to start a new project and the essential elements a project
+    needs such as the main class and the main method. Packages were also introduced
+    and although the package declaration is optional, we have learned that declaring
+    packages in our Java program will help us efficiently organize multiple classes
+    for bigger projects.
+
+
+    The main class and the main method may also contain access modifiers that will
+    allow the program in defining whether it should allow other classes in accessing
+    the statement or not. It is a general practice to use “Public” as the main class’s
+    access modifier.
+
+
+    Allowing the program to return a message as its output has also been discussed
+    in the first chapter of this book. You may use the keyword “print” as the simplest
+    form of the parameter or you may rather sign the Java program to show the string
+    in another line. This can be done with the use of the keyword “println”.
+
+
+    We also discussed how dull it is to have a one-way-only program where users'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'were capable of sending an input. The Java programming language has an answer
+    to this by allowing you to use its built-in Scanner class which can be found in
+    the built-in local package known as java.util. The Scanner class allows us to
+    collect data entered by the user from their keyboard. This opened new operations
+    as returning the user input as the program output.
+
+
+    The next chapter introduces variables and how they bring out the full potential
+    of the Java programming language. We discussed the different data types that we
+    can store inside variables and how to call these data for our program''s output.
+    It is also important to remember that we can also store variables into another
+    variable for efficient programming later on.
+
+
+    Lastly, our last chapter discusses the different operators aside from the assignment
+    operator represented by the equal sign (=). In the end, we combined everything
+    we have learned to create a Java program which can solve a mathematical equation
+    based on user''s input.
+
+
+    At this point, I am confident that you already grasped the idea behind the Java
+    programming language as an object-oriented language. I personally congratulate
+    you for finishing this book and I am quite sure that you are now ready to move
+    forward to a more advanced method in Java programming.
+
+
+    Do not forget that you have only took a glimpse on what the Java language is capable
+    of. This book has a continuation where you will learn more advanced techniques
+    such as flow control, a deeper understanding of access modifiers, a closer look
+    to objects and classes, constructors, serials, and inheritance.
+
+
+    Consider this book as your big leap into the world of Java programming language.
+    Always remember that this programming language is fun to learn, yet filled with
+    tons of challenges ahead. Nevertheless, the language will open new opportunities
+    to you such as able to develop your own mobile application. You may even end up
+    developing a new stand-alone game that may stand the test of time like Minecraft.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# # PYTHON
+
+    LEARN PYTHON FAST
+
+
+    The Ultimate Crash Course to Learning the Basics of the Python Programming Language
+    In No Time
+
+
+    ![](img/1e6b92f696f2143809e63d4be77e665e_92_0.png)
+
+
+    Stephen Hoffman'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# # Python
+
+
+    Learn Python FAST - The Ultimate Crash
+
+    Course to Learning the Basics of the Python
+
+    Programming Language In No Time
+
+
+    STEPHEN HOFFMAN'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   Introduction
+
+
+    +   Chapter One – Setting up Python
+
+
+    +   Installation
+
+
+    +   Interpreter
+
+
+    +   How to Run Programs
+
+
+    +   Text Editor
+
+
+    +   Beginning Writing
+
+
+    +   Chapter Two – Variables
+
+
+    +   Chapter Three – Interpreter
+
+
+    +   Interactively
+
+
+    +   Chapter Four – Importance of Comments
+
+
+    +   Chapter Five - Python Docstrings
+
+
+    +   What It Should Look Like
+
+
+    +   Declaration
+
+
+    +   Accessing the Docstring
+
+
+    +   Chapter Six - Keywords in Python
+
+
+    +   Definitions of Keywords
+
+
+    +   Chapter Seven - Booleans, True or False in Python
+
+
+    +   Boolean Strings
+
+
+    +   Logical Operator Boolean
+
+
+    +   Chapter Eight - Python Operators
+
+
+    +   Arithmetic Operators
+
+
+    +   Comparison Operators
+
+
+    +   Logical Operators
+
+
+    +   Chapter Nine - Using Math in Python'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# Counting With Variables
+
+
+    # Counter
+
+
+    # Counting with a While Loop
+
+
+    # Multiplication Table
+
+
+    # Chapter Ten - Exception Handling in Python
+
+
+    # Set Up Exception Handling Blocks
+
+
+    # How does it work?
+
+
+    # Code Example
+
+
+    # Try ... Except ... Else Clause
+
+
+    # Try ... Finally Clause
+
+
+    # Chapter Eleven - Strings Built-In Methods
+
+
+    # Chapter Twelve – Lists
+
+
+    # Chapter Thirteen - How to Use Dictionaries in Python
+
+
+    # Example 1 – Creating a New Dictionary
+
+
+    # Conclusion'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Introduction
+
+
+    Python can be used for a wide variety of projects, and there’s a reason many programmers
+    will reach for Python before they reach for any other programming language. Python
+    can be used for web applications, automating tasks on systems, finding colors
+    in images, and so many other different programming tasks!
+
+
+    Python is a general-purpose programming language that was created in the late
+    80’s, and it was named after the infamous Monty Python. It''s used by thousands
+    of programmers to do anything from testing microchips at Intel to building video
+    games with a PyGame library. It’s a small language that resembles the English
+    language and has hundreds of third-party libraries that already exist.
+
+
+    There are two main reasons as to why programmers will choose Python many different
+    programming languages.
+
+
+    The first reason is readability. Because it’s so close to the English language,
+    using words as ‘not’ and ‘in’ make it that you can read a script out loud and
+    not feel like you’re reading some long-forgotten language. This is also helped
+    by the strict punctuation rules in Python that you don’t curly braces all over
+    the code.
+
+
+    In addition, Python has some set rules, known as PEP 8, that tell Python developers
+    how to format their code. This means you will always know where to put new lines
+    and every code that you pick up from someone else will look similar and be just
+    as easy as yours to read. That makes for some very easy collaboration between
+    developers!'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: 'The second reason is that there are preexisting libraries for almost anything
+    you want to do in Python. The language has been around for over twenty years,
+    so there are many programmers out there who have mastered the language and know
+    how to write what you want. So if you find yourself in doubt, try to find someone
+    else who has already done it!
+
+
+    So the main reasons why you should learn Python are that it’s simple and it’s
+    easy for you to collaborate with others in order to hone your skills. So let’s
+    get started!'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# Chapter One – Setting up Python
+
+
+    When it comes to programming in python, the first thing you should know is that
+    python is already installed on many of the operating systems. Most operating systems,
+    other than Windows, already come with Python installed by default. If you want
+    to check to be sure it’s installed on your computer, open the command line by
+    running the terminal program, and type in ‘python–V’.
+
+
+    ![](img/1e6b92f696f2143809e63d4be77e665e_98_0.png)
+
+
+    If you see version information then Python is already installed on your computer.
+    However, if you get the ‘bash: python: command not found’ prompt, then there is
+    a possibility that it’s not installed on yours.
+
+
+    Follow the instructions for downloading and installing ActivePython on your computer.
+
+
+    # Installation'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: 'The first step is to go to the Python website,
+
+    www.activestate.com/Products/ActivePython, this will take you to a website
+
+    where you can choose the operating system you have. If you have a Windows
+
+    version that''s older than Windows XP, you''ll need to install the Windows
+
+    Installer 2.0 before you continue.
+
+
+    Once you find the installer you need,
+
+    double click on it and go through the
+
+    installation steps. After you''ve installed
+
+    it, go to Start-Programs-
+
+    ActiveState ActivePython (versions #)-
+
+    PythonWin IDE and you''ll see a little
+
+    script telling you what version you
+
+    have and what operating system it''s installed on.
+
+
+    ![](img/1e6b92f696f2143809e63d4be77e665e_99_0.png)'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# Interpreter
+
+
+    Once you start the interactive mode with Python, it’ll prompt you for the next
+    command. This is shown with three greater than symbols, >>>. If you want to run
+    python interpreter interactively, then you need to type in ‘python’ in the terminal.
+
+
+    It’ll look something like this:
+
+
+    ![](img/1e6b92f696f2143809e63d4be77e665e_100_0.png)'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# How to Run Programs
+
+
+    So once Python is all set up and you know how to use the interpreter, how are
+    you going to run programs in python? The simplest way to run a program is to type
+    ''python helloworld.py''. If your executable is set on a .py, then the file can
+    be run by name without having to type in the python first.
+
+
+    Now, set the execute bit with a ''chmod'' command, such as this:
+
+
+    +   - $ chmod +x hello.py
+
+
+    Now you''re able to run your program as ./hello.py.
+
+
+    # Text Editor
+
+
+    Before you''re able to write a python program in a source file, you need an editor
+    to write that source file. When it comes to programming python, there are many
+    editors you can choose from. Just pick one that will work with your platform.
+    The editor you choose is going to depend on your experience with computers, what
+    you have to do, and what platform you need in order to do it.
+
+
+    If you''re a beginner, choose something like Notepad ++ or TextEdit.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# Beginning Writing
+
+
+    Writing and running a python program is just a text file that is being edited
+    by you directly. In the command line or your terminal, you can run any number
+    of programs you want, just as you did with the aforementioned program of ''helloworld.py''.
+
+
+    When the command line prompt comes up, just hit the up-arrow key in order to recall
+    the commands that were typed previously, that way it''s easy to run a previous
+    command without retyping it.
+
+
+    To try out the editor you have, edit the helloworld.py program. Instead of using
+    the word ''Hello'', use the word ''Greetings''. Save the edits and run the program
+    again to see its output. Then adding a ''print yay!'' just below the print that
+    exists with the same indentation.
+
+
+    Run the program and see what the edits look like.
+
+
+    Congratulations! You just edited your first Python program! Now that you know
+    how to edit a program let''s take a look at variables you can use in your programs.'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# Chapter Two – Variables
+
+
+    Variables the characters you''re able to use in Python. You can use any letter,
+    every number, and every special character, but you cannot start with a number.
+    White spaces and the signs with the special meanings like + and – are not allowed.
+
+
+    Either capital or lowercase letters are allowed, but most prefer to use lowercase
+    letters in order to keep it all uniform. Variables names are case sensitive, and
+    python is typed dynamically, so that means you don''t need to declare what type
+    every variable is. In python, the variables are a placeholder for texts and numbers,
+    so it has to have a name in order to find it again.
+
+
+    The variable is assigned with an equal sign, followed by the value of your variable.
+    There are a few reserved words in python that you cannot use for your variable.
+    It''s also important to know that variables can be changed later on if you need
+    to.
+
+
+    For example, you can use these variables for numbers and create this formula:
+
+
+    +   - foo = 10
+
+    - bar = foo + 10
+
+
+    Here are a few different variable types to get started.
+
+
+    | # integer | X = 123 |
+
+    | # long integer | X = 123L |
+
+    | # double float | X = 3.14 |
+
+    | # string | X = "hello" |
+
+    | # list | X = [0,1,2] |
+
+    | # tuple | X = (0,1,2) |'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'You''re also able to assign a single value to several variables at the same
+    time with multiple assignments.
+
+    Variable a, b, and c are allocated to the identical memory location with the value
+    of 1; a = b = c = 1.
+
+    For example:
+
+
+    This will print out: The area is: 200
+
+    Now that you know how to use variables let''s take a look at the interpreter in
+    more detail.'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# Chapter Three – Interpreter
+
+
+    The interpret is usually installed at the /usrlocal/bin/python location on machines
+    where it''s available.
+
+    Putting /usrlocal/bin in the Unix shell''s search path is going to make it able
+    to start it by typing the
+
+    command: python to the shell.
+
+
+    When you begin the interactive mode, it will prompt for the following command
+    using three greater
+
+    an symbols, >>>. It will then print a welcome message that states its version
+    number and the copyright
+
+    notice before it prints the first prompt.
+
+
+    # Interactively
+
+
+    When used interactively, it''s a good idea to have some standard comments executed
+    each time the
+
+    interpreter is begin. You can do this when you set an environment variable called
+    PYTHONSTARTUP in
+
+    title of the file that contains startup commands. This is like the .profile feature
+    of the Unix shells. To do
+
+    add this line to your .bashrc
+
+
+    ```
+
+    export PYTHONSTARTUP=$HOME/.pythonstartup
+
+    ```
+
+
+    Create or change the .pythonstartup file and place the python code in, like, this:
+
+
+    ```
+
+    import os
+
+    s.system(''ls -l\'')
+
+    ```
+
+
+    To exit your interactive prompt, hit Ctrl+D if you''re using a Linux machine.'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# Chapter Four – Importance of Comments
+
+
+    The comments in python are strictly for the person reading the code, whether it''s
+    you or someone else. It''s a good way to communicate with groups of people what
+    the code is supposed to do so that they''re able to collaborate better. However,
+    there are two ways you can add comments to python that are universally accepted
+    in the programming industry.
+
+
+    A single line comment is going to start with the # symbol and is terminated by
+    the end of the line. Python will ignore all text that comes after the # symbol
+    to the end of that line because it views that as not part of the command.
+
+
+    Comments that will span more than a single line is achieved by inserting a multi-line
+    string with """ as the delimiter on either end. They are meant as documentation
+    for anyone who is reading the code.
+
+
+    Let''s take a look at two examples so you can see what I''m talking about.
+
+
+    ```
+
+    # This is a comment in Python
+
+
+    print("Hello World") #This is also a comment in Python
+
+
+    """
+
+    This is an example of a multiline
+
+    comment that spans multiple lines
+
+
+    """
+
+    ```
+
+
+    So now you know how to collaborate with others and just keep your code organized
+    with comments for yourself, let''s take a look at python docstrings.'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# Chapter Five - Python Docstrings
+
+
+    Docstrings, or python documentation strings, provide a nice way to associate documentation
+    with python functions, modules, methods, and classes. An object''s docstring is
+    made up of a string constant as the first statement in the definition of the object.
+
+
+    It''s specified in the source code that''s used to record a specific piece of
+    code. Unlike regular source code comments, the docstring should be a description
+    of what the function does rather than how. All functions need to have a docstring.
+
+
+    This lets the program inspect the content during run time, for example, as an
+    interactive help system or as metadata. You can use the doc attribute on objects
+    to access the docstring.'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# What It Should Look Like\n\nThe docstringline is going to begin with a capital\
+    \ letter and end with a period. The first line is going to be a short description.\
+    \ Don't write the name of your object. If there's more than one line in the documentation\
+    \ string, the second one should be blank so that visually separates the summary\
+    \ from the remainder of the description. The rest of the themselvesness is one\
+    \ or more paragraphs that describe the object's calling conventions and anything\
+    \ else that's important.\n\nAn example of a docstring is as follows:\n\n```\n\
+    def my_function():\n    \"\"\"Do nothing, but document it.\n    \n    No, really,\
+    \ it doesn't do anything.\n    \"\"\"\n    pass\n```\n\nAnd this is what it would\
+    \ like when it was printed.\n\n```\n>>> print(my_function.__doc__)\nDo nothing,\
+    \ but document it.\n\nNo, really, it doesn't do anything.\n```\n\n# Declaration\n\
+    \nThis python file shows you a declaration of a docstring in a python source file."
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "```\n---\nAssuming this is file mymodule.py, then this string, being the\n\
+    first statement in the file, will become the \"mymodule\" module's\ndooctring\
+    \ when the file is imported.\n---\n```\n\n```\nclass MyClass(object):\n    \"\"\
+    \"The class's docstring\"\"\"\n\n    def my_method(self):\n        \"\"\"The method's\
+    \ docstring\"\"\"\n\n    def my_function():\n        \"\"\"The function's docstring\"\
+    \"\"\n```"
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# Accessing the Docstring
+
+
+    The following session will show you how the docstring can be accessed:
+
+
+    ```
+
+    >>> importmodule
+
+    >>> help(mymodule)
+
+    ```
+
+
+    Assuming this is the file mymodule.py, then the string that is the primary declaration
+    in the file will be the mymoduleelelement docstring when the file is introduced.
+
+
+    ```
+
+    >>> help(mymodule.MyClass)
+
+    The class''s docstring
+
+
+    >>> help(mymodule.MyClass.my_method)
+
+    The method''s docstring
+
+
+    >>> help(mymodule.my_function)
+
+    The function''s docstring
+
+    ```
+
+
+    So now that you know what a docstring is let''s talk more about some keywords
+    in python that you need to know.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "# Chapter Six - Keywords in Python\n\nKeywords in python are reserved words\
+    \ that are not able to be used ordinary identifiers. They have to be spelled exactly\
+    \ as you see them written. If you want to print the keyword list in python, then\
+    \ use the following commands.\n\n```\n$ python\n>>> \n>>> import keyword\n\n>>>\
+    \ print keyword.kwlist\n\n['and', 'or', 'is', 'assert', 'break', 'class', 'continue',\
+    \ 'def', 'del', 'elif', 'else', \n'except', 'finally', 'for', 'from', 'global',\
+    \ 'if', 'import', 'in', \n'lambda', 'not', 'or', 'print', 'raise', 'return', 'try',\
+    \ 'while', 'with', \n'yield']\n```\n\n# Definitions of Keywords\n\nprint\n\n+\
+    \   - print to console\n- controls the movement of the platform\n- repeat over\
+    \ parts of a collection in the order they appear\n\nwhile\n\nfor\n\nbreak"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '+   break the loop cycle
+
+
+    +   made to interrupt the present cycle without getting out of the whole cycle.
+    A new cycle will start.
+
+
+    If
+
+
+    +   Used to figure out which statement is going to be executed
+
+
+    Elif
+
+
+    +   Is and abbreviation of else if; if the first test evaluates to false, then
+    it will continue to the next one.
+
+
+    Else
+
+
+    +   This means the command is optional. The statement following the word is executed
+    unless the condition is true.
+
+
+    Is
+
+
+    Not
+
+
+    and
+
+
+    or
+
+
+    import
+
+
+    as
+
+
+    from
+
+
+    def
+
+
+    return
+
+
+    lambda
+
+
+    global
+
+
+    try
+
+
+    +   Looks for object identity
+
+
+    +   Disproves a Boolean value
+
+
+    +   all circumstances in a boolean expression must happen
+
+
+    +   at the minimum condition must happen
+
+
+    +   bring in other elements into a Python script
+
+
+    +   gives a module a different alias
+
+
+    +   for introducing an exact variable, class or a function from an element
+
+
+    +   makes a new user-defined function
+
+
+    +   gets out of the function and yields a value
+
+
+    +   makes a new unspecified function
+
+
+    +   accesses variables defined exterior to functions
+
+
+    +   states exemption handlers'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: 'except
+
+
+    +   - holds the exception and completes codes
+
+
+    finally
+
+
+    +   - is constantly completed in the end and is needed to clean up resources
+
+
+    raise
+
+
+    +   - make a user-defined exclusion
+
+
+    del
+
+
+    +   - deletes objects
+
+
+    pass
+
+
+    +   - does nothing
+
+
+    assert
+
+
+    +   - used for restoring purposes
+
+
+    class
+
+
+    +   - used to create new user defined objects
+
+
+    exec
+
+
+    +   - executes Python code dynamically
+
+
+    yield
+
+
+    +   - is used with generators
+
+
+    # Chapter Seven - Booleans, True or False in Python'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# Booleans and Null
+
+
+    +   True
+
+    False
+
+    None
+
+
+    These values are the two continuous objects of true and false. They''re used to
+    symbolize truth values, which are other values that can be considered true or
+    false. In a numeric context, like if they''re used as an argument to a mathematic
+    operator, they will behave like the integers zero and one respectively.
+
+
+    The preexisting function bool() is able to create any value to a Boolean if the
+    value is able to be interpreted as a truthvalue. They''re written as false and
+    true.
+
+
+    ![](img/1e6b92f696f2143809e63d4be77e665e_114_0.png)'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# Boolean Strings
+
+
+    A string can be tested for truth value. The return type is to be in Boolean value
+    or True or False. Let''s take a look at an example. First, create a new variable
+    and assign it a value.
+
+
+    ```
+
+    numberone_string = "Hello World"
+
+    numberone_string.isalnum()
+
+    numberone_string.isalpha()
+
+    numberone_string.isdigit()
+
+    numberone_string.istitle()
+
+    numberone_string.isupper()
+
+    numberone_string.islower()
+
+    numberone_string.isspace()
+
+    numberone_string.endswith(''d'')
+
+    numberone_string.startswith(''H'')
+
+    ```
+
+
+    ```
+
+    #check if all char are numbers
+
+    #check if all char are alphabetical
+
+    #test if string has digits
+
+    #test to see if the string has title words
+
+    # test to see if the string has upper case letters
+
+    #test to see if the string has lower case letters
+
+    #test to see if the string has spaces
+
+    #test if the string ends with a ''d''
+
+    #test if the string begins with ''H''
+
+    ```'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: 'To see what the return value would be, print it out.
+
+    numberone_string="Hello World"
+
+
+    ```
+
+    print numberone_string.isalnum()      #false
+
+    print numberone_string.isalalpha()    #false
+
+    print numberone_string.isdigit()       #false
+
+    print numberone_string.istitle()      #true
+
+    print numberone_string.isupper()       #false
+
+    print numberone_string.islower()       #false
+
+    print numberone_string.isspace()       #false
+
+    print numberone_string.endswith(''d'')   #true
+
+    print numberone_string.startswith(''H'')  #true
+
+    ```
+
+
+    # Logical Operator Boolean
+
+
+    These values tend to respond to logical operators and/or
+
+
+    ```
+
+    >>>True and False
+
+    False
+
+    >>>True and True
+
+    True
+
+    >>>False and True
+
+    False
+
+    >>>False or True
+
+    True
+
+    >>>False or False
+
+    False
+
+    ```
+
+
+    Remember the built-in type of Boolean can have only one or two possible answers:
+    True or False. Now that you know a little more about Booleans and how to use them
+    let''s talk about python operators.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "# Chapter Eight - Python Operators\n\nThere are a few different types of operators.\
+    \ There's arithmetic, comparison, and logical operators. Let's take a look at\
+    \ each one in a little more detail.\n\n# Arithmetic Operators\n\nPython has the\
+    \ modulus -, +, /, % and ** operators. Assume the variable 'a' has a value of\
+    \ ten and variable 'b' has a value of twenty. Therefore:\n\n+   * +\n  a+b=30\n\
+    -\n  a-b=-10\n* \n  a*b=200\n/\n  b/a=2\n%\n  b%a=0\n**\n  a**b=10\\^20\n//\n\
+    \  9//2=4\n\n# Comparison Operators\n\nThe plain comparison operators like ==,\
+    \ <, >=, and the others are utilized on all different manner of values."
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: 'Strings, numbers, mappings, and sequences are all able to be compared. The
+    following bullets will show you a list of comparison operators.
+
+
+    +   - < is less than
+
+    - == equal
+
+    - <= less than or equal to
+
+    - >= greater than or equal to
+
+    - > greater than
+
+    - <> not equal
+
+    - != not equal
+
+
+    # Logical Operators
+
+
+    The logical operators and also give back a Boolean value when they''re used in
+    a decision structure. There are three logical operators, or, and, and not. For
+    example, x=0 and x<10 is only true if x is greater than 0 and less than 10.
+
+    Operator Description:
+
+
+    +   - and: logical AND
+
+    - or: logical OR
+
+    - not: logical NOT
+
+
+    Now that you know about operators let''s talk more about using math in python.'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# Chapter Nine - Using Math in Python
+
+
+    The Python language has the Python interpreter, which is a simple development
+    environment known as IDLE, tools, libraries, and documentation. It''s preinstalled
+    on almost all Linux machines and Mac systems, but it can be an older version.
+
+    In order to begin using the calculator in the Python interpreter, type in the
+    following script:
+
+
+    ```
+
+    >>> 2+2
+
+    4
+
+    >>> 4*2
+
+    8
+
+    >>> 10/2
+
+    5
+
+    >>> 10-2
+
+    8
+
+    ```'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# Counting With Variables
+
+
+    To put in values in the variables to count the area of a rectangle, try this code
+    out:
+
+
+    ```
+
+    >>> length = 2.20
+
+    >>> width = 1.10
+
+    >>> area = length * width
+
+    >>> area
+
+    2.4200000000000004
+
+    ```
+
+
+    # Counter
+
+
+    Counters are needed tools in programming in order to increase or decrease a value
+    every time it is run. The following code is a counter:
+
+
+    ```
+
+    >>> i = 0
+
+    >>> i + 1
+
+    >>> i
+
+    1
+
+    >>> i = 1 + 2
+
+    >>> i
+
+    3
+
+    ```'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "# Counting with a While Loop\n\nAnd here's an example of when it's useful to\
+    \ use a counter.\n\n```\n>>> i = 0\n>>> while i < 5:\n    print i\n    i = i+1\n\
+    \n0\n1\n2\n3\n4\n```\n\nThe above program will count from zero to four. Between\
+    \ the world while and the colon, there's an expression that is going to be true\
+    \ at first and then become false. As long as that expression is true, the following\
+    \ code is going to run. The code that has to be run has to be indented. The last\
+    \ declaration is a counter that adds one to the value for every time the loop\
+    \ runs."
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "# Multiplication Table\n\nTo make a multiplication table in Python, use the\
+    \ following code:\n\n```\ntable = 8\nstart = 1\nmax = 10\nprint(\"**20\")\nprint(\"\
+    The table of 8\")\nprint(\"**20\")\ni = start\nwhile i <= max:\n    result = i\
+    \ * table\n    print(i, \"*\", table, \"=\", result)\n    i += 1\nprint(\"**20\"\
+    )\nprint(\"Doneounting...\")\nprint(\"**20\")\n```\n\nThe output for this code\
+    \ is going to be as follows:\n\n+   >>Output:\nThe table of 8\n1*8=8\n2*8=16\n\
+    3*8=24\n4*8=32\n5*8=40\n6*8=48\n7*8=56\n8*8=64\n9*8=72\n10*8=80\n\nDone counting.\n\
+    \nAnd that's how you use math in Python. Now let's look at exception handling\
+    \ in Python in the following chapter."
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# Chapter Ten - Exception Handling in Python
+
+
+    Before you get into what you can do with exceptions, you first have to know what
+    they are. An exception is an error that occurs while a program is running. When
+    that error happens, Python will generate an exception that can be used in order
+    to avoid crashing the program.
+
+
+    Exceptions are convenient for handling special conditions and errors in programs.
+    When you believe you have a code that is able to produce an error, then you can
+    put in an exception handle. You can raise this exception on your own with the
+    raise exception declaration. Rising an exception will break the current code execution
+    and return the exception to the previous code until it can be handled.
+
+
+    Here are some comon errors you might see in your program
+
+
+    +   * IOError – the file is unable to be opened.
+
+    * ImportError – Python is not able to find the module.
+
+    * ValueError – this is brought up when a built-in operation or function obtains
+    an argument that might have the right type but not the right value.
+
+    * KeyboardInterrupt – This is brought up when the user will hit the interrupt
+    key on the keyboard, this is usually the Cntrl – C or Del keys.
+
+    * EOFError – this comes up when one of the built-in functions, input() or raw_input()
+    gets to an end-of-file conditions or EOF without scanning the data.'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# Set Up Exception Handling Blocks
+
+
+    ![](img/1e6b92f696f2143809e63d4be77e665e_124_0.png)
+
+
+    In order to use exception handling in Python, first you have to have a catch-all
+    except clause. The words ''try'' and ''except'' are Python keywords that programmers
+    use in order to catch exceptions.
+
+
+    For example:
+
+
+    +   try - except [exception-name] (insert exception) blocks
+
+    The code in the try clause is going to be executed statement by statement. If
+    an exception happens, the rest of the block is going to be skipped and the
+
+
+    except clause is going to be run.
+
+    Try:
+
+
+    some statements here
+
+
+    Except:
+
+    exception handling
+
+    So let''s see an example of this.
+
+    try:
+
+
+    ```
+
+    print 1/0
+
+    except zerodivisionerror:
+
+    print "You can''t divide by zero."
+
+    ```'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "# How does it work?\n\nError handling is handled through the use of exceptions\
+    \ that are made in try blocks and handled in except blocks. If your code encounters\
+    \ an error, a try block code execution is going to stop and transfer down to the\
+    \ except block.\n\nIn addition to using the except block after the try block,\
+    \ you're also able to use the finally block. The code in this block is going to\
+    \ be executed whether or not the exception happens.\n\nLet's take a look at some\
+    \ code to see what will happen when you do not use error handling in a program.\n\
+    \n# Code Example\n\nThis program is going to ask the user to input a number between\
+    \ one and ten and then print that number.\n\nnumber = int(raw_input(\"Enter number\
+    \ between 1-10\"))\n\nprint \"you entered number\", number\nThis program will\
+    \ work just as long as the user enters the number, but what happens if they put\
+    \ in something else, like a string?\nEnter a number between 1-10\nhelo\n\nYou\
+    \ can see that the program will throw an error when the string is entered.\nTraceback\
+    \ (most recent call last):\n\n```\nFile \"enter_number.py\", line 1, in\n\nnumber\
+    \ = int(raw_input(\"Enter number between 1-10\\n\"))\n\nvalueerror: invalid literal\
+    \ for int() with base 10: 'hello'\n```\n\nTheValueError is a type of exception.\
+    \ Now let's see how you can utilize exemption handling to repair the aforementioned\
+    \ program.\nImport sys\n\n```\ntry:\n    number = int(raw_input(\"Enter a number\
+    \ between 1-10 \\n\"))\nexcept valueerror:\n    print \"Only numbers are accepted.\"\
+    \nsys.exit()\n```\n\nprint \"you entered number \\n\", number\n\nIf you now start\
+    \ the program and input a string in lieu of amounts, you can see that you'll get\
+    \ a different"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: "response. So now, let's run the program to be sure it worked. The response\
+    \ should be:\n\nEnter number between 1-10\nhello\nOnly numbers are accepted.\n\
+    \n# Try ... Except ... Else Clause\n\nThe else clause in a try, except statement\
+    \ has to follow all except clauses and is used for code that has to be executed\
+    \ if the try clause will not raise an exception. For example:\n\n```\ndata = something_that_might_go_wrong\n\
+    except IOError:\n    handling_the_exception_handling\nelse:\n    trying_a_different_exception_handling\n\
+    ```\n\nExceptions in an else clause will not be handled by the preceding exception\
+    \ clauses. Be sure that the else clause is run before the final block."
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "# Try ... Finally Clause\n\nThefinallyclause is an optional clause. It's used\
+    \ to define clean-up actions that have to be executed under all circumstances.\
+    \ For example:\n\n```\ntry:\n    raise KeyboardInterrupt\nfinally:\n    print\
+    \ 'Goodbye!'\n    ...\n    Goodbye!\n    KeyboardInterrupt\n```\n\nA final clause\
+    \ will be executed before leaving the try statement, regardless of whether an\
+    \ exception has happened.\n\nRemember that if you don't specify the exception\
+    \ type on the exception line, it's going to catch all exceptions. This is not\
+    \ a good thing because it means the program will ignore any unexpected errors,\
+    \ as well as errors the exception block is able to handle.\n\nNow that you know\
+    \ about exceptions in Python let's take a look at Strings Built-In Methods in\
+    \ the following chapter."
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: "# # Chapter Eleven - Strings Built-In Methods\n\nThis chapter is just going\
+    \ to contain a list of built-in methods you can use for each string. Let's first\
+    \ make a string with the value of ‘Hello’.\n\nIt'll look a lot like this:\n\n\
+    ```\nstring = 'Hello'\n```\n\nIn order to manipulate this string, take a look\
+    \ at some of the following built-in methods and their explanations. \n\n+   -\
+    \ string.upper()\n  - This makes all the letters in the string uppercase, so if\
+    \ the string were ‘hello jane’, it would come out as ‘Hello Jane’.\n- string.lower()\n\
+    \  - This will make all the letters in your string lowercase, so if the string\
+    \ reads ‘Hello Jane’, it will come out as ‘hello jane’ in the program.\n- string.capitalize()\n\
+    \  - This will capitalize only the first letter. Therefore, if the string was\
+    \ ‘hello jane’, it would read as ‘Hello jane’ in the program.\n- string.title()\n\
+    \  - This would capitalize the first letter of the words. So if the string were\
+    \ ‘hello jane’ in the program, it would read ‘Hello Jane’.\n- string.swapcase()\n\
+    \  - This string will convert all uppercase letters to lowercase and"
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: "vice versa, so the following string, ‘hello jane’ would read\n‘HELLO JANE’\
+    \ in the program.\n\n+   - string.strip()\n  - This string removes all white space\
+    \ from the string. So if the\nstring was ‘Hello Jane’, it would read ‘HelloJane’\
+    \ in the\nprogram.\n\n+   - string.lstrip()\n  - This string removes all whitespace\
+    \ from the left. Therefore, if\nstring were ‘Hello Jane ‘ with space before hello\
+    \ and one\nAfter Jane, the code would split out ‘HelloJane’.\n\n+   - string.rstrip()\n\
+    \  - This string will remove all whitespace from the right.\nTherefore, if the\
+    \ same line of code were to read ‘Hello Jane ‘nwith a space after Jane, the space\
+    \ after Jane would be removed\nfirst to read ‘HelloJane’.\n\n+   - string.split()\n\
+    \  - This command will split words. So if the code read ‘Hello Jane’,\nit’ll be\
+    \ split into ‘Hello Jane’.\n\n+   - string.split(',\\')\n  - This means the code\
+    \ will split words by a comma, so the\nfollowing string ‘Hello Jane’ would come\
+    \ out ‘Hello, Jane’.\n\n+   - string.count('1’)\n  - This string will count the\
+    \ amount of times 1, or any other letter\ny choose to put into the string, occur\
+    \ in the string. So the\ninput would be ‘Hello Jane’ and the program would tell\
+    \ you 2.\n\n+   - string.find(Ja)\n  - This string will find the word ‘Ja’ in\
+    \ the string.\n\n+   - string.index(“Ja”)\n  - This will find the letters Ja in\
+    \ the string.\n\n+   - ““:”.join(string)\n  - This will add a : between every\
+    \ character. So ‘Hello Jane’\ncome out ‘H:e:l:l:o:J:a:n:e’\n\n+   - len(string)\n\
+    \  - This will find length of the string in characters, so if the"
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: 'string is ‘Hello Jane’ then the program would say ten.
+
+
+    So now that you know some of the basic strings that are built-in to the Python
+    code, let''s take a look at list examples in the following chapter.'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: "# Chapter Twelve – Lists\n\nLists are created with square brackets, [], and\
+    \ the elements that are between those brackets are what the program will use.\
+    \ The elements in a list do not have to be the same type, ergo, you can have letters,\
+    \ numbers, and strings between just one set of brackets.\n\nLet's take a look\
+    \ at an example.\n\n```\nmyList = [1,2,3,5,8,2]\ni=0\nwhile i < len(myList):\n\
+    \    print myList[i]\n    i+=1\n```\n\nSo what does this list do? The script is\
+    \ going to create a list, labeled (list1), with the values of 1, 2, 3, 5, 8, 2,\
+    \ 5, 2. The while loop is going to print each part of the list. Each part of the\
+    \ list list1 is going to be obtained by the index or the letter in the square\
+    \ brackets."
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: "The len function will be used to go through the entire length of the list.\
+    \ And the final line tells the program to increase each variable by one every\
+    \ time the loop runs.\nSo the output for this program is going to be: 1 2 3 5\
+    \ 8 2 5.2\n\nLet's take a look at another example.\n\nThis example is going to\
+    \ count the average value of the elements that are in the list.\n\n```\nlist1\
+    \ = [1,2,3,5,8,2,5]\ntotal = 0\ni = 0\nwhile i < len(list1):\n    total = total\
+    \ + list1[i]\n    i = i + 1\n\naverage = total / len(list1)\nprint average\n```\n\
+    \nThe output for this will be:\n#Output >> 3.74285714286\n\nAs you can see, lists\
+    \ are pretty easy to create and manipulate. Let's take a look at using dictionaries\
+    \ in Python."
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: "# Chapter Thirteen - How to Use Dictionaries in Python\n\nYou can use the curly\
+    \ brackets, {}, to make a dictionary in Python. You can use the square brackets,\
+    \ [], to index the dictionary. Separate the key and the value with some colons\
+    \ and commas between the pairs. Keys have to be quoted just like with lists, and\
+    \ you can print out the dictionary by printing the reference to the dictionary.\n\
+    \nA dictionary will map a set of objects (keys) to another set of objects (values).\
+    \ A python dictionary will map unique keys to values. Dictionaries are changeable\
+    \ or mutable in python. The values keys point to are able to be any Python value.\
+    \ They are unordered, so the order the keys are added does not reflect with the\
+    \ order they might be reported back as.\n\nLet's take a look at how to create\
+    \ a new dictionary in python.\n\nIn order to make a dictionary, you first have\
+    \ to start with an empty one: \n\n```\n>>>mydict={ } #\n```"
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: "# Example 1 – Creating a New Dictionary\n\nThis creates a dictionary that has\
+    \ six key-value pairs to begin with, where iPhone* is the key and the years the\
+    \ values.\n\n```\nreleased = [\n    'iphone': 2007,\n    'iphone 3G': 2008,\n\
+    \    'iphone 3GS': 2009,\n    'iphone 4': 2010,\n    'iphone 4S': 2011,\n    'iphone\
+    \ 5': 2012\n]\nprint released\n```\n\nThe output for this would be:\n\n>>Output\n\
+    >{'iphone 3G': 2008, 'iphone 4S': 2011, 'iphone 3GS': 2009, 'iphone': 2007, 'iphone\
+    \ 5': 2012, 'iphone 4': 2010}\n\nNow let's add a value to your dictionary.\n\n\
+    ```\n# the syntax is: dict['key'] = \"value\"\nreleased['iphone 5S'] = 2013\n\
+    print released\n```\n\n>>Output\n>{'iphone 5S': 2013, 'iphone 3G': 2008, 'iphone\
+    \ 4S': 2011, 'iphone 3GS': 2009, 'iphone': 2007, 'iphone 5': 2012, 'iphone 4':\
+    \ 2010}"
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: 'Now that you know how to do that let’s remove a key and a value from the code
+    using the del operator.
+
+
+    ```
+
+    del released["iphone"]
+
+    print(released)
+
+    ```
+
+
+    The output would be:
+
+    >>output
+
+
+    (''iphone 3G'': 2008, ''iphone 4S'': 2011, ''iphone 3GS'': 2009, ''iphone 5'':
+    2012,
+
+    ''iphone 4S'': 2010)
+
+
+    Now let''s check the length of the function by using the len() function.
+
+
+    ```
+
+    print(len(released))
+
+    ```
+
+
+    Now let''s test out the dictionary! Check to see if a key exists in a given dictionary
+    by using an operator such as:
+
+
+    ```
+
+    >>> my_dict = {''n'': ''mar'', ''b'': ''you''}
+
+    >>> ''n'' in my_dict
+
+    True
+
+    >>> ''b'' in my_dict
+
+    True
+
+    >>> ''v'' in my_dict
+
+    False
+
+    ```'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: "or this if you have a loop:\n\n```\nfor item in released:\n    if \"iphone\
+    \ 5\" in released:\n        print \"Key found\"\n        break\n    else:\n  \
+    \      print \"No keys found\"\n```\n\nor this if you need a value of a specified\
+    \ key:\n\n```\nprint released.get(\"iphone 3G\", \"name\")\n```\n\nor this if\
+    \ you need to print all key with a for loop:\n\n```\nprint \"* * 10\"\nprint \"\
+    iphone releases so far: *\"\nprint \"* * 10\"\nfor release in released:\n    print\
+    \ release\n```"
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: 'or this if you want to print all the key and values:
+
+
+    ```
+
+    for key,val in released.items():
+
+    print key, ":",", val
+
+    ```
+
+
+    or this if you need to get only the keys from your dictionary:
+
+
+    ```
+
+    phones=released.keys()
+
+    print phones
+
+    ```
+
+
+    Now that you know how to do those, why not look at how to print the values:
+
+
+    ```
+
+    print "Values:%s"
+
+    for your in released:
+
+    release=released[your]
+
+    print release
+
+    ```
+
+
+    Here''s how to sort your dictionary:
+
+
+    ```
+
+    for key,value in sorted(released.items()):
+
+    print key,value
+
+    ```
+
+
+    And that''s how you use a dictionary in Python'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# Conclusion
+
+
+    There’s a lot that you can do with Python code. Many developers will use it to
+    do something as simple as sorting some inventory to something complex like making
+    a video game.
+
+
+    The important part about Python is that there are user groups all over the globes,
+    known as PUGs, who do major conferences on continents across the globe so that
+    Python users can interact with one another. Many of these conferences allow children
+    to attend, who will learn how to use Python on their new Raspberry Pi’s they''re
+    given at the conference.
+
+
+    Overall, the community surrounding the language of Python is very positive and
+    upbeat. They are a group of people who want to make the world a better place with
+    their knowledge. So never be afraid to reach out to forums and discussion groups
+    to figure out how to write the code you need.'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: Thank you for reading. I hope you enjoy it. I ask you to leave your honest feedback.
+  merge: -1
+  pgno: 139
