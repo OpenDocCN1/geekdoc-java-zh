@@ -1,0 +1,2126 @@
+- md: '
+
+    ## JAVA EBOOK
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_0_0.png)
+
+
+    by @curious_.programmer
+
+
+    # # Python, Java, C, C++ Notes Uploaded on Telegram
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_1_0.png)
+
+
+    ## Join For More Ebooks!
+
+
+    @curious_.programmer
+
+
+    ## About this PDF:
+
+
+    Clean Code is another classic for Java programmers.
+
+    Anyone can learn to code, but it takes practice to write clean code. When code
+    is poorly written, you can lose countless hours and significant resources. This
+    PDF teaches you to read code and challenges you to think about what''s right about
+    that code. It is divided into three parts - Basics, Types, and Control flows.
+    And AWT, Swing.
+
+
+    This PDF includes the materials we covered complete java for beginners.
+
+
+    - If you''re completely new to Java, this is the first PDF by curious_programmer
+    worth investing in.
+
+    - It covers all the fundamentals of Java.
+
+
+    ## Basics...........................................................................................................
+    6
+
+
+    - Java Development Kit..................................................................................
+    6
+
+    Java Editions....................................................................................
+    7
+
+    How Java Code Gets Executed...............................................................
+    7
+
+    Architecture of Java Applications...........................................................
+    8
+
+    5 Interesting Facts about Java..................................................................
+    8
+
+
+    ## Types............................................................................................................
+    10
+
+
+    - Variables.........................................................................................................
+    10
+
+    Primitive Types..................................................................................
+    10
+
+    Declaring Variables..............................................................................
+    11
+
+    Comments...............................................................................................
+    12
+
+    Reference Types...............................................................................
+    13
+
+    Strings..................................................................................................
+    13
+
+    Useful String Methods.......................................................................
+    15
+
+    Escape Sequences................................................................................
+    15
+
+    Arrays...............................................................................................
+    16
+
+    The Array Class..................................................................................
+    18
+
+    Multi-dimensional Arrays...............................................................................
+    19
+
+    Constants...........................................................................................
+    21
+
+    Arithmetic Expressions.................................................................................
+    22
+
+    Comparison Operators...............................................................
+    22
+
+    Logical Operators............................................................................
+    23
+
+    Ternary Operator..............................................................................
+    23
+
+
+    Increment and Decrement Operators...............................................................24
+
+
+    Augmented Assignment Operator................................................................24
+
+
+    Order of Operations..................................................................................25
+
+
+    Casting....................................................................................................25
+
+
+    Formatting Numbers...............................................................................28
+
+
+    Reading Input........................................................................................28
+
+
+    ## Control Flow...............................................................................29
+
+
+    If Statements......................................................................................29
+
+
+    Switch Statements..................................................................31
+
+
+    For Loops.................................................................................34
+
+
+    While Loops...............................................................................37
+
+
+    Do..While Loops.......................................................................39
+
+
+    For-each Loops.....................................................................41
+
+
+    ## JAVA AWT...............................................................................43
+
+
+    component class...............................................................43
+
+
+    container...............................................................................43
+
+
+    container types..................................................................44
+
+
+    ## JAVA SWING..................................................................46
+
+
+    ## Difference Between AWT and Swing .......47
+
+
+    - Basics
+
+
+    Java is a powerful general-purpose programming language. It is used to develop
+    desktop and mobile applications, big data processing, embedded systems, and so
+    on. According to Oracle, the company that owns Java, Java runs on 3 billion devices
+    worldwide, which makes Java one of the most popular programming languages.
+
+
+    ## Java Development Kit
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_5_0.png)
+
+
+    We use Java Development Kit (JDK) to build Java applications. JDK contains a compiler,
+    the Java Runtime Environment (JRE) and a library of classes that we use to build
+    applications.
+
+
+    ## Java Editions:
+
+
+    We have four editions of Java, each used for building a different type of application:
+
+
+    Java Standard Edition (SE): the core Java platform. It contains all of the libraries
+    that every Java developer must learn.
+
+
+    Java Enterprise Edition (EE): used for building very large-scale distributed systems.
+    It''s built on top of Java SE and provides additional libraries for building fault-tolerant,
+    distributed multi-tier software.
+
+
+    Java Micro Edition (ME): a subset of Java SE, designed for Mobile devices.
+
+
+    Java Card: used in smart cards.
+
+
+    ## How Java Code Gets Executed
+
+
+    The Java compiler takes Java code and compiles it down to Java Byte code format.
+    When we run Java applications, Java Virtual Machine (JVM) gets loaded in memory.
+    It takes our bytecode as the input and translates it to the native code for the
+    underlying operating system. There are various implementations of Java Virtual
+    Machine for almost all operating systems.
+
+
+    ## Architecture of Java Applications
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_7_0.png)
+
+
+    The smallest building blocks in Java programs are methods (also called functions
+    in other programming languages). We combine related methods in classes, and related
+    classes in packages. This modularity in Java allows us to break down large programs
+    into smaller building blocks that are easier to understand and re-use.
+
+
+    ## 5 Interesting Facts about Java
+
+
+    1. Java was developed by James Gosling in 1995 at Sun Microsystems (later-acquired
+    by Oracle).
+
+    2. It was initially called Oak. Later it was renamed to Green and was finally
+    renamed to Java inspired by Java coffee.
+
+    3. Java has close to 9 million developers worldwide.
+
+    4. About 3 billion mobile phones run Java, as well as 125 million TV sets and
+    every Blu-Ray player.
+
+    5. According to indeed.com, the average salary of a Java developer is just over
+
+    a. $100,000 per year in the US.
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_8_0.png)
+
+
+    ## Types
+
+
+    ## Variables
+
+
+    As the name suggests, data types specify the type of data that can be stored inside
+    variables in Java. Java is a statically-typed language. This means that all variables
+    must be declared before they can be used.
+
+
+    A variable is a location in memory (storage area) to hold data. To indicate the
+    storage area, each variable should be given a unique name (identifier).
+
+
+    We use variables to temporarily store data in computer''s memory. In Java, the
+    typeof of a variable should be specified at the time of declaration.
+
+
+    In Java, we have two categories of types:
+
+
+    - Primitives: for storing simple values like Numbers, Strings and Booleans.
+
+    - Reference Types: for storing complex objects like email messages.
+
+
+    ## Primitive Types
+
+
+    A primitive data type specifies the size and type of variable values, and it has
+    no additional methods. There are eight primitive data types in Java.
+
+    '
+  mdcn: '
+
+
+    ## JAVA 电子书
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_0_0.png)
+
+
+    作者 @curious_.programmer
+
+
+    # 上传至 Telegram 的 Python, Java, C, C++ 笔记
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_1_0.png)
+
+
+    ## 获取更多电子书！
+
+
+    @curious_.programmer
+
+
+    ## 关于此 PDF：
+
+
+    《整洁代码》（Clean Code）是 Java 程序员的另一本经典。任何人都可以学习编程，但编写整洁的代码需要实践。当代码编写糟糕时，你会浪费无数的时间和大量的资源。这本
+    PDF 教你如何阅读代码，并挑战你去思考代码的正确之处。它分为三个部分——基础、类型和控制流。以及 AWT、Swing。
+
+
+    这本 PDF 包含了我们涵盖的“Java 初学者”全部内容。
+
+
+    - 如果你是 Java 完全初学者，这是 curious_programmer 编写的第一个值得投资的 PDF。
+
+    - 它涵盖了 Java 的所有基础。
+
+
+    ## 基础...........................................................................................................
+    6
+
+
+    - Java 开发工具包 (JDK)...................................................................
+    6
+
+    Java 版本....................................................................................
+    7
+
+    Java 代码如何执行...............................................................................
+    7
+
+    Java 应用程序架构........................................................... 8
+
+    关于 Java 的 5 个有趣事实..................................................................
+    8
+
+
+    ## 类型............................................................................................................
+    10
+
+
+    - 变量.........................................................................................................
+    10
+
+    基本类型..................................................................................
+    10
+
+    声明变量..............................................................................
+    11
+
+    注释...............................................................................................
+    12
+
+    引用类型...............................................................................
+    13
+
+    字符串..................................................................................................
+    13
+
+    常用字符串方法.......................................................................
+    15
+
+    转义序列................................................................................
+    15
+
+    数组...............................................................................................
+    16
+
+    数组类..................................................................................
+    18
+
+    多维数组...............................................................................
+    19
+
+    常量...........................................................................................
+    21
+
+    算术表达式..................................................................................
+    22
+
+    比较运算符...............................................................................
+    22
+
+    逻辑运算符............................................................................
+    23
+
+    三元运算符..............................................................................
+    23
+
+
+    递增和递减运算符...............................................................24
+
+
+    复合赋值运算符................................................................................24
+
+
+    操作顺序..................................................................................25
+
+
+    类型转换....................................................................................................25
+
+
+    数字格式化...............................................................................28
+
+
+    读取输入........................................................................................28
+
+
+    ## 控制流...............................................................................29
+
+
+    If 语句......................................................................................29
+
+
+    Switch 语句..................................................................31
+
+
+    For 循环.........................................................................................34
+
+
+    While 循环...............................................................................37
+
+
+    Do..While 循环.......................................................................39
+
+
+    For-each 循环.....................................................................41
+
+
+    ## JAVA AWT...............................................................................43
+
+
+    组件类 (component class)...............................................................43
+
+
+    容器 (container)...............................................................................43
+
+
+    容器类型..................................................................44
+
+
+    ## JAVA SWING..................................................................46
+
+
+    ## AWT 和 Swing 的区别 .......47
+
+
+    - 基础
+
+
+    Java 是一种强大的通用编程语言。它被用于开发桌面和移动应用程序、大数据处理、嵌入式系统等。根据 Java 的所有者 Oracle 公司的数据，Java
+    运行在全球 30 亿台设备上，这使得 Java 成为最流行的编程语言之一。
+
+
+    ## Java 开发工具包 (JDK)
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_5_0.png)
+
+
+    我们使用 Java 开发工具包 (JDK) 来构建 Java 应用程序。JDK 包含编译器、Java 运行环境 (JRE) 以及我们用于构建应用程序的类库。
+
+
+    ## Java 版本：
+
+
+    我们有四个版本的 Java，分别用于构建不同类型的应用程序：
+
+
+    Java 标准版 (SE)：Java 核心平台。它包含了每个 Java 开发者必须学习的所有库。
+
+
+    Java 企业级版 (EE)：用于构建非常庞大的分布式系统。它在 Java SE 之上构建，并为构建容错的、分布式多层软件提供了额外的库。
+
+
+    Java 微型版 (ME)：Java SE 的子集，为移动设备设计。
+
+
+    Java Card：用于智能卡。
+
+
+    ## Java 代码如何执行
+
+
+    Java 编译器获取 Java 代码并将其编译为 Java 字节码格式。当我们运行 Java 应用程序时，Java 虚拟机 (JVM) 被加载到内存中。它将我们的字节码作为输入，并翻译成底层操作系统的原生代码。几乎所有的操作系统都有各种虚拟机的实现。
+
+
+    ## Java 应用程序架构
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_7_0.png)
+
+
+    Java 程序中最小的构建单元是方法（其他编程语言中称为函数）。我们在类中组合相关的方法，在包中组合相关的类。Java 的这种模块化允许我们将大型程序拆分为更易理解和重用的较小构建单元。
+
+
+    ## 关于 Java 的 5 个有趣事实
+
+
+    1. Java 由 James Gosling 在 1995 年在 Sun Microsystems 公司（后被 Oracle 收购）开发。
+
+    2. 它最初被称为 Oak。后来被更名为 Green，最后受 Java 咖啡启发更名为 Java。
+
+    3. 全球有近 900 万 Java 开发者。
+
+    4. 大约有 30 亿部手机运行 Java，还有 1.25 亿电视和每台蓝光播放器。
+
+    5. 根据 indeed.com 的数据，美国 Java 开发者的平均薪资略高于 100,000 美元。
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_8_0.png)
+
+
+    ## 类型
+
+
+    ## 变量
+
+
+    顾名思，数据类型指定了 Java 中变量内部可以存储的数据类型。Java 是一种静态类型语言。这意味着所有变量在使用之前都必须声明。
+
+
+    变量是内存中的一个位置（存储区域），用于存放数据。为了指示该存储区域，每个变量都应该赋予一个唯一的名称（标识符）。
+
+
+    我们使用变量在计算机内存中临时存储数据。在 Java 中，变量的类型应该在声明时指定。
+
+
+    在 Java 中，我们有两种类型：
+
+
+    - 基本类型 (Primitives)：用于存储数字、字符串和布尔值等简单值。
+
+    - 引用类型 (Reference Types)：用于存储电子邮件消息等复杂对象。
+
+
+    ## 基本类型
+
+
+    基本数据类型指定了变量值的大小和类型，并且没有额外的方法。Java 中有 8 种基本类型。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # JAVA EBOOK
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_0_0.png)
+
+
+    by @curious_.programmer'
+  - '[PAGE 1]
+
+
+    # # Python, Java, C, C++ Notes Uploaded on Telegram
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_1_0.png)
+
+
+    # # Join For More Ebooks!
+
+
+    @curious_.programmer'
+  - '[PAGE 2]
+
+
+    # About this PDF:
+
+
+    Clean Code is another classic for Java programmers.
+
+    Anyone can learn to code, but it takes practice to write clean code. When code
+    is poorly written, you can lose countless hours and significant resources. This
+    PDF teaches you to read code and challenges you to think about what''s right about
+    that code. It is divided into three parts - Basics, Types, and Control flows.
+    And AWT, Swing.
+
+
+    This PDF includes the materials we covered complete java for beginners.
+
+
+    +   - If you''re completely new to Java, this is the first PDF by curious_programmer
+    worth investing in.
+
+    - It covers all the fundamentals of Java.'
+  - '[PAGE 3]
+
+
+    # Basics...........................................................................................................
+    6
+
+
+    +   Java Development Kīt..................................................................................
+    6
+
+    Java Editions....................................................................................
+    7
+
+    How Java Code Gets Executed...............................................................
+    7
+
+    Architecture of Java Applications...........................................................
+    8
+
+    5 Interesting Facts about Java..................................................................
+    8
+
+
+    # Types............................................................................................................
+    10
+
+
+    +   Variables.................................................................................................
+    10
+
+    Primitive Types..................................................................................
+    10
+
+    Declaring Variables..............................................................................
+    11
+
+    Comments...............................................................................................
+    12
+
+    Reference Types...............................................................................
+    13
+
+    Strings..................................................................................................
+    13
+
+    Useful String Methods.......................................................................
+    15
+
+    Escape Sequences................................................................................
+    15
+
+    Arrays...............................................................................................
+    16
+
+    The Array Class..................................................................................
+    18
+
+    Multi-dimensional Arrays...............................................................
+    19
+
+    Constants...........................................................................................
+    21
+
+    Arithmetic Expressions.................................................................
+    22
+
+    Comparison Operators...............................................................
+    22
+
+    Logical Operators............................................................................
+    23
+
+    Ternary Operator..............................................................................
+    23'
+  - '[PAGE 4]
+
+
+    Increment and Decrement Operators...............................................................24
+
+
+    Augmented Assignment Operator................................................................24
+
+
+    Order of Operations..................................................................................25
+
+
+    Casting....................................................................................................25
+
+
+    Formatting Numbers...............................................................................28
+
+
+    Reading Input........................................................................................28
+
+
+    # Control Flow...............................................................................29
+
+
+    If Statements......................................................................................29
+
+
+    Switch Statements..................................................................31
+
+
+    For Loops.................................................................................34
+
+
+    While Loops...............................................................................37
+
+
+    Do..While Loops.......................................................................39
+
+
+    For-each Loops.....................................................................41
+
+
+    # JAVA AWT...............................................................................43
+
+
+    component class...............................................................43
+
+
+    container...............................................................................43
+
+
+    container types..................................................................44
+
+
+    # JAVA SWING..................................................................46
+
+
+    # Difference Between AWT and Swing .......47'
+  - '[PAGE 5]
+
+
+    +   * Basics
+
+
+    Java is a powerful general-purpose programming language. It is used to develop
+    desktop and mobile applications, big data processing, embedded systems, and so
+    on. According to Oracle, the company that owns Java, Java runs on 3 billion devices
+    worldwide, which makes Java one of the most popular programming languages.
+
+
+    # Java Development Kit
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_5_0.png)
+
+
+    We use Java Development Kit (JDK) to build Java applications. JDK contains a compiler,
+    the Java Runtime Environment (JRE) and a library of classes that we useo to build
+    applications.'
+  - '[PAGE 6]
+
+
+    # Java Editions:
+
+
+    We have four editions of Java, each used for building a different type of application:
+
+
+    Java Standard Edition (SE): the core Java platform. It contains all of the libraries
+    that every Java developer must learn.
+
+
+    Java Enterprise Edition (EE): used for building very large-scale distributed systems.
+    It''s built on top of Java SE and provides additional libraries for building fault-tolerant,
+    distributed multi-tier software.
+
+
+    Java Micro Edition (ME): a subset of Java SE, designed for Mobile devices.
+
+
+    Java Card: used in smart cards.
+
+
+    # How Java Code Gets Executed
+
+
+    The Java compiler takes Java code and compiles it down to Java Byte code format.
+    When we run Java applications, Java Virtual Machine (JVM) gets loaded in memory.
+    It takes our bytecode as the input and translates it to the native code for the
+    underlying operating system. There are various implementations of Java Virtual
+    Machine for almost all operating systems.'
+  - '[PAGE 7]
+
+
+    # Architecture of Java Applications
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_7_0.png)
+
+
+    The smallest building blocks in Java programs are methods (also called functions
+    in other programming languages). We combine related methods in classes, and related
+    classes in packages. This modularity in Java allows us to break down large programs
+    into smaller building blocks that are easier to understand and re-use.
+
+
+    # 5 Interesting Facts about Java
+
+
+    +   1. Java was developed by James Gosling in 1995 at Sun Microsystems (lateracquired
+    by Oracle).
+
+    n2. It was initially called Oak. Later it was renamed to Green and was finally
+    renamed to Java inspired by Java coffee.
+
+    3. Java has close to 9 million developers worldwide.'
+  - '[PAGE 8]
+
+
+    +   4. About 3 billion mobile phones run Java, as well as 125 million TV sets
+    andevery Blu-Ray player.
+
+
+    +   5. According to indeed.com, the average salary of a Java developer is just
+    over
+
+
+    +   a. $100,000 per year in the US.
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_8_0.png)'
+  - '[PAGE 9]
+
+
+    # # Types
+
+
+    # ## Variables
+
+
+    As the name suggests, data types specify the type of data that can be stored inside
+    variables in Java. Java is a statically-typed language. This means that all variables
+    must be declared before they can be used.
+
+
+    A variable is a location in memory (storage area) to hold data. To indicate the
+    storage area, each variable should be given a unique name (identifier).
+
+
+    We use variables to temporarily store data in computer''s memory. In Java, the
+    typeof of a variable should be specified at the time of declaration.
+
+
+    In Java, we have two categories of types:
+
+
+    +   - Primitives: for storing simple values like Numbers, Strings and Booleans.
+
+    - Reference Types: for storing complex objects like email messages.
+
+
+    # ## Primitive Types
+
+
+    A primitive data type specifies the size and type of variable values, and it has
+    no additional methods. There are eight primitive data types in Java.'
+- md: "\n| Type | Bytes | Range |\n|---|---|---|\n| byte | 1 | [-128, 127] |\n| short\
+    \ | 2 | [-32K, 32K] |\n| int | 4 | [-2B, 2B] |\n| long | 8 | |\n| float | 4 |\
+    \ |\n| double | 8 | |\n| char | 2 | A, B, C, ... |\n| boolean | 1 | true / false\
+    \ |\n\n## Declaring Variables\n\n```java\n//@curious_.programmer\nbyte age = 30;\n\
+    long viewsCount = 3_123_456L; float price = 10.99F;\nchar letter = 'A';\nboolean\
+    \ isEligible = true;\n```\n\n- In Java, we terminate statements with a semicolon.\n\
+    - We enclose characters with single quotes and strings (series of characters)\
+    \ with double quotes.\n- The default integer type in Java is int. To represent\
+    \ a long value, we should add L to it as a postfix.\n- The default floating-point\
+    \ type in Java is double. To represent a float, we should append F to it as a\
+    \ postfix.\n\n## Comments\n\nWe use comments to add notes to our code. Two Types\
+    \ of comments in Java commonly used.\n\n- Single Line Comment:\n- Multi Line Comment:\n\
+    \n```java\n// Single Line comment - This is a comment and it won't get executed.\n\
+    \n/* Multi Line Comment - This is a comment and it won't get executed.\n   @curious_,programmer\n\
+    \   This is a comment and it won't get executed.\n*/\n```\n\n## Reference Types\n\
+    \nIn Java we have 8 primitive types. All the other types are reference types.\
+    \ These types don't store the actual objects in memory. They store the reference\
+    \ (or the address of) an object in memory.\n\nTo use reference types, we need\
+    \ to allocate memory using the new operator. The memory gets automatically released\
+    \ when no longer used.\n\n```java\nDate now = new Date();\n```\n\n## Strings\n\
+    \nIn Java, a string is a sequence of characters. For example, \"hello\" is a string\
+    \ containing a sequence of characters 'h', 'e', 'l', and 'o'. We use double quotes\
+    \ to represent a string in Java.\n\nStrings are reference types but we don't need\
+    \ to allocate memory to them. We can declare string variables like the primitives\
+    \ since we use a lot.\n\n```java\n//Curious_programmer\nclass Main {\n    public\
+    \ static void main(String[] args) {\n\n        // create strings\n        String\
+    \ first = \"Java\";\n        String second = \"Python\";\n        String third\
+    \ = \"JavaScript\";\n\n        // print strings\n        System.out.println(first);\
+    \ // print Java\n        System.out.println(second); // print Python\n       \
+    \ System.out.println(third); // print JavaScript\n    }\n}\n```\n\n```bash\njava\
+    \ -cp /tmp/zpNjEpowW Main\nJava\nPython\nJavaScript\n```\n\n## Useful String Methods\n\
+    \nThe String class in Java provides a number of useful methods:\n\n![](img/5dd48e01a3cc15319489428476134150_14_0.png)\n\
+    \nStrings are immutable, which means once we initialize them, their value cannot\
+    \ be changed. All methods that modify a string (like to Upper Case) return a new\
+    \ string object. The original string remains unaffected.\n\n## Escape Sequences\n\
+    \nIf you need to use a backslash or a double quotation mark in string, you need\
+    \ to prefix it with a backslash. This is called escaping.\n\nCommon escape sequences:\n\
+    \n- \\'\n- \\n (new line)\n- \\t (tab)\n\n## Arrays\n\nAn array is, a collection\
+    \ of similar types of data.\n\nFor example, if we want to store the names of 100\
+    \ people then we can create an array of the string type that can store 100 names.\n\
+    \n```java\nString [] array = new String[100];\n```\n\nHere, the above array cannot\
+    \ store more than 100 names. The number of values in a Java array is always fixed.\n\
+    \nWe use arrays to store a list of objects. We can store any type of object in\
+    \ an array (primitive or reference type). All items (also called elements) in\
+    \ an array have the same type.\n\nJava arrays have a fixed length (size). You\
+    \ cannot add or remove new items once you instantiate an array. If you need to\
+    \ add new items or remove existing items, you need to use one of the collection\
+    \ classes.\n\n```java\n//@curious_.programmer\nint[] numbers = new int[5];\nnumbers[0]\
+    \ = 10;\nnumbers[1] = 20;\nnumbers[2] = 30;\nnumbers[3] = 40;\nnumbers[4] = 50;\n\
+    \n// Shortcut\nint[] numbers = { 10, 20, 30, 40, 50 };\n```\n\n```java\n//Curious.Programmer\n\
+    class Testarray{\n    public static void main(String[] args){\n        int a[]=new\
+    \ int[5];//declaration and instantiation\n        a[0]=10;//initialization\n \
+    \       a[1]=20;\n        a[2]=70;\n        a[3]=40;\n        a[4]=50;\n     \
+    \   // traversing array\n        for(int i=0; i<a.length;i++){\n            System.out.println(a[i]);\n\
+    \        }\n    }\n}\n```\n\n// creating and initializing an array of 5 elements\n\
+    ```bash\njava -cp /tmp/zpNjEpowW Testarray\n10\n20\n70\n40\n50\n```\n\n## The\
+    \ Array Class\n\nThe java.util.Arrays class contains a static factory that allows\
+    \ arrays to be viewed as lists. Following are important points about Arrays -\n\
+    \n- class contains various methods for manipulating arrays (such as sorting and\
+    \ searching).\n- The methods in this class throw an Exception if the specified\
+    \ array is null.\n- Array class provides a few useful methods for working with\
+    \ arrays.\n\n```java\n//@curious_.programmer\nint[] numbers = { 4, 2, 3 };\nArrays.sort(numbers);\n\
+    String result = Arrays.toString(numbers);\nSystem.out.println(result);\n```\n\n\
+    ## Multi-dimensional Arrays\n\nA multidimensional array is an array of arrays.\
+    \ Each element of multidimensional array is an array itself. For example,\n\n\
+    ```java\n// @curious_.programmer\n// Creating 2x3 array (two rows, three columns)\n\
+    int[][] matrix = new int[2][3];\nmatrix[0][0] = 10;\n\n// Shortcut\nint[][] matrix\
+    \ = {\n    {1, 2, 3},\n    {4, 5, 6}\n};\n```\n\n```java\n//Curious_.programmer\n\
+    class Main {\n    public static void main(String[] args) {\n        int[][] myNumbers\
+    \ = {{1, 2, 3}, {4, 5, 6}};\n        for (int i = 0; i < myNumbers.length; i++)\
+    \ {\n            for (int j = 0; j < myNumbers[i].length; j++) {\n           \
+    \     System.out.println(myNumbers[i][j]);\n            }\n        }\n    }\n\
+    }\n```\n\n## Constants\n\nConstants (also called final variables) have a fixed\
+    \ value. Once we set them, we cannot change them.\n\nBy convention, we use CAPITAL\
+    \ LETTERS to name constants. Multiple words can be separated using underscore.\n\
+    \n```java\nfinal float INTEREST_RATE = 0.4;\n```\n\n## Arithmetic Expressions\n\
+    \nArithmetic operators are used to perform arithmetic operations on variables\
+    \ and data. For example,\n\n```java\n//@curious._programmer\nint x = 10 + 3;\n\
+    int x = 10 - 3;\nint x = 10 * 2;\nint x = 10 / 3; // returns an int\nfloat x =\
+    \ (float)10 / (float)3; // returns a float\nint x = 10 % 3; // modulus (remainder\
+    \ of division)\n```\n\n## Comparison Operators\n\noperators are used to check\
+    \ the relationship between two operands. We use comparison operators to compare\
+    \ values. It returns either true or false.\n\n```java\n//@curious._programmer\n\
+    x == y // equality operator\nx != y // inequality operator\nx > y\nx < y\nx <=\
+    \ y\n```\n\n## Logical Operators\n\nWe use logical operators to combine multiple\
+    \ boolean values/expressions.\n\n- x && (AND): if both x and y are true, the result\
+    \ will be true.\n- x || (OR): if either x or y or both are true, the result will\
+    \ be true.\n- !x (NOT): reverses a boolean value. True becomes false.\n\n```java\n\
+    //@curious_programmer\nboolean hasHighIncome = true;\nboolean hasGoodCredit =\
+    \ false;\nboolean hasCriminalRecord = false;\nboolean isEligible = (hasHighIncome\
+    \ || hasGoodCredit) && !isEligible;\n```\n\n## The Ternary Operator\n\nA ternary\
+    \ operator evaluates the test condition and executes a block of code based on\
+    \ the result of the condition.\n\n```java\nString className = (income > 100_000)\
+    \ ? \"First\" : \"Economy\";\n```\n\n## Increment and Decrement Operators\n\n\
+    Java also provides increment and decrement operators: ++ and -- respectively.\
+    \ ++ increases the value of the operand by 1, while -- decrease it by 1.\n\n```java\n\
+    // @curious._programmer\nint x = 1;\nx++; // Equivalent to x + 1\nx--; // Equivalent\
+    \ to x - 1\n```\n\n## Augmented Assignment Operator\n\n```java\nint x = 1;\nx\
+    \ += 5; // Equivalent to x + 5\n```\n\n## Order of Operations\n\n```java\n// @curious_programmer\n\
+    String className;\n\nif (income > 100_000) {\n    className = \"First\"\n} else\
+    \ {\n    className = \"Economy\"\n}\n```\n\nMultiplication and division operators\
+    \ have a higher order than addition and subtraction. They get applied first. We\
+    \ can always change the order using parentheses.\n\n```java\nint x = 10 + 3 *\
+    \ 2;\nint x = (10 + 3) * 2;\n```\n\n## Casting\n\nThe process of converting the\
+    \ value of one data type (int, float, double, etc.) to another data type is known\
+    \ as typecasting. In Java, we have two types of casting:\n\n- Implicit: happens\
+    \ automatically when we store a value in a larger or more precise data type.\n\
+    - Explicit: we do it manually.\n"
+  mdcn: "\n\n| 类型 | 字节 | 范围 |\n|---|---|---|\n| byte | 1 | [-128, 127] |\n| short\
+    \ | 2 | [-32K, 32K] |\n| int | 4 | [-2B, 2B] |\n| long | 8 | |\n| float | 4 |\
+    \ |\n| double | 8 | |\n| char | 2 | A, B, C, ... |\n| boolean | 1 | true / false\
+    \ |\n\n## 声明变量\n\n```java\n//@curious_.programmer\nbyte age = 30;\nlong viewsCount\
+    \ = 3_123_456L; float price = 10.99F;\nchar letter = 'A';\nboolean isEligible\
+    \ = true;\n```\n\n- 在 Java 中，我们用分号结束语句。\n- 我们用单引号包裹字符，用双引号包裹字符串（一系列字符）。\n- Java\
+    \ 默认的整数类型是 `int`。为了表示一个 `long` 值，我们应该在末尾添加 `L` 作为后缀。\n- Java 默认的浮点类型是 `double`。为了表示一个\
+    \ `float`，我们应该在末尾添加 `F` 作为后缀。\n\n## 注释\n\n我们使用注释来给代码添加备注。Java 中常用有两种类型的注释。\n\n\
+    - 单行注释：\n- 多行注释：\n\n```java\n// 单行注释 - 这是一个注释，它不会执行。\n\n/* 多行注释 - 这是一个注释，它不会执行。\n\
+    \   @curious_,programmer\n   这是一个注释，它不会执行。\n*/\n```\n\n## 引用类型\n\n在 Java 中我们有\
+    \ 8 种原始类型。所有其他类型都是引用类型。这些类型并不在内存中存储实际的对象。它们存储的是内存中对象的引用（或地址）。\n\n要使用引用类型，我们需要使用\
+    \ `new` 运算符分配内存。当内存不再被使用时，它会自动释放。\n\n```java\nDate now = new Date();\n```\n\n\
+    ## 字符串\n\n在 Java 中，字符串是字符序列。例如，“hello”是一个包含字符 'h'、'e'、'l' 和 'o' 序列的字符串。我们在 Java\
+    \ 中使用双引号来表示字符串。\n\n字符串是引用类型，但我们不需要为它们分配内存。由于我们频繁使用，可以像声明原始类型一样声明字符串变量。\n\n```java\n\
+    //Curious_programmer\nclass Main {\n    public static void main(String[] args)\
+    \ {\n\n        // 创建字符串\n        String first = \"Java\";\n        String second\
+    \ = \"Python\";\n        String third = \"JavaScript\";\n\n        // 打印字符串\n\
+    \        System.out.println(first); // 打印 Java\n        System.out.println(second);\
+    \ // 打印 Python\n        System.out.println(third); // 打印 JavaScript\n    }\n}\n\
+    ```\n\n```bash\njava -cp /tmp/zpNjEpowW Main\nJava\nPython\nJavaScript\n```\n\n\
+    ## 有用的字符串方法\n\nJava 中的 `String` 类提供了许多实用方法：\n\n![](img/5dd48e01a3cc15319489428476134150_14_0.png)\n\
+    \n字符串是不可变的，这意味着一旦初始化了它们，它们值就无法改变。所有修改字符串的方法（如转为大写）都会返回一个新的字符串对象。原始字符串不受影响。\n\n\
+    ## 转义序列\n\n如果你需要在字符串中使用反斜杠或双引号，需要在它们前面加一个反斜杠。这被称为转义。\n\n常见的转义序列：\n\n- \\'\n- \\\
+    n (换行)\n- \\t (制表符)\n\n## 数组\n\n数组是相同类型类型数据的集合。\n\n例如，如果我们想存储 100 个人的名字，那么我们可以创建一个\
+    \ `String` 类型的数组，它可以存储 100 个名字。\n\n```java\nString [] array = new String[100];\n\
+    ```\n\n在这里，上面的数组不能存储超过 100 个名字。Java 数组中的值数量始终是固定的。\n\n我们使用数组来存储对象列表。我们可以在数组中存储任何类型的对象（原始类型或引用类型）。数组中的所有项（也称为元素）具有相同的类型。\n\
+    \nJava 数组具有固定长度（大小）。一旦实例化了数组，你就无法添加或删除新项。如果你需要添加新项或删除现有项，则需要使用集合类之一。\n\n```java\n\
+    //@curious_.programmer\nint[] numbers = new int[5];\nnumbers[0] = 10;\nnumbers[1]\
+    \ = 20;\nnumbers[2] = 30;\nnumbers[3] = 40;\nnumbers[4] = 50;\n\n// 快捷方式\nint[]\
+    \ numbers = { 10, 20, 30, 40, 50 };\n```\n\n```java\n//Curious.Programmer\nclass\
+    \ Testarray{\n    public static void main(String[] args){\n        int a[]=new\
+    \ int[5];//声明和实例化\n        a[0]=10;//初始化\n        a[1]=20;\n        a[2]=30;\n\
+    \        a[3]=40;\n        a[4]=50;\n\n        for(int i=0; i<a.length; i++){\n\
+    \            System.out.println(a[i]);\n        }\n    }\n}\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 10]
+
+
+    | Type | Bytes | Range |
+
+    |---|---|--|
+
+    | byte | 1 | [-128, 127] |
+
+    | short | 2 | [-32K, 32K] |
+
+    | int | 4 | [-2B, 2B] |
+
+    | long | 8 | |
+
+    | float | 4 | |
+
+    | double | 8 | |
+
+    | char | 2 | A, B, C, ... |
+
+    | boolean | 1 | true / false |
+
+
+    # # Declaring Variables
+
+
+    ```
+
+    ```
+
+    //@curious_.programmer
+
+    nbyte age = 30;
+
+    long viewsCount = 3_123_456L; float price = 10.99F;
+
+    char letter = ''A'';
+
+    boolean isEligible = true;
+
+    ```
+
+    ```
+
+
+    +   * In Java, we terminate statements with a semicolon.
+
+    * We enclose characters with single quotes and strings (series of characters)
+    with double quotes.
+
+    * The default integer type in Java is int. To represent a long value,'
+  - "[PAGE 11]\n\nwe should add Lto to it as a postfix.\n\n+   - The default floating-point\
+    \ type in Java is double. To represent a float, we should append F to it as a\
+    \ postfix.\n\n# Comments\n\nWe use comments to add notes to our code. Two Types\
+    \ of comments in Java commonly used.\n\n+   - Single Line Comment:\n- Multi Line\
+    \ Comment:\n\n```\n// Single Line comment - This is a comment and it won't get\
+    \ executed.\n\n/* Multi Line Comment - This is a comment and it won't get executed.\n\
+    \   @curious_,programmer\n   This is a comment and it won't get executed.\n*/\n\
+    ```"
+  - '[PAGE 12]
+
+
+    # Reference Types
+
+
+    In Java we have 8 primitive types. All the other types are reference types. These
+    types don''t store the actual objects in memory. They store the reference (or
+    the address of) an object in memory.
+
+
+    To use reference types, we need to allocate memory using the new operator. The
+    memory gets automatically released when no longer used.
+
+
+    ```
+
+    Date now = new Date();
+
+    ```
+
+
+    # Strings
+
+
+    In Java, a string is a sequence of characters. For example, "hello" is a string
+    containing a sequence of characters ''h'', ''e'', ''l'', and ''o''. We use double
+    quotes to represent a string in Java.
+
+
+    Strings are reference types but we don''t need to allocate memory to them. We
+    can declare string variables like the primitives since we use a lot.'
+  - "[PAGE 13]\n\n```\n//Curious_programmer\nclass Main {\n    public static void\
+    \ main(String[] args) {\n\n        // create strings\n        String first = \"\
+    Java\";\n        String second = \"Python\";\n        String third = \"JavaScript\"\
+    ;\n\n        // print strings\n        System.out.println(first); // print Java\n\
+    \        System.out.println(second); // print Python\n        System.out.println(third);\
+    \ // print JavaScript\n    }\n\n    return go(f, seed, []);\n}\n```\n\n```\njava\
+    \ -cp /tmp/zpNjEpowW Main\nJava\nPython\nJavaScript\n```\n\n14"
+  - '[PAGE 14]
+
+
+    # # Useful String Methods
+
+
+    The String class in Java provides a number of useful methods:
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_14_0.png)
+
+
+    Strings are immutable, which means once we initialize them, their value cannot
+    be changed. All methods that modify a string (like to Upper Case) return a new
+    string object. The original string remains unaffected.
+
+
+    # # Escape Sequences
+
+
+    If you need to use a backslash or a double quotation mark in string, you need
+    toprefix it with a backslash. This is called escaping.
+
+
+    Common escape sequences:
+
+
+    +   - \''
+
+    - \n (new line)
+
+    - \t (tab)'
+  - '[PAGE 15]
+
+
+    # Arrays
+
+
+    An array is, a collection of similar types of data.
+
+
+    For example, if we want to store the names of 100 people then we can create an
+    array of the string type that can store 100 names.
+
+
+    ```
+
+    String [] array = new String[100];
+
+    ```
+
+
+    Here, the above array cannot store more than 100 names. The number of values in
+    a Java array is always fixed.
+
+
+    We use arrays to store a list of objects. We can store any type of object in an
+    array (primitive or reference type). All items (also called elements) in an array
+    have the same type.
+
+
+    Java arrays have a fixed length (size). You cannot add or remove new items once
+    you instantiate an array. If you need to add new items or remove existing items,
+    you need to use one of the collection classes.'
+  - '[PAGE 16]
+
+
+    ```
+
+    //@curious_.programmer
+
+    int[] numbers = new int[5];
+
+    numbers[0] = 10;
+
+    numbers[1] = 20;
+
+    numbers[2] = 30;
+
+    numbers[3] = 40;
+
+    numbers[4] = 50;
+
+
+    // Shortcut
+
+    int[] numbers = { 10, 20, 30, 40, 50 };
+
+    ```
+
+
+    ```
+
+    //Curious.Programmer
+
+    class Testarray{
+
+    public static void main(String[] args){{
+
+    int a[]=new int[5];//declaration and instantiation
+
+    a[0]=10;//initialization
+
+    a[1]=20;
+
+    a[2]=70;
+
+    a[3]=40;
+
+    a[4]=50;
+
+    //traversing array
+
+    for(int i=0;i<a.length;i++)//length is the property
+
+    of array
+
+    System.out.println(a[i]);
+
+    }}
+
+    ```
+
+
+    // creating and initializing an array of 5 elements'
+  - '[PAGE 17]
+
+
+    ```
+
+    java -cp /tmp/7Jvzh0S3PX Testarray
+
+    10
+
+    20
+
+    70
+
+    40
+
+    50|
+
+    ```
+
+
+    # The Array Class
+
+
+    The java.util.Arrays class contains a static factory that allows arrays to be
+    viewed as lists.
+
+    Following are the important points about Arrays -
+
+
+    +   - This class contains various methods for manipulating arrays (such as sorting
+    and searching).
+
+    - The methods in this class throw a Null Pointer Exception if the specified array
+    reference is null.
+
+    - The Array class provides a few useful methods for working with arrays.'
+  - '[PAGE 18]
+
+
+    ```
+
+    //@curious_.programmer
+
+    int[] numbers = { 4, 2, 7 };
+
+    Arrays.sort(numbers);
+
+
+    String result = Arrays.toString(numbers);
+
+    System.out.println(result);
+
+    ```
+
+
+    # Multi-dimensional Arrays
+
+
+    A multidimensional array is an array of arrays. Each element of a multidimensional
+    array is an array itself. For example,
+
+
+    // Creating a 2x3 array (two rows, three columns)'
+  - "[PAGE 19]\n\n```\n// @curious_.programmer\n// Creating a 2x3 array (two rows,\
+    \ three columns)\nint[2][3] matrix = new int[2][3];\nmatrix[0][0] = 10;\n\n//\
+    \ Shortcut\nint[2][3] matrix = {\n    {1, 2, 3},\n    {4, 5, 6}\n};\n```\n\n```\n\
+    // Courous_.programmer\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        int[][] myNumbers = {{1, 2, 3, 4}, {5, 6, 7}};\n        for\
+    \ (int i = 0; i < myNumbers.length; ++i) {\n            for (int j = 0; j < myNumbers[i].length;\
+    \ ++j) {\n                System.out.println(myNumbers[i][j]);\n            }\n\
+    \        }\n    }\n}\n```"
+  - '[PAGE 20]
+
+
+    ```
+
+    java -cp /tmp/MVMLIIYEj9 Main
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    7
+
+    ```
+
+
+    # Constants
+
+
+    Constants (also called final variables) have a fixed value. Once we set them,
+    we cannot change them.
+
+
+    ```
+
+    final float INTEREST_RATE = 0.04;
+
+    ```
+
+
+    By convention, we use CAPITAL LETTERS to name constants. Multiple words can be
+    separated using an underscore.'
+  - '[PAGE 21]
+
+
+    # Arithmetic Expressions
+
+
+    Arithmetic operators are used to perform arithmetic operations on variables and
+    data. For example,
+
+
+    ```
+
+    //@curious._programmer
+
+    int x = 10 + 3;
+
+    int x = 10 - 3;
+
+    int x = 10 * 2;
+
+    int x = 10 / 3; // returns an int
+
+    float x = (float)10 / (float)3; // returns a float
+
+    int x = 10 % 3; // modulus (remainder of division)
+
+    ```
+
+
+    # Comparison Operators
+
+
+    operators are used to check the relationship between two operands. We use comparison
+    operators to compare values.
+
+
+    It returns either true or false.
+
+
+    ```
+
+    //@curious._programmer
+
+    x == y // equality operator
+
+    x != y // in-inequality operator
+
+    x > y
+
+    x < y
+
+    x <= y
+
+    ```'
+  - '[PAGE 22]
+
+
+    # Logical Operators
+
+
+    We use logical operators to combine multiple boolean
+
+    values/expressions.
+
+
+    +   - x && (AND): if both x and y are true, the result will be true.
+
+    - x || (OR): if either x or y or both are true, the result will be true.
+
+    - !x (NOT): reverses a boolean value. True becomes false.
+
+
+    ```
+
+    //@curious_programmer
+
+    bool hasHighIncome = true;
+
+    bool hasGoodCredit = false;
+
+    bool hasCriminalRecord = false;
+
+    bool isEligible = (hasHighIncome || hasGoodCredit) && !isEligible;
+
+    ```
+
+
+    # The Ternary Operator
+
+
+    A ternary operator evaluates the test condition and executes a block
+
+    of code based on the result of the condition.
+
+
+    ```
+
+    String className = (income > 100_000) ? "First" : "Economy";
+
+    ```'
+  - '[PAGE 23]
+
+
+    # Increment and Decrement Operators
+
+
+    Java also provides increment and decrement operators: ++ and -- respectively.
+    ++nincreases the value of the operand by 1, while -- decrease it by 1.
+
+
+    ```
+
+    // @curious._programmer
+
+    int x = 1;
+
+    x++; // Equivalent to x = x + 1
+
+    x--; // Equivalent to x = x - 1
+
+    ```
+
+
+    # Augmented Assignment Operator
+
+
+    ```
+
+    int x = 1;
+
+    x += 5; // Equivalent to x = x + 5
+
+    ```'
+  - "[PAGE 24]\n\n# Order of Operations\n\n```\n// @curious_programmer\nString className;\n\
+    \nif (income > 100_000) {\n    className = \"First\"\n} else {\n    className\
+    \ = \"Economy\"\n}\n```\n\nMultiplication and division operators have a higher\
+    \ order than addition and subtraction. They get applied first. We can always change\
+    \ the order using parentheses.\n\n```\nint x = 10 + 3 * 2;\nint x = (10 + 3) *\
+    \ 2;\n```\n\n# Casting\n\nThe process of converting the value of one data type\
+    \ (int, float, double, etc.) to another data type is known as typecasting. In\
+    \ Java, we have two types of casting:\n\n+   - Implicit: happens automatically\
+    \ when we store a value in a larger or more precise data type.\n- Explicit: we\
+    \ do it manually."
+- md: "\n```java\n// Implicit casting happens because we try to store a short\n//\
+    \ value (2 bytes) in an int (4 bytes).\n```\n\n```java\nshort x = 1;\nint y =\
+    \ x;\n```\n\n// Explicit casting\n\n```java\nint x = 1;\nshort y = (short) x;\n\
+    ```\n\nWe can convert String to an int in java using Integer.parseInt() method.\
+    \ To convert String into Integer, we can use Integer.valueOf() method which returns\
+    \ instance of Integer class.\nTo convert a string to a number, we use one of the\
+    \ following methods.\n\n```java\n//@curious_programmer\nByte.parseByte(\"1\")\n\
+    Short.parseShort(\"1\")\nInteger.parseInt(\"1\")\nLong.parseLong(\"1\")\nFloat.parseFloat(\"\
+    1.1\")\nDouble.parseDouble(\"1.1\")\n```\n\n```java\n//Curious.Programmer\nclass\
+    \ Main {\n    public static void main(String[] args) {\n        // create int\
+    \ type variable\n        int num = 10;\n        System.out.println(\"The integer\
+    \ value: \" + num);\n\n        // convert into double type\n        double data\
+    \ = num;\n        System.out.println(\"The double value: \" + data);\n    }\n\
+    }\n```\n\n# Output\n\n```bash\njava -cp /tmp/N6a2EZhlb5 Main\nThe integer value:\
+    \ 10\nThe double value: 10.0\n```\n\n# Formatting Numbers\n\n```java\n// @curious._programmer\n\
+    NumberFormat currency = NumberFormat.getCurrencyInstance();\nString result = currency.format(\"\
+    123456\"); // $123,456\n\nNumberFormat percent = NumberFormat.getPercentInstance();\n\
+    String result = percent.format(0.04); // 4%\n```\n\n# Reading Input\n\n### Java\
+    \ Scanner Class\nScanner class allows the user to take input from the console.\
+    \ It belongs to java.util package. It is used to read the input of primitive types\
+    \ like int, double, long, short, float, and byte. It is the easiest way to read\
+    \ input in Java program.\n\n```java\n// @curious._programmer\nScanner scanner\
+    \ = new Scanner(System.in);\ndouble number = scanner.nextDouble();\nbyte number\
+    \ = scanner.nextByte();\nString name = scanner.next();\nString line = scanner.nextLine();\n\
+    ```\n\n# Control Flow\n\n### If Statements\nIn programming, we use the if..else\
+    \ statement to run a block of code among more than one alternatives.\nFor example,\
+    \ assigning grades (A, B, C) based on the percentage obtained by a student.\n\n\
+    - if the percentage is above 90, assign grade A\n- if the percentage is above\
+    \ 75, assign grade B\n- if the percentage is above 65, assign grade C\n\nHere\
+    \ is the basic structure of an if statement. If you want to execute multiple statements,\
+    \ you need to wrap them in curly braces.\n\n```java\n//@curious._programmer\n\
+    if (condition1)\n    statement1;\nelse if (condition2)\n    statement2;\nelse\
+    \ if (condition3)\n    statement3;\nelse\n    statement4;\n```\n\n```java\n//Curious.Programmer\n\
+    class Main {\n    public static void main(String[] args) {\n        int number\
+    \ = 0;\n        // checks if number is greater than 0\n        if (number > 0)\
+    \ {\n            System.out.println(\"The number is positive.\");\n        }\n\
+    \        // checks if number is less than 0\n        else if (number < 0) {\n\
+    \            System.out.println(\"The number is negative.\");\n        }\n   \
+    \     // if.both condition is false\n        else {\n            System.out.println(\"\
+    The number is 0.\");\n        }\n    }\n}\n```\n\n```bash\njava -cp /tmp/Ve0tGnR48a\
+    \ Main\nThe number is 0.\n```\n\n# Switch Statements\n\nWe use switch statements\
+    \ to execute different parts of the code depending on the value of a variable.\n\
+    After each case clause, we use the break statements to jump out of the switch\
+    \ block.\nThe switch statement allows us to execute a block of code among many\
+    \ alternatives.\n\n![](img/5dd48e01a3cc15319489428476134150_30_0.png)\n\n```java\n\
+    // @curious._programmer\nswitch (x) { \n    case 1:\n      break;\n    case 2:\n\
+    \      break;\n    default:\n}\n```\n\nThe expression is evaluated once and compared\
+    \ with the values of each case.\n\n- If expression matches value1, the code of\
+    \ case value1 is executed. Similarly, the code of case value2 is executed if expression\
+    \ matches with value2.\n- If there is no match, the code of the default case is\
+    \ executed.\n\n```bash\njava -cp /tmp/iU6AUtxgna Main\nSize: Large\n```\n\n# For\
+    \ Loops\n\nFor loops are useful when we know ahead of time how many times we want\
+    \ to repeat something. We declare a loop variable (or loop counter) and in each\
+    \ iteration we increment it until we reach the number of times we want to execute\
+    \ some code.\n\n![](img/5dd48e01a3cc15319489428476134150_33_0.png)\n\n```java\n\
+    //@curious._programmer\nfor (int i = 0; i < 5; i++) {\n    statement;\n}\n```\n\
+    \nHere, the initial Expression initializes variables and executes only once. The\
+    \ condition is evaluated. If the condition is true, the body of for loop is executed.\
+    \ The update Expression updates the value of initial Expression. The condition\
+    \ is evaluated again until the condition is false.\n\n```java\n//Curious.Programmer\n\
+    class Main {\n    public static void main(String[] args) {\n        int n = 5;\n\
+    \        // for loop\n        for (int i = 1; i <= n; i++) {\n            System.out.println(\"\
+    Java is fun\");\n        }\n    }\n}\n```\n\n```bash\njava -cp /tmp/YkAx Main\n\
+    Java is fun\nJava is fun\nJava is fun\n```\n\n# While Loops\n\nWhile loops are\
+    \ useful when we don't know ahead of time how many times we want to repeat something.\
+    \ This may be dependent on values at run-time (e.g. what the user enters). We\
+    \ use break statement to jump out of a loop.\n\n![](img/5dd48e01a3cc15319489428476134150_36_0.png)\n\
+    \n```java\n// @curious._programmer\nwhile (someCondition) {\n    if (someCondition)\
+    \ break;\n}\n```\n\n```java\n// Program to display numbers from 1 to 5\nclass\
+    \ Main {\n    public static void main(String[] args) {\n        // declare variables\n\
+    \        int i = 1, n = 5;\n\n        // while loop from 1 to 5\n        while(i\
+    \ <= n) {\n            System.out.println(i);\n            i++;\n        }\n \
+    \   }\n}\n```\n\n```bash\nOutput\njava -cp /tmp/5W3 Main\n1\n2\n3\n4\n5\n```\n\
+    \n# Do..While Loops\n\nDo..While loops are very similar to while loops but they\
+    \ execute at least once. In contrast, a while loop may never execute if the condition\
+    \ is initially false.\n\n```java\n//@curious._programmer\ndo {\n    // body\n\
+    } while (someCondition);\n```\n\nHere,\n- The body of the loop is executed at\
+    \ first. Then the expression is evaluated.\n- If the expression evaluates to true,\
+    \ the body of the loop inside do statement is executed again.\n- The expression\
+    \ is evaluated once again.\n- If the expression evaluates to true, the body of\
+    \ the loop inside do statement is executed again.\n- This process continues until\
+    \ the expression evaluates to false. Then the loop stops.\n\n![](img/5dd48e01a3cc15319489428476134150_39_0.png)\n\
+    \n# Loop Terminates\n\n```java\n@Curious.Programmer\n// Java Program to display\
+    \ numbers from 1 to 5\nimport java.util.Scanner;\n\n// Program to find the sum\
+    \ of natural numbers from 1 to 100.\nclass Main {\n    public static void main(String[]\
+    \ args) {\n        int i = 1, n = 5;\n\n        // do..while loop from 1 to 5\n\
+    \        do {\n            System.out.println(i);\n            i++;\n        }\
+    \ while (i <= n);\n    }\n}\n```\n\n```bash\njava -cp /tmp/Bn Main\n1\n2\n3\n\
+    4\n5\n```\n\n# For-each Loops\n\nIn Java, the for-each loop is used to iterate\
+    \ through elements of arrays and collections (like ArrayList), it is also known\
+    \ as the enhanced loop.\n\nFor-each loops are useful for iterating over an array\
+    \ or a collection.\n\n```java\n//@curious._programmer\nint[] numbers = {1, 2,\
+    \ 3, 4};\nfor (int number : numbers) {\n    ...\n}\n```\n\n```java\n//Curious.Programmer\n\
+    class Main {\n    public static void main(String[] args) {\n        char[] vowels\
+    \ = {'a', 'e', 'i', 'o', 'u'};\n\n        // iterating through an array using\
+    \ the for-each loop\n        for (char item: vowels) {\n            System.out.println(item);\n\
+    \        }\n    }\n}\n```\n\n# Output\n\n```bash\njava -cp /tmp/c6 Main\na\ne\n\
+    i\no\nu\n```\n\n# Java AWT\n\nJava AWT (Abstract Window Toolkit) is an API to\
+    \ develop Graphical User Interface (GUI) or windows-based applications in Java.\n\
+    \nJava AWT components are platform-dependent i.e. components are displayed according\
+    \ to the view of operating system. AWT is heavy weight i.e. its components are\
+    \ using the resources of underlying operating system (OS).\n\nThe java.awt package\
+    \ provides classes for AWT API such as TextField, Label, TextArea, RadioButton,\
+    \ CheckBox, Choice, List etc.\n\n# Component Class\n\nAll the elements like the\
+    \ button, text fields, scroll bars, etc. are called components. In Java-AWT, there\
+    \ are classes for each component.\n\nIn order to place every component in a particular\
+    \ position on a screen, we need to add them to a container.\n\n# Container\n\n\
+    The Container is a component in AWT that can contain another components like buttons,\
+    \ textfields, labels etc. The classes that extends Container class are known as\
+    \ container such as Frame, Dialog and Panel.\n\nIt is basically a screen where\
+    \ the where the components are placed at their specific locations. Thus it contains\
+    \ and controls the\n"
+  mdcn: "\n\n```java\n// 隐式类型转换是因为我们尝试将一个 short\n// 值（2 字节）存储在 int（4 字节）中。\n```\n\n\
+    ```java\nshort x = 1;\nint y = x;\n```\n\n// 强制类型转换\n\n```java\nint x = 1;\nshort\
+    \ y = (short) x;\n```\n\n在 Java 中，我们可以使用 `Integer.parseInt()` 方法将 String 转换为 int。要将\
+    \ String 转换为 Integer，可以使用 `Integer.valueOf()` 方法，它返回 Integer 类的实例。\n要将字符串转换为数字，我们使用以下方法之一。\n\
+    \n```java\n//@curious_programmer\nByte.parseByte(\"1\")\nShort.parseShort(\"1\"\
+    )\nInteger.parseInt(\"1\")\nLong.parseLong(\"1\")\nFloat.parseFloat(\"1.1\")\n\
+    Double.parseDouble(\"1.1\")\n```\n\n```java\n//Curious.Programmer\nclass Main\
+    \ {\n    public static void main(String[] args) {\n        // 创建 int 类型变量\n  \
+    \      int num = 10;\n        System.out.println(\"The integer value: \" + num);\n\
+    \n        // 转换为 double 类型\n        double data = num;\n        System.out.println(\"\
+    The double value: \" + data);\n    }\n}\n```\n\n# 输出\n\n```bash\njava -cp /tmp/N6a2EZhlb5\
+    \ Main\nThe integer value: 10\nThe double value: 10.0\n```\n\n# 数字格式化\n\n```java\n\
+    // @curious._programmer\nNumberFormat currency = NumberFormat.getCurrencyInstance();\n\
+    String result = currency.format(\"123456\"); // $123,456\n\nNumberFormat percent\
+    \ = NumberFormat.getPercentInstance();\nString result = percent.format(0.04);\
+    \ // 4%\n```\n\n# 读取输入\n\n### Java Scanner 类\nScanner 类允许用户从控制台获取输入。它属于 `java.util`\
+    \ 包。它被用于读取原始类型的输入，如 int, double, long, short, float 和 byte。它是 Java 程序中读取输入简单的方法。\n\
+    \n```java\n// @curious._programmer\nScanner scanner = new Scanner(System.in);\n\
+    double number = scanner.nextDouble();\nbyte number = scanner.nextByte();\nString\
+    \ name = scanner.next();\nString line = scanner.nextLine();\n```\n\n# 控制流\n\n\
+    ### If 语句\n在编程中，我们使用 `if..else` 语句在多个备选项中运行一个代码块。\n例如，根据学生获得的百分比分配等级（A, B, C）。\n\
+    \n- 如果百分比高于 90，分配等级 A\n- 如果百分比高于 75，分配等级 B\n- 如果百分比高于 65，分配等级 C\n\n这里是 `if` 语句的基础结构。如果你想执行多个语句，需要将它们封装在大括号中。\n\
+    \n```java\n//@curious._programmer\nif (condition1)\n    statement1;\nelse if (condition2)\n\
+    \    statement2;\nelse if (condition3)\n    statement3;\nelse\n    statement4;\n\
+    ```\n\n```java\n//Curious.Programmer\nclass Main {\n    public static void main(String[]\
+    \ args) {\n        int number = 0;\n        // 检查 number 是否大于 0\n        if (number\
+    \ > 0) {\n            System.out.println(\"The number is positive.\");\n     \
+    \   }\n        // 检查 number 是否小于 0\n        else if (number < 0) {\n         \
+    \   System.out.println(\"The number is negative.\");\n        }\n        // 如果两个条件都为假\n\
+    \        else {\n            System.out.println(\"The number is 0.\");\n     \
+    \   }\n    }\n}\n```\n\n```bash\njava -cp /tmp/Ve0tGnR48a Main\nThe number is\
+    \ 0.\n```\n\n# Switch 语句\n\n我们使用 `switch` 语句根据变量的值来执行代码的不同部分。\n在每个 `case` 子句之后，我们使用\
+    \ `break` 语句跳出 `switch` 块。\n`switch` 语句允许我们在许多备选项中执行一个代码块。\n\n![](img/5dd48e01a3cc15319489428476134150_30_0.png)\n\
+    \n```java\n// @curious._programmer\nswitch (x) { \n    case 1:\n      break;\n\
+    \    case 2:\n      break;\n    default:\n}\n```\n\n表达式被求值一次并与每个 `case` 的值进行比较。\n\
+    \n- 如果表达式匹配 `value1`，则执行 `case value1` 的代码。同样，如果表达式匹配 `value2`，则执行 `case value2`\
+    \ 的代码。\n- 如果没有，则执行 `default` 情况的代码。\n\n```bash\njava -cp /tmp/iU6AUtxgna Main\n\
+    Size: Large\n```\n\n# For 循环\n\n当我们提前知道想要重复某些内容的次数时，`for` 循环非常有用。我们声明一个循环变量（或循环计数器），并在每次迭代中对其进行增加，直到达到想要执行某些代码的次数。\n\
+    \n![](img/5dd48e01a3cc15319489428476134150_33_0.png)\n\n```java\n//@curious._programmer\n\
+    for (int i = 0; i < 5; i++) {\n    statement;\n}\n```\n\n在这里，初始表达式（Expression）初始化变量并只执行一次。计算条件。如果条件为真，则执行\
+    \ `for` 循环的主体。更新表达式（Expression）更新初始表达式的值。再次计算条件，直到条件为假。\n\n```java\n//Curious.Programmer\n\
+    class Main {\n    public static void main(String[] args) {\n        int n = 5;\n\
+    \        // for 循环\n        for (int i = 1; i <= n; i++) {\n            System.out.println(\"\
+    Java is fun\");\n        }\n    }\n}\n```\n\n```bash\njava -cp /tmp/YkAx Main\n\
+    Java is fun\nJava is fun\nJava is fun\n```\n\n# While 循环\n\n当我们提前不知道想要重复某些内容的次数时，`while`\
+    \ 循环非常有用。这可能取决于运行时的值（例如用户输入的内容）。我们使用 `break` 语句跳出循环。\n\n![](img/5dd48e01a3cc15319489428476134150_36_0.png)\n\
+    \n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n} (someCondition)\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    ```\n\n```java\n// @curious._programmer\nwhile (someCondition) {\n    ...\n}\n\
+    \n```i = 1, n = 5;\n\n        do {\n            System.out.println(i);\n     \
+    \       i++;\n        } while (i <= n);\n    }\n```\n\n```bash\njava -cp /tmp/Bn\n\
+    1\n2\n3\n4\n5\n```\n\n# For-each 循环\n\n在 Java 中，`for-each` 循环用于遍历数组和集合（如 `ArrayList`），它也被称为增强循环。\n\
+    \nFor-each 循环对于遍历数组或集合非常有用。\n\n```java\n//@curious._programmer\nint[] numbers\
+    \ = {1, 2, 3, 4};\nfor (int number : numbers) {\n    ...\n}\n```\n\n```java\n\
+    //Curious.Programmer\nclass Main {\n    public static void main(String[] args)\
+    \ {\n        char[] vowels = {'a', 'e', 'i', 'o', 'u'};\n\n        // 使用 for-each\
+    \ 循环遍历数组\n        for (char item: vowels) {\n            System.out.println(item);\n\
+    \        }\n    }\n}\n```\n\n# 输出\n\n```bash\njava -cp /tmp/c6 Main\na\ne\ni\n\
+    o\nu\n```\n\n# Java AWT\n\nJava AWT（抽象窗口工具）是一种用于开发图形用户界面（GUI）或窗口应用程序的 API。\n\n\
+    Java AWT 组件是取决于平台的，即组件根据操作系统的视图进行显示。AWT 是重量级的，即其组件使用底层操作系统的资源。\n\n`java.awt` 包提供了\
+    \ AWT API 的类，如 `TextField`、`Label`、`TextArea`、`RadioButton`、`CheckBox`、`Choice`\
+    \ 和 `List` 等。\n\n# Component 类\n\n所有的元素都称为组件。在 Java AWT 中，每个组件都有对应的类。\n\n为了在屏幕的特定位置放置每个组件，我们需要将其添加到容器中。\n\
+    \n# Container 类\n\n容器是 AWT 中的一种组件，它可以包含其他组件，如按钮、文本框、标签等。扩展 Container 类的类被称为容器，如\
+    \ `Frame`、`Dialog` 和 `Panel`。\n\n它基本上是一个放置组件在特定位置的屏幕。因此，它包含并控制\n\n"
+  merge: 1
+  raw:
+  - '[PAGE 25]
+
+
+    ```
+
+    // Implicit casting happens because we try to store a short
+
+    // value (2 bytes) in an int (4 bytes).
+
+    ```
+
+
+    ```
+
+    short x = 1;
+
+    int y = x;
+
+    ```
+
+
+    // Explicit casting
+
+
+    ```
+
+    int x = 1;
+
+    short y = (short) x;
+
+    ```
+
+
+    We can convert String to an int in java using Integer.parseInt()
+
+    method. To convert String into Integer, we can use Integer.valueOf()
+
+    method which returns instance of Integer class.
+
+    To convert a string to a number, we use one of the following methods.
+
+
+    ```
+
+    //@curious_programmer
+
+    Byte.parseByte("1")
+
+    Short.parseShort("1")
+
+    Integer.parseInt("1")
+
+    Long.parseLong("1")
+
+    Float.parseFloat("1.1")
+
+    Double.parseDouble("1.1")
+
+    ```'
+  - "[PAGE 26]\n\n```\n//Curious.Programmer\nclass Main {\n    public static void\
+    \ main(String[] args) {\n        // create int type variable\n        int num\
+    \ = 10;\n        System.out.println(\"The integer value: \" + num);\n\n      \
+    \  // convert into double type\n        double data = num;\n        System.out.println(\"\
+    The double value: \" + data);\n    }\n```\n\n# Output\n\n```\n```java -cp /tmp/N6a2EZhlb5\
+    \ Main\nThe integer value: 10\nThe double value: 10.0\n```\n```"
+  - '[PAGE 27]
+
+
+    # Formatting Numbers
+
+
+    ```
+
+    // @curious._programmer
+
+    NumberFormat currency = NumberFormat.getCurrencyInstance();
+
+    String result = currency.format("123456"); // $123,456
+
+
+    NumberFormat percent = NumberFormat.getPercentInstance();
+
+    String result = percent("0.04"); // 4%
+
+    ```
+
+
+    # Reading Input
+
+
+    Java Scanner Class
+
+    Scanner class allows the user to take input from the console. It belongs to java.util
+    package. It is used to read the input of primitive. Types like int, double, long,
+    short, float, and byte. It is the easiest way to read input in Java program.
+
+
+    ```
+
+    // @curious._programmer
+
+    Scanner scanner = new Scanner(system.in);
+
+    double number = scanner.nextDouble();
+
+    byte number = scanner.nextByte();
+
+    String name = scanner.next();
+
+    String line = scanner.nextLine();
+
+    ```'
+  - "[PAGE 28]\n\n# Control Flow\n\nIf Statements\nIn programming, we use the if..else\
+    \ statement to run a block of code among more than one alternatives.\nFor example,\
+    \ assigning grades (A, B, C) based on the percentage obtained by a student.\n\n\
+    +   - if the percentage is above 90, assign grade A\n- if the percentage is above\
+    \ 75, assign grade B\n- if the percentage is above 65, assign grade C\n\nHere\
+    \ is the basic structure of an if statement. If you want to execute multiple statements,\
+    \ you need to wrap them in curly braces.\n\n```\n//@curious._programmer\nif (condition1)\n\
+    \    statement1;\nelse if (condition2)\n    statement2;\nelse if (condition3)\n\
+    \    statement3;\nelse\n    statement4;\n```"
+  - "[PAGE 29]\n\n```\n//Curious.Programmer\nclass Main {\n    public static void\
+    \ main(String[] args) {\n        int number = 0;\n        // checks if number\
+    \ is greater than 0\n        if (number > 0) {\n            System.out.println(\"\
+    The number is positive.\");\n        }\n        // checks if number is less than\
+    \ 0\n        else if (number < 0) {\n            System.out.println(\"The number\
+    \ is negative.\");\n        }\n        // if.both condition is false\n       \
+    \ else {\n            System.out.println(\"The number is 0.\");\n        }\n \
+    \   }\n}\n```\n\n```\njava -cp /tmp/Ve0tGnR48a Main\nThe number is 0.\n```"
+  - '[PAGE 30]
+
+
+    # Switch Statements
+
+
+    We use switch statements to execute different parts of the code depending on thevalue
+    of a variable.
+
+    After each case clause, we use the break statements to jump out of the switchblock.
+
+    The switch statement allows us to execute a block of code among many alternatives.
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_30_0.png)'
+  - "[PAGE 31]\n\n```\n// @curious._programmer\nswitch (x) { case 1:\n  break;\n\n\
+    case 2:\n  break;\n\ndefault:\n}\n```\n\nThe expression is evaluated once and\
+    \ compared with the values of each case.\n\n+   - If expression matches value1,\
+    \ the code of case value1 is executed. Similarly, the code of case value2 is executed\
+    \ if expression matches with value2.\n- If there is no match, the code of the\
+    \ default case is executed."
+  - '[PAGE 32]
+
+
+    java -cp /tmp/iU6AUtxgna Main
+
+    Size: Large'
+  - '[PAGE 33]
+
+
+    # For Loops
+
+
+    For loops are useful when we know ahead of time how many times we want to repeat
+    something. We declare a loop variable (or loop counter) and in each iteration
+    we increment it until we reach the number of times we want to execute some code.
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_33_0.png)'
+  - "[PAGE 34]\n\n```\n//@curious._programmer\nfor (int i = 0; i < 5; i++)\nstatement;\n\
+    ```\n\nHere, The initial Expression initializes and/or declares variables and\
+    \ executes only once. The condition is evaluated. If the condition is true, the\
+    \ body of the for loop is executed. The update Expression updates the value of\
+    \ initial Expression. The condition is evaluated again. The process continues\
+    \ until the condition is false.\n\n```\n//Curious.Programmer\nclass Main {\n \
+    \   public static void main(String[] args) {\n        int n = 5;\n        // for\
+    \ loop\n        for (int i = 1; i <= n; i++) {\n            System.out.println(\"\
+    Java is fun\");\n        }\n    }\n}\n```"
+  - '[PAGE 35]
+
+
+    ```
+
+    java -cp /tmp/YKSatAxIfk Main
+
+    Java is fun
+
+    Java is fun
+
+    Java is fun
+
+    Java is fun
+
+    ```'
+  - "[PAGE 36]\n\n# While Loops\n\nWhile loops are useful when we don't know ahead\
+    \ of time how many times we want to repeat something. This may be dependent on\
+    \ the values at run-time (e.g. what theuser enters). We use the break statement\
+    \ to jump out of a loop.\n\n![](img/5dd48e01a3cc15319489428476134150_36_0.png)\n\
+    \n```\n// @curious._programmer\nwhile (someCondition) {\n  if (someCondition)\
+    \ break;\n}\n```"
+  - "[PAGE 37]\n\n```\n// Program to display numbers from 1 to 5\n//Curious.Programmer\n\
+    \nclass Main {\n    public static void main(String[] args) {\n\n    // declare\
+    \ variables\n    int i = 1, n = 5;\n\n    // while loop from 1 to 5\n    while(i\
+    \ <= n) {\n        System.out.println(i);\n        i++;\n    }\n}\n```\n\n```\n\
+    Output\njava -cp /tmp/K5W6B42D3 Main\n1\n2\n3\n4\n5\n```\n\n38"
+  - "[PAGE 38]\n\n# Do..While Loops\n\nDo..While loops are very similar to while loops\
+    \ but they executed at least once. Incontrast, a while loop may never get executed\
+    \ if the condition is initially false.\n\n```\n//@curious._programmer\ndo {\n\
+    \  } while (someCondition);\n```\n\nHere,\n\n+   - The body of the loop is executed\
+    \ at first. Then the textExpression is evaluated.\n- If the textExpression evaluates\
+    \ to true, the body of the loop inside the do statement is executed again.\n-\
+    \ The textExpression is evaluated once again.\n- If the textExpression evaluates\
+    \ to true, the body of the loop inside the do statement is executed again.\n-\
+    \ This process continues until the textExpression evaluates to false. Then the\
+    \ loop stops."
+  - "[PAGE 39]\n\n![](img/5dd48e01a3cc15319489428476134150_39_0.png)\n\n# Loop Terminates\n\
+    \n@Curious.Programmer\n\n```\n// Java Program to display numbers from 1 to 5\n\
+    //Curious.Programmer\nimport java.util.Scanner;\n\n// Program to find the sum\
+    \ of natural numbers from 1 to 100.\nclass Main {\n    public static void main(String[]\
+    \ args) {\n        int i = 1, n = 5;\n\n        // do..while loop from 1 to 5\n\
+    \        do {\n            System.out.println(i);\n            i++;\n        }\
+    \ while (i <= n);\n    }\n}\n```"
+  - '[PAGE 40]
+
+
+    ```
+
+    java -cp /tmp/oZHLIXuoBn Main
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    ```
+
+
+    # For-each Loops
+
+
+    In Java, the for-each loop is used to iterate through elements of arrays and collections
+    (like ArrayList), it is also known as the enhanced loop.
+
+
+    For-each loops are useful for iterating over an array or a collection.
+
+
+    ```
+
+    //@curious._programmer
+
+    int[] numbers = {1, 2, 3, 4};
+
+    for (int number : numbers) {
+
+    ...
+
+    ```'
+  - "[PAGE 41]\n\n```\n//Curious.Programmer\nclass Main {\n    public static void\
+    \ main(String[] args) {\n        char[] vowels = {'a', 'e', 'i', 'o', 'u'};\n\n\
+    \        // iterating through an array using the for-each loop\n        for (char\
+    \ item: vowels) {\n            System.out.println(item);\n        }\n    n}\n\
+    ```\n\n# Output\n\n```\njava -cp /tmp/6MYL7npsc6 Main\na\ne\ni\no\nu\n```"
+  - '[PAGE 42]
+
+
+    # Java AWT
+
+
+    Java AWT (Abstract Window Toolkit) is an API to develop Graphical User Interface
+    (GUI) or windows-based applications in Java.
+
+
+    Java AWT components are platform-dependent i.e. components are displayed according
+    to the view of operating system. AWT is heavy weight i.e. its components are using
+    the resources of underlying operating system (OS).
+
+
+    The java.awt package provides classes for AWT API such as TextField, Label, TextArea,
+    RadioButton, CheckBox, Choice, List etc.
+
+
+    # Component Class
+
+
+    All the elements like the button, text fields, scroll bars, etc. are called components.
+    In Java-AWT, there are classes for each component.
+
+
+    In order to place every component in a particular position on a screen, we need
+    to add them to a container.
+
+
+    # Container
+
+
+    The Container is a component in AWT that can contain another components like buttons,
+    textfields, labels etc. The classes that extends Container class are known as
+    container such as Frame, Dialog and Panel.
+
+
+    It is basically a screen where the where the components are placed at their specific
+    locations. Thus it contains and controls the'
+- md: "\nlayout of components.\n\nThere are four types of containers in Java AWT -\n\
+    \n- Window\n- Panel\n- Frame\n- Dialog\n\nConsider the following simple example\
+    \ of Java AWT in which we have shown an awt component button by setting its placement\
+    \ and window frame size.\n\n![](img/5dd48e01a3cc15319489428476134150_43_0.png)\n\
+    \n```java\n//Curious_Programmer\nimport java.awt.*;\npublic class AwtProgram1\
+    \ {\n    public AwtProgram1() {\n        Frame f = new Frame();\n        Button\
+    \ btn=new Button(\"Hello World\");\n        btn.setBounds(80, 80, 100, 50);\n\
+    \        f.add(btn); //adding a New Button.\n        f.setSize(300, 250); //setting\
+    \ size.\n        f.setTitle(\"JavaPoint\"); //setting title.\n        f.setLayout(null);\
+    \ //set default layout for frame.\n        f.setVisible(true); //set frame visibility.\n\
+    \    }\n    public static void main(String[] args) {\n        //TODO Auto-generated\
+    \ method stub\n        AwtProgram1 awt = new AwtProgram1(); //creating a frame.\n\
+    \    }\n}\n```\n\nOutput:\n\n![](img/5dd48e01a3cc15319489428476134150_44_0.png)\n\
+    \n- Java Swing\n\nJava Swing is a part of Java Foundation Classes (JFC) that is\
+    \ used to create window-based applications. It is built on the top of AWT (Abstract\
+    \ Windowing Toolkit) API and entirely written in java.\n\nUnlike AWT, Java Swing\
+    \ provides platform-independent and Lightweight components.\nThe javax.swing package\
+    \ provides classes for java swing API such as JButton, JTextField, JTextArea,\
+    \ JRadioButton, JCheckbox, JMenu, JColorChooser etc.\n\nsimple swing example where\
+    \ we are creating one button and adding it on the JFrame object inside the main()\
+    \ method.\n\n```java\n//Curious_.Programmer\nimport javax.swing.*;\npublic class\
+    \ FirstSwingExample {\n    public static void main(String[] args) {\n        JFrame\
+    \ f=new JFrame();//creating instance of JFrame\n        JButton b=new JButton(\"\
+    click\");//creating Instance of JButton\n        b.setBounds(130,100,100,40);//x\
+    \ axis, y axis, width, height\n\n        f.add(b);//adding button in JFrame\n\
+    \        f.setSize(400,500);//width and 500 height\n        f.setLayout(null);//using\
+    \ no layout managers\n        f.setVisible(true);//making the frame visible\n\
+    \    }\n}\n```\n\n![](img/5dd48e01a3cc15319489428476134150_46_0.png)\n\n### Difference\
+    \ Between AWT and Swing\n\n| AWT | SWING |\n| --- | --- |\n| Platform Dependent\
+    \ | Platform Independent |\n| Does not follow MVC | Follows MVC |\n| Lesser Components\
+    \ | More powerful components |\n| Does not support pluggable look and feel | Supports\
+    \ pluggable look and feel |\n| Heavyweight | Lightweight |\n"
+  mdcn: "\n组件的布局。\n\nJava AWT 中有四种容器：\n\n- Window（窗口）\n- Panel（面板）\n- Frame（帧）\n-\
+    \ Dialog（对话框）\n\n考虑以下简单的 Java AWT 示例，其中我们通过设置其位置和窗口大小，展示了一个 AWT 组件按钮。\n\n![](img/5dd48e01a3cc15319489428476134150_43_0.png)\n\
+    \n```java\n//Curious_Programmer\nimport java.awt.*;\npublic class AwtProgram1\
+    \ {\n    public AwtProgram1() {\n        Frame f = new Frame();\n        Button\
+    \ btn=new Button(\"Hello World\");\n        btn.setBounds(80, 80, 100, 50);\n\
+    \        f.add(btn); //adding a New Button.\n        f.setSize(300, 250); //setting\
+    \ size.\n        f.setTitle(\"JavaPoint\"); //setting title.\n        f.setLayout(null);\
+    \ //set default layout for frame.\n        f.setVisible(true); //set frame visibility.\n\
+    \    }\n    public static void main(String[] args) {\n        //TODO Auto-generated\
+    \ method stub\n        AwtProgram1 awt = new AwtProgram1(); //creating a frame.\n\
+    \    }\n}\n```\n\n输出：\n\n![](img/5dd48e01a3cc15319489428476134150_44_0.png)\n\n\
+    - Java Swing\n\nJava Swing 是 Java 基础类（JFC）的一部分，用于创建基于窗口应用程序。它构建在 AWT（抽象窗口工具包）API\
+    \ 之上并完全用 Java 编写。\n\n与 AWT 不同，Java Swing 提供了跨平台的轻量级组件。\n`javax.swing` 包提供了 Java\
+    \ Swing API 的类，如 JButton、JTextField、JTextArea、JRadioButton、JCheckbox、JMenu、JColorChooser\
+    \ 等。\n\n一个简单的 Swing 示例，我们在 `main()` 方法中创建了一个按钮并将其添加到 `JFrame` 对象中。\n\n```java\n\
+    //Curious_.Programmer\nimport javax.swing.*;\npublic class FirstSwingExample {\n\
+    \    public static void main(String[] args) {\n        JFrame f=new JFrame();//creating\
+    \ instance of JFrame\n        JButton b=new JButton(\"click\");//creating Instance\
+    \ of JButton\n        b.setBounds(130,100,100,40);//x axis, y axis, width, height\n\
+    \n        f.add(b);//adding button in JFrame\n        f.setSize(400,500);//width\
+    \ and 500 height\n        f.setLayout(null);//using no layout managers\n     \
+    \   f.setVisible(true);//making the frame visible\n    }\n}\n```\n\n![](img/5dd48e01a3cc15319489428476134150_46_0.png)\n\
+    \n### AWT 和 Swing 的区别\n\n| AWT | SWING |\n| --- | --- |\n| 依赖平台 | 平台无关 |\n| 不遵循\
+    \ MVC 模式 | 遵循 MVC 模式 |\n| 组件较少 | 组件更强大 |\n| 不支持可插拔的外观（pluggable look and feel）\
+    \ | 支持可插拔的外观 |\n| 重量级 | 轻量级组件 |\n"
+  merge: 1
+  raw:
+  - "[PAGE 43]\n\nlayout of components.\n\nThere are four types of containers in Java\
+    \ AWT -\n\n+   - Window\n- Panel\n- Frame\n- Dialog\n\nConsider the following\
+    \ simple example of Java AWT in which we have shown an awt component button by\
+    \ setting its placement and window frame size.\n\n![](img/5dd48e01a3cc15319489428476134150_43_0.png)\n\
+    \n```\n//Curious_Programmer\nimport java.awt.*;\npublic class AwtProgram1 {\n\
+    \    public AwtProgram1() {\n        Frame f = new Frame();\n        Button btn=new\
+    \ Button(\"Hello World\");\n        btn.setBounds(80, 80, 100, 50);\n        f.add(btn);\
+    \ //adding a New Button.\n        f.setSize(300, 250); //setting size.\n     \
+    \   f.setTitle(\"JavaPoint\"); //setting title.\n        f.setLayout(null); //set\
+    \ default layout for frame.\n        f.setVisible(true); //set frame visibility.\n\
+    \    }\nn    public static void main(String[] args) {\n        //TODO Auto-generated\
+    \ method stub\n        AwtProgram1 awt = new AwtProgram1(); //creating a frame.\n\
+    \    }\n}\n```"
+  - '[PAGE 44]
+
+
+    Output:
+
+
+    ![](img/5dd48e01a3cc15319489428476134150_44_0.png)'
+  - '[PAGE 45]
+
+
+    +   - Java Swing
+
+
+    Java Swing is a part of Java Foundation Classes (JFC) that is used to create window-based
+    applications. It is built on the top of AWT (Abstract Windowing Toolkit) API and
+    entirely written in java.
+
+
+    Unlike AWT, Java Swing provides platform-independent and Lightweight components.
+
+    The javax.swing package provides classes for java swing API such as JButton, JTextField,
+    JTextArea, JRadioButton, JCheckbox, JMenu, JColorChooser etc.
+
+
+    simple swing example where we are creating one button and adding it on the JFrame
+    object inside the main() method.'
+  - "[PAGE 46]\n\n```\n//Curious_.Programmer\nimport javax.swing.*;\npublic class\
+    \ FirstSwingExample {\n    public static void main(String[] args) {\n        JFrame\
+    \ f=new JFrame();//creating instance of JFrame\n        JButton b=new JButton(\"\
+    click\");//creating Instance of JButton\n        b.setBounds(130,100,100,40);//x\
+    \ axis, y axis, width, height\n\n        f.add(b);//adding button in JFrame\n\
+    \        f.setSize(400,500);//width and 500 height\n        f.setLayout(null);//using\
+    \ no layout managers\n        f.setVisible(true);//making the frame visible\n\
+    \    }\n}\n```\n\n![](img/5dd48e01a3cc15319489428476134150_46_0.png)\n\n47"
+  - '[PAGE 47]
+
+
+    +   * Difference Between AWT and Swing
+
+
+    | AWT | SWING |
+
+    | --- | --- |
+
+    | Platform Dependent | Platform Independent |
+
+    | Does not follow MVC | Follows MVC |
+
+    | Lesser Components | More powerful components |
+
+    | Does not support pluggable look and feel | Supports pluggable look and feel
+    |
+
+    | Heavyweight | Lightweight |'
