@@ -1,0 +1,1108 @@
+- img_proc: true
+  md: '# Structures 38 (2022) 1426–1437
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Structures
+
+
+    journal homepage: www://www.elsevier.com/locate/structures
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_0_0.png)
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_0_1.png)
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_0_2.png)
+
+
+    # Multilayer bamboo composite hollow-core: Lab-scale and non-destructive testing
+    of full-scale concrete bridges considering transverse bamboo pole as shear reinforcement
+
+
+    Taufiq Rochman*, Suharianto
+
+
+    Civil Engineering Department, State Polytechnic of Malang, J. Soekarno H No. 9,
+    Malang 65141, East Java, Indonesia
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    +   Keywords:
+
+    Multilayer
+
+    Cross-poly
+
+    Bamboo
+
+    Composite
+
+    Hollow-core
+
+    Multihollowcombed
+
+
+    Due to bamboo''s superior mechanical qualities, it has often been used in rural
+    construction, however research on bamboo poles as reinforcement has been limited.
+    The purpose of this paper is to introduce a composite system made of several layers
+    of bamboo-core, hollow Multihollowcomposite concrete system for simplicity. In
+    this paper, we analyze the implementation of a composite slab on a bridge span
+    consisting of concrete in a cross-section, without any utilization of steel reinforcement.
+    Multihollowcomposite bamboo reinforcement is used because the presence of entire
+    bamboo in this composite system enhances the flexural behavior of a full-scale
+    vehicle under an actual service load. Due to the difficulties of obtaining excellent
+    results and the potential for bias, the study is conducted using a FEM-based model
+    (thick shell and shell element). Bamboo poles with a certain section were used
+    as concrete slabs, which were subjected to the 21 kN force. Simultaneously, when
+    tested on a radial axis, multilayer bamboo poles can withstand a force 52% more
+    than conventional slabs at the same concrete volume, resulting in a 73% reduction
+    in deflection. On the other hand, higher resistance to failure in terms of ductility
+    and maximum load that can be carried in both analysis and experimental testing.
+
+
+    # 1. Introduction
+
+
+    # 1.1. Bamboo nature
+
+
+    Bamboo seems to be the only renewable material that was quickly growing and offers
+    a wide range of applications. The existing bamboo products were manufactured by
+    using bamboo hollow poles [1]. This is a concern and urgent research to construct
+    bridges using traditional materials that are reliable. As bamboo, a natural material
+    that is complex and multi-null, with an extremely thin layer on the outside.
+
+    The bamboo is made up of hollow cores and nodes. The nodes are responsible for
+    the formation of roots and branches. Internodes are formed by a hollow wall of
+    varying thickness that surrounds a hollow core. The outer layer of the culms denser
+
+
+    than the innermost layer, and as they expand, they often take a tapered shape
+    [2]. Bamboo was environmentally friendly material that has been widely employed
+    in building due to its mechanical properties [3, 4]. It has rapid growth and regeneration
+    capacities. Bamboo has also been used in construction elements such as timber,
+    flooring, special treatment (in material), and bamboo columns [6] especially in
+    structural frames [7, 8] and two-four point bending tests on bamboo culms to evaluate
+    a variety of mechanical properties and potential uses. Bamboo has been used as
+    reinforcement for structural concrete parts. By the logic of mesh, they established
+    bamboo''s composite behavior, bamboo reinforces concrete beams, in a simple manner.
+    However, with [10] illustrated the possibility of using lightweight, robust structural
+    materials on a massive scale using abundant, fast-growing, and sustainable bamboo.
+
+
+    > * Corresponding author.
+
+    E-mail: taufiq.rochman@polinema.ac.id (T. Rochman).
+
+
+    Received 29 September 2021; revised in 23 February 2022; Accepted 2 March 2022
+
+    Available online 7 March 2022
+
+
+    https://doi.org/10.1016/j.struct.2022.03.008
+
+
+    2352-0126 © 2022 Institution of Structural Engineers. Published by Elsevier Ltd.
+    All rights reserved.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# T. Rocha and Suburiyanto
+
+
+    # Structures 38 (2022) 1426-1437
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_1_0.png)
+
+
+    Fig. 1. Stress acts on the laminated plate element .
+
+    Source: [32]
+
+
+    direction on static bending properties of laminated bamboo
+
+    and by [5] to evaluate bending capacity of laminated
+
+    amboo lumber. Flexural properties as a basis for bamboo
+
+    strength was also done by [8].
+
+
+    The essential research on the construction, as a review by [11]
+
+    and [13-15] were discovered to work admirably on bamboo connections in
+
+    terms of bond strength and slide resistance. Bamboo material character-
+
+    ization such as mechanical properties experimental data were
+
+    verified by [16]. Researchers observed that density-
+
+    density, as well as moisture content and stiffness are some
+
+    marized by [18], as well as the variation of these along the bamboo
+
+    culm. The importance of considering geometrical properties in
+
+    characterization, as well as physical and mechanical properties, were
+
+    discussed by [18] and the results of the processing
+
+    present by [18].
+
+
+    As, bamboo reinforced composites are being used in
+
+    structural applications such as slab panels [19], columns [20] and full-
+
+    scales were also examined well by [21]. Although bamboo cons-
+
+    struction was widely considered as a natural resource for sustainable
+
+    structure, as discussed in [22-24]. The main result of study by [23]
+
+    bamboo materials is that that bamboo was an excellent rein-
+
+    forcement material is due to its high tensile and compressive
+
+    strengths. The flexural strength of the bamboo-reinforced beam
+
+    demonstrated increased strength [25], but its reliability still be
+
+    controversial as investigated by [26], and therefore a long term durability
+
+    coating was needed to overcome this problem [27].
+
+
+    # 1.2. State of the art of bamboo construction
+
+
+    The research on bamboo construction as a structural material is
+
+    primarily separated into three sections: the properties of bamboo-
+
+    terial composites with concrete, and the connection between
+
+    bamboo construction elements and their connections with-
+
+
+    Such evaluated the properties of radial strand
+
+    lamboo lumber from Calcutta and followed up on another researcher''s
+
+    study of the mechanical properties of bamboo lumber col-\umns subjected to radial
+    eccentric compression [6] and bamboo strand
+
+    lumber columns under axial eccentric compression also was examined by [7]. While
+
+    another researcher as [4] studied the effect of length and orientation
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_1_1.png)
+
+
+    Concrete (Solid
+
+    Bamboo (Shell)
+
+    Core core
+
+    (solid shell)
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_1_2.png)
+
+
+    Section S2
+
+
+    Section S2 at φ = 0
+
+
+    Section S1 at φ = π
+
+
+    Section S1
+
+
+    Fig. 2. The arrangement of bamboo used for Mullambcomphol system was inspired
+    by Huang .
+
+    Source: [32]
+
+
+    1427'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '![](img/7a1d517b8d42de1a00e341f2a348dd0c_2_0.png)
+
+
+    Fig. 3. Bamboo culm sample for tensile test on UTM.
+
+
+    Fig. 4. Laboratory scale of slab specimens.
+
+
+    # 2. Multilayer bamboo composite hollow-hollow
+
+
+    # 2.1. Proposed system
+
+
+    Almost majority of current research on bamboo as structural elements or on their
+    composite with concrete as culm strips. Very, if any, studies have been conducted
+    on bamboo poles as complete elements that are fully integrated with concrete.
+
+
+    Now until nowadays, bamboo hollow-core proposed specimens have received little
+    attention. Past studies have studied bamboo in the form of fiber, woven or unspun,
+    thick wick, latticework of or filamentous chips. There have been very little research
+    on the utilization of bamboo poles as reinforcement.
+
+
+    On that basis, this study discusses the implementation of a composite
+
+
+    slab system consisting of concrete and multilayer bamboo arranged in a cross-section,
+    without steel reinforcement, on a short span bridge. Due to the inclusion of complete
+    culms or bamboo poles in this composite system, it is dubbed Mulbamcompoh (multilayer
+    cross-ply bamboo hollow-cores). Non-destructive tests have been conducted on full-scale
+    structural behavior of trusses made with bamboo or agricultural material. Fundamentals
+    and applications of the finite element method (FEM) as an iterative method for
+    design and computation was described by [28]; (thick and solid element) bamboo
+    of the precision required, results are difficult to get and frequently different
+    from those obtained during bamboo.
+
+
+    The bending characteristics of bamboo (Phyllachys Bambusa) have also been examined
+    in its fiber-foam composite structure, and the compression-stress curve was discovered.
+
+
+    In reference [29] greater that bamboo''s ductility is greater than 8 times than
+    that of concrete''s ultimate failure was it. As a result of this, they found that
+    bamboo was the most suited for reinforcing concrete structures due to its ductility
+    and also for bamboo poles in bindings
+
+
+    # 2.2. Model assumption
+
+
+    The Mulbamcompoh system is conform to Huang''s ideal design [32]. His primary
+    objective was to build a novel tool for analyzing two-way fiber reinforced composite
+    slabs and facilit further parametric research into slab configurations for concept
+    refinement. Additionally, he 3D finite element experiments to investigate the
+    novel analysis method and a'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# T. Rochman and Sahubriyanto
+
+
+    # Structures 38 (2022) 1426–1437
+
+
+    a)
+
+
+    Upper bamboo poles
+
+
+    Lower bamboo poles
+
+
+    b)
+
+
+    Upper bamboo poles
+
+
+    Lower bamboo poles
+
+
+    simple support
+
+
+    simple support
+
+
+    Fig. 5. Bamboo poles arrangement of the (a) strong axis and (b) weak axis.
+
+
+    a)
+
+
+    b)
+
+
+    Strain Gauge
+
+
+    Strain Gauge
+
+
+    (c)
+
+
+    concrete
+
+
+    simple support
+
+
+    (d)
+
+
+    Fig. 6. (a) Slab structures, (b) Element (c) Strong axis loading (d) Flexural
+    testing of hollow-core slab in weak axis.
+
+
+    1429'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# T. Rochman and Suburiyanto
+
+
+    # Structures 38 (2022) 1426–1437
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_4_0.png)
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_4_1.png)
+
+
+    (a)
+
+
+    (b)
+
+
+    Fig. 9. (a). Strain gauges attachment to the bottom of bridges bamboo (b). Strain
+    measurement using strain meter.
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_4_2.png)
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_4_3.png)
+
+
+    Fig. 7. Bamboo poles, formwork, first bamboo bottom layer and transverse bamboo
+    reinforcement as shear connector between above adjacent layer.
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_4_4.png)
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_4_5.png)
+
+
+    (a)
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_4_6.png)
+
+
+    (b)
+
+
+    Fig. 10. Flexural test using actual truck loading in full scale.
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_4_7.png)
+
+
+    (c)
+
+
+    Fig. 8. (a) Three main layer (b) reinforcement of multilayer bamboo pole (c) Concreting
+    completion of Multambcomposite bridges.
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_4_8.png)
+
+
+    +   - Specimen 1
+
+    - Specimen 2
+
+    - Specimen 3
+
+    - Average
+
+
+    Longitudinal Direction
+
+
+    Stress N/mm
+
+
+    Longitudinal Direction
+
+
+    better understanding of the structural behavior of his new two-fiber reinforced
+    composite slab [32].
+
+
+    As a result, the term stress resultant is used to refer to the forces and moments
+    generated by these fractions. The shaded region in Fig. 1 represents the depicted
+    element being examined.
+
+
+    The notation $\sigma_x$ indicates normal stresses in the $x$ direction, while
+    the notation $\sigma_y$ indicates normal stresses in the y direction. This thickness
+
+
+    of the area is $z1$. By integrating the stresses over the cross-section, the force
+    and moment resultants per unit length of surface area are defined by [32] as in
+    Eq. ((1)-(3)) based on first-order shear deformation theory.
+
+
+    ```
+
+    $N = \int_{z_1}^{z_2} \sigma_x dz, \quad N_y = \int_{z_1}^{z_2} \sigma_y dz, \quad
+    Q_x = \int_{z_1}^{z_2} \tau_{xz} dz =
+
+    ```
+
+
+    1430'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# T. Rochman and Syahriyanto
+
+
+    # Structures 38 (2022) 1426–1437
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_5_0.png)
+
+
+    ```
+
+    ${M} = \begin{cases} M_i \ M_{ti} \end{cases} = \begin{cases} M_i \ M_{ti} \end{cases}_{dz}
+    = \sum_{i=1}^{n} \tau_i q_{dz} dz; \quad (2)$
+
+    ```
+
+
+    ```
+
+    ${E} = \begin{cases} E_i \ E_{ti} \end{cases} = \begin{cases} E_i \ E_{ti} \end{cases}_{dz}
+    = K \sum_{i=1}^{n} \tau_i q_{dz}; \quad (3)$
+
+    ```
+
+
+    The slab''s cross-section is idealized in Fig. 1 and Fig. 2. The cross-section
+    of $x$ direction represents the slab''s strong axis. The y axis represents the
+    weak axis. Fig. 2 illustrates the idealization of local shells and the global
+    coordinate system employed for composite beam, using concrete as solid element
+    and bamboo layers as shells.
+
+
+    # 3. Methods
+
+
+    # 3.1. Tensile specimen of bamboo wall
+
+
+    Petung bamboo (Dendrocalamus asper) were used both in tensile and full test specimens,
+    while three specimens measuring 210 mm x 40 mm with a notched center of 10 mm
+    are used in the bamboo culms. Tensile specimens of bamboo walls were also tested
+    utilizing the testing machine, which has a capacity of 13.6 tons-each depicted
+    in Fig. 3.
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_5_1.png)
+
+
+    Fig. 12. Flexural test on the axis: (a) Load vs deflection, (b) Load vs moment.
+
+
+    # 3.2. Laboratory setup for patch bending testing of flexural slab specimens
+
+
+    Two layers of clay fibers in a $f_c''$ 20 MPa made a composite slab with dimensions
+    of 1000 mm x 1000 mm and a thickness of 250 mm depicted in Fig. 4. Flexural specimens
+    were tested as Fig. 5a on the weak axis and Fig. 5b on the strong axis are used
+    to determine the strength of a composite slab, as described below.
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_5_2.png)
+
+
+    # 3.3. Full-scale test of multilayer bamboo hollow-core bridge
+
+
+    The construction stages of Multhamcomposite can be described in the following
+    depicted in Fig. 7. Multhamcomposite bridge, utilize a $f_c''$ 20 MPa concrete
+    slab with 5 layers (1 layer bamboo poles as concrete cover, three main layers,
+    and one bamboo poles as upper cover) was constructed using arrangement bamboo
+    poles and tested on a full-scale test of 10.5 m span bridge which was divided
+    into two spans of 5.25 m and 3 m. Fig. 8 depicts the multilayer bamboo reinforcement,
+    which flexural hollow-core bridges.
+
+
+    By inserting strain gauges to the joints of bridges (Fig. 9a) and crack meters
+    to observe the cracks (Fig. 9b), the full-scale flexural and destructive testing
+    procedure was carried out.
+
+
+    The truck''s front and rear axles were stopped (front and back) with real loads
+    to collect a variety of load combinations to determine the behavior and performance
+    at random intervals of 0.5 m-1 m to determine the maximum strain at the quarter
+    and midspan, as indicated in Fig. 10. The strain meter number will vary until
+    it reaches a consistent value and remains constant; at
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_5_3.png)
+
+
+    Fig. 13. Load versus moment comparison on the (a) strong axis, (b) weak axis.
+
+
+    1431'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# R. Rochman and Subariyanto
+
+
+    # Structures 38 (2022) 1426-1437
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_6_0.png)
+
+
+    Fig. 14. Equivalent stress for computing nominal capacity, Mn proposed for sectional
+    analysis of Mulbalcomphol.
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_6_1.png)
+
+
+    Fig. 15. Modeling slab in (a) strong axis (b) weak axis.
+
+
+    point, strain was recorded at locations 1 to 4 with a cycle of 14 times the load.
+
+
+    # 4. Results and discussion
+
+
+    # 4.1. Tensile test specimen of bamboo culm wall
+
+
+    As shown in Fig. 11, the strain and results of the bamboo tensile test are obtained.
+    The vertical axis represents the stress (σ), where the horizontal axis represents
+    the strain (ε), which is defined as ε = ΔL/L0. Fig. 11 illustrates the highest
+    tensile stress values for bamboo specimen 1, 2 and 3 with the same dimensions,
+    ranging from 242.5 MPa to 355 MPa and 257.7 MPa on average for all specimens.
+
+
+    load that specimens 1,2,3 can sustain 21 kN, 55 kN, and 26 kN, respectively. There
+    were no cracks detected in specimens 1 or 2. This action indicates that there
+    is a slippage of the bamboo poles'' surface and the concrete bonding on the structure.
+    The vertical moment component of the strong and weak axes is illustrated in Fig.
+    13. There are numerous methods for calculating moments. One method is to extract
+    moment from load associated stresses and strains. The external moment generated
+    by the load varies by time, and the nominal moment is obtained by the description
+    in Fig. 14.
+
+
+    The one-layer bamboo slab can sustain loads to the limit that the maximum concrete
+    compressive strength (σcmax) reaches 0.005 and is considered to have reached equilibrium.
+    The bamboo strength fb is maintained under specified conditions. When this occurs,
+    the concrete fails and the section reinforced with bamboo poles will provide a
+    specified failure state.
+
+
+    # 4.2. Point bending of flexural slabs
+
+
+    Slabs for tested deflection and flexural strength. Specimen-1 is the pin support
+    on the weak axis, specimen-2 is the strong axis, and specimen-3 is the conventional
+    slabs. Results of laboratory testing show. Fig. 12a and Fig. 12b illustrate the
+    slab with some concrete and corresponding minimum reinforcement.
+
+
+    According to Fig. 12, the deflection values for each specimen are 0.16 mm, 1.67
+    mm, and 1.33 mm, with maximum Mn values of 8.55 kNm, 17.32 kNm, and 9.91 kNm,
+    respectively, whereas the maximum
+
+
+    1432'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# R. Rochman and Suhariyanto
+
+
+    # Structures 38 (2022) 1426–1437
+
+
+    Max absolute
+
+    n/mm²
+
+    =0.003
+
+    0.017
+
+    0.033
+
+    0.049
+
+    0.064
+
+    0.080
+
+    0.096
+
+    0.111
+
+    0.127
+
+    0.143
+
+    0.158
+
+    0.174
+
+    0.190
+
+    0.205
+
+    0.221
+
+    0.237
+
+    ≥ 0.252
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_7_0.png)
+
+
+    N/mm²
+
+    =0.054
+
+    0.067
+
+    0.089
+
+    0.105
+
+    0.121
+
+    0.136
+
+    0.156
+
+    0.171
+
+    0.186
+
+    0.201
+
+    0.212
+
+    0.226
+
+    0.241
+
+    0.256
+
+    0.271
+
+    0.286
+
+    ≥ 0.302
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_7_1.png)
+
+
+    | P = 21 kN |
+
+    | No. | Sn (N/mm²) | Tc (N) |
+
+    |---|---|---|n| 1 | -0.096 | 2076.48 |
+
+    | 2 | -0.079 | 1708.77 |
+
+    | 3 | -0.055 | 1189.65 |
+
+    | 4 | -0.027 | 584.93 |
+
+    | 5 | -0.035 | 757.05 |
+
+    | 6 | -0.003 | 648.9 |
+
+    | 7 | -0.006 | 1297.8 |
+
+    | 8 | -0.084 | 1816.22 |
+
+    | 9 | -0.101 | 2184.63 |
+
+    | 10 | -0.095 | 2054.85 |
+
+    | tensile force, Tb | | 1439.06 |
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_7_2.png)
+
+
+    Fig. 16. Maximum absolute stresses on the stress axis from view (a) element of
+    bamboo poles (b) shell of element concrete (c) force numbering.
+
+
+    strength, fub. The nominal capacity can be obtained by multiplying these forces
+    Tc or Tb by the length between two couplers, as derived in concrete sectional
+    analysis.
+
+
+    concrete is modeled as 3D solid elements, bamboo layers are modeled as shells,
+    respectively. The results of the stress analysis for bamboo pads using shell elements
+    and using solid elements in each part.
+
+
+    # 4.3. FEM model for lab-scale for flexural slabs
+
+
+    The specimen is modeled in STAAD.Pro for laboratory scale experiments utilizing
+    a slab dimension of 100 mm × 100 mm and a length of 250 mm, as shown in Fig. 16.
+    The stress axis is modeled in Fig. 15a, while the weak axis is modeled in Fig.
+
+
+    From the bottom view, Fig. 16 depicts the bamboo culms elements along the stress
+    axis. While Fig 16b depicts the stress on the concrete part along the stress axis
+    from a bamboo-top perspective.
+
+
+    +   1. The maximum stress for bamboo on the weak and stress axes are 0.027 MPa
+    and 0.054 MPa, respectively, as illustrated in Fig. 17.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# T. Rochman and Sahariyanto
+
+
+    # Structures 38 (2022) 1426-1437
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_8_0.png)
+
+
+    Fig. 17. (a) compressive stress (Sy) of bamboo culms shell on the weak axis (b)
+    tensile stress (Sy) of bamboo culms shell on the weak axis.
+
+
+    Fig. 19. (a) Load moment curve on the weak axis. (b) Load moment curve on the
+    strong axis.
+
+
+    These values are required to calculate the moment ($M_{FEM}$), which are calculated
+    by multiplying the maximum stress value by the moment arm'' length.
+
+
+    The stresses encountered by the bamboo shell are represented respectively in Fig.
+    17 and Fig. 18 with the weak and strong axis on the culms. The $M_{FEM}$ is calculated
+    using the maximum stress value as starting point and then compared to the moment
+    results from analytical calculation, as shown in Fig. 19.
+
+
+    As illustrated in Fig. 19a and Table 1, there is a slip between the calculated
+    and measured moment. The $M_{FEM}$ is far to the coupling moment, while the test
+    moment ($M_{test}$) results approaches the coupling moment. All coupling moments
+    have a slip on the strong axis in Fig. 19b, only the test moment ($M_{test}$)
+    approaches the coupling moment.
+
+
+    # 4.4. Full-scale multilayer bamboo hollow-core bridge
+
+
+    The 45-cm thick multilayer of bamboo bridge was implemented to test the scale
+    of 28-days. The results on the load that has been processed at four strain gauge
+    positions at a number of combinations of axial variations, subsequently referred
+    to as loads 1 to 14, are shown in the given figure. The actual strain pattern
+    that happens is depicted in Fig. 20, and is still below the maximum limit.
+
+
+    Fig. 18. (a) compressive stress (Sy) of bamboo culms shell on the strong axis
+    (b) tensile stress (Sy) of bamboo culms shell on the strong axis.
+
+
+    # 4.5. FEM model for full-scale multilayer bamboo hollow-core bridge
+
+
+    As seen in Fig. 21, the bridge is modeled in MIDAS/Civil. The bridge contains
+    7497 node points connected by 2500 beam elements, with each bamboo pole representing
+    a single beam element. A total of 6000 solid pieces are used to represent the
+    bridge
+
+
+    1434'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Table 1
+
+
+    Moments in the weak axis.
+
+
+    | Load (kN) | M_YYT (kNm) | M (kNm) | M_LLOR (kNm) | M_MMM (kNm) |
+
+    |---|---|---|---|--|
+
+    | 0 | 0.00 | 0.00 | 0.00 | 0.00 |
+
+    | 1 | 0.67 | 0.25 | 0.29 | 0.29 |
+
+    | 3 | 2.25 | 0.75 | 0.85 | 1.92 |
+
+    | 5 | 2.47 | 1.25 | 1.42 | 1.93 |
+
+    | 7 | 2.70 | 1.75 | 1.99 | 2.70 |
+
+    | 9 | 3.60 | 2.25 | 2.56 | 3.36 |
+
+    | 11 | 4.27 | 2.75 | 3.13 | 4.44 |
+
+    | 13 | 4.95 | 3.25 | 3.70 | 5.33 |
+
+    | 14 | 5.62 | 3.50 | 3.98 | 5.75 |
+
+    | 15 | 6.07 | 4.05 | 4.29 | 6.19 |
+
+    | 16 | 6.75 | 4.55 | 4.55 | 6.65 |
+
+    | 17 | 6.75 | 4.25 | 4.84 | 7.07 |
+
+    | 18 | 6.97 | 4.50 | 5.12 | 7.50 |
+
+    | 19 | 7.65 | 5.45 | 5.41 | 7.96 |
+
+    | 21 | 8.55 | 5.25 | 5.98 | 8.85 |
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_9_0.png)
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_9_1.png)
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_9_2.png)
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_9_3.png)
+
+
+    As shown in Fig. 21, the maximum strain x of solid composite is -3.41 MPa for
+    the upper surface, and +3.37 MPa for tension at the bottom surface, as shown in
+    Fig. 21b). While the maximum axial stresses for the top and bottom poles are -0.91
+    MPa for compression and +1.88 MPa for tension, respectively, as shown in Fig.
+    21b), are significantly less than the tensile strength of bamboo, demonstrating
+    the Mulchamboo composite-fiber efficiency under live load conditions.
+
+
+    # 5. Conclusions
+
+
+    Bamboo stalks with a weak axis may withstand less than stalks of equal value;
+    but their deformation is 81% less. When stressed on a strong axis, bamboo can
+    support 52% more weight and deflect 7% less than standard bamboo. Mulchamboo composite-core
+    systems exhibit excellent flexural load resistance both visually and analytically.
+
+
+    This is still less than the strain limit. As result, the strain is typically minimal
+    but increases without없이, ensuring that the strain is constrained and does not
+    change with service loads. The tensile poles can be used as supports when constructing
+    the Mulchamboo reinforced composite system for concrete buildings is extremely
+    simple to implement, inexpensive, and does not require highly skilled humans and
+    resources. Additionally, the current study increases flexural capacity by using
+    bamboo poles as shown in the figures.
+
+
+    The flexibility allows the utilization of bamboo poles in the implementation of
+    a structural bridge, and the utility results in fast and cheap construction in
+    bamboo families. The flexural capacity of this bridge stands to become superior
+    to other structural bridge.
+
+
+    Fig. (20). Actual pattern at location-1). (b) Actual pattern at location-2. (c)
+    Actual pattern at location-3. (d) Actual pattern at location-4.
+
+
+    slabs. Simple used to withstand the bridge, which is designed with 2.2 tons/m²,
+    or "D" load, and "P" line load of 12 tons/m, or "D" load and "P" line load of
+    12 tons/m.
+
+
+    The midspan deflection is 16.5 mm for all elements. The stresses and axial forces
+    of Mulchamboo bridges are shown in Fig. 21a), and Fig. 21b), respectively, and
+    the strain at SG1 is positioned in Table 2.
+
+
+    The multilayer bamboo composite-core on bamboo poles have past adhesion strength
+    due to their internodes having a larger cross sectional area than non-cross sectional
+    internodes. As a result, the although imply that their adhesive bonding will be
+    improved. Additionally, their skin is extremely stiff in order to withstand'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# R. Rochman and Subahriyanto
+
+
+    # Structures 38 (2022) 1426–1437
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_10_0.png)
+
+
+    # Table 2
+
+    The full-scale test result at strain gauge position 1–4.
+
+
+    | cyclic nᵇ | Position of strain gauges (0.10⁻¹) | | | Strain limit |
+
+    | | SG1 | SG2 | SG3 | SG4 | Max. | Min. |
+
+    | 1 | 0 | 0 | 0 | 0 | | |
+
+    | 2 | 12 | 0 | -4 | 4 | | |
+
+    | 3 | 12 | 1 | -4 | 4 | | |
+
+    | 4 | 16 | 3 | -4 | 8 | | |
+
+    | 5 | 12 | 4 | 8 | 8 | 0.003 | -0.003 |
+
+    | 6 | 12 | 5 | 8 | 8 | or | or |
+
+    | 7 | 12 | 5 | 8 | 8 | 30.10⁻⁴ | -30.10⁻⁴ |
+
+    | 8 | 12 | 9 | 12 | 4 | | |
+
+    | 9 | 10 | 12 | 12 | 16 | | |
+
+    | 10 | 12 | 11 | 6 | 12 | | |
+
+    | 11 | 12 | 12 | 12 | 12 | | |
+
+    | 12 | 12 | 12 | 12 | 4 | | |
+
+    | 13 | 14 | 12 | 8 | 8 | | |
+
+
+    ![](img/7a1d517b8d42de1a00e341f2a348dd0c_10_1.png)
+
+
+    any stresses. As a result, whittled bamboo or filamentous chord is less rigid
+    than complete bamboo poles. To resist interlaminar transverse shear stresses,
+    high-strength shear studs are drilled through the internodes between longitudinal
+    and in-plane transverse bamboo directions (cross-ply) depicted in Fig. 22 as suggested
+    by [33].
+
+
+    # Declaration of Competing Interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    1436'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Acknowledgement
+
+
+    Financial support for this research was provided by a grant named Hibah Berais
+    scholarship from the Ministry of Education and Republic of Indonesia.
+
+
+    # References
+
+
+    +   [1] R Rahman, Gatio A, Bock M, Ramage M. Engineered bamboo for structural
+    applications. Build Mater 2013;51:56–67.
+
+    [2] Wang J, Li Y, Liu J et al. Engineered Bamboo Structures: Proceedings of the
+    Third International Conference on Modern Bamboo Structures (ICSBS 2018), 225:
+    27–72. Beijing, China.
+
+    [3] Ahmed S, Yusuf N. Experimental properties of laminated laminated bamboo from
+    Calcutta (Dendrocalamus asper). Wood Sci Technol 2021;116:793–808.
+
+    [4] Li H, Wei G, Zheng L, Corbi O, Cheng X, et al. Length and directional effect
+    on static bending properties of laminated bamboo beams. J Bamboo Res 2021;40:104150.
+
+    [5] Li H, Wei G, Zhang Q, Devks S, Jo Y. Utilizing ultimate bending capacity of
+    laminated bamboo beams. Build Mater 2018;160:695–710. https://doi.org/10.1016/j.buildmat.2018.01.045
+
+
+    +   [14] Wang GL, Li Z, Zhang S, Wu J. Experimental investigation of a connection
+    with all-bamboo-shaped energy dissipator. Exp Struct 2019;178:105912.
+
+    [15] Ayodeji O, Odoro SO, Obama JA. Experimental on the splitting strength of
+    bamboo reinforced laminated columns using different cut sizes. Data in Sets 2021;8:e77133.
+
+    [16] Javid A, Smith N, Samif S, Nafis HD, Hebei DE. Mechanical properties of bamboo
+    composites. In Numerical and experimental analysis. Comput Struct Sci 2020;215:104033.
+
+    [17] Mai PR, Trojnar LJ, Leep M. Axial load behavior of bamboo reinforced beam
+    with cement and mortar. Build Mater 2017;242:273–87.
+
+    [18] Wang L, Zhang J, Liu Y, Xu Y. Experimental and numerical investigation of
+    bamboo reinforced beam of full-scale glued laminated (lamboo)-composite beams.
+    Compos Struct B 2021;233:110118.
+
+    [19] Zhang S, Li H, Ahmed S. Experimental properties of bamboo-reinforced composite
+    in structural connections: design and evaluation. Build Mater 2021;238:110433.
+
+    [20] Sultan S, Rahmansur R, Rannaganna, S, A, & A, C. (2020). Experimental study
+    on Bamboo as a reinforcing material in concrete. Materials 13(11), 2503.
+
+    [21] Lorenzo, R., and Mitteri, L. (2020). Evaluation of bamboo columns for structural
+    applications. Engineering Structures 214, 103760.
+
+    [22] Arimura A, Kamishi T, Rujin E, Keeria H, et al. Experimental investigation
+    of the long-term behavior of reinforced bamboo beams: a critical review. Master
+    Stud 2018;58:11–16.
+
+    [23] Klein, Bernd. (2015). FEM: Grundlagen und Anwendungen der Finite-Element-Method
+    in Maschinen und Bautechnik. Springer Wiley, 10. August, 2015.
+
+    [24] Liu, J., Fang, Z., Yanhui, H., & He, F. (2022). Tensile and bending properties
+    of bamboo-reinforced composite slabs (University of Queensland). https://eprints.usq.edu.au/14550/2/Huang_2004_whole.pdf.
+
+    [25] Lorenzo, R., Mittelli, M., Yang, D., Li, H., Mouka, A., & Dimitropoulos,
+    K. E. (2021). Non-linear behaviour and failure mechanism of bamboo poles in bonding.
+    Compos Struct B 229:109533.
+
+    [26] Lin, H. Y. (2021), Connections for Bamboo Structures. In IOP Structures Conference:
+    Earth and Environmental Science (783, no. 1, p. 012026.'
+  merge: -1
+  pgno: 11
