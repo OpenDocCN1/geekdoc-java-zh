@@ -1,0 +1,3795 @@
+- img_proc: true
+  md: '# LAB MANUAL
+
+
+    for
+
+
+    ![](img/26fb2e0d2c27e34524300218035d0784_0_0.png)
+
+
+    # Diane Christie
+
+
+    University of Wisconsin – Stout
+
+
+    Addison-Wesley
+
+    New York Boston San Francisco
+
+    London Toronto Sydney Toyko Singapore Madrid
+
+    Mexico City Munich Paris Cape Town Hong Kong Montreal'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Publisher Greg Tobin
+
+    Executive Editor Michael Hirsch
+
+    Associate Editor Lindsey Triebel
+
+    Cover Designer Nicole Clayton
+
+    Senior Marketing Manager Michelle Brown
+
+    Marketing Assistant Sarah Milmore
+
+    Prepress and Manufacturing Carol Melville
+
+    Supplement Coordination Marianne Groth
+
+    Proofreader Melanie Aswell
+
+
+    Many of the designations used by manufacturers and sellers to distinguish products
+    are claimed as trademarks. Where those designations appear in this book, and Addison-Wesley
+    was aware of a trademark claim, the designations have been printed in initial
+    caps or all caps.
+
+
+    Copyright © 2008 Pearson Education, Inc.
+
+
+    All rights reserved. No part of this publication may be reproduced, stored in
+    a retrieval system, or transmitted, in any form or by any means, electronic, mechanical,
+    photocopying, recording, or otherwise, without the prior permission of the publisher.
+    Printed in the United States of America. For information on obtaining permission
+    for use of material in this work, please submit a written request to Pearson Education,
+    Inc., Rights and Contracts Department, 75 Arlington Street, Suite 300, Boston,
+    MA 02116, fax your request to 617-848-7047, or e-mail at http://www.pearson.com/legal/permissions.htm.
+
+
+    ISBN 0-321-51690-7
+
+    1 2 3 4 5 6 7 8 9 10—BB—10 09 08 07'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Preface
+
+
+    # About this Lab Manual
+
+
+    This manual accompanies Starting Out With Java: From Control Structures to Objects,
+    by Tony Gaddis. Each lab gives students hands on experience with the major topics
+    in each chapter. It is designed for closed laboratories—regularly scheduled classes
+    supervised by an instructor, with a length ofapproximately two hours. Lab manuals
+    correspond to textbook chapters. Each chapter in the lab manual contains learning
+    objectives, one or two with various tasks for the students to complete; and a
+    listing of the code provided as the starting basis for each Lab. are intended
+    to be used after reading the corresponding textbook chapter, but before programming
+    challenges for each chapter in the textbook.
+
+
+    Students should copy the partially written code (available at www.aw.com/support)
+    and use the instructions provided in each task to complete the code so that it
+    is operational. Instructions will guide them through each lab having add code
+    at locations in the partially written program. Students will gain experience in
+    writing code, compiling and debugging, testing plans, and finally executing and
+    testing their programs.
+
+
+    > Note: Labs 7 and 12 are written entirely by the student using the instructions
+    in the various tasks, so there is no code provided as a starting basis.
+
+
+    # What You''ll Find in this Lab Manual
+
+
+    The Lab Manual contains 15 labs that help students learn how to apply introductory
+    programming concepts:
+
+
+    +   * Chapter 1 Lab
+
+    * Chapter 2 Lab
+
+    * Chapter 3 Lab
+
+    * Chapter 4 Lab
+
+    * Chapter 5 Lab
+
+    * Chapter 6 Lab
+
+    * Chapter 7 Lab
+
+    * Chapter 8 Lab
+
+    * Chapter 9 Lab
+
+    * Chapter 10 Lab
+
+    * Chapter 11 Lab
+
+    * Chapter 12 Lab
+
+    * Chapter 13 Lab
+
+    * Chapter 14 Lab
+
+    * Chapter 15 Lab
+
+
+    +   * Algorithms, Errors, and Testing
+
+    Java Fundamentals
+
+    Selection Control Structures
+
+    Loops and Files
+
+    Methods
+
+    Classes and Objects
+
+    GUI Applications
+
+    Arrays
+
+    More Classes and Objects
+
+    Text Processing and Wrapper Classes
+
+    Inheritance
+
+    Exceptions and Advanced File I/O
+
+    Advanced GUI Applications
+
+    Applets and More
+
+    Recursion'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Supplementary Materials
+
+
+    +   * Students can find source files for the labs at www.aw.com/cssupport, under
+    author "Christie" and title "Lab Manual to Accompany Starting Out with Java: From
+    Control Structures to Objects" or "Gaddis", "Starting Out with Java: From Control
+    Structures to Objects."
+
+    n* Solution files and source code are available to qualified instructors at Addison-Wesley’s
+    Instructor Resource Center. Register at www.aw.com/irc and search for author "Gaddis."
+
+
+    # Acknowledgements
+
+
+    I would like to thank everyone at Addison-Wesley for making this lab manual a
+    reality. Tony Gaddis for having the confidence in me to write labs to accompany
+    his books and my colleagues who have contributed ideas to help develop these labs.
+
+
+    I also thank my students at the University of Wisconsin-Stout for giving me back
+    on these labs to continue to improve them.
+
+
+    Most of all, I want to thank my family: Michael, Andrew, and Pamela for all of
+    their encouragement, patience, love, and support.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Contents
+
+
+    +   Chapter 1 Lab Algorithms, Errors, and Testing 1
+
+    Chapter 2 Lab Java Fundamentals 9
+
+    Chapter 3 Lab Selection Control Structures 21
+
+    Chapter 4 Lab Loops and Files 31
+
+    Chapter 5 Lab Methods 41
+
+    Chapter 6 Lab Classes and Objects 51
+
+    Chapter 7 Lab GUI Applications 61
+
+    Chapter 8 Lab Arrays 67
+
+    Chapter 9 Lab More Classes and Objects 75
+
+    Chapter 10 Lab Text Processing and Wrapper Classes 87
+
+    Chapter 11 Lab Inheritance 97
+
+    Chapter 12 Lab Exceptions and Advanced File I/O 109
+
+    Chapter 13 Lab Advanced GUI Applications 113
+
+    Chapter 14 Lab Applets and More 121
+
+    Chapter 15 Lab Recursion 127'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# # Chapter 1 Lab
+
+
+    Algorithms, Errors, and Testing
+
+
+    # Objectives
+
+
+    +   - Be able to write an algorithm
+
+    - Be able to compile a Java program
+
+    - Be able to execute a Java program using the Sun JDK or a Java IDE
+
+    - Be able to test a program
+
+    - Be able to debug a program with syntax and logic errors
+
+
+    # Introduction
+
+
+    Your teacher will introduce your computer lab and the environment you will be
+    using for programming in Java.
+
+    In chapter 1 of the textbook, we discuss writing your first program. The example
+    calculates the user''s gross pay. It calculates the gross pay by multiplying the
+    number of hours worked by hourly rate. However, it is not always calculated this
+    way. What if you work 45 hours in a week? The hours you worked over 40 hours are
+    considered overtime. You will need to be paid time and a half for the overtime
+    hours worked.
+
+    In this lab, you are given a program which calculates user''s gross pay with or
+    without overtime. To output overtime, you re work backwards this time, and use
+    pseudocode to write an algorithm from the Java code. This will give you practice
+    with algorithms while allowing to explore and understand a little Java code before
+    begin learning the Java programming language.
+
+    You will also need to test this program to ensure the correctness of the algorithm
+    and code. You will need to develop test data that will represent all possible
+    kinds of data the user may use.
+
+    You will also be debugging a program. There are several types of errors. In this
+    lab, you will encounter syntax and logic errors. We will explore runtime errors
+    in lab 2.
+
+
+    +   1. Syntax Errors—the “grammar” of the programming language. These are caught
+    by the compiler and listed out with line number and error found. You will learn
+    how to understand what they tell you with experience. All syntax errors must be
+    corrected before the program runs. If the program runs, this'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'does not mean that it is correct, only that there are no syntax errors. Examples
+    of syntax errors are spelling mistakes in variable names, missing semicolon, unpaired
+    curly braces, etc.
+
+
+    +   2. Logic Errors—errors in the logic of the algorithm. These errors emphasize
+    the need for a correct algorithm. If the statements are out of order, if there
+    are errors in a formula, or if there are missing steps, the program can still
+    run and give you output, but it may be the wrong output. There is no list of logic
+    errors, you may not realize you have errors unless you check your output. It is
+    very important to know what to expect. You should test your programs with different
+    inputs, and know what output to expect in each case. For example, if your program
+    calculates your pay, you should check three different cases: less than 40 hours,
+    40 hours, and more than 40 hours. Calculate each case by hand before running your
+    program so that you know what to expect. You may get a correct answer for one
+    case, but not for another case. This will help you figure out where your logic
+    errors are.
+
+
+    +   3. Run time errors—errors that do not occur until the program is run, and
+    then may only occur with some data. These errors emphasize the need for completely
+    testing your program.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Task #1 Writing an Algorithm
+
+
+    +   1. Copy the file Pay.java (see code listing 1.1) from www.aw.com/cssupport
+    or as directed by your instructor.
+
+
+    +   2. Open the file in your Java Integrated Development Environment (IDE) or
+    a text editor as directed by your instructor. Examine the file, and compare it
+    with the detailed version of the pseudocode in step number 3, section 1.6 of the
+    textbook. Notice that the pseudocode does not include every line of code. The
+    program code includes identifier declarations and a statement that is needed to
+    enable Java to read from the keyboard. These are not part of actually completing
+    the task of calculating pay, so they are not included in the pseudocode. The only
+    important difference between the example pseudocode and the Java code is in the
+    calculation. Below is the detailed pseudocode for the example, but without the
+    calculation part. You need to fill in lines that tell in English what the calculation
+    of Pay.java is doing.
+
+
+    Display How many hours did you work?
+
+    Input hours
+
+    Display How much do you get paid per hour?
+
+    Input rate
+
+
+    Display the value in the pay variable.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Task #2 Compile and Execute a Program
+
+
+    +   1. Compile the Pay.java using the Sun JDK or a Java IDE as directed by your
+    instructor.
+
+
+    +   2. You should not receive any error messages.
+
+
+    +   3. When this program is executed, it will ask the user for input. You should
+    calculate several different changes, by hand. You should test three different
+    cases: the critical point, a number above the critical point, and a number below
+    the critical point. You want to calculate by hand so that you can check the logic
+    of the program. Fill in the chart below with your test cases and the result you
+    get when calculating by hand.
+
+
+    +   4. Execute the program using your first set of data. Record your result. You
+    will need to execute the program three times to test all your data. Note: you
+    do not need to execute the program again. Once the program compiles correctly
+    once, it can be executed many times. You only need to compile again if you make
+    changes to the code.
+
+
+    | Hours | Rate | Pay (hand calculated) | Pay (program result) |
+
+    |---|---|---|---|
+
+    | | | | |
+
+    | | | | |'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'Chapter 1 Lab Algorithms, Errors, and Testing 5
+
+
+    # Task #3 Debugging a Java Program
+
+
+    +   1. Copy the file SalesTax.java (see code listing 1.2) from www.aw.com/cssupport
+    as directed by your instructor.
+
+
+    +   2. Open the file in your IDE or text editor as directed by your instructor.
+    This file contains a simple Java program that contains errors. Compile the program.
+    You may get a list of syntax errors. Correct all the syntax errors, you may want
+    to recompile after you fix some of the errors.
+
+
+    +   3. When all syntax errors are corrected, the program should compile. As in
+    the previous exercise, you may need to develop some test data. Use the chart below
+    to record your test data and results when calculated by hand.
+
+
+    +   4. Execute the program using your test data and recording the results. If
+    the output of the program is different from what you calculated, this usually
+    indicates a logic error. Examine the program and correct logic error. Compile
+    the program and execute using the test data again. Repeat until all output matches
+    what is expected.
+
+
+    | Item | Price | Tax | Total (calculated) | Total (output) |
+
+    |---|---|---|---|--|
+
+    | | | | | |'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# Code Listing 1.1 (Pay.java)\n\n//This program calculates the user's gross\
+    \ pay\n\n```\nimport java.util.Scanner;      //to be able to read from the keyboard\n\
+    \npublic class Pay\n{\n    public static void main(String [] args)\n    {\n  \
+    \      //create a Scanner object to read from the keyboard\n        Scanner keyboard\
+    \ = new Scanner(System.in);\n\n        //identifier declarations\n        double\
+    \ hours;              //number of hours worked\n        double rate;         \
+    \     //hourly pay rate\n        double pay;               //gross pay\n\n   \
+    \     //display prompts and get input\n        System.out.print(\"How many hours\
+    \ did you work? \");\n        hours = keyboard.nextDouble();\n        System.out.print(\"\
+    How much do you get paid per hour? \");\n        rate = keyboard.nextDouble();\n\
+    \n        //calculations\n        if(hours <= 40)\n            pay = hours * rate;\n\
+    \        else\n            pay = (hours - 40) * (1.5 * rate) + 40 * rate;\n\n\
+    \        //display results\n        System.out.println(\"You earned $\" + pay);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# Code Listing 1.2 (SalesTax.java)\n\nimport java.util.Scanner;\n\n```\npublic\
+    \ class SalesTax\n{\n    public static void main(String[] args)\n{\n        //identifier\
+    \ declarations\n        final double TAX_RATE = 0.055;\n        double price;\n\
+    \        double tax;\n        double total;\n        String item;\n\n        //create\
+    \ a Scanner object to read from the keyboard\n        Scanner keyboard = new Scanner(System.in);\n\
+    \n        //display prompts and get input\n        System.out.print(\"Item description:\
+    \ \");\n        item = keyboard.nextLine() + \" $$\";\n        System.out.print(\"\
+    Item price: \");\n        price = keyboard.nextDouble();\n\n        //calculations\n\
+    \        tax = price + TAX_RATE;\n        total = price * tax;\n\n        //display\
+    \ results\n        System.out.print(item + \" $$\");\n        System.out.println(price);\n\
+    \        System.out.print(\"Tax \")\n```"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# # Chapter 2 Lab
+
+    Java Fundamentals
+
+
+    # Objectives
+
+
+    +   - Write arithmetic expressions to accomplish a task
+
+    - Use casting to convert between primitive types
+
+    - Use a value-returning library method and a library constant
+
+    - Use string methods to manipulate string data
+
+    - Communicate with the user using the Scanner class or dialog boxes
+
+    - Create a program by translating a pseudocode algorithm
+
+    - Be able to document a program
+
+
+    # Introduction
+
+
+    This lab is designed to give you practice with some of the basics in Java. We
+    will continue ideas from lab 1 by correcting logic errors while looking at mathematical
+    formulas in Java. We will explore the difference between integer division and
+    division on your calculator as well as reviewing the order of operations.
+
+
+    We will also learn how to use mathematical formulas that are preprogrammed in
+    Java. On your calculator there are buttons to do certain operations, such as raising
+    a number to a power or use the number pi. Similarly, in Java, we have programs
+    that are available for us to do these operations. Mathematical operations that
+    can be performed with the tech of a button on a calculator are also available
+    in the Math class. We will learn how to use a Math class to cube the radius in
+    the formula for finding the volume of a sphere.
+
+
+    This lab also introduces communicating with user. We have already seen how console
+    input and output work in lab 1. We will now need to learn how to program user
+    input, by investigating the lines of code that we need to add in order to use
+    the Scanner class. We will also learn the method called for output.
+
+
+    Alternately, you may use dialog boxes for communicating with the user. An introduction
+    to graphical user interface (GUI) programming is explored using the JOptionPane
+    class.
+
+
+    The String class is introduced and we will use some of the available methods to
+    prepare you for string processing.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: We will bring everything we have learned together by creating a program from
+    an algorithm. Finally, you will document the program by adding comments. Comments
+    are not read by the computer, they are for use by the programmer. They are to
+    help a programmer document what the program does and how it accomplishes it. This
+    is very important when a programmer needs to modify code that is written by another
+    person.
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Task #1 Correcting Logic Errors in Formulas
+
+
+    +   1. Download the file NumericTypes.java (see code listing 2.1) from www.aw.com/cssupport
+    or as directed by your instructor.
+
+
+    +   2. Compile the source file, run the program, and observe the output. Some
+    of the output is **incorrect**. You need to **correct logic errors** in the average
+    formula and the temperature conversion formula. The logic errors could be due
+    to conversion between data types, order of operations, or formula problems. The
+    necessary formulas are
+
+
+    average = score1 + score2 / numberOfScores
+
+    C = 5/9(F - 32)
+
+
+    +   3. Each time you make changes to the program, you must compile again for the
+    changes to take effect before running the program again.
+
+
+    +   4. Make sure that the output makes sense before you continue. The average
+    of 95 and 100 should be 97.5 and the temperature that water boils is 100 degrees
+    Celsius.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Task #2 Using the Scanner Class for User Input
+
+
+    +   1. Add an import statement above the class declaration to make the Scanner
+    class available to your program.
+
+    2. In the main method, create a Scanner object and connect it to the System.in
+    object.
+
+    3. Prompt the user to enter his/her first name.
+
+    4. Read the name from the keyboard using the next method, and store it in a variable
+    called firstName (you will need to declare any variables you use).
+
+    5. Prompt the user to enter his/her last name.
+
+    6. Read the name from the keyboard and store it in a variable called lastName.
+
+    7. Concatenate the firstName and lastName with a space between them and store
+    the result in a variable called fullName.
+
+    8. Print out the fullName.
+
+    9. Compile, debug, and run, using your name as test data.
+
+    10. Since we are adding on to the same program, each time we run the program we
+    will get the output from the previous tasks before the output of the current task.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Task #2 (Alternate) Using Dialog Boxes for User Input
+
+
+    +   1. Add an import statement above the class declaration to make the JOptionPane
+    class available to your program.
+
+
+    +   2. In the main method, prompt the user to enter his/her first name by displaying
+    an input dialog box and storing the user input in a variable called firstName
+    (you will need to declare any variables you use).
+
+
+    +   3. Prompt the user to enter his/her last name by displaying an input dialog
+    box and storing the user input in a variable called lastName.
+
+
+    +   4. Concatenate the firstName and lastName with a space between them and store
+    the result in a variable called fullName.
+
+
+    +   5. Display the fullName using a message dialog box.
+
+
+    +   6. Compile, debug, and run using your name as test data.
+
+
+    +   7. Since we are adding on to the same program, each time we run the program
+    we get the output from the previous tasks before the output of the current task.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Task #3 Working with Strings
+
+
+    +   1. Use the charAt method to get the first character in firstName and store
+    it in a variable called firstinitial (you will need to declare any variables that
+    you use).
+
+    2. Print out your user''s initial.
+
+    3. Use the toUpperCase method to change the fullName to all capitals and store
+    it back into the fullName variable
+
+    4. Add a line that prints out the value of fullName and how many characters (including
+    the space) are in the string stored in fullName (use the method length to obtain
+    that information).
+
+    5. Compile, debug, and run. The new output added on after the output from the
+    previous tasks should have your initials and your full name in all capital letters.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Task #4 Using Predefined Math Functions
+
+
+    +   1. Add a line that prompts the user to enter the diameter of a sphere.
+
+    2. Read in and store the number into a variable called diameter (you will need
+    to declare any variables that you use).
+
+    3. The diameter is twice as long as radius, so calculate and store the radius
+    in an appropriately named variable.
+
+    4. The formula for the volume of a sphere is $V = \frac{4}{3}\pi r^3$
+
+    5. Print your results to the screen with an appropriate message.
+
+    6. Compile, debug, and run using the following test data and record the results.
+
+
+    Convert the formula to Java and add a line which calculates and stores the value
+    of volume in an appropriately named variable. Use Math.PI for $\pi$ and Math.pow
+    to cube the radius.
+
+
+    | Diameter | Volume (hand calculated) | Volume (resulting output) |
+
+    | 2 | | |
+
+    | 25.4 | | |
+
+    | 875.000 | | |'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# Task #5 Create a program from scratch\n\nIn this the student will create\
+    \ a new program that calculates gas mileage in miles per gallon. The student will\
+    \ use string expressions, assignment statements, input and output statements to\
+    \ communicate with the user.\n\n+   1. Create a new file in your IDE or text editor.\n\
+    2. Create the shell for your first program by entering:\n```java\npublic class\
+    \ Mileage\n{\n    public static void main(String[] args)\n{\n        // add your\
+    \ declaration and code here\n    }\n}\n```\n3. Save the file as Mileage.java.\n\
+    4. Translate the algorithm below into Java. Don't forget to declare variables\
+    \ before they are used. Each variable must be one word only (no spaces).\nPrint\
+    \ a line indicating this program will calculate mileage\nPrint prompt to ask for\
+    \ miles driven\nRead in miles\nPrint prompt to ask for gallons used\nRead in gallons\n\
+    Calculate miles per gallon by dividing miles driven by gallons used\nPrint miles\
+    \ per gallon along with appropriate labels\n5. Compile the program and debug,\
+    \ repeating until it compiles successfully.\n6. Run the program and test it using\
+    \ the following set of data and return the results:\n\n| Miles driven | Gallons\
+    \ used | Miles per gallon (hand calculated) | Miles per gallon (resulting output)\
+    \ |\n|---|---|---|--|\n| 2000 | 100 | | |\n| 500 | 25.5 | | |\n| 241.5 | 10 |\
+    \ | |\n| 100 | 0 | | |\n\n+   7. The last set of data caused the computer to divide\
+    \ 100 by 0, which resulted in what is called a runtime error. Notice that runtime\
+    \ can occur on programs which compile and run on many other sets of data. This\
+    \ emphasizes the need to thoroughly test your program with all possible kinds\
+    \ of data."
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Task #6 Documenting a Java Program
+
+
+    +   1. Compare the code listings of NumericTypes.java with Mileage.java. You will
+    see that NumericTypes.java has lines which have information about what the program
+    is doing. These lines are called comments and are designated by the // at the
+    beginning of the line. Any comment that starts with /** and ends with **/ is considered
+    a documentation comment. They are typically written just before a class header,
+    giving a brief description of the class. They are also used for documenting methods
+    in the same way.
+
+
+    +   2. Write a documentation comment at the top of the program which indicates
+    the purpose of the program, your name, and today''s date.
+
+
+    +   3. Add comment lines after each variable declaration, indicating what each
+    variable represents.
+
+
+    +   4. Add comment lines for each section of the program, indicating what is done
+    in that section.
+
+
+    +   5. Finally add a comment line indicating the purpose of the calculation.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Code Listing 2.1 (NumericTypes.java)\n\n```\n//TASK #2 Add import statement\
+    \ to use the Scanner class\n//TASK #2 (Alternate) Add import statement to use\
+    \ JOptionPane\n//class\n/**\n    This program demonstrates how numeric types and\
+    \ operators behave\n*/\n```\n\n```\npublic class NumericTypes\n{\n    public static\
+    \ void main (String [] args)\n    {\n        //TASK #2 Create a Scanner object\
+    \ here\n        //(not used for alternate)\n\n        //identifier declarations\n\
+    \        final int NUMBER = 2 ; // number of scores\n        final int SCORE1\
+    \ = 100; // first test score\n        final int SCORE2 = 95; // second test score\n\
+    \        final int BOILING_IN_F = 212; // freezing temperature\n        int fToC;\
+    \ // temperature in Celsius\n        double average; // arithmetic average\n \
+    \       String output; // line of output to print out\n        //TASK #2 declare\
+    \ variables used here\n        //TASK #3 declare variables used here\n       \
+    \ //TASK #4 declare variables used here\n\n        // Find an arithmetic average\n\
+    \        average = SCORE1 + SCORE2 / NUMBER;\n        output = SCORE1 + \" and\
+    \ \" + SCORE2 +\n                \" have an average of \" + average;\n       \
+    \ System.out.println(output);\n\n        // Convert Fahrenheit temperatures to\
+    \ Celsius\n        fToC = 5 / 9 * (BOILING_IN_F - 32);\n        output = BOILING_IN_F\
+    \ + \" in Fahrenheit is \" + + fToC\n                + \" in Celsius.\";\n```\n\
+    \nCode Listing 2.1 continued on next page."
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Chapter 2 Lab Java Fundamentals
+
+
+    ```
+
+    System.out.println(output);
+
+    System.out.println(); // to leave a blank line
+
+    ```
+
+
+    ```
+
+    // ADD LINES FOR TASK #2 HERE
+
+    // prompt the user for first name
+
+    // read the user''s first name
+
+    // prompt the user for last name
+
+    // read the user''s last name
+
+    // concatenate the user''s first and last names
+
+    // print out the user''s full name
+
+    ```
+
+
+    ```
+
+    System.out.println(); // to leave a blank line
+
+    ```
+
+
+    ```
+
+    // ADD LINES FOR TASK #3 HERE
+
+    // get the first character from the user''s first name
+
+    // print out the user''s first initial
+
+    // convert the user''s full name to all capital letters
+
+    // print out the user''s full name in all capital
+
+    // letters and the number of characters in it
+
+    ```
+
+
+    ```
+
+    System.out.println(); // to leave a blank line
+
+    ```
+
+
+    ```
+
+    // ADD LINES FOR TASK #4 HERE
+
+    // prompt the user for a diameter of a sphere
+
+    // read the diameter
+
+    // calculate the radius
+
+    // calculate the volume
+
+    // print out the volume
+
+    ```
+
+
+    ```
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# # Chapter 3 Lab
+
+    Selection Control Structures
+
+
+    # Objectives
+
+
+    +   * Be able to construct boolean expressions to evaluate a given condition
+
+    * Be able to compare Strings
+
+    * Be able to use a flag
+
+    * Be able to construct if and if-else-if statements to perform a specific task
+
+    * Be able to construct a switch statement
+
+    * Be able to format numbers
+
+
+    # Introduction
+
+
+    Up to this point, all the programs you have a sequential control structure. This
+    means that all statements are executed in order, one after another. Sometimes
+    we need to let the computer make decisions, based on the data. A selection control
+    structure allows the computer to select which statement to execute.
+
+
+    In order to have the computer make a decision, we need to do a comparison. So
+    we will work with writing boolean expressions. Boolean use relational operators
+    and logical operators to create a condition that can be evaluated as true or false.
+
+
+    Once we have a condition, we can conditionally execute statements. This means
+    that there are statements in the program that may or not be executed, depending
+    on the condition.
+
+
+    We can also chain conditional statements together to allow the computer to choose
+    from several courses of action. We will explore this using nested if-else statements
+    as well as a switch statement.
+
+
+    In this lab, we will be editing a pizza ordering program. It creates a Pizza object
+    to the specifications that the user desires. It walks the user through ordering,
+    giving the user choices, which the program then uses to decide how to make the
+    pizza and how much the cost of the pizza will be. The user will also receive a
+    $2.00 discount if his/her name is Mike or Diane.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Task #1 The if Statement, Comparing Strings, and Flags
+
+
+    +   1. Copy the file PizzaOrder.java (see code listing 3.1) from www.aw.com/cssup-port
+    or as directed by your instructor.
+
+
+    +   2. Compile and run PizzaOrder.java. You will be able to make selections, but
+    at this point, you will always get a Hand-toed pizza at a base cost of $12.99
+    no matter what you select, you will be able to choose toppings, and they should
+    add into the price correctly. You will also notice that the output does not look
+    like nicely. So we need to edit PizzaOrder.java to complete the program so that
+    it works correctly.
+
+
+    +   3. Construct a simple statement. The condition will compare the String input
+    by the user as his/her first name with the first names of the owners, Mike and
+    Diane. Be sure that the comparison is not case sensitive.
+
+
+    +   4. If the user has either first name, set the discount flag to true. This
+    will not affect the price at this point yet.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Task #2 The if-else-if Statement
+
+
+    +   1. Write an if-else-if statement that lets the computer choose which statements
+    to execute by the user input size (10, 12, 14, or 16). For each option, the cost
+    needs to be set to the appropriate amount.
+
+    2. The default else of the above if-else statement should print a statement that
+    the user was not one of the choices, so a 12 inch pizza will be made. It should
+    also set the size to 12 and the cost to 12.99.
+
+    3. Compile, debug, and run. You should now be able to get correct output for size
+    and price (it will still have Hand-tossed crust, the output won''t look like money,
+    and no discount will be applied yet). Run your program multiple times ordering
+    a 10, 12, 14, 16, and 17 inch pizza.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Task #3 Switch Statement
+
+
+    +   1. Write a switch statement that compares the user''s choice with the appropriate
+    characters (make sure that both capital letters and small letters will work).
+
+    2. Each case will assign the appropriate string indicating crust type to the crust
+    variable.
+
+    3. The default case will print a statement that the user input was not one of
+    the choices, so a Hand-tossed crust will be made.
+
+    4. Compile, debug, and run. You should now be able to get crust types other than
+    Hand-tossed. Run your program multiple times to make sure all cases of the switch
+    statement operate correctly.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# Task #4 Using a Flag as a Condition\n\n+   1. Write an if statement that\
+    \ uses the flag as the condition. Remember that the flag is a Boolean variable,\
+    \ therefore is true or false. It does not have to be compared to anything.\n2.\
+    \ The body of the if statement should contain two statements:\n   a) A statement\
+    \ that prints a message indicating that the user is eligible for a $2.00 discount.\n\
+    \   b) A statement that reduces the variable cost by 2.\n3. Compile, debug, and\
+    \ run. Test your program using the owners' names (both capitalized and not) as\
+    \ well as a different name. The discount should be correctly at this time."
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Task #5 Formatting Numbers
+
+
+    +   1. Add an import statement to use the DecimalFormat class as indicated above
+    the class declaration.
+
+    2. Create a DecimalFormat object that always shows 2 decimal places.
+
+    3. Edit the appropriate lines in the main method so that any monetary output has
+    2 decimal places.
+
+    4. Compile, debug, and run. Your output should be completely correct at this time,
+    and numeric output should look like money.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Code Listing 3.1 (PizzaOrder.java)\n\nimport java.util.Scanner;\nimport java.text.DecimalFormat;\n\
+    /**\n * This program allows the user to order a pizza\n */\n\n```\npublic class\
+    \ PizzaOrder{\n    public static void main (String [] args) {\n//TASK #5 Create\
+    \ a DecimalFormat object with 2 decimal //places\n//Create a Scanner object to\
+    \ read input\nScanner keyboard = new Scanner (System.in);\nString firstName; //user's\
+    \ first name\nboolean discount = false; //flag, true if user is //eligible for\
+    \ discount\nsize of the pizza\nint inches;\nchar crustType;\nString crust = \"\
+    Hand-tossed\"; //code for type of crust\ndouble cost = 12.99; //cost of the pizza\n\
+    final double TAX_RATE = .08; //sales tax rate\ndouble tax; //amount of tax\nchar\
+    \ choice;\nString input; //user's choice\nString toppings = \"Cheese \" //list\
+    \ of toppings\nint numberOfToppings = 0; //number of toppings\n```\n\n```\n//prompt\
+    \ user and get first name\nSystem.out.println(\"Welcome to Mike and Diane's Pizza\"\
+    );\nSystem.out.print(\"Enter your first name: \");\nfirstName = keyboard.nextLine();\n\
+    ```\n\nCode Listing 3.1 continued on next page."
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "//determine if user is eligible for discount by\n//having the same first name\
+    \ as one of the owners\n//ADD LINES HERE FOR TASK #1\n\n```\n//prompt user and\
+    \ get pizza size choice\nSystem.out.println(\"Pizza Size (inches) Cost\");\nSystem.out.println(\"\
+    \");\n                10 $10.99\");\nSystem.out.println(\"\");\n             \
+    \   12 $12.99\");\nSystem.out.println(\"\");\n                14 $14.99\");\n\
+    System.out.println(\"\");\n                16 $16.99\");\nSystem.out.println(\"\
+    What size pizza would you like?\");\nSystem.out.print(\n                \"10,\
+    \ 12, 14, or 16 (or the number only): \");\ninches = keyboard.nextInt();\n```\n\
+    \n//set price and size of pizza ordered\n//ADD LINES HERE FOR TASK #2\n\n```\n\
+    //consume the remaining newline character\nkeyboard.nextLine();\n```\n\n```\n\
+    //prompt user and get crust choice\nSystem.out.println(\"What type of crust do\
+    \ you want? \");\nSystem.out.print(\"(H)Hand-tossed, (T)Thin-crust, or \" +\n\"\
+    (D)Deep-dish (enter H, T, or D): \");\ninput = keyboard.nextLine();\ncrustType\
+    \ = input.charAt(0);\n```\n\n//set user's crust choice on pizza ordered\n//ADD\
+    \ LINES HERE FOR TASK #3\n\n//prompt user and get topping choices one at a time\n\
+    \n```\nSystem.out.println(\"All pizzas come with cheese.\");\nSystem.out.println(\"\
+    Additional toppings are $1.25 each,\" +\n+ \" choose from\");\nSystem.out.println(\"\
+    Pepperoni, Sausage, Onion, Mushroom\");\n```\n\nCode Listing 3.1 continued on\
+    \ next page."
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# Chapter 3 Lab Selection Control Structures 29\n\n```\n//if topping is desired,\n\
+    //add to topping list and number of toppings\nSystem.out.print(\"Do you want Pepperoni?\
+    \ (Y/N): \");\ninput = keyboard.nextLine();\nchoice = input.charAt(0);\nif (choice\
+    \ == 'Y' || choice == 'y')\n{\n    numberOfToppings += 1;\nntoppings = toppings\
+    \ + \"Pepperoni \";\n}\nSystem.out.print(\"Do you want Sausage? (Y/N): \");\n\
+    input = keyboard.nextLine();\nchoice = input.charAt(0);\nif (choice == 'Y' ||\
+    \ choice == 'y')\n{\n    numberOfToppings += 1;\ntoppings = toppings + \"Sausage\
+    \ \";\n}\nSystem.out.print(\"Do you want Onion? (Y/N): \");\ninput = keyboard.nextLine();\n\
+    choice = input.charAt(0);\nif (choice == 'Y' || choice == 'y')\n{\n    numberOfToppings\
+    \ += 1;\ntoppings = toppings + \"Onion \";\n}\nSystem.out.print(\"Do you want\
+    \ Mushroom? (Y/N): \");\ninput = keyboard.nextLine();\nchoice = input.charAt(0);\n\
+    if (choice == 'Y' || choice == 'y')\n{\n    numberOfToppings += 1;\ntoppings =\
+    \ toppings + \"Mushroom \";\n}\n\n//add additional toppings cost to cost of pizza\n\
+    ```\n\nCode Listing 3.1 continued on next page."
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '```
+
+    cost = cost + (1.25*numberOfToppings);
+
+
+    //display order confirmation
+
+    System.out.println("Your order is as follows: ");
+
+    System.out.println("inches + " inch pizza");
+
+    System.out.println("crust + " crust");\nSystem.out.println("toppings");
+
+
+    //apply discount if user is eligible
+
+    //ADD LINES FOR TASK #4 HERE
+
+
+    //EDIT PROGRAM FOR TASK #5
+
+    //SO ALL MONEY OUTPUT APPEARS WITH 2 DECIMAL PLACES
+
+    System.out.println("The cost of your order is: $" + cost);
+
+
+    //calculate and display tax and total cost
+
+    tax = cost * TAX_RATE;
+
+    System.out.println("The tax is: $" + tax);
+
+    System.out.println("The total due is: $" + (tax+cost)");
+
+
+    System.out.println(
+
+    "Your order will be ready for pickup in 30 minutes.");
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# # Chapter 4 Lab
+
+
+    Loops and Files
+
+
+    # Objectives
+
+
+    +   - Be able to convert an algorithm using control structures into Java
+
+    - Be able to write a while loop
+
+    - Be able to do an do-while loop
+
+    - Be able to write a for loop
+
+    - Be able to use the Random class to generate random numbers
+
+    - Be able to use file streams for end of file
+
+    - Be able to write a loop that reads until end of file
+
+    - Be able to implement an accumulator and a counter
+
+
+    # Introduction
+
+
+    This is a simulation of rolling dice. Actual results approach theory only when
+    the sample size is large. So we will need to repeat rolling the dice a large number
+    of times (we will use 10,000). The theoretical probability of rolling doubles
+    of a specific number is 1 out of 36 or approximately 278 out of 10,000 times that
+    you roll the pair of dice. Since this is a simulation, the numbers will vary a
+    little each time you run it.
+
+
+    Check out how to use the random number generator (introduced in section 4.11 of
+    the text) to get a number between 1 and 6 to create the simulation.
+
+
+    We will continue to use control structures that we have already learned, while
+    exploring control structures for repetition. We shall also continue our work with
+    algorithms, translating a given algorithm to Java in order to complete our program.
+    We will start with a while loop, then use the same program, changing the loop
+    to a do-while loop, and then a for loop.
+
+
+    We will be introduced to file input and output. We will read a file, line by line,
+    converting each line into a number. We will then use the numbers to calculate
+    the mean and standard deviation.
+
+
+    First we will learn how to use file output to get results in a file. Next we will
+    use file input to read the numbers from a file and calculate the mean. Finally,
+    we will see that when the file is closed, and then reopened, we will start reading
+    from the top of the file again so that we can calculate the standard deviation.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Task #1 While loop
+
+
+    +   1. Copy the file DiceSimulation.java (see code listing 4.1) from www.com/cssupport
+    or as directed by your instructor. DiceSimulation.java is incomplete. Since there
+    is a large part of the program missing, the output will be incorrect if you run
+    DiceSimulation.java.
+
+
+    +   2. I have declared all the variables. You need to add code to simulate rolling
+    the dice and keeping track of the doubles. Convert the algorithm below to Java
+    and place it in the main method after the variable declarations, before the output
+    statements. By will using several control structures: a while loop and an if-else
+    statement nested inside another statement. The indenting of the algorithm to help
+    you decide what is included in the loop, what is included in the statement, and
+    what is included in the nested if-else-if statement.
+
+
+    +   3. To “roll” the dice, use the nextInt method of the random number generator
+    to generate an integer from 1 to 6.
+
+
+    Repeat while the number of dice rolls are less than the times the dice should
+    be rolled.
+
+
+    > Get the value of the first die by “rolling” the first die
+
+    Get the value of the second die by “rolling” the second die
+
+    If the value of the first die is the same as the value of the second die
+
+    If value of the first die is 1
+
+    Increment the number of times snake eyes were rolled
+
+    Else if value of the first die is 2
+
+    Increment the number of times twos were rolled
+
+    Else if value of the first die is 3
+
+    Increment the number of times threes were rolled
+
+    Else if value of the first die is 4
+
+    Increment the number of times fours were rolled
+
+    Else if value of the first die is 5
+
+    Increment the number of times fives were rolled
+
+    Else if value of the first die is 6
+
+    Increment the number of times sixes were rolled
+
+    Increment the number of times dice were rolled
+
+
+    +   4. Compile and run. You should get numbers that are somewhat close to 278
+    for each of the different pairs of doubles. Run it several times. You should get
+    different results than the first time, but again it should be somewhat close to
+    278.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Task #2 Using Other Types of Loops
+
+
+    +   1. Change the loop to a do-while loop. Compile and run. You should get the
+    same results.
+
+    2. Change the loop to a for loop. Compile and run. You should get the same results.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# Task #3 Writing Output to a File\n\n+   1. Copy the files *SatsDemo.java*\
+    \ (see code listing 4.2) and *Numbers.txt* from www.www.aw.com/cssupport or as\
+    \ directed by your instructor.\n\n+   2. First we will write output to a file:\n\
+    \   a) Create a PrintWriter object passing the filename “Results.txt” (Don’t get\
+    \ the needed import statement).\n   b) Since you are using a PrintWriter object,\
+    \ add a throws clause to the main method header.\n   c) Print the mean and standard\
+    \ deviation to the output file using a three decimal format, labeling each.\n\
+    \   d) Close the output file.\n\n+   3. Compile, debug, and run. You will need\
+    \ to type in the filename **Numbers.txt**. You should get no output to the console,\
+    \ but running the program will create a file called **Results.txt** with your\
+    \ output. The output you should get at this point is: mean = 0.000, standard deviation\
+    \ = 0.000. This is not the correct mean or standard deviation for the data, but\
+    \ we will fix this in the next tasks."
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# Task #4 Calculating the Mean\n\n+   1. Now we need to add lines to allow\
+    \ us to read from the input file and calculate the mean.\n a) Create a File object\
+    \ passing the filename.\n b) Create a Scanner object passing the File object.\n\
+    2. Write a loop that reads items from the file until you are at the end of the\
+    \ file. The body of the loop will\n a) read a double from the file\n b) add the\
+    \ value that was read from the file to the accumulator\n c) increment the counter\n\
+    3. When the loop terminates, close the input file.\n4. Calculate and store the\
+    \ mean. The mean is calculated by dividing the accumulator by the counter.\n5.\
+    \ Compile, debug, and run. You should now get a mean of 77.444, but the standard\
+    \ deviation will still be 0.000."
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# Task #5 Calculating the Standard Deviation\n\n+   1. We need to reconnect\
+    \ to the file so that we can start reading from the top again.\n   a) Create a\
+    \ File object passing the filename.\n   b) Create a Scanner object passing the\
+    \ File object.\n2. Reinitialize sum and count to 0.\n3. Write a loop that reads\
+    \ items from the file until you are at the end of the file.\nThe body of the loop\n\
+    \   a) read a double file from the file\n   b) subtract the mean from the value\
+    \ that was read from the file and store the result in difference\n   c) add the\
+    \ square of the difference to the accumulator\n   d) increment the counter\n4.\
+    \ When the loop terminates, close the input file.\n5. The variance is calculated\
+    \ by dividing the accumulator (sum of the squares of the difference) by the counter.\
+    \ Calculate the standard deviation by taking the square root of the variance (Use\
+    \ Math.sqrt ( ) to take the square root).\n6. Compile, debug, and run the program.\
+    \ you should get a mean of 77.444 and standard deviation of 10.021."
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# Code Listing 4.1 (DiceSimulation.java)\n\n```\nimport java.util.Random; \
+    \     //to use the random number\n                                //generator\n\
+    ```\n\n```\n/**\n**\n**\n* This class simulates rolling a pair of dice 10,000\
+    \ times and\n* counts the number of times doubles are rolled for each differ-\n\
+    pair of doubles.\n*/\n```\n\n```\npublic class DiceSimulation\n{\n    public static\
+    \ void main(String[] args)\n    {\n        final int NUMBER = 10000;      //the\
+    \ number of times to\n                                        //roll the dice\n\
+    \n        // a random number generator used in simulating\n        //rolling a\
+    \ dice\n        Random generator = new Random();\n\n        int die1Value;   \
+    \               // number of spots on the first\n                            \
+    \            //die\n        int die2Value;                  // number of spots\
+    \ on the second\n                                        //die\n        int count\
+    \ = 0;                  // number of times the dice were\n                   \
+    \                     //rolled\n        int snakeEyes = 0;             // number\
+    \ of times snake eyes is\n                                        //rolled\n \
+    \       int twos = 0;                   // number of times double\n          \
+    \                              //two is rolled\n        int threes = 0;      \
+    \           // number of times double three\n                                \
+    \        //is rolled\n        int fours = 0;                  // number of times\
+    \ double four\n                                        //is rolled\n        int\
+    \ fives = 0;                  // number of times double five\n               \
+    \                         //is rolled\n        int sixes = 0;                \
+    \  // number of times double six is\n                                        //rolled\n\
+    ```\n\nCode Listing 4.1 continued on next page."
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# Lab Manual to Accompany Starting Out with Java 5: From Control Structures\
+    \ to Objects\n\n```\n//ENTER YOUR CODE FOR THE ALGORITHM HERE\n\nSystem.out.println(\"\
+    You rolled snake eyes \" + \nsnakeEyes + \" out of \" + count + \" rolls.\");\n\
+    System.out.println(\"You rolled double twos \" + twos + \n      \" out of \" +\
+    \ count + \" rolls.\");\nSystem.out.println(\"You rolled double threes \" + \n\
+    \      threes + \" out of \" + count + \" rolls.\");\nSystem.out.println(\"You\
+    \ rolled double fours \" + fours + \n      \" out of \" + count + \" rolls.\"\
+    );\nSystem.out.println(\"You rolled double fives \" + fives + \n      \" out of\
+    \ \" + count + \" rolls.\");\nSystem.out.println(\"You rolled double sixes \"\
+    \ + sixes + \n      \" out of \" + count + \" rolls.\");\n\n}\n```"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# Code Listing 4.2 (StatsDemo.java)\n\n```\nimport java.text.DecimalFormat;\
+    \ //for number formatting\nimport java.util.Scanner; //for keyboard input\n//ADD\
+    \ AN IMPORT STATEMENT HERE //for using files\n```\n\n```\npublic class StatsDemo\n\
+    {\n    public static void main(String [] args) //ADD A THROWS\n    //CLAUSE HERE\n\
+    \n        double sum = 0; //the sum of the numbers\n        int count = 0; //the\
+    \ number of numbers added\n        double mean = 0; //the average of the numbers\n\
+    \        double stdDev = 0; //the standard deviation of the\n        //numbers\n\
+    \        double difference; //difference between the value\n        //and the\
+    \ mean\n```\n\n```\n//create an object of type Decimal Format\nDecimalFormat threeDecimals\
+    \ =\nnew DecimalFormat(\"0.000\");\n//create an object of type Scanner\nScanner\
+    \ keyboard = new Scanner(System.in);\nString filename; //the user input file name\n\
+    //Prompt the user and read in the file name\nSystem.out.println(\"\n    \"This\
+    \ program calculates statistics\"\n    + \"on a file containing a series of numbers\\\
+    \n```\n\nCode Listing 4.2 continued on next page."
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '```
+
+    //write a loop that reads from the file until you
+
+    //are at the end of the file
+
+    //read a double from the file and add it to sum
+
+    //increment the counter
+
+    //close the input file
+
+    //store the calculated mean
+
+    ```
+
+
+    ```
+
+    //ADD LINES FOR TASK #5 HERE
+
+    //Create a File object passing it the filename
+
+    //Create a Scanner object passing it the
+
+    //File object.
+
+    //reinitialize the sum of the numbers
+
+    //reinitialize the number of numbers added
+
+    //write a loop that reads until you are at
+
+    //the end of the file
+
+    //read a double value and subtract the mean
+
+    //add the square of the difference to the sum
+
+    //increment the counter
+
+    //close the input file
+
+    //store the calculated standard deviation
+
+    ```
+
+
+    ```
+
+    //ADD LINES FOR TASK #3 HERE
+
+    //create an object of type PrintWriter
+
+    //using "Results.txt" as the filename
+
+    //print the results to the output file
+
+    //close the output file
+
+    ```
+
+
+    ```
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Chapter 5 Lab
+
+
+    Methods
+
+
+    # Objectives
+
+
+    +   - Be able to write methods
+
+    - Be able to call methods
+
+    - Be able to write javadoc comments
+
+    - Be able to create HTML documentation for our Java class using javadoc
+
+
+    # Introduction
+
+
+    Methods are commonly used to break down a problem into small manageable pieces.
+    A large task can be broken down into smaller tasks (methods) that contain the
+    details of how to complete that small task. The larger problem is then solved
+    by implementing the smaller tasks (calling the methods) in the correct order.
+
+
+    This also allows for efficiencies, since the method can be called as many times
+    as needed without rewriting the code each time.
+
+
+    Finally, we will use documentation comments for each method, and generate HTML
+    documents similar to the Java APIs that we have seen.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Task #1 void Methods
+
+
+    +   1. Copy the file Geometry.java (code listing 5.1) from www.aw.com/cssupport
+    or as directed by your instructor. This program will compile, but when you run
+    it, it doesn''t appear to do anything except wait. That is because it is waiting
+    for user input, but the user doesn''t have the menu to choose from. We will need
+    to create this.
+
+
+    +   2. Above the main method, but in the Geometry class, create a static method
+    called printMenu that has no parameter list and does not return a value. It will
+    simply print out instructions for the user with a menu of options for the user
+    to choose from this. The menu should appear to the user as:
+
+    This is a geometry calculator
+
+    Choose what you would like to calculate
+
+    1. Find the area of a circle
+
+    2. Find the area of a rectangle
+
+    3. Find the area of a triangle
+
+    4. Find the circumference of a circle
+
+    5. Find the perimeter of a rectangle
+
+    6. Find the perimeter of a triangle
+
+    Enter the number of your choice:
+
+
+    +   3. Add a line in the main method that calls the printMenu method as indicated
+    by the comments.
+
+
+    +   4. Compile, debug, and run. You should be able to choose any option, but you
+    will always get 0 for the answer. We will fix this in the next task.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Task #2 Value-Returning Methods
+
+
+    +   1. Write a static method called circleArea that takes in the radius of the
+    circle and returns the area using the formula $A = \pi r^2$.
+
+
+    +   2. Write a static method called rectangleArea that takes in the length and
+    width of the rectangle and returns the area using the formula $A = lw$.
+
+
+    +   3. Write a static method called triangleArea that takes in the base and height
+    of the triangle and returns the area using the formula $A = \frac{1}{2}bh$.
+
+
+    +   4. Write a static method called circleCircumference that takes in the radius
+    of the circle and returns the circumference using the formula $C = 2\pi r$.
+
+
+    +   5. Write a static method called rectanglePerimeter that takes in the length
+    and width of the rectangle and returns the perimeter of the rectangle using the
+    formula $P = 2l + 2w$.
+
+
+    +   6. Write a static method called trianglePerimeter that takes in the lengths
+    of the three sides of the triangle and returns the perimeter of the triangle which
+    is calculated by adding up the three sides.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Task #3 Calling Methods
+
+
+    +   1. Add lines in the main method in the GeometryDemo class which will call
+    these methods. The comments indicate where to place the method calls.
+
+
+    +   2. Below, write some sample data and hand calculated results for you to test
+    all 6 menu items.
+
+
+    +   3. Compile, debug, and run. Test out the program using your sample data.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Task #4 Java Documentation
+
+
+    +   1. Write javadoc comments for each of the 7 static methods that you just wrote.
+
+    They should include
+
+    a) A one line summary of what the method does.
+
+    a) A description of what the program requires to operate and what the result of
+    that operation is.
+
+    a) @param listing and describing each of the parameters in the parameter list
+    (if any).
+
+    a) @return describing the information that is returned to the calling statement
+    (if any).
+
+    2. Generate the documentation. Check the method summary and the method details
+    to ensure your comments were put into the Java Documentation correctly.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# Code Listing 5.1 (Geometry.java)\n\n```\nimport java.util.Scanner;\n\n/**\n\
+    \ * This program demonstrates static methods\n */\n\npublic class static Geometry\n\
+    {\n    public static void main(String [] args) \n{\n        int choice; //the\
+    \ user's choice\n        double value = 0; //the value returned from the method\n\
+    \        char letter; //the Y or N from the user's decision\n        //to exit\n\
+    \n        double radius; //the radius of the circle\n        double length; //the\
+    \ length of the rectangle\n        double width; //the width of the rectangle\n\
+    \        double height; //the height of the triangle\n        double base; //the\
+    \ base of the triangle\n        double side1; //the first side of the triangle\n\
+    \        double side2; //the second side of the triangle\n        double side3;\
+    \ //the third side of the triangle\n\n        //create a scanner object to read\
+    \ from the keyboard\n        Scanner keyboard = new Scanner(System.in);\n\n  \
+    \      //do loop was chose to allow the menu to be displayed\n        //first\n\
+    \        do\n{\n            //call the printMenu method\n            choice =\
+    \ keyboard.nextInt();\n\n            switch (choice)\n            {\n```\n\nCode\
+    \ Listing 5.1 continued on next page."
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# Chapter 5 Lab Methods\n\n```\ncase 1:\nSystem.out.print(\n  \"Enter the radius\
+    \ of the circle: \");\nradius = keyboard.nextDouble();\n//call the circleArea\
+    \ method and\n//store the result\n//in the value\nSystem.out.println(\n  \"The\
+    \ area of the circle is \" + value);\nbreak;\n```\n\n```\ncase 2:\nSystem.out.print(\n\
+    \  \"Enter the length of the rectangle: \");\nlength = keyboard.nextDouble();\n\
+    System.out.print(\n  \"Enter the width of the rectangle: \");\nwidth = keyboard.nextDouble();\n\
+    //call the rectangleArea method and store\n//the result in the value\nSystem.out.println(\n\
+    \  \"The area of the rectangle is \" + value);\nbreak;\n```\n\n```\ncase 3:\n\
+    System.out.print(\n  \"Enter the height of the triangle: \");\nheight = keyboard.nextDouble();\n\
+    System.out.print(\n  \"Enter the base of the triangle: \");\nbase = keyboard.nextDouble();\n\
+    //call the triangleArea method and store\n//the result in the value\nSystem.out.println(\n\
+    \  \"The area of the triangle is \" + value);\nbreak;\n```\n\nCode Listing 5.1\
+    \ continued on next page."
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\ncase 4:\nSystem.out.print(\n\"Enter the radius of the circle: \");\nradius\
+    \ = keyboard.nextDouble();\n//call the circumference method and\n//store the result\
+    \ in the value\nSystem.out.println(\n\"The circumference of the circle is \" +\
+    \ value);\nbreak;\n```\n\n```\ncase 5:\nSystem.out.print(\n\"Enter the length\
+    \ of the rectangle: \");\nlength = keyboard.nextDouble();\nSystem.out.print(\n\
+    \"Enter the width of the rectangle: \");\nwidth = keyboard.nextDouble();\n//call\
+    \ the perimeter method and store the result\n//in the value\nSystem.out.println(\n\
+    \"The perimeter of the rectangle is \" + value);\nbreak;\n```\n\n```\ncase 6:\n\
+    System.out.print(\"Enter the length of side 1 \" + \n\"of of the triangle: \"\
+    );\nside1 = keyboard.nextDouble();\nSystem.out.print(\"Enter the length of side\
+    \ 2 \" + \n\"of of the triangle: \");\nside2 = keyboard.nextDouble();\nSystem.out.print(\"\
+    Enter the length of side 3 \" + \n\"of of the triangle: \");\nside3 = keyboard.nextDouble();\n\
+    //call the perimeter method and store the result\n//in the value\nSystem.out.println(\"\
+    The perimeter of the \" + \n\"triangle is \" + value);\nbreak;\ndef:\n```\n\n\
+    Code Listing 5.1 continued on next page."
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "```\nSystem.out.println(\n\"You did not enter a valid choice.\");\n}\n//consumes\
+    \ the new line character after the number\nkeyboard.nextLine();\n\nSystem.out.println(\"\
+    Do you want to exit the program \" + \n\"(Y/N)?: \");\nString answer = keyboard.nextLine();\n\
+    letter = answer.charAt(0);\n}while (letter != 'Y' && letter != 'y');\n}\n}\n```"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Chapter 6 Lab
+
+
+    Classes and Objects
+
+
+    # Objectives
+
+
+    +   - Be able to declare a new class
+
+    - Be able to write a constructor
+
+    - Be able to write instance methods that return a value
+
+    - Be able to write instance methods that take arguments
+
+    - Be able to instantiate an object
+
+    - Be able to use calls to instance methods to access and change the state of an
+    object
+
+
+    # Introduction
+
+
+    Everyone is familiar with a television. It is the object we are going to create
+    in this lab. First we need a blueprint. All manufacturers have the same basic
+    elements in the televisions they produce as well as many options. We are going
+    to work with a few basic elements that are common to all televisions. Think about
+    a television in general. It has a brand name (it is made by a specific manufacturer).
+    The television screen has a specific size. It has some basic controls. There is
+    a control to turn the power on and off. There is a control to change the channel.
+    There is also a control for the volume. At any point in time, the television''s
+    state can be described by how these controls are set.
+
+
+    We will write the television class. Each object that is created from the television
+    class must be an instance of fields. So a television''s state will have the following
+    attributes:
+
+
+    +   - **manufacturer**. The manufacturer attribute will hold the brand name. This
+    cannot change once the television is created, so will be a named constant.
+
+    - **screenSize**. The screenSize attribute will hold the size of the television
+    screen. This cannot change once the television has been created so will be a named
+    constant.
+
+    - **powerOn**. The powerOn attribute will hold the true value if the power is
+    on, and false if it is off.
+
+    - **channel**. The channel attribute will hold the value of the station that the
+    television is showing.
+
+    - **volume**. The volume attribute will hold a number value representing the loudness
+    (0 being no sound).'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Lab Manual to Accompany Starting Out with Java 5: From Control Structures
+    to Objects
+
+
+    These attributes become fields in our class. The television object will also be
+    able to control the state of its attributes. These controls methods in our class.
+
+
+    +   - **setChannel**: The setChannel method will store the desired state in the
+    channel field.
+
+    - **power**: The power method will toggle the power between on and off, changing
+    the value stored in powerOn from false to true or from true to false.
+
+    - **increaseVolume**: The increaseVolume method will increase the value stored
+    in the volume field by 1.
+
+    - **decreaseVolume**: The decreaseVolume method will decrease the value stored
+    in the volume field by 1.
+
+    - **getChannel**: The getChannel method will return the value stored in the channel
+    field.
+
+    - **getVolume**: The getVolume method will return the value stored in the volume
+    field.
+
+    - **getManufacturer**: The getManufacturer method will return the constant value
+    stored in the MANUFACTER field.
+
+    - **getScreenSize**: The getClientSize method will return the constant value stored
+    in the SCREEN_SIZE field.
+
+
+    We will also need a constructor method that will be used to create an instance
+    of a Television.
+
+    These ideas can be brought together to form a UML (Unified Modeling Language)
+    diagram for this class as shown below.
+
+    These ideas can be brought together to form a UML (Unified Modeling Language)
+    diagram for this class as shown below.
+
+
+    | Television |
+
+    | -MANUFACTURER: String |
+
+    |-SCREEN_SIZE: int |
+
+    |-powerOn: boolean |
+
+    |-channel: int |
+
+    |-volume: int |
+
+    |+Television(brand: String, size: int) |
+
+    |+setChannel(station: int): void |
+
+    |+power(): void |
+
+    |+increaseVolume(): void |
+
+    |+decreaseVolume(): void |
+
+    |+getChannel(): int |
+
+    |+getVolume(): int |
+
+    |+getManufacturer(): int |
+
+    |+getScreenSize(): int |
+
+
+    ![](img/26fb2e0d2c27e34524300218035d0784_57_0.png)
+
+
+    ![](img/26fb2e0d2c27e34524300218035d0784_57_1.png)
+
+
+    ![](img/26fb2e0d2c27e34524300218035d0784_57_2.png)
+
+
+    ![](img/26fb2e0d2c27e34524300218035d0784_57_3.png)
+
+
+    ![](img/26fb2e0d2c27e34524300218035d0784_57_4.png)'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# Task #1 Creating a New Class\n\n+   1. In a new file, create a class definition\
+    \ called Television.\n2. Put a program header (comments/documentation) at the\
+    \ top of the file\n   // The purpose of this class is to model a television\n\
+    \   // Your name and today's date\n3. Declare the 2 constant fields listed in\
+    \ the UML diagram.\n4. Declare the 3 remaining fields listed in the UML diagram.\n\
+    5. Write a comment for each field indicating what it represents.\n6. Save this\
+    \ file as Television.java.\n7. Compile and debug. Do not run."
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# Task #2 Writing a Constructor
+
+
+    +   1. Create a constructor definition that has two parameters, a manufacturer''s
+    brand and a screen size. These parameters will bring in information
+
+    2. Inside the constructor, assign the values taken in from the parameters to the
+    corresponding fields.
+
+    3. Initialize the powerOn field to false (power is off), the volume to 20, and
+    the channel to 2.
+
+    4. Write comments describing the purpose of the constructor above the method header.
+
+    5. Compile and debug. Do not run.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Task #3 Methods
+
+
+    +   1. Define accessor methods called getVolume, getChannel, getManufacturer,
+    and getScreenSize that return the value of the corresponding field.
+
+
+    +   2. Define a mutator method called setChannel accepts a value to be stored
+    in the channel field.
+
+
+    +   3. Define a mutator method called power that changes the state from false
+    to true or from true to false. If the boolean variable powerOn is true, then powerOn
+    is false and vice versa. This can be accomplished by using the NOT operator (!).
+    Use the assignment statement
+
+    powerOn = !powerOn;
+
+
+    ```
+
+    powerOn = !powerOn;
+
+    ```
+
+
+    to change the state of powerOn and store it back into powerOn (remember assignment
+    statements evaluate the right hand side first, then assign the result to the left
+    hand side variable).
+
+
+    +   4. Define two mutator methods to change the volume. One method should be called
+    increaseVolume and will increase the volume by 1. The other method should be called
+    decreaseVolume and will decrease the volume by 1.
+
+
+    +   5. Write javadoc comments above each method header.
+
+
+    +   6. Compile and debug. Do not run.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# Task #4 Running the application
+
+
+    +   1. You can only execute (run) a program that has a main method, so there is
+    a program that is already written to test your Television class. Copy the file
+    TelevisionDemo.java (see code listing 3.1) from www.aw.com/cssupport or as directed
+    by your instructor. Make sure it is in the same directory as TelevisionDemo.java.
+
+
+    +   2. Compile and run TelevisionDemo and follow the prompts.
+
+
+    +   3. If your output matches the output below, Television.java is complete and
+    correct. You will not need to modify it further for this lab.
+
+
+    OUTPUT (boldface is user input)
+
+
+    A 55 inch Toshiba has been turned on.
+
+    What channel do you want? **56**
+
+    Channel: 56 Volume: 21
+
+    Too loud!! I am lowering the volume.
+
+    Channel: 56 Volume: 15'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Task #5 Creating another instance of a Television
+
+
+    +   1. Edit the TelevisionDemo.java file.
+
+    2. Declare another Television object called portable.
+
+    3. Instantiate portable to be a Sharp 19 inch television.
+
+    4. Use a call to the power method to turn the power on.
+
+    5. Use calls to the accessor methods to print what television was turned on.
+
+    6. Use calls to the mutator methods to change the channel to the user’s preference
+    and decrease the volume by two.
+
+    7. Use calls to the accessor methods to print the changed state of the portable.
+
+    8. Compile and debug this class.
+
+    9. Run TelevisionDemo again.
+
+    10. The output for task #5 will appear after the output from above, since we added
+    onto the bottom of the program. The output for task #5 is shown below.
+
+
+    OUTPUT (**boldface is user input**)
+
+
+    A 19 inch Sharp has been turned on.
+
+    What channel do you want? **7**
+
+    Channel: 7 Volume: 18'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# Code Listing 6.1 (TelevisionDemo.java)\n\n```\nimport java.util.Scanner;\\\
+    n/** This class demonstrates the Television class*/\npublic class TelevisionDemo\n\
+    {\n    public static void main(String[] args)\n    {\n        //create a Scanner\
+    \ object to read from the keyboard\n        Scanner keyboard = new Scanner(System.in);\n\
+    \n        //declare variables\n        int station; //the user's channel choice\n\
+    \n        //declare and instantiate a television object\n        Television bigScreen\
+    \ = new Television(\"Toshiba\", 55);\n        //turn the power on\n        bigScreen.power();\n\
+    \        //display the state of the television\n        System.out.println(\"\
+    A \" + bigScreen.getScreenSize() + \\\n            bigScreen.getManufacturer()\
+    \ + \\\n            \" has been turned on.\");\n        //prompt the user for\
+    \ input and store into station\n        System.out.print(\"What channel do you\
+    \ want?\");\n        station = keyboard.nextInt();\n\n        //change the channel\
+    \ on the television\n        bigScreen.setChannel(station);\n        //increase\
+    \ the volume of the television\n        bigScreen.increaseVolume();\n        //display\
+    \ the current channel and volume of the\n        //television\n        System.out.println(\"\
+    Channel: \" + \\\n            bigScreen.getChannel() + \\\n            \" Volume:\
+    \ \" + bigScreen.getVolume());\n    }\\}\n```\n\nCode Listing 6.1 continued on\
+    \ next page."
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# Chapter 6 Lab Classes and Objects 59\n\n```\nSystem.out.println(\n    \"\
+    Too loud! I am lowering the volume.\");\n    //decrease the volume of the television\n\
+    \    bigScreen.decreaseVolume();\n    bigScreen.decreaseVolume();\n    bigScreen.decreaseVolume();\n\
+    \    bigScreen.decreaseVolume();\n    bigScreen.decreaseVolume();\n    bigScreen.decreaseVolume();\n\
+    \    //display the current channel and volume of the\n    //television\n    System.out.println(\"\
+    Channel: \" +\n        bigScreen.getChannel() + +\n        \"Volume: \" + bigScreen.getVolume());\n\
+    \    System.out.println(); //for a blank line\n\n    //HERE IS WHERE YOU DO TASK\
+    \ #5\n  }\n}\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# # Chapter 7 Lab
+
+    GUI Applications
+
+
+    # ## Objectives
+
+
+    +   - Be able to create a closeable window
+
+    - Be able to create panels containing buttons
+
+    - Be able to use different layouts
+
+    - Be able to handle button events
+
+
+    # ## Introduction
+
+
+    In this lab, we will be creating a graphical user interface (GUI) to allow the
+    user to select a button that will change the color of the center panel and radio
+    buttons that will change the color of the text in the center panel. We will need
+    to use a variety of Swing components to accomplish this task.
+
+
+    We will build two panels, a top panel containing three buttons and a bottom panel
+    containing three radio buttons. Layouts will be used to add these panels to the
+    window in the desired positions. A label with instructions will be added to the
+    window. Listeners will be employed to handle the events desired by the user.
+
+    Our final GUI should look like the following
+
+
+    ![](img/26fb2e0d2c27e34524300218035d0784_66_0.png)'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# Task #1 Creating a GUI
+
+
+    +   1. Import the required Java libraries.
+
+    2. Create a class ColorFactory that inherits from JFrame.
+
+    3. Create named constants for a width of 500 and height of 300 for the frame.
+
+    4. Write a default constructor that does the following
+
+    na) Set the title of the window to Color Factory.
+
+    nb) Set the size of the window using the constants.
+
+    nc) Specify what happens when the close button is clicked.
+
+    d) Get the content pane of the JFrame and set the layout manager to border layout.
+
+    e) Call the method to build the top panel (to be written as directed below).
+
+    f) Add the panel to the north part of the content pane.
+
+    g) Call the method to build the bottom panel (to be written as directed below).
+
+    h) Add this panel to the south part of the content pane.
+
+    i) Create a label that contains the message "Top buttons change the panel color
+    and bottom radio buttons change the text color."
+
+    j) Add this label to the center part of the content pane.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# Task #2 Writing Private Methods\n\n+   1. Write a private method that builds\
+    \ the top panel as follows\n na) Create a panel that contains three buttons, red,\
+    \ orange, and yellow.\n nb) Use flow layout for the panel and set the background\
+    \ to be white.\n nc) The buttons should be labeled with the color name and also\
+    \ appear in that color.\n nd) Set the action command of each button to be the\
+    \ first letter of the color name.\n ne) Add button listener that implements action\
+    \ listener for each button.\n2. Create a bottom panel in the same way as the top\
+    \ panel above, but use radio buttons with the colors green, blue, and cyan."
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Task #3 Writing Inner Classes
+
+
+    +   1. Write a private inner class called ButtonListener that implements ActionListener.
+    It should contain an actionPerformed method to handle the button events. This
+    event handler will handle all button events, so you must get the color of the
+    event and write a decision structure to determine which background of the content
+    pane.
+
+
+    +   2. Write another private inner class called RadioButtonListener, similar to
+    Button listener. It will handle all radio button events, so you will need to check
+    the source of the event and write a decision structure to determine which color
+    should be used for the text of the message.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Task #4 Running the GUI Program
+
+
+    +   1. Write a main method that declares and creates one instance of a ColorFactory,
+    then use the setVisible method to show it on the screen.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# # Chapter 8 Lab
+
+
+    Arrays
+
+
+    # Objectives
+
+
+    +   - Be able to declare and instantiate arrays
+
+    - Be able to fill an array using a for loop
+
+    - Be able to access and process data in an array
+
+    - Be able to write a sorting method
+
+    - Be able to use an array of objects
+
+
+    # Introduction
+
+
+    Everyone is familiar with a list. We make shopping lists, to-do lists, assignment
+    lists, birthday lists, etc. Notice that though there may be many items on the
+    list, we call the list by one name. Notice that the idea of the array, one name
+    for a list of related items. In this lab, we will work with lists in the form
+    of an array.
+
+
+    It will start out with a list of numbers. We will learn how to process the contents
+    of an array. We will also explore sorting algorithms, using the selection sort.
+    We will then move onto more complicated arrays, arrays that contain objects.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# Task #1 Average Class
+
+
+    Create a classed Average according to the UML diagram.
+
+
+    | Average |
+
+    | --- |
+
+    | -data[] : int |
+
+    | -mean: double |
+
+    | +Average() |
+
+    | +calculateMean(): void |
+
+    | +toString(): String |
+
+    | +selectionSort(): void |
+
+
+    This class will allow a user to enter 5 scores into an array. It will rearrange
+    the data in descending order and calculate the mean for the set.
+
+
+    +   Attributes:
+
+    - data[]—the array which will contain the scores
+
+    - mean—the arithmetic average of the scores
+
+
+    +   Methods:
+
+    - **Average**—the constructor. It will allocate memory for the array. Use a for
+    loop to repeatedly display for the user which should indicate that user should
+    enter score number 1, prompt score number 2, Note: The computer starts counting
+    with 0, but people start counting with 1, and your prompt should account for this.
+    For example, when the user enters score number 1, it will be stored in indexed
+    variable 0. The user will then call the **selectionSort** and the **calculateMean**
+    methods.
+
+    - **calculateMean**—this is a method that uses a for loop to access each score
+    in the array and add it to a running total. The total divided by the number of
+    scores (the length of the array), and the result is stored into mean.
+
+    - **toString**—returns a String containing data in descending order and the mean.
+
+    - **selectionSort**—this method uses the selection sort algorithm to rearrange
+    the data from highest to lowest.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# Task #2 Average Driver
+
+
+    +   1. Create an **AverageDriver** class. This class only contains the main method.
+    The main method should declare and instantiate an Average object. The Average
+    object information should then be printed to the console.
+
+
+    +   2. Compile, debug, and run the program. It should output the data set from
+    highest to lowest and the mean. Compare the computer''s output to your hand calculation
+    using a calculator. If they are not the same, do not continue until you correct
+    your code.'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# Task #3 Arrays of Objects
+
+
+    +   1. Copy the files Song.java (code listing 8.1), CompactDisc.java (code listing
+    8.2) and Classics.txt (code listing 8.3) from aw.com/cssupport or as directed
+    by your instructor. Song.java is complete and will not be edited. Classics.txt
+    is the data file that will be used by CompactDisc.java, the file you will be editing.
+
+    2. In CompactDisc.java, there are comments indicating where the missing code is
+    to be placed. Declare an array of Songs, called cd, to be of size 6.
+
+    3. Fill the array by creating a new song with the title and artist and storing
+    it in the appropriate position of the array.
+
+    4. Print the contents of the array to the console.
+
+    5. Compile, debug, and run. Your output should be as follows:
+
+    Contents of Classics
+
+    Ode to Joy by Bach
+
+    The Sleeping Beauty by Tchaikovsky
+
+    Lullaby by Brahms
+
+    Canon by Bach
+
+    Symphony No. 5 by Beethoven
+
+    The Blue Danube Waltz by Strauss'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "# Code Listing 8.1 (Song.java)\n\n```\n/*This program represents a song*/\n\
+    public class Song\n{\n    /**The title of the song*/\n    private String title;\n\
+    \    /**The artist who sings the song*/\n    private String artist;\n\n    /**\n\
+    \     * @param title Title of the song\n     * @param artist The artist who sings\
+    \ the song\n     */\n    public Song(String title, String artist)\n    {\n   \
+    \     this.title = title;\n        this.artist = artist;\n    }\n\n    /**toString\
+    \ method returns a description of the song\n     @return a String containing the\
+    \ name of the song\n     and the artist\n     */\n    public String toString()\n\
+    \    {\n        return title + \" by \" + artist + \"\\n\";\n    }\nn}\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "# Code Listing 8.2 (CompactDisc.java)\n\n```\nimport java.*;\nimport java.util.Scanner;\n\
+    \n/** This program creates a list of songs for a CD by\nreading from a file */\n\
+    \npublic class CompactDisc {\n    public static void main(String [] args) throws\
+    \ IOException\n    {\n        File file = new File(\"Classics.txt\");\n      \
+    \  Scanner input = new Scanner(file);\n        String title;\n        String artist;\n\
+    \n        //Declare an array of songs, called cd, of size 6\n        for (int\
+    \ i = 0; i < cd.length; i++)\n        {\n            title = input.readLine();\n\
+    \            artist = input.readLine();\n            // fill the array by creating\
+    \ a new song with\n            // the title and artist and storing it in the\n\
+    \            // appropriate position in the array\n        }\n\n        System.out.println(\"\
+    Contents of Classics:\");\n        for (int i = 0; i < cd.length; i++)\n     \
+    \   {\n            //print the contents of the array to the console\n        }\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Code Listing 8.3 (Classics.txt)
+
+
+    Ode to Joy
+
+    Bach
+
+    The Sleeping Beauty
+
+    Tchaikovsky
+
+    Lullaby
+
+    Brahms
+
+    Canon
+
+    Bach
+
+    Symphony No. 5
+
+    Beethoven
+
+    The Blue Danube Waltz
+
+    Strauss'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# # Chapter 9 Lab
+
+
+    More Classes and Objects
+
+
+    # ## Objectives
+
+
+    +   - Be able to write a copy constructor
+
+    - Be able to write equals and toString methods
+
+    - Be able to use objects made up of other objects (Aggregation)
+
+    - Be able to write methods that pass and return objects
+
+
+    # ## Introduction
+
+
+    We discussed objects in Chapter 6 and we a television in the Chapter 6 lab. We
+    want to build on that lab, and work more with objects. This time, the object that
+    we are choosing is more complicated. It is made up of other objects. This is called
+    aggregation. A credit card is an object that is very common, but not as simple
+    as a television. Attributes of the credit card include information about the owner,
+    as well as a balance and credit limit. These things would be instance fields.
+    A credit card allows you to make payments and charges. These would be methods.
+    As we have seen before, there would also be other methods associated with this
+    object in order to construct the object and access its fields.
+
+
+    Examine the UML diagram follows. Notice that the fields in the CreditCard class
+    are other types of objects, a Person or a Money object. We can say that the CreditCard
+    has a "Person", which means aggregation, and the Person has a "Address" object
+    as one of its instance fields. This aggregation structure can create a very complicated
+    object. We will try to keep this lab reasonably simply.
+
+
+    To start with, we will be editing a partially written class. The constructor that
+    you will be writing is a copy constructor. This means it should create a new object,
+    but with the same values in the instance variables as the object that is being
+    copied.
+
+
+    Next, we will write equals and toString methods. These are very common methods
+    that are needed when you write a class to model an object. You will also see a
+    compareTo method that is also a common method for objects.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'After we have finished the Money class, we will write a CreditCard class. This
+    contains Money objects, so you will use the methods that you have written to complete
+    the Money class. The CreditCard class will explore passing objects and the possible
+    security problems associated with it. We will use the copy constructor we wrote
+    for the Money class to create new objects with the same information to return
+    to the user through the accessor methods.
+
+
+    # Credit Card
+
+
+    ```
+
+    -balance:Money
+
+    -creditLimit:Money
+
+    -owner:Person
+
+
+    +CreditCard(newCardHolder:Person, limit:Money)
+
+    +getBalance():Money
+
+    +getCreditLimit():Money
+
+    +getPersonals():String
+
+    +charge(amount:Money):void
+
+    +payment(amount:Money):void
+
+    ```
+
+
+    | Money |
+
+    -dollars:long
+
+    -cents:long
+
+
+    +Money(amount:double)
+
+    +Money(otherObject:Money)
+
+    +add(otherAmount:Money):Money
+
+    +subtract(otherAmount:Money):Money
+
+    +compareTo(otherObject:Money):int
+
+    +equals(otherObject:Money):boolean
+
+    +toString():String |
+
+
+    | Person |
+
+    -lastName:String
+
+    -firstName:String
+
+    -home:Address
+
+
+    +toString():String |
+
+
+    | Address |
+
+    -street:String
+
+    -city:String
+
+    -state:String
+
+    -zip:String
+
+
+    +toString():String |'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Task #1 Writing a Copy Constructor
+
+
+    +   1. Copy the files Address.java (code listing 9.1), Person.java (code listing
+    9.2), Money.java (code listing 9.3), MoneyDriver.java (code listing 9.4), and
+    CreditCardDemo.java (code listing 9.5) from www.aw.com/csssupport or as directed
+    by your instructor. Address.java, Person.java, MoneyDemo.java, and CreditCardDemo.java
+    are complete and will not need to be modified. We will start by modifying Money.java.
+
+
+    +   2. Overload the constructor. The constructor that you will write be a copy
+    constructor. It should use the parameter money object to make a duplicate money
+    object, by copying the value of each instance variable from the parameter object
+    to the instance variable of the new object.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# Task #2 Writing equals and toString methods
+
+
+    +   1. Write and document an equals method. The method compares the instance variables
+    of the calling object with instance variables of the parameter object for equality
+    and returns true if the dollars and the cents of the calling object are the same
+    as the dollars and the cents of the parameter object. Otherwise, it returns false.
+
+
+    +   2. Write and document a toString method. This method will return a String
+    that looks like money, including the dollar sign. Remember that if you have less
+    than 10 cents, you will need to put a 0 before the cents so that it appears correctly
+    with 2 decimal places.
+
+
+    +   3. Compile, debug, and test by running the MoneyDriver.java driver program.
+    You should get the output:
+
+
+    ```
+
+    The current amount is $500.00
+
+    Adding $10.02 gives $510.00
+
+    Subtracting $10.88 gives $499.14
+
+    $10.02 equals $10.02
+
+    $10.88 does not equal $10.02
+
+    ```'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# Task #3 Passing and Returning Objects
+
+
+    +   1. Create a CreditCard class according to the UML Diagram on the back. It
+    should have data fields that include an owner of type Person, a balance of type
+    Money, and a creditLimit of Money.
+
+
+    +   2. It should have a constructor that takes two parameters, a Person and a
+    Money value to initialize the creditLimit. The balance can be initialized to a
+    Money value of zero. Remember that you are passing objects (by reference), so
+    you have passed the address to an object. If you want your CreditCard to have
+    its own creditLimit and balance, you should create a new object of each using
+    the constructor in the Money class.
+
+
+    +   3. It should have accessor methods to get the balance and the available credit.
+    Since these are objects (by reference), we don''t want to expose an insecure credit
+    by passing out addresses to components in our credit, so we must return a new
+    object with the same values. Again, use the constructor to create a new object
+    of type money that can be returned.
+
+
+    +   4. It should have an accessor method to get the information about the owner,
+    but in form of a String that can be printed out. This can be done by calling the
+    toString method for the owner (who is a Person).
+
+
+    +   5. It should have a method that will charge the credit card by adding the
+    amount of Money in the parameter to the balance if it will not exceed the credit
+    limit. If the limit is exceeded, the amount should not be added, and an error
+    message can be printed to the console.
+
+
+    +   6. It should have a method that will make a payment on the credit card by
+    subtracting the amount of Money in the parameter from the balance.
+
+
+    +   7. Compile, debug, and test it by running CreditCardDemo.java. You should
+    get the output:
+
+
+    ```
+
+    Diane Christine, 237J Harvey Hall, Mnomonie, WI 54751
+
+    Balance: $0.00
+
+    Attempt to charge $200.00
+
+    Charge: $200.00
+
+    Balance: $200.00
+
+    Attempt to charge $10.02
+
+    Charge: $10.02
+
+    Balance: $210.02
+
+    Attempt to pay $25.00
+
+    Payment: $25.00
+
+    Balance: $185.02
+
+    Attempt to charge $990.00
+
+    Exceeds credit limit
+
+    Balance: $185.02
+
+    ```'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "# Code Listing 9.1 (Address.java)\n\n```\n/*Def an address using a street\n\
+    ```\n\n```\n  /*The street number and street name*/\n  private String street;\n\
+    ```\n\n```\n  /*The city in which the address is located*/\n  private String city;\n\
+    ```\n\n```\n  /*The state in which the address is located*/\n  private String\
+    \ state;\n```\n\n```\n  /*The zip code associated with that city and street*/\n\
+    \  private String zip;\n```\n\n```\n  /*Constructor creates an address using four\
+    \ parameters\n  @param road describes the street number and name\n  @param town\
+    \ describes the city\n  @param st describes the state\n  @param zipCode describes\
+    \ the zip code*/\n  public Address(String road, String town, String st,\n    String\
+    \ zipCode)\n```\n\n```\n{n    street = road;\n    city = town;\n    state = st;\n\
+    \    zip = zipCode;\n  }\n```\n\n```\n  /**toString method returns information\
+    \ about the address\n  @return all information about the address*/\n  public String\
+    \ toString()\n```\n\n```\n{\n    return (street + \", \" + city + \", \" + state\
+    \ + \" \" + + \n    zip);\n  }\n```\n\n```\n}\n```"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "# Code Listing 9.2 (Person.java)\n\n```\n/**Defines a person by name and address*/\n\
+    public class Person\n{\n    /**The person's last name*/\n    private String lastName;\n\
+    \n    /**The person's first name*/\n    private String firstName;\n\n    /**The\
+    \ person's address*/\n    private Address home;\n\n    /**Constructor creates\
+    \ a person from a last name,\n      first name, and address\n      @param last\
+    \ the person's last name\n      @param first the person's first name\n      @param\
+    \ residence the person's address*/\n    public Person(String last, String first,\
+    \ Address residence)\n    {\n        lastName = last;\n        firstName = first;\n\
+    \        home = residence;\n    }\n\n    /**toString method returns information\
+    \ about the person\n      @return information about the person*/\n    public String\
+    \ toString()\n    {\n        return(firstName + \" \" + lastName + \", \" + +\n\
+    \               home.toString());\n    }\n}\n```"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# Code Listing 9.3 (Money.java)\n\n```\n/*Objects represent nonnegative amounts\
+    \ of money*/\npublic class Money\n{\n    /**A number of dollars*/\n    private\
+    \ long dollars;\n    /**A number of cents*/\n    private long cents;\n\n    /****Constructor\
+    \ creates a Money object using the amount of\nmoney in dollars and cents represented\
+    \ with a decimal\nnumber\n    @param the amount of money in the conventional\n\
+    decimal format*/\n    public Money(double amount)\n    {\n        if (amount <\
+    \ 0) {\n            System.out.println(\"Error: Negative amounts \" + \n     \
+    \       \"of money are not allowed.\");\n            System.exit(0);\n       \
+    \ } else {\n            long allCents = Math.round(amount*100);\n            dollars\
+    \ = allCents/100;\n            cents = allCents%100;\n        }\n    }\n\n   \
+    \ /**Adds the calling Money object to the parameter Money object.\n    @param\
+    \ otherAmount the amount of money to add\n    @return the sum of the calling Money\
+    \ object and the\nparameter Money object*/\n    public Money add(Money otherAmount)\n\
+    \    {}\n```\n\nCode Listing 9.3 continued on next page."
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "# Chapter 9 Lab More Classes and Objects 83\n\n```\nMoney sum = new Money(0);\n\
+    sum.cents = this.cents + otherAmount.cents;\nlong carryDollars = sum.cents/100;\n\
+    sum.cents = sum.cents%100;\nsum.dollars = this.dollars\n    + otherAmount.dollars\
+    \ + carryDollars;\n    return sum;\n\n```\n\n```\n/**Subracts the parameter Money\
+    \ object from the calling Money object and returns the difference.\n@param amount\
+    \ the amount of money to subtract\n@return the difference between the calling\
+    \ Money object and the parameter Money object*/\npublic Money subtract (Money\
+    \ amount)\n{\n    Money difference = new Money(0);\n    if (this.cents < amount.cents)\n\
+    \    {\n        this.dollars = this.dollars - 1;\n        this.cents = this.cents\
+    \ + 100;\n    }\n    difference = this.dollars - amount.dollars;\n    difference.cents\
+    \ = this.cents - amount.cents;\n    return difference;\n}\n```\n\n```\n/**Compare\
+    \ instance variable of the calling object with the parameter object. It returns\
+    \ -1 if the dollars and the cents of the calling object are less than the dollars\
+    \ and the cents of the parameter object, 0 if the dollars and the cents of the\
+    \ calling object are equal to the dollars and cents of the parameter object, and\
+    \ 1 if the dollars and the cents of the calling object are more than the dollars\
+    \ and the cents of the parameter object.\n@param amount the amount of money to\
+    \ compare against\n@return -1 if the dollars and the cents of the calling\n```\n\
+    \nCode Listing 9.3 continued on next page."
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "```\nobject less than the dollars and the cents of the\nparameter object, 0\
+    \ if the dollars and the cents of the\ncalling object are equal to the dollars\
+    \ and cents of the\nparameter object, 1 if the dollars and the cents of the\n\
+    calling object are more than the dollars and the cents of\nthe parameter object.*/\n\
+    public int compareTo(Money amount)\n{\n    int value;\n    if (this.dollars <\
+    \ amount.dollars)\n    {\n        value = -1;\n    }\n    else if (this.dollars\
+    \ > amount.dollars)\n    {\n        value = 1;\n    }\n    else if (this.cents\
+    \ < amount.dollars)\n    {\n        value = -1;\n    }\n    else if (this.cents\
+    \ > amount.cents)\n    {\n        value = 1;\n    }\n    else\n    {\n       \
+    \ value = 0;\n    }\n    return value;\n}\n\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "# Code Listing 9.4 (MoneyDriver.java)\n\n/**This program tests the money class.*/\n\
+    public class MoneyDriver\n\n```\n{\n    //This is a driver for testing the class\n\
+    \    public static void main(String[] args)\n    {\n        final int BEGINNING\
+    \ = 500;\n        final Money FIRST_AMOUNT = new Money(10.02);\n        final\
+    \ Money SECOND_AMOUNT = new Money(10.02);\n        final Money THIRD_AMOUNT =\
+    \ new Money(10.88);\n        Money balance = new Money(BEGINNING);\n        System.out.println(\"\
+    The current amount is \" +\n            balance.toString());\n        balance\
+    \ = balance.add(SECOND_AMOUNT);\n        System.out.println(\"Adding \" + SECOND_AMOUNT\
+    \ + +\n            \" gives \" + balance.toString()\\n        balance = balance.subtract(THIRD_AMOUNT);\n\
+    \        System.out.println(\"Subtracting \" + THIRD_AMOUNT + +\n            \"\
+    \ gives \" + balance.toString());\\n        boolean equal = SECOND_AMOUNT.equals(FIRST_AMOUNT);\n\
+    \        if(equal) {\n            System.out.println(SECOND_AMOUNT + \" equals\
+    \ \" +\n                + FIRST_AMOUNT);\n        }\n        else {\n        \
+    \    System.out.println(SECOND_AMOUNT + +\n                \" does not equal \"\
+    \ + FIRST_AMOUNT);\n        }\n\n        equal = THIRD_AMOUNT.equals(FIRST_AMOUNT);\n\
+    \        if(equal) {\n            System.out.println(THIRD_AMOUNT + \" equals\
+    \ \" +\n                + FIRST_AMOUNT);\n        }\n        else {\n        \
+    \    System.out.println(THIRD_AMOUNT + +\n                \" does not equal \"\
+    \ + FIRST_AMOUNT);\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "# Code Listing 9.5 (CreditCardDemo.java)\n\n```\n/**Demonstrates the CreditCard\
+    \ class*/\npublic class CreditCardDemo\n{\n    public static void main(String[]\
+    \ args)\n    {\n        final Money LIMIT = new Money(1000);\n        final Money\
+    \ FIRST_AMOUNT = new Money(200);\n        final Money SECOND_AMOUNT = new Money(10.02);\n\
+    \        final Money THIRD_AMOUNT = new Money(25);\n        final Money FOURTH_AMOUNT\
+    \ = new Money(990);\n        Person owner = new Person(\"Christie\", \"Diane\"\
+    ,\n            new Address(\"237J Harvey Hall\", \"Monmonie\",\n            \"\
+    WI\", \"54751\");\n        CreditCard visa = new CreditCard(owner, LIMIT);\n \
+    \       System.out.println(visa.getPersonals());\n        System.out.println(\"\
+    Balance: \" + visa.getBalance());\n        System.out.println(\"Credit Limit:\
+    \ \" \n            + visa.getCreditLimit());\n        System.out.println(\"Attempt\
+    \ to charge \" \n            + FIRST_AMOUNT);\n        visa.charge(FIRST_AMOUNT);\n\
+    \        System.out.println(\"Balance: \" + visa.getBalance());\n        System.out.println(\"\
+    Attempt to charge \" \n            + SECOND_AMOUNT);\n        visa.charge(SECOND_AMOUNT);\n\
+    \        System.out.println(\"Balance: \" + visa.getBalance());\n        System.out.println(\"\
+    Attempt to pay \" + THIRD_AMOUNT);\n        visa.payment(THIRD_AMOUNT);\n    \
+    \    System.out.println(\"Balance: \" + visa.getBalance());\n        System.out.println(\"\
+    Attempt to charge \" \n            + FOURTH_AMOUNT);\n        visa.charge(FOURTH_AMOUNT);\n\
+    \        System.out.println(\"Balance: \" + visa.getBalance());\n    }\n}\n```"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# Chapter 10 Lab
+
+
+    Text Processing and Wrapper Classes
+
+
+    # Objectives
+
+
+    +   - Use methods of the Character class and String class to process text
+
+    - Be able to use the StringTokenizer and StringBuilder classes
+
+
+    # Introduction
+
+
+    In this lab we ask the user to enter a time in military time (24 hours). The program
+    will convert and display the equivalent conventional time (12 hour with AM or
+    PM) for each entry if it is a valid military time. An error message will be printed
+    to the console if the entry is not a valid military time.
+
+    Think about how you would convert military time 00:00 to 23:59 into conventional
+    time. Also think about what would be valid military times. To be a valid, the
+    data must have a specific form. First, it should have exactly 5 characters. Next,
+    only digits are allowed in the first and last two positions, and that a colon
+    is always used in the middle position. Next, we need to ensure that we never have
+    over 23 hours or 59 minutes. This will require us to separate the substrings containing
+    the hours and minutes. When converting military time to conventional time, we
+    will not have to worry about times that have hours greater than 12, and we do
+    not need to do anything with the numbers at all. To convert, we will need to subtract
+    12, and put back together with the colon and the minutes, and indicate that it
+    is PM. Keep in mind that 00:00 in military time is 12:00 AM (midnight) and 12:00
+    in military time is 12:00 PM (noon).
+
+    We will need use a variety of Character class and String methods to validate the
+    data and separate it in order to process it. We will also use a Character class
+    method to allow the user to continue the program if desired.
+
+    The String Tokenizer class will allow us to process a text file in order to decode
+    a secret message. We will use the first letter of every 5th token read from a
+    file to reveal the secret message.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# Task #1 Character and String Class Methods
+
+
+    +   1. Copy the files Time.java (code listing 10.1) and TimeDemo.java (code listing
+    10.2) from www.awave.com/cssupport or as directed by your instructor.
+
+
+    +   2. In the Time.java file, add conditions to the decision structure that validates
+    the data. Conditions are needed that will
+
+    a) Check the length of the string
+
+    b) Check the position of the colon
+
+    c) Check that all other characters are digits
+
+
+    +   3. Add lines that will separate the string into two substrings containing
+    hours and minutes. Convert these substrings to integers and save them into the
+    instance variables.
+
+
+    +   4. In the TimeDemo class, add a condition to the loop that converts the user''s
+    answer to a capital letter prior to checking it.
+
+
+    +   5. Compile, debug, and run. Test out your program using the following valid
+    input: 00:00, 12:00, 04:05, 10:15, 23:59, 00:35, and the following invalid input:
+    7:56, 15:78, 08:60, 24:00, 3e:33, 1:111.'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# Task #2 StringTokenizer and StringBuilder classes
+
+
+    +   1. Copy the file secret.txt (code listing 10.3) from www.aw.com/cssupport
+    or as directed by your instructor. This file is only one line long. It contains
+    2 sentences.
+
+
+    +   2. Write a main method that will read the file secret.txt, separate it into
+    word tokens.
+
+
+    +   3. You should process the tokens by taking the first letter of every fifth
+    word, starting with the first word in the file. These letters should be converted
+    to capitals, then be appended to a StringBuilder object to form a word which will
+    be printed to the console to display the secret message.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# Code Listing 10.1 (Time.java)\n\n```\n/**Represents time in hours and minutes\
+    \ using\nthe customary conventions*/\npublic class Time\n{\n    /**hours in conventional\
+    \ time*/\n    private int hours;\n    /**minutes in conventional time*/\n    private\
+    \ int minutes;\n    /**true if afternoon time, false if morning time*/\n    private\
+    \ boolean afternoon;\n\n    /**Constructs a cutumary time (12 hours, am or pm)\n\
+    from a military time in the military format ###*/\n    @param militaryTime\n \
+    \   public Time(String militaryTime)\n    {\n        //Check to make sure something\
+    \ was entered\n        if (militaryTime == null)\n        {\n            System.out.println(\n\
+    \                \"You must enter a valid military time.\");\n        }\n    \
+    \    //Check to make sure there are 5 characters\n        else if (//CONDITION\
+    \ TO CHECK LENGTH OF STRING)\n        {\n            System.out.println(militaryTime\
+    \ +\n                \" is not a valid military time.\");\n        }\n       \
+    \ else\n        {\n            //Check to make sure the colon is in\n        \
+    \    //the correct spot\n            if (//CONDITION TO CHECK COLON POSITION)\n\
+    \            {\n                System.out.println(militaryTime +\n          \
+    \      \" is not a valid military time.\");\n            }\n        }\n}\n```\n\
+    \nCode Listing 10.1 continued on next page"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "# Chapter 10 Lab Text Processing and Wrapper Classes\n\n```\n//Check to make\
+    \ sure all other characters are\n//digits\nelse if ((CONDITION TO CHECK FOR DIGIT))\n\
+    {\n    System.out.println(militaryTime +\n        \" is not a valid military time.\"\
+    );\n}\nelse if ((CONDITION TO CHECK FOR DIGIT))\n{\n    System.out.println(militaryTime\
+    \ +\n        \" is not a valid military time.\");\n}\nelse if ((CONDITION TO CHECK\
+    \ FOR DIGIT))\n{\n    System.out.println(militaryTime +\n        \" is not a valid\
+    \ military time.\");\n}\nelse if ((CONDITION TO CHECK FOR DIGIT))\n{\n    System.out.println(militaryTime\
+    \ +\n        \" is not a valid military time.\");\n}\nelse{\n    //SEPARATE THE\
+    \ STRING INTO THE HOURS\n//AND THE MINUTES, CONVERTING THEM TO\n//INTEGERS AND\
+    \ STORING INTO THE\n//INSTANCE VARIABLES\n\n//validate hours and minutes are valid\n\
+    //values\nif(hours > 23)\n{\n    System.out.println(militaryTime +\n        \"\
+    \ is not a valid military\" +\n        \" time.\");\n}\n```\n\nCode Listing 10.1\
+    \ continued on next page"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "```\nelse if(minutes > 59)\n{\n    System.out.println(militaryTime +\n    \
+    \    \" is not a valid military\" +\n        \" time.\");\n}\n// //convert military\
+    \ time to conventional\n//time for afternoon times\nelse if (hours > 12)\n{\n\
+    \    hours = hours - 12;\n    afternoon = true;\n    System.out.println(this.toString());\n\
+    }\n// //account for midnight\nelse if (hours == 0)\n{\n    hours = 12;\n    System.out.println(this.toString());\n\
+    }\n// //account for noon\nelse if (hours == 12)\n{\n    afternoon = true;\n  \
+    \  System.out.println(this.toString());\n}\n// //morning times don't need converting\n\
+    else\n{\n    System.out.println(this.toString());\n}\n}\n```\n\nCode Listing 10.1\
+    \ continued on next page"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "```\n/**toString method returns a conventional time with am or pm*/\n@return\
+    \ a conventional time with am or pm*/\npublic String toString() {\n    String\
+    \ am_pm = \"\"\";\n    String zero = \"\"\";\n    if (afternoon) {\n        am_pm\
+    \ = \"PM\";\n    } else {\n        am_pm = \"AM\";\n    }\n    if (minutes < 10)\
+    \ {\n        zero = \"0\";\n    }\n    return hours + \":\" + zero + minutes +\
+    \ \":\" \" + am_pm;\n}\n```"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "# Code Listing 10.2 (TimeDemo.Java)\n\n```\npublic class TimeDemo\n{\n    public\
+    \ static void main(String [ args)\n    {\n        Scanner keyboard = new Scanner(System.in);\n\
+    \        char answer = 'Y';\n        String enteredTime;\n        String response;\n\
+    \n        while (CHECK ANSWER AFTER CONVERTING TO CAPITAL)\n        {\n      \
+    \      System.out.print(\"Enter a miitary time using\" +\n                \" the:##\
+    \ form \");\n            enteredTime = keyboard.nextLine();\n            Time\
+    \ now = new Time(enteredTime);\n            System.out.println(\n            \
+    \    \"Do you want to enter another (Y/N)? \");\n            response = keyboard.nextLine();\n\
+    \            answer = response.charAt(0);\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# Code Listing 10.3 (secret.txt)
+
+
+    January is the first month and December is the last. Violet is a purple color
+    as are lilac and plum.'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# # Chapter 11 Lab
+
+    Inheritance
+
+
+    # ## Objectives
+
+
+    +   * Be able to derive a class from an existing class
+
+    * Be able to define a class hierarchy in which methods are overridden and fields
+    are hidden
+
+    * Be able to use derived-class objects
+
+    * Implement a copy constructor
+
+
+    # ## Introduction
+
+
+    In this lab, you will be creating new classes that are derived from a class called
+    BankAccount. A checking account *is a* bank account and a savings *is a* bank
+    account as well. This sets up a relationship called inheritance, where BankAccount
+    is the superclass and CheckingAccount and SavingsAccount are subclasses.
+
+
+    This relationship allows CheckingAccount to inherit attributes from BankAccount
+    (like owner, balance, and accountNumber, but it can have new attributes that are
+    specific to a checking account, like a fee for checking a check. It also allows
+    CheckingAccount to inherit methods from BankAccount, like deposit, that are universal
+    for all bank accounts.
+
+
+    You will write a withdraw method in CheckingAccount that overrides the withdraw
+    method in BankAccount, in order to do something slightly different than the original
+    withdraw method.
+
+
+    You will use an instance variable called accountNumber in SavingsAccount to hide
+    the accountNumber variable inherited from BankAccount.'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: 'Lab Manual to Accompany Starting Out with Java 5: From Control Structures to
+    Objects
+
+
+    The UML diagram for the inheritance relationship is as follows:
+
+
+    | BankAccount |
+
+    |-balance:double
+
+    |-owner:String
+
+    |-accountNumber:String
+
+    |#numberOfAccounts:int
+
+    |+BankAccount()
+
+    |+BankAccount(name:String,amount:double)
+
+    |+BankAccount(oldAccount:BankAccount,amount:double)
+
+    |+deposit(amount:double):void
+
+    |+withdraw(amount:double):boolean
+
+    |+getBalance():double
+
+    |+getOwner():String
+
+    |+getAccountNumber(double):void
+
+    |+setBalance(amount:double):void
+
+    |+setAccountNumber(newAccountNumber:String):void |
+
+
+    | CheckingAccount | SavingsAccount |
+
+    |-FEE:double
+
+    |+CheckingAccount(name:String,amount:double)
+
+    |+withdraw(amount:double):boolean |-rate:double
+
+    |-savingsNumber:int
+
+    |-accountNumber:String
+
+    |+SavingsAccount(name:String,amount:double)
+
+    |+SavingsAccount(oldAccount:SavingsAccount,amount:double)
+
+    |+postInterest():void
+
+    |+getAccountNumber():String |'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# Task #1 Extending BankAccount
+
+
+    +   1. Copy the files AccountDriver.java (code listing 11,1) and BankAccount.java
+    (code listing 11,2) from www.aw.com/cssupport or as directed by your instructor.
+    Set BankAccount java is complete and will not need to be modified.
+
+
+    +   2. Create a new class called CheckingAccount that extends BankAccount.
+
+
+    +   3. It should have a static constant FEE that represents the cost of clearing
+    one check. It should be equal to 15 cents.
+
+
+    +   4. Write a constructor that takes a name and an initial amount as parameters.
+    It should initialize accountNumber to be the current value in accountNumber concatenated
+    with -10. All checking accounts are identified by the extension -10. There can
+    be only one account for each account number. Remember since accountNumber is a
+    private member in BankAccount, it must be changed by a mutator method.
+
+
+    +   5. Write a new instance method, withdraw, overrides the withdraw method in
+    the superclass. This method should take the amount to withdraw, add it to the
+    fee for check clearing, and call the withdraw method from the superclass. Remember
+    that to override the method, it must have the same method heading. Notice that
+    the withdraw method from the superclass returns true or false depending if it
+    was able to complete the withdrawal or not. The method that overrides it must
+    also return the same true or false that was returned from the call to the withdraw
+    method from the superclass.
+
+
+    +   6. Compile and debug this class.'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# Task #2 Creating a Second Subclass
+
+
+    +   1. Create a new class SavingsAccount that extends BankAccount.
+
+
+    +   2. It should contain an instance variable rate that represents the annual
+    interest rate. Set it to 2.5%.
+
+
+    +   3. It should also have an instance variable savingsNumber, initialized to
+    0. In this bank, you have one account number, but can have several savings accounts
+    with each number. Each individual savings account is identified by the number
+    following a dash. For example, 10001-0 is the first savings account, 10001-1 would
+    be another accounts that is still part of your account. This is so that you can
+    keep funds separate from the others, like a Christmas club account.
+
+
+    +   4. An instance variable accountNumber will hide the accountNumber from the
+    superclass, which should also be in this class.
+
+
+    +   5. Write a constructor that takes a name and an initial balance as parameters
+    and calls the constructor of the superclass. It should initialize accountNumber
+    to be the current value in the superclass accountNumber (the hidden instance variable)
+    concatenated with a hyphen and then the savingsNumber.
+
+
+    +   6. Write a method postInterest that has no parameters and returns no value.
+    This method will calculate one month''s interest on the balance and deposit it
+    into the account.
+
+
+    +   7. Write a method that overrides the getAccountNumber method in the superclass.
+
+
+    +   8. Write a copy constructor that creates another savings account for the same
+    person. It should take the original savings account and an initial balance as
+    parameters. It should call the copy constructor of the superclass, assign the
+    savingsNumber to be one more than the savingsNumber of the original savings account.
+    It should assign the accountNumber to the accountNumber of the superclass concatenated
+    with the hyphen and the savingsNumber of the new account.
+
+
+    +   9. Compile and debug this class.
+
+
+    +   10. Use the AccountDriver class to test your classes. If you named and created
+    your classes and methods correctly, it will not have any difficulties. If you
+    have errors, do not edit the AccountDriver class. You must make your classes work
+    with this program.
+
+
+    +   11. Running the program should give the following output:
+
+    Account Number 10001-10 belonging to Benjamin Franklin
+
+    Initial balance = $1000.00
+
+    After deposit of $500.00, balance = $1500.00
+
+    After withdrawal of $1000.00, balance = $499.85'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: 'Account Number 100002-0 belonging to William Shakespeare
+
+
+    Initial balance = $400.00
+
+
+    After deposit of $500.00, balance = $900.00
+
+
+    Insufficient funds to withdraw $1000.00, balance = $900.00
+
+
+    After monthly interest has been posted, balance = $901.88
+
+
+    Account Number 100002-1 belonging to William Shakespeare
+
+
+    Initial balance = $5.00
+
+
+    After deposit of $500.00, balance = $505.00
+
+
+    Insufficient funds to withdraw $1000.00, balance = $505.00
+
+
+    Account Number 100003-10 belonging to Isaac Newton'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# Code Listing 11.1 (AccountDriver.java)
+
+
+    Code Listing 11.1 continued on next page.'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# Chapter 11 Lab Inheritance 103\n\n```\nmoney = myFormat.format(\nmyCheckingAccount.getBalance());\n\
+    ```\n\n```\nif (completed)\n{\n    System.out.println(\"After withdrawal of $\"\
+    \ + +\n    money_out + \", balance = $\" + money);\n}\nelse\n{\n    System.out.println(\"\
+    Insufficient funds to $\" + +\n    \"withdraw $\" + money_out + +\n    \", balance\
+    \ = $\" + money);\n}\nSystem.out.println();\n```\n\n```\n// to test the savings\
+    \ account class\nSavingsAccount yourAccount =\nnew SavingsAccount(\"William Shakespeare\"\
+    , 400);\nSystem.out.println(\"Account Number \" +\n    + yourAccount.getAccountNumber()\
+    \ + +\n    \" belonging to \" + yourAccount.getOwner());\nmoney = myFormat.format(yourAccount.getBalance());\n\
+    System.out.println(\"Initial balance = $\" + money);\nyourourAccount.deposit(put_in);\n\
+    money_in = myFormat.format(put_in);\nmoney = myFormat.format(yourAccount.getBalance());\n\
+    System.out.println(\"After deposit of $\" + money_in +\n    + \", balance = $\"\
+    \ + money);\ncompleted = yourAccount.withdraw(take_out);\nmoney_out = myFormat.format(take_out);\n\
+    money = myFormat.format(yourAccount.getBalance());\nif (completed)\n{\n    System.out.println(\"\
+    After withdrawal of $\" + +\n    money_out + \", balance = $\" + money);\n}\n\
+    else\n{\n```\n\nCode Listing 11.1 continued on next page"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "```\nSystem.out.println(\"Insufficient funds to \" + \n    \"withdraw $\" +\
+    \ money_out +\n    \"\n```\n\nCode Listing 11.1 continued on next page"
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "# Chapter 11 Lab Inheritance 105\n\n```\nSystem.out.println(\"Insufficient\
+    \ funds to \" + \n    \"withdraw $\\$ \" + money_out + \n    \", balance = $\\\
+    $\" + money);\n\n}\nSystem.out.println();\n\n//to test to make sure new accounts\
+    \ are numbered\n//correctly\nCheckingAccount yourCheckingAccount = =\nnew CheckingAccount(\"\
+    Isaac Newton\", 5000);\nSystem.out.println(\"Account Number \" \n    + yourCheckingAccount.getAccountNumber()\n\
+    \    + \" belonging to \" \n    + yourCheckingAccount.getOwner());\n\n}\n```"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "# Code Listing 11.2 (BankAccount.java)\n\n```\n/**Defines any type of bank\
+    \ account*/\npublic abstract abstract class BankAccount\n{\n    /**class variable\
+    \ so that each account has a unique number*/\n    protected static int numberOfOfAccounts\
+    \ = 100000;\n\n    /**current balance in the account*/\n    private double balance;\n\
+    \    /** name on the account*/\n    private String String owner;\n    /** number\
+    \ bank uses to identify account*/\n    private String accountNumber;\n\n    /**default\
+    \ constructor*/\n    public BankAccount()\n    {\n        balance = 0;\n     \
+    \   accountNumber = numberOfOfAccounts + \"\";\n        numberOfAccounts++;\n\
+    \    }\n\n    /**standard constructor*/\n    @param name the owner of the account\n\
+    \    @param amount the beginning balance*/\n    public BankAccount(String name,\
+    \ double amount)\n    {\n        owner = name;\n        balance = amount;\n  \
+    \      accountNumber = numberOfOfAccounts + \"\";\n        numberOfAccounts++;\n\
+    \    }\n\n    /**copy constructor creates another account for the same owner*/\n\
+    \    @param oldAccount the account with information to copy\n```\n\nCode Listing\
+    \ 11.2 continued on next page."
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "```\n@param the beginning balance of the new account*/\npublic BankAccount(BankAccount\
+    \ oldAccount, double amount)\n{\n    owner = oldAccount.owner;\n    balance =\
+    \ amount;\n    accountNumber = oldAccount.accountNumber;\n}\n```\n\n```\n/**allows\
+    \ you to add money to the account\n@param the amount to deposit in the account*/\n\
+    public void deposit(double amount)\n{\n    balance = balance + amount;\n}\n```\n\
+    \n```\n/**allows you to remove money from the account if\nenough money is available,returns\
+    \ true if the there was not enough\ntransaction completed, returns false if there\
+    \ was not enough\nmoney.\n@param amount the amount to withdraw from the account\n\
+    @return return true if there was sufficient funds to complete\ntransaction, false\
+    \ otherwise*/\npublic boolean withdraw(double amount)\n{\n    boolean completed\
+    \ = true;\n\n    if (amount <= balance)\n    {\n        balance = balance - amount;\n\
+    \    }\n    else\n    {\n        completed = false;\n    }\n    return completed;\n\
+    }\n```\n\nCode Listing 11.2 continued on next page"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "```\n/**accessor method to balance\n@return the balance of the account*/\n\
+    public double getBalance()\n{\n    return balance;\n}\n```\n\n```\n/**accessor\
+    \ method to owner\n@return the owner of the account*/\npublic String getOwner()\n\
+    {\n    return owner;\n}\n```\n\n```\n/**accessor method to account number\n@return\
+    \ the account number*/\npublic String getAccountNumber()\n{\n    return accountNumber;\n\
+    }\n```\n\n```\n/**mutator method to change the balance\n@param newBalance the\
+    \ new balance for the account*/\npublic void setBalance(double newBalance)\n{\n\
+    \    balance = newBalance;\n}\n```\n\n```\n/**mutator method to change the account\
+    \ number\n@param newAccountNumber the new account number*/\npublic void setAccountNumber(String\
+    \ newAccountNumber)\n{\n    accountNumber = newAccountNumber;\n}\n```"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# # Chapter 12 Lab
+
+
+    Exceptions and Advanced File I/O
+
+
+    # ## Objectives
+
+
+    +   - Be able to write code that handles an exception
+
+    - Be able to write code that throws an exception
+
+    - Be able to write a custom exception class
+
+
+    # ## Introduction
+
+
+    This program will ask the user for a person''s name and social security number.
+    The program will then check to see if the social security number is valid. An
+    exception will be thrown if an invalid SSN is entered.
+
+
+    You will be creating your own exception class in this program. You will also create
+    a driver program that will use the exception class. Within the driver program,
+    you will include a static method that throws the exception. Note: Since you are
+    creating all the classes for this lab, there are no files on aw.com/cssupport.'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# Task #1 Writing a Custom Exception Class
+
+
+    +   1. Create an exception class called SocSecException. The UML for this class
+    is below.
+
+
+    | SocSecException |
+
+    |+SocSecException(String error): |
+
+
+    The constructor will call the superclass constructor. It will set the message
+    associated with the exception to "Invalid social security number" concatenated
+    with the error string.
+
+
+    +   2. Create a driver program called SocSecProcessor.java. This program will
+    have a main method and a static method called isValid that will check if the social
+    security number is valid.
+
+
+    | SocSecProcessor |
+
+    |+main(args:String[]):void
+
+    |+isValid(ssn:String):boolean |'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "# Task #2 Writing Code to Handle an Exception\n\n+   1. In the method:\n  \
+    \ a) The main method should read a name and social security number from the user\
+    \ as Strings.\n   b) The main method should contain a try-catch statement. This\
+    \ tries to check if the social security number is valid using the method isValid.\
+    \ If a SocSecException is thrown, it should catch and print out the name, social\
+    \ security number entered, and an associated error message indicating why the\
+    \ social security number is invalid.\n   c) A loop should be used to allow the\
+    \ user to continue until the user indicates they do not want to continue.\n2.\
+    \ The static isValid method:\n   a) This method tries a SocSecException.\n   b)\
+    \ True is returned if the social security number is valid, false otherwise.\n\
+    \   c) The method checks for the following errors and throws SocSecException with\
+    \ the appropriate message.\n      i) Number of characters not equal to 11. (Just\
+    \ check the length of the string)\n      ii) Dashes in the wrong spots.\n    \
+    \  iii) Any non-digits in the SSN.\n      iv) Hint: Use a loop to step through\
+    \ each character of the string, checking for a digit or hyphen in the appropriate\
+    \ spots.\n3. Compile, debug and run your program. Sample output is shown below\
+    \ with user input in bold.\n\n```\nOUTPUT (bold is user input)\nName? Sam Sly\n\
+    SSN? 333-00-999\nInvalid the social security number, wrong number of characters\n\
+    Continue? Y\nName? George Washington\nSSN? 123-45-6789\nGeorge Washington 123-45-6789\
+    \ is valid\nContinue? Y\nName? Dudley Doright\nSSN? 222-00-9990\nInvalid the social\
+    \ security number, contains a character that is not a digit\nContinue? Y\n```"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# 112 Lab Manual to Accompany Starting Out with Java 5: From Control Structures
+    to Objects
+
+
+    Name? Jane Doe
+
+
+    SSN? 333-333-333
+
+
+    Invalid the social security number, dashes at wrong positions
+
+
+    Continue? n'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# # Chapter 13
+
+    Advanced GUI Applications
+
+
+    # ## Objectives
+
+
+    +   - Be able to add a menu to the menu bar
+
+    - Be able to use nested menus
+
+    - Be able to add scroll bars, giving the user option of when they will be seen.
+
+    - Be able to change the look and feel, giving the user the option of which look
+    and feel to use
+
+
+    # ## Introduction
+
+
+    In this lab we will be creating a simple note taking interface. It is currently
+    a working program, but we will be adding features to it. The current program displays
+    a window which has one item on the menu bar, **Notes**, which allows the user
+    6 choices. These choices allow the user to store and retrieve to 2 different notes.
+    It also allows the user to clear the text area or exit the program.
+
+
+    We would like to add features to this program which allows the user to change
+    how the user interface appears. We will be adding another choice on the menu bar
+    called **Views**, giving the user choices about scroll bars and the look and feel
+    of the GUI.'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# Task #1 Creating a Menu with Submenus
+
+
+    +   1. Copy the file NoteMaker.java (code listing 13.1) from www.aw.com/ as directed
+    by your instructor.
+
+
+    +   2. Compile and run the program. Observe the horizontal menu bar at the top
+    which has only one menu choice, Notes. We will be adding an item to this menu
+    called Views that has two submenus. One named Look and Feel and one named Scroll
+    Bars. The submenu named Look and Feel lets the user change the feel and looks
+    for: Metal, Motif, and Windows. The submenu named Scroll Bars offers the user
+    three choices: Never, Always, and As Needed. When the user makes a choice, the
+    scroll bars are displayed according to the choice.
+
+
+    +   3. We want to logically break down the problem and make our program easier
+    to read and understand. We will separate methods to create each of the vertical
+    menus. The three methods that we will be are createScrollBars(), and createAndFeel().
+    The method headers with empty bodies.
+
+
+    +   4. Let''s start with the createAndFeel() method. This will create the first
+    submenu shown in figure 1. There are three items on this menu, Metal, Motif, and
+    Windows. We will create this menu by doing the following:
+
+    na) Create a new Menu with the name Look and Feel
+
+    nb) Create a new JMenuItem with the name Metal
+
+    c) Add an action listener to the menu item (the createNotes() method to see how
+    this is done).
+
+    nd) Add the menu item to the menu.
+
+
+    +   5. Similarly, write the createScrollBars() method to create a JMenu that has
+    three menu items, Never, Always, and As Needed. See figure 2.
+
+
+    +   6. Now that we have submenus, these menus will become menu items for the Views.
+    The createViews() method will call the vertical menu showing cascading from the
+    menu choice Views as shown in figure. We will do this as follows
+
+    a) Create a new JMenu with the name Views.
+
+    b) Call the createAndFeel() method to create the Look and Feel submenu.
+
+    c) Add an action listener to the Look and Feel menu.
+
+    d) Add the look and feel to the Views menu.
+
+    ne) Repeat steps b through d for the Scroll Bars menu item, this time calling
+    the createScrollBars() method.
+
+
+    +   7. Finish creating your menu system by adding the Views to the menu bar in
+    the constructor.'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# Task #2 Adding Scroll Bars and Editing the Action Listener
+
+
+    +   1. Add scroll bars to the area by completing the following steps in the constructor
+
+    a) Create a JScrollPane object called **scrolledText**, passing in **theText**.
+
+    b) Change the line that adds to the textPanel, passing in **scrolledText** (which
+    now has **theText**).
+
+    2. Edit the action listener by adding 6 more branches to the else-if branch which
+    will compare the actionCommand to the 6 submenu items: **Metal, Motif, Window,
+    Never, Always, and As Needed.**
+
+    aa) Each **Look and Feel** submenu item will use a try-catch statement to set
+    the look and feel to the appropriate one, displaying an error message if this
+    was not accomplished.
+
+    b) Each **Scroll Bars** submenu item will set the horizontal and vertical scroll
+    bar policy to the appropriate values.
+
+    c) Any components that have already been created need to be updated. This can
+    be accomplished by calling the **SwingUtilities.updateComponentTreeUI** method,
+    passing a reference to the component that you want to update as an argument. Specifically
+    you will need to add the line
+
+    `SwingUtilities.updateComponentTreeUI(getContentPane());` to each branch you just
+    added to the logic structure.
+
+
+    Figure 1
+
+
+    ![](img/26fb2e0d2c27e34524300218035d0784_120_0.png)'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: 'Figure 2
+
+
+    ![](img/26fb2e0d2c27e34524300218035d0784_121_0.png)
+
+
+    Figure 3
+
+
+    ![](img/26fb2e0d2c27e34524300218035d0784_121_1.png)'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "# Code Listing 13.1 (NoteTaker.java)\n\n```\nimport javax.swing.*;nimport java.awt.*;\n\
+    import java.awt.event.*;\n```\n\n```\npublic class NoteTaker extends JFrame {\n\
+    \    //constants for set of note taking area\n    public static final int WIDTH\
+    \ = 600;\n    public static final int HEIGHT = 300;\n    public static final int\
+    \ LINES = 13;\n    public static final int CHAR_PER_LINE = 45;\n\n    objects\
+    \ in GUI\n    private JTextArea theText; //area to take notes\n    private JMenuBar\
+    \ mBar; //horizontal menu bar\n    private JPanel textPanel; //panel to hold scrolling\
+    \ text area\n    private JMenu notesMenu; //vertical menu with choices for notes\n\
+    \n    *****THESE ITEMS ARE NOT YET USED.\n    //*****YOU WILL BE CREATING THEM\
+    \ IN THIS LAB\n    private JMenu viewMenu; //vertical menu with choices for views\n\
+    \    private JMenu leftMenu; //vertical menu with look and feel\n    private JMenu\
+    \ sbMenu; //vertical menu with scroll bar\n    private JScrollPane scrolledText;\
+    \ //scroll bars\n\n    //default notes\n    private String notel = \"No String\
+    \ 1.\";\n    private String note2 = \"No Note 2.\";\n\n    /**constructor*/\n\
+    \    public NoteTaker() {\n        //create a closeable JFrame with a specific\
+    \ size\n        super(\"Note Taker\");\n        setSize(WIDTH, HEIGHT);\n    \
+    \    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\n    }\n```\n\nCode Listing\
+    \ 13.1 continued on next page."
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "# Lab Manual to Accompany Starting Out with Java 5: From Control Structures\
+    \ to Objects\n\n```\n//set layout of the window\nsetlayout (new BorderLayout());\n\
+    \n//creates the vertical menus\ncreateNotes();\ncreateViews();\n\n//creates horizontal\
+    \ menu bar and\n//adds vertical menus to it\nmBar = new JMenuBar();\nmBar.add(notesMenu);\n\
+    //**** ADD THE VIEW TO THE MENU BAR HERE\nsetJMenuBar(mBar);\n\n//creates a panel\
+    \ to take notes on\ntextPanel = new JPanel();\ntextPanel.setBackground(Color.BLUE);\n\
+    theText = new J(LINES, CHAR_PER_LINE);\ntheText.setBackground(Color.WHITE);\n\
+    **** CREATE A JScrollPane OBJECT HERE CALLED scrolledText\n**** PASS IN THE iText,\
+    \ THEN\n//// CHANGE THE iText BELOW BY PASSING IN scrolledText\ntextPanel.add(theText);\n\
+    add(textPanel, BorderLayout.CENTER);\n}\n\n/**creates vertical menu associated\
+    \ with Notes\nmenu item on menu bar*/\npublic void createateNotes()\n{\n\tnotesMenu\
+    \ = new JMenu(\"Notes\");\nJJMenuItem item;\n\nitem = new JMenuItem(\"Save Note\
+    \ 1\");\nitem.addActionListener(new MenuListener());\n\tnotesMenu.add(item);\n\
+    ```\n\nCode Listing 13.1 continued on next page."
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# Chapter 13 Lab Advanced GUI Applications 119
+
+
+    ```
+
+    item = new JMenuItem("Save Note 2");
+
+    item.addActionListener(new MenuListener());
+
+    notesMenu.add(item);
+
+    ```
+
+
+    ```
+
+    item = new JMenuItem("Open Note 1");
+
+    item.addActionListener(new MenuListener());
+
+    notesMenu.add(item);
+
+    ```
+
+
+    ```
+
+    item = new JMenuItem("Open Note 2");
+
+    item.addActionListener(new MenuListener());
+
+    notesMenu.add(item);
+
+    ```
+
+
+    ```
+
+    item = new JMenuItem("Clear");
+
+    item.addActionListener(new MenuListener());
+
+    notesMenu.add(item);
+
+    ```
+
+
+    ```
+
+    item = new JMenuItem("Exit");
+
+    item.addActionListener(new MenuListener());
+
+    notesMenu.add(item);
+
+    }
+
+    ```
+
+
+    ```
+
+    /**creates vertical menu associated with Views
+
+    menu item on the menu bar*/
+
+    public void createViews() {
+
+    }
+
+    ```
+
+
+    ```
+
+    /**creates the look and feel submenu*/
+
+    public void createLookAndFeel() {
+
+    }
+
+    ```
+
+
+    ```
+
+    /**creates the scroll bars submenu*/
+
+    public void createScrollBars() {
+
+    }
+
+    ```
+
+
+    Code Listing 13.1 continued on next page.'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "120 Lab Manual to Accompany Starting Out with Java 5: From Control Structures\
+    \ to Objects\n\n}\n\nprivate class MenuListener implements ActionListener\n{\n\
+    \n```\npublic void actionPerformed(ActionEvent e) {\n    String actionCommand\
+    \ = e.getActionCommand();\n    String not = theText.getText();\n    if (actionCommand.equals(\"\
+    Save Note 1\")) {\n        theText.setText(not);\n    } else if (actionCommand.equals(\"\
+    Save Note 2\")) {\n        note2 = theText.getText();\n    } else if (actionCommand.equals(\"\
+    Clear\")) {\n        theText.setText(\"\");\n    } else if (actionCommand.equals(\"\
+    Open Note 1\")) {\n        theText.setText(not);\n    } else if (actionCommand.equals(\"\
+    Open Note 2\")) {\n        theText.setText(note2);\n    } else if (actionCommand.equals(\"\
+    Exit\")) {\n        System.exit(0);\n    }\n    //****6 BRANCHES TO THE ELSE-IF\
+    \ STRUCTURE\n    //*****ADD BRANCHES TO ALLOW ACTION TO BE PERFORMED FOR EACH\n\
+    \    //*****MENU ITEM YOU HAVE CREATED\n} else {\n    theText.setText(\"Error\
+    \ in memo interface\");\n}\n```\n\n}\n\n}\n\n```\npublic static void main(String[]\
+    \ args) {\n    NoteTaker gui = new NoteTaker();\n    gui.setVisible(true);\n}\n\
+    ```\n\n}"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# # Chapter 14 Lab
+
+    Applets and More
+
+
+    # ## Objectives
+
+
+    +   - Be able to write an applet
+
+    - Be able to draw rectangles, circles, and arcs
+
+    - Be able to override the paint method
+
+    - Be able to use a timer
+
+
+    # ## Introduction
+
+
+    In this lab we will create an applet that changes the light on a traffic signal.
+    The applet that you create will draw the outside rectangle of a traffic signal
+    and fill it in yellow. Then it will draw three circles in one column, to resemble
+    the red, orange, and green lights on the traffic signal. Only one circle at a
+    time will be filled. It will start green and cycle through the orange, red, and
+    back to green to start the cycle again. However, unlike a traffic signal, each
+    light will remain for the same amount of time. To accomplish this, we will use
+    a timer object.
+
+
+    When you have finished your applet should appear as shown in figure 1, but with
+    the filled in circle cycling up from green to orange to red and starting over
+    in a continuous changing of the traffic light.
+
+
+    ![](img/26fb2e0d2c27e34524300218035d0784_126_0.png)'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# Task #1 Create an Applet
+
+
+    +   1. Copy the file Traffic/Applet.java (see code listing 14.1) from www.aw.com/cssupport
+    or as directed by your instructor.
+
+
+    +   2. This class currently has all the constants you will need to be able to
+    you''re traffic signal. It doesn''t have anything else. You will need to change
+    the class heading so that it extends JApplet.'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# Task #2 The Timer
+
+
+    +   1. An applet does not have a constructor or a main method. Instead, it has
+    a method named **init** that performs the same operations as a constructor. The
+    **init** method accepts no arguments and has a void return type. Write an **init**
+    method.
+
+
+    +   2. Inside the **init** method, create a timer object passing in the TIME_DELAY
+    constant and a new TimerListener (We will be creating the listener class next).
+
+
+    +   3. Call the start method with the timer object to generate action events.'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# Task #3 The TimerListener Class
+
+
+    +   1. Write a private inner class called TimerListener which implements ActionListener.
+
+
+    +   2. Inside this class, write an actionPerformed method. This method will check
+    the status variable to see whether it is currently red, orange, or green. Since
+    we want the lights cycle as a traffic signal, we need to cycle in the order: green,
+    orange, red, green, orange, red, ... Once the status is determined, the status
+    should be set to the next color in the cycle.
+
+
+    +   3. Redis the graphics components (to be created next) by calling the repaint
+    method.'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# Task #4 Drawing Graphics
+
+
+    +   1. Draw the traffic signal by overriding the paint method. For all graphics,
+    use the named constants included in the class.
+
+    2. Call the method that is being overrid in the parent class. The constants
+
+    3. Create a yellow rectangle (solid color) for the traffic signal. The constants
+    X_TRAFFICLIGHT, Y_TRAFFICLIGHT, TRAFFICLIGHT_WIDTH, and X_TRAFFICLIGHT_HEIGHT
+    have already been defined for your use.
+
+    4. Create lights of red, orange, and green for the signals. These should be outlines
+    of these colors. The constants X_LIGHTS, Y_REDLIGHT, Y_GREENLIGHT, Y_ORANGELIGHT,
+    and LIGHT_DIAMETER, have already been defined for your use. Only one light will
+    be filled in a time, when the status indicates that one has been chosen. You will
+    need to check the status to determine which light to fill in. Remember, the status
+    is changed only in the actionPerformed method (already defined) where the repaint
+    method is also called.
+
+    5. Put the shade above by drawing black arcs above each light. The constants HOOD_START_ANGLE
+    and HOOD_ANGLE_SWEPT have already been defined for your use.
+
+    6. Try your applet. If time permits, create a web page on which you can display
+    your applet.'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: "# Code Listing 14.1 (TrafficApplet.java)\n\n```\nimport java.awt.*;\nimport\
+    \ java.awt.event.*;\nimport javax.swing.*;\n\npublic class TrafficApplet\n{\n\
+    \    public final int WIDTH = 300;\n    public final int HEIGHT = 400;\n\n   \
+    \ public final int X_TRAFFICLIGHT = WIDTH/3;\n    public final int Y_TRAFFICLIGHT_WIDTH\
+    \ = HEIGHT/7;\n    public final int TRAFFICLIGHT_WIDTH = WIDTH/2;\n    public\
+    \ final int TRAFFICLIGHT_HEIGHT = TRAFFICLIGHT*3/5;\n    public final int LIGHT_DIAMETER\
+    \ = TRAFFICLIGHT_HEIGHT/5;\n    public final int HOOD_START_ANGLE = 20;\n    public\
+    \ final int HOOD_ANGLE_SWEPT = 140;\n    public final int X_LIGHTS = =\n     \
+    \   TRAFFICLIGHT_WIDTH/3 + X_TRAFFICLIGHT;\n    public final int Y_REDLIGHT =\
+    \ =\n        TRAFFICLIGHT_HEIGHT/10 + Y_TRAFFICLIGHT;\n    public final int Y_ORANGELIGHT\
+    \ = =\n        TRAFFICLIGHT_HEIGHT*4/10 + Y_TRAFFICLIGHT;\n    public final int\
+    \ Y_GREENLIGHT =\n        TRAFFICLIGHT_HEIGHT*7/10 + Y_TRAFFICLIGHT;\n    public\
+    \ final int TIME_DELAY = 1000;\n\n    private String status = \"green\"; //start\
+    \ with the green\n    //light\n    private Timer timer; //will allow lights to\
+    \ cycle\n}\n```"
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '# # Chapter 15 Lab
+
+    Recursion
+
+
+    # ## Objectives
+
+
+    +   - Be able to trace recursive function calls
+
+    - Be able to write non-recursive and recursive methods to find geometric and harmonic
+    progressions
+
+
+    # ## Introduction
+
+
+    In this lab we will follow how the computer executes recursive methods, and will
+    write our own recursive method, as well as the iterative equivalent. There are
+    two common progressions in mathematics, the geometric progression and the harmonic
+    progression. The geometric progression is defined as the product of the first
+    $n$ integers. The harmonic progression is defined as the product of the inverses
+    of the first $n$ integers. Mathematically, the definitions are as follows
+
+
+    > Geometric $(n) = \prod_{i=1}^{n} i = i \times \prod_{i=1}^{n-1} i$
+
+
+    > Harmonic $(n) = \prod_{i=1}^{n} \frac{1}{i} = \frac{1}{i} \times \prod_{i=1}^{n-1}
+    \frac{1}{i}$
+
+
+    Let''s look at examples. If we use $n = 4$, the geometric progression would be
+    $1 \times 2 \times 3 \times 4 = 24$, and the harmonic progression would be
+
+
+    > $1 \times \frac{1}{2} \times \frac{1}{3} \times \frac{1}{4} = \frac{1}{24} =
+    0.04166...$'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Task #1 Tracing recursive methods
+
+
+    +   1. Copy the file Recursion_java (see code listing 15.1) from www.aw.com/cssup-port
+    or directed by your instructor.
+
+
+    +   2. Run the program to confirm that the generated answer is correct. Modify
+    the factorial method in the following ways:
+
+    a) add these lines above the first ''if'' statement
+
+    ```java
+
+    int temp;
+
+    System.out.println("Method call - calculating Factorial of: " + n);
+
+    ```
+
+    b) remove this line in the recursive section at the end of the method
+
+    ```java
+
+    return (factorial(n-1) *n);
+
+    ```
+
+    c) add these lines in the recursive section
+
+    ```java
+
+    temp = factorial(n-1);
+
+    System.out.println("Factorial of: " + (n-1) + " is " + temp);
+
+    return (temp * n);
+
+    ```
+
+
+    +   3. Rerun the program and note how the recursive calls are built up on the
+    run-time stack and then the values are calculated in reverse order as the run-time
+    stack "unwinds".'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# Task #2 Writing Recursive and Iterative Versions of a Method
+
+
+    +   1. Copy the file Progression.java (see code listing 15.2) from www.aw.com/cssup-port
+    or as directed by your instructor.
+
+
+    +   2. You need to write class (static) methods for an iterative and a recursive
+    version each of the progressions. You will have 4 methods, geometricRecursive,
+    geometricIterative, harmonicRecursive, and harmonicIterative. Be sure to match
+    them to the method calls in the main method.'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: "# Code Listing 15.1 (Recursive.java)\n\n```\npublic class Recursion\n{\n  \
+    \  public static void main(String[] args)\n    {\n        int n = 7;\n\n     \
+    \   //Test out the factorial\n        System.out.println(n + \" factorial equals\
+    \ \");\\n        System.out.println(Recursion.factorial(n));\n        System.out.println();\n\
+    \    }\n\n    public static int factorial(int n)\n    {\n        int temp;\n \
+    \       if (n==0)\n        {\n            return 1;\n        } else\n        {\n\
+    \            return (factorial(n-1) *n);\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: "# Code Listing 15.2 (Progression.java)\n\nimport java.util.Scanner;\n\npublic\
+    \ class Progression\n{}\n\n```\n    public static void main(String [] args)\n\
+    \    {\n        Scanner keyboard = new Scanner(System.in);\n        System.out.println(\"\
+    This program will calculate \" +\n            \"the geometric and \");\n     \
+    \   System.out.println(\"harmonic progression for the \" +\n            \"number\
+    \ you enter.\");\n        System.out.println(\"Enter an integer that is \" +\n\
+    \            \"greater than or equal to 1: \");\n        int input = keyboard.nextInt();\n\
+    \        int geomAnswer = geometricRecursive(input);\n        double harmAnswer\
+    \ = harmonicRecursive(input);\n        System.out.println(\"Using recursion:\"\
+    );\n        System.out.println(\"The geometric progression of \" +\n         \
+    \   input + \" is \" + geomAnswer);\n        System.out.println(\"The harmonic\
+    \ progression of \" +\n            input + \" is \" + harmAnswer);\n\n       \
+    \ int geomAnswerIterative = geometricIterative(input);\n        double harmAnswerIterative\
+    \ = harmonicIterative(input);\n        System.out.println(\"Using iteration:\"\
+    );\n        System.out.println(\"The geometric progression of \" +\n         \
+    \   input + \" is \" + geomAnswerIterative);\n        System.out.println(\"The\
+    \ harmonic progression of \" +\n            input + \" is \" + harmAnswerIterative);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 137
