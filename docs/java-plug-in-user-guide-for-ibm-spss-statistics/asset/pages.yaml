@@ -1,0 +1,1857 @@
+- img_proc: true
+  md: '# Java Plug-in User Guide for IBM SPSS Statistics
+
+
+    ![](img/7b14907fb29e3ededa26614548c41a2e_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '> Note
+
+    Before using this information and the product it supports, read the information
+    in “Notices” on page 27.
+
+
+    # Product Information
+
+
+    This edition applies to version 26, release 0, modification 0 of IBM SPSS Statistics
+    and to all subsequent releases and modifications until otherwise indicated in
+    new editions.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Contents
+
+
+    +   Chapter 1. Getting started with the Integration Plug-in for Java . . . . .
+    . . 1
+
+    Invoking IBM SPSS Statistics from an external application . . . . . . . . . .
+    . . 1
+
+    Creating IBM SPSS Statistics extension commands in Java . . . . . . . . . . .
+    2
+
+
+    +   Chapter 2. Running IBM SPSS Statistics commands . . . . . . . . . . . . .
+    . 5
+
+    Running IBM SPSS Statistics commands . . . . . . . . . . . . . . . . . .
+
+
+    +   Chapter 3. Retrieving dictionary information . . . . . . . . . . . . 7
+
+    Retrieving dictionary information . . . . . . . . . . . . . . . . . .
+
+
+    +   Chapter 4. Working with case data in the active dataset . . . . . . . 9
+
+    Working with case data in the active dataset . . . . . . . . . . . . . 9
+
+    Reading case data . . . . . . . . . . . . . . . . . . . . 9
+
+    Creating new variables in the active dataset . . . . . . . . . 11
+
+    Appending cases . . . . . . . . . . . . . . . . . . . . . . . 12
+
+
+    +   Chapter 5. Retrieving output from syntax commands. . . . . . . 15
+
+    Retrieving output from syntax commands . . . . . . . . . . . 15
+
+
+    +   Chapter 6. Creating custom output . . . . . . . . . . . 19
+
+    Creating custom output . . . . . . . . . . . . . . . . . 19
+
+    Creating pivot tables . . . . . . . . . . . . . . . . . 21
+
+    Creating text blocks . . . . . . . . . . . . . . . . . 21
+
+    Creating output for extension commands . . . . . . 21
+
+
+    +   Chapter 7. Running Python and R Programs from Java . . . . . 23
+
+
+    +   Chapter 8. Deploying an external Java application . . . . . . . . 25
+
+
+    +   Notices . . . . . . . . . . . . . . . . . . . . . . . . . . . 27
+
+    Trademarks . . . . . . . . . . . . . . . . . . . . . 29
+
+
+    +   Index . . . . . . . . . . . . . . . . . . . . . . . 31'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Chapter 1. Getting started with the Integration Plug-in for Java
+
+
+    The IBM SPSS Statistics - Integration Plug-in for Java™ enables an application
+    developer to create Java applications that can invoke and control the IBM SPSS
+    Statistics processor, or implement extension commands in Java that can then be
+    run from within IBM SPSS Statistics. Extension commands are IBM Statistics commands
+    that are implemented in an external language (Python, R or Java) and allow users
+    who are proficient in Java to share external functions with users of standard
+    IBM Statistics syntax.
+
+
+    With the IBM SPSS Statistics - Integration Plug-in for Java, you can do the following:
+
+
+    +   * Execute IBM SPSS commands from the active dataset.
+
+    * Read data from the active dataset.
+
+    * Get information about data in the active dataset.
+
+    * Add new variables and append cases to the active dataset.
+
+    * Get output results from syntax commands.
+
+    * Create custom output in the form of pivot tables and text blocks.
+
+
+    The IBM Statistics - Integration Plug-in for Java is installed with IBM SPSS Statistics
+    and IBM Statistics Server and require no separate installation or configuration.
+    For version 26 of IBM SPSS Statistics, the IBM Statistics - Integration Plug-in
+    for Java supports Java version 7.
+
+
+    The IBM SPSS Statistics - Integration Plug-in for Java is designed to work with
+    Unicode mode. Use of the IBM SPSS Statistics - Integration Plug-in for Java with
+    code page mode is not recommended.
+
+
+    Complete documentation for all of the classes and methods available with the IBM
+    Statistics Integration-Plug for Java is available in the Help system under the
+    heading IBM Statistics - Integration-Plug for Java API Reference.
+
+
+    # Invoking IBM Statistics from an external Java application
+
+
+    The interface for invoking IBM Statistics and controlling the IBM Statistics Statistics
+    processor is provided in the JAR file spssjavaplugin.jar, which is installed with
+    your IBM Statistics Statistics product. The JAR file contains the com.ibm.statistics
+    package, which contains the Java classes available with your operating system.
+    Be sure to add the Statistics - Integration Plug-in for Java Following the locations
+    of spssjavaplugin.jar to your class path.
+
+
+    +   * On Windows, spssjavaplugin.jar is located in the IBM Statistics Statistics
+    installation directory.
+
+    * On Linux and UNIX Server systems, spssjavaplugin.jar is located in the bin directory
+    under the IBM Statistics Statistics installation directory.
+
+    * On Mac OS, spssjavaplugin.jar is located in the bin directory under the Content
+    directory in the IBM Statistics application bundle.
+
+
+    Important: Do not move spssjavaplugin.jar from its installed location. The IBM
+    Statistics - Integration Plug-in for Java assumes that spssjavaplugin.jar is in
+    the installed location.
+
+
+    Note: For information on deploying your application on end user machines, please
+    see Chapter 8, "Deploying an external Java application," on page 25.
+
+
+    When invoked from an external Java application, the IBM Statistics processor runs
+    without an associated instance of the IBM Statistics Statistics client. In this
+    mode, output generated from IBM Statistics'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "Statistics can be managed with parameters specified on the method that starts\
+    \ the processor or through use of the IBM SPSS Output Management System, which\
+    \ is invoked by the OMS command.\n\nThe following is a simple example of using\
+    \ the IBM Statistics - Integration Plugin for Java to create a dataset in IBM\
+    \ SPSS, compute descriptive statistics and generate output. It illustrates the\
+    \ basic features of invoking IBM Statistics from an external Java application.\n\
+    \n```\nimport com.ibm.statistics.plugin.*;\npublic class demo { public static\
+    \ void main(String[] args) {\n\n    try {\n        StatsUtil.start();\n      \
+    \  String[] command = {\"OMS\",\n            \"DESCRIPTION FORMAT=HTML OUTPUT=/output/demo.html*\"\
+    ,\nn            \"DATA LIST free /salary (F).\",\n            \"RESIN DATA\",\n\
+    \            \"*25000\",\n            \"*30000\",\n            \"NEW DATA\",\n\
+    \            \"DESCRIPTIVES salary.\",\n            \"};\n        StatsUtil.commit(command);\n\
+    \        StatsUtil.stop();\n    } catch (Exception e) {\n        e.printStackTrace();\n\
+    \    }\n}\n}\n```\n\n+   - The element import com.ibm.statistics.plugin.* imports\
+    \ all of the classes in the com.ibm.statistics.plugin package.\n- The StatsUtil.start\
+    \ method starts the IBM Statistics processor.\n- A string array specifies IBM\
+    \ Statistics syntax creates a dataset and runs the DESCRIPTIVES procedure. The\
+    \ command syntax is submitted to IBM Statistics using the StatsUtil.submit method.\
+    \ Output from the DESCRIPTIVES procedure is routed to an HTML file using the OMS\
+    \ command.\n- The StatsUtil.stop method stops the IBM Statistics processor and\
+    \ should be called to properly end an IBM Statistics session.\n- The Exception\
+    \ class is a subclass of the native Exception class, and handles exceptions that\
+    \ are specific to the IBM Statistics - Integration Plugin for Java. It can be\
+    \ inherited to define custom exceptions for your application.\n\n# Creating IBM\
+    \ Statistics extension commands in Java\n\nThis topic describes aspects of extension\
+    \ commands that are to implementing extension commands in Java. Detailed information\
+    \ on creating extension commands is provided in the article \"Writing IBM Statistics\
+    \ Extension Commands\", available from the IBM Statistics Predictive Analytics\
+    \ community at https://developer.ibm..com/predictiveanalytics/.\n\nImplementation\
+    \ code can consist of a JAR file or class files.\n\n+   - When using a JAR file,\
+    \ the name of the JAR file must be the same as the extension command, and in upper\
+    \ case. For multi-word command names, spaces between words should be replaced\
+    \ with underscores when constructing the name of the JAR file. The JAR file must\
+    \ contain a class file with the same name as the JAR and the class must not be\
+    \ part of a package.\n- When using standalone class files, there must be one class\
+    \ file with the same name as that of the extension command, and in upper case.\
+    \ For multi-word command names, spaces between words should be replaced with underscores\
+    \ when constructing the name of the class file."
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "Whether using a JAR file or standalone Java classes, the class file with the\
+    \ same name as the extension command should contain the following:\n\n+   * A\
+    \ constructor method, which does not have a parameter, for the class.\n* A public\
+    \ static method named Run with a single Hashtable argument that should be specified\
+    \ as follows:\n Hashtable<String, Hashtable<String, Object>>\n* A public method\
+    \ that implements the command.\n\n# XML command syntax specification\n\n+   *\
+    \ For extension commands implemented in Java, the Language attribute of the Command\
+    \ element should be set to \"Java\".\n* For Java commands implemented with a JAR\
+    \ file, the Mode attribute of the Command element should be set to \"Package\"\
+    .\n\n# Sample Java class\n\nThe following is an example of a Java class for an\
+    \ extension command DEMO, which simply takes a variable list as input and prints\
+    \ the list. It demonstrates the basic structure of implementation code and the\
+    \ means by which values are passed from the command syntax (submitted by the user)\
+    \ to the method that implements the command. The XML command syntax specification\
+    \ for the DEMO command is also provided.\n\n```\nimport java.util.Arrays;\nimport\
+    \ java.util.HashSet;\nimport java.util.ArrayList;\nimport java.util.Hashtable;\n\
+    import java.util.List;\nimport com.ibm.statistics.plugin.*;\n\npublic class DEMO()\
+    \ {\n    System.out.println(\"This is the constructor method\");\n}\n\npublic\
+    \ static void Run(Hashtable<String, Hashtable<String, Object>> args) {\n    List<TemplateClass>\
+    \ testlist = Arrays.asList(testlist);\n    Extension.Template(\"VARIABLES\", \"\
+    *vars\", \"existinglist\", true);\n    \n    SyntaxObj obj = Extension.Syntax(testlist);\n\
+    \    Extension.processcmnd(obj, args, \"printvars\");\n\n    } catch (Exception\
+    \ e) {\n        e.printStackTrace();\n    }\n}\n\npublic void printvars(@ParamName(\"\
+    var\") ArrayString variables) {\n    System.out.println(\"variables = \" + variables);\n\
+    }\n```\n```\n\nBriefly, the function of the Run, Syntax and processcmnd methods\
+    \ are as follows:\n\n+   * IBM Statistics parses the command syntax by the user\
+    \ and passes the specified values to the Run function in a single argument-args\
+    \ in this example.\n* The Run function calls the Extension.Syntax, Extension.Template,\
+    \ and Extension.processcmnd methods, which are designed to work together.\n\n\
+    Extension.Template specifies the details needed to process a specific keyword\
+    \ in the syntax for an extension command. In this example, the extension command\
+    \ uses the single keyword VARIABLES.\nExtension.Syntax validates the values passed\
+    \ to the Run function according to the templates specified for the keywords."
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "Extension.processcmd parses values passed to the Run function and calls the\
+    \ function that will actually implement the command—in this example, the printvars\
+    \ method.\n\nThe annotation mechanism also requires that the implementation method\
+    \ be defined as object types, not primitive data types. In particular, you must\
+    \ use the object types Integer, Short, Long, Float, Double, Byte, Character and\
+    \ Boolean instead of the primitive types int, short, long, float, double, char\
+    \ and boolean. In the above example, the printvars method is an array of strings\
+    \ and is defined as an ArrayList object.\n\nThe XML specification for the DMO\
+    \ command is as follows:\n\n```\n<Command xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\
+    \n xsi:noNamespaceSchemaLocation=\"http://example.com/XML-Schema.xsd\"\n Name=\"\
+    DMO\" Language=\"Java\">\n  <Subcommand Name=\"\">\n    <Parameter Name=\"VARIABLES\"\
+    \ ParameterType=\"VariableNameList\"/>\n  </Subcommand>\n</Command>\n```\n\n+\
+    \   - The top level element Command specifies the name of the extension command\
+    \ and the implementation language. The Mode attribute is set to \"Source\", which\
+    \ specifies that the implementation code is contained in Java class files rather\
+    \ than a JAR file.\n\n+   - The Subcommand element specifies the single subcommand\
+    \ for this extension command. In this simple example, the subcommand is unnamed.\n\
+    \n+   - The Parameter element specifies the single parameter for this extension\
+    \ command. The parameter is named VARIABLES and it specifies a list of variable\
+    \ names.\n\nDeploying an extension command\n\nTo deploy an extension command,\
+    \ it is best to create an extension bundle (JAR file or Java class files) and\
+    \ the XML specifying the command syntax to the bundle. You can distribute the\
+    \ extension bundle (spv) file to other users who can install it and begin using\
+    \ your extension command. For more information, see Core System>Extensions>Creating\
+    \ and editing bundles, in the Help system."
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Chapter 2. Running IBM SPSS Statistics commands
+
+
+    # Running IBM SPSS Statistics commands
+
+
+    The submit method from the Util class is used to submit syntax commands to IBM
+    SPSS Statistics for processing. It takes a string that resolves to a complete
+    syntax command, or an array of strings that resolves to one or more complete syntax
+    commands. Output from syntax commands can be written to the standard output stream
+    or to an external file. It can also be directed to an in-memory workspace where
+    it is stored as XML and can be retrieved using XPath expressions. See the topic
+    "Retrieving output from syntax commands" on page 15 for more information.
+
+
+    Submitting a single command
+
+
+    You submit a single command to IBM SPSS Statistics by providing a string representation
+    of the command as shown in this. When submitting a single command in the manner
+    period () at the end of the command is optional.
+
+
+    ```
+
+    Util.submit("GET FILE=/data/Employee data.sav.");
+
+    Util.submit("DESCRIPTIVES SALARY.");
+
+    ```
+
+
+    +   The submit method is called twice; first to submit a GET command and then
+    to submit a DESCRIPTIVES command.
+
+
+    Submitting commands using an array
+
+
+    You can use multiple commands as an array of strings where each element is a representation
+    of a syntax command. The string for each command must be terminated with a period
+    () as shown in this.
+
+
+    ```
+
+    Util.submit("GET FILE=/data/Employee data.sav.");
+
+    String[] cmdlines = {"DESCRIPTIVES SALARY SALEBEGIN.","FREQUENCES EDUC JOBCAT."};
+
+    Util.submit(cmdlines);
+
+    ```
+
+
+    +   The submit method is called with an array that specifies a DESCRIPTIVES and
+    a FREQUENCES command.
+
+
+    You can also use elements of an array to represent parts of a command so that
+    a single array specifies one or more complete syntax commands. When submitting
+    multiple commands in this manner, each command must be terminated with a period
+    () as shown in this.
+
+
+    ```
+
+    Util.submit("GET FILE=/data/Employee data.sav.");
+
+    String[] COMMANDS = {"Descriptives ''Frequencies''",
+
+    "DESTINATION FORMAT = XML",
+
+    "IMAGES IN OUTPUT = /output/stats.html",
+
+    "DESCRIPTIVES SALARY.",
+
+    "FREQUENCES EDUC.",
+
+    "OMSEND.\};
+
+    Util.submit(COMMANDS);
+
+    ```
+
+
+    +   The submit method is called with an array that specifies an OMS command followed
+    by a DESCRIPTIVES command, a FREQUENCES command, and an OMSEND command. The first
+    four elements of the array are used to specify the OMS command.
+
+
+    Displaying command generated by the submit method
+
+
+    For debugging purposes, it is convenient to see the completed syntax passed to
+    IBM SPSS Statistics by any calls to the submit method. This is enabled through
+    syntax command with SET PRINTBACK MPRINT ON.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '```
+
+    String cmdDLines = ["SET PRINTBACK ON MPRINT ON.",
+
+    GET FILE="/data/Employee data.sav";
+
+    Statutil.submit(cmdDLines);
+
+    String varName;
+
+    varName = Statutil.getvariableName(1);
+
+    Statutil.submit("FREQUENCIES /VARIABLES*" + varName + \.*");
+
+    ```
+
+
+    The generated command syntax shows the completed FREQUENCIES command as well as
+    the GET command. In the present example the variable with index value 1 in the
+    dataset has the name gender.
+
+
+    +   M> GET FILE=''c:/data/Employee data.sav''.
+
+    M> FREQUENCIES /VARIABLES-gender.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# Chapter 3. Retrieving dictionary information\n\n# Retrieving dictionary information\n\
+    \nThe Cursor, DataUtil and StatsUtil classes provide a number of methods for retrieving\
+    \ dictionary information from the active dataset. The following information is\
+    \ available:\n\n+   * Cursor.getDataFileAttributes. The attribute values for a\
+    \ specified attribute.\n* Cursor.getDataFileAttributesNames. Names of any data\
+    \ attributes for the active dataset.\n* Cursor.getMultiResponseSet. The details\
+    \ of a specified multiple response set.\n* Cursor.getMultiResultSetNames. The\
+    \ names of any multiple response sets for the active dataset.\n* Cursor.getNumericMissingValues.\
+    \ The user-missing values, if any, for a specified numeric variable.\n* Cursor.getNumericValueLabels.\
+    \ The labels, if any, for a specified numeric variable.\n* Cursor.getStringValues.\
+    \ The user-missing values, if any, for a specified string variable.\n* Cursor.getStringLabels.\
+    \ The labels, if any, for a specified string variable.\n* Cursor.getVariableAttributeNames.\
+    \ The names of any custom attributes for a specified variable.\n* Cursor.getVariableAttribute.\
+    \ The attribute values for a specified attribute of a variable.\n* Cursor.getVariableCount.\
+    \ The number of variables in the active dataset.\n* Cursor.getVariableFormat.\
+    \ The display format for a specified variable; example, F8.2.\n* Cursor.getVariableLabel.\
+    \ The variable label, if any, for a specified variable.\n* Cursor.getVariableMeasurement.\
+    \ The measurement level for a specified variable.\n* Cursor.getVariableName. The\
+    \ variable name for a variable specified by its index position. Index positions\
+    \ start with 0 for the first variable in file order.\n* Cursor.getVariableRole.\
+    \ The variable role (for example, INPUT or TARGET) for a specified variable.\n\
+    * Cursor.getVariableType. The variable type (numeric or string) for a specified\
+    \ variable.\n* DataUtil.getVariableIndex. The index position, in the active dataset,\
+    \ of a specified variable.\n* DataUtil.getVariableNames. The names of the variables\
+    \ in the active dataset.\n* StatsUtil.splitVariables. The names of the split variables,\
+    \ if any.\n* StatsUtil.getWeightVariable. The name of the weight variable, if\
+    \ any.\n\nConsider the common scenario of running a parallel block of command\
+    \ syntax only if a specific variable exists in the dataset. For example, you are\
+    \ processing many datasets containing employee records and want to split them\
+    \ by gender–if a variable exists–to obtain statistics for the two group members.\
+    \ If we assume that a variable exists, it has the name gender, although it may\
+    \ be spelled in upper or mixed case. The following sample code illustrates the\
+    \ approach:\n\nExample\n\n```\nStatsUtil.submit(\"GET FILE=data/Employee.data.sav'\"\
+    );\nDataUtil.getVariableNames();\nString[] varames = DataUtil.getVariableNames();\n\
+    for (String varname : varames) {\n  if (varname.toLowerCase().equals(\"gender\"\
+    )) {\n    String[] command = {\"SPLIT FILE LAYERED BY *\" + varname + \"*\";};\n\
+    \    StatsUtil.submit(command);\n  }\n}\n\n```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Chapter 4. Working with case data in the active dataset
+
+
+    # Working with case data in the active dataset
+
+
+    The IBM Statistics - Integration Plug-in for Java provides the ability to read
+    case data from the active dataset, create new variables in the active dataset,
+    and append new cases to the active dataset. The functionality for reading and
+    writing to the active dataset is provided in the Cursor class. An instance of
+    the Cursor creates an open cursor, which provides access to the active dataset.
+    Because the following rules apply to your use:
+
+
+    +   You cannot use the submit method from the Util class while a data cursor is
+    open. You must close the cursor first using the close method. In particular, if
+    you need to save changes made to the active dataset to an external file, then
+    use the submit method to submit a SAVE command after closing the cursor.
+
+
+    +   Only one data cursor can be open at any point in an application. To define
+    a new data cursor, you must first close the previous one.
+
+
+    While the Cursor class provides the full set of methods for accessing the active
+    dataset, the simpler DataUtil class is a wrapper for the Cursor class and provides
+    the ability to read case, create new variables and append case. The examples in
+    this section use the DataUtil class. DataUtil class is a wrapper for the Cursor
+    class, also has limitations on cursor which apply to DataUtil objects. The following
+    apply:
+
+
+    +   You cannot use the submit method from the Util class while a DataUtil object
+    exists. You must release the resources associated with the object with the release
+    method. As with cursor, if you need to save changes made to the active dataset
+    to an external file, then use the submit method to submit a SAVE command after
+    releasing the DataUtil object.
+
+
+    +   Only one DataUtil object can exist at a time. To create a new DataUtil object,
+    you must first release the previous one.
+
+
+    Note: To create a new dataset, use the submit method in the Util class to submit
+    a DATA LIST
+
+
+    # Reading case data
+
+
+    You retrieve cases using the fetchCases method from the DataUtil class. You can
+    retrieve one case at a time in sequential or you can retrieve multiple cases (including
+    all cases) with a single call to the fetchCases method.
+
+
+    +   System-values are always returned as the Java null; however you can specify
+    user-missing values are treated as valid or returned as null. See the example
+    on missing data.
+
+
+    +   By default, retrieve from a variable representing a date, or a date and a
+    time, is given as the number of seconds from October 14, 1582. You can specify
+    that values retrieved from IBM Statistics variables with date or time formats
+    be converted to Calendar objects with the setConvertDataTypes shown in the following
+    example:
+
+
+    +   When retrieving cases, any case filtering specified with the FILTER or USE
+    commands is honored.
+
+
+    Example:
+
+
+    ```
+
+    DataUtil dataUtil = new DataUtil("file/demo.sav.\
+
+    ```'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '```
+
+    if(format == CellValue.DOUBLE)
+
+    numvar = onecase.getDoubleValue(i);
+
+    }
+
+    else if(format == CellValue.STRING)
+
+    strvar = onecase.getStringValue(i);
+
+    }\else if(format == CellValue.DATE)
+
+    datevar = onecase.getDateValue(i);
+
+    }
+
+    datail.release();
+
+    ```
+
+
+    +   You create an instance of the DataUtil class. In this example, the variable
+    datautil is a DataUtil object.
+
+
+    +   The convertDateTypes method specifies that values read from IBM SPSS Statistics
+    variables with date or datetime formats will be converted to Java Calendar objects.
+
+
+    +   The FetchCases method retrieves all cases from the active dataset. The first
+    argument specifies that user-using values will be treated as missing and converted
+    to the Java null value. The second argument specifies that from 0, it will be
+    retrieved from the active dataset. You can retrieve cases starting from an arbitrary
+    number by specifying a different value for the second argument. You can also retrieve
+    a subset of cases, using an overloaded form of fetchCases with a third argument
+    specifying the number of cases to retrieve.
+
+
+    +   The FetchCases method returns a Case object, which represents an array of
+    cases. The items in each element of the array contain the values in a particular
+    case of data from the active dataset, file order. You can get the number of items
+    in each case from the getCellValueNumber method of the Case object.
+
+
+    +   The type of value in each item of a case is available from the getCellValue
+    method of the Case object. Values are retrieved from the Case object with methods
+    specific to each type of value, as shown here for numeric, string and date values.
+
+
+    Retrieving a subset of variables for data will be retrieved.
+
+
+    You can specify a subset of variables which data will be retrieved. You can specify
+    the set of variables by name or by their index position in the active dataset.
+    Index positions start with 0 for the first variable in file order.:
+
+
+    ```
+
+    DataUtil.subset("FILE/data/employee data.csv");
+
+    dataUtil1 = new DataUtil();
+
+    String[] varNames = new String[]("educ","salary");
+
+    dataUtil1.subset(varNames, true);
+
+    Case[] data = dataUtil1.fetchCases(false, 0);
+
+    ```
+
+
+    The variableFilterMethod specifies the subset of variables for which data will
+    be retrieved. In this example, only the data for variables id, educ and salary
+    will be retrieved.
+
+
+    Missing data
+
+
+    The first argument to the FetchCases method specifies whether user-missing values
+    are converted to a Java null value or treated as valid data. Missing-missing values
+    are always converted to the Java null value.
+
+
+    ```
+
+    String command="GATA DATA LIST ('''',''/NumVar ('''') string Var (a4).";
+
+    "BEGIN DATA"
+
+    "0"
+
+    "1"
+
+    "2"
+
+    "3"
+
+    "4"
+
+    END DATA.
+
+    "MISSING VALUES num (9) string Var ('''')."
+
+    ndataUtil1.submit(command);
+
+    dataUtil1 = new DataUtil();
+
+    Case[] data = dataUtil1.fetchCases(false, 0);
+
+    dataUtil.release();
+
+    ```
+
+
+    Setting the first argument to fetchCases to false user-missing values are converted
+    to the Java null value. The values read from IBM SPSS Statistics and stored in
+    the variable data are:'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '1
+
+    a
+
+    b
+
+    null
+
+    3 null
+
+    null d
+
+
+    You can specify that user-missing values are treated as valid data by setting
+    the first argument to the fetchCases method to true. The values of data are now:
+
+
+    1
+
+    a
+
+    b
+
+    null
+
+    9 d
+
+
+    # Handling Data with Splits
+
+
+    The getSplit method, from the DataUtil class, allows you to detect split changes
+    when reading from datasets that have splits.
+
+
+    ```
+
+    String[] command="*DATA LIST FREE /salary (F) jobcat (F).*\n*BEGIN DATA;
+
+    *21400 1;
+
+    *45000 2;
+
+    *30000 2;
+
+    *103750 3;
+
+    *72000 3;
+
+    *57000 3;
+
+    *END DATA;
+
+    *SPLIT TILE.sum(command);
+
+    StatUtil.sumfile(command);
+
+    DataUtil dataut = new DataUtil();
+
+    int splitindex = dataut.getSplitIndex(0);
+
+    while(splitindex!=-1)System.out.println("new split begins at: "++splitindex);\splitindex
+    = dataut.getSplitIndex(splitindex);
+
+    daut.release();
+
+    ```
+
+
+    +   - dataut.getSplitIndex gets the number of the first case in the split following
+    the specified case. For the sample dataset used in this example, split boundaries
+    are crossed when reading the 3rd and 5th cases. Cases start from 0.
+
+    - If there are no split boundaries following the specified case, then dataut.getSplitIndex
+    returns -1.
+
+
+    # Creating new variables in the active dataset
+
+
+    The DataUtil allows you to add new variables, along with their case values, to
+    the active dataset.
+
+
+    Example
+
+
+    In this example we create a string variable, a numeric variable and a new date
+    variable, and populate case values for them.
+
+
+    ```
+
+    String[] command="*DATA LIST FREE /case (AS5).*\n*BEGIN DATA;
+
+    *case;
+
+    *case;
+
+    *case3;
+
+    *END DATA;
+
+    StatUtil.sumfile(command);
+
+    Variable numvar = new Variable("numvar",0);
+
+    Variable strvar = new Variable("strvar");
+
+    Variable datevar = new Variable("datevar",0);
+
+    datevar.setFormat(Variable.FORMAT_DATE);
+
+    Double[] doubles = new Double[]{1,0.2,0.3};
+
+    String[] strings = new String[]{"%a","%b","%c"};
+
+    Calendar calendar = Calendar.getInstance();
+
+    datevar.set(Calendar.YEAR, 2023);
+
+    datevar.set(Calendar.MONTH, Calendar.JANUARY);
+
+    datevar.set(Calendar.DAY_OF_MONTH, 1);
+
+    dataUtil dataut = new DataUtil();
+
+    dataaut.addVariableWithValue(numvar, doubles, 0);
+
+    dataaut.addVariableWithValue(strvar, strings, 0);
+
+    dataaut.addVariableWithValue(datevar, calendar, 0);
+
+    dataaut.release();
+
+    ```
+
+
+    Chapter 4. Working with case data in the active dataset 11'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "+   • The Variable class creates the specification for a new variable to be\
+    \ added to the active dataset. The first argument to the constructor is the variable\
+    \ and the second argument is an integer specifying the variable type. Numeric\
+    \ variables have a variable type of 0 and string variables have a variable type\
+    \ equal to the defined length of the string (maximum 32767 bytes).\n\n+   • addPathVariable\
+    \ method of the DataUtil adds a new variable to the active dataset. The first\
+    \ argument to the method is the Variable object that specifies the properties\
+    \ of the variable. The second argument is an array that specifies the value for\
+    \ each case in the active dataset to be populated. The third argument specifies\
+    \ the index of the case at which begin populating the variable values. Case index\
+    \ start with 0 for the first case in the active dataset.\n\n+   • Numeric variables,\
+    \ cases that are not populated are set to the system-missing value. String variables,\
+    \ cases that are not populated are set to a blank value. In this example, only\
+    \ the first case is populated for the variableVar.\n\n+   • Variables representing\
+    \ a date, or a time, in IBM SPSS Statistics are numeric variables that have date\
+    \ or datetime format. In the above example, the variable date is a numeric variable\
+    \ whose format has been set to DATE with the setLayout method of the Variable\
+    \ object. Setting the value for case, use a Java Calendar object as shown in this\
+    \ example.\n\n> Note: To save the modified dataset to an external file, use the\
+    \ submit method (following the release method) to submit a SAVE command;\nStatsUtil.submit(\"\
+    SAVE OUTPUT=\"/data/mydata.sav\");\n\nExample: Multiple data passes\n\nSometimes\
+    \ more than one pass of data is required, in the following example two data passes.\
+    \ The first pass is used to read the data and calculate a summary statistic. The\
+    \ second pass is used to add a summary to the active dataset.\n\n```\nString[1]command=\"\
+    DATA LIST FREE /var (F).\";\nBEGIN DATA.\n\"40000\",\n\"21900\",\n\"Data\";\n\
+    END DATA.\nStatsUtil.submit(command);\nDouble total = 0;\nDataUtil dataUtil =\
+    \ new DataUtil();\nCase[] data = dataUtil.fetchCases(false,0);\nfor (Case oncase:data)\
+    \ {\ntotal += oncase.getDouble(0);\n}\nDouble mean = total/data.length;\nVariable\
+    \ meanVar = new Variable(\"mean\",0);\ndouble[] means = new double[data.length];\n\
+    for (int i=0; i<data.length; i++) {\n  means[i]=mean;\n}\ndataUtil.addPathVariable(mean,\
+    \ means, 0);\ndataUtil.release();\n```\n\n# Appending new cases\n\nThe DataUtil\
+    \ enables you to add new cases to the active dataset.\n\nExample\n\nIn this example\
+    \ a single case is added to the active dataset.\n\n```\nString[1]command=\"DATA\
+    \ LIST FREE /var (F) value (A) date(DATE).\";\nBEGIN DATA.\n\"01/01/2012\"\nEND\
+    \ DATA.\nStatsUtil.submit(command);\nCase newCase = new Case(3);\nDataUtil dataUtil\
+    \ = new DataUtil();\nCalendar date = Calendar.getInstance();\ndate.set(Calendar.MONTH,\
+    \ JANUARY);\ndate.set(Calendar.DAY_OF_MONTH, 1);\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '```
+
+    newcase.setValue(0, 2);
+
+    newcase.setValue(1, "q1");
+
+    newcase.setValue(2,);
+
+    datautil.appendCase(newcase);
+
+    datautil.release();
+
+    ```
+
+
+    +   - To append a case to the active dataset, you create a Case object that represents
+    a single case, and populate it with the values of the variables for the case.
+    The variable values are populated with the setCellValue method of the Case object.
+    The first argument to this method is the index of the associated variable case
+    has index 0, the variable value has index 1 and the variable date has index 2.
+    The second argument to the setCellValue method is the value of the variable for
+    the given case.
+
+
+    +   - To specify the value of variable with a date or datetime format, use a Java
+    Calendar object as shown in this example.
+
+
+    +   - The appendCase method of the DataUtil object appends the case. Its only
+    argument is the Case object that specifies the case.
+
+
+    +   - A numeric variable whose value is not specified in the Case object is set
+    to the system-missing value. A string variable whose value is not specified in
+    the Case object will have a blank value. The value will be valid unless you explicitly
+    define the blank value to be missing for that variable. You can also use an overloaded
+    form of the setCellValue method to set the value of a specified cell in the Case
+    object to the Java null value, in which case it will be treated the same as if
+    the value of the cell was not specified.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# 5. Retrieving output from syntax commands
+
+
+    # Retrieving output from syntax commands
+
+
+    You can retrieve output by IBM Statistics commands without writing the output
+    to an external file. This is accomplished by routing the output via the Output
+    Management System (OMS) to an area in memory where it is stored as the XML workspace
+    where it is an XPath DOM that conforms to the IBM SPSS Statistics Output XML schema.
+    Output is retrieved from this workspace with functions that employ XPath expressions.
+
+
+    Constructing the XPath expression (IBM SPSS Statistics currently supports XPath
+    1.0) requires an understanding of the Output XML schema. The output schema spss-output-1.xsd
+    is distributed with IBM SPSS Statistics. Documentation is included in the IBM
+    Statistics Help system.
+
+
+    Example
+
+
+    ```
+
+    String[] commands={"GET FILE"/data/employee.data.sav.",
+
+    "/IF COMMANDS=`[DESCRIPTIVES]` SUBTYPES=`[Descriptive Statistics]`",
+
+    "/DESTINATION FORMAT=XML,WORKSPACE=`desc_table`;
+
+    "/TAG=`out.",
+
+    "/DESCRIPTIVES VARIABLES=salary, salbegin, datetime, jobtime",
+
+    "/OMEND TAG=`out.";};
+
+    StatusResult result=status1.execute(commands);
+
+    String handle="desc_table";
+
+    String xpath="//[pivott[@Type=''Descriptive Statistics'']]" +
+
+    "//Dimension[@Row=''salary'']" +
+
+    "//Dimension[@Column=''Mean'']" +
+
+    "//Cell[@Name=''Mean'']";
+
+    Cell result=status1.evaluateXPath(handle, context);
+
+    status1.deleteXPath(handle);
+
+    ```
+
+
+    +   - The OMS command is used to retrieve an output from a command to the XML
+    workspace. The XMLWORKSPACE keyword in the DESTINATION subcommand, with FORMAT=XML,
+    specifies the XML workspace as the output destination. It is a good practice to
+    use the desc_table here, so as not to interfere with any other OMS command that
+    may be operating. The identifiers used for the COMMANDS and SUBTYPES used in the
+    OMS can be found in the OMS identifiers box, available in the Utilities menu.
+
+    - The XMLWORKSPACE keyword is used to specify a name for this XPath DOM in the
+    workspace. In the current example, output from the DESCRIPTIVES command will be
+    identified with the name desc_table. You can have many XPath commands in the XML
+    workspace, each with its own name.
+
+    - You retrieve the values from the workspace using the evaluateXPath method from
+    the StatusClass. The method takes an XPath expression, evaluates it against a
+    specified XPath DOM in the XML workspace, and returns the result as an array of
+    strings.
+
+    - The first argument to the evaluateXPath function specifies the XPath DOM to
+    which an XPath expression will be applied. This argument is referred to as the
+    handle for the XPath DOM and is simply the name given on the XMLWORKSPACE keyword
+    of the associated OMS command. In this case the handle is desc_table.
+
+    - The second argument to evaluateXPath defines the XPath context for the expression
+    and should be set to "outputTree" routed to the XML workspace by the OMS command.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '+   • The argument to evaluateXPath specifies the remainder of the XPath expression
+    (the context is the first part). Since XPath expressions almost always contain
+    quoted strings, you''ll need to use a different quote to enclose the expression.
+    For familiar with XSLT and accustomed to needing a namespace prefix, note that
+    XPath expressions for the evaluateXPath function should not include the oms: namespace
+    prefix.
+
+
+    +   • The XPath expression in this example is specified by the variable XPath.
+    it is not the minimal expression needed to select the value of interest but is
+    used for illustration purposes and to highlight the structure of the XML output.
+
+
+    ```
+
+    /pivotTable[@subType=''Descriptive Statistics''] selects the Descriptive Statistics
+    table.
+
+    /dimension[@axis=''row'']/category[@varname=''salary''] selects the rows for the
+    variable salary.
+
+    /dimension[@axis=''column'']/measure[@text=''Mean''] selects the Mean count within
+    this row, thus usifying a single cell in the pivot table.
+
+    /cell/@text selects the textual representation of the contents.
+
+    ```
+
+
+    +   • When you have finished with a particular item, it is a good idea to delete
+    it from the XML workspace. This is done with the deleteXPathHandle, whose argument
+    is the name of the handle associated with it.
+
+
+    If you are familiar with XPath, the mean value of salary can also be selected
+    with the following
+
+    /category[@varname=''salary'']/category[@text=''Mean'']/cell
+
+
+    > Note: To easily possible, construct your XPath expressions using language-independent
+    attributes, such as the variable name rather than the variable label. This will
+    help reduce the translation effort if you need to deploy your code in multiple
+    languages. Also considering language-dependent identifiers, such as the name of
+    a statistic, into constants. You can obtain the current language used for pivot
+    table with the syntax command SHOW OLANG.
+
+
+    You may also consider using text_eng attributes in place of text attributes in
+    XPath expressions.
+
+    text_eng attributes are English versions of text attributes and have the same
+    value regardless of the output language. The OATRS subset of the SET command specifies
+    whether text_eng attributes are included in OXML output.
+
+
+    Writing XML workspace to a file
+
+
+    When writing and debugging XPath, it is often useful to have a sample file that
+    shows the XML structure. This can be obtained with the getXMLUTF16 from the StatsUtil
+    class, as well as an option on the OMS command syntax. The following code recreates
+    the workspace for the preceding example and writes the XML structure using the
+    handle desc to an external file.
+
+
+    ```
+
+    String[] command = {"GET FILE", "data/example_data.sav",
+
+    "SETTING FORMAT=XML", "SUBTYPES=''Descriptive Statistics''",
+
+    "desc=out",
+
+    "DESCRIPTIVE VARIABLES=salary, jobtime, prevail",
+
+    "STATISTICS-MEAN",
+
+    "SHOW OLANG",
+
+    "OMAND desc=''out''"};
+
+
+    String result = StatsUtil.getXMLUTF16("desc=table");
+
+    PrintWriter writer = new PrintWriter(new FileOutputStream("output/output_table.xml"));
+
+    writer.write(result);
+
+    out.close();
+
+    StatsUtil.deleteXPathHandle("desc=table");
+
+    ```
+
+
+    The section of the output file that describes the Descriptive Statistics table,
+    including the mean value of
+
+    salary, is follows (output written in Unicode (UTF-16):
+
+
+    ```
+
+    <pivottable subType=''Descriptive Statistics">
+
+    <dimension axis=''row'' text="Variables">
+
+    <category label="Current Salary" text="Current Salary">
+
+    <varname=''salary'' value="row">
+
+    <dimension axis=''column'' text=''Statistics">
+
+    ```
+
+
+    # 16 Java-Plugin User Guide for IBM SPSS Statistics'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '<category number="474" text="474"/>
+
+    <category>
+
+    <category text="Mean">
+
+    <cell decimals="2" format="$dollar" number="3419.567510548">$3419.57</cell>
+
+    </category>
+
+    </dimension>
+
+    </category>
+
+
+    Retrieving images with associated output to the XML workspace. In this example,
+    we''ll retrieve a bar chart associated output from the Frequencies procedure.
+
+
+    ```
+
+    String[] command = {"GET FILE";/data/Employee data.csv.\
+
+    ```
+
+
+    +   * The OMS command routes output from the FREQUENCIES command to an output
+    XPath DOM with the handle name of demo.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# # Chapter 6. Creating custom output
+
+
+    # ## Creating custom output
+
+
+    The IBM SPSS Statistics - Integration Plug-in for Java provides the ability to
+    create output in the form of custom pivot tables and text blocks. Using the Output
+    Management System (OMS), the output can be rendered in variety of formats such
+    as HTML, text, or XML that conforms to the IBM SPSS Statistics Output XML Schema.
+    If you are generating output part of an extension command implemented in Java,
+    then the output will be displayed in the Viewer by default.
+
+
+    # ## Creating pivot tables
+
+
+    The following figure shows the basic structural components of a pivot table. For
+    IBM Statistics version 26, the IBM Statistics - Integration Plug-in for Java supports
+    pivot tables with one dimension and one column. Each dimension contains a set
+    of categories that label the elements of the dimension–instance, row labels for
+    a row dimension.
+
+
+    Each cell in the table can be specified by a combination of category values. In
+    the example shown, the indicated cell is specified by a category value of *Male*
+    for the *Gender* dimension and *Custodial* for the *Employment Category* dimension.
+
+
+    | Row dimension | | Column dimension |
+
+    |---|---|---|---||
+
+    | | Employment Category | |
+
+    | Gender | Clerical | Custodial | Manager |
+
+    | Female | 186 | 0 | 10 |
+
+    | Male | 110 | 14 | 70 |
+
+    | Row dimension category | | Cell value |
+
+
+    Figure 1. Pivot table structure
+
+
+    Pivot tables are created with the PivotTable class, as shown in the following
+    example. This example assumes that you are generating pivot output for an external
+    Java application that will invoke SPSS Statistics, to that output is routed with
+    OMS.
+
+
+    ```
+
+    String[] command = {
+
+    "SELECT *",
+
+    "IF SUBSETS=(PivotTableDemo)",
+
+    "DESTINATION FORMAT=HTML OUTPUT=/pivottable.html"
+
+    };\execute(command);
+
+    Object[] rows = new Object[]{"row1","row2"};
+
+    Object[] columns = new Object[]{"columnA","columnB"};
+
+    Object[] cells = new Object[]{"1A","1B","2A","2B"};
+
+    // Create a sample pivot table
+
+    String template = "PivotTableDemo";
+
+    String caption = "";
+
+    String rowDim="Dimension";
+
+    String colDimTitle="Column dimension";
+
+    boolean hiddenRowDimTitle = false;
+
+    boolean hiddenColDimTitle = false;
+
+    boolean hiddenColDimLabel = false;
+
+    PivotTable table = new PivotTable(cells, rowLabels, colLabels, rowDim, template,
+    outline, caption, rowDim;
+
+    ```'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "columnDim, hideRowDimTitle, hideRowDimLabel, hideColDimTitle, hideColDimLabel,\
+    \ FormatSpec.COEFFICIENT); table.createSimplePivotTable(); StatsUtil.submit(\"\
+    OMSEND\");\n\n# Result\n\nSample pivot table\n\n| Row dimension | columnA,columnB\
+    \ |\n|---|---||\n| row1 | 1A | 1B |\n| row2 | 2A | 2B |\n\nFigure 2. Sample pivot\
+    \ table\n\n+   * In this example, pivot table output is routed to an external\
+    \ HTML file using OMS (Output Management System). OMS specifies that only tables\
+    \ with a table subtype of pivotTableDemo to be defined below will be included\
+    \ in the output. OMS specifies the path to the output file and that the output\
+    \ will be rendered in HTML.\n* The syntax for OMS command is routed as the argument\
+    \ to IBM SPSS Statistics. This starts an OMS session. The session is closed with\
+    \ the OMSEND command, which writes the output to the destination file.\n Note:\
+    \ As an alternative to routing output with OMS, you can specify output formats\
+    \ and destinations using an overloaded form of the StatsUtil.start method that\
+    \ accepts a string with output specifications. OMS offers greater flexibility,\
+    \ but for simple applications, specifying output on the start method may be sufficient.\n\
+    * To create a pivot table, you must create an instance of the PivotTable class.\
+    \ The arguments are as follows: cells. This argument specifies the values for\
+    \ the cells of the pivot table, and must be given as a 2-dimensional array, where\
+    \ each element of the array specifies the cells in a given row of the pivot table.\
+    \ Only Double and String objects can be specified in this.\nrowLabels A 1-dimensional\
+    \ array of categories for the row dimension. Only Double and String objects can\
+    \ be specified in this.\ncolLabels. A 1-dimensional array of categories for the\
+    \ column dimension. Only Double and String objects can be specified in this.\n\
+    title. A string specifying the title of the table.\ntemplateName A string that\
+    \ specifies the OMS (Output Management System) table subtype for this. This value\
+    \ must begin with a letter, and have a maximum of 64 bytes. The table subtype\
+    \ can be used on the TYPES keyword of the OMS command, as done here, to include\
+    \ this pivot table in the output for a specified set of subtypes.\n Note: By creating\
+    \ the pivot table instance within a startProcedure-endProcedure block, you can\
+    \ associate the pivot table output with a command name, and as the start pivot\
+    \ table output produced by syntax. The command name is routed to the startProcedure\
+    \ function and can used with the COMMAND keyword of the OMS command to include\
+    \ the pivot table in the output for a specified set of commands (along with optionally\
+    \ specifying a subtype as above).\noutline. A string specifying an optional title\
+    \ for the table. When routing output to a file with OMS, or generating output\
+    \ in the Viewer for an extension command implemented in Java, the pivot table\
+    \ will be nested under an item with the outline name. When output is routed to\
+    \ OXML format, the outline title specifies a heading tag that can caption the\
+    \ output for the pivot table.\ncaption. A string specifying the label for the\
+    \ row dimension.\ncolumnDim. A string specifying the label for the column dimension.\n\
+    hideRowDimTitle. A boolean specifying whether to hide the row dimension.\nhideRowDimLabels.\
+    \ A boolean specifying whether to hide the row labels."
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'hideColDimTitle. A boolean specifying whether to hide the dimension title.
+
+
+    hideColDimLabels. A boolean specifying whether to hide the labels.
+
+    format. The format to be used for displaying numbers, including value columns,
+    rows, and column labels. The argument is specified as a formatSpec enum.
+
+
+    # # Creating text blocks
+
+
+    Text blocks are created with the addTextBlock method in the StatsUtil class.
+
+
+    ```
+
+    String[] commands ={"OMS SELECT TEXTS",
+
+    "/ LABELS -text block name",
+
+    "/DESTINATION=HTML-OUTPUT=/output/textblock.html"};
+
+    StatsUtil.command(commands);
+
+    StatsUtil.addTextBlock("text block name", "The first line of text.");
+
+    StatsUtil.addTextBlock("text block name", "The second line of text.");
+
+    StatsUtil.command("OMENED");
+
+    ```
+
+
+    +   - In the common case you are creating text blocks along with other output
+    such as pivot tables, you are probably routing the output with OMS (unless you
+    are creating text blocks for an extension implemented in Java). To route text
+    block output to OMS, use the SELECT keyword subcommand of OMS command. As specified
+    in this example, the text block will be output in HTML.
+
+    - The addTextBlock method must be called within a startProcedure - endProcedure
+    block, as shown in this example. endProcedure define a set of output (pivot tables
+    and text blocks) that are associated with a name (in this example, demo). When
+    routing output to a Viewer (spv) or HTML startProcedure endProcedure blocks allow
+    you to group all output under a common heading, as done for the set of output
+    generated by IBM SPSS Statistics command.
+
+    - The first argument to the addTextBlock method is a string that specifies the
+    name of the text block. The name can be used on the LABELS keyword of OMS command,
+    as done here, to limit the textual outputs.
+
+    - You can append lines by calling an overloaded version of the addTextBlock method,
+    supplying the same text block name, the content for the next line, and an integer
+    specifying the number of lines to skip before the new line. You can also use the
+    escape sequence \n to new line breaks, allowing you to put multiple lines in a
+    single call to addTextBlock.
+
+
+    # # Creating output for extension
+
+
+    Pivot tables and blocks created from extension commands are displayed in the Viewer
+    by default. If you are displaying output in the Viewer you will probably want
+    to group your output under a common heading. This is done by wrapping the output
+    in a startProcedure - endProcedure block, which is required for text blocks but
+    optional for pivot tables. If you don''t wrap in aProcedure - endProcedure block,
+    then your output will be grouped under the heading Viewer in the Viewer. This
+    is a reworking of the example in "Creating pivot tables" on page 19, but wrapping
+    the pivot table in a startProcedure - endProcedure block.
+
+
+    ```
+
+    Object[] rows = new Object[]{"row1","row2"};
+
+    Object[] columns = new Object[]{"column1","column2"};
+
+    Object[] indices = new Object[]{"IA1","IA2"};
+
+    String title = "Pivot table";
+
+    String name = "pivotableDemo";
+
+    String outline = "";
+
+    String caption = "";
+
+    String rowDim = "Row dimension";
+
+    String colDim = "Column dimension";
+
+    boolean hideRowDefault = false;
+
+    boolean hideColDimTitle = false;
+
+    boolean hideColDimLabels = false;
+
+    StatsUtil.startProcedure("Demo",rows,columns,labels);
+
+    Pivotable table = new PivotTable(title, name, outline, caption, rowDim);
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '```
+
+    columnDim,hideRowDim,hideDimLabel,
+
+    table.createSimplePivotTable(hideColDimTitle,hideColDimLabel,FormatSpec.COEFFICIENT);
+
+    StatsUtil.endProcedure();
+
+    ```
+
+
+    +   - The argument to the startProcedure specifies the name associated with the
+    generated output, and is the name of the heading under which the output is grouped
+    in the PivotTable
+
+
+    +   - Although not utilized in this example, the outline argument to the PivotTable
+    method specifies a heading under which the pivot table will appear. This heading
+    will be nested under the heading specified by the argument to the startProcedure
+    method. When the argument is omitted, as in this example, the pivot table appears
+    directly under the heading specified by the argument to the startProcedure method.
+
+
+    +   - The endProcedure method must be called to end the block.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# ## 7. Running Python and R Programs from Java
+
+
+    The IBM SPSS Statistics BEGIN PROGRAM command provides the ability to integrate
+    the capabilities of external programming languages with IBM Statistics command
+    syntax. The supported languages are the Python programming language and R. This
+    enables you to utilize the extensive set of scientific and statistical programming
+    libraries available with the Python language and R to create custom algorithms
+    that you can apply to your data. Results can be written to a dataset or the XML
+    workspace and retrieved by your Java program.
+
+
+    Python Programs
+
+
+    Once you have installed the IBM SPSS Statistics - Integration Plug-in for Python,
+    you have full access to the block programming language using Python code in a
+    BEGIN PROGRAM PYTHON-END PROGRAM block (within command syntax) and submitting
+    the command with the submit method from the StatsUtil class. For example:
+
+
+    ```
+
+    String[] command = {\BEGIN PROGRAM PYTHON.",
+
+    "import spss",
+
+    "<Python code>",
+
+    "END PROGRAM."};
+
+    ```
+
+
+    ```
+
+    StatsUtil.submit(command);
+
+    ```
+
+
+    +   - The Python system import spss the Python modules (installed with the IBM
+    SPSS Statistics Plug-in for Python) that allow the Python processor to interact
+    with IBM SPSS Statistics. Your Python language code follows the import statement.
+
+    - You can omit the keyword ON BEGIN PROGRAM-it is the default.
+
+
+    Complete documentation on the functionality with the IBM SPSS Statistics - Plug-in
+    for Python is available in the SPSS Statistics Help system under Integration Plug-in
+    for Python.
+
+
+    R Programs
+
+
+    Once you have installed the IBM SPSS Statistics - Integration Plug-in for R, you
+    have full access to the R programming language including R in a BEGIN PROGRAM
+    R-END PROGRAM block (within command syntax) and submitting the command with the
+    submit method from the StatsUtil class. For example:
+
+
+    ```
+
+    String[] command = {\BEGIN PROGRAM R.",
+
+    "<R code>",
+
+    "END PROGRAM."};
+
+    ```
+
+
+    ```
+
+    StatsUtil.submit(command);
+
+    ```
+
+
+    Complete documentation on the functionality with the IBM SPSS Statistics - Plug-in
+    for R is available in the SPSS Statistics Help system under Integration Plug-in
+    for R.
+
+
+    Inserting Programs From Command Files
+
+
+    You can use the SPSS Statistics INSERT command to include BEGIN PROGRAM-END PROGRAM
+    blocks contained in command syntax files. This allows you to store your programs
+    as separate code files and include them as needed.
+
+
+    ```
+
+    StatsUtil.submit("INSERT FILE=/myprograms/program_block.sps");
+
+    ```
+
+
+    The file /myprograms/program_block.sps would contain a BEGIN PROGRAM block, as
+    in:'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '```
+
+    BEGIN PROGRAM PYTHON.
+
+    import spss
+
+    <Python code>
+
+    END PROGRAM.
+
+    ```'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# # 8. Deploying an external Java application
+
+
+    A Java application that externally invokes IBM SPSS through the IBM SPSS Statistics
+    - Integration Plug-in for Java must be deployed on a machine that has a licensed
+    IBM SPSS Statistics application. For information about licensing or distribution
+    arrangements, please contact IBM Corp. Directly. Support for the IBM Statistics
+    - Integration Plug-in for Java was introduced in version 21.
+
+
+    As discussed in Chapter 1, "Getting started with the Integration Plug-in for Java,"
+    on page 1, the JAR file containing the package for the IBM SPSS Statistics - Plug-in
+    for Java is located in the IBM Statistics installation directory, so your application
+    must be able to locate this directory. A utility distributed with the IBM Statistics
+    - Programmability SDK is provided for this purpose. Software development kit (SDK)
+    is available from http://www.ibm.com/developers/spssdevcentral.
+
+
+    The utility provides two means for obtaining the IBM Statistics installation directory.
+    You can either run a script which will write the location of the latest installed
+    version of IBM Statistics to a .ini file, or you can import a file that will allow
+    you to obtain that location or the locations of all installed versions of IBM
+    Statistics (beginning with version 21). The components available with the utility
+    can be found in the StatisticsUtil folder under the location where you extract
+    the ZIP file containing the IBM Statistics - Programmability SDK.
+
+
+    Using an ini file
+
+
+    To write the location of the latest installed version of IBM Statistics (beginning
+    with version 21) to an .ini file, run StatisticsUtil.bat (for Windows platforms)
+    or StatisticsUtil.sh (for non-Windows platforms). The script writes the location
+    of IBM SPSS Statistics to the file Statistics.ini, located in the folder that
+    contains the script. Specifically, it creates a key-value pair with STATISTICS_PATH
+    as the key and the location as the value-example, STATISTICS_PATH=C:\Program Files\IBM\SPSS\Statistics\21.
+    If Statistics.ini already exists, the script updates the file. If Statistics.ini
+    does not exist, then the script will create it.
+
+
+    Using methods in the JAR file
+
+
+    The file StatisticsUtil.Latest provides the following two methods in the Utility
+    class:
+
+
+    +   * getStatisticsLocation() This method returns a string with the path to the
+    latest installed version of IBM SPSS Statistics, starting with version 21.
+
+    * getStatisticsLocationAll() This method returns a string array with the paths
+    to all installed versions of IBM SPSS Statistics, starting with version 21.
+
+
+    Notes
+
+
+    +   * For instances of the client version of SPSS Statistics, the term ''latest''
+    means the highest installed version. For instances of the server version of SPSS
+    Statistics on UNIX platforms, where multiple instances with the same version number
+    may exist on the same machine, ''latest'' is the one with the highest version
+    number and most recent time stamp.
+
+    * If there is both a client and a server of SPSS Statistics installed as the latest
+    version, then the path to the server version is one returned by the getStatisticsLocationAll
+    method.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Notices
+
+
+    This information was developed for products and services offered in the US. This
+    material might be available from IBM in other languages. However, you may be required
+    to own a copy of the product or product version in that language in order to access
+    it.
+
+
+    IBM may not offer the products, services, or features discussed in this document
+    in other countries. Consult your IBM representative for information on the products
+    and services available in your area. Any reference to an IBM product, program,
+    or service is not intended to state or imply that only that IBM product, program,
+    or service may be used. Any functionally equivalent product, program, or service
+    that does not infringe any IBM intellectual property may be used instead. However,
+    it is the user''s responsibility to evaluate and verify the operation of any non-IBM
+    product, program, or service.
+
+
+    IBM may have patents or patent applications covering subject matter described
+    in this document. The furnishing of this document does not grant any license to
+    these patents. You can send license inquiries, in writing to:
+
+
+    IBM Director of Licensing
+
+    IBM Corporation
+
+    North Castle Drive, MD-NC119
+
+    Armonk, NY 10540-1785
+
+    US
+
+
+    For license inquiries regarding double-bate (DBCs) information, contact the IBM
+    Intellectual Property Department in your country or send inquiries in writing
+    to:
+
+
+    Intellectual Property Licensing
+
+    Legal and Intellectual Property Law
+
+    IBM Japan Ltd.
+
+    19-21, Nihonbashi-Hakozacho, Chuo-ku
+
+    Tokyo 103-8510
+
+
+    INTERNATIONAL BUSINESS MACHINES CORPORATION PROVIDES THIS PUBLICATION “AS IS”
+    WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, BUT NOT LIMITED TO,
+    THE IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+    PURPOSE. Some jurisdictions do not allow disclaimer of express or implied warranties
+    in certain transactions, this statement may not apply to you.
+
+
+    This information could contain technical inaccuracies or typographical errors.
+    Changes are periodically made to the information here; these changes will be incorporated
+    in new editions of the publication. IBM may make improvements and/or changes to
+    the product(s) and/or the program(s) described in this publication at any time
+    without notice.
+
+
+    Any references in this information to non-IBM websites are provided for convenience
+    only and not in any manner serve as an endorsement of those websites. The materials
+    at those websites are not part of the materials for this IBM product and use of
+    those websites is at your own risk.
+
+
+    IBM may use or distribute any of the information you provide in any way it believes
+    without incurring any obligation to you.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'Licensees of this program who wish to have information about it for the purpose
+    of enabling: (i) the exchange of information between independently created programs
+    and other programs (including this one) and (ii) the mutual use of the information
+    which has been exchanged, should contact:
+
+
+    IBM Director of Licensing
+
+    IBM Corporation
+
+    North Castle, MD-NC119
+
+    Armonk, NY 10540-1785
+
+
+    Such information may be available, subject to appropriate terms and conditions,
+    including in some cases, payment of a fee.
+
+
+    The licensed program described in this document and all licensed material available
+    for it are provided by IBM under terms of the IBM Customer Agreement, IBM International
+    Program License Agreement or any equivalent agreement between us.
+
+
+    The performance data and client examples cited presented for illustrative purposes
+    only. Actual performance results may vary depending on specific configurations
+    and operating conditions.
+
+
+    Information concerning non-IBM products was obtained from the suppliers of their
+    products, their published announcements or publicly available sources. IBM has
+    not tested these products and cannot confirm the accuracy of performance, compatibility
+    or any other claims related to non-IBMproducts. Questions on the capabilities
+    of non-IBM products should be addressed to the suppliers of those products.
+
+
+    Statements IBM''s future direction or intent are subject to change or withdrawal
+    without notice, and represent goals and objectives only.
+
+
+    This information contains examples of data and reports used in daily business
+    operations. To illustrate them as completely as possible, the examples include
+    the names of individuals, companies, brands, and products. All of these are fictitious
+    and any similarity to actual people or business enterprises are entirely coincidental.
+
+
+    # COPYRIGHT LICENSE:
+
+
+    This information contains sample application programs in source language, which
+    illustrate programming techniques on various operating platforms. You may copy,
+    modify, and distribute these sample programs in any form without payment to IBM,
+    for the purposes of developing, using, market or distributing application programs
+    conforming to the operating platform for which the sample programs are written.
+    These examples have not been thoroughly tested under all conditions, IBM therefore,
+    cannot guarantee or imply reliability, serviceability, or function of these programs.
+    The sample programs are provided "AS IS", without warranty of any kind. IBM shall
+    not liable for any damages arising out of your use of the sample programs.
+
+
+    Each copy or any portion of these sample programs or any derivative work, must
+    include a copyright notice as follows:
+
+
+    © IBM 2019. Portions of this code are derived from IBM Corp. Sample Programs.
+
+
+    © Copyright IBM Corp. 1989 - 20019. All rights reserved.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Trademarks
+
+
+    IBM, the IBM logo, and ibm.com are trademarks or registered trademarks of International
+    Business Machines Corp., registered in many jurisdictions worldwide. Other product
+    and service names might be trademarks of IBM or other companies. A current list
+    of IBM trademarks is available on the web at “Copyright and trademark information”
+    at www.ibm.com/legal/copytrade.html.
+
+
+    Adobe, the Adobe logo, PostScript, and the PostScript logo are either registered
+    trademarks or trademarks of Adobe Systems Incorporated in the United States, and/or
+    other countries.
+
+
+    Intel, Intel logo, Intel Inside, Intel Inside logo, Intel Centrino, Intel Centrino
+    logo, Celeron, Intel Xeon, Intel SpeedStep, Itanium, and Pentium are trademarks
+    or registered trademarks of Intel Corporation or its subsidiaries in the United
+    States and other countries.
+
+
+    Linux is a registered trademark of Linus Torvalds in the United States, other
+    countries, or both.
+
+
+    Microsoft, Windows, Windows NT, and the Windows logo are trademarks of Microsoft
+    Corporation in the United States, other countries, or both.
+
+
+    UNIX is a registered trademark of The Open Group in the United States and other
+    countries.
+
+
+    Java and all Java-based trademarks and logos are trademarks or registered trademarks
+    of Oracle and/or its affiliates.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# # Index
+
+
+    # # D
+
+
+    +   - appending cases 9, 12
+
+    - creating new variables 9, 11
+
+    - reading active dataset from Java 9
+
+
+    dictionary
+
+
+    +   - reading dictionary information from
+
+    - Java 7
+
+
+    # # J
+
+
+    Java
+
+
+    +   - DataUtil class 9
+
+    - evaluateXPath method 15
+
+    - Submit method 5
+
+
+    # # O
+
+
+    output
+
+
+    +   - reading output results from Java 15
+
+    - reading output XML from Java 15
+
+
+    OXML
+
+
+    # # P
+
+
+    pivot tables 19
+
+
+    # # R
+
+
+    +   - running command syntax from Java 5
+
+
+    # # X
+
+
+    +   - XML workspace 15
+
+    - XPath expressions 15'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '![](img/7b14907fb29e3ededa26614548c41a2e_37_0.png)
+
+
+    Printed in USA'
+  merge: -1
+  pgno: 37
