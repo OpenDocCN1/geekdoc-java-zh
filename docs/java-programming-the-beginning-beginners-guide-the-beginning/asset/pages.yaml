@@ -1,0 +1,2930 @@
+- img_proc: true
+  md: '# # Java Programming
+
+    THE BEGINNING BEGINNER’S GUIDE
+
+
+    +   * Learn the Fundamentals of Programming with Java
+
+
+    +   * Start Coding Like the Pros!
+
+
+    learntoprogram.tv by Keshav Patel'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Java Programming: Beginning Beginners’ Guide
+
+
+    By Keshav Patel
+
+
+    LearnToProgram Media
+
+    Connecticut
+
+
+    LearnToProgram.tv, Incorporated 27 Hartford Turnpike Suite 206 Vernon, CT 06066
+
+
+    contact@learntogram.tv
+
+    (860) 840-7090
+
+
+    ©2015 by LearnToProgram.tv, Incorporated
+
+
+    All rights reserved. No part of this document may be reprinted or transmitted
+    in any form or by any means, mechanical, electronic, photocopying, recording,
+    or otherwise, without prior permission of LearnToProgram.tv, Incorporated.
+
+    Limit of Liability/Disclaimer: While the publisher and author have used their
+    best efforts in preparing this book, they make no representations or warranties
+    with respect to the accuracy or completeness of the contents and specifically
+    disclaim any implied warranty of merchantability or fitness for a particular purpose.
+    No warranty may be created or extended by sales representatives or written sales
+    materials. The advice and strategies contained herein may not be suitable for
+    your situation. You should consult with a professional where appropriate. By following
+    the instructions contained herein, the reader willingly assumes all risks in connection
+    with the use or application of them, including any loss of profit or any other
+    commercial damages, including but not limited to special, incidental, consequential,
+    exemplary, or other damages resulting in whole or part, from the readers’ use
+    of, or reliance upon, this material.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# About the Beginning Beginners’ Guide Series
+
+
+    This Beginning Beginner’s series of books was born out of a frustration: Most
+    Beginning books on web and mobile development were not designed for true beginners.
+
+
+    Often in beginners'' books the language was so over complicated and laden with
+    jargon that only those with programming experience understand. The books assume
+    too much prior knowledge or experience. In the end, many people new to programming
+    gnashed their teeth in frustration and gave up.
+
+
+    The fact is that programming is completely approachable and even fun to learn
+    if taught correctly. That''s exactly what the Beginning Beginners’ Guide series
+    aims to do: Help true beginners learn to code.
+
+
+    This series of programming books is for you if you''ve never written a line of
+    code before—or if you''ve tried to learn from other books unsuccessfully. You
+    CAN learn to code well. You don''t have to be mathematically oriented, or uber-intelligent.
+
+
+    Learning to code won’t always be easy—but it is doable. If you can manipulate
+    an Excel spreadsheet, you can learn programming.
+
+
+    Here’s hoping that the process for you is as rewarding as it is for us to teach.
+
+
+    Should you have questions or comments, please email me directly at mark@learntoprogram.tv.
+
+    -Mark Lassoff, Founder LearnToProgram Media'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# # FREE COURSE!
+
+    Create Your First App in an Hour
+
+    An Introduction to Development with Mark Lassoff
+
+
+    As a thank you for reading this eBook, we''re providing you with complimentary
+    enrollment in our new online course **Create Your First App in an Hour** with
+    instructor Mark Lassoff.
+
+
+    ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_3_0.png)
+
+
+    In this brief course, you''ll learn how to create a basic app using languages
+    like HTML5, CSS and Javascript.
+
+
+    This program is especially developed for people like yourself who are beginning
+    developers.
+
+
+    TO ENROLL VISIT:
+
+    http://bit.ly/oneHourApp
+
+
+    learntoprogram.tv'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # Congratulations! You qualify for a free subscription to LearnToProgram
+    Magazine
+
+
+    ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_4_0.png)
+
+
+    # # YES!
+
+    Please begin my free subscription to: learntoprogram.tv MAGAZINE
+
+
+    TO REDEEM GO TO:
+
+    bit.ly/LearnToProgramMagazine
+
+
+    learntoprogram Media'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# TABLE OF CONTENTS
+
+
+    +   ABOUT THE BEGINNING BEGINNERS’ GUIDE SERIES ........................... 4
+
+    CHAPTER 1: WRITING YOUR FIRST PROGRAM ...................................... 8
+
+    CHAPTER 2: INPUT AND OUTPUT..................................................................
+    22
+
+    CHAPTER 3: VARIABLES AND LOOPS...............................................................
+    40
+
+    CHAPTER 4: CONDITIONALS AND LOOPS.......................................................
+    56
+
+    CHAPTER 5: DEALING WITH DATA................................................................
+    77
+
+    CHAPTER 6: PUTTING IT ALL TOGETHER.......................................................
+    103
+
+    ONLINE COURSES FROM LEARNTOPPROGRAM...............................................
+    125'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# # Chapter 1: Writing Your First Program
+
+
+    Welcome. If this is your first time programming, congratulations! You’re about
+    to start an adventure that If you are trying to learn after a previous abortive
+    attempt, you deserve recognition as. Tackling programming isn’t always easy—but
+    it’s not outside the grasp of the average person, either.
+
+
+    Over the years, I’ve taught programming to over 500,000 people both online and
+    in person. The programmers I’ve met over years—both beginners and seasoned vets—have
+    come from a variety of backgrounds. I’ve found that PhDs and high school dropouts
+    can make good programmers. I’ve had mathematicians, psychiatrists, and 12 year
+    olds in my classes the years and all have been able to learn some programming.
+
+
+    You will learn. In this introductory chapter—which is specially designed for the
+    slightly apprehensive beginner—I am going to take you step-by-step through the
+    process of writing your first program. You don’t need any special equipment except
+    a laptop or desktop computer.
+
+
+    So without furtherdelay, let’s get started!
+
+
+    # ## What You’re Going to Learn
+
+
+    This first chapter will serve as an introduction to setting up your programming
+    environment and getting started. Each chapter following is designed to take you
+    through the basics of a certain aspect of development and give you a foundation
+    for greater learning. Just to give you some context, here’s what is coming up
+    in the rest of the book:
+
+
+    Chapter 2: Input and Output
+
+
+    Input and output are key to any program. In this chapter we’ll look at how to
+    get data into and out of a program.
+
+
+    Chapter 3: Understanding Variables
+
+
+    Variables are key building blocks in any program. This chapter takes readers through
+    declaring and utilizing variables in expressions. Video tutorial included.
+
+
+    Chapter 4: Conditionals and Loops
+
+
+    Conditionals and Loops allow programs to make decisions that alter the execution
+    of the program and result. These will be demonstrated and explained in the chapter
+
+
+    Chapter 5: Dealing with Data
+
+
+    Almost every useful program, to some extent, deals with data. In this chapter
+    you’ll learn how to store various forms of data in a program.
+
+
+    Chapter 6: Putting it All Together
+
+
+    In this final chapter, readers will learn how to create a useful program that
+    processes and stores data, using the skills developed in the previous chapters.
+
+
+    Before we write any programs, we have to get your development environment set
+    up. I won’t make you buy anything and you’ll have a few options to choose from.
+
+
+    Figure 1.1: The Author’s Development Environment. Doobie Brothers’ music not included
+
+
+    # ## Setting Up Your Development Environment'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'We’re going to be using a language called Java in this book. Installing Java
+    on your machine is rather simple and the process is generally the same for most
+    major operating systems. With your browser you’re going to navigate to oracle.com.
+    Oracle is the company that maintains Java, the JDK (Java Development Kit) that
+    you need to download to write code in Java.
+
+
+    Once on Chrome, find “Downloads” on the menu bar and click on “Java for Developers”
+    under “Popular Downloads”.
+
+    Figure 1.2: Oracle.com with the Downloads menu.
+
+
+    After clicking that link you will see a download page. A dialog box will appear
+    that reads JDK, with a download button under. When you click, it will redirect
+    you to a page where you can select your operating system. The website will provide
+    a set of instructions detailing how to install the JDK onto your computer. Figure
+    1.3: The terminal in the author’s computer. Note that the author changed the default
+    colors through the terminal’s preferences
+
+
+    In the event that you’d rather go through the process of installing a JDK to your
+    machine I recommend you use the Linux server provided by my friends at Koding.
+    Point your browser to www.Koding.com and register for their free account. The
+    free account gives you a virtual Linux machine you can access through your web
+    browser—and it can compile and run Java right out of the box! No downloads required.It’s
+    what I used to write code that we’ll be using in this book.
+
+
+    Once you have your account, click the button to turn on your VirtualMachine(VM)
+    and get coding.You’ll be using a text editor on Koding to write Java files and
+    the terminal to run them.
+
+
+    Figure 1.4: Command Line (or Terminal) in Koding.com.
+
+
+    # Writing and Running Your Code
+
+
+    Now that you have your environment setup, it’s time to (finally) write some code.
+    We’ll write code in a text editor. A text editor is different than a word processor.
+    A word processor will introduce invisible formatting into code. If you were to
+    write code in a word processor it would likely cause an error due to the embedded
+    formatting.
+
+
+    A text editor, on the other hand, saves the text you enter as pure text — without
+    introducing unnecessary formatting. The text produced by a text editor can be
+    easily processed by the Java compiler. Within the command line environments in
+    the Koding.com virtual machine and on the Mac there are two text editors you can
+    use. They are known as nano and vi. These text editors have a heritage that goes
+    back to the 1970s—so as you can truly call them “old school!” The other option
+    is to use the default text editor on Koding, TextEdit on a Mac or Notepad on Windows.
+    They’re all self-explanatory, although some may need a few settings changed to
+    highlight Java code. As a side note, make that whenever you save your code files,
+    you save them as “filename.java”.
+
+
+    nano
+
+
+    Nano is an easy to use Linuxbased editor. It’s pretty intuitive. You can simply
+    start typing your code when the nano environment loads. Nano has a number of control
+    codes which'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'are listed at the bottom of your screen for your reference. The most important
+    to note are CTRLLO which saves your file and CTRL-X which exits nano and returns
+    you to the command line.
+
+
+    By default, nano will save your file in the same folder you were in when you opened
+    nano itself.
+
+
+    ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_9_0.png)
+
+
+    Figure 1.5: The nano text editor.
+
+
+    You can start nano by typing nano and hit enter on the command line.
+
+
+    vi is a slightly more complex (and even "old school") text editor. The most important
+    thing to understand about vi is that there are two modes: command mode and insert
+    mode. To enter insert mode, press ''i'' on your keyboard. When you want to move
+    into command mode to issue commands like write and quit, hit the ESC key. If you
+    screw up and find yourself in the wrong mode, press ESC a lot and that seems to
+    get you back into command mode from wherever you are.
+
+
+    There''s an old joke about vi that goes like this: vi has two modes, and you''re
+    in the wrong one. (One if you don''t think that''s funny right now, you will use
+    vi for a bit!)
+
+
+    When you enter vi, type i into insert mode and you''ll be able to type your code.
+    When you''re done, hit ESC to move into command mode. All commands must be preceded
+    by a colon. To write your file you''ll enter :w. To quit you''ll enter :q vi also
+    lets combine commands. For example, the combination :wq will write your file and
+    then quit to the command line.
+
+
+    Figure 1.6: vi wants to help you children in Uganda. It offers limited help for
+    new programmers worldwide.
+
+
+    You can start vi by typing vi and hitting return on the command line.
+
+
+    So now you should have your text editor started and be ready to enter your code.
+    Enter the'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "following code into your text editor as it appears:\n\n```\npublic class HelloWorld\
+    \ {\n    public static void main(String[] args) {\n        System.out.println(\"\
+    This is my first program!\"); System.out.println(\"Programmers are rockstars!\"\
+    ); \n    }\n}\n```\n\nIt should be least obvious what this code does. The println\
+    \ function prints content to the command line. In this case you are printing two\
+    \ strings. Strings are simple lines of characters. Strings are always enclosed\
+    \ in quotes.\n\nOnce you've typed the code, it's time to run it. In nano, save\
+    \ your file by typing CTRL-W. When prompted, enter the filename HelloWorld.java.\
+    \ The \"java\" extension indicates that this is a Java source file. Next CTRL-X\
+    \ to quit and you'll return to the command line. In vi, enter command mode and\
+    \ save your file by typing :w HelloWorld.java. This writes your file under the\
+    \ appropriate name. Finally, in vi, :q to quit and return to the command line.\
+    \ In any other editor, including the one on Koding, you can open a menu and click\
+    \ ‘save’ just as you would in any other program.\n\nNotice the filename you give\
+    \ this program matches the name of the class (HelloWorld). This is the Java standard.\
+    \ This standard makes class files easily identifiable in when you have multiple\
+    \ source files. For housekeeping purposes, whenever you make a new ‘java’ file\
+    \ make sure the name of the class in the code (which is written after ‘public\
+    \ class’ in the first line of the code.) matches the name of the file. This anyone\
+    \ reading your code will know ‘class’ file is associated with what ‘java’ file.\n\
+    \nFigure 1.7: Saving your code in Koding.\n\nNow that you have typed your code\
+    \ into an editor, open your terminal, and your cursor should appear at the prompt.\
+    \ Run the program by entering the following at the prompt (don't type the '$'—that\
+    \ represents the prompt itself):\n\n$ javac HelloWorld.java java HelloWorld\n\n\
+    The second line instructs Javato actually runs what's in the ‘class’ file. Not\
+    \ that ‘class’ is implied. You don't have to type it when you run your code. If\
+    \ you open the folder where the file is saved, you will see it as a ‘class’ file\
+    \ though.\n\nIf you've done everything correctly you should see the result of\
+    \ your program printed before the next prompt."
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '![](img/e5a8dc568f1f48bb56665e2d6b74cfce_11_0.png)
+
+
+    Figure 1.8: Execution of the HelloWorld.java program
+
+
+    If your output doesn''t look similar to figure 1.9, you need to load your text
+    editor and code again and find your error. You can reload your code at the command
+    line prompt with the following command:
+
+
+    vi: vi HelloWorld.java
+
+    nano: nano HelloWorld.java
+
+    In any other editor, open the file as you would any other.
+
+
+    Some common errors include:
+
+    -Not closing brackets
+
+    -Forgetting semicolons at the end of lines
+
+    -Mistyping "public static void main(String[]) args" (It''s case sensitive!)
+
+
+    Congratulations! You have successfully written your first program.
+
+
+    # Understanding the println() function
+
+
+    In the preceding example we used the println function to output a string. The
+    print function is also capable of printing the following types of data:
+
+
+    Integers: Integers are “whole numbers” and don’t have a decimal point. In Java,
+    you can print an integer like this:
+
+    System.out.println(2573);
+
+
+    Floating Point Numbers: Floats are more precise numbers that include a decimal
+    point. In Java you can print a floating point number like this:
+
+    System.out.println(3.45783);
+
+
+    Expressions: Expressions must be evaluated before a result is determined. Expressions
+    are'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'usually arithmetic problems. To print an expression in Java:
+
+
+    ```
+
+    System.out.println(3.0/(6+4));
+
+    ```
+
+
+    In the expression above, the part of the expression in parenthesis will be evaluated
+    first due to the order of operations. The result printed is 0.3.
+
+
+    We’ll look at expressions more closely in our next chapter.
+
+
+    As a side note, it’s good to understand that the println function is a version
+    of the print()function. The ‘Ln’ at the end stands for line. This means after
+    printing what you place in the parentheses the function will make a new line to
+    print the next expression. The ‘print’ function will simply print whatever you
+    put in the parenthesis without introducing its own formatting.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# Chapter 2: Input and Output\n\nIn this chapter we're going to look more closely\
+    \ at input and output, which are perhaps the two most critical activities in any\
+    \ program. In the previous chapter we looked closely at the output we produced\
+    \ with the println command. With println we were able to output three types of\
+    \ data to the command line screen: strings, integers, and floating point numbers.\
+    \ programs we wrote, however, had no capacity to take input and process data.\n\
+    \nIn this chapter we're going to look closely at two types of input. First input\
+    \ statements will allow us to programmatically request input from the user. We'll\
+    \ then use command line parameters to provide inputs to our program.\n\nAs we\
+    \ look output, we'll also look at directing our output to a file instead of back\
+    \ to the command line.\nSo now it's time to use your favorite programming music\
+    \ (I suggest The Cure), open nano, vi or your favorite text editor and start coding....\n\
+    \n# Input Statements\n\nWe're going to start with a program that calc ut the area\
+    \ of a rectangle based on a sideA input and a sideB input. Key the following Java\
+    \ code into your text editor:\n\n```\nimport java.util.Scanner;\npublic class\
+    \ Square {\n    public static void main (String[] args) {\n        System.out.println(\"\
+    RECTANGLE AREA CALCULATOR\");\n        Scanner input = new Scanner(System.in);\n\
+    \        System.out.println(\"What's the length of side A?\"); float sideA = input.nextFloat();\n\
+    \        System.out.println(\"What's the length of side B?\"); float sideB = input.nextFloat();\n\
+    \        float area = sideA*sideB;\n        System.out.println(\"The area of your\
+    \ rectangle is: \" + area);\n    }\n}\n```\n\nOnce you are sure you have keyed\
+    \ in the program correctly and saved it, go ahead and run the program on the command\
+    \ line. I saved mine as Square.java. Your output should look similar to figure\
+    \ 2.1:"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "```\nKpatel: ~ $ java Square\nRECTANGLE AREA CALCULATOR\nWhat's the length\
+    \ of side A?\n225.55\nWhat's the length of side B?\n224.7\nThe area of your rectangle\
+    \ is: 50681.086\nKpatel: ~ $ \n```\n\nFigure 2.1: Execution of the Square.java\
+    \ program which takes input from the user via the Java .nextFloat() function.\n\
+    \nOn the first line of this program, we encounter the **import** statement. Imports\
+    \ are used in many languages to add an additional library of commands to the language\
+    \ that are not in the language core. In this case, we're adding the **Scanner**\
+    \ object from the *util* library which contains a number of utilities and useful\
+    \ objects.\n\nIf you want to import the entire library, all you have to do is\
+    \ replace Scanner with an asterisk (*).\nFor example:\n\n```\nimport java.util.*;\n\
+    ```\n\nWhile this is useful, understand that in much larger programs importing\
+    \ an entire libraryjust to get one object like we're doing here makes your program\
+    \ less efficient. It's like grabbing your whole tool box when you just need a\
+    \ hammer.\n\nNow, based on context and the program execution, you've probably\
+    \ guessed what the nextInt() function does. Let's break it down:\n\n```\npublic\
+    \ static void main(String[] args) {\nScanner grabAge = new Scanner(System.in);\n\
+    System.out.println(\"How old are you?\");\nint age = grabAge.nextInt();\n}\n```\n\
+    \nThe first line of this class creates a Scanner object. Scanners are the object\
+    \ we want to obtain input from the command line.\nIn the example above, whatever\
+    \ the user types at the prompt “How old are you?” is going to be assigned to the\
+    \ variable age the Scanner’s nextInt method. We’re going to take a closer look\
+    \ at variables in this chapter—for right now, just consider variables as temporary\
+    \ storage place for values. These values can be strings, floats, or integers."
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "must declare variables before using them. Generally the syntax the datatype\
+    \ followed by a name to reference the variable.\n\nYou may be wondering what a\
+    \ datatype is. Datatype determines what a variable can contain, and what operations\
+    \ can be performed on it. Some examples of datatypes include integers, strings,\
+    \ and floating point numbers.\n\nHere's an example of the declaration of an integer\
+    \ variable:\n\nint name;\n\nNote: Indicates that the datatype for this variable\
+    \ is an integer.\n\nRemember to utilize the Scanner object or the util library\
+    \ before declaring a Scanner object. Otherwise, your program will encounter an\
+    \ error.\n\nLet's try a new example. Create a new file in your text editor called\
+    \ StringInput.java. You can do this in vi, for example, by typing the following\
+    \ command on the command line: **StringInput.java**.\n\nKey in your code:\n\n\
+    ```\nimport java.util.Scanner;\npublic class StringInput{\n    public static void\
+    \ main(String[] args) {\n        Scanner input = new Scanner(System.in);System.out.println(\"\
+    What's your name? \");\n        String name = input.nextFloat();\n        System.out.println(\"\
+    Hello \" + name);\n    }\n}\n```\n\nExit your editor and compile the program from\
+    \ your command line with the command **StringInput.java**.\n\n```\nStringInput...\
+    \ Terminal +\nkpatel: ~$ javac StringInput.java\nStringInput.java:9: error: incompatible\
+    \ types\n    String name = input.nextFloat();\n\nrequired: String\nfound: float\n\
+    1 error\nkpatel: ~ $\n```\n\nFigure 2.2: Uoh. This can't be good. We've made an\
+    \ error. How do we fix it?"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "So what happened? Instead of compiling allowing the code to run, the program\
+    \ exited with an error. Luckily the error is easy to fix. the nextFloat() function\
+    \ is designed to accept the float datatype and only datatype. When you enter anything\
+    \ that isn't a floating number, it causes you an error in figure 2.2. We have\
+    \ a different function that is intended for string use, call nextLine().\n\nEdit\
+    \ your code as follows:\n\n```\nimport java.util.Scanner; class StringInput{\n\
+    public static void main(String[] args) {\n  Scanner input = new Scanner(System.in);\n\
+    \  System.out.println(\"What's your name?\");\n  String name = input.nextLine();\n\
+    \  System.out.println(\"Hello \" + name);\n}\n```\n\nNote: The scanner has a function\
+    \ to obtain every kind of data type.\nHere are some examples:\n\n+   nextLine()\
+    \ : Strings\nnextInt() : Integers\nnextFloat() : Floating point numbers nextDouble()\
+    \ : Doubles\nYou can probably recognize the pattern. The documentation of the\
+    \ methods for the Scanner object is available:\n\nhttp://docs.oracle.com/Java/7/docs/api/Java/util/Scanner.html\n\
+    \nLearning how to read the Java documentation is an important skill itself.\n\n\
+    ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_17_0.png)\n\nFigure 2.3:\n\nSo much better\
+    \ with nextLine()!\n\nWhen you're working with strings, you should use the nextLine()\
+    \ function which does not scan for a datatype other than Strings. It'll always\
+    \ return whatever the user enter into the prompt as a string, including numbers\
+    \ or symbols.\n\n# Errors\n\nThe preceding example was probably one of the first\
+    \ examples of an error that you've"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "encountered. This type of error is known as a Runtime error. It’s one of three\
+    \ types of errors that can occur when writing Java code.\n\nThese three types\
+    \ are:\nSyntax errors:\n\nSyntax errors are issues with the formatting of your\
+    \ code. Examples include forgetting semicolons, not closing your brackets or misspelling\
+    \ method names. Text editors generally do a good job of pointing these out, so\
+    \ fixing them is rather simple.\n\nRuntime errors:\n\nRuntime errors are a bit\
+    \ trickier to catch. Syntactically, all runtime errors are correct, so your text\
+    \ editor won’t point them out to you. The issue occurs when something unexpected\
+    \ happens and results in the program failing to compile or execute at runtime.\
+    \ The result is your program failing Examples include trying to divide by zero\
+    \ or trying to call a file that doesn’t exist. Javanon encounter the error until\
+    \ you attempt to execute the code.\n\nLogic errors:\n\nThese are errors in the\
+    \ actual logic behind the program. They are the most challenging errors to fix,\
+    \ because the code isn’t technically wrong, it’s not just giving the correct result.\
+    \ Some logical errors go undetected even after the program is released. Examples\
+    \ include things like dividing when you should be multiplying, printing the wrong\
+    \ output, or opening the wrong file. If you have a logic error, you’re having\
+    \ a PICNIC. (Problem In Chair, Not In Computer.)\n\n# Parameterized Input\n\n\
+    Your workflow forces you to compile and then run your code before passing input.\
+    \ Including parameters with your Java command passes input and executes your code\
+    \ in tandem. The resulting command looks like this:\n\n$ java className arg1 arg2\
+    \ arg\n\nIn the example above, we still use the Java command and the class name\
+    \ of the program we’d like to run. We follow the command with arguments which\
+    \ get as input to the program. This could be advantageous in situations where\
+    \ we want to run our program without unattendedlike when we’re crunching numbers.\
+    \ For example, if we wanted a program to receive the user name and age as input,\
+    \ the parameters might look something like this:\n\n$ java moreInput Keshav 17\
+    \ The values “Keshav” and “17”, which are separated by a single space, are passed\
+    \ to the program. Let’s see how. Key in the following example and save it as MoreInput.java:\n\
+    \n```\npublic class MoreInput{\n    public static void main(String[] args) {\n\
+    \        System.out.println(\"Your name is: \" + args[0]); System.out.println(\"\
+    Your age is: \" + args[1]);\n        System.out.println(\"All the arguments: \"\
+    \ + args[0] + \", \" + args[1]);\\ \n    }\n}\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'Next, let''s run the program and supply command line arguments as input:
+
+    $ javaInput Keshav 17 You should get a result similar to the one pictured in figure
+    2.4:
+
+
+    ```
+
+    MoreInput.j...    Terminal    +
+
+    kpatel: ~ $ javaInput Keshav 17
+
+    Your name is: Keshav\Your age is: 17
+
+    All the arguments: Keshav, 17
+
+    patel: ~ $ []
+
+    ```
+
+
+    Figure 2.4: Command line parameters being processed as input on the Koding command
+    line.
+
+
+    **NOTE:** The arguments come into Java numbered sequentially, so in our case,
+    the user''s name is argument number zero and the age is argument number one. In
+    code, we call these **args[0]** and **args[1]**, respectively. If you study the
+    screenshot carefully, you may notice something interesting-**args[1]** is not
+    the first parameter.
+
+    This is because Java starts at 0, rather than 1. This means that the first argument
+    we entered, in which this case was a name, is actually in slot 0. As a result
+    Java is often referred to as a zero-indexed language.
+
+
+    # Output to a Filestream
+
+
+    So far the code''s output has only been directed to the command line. This doesn''t
+    always have to be the case. Output can be directed to a file for more permanent
+    storage. Being able to store data (more or less) permanently is an important skill
+    for programmers to learn. Let''s write a program in which we ask the user to enter
+    several pieces of data and we store those in a file.
+
+
+    Key in the following code:
+
+
+    ```
+
+    import java.io.*;
+
+    import java.util.Scanner; public class Storage{
+
+    public static void main(String[] args) {
+
+    Scanner grab = new Scanner(System.in);
+
+    System.out.println("What''s your name?"); String name = grab.nextLine();
+
+    System.out.println("What''s your email?"); String mail = grab.nextLine();
+
+    System.out.println("What''s your favorite band?"); }
+
+    ```'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '```
+
+    String band = grab.nextLine();
+
+    String name = name.replaceAll(".+\*", "_") + ".txt";
+
+    try { PrintWriter saver = new PrintWriter(name);
+
+    saver.println("Email:" + mail); saver.println("Band:" + band); saver.close();
+
+    ```
+
+
+    ```
+
+    } catch(FileNotFoundException e) { System.out.println("Oh no, it didn''t work!");
+
+    } System.out.println("" + name + " and " + band + " has been stored to " + + name
+    + ".txt"); }
+
+    ```
+
+
+    This is definitely the most complex program we have written. Go ahead and run
+    it on the command line and make sure you don''t get any errors.If you''re having
+    issues to check the imports. If everything runs correctly, your command line should
+    look like this:
+
+
+    ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_20_0.png)
+
+
+    Figure 2.5: The program stored the data in a file called Keshav .txt which is
+    now available in the directory listing by using the ls on the command line.
+
+
+    Note: I wrote and saved the file in a separate folder, and needed to navigate
+    to where the file was beforehand by using the cd (change directory) command.
+
+
+    While the code for this program is somewhat longer than what you are used to at
+    this point, it is still fairly straightforward. When the program runs it prompts
+    the user for their name, email, and name of their favorite band. We then create
+    a new variable called saver. Saver takes the information the user typed and formats
+    it to increase readability. It then prints the information to a file.
+
+    The objects we use to print to a file are located in the Java.io library and we''re
+    going to need a couple of objects, to import the whole thing.
+
+    The fname variable , which stores the filename for the file we''re creating, is
+    populated bythe variable that holds the user''s first name. When we create the
+    new PrintWriter object,'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "we pass in the filename. This is required so the PrintWriter knows what to\
+    \ name the file it\ncreates.\n\nThe next part of the program is where the action\
+    \ happens:\n\n```\npublic static void main(String[] args) {\n  try { PrintWriter\
+    \ saver = new PrintWriter(fname);\n  saver.println(\"Name:\" + name);\n  saver.println(\"\
+    Email:\" + mail);\n  saver.println(\"Band:\" + band);\n  saver.close();\n}\ncatch\
+    \ (FileNotFoundException e){\n  System.out.println(\"Oh no, it didn't work!\"\
+    );\n}\n```\n\nSystem.out.println(name + \" |\" + band + \" has been stored to\
+    \ \" + name + \n+\".txt\\\");\"\n\nThe first thing we do in the program is create\
+    \ a PrintWriter. This is an object that allows\nus to create and print to raw\
+    \ text (.txt) files. We named it saver and pass in the string\nname as a parameter.\
+    \ When the writer created our file, this string becameth file's name.\nNext we\
+    \ use our PrintWriter object and begin printing strings to the text file. Finally\
+    \ we\nclosed the object and printed to the console that we have created a file\
+    \ with the\ninformation that the user provided us with.\n\nNote that this entire\
+    \ process is done within a try-catch statement. A trycatch statement is\n to handle\
+    \ exceptions, which are events that interfere with the execution of your\nprogram.\
+    \ In the try block we put code that could possibly cause (AKA throw) an\nexception.\
+    \ In the catch block, we put code that executes if an exception is thrown. The\n\
+    parentheses contain the type of exception and the name we give it. In thiscase\
+    \ we just print\n\"Oh no, it didn't work!\" in the event that we get an exception."
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "```\nkpatel: ~ $ cd ~/store\nkpatel: ~/store $ ls\nKeshav.txt Storage.class\
+    \ Storage.java\nkpatel: ~/store $ cat Keshav.txt\nName:Keshav\nEmail:keshav@learntoprogram.com\n\
+    Band:Rush\nkpatel: ~/store $ \n```\n\nFigure 2.6 We opened “Keshav.txt” in the\
+    \ text editor and you can see the data that has been written to the disk.\n\n\
+    Congratulations! You’ve written a program that stores data permanently. You are\
+    \ well on your way to being a programmer!"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Chapter 3: Variables
+
+
+    In the previous chapter, we looked at input and output, which allow us to get
+    data into and out of our Javaprogram. In this chapter we''ll take a closer look
+    at one of the most important aspects of programming—variables. You may not equate
+    variables with computer programming, but you''ve likely been using variables since
+    high school if you took courses in Algebra, Chemistry, and Physics. In classic
+    "solve for x" problems, x is a variable.
+
+
+    Let''s take a look at how the Java programming environment handles variables.
+
+
+    # Declaring and Initializing Variables
+
+
+    Java is what is known as a strongly-typed language. This means that variables
+    need to be declared before they can be used. In Java, variables are differentiated
+    by the type of data they hold. The type of data is referred to as the variable''s
+    datatype.
+
+
+    There are two types of variables in Java: primitive type and class (also reference)
+    type.
+
+
+    # Primitive Variables
+
+
+    In Java, there are eight primitive data types. They are the byte, short, int,
+    long, float, double, boolean and chars.
+
+
+    The declaration and initialization statements are generally very short, and reserve
+    a specific amount of memory depending on what type the variable is. Here''s an
+    example of a declaration and initialization for an integer, done in one line:
+
+
+    ```
+
+    int name = 93;
+
+    ```
+
+
+    # Class Variables
+
+
+    Class type variables, also called reference type variables, are generally more
+    complex than primitive types. In most cases primitive types are the building blocks
+    of class type variables. When you declare and initialize a class variable, the
+    name doesn''t represent the object itself, rather it points to the memory location
+    that has all the parts of information that make the object.
+
+
+    There are hundreds of different class type variables out, and they all do different
+    things. One you''ve already encountered is a Scanner.
+
+    Here''s the declaration and initialization, one more time:
+
+
+    ```
+
+    Scanner name = new Scanner(<parameters>);
+
+    ```
+
+
+    # Strings
+
+
+    Strings are actually class or reference type variables. They can, however, be
+    declared like primitives. This was a sort of short cut put by the Java developers
+    to make dealing with strings a bit easier, as they''re one of the most common
+    datatypes and are used just as much as the primitives. (Think about how much you''ve
+    used them all!)
+
+
+    If you like, can declare strings like you would class type variables, but there''s
+    really no advantage in doing so.
+
+    It would look like:
+
+
+    ```
+
+    String blogName = new String("Edukwest!");
+
+    ```
+
+
+    NOTE: Due to strings being class, they cannot be compared like primitive types'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "using the general comparison operators like < > or ==.\n\nHere, we've created\
+    \ a variable **blogName** and initialized it with the string value **Edukwest**\
+    \ The equals sign in this context is the assignment operator. The string value\
+    \ **Edukwest** is being assigned to the variable **blogName**.\n\nOnce a variable\
+    \ has been declared, generally you can do a lot with it. Here's an example of\
+    \ using variables to change what is printed in a sentence. In the following code.\
+    \ (Feel free to substitute your own values for the variables.) Notice that comments\
+    \ are indicated by two slashes (//). Multi-line comments can be made with a slash\
+    \ and an asterisk and with an asterisk and a slash. (/*comment*/)\n\n```\npublic\
+    \ class Variables{\n    public static void main(String[] args) {\n        float\
+    \ gpa = 3.95f; int age = 17;\n        String name = \"Keshav\";\n        //Note\
+    \ that the first word of the variable declaration is the type.\n        System.out.println(name\
+    \ + \" is \" + age + \" and wished he had a \" + gpa + \" gpa.\");\n    }\n}\n\
+    ```\n\nSave your file as Variables.java and run it with the Java command. Your\
+    \ output should appear similar to figure 3.1\n\n![](img/e5a8dc568f1f48bb56665e2d6b74cfce_25_0.png)\n\
+    \nFigure 3.1: Variables.java executing in the Koding.com virtual Linux environment.\n\
+    \nThe first word in the declaration is the type of variable being created. To\
+    \ review, the types of variables in this program are:\n\n**String**: String variables\
+    \ are comprised of a series of characters in a particular order that have no mathematical\
+    \ value.\n\n**Integer**: Integer variables contain whole number values with no\
+    \ decimal point."
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Floating Point Values: Floating point variables contain more precise numbers
+    that have a whole number and fractional amount represented by a decimal point.
+
+
+    Variables are dynamic, in that the value can be changed or reassigned through
+    the life of the program. Imagine, for example, in a video game you have a variable
+    that tracks the player''s score. As the player''s score changes, that value would
+    go up until the game is over. Once ends, the value inside the player''s score
+    variable might be reassigned
+
+
+    Consider the following code:
+
+
+    ```
+
+    import java.util.*; public class Var2 {
+
+    public static void main(String[] args) { Scanner names = new Scanner(System.in);
+
+    String firstName, lastName, middleName, fullName;
+
+    System.out.println("What''s your first name?");
+
+    firstName = names.nextLine();
+
+    System.out.println("What''s your last name?");
+
+    lastName = names.nextLine();
+
+    fullName = firstName + " " + lastName;
+
+    System.out.println(fullName);
+
+    System.out.println("What''s your middle name?");
+
+    middleName = names.nextLine();
+
+    fullName = firstName + " " + middleName + " " + lastName;
+
+    System.out.println(fullName);
+
+    }
+
+    ```
+
+
+    Entering the code and running the program yields the following result:
+
+
+    ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_26_0.png)
+
+
+    Figure 3.2: During the lifetime of the fullName variable, the value is reassigned
+
+
+    Note when we first declare the fullName variable, it is assigned the values of
+    first and last concatenated by the + sign. That value is then printed to the console.
+    As the'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "program continues to execute, the value of fullName is reassigned to include\
+    \ the variable middle when a variable is assigned a new value, its original value\
+    \ is cleared and replaced with the new value.\n\nIn this program, we also declared\
+    \ four Strings in one line. Due to all the variables we were able to separate\
+    \ the four string's names with commas, and assign them values later on. Being\
+    \ a statically typed language, Java requires us to declare our variables before\
+    \ use. Being a statically typed language does not necessarily mean we assign initial\
+    \ values (or initialize) the variables upon declaration. You can do this with\
+    \ all types of variables.\n\n# Arithmetic of Variables\n\nVariables are frequently\
+    \ used as part of arithmetic expressions in Java. Arithmetic in Java is no different\
+    \ from the arithmetic you learned in grade school. The following symbols are used:\n\
+    \n+   + Addition\n- Subtraction\n* Multiplication\n/ Division\n% Modulus\n\nIf\
+    \ you are new to programming, modulus may be unfamiliar to you, but the concept\
+    \ is easy—modulus is the remainder after division. For example:\n\n10 % 3 = 1\n\
+    11 % 3 = 2 12 % 3 = 0\n\nI frequently use modulus when programming in order to\
+    \ determine if a number is even or odd. Any even number used with modulus two\
+    \ will result in zero.\n\nTalk the Talk: Programmers will say 'mod' for short\
+    \ when they are talking about modulus.\nMath variables looks pretty much as you'd\
+    \ expect. There are a few oddities that we'll cover later tough.\n\nKey in the\
+    \ following example program. You're free to forgo copying the comments:\n\n```\n\
+    public class MathDemo{\n    public static void main(String[] args) {\n       \
+    \ int alpha = 3; int bravo = 13;\n        System.out.println(alpha + bravo); System.out.println(alpha\
+    \ bravo); System.out.println(bravo * alpha);\n        System.out.println(bravo\
+    \ / alpha); //Note:\n        13 is not really a whole number.\n        System.out.println(bravo\
+    \ % alpha);\n\n        System.out.println((double)alpha/(double)alpha); // Because\
+    \ we cast the numbers as doubles, the real value is displayed. */\n    }\n}\n\
+    ```\n\nIn this program, two variables are declared as alpha and bravo. Then the\
+    \ operands are in five expressions using addition, subtraction, multiplication,\
+    \ division and modulus."
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "Both of these numbers, however, are integers. Integers can only be whole numbers\
+    \ between (2^31)-1 or -2^31. So expressions of the integer datatype have any numbers\
+    \ after the decimal point truncated.\n\nThis means that if an expression results\
+    \ in 3.9, but is printed as an int, it'll simply print 3.\n\nWe can avoid this\
+    \ issue by doing what's known as type casting. This changes the variable's type\
+    \ just before doing the math and printing, meaning we'll get the real answer rather\
+    \ than an approximation.\n\nJava requires you to identify the types of your variables.\
+    \ When using variables of different types, you may have to explicitly state what\
+    \ type of variable you want the answer to be. As a rule of thumb: small variables\
+    \ automatically transfer up, but large variables must manually be cast down.\n\
+    \nThis is the hierarchy:\nbyte < short < int < long < float < double\n\nUsing\
+    \ an int with a float requires no typecasting. Getting an answer as an int with\
+    \ a float and int DOES require you to explicitly cast your variable.\n\nA final\
+    \ print statement uses the modulus statement in an expression. When you run the\
+    \ program with the Java command, the result should appear similar to this:\n\n\
+    ```\nkpatel: ~ $ java MathDemo\n16\n-10\n39\n4\n1\n4.33333333333333\nkpatel: ~\
+    \ $ \n```\n\nFigure 3.3: Java program evaluating several mathematical expressions\
+    \ and outputting the result to the console.\n\nWhen working with arithmetic in\
+    \ programming, it's important to keep in mind the order of operations. Java will\
+    \ always follow the order of operations when doing math. As a result it's a good\
+    \ idea to make sure that any expressions you formulate take into account the"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "order of operations to prevent logic errors.\n\n```\n```java\npublic class\
+    \ Order0Ops {\n    public static void main(String[] args) {\n        // Java will\
+    \ follow the order of operations. (PEMDAS)\n        // it does move left to right.\n\
+    \        int ans = 0;\n        ans = (2*5)/11; //2*5 = 10, 10+12 = 22, 22/11 =\
+    \ 2;\n        System.out.println(ans);\n        ans = 3*4+20/2; //3*4 = 12, 20/2\
+    \ = 10, 12+10 = 22;\n        System.out.println(ans);\n    }\n}\n```\n```\n\n\
+    Figure 3.4: Different expressions are evaluated in a Java program demonstrating\
+    \ the order of operations.\n\nWas the result always what you expected? The order\
+    \ of operations determines what part of a mathematical expression is evaluated\
+    \ first. Expressions are evaluated from left to right generally, but the specific\
+    \ order of operations is:\n\n+   1) Parenthesis 2) Exponents\n3) Multiplication\
+    \ 4) Division\n5) Addition\n6) Subtraction\n\n**NOTE:** Despite multiplication\
+    \ coming before division and addition coming before subtraction, Java treats them\
+    \ as though they are on the same level and evaluates them left to right.\n\nA\
+    \ common error made by many programmers is to incorrectly interpret the order\
+    \ of operations within a math-related problem. When this happens, a program will\
+    \ still run, but often give an incorrect result.\n\nThere are many more advanced\
+    \ mathematics tools available in Java within the Math class. Utilizing this will\
+    \ allow you to run numbers, use exponents, square roots, and much more. The documentation\
+    \ is available here:\n\nhttp://docs.oracle.com/Javease/7/docs/api/Java/lang/Math.html\n\
+    \n# Working with Strings\n\nManipulating strings is a common task for programmers.\
+    \ Imagine, for you're given a list of data where first and last names are combined\
+    \ into a single field. Using string manipulation techniques, you'd have to separate\
+    \ them into separate fields by extracting data from the string.\n\n**Java 's String\
+    \ Methods** will allow you to manipulate strings in every way imaginable. You\
+    \ can see the documentation on the String Methods here:\n\nhttp://docs.oracle.com/Javease/7/docs/api/Java/lang/String.html\n\
+    \nLet's work with a few String Methods. Copy the following program. This program"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "demonstrates just a few of the string functions. You don’t have to type the\
+    \ embedded\ncomments if you don’t want to. They are just for your reference.\n\
+    \n```\npublic class Strings {\npublic static void main (String[] args) {\n  String\
+    \ phrase = \"The quick brown fox jumped over the lazy dogs.\";\n//Prints the number\
+    \ of characters in the String System.out.println(phrase.length());\n//Finds the\
+    \ index of the word fox.\nSystem.out.println(phrase.indexOf(\"fox\"));\n//Replace\
+    \ jumped with a new word.\nSystem.out.println(phrase.replace(\"jumped\", \"hopped\"\
+    ));\n//Changes case\nSystem.out.println(phrase.toUpperCase()); System.out.println(phrase.toLowerCase());\n\
+    }\n```\n\nOnce you run the program, you should see a result similar figure 3.5:\n\
+    \n![](img/e5a8dc568f1f48bb56665e2d6b74cfce_30_0.png)\n\nFigure 3.5: String manipulation\
+    \ result in Java\nAs you can see, Java’s string manipulation features are powerful."
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Chapter 4: Conditionals and Loops\n\nIn the last chapter we took a close\
+    \ look at variables. In this chapter, we're going to use variables again. First,\
+    \ we'll use variables to make decisions and execute branching within our program.\
+    \ We'll use variables to create loops that iterate through a portion of code a\
+    \ number of times. Conditionals and loops, the two concepts that we haven't covered\
+    \ up to now, are found in just about every programming language. So far, the programs\
+    \ we've written are all serial—they go through the steps in the same order each\
+    \ time. With the addition of conditionals and loops to our programming repertoire,\
+    \ your programs will be able to vary their path based on conditions you set. Sounds\
+    \ like fun, right?\n\n# Simple Conditionals\n\nLet's start by writing some code.\
+    \ Fire up your development environment and enter the following code (Make sure\
+    \ the file and class names match):\n\n```\npublic class Drink{\n    public static\
+    \ void main(String[] args) {\n        Scanner ageGetter = new Scanner(System.in);\n\
+    \        System.out.println(\"How old are you?\");\n        int age = ageGetter.nextInt();\n\
+    \        if(age >= 21){\n            System.out.println(\"You can legally drink!\"\
+    );\n        }\n    }\n}\n```\n\nOnce you've entered the program in your text editor,\
+    \ run it three separate times. The first time, enter an age older than 21. The\
+    \ next time you run it, enter an age younger than 21. When you run it one final\
+    \ time, enter 21 exactly. To make sure the program runs correctly we want to test\
+    \ all the possible scenarios for execution.\n\nYour output should appear similar\
+    \ to figure 4.1:"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '```
+
+    kpatel: ~ $ javac Drink.java
+
+    kpatel: ~ $ java Drink
+
+    How old are you?
+
+    18
+
+    kpatel: ~ $ java Drink
+
+    How old are you?
+
+    25
+
+    You can legally drink!
+
+    kpatel: ~ $ java Drink
+
+    How old are you?
+
+    21
+
+    You can legally drink!
+
+    kpatel: ~ $ $
+
+    ```
+
+
+    Figure 4.1: Program being tested for three different types of user responses
+
+
+    This program is pretty straightforward. What''s new is the if statement. In this
+    case we''re determining if the value user entered is greater than or equal to
+    21. The portion of the if statement written like this: age>=21 equals the condition.
+    Every conditional statement has a condition that is evaluated to true or false.
+    If it''s true, the code indented underneath and in brackets the conditional statement
+    is executed. If it''s false it''s generally skipped.
+
+
+    Note in the example shown in figure 4.1, the program responds “You are able to
+    drink” only if the user enters a value 21 or greater. Java uses brackets to contain
+    blocks of code, so if you open the bracket make sure you close it or else your
+    program won''t compile properly. Make sure that you only keep the code you want
+    to execute within the brackets of the conditional.
+
+
+    If the code block runs if the condition is true extends more than one line, please
+    note that each line should be within the brackets of the conditional. It''s also
+    good practice to have the same level of indentation below the conditional statement.
+    It won''t affect how the code runs, but it makes the code look much cleaner. Other
+    programmers reading your code will thank you.
+
+
+    # What Else?
+
+
+    The program we wrote responds only if the conditional is evaluated as true. If
+    the conditional is evaluated as false, the user receives no response. This is
+    likely confusing for the user. We''re going to add to the program so that it reacts
+    one way if the condition is evaluated as true and another way if the condition
+    is evaluated as false. Add the indicated code to your class.
+
+
+    ```
+
+    import java.util.*;
+
+    public class Drink{
+
+    ```'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '```
+
+    public static void main(String[] args) {
+
+    Scanner ageGetter = new Scanner(System.in);
+
+    System.out.println("How old are you?");
+
+    int age = ageGetter.nextInt();
+
+    if(age >= 21) {
+
+    System.out.println("You can legally drink!");
+
+    } else{
+
+    System.out.println("You''re not of drinking age.");
+
+    }
+
+    }
+
+    ```
+
+
+    After modifying your program code, run through the three possible scenarios as
+    you did before. Test a case where the user is under 21, another where the user
+    is older than 21, and a final scenario where the user is exactly 21. Your output
+    should appear similar to figure 4.2:
+
+
+    Don’t forget to save and recompile!
+
+
+    ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_34_0.png)
+
+
+    Figure 4.2 Result with the else statement added
+
+
+    As you can tell, the addition of the else statement gave a result if a value under
+    21 was entered. When the user enters a value under 21, the condition is evaluated
+    as false and the else statement block is triggered. Once again, only the code
+    in the brackets is considered part of the statement block.
+
+    Let''s add a bit more code to our program:
+
+
+    ```
+
+    import java.util.*;
+
+    public class Drink {
+
+    public static void main(String[] args) {
+
+    Scanner ageGetter = new Scanner(System.in);
+
+    ```'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "```\nSystem.out.println(\"How old are you?\");\nint age = ageGetter.nextInt();\n\
+    if(age >= 21){\n  System.out.println(\"You can legally drink!\");\n}else{\n  System.out.println(\"\
+    You're not drinking age.\");\n  if(age == 21){\n    System.out.println(\"Congratulations,\
+    \ Here's a free drink.\");\n  }\n}\n```\n\nNow, if the user says they are exactly\
+    \ 21, the program will print the congratulatory message. Note that the comparison\
+    \ operator == was used to denote equality. If the value in age is exactly 21,\
+    \ the conditional is evaluated as true.\n\nHere are all the comparison operators\
+    \ that you can use with statements:\n= Equal\n> Greater Than\n>= Greater Than\
+    \ or Equal\n< Less Than\n<= Less Than or Equal\n!= Not Equal\n\nNote: these operators\
+    \ can only be used for primitive types like ints or floats! For reference types\
+    \ there is generally a method that can be used to compare elements instead. Usually\
+    \ it's the `.equals()` method.\n\nWhile you can already see the power of conditionals,\
+    \ let's add a layer of complexity: what if you wanted to test two values at once?\n\
+    \n# Compound Conditionals\n\nLet's pretend that we're writing software for a college\
+    \ to determine whether or not a specific student made the honor roll. In our college,\
+    \ in order to be eligible for honors you must have a GPA greater than 3.5 and\
+    \ attempt more than 12 credit hours.\n\nCreate a new program in your text editor\
+    \ called Honors.java and enter the code below in the file:\n\n```\nimport java.util.*;\n\
+    public class Honors {\n  public static void main(String[] args) {\n    Scanner\
+    \ gpa = new Scanner(System.in);\n    Scanner hoursGet = new Scanner(System.in);\n\
+    \    System.out.println(\"What was your GPA this semester?\");\n    double gpa\
+    \ = gpa.nextDouble();\n    System.out.println(\"How many credit hours did you\
+    \ attempt this semester?\");\n    int hours = hoursGet.nextInt();\n    if(gpa>3.5\
+    \ && hours > 12){\n      System.out.println(\"Congratulations!\n      You made\
+    \ honor roll!\");\n    }\n  }\n}\n```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'else {
+
+    System.out.println("Sorry, you didn''t make honor roll. Better luck next time.");
+
+    }
+
+
+    Test your program and see what kind of result you get. Your result should be similar
+    to what appears in figure 4.3:
+
+
+    ```
+
+    Terminal +
+
+    kpatel: ~ java Honors
+
+    What was your GPA this semester?
+
+    3.8
+
+    How many credit hours did you attempt this semester?
+
+    12
+
+    Sorry, you didn''t make honor roll. Better luck next time.
+
+    kpatel: ~ java Honors
+
+    What was your GPA this semester?
+
+    3.8
+
+    How many credit hours did you attempt this semester?
+
+    15
+
+    Congratulations! You made honor roll!
+
+    kpatel: ~ $ |
+
+    ```
+
+
+    Figure 4.3: Two conditions are tested simultaneously.
+
+
+    You''ll notice that in the if statement we joined two conditions by two ampersands
+    (&&), which in this case, is acting as an operator. In this statement both conditions
+    joined by && will be evaluated as true in order for the whole statement to be
+    evaluated as true. You can use vertical bars (||) as an operator in other circumstances
+    where one condition or the other must be true. You can join any amount of conditions
+    in a single statement with if-else && || operators.
+
+
+    Talk the Talk: Generally when reading code, a programmer will read ''&&'' as ''and''
+    and will read ''||'' as ''or''. So the if (a>b && c<d (d-c)) will be read as "if
+    a is greater than b and is less than d, or if is less than c (the condition) is
+    true".
+
+
+    # Complex Conditions with else-if
+
+
+    So far the conditionals we''ve created can make decisions in an either/or scenario—either
+    you are eligible to drink, or you''re not. However, life is more complex than
+    this, which is why if statements can be paired with else-if statements. This combination
+    will let you choose from several options in the program below.
+
+
+    Please keep this in program and run it with the Java code to see the result:
+
+
+    ```
+
+    import java.util.*;
+
+    public class ComplexConditionals {
+
+    public static void main(String[] args) {
+
+    Scanner ageGet = new Scanner(System.in);
+
+    ```'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "```\nSystem.out.println(\"How are you?\");\nint age = ageGet.nextInt();\nif\
+    \ (age < 18) {\n  System.out.println(\"You're a kid!\"); System.out.println(\"\
+    Go to school.\");\n} else if (age < 29) {\n  System.out.println(\"Time to establish\
+    \ yourself.\");\n  System.out.println(\"Good Luck!\"); \n} else if (age < 39)\
+    \ {\n  System.out.println(\"These are the years that you focus on your career.\"\
+    );\n  System.out.println(\"Get a job.\");\n} else if (age < 49) {\n  System.out.println(\"\
+    Time to start thinking about retirement.\");\n  System.out.println(\"I hope you're\
+    \ putting money away.\");\n} else if (age < 59) {\n  System.out.println(\"Maintain\
+    \ your health through exercise.\");\n  System.out.println(\"Get a trainer.\");\n\
+    } else {\n  System.out.println(\"You are old\"); \n}\n```\n\nWith apologies to\
+    \ those 59 and older, this program provides feedback based on the age user enters.\
+    \ The first users enter their age and value is assigned to the variable age. The\
+    \ value entered by the user is then tested in the first part of the system. If\
+    \ the age is less than 18, the program responds with \"You're a kid! Go to school.\"\
+    \n\nIf the first condition turns out to be false, the else condition is evaluated.\
+    \ If the age is less than 29 the appropriate advice is dispensed. If not, the\
+    \ next statement is evaluated. If none of the conditions associated with the else\
+    \ statements are found to be true, then the unfortunate else statement at the\
+    \ end of the program runs.\n\nKeep in mind that else statements are only run if\
+    \ all of the previous conditions are found to be false. Note also the indentation\
+    \ used throughout the else/else if/else is consistent. This is for housekeeping\
+    \ purposes. Readability is an important part of programming.\n\n# While Loops\n\
+    \nLoops allow you to run a block of code a number of times. Each time that block\
+    \ of code is executed as an iteration. Loops are critical to many different types\
+    \ of programs. Imagine a card game where turns are taken and cards are dealt—all\
+    \ with loops. If you think about it, you can probably identify loops in many different\
+    \ types of software that you use every day. The process of waiting for the user\
+    \ to input something, processing input and waiting for the user is often coded\
+    \ in a loop structure.\n\nLet's code a simple loop:\n\n```\npublic class Loop\
+    \ {\n  public static void main (String[] args) {\n  int tracker = 0;\n  while(tracker<100){\n\
+    \    System.out.println(tracker);\n  }\n}\n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "```\ntracker += 5; \n}\n```\n\nRun the program with the Java command and the\
+    \ result should appear something like what you see in figure 4.4:\n\n```\nTerminal\n\
+    kpatel: ~ $ Java Loop\n0\n5\n10\n15\n20\n25\n30\n35\n40\n45\n50\n55\n60\n65\n\
+    70\n75\n80\n85\n90\n95\nkpatel: ~ $ []\n```\n\nFigure 4.4: The result of a while\
+    \ loop\n\nIn the first line of this program we declare and initialize a variable\
+    \ tracker with the value 0. Next comes our while statement which states that while\
+    \ the value of tracker is less than 100, the code block inside the brackets of\
+    \ the while statement will execute. In this case, the code block prints the value\
+    \ of tracker to the console and then increases the tracker by 5.\n\nNote that\
+    \ the x+=5 notation is shorthand for x=x+5. += is known as a combined assignment\
+    \ operator.\n\nTalk the Talk: Programmers generally call \"+\\=\" plus equals.\
+    \ So when describing this code one would say \"plus equals\" Here’s another loop\
+    \ example program for you to try. I saved mine as Loop.java.\n\n```\nimport java.util.*;\n\
+    public class Loop{\npublic static void main(String[] args) {\nScanner bandName\
+    \ = new Scanner(System.in); String band = \"\";\nwhile(!band.equals(\"XXX\"))\
+    \ {\n\n    System.out.println(\"Name of a band you like or XXX to stop.\");\n\
+    }\n}\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "```\nband = bandName.nextLine();\nif(!band.equals(\"XXX\")){\n    System.out.println(band\
+    \ + \" ROCKS!\");\n}\n```\n\n**Note**: Due to strings being a reference type,\
+    \ you have to use the .equals() method to check for equality. This method returns\
+    \ true if the strings are equal and false if not.\n\nRun the program with the\
+    \ Java command and you should see a result similar to figure 4.5:\n\n![](img/e5a8dc568f1f48bb56665e2d6b74cfce_39_0.png)\n\
+    \nFigure 4.5 The user inputs text inside a loop. The variable *band* is set to\
+    \ an empty string. The value of *bandis* compared to the string \"XXX\" each time\
+    \ through the loop. If the loop is anything other than \"XXX\" the loop iterates\
+    \ again. If the value is not XXX, the name of the band is echoed to the console.\n\
+    \nNotice that all of the opening brackets have a companion. If you get lost in\
+    \ code that has a number of closing brackets in a row, here's a trick: Always\
+    \ must be the same number of opening and closing brackets in a class– If you have\
+    \ more opening brackets try pairing each one until you find you're missing brackets.\n\
+    \n# Don’t Try This at Home\n\nA common error in programming is an endless loop.\
+    \ These endless loops can consume more and more computing resources and eventually\
+    \ make the program, or your computer crash. Consider the following code:\n\n```\n\
+    public class LetsBreakTheComputer{\n    public static void main (String[] args)\
+    \ {\n        double x = 1;\n        while(0<x){\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '```
+
+    System.out.println(x);
+
+    X*=30000; //
+
+    }
+
+    ```
+
+
+    You''ll note that the continuation condition will **always** be true in this example—the
+    value of x will always be greater than zero. The value of x very rapidly gets
+    out of hand, and fact, becomes too big to store in memory. I ran in the Koding.com
+    environment. It took me about 10 minutes to stop the execution of the program
+    as koding''s environment was lagging due to the program.
+
+
+    ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_40_0.png)
+
+
+    Figure 4.6: At this point the environment was frozen due to an endless loop. Every
+    so it would print "Infinity" hundred times and then right back up.
+
+
+    You can try to example this on your own. I''m not responsible for any damage done.
+    (Damage won''t be permanent... have fun!)
+
+
+    # For loops
+
+
+    So we''ve determined that forgetting to use a proper iterator can be bad for your
+    program. How can we avoid an endless loop? The answer is a for loop. For loops
+    do the same as while loops, however they will only execute a set of times you
+    are forced to iterate an iterator and as part of the loop''s syntax in addition
+    to a conditional. As a result it extremely difficult to create for a for loop
+    that executes endlessly.
+
+
+    Here''s an example of a very simple for loop. It does the same thing as our first
+    loop: Prints 0 to 100, counting by fives.
+
+
+    ```
+
+    This loop is in a file called Loop3;
+
+    public static void main(String[] args) {
+
+    for(int x = 0; x<100; x+=5) { System.out.println(x); }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'The syntax of the loop is simple. First we have a local variable x that is
+    initialized and declared. Local variables cannot be accessed or changed outside
+    the loop. Then, we have a conditional. The conditional fulfills the same purpose
+    as in the while loop. When it is no longer true the loop will stop iterating.
+    Finally we have what''s known as an iterator. This is a reassignment of the variable
+    you initially declared for this loop. The iterator is the reason that it''s generally
+    hard to accidentally make an endless loop. Note that these three statements are
+    separated by semicolons as though they were the end of lines. Here''s the result
+    of executing this code:
+
+
+    ```
+
+    Terminal  • Loop3.java ++
+
+    kpatel: ~$ javac Loop3.java
+
+    kpatel: ~$ java Loop3
+
+    0
+
+    5
+
+    10
+
+    15
+
+    20
+
+    25
+
+    30
+
+    35
+
+    40
+
+    45
+
+    50
+
+    55
+
+    60
+
+    65
+
+    70
+
+    75
+
+    80
+
+    85
+
+    90
+
+    95
+
+    kpatel: ~$ []
+
+    ```
+
+
+    Figure 4.7: The result of the for loop is the same as the result of our original
+    while loop.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Chapter 5: Dealing with Data
+
+
+    In the last chapter we examined control structures, conditionals, and loops, which
+    are critical in some programming languages. They allow your programs to make decisions
+    based on the criteria that you set as the developer. In this chapter, we''re going
+    to switch gears and examine data and how it''s stored. We''ll take a close look
+    at four data structures: Arrays, ArrayLists, Immutables, and HashTables. You may
+    not have given much thought to data before. The easiest way to conceptualize data
+    is as organized information.
+
+
+    Different types of information lend itself to being organized in different ways.
+    For example, if your data is a grocery list, then an Array would be the optimal
+    way to organize your data. However, if you wanted to store student grades on assignments
+    over a period of time, an Array wouldn''t work well at all. There are many different
+    data structures used by programmers and each is optimized for a different type
+    of data.
+
+
+    Let''s start with a simple grocery list.
+
+
+    # Arrays
+
+
+    We''ve all made a grocery list, but you likely haven''t stored it in Java code.
+    Let''s do that now using the following line of code: (Remember to put this in
+    your main method!)
+
+
+    ```
+
+    String [] groceries = {
+
+    "oranges","apples","milk","bread","butter","pepp","salt","sugar","pears"
+
+    ```
+
+
+    Unlike arrays which store a single unit of data, we''ve stored multiple elements
+    in our array. I''m sure you can imagine a number of situations where this could
+    be convenient. In this case, all of the members or elements of our array are strings.
+    This is because we declared our array as a String array. "String" is the data
+    type of the array''s members.
+
+
+    Here is another array to add to your code. This time it is comprised of double
+    values:
+
+
+    ```
+
+    double [] filas = {
+
+    3.25, 2.26, 1.99, 3.55, 4.0, 3.21, 2.56, 3.06,
+
+    2.72
+
+    };
+
+    ```
+
+
+    Now, here''s where arrays become a bit more interesting. Arrays have a number
+    of built-in methods that you can use to manipulate them; there are included functions
+    that do things count the members of the list or sort them. You could write your
+    own code to do this, but it would be a lot of work.
+
+
+    Before we start the really fancy stuff, let''s take a look at how we extract data
+    from the Array. Also copy the code below. You''re free to skip over the comments
+    if you like. Remember to keep the file name and the class name consistent!
+
+
+    ```
+
+    public class Arrays{
+
+    public static void main(String[] args) {
+
+    String[] groceries = {
+
+    "oranges","apples","milk","bread","butter","pepper","salt","sugar","pears"
+
+    };
+
+    double[] filas = {
+
+    3.25, 2.26, 1.99, 3.55, 4.0, 3.21, 2.56, 3.06, 2.72
+
+    };
+
+    ```'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '```
+
+    System.out.println(groceries[0]); //returns ''oranges''
+
+    System.out.println(groceries[1]); // returns ''apples''
+
+    System.out.println(gpas[3]); // returns ''3.55''
+
+    }
+
+    }
+
+    ```
+
+
+    Once you''re sure that the code is typed correctly in your text editor, execute
+    the code with the **Java**command. Don''t forget to compile! Your output should
+    look like this:
+
+
+    ```
+
+    Arrays.java Terminal +
+
+
+    kpatel: $ javac Arrays.java
+
+    kpatel: - $ java Arrays
+
+    oranges
+
+    apples
+
+    3.55
+
+    kpatel: - $ []
+
+    ```
+
+
+    Figure 5.1: Java Arrays program output using the Koding.com environment
+
+
+    Pay attention to the print statements. You''ll note that each print statement
+    references one of our arrays and a specific index within that list surrounded
+    by brackets. Lists in Java, like most languages, are indexed, meaning that each
+    member of the list is assigned a number used to reference it. The first member
+    of a list is always index zero.
+
+
+    Our grocery list would have the following indexes:
+
+
+    +   Index Member
+
+    0 oranges 1 apples
+
+    2 milk
+
+    3 bread
+
+    4 butter
+
+    5 pepper
+
+    6 salt
+
+    7 sugar
+
+    8 pears
+
+
+    When combined with print method, the general form of retrieving data from an array
+    is: ArrayName[#]
+
+    Where “#” is the index you are pointing to.
+
+
+    One thing to keep in mind is that your array is only as long as you initially
+    make it. If you try to access a non-existent array index, your program is going
+    to exit with an error. Let''s add one line to our current program:
+
+
+    ```
+
+    System.out.println(gpas[9001]);
+
+    ```
+
+
+    When you run the program you should see an output similar to the following:'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\nkpatel: ~ javac Arrays.java\nkpatel: ~ java Arrays\noranges\napples\n\
+    3.55\nException in thread \"main\" java.lang.ArrayOutOfBoundsException: 9001\n\
+    \    at Arrays.main(Arrays.java:19)\nkpatel: ~ $ \n```\n\nFigure 5.2: Using an\
+    \ index that is out of range results in an exception.\n\n# # Declaring Empty Arrays\n\
+    \nAll of the arrays we've filled so, far have been filled manually. We've then\
+    \ printed them by calling indexes individually. We don't have to do this. The\
+    \ declaration and instantiation (fancy word for creation) of an array can be done\
+    \ with no values so long as you know how many elements you plan on putting inside\
+    \ of your array.Here is an example of how to do:\n\n```\nint[] vals = new int[10];\n\
+    ```\n\nIn this case, we are creating an integer array with 10 slots. The slots\
+    \ are currently filled with integers containing the value zero, as zero is the\
+    \ default value for an integer without explicitly assigned value.\n\nRather than\
+    \ putting a series of values after the declaration statement, we commanded the\
+    \ JVM to make a new empty array with enough space for ten integer type numbers.\n\
+    \nRemember, Java is zero-indexed so the last slot in this array isn't called by\
+    \ putting a ten in the brackets. ten is simply the number of elements within the\
+    \ array. The last element is referenced with a nine.\n\n```\nvals[9];\n```\n\n\
+    The above will access the last slot of the array. The first slot is accessed by\
+    \ placing a 0 in the brackets.\nThe technical term for the way arrays counts “zero-based”.\
+    \ (Java is zero-indexed). Arrays are zero-based.\n\n# # Editing Array Members\n\
+    \nYou can also use the index of an array member to change the values of different\
+    \ members in the list. This is done with an assignment statement as assigning\
+    \ a value to a standard variable. The following statement will change the zeroth\
+    \ index of the GPA list:\ngpas[0] = 4.0\n\nNote that the indexes of the other\
+    \ members of the array are not affected.\nThis is one way we can fill our empty\
+    \ arrays. We would simply reassign an empty slot to a value we would like.\n\n\
+    # # Sorting Arrays"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'We’ve manipulated and stored a lot of data so far. We have not, however, organized
+    much data.
+
+
+    Arrays are a powerful organizational tool. One reason is because of the sort()
+    method. It does exactly what it sounds like—it sorts members of the array. The
+    sort method is called a bit differently from normal methods. Sort() is called
+    as a static member of the array class like:
+
+
+    ```
+
+    Arrays.sort(<Array);
+
+    Make a new file and copy this code. My file is ArraySortDemo.java:
+
+    import java.util.Arrays;
+
+    public class ArraySortDemo{
+
+    public static void main(String[] args) {
+
+    String[] groceries = {
+
+    "oranges","apples","milk","bread","butter","pepper","salt","sugar","pears"
+
+    };
+
+    System.out.println("__UNSORTED ARRAY__");
+
+    for(String a:groceries){
+
+    System.out.print(a + " ");
+
+    }
+
+    System.out.println();
+
+    System.out.println("__SORTED ARRAY__");
+
+    Arrays.sort(groceries);
+
+    for(String a:groceries){
+
+    System.out.print(a + " ");
+
+    }
+
+    System.out.println();
+
+    }
+
+    ```
+
+
+    Note: Don’t worry if you don’t understand the loops. They’re used to print our
+    array. We’ll cover them in the next section.
+
+    Run your program with the Java command. Your output should look something like
+    this:
+
+
+    ```
+
+    Terminal ArraySortD...
+
+    kpat: $ javac ArraySortDemo.java
+
+    kpat: $ java ArraySortDemo
+
+    unSORTED ARRAY
+
+    oranges apples milk bread butter pepper salt pears
+
+    SORTED ARRAY
+
+    apples bread butter milk oranges pepper salt sugar
+
+    kpat: $ _|
+
+    ```
+
+
+    Figure 5.3: After the sort() function returns, the groceries list is indexed.
+    It’s now in alphabetical order!
+
+    The sort method will also order numbers from smallest to largest, and organize
+    other primitive data.
+
+
+    # Printing Arrays
+
+
+    So far the only way we’ve bee n printing information from arrays is through referencing'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "an individual array element. But what if we need to print out a whole array?\n\
+    \nCopy this file below:\npublic class PrintingArrays{\npublic static void main\
+    \ (String[] args) {\nint[] oneToOne = { 1,2,3,4,5,6,7,8,9,10 };\nSystem.out.println(oneToOne);\n\
+    }\n\n\nExecuting the code above results in non-readable text:\n\n```\nPrintingArr...\
+    \        Terminal        +\nkpatel: ~ javac PrintingArrays.java\nkpatel: ~ $ java\
+    \ PrintingArrays\n[04e96c47]\nkpatel: ~ $ \n```\n\nFigure 5.4:\nPassing the variable\
+    \ name printed an internal reference used by the Java compiler. Odd. Instead,\
+    \ we have to use a loop. There are several ways to do this; I'm going to show\
+    \ you the two easiest and most used firstly.\n\n# With a for loop\n\nThe first\
+    \ method uses a simple for loop to print out the array. Replace the print method\
+    \ with these few code of PrintingArrays:\nfor(int x = 0; x<oneToOne.length; x++){\
+    \ System.out.println(oneToOne[x]); }\n\nNow if you run your program you will see\
+    \ that the contents of your array have been printed:\n\n```\nPrintingArr...  \
+    \      Terminal        +\nkpatel: ~ javac PrintingArrays.java\nkpatel: ~ $ java\
+    \ PrintingArrays\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\nkpatel: ~ $ Awesome!\n```\n\n\
+    Figure 5.5: Awesome! We printed the array.\nThe way this loop works is very simple.\
+    \ The local variable we create to track the number of times our loop has iterated\
+    \ is used as the index value when we call an array element. As a result after\
+    \ iteration, the value of the variable increases by one and the slot we're referencing\
+    \ changes.\n\nIn other words: x starts as zero. The next iteration changes x's\
+    \ value from zero to one. Due"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'to the square brackets containing the dynamic variable x rather than a static
+    number the index that we are calling, which was originally index zero, switches
+    to index one.
+
+
+    The number of iterations is set using the .length property which returns the total
+    number of elements in our array.
+
+
+    # With a for-each loop
+
+
+    The second method of printing is through the use of a modified loop called a for-each
+    loop. The syntax for this loop is simpler than that of the regular loop.
+
+
+    Add the following code to the end of your PrintingArrays program:
+
+
+    ```
+
+    System.out.println("With a for each loop_");
+
+    for(int i=0;i<len;i++){System.out.println(array[i]);};
+
+    ```
+
+
+    The first line in snippet of code produces a separator, so we know which loop
+    is generating the output.
+
+
+    Next is the for loop. The statement within the for''s parentheses is shorter,
+    consisting of two components rather than three. This statement also fails to conform
+    to what we''ve learned about traditional for loops, as it lacks iterator and conditional.
+    This different statement is what makes this a for-each loop rather than a regular
+    loop. Whatever code is put inside the loop will be performed for each member of
+    the array. In this case we''re printing the array.
+
+
+    The statement within the parentheses of the loop consists of a variable declaration,
+    whose type must match the type of the array you intended to call the loop on and
+    the name of the array you intend to use on the loop.
+
+
+    If, for example, want to print our grocery list array, the for-each loop would
+    look like this:
+
+    for(String item: groceries){
+
+    System.out.println(item);
+
+    }
+
+
+    Because groceries are an array of strings, the variable ‘item’ is a string as
+    well.
+
+
+    This needs to be true for all variables and datatypes declared for use in a for-each
+    loop. If you intend to print an array of integers, the holder variable that is
+    declared within the parentheses must have a type of integer.
+
+
+    Arrays are objects and you can use number of methods associated with the Array
+    object. You might want to take a look at the official Java documentation and see
+    the functions that you can use with arrays. The documentation is available
+
+
+    http://docs.oracle.com/javase/7/docs/api/util/Arrays.html
+
+
+    Remember: Learning to read documentation is a valuable skill.
+
+
+    # ArrayLists
+
+
+    Arrays are very useful, but they are also limited in what they can do. An example
+    is the array’s inability to be expanded instantly. If I have an array with ten
+    elements I can’t add an eleventh element to the end of the array. With ArrayLists
+    we gain new functionality and the ability to add different types of objects into
+    one data structure, but that’s not often.
+
+
+    At this point you might be wondering why we bother with arrays at all if we have
+    ArrayLists. The answer is efficiency. ArrayLists take up more memory than arrays.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'bigger programs these they can cause it to run slower than if we just used
+    arrays.
+
+    ArrayList, just like Scanners, are reference or class type objects. Their declaration
+    looks like this:
+
+
+    ArrayList name = new ArrayList();
+
+
+    It should be noted that ArrayList cannot be filled upon initialization like arrays.
+    The only way to fill it is through the .add() method. You should also be aware
+    that unless you put an integer in the parenthesis of the ArrayList''s constructor
+    it will be made with a default size of ten slots.
+
+
+    If your ArrayList is full the .add() method will simply add a new member and append
+    what you placed in the parenthesis to the end of the list.
+
+
+    Now let''s try an example. I put mine in a few called ArrayLists:
+
+    public class ArrayList{
+
+    public static void main(String[] args) {
+
+
+    ```
+
+    ArrayList languages = new ArrayList(3); languages.add("Spanish");
+
+    languages.add("French");
+
+    languages.add("English");
+
+    System.out.println(languages.size());
+
+    languages.add("German");
+
+    System.out.println(languages.size());
+
+    ```
+
+
+    The first line in the main method declares a new ArrayList that we named languages
+    and gave it a size of.
+
+
+    **Talk the Talk:** There are several ways to say you use a method. The most common
+    terms are ''call'' or ''invoke''. When I programmer says ‘I invokedthe method’
+    he or she is using the method.
+
+
+    The next three lines of code invoke the add method to fill up the ArrayList. Then
+    the size method is called to see how large the ArrayList is. After that one element
+    is appended to the end of the ArrayList, increasing the size from the original
+    three slots to four.
+
+
+    When you run the code, your output should appear something like this:
+
+
+    ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_49_0.png)
+
+
+    Figure 5.6:
+
+
+    We can see how the size of our ArrayList increased when we added an element to
+    the end.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "Java printed two notes in addition to the output of the program. This occured\
+    \ because we are using an unparameterized ArrayList. An unparameterized ArrayList\
+    \ is an ArrayList that's type hasn't been specified. As a result variables of\
+    \ different types can be stored within the same ArrayList and cause exceptions\
+    \ due to mismatches.\n\nTo alleviate this issue, we have to type our list to take\
+    \ one specific object arrays do. Rather than a standard declaration and instantiation,\
+    \ we need a slight modification to change part it looks like this:\n\n```\nArrayList<DataType>\
+    \ name = new ArrayList<DataType>();\n```\n\n**Talk the Talk:** An unparameterized\
+    \ ArrayList accepts what's known as a generic type. A generic type is a type that\
+    \ can be specified later by the programmer in order to improve functionality.\
+    \ The type can be anything, including custom classes that we implement and design\
+    \ yourself.\n\nLet's modify the code in our ArrayLists.java file to follow this:\n\
+    \n```\npublic class ArrayLists{\n    public static void main(String[] args) {\n\
+    \        ArrayList<String> languages = new ArrayList<String>(3);\n        languages.add(\"\
+    Spanish\");\n        languages.add(\"French\");\n        languages.add(\"English\"\
+    );\n        System.out.println(languages.size());\n        languages.add(\"German\"\
+    );\n        System.out.println(languages.size());\n    }\n```\n\nNow we recompile\
+    \ and run our code, there's no problem!\n\n```\nkpatel: ~ $ ArrayLists.java\n\
+    Note: ArrayLists.java uses unchecked or unsafe operations.\nNote: Recompile with\
+    \ -Xlint:unchecked for details.\nkpatel: ~ $ javac ArrayLists\n3\nkpatel: ~ $\
+    \ javac ArrayLists.java\nkpatel: ~ $ java ArrayLists\n4\nkpatel: ~ $ []\n```\n\
+    \nFigure 5.7: Much better.\n\nThe final thing to know about ArrayList is how to\
+    \ obtain data from them. Unlike arrays, we don't retrieve by index. Instead, we\
+    \ use a method to retrieve the data: The .get(#). The method in the parentheses\
+    \ is the index value of the element you want to access. Just like Arrays, ArrayLists\
+    \ are zero-based."
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "Add the following line to your code, recompile and run to see it in action:\n\
+    System.out.println(languages.get(0));\nWhen you recompile and run, the output\
+    \ should look something like this:\n\n```\nArrayLists... × Terminal +\nkpatel\
+    \ ~ $ javac ArrayLists.java\nkpatel ~ $ java ArrayLists\n3\n4\nSpanish ~ $ \n\
+    kpatel ~ $\n```\n\nFigure 5.8:\n\nWe got printed the first element of our ArrayList.\n\
+    There are a number of other methods for ArrayLists that are rather useful. The\
+    \ most notable being the .set(it) method, which replaces values without reassigning\
+    \ with arrays.\n\nThe official documentation is located here:\nhttp://docs.oracle.com/Java/7/docs/api/Java/util/ArrayList.html\n\
+    \n# Immutables\n\nImmutables are very similar to ArrayLists with one important\
+    \ exception: Immutables are non-dynamic. This means an Immutable is defined the\
+    \ values within it cannot be changed. Let's start a new program where we will\
+    \ define an Immutable.\n\n```\nCopy this code into a file named ImmutablesDemo.java:\
+    \ import java.util.*;\npublic class ImmutablesDemo{\n    public static void main(String[])\
+    \ args) {\n    //Note: Arrays cannot be made immutable. So instead, we use Lists.\n\
+    \    String[] turn = {\"600\",\"800\",\"1024\",\"1280\",\"1366\",\"1920\"};\n\
+    \    List<String> list = Arrays.asList(turn);\n    List<String> unmodList = Collections.unmodifiableList(list);\n\
+    \    for(String p : unmodList{\n        System.out.println(p);\n    }\n    System.out.println();\n\
+    \    System.out.print(unmodList.get(0));\n    // unmodList.add(\"464\"); \n}\\\
+    }\n```\n\nCompile the code then run it using the Java command and carefully examine\
+    \ the output."
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "```\nkpatel ~ $ javac ImmutablesDemo.java\nkpatel ~ $ java ImmutablesDemo\n\
+    600\n800\n1024\n1280\n1366\n1920\nException in thread \"main\" java.lang.UnsupportedOperationException\n\
+    \    at java.util.Collections$UnmodifiableCollection.add(Collections.java:1075)\n\
+    \    at ImmutablesDemo.main(ImmutablesDemo.java:19)\nkpatel ~ $ _\n```\n\nFigure\
+    \ 5.9: That we're able to access the complete immutable, a single index within\
+    \ the immutable, but when reassigning a value within an immutable, an error is\
+    \ generated. An immutable is non-dynamic and once initiated, the value within\
+    \ it cannot be changed.\n\nImmutable are for storing data that does not change\
+    \ over the life of a program. For example, in the program above, the screen widths\
+    \ are unlikely to change.\n\n# HashTables\n\nHashTables are yet another data structure.\
+    \ They are perfect for storing paired data, sometimes known as key: value data.\
+    \ In this type of data, instead of a numerical index, each data point is indexed\
+    \ by a key which is determined by the programmer. State and state capitals or\
+    \ towns and zip codes are both examples of where HashTables can be useful for\
+    \ storing data.\n\nSeasoned programmers may find HashTables to be very similar\
+    \ to Dictionaries. This is because HashTables were derived from them. (Dictionaries\
+    \ are the parent class of Hashtables))\n\nConsider the following program:\nimport\
+    \ java.util.*;\npublic class HashTables {\n    public static void main (String[]\
+    \ args) {\n        HashTable<String,String> statesAndCapitols = new HashTable<String,String>();\n\
+    \        statesAndCapitols.put(\"Connecticut\",\"Hartford\"); statesAndCapitols.put(\"\
+    New York\",\"Albany\");\n        statesAndCapitols.put(\"Maine\",\"Augusta\");\
+    \ statesAndCapitols.put(\"Mississippi\",\"Jackson\");\n        statesAndCapitols.put(\"\
+    Montana\",\"Helena\");\n        statesAndCapitols.put(\"Texas\",\"Austin\");\n\
+    \        String ConnCap = statesAndCapitols.get(\"Connecticut\");\n        System.out.println(ConnCap);\n\
+    \    }\n}\n\nWhen you run the program with the Java command you'll see the output\
+    \ \"Hartford\". This is the result of the key (or index) for \"Hartford\" being\
+    \ \"Connecticut\". Note the print"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "command.out.println how it is used to access the value in the HashTable.\n\n\
+    Like arrays, Java's HashTable are an object and have functions that can be associated\
+    \ with them. Let's take a look at one of these functions. Update your code so\
+    \ it appears like this:\n\n```\nimport java.util.*;\npublic class HashTables {\n\
+    \    public static void main(String[] args) {\n        Hasht<String,String> statesAndCapitols\
+    \ = new Hasht<String,String>();\n\n        statesAndCapitols.put(\"Connecticut\"\
+    , \"Hartford\"); statesAndCapitols.put(\"New York\", \"Albany\"); statesAndCapitols.put(\"\
+    Mississippi\", \"Jackson\");\n        statesAndCapitols.put(\"Maine\", \"Augusta\"\
+    ); statesAndCapitols.put(\"Montana\", \"Helena\"); statesAndCapitols.put(\"Texas\"\
+    , \"Austin\"); String ConnCap = statesAndCapitols.get(\"Connecticut\");\n\n  \
+    \      System.out.println(\"Values: \" + statesAndCapitols.values());\n      \
+    \  System.out.println(\"Keys: \" + statesAndCapitols.keySet());\n    }\n}\n```\n\
+    \n![](img/e5a8dc568f1f48bb56665e2d6b74cfce_53_0.png)\n\nFigure 5.10: Output demonstrating\
+    \ two of the functions used with dictionaries—values and keySet()\n\nYou'll note\
+    \ that the values() function returns all of the values in the dictionary, while\
+    \ the keySet() function returns all of the keys. This short chapter can only give\
+    \ you a broad introduction to working with data in programming. Almost every program,\
+    \ to some degree, works with data. Being effective at working with data is an\
+    \ important part of any programmer's toolbox."
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Chapter 6: Putting It All Together
+
+
+    Classes and objects represent not just a programming concept, but a way of looking
+    at the world and solving problems. Classes and objects, at a high level, represent
+    a process of classification—an activity that is as old as science. When we create
+    a class, we create a model of an object that breaks the object down to its core
+    activities and attributes. Java is an Object Oriented language, meaning that it
+    is completely dependent on the Class and Object structure everything must be contained
+    in one. Java isn''t the only language that supports objects. It''s good to have
+    an understanding of objects as they are a very common occurrence in programming.
+
+
+    # Class Versus Objects
+
+
+    I often tell my students to think of a class as a blueprint of an object. From
+    that blueprint, many instances of the class (objects) can be created. From planned
+    housing communities: a single blueprint may be used to build many different homes.
+    These homes may vary in substantial ways—they may be different colors, have different
+    kitchen counters, and different fixtures in the bathrooms—but they are all based
+    on the same blueprint.
+
+
+    In programming, a class defines how an object of the class is described and what
+    it can do. It might be useful to think of classes as a set of adjectives and a
+    set of verbs. The adjectives give us a way to describe the class, while the verbs
+    tell us what the class can do. The set of adjectives used to describe a class
+    are known as fields. The set of verbs associated with a class are known as methods.
+
+
+    If we were describing a class “vehicle” we might include the following methods
+    and properties:
+
+
+    Fields (Adjectives) Methods (Verbs)
+
+
+    +   color accelerate()
+
+    weight decelerate()
+
+    height turnLeft()
+
+    topSpeed turnRight()
+
+    vehicle startIgnition()
+
+    stopIgnition()
+
+
+    Obviously this model is greatly simplified. If we were truly trying to represent
+    a vehicle in code, we''d likely have to use several interrelated classes. In Java
+    we also have to declare the type of each property it would hold. For example,
+    the color property would hold a string... When we create an instance of the Vehicle
+    Class that we defined in the previous table, we might assign a value to all of
+    the properties, like:
+
+
+    ```
+
+    String color = "blue"; double weight = 5565.3; int height = 48;
+
+    topSpeed = 90;
+
+    String vehicleType = "car";
+
+    ```
+
+
+    This example assumes an instance (object) created the Vehicle.
+
+
+    # Coding a Class in Java
+
+
+    Let''s write the code that represents an Animal class in Java. We''ll create an
+    instance'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'of that class called myDog in another file, a bit later.
+
+
+    ```
+
+    public class Animal {
+
+    private static int numberOfAnimals = 0; public int length;
+
+    public String color;
+
+    public double weight;
+
+    public boolean hasFur;
+
+    ```
+
+
+    ```
+
+    public Animal(int Length, double Weight, String Color, boolean Fur) {
+
+    color = Color;
+
+    weight = Weight;
+
+    hasFur = Fur;
+
+    length = Length;
+
+    numberOfAnimals++;
+
+    }
+
+    ```
+
+
+    There are definitely a few new things here. The first is that we don''t have a
+    public static void main. This is because this program doesn''t run in the way
+    that we''ve been seeing so far. The main method is generally the entrance point
+    for the JVM to start executing our code. It will be in our driver class, which
+    we''ll write later. We start our definition of the class with the public class
+    keywords and the name of the class—in this case, “Animal.” The public keyword
+    gives information about visibility. It tells the JVM that any class is allowed
+    to make objects from this class. The Class keyword informs Java as to what this
+    file is. Next, you''ll notice I declare a variable named numAnimals variable is
+    designed to do some internal housekeeping in the class. Its job, is to track how
+    many instances of Animal we create. The static keyword between the datatype and
+    the visibility level (which is private) enables us to use this variable as a tracker.
+    Static means that you don''t have to create an instance of a class in order to
+    access or modify this information. This means that each object doesn''t have an
+    instance of “numAnimals” rather it exists in the class.
+
+
+    After numAnimals I simply create a number of variables detailing information about
+    our animals: things as weight, color, length and if it has fur or not.
+
+
+    A keyword is a reserved word that cannot be used for anything other than its intended
+    functions. Examples include: public, private, for, and so. Generally keywords
+    will be highlighted by your text editor. The I''m using Coding colors to turn
+    purple or class names, as seen on the left side of figure 6.1. Keywords cannot
+    be used as variable, function or class names, due to the fact that they''re already
+    reserved.
+
+
+    We then define with the publickeyword in the Animal file what''s known as a “constructor”.
+    This method is very important. It does three things: details the information that
+    we need in order to make an object based on this class, preforms any internal
+    housekeeping and assigns initial values to the fields. It will be executed every
+    time that an object is created based on your class.
+
+    The constructor is called by the driver class below.
+
+
+    I named mine AnimalDriver.java:'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '```
+
+    public class AnimalDriver {
+
+    public static void main(String[] args) {
+
+    Animal myDog = new Animal(19, 12, "brown", "true");
+
+    }
+
+    }
+
+    ```
+
+
+    The particular instance of Animal that we are creating, called myDog, has a length
+    of 19, weight of 12, is brown and has fur. The first four lines of constructor
+    assign these values that are passed into the instance. You may be wondering how
+    we determined the order of the information to put into the class. The answer is
+    pretty simple; the constructor accepts arguments in the order that the constructor
+    is coded. In our, the order of the data types was: int, double, String and Boolean.
+    This means when we call the constructor, that''s the order that arguments must
+    follow.
+
+
+    ![](img/e5a8dc568f1f48bb56665e2d6b74cfce_57_0.png)
+
+
+    Figure 6.1: Creating the class (left) and driver class(right) in Koding
+
+
+    Examine the following line:
+
+    numOfAnimals++;
+
+
+    This line is designed to increment the value of numOfAnimals, the internal housekeeping
+    variable of Animal that we generate. The actual instance is generated with the
+    code in the driver class which can be seen here in a file called AnimalDriver.java.
+
+
+    ```
+
+    public class AnimalDriver{
+
+    public static void main(String[] args) {
+
+    Animal myDog = new Animal(19, 12, "brown", "true");
+
+    }
+
+    ```
+
+
+    # Adding Some Methods
+
+
+    Let''s change up and add to our initial code:
+
+
+    ```
+
+    public class Animal{
+
+    private static int numOfAnimals = 0; public int length;
+
+    public String color;
+
+    public double weight; public boolean hasFur; public boolean isHungry;
+
+    public Animal(int Length, double Weight, String Color, boolean Fur, boolean Hungry){
+
+    color = Color;
+
+    weight = Weight;
+
+    hasFur = Fur;
+
+    ```'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '```
+
+    isHungry = Hungry; length = Length;
+
+    NumberOfAnimals ++;
+
+    }
+
+    ```
+
+
+    ```
+
+    public String walk(){
+
+    return "Animal is walking";
+
+    }
+
+    ```
+
+
+    ```
+
+    public String eat(){
+
+    isHungry = false;
+
+    weight += .1;
+
+    return "Animal has eaten.\\n" + "Animal now weighs: " +
+
+    weight + " pounds";
+
+    }
+
+    ```
+
+
+    ```
+
+    public String getLength(){
+
+    return "Animal’s length is " + length;
+
+    }
+
+    ```
+
+
+    Now that we''ve added to our animal class, we need to add to the driver class
+    in order to continue testing.
+
+
+    Rewrite the code in your AnimalDriver file so it looks like this, then recompile
+    and run it.
+
+    public class AnimalDriver{
+
+    public static void main(String[]) args) {
+
+    Animal myDog = new Animal(19, 2, "brown", true);
+
+    System.out.println(myDog.walk()); System.out.println(myDog.eat());
+
+    System.out.println(myDog.getLength());
+
+    }
+
+
+    When you run the code with the Java command, the result should appear something
+    like this:
+
+
+    ```
+
+    Animal.java AnimalDriver... Terminal +
+
+    kpatel: $ javac AnimalDriver.java
+
+    kpatel: $ java AnimalDriver
+
+    Animal is walking
+
+    Animal has eaten.
+
+    Animal now weighs: 12.1 pounds
+
+    Animal''s length is 19
+
+    kpatel: $ [ ]
+
+    ```
+
+
+    Figure 6.2: Creating an instance of a class and manipulating it
+
+
+    You''ll notice that I''ve added an additional property, with the datatype Boolean
+    to the class: hungry. This property is designed simply to track whether or not
+    the instance of Animal is hungry. When we create the instance of Animal called
+    myDog, we set the value of'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "of the hungry property to true.\n\nWe've also added two methods to our class.\
+    \ The first method, walk(), simply prints out the message \"Animal is walking.\"\
+    \n\nThe second method, eat(), interacts with the properties of the object. First,\
+    \ the eat() method sets the value of the hungry property to \"false.\" It informs\
+    \ the user that the animal is eating via the print statement. Finally, because\
+    \ the animal is eating, we access the weight property and add .1 to its value.\n\
+    \nAfter the class definition and the instantiation of the myDog instance, we run\
+    \ the walk() and eat() methods.\nYou'll notice that all of these methods use the\
+    \ return keyword.\n\nThe definition of these methods contains what's known as\
+    \ a \"return type\". It appears in the declaration of the method after the visibility\
+    \ level. This is the reason Scanner object needs several methods to take input\
+    \ from the prompt; methods can only return one datatype & object.In all of our\
+    \ instances, we're returning a string. When we call the methods in our AnimalDriver\
+    \ class, the return method will be a string. This means we can set a String to\
+    \ capture the return value of our method in a variable: public String walkText\
+    \ = myDog.walk();\n\nNote that we have so far returned primitive types like int,\
+    \ float or boolean, we can also return reference types as ArrayLists.\nThe return\
+    \ itself itself two things.\n\nThe first thing is sent back to the method call\
+    \ whatever you put on the rest of the line. If you put an expression, it sends\
+    \ back the result. If you put a string, it sends back the whole string.\n\nThe\
+    \ next thing the return keyword does is the completion of the method. As soon\
+    \ as your method returns it will regardless of what is after the return in the\
+    \ code. This is very useful because you could place the return statement within\
+    \ an if statement and have it pre-mature under set criteria.\n\nSome methods don't\
+    \ have to return anything. An example that we've encountered in print method.\
+    \ In this case the return type is \"void\", which goes in place of the data type.\
+    \ An example of a method with this kind of classification follows:\n\n```\npublic\
+    \ void name(<Datatype>Parameter){}\n```\n\nIt should be noted that the return\
+    \ keyword can be used to force a method to exit as well. Simply type \"return\"\
+    , to end the line, and a semicolon to stop the execution of the method.\n\n# Multiple\
+    \ Instances\n\nYou'll remember from our initial discussion that a class is merely\
+    \ a blueprint and multiple objects can be constructed from that class. Enter this\
+    \ revised code in your text editor:\n\n```\npublic class Animal{\n    private\
+    \ static int numberOfAnimals = 0; public String name;\n    public int length;\n\
+    ```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '```
+
+    public String color;
+
+    public double weight;
+
+    public boolean hasFur;
+
+    public boolean isHungry;
+
+
+    public Animal(String Name, String Color, int Length, double Weight, boolean Fur,
+
+    boolean Hungry{
+
+    color = Color;
+
+    weight = Weight; hasFur = Fur;
+
+    isHungry = Hungry; length = Length; name = Name;
+
+    }
+
+    ```
+
+
+    ```
+
+    public String walk(){
+
+    return name +" is walking";
+
+    }
+
+    ```
+
+
+    ```
+
+    public String eat(){
+
+    isHungry = false;
+
+    weight += .1;
+
+    return name + " has eaten.\n" + name + " now weighs: "
+
+    + weight + " pounds";
+
+    }
+
+    ```
+
+
+    ```
+
+    public String getLength(){
+
+    return name +"s length is " + length;
+
+    }
+
+    ```
+
+
+    I''ve added another property to the Animal class. The name property is designed
+    to hold the name of the Animal instance. Keep in mind; this is distinct from the
+    name of the code reference to the instance.
+
+
+    Now let''s update our Animal Driver to reflect the new functionality. Copy this
+    revised code:
+
+
+    ```
+
+    public class AnimalDriver{
+
+    public static void main (String[] args) {
+
+    Animal myDog = new Animal("Sparky","Grey", 17, 56.4, true, true);
+
+    Animal yourDog = new Animal("Rover","Brown", 19, 41.8, true, true);
+
+    System.out.println(myDog.walk()); System.out.println(myDog.eat());
+
+    System.out.println(yourDog.walk()); System.out.println(yourDog.eat());
+
+    System.out.println(myDog.getLength());
+
+    }
+
+    ```
+
+
+    The original Animal instance myDog has a value of "Sparky" in the name property,
+    and the new object has a value of "Rover" in the name property.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "Running the code below should result in output similar to the following:\n\n\
+    ```\nAnimalJava AnimalDrv... Terminal +\nkpatel: $ java AnimalDriver.java\nkpatel:\
+    \ $ java AnimalDriver\nSparky is eating.\nSparky now weighs: 56.5 pounds\nRover\
+    \ is walking.\nRover has eaten.\nRover now weighs: 41.9 pounds\nRover length 19\n\
+    kpatel: $ }\n```\n\nFigure 6.3: Two instances of Animal objects are created—Sparky\
+    \ and Rover.\n\n# Extending Classes\n\nThe object oriented structure does more\
+    \ allow us to simply represent objects as code in one file. It allows us to build\
+    \ an entire hierarchy of objects to represent our real life space. Let's take\
+    \ another look at Vehicles.\n\nIn the world we have numerous types of vehicles.\
+    \ Some work on the ground, some work in the water and in the air. To properly\
+    \ represent a vehicle in an object oriented manner, we need to determine what\
+    \ they all have in common. All vehicles have a top speed, a weight and a color.\
+    \ All vehicles are either moving, or still.\n\nAs a result we can create a new\
+    \ object that contains all of these common attributes, so we don't have to code\
+    \ each time we want to create a variant of a vehicle.\n\nCopy the following code,\
+    \ and save it as Vehicle.java:\n\n```\npublic class Vehicle{\nint topRight;\n\
+    String color;\ndouble weight; boolean isMoving;\npublic Vehicle(int setSpeed,\
+    \ String setColor, double setWeight, boolean tellIfMoving{\ntopSpeed = setSpeed;\
+    \ color = setColor;\nweight = setWeight;\nisMoving = tellIfMoving;\n}\npublic\
+    \ boolean startMoving(){\nisMoving = true;\nreturn \"Vehicle is moving.\"; \n\
+    public boolean stopMoving(){\nisMoving = false;\nreturn \"Vehicle isn't moving.\"\
+    ; } \n}\n}\n```\n\nThe code above summarizes the basic attribute of vehicles.\
+    \ But if we need to represent a car, there is information we need that wouldn't\
+    \ be relevant if we were representing a boat. But we would still need all of the\
+    \ attributes described in the Vehicle class. This means we would copy all of this\
+    \ code into two different files in just to represent these types of vehicles?\
+    \ We could, but that would be inefficient. Instead we extend the vehicle class."
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'By extending the vehicle class, we create what is known as a child class. The
+    child class inherits the fields, methods and even the constructor of the parent
+    (Vehicle in our case) class.
+
+
+    Open a new file in your text editor, and save the following code asnRoundVehicle.java:
+
+
+    ```
+
+    public class GroundVehicle extends Vehicle{
+
+    int numWheels; String vehicleType;
+
+
+    public GroundVehicle(int setSpeed, String setColor, double setWeight, boolean
+    tellIfMoving, int setNumWheels, String type) {
+
+
+    super(setSpeed, setColor, setWeight, tellIfMoving); numWheels = setNumWheels;
+
+    vehicleType = type;
+
+    }
+
+
+    public String startingMoving(){
+
+    isMoving = true;
+
+    return vehicleType + " driving";
+
+    }
+
+
+    public String stopMoving(){
+
+    isMoving = false;
+
+    return vehicleType + " isn driving";
+
+    }
+
+
+    public String getColor(){
+
+    return color;
+
+    }
+
+    }
+
+    ```
+
+
+    The first line of this code is slightly different from what you’re used to use
+    from this chapter. There is the addition of the "extends" keyword followed by
+    Vehicle. This notifies Java that GroundVehicle is a child of Vehicle. In other
+    words GroundVehicle is derived from Vehicle.
+
+
+    In Java, all classes, regardless of whether they extend the keyword, are an extension
+    of the Object class. As a result of the every hierarchical tree sets the Object
+    class.
+
+
+    Our tree appears as follows:
+
+    GroundVehicle is a Vehicle which is an Object.
+
+
+    **Talk the Talk:** In object programming when a programmer references the child
+    they say the class shares an "is/an" relationship with the parent class.
+
+
+    The next lines of code add two new fields to our object. The VehicleType variable
+    allows us to pass in a string "car", "motorcycle" or "truck". Both of these new
+    variables exist in addition to all of the variables in the Vehicle class. Vehicle’s
+    variables can be accessed through the "super" keyword. Since GroundVehicle is
+    a subclass of Vehicle, GroundVehicle has inherited Vehicle’s attributes and functionality.
+
+
+    The super keyword allows you to reference fields, constructors and methods of
+    the direct parent (class after the "extends" keyword) class.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "We already referenced constructor using the super keyword in the constructor\
+    \ of our GroundVehicle class. We treated the super keyword like the instantiation\
+    \ statement of Vehicle.\n\nThe normal instantiation would look like this:\n\n\
+    ```\nnew Vehicle(100,\"Orange\",1034.2, false);\n```\n\n“new Vehicle\" has been\
+    \ replaced by “super” within the constructor and as a result all the hidden fields\
+    \ within GroundVehicle will be populated upon construction due to invoking the\
+    \ parent’s class constructor.\n\nAfter the constructor we have three methods.\
+    \ They change one variable within the vehicle class and then return a string that\
+    \ confirms their change. Read the name of the first two methods in GroundVehicle\
+    \ and then the two methods in Vehicle. When methods in a child class share the\
+    \ same name as their superclass, they override the super method. We are changing\
+    \ the functionality of the method and nothing more. If we changed anything more,\
+    \ such as the return type, we would be overloading the method.\n\nRemember, we\
+    \ need a driver class in order to use our objects.\n\nCopy the following code\
+    \ to a file named VehicleDriver.java:\n\n```\npublic class VehicleDriver{\n  public\
+    \ static void main(String[] args) {\n    Vehicle transportationMachine = new Vehicle(50,\"\
+    Blue\",210,false);\n    System.out.println(transportationMachine.startMoving());\n\
+    \  }\n}\n```\n\nThe output of this code is:\n\n| Terminal | Vehicle.Java | VehicleDri...\
+    \ | + |\n| --- | --- | --- | --- |\n| kpath: - $ javac VehicleDriver.java | |\
+    \ | |\n| kpath: - $ Java VehicleDriver | | | |\n| Vehicle is moving. | | | |\n\
+    | kpath: - $ [] | | | |\n\nFigure 6.4 The output is the string we typed in the\
+    \ Vehicle Driver class, as that is what we put after the return statement."
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "```\nkpatel: ~ $ javac VehicleDriver.java\nkpatel: ~ $ java VehicleDriver\n\
+    Vehicle is moving.\nHorse and Buggy is driving\nkpatel: ~ $ \n```\n\nFigure 6.5:\
+    \ The more specific method in our GroundVehicle class resulted in a more specific\
+    \ output.\nThe first line of this code snippet is the instantiation for the GroundVehicle\
+    \ object which we use to make a horse and buggy. The next line makes a string,\
+    \ and sets it to the output of the startMoving method. The final line prints results.\n\
+    \nFinally let's look at one more that class extensions are capable of.\n\nCopy\
+    \ these last line into the driver class:\nVehicle goKart = new GroundVehicle(25,\"\
+    Yellow\", 3, true, 4, \"GoKart\");\nSystem.out.println(goKart.startMoving());\n\
+    \nLook at the declaration and instantiation of the object. They do not match.\
+    \ However when we compile and run this code, there are no issues due the fact\
+    \ that GroundVehicle is a type of Vehicle. Since the GroundVehicle class is derived\
+    \ from the Vehicle class, a Vehicle variable can be used to hold a GroundVehicle\
+    \ type object, which we’ve done in our code.\n\nHowever a GroundVehicle type variable\
+    \ cannot be used to hold a Vehicle type object! A GroundVehicle is a Vehicle,\
+    \ but a Vehicle is not necessarily a GroundVehicle.\nGroundVehicle has parameters\
+    \ that not all Vehicles have, an example being number of wheels.\n\nThis is true\
+    \ in all programming techniques. The less vague objects can be contained within\
+    \ vague variables. Vaguer objects cannot be contained within a more specific variable.\n\
+    \nThis also means you can place a GroundVehicle, or a Vehicle within an Object\
+    \ type variable, as all reference type objects are derived from the Object class.\
+    \ (Everything is an object.)\n\nAt this point you may be wondering what happens\
+    \ when you call the “startMoving” method on the next line. Will it use the more\
+    \ specific method within the GroundVehicle class or the vague method within the\
+    \ Vehicle class?\n\nWell if you compile and run the code, the result looks like\
+    \ this:"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\nkpatel: ~ $ javac VehicleDriver.java\nkpatel: ~ $ java VehicleDriver\n\
+    Vehicle is moving.\nHorse and Buggy is driving\nGoKart is driving\nkpatel: ~ $\
+    \ \n```\n\nFigure 6.6: It used the more specific method!\n\nDespite the variable\
+    \ being of the Vehicle type, the object that the variable referenced was of the\
+    \ type GroundVehicle. Due to the object being of the Ground Vehicle type, when\
+    \ we called the method on the object it did what it was supposed to do and executed\
+    \ the code that it had access to: The more specific method.\n\nI encourage you\
+    \ to add code and experiment with the vehicle class, or make your own classes\
+    \ and methods to see what you can do.\n\nA good project would be to represent\
+    \ some other real system in code. This section was designed to give you only a\
+    \ basic introduction to object-oriented programming with classes and objects.\
+    \ However, you will find these foundational concepts can be applied to many modern\
+    \ programming languages.\n\nThe end of this section also brings us to the conclusion\
+    \ of this book. You now know the foundations of programming using the Java programming\
+    \ language. You will find this information useful whether you continue your study\
+    \ in Java, or move to other areas of development, such as web applications or\
+    \ mobile.\n\nWhatever direction you go, I wish you the best of luck."
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Online Courses from LearnToProgram
+
+
+    +   Become a Certified Web Developer Level One
+
+    Become a Certified Web Developer Level Two
+
+    Certified Mobile Developer
+
+    Roadmap to Web Developer
+
+    HTML and CSS for Beginners (with HTML5)
+
+    Javascript for Beginners
+
+    Programming for Absolute Beginners
+
+    PHP and MySQL for Beginners
+
+    jQuery for Beginners
+
+    CSS Development with CSS3
+
+    Node.js for Beginners
+
+    Advanced Javascript Development
+
+    AJAX Development
+
+    SQL Database for Beginners
+
+    Ruby on Rails for Beginners
+
+    Famo.us Javascript Framework
+
+    GitHub Fundamentals Creating a PHP Login Script
+
+    Front End Developer with Adobe Dreamweaver
+
+    Codeless Web Development with Adobe Muse
+
+    Mobile App Development with HTML5
+
+    10 Apps in 10 Weeks
+
+    Java Programming for Beginners
+
+    Swift Language Fundamentals
+
+    iOS Development for Beginners
+
+    Android Development for Beginners
+
+    10 Apps in 10 Weeks;iOS Edition
+
+    Python for Beginners
+
+    Construct 2 for Beginners
+
+    Game Development with Unity
+
+    Mobile Game Development for iOS
+
+    3D Fundamentals with iOS
+
+    Project Management using Microsoft Project
+
+    .Net for Beginners
+
+    C++ for Beginners Joomla for Beginners
+
+    User Experience Design Fundamentals
+
+    Photoshop CS6 Training for Coders
+
+    Design for Coders
+
+    C Programming for Beginners
+
+    Objective C for Beginners
+
+    Introduction to Web Development
+
+    Game Development Fundamentals with Python'
+  merge: -1
+  pgno: 66
