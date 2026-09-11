@@ -1,0 +1,2346 @@
+- img_proc: true
+  md: '# # JAVA
+
+
+    STEP BY STEP BEGINNER''S GUIDE
+
+
+    ![](img/686a81b12470303bcb9a73c9bf6bac1c_0_0.png)
+
+
+    # ## PROGRAMMING BASICS FOR ABSOLUTE BEGINNERS
+
+
+    NATHAN CLARK'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Java
+
+
+    # Programming Basics for Absolute
+
+    Beginners
+
+
+    Nathan Clark'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '© Copyright 2017 by Nathan Clark - All rights reserved.
+
+
+    This document is presented with the desire to provide reliable, quality information
+    about the topic in question and the facts discussed within. This book is sold
+    under the assumption that neither the author nor the publisher should be asked
+    to provide the services discussed within. If any discussion, professional or legal,
+    is otherwise required a proper professional should be consulted.
+
+
+    This Declaration was held acceptable and equally approved by the Committee of
+    Publishers and Associations as well as the American Bar Association.
+
+
+    The reproduction, duplication or transmission of any of the included information
+    is considered illegal whether in print or electronically. Creating a recorded
+    copy or a secondary copy of this work is also prohibited unless action of doing
+    so is first cleared through the Publisher and condoned in writing. All rights
+    reserved.
+
+
+    Any information contained in the following pages is considered accurate and truthful
+    and that any liability through inattention or by any use or misuse of the topics
+    discussed within falls solely on the reader. There are no cases in which the Publisher
+    of this work can be held responsible for any loss of monetary gain or other damages
+    which may be caused by following the presented information in any way shape or
+    form.
+
+
+    The following information is presented purely for informative purposes and is
+    therefore considered universal. The information presented within is done so without
+    a contract or any other type of assurance as to its quality or validity.
+
+
+    Any trademarks which are used are done without consent and any use of the same
+    does not imply consent or permission was gained from the owner. Any trademarks
+    or brands found within are purely used for clarification purposes and no owners
+    are in anyway affiliated with this work.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Books in this Series
+
+
+    ![](img/686a81b12470303bcb9a73c9bf6bac1c_3_0.png)
+
+
+    Java: Programming Basics for Absolute Beginners
+
+
+    ![](img/686a81b12470303bcb9a73c9bf6bac1c_3_1.png)
+
+
+    Java: A Detailed Approach to Practical Coding'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   Introduction
+
+    1. What is Java?
+
+    2. History of Java
+
+    3. Features of Java
+
+    4. The Java Compiler
+
+    5. Building Your Environment
+
+    6. Your First Java Program
+
+    7. Data Types
+
+    8. Variables
+
+    9. Constants
+
+    10. Operators
+
+    11. Type Conversion
+
+    12. Loops
+
+    13. Decision Making
+
+    Conclusion
+
+    About the Author'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Introduction
+
+
+    Welcome to the wonderful world of programming, the chapters contained in this
+    book will give you a basic understanding of programming in Java. By its final
+    chapter you will be able to create a complete program on your own, using Java.
+
+
+    An important aspect of this series, and your learning experience, is **learning
+    by doing**. Practical examples are proven to be the best way to learn a programming
+    language, which is why I have crammed as many examples into this guide as possible.
+    I have tried to keep the core of the examples similar, so the only variable is
+    the topic under discussion. This makes it easier to understand what we are implementing.
+    As you progress through the chapters, remember to follow along with the examples
+    and try them yourself.
+
+
+    In order to use the information contained in this book, you must have a computer
+    that runs Windows, Macintosh, Linux, or UNIX operating system. You must know how
+    to run a program, copy a file, create a folder, and navigate through menus. These
+    are the only requirements for being able to program using Java.
+
+
+    Thank you for your interest in this versatile language and let''s have some fun!'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# 1. What is Java?\n\nJava is a programming language that is built by Sun Microsystems,\
+    \ which was later taken over by the Oracle Corporation. It is designed to run\
+    \ on any operating system that supports Java. This is what made the language so\
+    \ popular, because the developer just had to write the program once, and the program\
+    \ could then run on any operating system without the need for the programmer to\
+    \ change the code.\n\nMost of the modern applications built around the world are\
+    \ made from the Java programming language. Most of the server side and business\
+    \ logic components of major applications are built on the Java programming language.\n\
+    \nA sample Java program is shown below.\n\n# Example 1: The following program\
+    \ is used to showcase a simple Java program.\n\n```\npublic class HelloWorld {\n\
+    \    public static void main(String[] args) {\n        System.out.println(\"Hello\
+    \ World!\");\n    }\n}\n```\n\nDuring the entire course of this book you will\
+    \ learn how to write programs such as the one above, and also learn advanced concepts\
+    \ that will enable you to start writing complete application programs.\n\nSome\
+    \ of the design goals for Java are mentioned below:\n\n+   - The language is intended\
+    \ to be written once and have the ability to be run on any operating system."
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '+   - The language should provide support for numerous software engineering
+    principles.
+
+
+    +   - The language is intended to be used in developing software components suitable
+    for deployment in distributed environments.
+
+
+    +   - Portability is an important factor. This is why Java has the ability to
+    run on Windows, Linux and the MacOS operating system.
+
+
+    +   - Support for internationalization is very important.
+
+
+    +   - Java is intended to be suitable for writing applications for both hosted
+    and embedded systems.
+
+
+    Other design goals are discussed next.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# 1.1 Strong Type Checking\n\nJava is a strong type language. Every variable\
+    \ that is defined needs to be attached to a data type. An example is shown below.\n\
+    \nExample 2: The following program shows a strong typing for the Java programming\
+    \ language.\n\n```\npublic class HelloWorld\n{\n    public static void main(String[]\
+    \ args) {\n        int i=5;\n        System.out.println(\"The value of i is \"\
+    +i);\n    }\n}\n```\n\nYou don't need to understand the complete program for now,\
+    \ but let's have a quick look at 2 lines of the code.\n\n+   1) int i=5;\n\nHere\
+    \ we are defining something known as a variable, which is used to hold a value.\
+    \ The value that can be stored depends on the data type. In this example we are\
+    \ saying that 'i' is of the type 'int' or Integer, which is a number data value.\n\
+    \n+   2) System.out.println(\"The value of i is \"+i)\n\nHere we print the value\
+    \ of 'i' by means of the System.out.println statement. If we did not declare 'i'\
+    \ as an integer value, we would then get the below error if we had to compile\
+    \ the program.\n\nHelloWorld.java:5: error: cannot find symbol\n\nSystem.out.println(\"\
+    The value of i is \"+i)\n\n^\n\nsymbol: variable i\n\nlocation: class HelloWorld"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 1 error
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# 1.2 Array Bounds Checking\n\nAt runtime, Java will check whether the array\
+    \ has the required number of values defined. If one tries to access a value which\
+    \ is outside the bounds of the array, an exception will be thrown. An example\
+    \ is shown below.\n\nExample 3: The following program is used to showcase array\
+    \ bounds checking.\n\n```\npublic class HelloWorld {\n    public static void main(String[]\
+    \ args) {\n        int[] array1 = new int[2];\n        array1[0] = 1;\n      \
+    \  array1[1] = 2;\n        array1[2] = 3;\n    }\n}\n```\n\nYou don't need to\
+    \ understand the complete program for now, but let's just have a quick look at\
+    \ the following lines of the code.\n\n1) int[] array1 = new int[2];\n\nHere are\
+    \ the bounds of declaring an array, which is a set of integer values. The value\
+    \ of '2' means that we can only store two values in the array.\n\n2) array1[0]\
+    \ = 1;\n\narray1[1] = 2;\n\narray1[2] = 3;\n\nWith this code we can see that we\
+    \ are assigning 3 values to the array. When you run this program, you will get\
+    \ an error because the program will see that the array has gone out of its maximum\
+    \ allowable bounds of two. You will get the below error at runtime.\n\nException\
+    \ in thread \"main\"\n\njava.lang.ArrayIndexOutOfBoundsException: 2"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '```
+
+    at HelloWorld.main(HelloWorld.java:8)
+
+    ```'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 2. History of Java
+
+
+    The Java language was designed by James Gosling and first appeared on the scene
+    in May of 1995. The programming language has gone through various releases, with
+    the current version being version 8.
+
+
+    In the year 2006, Java had released the Java Virtual Machine. The Java Virtual
+    Machine is used to run Java programs on the relevant operating systems, and was
+    made available under free software/open-source distribution terms.
+
+
+    Below are the release date and the .net framework version for each Java version
+    release.
+
+
+    | Version | Release Date |
+
+    |--- |--- |
+
+    | JDK 1.0 | January 23, 1996 |
+
+    | JDK 1.1 | February 19, 1997 |
+
+    | J2SE 1.2 | December 8, 1998 |
+
+    | J2SE 1.3 | May 8, 2000 |
+
+    | J2SE 1.4 | February 6, 2002 |
+
+    | J2SE 5.0 | September 30, 2004 |
+
+    | Java SE 6 | December 11, 2006 |
+
+    | Java SE 7 | July 28, 2011 |
+
+
+    Below we go into detail on the various versions of Java and the features which
+    were introduced with each version.
+
+
+    # JDK 1.1 - Support for the following:
+
+
+    +   - An extensive retooling of the AWT event model.
+
+    - Inner classes added to the language.
+
+    - JavaBeans.
+
+    - JDBC.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '+   - RMI.
+
+    - Reflection, which supports Introspection only. No modification at runtime is
+    possible.
+
+    - JIT (Just In Time) compiler on Microsoft Windows platforms, produced for JavaSoft
+    by Symantec.
+
+    - Internationalization and Unicode support originating from Taligent.
+
+
+    # J2SE 1.2 - Support for the following:
+
+
+    +   - Strictfp keyword.
+
+    - The Swing graphical API was integrated into the core classes.
+
+    - Sun''s JVM was equipped with a JIT compiler.
+
+    - Java plug-in.
+
+    - Java IDL, an IDL implementation for CORBA interoperability.
+
+    - Collections framework.
+
+
+    # J2SE 1.3 - Support for the following:
+
+
+    +   - HotSpot JVM included.
+
+    - RMI was modified to support optional compatibility with CORBA.
+
+    - Java Naming and Directory Interface (JNDI) included in core libraries.
+
+    - Java Platform Debugger Architecture (JPDA).
+
+    - JavaScript.
+
+    - Synthetic proxy classes.
+
+
+    # J2SE 1.4 - Support for the following:
+
+
+    +   - Regular expressions modeled after Perl regular expressions.
+
+    - Exception chaining, which allows for an exception to encapsulate original lower-level
+    exceptions.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '+   - Internet Protocol version 6 (IPv6) support.
+
+    - Non-blocking IO.
+
+    - Logging API.
+
+    - Image I/O API for reading and writing images in formats like JPEG and PNG.
+
+    - Integrated XML parser and XSLT processor (JAXP).
+
+    - Integrated security and cryptography extensions (JCE, JSSE, JAAS).
+
+    - Java Web Start included.
+
+    - Preferences API (java.util.prefs).
+
+
+    # ## J2SE 5.0 - Support for the following:
+
+
+    +   - Generics, which provides compile-time (static) type safety for collections
+    and eliminates the need for most typecasts.
+
+    - Metadata, which is also called annotations. This allows language constructs
+    such as classes and methods to be tagged with additional data, which can be processed
+    by metadata-aware utilities.
+
+    - Autoboxing/unboxing. This allows for automatic conversions between primitive
+    types (such as int) and primitive wrapper classes (such as Integer).
+
+    - Enumerations. Here the enum keyword creates a typesafe, ordered list of values.
+
+    - Varags. This is the last parameter of a method, which can now be declared using
+    a type name followed by three dots.
+
+    - Enhanced ‘for each’ loop. The ‘for’ loop syntax is extended with a special syntax
+    for iterating over each member of either an array or an Iterable, such as the
+    standard Collection classes.
+
+    - Improved of execution for multi-threaded Java programs. The new Java memory
+    model addresses issues of complexity, effectiveness, and performance of previous
+    specifications.
+
+    - Static imports.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Java SE 6- Support for the following:
+
+
+    +   * Scripting Language Support. A generic API is introduced for tight integration
+    with scripting languages, and built-in Mozilla JavaScript Rhino integration.
+
+    * Dramatic performance improvements for the core platform and Swing.
+
+    * Improved Web Service support through JAX-WS.
+
+    * JDBC 4.0 support.
+
+    * Java Compiler API. This is an API allowing a Java program to select and invoke
+    a Java Compiler programmatically.
+
+    * Upgrade of JAXB to version 2.0.
+
+    * Support for pluggable annotations.
+
+    * Many GUI improvements, which included integration of SwingWorker in the API,
+    table sorting and filtering, and true Swing double-buffering.
+
+    * JVM improvements, which included synchronization and compiler performance optimizations,
+    new algorithms and upgrades to existing garbage collection algorithms, and application
+    start-up performance.
+
+
+    # Java SE 7 - Support for the following:
+
+
+    +   * JVM support for dynamic languages, with the new invokedynamic bytecode.
+
+    * Compressed 64-bit pointers.
+
+    * Strings in the switch statement.
+
+    * Automatic resource management in the try-statement.
+
+    * Improved type inference for generic instance creation.
+
+    * Simplified varargs method declaration.
+
+    * Binary integer literals.
+
+    * Allowing underscores in numeric literals.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '+   - Catching multiple exception types and rethrowing exceptions with improved
+    type checking.
+
+
+    +   - New file I/O library. Here support was added for multiple file systems,
+    file metadata and symbolic links.
+
+
+    +   - Library-level support for elliptic curve cryptography algorithms.
+
+
+    +   - An XRender pipeline for Java 2D, which improves handling of features specific
+    to modern GPUs.
+
+
+    +   - Enhanced library-level support for new network protocols, including SCTP
+    and Sockets Direct Protocol.
+
+
+    +   - Upstream updates to XML and Unicode.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# 3. Features of Java
+
+
+    Java has a lot of features with just a few of them mentioned below.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# 3.1 Simplicity\n\nThe Java language is simple to use and there are many built-in\
+    \ functions that are present to most of the common jobs you need. Because the\
+    \ language is built specifically for the Java framework, it relies on the Java\
+    \ framework to do all the heavy lifting. For example, when it comes to releasing\
+    \ memory used by the program, you don't have to specifically do this through a\
+    \ Java program. It is done automatically by the garbage collector in the Java\
+    \ Runtime Environment\n\nBelow is a simple example of a Java program which displays\
+    \ ‘Hello World’.\n\nExample 4: The following program is used to showcase a simple\
+    \ Java program.\n\n```\npublic class HelloWorld {\n    public static void main(String[]\
+    \ args) {\n        System.out.println(\"Hello World!\");\n    }\n}\n```"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# 3.2 Data Types\n\nJava has the support for many data types. Java is a strongly\
+    \ typed language in which you need to define the data type of a value before it\
+    \ can be used. Below is a simple example of a Java program which works with data\
+    \ types. We will see more of this in the chapter on data types.\n\nExample 5:\
+    \ The following program is used to showcase a simple Java program on data types.\n\
+    \n```\npublic class HelloWorld {\n    public static void main(String[] args) {\n\
+    \        // Integer data type\n        int a = 1;\n\n        // Float data type\n\
+    \        float b = 1.1F;\n\n        // String data type\n        String c=\"Hello\"\
+    ;\n\n        // Character data type\n        char d = 'A';\n\n        // boolean\
+    \ data type\n        boolean e = true;\n\n        // Double data type\n      \
+    \  double f = 1.11111111;\n\n        System.out.println(\"The integer data type\
+    \ is \" + a);\n        System.out.println(\"The Float data type is \" + b);\n\
+    \        System.out.println(\"The String data type is \" + c);\n        System.out.println(\"\
+    The Character data type is \" + d);\n        System.out.println(\"The boolean\
+    \ data type is \" + e);\n    }\n}\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '```
+
+    System.out.println(" Double data type is " + f);
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# 3.3 Loops and Decision Making\n\nJava has built-in methods that can be used\
+    \ to create loops logic based on decisions or loops to iterate through a set of\
+    \ values. Below is a simple example of a Java program which works with decision\
+    \ making and loops. We will see more of this in the chapter on decision making\
+    \ and loops.\n\nExample 6: The following program is used to showcase a simple\
+    \ Java program on decision statements.\n\n```\npublic class HelloWorld {\n   \
+    \ public static void main(String[] args) {\n\n        int i = 1;\n        // Decision\
+    \ making\n        if (i == 1) { System.out.println(\" The value is 1\"); }\n\n\
+    \        // Loops\n        for(int j=0;j<5;j++) {\n            System.out.println(\"\
+    \ The value of j is \" + j);\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# 3.4 Object Oriented\n\nThis is one of the basic principles of any programming\
+    \ language wherein one can define classes and objects. Classes are an encapsulation\
+    \ of properties and methods. Classes are relevant to real time entities. Below\
+    \ is a simple example of a Java program which works with classes. We will see\
+    \ more of this in book 2 of the series.\n\nExample 7: The following program is\
+    \ used to showcase a simple Java program on classes.\n\n```\nclass Student\n{\n\
+    \    // Encapsulating the ID property\n    private\n    int ID;\n    public void\
+    \ setID(int pID)\n    {\n        ID = pID;\n    }\n    public int getID()\n  \
+    \  {\n        return ID;\n    }\n}\n\npublic class HelloWorld\n{\n    public static\
+    \ void main(String[] args) {\n        Student stud = new Student();\n        stud.setID(1);\n\
+    \        System.out.println(\"The ID of the student is \" +stud.getID());\n  \
+    \  }\n}\n```"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# 3.5 Data Encapsulation Support\n\nJava has the facility to encapsulate its\
+    \ data members so that they are not exposed to other classes. You can then have\
+    \ 'getter' and 'setter' methods which can be used to get and set the data members\
+    \ accordingly. An example of data encapsulation is given below.\n\nExample 8:\
+    \ The following program is used to showcase a simple Java program for data encapsulation.\n\
+    \n```\nclass Student\n{\n    // Encapsulating the ID property\n    private\n \
+    \   int ID;\n    public void setID(int pID)\n    {\n        ID = pID;\n    }\n\
+    \    public int getID()\n    {\n        return ID;\n    }\n}\n\npublic class HelloWorld\n\
+    {\n    public static void main(String[] args) {\n        Student stud = new Student();\n\
+    \        stud.setID(1);\n        System.out.println(\"The ID of the student is\
+    \ \"+stud.getID());\n    }\n}\n}\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# ## 3.6 Inheritance\n\nJava has the support for classes to inherit the properties\
+    \ and methods of other classes. This greatly helps in not having the need to develop\
+    \ classes over and over again, and helps in better development of an application.\
+    \ An example of inheritance is given below. We will see this in further detail\
+    \ in book 2 of the series.\n\n**Example 9: The following program is used to showcase\
+    \ a simple Java program for inheritance.**\n\n```\nclass Person\n{\n    // Encapsulating\
+    \ the ID property\n    private\n    int ID;\n    public void setID(int pID)\n\
+    \    {\n        ID = pID;\n    }\n    public int getID()\n    {\n        return\
+    \ ID;\n    }\n}\n\nclass Student extends Person\n{\n    private\n    String Name;\n\
+    \    public void setName(String pName)\n    {\n        Name = pName;\n    }\n\
+    \    public String getName()\n    {\n        return Name;\n    }\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "```\n}\n}\npublic class HelloWorld\n{\n    public static void main(String[]\
+    \ args) {\n        Student stud = new Student();\n        stud.setID(1);\n   \
+    \     stud.setName(\"UserA\");\n        System.out.println(\"The ID of the student\
+    \ is \" +stud.getID());\n        System.out.println(\"The name of the student\
+    \ is \" +stud.getName());\n    }\n}\n}\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# 3.7 Interfaces\n\nAn interface is a contract that a class must abide by.\
+    \ In an interface you have function definitions and in the class which uses the\
+    \ interface, you will provide information into the interface function. An example\
+    \ of interfaces is given below. We will see this in further detail in book 2 of\
+    \ the series.\n\nExample 10: The following program is used to showcase a simple\
+    \ Java program for interfaces.\n\n```\ninterface IStudent\n{\n    // Only the\
+    \ function is part of the interface\n    void Display();\n}\n\nclass Student implements\
+    \ IStudent\n{\n    // Encapsulating the ID property\n    private int ID;\n   \
+    \ private String Name;\n    public void setID(int pID)\n{\n        ID = pID;\n\
+    \    }\n    public int getID()\n{\n        return ID;\n    }\n\n    public void\
+    \ setName(String pName)\n{\n        Name = pName;\n    }\n    public String getName()\n\
+    {\n        return Name;\n    }\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "```\n}\npublic void Display()\n{\n    System.out.println(\"The ID of the student\
+    \ is \" +this.getID());\n    System.out.println(\"The name of the student is \"\
+    \ +this.getName());\n}\n\npublic class HelloWorld\n{\n    public static void main(String[]\
+    \ args) {\n\n        Student stud = new Student();\n        stud.setID(1);\n \
+    \       stud.setName(\"UserA\");\n        stud.Display();\n    }\n}\n```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# 3.8 Polymorphism\n\nThis is the ability of the compiler at run time, to determine\
+    \ the class which needs to be called. You can have a base class variable point\
+    \ to an object of the derived class for instance. An example of polymorphism is\
+    \ given below. We will see this in further detail in book 2 of the series.\n\n\
+    Example 11: The following program is used to showcase a simple Java program for\
+    \ Polymorphism.\n\n```\nclass Person\n{\n    // Encapsulating the ID property\n\
+    \    private\n    int ID;\n    public void setID(int pID)\n    {\n        ID =\
+    \ pID;\n    }\n    public int getID()\n    {\n        return ID;\n    }\n    public\
+    \ void Display()\n    {\n        System.out.println(\"This is the Person class\"\
+    );\n    }\n}\n\nclass Student extends Person\n{\n    private\n    String Name;\n\
+    \    public void setName(String pName)\n    {\n        Name = pName;\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "```\npublic String getName()\n{\n    return Name;\n}\npublic void Display()\n\
+    {\n    System.out.println(\"This is the Student class\");\n}\n\npublic class HelloWorld\n\
+    {\n    public static void main(String[] args) {\n        Student stud = new Student();\n\
+    \        Person per = new Student();\n        per.Display();\n        stud.Display();\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# 3.9 Collections\n\nJava has a wide array of collections that can help reduce\
+    \ the burden of repetitive code. With built-in classes such as Lists, Stacks and\
+    \ Queues, it becomes easier to use these classes for your application. An example\
+    \ of a collection is given below. We will see this in further detail in book 3\
+    \ of the series.\n\nExample 12: The following program is used to showcase a simple\
+    \ Java program for collections.\n\n```\nimport java.util.*;\npublic class HelloWorld\
+    \ {\n    public static void main(String[] args) {\n\n        Stack st = new Stack();\n\
+    \n        // Adding elements to the stack\n        st.push(\"A\");\n        st.push(\"\
+    B\");\n        st.push(\"C\");\n        st.push(\"D\");\n\n        System.out.println(st.pop());\n\
+    \        System.out.println(st.pop());\n        System.out.println(st.pop());\n\
+    \        System.out.println(st.pop());\n    }\n}\n```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# 3.10 Java Methods\n\nThis allows you to segregate code into logical pieces.\
+    \ An example of a collection is given below. We will look at this in further detail\
+    \ in book 2 of the series.\n\nExample 13: The following program is used to showcase\
+    \ a simple Java program for methods.\n\n```\nimport java.util.*;\npublic class\
+    \ HelloWorld\n{\n    public static void DisplayA()\n    {\n        System.out.println(\"\
+    This displays the value A\\\");\n    }\n    public static void DisplayB()\n  \
+    \  {\n        System.out.println(\"This displays the value B\\\");\n    }\n\n\
+    \    public static void main(String[] args) {\n        DisplayA();\n        DisplayB();\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# 4. The Java Compiler
+
+
+    The Java programming language consists of the following main components.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# 4.1 The Java Software Development Kit
+
+
+    The Java Software Development Kit is used to code your Java development language.
+    This also contains a program known as javac, which is the Java compiler. The Java
+    compiler is a separate program that is used to go through the Java code and break
+    the code into smaller pieces known as symbols.
+
+
+    In turn, once the Java compiler has done its part, it will then pass it on the
+    the Java Interpreter. This will take the compiled code and make it into a file
+    that can be understood by the underlying operating system. The Java Development
+    Kit can be downloaded from the following site:
+
+
+    http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# ## 4.2 The Java Runtime Environment\n\nThe Java Runtime Environment is specific\
+    \ to each operating system, and it is used to run the java program on the relevant\
+    \ operating system. Next, let’s understand how the compilation process works.\n\
+    \n# ### Step 1\n\nFirst you will write a java program and store it in a file with\
+    \ the .java extension. Let’s take an example of the below code.\n\n```\npublic\
+    \ class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"\
+    Hello World!\");\n    }\n}\n```\n\nWe will store this in a file called HelloWorld.java.\
+    \ Note that the name of the file has to match the main Java class in the program.\n\
+    \n# ### Step 2\n\nNext to compile the program, we will use the javac command from\
+    \ the java development kit. The command used to compile the program is shown below.\n\
+    \n```\njavac HelloWorld.java\n```\n\nThis will compile the program and create\
+    \ a new class file called HelloWorld.class\n\n# ### Step 3\n\nThe next step is\
+    \ to run the program. This can be done via the java program. So we just run the\
+    \ following command."
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '```
+
+    java HelloWorld
+
+    ```
+
+
+    The java program will then run on the machine. Note that we have not mentioned
+    any extension when running the java program.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# 4.3 Understanding the JRE
+
+
+    The Java Runtime Environment, as we have seen in the earlier section, is used
+    to run Java applications. This is an important aspect of the Java programming
+    language. The diagram below gives a better perspective of how the Java Runtime
+    Environment works.
+
+
+    ![](img/686a81b12470303bcb9a73c9bf6bac1c_42_0.png)
+
+
+    The compiler first compiles the Java program into a file with the .class extension.
+    If you wanted to execute the java program onto a Windows machine, you would need
+    to install the compatible Java Runtime Environment onto the Windows machine and
+    then run the Java program. If you wanted to execute the Java program onto a Linux
+    machine, you would need to install the specific Java Runtime Environment for Linux.
+
+
+    Below is the link for the Java Runtime Environment downloads for the various operating
+    systems.
+
+
+    http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# 4.4 Different Java Editions
+
+
+    Java has many editions. The different editions and what they stand for are briefly
+    discussed below:
+
+
+    +   - The Java Standard Platform Edition – This is the core Java platform. This
+    is what provides the Java programming API, which are the different programs that
+    compile and run Java programs. Here you get access to the core classes, such as
+    the system classes, networking, security, database access and graphical user interfaces.
+
+    - Java Enterprise Edition – This is mostly used for developing and supporting
+    applications on a major scale. It''s primarily targeted at large organizations
+    that need to develop application on multiple tiers and multiple platforms. Here
+    you can build more scalable, reliable, and secure network applications.
+
+    - Java Micro Edition – This is a smaller subset of the Java programming language
+    and is used to develop application for smaller devices such as mobile phones and
+    tablets.
+
+    - Java FX - JavaFX is a platform for creating rich internet applications using
+    a lightweight user interface API. This API can make use of high level graphic
+    processors to create more appealing applications to the end users.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# 5. Building Your Environment
+
+
+    In order to start working with creating Java programs, you need to get the following
+    in place.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# 5.1 Installing the Java Development Kit
+
+
+    The Java Development Kit, or JDK, is used to develop Java based programs. The
+    JDK has all the necessary supporting code to help in developing Java based applications.
+    It is released by Oracle, who continues to make improvements and revisions on
+    fixes reported by developers or end users. The link for the Java Development Kit
+    can be found below.
+
+
+    http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+
+    Once the Java Development Kit is installed, the next step is to ensure that it
+    is installed properly. The easiest way to do this, is to issue the following command.
+
+
+    ```
+
+    java -version
+
+    ```
+
+
+    A sample output is given below. It will show the Java version that is installed
+    on the system.
+
+
+    java version "1.8.0_101"
+
+
+    Java(TM) SE Runtime Environment (build 1.8.0_101-b13)
+
+
+    Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# ## 5.2 Writing Programs in Editors
+
+
+    To write programs, you use a simple editor such as Notepad or you can use a full-fledged
+    Integrated Development Environment (IDE). Below is a list of some of the most
+    popular IDE’s that are available for Java and some of their relevant features.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# ## 5.2.1 Eclipse
+
+
+    This IDE has been around for quite a long time and is very popular and widely
+    used amongst the Java development community. Some of the core features of the
+    IDE are:
+
+
+    +   - It''s free and open source. Hence there are many developers who keep contributing
+    to the IDE.
+
+    - It can be used to develop applications in other languages such as C++, Ruby,
+    HTML5 and PHP.
+
+    - It has a rich client platform.
+
+    - It provides the ability of refactoring code.
+
+    - It helps in code completion.
+
+    - It has a wide variety of extensions and plugins.
+
+    - It also has support for most source code version control systems.
+
+
+    The official link for Eclipse is www.eclipse.org'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# 5.2.2 IntelliJ IDEA
+
+
+    This is another popular IDE used by the Java development community. Some of the
+    core features of this IDE are:
+
+
+    +   * The community edition is free and open source.
+
+    * The paid edition provides much more features and allows developers to build
+    enterprise applications with the Java Enterprise Edition.
+
+    * It provides the ability of refactoring code.
+
+    * It helps in code completion.
+
+    * It has a wide variety of extensions and plugins.
+
+    * It also has support for most source code version control systems.
+
+
+    The official link for IntelliJ IDEA is https://www.jetbrains.com/idea'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# 5.2.3 NetBeans
+
+
+    This IDE can also be used to develop all sorts of Java based applications, right
+    from Java standard programs to enterprise and mobile based applications. Some
+    of the core features of the IDE:
+
+
+    +   - With its editors, code analyzers, and converters you can quickly and smoothly
+    upgrade your applications to use new Java language constructs, such as lambdas,
+    functional operations, and method references.
+
+    - Batch analyzers and converters are provided to search through multiple applications
+    at the same time, matching patterns for conversion to new Java language constructs.
+
+    - NetBeans IDE provides different views of your data, from multiple project windows
+    to helpful tools for setting up your applications and managing them efficiently.
+
+    - It also has support for most source code version control systems.
+
+
+    The official link for NetBeans is https://netbeans.org
+
+
+    Below is a snapshot of how a Java Program would be created in an IntelliJ IDEA
+    Community Edition environment.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '![](img/686a81b12470303bcb9a73c9bf6bac1c_52_0.png)
+
+
+    When creating a new project, you would choose the Java environment, as well as
+    the Project SDK that would be linked to the Java SDK installed in your machine.
+    Once you give a name to the project, you can then choose to create a new Java
+    class.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'Once the class is created , you can then edit the program in the editor
+
+
+    ![](img/686a81b12470303bcb9a73c9bf6bac1c_53_0.png)'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# 6. Your First Java Program\n\nLet’s dive into your first Java program. We\
+    \ have already seen in the previous chapter how to get the entire Java setup in\
+    \ place. It’s now time to develop your first “Hello World” program. Below is the\
+    \ code you need to enter.\n\nExample 14: The following program is used to showcase\
+    \ a simple Hello World program.\n\n```\n// This is a Java class\npublic class\
+    \ Demo\n{\n    // This is the main entry point of the Java program\n    public\
+    \ static void main(String args[])\n    {\n        // Here we are printing Hello\
+    \ world to the console\n        System.out.println(\"Hello World\");\n    }\n\
+    }\n```\n\nWith this program, the output is as follows:\n\nHello World\n\nNow let’s\
+    \ break the program down into multiple steps to understand each statement.\n\n\
+    +   1) public class Demo:\nThis statement is used to define the class for the\
+    \ code. All Java code must reside in a class. It is the code in this class which\
+    \ gets executed. The name of the main class should also be the same name as the\
+    \ file which holds the class.\n\n+   2) public static void main(String args[])"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "This is the main entry point for the Java program. The code will start executing\
+    \ from this function. That is why this is called as the main function. The function\
+    \ does not return any values, hence it has the void prefix. You can pass arguments\
+    \ when calling the main java program. This will be available in the args[] parameter.\n\
+    \n# 3) // This is a Java class\n\nThis is a way to add a comment to the program.\
+    \ Comments are good for documentation purposes and help to maintain the code for\
+    \ the future.\n\n# 4) System.out.println(\"Hello World\")\n\nFinally we are using\
+    \ the String.out.println function to print Hello World to the console.\n\nSo now\
+    \ we have seen how to write our first program. Let's look at another example,\
+    \ but this time let's look at using a variable.\n\n# Example 15: The following\
+    \ program is used to showcase how you can write your second program.\n\n```\n\
+    // This is a Java class\npublic class Demo\n{\n    // This is the main entry point\
+    \ of the Java program\n    public static void main(String args[])\n    {\n   \
+    \     // Initializing a variable\n        int i=5;\n\n        // Displaying the\
+    \ variable\n        System.out.println(\"The value of i is \"+i);\n    }\n}\n\
+    ```\n\nWith this program, the output is as follows:"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# The value of i is 5\n\nLet’s look at the changes we made in this program.\n\
+    \n1) int=5;\n\nHere we have declared a variable called ‘i' and assigned a value\
+    \ of 5 to this variable. There is a separate chapter on variables and data types,\
+    \ but to get the hang of how to start using variables, you can experiment with\
+    \ the above program.\n\n2) System.out.println(\"The value of i is \"+i);\n\nNow\
+    \ we are working displaying the value of our variable. We are still using our\
+    \ System.out.println function. But here we are combining the string \"The value\
+    \ of i is\" and the value of ‘i’ itself. This can be done with the help of the\
+    \ + operator.\n\nNow let's look at a similar program to the one shown above, but\
+    \ with a small change to the program.\n\n# Example 16: The following program is\
+    \ used to showcase how you can write your third program.\n\n```\n// This is a\
+    \ Java class\npublic class Demo\n{\n    // This is the main entry point of the\
+    \ Java program\n    public static void main(String args[])\n    {\n        //\
+    \ Initializing a variable\n        int i=5;\n\n        // Displaying the variable\n\
+    \        System.out.println(\"The value of i is \"+i);\n    }\n}\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '```
+
+    // We are incrementing the value of i by one
+
+
+    i=i+1;
+
+
+    System.out.println("The value of i is "+i);
+
+    }
+
+    }
+
+    ```
+
+
+    With this program, the output is as follows:
+
+
+    # The value of i is 5
+
+
+    # The value of i is 6
+
+
+    Let’s look at the changes we made in this program.
+
+
+    +   1) i=i+1
+
+
+    Here we are merely incrementing the value of ‘i’ by one. We are then assigning
+    the incremented value back to ‘i’ again.
+
+
+    Great, we have seen our first few programs. Now you are ready to work with a few
+    more advanced topics in the following chapters.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# 7. Data Types
+
+
+    Data types are used in programming languages to store different types of data.
+    For example if you wanted to store text data, you would probably have a data type
+    of ''string''. If you wanted to store a number you can have a data type of ''number''
+    or ''integer''. This depends on the programming language and what data types are
+    defined. Data types help to make the program type safe and free from errors.
+
+
+    Now let''s look at the different data types available in Java.
+
+
+    # Table 1: Data Types
+
+
+    | Data Type | Description | Range (bits) |
+
+    | byte | This is an 8-bit signed two complement integer | -128 to 127 |
+
+    | short | This is a 16-bit signed two complement integer | -32,768 to 32,767 |
+
+    | int | This is a 32-bit signed two complement integer | -2,147,483,648 to 2,147,483,647
+    |
+
+    | long | This is a 64-bit signed two complement integer | -9223372036854775808
+    to 9223372036854775808 |
+
+    | float | This is a single-precision 32-bit IEEE 754 floating point | -3.40282338
+    to 3.40282338 |
+
+    | double | This is a double-precision 64-bit IEEE 754 floating point | -1.7976931486232e308
+    to 1.7976931486232e308 |
+
+    | char | This is a single 16-bit Unicode character | 0 to 65,535 |'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '| boolean | This has only two possible values: true and false | 8 |
+
+    | string | This is used to define a sequence of characters | N/A |
+
+
+    Next we will discuss each data type in more detail with the help of a Java program
+    for each data type. Remember to try these out yourself to help better understand
+    the concepts.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# ## 7.1 Byte Data Type\n\nThis data type is used to define an unsigned integer,\
+    \ which can have a range of values from -128 to 127.\n\n### Example 17: The following\
+    \ program is used to showcase the byte data type.\n\n```\n// This is a Java class\n\
+    public class Demo\n{\n    // This is the main entry point of the Java program\n\
+    \    public static void main(String[] args[])n    {\n        // Initializing a\
+    \ variable\n        byte i=5;\n\n        // Displaying the variable\n        System.out.println(\"\
+    The byte value is \"+i);\n    }\n}\n```\n\nWith this program, the output is as\
+    \ follows:\n\n**The byte value is 5**"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# 7.2 Short Data Type\n\nThis data type is used to define a short data type,\
+    \ which is a 16-bit signed two complement integer with a range of -32,768 to 32,767.\n\
+    \nExample 18: The following program is used to showcase the short data type.\n\
+    \n```\n// This is a class\npublic class Demo\n{\n    // This is the main entry\
+    \ point of the Java program\n    public static void main(String args[])\n    {\n\
+    \        // Initializing a variable\n        short i=5;\n        short j=-6;\n\
+    \n        // Displaying the variable\n        System.out.println(\"The value of\
+    \ i is \"+i\");\n        System.out.println(\"The value of j is \"+j\");\n   \
+    \ }\n}\n```\n\nWith this program, the output is as follows:\n\nThe value of i\
+    \ is 5\n\nThe value of j is -6"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# # 7.3 Int Data Type\n\nThis data type is used to define a signed integer,\
+    \ which has a range of values from -2,147,483,648 to 2,147,483,647.\n\nExample\
+    \ 19: The following program is used to showcase the int data type.\n\n```\n//\
+    \ This is a Java class\npublic class Demo\n{\n    // This is the main entry point\
+    \ of the Java program\n    public static void main(String[] args)\n{\n       \
+    \ // Initializing a variable\n        int i=5;\n        int j=-6;\n\n        //\
+    \ Displaying the variable\n        System.out.println(\"The value of i is \"+i);\n\
+    \        System.out.println(\"The value of j is \"+j);\n    }\n}\n```\n\nWith\
+    \ this program, the output is as follows:\n\n**The value of i is 5**\n\n**The\
+    \ value of j is -6**"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# ## 7.4 Long Data Type\n\nThis data type is used to define a 64-bit signed\
+    \ two complement integer, which has a range of values from -9223372036854775808\
+    \ to 9223372036854775807.\n\n**Example 20: The following program is used to showcase\
+    \ the long data type.**\n\n```\n// This is a Java class\npublic class Demo\n{\n\
+    \    // This is the main entry point of the Java program\n    public static void\
+    \ main(String[] args)\n{\n        // Initializing a variable\n        long i =\
+    \ 1000000000;\n        long j = -450000000;\n\n        // Displaying the variable\n\
+    \        System.out.println(\"The value of i is \"+i\\);\n        System.out.println(\"\
+    The value of j is \"+j\");\n    }\n}\n```\n\nWith this program, the output is\
+    \ as follows:\n\n**The value of i is 1000000000**\n\n**The value of j is 450000000**"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# 7.5 Float Data Type\n\nThis data type is used to define a single-precision\
+    \ floating point type, which has a range of values from -3.402823e38 to 3.402823e38.\n\
+    \nExample 21: The following program is used to showcase the float data type.\n\
+    \n```\n// This is a Java class\npublic class Demo\n{\n    // This is the main\
+    \ entry point of the Java program\n    public static void main(String[] args)\n\
+    \    {\n        // Initializing a variable\n        float i = 10.11F;\n      \
+    \  float j = -45.44F;\n\n        // Displaying the variable\n        System.out.println(\"\
+    The value of i is \"+i);\n        System.out.println(\"The value of j is \"+j);\n\
+    \    }\n}\n```\n\nWith this program, the output is as follows:\n\nThe value of\
+    \ i is 10.11\n\nThe value of j -45.44"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "# # 7.6 Double Data Type\n\nThis data type is used to define a double-precision\
+    \ floating point type, which has a range of values from -1.79769313486232e-308\
+    \ to 1.79769313486232e+308.\n\nExample 22: The following program is used to showcase\
+    \ the double data type.\n\n```\n// This is a Java class\npublic class Demo\n{\n\
+    \    // This is the main entry point of the Java program\n    public static void\
+    \ main(String args[])\n    {\n        // Initializing a variable\n        double\
+    \ i = 10.111111111;\n        double j = -45.44444444;\n\n        // Displaying\
+    \ the variable\n        System.out.println(\"The value of i is \"+i);\n      \
+    \  System.out.println(\"The value of j is \"+j);\n    }\n}\n```\n\nWith this program,\
+    \ the output is as follows:\n\n**The value of i is 10.111111111**\n\n**The value\
+    \ of j is -45.44444444**"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# 7.7 Char Data Type\n\nThis data type is used to define a single Unicode character.\n\
+    \nExample 23: The following program is used to showcase the char data type.\n\n\
+    ```\n// This is a Java class\npublic class Demo\n{\n    // This is the main entry\
+    \ point of the Java program\n    public static void main(String args[])\n    {\n\
+    \        // Initializing a variable\n        char i = 'A';\n        char j = 'a';\n\
+    \n        // Displaying the variable\n        System.out.println(\"The value of\
+    \ i is \"+i);\n        System.out.println(\"The value of j is \"+j);\n    }\n\
+    }\n```\n\nWith this program, the output is as follows:\n\nThe value of i is A\n\
+    \nThe value of j is a"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "# 7.8 Boolean Data Type\n\nThis data type is used to define a Boolean value,\
+    \ which can either be true or false.\n\nExample 24: The following program is used\
+    \ to showcase the Boolean data type.\n\n```\n// This is a Java class\npublic class\
+    \ Demo\n{\n    // This is the main entry point of the Java program\n    public\
+    \ static void main(String args[])n    {\n        // Initializing a variable\n\
+    \        boolean i = true;\n        boolean j = false;\n\n        // Displaying\
+    \ the variable\n        System.out.println(\"The value of i is \"+i\");\n    \
+    \    System.out.println(\"The value of j is \"+j\");\n    }\n}\n```\n\nWith this\
+    \ program, the output is as follows:\n\nThe value of i is True\n\nThe value of\
+    \ j is False"
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# 7.9 String Data Type\n\nThis data type is used to define a sequence of characters.\n\
+    \n**Example 25: The following program is used to showcase the string data type.**\n\
+    \n```\n// This is a Java class\npublic class Demo\n{\n    // This is the main\
+    \ entry point of the Java program\n    public static void main(String args[])\n\
+    \    {\n        // Initializing a variable\n        String i = \"Hello\";\n  \
+    \      String j = \"World\";\n\n        // Displaying the variable\n        System.out.println(\"\
+    The value of i is \"+i);\n        System.out.println(\"The value of j is \"+j);\n\
+    \    }\n}\n```\n\nWith this program, the output is as follows:\n\n**The value\
+    \ of i is Hello**\n\n**The value of j is World**"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# 7.10 Default Values for Fields
+
+
+    If no values are defined for fields in the various data types, they are assigned
+    their default values. We will discuss fields in detail when we cover classes in
+    book 2 of the series, but it’s good to have a basic understanding of this point.
+    The table below provides the default values for the various data types.
+
+
+    Table 2: Data Types Default Values
+
+
+    | Data Type | Default Value |
+
+    |--- | --- |
+
+    | byte | 0 |
+
+    | short | 0 |
+
+    | int | 0 |
+
+    | long | 0L |
+
+    | float | 0.0f |
+
+    | double | 0.0d |
+
+    | char | ''\u0000'' |
+
+    | string | null |
+
+    | boolean | false |'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# 8. Variables
+
+
+    Variables are used to define values which can be changed during the course of
+    the program. You can have different types of variables based on the various data
+    types. Let''s look at the different types of variables we can create based on
+    their data type.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# 8.1 Character Variables\n\nThese are variables that are used to hold characters,\
+    \ which can be changed at any point in time in the program. Let's look at an example\
+    \ of a character variable.\n\nExample 26: The following program is used to showcase\
+    \ character variables.\n\n```\n// This is a Java class\npublic class Demo\n{\n\
+    \    // This is the main entry point of the Java program\n    public static void\
+    \ main(String[] args)\n    {\n        // Initializing a variable\n        char\
+    \ i='A';\n\n        // Displaying the variable\n        System.out.println(\"\
+    The value of i is \"+i);\n        i='B';\n\n        System.out.println(\"The value\
+    \ of i is \"+i);\n    }\n}\n```\n\nWith this program, the output is as follows:\n\
+    \nThe value is i i is A\n\nThe value is i i is B"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# 8.2 Integer Variables\n\nThese are variables that are used to hold integers,\
+    \ which can be changed at any point in time in the program. Let's look at an example\
+    \ of an integer variable.\n\nExample 27: The following program is used to showcase\
+    \ integer variables.\n\n```\n// This is a Java class\npublic class Demo\n{\n \
+    \   // This is the main entry point of the Java program\n    public static void\
+    \ main(String args[])\n    {\n        // Initializing a variable\n        int\
+    \ i=5;\n\n        // Displaying the variable\n        System.out.println(\"The\
+    \ value of i is \"+i);\\n        i=6;\n\n        System.out.println(\"The value\
+    \ of i is \"+i);\\n    }\n}\n```\n\nWith this program, the output is as follows:\n\
+    \nThe value is i i is 5\n\nThe value is i i is 6"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "# 8.3 Floating Point Variables\n\nThese variables are used to hold floating\
+    \ point numbers, which can of course be changed at any point in time within the\
+    \ program. Let's look at an example of a floating point variable.\n\nExample 28:\
+    \ The following program is used to showcase floating point variables.\n\n```\n\
+    // This is a Java class\npublic class Demo\n{\n    // This is the main entry point\
+    \ of the Java program\n    public static void main(String args[])\n    {\n   \
+    \     // Initializing a variable\n        float i=1.11F;\n\n        // Displaying\
+    \ the variable\n        System.out.println(\"The value of i is \"+i);\n      \
+    \  i=2.22F;\n        System.out.println(\"The value of i is \"+i);\n    }\n}\n\
+    ```\n\nWith this program, the output is as follows:\n\nThe value of i is 1.11\n\
+    \nThe value of i is 2.22"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "# 8.4 Double Point Variables\n\nThese are variables that are used to hold double\
+    \ point numbers, which can be changed at any point in time in the program. Let's\
+    \ look at an example of a double point variable.\n\nExample 29: The following\
+    \ program is used to showcase double point variables.\n\n```\n// This is a Java\
+    \ class\npublic class Demo\n{\n    // This is the main entry point of the Java\
+    \ program\n    public static void main(String args[])\n    {\n        // Initializing\
+    \ a variable\n        double i=1.11111;\n\n        // Displaying the variable\n\
+    \        System.out.println(\"The value of i is \"+i);\n        i=2.22222;\n \
+    \       System.out.println(\"The value of i is \"+i);\n    }\n}\n```\n\nWith this\
+    \ program, the output is as follows:\n\nThe value of i is 1.11111\n\nThe value\
+    \ of i is 2.22222"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# 8.5 String Variables\n\nThese are variables used to hold strings, which can\
+    \ be changed at any point in time within the program. Let's look at an example\
+    \ of a string variable.\n\nExample 30: The following program is used to showcase\
+    \ string variables.\n\n```\n// This is a Java class\npublic class Demo\n{\n  \
+    \  // This is the main entry point of the Java program\n    public static void\
+    \ main(String args[])\n    {\n        // Initializing a variable\n        String\
+    \ i=\"Hello\";\n\n        // Displaying the variable\n        System.out.println(\"\
+    The value of i is \"+i);\n        i=\"World\";\n        System.out.println(\"\
+    The value of i is \"+i);\n    }\n}\n```\n\nWith this program, the output is as\
+    \ follows:\n\nThe value of i is Hello\n\nThe value of i is World"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# 8.6 Boolean Variables\n\nThese variables are used to hold Booleans, which\
+    \ can of course be changed at any point during the program. Let’s look at an example\
+    \ of a Boolean variable.\n\nExample 31: The following program is used to showcase\
+    \ Boolean variables.\n\n```\n// This is a Java class\npublic class Demo\n{\n \
+    \   // This is the main entry point of the Java program\n    public static void\
+    \ main(String[] args)\n{\n        // Initializing a variable\n        Boolean\
+    \ i=true;\n\n        // Displaying the variable\n        System.out.println(\"\
+    The value of i is \"+i);\n        i=false;\n        System.out.println(\"The value\
+    \ of i is \"+i);\n    }\n}\n```\n\nWith this program, the output is as follows:\n\
+    \nThe value of i is true\n\nThe value of i is False"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "# 8.7 Variables Scope\n\nVariables also have a defined scope and this depends\
+    \ on where they are defined in a program. Let's take the sample block of code\
+    \ given below.\n\n```\npublic static void main(String args[])\n{\n    int a;\n\
+    }\n```\n\nHere ‘a’ is defined in the beginning of the main function and hence\
+    \ has a global scope. This means it can be used anywhere in the program. But now\
+    \ let’s look at another example of variable declaration.\n\n```\npublic static\
+    \ void main(String args[])\n{\n    // Inner Scope\n    int a;\n}\n// Integer a\
+    \ cannot be used here\n```\n\nIn the above example, the variable ‘a’ is now limited\
+    \ to the second curly braces and cannot be accessed outside the Inner Scope curly\
+    \ braces. The scope of integer ‘a’ is now private to the block of code inside\
+    \ the second curly braces. Let's look now at an example on using variables defined\
+    \ by a particular scope.\n\n# Example 32: The following program is used to show\
+    \ variable scope.\n\n```\nimport java.io.Console;\n\n// This is a Java class\n\
+    public class Demo\n```"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "```\n{\n  // This is the main entry point of the Java program\n  public static\
+    \ void main(String args[]) {\n  {\n    int i=5; // Outer Scope\n    System.out.println(\"\
+    The value of i is \"+i);\n    {\\n      int j=6; // Inner Scope\n      System.out.println(\"\
+    The value of j is \"+j);\n    }\n  }\n}\n}\n```\n\nWith this program, the output\
+    \ is as follows::\n\n# The value of i is 5\n\n# The value of j is 6\n\nLet's look\
+    \ at the same example and try to create an error in the program to confirm our\
+    \ understanding of scope variables.\n\n# Example 33: The following program is\
+    \ used to show the wrong way to use variables scope.\n\n```\nimport java.io.Console;\n\
+    \n// This is a Java class\npublic class Demo\n{\n  // This is the main entry point\
+    \ of the Java program\n  public static void main(String args[]) {\n  {\n    int\
+    \ i=5; // Outer Scope\n    System.out.println(\"The value of i is \"+i);\n  }\n\
+    }\n```"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '```
+
+    int j=6; // Inner Scope
+
+    System.out.println("The value of j is "+j);
+
+    n}
+
+    System.out.println("The value of j is "+j);
+
+    n}
+
+    }
+
+    ```
+
+
+    With this program, you will actually get a compile time error.
+
+
+    **Error:(15, 49) java: cannot find symbol
+
+
+    **symbol: variable j
+
+
+    **location: class Demo
+
+
+    As right so, there is an error in the program because we are trying to use the
+    value of ‘j’ outside the scope in which it is defined.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# 9. Constants\n\nA constant is an identifier whose value does not change during\
+    \ the course of the program. For example, if you were to define an identifier\
+    \ with a name of ‘val’, assign a value of 5 to it, and also define it as a constant\
+    \ value, then you would not be able to change the value of that identifier.\n\n\
+    In Java, the syntax for defining a constant is shown below.\n\n```\nstatic final\
+    \ datatype identifier = value\n```\n\nWhere:\n\n+   - Static is a keyword which\
+    \ means that the variable is available without the need of having to define an\
+    \ instance of the class.\n- The final keyword is used to denote that the value\
+    \ assigned to the identifier cannot be changed during the course of the program.\n\
+    \nLet’s now at an example of how we can define constants in a program.\n\n# Example\
+    \ 34: The following program is used to show how to define constants.\n\n```\n\
+    // This is a Java class\npublic class Demo\n{\n    static final int i=5;\n\n//\
+    \ This is the main entry point of the Java program\npublic static void main(String\
+    \ args[])\n{\n    System.out.println(\"The value of i is \"+i);\n}\n\n```"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "With this program, the output is as follows:\n\n# The value of i is 5\n\nNow\
+    \ let’s write the same program, but this time try to change the value of ‘i’ during\
+    \ the course of the program.\n\n# Example 35: The following program is used to\
+    \ show the wrong way to work with constants.\n\n```\n// This is a Java class\n\
+    public class Demo\n{\n    static final int i=5;\n    // This is the main entry\
+    \ point of the Java program\n    public static void main(String args[])\n{\n \
+    \       System.out.println(\"The value of i is \"+i);\n        i++;\n    }\n}\n\
+    ```\n\nWith this program, you will get a compile time error as shown below.\n\n\
+    Error:(10, 9) java: cannot assign a value to final variable\n\nWe can define multiple\
+    \ constants in a program and we can also use them alongside normal variables.\
+    \ Let’s look at another example of how we can use constants.\n\n# Example 36:\
+    \ The following program is used to show another example of constants.\n\n```\n\
+    // This is a Java class\npublic class Demo\n```"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "```\n{\n  static final int ValA=5;\n  static final int ValB=5;\n  // This is\
+    \ the main entry point of the Java program\n  public static void main(String args[])\n\
+    {\n    int ValC=ValA+ValB;\n    System.out.println(\"The value of ValC is \"+ValC);\n\
+    \  }\n}\n```\n\nIn the above program we are carrying out the following steps:\n\
+    \n+   - First we are defining 2 constants – ValA and ValB.\n- We then use them\
+    \ in an operation with a normal variable ValC. We are just performing a simple\
+    \ addition operation.\n\nWith this program, the output is as follows:\n\n# The\
+    \ value of ValC is 5"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# 10. Operators
+
+
+    There are various types of operators available in Java. The operators help in
+    carrying out various operations on the defined variables in a Java program. Let’s
+    look at each of the operators in more detail.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "# # 10.1 Arithmetic Operators\n\nThese are operators that are used when working\
+    \ with numbers. The most common operators are shown below, with an example of\
+    \ them in action in one program.\n\nTable 3: Arithmetic Operators\n\n| Operator\
+    \ | Operation |\n| --- | --- |\n| + | This is used to add two operands |\n| -\
+    \ | This is used to subtract one operand |\n| * | This is used to multiply two\
+    \ operands |\n| / | This is used to divide one operand by another |\n| % | This\
+    \ gives a percentage value after a division operator |\n| ++ | This is used to\
+    \ increment a value by one |\n| -- | This is used to decrement a value by one\
+    \ |\n\nExample 37: The following program shows the way we can use arithmetic operators.\n\
+    \n```\n// This is a Java class\npublic class Demo\n{\n    // This is the main\
+    \ entry point of the Java program\n    public static void main(String args[])\n\
+    \    {\n        int i=4;\n        int j=5;\n\n        //The addition of the two\
+    \ operands\n        System.out.println(\"The addition of the two operands is \"\
+    \ + (i+j));\n\n        //The subtraction of the two operands\n    }\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '```
+
+    System.out.println("The subtraction of the two operands is " + (i - j);\n
+
+    //The multiplication of the two operands
+
+    System.out.println("The multiplication of the two operands is " + (i * j);\n
+
+    //The division of the two operands
+
+    System.out.println("The division of the two operands is " + (i / j));
+
+
+    //The remainder after division of the two operands
+
+    System.out.println("The remainder after division of the two operands is " + (i
+    % j));
+
+
+    //Incrementing operand one by one
+
+    System.out.println("Incrementing operand one by one " + ((i));
+
+
+    //Decrementing operand two by one
+
+    System.out.println("Decrementing operand two by one " + (-j));
+
+    }
+
+    }
+
+    ```
+
+
+    With this program, the output is as follows:
+
+
+    # The addition of the two operands is 9
+
+
+    # The subtraction of the two operands is -1
+
+
+    # The multiplication of the two operands is 20
+
+
+    # The division of the two operands is 0
+
+
+    # The remainder after division of the two operands is 4
+
+
+    # Incrementing operand one by one 5
+
+
+    # Decrementing operand two by one 4'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "# 10.2 Relational Operators\n\nThese are operators that are used to determine\
+    \ the value of conditions based on the value of the operands. The relational operators\
+    \ possible in Java are given below, with all of them used in an example.\n\nTable\
+    \ 4: Relational Operators\n\n| Operator | Operation |\n| --- | --- |\n| = | This\
+    \ is used to check if two operands are equal |\n| != | This is used to check if\
+    \ two operands are not equal |\n| > | This is used to check if one operand is\
+    \ greater than another |\n| < | This is used to check if one operand is less than\
+    \ another |\n| >= | This is used to check if one operand is greater or equal to\
+    \ another |\n| <= | This is used to check if one operand is less than equal to\
+    \ another |\n\nIf a condition evaluates to true, then a value of 1 is returned\
+    \ else a value of 0 is returned.\n\nExample 38: The following program shows the\
+    \ way we can use relational operators.\n\n```\n// This is a Java class\npublic\
+    \ class Demo\n{\n    // This is the main entry point of the Java program\n   \
+    \ public static void main(String args[])\n    {\n        int i=4;\n    }\n```"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '```
+
+    int j=5;
+
+
+    //Is i equal to j
+
+    System.out.println("Is i equal to j " + (i==j));
+
+
+    //Is i not equal to j
+
+    System.out.println("Is i not equal to j " + (i!=j));
+
+
+    //Is i greater than j
+
+    System.out.println("Is i greater than j " + (i>j));
+
+
+    //Is i less than j
+
+    System.out.println("Is i less than j " + (i<j));
+
+
+    //Is i greater than or equal j
+
+    System.out.println("Is i greater than or equal j " + (i>=j));
+
+
+    //Is i less than or equal j
+
+    System.out.println("Is i less than or equal j " + (i<=j));
+
+    }
+
+    }
+
+    ```
+
+
+    With this program, the output is as follows:
+
+
+    Is i equal to j false
+
+
+    Is i not equal to j true
+
+
+    Is i greater than j false
+
+
+    Is i less than j true
+
+
+    Is i greater than or equal j false
+
+
+    Is i less than or equal j true'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# 10.3 Logical Operators\n\nThese are operators that are used to determine\
+    \ the value of conditions based on the value of the operands, where the operands\
+    \ are Boolean values. The logical operators possible in Java are given below.\n\
+    \nTable 5: Relational Operators\n\n| Operator | Operation |\n| --- | --- |\n|\
+    \ && | This is the logical AND operator |\n| || | This is the logical OR operator\
+    \ |\n| ! | This is the Logical NOT operator |\n\nBelow is a table for the logical\
+    \ operators based on the value of the operands for the AND operator, as well as\
+    \ an example of the different results.\n\nTable 5.1: Relational Operators - AND\n\
+    \n| Operand A | Operand B | Result |\n| --- | --- | --- |\n| True | True | 1 |\n\
+    | True | False | 0 |\n| False | True | 0 |\n| False | False | 0 |\n\nExample 39:\
+    \ The following program shows how to use logical operators for the AND operator.\n\
+    \n```\n// This is a Java class\npublic class Demo\n{\n    // This is the main\
+    \ entry point of the Java program\n    public static void main(String[] args)\n\
+    {\n    }\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '```
+
+    boolean i = true;
+
+    boolean j = true;
+
+    boolean k = false;
+
+
+    //i AND j
+
+    System.out.println("i AND j " + (i&j));
+
+
+    //i AND k
+
+    System.out.println("i AND k " + (i&k));
+
+
+    //k AND i
+
+    System.out.println("k AND i " + (k&i));
+
+
+    //k AND k
+
+    System.out.println("k AND k " + (k&k));
+
+    }
+
+    ```
+
+
+    With this program, the output is as follows:
+
+
+    i AND j true
+
+
+    i AND k false
+
+
+    k AND i false
+
+
+    k AND k false
+
+
+    Below is a table for the logical operators based on the value of the operands
+    for the OR operator, followed by an example.
+
+
+    # Table 5.2: Relational Operators - OR
+
+
+    | Operand A | Operand B | Result |
+
+    | --- | --- | --- |
+
+    | True | True | 1 |
+
+    | True | False | 1 |
+
+    | False | True | 1 |'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "| False | False | 0 |\n\n# Example 40: The following program shows how to use\
+    \ logical operators for the OR operator.\n\n```\n// This is a Java class\npublic\
+    \ class Demo\n{\n    // This is the main entry point of the Java program\n   \
+    \ public static void main(String args[])\n{\n        boolean i = true;\n     \
+    \   boolean j = true;\n        boolean k = false;\n\n        //i OR j\n      \
+    \  System.out.println(\"i OR \" + (i||j));\n\n        //i OR k\n        System.out.println(\"\
+    i AND k \" + (i&&k));\n\n        //k OR i\n        System.out.println(\"k OR i\
+    \ \" + (k||i));\n\n        //k OR k\n        System.out.println(\"k OR k \" +\
+    \ (k||k));\n    }\n}\n```\n\nWith this program, the output is as follows:\n\n\
+    **i OR j true**\n\n**i AND k true**\n\n**k OR i true**\n\n**k OR k false**"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "Last is a table for the logical operators based on the value of the operands\
+    \ for the NOT operator with an example showing the different results.\n\n# Table\
+    \ 5.3: Relational Operators - NOT\n\n| Operand A | Result |\n|---|---|\n| True\
+    \ | 0 |\n| False | 1 |\n\n# Example 41: The following program shows how to use\
+    \ logical operators for the NOT operator.\n\n```\n// This is a Java class\npublic\
+    \ class Demo\n{\n    // This is the main entry point of the Java program\n   \
+    \ public static void main(String args[])\n    {\n        boolean i = true;\n \
+    \       boolean j = false;\n\n        //NOT i\n        System.out.println(\"NOT\
+    \ i \" + (!i));\n\n        //NOT j\n        System.out.println(\"NOT j \" + (!j));\n\
+    \    }\n}\n```\n\nWith this program, the output is as follows:\n\nNOT i false\n\
+    \nNOT j true"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "# 10.4 Assignment Operators\n\nThese are operators that are used to make assignment\
+    \ operations easier. The assignment operators possible in Java are given below.\n\
+    \nTable 6: Assignment Operators\n\n| Operator | Operation |\n| --- | --- |\n|\
+    \ = | This is used to assign the value of an operation to an operand |\n| += |\
+    \ This is used to carry out the addition and assignment operator in one go |\n\
+    | -= | This is used to carry out the subtraction and assignment operator in one\
+    \ go |\n| *= | This is used to carry out the multiplication and assignment operator\
+    \ in one go |\n| /= | This is used to carry out the division and assignment operator\
+    \ in one go |\n| %= | This is used to carry out the modulus and assignment operator\
+    \ in one go |\n\nNow let’s look at how we can implement these operators in further\
+    \ detail through an example showcasing all the operators.\n\n# Example 42: The\
+    \ following program shows the way we can use assignment operators.\n\n```\n//\
+    \ This is a Java class\npublic class Demo\n{\n    // This is the main entry point\
+    \ of the Java program\n    public static void main(String args[])\n}\n```"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '```
+
+    int i = 5;
+
+    int j = 10;
+
+
+    //The value of i+j
+
+    System.out.println("The value of i+j is " + (i+j));
+
+
+    //The value of i+=j
+
+    System.out.println("The value of i+=j is " + (i+=j));
+
+
+    //The value of i=-j
+
+    System.out.println("The value of i=-j is " + (i-=j));
+
+
+    //The value of i*=j
+
+    System.out.println("The value of i*=j is " + (i*=j));
+
+
+    //The value of i /=j
+
+    System.out.println("The value of i /=j is " + (i /=j));
+
+
+    //The value of i%=j
+
+    System.out.println("The value of i%=j is " + (i%%=j));
+
+    }
+
+    ```
+
+
+    With this program, the output is as follows:
+
+
+    # The value of i+j is 15
+
+
+    # The value of i+=j is 15
+
+
+    # The value of i=-j is 5
+
+
+    # The value of i*=j is 50
+
+
+    # The value of i /=j is 5
+
+
+    # The value of i%=j is 5'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "# 10.5 Bitwise Operators\n\nThese are operators that are used to make bit operations\
+    \ on operands. The assignment operators possible in Java are given below with\
+    \ an example of them in action.\n\n| Operator | Operation |\n| :--- | :--- |\n\
+    | & | This copies a bit to the result if it exists in both operands |\n| | | This\
+    \ copies a bit to the result if it exists in either operands |\n| ^ | This copies\
+    \ a bit to the result if it exists in one operand but not in both |\n| << | Here\
+    \ the left operands value is moved left by the number of bits specified by the\
+    \ right operand |\n| >> | Here the left operands value is moved right by the number\
+    \ of bits specified by the right operand |\n\nTable 7: Bitwise Operators\n\n#\
+    \ Example 43: The following program shows the way we can use bitwise operators.\n\
+    \n```\n// This is a Java class\npublic class Demo\n{\n    // This is the main\
+    \ entry point of the Java program\n    public static void main(String[] args)\n\
+    \    {\n        int i = 5;\n        int j = 10;\n\n        //Showcasing the &\
+    \ bit operator\n        System.out.println(\"Showcasing the & bit operator \"\
+    \ + (i&j));\n    }\n}\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '```
+
+    //Showcasing the | | bit operator
+
+    System.out.println("Showcasing the | bit operator " + (ij));
+
+    n
+
+    //Showcasing the ^ bit operator
+
+    System.out.println("Showcasing the ^ bit operator " + (i^j));
+
+    n
+
+    //Showcasing the << bit operator
+
+    System.out.println("Showcasing the << bit operator " + (i<<2));
+
+    n
+
+    //Showcasing the >> bit operator
+
+    System.out.println("Showcasing the >> bit operator " + (i>>j));
+
+    }
+
+    ```
+
+
+    With this program, the output is as follows:
+
+
+    Showcasing the & bit operator 0
+
+
+    Showcasing the | bit operator 15
+
+
+    Showcasing the ^ bit operator 15
+
+
+    Showcasing the << bit operator 20
+
+
+    Showcasing the >> bit operator 0'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# 11. Type Conversion
+
+
+    The Java programming language allows type conversion between primitive types.
+    This allows the conversion from one data type to another. There are 2 types of
+    conversions, one is called implicit and the other, explicit. We will discuss implicit
+    conversion first. Here the java compiler performs the type conversion if it is
+    not mentioned in the program.
+
+
+    Below is an example of an implicit conversion.
+
+
+    ```
+
+    char valA=''a'';
+
+    int valB=valA;
+
+    ```
+
+
+    In the first statement, we are assigning the character value of ''a'' to an identifier
+    of valA. In the second statement, even though we declare a variable of the type
+    integer, we are still able to assign the variable of the type character to this.
+    This conversion is done directly by the compiler.
+
+
+    Type conversions should always be done with caution as it can have unknown consequences
+    in the output of the program. The following primitive types can undergo type conversion:
+
+
+    +   - char
+
+    - byte
+
+    - short
+
+    - int
+
+    - long
+
+    - float
+
+    - double
+
+
+    Now let''s look at an example on how we can work with implicit conversions.'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "# Example 44: The following program is used to showcase the implicit type conversion.\n\
+    \n```\n// This is a Java class\npublic class Demo\n{\n    // This is the main\
+    \ entry point of the Java program\n    public static void main(String[] args)\n\
+    {\n        char valA='a';\n        // Carrying out the type case operation\n \
+    \       int valB = valA;\n\n        System.out.println(\"The value of valA is\
+    \ \" + valA);\n        System.out.println(\"The value of valB is \" + valB);\n\
+    \    }\n}\n```\n\nWith this program, the output is as follows:\n\nThe value of\
+    \ valA is a\n\nThe value of valB is 97\n\nIn the output you can see that the character\
+    \ value is converted to its equivalent ASCII value when being taken as an integer.\
+    \ Let’s see another example with floating and double precision numbers.\n\n# Example\
+    \ 45: The following program is used to show the implicit type conversion with\
+    \ numbers.\n\n```\n// This is a Java class\npublic class Demo\n{\n    // This\
+    \ is the main entry point of the Java program\n    public static void main(String[]\
+    \ args)\n{\n}\n```"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "```\nfloat valA=5.55f;\n// Carrying out the type case operation\ndouble valB\
+    \ = valA;\n```\n\n```\nSystem.out.println(\"The value of valA is \" + valA\");\n\
+    System.out.println(\"The value of valA is \" + valB\");\n}\n```\n\nWith this program,\
+    \ the output is as follows:\n\n# The value of valA is 5.55\n\n# The value of valA\
+    \ is 5.550000190734863\n\nThere is one thing to note when it comes to conversion.\
+    \ In the above example, we called on the Java compiler to carry out an implicit\
+    \ type conversion from floating point number to double.\n\nBut the reverse cannot\
+    \ be done. This is because we cannot ask the compiler to convert a bigger byte\
+    \ data type to a smaller one. And since the double data type can hold more digits,\
+    \ we cannot convert it to a floating number using implicit conversion. So let's\
+    \ try this out and see what happens.\n\n# **Example 46: The following program\
+    \ shows an illegal implicit type conversion with numbers.**\n\n```\n// This is\
+    \ a Java class\npublic class Demo\n{\n    // This is the main entry point of the\
+    \ Java program\n    public static void main(String args[])\n    {\n        double\
+    \ valA=5.55;\n        // Carrying out the type case operation\n        float valB\
+    \ = valA;\n    }\n```"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "```\nSystem.out.println(\"The value of valA is \"+ valA);\n    System.out.println(\"\
+    The value of valA is \"+ valB);\n}\n}\n```\n\nWith this program, you would actually\
+    \ get a compile time error.\n\nError:(9, 22) java: possible loss of precision\n\
+    \nrequired: float\n\nfound: double\n\nWe can overcome the above problem by using\
+    \ the next type of conversion which is called explicit conversion. This is where\
+    \ we specifically tell the compiler to carry out the conversion. Let’s look at\
+    \ how we can achieve this via an example.\n\n# Example 47: The following program\
+    \ shows an illegal implicit type conversion with numbers.\n\n```\n// This is a\
+    \ Java class\npublic class Demo\n{\n    // This is the main entry point of the\
+    \ Java program\n    public static void main(String args[])\n    {\n        double\
+    \ valA=5.55;\n        // Carrying out the type case operation\n        float valB\
+    \ = (float)valA;\n\n        System.out.println(\"The value of valA is \"+ valA);\n\
+    \        System.out.println(\"The value of valA is \"+ valB);\n    }\n}\n```\n\
+    \nIn the above program we need to note the following:"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '+   In the statement ‘float valB = (float)valA’, we are now explicitly telling
+    the compiler to perform the cast. This will force the Java compiler to carry out
+    the conversion.
+
+
+    With this program, the output is as follows:
+
+
+    # The value of valA is 5.55
+
+
+    The value of valA is 5.55'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# 12. Loops\n\nThe usage of loops helps us to iterate through a set of values.\
+    \ Let’s say we wanted to go through a list of students and display their names.\
+    \ Loops can help you iterate through the list of students easily and can help\
+    \ access each record separately. Loops work on a condition and only execute the\
+    \ code based on the condition. A simple view of how this works is shown below.\n\
+    \n```\nLoop(condition)\n{\n  //Execute code\n}\n```\n\nIn the above abstract code\
+    \ snippet, we can see that the code will be executed based on the evaluation of\
+    \ the condition in the loop statement. There are different types of loop statement\
+    \ and in this chapter we will go through each of the available loop types in more\
+    \ detail."
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "# 12.1 While Loops\n\nThe general syntax of the while loop is given below.\n\
+    \n```\nWhile(condition)\n{\n  //execute code\n}\n```\n\nAs long as the condition\
+    \ is true in the ‘while’ loop, the code in the ‘while’ code block will continue\
+    \ to execute. Let’s look at an example of the ‘while’ statement.\n\n# Example\
+    \ 48: The following program is used to showcase how to use the while loop.\n\n\
+    ```\n// This is a Java class\npublic class Demo\n{\n  // This is the main entry\
+    \ point of the Java program\n  public static void main(String args[])\n{\n   \
+    \ int i=0;\n    while(i<4)\n    {\n      System.out.println(\"The value of i is\
+    \ \" + i);\n      i++;\n    }\n  }\n}\n```\n\nThings to note about the above program:\n\
+    \n+   - We are defining an integer ‘i’ which has an initial value of 1.\n- In\
+    \ the while loop we state the condition that while the value of ‘i’ is less than\
+    \ 4, keep on executing the code in the while code block."
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '+   In the while code block, we display the value of ‘i’ and also increment
+    the value of i.
+
+
+    With this program, the output is as follows:
+
+
+    **The value of i is 0**
+
+
+    **The value of i i is 1**
+
+
+    **The value of i i is 2**
+
+
+    **The value of i i is 3**'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "# 12.2 Do-While Loops\n\nThe general syntax of the ‘do-while’ loop is given\
+    \ below.\n\n```\ndo\n{\n//execute code\n}\nWhile(condition);\n```\n\nHere the\
+    \ the difference between the ‘do-while’ loop and the normal ‘while’ loop is that\
+    \ the condition is tested at the end of the block of code. This means that you\
+    \ will be guaranteed that the block of code will be executed at least once. Let’s\
+    \ look at an example of the ‘do-while’ statement.\n\n# Example 49: The following\
+    \ program is used to showcase how to use the do-while loop.\n\n```\n// This is\
+    \ a Java class\npublic class Demo\n{\n    // This is the main entry point of the\
+    \ Java program\n    public static void main(String[] args)\n{\n        int i=0;\n\
+    \        do\n        {\n            System.out.println(\"The value of i is \"\
+    + i);\n            i++;\n        }\n        while(i<4);\n    }\n}\n```\n\nWith\
+    \ this program, the output is as follows:\n\nThe value of i is 0"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: 'The value of i i is 1
+
+
+    The value of i i is 2
+
+
+    The value of i i is 3'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "# 12.3 For Loops\n\nThe general syntax of the 'for' loop is given below.\n\n\
+    ```\nfor(initialization;condition;incrementer)\n{\n  //execute code\n}\n```\n\n\
+    In the 'for' clause, you can specify the initialization, condition and incrementer\
+    \ in one statement. Let's look at an example of the 'for' loop statement.\n\n\
+    # Example 50: The following program is used to showcase how to use the for loop.\n\
+    \n```\n// This is a Java class\npublic class Demo\n{\n  // This is the main entry\
+    \ point of the Java program\n  public static void main(String args[]) {\n    for(int\
+    \ i=0;i<4;i++) {\n      System.out.println(\"The value of i is \"+i);\n    }\n\
+    \  }\n}\n```\n\nThings to note about the above program:\n\n+   - We are now initializing\
+    \ the value of 'i' in the for loop itself.\n- We are also testing for the condition\
+    \ of the value of 'i' in the for loop itself.\n- Next we are incrementing the\
+    \ value of 'i' in the for loop itself."
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: 'With this program, the output is as follows:
+
+
+    The value of i is 0
+
+
+    The value of i i is 1
+
+
+    The value of i i is 2
+
+
+    The value of i i is 3'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "# 12.4 Nested Loops\n\nWe can also nest loops one inside of another. Let’s\
+    \ look at some examples of nested loops.\n\nExample 51: The following program\
+    \ is used to showcase how to use nested loops.\n\n```\n// This is a Java class\n\
+    public class Demo\n{\n    // This is the main entry point of the Java program\n\
+    \    public static void main(String[] args) {\n        for(int i=0;i<3;i++) {\n\
+    \            System.out.println(\"The value of i is \" + i);\n            for(int\
+    \ j=0;j<3;j++) {\n                System.out.println(\"The value of j is \"+j);\n\
+    \            }\n        }\n    }\n}\n```\n\nWith this program, the output is as\
+    \ follows:\n\nThe value of i is 0\n\nThe value of j is 0\n\nThe value of j is\
+    \ 1\n\nThe value of j is 2\n\nThe value of i is 1\n\nThe value of j is 0\n\nThe\
+    \ value of j is 1"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "The value of j is 2\n\nThe value of i is 2\n\nThe value of j is 0\n\nThe value\
+    \ of j is 1\n\nThe value of j is 2\n\nLet's see another example on how we can\
+    \ use nested loops.\n\n# Example 52: The following program is used to showcase\
+    \ how to use nested loops.\n\n```\n// This is a Java class\npublic class Demo\n\
+    {\n    // This is the main entry point of the Java program\n    public static\
+    \ void main(String args[])\n    {\n        for(int i=0;i<3; i++)\n        {\n\
+    \            System.out.println(\"The value of i is \" + i);\n            int\
+    \ j=0;\n            while(j<3)\n            {\n                System.out.println(\"\
+    The value of j is \"+ j);\n                j++;\n            }\n        }\n  \
+    \  }\n}\n```\n\nWith this program, the output is as follows:\n\nThe value of i\
+    \ is 0\n\nThe value of j is 0"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: 'The value of j is 1
+
+
+    The value of j is 2
+
+
+    The value of i is 1
+
+
+    The value of j is 0
+
+
+    The value of j is 1
+
+
+    The value of j is 2
+
+
+    The value of i is 2
+
+
+    The value of j is 0
+
+
+    The value of j is 1
+
+
+    The value of j is 2'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "# 13. Decision Making\n\nThe use of decision making loops helps us to execute\
+    \ code only if a particular condition holds true. Let says we wanted to search\
+    \ for records in a student database and only award scholarships to those students\
+    \ whose aggregate marks were above 90%, we could use decision loops for this purpose.\n\
+    \nA sample decision loop structure is shown below.\n\n```\nif(condition)\n{\n\
+    \  //Execute code\n}\n```\n\nIn the above abstract code snippet, we can see that\
+    \ the code will be executed based on the evaluation of the condition in the ‘if’\
+    \ statement. Only if the condition is true, will the code block statements be\
+    \ executed. There are different types of decision making statements and in this\
+    \ chapter we will go through each of the available statements in more detail."
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: "# 13.1 If Statement\n\nIn the ‘if’ statement we get the chance to perform an\
+    \ action only if a certain condition evaluates to true.\n\nThe general syntax\
+    \ of the ‘if’ statement is given below.\n\n```\nif(condition)\n{\n  //Execute\
+    \ code\n}\n```\n\nExample 53: The following program is used to showcase how to\
+    \ use the if statement.\n\n```\n// This is a Java class\npublic class Demo\n{\n\
+    \  // This is the main entry point of the Java program\n  public static void main(String\
+    \ args[])\n  {\n    int i = 4;\n    if (i < 5)\n    {\n      System.out.println(\"\
+    The value of i is less than 5\");\n    }\n  }\n```\n\nThings to note about the\
+    \ above program:\n\n+   - We are defining a condition in the ‘if’ statement which\
+    \ says that only if the value of ‘i’ is less than 5, should the program write\
+    \ to console the relevant string.\n\nWith this program, the output is as follows:\n\
+    \nThe value of i is less than 5"
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "# 13.2 If-Else Statement\n\nIn the ‘if-else’ statement we have the option of\
+    \ executing an optional statement when the ‘if’ condition does not evaluate to\
+    \ true.\n\nThe general syntax of the ‘if-else’ statement is given below.\n\n```\n\
+    if(condition)\n{\n    //Execute code\n}\nelse\n{\n    //Execute code\n}\n```\n\
+    \nExample 54: The following program is used to showcase how to use the if-else\
+    \ statement.\n\n```\n// This is a Java class\npublic class Demo\n{\n    // This\
+    \ is the main entry point of the Java program\n    public static void main(String\
+    \ args[])\n    {\n        int i = 7;\n        if (i < 5)\n        {\n        \
+    \    System.out.println(\"The value of i is less than 5\");\n        }\n     \
+    \   else\n        {\n            System.out.println(\"The value of i is more than\
+    \ 5\");\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: 'With this program, the output is as follows:
+
+
+    # **The value of i is more than 5**'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "# 13.3 Switch Statement\n\nThe ‘switch’ statement helps us to evaluate multiple\
+    \ options at one time and then execute code based on those various options.\n\n\
+    The general syntax of the ‘switch’ statement is given below.\n\n```\nswitch(expression)\n\
+    {\n    case constant-expression :\n        statement(s);\n        break;\n\n \
+    \   case constant-expression :\n        statement(s);\n        break;\n\n    default\
+    \ :\n        statement(s);\n}\n```\n\nIn the ‘switch’ statement, you can evaluate\
+    \ the condition against multiple expressions. For each matching expression you\
+    \ can have a corresponding statement to execute. Once the statement is found,\
+    \ the break statement can help to exit from the switch statement. You can also\
+    \ have a default statement which gets executed if neither of the expressions matches\
+    \ the condition in the switch statement.\n\n# Example 55: The following program\
+    \ is used to showcase how to use the switch statement.\n\n```\n// This is a Java\
+    \ class\npublic class Demo\n{\n    // This is the main entry point of the Java\
+    \ program\n    public static void main(String args[])\n```"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: "```\n{\n  int i=4;\nswitch (i)\n{\n    case 1: System.out.println(\"The value\
+    \ of i is 1\");\n    break;\n    case 2: System.out.println(\"The value of i is\
+    \ 2\");\n    break;\n    case 3: System.out.println(\"The value of i is 3\");\n\
+    \    break;\n    case 4: System.out.println(\"The value of i is 4\");\n    break;\n\
+    \    default: System.out.println(\"The value of i is unknown\");\n    break;\n\
+    \  }\n}\n```\n\nThings to note about the above program:\n\n+   * We are defining\
+    \ the switch statement to evaluate the value of ‘i’.\n* We are defining the different\
+    \ possible values of ‘i’ using the case statements.\n* We finally define the default\
+    \ statement, which gets executed if none of the case statements match the desired\
+    \ expression.\n\nWith this program, the output is as follows:\n\n# The value of\
+    \ i is 4"
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "# 13.4 Nested Statements\n\nWe can also make use of nested statements in decision\
+    \ making. Let’s look at some examples of nested statements.\n\nExample 56: The\
+    \ following program shows how to use the nested decision making statements.\n\n\
+    ```\n// This is a Java class\npublic class Demo\n{\n    // This is the main entry\
+    \ point of the Java program\n    public static void main(String args[])\n    {\n\
+    \        int i=4;\n        if (i > 0)\n        {\n            if (i == 4)\n  \
+    \          {\n                System.out.println(\"The value is 4\");\n      \
+    \      }\n        }\n    }\n}\n```\n\nIn the above program we are making use of\
+    \ multiple if statements in the program.\n\nWith this program, the output is as\
+    \ follows:\n\nThe value of i is 4\n\nLet’s look at another example of using nested\
+    \ decision making statements."
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: "# Example 57: The following program shows how to use the nested decision making\
+    \ statements.\n\n```\n// This is a Java class\npublic class Demo\n{\n    // This\
+    \ is the main entry point of the Java program\n    public static void main(String[]\
+    \ args)\n    {\n        int i = 4;\n        if (i > 0) \n        {\n         \
+    \   switch (i) \n            {\n                case 1:\n                    System.out.println(\"\
+    The value of i is 1\");\n                    break;\n                case 2:\n\
+    \                    System.out.println(\"The value of i is 2\");\n          \
+    \          break;\n                case 3:\n                    System.out.println(\"\
+    The value of i is 3\");\n                    break;\n                case 4:\n\
+    \                    System.out.println(\"The value of i is 4\");\n          \
+    \          break;\n                default:\n                    System.out.println(\"\
+    The value of i is unknown\");\n                    break;\n            }\n   \
+    \     }\n    }\n}\n```"
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: 'With this program, the output is as follows:
+
+
+    # **The value of i i is 4**'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# Conclusion
+
+
+    You have made it to the end of the first book in our Step-By-Step Java series.
+    If you enjoyed getting started with Java, there is so much more to learn and do
+    with this wonderful language. Be sure to continue your journey with the second
+    book in the series, Java: A Detailed Approach to Practical Coding.
+
+
+    Java is a valuable programming language with a large array of uses. It is practical,
+    efficient, and most importantly, easily modified. It will be your greatest asset
+    and your best reference point for your future in programming. If you can think
+    it, you can create it. Don’t be afraid to try something new.
+
+
+    Good luck and happy programming!'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# About the Author
+
+
+    Nathan Clark is an expert programmer with nearly 20 years of experience in the
+    software industry.
+
+
+    With a master’s degree from MIT, he has worked for some of the leading software
+    companies in the United States and built up extensive knowledge of software design
+    and development.
+
+
+    Nathan and his wife, Sarah, started their own development firm in 2009 to be able
+    to take on more challenging and creative projects. Today they assist high-caliber
+    clients from all over the world.
+
+
+    Nathan enjoys sharing his programming knowledge through his book series, developing
+    innovative software solutions for their clients and watching classic sci-fi movies
+    in his free time.'
+  merge: -1
+  pgno: 131
