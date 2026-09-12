@@ -1,0 +1,6506 @@
+- img_proc: true
+  md: '# JAVA
+
+
+    # In 8 Hours
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_0_0.png)
+
+
+    # For Beginners
+
+
+    # Learn Java Fast!
+
+
+    Ray Yao'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # JAVA
+
+
+    # For Beginners
+
+
+    By Ray Yao
+
+
+    Include Tests & Answers'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Copyright © 2015 by Ray Yao
+
+    All Rights Reserved
+
+
+    Neither part of this book nor whole of this book may be reproduced or transmitted
+    in any form or by any means electronic, photographic or mechanical, including
+    photocopying, recording, or by any information storage or retrieval system, without
+    prior written permission from the author. All Rights Reserved!
+
+    Ray Yao
+
+
+    # About the Author:
+
+
+    +   Ray Yao:
+
+    Certified PHP engineer by Zend, USA
+
+    Certified JAVA programmer by Sun, USA
+
+    Certified SCWCD developer by Oracle, USA
+
+    Certified A+ professional by CompTIA, USA
+
+    Certified ASP. NET expert by Microsoft, USA
+
+    Certified MCP professional by Microsoft, USA
+
+    Certified TECHNOLOGY specialist by Microsoft, USA
+
+    Certified NETWORK+ professional by CompTIA, USA'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Highly Recommend Computer Books on Amazon:
+
+
+    +   - Linux Command Line
+
+
+    +   - JAVA for Beginners
+
+
+    +   - PHP for Beginners
+
+
+    +   - JavaScript for Beginners
+
+
+    +   - C++ for Beginners
+
+
+    +   - AngularJS for Beginners
+
+
+    +   - JQuery for Beginners
+
+
+    +   - Python for Beginners
+
+
+    +   - HTML CSS for Beginners
+
+
+    +   - C# for Beginners
+
+
+    +   - Visual Basic for Beginners
+
+
+    +   - XML for Beginners
+
+
+    +   - Advanced Java
+
+
+    +   - Advanced C++
+
+
+    +   - JavaScript 50 Useful Programs'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Preface
+
+
+    “JAVA for Beginners” covers all essential JAVA knowledge. You can learn complete
+    primary skills of JAVA fast and easily.
+
+    This book includes many practical Hands-On Projects. You can study JAVA coding
+    with Hands-On Projects.
+
+
+    # Source Code for Download
+
+
+    This book provides source code for download; you can download the source code
+    for better study, or copy the source code to your favorite editor to test the
+    programs. The download link of the source code is at the last page of this book.
+    Start coding today!'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Table of Contents
+
+
+    # Hour 1 Start JAVA
+
+
+    +   - Install Java
+
+
+    +   - What is Java?
+
+
+    +   - Run First Program
+
+
+    +   - Java Comments
+
+
+    +   - Output Commands
+
+
+    +   - Escaping Characters
+
+
+    +   - Java Keywords
+
+
+    +   - Data Types
+
+
+    +   - Create a Variable
+
+
+    +   - Arithmetical Operators
+
+
+    +   - Logical Operators
+
+
+    +   - Assignment Operators
+
+
+    +   - Comparison Operators
+
+
+    +   - Conditional Operator
+
+
+    +   - Hands-On Project: Calculation
+
+
+    # Hour 2 Statements
+
+
+    +   - If Statement
+
+
+    +   - If-else Statement
+
+
+    +   - Switch Statement
+
+
+    +   - For Loop
+
+
+    +   - While Loop
+
+
+    +   - Do-While Loop
+
+
+    +   - Break Statement
+
+
+    +   - Continue Statement
+
+
+    +   - Boolean-Expression'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Hands-On Project: Run 100 Times
+
+
+    # Hour 3 Array & Math
+
+
+    +   - Create an Array (1)
+
+    - Create an Array (2)
+
+    - Array Length
+
+    - Element Value
+
+    - Sort Array Elements
+
+    - Math Methods
+
+    - Ceil () & Floor ()
+
+    - Max () & Min ()
+
+    - pow () & sqrt ()
+
+    - Math.PI & random())
+
+    - Hands-On Project: Start with Zero
+
+
+    # Hour 4 String Processing
+
+
+    +   - String Length
+
+    - String Connection
+
+    - String Comparing
+
+    - Extract a Character
+
+    - Locate a Character
+
+    - Extract a Substring
+
+    - Case Change
+
+    - Character Replace
+
+    - String Type Change
+
+    - StringBuilder
+
+    - Hands-On Project: True or False
+
+
+    # Hour 5 Method, Class & Object
+
+
+    +   - Method'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Method & Arguments
+
+
+    Return Value
+
+
+    Class Definition
+
+
+    Object Declaration
+
+
+    Class & Object
+
+
+    Constructor
+
+
+    Constructor Example
+
+
+    Overloading
+
+
+    “this” Keyword (1)
+
+
+    “this” Keyword (2)
+
+
+    Instance & Local variable
+
+
+    Hands-On Project: Contact Info.
+
+
+    # Hour 6 Inheritance & Modifiers
+
+
+    Inheritance
+
+
+    “super” keyword
+
+
+    Overriding
+
+
+    Overloading & Overriding
+
+
+    Static variable
+
+
+    Static Method
+
+
+    final Variable
+
+
+    final Method()
+
+
+    final class
+
+
+    Polymorphism
+
+
+    Package & Import
+
+
+    Build a Package, Import Class
+
+
+    Hands-On Project: Inheritance
+
+
+    # Hour 7 Abstract & Interface
+
+
+    Abstract'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '+   Abstract Example
+
+
+    +   Permission
+
+
+    +   Default Member
+
+
+    +   Public Member
+
+
+    +   Private Member
+
+
+    +   Private Example
+
+
+    +   Protected Member
+
+
+    +   Interface
+
+
+    +   Interface Example
+
+
+    +   Abstract & Interface
+
+
+    +   Initializes Variables
+
+
+    +   Another Class
+
+
+    +   Hands-On Project: Max & Min
+
+
+    +   Hands-On Project: Max & Min
+
+
+    # Hour 8 Exception & I/O
+
+
+    +   Exception
+
+
+    +   Catch Exception (1)
+
+
+    +   Catch Exception (2)
+
+
+    +   Catch Exception (3)
+
+
+    +   Finally Command
+
+
+    +   Throw Exception
+
+
+    +   Throws Exception
+
+
+    +   File Class
+
+
+    +   FileOutputStream
+
+
+    +   FileInputStream
+
+
+    +   Create Thread
+
+
+    +   Extends Thread
+
+
+    +   Implements Runnable
+
+
+    +   Multi-Thread'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '+   Thread’s Methods
+
+    Thread''s Example
+
+    Hands-On Project: Out of Range
+
+    Hands-On Project: Mult Tasks
+
+
+    # Appendix Java Tests & Answers
+
+
+    +   Tests
+
+    Answers
+
+
+    # Source Code for Download'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Hour 1
+
+
+    # Start JAVA'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Install Java
+
+
+    In order to create any Java program, the Java development environment needs to
+    be available on the local computer system.
+
+
+    # JDK (also called JSDK, Java SE)
+
+
+    JDK (Java Development Kit) contains all Java class libraries, all tools building
+    and running Java programs. JDK can create a Java development environment.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Download JDK
+
+
+    http://oracle.com/download
+
+
+    or
+
+
+    http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+
+    Please click the link to download the newest version JDK at Oracle website. (Figure
+    1)
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_12_0.png)
+
+
+    (Figure 1) Download JDK at Oracle Website'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'If your computer is a 32-bit operating system, download the JDK with x86; If
+    your computer is a 64-bit operating system, download the JDK with x64. (Figure
+    2)
+
+
+    | Product / File Description | File Size | Download |
+
+    |---|---|---||
+
+    | Linux x86 | 154.67 MB | jdk-8u251-linux-x86.rpm |
+
+    | Linux x86 | 174.63 MB | jdk-8u251-linux-x86.tar.gz |
+
+    | Linux x64 | 152.69 MB | jdk-8u251-linux-x64.tar.gz |
+
+    | Linux x64 | 172.98 MB | jdk-8u251-linux-x64.rpm |
+
+    | Mac OS x64 | 227.12 MB | jdk-8u251-macos-x64.dmg |
+
+    | Relis SPARC 64-bit (SPVR4 package) | 125.53 MB | jdk-8u251-solaris-sp64.tar.gz
+    |
+
+    | Solaris SPARC 64-bit | 99.05 MB | jdk-8u251-solaris-sparvc-64.tar.gz |
+
+    | Solaris x64 (SPVR4 package) | 140 MB | jdk-8u251-solaris-x64.tar.gz |
+
+    | Solaris x64 | 98.2 MB | jdk-8u251-solaris-x64.tar.z2 |
+
+    | Windows x86 | 181.33 MB | jdk-8u251-windows-x86.exe |
+
+    | Windows x64 | 189.65 MB | jdk-8u251-windows-x64.exe |
+
+
+    # (Figure 2)
+
+
+    Please install the newest version of JDK to your computer.
+
+
+    Congratulation! Once JDK has been installed successfully, the system is ready
+    to start running Java programs!'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# IDE (Integrated Development Environment)
+
+
+    IDE (Integrated Development Environment) is used to write, edit and run Java.
+    IDE contains many Java development tools, compiler and debugger. There are many
+    excellent IDEs for download on internet, please download one IDE by the following
+    links:
+
+
+    | IDE(editor) | Website |
+
+    |--- |--- |
+
+    | Eclipse | http://www.eclipse.org |
+
+    | NetBeans | https://netbeans.org/ |
+
+    | DrJava | http://www.drjava.org/ |
+
+    | JEdit | http://www.jedit.org/ |
+
+    | BlueJ | http://www.bluej.org/ |
+
+    | JCreator | http://www.jcreator.com/ |
+
+
+    Please install one of the editors to your computer.
+
+    (This book uses Eclipse as editor).
+
+
+    Congratulation! Once an IDE has been installed successfully, you can write, edit
+    and run Java programs from now on.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# What is Java?
+
+
+    Java is a class-based, object-oriented programming language, which is a secure,
+    fast, and reliable program for general-purpose such as internet, database, cell
+    phone, countless variety of equipment.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# Example 1.1\n\n```\npublic class Hi {\n    public static void main(String\
+    \ [ ] args) {\n        System.out.print(\"Hello World\");\n    }\n}\n```\n\n(\
+    \ Output: Hello World )"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Explanation:
+
+
+    “Public class” is two keywords; they are used to declare a Java program. “Hi”
+    is a program name.
+
+
+    “public static void main (String [ ] args) {...}” is used to declare a main method.
+
+
+    “main” method contains main program codes to execute.
+
+
+    String [ ] args” is used to accept the input manually.
+
+
+    “System.out.print( )” is used to display or print.
+
+
+    Each Java command should be ended with semicolon (;).'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Run First Program
+
+
+    **Eclipse** is one of the most popular Java IDE (Integrated Development Environment).
+    It is used to write, edit, debug and run Java program.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Download Eclipse Installer
+
+
+    http://www.eclipse.org/downloads/
+
+
+    Please click the link to download the newest version Eclipse Installer at Eclipse
+    website. (Figure 1)
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_19_0.png)
+
+
+    (Figure 1 Download Eclipse installer at Eclipse Website.)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Uncompress Eclipse File
+
+
+    Note: instead of installation, the Eclipse should be uncompressed in a directory
+    you prefer. For example, **C:\Eclipse**. Please create a shortcut of **eclipse.exe**
+    to desktop.
+
+
+    (Restate: Eclipse doesn’t need to be installed, but it should be uncompressed
+    in a directory.)'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Run Eclipse
+
+
+    Double click eclipse.exe to run Eclipse, set the default workplace, check the
+    box of “Use this as the default and do not ask again”, and click OK, as following
+    Figure 2 and Figure 3.
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_21_0.png)
+
+
+    (Figure 2)
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_21_1.png)
+
+
+    (Figure 3)'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Write & Run First Java Program
+
+
+    # Step 1: Create a Java Project
+
+
+    Start up Eclipse > File > New > Java Project > Project Name > “FirstProject"
+
+    Finish. (Figure 4)
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_22_0.png)
+
+
+    (Figure 4)
+
+
+    # Step 2: Create a Package
+
+
+    Package is used to contain various categories of Java files. Different package
+
+    contains different Java files.
+
+
+    Select project “FirstProject” > new > package > name > “newPackage” > Finish.
+
+    (Figure 5)
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_22_1.png)
+
+
+    (Figure 5)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Step 3: Create a Class
+
+
+    Select package "newPackage" > new > class > name > "HelloWorld" > Finish. (Figure
+    6)
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_23_0.png)
+
+
+    (Figure 6)'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Step 4: Write Java Codes
+
+
+    Write Java codes in Eclipse. (Figure 7)'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# Example 1.2\n\n```\npackage newPackage;\n\npublic class HelloWorld {\n  \
+    \  public static void main(String[] args{\n    System.out.print(\"Hello World!\"\
+    );\n}\n}\n```\n\n![](img/16a6794eb7241c5d7b1e4b6cacaa1576_25_0.png)\n\n(Figure\
+    \ 7 Java program in Eclipse)\n\n# Step 5: Run the Program\n\nClick White Triangle\
+    \ Green Button in tool bar to run the program, you can see the output: (Figure\
+    \ 8)"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Output:
+
+
+    ```
+
+    <terminated> HelloWorld
+
+    Hello World!
+
+    ```
+
+
+    (Figure 8)
+
+
+    Congratulation! The first Java program run by Eclipse is successful!'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Java Comments
+
+
+    ```
+
+    //
+
+    /* ...... **/
+
+    ```
+
+
+    Java comments is to explain will code, describe what this code is doing. Java
+    compiler will ignore comments.
+
+
+    // is used to single line comment.
+
+
+    /*...*/ is used to multi line comments'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# Example 1.3\n\n```\nSystem.out.println(\"Hello World\"); // show \"Hello\
+    \ World\"\n/* System.out.println( ) is a Java output command, meaning display\
+    \ or print.\n */\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'Explanation:
+
+
+    ```
+
+    // show “Hello World” is a single line comment.
+
+    /* System.out.println( ) is a Java output command, meaning display or print. */
+
+    is a multi line comment.
+
+    ```'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Output Commands
+
+
+    ```
+
+    System.out.print( ); // print the result at the same line.
+
+
+    System.out.println( ); // print the result at the different line.
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Example 1.4
+
+
+    ```
+
+    System.out.print("1 ");
+
+    System.out.print("2 ");
+
+    System.out.print("3 ");
+
+    ```
+
+
+    **Output:** 1 2 3
+
+
+    ```
+
+    System.out.println("1 ");
+
+    System.out.println("2 ");
+
+    System.out.println("3 ");
+
+    ```'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Output:
+
+
+    ```
+
+    1
+
+    2
+
+    3
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    System.out.print( ); will print the result at the same line.
+
+
+    System.out.println( ) will print the result at the different line.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Escaping Characters
+
+
+    The " \ backslash character can be used to escape characters.
+
+
+    ```
+
+    \n outputs content to the next new line.
+
+    \r makes a return
+
+    \t makes a tab
+
+    \'' outputs a single quotation mark.
+
+    \" outputs a double quotation mark.
+
+    ```'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# Example 1.5\n\npublic class Hi {\n\n```\npublic static void main ( String\
+    \ [ args ) // main function\n    System.out.print(\"\\ Hello World \\\"\");\n\
+    } // \\\"output a double quotation mark\n```\n\nOutput: “Hello World”"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    "" outputs a double quotation mark. Note “Hello World” has a double quotation
+    with it. Another sample:
+
+
+    ```
+
+    System.out.print ( "Hello \t\tt World" ); // Note it has three taps. ( Output:
+
+    Hello      World )
+
+    ```'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Java Keywords
+
+
+    Some words are only used by Java language itself. They may not be used when choosing
+    identifier names for variable, function, and labels. The following words are part
+    of Java reserved words:
+
+
+    | abstract | boolean | break |
+
+    | --- | --- | --- |
+
+    | byte | case | catch |
+
+    | char | class | const |
+
+    | continue | default | do |
+
+    | double | else | extends |
+
+    | false | final | finally |
+
+    | float | for | if |
+
+    | implements | import | int |
+
+    | interface | new | null |
+
+    | package | private | protected |
+
+    | public | return | static |
+
+    | String | super | switch |
+
+    | this | throw(s) | true |
+
+    | try | void | while |'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Example 1.6
+
+
+    ```
+
+    const continue  // Java keywords
+
+    ```'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Explanation:
+
+
+    Above words “const”, “continue” is Java reserved words, which may not be used
+    as variable name, function name, and label name.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Data Types
+
+
+    Java data types are listed in the following:
+
+
+    | Data Types | Explanation |
+
+    | --- | --- |
+
+    | String | a string of characters with double quotes |
+
+    | char | a single character with single quotes |
+
+    | int | an integer number |
+
+    | float | a floating point number |
+
+    | boolean | a value with true or false |
+
+    | double | a large or floating point number |'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Example 1.7
+
+
+    ```
+
+    "Very Good" // String type
+
+    ''S'' // char type
+
+    168 // int type
+
+    8f // float type
+
+    true // boolean type
+
+    ```'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    The data type of “Very Good” is a String.
+
+
+    The data type of ‘S’ is a char.
+
+
+    The data type of 168 is an int
+
+
+    The data type of 8f is a float
+
+
+    The data type of true is a boolean.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Create a Variable
+
+
+    Variable is a symbolic name associated with a value.
+
+    Using following syntax can create a variable and value.
+
+
+    ```
+
+    dataType variableName = value;
+
+    ```'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Example 1.8
+
+
+    ```
+
+    public static void main ( [ ] args ) { // main function
+
+    String mystring = “Hello World"; // mystring is a variable
+
+    char mychar = ''m''; // mychar is a variable
+
+    int myinteger = 168168; // myinteger is a variable
+
+    double myflt = 28.98; // myflt is a variable
+
+    boolean mybool = true; // mybool is a variable
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    mystring is a name of variable, its value is “Hello World”.
+
+
+    myinteger is a name of variable, its value is 168168.
+
+
+    mybool is a name of variable, its value is true.
+
+
+    “public static void main ( [ args ) { }” declares a main method.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Arithmetical Operators
+
+
+    | Operators | Running |
+
+    | --- | --- |
+
+    | + | add, connect strings |
+
+    | - | subtract |
+
+    | * | multiply |
+
+    | / | divide |
+
+    | % | get modulus |
+
+    | ++ | increase 1 |
+
+    | -- | decrease 1 |'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Example 1.9\n\n```\npublic class TryClass{\n    public static void main (String\
+    \ [ args){\n        int sum = 100 + 200;\n\n        String str = \"We love\" +\
+    \ \"Java\";\n        int incre = 10; incre = ++ incre;\n        System.out.println(\
+    \ sum ); // Output: 300\n        System.out.println( str ); // Output: We love\
+    \ Java.\n        System.out.println( incre ); // Output: 11\n    }\n}\n```\n\n\
+    # Explanation:\n\nint sum = 100 + 200 means int plus 200.\nString str = “We love”\
+    \ + “Java” connects two strings.\n++incre increases its value by 1."
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Logical Operators
+
+
+    | Operators | Equivalent |
+
+    | :--- | :--- |
+
+    | && | and |
+
+    | || | or |
+
+    | ! | not |
+
+
+    After using logical operators, the result will be true or false.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# Example 1.10\n\n```\npublic class TryClass{\n    public static void main\
+    \ (String [ ] args){\n        boolean x=true; boolean y=false;\n        boolean\
+    \ a, b, c;\n        a= x &&& y; System.out.print (a); // output: false\n     \
+    \   b=x || y; System.out.print (b); // output: true\n        c=! x; System.out.print\
+    \ (c); // output: false\n    }\n```"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: 'Explanation:
+
+
+    | true && true; returns true; | true && false; returns false; | false &&false;
+    returns false; |
+
+    | true II true; returns true; | true II false; returns true; | false II false;
+    return false; |
+
+    | ! false; returns true; | ! true; returns false; | |'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Assignment Operators
+
+
+    | Operator | Example | Explanation |
+
+    |---|---|--- |
+
+    | += | x += y | x = x + y |
+
+    | -= | x -= y | x = x - y |
+
+    | *= | x *= y | x = x * y |
+
+    | /= | x /= y | x = x / y |
+
+    | %= | x %= y | x = x % y |'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# Example 1.11
+
+
+    ```
+
+    int x=200; int y=100;
+
+    x+=y; System.out.print(x);
+
+    -=y; System.out.print(x);
+
+    x/=y; System.out.print(x);
+
+    x%=y; System.out.print(x);
+
+    ```'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Explanation:
+
+
+    ```
+
+    x+=y; // x=x+y, x=200+100, output 300.
+
+    x-=y; // x=x-y, x=200-100, output 100.
+
+    x/=y; // x=x/y, x=200/100, output 2.
+
+    x%=y; // x=%y, x=200%100, output 0.
+
+    ```'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Comparison Operators
+
+
+    | Operators | Running |
+
+    | --- | --- |
+
+    | > | greater than |
+
+    | < | less than |
+
+    | >= | greater than or equal |
+
+    | <= | less than or equal |
+
+    | == | equal |
+
+    | != | not equal |
+
+
+    After using comparison operators, the result will be true or false.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Example 1.12
+
+
+    ```
+
+    int x=200; int y=100;
+
+    boolean result1=(x>y); System.out.print(result1);
+
+    boolean result2=(x<=y); System.out.print(result2);
+
+    boolean result3=(x!=y ); System.out.print(result3);
+
+    ```'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Explanation:
+
+
+    ```
+
+    x>y // test 200>100, output true.
+
+    x<=y // test 200<=100, output false.
+
+    x!=y // test 200!=100, output true.
+
+    ```'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Conditional Operator
+
+
+    The syntax of conditional operator looks like this:
+
+
+    ```
+
+    (test-expression) ? (if-true-do-this) : (if-false-do-this);
+
+    ```
+
+
+    ( test-expression) such as a<b, x!= y, m==n. etc.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Example 1.13
+
+
+    ```
+
+    int a=100; int b=200;
+
+    String result1 = (a<b) ? "apple" : "banana";
+
+    System.out.print ( result1);
+
+    (Output: apple)
+
+    ```'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# Example 1.14
+
+
+    ```
+
+    int a=100; int b=200;
+
+    String result2 = (a>b) ? "apple" : "banana";
+
+    System.out.print ( result2 );
+
+    (Output: banana)
+
+    ```'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    If the test expression returns true, then outputs “apple”.
+
+
+    If the test expression returns false, then outputs “banana”.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# Hands-On Project: Calculation'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Write & Run Java Program by Eclipse
+
+
+    # Step 1: Create a Java Project
+
+
+    Start up Eclipse > File > New > Java Project > Project Name = “Test” > Finish.
+
+    Figure 1)
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_62_0.png)
+
+
+    (Figure 1)
+
+
+    # Step 2: Create a Package
+
+
+    Package is used to contain various categories of Java files. Different package
+    contains different Java files.
+
+
+    Select project “Test” > new > package > name > “myPackage” > Finish.
+
+    Figure 2)
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_62_1.png)
+
+
+    (Figure 2)'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# ### Step 3: Create a Class\n\nSelect package \"myPackage\" > new > class\
+    \ > name > \"Calculation\" > Finish.\n(Figure 3)\n\n![](img/16a6794eb7241c5d7b1e4b6cacaa1576_63_0.png)\n\
+    \n(Figure 3)\n\n# ### Step 4: Write Java Codes\n\nWrite Java codes in Eclipse.\n\
+    \n```\npackage myPackage;\npublic class Calculation{\npublic static void main\
+    \ (String args[] ){\n    int a = 100, b = 5; // define two variables\n    int\
+    \ c = a/b*10; // calculation\n    System.out.print(\"C = \" + c); // output the\
+    \ value of \"C\"\n}\n}\n```\n\n# ### Step 5: Run the Program\n\nClick White Triangle\
+    \ Green Button in tool bar to run the program, you can see\nthe output:"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'Output:
+
+
+    C = 200'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '**Explanation:** "int c = a/b*10;" calculates the expression and assigns the
+    result value to variable "c".'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Hour 2
+
+
+    # Statements'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# If Statement
+
+
+    ```
+
+    if ( test-expression ) { // if true do this; }
+
+    ```
+
+
+    “if statement” executes codes inside { ... } only if a specified condition is
+    true, does not execute any codes inside {...} if the condition is false.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "```\nExample 2.1\npublic class TryClass{\npublic static void main (String [\
+    \ ] args){\n  int a=200;\n  int b=100;\n  if (a>b) { // if true, run the next\
+    \ command\n    System.out.print ( \"a is greater than b.\");\n  }}\n}\n(Output:\
+    \ a is greater than b.)\n```"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Explanation:
+
+
+    ( a>b ) is a test expression, namely (200>100), if returns true, it will execute
+    the codes inside the { }, if returns false, it will not execute the codes inside
+    the { }.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# If-else Statement
+
+
+    ```
+
+    if ( test-expression) { // if true do this; }
+
+    else { // if false do this; }
+
+    ```
+
+
+    “if...else statement” runs some code if a condition is true and another code if
+    the condition is false'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "# Example 2.2\n\n```\npublic class TryClass{\n    public static void main (String\
+    \ [ ] args){\n    int a=100; int b=200;\n    if (a>b){ // if true do this\n  \
+    \      System.out.print (\"a is greater than b.\");\n    }\n    else { // if false\
+    \ do this\n        System.out.print (\"a is less than b\");\n    }\n}}}}\n(Output:\
+    \ a is less than b.)\n```"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    ( a>b ) is a test expression, namely (100>200), if returns true, it will output
+    "a is greater than b." if returns false, it will output “a is less than b”.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# Switch Statement
+
+
+    ```
+
+    switch ( variable )
+
+    { case 1: if equals this case, do this; break;
+
+    case 2: if equals this case, do this; break;
+
+    case 3: if equals this case, do this; break;
+
+    default : if not equals any case, run default code;
+
+    break;
+
+    }
+
+    ```
+
+
+    The value of variable will compare each case first, if equals one of the “case”
+    value; it will execute that “case” code. “break,” terminates the code running.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# Example 2.3\n\n```\npublic class TryClass{\n    public static void main(String\
+    \ [ ] args){\n    int number=20;\n    switch ( number ) { // \"number\" value\
+    \ compares each case\n        case 10 : System.out.print(\"Running case 10\");\
+    \ break;\n        case 20 : System.out.print(\"Running case 20\"); break;\n  \
+    \      case 30 : System.out.print(\"Running case 30\"); break;\n        default\
+    \ : System.out.print(\"Running default code\"); break;\n    }\n}} (Output: Running\
+    \ case 20)\n```"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# Explanation:
+
+
+    The “number” value is 20; it will match case 20, so it will run the code in case
+    20.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# For Loop
+
+
+    ```
+
+    for( init, test-expression, increment) { // some code; }
+
+    ```
+
+
+    “for loop” runs a block of code by specified number of times.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# Example 2.4
+
+
+    ```
+
+    public class TryClass{
+
+    public static void main (String [ args){
+
+    int x;
+
+    for (x = 0; x <= 5; x++) { // repeat at most 5 times
+
+    System.out.print( x);
+
+    }
+
+    }\}}
+
+    (Output: 012345 )
+
+    ```'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Explanation:
+
+
+    x = 0 is initializer,
+
+
+    x <= 5 is test-expression, the code will run at most 5 times.
+
+
+    x++ means that x will increase 1each loop.
+
+
+    After 5 times loop, the code will output 012345.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# While Loop
+
+
+    ```
+
+    while ( test-expression ) { // some java code in here;
+
+    }
+
+    ```
+
+
+    “while loop” loops through a block of code if the specified condition is true.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "# Example 2.5\n\n```\npublic class TryClass{\n    public static void main (String\
+    \ [ ] args){\n    int counter=0;\n    while (counter < 8){\\      // run 8 tmes\n\
+    \        System.out.print(\"&\");\n        counter++;\n    }\n}\n```\n\n( Output:\
+    \ &&&&&&&& )"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# Explanation:
+
+
+    “counter< 8” is a test expression, if the condition is true, the code will loop
+    less than 8 times, until the counter is 8, then the condition is false, the code
+    will stop running.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Do-While Loop
+
+
+    ```
+
+    do{ // some java code in here } while ( test-
+
+    ression);
+
+    ```
+
+
+    "do...while" loops through a block of code once, and then repeats the loop if
+    the specified condition is true.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "# Example 2.6\n\n```\npublic class TryClass{\n  public static void main (String\
+    \ [ ] args){\n    int counter=0;\n    do {\n      System.out.print ( \"@\");\n\
+    \      counter++;\n    } while (counter<8); // run 8 times\n  }\n( Output: @@@@@@@\
+    \ )\n```"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# Explanation:
+
+
+    “counter< 8” is a test expression, if the condition is true, the code will loop
+    less than 8 times, until the counter is 8, then the condition is false, the code
+    will stop running.'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# Break Statement
+
+
+    ```
+
+    Break;
+
+    ```
+
+
+    “break” keyword is used to stop the running of a loop according to the condition.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '```
+
+    Example 2.7
+
+    public class TryClass{
+
+    public static void main (String [ ] args){
+
+    int num=0;
+
+    while (num<10){
+
+    if (num==5) **break**; // leave the while loop
+
+    num++;
+
+    }
+
+    System.out.print( num );
+
+    }
+
+    }\n( Output: 5)
+
+    ```'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# Explanation:
+
+
+    “if (num==5) break;” is a break statement. If num is 5, the program will run the
+    “break” command, the break statement will leave the while loop, then run “System.out.print(num)".'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# Continue Statement
+
+
+    ```
+
+    continue;
+
+    ```
+
+
+    “continue” keyword is used to stop the current iteration, ignoring the following
+    codes, and then continue the next loop.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "# Example 2.8\n\n```\npublic class TryClass{\n    public static void main (String\
+    \ [ ] args{\n    int num=0;\n    while (num<10){\n        num++;\n        if (num==5)\
+    \ continue; // go to next while loop\n        System.out.print( num );\n    }}\n\
+    }\nOutput: 1234678910\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    Note that the output has no 5.
+
+
+    “if (num==5) continue;” includes “continue” command. When the num is 5, the program
+    will run “continue”, skipping the next command “System.out.print( num )”, and
+    then continue the next while loop.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# Boolean-Expression
+
+
+    | If ( bool-expression ) { statements } |
+
+    while ( boolean-expression ) { statement } |
+
+
+    The boolean-expression should be a test expression. For example: a>b; x<=y;
+
+    m!!=n; It cannot be a variable only.'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "```\nExample 2.9\npublic class TryClass{\npublic static void main (String [\
+    \ ] args{\nint num=10;\nif ( **num** ) //error! because \"num\" is not a bool-expression\n\
+    \  System.out.print(\"No good\");\n}\nwhile ( **num** ) { //error! for \"num\"\
+    \ is not a bool-expression\n  System.out.print(\"No good\");\n}\n}}\n```\n\n#\
+    \ Explanation:\n\nif( **num** ) and while ( **num** ) is not correct codes, because\
+    \ it should be a boolean-expression inside the ( ), for example, if (num==10)\
+    \ and while(num<10) are correct!"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# Hands-On Project: Run 100 Times'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "# While Statement Program\n\nStart up Eclipse > Select \"myPackage\" > new\
+    \ > class > name > WhileStatement > Finish.\n\nWrite following codes in Eclipse.\n\
+    \n```\npackage myPackage;\npublic class WhileStatement {\n    public static void\
+    \ main(String[ ] args) {\n        int n = 1;\n        int sum = 0;\n        while(n\
+    \ <= 100){ // run 100 times\n            sum += n; // sum = sum + n\n        \
+    \    n++;\n        }\n        System.out.println(\"Sum = \" + sum);\n    }\n}\n\
+    ```"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: 'Click White Triangle Green Button in tool bar to run the program and see the
+    output:
+
+
+    # **Output:**
+
+
+    Sum = 5050'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Explanation:
+
+
+    “n<=100” is a test expression, if the condition is true, the code will loop less
+    than 100 times, until the counter is 100, then the condition is false, the code
+    will stop running.
+
+
+    “sum += n;” is the same as “sum = sum + n”.
+
+
+    “n++;” means “n” increases 1in each loops.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# Hour 3
+
+
+    # Array & Math'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# Create an Array (1)
+
+
+    An array is a variable, which can contain multiple values.
+
+
+    The first method to create array as following:
+
+
+    ```
+
+    int array-name[] = {"value0", "value1", "value2",
+
+    ...};
+
+    ```'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# Example 3.1
+
+
+    ```
+
+    int myarray[] = { 10,20,30,40 }; // create an array
+
+    ```'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# Explanation:
+
+
+    The above code creates an array named “array”, which has four elements:
+
+    The 1st element is myarray[0] with value 10. Key is 0.
+
+    The 2nd element is myarray[1] with value 20. Key is 1.
+
+    The 3rd element is myarray[2] with value 30. Key is 2.
+
+    The 4th element is myarray[3] with value 40. Key is 3.
+
+    In array, Key’s alias is “index”. Index’s alias is “key”.
+
+    Note that index begins from 0.'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Create an Array (2)
+
+
+    An array is a variable, which can contain multiple values.
+
+    The second method to create an array as following:
+
+
+    ```
+
+    int array-name[ ] = new int [ number of elements ];
+
+    int array-name[index0] = "value0";
+
+    int array-name[index1] = "value1";
+
+    int array-name[index2] = "value2";
+
+    ```'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# Example 3.2
+
+
+    ```
+
+    int myArray[] = new int[3]; // create array
+
+    myArray[0] = 100;
+
+    myArray[1] = 200;
+
+    myArray[2] = 300;
+
+    ```'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    Above codes create an array, the array name “myArray”, and it has three elements:
+    myArray [0], myArray [1], myArray [2]. Their indexes are 0, 1, and 2. Their values
+    are 100, 200, and 300. Note that index number begins from 0.'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# Array Length
+
+
+    ```
+
+    array-name.length;
+
+    ```
+
+
+    array-name.length can return the total number of elements of an array.'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "# Example 3.3\n\n```\npublic class TryClass{\n    public static void main (String\
+    \ [ ] args){\n        int arr[] = {10,20,30}; // create array \"arr\"\n      \
+    \  int num = arr.length; // get length of the array\n        System.out.print\
+    \ ( num );\n    }\n}( Output: 3 )\n```"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    “arr.length;” is used to get the length of the array “arr”, which means the total
+    number of elements.
+
+
+    Note that string.length() is used to get the length of a string characters, instead
+    of array elements.'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# Element Value
+
+
+    | int value = array[index]; |
+
+    | // Get a value from an element. |
+
+    | int array[index] = value; |
+
+    | // Set a value to an element. |'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# Example 3.4
+
+
+    ```
+
+    int arr[] = {10, 20, 30, 40, 50};
+
+    int value = arr[2]; // Get a value from an element.
+
+    System.out.println( value );
+
+    ( Output: 30)
+
+    ```'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# Example 3.5
+
+
+    ```
+
+    int num[] = new int[5];
+
+    num[2] = 800; // Set a value to an element.
+
+    System.out.println ( num[2]);
+
+    ( Output: 800)
+
+    ```'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# Explanation:
+
+
+    “int value = arr[2];” gets a value 30 from “arr[2]”, and assign to the “value”
+    variable.
+
+
+    “num[2] = 800;” sets a value 800 to the element “num[2]”.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# Sort Array Elements
+
+
+    ```
+
+    Arrays.sort(array-name);
+
+    ```
+
+
+    “Arrays.sort(array-name);” can sort the array element, and display the result
+    in order.
+
+
+    Before using Arrays.sort( ), you must “import java.util.Arrays”;'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "# Example 3.6\n\n```\npackage tryPackage;\nimport java.util.Arrays;\npublic\
+    \ class TryClass{\n    public static void main (String [ ] args){\n        String\
+    \ myarray[] = { \"Cat\", \"Apple\", \"Dog\", \"Boy\"};\n        Arrays.sort(myarray);\
+    \ // sort the array\n        for(int num=0; num<myarray.length; num++){ // run\
+    \ 4 times\n            System.out.print(myarray[num]+\" \"); //num is a key\n\
+    \        }\n    }}\n    ( Output: Apple Boy Cat Dog )\n```"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# Explanation:
+
+
+    “Arrays.sort (myarray);” sorts the "array" by its element.
+
+
+    “myarray.length” returns "myarray"s length that is 4.
+
+
+    “for loop” runs output command four times, and display the sorted result: Apple
+    Boy Cat Dog.'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# Math Methods
+
+
+    | Method | Returns |
+
+    | --- | --- |
+
+    | abs() | a number’s absolute value |
+
+    | ceil() | an integer greater than or equal its argument |
+
+    | cos() | an angle’s trigonometric cosine |
+
+    | exp() | a number’s Math.E to the power |
+
+    | floor() | an integer less than or equal its argument |
+
+    | log() | a number’s natural logarithm |
+
+    | random() | a random positive value from 0 to 1 |
+
+    | max() | a greater between two numbers |
+
+    | min() | a smaller between two numbers |
+
+    | pow() | the first argument to the power of the second |
+
+    | round() | the closest long or int |
+
+    | sin() | an angle’s trigonometric sine |
+
+    | sqrt() | a number’s square root |
+
+    | tan() | an angle’s trigonometric tangent |'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# Example 3.7
+
+
+    ```
+
+    float num = 10.2f;
+
+    System.out.print( Math.round(num) ); //return an integer
+
+    (Output: 10)
+
+    ```'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# Explanation:
+
+
+    Math.round(num) returns integer of 10.2f. Result is 10.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# Ceil () & Floor ()
+
+
+    ```
+
+    Math.ceil();
+
+    Math.floor();
+
+    ```
+
+
+    “Math.ceil();” returns a closest integer that is greater than or equal to its
+    argument.
+
+
+    “Math.floor();” returns a closest integer that is less than or equal to its argument.'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "# Example 3.8\n\n```\npublic class TryClass{\n    public static void main (String\
+    \ [ ] args){\n        float num = 9.5f;\n        System.out.println(\\(\"Ceiling\
+    \ number is \"+Math.ceil( num ) );\n        System.out.println(\"Flooring number\
+    \ is \"+Math.floor( num ) );\n    }\n} ( Output: Ceiling number is 10.0\n    \
+    \  Flooring number is 9.0)\n```"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    “Math.ceil( num ));” returns a closest integer that is greater than or equal 9.5f,
+    the result is 10.0.
+
+
+    “Math.floor( num );” returns a closest integer that is less than or equal 9.5f,
+    the result is 9.0.'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# Max () & Min ()
+
+
+    ```
+
+    Math.max();
+
+    Math.min();
+
+    ```
+
+
+    “Math.max()” returns the greater one between two numbers.
+
+    “Math.min()” returns the less number between two numbers.'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "```\nExample 3.9\npublic class class TryClass{\npublic static void main (String\
+    \ [ ] args){\n  int x = 100;\n  int y = 200;\n  System.out.println(\"Greater number\
+    \ is \"+Math.max(x, y) );\n  System.out.println(\"Less number is \"+Math.min(x,\
+    \ y) );\n}\n\n( Output: Greater number is 200\nLess number is 100)\n```"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# Explanation:
+
+
+    “Math.max(x, y)” returns the greater number between 100 and 200, the result is
+    200.
+
+
+    “Math.min(x, y)” returns the less number between 100 and 200, the result is 100.'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# pow () & sqrt ()
+
+
+    ```
+
+    Math.pow();
+
+    Math.sqrt();
+
+    ```
+
+
+    “Math.pow ( ();” returns the first argument raised to the power of the second
+    argument.
+
+
+    “Math.sqrt ( ();” returns the square root of the argument.'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: "# Example 3.10\n\n```\npublic class class TryClass{\n  public static void main(String\
+    \ [ ] args){\n    int num = 4;\n    System.out.println(\"Square number is \"+Math.pow(num,2)\
+    \ );\n    System.out.println(\"Square root is \"+Math.sqrt(num) );\n  }\n\n```\n\
+    \n{ Output: Squared number is 16.0\n\nSquare root is 2.0"
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# Explanation:
+
+
+    “Maht.pow(num,2)” returns the first argument “4” raised to the power of the second
+    argument “2”, the result is 16.0
+
+
+    “Math.sqrt(num)” returns the square root of the argument “4”, the result is 2.0'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# Math.PI & random( )
+
+
+    | Math.PI |
+
+    | Math.random( ) |
+
+
+    Math.PI is a constant that stores the value of pi.
+
+
+    Math.random( ) generates a number between 0.0 to 1.0.'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "```\nExample 3.11\npublic class TryClass{\npublic static void main (String\
+    \ [ ] args){\n  double pi = Math.PI;\n  double ran = Math.random();\n  System.out.println(\"\
+    The PI value is \" + pi);\n  System.out.println(\"The random number is \" + ran);\n\
+    }}\n( Output: The PI value is 3.141592653589793\nThe random number is 0.168693228)\n\
+    ```"
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '**Explanation:**
+
+
+    The value of Math.PI is 3.1415926535389793.
+
+
+    Math.random( ) generates a random number between 0.0 to 1.0, in here the result
+    is 0.16869328.'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# Hands-On Project: Start with Zero'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# Assign values to an array by loop statement.
+
+
+    Start up Eclipse > Select “myPackage” > new > class > name > TestArray > Finish.
+
+
+    Write following codes in Eclipse.
+
+
+    Click White Triangle Green Button in tool bar to run the program and see the output:
+
+
+    # Output:
+
+
+    0 1 2 3 4 5 6 7 8 9'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# Explanation:
+
+
+    “myArray = new int[10];” creates an array “myArray” with 10 elements.
+
+    “for (int n = 0; n < myArray.length; n++)” is a loop statement.
+
+    “int n = 0” initializes the variable “n” as 0.
+
+    “n < myArray.length” sets the loop’s number of times.
+
+    The loop’s number of times depends on the length of myArray.
+
+    “n++” means the variable “n” increases 1 in each loops.
+
+    “myArray[n] = n;” assigns value of “n” to myArray.'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '# Hour 4
+
+
+    # String Processing'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# String Length
+
+
+    String is consisted of one or more characters within double quotes. String.length(
+    ) can get the length of a string.
+
+
+    ```
+
+    String str1 = "This is a string"; String str2 = "null";nint length = String.length();
+
+    ```
+
+
+    “This is a string” is a string. “null” is a string.
+
+
+    “int length = String.length( );” returns the length of a String.'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: "# Example 4.1\n\n```\npublic class TryClass{\n    public static void main (String\
+    \ [ ] args){\n        String str = \"This is a string\";n        int length =\
+    \ str.length(); // get the string length\n        System.out.println(\"The size\
+    \ of string is \" + length);\n    }\n}\n( Output: The size of string is 16 )\n\
+    ```"
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# Explanation:
+
+
+    “str.length( )” returns a length of a string.
+
+
+    Note that array.length returns a length of an array, without brackets.'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# String Connection
+
+
+    "+" can join two strings.
+
+    concat() can connect two strings.
+
+
+    ```
+
+    str = str1 + str2;
+
+    str = str1.concat(str2);
+
+    ```'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '# Example 4.2
+
+
+    String str1 = "Very"; String str2 = "Good";
+
+
+    ```
+
+    System.out.print(str1 + str2); //connect two strings
+
+    ( Output: Very Good )
+
+    ```
+
+
+    String str1 = "Very"; String str2 = "Good";
+
+
+    ```
+
+    System.out.print(str1.concat(str2)); //connect two strings
+
+    ( Output: Very Good )
+
+    ```'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# Explanation:
+
+
+    "str1 + str2" or "str1.concat(str2));" can join the str1 "Very" and str2 "Good",
+    and become a new string "Very Good".'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '# String Comparing
+
+
+    "str1 .equals ( str2 );" can compare two string values, returns true or false.
+
+
+    ```
+
+    str1 .equals ( str2 );
+
+    ```'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: "# Example 4.3\n\n```\npublic class TryClass{\n  public static void main (String\
+    \ [] args){\n    String str1=\"Good\", str2=\"Good\";\n    System.out.print(str1.equals\
+    \ (str2));\n    System.out.print(\"Good\".equals(\"Good\"));\n  }\n```\n\n( Output:\
+    \ true true )"
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '# Explanation:
+
+
+    "(str1.equals(str2);" or "(\Good".equals("Good");" compares strings, if the two
+    string''s value is the same, it returns true.'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '# Extract a Character
+
+
+    “charAt (int index)” returns a character located at the String’s specified index.
+
+    The string indexes start from zero.
+
+
+    ```
+
+    char result= charAt (int index);
+
+    ```'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: "# Example 4.4\n\n```\npublic class TryClass{\n    public static void main(String\
+    \ args[]) {\n        String str = \"Very Good\";\n        char result = str.charAt(5);\
+    \ //search the 5th character\n        System.out.println( result );\n    }\n```\n\
+    \n( Output: G )"
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '# Explanation:
+
+
+    “str.charAt(5);” search the 5th character in string “Very Good”. Note that the
+    string index starts from zero.
+
+
+    The 5th character is “G”.'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '# Locate a Character
+
+
+    "indexOf();" returns the index within this string of the first occurrence of the
+    specified substring. If it does not occur as a substring, -1 is returned.
+
+
+    ```
+
+    int index = string.indexOf ( substring );
+
+    ```'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: "# Example 4.5\n\n```\npublic class TryClass{\n  public static void main(String\
+    \ args[] ) {\n    String str = \"Very Good\";\n    System.out.println(str.indexOf(\"\
+    y\")); //get index of \"y\"\n}\n( Output: 3 )\n```"
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '# Explanation:
+
+
+    str.indexOf("y ") searches the index of "y" in "Very Good". The string index starts
+    from zero. Therefore, it returns 3.'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# Extract a Substring
+
+
+    “string.substring()” returns a substring from beginning index to ending index-1
+    in string.
+
+
+    ```
+
+    String str = string.substring(int beginIndex, int endIndex-1);
+
+    ```'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: "# Example 4.6\n\n```\npublic class TryClass{\n    public static void main(String\
+    \ args[] ) {\n    String Str = \"Very Good\";\n    System.out.println(Str.substring(5,\
+    \ 7) ); /* extract some characters from index \"5\" to index \"7-1\" */\n}\nn(\
+    \ Output: Go )\n```"
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '# Explanation:
+
+
+    Str.substring(5, 7)” returns a substring from index “5” to index “7-1” in “Very
+    Good”. The result is “Go”.'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: '# Case Change
+
+
+    “String.toUpperCase() ” returns an uppercase of a string.
+
+    “String.toLowerCase() ” returns a lowercase of a string.
+
+
+    | String.toUpperCase(); |
+
+    | String.toLowerCase(); |'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: "# Example 4.7\n\n```\npublic class TryClass{\n    public static void main(String\
+    \ args[] ){\n        String Str = \"Very Good\"; System.out.println(Str.toUpperCase()\
+    \ );\n        System.out.println(Str.toLowerCase() );\n    }\n}\n```\n\n( Output:\
+    \ VERY GOOD )\n\n( Output: very good )"
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '# Explanation:
+
+
+    “Str.toUpperCase( )” changes “Very Good” to “VERY GOOD”.
+
+
+    “Str.toLowerCase( )” changes “Very Good” to “very good”.'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: '# Character Replace
+
+
+    “str.replace()” can change old characters to new characters in a string, and returns
+    a new string
+
+
+    ```
+
+    str.replace(oldCharacter, newCharacter);
+
+    ```'
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: "# Example 4.8\n\n```\npublic class class TryClass{\npublic static void main(String\
+    \ args[] ){\n    String Str = \"Very Good\";\n    System.out.println(Str.replace(\"\
+    Good\", \"Well\\));\n}}\\ // replace “Good\" with \"Well\"\n```\n\n( Output: Very\
+    \ Well )"
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: '**Explanation:**
+
+
+    “Str.replace("Good", "Well") change the characters "Good" to characters "Well"
+    in string "Very Good". and return new string "Very Well".'
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: '# String Type Change
+
+
+    “Integer.toString(number)” can change a number to a string.
+
+
+    “String.trim( )” can remove space at the beginning or the end of a string.
+
+
+    ```
+
+    Integer.toString( number);
+
+    String.trim( );
+
+    ```'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: '# Example 4.9
+
+
+    ```
+
+    public class class TryClass{
+
+    public static void main(String args[ ]){
+
+    int num = 169;
+
+    String str = "  Good  "; // note that spaces.
+
+    String str1 = Integer.toString(num ); // convert to string
+
+    String str2 = str.trim(); // remove spaces
+
+    System.out.println(str1+" is a String" \);
+
+    System.out.println(str2+" is trimmed" \);
+
+    }
+
+    }}
+
+    ```
+
+
+    ( Output: 169 is a String
+
+    Good is trimmed)'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: 'Explanation:
+
+
+    “Integer.toString( num )” converts an int number 169 to a string 169.
+
+    “str.trim( )” “ Good ” to a string “Good”.'
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: '# StringBuffer
+
+
+    StringBuffer represents a string that can be dynamically changed. If a string
+    value may change in program running, please use StringBuffer, instead of String.
+
+
+    ```
+
+    StringBuffer str = new StringBuffer();
+
+    str.insert ( );
+
+    str.append ( );
+
+    str.reverse ( );
+
+    ```'
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: '```
+
+    StringBuffer sb = new StringBuffer ("abcde");
+
+    sb.insert (2, "123"); // Output: abc123de
+
+    sb.append ("456"); // Output: abc123de456
+
+    sb.reverse (); // Output: 654ed321cba
+
+    ```'
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: '# Explanation:
+
+
+    “StringBuffer sb = new StringBuffer ("abcd")” creates an object "sb", its value
+    is “abcde”.
+
+
+    “sb.insert ( 2, "123")” inserts “123” at the index of “2”.
+
+
+    “sb.append ( "456")” appends “456” in the end of the string.
+
+
+    “str.reverse ( )” reverses the order of the string.'
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: '# Hands-On Project: True or False'
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: '# Comparing String Values
+
+
+    Start up Eclipse > Select “myPackage” > new > class > name > TwoStrings >nFinish.
+
+
+    Write following codes in Eclipse.
+
+
+    ```
+
+    package myPackage;
+
+    public class TwoStrings {
+
+    public static void main(String[] args) {
+
+    String s1, s2, s3, s4;
+
+
+    s1 = "C++ in 8 Hours";
+
+    s2 = "C++ in 8 Hours";
+
+    s3 = "Python in 8 Hours";
+
+    s4 = s2; // assign the string value
+
+    System.out.println(s1.equals(s2));
+
+    System.out.println(s1.equals(s3));
+
+    System.out.println(s3.equals(s4));
+
+    }
+
+    }
+
+    ```
+
+
+    Click White Triangle Green Button in tool bar to run the program and see the
+
+    output:
+
+
+    # Output:
+
+
+    true'
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: 'false
+
+    false'
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    "String s1, s2, s3, s4;" declares four string variables.
+
+
+    "s1.equals(s2)" compares two string’s value, if the two string’s value is the
+    same, it returns true.'
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: '# Hour 5
+
+
+    # Method, Class
+
+    & Object'
+  merge: -1
+  pgno: 167
+- img_proc: true
+  md: '# Method
+
+
+    Method is code block that can be repeated to use.
+
+
+    ```
+
+    type method-name() {....}; // declares a method.
+
+    method-name(); // calls a method.
+
+    ```'
+  merge: -1
+  pgno: 168
+- img_proc: true
+  md: "```\nExample 5.1\npublic class TryClass{\n    public static void main(String\
+    \ args[]){\n        myMethod(); } // call \"myMethod\"\n        static void myMethod\
+    \ () { // declare method\n        System.out.print(\"This is a method \\ );\n\
+    \    }\n}\n( Output: This is a method )\n```"
+  merge: -1
+  pgno: 169
+- img_proc: true
+  md: '**Explanation:**
+
+
+    “myMethod();” calls a method, and outputs “This is a method”.
+
+
+    “public static void myMethod()” declares method name “myMethod”.
+
+
+    “public” means it can be accessed by any class.
+
+
+    “static” means it is a class method.
+
+
+    “void” is a return type, meaning without return value.'
+  merge: -1
+  pgno: 170
+- img_proc: true
+  md: '# Method & Arguments
+
+
+    A methodometimes has argument.
+
+
+    ```
+
+    type method-name ( argument ) {......};
+
+    method-name ( arg );
+
+    ```'
+  merge: -1
+  pgno: 171
+- img_proc: true
+  md: "# Example 5.2\n\n```\npublic class TryClass{\n    public static void main (\
+    \ String [ ] args ) {\n        myMethod(\"ABC\" ); //call myMethod & pass argument\n\
+    \    }\n    static void myMethod(String argument) { //declare method\n       \
+    \ System.out.print(\"This is a method \" + argument);\n    }\n}\n```\n\n( Output:\
+    \ This is a method ABC )"
+  merge: -1
+  pgno: 172
+- img_proc: true
+  md: '# Explanation:
+
+
+    “public static void myMethod ( String argument ) {...}” declares a method with
+    argument.
+
+
+    “myMethod(“ ABC”);” calls method “myMethod(String argument) {...”, and pass the
+    argument “ABC” to it. After receiving the argument “ABC”, it outputs “This is
+    method ABC”.'
+  merge: -1
+  pgno: 173
+- img_proc: true
+  md: '# Return Value
+
+
+    “return value” can return a value to the caller.
+
+
+    ```
+
+    type method-name ( argument ) { return value };
+
+
+    method-name ( arg );
+
+    ```'
+  merge: -1
+  pgno: 174
+- img_proc: true
+  md: '```
+
+    Example 5.3
+
+    public class class TryClass{
+
+    public static void main ( String [ ] args ) {
+
+    int num=10;
+
+    System.out.print("The number is "+myMethod( num ));
+
+    } // "myMethod(num);" is a caller
+
+    static int myMethod ( int arg ) {
+
+    return ++arg; // send back the value to caller
+
+    }
+
+    ( Output: The number is 11.)
+
+    ```'
+  merge: -1
+  pgno: 175
+- img_proc: true
+  md: '# Explanation:
+
+
+    “myMethod( num )” calls a method.
+
+    “int myMethod( int arg ) {...}” declares method.
+
+    “int” is a return type, it means the method returns int type.
+
+    “return ++arg ” can return the value “11” to the caller.
+
+    The output is “The number is 11”.'
+  merge: -1
+  pgno: 176
+- img_proc: true
+  md: '# Class Definition
+
+
+    A class is a template for object, and creates an object.
+
+
+    ```
+
+    class Class-name {
+
+    type variable;
+
+    type function-name() { }...
+
+    }
+
+    ```
+
+
+    "class Class-name" defines a class.
+
+
+    "type variable" defines a variable in class. Variable is also known as "property".
+
+
+    "type function-name() { }" defines a function in class. Function is also known
+    as "method".'
+  merge: -1
+  pgno: 177
+- img_proc: true
+  md: '# Example 5.4
+
+
+    ```
+
+    public class Color { // declare a class Color
+
+    String c1, c2;    // declare two variable members
+
+    void brightness () { System.out.print("......"); } ///a method
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 178
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    Above codes defines a class named “Color”, two variables named “c1” and “c2”,
+    a method named “brightness”.'
+  merge: -1
+  pgno: 179
+- img_proc: true
+  md: '# Object Declaration
+
+
+    Object is an instance of a class.
+
+
+    ```
+
+    obj = new Class-name( );
+
+    obj.variable;
+
+    obj.function-name();
+
+    ```
+
+
+    “obj = new Class-name( );” creates a new object named “obj” for the class.
+
+    “obj.variable;” means that “obj” references a variable.
+
+    “obj. function-name ( );” means that “obj” references a method.'
+  merge: -1
+  pgno: 180
+- img_proc: true
+  md: '# Example 5.5
+
+
+    ```
+
+    Color obj = new Color( ); // create an object "obj"
+
+    obj.c1="yellow"; // an object references a variable
+
+    obj.c2="purple"; // an object references a variable
+
+    obj.brightness( ); // an object references a method
+
+    ```'
+  merge: -1
+  pgno: 181
+- img_proc: true
+  md: '**Explanation:**
+
+
+    “Color obj = new Color;” creates an object named "obj", then references variable
+    "c1" and "c2".
+
+
+    “obj.brightness ( );” calls the function "brightness ();"in previous page), and
+    returns "blue".'
+  merge: -1
+  pgno: 182
+- img_proc: true
+  md: '# Class & Object'
+  merge: -1
+  pgno: 183
+- img_proc: true
+  md: "# Example:\n\n```\npublic class Color { // define a class\n    String c1, c2;\n\
+    \    void brightness () {\n        System.out.println(\"This flower is \" + c1);\n\
+    \        System.out.println(\"That flower is \" + c2);\n    }\n    public static\
+    \ void main(String[] args) {\n        Color obj = new Color( ); // create an object\n\
+    \        obj.c1=\"yellow\"; obj.c2=\"purple\"; // references\n        obj.brightness\
+    \ (); // an object references a method\n    }\n```"
+  merge: -1
+  pgno: 184
+- img_proc: true
+  md: '# Output:
+
+
+    This flower is yellow.
+
+
+    That flower is purple.'
+  merge: -1
+  pgno: 185
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    “public class Color { }” defines a class.
+
+
+    “Color obj = new Color( );” creates an object.'
+  merge: -1
+  pgno: 186
+- img_proc: true
+  md: "# Constructor\n\nConstructor is used to initialize variable. Constructor name\
+    \ is the same as class name.\n\n```\nclass Class-name{\n  Class-name() { ... }\
+    \ // constructor for\n  initialization\n}\n```\n\nclass Class-name{... } defines\
+    \ a class.\n\nClass-name() { ... } declares a constructor."
+  merge: -1
+  pgno: 187
+- img_proc: true
+  md: '# Example 5.6
+
+
+    ```
+
+    public class Color { // create a class
+
+    String c1, c2;
+
+    Color () { c1="yellow"; c2="purple"; } // constructor
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 188
+- img_proc: true
+  md: '# Explanation:
+
+
+    “Color () { c1="yellow"; c2="purple"; }” is a constructor. It initializes variable
+    c1 as "yellow" and c2 as "purple". when an object is created the constructor will
+    be called automatically.'
+  merge: -1
+  pgno: 189
+- img_proc: true
+  md: '# Constructor Example'
+  merge: -1
+  pgno: 190
+- img_proc: true
+  md: "Example:\n\n```\npublic class Color { // define a class\nString c1, c2;\nColor\
+    \ () {c1=\"yellow\"; c2=\"purple\";} // constructor\nvoid brightness () {\n  \
+    \  System.out.println(\"This flower is \" + c1);\n    System.out.println(\"That\
+    \ flower is \" + c2);\n}\n    public static void main(String[] args) {\n    Color\
+    \ obj = new Color( ); //create an object, call constructor\n    obj.brightness\
+    \ ( );\n}\n}\n```"
+  merge: -1
+  pgno: 191
+- img_proc: true
+  md: '# **Output:**
+
+
+    This flower is yellow.
+
+
+    That flower is purple.'
+  merge: -1
+  pgno: 192
+- img_proc: true
+  md: 'Explanation:
+
+
+    “Color () {c1="yellow"; c2="purple";};” creates a constructor.\n“Color obj = new
+    Color( );” creates an object, and calls the constructor automatically.'
+  merge: -1
+  pgno: 193
+- img_proc: true
+  md: '# Overloading
+
+
+    Overloading means that there are two or more same-name methods in a class, and
+    their arguments are different.'
+  merge: -1
+  pgno: 194
+- img_proc: true
+  md: "# Example 5.7\n\npackage correctPackage;\n\n```\nclass Color{ String x,y; //\
+    \ declare a class\nColor ( String a, String b) { x=a; y=b } //overloading\nColor\
+    \ ( ) { x=\"yellow \"; y=\"purple\"; }; //overloading\n\npublic static void main(String\
+    \ args[]) {\n    Color obj1=new Color(\"green \", \"orange \");\n    Color obj2=new\
+    \ Color( );\n    System.out.println(obj1.x + obj1.y);\n    System.out.println(obj2.x\
+    \ + obj2.y);\n}\n( Output: green orange\n    yellow purple )\n```"
+  merge: -1
+  pgno: 195
+- img_proc: true
+  md: '# Explanation:
+
+
+    In this class, there are two methods named “Color( )” with different argument,
+    which are known as “overloading”.'
+  merge: -1
+  pgno: 196
+- img_proc: true
+  md: '# “this” Keyword (1)
+
+
+    “this” is used to represent a current object.'
+  merge: -1
+  pgno: 197
+- img_proc: true
+  md: "# Example 5.8\n\n```\npackage correctPackage;\nclass MyClass {\n    int num;\n\
+    \    void test(int num) {\n        this.num=num; // \"this\" represents the \"\
+    obj\"\n        System.out.println(this.num);\n    }\n    public static void main(String[\
+    \ ] args) {\n        MyClass obj = new MyClass();\n        obj.test(10);\n   \
+    \ }\n}\n( Output: 10 )\n```"
+  merge: -1
+  pgno: 198
+- img_proc: true
+  md: '# Explanation:
+
+
+    In above, when “obj.test(10)” calls “test() { }” method, “this” signifies the
+    object “obj”.'
+  merge: -1
+  pgno: 199
+- img_proc: true
+  md: '# “this” Keyword (2)
+
+
+    “this” can present another same-name constructor.'
+  merge: -1
+  pgno: 200
+- img_proc: true
+  md: '# Example 5.9
+
+
+    ```
+
+    class MyClass {
+
+    int x, y;
+
+    MyClass () {
+
+    this ( 100, 200 ); //""this" presents MyClass ( int a, int b) {
+
+    }
+
+    MyClass ( int a, int b){
+
+    x=a; y=b;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 201
+- img_proc: true
+  md: '# Explanation:
+
+
+    “this ( 100, 200 )” represents another same-name constructor “MyClass ( int a,
+    int b){ }”.
+
+
+    Note that “this” cannot represent non-constructor method.'
+  merge: -1
+  pgno: 202
+- img_proc: true
+  md: '# Instance & Local variable
+
+
+    Instance variable is defined in a class. It works in the current class.
+
+    Local variable is defined in a method. It works in the current method.'
+  merge: -1
+  pgno: 203
+- img_proc: true
+  md: "# Example 5.10\n\n```\nclass Point {\n    int x= 100, y = 200; // instance\
+    \ variable\n    void test() {\n        int x = 1, y = 2; // local variable\n \
+    \   }\n}\n```"
+  merge: -1
+  pgno: 204
+- img_proc: true
+  md: '**Explanation:**
+
+
+    “int x= 100, y = 200;” defines instance variables inside a class.
+
+
+    “int x = 1, y = 2;” defines two local variables inside method.'
+  merge: -1
+  pgno: 205
+- img_proc: true
+  md: '# Hands-On Project: Contact Info.'
+  merge: -1
+  pgno: 206
+- img_proc: true
+  md: '# Class and Object > "myPackage" > new > class > name > Message >
+
+
+    Start up Eclipse > Select "myPackage" > new > class > name > Message >
+
+    Finish.
+
+
+    Write following codes in Eclipse.
+
+
+    ```
+
+    package myPackage;
+
+    public class Message { // declare a class
+
+    String name, email, phone;
+
+    public Message(String theName, String theEmail, String thePhone){ // declare a
+    constructor for initialization
+
+    name = theName;
+
+    el = theEmail;
+
+    phone = thePhone;
+
+    }
+
+    void displayEmail(){ // declare a function
+
+    System.out.println("Email:" + email);
+
+    }
+
+    void displayPhone(){ // declare a function
+
+    System.out.println("Phone:" + phone);
+
+    }
+
+    public static void main(String[] args) { // main function
+
+    Message JACK = new Message("JACK", "JACK@xxx.xxx", "678-xxx-9999"); // create
+    an object JACK,
+
+    and call constructor
+
+    System.out.println(JACK.name);
+
+    JACK.displayEmail(); // call a function
+
+    Message ANDY = new Message("ANDY", "ANDY@xxx.xxx", "567-xxx-0000"); // create
+    an object ANDY,
+
+    and call constructor
+
+    System.out.println(ANDY.name);
+
+    ANDY.displayPhone(); // call a function
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 207
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    Click White Triangle Green Button in tool bar to run the program and see the output:
+
+
+    # **Output:**
+
+
+    JACK
+
+
+    Email:JACK@xxx.xxx
+
+
+    ANDY
+
+
+    Phone:567-xxx-0000'
+  merge: -1
+  pgno: 208
+- img_proc: true
+  md: '# Explanation:
+
+
+    “public class Message” defines a class “Message”.
+
+    public Message(......) defines a constructor, initializes three string variables.
+
+
+    “Message JACK = new Message (.....)” creates an object “JACK”, and automatically
+    calls the constructor to initialize three string variables.
+
+
+    “JACK.name” references the variable “name”.
+
+
+    “JACK.displayEmail();” calls the function “displayEmail()”.
+
+
+    “Message ANDY = new Message (.....)” creates an object “ANDY”, and automatically
+    calls the constructor to initialize three string variables.
+
+
+    “ANDY.name” references the variable “name”.
+
+
+    “ANDY.displayPhone();” calls the function “displayPhone()”.'
+  merge: -1
+  pgno: 209
+- img_proc: true
+  md: '# Hour 6
+
+
+    # Inheritance & Modifiers'
+  merge: -1
+  pgno: 210
+- img_proc: true
+  md: '# Inheritance
+
+
+    A class can be extended by a subclass.
+
+
+    ```
+
+    class sub-class extends parent-class;
+
+    ```
+
+
+    “extends” is used in a sub class extends a parent class.'
+  merge: -1
+  pgno: 211
+- img_proc: true
+  md: '# Example 6.1
+
+
+    ```
+
+    class parent_class{ // parent class
+
+    // define variable here;
+
+    // define method here;
+
+    }
+
+    class sub_class extends parent_class{ // sub class
+
+    // define variable here;
+
+    // define method here;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 212
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    “class sub_class extends parent_class” means that a sub class extends a parent
+    class (also called super class).
+
+
+    Sub class can access the variable and method in parent class, but cannot access
+    the private variable and private method in parent class.'
+  merge: -1
+  pgno: 213
+- img_proc: true
+  md: '# “super” keyword
+
+
+    In sub class, “super” is used to call the constructor of parent class.
+
+
+    ```
+
+    super ( argument );
+
+    ```
+
+
+    “super ( argument );” is placed the first line in the constructor of sub class,
+    to call the constructor of parent class.
+
+
+    Example 6.2
+
+
+    ```
+
+    class super_class{
+
+    super_class (int x, int y){ // constructor
+
+    this.x=x; this .y=y;
+
+    }
+
+    ```
+
+
+    ```
+
+    class sub_class extends super_class{
+
+    sub_class(int x, int y){ // constructor
+
+    super ( x,y ); // call the constructor of parent class
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 214
+- img_proc: true
+  md: '# Explanation:
+
+
+    “super ( x,y);” calls the constructor in super class.'
+  merge: -1
+  pgno: 215
+- img_proc: true
+  md: '# Overriding
+
+
+    The method of sub class can override the method of super class, if the method
+    name and argument are the same.'
+  merge: -1
+  pgno: 216
+- img_proc: true
+  md: "# Example 6.3\n\n```\nclass Super_class{\n    int test(int num ) { return num;\
+    \ } // overriding\n}\nclass Sub_class extends Super_class{\n    int test(int num\
+    \ ) { return 100 + num; } // overriding\n}\npublic class OverridingClass {\n \
+    \   public static void main (String args[]){\n        Sub_class obj=new Sub_class();\n\
+    \        System.out.print( obj.test( 200 ));\n    }\n}\n```\n\n( Output: 300 )"
+  merge: -1
+  pgno: 217
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    When “obj.test( 200 )” calls the “int test() { }”, the “int test() { }” in sub
+    class overrides the “int test() { }” in super class, because they have the same
+    name and same argument.'
+  merge: -1
+  pgno: 218
+- img_proc: true
+  md: '# Overloading & Overriding
+
+
+    | overloading | same method name, different argument, in the same class. |
+
+    | overriding | same method name, same argument, in between super class and sub
+    class. |'
+  merge: -1
+  pgno: 219
+- img_proc: true
+  md: '# Example 6.4 (overloading)
+
+
+    ```
+
+    class Color{ String x,y;
+
+    Color ( String a, String b) { x=a; y=b; } // overloading
+
+    Color () { x="yellow"; y="purple";} // overloading
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 220
+- img_proc: true
+  md: '# Example 6.5 (overriding)
+
+
+    ```
+
+    class super_class{
+
+    int test(int num) { return num; } // overriding
+
+    }
+
+    class sub_class extends super_class{
+
+    int test(int num) { return 100 + num; } // overriding
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 221
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    Example 1 is overloading. Example 2 is overriding.'
+  merge: -1
+  pgno: 222
+- img_proc: true
+  md: '# Static variable
+
+
+    "static variable" is known as class variable, it can be referenced by the class
+    or object.
+
+
+    "Non static variable" cannot be referenced by class.'
+  merge: -1
+  pgno: 223
+- img_proc: true
+  md: "“Non static variable” can be referenced by object only.\n\n# Example 6.6\n\n\
+    ```\nclass MyClass {\n    static int count=100; // declare a static vaiable\n\
+    \    public static void main (String args[]){\n        System.out.print( MyClass.count\
+    \ ); /* MyClass references a static variable \"count\" directly */\n    }\n} (\
+    \ Output: 100 )\n```"
+  merge: -1
+  pgno: 224
+- img_proc: true
+  md: '# Explanation:
+
+
+    “static int count=100” defines a static variable.
+
+
+    “MyClass.count” means a class “MyClass” references a static variable “count"
+
+    directly.
+
+
+    Note that an object can also reference static variable.'
+  merge: -1
+  pgno: 225
+- img_proc: true
+  md: '# Static Method
+
+
+    "static method" is known as class method, it can be called by the class or object.
+
+    "Non static method" cannot be referenced by class.'
+  merge: -1
+  pgno: 226
+- img_proc: true
+  md: "“Non static method” can be referenced by object only.\n\n# Example 6.7\n\n\
+    ```\nclass MyClass {\n    static int count() { return 100 ; } // declare a static\
+    \ method\n    public static void main (String args[]){\n        System.out.print(\
+    \ MyClass.count() ); /* MyClass calls a static method \"count()\" directly */\n\
+    \    }\n} (Output: 100)\n```"
+  merge: -1
+  pgno: 227
+- img_proc: true
+  md: '# Explanation:
+
+
+    “static int count() { return 100 }” defines a static method.
+
+
+    “MyClass.count()” means a class “MyClass” calls a static method “count()” directly.
+
+
+    Note that an object can also call static method.'
+  merge: -1
+  pgno: 228
+- img_proc: true
+  md: '# final Variable
+
+
+    “final” is a keyword.
+
+
+    “final+ variable” means that variable value cannot be modified.'
+  merge: -1
+  pgno: 229
+- img_proc: true
+  md: "# Example 6.8\n\n```\nclass MyClass{\n    final int x =100; // declare a final\
+    \ variable\n    static void test( ) { x = 200; // error for \"x\" is a final variable\n\
+    \    public static void main (String args[]){\n        System.out.print( MyClass.test()\
+    \ );\n    }\n}\n```"
+  merge: -1
+  pgno: 230
+- img_proc: true
+  md: '# Explanation:
+
+
+    final int x =100” defines a final variable “x”, its value is 100 and cannot be
+    changed.
+
+
+    static void test( ) { x = 200;} tries to modify the value of “x”, but error occurs.'
+  merge: -1
+  pgno: 231
+- img_proc: true
+  md: '# final Method()
+
+
+    “final” is a keyword.
+
+
+    “final method()” means that method cannot be overridden.'
+  merge: -1
+  pgno: 232
+- img_proc: true
+  md: '```
+
+    Example 6.9
+
+    class animal{
+
+    final void test () { // declare a final method
+
+    System.out.print("animal");
+
+    }
+
+    class dog extends animal {
+
+    void test (() { // error! for test() want to override...
+
+    System.out.print("dog");
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 233
+- img_proc: true
+  md: '**Explanation:**
+
+
+    “final void test(){...}” defines a final method.
+
+
+    “void test(){...}” tries to override “**final void test(){...}**, but error occurs.'
+  merge: -1
+  pgno: 234
+- img_proc: true
+  md: '# final class
+
+
+    “final” is a keyword.
+
+
+    “final class” means that class cannot be extended.'
+  merge: -1
+  pgno: 235
+- img_proc: true
+  md: '```
+
+    Example 6.10
+
+    final class animal { // declare a final class
+
+    // define some variables;
+
+    // define some method;
+
+    }
+
+    class elephant extends animal { // error! cannot extends
+
+    // define some variables;
+
+    // define some method;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 236
+- img_proc: true
+  md: '# Explanation:
+
+
+    “final class animal {...}” defines a final class “animal”, which means “animal”
+    class cannot be extended.
+
+
+    “class elephant extends animal {...}” tries to extend super class “animal”, but
+    error occurs.'
+  merge: -1
+  pgno: 237
+- img_proc: true
+  md: '# Polymorphism
+
+
+    Polymorphism describes the ability to perform different method for different object.'
+  merge: -1
+  pgno: 238
+- img_proc: true
+  md: "# Example 6.11\n\n```\nclass Animal{ // parent class\nvoid cry(){\n    System.out.println(\"\
+    crying......\");\n}\n}\n\nclass Dog extends Animal{ // sub class\nvoid cry() {\
+    \ // overriding\n    System.out.println(\"Wow, Wow......\");\n}\n}\n\nclass Cat\
+    \ extends Animal{ // sub class\nvoid cry() { // overriding\n    System.out.println(\"\
+    Meow, Meow......\");\n}\n}\n\nclass PolymorphismDemo{\npublic static void void\
+    \ main(String args[]) { // main function\n    Animal animalVar;\n\n    animalVar\
+    \ = new Dog(); // create a dog object\n    animalVar.cry(); // dog object calls\
+    \ cry\n\n    animalVar = new Cat(); // create a cat object\n    animalVar.cry();\
+    \ // cat object calls cry\n}\n}\n```\n\n# Output:\n\nWow, Wow......\n\nMeow, Meow......"
+  merge: -1
+  pgno: 239
+- img_proc: true
+  md: '# Explanation:
+
+
+    “animalVar = new dog()” creates a dog object, therefore, “animalVar.cry( )” calls
+    a method cry( ) in sub class Dog.
+
+
+    “animalVar = new cat()” creates a cat object, therefore, “animalVar.cry( )” calls
+    a method cry() in sub class Cat.'
+  merge: -1
+  pgno: 240
+- img_proc: true
+  md: '# Package & Import
+
+
+    ```
+
+    package package-name;
+
+    import package.class;
+
+    ```
+
+
+    “package package-name” creates or use a package.
+
+    “import package.class” imports a package or its class.'
+  merge: -1
+  pgno: 241
+- img_proc: true
+  md: '# **Example 6.12** (in file1)
+
+
+    ```
+
+    package myPackage; /* create a package including two classes */
+
+    class MyClass1 {...}
+
+    class MyClass2 {......}
+
+    ```'
+  merge: -1
+  pgno: 242
+- img_proc: true
+  md: '# **Example 6.13** (in file2)
+
+
+    ```
+
+    package myPackage;   // use package “myPackage"
+
+    import myPackage.*;    // import all classes of myPackage
+
+    ```'
+  merge: -1
+  pgno: 243
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    “package myPackage” creates a package named “myPackage”, which contains two classes."MyClass1”
+    and “MyClass2” in file1.java
+
+
+    “import myPackage.*” imports any classes inside the package “myPackage” from file1
+    to file2.
+
+
+    Note that “package” command must be in above of the “import” command.'
+  merge: -1
+  pgno: 244
+- img_proc: true
+  md: '# Build a Package, Import a Class
+
+
+    ```
+
+    package myPackage; // build a package
+
+    import anyClass; // import a class
+
+    ```'
+  merge: -1
+  pgno: 245
+- img_proc: true
+  md: "# Example 6.14\n\n(In Drive.java)\n\n```\npackage myPackage; // create a package\
+    \ containing a class\npublic class Drive{\n    public void getDistance(int mph,\
+    \ float time) {\n        System.out.println(\"SPEED:\" + mph + \" MILES/HOUR\"\
+    );\n        System.out.println(\"TIME:\" + time + \" HOURS\");\n        System.out.println(\"\
+    DISTANCE:\" + time*mph + \" MILES\");\n    }\n}\n```\n\n# (In TestDrive.java)\n\
+    \n```\npackage myPackage; // use \"myPackage\"\nimport myPackage.Drive; // import\
+    \ class \"Drive\" in myPackage\npublic class TestDrive{\n    public static void\
+    \ main (String args[] ) {\n        Drive myDrive = new Drive();\n        myDrive.getDistance(120,\
+    \ 5);\n    }\n}\n```"
+  merge: -1
+  pgno: 246
+- img_proc: true
+  md: '# Output:
+
+
+    SPEED: 120 MILES/HOUR
+
+
+    TIME: 5 HOURS
+
+
+    DISTANCE: 600 MILES'
+  merge: -1
+  pgno: 247
+- img_proc: true
+  md: '# Explanation:
+
+
+    “package myPackage;” creates a package “myPackage” in Drive.java file.
+
+    “import myPackage.Drive;” imports a class “Drive” of “myPackage”.
+
+    “Drive myDrive = new Drive()” can create an object “myDrive” in file TestDrive,
+    because Drive class has been imported from Drive.java file.
+
+    “myDrive.getDistance(120, 5);” calls a method in Drive.java file.
+
+    Note: “package” command must be in above of the “import” command.'
+  merge: -1
+  pgno: 248
+- img_proc: true
+  md: '# Hands-On Project: Inheritance'
+  merge: -1
+  pgno: 249
+- img_proc: true
+  md: '# Inheritance Eclipse
+
+
+    Start up Eclipse > Select "myPackage" > new > class > name >nInheritanceDemo >
+    Finish.
+
+
+    Write following codes in Eclipse.
+
+
+    ```
+
+    package myPackage;
+
+    class code1{ // parent class
+
+    int x, y;
+
+    code1(int a, int b){ // constructor
+
+    x = a; y = b;
+
+    }
+
+
+    class code2 extends code1{ // sub class
+
+    code2(int a, int b){ // constructor
+
+    super(a,b); // call the constructor in parent class
+
+    }
+
+
+    public class InheritanceDemo {
+
+
+    public static void main(String[] args) { // main function
+
+    int result;
+
+    code2 number = new code2(100, 200); /* create an object "number", and call
+
+    2 constructor automatically */
+
+    result = number.x + number.y;
+
+    System.out.println("Sum = " + result);
+
+    }
+
+    ```
+
+
+    Click White Triangle Green Button in tool bar to run the program and see the result'
+  merge: -1
+  pgno: 250
+- img_proc: true
+  md: 'output:
+
+
+    # Output:
+
+
+    Sum = 300'
+  merge: -1
+  pgno: 251
+- img_proc: true
+  md: '# Explanation:
+
+
+    “class code1” creates a super class “code1”.
+
+
+    “code1(int a, int b){ }” defines constructor.
+
+
+    “code2 extends code1” creates sub class “code2” that extends super class
+
+    “code1”.
+
+
+    “code2 (int a, int b){ }” defines constructor.
+
+
+    “super (a,b) calls the constructor in super class so as to initialize the variable
+    x
+
+    and y.
+
+
+    “public class InheritanceDemo” creates a main class.
+
+
+    “code2 number = new code2(100, 200)” creates an object “number",
+
+    automatically calls constructor “code2() { }”, and passes two parameters 100 and
+
+    200 to constructor, so as to initializes the variable x and y.
+
+
+    “member.x” references variables x, its value is 100.
+
+
+    “member.y” references variables y, its value is 200.'
+  merge: -1
+  pgno: 252
+- img_proc: true
+  md: '# Hour 7
+
+
+    # Abstract & Interface'
+  merge: -1
+  pgno: 253
+- img_proc: true
+  md: '# # Abstract
+
+
+    Abstract class works as a parent class, which will be extended by its sub class.
+    The method of sub class will override the abstract method of abstract class.'
+  merge: -1
+  pgno: 254
+- img_proc: true
+  md: '# Example 7.1
+
+
+    ```
+
+    abstract class books{ //define a abstract class
+
+    abstract int read(); //define a abstract method
+
+    }
+
+    class eBooks extends books{ //extend the parent class
+
+    int read (){ return 100; } //override the abstract method
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 255
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    “abstract class books{ }” defines an abstract class.
+
+
+    “abstract int read()” defines a abstract method.
+
+
+    “class eBooks extends books { }” means a sub class "eBooks "extends the parent
+    class "books".
+
+
+    “int read() { }” means this method in sub class overrides the abstract method
+    in parent class.'
+  merge: -1
+  pgno: 256
+- img_proc: true
+  md: '# Abstract Example'
+  merge: -1
+  pgno: 257
+- img_proc: true
+  md: 'Example:
+
+
+    ```
+
+    package myPackage;
+
+    ababstract class Books { //create an abstract class
+
+    abstract void read(); //create an abstract method
+
+    }
+
+    class eBooks extends Books { //extend the parent class
+
+    void read() { //override the abstract method
+
+    System.out.println("Overrides the abstract method!");
+
+    }
+
+    }
+
+    public class AbstractExample {
+
+    public static void main(String[] args) {
+
+    eBooks obj =new eBooks();
+
+    obj.read();
+
+    }}
+
+    ```'
+  merge: -1
+  pgno: 258
+- img_proc: true
+  md: '**Output:**
+
+
+    Overrides the abstract method!'
+  merge: -1
+  pgno: 259
+- img_proc: true
+  md: '# Permission
+
+
+    Java has four permission modifiers to define a member.
+
+    default, public, private, protected
+
+
+    | Class | default | public | private | protected |
+
+    | same class | V | V | V | V |
+
+    | same package parent class | V | V | X | V |
+
+    | same package sub class | V | V | X | V |
+
+    | different package parent class | X | V | X | X |
+
+    | different package sub class | X | V | X | V |
+
+
+    default member cannot be accessed by different package.
+
+    public member can be accessed by any package & class.
+
+    private member cannot be accessed by different class.
+
+    protected member can be accessed by any sub class.'
+  merge: -1
+  pgno: 260
+- img_proc: true
+  md: '# Default Member
+
+
+    default member cannot be accessed by different package, Note that package name
+    must be the same as directory name where the package locates.
+
+
+    default member has no any modifier.'
+  merge: -1
+  pgno: 261
+- img_proc: true
+  md: '# Example 7.2
+
+
+    There two files in the same package as following:
+
+
+    ```
+
+    (In file1 of myPackage)
+
+    package myPackage;
+
+    public class ParentClass{
+
+    int num=100; // This is a default member.
+
+    }
+
+    ```
+
+
+    ```
+
+    (In file2 of myPackage)
+
+    package myPackage;
+
+    public class SubClass extends ParentClass{
+
+    public static void main(String[] args) {
+
+    SubClass s=new SubClass();
+
+    System.out.print ( s.num); /* s references num in the same package, ok! */
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 262
+- img_proc: true
+  md: '# Output:
+
+
+    100'
+  merge: -1
+  pgno: 263
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    “int num=100” defines a default member.
+
+
+    “s.num” can access a default member in the same package.'
+  merge: -1
+  pgno: 264
+- img_proc: true
+  md: '# Public Member
+
+
+    public member can be accessed by any package or any class, spcially in diffent
+    packages.'
+  merge: -1
+  pgno: 265
+- img_proc: true
+  md: "# Example 7.3\n\nThere two files in the different package as following:\n\n\
+    ```\n(In file1 of MyPackage)\npackage myPackage;\npublic class ParentClass{\n\
+    \    public int num=100; // This is a public member.\n}\n```\n\n```\n(In file2\
+    \ of NewPackage)\npackage newPackage;\nimport myPackage.ParentClass;\npublic class\
+    \ SubClass extends ParentClass{\n    public static void main(String[] args) {\n\
+    \        SubClass s=new SubClass();\n        System.out.print( s.num ); /** s\
+    \ references num in different package, ok! */\n    }\n}\n```"
+  merge: -1
+  pgno: 266
+- img_proc: true
+  md: '# Output:
+
+
+    100'
+  merge: -1
+  pgno: 267
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    “public int num=100” defines public member.
+
+
+    “s.num” can access a public member in different package.'
+  merge: -1
+  pgno: 268
+- img_proc: true
+  md: '# Private Member
+
+
+    private member cannot be accessed by different class.'
+  merge: -1
+  pgno: 269
+- img_proc: true
+  md: "Example:\n\n```\nclass MyClass {\n    private MyClass() { // private constructor\n\
+    \        System.out.println(\"This is a private method!\");\n    }\npublic class\
+    \ NewClass{\n    public static void main ( String args { ) {\n        MyClass\
+    \ obj = new MyClass ( ); /* Error! Access a private constructor */\n    }\n}\n\
+    ```\n\nOutput: ( Error message! )"
+  merge: -1
+  pgno: 270
+- img_proc: true
+  md: '**Explanation:**
+
+
+    “private MyClass( )” defines a private constructor “MyClass”.
+
+
+    “new MyClass( )” tries to calls private constructor “MyClass”, but error occurs,
+    because they respectively locates different class.'
+  merge: -1
+  pgno: 271
+- img_proc: true
+  md: '# Private Example'
+  merge: -1
+  pgno: 272
+- img_proc: true
+  md: "private member can be accessed by the same class.\n\n# **Example:**\n\n```\n\
+    package myPackage;\npublic class OurClass {\n    private int a = 100; // declare\
+    \ a private variable\n    private int b = 200; // declare a private variable\n\
+    \    public void accessVariable(){\n        System.out.println(\"a = \" + a);\
+    \ // access private variable\n        System.out.println(\"b = \" + b); // access\
+    \ private variable\n    }\n}\npublic class PrivateExample {\n    public static\
+    \ void main ( String args ) {\n        OurClass obj = new OurClass(); /* OK, access\
+    \ a default constructor */\n        obj.accessVariable();\n    }\n}\n```"
+  merge: -1
+  pgno: 273
+- img_proc: true
+  md: '# **Output:**
+
+
+    a = 100
+
+
+    b = 200'
+  merge: -1
+  pgno: 274
+- img_proc: true
+  md: '# Protected Member
+
+
+    protected member can be accessed any sub class.'
+  merge: -1
+  pgno: 275
+- img_proc: true
+  md: '# Example 7.5
+
+
+    There two files in the different package as following:
+
+
+    (In file1 of MyPackage)
+
+
+    ```
+
+    package myPackage;
+
+    public class ParentClass{ // paraent class
+
+    protected int num=100; // protected member.
+
+    }
+
+    ```
+
+
+    (In file2 of NewPackage)
+
+
+    ```
+
+    package newPackage;
+
+    import myPackage.ParentClass;
+
+    public class SubClass extends ParentClass{ // sub class
+
+    public static void main(String[] args) {
+
+    SubClass s=new SubClass();
+
+    System.out.print ( s.num ); // access a protected member
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 276
+- img_proc: true
+  md: '# Output:
+
+
+    100'
+  merge: -1
+  pgno: 277
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    "protected int num=100" defines a protected member.
+
+    "s.num" can access a protected member from sub class in different package.
+
+    protected member can be accessed any sub class.'
+  merge: -1
+  pgno: 278
+- img_proc: true
+  md: '# Interface
+
+
+    Interface is a special class, which will be implemented by a class. Interface
+    contains one or more more empty methods that will be implemented by a method of
+    the class.'
+  merge: -1
+  pgno: 279
+- img_proc: true
+  md: "# Example 7.6\n\n```\ninterface books { // define an interface\nint booknumber();\
+    \ // define an empty method\n}\nclass eBooks implement books { // implement interface\n\
+    public int booknumber () { // implement the empty method\nreturn 100;\n }\n```"
+  merge: -1
+  pgno: 280
+- img_proc: true
+  md: '# Explanation:
+
+
+    “interface books” defines an interface named “books”.
+
+
+    “int booknumber()” defines an empty method “booknumber”.
+
+
+    “class eBooks implement books{ }” means class “eBooks” implements “books” interface.
+
+
+    “public int booknumber() { }” implements the booknumber().'
+  merge: -1
+  pgno: 281
+- img_proc: true
+  md: '# Interface Example'
+  merge: -1
+  pgno: 282
+- img_proc: true
+  md: "# Example:\n\n```\npackage myPackage;\ninterface Books { //define an interface\n\
+    \    public void booksNumbers(); //define an empty method\n}\nclass eBooks implements\
+    \ Books { //implement interface\n    public void booksNumbers(){ //implement empty\
+    \ method\n        System.out.println(\"Implement the empty method!\");\n    }\n\
+    }\npublic class InterfaceExample {\n    public static void main(String[] args)\
+    \ {\n        eBooks obj = new eBooks();\n        obj.booksNumbers();\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 283
+- img_proc: true
+  md: '# **Output:**
+
+
+    Implement the empty method!'
+  merge: -1
+  pgno: 284
+- img_proc: true
+  md: '# Abstract & Interface'
+  merge: -1
+  pgno: 285
+- img_proc: true
+  md: "| Abstract Explanation: |\n| abstract class books{ //define an abstract class\n\
+    \ abstract int read(); //define an abstract method\n }\n class eBooks extends\
+    \ books{ //extend the parent class\n int read ( ) { return ...; } //override the\
+    \ abstract method\n } |"
+  merge: -1
+  pgno: 286
+- img_proc: true
+  md: "# Interface Explanation:\n\n```\ninterface books { //define an interface\n\
+    int booknumber( ); //define an empty method\n}\nclass eBooks implement books {\
+    \ //implement interface\npublic int booknumber() () { //implement the empty method\n\
+    \    return ...;\n}\n}\n```"
+  merge: -1
+  pgno: 287
+- img_proc: true
+  md: '# Initializes Variables
+
+
+    When creating an object, it needs a constructor to initialize the variables.'
+  merge: -1
+  pgno: 288
+- img_proc: true
+  md: "```\nExample 7.7\nclass Book { // create a class\n  public String title;\n\
+    \  public int number;\n  public Book () { // define a constructor\n    title =\
+    \ \"Learning Java \\ // initialization\n    number = 100; // initialization\n\
+    \  }\n}\npublic class Publisher { // create main class\n  public static void main\
+    \ ( String args) { //main method\n    Book eBook = new Book ( ); // create an\
+    \ object\n    System.out.print(eBook.title + eBook.number);\n  }\n}\n( Output:\
+    \ Learning Java 100 )\n```"
+  merge: -1
+  pgno: 289
+- img_proc: true
+  md: '# Explanation:
+
+
+    public Book () { } is a constructor to initialize variables.'
+  merge: -1
+  pgno: 290
+- img_proc: true
+  md: '# Another Class
+
+
+    Main class can use another-class to call another-method.'
+  merge: -1
+  pgno: 291
+- img_proc: true
+  md: "# Example 7.8\n\n```\nclass AnotherClass{ // define another class\npublic static\
+    \ void AnotherMethod() { // another method\n    System.out.print (\"Very Good\"\
+    ); \n}\npublic class MainClass{//define main class\n    public static void main\
+    \ (String args []) { // main method\n        AnotherClass.AnotherMethod(); //call\
+    \ another method\n    }\n}\n( Output: Very Good )\n```"
+  merge: -1
+  pgno: 292
+- img_proc: true
+  md: '# Explanation:
+
+
+    “AnotherClass.AnotherMethod( ) use another class to call another method.'
+  merge: -1
+  pgno: 293
+- img_proc: true
+  md: '# Hands-On Project: Max & Min'
+  merge: -1
+  pgno: 294
+- img_proc: true
+  md: '# Abstract Example
+
+
+    Start up Eclipse > Select "myPackage" > new > class > name > AbstractDemo >nFinish.
+
+
+    Write following codes in Eclipse.
+
+
+    ```
+
+    package myPackage;
+
+    ababstract class A { // define an abstract class
+
+    ababstract int max(int x, int y); // define an abstract method
+
+    int min(int x, int y);
+
+    return x>y?x;
+
+    }
+
+    class B extends A { // extend the parent class
+
+    int max(int x, int y) { // override the abstract method
+
+    return x>y?x;
+
+    }
+
+    ```
+
+
+    ```
+
+    public class AbstractDemo {
+
+    public static void main(String[] args) {
+
+    A a;
+
+    B b=new B();
+
+    int max=b.max(100,200);
+
+    int min=b.min(100, 200);
+
+    System.out.println("Max="+max);
+
+    System.out.println("Min="+min);
+
+    }}
+
+    ```
+
+
+    Click White Triangle Green Button in tool bar to run the program and see the
+
+    output:
+
+
+    # Output:
+
+
+    Max = 200
+
+    Min = 100'
+  merge: -1
+  pgno: 295
+- img_proc: true
+  md: 'Explanation:
+
+
+    “abstract class A{ }” defines abstract class.
+
+
+    “abstract int max()” defines a abstract method.
+
+
+    “class B extends A{ }” means a sub class “B” extends the parent class ”A”.
+
+
+    “int max() { }” means this method in sub class overrides the abstract method in
+    parent class.'
+  merge: -1
+  pgno: 296
+- img_proc: true
+  md: '# Hands-On Project: Max & Min'
+  merge: -1
+  pgno: 297
+- img_proc: true
+  md: '# Interface Example
+
+
+    Start up Eclipse > Select “myPackage > > new > class > name > InterfaceDemo >
+    Finish.
+
+
+    Write following codes in Eclipse.
+
+
+    ```
+
+    package myPackage;
+
+    interface myInterface{ // define an interface
+
+    public void compareNumbers(int num1, int num2) { /* define an empty method */
+
+    }
+
+    class MaxNum implements myInterface { //implement interface
+
+    public void compareNumbers(int num1, int num2) { /* implement the empty method
+    */
+
+    System.out.println("Two numbers are: "+num1+" & "+num2");
+
+    if (num1>=num2)
+
+    System.out.println("Maximum is:"+num1);
+
+    else
+
+    System.out.println("Maximum is:"+num2");
+
+    }
+
+    class MinNum implements myInterface{
+
+    public void compareNumbers(int num1, int num2) {
+
+    System.out.println("Two numbers are: "+num1+" & "+num2");
+
+    if (num1==num2)
+
+    System.out.println("Minimum is:"+num1);
+
+    else
+
+    System.out.println("Minimum is:"+num2");
+
+    }
+
+    public class InterfaceDemo {
+
+    public static void main(String[] args) {
+
+    MaxNum maxObject = new MaxNum();
+
+    maxObject.compareNumbers(100, 120);
+
+    MinNum minObject = new MinNum();
+
+    minObject.compareNumbers(60, 80);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 298
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    Click White Triangle Green Button in tool bar to run the program and see the output:
+
+
+    # **Output:**
+
+
+    Two numbers are: 100 & 120
+
+
+    Maxmum is:120
+
+
+    Two numbers are: 60 & 80
+
+
+    Minmum is:60'
+  merge: -1
+  pgno: 299
+- img_proc: true
+  md: '# Explanation:
+
+
+    “interface myInterface” defines an interface named “myInterface”.
+
+    “void compareNumbers ( )” defines an empty method “void compareNumbers(
+
+    )”.
+
+
+    “class MaxNum implements myInterface { }” means class “MaxNum"
+
+    implements “myInterface” interface.
+
+
+    “class MinNum implements myInterface { }” means class “MinNum"
+
+    implements “myInterface” interface.
+
+
+    “public void compareNumbers() { }” implements the empty method
+
+    compareNumbers( ) in interface.'
+  merge: -1
+  pgno: 300
+- img_proc: true
+  md: '# Hour 8
+
+
+    # Exception & I/O'
+  merge: -1
+  pgno: 301
+- img_proc: true
+  md: '# Exception
+
+
+    An exception is an error that occurs during the running of a program that breaks
+    the normal flow of commands.'
+  merge: -1
+  pgno: 302
+- img_proc: true
+  md: "# Example 8.1\n\n```\npublic class ExceptionSample {\n  public static void\
+    \ main (String args [ ]) {\n    int a=10, b=0, c;\n\n    c = a/b; // error! because\
+    \ \"b\" is 0.\n    System.out.print ( c );\n  }}\n```\n\n( Output: java.lang.ArithmeticException:\
+    \ / by zero"
+  merge: -1
+  pgno: 303
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    "c = a/b" occurs error, because “b” is zero.
+
+
+    Above example shows an exception whose pattern is “ArithmeticException”.'
+  merge: -1
+  pgno: 304
+- img_proc: true
+  md: '# Catch Exception (1)
+
+
+    ```
+
+    ```
+
+    try { // some codes that may have exception }
+
+    catch ( Exception ) { // process the exception }
+
+    ``````
+
+    ```
+
+
+    “try-catch” can catch exception and handles it.'
+  merge: -1
+  pgno: 305
+- img_proc: true
+  md: "# Example 8.2\n\n```\npublic class ExceptionSample {\npublic static void main\
+    \ (String args [ ]) {\n  try { // some codes that may have exception\n  int a=10,\
+    \ b=0; c;\n  c = a/b; // error! because \"b\" is 0.\n  System.out.print ( c );\n\
+    \ }\n  catch ( ArithmeticException e) { // handle the exception\n  System.out.print(\"\
+    \ Divided By Zero \");\n }}\n ( Output: Divided By Zero )\n```"
+  merge: -1
+  pgno: 306
+- img_proc: true
+  md: '**Explanation:**
+
+
+    “try{...}” has “c=a/b”, and causes an exception.
+
+
+    “catch {...}” processs that exception.'
+  merge: -1
+  pgno: 307
+- img_proc: true
+  md: '# Catch Exception (2)
+
+
+    ```
+
+    try { // some codes that may have exception }
+
+    catch ( Exception ) { // process exception }
+
+    ```
+
+
+    When an array index is out bound, exception will occur.'
+  merge: -1
+  pgno: 308
+- img_proc: true
+  md: "# Example 8.3 ExceptionSample {\n\n```\npublic class static void main (String\
+    \ args [ ]) {\ntry {\n    int a[ ] = new int[10]; // the last index is 9\n   \
+    \ a[10]=100; // error! because the index is out bound.\n    System.out.print(\"\
+    \ a[10]);\n}\ncatch ( ArrayOutOfBoundsException e) {\n    System.out.print(\"\
+    \ Array index out of bounds \");\n}}\n}} ( Output: Array index out of bounds )\n\
+    ```"
+  merge: -1
+  pgno: 309
+- img_proc: true
+  md: '**Explanation:**
+
+
+    “try {...}” has “a[10]”, and causes an exception.
+
+    “catch {...}” processes that exception.'
+  merge: -1
+  pgno: 310
+- img_proc: true
+  md: '# Catch Exception (3)
+
+
+    ```
+
+    try { // some codes that may have exception }
+
+    catch ( Exception ) { // process exception }
+
+    ```
+
+
+    When a character index is out bound, exception will occur.'
+  merge: -1
+  pgno: 311
+- img_proc: true
+  md: "# Example 8.4\n\n```\npublic class ExceptionSample {\n    public static void\
+    \ main (String args [ ]) {\n        try {\n            char ch = \"ABC\".charAt(100);\
+    \ // error! index out bound.\n            System.out.print( ch );\n        }\n\
+    \        catch (OutOfBoundsException e) {\n            System.out.print( \"Character\
+    \ index out of bounds\" );\n        }\n    }} ( Output: Character index out of\
+    \ bounds.)\n```"
+  merge: -1
+  pgno: 312
+- img_proc: true
+  md: 'Explanation:
+
+
+    "try{...}" has "ABC".charAt(100); and causes an exception, because the length
+    of "ABC" is 3, and without the 100th character.
+
+
+    "catch {...}" processes that exception.'
+  merge: -1
+  pgno: 313
+- img_proc: true
+  md: '# Finally Command
+
+
+    The try-catch block can be followed by a “finally” command which always be executed
+    at last.
+
+
+    ```
+
+    try { // some codes that may have exception }
+
+    catch ( Exception ) { // process exception }
+
+    finally { // must execute at last }
+
+    ```'
+  merge: -1
+  pgno: 314
+- img_proc: true
+  md: "# Example 8.5\n\n```\npublic class ExceptionSample {\n    public static void\
+    \ main (String args [ ]) {\n        try {\n            char ch = \"ABC\".charAt(100);\
+    \ // error!\n        }\n        catch (IndexOutOfBoundsException e) {\n      \
+    \      System.out.print (\"Character index out of bounds. \");\n        } ( Output:\
+    \ Character index out of bounds )\n        finally { System.out.print(\"The End\"\
+    ); } // must execute\n    }\n} ( Output: The End ) )\n```"
+  merge: -1
+  pgno: 315
+- img_proc: true
+  md: '# Explanation:
+
+
+    “finally { System.out.print("The End\); }” must be executed.'
+  merge: -1
+  pgno: 316
+- img_proc: true
+  md: '# Throw Exception
+
+
+    Any program can be ready to throw its own exceptions manually.
+
+
+    ```
+
+    throw new exception ( “exception message”);
+
+    ```
+
+
+    “throw” is used to throw an exception and error message manually.
+
+    e.getMessage( )” can display error message.'
+  merge: -1
+  pgno: 317
+- img_proc: true
+  md: "# Example 8.6\n\n```\npublic class ExceptionSample {\n    public static void\
+    \ main (String args [ ]) {\n        try {\n            int a[ ] = new int[10];\
+    \ // the last element is a[9], without a[10]\n            if ( a[10] >0 ) throw\
+    \ new ArrayOutOfBoundsException(\"Error\"); // throw\n        }\n        catch\
+    \ ( ArrayOutOfBoundsException e) {\n            System.out.print(\"Error index:\"\
+    +e.getMessage()); // alert\n        }\n    }}\n( Output: Error index: 10 )\n```"
+  merge: -1
+  pgno: 318
+- img_proc: true
+  md: '# Explanation:
+
+
+    “throw new exception("...") can throw an exception.'
+  merge: -1
+  pgno: 319
+- img_proc: true
+  md: '# Throws Exception
+
+
+    Any method can be ready to throw its own exceptions manually. “e.getMessage()"
+    displays the error message.
+
+
+    ```
+
+    method ( ) throws exception {...}
+
+    ```'
+  merge: -1
+  pgno: 320
+- img_proc: true
+  md: "# Example 8.7\n\n```\npublic class ExceptionSample {\n  public static void\
+    \ main(String args [ ]) {\n    try {\n      int b = 0;\n      calculate( b );\
+    \ //call the function, but exception occurs!\n    }\n    catch(Exception e) {\n\
+    \      System.out.println(\"The error is\"+ e.getMessage());\n    }\n  }\n  public\
+    \ static int calculate(int num) throws ArithmeticException { // throws exception\
+    \ manually\n    int a=10, c;\n    c = a/num; // num is 0, error!\n    return c;\n\
+    \  }\n}\n(Output: The error is: / by zero.)\n```\n\n# Explanation:\n\n“int calculate(\
+    \ int num) throws ArithmeticException” throws an exception.\n“e.getMessage() ”\
+    \ displays the error message."
+  merge: -1
+  pgno: 321
+- img_proc: true
+  md: '# File Class
+
+
+    File class is used to display the property of file, to check the file existence,
+    writable, readable, to rename the file......
+
+
+    ```
+
+    File f = new File (file-name);   // create a file object
+
+    f.exists();                    // check existence
+
+    f.canRead( );                  // check readable
+
+    f.canWrite( );                // check writable
+
+    f.isfile( );                   // check if is a file
+
+    ```'
+  merge: -1
+  pgno: 322
+- img_proc: true
+  md: "# Example 8.8\n\n```\nFile f = new File ( MyFile );\nif ((f.exists())) {\n\
+    \    System.out.println(\"Exists:\"+ f.exists()); // Exists: true\n    System.out.println(\"\
+    Can read:\"+ f.canRead()); // Can read: true\n    System.out.println(\"Can write:\"\
+    + f.canWrite()); // Can write: false\n    System.out.println(\"Is file:\"+ f.isFile());\
+    \ // Is file: true\n}\n```"
+  merge: -1
+  pgno: 323
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    All above method returns true or false.'
+  merge: -1
+  pgno: 324
+- img_proc: true
+  md: '# FileOutputStream
+
+
+    FileOutputStream class is used to process Output stream.
+
+
+    ```
+
+    FileOutputStream fout = new FileOutputStream(filename);
+
+
+    System.in.read( ); // read inputted characters
+
+
+    fout.write(); // write characters to file
+
+    ```
+
+
+    “new FileOutputStream(file-name)” creates a Output stream.
+
+    “System.in.read();” reads inputted characters from keyboard.'
+  merge: -1
+  pgno: 325
+- img_proc: true
+  md: “fout.write( );” writes characters to the file.
+  merge: -1
+  pgno: 326
+- img_proc: true
+  md: '# Example 8.9
+
+
+    (Prepare an empty file “MyFile.txt” in the same project folder with the following
+    Java file OutputFile.java)
+
+
+    ```
+
+    package myPackage;
+
+    import java.io.*;
+
+    public class OutputFile {
+
+    public static void main(String[] args) {
+
+
+    char ch;
+
+    int number;
+
+
+    try{
+
+    FileOutputStream fout = new FileOutputStream("MyFile.txt");
+
+    System.out.println("Please input some words, finish with # key and enter:");
+
+    while((ch = (char)System.in.read()) != ''#'') // read inputed characters from
+    keyboard
+
+    fout.write(ch); // write characters to file
+
+    fout.close();
+
+    }
+
+    catch(FileNotFoundException e){
+
+    System.err.println(e);
+
+    }
+
+    catch(IOException e){
+
+    System.err.println(e);
+
+    }
+
+    }
+
+    ```
+
+
+    (Run the program, and type “C++ is very good!” in keyboard)'
+  merge: -1
+  pgno: 327
+- img_proc: true
+  md: '# Result:
+
+
+    Please check the MyFile.txt, you will find that the content is “C++ is very good”’
+
+
+    # Explanation:
+
+
+    “fout” is an output stream object.
+
+
+    “System.in.read()” reads characters from keyboard.
+
+
+    “fout.write(ch)” writes characters to the file.
+
+
+    When you view the MyFile.txt, its content is:
+
+
+    “C++ is very good”'
+  merge: -1
+  pgno: 328
+- img_proc: true
+  md: '# FileInputStream
+
+
+    FileInputStream class is used to process input stream.
+
+
+    ```
+
+    FileInputStream fin = new FileInputStream(file-name);
+
+
+    fin.read(); // reads content of a file
+
+    ```
+
+
+    “new FileInputStream (file-name)” creates an input stream.
+
+    “fin.read();” reads content of a file.'
+  merge: -1
+  pgno: 329
+- img_proc: true
+  md: "# Example 8.10\n\n(Given MyFile.txt content is “C++ is very good!” in the same\
+    \ project folder with following Java file inputFile.java)\n\n```\npackage myPackage;\n\
+    import java.io.*;\npublic class InputFile {\n    public static void main(String[]\
+    \ args) {\n        char ch;\n        int number;\n        try {\n            FileInputStream\
+    \ fin = new FileInputStream(\"MyFile.txt\");\n            while((number=fin.read(char))!=-1)\
+    \ { // read the file\n                System.out.print((char)number); // change\
+    \ to characters\n            }\n            fin.close();\n        } catch (FileNotFoundException\
+    \ e) {\n            System.err.println(e);\n        } catch (IOException e) {\n\
+    \            System.err.println(e);\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 330
+- img_proc: true
+  md: '# Output:
+
+
+    C++ is very good!'
+  merge: -1
+  pgno: 331
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    “fin” is an input stream object.
+
+
+    “fin.read()” reads the content of MyFile.txt
+
+
+    “-1” indicates the end of file.'
+  merge: -1
+  pgno: 332
+- img_proc: true
+  md: '# Create Thread
+
+
+    Threads can be used to perform multiple tasks simultaneously. Each thread represents
+    a subtask. There are two methods to create a thread.'
+  merge: -1
+  pgno: 333
+- img_proc: true
+  md: "# Method One:\n\n```\npublic class ThreadDemo extends Thread{ //\nextends\n\
+    public void run(){\n  // the thread body\n}\n}\npublic static void main(String[\
+    \ ] args){\nThreadDemo myThread = new ThreadDemo();\nmyThread( ).start(); // start\
+    \ thread\n}\n```"
+  merge: -1
+  pgno: 334
+- img_proc: true
+  md: '# Explanation:
+
+
+    The method one uses "extends Thread" class.
+
+
+    "run()" automatically runs when thread start.
+
+
+    "myThread = new ThreadDemo();" creates a thread object "myThread".
+
+
+    "start()" starts the thread.'
+  merge: -1
+  pgno: 335
+- img_proc: true
+  md: "# Method two:\n\n```\nclass ThreadDemo implements Runnable{ //\n  implements\n\
+    \  public void run(){\n    // the thread body\n  }\n\n  public static void main(String[]\
+    \ args){\n    Thread myThread = new Thread(new ThreadDemo());\n    myThread.start();\
+    \ // start thread\n  }\n```"
+  merge: -1
+  pgno: 336
+- img_proc: true
+  md: '# Explanation:
+
+
+    The method two uses **“implements Runnable”** interface.
+
+
+    “run( )” automatically runs when thread start.
+
+
+    “new Thread(new ThreadDemo( ) )” creates a thread object “myThread”.
+
+
+    “start( )” starts the thread.'
+  merge: -1
+  pgno: 337
+- img_proc: true
+  md: '# Extends Thread'
+  merge: -1
+  pgno: 338
+- img_proc: true
+  md: "# Example 8.11\n\n```\npublic class class ThreadDemo extends Thread{ // extends\n\
+    public void run() { // thread body\nfor(int i = 0; i<3; i++){\n    System.out.println(\"\
+    Thread!\");\n}\npublic static void main(String[ ] args){\n    ThreadDemo myThread\
+    \ = new ThreadDemo();\n    myThread.start( ); // start thread\n}}\n```"
+  merge: -1
+  pgno: 339
+- img_proc: true
+  md: '**Output:** Thread!
+
+    Thread!
+
+    Thread!'
+  merge: -1
+  pgno: 340
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    “run()” automatically runs when thread start.
+
+
+    “myThread = new ThreadDemo();” creates a thread object “myThread”.
+
+
+    “start()” starts the thread.'
+  merge: -1
+  pgno: 341
+- img_proc: true
+  md: '# Implements Runnable'
+  merge: -1
+  pgno: 342
+- img_proc: true
+  md: "# Example 8.12\n\n```\nclass ThreadDemo implements Runnable{ // implements\n\
+    \    public void run() { // thread body\n        for(int i = 0; i<3; i++){\n \
+    \           System.out.println(\"Thread!\");\n        }\n    }\n    public static\
+    \ void main(String [] args){\n        Thread myThread = new Thread(new ThreadDemo());\n\
+    \        myThread.start(); // start thread\n    }\n}\n```"
+  merge: -1
+  pgno: 343
+- img_proc: true
+  md: '**Output:** Thread!
+
+    Thread!
+
+    Thread!'
+  merge: -1
+  pgno: 344
+- img_proc: true
+  md: '# **Explanation:**
+
+
+    “run()” automatically runs when thread start.
+
+
+    “myThread = new Thread(new ThreadDemo() ))” creates a thread object
+
+
+    “myThread”.
+
+
+    “start()” starts the thread.'
+  merge: -1
+  pgno: 345
+- img_proc: true
+  md: '# Multi-Thread'
+  merge: -1
+  pgno: 346
+- img_proc: true
+  md: "# Example 8.13\n\n```\nclass ThreadDemo extends Thread{\n    public ThreadDemo(String\
+    \ threadName){\n        super(threadName); // initialize thread name\n    }\n\
+    \    public void run() { // thread body\n        for(int i = 0; i<2; i++){\n \
+    \           System.out.println(getName() + \" running!\");\n        }\n    }\n\
+    }\npublic class UseThread{\n    public static void main(String[] args) {\n   \
+    \     ThreadDemo myThread1 = new ThreadDemo(\"1st thread\");\n        ThreadDemo\
+    \ myThread2 = new ThreadDemo(\"2nd thread\");\n        ThreadDemo myThread3 =\
+    \ new ThreadDemo(\"3rd thread\");\n        myThread1.start(); // start thread\n\
+    \        myThread2.start(); // start thread\n        myThread3.start(); // start\
+    \ thread\n    }\n}\n```"
+  merge: -1
+  pgno: 347
+- img_proc: true
+  md: '# **Output:**
+
+
+    1st thread running!
+
+
+    1st thread running!
+
+
+    2nd thread running!
+
+
+    2nd thread running!
+
+
+    3rd thread running!
+
+
+    3rd thread running!'
+  merge: -1
+  pgno: 348
+- img_proc: true
+  md: '# Explanation:
+
+
+    “super(threadName)” initializes the thread name by Thread class constructor.
+
+
+    “getName( )” returns thread name.
+
+
+    “run()” automatically runs when thread start.
+
+
+    “new myThread(“1st thread”)” creates a thread object named “1st Thread”.
+
+
+    “myThread1.start();” starts the thread “myThread1”.
+
+
+    ......'
+  merge: -1
+  pgno: 349
+- img_proc: true
+  md: '# Thread’s Methods
+
+
+    thread.start( ) starts the thread.
+
+    thread.stop( ) stops the thread.
+
+    thread.sleep( ) makes the thread sleep for some time.
+
+    thread.wait( ) makes the thread in waiting status.
+
+    thread.notify( ) wakes up the thread that is waiting.
+
+    thread.yield( ) lets other threads with same priority run.
+
+    thread.isAlive( ) tests the current thread alive.
+
+    thread.currentThread( ) gets the current thread.
+
+    thread.interrupt( ) stops the “blocked” thread.
+
+    thread.suspend( ) makes the thread pause.
+
+    thread.resume( ) starts the thread again.
+
+    thread.join( ) runs this thread after other thread ended.'
+  merge: -1
+  pgno: 350
+- img_proc: true
+  md: "For example:\n\n```\nif(time_to_stop){\n  thread.currentThread().stop(); //\
+    \ stop current thread.\n}\n```"
+  merge: -1
+  pgno: 351
+- img_proc: true
+  md: '# Thread’s Example'
+  merge: -1
+  pgno: 352
+- img_proc: true
+  md: "# Example 8.14\n\n```\nclass ThreadDemo implements Runnable{\n    public void\
+    \ run() { // thread body\n        ....\n        wait(); // make the thread in\
+    \ waiting status.\n        ....\n    }\n}\nClass TextThread{\n    public static\
+    \ void main(String args[]) {\n        Thread myThread = new Thread(new ThreadDemo());\n\
+    \        myThread.start(); // start thread\n        Thread.sleep(1000); // make\
+    \ the thread sleep for 1 second\n        notify(); // wake up the thread that\
+    \ is waiting\n        Thread.yield(); /* let other threads with the same priority\
+    \ run first. */\n    }\n}\n```"
+  merge: -1
+  pgno: 353
+- img_proc: true
+  md: '# Explanation:
+
+
+    “wait()” makes the current thread waiting.
+
+
+    “new Thread(newThreadDemo()” creates a thread.
+
+
+    “myThread.start()” starts the thread.
+
+
+    “Thread.sleep(1000)” makes the thread sleep for 1000 milliseconds.
+
+
+    “notify()” wakes up the thread that is waiting.
+
+
+    “Thread.yield()” lets other threads with the same priority run first.
+
+
+    Note: suspend ( ) and resume ( ) are not recommended to use nowadays.'
+  merge: -1
+  pgno: 354
+- img_proc: true
+  md: '# Hands-On Project: Out of Range'
+  merge: -1
+  pgno: 355
+- img_proc: true
+  md: "# Exception Example\n\nStart up Eclipse > Select \"myPackage\" > new > class\
+    \ > name > ArrayOutRange\n> Finish.\n\nWrite following codes in Eclipse.\n\n```\n\
+    package myPackage;\npublic class ArrayOutRange {\n    public static void main(String[]\
+    \ args) {\n    try{\\ // exception may occur here\n        int n = 0;\n      \
+    \  String color[]={\"Red\", \"Yellow\", \"Green\"};\n        while(n < 4) { //\
+    \ if the index equals 3, an exception occurs\n            System.out.println(color[n]);\n\
+    \            n++;\n        }\n    } catch(ArrayIndexOutOfBoundsException e){\n\
+    \        // process the exception\n        System.out.println(\" \");\n      \
+    \  System.out.println(\"Exception Occurs!\");\n        System.out.println(\"Array\
+    \ Index is Out of Range!\");\n    }}\n```\n\nClick White Triangle Green Button\
+    \ in tool bar to run the program and see the\noutput:\n\n# Output:\n\nRed\nYellow\n\
+    Green\n\nException Occurs!"
+  merge: -1
+  pgno: 356
+- img_proc: true
+  md: Array Index is Out of Range!
+  merge: -1
+  pgno: 357
+- img_proc: true
+  md: '# Explanation:
+
+
+    In array "String color[]={"Red", "Yellow", "Green"};", if the index equals 3,
+    an exception occurs.'
+  merge: -1
+  pgno: 358
+- img_proc: true
+  md: '# Hands-On Project: Mult Tasks'
+  merge: -1
+  pgno: 359
+- img_proc: true
+  md: '# Multi-Thread Program
+
+
+    # Step 1: Create a Java Project
+
+
+    Start up Eclipse > File > New > Java Project > Project Name > "ThreadProject"
+    > Finish. (Figure 1)
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_360_0.png)
+
+
+    (Figure 1)
+
+
+    # Step 2: Create a Package
+
+
+    Package is used to contain various categories of Java files. Different package
+    contains different Java files.
+
+
+    Select project "ThreadProject" > new > package > name > "threadPackage" > Finish.
+    (Figure 2)
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_360_1.png)
+
+
+    (Figure 2)
+
+
+    # Step 3: Create a Class'
+  merge: -1
+  pgno: 360
+- img_proc: true
+  md: 'Select package "threadPackage" > new > class > name > "ThreadClass" > Finish.
+    (Figure 3)
+
+
+    ![](img/16a6794eb7241c5d7b1e4b6cacaa1576_361_0.png)
+
+
+    (Figure 3)
+
+
+    # Step 4: Write Java Codes
+
+
+    Write Java codes in Eclipse.
+
+
+    ```
+
+    package threadPackage;
+
+    public class ThreadClass {
+
+    public static void main(String[] args) { // main function
+
+    myThread1=new myThread("Thread One");
+
+    myThread2=new myThread("Thread Two");
+
+    thread1.start(); // start thread
+
+    thread2.start(); // start thread
+
+    }
+
+    ```
+
+
+    ```
+
+    class myThread extends Thread{
+
+    public myThread(String str) // constructor
+
+    {super(str);} // initialize the thread
+
+    public void run(){\ // thread body
+
+    for(int I=0; I<2; I++){
+
+    ```'
+  merge: -1
+  pgno: 361
+- img_proc: true
+  md: '```
+
+    System.out.println(getName() + " is running!");
+
+    try{sleep((int)(Math.random()*1500));}
+
+    catch(InterruptedException e){
+
+    System.out.println(getName() + " is completed!");
+
+    }
+
+    }
+
+    }
+
+    ```
+
+
+    # Step 5: Run the Program
+
+
+    Click White Triangle Green Button in tool bar to run the program, you can see
+    the output like this:'
+  merge: -1
+  pgno: 362
+- img_proc: true
+  md: '# Output:
+
+
+    Thread Two is running!
+
+
+    Thread One is running!
+
+
+    Thread Two is completed!
+
+
+    Thread Two is running!
+
+
+    Thread One is completed!
+
+
+    Thread One is running!
+
+
+    Thread Two is completed!
+
+
+    Thread One is completed!'
+  merge: -1
+  pgno: 363
+- img_proc: true
+  md: '**Explanation:**
+
+
+    “thread1.start();” and “thread2.start();” runs in turns.
+
+
+    “sleep((int)(Math.random()\*1500));” makes one thread sleep for a moment while
+    another thread is running.'
+  merge: -1
+  pgno: 364
+- img_proc: true
+  md: '# # Appendix
+
+    # Java
+
+    # Tests & Answers'
+  merge: -1
+  pgno: 365
+- img_proc: true
+  md: "# Tests\n\nPlease choose the correct answer\n\n(1)\n\n```\npackage myPackage;\n\
+    public class Calculation{\n    public static void main(String args[]) {\n    \
+    \    int a = 100, b = 5;\n        fill in here c = a/b*10; // data type of \"\
+    c\"\n        System.out.print(\"C = \" + c);\n    }\n}\n```\n\nA. var    B. string\
+    \    C. boolean    D. int\n\n(2)\n\n```\npackage myPackage;\npublic class WhileStatement\
+    \ {\n    public static void main(String[] args) {\n        int n = 1;\n      \
+    \  int sum = 0;\n        fill in here (n <= 100){ // loop statement\n        \
+    \    sum += n;\n            n++;\n        }\n        System.out.println(\"Sum\
+    \ = \" + sum);\n    }\n```"
+  merge: -1
+  pgno: 366
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    +   1. for B. while C. do D. switch
+
+
+    (3)
+
+
+    ```
+
+    package myPackage;
+
+    public class TestArray {
+
+    public static void main(String[] args) {
+
+    int[]myArray;
+
+    myArray = fill in here int[10]; // creates an array object
+
+    for (int n = 0; n < myArray.length; n++){
+
+    myArray[n] = n;
+
+    System.out.print(myArray[n] + "");
+
+    }
+
+    }
+
+    }
+
+    ```
+
+
+    +   A. array B. create C. new D. object
+
+
+    (4)
+
+
+    ```
+
+    package myPackage;
+
+    public class TwoStrings {
+
+    public static void main(String[] args) {
+
+    fill in here s1, s2, s3, s4; // declares four variables
+
+    ```'
+  merge: -1
+  pgno: 367
+- img_proc: true
+  md: '```
+
+    s1 = "C++ in 8 Hours";
+
+    s2 = "C++ in 8 Hours";
+
+    s3 = "Python in 8 Hours";
+
+    s4 = s2;
+
+    System.out.println(s1.equals(s2));
+
+    System.out.println(s1.equals(s3));
+
+    System.out.println(s3.equals(s4));
+
+    }
+
+    }
+
+    ```
+
+
+    A. String      B. var      C. variable      D. void
+
+
+    (5)
+
+
+    ```
+
+    package myPackage;
+
+    public class Message {
+
+    String name, email, phone;
+
+    public fill in here constructor(String Name, String theEmail, String thePhone(
+    // creates a constructor
+
+    name = theName;
+
+    email = theEmail;
+
+    phone = thePhone;
+
+    }
+
+    void displayEmail(){
+
+    System.out.println("Email:" + email);
+
+    }
+
+    void displayPhone(){
+
+    System.out.println("Phone:" + phone);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 368
+- img_proc: true
+  md: "```\n}\npublic static void main(String[] args) {\n    Message JACK = new Message(\"\
+    JACK\", \"JACK@xxx.xxx\", \"678-xxx-9999\");\n    System.out.println(JACK.name);\n\
+    \    JACK.displayEmail();\n\n```\n\n```\nMessage ANDY = new Message(\"ANDY\",\
+    \ \"ANDY@xxx.xxx\", \"567-xxx-\n0000\");\n    System.out.println(ANDY.name);\n\
+    \    ANDY.displayPhone();\n}\n\n```\n\nA. constructor   B. function   C. method\
+    \   D. Message\n\n```\n(6)\npackage myPackage;\nclass code1{\nint x, y;\ncode1(int\
+    \ a, int b) {\nx = a; y = b;\n}\n\n```\n\n```\nclass code2 fill in here code1{\
+    \ // Inheritance\ncode2 (int a, int b) {\nsuper (a,b);\n}\n\n```"
+  merge: -1
+  pgno: 369
+- img_proc: true
+  md: '```
+
+    public class InheritanceDemo {
+
+    public static void main(String[] args) {
+
+    int result;
+
+    code2 number = new code2(100, 200);
+
+    result = number.x + number.y;
+
+    System.out.println("Sum = " + result);
+
+    }
+
+    }
+
+    ```
+
+
+    A. inheritance    B. extend    C. extends    D. inherits
+
+
+    (7)
+
+    fill in here class books{ // define an abstract class
+
+    fill in here int read(); // define an abstract method
+
+    }
+
+    class eBooks extends books{ // extend the parent class
+
+    int read( ){ return 100; } // implement abstract method
+
+    }
+
+
+    A. abstract    B. interface    C. void    D. public
+
+
+    (8)
+
+    fill in here books { // define an interface
+
+    int booknumber(); // define an empty method'
+  merge: -1
+  pgno: 370
+- img_proc: true
+  md: '```
+
+    }
+
+    class eBooks implement books { // implement interface
+
+    public int booknumber ( ) { // implement method
+
+    return 100;
+
+    }
+
+    }
+
+    ```
+
+
+    +   A. abstract  B. interface  C. void  D. public
+
+
+    ```
+
+    (9)
+
+    package myPackage;
+
+    public class ArrayOutRange {
+
+    public static void main(String[] args) {
+
+    int n = 0;
+
+    fill in here color[]="Red", "Yellow", "Green"};
+
+    // creates a String array
+
+    while(n < 4){
+
+    System.out.println(color[n]);
+
+    n++;
+
+    }
+
+    }\}
+
+    ```
+
+
+    +   A. String  B. var  C. variable  D. void'
+  merge: -1
+  pgno: 371
+- img_proc: true
+  md: '```
+
+    (10)
+
+    package threadPackage;
+
+    public class ThreadClass {
+
+    public static void main(String[] args) {
+
+    myThread1=new myThread("Thread One");
+
+    myThread2=new myThread("Thread Two");
+
+    thread1. fill in here; // start thread1
+
+    thread2. fill in here; // start thread2
+
+    }
+
+    }
+
+    ```
+
+
+    ```
+
+    class myThread extends Thread;
+
+    public myThread(String str) // constructor
+
+    {super(str);} // initialize the thread
+
+    public void run(){
+
+    for(int i=0; i<2; i++){
+
+    System.out.println(getName() ) + " is running!");
+
+    try{ sleep((int)(Math.Random()*1500)); }
+
+    catch(InterruptedException e){ { }
+
+    System.out.println(getName())+ " is completed!");
+
+    }
+
+    ```
+
+
+    A. begin()    B. commence()    C. run()    D. start()
+
+
+    ```
+
+    (11)
+
+    int a=100; int b=200;
+
+    ```'
+  merge: -1
+  pgno: 372
+- img_proc: true
+  md: 'String result1 = (a<b) fill in here "apple" : "banana";
+
+
+    ```
+
+    // conditional operator
+
+    System.out.print ( result1);
+
+    ```
+
+
+    +   1. == B. ? C. != D. %=
+
+
+    ```
+
+    (12)
+
+    public class TryClass{
+
+    public static void main (String [ ] args{
+
+    int number=20;
+
+    fill in here ( number ) { // evaluate the variable "number"
+
+    case 10 : System.out.print("Running case 10"); break;
+
+    case 20 : System.out.print("Running case 20"); break;
+
+    case 30 : System.out.print("Running case 30"); break;
+
+    default : System.out.print("Running default code"); break;
+
+    }}
+
+    ```
+
+
+    +   1. switch B. while C. do D. for
+
+
+    ```
+
+    (13)
+
+    public class TryClass{
+
+    public static void main (String [ ] args{
+
+    int x = 100;
+
+    int y = 200;
+
+    System.out.println("Greater number is "+ fill in .max(x, y) );
+
+    ```'
+  merge: -1
+  pgno: 373
+- img_proc: true
+  md: '```
+
+    System.out.println("Less number is " + fill in .min(x, y);
+
+    }} // Mathematics Function
+
+    ```
+
+
+    +   1. Mathematics B. Arith C. Math D. Arithmetic
+
+
+    (14)
+
+
+    ```
+
+    String sb = fill in here StringBuffer ("abcde");
+
+    // create StringBuffer object
+
+    sb.insert(2, "123"); // Output: abc123de
+
+    sb.append("456"); // Output: abc123de456
+
+    sb.reverse ( ); // Output: 654ed321cba
+
+    ```
+
+
+    +   1. create B. object C. class D. new
+
+
+    (15)
+
+
+    ```
+
+    package correctPackage;
+
+    class MyClass {
+
+    int num;
+
+    void test(int num) {
+
+    fill in here .num=num; // a keyword represent the current object
+
+    System.out.println(this.num);
+
+    }
+
+    public static void main(String[ ] args) {
+
+    MyClass obj = new MyClass();
+
+    obj.test(10);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 374
+- img_proc: true
+  md: '}
+
+    }
+
+
+    +   1. this B. MyClass C. object D. super
+
+
+    ```
+
+    (16)
+
+    class MyClass {
+
+    fill in here int count=100; // declare a variable that can be referenced by the
+
+    class directly
+
+    public static void main (String args[]) {
+
+    System.out.print( MyClass.count );
+
+    }
+
+    }
+
+    ```
+
+
+    +   1. final B. static C. dynamic D. abstract
+
+
+    ```
+
+    (17)
+
+    class MyClass{
+
+    fill in here int x=100; // define a variable whose value cannot be changed
+
+    static void test() { x = 200; // error
+
+    public static void main (String args[]) {
+
+    System.out.print( MyClass.test() );
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 375
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    +   1. static  B. private  C. final  D. void
+
+
+    ```
+
+    (18)
+
+    public class ExceptionSample {
+
+    public static void main (String args [ ] ) {
+
+    try {
+
+    int a=10, b=0; c;
+
+    c = a/b; // error
+
+    System.out.print( c );
+
+    }
+
+    fill in here ArithmeticException e { // handle the exception
+
+    System.out.print(" Divided By Zero ");
+
+    }}} // Output: Divided By Zero
+
+    ```
+
+
+    +   1. catch  B. handle  C. exception  D. finally
+
+
+    ```
+
+    (19)
+
+    class MyClass {
+
+    fill in here MyClass() { // set this constructor that cannot be accessed by
+
+    different class
+
+    System.out.print("OK!");
+
+    }
+
+    public class NewClass{
+
+    ```'
+  merge: -1
+  pgno: 376
+- img_proc: true
+  md: "```\npublic static void main ( String args [] ) {\n    MyClass mc=new MyClass\
+    \ ( ); // error\n}\n```\n\n+   1. public B. default C. protected D. private\n\n\
+    (20)"
+  merge: -1
+  pgno: 377
+- img_proc: true
+  md: "```\npublic class ExceptionSample {\n    public static void main (String args\
+    \ [ ]) {\n        try {\n            int b = 0;\n            calculate(b);\n \
+    \       } catch( Exception e) {\n            System.out.println(\"The error is\"\
+    + e.getMessage());\n        }\n    }\n    public static int calculate( int num)\
+    \ fill in here ArithmeticException {\n        // throw an exception\n        int\
+    \ a=10, c;\n        c = a/num; // num is 0, error\n        return c;\n    }\n\
+    }\n```\n\n+   1. throw    B. throws    C. exception    D. finally\n\n(21)"
+  merge: -1
+  pgno: 378
+- img_proc: true
+  md: '```
+
+    public class TryClass{
+
+    public static void main (String [ ] args{
+
+    int sum = 100 + 200;
+
+    String str = "We love fill in here "Java"; //connect two strings
+
+    int incre = 10; incre = ++ incre;
+
+    System.out.println( sum ); // Output: 300
+
+    System.out.println( str ); // Output: We love Java.
+
+    System.out.println( incre ); // Output: 11
+
+    }
+
+    ```
+
+
+    A. connect B. & C. join D. +
+
+
+    (22)
+
+    public class TryClass{
+
+    public static void main (String [ ] args{
+
+    int x;
+
+    fill in here (x = 0; x <= 5; x++) {
+
+    System.out.print(x);
+
+    }}
+
+
+    A. if B. do C. for D. while
+
+
+    (23)
+
+    public class TryClass{'
+  merge: -1
+  pgno: 379
+- img_proc: true
+  md: '```
+
+    public static void main (String [ ] args){
+
+    double pi = Math.PI;
+
+    double ran = fill in here(); // //creates a random number
+
+    System.out.println("The PI value is " + pi);
+
+    System.out.println("The random number is " + ran);
+
+    }
+
+    ```
+
+
+    A. random    B. Math.random    C. At.random    C. ran
+
+
+    ```
+
+    (24)
+
+    public class TryClass{
+
+    public static void main (String [ ] args){
+
+    String str = "This is a string";
+
+    int length = fill in here; //return the length of the string
+
+    System.out.println("The size of string is " + length);
+
+    }
+
+    ```
+
+
+    A. length()    B. size()    C. length    D.size
+
+
+    ```
+
+    (25)
+
+    public class fill in here { // define a class
+
+    String c1, c2;
+
+    Color () {c1="yellow"; c2="purple";}; // constructor
+
+    void brightness () {
+
+    System.out.println("This flower is " + c1);
+
+    ```'
+  merge: -1
+  pgno: 380
+- img_proc: true
+  md: '```
+
+    System.out.println("That flower is " + c2);
+
+    }
+
+    public static void main(String[] args) {
+
+    Color obj = new Color( ); //create an object, call constructor
+
+    obj.brightness ( );
+
+    }
+
+    ```
+
+
+    +   A. MyClass B. Class C. NewClass D. Color
+
+
+    ```
+
+    (26)
+
+    class super_class{
+
+    super_class(int x, int y){ // constructor
+
+    this.x=x; this .y=y;
+
+    }
+
+    class sub_class extends super_class{
+
+    sub_class(int x, int y){ // constructor
+
+    fill in here ( x, y); //calls the constructor in super class
+
+    }
+
+    }
+
+    ```
+
+
+    +   A. super_class B. super C. sub_class D. sub
+
+
+    ```
+
+    (27)
+
+    abstract class Books{ //create an abstract class
+
+    ```'
+  merge: -1
+  pgno: 381
+- img_proc: true
+  md: "```\nabstract void read(); //create an abstract method\n}\nclass eBooks extends\
+    \ Books{\nvoid fill in here() { //override the abstract method\nSystem.out.println(\"\
+    Overrides the abstract method!\");\n}\n  public class AbstractExample {\n  public\
+    \ static void main(String[] args) {\n    eBooks obj =new eBooks();\n    obj.read();\n\
+    \  }\n}\n```\n\n+   A. Book\nB. eBooks\nC. read\nD. abstract\n\n(28)\nFileOutputStream\
+    \ fout = new FileOutputStream(file-name);\nSystem.in.read(); // read inputted\
+    \ characters\nfout. fill in here; // write characters to file\n\n+   A. write()\n\
+    B. read()\nC. writeFile()\nD. readFile()\n\n```\n(29)\nclass MyClass {\nint x,\
+    \ y;\nMyClass ( ) {\n```"
+  merge: -1
+  pgno: 382
+- img_proc: true
+  md: '```
+
+    fill in here ( 100, 200 ); /** a keyword that represents another same-name
+
+    constructor */
+
+    }
+
+    MyClass ( int a, int b)
+
+    x=a; y=b;
+
+    }
+
+    ```
+
+
+    +   A. _construct    B. constructor    C. construct    D. this
+
+
+    ```
+
+    (30)
+
+    class Super_class{
+
+    int test( int num ) { return num; }
+
+    class Sub_class extends Super_class{
+
+    int fill in here( int num ) { return 100 + num; }
+
+    // overriding
+
+    public class OverridingClass {
+
+    public static void main (String args[]) {
+
+    Sub_class obj=new Sub_class();
+
+    System.out.print( obj.test( 200 ));
+
+    }
+
+    ```
+
+
+    +   A. myFunction    B. myMethod    C. test    D.myTest
+
+
+    (31)'
+  merge: -1
+  pgno: 383
+- img_proc: true
+  md: "```\nclass ParentClass{\n    fill in here int num=100; /** define a member\
+    \ that is only accessible by its sub\n    class's object */\n}\npublic class SubClass\
+    \ extends ParentClass{\n    public static void main(String[] args) {\n       \
+    \ SubClass s=new SubClass();\n        System.out.print ( s.num );\n    }\n}\n\
+    ```\n\n+   A. default    B. public    C. protected    D. private\n\n(32)\nFileInputStream\
+    \ fin = new FileInputStream(file-name);\nfin. fill in here (); // reads content\
+    \ of a file\n\n+   A. write()    B. read()    C. writeFile()    D. readFile()"
+  merge: -1
+  pgno: 384
+- img_proc: true
+  md: '# Answers
+
+
+    | 01 | D | 17 | C |
+
+    | 02 | B | 18 | A |
+
+    | 03 | C | 19 | D |
+
+    | 04 | A | 20 | B |
+
+    | 05 | D | 21 | D |
+
+    | 06 | C | 22 | C |
+
+    | 07 | A | 23 | B |
+
+    | 08 | B | 24 | A |
+
+    | 09 | A | 25 | D |
+
+    | 10 | D | 26 | B |
+
+    | 11 | B | 27 | C |
+
+    | 12 | A | 28 | A |
+
+    | 13 | C | 29 | D |
+
+    | 14 | D | 30 | C |
+
+    | 15 | A | 31 | C |
+
+    | 16 | B | 32 | B |'
+  merge: -1
+  pgno: 385
+- img_proc: true
+  md: '# Highly Recommend Computer Books on Amazon:
+
+
+    | AngularJS For Beginners | C# For Beginners | C++ For Beginners |
+
+    | --- | --- | --- |
+
+    | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min.
+    | Includes Tests & Answers<br>Pay Min. |
+
+    | HTML5/CSS3 For Beginners | JAVA For Beginners | JavaScript For Beginners |
+
+    | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min.
+    | Includes Tests & Answers<br>Pay Min. |
+
+    | jQuery For Beginners | PHP MySQL For Beginners | Python For Beginners |
+
+    | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min.
+    | Includes Tests & Answers<br>Pay Min. |
+
+    | Linux Command Line | 50 PROGRAMS JavaScript | Visual Book For Beginners |
+
+    | --- | --- | --- |
+
+    | Cover All Essential Commands<br>Pay Min. | For Beginners Learn Coding Fast<br>Pay
+    Min. | Includes Tests & Answers<br>Pay Min. |
+
+    | Advanced C++ | Advanced JAVA | XML For Beginners |
+
+    | --- | --- | --- |
+
+    | Includes Tests & Answers<br>Pay Min. | Includes Tests & Answers<br>Pay Min.
+    | Includes Tests & Answers<br>Pay Min. |'
+  merge: -1
+  pgno: 386
+- img_proc: true
+  md: '# # Source Code for Download
+
+
+    Please download the source code of this book:
+
+
+    [Java Source Code for Download](()
+
+
+    **Dear My Friend,
+
+
+    If you are not satisfied with this eBook, could you please return the eBook for
+    a refund within seven days of the date of purchase?
+
+
+    If you found any errors in this book, could you please send an email to me?
+
+    yawowiningg@yahoo.com
+
+
+    I will be very grateful for your email. Thank you very much!
+
+
+    Sincerely
+
+    Ray Yao
+
+
+    My friend, See you!'
+  merge: -1
+  pgno: 387

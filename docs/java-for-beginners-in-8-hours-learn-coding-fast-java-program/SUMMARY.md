@@ -1,0 +1,2 @@
++   [JAVA：初学者指南，8 小时内快速学会编程！Java 编程语言速成课程，Java 快速启动指南，带实战项目的简单步骤教程！初学者终极指南！](README.md)
++   [JAVA：初学者指南，8 小时内快速学会编程！Java 编程语言速成课程，Java 快速启动指南，带实战项目的简单步骤教程！初学者终极指南！](java-for-beginners-in-8-hours-learn-coding-fast-java-program.md)
