@@ -1,0 +1,4623 @@
+- img_proc: true
+  md: '# Job Interview Questions Series
+
+
+    # 2015 Edition
+
+
+    # RESTful JAVA
+
+
+    # Web Services
+
+
+    # Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    ![](img/f2d5f7dd81c54b5511f7cf51f16b5c04_0_0.png)
+
+
+    FREE
+
+    2 Aptitude Tests,
+
+    download available on website
+
+
+    203 RESTful JAVA Web Services Questions 51 HR Interview Questions
+
+
+    # Vibrant Publishers'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # RESTful JAVA
+
+    Web Services
+
+
+    # ## Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    Job Interview Questions Series
+
+
+    VP Vibrant Publishers
+
+    www.vibrantpublishers.com'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# RESTful JAVA Web Services
+
+    Interview Questions
+
+    nYou''ll Most Likely Be Asked
+
+
+    © 2014, By Vibrant Publishers, USA. All rights reserved. No part of this publication
+    may be reproduced or distributed in any form or by any means, or stored in a database
+    or retrieval system, without the prior permission of the publisher.
+
+
+    ISBN-10: 1463706340
+
+    ISBN-13: 978-14-63706-34-0
+
+
+    Library of Congress Control Number: 2011912657
+
+
+    This publication is designed to provide accurate and authoritative information
+    in regard to the subject matter covered. The author has made every effort in the
+    preparation of this book to ensure the accuracy of the information. However, information
+    in this book is sold without warranty either expressed or implied. The Author
+    or the Publisher will not be liable for any damages caused or alleged to be caused
+    either directly or indirectly by this book.
+
+
+    Vibrant Publishers books are available at special quantity discount for sales
+    promotions, or for use in corporate training programs. For more information please
+    write to bulkorders@vibrantpublishers.com
+
+
+    Please email feedback- / corrections (technical, grammatical or spelling) to spellerors@vibrantpublishers.com
+
+
+    To access the complete catalogue of Vibrant Publishers, visit www.vibrantpublishers.com'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   1 RESTful Basics / Annotations 7
+
+    2 Deploying a RESTful Web Service 19
+
+    3 Request Parameters 25
+
+    4 Responses 31
+
+    5 Sub-Resources 33
+
+    6 Building URIs 43
+
+    7 Exceptions as Responses 47
+
+    8 Life Cycle 51
+
+    9 Injection 55
+
+    10 Params Extraction 59
+
+    11 Jersey 65
+
+    12 JSON 69
+
+    13 Links 79
+
+    14 JAX-RS Client - Jersey Client API 83
+
+    15 HR Questions 95
+
+
+    +   INDEX 115'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# RESTful JAVA
+
+
+    # Web Services Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# RESTful Basics / Annotations'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 1: In which scenarios RESTful Web Services are preferred over SOAP ones?
+
+
+    Answer:
+
+
+    RESTful Web Services are preferred when:
+
+
+    +   a) The Web Services are completely stateless.
+
+    b) When data can be cached to improve performance.
+
+    c) Schema of data can be agreed between service consumer and service provider.
+
+    d) Bandwidth is limited.
+
+
+    # 2: How do you refer or identify resources in REST design idiom?
+
+
+    Answer:
+
+
+    Resources are identified by their unique URLs.
+
+
+    # 3: Is REST stateless or stateful client-server architecture?
+
+
+    Answer:
+
+
+    REST is stateless client-server architecture.
+
+
+    # 4: Name the JAVA API that is used for building and deploying RESTful Web Services.
+
+
+    Answer:
+
+
+    +   a) JAVA API for XML Web Services (JAX-WS) and
+
+    b) JAVA API for XML RESTful Web Services (JAX-RS).
+
+
+    # 5: How Web Service interface for RESTful Web Services are described?
+
+
+    Answer:'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    There is no formal way of describing the Web Service interfaces. To overcome this,
+    service producer and service consumer agree on schemas that describe the data
+    being exchanged.
+
+
+    # 6: Name few of the JAX-RS implementations.
+
+
+    Answer:
+
+
+    Jersey, RESTEasy, Restlet are to name a few.
+
+
+    # 7: If I plan to use the Jersey distribution for RESTful Services, do I need
+    to download it?
+
+
+    Answer:
+
+
+    Yes. But if you are using NetBeans IDE 6.0, downloading is not required.
+
+
+    # 8: How are resources addressed?
+
+
+    Answer:
+
+
+    Each resource is uniquely addressable using a universal syntax for use in hypermedia
+    links.
+
+
+    # 9: In RESTful architecture, what represents the application state and functionality?
+
+
+    Answer.
+
+
+    Uniquely Addressable Resources represent the application state and functionality.
+
+
+    # 10: What is shared between RESTful resource that is used for transfer of state
+    between client and resource?'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Answer:
+
+
+    A uniform interface is shared between resources that comprises of a set of well-defined
+    operations, content types and optionally supporting code-on-demand.
+
+
+    # 11: How do you annotate a method to respond to HTTP GET requests?
+
+
+    # Answer.
+
+
+    javax.ws.rs.Get annotation specifies that the annotated method will serve HTTP
+    Get request.
+
+
+    # 12: Name the most commonly HTTP methods used in designing RESTful services.
+
+
+    # Answer:
+
+
+    PUT, GET, POST, DELETE.
+
+
+    # 13: Define one-to-one mapping between HTTP methods and CRUD operations.
+
+
+    # Answer:
+
+
+    PUT maps to Create, GET maps to Retrieve, POST maps to Update, DELETE maps to
+    Delete.
+
+
+    # 14: What are idempotent methods?
+
+
+    # Answer:
+
+
+    A method is said to be idempotent if repeated calls to it does not cause duplicates.
+    e.g GET, DELETE, PUT
+
+
+    # 15: In order to answer HTTP PUT requests, how will you'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    11
+
+
+    # annotate your resource methods?
+
+
+    Answer:
+
+
+    The @PUT annotation is used to answer HTTP PUT requests.
+
+
+    # 16: Why PUT methods is idempotent?
+
+
+    Answer:
+
+
+    PUT is used to create a resource and repeating the operation should never create
+    another copy of the resource.
+
+
+    # 17: What is the purpose of javax.ws.rs.HttpMethod?
+
+
+    Answer:
+
+
+    HttpMethod annotation is used to associate the name of a HTTP method with an annotation.
+
+
+    # 18: List resource method designator annotations?
+
+
+    Answer:
+
+
+    @GET, @PUT, @POST, @DELETE
+
+
+    # 19: Define Root resource class.
+
+
+    Answer:
+
+
+    Root resource class is basically a POJO (Plain Old JAVA Objects) that is annotated
+    with @Path and has at least one method annotated with @Path or have at least a
+    single resource method.
+
+
+    # 20: Define Resource Method?
+
+
+    Answer:
+
+
+    Method of a resource class that is annotated with resource'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'method designator annotation is called Resource Method.
+
+
+    # 21: How to you specify relative path of a resource in RESTful Web Service?
+
+
+    Answer:
+
+
+    The @Path annotation is used to specify relative URI path.
+
+    e.g.
+
+    @Path("/test")
+
+
+    # 22: How can you embed variables in the URI?
+
+
+    Answer:
+
+
+    Variables can be embedded within the URI syntax (called URI path template). The
+    variables are substituted at runtime.
+
+    @Path("/test/{username}")
+
+
+    # 23: How embedded variables are represented in the URI syntax?
+
+
+    Answer:
+
+
+    Embedded variables are denoted by curly braces.
+
+
+    # 24: How can you obtain the value of a method parameter in RESTful resource method?
+
+
+    Answer:
+
+
+    @PathParam can be used on method parameter of a resource method to obtain the
+    value for a method parameter.
+
+    e.g.
+
+    @GET
+
+    @Produces("text/plain")'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    13
+
+
+    ```
+
+    public String getWelcomeMsg(@PathParam("username") String userName) {
+
+    ...
+
+    }
+
+    ```
+
+
+    # 25: How can you define a regular expression for a variable say username?
+
+
+    Answer:
+
+
+    ```
+
+    @Path("users/{username:[a-zA-Z][a-zA-Z_0-9]*}")
+
+    ```
+
+
+    # 26: What happens if regular expression of a URI embedded variable is not matched?
+
+
+    Answer:
+
+
+    A 404 (Not Found) response will occur.
+
+
+    # 27: Will the following direct to the same resource?
+
+
+    ```
+
+    @Path("/test/")
+
+
+    @Path("/test")
+
+    ```
+
+
+    Answer:
+
+
+    Yes. By default, both should point to the same resource, although Jersey has a
+    redirection mechanism that is disabled by default.
+
+
+    # 28: Explain how to specify MIME media types of a resource that is sent back
+    to the client?
+
+
+    Answer:
+
+
+    ```
+
+    @Produces annotation is used for this purpose.. e.g.
+
+    @Produces("text/plain")
+
+    ```'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# 29: Is it true that @Produces can only be applied at method level?\n\nAnswer:\n\
+    False. It can be applied at both the class and method levels.\n\n# 30: Can @Produces\
+    \ annotation be overridden in a RESTful resource? Give example.\n\nAnswer:\nYes.\
+    \ In the following example, the default MIME type is set as text/plain but doGetAsHtml\
+    \ method overrides it to text/html.\n\n```\n@Path(\"/testResource\")\n@Produces(\"\
+    text/plain\")\npublic class TestResource {\n  @GET\n  public String doGetAsPlainText()\
+    \ {\n    ...\n  }\n\n  @GET\n  @Produces(\"text/html\")\n  public String doGetAsHtml()\
+    \ {\n    ...\n  }\n}\n```\n\n# 31: How can you declare more than one media type\
+    \ in the same @Produces declaration?"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    15
+
+
+    # Answer:
+
+
+    @Produces("application/plain","application/xml","application/json")
+
+
+    # 32: Assume that there is a resource class capable of producing more than one
+    MIME media type for GET. How will be the response method chosen?
+
+
+    # Answer:
+
+
+    Resource method is chosen depending on the most acceptable media type as declared
+    by the client in the request header. e.g. Accept: text/plain.
+
+
+    # 33: How will you specify the MIME media types of representations a RESTful resource
+    can use?
+
+
+    # Answer:
+
+
+    @Consumes annotation is to be used.
+
+
+    # 34: Write a method that is triggered on POST request and takes text/plain as
+    input.
+
+
+    # Answer:
+
+
+    ```
+
+    @POST
+
+    @Consumes("text/plain")
+
+    public void postMessage(String message) {
+
+    ...
+
+    }
+
+    ```
+
+
+    # 35: At which levels, @Consumes can be applied?
+
+
+    # Answer:'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '@Consumes can be applied at both the class and method levels.
+
+
+    # 36: Give an example of declaring more than one media type @Consumes declaration?
+
+
+    Answer:
+
+
+    ```
+
+    @POST
+
+    @Consumes("application/plain","application/xml")
+
+    public void postMessage(String message) {
+
+    ...
+
+    }
+
+    ```
+
+
+    # 37: Can RESTful Web Services support multiple types of response (MIME formats)?
+
+
+    Answer:
+
+
+    RESTful Web Services, by confirming to HTTP, does support multiple types of response
+    (MIME) formats e.g. XML, JSON, PLAIN etc
+
+
+    # 38: Which two response formats are typically supported by RESTful Web Services?
+
+
+    Answer:
+
+
+    XML and JSON.
+
+
+    # 39: When designing a RESTful Web Service, what constitutes the resources of
+    the system?
+
+
+    Answer:
+
+
+    Any system concept that has a representation should be exposed as a resource.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# 40: What does HATEOAS mean?
+
+
+    Answer:
+
+
+    Hypermedia As The Engine Of Application State (HATEOAS) means that state of the
+    exchange in a session is neither kept by the client nor server. All the necessary
+    information is stored in the exchanged HTTP messages
+
+
+    # 41: Define Uniform Interface Constraint?
+
+
+    Answer:
+
+
+    The Uniform Interface Constraint binds the architecture of RESTful Web Services;
+    due to this a client can utilize the same interface to communicate with any service.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Deploying a RESTful Web Service'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# 42: Name the JAX-RS deployment agnostic abstract class that is used for declaring\
+    \ root resource.\n\nAnswer:\n\nJAX-RS provides a deployment agnostic abstract\
+    \ class called Application for declaring root resource.\n\n# 43: How can you declare\
+    \ root resource and provider classes using JAX-RS Application class?\n\nAnswer:\n\
+    \nWeb Service needs to extend Application class in order to declare root resource\
+    \ and provider classes e.g.\n\n```\npublic class MyApplication extends Application\
+    \ {\n    public Set<Class<?>> getClasses() {\n        Set<Class<?>> s = new HashSet<Class<?>>();\n\
+    \        s.add(HellResource.class);\n        return s;\n    }\n}\n```\n\n# 44:\
+    \ Give an example of JAX-RS application deployment using @ApplicationPath with\
+    \ Servlet 3.0.\n\nAnswer:\n\n```\n@ApplicationPath(\"resources\")\npublic class\
+    \ MyApplication extends PackagesResourceConfig {\n    public MyApplication() {\n\
+    \        super(\"org.test.rest;org.test1.rest\");\n    }\n}\n```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    ...
+
+    .xml is not required in most cases. When building .war without web.xml file using
+    maven, it is important to set maven-war-plugin attribute failOnMissingWebXml to
+    FALSE in pom.xml.
+
+
+    # 45: How to you configure maven-war-plugin in pom.xml with Servlet 3.0?
+
+
+    Answer:
+
+
+    ```
+
+    <plugin>
+
+    <groupId>org.apache.maven.plugins</groupId>
+
+    <artifactId>maven-war-plugin</artifactId>
+
+    <version>2.1.1</version>
+
+    <configuration>
+
+    <failOnMissingWebXml>false</failOnMissingWebXml>
+
+    </configuration>
+
+    </plugin>
+
+    ```
+
+
+    # 46: Is it possible to declare JAX-RS application details in the web.xml?
+
+
+    Answer:
+
+
+    Yes, but this is only preferred in complex deployment scenarios.
+
+
+    # 47: How will you declare JAX-RS application details in web.xml?
+
+
+    Answer:'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "As per JAX-RS 1.1 specifications, a fully qualified name of the class implementing\
+    \ Application has to be declared in the <servlet-name> element of the JAX-RS application's\
+    \ web.xml.\n\n```\nThis is supported in a Web container implementing Servlet 3.0.\n\
+    <web-app>\n<servlet>\n  <servlet-name>org.test.rest.MyApplication</servlet-name>\n\
+    </servlet>\n...\n<servlet-mapping>\n  <servlet-name>org.test.rest.MyApplication</servlet-name>\n\
+    \  <url-pattern>/resources</url-pattern>\n</servlet-mapping>\n...\n</web-app>\n\
+    ```\n\n<servlet-class> element is not required in the servlet declaration.\n\n\
+    # 48: Declaring RESTful resource using Servlet 3.0 extension mechanism, which\
+    \ element is used in web.xml to define the base resource URI.\n\nAnswer:\n<servlet-mapping>\
+    \ is used to define the base resource URI.\n\n# 49: You are using Servlet 2.x\
+    \ and want to declare Jersey specific servlet in web.xml. How will you configure\
+    \ it?\n\nAnswer:\nWe need to declare the Jersey specific servlet"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'com.sun.jersey.spi.container.servlet.ServletContainer and pass the Application
+    implementation class name as one of the Servlets init-param.
+
+
+    ```
+
+    <web-app>
+
+    <servlet>
+
+    <servlet-name>Jersey Web Application</servlet-name>
+
+    <class>com.sun.jersey.spi.container.servlet.ServletContainer</class>
+
+    <init-param>
+
+    <param-name>javax.ws.rs.Application</param-name>
+
+    <param-value>org.test.rest.MyApplication</param-value>
+
+    </init-param>
+
+    ...
+
+    </servlet>
+
+    ...
+
+    </web-app>
+
+    ```
+
+
+    50: You are using Servlet 2.x and want to let Jersey choose the PackagesResourceConfig
+    implementation automatically by declaring the packages in web.xml. How will you
+    configure it?
+
+
+    Answer:
+
+
+    ```
+
+    <init-param>
+
+    <param-name>com.sun.jersey.config.property.packages</param-name>
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '```
+
+    <param-value>org.test.rest;org.test1.rest</param-value>
+
+    </init-param>
+
+    ...
+
+    ```'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# # Request Parameters'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# 51: What is the purpose of parameter-based annotations?\n\nAnswer:\nParameter-based\
+    \ annotations are used to extract information from a request.\n\n# 52: Which annotation\
+    \ will you use to extract query parameters from the Query component of the request\
+    \ URL?\n\nAnswer:\n@QueryParams.\n\n# 53: How to declare default value of resource\
+    \ method parameter?\n\nAnswer:\n@Default annotation is used to declare default\
+    \ value of resource method parameter.\n@Path(\"/test\")\n\n```\n@GET\npublic Response\
+    \ getName(@DefaultValue(\"1\") @QueryParams(\"id\") int id{\n  ...\n}\n```\n\n\
+    # 54: What happens if a query parameter from the Query component of the request\
+    \ URL cannot be parsed into resource method parameter?\n\nAnswer:\nA HTTP 404\
+    \ (Not Found) response is returned."
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '55: Only primitive types can be used for resource method parameter''s query
+    parameter?
+
+
+    Answer:
+
+
+    No. User defined types can also be used.
+
+
+    56: Review the following resource method. If query parameter is not present in
+    the request, what will be the value of resource method parameter ''id''?
+
+
+    ```
+
+    @Path("/test")
+
+    @GET
+
+    public Response getName(@QueryParams("id") int id){
+
+    ...
+
+    }
+
+    ```
+
+
+    Answer:
+
+
+    JAVA primitive types get JAVA-defined default values if not present in the query
+    parameter. In the given scenario, id will be 0.
+
+
+    57: Review the following resource method. If query parameter is not present in
+    the request, what will be the value of resource method parameter ''firstName''?
+
+
+    ```
+
+    @Path("/test")
+
+    @GET
+
+    public Response getLastName(@QueryParams("firstName") String firstName){
+
+    ...
+
+    }
+
+    ```
+
+
+    Answer:'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'Object types get null if not present in the query parameter. In the given scenario,
+    firstName will be null.
+
+
+    58: What default value is set for resource method parameter of type List<T>, if
+    no default is specified and the required parameter is not present in the request?
+
+
+    Answer:
+
+
+    Empty list.
+
+
+    59: Name the parameter-based annotations that are used to extract information
+    from URL path segments?
+
+
+    Answer:
+
+
+    @MatrixParam
+
+
+    60: Which parameter-based annotations will be used to extract information from
+    HTTP headers?
+
+
+    Answer:
+
+
+    @HeaderParam
+
+
+    61: Name the parameter-based annotations that are used to extract information
+    from cookie related HTTP headers?
+
+
+    Answer:
+
+
+    @CookieParam
+
+
+    62: You want to get parameters POSTed by HTML forms as resource method’s arguments.
+    Which annotation will you prefer?
+
+
+    Answer:'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '@FormParam will be preferred as it extracts the parameters from the request
+    in MIME media type "application/x-www-form-urlencoded". It also conforms to the
+    encoding specified by HTML forms.
+
+
+    # 63: Give an example of resource method that processes POSTed HTML form?
+
+
+    Answer:
+
+
+    ```
+
+    @POST
+
+    @Consumes("application/x-www-form-urlencoded")
+
+    public void post(@FormParam("name") String name) {
+
+    ...
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# # Responses'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# 64: Is it possible to return a response to HTTP request from a resource method?
+
+
+    Answer:
+
+
+    Yes. Response can be built using Response & Response.ResponseBuilder. e.g. return
+    Response.created(createdUri).build();
+
+
+    # 65: Write a resource method that responds to a Post request, consumes application/xml
+    and adds an entity body to a custom response?
+
+
+    Answer:
+
+
+    ```
+
+    @POST
+
+    @Consumes("application/xml")
+
+    public Response post(String content) {
+
+    URI uri = ...
+
+
+    String createdContent = create(content);
+
+    return Response.created(uri).entity(createdContent).build();
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Sub Resources'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# 66: Define root resource classes?
+
+
+    Answer:
+
+
+    When a class is annotated with @Path, it is referred to as root resource class.
+
+
+    # 67: Can @Path be used on methods of root resource classes?
+
+
+    Answer:
+
+
+    Yes. This allows resources to be grouped together and allows reusability. Such
+    methods are referred as sub-resource methods.
+
+
+    > Questions 68, 69, 70, & 71 are based on the following root resource class.
+
+
+    ```
+
+    @Path("/cars")
+
+    public class CarsResource {
+
+    @GET
+
+    @Produces("application/json", "application/xml")
+
+    public WebResourceList getMyResources() { ... }
+
+    ```
+
+
+    ```
+
+    @GET
+
+    @Path("/model")
+
+    @Produces("application/json", "application/xml")
+
+    public WebResourceList getModels() { ... }
+
+    ```
+
+
+    ```
+
+    @GET
+
+    @Path("/make")
+
+    @Produces("application/json", "application/xml")
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '```
+
+    public WebResource getMakesList() { ... }
+
+    }
+
+    ```
+
+
+    # 68: Name the method that gets called when the request URL is /cars?
+
+
+    Answer:
+
+    getMyResources() gets called since it is not annotated.
+
+
+    # 69: What request URL will you use to call getMakes() resource method?
+
+
+    Answer:
+
+    /cars/make
+
+
+    # 70: Which request response methods gets called with the request URL ''cars/model''
+
+
+    Answer:
+
+    getModels()
+
+
+    # 71: Name the method that gets called when the request URL is /cars/test?
+
+
+    Answer:
+
+    Requested URL will not match with any resource and HTTP Status 404 will be returned.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# Questions 72, 73, 74 are based on the following root resource class.\n\n\
+    ```\n@Path(\"/hello\")\npublic class Hello {\n...\n@Path(\"/testparam\")\n@GET\n\
+    @Produces(MediaType.TEXT_PLAIN)\npublic String getLastName(@RequestParam(\"firstName\"\
+    ) String firstName){\n  return firstName + \" \" + \"MyLastName\";\n}\n...\\}\n\
+    ```\n\n72: What will be the outcome if the requested URL is:\n/hello/testparam?\n\
+    Answer:\nnull MyLastName\n\n73: What will be the outcome if the requested URL\
+    \ is:\n/hello/testparam?name=MyFirstName?\nAnswer:\nnull MyLastName\n\n74: What\
+    \ should be the requested URL in order to get the following result?"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# MyFirstName MyLastName
+
+
+    Answer:
+
+    /hello/testparam?firstName=MyFirstName
+
+
+    # 75: What are sub-resource locator methods?
+
+
+    Answer:
+
+    These are methods that are not annotated with resource method designators (@Get,
+    @Post, etc).
+
+
+    # 76: Give an example of sub-resource locator method.
+
+
+    Answer:
+
+    ItemResource is a root resource class and getItemContentResource() is a sub-resource
+    locator method. For request URL path "item/content" root resource will be matched
+    first and then the sub-resource locator will be matched and invoked.
+
+
+    ```
+
+    @Path("/item")
+
+    public class ItemResource {
+
+
+    @Path("/content")
+
+    public ItemContentResource getItemContentResource() {
+
+    ...
+
+    }\...
+
+    ```
+
+
+    # 77: Does JAX-RS support conditional GET and PUT HTTP requests?
+
+
+    Answer:'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: 'Yes, conditional GET and PUT HTTP requests are supported by JAX-RS.
+
+
+    # 78: What is the benefit of conditional GET and PUT HTTP requests?
+
+
+    Answer:
+
+
+    Conditional GET and PUT HTTP requests help in saving the bandwidth and thus improving
+    the efficiency of client processing.
+
+
+    # 79: Assume that the static content has not changed since the previous request.
+    What response should be sent for a GET request to save bandwidth?
+
+
+    Answer:
+
+
+    A Not Modified (304) response.
+
+
+    # 80: Assume that the representation was modified when the client made a PUT request.
+    What response should be sent to it?
+
+
+    Answer:
+
+
+    A Precondition Failed (412) response.
+
+
+    # 81: What is the correct way of solving a Precondition Failed (412) response
+    that results in lost update problem?
+
+
+    Answer:
+
+
+    The conditional PUT can be used to avoid the lost update problem.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# 82: How do you specify which MIME types of representations your resource
+    can accept?
+
+
+    Answer:
+
+
+    Resource class and resource methods can be annotated with @Consumes to specify
+    the accepted MIME types.
+
+
+    # 83: Assume that you applied @Consumes at the class level and have not specified
+    it at method level. What response MIME type will be accepted by the methods?
+
+
+    Answer:
+
+
+    Response method accepts the class specified MIME type by default. This means that
+    the methods will consume the MIME type defined at class level unless overridden
+    at method level.
+
+
+    # 84: Can you override a MIME type at resource method level?
+
+
+    Answer:
+
+
+    Yes. @Consumes can be applied at the method level and will override any @Consumes
+    annotations applied at the class level.
+
+
+    # 85: What response will be sent to the client if its requested MIME type is not
+    produced by any resource method?
+
+
+    Answer:
+
+
+    In such cases, the JAX-RS runtime sends back an HTTP “406 Not Acceptable” error.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# Questions 86, 87, 88 are based on the following code snippet\n\n```\n@Path(\"\
+    /myResource\")\n@Produces(\"text/plain\")\npublic class AResource {\n }\n```\n\
+    \n```\n@GET\npublic String doGetAsPlainText() {\n...\n}\n```\n\n```\n@GET\n@Produces(\"\
+    text/html\")\npublic String doGetAsHtml() {\n...\n}\n```\n\n86: Which MIME type\
+    \ can be produced by doGetAsPlainText()?\n\nAnswer:\ndoeGetAsPlainText() can produce\
+    \ text/plain which is defined at class level.\n\n87: doGetAsHtml() declares that\
+    \ it produces text/html where as the class is declaring that it produces text/plain.\
+    \ Does this mean that doGetAsHtml() produces text/plains and text/html?\nAnswer:"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    41
+
+
+    No. doGetAsHtml() is overriding the class defined MIME type and is producing only
+    text/plain.
+
+
+    88: If AResource is capable of producing more than one MIME media type, how will
+    the resource method be chosen?
+
+
+    Answer:
+
+
+    The most acceptable media type declared by the client is the accept header, defines
+    which resource method will be chosen and executed.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# # Building URIs'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# 89: Is it safe and easy to build URIs using java.net.URI?
+
+
+    Answer:
+
+
+    No.
+
+
+    # 90: Which JAX-RS class should be used to build URIs safely?
+
+
+    Answer:
+
+
+    javax.ws.rs.core.UriBuilder
+
+
+    # 91: Is it true that javax.ws.rs.core.UriBuilder can only be used to build new
+    URIs?
+
+
+    Answer:
+
+
+    No. It can also be used to build URLs from existing URIs.
+
+
+    # 92: How do you normally build the URIs of resource classes?
+
+
+    Answer:
+
+
+    The URIs of resource classes are normally built from the base URI the Web Service
+    is deployed at.
+
+
+    # 93: How to you obtain UriInfo in a RESTful resource class?
+
+
+    Answer:
+
+
+    @Context annotation can be used to obtain UriInfo instance.
+
+
+    # 94: Which URIs can you obtain if you have UriInfo instance?
+
+
+    Answer:
+
+
+    We can obtain the base URI of the application, the request URI and the absolute
+    path URI.
+
+
+    # 95: Which URI will you get if you minus query components'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    45
+
+
+    # from the request URI?
+
+
+    Answer:
+
+
+    Absolute path URI.
+
+
+    # 96: Give an example of building URIs using query parameters.
+
+
+    Answer:
+
+
+    ```
+
+    UriBuilder.fromUri("http://localhost/").path("{a}").queryParam("name", "{value}").build("segment",
+    "value");
+
+    ```'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Exceptions as Responses'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# 97: How can you return HTTP errors from RESTful resource methods?
+
+
+    Answer:
+
+
+    HTTP errors can be returned as HTTP responses by throwing Exceptions in a better
+    approach.
+
+
+    # 98: Write a RESTful resource method that throws an exception if processing fails
+    for any reason.
+
+
+    Answer:
+
+
+    In the given example, a Jersey specific exception is thrown if the requested test
+    is not found.
+
+
+    ```
+
+    @Path("test/{testid}/")
+
+    public Item getItem(@PathParam("testid") String testid) {
+
+    Item i = getTestss().get(testid);
+
+    if (i == null)
+
+    throw new NotFoundException("testid, " + testid + " ", is not found");
+
+    return i;
+
+    }
+
+    ```
+
+
+    NotFoundException is a Jersey specific exception that extends WebApplicationException.
+
+
+    # 99: What actually is sent as HTTP response, if RESTful resource method throws
+    WebApplicationException?
+
+
+    Answer:
+
+
+    HTTP response with the 404 status code with an optional message in the body of
+    the response is sent.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# 100: You wish to map an existing exception to a response instead of throwing\
+    \ instances of WebApplicationException from your RESTful resource methods. How\
+    \ can this be achieved?\n\nJAX-RS provides javax.ws.ext.ExceptionMapper<E extends\
+    \ Throwable> for mapping exceptions to responses.\n\n```\n@Provider\npublic class\
+    \ EntityNotFoundMapper implements ExceptionMapper<javax.persistence.EntityNotFoundException>\
+    \ {\n    public Response toResponse(javax.persistence.EntityNotFoundException\
+    \ ex) {\n        return Response.status(404).entity(ex.getMessage()).type(\"text/plain\"\
+    ).build();\n    }\n}\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# # Life Cycle'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# 101: A class is annotated with @Provider. What does that tell you?
+
+
+    Answer:
+
+
+    A class annotated with provider means that is of interest to the JAX-RS runtime.
+
+
+    # 102: When is a new instance of a root resource class created?
+
+
+    Answer:
+
+
+    When a request URI path matches the root resource, a new instance of root resource
+    class is created. Root resource class is created per-request.
+
+
+    # 103: Apart from resource classes creation on request bases, which other life-cycles
+    are supported by Jersey?
+
+
+    Answer:
+
+
+    Jersey supports the following: root resource instance creation on per-web application
+    basis, on per web session basis, on per request basis.
+
+
+    # 104: How will you declare a singleton resource class using Jersey?
+
+
+    Answer:
+
+
+    Jersey provides @Singleton annotation to support root resource creation per-web
+    application basis.
+
+
+    ```
+
+    @Singleton
+
+    @Path("/exroot")
+
+    public class RootResource {
+
+    ```'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    53
+
+
+    ...
+
+
+    ```
+
+    }
+
+    ```
+
+
+    # 105: Which Jersey annotation can be used if we want to create one instance of
+    a resource class for one web session?
+
+
+    Answer:
+
+
+    @Session allows an instance of resource class to be stored as a session attribute
+    which allows it to be shared in the session.
+
+
+    # 106: How do you obtain SecurityContext in a resource method?
+
+
+    Answer:
+
+
+    SecurityContext is obtained using @Context annotation. In the following example,
+    resource method''s parameter named ''sc'' is annotated with @SecurityContext to
+    obtain SecurityContext. e.g. @Path("test")
+
+
+    ```
+
+    public TestResource get(@Context SecurityContext sc) {
+
+    ...
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Injection'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# 107: Where can you use injection in your RESTful resource class?
+
+
+    Answer:
+
+
+    Injection can be performed on fields, bean setter methods, constructor parameters
+    and resource''s/sub-resource''s method parameters.
+
+
+    # 108: Give an example of injection onto a field?
+
+
+    Answer:
+
+
+    ```
+
+    @Path("student")
+
+    public class StudentResource {
+
+
+    @DefaultValue("20")
+
+    @PathParam("age")
+
+    private int age;
+
+    ...
+
+    }
+
+    ```
+
+
+    # 109: How can you inject a value into a RESTful resource class''s constructor
+    parameter?
+
+
+    Answer:
+
+
+    @PathParam annotation is used for this purpose. e.g.
+
+    @Path("student")
+
+
+    ```
+
+    public class StudentResource(@PathParam("id") int id) { ... }
+
+    ...
+
+    ```'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    57
+
+
+    # 110: Give an example of injection onto resource method parameter?
+
+
+    Answer:
+
+    @GET
+
+    public String get(@Context UriInfo ui) { ... }
+
+
+    # 111: Is it possible to use injection onto a sub-resource method parameter?
+
+
+    Answer:
+
+    Yes. It is done in the same way as done for resource method parameter.
+
+    e.g.
+
+    @Path("sub")
+
+    @GET
+
+    public String get(@PathParam("sid") String sid) { ... }
+
+
+    # 112: What are the injection restrictions on resource classes with a life-cycle
+    other than per-request?
+
+
+    Answer:
+
+    For non-per-request resource classes, it is not possible to inject onto fields
+    for the annotations associated with extraction of request parameters.
+
+
+    # 113: For non-per-request resource classes, will injection work for fields with
+    @Context annotation?
+
+
+    Answer:
+
+    Yes. For @Context annotation, a thread local proxy will be injected.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# 114: Where are @RequestParam annotation used?
+
+
+    Answer:
+
+
+    @RequestParam annotation can only be used on resource and sub-resource methods.
+
+
+    # 115: Assume that you are deploying a JAX-RS application using servlet. What
+    will be available using @Context?
+
+
+    Answer:
+
+
+    ServletConfig, ServletContext, HttpServletRequest and HttpServletResponse.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# # Params Extraction'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# 116: What type of parameters can be extracted in a resource class?\n\nAnswer:\n\
+    \nA resource class can extract the following parameters: Query, URI path, Form,\
+    \ Cookie, Header, Matrix\n\n# 117: Which JAX-RS annotation retrieves the JAVA\
+    \ types related to a request or response?\n\nAnswer:\n\njavax.ws.rs.core.Context\
+    \ annotation\n\n# 118: How do you get information about the request headers and\
+    \ cookies?\n\nAnswer:\n\nThe javax.ws.rs.core HttpHeaders interface is used to\
+    \ obtain a map of header and cookie parameters. e.g.\nGET\n\n```\npublic String\
+    \ getHeaders(@Context HttpHeaders hh) {\n  MultivaluedMap<String, String> headerParameters\
+    \ = hh.getRequestHeaders();\n  MultivaluedMap<String, Cookie> pathParameters =\
+    \ hh.getCookies();\n}\n```\n\n# 119: You wish to retrieve information about the\
+    \ components of a request URI. Which interface can provide you that?\n\nAnswer:\n\
+    \nThe javax.ws.rs.UriInfo interface provides a map of query and path parameters.\
+    \ e.g."
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "RESTful JAVA Web Services Interview Questions You'll Most Likely Be Asked 61\n\
+    \n```\n@GET\npublic String getPathParam(@Context UriInfo ui) {\n    MultivaluedMap<String,\
+    \ String> queryParameters =\n    ui.getQueryParameters();\n    MultivaluedMap<String,\
+    \ String> pathParameters =\n    ui.getPathParameters();\n}\n```\n\n# 120: Which\
+    \ annotation is used to extract form parameters from HTML forms?\n\nAnswer:\n\
+    The@PathParam annotation is used to extract information from a request whose content\
+    \ type is application/x-www-form-urlencoded.\n\n# 121: A form is posting a HTML\
+    \ form field named 'name' to your resource. Write a resource method that extracts\
+    \ the name posted?\n\n```\nAnswer:\n@POST\n@Consumes(\"application/x-www-form-urlencoded\"\
+    )\npublic void post(@PathParam(\"name\") String name) {\n    // do something\n\
+    }\n```\n\n# 122: Write a resource method that obtains a map of form parameters\
+    \ posted to it.\n\nAnswer:"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "62 RESTful JAVA Web Services Interview Questions You'll Most Likely Be Asked\n\
+    \n```\n@POST\n@Consumes(\"application/x-www-form-urlencoded\")\npublic void post(MultivaluedMap<String,\
+    \ String> formParams) {\n  // do something\n}\n```\n\n# 123: Write a resource\
+    \ method that entertains the following request\nGET /employee?name=abc&age=33\n\
+    \nAnswer:\n@RequestParam annotation is used to extract the query parameters.\n\
+    \n```\n@Path(/employee\")\n@GET\npublic Response getEmployee(\n@RequestParam(\"\
+    name\") String name,\n@RequestParam(\"age\") int age,\n{...})\n```\n\n# 124: What\
+    \ are URI path templates?\n\nAnswer:\nURIs with variables embedded within the\
+    \ URI syntax is referred as as URI path templates.\n\n# 125: How do you use a\
+    \ variable path fragment in your resource method?\n\nAnswer:"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "The @PathParam annotation allows us to use variable URI path fragments in resource\
+    \ methods. e.g.\n\n```\n@Path(/employees/{\"firstName}\")\npublic class EmployeeResource\
+    \ {\n  @GET\n  @Produces(\"text/plain\")\n  public String getEmployee(@PathParam(\"\
+    lastname\") String firstName) {\n    ...\n  }\n}\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Jersey'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# 126: What does Jersey use to parse incoming requests? Answer:
+
+
+    It uses javax.ws.rs.ext.MessageBody which is a contract (interface) for a provider
+    that supports the conversion of a stream to a JAVA type.
+
+
+    # 127: What does Jersey use to create outgoing responses? Answer:
+
+
+    Jersey uses javax.ws.rs.ext.MessageBodyWriter to create outgoing messages. MessageBodyWriter
+    is a contract (interface) for a provider that supports the conversion of a JAVA
+    type to a stream.
+
+
+    Questions 128 & 129 are based on the following:
+
+
+    ```
+
+    @Path("/hello")
+
+    public class Hello {
+
+    ...
+
+    @Path("/student")
+
+    @GET
+
+    @Produces(MediaType.TEXT_XML)
+
+    public Student getStudent() {
+
+    return new Student(22,"Name","ABC");
+
+    ...
+
+    }
+
+    ```
+
+
+    @XmlRootElement(name="RS_Student")'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "RESTful JAVA Web Services Interview Questions You'll Most Likely Be Asked 67\n\
+    \n```\npublic class Student {\n```\n\n```\npublic Student(){\npublic Student(int\
+    \ id, String name, String location){\n    this.id = id;\n    this.name = name;\n\
+    \    this.location = location;\n}\n```\n\n```\npublic int id;\npublic String name;\n\
+    public String location;\n}\n```\n\n# 128: What will be the output if you call\
+    \ the student resource method using URI: /hello/student?\n\nAnswer:\n<RS_Student>\n\
+    <id>1</id>\n<name>Name</name>\n<location>ABC</location>\n</RS_Student>\n\n# 129:\
+    \ If @XmlRootElement is removed from Student class, will the code still compile?\
+    \ What will be the output if you call the student resource method using URI: /hello/student?\n\
+    \nAnswer:\nCode will compile fine but we will get a"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: javax.ws.rs.WebApplicationException when student resource method gets called.
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# JSON'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# 130: How does jersey implementation support JSON?
+
+
+    Answer:
+
+    Jersey-JSON module contains a set of JAX-RS MessageBodyReader<T> and MessageBodyWriter<T>
+    providers that provide JSON support for RESTful Web Services.
+
+
+    # 131: Is JAXB based JSON support provided by Jersey implementation? When should
+    this approach be used?
+
+
+    Answer:
+
+    Yes. JAXB based approach is supported by Jersey and it should be used when you
+    want to utilize certain JAXB features.
+
+
+    # 132: Name the JSON approaches supported by Jersey.
+
+
+    Answer:
+
+    Jersey supports POJOs, JAXB and JSONObject/JSONArray based JSON support.
+
+
+    # 133: Which JSON approach is used when you want to map any Java Object to JSON
+    and vice versa in web resource methods?
+
+
+    Answer:
+
+    POJO approach.
+
+
+    # 134: What is the limitation of using JAXB or JSONObject/JSONArray based JSON
+    support in web resource methods?
+
+
+    Answer:
+
+    Resource methods can consume and produce limited Java types when you use JAXB
+    or JSONObject / JSONArray based JSON'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    71
+
+
+    support in web resource methods.
+
+
+    # 135: Assume you would like to use map JAVA Objects to JSON and vice versa in
+    web resource methods using Jersey JSON POJO support. How will you enable it?
+
+
+    Answer:
+
+
+    JSONConfiguration.FEATURE_POJO_MAPPING parameter needs to be set to TRUE. This
+    can be done using web.xml.
+
+
+    # 136: Give an example of configuring POJO mapping feature on the client side.
+
+
+    Answer:
+
+
+    DefaultClientConfig will be used to configure the POJO support by putting JSONConfiguration.FEATURE_POJO_MAPPING
+    as true into the features. e.g.
+
+
+    ```
+
+    ClientConfig config = new DefaultClientConfig();
+
+    config.put(JSONConfiguration.FEATURE_POJO_MAPPING, Boolean.TRUE);
+
+    Client myClient = Client.create(config);
+
+    ```
+
+
+    # 137: Give an example of enabling JSONConfiguration.FEATURE_POJO_MAPPING in web.xml
+    using servlet init parameter.
+
+
+    Answer:
+
+
+    ```
+
+    <init-param>
+
+    <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+
+    <param-value>true</param-value>
+
+    ```'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "</init-param>\n\n# 138: Name the Jersey's JSON approach that makes producing/consuming\
+    \ JSON and XML data easier?\n\nJAXB JSON approach saves a lot of time since it\
+    \ really makes producing/consuming JSON and XML data easier for the developers.\
+    \ It is simple because POJOs annotated with JAXB annotations are handled as simple\
+    \ JAVA beans.\n\n# 139: In which scenario, Jersey's JAXB JSON approach is not\
+    \ preferred?\n\nWhen we need to work with a very specific JSON format, Jersey's\
+    \ JAXB JSON approach is not ideal. The reason is that it is not easy to find a\
+    \ proper way to get a very specific format produced and consumed.\n\n# 140: Give\
+    \ an example of JAXB Bean that could be used with JAXB JSON approach.\n\nJAXB\
+    \ bean for JSON is simply a JAVA Bean annotated with JAXB annotations. e.g.\n\n\
+    ```\n@XmlRootElement\npublic class TestBean {\n    public String name;\n    public\
+    \ int id;\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    73
+
+
+    ```
+
+    public TestBean() {
+
+    public TestBean(String name, int id) {
+
+    this.name = name;
+
+    this.id = id;
+
+    }
+
+    }
+
+    ```
+
+
+    # 141: How can you produce JSON from a resource method?
+
+
+    Answer:
+
+
+    A resource method can be annotated with @Produces("application/json") in order
+    to produce application / JSON response.
+
+
+    ```
+
+    @GET
+
+    @Produces("application/json")
+
+    public MyTestBean getMyBean() {
+
+    return new TestBean("abc", 1);
+
+    }
+
+    ```
+
+
+    Where TestBean is a JAXB annotated bean class.
+
+
+    > Questions 142, 143, & 144 are based on the following root class & JAXB annotated
+    bean.
+
+
+    ```
+
+    @XmlRootElement
+
+    public class TestBean {
+
+    public String name;
+
+    public int id;
+
+    ```'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "```\npublic TestBean() {\npublic TestBean(String name, int id) {\n    this.name\
+    \ = name;\n    this.id = id;\n}\n\n```\n\n```\n@Path(\"/hello\")\npublic class\
+    \ Hello {\n...\n@GET\n@Path(\"/json\")\n@Produces(\"application/json\")\npublic\
+    \ MyJaxbBean getMyBean() {\n    return new TestBean(\"abc\", 1);\n}\n\n```\n\n\
+    # 142: What will be the outcome if the requested URL is:\n/hello/json?\n\nAnswer:\n\
+    \"name\":\"abc\", \"id\":\"1\"\n\n# 143: What change will you make in TestBean\
+    \ class so id can\nbe removed from the JSON response?\n\nAnswer:\nid field can\
+    \ be annotated with @Transient to remove it from the"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    75
+
+
+    # JSON response.
+
+
+    ```
+
+    @XmlTransient
+
+    public int id;
+
+    ```
+
+
+    # 144: What will you do to tweak JSON format using JAXB in order to change attribute
+    ''name'' to ''app-name'' in the JSON response?
+
+
+    Answer:
+
+
+    In TestBean, we have to annotate name with @XmlElement(name="app-name") to achieve
+    this.
+
+
+    ```
+
+    @XmlElement(name="app-name")
+
+    public String name;
+
+    ```
+
+
+    # 145: How to add a namespace to TestBean?
+
+
+    Answer:
+
+
+    ```
+
+    @XmlElement(namespace="mynamespace")
+
+    public class TestBean {
+
+    ...
+
+    ```
+
+
+    # 146: Name the JSON notations that can be used with JSONConfiguration to serialize
+    JSON in a different ways.
+
+
+    Answer:
+
+
+    With JSONConfiguration, it is possible to use following JSON notations: MAPPED,
+    NATURAL, JETTISON_MAPPED, BADGERFISH.
+
+
+    # 147: Name the default JSONConfiguration''s JSON notation.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '76 RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    JSONConfiguration''s default JSON notation is MAPPED.
+
+
+    # 148: Which JSONConfiguration''s JSON notation is to be used to avoid manual
+    work and figures out how individual items need to be processed?
+
+
+    # Answer:
+
+
+    NATURAL.
+
+
+    # 149: Using NATURAL JSON notation, how will JAVA arrays and lists be mapped?
+
+
+    # Answer:
+
+
+    JAVA arrays and lists will be mapped to JSON arrays.
+
+
+    # 150: Assume that you are using NATURAL JSON notation and your resource method
+    is returning an instance which has JAVA numbers and Booleans. To what will they
+    be mapped?
+
+
+    # Answer:
+
+
+    JAVA numbers and Booleans will be mapped into JSON numbers and Booleans.
+
+
+    # 151: Since you do not need to care for the XML attributes when using JSONConfiguration''s
+    NATURAL notation, what will be the names of the attributes returned?
+
+
+    # Answer:
+
+
+    Original names will be used as attribute names for the returned JSON.'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# 152: How to you tell RESTful resource to use NATURAL JSON notation?
+
+
+    Answer:
+
+
+    ```
+
+    JSONConfiguration.natural().build();
+
+    ```
+
+
+    # 153: Which JSON notation is the worst readable from JavaScript perspective?
+
+
+    Answer:
+
+
+    Badgerfish notation.
+
+
+    # 154: If Badgerfish JSON notation is the worst readable from JavaScript perspective,
+    why would you use it?
+
+
+    Answer:
+
+
+    It is useful when we need to make sure that our JAXB beans could be flawlessly
+    written and read back to and from JSON, without caring for any formatting configuration,
+    namespaces, etc.
+
+
+    # 155: How to build JSONConfiguration instance using Badgerfish notation?
+
+
+    Answer:
+
+
+    ```
+
+    JSONConfiguration.badgerFish().build();
+
+    ```
+
+
+    # 156: Which classes are used when using low-level JSON support with RESTful resources?
+
+
+    Answer:
+
+
+    When using low-level JSON support, RESTful resource use JSONObject and JSONArray
+    classes. These classes are part of'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'Jettison project.
+
+
+    # 157: What is the advantage of using low-level JSON support with RESTful resources?
+
+
+    Answer:
+
+
+    The best thing about using low-level JSON support means that we will have complete
+    control over the JSON format produced and consumed.
+
+
+    # 158: What is the disadvantage of using low-level JSON support with RESTful resources?
+
+
+    Answer:
+
+
+    Using low-level JSON support with RESTful resources means that the developer will
+    be dealing with the data model object which is a complex task as compared to using
+    the JAXB approach.
+
+
+    # 159: Give an example of constructing a JSONObject?
+
+
+    Answer:
+
+
+    Constructing a JSON object is more complex than constructing a JAXB annotated
+    bean instance.
+
+
+    ```
+
+    JSONObject myObject = new JSONObject();
+
+    Object.JSONObject myObject = new JSONObject();
+
+    try {
+
+    Object.put("name", "MyName");
+
+    myObject.put("age", 22);
+
+    } catch (JSONException ex) {
+
+    //log it
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# Links'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "# 160: Since RESTful APIs must be hypertext-driven, which class is provided\
+    \ by JAX-RS that simplifies URI creation?\n\nAnswer:\n\nUriBuilder\n\n# 161: Apart\
+    \ from UriBuilder, which Jersey annotation is provided to support URI creation?\n\
+    \nAnswer:\n\nJersey provides @Ref annotation to be used on entity class fields.\n\
+    \n# 162: If Jersey's @Ref annotation is used for URI creation, when and how is\
+    \ the appropriate URI injected into the field?\n\nAnswer:\n\nThe Jersey runtime\
+    \ is responsible for injecting the appropriate URI into the field and this is\
+    \ done by message body writer before serialization.\n\nDeclarative hyperlinking\
+    \ support is provided in the form of a filter. First, the application must declare\
+    \ a dependency on the jersey-server-linking module:\n\n```\n<dependency>\n  <groupId>com.sun.jersey</groupId>\n\
+    \  <artifactId>jersey-server-linking</artifactId>\n  <version>${jersey-version}</version>\n\
+    </dependency>\n```\n\n# 163: How does Jersey provide support for declarative"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# hyperlinking?\n\nAnswer:\n\nIt is provided in the form of a filter. The application\
+    \ has to declare a dependency on the jersey-server-linking module.\n\n```\n<dependency>\n\
+    \  <groupId>com.sun.jersey</groupId>\n  <artifactId>jersey-server-linking</artifactId>\n\
+    \  <version>${jersey-version}</version>\n</dependency>\n```\n\nThen the filter\
+    \ has to be installed in the application.\n\n# 164: How can you install declarative\
+    \ hyperlinking filter in your application in web.xml?\n\nAnswer:\n\nIt can be\
+    \ done using init params. e.g.\n\n```\n<init-param>\n  <name>com.sun.jersey.spi.container.ContainerResponseFilters</name>\n\
+    \  <param-value>com.sun.jersey.server.linking.LinkFilter</param-value>\n</init-param>\n\
+    ```\n\n# 165: Assume that you want to add HTTP Link headers to responses using\
+    \ annotations. You are using Jersey implementation. How will you achieve this?"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "# Answer:\n\nWe have to annotate the fields with @Link in order to insert a\
+    \ HTTP Link header into the response. e.g.\n@Link(\n\n```\nvalue=@Ref(\"widgets/${resource.nextId}\"\
+    ),\n    rel=\"next\"\n```\n\n)\nProperties of @Ref annotation can be used as shown\
+    \ above.\n\n# 166: Can multiple link headers be added by use of the @Links annotation?\n\
+    \n# Answer:\n\nYes, it is supported."
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# JAX-RS Client - Jersey Client API'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# 167: Why are JAVA-based client APIs not ideal to program RESTful clients?
+
+
+    Answer:
+
+
+    JAVA-based client APIs place focus on the Client-Server constraint for the request
+    and responses. They do not focus on a resource identified by a URI which is the
+    key for RESTful services.
+
+
+    # 168: Name JAVA-based client APIS.
+
+
+    Answer:
+
+
+    Apache HTTP client API, java.net.HttpURLConnection, etc
+
+
+    # 169: Using Jersey client API, which JAVA class encapsulates a URI?
+
+
+    Answer:
+
+
+    Using Jersey client API, a resource is represented by an instance of the WebResource,
+    and it encapsulates a URI.
+
+
+    # 170: What is the benefit of representing a resource as a JAVA type when using
+    Jersey client API?
+
+
+    Answer:
+
+
+    If a resource is represented as a JAVA type, then it makes it easy to configure
+    that resource, pass around and inject.
+
+
+    # 171: How does Jersey Client API build URIs safely?
+
+
+    Answer:
+
+
+    It uses UriBuilder and UriTemplate to build URIs safely.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'RESTful Web Services Interview Questions You''ll Most Likely Be Asked 85
+
+
+    # 172: Which JAVA types are supported by Jersey Client API?
+
+
+    Answer:
+
+
+    byte[], String, InputStream, File, DataSource, JAXB beans are supported. Jersey
+    Client API also has JSON support and MIME Multipart support.
+
+
+    # 173: How does Jersey Client API make use of established implementations of Apache
+    HTTP client or java.net.HttpURLConnection?
+
+
+    Answer:
+
+
+    Jersey Client API provides support for wrapping HttpURLConnection and the Apache
+    HTTP client and thus prevents the users from writing too much code for simple
+    tasks.
+
+
+    # 174: Is it possible to send a POST request to a RESTful resource using Apache
+    HTTP client?
+
+
+    Answer:
+
+
+    Yes. It is possible but it will be much simpler with Jersey Client API.
+
+
+    # 175: Give an example of a POST request to RESTful resource using Jersey Client
+    API.
+
+
+    Answer.
+
+
+    ```
+
+    form = new Form();
+
+    form.add("x", "xx");
+
+    form.add("y", "yy");
+
+    ```
+
+
+    Client c = Client.create();'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: 'WebResource r = c.resource("http://localhost:8089/form");
+
+    JAXBBean bean =
+
+    r.type(MediaType.APPLICATION_FORM_URLENCODED_TYPE).accept(MediaType.APPLICATION_JSON_TYPE).post(JAXBean.
+
+    class, form);
+
+
+    # 176: Do you write code serialization of the Form instance when doing a post
+    request to a web resource using Jersey Client API?
+
+
+    Answer:
+
+    No. This is handled by the API.
+
+
+    # 177: Create an instance of Jersey Client and configure it to perform automatic
+    redirection.
+
+
+    Answer:
+
+    Client c = Client.create();
+
+    c.getProperties().put(ClientConfig.PROPERTY_FOLLOW_REDICTS, true);
+
+
+    # 178: How do you create a Jersey Client using a ClientConfig object?
+
+
+    Answer:
+
+    ClientConfig cc = new DefaultClientConfig();
+
+    cc.getProperties().put(ClientConfig.PROPERTY_FOLLOW_REDICTS, true);
+
+    Client c = Client.create(cc);
+
+
+    # 179: Using Jersey Client API, when is it possible to obtain a'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# WebResource instance?
+
+
+    Answer:
+
+
+    In order to obtain a WebResource instance, a client instance has to be created
+    and configured before.
+
+
+    180: Give an example of creating a reference to a Web resource with the URI “http://localhost:8081/abc”
+    using Jersey Client API.
+
+
+    Answer:
+
+
+    ```
+
+    Client c = Client.create();
+
+    c.getProperties().put(ClientConfig.PROPERTY_FOLLOW_REDICTS, true);
+
+    WebResource r = c.resource("http://localhost:8081/abc");
+
+    ```
+
+
+    181: Why is it recommended to reuse a configured instance of Client for the creation
+    of Web resources?
+
+
+    Answer:
+
+
+    Reusing Client instance is preferred because Client instances are expensive resources.
+
+
+    182: Why is it safe to share Client instance and WebResource instances between
+    multiple threads?
+
+
+    Answer:
+
+
+    Since the creation of Web resources, the building of requests and receiving of
+    responses are guaranteed to be thread safe, therefore it is safe to share Client
+    instance and WebResource instances between multiple threads.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# 183: Assume that you have WebResource instance ''r''. How will you send a
+    GET request with an Accept header of application/json, application/xml and a non-standard
+    header X-FOO of test?
+
+
+    Answer:
+
+
+    ```
+
+    String response = r.accept(MediaType.APPLICATION_JSON_TYPE,MediaType.APPLICATION_XML_TYPE).header("X-FOO",
+    "test").get(String.class);
+
+    ```
+
+
+    # 184: Assume that you want to send a POST request to a resource with a request
+    entity of JAVA type. How will you send the POST request?
+
+
+    Answer:
+
+
+    ```
+
+    WebResource r = c.resource("http://localhost:8081/abc");
+
+    String request = "hello";
+
+    String response = r.accept(
+
+    MediaType.APPLICATION_JSON_TYPE,
+
+    MediaType.APPLICATION_XML_TYPE),
+
+    header("X-FOO", "test")
+
+    post(String.class, request);
+
+    ```
+
+
+    # 185: Which exception is thrown if the ClientResponse type is not utilized and
+    the response status is greater than or equal to 300?
+
+
+    Answer:
+
+
+    Runtime exception UniformInterfaceException will be thrown.'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "# 186: How will you obtain the ClientResponse if the ClientResponse type is\
+    \ not utilized and the response status is greater than or equal to 300?\n\nAnswer:\n\
+    \n```\ntry {\n  String entity = r.get(String.class);\n} catch (UniformInterfaceException\
+    \ ue) {\n  ClientResponse response = ue.getResponse();\n}\n```\n\n# 187: How do\
+    \ you create new WebResources from a WebResource?\n\nAnswer:\n\nNew WebResources\
+    \ can be created from an existing WebResource by using its URI.\n\n# 188: Give\
+    \ an example of processing a response entity as a stream of bytes?\n\nAnswer:\n\
+    \n```\nInputStream is used to read a stream of bytes.\nInputStream in = r.get(InputStream.class);\n\
+    // Read from the stream\nin.close();\n```\n\n# 189: Why it is important to close\
+    \ the inputstream after reading a response entity as a stream of bytes?\n\nAnswer:\n\
+    \nIt is important to close the stream after reading/processing so"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: 'that resources are freed up.
+
+
+    # 190: What is the use of filters when writing RESTful clients?
+
+
+    Answer:
+
+
+    Filters can be used to do filtering of requests and responses.
+
+    Filters can modify the request URI, headers, response status and entity.
+
+
+    # 191: What enables Client and WebResource classes the addition of ClientFilter
+    instances?
+
+
+    Answer:
+
+
+    The Client and WebResource classes extend from Filterable which enables the addition
+    of ClientFilter instances.
+
+
+    # 192: From where does a WebResource inherit filters?
+
+
+    Answer:
+
+
+    A WebResource inherits filters from its creator. The creator can be a Client or
+    another WebResource.
+
+
+    # 193: What enables Client and WebResource classes the addition of ClientFilter
+    instances?
+
+
+    Answer:
+
+
+    The Client and WebResource classes extend from Filterable which enables the addition
+    of ClientFilter instances.
+
+
+    # 194: You wish to track communication between client and server using LoggingFilter.
+    Assume that you are using Jersey client API. How will you configure the LoggingFilter?'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# Answer:
+
+
+    ```
+
+    import com.sun.jersey.api.client.filter.LoggingFilter
+
+    client.addFilter(new LoggingFilter());
+
+    ```
+
+
+    # 195: You wish to add additional filters to a WebResource.
+
+    When can that be done?
+
+
+    # Answer:
+
+
+    Additional filters can only be added to a WebResource after it
+
+    has been created.
+
+
+    # 196: What is the order of filter application for requests?
+
+
+    # Answer:
+
+
+    For requests, all filters are applied in the order in which they
+
+    were added. At first, the inherited filters are applied followed
+
+    by the filters added to the WebResource.
+
+
+    # 197: What is the order of filter application for responses?
+
+
+    # Answer:
+
+
+    For responses, all filters are applied in reverse order. At first,
+
+    the WebResource filters are applied and then the inherited filters.
+
+
+    > Questions 198, & 199 are based on the following code snippet.
+
+
+    ```
+
+    ClientFilter filterA = ...
+
+    ClientFilter filterB = ...
+
+    Client c = Client.create();
+
+    c.addFilter(filterA);
+
+    c.addFilter(filterB);
+
+    ```'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: 'ClientFilterfilterC = ...
+
+    WebResource r = c.resource(...);
+
+    r.addFilter(filterC);
+
+
+    # 198: What will be the filter application order after a request
+
+    has been built?
+
+
+    Answer:
+
+    filterA, filterB and filterC
+
+
+    # 199: What will be the filter application order after a response
+
+    has been received?
+
+
+    Answer:
+
+    filterC, filterB and filterA
+
+
+    # 200: Name the two filters supported by the Jersey Client API.
+
+    Answer:
+
+
+    A GZIP content encoding filter (GZIPContentEncodingFilter) and
+
+    a logging filter (LoggingFilter).
+
+
+    # 201: What is the use of Jersey Client APIs
+
+    GZIPContentEncodingFilter?
+
+    Answer:
+
+
+    GZIPContentEncodingFilter is added to compress a request
+
+    entity with the Content-Encoding of gzip. It also decompresses
+
+    a response entity if compressed with a Content-Encoding of
+
+    gzip.
+
+
+    # 202: What is the use of Jersey Client APIs LoggingFilter?'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    LoggingFilter is used to log request and response headers to a declared output
+    stream.
+
+
+    # 203: Assume that output stream is not declared for Jersey Client APIs LoggingFilter.
+    Where will the LoggingFilter be logging request and response headers?
+
+
+    # Answer:
+
+
+    LoggingFilter will log the request and response headers at: System.out.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: This page is intentionally left blank
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# HR Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# 1: Describe a time when you communicated a difficult or complicated idea
+    to a coworker.
+
+
+    Answer:
+
+
+    Start by explaining the idea briefly to the interviewer, and then give an overview
+    of why it was necessary to break down further to the coworker. Finally, explain
+    the idea in succinct steps, so the interviewer can see your communication abilities
+    and skill in simplification.
+
+
+    # 2: What situations do you find it difficult to communicate in?
+
+
+    Answer:
+
+
+    Even great communicators will often find particular situations that are more difficult
+    to communicate effectively in, so don''t be afraid to answer this question honestly.
+    Be sure to explain the particular situation you name is difficult for you, and
+    try to choose an uncommon answer such as language barrier or in time of hardship,
+    rather than a situation such as speaking to someone of higher authority.
+
+
+    # 3: What are the key components of good communication?
+
+
+    Answer:
+
+
+    Some of the components of good communication include an environment that is free
+    from distractions, feedback from the listener, and revision or clarification from
+    the speaker when necessary. Refer to basic communication models where necessary,
+    and offer to go through a role-play sample with the interviewer in order to show
+    your skills.'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# 4: Tell me about a time when you solved a problem through communication?
+
+
+    Answer:
+
+
+    Solving problems through communication is key in the business world, so choose
+    a specific situation from your previous job in which you navigated a messy situation
+    by communicating effectively through the conflict. Explain the basis of the situation,
+    as well as the communication steps you took, and end with a discussion of why
+    communicating through the problem was so important to its resolution.
+
+
+    # 5: Tell me about a time when you had a dispute with another employee. How did
+    you resolve the situation?
+
+
+    Answer:
+
+
+    Make sure to use a specific instance, and explain step-by-step the scenario, what
+    you did to handle it, and how it was finally resolved. The middle step, how you
+    handled the dispute, is clearly the most definitive – describe the types of communication
+    you used, and how you used compromise to reach a decision. Conflict resolution
+    is an important skill for any employee to have, and is one that interviewers will
+    search to determine both how likely you are to be involved in disputes, and how
+    likely they are to be forced to become involved in the dispute if one arises.
+
+
+    # 6: Do you build relationships quickly with people, or take more time to get
+    to know them?'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# Answer:
+
+
+    Either of these options can display good qualities, so determine which style is
+    more applicable to you. Emphasize the steps you take in relationship-building
+    over the particular style, and summarize briefly why this works best for you.
+
+
+    # 7: Describe a time when you had to work through office politics to solve a problem.
+
+
+    # Answer:
+
+
+    Try to focus on the positives in this question, so that you can use the situation
+    to your advantage. Don''t portray your previous employer negatively, and instead
+    use a minimal instance (such as paperwork or a single individual), to highlight
+    how you worked through a specific instance resourcefully. Give examples of communication
+    skills or problem-solving you used in order to achieve a resolution.
+
+
+    # 8: Tell me about a time when you persuaded others to take on a difficult task?
+
+
+    # Answer:
+
+
+    This question is an opportunity to highlight both your leadership and communication
+    skills. While the specific situation itself is important to offer as background,
+    focus on how you were able to persuade the others, and what tactics worked the
+    best.
+
+
+    # 9: Tell me about a time when you successfully persuaded a group to accept your
+    proposal.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    99
+
+
+    # Answer:
+
+
+    This question is designed to determine your resourcefulness and your communication
+    skills. Explain the ways in which you took into account different perspectives
+    within the group, and created a presentation that would be appealing and convincing
+    to all members. Additionally, you can pump up the proposal itself by offering
+    details about it that show how well-executed it was.
+
+
+    # 10: Tell me about a time when you had a problem with another person, that, in
+    hindsight, you wished you had handled differently.
+
+
+    # Answer:
+
+
+    The key to this question is to show your capabilities of reflection and your learning
+    process. Explain the situation, how you handled it at the time, what the outcome
+    of the situation was, and finally, how you would handle it now. Most importantly,
+    tell the interviewer why you would handle it differently now – did your previous
+    solution create stress on the relationship with the other person, or do you wish
+    that you had stood up more for what you wanted? While you shouldn''t elaborate
+    on how poorly you handled the situation before, the most important thing is to
+    show that you''ve grown and reached a deeper level of understanding as a result
+    of the conflict.
+
+
+    # 11: Tell me about a time when you negotiated a conflict between other employees.'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Answer:
+
+
+    An especially important question for those interviewing for a supervisory role
+    – begin with a specific situation, and explain how you communicated effectively
+    to each individual. For example, did you introduce a compromise? Did you make
+    an executive decision? Or, did you perform as a mediator and encourage the employees
+    to reach a conclusion on their own?
+
+
+    # 12: What are the three most important things you''re looking for in a position?
+
+
+    # Answer:
+
+
+    The top three things you want in a position should be similar to the top three
+    things the employer wants from an employee, so that it is clear that you are well-matched
+    to the job. For example, the employer wants a candidate who is well-qualified
+    for has practical experience – and you want a position that allows you to use
+    your education and skills to their best applications. The employer wants a candidate
+    who is willing to take on new challenges and develop new systems to increase sales
+    or productivity – and you want a position that pushes you and offers opportunities
+    to develop, create, and lead new initiatives. The employer wants a candidate who
+    will grow into and stay with the company for a long time – and you want a position
+    that offers stability and believes in building a strong team. Research what the
+    employer is looking for beforehand, and match your objectives to theirs.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# 13: How are you evaluating the companies you''re looking to work with?
+
+
+    Answer:
+
+
+    While you may feel uncomfortable exerting your own requirements during the interview,
+    the employer wants to that you are thinking critically about the companies you''re
+    applying with, just as they are critically looking at you. Don''t be afraid to
+    specify what your needs from a company are (but do try to make sure they match
+    up with the company – preferably before you apply), and show confidence and decisiveness
+    in your answer. The interviewer wants to know that you''re the kind of person
+    who knows what they want, how to get it.
+
+
+    # 14: Are you comfortable working for ________ salary?
+
+
+    Answer:
+
+
+    If the answer to this question is no, it may be a bit of a dealbreaker in a first
+    interview, as you are unlikely to have much room to negotiate. You can try to
+    leverage a bit by highlighting specific experience you have, and how that makes
+    you qualified for more, but be aware that this is very difficult to navigate at
+    this step of the process. To avoid aware of industry standards and, if possible,
+    company standards, prior to your application.
+
+
+    # 15: Why did you choose your last job?
+
+
+    Answer:
+
+
+    In learning what led you to your last job, the interviewer is able'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: 'to get a feel for the types of things that motivate you. Keep these professionally-focused,
+    and remain passionate about the early points of your career, and how excited you
+    were to get started in the field.
+
+
+    # 16: How long has it been since your last job and why?
+
+
+    Answer:
+
+    Be sure to have an explanation prepared for all gaps in employment, and make sure
+    it''s a professional reason. Don''t mention difficulties you may have had in finding
+    a job, and instead focus on positive things such as pursuing outside interests
+    or perhaps returning to school for additional education.
+
+
+    # 17: What other types of jobs have you been looking for?
+
+
+    Answer:
+
+    The answer to this question can show the interviewer that you''re both on the
+    market and in deman. Mention jobs you''ve applied for or looked at that are closely
+    related to your field, or similar to the position you''re interviewing for. Don''t
+    bring up last-ditch efforts that found you applying for a part-time job completely
+    unrelated to your field.
+
+
+    # 18: Have you ever been disciplined at work?
+
+
+    Answer:
+
+    Hopefully the answer is here no – but if you have been disciplined for something
+    at work though, be absolutely that you can explain it thoroughly. Detail what
+    you learned'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    103
+
+
+    from the situation, and reflect on how you grew after the process.
+
+
+    # 19: What is your availability like?
+
+
+    Answer:
+
+
+    Your availability should obviously be as open as possible, and any gaps in availability
+    should be explained and accounted for. Avoid asking about vacation or personal
+    days (as well as other benefits), and convey to the interviewer how serious you
+    are about your work.
+
+
+    # 20: May I contact your current employer?
+
+
+    Answer:
+
+
+    If possible, it is best to allow an interviewer to contact your current employer
+    as a reference. However, if it''s important your employer is not contacted, explain
+    your reason tactfully, such as you just started job searching and you haven''t
+    had the opportunity yet to inform them that you are looking for other employment.
+    Be careful of this reasoning though, as employers may wonder if you start shopping
+    for something better while employed with them as well.
+
+
+    # 21: Do you have any valuable contacts you could bring to our business?
+
+
+    Answer:
+
+
+    It''s great if you can bring knowledge, references, or other contacts that your
+    new employer may be able to network with. However, be sure that you aren''t offering
+    up any of your'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'previous employer''s clients, or in any way violating contractual agreements.
+
+
+    # 22: How soon would you be available to start working?
+
+
+    Answer:
+
+
+    While you want to be sure that you''re available to start as soon as possible
+    if the company is interested in hiring you, if you still have another job, be
+    sure to give them at least two weeks'' notice. Though your new employer may be
+    anxious for you to start, they will want to hire a worker whom they can respect
+    for for giving adequate notice, so that they won''t have to worry if you''ll eventually
+    leave them in the lurch.
+
+
+    # 23: Why would your last employer say that you left?
+
+
+    Answer:
+
+
+    The key to this question is that your employer''s answer must be the same as your
+    own answer about why you left. For instance, if you''ve told your employer that
+    you left to find a position with greater opportunities for career advancement,
+    your employer had better not say that you were let go for missing too many days
+    of work. Honesty is key in your job application process.
+
+
+    # 24: How long have you been actively looking for a job?
+
+
+    Answer:
+
+
+    It''s best if you haven''t been actively looking for a job for very long, as a
+    long period of time may make the interviewer wonder why no one else has hired
+    you. If it has been awhile,'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    make sure to explain why, and keep it positive. Perhaps you haven''t come across
+    many opportunities that provide you with enough of a challenge or that are adequately
+    matched to someone of your education and experience.
+
+
+    # 25: When you don''t show up to work?
+
+
+    Answer:
+
+
+    Clearly, the only time acceptable to miss work is for a real emergency or when
+    you''re truly sick – so don''t start bringing up times now that you plan to miss
+    work due to vacations or family birthdays. Alternatively, you can tell the interviewer
+    how dedicated to your work you are, and how you always strive to be fully present
+    and to put in the same amount of work every time you come in, even when you''re
+    feeling slightly under the weather.
+
+
+    # 26: What is the most common reason you miss work?
+
+
+    Answer:
+
+
+    If there is a reason that you will miss work routinely, this is the time to disclose
+    it – but doing so during an interview will reflect negatively on you. Ideally,
+    you will only miss work during cases of extreme illness or other emergencies.
+
+
+    # 27: What is your attendance record like?
+
+
+    Answer:
+
+
+    Be sure to answer this question honestly, but ideally you will have already put
+    in the work to back up the fact that you rarely miss days or arrive late. However,
+    if there are gaps in your'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: 'attendance, explain them briefly with appropriate reasons, make sure to emphasize
+    your dedication to your work, and reliability.
+
+
+    # 28: Where did you hear about this position?
+
+
+    Answer:
+
+
+    This may seem like a simple question, but the answer can actually speak volumes
+    about you. If you were referred by a friend or another employee who works for
+    the company, this is a great chance to mention your connection (if the person
+    is in good standing!). However, if you heard about it from somewhere like a career
+    fair or a work placement agency, you may want to focus on how pleased you were
+    to come across such a wonderful opportunity.
+
+
+    # 29: Tell me anything else you''d like me to know when making a hiring decision.
+
+
+    Answer:
+
+
+    This is a great opportunity for you to give a final sell of yourself to the interviewer
+    – use this time to remind the interviewer of why you are qualified for the position,
+    and what you can bring to the company that no one else can. Express your excitement
+    for the opportunity to work with a company pursuing X mission.
+
+
+    # 30: Tell me about a time when you didn''t meet a deadline.
+
+
+    Answer:
+
+
+    Ideally, this hasn''t happened – but if it has, make sure you use a'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: 'minor example to illustrate the situation, emphasize how long ago it happened,
+    and be sure that you did as much as you could to ensure that the deadline was
+    met. Additionally, be sure to include what you learned about managing time better
+    or prioritizing tasks in order to meet all future deadlines.
+
+
+    # 31: How do you eliminate distractions while working?
+
+
+    Answer:
+
+
+    With the increase of technology and the ease of communication, new distractions
+    arise every day. Your interviewer will want to see that you are still able to
+    focus on work, and that your productivity has not been affected, by an example
+    showing a routine you employ in order to stay on task.
+
+
+    # 32: Tell me about a time when you worked in a position with a weekly or monthly
+    quota to meet. How often were you successful?
+
+
+    Answer:
+
+
+    Your numbers will speak for themselves, and you must answer this question honestly.
+    If you were regularly met your quotas, be sure to highlight this in a confident
+    manner and don''t be shy in pointing out your strengths in this area. If your
+    statistics are less than stellar, try to point out trends in which they increased
+    toward the end of your employment, and show reflection as to ways you can improve
+    in the future.
+
+
+    # 33: Tell me about a time when you met a tough deadline, and how you were able
+    to complete it.'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# Answer:
+
+
+    Explain how you were able to prioritize tasks, or to delegate portions of an assignments
+    to other team members, in order to deal with a tough deadline. It may be beneficial
+    to specify why the deadline was tough – make sure it''s clear that it was not
+    a result of procrastination on your part. Finally, explain how you were able to
+    successfully meet the deadline, and what it took to get there in the end.
+
+
+    # 34: How do you stay organized when you have multiple projects on your plate?
+
+
+    # Answer:
+
+
+    The interviewer will be looking to see that you can manage your time and work
+    well – and being able to handle multiple projects at once, and still giving each
+    the attention it deserves, is a great mark of a worker''s competence and efficiency.
+    Go through a typical process of goal-setting and prioritizing, and explain the
+    steps of these to the interviewer, so he or she can see how well you manage time.
+
+
+    # 35: How much time during your work day do you spend on “auto-pilot?”
+
+
+    # Answer:
+
+
+    While you may wonder if the employer is looking to see how efficient you are with
+    this question (for example, so good at your job that you don''t have to think
+    about it), but in almost every case, the employer wants to see that you''re constantly
+    thinking, analyzing, and processing what''s going on in the'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: 'workplace. Even if things are running smoothly, there''s usually an opportunity
+    somewhere to make things more efficient or to increase sales or productivity.
+    Stress your dedication to ongoing development, and convey that being on “auto-pilot”
+    is not conducive to that type of success.
+
+
+    # 36: How do you handle deadlines?
+
+
+    Answer:
+
+
+    The most important part of handling tough deadlines is to prioritize tasks and
+    set goals for completion, as well as to delegate or eliminate unnecessary work.
+    Lead the interviewer through a general scenario, and display your competency through
+    your ability to organize and set priorities, and most importantly, remain calm.
+
+
+    # 37: Tell me about your personal problem-solving process.
+
+
+    Answer:
+
+
+    Your personal problem-solving process should include outlining the problem, coming
+    up with possible ways to fix the problem, and setting a clear action plan that
+    leads to resolution. Keep your answer brief and organized, and explain the steps
+    in a concise, calm manner that shows you are level-headed even under stress.
+
+
+    # 38: What sort of things at work can make you stressed?
+
+
+    Answer:
+
+
+    As it’s best to stay away from negatives, keep this answer brief and simple. While
+    answering that nothing at work makes you'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: 'stressed will not be very believable to the interviewer, keep your answer to
+    one generic principle such as when members of a team don''t keep their commitments,
+    and then focus on a solution you generally employ to tackle that stress, such
+    as having weekly status meetings or intermittent deadlines along the course of
+    a project.
+
+
+    # 39: What do you look like when you are stressed about something? How do you
+    solve it?
+
+
+    Answer:
+
+
+    This is a trick question – your interviewer wants to hear that you don''t look
+    any different when you''re stressed, and that you don''t allow negative emotions
+    to interfere with your productivity. As far as how you solve your stress, it''s
+    best if you have a simple solution mastered, such as simply taking deep breaths
+    and counting to 10 to bring yourself back to the task at hand.
+
+
+    # 40: Can you multi-task?
+
+
+    Answer:
+
+
+    Some people can, and some people can''t. The most important part of multi-tasking
+    is to keep a clear head at all times about what needs to be done, and what priority
+    each task falls under. Explain how you evaluate tasks to determine priority, and
+    how you manage your time in order to ensure that all are completed efficiently.
+
+
+    # 41: How many hours per week do you work?'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    Answer:
+
+
+    Many people get tricked by this question, thinking that answering more hours is
+    better – however, this may cause an employer to wonder why you have to work so
+    many hours in order to get the work done that other people can do in a shorter
+    amount of time. Give a fair estimate of hours that it should take you to complete
+    a job, and explain that you are also willing to work extra when needed.
+
+
+    # 42: How many times per day do you check your email?
+
+
+    Answer:
+
+
+    While an employer wants to see that you are plugged into modern technology, it
+    is also important that the number of times you check your email per day is relatively
+    low – perhaps two to three times per day (dependent on the specific field you''re
+    in). Checking email is often a great distraction in the workplace, and while it
+    is important to remain connected, much correspondence can simply be handled together
+    in the morning and afternoon.
+
+
+    # 43: Tell me about a time when you worked additional hours to finish a project.
+
+
+    Answer:
+
+
+    It''s important for your employer to see that you are dedicated to your work,
+    and willing to put in extra hours when required or a job calls for it. However,
+    be careful when explaining why you were called to work additional hours – for
+    instance, did you have to stay late because you set goals poorly earlier in'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: 'the process? Or on a more positive note, were you working additional hours
+    because a client requested for a deadline to be moved up on short notice? Stress
+    your competence and willingness to give 110% every time.
+
+
+    # 44: Tell me about a time when your performance exceeded the duties and requirements
+    of your job.
+
+
+    Answer:
+
+
+    If you''re a great candidate for the position, this should be an easy question
+    to answer – choose a time when you truly went above and beyond the call of duty,
+    and put in additional work or voluntarily took on new responsib-ilities. Remain
+    humble, and express gratitude for the learning opportunity, as well as confidence
+    in your ability to give a repeat performance.
+
+
+    # 45: What is your driving attitude about work?
+
+
+    Answer:
+
+
+    There are many possible good answers to this question, and the interviewer primarily
+    wants to see that you have a great passion for the job and that you will remain
+    motivated in your career if hired. Some specific driving forces behind your success
+    may include hard work, opportunity, growth potential, or success.
+
+
+    # 46: Do you take work home with you?
+
+
+    Answer:
+
+
+    It is important to first clarify that you are always willing to take'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+    113
+
+
+    work home when necessary, but you want to emphasize as well that it has not been
+    an issue for you in the past. Highlight skills such as time management, goal-setting,
+    and multi-tasking, which can all ensure that work is completed at work.
+
+
+    # 47: Describe a typical work day to me.
+
+
+    Answer:
+
+
+    There are several important components in your typical work day, and an interviewer
+    may derive meaning from any or all of them, as well as from your ability to systematically
+    lead him or her through the day. Start at the beginning of your day and proceed
+    chronologically, making sure to emphasize steady productivity, time for review,
+    goal-setting, and prioritizing, as well as some additional time to account for
+    unexpected things that may arise.
+
+
+    # 48: Tell me about a time when you went out of your way at your previous job.
+
+
+    Answer:
+
+
+    Here it is best to use a specific example of the situation that required you to
+    go out of your way, what your specific position would have required that you did,
+    and how you went above that. Use concrete details, and be sure to include the
+    results, as well as reflection on what you learned in the process.
+
+
+    # 49: Are you open to receiving feedback and criticisms on your job performance,
+    and adjusting as necessary?'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# Answer:
+
+
+    This question has a pretty clear answer – yes – but you''ll need to display a
+    knowledge as to why this is important. Receiving feedback and criticism is one
+    thing, but the most important part of that process is to implement it into your
+    daily work. Keep a good attitude, and express that you always appreciate constructive
+    feedback.
+
+
+    # 50: What inspires you?
+
+
+    # Answer:
+
+
+    You may find inspiration in nature, reading success stories, or mastering a difficult
+    task, but it''s important that your inspiration is positively-based and that you''re
+    able to listen and tune into it when it appears. Keep this answer generally based
+    in the professional world, but where applicable, it may stretch a bit into creative
+    exercises in your personal life that, in turn, you in achieving career objectives.
+
+
+    # 51: How do you inspire others?
+
+
+    # Answer:
+
+
+    This may be a difficult question, as it is often hard to discern the effects of
+    inspiration in others. Instead of offering a specific example of a time when you
+    inspired someone, focus on general principles such as leading by example that
+    you employ in your professional life. If possible, relate this to a quality of
+    someone who inspired you possessed, and discuss the way you have modified or modeled
+    it in your own work.
+
+
+    And Finally Good Luck!'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# INDEX
+
+
+    # RESTful JAVA Web Services Interview Questions
+
+
+    # RESTful Basics / Annotations
+
+
+    +   1: In which scenarios RESTful Web Services are preferred over SOAP ones?
+
+    2: How do you refer or identify resources in REST design idiom?
+
+    3: Is Rest stateless or stateful client-server architecture?
+
+    4: Name the JAVA API that is used for building and deploying RESTful Web Services.
+
+    5: How Web Service interface for RESTful Web Services are described?
+
+    6: Name few of the JAX-RS implementations.
+
+    7: If I plan to use the Jersey distribution for RESTful Web Services, do I need
+    to download it?
+
+    8: How are resources addressed?
+
+    9: In RESTful architecture, what represents the application state and functionality?
+
+    10: What is shared between RESTful resource that is used for transfer of state
+    between client and resource?
+
+    11: How do you annotate a method to respond to HTTP GET requests?
+
+    12: Name the most commonly HTTP methods used in designing RESTful services.
+
+    13: Define one-to-one mapping between HTTP methods and CRUD operations.
+
+    14: What are idempotent methods?
+
+    15: In order to answer HTTP PUT requests, how will you annotate your resource
+    methods?
+
+    16: Why PUT methods are idempotent?
+
+    17: What is the purpose of javax.ws.rs.HttpMethod?
+
+    18: List resource methodator annotations?
+
+    19: Define Root resource class.
+
+    20: Define Resource Method?
+
+    21: How to you specify relative path of a resource in RESTful Web Service?
+
+    22: How can you embed variables in the URI?'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '23: How embedded variables are represented in the URI syntax?
+
+
+    24: How can you obtain the value of a method parameter in RESTful resource?
+
+
+    25: How can you define a regular expression for a variable say username?
+
+
+    26: What happens if regular expression of a URI embedded variable is not matched?
+
+
+    27: Will the following direct to the same resource?
+
+
+    28: Explain how to specify MIME media types of a resource that is sent to the
+    client?
+
+
+    29: Is it true that @Produces can only be applied at method level?
+
+
+    30: Can @Produces annotation be overridden in a RESTLess resource? Give example.
+
+
+    31: How can you declare more than one media type in the same @Produces declaration?
+
+
+    32: Assume that there is a resource class capable of producing more than one MIME
+    media type for GET. How will be the response chosen?
+
+
+    33: How will you specify the MIME media types of representations a RESTful resource
+    can use?
+
+
+    34: Write a method that is triggered on POST request and takes text/plain as input.
+
+
+    35: At which levels, @Consumes can be applied?
+
+
+    36: Give an example of declaring more than one media type in @Consumes declaration?
+
+
+    37: Can RESTful Web Services support multiple types of response (MIME) formats?
+
+
+    38: Which two response formats are typically supported by RESTful Services?
+
+
+    39: When designing a RESTful Web Service, what constitutes the resources of the
+    system?
+
+
+    40: What does HATEOAS mean?
+
+
+    41: Define Uniform Interface Constraint?
+
+
+    # Deploying a RESTful Web Service
+
+
+    42: Name the JAX-RS deployment agnostic abstract class that is used for'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    declaring root resource.
+
+    43: How can you declare root resource and provider classes using JAX-RS Application
+    class?
+
+    44: Give an example of JAX-RS application deployment using @ApplicationPath Servlet
+    3.0.
+
+    45: How to you configure maven-war-plugin in pom.xml with with Servlet 3.0?
+
+    46: Is it possible to declare JAX-RS application details in the web.xml?
+
+    47: How will you declare JAX-RS application details in web.xml?
+
+    48: Declaring RESTful resource using Servlet 3.0 extension mechanism, element
+    is used in web.xml to define the base resource URI.
+
+    49: You are using Servlet 2.x and want to declare Jersey specific servlet in web.xml.
+    How will you configure it?
+
+    50: You are using ServletConfig 2.x and to let Jersey choose the PackagesResourceConfig
+    implementation automatically by declaring the packages in web.xml. How will you
+    configure it?
+
+
+    # Request Parameters
+
+
+    +   51: What is the purpose of parameter-based annotations?
+
+    52: Which annotation will you use to extract query parameters from the Query component
+    of the request URL?
+
+    53: How to declare default value of resource method parameter?
+
+    54: What happens if a query parameter from the Query component of the request
+    URL cannot be parsed into resource method parameter?
+
+    55: Only primitive types can be used for resource method parameter''s query parameter?
+
+    56: Review the following resource method. If query parameter is not present in
+    the request, what will be the value of resource method parameter ''id''?
+
+    57: Review the following resource method. If query parameter is not present in
+    the request, what will be the value of resource method parameter ''firstName''?
+
+    58: What default value is set for resource method parameter of type List<T>, if
+    no default is specified and the required parameter is not present in the request?
+
+    59: Name the parameter-based annotations that are used to extract'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# RESTful Java Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    information from URL path segments?
+
+    60: Which parameter-based annotations will be used to extract information
+
+    from HTTP headers?
+
+
+    61: Name the parameter-based annotations that are used to extract
+
+    information from cookie related HTTP headers?
+
+
+    62: You want to get parameters POSTed by HTML forms as resource
+
+    method''s arguments. Which annotation will you prefer?
+
+
+    63: Give an example of resource method that processes POSTed HTML form?
+
+
+    # Responses
+
+
+    +   64: Is it possible to return a response to HTTP request from a resource
+
+    method?
+
+    65: Write a resource method that responds to a Post request, consumes
+
+    application/xml and adds an entity body to a custom response?
+
+
+    # Sub-Resources
+
+
+    +   66: Define root resource classes?
+
+    67: Can @Path be used on methods of root resource classes?
+
+    68: Name the method that gets called when the request URL is /cars?
+
+    69: What request URL will you use to call getMakes() resource method?
+
+    70: Which method responds gets called with the request URL ''/cars/model''
+
+    71: Name the method that gets called when the requested URL is /cars/test?
+
+    72: What will be the outcome if the requested URL is: /hello/testparam?
+
+    73: What will be the outcome if the requested URL is:
+
+    /hello/testparam?name=MyFirstName
+
+    74: What should be the requested URL in order to get the following result?
+
+    MyFirstName MyLastName
+
+    75: What are sub-resource locator methods?
+
+    76: Give an example of sub-resource locator method.
+
+    77: Does JAX-RS support conditional GET and PUT HTTP requests?
+
+    78: What is the benefit of conditional GET and PUT HTTP requests?
+
+    79: Assume that the static content has not changed since the previous request.
+
+    What response should be sent for a GET request to save bandwidth?'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '80: Assume that the representation was modified when the client made a PUT
+    request. What response should be sent to it?
+
+
+    81: What is the correct way of solving a Precondition Failed (412) response that
+    results in lost update problem?
+
+
+    82: How do you specify which MIME types of representations your resource can accept?
+
+
+    83: Assume that you applied @Consumes at the class level and have not specified
+    it at method level. What response MIME type will be accepted by the methods?
+
+
+    84: Can you override a MIME type at resource method level?
+
+
+    85: What response will be sent to the client if its requested MIME type is not
+    produced by any resource method?
+
+
+    86: Which MIME type can be produced by doGetAsPlainText()?
+
+
+    87: doGetAsHtml() declares that it produces text/html where the class is declaring
+    that it produces text/plain. This mean that doGetAsHtml() produces text/plains
+    and text/html?
+
+
+    88: If AResource is capable of producing more than one MIME media type, how will
+    the resource method be chosen?
+
+
+    # Building URIs
+
+
+    89: Is it safe and easy to build URIs using java.net.URI?
+
+
+    90: Which JAX-RS class should be used to build URIs safely?
+
+
+    91: Is it true that javax.ws.rs.core.UriBuilder can only be used to build new
+    URIs?
+
+
+    92: How do you normally build the URIs of resource classes?
+
+
+    93: How to obtain UriInfo in a RESTful resource class?
+
+
+    94: Which URIs can you obtain if you have UriInfo instance?
+
+
+    95: Which URI will you get if you minus query components from the request URI?
+
+
+    96: Give an example of building URIs using query parameters.
+
+
+    # Exceptions as Responses
+
+
+    97: How can you return HTTP errors from RESTful resource methods?
+
+
+    98: Write a RESTful resource method that throws an exception if processing fails
+    for any reason.'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '99: What actually is sent as HTTP response, if RESTful resource method
+
+    throws WebApplicationException?
+
+
+    100: You wish to map an existing exception to a response instead of throwing
+
+    ininstances of WebApplicationException from your RESTful resource methods.
+
+
+    How can this be achieved?
+
+
+    # Life Cycle
+
+
+    +   101: A class is annotated with @Provider. What does that tell you?
+
+    102: When is a new instance of a root resource class created?
+
+    103: Apart from resource classes creation on request bases, which other life-cycles
+    are supported by Jersey?
+
+    104: How will Jersey declare a singleton resource class using Jersey?
+
+    105: Which Jersey annotation can be used if we want to create instance of a resource
+    class for one web session?
+
+    106: How do you obtain SecurityContext in a resource method?
+
+
+    # Injection
+
+
+    +   107: Where can you use injection in your RESTful resource class?
+
+    108: Give an example of injection onto a field?
+
+    109: How can you inject a value into a RESTful resource class''s constructor parameter?
+
+    110: Give an example of injection onto resource method parameter?
+
+    111: Is it possible to use injection onto a sub-resource method parameter?
+
+    112: What are the injection restrictions on resource classes with a life-cycle
+    other than per-request?
+
+    113: For non-per request resource classes, which injection will work for fields
+    with @Context annotation?
+
+    114: Where are @PathParam annotation used?
+
+    115: Assume that you are deploying a JAX-RS application using servlet. What will
+    be available using @Context
+
+
+    # Params Extraction
+
+
+    +   116: What type of parameters can be extracted in a resource class?'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# RESTful Java Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    117: Which JAX-RS annotation retrieves the JAVA types related to a request or
+    response?
+
+
+    118: How do you get information about the request headers and cookies?
+
+
+    119: You wish to retrieve information about the components of a request URI. Which
+    interface can provide you that?
+
+
+    120: Which annotation is used to extract form parameters from HTML forms?
+
+
+    121: A form is posting a HTML field named ''name'' to your resource. Write a resource
+    method that extracts the name?
+
+
+    122: Write a resource method that obtains a map of form parameters posted to it.
+
+
+    123: Write a resource method that contains the following request GET /employee?name=abc&age=33
+
+
+    124: What are URI path templates?
+
+
+    125: How do you use a variable URI path fragment in your resource method?
+
+
+    # Jersey
+
+
+    126: What does Jersey use to parse incoming requests?
+
+
+    127: What does Jersey use to create outgoing responses?
+
+
+    128: What will be the output if you call the student resource method using URI:
+    /hello/student?
+
+
+    129: If @XmlRootElement is removed from Student class, will the code compile?
+    What will be the output if you call the student resource method using URI: /hello/student?
+
+
+    # JSON
+
+
+    130: How does jersey implementation support JSON?
+
+
+    131: Is JAXB based JSON support provided by Jersey implementation? When should
+    this approach be used?
+
+
+    132: Name the JSON approaches supported by Jersey.
+
+
+    133: Which JSON approach is used when you want to map any JAVA Object to JSON
+    and vice versa in web resource methods?
+
+
+    134: What is the limitation of using JAXB or JSONObject / JSONArray JSON support
+    in web resource methods?'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '135: Assume you would like to map JAVA Objects to JSON and vice versa in web
+    resource methods using Jersey POJO JSON support. How will you enable it?
+
+
+    136: Give an example of configuring POJO mapping feature on the client side.
+
+
+    137: Give an example of enabling JSONConfiguration.FEATURE_POJO_MAPPING in web.xml
+    using servlet init parameter.
+
+
+    138: Name the Jersey''s JSON approach that makes producing/consuming JSON and
+    XML data easier?
+
+
+    139: In which scenario, JAXB JSON approach is not preferred?
+
+
+    140: Give an example of JAXB Bean that could be used with JAXB JSON approach.
+
+
+    141: How can you produce JSON from the requested method?
+
+
+    142: What will be the outcome if the requested URL is: /hello/json?
+
+
+    143: What change will you make in TestBean class so id can be removed from the
+    JSON response?
+
+
+    144: What will you do to tweak JSON format using JAXB in order to change attribute
+    ''name'' to ''app-name'' in the JSON response?
+
+
+    145: How to add a namespace to TestBean?
+
+
+    146: Name the JSON notations that can be used with JSONConfiguration to serialize
+    JSON in a different ways.
+
+
+    147: The default JSONConfiguration''s JSON notation is to avoid manual work and
+    figures out how individual items need to be processed?
+
+
+    149: Using NATURAL JSON notation, how will JAVA arrays and lists be mapped?
+
+
+    150: Assume that you are using NATURAL JSON notation and your resource method
+    is returning an instance which has JAVA numbers and Booleans. To what will they
+    be mapped?
+
+
+    151: Since you do not need to care for the XML attributes when using JSONConfiguration''s
+    NATURAL notation, what will be the names of the attributes returned?
+
+
+    152: How to tell your RESTful resource to use NATURAL JSON notation?'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# RESTful Java Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    153: Which JSON notation is the worst readable from JavaScript perspective?
+
+
+    154: If Badgerfish JSON notation is the worst readable from JavaScript perspective,
+    why would you use it?
+
+
+    155: How to build JSONConfiguration instance using Badgerfish notation?
+
+
+    156: Which classes are used when using low-level JSON support with RESTful resources?
+
+
+    157: What is the advantage of using low-level JSON support with RESTful resources?
+
+
+    158: What is the disadvantage of using low-level JSON support with RESTful resources?
+
+
+    159: Give an example of constructing a JSONObject?
+
+
+    # Links
+
+
+    160: Since RESTful APIs are hypertext-driven, which class is provided by JAX-RS
+    that simplifies URI creation?
+
+
+    161: Apart from UriBuilder, which Jersey annotation is provided to support URI
+    creation?
+
+
+    162: If Jersey''s @Ref annotation is used for URI creation, when and how is the
+    appropriate URI injected into the field?
+
+
+    163: How does Jersey provide support for declarative hyperlinking?
+
+
+    164: How can you install declarative hyperlinking filter in your application in
+    web.xml?
+
+
+    165: Assume that you want to add HTTP Link headers to responses using annotations.
+    You are using Jersey implementation. How will you achieve this?
+
+
+    166: Can multiple link headers be added by use of the @Links annotation?
+
+
+    # JAX-RS Client - Jersey Client API
+
+
+    167: Why are JAVA-based client APIs not ideal to program RESTful clients?
+
+
+    168: Name JAVA-based client APIs.
+
+
+    169: Using Jersey client API, which JAVA class encapsulates a URI?
+
+
+    170: What is the benefit of representing a resource as a JAVA type when using
+    Jersey client API?'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# RESTful Java Web Services Interview Questions You''ll Likely Be Askeded
+
+
+    171: How does Jersey Client API build URIs safely?
+
+
+    172: Which JAVA types are supported by Jersey Client API?
+
+
+    173: How does Jersey Client API make use of established implementations of Apache
+    HTTP client or java.net.HttpConnection?
+
+
+    174: Is it possible to send a POST request to a RESTful resource using Apache
+    HTTP client?
+
+
+    175: Give an example of a POST request to RESTful resource using Jersey Client
+    API.
+
+
+    176: Do you write code serialization of the Form instance when doing a post request
+    to a web resource using Jersey Client API?
+
+
+    177: Create an instance of Jersey Client and configure it to perform automatic
+    redirection.
+
+
+    178: How do you create a Jersey Client using a ClientConfig object?
+
+
+    179: Using Jersey Client API, when is it possible to obtain a WebResource instance?
+
+
+    180: Give an example of creating a reference to a Web resource with the URI “http://localhost:8081/abc”
+    using Jersey Client API.
+
+
+    181: Why is it recommended to reuse a configured instance of Client for the creation
+    of Web resources?
+
+
+    182: Why is it safe to share Client instance and WebResource instances between
+    multiple threads?
+
+
+    183: Assume that you have WebResource instance ''r''. How will you send a GET
+    request with an Accept header of application/json, application/xml and a non-standard
+    header X-FOO of test?
+
+
+    184: Assume that you want to send a POST request to a resource with entity of
+    JAVA type. How will you send the POST request?
+
+
+    185: Which exception is thrown if the ClientResponse type is not utilized and
+    the response status is greater than or equal to 300?
+
+
+    186: How will you obtain the ClientResponse if the ClientResponse type is not
+    utilized and the response status is greater than or equal to 300?
+
+
+    187: How do you create new WebResources from a WebResource?
+
+
+    188: Give an example of processing a response entity as a stream of bytes?
+
+
+    189: Why is it important to close the inputstream after reading a response entity
+    as a stream of bytes?'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    190: What is the use of filters when writing RESTful clients?
+
+
+    191: What enables Client and WebResource classes the addition of ClientFilter
+    instances?
+
+
+    192: From where does a WebResource inherit filters?
+
+
+    193: What enables Client and WebResource classes the addition of ClientFilter
+    instances?
+
+
+    194: You wish to track communication between client and server using LoggingFilter.
+    Assume that are using Jersey client API. How will you configure the LoggingFilter?
+
+
+    195: You wish to add additional filters to a WebResource. When can that be done?
+
+
+    196: What is the order of filter application for requests?
+
+
+    197: What is the order of filter application for responses?
+
+
+    198: What will be the filter application order after a request has been built?
+
+
+    199: What will be the filter application order after a response has been received?
+
+
+    200: Name the two filters supported by the Jersey Client APIs GZIPContentEncodingFilter?
+
+
+    201: What is the use of Jersey Client APIs LoggingFilter?
+
+
+    202: Assume that output stream is not declared for Jersey Client APIs LoggingFilter.
+    Where will the LoggingFilter be logging request and response headers?'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# HR Questions
+
+
+    1: Describe a time when you communicated a difficult or complicated idea to a
+    coworker.
+
+
+    2: What situations do you find it difficult to communicate in?
+
+
+    3: What are the key components of good communication?
+
+
+    4: Tell me about a time when you solved a problem through communication?
+
+
+    5: Tell me about a time when you had a dispute with another employee. How did
+    you resolve the situation?
+
+
+    6: Do you build relationships quickly with people, or take more time to get to
+    know them?
+
+
+    7: Describe a time when you had to work through office politics to solve a problem.
+
+
+    8: Tell me about a time when you persuaded others to take on a difficult task?
+
+
+    9: Tell me about a time when you successfully persuaded a group to accept your
+    proposal.
+
+
+    10: Tell me about a time when you had a problem with another person, in hindsight,
+    you wish you had handled differently.
+
+
+    11: Tell me about a time when you negotiated a conflict between other employees.
+
+
+    12: What are the three most important things you''re looking for in a position?
+
+
+    13: How are you evaluating the companies you''re looking to work with?
+
+
+    14: Are you comfortable working for ________ salary?
+
+
+    15: Why did you choose your last job?
+
+
+    16: How long has it been since your last job and why we?
+
+
+    17: What other types of jobs have you been looking for?
+
+
+    18: Have you ever been disciplined at work?
+
+
+    19: What is your availability like?
+
+
+    20: May I contact your current employer?
+
+
+    21: Do you have any valuable contacts you could bring to our business?
+
+
+    22: How soon would you be available to start working?
+
+
+    23: Why would your last employer say that you left?
+
+
+    24: How long have you been actively looking for a job?
+
+
+    25: When don''t you show up to work?
+
+
+    26: What is the most common reason you miss work?'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: 'RESTful JAVA Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    27: What is your attendance record like?
+
+
+    28: Where did you hear about this position?
+
+
+    29: Tell me anything else you''d like me to know when making a hiring decision.
+
+
+    30: Tell me about a time you didn''t meet a deadline.
+
+
+    31: How do you eliminate distractions while working?
+
+
+    32: Tell me about a time you worked in a position with a weekly or monthly quota
+    to meet. How often were you successful?
+
+
+    33: Tell me about a time you met a tough deadline, and how you were able to complete
+    it.
+
+
+    34: How do you stay organized when you have multiple projects on your plate?
+
+
+    35: How much time during your work day do you spend on “auto-pilot”?
+
+
+    36: How do you handle deadlines?
+
+
+    37: Tell me about your personal problem-solving process.
+
+
+    38: What sort of things at work can make you stressed?
+
+
+    39: What do you look like when you are stressed about something? How do you solve
+    it?
+
+
+    40: Can you multi-task?
+
+
+    41: How many hours per week do you work?
+
+
+    42: How many times per day do you check your email?
+
+
+    43: Tell me about a time when you worked additional hours to finish a project.
+
+
+    44: Tell me about a time when your performance exceeded the duties and requirements
+    of your job.
+
+
+    45: What is your driving attitude about work?
+
+
+    46: Do you take work home with you?
+
+
+    47: Describe a typical work day to me.
+
+
+    48: Tell me about a time when you went out of your way at your previous job.
+
+
+    49: Are you open to receiving feedback and criticisms on your job performance,
+    and adjusting as necessary?
+
+
+    50: What inspires you?
+
+
+    51: How do you inspire others?'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# Some of the following titles might also be handy:
+
+
+    +   1. .NET Interview Questions You''ll Likely Be Asked
+
+    2. 200 Interview Questions You''ll Likely Be Asked
+
+    3. Access VBA Programming Interview Questions You''ll Likely Be Asked
+
+    4. Adobe Fusion Interview Questions You''ll Likely Be Asked
+
+    5. Advanced Excel Interview Questions You''ll Likely Be Asked
+
+    6. Advanced JAVA Interview Questions You''ll Likely Be Asked
+
+    7. Advanced SAS Interview Questions You''ll Likely Be Asked
+
+    8. AJAX Interview Questions You''ll Likely Be Asked
+
+    9. Algorithms Interview Questions You''ll Likely Be Asked
+
+    10. Android Development Interview Questions You''ll Likely Be Asked
+
+    11. Ant & Maven Interview Questions You''ll Likely Be Asked
+
+    12. Apache Web Server Interview Questions You''ll Likely Be Asked
+
+    13. Artificial Intelligence Interview Questions You''ll Likely Be Asked
+
+    14. ASP.NET Interview Questions You''ll Likely Be Asked
+
+    15. Automated Software Testing Interview Questions You''ll Likely Be Asked
+
+    16. Basic SAS Interview Questions You''ll Likely Be Asked
+
+    17. BEAR Interview Questions You''ll Likely Be Asked
+
+    18. C & C++ Interview Questions You''ll Likely Be Asked
+
+    19. C# Interview Questions You''ll Likely Be Asked
+
+    20. C++ Interview Questions You''ll Likely Be Asked
+
+    21. CCNA Interview Questions You''ll Likely Be Asked
+
+    22. Cloud Computing Interview Questions You''ll Likely Be Asked
+
+    23. Computer Architecture Interview Questions You''ll Likely Be Asked
+
+    24. Computer Networks Interview Questions You''ll Likely Be Asked
+
+    25. Core Java Interview Questions You''ll Likely Be Asked
+
+    26. Data Structures & Algorithms Interview Questions You''ll Likely Be Asked
+
+    27. Data Warehousing Interview Questions You''ll Likely Be Asked
+
+    28. EJB 3.0 Interview Questions You''ll Likely Be Asked
+
+    29. Entity Framework Interview Questions You''ll Likely Be Asked
+
+    30. Fedora & HEL Interview Questions You''ll Likely Be Asked
+
+    31. GNU Development Interview Questions You''ll Likely Be Asked
+
+    32. Hibernate, Spring & Struts Interview Questions You''ll Likely Be Asked
+
+    33. HTML, HTML and CSS Interview Questions You''ll Likely Be Asked
+
+    34. HTML5 Interview Questions You''ll Likely Be Asked
+
+    35. IBM WebSphere Application Server Questions You''ll Likely Be Asked
+
+    36. iOS SDK Interview Questions You''ll Likely Be Asked
+
+    37. Java / JEE Design Patterns Interview Questions You''ll Likely Be Asked
+
+    38. Java / JEE Interview Questions You''ll Likely Be Asked
+
+    39. Java Messaging Service Interview Questions You''ll Likely Be Asked
+
+    40. JavaScript Interview Questions You''ll Likely Be Asked
+
+    41. JavaServerFaces Interview Questions You''ll Likely Be Asked
+
+    42. JDBC Interview Questions You''ll Likely Be Asked
+
+    43. JQuery Interview Questions You''ll Likely Be Asked
+
+    44. JSP-Servlet Interview Questions You''ll Likely Be Asked
+
+    45. JUnit Interview Questions You''ll Likely Be Asked
+
+    46. Linux Commands Interview Questions You''ll Likely Be Asked
+
+    47. Linux Interview Questions You''ll Likely Be Asked
+
+    48. Linux System Administrator Interview Questions You''ll Likely Be Asked
+
+    49. Mac OS X Lion Interview Questions You''ll Likely Be Asked'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# RESTful Java Web Services Interview Questions You''ll Most Likely Be Asked
+
+
+    +   50. Mac OS X Snow Leopard Interview Questions You''ll Most Likely Be Asked
+
+    51. Microsoft Access Interview Questions You''ll Most Likely Be Asked
+
+    52. Microsoft Excel Interview Questions You''ll Most Likely Be Asked
+
+    53. Microsoft Powerpoint Interview Questions You''ll Most Likely Be Asked
+
+    54. Microsoft Word Interview Questions You''ll Most Likely Be Asked
+
+    55. MySQL Interview Questions You''ll Most Likely Be Asked
+
+    56. NetSuite Interview Questions You''ll Most Likely Be Asked
+
+    57. Networking Interview Questions You''ll Most Likely Be Asked
+
+    58. OOPS Interview Questions You''ll Most Likely Be Asked
+
+    59. Operating Systems Interview Questions You''ll Most Likely Be Asked
+
+    60. Oracle DBA Interview Questions You''ll Most Likely Be Asked
+
+    61. Oracle E-Business Suite Interview Questions You''ll Most Likely Be Asked
+
+    62. ORACLE/SQL Interview Questions You''ll Most Likely Be Asked
+
+    63. Perl Programming Interview Questions You''ll Most Likely Be Asked
+
+    64. PHP Interview Questions You''ll Most Likely Be Asked
+
+    65. PMP Interview Questions You''ll Most Likely Be Asked
+
+    66. Python Interview Questions You''ll Most Likely Be Asked
+
+    67. RESTful Java Web Services Interview Questions You''ll Most Likely Be Asked
+
+    68. Ruby Interview Questions You''ll Most Likely Be Asked
+
+    69. Ruby on Rails Interview Questions You''ll Most Likely Be Asked
+
+    70. SAP ABAP Interview Questions You''ll Most Likely Be Asked
+
+    71. SAP HANA Interview Questions You''ll Most Likely Be Asked
+
+    72. SAS Programming Guidelines Questions You''ll Most Likely Be Asked
+
+    73. Selenium Testing Tools Interview Questions You''ll Most Likely Be Asked
+
+    74. Overight Interview Questions You''ll Most Likely Be Asked
+
+    75. Software Repository Interview Questions You''ll Most Likely Be Asked
+
+    76. Software Testing Interview Questions You''ll Most Likely Be Asked
+
+    77. SQL Server Interview Questions You''ll Most Likely Be Asked
+
+    78. Tomcat Interview Questions You''ll Most Likely Be Asked
+
+    79. UML Interview Questions You''ll Most Likely Be Asked
+
+    80. Unik Interview Questions You''ll Most Likely Be Asked
+
+    81. UNIX Shell Interview Questions You''ll Most Likely Be Asked
+
+    82. VB.NET Interview Questions You''ll Most Likely Be Asked
+
+    83. Windows Server 2008 R2 Interview Questions You''ll Most Likely Be Asked
+
+    84. XLXP, XSLT, XPath, XFORMS & XQuery Interview Questions You''ll Most Likely
+    Be Asked
+
+    85. XML Interview Questions You''ll Most Likely Be Asked
+
+
+    # For complete list visit
+
+
+    # www.vibrantpublishers.com'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# NOTES'
+  merge: -1
+  pgno: 131
