@@ -1,0 +1,6172 @@
+- img_proc: true
+  md: '# # START PROGRAMMING WITH ALICE
+
+
+    ## Third Edition Version 2.4
+
+
+    James Kelley'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_1_0.png)
+
+
+    # DISCARDED
+
+
+    Nashua
+
+    Public Library
+
+    2 Court Street
+
+    Nashua, NH 03060
+
+    602-589-4600
+
+    www.nashualibrary.org
+
+
+    9/14
+
+
+    # # Enjoy this book!
+
+
+    Please remember to return it on time.
+
+    so that others may enjoy it too.
+
+
+    Manage your library account and
+
+    discover all we offer by visiting us
+
+    online at www.nashualibrary.org.
+
+
+    Love your library? Tell a friend!'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_2_0.png)
+
+
+    # # Start Programming with Alice
+
+
+    Jim Kelley
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_2_1.png)
+
+
+    Version 2.4.1'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Copyright 2014, James Kelley
+
+
+    This book or parts thereof may not be reproduced in any form without permission
+    from the author, exceptions are made for brief excerpts used in published reviews
+    or for education.
+
+
+    Author''s Web Site: www.gurus4pcs.com
+
+
+    More information on Alice and other programming languages available at the author''s
+    web site.
+
+
+    If you find an error, have a question or have something to add to this publication,
+    email me at jkelley742@gmail.com.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # Table of Contents
+
+
+    +   Start Programming With Alice 7
+
+    Introduction
+
+    For the Instructor
+
+    For the Student
+
+    Supplements
+
+    Summary
+
+
+    +   Overview - Alice 2.4 Programming Language 9
+
+    Lesson 0.0 Overview of Alice
+
+    Lesson 0.1 How To Get Alice
+
+    Lesson 0.2 Welcome to Alice! Dialog Box
+
+
+    +   Section 1 – Alice Programming 12
+
+
+    +   Chapter 1 – Alice Basics 13
+
+    Lesson 1.0 The Alice Environment
+
+    Lesson 1.1 Alice Tutorials
+
+    Lesson 1.2 Properties & Methods of Objects
+
+    Lesson 1.3 Try This
+
+    Lesson 1.4 Quad View
+
+    Lesson 1.5 Storyboarding
+
+    Lesson 1.6 Pseudocode
+
+    Lesson 1.7 Summary
+
+
+    +   Chapter 2 – Alice Programming 24
+
+    Lesson 2.0 Overview of 3D and Object Movement
+
+    Lesson 2.1 Placing Objects in the World
+
+    Lesson 2.2 Using Primitive Methods to Position Objects
+
+    Lesson 2.3 Variables
+
+    Lesson 2.4 Alice Properties, Methods, and Functions
+
+    Lesson 2.5 Do Together / Do in Order
+
+    Lesson 2.6 Decisions'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'Lesson 2.7 Billboard
+
+    Lesson 2.8 3D Text
+
+    Lesson 2.9 Try This
+
+
+    # Chapter 3 – Repetition 45
+
+
+    +   Lesson 3.0 Overview of Repetition
+
+    Lesson 3.1 Repetition (Counter Loops)
+
+    Lesson 3.2 Coding Counter Loops
+
+    Lesson 3.3 Repetition (While Loops)
+
+    Lesson 3.4 Coding While Loops
+
+    Lesson 3.5 Random Numbers
+
+    Lesson 3.6 Lists
+
+    Lesson 3.7 Arrays
+
+    Lesson 3.8 Try This
+
+
+    # Chapter 4 – Methods 59
+
+
+    +   Lesson 4.0 Overview of Methods
+
+    Lesson 4.1 Creating Custom Class-Level Methods
+
+    Lesson 4.2 Create a Custom Class-Level Method
+
+    Lesson 4.3 Using the Method
+
+    Lesson 4.4 Passing Arguments to Methods
+
+    Lesson 4.5 Using the Camera
+
+    Lesson 4.6 Try This
+
+
+    # Chapter 5 – Functions 66
+
+
+    +   Lesson 5.0
+
+    Lesson 5.1
+
+    Lesson 5.2
+
+    Lesson 5.3
+
+    Lesson 5.4
+
+
+    # Chapter 6 – Events 76
+
+
+    +   Lesson 6.0 Overview of Events
+
+    Lesson 6.1 Using Events
+
+    Lesson 6.2 Program Generated Events'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Lesson 6.3 Keyboard Events
+
+    Lesson 6.4 Mouse Events
+
+    Lesson 6.5 Audio
+
+    Lesson 6.6 Video
+
+    Lesson 6.7 Try This
+
+
+    # Chapter 7 – Classes
+
+
+    +   Lesson 7.0 Overview of Classes
+
+    Lesson 7.1 Objects
+
+    Lesson 7.2 Inheritance
+
+    Lesson 7.3 Class-Level Methods
+
+    Lesson 7.4 Create a New Method Using a Parameter
+
+    Lesson 7.5 Creating a New Class
+
+    Lesson 7.6 Character Builder
+
+    Lesson 7.7 Try This
+
+
+    # Section 2 – Step-by-Step Exercises
+
+
+    +   Step-by-Step 1 – Step Sisters 93
+
+    Step-by-Step 2 – Billboard 95
+
+    Step-by-Step 3 – 3D Text 96
+
+    Step-by-Step 4 – Walk Around the House 97
+
+    Step-by-Step 5 – Using Random Numbers 99
+
+    Step-by-Step 6 – Bi-Plane 101
+
+    Step-by-Step 7 – Penguin 103
+
+    Step-by-Step 8 – Spider JR 105
+
+    Step-by-Step 9 – Ice Skater 107
+
+    Step-by-Step 10 – Lost in Space 111
+
+    Step-by-Step 11 – Japan 113
+
+    Step-by-Step 12 – Animal Sounds 115
+
+    Step-by-Step 13 – Cowboy 117
+
+    Step-by-Step 14 – Follow the Car 119
+
+    Step-by-Step 15 – Dragon’s Dance 121'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Other Ideas for Projects 124
+
+
+    Word Problems for Additional Exercises 125
+
+
+    Answer Key for In Review Questions 127
+
+
+    Glossary of Terms 132
+
+
+    Gallery Version 2.4.1 & 2.3 133
+
+
+    6'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# START PROGRAMMING WITH ALICE
+
+
+    # INTRODUCTION
+
+
+    After several years of using Alice to introduce programming in a college level
+    first course in programming, I decided to put my notes on paper in a form that
+    would serve as a text for the first six lessons of the course.
+
+
+    I have never attempted a writing of this magnitude since writing my Masters Thesis
+    the years made me loose sight of the scope of this undertaking. However, I stuck
+    with it and this is my result. I hope all who use this in their classes or for
+    their own self study, find it worthwhile.
+
+
+    As a user and proponent of Open Source Software, this book was written in its
+    entirety using OpenOffice. I used Writer to convert it to a PDF for distribution.
+
+
+    # FOR THE INSTRUCTOR:
+
+
+    One of the most frustrating parts of teaching computer related subjects is the
+    books. There are many good books on many subjects. However, I find that for courses
+    I don''t need 24 chapters on a topic that force my instruction into that chapter
+    pattern or sequence. Often I would like a few chapters or even sections from a
+    book, arranged in my way, and supplemented by my notes to create a lesson or part
+    of a course.
+
+
+    Alice textbooks available were few but the most quite good. But, I just needed
+    a few basics to allow me to introduce Computer Studies majors to the basic concepts
+    of programming and objects before moving to Visual Basic. Also I am fighting the
+    tendency to teach the way I learned, with long laborious lectures on theory. I
+    find that today''s student suffers from what I call "The Sesame Street Syndrome".
+    That is learning in 5 to 10 minute segments in an entertaining way. So, now we
+    must adjust to the new paradigm of teaching and learning. I began this work in
+    an attempt to match this learning pattern. Small segments of lessons with lots
+    of activities.
+
+
+    # FOR THE STUDENT:
+
+
+    I teach at a small community college that has keep tuition. We serve a rural community
+    and most of our students, as in other community colleges are on some type of financial
+    aid. One day in the bookstore totaled up the cost of two books for a course I
+    was teaching and that the books cost more than the tuition. No wonder I students
+    that shared a book or worse yet, did not purchase the book. Those books were not
+    good that they were worth more than thirteen weeks of instruction. Weeks, Yes,
+    they had a test bank (often with mistakes), they had the usual tiresome PowerPoint
+    slides (often with mistakes), an instructor manual that, somehow, never fit the
+    way I teach the course and some data files that went with the lab exercises (most
+    I never used). All packed in the book and a CD.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'The intent of this book is to be affordable for the student. Perhaps it is
+    an inexpensive book in color, some instructor copies of selected pages in black
+    and white or perhaps an online copy that costs only the internet access. For the
+    student with internet access already, that means FREE. Then, no excuse for not
+    being prepared for class.
+
+
+    # SUPPLEMENTS:
+
+
+    It is my intention to supplement this book with a web page. This way I can provide
+    updates to the material on a moments notice. We are teaching in a field where
+    change is good, frequent and when printed copy does not stand the test of time.
+    Test banks will nice, often leave the instructor explaining why a question was
+    wrong. Sometimes I have found that I agree with the student and have no rationale
+    as to why the test bank had a different answer. So, don''t expect fancy test banks.
+    Perhaps some questions that I use in my classes but in a format the instructor
+    can modify their own satisfaction. Programming Exercises as I come up with new
+    material would be included in a supplemental web page. Once again, use what you
+    like or make your own. PowerPoint slides, why? Students usually sleep through
+    them and then want to print them out. If you really need them, make your own as
+    you prepare your lesson. Better yet, use CamStudio or Jing (free) to create a
+    short lesson. Use YouTube and make an Alice movie and post it to a point.
+
+
+    # SUMMARY
+
+
+    I am a programmer who turned teacher. I see a need in my own classroom for a text
+    with lots of examples that take a student through creating Alice movies, step
+    by step. Hands on is the way to learn programming and this text is designed to
+    facilitate the students hands on experience. This text gives the theory in text
+    for reference or reading, then examples written to lead a student through practicing
+    the theory with step by step examples. So, here is my attempt to teach Alice Programming,
+    Step-by-step.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# # Alice 2.3/2.4 Programming Language
+
+
+    # ## Alice Overview
+
+
+    Objectives:
+
+
+    +   - Describe the concept of the Alice Programming Language
+
+    - Explain how to obtain and install Alice
+
+    - Use the Alice Tutorials
+
+
+    # ## Lesson 0.0 - Overview of Alice
+
+
+    Alice Versions 2.2, 2.3 and Alice 2.4, versions of Alice programming software
+    that will put you into the world of 3-D animation. The surprise is how quickly
+    one can master the art of creating animated movies or 3-D games. Developed by
+    Carnegie Mellon University by faculty Randy Pausch, Wanda Dann and Steven Cooper.
+    It was named after Lewis Carroll''s book, "Alice in Wonderland" and reflects Mr.
+    Carroll''s mathematical background.
+
+
+    Wait, let me re-read
+
+    Finally, a programming language that is simple and above all FUN! Alice was developed
+    for the beginning programmer. Alice is used at both the high school and university
+    level. It was designed to generate young women, particularly interested in programming.
+    It is also a great way to start to master the skills of 3-D programming for a
+    future in creating virtual reality, animated movies, special effects in movies
+    and other popular computer games.
+
+    Why study Alice? Alice is not a "real world" programming language. Applications
+    are not and never will be written in Alice. Then, what is the purpose of Alice?
+    Alice was designed to teach the principles of programming without the encumbrance
+    of syntax error. Plus, it was designed to be fun and learning is always supposed
+    to be fun. Results may not be as as Halo or Hollywood, but with a little effort
+    the beginner can show off pretty amazing 3-D virtual worlds.
+
+    In Alice, the programmer creates a world and then populates the world with various
+    objects. If the movie takes place in the city, one would populate the world with
+    buildings, streets, signs, etc The programmer can animate many of these objects
+    and make various actions that would be done by a similar object in the ''real
+    world''. For example: make a soldier march, a skater skate across the pond and
+    twirl and jump, a car move the highway, a space ship take off and many other actions
+    for various objects.
+
+    Learn to use Alice by telling a story. Compose a short story and then tell this
+    story using Alice. There are examples of teachers using Alice to illustrate their
+    courses. Alice can be used to teach a language, teach a math problem, used in
+    science and physics. The potential is endless. For some examples of how Alice
+    has been used there are some programs on YouTube and on other related web sites.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Lesson 0.1 – How To Get Alice
+
+
+    Another great feature of Alice is that it is FREE. Yes, it can be downloaded from
+    www.alice.org at no cost. Once the Alice zip file is downloaded, it must be unzipped.
+    It will create an Alice folder with a sub folder named “Required” and executable
+    files, Alice.exe and SlowSteadyAlice.exe.
+
+
+    To execute Alice, first try the Alice.exe and if that works on the computer in
+    use, stick with that one. It may take a while to load since there are a lot of
+    graphics to load. It is time to run on an older computer, try SlowSteadyAlice.exe.
+
+
+    To download and install Alice:
+
+
+    +   Go to the Alice website http://www.alice.org and download Alice 2.4, (or one
+    of the older versions like 2.3 or Alice 2.2) to the computer. Unzip the file and
+    it will put two files and a sub folder on the computer.
+
+
+    +   Alice.exe
+
+
+    +   SlowSteadyAlice.exe
+
+
+    +   A sub folder named “Required”
+
+
+    +   Click on the Alice.exe to execute the Alice program
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_11_0.png)
+
+
+    > Figure 0.1.1 – Alice.org web site
+
+
+    A tip for those who work on many different machines. Since Alice does not place
+    any code in the operating system or make any registry changes, it is completely
+    standalone. Once it has been unzipped, the files can be moved from computer to
+    computer without any installation. Alice can be loaded to a “Flash Drive”, USB
+    Drive”, “Memory Stick”, “SD”, etc.. It does take quite a bit of room to make sure
+    there is enough room to install. This way there is access to Alice wherever it
+    is needed. NOTE: The “Required” folder and all of its contents must be in the
+    same folder as .exe file for Alice.
+
+
+    It is worthy to note that Alice is available for Windows, Linux and Mac OS operating
+    systems.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Alice is under continuous development. Currently there are two versions available.
+    Alice 2.4, and Alice 3.0. There are also downloads for "Older Versions". We will
+    cover the 2.3 and 2.4 versions in this book.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_12_0.png)
+
+
+    # Lesson 0.2 – Welcome to Alice! Dialog Box
+
+
+    The Welcome to Alice 2.4 dialog box contains six tabs. This lesson gives a brief
+    explanation of each tab. This dialog box appears when Alice first opens. If you
+    need to bring this dialog box after it has closed, there are several ways. First,
+    from the File menu you can select either "New World" or "Open World". Then, from
+    the Help menu you can select "Tutorials" or "Example Worlds". Any of these four
+    selections will open the dialog box. The Tutorials give an excellent overview
+    of capabilities of Alice and is recommended as a starting place for all students.
+
+
+    The Examples are another great place for a student to see the capabilities of
+    Alice and a good reference for seeing code or animations to assist in completing
+    original worlds.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_13_0.png)
+
+
+    Tab 1 - Tutorial - There are 4 different tutorials which go over the basics of
+    Alice programming.
+
+    Tab 2 - Recent Worlds - This page shows all of your recent work for easy access.
+
+    Tab 3 - Templates - Six different templates for different types of worlds.
+
+    Tab 4 - Example - Six different examples of Alice Programs.
+
+    Tab 5 - Textbook - Alice programs that correspond to the official Alice Text book.
+
+    Tab 6 - Open A World - Allows the user to browse for a file, select the file and
+    open it.
+
+
+    12'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# SECTION 1
+
+
+    # Alice Programming Theory
+
+
+    This section describes the Alice Programming Environment. How to use the Alice
+    Integrated Development Environment (IDE) and how to write code for Alice programs.
+    There are seven (7) chapters in this section.
+
+
+    +   1. Alice Basics
+
+    2. Alice Programming
+
+    3. Repetition
+
+    4. Methods
+
+    5. Functions
+
+    6. Events
+
+    7. Classes'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Tutorial 1 – Alice Basics
+
+
+    Objectives:
+
+
+    +   - Explain the Alice environment.
+
+    - Describe Properties and Methods of Objects.
+
+    - Use the Quad view.
+
+    - Storyboard an Alice Program.
+
+
+    # Lesson 1.0 The Alice Environment
+
+
+    When the Alice programming environment is started, it is necessary to be familiar
+    with the different areas of the screen, the purpose of these areas and how we
+    will refer to each of them.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_15_0.png)
+
+
+    Figure 1.0.1
+
+
+    Each area of the Alice Environment can be defined as follows:
+
+
+    Toolbar(1): Contains a Play Button that plays a virtual world. An Undo Button
+    which will undo the previous operation. A Redo Button that returns the last Undo.
+    A trash can for deleted objects. It can also contain one or more clipboards to
+    temporarily store objects.
+
+
+    World View Window(2): Shows a view of a virtual world. Each virtual world has
+    a camera and the window acts as the viewfinder for this camera. It has three'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'controls that allows the camera to move and rotate, the controls are at the
+    bottom of the window.
+
+
+    **Object Tree(3):** Contains a list of all of the object for the virtual world.
+    Each object has a name and it is listed on the object tree. Use this panel to
+    select the appropriate object when the details panel is used.
+
+
+    **Details Panel(4):** Shows detailed information about an object that has been
+    selected in the World View window or in the Object Tree. There are three (3) tabs
+    in this panel. The Properties tab contains the attributes that describe the object
+    selected. The Methods tab contains the methods or things that the object can do.
+    The functions tab contains the functions (subprograms) associated with the object
+    selected.
+
+
+    **Method Editor(5):** This is where the programmer creates methods which are simply,
+    a set of instructions that cause some action to take place.
+
+
+    **Events Editor(6):** Events happen as the world plays. It may be a key pressed
+    or a mouse button clicked or a number of other predetermined events. Alice responds
+    to these events by triggering a program sequence.
+
+
+    In Review:
+
+
+    +   1.0.1 The ________ is where the programmer creates methods.
+
+    1.0.2 There are three tabs in the Details Panel:
+
+    (1) ________ (2) ________ (3) ________
+
+    1.0.3 Each virtual world has a camera and the ________ acts as the viewfinder
+    for this camera.
+
+    1.0.4 You may have more than one clipboard to temporarily store objects. ( True
+    / False )
+
+    1.0.5 Alice responds to ________ by triggering a program sequence.
+
+
+    # Lesson 1.1 Alice Tutorials
+
+
+    Alice comes with four(4) excellent tutorials to help the programmer get started.
+    The first time Alice is loaded, the tutorial dialog box should appear. If it does
+    not appear to go the menu bar and select Help, then Tutorials. Completing these
+    tutorials will familiarize the user with the basics of Alice programming.
+
+
+    At this point, I recommend the first two tutorials are completed moving to the
+    next step. If there are problems with the tutorials repeat them until a comfort
+    level with their content has bee achieved. Going through all of the tutorials
+    is important, but going through these two tutorials carefully will get the user
+    started. Understanding the concepts in these tutorials will help do the exercises
+    in future lessons.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'The four standard tutorials are:
+
+
+    +   * Skater
+
+    * Defending Naptime
+
+    * Penguins
+
+    * Space
+
+
+    Tutorial 1 - Skater covers the basics of the IDE. Then it goes into creating a
+    basic Alice movie. This, and the other tutorials allow you to practice using Alice
+    by leading you through the keystrokes and mouse clicks to create a project.
+
+
+    Tutorial 2 - Defending Naptime tells a short story. It demonstrates dialog bubbles,
+    sound and how to create a new method.
+
+
+    Tutorial 3 - Penguins demonstrates how to make an Alice respond to mouse clicks
+    and key presses.
+
+
+    Tutorial 4 - Space World show how to create scenes, select worlds and add new
+    objects.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_17_0.png)
+
+
+    Figure 1.1.1 - Alice Tutorials Dialog Box
+
+
+    Doing all of these tutorials will help the user gain an understanding of the power
+    of the Alice Programming Language. These are more than silly movies. They encompass
+    all of the principles of all programming languages in a fun, easy to use programming
+    environment that does much to prevent the new programmer from many programming
+    errors.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'In Review:
+
+
+    1.1.1 Alice comes with tutorials.
+
+
+    1.1.2 You can access the tutorials by clicking on the menu and then
+
+
+    1.1.3 The tutorials are designed to present only the advanced Alice commands.
+
+    ( True / False )
+
+
+    # Lesson 1.2 Properties & Methods of Objects
+
+
+    Each object has associated properties, methods and functions. To view these, select
+    the object to be worked with. Make the selection in the "Object Tree". Note that
+    there are selections for the "World", the "Camera" and "Light". These are also
+    objects that can be manipulated in the code. Some objects have a + sign next to
+    them. This means the object is a composition of several other objects that can
+    also be manipulated separately.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_18_0.png)
+
+
+    Each object in an Alice world has properties. These are simply values that describe
+    the object''s characteristics. As an object is placed in the Alice world, its
+    properties can be changed. The object''s color may be changed, for instance. The
+    object''s property values may be changed as the program executes.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_19_0.png)
+
+
+    Objects are capable of doing things. The things an object can do are called methods.
+    One of the methods is the "say" things. Some methods can move the object up, down,
+    left, right. The methods often are things that object can do in real life. The
+    penguin object can move and walk, a plane object can move but I if the designer
+    gives it the ability to walk. Methods are consistent with the object''s capabilities
+    in the real world.
+
+
+    Objects can become very complicated, quite often, objects are made from other
+    objects or groups of objects. As the user learns to Alice they will manipulate
+    an object and find the object coming apart. An example may be one of the people
+    objects. These are composite objects. The head can move, the arms can move, the
+    legs can move and it is necessary to manipulate the methods of these objects,
+    coordinate each part of the object so simulated activities that that object needs
+    to do in the course of the movie realistic.
+
+
+    It is important to recognize that the Alice Gallery is NOT a gallery of objects.
+    It is a gallery of classes. What is the difference? The best way to look at a
+    class is to compare it to a recipe. It is a recipe to create what is an object.
+    This recipe may gather several objects to present them as an object in a virtual
+    world. So, when several of the same object are placed in the world in use, the
+    recipe to create the class is used to create multiple instances of the same class.
+    Each instance is a completely separate object.
+
+
+    In Review:
+
+
+    +   1.2.1 Each object has associated ________, and ________.
+
+
+    +   1.2.2 The things objects can do are called
+
+
+    +   1.2.3 are values that describe the object''s characteristics.
+
+
+    +   1.2.4 The best way to look at a class is to compare it to a
+
+
+    +   1.2.5 Quite often, ________ are made from other ________ groups of'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Lesson 1.3 Try This
+
+
+    Now it is time to create an Alice movie from scratch:
+
+
+    +   1. Select File > New World from top menu bar.
+
+    2. Select the "Water" world.
+
+    3. Click on the GREEN "Add Objects" button in the world area.
+
+    4. Now, at the top of the screen there is the "Gallery" of objects that can be
+    used in the world. Go to the end of the gallery icon bar and select the one titled
+    3-D Text
+
+    5. There is a dialog box that contains a text box with "The quick brown fox" in
+    the box. Change this text to Your first and last names
+
+    6. Click on the OK button at the bottom of the dialog box.
+
+    7. Click on the Done button. A GREEN button on the right side just above the gallery.
+
+    8. Now Click on the "PLAY" button (upper left) to play your first movie.
+
+    9. You are now an Alice programmer
+
+
+    # Lesson 1.4 Quad View
+
+
+    As multiple objects are placed on the world, it is often difficult to get them
+    lined up in proper starting positions, orient them to various objects on the stage,
+    etc.. As objects are added to the world, in the upper right corner of the screen
+    there are radio buttons for single view and quad view. Quad view will allow a
+    view of the 3-D objects from the top, front and side.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_20_0.png)
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_20_1.png)'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Next, the Layout Tools found in the upper right corner of the screen. There
+    is a description of each tool that can be seen by moving the mouse pointer over
+    the tool. There are 7 different tools and the best way to learn what they do is
+    to place an object on a world and experiment with each of these tools.
+
+
+    The seven tools are:
+
+
+    +   - Move objects freely
+
+    - Move objects up and down
+
+    - Turn objects left and right with mouse
+
+    - Turn objects forward and backwards with mouse
+
+    - Tumble objects with the mouse
+
+    - Resize objects with the mouse
+
+    - Copy objects with the mouse
+
+
+    Using single view and quad view these tools help position and size objects on
+    the stage. Then, as the mouse progresses, the objects will perform correctly on
+    the screen.
+
+
+    There is also a button labeled "more controls" in this area. This contains some
+    advanced functions not covered by this text. Pressing the button reveals six additional
+    controls:
+
+
+    +   - Aspect Ratio: width versus height of windows. Default is 4/3, selected from
+    a drop down.
+
+    - Lens Angle slider control: Moves the camera lens
+
+    - Drop dummy at camera: Create a new dummy object at the current position of the
+    camera.
+
+    - Drop dummy at selected object: Creates a new dummy object at the current selected
+    object.
+
+    - Move dummy to dummy
+
+    - Fewer Controls: Hides the advanced controls.
+
+
+    There are two additional buttons, Scroll View and Zoom. These are used to assist
+    you in positioning the objects when you are in quad view. Below the right two
+    panels of quad view have been enlarged using the zoom feature. The Zoom and the
+    Scroll View are mouse controls.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_21_0.png)
+
+
+    Figure 1.4.3'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'I encourage the new user to learn how to use this view and the various other
+    positioning tools found in this area of the editor.
+
+
+    In Review:
+
+
+    1.4.1 Quad view will allow a view of the 3-D objects from the ______, ____ and
+
+
+    1.4.2 There are two additional buttons, ______, and ______. These are used to
+    assist you in positioning the objects when you are in quad view.
+
+
+    1.4.3 The ______ Tools found in the upper right corner of the screen.
+
+
+    1.4.4 There are different Layout tools
+
+
+    # Lesson 1-5 Storyboarding
+
+
+    First, there must be an idea for a story. The next step is to put that story on
+    paper and get it in a logical order. It could be viewed as a map to lead the programmer
+    through the story to ensure steps are not missed. This is called “storyboarding”
+    the movie. The concept comes from advertising agencies where it is used for developing
+    scripts for TV advertisements, Learning to use this tool will help make better
+    movies and cut down on development time.
+
+
+    A storyboard can be elaborate or just a group of sketch drawings of the movie
+    in development. It is not necessary for it to be a work of art. Stick figures,
+    shapes, lines are ok, it needs to assist in the organization of ideas and the
+    flow of the movie. It usually includes the script for the movie if there is interaction,
+    talking and/or music included.
+
+
+    The first step in developing a storyboard is to develop a script for the movie.
+    A written plan for the entire movie. The objects to be used and what part the
+    object will play in the movie. Then, take this script and draw a rough series
+    of pictures showing what the stage will look like at various points in the movie,
+    this is the storyboard.
+
+
+    Then, review the storyboard to insure all of the main elements have been included
+    and pay special attention to the order of activities. This is where the order
+    of events are reviewed closely to make sure the movie flows correctly from beginning
+    to end. It is uncommon to make significant changes later. Remember “Weeks of programming
+    can save hours of planning”.
+
+
+    Yes, the movie could be developed without taking the time to do this step, however,
+    that only works for short clips and they are usually well organized and often
+    a disappointment to the developer once they are finished. Then the developer is
+    left with the decision to live with it or spend more time in fixing the movie.
+    Just like any other programming project, an Alice project should be carefully
+    planned. The storyboard does not have to be fancy. My example is just stick figures
+    and comments to illustrate what is to be done in the movie and in what sequence.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'Another approach is to draw each screen on a post-it, 3 x 5 card, or sheet
+    of paper. This allows you to re-arrange sequence or substitute a new drawing for
+    the screen. Let''s look at a simple example.
+
+
+    # SAMPLE SCRIPT:
+
+
+    +   - Place 3 characters on the screen
+
+    - First character jumps up and down three times
+
+    - Second character turns around five times.
+
+    - Third character moves forward one meter then back one meter.
+
+
+    # SAMPLE STORYBOARD:
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_23_0.png)
+
+
+    This is just a quick, crude example of a storyboard for a simple movie. No fancy
+    artistry. It is not really necessary for such a short movie but would be a great
+    planning tool for a longer movie. Remember, all of great advertisements we see
+    on television began a storyboard.
+
+
+    # In Review:
+
+
+    +   1.5.1 A could be viewed as a road map to lead the programmer through a story.
+
+
+    +   1.5.2 The first step in developing a storyboard is to develop a for the movie.
+
+
+    +   1.5.3 A storyboard can consist of some simple drawings for each frame. ( True
+    / False )'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Lesson 1-6 Pseudocode
+
+
+    Another method of making sure you stay on track with your movie is to outline
+    your storyline in what is called pseudocode. Pseudocode is nothing more than an
+    outline. A list of statements that tell you, step-by-Step how to construct your
+    movie. This may also be your preferred method of organizing your thoughts when
+    you move to another programming language. Looking back at our storyboard example
+    the pseudocode is nothing more than the sample script:
+
+
+    PSEUDOCODE:
+
+
+    +   1. Place 3 characters on the screen
+
+    2. First character jumps up and down three times
+
+    3. Second character turns around five times
+
+    4. Third character moves forward one meter then back one meter.
+
+
+    While not as effective as storyboarding your movie, pseudocode is second best.
+    In any case, you need to plan your movie to keep it on track. This is especially
+    important when you begin to produce more complex movies with several scenes, added
+    methods and events. When the story line gets complex, some method of planning
+    must be used or your movie will fall short of its original intent.
+
+
+    In Review:
+
+
+    +   1.6.1 Pseudocode is nothing more than an _____________
+
+    1.6.2 You may also use pseudocode when _____________
+
+    1.6.3 or ____________ may be used to plan your movie.
+
+
+    # Lesson 1-7 Summary
+
+
+    We covered a lot of material in this chapter. First, we identified the various
+    windows of the Alice IDE. Next, a look at the tutorials. Each one shows important
+    aspect of creating an Alice movie. Then a discussion of Properties, Methods and
+    Functions of objects. Quad View helps in positioning objects on the stage. The
+    layout controls move the objects, as well as make copies of them, if needed. The
+    chapter also introduces some other tools to assist in making your objects about
+    the screen.
+
+
+    Lastly, we took a look at the concept of a storyboard. A planning tool to help
+    the programmer get all the action in the correct order. This is important in Alice
+    and every other programming language. The saying “Failing to Plan is a Plan to
+    Fail” is as important in programming as it is in life.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Tutorial 2 - Alice Programming
+
+
+    Objectives
+
+
+    +   * Use 3D objects.
+
+    * Describe how to create and use variables
+
+    * Explain how to use all of the data types.
+
+    * Describe object properties, methods and functions.
+
+    * Use the decision structures.
+
+    * Use the billboard object
+
+    * Create 3D text
+
+
+    Lesson 2 - Overview of 3-D and Object programming more interesting. It is
+
+
+    Alice is important to start thinking about front, back, left, right, top and bottom.
+    This can make some things just a little tricky but with a little practice it can
+    be mastered. Many of the objects can move forward, backwards, left, right, up
+    and down, this is referred to as the six degrees of freedom.
+
+
+    Each object has a center, the trick here is that it may not be the exact center
+    of the bounding box for the particular object. Select an object and then click
+    on the Properties tab in the Details area and scroll down to the point entry and
+    click the blue box to the right, there will be three numbers. (distance to the
+    left of center, distance above center, distance forward of center) This translates
+    to distance of the object from the center of the world. Negative figures may indicate
+    the object is below the ground.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_25_0.png)
+
+
+    Figure 2.0.1 – The Cow Object
+
+
+    Figure 2.0.1 shows the cow object. The arrow points to the intersect of three
+    lines (one green, one red and one blue) that indicate the center of the object.
+    When'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'manipulating this object this is the center of the object and the motion. Also,
+    note in the Object Tree all of the components of this object that can be manipulated.
+    Remember, these sub objects also have centers that affect their movement.
+
+
+    Now, let''s move our objects using methods. Methods are defined as things an object
+    can do and if there is an object that can move a method that allows it to move.
+    Using the object tree, select an object in the world, then select the Methods
+    tab in the Details area to see all things that the object can do. If you animate
+    an object is selected, there should be a method named move. If this is dragged
+    to the Editor area and dropped over the words "Do Nothing". A menu will pop up
+    that asks for direction and how far to move. Answer these questions, please play
+    the movie and watch the object.
+
+
+    Look at some of the other methods for the object. Such methods as "turn to face",
+    "point at", "stand up" are listed. To really understand the full capabilities
+    of Alice it is necessary to play with these methods learn what the object can
+    do with just a point and a click. Remember, not all objects will share the same
+    methods.
+
+
+    In Review:
+
+
+    +   2.0.1 In Alice 3D programming it is important to start thinking about ________,
+    and
+
+    2.0.2 ________ are defined as things an object can do.
+
+    2.0.3 Many of the objects can move forward, backwards, left, right, up and down,
+    this is referred to the ________
+
+    2.0.4 All objects will share the same methods. ( True / False )
+
+    2.0.5 Select the Methods tab in the ________ area to see all those things that
+    the object can do.
+
+
+    # Lesson 2.1 - Placing Objects in the World
+
+
+    Once we have selected a world template (grass, dirt, snow, sand, etc.), we need
+    to place some objects in the world. To do this we need to select the green button
+    in the lower right corner of the World View that is labeled "Add Objects"
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_26_0.png)
+
+
+    25'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'We then move to the Add Objects screen (see figure 2.1.2). Here is where we
+    can add new objects to the world, manipulate those objects into poses, move them
+    around the world, and other set up tasks. There is a larger area to view the world
+    and a choice of viewing your world in a single screen or in a "quad" view that
+    shows the world from the front, right side, and top. This tool can be used to
+    orient objects more precisely.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_27_0.png)
+
+
+    Figure 2.1.2 Add Objects Single View
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_27_1.png)
+
+
+    Figure 2.1.3 Add Objects Quad View
+
+
+    26'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'There are two ways to add an object to the world. First way to click on the
+    class then click on the Add object button as shown. (see figure 2.1.4)
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_28_0.png)
+
+
+    The second way is to drag-and-drop the class on the screen in the place you want
+    to put the object. (see figure x.x)
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_28_1.png)'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'If you look carefully at Figure 2.1.5 you will see a yellow 3-D box with a
+    Green Vertical Line, a red line and a blue line off the bottom of the green. The
+    green line represents up and down for that object, the red line represents how
+    the direction the object will move left and right and the blue line represents
+    how the object will move forward and backward. These are important when programming
+    your objects to move about the screen.
+
+
+    Try This:
+
+
+    +   1. Select the grass world and click on the "Add Objects" button
+
+    2. Select the Animals Gallery and find the "Bunny" object and place on the grass
+
+    3. Again, from the Animals Gallery, select the "Penguin" object and place on the
+    grass
+
+    4. Place the two objects side by side facing the camera.
+
+    5. Click on the "Done" button
+
+    6. Select the "bunny" object and click on the method tab and select the method
+    that makes the bunny "move" forward 5 meters, drag and drop it on the methods
+    editor pane.
+
+    7. Select the "penguin" object and click on the method tab and select the method
+    that makes the penguin "walk" forward 5 meters, drag and drop it on the methods
+    editor pane.
+
+    8. PLAY
+
+
+    Note how much more realistic the penguin movement is as compared to the bunny
+    movement. There is no "walk" method for the bunny. To simulate walking it is necessary
+    to create that capability as a new method for the bunny. This will be discussed
+    in future lessons.
+
+
+    In Review:
+
+
+    2.1.1 view shows the world from the front, left side and top.
+
+
+    2.1.2 Objects, when selected are bounded by a box of yellow lines. There are also
+    three other lines, a red, a blue and a green. All three lines intersect at the
+    center of the object.
+
+
+    2.1.3 Objects, when selected are bounded by a box of yellow lines. There are also
+    three other lines, a red, a blue and a green. The green line indicates the direction
+    for that object.
+
+
+    2.1.3 Objects, when selected are bounded by a box of yellow lines. There are also
+    three other lines, a red, a blue and a green. The blue line indicates the direction
+    for that object.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '2.1.3 Objects, when selected are bounded by a box of yellow lines. There are
+    also three other lines, a red, a blue and a green. The red line indicates the
+    and direction for that object.
+
+
+    # Lesson 2.2 – Using Primitive Methods to Position Objects
+
+
+    Another way to position objects when in Add Object Mode, is to use the primitive
+    methods. If the object is selected in the "Object Tree" you can "right click"
+    on the object name and a drop down list of primitive methods will appear and a
+    method can then be selected to position the object.
+
+
+    The "Lunar Lander" needs to be turned 1/4 revolution. The example 2.2.1 shows
+    the Lander selected in the object tree with the available selections to accomplish
+    this task shown in the drop down menus.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_30_0.png)
+
+
+    Figure 2.2.1 – Primitive Methods
+
+
+    The first drop down, select "methods", the next drop down shows the methods, select
+    "lunarLander turn", next drop down shows directions, choose "left", the last choice
+    is the amount the object should turn, here select "1/4 revolution". Press enter
+    and the object will turn 1/4 revolution to the left.
+
+
+    The next figure (Figure 2.2.2) shows the position of the Lander after the enter
+    key is pressed and the turn method is completed.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_31_0.png)
+
+
+    # 2.2.2 - After Method Executed
+
+
+    Try this on several objects using various primitive methods. This should give
+    you a good idea on how these methods can be used to position objects. One is if
+    an object is created out of view. Move the object to the center of the world,
+    which should give you a good idea where where the object is and it can be positioned
+    from that point.
+
+
+    In Review:
+
+
+    2.2.1 You may use the methods to position objects in the "Add Object" screen.
+
+
+    2.2.2 To access the primitive methods for an object, on the selected object in
+    the
+
+
+    # Lesson 2.3 - Variables
+
+
+    Variables are vital elements in every programming language. A portion of memory
+    that can be used to store a piece of information. In a program a variable is created
+    to store some information and is given a name so the programmer can use the data
+    in various processing instructions. The contents of the variable can be used in
+    calculations, used for display, changed, by various program instructions. So,
+    a variable is a storage place for numbers, strings, objects and others. It stores
+    these objects so they can be used in the processing of the program.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'As in other programming languages there are four categories of variables:
+
+
+    **Local Variables** This belongs to a specific Method and can only be used by
+    instructions that pertain to that method.
+
+
+    **Parameter Variables** Used to hold an argument that is passed to a method when
+    it is called.
+
+
+    **Class-Level Variables** Like a property that belongs to a specific object and
+    instances of that object.
+
+
+    **World-Level Variables** Like a property that belongs to the world.
+
+
+    Each variable must have a name created using the following rules:
+
+
+    +   - Must be unique within its scope (local, world, class, parameter).
+
+    - Name should be meaningful.
+
+    - Use the camelCase convention.
+
+
+    Types of variables includes:
+
+
+    **Number** Holds numbers, any number.
+
+    **Boolean** Holds either True or False
+
+    **Object** Holds an object
+
+    **Other** More specific types like: strings, sound, color and others.
+
+
+    Once a variable, has been created an initial value must be established.
+
+    Steps to create a variable:
+
+
+    +   1. In the Method Editor, click on the **create new variable** button.
+
+    2. In the **Create New Local Variable** dialog box, enter the name of the variable.
+
+    3. Select a data type.
+
+    4. Enter an initial value.
+
+    5. Click on **OK** button.
+
+    6. A tile for the variable should appear in the Method Editor''s variable area.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# world.my first method
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_33_0.png)
+
+
+    Figure 2.3.1 - Creating a Variable
+
+
+    To assign a value to a variable, give the variable an initial value when it is
+    created. In the course of running the program it may be changed depending on conditions
+
+
+    +   1. Drag the variable tile to the Methods Editor.
+
+    2. In the menu select Set Value
+
+    3. Select a value from the list or other to type a new value.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_33_1.png)
+
+
+    Figure 2.3.2 - Setting a Variable
+
+
+    Remember a variable must be initialized to a value. If the value is not in the
+    list choose other... and a calculator will pop up and you can specify the value
+    you need. While variables have an initial value, the value can be changed in the
+    running of the program. The variable is a storage place for a value that can be
+    used or changed in the running of the program.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# In Review:
+
+
+    2.3.1 A is a portion of memory that can be used to store a piece of information.
+
+
+    2.3.2 Once a variable, has been created an initial value must be established.
+    (True / False)
+
+
+    2.3.3 There are categories of variables.
+
+
+    2.3.4 Types of variables include:
+
+
+    # Lesson 2-4 - Alice Properties, Methods and Functions.
+
+
+    When using Alice, the mouse is used to select commands. Then watch what happens
+    on the screen. If the skater ends up in the wrong place or skates in the wrong
+    direction, go back and change the command. Alice is mainly a drag and drop programming
+    language. One of the major benefits is that the beginner programmer does not have
+    to be concerned with syntax errors. No matter what instructions are used, the
+    syntax will not cause compile errors. The program may do weird things but it will
+    run. It supports all three programming structures: sequence, decision and repetition.
+
+
+    Working with Alice, the user will not experience the most difficult part of writing
+    computer programs – writing all of the detailed instructions, in precisely the
+    correct language and syntax, for every little thing that is going to happen on
+    the screen. This is the big "turn-off" for beginner programmers. They often are
+    frustrated in trying to figure out what they did so wrong to cause the program
+    not to run as expected.
+
+
+    The programmer can change the values of variables and of properties of objects
+    as the program is running. The previous lesson established how to set the value
+    of a variable. Now, review the steps to change the value of a property of an object:
+
+
+    +   Select the object with the property tile from the Details Panel to the Methods
+    Editor.
+
+
+    +   Drag the property''s tile, a menu will appear allowing selection of a value
+    for the property.
+
+
+    Using Functions
+
+
+    A function is a special type of method that completes a task with the given parameters
+    (if any required) and returns a result to the program that called the function.
+
+
+    +   Select the object
+
+
+    +   Select the functions tab in the Details Panel to display a list of tiles that
+    represent the object''s functions'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: 'A function might be used to measure how close an object is to another object,
+    a math operation, create a random number, interact with the user, and many other
+    operations. Look at the functions for the World, the Camera, a person object,
+    a building object, a vehicle object, to get an idea of the wide variety of objects
+
+
+    Getting Input from the User
+
+    The world object has three primitive functions that can be used to ask the user
+    to input a value. Select the world object and then scroll down in its list of
+    functions there is a "ask user" category. the three choices are:
+
+
+    +   - ask user for a number
+
+    - ask user for yes or no
+
+    - ask user for a string
+
+
+    When one of these options are selected a dialog box is displayed that will accept
+    either a number, a yes or no or a string value. The ask user functions are used
+    to set a value of a function as part of the set value of a variable. Rather than
+    the program selecting a specified value, the user has an opportunity through the
+    dialog box to set that value.
+
+
+    Math Expressions
+
+    Most Alice programmers can do addition, subtraction, multiplication and division.
+    Math is implemented using the "set value to" instruction. The programmer simply
+    selects expressions rather than a value and then enters the mathematical expression
+    that assigns the appropriate value to the variable.
+
+
+    Strings and Text
+
+    A string is defined as a sequence of one or more characters. Alice has a full
+    range of features for working with strings and text. Strings are entered in one
+    of three different ways:
+
+
+    +   1. When you create a string variable.
+
+    2. When you set value to for a string variable.
+
+    3. Some objects have a "Say" value which requires a.
+
+
+    There will be times that it is necessary to combine two strings to display a result
+    of some action. This could be asking the user to enter their name so the character
+    object can say, "Hi Elmo" or whatever name was entered.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'This is accomplished in the "Say" method for objects that have the say method
+
+    them methods list. Select the Say method, enter the string "Hi" then after the
+
+    joined with" select the variable that contains the name that the user entered
+
+    We can also have an object "Say" a numeric value by using the numeric variable
+
+    name with the "as a string" modifier.
+
+
+    In Review:
+
+
+    2.4.1 When using Alice, the ________ is used to select commands.
+
+
+    2.4.2 The most difficult part of writing computer programs - writing all of the
+
+    detailed instructions, in precisely the correct language and _________.
+
+
+    2.4.3 A ________ is a special type of method that completes a task with the
+
+    given parameters (if any required) and returns a result to the program that called
+
+    the function.
+
+
+    2.4.4 The ________ has three primitive functions that can be used to ask
+
+    the user to input a value.
+
+
+    2.4.5 A ________ is defined as a sequence of one or more characters.
+
+
+    # Lesson 2.5 - Do Together / Do In Order
+
+
+    When it is necessary that two or more objects move at the same time the "Do
+
+    Together" structure is used. The Do Together structure makes all of the instructions
+
+    contained within the structure execute at the same time. This allows the
+
+    programmer to make several things happen simultaneously.
+
+
+    A good example of using Do Together is shown below. The car and the driver are
+
+    two objects that need to move at the same time, same rate, same
+
+    distance and same distance.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_36_0.png)
+
+
+    Figure 2.5.1
+
+
+    The car object and the randomGuy object move forward simultaneously, the same
+
+    distance at the same speed. If those instructions were not in the Do Together'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'structure, the car would move then the driver would move and this would not
+    look like the guy was driving the car.
+
+
+    The Do in Order structure is a way to group instructions that should happen in
+    a specific order. This is used when the programmer needs to insure that a group
+    of instructions are processed in an exact order. The Do in Order structure is
+    implied in a program but there are situations where this structure needs to be
+    nested in another structure to achieve the desired actions.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_37_0.png)
+
+
+    Figure 5.2
+
+
+    In our example, the two boys run around the lighthouse together but the two zombies
+    appear on the screen one at a time even though they are inside the "Do Together"
+    structure.
+
+
+    In Review:
+
+
+    2.5.1 When it is necessary that two or more objects move at the same time the
+    structure is used.
+
+
+    2.5.2 The Do in Order structure is a way to group instructions that should happen
+    in a
+
+
+    2.5.3 The structure allows the programmer to make several things happen simultaneously.
+
+
+    2.5.4 The structure is implied in a program
+
+
+    # Lesson 2.6 - Decisions
+
+
+    The Decision Structure programmatically evaluates expressions and based on the
+    outcome, decide which code to execute. The expression evaluated must evaluate
+    to a "Boolean" value or in simpler terms an expression that evaluates to either
+    "True" or "False".'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'At the bottom of the Method Editor there is a group of tiles and one of these
+    tiles is titled "If/Else. To use the decision structure drag this tile to the
+    appropriate place in the Method editor of the program. This will result in a If
+    Else structure placed in your program. The line after the If statement, is a box
+    for the true statements, next line is the Else and the fourth line is for the
+    False statements. The statement or statements to be executed in True side for
+    those to be executed if the evaluation of the expression results in true. Put
+    the statements to be executed if the expression is evaluated as false in the else
+    statement. If the false side does not contain any instructions this is a single
+    sided structure that executes alternate instructions if the expression evaluates
+    to true.
+
+
+    Constructing a "Boolean" Expression for Evaluation
+
+
+    There are six (6) relational operators:
+
+
+    +   1. == Equal to
+
+    2. != Not Equal to
+
+    3. > Greater than or equal to
+
+    4. <= Less than or equal to
+
+    5. > Greater than
+
+    6. < Less than
+
+
+    Use this to compare two values or the contents of two variables or the content
+    of a variable and a value. Based on the comparison of the two, the relational
+    operator selected gives a result of True or False. This determines which code
+    gets executed. When the appropriate code completes, the program continues with
+    the next instruction after the decision structure.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_38_0.png)
+
+
+    Figure 2.6.1'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: 'This example shows a few concepts in Alice programming. First, a new variable
+    has been created "movetruck" which is set to a value of 1. The first instruction
+    sets the value stored in movetruck to a value entered by the user. In the World
+    object there is a function "ask user for a number" this is dragged to replace
+    the value of 1 and a value of "Move truck 1 or 2?" as the prompt for the user
+    to enter a number.
+
+
+    Then comes the IF statement. The value in movetruck is tested and if it is equal
+    to a 1, the first dump is moved forward 10 meters. Any other value will cause
+    the second dumptruck to move forward 10 meters.
+
+
+    Also, decision structures can be "nested". Simply, this means that if there is
+    an If/Else structure, there may be another if/Else structure in either or both
+    the false statements. Nesting can be as many levels of nesting as required to
+    complete the task required by the program.
+
+
+    Let use nesting the previous example of the If statement. If the user enters some
+    other value than a 1, the movetruck variable is again tested to determine if it
+    is NOT equal to a 2. If this evaluates to a true, the camera moves back 10 meters
+    and (displays on screen), "The directions were 1 or 2....DUMMY!" If the expression
+    evaluates to false (2 was entered) the truck moves forward 10 meters. This limits
+    the user to entering only a 1 or a 2 to the appropriate truck.
+
+
+    Example 2.42 illustrates this use of nested statements. You may nest as many as
+    necessary to achieve the desired action.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_39_0.png)
+
+
+    Figure 2.6.2'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'There are three(3) logical operators. These are used when we need to evaluate
+    several expressions and based on the aggregate boolean evaluation the program
+    makes a decision to do the true statements or the false statements
+
+
+    # Logical Operators
+
+
+    +   not a reverses the truth of expression a
+
+    both a and b if both expressions evaluate to it returns true any other combination
+    of results in a return of false
+
+
+    Example: 5 == 5 and 7 > 3 - both are true so the entire expression is true
+
+
+    5 > 9 and 7 > 3 - only one is true so the entire expression is false
+
+
+    5 > 9 and 3 > 7 - both are false so the entire expression is false
+
+
+    +   either a or b, or both if the expressions return true or if either one is
+    true the evaluation results in a return of true. If both are false it returns
+    false
+
+
+    Example: 5 == 5 or 7 > 3 - both are true so the entire expression is true
+
+
+    5 > 9 or 7 > 3 - only one is true so the entire expression is false
+
+
+    5 > 9 or 3 > 7 - both are false so the entire expression is false
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_40_0.png)
+
+
+    Figure 2.6.3'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'Use logical operators when there are several conditions to be evaluated before
+    the program can decide what code to execute. In the example if the user selects
+    truck 1 and selects right turn, the truck one will move forward 10 meters, turn
+    to the right, move forward 5 meters and dump its load. If truck 1 and turn left
+    are selected, it will move forward 10 meters, turn left and move forward 5 meters
+    and dump the load. If truck two is selected, the same options and actions are
+    executed.
+
+
+    In Review:
+
+
+    +   - 2.6.1 Use operators when there are several conditions to be evaluated
+
+    - 2.6.2 Use operators to compare two values or the content of two variables and
+    the content of a value and a value.
+
+    - 2.6.3 There are logical operators.
+
+    - 2.6.4 There are expression evaluates to either true or false.
+
+
+    # Lesson 2.7 – Billboard
+
+
+    The billboard allows you to get a picture or a title into your Alice movie. Select
+    a picture, modify or create one using a product like Microsoft Paint, Gimp, Photoshop
+    or Paint.NET. I use Paint.NET to create or modify the 2D graphics in my Alice
+    movie. It is a free download and easy to use.
+
+
+    There are several common formats for pictures. GIF, PNG, JPG (or JPEG), and BMP
+    are some of the most popular formats. Each of these has unique characteristics
+    that you should consider before selecting one for your Alice movie.
+
+
+    +   - GIF - Graphics Interchange Format – Used for clip or text. Supports transparent
+    background and is a compressed format which makes an image that has less bytes
+    for your movie. This should help keep your movie smaller in size and load faster.
+    GIF supports animation.
+
+    - PNG - Portable Network Graphics – Similar to GIF. Supports transparency, animation
+    and is a compressed format. I recommend this format for use with billboards.
+
+    - JPG or (JPEG) – Joint Photographers Graphics – This is an uncompressed format
+    that is for high quality pictures. If you need sharp pictures with lots of colors
+    and GIF or PNG just not support your picture justice, choose JPG. It does not
+    support transparency or animation.
+
+    - BMP - Bit Mapped Pictures – An uncompressed format and is usually larger than
+    any of the other choices. Use this sparingly and preferably never.
+
+
+    You put the billboard on your movie set by selecting the File Menu and clicking
+    on the Make Billboard selection. This brings up a dialog box where you choose
+    your picture and add it to your movie. Once on the movie set, you can position
+    the billboard as required.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'I used Paint.NET to create a movie title to add to the opening of my movie.
+
+
+    # My First Alice Movie...
+
+
+    Figure 2.7.1
+
+
+    The next step was to place it in the movie. Using the Make Billboard selection,
+    I added it to the movie and placed a penguin at either end of the billboard.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_42_0.png)
+
+
+    Figure 2.7.2
+
+
+    Now, add some action to the billboard using the billboard''s methods and then
+    make it disappear by setting the isShowing property to false.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_42_1.png)
+
+
+    Figure 2.7.3
+
+
+    The billboard turns to face the camera, rolls and turns. Then using the resize
+    method it grows larger on the screen over a 5 second duration. Then, it disappears
+    to make way for the movie.
+
+
+    A picture can be used for a background. I dug into my picture files and found
+    a street scene to make a background for my next movie. A GIF or a PNG format is
+    sufficient for a background. If you use a JPG it will take some time to save and
+    load your project.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'Alice and the Class Jock look as if they are standing on a street in the heart
+    of the Berkshires of Massachusetts. This could be an opportunity to use some of
+    those photos of scenery or perhaps Alice to teach a history lesson at some historic
+    site or natural wonder.
+
+
+    In Review:
+
+
+    +   - 2.7.1 The allows you to get a picture or a title into your Alice movie.
+
+
+    +   - 2.7.2 is used for clip art or text.
+
+
+    +   - 2.7.3 is similar to GIF. Supports transparency, animation and is a compressed
+    format.
+
+
+    +   2.7.4 You put the billboard on your movie set by selecting the Menu and then
+    clicking on the selection.
+
+
+    # Lesson 2.8 – 3D Text
+
+
+    Put titles on movies with 3D Text. There are two ways to access 3D Text. First,
+    the last entry in the Gallery of Objects is 3D Text. Clicking on this opens a
+    dialog box. The default text in the dialog box is "The quick brown fox." and this
+    may be changed to the appropriate text for the movie. Alice, in the dialog box
+    a font style may be selected, and buttons to display the text as bold or italics.
+    The second way is to select it from the menu bar. It is found under the File menu
+    in a sub menu titled "Add 3D...". Selecting this item opens the same dialog box
+    as opened in the first method.
+
+
+    3D Text has Properties, Methods, and Functions like all other objects. For example,
+    if you want a different color text you select the color property and then select
+    the new color. If you want the text to rotate, select a method that turns or rolls
+    the text. Explore the methods and functions for many different things that can
+    be done with text objects.
+
+
+    Figure 2.7.4
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_43_0.png)'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "An example of using a picture as background with 3D text is the title for another\
+    \ Alice Travelogue.\n\n![](img/d2ba71a3d11a1090959dcfb8fe9d6290_44_0.png)\n\n\
+    Figure 2.8.1\n\nGo back to the movie magic we played with the billboard title\
+    \ and do some neat effects with your own 3D titles.\n\nIn Review:\n\n+   2.8.1\
+    \ There are ____ ways to access 3D Text.\n\n+   2.8.2 3D Text has Properties,\
+    \ Methods, and Functions like all other objects. ( True / False\n\n+   2.8.3 3D\
+    \ text can be added from the “Tools” menu. ( True / False\n\n# Lesson 2.9 - Try\
+    \ This\n\nIn this movie the bunny object spins based on the value of the variable\
+    \ number. If the number is greater than or equal to 5, the bunny spins “I don't\
+    \ spin more than 5 times”. Run the program twice, one with answer having a value\
+    \ of 1 and a second run with a value of 8.\n\n+   1. Create a Grass World.\n2.\
+    \ In the upper right corner of the World Editor Area, Click on \"Create New Variable\"\
+    \n   a. Name = answer\n   b. Data Type = Number\n   c. Value = 1\n   d. OK\n3.\
+    \ Add the Bunny object to the world from the Animal gallery.\n4. Drag and Drop\
+    \ the If/Else to the first line of the World Editor and select true.\n5. Drag\
+    \ and Drop the variable answer over \"true\" set to answer >= 5."
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '+   6. Select the Bunny Object
+
+    7. Drag and Drop bunny.say under the if statement but before the else. Select
+    Other
+
+    8. MESSAGE="I don''t spin more than 5 times." Duration = 5 seconds.
+
+    9. Drag and Drop bunny.turn at speed under the else statement. Turn = left Speed
+    = 5 revolutions per second.
+
+    10. PLAY
+
+    11. Change answer = 1 to answer = 8
+
+    12. PLAY
+
+    13. Drag and Drop the answer variable to the line just before the "If" statement.
+    Value = 1.
+
+    14. Select the World Object.
+
+    15. Select Function = "ask user for a number" and drag and drop over the 1 in
+    the variable created just above the "If" statement.
+
+    16. PLAY Test with entering a 2 then test again entering 8
+
+    17. Select Bunny Object and drag and drop "bunny move", forward, 10 meters.
+
+    18. PLAY Test with entering a 2 then test again entering 8'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Tutorial 3 – Repetition
+
+
+    Overview:
+
+
+    +   - Explain repetition.
+
+    - Use a counter loop.
+
+    - Use a while loop.
+
+    - Describe when to use each type of loop
+
+
+    # Lesson 3.0 – Overview of Repetition
+
+
+    The last structure to be examined is the "Repetition" structure. This is the real
+    power of a program, the ability to repeat a series of instructions. Perhaps something
+    so simple in Alice Worlds as making an object jump up and down three times or
+    move towards another object until you are 1 meter from the other object. These
+    activities require using "loops" or the repetition structure.
+
+
+    The repetition structure tests a condition and if the condition evaluates to true,
+    allows the program to repeat one or more times, until the condition changes and
+    evaluates to false. However, there must be something in the loop changes the condition
+    to avoid the "dread infinite loop". This is a loop that never ends because the
+    condition to exit the loop is never met.
+
+
+    There are two types of loops in Alice. First, there is the LOOP structure. This
+    structure is used when a loop is to be executed a number of times. It may be a
+    specific number or it may use the contents of a variable. The benefit of this
+    loop is that it uses a built in counter structure that ensures the loop will be
+    exited at some point. The second structure is the WHILE loop. This loop executes
+    while a condition is true, false or is a compound loop selected by choosing the
+    logic choice which then continues to asks construct a compound loop condition.
+    See Figure 3.0.1.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_46_0.png)
+
+
+    Figure 3.0.1'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'The Loop structure can be viewed in a simple or complex version by selecting
+    the button at the end of the command. The complex version shows all of the components
+    of the command and can be used to change the increment value from 1 to some other
+    value. There is only one version of the While structure.
+
+
+    # In Review
+
+
+    +   3.0.1 The Loop structure can be viewed in a \_\_\_\_\_\''or'' \_\_\_\_\_\_
+    version
+
+    3.0.2 There are \_\_\_\_\_\_ types of loops in Alice.
+
+    3.0.3 The \_\_\_\_\_\_ structure tests a condition and if the condition evaluates
+    to true, allows the program to repeat one or more times, until the condition changes
+    and evaluates to false.
+
+    3.0.4 The \_\_\_\_\_\_ loop is a loop that never ends because the condition to
+    exit the loop is never met.
+
+    3.0.5 There are also two versions of the While structure. ( True / False )
+
+
+    # ## Lesson 3.1 Repetition (Counter Loops)
+
+
+    At the bottom of the Method Editor is a tile labeled “loop”. Drag this to the
+    location in the Method Editor where the loop belong and drop it. Then, enter the
+    number of times (iterations) the loop is to be repeated. Under that the appropriate
+    instructions are to be repeated. This builds a counter controlled loop. Generally
+    this is written as a “For” loop in most programming languages
+
+
+    This type of loop may be used when an object is to do something a certain number
+    of times. For Example: when programming an ice skating scene and the skater is
+    to turn around three times. Either write three turn statements or simplify by
+    writing a loop that turns the skater three times.
+
+
+    Perhaps this is not the best example but consider the skater is to turn the number
+    of times contained in a variable. When the program is being written. The value
+    will be supplied when the program runs. Here is where the loop statement shines
+    shines.
+
+
+    Consider a situation where the programmer wants the Alice character to jump up
+    1 meter and back down again and do this ten times. Since the number of times the
+    loop is executed, the LOOP structure should be selected. Could this operation
+    be done without a loop structure? Certainly, just repeat the move up and move
+    down instructions ten times each, but this results in twenty instructions and
+    that is messy code. Imagine the code that would have to be written to have Alice
+    up and down a thousand times. By using the LOOP structure, only three lines of
+    code are written, no matter how many times she needs to jump. Here is the code
+    for jumping ten times:'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Events create event
+
+
+    When the world starts, do world my first method
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_48_0.png)
+
+
+    Figure 3.1.1
+
+
+    Figure 3.0.2 shows two views of the LOOP structure. The first is the "simple version"
+    which shows the number of times to loop and will increment the counter by one
+    until it reaches the number of times. The second is the complicated version which
+    shows the full version. It shows three parts of the loop that can be varied that
+    that fully explain the loop structure and how it operates. First it shows that
+    it has declared a variable named index and initialized it to zero, then it shows
+    the condition that will cause the loop to exit (up to (but not including)) 10
+    times. The last part is (incrementing by 1) by the number where we add to the
+    variable index can be changed. So, if a positive number is entered, the program
+    will increment through the loop and if it is a negative number the program will
+    decrement the index and from a higher number to a lower number. Some examples
+    of other ways to use the loop structure:
+
+
+    A Decrementing Loop
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_48_1.png)
+
+
+    Figure 3.1.2'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# An Incrementing by 2 loop
+
+
+    Changing the index value to start at 1, ending at 10 and step by 2
+
+
+    | Loop | index from 0 | up to (but not including) 10 times | incrementing by 2
+    |
+
+    |---|---|---|---||
+
+    | aliceidal | move up | 1 meter | more... | |
+
+    | aliceidal | move down | 1 meter | more... |
+
+
+    Figure 3.1.3
+
+
+    The user could substitute a variable for any of the values and use the contents
+    of the variable to control the starting point, the ending point or the value.
+
+
+    In Review
+
+
+    3.1.1 The repetition structure may be used when an object is to do something a
+    certain number of times.
+
+
+    3.1.2 The user could substitute a for any of the values and use the contents of
+    the variable to control the starting point, the ending point or the value.
+
+
+    3.1.3 Changing the incrementing by value to a causes the index to count from a
+    larger number to a smaller number.
+
+
+    # Lesson 3.2 Coding Counter Loops
+
+
+    +   1. Select a Grass World
+
+    2. Select the Socrates object from the People Gallery
+
+    3. Click on Done
+
+    4. Drag the Loop icon to the Method Editor
+
+    5. Choose "Infinity Times"
+
+    6. Now, Move Socrates forward 1 meter.
+
+    7. Move Socrates backward 1 meter.
+
+    8. After the loop structure add the command to turn Socrates 1 revolution.
+
+    9. PLAY
+
+    10. You have created an infinite loop. The program never gets to turn Socrates.
+
+    11. Stop the program.
+
+    12. Change "Infinity times" to 5.
+
+    13. PLAY
+
+
+    On the loop line click on the button that reads "Show Complicated Version". This
+    changes the appearance of the loop line. The line now shows the structure of the'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '"For" loop. Note the loop initializes the index variable, has a test condition
+    to limit the process when the value of the index reaches 5 and finally an update
+    portion telling the computer to add each index time through the loop. This structure
+    is exactly the same in JAVA, C++ and C.
+
+
+    # Lesson 3.3 - Repetition (While Loops)
+
+
+    Sometimes it is necessary to perform a series of instructions based on some "boolean"
+    condition testing "True". An example is: "Repeat these instructions until the
+    contents of expression A are greater than the contents of expression B"; Another
+    example would be to repeat some instructions until one object is less than one
+    meter from a second object
+
+
+    The "While" loop is the tool to use for this problem. The "While" loop is a Pretest
+    loop. This means that the condition for doing the loop is evaluated before any
+    instructions are executed. Therefore the instructions in the loop may never be
+    executed
+
+
+    The tile for the while instruction is at the bottom of the Method Editor. Just
+    as the loop instruction was implemented, drag the tile to the appropriate place
+    in the code. Then supply a boolean expression to be evaluated in the input box
+    with the initial value of "true". Then follow with the instructions to be executed
+    within the loop
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_50_0.png)
+
+
+    Figure 3.3.1
+
+
+    The lunar lander will continue to descend a half meter at a time to the surface
+    (ground) while it is still above the ground the test is. Once the test is that
+    it is at or below the ground, the test will be false and the while loop will exit.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# In Review\n\n3.3.1 The loop structure repeats instructions until the expression\
+    \ evaluated, evaluates to false.\n\n3.3.2 The \"While\" loop is a test loop.\n\
+    \n3.3.3 The instructions in the While loop may never be executed. ( True / False\
+    \ )\n\n# Lesson 3.4 Coding While Loops\n\nExample using the While Loop and Random\
+    \ Numbers\n\n+   1. Select a Grass World\n2. In Animals Gallery there is a \"\
+    Bugs\" subve. Select:\n   a. paulbeetle (on the left)\n   b. paulbeetle (in the\
+    \ center)\n   c. ringobeetle (on the right)\n3. Select georgebeetle and move left\
+    \ of paulbeetle one meter\n4. Select ringobeetle and move right of paulbeetle\
+    \ one meter\n5. Drag and Drop While Statement to next line and select true.\n\
+    6. Select georgebeetle functions and Drag and Drop \"georgebeetle is at least\
+    \ threshold\" over 'true' in while statement. At least .05 from paulbeetle, the\
+    \ entire paulbeetle.\n7. Drag and Drop georgebeetle move 1 meter to the while\
+    \ statement.\n8. Select World Object, random number, and replace 1 meter in georgebeetle\
+    \ move left\n   a. minimum = -0.5\n   b. maximum = +0.5\n9. After while statement\
+    \ Drag and drop georgebeetle say hello.\n10. PLAY (play until georgebeetle says\
+    \ hello)"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# Lesson 3.5 Random Numbers
+
+
+    The World object has a function called "random number", which returns a fractional
+    random number between 0 and 1. The "more..." editing tag has the following arguments:
+
+
+    **minimum** specify a minimum value for the random number to be returned.
+
+
+    **maximum** specify a maximum value for the random number to be returned. The
+    value returned will be a value not greater than one, one less than the specified
+    maximum number
+
+
+    **integer only** when set to true, the function converts the value generated and
+    returns only numbers.
+
+
+    When the problem is to have six numbers returned (simulating the roll of dice)
+    a minimum of one (1) and a maximum of seven (7) and integer only set to true.
+    This will return the values 1 to 6.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_52_0.png)
+
+
+    Figure 3.5.1
+
+
+    In Figure 3.5.1 there are three Sci-Fi characters in a line and facing the front.
+    The program in Figure 3.5.2 is the code that randomly moves one of the three'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'characters forward and backward 2 times. A random number is generated between
+    0 and 3 and the result is stored in the variable "whichPerson". The print statement
+    is used to display the random number being generated at the bottom of the screen.
+    The Print command is found in a tile at the bottom of the editor. When the movie
+    is played, it will display values or messages at the bottom of the screen. This
+    is a debugging tool and should be removed after the results have been confirmed
+    working. Then there is a nested statement to decide which character should move,
+    0, 1 or 2.
+
+
+    Random numbers are especially important when writing games or when the movie requires
+    objects moving or acting in a random manner.
+
+
+    # In Review
+
+
+    +   3.5.1 Random Number is a function of the ________.
+
+
+    +   3.5.2 The Print command displays values on the default printer. ( True / False
+    )
+
+
+    +   3.5.3 The maximum number limits the highest number returned to one less than
+    the maximum number specified. ( True / False )
+
+
+    +   3.5.4 The ________ function returns a fractional number between
+
+    0 and 1.
+
+
+    # Lesson 3.6 – Lists
+
+
+    Alice has the ability to create a variable as a list. List variables have the
+    ability to store multiple items of the same data type. The list can then be used
+    to step through the items one at a time, having that item perform some task. One
+    rule is that your list can contain any objects. They do not need to be all the
+    same. Another is that all items in the list be of the the same data type.
+
+
+    Our example for this lesson is to build a water world for three boats.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_53_0.png)'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'Line up three sailboats facing the camera. The first boat is on the left, the
+    second in the middle and the third on the right. The objective of the movie is
+    to have each sailboat turn right one quarter turn and sail off the screen. Instead
+    of instructions to do this we set up a list of boats and each sail off in turn.
+
+
+    set up the list variable we need to create a new variable. Because may be used
+    throughout the movie we need to set up a variable under the world object. Select
+    the object in the object tree and then go to the properties. Click on “create
+    a new variable” and get the dialog box in Figure 3.6.2. Name the variable, select
+    the object radio button, click on the check box to the left of “make a” and make
+    sure the list contains “List”. Then click on the “new item” button three times.
+    Then next item0’s None, click on the drop down arrow and select the first sailboat.
+    Then repeat for the second and third sailboats. When complete, your dialog box
+    should look like Figure 3.6.2. If all is ok, click on OK.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_54_0.png)
+
+
+    Now we can use the variable in our code. The “For all in order” structure executes
+    the commands for all items in the list in sequence. All the commands for the first
+    item, all the commands for the next item and continues until the list is finished.
+    Grab the tile “For all in order” from the bottom of the event panel. Select the
+    boat list by selecting the boat.boatList. Now, we have a loop structure to carry
+    our commands to be done by each member of the list.
+
+
+    Note there is no object in the object tree, so where do we get the method to move
+    our sailboats? Easy, look in the code line that begins with “For all...\ There
+    is an object variable named item_from_boatList. Drag this down one line to the
+    “Do Nothing...” area. Select turn, right and 0.25 revolutions. Repeat this process
+    using the move method, forward and 100 meters.
+
+
+    53'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# world.my first method
+
+
+    world.my first method No parameters
+
+
+    SA variables
+
+
+    +   - For all world.boat.list, one one Item_from_boat.List at a time
+
+    - item_from_boat.list turn right 0.25 revolutions more...
+
+    - item_from_boat.list move forward 100 meters more...
+
+
+    Figure 3.6.3
+
+
+    Play the movie and watch your boats turn to their right and sail off the screen.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_55_0.png)
+
+
+    Figure 3.6.4
+
+
+    If the boats don''t sail in the correct order you can fix the order in the list
+    variable. The other command for list processing is the "For All Together..." command.
+    This is used when all members of the list should act at the same time. Our example
+    for this is a simple "Chicken Dance."
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_55_1.png)
+
+
+    Figure 3.6.5
+
+
+    We have three chickens in a row. The code begins with selecting the tile "For
+    All Together..." from the tiles across the bottom. Using the same procedure as
+    was used for "For all in order..." build the movements for the dance.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# world.my first method\n\nworld.my first method No parameters\n\nNo variables\n\
+    \n```\nFor all world.chix  every  Item_from_chix together\n  Do together\n   \
+    \ item_from_chix    turn right  0.25 revolutions  more...\n  Do together\n   \
+    \ item_from_chix    turn left  0.25 revolutions  more...\n  Do together\n    item_from_chix\
+    \    turn to face camera  more...\n  Do together\n    item_from_chix    set color\
+    \ to  more...\n```\n\nFigure 3.6.6\n\nJust some simple movements to illustrate\
+    \ the dance may begin. Turning yellow at the end was just added to illustrate\
+    \ property changes for all items in the list.\n\n# In Review\n\n3.6.1 variables\
+    \ have the ability to store multiple items.\n\n3.6.2 The structure executes the\
+    \ commands for all items in the list in sequence.\n\n3.6.3 The is used when all\
+    \ members of the list should act at the same time.\n\n# Lesson 3.7 – Arrays\n\n\
+    An array is like a list. It is used to hold a group of like items. It has a fixed\
+    \ size and once it has been filled you cant add any new items. An array is composed\
+    \ of a group of elements. An element is a storage place for each item in the array.\n\
+    \nWhen you insert an item into an array, it does not shift in position in a list.\
+    \ In an array you insert the value into a specific element where it remains until\
+    \ changed, or deleted.\n\nThe first element in an array is item0, the second,\
+    \ item1, the third item and so on. To create an array, click on \"create new variable\"\
+    \ button in the object or method where you want to create the array. Name the\
+    \ variable, select the type of item you want to store in the array. Then click\
+    \ the \"make a\" option and select Array in the drop down list. The dialog box\
+    \ will expand to allow you to Add New Items. Add as many items as you need to\
+    \ put in the array.\n\n55"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_57_0.png)
+
+
+    Figure 3.7.1
+
+
+    The array is listed in the object or method where it was created. The asterisk
+    (*) next to the name indicates it is an array. (See Figure 3.7.2) Once completed
+    this array can be used in your program. The example in Figure 3.7.3 shows using
+    the array in a Loop.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_57_1.png)
+
+
+    Figure 3.7.2'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_58_0.png)
+
+
+    When you drag the variable to the "Do Nothing" line you are presented with a series
+    of options. Select the option for the action you wish to take. There are lots
+    of options, and it is worthwhile to experiment with some of them.
+
+
+    # In Review
+
+
+    +   - 3.7.1 An is like a list. It is used to hold a group of like items.
+
+    - 3.7.2 An is a storage space for each item in the array.
+
+    - 3.7.3 The array is listed in the object or method where it was created. The
+    next to the name indicates it is an array.
+
+    - 3.7.4 The first element in array item1, ( True / False )
+
+    - 3.7.5 An has a fixed size and once it has been filled you can add any new items.
+
+
+    # Lesson 3.8 – Try This
+
+
+    +   - 1. Open Alice and create a Water World.
+
+    - 2. Go to the Gallery and Select Environment and select the Island.
+
+    - 3. Go to the People Gallery and select the ScubaDiver. Position the ScubaDiver
+    on the Island.
+
+    - 4. Go to the Animals Gallery and select the Shark. Position the Shark in front
+    of the island, partially submerged in the water.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '+   5. In the methods editor create the following code
+
+    1. Loop 5 times
+
+    2. shark turns right 1 revolution, duration 6 seconds
+
+    3. Nest a loop that loops 2 times
+
+    1. ScubaDiver says “Shark Attack!”
+
+    2. camera move back 5 meters
+
+    3. camera move forward 5 meters
+
+    6. Play the Movie.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Tutorial 4 – Methods
+
+
+    # Objectives
+
+
+    +   - Create a custom class-level method
+
+    - Use a custom method
+
+    - Pass an argument to a method
+
+    - Use the camera for effects
+
+
+    # Lesson 4.0 - Overview of Methods
+
+
+    While the various classes include many methods (things they can do), there are
+    other things that could be included as methods that would streamline our programming.
+    So, if a class does not have a method to perform a certain task, and the task
+    will be done repeatedly in the program or perhaps in other programs, the programmer
+    needs to create a new method. Alice allows the programmer to create custom methods
+    for a class.
+
+
+    This lesson is to learn how to create class-level methods in Alice. The penguin
+    object has a walk method. This method, when invoked, simulates the penguin walking
+    across the stage. Other objects do not have a similar method. So, when Aliceiddel
+    moves, her legs remain stationary and she looks like she is floating forward.
+    This detracts from the realism of the movie.
+
+
+    This is an opportunity to create a method for an object to "teach" to walk. This
+    is where code becomes complicated.
+
+
+    In Lesson 4.2 code is generated to make the Toy Soldier to "March" across the
+    screen. This involves moving the arms and the legs appropriately to make them
+    look like his arms and legs are moving in a realistic manner. To keep it simple,
+    and reduce the number of instructions, the arms and legs move as one and the bends
+    at the knee and elbow have not been considered. However, with a little practice
+    and patience the movement can be made even more realistic.
+
+
+    # In Review
+
+
+    +   4.0.1 Alice allows the programmer to create custom for a class.
+
+    4.0.2 The object is an example of an object with a walk method.
+
+
+    # Lesson 4.1 - Creating Custom Class-Level Methods
+
+
+    Methods that are part of a class are referred to as class-level methods. If there
+    is some action that requires writing lots of code to do repeatedly, it would be
+    beneficial to create a new class to do that action and then call that method each
+    time the object needs to perform those steps. An example of this might be to write
+    classes to move the soldier''s legs to make him march across the screen.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'There are five (5) steps to write a custom class-level method in Alice:
+
+
+    +   1. Create an instance of the class.
+
+
+    +   2. Select the instance.
+
+
+    +   3. In the Details Panel, under the methods tab, click the create new method
+    button.
+
+
+    +   4. In the resulting dialog box, enter a unique and descriptive name for the
+    method you wish to create, click the OK button and the new name will appear above
+    the button in the Details Panel.
+
+
+    +   5. Create the instructions for the method in the new Method Editor.
+
+
+    Once created, the new method can be used just like any other methods already provided.
+    Drag it to the methods editor and drop it in the desired position.
+
+
+    In Review
+
+
+    4.1.1 Methods that are part of a class are referred to as
+
+
+    4.1.2 It would be beneficial to create a new to do that action and call that each
+    time the object needs to perform those steps.
+
+
+    4.1.3 Once created
+
+
+    # Lesson 4.2 Create a Custom Class-Level Method
+
+
+    Create "Sand World" and place the ToySoldier Class from the People Gallery on
+    the sand. Now, click on Done and begin a method that will make the soldier March
+    across the sand. If the forward method was used alone, the soldier would kind
+    of float across the sand and would not look like he is marching. This method will
+    add some reality to this simple little movie.
+
+
+    Now, select the ToySoldier object and click on the methods tab in the Details
+    Panel. Click on the button to create a new method, the new method "march". Look
+    in the object tree at the ToySoldier object and note the plus sign (+) to the
+    left of the name of the class. This indicates that class is made up of several
+    other classes. If the plus sign is selected, these classes will be displayed.
+    Each of these sub classes also have properties, methods and functions attached
+    to them. It is necessary to use several of the sub classes of the ToySoldier,
+    leftLeg, rightLeg, leftArm and rightArm.
+
+
+    The contents of the method are four "Do Together" sequences. In each sequence
+    the soldier will move forward .25 meters, move his leftLeg, rightLeg, leftArm
+    and rightArm in an appropriate distance. The legs and arms will "turn" .1 (note
+    it is point 1) revolutions in each instruction over a duration of .5 (note it
+    is point 5) seconds. Let''s examine the code that makes this all happen.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'do together
+
+
+    toySoldier.move forward .25 meters style=abruptly duration - .5
+
+    seconds more...
+
+
+    toySoldier.leftLeg.turn forward .1 revolutions style=abruptly duration
+
+    .5 seconds more...
+
+
+    toySoldier.rightLeg.turn backward .1 revolutions style=abruptly
+
+    duration = .5 seconds more...
+
+
+    toySoldier.leftArm.turn forward .1 revolutions style=abruptly duration
+
+    . .5 seconds more...
+
+
+    toySoldier.rightArm.turn backward .1 revolutions style=abruptly
+
+    duration = .5 seconds more...
+
+
+    do together
+
+
+    toySoldier.move forward .25 meters style=abruptly duration = .5
+
+    seconds more...
+
+
+    toySoldier.leftLeg.turn backward .1 revolutions style=abruptly
+
+    duration = .5 seconds more...
+
+
+    toySoldier.rightLeg.turn forward .1 revolutions style=abruptly
+
+    duration = .5 seconds more...
+
+
+    toySoldier.leftArm.turn backward .1 revolutions style=abruptly
+
+    duration = .5 seconds more...
+
+
+    toySoldier.rightArm.turn forward .1 revolutions style=abruptly
+
+    duration = .5 seconds more...
+
+
+    do together
+
+
+    toySoldier.move forward .25 meters style=abruptly duration = .5
+
+    seconds more...
+
+
+    toySoldier.leftLeg.turn backward .1 revolutions style=abruptly
+
+    duration = .5 seconds more...
+
+
+    toySoldier.rightLeg.turn forward .1 revolutions style=abruptly
+
+    duration = .5 seconds more...
+
+
+    toySoldier.leftArm.turn backward .1 revolutions style=abruptly
+
+    duration = .5 seconds more...
+
+
+    toySoldier.rightArm.turn forward .1 revolutions style=abruptly
+
+    duration = .5 seconds more...
+
+
+    do together
+
+
+    toySoldier.move forward .25 meters style=abruptly duration = .5
+
+    seconds more...
+
+
+    toySoldier.leftLeg.turn forward .1 revolutions style=abruptly duration
+
+    . .5 seconds more...
+
+
+    toySoldier.rightLeg.turn backward .1 revolutions style=abruptly
+
+    duration = .5 seconds more...
+
+
+    toySoldier.leftArm.turn forward .1 revolutions style=abruptly duration
+
+    . .5 seconds more...'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# toySoldier.rightArm.turn backward .1 revolutions style=abruptly duration
+    = .5 seconds more...
+
+
+    Now, we have a method named "march" and we can use this method just as we would
+    use any other method for class. This may look like a lot of code and it is, that
+    is why we code these routines once and reuse whenever possible.
+
+
+    # Lesson 4.3 Using the Method
+
+
+    With the new method ready to go, return to the "world.my first method" and use
+    the method just like it was - one of the methods that were programmed into the
+    toySoldier class.
+
+
+    To keep things simple, will loop through executing the method ten times. This
+    simply requires dragging the "Loop" structure from the bottom of the methods editor
+    and selecting 10 times. Then simply drag and drop the "march" function created
+    beneath the Loop structure and the toy soldier is ready to march across the screen.
+    Hit the PLAY button and if it is correct, your soldier marches across the screen.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_63_0.png)
+
+
+    Figure 4.3.1
+
+
+    62'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Lesson 4.4 – Passing Arguments to Methods
+
+
+    Sometimes it is necessary for the calling program to pass information (or values)
+    to the called method. This is called passing an argument to a method.
+
+
+    If a method is to accept an argument when it is called, it is necessary to create
+    a parameter in the method. A parameter is simply a variable that can hold the
+    value of the argument when it is passed.
+
+
+    To create a parameter in a method, there is a "Create New Parameter" button in
+    the method editor for creating a parameter variable to hold the argument passed
+    from the calling method. Clicking on this opens a dialog box identical to the
+    one opened for a new variable. Enter a name, select a type and create a parameter
+    variable.
+
+
+    Once this has been done, an argument will be required each time the method is
+    called.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_64_0.png)
+
+
+    Figure 4.4.1 shows the SoldierSpin method that asks for a parameter named spinTimes.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_64_1.png)
+
+
+    Figure 4.4.2
+
+
+    Figure 4.4.2 shows the SoldierSpin method used in the program. The ToySoldier
+    will march forward and when he stops, the user will be requested to enter a number
+    and the ToySoldier will turn that many times.
+
+
+    In Review
+
+
+    4.4.1 If a method is to accept an argument when it is called, it is necessary
+    to create a in the method.
+
+
+    4.4.2 Sometimes it is necessary for the calling program to pass information (or
+    values) to the called method. This is called passing an to a method.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# Lesson 4.5 Using the Camera
+
+
+    The World View is the camera''s viewfinder. The viewpoint of the camera is its
+    current position and the direction in which it is pointed. There are several ways
+    to control the camera. First in design mode there are the three camera controls
+    (sets of arrows) at the bottom of the screen.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_65_0.png)
+
+
+    Figure 4.5.1
+
+
+    Left to the right the controls are:
+
+
+    +   * up, down, left, right
+
+    * forward, backward, rotate left, rotate right
+
+    * tilts the camera up or down
+
+
+    The second method is moving the camera in the program. The camera is listed in
+    the object tree and has properties, methods and functions. Let''s look at the
+    methods and functions available.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_65_1.png)
+
+
+    Figure 4.5.2'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: 'Once again there are too many options to explain. You need to experiment with
+    these options in your movies to take advantage of the effects they can add to
+    your movie.
+
+
+    # In Review
+
+
+    4.5.1 The is the camera''s viewfinder.
+
+
+    4.5.2 The camera is listed in the object tree and has, and
+
+
+    # Lesson 4.6 Try This
+
+
+    This exercise causes a character to jump up and down a specified number of times.
+
+
+    +   1. Select the Dir World
+
+    2. Place the Class Ant on the world.
+
+    3. Select the Class Ant instance.
+
+    4. Click on Create New Method
+
+    5. Create New Parameter - jtime - type number
+
+    6. Loop jtime times
+
+    7. ant move up 1 meter
+
+    8. ant move down 1 meter
+
+    9. Return to world.my first method
+
+    10. Drag and Drop jump method to the method editor.
+
+    11. Select 2
+
+    12. PLAY
+
+
+    Add another jump method to the program with a different value. PLAY again.'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# Tutorial 5 – Functions
+
+
+    Objectives
+
+
+    +   - Differentiate a function from a method
+
+    - Create a movie that uses functions
+
+    - Use functions in calculations.
+
+
+    # Lesson 5.0 – Overview of Functions
+
+
+    The Functions Tab defines functions as "Functions are the things that an object
+    can answer about themselves or the world."
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_67_0.png)
+
+
+    Functions differ from Methods in that methods do some task or operation while
+    a function returns some information about the world or its objects. These functions
+    ask a question and return a value which can be a number, and object, a Boolean
+    (true or false), or some other object type.
+
+
+    Functions can optionally accept values in the form of arguments (or parameters).
+    Then return some value as output using the required return statement. There are
+    built-in functions for every object as well as the capability to create new functions.
+    Some functions for example, calculate the distance between one object and another
+    object. Another example is a function that returns a random number. A third example
+    is a function that calculates a value and returns it to the calling program.
+
+
+    # In Review
+
+
+    +   5.0.1 A returns some information about the world or its objects.
+
+    5.0.2 A does some task or operation.
+
+    5.0.3 A value is returned to the calling statement using the statement.
+
+
+    66'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# Lesson 5.1 – Built-In Functions – World
+
+
+    If we look at the "World" object we see a general set of functions. These functions
+    differ from functions we see for other objects. These functions have to do with
+    the categories: boolean logic, math, random numbers, strings, ask user, mouse,
+    time, advanced math, and other. World functions are generally used for values
+    that may pertain to several different objects, user interface, and math functions.
+    The Figure 5.1.1 shows a partial list of the world functions.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_68_0.png)
+
+
+    As you can see there are functions that apply to many different situations. Generating
+    a random number, asking the user for a number or a string, converting a number
+    to a string are just a few examples of the world''s functions. These functions
+    apply to many different situations and this is the only place you will find these
+    functions.
+
+
+    67'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'A popular use of a world function is the generation of a random number. There
+    are many instances where it is necessary to have a random number generated for
+    an object. The random number function exists ONLY in the World''s functions. The
+    code example has the car move forward a random distance, in meters, each time
+    the command is executed. The parameters issued to the random function is a minimum
+    number of 5, a maximum number of 50, and return only an integer value.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_69_0.png)
+
+
+    As you learn more about Alice, you will find more use for these world functions.
+
+
+    In review
+
+
+    +   - 5.1.1 The random-number function is only in the function list.
+
+    - 5.1.2 World functions are used for the interface.
+
+
+    # Lesson 5.2 - Built-In Functions in Other Objects.
+
+
+    Most of the other objects functions have the same, or similar, function. The categories
+    of these functions are: proximity, size, spatial relations, point of view, and
+    other. They answer questions like "how far is this object from another object?",
+    "is this object to the left or right of another object?", and other similar questions
+    about the object''s relationship to the environment.
+
+
+    In the code example we move the sheriff to within 1 meter of the cowboy. Remember,
+    the distance is measured from the center point of the sheriff to the center point
+    of the cowboy.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_70_0.png)
+
+
+    The function "sheriff distance to cowboy" returns the distance between the point
+    of the sheriff and the center point of the cowboy. So at the end of the function
+    1 meter is subtracted from the value returned.
+
+
+    There are many functions for each object the following is a partial, typical list
+    containing functions that pertain to most objects.
+
+
+    | Function | Description |
+
+    | --- | --- |
+
+    | sheriff distance | returns the distance between the sheriff and the center point
+    of the cowboy |
+
+    | sheriff distance | returns the distance between the sheriff and the center point
+    of the cowboy |
+
+    | sheriff distance | returns the distance between the sheriff and the left of
+    the object |
+
+    | sheriff distance | returns the distance between the sheriff and the right of
+    the object |
+
+    | sheriff distance | returns the distance between the sheriff and the front of
+    the object |
+
+    | sheriff distance | returns the distance between the sheriff and the back of
+    the object |
+
+    | sheriff distance | returns the distance between the sheriff and the center point
+    of the object |
+
+    | sheriff distance | returns the distance between the sheriff and the center point
+    of the object |
+
+    | sheriff distance | returns the distance between the sheriff and the left of
+    the object |
+
+    | sheriff distance | returns the distance between the sheriff and the right of
+    the object |
+
+    | sheriff distance | returns the distance between the sheriff and the front of
+    the object |
+
+    | sheriff distance | returns the distance between the sheriff and the back of
+    the object |
+
+    | sheriff distance | returns the distance between the sheriff and the center point
+    of the object |
+
+    | sheriff distance | returns the distance between the sheriff and the center point
+    of the object |
+
+
+    Figure 5.2.2 - Alice Object Functions'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'These functions are the same in most of the objects. Remember, a function always
+    returns a value.
+
+
+    In review
+
+
+    +   5.2.1 Functions measure distance from to
+
+    5.2.2 answer questions about the object''s relationship to the environment.
+
+
+    # 5.2.2
+
+
+    # Lesson 5.3 – Create a New Function
+
+
+    As methods, you can create a new function for an object. There may be an instance
+    where there is an object that does not have a function that you use frequently
+    with that object. This is the time to create a new function.
+
+
+    Our example will be a function to calculate how many gumdrops are in a container
+    given the weight in ounces of the container.
+
+
+    The stage is a grass world with the Class PJ from the People Gallery, the GumDrop
+    from the Kitchen Gallery (food folder), and the bag is from the Shapes Gallery
+    the Box Class with the property value changed to brown.
+
+
+    The pseudocode for this game is as follows:
+
+
+    +   1. Pj announces the game
+
+    2. Ask the user for a weight in ounces.
+
+    3. Pass weight to world function calcGumDrops
+
+    4. Display answer returned from the function'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_72_0.png)
+
+
+    The world function to calculate the number of gumdrops simply divides the weight
+    in ounces by the weight of a gumdrop which we know is .05 ounces. The function
+    should look something like this:
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_72_1.png)
+
+
+    This is a very simple function but it illustrates the use of a function to do
+    a calculation. The function returns the contents of the parameter passed divided
+    by the numeric literal 0.05 which is the weight of one gumdrop.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'In Review
+
+
+    5.3.1 A function always returns a _________
+
+
+    5.3.2 A __________ is a value passed to the function.
+
+
+    # Lesson 5.4 - Dummy Objects.
+
+
+    Often you want to move an object to a particular part of the screen. Alice has
+    the ability to set points on the screen called "dummy objects" and objects can
+    "move to" these points. You can use these points to position objects at various
+    times during a movie. In the scenario shown the object (the mummy) moves to several
+    spots on the screen movement is determined by dropping points on the screen and
+    then moving the object to these points. You generate these dummy spots by moving
+    the object to the spot you want an object to move to and then dropping the dummy
+    object by using the button on the Add Objects screen.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_73_0.png)
+
+
+    Figure 5.4.1 - Create Dummy Objects
+
+
+    You can now position the object at its starting point and generate the code to
+    move the object to specific dummy points.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_74_0.png)
+
+
+    The "move to" command and select the appropriate dummy spot as the destination.
+    I did not rename the dummy spots but if there are a number of spots it may be
+    a good idea. You may also use these dummy spots to relocate the
+
+
+    In Review
+
+
+    5.4.1 \u_\_\_\_\_\_\_ are points on the screen to control the movement of objects.
+
+
+    5.4.2 Use the \u_\_\_\_\_\_\_ command to move the object to a dummy object.
+
+
+    Section 5.5 – Try This
+
+
+    Open a new "Sand" World and go to "Add Objects" screen, select the Ancients Collection.
+    Add Class Shelter, Class Apple Tree, and AddFirstCenturyMale2, and FirstCenturyWoman1
+    as shown in Figure 5.5.1.
+
+
+    73'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_75_0.png)
+
+
+    While still in "Add Objects" Screen:
+
+
+    +   1. Select male in object tree and right click on "firstCenturyMale2", select
+    "methods", select "move", direction "forward", distance "10 meters".
+
+    2. On right side of panel click on "More Controls" if not already selected.
+
+    3. Click on "drop dummy at selected object".
+
+    4. Select male in object tree and right click again, select "methods", select
+    "turn to face" - "firstCenturyWoman1" - "the firstcenturywoman1".
+
+    5. Select male in object tree and right click again, select "methods", select
+    "move to" - "firstCenturywoman1" - "the firstcenturywoman1".
+
+    6. Now you will see the two objects overlap. Move the firstcenturymale2 a short
+    distance away from the woman.
+
+    7. Click on "drop dummy at selected object".
+
+    8. Select woman in object tree and right click on "firstCenturyWoman1", select
+    "methods", select "turn to face" - "firstCenturyMale2" - "the entire firstcenturymale2".
+
+    9. Move the male object back to his original position.
+
+
+    Almost ready to code but first go to the object tree and select the male object,
+    select "methods", select "turn to face", select "Dummy objects", select "dummy".
+
+    Then click on the GREEN DONE button and push the following code in the world.firstmethod.
+
+
+    +   1. Have the male "move to" the Dummy object named "dummy".
+
+    2. Have the male "turn to face" the "firstCenturyWoman1", the "entire firstcenturyWoman1".
+
+    3. Have the male "move to" the Dummy object named "dummy2".'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '+   4. Have the male object say "Hello!"
+
+    5. Now PLAY.
+
+
+    Your screen should look like the screen shown in Figure 5.5.2
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_76_0.png)
+
+
+    Figure 5.5.2 – Final Screen'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# Tutorial 6 – Events
+
+
+    Objectives
+
+
+    +   * Describe various events
+
+    * Create a movie that uses several events
+
+    * Explain why events are important in Alice
+
+
+    # Lesson 6.0 – Overview of Events
+
+
+    An event is an action that takes place while the Alice world is playing. Alice
+    worlds are capable of recognizing certain events and responding to them. This
+    is also important to understand for other languages that implement "Event Driven"
+    programming, like Visual Basic.NET and other "Visual" languages
+
+    The "Event Editor" is in the top right portion of the screen. When Alice world
+    is first opened, one event will be listed in this area. When the movie starts,
+    do "world.my method " is the method invoked by default.
+
+
+    Events Alice Detect
+
+
+    +   * When the world starts
+
+    * When a key is typed
+
+    * When the mouse is clicked on something
+
+    * While something is true
+
+    * When a variable changes
+
+    * Let the mouse move <object>
+
+    * Let the arrow keys move <subject>
+
+    * Let the mouse move the camera
+
+    * Let the mouse orient the camera
+
+
+    "Create New Event" button allows the user to choose these events.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_77_0.png)
+
+
+    Figure 6.0.1'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "Using these events allows the programmer to build user interaction into the\
+    \ movie. An object can move as directed by the keyboard or objects can be positioned\
+    \ by the mouse. In addition, certain changes in the program like a variable change\
+    \ or something becomes true or false can be used to control what is happening\
+    \ on the stage.\n\n# On Review\n\n+   - 6.0.1 Alice worlds are capable of recognizing\
+    \ certain and responding to them.\n- 6.0.3 When the movie starts, do \" is the\
+    \ method invoked by default.\n- 6.0.4 Using events allows the programmer to build\
+    \ user into the movie.\n- 6.0.5 The \" button allows the user to choose these\
+    \ events.\n\n# Lesson 6.1 - Using Events\n\nKnowing when to use an event is key\
+    \ to Alice programming. Events must be carefully planned so the event produces\
+    \ the correct responses when the program is run.\n\nThe event \"When the world\
+    \ starts\" is the event that is used by default. Every program run to date is\
+    \ part of this event. This lesson will expand to encompass other events.\n\nThere\
+    \ are keyboard events, mouse events and events that occur during program execution:\n\
+    \n+   - Events that occur during program execution.\n  - When the world starts\n\
+    \  - While something is true\n  - When a variable changes\n- Keyboard Events\n\
+    \  - When a key is typed\n  - Let the arrow keys move <subject>\n- Mouse Click\
+    \ Events\n  - Let the mouse move <object>\n  - Let the mouse move the camera\n\
+    \  - Let the mouse orient the camera\n\n“Create New Event” button allows you to\
+    \ choose these events."
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_79_0.png)
+
+
+    Figure 6.1.1
+
+
+    # # In Review
+
+
+    6.1.1 There are three categories of events:
+
+
+    6.1.2 The button allows you to choose these events.
+
+
+    6.1.3 The event is the event that is used by default.
+
+
+    # ## Lesson 6.2 Program Generated Events
+
+
+    +   * When the world starts
+
+    * While something is true
+
+    * When a variable changes
+
+
+    **When the world starts** - is the event that is generated when Alice first opens
+    a new world. This event is triggered when the play button is pressed. This is
+    the default event for every program.
+
+
+    **While something is true** - While some condition is true, perform the action(s)
+    in the called method. This will allow an event to continue as long as a condition
+    is true which gives the same effect as a loop.
+
+
+    **When a variable changes** - This event allows for calling a method every time
+    the contents of a variable changes. Monitors a variable and when it changes the
+    method for this event is triggered.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# In Review
+
+
+    6.2.1 This event is called every time the contents of a variable changes
+
+
+    6.2.2 The event is triggered when the play button is pressed.
+
+
+    6.2.3 In this event the action is performed as long as the condition evaluates
+    to true.
+
+
+    # Lesson 6.3 - Keyboard Events
+
+
+    +   - When a key is typed
+
+
+    +   - Let the arrow keys move <subject>
+
+
+    **When a key is typed** - This allows for a method to be called in response to
+    the user pressing one of the keys on the keyboard.
+
+
+    This event is valuable to allow the user to initiate some action by pressing a
+    key. Perhaps a response to a on screen prompt or cause the start of some portion
+    of the movie. The old "press any key to continue" routine.
+
+
+    **Let the arrow keys move <subject>** - This event should be used with caution.
+    An object moves under control of the arrow keys. An object may be lost while moving
+    it with the arrow keys and miss the animations that are currently running.
+
+
+    Many programs allow the user to control movement from the arrow keys. This has
+    been the prime keyboard control since the early DOS "Alien Attack" games. The
+    caution to use these keys carefully is that this is a 3D world. There are many
+    ways an object can be lost in the 3D environment. The down arrow could allow the
+    object to move below the ground and when an object disappears, the user, effectively,
+    loses control. So, the caution is that these arrows are used, it is a good idea
+    to provide a way for the user to reset or find lost objects.
+
+
+    # In Review
+
+
+    6.3.1 The event allows for a method to be called in response to the user pressing
+    one of the keys on the keyboard.
+
+
+    6.3.2 The event should be used with caution.
+
+
+    # Lesson 6.4 - Mouse Events <object>
+
+
+    +   - Let the mouse move
+
+
+    +   - Let the mouse move the camera
+
+
+    +   - Let the mouse orient the camera
+
+
+    **Let the mouse move <objects>** - This event automatically calls an internal
+    method that moves the object in a drag-and-drop manner.
+
+
+    This event allows the user to move objects around the stage. Just click on the
+    object and drag it to a new location.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'Let the mouse move the camera - This allows the mouse to “steer” the camera.
+    It will be possible to move the camera off the animations presented by the world.
+    Choosing this option allows the user to control the camera with the mouse. Allows
+    the user to move the camera to find objects or move to another area of the stage.
+
+
+    Let the mouse orient the camera - This should be used with caution. It is easy
+    to move the camera out of range of the animation and loose the effects of the
+    rest of the movie. This allows the user to change the direction in which the camera
+    is pointed by clicking and dragging the mouse.
+
+
+    In Review
+
+
+    +   6.4.1 The event automatically calls an internal Alice method that moves the
+    object in a drag-and-drop manner.
+
+
+    +   6.4.2 The event allows the mouse to “steer” the camera.
+
+
+    # ### Lesson 5.6 – Audio
+
+
+    The age of silent movies has long passed. To make movies really interesting we
+    need to add sound. Alice makes productions for sound but very few objects have
+    any sounds included. You can identify objects with sound when you place them on
+    the screen by looking at the description in dialog box that pops up when you select
+    the object.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_81_0.png)
+
+
+    Figure 6.5.1
+
+
+    Note right above the Cancel button is an entry that is titled sounds and includes
+    “MonkeyScreech”. This is the only sound available as part of this object.
+
+
+    The good news is that you can add your own sounds with two other choices when
+    you place the object in your movie. In the properties tab there are choices to
+
+
+    80'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: 'import sound or record sound for many Alice objects, including those that already
+    have sounds.
+
+
+    You can import .wav or .mp3 into your movie. When you select import you will get
+    a dialog box that will allow you to browse to your sound and import it. This can
+    be done in the properties tab or when you drag the "play sound" command to the
+    editor.
+
+
+    Recording a sound can be done if your computer has a microphone. Select record
+    sound from the properties tab or when you drag the play sound to the editor. A
+    dialog box appears that allows you to record your sound. A counter will remind
+    you how long the sound clip will.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_82_0.png)
+
+
+    Figure 6.5. 2'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_83_0.png)
+
+
+    When you see in Figure 6.5.2, we have dragged "monkey play sound" to the event
+    editor and it asks, do we want to play the screech, import a sound or record a
+    sound.
+
+
+    When the screech sound was selected the instruction appears as shown in Figure
+    6.5.3.
+
+
+    In Review
+
+
+    6.5.1 To make movies really interesting we need to add
+
+    6.5.2 You can identify objects with sound
+
+
+    6.5.3 You can add your own sounds in different ways.
+
+    6.5.4 You can import a or into your movie.
+
+
+    # Lesson 6.6 – Wait
+
+
+    The Wait instruction is designed to make the program do nothing for a specified
+    amount of time. The tile is located at the bottom of the event editor. It takes
+    one argument, the number of seconds to wait. The program will pause and do nothing
+    for that number of seconds.
+
+
+    In Review
+
+
+    6.6.1 The Wait instruction has argument(s).'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# # Lesson 6.7 - Try This\n\nThis exercise creates a space scene that uses\
+    \ the mouse to move objects, arrow keys to move the lunarLander and when the user\
+    \ hits the \"Q\" key the lunarLander blasts off.\n\n+   1. Select the Space World\n\
+    2. Place the lunarLander object in the world\n3. Place the astronaut object in\
+    \ the world\n4. world.my first world method\n   a. world set fogFarDistance to\
+    \ 75 meters\n5. In Event Window Click: Create New Event\n   a. Let the mouse move\
+    \ <objects>\n6. In Event Window Click: Create New Event\n   a. let Arrow keys\
+    \ moves <subject>\n   b. Select lunar Methods Tab: Create New Method\n7. In the\
+    \ World Methods Tab: Create New Method\n   a. Name the method blastoff\n   b.\
+    \ In the method Loop 15 times\n   c. In the method under Loop: lunarLander move\
+    \ up 0.5 meters\n   d. duration = 0.25 seconds\n8. In Event Window Click: Create\
+    \ New Event\n   a. When a key is typed\n   b. Change \"anykey\" to \"Q\"\n   c.\
+    \ Change \"nothing\" to blastoff\n\nPLAY and experiment with moving objects with\
+    \ the mouse, use the arrow keys to move the lunarLander. Then use the \"Q\" key\
+    \ to blast off the lunarLander."
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# Tutorial 7 - Classes
+
+
+    Objectives
+
+
+    +   - Explain the concept of objects and inheritance.
+
+    - Create a new method that requires a parameter.
+
+    - Create a new method for a class.
+
+    - Create a new class from an existing class.
+
+
+    # Lesson 7.0 - Overview of Classes
+
+
+    A class defines a particular kind of object. The Alice programming language has
+    classes that are predefined. These are the 3D classes found in the gallery. There
+    are classes stored in groups like Animals, People, Environment, Buildings, etc
+
+    A class is like a recipe. It is the procedure that is used to create a new instance
+    of that class. It contains all the properties, methods and functions that have
+    been assigned to class. When one of these are placed on the Alice world the program
+    is simply building object according to the rules of class. As many of the class
+    can be built as needed. Just like the recipe example, one can make many pies out
+    of a pie recipe as they can make.
+
+    A class may be made up of several classes. When we look in the Object Tree, we
+    see a plus sign (+) next to most of the objects. Clicking on this plus will expose
+    all of those classes that make up the new class of object. Just like a pie consists
+    of a recipe for crust and another for the filling and it takes both objects to
+    create the new object, most of the Alice objects are made up of several classes.
+
+
+    In Review
+
+
+    +   7.0.1 A is a recipe.
+
+    7.0.2 A class may be made up of several other
+
+    7.0.3 Clicking on that next to the object name in the object tree will expose
+    all of those classes that make up the new class of object.
+
+    7.0.4 A is a procedure that is used to create a new instance of that class.
+
+
+    # Lesson 7.1 - Objects
+
+
+    When adding an instance of a class to the Alice world it already knows how to
+    do things like move, turn, say, roll, etc.. A previous lesson covered how to write
+    new methods for a class to make it do that the original methods it came with.
+    Like the soldier in Lesson 4, we gave object a march method that simulated the
+    toy soldier marching across the screen. If additional toy soldiers were created
+    on the screen, he would be the only one with the ability to march unless all were
+    given the same march method. Since usability is the key in object oriented programming,
+    Alice has a fix for this. Just like new instances are created of'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'each class, each inherits all of the properties, methods and functions of the
+    original class. If a method is created for a new instance of the class, instance
+    may be saved as a new class and the new class will "inherit" all of the parameters,
+    methods and functions of the original class as well as the new methods, parameters
+    and functions just created for the new class.
+
+
+    The skater has used in some of the previous exercises and when she skates, kind
+    of moves across the ice without simulating all of the leg and arm movements generally
+    associated with a skating motion. Most objects have a move that simply moves the
+    object. The penguin is an exception since he has a walk method that moves his
+    legs and arms as he moves. A prior lesson gave the toy soldier a march method.
+    If there is a car or a truck it looks better moving than an animated object like
+    people and animals but still, the wheels should turn as the vehicle moves. The
+    biplane moves forward but would be more realistic if the propeller moved also.
+
+
+    The next lesson will teach an object to do a new complex action, save it as a
+    new object so it can pass this complex action on subsequent instances of this
+    new class.
+
+
+    # Review
+
+
+    +   7.1.1 If a method is created for a new instance of the class, that instance
+    may be saved as a \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+
+    +   7.1.2 the new class will "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" all
+    of the parameters, methods and functions of the original class as well as the
+    new methods, parameters and functions just created for the new class.
+
+
+    +   7.1.3 Just like when new instances are created of each class, each inherits
+    all of the \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ and \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+    of the original class.
+
+
+    # Lesson 7.2 - Inheritance
+
+
+    When we look at all the components of the Ice Skater found in the People Gallery,
+    we find it is composed of other objects. The best way to view this is to put the
+    skater object in a world and look at the object tree.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_86_0.png)'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "There are over 30 objects that make up the IceSkater. The IceSkater object\
+    \ inherits all of the capabilities (functions, methods, properties) of all the\
+    \ other objects. Everything the foot object can do, it can do at the end of the\
+    \ right leg or the left leg. All are inherited by the IceSkater object.\n\nLook\
+    \ at all of the objects that compose the upperBody object in the IceSkater. All\
+    \ of the things that can be done by the head object are inherited from all of\
+    \ the objects that compose the head. By manipulating the properties, methods and\
+    \ functions lifelike actions can be attributed to the IceSkater object.\n\nExamine\
+    \ other objects in the gallery and you will find that all of these objects are\
+    \ made up of other object. Every property, method, and function of each of the\
+    \ objects that make up the main object are inherited by the object you place on\
+    \ your world.\n\nSo, when you add a function or method to an object and compose\
+    \ a new class of that object, all future instances of that inherits the new function\
+    \ or method.\n\n# In Review\n\n7.2.1 When we look at all the components of an\
+    \ object, we find it is composed of\n\n7.2.2 By manipulating the ________, and\
+    \ ________ other actions can be attributed to the various objects.\n\n7.2.3 When\
+    \ you add a function or method to an object and compose a new class of that object,\
+    \ all future instances of that object inherits the new function or method. ( True\
+    \ / False )\n\n# Lesson 7.3 – Class-Level Methods\n\nUsing the ice skater generate\
+    \ a new method that will simulate the more complex movements that will add realism\
+    \ to the action of skating across the pond. This requires more complex animations\
+    \ that those Pixar movies look so real. The steps of the skating action are put\
+    \ together in a sequence of motions that must be programmed into a Class-Level\
+    \ Method. Below are the steps to include in this new method.\n\n+   * Skate\n\
+    \  * Do together\n  * Move skater forward 2 meters\n    * Do in order\n      *\
+    \ slide on left leg\n      * Do in order\n        * Lift right leg and turn upper\
+    \ body forward\n      * Lower right leg and turn upper body backward"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "+   - slide on right leg\n  - Do in order\n    - Lift left leg and turn upper\
+    \ body forward\n    - Lower left leg and turn upper body backward\n\nNow it is\
+    \ time to put the plan into code. To keep this new methods small it is necessary\
+    \ to first create a slideLeft method and a slideRight method. Then incorporate\
+    \ them into the overall skate method.\n\n# Lesson 7.4 - Create a new method using\
+    \ a parameter\n\nNow, to get real fancy and add a spin method to spin the skater\
+    \ in a realistic manner. The spin method will require a parameter to tell the\
+    \ skater how many times to spin.\n\n+   1. Spin\n  - Parameter: How many times\n\
+    \  - Do in order\n    - prepare to\n      - Do together\n        - move arms up\n\
+    \        - raise and turn left leg\n    - spin the skater (how many times)\n \
+    \   - finish the spin\n      - Do together\n        - move arms down\n       \
+    \ - lower and turn left leg\n\nNow code this operation and a new instance of a\
+    \ class has been created with more functionality than the original class. It has\
+    \ all of the old attributes, methods and functions plus some new ones to make\
+    \ the skater more realistic. Now it is time to look at how these methods can be\
+    \ passed on to new instances of this class.\n\n# Lesson 7.5 - Creating a new class\n\
+    \nThe skater has been given some new capabilities and they should be captured\
+    \ to use for other skaters. This involves creating a new class of object which\
+    \ should be called \"realSkater\". This is a two step process.\n\n+   - Rename\
+    \ the iceSkater. THIS IS THE MOST IMPORTANT STEP! Save the iceSkater object with\
+    \ a different name so it does not write the methods into"
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: 'the original class. Right click on the name of the object in the object tree
+    and select rename. Select rename from the popup and then enter "realSkater" in
+    the box.
+
+
+    2. Save the new class. Right click on "realSkater" in the Object tree and select
+    save object. In the save object popup select the folder/directory where the class
+    is saved and then click the Save button.
+
+
+    The class is automatically named with the new name beginning with a capital letter
+    and a file name extension of .a2c which stands for Alice 2.
+
+
+    Now that a new class has been created, it can be used in a new world by selecting
+    Import from the File menu. This will bring this new 3D action figure into the
+    world with all of the added functionality.
+
+
+    If we want to move this new object to another copy of Alice in the Alice directory.
+    Look in the required directory for a subdirectory named Gallery. You will find
+    the .a2c file here and you can then copy it to another copy of Alice. You can
+    build a Gallery of your own objects to use and share with others.
+
+
+    # Lesson 7.6 - Character Builder
+
+
+    Note: This is only available in Alice Versions 2.2 and 2.3. It is NOT available
+    in Version 2.4. Not enough different people for your movies? The character builder
+    is the answer. Yes, build your own character. Add to the characters methods and
+    function. Then, just as we learned in this lesson, save it for use in other movies.
+    Now the characters are not super graphics but they will give you lots of flexibility
+    in characters for your movies. Where do you find this character builder? At the
+    end of the People gallery you will find a "hebuilder" and a "shebuilder". These
+    enable you to build a male or female for your movie.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_89_0.png)
+
+
+    Figure 7.6.1'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'Add the instance to your movie, this may take a few seconds. They a dialog
+    box will appear similar to Figure 7.6.2.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_90_0.png)
+
+
+    Let''s examine this dialog box and start making changes. First, give your object
+    a name and then give yourself some credit for this creation by putting your name
+    in the Created by textbox.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_90_1.png)
+
+
+    There is a group of selectors across the top. Body Changes, Face (upper -eyes,
+    nose and lower - mouth), Hair Color and lastly change Shirt, Pants and Shoes.
+    As you select options in these various selection areas, the image on the left
+    will'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: 'accordingly. There are quite a few choices so getting it right may take some
+    experimentation. I created John and came up with the person in Figure 7.5.4.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_91_0.png)
+
+
+    Figure 7.6.4
+
+
+    When you are satisfied with your person save the person to the world and get started
+    on the new methods and functions to make your character truly your creation. Each
+    person comes with inherited properties, methods and functions but get creative
+    and make up some of your own.
+
+
+    90'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_92_0.png)
+
+
+    As you can see from Figure 7.6.5 there are quite a choice of methods. Explore
+    the properties, methods and functions before adding your own.
+
+
+    # In Review
+
+
+    7.6.1 A " " and a " class enable you to build a male or female object for your
+    movie.
+
+
+    7.6.2 Each object you create from the character builder comes with properties,
+    methods and functions.
+
+
+    # Lesson 7.7 - Try This
+
+
+    Now select an object and give it added functionality. Walk, turn the wheels, whatever
+    you create give a Class new functionality and realism. After creating the “new”
+    class, don''t forget to save it with a new name. If you forget this step you will
+    change the old class and that is something that should be avoided. It is important
+    to plan each new methods and test them thoroughly before saving them to a new
+    class.
+
+
+    Place several instances of this new object in a world and write a program to use
+    this new functionality. Then import the new object into a new world to test the
+    usability of this new class. Remember, re usability is the key advantage of object
+    oriented programming.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# SECTION 2
+
+
+    This section contains some step-by-Step exercises to help the student understand
+    the concepts presented in the first section. This section contains the following
+    Step-by-Step exercises.
+
+
+    +   - Step-by-Step 1 - The Step Sisters
+
+    - Step-by-Step 2 - Billboard
+
+    - Step-by-Step 3 - 3D Text
+
+    - Step-by-Step 4 - Walk around the House
+
+    - Step-by-Step 5 - Using Random Numbers
+
+    - Step-by-Step 6 - Bi-Plane
+
+    - Step-by-Step 7 - Penguin
+
+    - Step-by-Step 8 - Spider JR
+
+    - Step-by-Step 9 - Ice Skater
+
+    - Step-by-Step 10 - Lost in Space
+
+    - Step-by-Step 11 - Japan
+
+    - Step-by-Step 12 - Animal Sounds
+
+    - Step-by-Step 13 - Cowboy
+
+    - Step-by-Step 14 - Follow the Car
+
+    - Step-by-Step 15 - Dragon''s Dance
+
+
+    Alice Exercise Topics
+
+    Answer Key for In Review Questions'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: 'Open Alice and click on Templates tab.
+
+    Select Grass World and click Open
+
+    Click on Add Objects button (green button below grass).
+
+    Select "People" from the Gallery
+
+    Click on "class aliceLiddel" and click on "Add Instance to World"
+
+    Click on "Class evilStepsister1" and click on "Add Instance to World"
+
+    Click on "Class evilStepsister2" and click on "Add Instance to World"
+
+    Click on the quad view radio button in the upper right corner of the screen. Use
+    this view to line up all three objects.
+
+    Click on the single view radio button
+
+    Click on "Done" – green button screen far right.
+
+    Select evilStepsister1 and under the methods tab select evilStepsister1.say and
+    drag to to the method editor. Click on other and Enter "Alice, Jump!", click on
+    more.. and duration 2 seconds.
+
+    Select aliceLiddel under the methods tab select aliceLiddel.move under the previous
+    statement, select UP and 1/2 meter.
+
+    Select aliceLiddel, drag the method aliceLiddel.move under the previous statement,
+    select DOWN and 1/2 meter.
+
+    Select evilStepsister2 and under the methods tab select evilStepsister2.say and
+    drag to the method editor. Click on other and Enter "Alice, Turn!", click on more..
+    and duration 2 seconds.
+
+    Select aliceLiddel and drag the method aliceLiddel.turn under the previous statement,
+    select RIGHT and 1 revolution.
+
+    Select aliceLiddel and drag the method aliceLiddel.say under the previous statement,
+    select goodbye and duration 2 seconds.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: 'Select aliceLiddel, drag the method aliceLiddel.move under the previous statement,
+    select FORWARD and 10 meters then click on more... select duration, select other,
+    click on the 3 and then click on OKAY.
+
+    PLAY the movie.'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Alice Step-By-Step 2
+
+
+    Exercise Uses:
+
+
+    +   * Select a world
+
+    * Select Make Billboard
+
+
+    **Open Alice** and select a NEW **grass world**
+
+    From the Menu Bar, select **File** then the sub menu item **Make Billboard**nThe
+    Import dialog box will appear:
+
+
+    Browse to jpg / gif / png graphic you wish to use for your billboard
+
+    Click on **Import** Button
+
+
+    Click on **Add Objects** button.
+
+    Resize and adjust the image using the controls.
+
+    PLAY'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "# Alice Step-By-Step 3\n\nExercise Uses:\n\n+   * Select a world\n* Select\
+    \ Objects\n* 3D Text\n* Methods\n  turn\n  roll\n  resize\n\nOpen Alice and select\
+    \ a NEW space world\nClick on Add Objects to display the object gallery.\nGo to\
+    \ 3D TEXT and click. A dialog box will appear:\nReplace “The quick brown fox.”\
+    \ with “Lost in Space?”\nChange the Font to Comic Sans MS\nClick on the (B) Bold\
+    \ Button\nClick on the (I) Italics Button\n\nClick on OK button.\nMove your text\
+    \ up so it is displayed on the black sky.\nDrag loop tile to the Methods Editor,\
+    \ set the loop to 5 times, do the following in the loop:\n\n+   * Methods Tab:\
+    \ Set 3D Text.turn to left 1 revolution duration 2 seconds\n* Methods Tab: Set\
+    \ 3D Text.roll to right 1 revolution\n* Methods Tab: Set 3D Text.resize to ½ (half\
+    \ as big)\n* Methods Tab: Set 3D Text.resize to 2 (twice as big)\n\nPLAY"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# Alice Step-By-Step 4\n\nExercise Uses:\n\n+   - Select a world\n- Select\
+    \ Objects\n- Single View / Quad View\n- Do in Order\n- Do Together\n- Methods\n\
+    \  - move up\n  - move down\n  - move forward\n  - move backward\n  - turn\n \
+    \ - say\n\nOpen Alice and select a NEW grass world\nGo to Buildings and put a\
+    \ FARMHOUSE on the world\nGo to People and put a Class of RandomGuy2 and a class\
+    \ of Kelly on the world.\n\nKelly may be over the RandomGuy2 so we need to:\n\
+    move Kelly to the right.\nmove the Kelly back to the front door of theing.\nmove\
+    \ the RandomGuy2 slightly to the left.\nClick on DONE.\nSelect Kelly in the object\
+    \ tree and place a command in the world event area to move her forward to stand\
+    \ next to RandomGuy2.\nThis may require some experimentation as how many meters\
+    \ she will have to move\nHave Kelly say \"Do you want to go for a walk?\"\nSelect\
+    \ RandomGuy2 in the object tree and have him respond \"OK!\"\nTest your movie.\n\
+    Insert the \"Do in order\" command before the first command in the world events\
+    \ window. Then move the commands below the structure into the \"Do in order\"\
+    \ structure.\nInsert some comments\nabove \"Kelly move\" insert comment \"Move\
+    \ people into position\"\nabove \"Kelly say\" insert comment \"Couples conversation\"\
+    \nbelow \"Kelly say\" insert comment \"Turn to walk\""
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: 'Make RandomGuy2 turn right ¼ revolution
+
+
+    Make Kelly turn right ¼ revolution
+
+    TEST – not the girl is behind the boy and needs to be by his side to walk properly.
+
+    Move girl forward ½ meter BEFORE she makes the turn.
+
+    Move the girl forward to his side AFTER she makes the turn, this will require
+    some experimentation.
+
+    Drop the "Do Together" after the turn to walk comment but before the
+
+    "RadnomGuy2 turn right"
+
+    Drag the commands into the “Do Together” structure.
+
+    RandomGuy2 turn right right
+
+    Kelly move
+
+    Kelly turn
+
+    Kelly move
+
+    TEST (note how this happens much smoother)
+
+    Create another “Do together” structure.
+
+    In the new structure place
+
+    RandomGuy2 turn right one revolution as seen by the Farmhouse (entire
+
+    Farmhouse)
+
+    Kelly turn right one revolution as seen by the Farmhouse (entire Farmhouse)
+
+    TEST
+
+    Since this is too fast fast change the duration for both objects to a duration
+    of 5
+
+    seconds.
+
+    TEST.
+
+    Save your project and name it WALK'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "# Alice Step-By-Step 5\n\nExercise Uses:\n\n+   - Select a world\n- Select\
+    \ Objects\n- Single View / Quad View\n- Variables\n- Random Numbers\n- Loop\n\
+    - If/Else (Nested)\n- Ask user for input\n- Methods\n  - move forward\n  - move\
+    \ backward\n  - turn\n\nThis lesson uses Decisions, Repetition, and Random Numbers.\n\
+    Open Alice and select the snow world\nGo to the Animal Gallery and select the\
+    \ penguin object (3) times.\nGet all three penguins to face the camera.\nUsing\
+    \ Quad View make sure they all line up.\nGenerate the code to make each penguin\
+    \ move forward one meter and then move back one meter in a loop structure that\
+    \ them perform the action two times.\nCreate a new numeric variable and name it\
+    \ selectPenguin and set value to 1\nDrag it to the line above the first \"Loop\
+    \ 2 times\" and set value = 1.\nSelect the World Object and go to Functions and\
+    \ find the function that asks \"ask the user for a number\", drag and drop over\
+    \ the 1 in the variable command you created in step 7, then set the following\
+    \ question text \"Which penguin would you like to move to 0, 1, 2?\"\nWait, re-reading\
+    \ the text: \"Which penguin would you like to move to 0, 1, 2?\"\n\nPenguin1 =\
+    \ 0; Penguin2 = 1; Penguin3 = 2\n\nSet up a \"Nested If Statement.\nDrag an If/Else\
+    \ statement up to the World Event Editor, drop right after the \"Loop 2 times\"\
+    \ statement and select \"true\".\nDrag a second If statement to the \"Else\" side\
+    \ of first If/Else statement, once again, select true.\nDrag the Loop for Penguin\
+    \ to the true side of the first If Statement.\nDrag the Loop for Penguin1 to the\
+    \ true side of the second Statement.\nDrag the Loop for Penguin2 after the Else\
+    \ in the second Statement."
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: 'Drag and Drop the selectPenguin variable to the true in the first If statement
+    and replace it and change to == and value to 0.
+
+
+    Drag and Drop the selectPenguin variable to the true in the second If statement
+    and replace it and change to == and value to 1.
+
+
+    PLAY
+
+
+    Now, let''s change this movie to have the "Three Penguin Stooges" move forward
+    and back randomly.
+
+
+    Delete or Disable the instruction that asks for a number.
+
+
+    Drag and Drop selectPenguin variable in the same place in the code set value =
+    1.
+
+
+    Set the World Object and select random number and drag to the variable instruction
+    and drop over the 1
+
+
+    Select more and set minimum = 0..
+
+
+    Select more again and set maximum = 3. This is a glitch in the random number generation.
+    You need to select a number 1 higher than the maximum number you will need.
+
+
+    Select more again and set "integer only" = true.
+
+
+    PLAY repeatedly to make sure all the penguins move.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "# Alice Step-By-Step 6\n\nExercise Uses:\n\n+   * Select a world\n* Select\
+    \ Objects\n* Events\n* Create a New Method\n* Create a New Event\n* Single View\
+    \ / Quad View\n* Methods\n  * move up\n  * move down\n  * roll\n  * move forward\n\
+    \  * say\n\nBiplane Exercise (Events):\nOpen Alice and select the Sand World (for\
+    \ a change)\nSelect the BiPlane Object - position to screen right and it should\
+    \ be less than 10 percent of width of the screen (move it back in the world)\n\
+    Go to the methods tab in the details area\nClick on “create new method\"\nNAME:flyForward\n\
+    OK\n\n> Drag Do Together to the Methods Editor\nbiplane move forward 2 meters\n\
+    \nGo to the methods tab in the details area\nClick on “create new method\"\nNAME:roll\n\
+    OK\n\n> Drag Do Together to the Methods Editor\nbiplane move forward 2 meters\n\
+    biplane roll left 1 revolution\n\nGo to the methods tab in the details area\n\
+    Click on “create new method\"\nNAME:flyUp\nOK"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: 'Drag Do Together to the Methods Editor
+
+    biplane move forward 5 meters
+
+    biplane move up 5 meters
+
+
+    Go to the top right to the Events Editor Window
+
+    Click on "Create New Event"
+
+    Select "When a key is typed"
+
+    Click on "Any Key"
+
+    Select "left"
+
+    Click on "Nothing"
+
+    Select biplane
+
+    select method flyForward
+
+    Go to the top right to the Events Editor Window
+
+    Click on "Create New Event"
+
+    Select "When a key is typed"
+
+    Click on "Any Key"
+
+    Select "up"
+
+    Click on "Nothing"
+
+    Select biplane
+
+    select method flyUp
+
+    Go to the top right to the Events Editor Window
+
+    Click on "Create New Event"
+
+    Select "When a key is typed"
+
+    Click on "Any Key"
+
+    Select "space"
+
+    Click on "Nothing"
+
+    Select biplane
+
+    select method roll
+
+
+    PLAY'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# ALICE Step-By-Step 7
+
+
+    Exercise Uses:
+
+
+    +   * Select a world
+
+    * Select Objects
+
+    * Change properties
+
+    * Proximity Functions
+
+    * Single View / Quad View
+
+    * Methods
+
+
+    move up
+
+    move down
+
+    walk
+
+    move backward
+
+    turn to face
+
+
+    PROBLEM: A penguin turns to face a hole in the ice, regardless of where the hole
+    is located. The penguin should then walk to the center of the hole and jump into
+    it, disappearing below the surface of the ice.
+
+
+    PSEUDCODE:
+
+
+    penguin turns to the hole
+
+    penguin walks distance to the center of the hole
+
+    penguin falls down into the hole
+
+
+    STEPS:
+
+
+    Create a Snow World
+
+    Add a penguin from the animals gallery
+
+    Add a Hole (circle) from the Shapes gallery
+
+    Change the color property to blue. (details panel)
+
+    Select the penguin object
+
+    Drag & Drop tile for "turn to face" method into the Methods Editor.
+
+    Select turn towards the circle object
+
+    penguin turn to face circle more...
+
+    penguin class has a custom method named "walking"
+
+    Walking x (set x = 1)
+
+    Replace the 1 set in the previous step with a call to the "penguin distance to"
+    function.
+
+    Use the functions tab in the details panel
+
+    Look in the proximity category
+
+    Make sure you select the circle object
+
+    penguin walking x = penguin distance to circle'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'To make penguin fall into the hole
+
+    move penguin down until he is below the ice (approx. 5 meters)
+
+    penguin move down 5 meters more...
+
+
+    Code in Methods Editor should look like this:
+
+
+    ```
+
+    **penguin turn to face circle more...**
+
+    ```
+
+
+    ```
+
+    penguin walking x = penguin distance to circle
+
+    penguin move down 5 meters more...
+
+    ```
+
+
+    Test your movie, make any necessary changes.
+
+    Can you improve this movie? Example: make a fish jump out of the hole and back
+    in to entice the Penguin to move to the hole.'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# Alice Step-by-Step
+
+
+    Exercise Uses:
+
+
+    +   * Select a world
+
+    * Select Objects
+
+    * Change properties
+
+    * Proximity Functions
+
+    * Single View / Quad View
+
+    * Methods
+
+
+    move toward
+
+    move down
+
+    move forward
+
+
+    This exercise creates a movie where a spider object moves to a space ship object.
+    The code moves parts of the legs in the proper sequence to simulate life--like
+    movement of the legs.
+
+
+    # Spider Jr.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_106_0.png)
+
+
+    +   * Line up Spider and Lunar lander as shown in picture 1
+
+    * Picture 2 shows the result
+
+    * Using the code provided, recreate this scene.
+
+    * The spider moves towards the lunar lander, I looped 8 times, you may have to
+    adjust this for your spacing of the two objects.
+
+    * You may need to experiment some but this simulates leg movement.'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "This is the code for Spider Jr.\n\n```\nworld.my first method ()\nNo variables\n\
+    spiderRobot turn to face lunarLander\nLoop 8 times times\nDo together\n  spiderRobot\
+    \ move amount = 1 meter target = lunarLander duration = 0.5 seconds style = abruptly\n\
+    \  Do in order\n    spiderRobot.body.backLeftLegBase.upperJoint turn forward 0.1\
+    \ revolutions duration = 0.5 seconds\n    spiderRobot.body.backLeftLegBase.upperJoint\
+    \ turn backward 0.1 revolutions duration = 0.5 seconds\n  Do in order\n    spiderRobot.body.frontRightLegBase.upperJoint\
+    \ turn forward 0.1 revolutions duration = 0.5 seconds\n    spiderRobot.body.frontRightLegBase.upperJoint\
+    \ turn backward 0.1 revolutions duration = 0.5 seconds\n  Do in order\n    spiderRobot.body.frontRightLegBase.upperJoint\
+    \ turn forward 0.1 revolutions duration = 0.5 seconds\n    spiderRobot.body.frontRightLegBase.upperJoint\
+    \ turn backward 0.1 revolutions duration = 0.5 seconds\n  Do in order\n    spiderRobot.body.backRightLegBase.upperJoint\
+    \ turn backward 0.1 revolutions\n    spiderRobot.body.backRightLegBase.upperJoint\
+    \ turn forward 0.1 revolutions\nspiderRobot say Momma! duration = 2 seconds\n\
+    ```\n\nRun the movie. Carefully observe the leg movement. Can you improve the\
+    \ action?"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# Alice Step-by-Step 9\n\nExercise Uses:\n\n+   * Select a world\n* Select\
+    \ Objects\n* Create a new Class\n* Create new methods\n* Single View / Quad View\n\
+    * Methods\n  * turn\n  * move\n\nThe Ice Skater\n\nThis exercise requires a snow\
+    \ world with the ice lake and the ice skater loaded. This illustrates how we can\
+    \ create new classes of objects after giving them new methods.\n\nComplete the\
+    \ following exercise and at the end see how to create a new class that can be\
+    \ used in other exercises.\n\n![](img/d2ba71a3d11a1090959dcfb8fe9d6290_108_0.png)\n\
+    \nAfter she skates across the ice we will execute a spin method which more closely\
+    \ simulates an ice skater spinning. Enter the following code to complete the movie.\
+    \ Note how the spin now includes the arms and legs with a more life-like motion.\n\
+    \nIceSkateWorld's Code\nCreated by: Jim Kelley\nworld\nEvents"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: 'When the world starts
+
+
+    Do:
+
+
+    world.my first method
+
+
+    Methods
+
+
+    ```
+
+    world.my first method ( )
+
+    No variables
+
+    Loop 5 times times
+
+    iceSkater.skate
+
+    iceSkater.spin howManySpins = 2
+
+    Loop 2 times times
+
+    iceSkater.skate
+
+    ```
+
+
+    iceSkater
+
+
+    Methods
+
+
+    ```
+
+    iceSkater.slideLeft ( )
+
+    No variables
+
+    Do in order
+
+    Do together
+
+    iceSkater.rightLeg turn forward .1 revolutions duration = 0.5 seconds
+
+    iceSkater.upperBody turn forward 0.01 revolutions duration = 0.5 seconds
+
+    ```
+
+
+    ```
+
+    Wait 0.5 seconds
+
+    Do together
+
+    iceSkater.rightLeg turn backward 0.1 revolutions duration = 0.5 seconds
+
+    iceSkater.upperBody turn backward 0.01 revolutions duration = 0.5 seconds
+
+    ```
+
+
+    ```
+
+    iceSkater.slideRight ( )
+
+    No variables
+
+    Do in order
+
+    Do together
+
+    iceSkater.leftLeg turn forward 0.1 revolutions duration = 0.5 seconds
+
+    iceSkater.upperBody turn forward 0.01 revolutions duration = 0.5 seconds
+
+    ```
+
+
+    ```
+
+    Wait 0.5 seconds
+
+    Do together
+
+    ```'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "```\niceSkater.leftLeg turn backward 0.1 revolutions duration = 0.5 seconds\n\
+    iceSkater.upperBody turn backward 0.01 revolutions duration = 0.5 seconds\n```\n\
+    \n```\niceSkater.skate ( )\nNo variables\n```\n\n+   Do together\n  iceSkater.move\
+    \ forward 2 meters duration = 3 seconds\nDo in order\n  iceSkater.slideLeft\n\
+    \  iceSkater.slideRight\n\n```\niceSkater.prepareToSpin ( )\nNo variables\n```\n\
+    \n+   Do together\n  iceSkater.upperBody.chest.leftShoulder.arm turn backward\
+    \ 0.5 revolutions\n  iceSkater.upperBody.chest.rightShoulder.arm turn backward\
+    \ 0.5 revolutions\n  iceSkater.leftLeg turn left 0.2 revolutions\n  iceSkater.leftLeg\
+    \ turn backward 0.25 revolutions\n\n```\niceSkater.finishSpin ( )\nNo variables\n\
+    ```\n\n+   Do together\n  iceSkater.upperBody.chest.leftShoulder.arm turn forward\
+    \ 0.5 revolutions\n  iceSkater.upperBody.chest.rightShoulder.arm turn forward\
+    \ 0.5 revolutions\n  iceSkater.leftLeg turn right 0.2 revolutions\n  iceSkater.leftLeg\
+    \ turn forward 0.25 revolutions\n\n```\niceSkater.spin ( [[123]] howManySpins\
+    \ )\nNo variables\n```\n\n+   Do in order\n  iceSkater.prepareToSpin\n  iceSkater.turn\
+    \ left howManySpins revolutions\n  iceSkater.finishSpin"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_111_0.png)
+
+
+    Now let''s rename this skater “fancyIceSkater” and save as a new object to be
+    used later. Click on iceSkater in the Object tree and select rename. Rename the
+    object right click again and save the new class in an appropriate directory.
+
+
+    Can you add the proximity function to this movie?'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# Alice Step-By-Step 10
+
+
+    Exercise Uses:
+
+
+    +   - Select a world
+
+    - Select Objects
+
+    - Single View / Quad View
+
+    - 3D Text
+
+    - Move Camera
+
+    - Change Properties
+
+
+    Open Alice and click on Templates tab.
+
+    Select Space World and click Open
+
+    From the SPACE Gallery select:
+
+
+    +   - Astronaut
+
+    - LunarLander
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_112_0.png)
+
+
+    Position them on the screen
+
+    Go to their properties and set them both:
+
+    isisShowing = False
+
+    Then, back to the Gallery and go to the 3D Text Selection and place on the screen.
+
+    Select:
+
+
+    +   - Lucida Console
+
+    - Bold
+
+    - Italics
+
+    - Text = Lost in Space
+
+    - Properties of 3D Text: Change color to Orange'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# Lost in Space
+
+
+    In the code
+
+    Wait 10 Seconds
+
+    Set the properties of the 3D Text: isShowing = False
+
+    Do Together
+
+
+    +   - Astronaut: property: isShowing = True
+
+    - LunarLander: property: isShowing = True
+
+    - Move Camera back 10 meters.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_113_0.png)'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# Alice Step-By-Step 11
+
+
+    Exercise Uses:
+
+
+    +   * Select a world
+
+    * Select Objects
+
+    * Single View / Quad View
+
+    * 3D Text
+
+    * Change Properties
+
+    * Methods
+
+
+    move camera
+
+
+    **Open Alice** and click on **Templates tab.**
+
+    Select Sand World and click Open
+
+    Go to Japan Gallery and Select:
+
+
+    dojo
+
+    Two samurai
+
+    One fandancer
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_114_0.png)
+
+
+    Using the left, right, forward, back Arrows (arrow group on the left):
+
+    Scroll left to the outside of the dojo to the sand world.
+
+
+    Place and position the Temple Object from the Gallery
+
+    Using the arrows again, go back to inside the dojo.
+
+    Select 3D Text object and make the following property changes:
+
+
+    ```
+
+    Text = JAPAN
+
+    color = red
+
+    isShowing = False
+
+    ```'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: 'Code:
+
+
+    ```
+
+    world.my.first method No parameters
+
+    No variables:
+
+    camera move left 22 meters duration=5 seconds more...
+
+    camera move right 22 meters duration=5 seconds more...
+
+    camera move backward 5 meters more...
+
+    3D Text set IsShowing to true duration=7 seconds more...
+
+    3D Text set IsShowing to false more...
+
+    3D Text set text to Welcomes You true more...
+
+    ```
+
+
+    Outside the dojo:
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_115_0.png)
+
+
+    Back inside the 3D Text appears:
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_115_1.png)
+
+
+    Then a second message appears:
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_115_2.png)'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "# Alice Step-By-Step 12\n\nExercise Uses:\n\n+   - Select a world\n- Select\
+    \ Objects\n- Single View / Quad View\n- Methods\n  - move\n  - play sound\n\n\
+    **Open Alice** and click on **Templates tab.**\nSelect Grass World and click Open\n\
+    From the Animal Gallery Select:\n\n+   - lion\n- monkey\n- mouse\n- husky\n- cat\n\
+    - bird1\n- cow\n\nAll of these objects have built in sound. Now we will create\
+    \ code to let them display their golden voices.\n\n![](img/d2ba71a3d11a1090959dcfb8fe9d6290_116_0.png)\n\
+    \nCode:"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# world.my first method
+
+
+    world.my first method *No parameters*
+
+
+    No variables
+
+
+    | bird1 | move up | 0.5 meters | more... |
+
+    |---|---|---|---|
+
+    | bird1 | move down | 0.5 meters | more... |
+
+    | bird1 | play sound bird1.chirp (0:00.700) | more... |
+
+    | cow | turn left | 0.25 revolutions | more... |
+
+    | cow | play sound cow.mooo (0:01.567) | more... |
+
+    | lion | move forward | 0.5 meters | more... |
+
+    | lion | play sound lion.lionroar (0:00.909) | more... |
+
+    | monkey | move backward | 5 meters | more... |
+
+    | monkey | play sound monkey.Monkey/Screech (0:05.351) | more... |
+
+    | husky | turn to face | husky.Bark2 (0:00.689) | more... |
+
+    | mouse | move amount = 2 meters | away from target = lion | more... |
+
+    | mouse | play sound mouse.mouseSqueak (0:00.523) | more... |
+
+    | cat | play sound cat.cat (0:00.596) | more... |
+
+
+    Do together
+
+
+    | lion | turn left | 0.25 revolutions | more... |
+
+    |---|---|---|---|
+
+    | lion | move forward | 10 meters | more... |
+
+    | lion | play sound lion.wiper (0:02.980) | more... |
+
+
+    Do in order Do together IfElse Loop While For all in order For together
+
+
+    Now Play the concert.'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "# Alice Step-By-Step 13\n\nExercise Uses:\n\n+   * Select a world\n* Select\
+    \ Objects\n* Single View / Quad View\n* Methods\n  * play sound\n    turn\n\n\
+    **Open Alice** and click on **Templates tab**.\nSelect Sand and click Open\nFrom\
+    \ the Old West Gallery Select:\nSaloon\nCowboy\n\n![](img/d2ba71a3d11a1090959dcfb8fe9d6290_118_0.png)\n\
+    \nYou will need your favorite cowboy song in an .mp3 format. The cowboy will sing\
+    \ your song and move his arms. The movement is not very sophisticated but you\
+    \ can improve on this as you improve your Alice skills\n\nCODE:"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_119_0.png)
+
+
+    You will need to coordinate the timing and duration of the cowboy''s movements
+    to go with the length of the song. This is perhaps the most difficult part of
+    creating the movie. Note that in the code, the duration of the movie is displayed.'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: "# Alice Step-By-Step 14\n\nExercise Uses:\n\n+   * Select a world\n* Select\
+    \ Objects\n* Single View / Quad View\n* Methods\n  * move\n  * turm\n\nOpen Alice\
+    \ and click on Templates tab.\nSelect Grass World and click Open\nFrom the City\
+    \ Gallery Select:\nBuildingCluster1\nBuildingCluster2\nBuildingCluster3\nBuildingCluster4\n\
+    BuildingCluster5\nChurch\n\nFrom the Vehicles Gallery Select:\nAny car, I selected\
+    \ the StationWagon for my movie.\n\n![](img/d2ba71a3d11a1090959dcfb8fe9d6290_120_0.png)"
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: 'Arrange the BuildingCluster1-5 in a row with the Church object at the end.
+    They need to be in a straight line so you will need the quad view to line them
+    up properly. My example moves the car from right to left so I put the car at the
+    right end of the line of buildings and adjusted the camera manually. Now, experiment
+    to move the car along the fronts of the buildings moving the camera to keep the
+    movement in the playing screen. This takes some experimentation to make the whole
+    movie run smoothly. I had to back up the camera as it panned the line of buildings
+    and adjust to keep the car in the movie screen.
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_121_0.png)
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_121_1.png)
+
+
+    ![](img/d2ba71a3d11a1090959dcfb8fe9d6290_121_2.png)
+
+
+    After you master this you can also add the city landscape with streets, lights,
+    etc. to make it more realistic. It is useful just to play with something simple
+    like this to learn how camera movement and object movement need to be coordinated.'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_122_0.png)'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: 'In the Object Tree Select the World Object.
+
+    Under properties select "New Variable"
+
+    Name: DragonDance
+
+    Check "make a" and select LIST from the dropdown.
+
+    Add each dragon to the list
+
+    Click on OK
+
+
+    Select tab for World Methods
+
+    Click on “Create Method”
+
+
+    Name the new method “dance"
+
+    Drag For all in Order to the methods editor.
+
+    Select expression...
+
+    Select world.Dragon.Dance
+
+    Drag the item_from_DragonDance down to the “Do Nothing"
+
+    Select turn left 1 revolution.
+
+
+    This makes the dragons turn around one revolution, one at a time
+
+
+    Now, have the Dragons move backward 5 meters, one at a time.
+
+
+    The next two steps use the For all Together tile.
+
+    Have the dragons move up and down 1 meter, all at the same time.
+
+    Have the dragons turn forward one complete revolution, all at the same time.
+
+
+    No drag the new method to the event editor “When the World starts do” to replace
+    “My First Method” with the new “dance” method.
+
+
+    Most of our movies have begun with “My first method” and then called other methods.
+    This movie demonstrates that you can begin your movie with another method as well.
+    This gives the producer more flexibility in running the movie.
+
+
+    See the code example below to check your code before running the movie.'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '![](img/d2ba71a3d11a1090959dcfb8fe9d6290_124_0.png)
+
+
+    PLAY the Movie and when it starts, the dance should begin.'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# OTHER IDEAS FOR PROJECTS
+
+
+    Alice Exercise Topics
+
+
+    If you can''t think of something for an Alice movie, here are some ideas:
+
+
+    **Favorite Movie:** Create a scene from your favorite movie.
+
+
+    **How To:** Using Alice objects illustrate how to do something.
+
+
+    **Lesson:** Teach a short lesson using Alice.
+
+
+    **Moon World:** The Space collection in the Web Gallery provide several space
+    related classes. Create your own moon world with a moon surface, astronauts, lunar
+    lander, etc.
+
+
+    **Medieval Scene:** In the Gallery there is a Medieval Collection of classes.
+    Create a world of dragons, knights, princesses and castles.
+
+
+    **Oriental Scene:** There are some oriental figures and buildings. Use them to
+    create a world of ninjas and other objects from the far east.
+
+
+    **City Scene:** Several buildings, cars, streets exist in the gallery. Use these
+    to create a city street scene.
+
+
+    **Airport Scene:** Use the airport buildings, runways and airplanes to build an
+    airport.
+
+
+    **School Scene:** There are a lot of school objects in Alice 2.2. Use them to
+    create a scene at school or in the gym.
+
+
+    **Underwater World:** create an underwater world of fishes and scuba divers.
+
+
+    **Arctic World:** Create a snow world with classes that is filled with classes
+    appropriate for this venue.
+
+
+    **Holiday Scene:** There are a number of holiday objects, create a scene for your
+    favorite holiday.'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# WORD PROBLEMS FOR ADDITIONAL EXERCISES
+
+
+    # Exercise 1:
+
+
+    Create an Alice world where a person is in a rowboat yelling "Help! while two
+    sharks circle the boat. Be sure to make the sharks circle the boat at the same
+    time. Also, be sure to change some of the default settings to control how fast
+    the sharks swim around the boat.
+
+
+    # Exercise 2:
+
+
+    Create a world that contains any object that contains a turn method. When the
+    world first begins, ask the user for the number of times they want the object
+    to spin. If that number is less than 10, then use the turn method to spin the
+    object number of times. If the number is 10 or more, the object should say "Spinning
+    more than 10 times makes me sick!"
+
+
+    # Exercise 3:
+
+
+    Create an amusement park that has several rides. Activate those rides to spin
+    or turn and have a number of people objects and other amusement activities the
+    scene. Let the mouse move the camera to show the entire park from different perspectives.
+    Use the billboard object to create signs around the park.
+
+
+    # Exercise 4:
+
+
+    Create a sea world with an island and a fish. The fish should swim around the
+    island. (Part of the fish''s body should be above the water''s surface, so you
+    can see it swimming.) The program should ask the user for the number of fish from
+    1 to 6 and that many fish should swim around the island ten (10) times.
+
+
+    # Exercise 5:
+
+
+    Create a world with an instance of the Lake Class (from the environments collection)
+    and an instance of the IceSkater class (from the people collection). Program the
+    IceSkater so she skates around in a circle on the lake. When the program starts
+    it should ask the user how many times she should circle the lake and if she should
+    jump each time she finishes a loop. The skater should circle the number of times
+    entered and jump at the end of each circle.'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# Exercise 6:
+
+
+    Create your own story that includes the following elements:
+
+
+    +   - ask the user for at least one input.
+
+    - has at least one variable.
+
+    - multiple objects move together.
+
+    - changes a property value of one or more objects.
+
+    - User interaction with the mouse, or arrow keys.'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# ANSWER KEY FOR IN REVIEW QUESTIONS
+
+
+    # LESSON 1
+
+
+    QUESTION | ANSWER
+
+
+    +   1.0.1 Method Editor
+
+
+    +   1.0.2 Properties, Methods, Functions
+
+
+    +   1.0.3 World View Window
+
+
+    +   1.0.4 True
+
+
+    +   1.0.5 Events
+
+
+    +   1.1.1 Four
+
+
+    +   1.1.2 Help, Tutorials
+
+
+    +   1.1.3 False
+
+
+    +   1.2.1 Properties, Methods, Functions
+
+
+    +   1.2.2 Methods
+
+
+    +   1.2.3 Properties
+
+
+    +   1.2.4 recipe
+
+
+    +   1.2.5 object, objects, objects
+
+
+    +   1.4.1 top, front, side
+
+
+    +   1.4.2 scroll view, zoom
+
+
+    +   1.4.3 layout
+
+
+    +   1.4.4 seven
+
+
+    +   1.5.1 storyboard
+
+
+    +   1.5.2 script
+
+
+    +   1.5.3 True
+
+
+    +   1.5.4 planning
+
+
+    +   1.6.1 outline
+
+
+    +   1.6.2 programming another language.
+
+
+    +   1.6.3 storyboarding, pseudocode'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# LESSON 2
+
+
+    # ANSWER
+
+
+    QUESTION
+
+
+    2.0.1 front, back, left, right, top, bottom
+
+
+    2.0.2 methods
+
+
+    2.0.3 six degrees of freedom
+
+
+    2.0.4 False
+
+
+    2.1.5 details
+
+
+    2.1.1 quad
+
+
+    2.1.2 center
+
+
+    2.1.3 up, down
+
+
+    2.1.4 forward, backward
+
+
+    2.1.5 right, left
+
+
+    2.2.1 primitive
+
+
+    2.2.2 right click, object tree
+
+
+    2.3.1 variable
+
+
+    2.3.2 true
+
+
+    2.3.3 four
+
+
+    2.3.4 number, boolean, object, other
+
+
+    2.4.1 mouse
+
+
+    2.4.2 syntax
+
+
+    2.4.3 function
+
+
+    2.4.4 world object
+
+
+    2.4.5 string
+
+
+    2.5.1 Do Together
+
+
+    2.5.2 specific order
+
+
+    2.5.3 Do Together
+
+
+    2.5.4 Do in order
+
+
+    2.6.1 logical
+
+
+    2.6.2 relational
+
+
+    2.6.3 three
+
+
+    2.6.4 six'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '2.6.5 boolean
+
+
+    2.7.1 billboard
+
+
+    2.7.2 GIF
+
+
+    2.7.3 PNG
+
+
+    2.7.4 file, Make Billboard
+
+
+    2.8.1 two
+
+
+    2.8.2 true
+
+
+    2.8.3 false
+
+
+    # LESSON 3
+
+
+    QUESTION ANSWER
+
+
+    3.0.1 simple, complex
+
+
+    3.0.2 two
+
+
+    3.0.3 repetition
+
+
+    3.0.4 infinite
+
+
+    3.0.5 false
+
+
+    3.1.1 loop
+
+
+    3.1.2 variable
+
+
+    3.1.3 negative number
+
+
+    3.3.1 while
+
+
+    3.3.2 pretest
+
+
+    3.3.3 true
+
+
+    3.5.1 World Object
+
+
+    3.5.2 False
+
+
+    3.5.3 True
+
+
+    3.5.4 random number
+
+
+    3.6.1 list
+
+
+    3.6.2 For all in order
+
+
+    3.6.3 For all together
+
+
+    3.7.1 array
+
+
+    3.7.2 element
+
+
+    3.7.3 asterisk (*)'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '3.7.4
+
+
+    false¹
+
+
+    3.7.5
+
+
+    array
+
+
+    # LESSON 4
+
+
+    QUESTION
+
+
+    ANSWER
+
+
+    4.0.1
+
+
+    methods
+
+
+    4.0.2
+
+
+    penguin
+
+
+    4.1.1
+
+
+    class level methods
+
+
+    4.1.2
+
+
+    class, method
+
+
+    4.1.3
+
+
+    true
+
+
+    4.4.1
+
+
+    parameter
+
+
+    4.4.2
+
+
+    argument
+
+
+    4.5.1
+
+
+    World View
+
+
+    4.5.2
+
+
+    properties, methods, functions
+
+
+    # LESSON 5
+
+
+    QUESTION
+
+
+    ANSWER
+
+
+    5.0.1
+
+
+    events
+
+
+    5.0.2
+
+
+    top right
+
+
+    5.0.3
+
+
+    world.myfirstmethod
+
+
+    5.0.4
+
+
+    interaction
+
+
+    5.0.5
+
+
+    Create New Event
+
+
+    5.1.1
+
+
+    mouse
+
+
+    keyboard
+
+
+    events that occur during program execution.
+
+
+    5.1.2
+
+
+    Create New Event
+
+
+    5.1.3
+
+
+    When the world starts
+
+
+    5.2.1
+
+
+    When a variable changes
+
+
+    5.2.2
+
+
+    When the world starts
+
+
+    5.2.3
+
+
+    While something is true
+
+
+    5.3.1
+
+
+    When a key is typed
+
+
+    5.3.2
+
+
+    Let the arrow keys move <subject>'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '5.4.1 Let the Mouse move <object>
+
+
+    5.4.2 Let the mouse move the camera
+
+
+    5.5.1 sound
+
+
+    5.5.2 by looking at the dialog box when creating the object
+
+
+    5.5.3 two
+
+
+    5.5.4 .wav, .mp3
+
+
+    5.6.1 one
+
+
+    # LESSON 6
+
+
+    QUESTION 6.0.1 class
+
+
+    6.0.2 classes
+
+
+    6.0.3 plus sign
+
+
+    6.0.4 class
+
+
+    6.1.1 new class
+
+
+    6.1.2 inherit
+
+
+    6.1.3 properties, methods, functions
+
+
+    6.2.1 other objects
+
+
+    6.2.2 properties, methods, functions
+
+
+    6.2.3 True
+
+
+    6.6.1 hebuilder, shebuilder
+
+
+    6.6.2 inherited'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Glossary of Terms
+
+
+    data elements passed to functions (often called parameters)
+
+
+    a set of indexed variables, all of the same data type.
+
+
+    evaluates to either two conditions – True or False – Yes or No – 0 or 1
+
+
+    in instances where spaces are not allowed, use camelCase to separate words. First
+    word starts with lower subsequent words begin with upper case.
+
+
+    a collection of related properties, methods and functions that are a recipe for
+    creating objects.
+
+
+    variables that are available to all instances of a class of objects.
+
+
+    sort or sort a list of items in order take one path if true or second path if.
+
+
+    detailed information about an object that has been selected in the World View
+    or the Object Tree.
+
+
+    a popup box that allows the programmer or user to select related choices.
+
+
+    each cell in an array is referred to as an element of the array
+
+
+    hiding the details of a method from the user
+
+    ecurs during the running of the Alive Move. Start, Mouse movements, Key variables
+    change etc.
+
+
+    a list of events that are controlled by programs as the world plays
+
+
+    a collection of related properties, methods and functions that are a recipe for
+    creating instances of objects.
+
+
+    the act of adding an instance of a class of objects to the World View Window
+
+
+    an ordered set of data
+
+
+    variables accessible only to the current running program code.
+
+    operators used to create True/(False) boolean.
+
+    change an object can.
+
+
+    this is what you develop for your Alice Project
+
+    group of properties that are all related and methods that can manipulate the object
+
+    upper left corner of the Alice environment lists all of the objects on the stage.\he
+    property that controls the degree of transparency of an object. measured in pixels
+    with 100% is fully opaque and 0% is invisible.
+
+    the direction of an object is facing.
+
+
+    moving the left or right without changing its position.
+
+    variables used to pass data to function.
+
+
+    data elements passed to functions (often called arguments)
+
+    evaluates the expression before entering the loop. Loop instructions may never
+    be executed.
+
+    execute once.
+
+    evaluates the expression at the end of the loop. Loop instructions are always
+    satisfied.
+
+
+    describes an object
+
+    alice selection that allows you to see true, front and top side views
+
+    evaluates two expressions and returns false or true
+
+
+    a group of instructions that are all executed without decision or repetition structures
+    in the sequence.
+
+    a 3D object has a front, back, bottom, left, side, right side.
+
+    group of pictures that tell the story line of the move.
+
+    z or more alphanumeric characters
+
+
+    the rules for creating the program structures.
+
+    at the top of the Alice world that has several icons like Play, Undo, Trash, etc.
+
+    a named memory location to hold values for the Alice program(s).
+
+    shows a view of the virtual world. Has a camera object and a lighting object that
+    may be manipulated to enhance the move.
+
+    variables used to all programs or objects that are part of the current Alice world.
+
+
+    arguments
+
+
+    array
+
+
+    boolean
+
+
+    camelCase
+
+
+    class
+
+
+    Class-level variables
+
+
+    collate
+
+
+    decision structure
+
+
+    details panel
+
+
+    dialog box
+
+
+    elements
+
+
+    encapsulation
+
+
+    event
+
+
+    events function
+
+
+    inheritance
+
+
+    instantiation
+
+
+    list
+
+
+    local variables
+
+
+    operators
+
+
+    methods editor
+
+
+    object
+
+
+    object tree
+
+
+    opacity
+
+
+    orientation
+
+
+    pan
+
+
+    parameter variables
+
+
+    parameters
+
+
+    Pre-test loop
+
+
+    Post-test loop
+
+
+    property
+
+
+    quad view
+
+
+    relational operators
+
+
+    repetition structure
+
+
+    sequence structure
+
+
+    six degrees of freedom
+
+
+    storyboarding
+
+
+    string
+
+
+    syntax
+
+
+    toolbar
+
+
+    variable
+
+
+    world view window
+
+
+    World-level variables
+
+
+    132'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# Gallery of Classes
+
+    Version 2.4.1b
+
+
+    +   Amusement Park
+
+    Ancients
+
+    Animals
+
+    Bugs
+
+    Dinosaurs
+
+    Beach
+
+    Buildings
+
+    City
+
+    Controls
+
+    Egypt
+
+    Environments
+
+    Skies
+
+    Fantasy
+
+    Faeries
+
+    Farm
+
+    Furniture
+
+    Garfield
+
+    Hawaii
+
+    Animals
+
+    Environment
+
+    People
+
+    Plants
+
+    Transportation
+
+    High School
+
+    Students and Teachers
+
+    Hololidays
+
+    Japan
+
+
+    +   Kitchen
+
+    Food
+
+    Lights
+
+    Math
+
+    Random Numbers
+
+    Medieval
+
+    Musical Instruments
+
+    Nature
+
+    Objects
+
+    Ocean
+
+    Old West
+
+    Park
+
+    People
+
+    Pilgrims
+
+    Planets
+
+    Roads and Signs
+
+    Science
+
+    SciFi
+
+    Shapes
+
+    State Park
+
+    Space
+
+    Special Effects
+
+    Sports
+
+    Vehicles
+
+    Visualizations
+
+    Create 3D Text'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# # Gallery of Classes
+
+    Version 2.3
+
+
+    Amusement Park
+
+    Ancients
+
+    Animals
+
+    Bugs
+
+    Dinosaurs
+
+
+    Kitchen
+
+    Food
+
+    Lights
+
+    Math
+
+    Medieval
+
+    Musical Instruments
+
+    Nature
+
+    Objects
+
+    Ocean
+
+    Old West
+
+    Park
+
+    People
+
+    People
+
+
+    Beach
+
+    Buildings
+
+    City
+
+    Controls
+
+    Egypt
+
+    Environments
+
+    Skies
+
+    Fantasy
+
+    Faeries
+
+    Farm
+
+    Furniture
+
+    Hawai
+
+    Haii
+
+
+    Urban
+
+    Walking People
+
+    Pilgrims
+
+    Roads and Signs
+
+    SciFi
+
+    Shapes
+
+    State Park
+
+    Space
+
+    Special Effects
+
+    Spooky
+
+    Sports
+
+    Vehicles
+
+    Visualizations
+
+    Create 3D Text
+
+
+    Animals
+
+    Environment
+
+    People
+
+    Plants
+
+    Transportation
+
+    High School
+
+    Students and Teachers
+
+    Holidays
+
+    Japan'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: 'Alice is a fairly new concept in learning programming. It puts the user into
+    a world of 3D programming but removes many of the pitfalls that discourage beginner
+    programmers.
+
+
+    Free to download, easy to use and best of all FUN! Developed by Carnegie Mellon
+    to interest younger students, young women in particular, in programming as a career.
+    Used in K-12 and at the College/University level to introduce students to programming.
+
+
+    In Alice, the programmer creates a world and then populates the world with various
+    objects. If the movie takes place in the city, it would be a world of buildings,
+    streets, signs, people, vehicles, etc.. The programmer animates objects and they
+    perform various actions as they would be done by a similiar object in the “real
+    world”. For example: a girl walks, a skater skates, jumps and twirls, a car moves
+    along a road.
+
+
+    Why study Alice? Alice is not a programming language used in business for practical
+    applications. The real purpose is to teach the principles of programming while
+    having fun. Results may not be like Halo or Hollywood, but with a little effort,
+    the beginner can produce some dramatic movies quickly.
+
+
+    Learn to use Alice by telling a story. Compose a short story and then tell this
+    story Alice. Teachers use Alice to illustrate their courses. Alice can be used
+    to teach a new language, teach a math problem, teach science, and many other courses.
+    The possibilities are endless. For some examples of how Alice has been used, there
+    are numerous YouTube videos and on other Alice related web sites.'
+  merge: -1
+  pgno: 139
