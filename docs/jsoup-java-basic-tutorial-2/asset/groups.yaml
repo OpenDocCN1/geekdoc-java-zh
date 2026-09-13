@@ -1,0 +1,1415 @@
+- md: "\n# FREE eBook\n\n# LEARNING\nJsoup\n\nFree unaffiliated eBook created from\n\
+    Stack Overflow contributors.\n\n# jsoup\n\n# Table of Contents\n\n- About ............................................................................................................................\
+    \ 1\n- Chapter 1: Getting started with Jsoup .......................................................................................\
+    \ 2\n- Remarks ...................................................................................................................................\
+    \ 2\n- JavaScript support.........................................................................................................................\
+    \ 2\n- Official website & documentation.....................................................................................................\
+    \ 2\n- Download ...................................................................................................................................\
+    \ 2\n- Versions ...................................................................................................................................\
+    \ 3\n- Examples ................................................................................................................................\
+    \ 3\n- Extract the URLs and titles of links ..........................................................................................\
+    \ 3\n- Extract full URL from partial HTML .......................................................................................\
+    \ 4\n- Extract the data from HTML document file ...................................................................................\
+    \ 4\n- Chapter 2: Formatting HTML Output ............................................................................................\
+    \ 6\n- Parameters ..........................................................................................................................\
+    \ 6\n- Remarks ...................................................................................................................................\
+    \ 6\n- Examples ................................................................................................................................\
+    \ 6\n- Display all elements as block ................................................................................................\
+    \ 6\n- Chapter 3: Logging into websites with Jsoup .......................................................................\
+    \ 8\n- Examples ................................................................................................................................\
+    \ 8\n- A simple authentication POST request with Jsoup ..........................................................\
+    \ 8\n- A more comprehensive authentication POST request with Jsoup ......................................\
+    \ 8\n- Logging with FormElement .......................................................................................\
+    \ 9\n- Chapter 4: Parsing Javascript Generated Pages ......................................................\
+    \ 11\n- Examples ..........................................................................................................................\
+    \ 11\n- Parsing Javascript Generated Page with Jsoup and HtmUnit ................................\
+    \ 11\n- Chapter 5: Selectors .......................................................................................\
+    \ 13\n- Remarks ..................................................................................................................................\
+    \ 13\n- Examples ..........................................................................................................................\
+    \ 14\n- Selecting elements using CSS selectors ................................................................\
+    \ 14\n- Extract Twitter Markup ...................................................................................\
+    \ 15\n- Chapter 6: Web crawling with Jsoup .......................................................................\
+    \ 17\n- Examples ............................................................................................................................\
+    \ 17\n- Extracting email addresses & links to other pages ................................................................\
+    \ 17\n- Extracting JavaScript data with Jsoup.......................................................................\
+    \ 17\n- Extracting all the URLs from a website using Jsoup (recursion) .......................................\
+    \ 18\n\n# Credits . 20\n\n# About\n\nYou can share this PDF with anyone you feel\
+    \ could benefit from it, downloaded the latest version from: jsoup\n\nIt is an\
+    \ unofficial and free Jsoup ebook created for educational purposes. All the content\
+    \ is extracted from Stack Overflow Documentation, which is written by many hardworking\
+    \ individuals at Stack Overflow. It is neither affiliated with Stack Overflow\
+    \ nor official Jsoup.\n\nThe content is released under Creative Commons BY-SA,\
+    \ and the list of contributors to each chapter are provided in the credits section\
+    \ at the end of this book. Images may be copyright of their respective owners\
+    \ unless otherwise specified. All trademarks and registered trademarks are the\
+    \ property of their respective company owners.\n\nUse the content presented in\
+    \ this book at your own risk; it is not guaranteed to be correct nor accurate,\
+    \ please send your feedback and corrections to info@zzzprojects.com\n\n# Chapter\
+    \ 1: Getting started with Jsoup\n\n## Remarks\n\nJsoup is a HTML parsing and data\
+    \ extraction library for Java, focused on flexibility and ease of use. It can\
+    \ be used to extract specific data from HTML pages, which is commonly known as\
+    \ \"web scraping\", as well as modify the content of HTML pages, and \"clean\"\
+    \ untrusted HTML with a whitelist of allowed tags and attributes.\n\n## JavaScript\
+    \ support\n\n**Jsoup does not support JavaScript**, and because of this, any dynamically\
+    \ generated content or content which is added to the page after page load cannot\
+    \ be extracted from the page. If you need to extract content which is added to\
+    \ the page with JavaScript, there are a few alternative options:\n\n- Use a library\
+    \ which supports JavaScript, such as Selenium, which uses an actual web browser\
+    \ to load pages, or HTMLUnit.\n- Reverse engineer how the page loads via AJAX,\
+    \ and thus, Typically pages load dynamically so you can look at the network tab\
+    \ of your browser to see where the data is loaded from.\n\n## Official website\
+    \ & documentation\n\nYou can find various Jsoup related resources at jsoup.org,\
+    \ including the Javadoc, examples in the Jsoup cookbook and JAR downloads. See\
+    \ the GitHub repository for the source code, issues, and pull requests.\n\n##\
+    \ Download\n\nJsoup is available on Maven as `org.jsoup`. If you're using Gradle\
+    \ with Android Studio, you can add it to your project by adding the following\
+    \ to your `build.gradle`:\n\n```gradle\ncompile 'org.jsoup:jsoup:1.8.3'\n```\n\
+    \nIf you're using Ant (Eclipse), add the following to your POMs section:\n\n```xml\n\
+    <dependency>\n  <groupId>org.jsoup</groupId>\n  <artifactId>jsoup</artifactId>\n\
+    \  <version>1.8.3</version>\n</dependency>\n```\n\nJsoup is also available as\
+    \ downloadable JAR for other environments.\n\n# Versions\n\n| Version | Release\
+    \ Date |\n| --- | --- |\n| 1.9.2 | 2016-05-17 |\n| 1.8.3 | 2015-08-02 |\n\n# Examples\n\
+    \n# Extract the URLs and titles of links\n\nJsoup can be used to easily extract\
+    \ all links from a webpage. In this case, we can use Jsoup to extract only specific\
+    \ links we want, in a h3 header on a page. We can also get the text of the links.\n\
+    \n```java\nDocument doc = Jsoup.connect(\"http://stackoverflow.com\").userAgent(\"\
+    Mozilla\").get();\nfor (Element e: doc.select(\".question-hyperlink\")) {\n  System.out.println(e.attr(\"\
+    abs:href\"));\n  System.out.println(e.text());\n  System.out.println();\n}\n```\n\
+    \nThis gives the following output:\n\n```\nhttp://stackoverflow.com/questions/12920296/past-5-week-calculation-in-webi-bo-4-0\n\
+    Past 5 week calculation in WEBI (BO 4-0)?\n\nhttp://stackoverflow.com/questions/3603701/how-to-get-information-about-the-visualized-elements-in-listview\n\
+    How to get information about the visualized elements in listview?\n```\n\nWhat's\
+    \ happening here:\n\n- First, we get the HTML document from the specified URL.\
+    \ This code also sets the User Agent header of the request to \"Mozilla\", so\
+    \ the website serves it as it would usually serve to browsers.\n- Then, use select(...)\
+    \ and for a loop to get all the links to Stack Overflow questions, in this case\
+    \ links which have the class question-hyperlink.\n- Print out the text of each\
+    \ link with .text() and the href of the link with attr(\"abs:href\").\n"
+  mdcn: "\n\n# 免费电子书\n\n# 学习\nJsoup\n\n一本由 Stack Overflow 贡献者创建的免费非官方电子书。\n\n# jsoup\n\
+    \n# 目录\n\n- 关于 ............................................................................................................................\
+    \ 1\n- 第 1 章：Jsoup 入门 .......................................................................................\
+    \ 2\n- 备注 ...................................................................................................................................\
+    \ 2\n- JavaScript 支持.........................................................................................................................\
+    \ 2\n- 官方网站与文档.....................................................................................................\
+    \ 2\n- 下载 ...................................................................................................................................\
+    \ 2\n- 版本 ...................................................................................................................................\
+    \ 3\n- 示例 ................................................................................................................................\
+    \ 3\n- 提取链接的 URL 和标题 ..........................................................................................\
+    \ 3\n- 从部分 HTML 中提取完整 URL .......................................................................................\
+    \ 4\n- 从 HTML 文档文件中提取数据 ...................................................................................\
+    \ 4\n- 第 2 章：格式化 HTML 输出 ............................................................................................\
+    \ 6\n- 参数 ..........................................................................................................................\
+    \ 6\n- 备注 ...................................................................................................................................\
+    \ 6\n- 示例 ................................................................................................................................\
+    \ 6\n- 将所有元素显示为块级 ................................................................................\
+    \ 6\n- 第 3 章：使用 Jsoup 登录网站 .......................................................................\
+    \ 8\n- 示例 ................................................................................................................................\
+    \ 8\n- 使用 Jsoup 进行简单的认证 POST 请求 ..........................................................\
+    \ 8\n- 使用 Jsoup 进行更全面的认证 POST 请求 ...................................... 8\n- 使用\
+    \ FormElement 登录 .......................................................................\
+    \ 9\n- 第 4 章：解析 JavaScript 生成的页面 ......................................................\
+    \ 11\n- 示例 ..........................................................................................................................\
+    \ 11\n- 使用 Jsoup 和 HtmUnit 解析 JavaScript 生成的页面 ................ 11\n- 第 5 章：选择器\
+    \ ....................................................................... 13\n\
+    - 备注 ..................................................................................................................................\
+    \ 13\n- 示例 ..........................................................................................................................\
+    \ 14\n- 使用 CSS 选择器选择元素 ................................................................\
+    \ 14\n- 提取 Twitter 标记 ...................................................................................\
+    \ 15\n- 第 6 章：使用 Jsoup 进行爬虫 .......................................................................\
+    \ 17\n- 示例 ............................................................................................................................\
+    \ 17\n- 提取电子邮件地址及指向其他页面的链接 ................................................................\
+    \ 17\n- 使用 Jsoup 提取 JavaScript 数据.......................................................................\
+    \ 17\n- 使用 Jsoup 从网站中提取所有 URL（递归） ....................................... 18\n\
+    \n# 致谢 . 20\n\n# 关于\n\n你可以将此 PDF 分享给任何你认为能从中受益的人，最新版本可以从此处下载：jsoup\n\n这是一本为了教学目的而创建的非官方免费的\
+    \ Jsoup 电子书。所有内容均提取自 Stack Overflow 文档，这些文档由 Stack Overflow 的许多辛勤工作的人士编写。它既不属于\
+    \ Stack Overflow 附属，也不是 Jsoup 的官方出品。\n\n内容根据 Creative Commons BY-SA 协议发布，每个章节的贡献者列表在书末致谢部分提供。除非另有说明，图像版权可能归其所有者所有。所有商标和注册商标均为各自所有公司的财产。\n\
+    \n使用书中呈现的内容风险需自负；我们不保证其正确或准确，请将您的反馈和修正发送至 info@zzzprojects.com\n\n# 第 1 章：Jsoup\
+    \ 入门\n\n## 备注\n\nJsoup 是一个用于 Java 的 HTML 解析和数据提取库，侧重于灵活性和易用性。它可以从 HTML 页面中提取特定数据（通常被称为“网络爬虫”），还可以修改\
+    \ HTML 页面的内容，并使用允许的标签和属性白名单来“清理”不可信的 HTML。\n\n## JavaScript 支持\n\n**Jsoup 不支持\
+    \ JavaScript**，正因如此，任何动态生成的内容或添加到页面的内容都无法被提取。如果你需要提取通过 JavaScript 添加到页面的内容，有几种替代方案：\n\
+    \n- 使用支持 JavaScript 的库，例如 Selenium 或 HtmUnit，它们使用真实的浏览器来加载页面。\n- 反向工程通过 AJAX 加载页面，因此你可以查看浏览器的网络标签查看数据来自哪里。\n\
+    \n## 官方网站与文档\n\n你可以在 jsoup.org 找到各种 Jsoup 相关资源，包括 Javadoc、Jsoup 食谱以及 JAR 下载。\n\
+    \n## 下载\n\nJsoup 可以在 Maven 上作为 `org.jsoup` 获取。如果你在 Android Studio 中使用 Gradle，可以通过在\
+    \ `build.gradle` 中添加以下内容加入项目：\n\n```gradle\ncompile 'org.jsoup:jsoup:1.8.3'\n\
+    ```\n\n如果你在使用 Ant (Eclipse)，请在 POM 部分添加以下内容：\n\n```xml\n<dependency>\n  <groupId>org.jsoup</groupId>\n\
+    \  <artifactId>jsoup</artifactId>\n  <version>1.8.3</version>\n</dependency>\n\
+    ```\n\nJsoup 也可以作为下载的 JAR 用于其他环境。\n\n# 版本\n\n| 版本 | 发布日期 |\n| --- | --- |\n| 1.9.2\
+    \ | 2016-05-17 |\n| 1.8.3 | 2015-08-02 |\n\n# 示例\n\n# 提取链接的 URL 和标题\n\nJsoup 可以轻松从网页提取所有链接。在这种情况下，我们可以使用\
+    \ Jsoup 提取我们需要的特定链接，位于页面上的 h3 Header。我们还可以获取链接的文本。\n\n```java\nDocument doc =\
+    \ Jsoup.connect(\"http://stackoverflow.com\").userAgent(\"Mozilla\").get();\n\
+    for (Element e: doc.select(\".question-hyperlink\")) {\n  System.out.println(e.attr(\"\
+    abs:href\"));\n  System.out.println(e.text());\n  System.out.println();\n}\n```\n\
+    \n这得到了以下输出：\n\n```\nhttp://stackoverflow.com/questions/12920296/past-5-week-calculation-in-webi-bo-4-0\n\
+    Past 5 week calculation in WEBI (BO 4-0)?\n\nhttp://stackoverflow.com/questions/3603701/how-to-get-information-about-the-visualized-elements-in-listview\n\
+    How to get information about the visualized elements in listview?\n```\n\n发生了什么：\n\
+    \n- 首先，我们从指定的 URL 获取 HTML 文档。这段代码还将请求的 User Agent Header 设置“Mozilla”，这样网站就会像往常向浏览器那样提供内容。\n\
+    - 然后，使用 `select(...)` 和 `for` 循环获取所有 Stack Overflow 问题的链接，在本例中具有 `question-hyperlink`\
+    \ 类的链接。\n 使用 使用 `.text()` 输出每个链接的文本，并使用 `.attr(\"abs:href\")` 输出链接的 href。\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # FREE eBook
+
+
+    # LEARNING
+
+    Jsoup
+
+
+    Free unaffiliated eBook created from
+
+    Stack Overflow contributors.
+
+
+    # #jsoup'
+  - '[PAGE 1]
+
+
+    # # Table of Contents
+
+
+    +   About ............................................................................................................................
+    1
+
+
+    +   Chapter 1: Getting started with Jsoup .......................................................................................
+    2
+
+
+    +   Remarks ...................................................................................................................................
+    2
+
+
+    +   JavaScript support.........................................................................................................................
+    2
+
+
+    +   Official website & documentation.....................................................................................................
+    2
+
+
+    +   Download ...................................................................................................................................
+    2
+
+
+    +   Versions ...................................................................................................................................
+    3
+
+
+    +   Examples ................................................................................................................................
+    3
+
+
+    +   Extract the URLs and titles of links ..........................................................................................
+    3
+
+
+    +   Extract full URL from partial HTML .......................................................................................
+    4
+
+
+    +   Extract the data from HTML document file ...................................................................................
+    4
+
+
+    +   Chapter 2: Formatting HTML Output ............................................................................................
+    6
+
+
+    +   Parameters ..........................................................................................................................
+    6
+
+
+    +   Remarks ...................................................................................................................................
+    6
+
+
+    +   Examples ................................................................................................................................
+    6
+
+
+    +   Display all elements as block ................................................................................................
+    6
+
+
+    +   Chapter 3: Logging into websites with Jsoup .......................................................................
+    8
+
+
+    +   Examples ................................................................................................................................
+    8
+
+
+    +   A simple authentication POST request with Jsoup ..........................................................
+    8
+
+
+    +   A more comprehensive authentication POST request with Jsoup ......................................
+    8
+
+
+    +   Logging with FormElement .......................................................................................
+    9
+
+
+    +   Chapter 4: Parsing Javascript Generated Pages ......................................................
+    11
+
+
+    +   Examples ..........................................................................................................................
+    11
+
+
+    +   Parsing Javascript Generated Page with Jsoup and HtmUnit ................................
+    11
+
+
+    +   Chapter 5: Selectors .......................................................................................................
+    13
+
+
+    +   Remarks ..................................................................................................................................
+    13
+
+
+    +   Examples ..........................................................................................................................
+    14
+
+
+    +   Selecting elements using CSS selectors ................................................................
+    14
+
+
+    +   Extract Twitter Markup ...................................................................................................
+    15
+
+
+    +   Chapter 6: Web crawling with Jsoup .......................................................................
+    17'
+  - '[PAGE 2]
+
+
+    Examples ............................................................................................................................
+    17
+
+
+    Extracting email adresses & links to other pages ................................................................
+    17
+
+
+    Extracting JavaScript data with Jsoup.......................................................................
+    17
+
+
+    Extracting all the URLs from a website using Jsoup (recursion) .......................................
+    18
+
+
+    # Credits . 20'
+  - '[PAGE 3]
+
+
+    # About
+
+
+    You can share this PDF with anyone you feel could benefit from it, downloaded
+    the latest version from: jsoup
+
+
+    It is an unofficial and free Jsoup ebook created for educational purposes. All
+    the content is extracted from Stack Overflow Documentation, which is written by
+    many hardworking individuals at Stack Overflow. It is neither affiliated with
+    Stack Overflow nor official Jsoup.
+
+
+    The content is released under Creative Commons BY-SA, and the list of contributors
+    to each chapter are provided in the credits section at the end of this book. Images
+    may be copyright of their respective owners unless otherwise specified. All trademarks
+    and registered trademarks are the property of their respective company owners.
+
+
+    Use the content presented in this book at your own risk; it is not guaranteed
+    to be correct nor accurate, please send your feedback and corrections to info@zzzprojects.com'
+  - "[PAGE 4]\n\n# # Chapter 1: Getting started with Jsoup\n\n# ## Remarks\n\nJsoup\
+    \ is a HTML parsing and data extraction library for Java, focused on flexibility\
+    \ and ease of use. It can be used to extract sepecific data from HTML pages, which\
+    \ is commonly known as \"web scraping\", as well as modify the content of HTML\
+    \ pages, and \"clean\" untrusted HTML with a whitelist of allowed tags and attributes.\n\
+    \n# ## JavaScript support\n\n**Jsoup does not support JavaScript**, and because\
+    \ of this, any dynamically generated content or content which is added to the\
+    \ page after page load cannot be extracted from the page. If you need to extract\
+    \ content which is added to the page with JavaScript, there are a few alternative\
+    \ options:\n\n+   - Use a library which supports JavaScript, such as Selenium,\
+    \ which uses an actual web browser to load pages, or HTMLUnit.\n- Reverse engineer\
+    \ how the page loads it via AJAX, and thus, Typically, pages which load data dynamically\
+    \ so you can look at the network tab of your browser's developer tools to see\
+    \ where the data is being loaded from, and then use those URLs in your code. See\
+    \ [how to scrape AJAX pages]() for more details.\n\n# ## Official website & documentation\n\
+    \nYou can find various Jsoup related resources at [jsoup.org](https://jsoup.org/),\
+    \ including the [Javadoc](https://jsoup.org/javadoc/), examples in the [Jsoup\
+    \ cookbook](https://jsoup.org/cookbook/) and [JAR downloads](https://jsoup.org/download/).\
+    \ See [the GitHub repository](https://github.com/jsoup/jsoup) for the source code,\
+    \ issues, and pull requests.\n\n# ## Download\n\nJsoup is available on Maven as\
+    \ `org.jsoup:jsoup`. If you're using Gradle with Android Studio), you can add\
+    \ it to your project by adding the following to your `build.gradle` dependencies:\n\
+    \n```\ncompile 'org.jsoup:jsoup:1.8.3'\n```\n\nIf you're using Ant (Eclipse),\
+    \ add the following to your POMs dependencies section:\n\n```\n<dependency>\n\
+    <!-- jsoup HTML parser library @ http://jsoup.org/ -->\n  <groupId>org.jsoup</groupId>\n\
+    \  <artifactId>jsoup</artifactId>\n  <version>1.8.3</version>\n</dependency>\n\
+    ```"
+  - "[PAGE 5]\n\n```\n</dependency>\n```\n\nJsoup is also available as downloadable\
+    \ JAR for other environments.\n\n# Versions\n\n| Version | Release Date |\n| ---\
+    \ | --- |\n| 1.9.2 | 2016-05-17 |\n| 1.8.3 | 2015-08-02 |\n\n# Examples\n\n# Extract\
+    \ the URLs and titles of links\n\nJsoup can be used to easily extract all links\
+    \ from a webpage. In this case, we can use Jsoup to extract only specific links\
+    \ we want, in a h3 header on a page. We can also get the text of the links.\n\n\
+    ```\nDocument doc = Jsoup.connect(\"http://stackoverflow.com\").userAgent(\"Mozilla\"\
+    ).get();\nfor (Element e: doc.select(\"*.question-hyperlink\")) {\n  System.out.println(e.attr(\"\
+    abs:href\"));\n  System.out.println(e.text());\n  System.out.println();\n}\n```\n\
+    \nThis gives the following output:\n\n```\nhttp://stackoverflow.com/questions/12920296/past-5-week-calculation-in-webi-bo-4-0\n\
+    Past 5 week calculation in WEBI (BO 4-0)?\n\nhttp://stackoverflow.com/questions/3603701/how-to-get-information-about-the-visualized-elements-in-listview\n\
+    How to get information about the visualized elements in listview?\n\n...]\n```\n\
+    \nWhat's happening here:\n\n+   * First, we get the HTML document from the specified\
+    \ URL. This code also sets the User Agent header of the request to \"Mozilla\"\
+    , so the website serves it would usually serve to browsers.\n* Then, use select(...)\
+    \ and for a loop to get all the links to Stack Overflow questions, in this case\
+    \ links which have the class question-hyperlink.\n* Print out the text of each\
+    \ link with .text() and the href of the link with attr(\"abs:href\"). In this"
+- md: "\ncase, we use abs: to get the absolute URL, ie. with the domain and protocol\
+    \ included.\n\n# Extract full URL from partial HTML\n\nSelecting only the attribute\
+    \ value of a link:href will return the relative URL.\n\n```\nString bodyFragment\
+    \ =\n  <div<a href=\"/documentation\">Stack Overflow Documentation</a></</div>>;\n\
+    \nDocument doc = Jsoup.parseBodyFragment(bodyFragment);\nString link = doc\n \
+    \ .select(\"div > a\")\n  .first()\n  .attr(\"href\");\n\nSystem.out.println(link);\n\
+    ```\n\n# Output\n\n```\n/documentation\n```\n\nBy passing the base URI into the\
+    \ parse method and using the absUrl method instead of attr, we can extract the\
+    \ full URL.\n\n```\nDocument doc = Jsoup.parseBodyFragment(bodyFragment, \"http://stackoverflow.com\"\
+    );\n\nString link = doc\n  .select(\"div > a\")\n  .first()\n  .absUrl(\"href\"\
+    );\n\nSystem.out.println(link);\n```\n\n# Output\n\n```\nhttp://stackoverflow.com/documentation\n\
+    ```\n\n# Extract the data from HTML document file\n\nJsoup can be used to manipulate\
+    \ or extract data from a file on local that contains HTML. filePath is a path\
+    \ on disk. ENCODING is desired Charset Name e.g. \"Windows-31J\". It is optional.\n\
+    \n```\n// load file\nFile inputFile = new File(filePath);\n// parse file as HTML\
+    \ document\nDocument doc = Jsoup.parse(filePath, ENCODING);\n// select element\
+    \ by \"a\"\nElements elements = doc.select(\"a\");\n```\n\nGetting Started with\
+    \ Jsoup online: https://rtptutorial.com/jsoup/topic/297/getting-started-with-\n\
+    \nhttps://rtptutorial.com/\n\n# jsoup\n\n# Chapter 2: Formatting HTML Output\n\
+    \n# Parameters\n\n| Parameter | Detail |\n| --- | --- |\n| boolean outline() |\
+    \ Get if outline mode is enabled. Default is false. If enabled, the HTML output\
+    \ methods will consider all tags as block. |\n| Document.OutputSettings outline(boolean)\
+    \ | Enable or disable HTML outline mode. |\n\n# Remarks\n\n+ * Jsoup 1.9.2 API\n\
+    \n# Examples\n\nDisplay all elements as block\n\nBy default, Jsoup will display\
+    \ only block-level elements with a trailing line break. Inline elements are not\
+    \ displayed without a break.\n\nGiven a body fragment, with inline elements:\n\
+    \n```\n<select name=\"menu\">\n  <option value=\"foo\">foo</option>\n  <option\
+    \ value=\"bar\">bar</option>\n</select>\n```\n\nPrinting with Jsoup:\n\n```\n\
+    Document doc = Jsoup.parse(html);\nSystem.out.println(doc.html());\n```\n\nResults\
+    \ in:\n\n```\n<html>\n<head></head>\n<body>\n  <select name=\"menu\">\n    <option\
+    \ value=\"foo\">foo</option>\n    <option value=\"bar\">bar</option>\n  </select>\n\
+    </body>\n</</html>\n```\n\nTo display the output with each element treated as\
+    \ a block element, the outline option has to be enabled on the document's OutputSettings.\n\
+    \n```\nDocument doc = Jsoup.parse(html);\ndoc.outputSettings().outline(true);\n\
+    System.out.println(doc.html());\n```\n\n# Output\n\n```\n<html>\n<head></head>\n\
+    <body>\n<select name=\"menu\">\n<option value=\"foo\">foo</option>\n<option value=\"\
+    bar\">bar</option>\n</select>\n</body>\n</</html>\n```\n\nSource: Jsoup - Formatting\
+    \ the <option> elements\n\nRead Formatting HTML Output online: https://riptutorial.com/jsoup/topic/5954/formatting-html-output\n\
+    \n# # Chapter 3: Logging into websites with Jsoup\n\n# Examples\n\n# A simple\
+    \ authentication POST request with Jsoup\n\nA simple POST request with authentication\
+    \ data is demonstrated below, note that the username and password field will vary\
+    \ depending on the website:\n\n```\nfinal String USER_AGENT = \"Mozilla/5.0 (Windows\
+    \ NT 10.0; WOW64) AppleWebKit/537.36 (HTML, like Gecko) Chrome/51.0.2704.103 Safari/537.536\"\
+    ;\nJsoup.connect(\"http://website.com/loginUrl\")\nConnection.Response loginResponse\
+    \ = Jsoup.userAgent(USER_AGENT)\n    .data(\"username\", \"yourUsername\")\n \
+    \   .data(\"password\", \"yourPassword\")\n    .method(Method.POST)\n    .execute();\n\
+    ```\n\n# A comprehensive authentication POST request with Jsoup\n\nMost websites\
+    \ require a much more complicated process than the one demonstrated above.\n\n\
+    Common steps for logging into a website:\n\n+ 1. Get the unique cookie from the\
+    \ initial login form.\n2. Inspect the login form to see what the destination url\
+    \ is for the authentication request\n3. Parse the login form to check for any\
+    \ security token that needs to be sent along with username and password.\n4. Send\
+    \ the request.\n\nBelow is an example used in this example which will log you\
+    \ into the GitHub website\n\n```\n// Constants sent by server\nfinal String USER_AGENT\
+    \ = \"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36,\nlike Gecko) Chrome/51.0.2704.103\
+    \ Safari/537.536\";\nfinal String LOGIN_FORM_URL = \"https://github.com/login\"\
+    ;\nfinal String LOGIN_ACTION_URL = \"https://github.com/session\";\nfinal String\
+    \ USER = \"yourusername\";\nfinal String PASSWORD = \"yourPassword\";\n\n// Go\
+    \ to login and grab cookies sent by server\nConnection.Response loginForm = Jsoup.connect(LOGIN_FORM_URL)\n\
+    \    .method(Connection.METHOD)\n    .userAgent(USER_AGENT)\n    .execute();\n\
+    \nDocument loginDoc = loginForm.parse(); // this is the document containing html\n\
+    HashMap<String, String> cookies = new HashMap<>(loginDoc.cookies()); // save the\
+    \ cookies\nto be passed on next request\n```\n\n```\n// Prepare login credentials\n\
+    String authToken = loginDoc.select(\"#login > form div:nth-child(1)\");\n```\n\
+    \n```\nHashMap<String, String> formData = new HashMap<>();\nformData.put(\"commit\"\
+    , \"Sign in\");\nformData.put(\"utf-8\", \"e2 9c 93\");\nformData.put(\"login\"\
+    , USERNAME);\nformData.put(\"password\", PASSWORD);\nformData.put(\"authenticity_token\"\
+    , authToken);\n```\n\n```\n// Now send the form for login\nConnection.Response\
+    \ home = Jsoup.connect(LOGIN_ACTION_URL)\n    .cookies(cookies)\n    .data(formData)\n\
+    \    .method(Method.POST)\n    .userAgent(USER_AGENT)\n    .execute();\n```\n\n\
+    ```\nSystem.out.println(home.html());\n```\n\n# Logging with FormElement\n\nIn\
+    \ this example, we will log you into the GitHub website using the FormElement\
+    \ class. A ready Connection is built when invoking FormElement#submit. All we\
+    \ have to do is complete this connection with additional headers (cookies, user-agent)\
+    \ and execute it.\n\n```java\npublic static void checkElement(String name, Element\
+    \ elem) {\n    if (elem == null) {\n        throw new RuntimeException(\"Unable\
+    \ to find \" + name);\n    }\n}\n```\n\nRead Logging into websites with Jsoup\
+    \ online: https://riptutorial.com/jsoup/topic/4631/logging-into-websites\n\n#\
+    \ Chapter 4: Parsing Javascript Generated Pages\n\n# Examples\n\nParsing JavaScript\
+    \ Generated Page with Jsoup and HtmUnit\n\npage.html - source code\n\n```\n<html>\n\
+    <head>\n  <script src=\"loadData.js\"></script>\n</head>\n<body onload=\"loadData()\"\
+    >\n  <div class=\"container\">\n    <table id=\"data\" border=\"1\">\n      <tr>\n\
+    \        <th>col1</th>\n        <th>col2</th>\n      </tr>\n    </table>\n  </table>\n\
+    </body>\n</html>\n```\n\n```\n\nloadData.js\n\n```\n// append rows and cols to\
+    \ table.data in page.html\nfunction loadData() {\n  data = document.getElementById(\"\
+    data\");\n  for (var row = 0; row < 2; row++) {\n    var tr = document.createElement(\"\
+    tr\");\n    for (var col = 0; col < 2; col++) {\n      td = document.createElement(\"\
+    td\");\n      td.appendChild(document.createTextNodeNode(\".\" + col));\n    \
+    \  tr.appendChild(td);\n    }\n    data.appendChild(tr);\n  }\n}\n```\n```\n\n\
+    page.html when loaded to browser\n\n| Col1 | Col2 |\n| --- | --- |\n| 0.0 | 0.1\
+    \ |\n| 1.0 | 1.1 |\n\nUsing jsoup to parse page.html for col data\n"
+  mdcn: "\n在这种情况下，我们使用 `abs:` 来获取绝对 URL，即包含域名和协议的 URL。\n\n# 从部分 HTML 中提取完整 URL\n\n\
+    仅选择链接的 `href` 属性值将返回相对 URL。\n\n```\nString bodyFragment =\n  <div<a href=\"/documentation\"\
+    >Stack Overflow Documentation</a></</div>>;\n\nDocument doc = Jsoup.parseBodyFragment(bodyFragment);\n\
+    String link = doc\n  .select(\"div > a\")\n  .first()\n  .attr(\"href\");\n\n\
+    System.out.println(link);\n```\n\n# 输出\n\n```\n/documentation\n```\n\n通过将基础 URI\
+    \ 传递给 `parse` 方法并使用 `absUrl` 方法代替 `attr`，我们可以提取完整的 URL。\n\n```\nDocument doc =\
+    \ Jsoup.parseBodyFragment(bodyFragment, \"http://stackoverflow.com\");\n\nString\
+    \ link = doc\n  .select(\"div > a\")\n  .first()\n  .absUrl(\"href\");\n\nSystem.out.println(link);\n\
+    ```\n\n# 输出\n\n```\nhttp://stackoverflow.com/documentation\n```\n\n# 从 HTML 文档文件中提取数据\n\
+    \nJsoup 可用于操作或从本地包含 HTML 的文件中提取数据。`filePath` 是磁盘上的路径。`ENCODING` 是期望的字符集名称，例如 \"\
+    Windows-31J\"。它是可选的。\n\n```\n// 加载文件\nFile inputFile = new File(filePath);\n//\
+    \ 将文件解析为 HTML 文档\nDocument doc = Jsoup.parse(filePath, ENCODING);\n// 通过 \"a\"\
+    \ 选择元素\nElements elements = doc.select(\"a\");\n```\n\n在线开始使用 Jsoup: [https://rtptutorial.com/jsoup/topic/297/getting-started-with-\n\
+    \nhttps://rtptutorial.com/\n\n# jsoup\n\n# 第 2 章：格式化 HTML 输出\n\n# 参数\n\n| 参数 |\
+    \ 详情 |\n| --- | --- |\n| boolean outline() | 获取是否启用了大纲模式。默认是 false。如果启用，HTML 输出方法将认为所有标签均为块级元素。\
+    \ |\n| Document.OutputSettings outline(boolean) | 启用或禁用 HTML 大纲模式。 |\n\n# 备注\n\
+    \n+ * Jsoup 1.9.2 API\n\n# 示例\n\n将所有元素显示为块级元素\n\n默认情况下，Jsoup 将仅显示带有尾部换行符的块级元素。内联元素在不换行的情况下不会显示。\n\
+    \n给定一个包含内联元素的体片段：\n\n```\n<select name=\"menu\">\n  <option value=\"foo\">foo</option>\n\
+    \  <option value=\"bar\">bar</option>\n</select>\n```\n\n使用 Jsoup 打印：\n\n```\n\
+    Document doc = Jsoup.parse(html);\nSystem.out.println(doc.html());\n```\n\n结果为：\n\
+    \n```\n<html>\n<head></head>\n<body>\n  <select name=\"menu\">\n    <option value=\"\
+    foo\">foo</option>\n    <option value=\"bar\">bar</option>\n  </select>\n</body>\n\
+    </</html>\n```\n\n要以将每个元素都视为块级元素的方式显示输出，必须在文档的 `OutputSettings` 上启用 `outline`\
+    \ 选项。\n\n```\nDocument doc = Jsoup.parse(html);\ndoc.outputSettings().outline(true);\n\
+    System.out.println(doc.html());\n```\n\n# 输出\n\n```\n<html>\n<head></head>\n<body>\n\
+    <select name=\"menu\">\n<option value=\"foo\">foo</option>\n<option value=\"bar\"\
+    >bar</option>\n</select>\n</body>\n</</html>\n```\n\n来源：Jsoup - 格式化 <option> 元素\n\
+    \n在线阅读格式化 HTML 输出：[https://riptutorial.com/jsoup/topic/5954/formatting-html-output\n\
+    \n# # 第 3 章：使用 Jsoup 登录网站\n\n# 示例\n\n# 使用 Jsoup 进行简单的身份验证 POST 请求\n\n下面演示了一个带有身份验证数据的简单\
+    \ POST 请求，注意，带有身份验证数据的简单 POST 请求如下，注意此请求取决于网站：\n\n```\nfinal String USERAGENT\
+    \ = \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like\
+    \ Gecko) Chrome/91.0.4472.124 Safari/537.36\";\nString LOGIN_URL = \"https://example.com/login\"\
+    ;\nString body = \"username=password=password\";\nDocument doc = Jsoup.parse(body);\
+    \ // 此处仅为演示\n// 实际应使用：\n// Connection res = Jsoup.post(LOGIN_URL, body);\n```\n\
+    \n# 带有身份验证数据的简单 POST 请求\n\n下面演示了一个带有身份验证数据的简单 POST 请求，注意此请求取决于网站：\n\n```java\n\
+    // 示例：使用 Jsoup 发送身份验证 POST 请求\nString login_URL = \"https://example.com/login\"\
+    ;\nMap<String, String> formData = new HashMap<>();\nformData.put(\"username\"\
+    , \"myuser\");\nformData.put(\"password\", \"mypass\");\n\nConnection res = Jsoup.post(login_URL,\
+    \ formData);\nDocument doc = res.parse();\n```\n\n# 使用 Jsoup 复杂的 POST 请求\n\n大多数网站的身份验证过程比上述的要复杂。\n\
+    \n登录网站的常见步骤：\n\n1. 获取初始请求的 cookie\n2. 检查表单\n3. 解析表单以查看需要随请求发送的安全 token\n4. 发送请求。\n\
+    \n下面是一个使用 Jsoup 处理 cookie 的示例：\n\n```\nMap<String, String> cookies = new HashMap<>();\n\
+    Connection conn = Jsoup.connect(LOGIN_URL);\nresponse = conn.execute();\ncookies\
+    \ = response.cookies();\n\nMap<String, String> formData = new HashMap<>();\nformData.put(\"\
+    username\", \"myuser\");\nformData.put(\"password\", \"mypass\");\nformData.put(\"\
+    authenticity_token\", authToken);\n\nConnection res = Jsoup.connect(ACTION_URL)\n\
+    \    .cookies(cookies)\n    .data(formData)\n    .method(Method.POST)\n    .execute();\n\
+    ```\n\n# 登录 FormElement\n\n在本示例中，我们将使用 `FormElement` 类登录网站。\n\n```java\npublic\
+    \ static void checkElement(String name, Element elem) {\n    if (elem == null)\
+    \ {\n        throw new RuntimeException(\"无法找到 \" + name);\n    }\n}\n```\n\n\
+    在线阅读登录网站：[https://riptutorial.com/jsoup/topic/4631/logging-into-websites\n\n#\
+    \ 第 4 章：解析 JavaScript 生成的页面\n\n# 示例\n\n使用 Jsoup 和 HtmUnit 解析 JavaScript 生成的页面\n\
+    \npage.html - \n\n```html\n<html>\n<head>\n  <script src=\"loadData.js\"></script>\n\
+    </head>\n<body onload=\"loadData()\">\n  <div class=\"container\">\n    <table\
+    \ id=\"data\" border=\"1\">\n      <tr>\n        <th>col1</th>\n        <th>col2</th>\n\
+    \      </tr>\n    </table>\n  </div>\n</body>\n</html>\n```\n\n```\n\nloadData.js\n\
+    \n```javascript\n// 向 page.html 中的 table.data 添加行和列\nfunction loadData() {\n \
+    \ var data = document.getElementById(\"data\");\n  for (var row = 0; row < 2;\
+    \ row++) {\n    var tr = document.createElement(\"tr\");\n    for (var col = 0;\
+    \ col < 2; col++) {\n      var td = document.createElement(\"td\");\n      td.appendChild(document.createTextNode(\"\
+    .\" + col));\n      tr.appendChild(td);\n    }\n    data.appendChild(tr);\n  }\n\
+    }\n```\n```\n\npage.html 加载到浏览器时\n\n| Col1 | Col2 |\n| --- | --- |\n| 0.0 | 0.1\
+    \ |\n| 1.0 | 1.1 |\n\n使用 jsoup 解析 page.html 以获取 col 数据\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 6]\n\ncase, we use abs: to get the absolute URL, ie. with the domain and\
+    \ protocol included.\n\n# Extract full URL from partial HTML\n\nSelecting only\
+    \ the attribute value of a link:href will return the relative URL.\n\n```\nString\
+    \ bodyFragment =\n  <div<a href=\"/documentation\">Stack Overflow Documentation</a></div>;\n\
+    \nDocument doc = Jsoup.parseBodyFragment(bodyFragment);\nString link = doc\n \
+    \ .select(\"div > a\")\n  .first()\n  .attr(\"href\");\n\nSystem.out.println(link);\n\
+    ```\n\n# Output\n\n```\n/documentation\n```\n\nBy passing the base URI into the\
+    \ parse method and using the absUrl method instead of attr, we can extract the\
+    \ full URL.\n\n```\nDocument doc = Jsoup.parseBodyFragment(bodyFragment, \"http://stackoverflow.com\"\
+    );\n\nString link = doc\n  .select(\"div > a\")\n  .first()\n  .absUrl(\"href\"\
+    );\n\nSystem.out.println(link);\n```\n\n# Output\n\n```\nhttp://stackoverflow.com/documentation\n\
+    ```\n\n# Extract the data from HTML document file\n\nJsoup can be used to manipulate\
+    \ or extract data from a file on local that contains HTML. filePath is a path\
+    \ on disk. ENCODING is desired Charset Name e.g. \"Windows-31J\". It is optional.\n\
+    \n```\n// load file\nFile inputFile = new File(filePath);\n// parse file as HTML\
+    \ document\nDocument doc = Jsoup.parse(filePath, ENCODING);\n// select element\
+    \ by \"a\"\nElements elements = doc.select(\"a\");\n```\n\nGetting Started with\
+    \ Jsoup online: https://rtptutorial.com/jsoup/topic/297/getting-started-with-\n\
+    \nhttps://rtptutorial.com/"
+  - '[PAGE 7]
+
+
+    # jsoup'
+  - "[PAGE 8]\n\n# Chapter 2: Formatting HTML Output\n\n# Parameters\n\n| Parameter\
+    \ | Detail |\n| --- | --- |\n| boolean outline() | Get if outline mode is enabled.\
+    \ Default is false. If enabled, the HTML output methods will consider all tags\
+    \ as block. |\n| Document.OutputSettings outline(boolean) | Enable or disable\
+    \ HTML outline mode. |\n\n# Remarks\n\n+   * Jsoup 1.9.2 API\n\n# Examples\n\n\
+    Display all elements as block\n\nBy default, Jsoup will display only block-level\
+    \ elements with a trailing line break. Inline elements are not displayed without\
+    \ a break.\n\nGiven a body fragment, with inline elements:\n\n```\n<select name=\"\
+    menu\">\n  <option value=\"foo\">foo</option>\n  <option value=\"bar\">bar</option>\n\
+    </select>\n```\n\nPrinting with Jsoup:\n\n```\nDocument doc = Jsoup.parse(html);\n\
+    System.out.println(doc.html());\n```\n\nResults in:\n\n```\n<html>\n<head></head>\n\
+    <body>\n  <select name=\"menu\">\n    <option value=\"foo\">foo</option>\n   \
+    \ <option value=\"bar\">bar</option>\n  </select>\n</body>\n</html>\n```\n\nTo\
+    \ display the output with each element treated as a block element, the outline\
+    \ option has to be"
+  - '[PAGE 9]
+
+
+    enabled on the document''s OutputSettings.
+
+
+    ```
+
+    Document doc = Jsoup.parse(html);
+
+    doc.outputSettings().outline(true);
+
+    System.out.println(doc.html());
+
+    ```
+
+
+    # Output
+
+
+    ```
+
+    <html>
+
+    <head></head>
+
+    <body>
+
+    <select name="menu">
+
+    <option value="foo">foo</option>
+
+    <option value="bar">bar</option>
+
+    </select>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Source: Jsoup - Formatting the <option> elements
+
+
+    Read Formatting HTML Output online: https://riptutorial.com/jsoup/topic/5954/formatting-html-output'
+  - "[PAGE 10]\n\n# # Chapter 3: Logging into websites with Jsoup\n\n# Examples\n\n\
+    # A simple authentication POST request with Jsoup\n\nA simple POST request with\
+    \ authentication data is demonstrated below, note that the username and password\
+    \ field will vary depending on the website:\n\n```\nfinal String USER_AGENT =\
+    \ \"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (HTML, like Gecko)\
+    \ Chrome/51.0.2704.103 Safari/537.536\";\nJsoup.connect(\"http://website.com/loginUrl\"\
+    )\n    Connection.Response loginResponse = Jsoup.userAgent(USER_AGENT)\n    .data(\"\
+    username\", \"yourUsername\")\n    .data(\"password\", \"yourPassword\")\n   \
+    \ .method(Method.POST)\n    .execute();\n```\n\n# A comprehensive authentication\
+    \ POST request with Jsoup\n\nMost websites require a much more complicated process\
+    \ than the one demonstrated above.\n\nCommon steps for logging into a website:\n\
+    \n+   1. Get the unique cookie from the initial login form.\n2. Inspect the login\
+    \ form to see what the destination url is for the authentication request\n3. Parse\
+    \ the login form to check for any security token that needs to be sent along with\
+    \ username and password.\n4. Send the request.\n\nBelow is an example used in\
+    \ this example which will log you into the GitHub website\n\n```\n// Constants\
+    \ sent by server\nfinal String USER_AGENT = \"Mozilla/5.0 (Windows NT 10.0; WOW64)\
+    \ AppleWebKit/537.36,\nlike Gecko) Chrome/51.0.2704.103 Safari/537.536\";\nfinal\
+    \ String LOGIN_FORM_URL = \"https://github.com/login\";\nfinal String LOGIN_ACTION_URL\
+    \ = \"https://github.com/session\";\nfinal String USER = \"yourusername\";\nfinal\
+    \ String PASSWORD = \"yourPassword\";\n\n// Go to login and grab cookies sent\
+    \ by server\nConnection.Response loginForm = Jsoup.connect(LOGIN_FORM_URL)\n \
+    \   .method(Connection.METHOD)\n    .userAgent(USER_AGENT)\n    .execute();\n\n\
+    Document loginDoc = loginForm.parse(); // this is the document containing html\n\
+    HashMap<String, String> cookies = new HashMap<>(loginDoc.cookies()); // save the\
+    \ cookies\nto be passed on next request\n```\n\n```\n// Prepare login credentials\n\
+    String authToken = loginDoc.select(\"#login > form div:nth-child(1)\");\n```"
+  - '[PAGE 11]
+
+
+    ```
+
+    HashMap<String, String> formData = new HashMap<>();
+
+    formData.put("commit", "Sign in");
+
+    formData.put("utf-8", "e2 9c 93");
+
+    formData.put("login", USERNAME);
+
+    formData.put("password", PASSWORD);
+
+    formData.put("authenticity_token", authToken);
+
+    ```
+
+
+    ```
+
+    // Now send the form for login
+
+    Connection.Response home = Jsoup.connect(LOGIN_ACTION_URL)
+
+    .cookies(cookies)
+
+    .data(formData)
+
+    .method(Connection.Method.POST)
+
+    .userAgent(USER_AGENT)
+
+    .execute();
+
+    ```
+
+
+    ```
+
+    System.out.println(homePage.parse().html());
+
+    ```
+
+
+    #  Logging with FormElement
+
+
+    In this example, we will log used in this example GitHub website by using the
+    FormElement class.
+
+
+    ```
+
+    // Constants used
+
+    final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36
+    (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36;";
+
+    final String LOGIN_FORM_URL = "https://github.com/login";
+
+    final String USERNAME = "yourUsername";
+
+    final String PASSWORD = "yourPassword";
+
+    ```
+
+
+    ```
+
+    // Go to login page
+
+    Connection.Response loginFormResponse = Jsoup.connect(LOGIN_FORM_URL)
+
+    .method(Connection.Method.GET)
+
+    .userAgent(USER_AGENT)
+
+    .execute();
+
+    ```
+
+
+    ```
+
+    // Fill the login form
+
+    // Find the form first...
+
+    Element loginForm = (Element)loginFormResponse.parse().
+
+    .select("div#login > form").first();
+
+    ```
+
+
+    ```
+
+    checkElement("Login Form", loginForm);
+
+    // ... then "type" the username
+
+    Element loginField = loginForm.select("login-field").first();
+
+    checkElement("Login Field", loginField);
+
+    loginField.val(USERNAME);
+
+    ```
+
+
+    ```
+
+    // // and "type" the password
+
+    Element passwordField = loginForm.select("password").first();
+
+    checkElement("Password Field", passwordField);
+
+    passwordField.val(PASSWORD);
+
+    ```
+
+
+    ```
+
+    // Now send the form for login
+
+    Connection.Response loginActionResponse = loginForm.submit(
+
+    .cookies(loginFormResponse.cookies())
+
+    .userAgent(USER_AGENT);
+
+    ```'
+  - "[PAGE 12]\n\n```\n.execute();\n\nSystem.out.println(loginActionResponse.parse().html());\n\
+    \npublic static void checkElement(String name, Element elem) {\n    if (elem ==\
+    \ null) {\n        throw new RuntimeException(\"Unable to find \" + name);\n \
+    \   }\n}\n```\n\nAll the form data is handled by the FormElement class for us\
+    \ (even the form method detection). A ready made Connection is built when invoking\
+    \ FormElement#submit method. All we have to do is complete this connection with\
+    \ additional headers (cookies, user-agent etc) and execute it.\n\nRead Logging\
+    \ into websites with Jsoup online: https://riptutorial.com/jsoup/topic/4631/logging-into-websites-with-jsoup"
+  - "[PAGE 13]\n\n# # Chapter 4: Parsing Javascript Generated Pages\n\n# ## Examples\n\
+    \nParsing JavaScript Generated Page with Jsoup and HtmUnit\n\npage.html - source\
+    \ code\n\n```\n<html>\n<head>\n  <script src=\"loadData.js\"></script>\n</head>\n\
+    <body onload=\"loadData()\">\n  <div class=\"container\">\n    <table id=\"data\"\
+    \ border=\"1\">\n      <tr>\n        <th>col1</th>\n        <th>col2</th>\n  \
+    \    </tr>\n    </table>\n  </div>\n</body>\n\n```\n```\n\nloadData.js\n\n```\n\
+    // append rows and cols to table.data in page.html\nfunction loadData() {\n  data\
+    \ = document.getElementById(\"data\");\n  for (var row = 0; row < 2; row++) {\n\
+    \    var tr = document.createElement(\"tr\");\n    for (var col = 0; col < 2;\
+    \ col++) {\n      td = document.createElement(\"td\");\n      td.appendChild(document.createTextNodeNode(\"\
+    .\" + col));\n      tr.appendChild(td);\n    }\n    data.appendChild(tr);\n  }\n\
+    }\n```\n```\n\npage.html when loaded to browser\n\n| Col1 | Col2 |\n| 0.0 | 0.1\
+    \ |\n| 1.0 | 1.1 |\n\nUsing jsoup to parse page.html for col data"
+- md: "\n```java\n// load source from file\ndocument doc = Jsoup.parse(new File(\"\
+    page.html\"), \"UTF-8\");\n\n// iterate over row and col\nfor (Element row : doc.select(\"\
+    table#data tbody > tr\")) {\n\n  for (Element col : row.select(\"td\")) {\n\n\
+    \    // print results\n    System.out.println(col.ownText());\n  }\n}\n```\n\n\
+    ## Output\n\n## What happened?\n\nJsoup parses the source code as delivered from\
+    \ the server (or in this case loaded from file). It does not invoke client-side\
+    \ actions such as JavaScript or CSS DOM manipulation. In this example, the rows\
+    \ and cols are never appended to the data table.\n\n## How to parse my page as\
+    \ rendered in the browser?\n\n```java\n// load page using HTML Unit and fire scripts\n\
+    WebClient webClient = new WebClient();\nHtmlPage myWeb = webClient.getPage(new\
+    \ File(\"page.html\").toURI()).toURL();\n\n// convert page to generated HTML and\
+    \ convert to document\ndoc = Jsoup.parse(myPage.asXml());\n\n// iterate over row\
+    \ and col\nfor (Element row : doc.select(\"table#data > tr\")) {\n\n  for (Element\
+    \ col : row.select(\"td\")) {\n\n    // print results\n    System.out.println(col.ownText());\n\
+    \  }\n}\n\n// clean up resources\nwebClient.close();\n```\n\n## Output\n\n```\n\
+    0.0\n0.1\n1.0\n1.1\n```\n\nRead Parsing Javascript Generated Pages online: https://riptutorial.com/jsoup/topic/4632/parsing-javascript-generated-pages\n\
+    \n# Chapter 5: Selectors\n\n## Remarks\n\nA selector is a chain of simple selectors,\
+    \ separated by combinators. Selectors are case insensitive (including against\
+    \ elements, attributes, and attribute values).\n\nThe universal selector (*) is\
+    \ implicit when no element selector is supplied (i.e. *.header .header is equivalent).\n\
+    \n| Pattern | Matches | Example |\n| --- | --- | --- |\n| * | any element | *\
+    \ |\n| tag | elements with the given tag name | div |\n| ns:E | elements of type\
+    \ E in the namespace ns | fb:name finds <fb:name> elements |\n| #id | elements\
+    \ with attribute ID of \"id\" | div#wrap, #logo |\n| .class | elements with a\
+    \ class name of \"class\" | div.left, .result |\n| [attr] | elements with an attribute\
+    \ named \"attr\" (with any value) | a[href], [title] |\n| [attrPrefix] | elements\
+    \ with an attribute name starting with \"attrPrefix\". Use to find elements with\
+    \ HTML5 datasets | [^data], div[^data-] |\n| [attr=val] | elements with an attribute\
+    \ named \"attr\", and value equal to \"val\" | img[width=500], a[rel=nofollow]\
+    \ |\n| [attr=\"val\"] | elements with an attribute named \"attr\", and value equal\
+    \ to \"val\" | span[hello=\"Cleveland\"][goodbye=\"Columbus\"], a[rel=\"nofollow\"\
+    ] |\n\n| Pattern | Matches | Example |\n| --- | --- | --- |\n| [attr^=valPrefix]\
+    \ | elements with an attribute named \"attr\", and value starting with \"valPrefix\"\
+    \ | a[href^=http:] |\n| [attr$=valSuffix] | elements with an attribute named \"\
+    attr\", and value ending with \"valSuffix\" | img[src$=.png] |\n| [attr*=valContaining]\
+    \ | elements with an attribute named \"attr\", and value containing \"valContaining\"\
+    \ | a[href*=/search/] |\n| [attr~=regex] | elements with an attribute named \"\
+    attr\", and value matching the regex expression | img[src~=(?i)\\.(png|jpe?)]\
+    \ |\n| | The above may be combined in any order | div.header[title] |\n\nSelector\
+    \ full reference\n\n## Examples\n\nSelecting elements using CSS selectors\n\n\
+    ```java\nString html = \"<!DOCTYPE html>\" +\n  \"<html>\" +\n  \"<head>\" +\n\
+    \    \"<title>Hello world!</title>\" +\n  \"</head>\" +\n  \"<body>\" +\n    \"\
+    <h1>Hello there!</h1>\" +\n    \"<p>First paragraph</p>\" +\n    \"<p class=\\\
+    \"not-first\\\">Second paragraph</p>\" +\n    \"<p class=\\\"not-first third\\\
+    \">Third <a href=\\\"page.html\\\">paragraph</a></p>\"\n+\n  \"</body>\" +\n \
+    \ \"</html>\";\n```\n\n```java\n// Parse the document\nDocument doc = Jsoup.parse(html);\n\
+    ```\n\n```java\n// Get document title\nString title = doc.select(\"head title\"\
+    ).first().text();\nSystem.out.println(title); // Hello world!\n```\n\n```java\n\
+    // Get all paragraphs except from the first\nElements otherParagraphs = doc.select(\"\
+    p.not-first\");\n// Same as\notherParagraphs = doc.select(\"p\");\notherParagraphs.remove(0);\n\
+    ```\n\n```java\n// Get the third paragraph (second in the list otherParagraphs)\n\
+    // excludes the first paragraph\nElement thirdParagraph = otherParagraphs.get(1);\n\
+    // Alternative:\nthirdParagraph = doc.select(\"p.third\");\n```\n\n```java\n//\
+    \ You can also select within elements, e.g. anchors with a href attribute\n//\
+    \ within the third paragraph.\nElement link = thirdParagraph.select(\"a[href]\"\
+    );\n// or the first <h1> element in the document body\nElement headline = doc.select(\"\
+    body\").first().select(\"h1\").first();\n```\n\nYou can find a detailed overview\
+    \ of supported selectors here.\n\n## Extract Twitter Markup\n\n```java\n// Twitter\
+    \ markup documentation:\n// https://dev.twitter.com/cards/markup\nString[] twitterTags\
+    \ = {\n  \"twitter:site\",\n  \"twitter:site:id\",\n  \"twitter:creator\",\n \
+    \ \"twitter:creator:id\",\n  \"twitter:description\",\n  \"twitter:title\",\n\
+    \  \"twitter:image:alt\",\n  \"twitter:player\",\n  \"twitter:player:width\",\n\
+    \  \"twitter:player:height\",\n  \"twitter:player:stream\",\n  \"twitter:app:name:iphone\"\
+    ,\n  \"twitter:app:id:iphone\",\n  \"twitter:app:url:iphone\",\n  \"twitter:app:name:ipad\"\
+    ,\n  \"twitter:app:id:ipad\",\n  \"twitter:app:url:ipad\",\n  \"twitter:app:name:googleplay\"\
+    ,\n  \"twitter:app:id:googleplay\",\n  \"twitter:app:url:googleplay\"\n};\n```\n\
+    \n```java\n// Connect to URL and extract source code\nDocument doc = Jsoup.connect(\"\
+    http://stackoverflow.com/\").get();\n```\n\n```java\nfor (String twitterTag :\
+    \ twitterTags) {\n\n  // find a matching meta tag\n  Element meta = doc.select(\"\
+    meta[name=\" + twitterTag + \"]\").first();\n\n  // if found, get the value of\
+    \ the content attribute\n  String content = meta != null ? meta.attr(\"content\"\
+    ) : \"\";\n\n  // display results\n  System.out.printf(\"%s = %s%n\", twitterTag,\
+    \ content);\n}\n```\n\n## Output\n\n```\ntwitter:site =\ntwitter:site:id =\ntwitter:creator\
+    \ =\ntwitter:creator:id =\ntwitter:description = Q&A for professional and enthusiast\
+    \ programmers\ntwitter:title = Stack Overflow\ntwitter:image =\ntwitter:image:alt\
+    \ =\ntwitter:player =\ntwitter:player:width =\ntwitter:player:height =\ntwitter:player:stream\
+    \ =\ntwitter:app:name:iphone =\ntwitter:app:id:iphone =\ntwitter:app:url:iphone\
+    \ =\ntwitter:app:name:ipad =\ntwitter:app:id:ipad =\ntwitter:app:url:ipad =\n\
+    twitter:app:name:googleplay =\ntwitter:app:id:googleplay =\ntwitter:app:url:googleplay\n\
+    ```\n\n# Chapter 5: Selectors\n\n## Remarks\n\nA selector is a chain of simple\
+    \ selectors, separated by combinators. Selectors are case insensitive (including\
+    \ against elements, attributes, and attribute values).\n\nThe universal selector\
+    \ (*) is implicit when no element selector is supplied (i.e. *.header .header\
+    \ is equivalent).\n\n| Pattern | Matches | Example |\n| --- | --- | --- |\n| *\
+    \ | any element | * |\n| tag | elements with the given tag name | div |\n| ns:E\
+    \ | elements of type E in the namespace ns | fb:name finds <fb:name> elements\
+    \ |\n| #id | elements with attribute ID of \"id\" | div#wrap, #logo |\n| .class\
+    \ | elements with a class name of \"class\" | div.left, .result |\n| [attr] |\
+    \ elements with an attribute named \"attr\" (with any value) | a[href], [title]\
+    \ |\n| [attrPrefix] | elements with an attribute name starting with \"attrPrefix\"\
+    . Use to find elements with HTML5 datasets | [^data], div[^data-] |\n| [attr=val]\
+    \ | elements with an attribute named \"attr\", and value equal to \"val\" | img[width=500],\
+    \ a[rel=nofollow] |\n| [attr=\"val\"] | elements with an attribute named \"attr\"\
+    , and value equal to \"val\" | span[hello=\"Cleveland\"][goodbye=\"Columbus\"\
+    ], a[rel=\"nofollow\"] |\n\n| Pattern | Matches | Example |\n| --- | --- | ---\
+    \ |\n| [attr^=valPrefix] | elements with an attribute named \"attr\", and value\
+    \ starting with \"valPrefix\" | a[href^=http:] |\n| [attr$=valSuffix] | elements\
+    \ with an attribute named \"attr\", and value ending with \"valSuffix\" | img[src$=.png]\
+    \ |\n| [attr*=valContaining] | elements with an attribute named \"attr\", and\
+    \ value containing \"valContaining\" | a[href*=/search/] |\n| [attr~=regex] |\
+    \ elements with an attribute named \"attr\", and value matching the regex expression\
+    \ | img[src~=(?i)\\.(png|jpe?)] |\n| | The above may be combined in any order\
+    \ | div.header[title] |\n\nSelector full reference\n\n## Examples\n\nSelecting\
+    \ elements using CSS selectors\n\n```java\nString html = \"<!DOCTYPE html>\" +\n\
+    \  \"<html>\" +\n  \"<head>\" +\n    \"<title>Hello world!</title>\" +\n  \"</head>\"\
+    \ +\n  \"<body>\" +\n    \"<h1>Hello there!</h1>\" +\n    \"<p>First paragraph</p>\"\
+    \ +\n    \"<p class=\\\"not-first\\\">Second paragraph</p>\" +\n    \"<p class=\\\
+    \"not-first third\\\">Third <a href=\\\"page.html\\\">paragraph</a></p>\"\n+\n\
+    \  \"</body>\" +\n  \"</html>\";\n```\n\n```java\n// Parse the document\nDocument\
+    \ doc = Jsoup.parse(html);\n```\n\n```java\n// Get document title\nString title\
+    \ = doc.select(\"head title\").first().text();\nSystem.out.println(title); //\
+    \ Hello world!\n```\n\n```java\n// Get all paragraphs except from the first\n\
+    Elements otherParagraphs = doc.select(\"p.not-first\");\n// Same as\notherParagraphs\
+    \ = doc.select(\"p\");\notherParagraphs.remove(0);\n```\n\n```java\n// Get the\
+    \ third paragraph (second in the list otherParagraphs)\n// excludes the first\
+    \ paragraph\nElement thirdParagraph = otherParagraphs.get(1);\n// Alternative:\n\
+    thirdParagraph = doc.select(\"p.third\");\n```\n\n```java\n// You can also select\
+    \ within elements, e.g. anchors with a href attribute\n// within the third paragraph.\n\
+    Element link = thirdParagraph.select(\"a[href]\");\n// or the first <h1> element\
+    \ in the document body\nElement headline = doc.select(\"body\").first().select(\"\
+    h1\").first();\n```\n\nYou can find a detailed overview of supported selectors\
+    \ here.\n\n## Extract Twitter Markup\n\n```java\n// Twitter markup documentation:\n\
+    // https://dev.twitter.com/cards/markup\nString[] twitterTags = {\n  \"twitter:site\"\
+    ,\n  \"twitter:site:id\",\n  \"twitter:creator\",\n  \"twitter:creator:id\",\n\
+    \  \"twitter:description\",\n  \"twitter:title\",\n  \"twitter:image:alt\",\n\
+    \  \"twitter:player\",\n  \"twitter:player:width\",\n  \"twitter:player:height\"\
+    ,\n  \"twitter:player:stream\",\n  \"twitter:app:name:iphone\",\n  \"twitter:app:id:iphone\"\
+    ,\n  \"twitter:app:url:iphone\",\n  \"twitter:app:name:ipad\",\n  \"twitter:app:id:ipad\"\
+    ,\n  \"twitter:app:url:ipad\",\n  \"twitter:app:name:googleplay\",\n  \"twitter:app:id:googleplay\"\
+    ,\n  \"twitter:app:url:googleplay\"\n};\n```\n\n```java\n// Connect to URL and\
+    \ extract source code\nDocument doc = Jsoup.connect(\"http://stackoverflow.com/\"\
+    ).get();\n```\n\n```java\nfor (String twitterTag : twitterTags) {\n\n  // find\
+    \ a matching meta tag\n  Element meta = doc.select(\"meta[name=\" + twitterTag\
+    \ + \"]\").first();\n\n  // if found, get the value of the content attribute\n\
+    \  String content = meta != null ? meta.attr(\"content\") : \"\";\n\n  // display\
+    \ results\n  System.out.printf(\"%s = %s%n\", twitterTag, content);\n}\n```\n\n\
+    ## Output\n\n```\ntwitter:site =\ntwitter:site:id =\ntwitter:creator =\ntwitter:creator:id\
+    \ =\ntwitter:description = Q&A for professional and enthusiast programmers\ntwitter:title\
+    \ = Stack Overflow\ntwitter:image =\ntwitter:image:alt =\ntwitter:player =\ntwitter:player:width\
+    \ =\ntwitter:player:height =\ntwitter:player:stream =\ntwitter:app:name:iphone\
+    \ =\ntwitter:app:id:iphone =\ntwitter:app:url:iphone =\ntwitter:app:name:ipad\
+    \ =\ntwitter:app:id:ipad =\ntwitter:app:url:ipad =\ntwitter:app:name:googleplay\
+    \ =\ntwitter:app:id:googleplay =\ntwitter:app:url:googleplay\n```\n\n# Chapter\
+    \ 5: Selectors\n\n## Remarks\n\nA selector is a chain of simple selectors, separated\
+    \ by combinators. Selectors are case insensitive (including against elements,\
+    \ attributes, and attribute values).\n\nThe universal selector (*) is implicit\
+    \ when no element selector is supplied (i.e. *.header .header is equivalent).\n\
+    \n| Pattern | Matches | Example |\n| --- | --- | --- |\n| * | any element | *\
+    \ |\n| tag | elements with the given tag name | div |\n| ns:E | elements of type\
+    \ E in the namespace ns | fb:name finds <fb:name> elements |\n| #id | elements\
+    \ with attribute ID of \"id\" | div#wrap, #logo |\n| .class | elements with a\
+    \ class name of \"class\" | div.left, .result |\n| [attr] | elements with an attribute\
+    \ named \"attr\" (with any value) | a[href], [title] |\n| [attrPrefix] | elements\
+    \ with an attribute name starting with \"attrPrefix\". Use to find elements with\
+    \ HTML5 datasets | [^data], div[^data-] |\n| [attr=val] | elements with an attribute\
+    \ named \"attr\", and value equal to \"val\" | img[width=500], a[rel=nofollow]\
+    \ |\n| [attr=\"val\"] | elements with an attribute named \"attr\", and value equal\
+    \ to \"val\" | span[hello=\"Cleveland\"][goodbye=\"Columbus\"], a[rel=\"nofollow\"\
+    ] |\n\n| Pattern | Matches | Example |\n| --- | --- | --- |\n| [attr^=valPrefix]\
+    \ | elements with an attribute named \"attr\", and value starting with \"valPrefix\"\
+    \ | a[href^=http:] |\n| [attr$=valSuffix] | elements with an attribute named \"\
+    attr\", and value ending with \"valSuffix\" | img[src$=.png] |\n| [attr*=valContaining]\
+    \ | elements with an attribute named \"attr\", and value containing \"valContaining\"\
+    \ | a[href*=/search/] |\n| [attr~=regex] | elements with an attribute named \"\
+    attr\", and value matching the regex expression | img[src~=(?i)\\.(png|jpe?)]\
+    \ |\n| | The above may be combined in any order | div.header[title] |\n\nSelector\
+    \ full reference\n\n## Examples\n\nSelecting elements using CSS selectors\n\n\
+    ```java\nString html = \"<!DOCTYPE html>\" +\n  \"<html>\" +\n  \"<head>\" +\n\
+    \    \"<title>Hello world!</title>\" +\n  \"</head>\" +\n  \"<body>\" +\n    \"\
+    <h1>Hello there!</h1>\" +\n    \"<p>First paragraph</p>\" +\n    \"<p class=\\\
+    \"not-first\\\">Second paragraph</p>\" +\n    \"<p class=\\\"not-first third\\\
+    \">Third <a href=\\\"page.html\\\">paragraph</a></p>\"\n+\n  \"</body>\" +\n \
+    \ \"</html>\";\n```\n\n```java\n// Parse the document\nDocument doc = Jsoup.parse(html);\n\
+    ```\n\n```java\n// Get document title\nString title = doc.select(\"head title\"\
+    ).first().text();\nSystem.out.println(title); // Hello world!\n```\n\n```java\n\
+    // Get all paragraphs except from the first\nElements otherParagraphs = doc.select(\"\
+    p.not-first\");\n// Same as\notherParagraphs = doc.select(\"p\");\notherParagraphs.remove(0);\n\
+    ```\n\n```java\n// Get the third paragraph (second in the list otherParagraphs)\n\
+    // excludes the first paragraph\nElement thirdParagraph = otherParagraphs.get(1);\n\
+    // Alternative:\nthirdParagraph = doc.select(\"p.third\");\n```\n\n```java\n//\
+    \ You can also select within elements, e.g. anchors with a href attribute\n//\
+    \ within the third paragraph.\nElement link = thirdParagraph.select(\"a[href]\"\
+    );\n// or the first <h1> element in the document body\nElement headline = doc.select(\"\
+    body\").first().select(\"h1\").first();\n```\n\nYou can find a detailed overview\
+    \ of supported selectors here.\n\n## Extract Twitter Markup\n\n```java\n// Twitter\
+    \ markup documentation:\n// https://dev.twitter.com/cards/markup\nString[] twitterTags\
+    \ = {\n  \"twitter:site\",\n  \"twitter:site:id\",\n  \"twitter:creator\",\n \
+    \ \"twitter:creator:id\",\n  \"twitter:description\",\n  \"twitter:title\",\n\
+    \  \"twitter:image:alt\",\n  \"twitter:player\",\n  \"twitter:player:width\",\n\
+    \  \"twitter:player:height\",\n  \"twitter:player:stream\",\n  \"twitter:app:name:iphone\"\
+    ,\n  \"twitter:app:id:iphone\",\n  \"twitter:app:url:iphone\",\n  \"twitter:app:name:ipad\"\
+    ,\n  \"twitter:app:id:ipad\",\n  \"twitter:app:url:ipad\",\n  \"twitter:app:name:googleplay\"\
+    ,\n  \"twitter:app:id:googleplay\",\n  \"twitter:app:url:googleplay\"\n};\n```\n\
+    \n```java\n// Connect to URL and extract source code\nDocument doc = Jsoup.connect(\"\
+    http://stackoverflow.com/\").get();\n```\n\n```java\nfor (String twitterTag :\
+    \ twitterTags) {\n\n  // find a matching meta tag\n  Element meta = doc.select(\"\
+    meta[name=\" + twitterTag + \"]\").first();\n\n  // if found, get the value of\
+    \ the content attribute\n  String content = meta != null ? meta.attr(\"content\"\
+    ) : \"\";\n\n  // display results\n  System.out.printf(\"%s = %s%n\", twitterTag,\
+    \ content);\n}\n```\n\n## Output\n\n```\ntwitter:site =\ntwitter:site:id =\ntwitter:creator\
+    \ =\ntwitter:creator:id =\ntwitter:description = Q&A for professional and enthusiast\
+    \ programmers\ntwitter:title = Stack Overflow\ntwitter:image =\ntwitter:image:alt\
+    \ =\ntwitter:player =\ntwitter:player:width =\ntwitter:player:height =\ntwitter:player:stream\
+    \ =\ntwitter:app:name:iphone =\ntwitter:app:id:iphone =\ntwitter:app:url:iphone\
+    \ =\ntwitter:app:name:ipad =\ntwitter:app:id:ipad =\ntwitter:app:url:ipad =\n\
+    twitter:app:name:googleplay =\ntwitter:app:id:googleplay =\ntwitter:app:url:googleplay\n\
+    ```\n\n# Chapter 5: Selectors\n\n## Remarks\n\nA selector is a chain of simple\
+    \ selectors, separated by combinators. Selectors are case insensitive (including\
+    \ against elements, attributes, and attribute values).\n\nThe universal selector\
+    \ (*) is implicit when no element selector is supplied (i.e. *.header .header\
+    \ is equivalent).\n\n| Pattern | Matches | Example |\n| --- | --- | --- |\n| *\
+    \ | any element | * |\n| tag | elements with the given tag name | div |\n| ns:E\
+    \ | elements of type E in the namespace ns | fb:name finds <fb:name> elements\
+    \ |\n| #id | elements with attribute ID of \"id\" | div#wrap, #logo |\n| .class\
+    \ | elements with a class name of \"class\" | div.left, .result |\n| [attr] |\
+    \ elements with an attribute named \"attr\" (with any value) | a[href], [title]\
+    \ |\n| [attrPrefix] | elements with an attribute name starting with \"attrPrefix\"\
+    . Use to find elements with HTML5 datasets | [^data], div[^data-] |\n| [attr=val]\
+    \ | elements with an attribute named \"attr\", and value equal to \"val\" | img[width=500],\
+    \ a[rel=nofollow] |\n| [attr=\"val\"] | elements with an attribute named \"attr\"\
+    , and value equal to \"val\" | span[hello=\"Cleveland\"][goodbye=\"Columbus\"\
+    ], a[rel=\"nofollow\"] |\n\n| Pattern | Matches | Example |\n| --- | --- | ---\
+    \ |\n| [attr^=valPrefix] | elements with an attribute named \"attr\", and value\
+    \ starting with \"valPrefix\" | a[href^=http:] |\n| [attr$=valSuffix] | elements\
+    \ with an attribute named \"attr\", and value ending with \"valSuffix\" | img[src$=.png]\
+    \ |\n| [attr*=valContaining] | elements with an attribute named \"attr\", and\
+    \ value containing \"valContaining\" | a[href*=/search/] |\n| [attr~=regex] |\
+    \ elements with an attribute named \"attr\", and value matching the regex expression\
+    \ | img[src~=(?i)\\.(png|jpe?)] |\n| | The above may be combined in any order\
+    \ | div.header[title] |\n\nSelector full reference\n\n## Examples\n\nSelecting\
+    \ elements using CSS selectors\n\n```java\nString html = \"<!DOCTYPE html>\" +\n\
+    \  \"<html>\" +\n  \"<head>\" +\n    \"<title>Hello world!</title>\" +\n  \"</head>\"\
+    \ +\n  \"<body>\" +\n    \"<h1>Hello there!</h1>\" +\n    \"<p>First paragraph</p>\"\
+    \ +\n    \"<p class=\\\"not-first\\\">Second paragraph</p>\" +\n    \"<p class=\\\
+    \"not-first third\\\">Third <a href=\\\"page.html\\\">paragraph</a></p>\"\n+\n\
+    \  \"</body>\" +\n  \"</html>\";\n```\n\n```java\n// Parse the document\nDocument\
+    \ doc = Jsoup.parse(html);\n```\n\n```java\n// Get document title\nString title\
+    \ = doc.select(\"head title\").first().text();\nSystem.out.println(title); //\
+    \ Hello world!\n```\n\n```java\n// Get all paragraphs except from the first\n\
+    Elements otherParagraphs = doc.select(\"p.not-first\");\n// Same as\notherParagraphs\
+    \ = doc.select(\"p\");\notherParagraphs.remove(0);\n```\n\n```java\n// Get the\
+    \ third paragraph (second in the list otherParagraphs)\n// excludes the first\
+    \ paragraph\nElement thirdParagraph = otherParagraphs.get(1);\n// Alternative:\n\
+    thirdParagraph = doc.select(\"p.third\");\n```\n\n```java\n// You can also select\
+    \ within elements, e.g. anchors with a href attribute\n// within the third paragraph.\n\
+    Element link = thirdParagraph.select(\"a[href]\");\n// or the first <h1> element\
+    \ in the document body\nElement headline = doc.select(\"body\").first().select(\"\
+    h1\").first();\n```\n\nYou can find a detailed overview of supported selectors\
+    \ here.\n\n## Extract Twitter Markup\n\n```java\n// Twitter markup documentation:\n\
+    // https://dev.twitter.com/cards/markup\nString[] twitterTags = {\n  \"twitter:site\"\
+    ,\n  \"twitter:site:id\",\n  \"twitter:creator\",\n  \"twitter:creator:id\",\n\
+    \  \"twitter:description\",\n  \"twitter:title\",\n  \"twitter:image:alt\",\n\
+    \  \"twitter:player\",\n  \"twitter:player:width\",\n  \"twitter:player:height\"\
+    ,\n  \"twitter:player:stream\",\n  \"twitter:app:name:iphone\",\n  \"twitter:app:id:iphone\"\
+    ,\n  \"twitter:app:url:iphone\",\n  \"twitter:app:name:ipad\",\n  \"twitter:app:id:ipad\"\
+    ,\n  \"twitter:app:url:ipad\",\n  \"twitter:app:name:googleplay\",\n  \"twitter:app:id:googleplay\"\
+    ,\n  \"twitter:app:url:googleplay\"\n};\n```\n\n```java\n// Connect to URL and\
+    \ extract source code\nDocument doc = Jsoup.connect(\"http://stackoverflow.com/\"\
+    ).get();\n```\n\n```java\nfor (String twitterTag : twitterTags) {\n\n  // find\
+    \ a matching meta tag\n  Element meta = doc.select(\"meta[name=\" + twitterTag\
+    \ + \"]\").first();\n\n  // if found, get the value of the content attribute\n\
+    \  String content = meta != null ? meta.attr(\"content\") : \"\";\n\n  // display\
+    \ results\n  System.out.printf(\"%s = %s%n\", twitterTag, content);\n}\n```\n\n\
+    ## Output\n\n```\ntwitter:site =\ntwitter:site:id =\ntwitter:creator =\ntwitter:creator:id\
+    \ =\ntwitter:description = Q&A for professional and enthusiast programmers\ntwitter:title\
+    \ = Stack Overflow\ntwitter:image =\ntwitter:image:alt =\ntwitter:player =\ntwitter:player:width\
+    \ =\ntwitter:player:height =\ntwitter:player:stream =\ntwitter:app:name:iphone\
+    \ =\ntwitter:app:id:iphone =\ntwitter:app:url:iphone =\ntwitter:app:name:ipad\
+    \ =\ntwitter:app:id:ipad =\ntwitter:app:url:ipad =\ntwitter:app:name:googleplay\
+    \ =\ntwitter:app:id:googleplay =\ntwitter:app:url:googleplay\n```\n\n# Chapter\
+    \ 5: Selectors\n\n## Remarks\n\nA selector is a chain of simple selectors, separated\
+    \ by combinators. Selectors are case insensitive (including against elements,\
+    \ attributes, and attribute values).\n\nThe universal selector (*) is implicit\
+    \ when no element selector is supplied (i.e. *.header .header is equivalent).\n\
+    \n| Pattern | Matches | Example |\n| --- | --- | --- |\n| * | any element | *\
+    \ |\n| tag | elements with the given tag name | div |\n| ns:E | elements of type\
+    \ E in the namespace ns | fb:name finds <fb:name> elements |\n| #id | elements\
+    \ with attribute ID of \"id\" | div#wrap, #logo |\n| .class | elements with a\
+    \ class name of \"class\" | div.left, .result |\n| [attr] | elements with an attribute\
+    \ named \"attr\" (with any value) | a[href], [title] |\n| [attrPrefix] | elements\
+    \ with an attribute name starting with \"attrPrefix\". Use to find elements with\
+    \ HTML5 datasets | [^data], div[^data-] |\n| [attr=val] | elements with an attribute\
+    \ named \"attr\", and value equal to \"val\" | img[width=500], a[rel=nofollow]\
+    \ |\n| [attr=\"val\"] | elements with an attribute named \"attr\", and value equal\
+    \ to \"val\" | span[hello=\"Cleveland\"][goodbye=\"Columbus\"], a[rel=\"nofollow\"\
+    ] |\n\n| Pattern | Matches | Example |\n| --- | --- | --- |\n| [attr^=valPrefix]\
+    \ | elements with an attribute named \"attr\", and value starting with \"valPrefix\"\
+    \ | a[href^=http:] |\n| [attr$=valSuffix] | elements with an attribute named \"\
+    attr\", and value ending with \"valSuffix\" | img[src$=.png] |\n| [attr*=valContaining]\
+    \ | elements with an attribute named \"attr\", and value containing \"valContaining\"\
+    \ | a[href*=/search/] |\n| [attr~=regex] | elements with an attribute named \"\
+    attr\", and value matching the regex expression | img[src~=(?i)\\.(png|jpe?)]\
+    \ |\n| | The above may be combined in any order | div.header[title] |\n\nSelector\
+    \ full reference\n\n## Examples\n\nSelecting elements using CSS selectors\n\n\
+    ```java\nString html = \"<!DOCTYPE html>\" +\n  \"<html>\" +\n  \"<head>\" +\n\
+    \    \"<title>Hello world!</title>\" +\n  \"</head>\" +\n  \"<body>\" +\n    \"\
+    <h1>Hello there!</h1>\" +\n    \"<p>First paragraph</p>\" +\n    \"<p class=\\\
+    \"not-first\\\">Second paragraph</p>\" +\n    \"<p class=\\\"not-first third\\\
+    \">Third <a href=\\\"page.html\\\">paragraph</a></p>\"\n+\n  \"</body>\" +\n \
+    \ \"</html>\";\n```\n\n```java\n// Parse the document\nDocument doc = Jsoup.parse(html);\n\
+    ```\n\n```java\n// Get document title\nString title = doc.select(\"head title\"\
+    ).first().text();\nSystem.out.println(title); // Hello world!\n```\n\n```java\n\
+    // Get all paragraphs except from the first\nElements otherParagraphs = doc.select(\"\
+    p.not-first\");\n// Same as\notherParagraphs = doc.select(\"p\");\notherParagraphs.remove(0);\n\
+    ```\n\n```java\n// Get the third paragraph (second in the list otherParagraphs)\n\
+    // excludes the first paragraph\nElement thirdParagraph = otherParagraphs.get(1);\n\
+    // Alternative:\nthirdParagraph = doc.select(\"p.third\");\n```\n\n```java\n//\
+    \ You can also select within elements, e.g. anchors with a href attribute\n//\
+    \ within the third paragraph.\nElement link = thirdParagraph.select(\"a[href]\"\
+    );\n// or the first <h1> element in the document body\nElement headline = doc.select(\"\
+    body\").first().select(\"h1\").first();\n```\n\nYou can find a detailed overview\
+    \ of supported selectors here.\n\n## Extract Twitter Markup\n\n```java\n// Twitter\
+    \ markup documentation:\n// https://dev.twitter.com/cards/markup\nString[] twitterTags\
+    \ = {\n  \"twitter:site\",\n  \"twitter:site:id\",\n  \"twitter:creator\",\n \
+    \ \"twitter:creator:id\",\n  \"twitter:description\",\n  \"twitter:title\",\n\
+    \  \"twitter:image:alt\",\n  \"twitter:player\",\n  \"twitter:player:width\",\n\
+    \  \"twitter:player:height\",\n  \"twitter:player:stream\",\n  \"twitter:app:name:iphone\"\
+    ,\n  \"twitter:app:id:iphone\",\n  \"twitter:app:url:iphone\",\n  \"twitter:app:name:ipad\"\
+    ,\n  \"twitter:app:id:ipad\",\n  \"twitter:app:url:ipad\",\n  \"twitter:app:name:googleplay\"\
+    ,\n  \"twitter:app:id:googleplay\",\n  \"twitter:app:url:googleplay\"\n};\n```\n\
+    \n```java\n// Connect to URL and extract source code\nDocument doc = Jsoup.connect(\"\
+    http://stackoverflow.com/\").get();\n```\n\n```java\nfor (String twitterTag :\
+    \ twitterTags) {\n\n  // find a matching meta tag\n  Element meta = doc.select(\"\
+    meta[name=\" + twitterTag + \"]\").first();\n\n  // if found, get the value of\
+    \ the content attribute\n  String content = meta != null ? meta.attr(\"content\"\
+    ) : \"\";\n\n  // display results\n  System.out.printf(\"%s = %s%n\", twitterTag,\
+    \ content);\n}\n```\n\n## Output\n\n```\ntwitter:site =\ntwitter:site:id =\ntwitter:creator\
+    \ =\ntwitter:creator:id =\ntwitter:description = Q&A for professional and enthusiast\
+    \ programmers\ntwitter:title = Stack Overflow\ntwitter:image =\ntwitter:image:alt\
+    \ =\ntwitter:player =\ntwitter:player:width =\ntwitter:player:height =\ntwitter:player:stream\
+    \ =\ntwitter:app:name:iphone =\ntwitter:app:id:iphone =\ntwitter:app:url:iphone\
+    \ =\ntwitter:app:name:ipad =\ntwitter:app:id:ipad =\ntwitter:app:url:ipad =\n\
+    twitter:app:name:googleplay =\ntwitter:app:id:googleplay =\ntwitter:app:url:googleplay\n\
+    ```\n"
+  mdcn: "\n\n## 发生了什么？\n\nJsoup 解析从服务器交付的源码（在本例中为从文件加载的源码）。它不会调用客户端操作，例如 JavaScript\
+    \ 或 CSS DOM 操作。在这个示例中，行和列从未被附加到数据表中。\n\n## 如何解析在浏览器中渲染的页面？\n\n```java\n// 使用 HTML\
+    \ Unit 加载页面并触发脚本\nWebClient webClient = new WebClient();\nHtmlPage myWeb = webClient.getPage(new\
+    \ File(\"page.html\").toURI()).toURL();\n\n// 将页面转换为生成的 HTML 并转换为文档\ndoc = Jsoup.parse(myPage.asXml());\n\
+    \n// 遍历行和列\nfor (Element row : doc.select(\"table#data > tr\")) {\n\n  for (Element\
+    \ col : row.select(\"td\")) {\n\n    // 打印结果\n    System.out.println(col.ownText());\n\
+    \  }\n}\n\n// 清理资源\nwebClient.close();\n```\n\n## 输出\n\n```\n0.0\n0.1\n1.0\n1.1\n\
+    ```\n\n在线解析 Javascript 生成的页面：https://riptutorial.com/jsoup/topic/4632/parsing-javascript-generated-pages\n\
+    \n# 第5章：选择器\n\n## 备注\n\n选择器是由组合符分隔的简单选择器链。选择器是不区分大小写的（包括针对元素、属性和属性值）。\n\n当未提供元素选择器时，通用选择器\
+    \ (\\*) 是隐式的（即 `*.header .header` 是等价）。\n\n| 模式 | 匹配 | 示例 |\n| --- | --- | ---\
+    \ |\n| * | 任何元素 | * |\n| tag | 具有给定标签名的元素 | div |\n| ns:E | 命名空间 ns 中类型为 E 的元素\
+    \ | fb:name 查找 <fb:name> 元素 |\n| #id |  ID 为 \"id\" 的元素 | div#wrap, #logo |\n\
+    | .class | 类名为 \"class\" 的元素 | div.left, .result |\n| [attr] | 属性名为 \"attr\" 的元素（值任意可）\
+    \ | a[href], [title] |\n| [attrPrefix] | 属性名以 \"attrPrefix\" 开头的元素。用于查找带有 HTML5\
+    \ 数据集的元素 | [^data], div[^data-] |\n| [attr=val] | 属性名为 \"attr\" 且值等于 \"val\" 的元素\
+    \ | img[width=500], a[rel=nofollow] |\n| [attr=\"val\"] | 属性名为 \"attr\" 且值等于 \"\
+    val\" 的元素 | span[hello=\"Cleveland\"][goodbye=\"Columbus\"], a[rel=\"nofollow\"\
+    ] |\n\n| 模式 | 匹配 | 示例 |\n| --- | --- | --- |\n| [attr^=valPrefix] | 属性名为 \"attr\"\
+    \ 且值以 \"valPrefix\" 开头的元素 | a[href^=http:] |\n| [attr$=valSuffix] | 属性名为 \"attr\"\
+    \ 且值以 \"valSuffix\" 结尾的元素 | img[src$=.png] |\n| [attr*=valContaining] | 属性名为 \"\
+    attr\" 且值包含 \"valContaining\" 的元素 | a[href*=/search/] |\n| [attr~=regex] | 属性名为\
+    \ \"attr\" 且值匹配正则表达式的元素 | img[src~=(?i)\\.(png|jpe?)] |\n| | 以上内容可以任意顺序组合 | div.header[title]\
+    \ |\n\n选择器完整引用\n\n## 示例\n\n使用 CSS 选择器选择元素\n\n```java\nString html = \"<!DOCTYPE\
+    \ html>\" +\n  \"<html>\" +\n  \"<head>\" +\n    \"<title>Hello world!</title>\"\
+    \ +\n  \"</head>\" +\n  \"<body>\" +\n    \"<h1>Hello there!</h1>\" +\n    \"\
+    <p>First paragraph</p>\" +\n    \"<p class=\\\"not-first\\\">Second paragraph</p>\"\
+    \ +\n    \"<p class=\\\"not-first third\\\">Third <a href=\\\"page.html\\\">paragraph</a></p>\"\
+    \n+\n  \"</body>\" +\n  \"</html>\";\n```\n\n```java\n// 解析文档\nDocument doc =\
+    \ Jsoup.parse(html);\n```\n\n```java\n// 获取文档标题\nString title = doc.select(\"\
+    head title\").first().text();\nSystem.out.println(title); // Hello world!\n```\n\
+    \n```java\n// 获取除第一个之外以外的所有段落\nElements otherParagraphs = doc.select(\"p.not-first\"\
+    );\n// 等同于\notherParagraphs = doc.select(\"p\");\notherParagraphs.remove(0);\n\
+    ```\n\n```java\n// 获取第三个段（在 otherParagraphs 列表中的第二个）\n// 排除第一个段\nElement thirdParagraph\
+    \ = otherParagraphs.get(1);\n// 替代方案：\nthirdParagraph = doc.select(\"p.third\"\
+    );\n```\n\n```java\n// 你也可以在元素内部进行选择，例如第三个段内带有 href 属性的锚点\nElement link = thirdParagraph.select(\"\
+    a[href]\");\n// 或者文档正体中的第一个 <h1> 元素\nElement headline = doc.select(\"body\").first().select(\"\
+    h1\").first();\n```\n\n你可以在此处找到受支持选择器的详细概述。\n\n## 提取 Twitter 标记\n\n```java\n//\
+    \ Twitter 标记文档：\n// https://dev.twitter.com/cards/markup\nString[] twitterTags\
+    \ = {\n  \"twitter:site\",\n  \"twitter:site:id\",\n  \"twitter:creator\",\n \
+    \ \"twitter:creator:id\",\n  \"twitter:description\",\n  \"twitter:title\",\n\
+    \  \"twitter:image:alt\",\n  \"twitter:player\",\n  \"twitter:player:width\",\n\
+    \  \"twitter:player:height\",\n  \"twitter:player:stream\",\n  \"twitter:app:name:iphone\"\
+    ,\n  \"twitter:app:id:iphone\",\n  \"twitter:app:url:iphone\",\n  \"twitter:app:name:ipad\"\
+    ,\n  \"twitter:app:id:ipad\",\n  \"twitter:app:url:ipad\",\n  \"twitter:app:name:googleplay\"\
+    ,\n  \"twitter:app:id:googleplay\",\n  \"twitter:app:url:googleplay\"\n};\n```\n\
+    \n```java\n// 连接到 URL 并提取源码\nDocument doc = Jsoup.connect(\"http://stackoverflow.com/\"\
+    ).get();\n```\n\n```java\nfor (String twitterTag : twitterTags) {\n\n  // 查找匹配的\
+    \ meta 标签\n  Element meta = doc.select(\"meta[name=\" + twitterTag + \"]\").first();\n\
+    \n  // 如果找到，获取 content 属性的值\n  String content = meta != null ? meta.attr(\"content\"\
+    ) : \"\";\n\n  // 显示结果\n  System.out.printf(\"%s = %s%n\", twitterTag, content);\n\
+    }\n```\n\n## 输出\n\n```\ntwitter:site =\ntwitter:site:id =\ntwitter:creator =\n\
+    twitter:creator:id =\ntwitter:description = Q&A for professional and enthusiast\
+    \ programmers\ntwitter:title = Stack Overflow\ntwitter:image =\ntwitter:image:alt\
+    \ =\ntwitter:player =\ntwitter:player:width =\ntwitter:player:height =\ntwitter:player:stream\
+    \ =\ntwitter:app:name:iphone =\ntwitter:app:id:iphone =\ntwitter:app:url:iphone\
+    \ =\ntwitter:app:name:ipad =\ntwitter:app:id:ipad =\ntwitter:app:url:ipad =\n\
+    twitter:app:name:googleplay =\ntwitter:app:id:googleplay =\ntwitter:app:url:googleplay\n\
+    ```\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 14]\n\n```\n// load source from file\ndocument doc = Jsoup.parse(new File(\"\
+    page.html\"), \"UTF-8\");\n\n// iterate over row and col\nfor (Element row : doc.select(\"\
+    table#data tbody > tr\")) {\n\n  for (Element col : row.select(\"td\")) {\n\n\
+    \    // print results\n    System.out.println(col.ownText());\n  }\n}\n```\n\n\
+    # ## Output\n\n(empty)\n\n# ## What happened?\n\nJsoup parses the source code\
+    \ as delivered from the server (or in this case loaded from file). It does not\
+    \ invoke client-side actions such as JavaScript or CSS DOM manipulation. In this\
+    \ example, the rows and cols are never appended to the data table.\n\n# ## How\
+    \ to parse my page as rendered in the browser?\n\n```\n// load page using HTML\
+    \ Unit and fire scripts\nWebClient = new WebClient();\nHtmlPage myWeb = webClient.getPage(new\
+    \ File(\"page.html\").toURI()).toURL();\n\n// convert page to generated HTML and\
+    \ convert to document\ndoc = Jsoup.parse(myPage.asXml());\n\n// iterate over row\
+    \ and col\nfor (Element row : doc.select(\"table#data > tr\")) {\n\n  for (Element\
+    \ col : row.select(\"td\")) {\n\n    // print results\n    System.out.println(col.ownText());\n\
+    \  }\n}\n\n// clean up resources\nwebClient.close();\n```\n\n# ## Output\n\n```\n\
+    0.0\n0.1\n1.0\n1.1\n```\n\nRead Parsing Javascript Generated Pages online: https://riptutorial.com/jsoup/topic/4632/parsing-javascript-generated-pages"
+  - '[PAGE 15]
+
+
+    # Chapter 5: Selectors
+
+
+    # Remarks
+
+
+    A selector is a chain of simple selectors, separated by combinators. Selectors
+    are case insensitive (including against elements, attributes, and attribute values).
+
+
+    The universal selector (*) is implicit when no element selector is supplied (i.e.
+    *.header .header is equivalent).
+
+
+    | Pattern | Matches | Example |
+
+    | --- | --- | --- |
+
+    | * | any element | * |
+
+    | tag | elements with the given tag name | div |
+
+    | ns|E | elements of type E in the namespace ns | fb|name finds <fb:name> elements
+    |
+
+    | #id | elements with attribute ID of "id" | div#wrap, #logo |
+
+    | .class | elements with a class name of "class" | div.left, .result |
+
+    | [attr] | elements with an attribute named "attr" (with any value) | a[href],
+    [title] |
+
+    | [attrPrefix] | elements with an attribute name starting with "attrPrefix". Use
+    to find elements with HTML5 datasets | [^data], div[^data-] |
+
+    | [attr=val] | elements with an attribute named "attr", and value equal to "val"
+    | img[width=500], a[rel=nofollow] |
+
+    | [attr="val"] | elements with an attribute named "attr", and value equal to "val"
+    | span[hello="Cleveland"][goodbye="Columbus"], a[rel="nofollow"] |'
+  - "[PAGE 16]\n\n| Pattern | Matches | Example |\n| --- | --- | --- |\n| [attr^=valPrefix]\
+    \ | elements with an attribute named \"attr\", and value starting with \"valPrefix\"\
+    \ | a[href^=http:] |\n| [attr$=valSuffix] | elements with an attribute named \"\
+    attr\", and value ending with \"valSuffix\" | img[src$=.png] |\n| [attr*=valContaining]\
+    \ | elements with an attribute named \"attr\", and value containing \"valContaining\"\
+    \ | a[href*=/search/] |\n| [attr~=regex] | elements with an attribute named \"\
+    attr\", and value matching the regex expression | img[src~=(?i)\\.(png|jpe?)]\
+    \ |\n| | The above may be combined in any order | div.header[title] |\n\nSelector\
+    \ full reference\n\n# # Examples\n\nSelecting elements using CSS selectors\n\n\
+    ```\nString html = \"<!DOCTYPE html>\" +\n  \"<html>\" +\n  \"<head>\" +\\n  \
+    \  \"<title>Hello world!</title>\" +\\n  \"</head>\" +\n  \"<body>\" +\\n    \"\
+    <h1>Hello there!</h1>\" +\\n    \"<p>First paragraph</p>\" +\\n    \"<p class=\"\
+    not-first\">Second paragraph</p>\" +\\n    \"<p class=\"not-first third\">Third\
+    \ <a href=\\\"page.html\\\">paragraph</a></p>\" \n\n+\n  \"</body>\" +\\n  \"\
+    </html>\";\n```"
+  - "[PAGE 17]\n\n```\n// Parse the document\nDocument doc = Jsoup.parse(html);\n\
+    ```\n\n```\n// Get document title\nString title = doc.select(\"head title\").first().text();\n\
+    System.out.println(title); // Hello world!\n```\n\n```\n// Get all paragraphs\
+    \ except from the first\nElements otherParagraphs = doc.select(\"p.not-first\"\
+    );\n// Same as\notherParagraphs = doc.select(\"p\");\notherParagraphs.remove(0);\n\
+    ```\n\n```\n// Get the third paragraph (second in the list otherParagraphs)\n\
+    // excludes the first paragraph\nElement thirdParagraph = otherParagraphs.get(1);\n\
+    // Alternative:\nthirdParagraph = doc.select(\"p.third\");\n```\n\n```\n// You\
+    \ can also select within elements, e.g. anchors with a href attribute\n// within\
+    \ the third paragraph.\nElement link = thirdParagraph.select(\"a[href]\");\n//\
+    \ or the first <h1> element in the document body\nElement headline = doc.select(\"\
+    body\").first().select(\"h1\").first();\n```\n\nYou can find a detailed overview\
+    \ of supported selectors here.\n\n# Extract Twitter Markup\n\n```\n// Twitter\
+    \ markup documentation:\n// https://dev.twitter.com/cards/markup\nString[] twitterTags\
+    \ = {\n  \"twitter:site\",\n  \"twitter:site:id\",\n  \"twitter:creator\",\n \
+    \ \"twitter:creator:id\",\n  \"twitter:description\",\n  \"twitter:title\",\n\
+    \  \"twitter:image:alt\",\n  \"twitter:player\",\n  \"twitter:player:width\",\n\
+    \  \"twitter:player:height\",\n  \"twitter:player:stream\",\n  \"twitter:app:name:iphone\"\
+    ,\n  \"twitter:app:id:iphone\",\n  \"twitter:app:url:iphone\",\n  \"twitter:app:name:ipad\"\
+    ,\n  \"twitter:app:id:ipad\",\n  \"twitter:app:url:ipad\\u00adtt\",\n  \"twitter:app:name:googleplay\"\
+    ,\n  \"twitter:app:id:googleplay\",\n  \"twitter:app:url:googleplay\"\n};\n```\n\
+    \n```\n// Connect to URL and extract source code\nDocument doc = Jsoup.connect(\"\
+    http://stackoverflow.com/\").get();\n```"
+  - "[PAGE 18]\n\n```\nfor (String twitterTag : twitterTags) {\n\n// find a matching\
+    \ meta tag\nElement meta = doc.select(\"meta[name=\" + twitterTag + \")\first();\n\
+    \n// if found, get the value of the content attribute\nString content = meta !=\
+    \ null ? meta.attr(\"content\") : \"\";\n\n// display results\nSystem.out.printf(\"\
+    %s = %s%n\", twitterTag, content);\n}\n```\n\n# Output\n\n```\ntwitter:site =\n\
+    twitter:site:id =\ntwitter:creator =\ntwitter:creator:id =\ntwitter:description\
+    \ = Q&A for professional and enthusiast programmers\ntwitter:title = Stack Overflow\n\
+    twitter:image =\ntwitter:image:alt =\ntwitter:player =\ntwitter:player:width =\n\
+    twitter:player:height =\ntwitter:player:stream =\ntwitter:app:name=iphone =\n\
+    twitter:app:id:iphone =\ntwitter:app:url:iphone =\ntwitter:app:name=ipad =\ntwitter:app:id:ipad\
+    \ =\ntwitter:app:url:ipad =\ntwitter:app:name=googleplay =\ntwitter:app:id:googleplay\
+    \ =\ntwitter:app:url:googleplay =\n```\n\nRead Selectors online: https://riptutorial.com/jsoup/topic/515/selectors"
+  - "[PAGE 19]\n\n# # Chapter 6: Web crawling with Jsoup\n\n# ## Examples\n### Extracting\
+    \ email adresses & links to other pages\n\nJsoup can be used to extract links\
+    \ and email address from a webpage, thus \"Web address collector bot\"; First\
+    \ this code uses a Regular expression to extract the email addresses, and then\
+    \ uses methods provided by Jsoup to extract the URLs of links on the page.\n\n\
+    ```\npublic class JsoupTest {\n    public static void main(String[] args) throws\
+    \ IOException {\n        Document doc = doc.text();\n        Jsoup.connect(\"\
+    http://stackoverflow.com/questions/15893655/\").userAgent(\"Mozilla\").get();\n\
+    \n        Pattern p = Pattern.compile(\"[a-zA-Z0-9\\%+-]+@[a-zA-Z0-9\\-]+\\.[a-zA-Z0-9\\\
+    -.]+\");\n```\n\nThis code could also be easily extended to recursively visit\
+    \ those URLs and extract data from linked pages. It could also easily be used\
+    \ with a different regex to extract other data.\n\n(Please don't become a spammer!)\n\
+    \n# ## Extracting JavaScript data with Jsoup\n\nIn this example, we will try to\
+    \ find JavaScript data which containing backgroundColor:'#FFF'. Then, we will\
+    \ change value of backgroundColor '#FFF' '#ddd'. This code uses getWholeData()\
+    \ and setWholeData() methods to manipulate JavaScript data. Alternatively, html()\
+    \ method can be used to get data of JavaScript.\n\n```\n// create HTML with JavaScript\
+    \ data\nStringBuilder html = new StringBuilder();\n```"
+  - "[PAGE 20]\n\n```\nhtml.append(\"<script>\") <head> <title>Hello Jsoup!</title>\"\
+    );\\nhtml.append(\"StackExchange.docs.comments.init(\");\\nhtml.append(\"highlightColor:'#F4A83D'\n\
+    ```\n\n# Output\n\n```\n<script>StackExchange.docs.comments.init((highlightColor:'#F4A83D',backgroundColor:'#ddd'));</script>\n\
+    ```\n\n# Extracting the URLs from a website using Jsoup (recursion)\n\nIn this\
+    \ example we will extract all the web links from a website. I am using\nhttp://stackoverflow.com/\
+    \ for illustration. Here recursion is used, where each obtained linked page\n\
+    parsed for presence of an anchor tag and that link is submitted to the same function.\n\
+    \nThe condition `if(add && this.url.contains(my_site))` will limit results **to\
+    \ your domain only.**.\n\n```\nimport java.io.IOException;\nimport java.util.HashSet;\n\
+    import java.util.Set;\nimport org.jsoup.Jsoup;\nimport org.jsoup.nodes.Document;\n\
+    import org.jsoup.select.Elements;\n\npublic class readAllLinks {\n    public static\
+    \ Set<String> uniqueURL = new HashSet<String>();\n    public static String my_site;\n\
+    ```\n\nhttps://riptutorial.com/"
+- md: "\n```java\npublic static void main(String[] args) {\n\n    readAllLinks obj\
+    \ = new readAllLinks();\n    my_site = \"stackoverflow.com\";\n    obj.get_links(\"\
+    http://stackoverflow.com/\");\n}\n\n    private void get_links(String url) {\n\
+    \        try {\n            Document doc = Jsoup.connect(url).userAgent(\"Mozilla\"\
+    ).get();\n            Elements links = doc.select(\"a\");\n            \n    \
+    \        if (links.isEmpty()) {\n                return;\n            }\n\n  \
+    \          links.stream().map(link -> link.attr(\"href\")).forEachOrdered((this_url)\
+    \ -> {\n                boolean add = uniqueURL.add(this_url);\n             \
+    \   if (add && this_url.contains(my_site)) {\n                    System.out.println(this_url);\n\
+    \                    get_links(this_url);\n                }\n            });\n\
+    \        } catch (IOException ex) {\n        }\n    }\n```\n\nThe program will\
+    \ take much time to execute depending on your website. The above code can be extended\
+    \ to extract data (like titles of pages or text or images) from particular website.\
+    \ I would recommend you to go through company's terms of use before scraping it's\
+    \ links.\n\nThe example uses Jsoup library to get the links, you can also get\
+    \ the links your_url/sitemap.xml.\n\nRead Web crawling with Jsoup online: https://riptutorial.com/jsoup/topic/319/web-crawling-jsoup\n\
+    \n## Credits\n\n| S. No | Chapters | Contributors |\n|---|---|---|\n| 1 | Getting\
+    \ started with Jsoup | Alice, Community, Jeffrey Bosboom, JonasCz, Zack Teater\
+    \ |\n| 2 | Formatting HTML Output | Zack Teater |\n| 3 | Logging into websites\
+    \ with Jsoup | Joel Min, JonasCz, Stephan |\n| 4 | Parsing Javascript Generated\
+    \ Pages | Zack Teater |\n| 5 | Selectors | JonasCz, Stephan, still_learning, Zack\
+    \ Teater |\n| 6 | Web crawling with Jsoup | Alice, JonasCz, r_D, RamenChef |\n"
+  mdcn: "\n\n```java\npublic static void main(String[] args) {\n\n    readAllLinks\
+    \ obj = new readAllLinks();\n    my_site = \"stackoverflow.com\";\n    obj.get_links(\"\
+    http://stackoverflow.com/\");\n}\n\n    private void get_links(String url) {\n\
+    \        try {\n            Document doc = Jsoup.connect(url).userAgent(\"Mozilla\"\
+    ).get();\n            Elements links = doc.select(\"a\");\n            \n    \
+    \        if (links.isEmpty()) {\n                return;\n            }\n\n  \
+    \          links.stream().map(link -> link.attr(\"href\")).forEachOrdered((this_url)\
+    \ -> {\n                boolean add = uniqueURL.add(this_url);\n             \
+    \   if (add && this_url.contains(my_site)) {\n                    System.out.println(this_url);\n\
+    \                    get_links(this_url);\n                }\n            });\n\
+    \        } catch (IOException ex) {\n        }\n    }\n```\n\n该程序的执行时间取决于你的网站，可能会花费长时间。上述代码可以扩展，用于从特定网站提取数据（如页面标题、文本或图像）。我建议在抓取链接之前，先阅读公司的使用条款。\n\
+    \n示例使用了 Jsoup 库来获取链接，你也可以通过 `your_url/sitemap.xml` 获取链接。\n\n在线阅读使用 Jsoup 进行网络爬虫教程：https://riptutorial.com/jsoup/topic/319/web-crawling-jsoup\n\
+    \n## 鸣谢\n\n| 序号 | 章节 | 贡献者 |\n|---|---|---|\n| 1 | Jsoup 入门 | Alice, Community,\
+    \ Jeffrey Bosboom, JonasCz, Zack Teater |\n| 2 | HTML 输出格式化 | Zack Teater |\n\
+    | 3 | 使用 Jsoup 登录网站 | Joel Min, JonasCz, Stephan |\n| 4 | 解析 JavaScript 生成的页面\
+    \ | Zack Teater |\n| 5 | 选择器 | JonasCz, Stephan, still_learning, Zack Teater |\n\
+    | 6 | 使用 Jsoup 进行网络爬虫 | Alice, JonasCz, r_D, RamenChef |\n\n"
+  merge: 1
+  raw:
+  - "[PAGE 21]\n\n```\npublic static void main(String[] args) {\n\n    readAllLinks\
+    \ obj = new readAllLinks();\n    my_site = \"stackoverflow.com\";\n    obj.get_links(\"\
+    http://stackoverflow.com/\");\n}\n\n    private void get_links(String url) {\n\
+    \        try {\n            Document doc = Jsoup.connect(url).userAgent(\"Mozilla\"\
+    ).get();\n            Elements links = doc.select(\"a\");\n            \n    \
+    \        if (links.isEmpty()) {\n                return;\n            }\n\n  \
+    \          links.stream().map(link -> link.attr(\"href\")).forEachOrdered((this_url)\
+    \ -> {\n                boolean add = uniqueURL.add(this_url);\n             \
+    \   if (add && this_url.contains(my_site)) {\n                    System.out.println(this_url);\n\
+    \                    get_links(this_url);\n                }\n            });\n\
+    \        } catch (IOException ex) {\n        }\n    }\n\n```\n\nThe program will\
+    \ take much time to execute depending on your website. The above code can be extended\
+    \ to extract data (like titles of pages or text or images) from particular website.\
+    \ I would recommend you to go through company's terms of use before scraping it's\
+    \ links.\n\nThe example uses Jsoup library to get the links, you can also get\
+    \ the links your_url/sitemap.xml.\n\nRead Web crawling with Jsoup online: https://riptutorial.com/jsoup/topic/319/web-crawling-jsoup"
+  - '[PAGE 22]
+
+
+    # # Credits
+
+
+    | S. No | Chapters | Contributors |
+
+    |---|---||
+
+    | 1 | Getting started with Jsoup | Alice, Community, Jeffrey Bosboom, JonasCz,
+    Zack Teater |
+
+    | 2 | Formatting HTML Output | Zack Teater |
+
+    | 3 | Logging into websites with Jsoup | Joel Min, JonasCz, Stephan |
+
+    | 4 | Parsing Javascript Generated Pages | Zack Teater |
+
+    | 5 | Selectors | JonasCz, Stephan, still_learning, Zack Teater |
+
+    | 6 | Web crawling with Jsoup | Alice, JonasCz, r_D, RamenChef |'
