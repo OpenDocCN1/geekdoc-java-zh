@@ -1,0 +1,2181 @@
+- img_proc: true
+  md: '# # TestNG
+
+    java testing framework
+
+
+    # # tutorialspoint
+
+    SIMPLY EASY LEARNING
+
+
+    www.tutorialspoint.com
+
+
+    https://www.facebook.com/tutorialspointindia
+
+
+    https://twitter.com/tutorialspoint'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# About the Tutorial
+
+
+    TestNG is a testing framework developed in the lines of JUnit and NUnit, however
+    it introduces some new functionalities that make it more powerful and easier to
+    use.
+
+
+    TestNG is designed to cover all categories of tests: unit, functional, end-to-end,
+    integration, etc., and it requires JDK 5 or higher.
+
+
+    This tutorial provides a good understanding of TestNG framework needed to test
+    an enterprise-level application to deliver it with robustness and reliability.
+
+
+    # Audience
+
+
+    This tutorial is designed for software professionals interested in learning the
+    features of TestNG Framework in simple and easy steps and implement it in practice.
+
+
+    # Prerequisites
+
+
+    Before proceeding with this tutorial, you should have a basic understanding of
+    Java programming language, text editor, and execution of programs, etc. As you
+    are going to use TestNG to handle all levels of Java project testing, it will
+    be helpful if you have a prior knowledge of software development and software
+    testing processes.
+
+
+    # Copyright & Disclaimer
+
+
+    > © Copyright 2015 by Tutorials Point (I) Pvt. Ltd.
+
+
+    All the content and graphics published in this e-book are the property of Tutorials
+    Point (I) Pvt. Ltd. The user of this e-book is prohibited to reuse, retain, copy,
+    distribute or republish any contents or part of contents of this-book in any manner
+    without written consent of the publisher.
+
+
+    We strive to update the contents of our website and tutorials as timely and as
+    precisely as possible, however the contents may contain inaccuracies or errors.
+    Tutorials Point (I) Pvt. Ltd. provides no guarantee regarding the accuracy, timeliness
+    or completeness of our website or its contents including this tutorial. If you
+    discover any errors on our website or in this tutorial, please notify us at contact@tutorialspoint.com'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   About the Tutorial ................................................................................................i
+
+    Audience....................................................................................................................i
+
+    Prerequisites............................................................................................................i
+
+    Copyright & Disclaimer.............................................................................................i
+
+    Table of Contents................................................................................................ii
+
+    1. OVERVIEW ................................................................................................................1
+
+    What is TestNG?...............................................................................................................1
+
+    TestNG Features .................................................................................................2
+
+    2. ENVIRONMENT...............................................................................................3
+
+    System Requirement................................................................................................3
+
+    Step 1: Verify Java Installation in Your Machine.......................................................3
+
+    Step 2: Set JAVA Environment...............................................................................4
+
+    Step 3: Download TestNG Archive.......................................................................5
+
+    Step 4: Set TestNG Environment...............................................................................5
+
+    Step 5: Set CLSPATH Variable ................................................................6
+
+    Step 6: Test TestNG Setup...............................................................................6
+
+    Step 7: Verify the Result................................................................................7
+
+    3. WRITING TESTS .......................................................................................8
+
+    4. BASIC ANNOTATIONS..................................................................................13
+
+    Benefits of Using Annotations.....................................................................14
+
+    5. EXECUTION PROCEDURE...............................................................................15
+
+    6. EXECUTING TESTS ................................................................................19
+
+    Create a Class..................................................................................19
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_2_0.png)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Create Test Case Class...............................................................................................................
+    20
+
+
+    Create testng.xml.................................................................................................................................
+    21
+
+
+    # 7. SUITE TEST...........................................................................................................................
+    22
+
+
+    Create a Class..................................................................................................................................
+    22
+
+
+    Create Test Case Classes.....................................................................................................
+    23
+
+
+    # 8. IGNORE A TEST.....................................................................................................................
+    27
+
+
+    Create a Class..................................................................................................................................
+    27
+
+
+    Create Test Case Class...............................................................................................................
+    28
+
+
+    Create testng.xml........................................................................................................................
+    29
+
+
+    # 9. GROUP TEST.......................................................................................................................
+    30
+
+
+    Create a Class..................................................................................................................................
+    30
+
+
+    Create Test Case Class...............................................................................................................
+    31
+
+
+    Create testng.xml........................................................................................................................
+    32
+
+
+    Group of Groups......................................................................................................................
+    34
+
+
+    Exclusion Groups....................................................................................................................
+    35
+
+
+    # 10. EXCEPTION TEST...............................................................................................................
+    36
+
+
+    Create a Class..................................................................................................................................
+    36
+
+
+    Create Test Case Class...............................................................................................................
+    37
+
+
+    Create Test Runner.....................................................................................................................
+    38
+
+
+    # 11. DEPENDENCY TEST..................................................................................................
+    39
+
+
+    Example Using dependsOnMethods...............................................................................
+    39
+
+
+    Example Using dependsOnGroups...............................................................................
+    42
+
+
+    dependsOnGroups Vs dependsOnMethods..................................................................
+    45
+
+
+    # 12. PARAMETERIZED TEST..................................................................................
+    46
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_3_0.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'Passing Parameters with testng.xml ................................................................................46
+
+
+    Passing Parameters with Dataproviders ............................................................................48
+
+
+    # 13. RUN JUNIT TESTS ................................................................................................54
+
+
+    Create JUnit Test Case Class ......................................................................................54
+
+
+    # 14. TEST RESULTS..................................................................................................56
+
+
+    Custom Logging......................................................................................................56
+
+
+    Custom Reporter......................................................................................................60
+
+
+    HTML and XML Report ................................................................................................63
+
+
+    JUnit Reports .......................................................................................................66
+
+
+    # 15. PLUG WITH ANT ................................................................................70
+
+
+    Step 1: Download Apache Ant .................................................................70
+
+
+    Step 2: Set Ant Environment ..........................................................................70
+
+
+    Step 3: Download TestNG Archive ..............................................................71
+
+
+    Step 4: Create Project Structure ............................................................71
+
+
+    # 16. PLUG WITH ECLIPSE .......................................................................76
+
+
+    Step 1: Download TestNG Archive ..........................................................76
+
+
+    Step 2: Set Eclipse environment ...................................................76
+
+
+    Step 3: Verify TestNG Installation in Eclipse ................................77'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# 1. OVERVIEW
+
+
+    Testing is the process of checking the functionality of an application to ensure
+    it works as per requirements. Unit testing comes into picture at the developer
+    level where adequate measures are taken to test every single entity (class or
+    method) to ensure the final product meets the requirements.
+
+
+    JUnit has driven developers to understand the usefulness of tests, especially
+    of unit tests, compared to any other testing framework. Leveraging a rather simple,
+    pragmatic, and strict architecture, JUnit has been able to ''infect'' great number
+    of developers. Do a look at our tutorial on JUnit to have a good understanding
+    of its features. JUnit, at the same time, has some shortcomings as well, which
+    are listed below:
+
+
+    +   - Initially designed to enable unit testing only, now used for all kinds of
+    testing.
+
+    - Cannot do dependency testing.
+
+    - Poor configuration control (setUp/tearDown).
+
+    - Intrusive (forces you to extend classes and name your methods a certain way).
+
+    - Static programming model (forces you to recompile unnecessarily).
+
+    - The management of different suites of tests in complex projects can be very
+    tricky.
+
+
+    # What is TestNG?
+
+
+    Definition of TestNG as per its documentation is as follows:
+
+
+    > TestNG is a testing framework inspired by JUnit and JUnit, but introducing some
+    new functionalities that make it more powerful and easier to use.
+
+
+    TestNG is an open source automated testing framework; NG means NextGeneration.
+    TestNG is similar to JUnit (especially JUnit 4), but it is not a JUnit extension.
+    It is inspired by JUnit. It is designed to be better than JUnit, especially when
+    testing integrated tests. The creator of TestNG is Cedric Beust.
+
+
+    Eliminating most of the limitations of the older framework, TestNG gives the developer
+    the ability to write more flexible and powerful tests. As it heavily borrows from
+    Java Annotations (introduced with JDK 5.0) to define tests, it also show you how
+    to use this new feature of the Java language in a real production environment.
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# TestNG Features
+
+
+    +   * Supports annotations.
+
+    * TestNG uses more Java and OO features.
+
+    * Supports testing integrated classes (e.g., by default, no need to create a new
+    test class instance for every test method).
+
+    * Separates compile-time test code from run-time configuration/data info.
+
+    * Flexible runtime configuration.
+
+    * Introduces ''test groups''. Once you have compiled your tests, you can ask TestNG
+    to run all the "front-end" tests, or "fast", "slow", "database" tests, etc.
+
+    * Supports Dependent test methods, parallel testing, load testing, and partial
+    failure.
+
+    * Flexible plug-in API.
+
+    * Support for multi-threaded testing.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# 2. ENVIRONMENT
+
+
+    TestNG is a framework for Java, so the very first requirement is to have JDK installed
+    in your machine.
+
+
+    # System Requirement
+
+
+    | | |
+
+    |---||
+
+    | JDK | 1.5 or above. |
+
+    | Memory | No minimum requirement. |
+
+    | Disk Space | No minimum requirement. |
+
+    | Operating System | No minimum requirement. |
+
+
+    # Step 1: Verify Java Installation in Your Machine
+
+
+    Open the console and execute a java command based on the operating system you
+    have installed on your system.
+
+
+    | OS | Task | Command |
+
+    |---|---|---|
+
+    | Windows | Open Command Console | c:\> java -version |
+
+    | Linux | Open Command Terminal | $ java -version |
+
+    | Mac | Open Terminal | machine:~ joseph$ java -version |
+
+
+    Let''s verify the output for all the operating systems:
+
+
+    | OS | Output |
+
+    |---|---|
+
+    | Windows | java version "1.7.0_25" Java(TM) SE Runtime Environment (build 1.7.0_25-b15)
+    Java HotSpot(TM) 64-Bit Server VM (build 23.25-b011, mixed |
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_7_0.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# TestNG
+
+
+    | Linux | java version "1.7.0_25" Java(TM) SE Runtime Environment (build 1.7.0_25-b15)
+    Java HotSpot(TM) 64-Bit Server VM (build 23.25-b001, mixed mode) |
+
+    | Mac | java version "1.7.0_25" Java(TM) SE Runtime Environment (build 1.7.0_25-b15)
+    Java HotSpot(TM) 64-Bit Server VM (build 23.25-b001, mixed mode) |
+
+
+    If you do not have Java, install the Java Software Development Kit (SDK) from
+    http://www.oracle.com/technet/java/javase/downloads/index.html. We are assuming
+    Java 1.7.0_25 as the installed version for this tutorial.
+
+
+    # Step 2: Set Java Environment
+
+
+    Set the JAVA_HOME environment variable to point to the base directory location,
+    where Java is installed on your machine. For example,
+
+
+    | OS | Output |
+
+    | Windows | Set the environment variable JAVA_HOME to C:\Program Files\Java\jdk1.7.0_25.
+    |
+
+    | Linux | Export JAVA_HOME=/usr/local/java-current. |
+
+    | Mac | Export JAVA_HOME=/Library/Java/Home. |
+
+
+    Append Java compiler location to System Path.
+
+
+    | OS | Output |
+
+    | Windows | Append the string C:\Program Files\Java\jdk1.7.0_25\bin at the end
+    of the system variable, Path. |
+
+
+    4
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_8_0.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# TestNG
+
+
+    | Linux | Export PATH=$PATH:$JAVA_HOME/bin/ |
+
+    | Mac | Not required |
+
+
+    Verify Java Installation using the command java -version as explained above.
+
+
+    # Step 3: Download TestNG Archive
+
+
+    Download the latest version of TestNG jar file from http://www.testng.org. At
+    the time of writing this tutorial, we have downloaded testng-6.8.jar and copied
+    it onto C:\TestNG folder.
+
+
+    | OS | Archive name |
+
+    | Windows | testng-6.8.jar |
+
+    | Linux | testng-6.8.jar |
+
+    | Mac | testng-6.8.jar |
+
+
+    # Step 4: Set TestNG Environment
+
+
+    Set the TESTNG_HOME environment variable to point to the base directory location,
+    where TestNG is stored on your machine. The following table shows how to set the
+    environment variable in Windows, Linux, and Mac, assuming that we''ve stored testng-6.8.jar
+    at the location C:\TestNG.
+
+
+    | OS | Description |
+
+    | Windows | Set the environment variable TESTNG_HOME to C:\TESTNG. |
+
+    | Linux | Export TESTNG_HOME=/usr/local/TESTNG. |
+
+    | Mac | Export TESTNG_HOME=/Library/TESTNG. |'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# Step 5: Set CLSPATH Variable\n\nSet the CLSPATH environment variable to point\
+    \ to the TestNG jar location.\n\n| OS | Description |\n|---|---|\n| Windows |\
+    \ Set the environment variable CLSPATH to %CLASSPATH%;%TESTNG_HOME%\\testng-6.8.jar.\
+    \ |\n| Linux | Export CLSPATH=$CLASSPATH:$TESTNG_HOME/testng-6.8.jar. |\n| Mac\
+    \ | export CLSPATH=$CLASSPATH:$TESTNG_HOME/testng-6.8.jar. |\n\n# Step 6: Test\
+    \ TestNG Setup\n\nCreate a class file named TestNGSimpleTest at C:\\>TestNG_WORKSPACE.\n\
+    \n```\nimport org.testng.annotations.Test;\nimport static org.testng.Assert.assertEquals;\n\
+    \npublic class TestNGSimpleTest {\n    @Test\n    public void testAdd() {\n  \
+    \      String str = \"TestNG is working fine\";\n        assertEquals(\"TestNG\
+    \ is working fine\", str);\n    }\n}\n```\n\nTestNG can be invoked in several\
+    \ different ways:\n\n+   * With a testng.xml file.\n* With ANT.\n* From the command\
+    \ line.\n\nLet us invoke using the testng.xml file. Create an xml file with the\
+    \ name testng.xml in C:\\>TestNG_WORKSPACE to execute Test case(s).\n\n```\n<<?xml\
+    \ version=\"1.0\" encoding=\"UTF-8\"?>\n```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "```\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n<suite name=\"\
+    Suite1\">\n  <test name=\"test1\">\n  <classes>\n    <class name=\"TestNGSimpleTest\"\
+    />\n  </classes>\n  </test>\n</suite>\n```\n\n# ## Step 7: Verify the Result\n\
+    \nCompile the class using javac compiler as follows:\n\n```\nC:\\TestNG_WORKSPACE>javac\
+    \ TestNGSimpleTest.java\n```\n\nNow, invoke the testng.xml to see the result:\n\
+    \n```\nC:\\TestNG_WORKSPACE>java -cp \"C:\\TestNG_WORKSPACE\" org.testng.TestNG\
+    \ testng.xml\n```\n\nVerify the output.\n\n```\nSuite1\nTotal tests run: 1, Failures:\
+    \ 0, Skips: 0\n```"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# 3. WRITING TESTS\n\nWriting a test in TestNG basically involves the following\
+    \ steps:\n\n+   - Write the business logic of your test and insert TestNG annotations\
+    \ in your code.\n- Add the information about your test (e.g. the class name, the\
+    \ groups you wish to run, etc.) in a testng.xml file or in build.xml.\n- Run TestNG.\n\
+    \nHere, we will see one complete example of TestNG using POJO class, Business\
+    \ logic class and a test xml, which will be run by TestNG.\n\nCreate EmployeeDetails.java\
+    \ in C:\\TestNG_WORKSPACE, which is a POJO class.\n\n```\npublic class EmployeeDetails\
+    \ {\n\n    private String name;\n    private double monthlySalary;\n    private\
+    \ int age;\n\n    /**\n     * @return the name\n     */\n    public String getName()\
+    \ {\n        return name;\n    }\n\n    /**\n     * @param name the name to set\n\
+    \     */\n    public void setName(String name) {\n        this.name = name;\n\
+    \    }\n\n    /**\n     * @return the monthlySalary\n     */\n```\n\n![](img/949225fa30fb497905c23108e374caa1_12_0.png)"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "```\n/*\npublic double getMonthlySalary() {\n    return monthlySalary;\n}\n\
+    /**\n * @param monthlySalary the monthlySalary to set\n */\npublic void setMonthlySalary(double\
+    \ monthlySalary) {\n    this.monthlySalary = monthlySalary;\n}\n/**\n * @return\
+    \ the age\n */\npublic int getAge() {\n    return age;\n}\n/**\n * @param age\
+    \ the age to set\n */\npublic void setAge(int age) {\n    this.age = age;\n}\n\
+    ```\n\nEmployeeDetails class is used to:\n\n+   * get/set the value of employee's\
+    \ name.\n* get/set the value of employee's monthly salary.\n* get/set the value\
+    \ of employee's age.\n\nCreate an EmpBusinessLogic.java in C:\\TestNG_WORKSPACE,\
+    \ which contains business logic. \n\n```\npublic class EmpBusinessLogic {\n  \
+    \  // Calculate the yearly salary of employee\n    public double calculateYearlySalary(EmployeeDetails\
+    \ employeeDetails){\n```\n\n![](img/949225fa30fb497905c23108e374caa1_13_0.png)"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "```\ndouble yearlySalary=0;\nyearlySalary = employeeDetails.getMonthlySalary()\
+    \ * 12;\nreturn yearlySalary;\n}\n// Calculate the appraisal amount of employee\n\
+    public double calculateAppraisal(EmployeeDetails employeeDetails){\ndouble appraisal=0;\n\
+    if(employeeDetails.getMonthlySalary() < 10000){\n  appraisal = 500;\n}else{\n\
+    \  appraisal = 1000;\n}\nreturn appraisal;\n}\n\n```\n\n# EmpBusinessLogic class\
+    \ is used for calculating:\n\n+   - the yearly salary of employee.\n- the appraisal\
+    \ amount of employee.\n\nNow, let's create a TestNG class called TestEmployeeDetails.java\
+    \ in C:\\TestNG_WORKSPACE. A TestNG class is a Java class that contains at least\
+    \ one TestNG annotation. This class contains test cases to be tested. TestNG test\
+    \ can be configured by @BeforeXXX and @AfterXXX annotations (we Execution Procedure),\
+    \ which allows to perform some logic before and after a certain point.\n\n```\n\
+    import org.testng.Assert;\nimport org.testng.annotations.Test;\n\npublic class\
+    \ TestEmployeeDetails {\n  EmpBusinessLogic employeeBusiness = new EmpBusinessLogic();\n\
+    \  EmployeeDetails employee = new EmployeeDetails();\n\n  @Test\n  public void\
+    \ testCalculateAppraisal() {\n```\n\n![](img/949225fa30fb497905c23108e374caa1_14_0.png)"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "```\nemployee.setName(\"Rajeev\");\nemployee.setAge(25);\nemployee.setMonthlySalary(8000);\n\
+    double appraisal = empBusinessLogic.calculateAppraisal(employee);\nAssert.assertEquals(500,\
+    \ appraisal, 0.0, \"500\");\n```\n\n```\n// test to check yearly salary\n@Test\n\
+    public void testCalculateYearlySalary() {\n    employee.setName(\"Rajeev\");\n\
+    \    employee.setAge(25);\n    employee.setMonthlySalary(8000);\n    double salary\
+    \ = empBusinessLogic.calculateYearlySalary(employee);\n    Assert.assertEquals(96000,\
+    \ salary, 0.0, \"8000\");}\n\n```\n\n**TestEmployeeDetails** class is used for\
+    \ testing the methods of **EmpBusinessLogic** class. It does the following:\n\n\
+    +   * Tests the yearly salary of the employee.\n* Tests the appraisal amount of\
+    \ the employee.\n\nBefore you can run the tests, you must configure TestNG using\
+    \ a special XML file, conventionally named testng.xml. The syntax for this file\
+    \ is very simple, and its contents are as shown below. Create this file in C:\\\
+    TestNG_WORKSPACE.\n\n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE\
+    \ suite SYSTEM \"http://testng.org/testng-1.0.dtd\" >\n<suite name=\"Suite1\"\
+    >\n  <test name=\"test1\">\n    <classes>\n      <class name=\"TestEmployeeDetails\"\
+    />\n    </classes>\n  </test>\n</suite>\n```\n\n![](img/949225fa30fb497905c23108e374caa1_15_0.png)"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'Details of the above file are as follows:
+
+
+    +   - A suite is represented by one XML file. It can contain one or more tests
+    and is defined by the `&lt;suite&gt;` tag.
+
+
+    +   - Tag `&lt;test&gt;` represents one Test and can contain one or more TestNG
+    classes.
+
+
+    +   - `&lt;class&gt;` represents a TestNG class. It is a Java class that contains
+    at least one TestNG annotation. It can contain one or more test methods.
+
+
+    Compile the Test case classes using javac.
+
+
+    ```
+
+    C:\TestNG_WORKSPACE\java EmployeeDetails.java EmpBusinessLogic.java
+
+    TestEmployeeDetails.java
+
+    ```
+
+
+    Now TestNG with the following command:
+
+
+    ```
+
+    \TestNG_WORKSPACE>java -cp "C:\TestNG_WORKSPACE org.testng.TestNG.xml
+
+    ```
+
+
+    If all has been done correctly, you should see the results of your tests in the
+    console. Furthermore, TestNG creates a very nice HTML report in a folder called
+    **test-output** index is automatically created in the current directory. If you
+    open it and load index.html, you will see a page similar to the one in the image
+    below:
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# 4. BASIC ANNOTATIONS
+
+
+    The traditional way to indicate test methods in JUnit 3 is by prefixing their
+    names with test. This is a very effective method for tagging certain methods in
+    a class as having a special meaning, but the naming doesn''t scale well (if we
+    want to add more tags for different frameworks?) and is rather inflexible (if
+    we want to pass additional parameters to the testing framework?).
+
+
+    Annotations were formally added to the Java language in JDK 5, and TestNG made
+    the choice to use annotations to annotate test classes.
+
+
+    Here is the list of annotations that TestNG supports:
+
+
+    | Annotation | Description |
+
+    | --- | --- |
+
+    | @BeforeSuite | The annotated method will be run once before all tests in this
+    suite have run. |
+
+    | @AfterSuite | The annotated method will be run once after all tests in this
+    suite have run. |
+
+    | @BeforeClass | The annotated method will be run once before the first test method
+    in the current class is invoked. |
+
+    | @AfterClass | The annotated method will be run once after all the test methods
+    in the current class have run. |
+
+    | @BeforeTest | The annotated method will be run before any test method belonging
+    to the classes inside the <test> tag is run. |
+
+    | @AfterTest | The annotated method will be run after all the test methods belonging
+    to the classes inside the <test> tag have run. |
+
+    | @BeforeGroups | The list of groups that this configuration method will run before.
+    This method is guaranteed to run shortly before the first test method that belongs
+    to any of these groups is invoked. |
+
+    | @AfterGroups | The list of groups that this configuration method will run |'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# TestNG
+
+
+    | | |
+
+    | --- | --- |
+
+    | | after test. This method is guaranteed to run shortly after the last test method
+    that belongs to any of these groups is invoked. |
+
+    | @BeforeMethod | The annotated method will be run before each test method. |
+
+    | @AfterMethod | The annotated method will be run after each test method. |
+
+    | @DataProvider | Marks a method as supplying data for a test method. The annotated
+    method must return Object[], where each Object[] can be assigned the parameter
+    list of the test method. The @Test method that wants to receive data from this
+    DataProvider needs to use a DataProvider name equals to the name of this annotation.
+    |
+
+    | @Factory | Marks a method as a factory that returns objects that will be used
+    by TestNG as Test classes. The method must return Object[]. |
+
+    | @Listeners | Defines listeners on a test class. |
+
+    | @Parameters | Describes how to pass parameters to a @Test method. |
+
+    | @Test | Marks a class or a method as a part of the test. |
+
+
+    # Benefits of Using Annotations
+
+
+    Following are some of the benefits of using annotations:
+
+
+    +   - TestNG identifies the methods it is interested in by looking up annotations.
+    Hence, method names are not restricted to any pattern or format.
+
+    - We can pass additional parameters to annotations.
+
+    - Annotations are strongly typed, so the compiler will flag any mistakes right
+    away.
+
+    - Test classes no longer need to extend anything (such as TestCase, JUnit 3).
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_18_0.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# 5. EXECUTION PROCEDURE\n\nThis chapter explains the execution procedure of\
+    \ methods in TestNG. It explains the order of the methods called. Here is the\
+    \ execution procedure of the TestNG API methods with an example.\n\nCreate a java\
+    \ class file name TestngAnnotation.java in C:\\TestNG_WORKSPACE to test annotations.\n\
+    \n```\nimport org.testng.annotations.Test;\nimport org.testng.annotations.BeforeMethod;\n\
+    import org.testng.annotations.AfterMethod;\nimport org.testng.annotations.BeforeClass;\n\
+    import org.testng.annotations.AfterClass;\nimport org.testng.annotations.BeforeTest;\n\
+    import org.testng.annotations.AfterTest;\nimport org.testng.annotations.BeforeSuite;\n\
+    import org.testng.annotations.AfterSuite;\n\npublic class TestngAnnotation {\n\
+    \    // test case 1\n    @Test\n    public void testCase1() {\n        System.out.println(\"\
+    in test case 1\");\n    }\n\n    // test case 2\n    @Test\n    public void testCase2()\
+    \ {\n        System.out.println(\"in test case 2\");\n    }\n\n    @BeforeMethod\n\
+    \    public void beforeMethod() { }\n```"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "```\nSystem.out.println(\"in beforeMethod\");\n}\n\n@After\npublic void afterMethod()\
+    \ {\n    System.out.println(\"in afterMethod\");\n}\n\n@BeforeClass\npublic void\
+    \ beforeClass() {\n    System.out.println(\"in beforeClass\");\n}\n\n@AfterClass\n\
+    public void afterClass() {\n    System.out.println(\"in afterClass\");\n}\n\n\
+    @BeforeTest\npublic void beforeTest() {\n    System.out.println(\"in beforeTest\"\
+    );\n}\n\n@AfterTest\npublic void afterTest() {\n    System.out.println(\"in afterTest\"\
+    );\n}\n\n@BeforeSuite\npublic void beforeSuite() {\n    System.out.println(\"\
+    in beforeSuite\");\n}\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "```\n@AfterSuite\npublic void afterSuite() {\n    System.out.println(\"in afterSuite\"\
+    );\n}\n\n```\n\nNext, let's create the file testng.xml in C:\\>TestNG_WORKSPACE\
+    \ to execute annotations.\n\n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\
+    <!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n<suite name=\"Suite1\"\
+    >\n  <test name=\"test1\">\n    <classes>\n      <class name=\"TestngAnnotation\"\
+    />\n    </classes>\n  </test>\n</suite>\n\n```\n\nCompile the Test case class\
+    \ using javac.\n\n```\nC:\\TestNG_WORKSPACE\\javac TestngAnnotation.java\n```\n\
+    \nNow, run the testng.xml, which will run the test case defined in the provided\
+    \ Test class.\n\n```\nC:\\TestNG_WORKSPACE\\java org.testng.testng.TestNG testng.xml\n\
+    ```\n\nVerify the output.\n\n```\nin beforeSuite\nin beforeTest\nin beforeClass\n\
+    in beforeMethod\nin test case 1\nin afterMethod\nin beforeMethod\nin test case\
+    \ 2\n\n```\n\n![](img/949225fa30fb497905c23108e374caa1_21_0.png)"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '```
+
+    in afterMethod
+
+    in afterClass
+
+    in afterTest
+
+    in afterSuite
+
+
+    =================================================
+
+    Suite
+
+    Total tests run: 2, Failures: 0, Skips: 0
+
+    ====================================================
+
+    ```
+
+
+    Based on the above output, the execution procedure is as follows:
+
+
+    +   - First of all, beforeSuite() method is executed only once.
+
+    - Lastly, the afterSuite() method executes only once.
+
+    - Even the methods beforeTest(), beforeClass(), afterClass(), and afterTest()
+    methods are executed only once.
+
+    - beforeMethod() method executes for each test case but before executing the test
+    case.
+
+    - afterMethod() method executes for each test case but after executing the test
+    case.
+
+    - In between beforeMethod() and afterMethod(), each test case executes.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# 6. EXECUTING TESTS\n\nThe test cases are executed using TestNG class. This\
+    \ class is the main entry point for running tests in the TestNG framework. Users\
+    \ can create their own TestNG object and invoke it in many different ways such\
+    \ as:\n\n+   - On an existing testng.xml.\n- On a synthetic testng.xml, created\
+    \ entirely from Java.\n- By directly setting the test classes.\n\nYou can also\
+    \ define groups to include or exclude, assign parameters, etc. The command line\
+    \ parameters are:\n\n+   - -outputdir: specify the output directory.\n- -testclass_name:\
+    \ specifies one or several class names.\n- -testjar jar_name: specifies the jar\
+    \ containing the tests.\n- -sourcedir src1;src2 ; separated list of source directories\
+    \ (used only when javadoc annotations are used).\n- -target\n- -groups\n- -testrunfactory\n\
+    - -listener\n\n> We will create the TestNG object an existing testng.xml in our\
+    \ example below.\n\n# Create a Class\n\nCreate a java class to be tested, say,\
+    \ MessageUtil.java in C:\\TestNG_WORKSPACE.\n\n```\n/*\n* This class prints the\
+    \ given message on console.\n */\npublic class MessageUtil {\n\n    private String\
+    \ message;\n```\n\n![](img/949225fa30fb497905c23108e374caa1_23_0.png)"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "```\n//Constructor\n//@param message to be printed\npublic MessageUtil(String\
+    \ message){\n    this.message = message;\n}\n\n// prints the message\npublic String\
+    \ printMessage(){\n    System.out.println(message);\n    return message;\n}\n\
+    ```\n\n# Create Test Case\n\n+   - Create a java test class, say, SampleTest.java.\n\
+    - Add a test method testPrintMessage() to your test class.\n- Add an Annotation\
+    \ @Test to method testPrintMessage().\n- Implement the test condition and check\
+    \ the condition using assertEquals API of TestNG.\n\nCreate a java test class\
+    \ file named SampleTest.java in C:\\> TestNG_WORKSPACE.\n\n```\nimport org.testng.Assert;\n\
+    import org.testng.annotations.Test;\n\npublic class SampleTest {\n\n    String\
+    \ message = \"Hello World\";\n    MessageUtil messageUtil = new MessageUtil(message);\n\
+    \n    @Test\n    public void testPrintMessage() {\n        Assert.assertEquals(message,\
+    \ messageUtil.printMessage());\n    }\n```\n\n![](img/949225fa30fb497905c23108e374caa1_24_0.png)"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "```\n}\n```\n\n# Create testng.xml\n\nNext, let's create testng.xml file in\
+    \ C:\\TestNG_WORKSPACE, to execute test case(s). This file captures your entire\
+    \ testing in XML. This file makes it easy to describe all your test suites and\
+    \ their parameters in one file, which you can check in your code repository or\
+    \ e-mail to coworkers. It also makes it easy to extract subsets of tests or split\
+    \ several runtime configurations (e.g., testng-database.xml would run only tests\
+    \ that exercise your database).\n\n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"\
+    ?>n<suite name=\"Sample test Suite\">\n  <test name=\"Sample test\">\n    <classes>\n\
+    \      <class name=\"SampleTest\" />\n    </classes>\n  </test>\n</suite>\n```\n\
+    \nCompile the test case using javac.\n\n```\nC:\\TestNG_WORKSPACE>javac MessageUtil.java\
+    \ SampleTest.java\n```\n\nNow, run the testng.xml, which will run the test case\
+    \ defined in <test> tag.\n\n```\nC:\\TestNG_WORKSPACE>java -cp \"C:\\TestNG_WORKSPACE\"\
+    \ org.testng.TestNG testng.xml\n```\n\nVerify the output.\n\n```\nHello World\n\
+    =================================================\nSample test Suite\nTotal tests\
+    \ run: 1, Failures: 0, Skips: 0\n====================================================\n\
+    ```"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# 7. SUITE TEST\n\nA test suite is a collection of test cases intended to test\
+    \ a behavior or a set of behaviors of software program. In TestNG, we cannot define\
+    \ a suite in testing source code, but it is represented by one XML file, as suite\
+    \ is the feature of execution. It also allows flexible configuration of the tests\
+    \ to be run. A suite can contain one or more tests and is defined by the <suite>\
+    \ tag.\n\n<suite> is the root tag of testng.xml. It describes a test suite, which\
+    \ in is made of several <test> sections.\n\nThe following table lists all the\
+    \ legal attributes <suite> accepts.\n\n| Attribute | Description |\n| --- | ---\
+    \ |\n| name | The name of this suite. It is a mandatory attribute. |\n| verbose\
+    \ | The level or verbosity for this run. |\n| parallel | Whether TestNG should\
+    \ run different threads to run this suite. |\n| thread-count | The number of threads\
+    \ to use, if parallel mode is enabled (ignored other-wise). |\n| annotations |\
+    \ The type of annotations you are using in your tests. |\n| time-out | The default\
+    \ timeout that will be used on all the test methods found in this test. |\n\n\
+    In this chapter, we will show you an example having two test classes, Test1 &\
+    \ Test2, to run together using Test Suite.\n\n# Create a Class\n\nCreate a java\
+    \ class to be tested, say, MessageUtil.java in C:\\JUNIT_WORKSPACE.\n\n```\n/*\n\
+    \  * This class prints the given message on console.\"\n```\n\n![](img/949225fa30fb497905c23108e374caa1_26_0.png)"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "```\n/*/\npublic class MessageUtil {\n    private String message;\n\n    //\
+    \ Constructor\n    // @param message to be printed\n    public MessageUtil(String\
+    \ message) {\n        this.message = message;\n    }\n\n    // prints the message\n\
+    \    public String printMessage() {\n        System.out.println(message);\n  \
+    \      return message;\n    }\n\n    // add \"Hi!\" to the message\n    public\
+    \ String salutationMessage() {\n        message = \"Hi!\" + message;\n       \
+    \ System.out.println(message);\n        return message;\n    }\n}\n```\n\n# Create\
+    \ Test Case Classes\n\nCreate a java class file named Test1.java in C:\\>TestNG_WORKSPACE.\n\
+    \n```\nimport org.testng.Assert;\nimport org.testng.annotations.Test;\n\npublic\
+    \ class Test1 {\n    String message = \"Manisha\";\n    MessageUtil messageUtil\
+    \ = new MessageUtil(message);\n```\n\n![](img/949225fa30fb497905c23108e374caa1_27_0.png)"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# TestNG\n\n```\n@Test\npublic void testPrintMessage() {\n    System.out.println(\"\
+    Inside testPrintMessage()\");\n    Assert.assertEquals(message, messageUtil.printMessage());\n\
+    }}\n```\n\nCreate a java class file named Test2.java in C:\\>TestNG_WORKSPACE.\n\
+    \n```\nimport org.testng.Assert;\nimport org.testng.annotations.Test;\n\npublic\
+    \ class Test2 {\n    String message = \"Manisha\";\n    MessageUtil messageUtil\
+    \ = new MessageUtil(message);\n\n    @Test\n    public void testSalutationMessage()\
+    \ {\n        System.out.println(\"Inside testSalutationMessage()\");\n       \
+    \ message = \"Hi!\" + \"Manisha\"\n        Assert.assertEquals(message,messageUtil.salutationMessage());\n\
+    \    }\n}\n```\n\nNow, let's write the testng.xml in C:\\>TestNG_WORKSPACE, which\
+    \ would contain the <suite> tag as follows:\n\n```\n<?xml version=\"1.0\" encoding=\"\
+    UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n<suite\
+    \ name=\"Suite1\">\n  <classes>\n    <class name=\"Test1\" />\n  </classes>\n\
+    </test>\n<test name=\"exampletest2\">\n```\n```\n\n![](img/949225fa30fb497905c23108e374caa1_28_0.png)"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# TestNG\n\n```\n<classes>\n  <class name=\"Test2\" />\n</classes>\n</test>\n\
+    </suite>\n```\n\nSuite1 includes exampletest1 and exampletest2.\n\nCompile all\
+    \ java classes using javac.\n\n```\nC:\\TestNG_WORKSPACE\\javac MessageUtil.java\
+    \ Test1.java Test2.java\n```\n\nNow, run the testng.xml, which will run the test\
+    \ case defined in the provided\nTest class.\n\n```\nC:\\TestNG_WORKSPACE\\java\
+    \ -cp \"C:\\TestNG_WORKSPACE\" org.testng.TestNG\ntestng.xml\n```\n\nVerify the\
+    \ output.\n\n```\nInsidePrintMessage())\nManisha\nInsideSalutationMessage()\n\
+    Hi!Manisha\n\n====================================================\nSuite1\nTotal\
+    \ tests run: 2, Failures: 0, Skips: 0\n======================================================\n\
+    ```\n\nYou can also check the test-output folder. Under the Suite1 folder, you\
+    \ can see\ntwo html files created, exampletest1.html and exampletest2.html, which\
+    \ would\nlook as follows:"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# TestNG
+
+
+    # exampletest2
+
+
+    | Test passed/Failed/Stopped: 1/0/0 |
+
+    | Started on: | Wed Aug 14 19:17:02 IST 2013 |
+
+    | Total time: | Elapsed (1 ms) |
+
+    | Included groups: |
+
+    | Excluded groups: |
+
+
+    Hover over the method name to see the class name
+
+
+    | Test method | PASSED TESTS | Time (seconds) | Instance |
+
+    | subclass/message | | 0 | |
+
+    | test class: Test | | | Test@4622522 |'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# 8. IGNORE A TEST\n\nSometimes, it happens that our code is not ready and\
+    \ the test case written that method/code fails. In such cases, annotation @Test(enabled\
+    \ = false) helps to disable this test case.\n\nIf a test method is annotated with\
+    \ @Test(enabled = false), then the test case that is not ready will be bypassed.\n\
+    \nNow, let's see @Test(enabled = false) in action.\n\n# Create a Class\n\nCreate\
+    \ a java class to be tested, say, MessageUtil.java in C:\\TestNG_WORKSPACE.\n\n\
+    ```\n/**\n * This class prints the given message on console.\n */\npublic class\
+    \ MessageUtil {\n\n    private String message;\n\n    //Constructor\n    //@param\
+    \ message to be printed\n    public MessageUtil(String message){\n        this.message\
+    \ = message;\n    }\n\n    // prints the message\n    public String printMessage(){\n\
+    \        System.out.println(message);\n        return message;\n    }\n\n    //\
+    \ add \"Hi!\" to the message\n```\n\n![](img/949225fa30fb497905c23108e374caa1_31_0.png)"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "```\npublic String salutationMessage(){\n    message = \"Hi!\" + message;\n\
+    \    System.out.println(message);\n    return message;\n}\n```\n\n# Create Test\
+    \ Case Class\n\n+   - Create a java test class, say, IgnoreTest.java.\n- Add test\
+    \ methods, testMessage() and testSalutationMessage(), to your test class.\n- Add\
+    \ an Annotation @Test(enabled = false) to the method testPrintMessage().\n\n```\n\
+    import org.testng.Assert;\nimport org.testng.annotations.Test;\n\npublic class\
+    \ IgnoreTest {\n    String message = \"Manisha\";\n    MessageUtil messageUtil\
+    \ = new MessageUtil(message);\n\n    @Test(enabled = false)\n    public void testPrintMessage()\
+    \ {\n        System.out.println(\"Inside testPrintMessage()\");\n        message\
+    \ = \"Manisha\";\n        Assert.assertEquals(message, messageUtil.printMessage());\n\
+    \    }\n\n    @Test\n    public void testSalutationMessage() {\n        System.out.println(\"\
+    Inside testSalutationMessage()\");\n        message = \"HI!\" + \"Manisha\";\n\
+    \        Assert.assertEquals(message, messageUtil.salutationMessage());\n    }\n\
+    ```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\n}\n}\n```\n\n# # Create testng.xml\n\nCreate testng.xml in C:\\>TestNG_WORKSPACE\
+    \ to execute test case(s).\n\n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE\
+    \ suite SYSTEM\n\"http://testng.org/testng-1.0.dtd\" \n<suite name=\"Suite1\"\
+    >\n  <test name=\"test1\">\n    <classes>\n      <class name=\"IgnoreTest\" />\n\
+    \    </classes>\n  </test>\n</suite>\n```\n\nCompile the MessageUtil and test\
+    \ case classes using javac.\n\n```\nC:\\TestNG_WORKSPACE\\javac MessageUtil.java\
+    \ IgnoreTest.java\n```\n\nNow, run the testng.xml, which will not run PrintMessage()\
+    \ the test case defined in the Test Case class.\n\n```\nC:\\TestNG_WORKSPACE>java\
+    \ -cp \"C:\\TestNG_WORKSPACE\" org.testng.TestNG\ntestng.xml\n```\n\nVerify the\
+    \ output. testPrintMessage() test case is not tested.\n\n```\nInside testSalutationMessage()\n\
+    \nHi!Manisha\n\n=================================================\nSuite1\nTotal\
+    \ tests run: 1, Failures: 0, Skips: 0\n=================================================\n\
+    ```\n\nYou can also ignore a group of tests, which will be discussed in the next\
+    \ chapter."
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "Group test is a new innovative feature in TestNG, which doesn’t exist in JUnit\
+    \ framework. It permits you to dispatch methods into proper portions and perform\
+    \ sophisticated groupings of test methods.\n\nNot only can you declare those methods\
+    \ that belong to groups, but you can also specify groups contain other groups.\
+    \ Then, TestNG can be invoked and asked to include a certain set of groups (or\
+    \ regular expressions), while excluding another set.\n\nGroup tests provide maximum\
+    \ flexibility in how you partition your tests, and doesn't require you to recompile\
+    \ if you want to run two different sets of tests back to back.\n\nGroups are specified\
+    \ in your testng.xml file using the <groups> tag. It can be found either under\
+    \ the <test> or <suite> tag. Groups specified in the suite> tag apply to all the\
+    \ <test> tag underneath.\n\nNow, let's take an example to see how group test works.\n\
+    \n# Create a Class\n\nCreate a java class to be tested, say, MessageUtil.java\
+    \ in C:\\TestNG_WORKSPACE.\n\n```\n/*\n * This class prints the given message\
+    \ on console.\n */\npublic class MessageUtil {\n    private String message;\n\n\
+    \    // Constructor\n    // @param message to be printed\n    public MessageUtil(String\
+    \ message) {\n        this.message = message;\n    }\n\n    // prints the message\n\
+    \    public String printMessage() {\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "```\nSystem.out.println(message);\nreturn message;\n}\n\n// add \"tutorialpoint\"\
+    \ to the message\npublic String salutationMessage() {\nmessage = \"tutorialpoint\"\
+    \ + message;\nSystem.out.println(message);\nreturn message;\n}\n\n// add \"www.\"\
+    \ to the message\npublic String exitMessage() {\nmessage = \"www.\" + message;\n\
+    System.out.println(message);\nreturn message;\n}\n```\n\n# # Create Test Case\
+    \ Class\n\n+   - Create a java test case, GroupTestExample.java.\n- Add test methods,\
+    \ testPrintMessage() and testSalutationMessage(), and your test class.\n- Group\
+    \ the test method in these categories:\n  - Check-in tests (checkintest): These\
+    \ tests should be run before you submit new code. They should typically be fast\
+    \ and just make sure no functionality is broken.\n  - Functional tests (functest):\
+    \ These tests should cover all the functionalities of your software and be at\
+    \ least once a day, although ideally you would want to run them continuously.\n\
+    \nCreate the java class file named **GroupTestExample.java** in `C:\\TestNG_WORKSPACE`.\n\
+    \n![](img/949225fa30fb497905c23108e374caa1_35_0.png)"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "```\nimport org.testng.Assert;\nimport org.testng.annotations.Test;\n\npublic\
+    \ class GroupTestExample {\n    String message = \".com\";\n    MessageUtil messageUtil\
+    \ = new MessageUtil(message);\n\n    @Test(groups = { \"functest\", \"checktest\"\
+    \ })\n    public void testPrintMessage() {\n        System.out.println(\"Inside\
+    \ testPrintMessage()\");\n        message = \".com\";\n        Assert.assertEquals(message,\
+    \ messageUtil.printMessage());\n    }\n\n    @Test(groups = { \"checktest\" })\n\
+    \    public void testSalutationMessage() {\n        System.out.println(\"Inside\
+    \ testSalutationMessage()\");\n        message = \"tutorialspoint\" + + \".com\"\
+    ;\n        Assert.assertEquals(message, messageUtil.salutationMessage());\n  \
+    \  }\n\n    @Test(groups = { \"functest\" })\n    public void testExitMessage()\
+    \ {\n        System.out.println(\"Inside testExitMessage()\");\n        message\
+    \ = \"www.\" + \"tutorialspoint\"+\".com\";\n        Assert.assertEquals(message,\
+    \ messageUtil.exitMessage());\n    }\n}\n```\n\n# Create testng.xml\n\nCreate\
+    \ testng.xml in C:\\>TestNG_WORKSPACE to execute test case(s). Here, we would\
+    \ be executing only those tests that belong to the group functest."
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"\
+    http://testng.org/testng-1.0.dtd\">\n<suite name=\"Suite1\">\n  <test name=\"\
+    test1\">\n    <groups>\n      <run>\n        <include name=\"functest\" />\n \
+    \     </run>\n    </groups>\n    <classes>\n      <class name=\"GroupTestExample\"\
+    \ />\n    </classes>\n  </test>\n</suite>\n```\n\nCompile the MessageUtil, Test\
+    \ case classes using javac.\n\n| C:\\\\TestNG_WORKSPACE\\javac MessageUtil.java\
+    \ GroupTestExample.java |\n\nNow, run the testng.xml, which will run only the\
+    \ method testPrintMessage(), as it belongs to the group functest.\n\n```\nC:\\\
+    \\TestNG_WORKSPACE>java -cp \"C:\\\\TestNG_WORKSPACE\" org.testng.TestNG testng.xml\n\
+    ```\n\nVerify the output. Only the method testPrintMessage() is executed.\n\n\
+    ```\nInside testPrintMessage()\n.com\nInside testExitMessage()\nwww..com\n\n=================================================\n\
+    Suite1\nTotal tests run: 2, Failures: 1, Skips: 0\n=================================================\n\
+    ```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# Group of Groups\n\nGroups can also include other groups. These groups are\
+    \ called MetaGroups. For example, you might want to define a group all that includes\
+    \ checkintest and functest. Let's modify our testng.xml file as follows:\n\n```\n\
+    <xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\"\
+    >\n<suite name=\"Suite1\">\n  <test name=\"test1\">\n    <groups>\n      <define\
+    \ name=\"all\">\n        <include name=\"functest\"/>\n        <include name=\"\
+    checkintest\"/>\n      </define>\n    </groups>\n    <run>\n      <include name=\"\
+    all\"/>\n    </run>\n    <classes>\n      <class name=\"GroupTestExample\" />\n\
+    \    </classes>\n  </test>\n</suite>\n```\n\nExecuting the above testng.xml will\
+    \ execute all the three tests and will give you the following result:\n\n| Inside\
+    \ testPrintMessage())\n.com\nInside testSalutationMessage()\ntutorialpoint.com\n\
+    Inside testExitMessage()\nwww.tutorialpoint.com\n=================================================\n\
+    Suite1 |"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: 'Total tests run: 3, Failures: 0, Skips: 0
+
+    ====================================
+
+
+    # Exclusion Groups
+
+
+    You can ignore a group by using the <exclude> tag as shown below:
+
+
+    ```
+
+    <?xml version="1.0" encoding="UTF-8"?>
+
+    <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+    <suite name="Suite1">
+
+    <test name="test1">
+
+    <groups>
+
+    <define name="all">
+
+    <exclude name="functest"/>
+
+    <include name="checkintest"/>
+
+    </define>
+
+    <run>
+
+    <include name="all"/>
+
+    </run>
+
+    </groups>
+
+    <classes>
+
+    <class name="GroupTestExample" />
+
+    </classes>
+
+    </test>
+
+    </suite>
+
+    ```'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# 10. EXCEPTION TEST\n\nTestNG provides an option of tracing the exception\
+    \ handling of code. You can test whether a code throws a desired exception or\
+    \ not. Here the **expectedExceptions** parameter is used along with the @Test\
+    \ annotation. Now, let's see @Test(expectedExceptions) in action.\n\n# Create\
+    \ a Class\n\nCreate a java class to be tested, say, **MessageUtil.java in C:\\\
+    TestNG_WORKSPACE**.. Add an error condition inside the printMessage() method.\n\
+    \n```\n/*\n* This class prints the given message on console.\n*/\npublic class\
+    \ MessageUtil {\n\n    private String message;\n\n    //Constructor\n    //@param\
+    \ message to be printed\n    public MessageUtil(String message){\n        this.message\
+    \ = message;\n    }\n\n    // prints the message\n    public void printMessage(){\n\
+    \        System.out.println(message);\n        int a =0;\n        int b = 1/a;\n\
+    \    }\n\n    // add \"Hi!\" to the message\n    public String salutationMessage()\
+    \ {\n```"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "```\nmessage = \"Hi!\" + message;\nSystem.out.println(message);\nreturn message;\n\
+    \n```\n\n# # Create Test Case Class\n\n+   - Create a java test class say, **ExpectedExceptionTest.java**.\n\
+    - Add an expected exception ArithmeticException to the testWithMessage case.\n\
+    \nCreate a java class file named **ExpectedExceptionTest.java** in C:\\>TestNG_WORKSPACE.\n\
+    \n```\nimport org.testng.Assert;\nimport org.testng.annotations.Test;\n\npublic\
+    \ class class ExpectedExceptionTest {\n    String message = \"Manisha\";\n   \
+    \ MessageUtil messageUtil = new MessageUtil(message);\n\n    @Test(expectedExceptions\
+    \ = ArithmeticException.class)\n    public void testPrintMessage() {\n       \
+    \ System.out.println(\"Inside testPrintMessage()\");\n        messageUtil.printMessage();\n\
+    \    }\n\n    @Test\n    public void testSalutationMessage() {\n        System.out.println(\"\
+    Inside testSalutationMessage()\");\n        message = \"Hi!\" + \"Manisha\";\n\
+    \        Assert.assertEquals(message,messageUtil.salutationMessage());\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# Create Test Runner\n\nCreate testng.xml in C:\\>TestNG_WORKSPACE to execute\
+    \ test case(s).\n\n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE\
+    \ suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n<suite name=\"Suite1\">\n\
+    \  <test name=\"test1\">\n    <classes>\n      <class name=\"ExpectedExceptionTest\"\
+    \ />\n    </classes>\n  </test>\n</suite>\n```\n\nCompile the MessageUtil, Test\
+    \ case classes using javac.\n\n```\nC:\\>TestNG_WORKSPACE>javac MessageUtil.java\
+    \ TestJUnit.java\n```\n\nNow, run the Test Runner, which will run test cases defined\
+    \ in the provided Test Case class.\n\n```\nC:\\>TestNG_WORKSPACE>java -cp \"C:\\\
+    >TestNG_WORKSPACE\" org.testng.TestNG\\stestng.xml\n```\n\nVerify the output.\
+    \ testPrintMessage() test case will be passed.\n\n```\nInside testPrintMessage()\n\
+    Manisha\nInside testSalutationMessage()\nHi!Manisha\n\n=================================================\n\
+    Suite1\nTotal tests run: 2, Failures: 0, Skips: 0\n=================================================\\\
+    =\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# 11. DEPENDENCY TEST\n\nSometimes, you may need to invoke methods in a test\
+    \ case in a particular order, or you may want to share some data and state between\
+    \ methods. This kind of dependency is supported by TestNG, as it supports the\
+    \ declaration of explicit dependencies between test methods.\n\nTestNG allows\
+    \ you to specify dependencies either with:\n\n+   - Using attribute dependsOnMethods\
+    \ in @Test annotations, OR\n- Using attribute dependsOnGroups in @Test annotations.\n\
+    \n# Example Using dependsOnMethods\n\n# Create a Class\n\nCreate a java class\
+    \ to be tested, say, MessageUtil.java in C:\\TestNG_WORKSPACE.\n\n```\npublic\
+    \ class MessageUtil {\n    private String message;\n\n    // Constructor\n   \
+    \ // @param message to be printed\n    public MessageUtil(String message) {\n\
+    \        this.message = message;\n    }\n\n    // prints the message\n    public\
+    \ String printMessage() {\n        System.out.println(message);\n        return\
+    \ message;\n    }\n\n    // add \"Hi!\" to the message\n    public String salutationMessage()\
+    \ {\n        message = \"Hi!\" + message;\n    }\n```\n\n![](img/949225fa30fb497905c23108e374caa1_43_0.png)"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# TestNG\n\n```\nSystem.out.println(message);\nreturn message;\n}\n```\n\n\
+    # Create Test Case Class\n\n+   - Create a java test class, say, DependencyTestUsingAnnotation.java.\n\
+    - Add test methods, testPrintMessage() and testSalutationMessage(), and initEnvironmentTest()\
+    \ to your test class.\n- Add attribute dependsOnMethods = {\"initEnvironmentTest\"\
+    } to the @Test annotation of test method.\n\nCreate a java class name DependencyTestUsingAnnotation.java\
+    \ in C:\\TestNG_WORKSPACE.\n\n```\nimport org.testng.Assert;\nimport org.testng.annotations.Test;\n\
+    \npublic class DependencyTestUsingAnnotation {\n    String message = \"Manisha\"\
+    ;\n    MessageUtil messageUtil = new MessageUtil(message);\n\n    @Test\n    public\
+    \ void testPrintMessage() {\n        System.out.println(\"Inside testPrintMessage()\"\
+    );\n        message = \"Manisha\";\n        Assert.assertEquals(message, messageUtil.printMessage());\n\
+    \    }\n\n    @Test(dependsOnMethods = {\"initEnvironmentTest\"})\n    public\
+    \ void testSalutationMessage() {\n        System.out.println(\"Inside testSalutationMessage()\"\
+    );\n        message = \"Hi!\" + \"Manisha\";\n        Assert.assertEquals(message,\
+    \ messageUtil.salutationMessage());\n    }\n}\n```\n\n![](img/949225fa30fb497905c23108e374caa1_44_0.png)"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\n@Test\npublic void initEnvironmentTest() {\n    System.out.println(\"\
+    This is initEnvironmentTest\");\n}\n```\n\n# Create testng.xml\n\nCreate testng.xml\
+    \ in C:\\TestNG_WORKSPACE to execute test case(s).\n\n```\n<?xml version=\"1.0\"\
+    \ encoding=\"UTF-8\"?><!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\"\
+    >\n<suite name=\"Suite1\">\n  <test name=\"test1\">\n    <classes>\n      <class\
+    \ name=\"DependencyTestUsingAnnotation\" />\n    </classes>\n  </test>\n</suite>\n\
+    ```\n\nCompile the MessageUtil, Test case classes using javac.\n\n```\nC:\\TestNG_WORKSPACE\\\
+    javac MessageUtil.java\nDependencyTestUsingAnnotation.java\n```\n\nNow, run the\
+    \ testng.xml, which will run the testSalutationMessage() method only after the\
+    \ execution of initEnvironmentTest() method.\n\n```\nC:\\TestNG_WORKSPACE\\java\
+    \ -cp \"C:\\TestNG_WORKSPACE\" org.testng.TestNG.xml\n```\n\nVerify the output.\n\
+    \n```\nThis is initEnvironmentTest\nInside testPrintMessage()\nManisha\nInside\
+    \ testSalutationMessage()\nHi!Manisha\n```\n\n![](img/949225fa30fb497905c23108e374caa1_45_0.png)"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "```\n=============================================\nSuite1\nTotal tests run:\
+    \ 3, Failures: 0, Skips: 0\n=============================================\n```\n\
+    \n# # Example Using dependsOnGroups\n\nYou can also have methods that depend on\
+    \ entire groups. Let's have an example to demonstrate this.\n\n# # Create a Class\n\
+    \nCreate a java class to be tested, say, MessageUtil.java in C:\\>\n\n```\npublic\
+    \ class MessageUtil {\n    private String message;\n\n    // Constructor\n   \
+    \ // @param message to be printed\n    public MessageUtil(String message) {\n\
+    \        this.message = message;\n    }\n\n    // prints the message\n    public\
+    \ String printMessage() {\n        System.out.println(message);\n        return\
+    \ message;\n    }\n\n    // add \"Hi!\" to the message\n    public String salutationMessage()\
+    \ {\n        message = \"Hi!\" + message;\n        System.out.println(message);\n\
+    \        return message;\n    }\n\n```\n\n![](img/949225fa30fb497905c23108e374caa1_46_0.png)"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# TestNG
+
+
+    # Create Test Case Class
+
+
+    +   * Create a java test class, say, DependencyTestUsingAnnotation.java.
+
+    * Add test methods, testPrintMessage(), testSalutationMessage(), and initEnvironmentTest()
+    to your test class, and add them to the group "init".
+
+    * Add the attribute dependsOnMethods ={init.*}" to the @Test annotation ofestSalutationMessage()
+    method.
+
+
+    Create a java class named DependencyTestUsingAnnotation.java in C:\TestNG_WORKSPACE.
+
+
+    ```
+
+    import org.testng.annotations.Test;
+
+
+    public class DependencyTestUsingAnnotation {
+
+    String message = "Manisha";
+
+    MessageUtil message messageUtil = new MessageUtil(message);
+
+
+    @Test(groups = { "init" }
+
+    public void testPrintMessage() {
+
+    System.out.println("Inside testPrintMessage()");
+
+    message = "Manisha"
+
+    Assert.assertEquals(message, messageUtil.printMessage());
+
+    }
+
+
+    @Test(dependsOnGroups = { "init.*" }
+
+    public void testSalutationMessage() {
+
+    System.out.println("Inside testSalutationMessage()");
+
+    message = "Hi!" + "Manisha"
+
+    Assert.assertEquals(message, messageUtil.salutationMessage());
+
+    }
+
+
+    @Test(groups = { "init" }
+
+    public void initEnvironmentTest() {
+
+    ```
+
+
+    43'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "```\nSystem.out.println(\"This is initEnvironmentTest\");\n}\n```\n\nIn this\
+    \ example, testSalutationMessage() is declared as depending on any group, matching\
+    \ the regular expression \"init.*\", which guarantees that the methods testPrintMessage()\
+    \ and initEnvironmentTest() will always be invoked before testSalutationMessage().\n\
+    \nIf a method depended upon fails, and you have a hard dependency on it (alwaysRun=false,\
+    \ which is the default), the methods that depend on it are not marked as FAIL\
+    \ but as SKIP. Skipped methods will be reported as such in the final report (in\
+    \ a color that is Red nor Green in HTML), which is important since skipped methods\
+    \ are not necessarily failures.\n\n# Create testing.xml\n\nCreate testing.xml\
+    \ in C:\\>TestNG_WORKSPACE to execute test case(s).\n\n```\n<?xml version=\"1.0\"\
+    \ encoding=\"UTF-8\"?><!DOCTYPE suite SYSTEM\n\"http://testng.org/testng-1.0.dtd\"\
+    >\n<suite name=\"Suite1\">\n  <test name=\"test1\">\n    <classes>\n      <class\
+    \ name=\"DependencyTestUsingAnnotation\" />\n    </classes>\n  </test>\nn\n```\n\
+    \nCompile the MessageUtil, Test case classes using javac.\n\n```\nC:\\TestNG_WORKSPACE>javac\
+    \ MessageUtil.java\nDependencyTestUsingAnnotation.java\n```\n\nNow, run the test.xml,\
+    \ which will run the testSalutationMessage() method only after the execution of\
+    \ initEnvironmentTest() method.\n\n```\nC:\\TestNG_WORKSPACE>java -cp \"C:\\TestNG_WORKSPACE\"\
+    \ org.testng.TestNG\ntestng.xml\n```\n\nVerify the output.\n\n```\nThis is initEnvironmentTest\n\
+    ```\n\n![](img/949225fa30fb497905c23108e374caa1_48_0.png)"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '```
+
+    Inside testPrintMessage()
+
+    Manisha
+
+    Inside testSalutationMessage()
+
+    Hi!Manisha
+
+
+    ============================================
+
+    Suite1
+
+    Total tests run: 3, Failures: 0, Skips: 0
+
+    =================================
+
+    ```
+
+
+    # dependsOnGroups Vs dependsOnMethods
+
+
+    +   - On using groups, we are no longer exposed to refactoring problems. As long
+    as we don''t modify the dependsOnGroups or groups attributes, as tests will keep
+    running with the proper dependencies up.
+
+    - Whenever a new method needs to be added in the dependency graph, all we need
+    to do is put it in the right group and make sure it depends on the correct group.
+    We don''t need to modify any other method.
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_49_0.png)'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# 12. PARAMETERIZED TEST\n\nAnother interesting feature available in TestNG\
+    \ is **parametric testing**. In most cases, you'll come across a scenario where\
+    \ the business logic requires a hugely varying number of tests. Parameterized\
+    \ tests allow developers to run the same test over and over again using different\
+    \ values.\n\nTestNG lets you pass parameters directly to your test methods in\
+    \ two different ways:\n\n+   * With testng.xml\n* With Data Providers\n\n# Passing\
+    \ Parameters with testng.xml\n\nWith this technique, you define the simple parameters\
+    \ in the testng.xml file and then reference those parameters in the source files.\
+    \ Let us have an example to demonstrate how to use this technique to pass parameters.\n\
+    \n# Create Test Case Class\n\n+   * Create a java test class, say, ParameterizedTest1.java.\n\
+    * Add test method parameterTest() to your test class. This method takes a string\
+    \ as input parameter.\n* Add the annotation @Parameters(\"myName\") to this method.\
+    \ The parameter would be passed a value from testng.xml, which we will see in\
+    \ the next step.\n\nCreate a java class file named ParameterizedTest1.java in\
+    \ C:\\>TestNG_WORKSPACE.\n\n```\nimport org.testng.annotations.Parameters;\nimport\
+    \ org.testng.annotations.Test;\n\npublic class ParameterizedTest1 {\n\n    @Test\n\
+    \    @Parameters(\"myName\")\n    public void parameterTest(String myName) {\n\
+    \        System.out.println(\"Parameterized value is : \" + myName);\n    }\n\
+    }\n```\n\n![](img/949225fa30fb497905c23108e374caa1_50_0.png)"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# Create testng.xml\n\nCreate testng.xml in C:\\TestNG_WORKSPACE to execute\
+    \ test case(s).\n\n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?><DOCTYPE suite\
+    \ SYSTEM\n\"http://testng.org/testng-1.0.dtd\">\n<suite name=\"Suite1\">\n  <test\
+    \ name=\"test1\">\n    <parameter name=\"myName\" value=\"manisha\"/>\n    <classes>\n\
+    \      <class name=\"ParameterizedTest1\" />\n    </classes>\n  </test>\n</suite>\n\
+    ```\n\nWe can also define the parameters at the <suite> level. Suppose we have\
+    \ defined myName at both <suite> and <test> levels. In such cases, regular scoping\
+    \ rules apply. It means that any class inside <test> tag will see the value of\
+    \ parameter defined in <test>, while the classes in the rest of the testng.xml\
+    \ file will see the test case defined in <suite>.\n\nCompile the test case using\
+    \ javac.\n\n```\nC:\\TestNG_WORKSPACE>javac ParameterizedTest1.java\n```\n\nNow,\
+    \ run testng.xml, which will run the Parameterized method. TestNG will try to\
+    \ find a parameter named myName first in the <test> tag, and then, if it can't\
+    \ find it, it searches in the <suite> tag that encloses it.\n\n```\nC:\\TestNG_WORKSPACE>java\
+    \ -cp \"C:\\TestNG_WORKSPACE\" org.testng.TestNG\ntestng.xml\n```\n\nVerify the\
+    \ output.\n\n```\nParameterized value is : manisha\n\n=============================================\n\
+    Suite1\nTotal tests run: 1, Failures: 0, Skips: 0\n```\n\n![](img/949225fa30fb497905c23108e374caa1_51_0.png)"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "TestNG will automatically convert the value specified in testng.xml to the\
+    \ type of your parameter. Here are the types supported:\n\n+   * String\n* int/Integer\n\
+    * boolean/Boolean\n* byte/Byte\n* char/Character\n* double/Double\n* float/Float\n\
+    * long/Long\n* short/Short\n\n# Passing Parameters with Dataproivers\n\nWhen you\
+    \ need to pass complex objects or parameters that need to be created from Java\
+    \ (complex objects, objects read from a property file or a database, etc.), parameters\
+    \ can be passed using DataProviders.\n\nA Data Provider is a method annotated\
+    \ with @DataProvider. This annotation has only one string attribute: its name.\
+    \ If the name is not supplied, the data provider's name automatically defaults\
+    \ to the method's name. A data provider returns an array of objects.\n\nThe following\
+    \ demonstrate how to use data providers. The first example is about @DataProvider\
+    \ using Vector, String, or Integer as parameter, and the second example is about\
+    \ @DataProvider using object as parameter.\n\n# Example 1\n\nHere, the @DataProvider\
+    \ passes Integer and Boolean as parameter.\n\n# Create Java class\n\nCreate a\
+    \ java class called PrimeNumberChecker.java. This class checks if the number is\
+    \ prime. Create this class in C:\\>TestNG_WORKSPACE.\n\n```\npublic class PrimeNumberChecker\
+    \ {\n    public Boolean validate(final Integer primeNumber) {\n        for (int\
+    \ i = 2; i < (primeNumber / 2); i++) {\n```\n\n![](img/949225fa30fb497905c23108e374caa1_52_0.png)"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\nif (primeNumber % i == 0) {\n    return false;\n}\n}\nreturn true;\n}\n\
+    ```\n\n# Create Test Case Class\n\n+   - Create a java test class, say, ParamTestWithDataProvider1.java.\n\
+    - Define the method primeNumbers(), which is defined as a Datapvider using the\
+    \ annotation. This method returns an array of objects.\n- Add the test method\
+    \ primeNumberChecker() to your test class. This method takes an Integer and Boolean\
+    \ as input parameters. This method validates if the parameter is passed as a prime\
+    \ number.\n- Add the annotation @Test(dataProvider = \"test1\") to this method.\
+    \ The attribute dataProvider is mapped to \"test1\".\n\nCreate a java file named\
+    \ ParamTestWithDataProvider1.java in C:\\TestNG_WORKSPACE.\n\n```\nimport org.testng.Assert;\n\
+    import org.testng.annotations.BeforeMethod;\nimport org.testng.annotations.DataProvider;\n\
+    import org.testng.annotations.Test;\n\npublic class ParamTestWithDataProvider1\
+    \ {\n    private PrimeNumberChecker primenNumberChecker;\n\n    @BeforeMethod\n\
+    \    public void initialize() {\n        primeNumberChecker = new PrimeNumberChecker();\n\
+    \    }\n\n    @DataProvider(name = \"test1\")\n    public static Object[][][]\
+    \ primeNumbers() {\n```\n\n![](img/949225fa30fb497905c23108e374caa1_53_0.png)"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# TestNG\n\n```\nreturn new Object[][][] { { 2, true }, { 6, false }, { 19,\
+    \ true },\n{ 22, false }, { 23, true } };\n}\n// This test will run 4 times since\
+    \ we have 5 parameters defined\n@Test(dataProvider = \"test1\")\npublic void testPrimeNumberChecker(Integer\
+    \ inputNumber,\nBoolean expectedResult) {\nSystem.out.println(inputNumber + \"\
+    \ \" + expectedResult);\nAssert.assertEquals(expectedResult,\nprimeNumberChecker.validate(inputNumber));\n\
+    }}\n```\n\nCreate testng.xml\nCreate a testng.xml C:\\> TestNG_WORKSPACE to execute\
+    \ Test case(s).\n\n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE suite\
+    \ SYSTEM\n\"http://testng.org/testng-1.0.dtd\" >\n<suite name=\"Suite1\">\n  <test\
+    \ name=\"test1\">\n    <classes>\n      <class name=\"ParamTestWithDataProvider1\"\
+    \ />\n    </classes>\n  </test>\n</suite>\n```\n\nCompile the TestNG case class\
+    \ using javac.\nC:\\TestNG_WORKSPACE>javac ParamTestWithDataProvider1.java\nPrimeNumberChecker.java\n\
+    \nNow, run testng.xml.\nC:\\TestNG_WORKSPACE>java -cp \"C:\\TestNG_WORKSPACE\"\
+    \ org.testng.Testng.xml\n\nVerify the output.\n\n![](img/949225fa30fb497905c23108e374caa1_54_0.png)"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\n2 true\n6 false\n19 true\n22 false\n23 true\n\n===========================================\n\
+    Suite1\nTotal tests run: 5, Failures: 0, Skips: 0\n=========================================\n\
+    ```\n\n# Example 2\n\nHere, the @DataProvider passes Object as parameter.\n\n\
+    # Create Java class\n\nCreate java class Bean.java, which is a simple object with\
+    \ get/set methods, in C:\\TestNG_WORKSPACE.\n\n```\npublic class Bean {\n    private\
+    \ String val;\n    private int i;\n    public Bean(String val, int i){\n     \
+    \   this.val=val;\n        this.i=i;\n    }\n    public String getVal() {\n  \
+    \      return val;\n    }\n    public void setVal(String val) {\n        this.val\
+    \ = val;\n    }\n    public int getI() {\n        return i;\n    }\n    public\
+    \ void setI(int i) {\n```\n\n![](img/949225fa30fb497905c23108e374caa1_55_0.png)"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "```\nthis.i = i;\n}\n```\n\n# Create Test Case Class\n\n+   - Create a java\
+    \ test class, say, ParamTestWithDataProvider2.java.\n- Define the method primeNumbers(),\
+    \ which is defined as a data provider using annotation. This method returns an\
+    \ array of objects.\n- Add the test method test() to your test class. This method\
+    \ takes an object bean as parameter.\n- Add the annotation @Test(dataProvider\
+    \ = \"test1\") to this method. The attribute dataProvider is mapped to \"test1\"\
+    .\n\nCreate a java class named ParamTestWithDataProvider2.java in C:\\>TestNG_WORKSPACE.\n\
+    \n```\nimport org.testng.annotations.DataProvider;\nimport org.testng.annotations.Test;\n\
+    \npublic class ParamTestWithDataProvider2 {\n    @DataProvider(name = \"test1\"\
+    )\n    public static Object[][][] primeNumbers() {\n        return new Object[][][]]{\
+    \ { new Bean(\"hi I am the bean\", 111) };\n    }\n\n    @Test(dataProvider =\
+    \ \"test1\")\n    public void testMethod(Bean myBean) {\n        System.out.println(myBean.getVal()\
+    \ + \" \" + myBean.getI());\n    }\n}\n```\n\n# Create testing.xml\n\nCreate testing.xml\
+    \ in C:\\>TestNG_WORKSPACE to execute test case(s).\n\n```\n<?xml version=\"1.0\"\
+    \ encoding=\"UTF-8\"?<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\"\
+    \ >\n```\n\n![](img/949225fa30fb497905c23108e374caa1_56_0.png)"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "```\n<suite name=\"Suite1\">\n  <test name=\"test1\">\n    <classes>\n    \
+    \  <class name=\"ParamTestWithDataProvider2\" />\n    </classes>\n  </test>\n\
+    </suite>\n```\n\nCompile the test case class using javac.\n\n```\nC:\\TestNG_WORKSPACE>javac\
+    \ ParamTestWithDataProvider2.java Bean.java\n```\n\nNow, run testng.xml.\n\n```\n\
+    C:\\TestNG_WORKSPACE>java -cp \"C:\\TestNG_WORKSPACE\" org.testng.TestNG testng.xml\n\
+    ```\n\nVerify the output.\n\n```\nhi I am the bean 111\n==========================================\n\
+    Suite1\nTotal tests run: 1, Failures: 0, Skips: 0\n==========================================\n\
+    ```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# 13. RUN JUNIT TESTS\n\nNow that you have understood TestNG and its various\
+    \ tests, you must be worried by now and as to how to refactor your JUnit code.\
+    \ There's no need to worry, as TestNG provides a way to shift from JUnit to TestNG\
+    \ at your own pace. You can execute your existing JUnit test cases using TestNG.\n\
+    \nTestNG can automatically recognize and run JUnit tests, so that you can use\
+    \ TestNG as a runner for all your existing tests and write new tests using TestNG.\
+    \ All you have to do is put JUnit library on the TestNG classpath, so it can find\
+    \ and use JUnit classes, change your runner from JUnit to TestNG in Ant, and then\
+    \ run TestNG in \"mixed\" mode. This way, you can have all your tests in the same\
+    \ project, and start using TestNG. This approach also allows you to convert your\
+    \ existing Tshirt tests to TestNG incrementally.\n\nLet us have an example to\
+    \ demonstrate this amazing ability of TestNG.\n\n# Create JUnit Test Case Class\n\
+    \nCreate a java class, which is a JUnit test class, TestJUnit.java in C:\\TestNG_WORKSPACE.\n\
+    \n```\nimport org.junit.Test;\nimport static org.testng.AssertJUnit.assertEquals;\n\
+    \npublic class TestJUnit {\n    @Test\n    public void testAdd() {\n        String\
+    \ str= \"JUnit testing using TestNG\";n        assertEquals(\"JUnit testing using\
+    \ TestNG\",str);\n    }\n}\n```\n\nNow, let's write the test.xml in C:\\TestNG_WORKSPACE,\
+    \ which would contain the <suite> tag as:\n\n```\n<?xml version=\"1.0\" encoding=\"\
+    UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"http://testng.org/testng-1.0.dtd\">\n<suite\
+    \ name=\"Converted JUnit suite\" >\n```\n\n![](img/949225fa30fb497905c23108e374caa1_58_0.png)"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# TestNG\n\n```\n<test name=\"JUnitTests\" junit=\"true\">\n  <classes>\n \
+    \   <class name=\"TestJunit\" />\n  </classes>\n</test>\n</suite>\n```\n\nTo execute\
+    \ the JUnit test cases, define the property junit=\"true\" as in the xml above.\
+    \ The JUnit test case TestNG is defined in class name.\n\nFor JUnit 4, TestNG\
+    \ will use the org.junit.runner.JUnitCore runner to run your tests.\n\nCompile\
+    \ all java classes using javac.\n\n```\nC:\\TestNG_WORKSPACE>javac TestJUnit.java\n\
+    ```\n\nNow, run testng.xml, which will run the JUnit test case as TestNG.\n\n\
+    ```\nC:\\TestNG_WORKSPACE>java -cp\n\"C:\\TestNG_WORKSPACE:C:\\TestNG_WORKSPACE\\\
+    lib\\junit-4.11.jar\"\norg.testng.TestNG testng.xml\n```\n\nHere, we have placed\
+    \ the junit-4.11.jar under C:\\TestNG_WORKSPACE\\lib\\junit-4.11.jar.\n\nVerify\
+    \ the output.\n\n```\n============================================\nConverted\
+    \ JUnit suite\n\nTotal tests run: 1, Failures: 0, Skips: 0\n============================================\n\
+    ```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# # 14. TEST RESULTS
+
+
+    Reporting is the most important part of any test execution, as it helps the user
+    understand the result of the test execution, point of failure, and the reasons
+    for failure. Logging, on the other hand, is important to keep an eye on the execution
+    flow or for debugging in case of failures.
+
+
+    TestNG, by default, generates a different type of report for its test execution.
+    This includes an HTML and an XML report output. TestNG also allows users to write
+    their own reporter and use it with TestNG. There is also an option to write your
+    own loggers, which are notified at runtime by TestNG.
+
+
+    There are two ways to generate a report with TestNG:
+
+
+    +   * Listeners: For implementing a listener class, the class has to implement
+    `org.testng.ITestListener` interface. These classes are notified at runtime when
+    the test starts, finishes, fails, skips, or passes.
+
+    * Reporters: For implementing a reporting class, the class has to implement `org.testng.IReporter`
+    interface. These classes are called when the whole test run ends. The object containing
+    the information of the whole test run is passed to this class when called.
+
+
+    In this chapter, we will have four different examples to demonstrate four different
+    cases of reporting and logging:
+
+
+    | Custom Logging | This example illustrates how to write your own logger. |
+
+    | Custom Reporter | This example illustrates how to write your own reporter. |
+
+    | HTML and XML report | This example illustrates the default HTML and XML report
+    generated by TestNG. |
+
+    | JUnit Reports | This example illustrates how to generate JUnit reports from
+    TestNG reports. |
+
+
+    # ## Custom Logging
+
+
+    We had earlier read about the different options that TestNG provides for logging
+    and reporting. Now, let''s learn how to start using them. To start with, we will
+    write a sample program in which we will use the IRequestListener interface for
+    logging purposes.
+
+
+    56
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_60_0.png)'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# Create a Test Case Class\n\nCreate a java class, say, SampleTest.java in\
+    \ C:\\TestNG_WORKSPACE.\n\n```\nimport org.testng.Assert;\nimport org.testng.annotations.Test;\n\
+    \npublic class SampleTest {\n    @Test\n    public void testMethodOne() {\n  \
+    \      Assert.assertTrue(true);\n    }\n\n    @Test\n    public void testMethodTwo()\
+    \ {\n        Assert.assertTrue(false);\n    }\n\n    @Test(dependsOnMethods=\"\
+    testMethodTwo\")\n    public void testMethodThree() {\n        Assert.assertTrue(true);\n\
+    \    }\n}\n```\n\nThe preceding test class contains three test methods out of\
+    \ which testMethodOne and testMethodThree pass when executed, whereas testMethodTwo\
+    \ is made to fail by passing a false Boolean value to the Assert.assertTrue method,\
+    \ which is used for truth conditions in the tests.\n\n# Create Custom Logging\
+    \ Class\n\nCreate another new class named CustomListener.java in C:\\TestNG_WORKSPACE.\n\
+    \n```\nimport org.testng.ITestResult;\nimport org.testng.TestListenerAdapter;\n\
+    \npublic class CustomListener extends TestListenerAdapter{\n    private int m_count\
+    \ = 0;\n```\n\n![](img/949225fa30fb497905c23108e374caa1_61_0.png)"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "```\n@Override\npublic void onTestFailure(ITestResult tr) {\n  log(tr.getName())+\\\
+    \ \"--Test method failed\\n\"\n}\n```\n\n```\n@Override\npublic void onTestSkipped(ITestResult\
+    \ tr) {\n  log(tr.getName())+\\ \"--Test method skipped\\n\"\n}\n```\n\n```\n\
+    @Override\npublic void onTestSuccess(ITestResult tr) {\n  log(tr.getName())+\\\
+    \ \"--Test method success\\n\"\n}\n```\n\n```\nprivate void log(String string)\
+    \ {\n  System.out.print(string);\n  if (+m_count % 40 == 0) {\n    System.out.println(\"\
+    \");\n  }\n}\n```\n\nThe above class extends ListenerAdapter, which implements\
+    \ ITest with empty methods. Hence, no need to override other methods from the\
+    \ interface. You can implement the interface directly, if you prefer so.\n\n#\
+    \ Create testng.xml\n\nCreate testng.xml in C:\\TestNG_WORKSPACE to execute test\
+    \ case(s).\n\n```\n<xml version=\"1.0\" encoding=\"UTF-8\"?>\n<suite name=\"Simple\
+    \ Logger Suite\">\n  <listeners>\n    <listener class-name=\"CustomListener\"\
+    \ />\n  </listeners>\n</html>\n```\n\n![](img/949225fa30fb497905c23108e374caa1_62_0.png)"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\n</listeners>\n\n<test name=\"Simple Logger test\">\n<classes>\n  <class\
+    \ name=\"SampleTest\" />\n</classes>\n</test>\n</suite>\n```\n\nCompile the SampleTest,\
+    \ CustomListener classes using javac.\n\n```\nC:\\TestNG_WORKSPACE>javac CustomListener.java\
+    \ SampleTest.java\n```\n\nNow, run the testng.\n\n```\nC:\\TestNG_WORKSPACE>java\
+    \ -cp \"C:\\TestNG_WORKSPACE\" org.testng.TestNG\ntestng.xml\n```\n\nVerify the\
+    \ output.\n\n```\ntestMethodOne--Test method success\ntestMethodTwo--Test method\
+    \ failed\ntestMethodThree--Test method skipped\n\n============================\n\
+    Simple Logger Suite\nTotal tests run: 3, Failures: 1, Skips: 1\n============================\n\
+    ```\n\nWe created a custom logger class, which implements the ITestListener interface\
+    \ and attached itself to the TestNG test suite as a listener. Methods of this\
+    \ listener class are invoked by TestNG when started, at test start, at test fail,\
+    \ and so on. Multiple listeners can be implemented and added to the test suite\
+    \ execution, TestNG will invoke all the listeners that are attached to the test\
+    \ suite.\n\nLogging listeners are mainly used when we need to see the continuous\
+    \ status of the test execution when the tests are getting executed."
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# TestNG\n\n# Custom Reporter\n\nIn this section, we will cover, with an example,\
+    \ the method of writing your custom reporter and attaching it to TestNG. To write\
+    \ a custom reporter class, our extension class should implement the IReporter\
+    \ interface. Let's go ahead and create an example with the custom reporter.\n\n\
+    # Create Test Case Class\n\nCreate a java class say, SampleTest.java in C:\\TestNG_WORKSPACE.\n\
+    \n```\nimport org.testng.Assert;\nimport org.testng.annotations.Test;\n\npublic\
+    \ class SampleTest {\n  @Test\n  public void testMethodOne(){\n    Assert.assertTrue(true);\n\
+    \  }\n\n  @Test\n  public void testMethodTwo(){\n    Assert.assertTrue(false);\n\
+    \  }\n\n  @Test(dependsOnMethods=\"testMethodTwo\"})\n  public void testMethodThree(){\n\
+    \    Assert.assertTrue(true);\n  }\n}\n```\n\nThe preceding test class contains\
+    \ three test methods out of which testMethodOne and testMethodThree will pass\
+    \ when executed, whereas testMethodTwo is made to fail by passing a false Boolean\
+    \ value to the Assert.assertTrue method, which is used for true conditions in\
+    \ the tests.\n\n# Create Custom Reporting Class\n\nCreate another new class named\
+    \ CustomReporter.java in C:\\TestNG_WORKSPACE.\n\n![](img/949225fa30fb497905c23108e374caa1_64_0.png)"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\nimport java.util.List;\nimport java.util.Map;\n\nimport org.testng.IReporter;\n\
+    import org.testng.ISuite;\nimport org.testng.ISuiteResult;\nimport org.testng.ITestContext;\n\
+    import org.testng.xml.XmlSuite;\n\npublic class CustomReporter implements IReporter\
+    \ {\n    @Override\n    public void generateReport(List xmlSuites\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# TestNG\n\nThe preceding class implements the org.testng.IReporter interface.\
+    \ It implements the definition for the method generateReport of the IReporter\
+    \ interface. The method takes three arguments:\n\n+   - xmlSuite, which is the\
+    \ list of suites mentioned in the testng XML being executed.\n- suites, which\
+    \ contains the suite information after the test execution. This object contains\
+    \ all the information about the packages, classes, test methods, and their test\
+    \ execution results.\n- outputDirectory, which contains the information of the\
+    \ output folder path, where the reports will be generated.\n\n# Create testng.xml\n\
+    \nCreate testng.xml in C:\\TestNG_WORKSPACE to execute test case(s).\n\n```\n\
+    <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<suite name=\"Simple Reporter\">\n\
+    \  <listeners>\n    <listener class-name=\"CustomReporter\" />\n  </listeners>\n\
+    \n  <test name=\"Simple Reporter test\">\n    <classes>\n      <class name=\"\
+    SampleTest\" />\n    </classes>\n  </test>\n</suite>\n```\n\nCompile the SampleTest,\
+    \ CustomReporter classes using javac.\n\n```\nC:\\TestNG_WORKSPACE>javac CustomReporter.java\
+    \ SampleTest.java\n```\n\nNow, run testng.xml.\n\n```\nC:\\TestNG_WORKSPACE>java\
+    \ -cp \"C:\\TestNG_WORKSPACE\" org.testng.TestNG testng.xml\n```\n\nVerify the\
+    \ output.\n\n![](img/949225fa30fb497905c23108e374caa1_66_0.png)"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "```\n============================================\nSimple Reporter Suite\n\
+    Total tests run: 3, Failures: 1, Skips: 1\n============================================\n\
+    ```\n\nPassed tests for suite 'Simple Reporter Suite' is:1\nFailed tests for suite\
+    \ 'Simple Reporter Suite' is:1\nSkipped tests for suite 'Simple Reporter Suite'\
+    \ is:1\n\nThe preceding example shows a simple custom reporter, which prints the\
+    \ number of failed, passed, and skipped tests on the console for each suite included\
+    \ in the said test execution. The Reporter is mainly used to generate the final\
+    \ report for the test execution. The extension can be used to generate XML, HTML,\
+    \ XLS, CSV, or for test files depending upon the report requirement.\n\n# HTML\
+    \ and XML Report\n\nTestNG comes with certain predefined listeners as part of\
+    \ the library. These listeners are by default added to any test execution and\
+    \ generate different HTML and XML reports for any test execution. The report is\
+    \ generated by default under the folder testoutput and can be changed to any other\
+    \ folder by configuring it. Reports consist of certain HTML and XML reports that\
+    \ are TestNG specific.\n\n# Create Test Case Class\n\nCreate a java class, say,\
+    \ SampleTest.java in C:\\>TestNG_WORKSPACE.\n\n```\nimport org.testng.Assert;\n\
+    import org.testng.annotations.Test;\n\npublic class SampleTest {\n    @Test\n\
+    \    public void testMethodOne(){\n        Assert.assertTrue(true);\n    }\n\n\
+    \    @Test\n    public void testMethodTwo()\n```"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "```\nAssert.assertTrue(false);\n}\n\n@Test(dependsOnMethods={\"testMethodTwo\"\
+    })\npublic void testMethodThree(){\n  Assert.assertTrue(true);\n}\n```\n\nThe\
+    \ preceding test class contains three test methods out of which testOne and testMethodThree\
+    \ will pass when executed, whereas testMethodTwo is made to fail by passing a\
+    \ false Boolean value to the Assert.assertTrue method, which is used for truth\
+    \ conditions in the tests.\n\n# Create testng.xml\n\nCreate testng.xml in C:\\\
+    TestNG_WORKSPACE to execute test case().\n\n```\n<?xml version=\"1.0\" encoding=\"\
+    UTF-8\"?>\n<suite name=\"Simple HTML-XML Suite\">\n  <test name=\"Simple HTML-XML\
+    \ test\">\n    <classes>\n      <class name=\"SampleTest\" />\n    </classes>\n\
+    \  </test>\n</suite>\n```\n\nCompile the SampleTest class using javac.\n\n```\n\
+    C:\\TestNG_WORKSPACE\\javac SampleTest.java\n```\n\nNow, run the testng.xml.\n\
+    \n```\nC:\\TestNG_WORKSPACE>java -cp \"C:\\TestNG_WORKSPACE\" org.testng.TestNG\
+    \ testng.xml\n```\n\nVerify the output."
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "# TestNG\n\n# Simple HTML-XML Suite\n\nTotal tests run: 3, Failures: 1, Skips:\
+    \ 1\n\nNow, go to the C:\\TestNG_WORKSPACE\\test-output folder. Open the index.html\
+    \ on your default web browser. You will see the following HTML report:\n\n![](img/949225fa30fb497905c23108e374caa1_69_0.png)\n\
+    \nNow, open the file C:\\TestNG_WORKSPACE\\test-output\\testing-results.xml in\
+    \ the XML editor on your system, and you will see the content in the XML file:\n\
+    \nThis XML file does not have any attribute associated with it. The document is\
+    \ shown below:\n\n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<testsuite\
+    \ name=\"SimpleTest\" failed=\"1\" skipped=\"0\" started=\"2023-03-27T17:13:32\"\
+    \ finished=\"2023-03-27T17:13:32\">\n  <testcase name=\"testAssertion\" failed=\"\
+    1\" skipped=\"0\" started=\"2023-03-27T17:13:32\" finished=\"2023-03-27T17:13:32\"\
+    >\n    <failure>\n      <method name=\"testAssertion\" class=\"org.testng.internal.InvokerMethod\"\
+    \ instance=\"org.testng.internal.InvokerMethod$InstanceMethod\" invocation-duration=\"\
+    6\" started=\"2023-03-27T17:13:32\">\n      <message>expected [true] but found\
+    \ [false]</message>\n      java.lang.AssertionError: expected [true] but found\
+    \ [false]\n\tat org.testng.Assert.expected(Assertion.java:62)\n\tat org.testng.Assert.expected(Assertion.java:62)\n\
+    \tat org.testng.internal.InvokerMethod.invoke(InvokerMethod.java:168)\n\tat org.testng.internal.InvokerMethod$InstanceMethod.invoke(InvokerMethod.java:135)\n\
+    \tat org.testng.internal.InvokerMethod$InstanceMethod.invoke(InvokerMethod.java:135)\n\
+    \tat org.testng.internal.TestNG.invokeMethod(TestNG.java:1570)\n\tat org.testng.internal.TestNG.invokeMethod(TestNG.java:1570)\n\
+    \tat org.testng.internal.TestNG.invokeMethod(TestNG.java:1570)\n\tat org.testng.internal.TestNG.invokeMethod(TestNG.java:1570)\n\
+    \tat org.testng.internal.TestNG.invokeMethod(TestNG.java:1570)\n\tat org.testng.internal.TestNG.runMethods(TestNG.java:1638)\n\
+    \tat org.testng.internal.TestNG.runMethods(TestNG.java:1638)\n\tat org.testng.internal.TestNG.runMethods(TestNG.java:1638)\n\
+    \tat org.testng.internal.TestNG.runTests(TestNG.java:1706)\n\tat org.testng.internal.TestNG.runTests(TestNG.java:1706)\n\
+    \tat org.testng.internal.TestNG.runTests(TestNG.java:1706)\n\tat org.testng.internal.TestNG.runTests(TestNG.java:1706)\n\
+    \tat org.testng.internal.TestNG.runTests(TestNG.java:1706)\n\tat org.testng.internal.TestNG.runTests(TestNG.java:1706)\n\
+    \tat org.testng.internal.TestNG.runTests(TestNG.java:1706)\n\tat org.testng.internal.TestNG.runTests(TestNG.java:1706)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\tat org.testng.internal.TestNG.runResults(TestNG.java:1780)\n\
+    \    </failure>\n  </testcase>\n</testsuite>\n```\n\n65"
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# TestNG\n\nTestNG, by default, generates multiple reports as part of its test\
+    \ execution. These reports mainly include TestNG HTML report, TestNG email-able\
+    \ report, TestNG report XML, and JUnit report XML files. These files can be found\
+    \ under the output folder (in this case, test-output).\n\nThis default report\
+    \ generation can be disabled while running the tests by setting the value of the\
+    \ property setDefaultListeners to false. This property can be set using build\
+    \ tools like Ant or Maven.\n\n# JUnit Reports\n\nJUnit is one of those frameworks\
+    \ which were initially used by many Java applications as a Test framework. By\
+    \ default, JUnit tests generate simple report XML files for its test execution.\
+    \ These XML files can then be used to generate any custom reports as per the testing\
+    \ requirement. We can also generate HTML reports using the XML files. Ant has\
+    \ a utility task, which takes these JUnit XML files as input and generates an\
+    \ HTML report.\n\nTestNG, by default, generates JUnit XML reports for any test\
+    \ execution (the test-output folder). We can use these XML report files as input\
+    \ for generating a JUnit HTML report. Let us take an example.\n\n# Create Test\
+    \ Case Class\n\nCreate a java class, say, SampleTest.java in C:\\>TestNG_WORKSPACE.\n\
+    \n```\nimport org.testng.Assert;\nimport org.testng.annotations.Test;\n\npublic\
+    \ class SampleTest {\n    @Test\n    public void testMethodOne(){\n        Assert.assertTrue(true);\n\
+    \    }\n\n    @Test\n    public void testMethodTwo(){\n        Assert.assertTrue(false);\n\
+    \    }\n\n    @Test(dependsOnMethods={\"testMethodTwo\"})\n```"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "```\npublic void testMethodThree(){\n    Assert.assertTrue(true);\n}\n```\n\
+    \nThe preceding test class contains three test methods out of which testMethodOne\
+    \ and testMethodThree will pass when executed, whereas testMethodTwo is made to\
+    \ fail by passing a false Boolean value to the Assert.assertTrue method, which\
+    \ is used for truth conditions in the tests.\n\n# Create testng.xml\n\nCreate\
+    \ testng.xml in C:\\TestNG_WORKSPACE to execute test case(s).\n\n```\n<?xml version=\"\
+    1.0\" encoding=\"UTF-8\"?>\n<suite name=\"Simple Suite\">\n  <test name=\"Simple\
+    \ test\">\n    <classes>\n      <class name=\"SampleTest\" />\n    </classes>\n\
+    \  </test>\n</suite>\n```\n\nCompile the SampleTest class using javac.\n\n```\n\
+    C:\\TestNG_WORKSPACE\\javac SampleTest.java\n```\n\nNow, run testng.xml.\n\n```\n\
+    C:\\TestNG_WORKSPACE>java -cp \"C:\\TestNG_WORKSPACE\" org.testNG.TestNG testng.xml\n\
+    ```\n\nVerify the output.\n\n```\n=============================================\n\
+    Simple Suite\nTotal tests run: 3, Failures: 1, Skips: 1\n=============================================\n\
+    ```"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# TestNG\n\nNow that we have JUnit XML reports available from the above execution,\
+    \ let's create a simple Ant build configuration XML file to generate HTML report\
+    \ for the test execution.\n\nCreate a new file named build.xml under C:\\>TestNG_WORKSPACE\
+    \ folder.\n\n```\n<project name=\"TestNG_WORKSPACE\" default=\"junit-report\"\
+    \ basedir=\">\n<!-- Sets properties variables to point to respective directories\
+    \ -->\n<property name=\"junit-xml-dir\" value=\"${basedir}/test-output/junitreports\"\
+    />\n<property name=\"report-dir\" value=\"${basedir}/html-report\" />\n\n<!--\
+    \ Ant target to generate html report -->\n<target name=\"junit-report\">\n  <!--\
+    \ Delete and recreate the html report directories -->\\n  <delete dir=\"${report-dir}\"\
+    \ failonerror=\"false\"/>\n  <mkdir dir=\"${report-dir}\" />\n  <mkdir dir=\"\
+    ${report-dir}/JUnit\" />\n  <!-- Ant task to generate the html report. -->\n \
+    \ todir Directory to generate the output reports\n\n  <fileset Directory to look\
+    \ for the junit xml reports.\n\n  report defines the type of format to be generated.\n\
+    \  Here we are using \"noframes\" which generates a single html report.\n  -->\n\
+    \n  <junitreport todir=\"${report-dir}/JUnit\">\n    <fileset dir=\"${junit-xml-dir\"\
+    >\n      <include name=\"**/*.xml\" />\n    </fileset>\n    <report format=\"\
+    noframes\" todir=\"${report-dir}/JUnit\" />\n  </junitreport>\n</target>\n</project>\n\
+    ```\n\nThe preceding XML defines a simple Ant build.xml file having a specific\
+    \ Ant target named junit-report that generates a JUnit report when executed. The\
+    \ test looks for the JUnit report XML files under the directory\n\n![](img/949225fa30fb497905c23108e374caa1_72_0.png)"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'output/junitreports. For the Ant configuration file, the default target to
+    execute is configured as junit-report.
+
+
+    Open the command prompt window and go to the C:\TestNG_WORKSPACE directory in
+    the command prompt and run the command:
+
+
+    ```
+
+    C:\TestNG_WORKSPACE> ant
+
+    ```
+
+
+    Once executed, a JUnit HTML report will be generated in the configured directory
+    /html-report/JUnit. Open the file named junit-noframes.html on your default browser.
+    You will see the following HTML report:
+
+
+    # Unit Test Results.
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_73_0.png)
+
+
+    Here, we have seen how to use the JUnit XML report generated by TestNG and generate
+    HTML report using Ant. There are two kinds of reports that can be generated using
+    this method: frames and no-frames.
+
+
+    If the report generation is configured with frames, there will be multiple files
+    generated for each class and the main report will connect to them through links.
+    A no-frames report consists of a single file with all the results of the test
+    execution. This can be configured by providing the respective value to the format
+    attribute of the report task in Ant.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# 15. PLUG WITH ANT
+
+
+    In this chapter, we will demonstrate how to run TestNG using ANT. Let''s follow
+    the steps given below:
+
+
+    # Step 1: Download Apache Ant
+
+
+    Download the latest version of Apache Ant.
+
+
+    | OS | Archive Name |
+
+    |---|---|
+
+    | Windows | apache-ant-1.8.4-bin.zip |
+
+    | Linux | apache-ant-1.8.4-bin.tar.gz |
+
+    | Mac | apache-ant-1.8.4-bin.tar.gz |
+
+
+    # Step 2: Set Ant Environment
+
+
+    Set the ANT_HOME environment variable to point to the base directory location,
+    where ANT libraries are stored on your machine. Let''s assume we''ve stored the
+    Ant libraries in the folder apache-ant-1.8.4 folder.
+
+
+    | OS | Output |
+
+    |---|---|
+
+    | Windows | Set the environment variable ANT_HOME to C:\Program Files\Apache Software
+    Foundation\apache-ant-1.8.4 |
+
+    | Linux | Export ANT_HOME=/usr/local/apache-ant-1.8.4 |
+
+    | Mac | Export ANT_HOME=/Library/apache-ant-1.8.4 |'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "Append Ant compiler location to System Path as follows:\n\n| OS | Description\
+    \ |\n| Windows | Append the string %ANT_HOME\\bin at the end of the system variable,\
+    \ Path. |\n| Linux | Export PATH=$PATH:$ANT_HOME/bin/ |\n| Mac | Not required.\
+    \ |\n\n# Step 3: Download TestNG Archive\n\nDownload the required jar files from\
+    \ www.testng.org.\n\n| OS | Archive name |\n| Windows | testng-6.8.jar |\n| Linux\
+    \ | testng-6.8.jar |\n| Mac | testng-6.8.jar |\n\n# Step 4: Create Project Structure\n\
+    \n+   - Create a folder TestNGWithAnt in C:\\>TestNG_WORKSPACE.\n- Create a folder\
+    \ src in C:\\>TestNG_WORKSPACE>TestNGWithAnt.\n- Create a folder test in C:\\\
+    >TestNG_WORKSPACE>TestNGWithAnt.\n- Create a folder lib in C:\\>TestNG_WORKSPACE>TestNGWithAnt.\n\
+    - Create a MessageUtil class in C:\\>TestNG_WORKSPACE>TestNGWithAnt>srcfolder.\n\
+    \n```\n/*\n * This class prints the given message on console.\n */\npublic class\
+    \ MessageUtil {\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\nprivate String message;\n\n//Constructor\n//@param message to be printed\n\
+    public src MessageUtil(String message){\n    this.message = message;\n}\n\n//\
+    \ prints the message\npublic void printMessage(){\n    System.out.println(message);\n\
+    \    return message;\n}\n\n// add \"Hi!\" to the message\npublic String salutationMessage(){\n\
+    \    message = \"Hi!\" + message;\n    System.out.println(message);\n    return\
+    \ message;\n}\n```\n\n+   Create TestMessageUtil class in C:\\TestNG_WORKSPACE\\\
+    nTestNGWithAnt-src folder.\n\n```\nimport org.testng.Assert;\nimport org.testng.annotations.Test;\n\
+    \npublic class TestMessageUtil {\n    String message = \"Manisha\";\n    MessageUtil\
+    \ messageUtil = new MessageUtil(message);\n\n@Test\npublic void testPrintMessage()\
+    \ {\n    System.out.println(\"Inside testPrintMessage()\");\n}\n```\n\n![](img/949225fa30fb497905c23108e374caa1_76_0.png)"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "# TestNG\n\n```\nAssert.assertEquals(message,messageUtil.printMessage());\n\
+    }\n@Test\npublic void testSalutationMessage() {\n    System.out.println(\"Inside\
+    \ testSalutationMessage()\");\n    message = \"Hi!\" + \" Manisha\";n}\n```\n\n\
+    Assert.assertEquals(message,messageUtil.salutationMessage());\n}\n\n+   Copy testng-6.8.jar\
+    \ in C:\\>TestNG_WORKSPACE>TestNGWithAnt>lib folder.\n\n# Create ANT build.xml\n\
+    \nFirst, we need to define the TestNG Ant task as follows:\n\n```\n<taskdef name=\"\
+    testng\" className=\"org.testng.TestNGAntTask\">\n  <classpath>\n    <pathelement\
+    \ location=\"lib/testng-6.8.jar\"/>\n  </classpath>\n</taskdef>\n```\n\nThen,\
+    \ we'll be using <testng> task in Ant to execute our TestNG test cases.\nThe build.xml\
+    \ file is as follows:\n\n```\n<project name=\"TestNG\" default=\"test\" basedir=\"\
+    .\">\n  <!-- Define <testng> task -->\n<taskdef name=\"testng\" className=\"org.testng.TestNGAntTask\"\
+    >\n  <classpath>\n    <pathelement location=\"lib/testng-6.8.jar\"/>\n  </classpath>\n\
+    </taskdef>\n<property name=\"testdir\" location=\"test\" />\n<property name=\"\
+    srcdir\" location=\"src\" />\n```\n\n![](img/949225fa30fb497905c23108e374caa1_77_0.png)"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "```\n<property name=\"libdir\" location=\"lib\" />\n<property name=\"full-compile\"\
+    \ value=\"true\" />\n<path id=\"classpath.base\" />\n<path id=\"classpath.test\"\
+    >\n  <fileset dir=\"${libdir}\">\n    <include name=\"**/*.jar\" />\n  </fileset>\n\
+    \  <pathelement location=\"${testdir}\" />\n  <pathelement location=\"${srcdir}\"\
+    \ />\n  <path refid=\"classpath.base\" />\n</path>\n<target name=\"clean\" >\n\
+    \  <delete verbose=\"${full-compile}\">\n    <fileset dir=\"${testdir}\" includes=\"\
+    **/*.class\" />\n  </delete>\n</target>\n<target name=\"compile\" depends=\"${compile\"\
+    >\n  <javac srcdir=\"${srcdir}\" destdir=\"${testdir}\"\n    verbose=\"${full-compile}\"\
+    >\n  <classpath refid=\"classpath.test\" />\n  </javac>\n</target>\n<target name=\"\
+    test\" depends=\"compile\">\n<testng outputdir=\"${testdir}\" classpathref=\"\
+    classpath.test\">\n  <xmlfileset dir=\"${srcdir}\" includes=\"testng.xml\" />\n\
+    </testng>\n</target>\n</project>\n```\n\nRun the following Ant command.\n\n```\n\
+    C:\\TestNG_WORKSPACE\\TestNGWithAnt>ant\n```\n\nVerify the output."
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '```
+
+    test:
+
+    [testng] Running:
+
+    [testng] C:\TestNG_WORKSPACE\TestNGWithAnt\src\testng.xml
+
+    [testng]
+
+    [testng] Inside testPrintMessage()
+
+    [testng] Inside testsSalutationMessage()
+
+    [testng] Hi!Manisha
+
+    [testng]
+
+    [testng] ==================================================================
+
+    [testng] Plug ANT test Suite
+
+    [testng] Total tests run: 2, Failures: 0, Skips: 0
+
+    [testng] ==================================================================
+
+    [testng]
+
+
+    BUILD SUCCESSFUL
+
+    Total time: 1 second
+
+    ```'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# 16. PLUG WITH ECLIPSE
+
+
+    To set up TestNG with Eclipse, follow the steps given below:
+
+
+    # Step 1: Download TestNG Archive
+
+
+    Download the latest version of TestNG jar file from www.testng.org.
+
+
+    | OS | Archive name |
+
+    |---|---|
+
+    | Windows | testng-6.8.jar |
+
+    | Linux | testng-6.8.jar |
+
+    | Mac | testng-6.8.jar |
+
+
+    We assume you have copied the above JAR file in C:\>TestNG folder.
+
+
+    # Step 2: Set Eclipse environment
+
+
+    +   - Open eclipse -> right-click on the project and go to property -> Build Path
+    -> Configure Build Path and add the testng-6.8.jar in the libraries using Add
+    External Jar button.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "# # TestNG\n\n![](img/949225fa30fb497905c23108e374caa1_81_0.png)\n\nWe assume\
+    \ that your Eclipse has inbuilt TestNG plug-in; if it is not available, please\
+    \ then get the latest version using the update site.\n\n+   - In your Eclipse\
+    \ IDE, select Help / Software updates / Find and Install.\n- Search for new features\
+    \ to install.\n- New remote site.\n- For Eclipse 3.4 and above, enter http://beust.com/eclipse.\n\
+    - For Eclipse 3.3 and below, enter http://beust.com/eclipse1.\n- Make sure the\
+    \ checkbox next to the URL is checked and click Next.\n- Eclipse will then guide\
+    \ you through the process.\n\nNow, your Eclipse is ready for the development of\
+    \ TestNG test cases.\n\n# ## Step 3: Verify TestNG Installation in Eclipse\n\n\
+    +   - Create a project TestNGProject in Eclipse at any location.\n- Create a class\
+    \ MessageUtil to test in the project.\n\n```\n/**\n * This class prints the given\
+    \ message on console.\n * */\npublic class MessageUtil {\n```\n\n![](img/949225fa30fb497905c23108e374caa1_81_1.png)"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# TestNG\n\n```\nprivate String message;\n\n//Constructor\n//@param message\
+    \ to be printed\npublic MessageUtil(String message){\n    this.message = message;\n\
+    }\n\n// prints the message\npublic String printMessage(){\n    System.out.println(message);\n\
+    \    return message;\n}\n```\n\nCreate a test class TestNGExample in the project.\n\
+    \n```\nimport org.testng.Assert;\nimport org.testng.annotations.Test;\n\npublic\
+    \ class TestNGExample {\n    String message = \"Hello World\";\n    MessageUtil\
+    \ messageUtil = new MessageUtil(message);\n\n    @Test\n    public void testPrintMessage()\
+    \ {\n        Assert.assertEquals(message,messageUtil.printMessage());\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'The project structure should be as follows:
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_83_0.png)
+
+
+    Finally, verify the output of the program by right-clicking on the program and
+    running as TestNG.
+
+
+    Verify the result.
+
+
+    ![](img/949225fa30fb497905c23108e374caa1_83_1.png)
+
+
+    79'
+  merge: -1
+  pgno: 83
