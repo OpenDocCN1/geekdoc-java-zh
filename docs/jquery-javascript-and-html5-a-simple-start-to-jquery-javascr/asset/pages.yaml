@@ -1,0 +1,6997 @@
+- img_proc: true
+  md: '# # A Simple Start To jQuery, JavaScript, and HTML5
+
+
+    for Beginners Written by a Software Engineer
+
+
+    ![](img/5b2f768a50799763f7f92e5b907a924b_0_0.png)
+
+
+    SCOTT SANDERSON'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # A Simple Start to JQuery, JavaScript, And
+
+    # Html5 FOR BEGINNERS
+
+
+    WRITTEN BY A SOFTWARE ENGINEER
+
+
+    By
+
+
+    Scott Sanderson'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# TABLE OF CONTENTS
+
+
+    +   Chapter 1: Introduction
+
+
+    +   Chapter 2: Basics of HTML5
+
+
+    +   Chapter 3: Basics of JavaScript
+
+
+    +   Chapter 4: Basics of CSS3
+
+
+    +   Chapter 5: HTML5 Explained
+
+
+    +   Chapter 6: JavaScript and jQuery
+
+
+    +   Chapter 7: Forms
+
+
+    +   Chapter 8: Web Services
+
+
+    +   Chapter 9: WebSocket Communications
+
+
+    +   Chapter 10: Managing Local Data With the Help of Web Storage
+
+
+    +   Chapter 11: Offline Web Applications
+
+
+    +   Appendix
+
+
+    Copyright 2015 by Globalized Healing, LLC - All rights reserved.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# CHAPTER 1: INTRODUCTION
+
+
+    If there is one application development framework that can be termed as comprehensive,
+    then HTML5 wins the bid hands down. Although, the specification for HTML5 is not
+    yet complete, most modern web browsers support the popular features on device,
+    which range from a Smartphone to a desktop. What that means is that you just have
+    to write one application and it will run on your devices without any interoperability
+    issues.
+
+
+    There is no doubt about the fact that HTML5 is the future of web application development
+    and if you wish to remain in the league, you need to think futuristically and
+    equip yourself to deal the technological challenges that the future is about to
+    throw at you. The scope of HTML5 is evident from the fact that most of the major
+    players of the industry and setting their eyes on this technology and giving in
+    full support to the same.
+
+
+    If the multi-faceted functionality and high-on features of HTML5 intrigue you
+    and you want to start writing your own applications right away, but you do not
+    know how and where to begin, then this book is just for you. This book covers
+    everything that you shall require to create working applications with the help
+    of HTML, JavaScript/JQuery and CSS. However, it is not a reference guide. We hope
+    to give you practical knowledge so that you can get to development as quickly
+    as possible.
+
+
+    This book is a perfect start-up guide and covers all the basic facets of HTML5,
+    JavaScript and CSS development. It covers everything from the very basics to all
+    that you shall require in your trust with this framework. The first three chapters
+    introduce you to these three technologies, giving you some ground to start with.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# CHAPTER 2: BASICS OF HTML5
+
+
+    HTML (Hyper Text Markup Language) is a language used for creating web pages. In
+    fact, this language has been in use since the first webpage was made. However,
+    the functionality has evolved as newer and better versions of the language were
+    introduced. The language is known to have originated from SGML (Standard Generalized
+    Markup Language), which was earlier used for document publishing. HTML has inited
+    the concept of formatting features and their syntax from SGML.
+
+
+    One of the most interesting and beneficial facet of HTML usage, as far as browsers
+    are concerned, is that browsers support both backward as well as forward compatibility.
+    While backward compatibility is usually easy to achieve, forward compatibility
+    is tricky as the problem domain, in this case, is infinitely large. However, in
+    order to implement this, browsers were designed to ignore tags that it did not
+    recognize.
+
+
+    For years, HTML remained all that wanted. However, with time, people felt the
+    need for more, which was catalyzed by the presence of another technology called
+    XML (eXtensible Markup Language). Although, XML shares a lot of similarities with
+    HTML, there exist many fundamental differences between the two. Firstly, XML requires
+    tag matching in the sense that for every starting tag, a closing tag must inevitably
+    exist. Besides this, XML allow you to create your own tags as it does not possess
+    a fixed set of tags like HTML.
+
+
+    The tags used in XML are meta-tags or tags that describe the data that is included
+    between the starting and closing tag. In order to ensure the validity of the XML
+    document, a technology called XSD (XML Schema Definition) is used. However, this
+    technology cannot be used for validating HTML documents because HTML documents
+    lack a well-'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'defined structure.
+
+
+    The W3C (World Wide Web Consortium) introduced XHTML as an attempt to fix the
+    flaws of HTML.. According to the XHTML specification, HTML documents were forced
+    to adhere to the format specifications used for XML. Therefore, this allowed the
+    use of XSD tools for validation of HTML documents. Although, the integration of
+    XML in the framework fixed some issues, some issues continued to crop up. In the
+    staggering issues of the modern times was the growing need for integration of
+    multimedia. While CSS did perform formatting of some level, it was becoming inadequate
+    for the growing demands of users.
+
+
+    In order to provide support for interactivity and animated visuals, a programmable
+    support called JavaScript was added to this ensemble. However, initial versions
+    of this support were difficult for programmers to understand and slow on execution
+    time incurred. This led to the introduction of plug-ins like Flash to get the
+    attention that it did. These plugins did what was expected of them, but the browser-multimedia
+    integration was still loose in nature.
+
+
+    HTML5 is not an evolved form of XHTML. On the contrary, HTML5 can be better described
+    as the reinvented form of HTML 4.01 and how HTML., CSS and JavaScript can be used
+    together to solve the growing needs of the user base.
+
+
+    # Semantic Markup
+
+
+    The fundamental feature of HTML5 is that it stresses on separation of behaviour,
+    presentation and structure. The semantic markup of a website development specifies
+    the structure of the document. In other words, it specifies the meaning of tags
+    and what they will do for you. On the other hand, behaviour and presentation are
+    governed by CSS and JavaScript respectively.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# HTML5 Elements
+
+
+    In HTML, an element is simply a statement that contains a beginning tag, content
+    and a closing tag. Therefore, when you write,
+
+
+    ```
+
+    <div>
+
+    ```
+
+
+    ```
+
+    <b>This is my world!</b>
+
+    ```
+
+
+    ```
+
+    </div>
+
+    ```
+
+
+    In this example, the div elements includes everything from <div> to </div>. therefore,
+    the <b></b> tag is also a part of the div element.
+
+
+    It is important to state that HTML5 is not case sensitive. Therefore, regardless
+    of whether you write <B> or <b> for the bold tag, the browser will consider the
+    two same. However, the use of lower case for tags is recommended by the W3C standards.
+
+
+    # Working with Elements in HTML5
+
+
+    HTML5 defines more than a 100 elements. These elements, with their definitions
+    are provided in Appendix.
+
+
+    # How to add attributes to elements?
+
+
+    Additional data can be added to the begin tag in the form of attributes. An attribute
+    can be generally represented as, name="value". The value for the attribute name
+    is enclosed within quotes. There is no restriction on the number of attributes
+    that can be added to the begin tag. For these attributes, the attribute has a
+    name, but it does not have a value.
+
+
+    Example:
+
+
+    ```
+
+    <div id="main" class="mainContent"></div>
+
+    ```
+
+
+    Here, id and class are attributes where id uniquely identifies the element and
+    class specifies the CSS style to which this div belongs.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Boolean Attributes
+
+
+    Several types of attributes can be used. One of the most commonly used types is
+    Boolean attribute. The Boolean attribute can take a value from the allowable set
+    of values. Some possible values include:
+
+
+    +   - Checked
+
+    - Disabled
+
+    - Selected
+
+    - Readonly
+
+
+    There are two ways to indicate the value of a Boolean attribute.
+
+
+    ```
+
+    <input type="checkbox" name="vegetable" value="Broccoli" checked=" />
+
+    <input type="checkbox" name="vegetable" value="Broccoli" checked=''checked'' />
+
+    ```
+
+
+    In the first case, the value is not given and is assumed. Although, the latter
+    seems like a redundant form, it is the more preferred form, particularly if you
+    are using jQuery.
+
+
+    # Global Attribute Reference
+
+
+    There is a set of named attributes available in HTML5, which can be used with
+    any element. Examples of these attributes include accesskey, spellcheck and draggable,
+    in addition to several others.
+
+
+    # Void Elements
+
+
+    Some elements do not have to contain content under any circumstance. These elements
+    include <link>, <br> and <<a>, in addition to many others.
+
+
+    # Self-closing Tags
+
+
+    If you are using an element that does not contain any content, then you can use
+    a self closing tag. An example of this tag is <br/>. However, please note that
+    other tags like *'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '<div>have to be written as <div></div> even if they do not have any content.
+
+
+    # How to Add Expanda Attributes
+
+
+    Any attribute that you as the author define is known as expanda attribute. You
+    can give this custom attribute a name and assign a value to the same as and when
+    required.
+
+
+    # How to Add Comments
+
+
+    Comments can be added using a ! and two hyphens (-). The syntax for adding comments
+    is as follows:
+
+
+    ```
+
+    <!--text -->
+
+    ```
+
+
+    You can also add conditional comments using the following syntax:
+
+
+    ```
+
+    <!--[if lte IE 7]><html class="no-js ie6" lang="en"><![[endif]-->
+
+    ```
+
+
+    This comment determines if the browser being used is an earlier version released
+    than IE7.
+
+
+    # How to Create HTML Document
+
+
+    An HTML document can simply be described as a frame that contains metadata, content
+    and a structure.
+
+
+    The HTML document must start with the tag <!DOCTYPE html>. In HTML5, the declaration
+    is an indication to the browser that it should work in no-quirks mode or HTML5
+    compliant mode.
+
+
+    The next tag should be <html>. This element includes within itself the elements
+    <head> and <body>. The <head> element can contain the metadata for the HTML document,
+    which is declared and defined using the <meta> tag. The <head> element also contains
+    the <title> element, which serves the following purposes:
+
+
+    +   * Used by search engines'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '+   - This content is displayed in the browser toolbar
+
+    - Gives a default name to the page.
+
+
+    The <body> element includes any other information that is to be displayed on the
+    HTML document.
+
+
+    A sample HTML document is given below:
+
+
+    ```
+
+    <!DOCTYPE html>
+
+    n<html>
+
+    <head>
+
+    <meta charset="utf-8" />
+
+    <title>TITLE OF DOC</title>
+
+    </head>
+
+    <body>
+
+    CONTENT
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Note: Special character ''›'' or ''<'', which are part of the HTML syntax, can
+    be used on the HTML doc using their name or number. The syntax for their usage
+    is:
+
+
+    &entity_name or &entity_number
+
+
+    The appendix contains the table of entity names and numbers to be used.
+
+
+    +   1. White space created using tabs, line breaks and spaces is normalized by
+    HTML into a single space. Therefore, if you want to use multiple spaces, you must
+    use the non-'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'breaking space character. For example, if you want to display 10 mph such that
+    10 and mph are not separated by a newline, you can write 10 &nbsp;mph.
+
+
+    # How to Embed Content
+
+
+    Now that you know how to create HTML documents with your content, you may want
+    to embed content into the document from other sources. This content may be text
+    from another HTML document or flash applications.
+
+
+    # Inline Frames
+
+
+    Inline frames are used to embed HTML documents inline with the content of the
+    current HTML document. Therefore, in a way, this element creates nested browsers
+    as multiple web page are loaded in the same window. These are implemented using
+    the <iframe> element. Nested browsing contexts can be navigated using:
+
+
+    +   * window.parent – This WindowProxy object represents the parent context.
+
+    * window.top – This WindowProxy object represents the top-level browsing context
+
+    * window.frameElement – This represents the browsing context container and if
+    there is no context container, it returns null.
+
+
+    The syntax of the <iframe> element is as follows:
+
+
+    ```
+
+    <iframe src="name"></iframe>
+
+    ```
+
+
+    Here the name of the attribute defines the name of the browsing context. This
+    name can be any string like ‘sample.html’. However, the strong should not start
+    with an underscore as names starting with underscore are reserved for special
+    key names like _blank.
+
+
+    # Sandboxing'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'Sandboxing is used for avoiding the introduction of pop-ups or any other malware
+    in your HTML document. In order to implement this, the attribute ‘sandbox’ is
+    used. You can use this attribute in the following manner:
+
+
+    ```
+
+    <iframe sandbox="keywords" src="name">
+
+    </iframe>
+
+    ```
+
+
+    When you use sandboxing, several restrictions are imposed on the called context.
+    These restrictions include disabling forms, scripts, plugins and any frame other
+    than its itself. You can force the system to override these restrictions using
+    keywords like:
+
+
+    +   - allow-same-origin
+
+    - allow-scripts
+
+    - allow-forms
+
+    - allow-top-navigation
+
+
+    Multiple keywords can be used by separating them using a space.
+
+
+    # Seamless Embedding
+
+
+    The seamless attribute can be used in the <iframe> element for embedding of content
+    in a manner than this content appears to be part of the main content. This attribute
+    can be used in the following manner:
+
+
+    ```
+
+    <iframe seamless="" src="name"></iframe>
+
+    ```
+
+
+    ```
+
+    <iframe seamless src="name"></iframe>
+
+    ```
+
+
+    ```
+
+    <iframe seamless="seamless" src="name"></iframe>
+
+    ```
+
+
+    This attribute may not be supported by many browsers. Therefore, you can use CSS
+    to achieve a similar effect.
+
+
+    # Hyperlinks'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Hyperlinks can be implemented using the <a> element. This element can be used
+    to link both external (a different HTML document) as well as internal (another
+    location in the same HTML document) links.
+
+
+    All links are underlined and depending upon the nature of the link, the colour
+    of the link changes.
+
+
+    +   - Blue - Unvisited link
+
+    - Purple - Visited link
+
+    - Red - Active link
+
+
+    The first attribute of the <a> element is href, which is given the value of the
+    URL.
+
+
+    Syntax for external links:
+
+
+    ```
+
+    <a href="address">Text</a>
+
+    ```
+
+
+    Syntax for internal links:
+
+
+    ```
+
+    <a href="#id">Text</a>
+
+    ```
+
+
+    The id here is the id of the tag to which you want the link to jump onto. However,
+    if you use only the # value, the link jumps to the top of the page.
+
+
+    The other attribute used with the <a> element is target, which allows you to control
+    the behaviour of the link. For instance, if you want the link to open in another
+    window, then this requirement can be specified using this attribute. The following
+    can be used:
+
+
+    +   - _blank
+
+    - _parent
+
+
+    This opens the link in a new browser window.
+
+
+    This opens the link in the parent window.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '+   - _self
+
+
+    This opens the link in the current window and is the default setting.
+
+
+    +   - _top
+
+
+    This opens the link in the topmost frame of the current window.
+
+
+    +   - _iframe_name
+
+
+    This opens the link in the <<iframe>> element of the specified name. This is generally
+    used in menus.
+
+
+    Hyperlinks can also be used to send emails using the following syntax:
+
+
+    ```
+
+    <a href="mailto:email address">Text</a>
+
+    ```
+
+
+    When the user clicks on the link, an email will be sent to the specified email
+    address.
+
+
+    # Embedding Images
+
+
+    The <img> element is used for adding images to the HTML document. The <img> tag
+    is a void element and does not require a closing tag.
+
+
+    The required tag for this element is src, which specifies the absolute or relative
+    address at which the image is stored. Another attribute than can be used with
+    the <img> tag is target, which is used to specify the text that must be displayed
+    in case the image is not available.
+
+
+    Syntax:
+
+
+    ```
+
+    <img src="address" target="alternative text">
+
+    ```
+
+
+    It is important to note that you only give references to images and they are not
+    embedded into the HTML document, in actually. The allowed image formats are jpeg,
+    svg, png and gif.
+
+
+    # How to Create Image Map'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'The <map> element can be used to create a clickable image map. In order to
+    create a link between the map and image, you must set a name of the map and use
+    this name in the usemap attribute of the img tag.
+
+
+    The area of the map element is defined using <area> element. This is a self-closing
+    tag that is used to define the area of the map. The area of the map can be set
+    using the attributes shape, href, alt and coords.
+
+
+    The shape attribute can give the values poly, circle, rect or default. The default
+    value sets the area as the size of the image. The href and alt attributes are
+    used in the same manner as they are used in the <a> element. Lastly, the coords
+    attribute are defined according to the shape chosen in the following manner:
+
+
+    +   - poly - x₁, y₁, x₂, y₂, ..., xₙ, yₙ
+
+    - circle - x, y, radius
+
+    - rect - x₁, y₁, x², y₂
+
+
+    For the polygon, the starting and ending coordinates should be the same. In case
+    a discrepancy in this regard exists, a closing value is added.
+
+
+    Example:
+
+
+    ```
+
+    <img src="worldmap.gif" width="145" height="126"
+
+    alalt="World Map" usemap="#country" />
+
+
+    <map name="country">
+
+
+    <area shape="circle" coords="105,50,30"
+
+    href="China.html" alt="China" />
+
+
+    <area shape="default" href="InvalidCountry.html" alt="Please Try Again" />
+
+    ```'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "```\n<//map>\n```\n\n# Embedding Plug-ins\n\nPlugins likewise be embedded into\
+    \ HTML documents using <embed> and <object> elements. Although, these elements\
+    \ perform similar tasks, they were created by different browsers. As a result,\
+    \ they coexist in HTML5. While the <embed> element provides ease of use, the <object>\
+    \ element provides more functionality to the user. Syntax for these two elements\
+    \ is given below:\n\n# The <embed> tag\n\n```\n<embed src=\"Flash.swf\"> </embed>\n\
+    ```\n\nThe src attribute specifies the url or address of the file to be embedded.\
+    \ Other attributes that are taken by the <embed> element includes:\n\n+   - type\
+    \ - used to specify the MIME type of the content\n- height - used to specify the\
+    \ content height in pixels\n- width - used to specify the content width in pixels\n\
+    \nAs mentioned previously, some browsers may not support <embed> element. Therefore,\
+    \ if you are using it in your document, you must add fallback content specification.\
+    \ For instance, if you are embedding a flash file, you must redirect the user\
+    \ to the download link of flash player if the browser does not support it already.\n\
+    \nYou can do this in the following manner:\n\n```\n<embed src=\"Flash.swf\"> \n\
+    \n<a href=\"link for downloading flash player\">\n\n<img src=\"address of the\
+    \ image for download flash player\"\n\nalt=\"Download Adobe Flash player\" />\n\
+    ```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '```
+
+    <a>
+
+
+    </embed>
+
+    ```
+
+
+    # The <object> tag
+
+
+    The <object> tag allows you to embed a variety of multimedia files like video,
+    audio,
+
+    PDF, applets and Flash. The element accepts the following attributes:
+
+
+    +   - type – used to specify the MIME type of data
+
+    - form – used to specify the form id or ids of data
+
+    - data – used to specify the URL of the resources that the object uses
+
+    - usemap – used to specify the name of a client-side image map that the object
+    uses
+
+    - name – used to specify the object name
+
+    - height – used to specify the height of the object in pixels
+
+    - width – used to specify the width of the object in pixels
+
+
+    All of the attributes mentioned above, it is necessary to mention either the data
+    or type
+
+    attribute.
+
+
+    Data can be passed into the <object> element using the <param> tag, which is a
+
+    combination of name and value attributes. Multiple parameters can be declared
+    using this
+
+    tag.
+
+
+    ```
+
+    <object data="file.wav">
+
+
+    <param name="autoplay" value="false" />
+
+
+    </object>
+
+    ```
+
+
+    Note:'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '+   1. The <object> element must always be used inside the <body> element.
+
+
+    +   2. HTML5 supports only the attributes listed above and global attributes for
+    the <object> element.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# CHAPTER 3: BASICS OF JAVASCRIPT
+
+
+    Interaction is an important facet of any website. In order to connect with the
+    audience in a better way, it is vital to add behaviour to the website. This can
+    be as simple as buttons or as complex as animations. These tasks can be added
+    using JavaScript, which is a web and programming language. This chapter introduces
+    JavaScript and shall help you get started with JavaScript on an immediate basis.
+
+
+    # Background
+
+
+    JavaScript is the preferred programming language for client side scripting. Contrary
+    to popular belief, JavaScript is in no way related to Java. In fact, it finds
+    resemblance to ECMAScript. Besides this, the only common thing between this programming
+    language and other programming languages like C and C++ is that it uses curly
+    braces. The international standard for JavaScript is given in ISO/IEC 16262 and
+    ECMA-262 specification.
+
+
+    One of the most important features of this programming language is that it is
+    untyped. In other words, specifying the type of a variable is not necessary for
+    using it. For example, if you have assigned a string to a variable, you can later
+    assign an integer to the same variable. Variables are declared using the keyword
+    var.
+
+
+    # Data and Expressions
+
+
+    Any program accesses, manipulates and represents data to the user. Data is available
+    in different types and forms. This data can be easily decomposed into values.
+    In JavaScript, data may be represented as a primitive value, object or function.
+
+
+    The data representation at the lowest level is known as primitive type and includes'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'null, undefined, number, string and Boolean.
+
+
+    Several built-in objects are defined in JavaScript. These entail the Object object,
+    global object, Array object, Function object, Boolean object, String object, Math
+    object, Number object, the RegExp object, Date object, Error object and JSON object.
+
+
+    Any object that is callable is called a function. It may also be referred to as
+    a method if the function is associated with an object.
+
+
+    Data is produced by using expressions, which is a name given to any code that
+    generates a value. It may be assigned a value directly or the value may be computed
+    by substituting and computing an expression composed of operands and operators.
+    It is important to note that an operand can be another expression as well.
+
+
+    # Number Data Type
+
+
+    The number data type is a primitive data type and it is internally stored as a
+    floating point number, which is a 64 bit, double precision number. This 64 bit
+    field stores the sign, exponent and fraction. While the leftmost bit is reserved
+    for sign, the bits 0 to 51 are reserved for storing the fraction and bits 52-62
+    are reserved for the exponent.
+
+
+    Because of memory limitation on the system, 253 is the highest integer that can
+    be stored. It is important to note that integer calculations generate a precise
+    value. However, fractional data calculation may give imprecise results. Therefore,
+    these values have to be truncated.
+
+
+    In addition to numbers and strings, JavaScript also supports the use of the following
+    special characters.
+
+
+    +   - undefined specifies that the value has not been assigned yet.
+
+    - NaN stands for ''Not a Number''
+
+    - -Infinity any number that is less than -1.7976931348623157E + 10308 is'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'denoted by Infinity.
+
+
+    +   - Infinity - any number that exceeds the value 1.7976931348623157E + 10308
+    is denoted by Infinity.
+
+
+    # String Data Type
+
+
+    A string can simply be described as a collection of characters. Whenever you declare
+    character(s) within quotes, the system interprets as a string. Sample strings
+    include:
+
+
+    ‘Hello World!’
+
+
+    “Hello World!”
+
+
+    However, if you want to include quotes as characters in the string, then you must
+    add ''\'' before the character. Sample string:
+
+
+    ‘You\re Welcome’
+
+
+    “You\re Welcome”
+
+
+    JavaScript also supports other escape sequences like \t for tab and \n for newline.
+
+
+    # Boolean Data Type
+
+
+    The Boolean data type is a binary data type and return either true or false. These
+    operators are commonly used to indicate results of comparisons. For example,
+
+
+    10 > 5 will give ‘true’ while 5 > 10 will give ‘false’.
+
+
+    # Operations on Number Data Type
+
+
+    In order to perform calculations, operators are used. JavaScript supports all
+    the basic operators and the operator precedence is as follows:
+
+
+    +   - Addition and subtraction have the same precedence.
+
+
+    +   - Multiplication and division have the same precedence.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '+   The precedence of multiplication and division is higher than that of addition
+    and subtraction.
+
+
+    +   If an expression contains several operators of the same precedence, then the
+    expression is evaluated from left to right.
+
+
+    In addition the basic operators, JavaScript also supports modulo (%) operator.
+    This operator performs division and returns the remainder as result. For example,
+    23%7 is equal to 2.
+
+
+    # Unary Operators
+
+
+    While operators like addition and subtraction need to operands to execute, some
+    operators require only one. An example of such operators is typeof, which returns
+    the datatype of the data. For example, typeof 12 returns ‘number’. Please note
+    that ''+'' and ''-'' can be used as unary operators. This is the case when they
+    are used to specify the sign of a number.
+
+
+    # Logical Operators
+
+
+    Three logical operators are available for use in JavaScript namely, Not (!), Or
+    (||) and And (&&). The results of operations that involve these operators are
+    Boolean (true or false). The results of these operations are computed in accordance
+    with the following:
+
+
+    | AND (&&) | Binary operator |
+
+    |---||
+
+    | | Both the conditions must be true |
+
+    | OR (||) | Binary operator |
+
+    | | At least one of the conditions must be true |
+
+    | NOT (!) | Unary operator |
+
+    | | The value of the condition determined is complemented |'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'For example,
+
+
+    ```
+
+    ‘Red’ != ‘Blue’ && 5 > 1 = ‘true’
+
+    ```
+
+
+    ```
+
+    ‘Red’ != ‘Blue’ && 5 < 1 = ‘false’
+
+    ```
+
+
+    ```
+
+    ‘Red’ == ‘Blue’ && 5 < 1 = ‘false’
+
+    ```
+
+
+    For conditional operators, JavaScript uses short-circuit evaluation. In other
+    words, if the value of the first condition is computed to be ‘false’, the system
+    does not evaluate the other condition and directly presents the result.
+
+
+    # Writing Code in JavaScript
+
+
+    Any statement followed by a semicolon is referred to as a statement. This statement
+    may or not produce a value unlike expressions, which must inadvertently produce
+    a value.
+
+
+    # Variables
+
+
+    Manipulation of data is performed with the help of variables. Data is stored in
+    the memory and a named reference to this memory location is called a variable.
+    Any identifier is declared as a variable by preceding it with a keyword *var*.
+    A sample declaration of a variable is:
+
+
+    ```
+
+    var result;
+
+    ```
+
+
+    This statement declares a variable *result*. You may also define the variable
+    as you declare it using a statement like this:
+
+
+    ```
+
+    var result = 0;
+
+    ```
+
+
+    or
+
+
+    ```
+
+    var result = 23*4+6;
+
+    ```
+
+
+    Certain rules have to be followed while naming variables. These rules are as follows:
+
+
+    +   - A variable name can be a combination of numbers and characters.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '+   - A variable name cannot start with a number.
+
+    - The only special characters allowed in variable names is underscore (_) and
+    dollar sign($).
+
+    - There should not be any whitespace in the variable name. For example, ''result
+    value'' is not allowed.
+
+    - JavaScript keywords are reserved and cannot be used.
+
+
+    Please note that JavaScript, unlike HTML is case sensitive. Therefore VAL and
+    val are two different variables. Also, it is recommended that the variable name
+    should be such that it describes the purpose for which it is being used. For example,
+    if we name a variable result, it is evident that this variable will contain the
+    result value computed by the code.
+
+
+    Another convention used in JavaScript is to name variables such that the first
+    letter of the variable name is lowercase. However, every subsequent word in name
+    starts with a capital letter. An example of this is the variable name, arrayResult.
+    Besides, the use of underscore and dollar sign is discouraged. However, they are
+    used in jQuery objects.
+
+
+    # Environment
+
+
+    A complete set of variables and the values they contain form what is called the
+    environment. Therefore, whenever you load a new webpage in the browser, you are
+    creating a new environment. If you take the example of Windows 8, it creates an
+    environment when an application starts and the same is destroyed when the ends.
+
+
+    # Functions
+
+
+    A set of statements that solve a purpose are referred to as a function. The purpose
+    of using functions is code reuse. If your program uses functionality multiple
+    times in the program, then it is implemented as a function, which can be called
+    as and when required. Since, a'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'function is to be called from within the code, parameters can be sent to the
+    function from the code. Upon execution, the function returns a value to the calling
+    function. The syntax for function declaration and definition is as follows:
+
+
+    ```
+
+    function multiply(a, b){
+
+
+    return a*b;
+
+    }
+
+    ```
+
+
+    The name of the function must must always be preceded with the keyword function.
+    The variables a and b are parameters passed into the function and the function
+    return the value obtained by computing a*b. This is a simple function, but you
+    can implement complex and large function depending upon the functionality desired.
+
+
+    Now that you have implemented the function, you must be wondering as to how the
+    function is called. Here is an example:
+
+
+    ```
+
+    var x=2;
+
+
+    var y=5
+
+
+    var c=multiply(x, y);
+
+    ```
+
+
+    Here, x and y are arguments that the function multiply will receive parameters.
+
+
+    JavaScript is a loosely typed language. What that means is if you pass more arguments
+    to a function than it is expecting, the system simply uses the first n arguments
+    required and discards the rest. The advantage of this functionality is that you
+    can use already implemented functions and pass the extra argument to scale the
+    function and add functionality to it. On the other hand, you will not be able
+    to get any indication of error if you unintentionally pass the wrong number of
+    arguments.
+
+
+    JavaScript also provides some built-in functions for interacting with the user.
+    These functions are as follows:'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '+   - alert
+
+
+    This function raises an alert with a message and the system resumes operation
+    after the user clicks on the OK button. Sample implementation:
+
+
+    ```
+
+    alert(''Alert message!'');
+
+    ```
+
+
+    +   - prompt
+
+
+    This function presents a textbox to the user and asks him or her to give input.
+    You can supply the default value in the presented textbox and the user can click
+    on the OK button to accept that value entered is correct. Sample implementation:
+
+
+    ```
+
+    var result = prompt(''Enter a value'', ''default value'');
+
+    ```
+
+
+    +   - confirm
+
+
+    This message gives the user the choice to OK or CANCEL an action. Sample implementation:
+
+
+    ```
+
+    var result = confirm(''Do you wish to proceed?'');
+
+    ```
+
+
+    # Function Scope
+
+
+    Each variable that you declare possesses a scope of operation, which is the function
+    within which the variable has been declared. This is called the local scope. Unlike,
+    many other languages, which define local scope by the curly braces within which
+    the variable lies, JavaScript''s local scope is same as function scope.
+
+
+    In addition to this, JavaScript also supports the concept of global scope, in
+    which variables can be declared global and thus, can be used anywhere in the program.
+
+
+    # Nesting Functions
+
+
+    Functions can be nested at any level. In other words, a function can be called
+    from within another function, which could have been called from a different function.
+    However, it is'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'important to note that the scope of variable is within the function in which
+    they are declared.
+
+
+    # Conversion of One Data Type to Another
+
+
+    The prompt function discussed in the previous function returns a string. However,
+    you had asked the user to enter a number. In such a scenario, a string to number
+    conversion may be required. In JavaScript, a variable can be converted from one
+    type to another using the following functions:
+
+
+    +   * Number Function
+
+
+    This function converts the object supplied to it into number data type. However,
+    if the function is unable to perform the conversion, NaN is returned.
+
+
+    +   * String Function
+
+
+    This function converts the object supplied to it into string data type.
+
+
+    # Conditional Programming
+
+
+    While writing code, you will be faced with several situation where you need to
+    execute a different set of instructions if the condition is true and another set
+    of instructions if the same is false.
+
+
+    if-else
+
+
+    In order to implement such scenarios, you can use the if-else construct.
+
+
+    Syntax:
+
+
+    If(condition)
+
+
+    ```
+
+    {
+
+    //code
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'else
+
+
+    {
+
+
+    ```
+
+    //code
+
+    ```
+
+
+    }
+
+
+    Consider a scenario in which you ask the user to enter his or her age using prompt
+    function. Now, you must validate if the age is a valid number, before performing
+    any computation on the value supplied. This is an ideal scenario of implementing
+    conditional programming. Sample implementation for this scenario is:
+
+
+    ```
+
+    var userAge = prompt(''Enter your age: '', '''');'');
+
+    ```
+
+
+    ```
+
+    if(isNaN(userAge))
+
+    ```
+
+
+    {
+
+
+    ```
+
+    alert(''Age entered is invalid!'');
+
+    ```
+
+
+    }
+
+
+    else
+
+
+    {
+
+
+    ```
+
+    //code
+
+    ```
+
+
+    }
+
+
+    In this sample code, the if clause checks if the entered value is a number. If
+    the condition is true, that is the object entered is not a number, the user is
+    given an alert message. However, if the condition is false, the code for else
+    is executed.
+
+
+    It is important to note here that for single statements, it is not necessary to
+    use curly braces. The above mentioned code can also be written as:'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\nvar userAge = prompt('Enter your age: ', '');\n\nif(isNaN(userAge))\n\n\
+    alert('Age entered is invalid!');\n```\n\nelse\n\n//code\n\nHowever, it is a good\
+    \ practice to use curly braces as there is scope of adding additional code later\
+    \ on.\n\nif-else if\n\nAnother conditional programming construct is if-else if\
+    \ construct. This construct allows you to declare multiple conditions and the\
+    \ actions associated with them. The syntax is:\n\n```\nif(condition)\n{\n  //code\n\
+    }\n```\n\n```\nelse if(condition)\n{\n  //code\n}\n```\n\n```\nelse\n{\n  //code\n\
+    }\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Switch
+
+
+    Multiple else ifs can be implemented using this construct. The execution overhead
+    is high for this conditional programming construct as conditions are sequentially
+    checked for validity. As an alternative, another keyword, switch, is available,
+    which implements multiple conditions in the form of a jump table. Therefore, the
+    execution overhead for switch is less than that of if-else if.
+
+
+    Sample implementation:
+
+
+    ```
+
+    var userChoice = prompt(''Choose an alphabet: a, b, c'', ''e'');
+
+
+    switch (userChoice) {
+
+
+    case ''a'':
+
+
+    alert(''a chosen\n'');
+
+
+    break;
+
+
+    case ''b'':
+
+
+    alert(''b chosen\n'');
+
+
+    break;
+
+
+    case ''c'':
+
+
+    alert(''c chosen\n'');
+
+
+    break;
+
+
+    def:
+
+
+    alert(''None of the alphabets chosen\n'');
+
+
+    break;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'The switch construct matches that value entered by the user with the values
+    presented in the cases. If a matching value is found, the case is executed. However,
+    in case, none of the case values match the entered input, the default case is
+    executed. Besides this, you can also use conditions in case values and the case
+    for which the condition holds true is executed.
+
+
+    If you do not use the break statement after the code of a case, all the cases
+    following the matching case will be executed. For example, if the user enters
+    ‘b'' for the above example and there are no break statements after the case code,
+    then the output will be:
+
+
+    b chosen
+
+
+    c chosen
+
+
+    None of the alphabets chosen
+
+
+    Also, it is a good practice to use a break statement in the default case as well.
+
+
+    Note:
+
+
+    If you wish to determine if a keyword has been assigned any value or not, you
+    can use the following code:
+
+
+    ```
+
+    if(c)
+
+    {
+
+    //code
+
+    }
+
+    ```
+
+
+    ```
+
+    else
+
+    {
+
+    //code
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'If the variable c has been assigned a not-null value, then the if condition
+    is true and the corresponding code is executed. On the other hand, if the value
+    of variable c is undefined or null, the code within the else construct is executed.
+
+
+    Note:
+
+
+    The value of the following conditions will always be true:
+
+
+    ```
+
+    " == 0
+
+    null == undefined
+
+    ''123'' == 123
+
+
+    false == 0;
+
+    ```
+
+
+    Please note that JavaScript converts the type of the variable concerned for compatibility
+    comparisons.
+
+
+    However, if you want to compare both the value and type of two variables, JavaScript
+    provides another set of operators, === and !====. When the comparisons for the
+    values mentioned in the above example are done using this operator, the resultant
+    will always be false.
+
+
+    # Implementing Code Loops
+
+
+    Looping is an important and commonly used construct of any programming language.
+    You will be faced by several situations when you need to perform the same set
+    of instructions, a given number of times. In order to implement this scenario,
+    loops have to be used. Loop constructs available in JavaScript include for, while
+    and do-while.
+
+
+    The while loop includes a condition and as long as the condition remains true,
+    the loop continues to execute. The do - while loop is a modification of the while
+    loop. If the condition in the while is false, the loop will not execute at all.
+    On the other hand, even if the while condition is false, the do-while loop executes
+    at least once.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Syntax for while loop:\n\n```\nwhile(condition)\n{\n  //code\n}\n```\n\n\
+    # Syntax for do-while loop:\n\n```\ndo\n{\n  //code\n}\n```\n\nwhile(condition)\n\
+    \nThe last type of loop available in JavaScript is for loop. The for loop allows\
+    \ you to initialize the looping variable, check for condition and modify the looping\
+    \ variable in the same statement.\n\n# Syntax:\n\n```\nfor(initialize; condition;\
+    \ modify)\n{\n  //code\n}\n```\n\nSample code:\n\n```\nfor(i=0; i<10; i=i+1)\n\
+    {}\n```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '```
+
+    //code
+
+    }
+
+    ```
+
+
+    This loop will run 10 times.
+
+
+    Note:
+
+
+    +   1. If at any point in time, you wish the loop to break, you can use the break
+    statement.
+
+    2. If you do not specify a condition or specify a condition that is always true,
+    the loop will run infinitely.
+
+
+    # Error Handling
+
+
+    Exceptions are expected to occur at several points in your code. Therefore, it
+    is best to implement a mechanism that can help you deal with these exceptions
+    and avoid crashing.
+
+
+    An exception can be described as an illegal operation or any condition that is
+    unexpected and not ordinary. A few examples of exceptions include unauthorized
+    memory access.
+
+
+    You can perform exception handling at your own level by validating the values
+    of variables before performing any operations. For instance, before performing
+    division, it is advisable to check if the value of the denominator is equal to
+    zero. Any operation that involves division of a number by zero raises the divide-by-zero
+    exception.
+
+
+    However, there are other situations that cannot be handled in this manner. For
+    instance, if the network connection breaks abruptly, you cannot do anything to
+    pre-emptively handle the situation. Therefore, for situations like these, try,
+    catch and finally keywords are used.
+
+
+    The code that is expected to throw an exception is put inside the try block. This
+    exception, upon its occurrence, is caught by the catch block, which executes code
+    that is supposed to be executed immediately after an exception is caught. The
+    catch may be followed by the finally block, which performs the final cleanup.
+    This block is executed after the execution of try and catch blocks.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'Syntax:
+
+
+    ```
+
+    try
+
+    {
+
+    //code
+
+    }
+
+    catch(exception name)
+
+    {
+
+    //code
+
+    }
+
+    finally
+
+    {
+
+    //code
+
+    }
+
+    ```
+
+
+    # Working with Objects
+
+
+    JavaScript allows user access to a number of existing objects. One of these objects
+    is an array. This section discusses all the basics related to this chapter. Dealing
+    with objects in JavaScript also includes creation and handling of customized objects.
+    However, this topic shall be covered in the chapter on JavaScript and jQuery.
+
+
+    # Arrays
+
+
+    A collection of similar objects that are sequenced contiguously are referred to
+    as an array. This array is given a name and each element can be accessed using
+    the indexer, in the following form:'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: 'Let arrName[] be an array of names. The element arrName[2] refers to the third
+    element of the array.
+
+
+    An array can be created using the following three methods:
+
+
+    +   - Insertion of Items Using Indexer
+
+
+    An array can be created using the new keyword and then, elements can be added
+    into the array by assigning values to independent elements of the array. The new
+    keyword creates an instance of the object Array using the constructor for the
+    same.
+
+
+    Sample implementation:
+
+
+    ```
+
+    var arrName = new Array();
+
+    ```
+
+
+    ```
+
+    arrName[0] = ''Jack'';
+
+    ```
+
+
+    ```
+
+    arrName[1] = ''Alex'';
+
+    ```
+
+
+    +   - Condensed Array
+
+
+    The second type of implementation also uses the new keyword. However, in this
+    case, the values are assigned to the elements as arguments to the constructor
+    of the Array object.
+
+
+    Sample implementation:
+
+
+    ```
+
+    var arrName = new Array(''Jack'', ''Alex'');
+
+    ```
+
+
+    +   - Literal Array
+
+
+    In this type of array definition, values are provided within the square brackets.
+
+
+    Sample implementation:
+
+
+    ```
+
+    var arrName = [ ''Jack'', ''Alex''];
+
+    ```
+
+
+    The advantage of using the first type of definition is that it allows you to assign
+    values to'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'the elements anywhere in the code. On the other hand, the second and third
+    type of implementation requires you to have the exact list of elements with youbeforehand.
+
+
+    There are some properties associated with all object. The one property that can
+    come in handy to you is length, which is a read-only value and when called return
+    the number of elements present in the array. You can use this property in loops
+    and conditions.
+
+
+    Objects can also have their own functions. These functions are called methods.
+    The methods available for Array include:
+
+
+    +   - concat
+
+
+    Returns an array, which is the concatenation of the two arrays supplied to it.
+
+
+    +   - indexOf
+
+
+    Finds the location of the element concerned in the array and returns the index
+    of the same.
+
+
+    +   - join
+
+
+    This method concatenates all the values present in the array. However, these values
+    are separated by a comma by default. You can specify a delimiter of your choice
+    as well.
+
+
+    +   - lastIndexOf
+
+
+    This method works similarly as indexOf. However, it performs the search for the
+    last element of the array. Therefore, it returns the index of the last element
+    that matches the specified criterion.
+
+
+    +   - pop
+
+
+    Removes the last element and returns its value.
+
+
+    +   - push'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'Adds the concerned element to the end of the array and returns the changed
+    value of length.
+
+
+    +   - reverse
+
+
+    This method reverses the order of the array elements. The original array is modified
+    by this method.
+
+
+    +   - shift
+
+
+    Removes and returns the first value. If the array is empty, then undefined is
+    returned.
+
+
+    +   - slice
+
+
+    This method requires two arguments, start index and end index. A new array is
+    created with elements same as the elements present at indexes (start index) and
+    (end index – 1).
+
+
+    +   - sort
+
+
+    This method sorts the elements and modifies the original array.
+
+
+    +   - splice
+
+
+    This method removes and adds elements to the specified array. The arguments taken
+    by this method are start index (index from where the system should start removing
+    elements), number of elements to be removed and to be added. If the value passed
+    for number of elements is 0, then no elements are deleted. On the other hand,
+    if this value is greater than the size of the array, all elements from the start
+    index to the end of the array are deleted.
+
+
+    +   - toString
+
+
+    This method creates a string, which is a comma separated concatenated string of
+    all'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'the elements present in the array.
+
+
+    +   * unshift
+
+
+    This method adds an element at the first location of the array and return the
+    modified value of length.
+
+
+    +   * valueOf
+
+
+    This method returns a string, which is the concatenated, comma-separated string
+    containing all the values present in the array.
+
+
+    Note:
+
+
+    +   1. When working with functions, you can pass the whole array (using the array
+    name) or a particular element of the array (using array name[indexer]).
+
+
+    +   2. Array elements can be modified by accessing the element using the indexer.
+    For example, arrName[1] = ‘Danny’; assigns the value ‘Danny’ to the second element
+    of the array.
+
+
+    # DOM objects
+
+
+    The primary objects that you need to access while building an application, are
+    the DOM objects associated with it. This access is necessary for you to control
+    and get notified events that are occurring on the webpage.
+
+
+    The DOM is a representation of a hierarchy of objects. These objects can be accessed
+    using the document variable, which is built-in. This variable references the DOM
+    and performs a search, which may return an active or static NodeList. While the
+    active NodeList contains a list of elements that keep changing, the static NodeList
+    contains elements that do not change over time. Since the retrieval of the static
+    NodeList takes longer, it is advisable to choose search methods that work with
+    active NodeList.
+
+
+    The search methods available for DOM include:'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '+   * getElementById
+
+
+    This method returns a reference to the first element that has the specified ID.
+
+
+    +   * getElementsByTagName
+
+
+    This method returns the active NodeList, which has the specified tag name.
+
+
+    +   * getElementsByName
+
+
+    This method returns the active NodeList, which has the specified name. This is
+    a preferred method for option buttons.
+
+
+    +   * getElementsByClassName
+
+
+    This method returns the active NodeList, which has the specified class name. However,
+    this method is not supported by Internet Explorer version 8 and earlier.
+
+
+    +   * querySelector
+
+
+    This method accepts CSS selector as parameter and return the first matched element.
+    However, this method is not supported by Internet Explorer version 7 and earlier.
+
+
+    +   * querySelectorAll
+
+
+    This method accepts CSS selector as parameter and return all the matched elements.
+    Therefore, it returns a static NodeList. However, this method is not supported
+    by Internet Explorer version 7 and earlier.
+
+
+    # Events
+
+
+    If you look at JavaScript as an engine, then events are what give it the required
+    spark. Events can occur in two situations. The first type of events are those
+    that occur during user interactions. A user may click an image or enter text.
+    All these are classified as events. Besides this, changes in state of the system
+    are also considered an event. For instance, if a'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'video starts or stops, an event is said to have occurred. The DOM allows you
+    to capture events and execute code for the same.
+
+
+    In JavaScript events are based on the publish-subscribe methodology. Upon creation
+    of an object, the developer can publish the events that are related to this object.
+    Moreover, event handlers can be added to this object whenever it is used. The
+    event handler notifies the subscribed events that the event has been triggered.
+    This notification includes information about the event like location of the mouse
+    and key-presses, in addition to several other details relevant to the event.
+
+
+    Capturing events:
+
+
+    There may be situations when an event may be attached to a button click, which
+    may lie inside a hyperlink. In this situation, there is nesting of elements. Therefore,
+    the event, when triggered, is passed down the DOM hierarchy. This process is called
+    event capturing. However, once the event has reached the element, this event is
+    bubbled up the hierarchy. This process is called event bubbling. This movement
+    of the event across the hierarchy gives the developer an opportunity to subscribe
+    or cancel the propagation, on need basis.
+
+
+    Subscribing to event:
+
+
+    The function, addEventListener, can be used for the subscription process. This
+    function requires three arguments, the event, the function that needs to be called
+    for the event and a Boolean value that determines if the function will be called
+    during the capture or bubble process (true – capture, false – bubble). Mostly,
+    this value is set to false. This is the preferred method for subscription as it
+    is mentioned in the W3C standard.
+
+
+    Sample Code:
+
+
+    ```
+
+    var btn = document.getElementById(''btnDownload'');
+
+    ```'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '```
+
+    btn.addEventListener(''click'', initiateDownload, false);
+
+    ```
+
+
+    However, other methods also exist, which include giving an online subscription
+    to the html tag. This subscribes the event to the bubble process. The advantage
+    of using this method is that it is the oldest and most accepted method. therefore,
+    you can be sure that this method will work, regardless of which browser you are
+    using. Please see the tag below to understand how this can be done.
+
+
+    ```
+
+    <button id=''btnDownload'' onclick=''initiateDownload();''>Download</button>
+
+    ```
+
+
+    You can also use the traditional subscription process that uses JavaScript for
+    subscribing the event.
+
+
+    ```
+
+    var btn = document.getElementById(''btnDownload'');
+
+    ```
+
+
+    ```
+
+    btn.onclick = initiateDownload;
+
+    ```
+
+
+    Unsubscribing:
+
+
+    Events can be unsubscribed using the function, removeEventListener, which takes
+    the same set of parameters as addEventListener. For the btn variable used in the
+    previous example, this can be done in the following manner:
+
+
+    ```
+
+    var btn = document.getElementById(''btnDownload'');
+
+    ```
+
+
+    ```
+
+    btn.removeEventListener(''click'', initiateDownload, false);
+
+    ```
+
+
+    How to cancel propagation?
+
+
+    The function, stopPropagation, is used for performing this operation. This can
+    be done in the following manner:
+
+
+    ```
+
+    var btn = document.getElementById(''btnDownload'');
+
+    ```
+
+
+    ```
+
+    btn.addEventListener(''click'', initiateDownload, false);
+
+    ```
+
+
+    ```
+
+    function initiateDownload(e){
+
+    ```'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '```
+
+    //download
+
+
+    e.stopPropagation();
+
+
+    }
+
+    ```
+
+
+    # How to prevent the default operation?
+
+
+    This can be done by using the function, preventDefault, in the following manner:
+
+
+    var hyperlink = document.getElementById(''linkSave'');
+
+
+    hyper.addEventListener(''click'', saveData, false);
+
+
+    function saveData(e){
+
+
+    //save data
+
+
+    e.preventDefault();
+
+    }
+
+
+    JavaScript also provides the *this* keyword, which can be used if you wish to
+    access the event causing element, on a frequent basis.
+
+
+    # Window Event Reference
+
+
+    The current browser window is represented by the window variable, which is an
+    instance of the Window object. The following events are associated with this object:
+
+
+    +   - afterprint
+
+    - beforeonload
+
+    - beforeprint
+
+    - error
+
+    - blur
+
+    - haschange'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '+   - load
+
+    - message
+
+    - focus
+
+    - online
+
+    - offline
+
+    - pageshow
+
+    - pagehide
+
+    - redo
+
+    - popstate
+
+    - storage
+
+    - resize
+
+    - unload
+
+    - undo
+
+
+    # Form Event Reference
+
+
+    The actions that occur inside an HTML form trigger the flowing events:
+
+
+    +   - change
+
+    - blur
+
+    - focus
+
+    - contextmenu
+
+    - forminput
+
+    - formchange'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '+   * invalid
+
+    * input
+
+    * submit
+
+    * select
+
+
+    # Keyboard Event Reference
+
+
+    The keyboard triggers the following events:
+
+
+    +   * keyup
+
+    * keypress
+
+    * keydown
+
+
+    # Mouse Event Reference
+
+
+    The mouse triggers the following events:
+
+
+    +   * click
+
+    * drag
+
+    * drop
+
+    * scroll
+
+    * dblclick
+
+    * dragenter
+
+    * dragstart
+
+    * dragend
+
+    * dragover
+
+    * dragagleave'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '+   - mousemove
+
+    - mousedown
+
+    - mouseover
+
+    - mouseout
+
+    - mousewheel
+
+    - mouseup
+
+
+    # Media Event Reference
+
+
+    Media elements like videos, images and audios also trigger events, which are as
+    follows:
+
+
+    +   - canplay
+
+    - abort
+
+    - waiting
+
+    - durationchange
+
+    - canplaythrough
+
+    - ended
+
+    - emptied
+
+    - loadeddata
+
+    - error
+
+    - loadstart
+
+    - loadedmetadata
+
+    - play
+
+    - pause'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '+   * progress
+
+    * playing
+
+    * readystatechange
+
+    * ratechange
+
+    * seeking
+
+    * sought
+
+    * suspend
+
+    * stalled
+
+    * volumechange
+
+    * timeupdate'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# CHAPTER 4: BASICS OF CSS3
+
+
+    Cascading Style Sheets or CSS provide the presentation that webpages are known
+    for. Although, HTML is capable of providing a basic structure to the webpage,
+    CSS offers developers host of design options. Besides this, it is fast and efficient,
+    which makes it an all more popular design tool.
+
+
+    CSS is known to have evolved from SGML (Standardized Generalized Markup Language).
+    The goal of efforts made in this direction was to standardize the manner in which
+    web pages looked. The latest version of this technology is CSS3, which is a collection
+    of 50 modules.
+
+
+    The most powerful characteristic of CSS is its cascading ability. Simply, it allows
+    a webpage to take its styles from multiple sheets in such a manner that changes
+    to the style in subsequently read sheets overwrite the style already implemented
+    from one or more of the previous sheets.
+
+
+    # How to Define and Apply Style
+
+
+    The definition and application of a style involves two facets or parts, selector
+    and declaration. While the selector determines the area of the webpage that needs
+    to be styled, the declaration block describes the style specifications that have
+    to be implemented. In order to illustrate how it works, let us consider the following
+    example,
+
+
+    ```
+
+    body {
+
+    color: white;
+
+    }
+
+    ```
+
+
+    In this example, the selector selects the body of the webpage and the declaration
+    block defines that the font color should be changed to white. This is a simple
+    example and'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'declarations and selectors can be much more complex than this.
+
+
+    # How to Add Comments
+
+
+    Comments can be added to the style sheet using the following format:
+
+
+    ```
+
+    /*write the comment here*/
+
+    ```
+
+
+    # How to Create an Inline Style
+
+
+    Every element has an associated global attribute, style. This global attribute
+    can be manipulated within the tag for element to modify the appearance of that
+    element. This type of styling does not require you to specify the selector. Only
+    the declaration block is required. An example of how this is done is given:
+
+
+    ```
+
+    <body style=''color: white;''>
+
+
+    </body>
+
+    ```
+
+
+    This HTML tag performs the same functionality as the CSS code specified in the
+    previous section. The advantage of using this approach is that the style information
+    given in this manner overwrites any other styling information. Therefore, if you
+    need to use different style for one element while the rest of the document needs
+    to follow a different style, you can use a stylesheet for the document and specify
+    the style for this element in its tag.
+
+
+    # How to Use Embedded Style
+
+
+    Another approach for accomplishing the same outcome as inline styles is to use
+    the <style> element within the element concerned, for defining its style specification.
+    Here is how this can be done:
+
+
+    ```
+
+    <!DOCTYPE html>
+
+
+    <html xmlns=''http://www.w3.org/1999/xhtml''>
+
+
+    <head>
+
+    ```'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '```
+
+    <title></title>
+
+
+    <style>
+
+    body {
+
+    color: white;
+
+    }
+
+    </style>
+
+    <head>
+
+    <body>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    # How to Create External Style Sheet
+
+
+    For usages where you wish to use the same style for the complete webpage or a
+    number of webpages, the best approach is to use an external style sheet.
+
+
+    This external style sheet can be linked to the HTML page in the following manner:
+
+
+    ```
+
+    <!DOCTYPE html>
+
+
+    <html xmlns=''http://www.w3.org/1999/xhtml''>
+
+
+    <head>
+
+
+    <title></title>
+
+
+    <link rel=''stylesheet'' type=''text/css'' href=''Content/mainstyle.css'' />
+
+    </head>
+
+
+    <body>
+
+    ```'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '```
+
+    </body>
+
+
+    </html>
+
+    ```
+
+
+    You must create a file mainstyle.css, in the Content folder, and put the style
+    rule specified below into the file.
+
+
+    ```
+
+    body {
+
+
+    color: white;
+
+
+    }
+
+    ```
+
+
+    # Defining Media
+
+
+    It is important to note that a style sheet can contain as many style rules as
+    you want. Besides this, you can also link different CSS files for different media.
+    The different media types are as follows:
+
+
+    +   * all
+
+    * embossed
+
+    * braille
+
+    * print
+
+    * handheld
+
+    * speech
+
+    * screen
+
+    * tv
+
+    * tty
+
+
+    The media used can be defined in the following manner:'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Defining Character Encoding
+
+
+    You can also define the character encoding used, using the following format:
+
+
+    Style sheet:
+
+
+    Place the following line above the style rule in the style sheet.
+
+
+    ```
+
+    @charset ''UTF-8'';
+
+    ```
+
+
+    HTML page:
+
+
+    You must place this line above the link element.
+
+
+    ```
+
+    <meta http-equiv=''Content-Type'' content=''text/html;charset=UTF-8'' >
+
+    ```
+
+
+    # Importing style Sheets
+
+
+    As your web pages becomes complex, the style sheets used shall also grow in complexity.
+    Therefore, you may need to use many style sheets. You can import the style rules
+    in one style sheet to another by using:
+
+
+    ```
+
+    @import url(''/Content/header.css'');
+
+    ```
+
+
+    Here, header.css is imported and the url gives the relative address of the style
+    sheet to be imported.
+
+
+    # Importing Fonts
+
+
+    Fonts can be imported using the following format:
+
+
+    ```
+
+    @font-face {
+
+
+    font-family: newFont;
+
+
+    src: url(''New_Font.eot''); /* IE9 */
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# Selectors, Specificity and Cascading
+
+
+    Selectors can be of three types, class selectors, ID selectors and element selectors.
+    The element selector type is the simplest and requires you to simply name the
+    element that needs to be used. For instance, if you wish to change the background
+    color of the body, then the element selector used is body.
+
+
+    While declaring any element, you can assign an ID to it using the id attribute.
+    You can use this ID prefixed with a # as a selector. For example, if you have
+    created a button with ID btnID, then the ID selector for this will be #btnID.
+    Similarly, you can assign a class name to an element using the class attribute.
+    Class name can be used prefixed by a dot( in the following manner, .className.
+
+
+    However, if you wish to select all the elements of the webpage, then asterisk
+    (*) to it.
+
+
+    # Using Descendant and Child Selectors
+
+
+    You may wish to apply a particular style to a descendant of a selector. This can
+    be done by specifying the complete selector change. It can be done in the following
+    manner:
+
+
+    ```
+
+    li a {
+
+    text-color: black;
+
+    }
+
+    ```
+
+
+    On the other hand, you may want to apply to an element only if it is a direct
+    child of the selector. This can be implemented by specifying the parent and child
+    separated by a greater than (>) sign, in the following manner:
+
+
+    ```
+
+    li > a {
+
+    color: white;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Pseudo-element and Pseudo-class Selectors
+
+
+    Now that you know how to apply styles to specific elements, let us move on to
+    implementing styles to more specific sections like the first line of the second
+    paragraph. In order to style elements that cannot be classified on the basis of
+    name, content or is not a part of the DOM tree can be styled using pseudo-classes.
+    The available pseudo-classes include:
+
+
+    +   * :visited
+
+    * :link
+
+    * :hover
+
+    * :active
+
+    * :checked
+
+    * :focus
+
+    * :nth-last-child(n)
+
+    * :not
+
+    * :only-child
+
+    * :nth-child(formula)
+
+    * :lang(language)
+
+    * :first-of-type
+
+    * :only-of-type
+
+
+    If you want to access information of the DOM tree that is not accessible otherwise,
+    you can use pseudo-elements. Pseudo-elements include:
+
+
+    +   * ::first-letter'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '+   - ::first-line
+
+    - ::after
+
+    - ::before
+
+
+    # Grouping Selectors
+
+
+    Multiple selectors can be used for a style rule. These selectors must be separated
+    by commas. Sample implementation:
+
+
+    ```
+
+    body, button {
+
+    color: white;
+
+    }
+
+    ```
+
+
+    # Using Adjacent Selectors
+
+
+    If you want to style the first heading in a div or any similar adjacent elements,
+    the selector is constructed using a plus sign (+) between the two selectors. Sample
+    implementation:
+
+
+    ```
+
+    div ~ h1 {
+
+    color: white;
+
+    }
+
+    ```
+
+
+    # Sibling Selectors
+
+
+    Sibling selectors are similar to adjacent selectors except for the fact that all
+    the matching elements are styled against adjacent selectors, which only style
+    the first matching element. The selector is constructed using a ~ sign between
+    the two selectors. Sample implementation:
+
+
+    ```
+
+    div ~ h1 {
+
+    color: white;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    # Using Attribute Selector
+
+
+    This selector selects all the elements for which the specified attribute exists.
+    The selector
+
+    is written in this form:
+
+
+    a[title]
+
+
+    This selector will select all the links for which the title attribute has been
+    specified.
+
+    Moreover, this selector type can be modified into attribute-value selector by
+    specifying the
+
+    attribute value in the following manner:
+
+
+    a[title = value]
+
+
+    # In-Built Styles of Browsers
+
+
+    Every browser has a built-in stylesheet, which is applied to all the webpages
+    opened using
+
+    this browser. In fact, this stylesheet is applied before any other style sheet.
+    You can define
+
+    your own style sheet for the browser using the Accessibility option in Tools.
+    However,
+
+    user style sheets are browser specific. Therefore, if you open a different browser,
+    the style
+
+    sheet you defined may not be accessible.
+
+
+    In case, you want your user-defined stylesheet to override any other style specified
+    in the
+
+    HTML page, then you can use the ‘!important’ modifier. This modifier sets highest
+
+    priority for the specified style statement. Sample implementation:
+
+
+    ```
+
+    body {
+
+
+    color: white !important;
+
+
+    }
+
+    ```
+
+
+    # Cascading of Styles
+
+
+    The precedence and priority of the styles are decided on the basis of the following'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "parameters.\n\n+   * Importance\n* Specificity\n* Textual Order\n\n# Working\
+    \ with CSS Properties\n\nNow that you are thorough with the use of selectors,\
+    \ the next step is to look at CSS properties.\n\n# Color\n\nOne of the most crucial\
+    \ properties that are used in a web page is color, which can be defined using\
+    \ ARGB, RGB and color names.\n\nRGB value are typically defined using a decimal\
+    \ number, which lies between 0-255.\n\n+   * white #ffffff\n* red #ff0000\n* black\
+    \ #000000\n* green #008000\n\nColor values can also be used instead of the color\
+    \ name. An example of how this can be used is given below.\n\n```\nbody {\n  color:\
+    \ #ffffff;\n}\n```\n\nAnother way to specify the color is using the RGB function,\
+    \ which specifies the values of parameters using a number between 0-255 or percentage.\
+    \ Example of this type of"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'declaration is given below:
+
+
+    ```
+
+    h1 { color: rgb(255,0,0); }
+
+    ```
+
+
+    Other ways to specify color are RGBA, which accepts 4 values and HSL, which defines
+    values for hue, saturation and lightness.
+
+
+    # Transparency
+
+
+    The transparency or opacity are defined by a value between 0.0 (invisible) and
+    1.0 (opaque).
+
+
+    # Text
+
+
+    As far as text is concerned, font-face and font-size can be specified. These properties
+    can be defined in the following manner:
+
+
+    ```
+
+    h1 { font-family: arial, verdana, sans-serif; }
+
+    ```
+
+
+    ```
+
+    h1 { font-size: 12px; }
+
+    ```
+
+
+    # The CSS Box Model
+
+
+    The CSS Box Model assumes that a webpage can be considered to be made up of boxes.
+    The spacing between these boxes are given by margins and padding settings. These
+    properties can be given values in the following manner:
+
+
+    margin: 15px;
+
+
+    padding: 25px;
+
+
+    border: 10px;
+
+
+    # Positioning <div> elements
+
+
+    The element used for creating page layouts is <div>. Although, HTML5 recommends
+    the use of semantic markup instead of div elements, there are still used for content
+    that cannot be styled using semantic markup. A div element can be imagined as
+    a rectangular block'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'and is declared in the following manner:
+
+
+    ```
+
+    <div>
+
+    <!--other elements are enclosed within this area-->
+
+    </div>
+
+    ```
+
+
+    Properties used to define the position of a div element include:
+
+
+    +   - The position of the div element can be defined using the properties, top,
+    bottom, left and right, in pixels.
+
+    - A property, position, is used to define if the position specified is static
+    or relative.
+
+    - The float property can be used to allow elements to float to the right or left
+    and defined as float: left or float: right.
+
+    - The clear property places a clear element right after the floating element.
+
+    - You can also change the manner in which the browser calculates width with the
+    help of the box-sizing property. This property can take three values: content-box
+    (default setting), border-box and padding-box.
+
+
+    # Centering Content
+
+
+    If you are using a fixed width, the div element can be centered using the properties,
+    margin-left and margin-right. If you fix the width and set the margins to auto,
+    the extra space on the margins is equally divided. It can be done in the following
+    manner:
+
+
+    ```
+
+    #container {
+
+    width: 850px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    ```'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '```
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# CHAPTER 5: HTML5 EXPLAINED
+
+
+    The chapter focuses on the basics of HTML5 and how they can be used for creating
+    high performance, new-generation pages. However, most of the elements explained
+    in that chapter included elements that HTML5 has received from its predecessors.
+    This chapter takes a step further in your quest of learning HTML5, introducing
+    concepts that are newly added to this technology.
+
+
+    In the previous chapter on CSS, we introduced the concept of <div> element to
+    you. This element is preferred over all its alternatives as far as page layout
+    creation is concerned. While some people also use the <table> element, it is usually
+    not a recommended solution as it is difficult to maintain as well. However, both
+    the concepts are elaborated upon this chapter.
+
+
+    # Semantic Markup
+
+
+    <div> and <span> elements are the most commonly used and recommended elements
+    for positioning and formatting content. However, it is recommended that you should
+    use different <div> elements for specifying different sections of the page like
+    header and footer. This shall allow you to position them individually and in a
+    more organized manner. Therefore, the W3C has named these new elements with names
+    like <footer> and <header>.
+
+
+    # Browser Support
+
+
+    It is true that your HTML code will not be read by any of your users. However,
+    there are other tools and machines that are constantly parsing your code. These
+    tools include web crawlers, which indexes webpages for searching and NVDA (Non-Visual
+    Desktop Access)'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'devices, which are used by many users with special needs as an alternative
+    for reading and comprehending web pages. Therefore, they require you to use tags
+    that are understandable.
+
+
+    # How to Create HTML5 Documents
+
+
+    Although, the above discussion clearly mentions the importance of using meaning
+    tags and prohibits the use of tags like `<div>` and `<span>`, you may still have
+    to use them for styling purposes. As you read on, you will realize how semantic
+    tags must be supplied for providing meaning to your tags. It is important to mention
+    that semantic tags should be used carefully, and if you realize that there is
+    a need to define custom elements, then go ahead and use the `<div>` and `<span>`
+    elements. However, be sure to add an ID and class-name to the elements that describe
+    their meaning as well as possible.
+
+
+    # How to Create HTML5 Layout Container
+
+
+    A layout container, as the name suggests, is a container that entails the layout
+    of a page. In other words, the container contains the different sections of the
+    layout or its children in such a manner that they can be positioned in a flexible
+    manner. As a developer, you can easily distinguish between `<div>` elements on
+    the basis of their class names and IDs. However, this is not true for browsers.
+
+
+    Therefore, there has got to be by a way by which you can ask the browser to interpret
+    elements. For instance, you may want to ask the browser to focus on a certain
+    `<div>` element upon opening. All this and more can be done with the help of layout
+    containers that express elements in such a manner that they are understandable
+    to both the browser and the user.
+
+
+    Some of the commonly used elements for creating a layout container include:
+
+
+    +   - <header>'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'It is used to define the header section or the topmost section of the HTML
+    document. This element can also be defined inside the <article> element.
+
+
+    +   - <footer>
+
+
+    It is used to define the footer section or the bottom-most section of the HTML
+    document. This element can also be defined inside the <article> element.
+
+
+    +   - <nav>
+
+
+    It is used to define the section that contains all the navigational links.
+
+
+    +   - <aside>
+
+
+    This element is generally used for sidebars and separates the content in the <aside>
+    element from the content that is outside this element.
+
+
+    +   - <section>
+
+
+    This element defines a part of the whole section and is named with the elements
+    <h1>, <h2>, <h3>, <h4>, <h5> and <h6>.
+
+
+    +   - <article>
+
+
+    This element defines a complete unit of content, which you can copy from one location
+    to another. An example of such a unit is a blog post.
+
+
+    # Using Roles
+
+
+    The role attribute can be declared inside the <div> and <aside> elements. The
+    role class hierarchy and the usage of roles for providing specific meanings, as
+    far as far accessibility is concerned, is defined in WAI-ARIA (Web Accessible
+    Initiative - Accessible Rich Internet Applications).
+
+
+    Applications).
+
+
+    One of the parent role classes is the landmark role class, which defines the navigational'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: 'landmarks on the webpage. The child classes of the parent role class include:
+
+
+    +   - banner
+
+
+    This defines website specific content that is not expected to change from one
+    webpage to another like headers.
+
+
+    +   - application
+
+
+    This defines that the specified area is a web application.
+
+
+    +   - contentinfo
+
+
+    This defines the information included in the webpage about the webpage like copyright
+    information. This information is mostly a part of the footer content.
+
+
+    +   - complementary
+
+
+    This defines a section of the page that is meaningful when detached from the page
+    as well.
+
+
+    +   - main
+
+
+    The main web page content is defined using this child role class.
+
+
+    +   - form
+
+
+    This defines the area of the webpage that is expected to take webpage inputs.
+
+
+    +   - search
+
+
+    This child role class is used to define the location on the webpage that is used
+    for getting the search query from the user and displaying the results of the search.
+
+
+    +   - navigation
+
+
+    The area containing navigational links is a part of this child role class.
+
+
+    These roles can be used for providing meaning. However, the new elements included
+    in'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'HTML5 are meaningful themselves. Yet, there are some utilities that are not
+    available in HTML5 and for these, role attribute can be used.
+
+
+    # How to Control format using <div><div> element?
+
+
+    As mentioned previously, the <div> element is essentially invisible and not provide
+    any meaning to the element. However, if you wish to use it for formatting purposes
+    only, then it is perfect for this purpose.
+
+
+    # How to Add Thematic Breaks?
+
+
+    The void element <hr/> can be used for adding thematic breaks, which are used
+    for denoting a transition from one set of content to another.
+
+
+    # How to Annotate Content?
+
+
+    There are several elements available for annotation. These include <b> and <i>,
+    which you have been using for ages. However, they have new meanings, in addition
+    to the style that they denote. For instance, the <b> element denotes the style
+    ‘bold’. In addition to this, HTML5 adds the meaning ‘span of special focus, but
+    no change in mood, importance level or implication.’
+
+
+    Although, the use of the bold style makes more sense in this context, but you
+    can still use this element for denoting names of products in reviews or keywords.
+    Similarly, the element <strong> indicates the relative importance of content and
+    <i> denotes a change in mood or implication of the content concerned. Besides,
+    the <em> element is used for text that will be alternatively pronounced by the
+    reader.
+
+
+    # How to Use <abbr> for Acronyms and Abbreviations?
+
+
+    In the previous versions of HTML'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '<em> and <strong>>.
+
+
+    # Element - <address>
+
+
+    This element is used for defining the contact information of the owner or the
+    author of the webpage.
+
+
+    # Quotations and Citations
+
+
+    You can indicate that a particular text is a quote by using the element <blockquote>,
+    which is used for a long quotation, and <q>, which is used for an inline quotation.
+    You can mention the source of the quotation using the cite attribute or the <cite>
+    element. However, using the <cite> element inside <q> and <blockquote> elements
+    is considered a better approach. Please remember that the <cite> element can only
+    mention the name of the work and other information like author’s name and location
+    of publishing, are not included here.
+
+
+    # How to Document Code in HTML5?
+
+
+    There are two elements, <code> and <samp>, are used for documenting code. While
+    the element <code> is used for documenting the source code, the element <sample>
+    is used for the output of the code. A sample HTML for how this is done given below:
+
+
+    ```
+
+    <code class="maintainSpace">
+
+    echoContent(''Screen'');
+
+
+    function echoContent(name)
+
+    {
+
+    alert(''This is is'' + name + ''.'');
+
+    }
+
+    n</code>
+
+    ```'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '```
+
+    <samp class="maintainWhiteSpace">
+
+
+    This is Screen.
+
+
+    </samp>
+
+    ```
+
+
+    # The <pre> Element
+
+
+    It is important to mention here that these elements do not preserve the whitespace.
+    Therefore, a class needs to be implemented for this purpose. This class should
+    look like:
+
+
+    style rule.
+
+
+    ```
+
+    .maintainWhiteSpace {
+
+
+    white-space: pre;
+
+
+    }
+
+    ```
+
+
+    Some browsers may not support this style rule. Therefore, for such browsers, it
+    is advisable to use the element <pre>. Therefore, <pre> element can be used for
+    defining the pre-formatting rules.
+
+
+    # The <var> Element
+
+
+    This element is used to declare that the text specified inside it, is a variable.
+    Example:
+
+
+    <p>
+
+
+    The variable <i></var> represents the number of iterations for the loop to perform.
+
+
+    </p>
+
+
+    # The <br /> and <wbr /> Elements
+
+
+    The <br/> element implements a line break. On the other hand, the <wbr/> implements
+    a word break.
+
+
+    # The <dfn> Element'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: 'There may be occasions when you wish to define a term. This can be done using
+    the <dfn> element, which takes title as one of its attributes.
+
+
+    # Working with Figures
+
+
+    Images and figures are an integral part of any web page content. Therefore, every
+    figure can also be viewed as a unit of content, which may consist of a caption
+    and a reference from the page to which it may belong. In order to define one or
+    more images, the <figure> element is used. The element <figcaption> can be used
+    for defining the caption of the figure.
+
+
+    However, it is important to mention here that the <figure> element does not give
+    any importance to the position of the figure and the same is included along with
+    the content. However, if the position and location of the figure is of importance
+    to you., then you must consider using the <div> element.
+
+
+    # The <summary> and <details> Elements
+
+
+    The element <summary> contains the summary of the content of the webpage, which
+    can be displayed in the form of a collapsible list using the <details> element.
+    Therefore, when you load a page, only the contents of the <summary> element will
+    be displayed, while the contents of the <details> element are displayed when the
+    user clicks on the summary.
+
+
+    # Other Annotations
+
+
+    In addition to the above mentioned, there are a few more annotations available,
+    include:
+
+
+    +   - <s> - Used for striking out text
+
+    - <u> - Used for underlining text
+
+    - <mark> - Used for highlighting text
+
+    - <ins> - Used for indicating that the text has been inserted'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '+   <del> - Used for indicating that the text has been deleted
+
+
+    +   <small> - used for indicating that the text must be printed in fine letters
+
+
+    +   <sub> - Indicates that the text is a subscript
+
+
+    +   <sup> - Indicates that the text is a superscript
+
+
+    +   <time> - Used for indicating that the text denotes time and date
+
+
+    +   <kbd> - used for indicating that the text is a user input
+
+
+    # Language Elements
+
+
+    You may need to use characters of Chinese, Japanese or Korean origin in your text.
+    In order to support this inclusion, the element <ruby> can be used. Inside this
+    element, other elements like <bdi> and <bdo>, for defining the isolation and direction
+    of text. Besides this, <rt> and <rp> elements can also be used for placing notation
+    or parentheses in the text of <ruby> element.
+
+
+    # Working with Lists
+
+
+    In HTML5, several elements for defining unordered, ordered and descriptive lists
+    exist. A fourth category of ‘Custom lists’ is also present to allow customization
+    by the developer. The list items for all these are declared using the <li> element.
+    Moreover, all the three types of lists support nesting.
+
+
+    # Ordered Lists
+
+
+    Ordered lists are declared using the element <ol> and the elements of ‘order’
+    in this list are brought about by an automatic numbering of the elements that
+    are included in this list. The attributes that can be used with ordered lists
+    include:
+
+
+    +   start - Used to set the starting number of the list
+
+
+    +   reversed - Used for declaring if the list has to be ordered in an ascending
+    or'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'descending order
+
+
+    +   - type – Used for declaring the type of the list, which can be A, a, 1 or
+    I.
+
+
+    # Unordered Lists
+
+
+    This type of a list is declared using the <ul> element and there is no numbering
+    of elements in this case. The elements of the lists are simply represented as
+    bullet points.
+
+
+    # Description Lists
+
+
+    This type of a list is declared using the <dl> element. Using this element, you
+    can give a description containing zero or more terms. Besides this, the elements
+    of the list are declared using the <dt> element, which specifies the term, and
+    <dd>, which gives a description of the term.
+
+
+    # Custom Lists
+
+
+    The developer can make use of CSS styles to create custom lists. In this case,
+    a different style rule can be created for each level of a nested list.
+
+
+    # Working with Tables
+
+
+    Another format for arranging and presenting data in webpages is tables. Tables
+    are declared using the <table> element and represents data in a rows-columns format.
+    The cells of the tables are defined using the <tr> and <td> elements. While <tr>
+    is used for rows, <td> is used for columns.
+
+
+    Despite that fact HTML5 tables are one of the most powerful constructs available
+    to the developer, it is important to understand how and where tables can be most
+    appropriately used. Here are the reasons why tables should not be used:
+
+
+    +   - The table created for a web page is not rendered until the </table> tag
+    is read. On the other hand, if the same construct is created using the <div> element,
+    the content will be rendered as it is.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '+   - Tables are extremely difficult to maintain.
+
+    - Tables are difficult to interpret for accessibility devices.
+
+
+    Sample Implementation:
+
+
+    ```
+
+    <table>
+
+    <tr>
+
+    <td>Frank</td>
+
+    <td>1978</td>
+
+    </tr>
+
+    <tr>
+
+    <td>David</td>
+
+    <td>1967</td>
+
+    </tr>
+
+    <tr>
+
+    <td>Alex</td>
+
+    <td>1989</td></</tr>
+
+    </table>
+
+    ```
+
+
+    The table created above will look like:
+
+
+    | Frank | 1978 |
+
+    | David | 1967 |
+
+    | Alex | 1989 |'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'As you observe the table, you must have realized that the table is not complete
+    unless we define what is called the table headers. This can be done using the
+    `<th>` element. You can create table headers both vertically and horizontally.
+    For example, we can define the following table header in the code used above.
+
+
+    ```
+
+    <table>
+
+    <tr>
+
+    <th>Name</th>
+
+    <th>Year of Birth</th>
+
+    </tr>
+
+    <tr>
+
+    <td>Franky</td>
+
+    <td>1978</td>
+
+    </tr>
+
+    <tr>
+
+    <td>David</td>
+
+    <td>1967</td>
+
+    </tr>
+
+    <tr>
+
+    <td>Alex</td>
+
+    <td>1989</td>
+
+    </tr>
+
+    </table>
+
+    ```
+
+
+    The resulting table for this code will look like this:'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '| Name | Year of Birth |
+
+    | Franky | 1978 |
+
+    | David | 1967 |
+
+    | Alex | 1989 |
+
+
+    In the above case, the table headers are simply of a larger font size. However,
+    you can style these as as you want by style rules. This can be done in the following
+    manner:
+
+
+    ```
+
+    th {
+
+
+    background-color: black;
+
+
+    color: white;
+
+    }
+
+    ```
+
+
+    This style rule will color the cells of the table headers with black color and
+    the text will be written in white.
+
+
+    The normal behavior of most browsers is to automatically place all the <tr> elements
+    in the <tbody>, indicating that this is the body of the table. However, it is
+    a good practice to define the <tbody> explicitly. Besides, the <head> and <footer>
+    can be explicitly defined. The header, body and footer of the table can be individually
+    styled using CSS. As a rule, you can have one header element, one or more body
+    elements and one footer element.
+
+
+    The next important content feature that must be added to the table created above
+    is the table caption. In order to define the table caption, the <caption> element
+    is used.
+
+
+    In some cases, you may feel the need to style individual columns. This may seem
+    like a difficult task considering the fact that tables are essentially row centric
+    in HTML. While'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'you have <tr> elements to identify rows, there are no <td> elements for identifying
+    columns. The <td> element identifies a cell. However, you can still style individual
+    columns using the <colgroup> or <col> elements. The <table> element can have the
+    <colgroup> element, which includes the <col> elements for columns that are a part
+    of this group of elements. In addition, the <col> element also has a span attribute
+    for defining the columns that are part of this group. A sample implementation
+    to explain how this works is given below:
+
+
+    ```
+
+    <colgroup>
+
+    <col span="2" class="vHeader" />
+
+    </colgroup>
+
+    ```
+
+
+    The CSS style rule for styling this group of columns can be something like this
+    –
+
+    .vHeader {
+
+
+    color: red;
+
+    }
+
+
+    While the tables discussed till now are regular tables, HTML5 also supports irregular
+    tables, which can be described as tables that have a different number of columns
+    for each row. The rowspan and colspan attributes can be used for managing the
+    layout of the table.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# CHAPTER 6: JAVASCRIPT AND JQUERY
+
+
+    You must have got a hang of the power of JavaScript already. In the chapter JavaScript,
+    you have already learnt how to create and adding JavaScript for making web pages
+    dynamic. The biggest challenge of web development is to design webpage elements
+    that can run just as well on any browser as different browsers support for different
+    elements, making it difficult to find a common ground.
+
+
+    This chapter takes you a step further in JavaScript development by teaching you
+    how to create objects and use them. Besides this, it also introduces you to the
+    concept of jQuery, which attempts at creating browser-compatible code. Although,
+    it cannot promise 100% browser compatibility, but it certainly solves the day-to-day
+    issues regarding the same.
+
+
+    # How to Create JavaScript Objects
+
+
+    Anything from numbers to strings in JavaScript. Therefore, it is essential to
+    know how to create and deal with these effectively. The simplest way to create
+    objects in JavaScript is using the object literal syntax. The following example
+    illustrates how it is done.
+
+
+    ```
+
+    var customer1 = {
+
+    yearOfBirth: 2000,
+
+    name: ''Alex'',
+
+    getCustomerInfo: function () {
+
+    return ''Customer: '' + this.name + '' '' + this.yearOfBirth;
+
+    n}
+
+    ```'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '```
+
+    };
+
+    ```
+
+
+    This code creates an object customer1, with the data members, name and yearOfBirth
+    and the member function getCustomerInformation. It is also important to note the
+    use of this this keyword, which accesses the values correctly being used or referenced
+    for the object concerned.
+
+
+    Besides this, you can also create objects dynamically using the new keyword. The
+    methods inherited include:
+
+
+    +   - constructor
+
+    - isPrototypeOf
+
+    - hasOwnProperty
+
+    - toLocalString
+
+    - propertyIsEnumerable
+
+    - valueOf
+
+    - toString
+
+
+    Once the object has been created, properties can be added to the same in the following
+    manner:
+
+
+    ```
+
+    function getCustomer(myName, myYearOfBirth) {
+
+
+    var newCust = new Object();
+
+
+    newCust.name = myName;
+
+
+    newCust.yearOfBirth = myYearOfBirth;
+
+
+    newCust.getCustomerInfo = function () {
+
+
+    return ''Customer: '' + this.name + '' '' + this.yearOfBirth;
+
+    ```'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '```
+
+    };
+
+
+    return newCust;
+
+
+    }
+
+    ```
+
+
+    This code creates an object newCust dynamically. Several instances of this can
+    be created in the following manner:
+
+
+    var cust1 = getCustomer (''Alex'', 1978);
+
+
+    var cust2 = getCustomer (''David'', 1986);
+
+
+    Although, JavaScript doesn''t support a particular keyword ‘class’, but you can
+    simulate classes using the method mentioned above.
+
+
+    # Namespaces
+
+
+    There is no specific keyword like namespace for implementing namespaces. However,
+    namespaces can be implemented using the concepts of classes and objects. If you
+    classify variables and methods into objects and access them as instances of these
+    objects, then you placing only the names of these objects in the global namespace,
+    reducing the scope of the variables to the object that they belong.
+
+
+    # Implementing Inheritance
+
+
+    You can define ‘is-a’ relationships between objects in JavaScript by creating
+    objects and classifying those objects on the basis of their common characteristics.
+    For instance, if you are implementing an object for employee of a company. You
+    can create objects for specific types of objects like managerTechnical, managerGeneral,
+    technicalStaff, recruitmentStaff and officeStaff and classify them into objects,
+    technicalStaff, which includes the objects managerTechnical and technicalStaff,
+    and adminStaff, which includes the managerGeneral, recruitmentStaff and officeStaff.
+    In a similar manner, new functions can also be defined.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# Working with jQuery
+
+
+    jQuery is a library of browser-compatible helper functions, which you can use
+    in your code to minimize the efforts required for typing, implementation and testing.
+    These functions are essentially written in JavaScript. Therefore, you can also
+    call jQuery, a JavaScript library.
+
+
+    The list of functionalities that are available in jQuery include:
+
+
+    +   * Attributes, which are a group of methods that can be used for getting and
+    setting attributes of the DOM elements.
+
+    * Ajax, which is a group of methods that provide support for synchronous and asynchronous
+    server calls.
+
+    * Core Methods are the fundamental jQuery functions.
+
+    * Callbacks object is an object provided for management of callbacks.
+
+    * Data Methods are methods that facilitate the creation of association between
+    DOM elements and arbitrary data.
+
+    * CSS Methods are methods that can be used for getting and setting CSS-related
+    properties.
+
+    * Dimensions are methods that can be used for accessing and manipulating the dimensions
+    of DOM elements.
+
+    * Deferred object is an object that is capable of registering multiple callbacks
+    while maintaining the data of state change and propagating the same from one callback
+    to the next.
+
+    * Forms are methods that are used for controlling form-related controls.
+
+    * Traversing, this is a group of methods that provide support for traversing the'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: 'DOM.
+
+
+    +   - Effects are methods that can be used for creating animations for your webpage.
+
+    Events are methods used to perform event-based execution.
+
+    - Selectors are methods that can be used for accessing elements of DOM in CSS
+    selectors.
+
+    - Offset are methods that are used to position the DOM elements.
+
+    - Utilities, which is a group of utility methods
+
+
+    Before getting into jQuery, you will need to include it into your project. Once
+    you have installed it and you are ready to use it to your project, the next step
+    is to learn how to use it.
+
+
+    First things first, you need to reference the jQuery library on the webpage that
+    needs to use it in the following manner:
+
+
+    ```
+
+    <script type="text/javascript" src="Scripts/qunit.js"></script>
+
+    ```
+
+
+    ```
+
+    <script src="Scripts/jquery-1.8.2.js"></script>
+
+    ```
+
+
+    The next thing is to know that the jQuery code that you are hoping to use in your
+    HTML page lies in the jQuery namespace, which has an alias $. Therefore, you can
+    write either jQuery.jFeature or $.jFeature when referring to a feature of jQuery.
+
+
+    Before, you can start using it in your webpages, you will also need to change
+    the default.js file as follows:
+
+
+    ```
+
+    function initialize() {
+
+
+    txtInput = $(\(''#txtInput'');
+
+
+    txtResult = $(\(''#txtResult'');
+
+
+    clear();
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "```\n}\n```\n\nThis allows you to use jQuery and CSS selectors by matching\
+    \ them using their IDs.\n\nAlso, as you move ahead with coding using jQuery, remember\
+    \ to refresh the screen using Ctrl+F5 after making any changes as the browser\
+    \ may not be able to catch the JavaScript modification right away. Moreover, you\
+    \ use jQuery objects as much as possible because the cross-browser compatibility\
+    \ they offer.\n\nA DOM object can be referenced from a jQuery wrapper in the following\
+    \ manner:\n\n```\nvar domElement = $('txtInput')[0];\n```\n\nHere is a simple\
+    \ code that checks if the element exists before referencing it.\n\n```\nvar domElement;\n\
+    \nif($('#txtInput').length > 0){\n  domElement = $('txtInput')[0];\n}\n```\n\n\
+    # How to Create a jQuery wrapper for Referencing a DOM element\n\nA jQuery wrapper\
+    \ can be created from a DOM element reference in the following manner:\n\n```\n\
+    var myDoc = $(document);\nvar inText = $(this).text();\n```\n\nThe first statement\
+    \ assigns the wrapped object to the variable. On the other hand, the second statement\
+    \ wraps the object referenced using this.\n\n# How to Add Event Listeners\n\n\
+    jQuery provides the .on method for subscribing to events. Besides this, you can\
+    \ unsubscribe using the .off method. These methods can be used in the following\
+    \ manner:"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '$(''#btnSubmitInfo'').on(''click'', onSubmit);
+
+
+    $(''#btnSubmitInfo'').off(''click'', onSubmit);
+
+
+    # How to Trigger Event Handlers
+
+
+    jQuery provides triggers or the method, triggerHandler, for triggering event handlers
+    or handler code execution. This can be done in the following manner:
+
+
+    $(''#btnSubmitInfo'').triggerHandler(''click'');
+
+
+    # Initialization Code
+
+
+    You will often be faced with the requirement to run an initialization code upon
+    the loading of an HTML document. You can do this using jQuery in the following
+    manner:
+
+
+    ```
+
+    <script>
+
+
+    $(document).ready(function () {
+
+
+    initializationFunction();
+
+
+    });
+
+    </script>
+
+    ```
+
+
+    This can be placed at the bottom of the HTML document. It will call the initializationFunction.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# CHAPTER 7: FORMS
+
+
+    In the previous chapters, you have already studied how HTML documents can be created
+    and manipulated. Taking a lead from them, we can now move on to to understanding
+    forms, which is one of the most crucial and commonly used units of content in
+    webpage development.
+
+
+    Simply, a form is a way in which data is collected and sent to a location where
+    it can be processed, which is a server in most cases. However, since we are yet
+    to discuss server scripting, we will focus on sending the data to an email address.
+    However, it is important to note that we do not recommend this practice and it
+    is used only for understanding purposes.
+
+
+    # Web Communications
+
+
+    Before moving to the working of forms, it is important to know some basics of
+    HTTP. A typical web communication consists of the following activities:
+
+
+    +   1. When a user browses a webpage, a request for access to a web server resource
+    is initiated by sending a GET HTTP request.
+
+    2. The request is processed by the server and sends a response to the browser
+    using HTTP protocol.
+
+    3. The browser process the server response and presents it to the user in the
+    form of a ‘form’.
+
+    4. The user enters inputs to the form and upon hitting the submit or enter button,
+    data is sent to the server, using HTTP protocol again.
+
+    5. This data is again processed by the server and the server posts its response
+    to the browser, which is displayed on the webpage.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Web Servers
+
+
+    Originally, web servers were designed to receive and process requests and send
+    the results back to the browser using HTTP. Initially, when the web pages were
+    simple, such web servers were able to process a good number of requests per unit
+    time. There were no states involved as sending and receiving requests were as
+    simple as opening a connection, transferring data and closing the connection.
+
+
+    The new age web servers are much more equipped that these simple web servers.
+    The web servers of today implement what is called the ‘keep alive’ features, which
+    ensures that the connection remains open for a definite period of time in which
+    subsequent requests by the same browser to the server can be entertained.
+
+
+    # Web Browsers
+
+
+    The web browser is a desktop application, which displays web pages and manages
+    user interactions between the webpages and the server. The communication between
+    the web servers and pages is established using technologies like AJAX and Asynchronous
+    JavaScript.
+
+
+    # How is Data Submitted to the Web Server
+
+
+    An HTML form can be created using the <form> element in the following manner:
+
+
+    ```
+
+    <form method="post" action="getCustomerInformation.aspx" >
+
+
+    Enter Customer Number:
+
+
+    <input type="text" name="Number" />
+
+
+    <input type="submit" value="Get Customer Information" />
+
+    </form>
+
+    ```
+
+
+    This form takes in the customer number and returns a page that displays the details
+    of the'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'customer.
+
+
+    However, it is important to note that not all elements can be used for submitting
+    data in a form. The allowed elements for this purpose are:
+
+
+    +   - <textarea> - It takes a multi-line input
+
+
+    +   - <button> - It is a clickable button, which can be placed on any content
+    or image.
+
+
+    +   - <select> - It is a drop-down list, which allows multiple selections. The
+    selected options can be identified using jQuery: ''$(option:selected)''
+
+
+    +   - <input type=''checkbox''> - It is a checkbox, which has a value attribute
+    used for setting as well as reading the status of the checkbox. The jQuery for
+    identifying checked boxes is: ''$(input[type=checkbox]:checked'')
+
+
+    +   - <input type=''button''> - It is a clickable button, which has a text prompt.
+
+
+    +   - <input type=''datetime''> - It is a control, which is date and time (UTC).
+
+
+    +   - <input type=''date''> - It is a control, which is date-only.
+
+
+    +   - <input type=''email''> - It is a file-select field, which has a browser
+    button for uploading a file.
+
+
+    +   - <input type=''color''> - It is a color picker.
+
+
+    +   - <input type=''hidden''> - It is a hidden input field.
+
+
+    +   - <input type=''datetime-local''> - It is a control, which is date and time
+    (any timezone).
+
+
+    +   - <input type=''month''> - It is a month-year control.
+
+
+    +   - <input type=''image''> - It is an image submit button.
+
+
+    +   - <input type=''password''> - It is a password field, with masked characters.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '+   - <input type=''number''> - It is a numeric field.
+
+
+    +   - <input type=''range''> - It is a control, which accepts a numeric value
+    and defines the allowed range of values.
+
+
+    +   - <input type=''radio''> - It is an option button, which has a value attribute
+    for setting and reading the status of the button. The jQuery used for identifying
+    the marked radio buttons is $(''input[type=radio]:checked'')
+
+
+    +   - <input type=''search''> - It is a text field, which is used for entering
+    the search string.
+
+
+    +   - <input type=''reset''> - It is a button that can be used for resetting the
+    fields of a form.
+
+
+    +   - <input type=''url''> - It is a URL field.
+
+
+    +   - <input type=''tel''> - It is a telephone number field.
+
+
+    +   - <input type=''submit''> - It is a submit button.
+
+
+    +   - <input type=''time''> - It is a control, which accepts a time value.
+
+
+    +   - <input type=''text''> - It is a single-line text field.
+
+
+    +   - <input type=''week''> - It is a week-year control.
+
+
+    # ## The <label> Element
+
+
+    It is the element that is used to convey the meaning of an element to the user.
+    The text in this element is displayed inside the textbox, which is auto-removed
+    when the user clicks on it. You can also specify the style of a label.
+
+
+    # ## Specifying Parent Forms
+
+
+    There may be situations where the submission elements of a form may not lie inside
+    the same construct. Therefore, gathering data, in this case, can be quite a challenge.
+    In order'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: 'to this issue, HTML5 provides an attribute, id, which can be set for multiple
+    form elements. This shall allow data collection from different form elements in
+    one go.
+
+
+    # How to Trigger Form Submission
+
+
+    Upon triggering, all the data collected from the submission elements of the form
+    or forms of the same id is sent to the server using an HTTP method. The <input>
+    element can be used for triggering form submission. Besides, you can also use
+    JavaScript for this purpose. In order to implement this, you must give an id to
+    the concerned form, myFirstForm. The default.js file, which is linked to the HTML
+    document, must contain the following code:
+
+
+    ```
+
+    $(document).ready(function () {
+
+
+    $(''#myFirstButton'').on(''click'', submitMyFirstForm);
+
+
+    });
+
+
+    function submitMyFirstForm() {
+
+
+    $(''#myFirstForm'').submit();
+
+    }
+
+    ```
+
+
+    If the method attribute of the form is not given any value, then it is set to
+    a default GET. Moreover, the action attribute will also have a default value.
+    Therefore, the button click will reference the page to same page. However, the
+    URL will now include a QueryString, which is a combination of values selection
+    or entered by the user. For instance, if the form requests the user to enter Customer
+    ID and the user enters 1245, then the QueryString will be:
+
+
+    customerID=1245
+
+
+    This QueryString will be appended to the URL in the following manner:'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'Mywebpage.asp? customerID=1245
+
+
+    It is also important to mention here that the QueryString is URI encoded. Therefore,
+    special characters are represented by specific values. For instance, a space is
+    represented as ‘+’ and exclamation mark (!) as ‘%21’. Name-value pair is represented
+    as ‘name=value’ and name-value pairs are separated by ‘&’.
+
+
+    # How to Serialize the Form
+
+
+    You can serialize the form using the jQuery serialize method. This can be done
+    in the following manner:
+
+
+    ```
+
+    var myFormData = $(''myFirstForm'').serialize();
+
+    ```
+
+
+    You can decode the URI-encoded string using the following:
+
+
+    ```
+
+    var data = decodeURICodeComponent(myFormData);
+
+    ```
+
+
+    # Using Autofocus Attribute
+
+
+    By default, the focus is not set to any element of the form. However, you can
+    set focus using the focus method, which can be implemented in the following manner:
+
+
+    ```
+
+    $(''input[name="firstName"]'').focus();
+
+    ```
+
+
+    However, you can also set autofocus in the following manner:
+
+
+    ```
+
+    <input type="text" name="firstName" autofocus="autofocus"/>
+
+    ```
+
+
+    # How to Use Data Submission Constraints
+
+
+    A form can send data only if it satisfies the following constraints:
+
+
+    +   - Name attribute must be set.
+
+    - You must set the value of form submission element.
+
+    - The <form> element must have its form submission element defined and form'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: 'submission elements should not be disabled.
+
+
+    +   * If multiple submit buttons have in implemented, the values will be submitted
+    only on the click of the activated submit button.
+
+    * Select the check boxes
+
+    * Select the Option buttons
+
+    * The <option> elements must have set <option> elements.
+
+    * If there is a file selection field, one of the fields must be selected.
+
+    * The declare attribute of the object elements must be set
+
+
+    Always remember that the reset buttons don''t send any data and the form need
+    not have an ID for its data to be sent.
+
+
+    # How to Use POST or GET
+
+
+    There are two HTTP methods available for submitting data to the server. These
+    methods are GET and POST. In the former case, the URL is appended with the QueryString.
+    However, in case of the latter, the information is sent within the message body.
+
+
+    # Form Validation
+
+
+    It is beneficial to understand that the root of all security issues in web application
+    is user data. The moment you decide to open your application to user data and
+    interactions, you are making your application vulnerable to security threats.
+    Therefore, you need to validate any data that you receive before processing it
+    to prevent any issues from cropping up. Validation can be provided at the browser
+    or server end. However, server side validation is recommended as browser-level
+    validation can be easily manipulated.
+
+
+    The simplest form of validation that you can implement is using the required attribute
+    in the <select> element. You can set this attribute in the following manner:'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '```
+
+    <select name="dateBirth required="required">
+
+    ```
+
+
+    The validation error generated is browser dependent and each browser has a different
+    method of communication to the user that a field is required for submission.
+
+
+    Besides this, the placeholder attribute is also available, which keep the prompt
+    fixed on the unfilled field until a value for the same is provided by the user.
+    It can be implemented in the following manner:
+
+
+    ```
+
+    <input type="text" name="Date of birth required="required" placeholder="enter
+    the date of birth">/>
+
+    ```
+
+
+    The addition of time, date and type based inputs in HTML5 makes validation much
+    simpler as they can directly be matched to see if they have valid input values
+    or not. Besides this, email, numbers and ranges can also be easily validated.
+
+
+    HTML5 performs validation and matches it with the :valid or :invalid pseudoclasses.
+    If the validation is successful, the value is matched to :valid, else it is matched
+    to :invalid. However, if a value is not ‘required’, it is matched to :optional
+    pseudoclass.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# CHAPTER 8: WEB SERVICES
+
+
+    All the chapters discussed till now dealt with browser level coding and scripting.
+    However, now it is time to move on server side scripting. This chapter focuses
+    on the use of JavaScript at the server level, which is possible with the help
+    of Node.js, and how you can work around with web services.
+
+
+    # Basics of Node.js
+
+
+    Node.js is a platform, which is made on Google Chrome, and can be used for creating
+    scalable and flexible applications. It allows you to write JavaScript code for
+    the server. However, before you can begin, you must download and install Node.js
+    on your system.
+
+
+    # Writing a Basic Code
+
+
+    The first step is to open any text editor and create a file named myfile.js. In
+    the file, write the code:
+
+
+    ```
+
+    var http = require(''http'');
+
+
+    http.createServer(function(request, response) {
+
+
+    response.writeHead({''Content-Type'': ''text/plain''});
+
+
+    response.end(''Hello World!\n'');
+
+
+    console.log(''Handled request'');
+
+
+    }).listen(8080, ''localhost'');
+
+
+    console.log(''Server running at http://localhost:8080/'');
+
+    ```
+
+
+    The first line loads the http module while the second line creates a server object.
+    The function createServer takes two parameters, request and response. All the
+    website'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'handling is done from these functions. In this example, the response function
+    ends by writing ‘Hello World’ on the screen.
+
+
+    The function createServer returns a server object, which call the function, listen.
+    This function listens at the port 8080 and the IP address of the host is set to
+    127.0.0.1. therefore, if there is a network adapter installed on your system,
+    your web server will start listening to web requests right away. The last line
+    prints a line on the screen to let the user know that the server is running and
+    listening to requests.
+
+
+    Once you have created the file and saved the contents of the file as mentioned
+    above, you must open the command prompt and write the command:
+
+
+    Node myFile.js
+
+
+    Now, keeping the command prompt active, you must open the web browser and type
+    the address: http://localhost:8080/
+
+
+    As soon as the request is sent and a response is received, the same is communicated
+    to the user using the console window. If you have been able to do this successfully,
+    you have just created your first node.js website. If you wish to stop the running
+    of the code, you can just press Ctrl+C.
+
+
+    Now that you know how requests are received, it is time to look at how these requests
+    are processed and responses are generated. You may need to use the url module
+    for parsing the QueryString.
+
+
+    The code mentioned below shows how you can parse the URL string and generate a
+    response in accordance with it.
+
+
+    ```
+
+    var http = require(''http'');
+
+    var url = require(''url'');
+
+    http.createServer(function (request, response) {
+
+    ```'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '```
+
+    var url_parts = url.parse(request.url, true);
+
+
+    response.writeHead(200, {''Content-Type'': ''text/plain''});
+
+
+    response.end(''Hey '' + url_parts.query.name + ''\\n'');
+
+
+    console.log(''Handled request from '' + url_parts.query.name);
+
+
+    }).listen(8080, ''localhost'');
+
+    ```
+
+
+    ```
+
+    console.log(''Server is running at: http://localhost:8080/'');
+
+    ```
+
+
+    You can test the running of this code in the similar manner as the previous code.
+
+
+    # How to Create Node.js Module
+
+
+    You can create modules by writing code in the form of functions and then, calling
+    these modules from the main code.
+
+
+    ```
+
+    var myHttp = require(''http'');
+
+
+    var myUrl = require(''url'');
+
+
+    function start() {
+
+
+    http.createServer(function (request, response) {
+
+
+    var url_parts = url.parse(request.url, true);
+
+
+    response.writeHead(200, {''Content-Type'': ''text/plain''});
+
+
+    response.end(''Hello '' + url_parts.query.name + ''\\n'');
+
+
+    console.log(''Handled request from '' + url_parts.query.name);
+
+
+    }).listen(8080, ''localhost'');
+
+
+    console.log(''Server running at http://localhost:8080/'');
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '```
+
+    exports.start = start;
+
+    ```
+
+
+    when you save this piece of code in a file, a module is created. This module can
+    be used by other functions using the require function. For instance, if the file
+    is saved as sample1.js, the start() can be used in another function using:
+
+
+    ```
+
+    var samplex = require(''./sample1.js'');
+
+    ```
+
+
+    ```
+
+    sample1.start();
+
+    ```
+
+
+    # How to Create a Node.js package
+
+
+    A collection of modules is referred to as an application. Once you have published
+    your package, it can be installed and used. Consider for example, a package of
+    different mathematical modules.
+
+
+    The root folder must have the following:
+
+
+    +   README.md
+
+    \packName
+
+    \lib
+
+    main.js
+
+    \bin
+
+    mod1.js
+
+    mod2.js
+
+
+    # Creating Aggregate Module
+
+
+    You may wish to make only one object for the user to access. The user should be
+    able to access all the modules of the package through this object. In order to
+    accomplish this, main.js module must be created in the bin folder that must define
+    the modules to be included in the module.exports.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# How to Create README.md File\n\nThe README.md file is a help file that can\
+    \ be used by the developer as a startup guide for using your package. The extension\
+    \ of this file is .md, which is a short form for markdown. This format gives readability\
+    \ to the text written in this file.\n\nA sample file of this type is given below:\n\
+    \n```\nsamplePackage package\n=============\n```\n\nIn samplePackage, the following\
+    \ functions are available:\n\n+   - **add** Performs addition of two numbers and\
+    \ presents the result.\n- **sub** Performs subtraction of one number from the\
+    \ other and presents the result.\n\n# How to Create package.json File\n\nThis\
+    \ file contains the metadata for the package and can be created manually using\
+    \ the command:\n\nnpm init\n\nThis command creates the file, which can later be\
+    \ edited. A sample file is given below:\n\n```\n{\n  \"name\": \"sampleFile\"\
+    ,\n  \"version\": \"0.0.0\",\n  \"description\": \"This is a sample file \",\n\
+    \  \"main\": \"bin/main.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"This\
+    \ is a test file\\\" && exit 1\"\n  }\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '```
+
+    },
+
+
+    "repository": "",
+
+
+    "keywords": [
+
+
+    "sample",
+
+
+    "example",
+
+
+    "add",
+
+
+    "sub"
+
+    ],
+
+
+    "author": "XYZ",
+
+
+    "license": "ABC"
+
+
+    }
+
+    ```
+
+
+    In addition to test scripts, you can also give git scripts, which are the best
+    available source control managers.
+
+
+    # How to Publish a Package
+
+
+    As mentioned previously, a package can be defined in terms of a folder structure.
+    When you publish your package, you make it accessible to all users. In order to
+    perform this operation, you must use the npm command, which is also the command
+    used for searching and installing packages. However, you shall be required to
+    create an account for yourself before publishing any of your packages using the
+    command: npm adduser. After you enter the required information, your account is
+    created. However, what this means that there is no validation required. Therefore,
+    anyone can add code to the repository. Therefore, you should be careful while
+    downloading and installing packages from the registry.'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: 'In order to publish a package, you simply need to go to the root directory
+    of the package and enter the command npm publish in the command prompt.
+
+
+    # How to Install and Use the Package
+
+
+    A package that is published can be downloaded and installed by any user. You simply
+    need to go to the folder and give the command, npm install samplePackage. This
+    installs the package locally. On the other hand, if you wish to install the package
+    globally, you can give the command, npm install -g samplePackage. For a global
+    installation, you will need to create a link from each application to the global
+    install using the command, npm link samplePackage.
+
+
+    ```
+
+    var samplePackage = require(''samplePackage'');
+
+
+    var finalResult = 0;
+
+
+    console.log();
+
+
+    finalResult = samplePackage.add (5,10);
+
+
+    console.log(''add(5,10) = '' + finalResult);
+
+
+    console.log();
+
+
+    result = samplePackage.sub (50,10);
+
+
+    console.log(''sub(50,10) = '' + finalResult);
+
+
+    console.log();
+
+
+    console.log(''done'');
+
+    ```'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "This code tests the modules of the package. You can execute the code using:\n\
+    \nnode main\n\nThe package can be uninstalled locally using:\n\nnpm uninstall\
+    \ samplePackage\n\nHowever, if you wish to uninstall the package globally, you\
+    \ can do it using\n\nnpm uninstall -g samplePackage\n\n# How to Use Express\n\n\
+    +   1. The first step is to install Node.js and create a sample for keeping all\
+    \ .js files and projects. Besides this, you must also install Express, which is\
+    \ a web application framework for Node.js development.\n2. You can create a package\
+    \ using the following set of commands and instructions.\n   1. npm init\n   2.\
+    \ You can create myPackage.js file containing the following contents:\n   {\n\
+    \   \"name\": \"Sample\",\n   \"version\": \"0.0.0\",\n   \"description\": \"\
+    This is a sample website.\",\n   \"main\": \"main.js\",\n   \"scripts\": {\n \
+    \  \"test\": \"echo \\Error: Test not specified\\\" && exit 1\"\n   },\n   \"\
+    repository\": \"\","
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '```
+
+    "author": "XYZ",
+
+
+    "license": "BSD"
+
+    }
+
+
+    "private": true,
+
+
+    "dependencies": {
+
+
+    "express": "3.0.0"
+
+    }
+
+    }
+
+    ```
+
+
+    In order to use the file in Express, dependencies have to be added. Moreover,
+    if you do not define it to be private, you may get an error from the firewall
+    of your computer as it tries to load the page.
+
+
+    +   3. Give the install command: npm install
+
+    4. You can use the command, npm ls, to see if the package is present in the registry.
+
+
+    +   3. You can create a simple application using the following set of instructions:
+
+    1. Create a file MyApp.js and add the following to the file:
+
+
+    var express = require(''express'');
+
+
+    var app = express();
+
+
+    2. You can define the route using the MyApp.Method() syntax.
+
+
+    app.get(''/'', function(request, response) {
+
+
+    response.send(''Hey World!'');
+
+
+    });'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: 'The code mentioned above will send the response ‘Hey World!’ as and when
+
+    a request is received.
+
+
+    +   3. The last section of code that must be added is for listening to the request.
+
+    This code is as follows:
+
+
+    ```
+
+    var port = 8080;
+
+
+    app.listen(port);
+
+
+    console.log(''Listening on port: ‘ + port);
+
+    ```
+
+
+    +   4. Once the file is complete, you can save it and run it using the command,
+
+    node app. So, now if you open the browser and enter the address
+
+    http://localhost:8080/, you will get the response Hey World.
+
+
+    +   4. You can add webpages to applications by replacing the app.get statement
+    with
+
+    app.use(express.static(__dirname + ‘/public'')); This will allow you to use the
+    same
+
+    code for a number of webpages. Sample implementation of this concept is given
+
+    below:
+
+
+    ```
+
+    <!DOCTYPE html>
+
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+
+
+    <title></title>
+
+
+    </head>
+
+
+    <body>
+
+
+    <form method="get" action="/submitHey">
+
+
+    Enter First Name:<input type="text" name="firstName" />
+
+
+    <input type="submit" value="Submit" />
+
+    ```'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "```\n</form>\n<body>\n</html>\n```\n\nPlease note that the action attribute\
+    \ is set to /submitHey. In other words, this resource is called at the server\
+    \ for handling the data that is passed to it using the QueryString. The MyApp.js\
+    \ file should contain the following:\n\n```\nThe app can be run in the manner\
+    \ mentioned above.\n```\n\n+   - The formidable package can be used for posting\
+    \ back data. While the previous method used the GET method, this method uses the\
+    \ POST method.\n  - 1. To illustrate how it works, create an HTML as follows:"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "```\n<!DOCTYPE html>\n\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n\
+    <title></title>\n</head>\n<body>\n<form method=\"post\" action=\"SubmitHeyPost\"\
+    >\nnEnter Name: <input type=\"text\" name=\"firstName\" />\n<input type=\"submit\"\
+    \ value=\"Submit\" />\n</form>\n</body>\n</html>\n```\n\n+   2. Now, in the command\
+    \ prompt, you need to give a command for retrieving the formidable package, which\
+    \ is:\n\nnpm info formidable\n\n+   3. You can also modify the package.jason file\
+    \ in the following manner:\n\n```\n{\n  \"name\": \"HelloExpress\",\n  \"version\"\
+    : \"0.0.0\",\n  \"description\": \"Sample Website\",\n  \"main\": \"index.js\"\
+    ,\n}\n```"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "```\n\"scripts\": {\n  \"test\": \"echo \\Error: test not specified\\\" &&\
+    \ exit 1\"\n},\n\"repository\": \"\",\n\"author\": \"XYZ\",\n\"license\": \"BSD\"\
+    ,\n\"private\": true,\n\"dependencies\": {\n  \"formidable\": \"1.x\",\n  \"express\"\
+    : \"3.0.0\"\n}\n}\n\n```\n```\n\n+   4. Now you can install the formidable package\
+    \ by typing the following command into the command prompt:\n\nnpm install\n\n\
+    This command installs the package locally. Therefore, you will need to add a line\
+    \ to your MyApp.js that allows the file to reference the package:\n\nvar formidable\
+    \ = require('formidable');\n\n+   5. A sample MyApp.js file shall look like this:\n\
+    \nvar express = require('express');\n\nvar app = express();\n\nvar formidable\
+    \ = require('formidable');"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "```\napp.use('/forms', express.static(__dirname + '/public'));\n\napp.post('/SubmitHeyPost',\
+    \ function (request, response) {\n  if (request.method.toLowerCase() == 'post')\
+    \ {\n    var form = new formidable.IncomingForm();\n\n    form.parse(request,\
+    \ function (err, fields) {\n      response.write(200, { 'Content-Type': 'text/html'\
+    \ });\n\n      response.write('Hey ' + fields.userName + '!<br/>');\n\n      response.end('Enjoy\
+    \ this POST.');\n\n      console.log('Handled request from ' + fields.userName);\n\
+    \    });\n  }\n});\\n\napp.get('/SubmitHey', function (request, response) {\n\
+    \  response.write(200, { 'Content-Type': 'text/html' });\n\n  response.write('Hey\
+    \ ' + request.query.userName + '!<br/>');\n\n  response.end('Enjoy.');\n\n  console.log('Handled\
+    \ request from ' + request.query.userName);\n});\n\nvar port = 8080;\n\napp.listen(port);\n\
+    \nconsole.log('Listening on: ' + port + 'port');\n```"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '6. You can now run the application in a similar manner as you did for the previous
+    example.
+
+
+    # Working with web services
+
+
+    One of the biggest drawbacks of a typical website scenario is that the HTML page
+    is repainted even if the new page is the same as the previous page. This causes
+    you to lose bandwidth and resources. This drawback can be addressed using web
+    services, which can be used for sending and receiving data, with the benefit that
+    the HTML page is not repainted. The technology used for sending requests is AJAX
+    or Asynchronous JavaScript and XML. This technology allow you to perform the data
+    sending operation asynchronously.
+
+
+    Before moving any further, it is important to know the basics of web services
+    and how they can be used. A client needs to communicate with the web server on
+    a regular basis and this communication is facilitated by the web service. In this
+    case, the client can be anyone from a machine using the web service to the web
+    service itself. Therefore, the client, regardless what it is, needs to create
+    and send a request to the web service, and receive and parse the responses.
+
+
+    You must have heard of the term mashups, which is a term used to describe applications
+    that pierce together web services. Two main classes of web services exist, which
+    are arbitrary web services and REST or representational state transfer. While
+    the set of operations are arbitrary in the first case, there exists a uniform
+    operations set in the second.
+
+
+    # Representational State Transfer (REST)
+
+
+    This framework uses the standard HTTP operations, which are mapped to its create,
+    delete, update and retrieve operations. Moreover, REST does not focus on interacting
+    with messages. Instead, its interactions are focused towards stateless resources.
+    This is perhaps'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'the reason REST concept is concept for creation of clean URLs. Examples of
+    REST URLs include http://localhost:8080/Customers/2, which deletes a customer
+    and http://localhost:8080/Vehicles?VIN=XYZ12, which is used to retrieve the information
+    about a vehicle for which a parameter is passed using GET method.
+
+
+    Some firewalls may not allow the use of POST and GET methods. Therefore, it is
+    advisable to use ''verb'' in the QueryString. An example of how the URL will look
+    like is:
+
+
+    http://localhost:8080/Vehicles?verb=DELETE&VIN=XYZ987
+
+
+    The HTTP protocol also allows you to implement security using the HTTPS REST provides
+    several benefits like easy connection, faster operation and lesser consumption
+    of resources. However, many developers prefer to use JSON or (JavaScript Object
+    Notation) because it is compact in size. Besides this, REST only supports GET
+    and POST, which restricts its capabilities, Therefore, some developers switch
+    to RESTFUL.
+
+
+    # Arbitrary Web Services
+
+
+    This type of web services is also referred to as big web services. An example
+    of such services is WCF or Windows Communication Foundation. Arbitrary web services
+    expand their realm of operations by not mapping their operations to only aspects
+    of the protocol. As a result, they provide more functionality, which include many
+    security mechanisms and message routing.
+
+
+    This type of web services possess a typical interface format, which can be used
+    by the client for reading and parsing information. As a result, the client can
+    make calls to the service immediately. A common API format is the Web Services
+    Description Language (WSDL). In case of arbitrary web services, the client must
+    assemble its request with the help of a SOAP (Simple Object Access Protocol) message.
+    This web service does not use the HTTP protocol and instead uses the TCP.
+
+
+    # How to Create RESTful Web Service using Node.js'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'In the example mentioned previously, the samplePackage can be exposed as web
+    service.
+
+    The GET method can be used on the package and the operation is passed as a parameter.
+    A good RESTful implementation of this package can look something like this:
+
+
+    ```
+
+    http://localhost:8080/samplePackage?operation=add&x=1&y=5
+
+    ```
+
+
+    # How to Use AJAX to Call Web Service
+
+
+    Web services can be called asynchronously using AJAX, which is in actuality a
+    JavaScript. Instead of making a call to the server and repainting the HTML document,
+    AJAX just calls back to the server. In this case, the screen is not repainted.
+    A sample implementation is given below:
+
+
+    A MyPage.html can be created with the following code:
+
+
+    ```
+
+    <!DOCTYPE html>
+
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+
+
+    <title></title>
+
+
+    <script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+
+
+    <script type="text/javascript" src="scripts/default.js"></script>
+
+
+    </head>
+
+
+    <body>
+
+
+    <form id="myForm">
+
+
+    Enter Value of X:<input type="text" id="x" /><br />
+
+
+    Enter Value of Y:<input type="text" id="y" /><br />
+
+
+    Result of Operation: <span id="result"></span><br />
+
+
+    ```'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '```
+
+    <button id="btnAdd" type="button">Add the Numbers</button>
+
+
+    </form>
+
+
+    <body>
+
+
+    </html>
+
+    ```
+
+
+    The default.js file must be modified to contain the code required for processing
+    these functions. Be sure to check the version of jQuery and whether it matches
+    the version name that you have mentioned in your default.js file. The <form> element
+    used here is only a means of arranging the format of data and the data is not
+    actually sent via the form to the server. The JavaScript and jQuery access the
+    data entered and perform the AJAX call.
+
+
+    # How to Use XMLHttpRequest
+
+
+    The object that actually makes an AJAX call is XMLHttpRequest, which can be used
+    for sending/receiving XML and other types of data. This object can be used in
+    the following manner:
+
+
+    ```
+
+    var xmlhttp=new XMLHttpRequest();
+
+
+    xmlhttp.open("GET","add?x=50&y=1",false);
+
+
+    xmlhttp.send();
+
+
+    var xmlDoc=xmlhttp.responseXML();
+
+    ```
+
+
+    The first line creates the object while the second line sets up the use of GET
+    method with the specified QueryString and the use of ‘false’ indicates that the
+    operation must be performed asynchronously. The next line sends the request and
+    the last line sets the response to a variable, which can be later read and parsed
+    for processing the response.
+
+
+    However, the output generated is JSON and not XML, therefore, the default.js file
+    must be changed to:'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '```
+
+    $$(document).ready(function () {
+
+
+    $(''#btnAdd'').on(''click'', addTwoNum);
+
+
+    });
+
+
+    function addTwoNum() {
+
+
+    var x = document.getElementById(''x'').value;
+
+
+    var y = document.getElementById(''y'').value;
+
+
+    var result = document.getElementById(''finalResult'');
+
+
+    var xmlhttp = new XMLHttpRequest();
+
+
+    xmlhttp.open("GET", "add?x=" + x + "&y=" + y, false);
+
+
+    xmlhttp.send();
+
+
+    var jsonObject = JSON.parse(xmlhttp.response);
+
+
+    result.innerHTML = jsonObject.result;
+
+
+    }
+
+    ```
+
+
+    The code extracts the x and y values from the <input> element for the same. After
+    this, the XMLHttpObject is created and the open method is called using the QueryString.
+    After the execution of the send function, the response string is parsed. In order
+    to test the page, you can give the command:
+
+
+    node app
+
+
+    This command starts the web service, after which you can open the browser window
+    with the link:
+
+
+    http://localhost:8080/SamplePage.html
+
+
+    this code is operational now. However, you may wish to perform the AJAX call in
+    an'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: 'asynchronous manner. For this, you must locate the open method and change the
+    ‘false’ parameter to ‘true’. Besides this, you will also be required to subscribe
+    to onreadystateschange for managing asynchronous call. This can be implemented
+    in the following manner:
+
+
+    ```
+
+    function addTwoNum () {
+
+
+    var a = document.getElementById(''a'').value;
+
+
+    var b = document.getElementById(''b'').value;
+
+
+    var result = document.getElementById(''finalResult'');
+
+
+    var xmlhttp = new XMLHttpRequest();
+
+
+    xmlhttp.readyState = function () {
+
+
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+    var jsonObject = JSON.parse(xmlhttp.response);
+
+
+    result.innerHTML = jsonObject.result;
+
+    }
+
+    }
+
+    }
+
+
+    xmlhttp.open("GET", "/add?a=" + a + "&b=" + b , true);
+
+
+    xmlhttp.send();
+
+    ```
+
+
+    The codes for states are as follows:
+
+
+    +   - 0 - Uninitialized
+
+    - 1 - Loading
+
+    - 2 - Loaded'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '+   • 3 - Interactive
+
+
+    +   • 4 - Completed
+
+
+    If progress events are provided by the server, you can subscribe to the browser’s
+    progress event. Then, an event listener can be added to initiate the execution
+    of the code when the event is triggered. This can be done in the following manner:
+
+
+    ```
+
+    function addTwoNum () {
+
+    var a = document.getElementById(''a'').value;
+
+    var b = document.getElementById(''b'').value;
+
+    var finalResult = document.getElementById(''finalResult'');
+
+    var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function () {
+
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+    var json = JSON.parse(xmlhttp.response);
+
+    result.innerHTML = json.result;
+
+    }
+
+    }
+
+    xmlhttp.addEventListener("progress", updateProgress, false);
+
+    xmlhttp.open("GET", "/add?a=" + a + "&b=" + b , true);
+
+    xmlhttp.send();
+
+    }
+
+    function updateProgress(evt) {
+
+    if (evt.lengthComputable) {
+
+    ```'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '```
+
+    var percentComplete = evt.loaded / evt.total;
+
+
+    //display the progress by outputting percentComplete
+
+
+    } else {
+
+
+    // You need to know the total size to compute the progress
+
+
+    }
+
+    ```
+
+
+    You can also perform error handling by subscribing to the error event and the
+    abort event.
+
+    This can be done in the following manner:
+
+
+    ```
+
+    function addTwoNum () {
+
+
+    var a = document.getElementById(''a'').value;
+
+
+    var b = document.getElementById(''b'').value;
+
+
+    var finalResult = document.getElementById(''finalResult'');
+
+
+    var xmlhttp = new XMLHttpRequest();
+
+
+    xmlhttp.onreadystatechange = function () {
+
+
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+
+    var jsonObject = JSON.parse(xmlhttp.response);
+
+
+    result.innerHTML = jsonObject.result;
+
+    }
+
+    }
+
+
+    xmlhttp.addEventListener("progress", updateProgress, false);
+
+
+    xmlhttp.addEventListener("error", failed, false);
+
+    ```'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '```
+
+    xmlhttp.addEventListener("abort", canceled, false);
+
+
+    xmlhttp.open("GET", "/addition?x=" + x + "&y=" + y, true);
+
+
+    xmlhttp.send();
+
+
+    }
+
+    ```
+
+
+    ```
+
+    function transferFailed(evt) {
+
+
+    alert("An error occurred");
+
+
+    }
+
+    ```
+
+
+    ```
+
+    function canceled(evt) {
+
+
+    alert("canceled by the user");
+
+
+    }
+
+    ```
+
+
+    It is also beneficial for you to know that different browsers implement and respond
+    to objects in different manners. Therefore, it is advised that you must use XMLHttpRequest
+    jQuery wrappers. The use of jQuery makes the code browser independent. The jQuery
+    wrapper for AJAX call is $ajax(), which accepts an object as a parameter. The
+    above code can be re-implemented in the following manner:
+
+
+    ```
+
+    function addTwoNum() {
+
+
+    var a = $(''##a'').val();
+
+
+    var b = $(''##b'').val();
+
+
+    var data = { "a": a, "b": b };
+
+
+    $.ajax({
+
+
+    url: ''/add'',
+
+
+    data: data,
+
+
+    ```'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '```
+
+    type: ''GET'',
+
+
+    cache: false,
+
+    dataType: ''json'',
+
+    success: function (data) {
+
+
+    $(''#result'').html(data.result);
+
+
+    }
+
+    });
+
+
+    ```
+
+
+    The variable values are retrieved and supplied to the ajax call. The other properties
+    objects are set as shown. Another topic of concern is CORS, or Cross-Origin Resource
+    Sharing, which is a way for allowing cross-site AJAX calls.
+
+
+    # # Chapter 9: WebSocket Communications
+
+
+    There are scenarios that may require the establishment of two-way communication
+    between the client and the server. A sample application that requires this form
+    of communication is a chat application. This chapter gives an elaborative study
+    of how web socket communication can be established and used.
+
+
+    **Communicating by using WebSocket**
+
+
+    Websocket communications are established using the WebSocket protocol, which uses
+    the TCP connection for establishing a full-duplex communication pathway. The protocol
+    has been standardized by the IETF (RFC 6455) and the working draft of the WebSocket
+    API is in W3C.
+
+
+    This technology has replaced the concept of long polling. In this case, the client
+    sends a request and keeps waiting for a response until a response is received.
+    The benefit of this'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: 'approach is that the connection remains open and as and when the data is available,
+    it is immediately sent. However, the connection may be timed out and a re-establishment
+    of be required.
+
+
+    # Understanding WebSocket Protocol
+
+
+    The WebSocket protocol allows bi-directional connection establishment and is designed
+    for implementation for web servers and clients. This technology only interacts
+    with the handshake and is interpreted as a transition from the http to WebSocket.
+    The frame of this protocol has no headers and an overhead of 2 bytes. It is a
+    lightweight technology and its high performance allows communication of live content
+    and games.
+
+
+    # Defining WebSocket API
+
+
+    The heart of the WebSocket technology is WebSocket object. This object is defined
+    on the window object and contains the following members:
+
+
+    +   * close
+
+    * WebSocket constructor
+
+    * binaryType
+
+    * send
+
+    * extensions
+
+    * bufferedAmount
+
+    * onerror
+
+    * url
+
+    * onclose
+
+    * onopen
+
+    * onmessage'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '+   - readyState
+
+    - protocol
+
+
+    # How to Implement WebSocket Object
+
+
+    The WebSocket communication is based on TCP and thus, it operates on port number
+    80. You can use any HTML form for demonstration. The WebSocket url is of the ws://
+    and wss:// form. In order to implement this form, you need to create an object
+    of the WebSocket API, which can then be configured using onopen, onclose, onerror
+    and onmessage events. The default.js file must be modified in the following manner:
+
+
+    ```
+
+    /// <reference path="_references.js" />
+
+
+    var wsUri = ''ws://echo.websocket.org/'';
+
+
+    var webSocket;
+
+
+    $(document).ready(function () {
+
+
+    if (checkSupported()) {
+
+
+    connect();
+
+
+    $(''#btnSend'').click(doSend);
+
+    }
+
+    });
+
+
+    function writeOutput(message) {
+
+
+    var output = $(\(\#divOutput");
+
+
+    output.html(output.html()) + ''<br />'' + message);
+
+    }
+
+
+    function checkSupported() {
+
+    ```'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "```\nif (window.WebSocket) {\n\\  writeOutput('WebSocket is supported!');\n\
+    \n  return true;\n}\n\nelse {\n  writeOutput('WebSockets is not supported');\n\
+    \n  $('#btnSend').attr('disabled', 'disabled');\n\n  return false;\n}\n\nfunction\
+    \ connect() {\n\n  WebSocket = new WebSocket(wsUri);\n\n  WebSocket.onopen = function\
+    \ (evt) { onOpen(evt); };\n\n  WebSocket.onclose = function (evt) { onClose(evt);\
+    \ };\n\n  WebSocket.onmessage = function (evt) { onMessage(evt); };\n\n  WebSocket.onerror\
+    \ = function (evt) { onError(evt); };\n}\n\nfunction doSend() {\n  if (WebSocket.readyState\
+    \ != WebSocket.OPEN) {\n  writeOutput(\"NOT OPEN: \" + $('#txtMessage').val());\n\
+    }\n```"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '```
+
+    return;
+
+    }
+
+    writeOutput("SENT: " + $(\(''#txtMessage'').val());
+
+    webSocket.send($(''#txtMessage'').val());
+
+    }
+
+    ```
+
+
+    ```
+
+    function onOpen(evt) {
+
+    writeOutput("CONNECTED");
+
+    }
+
+    ```
+
+
+    ```
+
+    function onClose(evt) {
+
+    writeOutput("DISCONNECTED");
+
+    }
+
+    ```
+
+
+    ```
+
+    function onMessage(evt) {
+
+    writeOutput(\''RESPONSE: '' + evt.data);
+
+    }
+
+    ```
+
+
+    ```
+
+    function onError(evt) {
+
+    writeOutput(\''ERROR: '' + evt.data);
+
+    }
+
+    ```
+
+
+    When you create a WebSocket object, a connection to URI is automatically initiated.
+    The function, connect, subscribes the object the events mentioned above. The message
+    is sent using the doSend function. However, the readyState property of the object
+    is checked before sending any message. The values of the property can be as follows:
+
+
+    +   - Closed = 3'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "+   - Closing = 2\n- Open = 1\n- Connecting = 0\n\nUpon reception of message\
+    \ from the server, the client calls the onMessage function, which passes the event\
+    \ object. The property, data of this object, contains the message sent from the\
+    \ server. On the contrary, if an error has occurred, then the onError function\
+    \ is called and the data property contains the reason for error generation. In\
+    \ some cases, the data property may be 'undefined'. This is particularly the case\
+    \ in scenarios where the connection has timed-out.\n\n# How to Deal with Timeouts\n\
+    \nA timeout is identified when no activity is triggered for as long as 20 minutes.\
+    \ One of the most effective ways to deal with timeouts is sending an empty message\
+    \ to the server on a periodic basis. This can be done in the following manner.\n\
+    \n```\n// <reference path=\"_references.js\" />\n\nvar wsUri = 'ws://echo.websocket.org/';\n\
+    \nvar WebSocket;\n\nvar timerId = 0;\n\n$(document).ready(function () {\n  if\
+    \ (checkSupported()) {\n    connect();\n  }\n  $('#btnSend').click(doSend);\n\n\
+    });\n```"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '```
+
+    function writeOutput(message) {
+
+
+    var output = $(\("#divOutput");
+
+
+    output.html(output.html()) + ''<br />'' + message;
+
+
+    }
+
+    ```
+
+
+    ```
+
+    function checkSupported() {
+
+
+    if (window.WebSocket) {
+
+
+    writeOutput(''WebSockets supported!'');
+
+
+    return true;
+
+
+    }
+
+    ```
+
+
+    ```
+
+    else {
+
+
+    writeOutput(''WebSockets NOT supported'');
+
+
+    $(''#btnSend'').attr(''disabled'', ''disabled'');
+
+
+    return false;
+
+
+    }
+
+    }
+
+    ```
+
+
+    ```
+
+    function connect() {
+
+
+    WebSocket = new WebSocket(wsUri);
+
+
+    WebSocket.onopen = function(evt) { onOpen(evt) };
+
+
+    WebSocket.onclose = function(evt) { onClose(evt) };
+
+
+    WebSocket.onmessage = function(evt) { onMessage(evt) };
+
+
+    WebSocket.onerror = function(evt) { onError(evt) };
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '```
+
+    }
+
+
+    function keepAlive() {
+
+
+    var timeout = 15000;
+
+
+    if (WebSocket.readyState == WebSocket.OPEN) {
+
+
+    WebSocket.send('''');
+
+    }
+
+
+    timerId = setTimeout(keepAlive, timeout);
+
+    }
+
+
+    function cancelKeepAlive() {
+
+
+    if (timerId) {
+
+
+    cancelTimeout(timerId);
+
+    }
+
+    }
+
+
+    function doSend() {
+
+
+    if (WebSocket.readyState != WebSocket.OPEN) {
+
+
+    writeOutput(''NOT OPEN: '' + ($(''#txtMessage'').val()));
+
+
+    return;
+
+    }
+
+
+    writeOutput(''SENT: '' + ($(''#txtMessage'').val()));
+
+
+    WebSocket.send($(''#txtMessage'').val());
+
+    ```'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: "```\n}\n\nfunction onOpen(evt) {\n  writeOutput(\"CONNECTED\");\n  keepAlive();\n\
+    }\n```\n\n```\nfunction onClose(evt) {\n  cancelKeepAlive();\n  writeOutput(\"\
+    DISCONNECTED\");\n}\n```\n\n```\nfunction onMessage(evt) {\n  writeOutput('RESPONSE:\
+    \ ' + evt.data);\n}\n```\n\n```\nfunction onError(evt) {\n  writeOutput('ERROR:\
+    \ ' + evt.data);\n}\n```\n\n# How to Handle Disconnects\n\nConnections may sometimes\
+    \ close errors concerning the network. Therefore, you may be required to call\
+    \ the connect function while you are inside the construct of the onClose function.\
+    \ This may lead to issues. A common problem faced in this regard is that the server\
+    \ is unable to identify that this new connection request belongs to a client that\
+    \ already exists. You can handle this issue by sending an identification message\
+    \ to the server.\n\n# How to Deal with Web Farms"
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: 'You may need to run your application in web farm, in which case the incoming
+    requests may be handled by many servers. Multiple server are used to perform load
+    balancing and performance optimization. In this case, you can implement sticky
+    servers, which ensures that a client is served by only one server. In other words,
+    all the requests by one client are processed by the same server. This helps you
+    to address issues that may arise due to open connections. These problems can also
+    be handled using products like Microsoft App Fabric Caching Service and Redis.
+
+
+    # How to Use WebSocket Libraries
+
+
+    Dealing with all the issues mentioned above can be challenging. Therefore, the
+    best way to deal with the situation is to use server and client libraries. There
+    are several libraries like SignalR and Socket.IO are available for you to explore.'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# CHAPTER 10: MANAGING LOCAL DATA WITH THE HELP OF WEB STORAGE
+
+
+    Most of the topics discussed in the previous section focused on improving the
+    performance of the websites and the services that it provides its customers. Therefore,
+    handling information or data has been restricted to the data that is transferred
+    between the client and server. In such a case, the server needs to wait for the
+    complete round trip to occur. This involves cost overheads.
+
+
+    In order to address this issue, most modern day browsers have started supporting
+    web or DOM storage, which allows storage of some data at the client level. This
+    chapter provides an overview of storage mechanisms used and how they can be used
+    to improve the performance of the system in this regard.
+
+
+    # Introduction to Web Storage
+
+
+    In most web application, a server side storage solution like SQL Database Server
+    is implemented. This may be an attempt to kill a mosquito with a sword. You don''t
+    need such a huge solution as storing small bits of information at the browser
+    level could have solved your purpose.
+
+
+    Http cookies have been the most preferred and commonly used form of data storage
+    at the browser level. In fact, it is used by most browsers for storing user information.
+    The cookie value can be set in the following manner:
+
+
+    ```
+
+    function setCookieValue(cName, cValue, daysToExpire) {
+
+    ```
+
+
+    ```
+
+    var daysToExpire = new Date();
+
+    ```
+
+
+    ```
+
+    daysToExpire.setDate(daysToExpire.getDate() + daysToExpire);
+
+    ```'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "```\ncValue = cValue + \" expires=\" + daysToExpire.UTCString();\n\ndocument.cookie\
+    \ = cName + \"=\" + cValue;\n\n}\n```\n\nThe cookie value can be retrieved using\
+    \ the following code:\n\n```\nfunction getCookieValue(cName)\n{\n  var cookie\
+    \ = document.cookie.split(\";\");\n\n  for (var i = 0; i < cookie.length; i++)\
+    \ {\n    var cookies = cookie[i];\n\n    var indexVal = cookies.indexOf(\"=\"\
+    );\n\n    var keyVal = cookies.substr(0, index);\n\n    var actualVal = cookies.substr(index\
+    \ + 1);\n\n    if (keyVal == cName) {\n      return actualVal;\n    }\n  }\n}\n\
+    ```\n\nThe last segment of code, shown below, illustrates how cookies can be used.\n\
+    \nsetCookie('fName', Clark, 1);\n\nvar fName = getCookie('fName');\n\nYou can\
+    \ also use the cookie plug-in available in jQuery, which can be used in the following\
+    \ manner:"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '$.cookie(''fName'', ''Clark'');
+
+
+    var fName = $.cookie(''fName'');
+
+
+    Although, cookies are extensively used, they pose some serious issues like overhead
+    and capacity limitation. Some alternatives available include:
+
+
+    +   - Google Gears
+
+    - User Data
+
+    - Java Applets
+
+    - Flash Player
+
+
+    These options are better cookies and addresses its limitations, but they suffer
+    from issues, which include:
+
+
+    +   - Pug-in is required
+
+    - User can block them
+
+    - Not useful for corporate users
+
+    - They are vendor-specific.
+
+
+    # HTML5 Storage
+
+
+    Although, these tools offer some good, yet potentially improvable solutions, HTML5
+    has come up with some innovative tools in their attempt to provide a comprehensive
+    solution.
+
+
+    +   - Web storage
+
+
+    The simplest form of storing data over the web is web storage, in which key-value
+    pairs are stored.
+
+
+    +   - Web SQL database
+
+
+    If the application requires a full relational database, then Web SQL database
+    is also'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: 'available for us.
+
+
+    +   - IndexedDB
+
+
+    This is a NoSQL database that is seen as a good alternative to its relational
+    counterpart. It is considered to be a good option for complex database requirements.
+
+
+    +   - Filesystem API
+
+
+    This is the preferred form of data storage the data is of larger data types like
+    images, audios and videos.
+
+
+    In all of the above mentioned types of data storage, the data is tied to the URL.
+    Therefore, this data cannot be accessed by other websites. This is an important
+    consideration when multiple websites are hosted on a shared domain.
+
+
+    # Exploring localStorage
+
+
+    LocalStorage is one of the two storage mechanisms used for data storage. It is
+    basically a Storage Object, which is stored as a global variable. The biggest
+    advantage of using this mechanism is that the API provided for reading and writing
+    data is simple and easy to use.
+
+
+    # How to Use localStorage Object Reference
+
+
+    The attributes and methods available include:
+
+
+    +   - setItem(key, value)
+
+
+    It is a method that is used to set a value with the help of an associated key.
+    The syntax for this operation is:
+
+
+    ```
+
+    localStorage.setItem(''fName'', (''#fName'').val());
+
+    ```
+
+
+    +   - getItem(key)
+
+
+    It is a method that is used to get a value associated to the specified key. The
+    syntax'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: 'for this operation:
+
+
+    var fName = localStorage.getItem(''fName'');
+
+
+    If no value is set, then null is returned.
+
+
+    +   - removeItem(key)
+
+
+    It is a method that is used to remove a value associated to the specified key.
+    The syntax for this operation is:
+
+
+    localStorage.removeItem(''fName'');
+
+
+    +   - clear()
+
+
+    Removes all items from the local storage. Its syntax is:
+
+
+    localStorage.clear();
+
+
+    +   - length
+
+
+    It is the property that returns the number of entries in the storage.
+
+
+    var count = localStorage.length;
+
+
+    +   - key(index)
+
+
+    This method is used for finding the key associated with the given value. The syntax
+    for this operations is:
+
+
+    var keyValue = localStorage.key(1);
+
+
+    One of the biggest benefits of using this storage mechanism is that it is supported
+    by most modern browsers, unlike other storage mechanisms, which are supported
+    by only a few browsers. Although, this mechanism is supported by most web browsers,
+    it is a good idea to check it before using it. If the first reference to this
+    storage returns null, then it can be assumed that the storage mechanism is not
+    supported. In addition to this, you can also use the construct given below for
+    this purpose:'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "```\nfunction isWSSupported() {\n  return 'localStorage' in window;\n}\n\n\
+    if (isWSSupported()) {\n  localStorage.setItem('fName', ('#fName').val());\n}\n\
+    ```\n\nIn addition to this, you can also use the Modernizr javascript library\
+    \ for the checking purpose. It is worth mentioning here that this type of web\
+    \ storage allows 5MB of web storage, as against the 4KB of web storage allowed\
+    \ by cookies. When the storage space is exceeded, an exception for the same is\
+    \ thrown by the system.\n\nAlthough, web storage allows storage of strings only,\
+    \ but you can also store complex objects with the help of JSON utility methods.\n\
+    \n# How to Use Short-term Persistence with sessionStorage\n\nsessionStorage is\
+    \ also a Storage Object, with the same attributes and methods as localStorage.\
+    \ The only difference between the two storage mechanisms is that sessionStorage\
+    \ stores data for the session only. If the browser window is closed, the data\
+    \ will no longer be available for use.\n\n# Issues Related to sessionStorage and\
+    \ localStorage\n\nSome of the issues related to these two storage mechanisms include:\n\
+    \n+   1. Simultaneous reading and writing of the hard drive.\n\n+   2. Slow searching\
+    \ capabilities.\n\n+   3. No support for transactions.\n\n# How to Handle Storage\
+    \ Events"
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: 'Synchronization is the biggest challenge faced in the implementation of web
+    storage. In order to deal with this issue, you can subscribe to storage events,
+    which can notify you about any changes that may have been occurred. When you subscribe
+    to a StorageEvent, you get access to the following properties:
+
+
+    +   * newValue
+
+    * oldValue
+
+    * url
+
+    * storageArea
+
+
+    Unlike other events, cancelling or bubbling a StorageEvent is not allowed. You
+    can subscribe to an event using the following construct:
+
+
+    ```
+
+    function respond (exc) {
+
+
+    alert(exc.newValue);
+
+
+    }
+
+    ```
+
+
+    window.addEventListener(''storage'', respond, false);
+
+    This event can be triggered using the following operation:
+
+    localStorage.setItem(''name'', Clark);
+
+
+    You can also bind to these events with the help of jQuery.'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# CHAPTER 11: Offline Web Applications
+
+
+    The previous chapter discussed storage, which is one of the most used offline
+    application. However, in some scenarios, you may require better tools and advanced
+    features like indexing, asynchronous support and handling transactions. These
+    features are a part of the many other offline applications that are available.
+
+
+    This chapter discusses Websql and IndexedDB, which are relational constructs for
+    data storage. However, they cannot be used for storing files. Therefore, FileSystem
+    API is used for this purpose. The chapter ends with a discussion on how you can
+    make your website offline-friendly using HTTP Cache.
+
+
+    # Web SQL
+
+
+    Web SQL is a relational database and its most recent implementations are created
+    on SQLLite. However, it is important to mention that this database constrict is
+    no longer supported by W3C yet it is still supported by many browsers.
+
+
+    # How to Create and Open Database
+
+
+    ```
+
+    var dbase = openDatabase(''Lib’, ‘1.0’, ‘Sample library’, 5 * 1024 * 1024);
+
+    ```
+
+
+    The parameters are as follows:
+
+
+    +   - name
+
+    - version
+
+    - displayName
+
+    - estimatedSize'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: "+   • creationCallback\n\n# How to Manipulate Database\n\nManipulation scripts\
+    \ in SQL can be given as parameter to the transaction.executeSql function for\
+    \ manipulating the database. An example of how a table can be created is given\
+    \ below:\n\n```\ntransaction.executeSql(\"CREATE TABLE IF NOT EXISTS employees(\"\
+    \ + \n\n\"id INTEGER PRIMARY KEY AUTOINCREMENT, \" + \n\n\"fName TEXT, \" + \n\
+    \n\"lName TEXT, \" + \n\n)\");\n```\n\n# IndexedDB\n\nTill now, you have dealt\
+    \ with the two extreme cases of storing data over the web. While the web storage\
+    \ mechanisms follows the simple key-value pair model, Web SQL is based on the\
+    \ relational database model. IndexedDB is an alternative model that lies somewhere\
+    \ in between these two models. It is capable of dealing with everything from strings\
+    \ to complex objects. However, while using this storage mechanism, use browser-independent\
+    \ methods.\n\nA database can be opened or created in the following manner:\n\n\
+    ```\nvar indexedDB = window.indexedDB;\n```\n\n```\nvar openRequest = indexedDB.open('Lib',\
+    \ 1);\n```\n\nAn important facet of IndexedDB object is the keypath property,\
+    \ which is used to define the attributes that must be used as the key. If the\
+    \ specified property does not exist, an auto-incrementing or auto-decrementing\
+    \ attribute can be created."
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: 'Indexes can be added using the following code:
+
+
+    ```
+
+    var openRequest = indexedDB.open(''Lib'', 2);
+
+    ```
+
+
+    ```
+
+    openRequest.onupgradeneeded = function(response) {
+
+    ```
+
+
+    ```
+
+    var store = response.currentTarget.transaction.objectStore("employees");
+
+    ```
+
+
+    ```
+
+    store.createIndex(''lName'', ''lName'', { unique: false });
+
+    ```
+
+
+    ```
+
+    };
+
+    ```
+
+
+    The parameters required are: Name, keypath and optional parameters. In a similar
+    manner,
+
+    indexes can be removed using the following code:
+
+
+    ```
+
+    store.deleteIndex(''lastName'');
+
+    ```
+
+
+    You can add and remove objects storing the following code:
+
+
+    ```
+
+    var openRequest = indexedDB.open(''Lib'', 3);
+
+    ```
+
+
+    ```
+
+    openRequest.onupgradeneeded = function(response) {
+
+    ```
+
+
+    ```
+
+    response.currentTarget.result.deleteObjectStore("employees");
+
+    ```
+
+
+    ```
+
+    };
+
+    ```
+
+
+    Similarly, an object can be added in the following manner:
+
+
+    response.currentTarget.result.createObjectStore("employees"), { keypath: ''email''
+    };
+
+
+    The next set of operations include transactions, which are performed in the following
+    manner:
+
+
+    +   1. A transaction has to be opened in the following manner:
+
+
+    ```
+
+    var newTrans = dbase.transaction([''employees'', ''payroll'']);
+
+    ```
+
+
+    +   2. You can add a new record in the following manner:
+
+
+    ```
+
+    var openRequest = indexedDB.open(''Lib'', 1);
+
+    ```'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '```
+
+    var dbase;
+
+
+    openRequest.onsuccess = function(response) {
+
+
+    dbase = openRequest.result;
+
+
+    addEmployee();
+
+    }
+
+
+    function addEmployee() {
+
+
+    var myTrans = dbase.transaction(''employees'', ''readwrite'');
+
+
+    var employees = myTrans.objectStore("employees");
+
+
+    var request = employees.add({fName: ''Sammy'', lName: ''Carnie''});
+
+
+    request.onsuccess = function(response) {
+
+    nalert(''ID of New Record = '' + request.result);
+
+    }
+
+
+    request.onerror = function(response);
+
+    }
+
+    ```
+
+
+    +   3. A record can be updated in the following manner:
+
+
+    var openRequest = indexedDB.open(''Lib'', 1);
+
+
+    var dbase;
+
+
+    openRequest.onsuccess = function(response) {
+
+
+    dbase = openRequest.result;
+
+
+    updateEmployee();
+
+
+    ;'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: "```\nfunction updateEmployee() {\n\n  var myTrans = dbase.transaction('employees',\
+    \ 'readwrite');\n\n  var employees = myTrans.objectStore(\"employees\");\n\n \
+    \ var request = employees.put({fName: 'Sammy', lName: 'Carnie'}, 1);\n\n  request.onsuccess\
+    \ = function(response) {\n    alert('ID of Updated Record = ' + request.result);\n\
+    \  };\n\n  request.onerror = function(response);\n}\n```\n\n+   4. You can delete\
+    \ a record using the following code:\n\nfunction deleteEmployee() {\n\n  var myTrans\
+    \ = dbase.transaction('authors', 'readwrite');\n\n  var employees = myTrans.objectStore(\"\
+    employees\");\n\n  var request = employees.delete(1);\n\n  request.onsuccess =\
+    \ function(response);\n\n  request.onerror = function(response);\n\n}\n\n# How\
+    \ to Work with FileSystem API\n\nThe above mentioned storage mechanisms can be\
+    \ used for storing data, which is in form of strings. However, complex data structures\
+    \ like files and images may also be stored using URIs. However, it is an excessively\
+    \ costly option. HTML5 offers a low cost and simpler option called FileSystem\
+    \ API for this purpose. Using this format, you can create"
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: 'files and directories on a user file system’s sandboxed location.
+
+
+    The functionalities available include:
+
+
+    +   1. A FileSystem can be opened and created using::
+
+
+    ```
+
+    window.requestFileSystem(TEMPORARY, 5 * 1024 * 1024, getFile, handleError);
+
+
+    function getFile(FileSystem) {
+
+
+    FileSystem.root.getFile("sample.txt", { create: true }, fileOpened, handleError);
+
+    }
+
+
+    function fileOpened(fileEntry) {
+
+
+    alert("File opened!");
+
+    }
+
+
+    function handleError(error) {
+
+
+    alert(error.code);
+
+    }
+
+    ```
+
+
+    The parameters for the requestFileSystem() function are type, size, successCallback
+
+    and errorCallback. On the other hand, the parameter for getFile() function is
+    path
+
+    and options.
+
+
+    +   2. You can write to a file using the following code:
+
+
+    ```
+
+    function writeFile(fileWriter) {
+
+
+    fileWriter.onwrite = function() { alert(''Success''); };
+
+
+    fileWriter.onerror = function() { alert(''Failed''); };
+
+
+    fileWriter.write(new Blob([''Hello world''], {type: ''text/plain''})));
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: 'You can append to a file using the following code:
+
+
+    ```
+
+    function writeToFile(fileWriter) {
+
+    fileWriter.onloadend = function() { alert(''Success''); };
+
+    fileWriter.onerror = function() { alert(''Failed''); };
+
+    fileWriter.seek(fileWriter.length);
+
+    fileWriter.write(new Blob([''Hello world''], {type: ''text/plain''})));
+
+    }
+
+    ```
+
+
+    +   3. You can read from a file using the following code:
+
+
+    function readFile(file) {
+
+    var fileReader = new FileReader();
+
+    fileReader.onloadend = function() { alert(this.result); };
+
+    fileReader.onerror = function() { alert(''Failed''); };
+
+    fileReader.readAsText(file);
+
+    }
+
+
+    +   4. You can delete a file using the following code:
+
+
+    fileEntry.remove(fileRemoved, handleError);
+
+
+    Similar functions exist for directories as well.'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# APPENDIX
+
+
+    +    <a> Hyperlink
+
+
+    +   <abbr> Abbreviation
+
+
+    +   <address> Contact information
+
+
+    +   <area> Image map region
+
+
+    +   <article> Independent section
+
+
+    +   <aside> Auxiliary section
+
+
+    +   <audio> Audio stream
+
+
+    +   <b> Bold text
+
+
+    +   <base> Document base URI
+
+
+    +   <bb> Browser button
+
+
+    +   <bdo> Bi-directional text override
+
+
+    +   <blockquote> Long quotation
+
+
+    +   <body> Main content
+
+
+    +   <br> Line break
+
+
+    +   <button> Push button canvas
+
+
+    +   <canvas> Bitmap canvas
+
+
+    +   <caption> Table caption
+
+
+    +   <cite> Citation'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '<code> Code fragment
+
+
+    <col> Table column
+
+
+    <colgroup> Table column group
+
+
+    <command> Command that a user can invoke
+
+
+    <datagrid> Interactive tree, list, or tabular data
+
+
+    <datalist> Predefined control values
+
+
+    <dd> Definition description
+
+
+    <del> Deletion
+
+
+    <details> Additional information
+
+
+    <dfn> Defining instance of a term
+
+
+    <dialog> Conversation
+
+
+    <div> Generic division
+
+
+    <dl> Description list
+
+
+    <dt> Description term
+
+
+    <em> Stress emphasis
+
+
+    <embed> Embedded application
+
+
+    <fieldset> Form control group
+
+
+    <figure> A figure with a caption
+
+
+    <footer> Section footer
+
+
+    <form> Form
+
+
+    <h1> Heading level 1'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '<h2> Heading level 2
+
+
+    <h3> Heading level 3
+
+
+    <h4> Heading level 4
+
+
+    <h5> Heading level 5
+
+
+    <h6> Heading level 6
+
+
+    <head> Document head
+
+
+    <header> Section header
+
+
+    <hr> Separator
+
+
+    <html> Document root
+
+
+    <i> Italic text
+
+
+    <iframe> Inline frame
+
+
+    <img> Image
+
+
+    <input> Form control
+
+
+    <ins> Insertion
+
+
+    <kbd> User input
+
+
+    <label> Form control label
+
+
+    <legend> Explanatory title or caption
+
+
+    <li> List item
+
+
+    <link> Link to resources
+
+
+    <map> Client-side image map
+
+
+    <mark> Marked or highlighted text'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '<menu> Command menu
+
+
+    <meta> Metadata
+
+
+    <meter> Scalar measurement
+
+
+    <nav> Navigation
+
+
+    <noscript> Alternative content for no script support
+
+
+    <object> Generic embedded resource
+
+
+    <ol> Ordered list
+
+
+    <optgroup> Option group
+
+
+    <option> Selection control
+
+
+    <output> Output control
+
+
+    <p> Paragraph
+
+
+    <param> Plug-in parameter
+
+
+    <pre> Preformatted text
+
+
+    <progress> Progress of a task
+
+
+    <q> Inline quotation
+
+
+    <rp> Ruby parenthesis
+
+
+    <rt> Ruby text
+
+
+    <ruby> Ruby annotation
+
+
+    <samp> Sample output
+
+
+    <script> Linked or embedded script
+
+
+    <section> Document section'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '<select> Selection control
+
+
+    <small> Small print
+
+
+    <source> Media resource
+
+
+    <span> Generic inline container
+
+
+    <strong> Strong importance
+
+
+    <style> Embedded style sheet
+
+
+    <sub>> Subscript
+
+
+    <sup>> Superscript
+
+
+    <table> Table
+
+
+    <tbody> Table body
+
+
+    <td> Table cell
+
+
+    <textarea> Multiline text control
+
+
+    <footer> Table footer
+
+
+    <th> Table header cell
+
+
+    <thead> Table head
+
+
+    <time> Date and/or time
+
+
+    <title> Document title
+
+
+    <tr> Table row
+
+
+    <ul> Unordered list
+
+
+    <var> Variable
+
+
+    <video> Video or movie'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: <wbr> Optionally break up a large word at this element
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '# BONUS: Free Books & Special Offers
+
+
+    I want to thank you again for downloading this book! I would like to give you
+    access to a great service that will e-mail you notifications when we have FREE
+    books available. You will have FREE access to some great titles before they get
+    marked at the normal retail price that everyone else will pay. This is a no strings
+    attached offer simply for being a great customer. Simply click the link below
+    to get started.
+
+
+    ![](img/5b2f768a50799763f7f92e5b907a924b_142_0.png)
+
+
+    Copyright 2015 by Globalized Healing, LLC - All rights reserved.'
+  merge: -1
+  pgno: 142
