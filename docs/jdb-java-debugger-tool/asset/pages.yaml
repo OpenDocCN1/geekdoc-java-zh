@@ -1,0 +1,1383 @@
+- img_proc: true
+  md: '![](img/bf2d1ac3cc200346937a3b901a9ff2f3_0_0.png)
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_0_1.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# About the Tutorial
+
+
+    The Java Debugger, commonly known as jdb, is a useful tool to detect bugs in Java
+    programs. This is a brief tutorial that provides a basic overview of how to use
+    this tool in practice. In addition, the tutorial also covers how to debug a program
+    through stepping, breakpoints, and managing exceptions.
+
+
+    # Audience
+
+
+    This tutorial will be quite useful for beginners learning Java as well as programmers
+    and professionals aspiring to make a career in Testing and Analytics using Java.
+
+
+    # Prerequisites
+
+
+    Before you start with this tutorial, you need to know basic Java programming.
+
+
+    # Disclaimer & Copyright
+
+
+    > © Copyright 2014 by Tutorials Point (I) Pvt. Ltd.
+
+
+    All the content and graphics published in this e-book are the property of Tutorials
+    Point (I) Pvt. Ltd. The user of this e-book is prohibited to reuse, retain, copy,
+    distribute or republish any contents or part of contents in any manner without
+    written consent of the publisher. We strive to update the contents of our website
+    and tutorials as timely as and as precisely as possible, however, the contents
+    may contain inaccuracies or errors. Tutorials Point (I) Pvt. Ltd. provides no
+    guarantee regarding the accuracy, timeliness or completeness of our website or
+    its contents including this tutorial. If you discover any errors on our website
+    or in this tutorial, please notify us at contact@tutorialspoint.com.
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_1_0.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   - About the Tutorial...........................................................................................
+    I
+
+    - Audience .......................................................................................................
+    I
+
+    - Prerequisites ..............................................................................................
+    I
+
+    - Disclaimer & Copyright...............................................................................
+    I
+
+    - Table of Contents ................................................................................
+    ii
+
+    - 1. INTRODUCTION ................................................................
+    1
+
+    - Debugging Techniques ................................................................
+    1
+
+    - Types of Debugging ................................................................
+    2
+
+    - Java Debuggers ................................................................................
+    2
+
+    - JDB ................................................................................................
+    2
+
+    - JDB in JDK...........................................................................................
+    3
+
+    - 2. INSTALLATION .................................................................
+    5
+
+    - System Requirements .......................................................................
+    5
+
+    - Step 1: Verifying Java Installation..................................................
+    5
+
+    - Step 2: Setting Up Java Environment..................................................
+    6
+
+    - Step 3: Verifying JDB Installation.......................................................
+    7
+
+    - 3. SYNTAX .......................................................................
+    8
+
+    - Syntax ................................................................................................
+    8
+
+    - 4. OPTIONS .......................................................................
+    9
+
+    - Options ................................................................................................
+    9
+
+    - Using Options with Commands ................................................
+    10
+
+    - 5. SESSION .......................................................................
+    11
+
+    - Start a Session by Adding Class ................................................
+    11
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_2_0.png)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Start a Session by Adding JDB to a Running JVM....................................................................
+    11
+
+
+    6. BASIC COMMANDS...............................................................................................................
+    13
+
+
+    7. BREAKPOINTS......................................................................................................................
+    16
+
+
+    Syntax....................................................................................................................................
+    16
+
+
+    Example.................................................................................................................................
+    16
+
+
+    Debugging...............................................................................................................................
+    17
+
+
+    8. STEPPING.......................................................................................................................
+    19
+
+
+    Example.................................................................................................................................
+    19
+
+
+    Step 1: Execute the Job...............................................................................................
+    20
+
+
+    Step 2: Step through the Code...............................................................................
+    20
+
+
+    Step 3: List the Code...............................................................................................
+    21
+
+
+    Step 4: Continue Execution...............................................................................
+    21
+
+
+    Step Into..................................................................................................................
+    22
+
+
+    Step Over..................................................................................................................
+    23
+
+
+    Step Out..................................................................................................................
+    25
+
+
+    9. EXCEPTION...............................................................................................................
+    27
+
+
+    Example........................................................................................................................
+    27
+
+
+    Step 1: Run the Class.......................................................................................
+    28
+
+
+    Step 2: Catch the Exception.......................................................................
+    28
+
+
+    Step 3: Continue Execution..................................................................
+    28
+
+
+    10. JDB IN ECLIPSE...............................................................................................
+    30
+
+
+    Step 1: Download and Install Eclipse.....................................................
+    30
+
+
+    Step 2: Create a New Project and a New Class..................................
+    30
+
+
+    Step 3: Open the Debug Perspective..................................................
+    31
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_3_0.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "# 1. INTRODUCTION\n\nDebugging is a technical procedure to find and remove\
+    \ bugs or defects in a program and get expected results. Debugging includes testing\
+    \ and monitoring. It is very complex when the subunits of a program are tightly\
+    \ coupled. We can debug a program using the debugger tools that follow the prescribed\
+    \ APIs. A debugger allows you to step through every aspect of a code, inspect\
+    \ all the elements, and remove errors, if any.\n\n# Debugging Techniques\n\nThere\
+    \ are different kinds of techniques to debug a Java program. The old method of\
+    \ debugging is by using print statements at the end of every segment which will\
+    \ print the trace statements on the console. Take a look at the following code.\n\
+    \n```\npublic class Add\n{\n    public static void main(String ar[])\n    {\n\
+    \        int a=ar[0];\n        system.out.println(\"A : \" +a);\n\n        int\
+    \ b=ar[1];\n        system.out.println(\"B : \" +b);\n\n        int c = a + b;\n\
+    \        system.out.println(\"C = a + b : \" +c);\n    }\n}\n```\n\nHere, we have\
+    \ a program that adds two numbers and prints the output. Notice at each step,\
+    \ we have introduced a print statement that prints the state of the program on\
+    \ the console. This is the traditional approach to debug a program.\n\n![](img/bf2d1ac3cc200346937a3b901a9ff2f3_5_0.png)"
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'In addition, we have advanced concepts that can be used to debug a program
+    such as:
+
+
+    +   - stepping,
+
+    - breakpoints, and
+
+    - exceptions or watchpoints.
+
+
+    # Types of Debugging
+
+
+    We can debug a program using various methods:
+
+
+    +   - Using Java bytecode (compiled version of Java code)
+
+    - Using comments inside the programs
+
+    - Attaching class to a running program
+
+    - Remote debugging
+
+    - Debugging on demand
+
+    - Optimized code debugging
+
+
+    # Java Debuggers
+
+
+    Here are some examples of Java debuggers that are available in the market:
+
+
+    +   - IDEs such as Eclipse, Netbeans, etc. contain their own debuggers (Visual
+    cafe, Borland, JBuilder)
+
+    - Standalone Debug GUIs (such as Jikes, Java platform debugger, and JProbe)
+
+    - Command-line debugger (Sun''s JDB)
+
+    - Notepad or VI driven (stack trace)
+
+
+    This tutorial covers how to use the command-line debugger, **jdb.**
+
+
+    # JDB
+
+
+    The Java debugger (JDB) is a tool for Java classes to debug a program in command
+    line. It implements the Java Platform Debugger Architecture. It helps in detecting
+    and fixing bugs in a Java program using Java Debug Interface (JDI).
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_6_0.png)'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# JDB in JDK
+
+
+    The following architecture defines the role of JDB in JDK. It contains mainly
+    three units:
+
+
+    +   1. Java Virtual Machine Tool Interface (JVM TI)
+
+    2. Java Debug Wiring Pool (JDWP)
+
+    3. Java Debugger Interface (JDI)
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_7_0.png)
+
+
+    JVM TI is a native programming interface implemented by VM. It provides ways to
+    inspect and debug the state of the application running on the VM. It allows an
+    implementer (VM Implementer) that can be enclosed easily into the debugging architecture.
+    It also uses a third-party channel called JDWP for communication.
+
+
+    # JDWP
+
+
+    It defines the format of information and the requests that pass in between the
+    debugger process and the debugger front end. The primary purpose of having a'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Java Debugger
+
+
+    JDWP is to allow the debuggee and the debugger to communicate when they run under
+    separate VMs or in separate platforms.
+
+
+    # JDI
+
+
+    It is a high-level Java interface implemented as front end. It defines the variable
+    information at user code level. It is recommended to use a JDI layer for all debugger
+    development. It uses JDWP for communication with the debuggee JVM.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 2. INSTALLATION
+
+
+    This chapter explains how to install JDB on Windows and Linux based systems. JDB
+    is a part of JDK. Therefore, JDK installation is enough for using JDB in command
+    prompt.
+
+
+    # System Requirements
+
+
+    Here are the system requirements for installing JDB:
+
+
+    | JDK | Java SE 2 JDK 1.5 or above |
+
+    | Memory | 1 GB RAM (recommended) |
+
+    | Disk Space | No minimum requirement |
+
+    | Operating System Version | Windows XP or above, Linux |
+
+
+    Follow the simple steps given to install JDB on your system.
+
+
+    # Step 1: Verifying Java Installation
+
+
+    First of all, you need to have Java Software Development Kit (SDK) installed on
+    your system. To verify this, execute any of the two commands depending on the
+    platform you are working on.
+
+
+    If the Java installation has been done properly, then it displays the current
+    version and specifications of Java installation. A sample output is given in the
+    following table.
+
+
+    | Platform | Command | Sample Output |
+
+    | Windows | Open command console and type: \>java -version | Java version "1.7.0_60"<br>Java
+    (TM) SE Run Time Environment (build 1.7.0_60-b19)<br>Java Hotspot (TM) 64-bit
+    Server VM (build 24.60-b09,mixed mode) |
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_9_0.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Java Debugger
+
+
+    | Platform | Description |
+
+    | --- | --- |
+
+    | Linux | Open command terminal and type: **$java -version** <br> java version
+    "1.7.0_25" Open JDK Runtime Environment (rhel-2.3.10.4.el6_4_x86_64) Open JDK
+    64-Bit Server VM (build  23.7-b01, mixed mode) |
+
+
+    We assume the readers of this tutorial have Java SDK 1.7.0_60 installed in their
+    system. If you do not have Java SDK, download its current version from the link
+    http://www.oracle.com/technet/java/javase/downloads/index.html and install it.
+
+
+    # ## Step 2: Setting Up Java Environment
+
+
+    Set the environment variable JAVA_HOME to point to the base directory location
+    where Java is installed on your machine. For example,
+
+
+    | Platform | Description |
+
+    | --- | --- |
+
+    | Windows | set JAVA_HOME=C:\ProgramFiles\java\jdk1.7.0_60 |
+
+    | Linux | export JAVA_HOME=/usr/local/java |
+
+
+    Append the full path of Java compiler location to the System Path.
+
+
+    | Platform | Description |
+
+    | --- | --- |
+
+    | Windows | Append the String "C:\Program Files\Java\jdk1.7.0_60\bin" at the end
+    of the system variable PATH. |
+
+    | Linux | export PATH=$PATH:$JAVA_HOME/bin/ |
+
+
+    Execute the command **java -version** from the command prompt as explained above.
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_10_0.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Step 3: Verifying JDB Installation
+
+
+    Verify the JDB version as follows:
+
+
+    | Platform | Command | Sample Output |
+
+    | Windows | Open command console and type: \>jdb -version | This is JDB version
+    1.6 (Java SE version 1.7.0_60) |
+
+    | Linux | Open command terminal and type: $jdb -version | This is JDB version
+    1.6 (Java SE version 1.7.0_60) |'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# 3. SYNTAX
+
+
+    This chapter explains the syntax of JDB command. The syntax contains four sections
+    listed as follows:
+
+
+    +   - JDB
+
+    - option
+
+    - class
+
+    - arguments
+
+
+    # Syntax
+
+
+    The syntax of JDB is as follows.
+
+
+    ```
+
+    jdb [ options ] [ class ] [ arguments ]
+
+    ```
+
+
+    # JDB
+
+
+    It calls jdb.exe from the Java Development Kit.
+
+
+    # Options
+
+
+    These include the command line options used to debug a Java program in efficient
+    way. The JDB launcher accepts all the options (such as -D, -classpath, and -X)
+    and some additional advanced options such as (-attach, -listen, -launch, etc.).
+
+
+    # Class
+
+
+    It is the class name on which you want to perform debugging operations.
+
+
+    # Arguments
+
+
+    These are the input values given to a program at runtime. For example, arg[0],
+    arg[1] to the main() method.
+
+
+    In the above four segments, options is the most important one.
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_12_0.png)'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# # 4. OPTIONS
+
+
+    This chapter describes the important options available in JDB that are submitted
+    as arguments with the jdb command.
+
+
+    # ## Options
+
+
+    The following table contains a list of options accepted by JDB:
+
+
+    | Name | Description |
+
+    | - | - |
+
+    | -help | Displays the help message and lists the related options. |
+
+    | -sourcepath | Uses the given path for source files if path is not specified,
+    then it takes the default path ".", i.e., the current directory. |
+
+    | -attach | Attaches the debugger to the running VM by specifying the VM address.
+    |
+
+    | -listen | Waits for the running VM to connect using standard connector. |
+
+    | -listenany | Waits for the running VM to connect using any address. |
+
+    | -launch | Launches the debugged application immediately up startup job. |
+
+    | -listconnectors | Lists the connectors available in this VM. |
+
+    | -connect | Connects to the target VM using named connector with listed argument
+    values. |
+
+    | -dbtrace | Prints information for debugging jdb. |
+
+    | -tclient | Runs the application in Java Hotspot VM (client). |
+
+    | -tserver | Runs the application in Java Hotspot VM (server). |
+
+    | -Joption | Passes the option to the Java virtual machine used to run JDB. |
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_13_0.png)'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Using Options with Commands
+
+
+    The following commands show how to use some of the above options:
+
+
+    -help
+
+
+    The following command gets -help on using JDB.
+
+
+    ```
+
+    \jdb -help
+
+    ```
+
+
+    -attach
+
+
+    The following command attaches the debugger to a specified VM (port number:1099).
+
+
+    ```
+
+    \ jdb -attach 1099
+
+    ```
+
+
+    -listen
+
+
+    The following command makes the JDB process running on the current VM wait using
+    standard connector (VM in 8008).
+
+
+    ```
+
+    \jdb -listen 8008
+
+    ```
+
+
+    -listenany
+
+
+    The following command makes the JDB process running on the current VM wait using
+    any connector (VM in currently running port).
+
+
+    ```
+
+    \jdb -listenany
+
+    ```
+
+
+    -tclient
+
+
+    The following command executes the application in Java Hotspot(™) VM(client).
+
+
+    ```
+
+    \jdb -tclient
+
+    ```
+
+
+    -tserver
+
+
+    The following command executes the application in Java Hotspot(™) VM(server).
+
+
+    ```
+
+    \jdb -tserver
+
+    ```
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 5. SESSION
+
+
+    This chapter describes how to start a JDB session in different ways. JDB launch
+    is the frequently used technique to start a JDB session.
+
+
+    There are two different ways to start a JDB session:
+
+
+    +   - Starting JDB session by adding class (main class name) to it.
+
+    - Adding JDB to running JVM to start session.
+
+
+    # Start a Session by Adding DB Class
+
+
+    The following command starts a JDB session:
+
+
+    # Syntax
+
+
+    ```
+
+    \>jdb <classname>
+
+    ```
+
+
+    # Example
+
+
+    Let us assume we have a class named TestClass. The following command starts a
+    JDB session from the TestClass.
+
+
+    ```
+
+    \>jdb TestClass
+
+    ```
+
+
+    If you follow this command, it starts a new Java VM with any specified parameters.
+    Thereafter it loads the class and stops it before executing the first statement
+    of the class.
+
+
+    # Start a Session by Adding JDB to a Running JVM
+
+
+    Given below is the syntax and example to start a JDB session by adding the JDB
+    to a running JVM.
+
+
+    # Syntax
+
+
+    The following syntax is for JDB session:
+
+
+    ```
+
+    -agentlib:jdwp=transport=dt_shmem,address=<add>,server=y,suspend=n
+
+    ```
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Example
+
+
+    Let us assume the main class name is TestClass and JVM allows the JDB to connect
+    it later. The following is the command to add JDB to JVM:
+
+
+    ```
+
+    ```java
+
+    -agentlib:jdwp=transport=dt_shmem,address=jdbconn,server=y,suspend=n TestClass
+
+    ```
+
+
+    Now you can attach the JDB to the JVM with the following command:
+
+
+    ```
+
+    ```
+
+    jdb -attach jdbconn
+
+    ```
+
+    ```
+
+
+    **Note:** Here, the TestClass is not added to the JDB command, because JDB is
+    connected to the running VM instead of launching a new one.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# 6. BASIC COMMANDS
+
+
+    This chapter takes you through the basic commands of JDB. After launching a session,
+    these commands are used for debugging a program.
+
+    The following is the list of commands used for debugging.
+
+
+    | Name | Description |
+
+    | --- | --- |
+
+    | help or ? | The most important JDB command; it displays a list of of recognized
+    commands with a brief description. |
+
+    | run | After starting JDB and setting the necessary breakpoints, you can use
+    this command to start execution and debug an application. |
+
+    | cont | Continues execution of the debugged application after a breakpoint, exception,
+    or step. |
+
+    | print | Displays Java objects and and primitive values. |
+
+    | dump | For primitive values, this command is identical to print. For objects,
+    it prints the current value of each field defined in the object. Static and instance
+    fields are included. |
+
+    | threads | Lists the threads that are currently running. |
+
+    | thread | Selects a thread to be the current thread. |
+
+    | where | Dumps the stack of the current thread. |
+
+
+    Example
+
+    Let us assume we have a sample class called Add for the following examples:
+
+
+    Add.java
+
+
+    ```
+
+    public class Add
+
+    {}
+
+    ```
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_17_0.png)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "```\npublic int addition(int x, int y)\n{\n    int z = x+y;\n    return z;\n\
+    }\n\npublic static void main(String ar[] )\n{\n    int a = 5, b = 6;\n    Add\
+    \ ob = new Add();\n    int c = ob.addition(a,b);\n    System.out.println(\"Add:\
+    \ \"+c);\n}\n```\n\nCompile this class Add.java using the following command:\n\
+    \n```\n\\javac Add.java\n```\n\n# Run\n\nThis command executes the main class\
+    \ file, which is added to JDB for debugging. Execute the following commands to\
+    \ run the Add class.\n\n```\n\\jdb Add\ninitializing jdb ...\n>run\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'On executing these commands, you get to see the following output:
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_19_0.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# 7. BREAKPOINTS\n\nThis chapter explains the concept of breakpoints and how\
+    \ to set breakpoints in a program. A breakpoint introduces an explicit stop or\
+    \ pause in the execution of a program at a particular line of code while debugging.\
+    \ It is useful to acquire knowledge about variables in the program in its execution.\n\
+    \n# Syntax\n\nThe following command sets up a breakpoint at a particular line\
+    \ number:\n\n```\n> stop at <class name>:::<Line no\n```\n\nThe following command\
+    \ sets up a breakpoint on a particular method or on a particular variable:\n\n\
+    ```\n> stop in <class name>::: Method name | Variable name>\n```\n\n# Example\n\
+    \nThe following example shows how to set up a breakpoint in a class.\n\n```\n\
+    public class Add\n{\n    public int addition( int x, int y)\n    {\n        int\
+    \ z = x+y;\n        return z;\n    }\n    public static void main( String[] )\n\
+    {\n        int a = 5, b = 6;\n    }\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '```
+
+    Add ob = new Add();
+
+
+    int c = ob.addition(a,b);
+
+
+    System.out.println("Add: "+c);
+
+
+    }
+
+    ```
+
+
+    Save the above file as Add.java. Compile this file using the following command:
+
+
+    ```
+
+    \> javac Add.java
+
+    ```
+
+
+    # Debugging
+
+
+    Let us take an example for debugging. Here, we start the debugging process by
+    setting up a breakpoint on main(). Given below are the steps to be followed in
+    the debugging process:
+
+
+    # Step 1: Start a JDB Session
+
+
+    The following command starts a JDB session on the Add class for debugging:
+
+
+    ```
+
+    \> jdb Add
+
+    ```
+
+
+    # Step 2: Set a Breakpoint
+
+
+    The following command sets up a breakpoint on the main() method of Add class.
+
+
+    ```
+
+    > stop in Add.main
+
+    ```
+
+
+    If the breakpoint is set successfully, you get to see the following output:
+
+
+    > Deferring breakpoint Add.main.
+
+
+    It will set after the class is loaded.
+
+    n>'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Step 3: Start Debugging
+
+
+    The following command starts execution of the class Add:
+
+
+    ```
+
+    > run Add
+
+    ```
+
+
+    If you run this command, you get to see the following output. In this output,
+    you find that the execution stops at the breakpoint position, that is at the main()
+    function.
+
+
+    ```
+
+    C:\Windows\system32\cmd.exe - jdb Add
+
+    > run
+
+    run Add
+
+    Set uncaught java.lang.Throwable
+
+    Set deferred uncaught java.lang.Throwable
+
+    UM Started: Set deferred breakpoint Add.main
+
+    Breakpoint hit: "thread-main". Add.main(), line=11 bci=0
+
+    11 int a=5, b=6;
+
+    main[]
+
+    ```
+
+
+    The execution stops at the first line of the main method, that is at "int a=5,
+    b=6;" or no: 11 in the code. You can observe this information in the output.
+
+
+    # Step 4: Continue Execution
+
+
+    The following command continues the program execution:
+
+
+    ```
+
+    cont
+
+    ```
+
+
+    It gives you the remaining execution part and output as follows:
+
+
+    ```
+
+    > Add:11
+
+    The application exited
+
+    \>
+
+    ```'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# 8. STEPPING\n\nThis chapter explains how to use the concept of Stepping in\
+    \ debugging a program. Stepping is the debugger feature that lets you execute\
+    \ the code by stepping through line by line. Using this, you can examine each\
+    \ line of the code to ensure they are behaving as intended.\n\nThe following commands\
+    \ are used in the stepping process:\n\n+   - step: steps to the next line of execution\n\
+    - list: examines where you are in the code\n- cont: continues the remaining execution\n\
+    \n# Example\n\nThe following class uses the Add class that we have used in the\
+    \ previous chapter:\n\n```\npublic class Add\n{\n    public int addition(int x,\
+    \ int y)\n    {\n        int z = x+y;\n        return z;\n    }\n\n    public\
+    \ static void main(String ar[ ])\n    {\n        int a = 5, b = 6;\n        Add\
+    \ ob = new Add();\n        int c = ob.addition(a,b);\n        System.out.println(\"\
+    Add: \"+c);\n    }\nn\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    Save the above file as Add.java. Compile this file using the following command:
+
+
+    ```
+
+    \javac Add.java
+
+    ```
+
+
+    Let us assume the breakpoint is set on the main() method of the Add class. The
+    following steps show how to apply stepping in the Add class.
+
+
+    # Step 1: Execute the Job
+
+
+    The following command starts executing the class named Add.
+
+
+    ```
+
+    > run Add
+
+    ```
+
+
+    If you execute this command, you get to see the following output. In this output,
+    you can find that the execution stops at the breakpoint position, i.e., at the
+    main() method.
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_24_0.png)
+
+
+    The execution stops at the first line of the main method, that is at "int a=5,
+    b=6;" or Line no: 11 in the code. You can observe this information in the output.
+
+
+    # Step 2: Step through the Code
+
+
+    The following command steps the execution to the next line.
+
+
+    ```
+
+    main[1] step
+
+    ```
+
+
+    Now the execution steps to Line no: 12. You get to see the following output.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# Java Debugger\n\n```\n```C:\\Windows\\system32\\cmd.exe\nmain[1] step\nStep\
+    \ completed: \"thread-main\", Add.main(), line=12 bci=5\n  Add ob = new Add();\n\
+    ```\n```\n\n# Step 3: List the Code\n\nThe following command lists the code:\n\
+    \n```\nmain[1] list\n```\n\nYou get the following output. List command is used\
+    \ to let you know the line in the code up to which the program control has reached.\
+    \ Notice the arrow mark => in the following screenshot that shows the current\
+    \ position of the program control.\n\n```\n```C:\\Windows\\system32\\cmd.exe\n\
+    main[i] list\n  public static void main(String[] j) {\n    int a = 5, b = 6;\n\
+    \    => Add ob = new Add();\n    int c = ob.addition(a,b);\n    System.out.println(\"\
+    Add:\"+c);\n  }\n```\n```\n\n# Step 4: Continue Execution\n\nThe following command\
+    \ continues to execute the code:\n\n```\nmain[1] cont\n```\n\nThis command continues\
+    \ executing the remaining lines of the code. The output is shown below:\n\n+ \
+    \  * Add:11\nThe application exited\n\\>"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "Generally, there are three types of stepping:\n\n+   * Step Into\n* Step Over\n\
+    * Step Out\n\n# Step Into\n\nUsing this command, you can step to the next line\
+    \ of the code. If the next line of the code is a function call, then it enters\
+    \ the function by driving the control at the top line of the function.\n\nIn the\
+    \ following code, the arrow mark defines the controller in the code.\n\n```\n\
+    public class Add\n{\n    public int addition( int x, int y)\n    {\n        int\
+    \ z = x+y;\n        return z;\n    }\n\n    public static void main( String ar[]\
+    \ )\n    {\n        int a = 5, b = 6;\n        -> Add ob = new Add();\n      \
+    \  int c = ob.addition(a,b);\n        System.out.println(\"Add: \"+c);\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "If you use the step into command, the controller moves to the next line, i.e.,\
+    \ \"int c = ob.addition(a,b);\". At this line, there is a function call addition(int,\
+    \ int) hence the controller moves to the topmost line of the addition function\
+    \ with the arrow mark\n\n```\npublic class Add\n{\n    public int addition(int\
+    \ x, int y)\n    -> {\n        int z = x+y;\n        return z;\n    }\n\n    public\
+    \ static void main(String ar[ ] )\n{\n        int a = 5, b = 6;\n        Add ob\
+    \ = new Add();\n        int c = ob.addition(a,b);\n        System.out.println(\"\
+    Add: \"+c);\n    }\n}\n```\n\n# Step Over\n\nStep Over also executes the next\
+    \ line. But if the next line is a function call, it executes that function in\
+    \ the background and returns the result.\n\nLet us take an example. In the following\
+    \ code, the arrow mark defines the control in the code.\n\n```\npublic class Add\n\
+    {\"\n```\n\n![](img/bf2d1ac3cc200346937a3b901a9ff2f3_27_0.png)"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\npublic int addition(int x, int y)\n{\n    int z = x+y;\n    return z;\n\
+    }\npublic static void main(String ar[ ]\n{\n    int a = 5, b = 6;\n    Add ob\
+    \ = new Add();\n    int c = ob.addition(a,b);\n    System.out.println(\"Add: \"\
+    +c);\n}\n```\n\nstep over command, the control moves to the next line, i.e., \"\
+    int c = ob.addition(a,b)\". In this line, there is a function call addition(int,\
+    \ int) hence the function execution is done in the background and the result is\
+    \ returned to the current line with the arrow mark as shown below:\n\n```\npublic\
+    \ class Add\n{\n    public int addition(int x, int y)\n{\n        int z = x+y;\n\
+    \        return z;\n}\n    public static void main(String ar[ ]\n{\\}\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "Java Debugger\n\n```\nint a = 5, b = 6;\nAdd ob = new Add();\n-> int c = ob.addition(a,b);\n\
+    System.out.println(\"Add: \"+c);\n```\n\n# # Step Out\n\nStep Out executes the\
+    \ next line. If the next line is a function call, it skips that and the function\
+    \ execution continues with the remaining lines of the code.\n\nLet us take an\
+    \ example. In the following code, the arrow mark defines the controller in the\
+    \ code.\n\n```\npublic class Add {\n    public int addition(int x, int y) {\n\
+    \        int z = x+y;\n        return z;\n    }\n\n    public static void main(\
+    \ String ar[ ] ) {\n        int a = 5, b = 6;\n        -> Add ob = new Add();\n\
+    \        int c = ob.addition(a,b);\n        System.out.println(\"Add: \"+c);\n\
+    \    }\n}\n```\n\n25"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "```\n}\n```\n\nIf you use the step out command, the controller moves to the\
+    \ next line, i.e., \"int c = ob.addition(a,b)\\\n\n```\npublic class Add\n{\n\
+    \    public int addition( int x, int y)\n    {\n        int z = x+y;\n       \
+    \ return z;\n    }\n\n    public static void main( String ar[ ] )\n    {\n   \
+    \     int a = 5, b = 6;\n        Add ob = new Add();\n        int c = ob.addition(a,b);\n\
+    \        System.out.println(\"Add: \"+c);\n    }\n}\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# 9. EXCEPTION\n\nThis chapter explains how to handle the exception class JDB.\
+    \ Generally, whenever a program raises an exception without a catch statement,\
+    \ then the VM prints the exception line, the cause of the exception, and exits.\
+    \ If the exception has been raised with a catch statement, then the exception\
+    \ is handled by the catch statement. Here, the VM prints the output with the cause\
+    \ of exception.\n\nWhen the class raises the exception is running using JDB, it\
+    \ also throws the **uncaught** exception. That exception can be handled using\
+    \ the **catch** command.\n\n# Example\n\nLet us take an example of the class JdbException:\n\
+    \n```\npublic class JdbException\n{\n    public static void main(String ar[])\
+    \ throws Exception\n    {\n        int a=8, b=0;\n        System.out.println(\"\
+    Welcome\");\n        System.out.println(\"Ex: \"+(a/b));\n    }\n}\n```\n\nSave\
+    \ the above file with the name JdbException.java. Compile this file using the\
+    \ following command:\n\n```\n\\javac JdbException.java\n```\n\nFollow the steps\
+    \ given below to handle the exception."
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Step 1: Run the Class
+
+
+    The following command executes the class named JdbException as follows:
+
+
+    ```
+
+    >jdb JdbException
+
+    >run
+
+    ```
+
+
+    This JdbException class contains an exception, hence you get to see the following
+    output:
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_32_0.png)
+
+
+    # Step 2: Catch the Exception
+
+
+    The following command catch catches the exception:
+
+
+    ```
+
+    mian[1] catch java.lang.ArithmeticException
+
+    ```
+
+
+    It will give you the following output:
+
+
+    ```
+
+    Set all java.lang.ArithmeticException
+
+    ```
+
+
+    # Step 3: Continue Execution
+
+
+    The following command continues the execution. Now the catch handles the arithmetic
+    exception as follows:'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\nC:\\Windows\\system32\\cmd.exe\nmain[1] cont:\n> Exception in thread \"\
+    main\" java.lang.ArithmeticException: / by zero\n    at JdbException.main(JdbException.java:?)\n\
+    The application exited\nC:\\Users\\Satish Kumar\\Desktop\\jdb\\>\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# 10. JDB IN ECLIPSE\n\nThis chapter explains how to use JDB in Eclipse. Before\
+    \ proceeding further, you need to install Eclipse Indigo. Follow the steps given\
+    \ below to install Eclipse Indigo on your system.\n\n# Step 1: Download and Install\
+    \ Eclipse\n\nYou can download Eclipse from the following link:\n://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/indigosr2.\n\
+    \n# Step 2: Create a New Project and a New Class\n\n+   - Create a new Java project\
+    \ by following the options File -> New -> Java project.\n- Name it as \"sampledebug\"\
+    .\n- Create a new class by right clicking on the sampledebug project.\n- Select\
+    \ options ->new -> class\n- Name it as \"Add.java\"\n\n# Add.java\n\n```\npublic\
+    \ class Add\n{\n    public int addition(int x, int y)\n    {\n        int z =\
+    \ x+y;\n        return z;\n    }\n\n    public static void main(String ar[ ] )\n\
+    ```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "```\n{\n  int a = 5, b = 6;\n\n  Add ob = new Add();\n\n  int c = ob.addition(a,b);\n\
+    \n  System.out.println(\"Add: \"+c);\n}\n```\n\n# Step 3: Open the Debug Perspective\n\
+    \nFollow the instructions given below to open the debug perspective.\n\nOn the\
+    \ Eclipse IDE, go to Window -> Open perspective -> Debug. Now you get the debug\
+    \ perspective for the program Add.java. You get to see the following window.\n\
+    \n![](img/bf2d1ac3cc200346937a3b901a9ff2f3_35_0.png)"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Java Debugger
+
+
+    # Sections in Debug Perspective
+
+
+    The sections in the Debug perspective are as follows:
+
+
+    # Coding Section
+
+
+    Java code is displayed in this section. It is the code you want to debug, that
+    is, Add.java. Here we can add a breakpoint on a line by double clicking in front
+    of the line. You find the blue bubble with an arrow symbol to point out the breakpoint
+    of that line. See the following screenshot; you can find the selected area with
+    a red circle pointed as “1”.
+
+
+    +   1. Double click where you can set the breakpoint for this line.
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_36_0.png)
+
+
+    # Breakpoint Section
+
+
+    This section defines the list of breakpoints that are set to the program code.
+    Here we can add, delete, find, and manage the breakpoints. The following screenshot
+    shows the breakpoint section.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '![](img/bf2d1ac3cc200346937a3b901a9ff2f3_37_0.png)
+
+
+    Observe the following options in the given screenshot:
+
+
+    +   1. Using the check box in the left, we can select or deselect a breakpoint.
+    Here, we use one breakpoint, i.e., Add class-main() method.
+
+    2. The single cross icon "X" is used to delete the selected breakpoint.
+
+    3. The double cross icon "XX" is used to delete all the breakpoints in your code.
+
+    4. The arrow pointer is used to point to the code where the selected breakpoint
+    is applied.
+
+
+    The remaining functionalities in the breakpoint section are as follows:
+
+
+    +   - **Hitcount**: It shows how many times the control hits this breakpoint.
+    It is used for recursive logic.
+
+    - **Suspend thread**: We can suspend the current thread by selecting it.
+
+    - **Suspend VM**: We can suspend the VM by selecting it.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Java Debugger
+
+
+    # Debug Section
+
+
+    This section is used for the process of debugging. It contains options that are
+    used in debugging.
+
+
+    **Start debugging:** Follow the instructions given below to start debugging.
+
+
+    Right click on the **code** -> **Debug** as **->** click **1 Java application**.
+
+
+    The process of debugging starts as shown in the following screenshot. It contains
+    some selected options, highlighted using numeric digits.
+
+
+    +   - It is used to **Resume** the debugging process and skip the current breakpoint.
+    It works similar to the **cont** command in the JDB command line.
+
+
+    +   - It is used to stop the debugging process.
+
+
+    +   - It works similar to the **step in** process in the JDB command line. It
+    is used for moving the control to the next line, i.e., "1" moves to the next line.
+
+
+    +   - It is used to see on which line the breakpoint is applied.
+
+
+    ![](img/bf2d1ac3cc200346937a3b901a9ff2f3_38_0.png)
+
+
+    Follow the given steps and sections to debug your code in eclipse IDE. By default,
+    every IDE contains this debugging process.'
+  merge: -1
+  pgno: 38
