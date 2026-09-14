@@ -1,0 +1,3403 @@
+- img_proc: true
+  md: '# JAVA DESIGN PATTERNS
+
+
+    problem solving approaches
+
+
+    tutorialspoint
+
+    SIMPLY EASY LEARNING
+
+
+    www.tutorialspoint.com
+
+
+    +   - https://www.facebook.com/tutorialspointindia
+
+    - https://twitter.com/tutorialspoint'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# About the Tutorial
+
+
+    Design patterns represent the best practices used by experienced object-oriented
+    software developers. Design patterns are solutions to general problems that software
+    developers faced during software development. These solutions were obtained by
+    trial and error by numerous software developers over quite a substantial period
+    of time.
+
+
+    This tutorial will take you through step by step approach and examples using Java
+    while learning Design Pattern concepts.
+
+
+    # Audience
+
+
+    This reference has been prepared for the experienced developers to provide best
+    solutions to certain problems faced during software development and for unexperienced
+    developers to learn software design in an easy and faster way.
+
+
+    # Prerequisites
+
+
+    Before you start proceeding with this tutorial, we make an assumption that you
+    are already aware of the basic concepts of Java programming.
+
+
+    # Copyright & Disclaimer
+
+
+    © Copyright 2015 by Tutorials Point (I) Pvt. Ltd.
+
+
+    All the content and graphics published in this e-book is the property of Tutorials
+    Point (I) Pvt. Ltd. The user of this e-book is prohibited to reuse, retain, copy,
+    distribute or publish any contents or a part of contents of this e-book in any
+    manner without written consent of the publisher.
+
+
+    We strive to update the contents of our website and tutorials as timely and as
+    precisely as, however, the contents may contain inaccuracies or errors. Tutorials
+    Point (I) Pvt. Ltd. provides no guarantee regarding the accuracy, timeliness or
+    completeness of our website or its contents including this tutorial. If you discover
+    any errors on our website or in this tutorial, please notify us at contact@tutorialspoint.com
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_1_0.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   About the Tutorial................................................................................................i
+
+
+    +   Audience................................................................................................................i
+
+
+    +   Prerequisites..................................................................................................i
+
+
+    +   Copyright & Disclaimer..................................................................................i
+
+
+    +   Table of Contents..............................................................................................ii
+
+
+    +   1. DESIGN PATTERN OVERVIEW ................................................................
+    1
+
+
+    +   What is Gang of Four (GOF)?.......................................................................
+    1
+
+
+    +   Usage of Design Pattern ..........................................................................
+    1
+
+
+    +   Types of Design Patterns .......................................................................
+    1
+
+
+    +   2. FACTORY PATTERN ........................................................................
+    3
+
+
+    +   Implementation...............................................................................................
+    3
+
+
+    +   3. ABSTRACT FACTORY PATTERN ................................................
+    7
+
+
+    +   Implementation...............................................................................................
+    7
+
+
+    +   4. SINGLETON PATTERN .......................................................
+    15
+
+
+    +   Implementation...............................................................................................
+    15
+
+
+    +   5. BUILDER PATTERN ............................................................
+    18
+
+
+    +   Implementation...............................................................................................
+    18
+
+
+    +   6. PROTOTYPE PATTERN .......................................................
+    26
+
+
+    +   Implementation...............................................................................................
+    26
+
+
+    +   7. ADAPTER PATTERN......................................................................
+    32
+
+
+    +   Implementation...............................................................................................
+    32
+
+
+    +   8. BRIDGE PATTERN ............................................................
+    38
+
+
+    +   Implementation...............................................................................................
+    38
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_2_0.png)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '+   9. FILTER PATTERN ................................................................................................42
+
+
+    +   Implementation ...................................................................................................42
+
+
+    +   10. COMPOSITE PATTERN ................................................................................50
+
+
+    +   Implementation ...................................................................................................50
+
+
+    +   11. DECORATOR PATTERN...............................................................................54
+
+
+    +   Implementation ...................................................................................................54
+
+
+    +   12. FACADE PATTERN ................................................................................59
+
+
+    +   Implementation ...................................................................................................59
+
+
+    +   13. FLYWEIGHT PATTERN ................................................................63
+
+
+    +   Implementation ...................................................................................................63
+
+
+    +   14. PROXY PATTERN ................................................................................69
+
+
+    +   Implementation ...................................................................................................69
+
+
+    +   15. CHAIN OF RESPONSIBILITY PATTERN .......................................72
+
+
+    +   Implementation ...................................................................................................72
+
+
+    +   16. COMMAND PATTERN ................................................................77
+
+
+    +   Implementation ...................................................................................................77
+
+
+    +   17. INTERPRETER PATTERN ...............................................................81
+
+
+    +   Implementation ...................................................................................................81
+
+
+    +   18. ITERATOR PATTERN ................................................................85
+
+
+    +   Implementation ...................................................................................................85
+
+
+    +   19. MEDIATOR PATTERN ...............................................................88
+
+
+    +   Implementation ...................................................................................................88
+
+
+    +   20. MEMENTO PATTERN ................................................................91
+
+
+    +   Implementation .................................................................................................91
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_3_0.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '+   21. OBSERVER PATTERN ................................................................................
+    95
+
+
+    Implementation .......................................................................................
+    95
+
+
+    +   22. STATE PATTERN .................................................................................
+    100
+
+
+    Implementation ......................................................................................
+    100
+
+
+    +   23. NULL OBJECT PATTERN.................................................................................
+    104
+
+
+    Implementation ......................................................................................
+    104
+
+
+    +   24. STRATEGY PATTERN ............................................................................
+    108
+
+
+    Implementation ......................................................................................
+    108
+
+
+    +   25. TEMPLATE PATTERN...............................................................................
+    112
+
+
+    Implementation ......................................................................................
+    112
+
+
+    +   26. VISITOR PATTERN ..............................................................................
+    116
+
+
+    Implementation ......................................................................................
+    116
+
+
+    +   27. MVC PATTERN ................................................................................
+    121
+
+
+    Implementation ......................................................................................
+    121
+
+
+    +   28. BUSINESS DELEGATE PATTERN......................................................
+    126
+
+
+    Implementation ......................................................................................
+    126
+
+
+    +   29. COMPOSITE ENTITY PATTERN.......................................................
+    131
+
+
+    Implementation ......................................................................................
+    131
+
+
+    +   30. DATA ACCESS OBJECT PATTERN ................................................
+    136
+
+
+    Implementation ......................................................................................
+    136
+
+
+    +   31. FRONT CONTROLLER PATTERN.......................................................
+    141
+
+
+    Implementation ......................................................................................
+    141
+
+
+    +   32. INTERCEPTNG FILTER PATTERN ....................................... 145
+
+
+    Implementation ......................................................................................
+    145
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   33. SERVICE LOCATOR PATTERN.....................................................................................
+    151
+
+
+    +   Implementation ............................................................................................................151
+
+
+    +   34. TRANSFER OBJECT PATTERN....................................................................................
+    157
+
+
+    +   Implementation ............................................................................................................157'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# # 1. DESIGN PATTERN OVERVIEW
+
+
+    Design patterns represent the best practices used by experienced object-oriented
+    software developers. Design patterns are solutions to general problems that software
+    developers faced during software development. These solutions were obtained by
+    trial and error by numerous software developers over quite a substantial period
+    of time.
+
+
+    # ## What is Gang of Four (GOF)?
+
+
+    In 1994, four authors Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides
+    published a book titled **Design Patterns - Elements of Reusable Object-Oriented
+    Software** which initiated the concept of Design Pattern in Software development.
+
+
+    These authors are collectively known as **Gang of Four (GOF)**. According to these
+    authors design patterns are primarily based on the following principles of object
+    oriented design.
+
+
+    +   - Program to an interface not an implementation
+
+    - Favor object composition over inheritance
+
+
+    # ## Usage of Design Pattern
+
+
+    Design Patterns have two main usages in software development.
+
+
+    # ## Common platform for developers
+
+
+    Design patterns provide a standard terminology and are specific to particular
+    scenario. For example, a singleton design pattern signifies the use of single
+    object so all developers familiar with single design pattern will make use of
+    single object and can tell each other that program is following a singleton pattern.
+
+
+    # ## Best Practices
+
+
+    Design patterns have been evolved over a long period of time and they provide
+    best solutions to certain problems faced during software development. Learning
+    these patterns help inexperienced developers to learn software design in an easy
+    and fast way.
+
+
+    # ## Types of Design Patterns
+
+
+    As per the design pattern reference book **Design Patterns - Elements of Reusable
+    Object-Oriented Software**, there are 23 design patterns which can
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_6_0.png)'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'be classified in three categories: Creational, Structural and Behavioral patterns.
+
+    We will also discuss category of design pattern: J2EE design patterns.
+
+
+    | S.N. | Pattern & Description |
+
+    | 1 | Creational Patterns
+
+    These design patterns provide a way to create objects while hiding the creation
+    logic, rather than instantiating objects directly using new operator. This gives
+    more flexibility to the program in deciding which objects need to be created for
+    a given use case. |
+
+    | 2 | Structural Patterns
+
+    These design patterns concern class and object composition. Concept of inheritance
+    is used to compose interfaces and define ways to compose objects to obtain new
+    functionalities. |
+
+    | 3 | Behavioral Patterns
+
+    These design patterns are specifically concerned with communication between objects.
+    |
+
+    | 4 | J2EE Patterns
+
+    These design patterns are specifically concerned with the presentation tier. These
+    patterns are identified by Sun Java Center. |'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# 2. FACTORY PATTERN\n\nFactory pattern is one of most used design patterns\
+    \ in Java. This type of design pattern comes under creational pattern as this\
+    \ pattern provides one of the best ways to create an object.\n\nIn Factory pattern,\
+    \ we create objects without exposing the creation logic to the client and refer\
+    \ to newly created object using a common interface.\n\n# Implementation\n\nWe\
+    \ are going to create a Shape interface and concrete classes implementing the\
+    \ Shape interface. A factory class ShapeFactory is defined as a next step.\n\n\
+    FactoryBeanDemo, our demo class, will use ShapeFactory to get a Shape object.\
+    \ It will pass information (CIRCLE / RECTANGLE / SQUARE) to ShapeFactory to get\
+    \ the type of object it needs.\n\n![](img/6426660228f292f87ed477d27e961d81_8_0.png)\n\
+    \n# Step 1\n\nCreate an interface.\n\nShape.java\n\n```\npublic interface Shape\
+    \ {\n    void draw();\n}\n```"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "```\n}\n```\n\n# Step 2\n\nCreate concrete classes implementing the same interface.\n\
+    \n# Rectangle.java\n\n```\npublic class Rectangle implements Shape {\n\n  @Override\n\
+    \  public void draw() {\n    System.out.println(\"Inside Rectangle::draw() method.\"\
+    );\n  }\n}\n```\n\n# Square.java\n\n```\npublic class Square implements Shape\
+    \ {\n\n  @Override\n  public void draw() {\n    System.out.println(\"Inside Square::draw()\
+    \ method.\");\n  }\n}\n```\n\n# Circle.java\n\n```\npublic class Circle implements\
+    \ Shape {\n\n  @Override\n  public void draw() {\n    System.out.println(\"Inside\
+    \ Circle::draw() method.\");\n  }\n}\n```"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# Step 3\n\nCreate a Factory to generate object of concrete class based on\
+    \ given information.\n\n# ShapeFactory.java\n\n```\npublic class ShapeFactory\
+    \ {\n\n    //use getShape method to get object of type shape\n    public Shape\
+    \ getShape(String shapeType){\n        if(shapeType == null){\n            return\
+    \ null;\n        }\n        if(shapeType.equalsIgnoreCase(\"CIRCLE\"))\n     \
+    \       return Circle();\n        } else if(shapeType.equalsIgnoreCase(\"RECTANGLE\"\
+    ))\n            return Rectangle();\n        } else if(shapeType.equalsIgnoreCase(\"\
+    SQUARE\"))\n            return Square();\n        }\n        return null;\n  \
+    \  }\n}\n```\n\n# Step 4\n\nUse the Factory to get object of concrete class by\
+    \ passing an information such as type.\n\n# FactoryPatternDemo.java\n\n```\npublic\
+    \ class FactoryPatternDemo {\n\n    public static void main(String[] args) {\n\
+    \        ShapeFactory shapeFactory = new ShapeFactory();\n\n        //get an object\
+    \ of Circle and call its draw method.\n        Shape shape1 = shapeFactory.getShape(\"\
+    CIRCLE\");\n    }\n```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '```
+
+    //call draw method of Circle
+
+    shape1.draw();
+
+
+    //get an object of Rectangle and call its draw method.
+
+    Shape shape2 = shapeFactory.getShape("RECTANGLE");
+
+
+    //call draw method of Rectangle
+
+    shape2.draw();
+
+
+    //get an object of Square and call its draw method.
+
+    Shape shape3 = shapeFactory.getShape("SQUARE");
+
+
+    //call draw method of circle
+
+    shape3.draw();
+
+    }
+
+    }
+
+    ```
+
+
+    # Step 5
+
+
+    Verify the output.
+
+
+    | Inside Circle::draw() method |
+
+    | Inside Rectangle::draw() method |
+
+    | Inside Square::draw() method |'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# 3. ABSTRACT FACTORY PATTERN
+
+
+    Abstract Factory patterns work around a super-factory which creates other factories.
+    This factory is also called as factory of factories. This type of design pattern
+    comes under creational pattern as this pattern provides one of the best ways to
+    create an object.
+
+
+    In Abstract Factory pattern, an interface is responsible for creating a factory
+    of related objects without explicitly specifying their classes. Each generated
+    factory can give the objects as per the Factory pattern.
+
+
+    # Implementation
+
+
+    We are going to create a Shape and Color interfaces and concrete classes implementing
+    these interfaces. We create an abstract factory class AbstractFactory as next
+    step. Factory classes ShapeFactory and ColorFactory are defined where each factory
+    extends AbstractFactory. A factory creator/generator class PatternProducer is
+    created.
+
+
+    AbstractFactoryPatternDemo, our demo class, uses FactoryProducer to get an AbstractFactory
+    object. It will pass information (CIRCLE / RECTANGLE / SQUARE for Shape) to AbstractFactory
+    to get the type of object it needs. It also passes information (RED / GREEN /
+    BLUE for Color) to AbstractFactory to get the type of object it needs.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "![](img/6426660228f292f87ed477d27e961d81_13_0.png)\n\n# # Step 1\n\nCreate\
+    \ an interface for Shapes.\n\n# ## Shape.java\n\n```\n```java\npublic interface\
+    \ Shape {\n    void draw();\n}\\```\n```\n\n# ## Step 2\n\nCreate concrete classes\
+    \ implementing the same interface.\n\n# ## Rectangle.java\n\n```\n```java\npublic\
+    \ class Rectangle implements Shape {\n\n    @Override\n    public void draw()\
+    \ {\n        System.out.println(\"Inside Rectangle::draw(method)\");\n    }\n\
+    ```\n```"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "```\n}\n}\n```\n\n# Square.java\n\n```\npublic class Square implements Shape\
+    \ {\n\n    @Override\n    public void draw() {\n        System.out.println(\"\
+    Inside Square::draw() method.\");\n    }\n}\n```\n\n# Circle.java\n\n```\npublic\
+    \ class Circle implements Shape {\n\n    @Override\n    public void draw() {\n\
+    \        System.out.println(\"Inside Circle::draw() method.\");\n    }\n}\n```\n\
+    \n# Step 3\n\nCreate an interface for Colors.\n\n# Color.java\n\n```\npublic interface\
+    \ Color {\n    void fill();\n}\n```\n\n# Step4\n\nCreate concrete classes implementing\
+    \ the same interface."
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# Red.java\n\n```\npublic class Red implements Color {\n\n    @Override\n \
+    \   public void fill() {\n        System.out.println(\"Inside Red::fill() method.\"\
+    );\n    }\n}\n```\n\n# Green.java\n\n```\npublic class Green implements Color\
+    \ {\n\n    @Override\n    public void fill() {\n        System.out.println(\"\
+    Inside Green::fill() method.\");\n    }\n}\n```\n\n# Blue.java\n\n```\npublic\
+    \ class Blue implements Color {\n\n    @Override\n    public void fill() {\n \
+    \       System.out.println(\"Inside Blue::fill() method.\");\n    }\n}\n```\n\n\
+    # Step 5\n\nCreate an Abstract class to get factories for Color and Shape Objects.\n\
+    \n# AbstractFactory.java\n\n```\npublic abstract class AbstractFactory {\n   \
+    \ abstract Color getColor(String color);\n```\n\n![](img/6426660228f292f87ed477d27e961d81_15_0.png)"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "```\nabstract Shape getShape(String shape);\n}\n```\n\n# Step 6\n\nCreate Factory\
+    \ classes extending AbstractFactory to generate object of concrete class based\
+    \ on given information.\n\n# ShapeFactory.java\n\n```\npublic class ShapeFactory\
+    \ extends AbstractFactory {\n\n    @Override\n    public Shape getShape(String\
+    \ shapeType) {\n        if(shapeType == null) {\n            return null;\n  \
+    \      }\n        if(shapeType.equalsIgnoreCase(\"CIRCLE\")) {\n            return\
+    \ new Circle();\n        } else if (shapeType.equalsIgnoreCase(\"RECTANGLE\"))\
+    \ {\n            return new Rectangle();\n        } else if (shapeType.equalsIgnoreCase(\"\
+    SQUARE\")) {\n            return new Square();\n        }\n        return null;\n\
+    \    }\n\n    @Override\n    Color getColor(String color) {\n        return null;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# ColorFactory.java\n\n```\npublic class ColorFactory extends AbstractFactory\
+    \ {\n\n    @Override\n    public Shape getShape(String shapeType){\n        return\
+    \ null;\n    }\n\n    @Override\n    Color getColor(String color) {\n        if(color\
+    \ == null){\n            return null;\n        }\n        if(color.equalsIgnoreCase(\"\
+    RED\")){\n            return Red();\n        } else if(color.equalsIgnoreCase(\"\
+    GREEN\")){\n            return Green();\n        } else if(color.equalsIgnoreCase(\"\
+    BLUE\")){\n            return Blue();\n        }\n        return null;\n    }\n\
+    }\n```\n\n# Step 7\n\nCreate a Factory generator/producer class to get factories\
+    \ by passing an information such as Shape or Color\n\n# FactoryProducer.java\n\
+    \n```\npublic class FactoryProducer {\n\n    public static AbstractFactory getFactory(String\
+    \ choice) {\n        if(choice.equalsIgnoreCase(\"SHAPE\")){\n            return\
+    \ new ShapeFactory();\n        } else if(choice.equalsIgnoreCase(\"COLOR\"))\n\
+    ```\n\n![](img/6426660228f292f87ed477d27e961d81_17_0.png)"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "```\nreturn new ColorFactory();\n}\nreturn null;\n}\n```\n\n# Step 8\n\nUse\
+    \ the FactoryProducer to get AbstractFactory in order to get factories of concrete\
+    \ classes by passing an information such as type.\n\n# AbstractFactoryPatternDemo.java\n\
+    \n```\npublic class AbstractFactoryPatternDemo {\n    public static void main(String[]\
+    \ args) {\n\n        // get shape factory\n        AbstractFactory shapeFactory\
+    \ = FactoryProducer.getFactory(\"SHAPE\");\n\n        // get an object of Shape\
+    \ Circle\n        Shape shape1 = shapeFactory.getShape(\"CIRCLE\");\n\n      \
+    \  // call draw method of Shape Circle\n        shape1.draw();\n\n        // get\
+    \ an object of Shape Rectangle\n        Shape shape2 = shapeFactory.getShape(\"\
+    RECTANGLE\");\n\n        // call draw method of Shape Rectangle\n        shape2.draw();\n\
+    \n        // get an object of Shape Square\n        Shape shape3 = shapeFactory.getShape(\"\
+    SQUARE\");\n\n        // call draw method of Shape Square\n        shape3.draw();\n\
+    ```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '```
+
+    //get color factory
+
+    AbstractFactory colorFactory = FactoryProducer.getFactory("COLOR");
+
+
+    // get an object of Color Red
+
+    Color color1 = colorFactory.getColor("RED");
+
+
+    // call fill method of Red
+
+    color1.fill();
+
+
+    // get an object of Color Green
+
+    Color color2 = colorFactory.getColor("Green");
+
+
+    // call fill method of Green
+
+    color2.fill();
+
+
+    // get an object of Color Blue
+
+    Color color3 = colorFactory.getColor("BLUE");
+
+
+    // call fill method of Color Blue
+
+    color3.fill();
+
+    }
+
+    ```
+
+
+    # # Step 9
+
+
+    Verify the output.
+
+
+    Inside Circle::draw() method.
+
+    Inside Rectangle::draw() method.
+
+    Inside Square::draw() method.
+
+    Inside Red::fill() method.
+
+    Inside Green::fill() method.
+
+    Inside Blue::fill() method.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_19_0.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# 4. SINGLETON PATTERN
+
+
+    Singleton pattern is one of the simplest design patterns in Java. This type of
+    design comes under creational pattern as this pattern provides one of the best
+    ways to create an object.
+
+
+    This pattern involves a single class which is responsible to create an object
+    while making sure that only single object gets created. This class provides a
+    way to access its only object which can be accessed directly without instantiating
+    the object of the class.
+
+
+    # Implementation
+
+
+    We are going to create a SingletonObject class which has its constructor private
+    and a static instance of itself.
+
+
+    SingletonObject class provides a static method to get its static instance to outside
+    world. SingletonPatternDemo, our demo class, will use SingletonObject class to
+    get a SingletonObject object.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_20_0.png)'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# Step 1\n\nCreate a Singleton Class.\n\n# SingletonObject.java\n\n```\npublic\
+    \ class SingletonObject {\n\n    //create an object of SingletonObject\n    private\
+    \ static SingletonObject instance = new SingletonObject();\n\n    //make the constructor\
+    \ private so that this class cannot be\n    //instantiated\n    private SingletonObject(){\n\
+    \n    //Get the only object available\n    public static SingletonObject getInstance(){\n\
+    \        return instance;\n    }\n\n    public void showMessage(){\n        System.out.println(\"\
+    Hello World!\");\n    }\n}\n```\n\n# Step 2\n\nGet the only object from the singleton\
+    \ class.\n\n# SingletonPatternDemo.java\n\n```\npublic class SingletonPatternDemo\
+    \ {\n    public static void main(String[] args) {\n\n        //illegal construct\n\
+    \        //Compile Time Error: The constructor SingletonObject() is not visible\n\
+    \        //SingletonObject object = new SingletonObject();\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_21_0.png)"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '```
+
+    //Get the only object available
+
+    SingleObject object = SingleObject.getInstance();
+
+
+    //show the message
+
+    object.showMessage();
+
+    }
+
+
+    ```
+
+
+    # Step 3
+
+
+    Verify the output.
+
+
+    | Hello World! |'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# 5. BUILDER PATTERN
+
+
+    Builder pattern builds a complex object using simple objects and using a step
+    step approach. This type of design pattern comes under creational pattern as this
+    pattern provides one of the best ways to create an object.
+
+
+    A builder class builds the final object step by step. This builder is independent
+    of other objects.
+
+
+    # Implementation
+
+
+    We have considered a business case of fast-food restaurant where a typical meal
+    could be a burger and a cold drink. Burger could be either a Veg Burger or Chicken
+    Burger and will be packed by a wrapper. Cold drink could be either a coke or pepsi
+    and will be packed in a bottle.
+
+
+    We are going to create an Item interface representing food items such as burgers
+    and cold drinks and concrete classes implementing the Item interface and a Packing
+    interface representing packaging of food items and concrete classes implementing
+    the Packing interface as burger would be packed in wrapper and cold drink would
+    be packed as bottle.
+
+
+    We then create a Meal class having ArrayList of Item and a MealBuilder to build
+    different types of Meal objects by combining Item. BuilderPatternDemo, our demo
+    class, will use MealBuilder to build a Meal.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "![](img/6426660228f292f87ed477d27e961d81_24_0.png)\n\n# # Step 1\n\nCreate\
+    \ an interface Item representing food item and packing.\n\n# Item.java\n\n```\n\
+    public interface Item {\n    public String name();\n    public Packing packing();\n\
+    \    public float price();\n}\n```\n\n# Packing.java\n\n```\npublic interface\
+    \ Packing {\n    public String pack();\n}\n```"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# Step 2\n\nCreate concrete classes implementing the Packing interface.\n\n\
+    Wrapper.java\n\n```\npublic class Wrapper implements Packing {\n\n    @Override\n\
+    \    public String pack() {\n        return \"Wrapper\";\n    }\nn\n```\n\nBottle.java\n\
+    \n```\npublic class Bottle implements Packing {\n\n    @Override\n    public String\
+    \ pack() {\n        return \"Bottle\";\n    }\n}\n```\n\n# Step 3\n\nCreate abstract\
+    \ classes implementing the item interface providing default functionalities.\n\
+    \nBurger.java\n\n```\npublic abstract class Burger implements Item {\n\n    @Override\n\
+    \    public Packing packing() {\n        return new Wrapper();\n    }\n\n    @Override\n\
+    ```\n\n![](img/6426660228f292f87ed477d27e961d81_25_0.png)"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "```\npublic abstract float price();\n}\n```\n\n# ColdDrink.java\n\n```\npublic\
+    \ abstract class ColdDrink implements Item {\n\n    @Override\n    public Packing\
+    \ packing() {\n        return new Bottle();\n    }\n\n    @Override\n    public\
+    \ abstract float price();\n}\n```\n\n# Step 4\n\nCreate concrete classes extending\
+    \ Burger and ColdDrink classes\n\n# VegBurger.java\n\n```\npublic class VegBurger\
+    \ extends Burger {\n\n    @Override\n    public float price() {\n        return\
+    \ 25.0f;\n    }\n\n    @Override\n    public String name() {\n        return \"\
+    Veg Burger\";\n    }\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_26_0.png)"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# ChickenBurger.java\n\n```\npublic class ChickenBurger extends Burger {\n\n\
+    \  @Override\n  public float price() {\n    return 50.5f;\n  }\n\n  @Override\n\
+    \  public String name() {\n    return \"Chicken Burger\";\n  }\n}\n```\n\n# Coke.java\n\
+    \n```\npublic class Coke extends ColdDrink {\n\n  @Override\n  public float price()\
+    \ {\n    return 30.0f;\n  }\n\n  @Override\n  public String name() {\n    return\
+    \ \"Coke\";\n  }\n}\n```\n\n# Pepsi.java\n\n```\npublic class Pepsi extends ColdDrink\
+    \ {\n\n  @Override\n```\n\n![](img/6426660228f292f87ed477d27e961d81_27_0.png)"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\npublic float price() {\n    return 35.0f;\n}\n\n@Override\npublic String\
+    \ name() {\n    return \"Pepsi\";\n}\n\n```\n\n# Step 5\n\nCreate a Meal class\
+    \ having Item objects defined above.\n\n# Meal.java\n\n```\nimport java.util.ArrayList;\n\
+    import java.util.List;\n\npublic class Meal {\n    private List<Item> items =\
+    \ new ArrayList<Item>();\n\n    public void addItem(Item item) {\n        items.add(item);\n\
+    \    }\n\n    public float getCost() {\n        float cost = 0.0f;\n        for\
+    \ (Item item : items) {\n            cost += item.price();\n        }\n      \
+    \  return cost;\n    }\n\n    public void showItems() {\n        for (Item item\
+    \ : items) {\n\n```\n\n![](img/6426660228f292f87ed477d27e961d81_28_0.png)"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "```\nSystem.out.print(\"Item : \"+item.name());\nSystem.out.print(\", Packing\
+    \ : \"+item.packing().pack());\nSystem.out.println(\", Price : \"+item.price());\n\
+    \n}\n}\n\n```\n\n# Step 6\n\nCreate a MealBuilder class, the actual builder class\
+    \ responsible to create Meal objects.\n\n# MealBuilder.java\n\n```\npublic class\
+    \ MealBuilder {\n\n    public Meal prepareVegMeal() {\n    Meal meal = new Meal();\n\
+    \    meal.addItem(new VegBurger());\n    meal.addItem(new Coke());\n    return\
+    \ meal;\n    }\n\n    public Meal prepareNonVegMeal() {\n    Meal meal = new Meal();\n\
+    \    meal.addItem(new ChickenBurger());\n    meal.addItem(new Pepsi());\n    return\
+    \ meal;\n    }\n\n}\n```\n\n# Step 7\n\nBuilderPatternDemo uses MealBuilder to\
+    \ demonstrate builder pattern.\n\n# BuilderPatternDemo.java\n\n```\npublic class\
+    \ BuilderPatternDemo {\n```\n\n![](img/6426660228f292f87ed477d27e961d81_29_0.png)"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "```\npublic static void main(String[] args) {\n    MealBuilder mealBuilder\
+    \ = new MealBuilder();\n\n    Meal vegMeal = mealBuilder.prepareVegMeal();\n \
+    \   System.out.println(\"Veg Meal\");\n    vegMeal.showItems();\n    System.out.println(\"\
+    Total Cost: \" +vegMeal.getCost());\n\n    Meal nonVegMeal = mealBuilder.prepareNonVegMeal();\n\
+    \    System.out.println(\"\\n\\nNon-Veg Meal\");\n    nonVegMeal.showItems();\n\
+    \    System.out.println(\"Total Cost: \" +nonVegMeal.getCost());\n}\n```\n\n#\
+    \ # Step 8\n\nVerify the output.\n\n| Veg Meal |\n| Item : Veg Burger, Packing\
+    \ : Wrapper, Price : 25.0 |\n| Item : Coke, Packing : Bottle, Price : 30.0 |\n\
+    | Total Cost: 55.0 |\n\n| Non-Veg Meal |\n| Item : Chicken Burger, Packing : Wrapper,\
+    \ Price : 50.5 |\n| Item : Pepsi, Packing : Bottle, Price : 35.0 |\n| Total Cost:\
+    \ 85.5 |"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# 6. PROTOTYPE PATTERN
+
+
+    Prototype pattern refers to creating duplicate object while keeping performance
+    in mind. This type of design pattern comes under creational pattern as this pattern
+    provides one of the best ways to create an object.
+
+
+    This pattern involves implementing a prototype interface which tells to create
+    a clone of the current object. This pattern is used when creation of object directly
+    is costly. For example, an object is to be created after a costly database operation.
+    We can cache the object, return its clone on next request and update the database
+    as and needed thus reducing database calls.
+
+
+    # Implementation
+
+
+    We are going to create an abstract class Shape and concrete classes extending
+    the Shape class. A class ShapeCache is defined as a next step which stores shape
+    objects in a Hashtable and returns their clone when requested.
+
+
+    PrototypePatternDemo, our demo, will use ShapeCache class to create a Shape object.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_31_0.png)'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Step 1\n\nCreate an abstract class implementing Cloneable interface.\n\n\
+    Shape.java\n\n```\npublic abstract class Shape implements Cloneable {\n\n    private\
+    \ String id;\n    protected String type;\n\n    abstract void draw();\n\n    public\
+    \ String getType() {\n        return type;\n    }\n\n    public String getId()\
+    \ {\n        return id;\n    }\n\n    public void setId(String id) {\n       \
+    \ this.id = id;\n    }\n\n    public Object clone() {\n        Object clone =\
+    \ null;\n        try {\n            clone = super.clone();\n        } catch (CloneNotSupportedException\
+    \ e) {\n            e.printStackTrace();\n        }\n        return clone;\n \
+    \   }\n}\n```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# Step 2\n\nCreate concrete classes extending the above class.\n\n# Rectangle.java\n\
+    \n```\npublic class Rectangle extends Shape {\n\n    public Rectangle(){\n   \
+    \     type = \"Rectangle\";\n    }\n\n    @Override\n    public void draw() {\n\
+    \        System.out.println(\"Inside Rectangle::draw() method.\");\n    }\n}\n\
+    ```\n\n# Square.java\n\n```\npublic class Square extends Shape {\n\n    public\
+    \ Square(){\n        type = \"Square\";\n    }\n\n    @Override\n    public void\
+    \ draw() {\n        System.out.println(\"Inside Square::draw() method.\");\n \
+    \   }\n}\n```\n\n# Circle.java\n\n```\npublic class Circle extends Shape {\n\n\
+    \    public Circle(){\n        type = \"Circle\";\n    }\n```\n\n![](img/6426660228f292f87ed477d27e961d81_33_0.png)"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "```\n}\n\n@Override\npublic void draw() {\n    System.out.println(\"Inside\
+    \ Circle::draw() method.\");\n}\n\n```\n\n# # Step 3\n\nCreate a class to get\
+    \ concrete classes from database and store them in a Hashtable.\n\n# ## ShapeCache.java\n\
+    \n```\nimport java.util.Hashtable;\n\npublic class ShapeCache {\n\n    private\
+    \ static Hashtable<String, Shape> shapeMap\n        = new Hashtable<String, Shape>();\n\
+    \n    public static Shape getShape(String shapeId) {\n        Shape cachedShape\
+    \ = shapeMap.get(shapeId);\n        return (Shape) cachedShape.clone();\n    }\n\
+    \n    // for each shape run database query and create shape\n    // shapeMap.put(shapeKey,\
+    \ shape);\n    // for example, we are adding three shapes\n    public static void\
+    \ loadCache() {\n        Circle circle = new Circle();\n        circle.setId(\"\
+    1\");\n        shapeMap.put(circle.getId(),circle);\n\n        Square square =\
+    \ new Square();n\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "```\nsquare.setId(\"2\");\nshapeMap.put(square.getId(),square);\n\nRectangle\
+    \ rectangle = new Rectangle();\nrectangle.setId(\"3\");\nshapeMap.put(rectangle.getId(),rectangle);\n\
+    }\n```\n\n# Step 4\n\nPrototypePatternDemo uses ShapeCache class to get clones\
+    \ of shapes stored in a Hashtable.\n\n# PrototypePatternDemo.java\n\n```\npublic\
+    \ class PrototypePatternDemo {\n    public static void main(String[] args) {\n\
+    \        ShapeCache.loadCache();\n\n        Shape clonedShape = (Shape) ShapeCache.getShape(\"\
+    1\");\n        System.out.println(\"Shape : \" + clonedShape.getType());\n\n \
+    \       Shape clonedShape2 = (Shape) ShapeCache.getShape(\"2\");\n        System.out.println(\"\
+    Shape : \" + clonedShape2.getType());\n\n        Shape clonedShape3 = (Shape)\
+    \ ShapeCache.getShape(\"3\");\n        System.out.println(\"Shape : \" + clonedShape3.getType());\n\
+    \    }\n}\n```\n\n# Step 5\n\nVerify the output.\n\n```\nShape : Circle\nShape\
+    \ : Square\nShape : Rectangle\n```\n\n![](img/6426660228f292f87ed477d27e961d81_35_0.png)"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# 7. ADAPTER PATTERN
+
+
+    Adapter pattern works as a bridge between two incompatible interfaces. This type
+    of design pattern comes under structural pattern as this pattern combines the
+    capability of two independent interfaces.
+
+
+    This pattern involves a single class which is responsible to join functionalities
+    of independent or incompatible interfaces. A real life example could be a case
+    of card reader which acts as an adapter between memory card and a laptop. You
+    plugin the memory card into card reader and card reader into the laptop so that
+    memory card can be read via laptop.
+
+
+    We are demonstrating use of Adapter pattern via following example in which an
+    audio player device can play mp3 files and only wants to use an advanced audio
+    player capable of playing vlc and mp4 files.
+
+
+    # Implementation
+
+
+    We have a MediaPlayer interface and a concrete class AudioPlayer implementing
+    theMediaPlayer interface. AudioPlayer can play mp3 format audio files by default.
+
+
+    We are having another interface AdvancedMediaPlayer and concrete classes implementing
+    the AdvancedMediaPlayer interface. These classes can play vlc and mp4 format files.
+
+
+    We want to make AudioPlayer to play other formats as well. To attain this, we
+    have created an adapter class MediaAdapter which implements the MediaPlayer interface
+    and uses AdvancedMediaPlayer objects to play the required format.
+
+
+    AudioPlayer uses the adapter class MediaAdapter passing it the desired type without
+    knowing the actual class which can play the desired format. AdapterPatternDemo,
+    our demo class, will use AudioPlayer class to play various formats.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_37_0.png)'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '![](img/6426660228f292f87ed477d27e961d81_38_0.png)
+
+
+    # Step 1
+
+
+    Create interfaces for Media Player and Advanced Media Player.
+
+
+    # MediaPlayer.java
+
+
+    ```
+
+    public interface MediaPlayer {
+
+
+    public void play(String audioType, String fileName);
+
+    }
+
+    ```
+
+
+    # AdvancedMediaPlayer.java
+
+
+    ```
+
+    public interface AdvancedMediaPlayer {
+
+
+    public void playVlc(String fileName);
+
+
+    public void playMp4(String fileName);
+
+    }
+
+    ```
+
+
+    # Step 2
+
+
+    Create concrete classes implementing the AdvancedMediaPlayer interface.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# VlcPlayer.java\n\n```\npublic class VlcPlayer implements AdvancedMediaPlayer{\n\
+    \    @Override\n    public void playVlc(String fileName) {\n        System.out.println(\"\
+    Playing vlc file. Name: \" + fileName);\n    }\n\n    @Override\n    public void\
+    \ playMp4(String fileName) {\n        //do nothing\n    }\n}\n```\n\n# Mp4Player.java\n\
+    \n```\npublic class Mp4Player implements AdvancedMediaPlayer{\n    @Override\n\
+    \    public void playVlc(String fileName) {\n        //do nothing\n    }\n\n \
+    \   @Override\n    public void playMp4(String fileName) {\n        System.out.println(\"\
+    Playing mp4 file. Name: \"+ fileName);\n    }\n}\n```\n\n# Step 3\n\nCreate adapter\
+    \ class implementing the MediaPlayer interface.\n\n# MediaAdapter.java\n\n```\n\
+    public class MediaAdapter implements MediaPlayer {\n\n```\n\n34\n\n![](img/6426660228f292f87ed477d27e961d81_39_0.png)"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "```\nAdvancedMediaPlayer advancedMusicPlayer;\n\n    public MediaAdapter(String\
+    \ audioType){\n        if(audioType.equalsIgnoreCase(\"vlc\")) {\n           \
+    \ advancedMusicPlayer = new VlcPlayer();\n        } else if (audioType.equalsIgnoreCase(\"\
+    mp4\")){\n            advancedMusicPlayer = new Mp4Player();\n        }\n    }\n\
+    ```\n\n```\n@Override\n    public void play(String audioType, String fileName)\
+    \ {\n        if(audioType.equalsIgnoreCase(\"vlc\")){\n            advancedMusicPlayer.playVlc(fileName);\n\
+    \        }else if(audioType.equalsIgnoreCase(\"mp4\")){\n            advancedMusicPlayer.playMp4(fileName);\n\
+    \        }\n    }\n```\n\n# Step 4\n\nCreate concrete class implementing the MediaPlayer\
+    \ interface.\n\n# AudioPlayer.java\n\n```\npublic class AudioPlayer implements\
+    \ MediaPlayer {\n    MediaAdapter mediaAdapter;\n\n    @Override\n    public void\
+    \ play(String audioType, String fileName) {\n        //inbuilt support to play\
+    \ mp3 music files\n        if(audioType.equalsIgnoreCase(\"mp3\")){\n        \
+    \    System.out.println(\"Playing mp3 file. Name: \" + fileName);\n        }\n\
+    \    }\n```\n\n![](img/6426660228f292f87ed477d27e961d81_40_0.png)"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "```\n}\n//mediaAdapter is providing support to play other file formats\nelse\
+    \ if(audioType).equalsIgnoreCase(\"vlc\")\n|| audioType.equalsIgnoreCase(\"mp4\"\
+    ){\n    mediaAdapter = new MediaPlayer(audioType);\n    mediaAdapter.play(audioType,\
+    \ fileName);\n}\nelse{\n    System.out.println(\"Invalid media. +\n    audioType\
+    \ + \" format not supported\");\n}\n}\n```\n\n# Step 5\n\nUse the AudioPlayer\
+    \ to play different types of audio formats.\n\n# AdapterPatternDemo.java\n\n```\n\
+    public class AdapterPatternDemo {\n    public static void main(String[] args)\
+    \ {\n        AudioPlayer audioPlayer = new AudioPlayer();\n\n        audioPlayer.play(\"\
+    mp3\", \"beyond the horizon.mp3\");\n        audioPlayer.play(\"mp4\", \"alone.mp4\"\
+    );\n        audioPlayer.play(\"vlc\", \"far far away.vlc\");\n        audioPlayer.play(\"\
+    avi\", \"mind me.avi\");\n    }\n}\n```\n\n# Step 6\n\nVerify the output.\n\n\
+    | Playing mp3 file. Name: beyond the horizon.mp3\nPlaying mp4 file. Name: alone.mp4\
+    \ |\n\n![](img/6426660228f292f87ed477d27e961d81_41_0.png)"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '```
+
+    Playing vlc file. Name: far far away.vlc
+
+    Invalid media. avi format not supported
+
+    ```'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# 8. BRIDGE PATTERN
+
+
+    Bridge is used when we need to decouple an abstraction from its implementation
+    so that the two can vary independently. This type of design pattern comes under
+    structural pattern as this decouples implementation class and abstract class by
+    providing a bridge structure between them.
+
+
+    This pattern involves an interface which acts as a bridge which makes the functionality
+    of concrete classes independent from interface implementer classes. Both types
+    of classes can be altered structurally without affecting each other.
+
+
+    We are demonstrating use of Bridge pattern via following example in which a circle
+    can be drawn in different colors using same abstract class method but different
+    bridge implementer classes.
+
+
+    # Implementation
+
+
+    We haveDrawAPI interface which is acting as a bridge implementer and concrete
+    classes RedCircle, GreenCircle implementing the DrawAPI interface. Shape is an
+    abstract class and will use object of DrawAPI. BridgePatternDemo, our demo class,
+    will use Shape to draw different colored circle.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_43_0.png)
+
+
+    # Step 1
+
+
+    Create bridge implementer interface.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# DrawAPI.java\n\n```\npublic interface DrawAPI {\n    public void drawCircle(int\
+    \ radius, int x, int y);\n}\n```\n\n# Step 2\n\nCreate concrete bridge implementer\
+    \ classes implementing the DrawAPI interface.\n\n# RedCircle.java\n\n```\npublic\
+    \ class RedCircle implements DrawAPI {\n    @Override\n    public void drawCircle(int\
+    \ radius, int x, int y) {\n        System.out.println(\"Drawing Circle[ color:\
+    \ red, radius: \" + radius + \", x: \" + x + \", \" + y + \"]\");\n    }\n}\n\
+    }\n```\n\n# GreenCircle.java\n\n```\npublic class GreenCircle implements DrawAPI\
+    \ {\n    @Override\n    public void drawCircle(int radius, int x, int y) {\n \
+    \       System.out.println(\"Drawing Circle[ color: green, radius: \" + radius\
+    \ + \", x: \" + x + \", \" \" + y + \"]\");\n    }\n}\n\n```\n\n# Step 3\n\nCreate\
+    \ an abstract class Shape using the DrawAPI interface.\n\n# Shape.java\n\n```\n\
+    public abstract class Shape {\n    protected DrawAPI drawAPI;\n    protected Shape(DrawAPI\
+    \ drawAPI){\n```"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\nthis.drawAPI = drawAPI;\n}\npublic abstract void draw();\n}\n```\n\n#\
+    \ Step 4\n\nCreate concrete class implement the Shape interface.\n\n# Circle.java\n\
+    \n```\npublic class Circle extends Shape {\n    private int x, y, radius;\n\n\
+    \    public Circle(int x, int y, int radius, DrawAPI drawAPI) {\n        super(drawAPI);\n\
+    \        this.x = x;\n        this.y = y;\n        this.radius = radius;\n   \
+    \ }\n\n    public void draw() {\n        drawAPI.drawCircle(radius,x,y);\n   \
+    \ }\n}\n```\n\n# Step 5\n\nUse the Shape and DrawAPI classes to draw different\
+    \ colored circles.\n\n# BridgePattern.java\n\n```\npublic class BridgePatternDemo\
+    \ {\n    public static void main(String[] args) {\n        Shape redCircle = new\
+    \ Circle(100,100, 10, new RedCircle());\n        Shape greenCircle = new Circle(100,100,\
+    \ 10, new GreenCircle());\n\n        redCircle.draw();\n    }\n```\n\n![](img/6426660228f292f87ed477d27e961d81_45_0.png)"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '```
+
+    greenCircle.draw();
+
+    }
+
+    }
+
+    ```
+
+
+    # Step 6
+
+
+    Verify the output.
+
+
+    | Drawing Circle[ color: red, radius: 10, x: 100, 100] |
+
+    | Drawing Circle[ color: green, radius: 10, x: 100, 100] |'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# 9. FILTER PATTERN
+
+
+    Filter pattern or Criteria pattern is a design pattern that enables developers
+    to filter a set of objects using different criteria and chaining them in a decoupled
+    way through logical operations. This type of design pattern comes under structural
+    pattern as this pattern combines multiple criteria to obtain single criteria.
+
+
+    # Implementation
+
+
+    We are going to create a Person object, Criteria interface and concrete classes
+    implementing this interface to filter list of Person objects. CriteriaPatternDemo,
+    our demo class, uses Criteria to filter List of Person objects based on various
+    criteria and their combinations.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_47_0.png)
+
+
+    # Step 1
+
+
+    Create a class on which criteria is to be applied.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# Person.java\n\n```\npublic class Person {\n\n    private String name;\n \
+    \   private String gender;\n    private String maritalStatus;\n\n    public Person(String\
+    \ name, String gender, String maritalStatus){\n    this.name = name;\n    this.gender\
+    \ = gender;\n    this.maritalStatus = maritalStatus;\n}\n\n    public String getName()\
+    \ {\n    return name;\n}\n\n    public String getGender() {\n    return gender;\n\
+    }\n\n    public String getMaritalStatus() {\n    return maritalStatus;\n}\n}\n\
+    ```\n\n# Step 2\n\nCreate an interface for Criteria.\n\n# Criteria.java\n\n```\n\
+    import java.util.List;\n\npublic interface Criteria {\n    public List<Person>\
+    \ meetCriteria(List<Person> persons);\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_48_0.png)"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Step 3
+
+
+    Create concrete classes implementing the Criteria interface.
+
+
+    # CriteriaMale.java
+
+
+    # CriteriaFemale.java
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_49_0.png)'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "```\n}\nreturn femalePersons();\n}\n```\n\n# CriteriaSingle.java\n\n# AndCriteria.java\n\
+    \n```\nimport java.util.List;\n\npublic class AndCriteria implements Criteria\
+    \ {\n\n    private Criteria criteria;\n    private Criteria otherCriteria;\n\n\
+    \    public AndCriteria(Criteria criteria, Criteria otherCriteria) {\n       \
+    \ this.criteria = criteria;\n        this.otherCriteria = otherCriteria;\n   \
+    \ }\n```\n\n![](img/6426660228f292f87ed477d27e961d81_50_0.png)"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "```\n}\n\n@Override\npublic List<Person> meetCriteria(List<Person> persons)\
+    \ {\n    List<Person> firstCriteriaPersons = criteria.meetCriteria(persons);\n\
+    \    return otherCriteria.meetCriteria(firstCriteriaPersons);\n}\n\n```\n\n# OrCriteria.java\n\
+    \n```\nimport java.util.List;\n\npublic class OrCriteria implements Criteria {\n\
+    \n    private Criteria criteria;\n    private Criteria otherCriteria;\n\n    public\
+    \ OrCriteria(Criteria criteria, Criteria otherCriteria) {\n        this.criteria\
+    \ = criteria;\n        this.otherCriteria = otherCriteria;\n    }\n\n    @Override\n\
+    \    public List<Person> meetCriteria(List<Person> persons) {\n        List<Person>\
+    \ firstCriteriaItems = criteria.meetCriteria(persons);\n        List<Person> otherCriteriaItems\
+    \ = otherCriteria.meetCriteria(persons);\n\n        for (Person person : otherCriteriaItems)\
+    \ {\n            if(!firstCriteriaItems.contains(person)){\n                firstCriteriaItems.add(person);\n\
+    \            }\n        }\n        return firstCriteriaItems;\n    }\n\n```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# Step 4\n\nUse different Criteria and their combination to filter out persons.\n\
+    \nCriteriaPatternDemo.java\n\n```\npublic class CriteriaPatternDemo {\n    public\
+    \ static void main(String[] args) {\n        List<Person> persons = new ArrayList<Person>();\n\
+    \n        persons.add(new Person(\"Robert\"\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\n}\npublic static void printPersons(List<Person> persons) {\n    for (Person\
+    \ person : persons) {\n        System.out.println(\"Person : [ Name : \" + person.getName()\n\
+    \            +\", Gender : \" + person.getGender()\n            +\", Marital Status\
+    \ : \" + + person.getMaritalStatus() +\n            +\" ]\");\n    }\n}\n{}\n\
+    ```\n\n# Step 5\n\nVerify the output.\n\nMales:\n\n+   Person : [ Name : Robert,\
+    \ Gender : Male, Marital Status : Single ]\nPerson : [ Name : John, Gender : Male,\
+    \ Marital Status : Married ]\nPerson : [ Name : Mike, Gender : Male, Marital Status\
+    \ : Single ]\nPerson : [ Name : Bobby, Gender : Male, Marital Status : Single\
+    \ ]\n\nFemales:\n\n+   Person : [ Name : Laura, Gender : Female, Marital Status\
+    \ : Married ]\nPerson : [ Name : Diana, Gender : Female, Marital Status : Single\
+    \ ]\n\nSingle Males:\n\n+   Person : [ Name : Robert, Gender : Male, Marital Status\
+    \ : Single ]\nPerson : [ Name : Mike, Gender : Male, Marital Status : Single ]\n\
+    Person : [ Name : Bobby, Gender : Male, Marital Status : Single ]\n\nSingle Or\
+    \ Females:\n\n+   Person : [ Name : Robert, Gender : Male, Marital Status : Single\
+    \ ]\nPerson : [ Name : Diana, Gender : Female, Marital Status : Single ]\nPerson\
+    \ : [ Name : Mike, Gender : Male, Marital Status : Single ]\n\n![](img/6426660228f292f87ed477d27e961d81_53_0.png)"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '| Person : [ Name : Bobby, Gender : Male, Marital Status : Single ] |
+
+    | Person : [ Name : Laura, Gender : Female, Marital Status : Married ] |'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# 10. COMPOSITE PATTERN
+
+
+    Composite pattern is used where we need to treat a group of objects in similar
+    way as a single object. Composite pattern composes objects in term of a tree structure
+    to represent part as well as whole hierarchy. This type of design pattern comes
+    under structural pattern as this creates a tree structure of a group of objects.
+
+
+    This pattern creates a class that contains a group of its own objects. This class
+    provides ways to modify its group of same objects.
+
+
+    We are demonstrating use of composite pattern following example in which we will
+    show employees hierarchy of an organization.
+
+
+    # Implementation
+
+
+    We have a class Employee which acts as composite pattern actor class. CompositePatternDemo,
+    our demo class, will use Employee class to add level hierarchy and print all employees.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_55_0.png)'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# Step 1\n\nCreate Employee class having list of Employee objects.\n\n# Employee.java\n\
+    \n```\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic class Employee\
+    \ {\n    private String name;\n    private String dept;\n    private int salary;\n\
+    \    private List<Employee> subordinates;\n\n    // constructor\n    public Employee(String\
+    \ name,String dept, int sal) {\n        this.name = name;\n        this.dept =\
+    \ dept;\n        this.salary = sal;\n        subordinates = new ArrayList<Employee>();\n\
+    \    }\n\n    public void add(Employee e) {\n        subordinates.add(e);\n  \
+    \  }\n\n    public void remove(Employee e) {\n        subordinates.remove(e);\n\
+    \    }\n\n    public List<Employee> getSubordinates(){\n        return subordinates;\n\
+    \    }\n\n    public String toString() {\n```"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "```\nreturn (\"Employee : [ \" + name\n\", dept : \" + dept + \\\n```\n\n#\
+    \ Step 2\n\nUse the Employee class to create and print employee hierarchy.\n\n\
+    # CompositePatternDemo.java\n\n```\npublic class CompositePatternDemo {\n    public\
+    \ static void main(String[] args) {\n        Employee CEO = new Employee(\"John\"\
+    , \"CEO\", 30000);\n\n        Employee headSales = new Employee(\"Robert\", \"\
+    Head Sales\", 20000);\n\n        Employee headMarketing = new Employee(\"Michel\"\
+    , \"Head Marketing\", 20000);\n\n        Employee clerk1 = new Employee(\"Laura\"\
+    , \"Marketing\", 10000);\n        Employee clerk2 = new Employee(\"Bob\", \"Marketing\"\
+    , 10000);\n\n        Employee salesExecutive1 = new Employee(\"Richard\", \"Sales\"\
+    , 10000);\n        Employee salesExecutive2 = new Employee(\"Rob\", \"Sales\"\
+    , 10000);\n\n        CEO.add(headSales);\n        CEO.add(headMarketing);\n\n\
+    \        headSales.add(salesExecutive1);\n        headSales.add(salesExecutive2);\n\
+    \n        headMarketing.add(clerk1);\n        headMarketing.add(clerk2);\n\n \
+    \       //print all employees of the organization\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "```\nSystem.out.println(CEO);\nfor (Employee headEmployee : CEO.getSubSubordinates())\
+    \ {\n  System.out.println(headEmployee);\n  for (Employee employee : headEmployee.getSubSubordinates())\
+    \ {\n    System.out.println(employee);\n  }\n}\n\n```\n\n# Step 3\n\nVerify the\
+    \ output.\n\n| Employee :[ Name : John, dept : CEO, salary :30000 ] |\nEmployee\
+    \ :[ Name : Robert, dept : Head Sales, salary :20000 ] |\nEmployee :[ Name : Richard,\
+    \ dept : Sales, salary :10000 ] |\nEmployee :[ Name : Rob, dept : Sales, salary\
+    \ :10000 ] |\nEmployee :[ Name : Michel, dept : Head Marketing, salary :20000\
+    \ ] |\nEmployee :[ Name : Laura, dept : Marketing, salary :10000 ] |\nEmployee\
+    \ :[ Name : Bob, dept : Marketing, salary :10000 ] |"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# 11. DECORATOR PATTERN
+
+
+    Decorator pattern allows a user to add new functionality to an existing object
+    without altering its structure. This type of design pattern comes under structural
+    pattern as this pattern acts as a wrapper to existing class.
+
+
+    This pattern creates a decorator class which wraps the original class and provides
+    additional functionality keeping class methods signature intact.
+
+
+    We are demonstrating the use of decorator pattern via following example in which
+    we will decorate a shape with some color without other shape class.
+
+
+    # Implementation
+
+
+    We are going to create a Shape interface and concrete classes implementing the
+    Shape interface. We will then create an abstract decorator class ShapeDecorator
+    implementing the Shape interface and having Shape object as its instance variable.
+
+
+    RedShapeDecorator is concrete class implementing ShapeDecorator.
+
+
+    DecoratorPatternDemo, our demo class, will use RedShapeDecorator to decorate Shape
+    objects.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_59_0.png)'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# Step 1\n\nCreate an interface.\n\n# Shape.java\n\n```\npublic interface Shape\
+    \ {\n    void draw();\n}\n```\n\n# Step 2\n\nCreate concrete classes implementing\
+    \ the same interface.\n\n# Rectangle.java\n\n```\npublic class Rectangle implements\
+    \ Shape {\n    @Override\n    public void draw() {\n        System.out.println(\"\
+    Shape: Rectangle\");\n    }\n}\n```\n\n# Circle.java\n\n```\npublic class Circle\
+    \ implements Shape {\n    @Override\n    public void draw() {\n        System.out.println(\"\
+    Shape: Circle\");\n    }\n}\n```\n\n# Step 3\n\nCreate abstract decorator class\
+    \ implementing the Shape interface.\n\n# ShapeDecorator.java\n\n```\npublic abstract\
+    \ class ShapeDecorator implements Shape {\n```\n\n![](img/6426660228f292f87ed477d27e961d81_60_0.png)"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\nprotected Shape decoratedShape;\n\npublic ShapeDecorator(Shape decoratedShape){\n\
+    \    this.decoratedShape = decoratedShape;\n}\n\npublic void draw(){\n    decoratedShape.draw();\n\
+    }\n```\n\n# Step 4\n\nCreate concrete decorator class extending the ShapeDecorator\
+    \ class.\n\nRedShapeDecorator.java\n\n```\npublic class RedShapeDecorator extends\
+    \ ShapeDecorator {\n\n    public RedShapeDecorator(Shape decoratedShape) {\n \
+    \       super(decoratedShape);\n    }\n\n    @Override\n    public void draw()\
+    \ {\n        decoratedShape.draw();\n        setRedBorder(decoratedShape);\n \
+    \   }\n\n    private void setRedBorder(Shape decoratedShape){\n        System.out.println(\"\
+    Border Color: Red\");\n    }\n}\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# Step 5\n\nUse the RedShapeDecorator to decorate Shape objects.\n\nDecoratorPatternDemo.java\n\
+    \n```\npublic class DecoratorPatternDemo {\n    public static void main(String[]\
+    \ args) {\n\n        Shape circle = new Circle();\n\n        Shape redCircle =\
+    \ new RedShapeDecorator(new Circle());\n\n        Shape redRectangle = new RedShapeDecorator(new\
+    \ Rectangle());\n        System.out.println(\"Circle with normal border\");\n\
+    \        circle.draw();\n\n        System.out.println(\"\\nCircle of red border\"\
+    );\n        redCircle.draw();\n\n        System.out.println(\"\\nRectangle of\
+    \ red border\");\n        redRectangle.draw();\n    }\n}\n```\n\n# Step 6\n\n\
+    Verify the output.\n\n```\nCircle with normal border\nShape: Circle\n\nCircle\
+    \ of red border\nShape: Circle\nBorder Color: Red\n\nRectangle of red border\n\
+    ```\n\n![](img/6426660228f292f87ed477d27e961d81_62_0.png)"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: 'Shape: Rectangle
+
+    Border Color: Red'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# 12. FACADE PATTERN\n\nFacade pattern hides the complexities of the system\
+    \ and provides an interface to the client using which the client can access the\
+    \ system. This type of design pattern comes under structural pattern as this pattern\
+    \ adds an interface to existing system to hide its complexities.\n\nThis pattern\
+    \ invokes a single class which provides simplified methods required by the client\
+    \ and delegates calls to methods of existing system classes.\n\n# Implementation\n\
+    \nWe are going to create a Shape interface and concrete classes implementing the\
+    \ Shape interface. A facade class ShapeMaker is defined as a next step.\n\nShapeMaker\
+    \ uses the concrete classes to delegate calls to these classes. FacadePatternDemo,\
+    \ our demo class, will use ShapeMaker class to show the results.\n\n![](img/6426660228f292f87ed477d27e961d81_64_0.png)\n\
+    \n# Step 1\n\nCreate an interface.\n\nShape.java\n\n```\npublic interface Shape\
+    \ {\n    void draw();\n}\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# Step 2\n\nCreate concrete classes implementing the same interface.\n\n# Rectangle.java\n\
+    \n```\npublic class Rectangle implements Shape {\n\n  @Override\n  public void\
+    \ draw() {\n    System.out.println(\"Rectangle::draw()\");\n  }\n}\n```\n\n# Square.java\n\
+    \n```\npublic class Square implements Shape {\n\n  @Override\n  public void draw()\
+    \ {\n    System.out.println(\"Square::draw()\");\n  }\n}\n```\n\n# Circle.java\n\
+    \n```\npublic class Circle implements Shape {\n\n  @Override\n  public void draw()\
+    \ {\n    System.out.println(\"Circle::draw()\");\n  }\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_65_0.png)"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# Step 3\n\nCreate a facade class.\n\n# ShapeMaker.java\n\n```\npublic class\
+    \ ShapeMaker {\n    private Shape circle;\n    private Shape rectangle;\n    private\
+    \ Shape square;\n\n    public ShapeMaker() {\n        circle = new Circle();\n\
+    \        rectangle = new Rectangle();\n        square = new Square();\n    }\n\
+    \n    public void drawCircle() {\n        circle.draw();\n    }\n\n    public\
+    \ void drawRectangle() {\n        rectangle.draw();\n    }\n\n    public void\
+    \ drawSquare() {\n        square.draw();\n    }\n}\n```\n\n# Step 4\n\nUse the\
+    \ facade to draw various types of shapes.\n\n# FacadePatternDemo.java\n\n```\n\
+    public class FacadePatternDemo {\n    public static void main(String[] args) {\n\
+    \        ShapeMaker shapeMaker = new ShapeMaker();\n    }\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_66_0.png)"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '```
+
+    shapeMaker.drawCircle();
+
+    shapeMaker.drawRectangle();
+
+    shapeMaker.drawSquare();
+
+    }
+
+    ```
+
+
+    # ## Step 5
+
+
+    Verify the output.
+
+
+    | Circle::draw() |
+
+    | Rectangle::draw() |
+
+    | Square::draw() |'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# 13. FLYWEIGHT PATTERN
+
+
+    Flyweight pattern is primarily used to reduce the number of objects created to
+    decrease memory footprint and increase performance. This type of design comes
+    under structural pattern as this pattern provides ways to decrease object count
+    thus improving the object structure of application.
+
+
+    Flyweight pattern tries to reuse already existing kind objects by storing them
+    and creates new object when no matching object is found. We will demonstrate this
+    pattern by drawing 20 circles of different locations but we will create only 5
+    objects. Only 5 colors are available so color property is used to check already
+    existing Circle objects.
+
+
+    # Implementation
+
+
+    We are going to create a Shape interface and concrete class class Circle implementing
+    the Shape interface. A factory class ShapeFactory is defined as a next step.
+
+
+    ShapeFactory has a HashMap of Circle having key as color of the Circle object.
+    Whenever a request comes to create a circle of particular color to ShapeFactory,
+    it checks the circle object in its HashMap. If of Circle is found, that object
+    is returned otherwise a new object is created, stored in hashmap for future use,
+    and returned to client.
+
+
+    FlyweightPatternDemo, our demo class, will use ShapeFactory to get a Shape object.
+    It will pass information (red / green / blue / black / white) to ShapeFactory
+    to get the circle of desired color it needs.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_68_0.png)'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "![](img/6426660228f292f87ed477d27e961d81_69_0.png)\n\n# # Step 1\n\nCreate\
+    \ an interface.\n\n# # Shape.java\n\n```\npublic interface Shape {\n    void draw();\n\
+    }\n```\n\n# # Step 2\n\nCreate concrete class implementing the same interface.\n\
+    \n# # Circle.java\n\n```\npublic class Circle implements Shape {\n    private\
+    \ String color;\n    private int x;\n    private int y;\n    private int radius;\n\
+    ```"
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "```\npublic Circle(String color) {\n    this.color = color;\n}\n```\n\n```\n\
+    public void setX(int x) {\n    this.x = x;\n}\n```\n\n```\npublic void setY(int\
+    \ y) {\n    this.y = y;\n}\n```\n\n```\npublic void setRadius(int radius) {\n\
+    \    this.radius = radius;\n}\n```\n\n# Step 3\n\nCreate a factory to generate\
+    \ the object of concrete class based on given information.\n\n# ShapeFactory.java\n\
+    \n```\nimport java.util.HashMap;\n\npublic class ShapeFactory {\n    private static\
+    \ final HashMap<String, Shape> circleMap = new HashMap();\n```\n\n![](img/6426660228f292f87ed477d27e961d81_70_0.png)"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "```\npublic static Shape getCircle(String color) {\n    Circle circle = (Circle)circleMap.get(color);\n\
+    \n    if(circle == null) {\n        circle = new Circle(color);\n        circleMap.put(color,\
+    \ circle);\n        System.out.println(\"Creating circle of color : \" + color);\n\
+    \    }\n    return circle;\nn}\n```\n\n# ### Step 4\n\nUse the factory to get\
+    \ object of concrete class by passing an information such as color.\n\n# ### FlyweightPatternDemo.java\n\
+    \n```\npublic class FlyweightPatternDemo {\n    private static final String colors[]\
+    \ = \n        { \"Red\", \"Green\", \"Blue\", \"White\", \"Black\" };\n    public\
+    \ static void main(String[] args) {\n\n        for(int i=0; i < 20; i++) {\n \
+    \           Circle circle =\n                (Circle)ShapeFactory.getCircle(getRandomColor());\n\
+    \            circle.setX(getRandomX());\n            circle.setY(getRandomY());\n\
+    \            circle.setRadius(100);\n            circle.draw();\n        }\n \
+    \   }\n    private static String getRandomColor() {\n        return colors[(int)(Math.random()*colors.length)];\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "```\nprivate static int getRandomX() {\n    return (int)(Math.random()*100\
+    \ );\n}\n\nprivate static int getRandomY() {\n    return (int)(Math.random()*100);\n\
+    }\n\n```\n\n# Step 5\n\nVerify the output.\n\nCreating circle of color : Black\n\
+    Circle: Draw() [Color : Black, x : 36, y : 71, radius :100\nCreating circle of\
+    \ color : Green\nCircle: Draw() [Color : Green, x : 27, y : 27, radius :100\n\
+    Creating circle of color : White\nCircle: Draw() [Color : White, x : 64, y : 10,\
+    \ radius :100\nCreating circle of color : Red\nCircle: Draw() [Color : Red, x\
+    \ : 15, y : 44, radius :100\nCircle: Draw() [Color : Green, x : 19, y : 10, radius\
+    \ :100\nCircle: Draw() [Color : White, x : 94, y : 32, radius :100\nCircle: Draw()\
+    \ [Color : White, x : 69, y : 98, radius :100\nCreating circle of color : Blue\n\
+    Circle: Draw() [Color : Blue, x : 13, y : 4, radius :100\nCircle: Draw() [Color\
+    \ : Green, x : 21, y : 21, radius :100\nCircle: Draw() [Color : Blue, x : 55,\
+    \ y : 56, radius :100\nCircle: Draw() [Color : White, x : 90, y : 70, radius :100\n\
+    Circle: Draw() [Color : Green, x : 78, y : 3, radius :100\nCircle: Draw() [Color\
+    \ : Green, x : 64, y : 89, radius :100\nCircle: Draw() [Color : Blue, x : 3, y\
+    \ : 91, radius :100\nCircle: Draw() [Color : Blue, x : 62, y : 82, radius :100\n\
+    Circle: Draw() [Color : Green, x : 97, y : 61, radius :100\nCircle: Draw() [Color\
+    \ : Green, x : 86, y : 12, radius :100\nCircle: Draw() [Color : Green, x : 38,\
+    \ y : 93, radius :100]\n\n![](img/6426660228f292f87ed477d27e961d81_72_0.png)"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '```
+
+    Circle: Draw() [Color : Red, x : 76, y :82, radius :100
+
+    Circle: Draw() [Color : Blue, x : 95, y :82, radius :100
+
+    ```'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "In proxy pattern, a class represents functionality of another class. This type\
+    \ of design pattern comes under structural pattern.\n\nIn proxy pattern, we create\
+    \ object having original object to interface its functionality to outer world.\n\
+    \n# Implementation\n\nWe are going to create an Image interface and concrete classes\
+    \ implementing the Image interface. ProxyImage is a proxy class to reduce memory\
+    \ footprint of Image object loading.\n\nProxyPatternDemo, our demo class, will\
+    \ use ProxyImage to get an Image object to load and display as it needs.\n\n![](img/6426660228f292f87ed477d27e961d81_74_0.png)\n\
+    \n# Step 1\n\nCreate an interface.\n\nImage.java\n\n```\npublic interface Image\
+    \ {\n    void display();\n}\n```"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# Step 2\n\nCreate concrete classes implementing the same interface.\n\n# RealImage.java\n\
+    \n```\npublic class RealImage implements Image {\n\n    private String fileName;\n\
+    \n    public RealImage(String fileName){\n        this.fileName = fileName;\n\
+    \        loadFromDisk(fileName);\n    }\n\n    @Override\n    public void display()\
+    \ {\n        System.out.println(\"Displaying \" + fileName);\n    }\n\n    private\
+    \ void loadFromDisk(String fileName){\n        System.out.println(\"Loading \"\
+    \ + fileName);\n    }\nn}\n```\n\n# ProxyImage.java\n\n```\npublic class ProxyImage\
+    \ implements Image{\n\n    private RealImage realImage;\n    private String fileName;\n\
+    \n    public ProxyImage(String fileName){\n        this.fileName = fileName;\n\
+    \    }\n\n    @Override\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\npublic void display() {\n    if(realImage == null){\n        realImage\
+    \ = new RealImage(fileName);\n    }\n    realImage.display();\n}\n```\n\n# Step\
+    \ 3\n\nUse the ProxyImage to get object of RealImage class when required.\n\n\
+    # ProxyPatternDemo.java\n\n# Step 4\n\nVerify the output.\n\n| Loading test_10mb.jpg\
+    \ |\n| Displaying test_10mb.jpg |\n| | Displaying test_10mb.jpg |\n\n![](img/6426660228f292f87ed477d27e961d81_76_0.png)"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# 15. CHAIN OF RESPONSIBILITY PATTERN
+
+
+    As the name suggests, the chain of responsibility pattern creates a chain of receiver
+    objects for a request. This pattern decouples sender and receiver of a request
+    based on type of request. This pattern comes under behavioral patterns.
+
+
+    In this pattern, normally each receiver contains reference to another receiver.
+    If one object cannot handle the request then it passes the same to the next receiver
+    and so on.
+
+
+    # Implementation
+
+
+    We have created an abstract class AbstractLogger with level of logging. Then we
+    have created three types of loggers extending the AbstractLogger. Each logger
+    checks the level of message to its level and prints accordingly otherwise does
+    not print and pass the message to its next logger.
+
+
+    | ChainPatternDemo | AbstractLogger | <<abstract class>> |
+
+    | --- | --- | --- |
+
+    | uses | +INFO : int | |
+
+    | +main() : void | +DEBUG : int | |
+
+    | | +ERROR : int | |
+
+    | | +level : int | |
+
+    | | +nextLogger : AbstractLogger |
+
+    | | +setNextLogger() : void |
+
+    | | +logMessage() : void |
+
+    | | -write() : void | |
+
+
+    | ConsoleLogger | ErrorLogger | FileLogger |
+
+    | --- | --- | --- |
+
+    | +ConsoleLogger() | +ErrorLogger() | +FileLogger() |
+
+    | +setNextLogger() : void | +setNextLogger() : void | +setNextLogger() : void
+    |
+
+    | +logMessage() : void | +logMessage() : void | +logMessage() : void |
+
+    | -write() : void | -write() : void | -write() : void |'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# Step 1\n\nCreate an abstract logger class.\n\nAbstractLogger.java\n\n```\n\
+    public abstract class AbstractLogger {\n    public static int INFO = 1;\n    public\
+    \ static int DEBUG = 2;\n    public static int ERROR = 3;\n\n    protected int\
+    \ level;\n\n    //next element in chain or responsibility\n    protected AbstractLogger\
+    \ nextLogger;\n\n    public void setNextLogger(AbstractLogger nextLogger){\n \
+    \       this.nextLogger = nextLogger;\n    }\n\n    public void logMessage(int\
+    \ level, String message){\n        if(this.level <= level){\n            write(message);\n\
+    \        }\n        if(nextLogger !=null){\n            nextLogger.logMessage(level,\
+    \ message);\n        }\n    }\n\n    abstract protected void write(String message);\n\
+    }\n```"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Step 2\n\nCreate concrete classes extending the logger.\n\n# ConsoleLogger.java\n\
+    \n```\npublic class ConsoleLogger extends AbstractLogger {\n\n    public ConsoleLogger(int\
+    \ level){\n        this.level = level;\n    }\n\n    @Override\n    protected\
+    \ void write(String message) {\n        System.out.println(\"Standard Console::Logger:\
+    \ \" + message);\n    }\n}\n```\n\n# ErrorLogger.java\n\n```\npublic class ErrorLogger\
+    \ extends AbstractLogger {\n\n    public ErrorLogger(int level){\n        this.level\
+    \ = level;\n    }\n\n    @Override\n    protected void write(String message) {\n\
+    \        System.out.println(\"Error Console::Logger: \" + message);\n    }\n}\n\
+    ```\n\n# FileLogger.java\n\n```\npublic class FileLogger extends AbstractLogger\
+    \ {\n\n    public FileLogger(int level){\n        this.level = level;\n    }\n\
+    ```\n\n![](img/6426660228f292f87ed477d27e961d81_79_0.png)"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\n}\n\n@Override\nprotected void write(String message) {\n    System.out.println(\"\
+    File::Logger: \" + message);\n}\n\n```\n\n# Step 3\n\nCreate different types of\
+    \ loggers. Assign them error levels and set next logger in each logger. Next logger\
+    \ in each logger represents the part of the chain.\n\n# ChainPatternDemo.java\n\
+    \n```\npublic class ChainPatternDemo {\n\n    private static AbstractLogger getChainOfLoggers()\
+    \ {\n\n        AbstractLogger errorLogger = new ErrorLogger(AbstractLogger.ERROR);\n\
+    \        AbstractLogger fileLogger = new FileLogger(AbstractLogger.DEBUG);\n \
+    \       AbstractLogger consoleLogger = new ConsoleLogger(AbstractLogger.INFO);\n\
+    \n        errorLogger.setNextLogger(fileLogger);\n        fileLogger.setNextLogger(consoleLogger);\n\
+    \n        return errorLogger;\n    }\n\n    public static void main(String[] args)\
+    \ {\n        AbstractLogger loggerChain = getChainOfLoggers();\n\n        loggerChain.logMessage(AbstractLogger.INFO,\n\
+    \        \"This is an information.\");\n\n        loggerChain.logMessage(AbstractLogger.DEBUG,\n\
+    \    }\n\n```\n\n![](img/6426660228f292f87ed477d27e961d81_80_0.png)"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '```
+
+    "This is a debug level information.");
+
+
+    loggerChain.logMessage(AbstractLogger.ERROR,
+
+    "This is an error information.");
+
+    }
+
+    ```
+
+
+    # Step 4
+
+
+    Verify the output.
+
+
+    Standard Console::Logger: This is an information.
+
+    File::Logger: This is a debug level information.
+
+    Standard Console::Logger: This is a debug level information.
+
+    Error Console::Logger: This is an error information.
+
+    File::Logger: This is an error information.
+
+    Standard Console::Logger: This is an error information.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: 'Command pattern is a data driven design pattern and falls under behavioral
+    pattern category. A request is wrapped under an object as command and passed to
+    invoker object. Invoker object looks for the appropriate object which can handle
+    this command and passes the command to the corresponding object which executes
+    it.
+
+
+    # Implementation
+
+
+    We have created an interface Order which is acting as a command. We have created
+    a Stock class which acts as a request. We have concrete command BuyStock and SellStock
+    implementing Order interface which will do actual command processing. A class
+    Broker is created which acts as an invoker object. It can take and place orders.
+
+
+    Broker object uses command pattern to identify which object will execute command
+    based on the type of command. CommandPatternDemo, our demo class, will use Broker
+    class to demonstrate command pattern.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_82_0.png)'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "# Step 1\n\nCreate a command interface.\n\nOrder.java\n\n```\npublic interface\
+    \ Order {\n    void execute();\n}\n```\n\n# Step 2\n\nCreate a request class.\n\
+    \nStock.java\n\n```\npublic class Stock {\n    private String name = \"ABC\";\n\
+    \    private int quantity = 10;\n\n    public void buy() {\n        System.out.println(\"\
+    Stock [ Name: \"+name+\",\n        Quantity: \" + quantity + \"\\ ] bought\");\n\
+    \    }\n\n    public void sell() {\n        System.out.println(\"Stock [ Name:\
+    \ \"+name+\",\n        Quantity: \" + quantity + \"\\ ] sold\");\n    }\n}\n```\n\
+    \n# Step 3\n\nCreate concrete classes implementing the Order interface.\n\nBuyStock.java\n\
+    \n```\npublic class BuyStock implements Order {\n    private Stock abcStock;\n\
+    ```\n\n![](img/6426660228f292f87ed477d27e961d81_83_0.png)"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "```\npublic BuyStockStock(Stock abcStock) {\n    this.abcStock = abcStock;\n\
+    }\n\npublic void execute() {\n    abcStock.buy();\n}\n```\n\n# SellStock.java\n\
+    \n```\npublic class SellStock implements Order {\n    private Stock abcStock;\n\
+    \n    public SellStock(Stock abcStock) {\n    this.abcStock = abcStock;\n}\n\n\
+    public void execute() {\n    abcStock.sell();\n}\n```\n\n# Step 4\n\nCreate command\
+    \ invoker class.\n\n# Broker.java\n\n```\nimport java.util.ArrayList;\nimport\
+    \ java.util.List;\n\npublic class Broker {\n    private List<Order> orderList\
+    \ = new ArrayList<Order>();\n\n    public void takeOrder(Order order) {\n    orderList.add(order);\n\
+    }\n```\n\n![](img/6426660228f292f87ed477d27e961d81_84_0.png)"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "```\n}\npublic void placeOrders(){\n    for (Order order : orderList) {\n \
+    \       order.execute();\n    }\n    orderList.clear();\n}\n\n```\n\n# Step 5\n\
+    \nUse the Broker class to take and execute commands.\n\n# CommandPatternDemo.java\n\
+    \n```\npublic class CommandPatternDemo {\n    public static void main(String[]\
+    \ args) {\n        Stock abcStock = new Stock();\n\n        BuyStock buyStockOrder\
+    \ = new BuyStock(abcStock);\n        SellStock sellStockOrder = new SellStock(abcStock);\n\
+    \n        Broker broker = new Broker();\n        broker.takeOrder(buyStockOrder);\n\
+    \        broker.takeOrder(sellStockOrder);\n\n        broker.placeOrders();\n\
+    \    }\n\n```\n\n# Step 6\n\nVerify the output.\n\n| Stock [ Name: ABC, Quantity:\
+    \ 10 ] bought |\n| Stock [ Name: ABC, Quantity: 10 ] sold |\n\n![](img/6426660228f292f87ed477d27e961d81_85_0.png)\n\
+    \n80"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# 17. INTERPRETER PATTERN
+
+
+    Interpreter pattern provides a way to evaluate language grammar or expression.
+    This type of pattern comes under behavioral pattern. This pattern involves implementing
+    an expression interface which tells to interpret a particular context. This pattern
+    is used in SQL parsing, symbol processing engine etc.
+
+
+    # Implementation
+
+
+    We are going to create an interface Expression and concrete classes implementing
+    the Expression interface. A class TerminalExpression is defined which acts as
+    a main interpreter of context in question. Other classes are OrExpression and
+    AndExpression which are used to create combinational expressions.
+
+
+    InterpreterPatternDemo, our demo class, will use Expression class to create rules
+    and demonstrate parsing of expressions.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_86_0.png)'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# Step 1\n\nCreate an expression interface.\n\nExpression.java\n\n```\npublic\
+    \ interface Expression {\n    public boolean interpret(String context);\n}\n```\n\
+    \n# Step 2\n\nCreate concrete classes implementing the above interface.\n\nTerminalExpression.java\n\
+    \n```\npublic class TerminalExpression implements Expression {\n\n    private\
+    \ String data;\n\n    public TerminalExpression(String data){\n        this.data\
+    \ = data;\n    }\n\n    @Override\n    public boolean interpret(String context)\
+    \ {\n        if(context.contains(data)){\n            return true;\n        }\n\
+    \        return false;\n    }\n}\n```\n\nOrExpression.java\n\n```\npublic class\
+    \ OrExpression implements Expression {\n\n    private Expression expr1 = null;\n\
+    \    private Expression expr2 = null;\n```\n\n![](img/6426660228f292f87ed477d27e961d81_87_0.png)"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "```\npublic OrExpression(Expression expr1, Expression expr2) {\n    this.expr1\
+    \ = expr1;\n    this.expr2 = expr2;\n}\n\n@Override\npublic boolean interpret(String\
+    \ context) {\n    return expr1.interpret(context) || expr2.interpret(context);\n\
+    }\n```\n\n# AndExpression.java\n\n```\npublic class AndExpression implements Expression\
+    \ {\n    private Expression expr1 = null;\n    private Expression expr2 = null;\n\
+    \n    public AndExpression(Expression expr1, Expression expr2) {\n        this.expr1\
+    \ = expr1;\n        this.expr2 = expr2;\n    }\n\n    @Override\n    public boolean\
+    \ interpret(String context) {\n        return expr1.interpret(context) && expr2.interpret(context);\n\
+    \    }\n}\n```\n\n# Step 3\n\nInterpreterPatternDemo uses Expression class to\
+    \ create rules and then parse them."
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "# InterpreterPatternDemo.java\n\n```\npublic class InterpreterPatternDemo {\n\
+    \n    //Rule: Robert and John are male\n    public static Expression getMaleExpression(){\n\
+    \        Expression robert = new TerminalExpression(\"Robert\");\n        Expression\
+    \ john = new TerminalExpression(\"John\");\n        return new OrExpression(robert,\
+    \ john);\n    }\n\n    //Rule: Julie is a married women\n    public static Expression\
+    \ getMarriedWomanExpression(){\n        Expression julie = new TerminalExpression(\"\
+    Julie\");\n        Expression married = new TerminalExpression(\"Married\");\n\
+    \        return new AndExpression(julie, married);\n    }\n\n    public static\
+    \ void main(String[] args) {\n        Expression isMale = getMaleExpression();\n\
+    \        Expression isMarriedWoman = getMarriedWomanExpression();\n\n        System.out.println(\"\
+    John is male? \" + isMale.interpret(\"John\"));\n        System.out.println(\"\
+    Julie is a married woman? \" + isMarriedWoman.interpret(\"Married Julie\"));\n\
+    \    }\n}\n```\n\n# Step 4\n\nVerify the output.\n\n```\nJohn is male? true\n\
+    Julie is a married woman? true\n```\n\n![](img/6426660228f292f87ed477d27e961d81_89_0.png)"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "# 18. ITERATOR PATTERN\n\nIterator pattern is a commonly used design pattern\
+    \ in Java and .Net programming environment. This pattern is used to get a way\
+    \ to access the elements of a collection object in sequential manner without any\
+    \ need to know its underlying representation.\n\nIterator pattern falls under\
+    \ behavioral pattern category.\n\n# ## Implementation\n\nWe are going to create\
+    \ an Iterator interface which includes navigation method and a Container interface\
+    \ which returns the iterator. Concrete classes implementing the Container interface\
+    \ will be responsible to implement Iterator interface and use it.\n\nIteratorPatternDemo,\
+    \ our demo class, will use NamesRepository, a concrete class implementation, to\
+    \ print Names stored as a collection in NamesRepository.\n\n![](img/6426660228f292f87ed477d27e961d81_90_0.png)\n\
+    \n# ## Step 1\n\nCreate interfaces.\n\nIterator.java\n\n```\npublic interface\
+    \ Iterator {\n    public boolean hasNext();\n    public Object next();\n}\n```"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "```\nContainer.java\npublic interface Container {\n    public Iterator getIterator();\n\
+    }\n```\n\n# Step 2\n\nCreate concrete class implementing the Container interface.\
+    \ This class has inner class NameRepository implementing the Iterator interface.\n\
+    \n# NameRepository.java\n\n```\npublic class NameRepository implements Container\
+    \ {\n    public String names[] = {\"Robert\", \"John\", \"Julie\", \"Lora\"};\n\
+    \n    @Override\n    public Iterator getIterator() {\n        return new NameIterator();\n\
+    \    }\n\n    private class NameIterator implements Iterator {\n        int index;\n\
+    \n        @Override\n        public boolean hasNext() {\n            if(index\
+    \ < names.length()) {\n                return true;\n            }\n         \
+    \   return false;\n        }\n\n        @Override\n        public Object next()\
+    \ {\n            if(this.hasNext()) {\n                return names[index++];\n\
+    \            }\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "```\n}\n  return null;\n}\n}\n```\n\n# Step 3\n\nUse the NameRepository to\
+    \ get iterator and print names.\n\nIteratorPatternDemo.java\n\n```\npublic class\
+    \ IteratorPatternDemo {\n  public static void main(String[] args) {\n    NameRepository\
+    \ namesRepository = new NameRepository();\n\n    for(Iterator iter = namesRepository.getIterator();iter.hasNext();){\n\
+    \      String name = (String)iter.next();\n      System.out.println(\"Name : \"\
+    \ + name);\n    }\n  }\n}\n```\n\n# Step 4\n\nVerify the output.\n\nName : Robert\n\
+    Name : John\nName : Julie\nName : Lora\n\n![](img/6426660228f292f87ed477d27e961d81_92_0.png)"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# 19. MEDIATOR PATTERN\n\nMediator pattern is used to reduce communication\
+    \ complexity between multiple objects or classes. This pattern provides a mediator\
+    \ class which normally handles all the communications between different classes\
+    \ and supports easy maintenance of the code by loose coupling. Mediator pattern\
+    \ falls under behavioral category.\n\n# Implementation\n\nWe are demonstrating\
+    \ mediator pattern by example of a chat room where multiple users can send message\
+    \ to chat room and it is the responsibility of chat room to show the messages\
+    \ to all users. We have created two classes ChatRoom and User. User objects will\
+    \ use ChatRoom method to share their messages.\n\nMediatorPatternDemo, our demo\
+    \ class, will use User objects to show communication between them.\n\n| MediatorPatternDemo\
+    \ | User | ChatRoom |\n| :--- | :--- | :--- |\n| +main() : void | -name : String\n\
+    +User() : void\n+getName() : void\n+setName() : void\n+sendMessage() : void |\
+    \ | +showMessage() : void |\n\n# Step 1\n\nCreate mediator class.\n\n# ChatRoom.java\n\
+    \n```\nimport java.util.Date;\n\npublic class ChatRoom {\n    public static void\
+    \ showMessage(User user, String message){\n        System.out.println(new Date().toString())\n\
+    \        + \" [\" + user.getName() + \"] : \" + message);\n    }\n}\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "# Step 2\n\nCreate user class.\n\n# User.java\n\n```\npublic class User {\n\
+    \    private String name;\n\n    public String getName() {\n        return name;\n\
+    \    }\n\n    public void setName(String name) {\n        this.name = name;\n\
+    \    }\n\n    public User(String name){\n        this.name = name;\n    }\n\n\
+    \    public void sendMessage(String message){\n        ChatRoom.showMessage(this,message);\n\
+    \    }\n}\n```\n\n# Step 3\n\nUse the Mediator object to show communications between\
+    \ them.\n\n# MediatorPatternDemo.java\n\n```\npublic class MediatorPatternDemo\
+    \ {\n    public static void main(String[] args) {\n        User robert = new User(\"\
+    Robert\");\n        User john = new User(\"John\");\n\n        robert.sendMessage(\"\
+    Hi John!\");\n    }\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_94_0.png)"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '```
+
+    john.sendMessage("Hello! Robert!");
+
+    }
+
+    }
+
+    ```
+
+
+    # Step 4
+
+
+    Verify the output.
+
+
+    | Thu Jan 31 16:05:46 IST 2013 [Robert] : Hi! John! |
+
+    | Thu Jan 31 16:05:46 IST 2013 [John] : Hello! Robert! |'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "# 20. MEMENTO PATTERN\n\nMemento pattern is used to restore state of an object\
+    \ to a previous state. Memento pattern falls under behavioral pattern category.\n\
+    \n# Implementation\n\nMemento pattern uses three actor classes. Memento contains\
+    \ state of an object to be restored. Originator creates and stores states in Memento\
+    \ objects and Caretaker object is responsible to restore object state from Memento.\
+    \ We have to create Memento, Originator, and CareTaker classes.\n\nMementoPatternDemo,\
+    \ our demo class, will use CareTaker and Originator objects to show restoration\
+    \ of object states.\n\n![](img/6426660228f292f87ed477d27e961d81_96_0.png)\n\n\
+    # Step 1\n\nCreate Memento class.\n\n# Memento.java\n\n```\npublic class Memento\
+    \ {\n    private String state;\n```"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "```\npublic Memento(String state{\n    this.state = state;\n}\n\npublic String\
+    \ getState(){\n    return state;\n}\n\n```\n\n# Step 2\n\nCreate Originator class.\n\
+    \n# Originator.java\n\n```\npublic class Originator {\n    private String state;\n\
+    \n    public void setState(String state){\n        this.state = state;\n    }\n\
+    \n    public String getState(){\n        return state;\n    }\n\n    public Memento\
+    \ saveStateToMemento(Memento Memento){\n        return new Memento(state);\n \
+    \   }\n\n    public void getStateFromMemento(Memento Memento){\n        state\
+    \ = Memento.getState();\n    }\n}\n```"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# Step 3\n\nCreate CareTaker class.\n\n# CareTaker.java\n\n```\nimport java.util.ArrayList;\n\
+    import java.util.List;\n\npublic class CareTaker {\n    private List<Memento>\
+    \ mementoList = new ArrayList<Memento>();\n\n    public void add(Memento state)\
+    \ {\n        mementoList.add(state);\n    }\n\n    public Memento get(int index)\
+    \ {\n        return mementoList.get(index);\n    }\n}\n```\n\n# Step 4\n\nUse\
+    \ CareTaker and Originator objects.\n\n# MementoPatternDemo.java\n\n```\npublic\
+    \ class MementoPatternDemo {\n    public static void main(String[] args) {\n \
+    \       Originator originator = new Originator();\n        CareTaker careTaker\
+    \ = new CareTaker();\n        originator.setState(\"State #1\");\n        originator.setState(\"\
+    State #2\");\n        careTaker.add(originator.saveStateToMemento());\n      \
+    \  originator.setState(\"State #3\");\n        careTaker.add(originator.saveStateToMemento());\n\
+    \        originator.setState(\"State #4\");\n    }\n```"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '```
+
+    System.out.println("Current State: " + originator.getState());
+
+
+    origenator.getStateFromMemento(careTaker.get());
+
+    System.out.println("First saved State: " + originator.getState());
+
+    origenator.getStateFromMemento(careTaker.get(1));
+
+    System.out.println("Second saved State: " + originator.getState());
+
+    }
+
+    }
+
+    ```
+
+
+    # Step 5
+
+
+    Verify the output.
+
+
+    | Current State: State #4 |
+
+    | First saved State: State #2 |
+
+    | Second saved State: State #3 |'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# 21. OBSERVER PATTERN
+
+
+    Observer pattern is used when there is one-to-many relationship between objects
+    such as if one object is modified, its dependent objects are to be notified automatically.
+    Observer pattern falls under behavioral pattern category.
+
+
+    # Implementation
+
+
+    Observer pattern uses three actor classes. Subject, Observer and Client. Subject
+    is an object that having methods to attach and detach observers to a client object.
+    We have created an abstract class Observer and a concrete class Subject that is
+    extending class Observer.
+
+
+    ObserverPatternDemo, our demo class, will use Subject and concrete class object
+    to show observer pattern in action.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_100_0.png)'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "# Step 1\n\nCreate Subject class.\n\n# Subject.java\n\n```\nimport java.util.ArrayList;\n\
+    import java.util.List;\n\npublic class Subject {\n\n    private List<Observer>\
+    \ observers\n        = new ArrayList<Observer>();\n    private int state;\n\n\
+    \    public int getState() {\n        return state;\n    }\n\n    public void\
+    \ setState(int state) {\n        this.state = state;\n        notifyAllObservers();\n\
+    \    }\n\n    public void attach(Observer observer) {\n        observers.add(observer);\n\
+    \    }\n\n    public void notifyAllObservers(){\n        for (Observer observer\
+    \ : observers) {\n            observer.update();\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "# Step 2\n\nCreate Observer class.\n\n# Observer.java\n\n```\npublic abstract\
+    \ class Observer {\n    protected Subject subject;\n    public abstract void update();\n\
+    }\n```\n\n# Step 3\n\nCreate concrete observer classes\n\n# BinaryObserver.java\n\
+    \n```\npublic class BinaryObserver extends Observer{\n\n    public BinaryObserver(Subject\
+    \ subject){\n        this.subject = subject;\n        this.subject.attach(this);\n\
+    \    }\n\n    @Override\n    public void update() {\n        System.out.println(\"\
+    Binary String: \"\n        + Integer.toBinaryString(subject.getState()));\n  \
+    \  }\n}\n```\n\n# OctalObserver.java\n\n```\npublic class OctalObserver extends\
+    \ Observer{\n\n    public OctalObserver(Subject subject){\n        this.subject\
+    \ = subject;\n        this.subject.attach(this);\n    }\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_102_0.png)"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "```\n@Override\npublic void update() {\n    System.out.println(\"Octal String:\
+    \ \"\n    + Integer.toOctalString( subject.getState()) );\n}\n```\n\n# HexaObserver.java\n\
+    \n```\npublic class HexaObserver extends Observer{\n\n    public HexaObserver(Subject\
+    \ subject) {\n        this.subject = subject;\n        this.subject.attach(this);\n\
+    \    }\n\n    @Override\n    public void update() {\n        System.out.println(\"\
+    Hex String: \"\n        + Integer.toHexString( subject.getState()).toUpperCase());\n\
+    \    }\n}\n```\n\n# Step 4\n\nUse Subject and concrete observer objects.\n\n#\
+    \ ObserverPatternDemo.java\n\n```\npublic class ObserverPatternDemo {\n    public\
+    \ static void main(String[] args) {\n        Subject subject = new Subject();\n\
+    \n        new HexaObserver(subject);\n        new OctalObserver(subject);\n  \
+    \      new BinaryObserver(subject);\n    }\n```"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '```
+
+    System.out.println("First state change: 15");
+
+    subject.setState(15);
+
+    System.out.println("Second state change: 10");
+
+    subject.setState(10);
+
+    }
+
+    ```
+
+
+    # Step 5
+
+
+    Verify the output.
+
+
+    First state change: 15
+
+    Hex String: F
+
+    Octal String: 17
+
+    Binary String: 1111
+
+    Second state change: 10
+
+    Hex String: A
+
+    Octal String: 12
+
+    Binary String: 1010'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# 22. STATE PATTERN
+
+
+    In State pattern, a class behavior changes based on its state. This type of design
+    pattern comes under behavior pattern.
+
+
+    In State pattern, we create objects which represent various states and a context
+    object whose behavior varies as its state object changes.
+
+
+    # Implementation
+
+
+    We are going to create a State interface defining an action and concrete state
+    classes implementing the State interface. Context is a class which carries a State.
+
+
+    StatePatternDemo, our demo class, will use Context and state objects to demonstrate
+    change based on type of state it is in.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_105_0.png)
+
+
+    # Step 1
+
+
+    Create an interface.'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "# State.java\n\n```\npublic interface State {\n    public void doAction(Context\
+    \ context);\n}\n```\n\n# Step 2\n\nCreate concrete classes implementing the same\
+    \ interface.\n\n# StartState.java\n\n```\npublic class StartState implements State\
+    \ {\n    public void doAction(Context context) {\n        System.out.println(\"\
+    Player is in start state\");\n        context.setState(this);\n    }\n\n    public\
+    \ String toString(){\n        return \"Start State\";\n    }\n}\n```\n\n# StopState.java\n\
+    \n```\npublic class StopState implements State {\n    public void doAction(Context\
+    \ context) {\n        System.out.println(\"Player is in stop state\");\n     \
+    \   context.setState(this);\n    }\n\n    public String toString(){\n        return\
+    \ \"Stop State\";\n    }\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_106_0.png)"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "# Step 3\n\nCreate Context Class.\n\nContext.java\n\n```\npublic class Context\
+    \ {\n    private State state;\n\n    public Context(){\n        state = null;\n\
+    \    }\n\n    public void setState(State state){\n        this.state = state;\n\
+    \    }\n\n    public State getState(){\n        return state;\n    }\n}\n```\n\
+    \n# Step 4\n\nUse the Context to see change in behavior when State changes.\n\n\
+    StatePatternDemo.java\n\n```\npublic class StatePatternDemo {\n    public static\
+    \ void main(String[] args) {\n        Context context = new Context();\n\n   \
+    \     StartState startState = new StartState();\n        startState.doAction(context);\n\
+    \n        System.out.println(context.getState().toString());\n\n        StopState\
+    \ stopState = new StopState();\n    }\n```"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '```
+
+    stopState.doAction(context);
+
+
+    System.out.println(context.getState().toString());
+
+    }
+
+    ```
+
+
+    # Step 5
+
+
+    Verify the output.
+
+
+    | Player is in start state |
+
+    | Start State |
+
+    | Player is in stop state |
+
+    | Stop State |'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# 23. NULL OBJECT PATTERN
+
+
+    Null Object pattern, a null object replaces check of NULL object instance. Instead
+    of putting if check for a null value, Null Object reflects a do nothing relationship.
+    Such Null object can also be used to provide default behaviour in case data is
+    not available.
+
+
+    In Object pattern, we create an abstract class specifying various operations to
+    be done, concrete classes extending this class and a null object class providing
+    nothing implementation of this class and will be used to check null value.
+
+
+    # Implementation
+
+
+    We are going to create an AbstractCustomer class defining operations. Here concrete
+    classes will extend the AbstractCustomer class. A factory class CustomerFactory
+    is created to return either RealCustomer or NullCustomer objects based on the
+    name of customer passed to it.
+
+
+    NullPatternDemo, our demo class, will use CustomerFactory to demonstrate the use
+    of Null Object pattern.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_109_0.png)'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "# Step 1\n\nCreate an abstract class.\n\n# AbstractCustomer.java\n\n```\npublic\
+    \ abstract class AbstractCustomer {\n    protected String name;\n    public abstract\
+    \ boolean isNil();\n    public abstract String getName();\n}\n```\n\n# Step 2\n\
+    \nCreate concrete classes extending the above class.\n\n# RealCustomer.java\n\n\
+    ```\npublic class RealCustomer extends AbstractCustomer {\n    public RealCustomer(String\
+    \ name) {\n        this.name = name;\n    }\n\n    @Override\n    public String\
+    \ getName() {\n        return name;\n    }\n\n    @Override\n    public boolean\
+    \ isNil() {\n        return false;\n    }\n}\n```\n\n# NullCustomer.java\n\n```\n\
+    public class NullCustomer extends AbstractCustomer {\n```\n\n![](img/6426660228f292f87ed477d27e961d81_110_0.png)"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "```\n@Override\npublic String getName() {\n    return \"Not Available in Customer\
+    \ Database\";\n}\n\n@Override\npublic boolean isNil() {\n    return true;\n}\n\
+    \n```\n\n# Step 3\n\nCreate CustomerFactory Class.\n\n# CustomerFactory.java\n\
+    \n```\npublic class CustomerFactory {\n\n    public static final String[] names\
+    \ = {\"Rob\", \"Joe\", \"Julie\"};\n\n    public static AbstractCustomer getCustomer(String\
+    \ name) {\n        for (int i = 0; i < names.length; i++) {\n            if (names[i].equalsIgnoreCase(name))\
+    \ {\n                return new RealCustomer(name);\n            }\n        }\n\
+    \        return new NullCustomer();\n    }\nn}\n```\n\n# Step 4\n\nUse the CustomerFactory\
+    \ to get either RealCustomer or NullCustomer objects based on the name of customer\
+    \ passed to it.\n\n# NullPatternDemo.java\n\n![](img/6426660228f292f87ed477d27e961d81_111_0.png)"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "```\npublic class NullPatternDemo {\n    public static void main(String[] args)\
+    \ {\n\n        AbstractCustomer customer1 = CustomerFactory.getCustomer(\"Rob\"\
+    );\n        AbstractCustomer customer2 = CustomerFactory.getCustomer(\"Bob\");\n\
+    \        AbstractCustomer customer3 = CustomerFactory.getCustomer(\"Julie\");\n\
+    \        AbstractCustomer customer4 = CustomerFactory.getCustomer(\"Laura\");\n\
+    \n        System.out.println(\"Customers\");\n        System.out.println(customer1.getName());\n\
+    \        System.out.println(customer2.getName());\n        System.out.println(customer3.getName());\n\
+    \        System.out.println(customer4.getName());\n    }\n}\n```\n\n# Step 5\n\
+    \nVerify the output.\n\n| Customers |\n| Rob |\n| Not Available in Customer Database\
+    \ |\n| Julie |\n| Not Available in Customer Database |"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "# 24. STRATEGY PATTERN\n\nIn Strategy pattern, a class behavior or its algorithm\
+    \ can be changed at run time. This type of design pattern comes under behavior\
+    \ pattern.\n\nIn Strategy pattern, we create objects whose represent various strategies\
+    \ and a context object whose behavior varies as per its strategy object. The strategy\
+    \ object changes the executing algorithm of the context object.\n\n# Implementation\n\
+    \nWe are going to create a Strategy interface defining an action and concrete\
+    \ strategy classes implementing the Strategy interface. Context is a class which\
+    \ uses a Strategy.\n\nStrategyPatternDemo, our demo class, will use Context and\
+    \ strategy objects to demonstrate change in Context behaviour based on strategy\
+    \ it deploys or uses.\n\n![](img/6426660228f292f87ed477d27e961d81_113_0.png)\n\
+    \n# Step 1\n\nCreate an interface.\n\nStrategy.java\n\n```\npublic interface Strategy\
+    \ {\n    public int doOperation(int num1, int num2);\n```\n\n108"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "# Step 2\n\nCreate concrete classes implementing the same interface.\n\n# OperationAdd.java\n\
+    \n```\npublic class OperationAdd implements Strategy{\n    @Override\n    public\
+    \ int doOperation(int num1, int num2) {\n        return num1 + num2;\n    }\n\
+    }\n```\n\n# OperationSubstract.java\n\n```\npublic class OperationSubstract implements\
+    \ Strategy{\n    @Override\n    public int doOperation(int num1, int num2) {\n\
+    \        return num1 - num2;\n    }\n}\n```\n\n# OperationMultiply.java\n\n```\n\
+    public class OperationMultiply implements Strategy{\n    @Override\n    public\
+    \ int doOperation(int num1, int num2) {\n        return num1 * num2;\n    }\n\
+    }\n```\n\n# Step 3\n\nCreate Context Class.\n\n![](img/6426660228f292f87ed477d27e961d81_114_0.png)"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "# Context.java\n\n```\npublic class Context {\n    private Strategy strategy;\n\
+    \n    public Context(Strategy strategy){\n        this.strategy = strategy;\n\
+    \    }\n\n    public int executeStrategy(int num1, int num2){\n        return\
+    \ strategy.doOperation(num1, num2);\n    }\n}\n```\n\n# Step 4\n\nUse the Context\
+    \ to see change in behavior when it changes its Strategy.\n\n# StrategyPatternDemo.java\n\
+    \n```\npublic class StrategyPatternDemo {\n    public static void main(String[]\
+    \ args) {\n        Context context = new Context(new OperationAdd());\n      \
+    \  System.out.println(\"10 + 5 = \" + context.executeStrategy(10, 5));\n\n   \
+    \     context = new Context(new OperationSubtract());\n        System.out.println(\"\
+    10 - 5 = \" + context.executeStrategy(10, 5));\n\n        context = new Context(new\
+    \ OperationMultiply());\n        System.out.println(\"10 * 5 = \" + context.executeStrategy(10,\
+    \ 5));\n    }\n}\n```\n\n# Step 5\n\nVerify the output.\n\n![](img/6426660228f292f87ed477d27e961d81_115_0.png)"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '```
+
+    10 + 5 = 15
+
+    10 - 5 = 5
+
+    10 * 5 = 50
+
+    ```'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# 25. TEMPLATE PATTERN
+
+
+    In Template pattern, an abstract class defines ways(s)/template(s) to execute
+    its methods. Its subclasses can override the method implementation as per need
+    but the invocation is to be in the same way as defined by an abstract class. This
+    pattern comes under behavior pattern category.
+
+
+    # Implementation
+
+
+    We are going to create a Game abstract class defining operations with a template
+    method set to be final so that it cannot be overridden. Cricket and Football are
+    concrete classes that extend Game and override its methods.
+
+
+    TemplateDemo, our demo class, will use Game to demonstrate use of template pattern.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_117_0.png)
+
+
+    # Step 1
+
+
+    Create an abstract class with a template method being final.'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "```\npublic abstract class Game {\n    abstract void initialize();\n    abstract\
+    \ void startPlay();\n    abstract void endPlay();\n\n    //template method\n \
+    \   public final void play(){\n\n        //initialize the game\n        initialize();\n\
+    \n        //start game\n        startPlay();\n\n        //end game\n        endPlay();\n\
+    \    }\n}\n```\n\n# Step 2\n\nCreate concrete classes extending the above class.\n\
+    \n# Cricket.java\n\n```\npublic class Cricket extends Game {\n\n    @Override\n\
+    \    void endPlay() {\n        System.out.println(\"Cricket Game Finished!\");\n\
+    \    }\n\n    @Override\n    void initialize() {\n        System.out.println(\"\
+    Cricket Game Initialized! Start playing.\");\n    }\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_118_0.png)"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "```\n}\n\n@Override\nvoid startPlay() {\n    System.out.println(\"Cricket Game\
+    \ Started. Enjoy the game!\");\n}\n\n```\n\n# Football.java\n\n```\npublic class\
+    \ Football extends Game {\n\n@Override\nvoid endPlay() {\n    System.out.println(\"\
+    Football Game Finished!\");\n}\n\n@Override\nvoid initialize() {\n    System.out.println(\"\
+    Football Game Initialized! Start playing.\");\n}\n\n@Override\nvoid startPlay()\
+    \ {\n    System.out.println(\"Football Game Started. Enjoy the game!\");\n}\n\n\
+    ```\n\n# Step 3\n\nUse the Game's template method play() to demonstrate a defined\
+    \ way of playing game.\n\n# TemplatePatternDemo.java\n\n![](img/6426660228f292f87ed477d27e961d81_119_0.png)"
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: "```\npublic class TemplatePatternDemo {\n    public static void main(String[]\
+    \ args) {\n        Game game = new Cricket();\n        game.play();\n        System.out.println();\n\
+    \        game = new Football();\n        game.play();\n    }\n}\n```\n\n# Step\
+    \ 4\n\nVerify the output.\n\nCricket Game Initialized! Start playing.\nCricket\
+    \ Game Started. Enjoy the game!\nCricket Game Finished!\n\nFootball Game Initialized!\
+    \ Start playing.\nFootball Game Started. Enjoy the game!\nFootball Game Finished!"
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# 26. VISITOR PATTERN
+
+
+    In Visitor pattern, we use a visitor class which changes the executing algorithm
+    of an element class. By this way, execution algorithm of element can vary as when
+    visitor varies. This pattern comes under behavior pattern category. As per the
+    pattern, element object has accept the visitor object so that visitor object handles
+    the operation on the element object.
+
+
+    # Implementation
+
+
+    We are going to create a ComputerPart interface defining accept operation. Keyboard,
+    Mouse, Monitor, and Computer are concrete classes implementing ComputerPart interface.
+    We will define another interface ComputerPartVisitor which will define a visitor
+    class operations. Computer uses concrete visitor to do corresponding action.
+
+
+    VisitorPatternDemo, our demo class, will use Computer and ComputerPartVisitor
+    classes to demonstrate use of visitor pattern.
+
+
+    ```
+
+    <<interface>
+
+    ComputerPartVisitor
+
+    +visit(Computer) : void
+
+    +visit(Mouse) : void
+
+    +visit(Keyboard) : void
+
+    +visit(Monitor) : void
+
+    ```
+
+
+    ```
+
+    ComputerPartDisplayVisitor
+
+    +visit(Computer) : void
+
+    +visit(Mouse) : void
+
+    +visit(Keyboard) : void
+
+    +visit(Monitor) : void
+
+    ```
+
+
+    ```
+
+    VisitorPatternDemo
+
+    +main() : void
+
+    ```
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_121_0.png)
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_121_1.png)'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "# Step 1\n\nDefine an interface to represent element.\n\n# ComputerPart.java\n\
+    \n```\npublic interface ComputerPart {\n    public void accept(ComputerPartVisitor\
+    \ computerPartVisitor);\n}\n```\n\n# Step 2\n\nCreate concrete classes extending\
+    \ the above class.\n\n# Keyboard.java\n\n```\npublic class Keyboard implements\
+    \ ComputerPart {\n    @Override\n    public void accept(ComputerPartVisitor computerPartVisitor)\
+    \ {\n        computerPartVisitor.visit(this);\n    }\n}\n```\n\n# Monitor.java\n\
+    \n```\npublic class Monitor implements ComputerPart {\n    @Override\n    public\
+    \ void accept(ComputerPartVisitor computerPartVisitor) {\n        computerPartVisitor.visit(this);\n\
+    \    }\n}\n```\n\n# Mouse.java\n\n```\npublic class Mouse implements ComputerPart\
+    \ {\n    @Override\n    public void accept(ComputerPartVisitor computerPartVisitor)\
+    \ {\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_122_0.png)"
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "```\ncomputerPartVisitor.visit(this);\n}\n```\n\n# Computer.java\n\n```\npublic\
+    \ class Computer implements ComputerPart {\n\n    ComputerPart[] parts;\n\n  \
+    \  public Computer() {\n        parts = new ComputerPart[]{new Mouse(), new Keyboard(),\
+    \ new Monitor()};\n    }\n\n    @Override\n    public void accept(ComputerPartVisitor\
+    \ computerPartVisitor) {\n        for (int i = 0; i < parts.length; i++) {\n \
+    \           parts[i].accept(computerPartVisitor);\n        }\n        computerPartVisitor.visit(this);\n\
+    \    }\n}\n```\n\n# Step 3\n\nDefine an interface to represent visitor.\n\n# ComputerPartVisitor.java\n\
+    \n```\npublic interface ComputerPartVisitor {\n    public void visit(ComputerPart\
+    \ computer);\n    public void visit(Mouse mouse);\n    public void visit(Keyboard\
+    \ keyboard);\n    public void visit(Monitor monitor);\n}\n```"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: "# Step 4\n\nCreate concrete visitor implementing the above class.\n\n# ComputerPartDisplayVisitor.java\n\
+    \n```\npublic class ComputerPartDisplayVisitor implements ComputerPartVisitor\
+    \ {\n\n    @Override\n    public void visit(Computer computer) {\n        System.out.println(\"\
+    Displaying Computer.\");\n    }\n\n    @Override\n    public void visit(Mouse\
+    \ mouse) {\n        System.out.println(\"Displaying Mouse.\");\n    }\n\n    @Override\n\
+    \    public void visit(Keyboard keyboard) {\n        System.out.println(\"Displaying\
+    \ Keyboard.\");\n    }\n\n    @Override\n    public void visit(Monitor monitor)\
+    \ {\n        System.out.println(\"Displaying Monitor.\");\n    }\n}\n```\n\n#\
+    \ Step 5\n\nUse the ComputerPartDisplayVisitor to display parts of Computer.\n\
+    \n# VisitorPatternDemo.java\n\n```\npublic class VisitorPatternDemo {\n    public\
+    \ static void main(String[] args) {\n```\n\n![](img/6426660228f292f87ed477d27e961d81_124_0.png)"
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '```
+
+    ComputerPart computer = new Computer();
+
+    computer.accept(new ComputerPartDisplayVisitor());
+
+    }
+
+    ```
+
+
+    # Step 6
+
+
+    Verify the output.
+
+
+    +   - Displaying Mouse.
+
+    - Displaying Keyboard.
+
+    - Displaying Monitor.
+
+    - Displaying Computer.'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# 27. MVC PATTERN
+
+
+    MVC Pattern stands for Model-View-Controller Pattern. This pattern is used to
+    separate application''s concerns.
+
+
+    +   - Model - Model represents an object or JAVA POJO carrying data. It can also
+    have logic to update controller if its data changes.
+
+    - View - View represents the visualization of the data that model contains.
+
+    - Controller - Controller acts on both model and view. It controls the data flow
+    into model object and updates the view whenever data changes. It keeps view and
+    model separate.
+
+
+    # Implementation
+
+
+    We are going to create a Student object acting as a model. StudentView will be
+    a view class which can print student details on console and StudentController
+    is the controller class responsible to store data in Student object and update
+    StudentView accordingly.
+
+
+    MVCPatternDemo, our demo class, will use StudentController to demonstrate use
+    of MVC pattern.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_126_0.png)'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "# Step 1\n\nCreate Model.\n\n# Student.java\n\n```\npublic class Student {\n\
+    \    private String rollNo;\n    private String name;\n    public String getRollNo()\
+    \ {\n        return rollNo;\n    }\n    public void setRollNo(String rollNo) {\n\
+    \        this.rollNo = rollNo;\n    }\n    public String getName() {\n       \
+    \ return name;\n    }\n    public void setName(String name) {\n        this.name\
+    \ = name;\n    }\n}\n```\n\n# Step 2\n\nCreate View.\n\n# SearchView.java\n\n\
+    ```\npublic class StudentView {\n    public void printStudentDetails(String studentName,\
+    \ String studentRollNo) {\n        System.out.println(\"Student: \");\n      \
+    \  System.out.println(\"Name: \" + studentName);\n        System.out.println(\"\
+    Roll No: \" + studentRollNo);\n    }\n}\n```"
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: "# Step 3\n\nCreate Controller.\n\n# StudentController.java\n\n```\npublic class\
+    \ StudentController {\n    private Student model;\n    private StudentView view;\n\
+    \n    public StudentController(Student model, StudentView view){\n        this.model\
+    \ = model;\n        this.view = view;\n    }\n\n    public void setStudentName(String\
+    \ name){\n        model.setName(name);\n    }\n\n    public String getStudentName(){\n\
+    \        return model.getName();\n    }\n\n    public void setStudentRollNo(String\
+    \ rollNo){\n        model.setRollNo(rollNo);\n    }\n\n    public String getStudentRollNo(){\n\
+    \        return model.getRollNo();\n    }\n\n    public void getView({\n     \
+    \   view.printStudentDetails(model.getName(), model.getRollNo());\n    }\n```"
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: "# Step 4\n\nUse the StudentController methods to demonstrate MVC design pattern\
+    \ usage.\n\n# MVCPatternDemo.java\n\n```\npublic class MVCPatternDemo {\n    public\
+    \ static void main(String[] args) {\n\n        //fetch student record based on\
+    \ his roll no from the database\n        Student model = retriveStudentFromDatabase();\n\
+    \n        //Create a view : to write student details on console\n        StudentView\
+    \ view = new StudentView();\n\n        StudentController controller = new StudentController(model,\
+    \ view);\n\n        controller.updateView();\n\n        //update model data\n\
+    \        controller.setStudentName(\"John\");\n\n        controller.updateView();\n\
+    \    }\n\n    private static Student retriveStudentFromDatabase(){\n        Student\
+    \ student = new Student();\n        student.setName(\"Robert\");\n        student.setRollNo(\"\
+    10\");\n        return student;\n    }\n}\n```"
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# Step 5
+
+
+    Verify the output.
+
+
+    | Student |
+
+    | Name: Robert |
+
+    | Roll No: 10 |
+
+    | Student |
+
+    | Name: John |
+
+    | Roll No: 10 |'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: "# 28. BUSINESS DELEGATE PATTERN\n\nBusiness Delegate Pattern is used to decouple\
+    \ presentation tier and business tier. It is basically use to reduce communication\
+    \ or remote lookup functionality to business tier code in presentation tier we\
+    \ have following entities. \n\n+   * **Client** - Presentation tier code may be\
+    \ JSP, servlet or UI java code.\n* **Business Delegate** - A single entry point\
+    \ class for client entities to provide access to Business Service methods.\n*\
+    \ **Lookup Service** - Lookup service object is responsible to get relative business\
+    \ implementation and provide business object access to business delegate object.\n\
+    * **Business Service** - Concrete classes implement this business service to provide\
+    \ actual business implementation logic.\n\n# Implementation\n\nWe are going to\
+    \ create a `Client`, `BusinessDelegate`, `BusinessService`, `LookupService`, `JMSService`\
+    \ and `EJBService` representing various entities of Business Delegate patterns.\n\
+    \n`BusinessDelegatePatternDemo`, our demo class, will use `BusinessDelegate` and\
+    \ `Client` to demonstrate use of Business Delegate pattern."
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: "![](img/6426660228f292f87ed477d27e961d81_132_0.png)\n\n# # Step 1\n\nCreate\
+    \ BusinessService Interface.\n\n# # BusinessService.java\n\n```\n```java\npublic\
+    \ interface BusinessService {\n    public void doProcessing();\n}\n```\n```\n\n\
+    # # Step 2\n\nCreate concrete Service classes.\n\n# # EJBService.java\n\n```\n\
+    ```java\npublic class EJBService implements BusinessService {\n\n    @Override\n\
+    \    public void doProcessing() {\n        System.out.println(\"Processing task\
+    \ by invoking EJB Service\");\n    }\n}\n```\n```"
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: "```\n}\n}\n```\n\n# JMSService.java\n\n```\npublic class JMSService implements\
+    \ BusinessService {\n\n    @Override\n    public void doProcessing() {\n     \
+    \   System.out.println(\"Processing task by invoking JMS Service\");\n    }\n\
+    }\n```\n\n# Step 3\n\nCreate Business Lookup Service.\n\n# BusinessLookup.java\n\
+    \n```\npublic class BusinessLookup {\n    public BusinessServiceCase getBusinessService(String\
+    \ serviceType) {\n        if(serviceType.equalsIgnoreCase(\"EJB\")){\n       \
+    \     return new EJBService();\n        } else {\n            return new JMSService();\n\
+    \        }\n    }\n}\n```\n\n# Step 4\n\nCreate Business Delegate.\n\n# BusinessDelegate.java\n\
+    \n```\npublic class BusinessDelegate {\n    private BusinessLookup lookupService\
+    \ = new BusinessLookup();\n    private BusinessService businessService;\n    private\
+    \ String serviceType;\n```\n\n![](img/6426660228f292f87ed477d27e961d81_133_0.png)"
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: "```\npublic void setServiceType(String serviceType){\n    this.serviceType\
+    \ = serviceType;\n}\n\npublic void doTask(){\n    businessService = lookupService.getBusinessService(serviceType);\n\
+    \    businessService.doProcessing();\n}\n```\n\n# Step 5\n\nCreate Client.\n\n\
+    Client.java\n\n```\npublic class Client {\n\n    BusinessDelegate businessService;\n\
+    \n    public Client(BusinessDelegate businessService){\n        this.businessService\
+    \ = businessService;\n    }\n\n    public void doTask(){\n        businessService.doTask();\n\
+    \    }\n}\n```\n\n# Step 6\n\nUse BusinessDelegate and Client classes to demonstrate\
+    \ Business Delegate pattern.\n\n# BusinessDelegatePatternDemo.java\n\n![](img/6426660228f292f87ed477d27e961d81_134_0.png)"
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: "```\npublic static void main(String[] args) {\n\n    BusinessDelegate businessDelegate\
+    \ = new BusinessDelegate();\n    businessDelegate.setServiceType(\"EJB\");\n\n\
+    \    Client client = new Client(businessDelegate);\n    client.doTask();\n\n \
+    \   businessDelegate.setServiceType(\"JMS\");\n    client.doTask();\n}\n```\n\n\
+    # Step 7\n\nVerify the output.\n\n| Processing task by invoking EJB Service |\n\
+    | Processing task by invoking JMS Service |"
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# 29. COMPOSITE ENTITY PATTERN
+
+
+    Composite Entity pattern is used in EJB persistence mechanism. A Composite entity
+    is an EJB bean which represents a graph of objects. When a composite entity is
+    updated, internally dependent objects get updated automatically as being managed
+    by EJB entity bean. Following are the participants in Composite Entity Bean.
+
+
+    +   * Composite Entity - It is primary entity bean. It can be coarse grained or
+    contain a coarse grained object to be used for persistence purpose.
+
+    * Coarse-Grained Object - This object contains dependent objects. It has its own
+    life cycle and manages life cycle of dependent objects.
+
+    * Dependent Object - Dependent object is an object which depends on coarse grained
+    object for its persistence lifecycle.
+
+    * Strategies - Strategies represent how to implement a Composite Entity.
+
+
+    # Implementation
+
+
+    We are going to create CompositeEntity object acting as CompositeEntity. CoarseGrainedObject
+    will be a class which contains dependent objects. CompositeEntityPatternDemo,
+    our demo class, will use Client to demonstrate use of Composite pattern.
+
+
+    | Client | CompositeEntity |
+
+    | --- | --- |
+
+    | -entity: CompositeEntity | -cgo: CoarseGrainedObject |
+
+    | +getData(): void | +getData(): String[] |
+
+    | +setData(): void | +setData(): void |
+
+    | uses | uses |
+
+    | | CoarseGrainedObject |
+
+    | CompositeEntityPatternDemo | -object1: DependentObject1 |
+
+    | | -object2: DependentObject2 |
+
+    | +main(): void | +getData(): String[] |
+
+    | | +setData(): void |
+
+    | uses | uses |
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_136_0.png)'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: "# # Step 1\n\nCreate Dependent Objects.\n\nDependentObject1.java\n\n```\npublic\
+    \ class DependentObject1 {\n\n    private String data;\n\n    public void setData(String\
+    \ data){\n        this.data = data;\n    }\n\n    public String getData(){\n \
+    \       return data;\n    }\n}\n```\n\nDependentObject2.java\n\n```\npublic class\
+    \ DependentObject2 {\n\n    private String data;\n\n    public void setData(String\
+    \ data){\n        this.data = data;\n    }\n\n    public String getData(){\n \
+    \       return data;\n    }\n}\n```"
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: "# Step 2\n\nCreate Coarse Grained Object.\n\n# CoarseGrainedObject.java\n\n\
+    ```\npublic class CoarseGrainedObject {\n    DependentObject1 do1 = new DependentObject1();\n\
+    \    DependentObject2 do2 = new DependentObject2();\n\n    public void setData(String\
+    \ data1, String data2){\n        do1.setData(data1);\n        do2.setData(data2);\n\
+    \    }\n\n    public String[] getData(){\n        return new String[] {do1.getData(),do2.getData()};\n\
+    \    }\n}\n```\n\n# Step 3\n\nCreate Composite Entity.\n\n# CompositeEntity.java\n\
+    \n```\npublic class CompositeEntity {\n    private CoarseGrainedObject cgo = new\
+    \ CoarseGrainedObject();\n\n    public void setData(String data1, String data2){\n\
+    \        cgo.setData(data1, data2);\n    }\n\n    public String[] getData(){\n\
+    \        return cgo.getData();\n    }\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_138_0.png)"
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: "# Step 4\n\nCreate Client class to use Composite Entity.\n\n# Client.java\n\
+    \n```\npublic class Client {\n    private CompositeEntity compositeEntity = new\
+    \ CompositeEntity();\n\n    public void printData(){\n        for (int i = 0;\
+    \ i < compositeEntity.getData().length; i++) {\n            System.out.println(\"\
+    Data: \" + compositeEntity.getData()[i]);\n        }\n    }\n\n    public void\
+    \ setData(String data1, String data2){\n        compositeEntity.setData(data1,\
+    \ data2);\n    }\n}\n```\n\n# Step 5\n\nUse the Client to demonstrate Composite\
+    \ Entity design pattern usage.\n\n# CompositeEntityPatternDemo.java\n\n```\npublic\
+    \ class CompositeEntityPatternDemo {\n    public static void main(String[] args)\
+    \ {\n        Client client = new Client();\n        client.setData(\"Test\", \"\
+    Data\");\n        client.printData();\n        client.setData(\"Second Test\"\
+    , \"Data1\");\n        client.printData();\n    }\n}\n```"
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '# Step 6
+
+
+    Verify the output.
+
+
+    ```
+
+    Data: Test
+
+    Data: Data
+
+    Data: Second Test
+
+    Data: Data1
+
+    ```'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '# 30. DATA ACCESS OBJECT PATTERN
+
+
+    Data Access Object Pattern or DAO pattern is used to separate low level data accessing
+    API or operations from high level business services. Following are the participants
+    in Data Access Object Pattern.
+
+
+    +   - Data Access Object Interface - This interface defines the standard operations
+    to be performed on a model object(s).
+
+    - Data Access Object concrete class - This class implements above. This class
+    is responsible to get data from a data source which can be database / xml or any
+    other storage mechanism.
+
+    - Model Object or Value Object - This object is simple POJO containing get/set
+    methods to store data retrieved using DAO class.
+
+
+    # Implementation
+
+
+    We are going to create a Student acting as a Model or Value Object.StudentDao
+    is Data Access Object Interface. StudentDaoImpl is concrete implementing Data
+    Access Object Interface. DaoPatternDemo, our demo class, will use StudentDao to
+    demonstrate the use of Data Access Object pattern.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_141_0.png)'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: "# Step 1\n\nCreate Value Object.\n\nStudent.java\n\n```\npublic class Student\
+    \ {\n    private String name;\n    private int rollNo;\n\nStudent(String name,\
+    \ int rollNo){\n        this.name = name;\n        this.rollNo = rollNo;\n   \
+    \ }\n\n    public String getName() {\n        return name;\n    }\n\n    public\
+    \ void setName(String name) {\n        this.name = name;\n    }\n\n    public\
+    \ int getRollNo() {\n        return rollNo;\n    }\n\n    public void setRollNo(int\
+    \ rollNo) {\n        this.rollNo = rollNo;\n    }\n}\n```\n\n# Step 2\n\nCreate\
+    \ Data Access Object Interface.\n\n![](img/6426660228f292f87ed477d27e961d81_142_0.png)"
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: "# StudentDao.java\n\n```\nimport java.util.List;\n\npublic interface StudentDao\
+    \ {\n    public List<Student> getAllStudents();\n    public Student getStudent(int\
+    \ rollNo);\n    public void updateStudent(Student student);\n    public void deleteStudent(Student\
+    \ student);\n}\n```\n\n# Step 3\n\nCreate concrete class implementing above interface.\n\
+    \n# StudentDaoImpl.java\n\n```\nimport java.util.ArrayList;\nimport java.util.List;\n\
+    \npublic class StudentDaoImpl implements StudentDao {\n\n    //list is working\
+    \ as a database\n    List<Student> students;\n\n    public StudentDaoImpl(){\n\
+    \        students = new ArrayList<Student>();\n        Student student1 = new\
+    \ Student(\"Robert\",0);\n        Student student2 = new Student(\"John\",1);\n\
+    \        students.add(student1);\n        students.add(student2);\n    }\n\n \
+    \   @Override\n    public void deleteStudent(Student student) {\n        students.remove(student.getRollNo());\n\
+    \        System.out.println(\"Student: Roll No \" + student.getRollNo() + \",,\
+    \ deleted from database\");\n    }\n```"
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: "```\n}\n\n//retrive list of students from the database\n@Override\npublic List<Student>\
+    \ getAllStudents() {\n    return students;\n}\n```\n\n```\n@Override\npublic Student\
+    \ getStudent(int rollNo) {\n    return students.get(rollNo);\n}\n\n@Override\n\
+    public void updateStudent(Student student) {\n    students.get(student.getRollNo()).setName(student.getName());\n\
+    \    System.out.println(\"Student: Roll No \" + student.getRollNo() + \",\", updated\
+    \ in the database\");\n}\n```\n\n# Step 4\n\nUse the StudentDao to demonstrate\
+    \ Data Access Object pattern usage.\n\n# DaoPatternDemo.java\n\n```\npublic class\
+    \ DaoPatternDemo {\n    public static void main(String[] args) {\n        StudentDao\
+    \ studentDao = new StudentDaoImpl();\n\n        //print all students\n       \
+    \ for (Student student : studentDao.getAllStudents()) {\n            System.out.println(\"\
+    Student: [RollNo : \"+student.getRollNo()+\"\n```"
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '```
+
+    //update student
+
+
+    Student student = studentDao.getAllStudents().get(0);
+
+    student.setName("Michael");
+
+    studentDao.updateStudent(student);
+
+
+    // get the student
+
+    studentDao.getStudent(0);
+
+    System.out.println("Student: [RollNo : "\n+student.getRollNo()+", Name : "+student.getName()+"]");
+
+    }
+
+    }
+
+    ```
+
+
+    # Step 5
+
+
+    Verify the output.
+
+
+    | Student: [RollNo : 0, Name : Robert ] |
+
+    | Student: [RollNo : 1, Name : John ] |
+
+    | Student: Roll No 0, updated in the database |
+
+    | Student: [RollNo : 0, Name : Michael |'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '# 31. FRONT CONTROLLER PATTERN
+
+
+    The front controller design pattern is used to provide a centralized request handling
+    mechanism so that all requests will be handled by a single handler. This handler
+    can do the authentication/ authorization/ logging or tracking of request and then
+    pass the requests to corresponding handlers. Following are the entities of this
+    type of design pattern.
+
+
+    +   - **Front Controller**: Single handler for all kinds of requests coming to
+    the application (either web based/ desktop based).
+
+    - **Dispatcher** - Front Controller may use a dispatcher object which can dispatch
+    the request to corresponding specific handler.
+
+    - **View** - Views are the object for which the requests are made.
+
+
+    # Implementation
+
+
+    We are going to create a FrontController and Dispatcher to act as Front Controller
+    and Dispatcher correspondingly. HomeView and StudentView represent various views
+    for which requests come to front controller.
+
+
+    FrontControllerPatternDemo, our demo class, will use FrontController to demonstrate
+    Front Controller Design Pattern.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_146_0.png)'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: "# Step 1\n\nCreate Views.\n\n# HomeView.java\n\n```\npublic class HomeView\
+    \ {\n    public void show(){\n        System.out.println(\"Displaying Home Page\"\
+    );\n    }\n}\n```\n\n# StudentView.java\n\n```\npublic class StudentView {\n \
+    \   public void show(){\n        System.out.println(\"Displaying Student Page\"\
+    );\n    }\n}\n```\n\n# Step 2\n\nCreate Dispatcher.\n\n# Dispatcher.java\n\n```\n\
+    public class Dispatcher {\n    private StudentView studentView;\n    private HomeView\
+    \ homeView;\n    public Dispatcher(){\n        studentView = new StudentView();\n\
+    \        homeView = new HomeView();\n    }\n\n    public void dispatch(String\
+    \ request){\n        if(request.equalsIgnoreCase(\"STUDENT\")){\n            studentView.show();\n\
+    \        }else{\n            homeView.show();\n        }\n    }\n```\n\n![](img/6426660228f292f87ed477d27e961d81_147_0.png)"
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: "```\n}\n}\n}\n```\n\n# Step 3\n\nCreate FrontController.java\n\n```\npublic\
+    \ class FrontController {\n\n    private Dispatcher dispatcher;\n\n    public\
+    \ FrontController(){\n        dispatcher = new Dispatcher();\n    }\n\n    private\
+    \ boolean isAuthenticUser(){\n        System.out.println(\"User is authenticated\
+    \ successfully.\");\n        return true;\n    }\n\n    private void trackRequest(String\
+    \ request) {\n        System.out.println(\"Page requested: \" + request);\n  \
+    \  }\n\n    public void dispatchRequest(String request) {\n        //log each\
+    \ request\n        trackRequest(request);\n        //authenticate the user\n \
+    \       if(isAuthenticUser()){\n            dispatcher.dispatch(request);\n  \
+    \      }\n    }\n```\n\n![](img/6426660228f292f87ed477d27e961d81_148_0.png)"
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: "# Step 4\n\nUse the FrontController to demonstrate Front Controller Design\
+    \ Pattern.\n\nCameraControllerPatternDemo.java\n\n```\npublic class FrontControllerPatternDemo\
+    \ {\n    public static void main(String[] args) {\n        FrontController frontController\
+    \ = new FrontController();\n        frontController.dispatchRequest(\"HOME\");\n\
+    \        frontController.dispatchRequest(\"STUDENT\");\n    }\n}\n```\n\n# Step\
+    \ 5\n\nVerify the output.\n\n| Page requested: HOME\nUser is authenticated successfully.\n\
+    Displaying Home Page\nPage requested: STUDENT\nUser is authenticated successfully.\n\
+    Displaying Student Page |"
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '# 32. INTERCEPTNG FILTER PATTERN
+
+
+    The intercepting filter design pattern is used when we want to do some processing
+    / post-processing with request or response of the application. Filters are defined
+    and applied on the request before passing the request to actual target application.
+    Filters can do the authentication/ authorization/ logging or tracking of the entities
+    and then pass the requests to corresponding handlers. Following are the entities
+    of this type of design pattern.
+
+
+    +   - **Filter** - Filter which will perform certain task prior or after execution
+    of request by request handler.
+
+    - **Filter Chain** - Filter Chain carries multiple filters and help to execute
+    them in defined order on target.
+
+    - **Target** - Target object is the request handler
+
+    - **Filter Manager** - Filter Manager manages the filters and Filter Chain.
+
+    - **Client** - Client is the object who sends request to the Target object.
+
+
+    # Implementation
+
+
+    We are going to create a FilterChain, FilterManager, Target, and Client as various
+    objects representing our entities. AuthenticationFilter and DebugFilter represent
+    concrete filters.
+
+
+    InterceptingFilterDemo, our demo class, will use Client to demonstrate Intercepting
+    Filter Design Pattern.'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: "![](img/6426660228f292f87ed477d27e961d81_151_0.png)\n\n# Step 1\n\nCreate Filter\
+    \ interface.\n\n# Filter.java\n\n```\npublic interface Filter {\n    public void\
+    \ execute(String request);\n}\n```\n\n# Step 2\n\nCreate concrete filters.\n\n\
+    # AuthenticationFilter.java\n\n```\npublic class AuthenticationFilter implements\
+    \ Filter {\n    public void execute(String request){\n        System.out.println(\"\
+    Authenticating request: \" + request);\n    }\n}\n```"
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: "# DebugFilter.java\n\n```\npublic class DebugFilter implements Filter {\n \
+    \   public void execute(String request){\n        System.out.println(\"request\
+    \ log: \" + request);\n    }\n}\n```\n\n# Step 3\n\nCreate Target\n\n# Target.java\n\
+    \n```\npublic class Target {\n    public void execute(String request){\n     \
+    \   System.out.println(\"Executing request: \" + request);\n    }\n}\n```\n\n\
+    # Step 4\n\nCreate Filter Chain.\n\n# FilterChain.java\n\n```\nimport java.util.ArrayList;\n\
+    import java.util.List;\n\npublic class FilterChain {\n    private List<Filter>\
+    \ filters = new ArrayList<Filter>();\n    private Target target;\n\n    public\
+    \ void addFilter(Filter filter){\n        filters.add(filter);\n    }\\}\n```\n\
+    \n![](img/6426660228f292f87ed477d27e961d81_152_0.png)"
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: "```\npublic void execute(String request){\n    for (Filter filter : filters)\
+    \ {\n        filter.execute(request);\n    }\n    target.execute(request);\n}\n\
+    \npublic void setTarget(Target target){\n    this.target = target;\n}\n```\n\n\
+    # Step 5\n\nCreate Filter Manager.\n\nFilterManager.java\n\n```\npublic class\
+    \ FilterManager {\n    FilterChain filterChain;\n\n    public FilterManager(Target\
+    \ target) {\n        filterChain = new FilterChain();\n        filterChain.setTarget(target);\n\
+    \    }\n\n    public void setFilter(Filter filter) {\n        filterChain.addFilter(filter);\n\
+    \    }\n\n    public void filterRequest(String request) {\n        filterChain.execute(request);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: "# Step 6\n\nCreate Client.\n\nClient.java\n\n```\npublic class Client {\n \
+    \   FilterManager filterManager;\n\n    public void setFilterManager(FilterManager\
+    \ filterManager){\n        this.filterManager = filterManager;\n    }\n\n    public\
+    \ void sendRequest(String request){\n        filterManager.filterRequest(request);\n\
+    \    }\n}\n```\n\n# Step 7\n\nUse the Client to demonstrate Intercepting Filter\
+    \ Design Pattern.\n\nInterceptingFilterDemo.java\n\n```\npublic class InterceptingFilterDemo\
+    \ {\n    public static void main(String[]) args {\n        FilterManager filterManager\
+    \ = new FilterManager(new Target());\n        filterManager.setFilter(new AuthenticationFilter());\n\
+    \        filterManager.setFilter(new DebugFilter());\n\n        Client client\
+    \ = new Client();\n        client.setFilterManager(filterManager);\n        client.setRequest(\"\
+    HOME\");\n    }\n}\n```\n\n![](img/6426660228f292f87ed477d27e961d81_154_0.png)"
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: '# Step 8
+
+
+    Verify the output.
+
+
+    ```
+
+    Authenticating request: HOME
+
+    request log: HOME
+
+    Executing request: HOME
+
+    ```'
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: '# 33. SERVICE LOCATOR PATTERN
+
+
+    The service locator design pattern is used when we want to locate various services
+    using JNDI lookup. Considering high cost of looking up JNDI for a service, Service
+    Locator pattern makes of caching technique. Service Locator looks up in JNDI and
+    caches the service object. Further lookup or same service via Service Locator
+    is done in its cache which improves the performance of application to great extent.
+    Following are the entities of this type of design pattern.
+
+
+    +   - **Service** - Actual Service which will process the request. Reference of
+    such service is to be looked upon in JNDI server.
+
+    - **Context / Initial Context** - JNDI Context carries the reference to service
+    used for lookup purpose.
+
+    - **Service Locator** - Service Locator is a single point of contact to get services
+    by JNDI lookup caching the services.
+
+    - **Cache** - Cache to store references of services to reuse them
+
+    - **Client** - Client is the object that invokes the services via ServiceLocator.
+
+
+    # Implementation
+
+
+    We are going to create a *ServiceLocator, InitialContext, Cache, and Service*
+    for various objects representing our entities. *Service1* and *Service2* represent
+    concrete services.
+
+
+    *ServiceLocatorPatternDemo*, our demo class, is acting as a client here and will
+    use *ServiceLocator* to demonstrate Service Locator Design Pattern.'
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: "![](img/6426660228f292f87ed477d27e961d81_157_0.png)\n\n# # Step 1\n\nCreate\
+    \ Service interface.\n\n# Service.java\n\n```\npublic interface Service {\n  \
+    \  public String getName();\n    public void execute();\n}\n```\n\n# # Step 2\n\
+    \nCreate concrete services.\n\n# Service1.java\n\n```\npublic class Service1 implements\
+    \ Service {\n    public void execute(){\n}\n```"
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: "```\nSystem.out.println(\"Executing Service1\");\n}\n\n@Override\npublic String\
+    \ getName() {\n    return \"Service1\";\n}\n\n```\n\n# Service2.java\n\n```\n\
+    public class Service2 implements Service {\n    public void execute() {\n    \
+    \    System.out.println(\"Executing Service2\");\n    }\n\n    @Override\n   \
+    \ public String getName() {\n        return \"Service2\";\n    }\n}\n```\n\n#\
+    \ Step 3\n\nCreate InitialContext for JNDI lookup\n\n```\npublic class InitialContext\
+    \ {\n    public Object lookup(String jndiName) {\n        if(jndiName.equalsIgnoreCase(\"\
+    SERVICE1\")) {\n            System.out.println(\"Looking up and creating a new\
+    \ Service1 object\");\n            return new Service1();\n        } else if (jndiName.equalsIgnoreCase(\"\
+    SERVICE2\")) {\n            System.out.println(\"Looking up and creating a new\
+    \ Service2 object\");\n            return new Service2();\n        }\n    }\n\
+    }\n```\n\n![](img/6426660228f292f87ed477d27e961d81_158_0.png)"
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: '```
+
+    return null;
+
+    }
+
+    }
+
+    ```
+
+
+    # Step 4
+
+
+    Create Cache.java
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_159_0.png)'
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: "```\n}\n}\nif(!exists){\n    services.add(newService);\n}\n}\n```\n\n# ## Step\
+    \ 5\n\nCreate Service Locator.\n\n# ### ServiceLocator.java\n\n```\npublic class\
+    \ ServiceLocator {\n    private static Cache cache;\n\n    static {\n        cache\
+    \ = new Cache();\n    }\n\n    public static Service getService(String jndiName)\
+    \ {\n        Service service = cache.getService(jndiName);\n\n        if(service\
+    \ != null){\n            return service;\n        }\n\n        InitialContext\
+    \ context = new InitialContext();\n        Service service1 = (Service)context.lookup(jndiName);\n\
+    \        cache.addService(service1);\n        return service1;\n    }\n}\n```"
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: "# Step 6\n\nUse the ServiceLocator to demonstrate Service Locator Design Pattern.\n\
+    \nServiceLocatorPatternDemo.java\n\n```\npublic class ServiceLocatorPatternDemo\
+    \ {\n    public static void main(String[] args) {\n        Service service = ServiceLocator.getService(\"\
+    Service1\");\n        service.execute();\n        service = ServiceLocator.getService(\"\
+    Service2\");\n        service.execute();\n        service = ServiceLocator.getService(\"\
+    Service1\");\n        service.execute();\n        service = ServiceLocator.getService(\"\
+    Service2\");\n        service.execute();\n    }\n}\n```\n\n# Step 7\n\nVerify\
+    \ the output.\n\n+   Looking up and creating a new Service1 object\nExecuting\
+    \ Service1\nLooking up and creating a new Service2 object\nExecuting Service2\n\
+    Returning cached Service1 object\nExecuting Service1\nReturning cached Service2\
+    \ object\nExecuting Service2"
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: '# 34. TRANSFER OBJECT PATTERN
+
+
+    The Transfer Object pattern is used when we want to pass data with multiple attributes
+    in one shot from client to server. Transfer object is also known as Value Object.
+    Transfer Object is a simple POJO class having getter/setter methods and is serializable
+    so that it can be transferred over the network. It does not have any behavior.
+    Server class normally fetches data from the database and fills the POJO and send
+    it to the client or pass it by. For client, transfer object is read-only. Client
+    can create its own transfer object and pass it to server to update values in database
+    in one shot. Following are the entities of this type of design pattern.
+
+
+    +   - Business Object - Business Service fills the Transfer Object with data.
+
+    - Transfer Object - Simple POJO having methods to set/get attributes only.
+
+    - Client - Client requests or sends the Transfer Object to Business Object.
+
+
+    # Implementation
+
+
+    We are going to create a StudentBO as Business Object, Student as Transfer Object
+    representing its entities.
+
+
+    TransferObjectPatternDemo, our demo class is acting as a client here and will
+    use StudentBO and Student to demonstrate Transfer Object Design Pattern.
+
+
+    ![](img/6426660228f292f87ed477d27e961d81_162_0.png)'
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: "# Step 1\n\nCreate Transfer Object.\n\n# StudentVO.java\n\n```\npublic class\
+    \ StudentVO {\n    private String name;\n    private int rollNo;\n\nStudentVO(String\
+    \ name, int rollNo)nn        this.name = name;\n        this.rollNo = rollNo;\n\
+    \    }\n\n    public String getName() {\n        return name;\n    }\n\n    public\
+    \ void setName(String name) {\n        this.name = name;\n    }\n\n    public\
+    \ int getRollNo() {\n        return rollNo;\n    }\n\n    public void setRollNo(int\
+    \ rollNo) {\n        this.rollNo = rollNo;\n    }\n}\n```"
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: "# Step 2\n\nCreate Business Object.\n\n# StudentBO.java\n\n```\nimport java.util.ArrayList;\n\
+    import java.util.List;\n\npublic class StudentBO {\n\n    //list is working as\
+    \ a database\n    List<StudentVO> students;\n\n    public StudentBO(){\n     \
+    \   students = new ArrayList<StudentVO>();\n        StudentVO student1 = new StudentVO(\"\
+    Robert\",0);\n        StudentVO student2 = new StudentVO(\"John\",1);\n      \
+    \  students.add(student1);\n        students.add(student2);\n    }\n\n    public\
+    \ void deleteStudent(StudentVO student) {\n        students.remove(student.getRollNo());\n\
+    \        System.out.println(\"Student: Roll No \" + student.getRollNo() + \",\
+    \ deleted from database\");\n    }\n\n    //retrive list of students from the\
+    \ database\n    public List<StudentVO> getAllStudents() {\n        return students;\n\
+    \    }\n\n    public StudentVO getStudent(int rollNo) {\n        return students.get(rollNo);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: "```\npublic void updateStudent(StudentVO student) {\n    students.get(student.getRollNo()).setName(student.getName());\n\
+    \    System.out.println(\"Student: Roll No \" \\\n    + student.getRollNo() +\
+    \ \", updated in the database\");\n}\n\n```\n\n# Step 3\n\nUse the StudentBO to\
+    \ demonstrate Transfer Object Design Pattern.\n\n# TransferObjectPatternDemo.java\n\
+    \n```\npublic class TransferObjectPatternDemo {\n    public static void main(String[]\
+    \ args) {\n        StudentBO studentBusinessObject = new StudentBO();\n\n    \
+    \    // print all students\n        for (StudentVO student : studentBusinessObject.getAllStudents())\
+    \ {\n            System.out.println(\"Student: [Roll No : \" \\\n            +student.getRollNo()+\"\
+    , Name : \"\"+student.getName()+\"]\");\n        }\n\n        // update student\n\
+    \        StudentVO student = studentBusinessObject.getAllStudents().get(0);\n\
+    \        student.setName(\"Michael\");\n        studentBusinessObject.updateStudent(student);\n\
+    \n        // get the student\n        student = studentBusinessObject.getStudent(0);\n\
+    \        System.out.println(\"Student: [Roll No : \" \\\n            +student.getRollNo()+\"\
+    , Name : \"\"+student.getName()+\"]\");\n    }\n}\n\n```"
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: '# Step 4
+
+
+    Verify the output.
+
+
+    | Student: [RollNo : 0, Name : Robert ] |
+
+    | Student: [RollNo : 1, Name : John ] |
+
+    | Student: [Roll No 0, updated in the database |
+
+    | Student: [RollNo : 0, Name : Michael ] |'
+  merge: -1
+  pgno: 166

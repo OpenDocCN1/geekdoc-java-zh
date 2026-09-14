@@ -1,0 +1,702 @@
+- - '#'
+  - Java 设计模式：问题解决方法
+- - '#'
+  - 关于教程
+- - '#'
+  - 目标读者
+- - '#'
+  - 先决条件
+- - '##'
+  - 1. 设计模式概述
+- - '##'
+  - 什么是四人帮 (GOF)？
+- - '##'
+  - 设计模式的使用
+- - '##'
+  - 开发人员的通用平台
+- - '##'
+  - 最佳实践
+- - '##'
+  - 设计模式的类型
+- - '##'
+  - 2. 工厂模式
+- - '###'
+  - 实现
+- - '###'
+  - 第 1 步
+- - '###'
+  - Rectangle.java
+- - '###'
+  - Square.java
+- - '###'
+  - Circle.java
+- - '###'
+  - 第 2 步
+- - '###'
+  - ShapeFactory.java
+- - '###'
+  - 第 3 步
+- - '###'
+  - FactoryPatternDemo.java
+- - '###'
+  - 第 4 步
+- - '###'
+  - Red.java
+- - '###'
+  - Green.java
+- - '###'
+  - Blue.java
+- - '###'
+  - Step 5
+- - '###'
+  - AbstractFactory.java
+- - '###'
+  - 第 6 步
+- - '###'
+  - ShapeFactory.java
+- - '###'
+  - ColorFactory.java
+- - '###'
+  - 第 7 步
+- - '###'
+  - FactoryProducer.java
+- - '###'
+  - 第 8 步
+- - '###'
+  - AbstractFactoryPatternDemo.java
+- - '###'
+  - 第 9 步
+- - '##'
+  - 5. 构建器模式
+- - '###'
+  - 第 1 步
+- - '###'
+  - Item.java
+- - '###'
+  - Packing.java
+- - '###'
+  - 第 2 步
+- - '###'
+  - Wrapper.java
+- - '###'
+  - Bottle.java
+- - '###'
+  - 第 3 步
+- - '###'
+  - Burger.java
+- - '###'
+  - ColdDrink.java
+- - '###'
+  - '第 4 '
+- - '###'
+  - VegBurger.java
+- - '###'
+  - ChickenBurger.java
+- - '###'
+  - Coke.java
+- - '###'
+  - Pepsi.java
+- - '###'
+  - '第 5 '
+- - '###'
+  - Meal.java
+- - '###'
+  - '第 6 '
+- - '###'
+  - MealBuilder.java
+- - '###'
+  - '第 7 '
+- - '###'
+  - BuilderPatternDemo.java
+- - '###'
+  - '第 8 '
+- - '##'
+  - 6. 原型模式 (PROTOTYPE PATTERN)
+- - '###'
+  - '第 1 '
+- - '###'
+  - Shape.java
+- - '###'
+  - '第 2 '
+- - '###'
+  - Rectangle.java
+- - '###'
+  - Square.java
+- - '###'
+  - Circle.java
+- - '###'
+  - '第 3 '
+- - '###'
+  - ShapeCache.java
+- - '###'
+  - 第 4
+- - '###'
+  - PrototypePatternDemo.java
+- - '###'
+  - 第 5
+- - '##'
+  - 7. 适配器模式 (ADAPTER PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - 第 1 步
+- - '###'
+  - MediaPlayer.java
+- - '###'
+  - AdvancedMediaPlayer.java
+- - '###'
+  - '第 2 '
+- - '###'
+  - VlcPlayer.java
+- - '###'
+  - Mp4Player.java
+- - '###'
+  - 第 3 步
+- - '###'
+  - MediaAdapter.java
+- - '###'
+  - 第 4 步
+- - '###'
+  - AudioPlayer.java
+- - '###'
+  - 第 5 步
+- - '###'
+  - AdapterPatternDemo.java
+- - '###'
+  - 第 6 步
+- - '##'
+  - 8. 桥接模式 (BRIDGE PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - 第 1 步
+- - '###'
+  - DrawAPI.java
+- - '###'
+  - '第 2 '
+- - '###'
+  - RedCircle.java
+- - '###'
+  - GreenCircle.java
+- - '###'
+  - 第 3 步
+- - '###'
+  - Shape.java
+- - '###'
+  - 第 4 步
+- - '###'
+  - Circle.java
+- - '###'
+  - 第 5 步
+- - '###'
+  - BridgePatternDemo.java
+- - '###'
+  - 第 6 步
+- - '##'
+  - 9. 过滤模式 (FILTER PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - 第 1 步
+- - '###'
+  - Person.java
+- - '###'
+  - 第 2 步
+- - '###'
+  - Criteria.java
+- - '###'
+  - '第 3 '
+- - '###'
+  - CriteriaMale.java
+- - '###'
+  - CriteriaFemale.java
+- - '###'
+  - CriteriaSingle.java
+- - '###'
+  - AndCriteria.java
+- - '###'
+  - OrCriteria.java
+- - '###'
+  - '第 4 '
+- - '###'
+  - CriteriaPatternDemo.java
+- - '###'
+  - '第 5 '
+- - '##'
+  - 10. 组合模式 (COMPOSITE PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - '第 1 '
+- - '###'
+  - Employee.java
+- - '###'
+  - '第 2 '
+- - '###'
+  - CompositePatternDemo.java
+- - '###'
+  - '第 3 '
+- - '##'
+  - 11. 装饰器模式 (DECORATOR PATTERN)
+- - '###'
+  - '第 1 '
+- - '###'
+  - Shape.java
+- - '###'
+  - '第 2 '
+- - '###'
+  - Rectangle.java
+- - '###'
+  - Circle.java
+- - '###'
+  - '第 3 '
+- - '###'
+  - ShapeDecorator.java
+- - '###'
+  - 第 4 步
+- - '###'
+  - 第 5 步
+- - '###'
+  - 第 6 步
+- - '##'
+  - 12. 外观模式 (FACADE PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - 第 1 步
+- - '###'
+  - 第 2 步
+- - '###'
+  - Rectangle.java
+- - '###'
+  - Square.java
+- - '###'
+  - Circle.java
+- - '###'
+  - 第 3 步
+- - '###'
+  - ShapeMaker.java
+- - '###'
+  - 第 4 步
+- - '###'
+  - FacadePatternDemo.java
+- - '###'
+  - 第 5 步
+- - '##'
+  - 13. 享重量模式 (FLYWEIGHT PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - 第 1 步
+- - '###'
+  - Shape.java
+- - '###'
+  - 第 2 步
+- - '###'
+  - Circle.java
+- - '###'
+  - 第 3 步
+- - '###'
+  - ShapeFactory.java
+- - '###'
+  - 第 4 步
+- - '###'
+  - FlyweightDemo.java
+- - '###'
+  - 第 5 步
+- - '##'
+  - 14. 代理模式
+- - '###'
+  - 实现
+- - '###'
+  - 步骤 1
+- - '###'
+  - 步骤 2
+- - '###'
+  - RealImage.java
+- - '###'
+  - ProxyImage.java
+- - '###'
+  - 步骤 3
+- - '###'
+  - ProxyPatternDemo.java
+- - '###'
+  - 步骤 4
+- - '##'
+  - 15. 责任链模式
+- - '###'
+  - 实现
+- - '###'
+  - Step 1
+- - '###'
+  - Step 2
+- - '###'
+  - ConsoleLogger.java
+- - '###'
+  - ErrorLogger.java
+- - '###'
+  - FileLogger.java
+- - '###'
+  - Step 3
+- - '###'
+  - ChainPatternDemo.java
+- - '###'
+  - SellStock.java
+- - '###'
+  - Step 4
+- - '###'
+  - Broker.java
+- - '###'
+  - Step 5
+- - '###'
+  - CommandPatternDemo.java
+- - '###'
+  - Step 6
+- - '##'
+  - 17. 解释器模式 (INTERPRETER PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - Step 1
+- - '###'
+  - Step 2
+- - '###'
+  - AndExpression.java
+- - '###'
+  - Step 3
+- - '###'
+  - InterpreterPatternDemo.java
+- - '###'
+  - Step 4
+- - '##'
+  - 18. 迭代器模式 (ITERATOR PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - Step 1
+- - '###'
+  - Step 2
+- - '###'
+  - NameRepository.java
+- - '###'
+  - Step 3
+- - '###'
+  - Step 4
+- - '##'
+  - 19. 中介者模式 (MEDIATOR PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - Step 1
+- - '###'
+  - ChatRoom.java
+- - '###'
+  - '第 2 '
+- - '###'
+  - User.java
+- - '###'
+  - '第 3 '
+- - '###'
+  - MediatorPatternDemo.java
+- - '###'
+  - '第 4 '
+- - '##'
+  - 20. 备忘模式 (MEMENTO PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - '第 1 '
+- - '###'
+  - Memento.java
+- - '###'
+  - '第 2 '
+- - '###'
+  - Originator.java
+- - '###'
+  - '第 3 '
+- - '###'
+  - CareTaker.java
+- - '###'
+  - '第 4 '
+- - '###'
+  - MementoPatternDemo.java
+- - '###'
+  - '第 5 '
+- - '##'
+  - 21. 观察者模式 (OBSERVER PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - '第 1 '
+- - '###'
+  - Subject.java
+- - '###'
+  - '第 2 '
+- - '###'
+  - Observer.java
+- - '###'
+  - '第 3 '
+- - '###'
+  - Observer.java
+- - '###'
+  - '第 4 '
+- - '###'
+  - 第 5
+- - '##'
+  - 23. 空对象模式 (NULL OBJECT PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - '第 1 '
+- - '###'
+  - AbstractCustomer.java
+- - '###'
+  - '第 2 '
+- - '###'
+  - NullCustomer.java
+- - '###'
+  - '第 3 '
+- - '###'
+  - Customer.java
+- - '###'
+  - '第 4 '
+- - '###'
+  - 第 5
+- - '##'
+  - 24. 策略模式 (STRATEGY PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - '第 1 '
+- - '###'
+  - '第 2 '
+- - '###'
+  - OperationAdd.java
+- - '###'
+  - OperationSubstract.java
+- - '###'
+  - OperationMultiply.java
+- - '###'
+  - '第 3 '
+- - '###'
+  - Context.java
+- - '###'
+  - '第 4 '
+- - '###'
+  - StrategyPatternDemo.java
+- - '###'
+  - 第 5
+- - '##'
+  - 25. 模板方法模式 (TEMPLATE METHOD PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - '第 1 '
+- - '###'
+  - '第 2 '
+- - '###'
+  - Cricket.java
+- - '###'
+  - '第 3 '
+- - '###'
+  - Football.java
+- - '###'
+  - Step 3
+- - '###'
+  - TemplatePatternDemo.java
+- - '##'
+  - 26. 访问者模式 (VISITOR PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - Step 1
+- - '###'
+  - ComputerPart.java
+- - '###'
+  - Step 2
+- - '###'
+  - Keyboard.java
+- - '###'
+  - Monitor.java
+- - '###'
+  - Mouse.java
+- - '###'
+  - Computer.java
+- - '###'
+  - Step 3
+- - '###'
+  - ComputerPartVisitor.java
+- - '###'
+  - Step 4
+- - '###'
+  - ComputerPartVisitor.java
+- - '###'
+  - Step 5
+- - '###'
+  - VisitorPatternDemo.java
+- - '###'
+  - Step 6
+- - '##'
+  - 28. 业务委托模式 (BUSINESS DELEGATE PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - Step 1
+- - '###'
+  - BusinessService.java
+- - '###'
+  - Step 2
+- - '###'
+  - EJBService.java
+- - '###'
+  - JMSService.java
+- - '###'
+  - Step 3
+- - '###'
+  - BusinessLookup.java
+- - '###'
+  - Step 4
+- - '###'
+  - BusinessDelegate.java
+- - '###'
+  - Step 5
+- - '###'
+  - Client.java
+- - '###'
+  - Step 6
+- - '###'
+  - BusinessDelegateDemo.java
+- - '###'
+  - Step 7
+- - '##'
+  - 29. 组合实体模式 (COMPOSITE ENTITY PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - Step 1
+- - '###'
+  - Dependent1.java
+- - '###'
+  - Dependent2.java
+- - '###'
+  - Step 2
+- - '###'
+  - CoarseGrainedObject.java
+- - '###'
+  - Step 3
+- - '###'
+  - CompositeEntity.java
+- - '###'
+  - Step 4
+- - '###'
+  - Client.java
+- - '###'
+  - Step 5
+- - '###'
+  - CompositeEntityDemo.java
+- - '##'
+  - 30. 数据访问对象模式 (DATA ACCESS PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - Student.java
+- - '###'
+  - StudentDao.java
+- - '###'
+  - StudentDaoImpl.java
+- - '###'
+  - Client.java
+- - '###'
+  - DaoPatternDemo.java
+- - '###'
+  - 第1步
+- - '###'
+  - 第2步
+- - '###'
+  - StudentDao.java
+- - '###'
+  - 第3步
+- - '###'
+  - StudentDaoImpl.java
+- - '###'
+  - 第4步
+- - '###'
+  - DaoPatternDemo.java
+- - '###'
+  - 第5步
+- - '##'
+  - 31. 前端控制器模式 (FRONT CONTROLLER PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - 第1步
+- - '###'
+  - HomeView.java
+- - '###'
+  - StudentView.java
+- - '###'
+  - 第2步
+- - '###'
+  - Dispatcher.java
+- - '###'
+  - 第3步
+- - '###'
+  - 第4步
+- - '###'
+  - 第5步
+- - '##'
+  - 32. 拦截过滤器模式 (INTERCEPTING FILTER PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - 第1步
+- - '###'
+  - Filter.java
+- - '###'
+  - 第2步
+- - '###'
+  - AuthenticationFilter.java
+- - '###'
+  - DebugFilter.java
+- - '###'
+  - 第3步
+- - '###'
+  - Target.java
+- - '###'
+  - 第4步
+- - '###'
+  - FilterChain.java
+- - '###'
+  - 第5步
+- - '###'
+  - 第6步
+- - '##'
+  - 33. 服务定位器模式 (SERVICE LOCATOR PATTERN)
+- - '###'
+  - 实现
+- - '###'
+  - '第 1 '
+- - '###'
+  - '第 2 '
+- - '###'
+  - '第 3 '
+- - '###'
+  - '第 4 '
+- - '###'
+  - '第 5 '
+- - '###'
+  - '第 6 '
+- - '###'
+  - '第 7 '
+- - '##'
+  - 34. 传输对象模式 (TRANSFER OBJECT PATTERN)
+- - '###'
+  - '第 1 '
+- - '###'
+  - '第 2 '
+- - '###'
+  - '第 3 '
+- - '###'
+  - TransferObjectPatternDemo.java
+- - '###'
+  - '第 4 '
