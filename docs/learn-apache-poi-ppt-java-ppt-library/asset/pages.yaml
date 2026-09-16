@@ -1,0 +1,2704 @@
+- img_proc: true
+  md: '![](img/95f35ef98573c69266016c19d4858ebe_0_0.png)
+
+
+    # # LEARN APACHE POI-PPT
+
+
+    java PPT library
+
+
+    **tutorialspoint**
+
+    SIMPLY EASY LEARNING
+
+
+    www.tutorialspoint.com'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# About the Tutorial
+
+
+    This tutorial provides a basic understanding of Apache POI library and its features.
+    Here we will learn how to read, write, and manage MS-PowerPoint documents using
+    Java programs.
+
+
+    # Audience
+
+
+    This tutorial is designed for all the readers working on Java and especially those
+    who want to create, read, write, and modify PPT files using Java.
+
+
+    # Prerequisites
+
+
+    A general awareness of Java progaming with JDK1.5 or later versions and IO concepts
+    in Java are the only prerequisites to understand this tutorial.
+
+
+    # Copyright & Disclaimer
+
+
+    © Copyright 2014 by Tutorials Point (I) Pvt. Ltd.
+
+    The content and graphics published in this e-book are the property of Tutorials
+    Point (I) Pvt. Ltd. The user of this e-book is prohibited to reuse, retain, copy,
+    distribute or publish any contents or a part of contents of this e-book in any
+    manner without written consent of the publisher.
+
+
+    The API of Apache POI contains a number of methods and classes. In this tutorial,
+    we have used some of those for demonstration purpose. We encourage the readers
+    to refer the the complete API document for a comprehensive understanding.
+
+
+    We strive to update the contents of our website and tutorials as timely and as
+    precisely as possible, the contents may contain inaccuracies or errors. Tutorials
+    Point (I) Pvt. Ltd. provides no guarantee regarding the accuracy, timeliness or
+    completeness of our website or its contents including this tutorial. If you discover
+    any errors on our website or in this tutorial, please notify us at contact@tutorialspoint.com.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: "# Table of Contents\n\n+   About the Tutorial ............................................................................................................i\n\
+    Audience ..............................................................................................................................i\n\
+    Prerequisites .................................................................................................................i\n\
+    Copyright & Disclaimer................................................................................................i\n\
+    Table of Contents...............................................................................................................ii\n\
+    1. APACHE POI – OVERVIEW................................................................................1\n\
+    \   What is Apache POI?...............................................................................................1\n\
+    \   Components of Apache POI...............................................................................1\n\
+    2. FLAVORS OF JAVA PPT API................................................................................3\n\
+    \   Aspose Slides for Java...........................................................................................3\n\
+    \   Apache POI................................................................................................................3\n\
+    3. APACHE POI – INSTALLATION ................................................................5\n\
+    \   System Requirements ............................................................................................5\n\
+    \   Step 1: Verify your Java Installation...............................................................5\n\
+    \   Step 2: Set your Java Environment...............................................................6\n\
+    \   Step 3: Install Apache POI Library...............................................................6\n\
+    4. CLASSES AND METHODS...............................................................................9\n\
+    \   Presentation.......................................................................................................9\n\
+    \   Slide ................................................................................................................10\n\
+    \   Slide Master ................................................................................................11\n\
+    \   Slide Layout......................................................................................................11\n\
+    \   Text Paragraph ................................................................................................12\n\
+    \   Text Run ...............................................................................................................13\n\
+    \   Text shape...........................................................................................................14\n\
+    \   HyperLink...........................................................................................................15"
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '+   5. PRESENTATION....................................................................................16
+
+
+    +      Creating Empty Presentation................................................................16
+
+
+    +      Editing an Existing Presentation...............................................................18
+
+
+    +   6. SLIDE LAYOUTS ................................................................................22
+
+
+    +      Available Slide layouts.......................................................................22
+
+
+    +      Title Layout.....................................................................................25
+
+
+    +      Title and content Layout.....................................................................29
+
+
+    +   7. MANAGEMENT OF SLIDES ........................................................34
+
+
+    +      Changing a Slide...............................................................................34
+
+
+    +      Reordering Slides.............................................................................37
+
+
+    +      Deleting Slides...............................................................................41
+
+
+    +   8. IMAGES ................................................................................46
+
+
+    +      Adding Image...............................................................................46
+
+
+    +      Reading Image...............................................................................49
+
+
+    +   9. CREATING HYPERLINKS...........................................................52
+
+
+    +      Creating Hyperlinks.........................................................................52
+
+
+    +   10. READING SHAPES...............................................................57
+
+
+    +      Reading Shapes from a Presentation..................................................57
+
+
+    +   11. FORMATTING TEXT..............................................................60
+
+
+    +      Formatting Text in a Presentation..................................................60
+
+
+    +   12. MERGING.......................................................................67
+
+
+    +      Merging Multiple Presentations......................................................67
+
+
+    +   13. PPT TO IMAGE...............................................................71
+
+
+    +      Converting Presentation to Image...............................................71'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# 1. APACHE POI – OVERVIEW
+
+
+    Many a time, a software application is required to generate reports in Microsoft
+    Office file format. Sometimes, an application is even expected to receive MS-Office
+    files as input data.
+
+
+    Any Java programmer who wants to produce MS Office files as output must use a
+    predefined and read-only API to do.
+
+
+    # What is Apache POI?
+
+
+    Apache POI is a popular API that allows programmers to create, modify, and display
+    MS-Office files using Java programs. It is an open source library developed and
+    distributed by Apache Software Foundation. It contains classes and methods to
+    decode the user input data, or a file into MS Office documents.
+
+
+    # Components of Apache POI
+
+
+    Apache POI contains classes and methods to work on all OLE2 Compound documents
+    of MS-Office. The list of components of this API is given below:
+
+
+    +   * POIFS (Poor Obfuscation Implementation File System): This component is the
+    basic factor of all other POI elements. It is used to read different files explicitly.
+
+    * HSSF (Horrible Spreadsheet Format): It is used to read and write .xls format
+    of MS-Excel files.
+
+    * XSSF (XML Spreadsheet Format): It is used for .xlsx file format of MS-Excel.
+
+    * HPSF (Horrible Property Set Format): It is used to extract property sets of
+    MS-Office files.
+
+    * HWPF (Horrible Word Processor Format): It is used to read and write .doc extension
+    files of MS-Word.
+
+    * XWPF (XML Word Processor Format): It is used to read and write .docx extension
+    files of MS-Word.
+
+    * HSLF (Horrible Slide Layout Format): It is used to read, create, and edit PowerPoint
+    presentations.
+
+    * HDGF (Horrible DiaGram Format): It contains classes and methods for MS-Visio
+    binary files.
+
+    * HPBF (Horrible PuBlisher Format): It is used to read and write MS-Publisher
+    files.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'Apache POI – PPT
+
+
+    This tutorial guides you through the process of working on Microsoft PowerPoint
+    presentation using Java. Therefore the discussion is confined to XSLF component.
+
+
+    > Note: Older versions of POI support binary file formats such as doc, xls, ppt,
+    etc. Version 3.5 onwards, POI supports OOXML file formats of MS-Office such as
+    docx, xlsx, pptx, etc.
+
+
+    2
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# 2. FLAVORS OF JAVA PPT API
+
+
+    This chapter takes you through some of the flavors of Java PowerPoint API and
+    their features. There are many vendors who provide Java PPT related APIs; some
+    of them are considered in this chapter.
+
+
+    # Aspose Slides for Java
+
+
+    Aspose slides for Java is a purely licensed Java PPT API, developed and distributed
+    by the vendor Aspose. The latest version of this API is 8.1.2, released in July
+    2014. It is a rich and heavy API (combination of plain Java classes and AWT classes)
+    for designing the PPT component that can read, write, and manage slides.
+
+
+    The common uses of this API are as follows:
+
+
+    +   * Build dynamic presentations
+
+    * Render and print high-fidelity presentations
+
+    * Generate, edit, convert, and print presentations
+
+
+    # Apache POI
+
+
+    Apache POI is a 100% open source library provided by Apache Software Foundation.
+    Most of the small and medium scale application developers depend heavily on Apache
+    POI (HSLF + XSLF). It supports all the basic features of PPT libraries; however,
+    rendering and text extraction are its main features. Given below is the architecture
+    of Apache POI for PPT.
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_6_0.png)'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '![](img/95f35ef98573c69266016c19d4858ebe_7_0.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# 3. APACHE POI – INSTALLATION
+
+
+    This chapter takes you through the process of setting up Apache POI on Windows
+    and Linux based systems. Apache POI can easily be installed and integrated with
+    your current Java environment, following a few simple steps without any complex
+    setup procedures. User administration is required for installation.
+
+
+    # System Requirements
+
+
+    | | |
+
+    |---||
+
+    | JDK | Java SE 2 JDK 1.5 or above |
+
+    | Memory | 1 GB RAM (recommended) |
+
+    | Disk Space | No minimum requirement |
+
+    | Operating System Version | Windows XP or above, Linux |
+
+
+    Let us now proceed with the steps to install Apache POI.
+
+
+    # Step 1: Verify your Java Installation
+
+
+    First of all, you need to have Java Software Development Kit (SDK) installed on
+    your system. To verify this, execute any of the following two commands depending
+    on the platform you are working on.
+
+
+    If the Java installation has been done properly, then it will display the current
+    version and specification of your Java installation. A sample output is given
+    in the following table.
+
+
+    | Platform | Command | Sample Output |
+
+    |---|---||
+
+    | Windows | Open command console and type: \>java -version | Java version "1.7.0_60"
+    Java (TM) SE Run Time Environment (build 1.7.0-60-b19) Java Hotspot (TM) 64-bit
+    Server VM (build 24.60-b09,mixed mode) |
+
+    | Linux | Open command | java version "1.7.0_25" |
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_8_0.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Apache – POI
+
+
+    | terminal and type: | Open JDK Runtime Environment (rhel-2.3.10.4.el6_4-x86_64)
+    |
+
+    | **$java -version** | Open JDK 64-Bit Server VM (23.7-b011, mixed mode) |
+
+
+    +   - We assume that the readers of this tutorial have Java SDK version 1.7.0_60
+    installed on their system.
+
+    - In case you do not have Java SDK, download its current version from http://www.oracle.com/technetwork/java/javase/downloads/index.html
+    and install it.
+
+
+    # ## Step 2: Set your Java Environment
+
+
+    Set the environment JAVA_HOME to point to the base directory location where Java
+    is installed on your machine. For example,
+
+
+    | Platform | Description |
+
+    | Windows | Set JAVA_HOME to C:\Program Files\java\dk1.7.0_60 |
+
+    | Linux | Export JAVA_HOME=/usr/local/java-current |
+
+
+    Append the full path of Java compiler location to the System Path.
+
+
+    | Platform | Description |
+
+    | Windows | Append the String "C:\Program Files\java\dk1.7.0_60\bin" to the end
+    of the system variable PATH.
+
+    | Linux | Export PATH=$PATH:$JAVA_HOME/bin/ |
+
+
+    Execute the command java -version from the command prompt as explained above.
+
+
+    # ## Step 3: Install Apache POI Library
+
+
+    Download the latest version of Apache POI from http://poi.apache.org/download.html
+    and unzip its contents to a folder from
+
+
+    6
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_9_0.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'the required libraries can be linked to your Java program. Let us assume
+
+    the files are collected in a folder on C drive.
+
+
+    The following images show the directories and the file structures inside the
+
+    downloaded folder:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_10_0.png)
+
+
+    Add the complete path of the five jars as highlighted in the blue image to the
+
+    CLASSPATH.
+
+
+    # Platform | Description
+
+
+    Append the following strings to the end of the user variable
+
+    CLASSPATH:
+
+
+    "C:\poi-3.9\poi-3.9-20121203.jar;"
+
+
+    "C:\poi-3.9\poi-oxml-3.9-20121203.jar;"
+
+
+    "C:\poi-3.9\poi-oxml-schemas-3.9-20121203.jar;"
+
+
+    "C:\poi-3.9\oxml-lib\dom4j-1.6.1.jar;"
+
+
+    "C:\poi-3.9\oxml-lib\xmlbeans-2.3.0.jar;;\"
+
+
+    Windows'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '| Linux | Export CLASSPATH=$CLASSPATH:<br>/usr/share/poi-3.9/poi-3.9-20121203.tar:<br>/
+    /usr/share/poi-3.9/poi-ooxml-schemas-3.9-20121203.tar:<br>/ /usr/share/poi-3.9/ooxml-3.9-20121203.tar:<br>/
+    /usr/share/poi-3.9/ooxml-lib/dom4j-1.6.1.tar:<br>/ /usr/share/poi-3.9/ooxml-lib/xmlbeans-2.3.0.tar
+    |'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# 4. CLASSES AND METHODS
+
+
+    In this chapter, we will learn about a few classes and methods under Apache POI
+    API that are crucial to work on PPT files using Java programs.
+
+
+    # Presentation
+
+
+    To create and manage a presentation, you have a class called XMLSlideShow in the
+    package org.apache.poi.xslf.usermodel. Given below are some important methods
+    and a constructor of this class.
+
+
+    **Class:** XMLSlideShow
+
+
+    **Package:** org.apache.poi.xslf.usermodel
+
+
+    | S. No. | Constructor and Description |
+
+    |---|---|n| 1 | **XMLSlideShow(InputStream inputStream)** You can instantiate
+    this class by passing an inputStream class object to it. |
+
+
+    | S. No. | Methods and Description |
+
+    |---|---|n| 1 | **int addPicture(byte[] pictureData, int format)** Using this
+    method, you can add a picture to a presentation. |
+
+    | 2 | **XSLFSlide createSlide()** Creates a blank slide in a presentation. |
+
+    | 3 | **XSLFSlide createSlide(XSLSlideLayout layout)** Creates a slide with a
+    given slide layout. |
+
+    | 4 | **java.util.List<XSLFPictureData> getAllPictures()** Returns an array of
+    all the pictures in a presentation. |
+
+    | 5 | **java.awt.Dimension getPageSize()** |'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '| | Using this method, you can get to know the current page size. |
+
+    | 6 | **XSLFSlideMaster[] getSlideMasters()**<br>Returns the array of all slides
+    in a presentation. |
+
+    | 7 | **XSLFSlide[] getSlides()**<br>Returns all the slides in a presentation.
+    |
+
+    | 8 | **XSLFSlide removeSlide(int index)**<br>Using this method, you can remove
+    a slide from a presentation. |
+
+    | 9 | **void setPageSize(java.awt.Dimension pgSize)**<br>Using this method, you
+    can reset the page size. |
+
+    | 10 | **void setSlideOrder(XSLFSlide slide, int newIndex)**<br>Using this method,
+    you can reorder the slides. |
+
+
+    # # Slide
+
+
+    To create and manage a slide in a presentation, the methods of the XSLFSlide class
+    are used. Some important methods of this class are mentioned below.
+
+
+    **Class:** XSLFSlide
+
+
+    **Package:** org.apache.poi.xlsf.usermodel**
+
+
+    | S. No. | Methods and Description |
+
+    | 1 | **XSLFBackground getBackground()**<br>Returns the XSLFBackground object
+    which can be used to retrieve details like color and anchor of the slide. You
+    can also draw shapes in the slide using this object. |
+
+    | 2 | **XSLFSlideLayout getSlideLayout()**<br>Provides access to the **XSLFSlideLayout**
+    object of the current slide. |
+
+    | 3 | **XSLFSlideMaster getSlideMaster()** |'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "| Provides access to the slide master of the current slide. |\n| 4 | **XSLFTheme\
+    \ getTheme()**\n Returns the **XSLFTheme** object of the current slide. |\n| 5\
+    \ | **java.lang.String getTitle()**\n Returns the title of the current slide.\
+    \ |\n| 6 | **XSLFSlide importContent(XSLFSheet src)**\n Copies the contents of\
+    \ another slide to this slide. |\n\n# # Slide Master\n\nIt is the component of\
+    \ the presentation having different slide layouts. The **XSLFSlideMaster** class\
+    \ gives you access to it. Mentioned below are some important methods of this class.\n\
+    \n**Class:** XSLFSlideMaster\n\n**Package:** org.apache.poi.xssff.usermodel\n\n\
+    | S. No. | Methods and Description |\n| 1 | **XSLFBackground getBackground()**\n\
+    \ Returns the common background of the slide master. |\n| 2 | **XSLFSlideLayout\
+    \ getLayout(SlideLayout type)**\n Returns the XSLFSlideLayout object. |\n| 3 |\
+    \ **XSLFSlideLayout[] getSlideLayouts()**\n Returns all the slide layouts in this\
+    \ slide master. |\n\n# # Slide Layout\n\nThe POI library has a class called **XSLFSlideLayout**,\
+    \ using which you can manage the layouts of a slide.\n\n![](img/95f35ef98573c69266016c19d4858ebe_14_0.png)"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'Class: XSLFlideLayout
+
+
+    Package: org.apache.poi.xslf.usermodel
+
+
+    | S. No. | Method and Description |
+
+    |---|---|
+
+    | 1 | void copyLayout(XSLFlide slide) <br> This method will copy the placeholders
+    from this layout to the given slide. |
+
+
+    # Text Paragraph
+
+
+    You can write content to the slide using XSLFTextParagraph class. Below mentioned
+    are some important methods of this class.
+
+
+    Class: XSLFTextParagraph
+
+
+    Package: org.apache.poi.xslf.usermodel
+
+
+    | S. No. | Methods and Description |
+
+    |---|---|
+
+    | 1 | XSLFTextRun addLineBreak() <br> Inserts a line break in a paragraph. |
+
+    | 2 | XSLFTextRun addNewTextRun() <br> Adds a new run of text in a paragraph.
+    |
+
+    | 3 | void setBulletAutoNumber(ListAutoNumber scheme, int startAt) <br> Applies
+    automatic numbered bullet points to the paragraph. |
+
+    | 4 | void setIndent(double value) <br> Sets the indent to the text in the paragraph.
+    |
+
+    | 5 | void setLeftMargin(double value) <br> This method is used to add the left
+    margin of the paragraph. |
+
+    | 6 | void setLineSpacing(double linesacing) |'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Apache POI – PPT
+
+
+    | | |
+
+    |---||
+
+    | | This method is used to set line spacing in the paragraph. |
+
+    | 7 | **void setText(TextAlign align)**<br>This method is used to set alignment
+    that is to be set to the paragraph. |
+
+
+    # # Text Run
+
+
+    This is the lowest level of text separation within a text body. You have XSLFTextRun
+    class to manage the text run of a paragraph. Below mentioned are some important
+    methods of this class.
+
+
+    **Class:** XSLFTextParagraph
+
+
+    **Package:** org.apache.poi.xssf.usermodel
+
+
+    | S. No. | Methods and Description |
+
+    |---|---|
+
+    | 1 | **XSLFHyperlink createHyperlink()**<br>Creates a hyperlink in the presentation.
+    |
+
+    | 2 | **XSLFHyperlink getHyperlink()**<br>This method is used to get the hyperlink.
+    |
+
+    | 3 | **java.lang.String getText()**<br>Returns the value of this Text node as
+    a Java string. |
+
+    | 4 | **void setBold(boolean bold)**<br>This method is used to set the text in
+    Bold. |
+
+    | 5 | **void setCharacterSpacing(double spc)**<br>Sets the spacing between characters
+    within a text run. |
+
+    | 6 | **void setFontColor(java.awt.Color color)**<br>Sets the font color of the
+    text. |
+
+    | 7 | **void setFontSize(double fontSize)** |
+
+
+    13
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Apache POI – PPT
+
+
+    | | Sets the font size of the text. |
+
+    |---||
+
+    | 8 | void setItalic(boolean italic)
+
+    This method is used to make the paragraph italicized. |
+
+    | 9 | void setStrikethrough(boolean strike)
+
+    This method is used to format a run of text as strikethrough. |
+
+    | 10 | void setSubscript(boolean flag)
+
+    This method is used to format the text as subscript. |
+
+    | 11 | void setSuperscript(boolean flag)
+
+    This method is used to format the text in this run as superscript. |
+
+    | 12 | void setText(java.lang.String text)
+
+    This method is used to set the text in a run. |
+
+    | 13 | void setUnderline(boolean underline)
+
+    This method is used to underline the text in a text run. |
+
+
+    # Text shape
+
+
+    In PPT, we have shapes that can hold text within them. We can manage using XSLFTTextShape
+    class. Mentioned below are some important methods of this class.
+
+
+    **Class:** XSLFTTextShape
+
+
+    **Package:** org.apache.poi.xslf.usermodel
+
+
+    | S. No. | Methods and Description |
+
+    |---|---|
+
+    | 1 | void setPlaceholder(Placeholder placeholder)
+
+    Using this method, you can choose a place holder. |
+
+    | 2 | Placeholder getTypeText() |
+
+
+    14'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '| | Returns the type of the current placeholder. |
+
+    | 3 | **void clearText()**
+
+    Clears the text area of the current text shape. |
+
+    | 4 | **XSLFTextParagraph addNewTextParagraph()**
+
+    Adds a new paragraph run to a shape. |
+
+    | 5 | **void drawContent(java.awt.Graphics2D graphics)**
+
+    This method allows you to draw any content on the slide. |
+
+
+    # # HyperLink
+
+
+    The POI library has a class called XSLFHyperlink using which you can create a
+    hyperlink in the presentation. Mentioned below are some important methods of this
+    class.
+
+
+    **Class:** XSLFHyperlink
+
+    **Package:** org.apache.poi.xslf.usermodel
+
+
+    | S. No. | Methods and Description |
+
+    | 1 | **java.net.URI getTargetURL()**
+
+    Returns the URL existing in a slide of the presentation. |
+
+    | 2 | **void setAddress(java.lang.String address)**
+
+    This method is used to set address to a URL. |
+
+    | 3 | **void setAddress(XSLFSlide slide)**
+
+    Sets address to the URL present in a slide of the presentation. |'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# 5. PRESENTATION\n\nGenerally, we use MS-PowerPoint to create presentations.\
+    \ Now let us see how to create presentations using Java. After completion of this\
+    \ chapter, you will be able to create new MS-PowerPoint presentations and open\
+    \ existing PPTs with your Java program.\n\n# Creating Empty Presentation\n\nTo\
+    \ create an empty presentation, you have to instantiate the XMLSlideShow class\
+    \ of the org.poi.xslf.usermodel package:\n\n```\nXMLSlideShow ppt = new XMLSlideShow();\n\
+    ```\n\nSave the changes to a PPT document using the FileOutputStream class:\n\n\
+    ```\nFile file=new File(\"C://PPT//Examples//example1.pptx\");\n\nFileOutputStream\
+    \ out = new FileOutputStream(file);\n\nppt.write(out);\n```\n\nGiven below is\
+    \ the complete program to create a blank MS-PowerPoint presentation.\n\n```\n\
+    import java.io.FileOutputStream;\n\nimport java.io.IOException;\n\nimport org.apache.poi.xslf.usermodel.XMLSlideShow;\n\
+    \nimport org.apache.poi.xslf.usermodel.XSLFSlide;\n\n\npublic class CreatePresentation\
+    \ {\n\n    public static void main(String[] args) throws IOException {\"\n```"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '```
+
+    //creating a new empty slide show
+
+    XMLSlideShow ppt = new XMLSlideShow();
+
+
+    //creating an FileOutputStream object
+
+    File file =newFile("C://POIPPT//Examples//example1.pptx");
+
+    FileOutputStream out = new FileOutputStream(file);
+
+
+    //saving the changes to a file
+
+    ppt.write(out);
+
+    System.out.println("Presentation created successfully");
+
+    out.close();
+
+    }
+
+    ```
+
+
+    Save the above Java code as CreatePresentation.java, and then compile andnexecute
+    it from the command prompt as follows:
+
+
+    | javac CreatePresentation.java |
+
+    | java CreatePresentation |
+
+
+    If your system environment is configured with the POI library, it will compile
+    andnexecute to generate a blank PPT file named example1.pptx in your current
+
+    directory and display the following output on the command prompt:
+
+
+    | Presentation created successfully |'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Apache POI – PPT
+
+
+    The blank PowerPoint document appears as follows:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_21_0.png)
+
+
+    # Editing an Existing Presentation
+
+
+    To open an existing presentation, instantiate the XMLSlideShow class and pass
+    the FileInputStream object of the file to be edited, as an argument to the XMLSlideShow
+    constructor.
+
+
+    ```
+
+    File file=new File("C:/POIPPT/Examples/example1.pptx");
+
+
+    FileInputStream inputStream=new FileInputStream(file);
+
+
+    XMLSlideShow ppt = new XMLSlideShow(inputstream);
+
+    ```
+
+
+    You can add slides to a presentation using the createSlide() method of the XMLSlideShow
+    class which is in the org.poi.xslf.usermodelodel package.
+
+
+    ```
+
+    XSLFSlide slide1= ppt.createSlide();
+
+    ```
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_21_1.png)'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "Given below is the complete program to open and add slides to an existing PPT:\n\
+    \n```\nimport java.io.File;\nimport java.io.FileInputStream;\nimport java.io.FileOutputStream;\n\
+    import java.io.IOException;\nimport org.apache.poi.xslf.usermodel.XMLSlideShow;\n\
+    import org.apache.poi.xslf.usermodel.XSLFSlide;\n\npublic class EditPresentation\
+    \ {\npublic static void main(String[] args) throws IOException {\n\n    //opening\
+    \ an existing slide show\n    File file=new File(\"C://POIPPT/Examples/example1.pptx\"\
+    );\n    FileInputStream inputstream=new FileInputStream(file);\n    XMLSlideShow\
+    \ ppt = new XMLSlideShow(inputstream);\n\n    //adding slides to it\n    XSLFSlide\
+    \ slide1= ppt.createSlide();\n    XSLFSlide slide2= ppt.createSlide();\n\n   \
+    \ //saving the changes\n    FileOutputStream output out = new FileOutputStream(file);\n\
+    ```"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '```
+
+    ppt.write(out);
+
+
+    System.out.println("Presentation edited successfully");
+
+
+    out.close();
+
+
+    }
+
+    ```
+
+
+    Save the above Java code as **EditPresentation.java**, and then compile and execute
+    it from the command prompt as follows:
+
+
+    ```
+
+    $javac EditPresentation.java
+
+
+    $java EditPresentation
+
+    ```
+
+
+    It will compile and execute to generate the following output:
+
+
+    slides successfully added'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'The output PPT document with newly added slides looks as follows:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_24_0.png)
+
+
+    After adding slides to a PPT, you can add, perform, read, and write operations
+    on the slides.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'In the previous chapter, you have seen how to create empty slides and how to
+    add slides to it. In this chapter, you will learn how to get the list of available
+    slides, and how to create a slide with different layouts.
+
+
+    # Available Slide layouts
+
+
+    PowerPoint presentations have slide layouts, and you can choose a desired layout
+    to edit a slide. First of all, let us find out the list of all the slide layouts
+    available.
+
+
+    +   * There are different slide masters and in each slide master, there are several
+    slide layouts.
+
+    * You can get the list of the slide masters using the getSlideMasters() method
+    of the XMLSlideShow class.
+
+    * You can get the list of slide layouts from each slide master using the getSlideLayouts()
+    method of the XSLSlideMaster class.
+
+    * You can get the name of the slide layout from the layout object using the getType()
+    method of the XSLFSlideLayout class.
+
+
+    > Note: All these classes belongs to org.poi.xmlf.usermodel package.
+
+
+    Given below is the complete program to get the list of available slide layouts
+    in the PPT:
+
+
+    ```
+
+    import java.io.FileInputStream;
+
+
+    import java.io.FileNotFoundException;
+
+
+    import java.io.IOException;
+
+
+    import org.apache.poi.xslf.usermodel.XMLSlideShow;
+
+
+    import org.apache.poi.xslf.usermodel.XSLFSlideLayout;
+
+
+    import org.apache.poi.xslf.usermodel.XSLFSlideMaster;
+
+    ```'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "```\npublic class SlideLayouts {\n    public static void main(String[] args[])\
+    \ throws IOException {\n\n        // create an empty presentation\n\n        XMLSSlide\
+    \ ppt = new XMLSSlideShow();\n\n        System.out.println(\"Available slide layouts:\"\
+    );\n\n        // getting the list of all slide masters\n\n        for(XSLSlideMaster\
+    \ master : ppt.getSlideMasters()){\n\n            // getting the list of the layouts\
+    \ in each slide master\n            for(XSLSlideLayout layout : master.getSlideLayouts()){\n\
+    \n                // getting the list of available slides\n                System.out.println(layout.getType());\n\
+    \            }\n        }\n    }\n}\n```\n\nSave the above Java code as SlideLayouts.java,\
+    \ and then compile and execute it from the command prompt as:\n\n```\n$javac SlideLayouts.java\n\
+    ```\n\n![](img/95f35ef98573c69266016c19d4858ebe_26_0.png)"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '$Java SlideDeLayouts
+
+
+    It will compile and execute to generate the following output:
+
+
+    ```
+
+    Available slide layouts:
+
+
+    TITLE
+
+    PIC_TX
+
+    VERT_TX
+
+    TWO_TX_TWO_OBJ
+
+    BLANK
+
+    VERT_TITLE_AND_TX
+
+    TITLE_AND_CONTENT
+
+    TITLE_ONLY
+
+    SECTION_HEADER
+
+    TWO_OBJ
+
+    OBJ_TX
+
+    ```
+
+
+    Shown below are some of the sample slide layouts available with MS-Office 360,
+    2013 edition.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '![](img/95f35ef98573c69266016c19d4858ebe_28_0.png)
+
+
+    # # Title Layout
+
+
+    Let us create a slide in a PPT Using Title layout. Follow the steps given below:
+
+
+    **Step 1: Create an empty presentation by instantiating the XMLSlideShow class
+    as shown below:
+
+
+    ```
+
+    XMLSlideShow ppt = new XMLSlideShow();
+
+    ```
+
+
+    **Step 2:** Get the list of slide masters using the getSlideMasters() method.
+    Thereafter, select the desired slide master using the index as shown below:
+
+
+    ```
+
+    XSLFSlideMaster master = ppt.getSlideMasters()[];
+
+    ```
+
+
+    Here we are getting the default slide master which is in the 0th location of the
+    slide masters array.
+
+
+    **Step 3:** Get the desired layout using the getLayout() method of the **XSLFSlideMaster**
+    class. This method accepts a parameter where you have to'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'pass one of the static variable of the SlideLayoutclass, which represents our
+    desired layout. There are several variables in this class where each variable
+    represents a slide layout.
+
+
+    The code snippet given below shows how to create a slide layout:
+
+
+    ```
+
+    XSLFSlideLayout titleLayout = slideMaster.getLayout(SlideLayout.TITLE);
+
+    ```
+
+
+    Step 4: Create a new slide by passing a slide layout object as parameter.
+
+
+    ```
+
+    XSLFSlide slide = ppt.createSlide(titleLayout);
+
+    ```
+
+
+    Step 5: Select a placeholder using the getPlaceholder() method of the XSLFSlide
+    class. This method accepts an integer parameter. By passing 0 to it, you will
+    get the XSLFTextShape object, using which you can access the title text area of
+    the slide. Set the title using the setText() method as shown below:
+
+
+    ```
+
+    XSLFTextShape title1 = slide.getPlaceholder(0)
+
+
+    //setting the title init
+
+
+    title1.setText("Tutorials point");
+
+    ```
+
+
+    Given below is the complete program to create a slide with Title layout in a presentation:
+
+
+    ```
+
+    import java.io.File;
+
+
+    import java.io.FileOutputStream;
+
+
+    import java.io.IOException;
+
+
+    import org.apache.poi.xslf.usermodel.SlideLayout;
+
+    import org.apache.poi.xslf.usermodel.XMLSlideShow;
+
+    import org.apache.poi.xslf.usermodel.XSLFSlide;
+
+    import org.apache.poi.xslf.usermodel.XSLFSlideLayout;
+
+    import org.apache.poi.xslf.usermodel.XSLFSlideMaster;
+
+    import org.apache.poi.xslf.usermodel.XSLFTextShape;
+
+    ```
+
+
+    26
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_29_0.png)'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "```\npublic class TitleLayout {\n\n    public static void main(String args[])\
+    \ throws Exception {\n\n        // creating presentation\n        XMLSLlideShow\
+    \ ppt = new XMLSLlideShow();\n\n        // getting the slide master object\n \
+    \       XSLFSlideMaster slideMaster = ppt.getSlideMasters()[0];\n\n        //\
+    \ get the desired slide layout\n        XSLFSlideLayout titleLayout = \n     \
+    \   slideMaster.getLayout(SlideLayout.TITLE);\n\n        // creating a slide with\
+    \ title layout\n        XSLFSlide slide1 = ppt.createSlide(titleLayout);\n\n \
+    \       // selecting the place holder in it\n        XSLFTextShape title1 = slide1.getPlaceholder(0);\n\
+    \n        // setting the title index\n        title1.setText(\"Tutorials point\"\
+    );\n\n        // create a file object\n        File file=new File(\"C:\\POIPPT//Examples//Titlelayout.pptx\"\
+    );\n        FileOutputStream out = new FileOutputStream(file);\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '```
+
+    // save the changes in a PPT document
+
+
+    ppt.write(out);
+
+
+    System.out.println(" created successfully");
+
+
+    out.close();
+
+    }
+
+    ```
+
+
+    Save the above Java code as TitleLayout.java, and then compile and execute it
+    from the command prompt as follows:
+
+
+    ```
+
+    $javac TitleLayout.java
+
+
+    $java TitleLayout
+
+    ```
+
+
+    It will compile and execute to generate the following output.
+
+
+    slide created successfully
+
+
+    The PPT document with newly added Title layout slide appears as follows:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_31_0.png)'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Title and content Layout
+
+
+    Let us create a slide in a PPT using Title and content layout. Follow the steps
+    given below.
+
+
+    **Step 1:** Create an empty presentation by instantiating the XMLSlideShow class
+    as shown below:
+
+
+    ```
+
+    XMLSlideShow ppt = new XMLSlideShow();
+
+    ```
+
+
+    **Step 2:** Get the list of slide masters using the getSlideMasters() method.
+    Select the desired slide master using the index as shown below:
+
+
+    ```
+
+    XSLFSlideMaster slideMaster = ppt.getSlideMasters()[0];
+
+    ```
+
+
+    Here we get the default slide master which is in the 0th location of the slide
+    masters array.
+
+
+    **Step 3:** Get the desired layout using the getLayout() method of the XSLFSlideMaster
+    class. This method accepts a parameter where you have to pass one of the static
+    variable of the SlideLayout class which represents our desired layout. There are
+    several variables in this class that represent slide layouts.
+
+
+    The following code snippet shows how to create title and content layout:
+
+
+    ```
+
+    XSLFSlideLayout contentlayout = slideMaster.getLayout(slideLayout.TITLE_AND_CONTENT);
+
+    ```
+
+
+    **Step 4:** Create a new slide by passing the slide layout object as parameter.
+
+
+    ```
+
+    XSLFSlide slide = ppt.createSlide(slideLayout.TITLE_AND_CONTENT);
+
+    ```
+
+
+    **Step 5:** Select a placeholder using the getPlaceholder() method of the XSLFSlide
+    class. This method accepts an integer parameter. By passing 1 to it, you will
+    get the XSLTextShape object, using which you can access the content area of the
+    slide. Set the title using the setText() method as shown below:
+
+
+    ```
+
+    XSLTextShape title1 = slide1.getPlaceholder(1);
+
+
+    //setting the title init
+
+    title1.setText("Introduction");"
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# Step 6: Clear the existing text in the slide using the clearText() method\
+    \ of the XSLFTextShape class.\n\n```\nbody.clearText();\n```\n\nStep 7: Add new\
+    \ paragraph using the addNewTextParagraph() method. Now add a new text run to\
+    \ the paragraph using the addNewTextRun() method. Now to the text, add text using\
+    \ the setText() method as shown below:\n\nGiven below is the complete program\
+    \ to create a slide with Title layout in a presentation:\n\n```\nimport java.io.File;\n\
+    import java.io.FileOutputStream;\nimport java.io.IOException;\n\nimport org.apache.poi.slff.model.SlideLayout;\n\
+    import org.apache.poi.slff.model.XMLSlideShow;\nimport org.apache.poi.slff.model.XSLFSlide;\n\
+    import org.apache.poi.slff.model.XSLFSlideLayout;\nimport org.apache.poi.slff.model.XSLFSlideMaster;\n\
+    import org.apache.poi.slff.model.XSLFTextShape;\n\npublic class TitleAndBodyLayout\
+    \ {\n\n    public static void main(String args[]) throws IOException {\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "```\n//creating presentation\nXMLSlideShow ppt = new XMLSlideShow();\n\n//getting\
+    \ the slide master object\nXSLFSlideMaster slideMaster = ppt.getSlideMasters()[0];\n\
+    \n//select a layout from specified list\nXSLFSlideLayout slidelayout = \nslideMaster.getLayout(SlideLayout.TITLE_AND_CONTENT);\n\
+    \n//creating a slide with title and content layout\nXSLFSlide slide = ppt.createSlide(slidelayout);\n\
+    \n//selection of title place holder\nXSLFTextShape slide = slide.getPlaceholder(0);\n\
+    \n//setting the title in it\ntitle.setText(\"introduction\");\n\n//selection of\
+    \ body placeholder\nXSLFTextShape body = slide.getPlaceholder(1);\n\n//clear the\
+    \ existing text in the slide\nbody.clearText();();\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '```
+
+    //adding new paragraph
+
+    body.addNewTextParagraph().addNewTextRun().setText("this is my
+
+    first slide body");
+
+    ```
+
+
+    ```
+
+    //create a file object
+
+    File file=new File("C://PPT//Examples//contentlayout.pptx");
+
+    FileOutputStream out = new FileOutputStream(file);
+
+
+    //save the changes in a file
+
+    ppt.write(out);
+
+    System.out.println("slide created successfully");
+
+    out.close();
+
+    ```
+
+
+    Save the above Java code as **TitleLayout.java**, and then compile and execute
+    it from the command prompt as:
+
+
+    $javac TitleLayout.java
+
+    $java TitleLayout
+
+
+    It will compile and execute to generate the following output:
+
+
+    slide created successfully'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'The PPT document with newly added Title layout slide appears as follows:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_36_0.png)
+
+
+    In the same way, you can create slides with different layouts as well.
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_36_1.png)
+
+
+    33'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'After completing this chapter, you will be able to delete, reorder, and perform
+    read and write operations on a slide.
+
+
+    # Changing a Slide
+
+
+    We can change the page size of a slide using the setPageSize() method of the XMLSlideShow
+    class.
+
+
+    Initially create a presentation as shown below:
+
+
+    ```
+
+    File file=new File("C://POIPP//Examples//TitleAndContentLayout.pptx");
+
+    //create presentation
+
+    XMLSlideShow ppt = new XMLSlideShow(new FileInputStream(file));
+
+    ```
+
+
+    Get the size of the current slide using the getPageSize() method of the XMLSlideShow
+    class.
+
+
+    ```
+
+    java.awt.Dimension pgsize = ppt.getPageSize();
+
+    ```
+
+
+    Set the size of the page using the setPageSize() method.
+
+
+    ```
+
+    ppt.setPageSize(new java.awt.Dimension(1024, 768));
+
+    ```
+
+
+    The complete program for changing the size of a slide is given below:
+
+
+    ```
+
+    import java.io.File;
+
+    import java.io.FileOutputStream;
+
+    import java.io.IOException;
+
+    import org.apache.poi.xslf.usermodel.XMLSlideShow;
+
+
+    public class ChangingSlideSize {
+
+    ```'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '```
+
+    public static void main(String args[]) throws IOException {
+
+
+    //create file object
+
+    File file = new File("C://POIPPT//Examples//TitleAndContentLayout.pptx");
+
+
+    //create presentation
+
+    XMLSLideShow ppt = new XMLSLideShow();
+
+
+    // getting the current page size
+
+    java.awt.Dimension pgsize = ppt.getPageSize();
+
+    int pgw = pgsize.width; //slide width in points
+
+    int pgh = pgsize.height; //slide height in points
+
+    System.out.println("current page size of the PPT is:");
+
+    System.out.println("width :"+pgw);
+
+    System.out.println("height :"+pgh);
+
+
+    // set new page size
+
+    ppt.setPageSize(new java.awt.Dimension(2048,1536));n
+
+
+    //creating file object
+
+    FileOutputStream out = new FileOutputStream(file);
+
+
+    //saving the changes to a file
+
+    ppt.write(out);
+
+    System.out.println("slide size changed to given dimentions ");n}
+
+    ```'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '```
+
+    out.close();
+
+    }
+
+    }
+
+    ```
+
+
+    Save the above Java code as **ChangingSlide.java**, and then compile and execute
+    it from the command prompt as follows:
+
+
+    ```
+
+    $javac ChangingSlide.java
+
+
+    $java ChangingSlide
+
+    ```
+
+
+    It will compile and execute to generate the following output:
+
+
+    ```
+
+    current page size of the presentation is :
+
+
+    width :720
+
+
+    height :540
+
+
+    slide size changed to given dimensions
+
+    ```'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'Given below is the snapshot of the presentation before changing the slide size:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_40_0.png)
+
+
+    The slide appears as follows after changing its size:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_40_1.png)
+
+
+    # Reordering Slides
+
+
+    You can set the slide order using the setSlideOrder() method. Given below is the
+    procedure to set the order of the slides.
+
+
+    Open an existing PPT document as shown below:
+
+
+    ```
+
+    File file=new File("C://POIPPT//Examples//example1.pptx");
+
+
+    XMLSlideShow ppt = new XMLSlideShow(new FileInputStream(file));
+
+    ```
+
+
+    37'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "Get the slides using the getSlides() method as shown below:\n\n```\nXSLFSlide[]\
+    \ slides =ppt.getSlides();\n```\n\nSelect a slideOrder() from the array of the\
+    \ slides, and change the order using the setSlideOrder() method as shown below:\n\
+    \n```\n//selecting the fourth slide\n\nXSLFSlide selectdslide= slides[4];\n\n\
+    //bringing it to the top\nppt.setSlideOrder(selectsdslide, 1);\n```\n\nGiven below\
+    \ is the complete program to reorder the slides in a presentation:\n\n```\nimport\
+    \ java.io.File;\n\nimport java.io.FileInputStream;\n\nimport java.io.FileOutputStream;\n\
+    \nimport java.io.IOException;\n\nimport org.apache.poi.xssf.usermodel.XMLSlideShow;\n\
+    \nimport org.apache.poi.xssf.usermodel.XSLFSlide;\n\npublic class ReorderSlide\
+    \ {\n\n    public static void main(String[] args) throws IOException {\n\n   \
+    \     //opening an existing presentation\n\n        File file=new File(\"C://POIPPT//Examples//example1.pptx\"\
+    );\n\n        XMLSlideShow ppt = new XMLSlideShow(new FileInputStream(file));\n\
+    \n        //get the slides\n\n        XSLFSlide[] slides =ppt.getSlides();\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '```
+
+    //selecting the fourth slide
+
+    nXSLFSlide selectsdslide= slides[13];
+
+
+    //bringing it to the top
+
+    ppt.setSlideOrder(selectdslide, 0);
+
+
+    //creating an file object
+
+    FileOutputStream out = new FileOutputStream(file);
+
+
+    //saving the changes to a file
+
+    ppt.write(out);
+
+    out.close();
+
+    }
+
+    ```
+
+
+    Save the above Java code as ReorderSlide.java, and then compile and execute it
+    from the command prompt as follows:
+
+
+    ```
+
+    $javac ReorderSlide.java
+
+    $java ReorderSlide
+
+    ```
+
+
+    It will compile and execute to generate the following output.
+
+
+    Reordering of the slides is done'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'Given below is the snapshot of the presentation before reordering the slides:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_43_0.png)
+
+
+    40'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Apache POI - PPT
+
+
+    After reordering the slides, the presentation appears as follows. Here we have
+    selected the slide with image and moved it to the top.
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_44_0.png)
+
+
+    # Deleting Slides
+
+
+    You can delete the slides using the removeSlide() method. Follow the steps given
+    below to delete slides.
+
+
+    Open an existing presentation using the XMLSlideShow class as shown below:
+
+
+    ```
+
+    File-file=new File("C://POIPPT//Examples//image.pptx");
+
+    XMLSlideShow ppt = new XMLSlideShow(new FileInputStream(file));
+
+    ```
+
+
+    Delete the required slide using the removeSlide() method. This method accepts
+    an integer parameter. Pass the index of the slide that is to be deleted to this
+    method.
+
+
+    41
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_44_1.png)'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# Apache POI – PPT\n\nGiven below is the program to delete slides from a presentation:\n\
+    \n```\nimport java.io.File;\nimport java.io.FileInputStream;\nimport java.io.FileOutputStream;\n\
+    import java.io.IOException;\n\nimport org.apache.poi.xslf.usermodel.XMLSlideShow;\n\
+    \npublic static class Deleteslide {\n    public static void main(String[] args)\
+    \ throws IOException {\n\n    //Opening an existing slide\n    File file=new File(\"\
+    C://POIPP//Examples//image.pptx\");\n    XMLSlideShow ppt = new XMLSlideShow(new\
+    \ FileInputStream(file));\n\n    //deleting a slide\n    ppt.removeSlide(1);\n\
+    \n    //creating a file object\n    FileOutputStream out = new FileOutputStream(file);\n\
+    \n    //Saving the changes to the presentation\n    ppt.write(out);\n  }\n}\n\
+    ```\n\n![](img/95f35ef98573c69266016c19d4858ebe_45_0.png)"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '```
+
+    out.close();
+
+    }
+
+    }
+
+    ```
+
+
+    Save the above Java code as **Deleteslide.java**, and then compile and execute
+    it from the command prompt as follows:
+
+
+    ```
+
+    $javac Deleteslide.java
+
+    $java Deleteslide
+
+    ```
+
+
+    It will compile and execute to generate the following output:
+
+
+    reordering of the slides is done
+
+
+    The snapshot below is is of the presentation before deleting the slide:'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Apache POI - PPT
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_47_0.png)
+
+
+    Bold (Ctrl+B)
+
+    Make your text bold.
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_47_1.png)
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_47_2.png)
+
+
+    Tutorial point
+
+
+    www.tutorialpoint.com
+
+    SIMPLY EASY LEARNING
+
+
+    Apache POI
+
+    Apache POI is a Java API for handling Microsoft Office documents. It allows applications
+    to read and write to Excel, Word and PowerPoint files. It is created and maintained
+    by Apache Software Foundation. It is easy to read and write input data as a file.
+
+
+    Click to add notes
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_47_3.png)'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'After deleting the slide, the presentation appears as follows:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_48_0.png)'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# 8. IMAGES
+
+
+    In this chapter, you will learn how to add an image to a PPT and how to read an
+    image from it.
+
+
+    # Adding Image
+
+
+    You can add images to a presentation using the createPicture() method of XSLFSlide.
+    This method accepts image in the form of byte array format. Therefore, you have
+    create a byte array of the image that is to be added to the presentation.
+
+
+    Follow the given procedure to add an image to a presentation. Create an empty
+    slideshow using XMLSlideShow as shown below:
+
+
+    ```
+
+    XMLSlideShow ppt = new XMLSlideShow();
+
+    ```
+
+
+    Create an empty presentation in it using createSlide().
+
+
+    ```
+
+    XSLFSlide slide = ppt.createSlide();
+
+    ```
+
+
+    Read the image that file is to be added and convert it into byte array using IOUtils.toByteArray()
+    of the IOUTils class as shown below:
+
+
+    ```
+
+    //reading an image
+
+
+    File image=new File("C://PPT//boy.jpg");
+
+
+    //converting it into a byte array
+
+
+    byte[] picture = IOUTils.toByteArray(new FileInputStream(image));
+
+    ```
+
+
+    Add the image to the presentation using addPicture(). This method accepts two
+    variables: byte array format of the image that is to be added and the static variable
+    representing the file format of the image. The usage of the addPicture() method
+    is shown below:
+
+
+    ```
+
+    int idx = ppt.addPicture(picture, XSLFPictureData.PICTURE_TYPE_PNG);
+
+    ```
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_49_0.png)'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "Embed the image to the slide using createPicture() as shown below:\n\n| XSLFPictureShape\
+    \ pic = slide.createPicture(idx);\n\nGiven below is the complete program to add\
+    \ an image to the slide in a presentation:\n\n```\nimport java.io.File;\nimport\
+    \ java.io.FileInputStream;\nimport java.io.FileOutputStream;\nimport java.io.IOException;\n\
+    \nimport org.apache.poi.util.IOUtils;\nimport org.apache.poi.xlssf.usermodel.XMLSlideShow;\n\
+    import org.apache.poi.xlssf.usermodel.XSLFPictureData;\nimport org.apache.poi.xlssf.usermodel.XSLFPictureShape;\n\
+    import org.apache.poi.xlssf.usermodel.XSLFSlide;\n\npublic class AddingImage {\n\
+    \n    public static void main(String[] args) throws IOException {\n\n        //creating\
+    \ a presentation\n        XMLSlideShow ppt = new XMLSlideShow();\n\n        //creating\
+    \ a slide in it\n        XSLFSlide slide = ppt.createSlide();\n\n        //reading\
+    \ an image\n        File image=new File(\"C://POIPPT/boy.jpg\");\n    }\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '```
+
+    //converting it into a byte array
+
+
+    byte[] picture = IOUtils.toByteArray(new FileInputStream(image));
+
+
+    //adding the image to the presentation
+
+    int idx = ppt.addPicture(picture,
+
+    XSLFPictureData.PICTURE_TYPE_PNG);
+
+
+    //creating a slide with given picture on it
+
+    XSLFPictureShape pic = slide.createPicture(idx);
+
+
+    //creating a file object
+
+    File file=new File("C://POIPPT//Examples//addingimage.pptx");
+
+    FileOutputStream out = new FileOutputStream(file);
+
+
+    //saving the changes to a file
+
+    ppt.write(out);
+
+    System.out.println("image added successfully");
+
+    out.close();
+
+    }
+
+    ```
+
+
+    Save the above Java code as AddingImage.java, and then compile and execute it
+    from the command prompt as follows:
+
+
+    ```
+
+    $javac AddingImage.java
+
+
+    java AddingImage
+
+    ```'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'It will compile and execute to generate the following output:
+
+
+    reordering of the slides is done
+
+
+    The presentation with the newly added slide with image appears as follows:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_52_0.png)
+
+
+    # Reading Image
+
+
+    You can get the data of all the pictures using the getAllPictures() method of
+    the XMLSLideShow class. The following program reads the images from a presentation:
+
+
+    ```
+
+    import java.io.File;
+
+    import java.io.FileInputStream;
+
+    import java.io.FileOutputStream;
+
+    import java.io.IOException;
+
+
+    import org.apache.poi.xslf.usermodel.XMLSLideShow;
+
+    ```
+
+
+    49'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\nimport org.apache.poi.xlxf.usermodel.XSLFPictureureData;\n\npublic class\
+    \ Readingimage {\n\n    public static void main(String[] args) throws IOException{\n\
+    \n    //open an existing presentation\n    File file=new File(\"C://POIPPT//Examples//addingimage.pptx\"\
+    );\n    XMLSlide ppt = new XMLSlideShow(new FileInputStream(file));\n\n    //reading\
+    \ all the pictures in the presentation\n    for(XSLFPictureureData data : ppt.getAllPictures()){\n\
+    \        byte[] bytes = data.getData();\n\n        String fileName = data.getFileName();\n\
+    \        int pictureFormat=data.getPictureType();\n\n        System.out.println(\"\
+    picture name: \"+fileName);\n        System.out.println(\"picture format: \"+pictureFormat);\n\
+    \    }\n\n    //saving the changes to a file\n    FileOutputStream out = new FileOutputStream(file);\n\
+    \n    ppt.write(out);\n    out.close();\n}\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    Save the above Java code as Readingimage.java, and then compile and execute it
+    from the command prompt as follows:
+
+
+    ```
+
+    $javac Readingimage.java
+
+
+    $java Readingimage
+
+    ```
+
+
+    It will compile and execute to generate the following output:
+
+
+    picture name: image1.png
+
+    \picture format: 6'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# 9. CREATING HYPERLINKS
+
+
+    In this chapter you will learn how to create hyperlinks in a presentation.
+
+
+    # Creating Hyperlinks
+
+
+    You can read the hyperlinks in a presentation using the createHyperlink() method
+    of the XSLFTRun class. Follow the procedure given below to create a hyperlink
+    in a presentation.
+
+
+    Create an empty presentation using the XMLSlideShow class as shown below:
+
+
+    ```
+
+    XMLSlideShow ppt = new XMLSlideShow();
+
+    ```
+
+
+    Create an empty slide and create a textbox and body of the slide using body and
+    content layout.
+
+
+    ```
+
+    //create
+
+    XSLFSlideMaster slideMaster = ppt.getSlideMasters()[0];
+
+
+    //creating a slide with title and content layout
+
+    XSLFSlideLayout slidelayout = slideMaster.getLayout(SlideLayout.TITLE_AND_CONTENT);
+
+    XSLFSlide slide = ppt.createSlide(slidelayout);
+
+
+    //selection of body place holder
+
+    XSLFTextShape body = slide.getPlaceholder(1);
+
+
+    //clear the existing text in the slide
+
+    body.clearText();
+
+    ```
+
+
+    Create a text run object and set text to it as shown below:
+
+
+    ```
+
+    XSLFTextRun textRun=body.addNewTextParagraph().addNewTextRun();
+
+    ```
+
+
+    52
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_55_0.png)'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# Apache POI – PPT\n\n```\ntextRun.setText(\"Tutorials point\");\n```\n\nCreate\
+    \ a hyperlink using the createHyperlink() method of the XSLFText class as shown\
+    \ below:\n\n```\nXSLFHyperlink link = textRun.createHyperlink();\n```\n\nSet the\
+    \ link address to the hyperlink using the setAddress() method of XSLFHyperlink\
+    \ class as shown below:\n\n```\nlink.setAddress(\"http://www.tutorialpoint.com/\"\
+    );\n```\n\nGiven below is the complete program to create hyperlink in a presentation:\n\
+    \n```\nimport java.io.File;\nimport java.io.FileOutputStream;\nimport java.io.IOException;\n\
+    \nimport org.apache.poi.xssf.usermodel.SlideLayout;\nimport org.apache.poi.xssf.usermodel.XMLSlideShow;\n\
+    import org.apache.poi.xssf.usermodel.XSLFHyperlink;\nimport org.apache.poi.xssf.usermodel.XSLFSlide;\n\
+    import org.apache.poi.xssf.usermodel.XSLFSlideLayout;\nimport org.apache.poi.xssf.usermodel.XSLFSlideMaster;\n\
+    import org.apache.poi.xssf.usermodel.XSLFTextRun;\nimport org.apache.poi.xssf.usermodel.XSLFTextShape;\n\
+    \npublic class CreatingHyperlinks {\n\n    public static void main(String[] args)\
+    \ throws IOException {\n\n}}\n```\n\n53"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '```
+
+    //create an empty presentation
+
+    XMLSLlide ppt = new XMLSLideShow();
+
+
+    //getting the slide master object
+
+    XSLFSlideMaster slideMaster = ppt.getSlideMasters()[0];
+
+
+    //select a layout from specified list
+
+    XSLFSlideLayout
+
+    slidelayout=slideMaster.getLayout(SlideLayout.TITLE_AND_CONTENT);
+
+
+    //creating a slide with title and content layout
+
+    XSLFSlide slide = ppt.createSlide(slidelayout);
+
+
+    //selection of title place holder
+
+    XSLFTextShape body = slide.getPlaceholder(1);
+
+
+    //clear the existing text in the slide
+
+    body.clearText();
+
+
+    //adding new paragraph
+
+    XSLFTextRun textRun = body.addNewTextParagraph().addNewTextRun();
+
+
+    //setting the text
+
+    textRun.setText("Tutorials point");
+
+
+    //creating the hyperlink
+
+    XSLFHyperlink link = textRun.createHyperlink();
+
+    ```'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '```
+
+    //setting the link address
+
+
+    link.setAddress("http://www.tutorialpoint.com/");
+
+
+    //create the file object
+
+    File file=new File("C://POIPPT//Examples//hyperlink.pptx");
+
+    FileOutputStream out = new FileOutputStream(file);
+
+
+    //save the changes in a file
+
+    ppt.write(out);
+
+    System.out.println("slide created successfully");
+
+    out.close();
+
+    }
+
+    }
+
+    ```
+
+
+    Save the above Java code as **CreatingHyperlinks.java**, and then compile and
+    execute it from the command prompt as follows:
+
+
+    ```
+
+    $javac CreatingHyperlinks.java
+
+
+    $java CreatingHyperlinks
+
+    ```
+
+
+    It will compile and execute to generate the following output:
+
+
+    | slide created successfully |'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: 'The newly added slide with the hyperlink in its body looks as follows:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_59_0.png)
+
+
+    56'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# 10. READING SHAPES\n\n# Reading Shapes from a Presentation\n\nYou can get\
+    \ a count of the number of shapes used in a presentation using the method getShapeName()\
+    \ of the XSLShape class. Given below is the program to read the shapes from a\
+    \ presentation:\n\n```\nimport java.io.File;\nimport java.io.FileInputStream;\n\
+    import java.io.FileOutputStream;\nimport java.io.IOException;\n\nimport org.apache.poi.xslf.usermodel.XMLSlideShow;\n\
+    import org.apache.poi.xslf.usermodel.XSLShape;\nimport org.apache.poi.xslf.usermodel.XSLFSlide;\n\
+    \npublic class ReadingShapes {\n\n    public static void main(String[] args) throws\
+    \ IOException {\n\n        File file = new File(\"C://POIPPT//Examples//shapes.pptx\"\
+    );\n\n        XMLSlideShow ppt = new XMLSlideShow(new FileInputStream(file));\n\
+    \n        //get slides\n\n        XSLFSlide[] slide = ppt.getSlides();\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\n//getting the shapes in the presentation\n\nSystem.out.println(\"Shapes\
+    \ in the presentation:\");\n\nfor (int i = 0; i < slide.length; i++) {\\n    XSLFShape[]\
+    \ sh = slide[i].getShapes();\n\n    for (int j = 0; j < sh.length; j++) {\n\n\
+    \        //name of the shape\n\n        System.out.println(sh[j].getShapeName());\n\
+    \    }\n}\n\nFileOutputStream out = new FileOutputStream(file);\nppt.write(out);\n\
+    out.close();\n\n```\n\nSave the above Java code as as **ReadingShapes.java**,\
+    \ and then compile and execute it from the command prompt as follows:\n\n```\n\
+    $javac ReadingShapes.java\n\n$java ReadingShapes\n```\n\nIt will compile and execute\
+    \ to generate the following output.\n\nShapes in the presentation:\n\nRectangle\
+    \ 1\n\nOval 1\n\n![](img/95f35ef98573c69266016c19d4858ebe_61_0.png)"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Apache POI – PPT
+
+
+    Isosceles Triangle 1
+
+
+    The newly added slide with the various shapes appears as follows:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_62_0.png)
+
+
+    59'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# # 11. FORMATTING TEXT
+
+
+    # ## Formatting Text in a Presentation
+
+
+    The text in a presentation can be formatted using the methods of the XSLTextRun
+    class. For that, you have to create an XLTextRun class object by selecting one
+    of the slide layouts as shown below:
+
+
+    ```
+
+    //create the empty presentation
+
+    XMLSlideShow ppt = new XMLSlideShow();
+
+
+    //getting the slide master object
+
+    XLFSlideMaster slideMaster = ppt.getSlideMasters()[0];
+
+
+    //select a layout from specified list
+
+    XLFSlideLayout slidelelayout = slideMaster.getLayout(SlideLayout.TITLE_AND_CONTENT);
+
+
+    //creating a slide with title and content layout
+
+    XLFSlide slide = ppt.createSlide(slidelayout);
+
+
+    //selection of title place holder
+
+    XLFTextShape body = slide.getPlaceholder(1);
+
+
+    //clear the existing text in the slide
+
+    body.clearText();
+
+
+    //adding new paragraph
+
+    XLFTextParagraph paragraph=body.addNewTextParagraph();
+
+    ```'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Apache POI – PPT
+
+
+    ```
+
+    //creating text run object
+
+    XSLFTextRun run = paragraph.addNewRun();
+
+    ```
+
+
+    You can set the font size of the text in the presentation setFontSize().
+
+
+    ```
+
+    run.setFontColor(java.awt.Color.red);
+
+    run.setFontSize(24);
+
+    ```
+
+
+    The following code snippet shows how to apply different formatting styles (bold,
+    italic, underline, strikeout) to the text in a presentation.
+
+
+    ```
+
+    //change the text into bold format
+
+    run.setBold(true);
+
+
+    //change the text it to italic format
+
+    run.setItalic(true)
+
+
+    // strike through the text
+
+    run.setStrikethrough(true);
+
+
+    //underline the text
+
+    run.setUnderline(true);
+
+    ```
+
+
+    To have line breaks between paragraphs, use addLineBreak() of the XSLFTextParagraph
+    class as shown below:
+
+
+    ```
+
+    paragraph.addLineBreak();
+
+    ```
+
+
+    Given below is the complete program to format the text using all the above methods:'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\nimport java.io.FileOutputStream;\n\nimport java.io.IOException;\n\nimport\
+    \ org.apache.poi.xslf.usermodelmodel.SlideLayout\nimport org.apache.poi.xslf.usermodelmodel.XMLSlideShow\n\
+    import org.apache.poi.xslf.usermodelmodel.XSLFSlide\nimport org.apache.poi.xslf.usermodelmodel.XSLFSlideMaster\n\
+    import org.apache.poi.xslf.usermodelmodel.XSLTextParagraph\nimport org.apache.poi.xslf.usermodelmodel.XSLTextRun\n\
+    import org.apache.poi.xslf.usermodelmodel.XSLTextShape;\n\npublic class TextFormatting\
+    \ {\n    public static void main(String[] args) throws IOException {\n\n    //creating\
+    \ an empty presentation\n    XMLSlideShow ppt = new XMLSlideShow();\n\n    //getting\
+    \ the slide master object\n    XSLFSlide slideMaster = ppt.getSlideMasters()[0];\n\
+    \n    //select a layout from specified list\n    XSLFSlide slideLayout =\n   \
+    \ slideMaster.getLayout(SlideLayout.TITLE_AND_CONTENT);\n\n    //creating a slide\
+    \ with title and content layout\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '```
+
+    XSLFSlide slide = ppt.createSlide(slidelayout);
+
+
+    //selection of title place holder
+
+    XSLFTextShape body = slide.getPlaceholder(1);
+
+
+    //clear the existing text in the slide
+
+    body.clearText();
+
+
+    //adding new paragraph
+
+    XSLFTextParagraph paragraph=body.addNewTextParagraph();
+
+
+    //formatting line1
+
+    XSLFTextRun run1 = paragraph.addNewTextRun();
+
+    run1.setText("This is a colored line");
+
+
+    //setting color to the text
+
+    run1.setFontColor(java.awt.Color.red);
+
+
+    //setting font size to the text
+
+    run1.setFontSize(24);
+
+
+    //moving to the next line
+
+    paragraph.addLineBreak();
+
+
+    //formatting line2
+
+    ```'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '```
+
+    XSLFTextRun run2 = paragraph.addNewTextRun();
+
+
+    run2.setText("This is a bold line");
+
+
+    run2.setFontColor(java.awt.Color.CYAN);
+
+
+    //making the text bold
+
+    run2.setBold(true);
+
+    paragraph.addLineBreak();
+
+
+    //formatting line3
+
+    XSLFTextRun run3 = paragraph.addNewTextRun();
+
+
+    run3.setText(" This is a striked line");
+
+    run3.setFontSize(12);
+
+
+    //making the text italic
+
+    run3.setItalic(true);
+
+
+    //strike through the text
+
+    run3.setStrikethrough(true)
+
+    paragraph.addLineBreak();
+
+
+    //formatting line4
+
+    XSLFTextRun run4 = paragraph.addNewTextRun();
+
+
+    run4.setText(" This is an underlined line");
+
+
+    run4.setUnderline(true);
+
+    ```'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '```
+
+    //underlining the text
+
+    paragraph.addLineBreak();
+
+
+    //creating a file object
+
+    File file=new File("C://POIPPT//Examples//TextFormat.pptx");
+
+    FileOutputStream out = new FileOutputStream(file);
+
+    saving the changes to a file
+
+    ppt.write(out);
+
+    out.close();
+
+
+    }
+
+    ```
+
+
+    Save the above code as **Formatting.java**, and then compile and execute it from
+    the command prompt as:
+
+
+    $javac TextFormatting.java
+
+    $java TextFormatting
+
+
+    It will compile and execute to generate the following output:
+
+
+    Formatting completed successfully'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'Apache POI – PPT
+
+
+    The slide with formatted text appears as follows:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_69_0.png)
+
+
+    66
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_69_1.png)'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# 12. MERGING
+
+
+    # Merging Multiple Presentations
+
+
+    You can merge multiple presentations using the importContent() method of the XMLSlideShow
+    class. Given below is the complete program to merge two presentations:
+
+
+    67
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_70_0.png)'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "```\nFileInputStream inputstream = new FileInputStream(arg);\n\nXMLSlideShow\
+    \ src = new XMLSlideShow(inputstream);\n\nfor(XSLFSlide srcSlide : src.getSlides())\
+    \ {\n    //merging the contents\n    ppt.createSlide().importContent(srcSlide);\n\
+    }\n\nString file3 = \"C://POIPPT/Examples//combinedpresentation.pptx\";\n\n//creating\
+    \ the file object\nFileOutputStream out = new FileOutputStream(file3);\n\n// saving\
+    \ the changes to a file\nppt.write(out);\nSystem.out.println(\"Merging done successfully\"\
+    );\nout.close();\n\n```\n\nSave the above code as MergingMultiplePresentations.java,\
+    \ and then compile and execute it from the command prompt as follows:\n\n```\n\
+    $javac MergingMultiplePresentations.java\n\n$java MergingMultiplePresentations\n\
+    ```\n\nIt will compile and execute to generate the following output:\n\nMerging\
+    \ done successfully"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: 'The following snapshot shows the first presentation:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_72_0.png)
+
+
+    The following snapshot shows the second presentation:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_72_1.png)'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'Given below is the output of the program after merging the two slides. Here
+    you can see the content of the earlier slides merged together.
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_73_0.png)'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# Converting Presentation to Image\n\nYou can convert a presentation to an\
+    \ image file. The following program shows how to go about it.\n\n```\nimport java.io.File;\n\
+    import java.io.FileInputStream;\nimport java.io.OutputStream;\nimport java.io.IOException;\n\
+    \nimport org.apache.poi.xslf.usermodel.XMLSlideShow;\nimport org.apache.poi.xslf.usermodel.XSLFSlide;\n\
+    \npublic class PpttoPNG {\n\n    public static void main(String[] args[]) throws\
+    \ IOException {\n\n        //creating an empty presentation\n        File file=new\
+    \ File(\"C:/POPPT/Examples/addingimage.pptx\");\n        XMLSlideShow ppt = new\
+    \ XMLSlideShow(new FileInputStream(file));\n\n        //getting the dimensions\
+    \ and size of the slide\n        Dimension pgsize = ppt.getPageSize();\n     \
+    \   XSLFSlide[] slide = ppt.getSlides();\n\n        for (int i = 0; i < slide.length;\
+    \ i++) {\n```"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '```
+
+    BufferedImage img = new BufferedImage(pgsize.width, pgsize.height,BufferedImage.TYPE_INT_RGB);
+
+
+    Graphics2D graphics = img.createGraphics();
+
+
+    //clear the drawing area
+
+    graphics.setPaint(Color.white);
+
+    graphics.fill(new Rectangle2D.Float(0, 0, pgsize.width, pgsize.height));
+
+
+    //render
+
+    slide[i].draw(graphics);
+
+
+    //creating an image file as output
+
+    FileOutputStream out = new FileOutputStream("C:\POIPPT//ppt_image.png");
+
+    javax.image.io.ImageIO.write(img, "png", out);
+
+    ppt.write(out);
+
+    System.out.println("Image successfully created");
+
+    out.close();
+
+    }
+
+    ```
+
+
+    Save the above Java code as PpttoPNG.java, and then compile and execute it from
+    the command prompt as follows:
+
+
+    ```
+
+    $javac PpttoPNG.java
+
+    $java PpttoPNG
+
+    ```'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: 'It will compile and execute to generate the following output:
+
+
+    Image created successfully
+
+
+    The following snapshot shows the presentation that is given as input:
+
+
+    ![](img/95f35ef98573c69266016c19d4858ebe_76_0.png)
+
+
+    73'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# About:
+
+
+    +   At tutorialpoint.com, we strive hard to provide quality tutorials for self
+    learning purpose in the domains of Academics, Information Technology, Management
+    and Computer Programming Languages.
+
+
+    +   The endeavor started by Mohtashim, an AMU alumni, who is the founder and the
+    managing director of Tutorials Point (l) Pvt. Ltd. He came up with the website
+    tutorialpoint.com in year 2006 with the help of handpicked freelancers, with an
+    array of tutorials for commuter programming languages.'
+  merge: -1
+  pgno: 77
