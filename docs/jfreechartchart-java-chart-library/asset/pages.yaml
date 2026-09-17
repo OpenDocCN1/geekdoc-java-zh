@@ -1,0 +1,2637 @@
+- img_proc: true
+  md: '![](img/8ddb3ec6e7d677f78107576a1c853ea9_0_0.png)
+
+
+    # # JFREE CHART
+
+
+    chart java chart library
+
+
+    # tutorialspoint SIMPLYEASYLEARNING
+
+
+    www.tutorialspoint.com'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# About the Tutorial
+
+
+    This tutorial describes various ways to incorporate JFreeChart in Java-based standalone
+    and web-based applications. The tutorial is categorized into various chapters
+    to provide a comprehensive and easy understanding of JFreeChart programming with
+    Java applications.
+
+
+    # Audience
+
+
+    This reference has been prepared for beginners to help them understand the basic-to-advanced
+    concepts related to JFreeChart library.
+
+
+    # Prerequisites
+
+
+    Before you start practicing the examples given in the tutorial, it is expected
+    that you have a basic understanding of Java programming with JDK1.6 or later versions,
+    Swing, file management and database management in Java.
+
+
+    # Copyright & Disclaimer
+
+
+    © Copyright 2017 by Tutorials Point (I) Pvt. Ltd.
+
+
+    All the content and graphics published in this e-book are the property of Tutorials
+    Point (I) Pvt. Ltd. The user of this e-book is prohibited to reuse, retain, copy,
+    distribute or republish any contents or part of the contents of this e-book in
+    any manner without written consent of the publisher.
+
+
+    We strive to update the contents of our website and tutorials as timely and as
+    precisely as possible; however, the contents may contain inaccuracies or errors.
+    Tutorials Point (I) provides no guarantee regarding the accuracy, timeliness,
+    or completeness of our website or its contents including this tutorial. If you
+    discover any errors on our website or in this tutorial, please notify us at contact@tutorialspoint.com
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_1_0.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table of Contents
+
+
+    About the Tutorial...........................................................................................i
+
+
+    Audience ..........................................................................................................
+
+
+    Prerequisites ..............................................................................................i
+
+
+    Copyright & Disclaimer..................................................................................i
+
+
+    Table of Contents ..............................................................................ii
+
+
+    +   1. JFREECHART – OVERVIEW ................................................................1
+
+
+    +   What is JFreeChart? .......................................................................1
+
+
+    +   Why JFreeChart? ........................................................................1
+
+
+    +   2. JFREECHART – INSTALLATION...............................................................2
+
+
+    +   System Requirements ................................................................2
+
+
+    +   Installing JFreeChart.....................................................................2
+
+
+    +   3. JFREECHART – ARCHITECTURE .................................5
+
+
+    +   Class Level Architecture ......................................................5
+
+
+    +   Application Level Architecture..................................................6
+
+
+    +   4. JFREECHART – REFERENCED APIS...............................................7
+
+
+    +   ChartFactory Class.......................................................................7
+
+
+    +   ChartFrame Class...............................................................................8
+
+
+    +   ChartPanel Class...............................................................................9
+
+
+    +   ChartUtilities Class.....................................................................9
+
+
+    +   JFreeChart Class ................................................................10
+
+
+    +   PiePlot Class...............................................................................11
+
+
+    +   PiePlot3D Class.........................................................................11
+
+
+    +   PlotOrientation Class.......................................................12
+
+
+    +   XYPlot Class..................................................................13
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_2_0.png)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'NumberAxisClass.......................................................................................................13
+
+
+    XYLineAndShaperRenderer Class..................................................................................14
+
+
+    XYItemRenderer general datasets....................................................................................15
+
+
+    PieDataset......................................................................................................................15
+
+
+    DefaultPieDataset Class...............................................................................................15
+
+
+    SeriesException Class..................................................................................................15
+
+
+    DefaultCategoryDataset...............................................................................................16
+
+
+    Series Datasets...............................................................................................................16
+
+
+    XYDataset...............................................................................................................16
+
+
+    XYZDataset...............................................................................................................17
+
+
+    XYSeries...............................................................................................................17
+
+
+    XYSeriesCollection.....................................................................................................17
+
+
+    Default XYZDataset...............................................................................................18
+
+
+    Time Series in JFreeCharts...............................................................................19
+
+
+    TimeSeriesCollection..................................................................................19
+
+
+    Second...............................................................................................................20
+
+
+    Frames in JFreeCharts...............................................................................21
+
+
+    ApplicationFrame.....................................................................................21
+
+
+    RefineryUtilities......................................................................................22
+
+
+    # 5. JFREECHART – PIE CHART...............................................................23
+
+
+    Business data......................................................................................................23
+
+
+    AWT Based Application...............................................................................23
+
+
+    JPEG Image Creation....................................................................................25
+
+
+    # 6. JFREECHART – BAR CHART...............................................................27
+
+
+    Business Data.......................................................................................27
+
+
+    AWT Based Application...............................................................27
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_3_0.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'JPEG Image Creation ................................................................................
+    29
+
+
+    +   7. JFREECHART – LINE CHART ................................................................
+    32
+
+
+    Business Data .......................................................................................
+    32
+
+
+    AWT Based Application ............................................................................
+    32
+
+
+    JPEG Image Creation ............................................................................
+    34
+
+
+    +   8. JFREECHART – XY CHART .................................................................
+    36
+
+
+    Business Data .......................................................................................
+    36
+
+
+    AWT Based Application ............................................................................
+    37
+
+
+    JPEG Image Creation ............................................................................
+    39
+
+
+    +   9. JFREECHART – 3D PIE/BAR CHART ................................................
+    41
+
+
+    3D Pie chart .......................................................................................
+    41
+
+
+    3D Bar Chart .......................................................................................
+    43
+
+
+    +   10. JFREECHART – BUBBLE CHART.................................................................
+    46
+
+
+    Business Data .......................................................................................
+    46
+
+
+    AWT Based Application ............................................................................
+    46
+
+
+    JPEG Image Creation ............................................................................
+    49
+
+
+    +   11. JFREECHART – TIMESERIES CHART ................................................
+    51
+
+
+    Business Data .......................................................................................
+    51
+
+
+    AWT Based Application ............................................................................
+    51
+
+
+    JPEG Image Creation ............................................................................
+    53
+
+
+    +   12. JFREECHART – FILE INTERFACE.......................................................
+    56
+
+
+    Business Data .......................................................................................
+    56
+
+
+    Chart Generation Based on File ...................................................
+    56
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   13. JFREECHART – DATABASE INTERFACE...............................................................................59
+
+
+    +   Business Data ............................................................................................................................59
+
+
+    +   Chart Generation Using Database ................................................................................59'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# 1. JFreeChart – Overview
+
+
+    A chart is a graphical representation of information. There are various tools
+    available, which can be used to create different types of charts. The JFreeChart
+    project was founded in February 2000, by David Gilbert. Today, it is the most
+    used charting library among Java developers.
+
+
+    This tutorial will help you understand exactly what JFreeChart is, why it is required,
+    and the various ways to create different types of charts within a Java-based application
+    or independently.
+
+
+    # What is JFreeChart?
+
+
+    JFreeChart is an open source library developed in Java. It can be used with Java
+    based applications to create a wide range of charts. By using JFreeChart, we can
+    create all the major type of 2D and 3D charts such as pie chart, bar chart, line
+    chart, XY chart and 3D charts.
+
+
+    # Why JFreeChart?
+
+
+    JFreeChart is open source and 100% free, which permits usage in the commercial
+    applications without any cost. We have enlisted here some more points in favor
+    of why you should use JFreeChart:
+
+
+    +   * It comes with well documented APIs, which makes it quite easy to understand.
+
+    * It supports a wide range of charts types such as Pie Chart, Line Chart, Bar
+    Chart, Area Chart and 3D charts.
+
+    * JFreeChart is easy to extend and can be used in both, the client-side, as well
+    as the server-side applications.
+
+    * It supports multiple output formats like PNG, JPEG, PDF, SVG etc.
+
+    * It allows extensive customizations of charts.
+
+
+    Consider a situation where you are developing an application and you need to show
+    the data in the form of charts, and the data itself is populated dynamically.
+    In such case, displaying the data in the form of charts using JFreeChart programming
+    is very simple.
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_6_0.png)'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# 2. JFreeChart – Installation
+
+
+    JFreeChart is popular for its efficient chart creation and user-friendly installation
+    setup. This chapter describes the process of setting up JFreeChart on Windows
+    and Linux. User administration is needed while installing JFreeChart.
+
+
+    # System Requirements
+
+
+    | JDK | 1.5 or above |
+
+    | Memory | 2GB RAM |
+
+    | Disk Space | No minimum requirement |
+
+    | Operating System Version | Linux or Windows |
+
+
+    # Installing JFreeChart
+
+
+    To install JFreeChart, there are three following steps viz...
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_7_0.png)
+
+
+    Step 1: Verifying Java Installation
+
+    To verify Java installation, open the console and execute the following **java**
+    command:
+
+
+    | OS | Task | Command |
+
+    | Windows | Open command console | C:>java -version |
+
+    | Linux | Open command terminal | $java -version |'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Once Java installation is done properly, then you should get the following
+    output for both the operating systems:
+
+
+    | OS | Description |
+
+    | --- | --- |
+
+    | Windows | Java version "1.7.0_60" Java (TM) SE Runtime Environment (build 1.7.0_60-b19)
+    Java HotSpot(TM) 64-bit Server VM (build 24.60-b09,mixed mode) |
+
+    | Linux | Java version "1.7.0_25" OpenJDK Runtime Environment (rhel-2.3.10.4.el6_x86_64)
+    OpenJDK 64-Bit Server VM (build 23.7-b01,mixed mode) |
+
+
+    If you do not have installed, install the Java Software Development Kit (SDK)
+    from the link:
+
+
+    http://www.oracle.com/technwork/java/javase/downloads/index.html
+
+
+    We assume that you have installed Java 1.7.0_60 version before proceeding for
+    this tutorial.
+
+
+    # Step 2: Setting JAVA Environment
+
+
+    Set the JAVA_HOME environment variable to point to the base directory location
+    where Java is installed on your machine. For example:
+
+
+    | OS | Description |
+
+    | --- | --- |
+
+    | Windows | Set Environmental variable JAVA_HOME to C:\ProgramFiles\java\jdk1.7.0_60
+    |
+
+    | Linux | export JAVA_HOME=/usr/local/java-current |
+
+
+    Append Java compiler to System Path.
+
+
+    | OS | Description |
+
+    | --- | --- |
+
+    | Windows | Append the String; C:\Program Files\Java\jdk1.7.0_60\bin to the end
+    of the system variable PATH. |
+
+    | Linux | export PATH=$PATH:$JAVA_HOME/bin/ |
+
+
+    Verify the command java -version from the command prompt as explained above.
+
+
+    # Step 3: Installing JFreeChart
+
+
+    Download the latest version of JFreeChart.zip from the link http://www.jfree.org/jfreechart/download/.
+    Unzip the downloaded file at any location from where required libraries can be
+    linked into your Java program. The following image shows the structure of the
+    directories and files:
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_8_0.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# JFreeChart
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_9_0.png)
+
+
+    +   - Previous 30 Days
+
+    - ChangeLog
+
+    - experimental
+
+    - jfreechart-1.0.18-demo.jar
+
+    - licence-LCPL.txt
+
+    - NEWS
+
+    - pom.xml
+
+    - README.txt
+
+    - tests
+
+
+    Add complete path of jfreechart-1.0.18.jar and jcommon-1.0.22.jar files to the
+    CLSPATH as shown below:
+
+
+    | OS | Description |
+
+    | --- | --- |
+
+    | Windows | Append the Strings "C:\jfreechart-1.0.18\lib,jfreechart-1.0.18.jar"
+    and "C:\jfreechart-1.0.18\lib\jcommon-1.0.22.jar" to the end of the user variable
+    CLSPATH |
+
+    | Linux | Export CLSPATH=$CLASSPATH:/usr/share/jfreechart-1.0.18/lib/jfreechart-1.0.18.jar:/usr/share/jfreechart-1.0.18/lib/jcommon-1.0.22.jar
+    |'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# 3. JFreeChart – Architecture
+
+
+    This chapter explains basic class level and application level architectures of
+    JFreeChart to give you an idea how JFreeChart interacts with different classes
+    and how it fits in your Java based application.
+
+
+    # Class Level Architecture
+
+
+    The class level architecture explains how various classes from the library interact
+    with each other to create various types of charts.
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_10_0.png)
+
+
+    Following is the detail of the units used in the above block diagram:
+
+
+    | Units | Description |
+
+    | --- | --- |
+
+    | File | The source having user input to be used for creating a dataset in the
+    file. |
+
+    | Database | The source having user input to be used for creating a dataset in
+    the database. |
+
+    | Create Dataset | Accepts the dataset and stores the dataset into dataset object.
+    |
+
+    | General Dataset | This type of dataset is mainly used for pie charts. |
+
+    | Category Dataset | This type of dataset is used for bar chart, line chart, etc.
+    |'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# JFreeChart
+
+
+    | Series Dataset | |
+
+    | --- --- | This type of dataset is used for storing series of data and construct
+    line charts. |
+
+    | Series Collection Dataset | The different categories of series datasets are
+    added to series collection dataset. This type of dataset is used for XYLine Charts.
+    |
+
+    | Create Chart | This is the method, which is executed to create final chart.
+    |
+
+    | Frame/Image | The chart is displayed on a Swing Frame or an image created. |
+
+
+    # Application Level Architecture
+
+
+    The application level architecture explains where JFreeChart library sits inside
+    a Java Application.
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_11_0.png)
+
+
+    The client program receives user data and then it uses standard Java and JFreeChart
+    APIs based on requirements to generate the output in the form of either a frame,
+    which can be displayed directly inside the application or independently in the
+    image formats such as JPEG or PNG.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# 4. JFreeChart – Referenced APIs
+
+
+    In this chapter, we will discuss about some of the important packages, classes,
+    and methods from JFreeChart library. These packages, classes, and methods are
+    the most frequently used when creating a variety of charts using JFreeChart library.
+
+
+    # ChartFactory Class
+
+
+    ChartFactory is an abstract class under the org.jfree.chart package. It provides
+    a collection of utility methods for generating standard charts.
+
+
+    Following is a list of few of the important methods:
+
+
+    # Class Constructor
+
+
+    | S.N. | Description |
+
+    |---|---|
+
+    | 1 | ChartFactory() Default constructor of ChartFactory class. |
+
+
+    # Class Methods
+
+
+    | S.N. | Methods & Description |
+
+    |---|---|
+
+    | 1 | createPieChart(java.lang.String title, PieDataset dataset, boolean legend,
+    boolean tooltips, boolean urls) This method creates a pie chart with default settings.
+    It returns JFreeChart object. |
+
+    | 2 | createPieChart3D(java.lang.String title, PieDataset dataset, boolean legend,
+    boolean tooltips, boolean urls) This method creates a 3D pie chart using the specified
+    dataset. |
+
+    | 3 | createBarChart(java.lang.String title, java.lang.String categoryAxisLabel,
+    java.lang.String valueAxisLabel, CategoryAxisLabel, Plot orientation, boolean
+    legend, boolean tooltips, boolean urls) The argument java.lang.String categoryAxisLabel
+    is the label for values placed on X-axis. The argument java.lang.String valueAxisLabel
+    is the label for values placed on Y-axis. This method creates a bar chart. |
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_12_0.png)'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# JFreeChart
+
+
+    | | |
+
+    |---|-|
+
+    | 4 | createBarChart3D(java.lang.String title, java.lang.String categoryAxisLabel,
+    java.lang.String valueAxisLabel, CategoryDataset dataset, PlotOrientation orientation,
+    boolean legend, boolean tooltips, boolean urls)
+
+
+    This Method creates a bar chart with a 3D effect. It returns JFreeChart type object.
+    |
+
+    | 5 | createLineChart(java.lang.String title, java.lang.String categoryAxisLabel,
+    java.lang.String valueAxisLabel, CategoryDataset dataset, PlotOrientation orientation,
+    boolean legend, boolean tooltips, boolean urls)
+
+
+    This method creates a line with default settings. |
+
+    | 6 | createLineChart3D(java.lang.String title, java.lang.String categoryAxisLabel,
+    java.lang.String valueAxisLabel, CategoryDataset dataset, PlotOrientation orientation,
+    boolean legend, boolean tooltips, boolean urls)
+
+
+    This method creates a line chart with 3D effect. |
+
+    | 7 | createXYLineChart(java.lang.String title, java.lang.String xAxisLabel, java.lang.String
+    yAxisLabel, XYDataset dataset, PlotOrientation orientation, boolean legend, boolean
+    tooltips, boolean urls)
+
+
+    This method creates a line chart based on XYDataset with default settings. |
+
+
+    # ChartFrame Class
+
+
+    ChartFrame class under the org.jfree.chart package, provides all frame related
+    functions and utilities. ChartFrame class inherits functionalities from parent
+    classes such as Frame, Window, Container, and Component classes.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|-|
+
+    | 1 | ChartFrame (java.lang.Frame String, JFreeChart chart)
+
+
+    It constructs a frame. |
+
+    | 2 | ChartFrame (java.lang.Frame String, JFreeChart chart, boolean scrollpane)
+
+
+    It constructs a frame. |
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_13_0.png)'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|
+
+    | 1 | getChartPanel()
+
+    This returns the chart panel for a frame. |
+
+
+    # ChartPanel Class
+
+
+    ChartPanel class from the org.jfree.chart package is used as a swing GUI component
+    for displaying JFreeChart object.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---|
+
+    | 1 | ChartPanel(JFreeChart)
+
+    This constructor constructs a panel that displays the specified chart. |
+
+    | 2 | ChartPanel(JFreeChart chart, boolean useBuffer)
+
+    This constructor constructs a panel containing a chart. |
+
+    | 3 | ChartPanel(JFreeChart chart, boolean properties, boolean save, boolean print,
+    boolean zoom, boolean tooltip)
+
+    This constructor constructs a JFreeChart panel. |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|
+
+    | 1 | setPreferredSize(java.awt.Dimension)
+
+    This method is used to set the frame size using java.awt. Dimension class object
+    as an argument. This method is taken from javax.swing.JComponent. |
+
+
+    # ChartUtilities Class
+
+
+    ChartUtilities class from the org.jfree.chart package provides a collection of
+    utility methods of JFreeCharts including methods for converting charts into image
+    format such as PNG, JPEG, and creating HTML image maps.
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'JFreeChart
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    | 1 | ChartUtilities() <br> This is a default constructor of a class |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    | 1 | saveChartAsPNG(java.io.File file, JFreeChart chart, int width, int height)
+    <br> This method converts and saves a chart to the specified file in PNG format.
+    |
+
+    | 2 | saveChartAsJPEG(java.io.File file, JFreeChart chart, int width, int height)
+    <br> This method converts and saves a chart to the specified file in JPEG format.
+    |
+
+
+    # JFreeChart Class
+
+
+    JFreeChart class is the core class under the org.jfree.chart package. This class
+    provides JFreeChart method to create bar charts, line charts, pie charts, and
+    xy plots including time series data.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    | 1 | JFreeChart(Plot plot) <br> This constructor creates a new chart based on
+    the supplied plot. |
+
+    | 2 | JFreeChart(java.lang.String title, java.awt.Font title, Plot plot, boolean
+    createLegend) <br> This constructor creates a new chart with the given title and
+    plot. |
+
+    | 3 | JFreeChart(java.lang.String title, Plot plot) <br> This constructor creates
+    a new chart with the given title and plot. |'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|n| 1 | getXYPlot() This Method Returns the plot chart as XYPlot. Using
+    XYPolt, we can do some utility operations on xy charts. |
+
+
+    # PiePlot Class
+
+
+    This class is a part of org.jfree.chart.plot package and extends Plot class from
+    the same package. This class provides methods to create Pie Plots.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---|n| 1 | PiePlot() It creates a new plot.
+
+    | 2 | PiePlot(PieDataset dataset) It creates a plot that draws a pie chart for
+    the specified dataset. |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|n| 1 | setStartAngle(double angle) This Method sets the starting angle
+    and sends a PlotChangeEvent to all registered listeners. |
+
+
+    # PiePlot3D Class
+
+
+    PiePlot3D class is a subclass of PiePlot class under the same package. Hence,
+    this class has the features as PiePlot class, except it is used to create 3D plots.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---|n| 1 | PiePlot3D() This constructor creates a new instance with no dataset.
+
+    | 2 | PiePlot3D(PieDataset dataset) This constructor creates a pie chart with
+    three dimensional effect using a specified dataset. |
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|
+
+    | 1 | **setForegroundAlpha(float alpha)** It sets the alpha-transparency for the
+    plot and sends a PlotChangeEvent to all registered listeners. This is taken from
+    one of a parent Plot classes. |
+
+    | 2 | **setInteriorGap(double percent)** It sets the interior gap and sends a
+    PlotChangeEvent to all registered listeners. This controls the space between the
+    edges of the pie plot and the plot area itself (i. e., the region where the labels
+    appear). This method is taken from the parent class PiePlot. |
+
+
+    # PlotOrientation Class
+
+
+    This is a serialized class available in **org.jfree.chart.plot** package and it
+    is used to show the orientation of a 2D plot. The orientation can be either **vertical**
+    or **horizontal**. It sets the orientation of Y axis. A conventional plot has
+    a vertical Y- axis.
+
+
+    # Field summary
+
+
+    | S.N. | Type | Field & Description |
+
+    |---|---|---|
+
+    | 1 | PlotOrientation | **HORIZONTAL** For a plot where the range axis(Y-axis)
+    is horizontal. |
+
+    | 2 | PlotOrientation | **VERTICAL** For a plot where the range axis(Y-axis) is
+    vertical. This is the default orientation. |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|
+
+    | 1 | **isHorizontal()** This method returns true if this orientation is HORIZONTAL,
+    and false otherwise. |
+
+    | 2 | **isVertical()** This Method returns true if this orientation is VERTICAL,
+    and false otherwise. |
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_17_0.png)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# JFreeChart
+
+
+    # XYPlot Class
+
+
+    This is a general class available in org.jfree.chart.plot package and it is used
+    for the plotting data in the form of (x,y) pairs. This plot can use data from
+    any other class that implements the XYDataSet Interface. XYPlot makes use of a
+    XYItemRenderer to draw each point on the plot.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---|
+
+    | 1 | **XYPlot()**nThis constructor creates a new XYPlot instance with no dataset,
+    no axes and no renderer. |
+
+    | 2 | **XYPlot(XYDataSet dataset, ValueAxis domainAxis, ValueAxis rangeAxis, XYItemRenderer
+    renderer)**This constructor creates a new plot with the specified dataset, axes,
+    and renderer. |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|
+
+    | 1 | **setRenderer(XYItemRenderer renderer)**nThis method sets the renderer for
+    the primary dataset and sends a change event to all registered listeners. |
+
+
+    # NumberAxis Class
+
+
+    This class is available in org.jfree.chart.axis package and it can access the
+    numerical data of any axis. When we set the range of any axis to default, it fits
+    according to the range of the data. But by using NumberAxis, class we can set
+    the lower margin and upper margin of domain and range axes.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---|
+
+    | 1 | **NumberAxis()**nThis is a default Constructor of NumberAxis. |
+
+    | 2 | **NumberAxis(java.lang.String label)**nThe constructor NumberAxis uses default
+    values where necessary. |
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_18_0.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|
+
+    | 1 | **setLowerMargin(double margin)** It sets the lower margin for the axis
+    (as a percentage of the axis range) and sends an **AxisChangeEvent** to all registered
+    listeners. This method is taken from parent class of the class ValueAxis. |
+
+    | 2 | **setUpperMargin(double margin)** It sets the upper margin for the axis
+    (as a percentage of the axis range) and sends an **AxisChangeEvent** to all registered
+    listeners. This method is also present in ValueAxis Class.
+
+
+    # XYLineAndShapeRenderer Class
+
+
+    This is the class, available under **org.free.chart.renderer.xy** package, which
+    takes care of connecting data points with lines and draws shapes at each data
+    point. This renderer class is designed for use with the **XYPlot** class.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---|
+
+    | 1 | **XYLineAndShapeRenderer()** It creates a new renderer with lines and shapes
+    visible.
+
+    | 2 | **XYLineAndShapeRenderer(boolean lines, boolean shapes)** It creates a new
+    renderer with specific property.|
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|
+
+    | 1 | **setSeriesPaint(int series, java.awt.Paint paint)** This method sets the
+    paint used for a series and sends a RendererChangeEvent to all registered listeners.
+    This method is taken from AbstractRenderer abstract class from renderer in JFreeChart
+    API.
+
+    | 2 | **setSeriesStroke(int series, java.awt.Stroke stroke)** This method sets
+    the stroke used for a series and sends a RendererChangeEvent to all registered
+    listeners. This method is taken from AbstractRenderer abstract class, which is
+    super class of this package.|
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_19_0.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# XYItemRenderer general datasets
+
+
+    This is an interface for rendering the format of a single (x, y) item on an XYPlot.
+    The package is **org.jfree.data.general**, which has classes and interfaces to
+    define different types of datasets to construct charts.
+
+
+    # PieDataset
+
+
+    This is an interface used as a general purpose dataset, where values are associated
+    with keys. The name suggests, you can use this dataset to supply data for pie
+    charts. This interface extends KeyedValues and DataSet interfaces. All the methods
+    used for this interface are taken from KeyedValues, Values, and Dataset interfaces.
+
+
+    # DefaultPieDataset Class
+
+
+    This is a Default implementation class of a PieDataset interface.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---||
+
+    | 1 | **DefaultPieDataset()** <br>This constructor creates a new dataset, initially
+    empty.<br>**DefaultPieDataset(KeyedValues data)** |
+
+    | 2 | It creates a new dataset by copying data from a **KeyedValues** instance.
+    |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---||
+
+    | 1 | **setValue(java.lang.Comparable key, double value)** <br>It sets the data
+    value for a key and sends a **DatasetChangeEvent** to all registered listeners.
+    |
+
+    | 2 | **setValue(java.lang.Comparable key, java.lang.Number value)** <br>It sets
+    the data value for a key and sends a **DatasetChangeEvent** to all registered
+    listeners. |
+
+
+    # SeriesException Class
+
+
+    This is an exception class. It raises an exception occurred in the time series
+    of data in the dataset. Exceptions are raised on the occurrence of duplicate or
+    invalid data. The time series must not be applied with duplicates and the format
+    must be valid.
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_20_0.png)'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# DefaultCategoryDataset
+
+
+    This is a default implementation class of CategoryDataset interface.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---|
+
+    | 1 | DefaultCategoryDataset()<br>This constructor creates new empty dataset.
+    |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|
+
+    | 1 | addValue(double value, java.lang.Comparable rowKey, java.lang.Comparable
+    columnKey)<br>This method adds a value to the table using comparable keys. |
+
+    | 2 | addValue(java.lang.Number value, java.lang.Comparable rowKey, java.lang.Comparable
+    columnKey)<br>This method adds a value to the table. |
+
+    | 3 | setValue(double value, java.lang.Comparable rowKey, java.lang.Comparable
+    columnKey)<br>This method adds or updates a value in the table and sends a DatasetChangeEvent
+    to all registered listeners. |
+
+    | 4 | setValue(java.lang.Number value, java.lang.Comparable rowKey, java.lang.Comparable
+    columnKey)<br>This method adds or updates a value in the table and sends a DatasetChangeEvent
+    to all registered listeners. |
+
+
+    Refer FreeChart API for more information on various other methods and fields.
+
+
+    # Series Datasets
+
+
+    The series dataset is used by XY charts. The package is org.jfree.data.xy, which
+    contains classes and interfaces belonging to xy charts. The core interface is
+    XYDataset.
+
+
+    # XYDataset
+
+
+    This is an interface through which data in the form of (x,y) items can be accessed.
+    As the name suggests, you can use this dataset to serve XY chart. Some of the
+    methods in this interface are taken from SeriesDateset interface.
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_21_0.png)'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# JFreeChart
+
+
+    # XYZDataset
+
+
+    This is an interface through which data in the form of (x,y,z) items can be accessed.
+    As the name suggests, you can use this dataset to serve XYZ chart. Some of the
+    methods in this interface are taken from SeriesDataset.
+
+
+    # XYSeries
+
+
+    This is a class, which represents a sequence of zero or more data items in the
+    form (x, y). By default, the items in the series are sorted in ascending order
+    by x-value, and duplicate x-values are permitted. Both the sorting and duplicate
+    defaults can be changed in the constructor. Y-values can be denoted as null to
+    represent missing values.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    | --- | |
+
+    | 1 | **XYSeries(java.lang.Comparable key)**<br>This constructor creates a new
+    empty series. |
+
+    | 2 | **XYSeries(java.lang.Comparable key, boolean autoSort)**<br>It constructs
+    a new empty series, with the auto-sort flag set as requested, and duplicate values
+    are allowed. |
+
+    | 3 | **XYSeries(java.lang.Comparable key, boolean autoSort, boolean allowDuplicates)**<br>It
+    constructs a new xy-series that contains no data. |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    | --- | |
+
+    | 1 | **add(double x, double y)**<br>This method adds data item into the series.
+    |
+
+
+    The above method is used in the tutorial example. If you want to learn the remaining
+    methods and fields, please refer JFreeChart API.
+
+
+    # XYSeriesCollection
+
+
+    XYSeriesCollection class has parent classes like AbstractIntervalDataset, AbstractXYDataset,
+    AbstractSeriesDataset and AbstractDataset. Some of the methods in this class belong
+    to parent classes of this class.
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_22_0.png)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---||
+
+    | 1 | **XYSeriesCollection()**
+
+    It constructs an empty dataset.
+
+    XYSeriesCollection(XYSeries xyseries)** |
+
+    | 2 | It constructs a dataset and populates it with a single series. |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---||
+
+    | 1 | **addSeries(XYSeries series)**
+
+    This method adds a series to the collection and sends a **ChangeEvent** to all
+    registered listeners. |
+
+
+    Refer JFreeChart API for the remaining methods and fields.
+
+
+    # Default XYZDataset
+
+
+    DefaultXYZDataset class have parent classes like AbstractIntervalDataset, AbstractXYZDataset,
+    AbstractSeriesDataset, AbstractDataset and AbstractXYZDataset. Some of the methods
+    in this class belong to parent classes of this class.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---||
+
+    | 1 | **DefaultXYZDataset()**
+
+    It constructs an empty dataset. |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---||
+
+    | 1 | **addSeries(java.lang.Comparable seriesKey, double[ ] data )**
+
+    This method adds a series to the collection and sends a **ChangeEvent** to all
+    registered listeners. |
+
+
+    Please refer JFreeChart API for the remaining methods and fields.
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_23_0.png)'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Time Series in JFreeCharts
+
+
+    The package is org.jfree.data.time. This package contains classes and interfaces,
+    which are used for the time related data.
+
+
+    # TimeSeries
+
+
+    This class represents a sequence of data items in the form of period values, where
+    period is some instance of RegularTimePeriod abstract class such as Time, Day,
+    Hour, Minute, and Second classes.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---|
+
+    | 1 | **TimeSeries(java.lang.Comparable name)** <br>It creates empty series. |
+
+    | 2 | **TimeSeries(java.lang.Comarable name, java.lang.String domain, java.lang.Strin
+    range)** <br>It creates new time series that contains no data. |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|
+
+    | 1 | **add(RegularTimePeriod period,double value)** <br>This method adds a new
+    data item to the series. |
+
+
+    Refer JFreeChart API for the remaining methods and fields.
+
+
+    # TimeSeriesCollection
+
+
+    This class is used as a collection of time series objects. This class implements
+    the XYDataset interface, as it extends IntervalXYDataset interface. This makes
+    it convenient to collect series data objects.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---|
+
+    | 1 | **TimeSeriesCollection()** It constructs an empty dataset, tied to the default
+    time zone. |
+
+    | 2 | **TimeSeriesCollection(TimeSeries)** It constructs a dataset containing
+    a single series (more can be added), tied to the default time zone. |
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_24_0.png)'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '| | |
+
+    |---||
+
+    | 3 | TimeSeriesCollection(TimeSeries series, java.util.TimeZone zone) It constructs
+    a dataset containing a single series (more can be added), tied to a specific time
+    zone. |
+
+    | 4 | TimeSeriesCollection(java.util.TimeZone zone) It constructs an empty dataset,
+    tied to a specific time zone. |
+
+
+    # Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---|n| 1 | **addSeries(TimeSeries series)**\nThis method adds a series to
+    the collection and sends a **ChangeEvent** to all registered listeners. |
+
+
+    Please refer JFreeChart API for the remaining methods and fields.
+
+
+    # Second
+
+
+    This class represents a second in a particular day. This class is immutable, which
+    is a requirement for all RegularTimePeriod subclass.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---|n| 1 | **Second()**\nIt constructs a new Second, based on the system
+    date/time. |
+
+    | 2 | **Second(java.util.Date time)**\nIt constructs a new instance from the specified
+    date/time and the default time zone. |
+
+    | 3 | **Second(java.util.Date time, java.util.TimeZone zone, java.util.Locale
+    locale)**\nIt creates a new second based on the supplied time and time zone. |
+
+    | 4 | **Second(int second, int minute, int hour, int day, int month, int year)**\nIt
+    creates a new second. |
+
+    | 5 | **Second(int second, Minute minute)**\nIt constructs a new Second. |
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_25_0.png)'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Class Method
+
+
+    | S.N. | Method and Description |
+
+    |---|---||
+
+    | 1 | getSecond() It returns the second within the minute. |
+
+    | 2 | next() It returns the second following the present second. |
+
+
+    Please refer JFreeChart API the remaining methods and fields.
+
+
+    # Frames in JFreeCharts
+
+
+    The package is org.jfree.ui. This is the package belongs to JCommons API of JFreeChart.
+    It contains utility classes used for creating frames for pre-configured charts.
+
+
+    # ApplicationFrame
+
+
+    This is a base class for creating the main frame for simple applications. The
+    frame listens for window closing events, and responds by shutting down the JVM.
+    This is fine for small demos. For enterprise applications, you need to use something
+    more robust. The main core methods in this class are taken from Component, Container,
+    Window, Frame, and JFrame classes.
+
+
+    # Class Constructor
+
+
+    | S.N. | Constructor and Description |
+
+    |---|---||
+
+    | 1 | ApplicationFrame(java.lang.String title) It creates an application frame
+    with the string title. |
+
+
+    This class helps to create AWT Frames. This is the reason for why we use this
+    class as super class in this tutorial examples.
+
+
+    The methods, which are taken form the parent classes are used for opening a frame,
+    closing a frame, changing the size, changing the background or foreground color,
+    and listeners.
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_26_0.png)'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# RefineryUtilities\n\nThis is a class collection of utility methods relating\
+    \ to user interface.\n\n# Class Method\n\n| S.N. | Method and Description |\n\
+    | 1 | centerFrameOnScreen(java.awt.Window frame) \n It positions the specified\
+    \ frame in the middle of the screen. |\n\nThe above method is used in the tutorial\
+    \ example. Refer JFreeChart API for remaining methods and fields."
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# 5. JFreeChart – Pie Chart\n\nIn a pie chart, the arc length of each sector\
+    \ is proportional to the quantity that it represents. This chapter demonstrates\
+    \ — how we can use JFreeChart to create Pie Chart from a given set of business\
+    \ data.\n\n# Business data\n\nThe following example depicts mobile sale with the\
+    \ help of a pie chart. Following is a list of different mobile brands and their\
+    \ sales (units per day).\n\n| S.N. | Mobile Brands | Sales (UNITS per day) |\n\
+    |---|---|--|\n| 1 | Iphone 5S | 20 |\n| 2 | Samsung Grand | 20 |\n| 3 | MOTO G\
+    \ | 40 |\n| 4 | Nokia Lumia | 10 |\n\n# AWT Based Application\n\nFollowing is\
+    \ the code to create a Pie Chart by the above given information. This code helps\
+    \ you to embed a pie chart in any AWT based application.\n\n```\nimport javax.swing.JPanel;\n\
+    import org.jfree.chart.ChartFactory;\nimport org.jfree.chart.ChartPanel;\nimport\
+    \ org.jfree.chart.JFreeChart;\nimport org.jfree.chart.data.general.DefaultDataset;\n\
+    import org.jfree.chart.data.general.PieDataset;\nimport org.jfree.ui.ApplicationFrame;\n\
+    import org.jfree.ui.RefineryUtilityClasses;\n\npublic class PieChart_AWT extends\
+    \ ApplicationFrame\n{\n    public PieChart_AWT( String title )\n    {\n      \
+    \  super( title);\n        setContent(createDemoPanel( ));\n    }\n    private\
+    \ static PieDataset createDataset()\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_28_0.png)"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "```\n{\n  DefaultPieDataset dataset = new DefaultPieDataset();\n  dataset.setValue(\"\
+    iPhone 5s\", new Double( 20 ));\n  dataset.setValue(\"SamSung Grand\", new Double(\
+    \ 20 ) );\n  dataset.setValue(\"MotoG\", new Double( 40 ) );\n  dataset.setValue(\"\
+    Nokia Lumia\", new Double( 10 ) );\n  return dataset;\n}\nprivate static JFreeChart\
+    \ createChart( PieDataset dataset )\\n{\n  JFreeChart chart = ChartFactory.createPieChart(\n\
+    \    \"Mobile Sales\", // chart title\n    dataset, // data\n    true, // include\
+    \ legend\n    true,\n    false);\n\n  return chart;\n}\npublic static void JPanel\
+    \ createDemoPanel())\n{\n  JFreeChart chart = createChart(createDataset())\n \
+    \ return new ChartPanel( chart);\n}\npublic static void main( String[ ] args )\n\
+    {\n  PieChart_AWT demo = new PieChart_AWT(\"Mobile Sales\" );\n  demo.setSize(\
+    \ 560 , 367 );\n  RefineryUtilities.centerFrameOnScreen( demo );\n  demo.setVisible(\
+    \ true );\n}\n```\n\nLet us keep the above Java code in PieChart_AWT.java file,\
+    \ and then compile and run it from the command prompted as:\n\n```\n$javac PieChart_AWT.java\n\
+    $java PieChart_AWT\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "If everything is fine, it will compile and run to generate the following Pie\
+    \ Graph:\n\n# Mobile Sales\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_30_0.png)\n\
+    \nIf you do not need to embed your chart in any application, then you can create\
+    \ images at command prompt. JFreeChart allows you to save chart images in either\
+    \ JPG or PNG formats.\n\n# JPEG Image Creation\n\nLet us re-write the above to\
+    \ generate a JPEG image from a command line. Following are the two APIs provided\
+    \ by JFreeChart library, which you can use to generate either PNG or JPEG image\
+    \ as per your requirement.\n\n+   * saveChartAsPNG() - API to save image in PNG\
+    \ format.\n* saveChartAsJPEG() - API to save image in JPEG format.\n\n```\nimport\
+    \ java.io.*;\nimport org.jfree.chart.ChartUtilities;\nimport org.jfree.chart.ChartFactory;\n\
+    import org.jfree.chart.JFreeChart;\nimport org.jfree.chart.data.DefaultPieDataset;\n\
+    \npublic class PieChart {\n    public static void main(String[] args ) throws\
+    \ Exception\n{\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "DefaultPieChartDataset dataset = new DefaultPieChartDataset();\ndataset.setValue(\"\
+    Iphone 5s\", new Double( 20 ));\ndataset.setValue(\"Samung Grand\", new Double(\
+    \ 20 ));\ndataset.setValue(\"Motog\", new Double( 40 ));\ndataset.setValue(\"\
+    Nokia Lumia\", new Double( 10 ))\n\n```\nJFreeChart chart = ChartFactory.createPieChart(\n\
+    \  \"Mobile Sales\", // chart title\n  dataset, // data\n  true, // include legend\n\
+    \  true,\n  false);\n\nint width = 640; /* Width of the image */\nint height =\
+    \ 480; /* Height of the image */\nFile pieChart = new File(\"PieChart.jpeg\");\n\
+    ChartUtilities.saveChartAsJPEG( pieChart , chart , width , height );\n```\n\n\
+    Let us keep the Java code in PieChart.java file, and then compile and run it from\
+    \ the command prompted as:\n\n```\n$javac PieChart.java\n$java PieChart\n```\n\
+    \nIf everything is fine, it will compile and run to create a JPEG image file named\
+    \ PieChart.jpeg in your current directory."
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# 6. JFreeChart – Bar Chart\n\nThis chapter demonstrates how you can use JFreeChart\
+    \ to create Bar Chart from a given set of business data.\n\nA bar chart uses different\
+    \ orientation (horizontal or vertical) bars to show comparisons in various categories.\
+    \ One axis (domain axis) of the chart shows the specific domain compared, and\
+    \ the other axis (range axis) represents discrete values.\n\n# Business Data\n\
+    \nThe following example depicts various car statistics with the help of a bar\
+    \ chart. Following is a list of car brands with their different characteristics,\
+    \ which we will show using a bar chart:\n\n| Car | Speed | User Rating | Millage\
+    \ | Safety |\n|---|---|---|---|-|\n| Fiat | 1.0 | 3.0 | 5.0 | 5.0 |\n| Audi |\
+    \ 5.0 | 6.0 | 10.0 | 4.0 |\n| Ford | 4.0 | 2.0 | 3.0 | 6.0 |\n\n# AWT Based Application\n\
+    \nFollowing is the code to create a Bar Chart from the above given information.\
+    \ This code helps you to embed a bar chart in any AWT based application.\n\n```\n\
+    import org.jfree.chart.ChartFactory;\nimport org.jfree.chart.ChartPanel;\nimport\
+    \ org.jfree.chart.JFreeChart;\nimport org.jfree.chart.plot.Orientation;\nimport\
+    \ org.jfree.data.category.CategoryDataset;\nimport org.jfree.data.category.DefaultCategoryDataset;\n\
+    import org.jfree.ui.ApplicationFrame;\nimport org.jfree.ui.RefUtilities;\n\npublic\
+    \ class BarChart_AWT extends ApplicationFrame\n{\n    public BarChart_AWT (String\
+    \ applicationTitle , String chartTitle)\n    {\n        super( applicationTitle\
+    \ );\n    }\n}\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_32_0.png)"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\nJFreeChart barChart = ChartFactory.createBarChart(\nchartTitle,\n\"Category\"\
+    ,\n\"Score\",\ncreatedDataset(),\nPlotOrientation.VERTICAL,\ntruue, true, false);\n\
+    ```\n\n```\nChartPanel chartPanel = new ChartPanel( barChart);\nchartPanel.setPreferredSize(new\
+    \ java.awt.Dimension( 560 , 367 ));\nsetContent( chartPanel );\n```\n\n```\nprivate\
+    \ CategoryDataset createDataset()\n{\n    final String fiat = \"FIAT\";\n    final\
+    \ String audi = \"AUDI\";\n    final String ford = \"FORD\";\n    final String\
+    \ speed = \"Speed\";\n    final String millage = \"Millage\";\n    final String\
+    \ userrating = \"User Rating\";\n    final String safety = \"safety\";\n```\n\n\
+    ```\ndataset.addValue(1.0 , fiat , speed );ndataset.addValue(3.0 , fiat , userrating\
+    \ );ndataset.addValue(5.0 , fiat , millage );ndataset.addValue(5.0 , fiat , safety\
+    \ );\n```\n\n```\ndataset.addValue(5.0 , audi , speed );ndataset.addValue(6.0\
+    \ , audi , userrating );ndataset.addValue(10.0 , audi , millage );ndataset.addValue(4.0\
+    \ , audi , safety );\n```\n\n```\ndataset.addValue(4.0 , ford , speed );ndataset.addValue(2.0\
+    \ , ford , userrating );ndataset.addValue(3.0 , ford , millage );ndataset.addValue(6.0\
+    \ , ford , safety );\nreturn dataset;\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_33_0.png)"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "```\n}\npublic static void main( String[ ] args ) {\n    BarChart_AWT chart\
+    \ = new BarChart_AWT(\"Car Usage Statistics\", \"Which car do you like?\");\n\
+    \    chart.pack( );\n    RefineryUtilities.centerFrameOnScreen( chart );\n   \
+    \ chart.setVisible( true );\n}\n\n```\n\nLet us keep the above Java code in BarChart_AWT.java\
+    \ file, and then compile and run it from the command prompted as:\n\n```\n$javac\
+    \ BarChar_AWT.java\n$java BarChar_AWT.java\n```\n\nIf everything is fine, it will\
+    \ compile and run to generate the following Bar Graph:\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_34_0.png)\n\
+    \n# JPEG Image Creation\n\nLet us re-write the above example to generate a JPEG\
+    \ image from a command line.\n\n```\nimport java.io.*;\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_34_1.png)"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "```\nimport org.jfree.chart.ChartFactory;\nimport org.jfree.chart.JFreeChart;\n\
+    import org.jfree.chart.plot.PlotOrientation;\nimport org.jfree.data.category.DefaultCategoryDataset;\n\
+    import org.jfree.chart.ChartUtilities;\n```\n\n```\npublic class BarChart\n{\n\
+    \    public static void main(String[ ] args ) throws Exception {\n        final\
+    \ String fiat = \"FIAT\";\n        final String audi = \"AUDI\";\n        final\
+    \ String ford = \"FORD\";\n        final String speed = \"Speed\";\n        final\
+    \ String millage = \"Millage\";\n        final String userrating = \"User Rating\"\
+    ;\n        final String safety = \"safety\";\n\n        final DefaultCategoryDataset\
+    \ dataset = new DefaultCategoryDataset();\n\n        dataset.addValue( 1.0 , fiat\
+    \ , speed );\n        dataset.addValue( 3.0 , fiat , userrating );\n        dataset.addValue(\
+    \ 5.0 , fiat , millage );\n        dataset.addValue( 5.0 , fiat , safety );\n\n\
+    \        dataset.addValue( 5.0 , audi , speed );\n        dataset.addValue( 6.0\
+    \ , audi , userrating );\n        dataset.addValue( 10.0 , audi , millage );\n\
+    \        dataset.addValue( 4.0 , audi , safety );\n\n        dataset.addValue(\
+    \ 4.0 , ford , speed );\n        dataset.addValue( 2.0 , ford , userrating );\n\
+    \        dataset.addValue( 3.0 , ford , millage );\n        dataset.addValue(\
+    \ 6.0 , ford , safety );\n\n        JFreeChart barChart = ChartFactory.createBarChart(\n\
+    \            \"CAR USAGE STATISTICS\",\n            \"Category\", \"Score\",\n\
+    ```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "dataset,PlotOrientation.VERTICAL,\ntrue, true, false);\n\n```\nint width =\
+    \ 640; /* Width of the image */\nint height = 480; /* Height of the image */\n\
+    FileChart BarChart = new File(\"BarChart.jpeg\");\nChartUtilities.saveChartAsJPEG(\
+    \ BarChart , barChart , width , height );\n }\n```\n\nLet us keep the above Java\
+    \ code in BarChart.java file, and then compile and run it from\nthe command prompted\
+    \ as:\n\n+   $javac BarChart.java\n$java BarChart\n\nIf everything is fine, it\
+    \ will compile and run to create a JPEG image file\nnamed BarChart.jpeg in your\
+    \ current directory."
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# 7. JFreeChart – Line Chart
+
+
+    A line chart or line graph displays information as a series of data points (markers)
+    connected by straight line segments. Line Chart shows how data changes at equal
+    time frequency.
+
+
+    This chapter demonstrates how we can use JFreeChart to create Line Chart from
+    a given set of business data.
+
+
+    # Business Data
+
+
+    The following example draws a line chart to show a trend of number of schools
+    opened in different years starting from 1970.
+
+
+    Given data is as follows:
+
+
+    | Year | Number of Schools |
+
+    |---|---|
+
+    | 1970 | 15 |
+
+    | 1980 | 30 |
+
+    | 1990 | 60 |
+
+    | 2000 | 12 |
+
+    | 2013 | 240 |
+
+    | 2014 | 300 |
+
+
+    # AWT Based Application
+
+
+    Following is the code to create Line Chart from the information above given. This
+    code helps you to embed a line chart in any AWT based application.
+
+
+    ```
+
+    import org.jfree.chart.ChartPanel;
+
+    import org.jfree.chart.ChartFactory;
+
+    import org.jfree.chart.JFreeChart;
+
+    import org.jfree.ui.ApplicationFrame;
+
+    import org.jfree.ui.RefineryUtilities;
+
+    import org.jfree.chart.plot.PlotOrientation;
+
+    import org.jfree.chart.category.DefaultCategoryDataset;
+
+
+    public class LineChart_AWT extends ApplicationFrame
+
+    ```
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_37_0.png)'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "```\n{\n  public LineChart_AWT( String applicationTitle , String chartTitle\
+    \ ) {\n    super(applicationTitle);\n    JFreeChart lineChart = ChartFactory.createLineChart(\n\
+    \      chartTitle,\n      \"Years\",\"Number of Schools\",\n      createDataset(),\n\
+    \      PlotOrientation.VERTICAL,\n      true,true,false);\n\n    ChartPanel chartPanel\
+    \ = new ChartPanel( lineChart );\n    chartPanel.setPreferredSize(new java.awt.Dimension(\
+    \ 560 , 367 ) );\n    setContent(chartPanel);\n  }\n\n  private DefaultCategoryDataset\
+    \ createDataset() {\n    DefaultCategoryDataset dataset = new DefaultCategoryDataset();\n\
+    \    dataset.addValue( 15 , \"schools\", \"1970\" );\n    dataset.addValue( 30\
+    \ , \"schools\", \"1980\" );\n    dataset.addValue( \"1990\" );\n    dataset.addValue(\
+    \ 120 , \"schools\", \"2000\" );\n    dataset.addValue( 240 , \"schools\", \"\
+    2010\" );\n    dataset.addValue( 300 , \"schools\", \"2014\" );\n    return dataset;\n\
+    \  }\n\n  public static void main( String[] args ) {\n    LineChart_AWT chart\
+    \ = new LineChart_AWT(\n      \"School Vs Years\",\n      \"Number of Schools\
+    \ vs years\");\n\n    chart.pack( );\n    RefineryUtilities.centerFrameScreen(\
+    \ chart );\n    chart.setVisible( true );\n  }\n}\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "Let us keep the above Java code in LineChart_AWT.java file, and compile and\
+    \ run it from the command prompted as:\n\n```\njavac LineChart_AWT.java\njava\
+    \ LineChart_AWT\n```\n\nIf everything is fine, it will compile and run to generate\
+    \ the following Line Graph:\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_39_0.png)\n\
+    \n# JPEG Image Creation\n\nLet us re-write the above example to generate a JPEG\
+    \ image from a command line.\n\n```\nimport java.io.*;\nimport org.jfree.chart.JFreeChart;\n\
+    import org.jfree.chart.ChartFactory;\nimport org.jfree.chart.ChartUtilities;\n\
+    import org.jfree.chart.plot.PlotOrientation;\nimport org.jfree.data.category.DefaultCategoryDataset;\n\
+    \npublic class LineChart\n{\n    public static void main(String[ ] args ) throws\
+    \ Exception\n{\n}\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '```
+
+    DefaultCategoryDataset line_chart_dataset = new DefaultCategoryDataset();
+
+    line_chart_dataset.addValue( 15, "schools", "1970" );
+
+    line_chart_dataset.addValue( 30, "schools", "1980" );
+
+    line_chart_dataset.addValue( 60, "schools", "1990" );
+
+    line_chart_dataset.addValue( 120, "schools", "2000" );
+
+    line_chart_dataset.addValue( 240, "schools", "2010" );
+
+    line_chart_dataset.addValue( 300, "schools", "2014" );
+
+
+    JFreeChart chartObject = ChartFactory.createLineChart(
+
+    "Schools Vs Years", "Year",
+
+    "Schools Count",
+
+    line_chart_dataset,PlotOrientation.VERTICAL,
+
+    true,true,false);
+
+
+    int width = 640; /* Width of the image */
+
+    int height = 480; /* Height of the image */
+
+    File lineChart = new File("LineChart.jpg");
+
+    ChartUtilities.saveChartAsJPEG(lineChart,chartObject,width, height);
+
+
+    ```
+
+
+    Let us keep the above Java code in LineChart.java file, and then compile and run
+    it from the command prompted as:
+
+
+    ```
+
+    $javac LineChart.java
+
+    $java LineChart
+
+    ```
+
+
+    If everything is fine, it will compile and execute to create a JPEG image file
+    named LineChart.jpeg in your current directory.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# # 8. JFreeChart – XY Chart
+
+
+    The XY chart (scatter) is based on one data series consisting of a list of X and
+    Y values. Each value pair (X,Y) is a point in a coordinate system. Here, one value
+    determines the horizontal (X) position, and the other determines the vertical
+    (Y) position. This chapter demonstrates — how we can use JFreeChart to create
+    XY Chart from a given set of business data.
+
+
+    # ## Business Data
+
+
+    Consider an example where we want to create an XY chart for all major browsers.
+    Here, different performance scores are gathered from different categories of people
+    as shown below:
+
+
+    | Category(X) | Score(Y) |
+
+    |--- |--- |
+
+    | Firefox | 1.0 | 1.0 |
+
+    | | 2.0 | 4.0 |
+
+    | | 3.0 | 3.0 |
+
+    | Category(X) | Score(Y) |
+
+    | Chrome | 1.0 | 4.0 |
+
+    | | 2.0 | 5.0 |
+
+    | | 3.0 | 6.0 |
+
+    | Category(X) | Score(Y) |
+
+    | IE | 3.0 | 4.0 |
+
+    | | 4.0 | 5.0 |
+
+    | | 5.0 | 4.0 |
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_41_0.png)'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# AWT Based Application\n\nFollowing is the code to create an XY Chart from\
+    \ the above given information. This code helps you to embed an XY chart in any\
+    \ AWT based application.\n\n```\nimport java.awt.Color;\nimport java.awt.BasicStroke;\n\
+    import org.jfree.chart.ChartPanel;\nimport org.jfree.chart.JFreeChart;\nimport\
+    \ org.jfree.data.xy.XYDataset;\nimport org.jfree.data.xy.XYSeries;\nimport org.jfree.ui.ApplicationFrame;\n\
+    import org.jfree.ui.RefineryUtilities;\nimport org.jfree.chart.plot.XYPlot;\n\
+    import org.jfree.chart.ChartFactory;\nimport org.jfree.chart.plot.PlotOrientation;\n\
+    import org.jfree.data.xy.XYSeriesCollection;\nimport org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;\n\
+    \npublic class XYLineChart extends ApplicationFrame\n{\n    public XYLineChart_AWT(\
+    \ String applicationTitle, String chartTitle )\n{\n        super(applicationTitle);\n\
+    \        JFreeChart xyLineChart = ChartFactory.createXYLineChart(\n          \
+    \  chartTitle ,\n            \"Category\",\n            \"Score\",\n         \
+    \   createdDataset(),\n            PlotOrientation.VERTICAL ,\n            true\
+    \ , true, false);\n\n        ChartPanel chartPanel = new ChartPanel( xyLineChart);\n\
+    \        chartPanel.setPreferredSize(new java.awt.Dimension(560 , 367));\n   \
+    \     final XYPlot plot = xyLineChart.getXYPlot();\n        XYLineAndShapeRenderer\
+    \ renderer = new XYLineAndShapeRenderer();\n        renderer.setSeriesPaint(1\
+    \ , Color.RED);\n        renderer.setSeriesPaint(1 , Color.GREEN);\n        renderer.setSeriesPaint(2\
+    \ , Color.YELLOW);\n        renderer.setSeriesStroke(0 , new BasicStroke( 4.0f\
+    \ )));\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_42_0.png)"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "```\nrenderer.setSeriesStroke( 1 , new BasicStroke( 3.0f ) );\nrenderer.setSeriesStroke(\
+    \ 2 , new BasicStroke( 2.0f )\nplot.setRenderer( renderer );\nsetContent( chartPane\
+    \ );\n}\n\nprivate XYDataset createDataset() {\n{\n    final XYSeries firefox\
+    \ = new XYSeries(\"Firefox\");\n    firefox.add( 1.0 , 1.0 );\n    firefox.add(\
+    \ 2.0 , 4.0 );\n    firefox.add( 3.0 , 3.0 );\n    final XYSeries chrome = new\
+    \ XYSeries(\"Chrome\");\n    chrome.add( 1.0 , 4.0 );\n    chrome.add( 2.0 , 5.0\
+    \ );\n    chrome.add( 3.0 , 6.0 );\n    final XYSeries iexplorer = new XYSeries(\"\
+    InternetExplorer\");\n    iexorer.add( 3.0 , 4.0 );\n    iexorer.add( 4.0 , 5.0\
+    \ );\n    iexorer.add( 5.0 , 4.0 );\n    final XYSeriesCollection dataset = new\
+    \ XYSeriesCollection();\n    dataset.addSeries( firefox );\n    dataset.addSeries(\
+    \ chrome );\n    dataset.addSeries( iexplorer );\n    return dataset;\n}\n\npublic\
+    \ static void main( String[] args ) {\nn    XYLineChart_AWT chart = new XYLineChart_AWT(\"\
+    Browser Usage Statistics\", \"Which Browser are you using?\");\n    chart.pack(\
+    \ );\n    RefineryUtilities.centerFrameOnScreen( chart );\n    chart.setVisible(\
+    \ true );\n}\n```"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# JFreeChart\n\nLet us keep the above Java code in **XYLineChart_AWT.java**\
+    \ file, and then compile\nrun it from the command prompted as:\n\n```\n$javac\
+    \ XYLineChart_AWT.java\n$java XYLineChart_AWT\n```\n\nIf everything is fine, it\
+    \ will compile and run to generate the following XY Graph:\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_44_0.png)\n\
+    \n# JPEG Image Creation\n\nLet us re-write the above example to generate a JPEG\
+    \ image from the command line.\n\n```\nimport java.io.*;\nimport org.jfree.chart.ChartFactory;\n\
+    import org.jfree.chart.JFreeChart;\nimport org.jfree.data.xy.XYSeries;\nimport\
+    \ org.jfree.chart.plot.PlotOrientation;\nimport org.jfree.data.xy.XYSeriesCollection;\n\
+    import org.jfree.chart.ChartUtilities;\n\npublic class XYLineChart_image\n{\n\
+    \    public static void main(String[] args) throws Exception\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_44_1.png)"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\n{\n  final XYSeries firefox = new XYSeries(\"Firefox\");\nfirefox.add(1.0,\
+    \ 1.0);\nfirefox.add(2.0, 4.0);\nfirefox.add(3.0, 3.0);\nfinal XYSeries chrome\
+    \ = new XYSeries(\"Chrome\");\nchrome.add(1.0, 4.0);\nchrome.add(2.0, 5.0);\n\
+    chrome.add(3.0, 6.0);\nfinal XYSeries ieplorer = new XYSeries(\"InternetExplorer\"\
+    );\niexplorer.add(3.0, 4.0);\nplorer.add(4.0, 5.0);\niexplorer.add(5.0, 4.0);\n\
+    final XYSeriesCollection dataset = new XYSeriesCollection();\ndataset.addSeries(\
+    \ firefox);\ndataset.addSeries( chrome);\ndataset.addSeries( ieplorer );\n\nJFreeChart\
+    \ xylineChart = ChartFactory.createXYLineChart(\n  \"Browser usage statistics\"\
+    ,\n  \"Category\",\n  \"Score\",\n  dataset,\n  PlotOrientation.VERTICAL,\n  true,\
+    \ true, false);\n\nint width = 640; /* Width of the image */\nint height = 480;\
+    \ /* Height of the image */\nFile XYChart = new File(\"XYLineChart.jpeg\");\n\
+    ChartUtils.saveChartAsJPEG(XYChart, xylineChart, width, height);\n}\n```\n\nLet\
+    \ us keep the above Java code in XYLineChart_image.java file, and then compile\
+    \ and run it from the command prompted as:\n\n```\n$javac XYLineChart_image.java\n\
+    $java XYLineChart_image\n```\n\nIf everything is fine, it will compile and run\
+    \ to create a JPEG image file named XYLineChart.jpeg in your current directory.\n\
+    \n![](img/8ddb3ec6e7d677f78107576a1c853ea9_45_0.png)"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# 9. JFreeChart – 3D Pie/Bar Chart\n\nThe 3D charts are the ones, which appear\
+    \ in a three-dimensional format. You can use these charts to provide better display\
+    \ and clear information. A 3D Pie chart is same as the pie chart additionally\
+    \ with a new 3D effect can be achieved by adding a little extra code, which will\
+    \ take care of creating 3D effect in a pie chart.\n\n# 3D Pie chart\n\nConsider\
+    \ the following example to illustrate mobile sale with the head of a 3D pie chart.\
+    \ Following is a list of different mobile brands and their sale (units per day).\n\
+    \n| S.N. | Mobile Brands | Sales (UNITS per day) |\n| 1 | Iphone 5S | 20 |\n|\
+    \ 2 | Samsung Grand | 20 |\n| 3 | MOTO G | 40 |\n| 4 | Nokia Lumia | 10 |\n\n\
+    Following is the code to create 3D Pie Chart from the above given information.\
+    \ This code helps you to embed a pie chart in any AWT based application.\n\n```\n\
+    import java.io.*;\nimport org.jfree.chart.ChartFactory;\nimport org.jfree.chart.JFreeChart;\n\
+    import org.jfree.chart.plot.PiePlot3D;\nimport org.jfree.chart.data.DefaultPieDataset;\n\
+    import org.jfree.chart.ChartUtilities;\n\npublic class PieChart3D\n{\n    public\
+    \ static void main(String [ ] args throws Exception\n{\n        DefaultPieDataset\
+    \ dataset = new DefaultPieDataset();\n        dataset.setValue(\"Iphone 5S\",\
+    \ new Double( 20 ) );\n        dataset.setValue(\"Samsung Grand\", new Double(\
+    \ 20 ) );\n        dataset.setValue(\"MotoG\", new Double( 40 ) );\n        dataset.setValue(\"\
+    Nokia Lumia\", new Double( 10 ) );\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_46_0.png)"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '```
+
+    JFreeChart chart = ChartFactory.createPieChart3D(
+
+
+    "Mobile Sales", // chart title
+
+
+    dataset , // data
+
+
+    true, // include legend
+
+    true,
+
+    false);
+
+
+    final PiePlot3D plot = ( PiePlot3D ) chart.getPlot( );
+
+    plot.setStartAngle(270);
+
+    plot.setForegroundAlpha(0.60f);
+
+    plot.setInteriorGap(0.02);
+
+    int width = 640; /* Width of the image */
+
+    int height = 480; /* Height of the image */
+
+    File pieChart3D = new File("pie_Chart3D.jpeg" ), width, width, height);
+
+    ChartUtilities.saveChartAsJPEG(pieChart3D, chart, width, height);
+
+
+    ```
+
+
+    Let us keep the above Java code in PieChart3D.java file, and then compile and
+    run it from the command prompted as:
+
+
+    ```
+
+    $javac PieChart3D.java
+
+    $java PieChart3D
+
+    ```
+
+
+    If everything is fine, it will compile and run to create a JPEG image file named
+    PieChart3D.jpeg having the following 3D Pie Chart:'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Mobile Sales
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_48_0.png)
+
+
+    # 3D Bar Chart
+
+
+    3D Bar chart is same as the bar chart additionally with a nice 3D effect. A 3D
+    effect can be achieved by adding a little extra code, which will take care of
+    creating 3D effect in a bar chart. Consider the following example that depicts
+    various car statistics with the help of a 3D bar chart. Following is a list of
+    car brands along with their different characteristics, which we will show using
+    a bar chart:
+
+
+    | Car | Speed | User Rating | Millage | Safety |
+
+    | FIAT | 1.0 | 3.0 | 5.0 | 5.0 |
+
+    | AUDI | 5.0 | 6.0 | 10.0 | 4.0 |
+
+    | FORD | 4.0 | 2.0 | 3.0 | 6.0 |'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "The following code creates 3D Chart from the above given information. This\
+    \ code helps you to embed a bar chart in any AWT based application.\n\n```\nimport\
+    \ java.io.*;\nimport org.jfree.chart.ChartFactory;\nimport org.jfree.chart.JFreeChart;\n\
+    import org.jfree.chart.plot.PlotOrientation;\nimport org.jfree.data.category.DefaultCategoryDataset;\n\
+    import org.jfree.chart.ChartUtilities;\n\npublic class BarChart3D\n{\n    public\
+    \ static void main(String[ ] args) throws Exception\n    {\n        final String\
+    \ fait = \"FAIT\";\n        final String audi = \"AUDI\";\n        final String\
+    \ ford = \"FORD\";\n        final String speed = \"Speed\";\n        final String\
+    \ popular = \"Popular\";\n        final String mailage = \"Mailage\";\n      \
+    \  final String serrating = \"User Rating\";\n        final String safty = \"\
+    safty\";\n        final DefaultCategoryDataset dataset = new DefaultCategoryDataset();\n\
+    \n        dataset.addValue(1.0, fait, speed);\n        dataset.addValue(4.0, fait,\
+    \ popular);\n        dataset.addValue(3.0, fait, serrating);\n        dataset.addValue(5.0,\
+    \ fait, mailage);\n        dataset.addValue(5.0, fait, safty);\n        dataset.addValue(5.0,\
+    \ audi, speed);\n        dataset.addValue(7.0, audi, popular);\n        dataset.addValue(6.0,\
+    \ audi, serrating);\n        dataset.addValue(10.0, audi, mailage);\n        dataset.addValue(4.0,\
+    \ audi, safty);\n        dataset.addValue(4.0, ford, speed);\n        dataset.addValue(3.0,\
+    \ ford, popular);\n        dataset.addValue(2.0, ford, serrating);\n        dataset.addValue(3.0,\
+    \ ford, mailage);\n        dataset.addValue(6.0, ford, safty);\n        JFreeChart\
+    \ barChart = ChartFactory.createBarChart3D(\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_49_0.png)"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# JFreeChart
+
+
+    ```
+
+    "Car Usage Statistics",n"Category",n"Score'',
+
+    dataset,
+
+    PlotOrientation.VERTICAL,
+
+    true, true, false);
+
+    width = 640; /* Width of the image */
+
+    height = 480; /* Height of the image */
+
+    File barChart3D = new File("barChart3D.jpeg");
+
+    ChartUtilities.saveChartAsJPEG(barChart3D, barChart, width, height);
+
+    ```
+
+
+    We keep the above Java code in BarChart3D.java file, and then compile and run
+    it from the command prompted as:
+
+
+    ```
+
+    javac BarChart3D.java
+
+    java BarChart3
+
+    ```
+
+
+    If everything is fine with your environment, it will compile and run to create
+    a JPEG image BarChart3D.jpeg having the following 3D Bar Chart:
+
+
+    # Car Usage Statistics
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_50_0.png)'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# 10. JFreeChart – Bubble Chart
+
+
+    This chapter demonstrates how you can use JFreeChart to create Bubble Chart from
+    a set of business data. A bubble chart displays information in three-dimensional
+    way. A bubble is plotted at the place where (x, y) coordinate intersect. The size
+    of the bubble is considered as range or quantity of X and Y axis.
+
+
+    # Business Data
+
+
+    Let us consider different persons along with their age, weight, and work capacities.
+    The wok capacity can be treated as number of hours that is plotted as bubbles
+    in the chart.
+
+
+    | | | 30 | 40 | 50 | 60 | 70 | 80 |
+
+    |---|---|---|---|---|---|---||}{
+
+    | | 10 | 4 | | | | | |
+
+    | | 20 | | 5 | | | | |
+
+    | AGE | 30 | | | 10 | | | |
+
+    | | 40 | | | | 8 | | |
+
+    | | 50 | | | | | 9 | |
+
+    | | 60 | | | | | | 6 |
+
+
+    # AWT Based Application
+
+
+    Following the code to create Bubble Chart from the above given information. This
+    code helps you to embed a Bubble chart in any AWT based application.
+
+
+    ```
+
+    import java.awt.Color;
+
+    import java.awt.Dimension;
+
+    import javax.swing.JPanel;
+
+    import org.jfree.chart.*;
+
+    import org.jfree.chart.axis.NumberAxis;
+
+    import org.jfree.chart.plot.PlotOrientation;
+
+    import org.jfree.chart.plot.XYPlot;
+
+    import org.jfree.chart.renderer.xy.XYItemRenderer;
+
+    import org.jfree.chart.data.DefaultXYZDataset;
+
+    import org.jfree.ui.ApplicationFrame;
+
+    import org.jfree.ui.RefineryUtilities;
+
+    ```
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_51_0.png)'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "```\npublic class BubbleChart_AWT extends ApplicationFrame\n{\n    public BubbleChart_AWT(\
+    \ String s )\n    {\n        super( s );\n        JPanel jpanel = createDemoPanel(\
+    \ );\n        jpanel.setPreferredSize(new Dimension( 560 , 370 ) );\n        setContent(\
+    \ jpanel);\n    }\n\n    private static JFreeChart createBubbleChart( XYZdataset\
+    \ xyzdataset )\n    {\n        JFreeChart jfreechart = ChartFactory.createBubbleChart(\n\
+    \            \"AGE vs WEIGHT vs WORK\",\n            \"Weight\",\n           \
+    \ \"AGE\",\n            xyzdataset,\n            PlotOrientation.HORIZON,\n  \
+    \          true, true, false);\n\n        XYPlot xyplot = ( XYPlot) jfreechart.getPlot();\n\
+    \        xyplot.setRendererAlpha( 0.65F );\n        XYItemRenderer xyitemenderer\
+    \ = xyplot.getRenderer();\n        xyitemenderer.setSeriesPaint( 0, Color.blue\
+    \ );\n        NumberAxis numeraxis = ( NumberAxis ) xyplot.getDomainAxis( );\n\
+    \        numeraxis.setLowerMargin( 0.2 );\n        numeraxis.setUpperMargin( 0.5\
+    \ );\n        NumberAxis numeraxis1 = ( NumberAxis ) xyplot.getRangeAxis( );\n\
+    \        numeraxis1.setLowerMargin( 0.8 );\n        numeraxis1.setUpperMargin(\
+    \ 0.9 );\n\n        return jfreechart;\n    }\n\n    public static XYZDataset\
+    \ createDataset( )\n    {\n        DefaultXYZDataset defaultxyzdataset = new DefaultXYZDataset();\n\
+    \    }\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_52_0.png)"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "# JFreeChart\n\n```\ndouble ad[] = { 30, 40, 50, 60, 70, 80 };\ndouble ad1[]\
+    \ = { 10, 20, 30, 40, 50, 60 };\ndouble ad2[] = { 4, 5, 10, 8, 9, 6 };\ndouble\
+    \ ad3[][] = { ad, ad1, ad2 };\ndefaultxydataset.addSeries(\"Series 1\", ad3 );\n\
+    ```\n\nreturn defaultxydat;\n\npublic static JPanel createdDemoPanel() \n{\nJFreeChart\
+    \ jfreechart = createChart( createDataset() );\nChartPanel chartpanel = new ChartPanel(\
+    \ jfreechart );\n\nchartpanel.setDomainZoomable( true );\nchartpanel.setRangeZoomable(\
+    \ true );\n\nreturn chartpanel;\n\npublic static void main( String args[] ) \n\
+    {\nBubbleChart_AWT bubblechart = new BubbleChart_AWT(\"Bubble Chart_frame\" );\n\
+    bubblechart.pack( );\nRefineryUtilities.centerFrameOnScreen( bubblechart );\n\
+    bubblechart.setVisible( true );\n}\n\nLets keep the above Java code in BubbleChart_AWT.java\
+    \ file, and then compile and run it from the command prompted as:\n\n```\n$javac\
+    \ BubbleChart_AWT.java\n$java BubbleChart_AW\n```\n\nIf everything is fine, it\
+    \ will compile and run to generate the following Bubble Graph:\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_53_0.png)"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "![](img/8ddb3ec6e7d677f78107576a1c853ea9_54_0.png)\n\n#  JPEG Image Creation\n\
+    \nLet us re-write the above example to generate a JPEG image from a command line.\n\
+    \n```\nimport java.io.*;\nimport java.awt.Color;\nimport org.jfree.chart.*;\n\
+    import org.jfree.chart.axis.NumberAxis;\nimport org.jfree.chart.plot.PlotOrientation;\n\
+    import org.jfree.chart.plot.XYPlot;\nimport org.jfree.chart.renderer.xy.XYItemRenderer;\n\
+    import org.jfree.data.xy.DefaultXYZDataset;\nimport org.jfree.chart.ChartUtils;\n\
+    \npublic class BubbleChart_image\n{\n    public static void main(String args[]\
+    \ ) throws Exception\n    {\n        DefaultXYZDataset defaultxyzdataset = new\
+    \ DefaultXYZDataset( );\n        double ad[] = { 30, 40, 50, 60, 70, 80 };\n \
+    \       double data1[] = { 10, 20, 30, 40, 50, 60 };\n        double data2[] =\
+    \ { 4, 5, 10, 8, 9, 6 };\n    }\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_54_1.png)"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '```
+
+    double ad3[ ][ ] = { ad , ad1 , ad2 };
+
+    defaultxyzdataset.addSeries("Series 1" , ad3 );
+
+    ```
+
+
+    ```
+
+    JFreeChart jfreechart = ChartFactory.createBubbleChart(
+
+    "AGE vs WEIGHT vs WORK",
+
+    "Weight",
+
+    "AGE",
+
+    defaultxyzdataset,
+
+    PlotOrientation.HORIZONAL,
+
+    true, true, false);
+
+    ```
+
+
+    ```
+
+    XYPlot pyplot = ( XYplot ) jfreechart.getPlot();
+
+    xyplot.setRendererAlpha( 0.65F );
+
+    XYItemRenderer xyitemrenderer = xyplot.getRenderer( );
+
+    xyitemrenderer.setSeriesPaint( 0 , Color.blue );
+
+    NumberAxis numberaxis = ( NumberAxis ) pyplot.getDomainAxis( );
+
+    numberaxis.setLowerMargin( 0.2 );
+
+    numberaxis.setUpperMargin( 0.5 );
+
+    NumberAxis numberaxis1 = ( NumberAxis ) pyplot.getRangeAxis( );
+
+    numberaxis1.setLowerMargin( 0.8 );
+
+    numberaxis1.setUpperMargin( 0.9 );
+
+    ```
+
+
+    ```
+
+    int width = 560; /* Width of the image */
+
+    int height = 370; /* Height of the image */
+
+    File bubblechart = new File("BubbleChart.jpg");
+
+    ChartUtilities.saveChartAsJPEG(bubbleChart,jfreechart,width,height);
+
+    }
+
+    ```
+
+
+    Let us keep the above Java code in BubbleChart_image.java file, and then compile
+    and run it from the command prompted:
+
+
+    ```
+
+    $javac BubbleChart_image.java
+
+    $java BubbleChart_image
+
+    ```
+
+
+    If everything is fine, it will compile and run to create a JPEG image named BubbleChart.jpeg
+    in your current directory.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# 11. JFreeChart – TimeSeries Chart\n\nA time series chart displays sequence\
+    \ of data points, which varies at equal intervals of time. This chapter demonstrates\
+    \ — how we can use JFreeChart to create Time Series Chart from a given set of\
+    \ business data.\n\n# Business Data\n\nLet us consider various random numbers\
+    \ generated by using standard Java API Math.random(). We use these numbers to\
+    \ generate a Time Series Chart. You can generate similar chart for total number\
+    \ of errors occurring in your website at a given interval of time.\n\n# AWT Based\
+    \ Application\n\nFollowing the code to create Time Series Chart from the numbers\
+    \ generated by Math.random()\n\n```\nimport org.jfree.chart.ChartFactory;\nimport\
+    \ org.jfree.chart.ChartPanel;\nimport org.jfree.chart.JFreeChart;\nimport org.jfree.data.general.SeriesException;\n\
+    import org.jfree.data.time.Second;\nimport org.jfree.data.time.TimeSeries;\nimport\
+    \ org.jfree.data.time.TimeSeriesCollection;\nimport org.jfree.data.xy.XYDataset;\n\
+    import org.jfree.ui.ApplicationFrame;\nimport org.jfree.ui.RefineryUtilities;\n\
+    \npublic class TimeSeries_AWT extends ApplicationFrame {\n    public TimeSeries_AWT(final\
+    \ String title ) {\n        super( title );\n        final XYDataset dataset =\
+    \ createDataset( );\n        final JFreeChart chart = createChart( dataset );\n\
+    \        final ChartPanel chartPanel = new ChartPanel( chart );\n        chartPanel.setPreferredSize(new\
+    \ java.awt.Dimension( 560 , 370 ) );\n        chartPanel.setMouseZoomable( true\
+    \ , false );\n        setContentPane(chartPanel );\n    }\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_56_0.png)"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "```\n}\n\nprivate XYDataset createdDataset( )\n{\n    final TimeSeries series\
+    \ = new TimeSeries(\"Random Data\" );\n    Second current = new Second();\ndouble\
+    \ value = 100.0;\n    for (int i = 0; i < 4000; i++)\n{\n        try\n       \
+    \ {\n            value = value + Math.random() ) - 0.5;\n            series.add(current,\
+    \ new Double( value ) );\n            current = ( Second ) current.next();\n \
+    \       }\n        catch ( SeriesException e )\n        {\n            System.err.println(\"\
+    Error adding to series\");\n        }\n    }\n\n    return new TimeSeriesCollection(series);\n\
+    }\n\nprivate JFreeChart createChart( final XYDataset dataset )\n{\n    return\
+    \ ChartFactory.createTimeSeriesChart(\n        \"Computing Test\",\n        \"\
+    Seconds\",\n        \"Value\",\n        dataset,\n        false,\n        false,\n\
+    \        false);\n}\n\npublic static void main( final String[ ] args\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "```\n{\n  final String title = \"Time Series Management\";\n  final TimeSeries_AWT\
+    \ demo = new TimeSeries_AWT( title );\n  demo.pack();\n  RefineryUtilities.positionFrameRandomly(\
+    \ demo );\n  demo.setVisible( true );\n}\n```\n\nLet us keep the above Java code\
+    \ in TimeSeries_AWT.java file, and compile and run it from the command prompted\
+    \ as:\n\n```\n$javac TimeSeries_AWT.java\n$java TimeSeries_AWT\n```\n\nIf everything\
+    \ is fine, it will compile and run to generate the following Time Series Graph:\n\
+    \n![](img/8ddb3ec6e7d677f78107576a1c853ea9_58_0.png)\n\n# JPEG Image Creation\n\
+    \nLet us re-write the above example to generate a JPEG image from a command line.\n\
+    \n```\nimport java.io.*;\n```"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "```\nimport org.jfree.chart.ChartFactory;\nimport org.jfree.chart.JFreeChart;\n\
+    import org.jfree.data.general.SeriesException;\nimport org.jfree.data.time.Second;\n\
+    import org.jfree.data.time.TimeSeries;\nimport org.jfree.data.time.TimeSeriesCollection;\n\
+    import org.jfree.data.xy.XYDataset;\nimport org.jfree.chart.ChartUtilities;\n\n\
+    public class TimeSeriesChart\n{\n    public static void main( final String[ ]\
+    \ args ) throws Exception {\n        final TimeSeries series = new TimeSeries(\"\
+    Random Data\");\n        Second current = new Second();\n        double value\
+    \ = 100.0;\n        for ( int i = 0; i < 4000; i++) {\n            try {\n   \
+    \             value = value + Math.random() ) - 0.5;\n                series.add(\
+    \ current , new Double( value ) );\n                current = ( Second ) current.next();\n\
+    \            } catch ( SeriesException e ) {\n                System.err.println(\
+    \ \"Error adding to series\" );\n            }\n        }\n        final XYDataset\
+    \ dataset= ( XYDataset ) new TimeSeriesCollection(series);\n        JFreechart\
+    \ timechart = ChartFactory.createTimeSeriesChart(\n\"Computing Test\",\n\"Seconds\"\
+    ,\n\"Value\",\ndataset,\nfalse,\nfalse,\nfalse\n);\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_59_0.png)"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '```
+
+    int width = 560; /* Width of the image */
+
+    int height = 370; /* Height of the image */
+
+    File timeChart = new File("TimeChart.jpeg");
+
+    ChartUtilities.saveChartAsJPEG( timeChart, timechart, width, height );
+
+    }
+
+    ```
+
+
+    Let us keep the above Java code in **TimeSeriesChart.java** file, and then compile
+    and run it from the command prompted as:
+
+
+    ```
+
+    $java TimeSeriesChart.java
+
+    $java TimeSeriesChart
+
+    ```
+
+
+    If everything is fine with your environment, it will compile and run to create
+    a JPEG image **TimeChart.jpeg** file in your current directory.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# 12. JFreeChart – File Interface\n\nSo far we studied how to create various\
+    \ types of charts using JFreeChart APIs as static data. But in production environment,\
+    \ data is provided in the form of text file with a predefined format, or it comes\
+    \ directly from the database.\n\nThis chapter will explain — how we can read a\
+    \ simple data from a given text file from a given location and then use JFreeChart\
+    \ to create a chart of your choice.\n\n# Business Data\n\nConsider we have a file\
+    \ named mobile.txt, having different mobile brands and their sale (units per day)\
+    \ separated by a simple comma (,);\n\n| Iphone 5S, 20 |\n| Samsung Grand, 20 |\n\
+    | Moto G, 40 Nokia |\n| Lumia, 10 |\n\n# Chart Generation Based on File\n\nFollowing\
+    \ is the code to create a Pie Chart based on the information provided in mobile.txt:\n\
+    \n```\nimport java.io.*;\nimport java.util.StringTokenizer;\nimport org.jfree.chart.ChartUtilities;\n\
+    import org.jfree.chart.ChartFactory;\nimport org.jfree.chart.JFreeChart;\nimport\
+    \ org.jfree.chart.data.general.DefaultPieDataset;\n\npublic class PieChart_File\n\
+    {\n    public static void main(String[] args ) throws Exception\n    {\n     \
+    \   String mobilebrands[] = {\n            \"iPhone 5s\",\n            \"Samsung\
+    \ Grand\",\n            \"MotoG\",\n            \"Nokia Lumia\"\n        };\n\
+    \    };\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_61_0.png)"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# JFreeChart
+
+
+    We keep the above Java code in **PieChart_File.java** file, and then compile and
+    run it from the command prompt:
+
+
+    ```
+
+    $javac PieChart_File.java
+
+    $java PieChart_File
+
+    ```
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_62_0.png)'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: 'If everything is fine, it will compile and run to create a JPEG image file
+    named PieChart.jpeg that contains the following chart.
+
+
+    # Mobile Sales
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_63_0.png)'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# 13. JFreeChart – Database Interface\n\nThis chapter explains how you can\
+    \ read simple data from a database table and then use JFreeChart to create a chart\
+    \ of your choice.\n\n# Business Data\n\nConsider we have the following MySQL table\
+    \ mobile_tbl(mobile_brand VARCHAR(100) NOT NULL, unit_sale INT NO NULL);\n\nConsider\
+    \ this table is having the following records:\n\n| Mobile Brands | Unit Sales\
+    \ |\n|---|---|\n| iPhone5S | 20 |\n| Samsung Grand | 20 |\n| MotoG | 40 |\n| Nokia\
+    \ Lumia | 10 |\n\n# Chart Generation Using Database\n\nFollowing is the code to\
+    \ create a Pie Chart based on the information provided in mobile_tbl table available\
+    \ in test_db in a MySQL database. Based on your requirements, you can use any\
+    \ other database.\n\n```\nimport java.io.*;\nimport java.sql.*;\nimport org.jfree.chart.ChartUtilities;\n\
+    import org.jfree.chart.ChartFactory;\nimport org.jfree.chart.JFreeChart;\nimport\
+    \ org.jfree.chart.data.DefaultPiedDataset;\npublic class PieChart_DB\n{\n    public\
+    \ static void main(String [ ] args) throws Exception\n    {\n        String mobilebrands[]\
+    \ = {\n            \"iPhone 5s\",\n            \"Samsung Grand\",\n          \
+    \  \"MotoG\",\n```\n\n![](img/8ddb3ec6e7d677f78107576a1c853ea9_64_0.png)"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# JFreeChart
+
+
+    "Nokia Lumia"
+
+
+    ```
+
+    ););
+
+    /* Create MySQL Database Connection */
+
+    Class.forName("com.mysql.jdbc.Driver");
+
+    Connection connection = DriverManager.getConnection(
+
+    "jdbc:mysql://localhost:3306/jf_testdb",
+
+    "root",
+
+    "root123");
+
+
+    Statement statement = connect.createStatement();
+
+    ResultSet result = statement.executeQuery("select * from dataset_tb");
+
+    DefaultPieDataset dataset = new DefaultPieDataset();
+
+    while (result.next()) {
+
+
+    dataset.setValue(
+
+    result.getString("brandname"),
+
+    Double.parseDouble(result.getString("datavalue")));
+
+    }
+
+    JFreeChart chart = ChartFactory.createPieChart(
+
+    "Mobile Sales", // chart title
+
+    dataset,
+
+    // data
+
+    true,
+
+    // include legend
+
+    true,
+
+    false);
+
+    );
+
+
+    int width = 560; /* Width of the image */
+
+    int height = 370; /* Height of the image */
+
+    File pieChart = new File("Pie-Chart.jpeg");
+
+    ChartUtilities.saveChartAsJPEG(pieChart, chart, width, height);
+
+
+    ```
+
+
+    Let us keep the above Java code in PieChart_DB.java file, then compile and run
+    it from the command prompted as:
+
+
+    ```
+
+    $javac PieChart_DB.java
+
+    $java PieChart_DB
+
+    ```
+
+
+    If everything is fine, it will compile and run to create a JPEG image named Pie_Chart.jpeg
+    having the following chart.
+
+
+    60
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_65_0.png)'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# # Mobile Sales
+
+
+    ![](img/8ddb3ec6e7d677f78107576a1c853ea9_66_0.png)'
+  merge: -1
+  pgno: 66
