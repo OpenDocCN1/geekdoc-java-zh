@@ -1,0 +1,2477 @@
+- img_proc: true
+  md: '# JAVA
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_0_0.png)
+
+
+    # ADVANCED FEATURES &
+
+    PROGRAMMING TECHNIQUES
+
+
+    NATHAN CLARK'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Java
+
+
+    # Advanced Features and Programming Techniques
+
+
+    Nathan Clark'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '© Copyright 2018 Nathan Clark. All rights reserved.
+
+
+    No part of this publication may be reproduced, distributed, or transmitted in
+    any form or by any means, photocopying, recording, or other electronic or mechanical
+    methods, without the prior written permission of the publisher, except in the
+    case of brief quotations embodied in critical reviews and other noncommercial
+    uses permitted by copyright law.
+
+
+    Every effort has been made to ensure that the content provided herein is accurate
+    and helpful for our readers at publishing time. However, this is not an exhaustive
+    treatment of the subjects. No liability is assumed for losses or damages due to
+    the information provided.
+
+
+    Any trademarks which are used done so without consent and any use of the same
+    does not imply consent or permission was gained from the owner. Any trademarks
+    or brands found within are purely used for clarification purposes and no owners
+    are in anyway affiliated with this work.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Books in this Series
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_4_0.png)
+
+
+    # Computer Programming for Beginners
+
+
+    Fundamentals of Programming Terms and Concepts
+
+
+    +   FREE Kindle Version with Paperback
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_4_1.png)
+
+
+    # JAVA
+
+
+    Programming Basics for Absolute Beginners
+
+
+    +   FREE Kindle Version with Paperback'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '![](img/164f77fcab6b95970f901980879f9631_5_0.png)
+
+
+    # JAVA
+
+
+    A Detailed Approach to Practical Coding
+
+
+    +   FREE Kindle Version with Paperback
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_5_1.png)
+
+
+    # JAVA
+
+
+    Advanced Features and Programming Techniques
+
+
+    +   FREE Kindle Version with Paperback'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   Introduction
+
+    1. Collections
+
+    2. Controlling the App Execution
+
+    3. Packages in Java
+
+    4. Multithreading
+
+    5. Java Annotations
+
+    6. Reflection
+
+    7. Java Properties
+
+    8. Serialization
+
+    9. What is Java EE?
+
+    10. Java Servlets
+
+    11. Java Server Faces
+
+    12. Java Database Connectivity (JDBC)
+
+    13. Android and Java
+
+    Conclusion
+
+    About the Author'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Introduction
+
+
+    Welcome to the third installment of the Step-By-Step Java series, where I go even
+    further into the workings of Java by looking at advanced features and techniques.
+    If you haven''t read the first two books in the series, Our beginner guide covers
+    the fundamentals of getting started with Java and takes you step by step through
+    writing your very first program, while the second book in the series looks at
+    slightly more complex topics while still being beginner friendly.
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_9_0.png)
+
+
+    JAVA Programming Basics for Absolute Beginners
+
+
+    FREE Kindle Version with Paperback
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_9_1.png)
+
+
+    JAVA A Detailed Approach to Practical Coding
+
+
+    FREE Kindle Version with Paperback'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'An important aspect of this series, and your learning experience, is **learning
+    by doing**. Practical examples are proven to be the best way to learn a programming
+    language, which is why I have crammed as many examples into this guide as possible.
+    I have tried to keep the core of the examples similar, so the only variable is
+    the topic under discussion. This makes it easier to understand what we are implementing.
+    As you progress through the chapters, remember to follow along with the examples
+    and try them yourself.
+
+
+    With each topic in this advanced level guide, we will look at a detailed description,
+    proper syntax and numerous examples to make your learning experience as easy as
+    possible. Java is a powerful and versatile programming language and I trust you
+    will enjoy this book as much as I enjoyed writing it.
+
+
+    So without further ado, let''s get started!'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# 1. Collections
+
+
+    Collections are special classes in Java that makes working with special data classes
+    much easier. For example, imagine we have a collection called the ArrayList collection,
+    and we want to find out the size of the array. Instead of writing special code
+    to find the size, we can use a built-in function of the collection called size()
+    to get the size of the array.
+
+
+    Some of the notable advantages of collections are:
+
+
+    +   - It reduces the programming effort required by the developer, since these
+    are built-in available data structures and algorithms that don''t have to written
+    from scratch.
+
+    - It increases performance by providing high-performance implementation of data
+    structures and algorithms.
+
+    - It provides interoperability between unrelated APIs, by establishing a common
+    language in order to pass collections back and forth.
+
+    - It also reduces the effort required to learn APIs, by lessening the need to
+    learn multiple hoc APIs.
+
+
+    The following collections are present in Java:
+
+
+    +   - ArrayList - The array container is used to store a contiguous set of values
+    of the same data type.
+
+    - HashSet - This collection is used to store elements in such a way that there
+    are no duplicate elements.
+
+    - ArrayDeque - This collection is similar to a queue, but here we can add elements
+    at both the beginning and end of the queue.
+
+    - HashMap – This is a collection which is a set of key value pairs.
+
+
+    Let''s look at each collection in more detail.
+
+
+    # 1.1 ArrayList
+
+
+    The ArrayList container is used to store a contiguous set of values of the same
+    data type. Let''s look at the definition of an array container via a'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "sample code.\n\nThe syntax variablename=new ArrayList() is as follows:\n\n\
+    ```\nArrayList variablename=new ArrayList();\n```\n\nIn this code, ‘variablename’\
+    \ refers to the variable name to be assigned to the array list. To add an element\
+    \ to the ArrayList we use the ‘add()’ method as shown below.\n\n```\nVariablename.add(element)\n\
+    ```\n\nWhere ‘element’ is the value that needs to be added to the ArrayList. Let’s\
+    \ now look at an example of how to use the ArrayList collection.\n\n# Example\
+    \ 1: The following program is used to showcase the way to use array lists.\n\n\
+    ```\nimport java.util.*;\npublic class Demo\n{\n    public static void main(String[]\
+    \ args)\n{\n        ArrayList arr=new ArrayList();\n        arr.add(1);\n    \
+    \    arr.add(2);\n\n        System.out.println(\"The element at position 1 of\
+    \ the array is \"+ arr.get(1));\n    }\n}\n```\n\nWith the above program:\n\n\
+    +   - We are first ensuring that we import the ‘java.util’ package, because this\
+    \ has all the collection classes.\n- Next, we define a new object of the ArrayList\
+    \ class."
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "+   * We then use the ‘add’ method to add integer elements to the array list.\n\
+    * Lastly, we use the ‘get’ method to get the value of the array list at a particular\
+    \ index position.\n\nWith this program, the output is as follows:\n\n# The element\
+    \ at position 1 of the array is 2\n\nWe can also store other data types, such\
+    \ as strings, in the array list. Another example is shown below:\n\nExample 2:\
+    \ The following program shows how to use array lists with strings.\n\n```\nimport\
+    \ java.util.*;\npublic class Demo\n{\n    public static void main(String args[])\n\
+    {\n        ArrayList arr=new ArrayList();\n        arr.add(\"One\");\n\n     \
+    \   System.out.println(\"The element at position 1 of the array is \"+ arr.get(1));\n\
+    \    }\n}\n```\n\nWith this program, the output is as follows:\n\n# The element\
+    \ at position 1 of the array is Two\n\nWe can also store objects of defined classes\
+    \ in the array list. An example of this is shown below:"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# Example 3: The next program is used to showcase array lists with classes.\n\
+    \n```\nimport java.util.*;\nclass Person\n{\n    public String Name;\n}\n\npublic\
+    \ class Demo\n{\n    public static void main(String args[])\\{\n        ArrayList\
+    \ arr=new ArrayList();\n\n        Person Per1=new Person();\n        Per1.Name=\"\
+    John\";\n\n        Person Per2=new Person();\n        Per2.Name=\"Mark\";\n\n\
+    \        arr.add(Per1);\n        arr.add(Per2);\n\n        System.out.println(\"\
+    The name of Person One is \" + ((Person)arr.get(0)).Name);\n        System.out.println(\"\
+    The name of Person Two is \" + ((Person)arr.get(1)).Name);\n    }\n}\n```\n\n\
+    With the above program:\n\n+   * We are first defining a class named ‘Person\\\
+    u2019.\n* Then"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "retrieving the object from the ArrayList.\n\nWith this program, the output\
+    \ is as follows:\n\n# The name of Person One is John\n\n# The name of Person Two\
+    \ is Mark\n\nNow let's look at the other methods that are available for the ArrayList\
+    \ class.\n\n# 1.1.1 Size\n\nThis method returns the number of elements in the\
+    \ ArrayList. Let's see an example of this.\n\nExample 4: The following program\
+    \ is used to showcase how to use the size method.\n\n```\nimport java.util.*;\n\
+    public class Demo\n{\n    public static void main(String args[])\n    {\n    \
+    \    ArrayList arr=new ArrayList();\n\n        arr.add(1);\n        arr.add(2);\n\
+    \n        System.out.println(\"The size of the array is \"+arr.size()');\n   \
+    \ }\n}\n```\n\nWith this program, the output is as follows:\n\n# The size of the\
+    \ array is 2"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# 1.1.2 Contains\n\nThis method returns True if this array list contains the\
+    \ specified element we are looking for, otherwise it returns False. Let’s look\
+    \ at an example of this.\n\nExample 5: The following program showcases the way\
+    \ to use the contains method.\n\n```\nimport java.util.*;\npublic class Demo\n\
+    {\n    public static void main(String[] args)\n    {\n        ArrayList arr=new\
+    \ ArrayList();\n\n        arr.add(1);\n        arr.add(2);\n\n        System.out.println(\"\
+    Does the Array List contain the value 2 \"+arr.contains(2));\n    }\n}\n```\n\n\
+    With this program, the output is as follows:\n\n# Does the Array List contain\
+    \ the value 2 true\n\n# 1.1.3 Remove\n\nThis method removes the element at the\
+    \ specified position in the array list. Let’s see an example of this.\n\nExample\
+    \ 6: This program is used to showcase the way to use the remove method.\n\n```\n\
+    import java.util.*;\npublic class Demo\n```"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "```\n{\n  public static void main(String[] args)\n  {\n    ArrayList arr=new\
+    \ ArrayList();\n\n    arr.add(1);\n    arr.add(2);\n    arr.add(3);\n\n    //\
+    \ We are removing the element at Index no 1\n    // Remember that the Array List\
+    \ starts from Index No 0\n    // Hence the value 2 is stored at Index no 1\n \
+    \   arr.remove(1);\n    System.out.println(\"Does the Array List contain the value\
+    \ 2 \"+arr.contains(2));\n  }\n}\n```\n\nWith this program, the output is as follows:\n\
+    \n# Does the Array List contain the value 2 false\n\n# 1.1.4 Add(int index, E\
+    \ element)\n\nThis method inserts a specified element at an identified position\
+    \ in the array list. Let's look at an example of this.\n\nExample 7: The next\
+    \ program is used to showcase the way to use the add at index method.\n\n```\n\
+    import java.util.*;\npublic class Demo\n{\n  public static void main(String[]\
+    \ args)\n  {\n    ArrayList arr=new ArrayList();\n  }\n\n  arr.add(1);\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "```\narr.add(2);\narr.add(3);\narr.add(2,4);\n\nint length=arr.size();\nfor(int\
+    \ i=0;i<length;i++)\n    System.out.println(arr.get(i));\n\n```\n\nWith the above\
+    \ program:\n\n+   - We are using the ‘add at index’ method to add an element at\
+    \ index number 2 of the array list.\n- Then we are using the ‘for loop’ to iterate\
+    \ through the elements of the array list.\n\nWith this program, the output is\
+    \ as follows:\n\n# 1\n\n# 2\n\n# 4\n\n# 3\n\n# 1.2 HashSet\n\nThis collection\
+    \ is used to store elements in such a way that there are no duplicate elements.\n\
+    \nThe syntax for defining an array container is as follows:\n\n```\nHashSet varilename=new\
+    \ HashSet();\n```\n\nIn this code, ‘varilename’ is the variable name to be assigned\
+    \ to the HashSet. To add an element to the HashSet, we use the ‘add()’ method\
+    \ shown below.\n\n```\nVarilename.add(element)\n```"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "Where ‘element’ again is the value that needs to be added to the HashSet. To\
+    \ iterate through the HashSet collection, we first need to create something known\
+    \ as an ‘Iterator’ object as shown below.\n\n```\nIterator<Integer> itr = variablename.iterator();\n\
+    ```\n\nIn this code we need to specify the data type for the items in collection,\
+    \ as well as the data type of the iterator object. The variable name is the collection\
+    \ variable. We can then iterate through the elements using the ‘Next’ method.\n\
+    \n```\nwhile (itr.hasNext()) {\n```\n\nLet’s look at an example of how to use\
+    \ the HashSet collection.\n\n# Example 8: The following program showcases the\
+    \ hash set collection.\n\n```\nimport java.util.*;\npublic class Demo\n{\n   \
+    \ public static void main(String args[])\n{\n        Set st = new HashSet();\n\
+    \n        st.add(1);\n        st.add(2);\n        st.add(3);\n\n        Iterator<Integer>\
+    \ itr = st.iterator();\n        while (itr.hasNext()) {\n            System.out.println(itr.next());\n\
+    \        }\n    }\n}\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "With the above program:\n\n+   * We are first defining a HashSet object.\n\
+    * Then we use the ‘add’ method to add objects to the HashSet.\n* And lastly, we\
+    \ set an iterator object to iterate through the elements of the HashSet.\n\nWith\
+    \ this program, the output is as follows:\n\n```\n1\n2\n3\n```\n\nSimilar to the\
+    \ ArrayList collection, we can also use strings as elements of the HashSet. Below\
+    \ is an example of this.\n\n# Example 9: The following program shows the hash\
+    \ set collection with strings as elements.\n\n```\nimport java.util.*;\npublic\
+    \ class Demo\n{\n    public static void main(String args[])\n{\n        Set st\
+    \ = new HashSet();\n\n        st.add(\"One\");\n        st.add(\"Two\");\n   \
+    \     st.add(\"Three\");\n\n        Iterator<Integer> itr = st.iterator();\n \
+    \       while (itr.hasNext())\n        {\n            System.out.println(itr.next());\n\
+    \        }\n    }\n}\n```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "```\n}\n}\n```\n\nWith this program, the output is as follows:\n\n# One\n\n\
+    # Two\n\n# Three\n\nNow let’s look at the other methods that are available for\
+    \ the HashSet class.\n\n# 1.2.1 Size\n\nThis method returns the number of elements\
+    \ in the HashSet. Let’s see an example of this.\n\nExample 10: The next program\
+    \ showcases the size method of the hash set collection.\n\n```\nimport java.util.*;\n\
+    public class Demo\n{\n    public static void main(String args[])\n    {\n    \
+    \    Set st = new HashSet();\n\n        st.add(\"One\");\n        st.add(\"Two\"\
+    );\n        st.add(\"Three\");\n\n        System.out.println(\"The size of the\
+    \ Hash Set is \"+st.size());\n    }\n}\n\n```"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "With this program, the output is as follows:\n\n# The size of the Hash Set\
+    \ is 3\n\n# 1.2.2 Contains\n\nThis method returns True if the HashSet contains\
+    \ the item we specify, else it returns False. Let’s see an example of this.\n\n\
+    Example 11: The following program showcases the contains method of the hash set\
+    \ collection.\n\n```\nimport java.util.*;\npublic class Demo\n{\n    public static\
+    \ void main(String args[])\n    {\n        Set st = new HashSet();\n\n       \
+    \ st.add(\"One\");\n        st.add(\"Two\");\n        st.add(\"Three\");\n\n \
+    \       System.out.println(\"Does the Hash Set contain the value Two \"+st.contains(\"\
+    Two\")\");\n    }\n}\n```\n\nWith this program, the output is as follows:\n\n\
+    # Does the Hash Set contain the value Two true\n\n# 1.2.3 Removes\n\nThis method\
+    \ removes the specified element from the HashSet if it is present. Let’s look\
+    \ at an example of this."
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Example 12: This program is used to showcase the removes method of the hash\
+    \ set collection.\n\n```\nimport java.util.*;\npublic class Demo {\n    public\
+    \ static void main(String args[]) {\n        Set st = new HashSet();\n\n     \
+    \   st.add(\"One\");\n        st.add(\"Two\");\n        st.add(\"Three\");\n\n\
+    \        st.remove(\"Two\");\n        System.out.println(\"Does the Hash Set contain\
+    \ the value \"+st.contains(\"Two\")\");\n    }\n}\n```\n\nWith this program, the\
+    \ output is as follows:\n\n# Does the Hash Set contain the value Two false\n\n\
+    # 1.3 ArrayDeque\n\nThis collection is similar to a queue, but here we can add\
+    \ elements at both the beginning and end of the queue.\n\nThe syntax for defining\
+    \ an array container is as follows:\n\n```\nArrayDeque<datatype> variablename=new\
+    \ ArrayDeque<datatype>();\n```\n\nWhere ‘variable’ is the variable name to be\
+    \ assigned to the ArrayDeque, and ‘datatype’ is the type of elements that we need\
+    \ to add to the queue. To add an element to the ArrayDeque, we use the ‘add()’\
+    \ method as shown below.\n\n```\nvariablename.add(element)\n```"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "In the above code, ‘element’ refers to the value that needs to be added to\
+    \ the ArrayDeque. To iterate through the ArrayDeque collection, we can use the\
+    \ ‘for each’ statement to iterate through the elements.\n\nLet’s look at an example\
+    \ of how to use the ArrayDeque collection.\n\n# Example 13: The following program\
+    \ shows the workings of the ArrayDeque collection.\n\n```\nimport java.util.*;\n\
+    public class Demo {\n    public static void main(String[] args) {\n        ArrayDeque<Integer>\
+    \ arr = new ArrayDeque<Integer>();\n\n        arr.add(1);\n        arr.add(2);\n\
+    \        arr.add(3);\n\n        for (Integer i : arr) {\n            System.out.println(i);\n\
+    \        }\n    }\n}\n```\n\nWith the above program:\n\n+   - We are first defining\
+    \ an ArrayDeque object, and we are first defining an ArrayDeque object, and we\
+    \ are specifying that we want to store Integer elements in the queue.\n- We then\
+    \ use the ‘add’ method to add objects to the queue.\n- Lastly, we use the ‘for’\
+    \ statement to display the elements of the queue.\n\nWith this program, the output\
+    \ is as follows:"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "1\n\n2\n\n3\n\nSimilar to the ArrayList collection, we can use strings as elements\
+    \ of the ArrayDeque. Below is an example of this.\n\n# Example 14: The following\
+    \ program showcases the ArrayDeque collection with strings as elements.\n\n```\n\
+    import java.util.*;\npublic class Demo\n{\n    public static void main(String\
+    \ args[])\n    {\n        ArrayDeque<String> arr = new ArrayDeque<String>();\n\
+    \n        arr.add(\"One\");\n        arr.add(\"Two\");\n        arr.add(\"Three\"\
+    );\n\n        for (String str : arr)\n        {\n            System.out.println(str);\n\
+    \        }\n    }\nn\n```\n\nWith this program, the output is as follows:\n\n\
+    # One\n\n# Two\n\n# Three"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "Now let's look at the other methods that are available for the ArrayDeque class.\n\
+    \n# 1.3.1 Size\n\nThis method returns the number of elements in the HashSet. Let's\
+    \ see an example of this.\n\nExample 15: The next program shows how to use the\
+    \ size method of the ArrayDeque collection.\n\n```\nimport java.util.*;\npublic\
+    \ class Demo\n{\n    public static void main(String args[])\n    {\n        ArrayDeque<String>\
+    \ arr = new ArrayDeque<String>();\n\n        arr.add(\"One\");\n        arr.add(\"\
+    Two\");\n        arr.add(\"Three\");\n\n        System.out.println(\"The size\
+    \ of the ArrayDeque is \"+arr.size()\\n    }\n}\n```\n\nWith this program, the\
+    \ output is as follows:\n\n# The size of the ArrayDeque Contains\n\n# 1.3.2 Contains\n\
+    \nThis method returns True if the ArrayDeque contains a specified item, otherwise\
+    \ it returns False. Let's look at an example of this."
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "Example 16: The following program is used to showcase the contains method of\
+    \ the ArrayDeque collection.\n\n```\nimport java.util.*;\npublic class Demo\n\
+    {\n    public static void main(String[] args) {\n        ArrayDeque<String> arr\
+    \ = new ArrayDeque<String>();\n\n        arr.add(\"One\");\n        arr.add(\"\
+    Two\");\n        arr.add(\"Three\");\n\n        System.out.println(\"Does the\
+    \ ArrayDeque contain the element \"+arr.contains(\"Two\")\");\n    }\n}\n```\n\
+    \nWith this program, the output is as follows:\n\n# Does the ArrayDeque contain\
+    \ the element true\n\n# 1.3.3 Removes\n\nThis method removes the specified element\
+    \ from the queue, if it is present. Let's see an example of this.\n\nExample 17:\
+    \ This program showcases the removes method of the ArrayDeque collection.\n\n\
+    ```\nimport java.util.*;\npublic class Demo\n{\n    public static void main(String[]\
+    \ args) {\n        ArrayDeque<String> arr = new ArrayDeque<String>();\n    }\n\
+    ```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '```
+
+    arr.add("One");
+
+    arr.add("Two");
+
+    arr.add("Three");
+
+
+    arr.remove("Two");
+
+    System.out.println("Does the ArrayDeque contain the element "+arr.contains("Two")");");"
+
+    ```
+
+
+    With this program, the output is as follows:
+
+
+    # Does the ArrayDeque contain the element false
+
+
+    # 1.3.4 addFirst
+
+
+    This method adds an element to the beginning of the queue. Let''s see an example
+    of this.
+
+
+    Example 18: The following program shows how to use the addFirst method of the
+    ArrayDeque collection.
+
+
+    ```
+
+    import java.util.*;
+
+    public class Demo {
+
+
+    public static void main(String args[]) {
+
+
+    ArrayDeque<String> arr = new ArrayDeque<String>();
+
+
+    arr.add("One");
+
+    arr.add("Two");
+
+    arr.add("Three");
+
+    arr.addFirst("Zero");
+
+
+    for (String str : arr) {
+
+
+    System.out.println(str);
+
+    }
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "```\n}\n}\n```\n\nWith this program, the output is as follows:\n\nZero\n\n\
+    One\n\nTwo\n\nThree\n\n# 1.3.5 addLast\n\nThis method adds an element to the end\
+    \ of the queue. Let’s look at an example of this.\n\n# Example 19: The next program\
+    \ showcases the addLast method of the ArrayDeque collection.\n\n```\nimport java.util.*;\n\
+    public class class Demo\n{\n    public static void main(String args[])\n{\n  \
+    \      ArrayDeque<String> arr = new ArrayDeque<String>();\n    }\n\narr.add(\"\
+    One\");\narr.add(\"Two\");\narr.add(\"Three\");\narr.addLast(\"Four\");\n\nfor\
+    \ (String str : arr)\n{\n    System.out.println(str);\n}\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "```\n}\n}\n```\n\nWith this program, the output is as follows:\n\n# One\n\n\
+    # Two\n\n# Three\n\n# Four\n\n# 1.3.6 getFirst\n\nThis method retrieves the element\
+    \ at the beginning of the queue. Let’s see an example of this.\n\nExample 20:\
+    \ The next program is used to show the getFirst method of the ArrayDeque collection.\n\
+    \n```\nimport java.util.*;\npublic class Demo {\n    public static void main(String\
+    \ args[]) {\n        ArrayDeque<String> arr = new ArrayDeque<String>();\n\n  \
+    \      arr.add(\"One\");\n        arr.add(\"Two\");\n        arr.add(\"Three\"\
+    );\n\n        System.out.println(\"The element at the beginning of the queue is\
+    \ \"+arr.getFirst());\\n    }\n}\n```\n\nWith this program, the output is as follows:"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "The element at the beginning of the queue is One\n\n# 1.3.7 getLast\n\nThis\
+    \ method fetches the element at the end of the queue. Let’s see an example of\
+    \ this.\n\nExample 21: This program shows how to use the getLast method of the\
+    \ ArrayDeque collection.\n\n```\nimport java.util.*;\npublic class Demo\n{\n \
+    \   public static void main(String[] args)\n    {\n        ArrayDeque<String>\
+    \ arr = new ArrayDeque<String>();\n\n        arr.add(\"One\");\n        arr.add(\"\
+    Two\");\n        arr.add(\"Three\");\n\n        System.out.println(\"The element\
+    \ at the end of the queue is \"+arr.getLast());\\n    }\n}\n```\n\nWith this program,\
+    \ the output is as follows:\n\nThe element at the end of the queue is Three\n\n\
+    # 1.4 HashMap\n\nThis collection is used to store a collection of key value pairs.\
+    \ When we retrieve a value, we can do it by specifying the key value.\n\nThe syntax\
+    \ for defining an array container is as follows:\n\n```\nHashMap variab=new HashMap();\n\
+    ```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "In this code, as shown previously, ‘variablename’ is the variable name to be\
+    \ assigned to the HashMap. To add an element to the HashMap we use the ‘put()’\
+    \ method as shown below.\n\n```\nVariablename.put(key,value)\n```\n\nIn the above,\
+    \ 'key' and 'value' is the key and value pair to be added to the HashMap. To get\
+    \ the value for a particular key, we can use the ‘get’ method. Let’s look at an\
+    \ example of how to use the HashMap collection.\n\n# Example 22: The following\
+    \ program is used to showcase the HashMap collection.\n\n```\nimport java.util.*;\n\
+    public class Demo\n{\n    public static void main(String args[])\n{\n        HashMap\
+    \ mp = new HashMap();\n\n        mp.put(1,\"One\");\n        mp.put(2,\"Two\"\
+    );\n        mp.put(3,\"Three\");\n\n        System.out.println(\"The value for\
+    \ key value of 2 is \"+mp.get(2)\");\n    }\n}\n```\n\nWith the above program\
+    \ we are:\n\n+   - First defining a HashMap object.\n- Then we use the ‘put’ method\
+    \ to add objects to the queue. Here we need to specify key and value pairs for\
+    \ the put method.\n- Lastly, we use the ‘get’ method to retrieve the value associated\
+    \ with a particular key."
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "With this program, the output is as follows:\n\n# The value for key value of\
+    \ 2 is Two\n\nNow let's look at some of the methods available for the HashMap\
+    \ class.\n\n# 1.4.1 Size\n\nThis method displays the number of elements in the\
+    \ HashMap object. Let's see an example of this.\n\nExample 23: This program showcases\
+    \ the size method of the HashMap collection.\n\n```\nimport java.util.*;\npublic\
+    \ class Demo\n{\n    public static void main(String args[])\n{\n        HashMap\
+    \ mp = new HashMap();\n\n        mp.put(1,\"One\");\n        mp.put(2,\"Two\"\
+    );\n        mp.put(3,\"Three\");\n\n        System.out.println(\"The number of\
+    \ elements in the map is \"+mp.size());\n    }\n}\n```\n\nWith this program, the\
+    \ output is as follows:\n\n# The number of elements in the map is 3\n\n# 1.4.2\
+    \ containsKey"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "This method returns True if the map object contains a particular key specify,\
+    \ else it returns False. Let’s see an example of this.\n\n# Example 24: The next\
+    \ program is used to show the workings of the containsKey method of the HashMap\
+    \ collection.\n\n```\nimport java.util.*;\npublic class Demo\n{\n    public static\
+    \ void main(String args[])\n{\n        HashMap mp = new HashMap();\n\n       \
+    \ mp.put(1,\"One\");\n        mp.put(2,\"Two\");\n        mp.put(3,\"Three\");\n\
+    \n        System.out.println(\"Does the map contain the key 2\"+mp.containsKey(2));\n\
+    \    }\n}\n```\n\nWith this program, the output is as follows:\n\nDoes the map\
+    \ contain the key 2 true\n\n# 1.4.3 containsValue\n\nSimilar to containsKey, this\
+    \ method returns True if the map object contains a particular value, rather than\
+    \ key. Let’s see an example of this.\n\n# Example 25: The following program shows\
+    \ the containsValue method of the HashMap collection.\n\n```\nimport java.util.*;\n\
+    public class Demo\n```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "```\n{\n    public static void main(String args[])\n    {\n        HashMap\
+    \ mp = new HashMap();\n\n        mp.put(\"1\"\n```\n\nWith this program, the output\
+    \ is as follows:\n\n# Does the map contain the value Two true\n\n# 1.4.4 Removes\n\
+    \nThis method removes an object based on the key value we specify. Let’s look\
+    \ at an example of this.\n\n# Example 26: The following program showcases the\
+    \ removes method of the HashMap collection.\n\n```\nimport java.util.*;\npublic\
+    \ class Demo\n{\n    public static void main(String args[])\n    {\n        HashMap\
+    \ mp = new HashMap();\n\n        mp.put(\"1\",\"One\");\n        mp.put(\"2\"\
+    ,\"Two\");\n        mp.put(\"3\",\"Three\");\n        mp.remove(2);\n    }\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '```
+
+    System.out.println("Does the map contain the value Two "+mp.containsValue("Two"));
+
+    }
+
+    ```
+
+
+    With this program, the output is as follows:
+
+
+    # **Does the map contain the value Two** false'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# 2. Controlling the App Execution
+
+
+    # 2.1 Security
+
+
+    One of the most important aspects when it comes to running programs on workstations
+    is the security that is assigned to the program. Since there are a lot of potentials
+    threats in the industry, it becomes important to control the security aspects
+    of the program. On the Windows platform we have the Java Control Panel, which
+    can be used to control the different aspects of the program.
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_39_0.png)'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'Let’s look at some of the important features of the Java Control Panel.
+
+
+    #  2.1.1 Temp Internet Files
+
+
+    This location is used to store jar files or cache files. It is an important location
+    and you should always ensure that there is sufficient space present for these
+    files.
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_40_0.png)
+
+
+    #  2.1.2 Java Versions
+
+
+    In the Java tab, we can see the various versions of Java that are installed on
+    the system.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '![](img/164f77fcab6b95970f901980879f9631_41_0.png)
+
+
+    #  2.1.3 Security
+
+
+    In the security tab, we have the various ways in which we can control the security
+    of Java programs running on the system. Here we can disable Java content running
+    in the browser.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '![](img/164f77fcab6b95970f901980879f9631_42_0.png)
+
+
+    # 2.2 Passing Command Line Arguments
+
+
+    We can also pass command line arguments to control the execution of Java programs.
+    If we look at the main entry point of our Java programs, which is the main method,
+    we will see that we have the String array being passed. Here we can actually pass
+    arguments to the main method. We can then access those values as we would for
+    a normal array.
+
+
+    ```
+
+    public static void main(String[] args)
+
+    ```'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "Let's look at an example of how we can process the arguments in the main method.\n\
+    \n# Example 27: The following program shows how to work with arguments in the\
+    \ main method.\n\n```\npublic class Demo\n{\n    public static void main(String[]\
+    \ args)\n{\n        if(args.length<1)\n            System.out.println(\"No arguments\"\
+    );\n        else\n        {\n            for(String str:args)\n              \
+    \  System.out.println(str);\n        }\n    }\n}\n```\n\nWith the above program:\n\
+    \n+   - We are using the Java command line utility.\n- If we store the above program\
+    \ in a file called Demo.java, and then pass the values of 1 and 2 to the program\
+    \ at runtime...\n\nThen we will get the following output:\n\n1\n\n2"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# 3. Packages in Java\n\nMost of the classes and interfaces in Java are organized\
+    \ in what is referred to as ‘Packages’. When we worked with collections, we saw\
+    \ that we had to import the java.util package. This is because the collection\
+    \ classes were located in this package.\n\nJava also gives us the ability to create\
+    \ our own packages, organize the class files in these packages, and then access\
+    \ those packages and classes. To ensure that a class is part of a package, we\
+    \ need to define the package statement at the beginning of the class as shown\
+    \ below.\n\n```\npackage packename\n```\n\nIn this code sample, ‘packagename’\
+    \ is the name of the package. If we want the class to be accessed outside of the\
+    \ package, then the class needs to be defined as ‘public’.\n\nSo now let’s see\
+    \ how to use packages via an example.\n\n# Example 28: The following program showcases\
+    \ the usage of packages in Java.\n\nFirst we will define a class called Student\
+    \ as shown below:\n\n```\npackage person;\n\nclass Student\n{\n    public String\
+    \ Name;\n    public void Display()\n    {\n        System.out.println(this.Name);\n\
+    \    }\n}\n```\n\nThe following things need to be noted about the above program:"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "+   • First we define the ‘Student’ class to be in a package named ‘person',\n\
+    with a member called ‘Name’.\n\n+   • The class has a method called ‘Display’,\
+    \ which displays the name assigned to the object of the class.\n\nThen, let’s\
+    \ compile the program as follows:\n\n```\njava -d . Student.java\n```\n\nWhere:\n\
+    \n+   • The ‘-d’ option means that a destination folder, with the same name as\
+    \ the package, should be created.\n\n+   • The dot(.) indicates that we want to\
+    \ create this in the current folder.\n\nSo when we run the above command, we will\
+    \ get a ‘Student.class’ compiled file that will be in a folder called ‘person’.\n\
+    \nLet’s create another Java program called ‘Demo.java’, which will make use of\
+    \ this packaged class. To do this, let’s attach the following code:\n\n```\nimport\
+    \ person.Student;\nclass Demo\n{\n    public static void main(String[] args)\n\
+    {\n        Student stud=new Student();\n        stud.Name=\"John\"\n        stud.Display();\n\
+    \    }\n}\n```\n\nWith the above piece of code:\n\n+   • We can see that we are\
+    \ importing the ‘Student’ class from the ‘person’ folder."
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "+   - And because the Student class is public, we can make an object and use\
+    \ it like any other class.\n\nWith this program, the output is as follows:\n\n\
+    # John\n\nNote that even if we don't use the import statement, we can use the\
+    \ fully qualified name of the class as shown below.\n\n```\nclass Demo\n{\n  \
+    \  public static void main(String[] args)\n{\n        person.Student stud=new\
+    \ person.Student();\n        stud.Name=\"John\";\n        stud.Display();\n  \
+    \  }\n}\n```\n\nWe can also have a nested directory structure for our packages.\
+    \ An example is shown below.\n\n# Example 29: This program shows how to use packages\
+    \ in Java with nested directories.\n\nFirst we will define a class called ‘Student’\
+    \ as shown below:\n\n```\npackage com.person;\n\nclass Student\n{\n    public\
+    \ String Name;\n    public void Display()\n{\n        System.out.println(this.Name);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "Then compile the program as follows:\n\n```\njava -d . Student.java\n```\n\n\
+    The compiler will create a folder called ‘com’. In that folder it will create\
+    \ a subfolder called ‘person’, and it will place the class file in that folder.\
+    \ Now we need to create the ‘Demo’ class as shown below:\n\n```\nimport com.person.Student;\n\
+    class Demo {\n    public static void main(String[] args) {\n        Student stud\
+    \ =new Student();\n        stud.Name=\"John\"\n        stud.Display();\n    }\n\
+    }\n```\n\nWith this program, the output is as follows:\n\n# John"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# 4. Multithreading\n\nThreads are used for concurrent programming. All systems\
+    \ are designed to run programs as threads, which can run concurrently. As a result,\
+    \ programming languages also have the facility to support threaded programming.\
+    \ By running threads, we can run multiple code side by side, giving us more results\
+    \ in a shorter duration of time.\n\nIn Java, a thread can be in any one of the\
+    \ following states:\n\n+   - New - The thread is in the new state when we create\
+    \ an instance of the ‘Thread’ class, but before the invocation of the ‘start()’\
+    \ method.\n- Runnable - The thread is in the runnable state after invocation of\
+    \ the ‘run()’ method.\n- Running - The thread is in the running state if the thread\
+    \ scheduler has selected it.\n- Non-Runnable (Blocked) - The thread is in this\
+    \ state when the thread is still alive, but is currently not eligible to run.\n\
+    - Terminated - The thread is terminated or in the dead state when its ‘run()’\
+    \ method exits.\n\nAll threads are created with the help of either extending the\
+    \ thread class, or the Runnable Interface. Let’s look at some examples of threads.\n\
+    \nExample 30: The following program shows how to create threads by extending the\
+    \ thread class.\n\n```\nclass MyThread extends Thread {\n    public void run()\
+    \ {\n        System.out.println(\"Thread running\");\n    }\n}\n\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "```\npublic class Demo\n{\n    public static void main(String[] args)\n   \
+    \ {\n        MyThread th=new MyThread();\n        th.start();\n    }\n}\n```\n\
+    \nThe following needs to be noted about the above program:\n\n+   - First we create\
+    \ a class called ‘MyThread’, which extends the ‘Thread’ class.\n- Because we extend\
+    \ the ‘Thread’ class, we need to implement the ‘run’ method.\n- In the main program,\
+    \ we create an object of the ‘Thread’ class and choose the ‘start’ method. This\
+    \ will cause our Thread class to call the run method.\n\nWith this program, the\
+    \ output is as follows:\n\n# Thread running\n\nWe can also add more code to the\
+    \ run method, and we can create an array of threads. Let’s look at an example\
+    \ of this.\n\nExample 31: The next program shows how to create an array of threads.\n\
+    \n```\nclass MyThread extends Thread\n{\n    public static int count=0;\n    public\
+    \ void run()\n    {\n        count++;\n        System.out.println(\"Thread running\"\
+    \ + count);\n    }\n}\n```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "```\n}\n}\npublic class Demo\n{\n    public static void main(String args[])\n\
+    \    {\n        My[] th=new MyThread[3];\n        for(int i=0;i<3;i++)\n     \
+    \   {\n            th[i]=new MyThread();\n            th[i].start();\n       \
+    \ }\n    }\n}\n```\n\nThe following needs to be noted about the above program:\n\
+    \n+   - In our main thread class, we have a static variable of 'count'.\n- We\
+    \ increment the value of count whenever a new thread is created.\n- We create\
+    \ an array of threads in the main program.\n\nWith this program, the output is\
+    \ as follows:\n\n# Thread running1\n\n# Thread running2\n\n# Thread running3\n\
+    \nNow let's look at an example of how to work with threads using the Runnable\
+    \ Interface.\n\n# Example 32: This program shows how to create an array of threads.\n\
+    \n```\nclass MyThread implements Runnable\n{\n    private Thread t;\n    private\
+    \ String threadName;\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\nMyThread(String name)\n{\n    threadName = name;\n    System.out.println(\"\
+    Creating \" + threadName);\n}\npublic static int count = 0;\npublic void run()\n\
+    {\n    count++;\n    System.out.println(\"Thread running \" + count);\n}\npublic\
+    \ void start()\n{\n    System.out.println(\"Starting \" + threadName);\n    if\
+    \ (t == null)\n    {\n        t = new Thread(this, threadName);\n        t.start();\n\
+    \    }\n}\n\n\n\n\n\n\n\n\npublic class Demo\n{\n    public static void main(String\
+    \ args[])\n    {\n        MyThread th = new MyThread(\"Thread1\");\n        th.start();\n\
+    \    }\n}\n```\n\nThe following needs to be noted about the above program:\n\n\
+    +   - We are creating our ‘MyThread’ class to implement the Runnable Interface.\n\
+    - We create a constructor to take a name for the thread and assign it to the ‘private’\
+    \ variable."
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "+   • We now include ‘start’ method in which we create a new thread object.\n\
+    \nWith this program, the output is as follows:\n\n# Creating Thread1\n\n# Starting\
+    \ Thread1\n\n# Thread running1\n\nWe can also get the state of the thread at any\
+    \ point in time. This can be done by using the ‘getState’ method on the thread.\
+    \ Let’s see an example of how we can get the state of a thread.\n\nExample 33:\
+    \ The following program is used to showcase how to get the state of a thread.\n\
+    \n```\nclass MyThread extends Thread\n{\n    public static int count=0;\n    public\
+    \ void run())\n    {\n        count++;\n        System.out.println(\"Thread running\
+    \ \" + count);\n    }\n}\npublic class Demo\n{\n    public static void main(String[]\
+    \ args)\n    {\n        MyThread[] th=new MyThread[3];\n        for(int i=0;i<3;i++)\n\
+    \        {\n            th[i]=new MyThread();\n            th[i].start();\n  \
+    \          System.out.println(th[i].getState());\n        }\n    }\n```"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    ```
+
+
+    With this program, the output is as follows:
+
+
+    RUNNABLE
+
+
+    RUNNABLE
+
+
+    RUNNABLE
+
+
+    Thread running1
+
+
+    Thread running2
+
+
+    Thread running3'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# 5. Java Annotations\n\nAnnotations are used to provide metadata or more information\
+    \ about the program. As such, they don't have any direct effect on the program\
+    \ code itself and are only used to describe the program.\n\nSome examples of how\
+    \ annotations can be used are:\n\n+   - Information for the compiler — Annotations\
+    \ can be used by the compiler to detect errors or suppress warnings.\n- Compile\
+    \ time and deployment time processing — Software tools process annotation information\
+    \ to generate code, XML files, and so forth.\n- Runtime processing — Some annotations\
+    \ are available at runtime.\n\nThe simplest form of an annotation is as follows:\n\
+    \n```\n@annotationname\n```\n\nIn the above code line, the ‘@’ symbol indicates\
+    \ to the compiler that this is an annotation. One of the most common annotations\
+    \ you would see is the ‘@Override’ annotation. This is used in the derived class\
+    \ whenever the derived class method overrides the implementation in the base class.\n\
+    \nLet’s look at an example of this annotation.\n\nExample 34: The following program\
+    \ showcases a simple annotation.\n\n```\nclass Person\n{\n    void Display()\n\
+    \    {\n        System.out.println(\"This is the Person class\");\n    }\n}\n\
+    class Student extends Person\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "```\n{\n  @Override\n  void Display() {\n    System.out.println(\"This is the\
+    \ Student class\");\n  }\n}\npublic class Demo {\n  public static void main(String[]args)\
+    \ {\n    Person per=new Student();\n    per.Display();\n  }\n}\n```\n\nThe following\
+    \ things need to be noted about the above program:\n\n+   - We define 2 classes.\
+    \ One is the ‘Person’ base class and the other is the ‘Student’ derived class.\n\
+    - Next we define the ‘Display’ method in both classes.\n- In the derived class,\
+    \ for the Display method, we add the ‘@Override’ annotation to say that this method\
+    \ will override the definition of the method in the base class. But the annotation\
+    \ itself does not interfere with the program execution.\n\nWith this program,\
+    \ the output is as follows:\n\nThis is the Student class\n\n# 5.1 Creating Your\
+    \ Own Annotations\n\nWe can also create our own annotations in Java. Let’s look\
+    \ at the steps required to create annotations.\n\n# Step 1"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: 'First create the annotation type as shown below:
+
+
+    ```
+
+    @interface annotationname
+
+    {
+
+    //Annotation members
+
+    }
+
+    ```
+
+
+    Here the ‘annotationname’ is the name of the annotation. And then we can have
+    members for the annotation. For example, let’s say we want to create an annotation
+    called ‘Author’ and then have a name for the author. We can then define ‘Author’
+    as the name of the annotation, and define a member of the ‘String’ type with the
+    ‘name’ value.
+
+
+    # Step 2
+
+
+    Append the ‘@Retention(RetentionPolicy.RUNTIME)’ statement to the annotation.
+    This ensures that the annotation is available at runtime.
+
+
+    # Step 3
+
+
+    The next step is to access the annotation through reflection. Reflection is the
+    process of gaining access to classes and methods at runtime. There is an entire
+    chapter dedicated to reflection later in this book. But for now, it’s good to
+    just know that the concept of getting the annotation values is called reflection.
+
+
+    The best way to understand the entire process is with an example.
+
+
+    # Example 35: The following program shows how to create an annotation.
+
+
+    ```
+
+    import java.lang.annotation.Annotation;
+
+    import java.lang.annotation.Retention;
+
+    import java.lang.annotation.RetentionPolicy;
+
+
+    @Retention(RetentionPolicy.RUNTIME)
+
+    @interface Author
+
+    {
+
+    String name();
+
+    }
+
+    @Author(name="John")
+
+    ```'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "```\nclass Person\n{\n    void Display()\n    {\n        System.out.println(\"\
+    This is the Person class\");\n    }\n}\npublic class Demo\n{\n    public static\
+    \ void main(String[] args)\n    {\n        Class<Person> aClass = Person.class;\n\
+    \        Annotation annotation = aClass.getAnnotation(Author.class);\n\n     \
+    \   Author myAnnotation = (Author) annotation;\n        System.out.println(\"\
+    name: \" + myAnnotation.name());\n    }\n}\n```\n\nThe following things need to\
+    \ be noted about the above program:\n\n+   * We are creating an annotation named\
+    \ ‘Author’. This annotation has a member called ‘name’, which is of the ‘String’\
+    \ type.\n\n+   * We ensure the correct import statements are used, to enable us\
+    \ to work with annotations.\n\n+   * Next create a new annotation for the ‘Person’\
+    \ class. We then give a name to the ‘Author’.\n\n+   * In the main program, we\
+    \ first get a handle to the ‘Person’ class.\n\n+   * We then use this to get this\
+    \ handle to the annotation for the class.\n\n+   * Finally, we display the value\
+    \ of the annotation.\n\nWith this program, the output is as follows:\n\n# **name:\
+    \ John**"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "We can also apply the annotation to class methods and get the details via reflection.\
+    \ Let’s look at an example of this.\n\n# Example 36: The next program showcases\
+    \ an annotation for a method.\n\n```\nimport java.lang.annotation.Annotation;\n\
+    import java.lang.annotation.Retention;\nimport java.lang.annotation.RetentionPolicy;\n\
+    import java.lang.reflect.Method;\n\n@Retention(RetentionPolicy.RUNTIME)\n@interface\
+    \ Author\n{\n    String name();\n}\nclass Person\n{\n    @Author(name=\"John\"\
+    )\n    void Display()\n    {\n        System.out.println(\"This is the Person\
+    \ class\");\n    }\n}\npublic class Demo\n{\n    public static void main(String[]\
+    \ args)\n    {\n        Class<Person> aClass = Person.class;\n        Method[]\
+    \ method = aClass.getDeclaredMethods();\n\n        Annotation[] annotations =\
+    \ method[0].getDeclaredAnnotations();\n\n        for(Annotation annotation : annotations)\n\
+    \        {\n            Author myAnnotation = (Author) annotation;\n         \
+    \   System.out.println(\"name: \" + myAnnotation.name());\n        }\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'The following things need to be noted about the above program:
+
+
+    +   - We are now applying the annotation for the method.
+
+    - We then access the annotation after getting a handler to the method.
+
+
+    With this program, the output is as follows:
+
+
+    **name: John**
+
+
+    # 5.2 Predefined Annotation Types
+
+
+    Java has the following list of predefined annotation types:
+
+
+    +   - @Deprecated - This indicates that the marked element is deprecated and should
+    no longer be used. The compiler generates a warning whenever a program uses a
+    method, class or field with the @Deprecated annotation.
+
+    - @Override - This informs the compiler that the element is meant to override
+    another element declared in the superclass.
+
+    - @SuppressWarnings - This tells the compiler to suppress specific warnings that
+    it would otherwise generate.
+
+    - @SafeVarargs - When applied to a method or constructor, it asserts that the
+    code does not perform potentially unsafe operations on its varargs parameter.
+
+    - @FunctionalInterface - Introduced in Java SE 8, it indicates that the type declaration
+    is intended to be a functional interface, as defined by the Java Language Specification.
+
+
+    Let''s look at an example using the built-in annotations.
+
+
+    **Example 37: This program is used to showcase the @Deprecated annotation.**
+
+
+    ```
+
+    class Person
+
+    ```'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\n{\n@Deprecated\nvoid Display()\n{\n    System.out.println(\"This is the\
+    \ Person class\");\n}\n}\npublic class Demo\n{\n    public static void main(String[]\
+    \ args[])\n    {\n        Person per=new Person();\n        per.Display();\n \
+    \   }\n}\n```\n\nNow when we compile the above program, we will get the following\
+    \ compile time error\n\n# Warning:(15, 12) java: Display() in Person has been\
+    \ deprecated\n\nWe can still run the program, but we will get the warning every\
+    \ time. This means that the method should be removed from the class in the future.\
+    \ On the other hand, we can also suppress this warning by using the ‘@SuppressWarnings’\
+    \ annotation. Let’s look at an example of this.\n\n```\nclass Person\n{\n@Deprecated\n\
+    void Display()\n{\n    System.out.println(\"This is the Person class\");\n}\n\
+    }\n```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "```\n}\n\n@SuppressWarnings(value = \"deprecation\")\n\npublic class Demo\n\
+    {\n    public static void main(String[] args)\n    {\n        Person per=new Person();\n\
+    \        per.Display();\n    }\n}\n```\n\nNow when we compile the program we will\
+    \ not get any warnings, because the '@SuppressWarnings' annotation has been applied\
+    \ to the class that has our main program."
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# 6. Reflection\n\nReflection is a concept that is present in most modern day\
+    \ programming languages. It allows for the introspection of classes and methods\
+    \ at runtime. So as an example, let’s say we don’t know what methods are present\
+    \ in a particular class. We can actually inspect the class at runtime, and inspect\
+    \ the methods present in the class. For this to happen we need to use the Reflection\
+    \ API that is present in Java.\n\nLet’s look at our first example of how reflection\
+    \ can be used.\n\nExample 39: The following program is an example of reflection.\n\
+    \n```\nimport java.lang.reflect.Method;\nclass Person\n{\n}\npublic class Demo\n\
+    {\n    public static void main(String[] args)\n    {\n        Method[] methods\
+    \ = Person.class.getMethods();\n\n        for(Method method : methods)\n     \
+    \   {\n            System.out.println(\"method = \" + method.getName());\n   \
+    \     }\n    }\n}\n```\n\nThe following things need to be noted about the above\
+    \ program:\n\n+   - We need to import the necessary class from the `java.lang.reflect`\
+    \ namespace.\n- We are using the `.class` reflection to get the list of methods\
+    \ in the class. This will retrieve all the pre-built methods that come with the"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "Java classes.\n\n+   * Then for each method, we are printing the name of the\
+    \ methods.\nWith this program, the output is as follows:\n\n```\nmethod = wait\n\
+    method = wait\nmethod = wait\nmethod = equals\nmethod = toString\nmethod = hashCode\n\
+    method = getClass\nmethod = notify\nmethod = notifyAll\n```\n\nThe above implementation\
+    \ retrieves the built-in methods for the class. Let’s look at an example of how\
+    \ we can get the declared methods for the class.\n\n# Example 40: The following\
+    \ program showcases an example of reflection.\n\n```\nimport java.lang.reflect.Method;\n\
+    class Person\n{\n    public void Display(){\n    public void Input(){\n}\n   \
+    \ public class Demo\n{\n        public static void main(String args[])\n{\n  \
+    \          Method[] methods = Person.class.getDeclaredMethods();\n        }\n\
+    \        for(Method method : methods)\n```"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "```\n{\n  System.out.println(\"method = \" + method.getName());\n}\n\n```\n\
+    \nThe following needs to be noted about the above program:\n\n+   - We are using\
+    \ the reflective method called ‘getDeclaredMethods’ to retrieve the declared methods\
+    \ of the class.\n\nWith this program, the output is as follows:\n\n# method =\
+    \ Display\n\n# method = Input\n\n# 6.1 Retrieving Information on Classes\n\nReflection\
+    \ can be used to get information about classes. Let’s look at the different aspects\
+    \ of how we can get the information through reflection.\n\n# 6.1.1 Getting the\
+    \ Class Name\n\nThe first aspect is getting the name of the class. Let’s look\
+    \ at an example of this.\n\nExample 41: This program shows how to get the name\
+    \ of the class via reflection.\n\n```\nimport java.lang.reflect.Method;\nclass\
+    \ Person\n{\n  public void Display(){\n  public void Input(){\n}\n}\npublic class\
+    \ Demo\n```"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "```\n{\n    public static void main(String[] args)\n    {\n        Class cls\
+    \ =Person.class;\n        System.out.println(\"The class name is \"+cls.getName());\n\
+    \    }\n}\n```\n\nThe following things need to be noted about the class by using\
+    \ class reflection.\n\n+   - First we are getting a handle to the class by using\
+    \ class reflection.\n- We then use the ‘getName’ reflective method to get the\
+    \ name of the class.\n\nWith this program, the output is as follows:\n\n# The\
+    \ class name is Person\n\n# 6.1.2 Getting the Number of Constructors\n\nWe can\
+    \ also get the number of constructors for a class. Let’s look at an example of\
+    \ this.\n\nExample 42: The next program shows how to get the constructors of a\
+    \ class.\n\n```\nimport java.lang.reflect.Constructor;\nimport java.lang.reflect.Method;\n\
+    \nclass Person\n{\n    Person()\n    {\n}\n    public void Display(){\\}\n   \
+    \ public void Input(){\\}\n```"
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "```\n}\npublic class Demo\n{\n    public static void main(String args[])\n\
+    \    {\n        Class cls = Person.class;\n\n        Constructor[] constructors\
+    \ = cls.getDeclaredConstructors();\n        System.out.println(\"The number of\
+    \ constructors are \" + constructors.length);\n    }\n}\n```\n\nWith this program,\
+    \ the output is as follows:\n\n# The number of constructors are 1\n\n# 6.1.3 Getting\
+    \ the Number of Fields\n\nWe can get the number of fields for a class. Let's look\
+    \ at an example of this.\n\n# Example 43: The following program shows how to get\
+    \ the fields of a class.\n\n```\nimport java.lang.reflect.Constructor;\nimport\
+    \ java.lang.reflect.Field;\nimport java.lang.reflect.Method;\n\nclass Person\n\
+    {\n    int ID;\n    Person()\n    {\n    }\n    public void Display(){}\n    public\
+    \ void Input(){}\n}\nublic class Demo\n```"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "```\n{\n    public static void main(String[] args[])\n    {\n        Class\
+    \ cls = Person.class;\n\n        Field[] fld = cls.getDeclaredFields();\n    \
+    \    System.out.println(\"The number of fields are \" + fld.length);\n       \
+    \ System.out.println(\"The fields are\");\n        for(Field fldname : fld) {\n\
+    \            System.out.println(fldname.getName());\n        }\n    }\n}\n```\n\
+    \nWith this program, the output is as follows:\n\n# The number of fields are 1\n\
+    \nThe fields are\n\nID\n\n# 6.2 Invoking Methods\n\nWe can also invoke methods\
+    \ by the name of the method, after we retrieve the name with reflection. The following\
+    \ steps need to be carried out when working with retrieving method signatures\
+    \ at run time:\n\n# Step 1\n\nFirst we need to create an object of the class through\
+    \ reflection. This is done via the statements below. Here we need to mention the\
+    \ name of the class.\n\n| Class<?> c = Class.forName(classname); |\n| Object t\
+    \ = c.newInstance(); |"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# Step 2
+
+
+    Next we need to get the handle to the method by calling the \getgetDeclaredMethod\’
+    reflective method.
+
+
+    # Step 3
+
+
+    Then we use the ‘Invoke’ function to invoke the method.
+
+
+    # Step 4
+
+
+    We also need to ensure that our main method makes an explicit declaration to throw
+    the possible exceptions below, when working with methods and reflection.
+
+
+    +   - NoSuchMethodException
+
+    - InvocationTargetException
+
+    - IllegalAccessExceptionException
+
+    - ClassNotFoundException
+
+    - InstantiationException
+
+
+    Now let’s look at an example of how to invoke methods via reflection.
+
+
+    # Example 44: The following program shows how to invoke methods via reflection.
+
+
+    ```
+
+    import java.lang.reflect.Constructor;
+
+    import java.lang.reflect.Field;
+
+    import java.lang.reflect.InvocationTargetException;
+
+    import java.lang.reflect.Method;
+
+
+    class Person
+
+    {
+
+    int ID;
+
+    Person()
+
+    {
+
+    }public void Display()
+
+    ```'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "```\n{\n  System.out.println(\"This is the Display method\");\n}\npublic void\
+    \ Input(){\n}\npublic class Demo {\n  public static void main(String[] args) throws\
+    \ NoSuchMethodException,\n  InvocationTargetException, IllegalAccessException,\
+    \ ClassNotFoundException,\n  InstantiationException\n{\n    Class<?> c = Class.forName(\"\
+    Person\");\n    Object t = c.newInstance();\n\n    Method method = Person.class.getDeclaredMethod(\"\
+    Display\");\n    method.invoke(t,null);\n  }\n}\n```\n\nThe following things need\
+    \ to be noted about the above program:\n\n+   - We use the following statements\
+    \ to create a new instance of the ‘Person’ class at runtime.\n\n| Class<?> c =\
+    \ Class.forName(\"Person\") |\n| Object t = c.newInstance(); |\n\n+   - We then\
+    \ get a handle to the ‘Display’ method.\n- We invoke the method using the newly\
+    \ created object.\n- Since there are no parameters for our display method, we\
+    \ need to specify a value of null when invoking the method.\n\nWith this program,\
+    \ the output is as follows:\n\n# This is the Display method\n\nLet’s look at an\
+    \ example of how to invoke a method with parameters."
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# Example 45: The next program shows how to invoke methods with parameters.\n\
+    \n```\nimport java.lang.reflect.Constructor;\nimport java.lang.reflect.Field;\n\
+    import java.lang.reflect.InvocationTargetException;\nimport java.lang.reflect.Method;\n\
+    \nclass Person {\n    int ID;\n    public void Display(int pid) {\n        System.out.println(\"\
+    The id is \"+pid);\n    }\n    public void Input(){\n    }\n}\n\npublic class\
+    \ Demo {\n    public static void main(String[] args) throws NoSuchMethodException,\n\
+    InvocationTargetException, IllegalAccessException, ClassNotFoundException,\nInstantiationException\
+    \ {\n        Class<?> c = Class.forName(\"Person\");\n        Object t = c.newInstance();\n\
+    \n        Class[] par1 = new Class[1];\n        par1[0] = Integer.TYPE;\n\n  \
+    \      Object[] arglist = new Object[1];\n        arglist[0] = new Integer(10);\n\
+    \n        Method meth = Person.class.getDeclaredMethod(\"Display\",par1);\n  \
+    \      meth.invoke(t,arglist);\n    }\n}\n```"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "The following things need to be noted about the above program:\n\n+   * We\
+    \ now have an ‘Integer’ parameter for our ‘Display’ method.\n* We create a new\
+    \ parameter type of ‘Integer’ when we call our ‘getDeclaredMethod’ method.\n*\
+    \ Then we create a new ‘Integer’ object type and pass in the value of 10.\n* When\
+    \ we invoke the method, we pass this value of 10 so that it can be passed over\
+    \ to the method.\n\nWith this program, the output is as follows:\n\n# The id is\
+    \ 10\n\n# 6.3 Changing the Values of Fields\n\nWe can also change the value of\
+    \ fields assigned to classes via reflection. Let's look at an example of how we\
+    \ can achieve this.\n\nExample 46: This program shows how to change the value\
+    \ of fields via reflection.\n\n```\nimport java.lang.reflect.Constructor;\nimport\
+    \ java.lang.reflect.Field;\nimport java.lang.reflect.InvocationTargetException;\n\
+    import java.lang.reflect.Method;\n\nclass Person\n{\n    public int ID;\n    public\
+    \ String name;\n    public void Display()\n    {\n        System.out.println(\"\
+    The ID of the person is \"+this.ID);\\n        System.out.println(\"The name of\
+    \ the person is \"+this.name);\");\n    }\n}\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\npublic void Input() {\n}\npublic class Demo {\n    public static void\
+    \ main(String args[]) throws NoSuchMethodException, InvocationTargetException,\
+    \ IllegalAccessException, ClassNotFoundException, InstantiationException, NoSuchFieldException\
+    \ {\n        Class<?> c = Class.forName(\"Person\");\n        Object t = c.newInstance();\n\
+    \n        Method method = Person.class.getDeclaredMethod(\"Display\",null);\n\
+    \        Field fldID = c.getField(\"ID\");\n        fldID.setInt(t,10);\n\n  \
+    \      Field fname = c.getField(\"name\");\n        fname.set(t,\"John\");\n \
+    \       meth.invoke(t,null);\n    }\n}\n```\n\nThe following things need to be\
+    \ noted about the above program:\n\n+   - We add two fields to our class. One\
+    \ being ‘ID’ and the other being ‘name’.\n- We first get a handle to the individual\
+    \ fields.\n- Then we set the value of the fields with the appropriate ‘set’ method.\n\
+    \nWith this program, the output is as follows:\n\n# The ID of the person is 10\n\
+    \n# The name of the person is John"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# 7. Java Properties
+
+
+    Java properties are configuration values that are nothing more than key value
+    pairs. For each pair, the key and the value are both String values. To manage
+    properties, Java provides the ‘java.util.Properties’ class. This class provides
+    methods for the following:
+
+
+    +   - Loading key/value pairs into a Properties object from a stream.
+
+    - Retrieving a value from its key.
+
+    - Listing the keys and their values.
+
+    - Enumerating over the keys.
+
+    - Saving the properties to a stream.
+
+
+    When we look at some of the use cases for properties, one clear example is the
+    storage of database properties in a file. For example, the properties file can
+    be used to store database values which can then be read from the program.
+
+
+    Let’s look at an example on this.
+
+
+    **Example 47: The following program showcases how to work with the properties
+    file.**
+
+
+    First we create a file called ‘db.properties’ and we add the following key pairs
+    to the file:
+
+
+    ```
+
+    user=system
+
+    password=oracle
+
+    ```
+
+
+    Then we write the following program:
+
+
+    ```
+
+    import java.io.FileReader;
+
+    import java.util.Properties;
+
+
+    public class Demo
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "```\n{\n    public static void main(String args[]) {\n        try {\n     \
+    \       FileReader reader = new FileReader(\"H:\\db.properties\");\n\n       \
+    \     Properties pr = new Properties();\n            pr.load(reader);\n\n    \
+    \        System.out.println(\"The user name is \" + pr.getProperty(\"user\")\"\
+    );\n            System.out.println(\"The password is \" + pr.getProperty(\"password\"\
+    )\");\n        } catch (java.io.FileNotFoundException ex) {\n            System.out.println(ex.getMessage());\n\
+    \        } catch (java.io.IOException ioex) {\n            System.out.println(ioex.getMessage());\n\
+    \        }\n    }\n}\n```\n\nIn the above program:\n\n+   - We are first creating\
+    \ a normal ‘FileReader’ object to read data from the ‘db.properties’ file.\n-\
+    \ Then we create a new properties object.\n- We load the file object into the\
+    \ properties object.\n- And finally, we use the ‘getProperty’ method to retrieve\
+    \ the values of the properties.\n\nWith this program, the output is as follows:\n\
+    \n# The user name is system\n\n# The password is oracle"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "We can also use the ‘Properties' class to get the system properties. Let’s\
+    \ look at an example of this.\n\n# Example 48: The following program shows how\
+    \ to get system properties.\n\n```\nimport java.util.Iterator;\nimport java.util.Map;\n\
+    import java.util.Properties;\nimport java.util.Set;\n\npublic class Demo\n{\n\
+    \    public static void main(String[] args[])n    {\n        Properties p = System.getProperties();\n\
+    \        Set set = p.entrySet();\n\n        Iterator itr = set.iterator();\n \
+    \       while (itr.hasNext())\n        {\n            Map.Entry entry = (Map.Entry)\
+    \ itr.next();\n            System.out.println(entry.getKey() + \" = \" + entry.getValue());\n\
+    \        }\n    }\n}\n\n```\n\nWith this program, the output is as follows:\n\n\
+    The result returns quite a number of properties. A sample of those properties\
+    \ are shown below.\n\njava.runtime.name = Java(TM) Runtime Environment\n\nsun.boot.library.path\
+    \ = C:\\Program Files\\Java\\jdk1.8.0_101\\jre\\bin\n\njava.vm.version = 25.101-b13\n\
+    \njava.vm.vendor = Oracle Corporation"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+
+
+    We can also create our own properties objects, and utilize them in a program.
+    Let’s look at an example of this.
+
+
+    # Example 49: The program below shows how to set the properties object.
+
+
+    The following need to be noted about the above program:
+
+
+    +   - We are using the ‘setProperty’ method to set the name and value of a property.
+
+
+    With this program, the output is as follows:
+
+
+    # The user name is system
+
+
+    # The password is oracle'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: 'We can also write properties to the file. The below code is an example on how
+    this can be achieved.
+
+
+    # Example 50: The following program shows how to write properties to a file.
+
+
+    When we run the above program, the code will be written to a file called ‘db.properties''.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# 8. Serialization\n\nSerialization is the concept of storing objects onto\
+    \ persistent storage, such as files or databases. Let's say we have a class known\
+    \ as Person, and during the course of the program we create objects of this class.\
+    \ If we wanted to store the objects so that they could be retrieved later on,\
+    \ we would use serialization.\n\nIn order for the class to be serializable, the\
+    \ class needs to implement the ‘Serialize’ interface as shown below.\n\n```\n\
+    public class className implements Serializable\n{}\n```\n\nIn this code, ‘classname’\
+    \ is the name of the class we want to serialize. We could then use the normal\
+    \ IO streams methods to store the objects to the file system.\n\nLet's look at\
+    \ an example of how we can implement this.\n\n# Example 51: This program is used\
+    \ to show how to use serialization.\n\n```\nimport java.io.FileOutputStream;\n\
+    import java.io.ObjectOutputStream;\nimport java.io.Serializable;\n\nclass Person\
+    \ implements Serializable\n{\n    public int ID;\n    public String name;\n}\n\
+    \npublic class Demo\n{\n    public static void main(String args[])\n```"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "```\n{\n  Person per=new Person();\n  per.ID=1;\n  per.name=\"John\";\n\n \
+    \ // Writing the object to the file\n  try {\n    FileOutputStream fout = new\
+    \ FileOutputStream(\"H:\\\\\\Sample.txt\");\n    ObjectOutputStream out = new\
+    \ ObjectOutputStream(fout);\n    out.writeObject(per);\n    out.flush();\n  }\n\
+    \  catch(java.io.FileNotFoundException ex) {\n    System.out.println(ex.getMessage());\n\
+    \  }\n  catch(java.io.IOException IOex) {\n    System.out.println(ex.getMessage());\n\
+    \  }\n}\n```\n\nThe following things need to be noted about the above program:\n\
+    \n+   - First we are creating a class called ‘Person’ with two fields.\n- This\
+    \ class implements the ‘Serializable’ interface.\n- We then create a ‘FileOutputStream’\
+    \ object in our main program and ensure that the object would be written to a\
+    \ file called ‘Sample.txt’.\n- Lastly, we use the ‘ObjectOutputStream’ class to\
+    \ write the object to the file.\n\nWhen the program is executed, the object would\
+    \ be written in binary format to the Sample.txt file. We can also read the object\
+    \ from the file with a"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "process called deserialization. Let’s look at an example of how this is done.\n\
+    \n# Example 52: The following program shows how to use deserialization.\n\n```\n\
+    import java.io.*;\n\nclass Person implements Serializable\n{\n    public int ID;\n\
+    \    public String name;\n}\n\npublic class Demo\n{\n    public static void main(String\
+    \ args[])\n{\n        Person per=new Person();\n        per.ID=1;\n        per.name=\"\
+    John\";\n\n// Writing the object to the file\n        try {\n            FileOutputStream\
+    \ fout = new FileOutputStream(\"H:\\\\Sample.txt\");\n            ObjectOutputStream\
+    \ out = new ObjectOutputStream(fout);\n            out.writeObject(per);\n   \
+    \         fout.flush();\n\n// Now we are deserializing the object\n          \
+    \  ObjectInputStream in=new FileInputStream(\"H:\\\\Sample.txt\");\n         \
+    \   Person newper=(Person)in.readObject();\n            System.out.println(\"\
+    The ID of the Person is \"+newper.ID\");\n            System.out.println(\"the\
+    \ name of the Person is \"+newper.name\");\n        } catch(java.io.FileNotFoundException\
+    \ ex) {\n            System.out.println(ex.getMessage());\n        }\n    }\n\
+    ```"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "```\n}\ncatch(java.io.IOException IOex)\n{\n    System.out.println(IOex.getMessage());\n\
+    }\ncatch (ClassNotFoundException e)\n{\n    e.printStackTrace();\n}\n}\n```\n\n\
+    The following things need to be noted about the above program:\n\n+   - We are\
+    \ now adding an ‘InputStream’ object to read the contents of the file.\n- Then\
+    \ we use the ‘readObject’ method to read the object from the file.\n- We typecast\
+    \ the object returned to the ‘Person’ class.\n- And finally we display the ‘ID’\
+    \ and ‘name’ fields of the object.\n\nWith this program, the output is as follows:\n\
+    \n# The ID of the Person is 1\n\n# The name of the Person is John\n\nWe can use\
+    \ inherited classes in serialization. If the base class implements the ‘Serialize’\
+    \ interface, then the objects of the derived class can also be serialized automatically.\
+    \ Let’s look at an example of how we can accomplish this.\n\nExample 53: This\
+    \ program shows how to use base and derived classes in serialization.\n\n```\n\
+    import java.io.*;\n\nclass Person implements Serializable\n```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "```\n{\n    public int ID;\n    public String name;\n}\nclass Student extends\
+    \ Person\n{\n    public int marks;\n}\n\npublic class Demo\n{\n    public static\
+    \ void main(String args[])\n{\n        Student st=new Student();\n        st.ID=1;\n\
+    \        st.name=\"John\";\n        st.marks=10;\n\n        // Writing the object\
+    \ to the file\n        try {\n            FileOutputStream fout = new FileOutputStream(\"\
+    H:\\\\Sample.txt\");\n            ObjectOutputStream out = new ObjectOutputStream(fout);\n\
+    \            out.writeObject(st);\n            out.flush();\n\n        // Now\
+    \ we are deserializing the object\n        ObjectInputStream in=new ObjectInputStream(new\
+    \ FileInputStream(\"H:\\\\Sample.txt\"));\n        Student newst=(Student)in.readObject();\n\
+    \        System.out.println(\"The ID of the Student is \"+newst.ID);\n       \
+    \ System.out.println(\"The name of the Student is \"+newst.name);\n        System.out.println(\"\
+    The marks of the Student is \"+newst.marks);\n        } catch(java.io.FileNotFoundException\
+    \ ex) {\n            System.out.println(ex.getMessage());\n        }\n    }\n\
+    }\n```"
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "```\n}\n  catch(java.io.IOException IOex)\n{\n    System.out.println(IOex.getMessage());\n\
+    \  }\n catch (ClassNotFoundException e)\n{\n    e.printStackTrace();\n  }\n}\n\
+    ```\n\nWith this program, the output is as follows:\n\nThe ID of the Student is\
+    \ 1\n\nThe name of the Student is John\n\nThe marks of the Student is 10\n\n#\
+    \ 8.1 Transient Keyword\n\nThe transient keyword will be used in situations where\
+    \ we don’t want a field to be serialized when the entire class is serialized.\
+    \ The transient keyword needs to be used along with the field.\n\nLet’s look at\
+    \ an example of how we can accomplish this.\n\nExample 54: The following program\
+    \ showcases the use of the transient keyword.\n\n```\nimport java.io.*;\n\nclass\
+    \ Person implements Serializable\n{\n    transient int ID;\n    public String\
+    \ name;\n}\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "```\nclass Student extends Person\n{\n    public int marks;\n}\n\npublic class\
+    \ Demo\n{\n    public static void main(String args[])\n    {\n        Student\
+    \ st=new Student();\n        st.ID=1;\n        st.name=\"John\";\n        st.marks=10;\n\
+    \n        // Writing the object to the file\n        try {\n            FileOutputStream\
+    \ fout = new FileOutputStream(\"H:\\\\Sample.txt\");\n            ObjectOutputStream\
+    \ out = new ObjectOutputStream(fout);\n            out.writeObject(st);\n    \
+    \        out.flush();\n\n            // Now we are deserializing the object\n\
+    \            ObjectInputStream in=new ObjectInputStream(new FileInputStream(\"\
+    H:\\\\Sample.txt\"));\n            Student newst=(Student)in.readObject();\n \
+    \           System.out.println(\"The ID of the Student is \"+newst.ID);\nn   \
+    \         System.out.println(\"The name of the Student is \"+newst.name);\n  \
+    \          System.out.println(\"The marks of the Student is \"+newst.marks);\n\
+    \        } catch (java.io.FileNotFoundException ex) {\n            System.out.println(ex.getMessage());\n\
+    \        } catch (java.io.IOException IOex) {\n            System.out.println(IOex.getMessage());\n\
+    \        }\n    }\n```"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "```\ncatch (ClassNotFoundException e)\n{\n    e.printStackTrace();\n}\n}\n\
+    ```\n\nWith this program, the output is as shown below. You will notice that the\
+    \ value of ‘ID’ is defaulting to zero, because this value was not serialized.\n\
+    \n# The ID of the Student is 0\n\n# The name of the Student is John\n\n# The marks\
+    \ of the Student is 10"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# 9. What is Java EE?
+
+
+    So far we have looked at how to work with the standard Java programming language.
+    Let''s quickly review what the Java world has available for developers and enterprises.
+    There are currently four platforms available:
+
+
+    +   - Java SE - This is the Standard Edition, which contains all the core Java
+    libraries and the Java API. Here you also get access to the Java Virtual Machine
+    which is used to run basic Java applications.
+
+
+    +   - Java ME - This is the Micro Edition of Java. Here you get a subset of features
+    of the main Java Standard Edition. This is good for developing applications on
+    smaller devices such as mobile devices.
+
+
+    +   - Java FX - This library is used for building rich internet based applications.
+    Here you can design a modern look and feel application with a rich user interface.
+
+
+    +   - Java EE - Finally you have the Enterprise Edition, which is used for developing
+    enterprise based applications.
+
+
+    Many organizations make use of the Java Enterprise Edition. This edition is based
+    on a set of specifications. For example, the web specification is used for building
+    web based applications. Let''s look at some of the components of the Java Enterprise
+    Edition in more detail.
+
+
+    # 9.1 Java Servlet
+
+
+    Java Servlets are used to build dynamic webpages. The output normally generated
+    by a servlet is HTML. The Java class, that needs to behave like a servlet, needs
+    to conform to the specifications of the Java Servlet. The Java Servlet program
+    is then hosted in a servlet container, which is used to run the servlet and provide
+    the desired output. This is best understood through an example.'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "# Example 55: The following program shows an example of what a servlet looks\
+    \ like.\n\n```\nimport java.io.*;\nimport javax.servlet.*;\nimport javax.servlet.http.*;\n\
+    \npublic class DemoServlet extends HttpServlet\n{\n    @Override\n    public void\
+    \ doGet(HttpServletRequest request, HttpServletResponse response)\n        throws\
+    \ IOException, ServletException\n    {\n        response.setContentType(\"text/html;charset=UTF-8\"\
+    );\n        PrintWriter out = response.getWriter();\n\n        try\n        {\n\
+    \            out.println(\"<html><head>\");\n            out.println(\"<title>Hello,\
+    \ World!</title></head>\");\n            out.println(\"<body>\");\n          \
+    \  out.println(\"<h1>Hello, world!</h1>\"; // says Hello\");\n            out.println(\"\
+    </body>\");\n            out.println(\"</html>\");\n        }\n        finally\n\
+    \        {\n            out.close();\n        }\n    }\n}\n```\n\nThe following\
+    \ things need to be noted about the above program:\n\n+   - Firstly, the 'Java'\
+    \ class extends the 'HttpServlet' class. This is required to ensure that the class\
+    \ behaves like a servlet."
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '+   - Next, we override the ‘doGet’ method that is used to send the response
+    back to the client.
+
+
+    +   - And finally, we use the ‘response’ method to write the response back to
+    the client.
+
+
+    The servlet would then run inside a web container. The container would process
+    the servlet and then send the response back to the client. We will look at Java
+    Servlets in greater detail in the next chapter.
+
+
+    # 9.2 Java Server Pages
+
+
+    Java Server Pages are also used to generate dynamic HTML pages. To deploy and
+    run Java Server Pages, a compatible web server with a servlet container, such
+    as Apache Tomcat or Jetty, is required. Let’s look at an example.
+
+
+    Example 56: The following program shows an example of what a Java server page
+    looks like.
+
+
+    ```
+
+    <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+
+    pageEncoding="ISO-8859-1%"
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+    <html>
+
+    <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+    <title>Hello World Java EE</title>
+
+    </head>
+
+    <body>
+
+    <%System.out.println("Hello World");%%>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    The following things need to be noted about the above program:
+
+
+    +   - The page language directive needs to be declared on top of the program,
+    to indicate that Java constructs can be used in the program.'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "+   - The major part of the page is a simple HTML page.\n- The ‘<% %%>’ construct\
+    \ is used to embed Java code.\n\n# 9.3 Java Server Faces (JSF)\n\nJava Server\
+    \ Faces (JSF) is used for building component based user interfaces for web based\
+    \ applications. This framework is based on the MVC or the Model/View/Controller\
+    \ framework. Here the Model layer is used to represent the data layer, the View\
+    \ layer is used to denote the presentation layer, and the Controller layer is\
+    \ the business logic layer. Let's look at a small example.\n\nExample 57: The\
+    \ following program shows an example of what a basic JSF program looks like.\n\
+    \nA basic Java Server Faces program will contain two parts. The first part is\
+    \ the JSF component itself.\n\n```\nimport java.io.Serializable;\nimport javax.faces.bean.ManagedBean;\n\
+    import javax.faces.bean.SessionScoped;\n\n@ManagedBean(name=\"demo\")\n@SessionScoped\n\
+    public class Demo implements Serializable {\n    private String str = \"Hello\
+    \ World!!\";\n\n    public String getstr() {\n        System.out.println(str);\n\
+    \        return str;\n    }\n\n    public void setstr(String pstr) {\n       \
+    \ this.str = pstr;\n    }\n```"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: 'In the above program:
+
+
+    +   * The ‘@Managed’ annotation indicates the class ‘Demo’ is a managed bean.
+
+    * The ‘@SessionScoped’ indicates that the bean is alive until the ‘HttpSession’
+    is valid.
+
+    * Then a string ‘str’ is declared and initialized with ‘Hello World’ and the getter
+    and setter methods are defined to retrieve the value of string ‘str’.
+
+
+    The second part is the xhtml page that references the JSF object.
+
+
+    ```
+
+    <?xml version="1.0" encoding="UTF-8" ?>
+
+    <!DOCTYPE type html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+
+    "http://www.w3.org/TR/xhtml/DTD/xhtml1-transitional.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml"
+
+    xmlns:h="http://java.sun.com/jsf/html">
+
+    <head>
+
+    <title>Example</title>
+
+    </head>
+
+    <body>
+
+    <h:body value="#{demo.str}">
+
+    </h:body>
+
+    </body></html>
+
+    ```
+
+
+    In the above program, the ‘#{demo.str}’ is used to reference the ‘str’ property
+    from the JSF object. We will look at Java Server Faces in greater detail, later
+    in this book.'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "# 10. Java Servlets\n\nAs mentioned in the previous chapter, Java Servlets\
+    \ are used to build dynamic web based applications. In order to create a servlet,\
+    \ our class needs to extend one of the main servlet classes. This can be either\
+    \ the ‘GenericServlet’ class or the ‘HttpServlet’ class. If the program is going\
+    \ to utilize any protocol, we need to use the Generic Servlet class, otherwise\
+    \ we use the HttpServlet class.\n\nThe basic structure of classname extends GenericServlet\
+    \ class is shown below.\n\n```\npublic class classname extends GenericServlet\n\
+    {\n    public void service(ServletRequest request, ServletResponse response)\n\
+    \    throws ServletException, IOException\n    {\n    }\n}\n```\n\nThe following\
+    \ things need to be noted about the above structure:\n\n+   - The class has to\
+    \ extend the ‘GenericServlet’ class\n- Then we need to override the service method.\n\
+    - The service method gets passed the request and the response object. If the user\
+    \ has sent some parameters with the request, it would be available in the request\
+    \ object.\n\nAlternatively if the class was going to work with the HttpServlet\
+    \ class, then the syntax would be as follows:\n\n```\npublic class Demo extends\
+    \ HttpServlet\n{\n    public void doGet(HttpServletRequest request, HttpServletResponse\
+    \ response)\n    throws IOException, ServletException\n    {\n}\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# 10.1 How to Create a Simple Servlet
+
+
+    To create a simple servlet in an IDE, such as Eclipse, we need to create a dynamic
+    web project. This dynamic web project will be configured with a web server that
+    will be used to run the servlet program. In Eclipse it is important to ensure
+    that the web tools are installed. The Eclipse web tools can download from the
+    link below:
+
+
+    https://www.eclipse.org/webtools/
+
+
+    With this installed, when we go to Eclipse and create an ‘Other’ type project,
+    we will be able to see the ‘Dynamic Web Project’ under the ‘Web’ section.
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_100_0.png)
+
+
+    We also need to ensure that a web server, such as Apache is downloaded. Apache
+    can be downloaded from the following link:
+
+
+    https://://httpd.apache.org/'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "Then in Eclipse, we need to click on the project and add a new servlet. The\
+    \ following dialog box will be shown.\n\n![](img/164f77fcab6b95970f901980879f9631_101_0.png)\n\
+    \nOnce the servlet has been created, the skeleton code below will be added for\
+    \ you.\n\n# Example 58: The following program shows how to create a basic servlet\
+    \ program.\n\n```\nimport java.io.IOException;\nimport javax.servlet.ServletExceptionException;\n\
+    import javax.servlet.annotation.WebWebServlet;\nimport javax.servlet.http.HttpServlet;\n\
+    import javax.servlet.http.HttpServletRequest;\nimport javax.servlet.http.HttpServletResponse;\n\
+    \n/**\n * Servlet implementation class Demo\n/**\n```"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "```\n@WebServlet(\"/Demo\")\npublic class Demo extends HttpServlet {\n\n  \
+    \  private static final long serialVersionUID = 1L;\n\n    /**\n     * @see HttpServlet#HttpServlet()\n\
+    \     */\n    public Demo() {\n\n        super();\n        // TODO Auto-generated\
+    \ constructor stub\n    }\n\n    /**\n     * @see HttpServlet#doGet(HttpServletRequest\
+    \ request, HttpServletResponse response)\n     */\n    protected void doGet(HttpServletRequest\
+    \ request, HttpServletResponse response) throws ServletException, IOException\
+    \ {\n        // TODO Auto-generated method stub\n        response.getWriter().append(\"\
+    Hello World\");\n    }\n\n    /**\n     * @see HttpServlet#doPost(HttpServletRequest\
+    \ request, HttpServletResponse response)\n     */\n    protected void doPost(HttpServletRequest\
+    \ request, HttpServletResponse response) throws ServletException, IOException\
+    \ {\n        // TODO Auto-generated method stub\n        doGet(request, response);\n\
+    \    }\n}\n```\n\nThe following things need to be noted about the above program:"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "+   - First class is extending the servlet class.\n- It is then overriding\
+    \ the ‘doGet’ and ‘doPost’ methods that come as part of the boiler plate code.\n\
+    - In the ‘doGet’ method, we then add the following line of code to write ‘Hello\
+    \ World’ as the response.\n\n```\nresponse.getWriter().append(\"Hello World\"\
+    );\n```\n\nWhen we run the program in Eclipse, it will run in Apache in Eclipse\
+    \ and we will get the following output:\n\n# Hello World\n\n# 10.2 Using Parameters\n\
+    \nWith dynamic web pages, it is possible to send parameters via the Query String\
+    \ in the URL. We can then use the Java servlet to process this parameter. Let’s\
+    \ see an example of how we can get this done.\n\n> Example 59: The following program\
+    \ showcases how to use parameters.\n\n```\nimport java.io.IOException;\nimport\
+    \ java.io.PrintWriter;\n\nimport javax.servlet.ServletExceptionException;\nimport\
+    \ javax.servlet.annotation.WebServlet;\nimport javax.servlet.http.HttpServlet;\n\
+    import javax.servlet.http.HttpServletRequest;\nimport javax.servlet.http.HttpServletResponse;\n\
+    \n/**\n * Servlet implementation class Demo\n */\n@WebServlet(\"/Demo\")\npublic\
+    \ class Demo extends HttpServlet\n{\n```"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "```\nprivate static final long serialVersionUID = 1L;\n\n/**\n * @see HttpServlet#HttpServlet()\n\
+    \ */\npublic Demo() {\n    super();\n    // TODO Auto-generated constructor stub\n\
+    }\n\n/**\n * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse\
+    \ response)\n */\nprotected void doGet(HttpServletRequest request, HttpServletResponse\
+    \ response) throws ServletException, IOException {\n    // TODO Auto-generated\
+    \ method stub\n    String id=request.getParameter(\"Id\");\n    String name=request.getParameter(\"\
+    name\");\n    \n    PrintWriter out=response.getWriter();\n    out.println(\"\
+    <p> id is \"+id + \"</p>\");\n    out.println(\"<p> Name is \"+name + \"</p>\"\
+    );\n}\n\n/**\n * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse\
+    \ response)\n */\nprotected void doPost(HttpServletRequest request, HttpServletResponse\
+    \ response) throws ServletException, IOException {\n    // TODO Auto-generated\
+    \ method stub\n    doGet(request, response);\n}\n```"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'The following things need to be noted about the modified program:
+
+
+    +   - In the ''doGet'' method, we now create a ''PrinterWriter'' object to write
+    data back as a response.
+
+
+    +   - We then use the ''request.getParameter'' object to get the query string
+    parameters. Here we are assuming that we are passing an ''ID'' and ''Name'' as
+    the query string parameters. We are then writing these values back in the response.
+
+
+    +   - Finally, we are embedding these values in html tags and then writing the
+    response back to the client.
+
+
+    When we refresh the browser window in Eclipse, we will get the following output:
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_105_0.png)
+
+
+    Id is null
+
+
+    Name is null
+
+
+    This is because we are not passing any Query String values, hence the default
+    value of the ID and Name is null. If we append the Query String to the url, we
+    get the following output:'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '![](img/164f77fcab6b95970f901980879f9631_106_0.png)
+
+
+    Id is 1
+
+
+    Name is John
+
+
+    So from the above output we can see that once we enter the Query String parameters,
+    we get the desired output.'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# 11. Java Server Faces
+
+
+    Java Server Faces (JSF) is used to develop component based user interfaces for
+    web based applications. The Java Server Faces application runs on the server that
+    processes the Java Server based application. The program itself can also contain
+    JavaScript for client side interaction.
+
+
+    For the purpose of working with Java Server Faces, we need to use the GlassFish
+    tools. GlassFish is a reference implementation of the Java Enterprise Edition
+    and will help to build Java Server Faces programs. If we are using an IDE such
+    as Eclipse, we need to add the GlassFish Tools to it. This can be done through
+    the following steps:
+
+
+    +   - Go to ‘Preferences’.
+
+    - Choose ‘Server Runtime Environments’.
+
+    - Choose to add a new runtime environment. Here under Oracle, we can see the GlassFish
+    Tools.'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "# Server Runtime Environments\n\nAdd, remove, or edit server runtime environments.\n\
+    \nServer runtime environments:\n\n| Name | Type |\n| --- | --- |\n| Apache Tomcat\
+    \ v8.5 | Apache Tomcat v8.5 |\n\n# New Server Runtime Environment\n\nClick Next\
+    \ to download and install\n\nSelect the type of runtime environment:\n\n+   -\
+    \ Oracle\n  - GlassFish Tools\n  - Oracle Cloud Tools\n  - Oracle WebLogic Server\
+    \ Tools\n\n+   - If you don't have the GlassFish software, it can be downloaded\
+    \ from the following link: https://javaee.github.io/glassfish/download\n\n+  \
+    \ - Once GlassFish has been installed, again go back to Preferences and Server\
+    \ Runtime Environment. Choose to add a runtime environment and ensure to choose\
+    \ ‘Create a new local server’."
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '![](img/164f77fcab6b95970f901980879f9631_110_0.png)
+
+
+    # New Server Runtime Environment
+
+
+    Define a new server runtime environment
+
+
+    Select the type of runtime environment:
+
+    type filter text
+
+    - Apache Tomcat v9.0
+
+    - Basic
+
+    - GlassFish
+
+
+    Supports GlassFish 4 and 3.1
+
+
+    +   - Create a new local server
+
+
+    +   - Next we need to specify the location of the Java Runtime Environment and
+    GlassFish folder.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '![](img/164f77fcab6b95970f901980879f9631_111_0.png)
+
+
+    Once all this is done, we can start developing our first application.
+
+
+    # 11.1 Developing a Sample Application
+
+
+    Let’s understand what goes into building a sample application. The following steps
+    need to be in place:
+
+
+    Step 1
+
+
+    Create a web based project in the IDE.
+
+
+    Step 2
+
+
+    Create a Java class file that will act as a ‘ManagedBean’. An example is shown
+    below.
+
+
+    ```
+
+    import javax.faces.bean.ManagedBean;
+
+    @ManagedBean
+
+    ```'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "```\npublic class hello\n{\n    final String world = \"Hello World\";\n   \
+    \ public String getworld()\n    {\n        return world;\n    }\n}\n```\n\nIn\
+    \ the above program, we need to add an annotation for the class to ensure it is\
+    \ recognized as a ‘ManagedBean’. Then we define a property called ‘world’ and\
+    \ put the value as ‘Hello World’.\n\n# Step 3\n\nIn the ‘web.xml’ file, the following\
+    \ code should be present to ensure that this becomes a Java Face application.\n\
+    \n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<web-app version=\"3.1\" xmlns=\"\
+    http://xmlns.jcp.org/ns/javaee\"\nxmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\
+    \ \nsi:schemaSchemaLocation=\"http://xmlns.jcp.org/ns/javaee/web-app_3_1.xsd\"\
+    >\n  <context-param>\n    <param-name>javax.faces.PROJECT_STAGE</param-name>\n\
+    \    <param-value>Development</param-value>\n  </context-param>\n  <servlet>\n\
+    \    <servlet-name>Faces Servlet</servlet-name>\n    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>\n\
+    \    <load-on-startup>1</load-on-startup>\n  </servlet>\n  <servlet-mapping>\n\
+    \    <servlet-name>Faces Servlet</servlet-name>\n    <url-pattern>/faces/*</url-pattern>\n\
+    \  </servlet-mapping>\n  <session-config>\n    <session-timeout>\n```"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "# Step 4\n\nCreate an xhtml file that will be used to render the application.\n\
+    \n```\n<html lang=\"en\"\nxmlns=\"http://www.w3.org/1999/xhtml\"\nxmlns:h=\"http://java.sun.com/jsf/html\"\
+    \n<head>\n  <title>Facelets Hello World</title>\n</head>\n<body>\n  #{hello.world}\n\
+    </body>\n</html>\n```\n\nIn the above program, we are referencing the static property\
+    \ from our class using the code line:\n\n```\n#{hello.world}\n```\n\nOnce we run\
+    \ the application using the GlassFish Server, we will get the following output:\n\
+    \nlocalhost:8080/Demo/\n\nHello World!"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "# 12. Java Database Connectivity (JDBC)\n\nThe Java Database Connectivity,\
+    \ or JDBC, API is used to interact with databases. With JDBC we can make connections\
+    \ to a database and work with the built-in SQL statements. First let's look at\
+    \ the setup. In our example, we are going to work with a MySQL database as our\
+    \ data source. The MySQL database setup can be downloaded from the link below:\n\
+    \nhttps://dev.mysql.com/downloads/installer/\n\nOnce download and installed, let's\
+    \ create the following:\n\n+   A database called ‘Person’\n\n+   A table ‘Per’\
+    \ that has 2 columns. One column is titled ‘ID’ for the INT type, and the other\
+    \ is titled ‘Name’ for the varchar type.\n\n+   Add one item to the table as ‘1\
+    \ John’.\n\nNext we need to download the MySQL database connector for Java from\
+    \ the following location:\n\nhttps://www.mysql.com/products/connector/\n\nOnce\
+    \ done, we need to add the jar file as an external jar for our project. Now let's\
+    \ add the following code to establish a connection to the database using JDBC\
+    \ and read the contents of the table.\n\nExample 60: The following program shows\
+    \ how to read data from a database table.\n\n```\nimport java.sql.*;\npublic class\
+    \ Sample\n{\n    public static void main(String[] args) throws Exception\n   \
+    \ {\n        Class.forName(\"com.mysql.jdbc.Driver\");\n        Connection con=DriverManager.getConnection(\n\
+    \        \"jdbc:mysql://localhost:3306/Person\",\"admin\",\"password\");\n   \
+    \     Statement stmt=con.createStatement();\n```"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "```\nResultSet rs=stmt.executeQuery(\"select * from Per\");\n\nwhile(rs.next())\n\
+    \    System.out.println(rs.getInt(1)+\" \"+rs.getString(2));\n\ncon.close();\n\
+    }\n```\n\nThe following things needs to be noted about the above program:\n\n\
+    +   - First we import the necessary SQL libraries.\n- Then we use the ‘DriverManager’\
+    \ class to get a connection to the database using the JDBC protocol. Here we mention\
+    \ the server name, port number, username and password to connect.\n- Next we create\
+    \ a result set by executing a select query.\n- Finally we use the ‘recordset’\
+    \ to navigate through the records.\n\nOnce we run the program, we will get the\
+    \ following output:\n\n# 1 John\n\nWe can also use JDBC to insert records into\
+    \ the database. Let’s look at an example of this.\n\nExample 61: The following\
+    \ program shows how to insert records into a table.\n\n```\nimport java.sql.*;\n\
+    public class Sample\n{\n    public static void main(String args[]) throws Exception\n\
+    \    {\n        Class.forName(\"com.mysql.jdbc.Driver\");\n        Connection\
+    \ con=DriverManager.getConnection(\n            \"jdbc:mysql://localhost:3306/Person\"\
+    ,\"admin\",\"password\");\n    }\n}\n```"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "```\nPreparedStatement stmt=con.prepareStatement(\"insert into values(?,?)\"\
+    );\nstmt.setInt(1,2);\nstmt.setString(2,\"Mark\");\n\nint i=stmt.executeUpdate();\n\
+    System.out.println(\" The number of records inserted is \"+i);\n\ncon.close();\n\
+    \n```\n\nThe following things need to be noted about the above program:\n\n+ \
+    \  - We are using the ‘PreparedStatement’ here so that we can take dynamic values\
+    \ in our statement.\n- We then use the ‘set’ methods to set the values of ‘ID’\
+    \ and ‘Name’, which will be written to the database.\n- Finally we execute the\
+    \ ‘Update’ statement to add the record to the database.\n\nOnce we run the program,\
+    \ we will get the following output:\n\n# The number of records inserted is 1\n\
+    \nWe can also get metadata about the table via JDBC. Let’s look at an example\
+    \ of this.\n\n# Example 62: The following program shows how to get the table metadata.\n\
+    \n```\nimport java.sql.*;\npublic class Sample\n{\n    public static void main(String[]\
+    \ args) throws Exception\n{\n    Class.forName(\"com.mysql.jdbc.Driver\");\n\n\
+    ```"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "```\nConnection con=DriverManager.getConnection(\n\"jdbc:mysql://localhost:3306/Person\"\
+    ,\"admin\",\"password\");\n\nPreparedStatement ps=con.prepareStatement(\"select\
+    \ * from per\");\nResultSet rs=ps.executeQuery();\nResultSetMetaData rsmd=rs.getMetaData();\n\
+    \nSystem.out.println(\"Total columns: \"+rsmd.getColumnCount());\nSystem.out.println(\"\
+    Column Name of 1st column: \"+rsmd.getColumnName(1));\nSystem.out.println(\"Column\
+    \ Type Name of 1st column: \"+rsmd.getColumnTypeName(1));\n\ncon.close();\n\n\
+    ```\n\nWhen we run the program, we will get the following output:\n\n# Total columns:\
+    \ 2\n\n# Column Name of 1st column: Id\n\n# Column Type Name of 1st column: INT\n\
+    \nAnother thing we can do is use JDBC to get the metadata about the database.\
+    \ Below is an example of this.\n\nExample 63: The following program shows how\
+    \ to get the database metadata.\n\n```\nimport java.sql.*;\nimport com.mysql.jdbc.DatabaseMetaData;\n\
+    \npublic class Sample\n{\n    public static void main(String args[]) throws Exception\n\
+    \    {\n        Class.forName(\"com.mysql.jdbc.Driver\");\n\n```"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '```
+
+    Connection con=DriverManager.getConnection(
+
+    "jdbc:mysql://localhost:3306/Person","admin","password");
+
+
+    DatabaseMetaData dbmd=(DatabaseMetaData) con.getMetaData();
+
+
+    System.out.println("Driver Name: "+dbmd.getDriverName());
+
+    System.out.println("Driver Version: "+dbmd.getDriverVersion());
+
+    System.out.println("Username: "+dbmd.getUsername());
+
+    System.out.println("Database Product Name: "+dbmd.getDatabaseProductName());
+
+    System.out.println("Database Product Version: "+dbmd.getDatabaseProductVersion());
+
+
+    con.close();
+
+    }
+
+    ```
+
+
+    Once we run the program, we will get the following output:
+
+
+    # Driver Name: MySQL Connector Java
+
+
+    Driver Version: mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffddde495b9df9337c3e20009be
+    )
+
+
+    UserName: admin@localhost
+
+
+    Database Product Name: MySQL
+
+
+    Database Product Version: 5.7.20-log'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# 13. Android and Java
+
+
+    A great feature of Java is that it can be used to develop Android based applications.
+    One reason why Java is favored as a programming language to develop Android apps,
+    is because of its functionality as an object oriented programming language. To
+    start developing Android based applications using Java, the first step is to download
+    an IDE. Android Studio is a well renowned IDE for developing Android apps.
+
+
+    Some of the features of Android Studio are:
+
+
+    +   * Gradle-based build support.
+
+    * Android-specific refactoring and quick fixes.
+
+    * Lint tools to catch performance, usability, version compatibility and other
+    problems.
+
+    * ProGuard and app-signing capabilities.
+
+    * Template-based wizards to create common Android designs and components.
+
+
+    The Android Studio and SDK are available at the following link:
+
+    https://developer.android.com/studio/index.html
+
+
+    Once you download and install Android Studio, you go ahead and build a new project.
+    Make sure to choose the basic template to begin with. The steps below show how
+    to create a project in Android Studio.
+
+
+    +   * First we start by giving our application a name.'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: 'Create New Project
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_122_0.png)
+
+
+    # Configure your new project
+
+
+    | Application name: | Sample |
+
+    | Company domain: | techuser.example.com |
+
+    | Package name: | com.example.techuser.sample |
+
+    | | ] Include C++ support |
+
+
+    +   - Select the form factors for the application. The API level will determine
+    the compatibility of our app. The older we go, the more compatible our app will
+    be, but we will lose some key features.'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "Select the form factors your app will run on\n\nDifferent platforms may require\
+    \ separate SDKs\n\n+   - Phone and Tablet\n  Minimum SDK API 16: Android 4.1 (Jelly\
+    \ Bean)\nLower API levels target more devices, but have fewer features available.\n\
+    By targeting API 16 and later, your app will run on approximately 99.2% of the\
+    \ devices that are active on the Google Play Store.\n[Help me choose]\n- Wear\n\
+    \  Minimum SDK API 21: Android 5.0 (Lollipop)\n- TV\n  Minimum SDK API 21: Android\
+    \ 5.0 (Lollipop)\n- Android Auto\n\n+   Choose the type of activity. We will start\
+    \ with a basic activity for our example.\n\n# Add an Activity to Mobile\n\n![](img/164f77fcab6b95970f901980879f9631_123_0.png)\n\
+    \n+   Name the different aspects of the activity."
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: 'Creates a new basic activity with an app bar.
+
+
+    | Activity Name: | MainActivity |
+
+    |---|---|n| Layout Name: | activity_main |
+
+    | Title: | MainActivity |
+
+    | Menu Resource Name: | menu_main |
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_124_0.png)
+
+
+    +   * Once the project is set up, we will get the interface below.
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_124_1.png)
+
+
+    The MainActivity class will contain the following boiler template code:
+
+
+    ```
+
+    package com.example.texucher.myapplication;
+
+
+    import android.os.Bundle;
+
+
+    import android.support.design.widget.FloatingActionButton;
+
+    ```'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: "```\nimport android.support.design.widget.Snackbar;\nimport android.support.v7.app.AppCompatActivity;\n\
+    import android.support.v7.widget.Toolbar;\nimport android.view.View;\nimport android.view.Menu;\n\
+    import android.view.MenuItem;\n```\n\n```\npublic class MainActivity Extends AppCompatActivity\
+    \ {\n```\n\n```\n@Override\nprotected void onCreate(Bundle savedInstanceState)\
+    \ {\n  super.onCreate(savedInstanceState);\n  setContentView(R.layout.activity_main);\n\
+    \  Toolbar toolbar = (Toolbar) findViewByIdById(R.id.toolbar);\n  setSupportActionBarBar(toolbar);\n\
+    ```\n\n```\nFloatingActionButton fab = (FloatingActionButton) findViewByIdById(R.id.fab);\n\
+    fab.setOnClickListener(new View.OnClickListener() {\n  @Override\n  public void\
+    \ onClick(View view) {\n    Snackbar.make(view, \"Replace with your own action\"\
+    , Snackbar.LENGTH_LONG)\n      .setAction(\"Action\", null).show();\n  }\n});\n\
+    ```\n\n```\n@Override\npublic boolean onCreateOptionsMenu(Menu menu) {\n  // Inflate\
+    \ the menu; this adds items to the action bar if it is present.\n  getMenuInflater().inflate(R.menu.menu_main,\
+    \ menu);\n  return true;\n```\n\n```\n@Override\npublic boolean onOptionsItemSelected(MenuItem\
+    \ item) {\n  // Handle action bar item clicks here. The action bar will\n  //\
+    \ automatically handle clicks on the Home/Up button, so longn\n```"
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: "```\n// as you specify a parent activity in AndroidManifest.xml.\nint id =\
+    \ item.getItemId();\n\n//noinspection SimplifiableIfStatement\nif (id == R.id.action_settings)\
+    \ {\n    return true;\n}\n\nreturn super.onOptionsItemSelected(item);\n}\n```\n\
+    \nSome of the key aspects of the above code are:\n\n+   - The main class extends\
+    \ the ‘AppCompatActivity’ class that forms the basis for the activity bar for\
+    \ the mobile application.\n- The ‘onCreateOptionsMenu’ method is used to create\
+    \ the menu for the mobile application.\n\nTo run the mobile application, we first\
+    \ need to create a virtual device as follows:\n\n+   - Create a New Virtual Device\
+    \ from the menu.\n- Choose the Device Type.\n- Then we download a system image\
+    \ for the virtual device.\n\nOnce the image has been downloaded, we can go ahead\
+    \ and run a Java program. It will then run in the emulator."
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# Conclusion
+
+
+    We have unfortunately reached the end of this guide. But as I always say, it doesn''t
+    mean your Java journey should end here. Practice as much as possible. This book
+    was written not only to be a teaching guide, but also a reference manual. So remember
+    to always keep it near, as you venture through this wonderful world of programming.
+
+
+    If you enjoyed this guide, and this series, be sure to look into the other programming
+    languages I cover, such as Python. It is a high-level language that is used in
+    a variety of different applications. Python is best known for the simplicity of
+    its programs. It requires less code to create a similar program in Python, compared
+    to other languages. This makes it one of the most popular languages available
+    today.
+
+
+    ![](img/164f77fcab6b95970f901980879f9631_128_0.png)
+
+
+    # PYTHON
+
+
+    Programming Basics for Absolute Beginners
+
+
+    > a FREE Kindle Version with Paperback'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# About the Author
+
+
+    Nathan Clark is an expert programmer with nearly 20 years of experience in the
+    software industry.
+
+
+    With a master''s degree from MIT, he has worked for some of the leading software
+    companies in the United States and built up extensive knowledge of software design
+    and development.
+
+
+    Nathan and his wife, Sarah, started their own development firm in 2009 to be able
+    to take on more challenging and creative projects. Today they assist high-caliber
+    clients from all over the world.
+
+
+    Nathan enjoys sharing his programming knowledge through his book series, developing
+    innovative software solutions for their clients and watching classic sci-fi movies
+    in his free time.'
+  merge: -1
+  pgno: 130
