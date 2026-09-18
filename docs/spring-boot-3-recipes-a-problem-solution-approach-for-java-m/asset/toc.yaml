@@ -1,0 +1,1240 @@
+- - '#'
+  - Spring Boot 3 秘籍：Java 微服务与云原生应用解决方案[第2版]
+- - '#'
+  - 第 4 章：WebFlux
+- - '#'
+  - 第 5 章：Spring Security
+- - '#'
+  - 第 6 章：数据访问
+- - '#'
+  - 第 7 章：Java 企业级服务
+- - '#'
+  - 第 8 章：Spring 消息传递
+- - '#'
+  - 第 9 章：Spring Boot Actuator
+- - '#'
+  - 第 10 章：打包
+- - '#'
+  - 关于作者
+- - '#'
+  - 引言
+- - '#'
+  - 读者
+- - '#'
+  - 本书的结构
+- - '#'
+  - 约定
+- - '#'
+  - 前提条件
+- - '#'
+  - 联系作者
+- - '#'
+  - 第 1 章
+- - '##'
+  - Spring Boot 简介
+- - '##'
+  - 1-1 使用 Maven 创建 Spring Boot 应用程序
+- - '##'
+  - 解决方案
+- - '##'
+  - 工作原理
+- - '##'
+  - 创建 pom.xml 文件
+- - '###'
+  - 列表 1-1 Spring Boot Starter Parent
+- - '###'
+  - 列表 1-2 Spring Boot Dependency
+- - '###'
+  - 列表 1-4. 完整的 pom.xml
+- - '##'
+  - 创建应用程序类
+- - '###'
+  - 列表 1-5. DemoApplication 类
+- - '##'
+  - 'Beans: 59'
+- - '###'
+  - 图 1-1. 运行应用程序的输出
+- - '###'
+  - 图 1-2. @SpringBootApplication 定义
+- - '##'
+  - 使用 @Bean 方法配置 Bean
+- - '#'
+  - 第 2 章：Spring Boot 基础
+- - '##'
+  - 列表 2-2. Calculator 类源代码
+- - '###'
+  - 列表 2-3. Operation 接口源代码
+- - '###'
+  - 列表 2-4. 加法操作类源代码
+- - '###'
+  - 列表 2-5. 乘法操作类源代码
+- - '###'
+  - 列表 2-6. CalculatorApplication 源代码
+- - '###'
+  - 列表 2-7. CalculatorApplication 源代码（更新后）
+- - '##'
+  - 2-2. 属性外部化
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 使用外部 application.properties 覆盖属性
+- - '###'
+  - 列表 2-9. 默认属性
+- - '###'
+  - 列表 2-10. 覆盖属性示例
+- - '##'
+  - 使用 Profiles 覆盖属性
+- - '###'
+  - 列表 2-11. 特定配置的属性
+- - '##'
+  - 使用命令行参数覆盖属性
+- - '##'
+  - 从不同的配置文件加载属性
+- - '###'
+  - 表 2-1. 配置参数
+- - '##'
+  - 2-3. 配置测试问题
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 编写单元测试
+- - '##'
+  - 在单元测试中模拟依赖项
+- - '##'
+  - 使用 Spring Boot 进行集成测试
+- - '##'
+  - 使用 Spring Boot 和 Mock 进行集成测试
+- - '###'
+  - 列表 2-20. 验证操作数量
+- - '###'
+  - 列表 2-21. 使用 Mock Bean
+- - '##'
+  - 使用 Spring Boot 切片（Slices）进行集成测试
+- - '###'
+  - 表 2-2. 测试切片注解
+- - '###'
+  - 列表 2-22. Calculator Controller
+- - '##'
+  - 2-4. 配置日志
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 配置日志
+- - '##'
+  - 写入文件
+- - '##'
+  - 使用你偏好的日志提供程序
+- - '##'
+  - 2-5. 复用现有的配置
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 复用 XML 配置
+- - '##'
+  - 复用 Java 配置
+- - '##'
+  - 2-6. 在 Spring Boot 中使用 Docker
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - Docker Compose 支持
+- - '###'
+  - 图 2-6. Docker 应用程序输出
+- - '##'
+  - Spring Boot Docker Compose 支持：自定义容器镜像
+- - '###'
+  - 列表 2-32. 带标签的 Docker Compose 文件
+- - '##'
+  - Spring Boot Testcontainers 支持
+- - '###'
+  - 列表 2-37. 接口上的 Testcontainers 定义
+- - '##'
+  - 2-7. 使用 Spring Boot Devtools 加速开发
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 表 2-6. Spring Boot Devtools 默认属性
+- - '###'
+  - 工作原理
+- - '###'
+  - 列表 2-38. Devtools 依赖
+- - '##'
+  - 重启后的输出
+- - '##'
+  - 总结
+- - '#'
+  - 第 3 章
+- - '##'
+  - Spring MVC
+- - '##'
+  - 3-1. 开启 Spring MVC
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 3-2. 使用 Spring MVC 暴露资源
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '###'
+  - 列表 3-9. 带有数据的应用程序
+- - '##'
+  - 3-3. 使用 Thymeleaf
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '###'
+  - 表 3-2. Thymeleaf 属性
+- - '###'
+  - 列表 3-2.（续）
+- - '##'
+  - 添加索引页
+- - '##'
+  - 添加控制器
+- - '##'
+  - 视图
+- - '##'
+  - '@RestController'
+- - '###'
+  - 列表 3-14. BookController
+- - '##'
+  - 添加详情页
+- - '##'
+  - 测试控制器
+- - '###'
+  - 列表 3-17. 使用 WebMvc 的集成测试
+- - '##'
+  - 3-4. 使用 Spring MVC 处理异常
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 处理视图
+- - '###'
+  - 图 3-7. 默认错误页面
+- - '###'
+  - 列表 3-18. 自定义错误页面
+- - '###'
+  - 列表 3-22. 错误页的修改
+- - '##'
+  - 为 器处理
+- - '###'
+  - 表 3-5. 默认错误模型
+- - '###'
+  - 列表 3-23. 自定义 ErrorAttributes
+- - '###'
+  - 列表 3-24. 自定义 ErrorAttributes Bean
+- - '##'
+  - 启用并使用
+- - '##'
+  - 3-5. 实现国际化 (I18N)
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '###'
+  - 表 3-6. I18N 属性
+- - '###'
+  - 列表 3-25. 默认消息
+- - '###'
+  - 列表 3-26. 带有 I18N 的首页
+- - '###'
+  - 列表 3-27. 荷兰语消息
+- - '##'
+  - 3-6. 更改语言 (Locales)
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 通过 HTTP 请求头
+- - '##'
+  - 通过 Cookie 解析语言
+- - '##'
+  - 3-7. 选择并配置嵌入式服务器
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '###'
+  - 表 3-8.（续）
+- - '###'
+  - 表 3-9. 相关的服务器
+- - '##'
+  - 3-10. Servlet 容器属性
+- - '###'
+  - 列表 3-10.（续）
+- - '##'
+  - 运行时
+- - '##'
+  - 3-11. Servlet 容器属性
+- - '###'
+  - 列表 3-11.（续）
+- - '##'
+  - 更改
+- - '##'
+  - 3-14. 排除 Tomcat 并 Jetty
+- - '##'
+  - 配置 Spring Boot 使用密钥
+- - '##'
+  - 库
+- - '##'
+  - 3-15. RestTemplateBuilder 方法
+- - '##'
+  - 使用声明式客户端
+- - '###'
+  - 表 3-16. HttpExchange 属性
+- - '###'
+  - 表 3-17. HttpExchange 支持的方法参数
+- - '###'
+  - 表 3-18. HttpExchange 支持的方法类型
+- - '###'
+  - 列表 3-56. BookServiceSources
+- - '###'
+  - 列表 3-57. OpenLibrary Sources
+- - '###'
+  - 列表 3-58. HttpServiceProxyFactory 配置
+- - '##'
+  - 基于 RestTemplate 或 RestClient 的代码
+- - '###'
+  - 表 3-19. MockRestMatchers 设置方法
+- - '###'
+  - 表 3-20. MockResponseCreators 设置方法
+- - '#'
+  - 第 4 章 WebFlux
+- - '##'
+  - WebFlux
+- - '##'
+  - 4-1. 使用 SpringFlux 开发响应式应用
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 如何工作
+- - '##'
+  - 列表 4-2. 响应式 HelloWorldController
+- - '##'
+  - '设置 Spring WebFlux '
+- - '##'
+  - 列表 4-3. HelloWorldApplication
+- - '##'
+  - 创建 Spring WebFlux 控制器
+- - '##'
+  - 为响应式控制器进行单元测试
+- - '###'
+  - 列表 4-4. HelloWorldController 单元测试
+- - '##'
+  - 对响应式控制器进行集成测试
+- - '##'
+  - 4-2. 使用响应式 REST 服务进行发布和消费
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 流式 JSON
+- - '##'
+  - 编写集成测试
+- - '##'
+  - 4-3. 使用 Thymeleaf 作为模板引擎的问题
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '###'
+  - 表 4-1. Thymeleaf 属性
+- - '##'
+  - 列表 4-13. Library Spring Boot Application
+- - '##'
+  - 让更具响应性
+- - '##'
+  - 4-4. 使用 Spring WebFlux 处理异常
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '##'
+  - '处理 '
+- - '###'
+  - 列表 4-20. CustomizedAttributes
+- - '###'
+  - 列表 4-21. CustomizedAttributes Bean
+- - '##'
+  - 启用并使用
+- - '##'
+  - 4-5. 实现国际化 (I18N)
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '###'
+  - 表 4-3. I18N 属性
+- - '###'
+  - 列表 4-22. 默认消息
+- - '###'
+  - 列表 4-23. 支持 I18N
+- - '###'
+  - 列表 4-24. 荷兰语消息
+- - '##'
+  - 4-6. 更改设置
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 你的应用程序
+- - '##'
+  - 固定设置
+- - '###'
+  - 列表 4-29. WebFilter 设置
+- - '###'
+  - 列表 4-30. WebFilter 定义
+- - '##'
+  - 4-7. 选择并嵌入式服务器
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '###'
+  - 表 4-4. 通用属性
+- - '###'
+  - 表 4-5. 响应式容器属性
+- - '##'
+  - 你的应用程序
+- - '##'
+  - 固定设置
+- - '##'
+  - 列表
+- - '###'
+  - 4-8. 响应式内容
+- - '##'
+  - 4-9. 使用 Controllers 执行同步请求
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 列表 4-32. SSL 属性
+- - '###'
+  - 列表 4-33. SSL 属性
+- - '###'
+  - 列表 4-34. AsyncTask 的 Spring Boot
+- - '###'
+  - 列表 4-35. 阻塞和响应式处理
+- - '###'
+  - 列表 4-36. 显式 WebFlux
+- - '###'
+  - 列表 4-37. OrderController 的 WebTest
+- - '###'
+  - 列表 4-38. Spring Security 依赖
+- - '###'
+  - 列表 4-39. 额外的连接器
+- - '###'
+  - 列表 4-40. 额外的连接器
+- - '###'
+  - 列表
+- - '###'
+  - 4-41. CustomerRepositoryTest 类
+- - '###'
+  - 列表 4-42. CustomerRepository 插入客户测试
+- - '###'
+  - 列表 4-43. CustomerRepository 查找所有
+- - '###'
+  - 列表 4-44. PostgreSQL 和 JUnit Testcontainers 依赖
+- - '###'
+  - 列表 4-45. Testcontainers 的 CustomerRepository 设置
+- - '###'
+  - 列表 4-46. 使用 Testcontainers CustomerRepositoryTest
+- - '###'
+  - 列表 4-47. 用于 Kafka 的 OrderConfirmationService
+- - '###'
+  - 列表 4-48. 使用 SseEmitter 的 OrderController：扩展
+- - '###'
+  - 列表 4-49. 针对 Server-Sent Events 测试的 OrderTest
+- - '#'
+  - 第 5 章：Spring Security
+- - '##'
+  - 5-1. 在你的 Spring Boot 应用程序中启用
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '###'
+  - 表 5-1. 默认用户属性
+- - '##'
+  - 测试功能
+- - '###'
+  - 表 5-2. 测试用的 Spring Security 注解
+- - '###'
+  - 列表 5-2. 禁用测试
+- - '##'
+  - 执行集成测试
+- - '###'
+  - 列表 5-3. 启用安全的测试
+- - '###'
+  - 列表 5-5. 启用安全的 TestRestTemplate 集成测试
+- - '###'
+  - 列表 5-6. 启用安全的 WebTestClient 集成测试
+- - '##'
+  - 工作原理
+- - '###'
+  - 列表 5-7. 安全上下文集成与异常处理
+- - '###'
+  - 列表 5-8. Servlet API 默认值
+- - '##'
+  - HTTP Basic 认证
+- - '###'
+  - 列表 5-9. 使用默认启用 Basic认证
+- - '##'
+  - 表单登录
+- - '###'
+  - 列表 5-17. 带有成功 URL 的退出配置
+- - '###'
+  - 列表 5-18. 安全响应头配置
+- - '##'
+  - 匿名登录
+- - '###'
+  - 列表 5-19. 匿名登录配置
+- - '##'
+  - 记住我（Remember-Me）支持
+- - '###'
+  - 列表 5-20. RememberMe 配置
+- - '##'
+  - 5-3. 验证用户
+- - '###'
+  - 问题
+- - '###'
+  - 解决方案
+- - '###'
+  - 工作原理
+- - '##'
+  - 在内存中验证用户
+- - '###'
+  - 列表 5-21. 内存配置
+- - '##'
+  - 数据库验证用户
+- - '###'
+  - 列表 5-22. 默认 Spring查询
+- - '###'
+  - Spring 5-23. Spring 表结构 DDL
+- - '###'
+  - 表 5-3. USERS 表的测试数据
+- - '###'
+  - 表 5-4. 用于 AUTHORITIES 表的用户数据测试
+- - '###'
+  - 列表 5-24. 基于 JDBC 的 UserDetailsService 配置
+- - '###'
+  - 列表 5-25. 自定义 Spring Security 表结构的 DDL（示例）
+- - '###'
+  - 表 5-5. MEMBER 表中的遗留用户数据
+- - '###'
+  - 表 5-6. MEMBER_ROLE 表中的遗留用户数据
+- - '###'
+  - 列表 5-26. 自定义查询配置
+- - '##'
+  - 使用 OAuth2 进行身份验证
+- - '##'
+  - Spring Boot 3 配方
+- - '###'
+  - 列表 5-28. Spring Security OAuth2 Client 配置
+- - '##'
+  - 加密密码
+- - '###'
+  - 表 5-8. Spring Security 内置表达式
+- - '###'
+  - 列表 5-29. 使用访问规则的 Spring Security
+- - '##'
+  - 使用表达式通过 Spring Bean 进行访问控制决策
+- - '###'
+  - 列表 5-30. AccessCheckerSource
+- - '##'
+  - 使用注解和表达式保护安全方法
+- - '###'
+  - 列表 5-32. 带方法的安全配置
+- - '###'
+  - 列表 5-33. 带有授权规则的 InMemoryService
+- - '##'
+  - 5-4. 为 WebFlux 添加安全性
+- - '##'
+  - 5-5. Spring Security
+- - '##'
+  - 5-6. Spring Security
+- - '##'
+  - 5-7. Spring Security
+- - '##'
+  - 5-8. Spring Security
+- - '##'
+  - 5-9. Spring Security
+- - '##'
+  - 5-10. Spring Security
+- - '##'
+  - 5-11. Spring Security
+- - '##'
+  - 5-12. Spring Security
+- - '##'
+  - 5-13. Spring Security
+- - '##'
+  - 5-14. Spring Security
+- - '##'
+  - 5-15. Spring Security
+- - '##'
+  - 5-16. Spring Security
+- - '##'
+  - 5-17. Spring Security
+- - '##'
+  - 5-18. Spring Security
+- - '##'
+  - 5-19. Spring Security
+- - '##'
+  - 5-20. Spring Security
+- - '##'
+  - 5-21. Spring Security
+- - '##'
+  - 5-22. Spring Security
+- - '##'
+  - 5-23. Spring Security
+- - '##'
+  - 5-24. Spring Security
+- - '##'
+  - 5-25. Spring Security
+- - '##'
+  - 5-26. Spring Security
+- - '##'
+  - 5-27. Spring Security
+- - '##'
+  - 5-28. Spring Security
+- - '##'
+  - 5-29. Spring Security
+- - '##'
+  - 5-30. Spring Security
+- - '##'
+  - 5-31. Spring Security
+- - '##'
+  - 5-32. Spring Security
+- - '##'
+  - 5-33. Spring Security
+- - '##'
+  - 5-34. Spring Security
+- - '##'
+  - 5-35. Spring Security
+- - '##'
+  - 5-36. Spring Security
+- - '##'
+  - 5-37. Spring Security
+- - '##'
+  - 5-38. Spring Security
+- - '##'
+  - 5-39. Spring Security
+- - '##'
+  - 5-40. Spring Security
+- - '##'
+  - 5-41. Spring Security
+- - '##'
+  - 5-42. Spring Security
+- - '##'
+  - 5-43. Spring Security
+- - '##'
+  - 5-44. Spring Security
+- - '##'
+  - 5-45. Spring Security
+- - '##'
+  - 5-46. Spring Security
+- - '##'
+  - 5-47. Spring Security
+- - '##'
+  - 5-48. Spring Security
+- - '##'
+  - 5-49. Spring Security
+- - '##'
+  - 5-50. Spring Security
+- - '##'
+  - 5-51. Spring Security
+- - '##'
+  - 5-52. Spring Security
+- - '#'
+  - 第 6 章：数据访问
+- - '##'
+  - 6-1. 配置数据源
+- - '##'
+  - 6-2. 配置数据源
+- - '##'
+  - 6-3. 配置数据源
+- - '##'
+  - 6-4. 配置数据源
+- - '##'
+  - 6-5. 配置数据源
+- - '##'
+  - 6-6. 配置数据源
+- - '##'
+  - 6-7. 配置数据源
+- - '##'
+  - 6-8. 配置数据源
+- - '##'
+  - 6-9. 配置数据源
+- - '##'
+  - 6-10. 配置数据源
+- - '##'
+  - 6-11. 配置数据源
+- - '##'
+  - 6-12. 配置数据源
+- - '##'
+  - 6-13. 配置数据源
+- - '##'
+  - 6-14. 配置数据源
+- - '##'
+  - 6-15. 配置数据源
+- - '##'
+  - 6-16. 配置数据源
+- - '##'
+  - 6-17. 配置数据源
+- - '##'
+  - 6-18. 配置数据源
+- - '##'
+  - 6-19. 配置数据源
+- - '##'
+  - 6-20. 配置数据源
+- - '##'
+  - 6-21. 配置数据源
+- - '##'
+  - 6-22. 配置数据源
+- - '##'
+  - 6-23. 配置数据源
+- - '##'
+  - 6-24. 配置数据源
+- - '##'
+  - 6-25. 配置数据源
+- - '##'
+  - 6-26. 配置数据源
+- - '##'
+  - 6-27. 配置数据源
+- - '##'
+  - 6-28. 配置数据源
+- - '##'
+  - 6-29. 配置数据源
+- - '##'
+  - 6-30. 配置数据源
+- - '##'
+  - 6-31. 配置数据源
+- - '##'
+  - 6-32. 配置数据源
+- - '##'
+  - 6-33. 配置数据源
+- - '##'
+  - 6-34. 配置数据源
+- - '##'
+  - 6-35. 配置数据源
+- - '##'
+  - 6-36. 配置数据源
+- - '##'
+  - 6-37. 配置数据源
+- - '##'
+  - 6-38. 配置数据源
+- - '##'
+  - 6-39. 配置数据源
+- - '##'
+  - 6-40. 配置数据源
+- - '##'
+  - 6-41. 配置数据源
+- - '##'
+  - 6-42. 配置数据源
+- - '##'
+  - 6-43. 配置数据源
+- - '##'
+  - 6-44. 配置数据源
+- - '##'
+  - 6-45. 配置数据源
+- - '##'
+  - 6-46. 配置数据源
+- - '##'
+  - 6-47. 配置数据源
+- - '##'
+  - 6-48. 配置数据源
+- - '##'
+  - 6-49. 配置数据源
+- - '##'
+  - 6-50. 配置数据源
+- - '##'
+  - 6-51. 配置数据源
+- - '##'
+  - 6-52. 配置数据源
+- - '##'
+  - 使用原生仓库
+- - '##'
+  - 6-1. 使用 JPA
+- - '##'
+  - 6-2. 使用 JPA
+- - '##'
+  - 6-3. 使用 JPA
+- - '##'
+  - 6-4. 使用 JPA
+- - '##'
+  - 6-5. 使用 JPA
+- - '##'
+  - 6-6. 使用 JPA
+- - '##'
+  - 6-7. 使用 JPA
+- - '##'
+  - 6-8. 使用 JPA
+- - '##'
+  - 6-9. 使用 JPA
+- - '##'
+  - 6-10. 使用 JPA
+- - '##'
+  - 6-11. 使用 JPA
+- - '##'
+  - 6-12. 使用 JPA
+- - '##'
+  - 6-13. 使用 JPA
+- - '##'
+  - 6-14. 使用 JPA
+- - '##'
+  - 6-15. 使用 JPA
+- - '##'
+  - 6-16. 使用 JPA
+- - '##'
+  - 6-17. 使用 JPA
+- - '##'
+  - 6-18. 使用 JPA
+- - '##'
+  - 6-19. 使用 JPA
+- - '##'
+  - 6-20. 使用 JPA
+- - '##'
+  - 6-21. 使用 JPA
+- - '##'
+  - 6-22. 使用 JPA
+- - '##'
+  - 6-23. 使用 JPA
+- - '##'
+  - 6-24. 使用 JPA
+- - '##'
+  - 6-25. 使用 JPA
+- - '##'
+  - 6-26. 使用 JPA
+- - '##'
+  - 6-27. 使用 JPA
+- - '##'
+  - 6-28. 使用 JPA
+- - '##'
+  - 6-29. 使用 JPA
+- - '##'
+  - 6-30. 使用 JPA
+- - '##'
+  - 6-31. 使用 JPA
+- - '##'
+  - 6-32. 使用 JPA
+- - '##'
+  - 6-33. 使用 JPA
+- - '##'
+  - 6-34. 使用 JPA
+- - '##'
+  - 6-35. 使用 JPA
+- - '##'
+  - 6-36. 使用 JPA
+- - '##'
+  - 6-37. 使用 JPA
+- - '##'
+  - 6-38. 使用 JPA
+- - '##'
+  - 6-39. 使用 JPA
+- - '##'
+  - 6-40. 使用 JPA
+- - '##'
+  - 6-41. 使用 JPA
+- - '##'
+  - 6-42. 使用 JPA
+- - '##'
+  - 6-43. 使用 JPA
+- - '##'
+  - 6-44. 使用 JPA
+- - '##'
+  - 6-45. 使用 JPA
+- - '##'
+  - 6-46. 使用 JPA
+- - '##'
+  - 6-47. 使用 JPA
+- - '##'
+  - 6-48. 使用 JPA
+- - '##'
+  - 6-49. 使用 JPA
+- - '##'
+  - 6-50. 使用 JPA
+- - '##'
+  - 6-51. 使用 JPA
+- - '##'
+  - 6-52. 使用 JPA
+- - '##'
+  - 使用 Spring Data JDBC
+- - '##'
+  - 6-1. 使用 Spring Data JDBC
+- - '##'
+  - 6-2. 使用 Spring Data JDBC
+- - '##'
+  - 6-3. 使用 Spring Data JDBC
+- - '##'
+  - 6-4. 使用 Spring Data JDBC
+- - '##'
+  - 6-5. 使用 Spring Data JDBC
+- - '##'
+  - 6-6. 使用 Spring Data JDBC
+- - '##'
+  - 6-7. 使用 Spring Data JDBC
+- - '##'
+  - 6-8. 使用 Spring Data JDBC
+- - '##'
+  - 6-9. 使用 Spring Data JDBC
+- - '##'
+  - 6-10. 使用 Spring Data JDBC
+- - '##'
+  - 6-11. 使用 Spring Data JDBC
+- - '##'
+  - 6-12. 使用 Spring Data JDBC
+- - '##'
+  - 6-13. 使用 Spring Data JDBC
+- - '##'
+  - 6-14. 使用 Spring Data JDBC
+- - '##'
+  - 6-15. 使用 Spring Data JDBC
+- - '##'
+  - 6-16. 使用 Spring Data JDBC
+- - '##'
+  - 6-17. 使用 Spring Data JDBC
+- - '##'
+  - 6-18. 使用 Spring Data JDBC
+- - '##'
+  - 6-19. 使用 Spring Data JDBC
+- - '##'
+  - 6-20. 使用 Spring Data JDBC
+- - '##'
+  - 6-21. 使用 Spring Data JDBC
+- - '##'
+  - 6-22. 使用 Spring Data JDBC
+- - '##'
+  - 6-23. 使用 Spring Data JDBC
+- - '##'
+  - 6-24. 使用 Spring Data JDBC
+- - '##'
+  - 6-25. 使用 Spring Data JDBC
+- - '##'
+  - 6-26. 使用 Spring Data JDBC
+- - '##'
+  - 6-27. 使用 Spring Data JDBC
+- - '##'
+  - 6-28. 使用 Spring Data JDBC
+- - '##'
+  - 6-29. 使用 Spring Data JDBC
+- - '##'
+  - 6-30. 使用 Spring Data JDBC
+- - '##'
+  - 6-31. 使用 Spring Data JDBC
+- - '##'
+  - 6-32. 使用 Spring Data JDBC
+- - '##'
+  - 6-33. 使用 Spring Data JDBC
+- - '##'
+  - 6-34. 使用 Spring Data JDBC
+- - '##'
+  - 6-35. 使用 Spring Data JDBC
+- - '##'
+  - 6-36. 使用 Spring Data JDBC
+- - '##'
+  - 6-37. 使用 Spring Data JDBC
+- - '##'
+  - 6-38. 使用 Spring Data JDBC
+- - '##'
+  - 6-39. 使用 Spring Data JDBC
+- - '##'
+  - 6-40. 使用 Spring Data JDBC
+- - '##'
+  - 6-41. 使用 Spring Data JDBC
+- - '##'
+  - 6-42. 使用 Spring Data JDBC
+- - '##'
+  - 6-43. 使用 Spring Data JDBC
+- - '##'
+  - 6-44. 使用 Spring Data JDBC
+- - '##'
+  - 6-45. 使用 Spring Data JDBC
+- - '##'
+  - 6-46. 使用 Spring Data JDBC
+- - '##'
+  - 6-47. 使用 Spring Data JDBC
+- - '##'
+  - 6-48. 使用 Spring Data JDBC
+- - '##'
+  - 6-49. 使用 Spring Data JDBC
+- - '##'
+  - 6-50. 使用 Spring Data JDBC
+- - '##'
+  - 6-51. 使用 Spring Data JDBC
+- - '##'
+  - 6-52. 使用 Spring Data JDBC
+- - '##'
+  - 使用 Spring Data MongoDB
+- - '##'
+  - 6-1. 使用 Spring Data MongoDB
+- - '##'
+  - 6-2. 使用 Spring Data MongoDB
+- - '##'
+  - 6-3. 使用 Spring Data MongoDB
+- - '##'
+  - 6-4. 使用 Spring Data MongoDB
+- - '##'
+  - 6-5. 使用 Spring Data MongoDB
+- - '##'
+  - 6-6. 使用 Spring Data MongoDB
+- - '##'
+  - 6-7. 使用 Spring Data MongoDB
+- - '##'
+  - 6-8. 使用 Spring Data MongoDB
+- - '##'
+  - 6-9. 使用 Spring Data MongoDB
+- - '##'
+  - 6-10. 使用 Spring Data MongoDB
+- - '##'
+  - 6-11. 使用 Spring Data MongoDB
+- - '##'
+  - 6-12. 使用 Spring Data MongoDB
+- - '##'
+  - 6-13. 使用 Spring Data MongoDB
+- - '##'
+  - 6-14. 使用 Spring Data MongoDB
+- - '##'
+  - 6-15. 使用 Spring Data MongoDB
+- - '##'
+  - 6-16. 使用 Spring Data MongoDB
+- - '##'
+  - 6-17. 使用 Spring Data MongoDB
+- - '##'
+  - 6-18. 使用 Spring Data MongoDB
+- - '##'
+  - 6-19. 使用 Spring Data MongoDB
+- - '##'
+  - 6-20. 使用 Spring Data MongoDB
+- - '##'
+  - 6-21. 使用 Spring Data MongoDB
+- - '##'
+  - 6-22. 使用 Spring Data MongoDB
+- - '##'
+  - 6-23. 使用 Spring Data MongoDB
+- - '##'
+  - 6-24. 使用 Spring Data MongoDB
+- - '##'
+  - 6-25. 使用 Spring Data MongoDB
+- - '##'
+  - 6-26. 使用 Spring Data MongoDB
+- - '##'
+  - 6-27. 使用 Spring Data MongoDB
+- - '##'
+  - 6-28. 使用 Spring Data MongoDB
+- - '##'
+  - 6-29. 使用 Spring Data MongoDB
+- - '##'
+  - 6-30. 使用 Spring Data MongoDB
+- - '##'
+  - 6-31. 使用 Spring Data MongoDB
+- - '##'
+  - 6-32. 使用 Spring Data MongoDB
+- - '##'
+  - 6-33. 使用 Spring Data MongoDB
+- - '##'
+  - 6-34. 使用 Spring Data MongoDB
+- - '##'
+  - 6-35. 使用 Spring Data MongoDB
+- - '##'
+  - 6-36. 使用 Spring Data MongoDB
+- - '##'
+  - 6-37. 使用 Spring Data MongoDB
+- - '##'
+  - 6-38. 使用 Spring Data MongoDB
+- - '##'
+  - 6-39. 使用 Spring Data MongoDB
+- - '##'
+  - 6-40. 使用 Spring Data MongoDB
+- - '##'
+  - 6-41. 使用 Spring Data MongoDB
+- - '##'
+  - 6-42. 使用 Spring Data MongoDB
+- - '##'
+  - 6-43. 使用 Spring Data MongoDB
+- - '##'
+  - 6-44. 使用 Spring Data MongoDB
+- - '##'
+  - 6-45. 使用 Spring Data MongoDB
+- - '##'
+  - 6-46. 使用 Spring Data MongoDB
+- - '##'
+  - 6-47. 使用 Spring Data MongoDB
+- - '##'
+  - 6-48. 使用 Spring Data MongoDB
+- - '##'
+  - 6-49. 使用 Spring Data MongoDB
+- - '##'
+  - 6-50. 使用 Spring Data MongoDB
+- - '##'
+  - 6-51. 使用 Spring Data MongoDB
+- - '##'
+  - 6-52. 使用 Spring Data MongoDB
+- - '##'
+  - 使用 R2DBC
+- - '##'
+  - 6-1. 使用 R2DBC
+- - '##'
+  - 6-2. 使用 R2DBC
+- - '##'
+  - 6-3. 使用 R2DBC
+- - '##'
+  - 6-4. 使用 R2DBC
+- - '##'
+  - 6-5. 使用 R2DBC
+- - '##'
+  - 6-6. 使用 R2DBC
+- - '##'
+  - 6-7. 使用 R2DBC
+- - '##'
+  - 6-8. 使用 R2DBC
+- - '##'
+  - 6-9. 使用 R2DBC
+- - '##'
+  - 6-10. 使用 R2DBC
+- - '##'
+  - 6-11. 使用 R2DBC
+- - '##'
+  - 6-12. 使用 R2DBC
+- - '##'
+  - 6-13. 使用 R2DBC
+- - '##'
+  - 6-14. 使用 R2DBC
+- - '##'
+  - 6-15. 使用 R2DBC
+- - '##'
+  - 6-16. 使用 R2DBC
+- - '##'
+  - 6-17. 使用 R2DBC
+- - '##'
+  - 6-18. 使用 R2DBC
+- - '##'
+  - 6-19. 使用 R2DBC
+- - '##'
+  - 6-20. 使用 R2DBC
+- - '##'
+  - 6-21. 使用 R2DBC
+- - '##'
+  - 6-22. 使用 R2DBC
+- - '##'
+  - 6-23. 使用 R2DBC
+- - '##'
+  - 6-24. 使用 R2DBC
+- - '##'
+  - 6-25. 使用 R2DBC
+- - '##'
+  - 6-26. 使用 R2DBC
+- - '##'
+  - 6-27. 使用 R2DBC
+- - '##'
+  - 6-28. 使用 R2DBC
+- - '##'
+  - 6-29. 使用 R2DBC
+- - '##'
+  - 6-30. 使用 R2DBC
+- - '##'
+  - 6-31. 使用 R2DBC
+- - '##'
+  - 6-32. 使用 R2DBC
+- - '##'
+  - 6-33. 使用 R2DBC
+- - '##'
+  - 6-34. 使用 R2DBC
+- - '##'
+  - 6-35. 使用 R2DBC
+- - '##'
+  - 6-36. 使用 R2DBC
+- - '##'
+  - 6-37. 使用 R2DBC
+- - '##'
+  - 6-38. 使用 R2DBC
+- - '##'
+  - 6-39. 使用 R2DBC
+- - '##'
+  - 6-40. 使用 R2DBC
+- - '##'
+  - 6-41. 使用 R2DBC
+- - '##'
+  - 6-42. 使用 R2DBC
+- - '##'
+  - 6-43. 使用 R2DBC
+- - '##'
+  - 6-44. 使用 R2DBC
+- - '##'
+  - 6-45. 使用 R2DBC
+- - '##'
+  - 6-46. 使用 R2DBC
+- - '##'
+  - 6-47. 使用 R2DBC
+- - '##'
+  - 6-48. 使用 R2DBC
+- - '##'
+  - 6-49. 使用 R2DBC
+- - '##'
+  - 6-50. 使用 R2DBC
+- - '##'
+  - 6-51. 使用 R2DBC
+- - '##'
+  - 6-52. 使用 R2DBC
