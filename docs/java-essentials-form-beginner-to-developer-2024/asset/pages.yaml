@@ -1,0 +1,4683 @@
+- pgno: 0
+  md: '# # JAVA ESSENTIALS
+
+
+    From Beginner to Developer
+
+
+    ![](img/5e234c0d1d53d86faec1cf29e7398774_0_0.png)
+
+
+    PROGRAMMING HUB'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Java Essentials:
+
+
+    From Beginner to Developer
+
+
+    ![](img/5e234c0d1d53d86faec1cf29e7398774_1_0.png)
+
+
+    Java Essentials: From Beginner to Developer by Programming Hub'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Copyright © 2024 - All rights reserved by Rightsol Private Limited.
+
+    All rights reserved. No part of this book may be reproduced, stored in a retrieval
+    system, or transmitted in
+
+    any form or by any means, electronic, mechanical, photocopying, recording, scanning,
+    or otherwise, with-
+
+    out the prior written permission of the publisher, except in the case of brief
+    quotations embodied in critical
+
+    reviews and certain other noncommercial uses permitted by copyright law.
+
+
+    For permission requests, write to the publisher at the address below: Programming
+    Hub, Inc.
+
+    Platinum Palm Woods, Sector- 38, Nerul
+
+    Office No. 5 and 6, Plot No. 15 B
+
+    Navi Mumbai, Maharashtra 400706
+
+    India
+
+
+    www.programminghub.com
+
+
+    # How to Contact Us?
+
+
+    Please address comments and questions concerning this book to the given address:
+
+
+    Rightsol Private Limited
+
+    Platinum Palm Woods, Sector- 38, Nerul Office No. 5 and 6, Plot No. 15 B
+
+    Navi Mumbai, Maharashtra, 400706 India'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'Given platforms are reachable to us:
+
+    Facebook: https://www.facebook.com/programminghub/ LinkedIn: www.linkedin.com/company/pro-programming-hub
+    Twitter: twitter.com/prghub?lang=en
+
+    Instagram: https://www.instagram.com/programminghub_app_official/ To comment or
+    ask technical questions about this book, send email to: Hello@programminghub.io
+
+    For more information about our products, courses see our website at: https://programminghub.io/
+
+
+    # Chapter 1: Welcome to Java 8
+
+
+    +   -1.1 Discovering Java: Features and Architecture
+
+    -1.2 Writing Your First Java Program
+
+    -1.3 Exploring the Java Development Kit (JDK)
+
+    -1.4 Evolution of Java: Versions and Editions
+
+
+    # Chapter 2: Setting Up Your Java Environment 15
+
+
+    +   -2.1 Configuring System Environment Variables
+
+    -2.2 Integrating Build Tools with Your IDE
+
+    -2.3 Version Control Systems: Git and Java
+
+    -2.4 Debugging Java Applications
+
+
+    # Chapter 3: Fundamentals of Java Programming 23
+
+
+    +   -3.1 Understanding Variables and Data Types
+
+    -3.2 Delving into Operators and Expressions
+
+    -3.3 Conditional Statements for Decision Making
+
+    -3.4 Looping Mechanisms: for, while, and do-while Loops'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Chapter 4: Diving Deeper: Arrays and Strings 33
+
+
+    4.1 Working with Arrays
+
+
+    4.2 Manipulating Strings in Java
+
+
+    4.3 Advanced Array Concepts
+
+
+    4.4 String Class Functions and Operations
+
+
+    # Chapter 5: Methods and Modular Programming 44
+
+
+    5.1 Defining and Calling Methods
+
+
+    5.2 Parameters and Return Types
+
+
+    5.3 Method Overloading
+
+
+    5.4 Understanding Scope and Accessibility
+
+
+    # Chapter 6: Object-Oriented Programming Fundamentals 55
+
+
+    6.1 Introduction to Object-Oriented Programming
+
+
+    6.2 Working with Classes and Objects
+
+
+    6.3 Understanding Constructors
+
+
+    6.4 Pillars of OOP: Encapsulation, Inheritance, and Polymorphism
+
+
+    # Chapter 7: Advancing with OOP: Inheritance and Interfaces 68
+
+
+    7.1 Implementing Inheritance
+
+
+    7.2 Using ''super'' and Method Overriding
+
+
+    7.3 Interfaces and Abstract Classes
+
+
+    7.4 Polymorphism in Action
+
+
+    # Chapter 8: Exception Handling 82
+
+
+    8.1 Understanding Exceptions'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '8.2 try, catch, and finally Blocks
+
+
+    8.3 Creating Custom Exceptions
+
+
+    8.4 Best Practices in Exception Handling
+
+
+    # Chapter 9: Delving Into Java Collections Framework 93
+
+
+    9.1 Overview of Collections in Java
+
+
+    9.2 Lists, Sets, and Queues
+
+
+    9.3 Maps and Their Implementations
+
+
+    9.4 Collection Class Utilities
+
+
+    # Chapter 10: Exploring Java IO and NIO 104
+
+
+    10.1 Streams and File Handling
+
+
+    10.2 The NIO Package
+
+
+    10.3 Reading and Writing Files in Java
+
+
+    10.4 Understanding Byte Streams and Character Streams
+
+
+    # Chapter 11: Java Concurrency and Multithreading 112
+
+
+    11.1 Basics of Threads in Java
+
+
+    11.2 Synchronization and Inter-thread Communication
+
+
+    11.3 The Concurrency Utilities
+
+
+    11.4 Working with Executors and Thread Pools
+
+
+    # Chapter 12: Advanced OOP Concepts 123
+
+
+    12.1 Abstract Classes and Methods
+
+
+    12.2 Exploring Interfaces'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# 12.3 Inner Classes in Depth
+
+
+    # 12.4 Understanding Static and Final
+
+
+    # # Preface
+
+
+    Welcome to the structured and robust world of Java programming! This book, "Java
+    Essentials," is designed to be an illuminating beacon for students embarking on
+    their adventure into the realm of computer science and engineering. Intended particularly
+    for those in their formative years of study, this book aims to lay down a strong
+    foundation in Java programming, a language renowned for its reliability, efficiency,
+    and wide applicability across platforms.
+
+
+    Java stands as one of the pillars of modern software development, its importance
+    underscored by its role in building enterprise-level applications, Android apps,
+    web applications, and much more. The versatility and stability of Java make it
+    an indispensable tool for aspiring programmers and seasoned developers alike.
+    Whether your interest lie in web development, mobile app creation, software engineering,
+    or even in the burgeoning fields of big data and IoT, Java will prove to be a
+    steadfast ally across your journey.
+
+
+    As you progress through "Java Essentials," you will encounter a meticulously curated
+    curriculum designed to you to the fundamentals of Java programming in a gradual,
+    engaging, and comprehensive manner. Our approach to presenting these concepts
+    focuses on clarity, ensuring that readers can grasp the principles underpinning
+    Java programming with ease and apply them to real-world scenarios.
+
+
+    Picture yourself engaged in a lively discussion with an instructor, who brings
+    the world of Java to life through vivid examples, insightful anecdotes, and a
+    dash of humor. It is our firm belief that learning, especially the learning of
+    a language as powerful and nuanced as Java, should be a stimulating, enjoyable
+    adventure. Our aim is to kindle a sense of wonder and curiosity as you discover
+    the capabilities and intricacies of Java, making each step of your learning process
+    a memorable experience.
+
+
+    Sprinkled throughout the book are exercises, projects, and practical examples
+    designed to reinforce your understanding and encourage hands-experimentation.
+    These activities are your playground for applying the knowledge you''ve gained,
+    allowing you to dive deeper into Java''s rich ecosystem and discover its vast
+    potential. Remember, proficiency in programming comes with patience, persistence,
+    and plenty of practice.
+
+
+    While "Java Essentials" serves as your entry point into the world of Java programming,
+    it merely marks the beginning of an endless journey of learning and discovery.
+    The landscape of Java is vast, continually evolving and rich with opportunities
+    for exploration and growth. We encourage you to keep pushing the boundaries of
+    your knowledge, to explore the diverse libraries and frameworks that the Java
+    ecosystem has to offer, and to continuously seek out new challenges.
+
+
+    As we turn this page and set forth on our Java adventure, let us embrace the discipline,
+    creativity, and problem-solving spirit that Java programming cultivates. We are
+    excited to accompany you on this journey and look forward forward to witnessing
+    the remarkable applications and software you will create with Java.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Here''s to journey filled with innovation, discovery, and the sheer joy of
+    coding in Java. Welcome to "Java Essentials.
+
+
+
+    # Happy coding!
+
+
+    # Acknowledgements
+
+
+    We, at Programming Hub, are thrilled to present this book, "Java Essentials: From
+    Beginner to Developer," to the aspiring architects of the digital world. This
+    book stands as a testament to the collective efforts and unwavering dedication
+    of our team of experts in programming and instructional design.
+
+
+    First and foremost, we extend our deepest gratitude to all the engineers, developers,
+    and educators who have shared their knowledge, expertise, and passion. Their commitment
+    to excellence and their profound understanding of Java have been pivotal in creating
+    a comprehensive guide for learning Java.
+
+
+    Our appreciation also goes out to our esteemed authors, who have invested their
+    creativity and expertise in shaping the contents of this book. Their knack for
+    demystifying complex concepts, coupled with an engaging writing style and a dedication
+    to clarity, has rendered this book an invaluable resource for learners at various
+    stages of their journey.
+
+
+    We are thankful for the reviewers who provided constructive feedback and insights
+    throughout the book''s development. Their keen observations and meticulous attention
+    have greatly contributed to refining the content, ensuring both its accuracy and
+    effectiveness.
+
+
+    Our gratitude extends to the technical editors and proofreaders, who have carefully
+    scrutinized the manuscript to uphold the highest standards of quality and readability.
+
+
+    Further, we are indebted to the talented designers and illustrators who have visually
+    captivating graphs, diagrams, and illustrations have enlivened the pages of this
+    book. Their imaginative flair and artistic prowess have significantly enriched
+    the learning experience, rendering the material not only accessible but also memorable.
+
+
+    In addition, our heartfelt thanks goes to our readers, whose zeal for learning
+    and eagerness to master Java have been the inspiration behind this book.
+
+    Lastly, we acknowledge our entire team at Programming Hub, whose relentless pursuit
+    of excellence and dedication to enriching the learning experience has brought
+    this deavor to fruition.
+
+
+    We envisage that "Java Essentials: From Beginner to Developer" will spark your
+    curiosity, bolster your learning, and equip you with the competencies necessary
+    to navigate the vast landscape of Java programming. May your voyage through the
+    world of Java be marked by discovery, growth, and the exhilaration of unlocking
+    the vast potential this language holds.
+
+
+    Happy coding and may you harness the full power of Java in your programming endeavors!--Programming
+    Hub'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # Welcome to Java
+
+
+    # ## 1.1 Discovering Java: Features and Architecture
+
+
+    # ### 1.1.1 Introduction to Java: A Powerful Programming Language
+
+
+    Java is a versatile and powerful programming language that has maintained its
+    importance in the world of software development since its inception in 1995 by
+    Sun Microsystems (now owned by Oracle Corporation). Designed with the principle
+    of "Write Once, Run Anywhere" (WORA), Java enables developers to write code that
+    runs on any device that supports Java without the need for recompilation. Its
+    widespread adoption is evidence of its robustness, portability, and user-friendly
+    design.
+
+
+    # ### 1.1.2 Key Features of Java: Simple, Object-Oriented, and Secure
+
+
+    Java''s design principles were aimed at making it a simple, secure, and reliable
+    programming language. One of its foundational features is being Object-Oriented,
+    where the design focuses on data (objects) and the methods to manipulate these
+    objects, promoting a cleaner, more modular approach to coding. Security is another
+    cornerstone, with built-in mechanisms to minimize virus attacks and unauthorized
+    access to data and systems. Simplified syntax and an absence of low-level programming
+    functionalities make Java accessible to beginners while still powerful for experienced
+    developers.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 1.1.3 Understanding Java Architecture: JVM, JRE, and JDK
+
+
+    The architecture of Java speaks volumes about its portability and efficiency across
+    different platforms. It consists of:
+
+
+    +   - Java Virtual Machine (JVM): The runtime engine that executes Java byte codes,
+    ensuring the WORA principle. It abstracts the underlying OS and hardware from
+    Java applications.
+
+
+    +   - Java Runtime Environment (JRE): Includes JVM and the core libraries and
+    components needed to run Java programs. It does not include development tools
+    such as a compiler or debugger.
+
+
+    +   - Java Development Kit (JDK): The full suite for Java development, encompassing
+    JRE and development tools.
+
+
+    # 1.1.4 The Write Once, Run Anywhere (WORA) Philosophy
+
+
+    The WORA philosophy is central to Java''s identity, emphasizing the ability to
+    run Javacoded software on any device equipped with a JVM. This cross-platform
+    compatibility is a significant advantage, freeing developers from the constraints
+    of platform-specific coding and enabling a more streamlined development and deployment
+    process.
+
+
+    # 1.2 Writing Your First Java Program
+
+
+    # 1.2.1 Preparations: Setting Up Your Development Environment'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "Before diving into coding, it's essential to prepare your development environment.\
+    \ This process involves the installation of the Java Development Kit (JDK) and\
+    \ an Integrated Development Environment (IDE) of your choice, like IntelliJ IDEA,\
+    \ Eclipse, or NetBeans. Ensure that Java is correctly installed on your system\
+    \ by checking the version in the command line or with the command java -version.\
+    \ Setting up includes configuring environmental variables, such as PATH, to easily\
+    \ run Java programs from the command line.\n\n# 1.2.2 Hello, World!: Understanding\
+    \ the Structure of a Java Program\n\nEvery journey begins with a single step,\
+    \ and in Java, that step is the \"Hello, World!\" program. A simple \"Hello, World!\"\
+    \ program in Java demonstrates basic Java syntax and structure, including the\
+    \ declaration of the public class, the main method declaration, and the System.out.println\
+    \ statement to print output to the console. This program serves not just as a\
+    \ tradition in learning a new programming language, but as an introduction to\
+    \ the syntax and functioning of Java programs.\n\n```\npublic class HelloWorld\
+    \ {\n    public static void main(String[] args) {\n        System.out.println(\"\
+    Hello, World!\");\n    }\n}\n```\n\n# 1.2.3 Compiling and Running Your First Program"
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'Java programs are written in plain text, so feel free to use any text editor
+    to write your code. To turn your Java program into something that can be run,
+    you first need to compile it into bytecode using the Java compiler (javac). This
+    process takes your .java file and creates a .class file which the Java Virtual
+    Machine (JVM) can execute. The basic commands to compile and run your program
+    in the command line are:
+
+
+    ```
+
+    javac HelloWorld.java
+
+    java HelloWorld
+
+    ```
+
+
+    The first command compiles the HelloWorld.java source file into a HelloWorld.class
+    bytecode file. The second command runs the compiled bytecode on the JVM.
+
+
+    # 1.2.4 Common Errors and Troubleshooting
+
+
+    When starting out, it''s typical to run into errors. The most common types include:
+
+
+    +   - Syntax errors: Missing semicolons, unpaired braces, or misspelled keywords.
+
+
+    +   - Runtime errors: Errors that occur during the execution of your program,
+    often due to logic errors such as dividing by zero.
+
+
+    +   - Compilation errors: Issues found during the compilation process, typically
+    due to syntax errors or issues with the classpath.
+
+
+    Troubleshooting involves carefully reading error messages, which often give hints
+    as to what and where the problem might be, and incrementally testing your program
+    by compiling and running frequently after making changes.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "# 1.3 Exploring the Java Development Kit (JDK)\n\n# 1.3.1 What Is the JDK?\
+    \ A Comprehensive Overview\n\nThe Java Development Kit (JDK) is a full-featured\
+    \ software development kit for developing Java applications and applets. It encompasses\
+    \ a wide array of tools necessary for coding, debugging, and running Java programs.\
+    \ The JDK is essentially what every developer needs to begin crafting applications\
+    \ in Java. It includes the Java Runtime Environment (JRE), which is required to\
+    \ run Java applications and applets, as well as compilers, debuggers, and tools\
+    \ to convert your code into a format that the Java Virtual Machine (JVM) can execute.\n\
+    \n# 1.3.2 Installing the JDK: Step-by-Step Instructions\n\nTo make your machine\
+    \ ready for Java programming, follow these steps to install the JDK:\n\n+   1.\
+    \ Download the JDK:\n   - Visit the official Oracle website or an OpenJDK variant\
+    \ and choose the version of JDK suitable for your operating system.\n\n+   2.\
+    \ Run the Installer:\n   - Execute the downloaded installer file. Follow the on-screen\
+    \ instructions. This typically involves agreeing to the license agreement and\
+    \ selecting an installation path."
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# 3. Set Environment Variables:
+
+
+    +   - To use the JDK from the command line, you need to set the PATH environment
+    variable to include the bin directory of the JDK installation. On Windows, you
+    might also need to set the JAVA_HOME variable to the JDK installation directory.
+
+
+    # 4. Verify Installation:
+
+
+    +   - Open a command prompt or terminal and type java -version and javac -version.
+    If the JDK is installed correctly, you should see the version of Java and the
+    the
+
+
+    Java compiler printed respectively.
+
+
+    # 1.3.3 Key Components of the JDK
+
+
+    The JDK is more than just a compiler; it includes several key components essential
+    for Java development:
+
+
+    +   - javac: The Java compiler converts source code into Java bytecode.
+
+
+    +   - java: The Java launcher tool executes your Java program''s bytecode on the
+    JVM. - jar: The Java Archiver combines multiple files into a single JAR (Java
+    ARchive)
+
+
+    file.
+
+
+    +   - javadoc: The documentation generator automatically produces HTML format
+    documentation from Java source code comments.
+
+
+    +   - debugger: Tools for debugging Java programs, both in the command line and
+    integrated into IDEs.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'JVM (Java Virtual Machine): A crucial part of the runtime environment for executing
+    Java bytecode.
+
+
+    # 1.3.4 Navigating the JDK Documentation
+
+
+    The JDK documentation is an invaluable resource for developers. It covers every
+    aspect of Java, from a comprehensive overview of the platform to detailed descriptions
+    of Java''s extensive API (Application Programming Interface). Here are a few tips
+    for navigating the JDK documentation:
+
+
+    +   • Start with the Overview: The documentation overview page provides a summary
+    of what''s included and can help you find the information you need.
+
+
+    +   • API Documentation: Familiarize yourself with the structure of the API documentation.
+    It''s organized into packages, classes, and interfaces with detailed descriptions
+    for each method and field.
+
+
+    +   • Tutorials and Guides: Beyond the reference material, the JDK documentation
+    includes tutorials, guides, and articles on more complex topics or specific features.
+
+
+    +   • Example Code: Look out for example code snippets within the documentation,
+    which can help clarify usage of various classes and methods.
+
+
+    Understanding the JDK and its documentation is pivotal for effective Java development.
+    With a proper grip on these tools and resources, developers can tackle virtually
+    any programming challenge in Java.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# 1.4 Evolution of Java: Versions and Editions
+
+
+    # 1.4.1 The Historical Journey of Java
+
+
+    Java has come a long way since its inception. Initially conceived as a project
+    named "Oak" by James Gosling at Sun Microsystems in 1991, it was designed for
+    use in digital devices like set-top boxes and televisions. However, it was the
+    rise of the internet that provided the perfect environment for Java to flourish.
+    Officially released by Sun Microsystems as Java 1.0 in 1995, its promise of "Write
+    Once, Run Anywhere" captured the imagination of developers worldwide. Over the
+    years, Java has undergone significant evolutions, consistently adding new features
+    and improvements with each version release.
+
+
+    # 1.4.2 Java SE vs Java EE vs Java ME: Understanding the Differences
+
+
+    Java technology is divided into several editions, each targeting different application
+    environments and needs:
+
+
+    +   * Java SE (Standard Edition): The foundation for Java programming, providing
+    the core functionality of the Java programming language. It includes basic APIs
+    for networking, UI, database access, security, and more.
+
+
+    +   * Java EE (Enterprise Edition): Builds on Java SE and adds APIs for enterprise
+    features such as distributed computing and web services. Java EE is designed for
+    developing large-scale, multi-tiered, scalable, reliable, and secure network applications.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'Java ME (Micro Edition): Optimized for mobile and embedded devices with limited
+    resources, Java ME provides a robust, flexible environment for applications running
+    on these devices.
+
+
+    # 1.4.3 Highlights and Features from Java 1 to the Latest Version
+
+
+    Java''s evolution is marked by significant additions and improvements with each
+    version. Here are some highlights:
+
+
+    +   - Java 1.0 (1996): The beginning, introducing the Java language with features
+    like garbage collection and the JVM for portability.
+
+    - Java 5 (2004): Introduced major enhancements, including generics, metadata annotations,
+    the enhanced loop, autoboxing/unboxing, and the concurrency utilities.
+
+    - Java 8 (2014): A landmark release that introduced lambda expressions, the stream
+    API for bulk data operations on collections, and new date/time API.
+
+    - Java 11 (2018): The first long-term support (LTS) version after Java 8, bringing
+    new features like local-variable syntax for lambda parameters, HTTP Client API,
+    and more.
+
+    - Java 17 (2021): The latest LTS version as of my last update, introducing sealed
+    classes, pattern matching for instanceof, and deprecating the Applet API.
+
+
+    # 1.4.4 How to Keep Up-to-Date with Java Developments
+
+
+    Stay informed about Java developments through:
+
+
+    +   - Official Java Blog and Mailing Lists: Subscribe to receive the latest news
+    and updates.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '+   - Java Community Process (JCP): Participate or follow the JCP to see future
+    directions and proposals for Java.
+
+    - Developer Conferences: Attend Java conferences, such as Oracle One or local
+    Java user group meetings.
+
+    - Follow Experts and Influencers: Social media platforms and personal blogs of
+    Java thought leaders can be a great source of insights.
+
+
+    # Setting Up Your Java Environment
+
+
+    # 2.1 Configuring System Environment Variables
+
+
+    # 2.1.1 Introduction to Environment Variables for Java
+
+
+    Environment variables in computing are dynamic values that affect the behavior
+    of running processes on a computer. They can specify data like the location of
+    system files, or settings for software applications. For Java development, setting
+    environment variables is crucial because they direct where the Java compiler (javac)
+    and Java runtime (java) can be found. This allows developers to run Java commands
+    from the command line from any directory without having to specify the full path
+    to the Java executables.
+
+
+    # 2.1.2 Setting JAVA_HOME and Updating the PATH
+
+
+    Setting JAVA_HOME: The JAVA_HOME environment variable points to the installation
+    directory of the JDK. This variable is used by applications to find the Java libraries.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '+   1. Right-click on ''My Computer'' and select ''Properties''.
+
+
+    +   2. Navigate to ''Advanced system settings'' > ''Environment Variables''.
+
+
+    +   3. Click ''New'' to create a new environment variable. Name it JAVA_HOME and
+    set its value to the JDK installation path (e.g., C:\Program Files\Java\jdk-17).
+    ● macOS/Linux:
+
+
+    +   1. Open the Terminal.
+
+
+    +   2. Edit your shell profile file (.bash_profile, .bashrc, .zshrc etc.). For
+    example, you can open it with nano ~/.bashrc.
+
+
+    +   3. Add this line: export JAVA_HOME=$(/usr/libexec/java_home).
+
+
+    +   4. Save the changes and close the editor.
+
+
+    Updating the PATH: To easily run Java executables from the command line, add the
+    JDK''s bin directory to the system PATH.
+
+
+    +   ● Windows: Follow the steps to get to the ''Environment Variables'' as above,
+    then find the PATHvariable and select ''Edit''. Append the path to the JDK''s
+    bin directory (e.g., C:\Program Files\Java\jdk-17).
+
+
+    +   ● macOS/Linux: Open the shell profile file as before and add the line: export
+    PATH=$PATH:$JAVA_HOME/bin.
+
+
+    # 2.1.3 Verifying the Configuration in Windows, macOS, and Linux
+
+
+    After setting JAVA_HOME and updating the PATH, verify the configuration:'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '+   - Open a new terminal or command prompt (changes might not apply to already
+    opened terminals).
+
+    - Type `java -version` and `javac -version`. If the installations were successful,
+    you should see the installed Java versions for each command.
+
+
+    Windows:
+
+
+    +   - If the configuration was incorrect, java or javac commands might be unrecognized.
+    Double-check the environment variables in the system settings.
+
+
+    macOS/Linux:
+
+
+    +   - Ensure you''ve saved the changes to your profile file and sourced the file
+    with `source ~/.bashrc` or reopened the terminal. If the commands are not recognized,
+    review the paths set in the environment variables.
+
+
+    Correctly configuring these environment variables simplifies Java development,
+    making it easy to compile and run Java applications from any directory via the
+    command line.
+
+
+    # 2.2 Integrating Build Tools with Your IDE
+
+
+    # 2.2.1 Overview of Build Tools: Maven and Gradle
+
+
+    Maven and Gradle are two of the most popular build automation tools used in Java
+    development. They help in project creation, dependency management, and build lifecycle
+    management.
+
+
+    +   - Maven is known for its use of XML-based pom.xml (Project Object Model) files
+    to'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'define project structures and dependencies. It follows a convention-overconfiguration
+    approach, which simplifies project setup but can be less flexible for complex
+    configurations.
+
+
+    +   - Gradle, on the other hand, uses a Groovy-based DSL (Domain Specific Language)
+    for its configuration scripts (build.gradle files), offering more programmability
+    and flexibility. Gradle''s performance is often cited as a benefit, particularly
+    its incremental builds feature that makes it faster than Maven in many cases.
+
+
+    Both tools integrate with popular IDEs like Eclipse and IntelliJ IDEA, providing
+    developers with powerful and efficient development environments.
+
+
+    # 2.2.2 Setting Up Maven in Eclipse and IntelliJ IDEA
+
+
+    Maven in Eclipse:
+
+
+    +   1. Eclipse comes with Maven integration in most recent editions. To create
+    a new Maven project, go to File > New > Other... > Maven > Maven Project.
+
+    2. Follow the wizard to specify the group ID, artifact ID, and archetype for your
+    project.
+
+
+    Maven in IntelliJ IDEA:
+
+
+    +   1. Open IntelliJ IDEA, navigate to File > New > Project.
+
+    2. Choose Maven from the options on the left. IntelliJ IDEA will prompt you to
+    specify the project''s SDK (Software-Development Kit) and other Maven-specific
+    parameters, like GroupId and ArtifactId.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'Both IDEs automatically handle the dependency resolution based on the pom.xml
+    file without needing manual downloads and library configurations.
+
+
+    # 2.2.3 Configuring Gradle in Your Java Project
+
+
+    Setting Up Gradle does not substantially differ across IDEs since both Eclipse
+    and IntelliJ IDEA offer good support for Gradle.
+
+
+    In Eclipse:
+
+
+    +   1. You''ll need to install the Buildship Gradle Integration plugin if it isn''t
+    already included in your Eclipse edition. This can be done via the Eclipse Marketplace.
+
+    2. To create a new Gradle project, go to File > New > Other... > Gradle > Gradle
+    Project and follow the wizard.
+
+
+    In IntelliJ IDEA:
+
+
+    +   1. IntelliJ IDEA comes with out-of-the-box support for Gradle. To start a
+    new Gradle project, simply navigate to File > New > Project, then select Gradle
+    from the left sidebar.
+
+    2. IntelliJ IDEA will ask you to define the GroupID, ArtifactId, and other options
+    similar to setting up a Maven project.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'For both Maven and Gradle, after setting up your project, the IDEs will show
+    the project structure based on the build configuration (pom.xml or build.gradle)
+    allowing you to run, debug, and manage dependencies through the IDE''s UI.
+
+
+    Incorporating Maven or Gradle into your development environment significantly
+    enhances project management, dependency resolution, and build automation, fitting
+    seamlessly into the IDEs used by Java developers.
+
+
+    # 2.3 Version Control Systems: Git and Java
+
+
+    # 2.3.1 Introduction to Git for Java Developers
+
+
+    For Java developers, understanding and utilizing version control systems (VCS)
+    is indispensable, with Git being the most widely adopted VCS in today''s development
+    landscape. Git helps manage code changes, collaborate with other developers, and
+    maintain a historical record of project evolution. It''s essential for tasks ranging
+    from simple code storage to complex cooperative development projects.
+
+
+    Git operates on the principle of ''snapshots'', where each commit represents a
+    snapshot of your project at a specific point in time. This model allows for powerful
+    branch and merge operations, enabling parallel development streams without interference.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# 2.3.2 Cloning Your First Java Project with Git
+
+
+    Cloning is the process of creating a local copy of a Git repository. To clone
+    your first Java project:
+
+
+    +   1. Find a Repository: Locate the URL of the Git repository you intend to clone.
+    This could be on GitHub, GitLab, Bitbucket, or any Git server.
+
+
+    +   2. Open Terminal or Command Prompt: Change your directory (cd) to where you
+    want the repository to be cloned into.
+
+
+    +   3. Clone the Repository: Use the git clone command followed by the URL of
+    the repository.
+
+
+    For example,
+
+
+    +   4. Copy code
+
+
+    ```
+
+    git clone https://github.com/example/project.git
+
+    ```
+
+
+    +   5. This command downloads the project to a local folder named after the project.
+
+
+    +   6. Open with an IDE: Open the cloned directory with your favorite IDE (e.g.,
+    Eclipse or IntelliJ IDEA)
+
+
+    as an existing project. Most IDEs will recognize the Git repository automatically
+    and enable VCS support.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# 2.3.3 Committing and Pushing Changes in Java Projects
+
+
+    After making changes to your Java project, you''ll likely want to save these changes
+    to your Git repository.
+
+    Committing and pushing are two primary operations to do this.
+
+    Committing Changes:
+
+
+    +   1. Review Changes: Using git status, you can see which files have been changed.
+    To see the specific changes in detail, use git diff.
+
+    2. Stage Files for Commit: Before committing, you need to stage the changes using
+    git add. You can stage all changed files with git add . or individual files with
+    git add filename.
+
+    3. Commit: Commit your staged changes with git commit -m "Your commit message".
+    The commit message should be a brief description of the changes.
+
+
+    Pushing Changes:
+
+
+    +   1. If you''re working on a cloned repository, it''s linked to a remote repository.
+    Push your committed changes to the remote repository using git push.
+
+    2. The first time you push, you may need to set the upstream branch with git push
+    --upstream origin branch_name, replacing branch_name with your current branch.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'By mastering the basics of cloning, committing, and pushing within Git, Java
+    developers can effectively manage and collaborate on software projects, ensuring
+    that changes are safely stored and shared among team members.
+
+
+    # 2.4 Debugging Java Applications
+
+
+    # 2.4.1 Basics of Debugging in Java
+
+
+    Debugging is a critical phase in the development process, allowing developers
+    to diagnose and fix errors in their Java applications. It involves identifying
+    the source of bugs, understanding why they''re occurring, and determining the
+    best way to correct them. Effective debugging can save time and effort, ensuring
+    the application runs smoothly and as intended.
+
+
+    Java offers a range of debugging tools and IDE features, such as stack trace analysis,
+    breakpoints, step execution, and variable inspection, to facilitate this process.
+    Understanding these tools and how to leverage them can significantly improve a
+    developer''s ability to quickly diagnose and solve problems.
+
+
+    # 2.4.2 Setting Breakpoints and Inspecting Variables
+
+
+    Setting Breakpoints: Breakpoints temporarily halt the execution of your program
+    at a specific line of code. This allows you to inspect the state of the program
+    at that moment, which is invaluable for diagnosing-'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'sues. To set a breakpoint in most Java IDEs:
+
+
+    +   1. Open the source code where you wish to pause execution.
+
+    2. Click on the left margin next to the line number or directly on the code line.
+    A marker or a highlighted line indicates a breakpoint has been set.
+
+    3. Run your program in debug mode (usually by clicking a "bug" icon or choosing
+    "Debug" from the run menu). Execution will pause at the breakpoint.
+
+
+    Inspecting Variables: While paused at a breakpoint, you can inspect the current
+    values of variables:
+
+
+    +   1. Most IDEs will show a list of variables and their values in a debugging
+    window.
+
+    2. You can often hover over variables in the code editor to see their values pop
+    up.
+
+    3. Some IDEs allow you to modify the value of variables during debugging to test
+    how changes affect program execution.
+
+
+    # 2.4.3 Common Debugging Scenarios and Solutions
+
+
+    Scenario 1: Null Pointer Exception
+
+    ● Problem: Attempting to use an object reference that has the null value. ● Solution:
+    Use IDE debugging tools to identify where the null value originates and ensure
+    that object references are properly initialized before use.
+
+
+    Scenario 2: Array Index Out of Bounds'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '* Problem: Trying to access an array element with an index that exceeds the
+    array''s size.
+
+
+    * Solution: Check the array''s length using the .length property before accessing
+    its elements. Use breakpoints to track the value of the index variable throughout
+    the execution.
+
+
+    # Scenario 3: Infinite Loops
+
+
+    * Problem: A loop that never terminates because the loop condition never becomes
+    false.
+
+
+    * Solution: Place a breakpoint inside the loop and step through each iteration.
+    Inspect changes to variables that are part of the loop''s condition to identify
+    why the condition never becomes false.
+
+
+    # Scenario 4: Concurrency Issues
+
+
+    * Problem: Issues arising from multiple threads accessing shared resources, leading
+    to unpredictable behaviors.
+
+
+    * Solution: Debugging concurrency issues can be tricky since they may not occur
+    in every run. Place breakpoints at critical sections and inspect thread states
+    and shared resources. Consider using synchronized blocks or locks to manage access
+    to shared resources.
+
+
+    Debugging is both an art and a science, requiring patience, attention to detail,
+    and a systematic approach. By familiarizing yourself with debugging tools and
+    common debugging scenarios, you can become more effective at diagnosing and fixing
+    issues in Java applications.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Fundamentals of Java Programming
+
+
+    # 3.1 Understanding Variables and Data Types
+
+
+    # 3.1.1 What are Variables?
+
+
+    Introduction to Variables in Java Variables in Java are basic containers that
+    store data values during the execution of a program. They are called variables
+    because the data contained can change (or vary) throughout program execution.
+    In Java, each variable has a specific type, determining the size and layout of
+    the variable''s memory, the range of values that can be stored, and the set of
+    operations that can be applied to the variable.
+
+
+    Variable Naming Conventions Java follows certain conventions and rules for naming
+    variables:
+
+
+    +   * Variable names should start with a lowercase letter and follow the camelCase
+    convention.
+
+    * They can contain letters, digits, underscores, and dollar signs, but cannot
+    begin with a digit.
+
+    * It''s important to choose meaningful variable names that reflect the variable''s
+    purpose.
+
+    * Java keywords cannot be used as variable names.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# ### 3.1.2 Primitive Data Types
+
+
+    Overview of Primitive Types Primitive data types are predefined by the language
+    and named by a keyword. They represent the basic types of data.
+
+    Numeric Data Types: int, short, short, long, byte
+
+
+    +   - byte: A very small integer from -128 to 127. Useful for saving memory in
+    large arrays.
+
+    - short: A small integer from -32,768 to 32,767.
+
+    - int: The default integer type with a range from -2^31 to 2^31-1.
+
+    - long: A large integer from -2^63 to 2^63-1, used when int is not large enough.
+    Floating-Point Types: float, double
+
+
+    +   - float: A single-precision 32-bit floating-point. It should never be used
+    for precise values, such as currency.
+
+    - double: A double-precision 64-bit IEEE 754 floating-point. It is generally the
+    default choice for decimal values.
+
+
+    Boolean and Char Types
+
+
+    +   - boolean: This type represents one bit of information but its "size" isn''t
+    something that''s precisely defined. Values are `true` or `false`.
+
+    - char: A single 16-bit Unicode character. It has a minimum value of ''\u0000''
+    (or 0) and a maximum value of ''\uffff'' (or 65,535 inclusive).'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# 3.1.3 Reference Data Types
+
+
+    Understanding Reference Variables Reference variables are used to refer to objects.
+    Unlike primitive data types that store the actual values, reference variables
+    store the memory address or reference to the actual data.
+
+
+    Strings and Arrays
+
+
+    +   - Strings: The string class is not a primitive data type but a reference type
+    that can store sequences of characters.
+
+
+    +   - Arrays: Arrays are reference types that store multiple items of the same
+    type. Both primitives and objects can be stored in arrays.
+
+
+    # 3.1.4 Type Conversion and Casting
+
+
+    Implicit vs Explicit Casting
+
+
+    +   - Implicit Casting (Widening Conversion): This happens when the source type
+    has smaller size than the destination type. For instance, assigning an int to
+    a long is done implicitly by Java.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'Explicit Casting (Narrowing Conversion): This is needed when you''re assigning
+    a larger sized type to a smaller sized type, like a double to an int. It requires
+    the use of a cast operator.
+
+
+    Converting Between Data Types Conversion between data types may be necessary to
+    perform operations involving values of different types. When converting, be mindful
+    of the potential for data loss (with narrowing conversions) and ensure that conversions
+    are necessary and intentional to maintain the accuracy and integrity of your data.
+
+
+    # 3.2 Delving into Operators and Expressions
+
+
+    # 3.2.1 Arithmetic Operators
+
+
+    Basic Operations: Addition, Subtraction, etc. Java provides several arithmetic
+    operators to perform common mathematical operations:
+
+
+    +   + (Addition): Combines two values.
+
+    - (Subtraction): Subtracts one value from another.
+
+    * (Multiplication): Multiplies two values.
+
+    * / (Division): Divides one value by another. If both operands are integers, the
+    result will also be an integer, discarding any remainder.
+
+    * % (Modulus Operator): Returns the remainder of a division operation.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'Modulus Operator The modulus operator, represented by %, is particularly useful
+    for finding remainders, determining if a number is even or odd (by modulus 2),
+    and cycling through values with wraparound at a specific threshold.
+
+
+    # 3.2.2 Relational and Logical Operators
+
+
+    Comparing Values Relational operators compare two values and determine the relationship
+    between them. The primary relational operators are:
+
+
+    +   * == (equals)
+
+    * != (not equals to)
+
+    * > (greater than)
+
+    * < (less than)
+
+    * >= (greater than or equal to) • <= (less than or equal to)
+
+
+    These operators return a boolean result (true or false). Combining Conditions:
+    AND, OR, NOT Logical operators are used to form more complex conditional expressions:
+
+
+    +   * && (Logical AND): Returns true only if both operands are true.
+
+    * || (Logical OR): Returns true if at least one of the operands is true. • ! (Logical
+    NOT): Inverts the value of a boolean, turning true to false and vice versa.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# ### 3.2.3 Assignment Operators
+
+
+    Simple Assignment The simple assignment operator = is used to assign the value
+    on its right to the operand on its left.
+
+
+    Compound Assignment Operators Compound assignment operators perform an operation
+    and assignment in one step. Examples include +=, -=, *=, /= and %=. For example,
+    x += y is equivalent to x = x + y.
+
+
+    # ### 3.2.4 Unary Operators, Ternary Operator, and Operator Precedence
+
+
+    Increment and Decrement The increment (++) and decrement (--) increase or decrease
+    a variable''s value by one, respectively. They can be used both as prefix and
+    postfix forms, which can affect the timing of the operation within an expression.
+
+
+    Using the Ternary Operator for Conditional Assignment The ternary operator ? :
+    offers a shortcut for an if-else statement and is used for conditional assignments.
+    The syntax is condition ? valueTrue : valueFalse.
+
+
+    Understanding Operator Precedence and Associativity Operator precedence determines
+    the grouping of terms in an expression. This affects how an expression is evaluated.
+    Certain operators take precedence over others; for example, multiplication takes
+    precedence over addition and subtraction. Associativity defines the direction
+    of execution, either left-to-right or right-to-left, which is crucial when multiple
+    operations occur in an expression with operators of the same precedence level.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "#  3.3 Conditional Statements for Decision Making\n\n#  3.3.1 The if Statement\n\
+    \nBasic if Structure The if statement is one of the most fundamental control flow\
+    \ statements in Java. It allows the program to perform different actions based\
+    \ on whether a condition is true or false. The basic syntax looks like this:\n\
+    \n```\nif (condition) {\n  // block of code to be executed if the condition is\
+    \ true\n}\n```\n\nif-else and if-else-if Ladders For situations where you need\
+    \ to perform one action when the condition is true and another when it's false,\
+    \ the if-else structure is used:\n\n```\nif (condition) {\n  // block of code\
+    \ to be executed if the condition is true\n} else {\n  // block of code to be\
+    \ executed if the condition is false\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "For multiple conditions, an if-else-if ladder is useful:\n\n# 3.3.2 Switch\
+    \ Statement\n\nSyntax and Use Cases The switch statement provides an easy way\
+    \ to dispatch execution to different parts of code based on the value of an expression.\
+    \ Unlike if-else-if ladders that evaluate conditions in sequence, the switch statement\
+    \ executes one case based on match:\n\n```\nswitch(expression) {\n  case value1:\n\
+    \    // code block to be executed when expression matches value1\n    break;\n\
+    \  case value2:\n    // code block to be executed when expression matches value2\n\
+    \    break;\n  // additional cases\n  default:\n    // code block to be executed\
+    \ if no cases are matched\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "Switch cases can work with byte, short, char, and int primitive data types,\
+    \ enumerated types (Java's enum types), the string class, and a few special classes\
+    \ that wrap certain primitive types: Character, Byte, Short, and Integer.\n\n\
+    New switch Expressions in Java Java introduced enhanced switch expressions that\
+    \ simplify usage and control flow in switch statements by allowing multiple case\
+    \ labels, eliminating the need for break statements, and enabling the return of\
+    \ a value directly from switch expressions:\n\n# 3.3.3 Conditional Logic in Practice\n\
+    \nCombining Conditions Logical operators (&&, ||, !) allow for the combination\
+    \ of multiple conditions within if statements, creating more complex and specific\
+    \ control paths:\n\n```\nif (condition1 && condition2) {\n  // code to execute\
+    \ if both condition1 and condition2 are true\n}\n```\n\nNesting Conditional Statements\
+    \ Conditional statements can be nested inside one another to further refine decision-making\
+    \ paths. This involves putting an if or switch statement inside another if or\
+    \ switch statement:"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\nif (condition1) {\n    // code to execute if condition1 is true\n    if\
+    \ (condition2) {\n        // code to execute if both condition1 and condition2\
+    \ are true\n    }\n}\n```\n\nProper use of conditional statements enables developers\
+    \ to write flexible and scalable Java applications, capable of making decisions\
+    \ and executing different blocks of code based on various conditions.\n\n# 3.4\
+    \ Looping Mechanisms: for, while, and do-while Loops\n\n# 3.4.1 The for Loop\n\
+    \nSyntax and Basic Use The for loop in Java is used to execute a block of code\
+    \ a fixed number of times. The syntax for a basic for loop is as follows:\n\n\
+    ```\nfor(initialization; condition; update) {\n    // block of code to be executed\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "+   - Initialization: Typically used to initialize a counter variable.\n- Condition:\
+    \ The loop runs as long as this condition is true.\n- Update: Executed after each\
+    \ iteration; often used to update the counter variable.\n\nEnhanced for-each Loop\
+    \ for Arrays and Collections Java 5 introduced an enhanced for loop, making it\
+    \ easier to iterate through elements in arrays and collections: \n\n```\nfor(dataType\
+    \ item : arrayOrCollection) {\n    // block of code to be executed for each item\n\
+    }\n```\n\nThis form eliminates the need to maintain an index or use iterators\
+    \ directly.\n\n# 3.4.2 The while Loop\n\nWhen to Use while Loops A while loop\
+    \ should be used when the number of iterations is not known before the loop starts.\
+    \ The loop continues as long as the specified condition evaluates to true.\n\n\
+    ```\nwhile(condition) {\n    // block of code to be executed\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "Infinite Loops and Loop Control An infinite loop occurs when the loop condition\
+    \ never turns false. It's sometimes used intentionally with a break statement\
+    \ to exit the loop based on a condition inside the loop body.\n\n# 3.4.3 The do-while\
+    \ Loop\n\nDifferences from while Loop The do-while loop is similar to the while\
+    \ loop, with the main difference being that the do-while loop is guaranteed to\
+    \ execute at least once. This is because the condition is checked after the loop\
+    \ body is executed.\n\n```\ndo {\n  // block of code to be executed\n} while(condition);\n\
+    ```\n\nPractical Examples of Usage Do-while loops are particularly useful when\
+    \ the loop body needs to be executed at least once before the condition can be\
+    \ evaluated, such as when displaying a menu in a user input loop.\n\n# 3.4.4 Loop\
+    \ Control Statements\n\nbreak and continue in Loops"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '- The `break` statement is used to exit from the loop immediately, skipping
+    any remaining iterations.
+
+    - The `continue` statement skips the current iteration and proceeds with the next
+    iteration of the loop.
+
+
+    **Nested Loops** Nested loops are loops inside loop. They are commonly used for
+    iterating over multi-dimensional arrays, among other tasks.
+
+    Loop control statements such as `break` and `continue` can be applied within nested
+    loops, affecting the flow of both inner and outer loops. Accurate control and
+    understanding of loops are essential for creating efficient Java programs that
+    handle repetitive tasks effectively.
+
+
+    # # Chapter 4: Diving Deeper: Arrays and Strings
+
+
+    # ## 4.1 Working with Arrays
+
+
+    # ### 4.1.1 Introduction to Arrays: Definition and Declaration
+
+
+    An array is is a container object that holds a fixed number of values of a single
+    type. The length of an array is established at the time of creation and cannot
+    be changed. Arrays in Java are zero-based, meaning that the initial element of
+    an array is accessed at the index 0.
+
+
+    To declare an array in Java, you specify the type of elements it will hold, followed
+    by square brackets, and then the array''s name:'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '```
+
+    int[] myArray;
+
+    String[] myString;
+
+    ```
+
+
+    You can also place the brackets after the array''s name:
+
+
+    ```
+
+    int myArray[];
+
+    String myString[];
+
+    ```
+
+
+    However, the former declaration is more commonly used and preferred for consistency.
+
+
+    # 4.1.2 Initializing and Accessing Array Elements
+
+
+    To allocate memory for the array and initialize it, you use the new keyword followed
+    by the type of the array''s elements and its size:
+
+
+    ```
+
+    myArray = new int[10]; // Initializes an array that can hold ten integers
+
+    ```
+
+
+    Arrays can also be initialized with values upon declaration by enclosing the values
+    in braces {}:
+
+    Accessing array elements is straightforward; you use the array name followed by
+    the index of the element in square brackets:
+
+
+    ```
+
+    int firstElement = myArray[0]; // Access the first element
+
+    myArray[4] = 20; // Modify the value of the fifth element
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "# 4.1.3 Iterating Over Arrays\n\nTo perform operations on each element of an\
+    \ array, you can iterate over the array using a loop. The for loop is commonly\
+    \ used for this purpose:\n\n```\nfor(int i = 0; i < myIntVar.length; i++) {\n\
+    \    System.out.println(myIntVar[i]); // Print each element in the array\n}\n\
+    ```\n\nJava also offers an enhanced for loop (also known as the \"for-each\" loop)\
+    \ for iterating over arrays, which makes the code cleaner and more readable:\n\
+    \n```\nfor(int element : myIntVar) {\n    System.out.println(element); // Print\
+    \ each element in the array\n}\n```\n\n# 4.1.4 Multidimensional Arrays: Concept\
+    \ and Usage\n\nMultidimensional arrays are arrays of arrays, with each element\
+    \ of the main array holding another array. The most common form is the two-dimensional\
+    \ array, or matrix. A twodimensional array is declared, allocated, andnd accessed\
+    \ by specifying two sets of square brackets:"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '```
+
+    int[][] myMatrix = new int[3][4]; // A 3x4 (rows x columns) array
+
+    ```
+
+
+    To initialize a two-dimensional array with values:
+
+    Accessing elements requires specifying the index for each dimension:
+
+
+    ```
+
+    int firstRowThirdColumn = myMatrix[0][2];
+
+    ```
+
+
+    Iterating over multidimensional arrays usually involves nested loops:
+
+
+    Understanding and using arrays effectively is foundational for programming in
+    Java, facilitating storage and manipulation of collections of data efficiently
+    and logically.
+
+
+    # 4.2 Manipulating Strings in Java
+
+
+    # 4.2.1 Overview of the String Class'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'The String class in Java is used to store and manipulate sequences of characters.
+    Strings are immutable, which means once a String object is created, its content
+    cannot be changed. If you perform any operation that modifies a string, Java creates
+    a new String object to hold the result.
+
+
+    Java provides a rich set of methods in the String class to perform various operations
+    like comparing, concatenating, splitting, searching, and examining individual
+    characters in the string.
+
+
+    # 4.2.2 Creating and Initializing Strings
+
+
+    Strings can be created in Java in two ways: by using the String literal or by
+    using the new keyword.
+
+
+    +   - Using String Literal
+
+
+    ```
+
+    String greeting = "Hello";
+
+    ```
+
+
+    When you create a string using string literal, Java checks the string pool first.
+    If the string already exists, then it returns the reference to the same instance.
+    This way, Java saves memory.
+
+
+    +   - Using new Keyword
+
+
+    ```
+
+    String str1 = "Hello";
+
+    String str2 = "Hello";
+
+    boolean result = str1.equals(str2); // true
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'This will create a new string object in memory, even if the same string exists
+    in the pool.
+
+
+    # 4.2.3 Comparing Strings: Methods and Operations
+
+
+    Java provides several methods to compare string objects:
+
+
+    +   - equals(): This method compares the actual content of the string. It returns
+    true if the strings are equal, and false otherwise.
+
+
+    ```
+
+    String str1 = "Hello";
+
+    String str2 = "World";
+
+    int result = str1.compareTo(str2); // Negative value
+
+    ```
+
+
+    +   - equalsIgnoreCase(): This method is similar to equals() but ignores case
+    during comparison.
+
+
+    ```
+
+    String str1 = "hello";
+
+    String str2 = "Hello";
+
+    boolean result = str1.equalsIgnoreCase(str2); // true
+
+    ```
+
+
+    +   - compareTo(): This method compares two strings lexicographically and returns
+    an integer value. A value of o means both strings are equal. A value less than
+    o indicates the calling string is lexicographically less than the argument string.
+    A value greater than o indicates the opposite.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '```
+
+    String str1 = "Hello";
+
+    String str2 = "World";
+
+    int result = str1.compareTo(str2); // Negative value
+
+    ```
+
+
+    # 4.2.4 String Concatenation and Splitting
+
+
+    +   - Concatenation
+
+    Strings can be concatenated using the + operator or the concat() method.
+
+
+    ```
+
+    String greeting = "Hello";
+
+    String name = "John";
+
+    String message = greeting + ", " + name + "!"; // Using + operator
+
+    String anotherMessage = greeting.concat(", "").concat(name); // Using concat()
+
+    ```
+
+
+    +   - Splitting
+
+    The split() method is used to split a string into an array of strings based on
+    a given regular expression.
+
+
+    ```
+
+    String fruits = "apple, banana, cherry";
+
+    String[] fruitsArray = fruits.split(", " "");
+
+    // fruitsArray contains ["apple", "banana", "cherry"]
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: 'Manipulating strings is a common task in Java programming. The String class
+    provides numerous methods for string comparison, concatenation, and splitting,
+    among other utilities, making it easier to manage and modify strings in Java applications.
+
+
+    # 4.3 Advanced Array Concepts
+
+
+    # 4.3.1 Dynamic Arrays and Their Usage
+
+
+    In Java, arrays are fixed in size. However, sometimes we need data structures
+    that can grow or shrink as needed. Java collections framework offers ArrayList,
+    a class that implements a dynamic array, which automatically adjusts its capacity.
+
+
+    ```
+
+    import java.util.ArrayList;
+
+    ArrayList<Integer> dynamicArray = new ArrayList<>();
+
+    dynamicArray.add(10); // Add elements
+
+    dynamicArray.add(20);
+
+    System.out.println(dynamicArray.get(0)); // Access elements
+
+    ```
+
+
+    Dynamic arrays are particularly useful when the number of elements is not known
+    in advance. They offer methods to add, remove, and search for elements efficiently.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# 4.3.2 Arrays Class: Sorting and Searching
+
+
+    The java.util.Arrays class provides static methods to perform sorting and searching
+    on arrays. These utilities ease the manipulation of arrays significantly.
+
+
+    +   - Sorting
+
+
+    To sort an array, you can use the Arrays.sort() method. It modifies the array
+    in place, arranging the elements in ascending order.
+
+
+    ```
+
+    import java.util.Arrays;
+
+    int[] numbers = {5, 3, 9, 1};
+
+    Arrays.sort(numbers); // The numbers array is now sorted
+
+    ```
+
+
+    +   - Searching
+
+
+    After sorting an array, you can perform a binary search using the Arrays.binarySearch()
+    method. It returns the index of the searched value if it is found; otherwise,
+    it returns a negative number.
+
+
+    ```
+
+    int[] numbers = {1, 3, 5, 5, 9}; // Must be sorted for binary search
+
+    int index = Arrays.binarySearch(numbers, 5); // Returns 2
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# 4.3.3 Array Conversions: From Arrays to Collections and Back
+
+
+    Java provides mechanisms to convert between arrays and collections, such as List,
+    Set, and Map, allowing you to leverage the utilities offered by the Collections
+    Framework.
+
+
+    +   - Array to Collection
+
+
+    You can convert an array to a list using Arrays.asList() method. Collection to
+    Array Collections can be converted back to arrays using toArray()
+
+
+    ```
+
+    String[] color = new String[colorList.size()];
+
+    colorList.toArray(color); // Convert List back to array
+
+    ```
+
+
+    # 4.3.4 Practical Use Cases and Examples
+
+
+    Dynamic arrays, along with array manipulation utilities provided by the Arrays
+    class, find applications across various domains:
+
+
+    +   - Data Aggregation: Collecting and summarizing data for reports or analysis
+    often involves dynamic resizing of collections, sorting, and searching operations.
+
+
+    +   - System Administration: Parsing and processing log files, configuration files,
+    or user inputs can involve conversions between arrays and collection types for
+    easier manipulation.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'Game Development: Managing entities in a game, like characters, obstacles,
+    and power-ups, often requires dynamic arrays for flexible addition and removal
+    of elements.
+
+
+    Example: Finding Maximum and Minimum
+
+
+    ```
+
+    int[] numbers = {4, 1, 13, 0, 6};
+
+    Arrays.sort(numbers); // Sort the array
+
+    int min = numbers[0]; // First element is the smallest
+
+    int max = numbers[numbers.length - 1]; // Last element is the largest
+
+    System.out.println("Minimum: " + min + ", Maximum: " + max);
+
+    ```
+
+
+    Example: Removing Duplicates from a List
+
+
+    Advanced array concepts, including dynamic arrays and utilities provided by the
+    Arrays class, are fundamental in developing efficient and robust Java applications.
+
+
+    # 4.4 String Class Functions and Operations
+
+
+    # 4.4.1 Converting Data Types to Strings
+
+
+    Converting various data types to strings is a common requirement. In Java, this
+    can be achieved using several methods:'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'String.valueOf(): This static method can convert various data types (int, long,
+    float, double, char, char array, etc.) to strings.
+
+
+    ```
+
+    int num = 100;
+
+    String str = String.valueOf(num); // "100"
+
+    ```
+
+
+    +   Using toString() method: Every class in Java inherits a toString() method
+    from the Object class, which can be overridden to represent an object in string
+    form.
+
+    - Integer numInteger = 100;
+
+    String str = numInteger.toString(); // "100"
+
+
+    +   Concatenation with an empty string: A quick way to convert a value to a string.
+
+    - int num = 100;
+
+    String str = num + ""; // "100"
+
+
+    # 4.4.2 String Manipulation: Substring, Replace, and Case Conversion
+
+
+    +   Substring: Extracts a part of a string.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '```
+
+    String str = "Hello World";
+
+    String substr = str.substring(0, 5); // "Hello",
+
+    ```
+
+
+    +   - Replace: Replaces parts of the string.
+
+
+    ```
+
+    String str = "Java is fun";
+
+    String replacedStr = str.replace("fun", "awesome"); // "Java is awesome"
+
+    ```
+
+
+    +   - Case Conversion: Converts the case of the string.
+
+
+    ```
+
+    String str = "Java Programming";
+
+    String lowerStr = str.toLowerCase(); // "java programming"
+
+    String upperStr = str.toUpperCase(); // "JAVA PROGRAMMING"
+
+    ```
+
+
+    # 4.4.3 String Analysis: Length, Character Extraction, and Pattern Matching
+
+
+    +   - Length: Returns the number of characters in the string.
+
+
+    ```
+
+    String str = "Hello";
+
+    int length = str.length(); // 5
+
+    ```
+
+
+    +   - Character Extraction: Obtain a character at a specified index.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '```
+
+    char ch = str.charAt(0); // ''H''
+
+    ```
+
+
+    +   - Pattern Matching: Java provides the Pattern and Matcher classes for regular
+    expression pattern matching.
+
+
+    #  4.4.4 Advanced String Handling: StringBuilder and StringBuffer Classes
+
+
+    When there is a necessity to modify strings frequently, using String directly
+    can lead to performance issues due to its immutability. Java provides StringBuilder
+    and StringBuffer for such scenarios.
+
+
+    +   - StringBuilder: Provides an API for mutable strings. It is not thread-safe,
+    which makes it faster in single-threaded environments.
+
+
+    +   - StringBuffer: Similar to StringBuilder but thread-safe, making it suitable
+    for use in multi-threaded environments.
+
+
+    ```
+
+    StringBuffer sbf = new StringBuffer("Hello");
+
+    sbf.append(" World");
+
+    System.out.println(sbf.toString()); // "Hello World"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'Both StringBuilder and StringBuffer offer methods for appending, inserting,
+    reversing, deleting, and replacing strings, making them invaluable for efficient
+    string manipulation requiring numerous modifications.
+
+
+    # Methods and Modular Programming
+
+
+    # 5.1 Defining and Calling Methods
+
+
+    Methods in Java are used to define a block of code that performs a specific task.
+    They are fundamental for reducing redundancy, improving code readability, and
+    modularizing code.
+
+
+    # 5.1.1 Introduction to Methods in Java
+
+
+    Methods in Java, also known as functions in some other programming languages,
+    are a way to encapsulate a sequence of statements into a single unit that can
+    be executed whenever needed. Methods can take in-puts, perform operations, and
+    optionally return a result. They enable developers to break down complex problems
+    into smaller, more manageable tasks.
+
+
+    # 5.1.2 Structure of a Method
+
+
+    A method in Java has the following structure:'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "```\naccessModifier returnType methodName(parameterList) {\n    // method body\n\
+    }\n```\n\n+   * accessModifier: Defines the access level for the method (e.g.,\
+    \ public, private). If not specified, it has a default package-private visibility.\n\
+    \n+   * returnType: Specifies the data type of the value method returns. If the\
+    \ method does not return a value, void is used.\n\n+   * methodName: The name\
+    \ given to the method, following camelCase conventions.\n\n+   * parameterList:\
+    \ A comma-separated list of input parameters (type and name) that the method accepts.\
+    \ It can be empty.\n\n# 5.1.3 Void vs. Return Methods\n\n+   * Void Methods: These\
+    \ methods do not return any value. They are declared with the keyword void. They\
+    \ are used when a method needs to perform some operations but does not need to\
+    \ give any feedback to the caller.\n\n```\npublic void displayMessage() {\n  \
+    \  System.out.println(\"Hello, World!\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "• Return Methods: These methods return a value back to the caller. They must\
+    \ declare the type of data they return. At the end of the method, a return statement\
+    \ is used to provide the value back.\n\n```\npublic int addNumbers(int a, int\
+    \ b) {\n    return a + b;\n}\n```\n\n#  5.1.4 Writing Your First Method\n\nLet's\
+    \ write a simple method that takes two integers as parameters and returns their\
+    \ sum:"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "```\npublic class Calculator {\n    // Method that adds two numbers and returns\
+    \ the result\n    public static int add(int num1, int num2) {\n        return\
+    \ num1 + num2;\n    }\n\n    public static void main(String[] args) {\n      \
+    \  int result = add(5, 3);\n        System.out.println(\"The sum is: \" + result);\n\
+    \    }\n}\n```\n\nIn this example, the add method is defined with two parameters\
+    \ (num1 and num2), and it returns their sum. The main method calls the add method\
+    \ with two arguments (5 and 3) and prints the result. This demonstrates defining\
+    \ and calling a method, as well as working with return types and parameters.\n\
+    \n# 5.2 Parameters and Return Types\n\n# 5.2.1 Passing Parameters to Methods\n\
+    \nParameters allow methods in Java to receive data from outside, making methods\
+    \ more flexible and reus-"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "able. When you define a method, you specify its parameter list as part of its\
+    \ declaration. When you call the method, you provide arguments corresponding to\
+    \ these parameters. Java methods receive parameters as a 'pass-by-value', meaning\
+    \ the method receives a copy of the original data.\n\n```\npublic static void\
+    \ greet(String name) {\n    System.out.println(\"Hello, \" + name);\n}\n\npublic\
+    \ static void main(String[] args) {\n    greet(\"Alice\"); // Passing \"Alice\"\
+    \ as an argument to the greet method\n}\n```\n\n# 5.2.2 Primitive vs. Reference\
+    \ Parameters\n\nIn Java, method parameters are passed by value. This concept behaves\
+    \ differently for primitive and reference types.\n\n+   - Primitive Parameters:\
+    \ For primitive data types (e.g., int, double, char), a method receives a copy\
+    \ of the value. Modifying this value does not affect the original variable."
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "```\npublic static void increment(int number) {\n    number++;\n    System.out.println(\"\
+    Number inside method: \" + number);\n}\n\npublic static void main(String[] args)\
+    \ {\n    int value = 5;\n    increment(value); // value remains 5 outside the\
+    \ method\n    System.out.println(\"Number after method call: \" + value);\n}\n\
+    ```\n\n+   - Reference Parameters: For reference data types (e.g., arrays, objects),\
+    \ the method receives a copy of the reference, pointing to the same object in\
+    \ memory. Modifying the object through this reference will affect the original\
+    \ object."
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "```\npublic static void updateArray(int[] arr) {\n    arr[0] = 100;\n}\n\n\
+    public static void main(String[] args) {\n    int[] values = {1, 2, 3};\n    updateArray(values);\n\
+    \    System.out.println(\"First element: \" + values[0]); // Outputs 100, showing\
+    \ the\n}\n```\n\n# 5.2.3 Return Types in Detail\n\nA method's return type determines\
+    \ the type of value it can send back to its caller. The return type is specified\
+    \ just before the method name in its declaration. Methods can return any type\
+    \ of data including primitives, objects, or even no data (void). If a method declares\
+    \ a return type (other than void), it must use the return statement to return\
+    \ a value of that type.\n\n```\npublic static double getAverage(int sum, int count)\
+    \ {\n    return (double) sum / count;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "# 5.2.4 Returning Multiple Values from Methods\n\nJava methods can only return\
+    \ one value. However, you can work around this limitation by using arrays or objects\
+    \ to package multiple values.\n\n+   - Using Arrays: Suitable for returning multiple\
+    \ values of the same type.\n\n```\npublic static int[] minMax(int[] numbers) {\n\
+    \  int[] result = {numbers[0], numbers[0]}; // Assuming array is not empty\n \
+    \ for (int num : numbers) {\n    if (num < result[0]) result[0] = num; // Update\
+    \ num\n    if (num > result[1]) result[1] = num; // Update max\n  }\n  return\
+    \ result; // An array containing both min and max\n}\n```\n\n+   - Using Objects:\
+    \ Suitable for returning values of different types or when you need to return\
+    \ structured data."
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "```\nclass MinMax {\n  int min;\n  int max;\n\n  MinMax(int min, int max) {\n\
+    \    this.min = min;\n    this.max = max;\n  }\n\n  public static MinMax findMinMax(int[]\
+    \ numbers) {\n    return new MinMax(/* calculations for min */, /* calculations\
+    \ for max */);\n  }\n}\n```\n\nUnderstanding parameters and their types, mastering\
+    \ the return mechanisms, are essential skills for developing efficient and flexible\
+    \ Java applications.\n\n# 5.3 Method Overloading\n\n# 5.3.1 Concept of Method\
+    \ Overloading"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'Method overloading is a feature of Java that allows multiple methods to have
+    the same name within the same class, provided they differ in parameters (either
+    the number of parameters, the types of parameters, or both). This does not concern
+    the return type of the methods; it''s purely parameter-driven. Overloading enables
+    a form of polymorphism, making methods more versatile in handling different input
+    scenarios without needing unique method names for each variant.
+
+
+    # 5.3.2 Overloading Methods with Different Parameter Types
+
+
+    Java allows methods to be overloaded based on different parameter types. This
+    means you can have multiple- versions of a method that accept different types
+    of parameters. It allows a method to process differently typed inputs with the
+    same logical operation encapsulated under the same method name.'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "```\npublic class Calculator {\n    public int add(int a, int b) {\n      \
+    \  return a + b;\n    }\n\n    public double add(double a, double b) {\n     \
+    \   return a + b;\n    }\n}\n```\n\nIn the above example, the add method is overloaded\
+    \ to handle both integer and double additions, enabling the Calculator to be more\
+    \ flexible with input types.\n\n# 5.3.3 Overloading Methods with Different Number\
+    \ of Parameters\n\nMethod overloading can also be based on the number of parameters.\
+    \ You can have several methods with the same name but with a different number\
+    \ of parameters. This variant of overloading is especially useful for methods\
+    \ where a varying number of inputs may make sense for the method's purpose."
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "```\npublic class Calculator {\n    public int multiply(int a, int b) {\n \
+    \       return a * b;\n    }\n\n    public int multiply(int a, int b, int c) {\n\
+    \        return a * b * c;\n    }\n}\n```\n\nHere, the multiply method is overloaded\
+    \ to support both two and three parameters, providing flexibility in the number\
+    \ of factors to multiply.\n\n# 5.3.4 Best Practices for Method Overloading\n\n\
+    While method overloading adds versatility to method design, following best practices\
+    \ ensures it enhances rather than confuses the API usability:\n\n+   1. Use Overloading\
+    \ Judiciously: Only overload when it makes logical sense and enhances understanding.\
+    \ Overloading methods with completely different purposes can lead to confusion."
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '2. Maintain Consistency in Logic: Ensure overloaded methods perform essentially
+    the same task but on different types or numbers of inputs. The core logic should
+    be identifiable across the overloaded methods.
+
+
+    3. Use Clear and Descriptive Parameters: This helps clarify the purpose of each
+    method variation. For instance, if the methods handle different types of measurements,
+    the parameter names can reflect these measurement types.
+
+
+    4. Consider Varargs for Multiple Parameters of the Same Type: When overloading
+    methods to accept a variable number of arguments of the same type, consider using
+    Java''s varargs feature instead of overloading.
+
+
+    Method overloading allows developers to create more readable and naturally polymorphic
+    APIs. When employed strategically, it aids in crafting succinct and intuitive
+    code interfaces.
+
+
+    # 5.4 Understanding Scope and Accessibility
+
+
+    # 5.4.1 Scope of Variables in Methods
+
+
+    The scope of a variable determines where within your code a variable can be accessed.
+    Method variables (also known as local variables) are defined within a method and
+    are only accessible within that method. They cease to exist once the method execution
+    is completed. This limited scope helps reduce naming conflicts and memory usage
+    since these variables are temporary.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "```\npublic void myMethod() {\n    int local = 5; // local variable, only accessible\
+    \ within myMethod\n}\n```\n\n# 5.4.2 Global vs. Local Variables\n\n+   - Local\
+    \ Variables: These are declared within a method and can only be accessed within\
+    \ that method. They're initialized each time the method is called and are not\
+    \ known outside the method's scope.\n\n```\npublic void someMethod() {\n    int\
+    \ localVar = 10; // Local variable. Only accessible here\n}\n```\n\n+   - Global\
+    \ Variables: In the context of Java, global variables are generally referred to\
+    \ as fields or class variables. These are accessible from any method within the\
+    \ class (and outside, depending on the access modifier applied). They're declared\
+    \ outside any method, often at the top of the class."
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "```\npublic class MyClass {\n    int globalVar = 20; // Field, accessible from\
+    \ any method within this class\n\n    public void anotherMethod() {\n        System.out.println(globalVar);\
+    \ // Accessing the global variable\n    }\n}\n```\n\n# 5.4.3 Access Modifiers\
+    \ and Their Impact\n\nAccess modifiers in Java control the visibility of class\
+    \ fields (variables) and methods to other classes and the rest of the program.\
+    \ Understanding them is key to controlling access levels and safeguarding your\
+    \ objects.\n\n+   - Private: The private modifier restricts the visibility to\
+    \ the declaring class only. This is a key principle in encapsulation, protecting\
+    \ the data from unintended access and modification.\n\n+   - Default (No Modifier):\
+    \ Allows access to fields and methods from within the same package. It's more\
+    \ accessible than private but still provides a constrained access level.\n\n+\
+    \   - Protected: Similar to default access, with the addition that subclasses\
+    \ (even in different packages) can access protected members."
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "Public: The public modifier allows fields and methods to be accessible from\
+    \ any other class in the application.\n\n```\npublic class ModifierExample {\n\
+    \    private int privateVar = 1;\n    int defaultVar = 2;\n    protected int protectedVar\
+    \ = 3;\n    public int publicVar = 4;\n}\n```\n\n# 5.4.4 Encapsulation and Protected\
+    \ Access\n\nEncapsulation is a fundamental principle of object-oriented programming.\
+    \ It involves bundling the data (attributes) and methods (functions) that operate\
+    \ on the data into a single unit, or class, and restricting access to the specifics\
+    \ of the data."
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "Achieving Encapsulation: Use private access modifiers on fields, providing\
+    \ public getter and setter methods to access and update the values.\n\n```\npublic\
+    \ class EncapsulatedObject {\n    private int id;\n\n    // Getter\n    public\
+    \ int getId() {\n        return id;\n    }\n\n    // Setter\n    public void setId(int\
+    \ id) {\n        this.id = id;\n    }\n}\n```\n\nProtected Access: Protected access\
+    \ is often used within the context of inheritance. It allows subclasses to access\
+    \ the superclass fields and methods, promoting code reuse while still keeping\
+    \ a restricted access level compared to public access."
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "```\npublic class Base {\n    protected int baseNumber;\n}\n\npublic class\
+    \ Derived extends Base {\n    public void show() {\n        baseNumber = 10; //\
+    \ Accessible due to protected access\n        System.out.println(\"Base number\
+    \ is: \" + baseNumber);\n    }\n}\n```\n\nUnderstanding the nuances of scope and\
+    \ accessibility can significantly influence the design and security of your Java\
+    \ applications, ensuring data integrity and system robustness.\n\n# # Object-Oriented\
+    \ Programming Fundamentals\n\n# ## 6.1 Introduction to Object-Oriented Programming\n\
+    \n# ### 6.1.1 Overview of OOP Concepts\n\nObject-Oriented Programming (OOP) is\
+    \ a programming paradigm based on the concept of \"objects\", which"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: 'can contain data, in the form of fields (often known as attributes or properties),
+    and code, in the form of procedures (often known as methods). OOP models real-world
+    entities as objects that have states and behaviors, encapsulating related data
+    and functions that operate on the data.
+
+
+    The core concepts of OOP include:
+
+
+    +   - Classes: Templates for creating objects, defining their structure and behavior.
+    - Objects: Instances of classes, representing specific entities.
+
+    - Inheritance: A mechanism for creating new classes from existing ones, enhancing
+    code reusability.
+
+
+    +   - Polymorphism: The ability to call the same method on different objects and
+    have each of them respond in their own way.
+
+    - Encapsulation: The bundling of data and methods that operate on the data within
+    one unit, restricting access to some of the object''s components.
+
+
+    # 6.1.2 Benefits of Object-Oriented Programming
+
+
+    +   - Modularity: The source code for an object can be written and maintained
+    independently of the source code for other objects. This makes it easier to manage
+    large applications.
+
+
+    +   - Reuse of Code: Through inheritance, a new class can be derived from an existing
+    class, inheriting its properties and methods, leading to significant code reuse.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '+   - Scalability: OOP allows developers to build programs by incrementally
+    adding new objects, making it feasible to tackle larger software projects.
+
+
+    +   - Maintenance: With encapsulation, objects can hide their internal state and
+    make changes without affecting other parts of the code, thus facilitating maintenance.
+
+
+    +   - Design Benefits: OOP methodologies encourage the planning and thought process
+    in the design phase, making for more flexible, modular, and abstract design.
+
+
+    # 6.1.3 OOP vs. Procedural Programming
+
+
+    While OOP organizes code around objects and data, procedural programming is centered
+    around procedures or routines. The main differences include:
+
+
+    +   - State and Behavior: In OOP, data (state) and operations (behaviors) are
+    bundled together, whereas, in procedural programming, procedures operate on data
+    passed into them.
+
+
+    +   - Modularity and Maintenance: OOP provides a more clear modular structure
+    for programs which makes it easier to keep track of program elements, enhance
+    them, and fix bugs.
+
+
+    +   - Reusability and Scalability: Object-oriented programs encourage the reuse
+    of software components, thanks to inheritance and polymorphism, which is less
+    natural in procedural approaches.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# # 6.1.4 Key Terminology in OOP: Class, Object, Method, and Property
+
+
+    +   * Class: A blueprint for creating objects. Classes define the initial state
+    of an object as well as the set of actions (methods) that objects can take.
+
+    * Object: An instance of a class. Each object has its own set of properties and
+    methods as defined by its class.
+
+    * Method: A procedure associated with a class that defines behaviors of the objects.
+    Methods operate on the internal state of an object and serve as the primary mechanism
+    for object-to-object communication.
+
+    * Property: An attribute of an object. Properties hold the state of an object,
+    describing certain qualities or characteristics it may have.
+
+
+    These fundamental concepts and advantages make OOP a popular choice among programmers
+    for design- and implementing modern software applications.
+
+
+    # # 6.2 Working with Classes and Objects
+
+
+    # # 6.2.1 Defining Classes in Java
+
+
+    In Java, a class is a template used to create objects and define object data types
+    and methods. It acts as a blueprint for objects that encapsulates attributes and
+    behaviors. A class is defined using the `class` keyword followed by the class
+    name and a class body enclosed by curly braces.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "```\npublic class Car {\n    // Attributes of the class\n    String model;\n\
+    \    int year;\n\n    // Method of the class\n    void displayInformation() {\n\
+    \        System.out.println(\"Model: \" + model + \", \" Year: \" + year);\n \
+    \   }\n}\n```\n\nThe Car class has two attributes (model and year) and one method\
+    \ (displayInformation).\n\n# 6.2.2 Creating and Using Objects\n\nObjects are instances\
+    \ of a class created using the new keyword. Once an object has been created, you\
+    \ can access its attributes and invoke its methods."
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "```\npublic class TestCar {\n    public static void main(String[] args) {\n\
+    \        // Creating an object of the Car class\n        Car myCar = new Car();\n\
+    \        myCar.model = \"Toyota\";\n        myCar.year = 2020;\n\n        // Using\
+    \ a method of the Car class\n        myCar.displayInformation();\n    }\n}\n```\n\
+    \n# 6.2.3 Instance Variables and Methods\n\nInstance variables and methods belong\
+    \ to an instance of a class. For each object created from a class, each instance\
+    \ will have its own copy of instance variables and the ability to use methods\
+    \ to manipulate those variables.\n\n+   - Instance Variables: Variables declared\
+    \ inside a class but outside any method. These\n\nvariables are created when an\
+    \ object is created with the use of the keyword new and destroyed when the object\
+    \ is destroyed."
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "- Instance Methods: Methods that require an instance of its class to be created\
+    \ before it can be called. To invoke an instance method, we need to create an\
+    \ Object using the new keyword.\n\n```\npublic class Student {\n    String name;\
+    \ // Instance variable\n\n    void introduce() { // Instance method\n        System.out.println(\"\
+    Hi, my name is \" + name);\n    }\n}\n```\n\n# ### 6.2.4 Static Variables and\
+    \ Methods\n\nStatic variables and methods belong to the class rather than any\
+    \ instance. This means that they can be accessed without creating an object of\
+    \ the class.\n\n+   - Static Variables: Also known as class variables, they are\
+    \ shared among all instances of a class. Any change to a static variable is reflected\
+    \ in all instances.\n\n+   - Static Methods: Methods that can be invoked without\
+    \ the need for creating an object of the class. They can access static variables\
+    \ and change their values."
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "```\npublic class Counter {\n    static int count = 0; // Static variable\n\
+    \n    static void increment() { // Static method\n        count++;\n    }\n}\n\
+    ```\n\nUnderstanding the distinction between class and instance members is crucial\
+    \ for proper programming practices, as they influence how information is stored,\
+    \ shared, and manipulated across your classes and objects.\n\n# ## 6.3 Understanding\
+    \ Constructors\n\n# ### 6.3.1 Purpose of Constructors in Java\n\nIn Java, a constructor\
+    \ is a special type of method that is called when an object is instantiated. Constructors\
+    \ have the same name as the class and do not return a value, not even void. The\
+    \ primary purpose of constructors is to initialize the newly created object before\
+    \ it is used, typically by assigning initial values to its fields."
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "```\npublic class Bicycle {\n    int gear;\n    int speed;\n\n    // Constructor\n\
+    \    Bicycle(int gear, int speed) {\n        this.gear = gear;\n        this.speed\
+    \ = speed;\n    }\n}\n```\n\n# 6.3.2 Types of Constructors: Default and Parameterized\n\
+    \n+   - Default Constructor: If no constructor is explicitly defined in a class,\
+    \ Java automatically provides a default constructor that has no parameters and\
+    \ does nothing but instantiate the object. However, this default constructor is\
+    \ not provided if any other constructor is explicitly declared in the class.\n\
+    \n```\npublic class Example {\n    // Java will create a default constructor here.\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "Parameterized Constructor: A constructor that includes parameters to initialize\
+    \ an object with a specific state upon creation. Using parameterized constructors,\
+    \ you can provide different values to objects when they are created.\n\n```\n\
+    public class Book {\n    String title;\n    int pageCount;\n\n    // Parameterized\
+    \ constructor\n    Book(String title, int pageCount) {\n        this.title = title;\n\
+    \        this.pageCount = pageCount;\n    }\n}\n```\n\n# 6.3.3 Overloading Constructors\n\
+    \nConstructor overloading is a feature in Java where a class can have more than\
+    \ one constructor that differs in parameters they accept. It allows you to create\
+    \ objects in different ways, depending on what information is available at the\
+    \ time of object creation."
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: "```\npublic class Rectangle {\n    int length;\n    int width;\n\n    // Default\
+    \ constructor\n    Rectangle() {\n        this.length = this.width = 0;\n    }\n\
+    \n    // Parameterized constructor 1\n    Rectangle(int side) {\n        this.length\
+    \ = this.width = side;\n    }\n\n    // Parameterized constructor 2\n    Rectangle(int\
+    \ length, int width) {\n        this.length = length;\n        this.width = width;\n\
+    \    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# 6.3.4 Constructor Chaining
+
+
+    Constructor chaining refers to the process of calling one constructor from another
+    constructor with respect to the current object. This can be done using this()
+    and super() calls. Using this() allows you to call a constructor from another
+    overloaded constructor in the same class, while super() calls a constructor from
+    the superclass.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "```\npublic class Student {\n  String name;\n  int age;\n\n  // Constructor\
+    \ with 1 parameter\n  Student(String name) {\n    this(name, 18); // Calls the\
+    \ constructor with 2 parameters\n  }\n\n  // Constructor with 2 parameters\n \
+    \ Student(String name, int age) {\n    this.name = name;\n    this.age = age;\n\
+    \  }\n}\n```\n\n+   - Using super():"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "```\nclass Person {\n  String name;\n\n  Person(String name) {\n    this.name\
+    \ = name;\n  }\n}\n\nclass Teacher extends Person {\n  int salary;\n\n  Teacher(String\
+    \ name, int salary) {\n    super(name); // Calls the superclass constructor\n\
+    \    this.salary = salary;\n  }\n}\n```\n\nConstructor chaining simplifies code\
+    \ and removes redundancy by allowing a constructor to leverage the initialization\
+    \ procedures of another."
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# 6.4 Pillars of OOP: Encapsulation, Inheritance, and Polymorphism
+
+
+    # 6.4.1 Encapsulation: Protecting Data with Access Modifiers
+
+
+    Encapsulation is a fundamental concept in object-oriented programming that involves
+    bundling the data (attributes) and code acting on the data (methods) together
+    as a single unit. Additionally, it restricts direct access to some of an object''s
+    components, which is a means of preventing accidental data modification. Access
+    to restricted components is typically facilitated through getter and setter methods.
+
+
+    Java uses access modifiers to protect variables and methods. The most common access
+    modifiers are:
+
+
+    +   - Private: The member is accessible only within its own class.
+
+    - Protected: The member is accessible within its own package and by subclasses.
+
+    - Public: The member is accessible from any other class.'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "```\npublic class Account {\n    private double balance;\n\n    // Getter method\n\
+    \    public double getBalance() {\n        return balance;\n    }\n\n    // Setter\
+    \ method\n    public void deposit(double amount) {\n        if (amount > 0) {\n\
+    \            balance += amount;\n        }\n    }\n}\n```\n\n# 6.4.2 Inheritance:\
+    \ Extending Classes and Code Reusability\n\nInheritance allows one class to inherit\
+    \ the methods and fields of another class. In Java, inheritance is used to promote\
+    \ code reuse and establish a relationship between classes."
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "# Creating Subclasses\n\nTo inherit from a class, you use the extends keyword.\
+    \ The class being inherited from is called the superclass, and the class that\
+    \ inherits is called the subclass.\n\nExample:\n\n```\nclass Vehicle {\n    protected\
+    \ String brand = \"Ford\";\n    public void honk() {\n        System.out.println(\"\
+    Tuut, tuut!\");\n    }\n}\n\nclass Car extends Vehicle {\n    private String modelName\
+    \ = \"Mustang\";\n    public static void main(String[] args) {\n        Car myFastCar\
+    \ = new Car();\n        myFastCar.honk();\n        System.out.println(myFastCar.brand\
+    \ + \" \" + + myFastCar.modelName);\n    }\n}\n```\n\n# Method Overriding and\
+    \ super Keyword"
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "Method overriding occurs when a subclass provides a specific implementation\
+    \ of a method that is already provided by its superclass. The super keyword is\
+    \ used to access overridden methods or the superclass's constructor.\n\nExample:\n\
+    \n```\nclass Animal {\n  void sound() {\n    System.out.println(\"The animal makes\
+    \ a sound\");\n  }\n}\n\nclass Pig extends Animal {\n  @Override\n  void sound()\
+    \ {\n    super.sound(); // Calls the superclass method\n    System.out.println(\"\
+    The pig says: wee wee\");\n  }\n}\n```\n\n# 6.4.3 Polymorphism: Static and Dynamic\n\
+    \nPolymorphism in Java has two types: compile-time (static) and runtime (dynamic)\
+    \ polymorphism.\n\n# Method Overloading"
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: "Method overloading (static polymorphism) occurs within the same class when\
+    \ two or more methods have the same name but different parameters.\n\nExample:\n\
+    \n```\nclass Display {\n    void show(int x) {\n        System.out.println(\"\
+    Show int: \" + x);\n    }\n\n    void show(String s) {\n        System.out.println(\"\
+    Show String: \" + s);\n    }\n}\n```\n\n# Method Overriding and Dynamic Method\
+    \ Dispatch\n\nMethod overriding (dynamic polymorphism) allows a subclass to override\
+    \ a method in its superclass. Dynamic method dispatch is a mechanism by which\
+    \ a call to an overridden method is resolved at runtime rather than compile-time."
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "```\nclass Figure {\n    double dim1;\n    double dim2;\n\n    Figure(double\
+    \ a, double b) {\n        dim1 = a;\n        dim2 = b;\n    }\n\n    double area()\
+    \ {\n        System.out.println(\"Area for Figure is undefined.\");\n        return\
+    \ 0;\n    }\n}\n\nclass Rectangle extends Figure {\n    Rectangle(double a, double\
+    \ b) {\n        super(a, b);\n    }\n\n    // override area for rectangle\n  \
+    \  double area() {\n        System.out.println(\"Inside Area for Rectangle.\"\
+    );\n        return dim1 * dim2;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "# 6.4.4 Abstract Classes and Interfaces: Enforcing a Contract\n\nAbstract Classes:\
+    \ An abstract class cannot be instantiated and may contain abstract methods, i.e.,\
+    \ methods without a body. They're used when you want to share code among several\
+    \ closely related classes.\n\n```\nabstract class Animal {\n    public abstract\
+    \ void sound();\n}\n\nclass Dog extends Animal {\n    public void sound() {\n\
+    \        System.out.println(\"Woof\");\n    }\n}\n```\n\nInterfaces: An interface\
+    \ is a completely \"abstract class\" that is used to group related methods with\
+    \ empty bodies. Classes can implement multiple interfaces, overcoming the limitation\
+    \ of single inheritance."
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "Example:\n\n```\ninterface Animal {\n    void sound(); // interface method\
+    \ (does not have a body)\n}\n\nclass Pig implements Animal {\n    public void\
+    \ sound() { // The body of sound() is provided here\n        System.out.println(\"\
+    The pig says: wee wee\");\n    }\n}\n```\n\nThese concepts are integral to understanding\
+    \ and applying object-oriented programming principles in real-world scenarios.\n\
+    \n# Advancing with OOP: Inheritance and Interfaces\n\n# 7.1 Implementing Inheritance\n\
+    \nInheritance is one of the core concepts of object-oriented programming (OOP).\
+    \ It allows a class to inherit properties and methods from another class. In Java,\
+    \ inheritance is used to promote reusability of code and establish a relationship\
+    \ between different classes."
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# ## 7.1.1 Understanding the Basics of Inheritance
+
+
+    Inheritance enables a new class, known as the subclass or derived class, to absorb
+    the members (fields, methods, and constructors) of another class, referred to
+    as the super or base class. The primary advantage is the ability to define a common
+    base class that can share code across multiple derived classes.
+
+
+    Key concepts include:
+
+
+    +   * Superclass and Subclass: The superclass is the class from which others inherit,
+    whereas the subclass is the class that inherits from the superclass.
+
+    * extends Keyword: In Java, the extends keyword is used by a class to declare
+    that it inherits from another class.
+
+
+    # ## 7.1.2 Creating and Extending Superclasses
+
+
+    Creating a superclass involves defining a regular class that other classes will
+    inherit from. Extending this class is done using the extends keyword. For example,
+    if Animal is a superclass, creating a subclass Dog that inherits from Animal can
+    be done as follows: By extending Animal, Dog inherits the eat method and can also
+    define its own methods, such as bark.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# 7.1.3 Utilizing Protected Access Modifiers
+
+
+    The protected access modifier plays a crucial role in inheritance. Members declared
+    as protected in a superclass can be accessed by the subclass (including subclasses
+    outside the package), but are not accessible by other classes outside the package.
+
+
+    This modifier helps in encapsulating the superclass''s members, allowing controlled
+    access to them, as opposed to public access (which could expose too much of the
+    superclass''s internal details), or private access (which would prevent the subclass
+    from accessing important members).
+
+
+    # 7.1.4 Exploring Inheritance Hierarchies and Multiple Inheritance Issues
+
+
+    Inheritance hierarchies occur when a class inherits from a subclass, creating
+    a "family tree" of classes with multiple levels. This allows for more specific
+    categorizations and behaviors at each subclass level.
+
+
+    Java does not support multiple inheritance through classes to avoid the diamond
+    problem, where a class inherits from two classes that have a method with the same
+    signature. This could confuse the compiler as to which method to invoke. However,
+    Java tackles the need for multiple inheritances by allowing a class to implement
+    multiple interfaces.
+
+
+    Example of inheritance hierarchy:'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "```\nclass Animal {\n    void eat() {\n        System.out.println(\"This animal\
+    \ eats.\");\n    }\n}\n\nclass Mammal extends Animal {\n    void breathe() {\n\
+    \        System.out.println(\"This mammal breathes.\");\n    }\n}\n\nclass Bat\
+    \ extends Mammal {\n    void fly() {\n        System.out.println(\"This bat can\
+    \ fly.\");\n    }\n}\n```\n\nHere, Bat inherits from Mammal, which in turn inherits\
+    \ from Animal, forming a hierarchy. By understanding and implementing inheritance\
+    \ appropriately, developers can create flexible and maintainable codebases."
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# 7.2 Using ''super'' and Method Overriding
+
+
+    The concepts of super keyword utilization and method overriding play significant
+    roles in the implementation of inheritance in Java, enhancing both functionality
+    and polymorphism.
+
+
+    # 7.2.1 The Role of the ''super'' Keyword in Accessing Superclass Members
+
+
+    The super keyword in Java is a reference variable that is used to refer to the
+    immediate parent class object. It can be employed to access superclass methods
+    and constructors that are overridden or hidden in the subclass.
+
+
+    +   - Accessing Superclass Methods: super can be used to call superclass methods
+    that have been overridden in the subclass. This is particularly useful when you
+    want both the superclass and subclass versions of a method to be accessible from
+    the subclass.
+
+
+    +   - Calling Superclass Constructors: super() can call superclass constructors.
+    The call to super() must be the first statement in each constructor of a subclass.
+    If a subclass constructor does not explicitly call a superclass constructor, the
+    Java compiler automatically inserts a call to the no-argument constructor of the
+    superclass.'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "```\nclass Animal {\n    void move() {\n        System.out.println(\"Animals\
+    \ can move\");\n    }\n}\n\nclass Dog extends Animal {\n    void move() {\n  \
+    \      super.move(); // Calls the method in Animal class\n        System.out.println(\"\
+    Dogs can walk and run\");\n    }\n}\n```\n\n# 7.2.2 Overriding Methods in the\
+    \ Subclass\n\nMethod overriding occurs when a subclass redefines a method in its\
+    \ superclass. Overriding allows a subclass to provide a specific implementation\
+    \ of a method already provided its superclass."
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "Overriding Rules: The argument list must exactly match that of the overridden\
+    \ method. The return type must also be the same or a subtype (covariant return\
+    \ type). Furthermore, a subclass can not override methods that are declared final\
+    \ OR static.\n\nExample of overriding:\n\n```\nclass Vehicle {\n  void run() {\n\
+    \    System.out.println(\"The vehicle is running\");\n  }\n}\nclass Car extends\
+    \ Vehicle {\n  @Override\n  void run() {\n    System.out.println(\"The car is\
+    \ running safely\");\n  }\n}\n```\n\n# 7.2.3 Rules and Best Practices for Method\
+    \ Overriding\n\n+   1. Signature Match: The method name and parameters must exactly\
+    \ match the method's signature in the"
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: 'superclass.
+
+
+    +   2. Access Level: The access level cannot be more restrictive than the overridden
+    method''s access level.
+
+    3. Return Type: Must be the same or a subtype of the return type in the superclass
+    method (covariant type).
+
+    4. Invocation of Superclass Method: Sometimes, it''s beneficial to call the superclass''s
+    version in the overridden method using super.
+
+
+    Following these rules ensures clean, functional inheritance hierarchies with predictable
+    behaviors.
+
+
+    # 7.2.4 The Significance of Annotation @Override
+
+
+    @Override annotation indicates that a method declaration is intended to override
+    a method declaration in a superclass. If the method does not actually override
+    a superclass method, the compiler produces an error. This annotation improves
+    code clarity and helps avoid errors, such as misspelling a method name or not
+    correctly matching the parameters.'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "```\nclass Animal {\n  void eat() {\n    System.out.println(\"This animal eats\
+    \ food.\");\n  }\n}\n\nclass Dog extends Animal {\n  @Override\n  void eat() {\n\
+    \    System.out.println(\"A dog eats meat.\");\n  }\n}\n```\n\nUsing @Override\
+    \ enhances code safety and readability, making overriding intentions explicit\
+    \ and ensuring the subclass properly overrides the intended methods from its superclass.\n\
+    \n# 7.3 Interfaces and Abstract Classes\n\nInterfaces and abstract classes are\
+    \ two pivotal concepts in Java used to achieve abstraction and multiple inheritance\
+    \ (through interfaces). They set a blueprint for classes, guiding them on what\
+    \ methods they must implement."
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "#  7.3.1 Defining and Implementing Interfaces\n\nAn interface in Java is a\
+    \ reference type, similar to a class, that can contain only constants, method\
+    \ signatures, default methods, static methods, and nested types. Interfaces cannot\
+    \ contain instance fields. The methods in interfaces are abstract by default.\n\
+    \nTo define an interface, you use the interface keyword. Classes implement interfaces\
+    \ and must provide concrete implementations for all abstract methods declared\
+    \ in the interface.\n\n```\ninterface Animal {\n    void eat();\n    void travel();\n\
+    }\nclass Mammal implements Animal {\n  public void eat() {\n    System.out.println(\"\
+    Mammal eats\");\n  }\n\n  public void travel() {\n    System.out.println(\"Mammal\
+    \ travels\");\n  }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# 7.3.2 Comparing Interfaces With Abstract Classes
+
+
+    Both interfaces and abstract classes can have abstract methods, but there are
+    key differences:
+
+
+    +   - Abstract Classes: Can have a mix of methods with or without implementations.
+    Only one abstract class can be extended by a subclass.
+
+    - Interfaces: Before Java 8, interfaces could only have abstract methods without
+    implementations. From Java 8 onwards, they can have default and static methods
+    with bodies. A class can implement multiple interfaces.
+
+
+    Abstract classes are used when subclasses share methods with implementations.
+    Interfaces are typically used to define a common set of functionalities that can
+    be provided by any class, regardless of its place in the class hierarchy.
+
+
+    # 7.3.3 Using Default and Static Methods in Interfaces
+
+
+    Java 8 introduced the ability to define concrete methods in interfaces using default
+    and static methods. This allows for new functionalities to be added to interfaces
+    without affecting the classes that implement these interfaces.'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "- Default Methods: Allow the implementation of methods within an interface.\
+    \ Classes that implement the interface can override the default method.\n\n```\n\
+    interface Vehicle {\n  default void print() {\n    System.out.println(\"I am a\
+    \ vehicle!\");\n  }\n}\n```\n\n- Static Methods: Can be declared within an interface\
+    \ and cannot be overridden by implementing classes.\n\n```\ninterface Animal {\n\
+    \  static void test() {\n    System.out.println(\"Static method in interface\"\
+    );\n  }\n}\n```\n\n# 7.3.4 Applying Interfaces for Multiple Inheritance\n\nIn\
+    \ Java, multiple inheritance—the ability of a class to inherit behaviors from\
+    \ more than one parent class—is not directly supported (to avoid the \"diamond\
+    \ problem\"). However, Java allows multiple inheritance of type through interfaces.\
+    \ A class can implement multiple interfaces, and thus, inherit the abstract methods\
+    \ of multiple sources."
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "Example of multiple inheritance:\n\n```\ninterface WaterAnimal {\n    void\
+    \ swim();\n}\n\ninterface LandAnimal {\n    void walk();\n}\n\nclass Frog implements\
+    \ WaterAnimal, LandAnimal {\n    public void swim() {\n        System.out.println(\"\
+    Frog swims\");\n    }\n\n    public void walk() {\n        System.out.println(\"\
+    Frog walks\");\n    }\n}\n```\n\nIn this setup, a Frog class can inherit behavior\
+    \ (swim and walk methods) from both WaterAnimal and LandAnimal interfaces, showcasing\
+    \ the versatility of interfaces in overcoming the limitations of single inheritance\
+    \ in Java."
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# ## 7.4 Polymorphism in Action
+
+
+    Polymorphism is a core concept in object-oriented programming that allows actions
+    to operate differently based on the actual object that the action is being performed
+    on. It enhances flexibility and the ability to extend code without modifying it.
+    Polymorphism comes in two types in Java: static (compile-time) and dynamic (runtime).
+
+
+    # ### 7.4.1 Demonstrating Static and Dynamic Polymorphism
+
+
+    +   * Static Polymorphism is achieved through method overloading. It occurs at
+    compiletime. In static polymorphism, the response to a function is determined
+    by the parameter list at the time of compilation.'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: "Example of method overloading:\n\n```\nclass Display {\n    void show(int x)\
+    \ {\n        System.out.println(\"Show with int: \" + x);\n    }\n\n    void show(String\
+    \ s) {\n        System.out.println(\"Show with String: \" + s);\n    }\n}\n```\n\
+    \n+   - Dynamic Polymorphism occurs through method overriding, meaning that the\
+    \ exact method to be called is determined at runtime based on the object's instantiation.\
+    \ Example of dynamic polymorphism:\n\n# 7.4.2 Method Overloading vs. Method Overriding\n\
+    \n+   - Method Overloading (Static Polymorphism): It allows a class to have more\
+    \ than one method with the same name, but with different method signatures (i.e.,\
+    \ different parameter lists). It facilitates readability and reusability by treating\
+    \ the same method differently based on input parameters."
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: 'Method Overriding (Dynamic Polymorphism): It enables a subclass to provide
+    a specific implementation for a method that is already provided by its superclass.
+    The method in the subclass must have the same name, return type, and parameters
+    as the method in the parent class.
+
+
+    # 7.4.3 Dynamic Method Dispatch
+
+
+    Dynamic method dispatch is a mechanism by which a call to an overridden method
+    is resolved at runtime rather than compile-time. This is how Java implements runtime
+    polymorphism.
+
+    In this scenario, the reference type Animal does not determine which version of
+    sound() is called. The method to be called is determined at runtime by the type
+    of the instance.
+
+
+    # 7.4.4 Real-world Examples of Polymorphism
+
+
+    +   Graphical User Interface (GUI) Elements: Different objects (such as buttons,
+    textboxes, and checkboxes) might inherit from a common superclass (e.g., Component).
+    Each object might override a draw() method to render it. When iterating through
+    a collection of components and calling draw(), polymorphism ensures that the correct
+    method is called for each element.
+
+
+    +   Payment Processing Systems: In a payment system, different payment methods
+    (credit card, PayPal, bank transfer) might derive from a Payment superclass. Each
+    method would have its own implementation of a processPayment() method. Polymorphism
+    allows the system to process different payment types in a uniform manner, enhancing
+    code reusability and flexibility.'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: 'Polymorphism, both static and dynamic, plays a crucial role in simplifying
+    complexity by allowing the same interface to be used for different underlying
+    forms (data types or classes), promoting code reusability and system extensibility.
+
+
+    # Exception Handling
+
+
+    # 8.1 Understanding Exceptions
+
+
+    Exceptions are events that occur during the execution of programs that disrupt
+    the normal flow of instructions. In Java, an exception is an object thrown at
+    runtime to indicate that an abnormal situation has occurred. Handling exceptions
+    appropriately allows your program to continue operating or terminate gracefully
+    instead of crashing due to unforeseen issues.
+
+
+    # 8.1.1 What Are Exceptions?
+
+
+    An exception can be any error condition or unexpected behavior encountered by
+    an executing program. When such a condition arises, an object representing that
+    exception is created and thrown in the method that caused the error. The method
+    may choose to handle the exception itself or pass it on. If the method does not
+    handle the exception, the runtime system attempts to find another method in the
+    call stack that will, eventually leading to program termination if uncaught.'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# ## 8.1.2 Types of Exceptions
+
+
+    Exceptions in Java are categorized mainly into two types: checked exceptions and
+    unchecked exceptions.
+
+
+    **Checked Exceptions**
+
+
+    Checked exceptions are exceptions that are checked at compile-time, meaning the
+    compiler requires the code to either handle these exceptions or declare them using
+    the throws keyword in the method signature. The presence of checked exceptions
+    signals expectable yet unpreventable problems that a reasonable application should
+    anticipate and recover from. An example of a checked exception is FileNotFoundException.
+
+
+    **Unchecked Exceptions**
+
+
+    checked exceptions represent defects in the program (bugs) - often logical errors.
+    These are not checked at compile time; instead, they are checked at runtime. Since
+    they reflect programming errors, handling them is usually not anticipated. Examples
+    include NullPointerException and ArrayIndexOutOfBoundsException.
+
+
+    # ## 8.1.3 The Exception Hierarchy
+
+
+    All exception classes are descendants of the Throwable class. The Throwable class
+    is divided into two main subclasses: Error (used for error conditions that a normal
+    application should not try to catch) and Exception, which is divided further into
+    checked exceptions and runtime exceptions (unchecked exceptions).'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# ### 8.1.4 Common Exception Scenarios and Handling Strategies
+
+
+    +   * Input/Output Operations: These operations are prone to failure due to many
+    reasons like the file not existing or hardware failure. Strategies include using
+    trycatch to handle these exceptions or declaring them with throws.
+
+
+    +   * Null Pointer Access: Accessing or modifying the slots of null as if it were
+    an array. A preventive check for null values before accessing methods or fields
+    can mitigate this.
+
+
+    +   * Array Index Out of Bound: Trying to access the elements of an array beyond
+    its size. Ensuring index bounds checks before array access can prevent these.
+
+
+    +   * Class Cast Exceptions: Trying to cast an object to a subclass of which it
+    is not an instance. This can be prevented by using instanceof checks before casting.
+
+
+    The key to exception handling is not only to prevent program crashes but also
+    to ensure that resources (like file handles or network connections) are properly
+    cleaned up and to provide meaningful error messages to the users and logs for
+    debugging purposes. Careful planning and use of exceptions can significantly improve
+    the reliability and maintainability of software.
+
+
+    # ### 8.2 try, catch, and finally Blocks
+
+
+    The try, catch, and finally blocks form the core of Java''s exception handling
+    mechanism. They work together'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: "to catch and handle exceptions in a controlled manner, ensuring that the program\
+    \ can recover from errors and execute necessary cleanup actions.\n\n# 8.2.1 The\
+    \ try Block\n\nThe try block allows you to define a block of code to be tested\
+    \ for errors while it is being executed.\n\n# Writing Code Prone to Exceptions\
+    \ within a try Block\n\nAny code that is expected to throw an exception should\
+    \ be enclosed within a try block. For example, code that deals with file operations,\
+    \ parsing, or network connections often encounters exceptional conditions and\
+    \ is a prime candidate for inclusion in a try block.\n\nExample:\n\n```\ntry {\n\
+    \    // Code that might throw an exception\n    FileReader fr = new FileReader(\"\
+    file.txt\");\n    // Use the file...\n} catch (FileNotFoundException e) {\n  \
+    \  // Handle exception\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "# 8.2.2 The catch Block\n\nA catch block is used to handle the exception. It\
+    \ must be used after the try block only. Within the parentheses, you specify the\
+    \ type of exception you want to catch.\n\nHandling Different Exceptions\n\nDifferent\
+    \ types of exceptions can be caught and handled differently. It's a good practice\
+    \ to catch specific exceptions first, followed by more generic ones, to provide\
+    \ more detailed error handling.\n\nMultiple catch Blocks\n\nA try block can be\
+    \ followed by multiple catch blocks for different types of exceptions. This allows\
+    \ specific handling for each exception type.\n\nExample:\n\n```\ntry {\n    //\
+    \ Code that might throw several exceptions\n} catch (ArithmeticException e) {\n\
+    \    // Specific handling for ArithmeticException\n} catch (NullPointerException\
+    \ e) {\n    // Specific handling for NullPointerException\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '# ### 8.2.3 The finally Block
+
+
+    The finally block contains code that must be executed after the try and catch
+    blocks have executed, irrespective of whether an exception was caught or not.
+
+
+    **Guaranteeing Resource Release and Cleanup Actions**
+
+
+    The finally block is ideal for cleanup code, such as closing file streams or releasing
+    network connections, to ensure resources are not leaked.
+
+
+    The combination of try, catch, and finally blocks provides a robust mechanism
+    for dealing with exceptions, ensuring that your program can handle errors gracefully
+    and maintain resource integrity.
+
+
+    # ### 8.3 Creating Custom Exceptions
+
+
+    Custom exceptions allow developers to create specific error conditions that can
+    be more descriptive and appropriate for their application''s needs. They add clarity
+    to error handling by defining exceptions that are specific to the application''s
+    domain.
+
+
+    # ### 8.3.1 Why Create Custom Exceptions?
+
+
+    Custom exceptions provide several benefits:'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: "• Enhanced Semantics: They can make your code more readable and understandable\
+    \ by clearly indicating the specific problem that occurred.\n\n• Consistent Error\
+    \ Reporting: Allows for uniform error reporting and handling across your application.\n\
+    \n• Specific Exception Handling: Enables the creation of exception handling mechanisms\
+    \ that are finely tuned to the needs of your application.\n\n# 8.3.2 Extending\
+    \ the Exception Class\n\nTo create a custom exception in Java, you simply extend\
+    \ the Exception class or any of its subclasses.\nExample:\n\n```\npublic class\
+    \ MyCustomException extends Exception {\n    public MyCustomException(String message)\
+    \ {\n      super(message);\n    }\n}\n```\n\nYou can also extend RuntimeException\
+    \ if you prefer to create an unchecked exception.\n\n# 8.3.3 Implementing Custom\
+    \ Exception Logic\n\nWhen creating a custom exception, you can add additional\
+    \ fields and methods to provide more information about the error condition."
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: "```\npublic class DatabaseConnectionException extends Exception {\n    private\
+    \ String dbName;\n\n    public DatabaseConnectionException(String dbName, String\
+    \ message) {\n        super(message);\n        this.dbName = dbName;\n    }\n\n\
+    \    public String getDbName() {\n        return dbName;\n    }\n}\n```\n\n# \
+    \ 8.3.4 Using Custom Exceptions in Applications\n\nCustom exceptions can be used\
+    \ in your application like any other exception, with the added benefit of being"
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: "more expressive.\n\nExample:\n\n```\npublic class DatabaseService {\n    public\
+    \ void connectToDatabase(String dbName) throws DatabaseConnectionException {\n\
+    \        if (dbName == null || dbName.isEmpty()) {\n            throw new DatabaseConnectionException(dbName,\
+    \ \"Database name cannot be empty\")\n        }\n        // Attempt to connect\
+    \ to the database\n        // If connection fails, throw DatabaseConnectionException\n\
+    \    }\n}\n\npublic class App {\n    public static void main(String[] args) {\n\
+    \        DatabaseService dbService = new DatabaseService();\n        try {\n \
+    \           dbService.connectToDatabase(\"myDatabase\");\n        } catch (DatabaseConnectionException\
+    \ e) {\n            System.err.println(\"Failed to connect to database \" + e.getDbName()\
+    \ + e.getMessage());\n        }\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: 'In this example, a custom exception (DatabaseConnectionException) is thrown
+    and caught, allowing for a clear and meaningful response to the error condition.
+
+
+    Creating and using custom exceptions in your applications can greatly improve
+    the clarity and maintainability of your error handling code, making your applications
+    more robust and user-friendly.
+
+
+    # 8.4 Best Practices in Exception Handling
+
+
+    Proper exception handling is crucial for maintaining the reliability and readability
+    of software. Adhering to best practices not only makes your code more robust but
+    also easier to maintain.
+
+
+    # 8.4.1 Avoiding Common Pitfalls
+
+
+    Certain practices in exception handling can lead to code that is difficult to
+    maintain or debug. Avoiding these pitfalls is essential for writing clean and
+    effective exception handling code.
+
+
+    # Catching Generic Exception
+
+
+    Catching the base Exception class (or Throwable) can make error diagnosis difficult,
+    as it can catch more-exceptions than intended, including those you might wish
+    to bubble up or handle differently. Instead, catch specific exceptions whenever
+    possible.'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: "# Poor Practice:\n\n```\ntry {\n  // risky code\n} catch (Exception e) {\n\
+    \  // generic handling\n}\n```\n\n# Better Approach:\n\n```\ntry {\n  // risky\
+    \ code\n} catch (SpecificException e) {\n  // specific handling\n}\n```\n\n# Ignoring\
+    \ Exceptions\n\nSilently catching and ignoring exceptions might leave your program\
+    \ in an unpredictable state, making it difficult to diagnose issues.\n\nPoor Practice:"
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "```\ntry {\n  // risky code\n} catch (Exception e) {\n  // ignored\n}\n```\n\
+    \nBetter Approach:\nAlways handle the exception in a meaningful way, or log it\
+    \ at the very least.\n\n```\ntry {\n  // risky code\n} catch (Exception e) {\n\
+    \  log.error(\"An error occurred\", e);\n}\n```\n\n# 8.4.2 Using Finally for Cleanup\n\
+    \nRegardless of whether an exception is thrown or not, you often need to execute\
+    \ some cleanup code (e.g., to close file streams or database connections). The\
+    \ finally block ensures that this code is executed."
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "```\nFileReader fr = null;\ntry {\n    fr = new FileReader(\"file.txt\");\n\
+    \    // Use the file...\n} catch (FileNotFoundException e) {\n    // Handle exception\n\
+    } finally {\n  if (fr != null) {\n    try {\n      fr.close();\n    } catch (IOException\
+    \ e) {\n      // Handle or Log the IOException\n    }\n  }\n}\n```\n\n# 8.4.3\
+    \ Documenting Exceptional Behavior\n\nDocument the exceptions your methods can\
+    \ throw, using the @throws (or @exception) tag in JavaDoc. This documentation\
+    \ is crucial for other developers who use your methods, so they understand the\
+    \ risks involved and how to handle potential issues."
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: "```\n/**\n * Connects to the specified database.\n *\n * @param dbName The\
+    \ name of the database.\n * @throws DatabaseConnectionException if the connection\
+    \ fails.\n */\npublic void connectToDatabase(String dbName) throws DatabaseAccessException\
+    \ {\n    // Implementation\n}\n```\n\n#  8.4.4 Exception Handling and Application\
+    \ Design Decisions\n\nException handling should be part of the initial design\
+    \ phase and not an afterthought. Decide early on which exceptions should be checked\
+    \ vs. unchecked, how to use custom exceptions for clearer error reporting, and\
+    \ establish guidelines for how exceptions should be handled at different layers\
+    \ of your application.\n\nProperly designed exception handling can dramatically\
+    \ increase an application's robustness, maintainability, and user experience.\
+    \ It's a critical aspect that influences architecture and design decisions throughout\
+    \ the lifecycle of the software."
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '# Delving Into Java Collections Framework
+
+
+    # 9.1 Overview of Collections in Java
+
+
+    Java Collections Framework (JCF) is a set of classes and interfaces that implement
+    commonly reusable collection data structures. It is one of Java''s most powerful
+    and flexible APIs, encompassing various data structures that can dynamically store
+    objects.
+
+
+    # 9.1.1 Introduction to the Collections Framework
+
+
+    # 9.1.2 The Collection Interface
+
+
+    At the heart of the framework is the Collection interface, which provides the
+    standard functionality for all collection types. The Collection interface forms
+    the basis for interfaces like List, Set, and Queue, each serving different abstract
+    data types. Implementing classes must provide the functionality for common operations
+    like adding, removing, and querying the size of the collection.'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# ## 9.1.3 Key Characteristics of Collections
+
+
+    The key characteristics of collections include:
+
+
+    +   * Dynamic Size: Unlike arrays, the size of collections can grow or shrink
+    dynamically, accommodating more elements as needed.
+
+    * Type Safety: Generics allow collections to enforce type safety, ensuring only
+    objects of a specified type are stored, thus reducing runtime errors.
+
+    * Iterability: Collections can be iterated over using iterators or enhanced for
+    loops, making it easier to traverse and manipulate elements.
+
+    * Data Manipulation: Collections provide methods to add, remove, and search for
+    elements, offering greater flexibility than primitive data types or arrays.
+
+
+    # ## 9.1.4 Comparing Collections, Arrays, and Primitive Data Types
+
+
+    Collections differ from arrays and primitive data types in several ways:
+
+
+    +   * Size and Flexibility: Collections are dynamic, whereas arrays have a fixed
+    size.
+
+
+    Collections offer more flexibility and functionalities than arrays.
+
+
+    +   * Performance: For certain operations like adding or removing elements, collections
+    might be slower than arrays due to the added abstraction. However, certain'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: 'collection types are optimized for specific operations.
+
+
+    +   Type Safety and Utility: Collections support generics, enhancing type safety
+    compared to arrays. Moreover, the Collections Framework offers utility methods
+    for common tasks like sorting and searching, which are cumbersome with arrays.
+
+
+    # 9.1.5 Choosing the Right Collection
+
+
+    Choosing the right collection type depends on several factors:
+
+
+    +   Ordering: If you need to maintain the insertion order, consider ArrayList
+    or LinkedHashSet.
+
+
+    +   Duplicates: If your collection cannot contain duplicates, use set implementations
+    like HashSet.
+
+
+    +   Key-Value Pairs: To store data in key-value pairs for efficient retrieval,
+    use Map implementations like HashMap.
+
+
+    +   Access: If you need fast access to elements by index, use List implementations
+    such as ArrayList.
+
+
+    +   Concurrency: Consider thread-safe or concurrent collections from the java.util.concurrent
+    package when working in a multithreaded environment.
+
+
+    Selecting the appropriate collection type optimizes both the performance and the
+    readability of your code, making the Collections Framework a cornerstone of effective
+    Java development.'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# 9.2 Lists, Sets, and Queues
+
+
+    The Java Collections Framework divides its data structures into several core interfaces,
+    each serving different data management purposes. Among these, the List, Set, and
+    Queue interfaces are foundational, each catering to specific requirements.
+
+
+    # 9.2.1 Understanding List Interface
+
+
+    The List interface in Java allows for ordered collections of elements, including
+    duplicates. Lists excel in scenarios where the insertion order of elements matters
+    or direct positional access to elements is needed.
+
+
+    # ArrayList
+
+
+    Description: An implementation of the List interface backed by a resizable array.
+
+
+    This provides fast access to elements via indices.
+
+
+    +   • Use Cases: Ideal for scenarios with minimal insertion and deletion operations
+    but numerous access operations.
+
+    • Key Features: Automatic resizing, fast random access.
+
+
+    # LinkedList'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '• Description: A doubly-linked list implementation of the List and Deque interfaces.
+    It allows for constant-time insertions and deletions from the list''s beginning
+    or end.
+
+
+    • Use Cases: Suitable for applications that require frequent insertions and deletions.
+
+
+    • Key Features: Each element (node) contains references to both the next and previous
+    nodes.
+
+
+    # Vector and Stack
+
+
+    • Vector Description: A synchronized, resizable array implementation of the List
+    interface. Slower than ArrayList but suitable for thread-safe operations.
+
+
+    • Stack Description: A last-in-first-out (LIFO) stack of objects that extends
+    Vector. It implements traditional stack operations.
+
+
+    • Use Cases: Vector is used in thread-safe applications requiring dynamic arrays.
+    Stack is utilized for depth-first search algorithms and undo mechanisms.
+
+
+    # 9.2.2 Exploring Set Interface
+
+
+    The Set interface models the mathematical set abstraction, useful for storing
+    nonduplicated elements without worrying about their order.
+
+
+    # HashSet
+
+
+    • Description: Implements the set interface, backed by a hash table. It is the
+    bestperforming implementation but offers no order guarantees.'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: '+   - Use Cases: Ideal when uniqueness of elements is a priority over ordering.
+
+
+    +   - Key Features: Constant time performance for basic operations (assuming the
+    hash function disperses elements properly).
+
+
+    # LinkedHashSet
+
+
+    +   - Description: An ordered version of a HashSet that maintains a doubly-linked
+    list across all elements. It iterates in insertion order.
+
+
+    +   - Use Cases: Useful when iteration order needs to be predictable, yet element
+    uniqueness must be maintained.
+
+
+    +   - Key Features: Slightly slower than HashSet due to the added list maintenance
+    overhead.
+
+
+    # TreeSet
+
+
+    +   - Description: Implements the NavigableSet interface and organizes its elements
+    based on their values. It is backed by a TreeSet.
+
+
+    +   - Use Cases: Ideal for storing large sets where fast retrieval, sort order,
+    and range searches are important.
+
+
+    +   - Key Features: Guarantees log(n) time cost for basic operations (add, remove,
+    contains).
+
+
+    # 9.2.3 Working with Queue Interface
+
+
+    Queues support typical queue operations: offering, polling, and inspecting elements,
+    catering mainly to'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: 'FIFO (first-in-first-out) orderings.
+
+
+    # PriorityQueue
+
+
+    +   - Description: An unbounded priority queue based on a priority heap. Elements
+    are ordered according to their natural ordering or by a Comparator provided at
+    queue construction time.
+
+
+    +   - Use Cases: Useful in scenarios where you want to process elements based
+    on their priority rather than the insertion order.
+
+
+    +   - Key Features: Does not permit null elements. Operations on the queue are
+    O(log(n)).
+
+
+    # Deque Interface
+
+
+    A linear collection that supports element insertion and removal at both ends.
+    It is a generalization of stacks and queues.
+
+
+    # ArrayDeque
+
+
+    +   - Description: A resizable-array implementation of the Deque interface. Faster
+    than
+
+
+    Stack and LinkedList when used as a stack or queue.
+
+
+    +   - Use Cases: Efficient as both a stack (LIFO) and a queue (FIFO).
+
+
+    +   - Key Features: No capacity restrictions; faster than LinkedList for queue-related
+
+
+    operations.
+
+
+    # LinkedList as Deque'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '+   - Description: While primarily a list, LinkedList also implements the Deque
+    interface, supporting operations at both ends points.
+
+
+    +   - Use Cases: Suitable when you need both list and deque functionalities.
+
+
+    +   - Key Features: Doubly-linked list implementation allows for constant-time
+    insertions and removals.
+
+
+    These core interfaces and their implementations provide a flexible framework for
+    working with a group of objects in Java, catering to a wide variety of data management
+    and manipulation needs.
+
+
+    # ## 9.3 Maps and Their Implementations
+
+
+    Maps in Java provide a powerful way to manage key-value pairs, allowing efficient
+    storage and retrieval based on keys. Understanding the nuances of different Map
+    implementations helps in selecting the right for specific use cases.
+
+
+    # ### 9.3.1 Understanding the Map Interface
+
+
+    The Map interface represents a key-value pair mapping; keys are unique, and each
+    key map to exactly one value. Map is not an extension of the Collection interface;
+    instead, it has its own hierarchy.
+
+
+    # #### HashMap'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: 'Description: Implements the Map interface, using a hash table. It permits null
+    values and one null key, providing constant-time performance for the basic operations
+    (get and put), assuming the hash function disperses properly across the buckets.
+
+
+    Use Cases: Best used when the order of insertion is not significant, and fast
+    access to elements is needed.
+
+
+    Key Features: Iteration over HashMap views (keys, values, entries) depends on
+    the capacity of the hash table and the number of key-value pairs.
+
+
+    # LinkedHashMap
+
+
+    Description: A HashMap with a linked list running through it, thus it maintains
+    the insertion order (or optionally, access order). Except for ordering behavior,
+    it has the same characteristics as HashMap.
+
+
+    Use Cases: Useful in scenarios where the order of insertion/access is to be preserved.
+
+
+    Key Features: Slightly lower performance than HashMap in terms of iteration due
+    to the enhanced structure to maintain order.
+
+
+    # TreeMap
+
+
+    Description: Implements the NavigableMap interface and arranges keys according
+    to their natural ordering or a specified Comparator. It''s based on a Red-Black
+    tree structure.'
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '+   - Use Cases: Ideal for when you need to extract ranges of keys or require
+    the keys to be sorted.
+
+    - Key Features: Provides guaranteed log(n) time cost for the containsKey, get,
+    put, and remove operations.
+
+
+    # 9.3.2 Comparing Map Implementations
+
+
+    | Feature/Map Type | HashMap | LinkedHashMap | TreeMap |
+
+    | Ordering | No order | Insertion/Access order | Sorted order |
+
+    | Get/Put Time | O(1) average | O(1) average | O(log n) |
+
+    | Iteration Order | Random | Insertion/Access order | Ascending key order |
+
+    | Key Nullability | One null key allowed | One null key allowed | No null keys
+    (if natural ordering used) |
+
+    | Use Case | Most common scenarios where mapping is needed | When insertion/access
+    order matters | When sorted order or range searches are necessary |
+
+
+    # 9.3.3 Special Map Implementations
+
+
+    WeakHashMap'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '+   - Description: A HashMap variant that stores keys as weak references. An
+    entry in a WeakHashMap will automatically be removed when its key is no longer
+    in ordinary use.
+
+
+    +   - Use Cases: Suitable for caches and metadata storage where the longevity
+    of stored data depends on external references to the key.
+
+    - Key Features: The garbage collector automatically deletes the entries when the
+    key is no longer referenced.
+
+
+    # EnumMap
+
+
+    +   - Description: A specialized Map implementation for use with enum type keys.
+    All of the keys in an EnumMap must come from a single enum type that is specified,
+    explicitly or implicitly, when the map is created.
+
+
+    +   - Use Cases: Extremely efficient and compact for key-based data access when
+    using enums.
+
+    - Key Features: Iteration order of the map follows the natural order of the enum
+    keys.
+
+
+    # Hashtable (Legacy)
+
+
+    +   - Description: An early implementation of a map data structure which is synchronized,
+    meaning it''s thread-safe but provides lower performance in singlethreaded scenarios
+    compared to HashMap.'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '+   - Use Cases: Now considered legacy, it''s rarely recommended with the existence
+    of ConcurrentHashMap for thread-safe maps.
+
+
+    +   - Key Features: Does not allow null keys or values, unlike HashMap.
+
+
+    Choosing the correct Map implementation can greatly impact the performance and
+    resource usage of your Java applications, especially when dealing with large datasets
+    or performance-critical applications.
+
+
+    # 9.4 Collection Class Utilities
+
+
+    The Java Collections Framework not only provides a variety of data structures
+    but also includes a powerful set of utilities through the Collections class. These
+    utilities offer methods for sorting, searching, modifying, and converting collections,
+    enhancing the capability to efficiently manage and manipulate data.
+
+
+    # 9.4.1 Sorting Collections
+
+
+    Sorting is a fundamental operation for collections that allow their elements to
+    be arranged in a specific order.
+
+
+    Using Comparable
+
+
+    +   - Description: The Comparable interface provides a single compareTo method,
+    which defines the natural order of objects. Classes that implement this interface
+    can be easily sorted.'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '- How It Works: An object is compared with another object for order, returning
+    a negative integer, zero, or a positive integer as this object is less than, equal
+    to, or greater than the specified object.
+
+
+    # Using Comparator
+
+
+    +   - Description: The Comparator interface defines a compare method, allowing
+    the order of objects to be controlled outside the objects themselves. It''s especially
+    useful when a class cannot be modified to implement Comparable, or when multiple
+    sorting orders are needed.
+
+
+    +   - How It Works: It compares its two arguments for order, returning a negative
+    integer, zero, or a positive integer depending on whether the first argument is
+    less than, equal to, or greater than the second.
+
+
+    # 9.4.2 Searching in Collections
+
+
+    +   - Techniques: Collections.binarySearch() provides an efficient way to search
+    sorted lists for a specific object. The collection must be sorted into ascending
+    order according to the natural ordering of its elements (or using a specified
+    Comparator).
+
+
+    # 9.4.3 Converting between Collections and Arrays
+
+
+    +   - Methods: The to() method in collection interfaces converts collections to
+    arrays. Conversely, Arrays.asList() provides a fixed-size list backed by the specified
+    array, serving as a bridge between array-based'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: 'and collection-based APIs.
+
+
+    # 9.4.4 Collections Class Utilities Overview
+
+
+    Collections.sort()
+
+
+    +   - Sorts a list into ascending order, either using the natural ordering of
+    its elements (Comparable) or using a specified Comparator.
+
+
+    Collections.binarySearch()
+
+
+    +   - Searches for the specified object in the given sorted list using the binary
+    search algorithm, necessitating an ordered collection for meaningful results.
+
+
+    Collections.reverse(), Collections.shuffle(), and And New
+
+
+    +   - Collections.reverse() reverses the order of a list.
+
+    - Collections.shuffle() randomizes the order of elements in a list.
+
+    - These and more such methods provide convenient utilities for modifying collections.
+
+
+    # 9.4.5 Using Collections.synchronizedList, Collections.synchronizedSet,
+
+
+    Collections.synchronizedMap for Thread Safety
+
+
+    +   - Purpose: Wraps standard collections and returns threadsafe versions of them.
+    It''s crucial when a collection is accessed by multiple threads concurrently.'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: '• Important Note: Iteration over these collections must be synchronized manually
+    on the returned collection instance to avoid concurrent modification exceptions.
+
+
+    # 9.4.6 Advanced Utilities
+
+
+    Collections.unmodifiableCollection **and Other Unmodifiable Wrappers**
+
+
+    +   • Provide read-only access to collections, protecting them from modification
+    attempts, which would throw an UnsupportedOperationException.
+
+
+    **Using the** `Collections.singleton()`, `Collections.emptyList()`, **and** `Collections.emptyMap()`
+    Methods
+
+
+    +   • These methods are useful for optimization purposes, reducing memory footprint
+    and improving performance when empty or singleton collections are needed.
+
+
+    +   • They return immutable instances, ensuring that the collections cannot be
+    altered after creation.
+
+
+    The `Collections` class stands stands as a cornerstone of the Java Collections
+    Framework, providing essential utilities that enhance the versatility and functional
+    capacity of collection manipulation in Java.
+
+
+    # Exploring Java IO and NIO
+
+
+    # 10.1 Streams and File Handling
+
+
+    # 10.1.1 Overview of Streams in Java'
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: 'Streams in Java are sequences of data that can be read from or written to.
+    They serve as a conduit for data flow between your Java program and a variety
+    of sources or destinations, including memory, files, pipes, and network sockets.
+    Java categorizes streams into two main types: byte streams (for binary data) and
+    character streams use classes such as InputStream and OutputStream as their foundation,
+    while character streams use Reader and Writer classes.
+
+
+    # 10.1.2 File Handling Basics
+
+
+    File handling in Java revolves around creating, reading, writing, and manipulating
+    files on the filesystem. This functionality is facilitated primarily through classes
+    found in the java.io package for traditional I/O operations and the java.nio.file
+    package in the New I/O (NIO) library for newer, more flexible file handling. Key
+    classes include File, FileInputStream, FileOutputStream, FileReader, FileWriter,
+    and the NIO Files and Path classes. Understanding how to use these classes is
+    essential for tasks like reading configuration files, storing application data,
+    and managing logs.
+
+
+    # 10.1.3 Common File Operations: Reading, Writing, Appending
+
+
+    Reading: Java provides multiple ways to read from files. For binary data, one
+    might use FileInputStream, while FileReader is useful for reading characters.
+    The NIO package also offers the Files.readAllBytes(Path) and Files.new-BufferedReader(Path)
+    methods for efficient file reading.'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: 'Writing: Writing to files is similarly flexible. FileOutputStream and FileWriter
+    are respectively suited for binary and character data. For appending data, constructors
+    for these classes accept a boolean parameter to indicate whether content should
+    be appended to the end of the file.
+
+
+    Appending: When you want to add to the existing contents of a file without overwriting
+    it, you can use constructors or methods that support the append mode. In NIO,
+    the Files.write(Path, byte[], StandardOpenOption.APPEND) method facilitates this
+    operation.
+
+
+    # 10.1.4 Try-with-Resources and AutoCloseable Interface
+
+
+    A significant concern with file handling and stream manipulation is ensuring that
+    resources are properly closed after use to prevent resource leaks. Java''s try-with-resources
+    statement, introduced in Java 7, simplifies this task. It automatically manages
+    resource closure at the end of the statement''s execution. To be compatible with
+    this statement, a resource must implement the AutoCloseable interface, which includes
+    almost all streams and related resources. Here is a concise example of its usage:'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: 'In this example, FileReader is a resource that implements AutoCloseable. It
+    gets automatically closed once the try block is exited, either normally or due
+    to an exception, significantly reducing boilerplate code and minimizing the risk
+    of resource leaks.
+
+
+    # ## 10.2 The NIO Package
+
+
+    # ### 10.2.1 Introduction to Java NIO
+
+
+    Java NIO (New Input/Output) was introduced in Java 1.4 as an alternative and complement
+    to the standard Java I/O API. It offers non-blocking IO operations, a buffer-oriented
+    data manipulation approach, and the ability to manage multiple network connections
+    through a single thread. The key components of NIO include Channels, Buffers,
+    Selectors, and character sets, enabling faster and more scalable I/O operations,'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: 'especially for applications that require managing numerous connections simultaneously,
+    such as web servers.
+
+
+    # 10.2.2 Buffers: The Core of NIO
+
+
+    Buffers are a core concept in NIO, representing a contiguous block of memory where
+    data is temporarily stored during I/O operations. Unlike streams in the traditional
+    I/O model, which process data in a linear, sequential manner, buffers allow data
+    to be read and written randomly. Buffers in Java NIO are typed; i.e., there are
+    separate buffer classes for different data types as ByteBuffer, CharBuffer, IntBuffer,
+    etc. These buffers operate under a flip mechanism where the buffer switches from
+    writing mode to reading mode, ensuring efficient data access and manipulation.
+
+
+    # 10.2.3 Channels: A New Way to Handle IO
+
+
+    Channels can be thought of as conduits through which data is transferred between
+    buffers and the external entity (e.g., a file or a network socket). They provide
+    a unified API for managing various types of I/O operations like reading from and
+    writing to files, as well as network communications. The primary channel types
+    include FileChannel for I/O, SocketChannel for TCP network I/O, and DatagramChannel
+    for UDP network I/O. In contrast to streams, channels support both reading and
+    writing on the same instance, facilitating more versatile and powerful data handling
+    capabilities.'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: '# 10.2.4 Selector: Multiplexing with NIO
+
+
+    The Selector component is a mechanism allowing a single thread to monitor multiple
+    channels for events, such as data arrival, connection openings, or readiness for
+    reading/writing. This capability enables the development of highly scalable network
+    applications that do not require a thread per connection, significantly reducing
+    resource consumption and increasing performance. By registering multiple channels
+    with a selector, an application can efficiently manage thousands of open connections
+    in a non-blocking manner, checking for I/O events and handling them as they occur.
+    This is particularly useful for implementing servers that handle many concurrent
+    connections, such as web or application servers.
+
+
+    Java NIO''s introduction of buffers, channels, and selectors marked a significant
+    enhancement in Java''s I/O capabilities, providing developers with the tools to
+    build highly scalable and efficient networking and file I/O applications. The
+    shift from a stream-based to a buffer-oriented model allows more control and flexibility
+    in how data is processed, making Java NIO an essential component in modern Java
+    application development.
+
+
+    # 10.3 Reading and Writing Files in Java
+
+
+    # 10.3.1 Using FileInputStream and FileOutputStream'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: "InputStream and FileInputStream are classes from the java.io package designed\
+    \ for reading from and writing files as streams of bytes, making them highly effective\
+    \ for handling binary data such as images and executable files.\n\n+   - FileInputStream:\
+    \ It's used for reading data from files. Data is read in byte format, meaning\
+    \ it reads data by byte byte, making it suitable for reading binary files.\n\n\
+    ```\nFileInputStream fis = new FileInputStream(\"example.txt\");\nint i;\nwhile\
+    \ ((i = fis.read()) != -1) {\n    System.out.print((char) i);\n}\nfis.close();\n\
+    ```\n\n+   - OutputStream: This class is utilized for writing data to files. Like\
+    \ FileInputStream, it operates on data byte by byte byte. It's especially useful\
+    \ for writing binary data to a file.\n\n```\nFileOutputStream fos = new FileOutputStream(\"\
+    output.txt\");\nString data = \"Hello World!\";\nfos.write(data.getBytes());\n\
+    fos.close();\n```"
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: '# 10.3.2 Reader and Writer Classes
+
+
+    For character-oriented data (like text files), Java provides Reader and Writer
+    abstract classes within the java.io package.
+
+
+    +   - FileReader and FileWriter are subclasses for reading and writing character
+    files. Unlike byte streams (FileInputStream/FileOutputStream), these are designed
+    to handle characters, which makes them perfect for dealing with text file
+
+
+    # 10.3.3 Using NIO Files Class for Efficient IO
+
+
+    The Files class in the java.nio.file package offers a set of static methods to
+    operate on files and directories. These methods are designed to use Path objects,
+    making file operations more efficient and simpler to perform.
+
+
+    +   - Reading a file:
+
+
+    ```
+
+    Path path = Paths.get("example.txt");
+
+    byte[] fileArray = Files.readAllBytes(path);
+
+    ```
+
+
+    +   -'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: '• Writing to a file:
+
+
+    ```
+
+    Path newPath = Paths.get("newfile.txt");
+
+    byte[] data = "Sample text".getBytes();
+
+    Files.write(newPath, data, StandardOpenOption.CREATE);
+
+    ```
+
+
+    # 10.3.4 Path and Paths: NIO 2 Enhancements
+
+
+    Introduced in Java 7, the NIO.2 file API added the Path interface and Paths utility
+    class to provide a more comprehensive approach for handling file systems.
+
+
+    +   • Path: Represents a system-dependent file path. It is an object that may
+    be used to locate a file in a file system. It offers methods to inspect, locate,
+    and manipulate file system objects.
+
+
+    +   • Paths: A utility class that contains static methods to return a Path by
+    converting a path string or URI.
+
+
+    Adopting the NIO Files class and the Path/Paths interfaces can lead to more readable
+    and maintainable code for file I/O operations, offering advanced functionalities
+    like symbolic links handling, file attribute access, and directory walking, which
+    are not directly available through the traditional I/O streams.'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: '# # 10.4 Understanding Byte Streams and Character Streams
+
+
+    # ## 10.4.1 Difference Between Byte Streams and Character Streams
+
+
+    Java I/O streams are categorized into two main types: byte streams and character
+    streams. Byte streams (InputStream and OutputStream subclasses) are primarily
+    used for handling raw binary data, such as image files, audio files, and serialized
+    objects. They read and write data byte by byte. Character streams (Reader and
+    writer subclasses), on the other hand, are designed for handling character data,
+    like text files. They read and write data character by character, automatically
+    handling character encoding and decoding, thus abstracting the complexity of converting
+    between characters and bytes.
+
+
+    # ## 10.4.2 When to Use Byte Streams Over Character Streams
+
+
+    Byte streams should be used when dealing with raw data or binary files where data
+    does not necessarily represent characters. Examples include:
+
+
+    +   - Reading or writing binary files (e.g., images, videos).
+
+    - Working with serialized objects.
+
+    - Interacting with data streams that come from sources or go to destinations that
+    do'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: 'not represent textual data. recommended when working with text data, as they
+    take character encoding into account, which is crucial for internationalization.
+    Use cases include:
+
+
+    +   - Reading or writing files that contain text.
+
+    - Processing data streams where the source or destination is text-based, like
+    document files or standard I/O.
+
+
+    # 10.4.3 Common Byte and Character Stream Classes
+
+
+    Byte Stream Classes:
+
+
+    +   - FileInputStream and FileOutputStream for reading from and writing to files.
+    BufferedInputStream and BufferedOutputStream for buffered I/O operations, improving
+    efficiency by reducing the number of I/O operations required.
+
+
+    Character Stream Classes:
+
+
+    +   - FileReader and FileWriter for reading from and writing to text files. BufferedReader
+    and BufferedWriter provide buffering for character input and output streams, making
+    reading and writing text more efficient.
+
+
+    # 10.4.4 Performance Tips for Stream Operations
+
+
+    +   1. Use Buffered Streams: Wrapping a file stream in a buffered stream (BufferedInputStream,
+    BufferedOutputStream, BufferedReader, BufferedWriter) can significantly enhance
+    performance by reducing the number of I/O operations.'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '+   2. Reuse Objects: Where possible, reuse I/O objects within your programs
+    to minimize the overhead of creating and destroying resources.
+
+
+    +   3. Close Resources Properly: Always close your streams with a finally block
+    or use trywith-resources statement to ensure that all resources get free, and
+    underlying files or sockets get closed.
+
+
+    +   4. Limit Resource Allocation: Be mindful of resource allocation within loops
+    or recursive calls. Opening a file inside a loop without proper closing can lead
+    to resource leakage.
+
+
+    +   5. Use NIO for Large Data: For applications that work with large files or
+    require scalable I/O operations (such as reading, writing, or transferring large
+    files), consider using the Java NIO package, as it provides channels and buffers
+    that can handle these scenarios more efficiently.
+
+
+    Applying these performance tips will lead to more efficient, scalable, and maintainable
+    Java applications that make the best use of I/O streams for reading and writing
+    data.
+
+
+    # Java Concurrency and Multithreading
+
+
+    # 11.1 Basics of Threads in Java
+
+
+    # 11.1.1 Creating Threads Using the Thread Class and Runnable Interface
+
+
+    Threads in Java can be created in two primary ways: by extending the Thread class
+    and by implementing the Runnable interface.'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: "Extending the Thread Class: This method involves creating a new class that\
+    \ extends Thread and overrides its run() method. An instance of this class can\
+    \ be created and started using its start() method.\n\n```\nclass MyThread extends\
+    \ Thread {\n    public void run() {\n        // Code that runs in the new thread\n\
+    \        System.out.println(\"Thread running: \" + Thread.currentThread().getName());\n\
+    \    }\n}\n\npublic class ThreadExample {\n    public static void main(String[]\
+    \ args) {\n        Thread myThread = new MyThread();\n        myThread.start();\
+    \ // Start the thread\n    }\n}\n```\n\nImplementing the Runnable Interface: In\
+    \ this approach, a class implements the Runnable interface and its run() method.\
+    \ An instance of Thread is then created with an instance of the implementing class\
+    \ passed to its constructor."
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: "```\nclass MyRunnable implements Runnable {\n    public void run() {\n    \
+    \    // Code that runs in the new thread\n        System.out.println(\"Thread\
+    \ running: \" + Thread.currentThread().getName());\n    }\n}\n\npublic class RunnableExample\
+    \ {\n    public static void main(String[] args) {\n        Thread thread = new\
+    \ Thread(new MyRunnable());\n        thread.start(); // Start the thread\n   \
+    \ }\n}\n```\n\n#  11.1.2 Thread Lifecycle and States\n\nA thread in Java can exist\
+    \ in one of the following states:\n\n+   1. New: The thread is created but not\
+    \ yet started.\n2. Runnable: The thread may be running or ready to run waiting\
+    \ for resource allocation.\n3. Blocked: The thread is blocked waiting for a monitor\
+    \ lock.\n4. Waiting: The thread waits indefinitely for another thread to perform\
+    \ a particular action.\n5. Timed Waiting: The thread waits for another thread\
+    \ to perform an action for up to a specified waiting"
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: 'time.
+
+    6. Terminated: The thread has completed its execution.
+
+
+    # 11.1.3 Thread Priorities and Daemon Threads
+
+
+    +   - Thread Priorities: Java provides a provision for assigning priority (min:
+    1, max: 10) to threads using the setPriority(int priority) method. Threads with
+    higher priorities are executed in preference to threads with lower priorities,
+    although this is not a strict guarantee due to the JVM and OS dependencies.
+
+
+    +   - Daemon Threads: A daemon thread in Java is a service provider thread that
+    provides services to the user thread. Its life depends on the mercy of user threads,
+    i.e., when all non-daemon (user) threads finish, the VM terminates any running
+    daemon threads. Daemon threads are generally used as service providers for user
+    threads and set via the setDaemon(true) method before the thread starts.
+
+
+    # 11.1.4 Handling InterruptedExceptions
+
+
+    InterruptedException is thrown when a thread is waiting, sleeping, or otherwise
+    occupied, and the thread is interrupted. Handling this exception properly is crucial
+    for stopping a thread or cleaning up resources when a thread is asked to stop.'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: "```\nclass MyRunnable implements Runnable {\n    public void run() {\n    \
+    \    try {\n            Thread.sleep(1000);\n            System.out.println(\"\
+    Thread running\");\n        } catch (InterruptedException e) {\n            System.out.println(\"\
+    Thread was interrupted\");\n        }\n    }\n}\n```\n\nWhen dealing with interruptions,\
+    \ it's often a good practice to restore the interrupt status by calling Thread.currentThread().interrupt()\
+    \ within the catch block, allowing other parts of the code to further handle the\
+    \ interrupt if necessary.\n\n# 11.2 Synchronization and Inter-thread Communication\n\
+    \n# 11.2.1 The Synchronized Keyword and Intrinsic Locks\n\nSynchronization in\
+    \ Java is crucial for ensuring that only one thread can access a resource at a\
+    \ time, pre- venting race conditions and data inconsistency. The synchronized\
+    \ keyword can be used to mark a method or"
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: "a block of code so that only one thread can execute it at a time for an instance\
+    \ of a class.\n\n+   * Synchronized Methods: When a method is declared as synchronized,\
+    \ it locks the monitor for the object on which it is invoked. Other threads cannot\
+    \ execute any synchronized method on the same object until the lock is released.\n\
+    \n```\npublic synchronized void increment() {\n    count++;\n}\n```\n\n+   * Synchronized\
+    \ Blocks: Synchronized blocks are more flexible compared to synchronized methods\
+    \ as they allow locking on a different object and can cover just part of a method.\n\
+    \n```\nsynchronized(this) {\n    count++;\n}\n```\n\n# 11.2.2 Volatile Keyword\
+    \ and Memory Visibility\n\nThe volatile keyword in Java ensures that changes to\
+    \ a variable are propagated predictably to other threads. When a field is declared\
+    \ volatile, the compiler and runtime are put on notice that this variable is shared\
+    \ and changes made to it should not be cached or reordered for execution purposes."
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: "* Use Cases: volatileVariables are used when a variable's value is modified\
+    \ by different threads, but the operations performed on the variable do not depend\
+    \ on its current value (e.g., flag to stop a thread).\n\n```\nprivate volatile\
+    \ boolean active;\n\npublic void stop() {\n  active = false;\n}\n```\n\n#  11.2.3\
+    \ Wait, Notify, and NotifyAll Methods\n\nThe methods wait(), notify(), and notifyAll()\
+    \ in the Object class are used for inter-thread communication and coordinating\
+    \ activities among multiple threads.\n\n+   * wait(): Causes the current thread\
+    \ to wait until another thread invokes notify() OR notifyAll() for the object.\n\
+    * notify(): Wakes up one of the threads that are waiting on the object's monitor.\n\
+    * notifyAll(): Wakes up all threads that are waiting on the object's monitor."
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: "These methods must be called from a synchronized context (method or block)\
+    \ concerning the object on which the method is invoked.\n\n```\nsynchronized(obj)\
+    \ {\n    while (<condition does not hold>) obj.wait();\n    // perform action\
+    \ appropriate to condition\n    obj.notifyAll(); // or obj.notify();\n}\n```\n\
+    \n# 11.2.4 Reentrant Locks and Conditions\n\nThe ReentrantLock class in the java.util.concurrent.locks\
+    \ package offers an alternative to using synchronized methods and blocks with\
+    \ more extended capabilities, such as interruptible lock acquisition, lock polling,\
+    \ timed lock waits, and fairness."
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: "```\nprivate final ReentrantLock lock = new ReentrantLock();\npublic void method()\
+    \ {\n    lock.lock();\n    try {\n        // critical section code\n    } finally\
+    \ {\n        lock.unlock();\n    }\n}\n```\n\n+   - Conditions: ReentrantLock\
+    \ provides the ability to create multiple Condition objects"
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: "which allows threads to wait for specific conditions to become true.\n\n```\n\
+    private final Condition condition = lock.newCondition();\n\npublic void awaitCondition()\
+    \ throws InterruptedException {\n    lock.lock();\n    try {\n        condition.await();\
+    \ // similar to Object.wait()\n        // code to execute after await\n    } finally\
+    \ {\n        lock.unlock();\n    }\n}\n\npublic void signalCondition() {\n   \
+    \ lock.lock();\n    try {\n        condition.signal(); // similar to Object.notify()\n\
+    \    } finally {\n        lock.unlock();\n    }\n}\n```\n\nUsing ReentrantLock\
+    \ and Condition provides more fine-grained control over the locking and waking\
+    \ up of threads, suitable for situations requiring complex synchronization policies."
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: '# # 11.3 The Concurrency Utilities
+
+
+    # ## 11.3.1 Overview of java.util.concurrent Package
+
+
+    The java.util.concurrent package offers robust, high-performance utilities for
+    building concurrent applications. Introduced in Java 5 and significantly enhanced
+    in subsequent releases, this package includes a set of synchronized collections,
+    executor interfaces for managing thread pools, utilities for atomic operations,
+    synchronizers, and much more. Its design significantly simplifies the development
+    of concurrent applications by abstracting many complexities of synchronization.
+
+
+    # ## 11.3.2 Concurrent Collections (ConcurrentHashMap, BlockingQueue)
+
+
+    ConcurrentHashMap: A thread-safe variant of HashMap designed for concurrency.
+    It allows concurrent reads and updates without the need for synchronization. With
+    segment locking mechanism, ConcurrentHashMap achieves high throughput and scalability.
+
+
+    ```
+
+    ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
+
+    map.put("key", "value");
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: 'BlockingQueue: An interface representing a queue that additionally supports
+    operations that wait for the queue to become non-empty when retrieving an element,
+    and for space to become available in the queue when storing an element. ArrayBlockingQueue,
+    LinkedBlockingQueue, PriorityBlockingQueue, and SynchronousQueue are notable implementations.
+
+
+    ```
+
+    BlockingQueue<String> queue = new ArrayBlockingQueue<>(1024);
+
+    queue.put("item");
+
+    String item = queue.take();
+
+    ```
+
+
+    # 11.3.3 Atomic Variables and the Atomic Package
+
+
+    This part of the java.util.concurrent.atomic package provides a set of classes
+    that support lockfree thread-safe programming on single variables. Atomic classes,
+    like AtomicInteger, AtomicLong, AtomicBoolean, and AtomicReference, provide mechanisms
+    to atomically update their values.
+
+
+    ```
+
+    AtomicInteger atomicInt = new AtomicInteger(0);
+
+    int oldValue = atomicInt.getAndIncrement(); // atomically increments by 1
+
+    ```
+
+
+    These are particularly useful for counters, flags, or references that can be updated
+    safely without the need for synchronization.'
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '# 11.3.4 The SynchronousQueue and Phaser
+
+
+    SynchronousQueue: A BlockingQueue in which each insert operation must wait for
+    a corresponding remove operation by another thread, and vice versa. A synchronous
+    queue does not have any internal capacity, not even a capacity of one. It’s useful
+    in scenarios where you want to hand off data from one thread to another.
+
+
+    ```
+
+    BlockingQueue<String> syncQueue = new SynchronousQueue<>();
+
+    Thread producer = new Thread(() -> syncQueue.put("hello"));
+
+    Thread consumer = new Thread(() -> String received = syncQueue.take());
+
+    producer.start();
+
+    consumer.start();
+
+    ```
+
+
+    Phaser: A reusable resynchronization barrier, similar in functionality to CyclicBarrier
+    and CountDownLatch but with more flexibility. A Phaser can handle a dynamic number
+    of parties (threads) registered to it and supports advancing from one phase to
+    another. Each phase number represents a r'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '```
+
+    Phaser phaser = new Phaser(1); // ''1'' to register the current thread
+
+    int currentPhase;
+
+
+    currentPhase = phaser.arriveAndWaitAdvance();
+
+    // Perform action here after all threads arrived
+
+    phaser.arriveAndDeregister();
+
+    ```
+
+
+    Phaser is particularly useful for scenarios where a set of threads need to periodically
+    synchronize with each other, exchanging data or combining results from different
+    computation stages.
+
+
+    # # 11.4 Working with Executors and Thread Pools
+
+
+    # ## 11.4.1 Executor Framework Basics
+
+
+    The Executor framework is a high-level replacement for explicitly managing threads
+    in applications. It provides a layer of abstraction over explicit thread management
+    by allowing you to execute tasks asynchronously. The primary components include:
+
+
+    +   - Executor: An interface that represents an object that executes provided
+    tasks.'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: "• Executors: A utility class that provides factory methods for creating common\
+    \ kinds of executor services.\n• Executor: An executor that provides methods to\
+    \ manage termination and methods that can produce a Future for tracking progress\
+    \ of one or more asynchronous tasks.\n\n# simple usage:\n\n```\nExecutorService\
+    \ executor = Executors.newSingleThreadExecutor();\nexecutor.submit(() -> {\n \
+    \   // Task to be executed\n    System.out.println(\"Asynchronous task\");\n});\n\
+    executor.shutdown();\n```\n\n# 11.4.2 Creating Fixed and Cached Thread Pools\n\
+    \nFixed Thread Pool: A thread pool with a fixed number of threads. If a thread\
+    \ is not available for the task, the task is put in a queue waiting for other\
+    \ tasks to finish.\n\n```\nExecutorService fixedThreadPool = Executors.newFixedThreadPool(4);\n\
+    fixedThreadPool.execute(() -> System.out.println(\"Task in fixed thread pool\"\
+    ));\nfixedThreadPool.shutdown();\n```\n\nCached Thread Pool: A thread pool that\
+    \ creates new threads as needed but will reuse previously constructed"
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: '```
+
+    ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+
+    cachedThreadPool.execute(() -> System.out.println("Task in cached thread pool"));
+
+    cachedThreadPool.shutdown();
+
+    ```
+
+
+    #  1.4.3 Scheduled Executors for Time-based Task Execution
+
+
+    ScheduledThreadPoolExecutor allows you to schedule commands to run after a given
+    delay or to execute periodically. This is useful for implementing timeouts, heartbeats,
+    or other timed behaviors.
+
+
+    ```
+
+    ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+
+
+    Runnable task = () -> System.out.println("Task executed after delay");
+
+    ScheduledFuture<?> scheduledFuture = scheduler.schedule(task, 5, TimeUnit.SECONDS);
+
+
+    scheduler.shutdown();
+
+    ```
+
+
+    #  1.4.4 Customizing Thread Pool via ThreadPoolExecutor
+
+
+    If the executor services provided by the Executors class don''t meet your needs,
+    you can create a ThreadPoolEx-'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: "executor directly and customize it. When creating a ThreadPoolExecutor, you\
+    \ can specify core and maximum pool sizes, keep-alive time for idle threads, a\
+    \ blocking queue for tasks waiting to be executed, and a thread factory to create\
+    \ new threads.\n\n```\nint corePoolSize = 2;\nint maxPoolSize = 4;\nlong keepAliveTime\
+    \ = 10;\n\nThreadPoolExecutor executor = new ThreadPoolExecutor(\n  corePoolSize,\n\
+    \  maxPoolSize,\n  keepAliveTime,\n  TimeUnit.SECONDS,\n  new LinkedBlockingQueue<Runnable>(),\n\
+    \  Executors.defaultThreadFactory()\n);\n\nexecutor.execute(() -> System.out.println(\"\
+    Task in custom thread pool\"));\nexecutor.shutdown();\n```\n\nThis allows for\
+    \ fine-tuned control over thread behavior, resource allocation, and task scheduling,\
+    \ enabling optimized performance for specific application requirements."
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: '# Advanced OOP Concepts
+
+
+    # 12.1 Abstract Classes and Methods
+
+
+    # 12.1.1 Introduction to Abstraction
+
+
+    Abstraction is a fundamental concept in Object-Oriented Programming (OOP) that
+    aims to hide complex implementation details and show only the necessary features
+    of an object. It helps in managing complexity by allowing programmers to think
+    at a higher level of logic. Abstraction can be achieved with either abstract classes
+    or interfaces in Java. An abstract class can have both abstract (methods without
+    bodies) and non-abstract methods, making it a powerful tool for sharing a common
+    design among related classes while allowing each to have its own unique implementations
+    of certain details.
+
+
+    # 12.1.2 Defining Abstract Classes
+
+
+    An abstract class in Java is declared using the abstract keyword. It cannot be
+    instantiated, meaning you cannot create objects directly from an abstract class.
+    However, you can create objects of concrete subclasses that inherit from the abstract
+    class. Abstract classes are used to provide a base template or architectural plan
+    for other classes to build upon.'
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: "```\nabstract class Animal {\n    abstract void makeSound();\n\n    void eat()\
+    \ {\n        System.out.println(\"This animal eats food.\");\n    }\n}\n```\n\n\
+    # 12.1.3 Abstract Methods and Their Impacts\n\nAbstract methods are methods in\
+    \ an abstract class that do not have a body. Instead, they merely provide a method\
+    \ signature. It is the responsibility of the subclass to provide an actual implementation\
+    \ of these methods. If a class contains even a single abstract method, the class\
+    \ must be declared as abstract.\n\nThe presence of abstract methods in a class\
+    \ signals that the class is meant to be a blueprint or a base to other classes.\
+    \ It enforces a contract with the subclasses, ensuring that certain essential\
+    \ methods are implemented, thus promoting a uniform use and behavior of the inheriting\
+    \ classes."
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: "```\nclass Dog extends Animal {\n    @Override\n    void makeSound() {\n  \
+    \      System.out.println(\"Bark\");\n    }\n}\n```\n\n# 12.1.4 Practical Uses\
+    \ of Abstract Classes\n\nAbstract classes are particularly useful in scenarios\
+    \ where a general framework needs to be defined for a group of subclasses, ensuring\
+    \ consistency in functionality while allowing flexibility in implementation. Some\
+    \ practical uses include:\n\n+   - Template Methods: An abstract class can define\
+    \ a “template method” with a series of steps to perform a task. Subclasses can\
+    \ then define these steps' actual implementation.\n\n+   - Code Reuse: They allow\
+    \ for significant code reuse by declaring and possibly providing default implementations\
+    \ for common methods that subclasses can directly use or override if needed.\n\
+    \n+   - Design and Documentation: Serving as a blueprint for future development,\
+    \ abstract classes help document and enforce class hierarchies, promoting good\
+    \ design practices.\n\nIn sum, abstract classes and methods provide a structured\
+    \ way to encapsulate common features among"
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: "related classes while ensuring a level of abstraction and requiring subclasses\
+    \ to implement specific functionalities tailored to their needs\n\n# 12.2 Exploring\
+    \ Interfaces\n\n# 12.2.1 Basics of Interfaces\n\nIn Java, an interface is a reference\
+    \ type, similar to a class, that can contain only constants, method signatures,\
+    \ default methods, static methods, and nested types. Interfaces cannot contain\
+    \ instance fields or constructors. The methods in interfaces are abstract by default,\
+    \ which means they do not have a body and must be implemented by classes that\
+    \ choose to implement the interface.\n\n```\npublic interface Animal {\n    void\
+    \ eat();\n    void sleep();\n}\n```\n\nAn interface is implemented by using the\
+    \ implements keyword in a class. A class that implements an interface must provide\
+    \ concrete implementations for all of the abstract methods declared in the interface."
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: "# ##12.2.2 Implementing Multiple Interfaces\n\nJava supports multiple inheritance\
+    \ of type through the use of interfaces. This means a class can implement more\
+    \ than one interface, thereby inheriting abstract methods from multiple sources.\n\
+    \n```\npublic interface Herbivore {\n    void graze();\n}\n\npublic interface\
+    \ Carnivore {\n    void hunt();\n}\n\npublic class Bear implements Herbivore,\
+    \ Carnivore {\n    public void graze() {\n        System.out.println(\"Bear is\
+    \ grazing\");\n    }\n\n    public void hunt() {\n        System.out.println(\"\
+    Bear is hunting\");\n    }\nn\n```"
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: "This approach allows for a flexible design without the complexities and issues\
+    \ associated with the multiple inheritances of implementation.\n\n# 12.2.3 Default\
+    \ Methods in Interfaces\n\nIntroduced in Java 8, default methods allow you to\
+    \ add new methods to an interface that already has implementers without breaking\
+    \ their code. Default methods have a body and are not abstract, unlike other methods\
+    \ defined in interfaces.\n\n```\npublic interface Animal {\n    void eat();\n\n\
+    \    default void breathe() {\n        System.out.println(\"Breathing\");\n  \
+    \  }\n}\n```\n\nDefault methods were introduced primarily to enhance the Collections\
+    \ API in Java 8, allowing new methods to be added without affecting existing code."
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: "# 12.2.4 Functional Interfaces and Lambda Expressions\n\nA functional interface\
+    \ in Java is an interface that contains exactly one abstract method. It can have\
+    \ more than one method, but all other methods must have default implementations\
+    \ or be static. These interfaces are intended to be used primarily with lambda\
+    \ expressions, which provide a clear and concise way to represent one method interfaces\
+    \ (or functional interfaces).\n\n```\n@FunctionalInterface\npublic interface Greeting\
+    \ {\n    void sayHello(String message);\n}\n\npublic class Demo {\n    public\
+    \ static void main(String[] args) {\n        Greeting greeting = message -> System.out.println(\"\
+    Hello, \" + message);\n        greeting.sayHello(\"World\");\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: 'Lambda expressions enable you to treat functionality as a method argument,
+    or code as data. Functional interfaces provide target types for lambda expressions
+    and method references.
+
+
+    # 12.3 Inner Classes in Depth
+
+
+    # 12.3.1 Overview of Inner Classes
+
+
+    In Java, an inner class is defined within the scope of another class. Inner classes
+    are a security mechanism that allows the inner class to access the members of
+    its outer class while keeping its own members hidden from the world outside. Inner
+    classes are divided into several types based on their purpose and the way they
+    are declared and used: member inner classes, local inner classes, anonymous inner
+    classes, and static nested classes. Each type serves different roles, offering
+    a powerful mechanism for encapsulation and organization of code.
+
+
+    # 12.3.2 Member Inner Classes
+
+
+    A member inner class is a non-static class that is defined at the same level as
+    the instance variables of a class. It can access all members of the outer class,
+    including private members. However, an object of a member inner class can only
+    be instantiated in the context of an object of the outer class.'
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: "```\nclass OuterClass {\n    private String message = \"Hello World\";\n\n\
+    \    class InnerClass {\n        void display() {\n            System.out.println(message);\
+    \ // Access to OuterClass private member\n        }\n    }\n}\n```\n\n# 12.3.3\
+    \ Local Inner Classes\n\nLocal inner classes are defined within a block, usually\
+    \ a method, and are visible only within that block. Just like local variables,\
+    \ the scope of a local inner class is restricted to the block it is defined in.\
+    \ They can access local variables and parameters of the enclosing block that are\
+    \ effectively final.\n\n# 12.3.4 Anonymous Inner Classes\n\nAnonymous inner classes\
+    \ are unnamed and are typically used for instantiating objects with certain extensions\
+    \ or implementations of interfaces or abstract classes on the fly, without the\
+    \ need to formally declare a subclass. They are useful when a local class is required\
+    \ only once."
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: "```\nRunnable runnable = new Runnable() {\n    @Override\n    public void run()\
+    \ {\n        System.out.println(\"Anonymous inner class example.\");\n    }\n\
+    };\n```\n\n# 12.3.5 Static Nested Classes\n\nUnlike the other types of inner classes,\
+    \ static nested classes do not require an instance of the outer class to be created.\
+    \ They cannot access non-static members of the outer class directly. They are\
+    \ typically used to associate a class with another class where the inner class\
+    \ needs to be accessed in a static context. Each type of inner class serves a\
+    \ unique purpose and offers different capabilities and restrictions, providing\
+    \ flexible options for organizing and structuring Java applications.\n\n# 12.4\
+    \ Understanding Static and Final\n\n# 12.4.1 Static Keyword: Variables and Methods\n\
+    \nThe static keyword in Java is used to indicate that a particular member (variable\
+    \ or method) belongs to the"
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: 'class, rather than instances of the class. This means that a single copy of
+    the static member is created and shared across all instances of the class.
+
+
+    +   - Static Variables: Also known as class variables, these are declared with
+    the static keyword within a class, but outside any method. They are initialized
+    when the class is loaded.
+
+
+    +   - Static Methods: These methods can be called without creating an instance
+    of the class. Static methods cannot access instance variables or methods directly;
+    they must use an object reference.
+
+
+    ```
+
+    final int finalVariable = 10; // Cannot be reassigned a new value
+
+    ```
+
+
+    # 12.4.2 Final Keyword: Immutable States
+
+
+    The final keyword in Java is used to declare constants, prevent inheritance, and
+    prevent methods from being overridden. When applied to variables, it makes them
+    unchangeable after they are initialized. When applied to classes and methods,
+    it restricts inheritance and overriding, respectively.
+
+
+    +   - Final Variables: These variables must be initialized when declared or within
+    the constructor.
+
+
+    Once assigned, their value cannot be changed.
+
+
+    +   - Final Parameters: Parameters of a method declared as final cannot be modified
+    within the method.'
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: "```\nclass MyClass {\n  static {\n    // code to be executed when class is\
+    \ loaded\n  }\n}\n```\n\n# 12.4.3 Static Blocks and Initializers\n\nStatic Blocks:\
+    \ Static initialization blocks are used for initializing static variables. This\
+    \ block is executed only once: the first time the class is loaded into memory.\n\
+    \n```\nclass MyClass {\n{\n    // code to be executed when an instance is created\n\
+    \  }\n}\n```\n\nInitializers: Non-static initializer blocks are used to initialize\
+    \ instance variables. These blocks are executed"
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: "whenever an instance of the class is created.\n\n```\nclass MyClass {\n  //\
+    \ code to be executed when an instance is created\n}\n```\n\n# 12.4.4 Final Classes\
+    \ and Methods\n\n+   - Final Classes: A class declared as final cannot be subclassed.\
+    \ This is particularly useful when creating an immutable class like the string\
+    \ class.\n- Final Methods: Methods declared as final cannot be overridden by subclasses.\
+    \ This is used to prevent accidental overriding of methods which can alter crucial\
+    \ behavior of the class."
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: "```\nfinal class MyFinalClass {\n    // class body\n}\n\nclass MyClass {\n\
+    \    final void myFinalMethod() {\n        // method body\n    }\n}\n```\n\nUsing\
+    \ the static and final keywords properly can significantly enhance the design\
+    \ and performance of Java applications, by promoting immutability, reducing overhead,\
+    \ and securing critical functionality against modification.\n\n# About the Author\n\
+    \nProgramming Hub is a pioneering platform that has revolutionized the way millions\
+    \ of learners engage with coding and computer science. With a mission to make\
+    \ programming accessible to all, Programming Hub has reached significant milestones,\
+    \ empowering individuals from diverse backgrounds to explore the world of programming."
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: 'With over 5 million downloads, and rated as 4.7 on both play store and app
+    store by more than 183K reviews the Programming Hub is considered to be one of
+    the best app. It is a comprehensive learning companion that covers a vast array
+    of programming languages and topics. From Python and Java to C++ and HTML, the
+    app provides interactive lessons, coding challenges, and quizzes to help you sharpen
+    your skills. Its intuitive interface and gamified learning approach make mastering
+    programming languages engaging and accessible. Programming Hub has received numerous
+    award. It has been recognized as Google editor’s choice in 2017, Google Best App
+    in 2017, Google LaunchPad Accelerator, got featured on Product Hunt, received
+    FB Start from Facebook.
+
+
+    Programming Hub offers over 45+ apps for the users and have garnered praise from
+    learners worldwide. Users commend the app’s user-friendly interface, engaging
+    content, and effective teaching methodology. Learners of all ages and skill levels
+    have found Programming Hub to be a reliable companion on their coding journey,
+    igniting their passion for programming and unlocking their full potential.
+
+
+    Other apps mostly used apps by users of programming hub are:
+
+
+    +   1. Python
+
+
+    +   2. Digital marketing
+
+
+    +   3. Java
+
+
+    +   4. Hacking
+
+
+    +   5. Artificial Intelligence
+
+
+    +   6. C++ Programming
+
+
+    +   7. C Programming
+
+
+    +   & more'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: That's all for this Journey fellow sorcerers, but remember, this is just the
+    beginning! Stay tuned and eagerly await the next volume of this enlightening series
+    as we delve deeper into the fascinating world of program-ming and continue our
+    quest for mastery. The adventure is far from over!
+  merge: -1
+  img_proc: true
