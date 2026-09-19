@@ -1,0 +1,228 @@
+- - '#'
+  - Java 响应式编程使用指南
+- - '#'
+  - 引言
+- - '#'
+  - 第 1 章
+- - '##'
+  - ReactiveX 和 RxJava
+- - '###'
+  - 简介
+- - '##'
+  - 命令式编程与函数式编程
+- - '##'
+  - Lambda 表达式
+- - '##'
+  - 命令式还是函数式？
+- - '##'
+  - 数据流 (Streams of Data)
+- - '##'
+  - 观察者模式 (Observer Pattern)
+- - '#'
+  - 第一章 REACTX 与 JAVA
+- - '##'
+  - 什么是 ReactiveX？
+- - '##'
+  - 什么是 RxJava？
+- - '#'
+  - 第 2 章 可观测对象与观察者
+- - '##'
+  - 可观测对象（Observable）的定义
+- - '##'
+  - 观察者（Observer）的定义
+- - '##'
+  - onNext, onCompleted, onError
+- - '##'
+  - 热观测对象与冷可观测对象
+- - '##'
+  - 创建可观测对象
+- - '###'
+  - Observable.just()
+- - '###'
+  - Observable.range()
+- - '###'
+  - Observable.interval()
+- - '###'
+  - Observable.timer()
+- - '###'
+  - Observable.create()
+- - '###'
+  - Observable.empty()
+- - '###'
+  - Observable.error()
+- - '###'
+  - Observable.never()
+- - '###'
+  - Observable.defer()
+- - '##'
+  - flatMap
+- - '##'
+  - concatMap
+- - '##'
+  - zip
+- - '##'
+  - concat
+- - '##'
+  - distinct
+- - '##'
+  - first
+- - '##'
+  - last
+- - '##'
+  - take
+- - '##'
+  - startWith
+- - '##'
+  - scan
+- - '##'
+  - 其他算符
+- - '###'
+  - 转换可观测对象的算符
+- - '###'
+  - 过滤可观测对象的算符
+- - '###'
+  - 组合可观测对象的算符
+- - '##'
+  - 示例：斐波那契数列
+- - '#'
+  - 第 3 章 订阅生命周期
+- - '##'
+  - 引言
+- - '##'
+  - 错误处理
+- - '##'
+  - 在 onError() 方法中处理错误
+- - '##'
+  - 忽略异常并继续
+- - '##'
+  - 重试 (Retry)
+- - '##'
+  - Schedulers
+- - '###'
+  - 示例：网络调用
+- - '###'
+  - 示例：向数据库插入数据
+- - '##'
+  - 转换器 (Transformers)
+- - '##'
+  - 调度器的进阶用法
+- - '##'
+  - 背压 (Backpressure)
+- - '##'
+  - 处理发射期间背压：节流
+- - '###'
+  - sample
+- - '###'
+  - throttleFirst
+- - '###'
+  - debounce
+- - '##'
+  - 在发射期间处理背压：缓冲（Buffering）
+- - '###'
+  - Buffer
+- - '###'
+  - Window
+- - '##'
+  - 在订阅者内部处理背压
+- - '#'
+  - 第 4 章 Subjects（主项）
+- - '##'
+  - PublishSubject
+- - '##'
+  - BehaviorSubject
+- - '##'
+  - ReplaySubject
+- - '##'
+  - AsyncSubject
+- - '##'
+  - 什么时候应该使用 Subject？
+- - '##'
+  - 示例：ArrayList 的响应式版本
+- - '##'
+  - 可连接的 Observable (Connectable Observables)
+- - '#'
+  - 第 5 章 使用 RxJava 和 Retrofit 进行网络编程
+- - '##'
+  - 'Retrofit 对 RxJava 的内置支持 '
+- - '##'
+  - 在你的 Java 项目中设置 Retrofit
+- - '##'
+  - 创建 Retrofit 服务
+- - '##'
+  - 过滤结果
+- - '##'
+  - 选择正确的 Scheduler
+- - '##'
+  - 链式多次调用
+- - '##'
+  - 缓存数据
+- - '#'
+  - 第 6 章 RXJAVA 与 Android
+- - '##'
+  - RxJava 与 Android
+- - '##'
+  - RxAndroid
+- - '##'
+  - RxBindings
+- - '##'
+  - 将此库添加到你的 Android 项目，请将依赖添加到 app 的 `build.gradle` 文件中：
+- - '#'
+  - 索引
+- - '##'
+  - Activity Lifecycle, 101–105
+- - '##'
+  - AsyncSubject, 70–72
+- - '##'
+  - Backpressure, 41, 55–59
+- - '##'
+  - BehaviorSubject, 66–69
+- - '##'
+  - Callback, 8–9, 41, 79, 88–90
+- - '##'
+  - Cold observable, 15–16, 29, 66
+- - '##'
+  - Connectable observable, 15, 76–77
+- - '##'
+  - Fragment Lifecycle, 101–105
+- - '##'
+  - Functional programming, 4–21
+- - '##'
+  - Gradle, 11, 80, 95, 98, 104
+- - '##'
+  - Handler, 97
+- - '##'
+  - Gson, 72
+- - '##'
+  - Imperative programming, 1–4
+- - '##'
+  - JSON, 18, 79, 81–82
+- - '##'
+  - Lambda expressions, 1–4, 7, 90
+- - '##'
+  - Network, 18–19, 49, 51–52, 93
+- - '##'
+  - Observable (definition), 12
+- - '##'
+  - Observable class (java.util), 6
+- - '##'
+  - Observable composition, 22–39
+- - '##'
+  - Observable operators
+- - '##'
+  - Observer (definition), 5
+- - '##'
+  - Observer pattern, 8
+- - '##'
+  - Error, 13–17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 38, 39, 41, 43, 44, 45, 46,
+    47, 49, 50, 51, 52, 53, 54, 55, 57, 58, 59, 61, 63, 64, 65, 66, 67, 69, 71, 72,
+    75, 76, 77, 79, 83, 86, 87, 88, 89, 90, 93, 95, 96, 97, 99, 101, 102, 103, 104
+- - '##'
+  - Next, 13–19, 21, 23, 25, 27, 29, 31, 33, 35, 38, 39, 41, 43, 44, 45, 46, 47, 49,
+    50, 51, 52, 53, 54, 55, 57, 58, 59, 61, 63, 64, 65, 66, 67, 69, 71, 72, 75, 76,
+    77, 79, 83, 86, 87, 88, 89, 90, 93, 95, 96, 97, 99, 101, 102, 103, 104
+- - '##'
+  - Subscription, 13–15–104
+- - '##'
+  - Transformers, 53–54
+- - '##'
+  - Unsubscription, 14–15–104

@@ -1,0 +1,3289 @@
+- pgno: 0
+  md: '# # REACTIVE PROGRAMMING USING JAVA
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Contents at a Glance
+
+
+    +   - About the Author ................................................................................
+    xi
+
+    - About the Technical Reviewer ................................................
+    xiii
+
+    - Acknowledgments ..............................................................................
+    XV
+
+    - Introduction ................................................................................
+    xvii
+
+    - Chapter 1: ReactiveX and RxJava..............................................
+    1
+
+    - Chapter 2: Observables and Observers.......................................
+    11
+
+    - Chapter 3: Subscription Lifecycle..................................................
+    41
+
+    - Chapter 4: Subjects...........................................................................
+    61
+
+    - Chapter 5: Networking with RxJava and Retrofit.......................... 79
+
+    - Chapter 6: RxJava and Android.......................................................
+    95
+
+    - Index...........................................................................................
+    107'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Contents
+
+
+    +   About the Author .....................................................................
+    xi
+
+    About the Technical Reviewer ................................................
+    xiii
+
+    Acknowledgments .................................................................
+    XV
+
+    Introduction .......................................................................
+    xvii
+
+    Chapter 1: ReactiveX and RxJava...............................................
+    1
+
+    Introduction ........................................................................
+    1
+
+    Imperative and Functional Programming................................ 1
+
+    Lambda Expressions...............................................................
+    3
+
+    Imperative or Functional?............................................... 4
+
+    Reactive Programming ............................................................
+    4
+
+    Streams of Data .................................................................
+    5
+
+    The Observer Pattern ............................................................
+    5
+
+    What''s ReactiveX?........................................................ 6
+
+    What''s RxJava?......................................................................
+    7
+
+    Chapter 2: Observables and Observers ............................. 11
+
+    Introduction .......................................................................
+    11
+
+    Adding RxJava to Your Project............................................... 11
+
+    Definition of Observable ................................................ 12
+
+    Definition of Observer .................................................. 12
+
+    onNext, onCompleted, onError..................................................
+    13
+
+    Hot and Cold Observables ........................................ 15'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# CONTENTS
+
+
+    +   Creating Observables ............................................................
+    16
+
+    Observable.just()........................................................................
+    16
+
+    Observable.range()......................................................................
+    17
+
+    Observable.interval()................................................................
+    17
+
+    Observable.timer()......................................................................
+    18
+
+    Observable.create()......................................................................
+    18
+
+    Observable.empty().......................................................................
+    19
+
+    Observable.error().......................................................................
+    19
+
+    Observable.never()......................................................................
+    19
+
+    Observable.defer()......................................................................
+    20
+
+    Composing and Transforming Observables...........................................
+    22
+
+    map()......................................................................................
+    22
+
+    flatMap()................................................................................
+    24
+
+    concatMap()..............................................................................
+    25
+
+    zip()......................................................................................
+    26
+
+    concat()..................................................................................
+    27
+
+    filter().................................................................................
+    29
+
+    distinct()..............................................................................
+    30
+
+    first()....................................................................................
+    30
+
+    last()....................................................................................
+    31
+
+    take()....................................................................................
+    33
+
+    startWith()............................................................................
+    34
+
+    scan()....................................................................................
+    35
+
+    Other Operators......................................................................
+    36'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Chapter 3: Subscription Lifecycle...............................................................
+    41
+
+
+    Introduction ............................................................................................
+    41
+
+
+    Error Handling .......................................................................................
+    41
+
+
+    Handling Errors in the onError() Method ................................................
+    42
+
+
+    Ignoring the Exception and Continuing with Item Emission ................ 43
+
+
+    Retry ......................................................................................
+    46
+
+
+    Schedulers ..........................................................................................
+    49
+
+
+    Transformers .......................................................................................
+    53
+
+
+    Advanced Use of Schedulers ................................................................
+    54
+
+
+    Backpressure ......................................................................
+    55
+
+
+    Handling Backpressure During Emission: Throttling ................ 55
+
+
+    Handling Backpressure During Emission: Buffering ................... 57
+
+
+    Handling Backpressure Inside the Subscriber..................................
+    59
+
+
+    # Chapter 4: Subjects ...................................................................
+    61
+
+
+    PublishSubject .....................................................................
+    63
+
+
+    BehaviorSubject ...................................................................
+    66
+
+
+    ReplaySubject ...................................................................
+    69
+
+
+    AsyncSubject ................................................................
+    70
+
+
+    When Should You Use Subjects? ................................ 72
+
+
+    Connectable Observables..................................................................
+    76
+
+
+    # Chapter 5: Networking with RxJava and Retrofit ................ 79
+
+
+    Retrofit''s Built-in Support for RxJava.................................. 80
+
+
+    Setting Up Retrofit in Your Java Project......................................
+    80
+
+
+    Creating a Retrofit Service ................................................ 80
+
+
+    Filter Results..................................................................
+    85
+
+
+    Choosing the Right Scheduler ........................................ 87'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# CONTENTS
+
+
+    +   Chaining Multiple Network Calls ............................................................
+    88
+
+    Caching Data...............................................................................................
+    90
+
+    Chapter 6: RxJava and Android .......................................................
+    95
+
+    RxAndroid................................................................................................
+    95
+
+    RxBindings...............................................................................................
+    97
+
+    Activity and Fragment Life Cycle......................................................
+    101
+
+    Index.......................................................................................................
+    107'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Introduction
+
+
+    Welcome to Reactive Java Programming. With this book you''ll learn how to transform
+    the way you develop Java Android applications in a reactive way, moving from synchronous
+    state management with variables to working with asynchronous streams of data.
+    This means you''ll learn how to apply elements of functional programming to Java
+    programs and how to write code that "reacts" to events; you''ll also be able to
+    produce shorter, more readable, more maintainable, and less error-prone code.
+    To do this, you''ll study the RxJava library, the Java implementation of the reactive
+    extension (Rx) library originally developed by Erik Meier for .NET.
+
+
+    You''ll start by learning what reactive functional programming is and why it''s
+    different from imperative programming.
+
+
+    In Chapter 2, you''ll see how to include the RxJava library in your projects,
+    and you''ll explore the main classes and methods provided by this library.
+
+
+    Chapters 3 and 4 cover more advanced concepts of working with asynchronous streams
+    of data, like error handling and threading.
+
+
+    In Chapter 5, you''ll apply what you learned in the previous chapters to a specific
+    area: networking.
+
+
+    Finally, in Chapter 6, you will take a look at some libraries created to extend
+    RxJava to Android development.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# CHAPTER 1
+
+
+    # ReactiveX and RxJava
+
+
+    # Introduction
+
+
+    Java is an object-oriented programming language that has been around for many
+    years (it officially introduced in 1995). Today, it is one of the most appreciated
+    and used languages, thanks to its maturity, stability, and great community support.
+
+
+    Java is anchored to the concepts upon which it was built: Java is an imperative,
+    object-oriented language.
+
+
+    In recent years, new programming paradigms have become popular, such as functional
+    and reactive programming. Many new languages have been created.
+
+
+    Java was left behind for some time. However, functional programming was introduced
+    in Java 8 with the support of lambda expressions and streams, but the RxJava library
+    provide the classes and methods needed to implement functional and reactive programming
+    in Java versions starting from Java 5.
+
+
+    In this chapter, I will introduce the concepts of functional programming, reactive
+    programming and the Observer pattern. Then I will show you what ReactiveX and
+    RxJava are and how they can help you write more readable, shorter, more maintainable,
+    and error-free code.
+
+
+    In the following chapters, you will dig into RxJava, learning about the common
+    classes and methods via concrete examples of where you can use them.
+
+
+    I am assuming that you have basic knowledge of Java programming, although deep
+    skills are not required.
+
+
+    # Imperative and Functional Programming
+
+
+    As you may already know, Java is an imperative programming language. A java program
+    consists of a sequence of instructions. Each of these instructions is executed
+    in the same order as you write them, and the execution leads to changes in the
+    state of the program.
+
+
+    Electronic supplementary material The online version of this chapter
+
+    (doi:10.1007/978-1-4842-1428-2_1) contains supplementary material, which is available
+    to authorized users.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# CHAPTER 1 REACTIVE AND RXJAVA\n\nFor example, the following code creates\
+    \ a collection of even numbers:\n\n```\nList<Integer> input = Arrays.asList(1,\
+    \ 2, 3, 4, 5);\nList<Integer> output = new ArrayList<>();\nfor (Integer x : input)\
+    \ {\n    if (x % 2 == 0) {\n        output.add(x);\n    }\n}\n```\n\nIn order\
+    \ to produce the desired output, you define every step that the program has to\
+    \ build the result list, and each step is defined sequentially.\n\n+   1. Define\
+    \ and create an input list.\n2. Define and create an empty output list.\n3. Take\
+    \ each item of the input list.\n4. If the item is even, add it to the output list.\n\
+    5. Continue with the following programming until the end of the input list is\
+    \ reached.\n\nOne alternative to functional programming. In functional programming,\
+    \ the result of the program derives from evaluation of mathematical functions,\
+    \ without changing the internal program state. In fact, for every function f(x),\
+    \ the result of f depends on the arguments passed to the function. Each time f(x)\
+    \ is called, passing the same argument x, you always get the same result. This\
+    \ is similar to an Object's static method that does not depend on any of the Object's\
+    \ members.\nin simpler terms, in functional programming the blocks with which\
+    \ you build the program are not objects but functions and procedures.\nSo, using\
+    \ functional programming, the example above can be rewritten with the following\
+    \ pseudocode:\n\n```\nvar output = input.where(x -> x % 2 == 0);\n```\n\nHere,\
+    \ you don't have a sequence of steps but just a function (x % 2 == 0) passed as\
+    \ a parameter to another function (where) that is applied to an object (Input).\
+    \ The arrow (->) means \"apply function f\" (right side of the expression) to\
+    \ the variable x (left side of expression).\n\nThe features of functional language\
+    \ are the following:\n\n+   * Higher-order functions: Higher-order functions are\
+    \ functions that take other functions as arguments.\n* Immutable data: Data is\
+    \ immutable by default; instead of modifying values, functional languages often\
+    \ operate on a copy of original values to preserve them (in Java, primitive types\
+    \ are already immutable but an object is not, so its implementation must not allow\
+    \ the object's state to be changed after creation)."
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "+   - Concurrency: Concurrency is supported and is safer to implement, thanks\
+    \ also to the immutability by default.\n\n+   - Referential transparency: This\
+    \ term defines the fact that computations can be performed at any time, always\
+    \ producing the same result (similar to static methods in Java).\n\n+   - Lazy\
+    \ evaluation: Values can be computed only when needed (lazily) because functions\
+    \ can be evaluated at any time, giving the same result (these functions do not\
+    \ depend on the program's internal state).\n\nThere are programming languages\
+    \ that are defined as purely functional programming languages, like Haskell, Hope,\
+    \ and Mercury. Java is not one of these languages, but we can get the advantages\
+    \ of functional programming also in Java.\n\nWith the release of Java 8, some\
+    \ constructs of functional programming have been added, lambda functions and streams.\
+    \ But with the RxJava library we can use concepts of functional programming with\
+    \ Java 1.7 and Java 1.8.\n\n#  Lambda Expressions\n\nLambda expressions are anonymous\
+    \ functions; the lambda operator is indicated using an arrow symbol pointing to\
+    \ the right (>). Inputs are placed at the left of the operator, and the function\
+    \ body is placed at the right.\n\nIn Java, lambda expressions can be used to replace\
+    \ anonymous inner classes that implement an interface with just one method. For\
+    \ example, consider the following Button object:\n\n...\n\n```\nclass Button {\n\
+    \    setOnClickListener(OnButtonClickClickListener listener) {\n    }\n}\n\ninterface\
+    \ OnButtonClickClickListener {\n    void onButtonClick();\n}\n```\n\nTo attach\
+    \ a listener to the Button, you can use an anonymous function:\n\n```\nButton\
+    \ button = ...\nbutton.setOnClickListener(new OnButtonClickClickListener() {\n\
+    \    public void onButtonClick() {\n        // do something on button clicked\n\
+    \    }\n});\n```"
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "# CHAPTER 1 REACTIVE AND RXJAVA\n\nUsing lambda expressions, the code above\
+    \ becomes the:\n\n```\nButton button = ...nbutton.setOnClickListener( () -> //\
+    \ do something on button clicked );\n```\n\nOn the right side of the lambda operator\
+    \ you can include all of the code to be executed when the button is clicked; this\
+    \ code has no input, as indicated by the two brackets on the left side of the\
+    \ lambda operator.\n\nIf the method onButtonClickListener accepts some parameters,\
+    \ the example above becomes\n\n```\nInterface OnButtonClickClickListener {\n \
+    \ void buttonClicked(Object param);\n}\n```\n\n```\nButton button = ...nbutton.setOnClickListener(\
+    \ param ->\n// do something on button clicked\n// param can be used in this code\
+    \ block\n)\n```\n\nJava support for lambda expressions was introduced in Java\
+    \ 8, but you can use them in previous Java versions using the retrolambda library\
+    \ (https://github.com/evant/gradle-retrolambda).\n\n# Imperative or Functional?\n\
+    \nSo, why should you choose functional programming over imperative programming?\
+    \ Functional code is often shorter and easier to understand than the corresponding\
+    \ imperative code. You can do the same work with less code, and every programmer\
+    \ knows that less code leads to less bugs.\n\nIn imperative programming, implementing\
+    \ abstraction requires you to define interfaces and split code into components\
+    \ that implement those interfaces; functional languages make it easier to create\
+    \ abstractions (just think about how lambda expressions avoid the necessity of\
+    \ creating interfaces with implementations).\n\n# Reactive Programming\n\nReactive\
+    \ programming takes functional programming a little bit further, by adding the\
+    \ concept of data flows (the next section) and propagation of data changes. In\
+    \ reactive programming, a value can be assigned to a variable in the following\
+    \ way:\n\n```\nx = y + z\n```\n\nHere, the sum of y and z will be assigned to\
+    \ variable x at the same time that the function is called; later, variables y\
+    \ and z can change, but these changes will not automatically influence the value\
+    \ of x."
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'In reactive programming, the value of x should be updated whenever the values
+    of y or z
+
+    change.
+
+
+    So, if the initial values are y = 1 and z = 1, you''ll have
+
+
+    x = y + z = 2.
+
+
+    If (or or z) changes its value, this does not mean that x changes automatically,
+    but you
+
+    must implement a mechanism to update the values of x when values of y and z are
+    changed.
+
+
+    Functional reactive programming is a new programming paradigm; it was made
+
+    popular Erik Muller (who created the Rx library for .NET when working at Microsoft)
+
+    and it''s based on two concepts:
+
+
+    +   - Code "reacts" to events.
+
+
+    +   - Code handles values as they vary in time, propagating changes to
+
+    every part of the code that uses those values.
+
+
+    # ## Streams of Data
+
+
+    The key to understand reactive programming is to think about it operating on a
+    stream
+
+    of data.
+
+
+    But what do I mean by "stream of data"? I mean a sequence of events, where an
+
+    event could be user input (like a tap on a button), a response from an API request
+    (like a
+
+    Facebook feed), data contained in a collection, or even a single variable.
+
+
+    In reactive programming, there''s often a component that acts as the source, emitting
+
+    a sequence of items (or a stream of data), and some other components that observe
+    this
+
+    flow of items and react to each emitted item (they "react" to item emission).
+
+
+    # ## Observer Pattern
+
+
+    The Observer pattern is a design pattern in which there are two kinds of objects:
+
+    observers and subjects. a subject is an object that observes the changes of one
+    or more
+
+    subjects; a subject is an object that keeps a list of its observers and automatically
+    notifies
+
+    when it changes its state.
+
+
+    The definition of the Observer pattern from the "Gang of Four" (Design
+
+    Patterns: Elements of Reusable Object Software by Erik Gamma, Richard Helm,
+
+    Ralph Johnson, and John Videsch, ISBN 978-0-201-63361-2) is
+
+
+    > > Define a one-to-many dependency between objects so that when
+
+    one object changes state
+
+
+    This pattern is the core of reactive programming. It fits perfectly the concept
+    of
+
+    reactive programming by providing the structures to implement the produce/react
+
+    mechanism.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "# CHAPTER 1 REACTIVEX AND JAVA\n\nJava SDK implements the Observer pattern\
+    \ with the class java.util.Observable and the interface java.util.Observer.\n\n\
+    class Subject extends java.util.Observable {\n\n```\npublic void doWorkAndNotify()\
+    \ {\n    Object result = doWork();\n    notifyObservers(result);\n}\n```\n\nclass\
+    \ MyObserver implements Observer {\n\n```\n@Override\npublic void update(Observable\
+    \ obs, Object item) {\n    doSomethingWith(item);\n}\n```\n\nThe Subject class\
+    \ extends java.util.Observable and is responsible for producing an object and\
+    \ notifying the observer as soon as the item has been produced.\nMyObserver implements\
+    \ Observer and is responsible for observing Subject and consuming every item that\
+    \ Subject produces.\nPutting Subject and MyObserver together.\n\n```\nMyObserver\
+    \ observer = new MyObserver();\nSubject subject = new Subject();\nsubject.addObserver(observer);\n\
+    subject.doWorkAndNotify();\n```\n\nUnfortunately, this implementation reveals\
+    \ itself to be too simple when you start to write more complex logic.\nYou'll\
+    \ never use this implementation; instead you'll use the built-in RxJava implementation.\n\
+    \n# What's ReactiveX?\n\nFrom http://reactive.io/ comes the following definition:\
+    \ ReactiveX is a combination of the best ideas from Observer pattern, the Iterator\
+    \ pattern, and functional programming.\nIt's a library that implements functional\
+    \ reactive programming in many languages. It uses \"observables\" to represent\
+    \ asynchronous data streams, and it abstracts all details related to threading,\
+    \ concurrency, and synchronization. Thanks to ReactiveX, writing concurrent programs\
+    \ becomes a lot easier because"
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "+   - You don't have to deal with multithreading problems.\n\n+   - You can\
+    \ easily transform a data stream into another data stream (where the data type\
+    \ can differ from the source stream's data type).\n\n+   - You can easily combine\
+    \ different data streams (like merging two or more data streams into one stream\
+    \ or concatenating streams).\n\n# # What's RxJava?\n\nReactiveX has been implemented\
+    \ as a library for the most used programming languages: Java, JavaScript, Cr,\
+    \ Scala, C++, Python, Groovy, JRuby, Kotlin, Swift, and more. (See the full list\
+    \ at http://reactive.io/languages.html).\n\nRxJava is a library that implements\
+    \ the concepts of ReactiveX in Java. As you will use in following chapters, you\
+    \ can rewrite the imperative code that filters even numbers using RxJava:\n\n\
+    List<Integer> input = Arrays.asList(1, 2, 3, 4, 5);\n\n```\nobservable.from(input)\n\
+    \    .filter(new Func1() {\n        @Override\n        public Boolean call(Integer\
+    \ x) {\n            return x % 2 == 0;\n        }\n    })\n```\n\nOr, using a\
+    \ lambda expression:\n\n```\nobservable.from(input)\n    .filter(x -> x % 2 ==\
+    \ 0);\n```\n\nThe resulting object (the instance of rx.Observable) will generate\
+    \ a sequence of the even numbers contained in the input sequence: 2 and 4.\n\n\
+    In RxJava\n\n+   - The producer can notify the consumer that there is no more\
+    \ data available.\n\n+   - The producer can notify the consumer that an error\
+    \ has occurred.\n\nNote The RxJava library provides a programming model that we\
+    \ can work with events generated from UI or asynchronous calls in the same way\
+    \ in which we operate with collections and streams in Java 8."
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "# CHAPTER 1 REACTIVE AND RXJAVA\n\nThe RxJava library was created at Netflix\
+    \ as a smarter alternative to Java Futures and callbacks. Both Futures and callbacks\
+    \ are straightforward to use when there's just one level of asynchronous execution,\
+    \ but they are hard to manage when they're nested. The following example shows\
+    \ how the nested callbacks problem is handled in RxJava.\n\n# EXAMPLE: NESTED\
+    \ API CALLS\n\nSuppose that you need to call a remote API to authenticate a user,\
+    \ then another one to get the user's data, and another API to get a user's contacts.\
+    \ Typically, you would have to nest API calls like this:\n\n```\nUser user = null;\n\
+    serviceEndpoint.login(username, password, new CallbackAccessToken()) {\n  @Override\n\
+    \  public void success(User user, Response response) {\n    // accessToken somewhere\n\
+    \    serviceEndpoint.getUser(new Callback<User>()) {\n      @Override\n      public\
+    \ void success(User userRepository, Response response) {\n        user = userRepository;\n\
+    \        serviceEndpoint.getUserContact(user.getId(), new Callback<Contact>())\
+    \ {\n          @Override\n          public void success(Contact contact, Response\
+    \ response) {\n            user.setContact(contact);\n          }\n          @Override\n\
+    \          public void failure(RetrofitError error) {\n            // handle error\
+    \ here...\n          }\n        }\n      }\n    }\n  @Override\n  public void\
+    \ failure(RetrofitError error) {\n    // handle error here...\n  }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "```\n}\n@Override\npublic void failure(RetrofitError error) {\n    // handle\
+    \ error here...\n}\n));\n```\n\nWith RxJava, the nested callbacks are replaced\
+    \ with more efficient, readable, and maintainable composed functions:\n\n```\n\
+    serviceEndpoint.login(\n    .doNext(accessToken -> storeCredentials(accessToken))\n\
+    \    .flatMap(accessToken -> serviceEndpoint.getUser())\n    .flatMap(user ->\
+    \ serviceEndpoint.getUserContact(user.getId())))\n```\n\nAs you can see, this\
+    \ piece of code has all the properties of functional programming, with the addition\
+    \ of the reactive component (functions are executed as a reaction to the response\
+    \ received from the login() method)."
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# CHAPTER 2\n\n# Observables and Observers\n\n# Introduction\n\nIn this chapter,\
+    \ you'll dive into the RxJava library. First, you'll learn how to include RxJava\
+    \ in your Java project. Then, you will learn\n\n+   - About the building blocks\
+    \ of RxJava (rx.Observable<T>, rx.Observer<T>, rx.Subscriber<T>)\n- The type of\
+    \ events that can be emitted by rx.Observable<T> and received by rx.Observer<T>\n\
+    - The operators that can be applied to observables\n\n# Adding RxJava to Your\
+    \ Project\n\nThe RxJava library (https://github.com/Reactive/RxJava) can be included\
+    \ by simply adding the corresponding dependency to your project (no other dependencies\
+    \ are required). At the time of writing, the latest version is 1.1.10.\nYou include\
+    \ it in a Maven project like so:\n\n```\n<dependency>\n  <groupId>io.reactive</groupId>\n\
+    \  <artifactId>rxjava</artifactId>\n  <version>1.1.10</version>\n</dependency>\n\
+    ```\n\nIf you're working with a gradle project, it looks like this:\ncompile 'io.reactive:rxjava:1.1.10'\n\
+    \nRxJava supports all versions of JDK starting from Java 6. If you're working\
+    \ with Java 8, you can take advantage of Java native support for lambda expressions;\
+    \ otherwise, you can use lambda expression by adding retrolambda as a dependency\
+    \ (https://github.com/evant/gradle-retrolambda)."
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n# Definition of Observable\n\nAn observable\
+    \ is an object that emits a sequence (or stream) of events. It represents a push-based\
+    \ collection, which is a collection in which events are pushed when they are created.\n\
+    \nAn observable emits a sequence that can be empty, finite, or infinite. When\
+    \ the sequence is finite, a complete event is emitted after the end of the sequence.\
+    \ At any time during the emission (but not after the end of) an error event can\
+    \ be emitted, stopping the emission and cancelling the emission of the complete\
+    \ event.\n\nWhen the sequence is empty, only the complete event is emitted, without\
+    \ emitting any items. Without an infinite sequence, the complete event is never\
+    \ emitted.\n\nAs you'll see later, the emission can be transformed, filtered,\
+    \ or combined with other emissions.\n\n# Definition of Observer\n\nAn Observer\
+    \ is an object that subscribes to an Observable. It listens and reacts to whatever\
+    \ sequence of items is emitted by the Observable. The Observer is not blocked\
+    \ while waiting for new emitted items, so in concurrent operations, no blocking\
+    \ occurs. It wakes up when a new item is emitted.\n\nThis is one of the core principles\
+    \ of reactive programming instead of executing instructions one at a time (always\
+    \ waiting for the instruction to be completed), the observable provides a mechanism\
+    \ to receive and transform data, and the Observer activates this mechanism, all\
+    \ in a concurrent way.\n\nThe following pseudocode is an example of the method\
+    \ that the Observer implements that reacts to the Observable's items:\n\n```\n\
+    onNext = { it -> doSomething };\n```\n\nHere, the method is defined, but not invoked.\
+    \ To start reacting, you need to subscribe to the Observable:\n\n```\nobservable.subscribe(onNext)\n\
+    ```\n\nNow the Observer is listening for items and will react to every new item\
+    \ that will be emitted.\n\nLet's write this example in code using Java APIs:\n\
+    \n```\npublic void subscribeObservable(Observable<T> observer) {\n  observer.subscribe(nextItem\
+    \ -> {\n    // invoked when Observer emits an item\n    // usually you will consume\
+    \ the nextItem here\n  });\n}\n```\n\nNow it's clear that in order to connect\
+    \ an observable with an observer, you must use the subscribe method."
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "# onNext, onCompleted, onError\n\nThe rx.Observer<T> interface does not define\
+    \ only the onNext(T) method, but also the following methods:\n\n```\npublic void\
+    \ subscribe(Observable<T> observable) {\n    observable.subscribe(new Subscriber<T>()\
+    \ {\n        @Override\n        public void onCompleted() {\n            // invoked\
+    \ when Observable stops emitting items\n        }\n\n        @Override\n     \
+    \   public void onError(Throwable e) {\n            // invoked when Observable\
+    \ throws an exception\n            // while emitting items\n        }\n\n    \
+    \    @Override\n        public void onNext(T nextItem) {\n            // invoked\
+    \ when Observable emits an item\n            // usually you will consume the nextItem\
+    \ here\n        }\n    });\n```\n\nBut wait, why are you using an instance of\
+    \ Rx.Subscriber<T> here? If you take a look at the RxJava documentation, you will\
+    \ see that Subscriber<T> is an object that implements the Observer<T> interface,\
+    \ so it's legal to use it as an Observer. The reason why we use Subscriber is\
+    \ it also implements Subscription interface, which allows you to check if it is\
+    \ unsubscribed (using the isSubscribed() method) and to unsubscribe it (with the\
+    \ unsubscribe() method).\n\nFor simplicity, I will use Subscriber<T> instead of\
+    \ Observer<T>, unless it affects the readability and comprehension of tests and\
+    \ examples.\nFrom the previous example, notice that an Observer reacts to three\
+    \ types of events:\n\n+   - Item emission by the Observable: It occurs zero, one,\
+    \ or more times. If the sequence completes correctly, the onNext method will be\
+    \ invoked as many times as the number of items in the sequence. If an error occurs\
+    \ at a certain point, the onNext method won't be invoked any further."
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n+   * The completion of item emission:\
+    \ Only when all items in the sequence are emitted correctly will the onCompleted\
+    \ method be invoked. It is invoked only once, and after the last item has been\
+    \ emitted. It can also never happen if you're working with an infinite sequence.\n\
+    \n+   * An error can occur in every moment of the sequence, and the sequence will\
+    \ stop immediately. In this case, the onError will be invoked, passing the error\
+    \ as a Throwable object. The other two methods, onNext and onCompleted, won't\
+    \ be invoked.\n\nAn observable can notify both onCompleted and onError methods,\
+    \ only one of them. It will be the last method invoked.\n\n> Note If you use the\
+    \ shortest notation observable.subscribe(nextItem) -> {\n// do something with\
+    \ nextItem\n\n```\n));\n```\n\nyou won't get notified when the sequence completes.\
+    \ More importantly, if an error occurs, an exception will be thrown by RxJava\
+    \ because no implementation of onError can be found, and your app will crash!\n\
+    \nWith the Observable, subscribe() method (an operation-called subscription),\
+    \ you can connect an Observable to an Observer, but what if you want to disconnect\
+    \ them? This operation is called unsubscription and it looks like this:\n\n```\n\
+    public void subscribeTo(Observable<T> observable) {\n  Subscription subscription\
+    \ =\n  observable.subscribe(new Subscriber<>() {\n    @Override\n    public void\
+    \ onCompleted() {\n      // invoked when Observable stops emitting items\n   \
+    \ }\n\n    @Override\n    public void onError(Throwable e) {\n      // invoked\
+    \ when Observable throws an exception\n      // while emitting items\n    }\n\n\
+    \    @Override\n    public void onNext(T nextItem) {\n      // invoked when Observable\
+    \ emits an item\n    }\n  });\n```"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "```\n// usually you will consume the nextitem here\n\n}\n// disconnect observable\
+    \ and observer\nsubscription.unsubscribe()\n```\n\nYou can check if the subscription\
+    \ has been unsubscribed (Observer and Observable are no longer connected) with\
+    \ the following method:\n\nsubscription.subscribed()\n\nThe unsubscribe method\
+    \ can be called at any time during items emission. After the call to subscribe,\
+    \ onError won't receive any other item, and the other two methods, onCompleted\
+    \ won't be notified. After unsubscription, the observable can stop or continue\
+    \ with item emission, the observer will not be notified about it.\n\n# Hot and\
+    \ Cold Observables\n\nIn the examples so far we have assumed that an Observable\
+    \ beginning a sequence of items when the Observable subscribes to it: they are\
+    \ called *cold observables*. Cold observables always wait to have at least one\
+    \ subscribed to start emitting items.\n\nOn the other hand, an Observable that\
+    \ begins emitting items before being connected to an observer is called a *hot\
+    \ observable*\n\nWith hot observables, an observer can subscribe and start receiving\
+    \ items at any time during the emission. With hot observables, the observer may\
+    \ receive the complete sequence of items starting from the beginning or not.\n\
+    \n> Note There's another kind of observable called a *connectable observable*.\
+    \ This kind of observable begins emitting items when its \"connect\" method is\
+    \ called, whether or not any observers have subscribed to it.\n\nLet's go with\
+    \ a more concrete, yet simple, example. Let's create an Observable that all emits\
+    \ items from 1 to 5 and subscribe to it:\n\n```\nObservable<Integer> observable\
+    \ =\n  Observable.from(new Integer[] {1, 2, 3, 4, 5});\n\nobservable.subscribe(new\
+    \ Subscriber<Integer>() {\n  @Override\n  public void onCompleted() {\n    System.out.println(\"\
+    Sequence completed!\");\n  })\n```"
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n```\n@Override\npublic void onError(Throwable\
+    \ e) {\n    System.err.println(\"Exception: \" + e.getMessage());\n}\n\n@Override\n\
+    public void onNext(Integer integer) {\n    System.out.println(\"next item is:\
+    \ \" + integer);\n};\n```\n\nThe expected output is\n\n+   next item is: 1\nnext\
+    \ item is: 2\nnext item is: 3\nnext item is: 4\nnext item is: 5\n\nSequence completed!\n\
+    nThis is a cold observable because it will begin emitting items only when the\
+    \ observer subscribes. The observable will generate a sequence of five items,\
+    \ each one representing an integer object (from 1 to 5), so the onNext method\
+    \ of the observer will be invoked times. At the end of the sequence, the method\
+    \ onCompleted will be notified. The method onError will not be notified because\
+    \ this sequence does not generate any error or exception.\nExample of a hot observable\
+    \ is an observable that emits an event every time a UI button is clicked. It does\
+    \ not start to emit events when the observer subscribes; it emits events even\
+    \ if no Subscriber is subscribed. I will talk about observables in the section\
+    \ dedicated to Subjects.\nAs you noticed, in this example, you created an observable\
+    \ using the method Observable.from(), a static factory method that can create\
+    \ an Observable out of an array, an iterable, or a Future.\nThis is not the only\
+    \ way to create observables.\n\n# Creating Observables\n\nThe easiest way to create\
+    \ an observable is to use the factory methods that are implemented in the Rx library.\
+    \ You've already seen how to create an Observable using the Observable.from()\
+    \ method, so let's take a look at the other available methods.\n\n# Observable.just()\n\
+    \nObservable.just() creates an Observable that emits the object or the objects\
+    \ that are passed in as parameters:\n\n```\nObservable.just(\"an item\")\n```\n\
+    \n16"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "Observable.just(\"first item\", \"second item\")\nObservable.just(1, 2, 3)\n\
+    \nWith this operator you can rewrite your previous example as\n\n```\nObservable<Integer>\
+    \ observable =\n    Observable.just(1, 2, 3, 4, 5);\nobservable.subscribe(new\
+    \ Subscriber<Integer>() {\n    @Override\n    public void onNextCompleted() {\n\
+    \        System.out.println(\"Sequence completed!\");\n    }\n\n    @Override\n\
+    \    public void onError(Throwable e) {\n        System.out.println(\"Exception:\
+    \ \" + e.getMessage());\n    }\n\n    @Override\n    public void onNext(Integer\
+    \ integer) {\n        System.out.println(\"next item is: \" + integer);\n    }\n\
+    });\n```\n\nThe output will be the same:\n\n+   next item is: 1\nnext item is:\
+    \ 2\nnext item is: 3\nnext item is: 4\nnext item is: 5\nSequence completed!\n\n\
+    # Observable.range()\n\nObservable.range(a, n) creates an Observable that emits\
+    \ a range of n consecutive integers starting from a.\nObservable.just(1, 2, 3,\
+    \ 4, 5) and Observable.range(1, 5) will emit the same sequence.\n\n# Observable.interval()\n\
+    \nThe previous methods created observables that emit items in sequence, one after\
+    \ another, with no delay between items.\n\nBut what if you want your items to\
+    \ be emitted with some time interval?"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "# CHAPTER 2 | OBSERVABLES AND OBSERVERS\n\nObservable.interval(long, TimeUnit)\
+    \ does exactly this: it creates an Observable that emits a sequence of integers\
+    \ starting from 0 that are spaced by a given time interval.\nThe first argument\
+    \ is the amount of time, and the second argument defines the time unit.\nThe following\
+    \ observable emits an item every 1 second:\n\n```\nObservable.interval(1, TimeUnit.SECONDS)\n\
+    ```\n\nThe sequence is an infinite sequence, with no natural end, so onCompleted\
+    \ will never be notified. The sequence stops only when no more observers are connected\
+    \ (subscribed) to the observable.\n\n# Observable.timer()\n\nObservable.timer(long,\
+    \ TimeUnit) creates an Observable that emits just one item after a given delay.\
+    \ It can be useful when combined with other observables to introduce a delay before\
+    \ the beginning of another observable's sequence, as you will see later.\n\n#\
+    \ Observable.create()\n\nObservable.create() is the method that lets you create\
+    \ an Observable from scratch. For example, if you want to create an observable\
+    \ that emits only one string \"Hello\", you can write\n\n```\nObservable.create(\n\
+    new Observable.OnSubscribe<String>() {\n    @Override\n    public void call(Subscriber<String>\
+    \ super String observer) {\n        observer.onNext(\"Hello!\");\n    }\n    observer.onCompleted();\n\
+    \    }\n);\n```\n\nSuppose now that you want to create an observable that emits\
+    \ a JSON string resulting from a networking operation. If the response is successful,\
+    \ the observable will emit the result and terminate. Otherwise, it will raise\
+    \ an error.\n\n```\nObservable.create(\nnew Observable.OnSubscribe<String>() {\n\
+    \    @Override\n    public void call(Subscriber<String> super String observer)\
+    \ {\n        Response response = executeNetworkCall();\n        if (observer.isSubscribed())\
+    \ {\n            // do not emit the item,\n            // observer is not subscribed\
+    \ anymore\n            return;\n        }\n    }\n})\n```\n\n18\n\nwww.allbooks.com"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n```\nif (response != null && response.isSuccessful())\
+    \ {\n  observer.onNext(convertToTson(response));\n  observer.onCompleted();\n\
+    } else {\n  observer\n    .onError(new Exception(\"network error\"));\n}\n\n```\n\
+    \n# Observable.empty()\n\nObservable.empty() creates an Observable that emits\
+    \ an empty sequence (zero items) and then completes. So only onCompleted() will\
+    \ be notified.\nIt can be useful if you want to emit an empty sequence instead\
+    \ of emitting null items or throwing errors, like:\n\n```\nObject data = ...;\n\
+    \npublic Observable<Object> getData() {\n  if (data == null) {\n    return Observable.empty();\n\
+    \  } else {\n    return Observable.just(data);\n  }\n}\n```\n\n# Observable.error()\n\
+    \nObservable.error(throwable) creates an Observable that emits an empty sequence\
+    \ (zero items) and then notifies an error. So only onError() will be called.\n\
+    Object data = ...;\n\n```\npublic Observable<Object> getData() {\n  if (data ==\
+    \ null) {\n    return Observable.error(new Exception(\"no data!\"));\n  } else\
+    \ {\n    return Observable.just(data);\n  }\n}\n```\n\n# Observable.never()\n\n\
+    Observable.never() creates an Observable that emits an empty sequence (zero items)\
+    \ and never completes. No method of the observer will be invoked."
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n# Observable.defer()\n\nObservable.defer()\
+    \ creates an Observable only when a Subscriber subscribes.\nThe best way to explain\
+    \ what defer() does is with the following example. Let's start\nfrom the class\
+    \ Person, which has two fields: name and age.\n\n```\nclass Person {\n    private\
+    \ String name;\n    private int age;\n\n    public void setAge(int age) {\n  \
+    \      this.age = age;\n    }\n\n    public void setName(String name) {\n    \
+    \    this.name = name;\n    }\n\n    public int getAge() {\n        return age;\n\
+    \    }\n\n    public String getName() {\n        return name;\n    }\n}\n```\n\
+    \nNow create an instance of Person, two Observables to be notified with age and\
+    \ name\nvalues, and set the values for age and name:\n\n```\n// create a new Instance\
+    \ of Person\nfinal Person person = new Person();\n\nObservable<String> nameObservable\
+    \ =\nObservable.just(person.getName());\n\nObservable<Integer> ageObservable =\n\
+    Observable.just(person.getAge());\n```\n\n```\n// set age and name\nperson.setName(\"\
+    Bob\");\nperson.setAge(35);\n```\n\n```\nageObservable.subscribe(new Subscriber<Integer>()\
+    \ {\n    @Override\n    public void onCompleted() {\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n```\n@Override\npublic void onError(Throwable\
+    \ e) {\n}\n\n@Override\npublic void onNext(Integer age) {\n    System.out.println(\"\
+    age is: \" + age);\n}\n\nnameObservable.subscribe(new Subscriber<String>() {\n\
+    \    @Override\n    public void onCompleted() {\n}\n    @Override\n    public\
+    \ void onError(Throwable e) {\n}\n    @Override\n    public void onNext(String\
+    \ name) {\n    System.out.println(\"name is: \" + name);\n    }\n});\n```\n\n\
+    What happens when you call methods observeName() and observeAge()\non an instance\
+    \ of Person? What will be the sequence emitted by the observables?\nUnfortunately,\
+    \ the output will be\n\nage: 0\nname: null\n\nThis is not what you wanted. The\
+    \ problem here is that Observable.just() is evaluated as soon as it is invoked,\
+    \ it will create a sequence using the exact value that name and reference when\
+    \ the observable is created. In the example, when the observable is created, age\
+    \ is 0 and name is null.\n\nYou'd like to have a different behavior here: you\
+    \ want the values to be evaluated when you subscribe to the observables, and you\
+    \ can do this using Observable.defer().\n\nObservable.defer() accepts an interface\
+    \ of Func<Observable<T>> as parameter. Func<R> is an interface that exposes just\
+    \ one method that accepts zero arguments and returns a value of type R. There\
+    \ is also a Func<T,R> interface that exposes just one method that accepts one\
+    \ argument of type T and returns a value of type R. RxJava provides similar interfaces\
+    \ for up to nine arguments (Func<T,R>) and a varags version (FuncN<R>).\n\n21"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n```\nObservable<String> nameObservable\
+    \ =\nObservable.defer(new\n    FuncObservable<String>()() {\n    @Override\n \
+    \   public Observable<String> call() {\n        return Observable.just(person.getName());\n\
+    \    }\n});\nObservable<Integer> ageObservable =\nObservable.defer(new FuncObservable<Integer>()()\
+    \ {\n    @Override\n    public Observable<Integer> call() {\n        return Observable.just(person.getAge());\n\
+    \    }\n\n```\n\nBy using these two observables, the output of the previous examples\
+    \ becomes\n\nage: 35\nname: Bob\n\nAnd that's what you expected.\n\n# Composing\
+    \ and Transforming Observables\n\nObservables are especially good at being composed\
+    \ and transformed. With the usage of some operators defined in the library, you\
+    \ can compose and transform sequences of data in a easy way that requires little\
+    \ coding, so it's less prone to error.\n\nIn the following sections we use special\
+    \ diagrams called marble diagrams that efficiently explain what operators do.\n\
+    \n# map\n\nThe map operator is one of the most common operators in reactive programming.\
+    \ It lets transform every item of the emitted sequence with a specific function.\n\
+    \nIn the example shown in Figure 2-1, the input sequence is a series of integers\
+    \ (1, 2, 3) and every item of the sequence is multiplied by 10. Applying the map\
+    \ operator to an observable, a new observable will be created; this new observable\
+    \ will emit x*10 every time the first observable emits."
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "![](img/2ab15486b46859b709ebbac39262fbfa_28_0.png)\n\nFigure 2-1. A marble\
+    \ diagram of the map operator\n\n```\nObservable.just(1, 2, 3)\n.map(new Funcic<Integer,\
+    \ Integer>() {\n    @Override\n    public Integer call(Integer x) {\n        return\
+    \ x * 10;\n    }\n})\n.subscribe(new Subscriber<Integer>() {\n    @Override\n\
+    \    public void onCompleted() {\n    }\n\n    @Override\n    public void onError(Throwable\
+    \ e) {\n    }\n\n    @Override\n    public void onNext(Integer integer) {\n  \
+    \      System.out.println(\"next item is: \" + integer);\n    }\n});\n```\n\n\
+    The output of this operation is\n\nnext item is: 10\nnext item is: 20\nnext item\
+    \ is: 30\n\nLet's try to understand the marble diagram: the line represents the\
+    \ original\nsequence of items that are emitted by the original observable. The\
+    \ line below represents\nthe transformed by the operator and emitted by the second\
+    \ observable (remember\nthat the second observable is the first one plus the operator).\
+    \ The box in the middle\ncontains the function that the operators will perform\
+    \ on each item."
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# CHAPTER 2 OBSERVABLES AND OBSERVERS
+
+
+    The two lines must be considered as synchronized timelines: the marbles are placed
+    in a way that reflects what happens in time.
+
+    nFigure 2-1 shows that when the marble with item 1 is emitted, the marble with
+    item 10 is also emitted, so the transformation occurs as soon as the item 1 is
+    emitted, before item 2 is emitted. When item 2 is emitted, the operator is applied
+    and item 20 is emitted, and so on.
+
+
+    # flatMap
+
+
+    The flatMap operator (Figure 2-2) performs two types of actions: the ''map'' action
+    that transforms the emitted items into observables and a ''flatten'' action that
+    converts those
+
+    observables into one observable. So, you can use flatMap to convert the input
+    observable into any other observable (or, in other words, to convert the input
+    stream into a different stream).
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_29_0.png)
+
+
+    Figure 2-2. A marble diagram of the flatMap operator
+
+
+    So, like the map operator, flatMap applies a function to each emitted item, but
+    this
+
+    function must return an observable. Then those items are merged into one observable,
+    so
+
+    observables may be interleaved. If you need your observables not to be interleaved,
+
+    y must use the operator concatMap.
+
+    For example, suppose that you have a list of integers as input and you want to
+
+    convert it in a sequence of strings in the format "Number x" where x is the next
+    integer in
+
+    the input list. You can combine flatMap and map as follows:
+
+
+    ```
+
+    List<Integer> input = Arrays.asList(1, 2, 3, 4, 5);
+
+    Observable.just(input)
+
+    ```
+
+
+    24'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "```\n.flatMap(new Func1<List<Integer>, Observable<Integer>>() {\n  @Override\n\
+    \  public Observable<Integer> call(List<Integer> item) {\n    return Observable.from(item);\n\
+    \  }\n})\n.map(new Func1<Integer, String>()() {\n  @Override\n  public String\
+    \ call(Integer t) {\n    return \"Number \" + t;\n  }\n})\n.subscribe(new Subscriber<String>()()\
+    \ {\n  @Override\n  public void onCompleted() {\n    System.out.println(\"sequence\
+    \ completed!\");\n  }\n  @Override\n  public void onError(Throwable e) {\n}\n\
+    \  @Override\n  public void onNext(String item) {\n    System.out.println(\"next\
+    \ item is: \" + item);\n  }\n});\n```\n\nThe results are\nnext item is: Number\
+    \ 1\nnext item is: Number 2\nnext item is: Number 3\nnext item is: Number 4\n\
+    next item is: Number 5\nsequence completed!\n\n# concatMap\n\nThe concatMap operator\
+    \ (Figure 2-3) behaves like flatMap, except that it ensures that the observables\
+    \ are not interleaved but concatenated, keeping their order."
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# zip
+
+
+    The zip operator (Figure 2-4) takes multiple observables as inputs and combines
+    each emission via a specified function and emits the results of this function
+    as a new sequence.
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_31_0.png)
+
+
+    Figure 2-4. A marble diagram of the zip operator
+
+
+    The function is applied in strict sequence. If there are two sequences as input,
+    zip waits for the first item emitted by the first sequence, then the first item
+    from the second sequence, applies the function to them, and emits the result of
+    the function. It then waits for the second item from the first sequence, the second
+    item from the second sequence, applies the function to these two items, and emits
+    the result as a function. And so on. It stops when the shortest sequence stops.
+
+
+    Here''s an example:
+
+
+    ```
+
+    Observable<Integer> rangeMajor = Observable.range(1, 3);
+
+    ```
+
+
+    26'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n```\nObservable<Integer> rangeMinor\
+    \ = Observable.range(5, 10);\n\nObservable.zip(rangeMajor, rangeMinor,\n    new\
+    \ Func2<Integer, Integer, String>() {\n        @Override\n        // order of\
+    \ parameters here is the same order\n        // of zip parameters\n        public\
+    \ String call(Integer major, Integer minor) {\n            return major + \".\"\
+    \ + minor;\n        }\n    }).subscribe(new Subscriber<String>() {\n    @Override\n\
+    \    public void onCompleted() {\n        System.out.println(\"sequence completed!\"\
+    );\n    }\n\n    @Override\n    public void onError(Throwable e) {\n    }\n\n\
+    \    @Override\n    public void onNext(String s) {\n        System.out.println(\"\
+    next item is: \" + s);\n    }\n    });\n```\n\nIn this example, the zip operator\
+    \ takes two sequences as inputs and a function that simply takes two integers\
+    \ and builds a string.\n\nThe output of this code is\n\nnext item is: 1.5\nnext\
+    \ item is: 2.6\nnext item is: 3.7\nsequence completed!\n\nAs you can see, the\
+    \ emitted sequence stops when the shortest sequence stops, and in this case the\
+    \ shortest sequence is the first one (1,2,3).\n\n# concat\n\nThe concat operator\
+    \ (Figure 2-5) concatenates two or more emissions, generating one emission where\
+    \ all the items from the first source emission appear before the items of the\
+    \ second source emission. Also, the concat operator waits for each sequence to\
+    \ be completed before subscribing to the next observable."
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n![](img/2ab15486b46859b709ebbac39262fbfa_33_0.png)\n\
+    \nFigure 2-5. A marble diagram of the concat operator\n\nIn the following example,\
+    \ you concatenate two sequences of strings:\n\n```\nObservable<String> first =\n\
+    Observable.just(\"one\", \"two\");\n\nObservable<String> second =\nObservable.just(\"\
+    three\", \"four\", \"five\");\n\nObservable.concat(first, second)\n.subscribe(new\
+    \ Subscriber<String>() { {\n    @Override\n    public void onCompleted() {\n \
+    \       System.out.println(\"sequence completed!\");\n    }\n    @Override\n \
+    \   public void onError(Throwable e) {\n    }\n    @Override\n    public void\
+    \ onNext(String s) {\n        System.out.println(\"next item is: \" + s);\n  \
+    \  }\n});\n\n```\n\nThe output is\n\nnext item is: one\nnext item is: two\nnext\
+    \ item is: three\nnext item is: four\nnext item is: five\nsequence completed!\n\
+    \n28"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\nNote that you can only concatenate\
+    \ sequences of objects of the same type (i.e., you cannot concatenate an observable\
+    \ that emits strings with one that emits integers).\nDo you remember the definition\
+    \ of hot and cold observables?\nWhat would happen if you concatenate a cold observable\
+    \ (first) with a hot one (second)? The concat operator will emit all items from\
+    \ the first observable, and then it will subscribe to the second (the hot observable)\
+    \ and start to emit all items from the hot observable, losing all of the items\
+    \ that the hot observable emitted before the subscription.\n\n# filter\nThe filter\
+    \ operator uses a specified function to allow only some items of the source to\
+    \ be emitted.\n\nHere is the translation of the diagram shown in Figure 2-6 into\
+    \ Java code:\n\n![](img/2ab15486b46859b709ebbac39262fbfa_34_0.png)\n\nFigure 2-6.\
+    \ A marble diagram of the filter operator\n\n```\nObservable.from(new Integer[]{2,\
+    \ 30, 22, 5, 60, 1})\\n    .filter(new Function<Integer, Boolean>() {\n      \
+    \  @Override\n        public Boolean call(Integer x) {\n            return x >\
+    \ 10;\n        }\n    }).subscribe(new Subscriber<Integer>() {\n        @Override\n\
+    \        public void onCompleted() {\n            System.out.println(\"sequence\
+    \ completed!\");\n        }\n        @Override\n        public void onError(Throwable\
+    \ e) {\n        }\n        @Override\n        public void onNext(Integer item)\
+    \ {\n            System.out.println(\"next item is: \" + item);\n        }\n \
+    \   });\n```\n\n29"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# CHAPTER 2 OBSERVABLES AND OBSERVERS
+
+
+    And the output of this code is
+
+
+    ```
+
+    next item is: 30
+
+    next item is: 22
+
+    next item is: 60
+
+    completed!
+
+    ```
+
+
+    # distinct
+
+
+    The distinct operator (Figure 2-7) applies a filter to the source sequence. If
+    an item is emitted more than once, only the first occurrence will be emitted.
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_35_0.png)
+
+
+    Figure 2-7. A marble diagram of the distinct operator
+
+
+    # first
+
+
+    The first operator (Figure 2-8) emits only the first item of a sequence. If a
+    function is specified, it will be used to filter the items, so only the first
+    item of the sequence that meets the conditions will be emitted.
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_35_1.png)
+
+
+    Figure 2-8. A marble diagram of the first operator
+
+
+    You can take the example written for the filter operator and change it by applying
+    the operator first instead of filter:
+
+
+    ```
+
+    Observable.from(new Integer[] {2, 30, 22, 25, 5, 60, 1})
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n```\n.first(new Func1<Integer, Boolean>()\
+    \ {\n    @Override\n    public Boolean call(Integer x) {\n        return x > 10;\n\
+    \    }\n}).subscribe(new Subscriber<Integer>() {\n    @Override\n    public void\
+    \ onCompleted() {\n        System.out.println(\"sequence completed!\");\n    }\n\
+    \    @Override\n    public void onError(Throwable e) {\n    }\n    @Override\n\
+    \    public void onNext(Integer item) {\n        System.out.println(\"next item\
+    \ is: \" + item);\n    }\n});\n```\n\nAs you may expect, the output will be similar\
+    \ to the output of the filter operator, but limited to one item:\n\nnext item\
+    \ is: 10\nsequence completed!\n\n# last\n\nIf you can apply a filter to the beginning\
+    \ of the sequence with the operator first, you can also filter the end of the\
+    \ sequence with the operator last (Figure 2-9).\n\n![](img/2ab15486b46859b709ebbac39262fbfa_36_0.png)\n\
+    \nFigure 2-9. A marble diagram of the last operator\n\nObservable.just(\"first\"\
+    , \"second\", \"third\")\n.last()\n\n31"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\n.subscribe(new Subscriber<Integer>()) {\n  @Override\n  public void onCompleted()\
+    \ {\n    System.out.println(\"sequence completed!\");\n  }\n\n  @Override\n  public\
+    \ void onError(Throwable error) {\n  }\n\n  @Override\n  public void onNext(String\
+    \ item) {\n    System.out.println(\"next item is: \" + item);\n  }\n}\n```\n\n\
+    The output of this code is\n\nnext item is: third\nsequence completed!\n\nThe\
+    \ last operator can take a predicate as a parameter, and only the last item from\
+    \ the source sequence that evaluates that predicate to true is emitted.\n\n```\n\
+    observable.just(\"first\", \"second\", \"third\")\n.last(new Function<String,\
+    \ Boolean>()()) {\n  @Override\n  public Boolean call(String t) {\n    return\
+    \ t.startsWith(\"s\");\n  }\n})\n.subscribe(new Subscriber<String>()) {\n  @Override\n\
+    \  public void onCompleted() {\n    System.out.println(\"sequence completed!\"\
+    );\n  }\n\n  @Override\n  public void onError(Throwable error) {\n  }\\n  @Override\n\
+    \  public void onNext(String item) {\n    System.out.println(\"next item is: \"\
+    \ + item);\n  }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'The output of this code is
+
+    next item is: second
+
+    sequence completed!
+
+
+    # take
+
+
+    The operator first is good for filtering the beginning of a sequence, but what
+    if you are interested not only in the first item but you want the first n items?
+    Here''s where the take operator (Figure 2-10) comes in handy. It takes integer
+    n as a parameter, allowing only the first n items to be emitted.
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_38_0.png)
+
+
+    Figure 2-10. A marble diagram of the take operator
+
+
+    The output of this code is
+
+    next item is: first
+
+    next item is: second
+
+    sequence completed!'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\nAnother version of this operator accepts\
+    \ a timeout as input (take(long, TimeUnit)), emitting only the items that are\
+    \ emitted by the source sequence before this timeout.\n\nNote One may think that\
+    \ the first() and take(i) operators should have the same behavior. They emit the\
+    \ same output sequence if applied to the same input sequence, but there's a difference:\
+    \ take(i) emits once or nothing at all, and first() emits once or crashes if the\
+    \ source sequence is empty.\n\n# startWith\n\nThe operator startWith(Figure 2-11)\
+    \ takes the input sequence and adds a given item to it. It can be useful if you\
+    \ want to force your sequence to begin with a default value, or with a cached\
+    \ item.\n\n![](img/2ab15486b46859b709ebbac39262fbfa_39_0.png)\n\nFigure 2-11.\
+    \ A marble diagram of the startWith operator\n\n```\nobservable.just(\"first\"\
+    , \"second\", \"third\")\n.start(\"zero\")\n.subscribe(new Subscriber<String>()\
+    \ {\n    @Override\n    public void onCompleted() {\n        System.out.println(\"\
+    sequence completed!\");\n    }\n\n    @Override\n    public void onError(Throwable\
+    \ error) {\n    }\n\n    @Override\n    public void onNext(String item) {\n}\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n```\nSystem.out.println(\"next item\
+    \ is: \" + item);\n));\n```\n\nThe output of this code is:\n\n+   - next item\
+    \ is: zero\n- next item is: first\n- next item is: second\n- next item is: third\n\
+    - sequence completed!\n\n# scan\n\nThe operator scans one sequence and applies\
+    \ a function to each pair of sequentially emitted items.\n\n```\nObservable<Integer>\
+    \ sourceObservable = Observable.range(1, 5);\nObservable<Integer> scanObservable\
+    \ = sourceObservable\n    .scan(new Func2<Integer, Integer, Integer>() {\n   \
+    \     @Override\n        public Integer call(Integer i1, Integer i2) {\n     \
+    \       return i1 + i2;\n        }\n    });\nscanObservable.subscribe(new Subscriber<Integer>()\
+    \ {\n    @Override\n    public void onCompleted() {\n        System.out.println(\"\
+    sequence completed!\");\n    }\n    @Override\n    public void onError(Throwable\
+    \ e) {\n    }\n    @Override\n    public voidNext(Integer item) {\n        System.out.println(\"\
+    next item is: \" + item);\n    }\n});\n```\n\nThis code mimics the behavior of\
+    \ the diagram in Figure 2-12.\n\n35"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# CHAPTER 2 ■ OBSERVABLES AND OBSERVERS
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_41_0.png)
+
+
+    Figure 2-12. A marble diagram of the scan operator
+
+
+    After the emission of the first item from sourceObservable, scanObservable will
+    emit the same item without any transformation. When the second item is emitted
+    from the source, scanObservable will apply the function to the first and the second
+    item, emitting the results.
+
+
+    The output of the code is
+
+
+    ```
+
+    next item is: 1
+
+    next item is: 3
+
+    next item is: 6
+
+    next item is: 10
+
+    next item is: 15
+
+    completed!
+
+    ```
+
+
+    # Other Operators
+
+
+    There are many other operators available to transform, filter, or combine observables.
+
+
+    # Operators for Transforming Observables
+
+
+    +   buffer: Periodically gathers items from an Observable into bundles and emits
+    these bundles rather than emitting the items at a time.
+
+    groupby: Divides an Observable into a set of observables that each emit a different
+    group of items from the original Observable, organized by key.
+
+    window: Periodically subdivides items from an Observable into Observable windows
+    and emits these windows rather than emitting the items at a time.
+
+
+    # Operators for Filtering Observables
+
+
+    +   debounce: Only emits an item from an Observable if a particular timespan has
+    passed without emitting another item.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# CHAPTER 2 OBSERVABLES AND OBSERVERS
+
+
+    +   - elementAt: Emits only item n emitted by an Observable.
+
+    - ignoreElements: Does not emit any items from an Observable but mirrors its termination
+    notification.
+
+    - sample: Emits the most recent item emitted by an Observable within periodic
+    time intervals.
+
+    - skip: Suppresses the first n items emitted by an Observable.
+
+    - skipLast: Suppresses the last n items emitted by an Observable.
+
+    - takeLast: Emits only the last n items emitted by an Observable.
+
+
+    # Operators for Combining Observables
+
+
+    +   - And/Then: Combines items emitted by two or more observables by means of
+    pattern and plan intermediaries; these operators are not part of the RxJava library
+    but can be found at https://github.com/reactivex/RxJavaJoins
+
+    - combineLatest: When an item is emitted by either of two observables it combines
+    the latest item emitted by each via a specified function and emits items based
+    on the results of this function.
+
+    - join: Combines items emitted by two Observables whenever an item from one Observable
+    is emitted during a time window defined according to an item emitted by the other
+    Observable.
+
+    - merge: Combines multiple Observables into one by merging their emissions.
+
+    - switchNext: Converts an Observable that emits Observables into a single Observable
+    that emits the items emitted by the most-recently-emitted of those Observables.
+
+
+    # EXAMPLE: GENERATE A SEQUENCE OF ODD INTEGERS
+
+
+    To create a sequence of odd numbers, you need to generate a sequence of integers
+    and then filter the emitted items, removing even integers.
+
+
+    You start with a finite sequence of integers, and this sequence can be created
+    using just or range.
+
+
+    Then you apply the filter operator, passing a function that returns true if the
+    emitted item is odd.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# CHAPTER 2 OBSERVABLES AND OBSERVERS\n\n```\nObservable.just(1, 2, 3, 4, 5,\
+    \ 6)\n.filter(new Func1() {\n  @Override\n  public Boolean call(Integer value)\
+    \ {\n    return value % 2 == 1;\n  }\n})\n.subscribe(new Subscriber() {\n  @Override\n\
+    \  public void onCompleted() {\n    System.out.println(\"sequence completed!\"\
+    );\n  }\n  @Override\n  public void onError(Throwable e) {\n  }\n  @Override\n\
+    \  public void onNext(Integer item) {\n    System.out.println(\"next item: \"\
+    \ + item);\n  }\n});\n```\n\n# EXAMPLE: FIBONACCI SEQUENCE\n\nYou want to create\
+    \ a method that takes an integer n and outputs the Fibonacci sequence F(n).\n\n\
+    First, you create an observable that emits a sequence of n integers: Observable.range(n)\
+    \ is the perfect candidate for this role. Second, you apply a function on each\
+    \ of these items, and use the map operator to do so.\n\nHere's the code:\n\n```\n\
+    public static void rxFibonacci(int n)\n  int[] tmp = {0, 0};\n```\n\n```\nObservable.range(1,\
+    \ n).map(new Func1<Integer, Integer>() {\n  @Override\n  public Integer call(Integer\
+    \ x) {\n    if (x < 3) {\n      tmp[0] = 1;\n      tmp[1] = 1;\n    }\n    return\
+    \ 1;\n  }\n});\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "```\n} else {\n    int item = tmp[0] + tmp[1];\n    tmp[0] = tmp[1];\n    tmp[1]\
+    \ = item;\n    return item;\n}\n}}\n.subscribe(new Subscriber<Integer>() { {\n\
+    \    @Override\n    public void onCompleted() {\n        System.out.println(\"\
+    sequence completed!\");\n    }\n\n    @Override\n    public void onError(Throwable\
+    \ e) {\n    }\n\n    @Override\n    public void onNext(Integer item) {\n     \
+    \   System.out.println(\"next item: \" + item);\n    }\n});\n```\n\nObservable.range(1,n)\
+    \ will emit a sequence of n integers starting from 1. Then, for each emitted item,\
+    \ a function is applied through the map operator. The function uses a temporary\
+    \ array to store the values of F(n-1) and F(n-2) and uses these values to evaluate\
+    \ F(n).\n\nFor example, calling rxFibonacci(10) produces the following output:\n\
+    \n+   - next item: 1\n- next item: 1\n- next item: 2\n- next item: 3\n- next item:\
+    \ 5\n- next item: 8\n- next item: 13\n- next item: 21\n- next item: 34\n- next\
+    \ item: 55\n- sequence completed!"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# CHAPTER 3
+
+
+    # Subscription Lifecycle
+
+
+    # Introduction
+
+
+    Working with observables is not only about subscribing and receiving items.
+
+    In previous chapters, you saw that sequences can also terminate with an error
+    event, but what can you do to handle an error event? And what about threads? Can
+    an Observable operate and notify on different threads?
+
+    In this chapter, you''ll learn
+
+
+    +   * The tools that RxJava provides to manage error events
+
+    * How to use schedulers to operate on different threads
+
+    * How to deal with backpressure
+
+
+    # Error Handling
+
+
+    As mentioned, an observable''s emission can end with either a completed event
+    or error event, but not death.
+
+    If an error occurs at any time during the emission, the sequence is stopped and
+    the onError() method is called.
+
+    But what do we mean by "error"?
+
+
+    +   * An error is anything than exception that is thrown during the emission of
+    the sequence.
+
+    * It can be thrown by the source observable or by any operator applied to the
+    source observable.
+
+    * The first exception that is thrown causes the sequence to be stopped, so no
+    other exception can be thrown.
+
+    * The exception is propagated from the observable that throws it to the subscribers,
+    so the other operators are skipped.
+
+    * Operators do not have to handle the exception; it''s all left up to the subscriber
+    (as opposed to the callback mechanism, where you have to handle errors in each
+    callback).'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "# CHAPTER 3 SUBSCRIPTION LIFECYCLE\n\nThe observable itself does not throw\
+    \ the exception; it notifies the subscriber calling the onError() method. If the\
+    \ observable fails when calling the onError() method (i.e. an exception is thrown\
+    \ when calling onError()), the onError() method won't be called anymore and another\
+    \ exception will be thrown.\n\nThere are some exceptions that are not handled\
+    \ as error events but they are thrown, causing JVM to stop:\n\n+   - rx.exceptions.OnErrorImplementedException\n\
+    - rx.exceptions.OnErrorFailedException\n- rx.exceptions.CompletedFailedException\n\
+    - Java.lang.StackOverflowError\n- Java.lang.VirtualMachineError\n- Java.lang.ThreadDeath\n\
+    - Java.lang.LinkageError\n\nTypically, in java code, you catch exceptions using\
+    \ the try/catch block. With observers, there's no try/catch block, you can choose\
+    \ between different techniques to recover from errors.\n\n# Handling Errors in\
+    \ the onError() Method\n\nThe common scenario is to handle errors in the onError()\
+    \ method. The subscriber's onError() method is responsible for handling the error\
+    \ state.\n\nIn the following example, you generate a sequence of strings in which\
+    \ every string should represent an integer, and then you deliberately introduce\
+    \ an invalid string in the middle of the sequence.\n\n```\nObservable.just(\"\
+    1\", \"2\", \"a\", \"3\", \"4\")n  .map(new Func<String, Integer>(){\n    @Override\n\
+    \    public Integer call(String s) {\n      return Integer.parseInt(s);\n    }\n\
+    \  })\n  .subscribe(new Subscriber<Integer>(){\n    @Override\n    public void\
+    \ onCompleted() {\n      System.out.println(\"sequence completed!\");\n    }\n\
+    \n    @Override\n    public void onError(Throwable e) {\n      System.out.println(\"\
+    error! \" + e.toString());\n    }\n  });\n@Override\n```"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "# CHAPTER 3 SUBSCRIPTION LIFECYCLE\n\n```\npublic void onNext(Integer item)\
+    \ {\n    System.out.println(\"next item is: \" + item);\n}\n```\n\nThe first two\
+    \ items (string \"1\" and \"2\") are correctly parsed as integers. When item \"\
+    a\" is emitted, the function inside the map operator fails, throwing a java.lang.FormatException,\
+    \ and this exception is sent to the subscriber in the onError() method. The NumberFormatException\
+    \ is passed to the onError() method as a parameter.\n\nThe output is:\n1\n\nnext\
+    \ item is: 2\n\nerror! java.lang.FormatException: For input string: \"a\"\n\n\
+    # Ignoring the Exception and Continuing with Item Emission\n\nContinuing the previous\
+    \ example, suppose you want to terminate the sequence normally when an invalid\
+    \ string is emitted. You can achieve this by applying the operator onErrorResumeNext(Next)\
+    \ to the observable.\n\n```\nObservable.just(\"1\", \"2\", \"a\", \"3\")\n   \
+    \ .map(new Function<String, Integer>() {\n        @Override\n        public Integer\
+    \ call(String s) {\n            return Integer.parseInt(s);\n        }\n    })\n\
+    \    .onErrorResumeNext(Observable.<Integer>empty())\n    .subscribe(new Subscriber<Integer>()\
+    \ {\n        @Override\n        public void onNext(Integer item) {\n         \
+    \   System.out.println(\"next item is: \" + item);\n        }\n        @Override\n\
+    \        public void onError(Throwable e) {\n            System.out.println(\"\
+    error! \" + e.toString());\n        }\n        @Override\n        public void\
+    \ onCompleted() {\n            System.out.println(\"sequence completed!\");\n\
+    \        }\n    });\n```\n\n```\n@Override\npublic void onError(Throwable e) {\n\
+    \    System.out.println(\"error! \" + e.toString());\n}\n```\n\n```\n@Override\n\
+    public void onNext(Integer item) {\n    System.out.println(\"next item is: \"\
+    \ + item);\n}\n```\n\n43"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "# CHAPTER 3 SUBSCRIPTION LIFECYCLE\n\nThe output is\n\nnext item is: 1\nnext\
+    \ item is: 2\nsequence completed!\n\nThe onErrorNext() operator tells the observable\
+    \ to avoid notifying the\nerror method when exception is thrown and to continue\
+    \ by emitting the sequence that\nis specified as a parameter of the operator.\
+    \ In this case, when an error event occurs, the\noriginal sequence is stopped\
+    \ and the emission continues with the sequence emitted by\nempty(), which is an\
+    \ empty sequence. In other words, in the code above, if\nan error occurs, the\
+    \ sequence is stopped and no error event is notified.\nTwo other operators are:\n\
+    \n+   * onErrorReturn(), which makes the observable emit a specified\nitem when\
+    \ an error occurs; the item emitted is the result of the\nfunction as parameter.\n\
+    * onErrorNext(), which makes the observable\ncontinuing emitting items from a\
+    \ specified observable when an\nexception occurs (and not other throwable) is\
+    \ thrown.\n\nContinuing the example above, suppose you want to emit the integer\
+    \ -1 when the\nevent occurs. For this, you can use onErrorReturn():\n\n```\nObservable.just(\"\
+    1\",\"2\",\"a\",\"3\",\"4\"\n.map(new Func<String, Integer>()() {\n    @Override\n\
+    \    public Integer call(String s) {\n        return Integer.parseInt(s);\n  \
+    \  }\n})\n.onErrorReturn(new Func<Throwable, Integer>()() {\n    @Override\n \
+    \   public Integer call(Throwable t) {\n        return -1;\n    }\n})\n.subscribe(new\
+    \ Subscriber<Integer>()() {\n    @Override\n    public void onCompleted() {\n\
+    \        System.out.println(\"sequence completed!\");\n    }\n    @Override\n\
+    \    public void onError(Throwable e) {\n        System.err.println(\"error! \"\
+    \ + e.toString());\n}\n})\n```"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "# CHAPTER 3 SUBSCRIPTION LIFECYCLE\n\n```\n@Override\npublic void onNext(Integer\
+    \ item) {\n    System.out.println(\"next item is: \" + item);\n}\n));\n```\n\n\
+    The output is\n\nnext item is: 1\nnext item is: 2\nnext item is: -1\nsequence\
+    \ completed!\n\nYou can get the same effect using onExceptionResumeNext:\n\nThe\
+    \ output is the same:\n\nnext item is: 1\nnext item is: 2\nnext item is: -1\n\
+    sequence completed!\n\n45"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "# CHAPTER 3 SUBSCRIPTION LIFECYCLE\n\n# Retry\n\nThe RxJava library also contains\
+    \ two operators that .retry to let you recover from error implementing with a\
+    \ retry mechanism.\n\n+   * The Observable.retry(...) operator does not notify\
+    \ the error and resubscribes to the source observable.\n* The Observable.retryWhen(...)\
+    \ operator passes the error event to another observable that becomes responsible\
+    \ for determining whether to resubscribe to the source observable.\n\nLet's apply\
+    \ the retry() operator to the previous examples instead of onErrorResumeNext():n\n\
+    \n```\nObservable.just(\"1\", \"2\", \"a\", \"3\", \"4\")n  .map(new Func1<String,\
+    \ Integer>() {\n    @Override\n    public Integer call(String s) {\n      return\
+    \ Integer.parseInt(s);\n    }\n})\n  .retry()\n  .subscribe(new Subscriber<Integer>()\
+    \ {\n    @Override\n    public void onCompleted() {\n      System.out.println(\"\
+    sequence completed!\");\n    }\n\n    @Override\n    public void onError(Throwable\
+    \ e) {\n      System.out.println(\"error! \" + e.toString());\n    }\n\n    @Override\n\
+    \    public void onNext(Integer item) {\n      System.out.println(\"next item\
+    \ is: \" + item);\n    }\n  });\n```\n\nWhenever an error occurs, retry() will\
+    \ resubscribe to the source, restarting the emission and encountering the error\
+    \ again and again. As you may have guessed, this code will run forever, emitting\
+    \ the following output:\n\n```\nnext item is: 1\nnext item is: 2\nnext item is:\
+    \ 1\nnext item is: 1\nnext item is: 2\nnext item is: 1\n```"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# CHAPTER 3 ## SUBSCRIPTION LIFECYCLE\n\nYou can use retry(i) instead of retry(),\
+    \ so the retry mechanism will be executed only one time (the argument passed in\
+    \ determines the number of retries):\n\n```\nObservable.just(\"1\", \"2\", \"\
+    a\", \"3\", \"4\")\n  .map(new Func<String, Integer>()() {\n    @Override\n  \
+    \  public Integer call(String s) {\n      return Integer.parseInt(s);\n    }\n\
+    \  })\n  .retry(1)\n  .subscribe(new Subscriber<Integer>()() {\n    @Override\n\
+    \    public void onCompleted() {\n      System.out.println(\"sequence completed!\"\
+    );\n    }\n\n    @Override\n    public void onError(Throwable e) {\n      System.out.println(\"\
+    error! \" + e.toString());\n    }\n\n    @Override\n    public void onNext(Integer\
+    \ item) {\n      System.out.println(\"next item: \" + item);\n    }\n  });\n```\n\
+    \nIn this case, the emission will be retried once; after that, if the error condition\
+    \ persists, the error event will be propagated. The output is\n\nnext item is:\
+    \ 1\nnext item is: 2\nnext item is: 1\nnext item is: 2\n\nerror! java.lang.NumberFormatException:\
+    \ For input string: \"a\"\n\nIf you want to retry one more time after 5 seconds,\
+    \ you can use retryWhen():\n\n```\n.retryWhen(new Func<Observable<? extends Throwable>,\
+    \ Observable<? extends Long>>()() {\n  @Override\n  public Observable<? extends\
+    \ Long> call(Observable<? extends Throwable> observable) {\n    return Observable.timer(5,\
+    \ TimeUnit.SECONDS);\n  }\n})\n```\n\nAfter the specified timed out (5 seconds\
+    \ in this example), the sequence will be retried. If an error occurs during the\
+    \ retry, the error event will not be notified. Instead the complete event will\
+    \ be notified. The output is\n\n47"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "# CHAPTER 3 SUBSCRIPTION LIFECYCLE\n\nnext item is: 1\nnext item is: 2\nnext\
+    \ item is: 1\nnext item is: 2\nsequence completed!\n\nIn the following more complex\
+    \ example, combine different operators to get three retries, every 5 seconds:\n\
+    \n```\n.retryWhen(new Func1<Observable<? extends Throwableable>, Observable<?>>()\
+    \ {\n    @Override\n    public Observable<?> call(Observable<? extends Throwableable>\
+    \ observable) {\n        return observable.zipWith(Observable.range(1, 3),\n \
+    \           new Func2<Throwable, Integer, Integer>() {\n                @Override\n\
+    \                public Integer call(Throwable throwable, Integer retryCount)\
+    \ {\n                    System.out.println(\"retry #\" + retryCount);\n     \
+    \               return retryCount;\n                }\n            }));\n    }).flatMap(new\
+    \ Func1<Integer, Observable<?>>() {\n    @Override\n    public Observable<?> call(Integer\
+    \ integer) {\n        return Observable.timer(5, TimeUnit.SECONDS);\n    }\n});\n\
+    ```\n\nThe idea is to combine a sequence of three items (because you want three\
+    \ retries) with a delay of 1,3 seconds for each retry. The sequence of three items\
+    \ is generated by Observable.range(1,3) also Observable.just(1,2,3) would work.\
+    \ For the delay, you still use Observable.timer(5, TimeUnit.SECONDS). For every\
+    \ integer, a timer is launched, and this triggers the mechanism. In addition,\
+    \ you print the current retry count. The Observable.zipWith is applied to the\
+    \ source observable and takes two parameters.\n\n+   - An Observable.range(1,3)\
+    \ in this example that is the observable that you want to zip with the source\
+    \ observable (with the Observable.zip() operator).\n- An instance of Func2<Throwable,\
+    \ Integer, Integer>. A Func2 is required because you have two inputs: the Throwableable\
+    \ emitted by the retryWhen operator and an Integer emitted by the Observable.range(1,3).\n\
+    \nThen you use flatMap to transform the items emitted by the zipWith operator\
+    \ into a 5-second delay. The resulting observable is used by retryWhen to apply\
+    \ the retry logic to the source observable."
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# CHAPTER 3 SUBSCRIPTION LIFECYCLE
+
+
+    If you apply this retry mechanism to the previous example, you get the following
+
+    output:
+
+
+    +   - next item is: 1
+
+    - next item is: 2
+
+    - retry #1
+
+    - next item is: 1
+
+    - next item is: 2
+
+    - retry #2
+
+    - next item is: 1
+
+    - next item is: 2
+
+    - retry #3
+
+    - next item is: 1
+
+    - next item is: 2
+
+    - sequence completed!
+
+
+    # Schedulers
+
+
+    By default the chain of operations of an observable is executed in the same thread
+    onnwhich the subscribe method is called. You can change this behavior using two
+    operators:
+
+
+    +   - Observable.subscribe(...) lets you specify a scheduler on
+
+    which observable operates.
+
+    - Observable.observeOn(...) lets you specify a scheduler on
+
+    which observers will be notified.
+
+
+    This means you can use a thread for the executions of all the chains of operations
+
+    a a different thread to receive the execution of next(), onCompleted(), and onError()
+
+    notifications. This is often used when your observable executes I/O operations
+    (like
+
+    network requests or reading/writing on):
+
+
+    ```
+
+    myNetworkObservable()
+
+    .subscribe(background thread)
+
+    .observeOn(ui thread)
+
+    .subscribe(...)
+
+    ```
+
+
+    The two operators can be called from any point in the chain of operators, but
+    their
+
+    behavior is different:
+
+
+    +   - subscribeOn() changes the thread on which the observable
+
+    operates, regardless of where in the chain it is applied.
+
+    - observeOn() changes the thread that Observable will use, starting
+
+    from the point at which it is applied.
+
+
+    Usually you don''t have to create or specify a thread directly; instead, you can
+    choose
+
+    among the schedulers that are built in the RxJava library:'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "# CHAPTER 3 SUBSCRIPTION LIFECYCLE\n\n+   * Schedulers.immediate() schedules\
+    \ work to begin immediately in the current thread.\n* Schedulers.computation()\
+    \ can be used for computational work, and by default it allocates as many threads\
+    \ as the number of procecessors. It's not meant for I/O operations.\n* Schedulers.io()\
+    \ is not meant for I/O operations.\n* Schedulers.newThread() creates a new thread\
+    \ for each operation.\n* Schedulers.trampoline() keeps a queue of operations,\
+    \ and every operation begins on the current thread after all previous operations\
+    \ have finished.\n* Schedulers.from(java.util.concurrent.Executor) uses the specified\
+    \ executor as Scheduler.\n\nYou have implicitly used schedulers before Observable.timer()\
+    \ operates with the Scheduler.computation() scheduler, which will operate on a\
+    \ different thread. There are other operators that have a particular default scheduler:\
+    \ buffer, debounce, delay, delaySubscription, interval, repeat, replay, retry,\
+    \ sample, skip, skipLast, takeLast, takeBuffer, throttleFirst, throttleLatest,\
+    \ throttleTimeout, interval, timeout, timestamp.\n\n# EXAMPLE: MULTITHREADING\
+    \ FIBONACCI\n\nTake a look at the Fibonacci Sequence example from Chapter 2. How\
+    \ can you modify it to add multithreading? You just need one line of code!\n\n\
+    ```\nint[] tmp = {0, 0};\n\nObservable.range(1, n)\n  .map(new Func<Integer, Integer>()\
+    \ {\n    @Override\n    public Integer call(Integer x) {\n      if (x < 3) {\n\
+    \        tmp[0] += x;\n        tmp[1] += x;\n        return x;\n      } else {\n\
+    \        int item = tmp[0] + tmp[1];\n        tmp[0] = tmp[1];\n        tmp[1]\
+    \ = item;\n        return item;\n      }\n    }\n```\n\n50"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "```\n}}\n.subscribe(Schedulers.computation())\n.subscribe(new Subscriber<Integer>()\
+    \ {\n    @Override\n    public void onCompleted() {\n        System.out.println(\"\
+    sequence completed!\");\n    }\n\n    @Override\n    public void onError(Throwable\
+    \ e) {\n    }\n\n    @Override\n    public void onNext(Integer item) {\n     \
+    \   System.out.println(\"next item: \" + item);\n    }\n});\n```\n\nYou only applied\
+    \ the subscribeOn() operator, passing the scheduler Schedulers. as a parameter,\
+    \ and your code is now multithreading! Remember that the subscribeOn() operator\
+    \ can be applied at any point in the chain, the preferred place is right before\
+    \ the call to the subscribe() method. It makes the code more readable; if you\
+    \ have a long chain of operators, you don't want your subscribeOn() call to be\
+    \ left in the chain.\n\n# EXAMPLE: NETWORK CALLS\n\nA typical use case in which\
+    \ you have to specify both the subscribeOn() and observeOn() operators is when\
+    \ you're developing an Android app and you have to update the UI after getting\
+    \ data from a remote server.\n\n```\nObservable<MyResponse> networkCall = ...\n\
+    \nnetworkCall.subscribeOn(Schedulers.io())\n    .observeOn(AndroidSchedulers.mainThread())\n\
+    \    .subscribe(new Subscriber<MyResponse>(){\n    @Override\n    public void\
+    \ onCompleted() {\n    }\n\n    @Override\n    public void onError(Throwable e)\
+    \ {\nn});\n```"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "# CHAPTER 3 SUBSCRIPTION LIFECYCLE\n\n```\n// here we can update the UI showing\
+    \ an error message\n```\n\n```\n@Override\npublic void onNext(MyObject item) {\n\
+    \    // here we can update the UI reading item data\n}\n```\n\nIn this example,\
+    \ you applied\n\n+   - The subscribe() operator because otherwise the UI (the\
+    \ main thread in Android) will hang until the operation is complete (and an ANR:\
+    \ Application Not Responding error will be shown by development). The Schedulers.io()\
+    \ scheduler is a good choice because you're dealing with a network operation,\
+    \ which is an I/O operation.\n\n+   - The observeOn() operator because you cannot\
+    \ update the UI from a thread that is different from the UI thread; the Schedulers.mainThread()\
+    \ that you have used is a special scheduler that is not included in the RxJava\
+    \ library (a sort of add-on to RxJava for Android development; see https://github.com/ReactiveX/RxAndroid)\
+    \ which will return the UI thread. If you don't apply the observeOn() operator,\
+    \ your app will crash when trying to change the UI items (like updating a TextView).\n\
+    \n# EXAMPLE: INSERTING DATA INTO A DATABASE\n\nSuppose that you want to store\
+    \ some data in a database as soon as a user changes the value of an input form,\
+    \ without having to wait for a click of a button and without blocking the UI thread.\n\
+    \nGiven an observable that emits an item (the content of the field) whenever the\
+    \ input changes, you can use schedulers to execute the insertion in a separate\
+    \ thread.\n\n```\nObservable<String> inputObservable = ...\n```\n\n```\ninputObservable.flatMap(()\
+    \ -> validate(x))\n    .observeOn(Schedulers.io())\n    .subscribe(new Subscriber<String>()\
+    \ {\n        @Override\n        public void onCompleted() {\n```\n\n52"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "```\n}\n@Override\npublic void onError(Throwable e) {\n}\n@Override\npublic\
+    \ void onNext(String item) {\n  db.insert(item);\n}\n));\n```\n\nHere you apply\
+    \ the observeOn() operator so that the onNext method will be notified to copy/paste\
+    \ the two lines of code necessary to apply these operators... which is the right\
+    \ one for I/O operations such as writing on db.\n\n# Transformers\n\nAs mentioned,\
+    \ the sub.observeOn()/observeOn() pair can be used many times, forcing you to\
+    \ copy/paste code which leads to duplicated code, and it's not a good practice.\
+    \ So, how can you create an operator that automatically applies these two operators?\n\
+    \nYou can do it using Observable.Transformer<T, R> (T is the type of input Observable\
+    \ and R is the type of output Observable). Instances of Transformer are functions\
+    \ that are applied to an observable using observeOn(), an operator that gives\
+    \ you the ability to modify the source observable, not only the items of the sequence.\n\
+    \n```\npublic static <T> Observable.Transformer<T, T> toSchedulers() {\n  return\
+    \ new Observable<T>() {\n    @Override\n    public Observable<T> call(Observable<T>\
+    \ observable) {\n      return observable.subscribeOn(Schedulers.io())\n      \
+    \                 .observeOn(AndroidSchedulers.mainThread());\n    }\n  }}\n```\n\
+    \nWhen you implement Transformer<T, R>, you receive in input Observable<T> and\
+    \ return an Observable<R>. In the example, T and R are the same object because\
+    \ the Transformer does not modify the items of the emitted sequence. Now you can\
+    \ rewrite the previous example as\n\n```\nObservable<MyResponseObject> networkCall\
+    \ = ...\n```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# CHAPTER 3 SUBSCRIPTION LIFYCLE\n\n```\nnetworkCall\n  .compose(mySchedulers())\n\
+    \  .subscribe(new Subscriber<MyObject>() {\n    @Override\n    public void onCompleted()\
+    \ {\n    }\n    @Override\n    public void onError(Throwable e) {\n      // here\
+    \ we update the UI showing an error message\n    }\n    @Override\n    public\
+    \ void onNext(MyObject item) {\n      // here we update the UI reading item data\n\
+    \    }\n  });\n```\n\n# Advanced Use of Schedulers\n\nYou can also use schedulers\
+    \ without applying operators in a chain of observables. For example, if you want\
+    \ to execute some operations in a dedicated thread, you can use the rx.SchedulerWorker\
+    \ class, like so:\n\n```\nWorker worker = Sulers.newThread().createWorker();\n\
+    worker.schedule(new Action(0) {\n  @Override\n  public void call() {\n    // do\
+    \ your work here\n  }\n});\n```\n\nThe Worker class implements the Subscription\
+    \ interface, so you can call methods unsubscribe() and is() on it.\nAction is\
+    \ an interface that defines just one method, call(), which accepts no parameters\
+    \ and returns void.\nWorker implements two methods to execute actions after a\
+    \ certain amount of time or periodically:\n\n+   - Worker.schedule(Action action,\
+    \ long delayTime, TimeUnit unit) executes an action after the specified delay.\n\
+    - Worker.schedulePeriodically(Action action, long initialDelay, long period, TimeUnit\
+    \ unit) executes an action periodically, optionally starting after a delay.\n\n\
+    54"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# Backpressure
+
+
+    Until now we have considered only situations in which the emission of items is
+    slower
+
+    an the operations executed on each of the items. So, for every emission, there''s
+    enough
+
+    time for the subscriber to consume the emitted item before the next one is emitted.
+
+
+    There are also situations in which the observable emits items too fast for the
+
+    subscriber, and the subscriber cannot continue the single item before receiving
+    the next
+
+    one.
+
+
+    For example, take two observables A and B, where A emits items twice as fast as
+    B
+
+    creates an Observable. The resulting observable combines the n-th
+
+    item from A and n-th item from B, meanwhile B has emitted items n+1 to n+m,
+
+    so it should keep an increasing buffer of the emitted items.
+
+
+    Another case is when inside the next method the UI is updated with data
+
+    from the emitted item, but items are emitted at a frequency higher than the frequency
+
+    with which the UI is updated.
+
+
+    Backpressure happens every time we face such situations. We can handle
+
+    backpressure in the following ways:
+
+
+    +   * By controlling the emission, applying some specific operator to
+
+    observable
+
+    * At consumption time in the subscriber
+
+
+    # Handling Backpressure During Emission: Throttling
+
+
+    You can use RxJava operators to adjust the rate at which the Observable emits
+
+    items.
+
+
+    # sample
+
+
+    With Observable.sample() you can periodically take samples of the sequence and
+    emit
+
+    the most recent item of each sample. Figure 3-1 shows this process.
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_59_0.png)
+
+
+    Figure 3-1. The marble diagram of Observable.sample().'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# CHAPTER 3 SUBSCRIPTION LIFECYCLE
+
+
+    Looking at the diagram in Figure 3-1, you can see that at the end of each period
+    only the emitted item (from the source observable) is emitted by the resulting
+    observable, and the other items are discarded.
+
+
+    # throttleFirst
+
+
+    Observable,throttleFirst() behaves like sample, but it emits the first item of
+    each sample (Figure 3-2).
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_60_0.png)
+
+
+    Figure 3-2. The marble diagram of Observable.throttleFirst()
+
+
+    # debounce
+
+
+    Observable,debounce() emits only items that are not followed by any other item
+    within a specified interval, as shown in Figure 3-3.
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_60_1.png)
+
+
+    Figure 3-3. The marble diagram of Observable.debounce()
+
+
+    56'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Handling Backpressure During Emission: Buffering
+
+
+    Another way to control backpressure is to collect items into buffers before notifying
+    the subscriber. The subscriber''s onNext() method will not receive the single
+    emitted item but a collection that contains the items collected in the buffer.
+
+
+    To apply this technique, you can use the operators buffer() and window().
+
+
+    # Buffer
+
+
+    Observable.buffer() lets you collect items periodically at a specified interval
+    of time.
+
+    You choose to create buffers based on the number of items or on a time interval
+    by passing a function that computes the necessary conditions to close each buffer
+    (Figure 3-4). You can also specify an Observable that triggers the beginning of
+    a buffer.
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_61_0.png)
+
+
+    Figure 3-4. The marble diagram of Observable.buffer()
+
+
+    # Window
+
+
+    Observable.window() is similar to buffer, but rather than emitting collections
+    of items from the source Observable, it emits observables, and each one of these
+    observables emits a subset of items from the source Observable and terminates
+    with an onCompleted notification.
+
+
+    You can choose to create "windows" based on a time interval (Figure 3-5), the
+    number of items (Figure 3-6), or by passing a function that computes the necessary
+    conditions to close each window.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# CHAPTER 3 SUBSCRIPTION LIFECYCLE
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_62_0.png)
+
+
+    Figure 3-5. The marble diagram of Observable, window() based on a time interval
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_62_1.png)
+
+
+    Figure 3-6. The marble diagram of Observable, window() based on number of items
+
+
+    Note If an error occurs, both operators will notify the onError method and stop
+    building the current buffer or window. The items contained in the unfinished buffer/window
+    will not be forwarded to the subscriber.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "# Handling Backpressure Inside the Subscriber\n\nInside the subscriber you\
+    \ can ask the observable to slow down the emission. So, in the zip example above,\
+    \ you can ask B to emit items slowly instead of applying a throttling operator.\n\
+    \nInside the subscriber's start() method you must call the Subscriber.request(n)\
+    \ where n is an integer representing the maximum of items you want the Observable\
+    \ to emit before the next request(n). Then, after consuming the item in the next(n),\
+    \ you must call request() again to tell the observable to continue with the emission\
+    \ of the following items.\n\nIn the following example, you set n=1, so you can\
+    \ consume each item before the next one is emitted:\n\n```\nobservable.subscribe(new\
+    \ Subscriber<T>() {\n    @Override\n    public void start() {\n        request(1);\n\
+    \    }\n\n    @Override\n    public void onCompleted() {\n    }\n\n    @Override\n\
+    \    public void onError(Throwable e) {\n    }\n\n    @Override\n    public void\
+    \ onNext(T item) {\n        consume(item)\n        request(1);\n    }\n});\n```\n\
+    \nHere you called the request() method in start() and onNext() with the same parameter\
+    \ of 1, because you supposed that you can consume only one item before the next\
+    \ one is emitted, but these values are independent and can be tuned based on the\
+    \ use case.\n\nIf you omit the request() call, the observable emits items as it\
+    \ would normally, without slowing down the emission; the same effect can be achieved\
+    \ calling request(0)."
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "# CHAPTER 4\n\n# Subjects\n\nIn previous chapters, you learned about Observable<T>,\
+    \ Observer<T>, and Subscriber<T> and their role in reactive programming with RxJava:\
+    \ an Observable object emits a sequence of events, and a Subscriber object acts\
+    \ as an observer, reacting to each event emitted by the Observable.\n\nThe RxJava\
+    \ library provides a proxy that acts both as Observable and Observer; it's called\
+    \ Subject<T, R>, where T is the type of the input value and R is the type of the\
+    \ output value. A Subject can\n\n+   - Subscribe to one or more Observables (as\
+    \ a Subscriber)\n- Pass through the items it observes by reemitting them\n- Emit\
+    \ new items\n\nLet's see how a Subject can act as Observable (PublishSubject will\
+    \ be introduced later):\n\n```\nSubject<String, String> subject = PublishSubject.create();\n\
+    subject.subscribe(new Subscriber<String>() {\n\n```\n\n```\n@Override\npublic\
+    \ void onCompleted() {\n    System.out.println(\"sequence completed\");\n}\n```\n\
+    \n```\n@Override\npublic void onError(Throwable e) {\n```\n\n```\n@Override\n\
+    public void onNext(String item) {\n    System.out.println(item);\n}\n});\n```"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "# CHAPTER 4 SUBJECTS\n\n```\nsubject.onNext(\"first item\");\nsubject.onNext(\"\
+    second item\");\nsubject.onNext(\"third item\");\nsubject.onCompleted();\n```\n\
+    \nAs you may expect, if you run this code you get the following output:\n\n+ \
+    \  first item\nsecond item\nthird item\nsequence completed\n\nNow let's create\
+    \ a Subject that acts both as Observable and as Subscriber:\n\n```\nObservable<Long>\
+    \ interval =\nObservable.interval(1, TimeUnit.SECONDS);\n```\n\n```\nSubject<Long>\
+    \ subject = PublishSubject.create();\ninterval.subscribe(subject);\n```\n\n```\n\
+    subject.subscribe(new Subscriber<Long>() {\n\n```\n\n```\n@Override\npublic void\
+    \ onCompleted() {\n    System.out.println(\"first sequence completed\");\n}\n\
+    ```\n\n```\n@Override\npublic void onError(Throwable e) {\n}\n```\n\n```\n@Override\n\
+    public void onNext(Long item) {\n    System.out.println(\"first sequence, item:\
+    \ \" + item);\n}\n});\n```\n\n```\nsubject.subscribe(new Subscriber<Long>() {\n\
+    \n```\n\n```\n@Override\npublic void onCompleted() {\n    System.out.println(\"\
+    second sequence completed\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "# CHAPTER 4 SUBJECTS\n\n```\n@Override\npublic void onError(Throwable e) {\n\
+    }\n\n@Override\npublic void onNext(Long item) {\n    System.out.println(\"second\
+    \ sequence, \" + item);\n}\n```\n\nThe Subject first subscribes to the interval\
+    \ observable (which emits an incremental value every second), then reemits a Long\
+    \ object every time it receive an item from the interval observable. The output\
+    \ of this code is\n\n+   first sequence, item: 0\nsecond sequence, item: 0\nfirst\
+    \ sequence, item: 1\nsecond sequence, item: 1\nfirst sequence, item: 2\nsecond\
+    \ sequence, item: 2\nfirst sequence, item: 3\nsecond sequence, item: 3\nfirst\
+    \ sequence, item: 4\nsecond sequence, item: 4\nfirst sequence, item: 5\n\nIn Java,\
+    \ the class Subject is an abstract class. In these examples, you didn't create\
+    \ a concrete implementation of Subject; you used one of the built-in implementations\
+    \ available, returned by the static factory method PublishSubject.create(). RxJava\
+    \ provides four different implementations of Subject.\n\n# PublishSubject\n\n\
+    PublishSubject<T> (Figure 4-1) is a Subject that\n\n+   Emits all the items emitted\
+    \ by the source observable, starting from the moment of the subscription\nNotifies\
+    \ of an error event and does not emit any other item if the source Observable\
+    \ terminates with an error"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "# PublishSubject\n\n![](img/2ab15486b46859b709ebbac39262fbfa_67_0.png)\n\n\
+    Figure 4-1. The marble diagram for PublishSubject<T>\n\nTo create an instance\
+    \ of PublishSubject (Figure 4-1), you can use the static factory method PublishSubject.create().\n\
+    \nNow, create an instance of PublishSubject that emits a sequence of integers,\
+    \ and then subscribe to two different subscribers:\n\n```\nPublishSubject<Integer>\
+    \ subject = PublishSubject.create();\nObservable<Integer> subjectAsObservable\
+    \ =\nubject.asObservable();\n```\n\n```\n// subscribe the first Subscriber\nsubjectAsObservable.subscribe(new\
+    \ Subscriber<Integer>() {\n    @Override\npublic void onCompleted() {\n    System.out.println(\"\
+    first: sequence completed\");\n}\n\n    @Override\npublic void onError(Throwable\
+    \ e) {\n}\n\n    @Override\npublic void onNext(Integer item) {\n    System.out.println(\"\
+    first: next item is \" + item);\nn}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "```\n}\n));\nsubject.onNext(1);\nsubject.onNext(2);\n\n// subscribe the second\
+    \ Subscriber\nsubjectAsObservable.subscribe(new Subscriber<Integer>()) {\n   \
+    \ @Override\n    public void onCompleted() {\n        System.out.println(\"second:\
+    \ sequence completed\");\n    }\n\n    @Override\n    public void onError(Throwable\
+    \ e) {\n    }\n\n    @Override\n    public void onNext(Integer item) {\n     \
+    \   System.out.println(\"second: next item is \" + item);\n    }\n}\n```\n\n```\n\
+    subject.onNext(3);\nsubject.onNext(4);\nsubject.onNext(5);\nubject.onCompleted();\n\
+    ```\n\nThe output of this code is\n\n+   first: next item is 1\nfirst: next item\
+    \ is 2\nfirst: next item is 3\nsecond: next item is 3\nfirst: next item is 4\n\
+    second: next item is 4\nfirst: next item is 5\nsecond: next item is 5\nfirst:\
+    \ sequence completed\nsecond: sequence completed\n\nThe first subscriber subscribes\
+    \ before PublishSubject starts to emit items, so it will receive all five items\
+    \ and then complete. The second subscriber subscribes in the middle of the sequence,\
+    \ so it will receive only the subsequent items."
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# CHAPTER 4 SUBJECTS
+
+
+    Are Subjects hot or cold observables? This example makes it easy to answer the
+    question. Subjects are hot observables because they can produce items when no
+    Observer is subscribed.
+
+
+    Another interesting point is the usage of the Subject.asObservable() method. Subscribing
+    to subject instead of asObservable will produce the same output, but the method
+    Subject.asObservable() helps you by wrapping your Subject instance in an Observable
+    instance. This means you can expose only the Observable interface to the subscribers
+    and it also means that no one else can use the Subject instance to emit items
+    or notify completed/error events.
+
+
+    # BehaviorSubject
+
+
+    BehaviorSubject<T> (Figure 4-2) is similar to PublishSubject, except that the
+    subscriber will also receive the last item emitted before its subscription.
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_69_0.png)
+
+
+    Figure 4-2. The marble diagram for BehaviorSubject<T>
+
+
+    Let''s take the previous example and change the PublishSubject instance to a BehaviorSubject
+    instance:
+
+
+    ```
+
+    BehaviorSubject<Integer> subject = BehaviorSubject.create();
+
+    Observable<Integer> subjectAsObservable =
+
+    subject.asObservable();
+
+    ```
+
+
+    66'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "```\n// subscribe the first Subscriber\nsubjectAsObservable.subscribe(new Subscriber<Integer>())\
+    \ {\n    @Override\n    public void onCompleted() {\n        System.out.println(\"\
+    first: sequence completed\");\n    }\n    @Override\n    public void onError(Throwable\
+    \ e) {\n    }\n    @Override\n    public void onNext(Integer item) {\n       \
+    \ System.out.println(\"first: next item is \" + item);\n    }\n}\nsubject.next(1);\n\
+    subject.next(2);\n// subscribe the second Subscriber\nsubjectAsObservable.subscribe(new\
+    \ Subscriber<Integer>()) {\n    @Override\n    public void onCompleted() {\n \
+    \       System.out.println(\"second: sequence completed\");\n    }\n    @Override\n\
+    \    public void onError(Throwable e) {\n    }\n    @Override\n    public void\
+    \ onNext(Integer item) {\n        System.out.println(\"second: next item is \"\
+    \ + item);\n    }\n}\nsubject.next(3);\nsubject.next(4);\nsubject.next(5);\nsubject.onCompleted();\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "# CHAPTER 4 SUBJECTS\n\nThis code produces the following output:\n\n```\nfirst:\
+    \ next item is 1\nfirst: next item is 2\nsecond: next item is 2\nfirst: next item\
+    \ is 1\nsecond: next item is 3\nfirst: next item is 4\nsecond: next item is 4\n\
+    first: next item is 5\nsecond: next item is 5\nfirst: sequence completed\nsecond:\
+    \ sequence completed\n```\n\nHere the subscriber receives the sequence starting\
+    \ from item 2, and it\nJava also provides the static factory method BehaviorSubject.create(t\
+    \ defaultValue); the instance returned by this method will emit the provided default\
+    \ item as long as no item has been received from the source observable.\n\n```\n\
+    BehaviorSubject<Integer> subject = \nBehaviorSubject.create(-1);\n\nObservable<Integer>\
+    \ subjectAsObservable = \nsubject.asObservable();\n\n// subscribe the first Subscriber\n\
+    subjectAsObservable.subscribe(new Subscriber<Integer>() {\n\n@Override\n    public\
+    \ void onCompleted() {\n    System.out.println(\"first: sequence completed\");\n\
+    }\n\n@Override\n    public void onError(Throwable e) {\n}\n\n@Override\n    public\
+    \ void onNext(Integer item) {\n    System.out.println(\"first: next item is \"\
+    \ + item);\n}\n});\n\nsubject.onNext(1);\nsubject.onNext(2);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "```\n// subscribe the second Subscriber\nsubjectAsObservable.subscribe(new\
+    \ Subscriber<Integer>()) {\n    @Override\n    public void onCompleted() {\n \
+    \       System.out.println(\"second: sequence completed\");\n    }\n\n    @Override\n\
+    \    public void onError(Throwable e) {\n    }\n\n    @Override\n    public void\
+    \ onNext(Integer item) {\n        System.out.println(\"second: next item is \"\
+    \ + item);\n    }\n}\nsubject.onNext(3);\nubject.onNext(4);\nubject.onNext(5);\n\
+    ubject.onCompleted();\n```\n\nThe output is\n\nfirst: next item is -1\nfirst:\
+    \ next item is 1\nfirst: next item is 2\nsecond: next item is 2\nfirst: next item\
+    \ is 3\nsecond: next item is 3\nfirst: next item is 4\nsecond: next item is 4\n\
+    first: next item is 5\nsecond: next item is 5\nfirst: sequence completed\nsecond:\
+    \ sequence completed\n\nWhat if you want the subscriber to receive all items emitted\
+    \ prior to its subscription instead of only the last? Use ReplaySubject.\n\n#\
+    \ ReplaySubject\n\nReplaySubject<T> (Figure 4-3) emits all items emitted by the\
+    \ source Observable, regardless of when the observer subscribes, keeping a buffer\
+    \ of the emitted items."
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# ReplaySubject
+
+
+    ![](img/2ab15486b46859b709ebbac39262fbfa_73_0.png)
+
+
+    Figure 4-3. The marble diagram for ReplaySubject<T>
+
+
+    This buffer is backed up by an ArrayList, and by default it has an initial capacity
+    of 16 and no upper bounds.
+
+
+    RxJava provides other static factory methods to create an instance of ReplaySubject
+    with different behaviors:
+
+
+    +   * ReplaySubject.create(int capacity) creates an instance of ReplaySubject
+    with the specified initial capacity.
+
+    * ReplaySubject.createWithSize(int size) creates an instance that will keep a
+    buffer with the specified size: when the buffer is full, older items are discarded.
+
+    * ReplaySubject.createTime(long time, TimeUnit unit, Scheduler scheduler) creates
+    a time-bounded ReplaySubject.
+
+    * ReplaySubject.createTimeAndTimeSize(long time, TimeUnit unit, Scheduler scheduler)
+    lets you create a ReplaySubject that is both time-bounded and size-bounded.
+
+
+    # AsyncSubject
+
+
+    AsyncSubject<T> (Figure 4-4) is an implementation of Subject that
+
+
+    +   * Emits only the last emitted item from the source observable after that observable
+    completes.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "+   - Emits no item if the source observable does not emit any item.\n- Notifies\
+    \ an error event (without emitting any item) if the\nObservable terminates with\
+    \ an error.\n\n# AsyncSubject\n\n![](img/2ab15486b46859b709ebbac39262fbfa_74_0.png)\n\
+    \n**Figure 4-4.** the marble diagram for AsyncSubject<T>\n\nLet's change the previous\
+    \ example to use AsyncSubject instead of PublishSubject:\n\nAsyncSubject<Integer>\
+    \ subject = AsyncSubject.create();\n\nObservable<Integer> subjectAsObservable\
+    \ =\nsubject.asObservable();\n\n```\n// subscribe the first Subscriber\nsubjectAsObservable.subscribe(new\
+    \ Subscriber<Integer>()) {\n  @Override\n  public void onCompleted() {\n    System.out.println(\"\
+    first: sequence completed\");\n  }\n  @Override\n  public void onError(Throwable\
+    \ e) {\n  }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "# CHAPTER 4 SUBJECTS\n\n```\n@Override\npublic void onNext(Integer item) {\n\
+    \    System.out.println(\"first: next item is \" + item);\n}\n\n```\n\n```\nsubject.next(1);\n\
+    subject.next(2);\n```\n\n// subscribe the second Subscriber\n\n```\nsubjectASObservable.subscribe(new\
+    \ Subscriber<Integer>()) {\n```\n\n```\n@Override\npublic void onCompleted() {\n\
+    \    System.out.println(\"second: sequence completed\");\n}\n```\n\n```\n@Override\n\
+    public void onError(Throwable e) {\n}\n@Override\npublic void onNext(Integer item)\
+    \ {\n    System.out.println(\"second: next item is \" + item);\n}\n\n```\n\n```\n\
+    subject.next(3);\nsubject.next(4);\nsubject.next(5);\nsubject.onCompleted();\n\
+    ```\n\nThis code produces the following output:\n\nfirst: next item is 5\nfirst:\
+    \ sequence completed\nsecond: next item is 5\nsecond: sequence completed\n\n#\
+    \ When Should You Use Subjects?\n\nThere's an ongoing debate about the usage of\
+    \ Subjects. Erik Meijer, one of the RxJava's fathers, says that\n\n72"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "# CHAPTER 4 = SUBJECTS\n\nThey are the mutable variables of the Rx world, and\
+    \ in most cases you do not need them. Typically a solution with Create or the\
+    \ other operators allows you to just wire up continuations without adding extra\
+    \ state. Stated slightly differently, it is a good practice to minimize the number\
+    \ of objects that held on subscribers, you just want to pass them through.\n\n\
+    [https://social.msdn.microsoft.com/Forums/en-US/bb87eea-6a317-4920-96d7-2313e9a7a234/why-does-emitter-not-like-subjects]\n\
+    \nAs a general rule, before using a Subject, ask yourself if the same purpose\
+    \ can be achieved with Observable.create() (or any other operator that creates\
+    \ observables). And, if you need to use a Subject, it's a good idea to expose\
+    \ it wrapped inside an Observable with the method Subject.asObservable(), because\
+    \ by doing so you will not expose the mutable component of the Subject.\n\n# EXAMPLE:\
+    \ A REACTIVE VERSION OF ARRAYLIST\n\nThe following example shows how to create\
+    \ a reactive version of ArrayList. The implementation of ArrayList exposes two\
+    \ additional methods to get notified when an item is added or removed:\n\n```\n\
+    class ReactiveArrayList<T> extends ArrayList<T> {\n\n    private PublishSubject<T>\
+    \ addSubject =\n        PublishSubject.create();\n    private PublishSubject<Object>\
+    \ removeSubject =\n        PublishSubject.create();\n\n    @Override\n    public\
+    \ boolean add(T item) {\n        boolean result = super.add(item);\n        if\
+    \ (result) {\n            addSubject.next(item);\n        }\n        return result;\n\
+    \    }\n\n    @Override\n    public void add(int index, T item) {\n        super.add(index,\
+    \ item);\n        addSubject.next(item);\n    }\n\n    @Override\n```"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "# CHAPTER 4 SUBJECTS\n\n```\npublic T remove(int index) {\n    T removedItem\
+    \ = super.remove(index);\n    removeSubject.onNext(removedItem);\n    return removedItem;\n\
+    }\n```\n\n```\n@Override\npublic boolean remove(Object object) {\n    boolean\
+    \ result = super.remove(object);\n    if (result) {\n        removeSubject.onNext(object);\n\
+    \    }\n    return result;\n}\n```\n\n```\n@Override\npublic boolean add(Collection<?\
+    \ extends T> c) {\n    boolean result = super.addAll(c);\n    if (result) {\n\
+    \        for (T t : c) {\n            addSubject.onNext(t);\n        }\n    }\n\
+    \    return result;\n}\n```\n\n```\n@Override\npublic boolean addAll(int index,\
+    \ Collection<? extends T> c) {\n    boolean result = super.addAll(index, c);\n\
+    \    if (result) {\n        for (T t : c) {\n            addSubject.onNext(t);\n\
+    \        }\n    }\n    return result;\n}\n```\n\n```\npublic Observable<T> itemsAdded()\
+    \ {\n    return addSubject.asObservable();\n}\n```\n\n```\npublic Observable<Object>\
+    \ itemsRemoved() {\n    return removeSubject.asObservable();\n}\n```\n\nThis is\
+    \ a usage example:\n\n```\nReactiveArrayList<String> reactiveList = \nnew ReactiveArrayList<String>();\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "# CHAPTER 4 === SUBJECTS\n\n```\nreactiveList.observeItemsAdded()\n  .subscribe(new\
+    \ Subscriber<String>()() {\n    @Override\n    public void onCompleted() {\n \
+    \   }\n    @Override\n    public void onError(Throwable e) {\n    }\n    @Override\n\
+    \    public void onNext(String item) {\n      System.out.println(\"item added:\
+    \ \" + item);\n    }\n  });\nreactiveList.observeItemsRemoved()\n  .subscribe(new\
+    \ Subscriber<Object>()() {\n    @Override\n    public void onCompleted() {\n \
+    \   }\n    @Override\n    public void onError(Throwable e) {\n    }\n    @Override\n\
+    \    public void onNext(Object item) {\n      System.out.println(\"item removed:\
+    \ \" + item);\n    }\n  });\n\nreactiveList.add(\"1\");\nreactiveList.add(\"2\"\
+    );\nreactiveList.remove(\"1\");\nreactiveList.addAll(Arrays.asList(\"4\", \"s\"\
+    , \"6\"));\nreactiveList.remove(\"s\");\n```\n\nThe output of this code is\n\n\
+    item added: 1\nitem added: 2\nitem removed: 1\n\n75"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "# CHAPTER 4 ## SUBJECTS\n\nitem added: 4\nitem added: 5\nitem added: 6\nitem\
+    \ removed: 5\n\n**Note** Subjects are not thread-safe by default. They do not\
+    \ perform any synchronization across threads, you must not call the onNext()/onCompleted()/onError()\
+    \ methods from multiple threads, as this could lead to non-serialized calls, which\
+    \ violates the Observable contract and creates an ambiguity in the resulting Subject.\n\
+    \nTo make the Subject thread-safe, convert it into a SerializedSubject<T,R> (a\
+    \ subclass of Subject<T,R>) with code like the following:\n\n```\nnewSerializedSubject(mySubject);\n\
+    ```\n\n# # Connectable Observables\n\nConnectable Observables are another alternative\
+    \ to the usage of Subjects. A ConnectableObservable<T> behaves like an Observable,\
+    \ but it begins emitting items only when its connect() method is called.\n\n```\n\
+    ConnectableObservable<String> observable =\nObservable.range(0, 5)\n.map(new Func<Integer,\
+    \ String>()() {\n    @Override\n    public String call(Integer t) {\n        return\
+    \ String.valueOf(t);\n    }\n}).publish();\nbservable.subscribe(new Subscriber<String>()()\
+    \ {\n```\n\n```\n@Override\npublic void onCompleted() {\n    System.out.println(\"\
+    first: sequence completed\");\n}\n\n@Override\npublic void onError(Throwable e)\
+    \ {\n}\n```\n\n76"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "```\npublic void onNext(String item) {\n    System.out.println(\"first: next\
+    \ item is \" + item);\n}\n));\n```\n\n```\nobservable.subscribe(new Subscriber<String>()\
+    \ {\n    @Override\n    public void onCompleted() {\n        System.out.println(\"\
+    second: sequence completed\");\n    }\n    @Override\n    public void onError(Throwable\
+    \ e) {\n}\n    @Override\n    public void onNext(String item) {\n        System.out.println(\"\
+    second: next item is \" + item);\n    }\n});\n```\n\nIf you run this code, the\
+    \ output is... nothing! This is because you are missing the call to the connect()\
+    \ method:\n\n```\nobservable.connect();\n```\n\nBy adding this line, the observable\
+    \ starts emitting items and the output becomes\n\n+   first: next item is 0\n\
+    second: next item is 0\nfirst: next item is 1\nsecond: next item is 1\nfirst:\
+    \ next item is 2\nsecond: next item is 2\nfirst: next item is 3\nsecond: next\
+    \ item is 3\nfirst: next item is 4\nsecond: next item is 4\nfirst: sequence completed\n\
+    second: sequence completed\n\nAs you can see, every event generated by the observable\
+    \ is propagated to both subscribers, preserving the order of subscription (the\
+    \ first subscriber is notified for each event)."
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# CHAPTER 5
+
+
+    # # Networking with RxJava
+
+    and Retrofit
+
+
+    Network operations like calling the Restful API are an example of a scenario where
+    you can apply RxJava.
+
+
+    +   - You need to implement a callback mechanism to react to the response of the
+    network call, which can terminate with a successful true or a failure.
+
+    - Sometimes you need to chain different network calls sequentially.
+
+    - Often these operations need to be executed in a separate thread.
+
+
+    It''s trivial now to map the idea of a response with a successful or error state
+    to the Subscriber''s next and onError methods, chaining operations to an Observable
+    concatenation (or transformation), and the idea of using a separate thread for
+    the application of a Scheduler.
+
+
+    Java provides a basic support for network operations (look at packages java.net
+    and java.util), but there are many other libraries that really-simplify working
+    with a network, like
+
+
+    +   - Netty (http://netty.io/)
+
+    - AsyncHttp Client (https://github.com/AsyncHttpClient/AsyncHttp-client)
+
+    - OkHttp (https://square.github.io/okhttp/)
+
+    - Retrofit (https://square.github.io/retrofit/)
+
+
+    This chapter covers Retrofit as it has an interesting feature: built-in support
+    for RxJava lets you choose if you want the network response to be wrapped inside
+    an Observable object.
+
+
+    I''m assuming you know what RESTful APIs (https://en.wikipedia.org/wiki/Representational_state_transfer)
+    are and that you have a basic knowledge of JSON (Google Gson will be used for
+    JSON parsing - https://github.com/google/gson).'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "# CHAPTER 5 NETWORKING WITH RXJAVA AND RETROFIT\n\n# Retrofit's Built-in Support\
+    \ for RxJava\n\nRetrofit is a library that provides a type-safe HTTP client for\
+    \ Java (and Android). The great point about Retrofit is that you just have to\
+    \ define an interface that will act as a proxy for the HTTP API, and the library\
+    \ will automatically generate the implementation of this interface for you.\n\n\
+    All examples are based on version 2.1.0 of Retrofit. It supports Java 7 and 8,\
+    \ but not Java 6.\n\n# Setting Up Retrofit in Your Java Project\n\nThe setup is\
+    \ straightforward. If you're using maven, just add the following dependency declaration:\n\
+    \n```\n<dependency>\n  <groupId>com.squareup.retrofit2</groupId>\n  <artifactId>retrofit</artifactId>\n\
+    \  <version>2.1.0</version>\n</dependency>\n```\n\nIf you're using gradle:\n\n\
+    ```\ncompile 'com.squareup.retrofit2:retrofit:2.1.0'\n```\n\nAlternatively, you\
+    \ can download the jar from the web site.\n\n# Creating a Retrofit Service\n\n\
+    Let's consider the APIs that are provided by GitHub (https://developer.github.com/v3/).\
+    \ GitHub provides many APIs to access user's information, repositories, and gists,\
+    \ but for now let's just consider the API to retrieve a user's list of public\
+    \ repositories.\n\nFrom the GitHub API documentation, the URL of this API is\n\
+    \n```\nhttps://api.github.com/users/{user}/repos\n```\n\nwhere [user] is the name\
+    \ of the GitHub user.\n\nA Retrofit interface that maps the GitHub API will look\
+    \ like this:\n\n```\nimport java.util.List;\nimport retrofit2.http.GET;\nimport\
+    \ retrofit2.http.Path;\nimport rx.Observable.Observable;\n\npublic interface GitHubService\
+    \ {\n  @GET(\"users/{user}/repos\")\n  Observable<List<Repo>> listRepos(@Path(\"\
+    user\") String user);\n}\n```\n\n80"
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "# CHAPTER 5 ## NETWORKING WITH RXJAVA AND RETROFIT\n\nThe Repo object is used\
+    \ to map the JSON returned by the API to the POJO (plain old Java object); this\
+    \ is a simple implementation that maps only the fields that you need in the examples:\n\
+    \n```\npublic class Repo {\n    @SerializedName(\"id\")\n    private int id;\n\
+    \n    @SerializedName(\"name\")\n    private String name;\n\n    @SerializedName(\"\
+    url\")\n    private String url;\n\n    @SerializedName(\"watchers_count\")\n \
+    \   private int watchersCount;\n\n    @SerializedName(\"open_issues_count\")\n\
+    \    private int openIssueCount;\n\n    public int getId() {\n        return id;\n\
+    \    }\n\n    public void setId(int id) {\n        this.id = id;\n    }\n\n  \
+    \  public String getName() {\n        return name;\n    }\n\n    public void setName(String\
+    \ name) {\n        this.name = name;\n    }\n\n    public String getUrl() {\n\
+    \        return url;\n    }\n\n    public void setUrl(String url) {\n        this.url\
+    \ = url;\n    }\n\n    public int getWatchersCount() {\n        return watchersCount;\n\
+    \    }\n```\n\n81"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "# CHAPTER 5 NETWORKING WITH RXJAVA AND RETROFIT\n\n```\npublic void setWatchersCount(int\
+    \ watchers) {\n    this.watchersCount = watchers;\n}\n```\n\n```\npublic int getOpenIssueCount()\
+    \ {\n    return openIssueCount;\n}\n```\n\n```\npublic void setOpenIssueCount(int\
+    \ openIssueCount) {\n    this.openIssueCount = openIssueCount;\n}\n```\n\nHere've\
+    \ defined a method that maps a GET request (see @GET annotation) to the API \"\
+    users/{user}/repos\" (\"passed as parameter to the method, and the value of {user}\
+    \ is a parameter of the method, and with the annotation @Path you're telling Retrofit\
+    \ that the \"user\" parameter must be substituted in the part of the API URL.\n\
+    The method will return an Observable that will do the following:\n\n+   - Emit\
+    \ a sequence of a non-null object of type List<Repo> if the request is successful\
+    \ (and then terminates).\n- Notify with an error if some error occurs.\n\nThe\
+    \ implementation of the GitHubService interface can be generated as follows:\n\
+    \n```\nRetrofit retrofit = new Retrofit.Builder()\n    .baseUrl(\"https://api.github.com/\"\
+    )\n    .addCallAdapterFactory(RxJavaAdapterFactory.create())\n    .addConverterFactory(GsonConverterFactory.create())\n\
+    \    .build();\n```\n\n```\nGitHubService service = retrofit.create(GitHubService.class);\n\
+    ```\n\nThe support for RxJava must be enabled by including the following dependency:\n\
+    \n```\n<dependency>\n    <groupId>com.squareup.retrofit</groupId>\n    <artifactId>retrofit-adapter-rxjava</artifactId>\n\
+    \    <version>2.1.0</version>\n</dependency>\n```\n\nYou must also register the\
+    \ adapter with the method\n\n```\naddCallAdapterFactory(RxJavaAdapterFactory.create());\n\
+    ```\n\nYou also need to add support for converting the response body from JSON\
+    \ to your Repo object using Gson. To do this, you need to add the following dependency:\n\
+    \n```\n<dependency>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: "# CHAPTER 5 NETWORKING WITH RXJAVA AND RETROFIT\n\n```\n<groupId>com.squareup.retrofit2</groupId>\n\
+    <artifactId>converter-gson</artifactId>\n<version>2.1.0</version>\n</dependency>\n\
+    ```\n\nYou also need to register the converter:\n\n```\naddConverterFactory(GsonConverterFactory.create())\n\
+    ```\n\nNow you can use the service implementation and make a subscription:\n\n\
+    ```\nString user = ...\nservice.listRepos(user)\n.subscribe(new Subscriber<List<Repo>>()\
+    \ {\n    @Override\n    public void onCompleted() {\n        System.out.println(\"\
+    sequence completed\");\n    }\n    @Override\n    public void onError(Throwable\
+    \ e) {\n        e.printStackTrace();\n    }\n    @Override\n    public void onNext(List<Repo>\
+    \ repos) {\n        for (Repo repo : repos) {\n            System.out.println(\"\
+    Repo: \" + repo.getName());\n        }\n    }\n});\n```\n\nPutting all together,\n\
+    \n```\nimport retrofit2.Retrofit;\nimport retrofit2.adapter.RxJavaCallAdapterFactory;\n\
+    import retrofit2.converter.gson.GsonConverterFactory;\nimport rx.Observable;\n\
+    import rx.Subscriber;\nimport rx.functions.Func1;\nimport rx.schedulers.Schedulers\n\
+    ```\n\n```\npublic static void listRepos(String user) {\n    retrofit2.Retrofit\
+    \ retrofit =\n        new retrofit2.Retrofit.Builder().build()\n```"
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "# CHAPTER 5 NETWORKING WITH RXJAVA AND RETROFIT\n\n```\n.baseUrl(\"https://api.github.com/\"\
+    )\n.addCallAdapterFactory(RxJavaCallAdapterFactory.create())\n.addConverterFactory(GsonConverterFactory.create())\n\
+    .build();n\n```\n\nGitHubService service = retrofit.create(GitHubService.class);\n\
+    \n```\nservice.listRepos(user)\n.subscribe(new Subscriber<List<Repo>>() {\n```\n\
+    \n```\n@Override\npublic void onCompleted() {\n    System.out.println(\"sequence\
+    \ completed\");\n}\n```\n\n```\n@Override\npublic void onError(Throwable e) {\n\
+    \    e.printStackTrace();\n}\n```\n\n```\n@Override\npublic void onNext(List<Repo>\
+    \ repos) {\n    for (Repo repo : repos) {\n        System.out.println(\"Repo:\
+    \ \" + repo.getName());\n    }\n});\n```\n\nFor example, to print a list of the\
+    \ GitHub repositories of user \"octocat\", you can call listRepos(\"octocat\"\
+    );\n\nand the results will be\n\n+   Repo: git-consortium\nRepo: hello-world\n\
+    Repo: Hello-World\nRepo: linguist\nRepo: octocat, github.io\nRepo: Spoon-Knife\n\
+    Repo: test-repo1\nsequence completed"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "# Filter Results\n\nNow that you've got the list of repositories, you want\
+    \ to filter that list and show only the repositories with at most two open issues.\
+    \ You can do this by applying the filter() operator.\n\nThe Observable returned\
+    \ by the method listRepos() emits a sequence of only one type of List<Repo>. To\
+    \ apply the filter() operator, you need to observe the Observable to emit an item\
+    \ for each Repo object. The following code shows how you can transform the Observable\
+    \ into another Observable and then apply a filter:\n\n```\nString use = ...\n\
+    int maxOpenIssues = ...\nlistRepos(user)\n.flatMap(new Func1<List<Repo>, Observable<Repo>>()\
+    \ {\n    @Override\n    public Observable<Repo> call(List<Repo> repos) {\n   \
+    \     return Observable.from(repos);\n    }\n})\\.filter(new Func1<Repo, Boolean>()()\
+    \ {\n    @Override\n    public Boolean call(Repo repo) {\n        return repo.getOpenIssueCount()\
+    \ <= maxOpenIssues;\n    }\n}).subscribe(new Subscriber<Repo>()() {\n    @Override\n\
+    \    public void onCompleted() {\n        System.out.println(\"sequence completed\"\
+    );\n    }\n    @Override\n    public void onError(Throwable e) {\n        e.printStackTrace();\n\
+    \    }\n    @Override\n    public void onNext(Repo repo) {\n        System.out.println(\"\
+    Repo: \" + repo.getName());\n    }\n});\n```"
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "# CHAPTER 5 WORKING WITH RXJAVA AND RETROIT\n\nThe complete static method is\n\
+    \n```\npublic static void listReposWithMaxIssues(String user, final int\nmaxOpenIssues())\
+    \ {\n    Retrofit retrofit = new Retrofit.Builder()\n        .baseUrl(\"https://api.github.com/\"\
+    )\n        .addCallAdapterFactory(RxJavaCallAdapterFactory.create())\n       \
+    \ .addConverterFactory(GsonConverterFactory.create())\n        .build();\n\n \
+    \   GitHubService service = retrofit.create(GitHubService.class);\n    service.listRepos(user)\n\
+    \        .flatMap(new Func1<List<Repo>, Observable<Repo>>() {\n            @Override\n\
+    \            public Observable<Repo> call(List<Repo> repos) {\n              \
+    \  return Observable.fromIterable(repos);\n            }\n        })\n       \
+    \ .filter(new Func1<Repo, Boolean>() { // Note: typo in original Func1\n     \
+    \       @Override\n            public Boolean call(Repo repo) {\n            \
+    \    return repo.getOpenIssueCount() <= maxOpenIssues;\n            }\n      \
+    \  })\\n        .subscribe(new Subscriber<Repo>() {\n            @Override\n \
+    \           public void onCompleted() {\n                System.out.println(\"\
+    sequence completed\");\n            }\n\n            @Override\n            public\
+    \ void onError(Throwable e) {\n                e.printStackTrace();\n        \
+    \    }\n\n            @Override\n            public void onNext(Repo repo) {\n\
+    \                System.out.println(\"Repo: \" + repo.getName());\n          \
+    \  }\n        });\n```"
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: "# CHAPTER 5 ▩ WORKING WITH RXJAVA AND RETROFIT\n\nAnd here's the output:\n\
+    Repo: hello-world\nRepo: test-repo1\nsequence completed\n\n# Choosing the Right\
+    \ Scheduler\n\nIn the previous example, you didn't specify any Scheduler, so the\
+    \ code is executed using\nt default Scheduler.\n\nSuppose that you're working\
+    \ on an application with a UI and that the network\noperation is kicked off by\
+    \ clicking on a button. You don't want the UI to be blocked\nwaiting for the response,\
+    \ so you need to ensure all the network stuff on a separate\nthread. This can\
+    \ be done by applying the subscribeOn() operator. A network operation is\nan IO\
+    \ operation, so you also need to ensure that the result is marshaled on the UI\
+    \ thread (if the result\nis to update the UI, so you also need to apply the observeOn()\
+    \ operator). The right\nscheduler depends on the library or framework you are\
+    \ using to build the UI. For\nexample in Java, you can use the JavaScheduler provided\
+    \ by RxJava (https://ngithub.com/ReactiveX/RxJava). In Android use AndroidSchedulers.mainThread()\n\
+    provided by RxAndroid (https://github.com/ReactiveX/RxAndroid).\n\n```\nservice.listRepos(user)\n\
+    \  .flatMap(new FuncList<List<Repo>, Repo>() {\n    @Override\n    public Observable<Repo>\
+    \ call(List<Repo> repos) {\n      return Observable.fromIterable(repos);\n   \
+    \ }\n  })\n  .filter(new Func<Repo, Boolean>() {\n    @Override\n    public Boolean\
+    \ call(Repo repo) {\n      return repo.getIssueCount() <= maxOpenIssues;\n   \
+    \ }\n  })\n  .observeOn(AndroidSchedulers.mainThread())\n  .subscribe(new Subscriber<Repo>()()\
+    \ {\n    @Override\n    public void onCompleted() {\n      System.out.println(\"\
+    sequence completed\");\n    }\n  });\n```"
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "# CHAPTER 5 NETWORKING WITH RXJAVA AND RETROFIT\n\n```\n@Override\npublic void\
+    \ onError(Throwable e) {\n    e.printStackTrace();\n}\n\n@Override\npublic void\
+    \ onNext(Repo repo) {\n    System.out.println(\"Repo: \" + repo.getName());\n\
+    };\n```\n\nBy adding subscribeOn(Schedulers.io()) right before subscribe(), call\
+    \ methods listRepos(), flatMap(), and filter() will be executed on a different\
+    \ thread.\nThe results (onNext, onError, and onCompleted) will be notified on\
+    \ the main thread.\n\n# Chaining Multiple Calls\n\nChaining multiple calls often\
+    \ means dealing with nested callbacks, which make your code hard to read and maintain.\
+    \ Moreover, you have to handle errors in each callback, increasing the code complexity.\n\
+    \nFrom what you've seen so far, it's easy to understand how to use RxJava to substitute\
+    \ the callback chain with a combination of observables.\nIn this simple-scenario,\
+    \ you need to call one remote API to authenticate a user, then another one to\
+    \ get the user's data, and again another API to get the user's contacts.\nThe\
+    \ following code shows nested API calls with callbacks:\n\n```\nimport retrofit2.Callback;\n\
+    import retrofit2.Call;\nimport retrofit2.Response;\n```\n\n```\nUser user = null;\n\
+    \nmyService.login(username, password,\n    new Callback<AccessToken>() {\n\n \
+    \   @Override\n    public void success(User user, Response response) {\n\n   \
+    \     storeCredentials(response.getAccessToken());\n\n        myService.getUser(accessToken,\
+    \ new Callback<User>() {\n            @Override\n            public void onResponse(Call<User>\
+    \ call,\n                Response<User> response) {\n\n                user =\
+    \ response.getBody();\n            });\n        });\n    }\n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "```\nmyService.getUserContact(user.getid(),\n    new Callback<Contact>() {\n\
+    \    @Override\n    public void onResponse(Call<Contact> contact,\n        Response<Contact>\
+    \ response) {\n        user.setContact(response.getBody());\n    }\n\n    @Override\n\
+    \    public void onFailure(RetrofitError error) {\n        // handle error here...\n\
+    \    }\n});\n\n@Override\npublic void onFailure(RetrofitError error) {\n    //\
+    \ handle error here...\n    }\n});\nn@Override\npublic void failure(RetrofitError\
+    \ error) {\n    // handle error here...\n    }\n});\n```\n\nAnd this is how you\
+    \ can transform this code using RxJava:\nmyService.login(\n    .doNext(accessToken\
+    \ -> storeCredentials(accessToken))\n    .flatMap(accessToken -> myService.getUser(accessToken))\n\
+    \    .flatMap(user -> myService.getUserContact(user.getid()))\n    .subscribe(new\
+    \ Subscriber<Contact>() {\n    @Override\n    public void onCompleted() {\n  \
+    \  }\n\n    @Override\n    public void onError(Throwable e) {\n    }\n\n    @Override\n\
+    \    public void onNext(Contact contact) {\n    }\n});"
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "# CHAPTER 5 WORKING WITH RXJAVA AND RETROFIT\n\nwhere\n\n+   * myService.login(token)\
+    \ returns an Observable<AccessToken>\n* the doNext() method is applied to the\
+    \ result of myService.\n  login() to invoke storeCredentials() every time an instance\
+    \ of\n  AccessToken is emitted\n* The same instance of AccessToken is used by\
+    \ the first\n  flatMap operator to invoke the method myService.\n  getUser(accessToken)\
+    \ and then return an Observable<User>.\n* Another flatMap operator is used to\
+    \ emit the instance of\n  User to call myService.getContact(user.get(id())).\n\
+    \nThe code becomes simpler to read and maintain because it's built using reusable\
+    \ blocks of code.\nWith the nested callbacks, there are three different places\
+    \ where you have to\nhandle errors in the RxJava version, you can handle errors\
+    \ in just one place, since every\nerror will be forwarded to the observer and\
+    \ notified in the onError method.\n\n# Caching Data\n\nWhen working with network,\
+    \ an important topic is caching. Caching is a mechanism to\nsave a local copy\
+    \ of the network response to be used when the network is unreachable\nor to avoid\
+    \ too many subsequent network calls.\nRetrofit catches network responses using\
+    \ OkHttpClient's cache\nmechanism. In some cases, this is not enough and you need\
+    \ to cache data by applying\nyour own cache logic.\nAgain, RxJava can help you\
+    \ build a complex caching mechanism with simple and\nreadable code. The following\
+    \ code shows an abstract implementation of a class that\ncaches a network response\
+    \ on disk and memory. Note that in this example you take\nadvantage of lambda\
+    \ expressions (provided by Java 8) to make your code less verbose.\n\n```\nabstract\
+    \ class CacheManager<T>nprivate T memoryCache;\npublic Observable<T> getData(){\r\
+    eturn Observable.concat(fromMemory(),fromDisk(), fromNetwork()),.first(response\
+    \ -> isValid(response))\nonErrorNext(t -> fallbackToDiskCache());\n}\nprotected\
+    \ Observable<T> fromNetwork(){\nreturn doNetworkCall()\n.doNext(response ->\n\
+    ```\n\n90"
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "# CHAPTER 5 == NETWORKING WITH RXJAVA AND RETROFIT\n\n```\ncacheInMemory(response);\n\
+    \    cacheOnDisk(response);\n}\nn.compose(logSource(\"network\"));\n}\n```\n\n\
+    ```\nprivate Observable<T> fallbackToDiskCache() {\n    System.out.println(\"\
+    fallback to disk cache\");\n    return fromDisk();\n}\n```\n\n```\nprotected void\
+    \ cacheOnDisk(T response) {\n    System.out.println(\"saving data on disk: \"\
+    \ + response);\n    persistOnDisk(response);\n}\n```\n\n```\nprotected Observable<T>\
+    \ fromDisk() {\n    Observable<T> observable = Observable.create(subscriber ->\
+    \ {\n        T response = readFromDisk();\n        if (response != null) {\n \
+    \           subscriber.onNext(response);\n            cacheInMemory(response);\n\
+    \        }\n        subscriber.onCompleted();\n    });\n    return observable.compose(logSource(\"\
+    disk\"));\n}\n```\n\n```\nprotected void cacheInMemory(T response) {\n    mMemoryCache\
+    \ = response;\n}\n```\n\n```\nprotected Observable<T> fromMemory() {\n    Observable<T>\
+    \ observable = Observable.create(subscriber -> {\n        subscriber.onNext(mMemoryCache);\n\
+    \        subscriber.onCompleted();\n    });\n    return observable.compose(logSource(\"\
+    memory\"));\n}\n```\n\n```\npublic void deleteAll() {\n    mMemoryCache = null;\n\
+    \    deleteFromDisk();\n}\n```\n\n```\nprivate Observable.Transformer<T, T> logSource(final\
+    \ String source) {\n```\n\nwww.allitebooks.com"
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "# CHAPTER 5 NETWORKING WITH RXJAVA AND RETROFIT\n\n```\nreturn dataObservable\
+    \ -> dataObservable.doNext(data -> {\nif (data == null) {\n    System.out.println(source\
+    \ + \" does not have any data.\");\n} else if (!isValid(data)) {\n    System.out.println(source\
+    \ + \" has stale data.\");\n} else {\n    System.out.println(source + \" has the\
+    \ data you are looking for!\");\n}\n});\n```\n\n```\nabstract boolean isValid(T\
+    \ data);\nababstract Observable<T> doNetworkCall();\nababstract void persistOnChange(T\
+    \ response);\nababstract T readFromDisk();\nababstract void deleteFromDisk();\n\
+    ```\n\nLet's break down this:\n\n+   - The main idea is to use the Observable.concat()\
+    \ operator to concatenate three operations: getting data from memory, getting\
+    \ data from the disk, and getting data from the network, in this exact order.\n\
+    - Then you apply the first() operator with a filter that out data that is not\
+    \ valid (i.e. it's not null or it's not too old). If the memory returns invalid\
+    \ data, it will be forwarded to the subscriber and no data will be read from the\
+    \ disk or the network. If the memory returns valid data, the data will be read\
+    \ from the disk, checking if it's valid, and so on.\n- If some error occurs (for\
+    \ example, no network connection or server unreachable), you fall back to disk\
+    \ cache. This is done with the help of onError which makes the sourceObservable\
+    \ emit items from the given Observable(fallbackToCache()) in case of an error.\n\
+    - The fromNetwork() Observable retrieves data from the network and uses the next\
+    \ operator to cache data on disk and in memory when the subscriber's next() method\
+    \ is notified. Remember that fromNetwork() is called only if memory and the disk\
+    \ contain invalid data."
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# CHAPTER 5 NETWORKING WITH RXJAVA AND RETROFIT
+
+
+    +   - The same logic is applied to the fromDisk() method, where you save data
+    in memory before notifying the subscriber''s onNext() method.
+
+
+    +   - Finally, you use the Observable.compose() operator to apply the logSource()
+    operator that prints informations about the current source of data.
+
+
+    Note how you used Observable.create() to create the observers for getting data
+    from memory and from disk.
+
+
+    The details about getting data from the network and saving and reading data from
+    disk are left to the concrete implementation.
+
+
+    In these examples, you''ve used only a few of the many features that the Retrofit
+    library provides, because the focus was on the RxJava integration part. With Retrofit,
+    you can manage not only GET but also POST, DELETE, PUT, and PATCH requests. You
+    can specify header and query parameters, manipulate a URL''s path, form-encoded
+    and multipart data. Go to http://square.github.io/retrofit/ for the full documentation.'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: "# CHAPTER 6\n\n# RxJava and Android\n\nIn the actual mobile-driven world, talking\
+    \ about Java also means talking about Android.\nnThe RxJava library can be used\
+    \ in Android development without any other requirements. This means that all the\
+    \ code examples that you have seen so far can be included in an Android project;\
+    \ all you need to do is add the dependency for RxJava in your build.gradle file.\n\
+    There are some libraries that provide additional support for applying RxJava concepts\
+    \ in the Android environment. The fundamentals are\n\n+   * RxAndroid\n* RxBindings\n\
+    * RxLifecycle\n\n# RxAndroid\n\nRxAndroid is the first open-source library for\
+    \ Android that you'll need. In fact, it provides a very useful instance of Scheduler\
+    \ that schedules on the main thread (or a given looper).\nto install the dependency,\
+    \ you just need to add the two dependency declarations to your build.gradle file:\n\
+    \n```\napply plugin: 'com.android.application'\n\nandroid {\n    compileSdkVersion\
+    \ 24\n    buildToolsVersion \"24.0.1\"\n\n    defaultConfig {\n        applicationId\
+    \ \"com.example\"\n        minSdkVersion 24\n        targetSdkVersion 24\n   \
+    \     versionCode 1\n        versionName \"1.0\"\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "# CHAPTER 6 RXJAVA AND ANDROID\n\n```\nbuildTypes {\n    release {\n      \
+    \  minifyEnabled true\n        shrinkResources true\n        proguardFiles getDefaultProguardFile('proguard-android.txt',\n\
+    \                        'proguard-rules.pro')\n    }\n}\n```\n\n```\ndependencies\
+    \ {\n    compile 'com.android.support:compat-v7:24.1.1'\n    compile 'io.reactive:rxjava:1.2.0'\n\
+    \    compile 'io.reactive:rxandroid:1.2.1'\n}\n```\n\nRxJava requires minSdkVersion\
+    \ 9, but RxAndroid requires minSdkVersion 14.\nRefer to the web site (https://github.com/ReactiveX/RxAndroid)\
+    \ to know the latest version of both.\n\nAs you've already seen, you can use the\
+    \ provided AndroidSchedulers.mainThread() as a parameter to the Observer to make\
+    \ your Subscriber notified of the onNext(T)/onError(Throwable)/onComplete() events\
+    \ on the UI thread: \n\n```\nObservable.range(1, 10)\n    .subscribeOn(Schedulers.newThread())\n\
+    \    .observeOn(AndroidSchedulers.mainThread())\n    .subscribe(new Subscriber<Integer>()\
+    \ {\n```\n\n```\n@Override\n    public void onCompleted() {\n        // notified\
+    \ on UI thread\n}\n```\n\n```\n@Override\n    public void onError(Throwable e)\
+    \ {\n        // notified on UI thread\n}\n```\n\n```\n@Override\n    public void\
+    \ onNext(Integer item) {\n        // notified on UI thread\n}\n```\n\n```\n});\n\
+    ```\n\nYou can also subscribe on another thread, the corresponding Scheduler can\
+    \ be instantiated with the AndroidSchedulers.from(method):\n\n```\nBackgroundThread\
+    \ myThread = new myThread();\nThread.start();\n```"
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "```\nObservable.range(3, 10)\n  .subscribeOn(AndroidSchedulers.from(myThread.getLooper()))\n\
+    \  .observeOn(AndroidSchedulers.mainThread())\n  .subscribe(new Subscriber<Integer>()\
+    \ {\n    @Override\n    public void onCompleted() {\n      // notified on UI thread\n\
+    \    }\n\n    @Override\n    public void onError(Throwable e) {\n      // notified\
+    \ on UI thread\n    }\n\n    @Override\n    public void onNext(Integer item) {\n\
+    \      // notified on UI thread\n    }\n  });\n```\n\nIf you want to build a Scheduler\
+    \ around your Handler, use HandlerThreadScheduler.\n\n# RxBindings\n\nRxJava can\
+    \ also be used to interact with UI components in a reactive way, instead of using\
+    \ listeners.\n\nFor example, to be notified when a View is clicked, you must implement\
+    \ an OnClickListener():\n\n```\nmyView.setOnClickListener(new OnClickListener()\
+    \ {\n    @Override\n    public void onClick(final View v) {\n    }\n});\n```\n\
+    \nIf you want to listen for changes to the text typed in an EditText, you must\
+    \ add a TextWatcher with the method EditText.addTextChangedListener(TextWatcher):\n\
+    \n```\neditText.addTextChangedListener(new TextWatcher() {\n    @Override\n  \
+    \  public void onChange(CharSequence s, int start, int before, int count) {\n\
+    \    }\n});\n```"
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: "# CHAPTER 6 RXJAVA AND ANDROID\n\n```\n@Override\npublic void beforeTextChanged(CharSequence\
+    \ s, int start, int count,\n    int after) {\n}\n\n@Override\npublic void afterTextChanged(Editable\
+    \ s) {\n}\n};\n```\n\nRxBinding (https://github.com/jakewharton/RxBinding) is\
+    \ an open source library that provides some methods to avoid using this callback\
+    \ mechanism, applying the reactive logic instead.\n# To add this library to your\
+    \ Android project, add the dependency into your app's build.gradle file:\n\n```\n\
+    apply plugin: 'com.android.application'\n\nandroid {\n    compileSdkVersion 24\n\
+    \    buildToolsVersion \"24.0.1\"\n\n    defaultConfig {\n        applicationId\
+    \ \"com.example\"\n        minSdkVersion 14\n        targetSdkVersion 24\n   \
+    \     versionCode 1\n        versionName \"1.0\"\n    }\n\n    buildTypes {\n\
+    \        shrinkEnabled true\n        minifyResources true\n        proguardFiles\
+    \ getDefaultFile('proguard-android.txt'),\n            'proguard-rules.pro'\n\
+    \    }\n}\n\ndependencies {\n    compile 'com.android.support:appcompat-v7:24.1.1'\n\
+    \    compile 'io.reactive:rxjava:1.2.0'\n    compile 'io.reactive:rxandroid:1.2.1'\n\
+    \    compile 'com.jakewarton.rxbinding:rxbinding:0.4.0'\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "CHAPTER 6 RXJAVA AND ANDROID\n\n# EXAMPLE: REACTING TO CLICKS ON A VIEW\n\n\
+    Listening for clicks can be implemented with the method\n\n```\nRxView.clicks(myView)\n\
+    .subscribe(click -> doSomething());\n```\n\nRxView.clicks() returns a hot Observable\
+    \ (hot because clicks are fired even when\there are no subscribers).\n\nYou can\
+    \ also apply operators to this Observable.\n\nIt could be useful to implement\
+    \ a mechanism to avoid too many consecutive clicks\non a view. This can be achieved\
+    \ with the throttleFirst operator (see Chapter 3 for\nthe definition of throttleFirst);\n\
+    \n```\nRxView.clicks(myView)\n.throttleFirst(300, TimeUnit.MILLISECONDS)\n.subscribe(click\
+    \ -> doSomething());\n```\n\n# EXAMPLE: REACTING TO TEXT TYED IN EDITTEXT\n\n\
+    The method RxTextView.afterTextChangeEvents() provides an Observable that\nnifies\
+    \ the subscribers when a change occurs in an EditText:\n\n```\nRxTextView.afterTextChangeEvents(editText)\n\
+    .subscribe(new Subscriber<TextViewAfterTextChanged>() {\n    @Override\n    public\
+    \ void onCompleted() {}\n    @Override\n    public void onError(Throwable e) {}\n\
+    \    @Override\n    public void onNext(TextViewAfterTextChanged event) {\n   \
+    \     CharSequence text = event.view().getText();\n        // do something\n \
+    \   }\n});\n```\n\n99"
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "# CHAPTER 6 RXJAVA AND ANDROID\n\nIf you want to be notified of text changes\
+    \ only every 500 milliseconds, you can apply the debounce operator:\n\n```\nRxTextView.afterTextChangeEvents(editText)\n\
+    \  .debounce(500, TimeUnit.MILLISECONDS)\n  .observeOn(AndroidSchedulers.mainThread())\n\
+    \  .subscribe(new Subscriber<AfterTextChangedChangeEvent>() {\n    @Override\n\
+    \    public void onNext(AfterTextChangedChangeEvent event) {\n      CharSequence\
+    \ text = event.getView().getText();\n      // do something\n    }\n  });\n```\n\
+    \nLooking at the source of RxTextView, you can see that afterTextChangeEvents\
+    \ returns an TextWatcher for you:\n\n```\nObservable<AfterTextChangedChangeEvent>\
+    \ afterTextChangeEvents(\n  checkNull(view, \"view == null\");\n  return Observable\n\
+    \    .create(new AfterTextChangedChangeEventOnSubscribe(view));\n);\n```\n\n```\n\
+    class AfterTextChangedChangeEventOnSubscribe(TextView view) {\n  implements Observable.OnSubscribe<AfterTextChangedChangeEvent>\
+    \ {\n    TextView view;\n\n    AfterTextChangedChangeEventOnSubscribe(TextView\
+    \ view) {\n      this.view = view;\n    }\n  }\n```\n\n```\n@Override public void\
+    \ call(final Subscriber<?super\n  AfterTextChangedChangeEvent> subscriber) {\n\
+    \  verifyMainThread();\n  subscriber.subscribe(\n\n  final TextWatcher watcher\
+    \ = new TextWatcher() {\n    @Override public void beforeTextChanged(CharSequence\
+    \ s, int start, int len,\n      count, int after) {\n    }\n\n    @Override public\
+    \ void onTextChanged(CharSequence s, int start, int len,\n      count, int after)\
+    \ {\n    }\n\n    @Override public void afterChanged(Editable s) {\n      if (!subscriber.isUnsubscribed())\
+    \ {\n        subscriber.onNext(AfterTextChangedChangeEvent.create(view, s));\n\
+    \      }\n    }\n  });\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: "```\n}\n};\nview.addTextChangedListener(watcher);\n\nsubscriber.add(new MainThreadSubscription()\
+    \ {\n  @Override protected void onUnsubscribe() {\n    view.removeTextChangedListener(watcher);\n\
+    \  }\n});\n\n// Emit initial value,\nsubscriber.onNext(TextViewAfterTextChangedChangeEvent.create(view,\
+    \ view.\ngetEditableText()));\n});\n```\n\nIn this code:\n\n+   - A TextWatcher\
+    \ is implemented and added to the EditText.\n- The TextWatcher is removed when\
+    \ the observable is unsubscribed.\n- The Subscriber's onNext method is called\
+    \ every time the TextWatcher.afterTextChanged() method is called (if the subscriber\
+    \ is still subscribed).\n\n# # Activity and Fragment Life Cycle\n\nIf you develop\
+    \ on Android, you should be familiar with the concept of the Activity cycle: during\
+    \ the process of setting up and displaying an Activity, the operating system calls\
+    \ a series of callbacks. These methods are called when a user performs an action\
+    \ (like rotating the device); some others are called in response to external events\
+    \ (as an incoming call passes your app's Activity).\n\nHow do subscriptions behave\
+    \ in these situations? There is no built-in mechanism in RxJava that manages those\
+    \ cases for you.\n\nLet's look at some examples. Suppose that you subscribe to\
+    \ an observable inside an Activity create:\n\n```\n@Override\nprotected void onCreate(Bundle\
+    \ savedInstanceState) {\n  super.onCreate(savedInstanceState);\n  setContentView(R.layout.activity_layout);\n\
+    \  TextView textView = findViewById(R.id.text_view);\n\nObservable.timer(2\n```"
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "# CHAPTER 6 RXJAVA AND ANDROID\n\n```\n.subscribe(new Subscriber<Long>() {\
+    \ {\n    @Override\n    public void onCompleted() {\n    }\n\n    @Override\n\
+    \    public void onError(Throwable e) {\n    }\n\n    @Override\n    public void\
+    \ onNext(Long item) {\n        textView.setText(\"Timeout!\");\n    }\n}\n```\n\
+    \nA timer observable is subscribed in the onCreate method; after 2 minutes, the\
+    \ TextView will be updated with the message \"Timeout\"\nWhat happens if user\
+    \ rotates the screen? The Activity is destroyed and recreated before 2 minutes\
+    \ has passed?\nWhen the screen is rotated, the Activity is destroyed and recreated.\
+    \ This leads to two problems in your situation:\n\n+   - The observable will continue\
+    \ its execution at the activity rotation, but when it completes, it will try to\
+    \ update a new instance of TextView.\n- The observable will keep a reference to\
+    \ the old Activity, causing a memory leak.\n\nThe solution here is simple: you\
+    \ must unsubscribe according to the life cycle. For example, let's keep a reference\
+    \ to the subscription and unsubscribe it when Activity is destroyed:\n\nSubscription\
+    \ subscription = null;\n\n```\n@Override\nprotected void onCreate(Bundle savedInstanceState)\
+    \ {\n    super.onCreate(savedInstanceState);\n    setContentView(R.layout.activity_layout);\n\
+    \    TextView textView = findViewById(R.id.text_view)\n}\n\nsubscription = Observable.timer(2,\
+    \ TimeUnit.MINUTES)\n    .subscribeOn(Schedulers.newThread())\n    .observeOn(AndroidSchedulers.mainThread())\n\
+    \    .subscribe(new Subscriber<Long>() {\n    @Override\n    public void onCompleted()\
+    \ {\n```\n\n102"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "# CHAPTER 6 RXJAVA AND ANDROID\n\n```\n}\n@Override\npublic void onError(Throwable\
+    \ e) {\n}\n@Override\npublic void onNext(Long item) {\n    textView.setText(\"\
+    Timeout!\");\n}\n}\n}\n}\n@Override\nprotected void onDestroy() {\n    super.onDestroy();\n\
+    }\n```\n\nif (subscription != null && subscription.issubscribed()) {\n    subscription.unsubscribe();\n\
+    }\n\nYou can also create a CompositeSubscription object and add all subscriptions\
+    \ to it. Then you can unsubscribe all of them at once:\n\nCompositeSubscription\
+    \ compositeSubscription\n= new CompositeSubscription();\n\n```\n@Override\nprotected\
+    \ void onCreate(Bundle savedInstanceState) {\n    super.onCreate(savedInstanceState);\n\
+    \    setContentView(R.layout.activity_layout);\n    TextView textView = (TextView)\
+    \ findViewById(R.id.text_view)\n```\n\n```\nsubscription = Observable.timer(2,\
+    \ TimeUnit.MINUTES)\n    .subscribeOn(Schedulers.newThread())\n    .observeOn(AndroidSchedulers.mainThread())\n\
+    \    .subscribe(new Subscriber<Long>() {\n```\n\n```\n@Override\npublic void onCompleted()\
+    \ {\n}\n```\n\n```\n@Override\npublic void onError(Throwable e) {\n}\n```\n\n\
+    103"
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "# CHAPTER 6 RXJAVA AND AND\n\n```\n@Override\npublic void onError(long item)\
+    \ {\n    textView.setText(\"Timeout!\");\n}\n);\n```\n\n```\n@Override\nprotected\
+    \ void onDestroy() {\n    super.onDestroy();\n    compositeSubscription.unsubscribe();\n\
+    \    subscribe();\n}\n```\n\nNote that once CompositeSubscription.unsubscribe()\
+    \ is called, the object becomes unusable, because it will automatically unsubscribe\
+    \ any other subscription that will be added.\n\nTrello made an open source library\
+    \ called RxLifecycle (https://github.com/trello/rxlifecycle) that simplifies subscription/unsubscription\
+    \ in the Activity (or Fragment) life cycle.\n\nTo include this in your project,\
+    \ add the dependency to your app build.gradle file:\n\n+   compile 'com.android.support:appcompat-compat-v7:24.1.1'\n\
+    compile 'io.reactivex:rxjava:1.2.5'\ncompile 'com.jakewhartator:rxandroidbinding:0.4.0'\n\
+    compile 'com.trello:rxlifecycle:0.7.0'\ncompile 'com.trello:rxlifecycle-android:0.7.0'\n\
+    \nWith this library, you can use the compose() operator to specify when to subscribe\
+    \ from Observable:\n\n```\n.compose(RxLifecycle.bindUntilEvent(lifecycle, ActivityEvent.DESTROY))\n\
+    .subscribe();\n```\n\nOr you can let the library auto-detect when to unsubscribe:\n\
+    \n```\n.compose(RxLifecycle.bindActivity(lifecycle))\n.subscribe();\n```\n\nIn\
+    \ the latter case, the subscription is managed in the life cycle event opposed\
+    \ to the subscription (for example, if subscription occurs in the Activity's onCreate()\
+    \ method, the subscription will happen in onStop().\n\n104"
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: 'Android development with RxJava is a hot topic and many other open source libraries
+    have been developed, covering many areas. Some of those libraries are
+
+
+    +   * Android-ReactiveLocation (https://github.com/mcharmas/Android-ReactiveLocation)
+
+
+    +   * rx-android-permissions (https://github.com/bewerker/rx-android-permissions)
+
+
+    +   * RxSensor (https://github.com/wandup/RxSensor)'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '# # Index
+
+
+    +   ## A
+
+    Activity Lifecycle, 101–105
+
+    AsyncSubject, 70–72
+
+
+    +   ## B
+
+    Backpressure, 41, 55–59
+
+    BehaviorSubject, 66–69
+
+
+    +   ## C, D, E
+
+    Callback, 8–9, 41, 79, 88–90
+
+    Cold observable, 15–16, 29, 66
+
+    Connectable observable, 15, 76–77
+
+
+    +   ## F
+
+    Fragment Lifecycle, 101–105
+
+    Func0, 21
+
+    FuncIT, 21
+
+    Functional programming, 1–4, 6, 9
+
+
+    +   ## G
+
+    Gradle, 4, 11, 80, 95, 98, 104
+
+    Gson, 72
+
+
+    +   ## H
+
+    Handler, 97
+
+    Hot observable, 15–16, 29, 66, 99
+
+
+    +   ## I
+
+    Imperative programming, 1–4
+
+
+    +   ## J, K
+
+    JSON, 18, 79, 81–82
+
+
+    +   ## L, M
+
+    Lambda expressions, 1,3–4, 7, 11, 90
+
+
+    +   ## N
+
+    Network, 18–19, 49, 51–52, 79–93
+
+
+    +   ## O
+
+    Observable (definition), 12
+
+    Observable class (java.util), 6
+
+    Observable composition, 22–39
+
+    Observable operators
+
+    buffer, 35, 37
+
+    debounce, 36, 56
+
+    empty, 12, 19, 44
+
+    observeOn, 49, 51–53, 87, 96–97
+
+    1110
+
+    onErrorReturn, 44
+
+    onErrorResumeNext, 44–50
+
+    retry, 46–48
+
+    sample, 37, 55–56
+
+    substituteOn, 49, 51, 53–87
+
+    violation, 38, 56, 57–58
+
+    Observer (definition), 5, 12
+
+    Observer design pattern, 5, 8
+
+    Completed, 13–21, 23, 25, 27, 29, 31–35,
+
+    38–43, 46–47, 49–51–52, 54, 57,
+
+    59, 61–62, 64–65, 67–69, 71–72,
+
+    75–77, 83–86, 89–97, 102–103'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# INDEX
+
+
+    +   Error, 13-17, 19, 21, 23, 25, 27-29,
+
+    31-35, 38-39, 41-44, 47-49, 51,
+
+    53-54, 58-59, 61-65, 67-69,
+
+    71-72, 75-77, 79, 83-86, 88-90,
+
+    96-97, 102-103
+
+    Next, 12-19, 21, 23, 25, 28-29,
+
+    31-35, 38-39, 43, 45, 47, 49,
+
+    51-55, 57, 59, 61-65, 67-69,
+
+    72-77, 79, 83-86, 88-93,
+
+    96-97, 99-104
+
+    Operators:
+
+    from, 7, 15-16, 25, 29-30, 35-87
+
+    and/then/when, 1-31, 37
+
+    buffer, 28
+
+    combineLatest, 37
+
+    concatMap, 24-26
+
+    create, 16-19
+
+    debounce, 36
+
+    define, 20-22
+
+    distinct, 30
+
+    elementA, 37
+
+    empty, 12, 19, 44
+
+    filter, 29-30
+
+    first, 30-31
+
+    flatMap, 24-25, 48
+
+    groupby, 36
+
+    ignoreRelements, 37
+
+    interval, 37
+
+    join, 37
+
+    jist, 16-17, 21
+
+    last, 31-33
+
+    map, 22-24
+
+    merge, 37
+
+    never, 19
+
+    range, 17, 37-39, 48, 50, 76, 96-97
+
+    sample, 37
+
+    scan, 35-36
+
+    skip, 37
+
+    skipLast, 37
+
+    startsWith, 34-35
+
+    switchNext, 37
+
+    take, 33-38
+
+    takeLast, 37
+
+    timer, 18, 48, 50, 101-103
+
+    window, 30-36
+
+    zip, 26-27
+
+
+    # P, Q
+
+
+    PublishSubject, 61-66, 71, 73
+
+
+    # R
+
+
+    Reactive programming, 1-4-6, 12, 22, 61
+
+    Reactive, 1-9, 11, 37, 52, 87, 96
+
+    ReplaySubject, 69-70
+
+    RefUntil, 39
+
+    Retry, 70-73
+
+
+    RxAndroid, 52, 87, 95, 101
+
+    RxBindings, 95, 97-98
+
+    Rx, 1-1-11-14, 16, 21, 37, 41, 46, 49,
+
+    52, 55, 61, 63, 68, 70, 72, 79-93,
+
+    95-105
+
+
+    RxMap, 27
+
+    RxLifecycle, 95, 104
+
+    rxObservable, 19
+
+    rxObservable, 11, 13
+
+    rxSubject, 11, 13
+
+
+    # S
+
+
+    Schedulers, 41, 49-54, 61, 79, 87-88, 95-97
+
+    from, 50
+
+    computation, 50-51
+
+    immediate, 50
+
+    io, 50-53-88
+
+    newObservable, 50, 54, 96, 101-103
+
+    trampoline, 50
+
+
+    SerializedSubject, 76
+
+    Subject, 5, 6, 16-61, 77
+
+    Subscription, 13-15, 29, 41-59, 63, 66, 69,
+
+    77, 83, 101-104
+
+
+    # T
+
+
+    Transformers, 53-54
+
+
+    # U, V
+
+
+    Unsubscription, 14-15-104
+
+
+    # W, X, Y, Z
+
+
+    Worker, 54
+
+    Worker.schedule, 54
+
+    WorkerschedulePeriodically, 55'
+  merge: -1
+  img_proc: true
