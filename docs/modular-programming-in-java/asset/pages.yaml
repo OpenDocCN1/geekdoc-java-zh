@@ -1,0 +1,17 @@
+- pgno: 0
+  md: '+   1 - Switch dip switch No 8 to ON
+
+
+    +   2– Press on Auto learn for 1 sec (in the panel)
+
+
+    +   3- Press on the 2 remote keys together until the red LED goes continues RED
+    (new Remote)
+
+
+    +   4- Press on the any key on the remote (new Remote)
+
+
+    +   5- Switch dip switch no 8 to off'
+  merge: -1
+  img_proc: true
