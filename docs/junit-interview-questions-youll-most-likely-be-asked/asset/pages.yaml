@@ -1,0 +1,3971 @@
+- pgno: 0
+  md: '# Job Interview Questions Series
+
+
+    # 2015 Edition
+
+
+    # JUnit
+
+    Interview Questions
+
+    nYou''ll Most Likely Be Asked
+
+
+    ![](img/35a30a68f7643b185635310e7a25e3fa_0_0.png)
+
+
+    > FREE
+
+    2 Aptitude Tests,
+
+    download available
+
+    on website
+
+
+    200 JUnit Questions | 51 HR Interview Questions
+
+
+    # Vibrant Publishers'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# # JUnit
+
+
+    # ## Interview Questions
+
+
+    You''ll Most Likely Be Asked
+
+
+    Job Interview Questions Series
+
+
+    # ## Vibrant Publishers
+
+
+    www.vibrantpublishers.com'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# JUnit Interview Questions
+
+    You''ll Most Likely Be Asked
+
+
+    © 2014, By Vibrant Publishers, USA. All rights reserved. No part of this publication
+    may be reproduced or distributed in any form or by any means, stored in a database
+    or retrieval system, without the prior permission of the publisher.
+
+
+    ISBN-10: 1463768192
+
+    ISBN-13: 978-14-63768-19-15
+
+
+    Library of Congress Control Number: 2011913388
+
+
+    This publication is designed to provide accurate and authoritative information
+    in regard to the subject matter covered. The author has made every effort in the
+    preparation of this book to ensure the accuracy of the information. However, information
+    in this book is sold without warranty either expressed or implied. The Author
+    or the Publisher will not be liable for any damages caused or alleged to be caused
+    either directly or indirectly by this book.
+
+
+    Vibrant Publishers books are available at special quantity discount for sales
+    promotions, or for use in corporate training programs. For more information please
+    write to **bulkorders@vibrantpublishers.com**
+
+
+    Please email feedback / corrections (technical, grammatical or spelling) to **spellerrors@vibrantpublishers.com**
+
+
+    To access the complete catalogue of Vibrant Publishers, visit **www.vibrantpublishers.com**'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# # Table of Contents
+
+
+    +   1 Rules 7
+
+    2 Assertions 13
+
+    3 Test Classes 23
+
+    4 Running Tests 27
+
+    5 Unit Testing and JUnit Features 35
+
+    6 Junit 3 41
+
+    7 JUnit API 43
+
+    8 JUnit 4.x 47
+
+    9 Test Class and Annotations 59
+
+    10 HR Questions 67
+
+    INDEX 82'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# # JUnit Interview
+
+
+    # # Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# # Rules'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 1: What is the Rules capability of JUnit?
+
+
+    Answer:
+
+
+    Rules allow very flexible addition or redefinition of the behavior of each test
+    method in a test class. This is the Rules capability of JUnit.
+
+
+    # 2: How would you use the TemporaryFolder Rule to create a file that is guaranteed
+    to be deleted when the tests end?
+
+
+    Answer:
+
+
+    ```
+
+    @Rule public TemporaryFolder folder = new TemporaryFolder();
+
+    @Test void someTest() { File f = folder.newFile("file"); }
+
+    ```
+
+
+    # 3: What does the ExternalResource Rule do?
+
+
+    Answer:
+
+
+    ExternalResource Rule a rule that allows defining initialization and deconstruction
+    of a resource when tests start and end.
+
+
+    # 4: What advantage does ExternalResource have over set up and tear down methods?
+
+
+    Answer:
+
+
+    External Resource allows localization of the logic related to a single resource
+    to a single class that can then be reused in multiple tests.
+
+
+    # 5: What does the ErrorCollector Rule do?
+
+
+    Answer:
+
+
+    ErrorCollector Rule allows the execution of a test to continue the first problem
+    is found (for example, to collect all the incorrect rows in a table and report
+    them all at once).
+
+
+    # 6: How would you use the Timeout Rule in order to make sure that each test method
+    in a class doesn''t run longer than 20 milliseconds?
+
+
+    Answer:
+
+
+    ```
+
+    @Rule public Timeout globalTimeout = new Timeout(20);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "# 7: How would you use the ExpectedException Rule in order to make sure that\
+    \ a specific exception is thrown, with a specific message?\n\nAnswer:\n\n```\n\
+    @Rule public ExpectedException thrown = new\nExpectedException();\n@Test public\
+    \ void someTest(NullPointerException.class) {\n    thrown.expectMessage(\"Error\
+    \ happened\");\n    throw new NullPointerException(\"Error happened\");\n}\n```\n\
+    \n# 8: What does the TestName Rule do?\n\nAnswer:\n\nTestName Rule allows access\
+    \ to the current test's name in a test\n\n# 9: What does the TestWatcher Rule\
+    \ do?\n\nAnswer:\n\nTestWatcher Rule allows taking note of the testing action,\
+    \ without modifying it.\n\n# 10: What does the Verifier Rule do?\n\nAnswer:\n\n\
+    Verifier Rule allows supplying logic that can make a test seems to pass fail.\n\
+    \n# 11: How would you use a MethodRule in order to print something before every\
+    \ test?\n\nAnswer:\n\n```\npublic class SomeRule implements MethodRule {\n   \
+    \ @Override public Statement apply(final Statement base, FrameworkMethod method,\
+    \ Object target) {\n        return new Statement() {\n            @Override public\
+    \ void evaluate() throws Exception {\n                System.out.println(\"foo\"\
+    );\n                base.evaluate();\n            }\n        }\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '```
+
+    }
+
+    );
+
+    }
+
+    ```
+
+
+    12: Say you''ve got an integration test written in JUnit that is flaky because
+    it depends on an external resource that might sometimes fail. How will you use
+    JUnit''s features in order to automatically retry a few times tests that use resource?
+
+
+    Answer:
+
+    We can write a Rule that simply retries failed tests (catching AssertionError;
+    for e.g; and then calling the statement again).
+
+
+    13: Let''s say we have special test objects used in our testing and we want them
+    to automatically fail tests when they end up in a bad state, without having to
+    explicitly call asserts on them in every test method; an example is expectations
+    that are set on mock objects. How can we do that?
+
+
+    Answer:
+
+    We can provide a Rule that executes its validations after running the test method''s
+    statement itself.
+
+
+    14: A lot of times we write tests with random data in order to increase chances
+    of finding bugs and for doing exploratory testing. The main problem with such
+    tests is that once it fails, it isn''t guaranteed to fail again. How can we make
+    JUnit help us reproduce these failed tests?
+
+
+    Answer:
+
+    We can use a Random object that is supplied by an ExternalResource and so make
+    it save the seed that failed when tests fail. In that case we can rerun the tests
+    with the same seed to get the same results.
+
+
+    15: How can we keep track of system performance by automatically failing tests
+    that suddenly take, say 50% longer than previous runs?'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    We can add a Rule that keeps track of running times and when a test takes too
+    long (compared to previous runs) it fails the tests.
+
+
+    # 16: Describe the interface to Rule implementations to inject their logic to
+    runtime.
+
+
+    # Answer:
+
+
+    A rule simply receives a Statement, which represents the test method that is about
+    to be executed. It can then decorate the execution of that statement (which is
+    using statement.evaluate()) by performing tasks before, after it, instead of it,
+    etc.
+
+
+    # 17: How would you add automatic logging to print the time each test took?
+
+
+    # Answer:
+
+
+    We can create a LoggingRule that will keep track of test execution time and log
+    it after each test finishes running.
+
+
+    # 18: How many Rules can be supplied in a single test class?
+
+
+    # Answer:
+
+
+    There is no limitation, since Rules are composable.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Assertions'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# 19: How do you assert that a certain condition is true in a test?
+
+
+    Answer:
+
+
+    By using the assertTrue() method, e.g. assertTrue(condition) assert that certain
+    conditions are true in a test.
+
+
+    # 20: Why do assertion methods have an optional String argument?
+
+
+    Answer:
+
+
+    To specify a verbose and readable reason that can be understood from the failure
+    message, assertion methods have optional String argument.
+
+
+    # 21: If you have multiple assertions in the same test method and one fails, will
+    the next one be executed? Why?
+
+
+    Answer:
+
+
+    No, the next one will not be executed because an AssertionError will be raised
+    by the failed assertion and the method''s execution will be stopped.
+
+
+    # 22: Why does assertEquals do?
+
+
+    Answer:
+
+
+    assertEquals asserts that the two objects that are passed to it are equal
+
+
+    # 23: Why is there a need for both assertTrue() and assertEquals() ?
+
+
+    Answer:
+
+
+    Since assertEquals is more specific, it can provide better messaging when it fails
+    and expresses intent better.
+
+
+    # 24: What is the difference between assertEquals() and assertSame() ?
+
+
+    Answer:
+
+
+    assertEquals compares objects using equals() whereas assertSame uses ====
+
+
+    # 25: What is the correct way to assert equality of two arrays?'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# JUnit Interview Questions You'll Most Likely Be Asked\n\nWhy?\nAnswer:\n\
+    AssertEquals is the correct way to assert equality of two arrays, because it compares\
+    \ their values correctly, the intuitive way by comparing each element, as opposed\
+    \ to their regular equality method which is the same as =.\n\n26: In case you\
+    \ logically come to the conclusion that a test should fail; what's the right way\
+    \ to stop it? Without using assertTrue(false) and the likes? Why?\n\nAnswer:\n\
+    Fail(), because it clearly states the intent of the code. Instead of using an\
+    \ obscure construct, it just happens to do the \"right thing\".\n\n27: Why does\
+    \ the assertEquals() method for doubles receive three doubles?\n\nAnswer:\nIt\
+    \ is because another argument is specified for the allowed difference between\
+    \ the doubles.\n\n28: How would you assert that a certain method is thrown in\
+    \ a test?\n\nAnswer:\nSpecify expected=Exception in the test's @Test annotation\
+    \ to assert that a certain method is thrown in a test.\n\n29: Why is fail() used\
+    \ in the following example?\n\n```\ntry {\n    doSomething();\n    fail();\n}\
+    \ catch (Exception e) {\n    assertEquals(\"Bad thing\", e.getMessage());\n}\n\
+    ```\n\nAnswer:\nTo make sure the test will fail in case the expected exception\
+    \ was not thrown, fail() was used."
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# 30: Does the order of arguments to assertEquals() matter?
+
+
+    Answer:
+
+    Yes, the order of arguments to assertEquals() matter because the first one specifies
+    what the test expects and the second actual result it saw. JUnit relies on this
+    order for its helpful error messages.
+
+
+    # 31: What is assertThat()?
+
+
+    Answer:
+
+    assertThat() is a new kind of assertion that uses matchers for more readable assertions.
+
+
+    # 32: Use assertThat() to assert that a variable equals the String "hello".
+
+
+    Answer:
+
+    assertThat(variable, equalTo("Hello"));
+
+
+    # 33: Use assertThat() to assert that a variable is an instance of a specific
+    class.
+
+
+    Answer:
+
+    assertThat(variable, instanceOf(SomeClass.class));
+
+
+    # 34 Use assertThat() to assert that a string contains "abc".
+
+
+    Answer:
+
+    assertThat(variable, containsString("abc"));
+
+
+    # 35 Use assertThat() to assert that a list contains "Hello".
+
+
+    Answer:
+
+    assertThat(list, hasItem("Hello"));
+
+
+    # 36 Use assertThat() to assert that a list contains "Foo" or "Bar".
+
+
+    Answer:
+
+    assertThat(list, anyOf(hasItem("Foo"), hasItem("Bar")));
+
+
+    # 37: Use assertThat() to assert that a list contains "Foo" and "Bar".
+
+
+    Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "# JUnit Interview Questions You'll Most Likely Be Asked\n\nAssertThat(list\n\
+    \n**38: Use assertThat() to assert that a number is greater than 4.**\n\nAssertThat(number,\
+    \ is(greaterThan(4)));\n\n**39: Use assertThat() to assert that a string equals,\
+    \ ignoring case, the string \"Foo\".**\n\nAssertThat(string, is(isEqualToIgnoringCase(\"\
+    Foo\")));\n\n**40: Use assertThat() to assert that a variable is null.**\n\nAssertThat(variable,\
+    \ is(nullValue()));\n\n**41: Write a custom matcher to assert that an integer\
+    \ is between 2 numbers.**\n\n```\nPublic class InRange extends TypeSafeMatcher<Integer>\
+    \ {\n    private int from;\n    private int to;\n    public InRange(int from,\
+    \ int to) {\n        this.from = from;\n        this.to = to;\n    }\n    @Override\n\
+    \    public void describeTo(Description description) {\n        description.appendText(String.format(\"\
+    between (%d, %d)\", from, to));\n    }\n    @Override\n    public boolean matchesSafely(Integer\
+    \ item) {\n        return < item && item < to;\n    }\n    @Factory\n    public\
+    \ static <T> Matcher<Integer> between(int from, int to) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '```
+
+    return new InRange(from, to);
+
+    }
+
+    ```
+
+
+    # 42: Use assertThat() to assert that a Map contains the key "foo" with value
+    "bar".
+
+
+    Answer:
+
+
+    ```
+
+    assertThat(map, hasEntry("foo", "bar"));
+
+    ```
+
+
+    # 43: Use assertThat() to assert that a Map contains the key "foo".
+
+
+    Answer:
+
+
+    ```
+
+    assertThat(map, hasKey("foo"));
+
+    ```
+
+
+    # 44: Use assertThat() to assertThat a Map contains the value "bar".
+
+
+    Answer:
+
+
+    ```
+
+    assertThat(map, hasValue("bar"));
+
+    ```
+
+
+    # 45: Use assertThat() in order to assert that all of the strings in a collection
+    are equal to "foo".
+
+
+    Answer:
+
+
+    ```
+
+    assertThat(list, everyItem(isEqualTo("foo"))));
+
+    ```
+
+
+    # 46: What does assertFalse do?
+
+
+    Answer:
+
+
+    Assertfalse asserts that the Boolean given to it is equal to FALSE
+
+
+    # 47: What does fail() do?
+
+
+    Answer:
+
+
+    Fail() fails the currently executing test.
+
+
+    # 48: What does assertNotNull() do?
+
+
+    Answer:
+
+
+    assertNotNull() asserts that the given object is not NULL.
+
+
+    # 49: What does assertNull() do?
+
+
+    Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    AssertNull() asserts that the given object is NULL.
+
+
+    #  50: What does assertSame() do?
+
+
+    Answer:
+
+    AssertSame() asserts that the two given objects are the same instance.
+
+
+    #  51: What does assertNotSame() do?
+
+
+    Answer:
+
+    AssertNotSame() asserts that the two given objects are not the same instance.
+
+
+    #  52: Where are all the JUnit asserts declared and how are they made visible
+    to test classes?
+
+
+    Answer:
+
+    All the JUnit asserts are declared in the Assert class, and are made using a static
+    import.
+
+
+    #  53: What will be the result of a test that throws AssertionError and why?
+
+
+    Answer:
+
+    The test that throws AssertionError will be marked as failed and not error, as
+    opposed to what happens in with every other exception. This is because the scenes,
+    AssertionError is used by all of JUnit''s assertion methods to signal that a failure
+    has occurred.
+
+
+    #  54: Can you simply use the "assert" keyword in Java?
+
+
+    Answer:
+
+    No, we cannot use the “assert” keyword in Java because by default assertions aren''t
+    enabled in the JVM and JUnit does not enable them when running tests, because
+    it throws its exceptions explicitly and doesn''t use the assert keyword.
+
+
+    #  55: What is a Hamcrest Matcher?
+
+
+    Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'Hamcrest Matcher is a class that performs an assertion and can be used in a
+    assertThat() call.
+
+
+    # 56: Why would this assertion not pass? assertEquals(new MyClass(1), new MyClass(1))
+
+
+    Answer:
+
+    The assertion would would not pass because equals() was not defined properly on
+    the classes.
+
+
+    # 57: Does the new assertThat() syntax deprecate the old assertions?
+
+
+    Answer:
+
+    No, it does not deprecate the old assertions. It just adds another way for asserting.
+
+
+    # 58: How does JUnit enable assertions for primitive types?
+
+
+    Answer:
+
+    Every assertEquals() method and its likes are defined multiple times, for each
+    primitive type and for Object.
+
+
+    # 59: Is there an "old" assert for greater-than etc. in numbers?
+
+
+    Answer:
+
+    No, there isn''t an old assert. It was done using assertTrue.
+
+
+    # 60: Is there a way to make the "assert" keyword work with JUnit?
+
+
+    Answer:
+
+    If you enable assertions, then the "assert" keyword would work with JUnit.
+
+
+    # 61: How do you enable assertions (using the assert keyword) in the JVM?
+
+
+    Answer:
+
+    You need to supply the JVM with the -ea (enable assertions) flag to enable assertions
+    in the JVM.
+
+
+    # 62: What is the reason that JUnit supplies both assertTrue() and'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# assertFalse() ?
+
+
+    Answer:
+
+
+    The reason that JUnit supplies both assertTrue() and assertFalse() is because
+    this allows the programmer to express intent better.
+
+
+    # 63: How many assertions can you put in a single test method?
+
+
+    Answer:
+
+
+    The number of assertions that we can put in a single test method is not limited.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Test Classes'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# 64: How do you mark a method as a test method?
+
+
+    Answer:
+
+
+    Annotate it with the @Test annotation to mark a method as a test method.
+
+
+    # 65: What is a valid visibility for a test method and why?
+
+
+    Answer:
+
+
+    Public is a valid visibility for a test method since JUnit needs to access it
+    via reflection.
+
+
+    # 66: What is a valid return type for a test method?
+
+
+    Answer:
+
+
+    None, it should be declared as a void method
+
+
+    # 67: Does JUnit require test methods to be named with "test" at the start?
+
+
+    Answer:
+
+
+    No, JUnit does not require methods to be named with "test" at the start. (not
+    required in JUnit 4, was required in JUnit 3).
+
+
+    # 68: Do test classes require a specific annotation? Why?
+
+
+    Answer:
+
+
+    test classes do not require a specific annotation since they are discovered by
+    the test methods annotated in them.
+
+
+    # 69: How do you mark a collection of tests to be run in a suite?
+
+
+    Answer:
+
+
+    Annotate it with @RunWith(Suite.class) and specify classes with @SuiteClasses
+    to mark a collection of tests to be run in a suite.
+
+
+    # 70: Is it required to catch all checked exceptions in a test method?
+
+
+    Answer:
+
+
+    No, it''s not required to catch all checked exceptions in a test method. A test
+    method can be declared to throw everything, which will mean the test didn''t pass
+    successfully.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# 71: How would you specify that a certain test should be finished by a given
+    time frame?
+
+
+    Answer:
+
+
+    Specify timeout=timeoutInMillis in the test''s @Test annotation to specify that
+    a certain test should be finished by a given time frame.
+
+
+    # 72: Can regular test classes'' constructors have arguments?
+
+
+    Answer:
+
+
+    No, regular test classes'' constructors cannot have arguments because JUnit won''t
+    know how to instantiate them.
+
+
+    # 73: What are set up methods in a test class?
+
+
+    Answer:
+
+
+    Set up methods are used for preparing the objects that are needed for the test
+    and sharing them between test methods in the class.
+
+
+    # 74: What are Tear down methods in a test class?
+
+
+    Answer:
+
+
+    Tear down methods are used for cleaning up objects and undoing whatever actions
+    the tests performed; and don''t want other tests to get affected.
+
+
+    # 75: Do you have to specify set up and Tear down methods?
+
+
+    Answer:
+
+
+    No, it is not required to set up and tear down methods. It is because they are
+    optional for helping writing tests better, and are not a must. Tests can be used
+    without them.
+
+
+    # 76: If you specify a tear down method, do you also have to declare a set up
+    method?
+
+
+    Answer:
+
+
+    No, since they are optional and the use of one does not necessitate the user of
+    another.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# 77: How do you specify that a method is a set up method?
+
+
+    Answer:
+
+    Annotate it with @Before to specify that a method is a set up method.
+
+
+    # 78: How do you specify that a method is a Tear down method?
+
+    Answer:
+
+    Annotate it with @After to specify that a method is a Tear down method.
+
+
+    # 79: How would you specify set up code that should only happen once for the test
+    class?
+
+    Answer:
+
+    Put it in a method annotated with @BeforeClass to specify set up code that should
+    happen once for the whole test class.
+
+
+    # 80: How would you specify tear down code that should only happen once for the
+    whole test class?
+
+    Answer:
+
+    Put it in a method annotated with @AfterClass to specify tear down code that should
+    happen once for the whole test class.
+
+
+    # 81: Specify a valid declaration of a @BeforeClass/ @AfterClass method.
+
+    Answer:
+
+    @BeforeClass public static void setUpAll() {}
+
+    Note, the important part is that it has the "static" keyword.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Running Tests'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "# 82: If you have multiple test methods in the same class and one fails, will\
+    \ the next one be executed? Why?\n\nAnswer:\n\nYes, since JUnit does not stop\
+    \ execution in case a single method fails, the next one will be executed.\n\n\
+    # 83: What are the different possible results of a test method?\n\nAnswer:\n\n\
+    Success, Failure and Error are the different possible results of a test method.\n\
+    \n# 84: What is the difference between a failure and an error?\n\nAnswer:\n\n\
+    A failure is when an assertion fails, but an error occurs when an unexpected exception\
+    \ is thrown.\n\n# 85: Will the following test pass? Why?\n\n```\n@Test public\
+    \ void someTest() {\n    Thread t = new Thread() { public void run() { throw new\
+    \ RuntimeException(); } }\n    t.start(0);\n    t.join();\n}\n```\n\nAnswer:\n\
+    \nYes, it will pass as the exception is raised in a thread that is different from\
+    \ the test's thread; JUnit has no way of knowing the error occurred and will not\
+    \ fail the test.\n\n# 86: When are set up methods run?\n\nAnswer:\n\nSet up methods\
+    \ run just before every test method is run.\n\n# 87: When are tear down methods\
+    \ run?\n\nAnswer:\n\nTear down methods run just after every test method is run."
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    88: Should a tear down method be run if a test fails? Why?
+
+    Answer:
+
+
+    Yes, since the fact that the test failed does not mean the tear down code should
+    not happen. This is useful to make sure that state is cleared, just as one might
+    do in production code using the finally keyword.
+
+
+    89: Should a tear down method be run if a test errors out? Why?
+
+    Answer:
+
+
+    Yes, since the fact that the test failed does not mean the tear down code should
+    not happen. This is useful to make sure that state is cleared, just as one might
+    do in production code using the finally keyword.
+
+
+    90: Should a test method be run if its set up method raises an exception? Why?
+
+    Answer:
+
+
+    No, since the error leaves the test case not knowing if the set up needed for
+    the test itself has been executed; so it can''t execute it in an unknown state.
+
+
+    91: If a test passes successfully, but its tear down method raises an exception,
+    will the test still be looked at as passed? Why?
+
+    Answer:
+
+
+    No, since tear down code can be used for having global assertions (like making
+    sure all temporary files have been deleted) and the fact that it has failed might
+    mean there was a problem with the test code itself.
+
+
+    92: How many times should a BeforeClass method run in case it it throws an exception?
+    Why?
+
+    Answer:
+
+
+    Once, because it is always run once, and the fact that it failed does not mean
+    it gets "another chance" to try and set up the code.
+
+
+    93: If instead of initializing a member in a set up method, we'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "# initialize it in its declaration, does it mean different tests will share\
+    \ it? Why?\n\nAnswer:\n\nNo, since a different instance of the test class is created\
+    \ per method.\n\n# 94: How many instances of a test class are instantiated for\
+    \ a test class with N test methods? Why?\n\nAnswer:\n\nN instances are instantiated,\
+    \ because JUnit creates a single instance of the class per each test method, in\
+    \ order to ensure isolation.\n\n# 95: How many instances of a test class are instantiated\
+    \ for a test class with N test methods if its BeforeClassMethod raises an exception?\
+    \ Why?\n\nAnswer:\n\n0 instances are instantiated, because BeforeClass methods\
+    \ are forced to be static and not require an instance of the test class to be\
+    \ created before executing. Once it fails, JUnit will abort the whole class's\
+    \ execution; meaning it will not even bother creating an instance of it.\n\n#\
+    \ 96: Are static members shared between different test methods of the same class?\
+    \ Why?\n\nAnswer:\n\nYes, the static members are dared between different test\
+    \ methods of the same class JUnit does not reload a class in the ClassLoader between\
+    \ test methods execution.\n\n# 97: Write a main method to execute tests in its\
+    \ class.\n\nAnswer:\n\n```\nPublic static void main(String[] args) {\n    JUnitCore.main(MyTest.class.getName());\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# JUnit Interview Questions You'll Most Likely Be Asked\n\n# 98: What does\
+    \ the Enclosed runner do?\nAnswer:\n\nEnclosed runner runs all the static inner\
+    \ classes of an outer class.\n\n# 99: What does the Categories runner of JUnit\
+    \ enable?\nAnswer:\n\nThe Categories runner runs only the classes and methods\
+    \ that are annotated with either the category to be included, or a subtype of\
+    \ that category. You can also exclude categories.\n\n# 100: How would you use\
+    \ Categories to create a suite of fast tests?\nAnswer:\n\n```\n@Category(FastTests.class)\
+    \ public class A {\n    @Test public void test() {}\n}\n```\n\n# 101: Is it possible\
+    \ to supply multiple included categories in one test run? Why?\nAnswer:\n\nNo,\
+    \ it is not possible to supply multiple included categories in one test run because\
+    \ the IncludeCategory annotation receives a single class.\n\n# 102: Is it possible\
+    \ to supply an included category and an excluded category? Why?\nAnswer:\n\nYes,\
+    \ it is possible to supply an included category and an excluded category since\
+    \ the two annotations are not mutually exclusive."
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# 103: How would you mark a test to not run?
+
+
+    Answer:
+
+
+    To mark a test not to run, annotate it with the @Ignore annotation.
+
+
+    # 104: Can the @Ignore annotation be applied to something other than a method?
+
+
+    Answer:
+
+
+    Yes, it can be applied to a class in order to ignore the entire test methods declared
+    in it.
+
+
+    # 105: What does the Parameterized Runner of JUnit do?
+
+
+    Answer:
+
+
+    Parameterized allows executing the same tests over a given set of inputs
+
+
+    # 106: What is JUnit’s ParallelComputer?
+
+
+    Answer:
+
+
+    JUnit’s ParallelComputer allows executing tests in parallel.
+
+
+    # 107: What is the difference between ParallelComputer''s classes and methods
+    options?
+
+
+    Answer:
+
+
+    Classes run tests in multiple threads, but all of the tests in a single class
+    are run sequentially; Methods allow running everything in multiple tests.
+
+
+    # 108: In what order are test methods of a class executed?
+
+
+    Answer:
+
+
+    Test methods of a class are executed in their declared order.
+
+
+    # 109: What will happen if you have a class that contains setup or tear down method
+    but no test methods, and attempt to run it?
+
+
+    Answer:
+
+
+    JUnit will fail, letting you know it did not find any test methods in the given
+    scenario.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'JUnit Interview Questions You''ll Most Likely Asked 33
+
+
+    110: In case some of your tests require an internet connection to run, how would
+    you enable separating them so that you can usually run all of them, but when you''re
+    on the subway and have no internet connection, you can run all the tests that
+    don''t require internet connectivity?
+
+
+    Answer:
+
+
+    We can mark all the tests that require an internet connection with a specific
+    category and then create a suite that excludes them. This will enable us to run
+    that internet independent suite whenever we want.
+
+
+    111: In well run projects, the test suite usually grows quite fast and running
+    the tests eventually takes up more time than we''d like it to. Which JUnit feature
+    can you use to speed up the time it takes to run all your tests?
+
+
+    Answer:
+
+
+    We can run the tests using the ParallelComputer that allows execution of tests
+    in multiple threads concurrently.
+
+
+    112: How would you allow your customers to supply test data in the form of a table
+    where they provide input values and expected output?
+
+
+    Answer:
+
+
+    We can use the Parameterized runner. It will simply read the data from the file
+    and proper test methods will be created for it on the fly.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# # Unit Testing and JUnit Features'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# 113: Does JUnit offer any native support for multithreaded tests?
+
+    Explain.
+
+
+    Answer:
+
+
+    No, JUnit does not offer any native support for multithreaded tests instead; it
+    leaves the handling of errors in different threads for the programmer and other
+    tools. This is because the control of threads is not easy especially without knowledge
+    of the domain problem at hand.
+
+
+    # 114: How would you use a JUnit assumption in order to stop a test from executing
+    unless it is the year 2011?
+
+
+    Answer:
+
+
+    AssumeThat(Calendar.getInstance().get(Calendar.YEAR), is(equalTo(2011)));
+
+
+    # 115: What support for stubbing does JUnit provide?
+
+
+    Answer:
+
+
+    JUnit does not provide any support for stubbing, and leaves that for the programmer
+    and external libraries.
+
+
+    # 116: What support for mocking does JUnit provide?
+
+
+    Answer:
+
+
+    JUnit does not provide any support for mocking, and leaves that to the programmer
+    and external libraries.
+
+
+    # 117: What is JUnit?
+
+
+    Answer:
+
+
+    JUnit is a framework for unit testing in Java
+
+
+    # 118: What is Unit Testing?
+
+
+    Answer:
+
+
+    Unit Testing is the act of writing automatic tests for testing units (usually,
+    classes) in isolation from other objects.
+
+
+    # 119: Would you say that having a test per each object''s method is good testing
+    conduct?'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    No it is not. This is because good unit tests generally test the behavior of an
+    object, and not its individual methods, and so it makes more sense to have tests
+    that use a few methods at a time, as part of testing a particular functionality
+    of the object.
+
+
+    # 120: What is an Isolated Unit Test?
+
+
+    # Answer:
+
+
+    An Isolated Unit Test checks the object in isolation from its other dependencies.
+    This means that even if the object uses the network, file system, database, etc.,
+    we do not allow it to actually use those objects, but still it thinks it is using
+    them. By doing so, we isolate and make sure that any failures are caused by errors
+    in the object itself.
+
+
+    # 121: How many isolated tests can one expect to have run in a single second?
+
+
+    # Answer:
+
+
+    Usually, a thousand or even more, since isolated tests are usually very fast,
+    which is another advantage to make sure your tests are truly isolating the objects
+    they are testing.
+
+
+    # 122: When will you write a Unit Test for a getter method?
+
+
+    # Answer:
+
+
+    Usually, if the getter does no other work than returning an object, testing it
+    is not worthwhile. But if it does any extra work beyond that, it should be tested.
+
+
+    # 123: JUnit tests can be abstract. What would be a good use case for that?
+
+
+    # Answer:
+
+
+    It can be used to test an interface. We can write a single test that checks if
+    the implementation follows all of the interface''s expected behavior. Then, subclass
+    tests the abstract test for each of the new implementations, providing it with
+    a concrete instance to test against.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# 124: What is a test fixture?
+
+
+    Answer:
+
+
+    A test fixture is a name for a test class that contains set code for the object
+    that''s tested.
+
+
+    # 125: Why does JUnit re-instantiate the test class for each test method?
+
+
+    Answer:
+
+
+    JUnit re-instantiates the test class for each test method as it increases the
+    chances that tests are completely isolated and independent of one another. This
+    forces developers to write their tests cleanly.
+
+
+    # 126: What is test coverage?
+
+
+    Answer:
+
+
+    Test coverage stands for the percentage of lines of production code that were
+    executed by the tests. It is a means of measuring thoroughness of tests.
+
+
+    # 127: Does a 100% code coverage guarantee that the code being tested works?
+
+
+    Answer:
+
+
+    Of course not; since simply passing through all lines still doesn''t check all
+    possible scenarios. E.g.,threading problems and passing problematic input or methods.
+
+
+    # 128: How will you test a method if it is declared as ''void''?
+
+
+    Answer:
+
+
+    +   a) When a function returns nothing, the data will be returned through its
+    argument.
+
+
+    +   b) If nothing is returned using ''arguments'', some changes will be made to
+    instance variable. Hence it should be tested
+
+
+    # 129: When a void function is not returning data using ''arguments'' or ''instance
+    variable'', what are the other ways to test'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# the method?
+
+
+    Answer:
+
+
+    +   a) It may change class variable or external resource, so it should be tested
+
+    b) Suppose, there is no change in class variable or external resource, its thread
+    should be tested'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: This page is intentionally left blank
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# # JUnit 3'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# 130: How would you declare an old-style test class (in JUnit 3 format) to
+    be executed in JUnit 4?
+
+
+    Answer:
+
+
+    Annotate it with @RunWith(JUnit38ClassRunner.class) to declare an old style test
+    class.
+
+
+    # 131: What is the advantage in moving to the JUnit 4 style of test cases, which
+    no longer requires inheriting from TestCase?
+
+
+    Answer:
+
+
+    The advantage is that it makes easier to write tests that need to extend their
+    subject in order to test it better, since Java does not have multiple inheritances.
+
+
+    # 132: Why was the String parameter required in the constructor of TestCase used
+    in JUnit 3?
+
+
+    Answer:
+
+
+    The string parameter stood for the name of the test method that was currently
+    being executed. Hence it was required in the constructor of TestCase.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# JUnit API'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# 133: What is the job of the Request object in JUnit?
+
+
+    Answer:
+
+
+    The Request object describes a request to execute a certain set of tests.
+
+
+    # 134: How would you create a request to execute tests in a certain class?
+
+
+    Answer:
+
+
+    We would create a request to execute tests in a certain class by using Request.addClass()
+
+
+    # 135: How would you create a request to execute tests in a set of classes?
+
+
+    Answer:
+
+
+    We would create a request to execute tests in a set of classes by using Request.classes()
+
+
+    # 136: How would you create a request to execute a certain method in a class?
+
+
+    Answer:
+
+
+    We would create a request to execute a certain method in a class by using Request.method()
+
+
+    # 137: What is the job of the Description class?
+
+
+    Answer:
+
+
+    A Description describes a test that is to be run. It can be a single test or a
+    composite of several tests.
+
+
+    # 138: How can you filter certain tests from a Request object?
+
+
+    Answer:
+
+
+    We can filter certain tests from a request object by calling filterWith() on it.
+
+
+    # 139: How would you order tests in a specific order?
+
+
+    Answer:
+
+
+    Create a Request object that contains all the tests and then order'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    them by callingWith() on it.
+
+
+    # 140: Say we want to filter all Descriptions of composite tests, how will you
+    know a description contains multiple tests?
+
+    Answer:
+
+
+    By checking its isSuite() method, we would know if a description contains multiple
+    tests.
+
+
+    # 141: Say we want to filter all Descriptions of atomic tests, how will you know
+    if a description contains a single test?
+
+    Answer:
+
+
+    By checking itsTest() method, we will know if a description contains a single
+    test.
+
+
+    # 142: How can you filter Descriptions that contain less than 10 tests in total?
+
+    Answer:
+
+
+    By checking its testCount() method and filtering them accordingly.
+
+
+    # 143: What is a RunListener and how can it be used?
+
+    Answer:
+
+
+    A RunListener is an object that listens to different test cycle events and can
+    be used by adding it to the JUnitCore instance that''s used to execute all the
+    tests.
+
+
+    # 144: What is the best way to attach logic that plays sounds as tests are running
+    to indicate their progress?
+
+    Answer:
+
+
+    We can add a RunListener that will play proper sounds whenever a test begins,
+    ends successfully, and fails, etc.
+
+
+    # 145: Will a RunListener be informed when a test is ignored, because it''s been
+    annotated with @Ignore?
+
+    Answer:
+
+
+    Yes, the listener''s testIgnored() method will be called.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# 146: How does JUnitCore report back the status of the tests it ran?
+
+
+    Answer:
+
+
+    JUnitCore returns a Result object, which contains different statistics for the
+    test execution.
+
+
+    # 147: What is the JUnit XML format and what are its uses?
+
+
+    Answer:
+
+
+    The JUnit XML format is a format to output the results of test execution. It is
+    used by a variety of tools in order to parse JUnit''s results and act on it (play
+    sounds, display statistics, etc.)
+
+
+    # 148: What does the RunWith annotation specify?
+
+
+    Answer:
+
+
+    RunWith specifies the Runner object that should be used to run the tests in the
+    given class.
+
+
+    # 149: What does the Runner interface represent?
+
+
+    Answer:
+
+
+    A Runner runs tests and notifies the system of the progress.
+
+
+    # 150: What is a ParentRunner?
+
+
+    Answer:
+
+
+    ParentRunner is a general Runner implementation that does most of the regular
+    stuff a Runner is supposed to do. It is a good starting place for extending JUnit.'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Junit4.x'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "# Parameterized test\n\n151: How would you use Parameterized to run a given\
+    \ test over a few inputs?\n\nAnswer:\n\n```\n@RunWith(Parameterized.class)\npublic\
+    \ class DemoTest {\n    private String s1;\n    private String res;\n    public\
+    \ DemoTest(String s1, String result) {\n        this.s1 = s1;\n        this.res\
+    \ = res;\n    }\n}\n\n@Parameters\npublic static Collection<Object[]> create()\
+    \ {\n    return Arrays.asList(new Object[][]{ { \"ks\", \"shobana\" } });\n}\n\
+    \n@Test\npublic void mytest1() {\n    s.out.p(s1+\",\"\"+res);\n}\n```\n\n# 152:\
+    \ What is the function of parameterized test?\n\nAnswer:\n\nParameterized test\
+    \ provides the functionality of running the same test again and again with different\
+    \ values. Test class should be annotated with '@RunWith(parameter.class) annotation.\
+    \ Contains a public static method with '@parameters' annotation\n\n# 153: Describe\
+    \ the '@parameter' annotation.\n\nAnswer:\n\nReturns the list(array) as test data\
+    \ set.\nExample:\nPublic static collection<> my_data1("
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "JUnit Interview Questions You'll Likely Be As Asked\n\n```\nObject[][] my_data1={...}\n\
+    return Array;\n}\ncollection -> Collection< Object[]>\nArray -> Arrays.asList(my_data1)\n\
+    ```\n\n# Expected Exception testing\n\n154: How will you test expected exception\
+    \ using Junit?\nAnswer:\n\n```\n@Test(expected=NullPointerException.class)\nPublic\
+    \ void processDeal(boolean isActive) {\n    deal = null;\n    If (isActive ==\
+    \ true) {\n        deal = new Deal();\n    }\n    deal.getDealResp();\n}\n```\n\
+    \nDeal object is created based on the condition. Hence null pointer exception\
+    \ is expected when getDealResp() function is called.\n\n# Time Test\n\n155: How\
+    \ will you mark the testing failed if the test method does not return after certain\
+    \ time?\nAnswer:\n\n```\n@Test(timeout=2000)\npublic void calcSalary() {\nintsal=20;\n\
+    \    while (sal==10) {\n        sal++;\n    }\n}\n```\n\nTest will be terminated\
+    \ and marked as failed after 2000 milliseconds since it is infinite loop which\
+    \ will take longer than specified amount of time (2000)."
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# 156: Write a simple test class in Junit.\n\nAnswer: Class DemoTest {\n@Test\n\
+    \ Public void dispName() {\n  String s1 = \"shobhana\";\n  Assert.assertEquals(8,s1.length());\n\
+    }\n\n# 157: What is the use of static import of Assert classes?\n\nAnswer: If\
+    \ org.junit.Assert.* is imported statically, Assert methods can be used directly\
+    \ without class name Assert (as in above question).\n\nimport static org.junit.Assert.*;\n\
+    ....\nassertEquals(8,s1.length());\n\n# Ignore Test\n\n# 158: How will you bypass\
+    \ a method which is not ready for testing?\n\nAnswer:\nIgnore(\"This method is\
+    \ not ready for testing\")\n@Test\npublic void calcSalary() {\nSystem.out.println(\"\
+    Calculate salary\");\n}\n\n# 159: Can we ignore a class that needs to be tested?\n\
+    \nAnswer: Yes. All the methods within the class will be bypassed by testing.\n\
+    Ignore(\"This class is not ready for testing\")\nPublic class DemoTest {\n@Test"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "JUnit Interview Questions You'll Most Likely Be Asked\n\n```\nPublic void method1()\
+    \ {\n  ...\n}\n@Test\nPublic void method2() {\n  ...\n}\n```\n\n# Suite Test\n\
+    \n##160: Can we run more than one unit test cases together?\nAnswer:\nYes. Using\
+    \ Suite test where more than one unit test cases can be bundled and run together.\n\
+    \n##161: What are the annotations used for running suite test?\nAnswer:\nThe annotations\
+    \ used for running suite test are:\n\n+   - @RunWith\n- @Suite\n\n##162: How will\
+    \ you implement Suite test in JUnit3?\nAnswer:\nWe can implement Suite test in\
+    \ JUnit3:\n\n+   - By invoking suite() method in the test class\n- Another Test\
+    \ and testsuite can be invoked or added\n- In below code sample, class DemoTest\
+    \ and its test method dispName() will be added in suite\n\n```\npublic static\
+    \ Test suite() {\n  TestSuite ts = new TestSuite();\n  ts.addTest(new DemoTest(\"\
+    dispName\"));\n  return ts;\n```\n\n163: How will you implement suite test using\
+    \ annotations in"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# Junit4?
+
+
+    Answer:
+
+    @RunWith(Suite.class)
+
+    @Suite.SuiteClasses({
+
+    DemoTestEmp.class,
+
+    DemoTestDept.class,
+
+    DemoTestMgr.class
+
+    })
+
+    public class DemoHRestest
+
+    ...
+
+    }
+
+
+    # 164: How will you add a test suite method present in one class
+
+    into another suite() method in different class in Junit3?
+
+
+    Answer:
+
+    public static Test suite() {
+
+    TestSuite ts = new TestSuite();
+
+    ts.addTestSuite(DemoTestEmp.class);
+
+    ts.addTest(DemoTest.suite());
+
+    returns;
+
+    }
+
+
+    # 165: Can you make suite() method of Junit3 to work in Junit4?
+
+
+    +   Answer:
+
+    a) Using Junit4TestAdapter
+
+    public static Test suite() {
+
+    TestSuite ts = new TestSuite();
+
+    ts.addTest(new Junit4TestAdapter
+
+    (DemoTestEmp.class));
+
+    ts.addTest(new JUnit4TestAdapter
+
+    (DemoTestDept.class));
+
+    returns;
+
+
+    # 166: Do we need to write a separate test class for each class that
+
+    needs to be tested?'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    # Answer:
+
+
+    +   a) No need. One test class can contain many test cases for several classes
+
+    b) Separate test class should be written for each class to perform basic tests
+    for all the classes
+
+
+    # 167: Which test methods should be declared as static?
+
+
+    +   a) @BeforeClass and @AfterClass methods
+
+    b) BeforeClass method will run once before any of the other methods in the class
+
+    c) AfterClass method will run after all the methods in the class
+
+    d) If any resources are held in BeforeClass method, it will be released in AfterClass
+    irrespective of BeforeClass throws exception
+
+
+    # 168: How many test runners are supported in JUnit3?
+
+
+    # Answer:
+
+
+    The test runners supported in JUnit3 are:
+
+
+    +   a) Textui: Command line based to run the tests
+
+    b) Awtgui: AWT based UI
+
+    c) Swingui: Swing based UI to run the tests
+
+
+    These runners can be executed by JVM directly with the class name as an argument'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# 169: Can you test private method in a class?
+
+
+    Answer:
+
+
+    +   a) No. Private method of a class cannot be tested from a test class
+
+
+    +   b) Only manual unit testing is possible. Otherwise method needs to be changed
+    as protected
+
+
+    # 170: How will you test protected method?
+
+
+    Answer:
+
+
+    To test a protected method, the test class should be defined in the same package
+    where the class that needs to be tested is present.
+
+
+    # 171: How will you run the testcases in J2EE container?
+
+
+    Answer:
+
+
+    +   a) Using Cactus open source JUnit extension
+
+
+    +   b) J2EE component will be tested in their natural environment
+
+
+    # 172: How often do we need to run JUnit tests?
+
+
+    Answer:
+
+
+    +   a) For every time the code is changed and make sure the result is always 100%
+
+
+    +   b) For larger application, testsuite can be run
+
+
+    # 173: What are the methods in a test class?
+
+
+    Answer:
+
+
+    The methods in a test class are:
+
+
+    +   a) @Beforeclass method
+
+
+    +   b) @Before
+
+
+    +   c) @Test
+
+
+    +   d) @After
+
+
+    +   e) @AfterClass
+
+
+    # Assert Functions:
+
+
+    # 174: How will you write a test case for checking a string’s expected and actual
+    value?'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "# JUnit Interview Questions You'll Most Likely Be Asked\n\nAnswer:\n\n```\n\
+    public class DemoTest extends TestCase {\n\n    public DemoTest(String uname1)\
+    \ {\n        super(uname1);\n    }\n\n    public void calc() {\n        String\
+    \ myExpectedName = \"shobhana\";\n        String myActualName = \"shobhana\";\n\
+    \        assertNotSame(\"Both values should match\",myExpectedName,myActualName);\n\
+    \    }\n}\n```\n\n175: What will happen if you want to test a method that is declared\
+    \ as String?\n\nAnswer:\n\n+   a) No compilation error\nb) Since the Junit test\
+    \ method will always be \"void\", the execution will fail.\n\n```\n@Test\nPublic\
+    \ String getAndDispName() {\n    String myActualName = \"shobhana\";\n    assertEquals(8,myActualName.length());\n\
+    \    return myActualName;\n}\n```\n\nc) \"java.lang.Exception: Method testHello\
+    \ should be void...\"\n\n# 176: How will you check whether the object is null?\n\
+    \nAnswer:\n\n+   a) Using assertNull(...)\n    String s1= null;\n    assertNull(\"\
+    this string object should be null here\",s1);"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# 177: How will you verify whether two object reference points to different\
+    \ objects?\n\nAnswer:\n\n+   a) Using assertNotSame(...)\n\n```\nList fruitList\
+    \ = new ArrayList();\nList vegList = new ArrayList();\n```\n\n```\nassertNotSame(\"\
+    Both objects should not be\\nfruitList, vegList);\n```\n\n# 178: Can we overload\
+    \ assert equals method?\n\nAnswer:\n\nYes. Each function statement will confirm\
+    \ that the tests pass or fail.\npublic class DemoTestClass extends TestCase {\n\
+    \    public void calcSal() {\n        assertEquals(5, (int) Math . max(5,10) );\
+    \ // test fail\n        assertEquals(5, (int) Math . min(5,10) ); // test pass\n\
+    \    }\n}\n\n# fail() function\n\n# 179: How will you display a message if test\
+    \ fails?\n\nAnswer:\n\n+   a) Using fail() method.\n\n```\n@Test\nPublic void\
+    \ calcSalTest() {\n    If (sal == 0)\n    fail(\"Test failed\");\n}\n```\n\n#\
+    \ 180: How will you throw an exception in your testcase?\n\nAnswer:"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "JUnit Interview Questions You'll Most Likely Be Asked 57\n\n```\n@Test\nPublic\
+    \ void calcSalTest() {\n    Deal deal = null;\n    try {\n        if (sal> 20000)\
+    \ {\n            deal=new Deal();\n        }\n        deal.goForShopping();\n\
+    \        fail(\"Test failed. Null Pointer exception.\");\n    }\n    Catch Exception\
+    \ e) {\n        ...\n    }\n}\n```\n\n# Handling Throwableable\n\n181: How will\
+    \ you handle exceptions without using fail()?\nAnswer:\n\n+   a) Using AssertionFailedError.\n\
+    b) Will identify the source of the problem instead of displaying the location\
+    \ from where fail() is invoked.\n\n```\nimport junit.framework.AssertionFailedError;\n\
+    public void DemoTest1() {\n    try {\n        calcSal();\n    } catch (SQLException\
+    \ sqlex) {\n        AssertionFailedErrorafer = new\n        AssertionFailedError(sqlex.getMessage());\n\
+    \        aferr.initCause(sqlex);\n    }\n}\n```\n\n# 182: How will you handle\
+    \ when a method declared as ‘checked"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: 'exceptions'' is called from your test method?
+
+
+    Answer:
+
+
+    Declaring these kind of methods in the test code itself is not sufficient. They
+    should be either handled by
+
+
+    +   a) A java try/catch or
+
+
+    +   b) Expected attribute of junit'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# # Test Class and Annotations'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# 183: What does the term “Fixtures” mean in JUnit?
+
+
+    Answer:
+
+    The Test class contains many test methods and it can extend other classes. Test
+    method should be independent of other. An instance object is created for an execution
+    of each test method. This instance object is referred as fixtures.
+
+
+    # 184: What is Testrunner?
+
+
+    Answer:
+
+    A testrunner is:
+
+
+    +   a) A java program which runs all the test methods defined in the Test class
+
+    b) Tracks success and failure of test and report through graphically
+
+    c) Red bar denotes failure and green bar bar denotes success
+
+
+    # 185: How will you make an execution of the methods before/after the test methods?
+
+
+    Answer:
+
+
+    +   a) Using the annotations “Before” and “@After"
+
+    b) If a method defined with before or after, will be executed before or after
+    the test methods respectively
+
+    Example:
+
+    public class status{
+
+    @Before void my_function1(){...
+
+    }
+
+    @Test public void my_function3(){...
+
+    }
+
+    @After void my_function2(){...
+
+    }
+
+
+
+    Here, the test method is ‘my_function3’. Since the my_function1 and my_function2
+    are defined with annotations ‘before’ and ‘after’, my_function1 will be executed
+    before and my_function2 will be executed after the test method ‘my_function3’.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "JUnit Interview Questions You'll Most Likely Be Asked\n\n# 186: What is the\
+    \ purpose of ‘@BeforeClass’\nAnswer:\n\nWhen a function with noargument is defined\
+    \ with ‘Beforeclass’, it gets executed only once before all the test methods.\
+    \ When any external resources are allocated in BeforeClass, should be deallocated\
+    \ after all the test methods run.\n\n# 187: Give an Example for ‘Before class’\
+    \ annotation.\nAnswer:\n\n```\nExample:\npublic class status{\n  @Beforeclass\
+    \ void my_function1(){\\...\n}\n  @Test void my_function2(){...\n}\n  @Test public\
+    \ void my_function3(){...\n}\n```\n\nHere the test methods are ‘my_function2’\
+    \ and ‘my_function3’. my_function1() is defined as ‘Beforeclass’. Hence it is\
+    \ executed only once before ‘my_function2’ and ‘my_AfterClass3’\n\n# 188: What\
+    \ is the purpose of ‘@AfterClass’\nAnswer:\n\nWhen a function with no argument\
+    \ is defined with ‘Afterclass’, it gets executed after the test methodshave run.\
+    \ Even if the ”beforeclass” method throws exception, “AfterClass” will run.\n\n\
+    ```\nExample:\npublic class status{\n  @Test void my_function2(){\\...\n}\n  @Test\
+    \ public void my_function3(){...\n}\n  @Afterclass void my_function1(){\\...\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '}
+
+
+    Here the test methods are ''my_function2'' and ''my_function3''.
+
+    _function1() is defined as ''Afterclass''. Hence it is executed after
+
+    ''my_function2'' and ''my_function3''
+
+
+    # 189: Give the order of an execution of the methods in the given class.
+
+
+    Answer:
+
+
+    ```
+
+    public class status{
+
+    @Beforeclass void my_function1(){...
+
+    }
+
+    @Before void my_function2(){...
+
+    }
+
+    @Test void my_function3(){...
+
+    }
+
+    @Test public void my_function4(){...
+
+    }
+
+    @After void my_function5(){...
+
+    }
+
+    @Afterclass void my_function6(){...
+
+    }
+
+    ```
+
+
+
+    Execution Order: ( if my_function3 is called first)
+
+    my_function1 → BeforeClass
+
+    my_function2 → Before
+
+    my_function3 → Test
+
+    my_function5 → After
+
+    my_function2 → Test
+
+    my_function4 → Test
+
+    my_function5 → After
+
+    my_function6 → AfterClass
+
+
+    # 190: Which catch is made as "test failure" or "test error"
+
+
+    Answer:
+
+
+    +   a) When a test method throws ''AssertionErrors'', it will be'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    caught and called as ‘test failure’
+
+    b) When a test method or fixture throws other than assertionerrors, it will be
+    caught and called as ‘test error’
+
+
+    # 191: What are the ways to run the ‘test class’?
+
+    Answer:
+
+
+    +   a) Using ‘command line’
+
+    Example:
+
+    java org.junit.my_runner1.JUnitcore com.ki_test_loader1 com.ki_test_loader2
+
+    b) Making test class to be self executable
+
+    Example:
+
+    public static void main(String my_arg1[]){
+
+    org.junit.my_runner.junitcore.main(my_test_loader.my_intializatonl1());
+
+    }
+
+
+    # Test Case Class
+
+    192: How will you get and set the name of the Test Case?
+
+    Answer:
+
+
+    +   a) Using “getName” and “setName” method
+
+    b) getName() returns the name of the Test Case
+
+    c) setName() sets the name for the Test case
+
+    Example:
+
+    publicmy_testcase_class extends TestCase{
+
+    @Test
+
+    public void my_test_method{
+
+    System.out.println("Name:\ +this.getName()//Name:my_test_method
+
+    String mytest_new_name = setName(“newname1”)
+
+    System.out.println("Name:\ +this.getName()););//Name: newname1
+
+    }
+
+
+    # 193: What is the purpose of ‘createResult’ and ‘run’ function in'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# Test case?
+
+
+    Answer:
+
+
+    +   a) Both the functions are of type "TestResult''
+
+    b) ''CreateResult'' function creates a default ''Test result object''
+
+    c) And the ''run'' method("void run(TestResult res1)") runs the test and collects
+    the result with the default method created using the ''createResult''
+
+    countTestCase'' method returns the number of test cases executed by the ''run''
+    method.
+
+    Example:
+
+    publicmy_testcase_class extends TestCase{
+
+    @Test
+
+    public void my_test_method(
+
+    ...
+
+    System.out.println("Number of runs:" + this.countTestCase());
+
+    }
+
+
+    # 194: What is the connection between ''counttestcase'' and ''run''?
+
+
+    Answer:
+
+
+    # Test Result Class
+
+
+    195: How will you add failure/ error in ''testresult''?
+
+
+    Answer:
+
+
+    +   a) Using ''addError'' and addFailure function
+
+    b) The result of the executed test cases will be collected by ''TestResult'' class.
+    The failure or error occured will be caught by this class and handled separately
+
+    Example:
+
+    Public void error_list(Test my_test, throwable-throw){super.addError((link)my_test,
+    failed_assert);
+
+    public void failue_list(test my_test, AssertionFailedErrorfailed_assert){super.addFailure((link)my_test,
+    failed_assert);'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    link -> junit.framework.Test
+
+
+    # 196: How will you detect the error and failure count?
+
+    Answer:
+
+
+    +   a) Using ‘failureCount’ and ‘errorCount’ method. Return type for both the
+    methods is int
+
+    b) Number of errors detected will be returned by the ‘errorCount’ and
+
+    c) Number of failures detected will be returned by the ‘failureCount’
+
+
+    ```
+
+    Example:
+
+    System.out.println("Failure detected:" + failureCount());
+
+    System.out.println("Error detected:" + errorCount());
+
+    ```
+
+
+    # 197: How will you run the testcase and get the number of runs?
+
+    Answer:
+
+
+    +   a) Using the methods ‘run’ and ‘runCount’
+
+    b) run() executes the test by calling this function with the ‘testcase’ as argument
+
+    c) runCount() get the count of runs
+
+
+    ```
+
+    Example:
+
+    void run(testCase my_test1){..}
+
+    Sysytem.out.println("Count:" + runCount());
+
+    ```
+
+
+    # 198: Describe the purpose of start and stop function.
+
+    Answer:
+
+
+    +   a) startTest() initiates the testResult that the passed test will be started
+    for execution
+
+    b) stop() makes the test run to stop the execution
+
+
+    ```
+
+    Example:
+
+    startTest(Test my_test1);
+
+    stop();
+
+    ```
+
+
+    # Test Suite Class
+
+
+    199: How will you set/get the name of the suite and number of'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# test in the suite?
+
+
+    Answer:
+
+
+    +   a) Using ‘setName’ method. When this method is called with the new name as
+    parameter, it will be set as the name of the ‘suite’
+
+    Example:
+
+    setName("suite_newn_name");
+
+    b) Using ‘setName’, suite name will be retrieved
+
+    Example:
+
+    getName();
+
+    c) UisngtestCount(), number of test in the suite will be retrieved
+
+    Example:
+
+    testCount();
+
+
+    # 200: Describe the function ‘testAt’.
+
+
+    Answer:
+
+
+    When a test is required at the particular index, ‘testAt’ function is used that
+    returns the test at the specified index.
+
+
+    Example:
+
+    intmy_test_id=13;
+
+    testAt(my_test_id);'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# # HR Questions
+
+
+    Review these typical interview questions and think about how you would answer
+    them. Read the answers listed; you will find best possible answers along with
+    strategies and suggestions.'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# 1: How would you handle a negative coworker?
+
+
+    Answer:
+
+
+    Everyone has to deal with negative coworkers – and the single best way to do so
+    is to remain positive. You may try to build a relationship with the coworker or
+    relate to them in some way, even if your efforts are met with a cold shoulder,
+    you must retain your positive attitude. Above all, stress that you would never
+    allow a coworker''s negativity to impact your work or productivity.
+
+
+    # 2: What would you do if you witnessed a coworker surfing the web, reading a
+    book, etc, wasting company time?
+
+
+    Answer:
+
+
+    The interviewer will want to see that you realize how detrimental it is for employees
+    to waste company time, and that it is not something you take lightly. Explain
+    the way you would adhere to company policy, whether that includes talking to the
+    coworker yourself, reporting the behavior straight to a supervisor, or talking
+    to someone in HR.
+
+
+    # 3: How do you handle competition among yourself and other employees?
+
+
+    Answer:
+
+
+    Healthy competition can be a great thing, and it is best to stay focused on the
+    positive aspects of this here. Don''t bring up conflict among yourself and other
+    coworkers, and instead focus on the motivation to keep up with the great work
+    of others, and the ways in which coworkers may be a great support network in helping
+    to push you to new successes.
+
+
+    # 4: When is it okay to socialize with coworkers?
+
+
+    Answer:
+
+
+    This question has two extreme answers (all the time, or never), and your interviewer,
+    in most cases, will want to see that you fall somewhere in the middle. It is important
+    to establish solid relationships with your coworkers, but never at the expense
+    of'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'getting work done. Ideally, relationship-building can happen with exercises
+    of teamwork and special projects, as well as in the break room.
+
+
+    # 5: Tell me about a time when a major change was made at your last job, and how
+    you handled it.
+
+
+    Answer:
+
+
+    Provide a set-up for the situation including the old system, what the change was,
+    how it was implemented, and the results of the change, and include how you felt
+    about each step of the way. Be sure that your initial thoughts on the old system
+    are neutral, and that your excitement grows with each step of the new change,
+    as an interviewer will be pleased to see your adaptability.
+
+
+    # 6: When delegating tasks, how do you choose which tasks go to which team members?
+
+
+    Answer:
+
+
+    The interviewer is looking to gain insight into your thought process with this
+    question, be sure to offer thorough reasoning behind your choice. Explain that
+    you delegate tasks based on each individual''s personal strengths, or that you
+    like how many other projects each person is working on at the time, in order to
+    create the best fit possible.
+
+
+    # 7: Tell me about a time when you had to stand up for something you believed
+    strongly about coworkers or a supervisor.
+
+
+    Answer:
+
+
+    While it may be difficult to explain a situation of conflict to an interviewer,
+    this is a great opportunity to display your passions and convictions, and your
+    dedication to your beliefs. Explain not just the situation to the interviewer,
+    but also elaborate on why it was important to stand up for the issue, and how
+    your coworker or supervisor responded to you afterward – were they respectful?
+    Unreceptive? Open-minded? Apologetic?
+
+
+    # 8: Tell me about a time when you helped someone finish their'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# work, even though it wasn’t “your job.”
+
+
+    Answer:
+
+    Though you may be frustrated when required to pick up someone else''s slack, it
+    is important that you remain positive about lending a hand. The interviewer will
+    be looking to see if you''re a team player, and by helping someone else finish
+    a task that he or she couldn''t manage alone, you show both your willingness to
+    help the team succeed, and your own competence.
+
+
+    # 9: What are the challenges of working on a team? How do you handle this?
+
+
+    Answer:
+
+    There are many obvious challenges to working on a team, such as handling different
+    perspectives, navigating individual schedules, or accommodating difficult workers.
+    It is best to focus on one challenge, such as individual team members missing
+    deadlines or failing to keep commitments, and then offer a solution that clearly
+    addresses the problem. For example, you could organize weekly status meetings
+    for your team to discuss progress, or assign shorter deadlines in order to keep
+    the long-term deadline on schedule.
+
+
+    # 10: Do you value diversity in the workplace?
+
+
+    Answer:
+
+    Diversity is important in the workplace in order to foster an environment that
+    is accepting, equalizing, and full of different perspectives and backgrounds.
+    Be sure to show your awareness of these issues, and stress the importance of learning
+    from others'' experiences.
+
+
+    # 11: How would you handle a situation in which a coworker was not accepting of
+    someone else''s diversity?
+
+
+    Answer:
+
+    Explain that it is important to adhere to company policies regarding diversity,
+    and that you would talk to the relevant supervisors or management team. When it
+    is appropriate, it could'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: 'also be best to talk to the coworker in question about the benefits of alternate
+    perspectives – if you can handle the situation yourself, it is best not to bring
+    resolvable issues to management.
+
+
+    # 12: Are you rewarded more from working on a team, or accomplishing a task on
+    your own?
+
+
+    Answer:
+
+
+    It is best to show a balance between these two aspects – your employer wants to
+    see that you''re comfortable working on your own, and that you can complete tasks
+    efficiently and well without assistance. However, it is also important for your
+    employer to see that you can be a team player, and that you understand the value
+    that multiple perspectives and efforts can bring to a project.
+
+
+    # 13: Tell me about a time when you worked additional hours to finish a project.
+
+
+    Answer:
+
+
+    It is important for your employer to see that you are dedicated to your work,
+    and willing to put in extra hours when required or when a job calls for it. However,
+    be careful when explaining why you were called to work additional hours – for
+    instance, did you have to stay late because you set goals poorly earlier in the
+    process? Or on a more positive note, you were working additional hours because
+    a client requested a deadline to be moved up on short notice? Stress your competence
+    and willingness to give 110% every time.
+
+
+    # 14: Tell me about a time when your performance exceeded the duties and requirements
+    of your job.
+
+
+    Answer:
+
+
+    If you''re a great candidate for the position, this should be an easy question
+    to answer – choose a time when you truly went above and beyond the call of duty,
+    and put in additional work or voluntarily took on new responsibilities. Remain
+    humble, and express gratitude for the learning opportunity, as well as confidence
+    in your ability to give a repeat performance.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# 15: What is your driving attitude about work?
+
+
+    Answer:
+
+
+    There are many possible good answers to this question, and the interviewer primarily
+    wants to see that you have a great passion for the job and that you will remain
+    motivated in your career if hired. Some specific driving forces behind your success
+    may include hard work, opportunity, growth potential, or success.
+
+
+    # 16: Do you take work home with you?
+
+
+    Answer:
+
+
+    It is important to clarify that you are always willing to take work home when
+    necessary, but you want to emphasize as well that it has not been an issue for
+    you in the past. Highlight skills such as time management, goal-setting, and multi-tasking,
+    which can ensure all work is completed at work.
+
+
+    # 17: Describe a typical work day to me.
+
+
+    Answer:
+
+
+    There are several important components in your typical work day, and an interviewer
+    may derive from any or all of them, as well as from your ability to systematically
+    lead him or her through the day. Start at the beginning of your day and proceed
+    chronologically, making sure to emphasize steady productivity, time for review,
+    goal-setting, and prioritizing, as well as some additional time to account for
+    unexpected things that may arise.
+
+
+    # 18: Tell me about a time when you went out of your way at your previous job.
+
+
+    Answer:
+
+
+    Here it is best to use a specific example of the situation that required you to
+    go out of your way, what your specific position would have required that you did,
+    and how you went above that. Use concrete details, and be sure to include the
+    results, as well as reflection on what you learned in the process.
+
+
+    # 19: Are you open to receiving feedback and criticisms on your'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    # job performance, and adjusting as necessary?
+
+
+    Answer:
+
+
+    This question has a pretty clear answer – yes – but you''ll need to display a
+    knowledge as to why this is important. Receiving feedback and criticism is one
+    thing, but the most important part of that process is to implement it into your
+    daily work. Keep a good attitude, and express that you always appreciate constructive
+    feedback.
+
+
+    # 20: What inspires you?
+
+
+    Answer:
+
+
+    You may find inspiration in nature, reading success stories, or mastering a difficult
+    task, but it is important that your inspiration is positively-based and that you''re
+    able to listen and tune into it when it appears. Keep this answer generally based
+    in the professional world, but where applicable, it may stretch a bit into creative
+    exercises in your personal life that, in turn, help you in achieving career objectives.
+
+
+    # 21: How do you inspire others?
+
+
+    Answer:
+
+
+    This may be a difficult question, as it is often hard to discern the effects of
+    inspiration in others. Instead of offering a specific example of a time when you
+    inspired someone, focus on general principles such as leading by example that
+    you employ in your professional life. If possible, relate this to a quality that
+    someone who inspired you possessed, and discuss the way you have modified or modeled
+    it in your own work.
+
+
+    # 22: How do you make decisions?
+
+
+    Answer:
+
+
+    This is a great opportunity for you to wow your interviewer with your decisiveness,
+    confidence, and organizational skills. Make sure that you outline a process for
+    decision-making, and that you stress the importance of weighing your options,
+    as well as in trusting intuition. If you answer this question skillfully and with'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'ease, your interviewer will trust in your capability as a worker.
+
+
+    # 23: What are the most difficult decisions for you to make?
+
+
+    Explain your relationship to decision-making, and a general synopsis of the process
+    you take in making choices. If there is a particular type of decision that you
+    often struggle with, such as those that involve other people, make sure to explain
+    why that type of decision is tough for you, and how you are currently engaged
+    in improving your skills.
+
+
+    # 24: When making a tough decision, how do you gather information?
+
+
+    If you''re making a tough choice, it is best to gather information from as many
+    sources as possible. Lead the interviewer through your process of taking information
+    from people in different areas, starting first with advice from experts in your
+    field, feedback from coworkers or other clients, and by looking analytically at
+    your own past experiences.
+
+
+    # 25: Tell me about a decision you made that did not turn out well.
+
+
+    Honesty and transparency are great values that your interviewer will appreciate
+    – outline the choice you made, why you made it, the results of your poor decision
+    – and finally (and importantly!) what you learned from the decision. Give the
+    interviewer reason to trust that you wouldn''t make a decision like again in the
+    future.
+
+
+    # 26: Are you able to make decisions quickly?
+
+
+    You may be able to make decisions quickly, but be sure to communicate your skill
+    in making sound, thorough decisions as well. Discuss the importance of making
+    a decision quickly, and how you do so, as well as the necessity for each decision
+    to first be'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: 'JUnit Interview Questions You''ll Most Likely Be Asked 75
+
+
+    well-informed.
+
+
+    # 27: What is customer service?
+
+
+    Customer service can be many things – and the most important consideration in
+    this question is that you have a creative answer. Demonstrate your ability to
+    think outside the box by offering a confident answer that goes past a basic definition,
+    and that shows you have truly considered your own individual view of what it means
+    to take care of your customers. The thoughtful consideration you hold for customers
+    will speak for itself.
+
+
+    # 28: Tell me about a time when you went out of your way for a customer.
+
+
+    It is important that you offer an example of a time you truly went out of your
+    way – be careful not to confuse something that felt like a big effort on your
+    part, with something your employer would expect you to do anyway. Offer an example
+    of the customer''s problems, what you did to solve it, and the way the customer
+    responded after you took care of the situation.
+
+
+    # 29: How do you gain confidence from customers?
+
+
+    This is a very open-ended question that allows you to show your customer service
+    skills to the interviewer. There are many possible answers, and it is best to
+    choose something that you’ve had great experience with, such as “by handling situations
+    with transparency,” “offering rewards,” or “focusing on great communication.”
+    Offer specific examples of successes you’ve had.
+
+
+    # 30: Tell me about a time when a customer was upset or agitated – how did you
+    handle the situation?
+
+
+    Similarly to handling a dispute with another employee, the most important part
+    to answering this question is to first set up the'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: 'scenario, offer a step-by-step guide to your particular conflict resolution
+    style, and end by describing the way the conflict was resolved. Be sure that in
+    answering questions about your own conflict resolution style, that you emphasize
+    the importance of open communication and understanding from both parties, as well
+    as a willingness to reach a compromise or other solution.
+
+
+    # 31: When can you make an exception for a customer?
+
+
+    Answer:
+
+
+    Exceptions for customers can generally be made in accordance with company policy
+    or when directed by a supervisor. Display an understanding of the types of situations
+    in which an exception should be considered, such as when a customer has endured
+    a particular hardship, had a complication with order, or at a request.
+
+
+    # 32: What would you do in a situation where you were needed by both a customer
+    and your boss?
+
+
+    Answer:
+
+
+    While both your customer and your boss have different needs of you and are very
+    important to your success as a worker, it is always best to try to attend to your
+    customer first – however, the key is explaining to your boss why you are needed
+    urgently by the customer, and then to assure your boss that you will attend to
+    his or her needs as soon as possible (unless it is absolutely an urgent matter).
+
+
+    # 33: What is the most important aspect of customer service?
+
+
+    Answer:
+
+
+    While many people would simply state that customer satisfaction is the most important
+    aspect of customer service, it is important to be able to elaborate on other important
+    techniques in customer service situations. Explain why customer service is such
+    a key part of business, and be sure to expand on the aspect that you deem to be
+    the most important in a way that is reasoned and well-thought out.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# 34: Is it best to create low or high expectations for a customer?
+
+
+    You may answer this question either way (after, of course, determining that the
+    company does not have a clear opinion on the matter). However, no matter which
+    you answer the question, you must display a thorough thought process, and very
+    clear reasoning for the option you chose. Offer pros and cons of each, and include
+    the ultimate point that tips the scale in favor of your chosen answer.
+
+
+    # 35: What is the best way for a company to advertise?
+
+
+    If you''re going for a position in any career other than marketing, this question
+    is probably intended to demonstrate your ability to think critically and provide
+    reflective support for your answers. As such, the particular method you choose
+    is not so important as why you''ve chosen it. For example, word of mouth advertising
+    is important because customers will inherently trust the source, and social media
+    advertising is important as it reaches new customers quickly and cheaply.
+
+
+    # 36: Is it better to gain a new customer or to keep an old one?
+
+
+    In almost every case, it is better to keep an old customer, and it is important
+    that you are able to articulate why this is. First, new customers generally cost
+    companies more than retaining old ones does, and new customers are more likely
+    to switch to a different company. Additionally, keeping old customers is a great
+    way to provide a stable backbone for the company, as well as to also gain new
+    customers as they are likely to recommend your company to friends.
+
+
+    # 37: What is the best way to win clients from competitors?
+
+
+    There are many schools of thought on the best way to win clients from competitors,
+    and unless you know that your interviewer'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: 'adheres to a specific thought or practice, it is best to keep this question
+    general. Rather than using absolute language, focus on the benefits of one or
+    two strategies and show a clear, critical understanding of how these ways can
+    succeed in a practical application.
+
+
+    # 38: How do you feel about companies monitoring internet usage?
+
+
+    Answer:
+
+    Generally speaking, most companies will monitor some degree of internet usage
+    over their employees – and during an interview is not the best time to rebel against
+    this practice. Instead, focus on positive aspects such as the way it can lead
+    to increased productivity for some employees who may be easily lost in the world
+    of resourceful information available to them.
+
+
+    # 39: What is your first impression of our company?
+
+
+    Answer:
+
+    Obviously, this should be a positive answer! Pick out a couple key components
+    of the company''s message or goals that you especially identify with or that pertain
+    to your experience, and discuss why you believe these missions are so important.
+
+
+    # 40: Tell me about your personal philosophy on business.
+
+
+    Answer:
+
+    Your personal philosophy on business should be well-thought, and in line with
+    the missions and objectives of the company. Stay focused on positive aspects such
+    as the service it can provide, and the lessons people gain in business, and offer
+    insight as to where your philosophy has come from.
+
+
+    # 41: What is most important in a business model: sales, customer service, marketing,
+    management, etc.?
+
+
+    Answer:
+
+    For many positions, it may be a good strategy to tailor this answer to the type
+    of field you''re working in, and to explain why that'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: 'aspect of business is key. However, by explaining that each aspect is integral
+    to the function as a whole, you can display a greater sense of business savvy
+    to the interviewer and may stand out in his or her mind as a particularly awake
+    candidate.
+
+
+    # 42: How do you keep up with news and emerging trends in the field?
+
+
+    Answer:
+
+
+    The interviewer wants to see that you are aware of what''s currently going on
+    in your field. It is important that your education does not stop after college,
+    and the most successful candidates will have a list of resources they regularly
+    turn to already in place, so that they may stay aware and engaged in developing
+    trends.
+
+
+    # 43: Would you have a problem adhering to company policies on social media?
+
+
+    Answer:
+
+
+    Social media concerns in the workplace have become a greater issue, and many companies
+    now outline policies for the use of social media. Interviewers will want to be
+    assured that you won''t have a problem adhering to company standards, and that
+    you will maintain a consistent, professional image both in the office and online.
+
+
+    # 44: Tell me about one of the greatest problems facing X industry today.
+
+
+    Answer:
+
+
+    If you''re involved in your career field, and spend time on your studying trends
+    and new developments, you should be able to display an awareness of both problems
+    and potential solutions coming up in the industry. Research some of the latest
+    news before heading into the interview, and be prepared to discuss current events
+    thoroughly.
+
+
+    # 45: What do you think it takes to be successful in our company?'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# Answer:
+
+
+    Research the company prior to the interview. Be aware of the company''s mission
+    and main objectives, as well as some of the biggest names in the company, and
+    also keep in mind how they achieved success. Keep your answer focused on specific
+    objectives you could reach in order to help the company achieve its goals.
+
+
+    # 46: What is your favorite part of working in this career field?
+
+
+    # Answer:
+
+
+    This question is an opportunity to discuss some of your favorite aspects of the
+    job, and to highlight why you are a great candidate for the particular position.
+    Choose elements of the work you enjoy that are related to what you would do if
+    hired for the position. Remember to remain enthusiastic and excited for the opportunities
+    you could attain in the job.
+
+
+    # 47: What do you see happening to your career in the next 10 years?
+
+
+    # Answer:
+
+
+    If you''re plugged in to what''s happening in your career now, and are making
+    an effort to stay abreast of emerging trends in your field, you should be able
+    to offer the interviewer several predictions as to where your career or field
+    may be heading. This insight and level of awareness shows a level of dedication
+    and interest that is important to employers.
+
+
+    # 48: Where do you find ideas?
+
+
+    # Answer:
+
+
+    Ideas can come from all places, and an interviewer wants to see that your ideas
+    are just as varied. Mention multiple places that you gain ideas from, or settings
+    in which you find yourself brainstorming. Additionally, elaborate on how you record
+    ideas and expand upon them later.
+
+
+    # 49: How do you achieve creativity in the workplace?
+
+
+    # Answer:'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    It is important to show the interviewer that you''re capable of being resourceful
+    and innovative in the workplace, without stepping outside the lines of company
+    values. Explain where ideas normally step from for you (examples may include an
+    exercise such as list-making or a mind map), and connect this to a particular
+    task in your job that it would be helpful to be creative in.
+
+
+    # 50: How do you push others to create ideas?
+
+
+    Answer:
+
+    If you''re in a supervisory position, this may be requiring employees to submit
+    a particular number of ideas, or to complete regular idea-generating exercises,
+    in order to work their creative muscles. However, you can also push others around
+    to create ideas simply by creating more of your own. Additionally, discuss with
+    the interviewer the importance of questioning people as a way to inspire ideas
+    and change.
+
+
+    # 51: Describe your creativity.
+
+
+    Answer:
+
+    Try to keep this answer within the professional realm, but if you have an impressive
+    background in something creative outside of your employment history, don''t be
+    afraid to include it in your answer also. The best answers to creativity will
+    relate problem-solving skills, goal-setting, and finding innovative ways to tackle
+    a project or make a sale in the workplace. However, passions outside of the office
+    are great, too (so long as they don''t cut into your work time or mental space).'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# INDEX
+
+
+    # JUnit Interview Questions
+
+
+    # Rules
+
+
+    +   1: What is the Rules capability of JUnit?
+
+    2: How would you use the TemporaryFolder Rule to create a file that is guaranteed
+    to be deleted when the tests end?
+
+    3: What does the ExternalResource Rule do?
+
+    4: What advantage does ExternalResource Rule have over set up and tear down methods?
+
+    5: What does the ErrorCollector Rule do?
+
+    6: How would you use the Timeout Rule in order to make sure that each test method
+    in a class does not run longer than 20 milliseconds?
+
+    7: How would you use the ExpectedException Rule in order to make sure that a specific
+    exception is thrown, with a specific message?
+
+    8: What does the TestName Rule do?
+
+    9: What does the TestWatcher do?
+
+    10: What does the Verifier Rule do?
+
+    11: How would you use a MethodRule in order to print something before every test?
+
+    12: Say you''ve got an integration test written in JUnit that is flaky because
+    it depends on an external resource that sometimes fails. How will you use JUnit''s
+    features in order to automatically retry a few times that use resource?
+
+    13: Let''s say we have special test objects used in our testing and we want them
+    to automatically fail tests in case they end up in a bad state, without having
+    to explicitly call asserts on every test method; an example expectations that
+    are set on mock objects. How can we do that?
+
+    14: Lot of times we write tests with random data in order to increase chances
+    of finding bugs and for doing exploratory testing. The main problem with such
+    tests is that it fails, it isn''t guaranteed to fail again. How can we make JUnit
+    help us reproduce these failed tests?
+
+    15: How can we track of system performance by automatically failing tests that
+    suddenly take, say 50% longer than previous runs?
+
+    16: Describe the interface given Rule implementations to inject their logic to
+    test runtime.
+
+    17: How would you add automatic logging to print the time each test'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    took?
+
+
+    18: How many Rules can be supplied in a single test class?
+
+
+    # Assertions
+
+
+    19: How do you assert that a certain condition is true in a test?
+
+
+    20: Why do assertion methods have an optional String argument?
+
+
+    21: If you have multiple assertions in the same test method and one fails, will
+    the next one be executed? Why?
+
+
+    22: Why does assertEquals do?
+
+
+    23: Why is there a need for both assertTrue() and assertEquals() ?
+
+
+    24: What is the difference between assertEquals() and assertSame() ?
+
+
+    25: What is the correct way to assert equality of two arrays? Why?
+
+
+    26: In case you logically come to the conclusion that a test should fail; what''s
+    the right way to stop it? Without using assertTrue(false) and the likes? Why?
+
+
+    27: Why does the assertEquals() method for doubles receive three doubles?
+
+
+    28: How would you assert that a certain method is thrown in the test?
+
+
+    29: Why is fail() used in the following example?
+
+
+    30: Does the order of arguments to assertEquals() matter?
+
+
+    31: What is assertThat()?
+
+
+    32: Use assertThat() to assert that variable equals the String "hello".
+
+
+    33: Use assertThat() to assert that variable is an instance of a specific class.
+
+
+    34: Use assertThat() to assert that a string contains "abc".
+
+
+    35: Use assertThat() to assert that a list contains "Hello".
+
+
+    36: Use assertThat() to assert that a list contains "Foo" or "Bar".
+
+
+    37: Use assertThat() to assert that a list contains "Foo" and "Bar".
+
+
+    38: Use assertThat() to assert that a number is greater than 4.
+
+
+    39: Use assertThat() to assert that a string equals, ignoring case, the string
+    "Foo".
+
+
+    40: Use assertThat() to assert that a variable is null.
+
+
+    41: Write a custom matcher to assert that an integer is between 2 numbers.
+
+
+    42: Use assertThat() to assert that a Map contains the key "foo",
+
+
+    43: Use assertThat() to assert that a Map contains the key "foo".
+
+
+    44: Use assertThat() to assert that a Map contains the value "bar".
+
+
+    45: Use assertThat() in order to assert all of the strings in a collection are
+    equal to "foo".'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    +   46: What does assertFalse do?
+
+    47: What does fail(fail) do?
+
+    48: What does assertNotNull() do?
+
+    49: What does assertNull() do?
+
+    50: What does assertSame() do?
+
+    51: What does assertNotSame() do?
+
+    52: Where are all the JUnit asserts declared and how are they made visible to
+    test classes?
+
+    53: What would be the result of a test that throws AssertionError and why?
+
+    54: Can you simply use the "assert" keyword in Java?
+
+    55: What is a Hamcrest Matcher?
+
+    56: Why would this assertion not pass? assertEquals(new MyClass(1), new MyClass(1))
+
+    57: Does the new assertThat() syntax deprecate the old assertions?
+
+    58: How does JUnit enable assertions for primitive types?
+
+    59: Is there a way to make the "assert" keyword work with JUnit?
+
+    60: For greater-than numbers?
+
+    61: How do you enable assertions (using the assert keyword) in the JVM
+
+    62: What is the reason that JUnit supplies both assertTrue() and assertFalse()?
+
+    63: How many assertions can you put in a single test method?
+
+
+    # Test Classes
+
+
+    +   64: How do you mark a method as a test method?
+
+    65: What is a valid visibility for a test method and why?
+
+    66: What is a valid return type for a test method?
+
+    67: Does JUnit require test methods to be named with "test" at the start?
+
+    68: Do test classes require a specific annotation?
+
+    69: How do you mark a collection of tests to be run in a suite?
+
+    70: Is it required to catch all checked exceptions in a test method?
+
+    71: How would you specify that a certain test should be finished by a given time
+    frame?
+
+    72: Can regular test classes'' constructors have arguments?
+
+    73: What are set up methods in a test class?
+
+    74: What are Tear down methods in a test class?
+
+    75: Do you have to set up and Tear down methods? Why?
+
+    76: If you specify a tear down method, do you also have to declare a set up method?
+
+    77: How do you specify that a method is a set up method?
+
+    78: How do you specify that a method is a Tear down method?'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    79: How would you specify set up code that should only happen once for the whole
+    test class?
+
+
+    80: How would you specify tear down code that should only happen once for the
+    whole test class?
+
+
+    81: Specify a valid declaration of a @BeforeClass/ and @AfterClass method.
+
+
+    # Running Tests
+
+
+    +   82: If you have multiple test methods in the same class and one fails, the
+    next one be executed? Why?
+
+
+    +   83: What are the different possible results of a test method?
+
+
+    +   84: What is the difference between a failure and an error?
+
+
+    +   85: Will the following test pass? Why?
+
+
+    +   86: When are set up methods run?
+
+
+    +   87: When are a tear down method be run if a test fails? Why?
+
+
+    +   88: Should a tear down method be run if a test errors errors out? Why?
+
+
+    +   90: Should a test method be run if its set method raises an exception?
+
+    Why?
+
+
+    +   91: If a test passes successfully, but its tear down method raises an exception,
+    will the still be looked at as passed? Why?
+
+
+    +   92: How many times should a BeforeClass method run in case it throws an exception?
+    Why?
+
+
+    +   93: If instead of initializing a member in a set up method, we initialize
+    in its declaration, does it mean different tests will it share? Why?
+
+
+    +   94: How many instances of a test class are instantiated for a test class with
+    N test methods? Why?
+
+
+    +   95: How many instances of a test class are instantiated for a test class with
+    N test methods if its BeforeClass method raises an exception? Why?
+
+
+    +   96: Are static members shared between different test methods of the class?
+    Why?
+
+
+    +   97: Write a method to execute tests in the class.
+
+
+    +   98: What does the Enclosed runner do?
+
+
+    +   99: What does the Categories runner enable?
+
+
+    +   100: How would you use Categories to create a suite of fast tests?
+
+
+    +   101: Is it possible to supply multiple included categories in one test run?
+    Why?
+
+
+    +   102: Is it possible to supply an included category and an excluded category?
+    Why?
+
+
+    +   103: How would you mark a test to not run?
+
+
+    +   104: Can the @Ignore annotation be applied to something other than a'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: 'method?
+
+
+    105: What does the Parameterized Runner of JUnit do?
+
+
+    106: What is JUnit''s ParallelComputer?
+
+
+    107: What is the difference between ParallelComputer''s classes and methods options?
+
+
+    108: In what order are test methods of a class executed?
+
+
+    109: What will happen if you have a class that contains setup or tear down method
+    but no test methods, and attempt to run it?
+
+
+    110: In some case of your tests require an internet connection to run, how would
+    you separating them so that you can run all of them, but when you''re on the subway
+    and have no internet connection, you can run all the tests that don''t require
+    internet connectivity?
+
+
+    111: In well run projects, the test suite usually grows fast and running the tests
+    eventually takes up more time than we''d like to. Which JUnit feature can you
+    use to speed up the time it takes to run all your tests?
+
+
+    112: How would you allow your customers to supply test data in the form of a table
+    where they provide input values and expected output?
+
+
+    # Unit Testing and JUnit Features
+
+
+    113: Does JUnit offer any support for multithreaded tests? Explain.
+
+
+    114: How would you use a JUnit assumption in order to stop a test from executing
+    unless it is the year 2011?
+
+
+    115: What support for stubbing JUnit provide?
+
+
+    116: What support for mocking JUnit provide?
+
+
+    117: What is JUnit?
+
+
+    118: What is Unit Testing?
+
+
+    119: Would you say that having a test per each object''s method is good testing
+    conduct?
+
+
+    120: What is an Isolated Unit Test?
+
+
+    121: How many isolated tests can one expect to run in a single second?
+
+
+    122: When will you write a Unit Test for a getter method?
+
+
+    123: JUnit tests can be abstract. What would be a good use case for that?
+
+
+    124: What is a test fixture?
+
+
+    125: Why does JUnit re-instantiate the test class for each test method?
+
+
+    126: What is test coverage?
+
+
+    127: Does a 100% code coverage guarantee that the code being tested works?
+
+
+    128: How will you test a method if it is declared as ''void''?'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    129: When a void function is not returning data using ‘arguments’ or ‘instance
+    variable’, what are the other ways to test the method?
+
+
+    # JUnit 3
+
+
+    +   130: How would you declare an old-style test class (in JUnit 3 format) to
+    be executed in JUnit 4?
+
+    131: What is the advantage in moving to the JUnit 4 style of test cases, which
+    no longer requires inheriting from TestCase?
+
+    132: Why was the String parameter required in the constructor of TestCase used
+    in JUnit 3?
+
+
+    # JUnit API
+
+
+    +   133: What is the job of the Request object in JUnit?
+
+    134: How would you create a request to execute tests in a certain class?
+
+    135: How would you create a request to execute tests in a set of classes?
+
+    136: How would you create a request to execute a certain method in a class?
+
+    137: What is the job of the Description class?
+
+    138: How can you filter certain tests from a Request object?
+
+    139: How would you order tests in a specific order?
+
+    140: Say we want to filter Descriptions of composite tests, how will you know
+    a description contains multiple tests?
+
+    141: Say we want to filter Descriptions of atomic tests, how will you know if
+    a description contains a single test?
+
+    142: How can you filter Descriptions that contain less than 10 tests in total?
+
+    143: What is a RunListener and how can it be used?
+
+    144: What is the best way to attach logic that sounds as tests are running to
+    indicate their progress?
+
+    145: Will a RunListener be informed when a test is ignored, e.g. because it''s
+    annotated with @Ignore?
+
+    146: How does JUnitCore report the status of the tests it ran?
+
+    147: What is the JUnit XML format and what are its uses?
+
+    148: What does the RunWith annotation specify?
+
+    149: What does the Runner interface represent?
+
+    150: What is a ParentRunner?
+
+
+    # JUnit4.x
+
+
+    151: How would you use Parameterized to run a given test over a few'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: 'inputs?
+
+
+    152: What is the function of parameterized test?
+
+
+    153: Describe the ‘parameter’ annotation.
+
+
+    154: How will you test expected exception using JUnit?
+
+
+    155: How will you mark the testing failed if the test method does not return after
+    certain time?
+
+
+    156: Write a simple test class in JUnit.
+
+
+    157: What is the use of static import of Assert classes?
+
+
+    158: How will you bypass a method which is not ready for testing?
+
+
+    159: Can we ignore a class that needs to be tested?
+
+
+    160: How can we run more than one unit test cases together?
+
+
+    161: What are the annotations used for running suite test?
+
+
+    162: How will you implement suite test in JUnit3?
+
+
+    163: How will you implement suite test using annotations in JUnit4?
+
+
+    164: How will you add a test suite method present in one class into another suite()
+    method in different class in JUnit3?
+
+
+    165: Can you make suite() method of JUnit3 to work in JUnit4?
+
+
+    166: Do we need to write a separate test class for each class that needs to be
+    tested?
+
+
+    167: Which test methods should be declared as static?
+
+
+    168: How many test runners are supported in JUnit3?
+
+
+    169: Can you test private method in a class?
+
+
+    170: How will you test protected method?
+
+
+    171: How will you run the testcases in J2EE container?
+
+
+    172: How often do we run JUnit tests?
+
+
+    173: What are the methods in a test class?
+
+
+    174: How will you write a test case for checking a string’s expected and actual
+    value?
+
+
+    175: What will happen if you want to test a method that is declared as String?
+
+
+    176: How will you check whether the object is null?
+
+
+    177: How will you verify whether two object reference points to different objects?
+
+
+    178: Can we overload assert equals method?
+
+
+    179: How will you display a message if test fails?
+
+
+    180: How will you throw an exception in your testcase?
+
+
+    181: How will you handle exceptions without using fail())?
+
+
+    182: How will you handle when a method declared as ‘checked exceptions’ is called
+    from your test method?'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Test Class and Annotations
+
+
+    +   183: What does the term “Fixtures” mean in JUnit?
+
+    184: What is Testrunner?
+
+    185: How will you make an execution of the methods before/after the test methods?
+
+    186: What is the purpose of ‘@BeforeClass’?
+
+    187: Give the order of an execution of ‘Before class’ annotation.
+
+    188: What is the purpose of ‘@AfterClass’?
+
+    189: What is the purpose of the execution of the methods in the given class?
+
+    190: Which catch is made as “test failure” or “test error”?
+
+    191: What are the ways to run the ‘test Case’
+
+    192: What is the purpose of ‘createResult’ and ‘run’ function in Test case?
+
+    194: What is the connection between ‘counttestcase’ and ‘run’?
+
+    195: How will you add failure/ error in ‘testresult’ class?
+
+    196: How will you detect the error and failure count?
+
+    197: How will you run the testcase and get the number of runs?
+
+    198: Describe the purpose of start and stop function.
+
+    199: How will you set/get the name of the suite and number of test in the suite?
+
+    200: Describe the function ‘testAt’.'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# HR Questions
+
+
+    +   1: How would you handle a negative coworker?
+
+
+    +   2: What would you do if you witnessed a coworker surfing the web, reading
+    a book, etc, wasting company time?
+
+
+    +   3: How do you handle competition among yourself and other employees?
+
+
+    +   4: When is it okay to socialize with coworkers?
+
+
+    +   5: Tell me about a time when a major change was made at your last job, and
+    how you handled it.
+
+
+    +   6: When delegating tasks, how do you choose which tasks go to which team members?
+
+
+    +   7: Tell me about a time when you had to stand up for something you believed
+    strongly about coworkers or a supervisor.
+
+
+    +   8: Tell me about a time you helped someone finish their work, though it wasn''t
+    "your job."
+
+
+    +   9: What are the challenges of working on a team? How do you handle this?
+
+
+    +   10: Do you value diversity in the workplace?
+
+
+    +   11: How would you handle a situation in which a coworker was not accepting
+    someone else''s diversity?
+
+
+    +   12: Are you rewarded from working on a team, or accomplishing a task on your
+    own?
+
+
+    +   13: Tell me about a time when you worked additional hours to finish a project.
+
+
+    +   14: Tell me about a time when your performance exceeded the duties and requirements
+    of your job.
+
+
+    +   15: What is your driving attitude about work?
+
+
+    +   16: Do you take work home with you?
+
+
+    +   17: Describe a typical work day to me.
+
+
+    +   18: Tell me about a time when you went out of your way at your previous job.
+
+
+    +   19: Are you open to receiving feedback and criticisms on your job performance,
+    and adjusting as necessary?
+
+
+    +   20: What inspires you?
+
+
+    +   21: How do you inspire others?
+
+
+    +   22: How do you make decisions?
+
+
+    +   23: What are the most difficult decisions for you to make?
+
+
+    +   24: When making a tough decision, how do you gather information?
+
+
+    +   25: Tell me about a decision you made that did not turn out well.
+
+
+    +   26: Are you able to make decisions quickly?
+
+
+    +   27: What is customer service?'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: 'JUnit Interview Questions You''ll Most Likely Be Asked 91
+
+
+    +   28: Tell me about a time when you went out of your way for a customer.
+
+    29: How do you gain confidence from customers?
+
+    30: Tell me about a time when a customer was upset or agitated – how did you handle
+    the situation?
+
+    31: When can you make an exception for a customer?
+
+    32: What would you do in a situation where you were needed by both a customer
+    and your boss?
+
+    33: What is the most important aspect of customer service?
+
+    34: Is it best to create low or high expectations for a customer?
+
+    35: What is the best way for a company to advertise?
+
+    36: Is it better to gain a new customer or keep an old one?
+
+    37: What is the best way to win clients from competitors?
+
+    38: What is your first impression of our company?
+
+    39: Tell me about your personal philosophy on business.
+
+    40: What is most important in a business model: sales, customer service, marketing,
+    management, etc.?
+
+    41: How do you keep up with news and emerging trends in the field?
+
+    42: Would you have a problem adhering to company policies on media?
+
+    43: Tell me about one of the greatest problems facing X industry today.
+
+    44: What do you think it takes to be successful in our company?
+
+    45: What is your favorite part of working in this career field?
+
+    46: What do you see happening to your career in the next 10 years?
+
+    47: Where do you find ideas?
+
+    48: How do you achieve creativity in the workplace?
+
+    49:'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# Some of the following titles might also be handy:
+
+
+    +   1. .NET Interview Questions You''ll Most Likely Be Asked
+
+    2. 200 Interview Questions You''ll Most Likely Be Asked
+
+    3. Access VBA Programming Interview Questions You''ll Likely Be Asked
+
+    4. Adobe Cold Interview Questions You''ll Likely Be Asked
+
+    5. Advanced Excel Interview Questions You''ll Likely Be Asked
+
+    6. Advanced JAVA Interview Questions You''ll Likely Be Asked
+
+    7. Advanced SAS Interview Questions You''ll Likely Be Asked
+
+    8. AJAX Interview Questions You''ll Likely Be Asked
+
+    9. Algorithms Interview Questions You''ll Likely Be Asked
+
+    10. Android Development Interview Questions You''ll Likely Be Asked
+
+    11. Ant & Maven Interview Questions You''ll Most Likely Be Asked
+
+    12. Apache Web Server Interview Questions You''ll Most Likely Be Asked
+
+    13. Artificial Intelligence Interview Questions You''ll Most Likely Be Asked
+
+    14. ASP.NET Interview Questions You''ll Most Likely Be Asked
+
+    15. Automated Software Testing Interview Questions You''ll Most Likely Be Asked
+
+    16. Base SAS Interview Questions You''ll Most Likely Be Asked
+
+    17. BEA WebLogic Server Questions You''ll Most Likely Be Asked
+
+    18. C & C++ Interview Questions You''ll Most Likely Be Asked
+
+    19. C# Interview Questions You''ll Most Likely Be Asked
+
+    20. C++ Internals Interview Questions You''ll Most Likely Be Asked
+
+    21. CCNA Interview Questions You''ll Most Likely Be Asked
+
+    22. Cloud Computing Interview Questions You''ll Most Likely Be Asked
+
+    23. Computer Architecture Interview Questions You''ll Most Likely Be Asked
+
+    24. Computer Networks Interview Questions You''ll Most Likely Be Asked
+
+    25. Core Java Interview Questions You''ll Most Likely Be Asked
+
+    26. Data Structures & Algorithms Interview Questions You''ll Most Likely Be Asked
+
+    27. Data WareHousing Interview Questions You''ll Most Likely Be Asked
+
+    28. EJB 3.0 Interview Questions You''ll Most Likely Be Asked
+
+    29. Entity Framework Interview Questions You''ll Most Likely Be Asked
+
+    30. Fedora & RHEL Interview Questions You''ll Most Likely Be Asked
+
+    31. GNU Development Interview Questions You''ll Most Likely Be Asked
+
+    32. Hiberate, Spring & Struts Interview Questions You''ll Most Likely Be Asked
+
+    33. HTML, XML and CSS Interview Questions You''ll Most Likely Be Asked
+
+    34. HTML5 Interview Questions You''ll Most Likely Be Asked
+
+    35. IBM WebSphere Application Server Interview Questions You''ll Most Likely Be
+    Asked
+
+    36. iOS SDK Design Patterns Interview Questions You''ll Most Likely Be Asked
+
+    37. Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+    38. Java / J2EE Interview Questions You''ll Most Likely Be Asked
+
+    39. Java Messaging Service Interview Questions You''ll Most Likely Be Asked
+
+    40. JavaScript Interview Questions You''ll Most Likely Be Asked
+
+    41. JavaFaces Interview Questions You''ll Most Likely Be Asked
+
+    42. JDBC Interview Questions You''ll Most Likely Be Asked
+
+    43. jQuery Interview Questions You''ll Most Likely Be Asked
+
+    44. JSP-Servlet Interview Questions You''ll Most Likely Be Asked
+
+    45. JUnit Interview Questions You''ll Most Likely Be Asked'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# JUnit Interview Questions You''ll Most Likely Be Asked
+
+
+    +   46. Linux Commands Interview Questions You''ll Most Likely Be Asked
+
+    47. Linux Interview Questions You''ll Most Likely Be Asked
+
+    48. Linux System Administrator Interview Questions You''ll Most Likely Be Asked
+
+    49. Mac OS X Lion Interview Questions You''ll Most Likely Be Asked
+
+    50. Mac OS X Snow Leopard Interview Questions You''ll Most Likely Be Asked
+
+    51. Microsoft Access Interview Questions You''ll Most Likely Be Asked
+
+    52. Microsoft Excel Interview Questions You''ll Most Likely Be Asked
+
+    53. Microsoft PowerPoint Interview Questions You''ll Most Likely Be Asked
+
+    54. Microsoft Word Interview Questions You''ll Most Likely Be Asked
+
+    55. MySQL Interview Questions You''ll Most Likely Be Asked
+
+    56. NetSuite Interview Questions You''ll Most Likely Be Asked
+
+    57. Networking Interview Questions You''ll Most Likely Be Asked
+
+    58. OOPS Interview Questions You''ll Most Likely Be Asked
+
+    59. Operating Systems Interview Questions You''ll Most Likely Be Asked
+
+    60. Oracle DBA Interview Questions You''ll Most Likely Be Asked
+
+    61. Oracle E-Business Suite Interview Questions You''ll Most Likely Be Asked
+
+    62. ORACLE PL/SQL Interview Questions You''ll Most Likely Be Asked
+
+    63. Perl Programming Interview Questions You''ll Most Likely Be Asked
+
+    64. PHP Interview Questions You''ll Most Likely Be Asked
+
+    65. PMP Interview Questions You''ll Most Likely Be Asked
+
+    66. Python Interview Questions You''ll Most Likely Be Asked
+
+    67. RESTFUL Java Web Interview Questions You''ll Most Likely Be Asked
+
+    68. Ruby Interview Questions You''ll Most Likely Be Asked
+
+    69. Ruby on Rails Interview Questions You''ll Most Likely Be Asked
+
+    70. SAP ABAP Interview Questions You''ll Most Likely Be Asked
+
+    71. SAP HANA Interview Questions You''ll Most Likely Be Asked
+
+    72. SAS Programming Guidelines Interview Questions You''ll Most Likely Be Asked
+
+    73. Selenium Testing Tools Interview Questions You''ll Most Likely Be Asked
+
+    74. Silverlight Interview Questions You''ll Most Likely Be Asked
+
+    75. Software Repositories Interview Questions You''ll Most Likely Be Asked
+
+    76. Software Testing Interview Questions You''ll Most Likely Be Asked
+
+    77. SQL Server Interview Questions You''ll Most Likely Be Asked
+
+    78. Tomcat Interview Questions You''ll Most Likely Be Asked
+
+    79. UML Interview Questions You''ll Most Likely Be Asked
+
+    80. Unix Interview Questions You''ll Most Likely Be Asked
+
+    81. Unix Shell Programming Interview Questions You''ll Most Likely Be Asked
+
+    82. VB.NET Interview Questions You''ll Most Likely Be Asked
+
+    83. Windows Server 2008 R2 Interview Questions You''ll Most Likely Be Asked
+
+    84. XLQP, XSLT, XPath, XFORMS &Query Interview Questions You''ll Most Likely Be
+    Asked
+
+    85. XML Interview Questions You''ll Most Likely Be Asked
+
+
+    For complete list visit
+
+
+    www.vibrantpublishers.com'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# NOTES'
+  merge: -1
+  img_proc: true
