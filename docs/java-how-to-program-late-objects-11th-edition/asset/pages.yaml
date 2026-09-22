@@ -1,0 +1,3001 @@
+- pgno: 0
+  md: '# Tshwane University of Technology
+
+
+    FACULTY OF INFORMATION AND COMMUNICATION TECHNOLOGY
+
+
+    # Principles of Programming A (Extended)
+
+
+    PPAF05D
+
+
+    # Introduction to Programming 115R (Extended)
+
+
+    TROF05D
+
+
+    # Unit 2
+
+
+    # Basic programs in Scratch
+
+
+    DEVELOPED: 2019-2021
+
+
+    © COPYRIGHT: TSHWANE UNIVERSITY OF TECHNOLOGY (2022)
+
+
+    All rights reserved. Apart from any reasonable quotations for the purposes of
+    research criticism or review as permitted under the Copyright Act, no part of
+    this book may be reproduced or transmitted in any form or by any means, electronic
+    or mechanical, including photocopy and recording, without permission in writing
+    from the publisher.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Unit 2: Basic programs in Scratch ................................................................................
+    1
+
+
+    # Assessment criteria .................................................................................................
+    1
+
+
+    # Introduction to variables ......................................................................................
+    3
+
+
+    +   - Activity 1: Add a variable to an existing program ........................................................
+    4
+
+    - Activity 2: Create variables visible for different sprites ...................................................
+    8
+
+    - Activity 3: Worked example: Use variables visible to the stage and all sprites
+    ................ 8
+
+    - Activity 4: Food nutrition – variable with stage scope .......................................................
+    11
+
+
+    # Getting values from the user (user interactivity - input) ..........................................
+    11
+
+
+    +   - Activity 5: Write a Scratch program based on pseudocode ..........................................
+    12
+
+    - Activity 6: Get a value from the user (input) ...................................................................
+    13
+
+    - Activity 7: Obtain two input values ...................................................................................
+    14
+
+
+    # Displaying messages on the screen (output) .........................................................
+    15
+
+
+    +   - Activity 8: Display output .......................................................................................
+    17
+
+    - Activity 9: Display name and age. ...................................................................................
+    19
+
+
+    # Writing basic programs .......................................................................................
+    19
+
+
+    +   - Worked example: Cost of tickets. ...................................................................
+    21
+
+    - Activity 10: Cost of tickets .......................................................................................
+    23
+
+    - Worked example: Calculate percentage ...............................................................
+    24
+
+    - Activity 11: Calculate percentage. ..........................................................................
+    26
+
+
+    # Order of precedence in calculations ........................................................
+    26
+
+
+    +   - Activity 12: Practise stacking to effect order of precedence ................................
+    29
+
+    - Activity 13: VAT and total amount ..........................................................................
+    29
+
+    - Activity 14: Pocket money .......................................................................................
+    32
+
+    - Activity 15: Calculate average of 3 values ................................................................
+    32
+
+    - Activity 16: Calculate age this year ......................................................................
+    32
+
+    - Activity 17: Calculate perimeter and area. ................................................
+    32
+
+
+    # Data types of variables ........................................................................
+    33
+
+
+    # Naming conventions for variables ...................................................................
+    33
+
+
+    +   - Activity 18: Variable names ...................................................................
+    34'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '+   Activity 19: Suitable variable names ............................................................................
+    34
+
+    Activity 20: Km walked ................................................................................................
+    35
+
+    Activity 21: Library fine...............................................................................................
+    36
+
+    Activity 22: Buy candy ................................................................................................
+    37
+
+    Activity 23: Apple profit...............................................................................................
+    37
+
+    Activity 24: Calculate phone call cost .................................................................
+    38
+
+
+    # Multiple lines of output ..........................................................................................
+    41
+
+
+    +   Worked example: Output to a List ..........................................................................
+    41
+
+    Activity 25: Area and perimeter - Display output to a List ......................................
+    45
+
+    Activity 26: Wages – display output to a List...........................................................
+    45
+
+    Activity 27: Contractor fees – display output to a List ............................................
+    46
+
+    Activity 28: Happy Doggle kennels......................................................................
+    47
+
+    Activity 29: Wage for 4 weeks ................................................................................
+    49
+
+    Activity 30: Sell magwinya...............................................................................................
+    49
+
+
+    # Calculations with integer values..................................................................................
+    51
+
+
+    +   Activity 31: Integer division and mod..................................................................
+    54
+
+    Activity 32: Chairs in student centre ..........................................................................
+    54
+
+    Activity 33: Tablets in bottles...............................................................................
+    55
+
+    Activity 34: Number of 85g packets...............................................................................
+    55
+
+
+    # Obtain more input after output .......................................................................
+    56
+
+
+    +   Activity 35: Calculate cost and discount................................................................
+    59
+
+    Activity 36: Calculate installment per month..................................................................
+    59
+
+    Activity 37: Knowledge questions.................................................................................
+    59
+
+    Activity 38: Skills checklist......................................................................................
+    60
+
+
+    # Reflection...........................................................................................................
+    62
+
+
+    # Sources consulted..................................................................................................
+    63'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "You OWN your learning – therefore you need to reflect on your learning process.\
+    \ At the end of each lesson, you need\nto have a discussion with yourself and/or\
+    \ fellow students and/or lecturer to reflect on the lesson of the day. See the\n\
+    \ called ‘Reflection’ at the end of the chapter for examples of questions you\
+    \ can include in your discussions.\n\n![](img/760028ee1a0ddba727157948af276099_3_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# # Unit 2: Basic programs in Scratch
+
+
+    ## Assessment criteria
+
+    The content covered in this unit relates to the following outcomes and assessment
+    criteria:
+
+
+    | Module descriptor UNIT 1: Problem solving |
+
+    | Outcome: The student must be able to apply logic and knowledge to solve basic
+    problems. |
+
+    | Assessment Criteria |
+
+    | Redundant information can be excluded from a basic programming problem statement
+    by rewriting the problem without redundant information. |
+
+    | Missing data can be identified in a basic programming statement, by listing
+    the missing data elements. |
+
+    | Problems requiring logical thought flow can be analysed and solutions provided
+    by providing narratives, diagrams or completing tables. |
+
+
+    | Module descriptor UNIT 2: Basic programming principles |
+
+    | Outcome: The student must be able to apply algorithmic problem solving to basic
+    mathematical and programming problems. |
+
+    | Assessment Criteria |
+
+    | Input and output can be identified for a given programming problem. |
+
+    | The variables needed as part of an algorithm can be identified by completing
+    an input-processing-output (IPO) table. |
+
+    | Valid variable names can be provided following the best practices of the OOP
+    language used. |
+
+    | Constants to be used in a program can be identified by writing it in the correct
+    section of an algorithm. |
+
+    | Valid data types for variables can be suggested by indicating the data type
+    in an algorithm. |
+
+    | The rules of the order of processing can be applied in writing pseudo code for
+    a mathematical calculation. |'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '+   - A solution can be planned using an input-output-processing (IPO) table.
+
+    - An algorithm to solve a basic mathematical problem requiring sequential steps
+    can be designed, presented in pseudo code and implemented in a programming language
+    providing correct output.
+
+    - Comments can be added in a program to clarify the flow of the program..'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Introduction to variables
+
+
+    In algebra in Mathematics you have learned about using variables. Usually a single
+    letter is used to represent a variable, and it represents a value that is unknown.
+    For example, in the equation p = 21 + 2w, the letters 1 and w represents the length
+    and width of a rectangle. Once a person measures the length and width of the rectangle,
+    the values can be replaced in the equation, for example, p = 2(5) + 2(2) = 10
+    + 4. The perimeter of the rectangle is 14. A variable therefore represents a value,
+    or you can say it is a ''keeper'' for a value. In programming, a variable can
+    also be referred to as a ''storage space'' or a ''container'' for a value and
+    it is used in the program to remember a value. Let us look at an example where
+    a program needs to use a variable.
+
+
+    In Unit 1 you created a program (small game) where the user had to click on a
+    moving sprite (The Ball sprite). When the user managed to click on the ball, it
+    changed position, and a sound was played (Boing).
+
+
+    We would like to improve on this game, so that we can keep score of the number
+    of times the ball has been hit. This is what we will need to do:
+
+
+    +   - Create a ''container'' where the computer can put the score to ''remember''
+    the number of hits (a variable).
+
+    - When the program starts, we have to place the value (0) in the container, to
+    indicate that no hits have yet made.
+
+    - Every time the ball is hit, we instruct the computer to increase the value in
+    the container by one.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_6_0.png)
+
+
+    > In programming languages, this ''container'' for a value is called a variable.
+    A variable has a name and can hold only one data item (for example a number, or
+    a name) at a time. In the following activity we will show you how to add a variable
+    to the existing program to count the number of hits.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_6_1.png)
+
+
+    ![](img/760028ee1a0ddba727157948af276099_6_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "# Activity 1: Add a variable to an existing program\n\nOpen the program you\
+    \ wrote in Unit 1, Activity 11.\n* Add a variable (a container).\n  * Click on\
+    \ the Variables class in the blocks palette.\n  * Choose Make a Variable.\n  *\
+    \ Select the radiobutton For this Sprite only\n  * Enter a variable name, e.g.\
+    \ iHits, and click OK.\n\n+   * Radiobutton\n* Checkbox\n\n![](img/760028ee1a0ddba727157948af276099_7_0.png)\n\
+    \n> > It is good programming practice to use meaningful names for variables, that\
+    \ describe both the purpose and the type of the value which will be stored in\
+    \ them. The type of value which will be stored in this variable must be a whole\
+    \ number, i.e. an integer, therefore we add the number, i in front of the variable\
+    \ name to remind ourselves that the variable name contains an integer value.\n\
+    \nNote: When you write more complex programs, it will matter whether a variable\
+    \ is visible to all sprites, or to a specific sprite only. The difference will\
+    \ be explained later. In this specific program it does not matter what option\
+    \ you choose, as there is only one sprite. However, it is a good programming principle\
+    \ to assign variables to the sprite it 'belongs'\n* Tick the checkbox next to\
+    \ the name of the variable.\n\n![](img/760028ee1a0ddba727157948af276099_7_1.png)\n\
+    \n+   * Initialise\n* Assignment statement\n\nUnit 2 : Basic programs in Scratch"
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'Add code blocks as indicated (the blocks can be found in the Variables class).
+
+
+    Readout: The Scratch terminology for the small window on the stage that displays
+    information about a variable. The readout appears on the screen when you tick
+    the checkbox next to the name of the variable in the Variables class.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_8_0.png)
+
+
+    To create the instruction to increase the variable iHits by 1, look at the colours
+    of the blocks to determine from which class to obtain the separate blocks. Add
+    them in the scripts area.
+
+
+    Now combine the different blocks, and add the number 1.
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '+   Run the program. Notice how the variable name and the value of the variable
+    are displayed on the stage.
+
+
+    +   Every time you click on the ball, the value of the variable will increase
+    by one, and the updated value will be displayed in the readout.
+
+
+    +   The name of the sprite variable ''belongs''.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_9_0.png)
+
+
+    +   Right click on the readout. You can then select the format of the readout.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_9_1.png)
+
+
+    ![](img/760028ee1a0ddba727157948af276099_9_2.png)
+
+
+    ![](img/760028ee1a0ddba727157948af276099_9_3.png)
+
+
+    # Note the following programming language concepts
+
+
+    +   This statement 0 is called an assignment statement.
+
+
+    +   The value 0 is assigned to (placed into) the variable iHiits.
+
+
+    +   This corresponds to an algebra equation such as x = 0. In this case iHiits
+    = 0.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_9_4.png)
+
+
+    +   This statement is also an assignment statement.
+
+
+    +   The current value of iHiits is increased by 1. The result is ''placed back''
+    in the variable iHiits.
+
+
+    +   This corresponds to an algebra equation such as y = y + 1. In this case, iHiits
+    = iHiits + 1.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_9_5.png)
+
+
+    # Remember
+
+
+    +   Programming variables are given meaningful names. You can name a variable
+    x, or y. But in longer programs with many variables become confused if you use
+    single-letter variable names. In programming we use meaningful variable names
+    such as iNumStudents, iTestTotal, iScore of x, y and z.
+
+
+    +   An integer is a number that is not a fraction, a number, such as 10; 25; 166.
+
+
+    +   In programming languages that have a decimal point in them, such as 12.8;
+    145.07823; 0.678 are called floating point numbers. They can also be called real
+    numbers, measuring or measurement numbers. In programming languages it is important
+    to note that the value 5 is an integer, but the value 5.0 is a decimal (real value).
+
+
+    +   When we name variables in a program, it helps to include a reference to the
+    type of number that will be stored in a variable. For example, iHiits indicates
+    that an integer value will be stored in the variable. rAvg indicates that a real
+    number will be stored in the variable.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'In algebra you learned when the answer of an expression is calculated, it becomes
+    an equation. For example: if we calculate speed, we can write an equation (using
+    meaningful variable names0):
+
+
+    ```
+
+    speed = \frac{distance}{time}
+
+    ```
+
+
+    In programming we use equations to determine how certain values should be calculated,
+    and the result of the calculation on the right-hand side of the equation is assigned
+    to a variable on the left-hand side. In Scratch we will code:
+
+
+    ![](img/760028ee1a0ddba727157948af276099_10_0.png)
+
+
+    Here are examples of other algebra equations and their corresponding Scratch assignment
+    statements:
+
+
+    | | |
+
+    |---||
+
+    | avg = testTotal + 100 | set rAvg to rScore / TestTotal |
+
+    | totalCost = price * 1.15 | set rTotalCost to rPrice |
+
+    | points = points + 25 | set iPoints to iPoints + 25 |'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Activity 2: Create variables for different sprites
+
+
+    +   - Create a program with two sprites – an apple and a watermelon.
+
+    - The cafeteria manager wants to determine which fruit he should have availble
+    for students, he sets up a computer at the cashier, and asks students to click
+    on their favourite fruit.
+
+    - The program should display the number of votes for each fruit every time a student
+    clicks on a fruit sprite.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_11_0.png)
+
+
+    # Helpful hints:
+
+
+    +   - Create a variable for each sprite. Choose the option For this sprite only.
+    The variables for the different sprites can have the same name (iVote). The readouts
+    on the stage includes the names of the sprites, so it is clear to see whose each
+    each value belongs to.
+
+    - Add instructions for each sprite to initialise the variables to 0 when the green
+    flag is clicked.
+
+
+    > Note
+
+    In Activity 2 you used two sprites, and each had one variable. Each had control
+    over their own variable.
+
+
+    # Activity 3: Worked example: Use variables visible to the stage and all sprites
+
+
+    +   - Create a program containing two sprites – the letter I and the letter O.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '• This program can be used to keep track of the number of cars inside a parking
+    lot. When a car drives into the parking lot, the user clicks on the letter I.
+    When a car drives out, they click on the letter O.
+
+
+    • The total number of cars in the parking lot should be displayed on the stage.
+
+
+    +   - Click on *Variables* in the blocks palette.
+
+    - Choose *Make a Variable.*
+
+    - Select the radiobutton *For all* sprites.
+
+    - Enter a variable name, e.g. *iNumCars*, and click OK.
+
+    - Add a script for each sprite. When the user clicks on the letter I, the value
+    of *iNumCars* should be increased by 1. When the user clicks on the letter O,
+    the value of the variable *iNumCars* should be decreased by 1 (it is the same
+    variable).
+
+
+    ![](img/760028ee1a0ddba727157948af276099_12_0.png)
+
+
+    ![](img/760028ee1a0ddba727157948af276099_12_1.png)
+
+
+    ![](img/760028ee1a0ddba727157948af276099_12_2.png)
+
+
+    ![](img/760028ee1a0ddba727157948af276099_12_3.png)
+
+
+    • Add an instruction on the stage to initialise the variable iNumCars to 0.
+
+    • Click on the Stage icon. Add code for the [when green flag clicked] event.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_12_4.png)'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# Note
+
+
+    +   - In Activity 3, you used 2 sprites, but just 1 variable (iNumCars).
+
+    - When the variable iNumCars was created, you chose the option For all sprites.
+    This means all sprites can access the variable (make changes to
+
+    it). This variable ''belonged'' to the stage. Like actors can see all objects
+    on the stage, the sprites can see and change all variables on the
+
+    stage.
+
+    - To initialise the variable iNumCars, it is best to add the code to the script
+    of the stage.
+
+
+    # The difference between For all sprites and For this sprite only
+
+
+    | For this sprite only | For all sprites |
+
+    |---|---|
+
+    | Only the sprite can access the value of the variable. | All sprites on the stage
+    have acceses to the variable. |
+
+    | The variable has sprite scope. | The variable has stage scope. |
+
+    | Similar to an actor who can only read the words on his own script, not that
+    of another actor. | Similar to an actor that can see all banners or props that
+    is placed on the stage. |
+
+    | The readout on the stage displays the name of the sprite before the name and
+    value of the variable. | The readout on the stage only displays the name and value
+    of the variable. |
+
+
+    ![](img/760028ee1a0ddba727157948af276099_13_0.png)
+
+
+    ![](img/760028ee1a0ddba727157948af276099_13_1.png)
+
+
+    +   - Banner
+
+    - Prop
+
+    The objects used on a stage or screen by actors when they perform is called theatrical
+    property. This has been shortened to ''props''. So a prop refers to anything movable
+    or portable on a stage.
+
+    - Stage scope
+
+    - Sprite scope.
+
+
+    In the next Activity you will use 4 sprites, and 1 variable. Each sprite must
+    have access to the variable.
+
+
+    Unit 2 : Basic programs in Scratch
+
+
+    ![](img/760028ee1a0ddba727157948af276099_13_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# ## Activity 4: Food nutrition – variable with stage scope
+
+
+    Write a program where the user should click on the food he eats every day. Every
+    type of food has a point associated with it.
+
+
+    | | |
+
+    |---|---|
+
+    | Muffin | +10 |
+
+    | Cake | -20 |
+
+    | Fruit salad | +25 |
+
+    | Cheesy Puffs | -12 |
+
+
+    The starting score is 0. Every time an item is chosen, the score should be adjusted
+    by the points for that type of food. The program should display the total score
+    for the user.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_14_0.png)
+
+
+    Remember to initialise the variable ifScore to 0 by placing code on the stage.
+
+
+    Examples of the assignment statements you will use:
+
+
+    iFoodScore = iFoodScore + 10
+
+    iFoodScore = iFoodScore - 12
+
+
+    > This variable has stage scope. Therefore no name of a sprite is displayed infront
+    of the readout. All sprites have access to the same variable.
+
+
+    The only difference between this program and the previous ones are that you have
+    more sprites, and that the variable is not just increased or decreased by 1.
+
+
+    # ## Getting values from the user (user interactivity - input)
+
+
+    Most programs interact with the user of the program – the user needs to click
+    somewhere on the screen or enter data (such as numeric values) on the keyboard.
+    We will now learn how to write programs that can read values entered by a user
+    on the keyboard, and then use that data to display a message or perform some operations.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "# Activity 5: Write a Scratch program based on pseudocode\n\nWrite the following\
+    \ program in Scratch (the pseudocode is provided just to remind you again how\
+    \ instructions for a program can be given in a way that is not specific to a programming\
+    \ language).\n\n# Pseudocode\n\n# Scratch code\n\n+   when the user clicks the\
+    \ green flag\nrepeat 3 times\n    go 100 steps towards top of screen\n    wait\
+    \ 0.5 seconds\n    go 100 steps towards bottom of screen\n    wait 0.5 seconds\n\
+    end repeat\nend\n\n![](img/760028ee1a0ddba727157948af276099_15_0.png)\n\nSave\
+    \ the program as Unit1 JUMP.\n\nThis program will let the sprite jump up and down\
+    \ the screen 3 times. Now we want to change the program so it will ask the user\
+    \ how many times the sprite should jump up and down. The user will type a value\
+    \ on the keyboard, and push the <Enter> key. The program will then use the value\
+    \ entered by the user in the [repeat] block. When values are provided by the user\
+    \ on the keyboard, it is called input to the program. (A value is placed IN to\
+    \ the program)."
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# Activity 6: Get a value from the user (input)\n\nChange the program Unit\
+    \ 2 JUMP to ask the user how many times the sprite should jump. You need to create\
+    \ a variable iJ.\n\n# Pseudocode\n\n# Scratch code\n\n```\nwhen the user clicks\
+    \ the green flag\nask \"How many times should I jump?\"\nenter iJumps\nrepeat\
+    \ iJumps times\n  go up 100 steps\n  wait 0.5 seconds\n  go down 100 steps\n \
+    \ wait 0.5 seconds\nend\n```\n\n![](img/760028ee1a0ddba727157948af276099_16_0.png)\n\
+    \nThe [ask] block is from the Sensing class\n\nThe [answer] variable can be found\
+    \ in the Sensing class. It is the variable that is typed on the keyboard is stored\
+    \ automatically.\n\n> Note: The number of jumps will be an integer value (the\
+    \ sprite cannot jump a decimal number of times – for exampl, 4.5 times). So a\
+    \ lower case i is added in front of the name of the variable."
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "# New knowledge explained\n\n| Pseudocode | Scratch block | Description |\n\
+    | --- | --- | --- |\n| ask \"How many times should I jump? \" | ![ask How many\
+    \ times should I jump? and wait] | The [ask] block (in the Sensing group) prompts\
+    \ the user to enter the data requested by the programmer using the keyboard. |\n\
+    | enter iJumps | ![set Jumps to answer] | - Scratch automatically puts the value\
+    \ that is entered into the keyboard into its own variable, *answer*.<br>- The\
+    \ [set] block (from the Variables class), then transfers the data from the variable\
+    \ *answer* to the variable iJumps (declared by the programmer.) |\n| | | The content\
+    \ of the variable changed answer, is on the right hand of the block, and it is\
+    \ transferred to the variable sName -on the left hand of the block. |\n\n# Activity\
+    \ 7: Obtain two input values\n\nCreate a Scratch program using the following pseudocode.\
+    \ Choose a smaller sprite such as a ball. Note that you have to create two variables.\n\
+    \n+   - when the user clicks on the green flag\n  - clear all previous graphics\
+    \ effects\n  - lift the pen up\n  - move to position (-160, 160)\n  - look to\
+    \ the right of the screen\n  - put the pen down\n  - ask \"How many steps should\
+    \ I take to draw a square (between 100 and 300)?\"\n  - enter `steps`\n\nCode\
+    \ blocks to manipulate a pen can be found in the *Pen* class. You need to click\
+    \ on the *Add extension* icon to make the Pen class visible\n\n![](img/760028ee1a0ddba727157948af276099_17_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "```\nask \"How thick must the pen be (between 1 and 10)?\"\nenter iPen\nset\
+    \ pen size to iPen\nrepeat 4 times\n    move steps\n    turn 90° clockwise\n \
+    \   wait 1 second\nend\n```\n\n# Displaying messages on the screen (output)\n\n\
+    When a computer program displays something on the screen, it is called output\
+    \ of the program. In Unit 1 you used the [say] block in many programs to display\
+    \ words in a speech bubble next to a sprite.\n\n> The [say] block is used to create\
+    \ output of a program.\n\nIn this example, the word 'Hello!' is the output of\
+    \ the program.\n\n![](img/760028ee1a0ddba727157948af276099_18_0.png)\n\n> The\
+    \ pseudocode to indicate this type of message will look as follows:\nndisplay\
+    \ \"Hello!\""
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'The output in this example is a word. In programming terminology a word or
+    a sentence consisting of alphabetical characters and/or digits and/or other special
+    characters (e.g. $ or *) is referred to as a string or text.
+
+
+    In pseudocode and most programming languages'' code, double quotes are used to
+    indicate that a value is a string, for example, "Hallo!" is a string. These are
+    more examples of strings:
+
+
+    +   "I am dancing"
+
+    "This is gr8!"
+
+    "PO Box 58234"
+
+
+    You can combine blocks to create output using a [join] block from the operators
+    class. The [join] block has two editboxes where you can enter sentences or variable
+    names to display.
+
+
+    These are examples of using [say], [join] and other blocks to create output:
+
+
+    ![](img/760028ee1a0ddba727157948af276099_19_0.png)
+
+
+    You can use multiple [join] blocks to concatenate (add together) different components
+    to form one output message.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'The pseudocode to indicate this code will look as follows:
+
+
+    iAge = 8
+
+    display "I am " + iAge + " years old"
+
+    The + symbol indicates that different components must be joined to form the output.
+    These components are:
+
+
+    | " I am " | + | iAge | + | " years old |
+
+    |--- | --- | --- | --- | --- |
+
+    | A string | + | A variable | + | A string |
+
+
+    # Activity 8: Display output
+
+
+    Add code to the program Unit 2 JUMP so the sprite will display a message to report
+    how many times it jumped. For example:
+
+
+    The pseudocode to indicate this type of message will look as follows:
+
+
+    display "I jumped " + jumps + " times"'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'Note the spaces that you will have to leave at the end of the first string,
+    and the beginning of the second string.
+
+    If you do not leave any spaces in the output strings, the output will look like
+    this:
+
+
+    Look at the following algorithm in pseudocode and the corresponding Scratch code.
+
+
+    # Pseudocode
+
+
+    # Scratch code
+
+
+    ```
+
+    when the user clicks the green flag
+
+    ask "What''s your name? "
+
+    enter sName
+
+    display "Sawubona " + sName
+
+    ```
+
+
+    ![](img/760028ee1a0ddba727157948af276099_21_0.png)
+
+
+    end
+
+
+    # Note the following
+
+
+    +   - Each line of the pseudocode is translated to a programming instruction (program
+    block).
+
+    - The name of a पर्सन consists of letters, therefore it is a string, and we add
+    the letter ''s'' to the variable name to remind us that the variable will contain
+    a string. The name of the variable that will contain the value entered by the
+    user on the keyboard is sName.
+
+    - To display a space between the word Sawubona and the value of sName, enter a
+    space after the word Sawubona. This can also be seen in the pseudocode example,
+    where a space was typed before the apostrophe closing the text string - "Sawubona
+    ",'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# Activity 9: Display name and age
+
+
+    Write pseudocode for a program where the sprite will ask a person''s name and
+    age, and display a sentence such as: ''Good day Katlego, you are 16 years old.''
+    Write a Scratch program based on the pseudocode.
+
+
+    +   - Interface
+
+    - Comparisons
+
+    - Retrieve
+
+
+    # Writing basic programs
+
+
+    The programs we have written up till now have been very plain, designed to introduce
+    you to the Scratch interface and basic programming language terminology. However,
+    the actual usefulness of computers lies in their ability to perform calculations
+    and quickly and accurately. The aim of learning to program is learning how to
+    instruct the computer to process data and perform calculations.
+
+
+    Before attempting to write code to solve problems, we need to understand how computers
+    work. In short, computers receive input, process the input and give output.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_22_0.png)
+
+
+    Here are some examples of input and output.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '| Input | Processing | Output |
+
+    | --- | --- | --- |
+
+    | Values entered by the user of the program. | | Results / answers displayed by
+    the computer. |
+
+    | How many books did you borrow? How many days late? | | Your fine is R 20 |
+
+    | 5 | Calculations done by the computer. As the user of the program, you do not
+    have to know how the cacluations are done. |
+
+    | Length of rectangle Width of rectangle | | The area is 44.1 The perimeter is
+    32.2 |
+
+    | 12.6 3.5 | |
+
+
+    For computers to accomplish a task
+
+    * receive input (from various sources, e.g. keyboard, mouse, storage media)
+
+    * perform calculations (usually mathematical in nature)
+
+    * make comparisons (and then perform certain actions as a result of this)
+
+    * give output (to various devices such as the screen, storage media, printer)
+
+    * store and retrieve data
+
+    * So the first thing we have to learn in programming is to identify input and
+    output, and decide on the processing that will be needed. We will show you some
+    examples on how to plan and write programs which involve calculations.
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Worked example: Cost of tickets
+
+
+    TUT students are selling tickets for a Casper Nyovest concert. The price of a
+    ticket is R200. You need a program that will read the name of the student who
+    wants to buy a ticket as well as the number of tickets the student wants to buy
+    (the name and number is the input to the program – the information to be supplied
+    by the user). The computer must then work out the amount to be paid and display
+    the result with an appropriate message. For example, ''Katlego you need to pay
+    R600''. The result to be displayed is the output of the program.
+
+
+    # Solve the problem yourself
+
+
+    Before you can write instructions for the computer to do calculations, you need
+    to analyse the problem, and be able to solve the problem yourself.
+
+
+    Plan Constants, Input, Processing and Output
+
+
+    | CONSTANT VALUE(S) AND INPUT | PROCESSING | OUTPUT |
+
+    | --- | --- | --- |
+
+    | Step 2: What values do you know that will not change the program? | Step 4:
+    If you assume you know the input value(s), how will you calculate the answer?
+    | Step 1: What do you need to calculate and/or display? |
+
+    | One ticket''s cost is R200 | | ![Katlego you need to pay R600]
+
+    | Step 3: What values do you need? | Let us pretend the input value number of
+    tickets bought is 3. Then we would calculate the total as: | |
+
+    | The name of the student. | | sName (The name of the student.) |
+
+    | The number of tickets bought: 3 * 200 = 600 | Now you can translate the mathematical
+    calculation to an assignment statement (a formula): | rTotal (The total cost of
+    the tickets.) |
+
+    | An assignment statement. Assign the value calculated on the right-hand side
+    of the = sign to the variable on the left | | |'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "| Constant value (from step 2) | Processing | Output |\n|---|---|---|n| Cost\
+    \ of one ticket (ONETICKET-200) | rTotalCost = iNumTickets * ONETICKET | Name\
+    \ of the learner (sName) |\n| Input (from step 3) | | |\n| Number of tickets (iNumTickets)\
+    \ | | Amount payable (rTotalCost) |\n\nThis table is called an Constant-Input-Processing-Ouput\
+    \ (CIPO) table. It is one of the tools you can use to develop an algorithm when\
+    \ you plan a program.\n\nWrite an algorithm for the program.\n\nThe complete algorithm\
+    \ in pseudocode is as follows:\nwhen the user clicks the green flag\n\nThe string\
+    \ created using the [join] blocks will be displayed in the speech bubble close\
+    \ to the sprite. You can also use the readouts for variables to display the values.\n\
+    \n```\nONETICKET = 200\nask \"What is your name?\" \nenter sName\nask \"How many\
+    \ tickets do you want to buy?\"\nenter iNumTickets\n```\n\nYou need to display\
+    \ the letter R in front of the amount, that the person who uses the program can\
+    \ see the amount as a currency in Rand.\n\n```\nrTotalCost = iNumTickets * 200\n\
+    display sName + \" you need to pay R \" + rTotalCost\n```\n\nend"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Translate the algorithm to programming code.
+
+
+    > NOTE
+
+    Always use the output that should appear on the screen to identify your variables''
+    names.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_26_0.png)
+
+
+    The output is made up of three parts, so you need to use [join] blocks.
+
+
+    It is good practice to use capital letters only for the name of values that will
+    not change during the run of the program. For example, in the program calculating
+    the cost of the ticket, it will stay R200 per person. If you want to change the
+    value to R250, you can see easily where the fixed values (constants) in your program
+    is when you use capital letters in the names.
+
+
+    # Activity 10: Cost of tickets
+
+
+    Watch the video to see how to create the output using the say and join blocks,
+    then write the program to calculate the cost of all tickets in Scratch.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_26_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'Run the program a number of times. Use different names and number of tickets
+    each time. See how the output changes because the program uses the value of the
+    variables you supplied.
+
+
+    Worked example: Calculate percentage
+
+    A student needs a program to calculate the percentage for a test. The student''s
+    score, and the total marks for the test need to be entered.
+
+
+    # Solve the problem yourself
+
+
+    Again you need to analyse the problem, and be able to solve the problem yourself.
+
+
+    Plan Constants, Input, Processing and Output
+
+
+    | CONSTANT VALUE(S) AND INPUT | PROCESSING | OUTPUT |
+
+    | Step 2: What values do you know will not change during the program? | Step 4:
+    If you assume know the input value(s), how will you calculate the answer? | Step
+    1: What do you need to calculate and/or display? |
+
+    | There are no fixed values | Let us pretend the student scored 45 out of 60.
+    Then we would calculate the percentage as follows: | The percentage for the test
+    |
+
+    | Step 3: What data values do you need? | 45/100 = 75 | |
+
+    | The score of the student. | You can write it as a formula: | |
+
+    | The total of the test. | | |
+
+    | Score of the student (iScore) | rPercentage = iScore/iTestTotal * 100 | The
+    percentage of the test (rPercentage) |
+
+    | Total of the test (iTestTotal) | | |
+
+
+    ![](img/760028ee1a0ddba727157948af276099_27_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Write an algorithm for the program.
+
+
+    The complete algorithm in pseudocode is as follows:
+
+
+    when the user clicks the green flag
+
+
+    ```
+
+    // Input                               Comments.
+
+    ask "What is your score?"
+
+    enter iScore
+
+    ask "What is the total for the test?"
+
+    enter iTestTotal
+
+    // Processing
+
+    rPercentage = iScore/iTestTotal * 100
+
+    // Output
+
+    display "You have " + rPercentage + "%"
+
+    ```
+
+
+    The two forward slashes // is used to indicate comments in a program. Anything
+    you write after the //, provides more information about the program.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_28_0.png)
+
+
+    +   - Test data
+
+
+    You can calculate the percentage of 45/60. It is 75. When you run your program,
+    you can use the value 45 for iScore, and 60 for iTestTotal. The values 45 and
+    60 are then called test data for your program.
+
+
+    # NOTE
+
+
+    Your program should work for ANY score and total, not just 45 and 60. That is
+    why you have to use variables in a program.
+
+
+    end
+
+
+    # Translate the algorithm to programming code.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_28_1.png)
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '![](img/760028ee1a0ddba727157948af276099_29_0.png)
+
+
+    # Activity 11: Calculate percentage
+
+
+    +   - Watch the video to see how to create the instructions to do calculations
+    using operator blocks.
+
+    - Write the program to calculate the percentage when a test score and total is
+    read from the keyboard.
+
+    - Run the program a number of times, using different values for the score and
+    test.
+
+
+    5_CalculationsUsingOperatorBlocks
+
+
+    ![](img/760028ee1a0ddba727157948af276099_29_1.png)
+
+
+    > Scratch will display all the decimal values for the answer. E.g. 44/60 = 73.3333333333.
+    When you learn to program using Java, you will learn how to change the value of
+    a variable to show a certain number of decimal values.
+
+
+    # Order of precedence in calculations
+
+
+    We already know how to perform calculations and apply mathematical rules. For
+    example,
+
+
+    In Computational Mathematics you learned the order of precedence of arithmetic
+    operations:
+
+
+    3 + 4 * 5 = 3 + (4 * 5) = 3 + 20 = 23.
+
+
+    Most programming languages have built-in ''knowledge'' of the order of precedence
+    in calculations; for example, multiplication and division are performed before
+    addition and
+
+
+    | Parentheses ()
+
+    Exponents ^
+
+    Multiply Divide MOD (* / %)
+
+    (operator on left side first)
+
+    Add Subtract (+ -)
+
+    (operator on left side first)|
+
+
+    Unit 2 : Basic programs in Scratch
+
+
+    NOT the same answer!'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'subtraction. If the following calculation is given to a computer, it will calculate
+    12/4 first.
+
+
+    3 + 8 + 12/4 = 3 + 8 + 3 = 14
+
+
+    When you want addition or subtraction to happen first in a calculation, you need
+    to use parentheses to ensure that does is done first. For example, when calculating
+    the average of three numbers, it should be done as follows:
+
+
+    ```
+
+    (70 + 65 + 81) / 3 = 216 / 3 = 72
+
+    ```
+
+
+    as pseudocode we can write rAvg = (iMark1 + iMark2 + iMark3) / 3
+
+
+    However, if the calculation is performed as follows (no brackets):
+
+
+    avg = iMark1 + iMark2 + iMark3 / 3 it will be interpreted as 70 + 65 + 81 / 3
+    = 70 + 65 + 27 = 162
+
+
+    > Division is done before plus.
+
+
+    When writing a program, the programmer has to handle mathematical principles correctly
+    when programming calculations – such as using parentheses – the programming language
+    has no way of ''knowing'' that parentheses should have been used to calculate
+    the average. It only performs the instruction as it provided.
+
+
+    In Scratch, the effect of parentheses and the order of precedence in calculations
+    is achieved by stacking various program blocks from the Operators group. In other
+    programming language the calculations are typed on one line, and the language
+    will automatically do the calculations in the correct way (following rules for
+    order of operations).
+
+
+    Here are the steps to perform the calculation 3 + 4 * 5 in Scratch:
+
+
+    +   1. The multiplication has to be completed first. So drag a multiplication
+    block from the Operators class to the script area, and enter the values 4 and
+    5.
+
+    2. Drag an addition block onto the scripts area. Enter the value 3.
+
+    3. Now plug the multiplication operator into the open slot on the right side of
+    the addition
+
+
+    ![](img/760028ee1a0ddba727157948af276099_30_0.png)
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "operator.\nNotice how the multiplication block appears to be raised higher.\
+    \ It is at the top of the stack.\nScratch will perform the calculation at the\
+    \ top of the stack (i.e. the multiplication) first.\n\nHere are more examples\
+    \ of the way stacking should be used to ensure the correct order of precedence:\n\
+    \n![](img/760028ee1a0ddba727157948af276099_31_0.png)\n\n12 \\div 6 \\div 2\n=\f\
+    rac{12}{6}/2\n12/6/2\nThis should be programmed as (12/6)/2, since the rules for\
+    \ the order of precedence indicate that division is carried out from left to right.\n\
+    \n12 \\div (6 \\div 2)\n=\frac{12}{6/2}\n12/(6/2)\n\n12 \\div 2 \\times 2\n=\f\
+    rac{12}{2} \\times 2\n12 / 2 * 2\nThis should be programmed as (12/2)*2, since\
+    \ division and multiplication are on the same 'level' in the order of precedence,\
+    \ and should be performed from left to right.\n\n12 \\div (2 \\times 2)\n=\frac{12}{2*2}\n\
+    12 / (2 * 2)"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# Activity 12: Practise stacking to effect order of precedence
+
+
+    Use mathematical operator blocks to calculate the following:
+
+
+    +   1. Add 5 to 20.
+
+    2. You scored 45 out of 60 for a test. Calculate your percentage.
+
+    3. Calculate the average of the three numbers 68, 89 and 77.
+
+    4. Calculate (3 + 2) / (1 + 1).
+
+    5. Determine the speed of a car that travels 14 km in 8 minutes, in/km.
+
+    6. Increase the value of 100 by 15%.
+
+    7. Calculate 15% of 100.
+
+    8. Decrease the value of 100 by 15%.
+
+
+    If you want to test a calculation quickly, you do not need to write a complete
+    program using a sprite and program blocks. You can use a mathematical operator
+    block only, enter values in the slots, and left-click on the block. A speech bubble
+    will appear containing the answer
+
+
+    ![](img/760028ee1a0ddba727157948af276099_32_0.png)
+
+
+    # Activity 13: VAT and total amount
+
+
+    Use the template provided below to plan a solution, and write an algorithm as
+    well as a Scratch program for the following problem:
+
+
+    Read the amount a customer spent at the bookshop. The program must calculate and
+    display the amount of VAT the customer should pay, as well as the total amount
+    (original + VAT) to be paid.
+
+
+    Plan Constants, Input, Processing and Output'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# CONSTANT VALUE(S) and INPUT PROCESSING OUTPUT
+
+
+    Step 2: What values do you know that will not change during the program?
+
+    VAT is 15% of the amount spent.
+
+    Step 3: What data values do you need?
+
+
+    Step 4: If you assume you know the input value(s), how will you calculate the
+    answer?
+
+    Let us pretend the customer spent R245.
+
+
+    Step 1: What do you need to calculate and/or display?
+
+    The amount VAT to be paid.
+
+    The total to be paid..
+
+
+    Calculate the amount VAT
+
+    Calculate the total to be paid.
+
+
+    # Input Processing Output
+
+
+    rVAT =
+
+    rTotalToPay =
+
+
+    # Write an algorithm for the program.
+
+
+    Complete the algorithm in pseudocode:
+
+
+    when the user clicks the green flag
+
+
+    ```
+
+    //Constant value
+
+    VAT_PERC = 0.15
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '```
+
+    // Input
+
+    ask "What is the amount spent? "
+
+    enter rSpent
+
+    // Processing
+
+    rVat =
+
+    rTotalPay =
+
+    // Output
+
+    display
+
+    display
+
+    end
+
+    ```
+
+
+    # Translate the algorithm to programming code.
+
+
+    Test data: Use the following values to test your program.
+
+
+    | rSpent | rVat | rTotalPay |
+
+    |---|---|--|
+
+    | 100 | 15 | 115 |
+
+    | 250.88 | 37.632 | 288.512 |
+
+
+    > NOTE
+
+    Every time you run the program, you can use a different value for the amount spent.
+    That is why the input and output values are called variables.
+
+    You should not program the values of the test data e.g. 100 or 250.88 in the code
+    of the program.
+
+
+    All decimal values will be displayed, not just 2 as we would prefer when displaying
+    a monetary value. You will learn how to display only 2 decimal values for values
+    when you program in Java.
+
+
+    Monetary value
+
+
+    C:\Users\wassermannu\AppData\Local\Programs\Scratch Desktop
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Activity 14: Pocket money
+
+
+    Ask the user''s age. Calculate the pocket money to be paid. Pocket money per month
+    is calculated as R20 for each year of the age. So a person who is 5 years old,
+    will receive R100 pocket money per year. Let year be an integer value.
+
+
+    Create an IPO-table, complete the algorithm and write a Scratch program to implement
+    the algorithm.
+
+
+    # Activity 15: Calculate average of 3 values
+
+
+    Enter the name of a student and the student''s marks (as percentages) for three
+    class tests written this term. Determine the average of the three marks. Display
+    the student''s name and average as output.
+
+
+    Create an IPO-table, complete the algorithm and write a Scratch program to implement
+    the algorithm.
+
+
+    # Activity 16: Calculate age this year
+
+
+    Ask the user for the current year and the user''s year of birth, and then calculate
+    and tell the user how old he or she will be in the current year.
+
+
+    Create an IPO-table, complete the algorithm and write a Scratch program to implement
+    the algorithm.
+
+
+    # Activity 17: Calculate perimeter and area
+
+
+    A builder wants to calculate the perimeter and surface area of the floor of a
+    room. Applying your knowledge of Mathematics, you know that the length and width
+    of a rectangular area are needed to calculate the area and perimeter. The table
+    below shows the input and output required as well as the processing of the data.
+
+
+    | Input | Processing | Output |
+
+    |---|---|--|
+
+    | The length of the room (rLength) | rPerimeter = 2 x rLength + 2* rwidth | The
+    perimeter (rPerimeter) |
+
+    | The width of the room (rWidth) | rArea = rLength *rwidth | The area (rArea)
+    |
+
+
+    Write an algorithm to obtain data, perform calculations and display the output.
+
+
+    Write a Scratch program to implement the algorithm.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# Data types of variables
+
+
+    All programming languages can manipulate different types of data. For example,
+    you have already used
+
+
+    +   * integer values (whole numbers, negative or positive e.g. -5; 8; 350)
+
+    * real values (decimal values, e.g. 3.44; -6.768686)
+
+    * strings (text values, e.g., a name "James", or an address "2 College Road ",
+    or a cell phone "08845561289 \ You cannot do a numerical calculation with a string
+    value.
+
+
+    There are more types of data, and we will learn to use them in this module:
+
+
+    +   * Manipulate
+
+    * Decimal value
+
+
+    ![](img/760028ee1a0ddba727157948af276099_36_0.png)
+
+
+    5_Different DataTypes
+
+
+    # Scratch-specific programming principle
+
+
+    Most programming languages require you to indicate the data type of a variable
+    when the variable is declared. Scratch does not require this. Instead, the data
+    type is determined by Scratch, based on the operations and calculations performed
+    on the variable.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_36_1.png)
+
+
+    +   * Declare a variable
+
+
+    ![](img/760028ee1a0ddba727157948af276099_36_2.png)
+
+
+    > Monetary values have a decimal value – even if the amount is R5.00 and the decimal
+    part of the value is 0, you will want to display 2 decimal values, e.g. R50.00,
+    or R67.70. Note: The ''R'' character is not part of the value the variable contains.
+    As the programmer you have to display the letter ''R'' in output values in Scratch.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_36_3.png)
+
+
+    # Naming conventions for variables
+
+
+    Scratch does not have rules about variable names. However, most programming languages
+    have strict rules about this, and may return an error if the rules are disregarded.
+    To prevent from becoming confused when programming in another language, we suggest
+    that you adhere to the following rules when naming variables:
+
+
+    +   * The first character of a variable name should be an alphabetical character
+    (not a number or symbol), and should be an indication of the type of value that
+    should be stored in the variable. For example: iCount (an integer value), rAverage
+    (a real value), sName (a string).
+
+    * Do not use spaces in variable names. For example, instead of ''Term Mark'',
+    rather use the name TermMark or Term_Mark.
+
+
+    Unit 2 : Basic programs in Scratch
+
+
+    ![](img/760028ee1a0ddba727157948af276099_36_4.png)'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '• Do not use non-alphabetic characters like ''/'' and ''*''. Only the underscore
+    character ''_'' is allowed.
+
+
+    • The name of the variable should describe its content. For example sName or iCount
+    or iMark.
+
+
+    • Use a capital letter for the first character of each word that make up the variable
+    name, e.g. sCellNumber, sDateOfBirth.
+
+
+    # Activity 18: Variable names
+
+
+    Indicate the following variable names are good choices or not. Provide a reason
+    when it is not a good choice, and provide a better alternative.
+
+
+    +   a) iPhoneNumber
+
+    b) sISBN
+
+    c) sUrnames
+
+    d) rNum2
+
+    e) sSum
+
+    f) sName&Surname
+
+    g) Endangered species
+
+    h) rTo
+
+    i) rAmountPayable
+
+    j) tShops
+
+    k) t1HoleCourseName
+
+
+    # Activity 19: Suitable variable names
+
+
+    Choose a suitable variable name for each of the following scenarios. The variable
+    name should reflect the type of the data.
+
+
+    +   a) The name of one of your subjects.
+
+    b) Test marks.
+
+    c) The average on your report card.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "+   d) To store ID numbers.\n\n+   e) To indicate the season.\n\n+   f) The\
+    \ variables you will need to calculate the area of a rectangle, as well as the\
+    \ variable where you will store the answer.\n\n+   g) To store a password.\n\n\
+    +   h) Two variables, inde for your grade, and one for the number of learners\
+    \ in grade.\n\n+   i) You want to calculate your budget. Which variables will\
+    \ you need to store your income, expenses, and the remainder of your money.\n\n\
+    # Activity 20: Km walked\n\nThe distance between a student's room and the campus\
+    \ is 500m. The student walks to campus and back home for 5 days. How many kilometers\
+    \ does the student walk each week?\n\nDo the calculation using a pocket calculator\
+    \ and writing down all the calculations.\n\nRefer to your calculations, and complete\
+    \ the following algorithm:\n\n```\nwhen the user clicks on the green flag\n  ask\
+    \ \"How far is your room from the campus (in m)?\" \n  enter rDist\n  ask \"How\
+    \ many days do you walk to campus?\" \n  enter numDays\n```\n\n```\ndisplay \"\
+    You have walked \", rKm, \" km this week\"\nend\n```"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: 'Complete the IPO-table for this solution
+
+
+    | Input | Processing | Output |
+
+    |---|---|---|
+
+    | | | |
+
+
+    Write a Scratch program to implement the algorithm.
+
+
+    Use the following test data to determine whether your program is correct.
+
+
+    | Distance in meter | Number of days | Km walked |
+
+    |---|---|---|
+
+    | 500 | 2 | 2 |
+
+    | 850 | 5 | 8.5 |
+
+    | 1300 | 4 | 10.4 |
+
+
+    # Activity 21: Library fine
+
+
+    A library charges a fine of 50c per day per book if a book is returned late.
+
+
+    | A student has 4 books and hand them in 5 days late. How much is the fine (in
+    Rand)? | A student has 9 books and hand them in 4 days late. How much is the fine
+    (in Rand)? | Write a formula in pseudocode to calculate the fine if x books are
+    y days late. |
+
+
+    Write an algorithm using valid variable names to read the number of books and
+    the number of days they have been returned late, then calculate and display the
+    fine in Rand.
+
+
+    Write a Scratch program to implement the algorithm.'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# Activity 22: Buy candy
+
+
+    A 100g of candy costs R6.50. A program is needed where the shopkeeper can enter
+    the weight (in gram) of the candy a customer buys, and then the program will display
+    the amount owed by the customer.
+
+
+    In Mathematics you calculated it as follows:
+
+
+    | 100g | R6.50 |
+
+    |---||
+
+    | rCandyWeight | rAmount |
+
+
+    Cross multiply (we do not use variables such as x and y, rather variable names
+    that describes the unknown value).
+
+
+    $100 * rAmount = 6.5 * rCandyWeight$
+
+
+    Rightarrow rAmount = \frac{6.5 * rCandyWeight}{100}$
+
+
+    Develop an algortih to read the weight of the candy bought, then calciate and
+    display the amount to be paid.
+
+
+    | Candyweight | Amount |
+
+    |---||
+
+    | 350 | R22.75 |
+
+    | 120 | R7.80 |
+
+
+    Write a Scratch program to implement the algorithm.
+
+
+    Use the test data provided to test your program.
+
+
+    # Activity 23: Apple profit
+
+
+    A bag with 10 apples costs R30. If you sell each apple for R5, how much profit
+    will you make? (Do the calculation here.)
+
+
+    A bag with 22 apples costs R50. If you sell each apple for R1.50, how much profit
+    will you make? (Do the calculation here.)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "```\nWrite an assignment statement in pseudocode to calculate profit using\
+    \ the following variable names:\n\niNumApples //The number of apples in a bag\n\
+    rProfit //Total profit when all the apples are sold\rcostBag //Cost for the bag\
+    \ of apples\nrSellOne // The amount you will charge for one apple\n```\n\nCreate\
+    \ an algorithm in pseudo code so a program will read how many apples are in a\
+    \ bag, what is the cost of the bag, how much will you charge for one apple. The\
+    \ program should calculate and display the total amount of profit when all the\
+    \ apples are sold.\n\n# Activity 24: Calculate phone call cost\n\nUse the template\
+    \ provided to plan a solution, and write an algorithm as well as a Scratch program\
+    \ for the following problem:\nThe first three minutes of a phone call costs 50c\
+    \ per minute. The remaining minutes (everything more than 3 minutes), costs 15c\
+    \ per minute. Write a program to calculate the total cost of a phone call when\
+    \ the duration of the call is provided. Assume the user will never enter a value\
+    \ less than 3.\n\nYou can draw a diagram such as the one below to indicate how\
+    \ the price of a phone call is calculated.\n\n| first 3 minutes | 4th minute |\
+    \ 5th minute | 6th minute | . . . |\n| --- | --- | --- | --- | --- |\n| 50c per\
+    \ minute | 15c | 15c | 15c | . . . |"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Plan Input Processing and Output
+
+
+    Step 2: What values must you use?
+
+
+    First 3 minutes cost 50c per minute
+
+
+    Remaining minutes cost 15c per minute.
+
+
+    Step 3: What information do you need?
+
+    (Input)
+
+
+    Step 1: What do you need to calculate
+
+    /or display? (Output)
+
+
+    The total cost of the phone call.
+
+
+    Step 4: If you use a test value, how will you calculate
+
+    the answer?
+
+
+    Let say the call was for 10 minutes
+
+
+    ![](img/760028ee1a0ddba727157948af276099_42_0.png)
+
+
+    | What is the cost of the first three minutes? |
+
+    | How many minutes were more than 3? |
+
+    | What is the cost for those minutes above 3 min? |
+
+    | Write a formula to calculate the total cost. |
+
+
+    Input
+
+
+    Processing
+
+
+    Output
+
+
+    ![](img/760028ee1a0ddba727157948af276099_42_1.png)
+
+
+    ```
+
+    rFirstCost = 3 * 0.5
+
+    iRemMin =
+
+    rCostRem =
+
+    rTotalCost =
+
+    ```
+
+
+    ![](img/760028ee1a0ddba727157948af276099_42_2.png)
+
+
+    Write an algorithm for the program.
+
+
+    Complete the algorithm in pseudocode:'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '```
+
+    when the user clicks the green flag
+
+    //Constant values
+
+
+    // Input
+
+    ask "What is the duration of the call? "
+
+    enter iDuration
+
+    // Processing
+
+
+    // Output
+
+    display
+
+
+    ```
+
+
+    Translate the algorithm to programming code.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# Multiple lines of output
+
+
+    Worked example: Output to a List
+
+    In a previous activity, you had to calculate the perimeter and area of a rectangle.
+
+    This was the code for the program:
+
+
+    ![](img/760028ee1a0ddba727157948af276099_44_0.png)
+
+
+    The way the output is displayed, is not really effective, since each value is
+    displayed for only 2 seconds, then it disappears. It would be better to use a
+    structure where all the output lines will be visible. In Scratch we can use a
+    structure called List. It can be found in the Variables class. A List is one structure
+    that consists of many lines – each line contains one value. When we use a List
+    as ouput structure, each line will contain a string. The output on the screen
+    will look as follows:
+
+
+    +   - List
+
+    - String
+
+
+    ![](img/760028ee1a0ddba727157948af276099_44_1.png)
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "![](img/760028ee1a0ddba727157948af276099_45_0.png)\n\n+   * The name of the\
+    \ Sprite in this program is *Calculator*.\n* The name of the List is *Results*.\n\
+    * There are four lines of output (the number of lines is indicated at the bottom\
+    \ of the List – *length 4*).\n\nThe algorithm can be written as follows:\n\nwhen\
+    \ the user clicks the green flag\n\n```\n// Input\nask \"Length of rectangle?\"\
+    \ \nenter rLength\nask \"Width of rectangle?\" \nenter rWidth\n// Processing\n\
+    rArea = rLength * rWidth\nrPerimeter = 2 * rLength + 2 * rWidth\n// Output to\
+    \ a List\naddToList \"Length = \" + rLength\naddToList \"Width = \" + rWidth\n\
+    addToList \"The area is: \" + rArea\naddToList \"The perimeter is: \" + rPerimeter\n\
+    end\n```\n\nUnit 2 : Basic programs in Scratch"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# The program will look as follows:
+
+
+    +   - To add a list, you click on the button Make a List in the Variable class.
+    In this example, the name of the list is Results.
+
+
+    +   - In other programming languages a List is called an array.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_46_0.png)
+
+
+    ![](img/760028ee1a0ddba727157948af276099_46_1.png)
+
+
+    +   - An empty list will appear on the screen. The name of the sprite, and the
+    name of the list will be displayed. The name Results was chosen, now it will be
+    clearer to a user what the meaning of the output.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_46_2.png)
+
+
+    The [delete all of] block removes all lines in the List. Therefore when the program
+    is executed a second time, the previous output will be deleted.
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '![](img/760028ee1a0ddba727157948af276099_47_0.png)
+
+
+    The [add .. :to] block adds the string created by the [join] block to the bottom
+    of the List.
+
+
+    +   - The sprite was renamed to Calculator.
+
+    - Each [add] block added the output string to the bottom of the List.
+
+    - Each line in the List is numbered (in this example 1 to 4).
+
+    - The number of lines in the List is displayed at the bottom of the list (in this
+    example it is 4).
+
+
+    ![](img/760028ee1a0ddba727157948af276099_47_1.png)
+
+
+    | Calculator: Results |
+
+    |---|---|
+
+    | Length = 12 | rLength |
+
+    | Width = 5 | rWidth |
+
+    | The area is 60 | rArea |
+
+    | The perimeter is 34 | rPerimeter |
+
+
+    Sometimes you will receive an example of help you to plan your program. Highlight
+    what have to be used.
+
+
+    the output of a program. You can use this output to all the values in the output
+    where variables will be
+
+
+    In the screenshot alongside, you can see
+
+
+    which values are obtained from variables.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_47_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# Activity 25: Area and perimeter - Display output to a List
+
+
+    Create the program for the previous worked example. Use the values in the examples
+    of output as test data.
+
+
+    | Calculator: Results | Calculator: Results |
+
+    |---|---|
+
+    | 1 Length = 12.5 | 1 Length = 3.8 |
+
+    | 2 Width = 3.4 | 2 Width = 2.4 |
+
+    | 3 The area is 42.5 | 3 The area is 9.12 |
+
+    | 4 The perimeter is 31.8 | 4 The perimeter is 12.399999999999999 |
+
+
+    Real values (also called floating point values), are not stored with complete
+    accuracy. For example, the value 0.5 is stored as 0.500000000000001. Therefore,
+    when real values are displayed, the programming language approximate the values.
+    However, the developers of Scratch did not build this functionality into Scratch
+    when displaying values to a List. When you program in Java, you will learn how
+    to prevent this type of display issue.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_48_0.png)
+
+
+    # Activity 26: Wages – display output to a List
+
+
+    William is a temporary worker and receives a wage of R100 per hour for the first
+    5 hours worked but for any additional hours hourly wage is increased by 15%. He
+    has to pay tax at a rate of 22.5% of his gross income. The hours worked by him
+    must be entered (e.g. 6.8). Assume he will work more than 5 hours. Calculate his
+    gross income, tax to be paid, and net income. The following is an example of the
+    output you need to display. Use the numbers in the example output as test data.
+
+
+    > Remember to plan
+
+
+    +   - Draw a diagram to represent the salary will be calculated.
+
+    - Indicate the variables in the examples of output.
+
+    - Determine the output and input variables, and use any number (e.g. 12) as input.
+
+    - Complete the calculation yourself. Ensure you are able to do the calculations
+    correctly by comparing your answer to the test data provided. Write a complete
+    algorithm, then write the Scratch code.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_48_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Calculator: Results
+
+
+    | | |
+
+    |---||
+
+    | 1 | Hours worked: 12 |
+
+    | 2 | Gross salary: R1305 |
+
+    | 3 | Tax: R293 625 |
+
+    | 4 | Nett salary: R1011375 |
+
+
+    # Calculator: Results
+
+
+    | | |
+
+    |---||
+
+    | 1 | Hours worked: 7 |
+
+    | 2 | Gross salary: R7330 |
+
+    | 3 | Tax: R164.25 |
+
+    | 4 | Nett salary: R5665.75 |
+
+
+    Certain values are ‘fixed’ – in this case:
+
+
+    +   - the rate for the first 5 hours (base rate),
+
+    - the percentage the hourly rate should be increased by, and
+
+    - the percentage tax.
+
+
+    You can set the values at the beginning of your program, and use the variables
+    in all calculations. In that way, if you decide to make changes to the values,
+    you do not need to find all the occurrences of the values in your code, you simply
+    change the values allocated to the variables.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_49_0.png)
+
+
+    In other programming languages, you indicate fixed values by using special key
+    words, and the programming language will not allow you to make changes to them.
+    The values are then called constants.
+
+
+    # ### Activity 27: Contractor fees – display output to a List
+
+
+    A contractor lays floor tiles at a tariff of R65.45 per square meter (m²). Calculate
+    the total cost to tile a room of a certain length and width in meter (as specified
+    by the user). The contractor requires a deposit of 10% of the cost prior to commencing,
+    and the balance on completion of the work. Calculate the deposit as well as the
+    balance. Display the area, cost, deposit and the balance. Use fixed variables
+    where relevant.
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '![](img/760028ee1a0ddba727157948af276099_50_0.png)
+
+
+    # Activity 28: Happy Doggie kennels
+
+
+    The Happy Doggie Kennels charges the following kennel:
+
+
+    +   - For the first day R60.00
+
+    - For day 2 and more R52.50 per day
+
+
+    The kennel also charges 25% of the total kennel fee to exercise the dogs each
+    day. The owner should pay separately for food for the dog charged at a fee per
+    day. Calculate and display the kennel and exercise fees, as well as the cost for
+    the food. (All dogs will stay for at least two days.)
+
+
+    +   - Kennel'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "when the user clicks the green flag\n\n```\n// Declare fixed values (constants)\n\
+    FIRSTDAY = 60\nOTHERDAYS = 52.5\nEXERCISEPCERC = 25\n\n// Input\ndisplay \"How\
+    \ many days did the dog stay? \"\nenter iNumDays\ndisplay \"What is the cost of\
+    \ food per day? \"\nenter rCostFoodday\n\n//Calculations\nrKernelFee =\nrExerciseFee\
+    \ =\nrKernel_Exercise =\nrTotalFood =\n\n```\n\n // Output to a List\n\naddToList\
+    \ \"Kennel and exercise fee R\", rKernel_Exercise\naddToList \"Cost for food R\"\
+    , rTotalFood\n\n> Note\nThere are 4 variables used in the calculations (processing).\
+    \ Two of them are output variables (rTotalFood and rKernel_Exercise).\n\nThe other\
+    \ two variables are used in the calculations to determine the output values, but\
+    \ they are not displayed (rKernelFee and rExerciseFee). These type of variales\
+    \ are called intermediate variables.\n\nend"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Activity 29: Wage for 4 weeks
+
+
+    Josephine is working as a waitress at a restaurant:
+
+
+    +   - Read her hourly wage from the keyboard.
+
+    - She works 8 hours per day.
+
+    - She works 5 days a week.
+
+    - She also works every Sunday for 5 hours.
+
+    - On Sundays she is paid double the hourly rate.
+
+    - She usually gets tips of approximately R50 per hour.
+
+
+    Calculate her (approximate) income in a month that has 4 weeks.
+
+
+    An example of output is provided. Use the output to determine which values to
+    calculate and display.
+
+    Write a Scratch program based on the pseudocode.
+
+
+    | Josephine: WageCalculator |
+
+    |---||
+
+    | 1 | Hourly rate: R120 |
+
+    | 2 | Income for hours worked: R21600 |
+
+    | 3 | Income tips: R8500 |
+
+    | 4 | Total income: R30100 |
+
+    | | length 4 = |
+
+
+    # Activity 30: Sell magwinyia
+
+
+    Pulani made cakes magwinyia to sell to fellow students. The muffins she does not
+    sell, she gives away to students in need (so she does not receive money for them).
+    She wants a program to calculate her profit per day.
+
+
+    The following values are constants:
+
+
+    The following values should be entered for a specific day:
+
+
+    +   - The cost price to bake one dozen.
+
+    - The price of one magwinyia.
+
+
+    +   - The number of dozens of magwinyia she baked.
+
+    - The number of magwinyia she sold.
+
+
+    when the user clicks the green flag
+
+
+    Calculate and display:
+
+
+    ```
+
+    // Declare fixed variables
+
+    COSTDOZEN = 32
+
+    COSTONE = 3.5
+
+    ```
+
+
+    +   - how much money she needed to bake the magwinyia,
+
+    - what percentage of magwinyia did she sell,
+
+    - how much money she received from her sales,
+
+    - how much profit she made.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "```\n// Input\ndisplay \"How many dozens of magwinya did she bake? \" \nenter\
+    \ iNumDozens\ndisplay \"How many magwinya did she sell? \" \nenter iNumMagwinyaSold\n\
+    // Processing\rmoneyNeeded = \nrPercSold = \rmoneyFromSales = \rProfit =\n// Output\n\
+    addToList(\"Money needed was R\" + moneyNeeded)\naddToList(\"Percentage sold:\
+    \ \" + percsold, \"%%\"\naddToList(\"Money earned from sales R\" + moneyFromSales)\n\
+    addToList(\"Profit made R\" + profit)\nend\n```"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "# Calculations with integer values\n\nIn Computational Mathematics you learned\
+    \ that many calculations require you to do calculations with integer numbers.\
+    \ The following are examples of various calculations where the results are integer\
+    \ values. The table contains the mathematical equation, as well as the pseudocode\
+    \ and Scratch blocks necessary to do the calculations.\n\n| Mathematical scenario\
+    \ | Pseudocode | Scatch program block |\n| --- | --- | --- |\n| We have 13 sweets,\
+    \ and need to divide it equally between 4 children. How many sweets will each\
+    \ child receive? We need to use integer division. \n\n13 \\ 4 = 3 \n\n(3 * 4 =\
+    \ 12, so you can give each child 3 sweets) \n\nWe can also use the floor notation\
+    \ to indicate that a value should be 'rounded down', or we can say the fraction\
+    \ part of the number should be removed (truncated). | How will we calculate the\
+    \ number of sweets each child should receive for any number of sweets, and any\
+    \ number of children? \n\nUse the following variables:\n\n`iNumsweets; iNumChildren;\
+    \ iNumEach` \n`iNumEach = iNumsweets / iNumChildren` \nor\n`iNumEach = |iNumsweets/iNumChildren|`\
+    \ | set #NumEach to floor of #Numsweets / NumChildren |\n\nWe have 13 sweets,\
+    \ and need to divide equally between 4 children. How many sweets will be left\
+    \ over after each child received the same number of sweets? We need to use the\
+    \ modulus operator (MOD).\n\nHow will we calculate the number of sweets that will\
+    \ remain for any number of sweets, and any number of children? \n\nUse the following\
+    \ variables:\n\n`iNumsweets; iNumChildren; iNumLeft`\n\nUnit 2 : Basic programs\
+    \ in Scratch"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# 13 MOD 4 = 1
+
+
+    (13 = 4 * 3 + 1, so you can give each child 3 sweets, and 1 sweet will remain).
+
+
+    Joseph wants to paint his mother''s house and calculated that he needs 164 litres
+    of paint. However, the paint is only sold in 20 litre containers. How many containers
+    of paint must he buy?
+
+
+    164/20 = 8.2 – therefore we need to buy 9 containers. The value 8.2 must be ''rounded
+    up''
+
+
+    In Mathematics we can use the ceiling notation to indicate that a value should
+    be rounded up.
+
+
+    $\lceil \frac{164}{20} \rceil$
+
+
+    iNumLeft = iNumSweets MOD iNumChildren
+
+
+    or
+
+
+    iNumLeft = iNumSweets % iNumChildren
+
+
+    How will we calculate the number of containers for any number of litres paint,
+    and any size container. Use the following variables:
+
+
+    ```
+
+    iLitrePaint ; iNumContainer; iNumContainers = [iLitrePaint/iNumContainer]
+
+    ```
+
+
+    Programming languages have methods available to ''round a value up''. In Scratch
+    we have the ceiling method.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_55_0.png)
+
+
+    Unit 2 : Basic programs in Scratch
+
+
+    52'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# Determine results for integer division and MOD
+
+
+    You can use any of the following methods to determine the results for the MOD
+    and integer division (/) operators:
+
+
+    # Example 1
+
+
+    15 ÷ 6 = 2 remainder
+
+
+    15 = 6 * 2 + 3
+
+
+    15 MOD 6 = 3
+
+
+
+    (The remainder after long division)
+
+
+    On your pocket calculator the result of the division will be 2.5. The result of
+    integer division is the number before the decimal point. Just ignore the fraction.
+
+
+    15 + 6 = 25
+
+
+    # Example 2
+
+
+    5 ÷ 7 = 0 remainder
+
+
+    5 = 7 * 0 + 5
+
+
+    5 \ 7 = 0
+
+
+    5 MOD 7 = 5'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# Activity 31: Integer division and mod
+
+
+    Find the missing numbers:
+
+
+    | 35 ÷ 6 = * + | 35 ÷ 6 = remainder | 35 \ 6 = | 35 MOD 6 = |
+
+    | 9 = 2 * + + | 9 ÷ 2 = remainder | 9 \ 2 = | 9 MOD 2 = |
+
+    | 2 = 9 * + + | 2 ÷ 9 = remainder | 2 \ 9 = | 2 MOD 9 = |
+
+    | 134 = 7 * + + | 134 ÷ 7 = remainder | 134 \ 7 = | 134 MOD 7 = |
+
+    | 36 = 6 * + + | 36 ÷ 6 = remainder | 36 \ 6 = | 36 MOD 6 = |
+
+    | 12 = 2.5 * + + | 12 ÷ 2.5 = remainder | 12 \ 2.5 = | 12 MOD 2.5 = |
+
+
+    # Activity 32: Chairs in student centre
+
+
+    TUT has a certain number of chairs available to place in the student centre for
+    a concert. Write an algorithm to calculate the maximum number of rows of 54 chairs
+    each that can be filled with chairs. Calculate how many chairs will be left. (The
+    number of available chairs must be read from the keyboard.)
+
+
+    Write a Scratch program based on the algorithm.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# Activity 33: Tablets in bottles
+
+
+    A medicine factory has a certain number of tablets (read the number of tablets
+    from the keyboard). They have two types of bottles. The one can hold 250 tablets,
+    and the other 15 tablets. They want to fill all the bottles that can contain 250
+    tablets first, and then place the remaining tablets in the bottles that can hold
+    15 tablets. Calculate and display how many bottles of each size can be packed,
+    and how many tablets will remain. Use the following variables (you may have other
+    variables as well as if you need to):
+
+
+    iNumTablets; iNumB250; iNumB15; iRemTablets
+
+
+    | Chemist: Tablet summary |
+
+    |---||
+
+    | 1 | 1200 tablets |
+
+    | 2 | 4 bottles with 250 tablets |
+
+    | 3 | 13 bottles with 15 tablets |
+
+    | 4 | 5 tablets remaining |
+
+    | | length 4 | |
+
+
+    # Activity 34: Number of 85g packets
+
+
+    A school receives two containers of sweets, each containing a certain kilogram
+    of sweets (read the mass from the keyboard). How many small packets of sweets
+    of 85g each can be packed using the sweets from both containers?
+
+
+    Write an algorithm to solve the problem, write a Scratch program based on the
+    algorithm.
+
+
+    | Teacher: summary sweets |
+
+    |---||
+
+    | 1 | 8 + 5 kg |
+
+    | 2 | You had 13 kg of sweets |
+
+    | 3 | You can make 152 packet of 85g each |
+
+    | | length 3 | |'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# Obtain more input after output
+
+
+    In Activity 13: , we wrote the following program:
+
+
+    When you buy a number of articles, you wait to see the amount you need to pay
+    on the cash register, before you hand over money to the cashier. For example,
+    if you have to pay R45.00, you can pay with a R50.00 note, and receive R5.00 change.
+    Or you can pay using a R100.00 note, and receive R55.00 change.
+
+
+    ![](img/760028ee1a0ddba727157948af276099_59_0.png)
+
+
+    We are going to adjust this program:
+
+
+    +   - this time we are going to ask the user what amount the customer pays after
+    displaying the amount,
+
+    - then calculate and display the amount of change to be returned to the customer.
+
+
+    Write an algorithm for the program.
+
+
+    ```
+
+    when the user clicks the green flag
+
+    // Constant value
+
+    VAT_PERC = 0.15
+
+    // Input
+
+    ask "What is the amount spent? "
+
+    ```
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '```
+
+    enter rSpent
+
+    // Processing
+
+    rVat = VAT_PERC * rSpent
+
+    rTotalPay = rSpent + rVat
+
+    // Output to a List
+
+    addToList("Amount is R" + rSpent)
+
+    addToList("VAT R" + rVat)
+
+    addToList("Customer needs to pay R" + rTotalPay)
+
+    // Input - user needs to see the total amount before deciding what to pay
+
+    ask "How much does the customer pay? "
+
+    enter rMoney
+
+    // Processing
+
+    rChange = rMoney - rTotalPay
+
+    // Output to a List
+
+    addToList("Customer paid R" + rMoney)
+
+    addToList("Change is R" + rChange)
+
+    ```
+
+
+    The amount to be paid will be displayed in the List. The user of the program can
+    see what needs to be paid.
+
+
+    The program will display a prompt to ask the user for the amount the customer
+    will pay, and read a value from the keyboard (input).
+
+
+    Translate the algorithm to programming code.
+
+
+    +   - The complete program will look as follows:'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Example of output.
+
+
+    ```
+
+    when clicked
+
+
+    delete all of cashRegister
+
+    set VAT_PERC to 0.15
+
+    ask What is the amount spent? and wait
+
+    set rSpent to answer
+
+    set rVAT to VAT_PERC
+
+    set rTotalPay to rSpent + rVAT
+
+    join Amount is R rSpent to cashRegister
+
+    join RVAT is R rVAT to cashRegister
+
+    join Customer needs to pay R rTotalPay to cashRegister
+
+    how much does the customer pay? and wait
+
+    set rMoney to answer
+
+    set rChange to rMoney - rTotalPay
+
+    join Customer paid R rMoney to cashRegister
+
+    join Change is R rChange to cashRegister
+
+    ```
+
+
+    | Amount is R350 |
+
+    | Vat is R52.5 |
+
+    | Customer needs to pay R402.5 |
+
+    | Customer paid R500 |
+
+    | Change is R97.5 |
+
+
+    + length 5
+
+
+    +   * The Sprite was renamed Cashier.
+
+    * Each [add] block added the output string to the bottom of the List.
+
+    * Each line in the List is numbered (in this example it is 5).
+
+    * The number of lines in the List is displayed at the bottom of the list (in this
+    example it is 5).
+
+    * Scratch does not show 2 values after the decimal point as we would prefer when
+    displaying a monetary value. For example, display R52.50 – it displays R52.5.
+    In any other programming languages it is possible to format the output with 2
+    decimal values quite easily.
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# Activity 35: Calculate cost and discount
+
+
+    Write pseudocode for a program that will do the following:
+
+
+    +   - Read the number of items a customer buys and the price of one item. (All
+    items have the same price.)
+
+    - Display the cost of all the items, and ask the user what percentage discount
+    must be given.
+
+    - Display the discount amount, as well as the final amount to be paid.
+
+
+    An example of output is provided. Use the output to determine which values to
+    calculate and display. Write a Scratch program based on the pseudocode.
+
+
+    | Cashregister: Results |
+
+    |---||
+
+    | 1 Number of items: 10 |
+
+    | 2 Cost of one item: R55 |
+
+    | 3 Total cost: R550 |
+
+    | 4 Discount is 6% |
+
+    | 5 Discount amount: R33 |
+
+    | 6 Amount to pay: R517 |
+
+
+    # Activity 36: Calculate installment per month
+
+
+    Write pseudocode for a program that will do the following:
+
+
+    +   - Read the amount a person wants to loan from a bank.
+
+    - Read the interest rate that will be charged.
+
+    - Display the total loan amount.
+
+    - Ask the user how many years the person wants to pay back the loan.
+
+    - Calculate and display what the installment for each month should be.
+
+
+    An example of output is provided. Use the output to determine which values to
+    calculate and display. Write a Scratch program based on the pseudocode.
+
+
+    | InstallmentCalculator: Results |
+
+    |---||
+
+    | 1 Loan amount is R15000 |
+
+    | 2 Interest rate is 8% |
+
+    | 3 Final loan is R16200 |
+
+    | 4 You will pay for 2 years |
+
+    | 5 Each month you will pay R675 |
+
+
+    # Activity 37: Knowledge questions
+
+
+    +   a) What is a variable?
+
+    b) What is the difference between a radiobutton and a checkbox?
+
+    c) How can a readout be used to help you find errors in your program?'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'd) How can you determine whether a variable has stage scope or sprite scope?
+
+
+    e) What is an IPO table?
+
+
+    f) What is an algorithm?
+
+
+    g) Which character(s) are used to indicate a comment in an algorithm?
+
+
+    h) Why is it useful to declare some values as fixed values (constants) in a program?
+
+
+    i) How will you explain the difference between integer division and MOD to another
+    student?
+
+
+    j) Would you recommend that a programmer adds comments to a program? Motivate
+    your answer.
+
+
+    # Activity 38: Skills checklist
+
+
+    Ensure you can do the following:
+
+
+    | | I know ✓ |
+
+    | a) Define input and output for a given programming problem. | |
+
+    | b) Complete an IPO table as part of designing an algorithm. | |
+
+    | c) Choose valid variable names based on best practices standards. | |
+
+    | d) Identify fixed-value variables (constants) and write it in the correct section
+    of an algorithm. | |
+
+    | e) Suggest valid data types for variables by indicating the data type in an
+    algorithm. | |
+
+    | f) Apply the rules of the order of processing when writing pseudo code for a
+    mathematical calculation. | |
+
+    | g) Design an algorithm to solve a basic mathematical problem requiring sequential
+    steps, present it in pseudo code, and implement it in Scratch providing correct
+    output. | |
+
+    | h) Add comments in a program to clarify the flow of a program. | |
+
+    | i) Display the value of a variable on the stage using readouts. | |
+
+
+    ![](img/760028ee1a0ddba727157948af276099_63_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '| j) Decide whether a variable should have sprite or stage scope. | | |
+
+    | k) Design programming solutions to solve basic mathematical problems using mathematical
+    operators such as addition, subtraction, multiplication, division, integer division
+    and MOD. | | |
+
+    | l) Apply the rules of the order of processing by using stacking of code blocks
+    in Scratch. | | |
+
+    | m) Display multiple lines of output on a list on the stage. | | |
+
+    | n) Write programming solutions where more data must be obtained after output
+    has been displayed by the program. | | |'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# # Reflection
+
+
+    +   1. What was the purpose of the lesson content you rediscussing?
+
+    2. What did you learn that will advance your future learning?
+
+    3. What new knowledge and skills did you learn today? (Tip: To help you to answer
+    this question – if someone asks you tonight – “So, what did you learn in class
+    today?” – what will you answer them? Your answers can, for example, start with
+    “I am now able to....I managed to ....I learned learned how to ....)
+
+    4. What did you figure out on your own?
+
+    5. What is still challenging or confusing for you to get your mind around?
+
+    6. What did you find most challenging today?
+
+    7. Are you now confident that you have mastered that difficult concept / skill?
+
+    8. If not – what are you going to do to make it work?
+
+    9. How was your thinking extended or pushed today?
+
+    10. How are the knowledge and skills you learned today connected to what you already
+    knew?
+
+    11. Did you discover a connection today that you were not aware of previously?
+
+    12. What did you enjoy doing and why?
+
+    13. What do you think could be done differently in today’s lesson?
+
+    14. What did you discover that may make someone else’s life easier in future classes?
+
+
+    (Sackson, 2011)
+
+
+    (Harvard Graduate School of Education, n.d.)
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# Sources consulted
+
+
+    2018 Scratch Foundation. (2015, June 28). Retrieved from Code-to-Learn Foundation:
+    http://scratchfoundation.org/about-us
+
+    Coetzee, C., & Wassermann, U. (2016). Reflections on the application of scaffolding
+    principles to support transfer of mathematical skills to entry-level
+
+    alalgorithm design in a novice programming course. EdMedia. Vancouver.
+
+
+    edSurge. (2015, June 28). Retrieved from Learn to Code, Code to Learn: https://www.edsurge.org/n/2013-05-08-learn-to-code-code-learn
+
+    Erasmus, H. G., & Pretorius, C. M. (2012). Basic Programming Principles (2nd ed.).
+    Cape Town, South Africa: Pearson Education South Africa (Pty)
+
+    Ltd.
+
+
+    Farrell, J. (2002). Programming Logic and Design, Introductory (2nd ed.). Boston:
+    Course Technology.
+
+    Liang, D. Y. (2013). Introduction to Java Programming: Comprehensive Version (9th
+    ed.). Harlow, England: Pearson Education Limited.
+
+
+    Murach, J. (2017). Murach’s Java programming (5th ed.). United States of America:
+    Mike Murach & Associates, Inc.
+
+    ackon, E. (2011, 10 ways to encourage student reflection. From What Ed said:
+
+    https://whatedsaid.wordpress.com/2011/06/11/10-ways-to-encourage-student-reflection-2/
+
+
+    ScratchEd. (2015, June 28). What is computational thinking? Retrieved from ScratchEd:
+    http://scratchched.gse.harvard.edu/ct/defining.html
+
+    Tshwane University of Technology. (2019). FPIDS01:Practical Study Guide. (U. Wassermann,
+    Compiler) Pretoria Pretoria, Gauteng: Tshwane University of
+
+    Technology.
+
+
+    Wassermann, U., Gentle, E., Gibson, K., Noomé, C., Van Zil, S., & Zeeman, M. (2014).
+    IT is gr8! @ Grade 11: Delphi, Pretoria, South Africa: Study
+
+    Opportunities.
+
+
+    Wassermann, U., Noomé, C., Gentle, E., Gibson, K., Macmillan, P., & Zeeman, M.
+    (2011). IT is gr8! @ Grade 10. Pretoria, South Africa: Study
+
+    Opportunities.
+
+
+    Unit 2 : Basic programs in Scratch'
+  merge: -1
+  img_proc: true
