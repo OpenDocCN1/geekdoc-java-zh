@@ -1,0 +1,3569 @@
+- pgno: 0
+  md: '# # TOP JAVA CHALLENGES
+
+    CRACKING THE CODING INTERVIEW
+
+
+    Based on real questions
+
+
+    Moises Gamio
+
+    Founder, codersite.dev'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Top Java Challenges
+
+
+    Cracking the Coding Interview
+
+
+    by Moises Gamio
+
+
+    Copyright © 2020 Moises Gamio. All rights reserved.
+
+
+    It cannot reproduce any part of this book, stored in a retrieval system, or transmitted
+    in any form or by any means, electronic, mechanical, photocopying, recording,
+    or otherwise, without the publisher''s express written permission.
+
+
+    Once you have read and used this book, please leave a review on the site that
+    you purchased it. By doing so, you can help me improve the next editions of this
+    book. Thanks, and I hope you enjoy using the text in your job interview! If you
+    find any error in the text, code, or suggestions, please let me know by emailing
+    at codersitedev@gmail.com.
+
+
+    Cover designer: Maria Elena Gamio
+
+
+    ISBN: 9798650252368'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: For Lorena
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# # Contenido
+
+
+    PREFACE ... vii
+
+
+    Introduction ... 1
+
+
+    +   * Algorithms and Data structures ... 1
+
+    * Abstract Data Types ... 1
+
+    * How to develop a Usable Algorithm ... 1
+
+    * Clean Code ... 1
+
+    * Test-Driven Java Development ... 2
+
+
+    # Arrays and Strings ... 3
+
+
+    +   * 1.0 Fundamentals ... 3
+
+    * 1.1 Reverse a Text ... 5
+
+    * 1.2 Validate If a String Has All Unique Characters ... 8
+
+    * 1.3 Validate If a String Is a Palindrome ... 9
+
+    * 1.4 Compare Version Numbers ... 10
+
+    * 1.5 Remove Duplicates from a List ... 12
+
+    * 1.6 Rotate a Matrix by 90 Degrees ... 13
+
+    * 1.7 Items in Containers ... 15
+
+    * 1.8 Shopping Options ... 18
+
+
+    # Linked Lists ... 21
+
+
+    +   * 2.0 Fundamentals ... 21
+
+    * 2.1 Implement a Linked List ... 22
+
+    * 2.2 Reverse a Linked List ... 24
+
+
+    # Math and Logic Puzzles ... 26
+
+
+    +   * 3.0 Fundamentals ... 26
+
+    * 3.1 Sum of All Even Numbers from 1 to a Given Integer ... 27
+
+    * 3.2 Validate a Leap Year ... 28
+
+    * 3.3 Given an Integer N, Returns the Smallest Number of Digits ... 29
+
+    * 3.4 Fizz-Buzz ... 31
+
+    * 3.5 Verify If a Number is a Valid Power of Base ... 32
+
+    * 3.6 Validate If a Number Is Prime or Not ... 33
+
+    * 3.7 Distance Between Two Points ... 34
+
+    * 3.8 Write an Immutable Class to convert Currencies ... 36
+
+    * 3.9 Number of Products of Two Consecutive Integers ... 38
+
+    * 3.10 Assemble Parts in Minimum Time ... 39
+
+
+    # Recursion ... 41
+
+
+    +   * 4.0 Fundamentals ... 41
+
+    * 4.1 Calculate Factorial of a Given Integer N ... 41
+
+    * 4.2 Calculate Fibonacci Series ... 42
+
+
+    # Sorting and Searching ... 44'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '5.0 Fundamentals 44
+
+
+    5.1 Bubble Sort 44
+
+
+    5.2 Insertion Sort 47
+
+
+    5.3 Quick Sort 48
+
+
+    5.4 Binary Search 50
+
+
+    # Stacks and Queues 53
+
+
+    6.0 Fundamentals 53
+
+
+    6.1 Delimiter Matching 54
+
+
+    6.2 Queue via Stacks 56
+
+
+    6.3 Reverse a String using a Stack 57
+
+
+    # Hash Table 59
+
+
+    7.0 Fundamentals 59
+
+
+    7.1 Design a Hash Table 60
+
+
+    7.2 Find the Most Frequent Elements in an Array 63
+
+
+    7.3 Nuts and Bolts 64
+
+
+    # Trees 66
+
+
+    8.0 Fundamentals 66
+
+
+    8.1 Binary Search Tree 67
+
+
+    8.2 Tree Traversal 70
+
+
+    # Graphs 74
+
+
+    9.0 Fundamentals 74
+
+
+    9.1 Depth-First Search (DFS) 75
+
+
+    9.2 Breadth-First Search (BFS) 81
+
+
+    # Coding Challenges 86
+
+
+    10.0 Fundamentals 86
+
+
+    10.1 Optimize Online Purchases 86
+
+
+    10.2 Tic Tac Toe 94
+
+
+    # Big O Notation 114
+
+
+    Time and Space Complexity 114
+
+
+    Order of Growth of Common Algorithms 114
+
+
+    How to Find the Time Complexity of an Algorithm 117
+
+
+    Why Big O Notation ignores Constants? 118'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# PREFACE
+
+
+    I am a software engineer who faced real interviews as a candidate for startups
+    and big companies. Throughout the years, I have sourced factual questions that
+    have been tried, tested, and commented on step by step and are now part of this
+    book! I hope you find them practical and valuable in your career search.
+
+
+    Yes, your CV matters. The job market is tough, and big firms and tech startups
+    receive many applicants every day, so the need to filter the one becomes a daunting
+    process. The interview by phone and the code challenge to be solved at home will
+    lead you to the last and most decisive stage of the recruiting process, where
+    the interviewer evaluates your problem-solving skills and knowledge of efficient
+    data structures and algorithms.
+
+
+    Usually, the interviewer poses a complex problem to solve in a limited time. You
+    need to provide rationales about design choices made in your proposed solution
+    in terms of resource and efficiency.
+
+
+    Therefore, knowing the most appropriate data structures and algorithms to solve
+    complex problems frequently used in the recruiting process can be decisive. Whether
+    your knowledge of efficient data structures and algorithms is scarce or buried
+    in your memory since you learned them for the first time, this book can help you.
+    It includes the most common questions, and their respective solutions, that you
+    can find in a real interview. Recall, the more prepared you are, the more points
+    you accumulate objectively concerning other candidates.
+
+
+    This book includes typical questions based on real interviews that you must know
+    and practice. All solved and explained in detail.
+
+
+    Typical questions include String manipulation, arrays, variables swapping, linked
+    list, refactoring, recursion, searching, stacks, queues, trees, graphs, optimization,
+    and games. In these questions, you can see how to choose the proper data structure
+    for their optimal implementation.
+
+
+    Also included are questions where you can design an algorithm based on the test
+    development-driven approach, which is exceptionally essential for today''s companies.
+
+
+    The more prepared and confident you are, the better the chances of negotiating
+    your next salary.
+
+
+    Moises Gamio
+
+
+    Software Engineer, Senior Java Developer'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Introduction
+
+
+    # Algorithms and Data structures
+
+
+    Data structures refer to how data is organized and stored and can impacts how
+    fast your program runs.
+
+
+    An algorithm is a set of instructions well defined for accomplishing a task or
+    solve a problem.
+
+
+    It is possible to have two different algorithms that solve the same problem, but
+    it matters which one is better in terms of performance.
+
+
+    # Abstract Data Types
+
+
+    Abstract Data Type (ADT) is a data type, which specifies a set of data and a set
+    of operations that can perform with that data. It''s called abstract because only
+    its behavior is defined but not its implementation.
+
+
+    # How to develop a Usable Algorithm
+
+
+    +   - Model the problem, identifying the elements of the problem.
+
+    - Design a sequence of steps algorithm should do, defining the data structures
+    and data types.
+
+    - Is the algorithm fast enough and fit in memory? Here you must refactor the algorithm,
+    possibly changing the data structures and the sequence of steps. Big O Notation
+    is your helper in this task.
+
+    - Iterate until you are satisfied.
+
+    - We are ending possibly in a new abstract data type.
+
+
+    # Clean Code
+
+
+    Clean code can be read and enhanced by a developer other than its original author.
+
+
+    If you want to be a better programmer, you must follow these recommendations.
+
+
+    Clean code has Intention-Revealing names
+
+
+    Names reveal intent. Someone who reads your code must understand the purpose of
+    your'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'variable, function, or Class.
+
+
+    | Real situation: | It must be refactored to this: |
+
+    | int sID; //supplier Id | int supplierId; |
+
+    | int artDelPrice; | int articleDeliveredPrice; |
+
+
+    Even with external dependencies:
+
+
+    ```
+
+    private Z_E2F_RS_Result e2fResult; //ingredients recordset
+
+    ```
+
+
+    It must be refactored to:
+
+
+    private Z_E2F_RS_Result ingredients;
+
+
+    Imagine that we don''t have the //ingredients comment in e2fResult variable. Then,
+    further in any part of our code, when we try to process this variable, we have
+    the following sentence:
+
+
+    ```
+
+    e2f = e2fResult[];
+
+    ```
+
+
+    And we don''t know what does e2f means! Well, someone suggests asking the person
+    responsible for this code. But that guy is not at the office. Well, send it an
+    email, and he is on holiday!
+
+
+    But if, instead, we adopt names that reveal intent from the beginning, we could
+    avoid these catastrophic scenarios.
+
+
+    ```
+
+    ingredient = ingredients[];
+
+    ```
+
+
+    Throughout this book, you will see how important these practices are to write
+    efficient readable algorithms.
+
+
+    # Test-Driven Java Development
+
+
+    Test-Driven Development (TDD) is a process, which is based on a procedure called
+    green-green-refactor. This procedure consists of a few steps that are repeated
+    over and again: Write a test, run all tests, write an implementation code, run
+    all tests, refactor code, run all tests.
+
+
+    While writing tests, we are in the green state. When the test implementation is
+    ready, all tests should pass, and then we will be in the green state.
+
+
+    In Java, we use JUnit libraries to implement our test cases. Throughout this book,
+    we will omit, in some cases, the definition of a Java Test Class and focus only
+    on the methods with @Test annotations.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Arrays and Strings
+
+
+    # 1.0 Fundamentals
+
+
+    Arrays
+
+
+    An array is an object that stores a fixed number of elements of the same data
+    type. It uses a contiguous memory location to store the elements. Its numerical
+    index accesses each element.
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_10_0.png)
+
+
+    Figure 1.0.1 Array
+
+
+    If you ask the Array, give me the element at 4, the computer locates element''s
+    cell in a single step.
+
+
+    That happens because the computer finds the memory address where the Array begins-1000
+    in the figure above - and adds 4, so the element will be located at memory address
+    1004.
+
+
+    Arrays are a linear data structure because the elements are arranged sequentially
+    and accessed randomly.
+
+
+    One of the limitations of the Array is that adding or deleting data takes a lot
+    of time.
+
+
+    In a one-dimensional array, you retrieve a single value when accessing each index.
+
+
+    ```
+
+    //declares an array of integers
+
+    int[] arrayOfInts;
+
+    //allocates memory for 10 integers
+
+    arrayOfInts = new int[10];
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "```\n//initialize first element\narrayOfInts[0] = 100;\n//initialize fourth\
+    \ element\narrayOfInts[3] = 200;\n```\n\n```\n//get contents of fourth element\n\
+    int temp = arrayOfInts[3];\n```\n\nIn a multidimensional array implementation,\
+    \ you retrieve an array when accessing each index. A two-dimensional array is\
+    \ known as a matrix.\n\nArrays allow us to have one variable store multiple values.\n\
+    \nFor example, we define an array of products 2-D, whose elements per row represents:\
+    \ productID, price, and grams.\n\n```\ndouble[][] arrayOfProducts = new double[4];\n\
+    arrayOfProducts[2][0] = 2;\narrayOfProducts[2][1] = 1.29;\narrayOfProducts[2][2]\
+    \ = 240;\n```\n\nThe following figure shows the representation of this Array of\
+    \ arrays:\n\n| | [0] | [1] | [2] |\n|---|---|---||}{\n| arrayOfProducts[0] | |\
+    \ | |\n| arrayOfProducts[1] | | | |\n| arrayOfProducts[2] | | 1.29 | 240 |\n|\
+    \ arrayOfProducts[3] | | | |\n\nFigure 1.0.2 Multidimensional Array\n\nOnce an\
+    \ array is created, it cannot change its size. For dynamic arrays, we can use\
+    \ a List.\n\nAn ArrayList is a resizable implementation of the List.\n\n```\n\
+    List<String> listCities = new ArrayList<>();\nlistCities.add(\"New York\");\n\
+    listCities.add(\"Berlin\");\nlistCities.add(\"Paris\");\nlistCities.add(\"Berlin\"\
+    );\n```\n\n```\n//Traversing list through the for-each loop\nfor (String city\
+    \ : listCities)\n    System.out.println(city);\n```\n\n# Strings\n\nA sequence\
+    \ of character data is called a string and is implemented by the String class."
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'There are two ways to create a String object:
+
+
+    +   1. By string literal
+
+
+    ```
+
+    String myString = "literal of";
+
+    ```
+
+
+    The java compiler creates and places a new string instance in the string constant
+    pool. This avoids to create two instances with the same value.
+
+
+    +   2. By new keyword
+
+
+    ```
+
+    String s = new String("hello world");
+
+    ```
+
+
+    The java compiler creates a new string object in the heap memory. The variable
+    s refers to the object.
+
+
+    ```
+
+    myString + "chars.",
+
+    ```
+
+
+    The previous concatenation creates a third String object in memory. That is because
+    Strings are immutable, they cannot change once it is created. A mutable StringBuilder
+    class if you want to manipulate the contents of the string on the fly.
+
+
+    ```
+
+    StringBuilder stringOnFly = new StringBuilder();
+
+    stringOnFly.append(myString).append("chars");
+
+    ```
+
+
+    String, StringBuffer and StringBuilder implements the CharSequence interface that
+    is used to represent a sequence of characters.
+
+
+    # 1.1 Reverse a Text
+
+
+    Given a string of characters, reverse the order of the characters in an efficient
+    manner.
+
+
+    # Solution
+
+
+    We choose an array - holds values of a single type - as our data structure because
+    the algorithm receives a small amount of data, which is predictable and can be
+    read randomly (its numerical index accesses each element).
+
+
+    Firstly, convert the text to be reversed to a character array. Then, calculate
+    the length of the string.
+
+
+    Secondly, swap the position of array elements using a loop. Don''t use additional
+    memory, which means avoiding unnecessary objects or variables (space complexity).
+    Swapping does it in place by traversing values using a temporary variable. Then,
+    swap the first element with the last, the second element with the penultimate,
+    and so on. Moreover, we only need to iterate until half of the Array.
+
+
+    Finally, it returns the new character array as a String. Listing 1.1 shows the
+    algorithm.
+
+
+    Listing 1.1 - Reverse a Text'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "```\npublic class StringUtils {\n    public static String reverse(String text)\
+    \ {\n        char[] chars =text.toCharArray();\n        final int arrayLength\
+    \ =chars.length;\n        char temp;\n        for (int idx = 0; idx < arrayLength/2;\
+    \ idx++) {\n            temp = chars[idx];\n            chars[idx] =chars[arrayLength\
+    \ - 1 - idx];\n            chars[arrayLength - 1 - idx] = temp;\n        }\n \
+    \       return String.valueOf(chars);\n    }\n}\n```\n\n# Example:\n\nWhen idx\
+    \ = 0:\nchars = [a, b, c, 2, 1, 3, 2]\nchars[idx] = a\nchars[arrayLength-1-idx]\
+    \ = 2\n\nWhen idx = 1:\nchars = {2, b, c, 2, 1, 3, a}\nchars[idx] = b\nchars[arrayLength-1-idx]\
+    \ = 3\n\nWhen idx = 2:\nchars = {2, 3, 1, 2, 1, b, a}\nchars[idx] = c\nchars[arrayLength-1-idx]\
+    \ = 3\n\nWhen idx = 3:\nchars = {2, 3, 1, 2, c, b, a}\nidx is not less than arrayLength/2\n\
+    end\n\n# Tests\n\n```\n@Test\npublic void reverseText_useCases() {\n    assertEquals(\"\
+    abc2132\", StringUtils.reverse(\"2312cba\"));\n    assertEquals(\"ba\", StringUtils.reverse(\"\
+    ab\"));\n    assertEquals(\"c a1\", StringUtils.reverse(\"1a c\"));\n}\n```\n\n\
+    During the interview, it is common to receive additional questions about your\
+    \ code. For instance, what happens if we pass a null argument.\n\nFirst, we need\
+    \ to define our test case"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "```\n@Test(expected = RuntimeException.class)\npublic void reverseTextExceptionThrownCase()\
+    \ {\n    assertEquals(\"cdai1\", StringUtils.reverse(null));\n}\n```\n\nTo avoid\
+    \ a NullPointerException, we need to add the following precondition:\n\n```\n\
+    if (text == null)\n    throw new RuntimeException(\"text is not initialized\"\
+    );\n```\n\nMoreover, the interviewer wants our algorithm to reverse only those\
+    \ characters that occupy an odd position inside the Array.\n\nAgain, we define\
+    \ our assumption using a test case.\n\n```\n@Test\npublic void reverseOddsText()\
+    \ {\n    assertEquals(\"ub32cta192\", StringUtils.reverseOdds(\"2b12cta39u\"));\n\
+    }\n```\n\nThe % operator is used to detect these locations. Under the loop for\
+    \ sentence, we need to add the following conditional sentence:\n\n```\nif ((idx+1)\
+    \ % 2 != 0) {\n    ...\n```\n\nWhat is the performance of this algorithm?\n\n\
+    Start to analyze the most important sentences:\n\n```\nchar[] chars = text.toCharArray();\n\
+    -> runs in 1 execution: O(1)\nfinal int arrayLength = chars.length;\n-> runs in\
+    \ 1 execution: O(1)\nfor (int idx=0; idx<arrayLength/2; idx++) {\n-> runs in O(N)\n\
+    return String.valueOf(chars);\n-> runs in 1 execution: O(1)\n```\n\nTotal time:\
+    \ O(1) + O(1) + O(N) + O(1) = O(N)\nIn this scenario, a constant time O(1) is\
+    \ insignificance compared with a linear time O(N).\nIn order to know why Big O\
+    \ Notation ignores constants, let's see the following example:"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'When chars.length is 100, then:
+
+
+    Total run time:
+
+
+    O(1) + O(1) + O(100/2) + O(1) = 1 + 1 + 50 + 1 = 53
+
+
+    But 53 ~ 50 → (N/2)
+
+
+    If 50 executions depend on N/2, and N/2 depend on N
+
+
+    Then, we can say that 50 executions depend on N as well.
+
+
+    When chars.length is 100000, then:
+
+
+    Total run time:
+
+
+    O(1) + O(1) + O(100000/2) + O(1) = 1 + 1 + 50000 + 1 = 50003
+
+
+    But 50003 ~ 50000 → (N/2)
+
+
+    If 50000 executions depend on N/2, and N/2 depend on N
+
+
+    Then, we can say that 50000 executions depend on N as well.
+
+
+    Therefore, we can say that our Reverse Text algorithm runs in O(N) time.
+
+
+    # 1.2 Validate if a String Has All Unique Characters
+
+
+    Given a string of characters, validate if all of them are unique.
+
+
+    Solution
+
+
+    We assume the charset is ASCII, but you should always ask interviewers if you
+    are unsure. Originally based on the English alphabet, ASCII encodes 128 specified
+    into seven-bit integers. Ninety-five of the encoded characters are printable:
+    these include the digits 0 to 9, lowercase letters a to z, uppercase A to Z, and
+    punctuation symbols.
+
+
+    Firstly, iterate the string, use the java charAt method to return the numerical
+    representation for every character. Check this value in the Boolean Array. If
+    it exists, the string does not have unique values. Otherwise, store this value
+    in the Boolean Array as its first occurrence.
+
+
+    Finally, if all characters had only one occurrence in the Boolean Array, the string
+    has all unique characters. Listing 1.2 shows the algorithm.
+
+
+    +   Listing 1.2 - Validate if a String Has All Unique Characters'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "```\npublic class StringUtils {\n    public static boolean areUniqueChars(String\
+    \ str) {\n        if (str.length() > 128)\n            return false;\n\n     \
+    \   boolean[] booleans = new boolean[128];\n        for (int idx = 0; idx < str.length();\
+    \ idx++) {\n            int value = str.charAt(idx);\n            if (booleans[value])\
+    \ // /is found?\n                return false;\n            }\n            booleans[value]\
+    \ = true;\n        }\n        return true;\n    }\n}\n```\n\n# Tests\n\n```\n\
+    public class AreUniqueCharsTest {\n    @Test\n    public void is_not_UniqueChars()\
+    \ {\n        assertFalse(StringUtils.areUniqueChars(\"29s2\"));\n        assertFalse(StringUtils.areUniqueChars(\"\
+    1903aio9p\"));\n    }\n    @Test\n    public void is_UniqueChars() {\n       \
+    \ assertTrue(StringUtils.areUniqueChars(\"29s13\"));\n        assertTrue(StringUtils.areUniqueChars(\"\
+    2813450769\"));\n    }\n}\n```\n\n#  1.3 Validate If a String Is a Palindrome\n\
+    \nA palindrome is a string that reads the same forward and backward, for example,\
+    \ level, wow, and madam.\n\nSolution\n\nWe can loop through each character and\
+    \ check it against another one on the opposite side. If one of these checks fails,\
+    \ then the text is not Palindrome. Listing 1.3 shows the algorithm.\n\nListing\
+    \ 1.3 - Validate If a String Is a Palindrome"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "```\npublic class StringUtils {\n    public static boolean isPalindrome(String\
+    \ text) {\n        final int length = text.length();\n        for (int idx = 0;\
+    \ idx < length / 2; idx++) {\n            if (text.charAt(idx) != text.charAt(length\
+    \ - 1 - idx)) {\n                return false;\n            }\n        }\n   \
+    \     return true;\n    }\n}\n```\n\n# Tests\n\n```\npublic class IsPalindromeTest\
+    \ {\n    @Test\n    public void is_not_palindrome() {\n        assertFalse(StringUtils.isPalindrome(\"\
+    2f1\"));\n        assertFalse(StringUtils.isPalindrome(\"-101\"));\n    }\n  \
+    \  @Test\n    public void is_palindrome() {\n        assertTrue(StringUtils.isPalindrome(\"\
+    2f2f\"));\n        assertTrue(StringUtils.isPalindrome(\"-101-f\"));\n       \
+    \ assertTrue(StringUtils.isPalindrome(\"9\"));\n        assertTrue(StringUtils.isPalindrome(\"\
+    99\"));\n        assertTrue(StringUtils.isPalindrome(\"madam\"));\n    }\n}\n\
+    ```\n\n# 1.4 Compare Application Version Numbers\n\nSemantic versioning is a formal\
+    \ convention for specifying compatibility using a three-part version number: major\
+    \ version, minor version, and patch. Minor changes and bug fixes increment the\
+    \ patch number, which does not change the software's programming interface (API).\
+    \ Given version1 and version2, returns:\n\n+   * if version1 < version2\n* if\
+    \ version1 > version2\n* if version1 == version2\n\n# Solution\n\nFirstly, we\
+    \ must split the version number into its components. Since the input is in the\
+    \ form of strings, there is a need to divide them, given the dot delimiter that\
+    \ separates them to convert them to int arrays.\n\nSecondly, we must iterate the\
+    \ arrays while it has not achieved at least one of the lengths of"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "the arrays. Compare each component from the left to the right side. If one\
+    \ version contains one more component than the other one, then check that a value\
+    \ of 0 in that additional component is not representative.\n\nFinally, we return\
+    \ 0 when versions were not different during the iteration.\n\n![](img/60b89ebeda3428b712e02fb7e9fd8b5b_18_0.png)\n\
+    \nFigure 1.4 Compare Application Version Numbers\n\n# Listing 1.4 - Compare Application\
+    \ Version Numbers\n\n```\npublic class VersionNumber {\n    public static int\
+    \ compare(String v1, String v2) {\n        int[] a1 = Arrays.stream(v1.split(\"\
+    \\.\")).\n            .map(String::trim)\n            .mapToInteger(Integer::parseInt).toArray();\n\
+    \        int[] a2 = Arrays.stream(v2.split(\"\\.\")).\n            .map(String::trim)\n\
+    \            .mapToInteger(Integer::parseInt).toArray();\n        int idx = 0;\n\
+    \        while (idx < a1.length || idx < a2.length) {\n            if (idx < a1.length\
+    \ && idx < a2.length) {\n                if (a1[idx] < a2[idx]) {\n          \
+    \          return -1;\n                } else if (a1[idx] > a2[idx]) {\n     \
+    \               return 1;\n                }\n            } else if (idx < a1.length)\
+    \ {\n                if (a1[idx] != 0) {\n                    return 1;\n    \
+    \            }\n            } else if (idx < a2.length) {\n                if\
+    \ (a2[idx] != 0) {\n                    return -1;\n                }\n      \
+    \      }\n            idx++;\n        }\n        return 0;\n    }\n}\n```\n\n\
+    # Tests"
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# 1.5 Remove Duplicates from a List\n\nWrite a program to check if a list has\
+    \ any duplicates, and if it does, it removes them.\n\nSolution\n\nMaybe your first\
+    \ idea is to iterate through the list. You compare every item with the other ones.\
+    \ If a duplicate is detected, it is removed. Or may you traverse the list and\
+    \ store the first occurrence of each item in a new list and ignore all the next\
+    \ occurrences of that item. Those solutions are brute force algorithms because\
+    \ they use straightforward methods of solving a problem, but sometimes the interviewer\
+    \ expects to reuse the libraries included in the JDK, which improves efficiency.\n\
+    \nWe use the Set interface from the Collections library. By definition, Set does\
+    \ not allow duplicates. Then, we use the sort method to order its items.\n\nA\
+    \ Comparable interface sorts lists of custom objects in natural ordering. List\
+    \ of Objects that implement Comparable (e.g., String) can be sorted automatically\
+    \ by Collections.sort.\n\nLinkedHashSet(Collection list) is used to initialize\
+    \ a HashSet with the list, removing the duplicates. List 1.5 shows this implementation.\n\
+    \n```\npublic class ListUtils {\n    public static <E extends Comparable<E>>n\
+    \    List<E> removeDuplicatesAndOrder(List<E> list) {\n        Set<E> set = new\
+    \ LinkedHashSet<>(list);\n        ArrayList<E> arrayList = new ArrayList<>(set);\n\
+    \        Collections.sort(arrayList);\n        return arrayList;\n    }\n}\n```\n\
+    \n# Tests\n\n```\n@Test\npublic void versionNumberUsesCases() {\n    assertEquals(0,\
+    \ VersionNumber.compare(\"15\", \"15.0\\));\n    assertEquals(0, VersionNumber.compare(\"\
+    10.1\", \"10.1.0\\));\n    assertEquals(-1, VersionNumber.compare(\"10.1\", \"\
+    10.1.1\\));\n    assertEquals(1, VersionNumber.compare(\"10.1.2\", \"10.1.1\\\
+    ));\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "```\n@Test\npublic void givenStringsThenRemovedDuplicates() {\n    List<String>\
+    \ input = new ArrayList<>();\n    input.add(\"c\");\n    input.add(\"b\");\n \
+    \   input.add(\"b\");\n    input.add(\"d\");\n    input.add(\"c\");\n    input.add(\"\
+    a\");\n    List<String> result = ListUtils.removeDuplicatesAndOrder(input);\n\
+    \    assertEquals(\"[a, b, c, d]\", result.toString());\n}\n```\n\n```\n@Test\n\
+    public void integersThenRemovedDuplicates() {\n    List<Integer> input = new ArrayList<>();\n\
+    \    input.add(Integer.valueOf(3));\n    input.add(Integer.valueOf(3));\n    input.add(Integer.valueOf(4));\n\
+    \    input.add(Integer.valueOf(1));\n    input.add(Integer.valueOf(7));\n    input.add(Integer.valueOf(1));\n\
+    \    input.add(Integer.valueOf(2));\n    input.add(Integer.valueOf(1));\n    List<Integer>\
+    \ result = ListUtils.removeDuplicatesAndOrder(input);\n    assertEquals(\"[[1,\
+    \ 2, 3, 4, 7]\", result.toString());\n}\n```\n\n# 1.6 Rotate a Matrix by 90 Degrees\n\
+    \nGiven a square matrix, turn it by 90 degrees in a clockwise direction.\n\nSolution\n\
+    \nWe build for loops, an outer one deals with one layer of the matrix per iteration,\
+    \ and an inner deals with the elements of the layers. We rotate the elements in\
+    \ n/2 cycles. We swap the elements with the corresponding cell in the matrix in\
+    \ every square cycle using a temporary variable. Listing 1.6 shows the algorithm."
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# Listing 1.6 Rotate a Matrix by 90 Degrees.\n\n```\npublic class MatrixUtils\
+    \ {\n    public static void rotate(int[][] matrix) {\n        int n = matrix.length;\n\
+    \        if (n < 1)\n            return;\n\n        /* layers */\\n        for\
+    \ (int i = 0; i < n / 2; i++) {\n            /* elements */\\n            for\
+    \ (int j = i; j < n - i - 1; j++) {\n                //Swap elements in clockwise\
+    \ direction\n                //temp = top-left\n                int temp = matrix[i][j];\n\
+    \                //top-left <- bottom-left\n                matrix[i][j] = matrix[n\
+    \ - 1 - j][i];\n                //bottom-left <- bottom-right\n              \
+    \  matrix[n - 1 - j][i] = matrix[n - 1 - i][n - 1 - j];\n                //bottom-right\
+    \ <- top-right\n                matrix[n - 1 - i][n - 1 - j] = matrix[j][n - 1\
+    \ - i];\n                //top-right <- top-left\n                matrix[j][n\
+    \ - 1 - i] = temp;\n            }\n        }\n    }\n}\n```\n\n# Tests\n\n![](img/60b89ebeda3428b712e02fb7e9fd8b5b_21_0.png)\n\
+    \n![](img/60b89ebeda3428b712e02fb7e9fd8b5b_21_1.png)\n\n![](img/60b89ebeda3428b712e02fb7e9fd8b5b_21_2.png)"
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "```\n@Test\npublic void rotate4x4() {\nint[][] matrix = new int[][][\n    {9,\
+    \ 10, 11, 12},\n    {16, 17, 18, 19},\n    {23, 24, 25, 26},\n    {30, 31, 32,\
+    \ 33});\n    MatrixUtils.rotate(matrix);\n    assertArrayEquals(new int[]{30,\
+    \ 23, 16, 9}, matrix[0]);\n    assertArrayEquals(new int[]{33, 26, 19, 12}, matrix[3]);\n\
+    }\n\n@Test\npublic void rotate5x5() {\nint[][] matrix = new int[][][\n    {1,\
+    \ 2, 3, 4, 5},\n    {6, 7, 8, 9, 10},\n    {11, 12, 13, 14, 15},\n    {16, 17,\
+    \ 18, 19, 20},\n    {21, 22, 23, 24, 25});\n    MatrixUtils.rotate(matrix);\n\
+    \    assertArrayEquals(new int[]{21, 16, 11, 6, 1}, matrix[0]);\n    assertArrayEquals(new\
+    \ int[]{22, 17, 12, 7, 2}, matrix[1]);\n}\n```\n\n# ## 1.7 Items in Containers\n\
+    \nAmazon would like to know how much inventory exists in their closed compartments.\
+    \ Given a string s consisting of items as \"*\" and closed compartments as open\
+    \ and close \"|\", an array of starting indices startIndices and an array of ending\
+    \ indices endIndices, determine the number of items in closed compartments within\
+    \ the substring between the two indices, inclusive.\n\n+   - An item is represented\
+    \ as an asterisk ('*' = ascii decimal 42)\n- A compartment is represented as a\
+    \ pair of pipes that may or may not have items between them ('||' = ascii decimal\
+    \ 124).\n\nExample\ns = '*|*|*'\nstartIndices = [1,1]\nendIndices = [5,6]\n\n\
+    The string has a total of 2 closed compartments, one with 2 items and one with\
+    \ 1 item. For the first pair of indices, (1,5), the substring is '*|*|*'. There\
+    \ are 2 items in a compartment.\nFor the second pair of indices, (1,6), the substring\
+    \ is '*|*|*' and there are 2 + 1 = 3 items"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "in compartments.\n\nBoth of the answers are returned in an array. [2, 3].\n\
+    \n# Function Description\n\nWrite a function that returns an array that contains\
+    \ the results for each of the startIndices[i] and endIndices[i] pairs.\n\nThe\
+    \ function must have three parameters:\n\n+   - s: A string to evaluate\n- startIndices:\
+    \ An integer array, the starting indices.\n- endIndices: An integer array, the\
+    \ ending indices.\n\n# Constraints\n\n+   - 1 ≤ m, n ≤ 10\n- 1 ≤ startIndices[i]\
+    \ ≤ endIndices[i] ≤ n\n- Each character of s is either “*” or “|”\n\n# Solution\n\
+    \nTo determine the number of items in closed compartments, we need to build substrings\
+    \ from the two indices startIndices and endIndices. All strings start with a ‘|’\
+    \ character. We define a numOfAsterisk variable to count items inside a compartment.\n\
+    \nWe define a wasFirstPipeFound variable to initialize our numOfAsterisk variable\
+    \ the first time a ‘|’ character is found, and we accumulate all items since subsequent\
+    \ '|’ characters.\n\nListing 1.7 - Items in Containers.\n\n```\nimport java.util.ArrayList;\n\
+    import java.util.List;\npublic class Container {\n    public static List<Integer>\
+    \ numOfItems(String s,\n    List<Integer> startIndices, List<Integer> endIndices)\
+    \ {\n\n    if (startIndices.size()<1 || startIndices.size()>100000)\n        throw\
+    \ new RuntimeException(\"wrong size in startIndices\");\n\n    if (endIndices.size())<1\
+    \ || endIndices.size()>100000)\n        throw new RuntimeException(\"wrong size\
+    \ in endIndices\");\n```"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "```\nList<Integer> numOfItemsInClosedCompartments = new ArrayList<>();\nfor\
+    \ (int idx=0; idx<startIndices.size(); idx++) {\n    int start = startIndices.get(idx);\n\
+    \    int end = endIndices.get(idx);\n\n    if (start<1 || start>100000)\n    \
+    \    throw new RuntimeException(\"wrong value at startIndices\");\n\n    if (end<1\
+    \ || end>100000)\n        throw new RuntimeException(\"wrong value at endIndices\"\
+    );\n\n    int numOfAsterisk = 0;\n    boolean wasFirstPipePound = false;\n   \
+    \ int numOfAsteriskAccumulated = 0;\n    for (char c : s.substring(start-1, end).toCharArray())\
+    \ {\n        if (c == '|') {\n            if (wasFirstPipePound == true) {\n \
+    \               numOfAsteriskAccumulated+=numOfAsterisk;\n                numOfAsterisk\
+    \ = 0;\n            } else {\n                wasFirstPipePound = true;\n    \
+    \            numOfAsterisk = 0;\n            }\n        } else if (c == '*') {\n\
+    \            numOfAsterisk +=1;\n        } else {\n            throw new RuntimeException(\"\
+    wrong character\");\n        }\n    }\n    numOfItemsInClosedCompartments.add(numOfAsteriskAccumulated);\n\
+    }\nreturn numOfItemsInClosedCompartments;\n```\n\n# Test\n\n```\n@Test\npublic\
+    \ void test_numberOfOfItems() {\n    assertEquals(new ArrayList<Integer>>(Arrays.asList(2,3)),\n\
+    \        Container.numOfItems(\"|**|*|***\",\n            new ArrayList<Integer>>(Arrays.asList(1,1)),\n\
+    \            new ArrayList<Integer>(Arrays.asList(5,6))\n        );\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# 1.8 Shopping Options
+
+
+    An Amazon customer wants to buy a pair of jeans, a pair of shoes, a skirt, and
+    a top but has a limited budget in dollars. Given different pricing options for
+    each product, determine how many options our customer has to buy 1 of each product.
+    You cannot spend more money than the budgeted amount.
+
+
+    Example
+
+
+    ```
+
+    priceOfJeans = [2,3]
+
+    priceOfShoes = [4]
+
+    priceOfSkirts = [2,3]
+
+    priceOfTops = [1,2]
+
+    budget = 10
+
+    ```
+
+
+    The customer must buy shoes for 4 dollars since this leaves 6 dollars to spend
+    on the other 3 items. Combinations of prices paid for jeans, skirts, and tops
+    respectively that add up to 6 dollars or less are [2,2,2], [2,2,1], [3,2,1], [2,3,1].
+    There are 4 ways the customer can purchase all 4 items.
+
+
+    Function description
+
+
+    Create a function that returns an integer which represents the number of options
+    present to buy the four items.
+
+
+    The function must have 5 parameters:
+
+
+    ```
+
+    int[] priceOfJeans: An integer array, which contains the prices of the pairs of
+    jeans available.
+
+    ```
+
+
+    ```
+
+    int[] priceOfShoes: An integer array, which contains the prices of the pairs of
+    shoes available.
+
+    ```
+
+
+    ```
+
+    int[] priceOfSkirts: An integer array, which contains the prices of the skirts
+    available.
+
+    ```
+
+
+    ```
+
+    int[] priceOfTops: An integer array, which contains the prices of the tops available.
+
+    ```
+
+
+    ```
+
+    int dollars: the total number of dollars available to shop with.
+
+    ```
+
+
+    Constraints
+
+
+    +   1 ≤ length(priceOfJeans, priceOfShoes, priceOfSkirts, priceOfTops) ≤ 10³
+
+    1 ≤ dollars, prices ≤ 10⁹
+
+
+    Solution
+
+
+    To find how many ways the customer can purchase all four items, we can iterate
+    the four arrays, combine all its products, and validate that customer cannot spend
+    more money than the budgeted amount. The for-each construct helps our code be
+    elegant and readable and there is no use of the index.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "```\nint numberOfOptions = 0;\nfor (int priceOfJean : priceJeans) {\n  for\
+    \ (int priceOfShoe : priceOfShoes) {\n    for (int priceOfSkirt : priceOfSkirts)\
+    \ {\n      for (int priceOfTop : priceTops) {\n        if (priceOfJean + priceOfShoe\
+    \ + priceOfSkirt + priceOfTop <= dollars) {\n          numberOfOptions+=1;\n \
+    \       }\n      }\n    }\n  }\n}\n```\n\nThis algorithm works fine when array\
+    \ size and values are small. But based on the constraints, imagine you are processing\
+    \ a priceOfShoe value of 100000 at the location priceOfShoes[101], and at that\
+    \ moment, the sum of priceOfJean + priceOfShoe is greater than 10 dollars. Therefore,\
+    \ it does not make sense to continue processing the following 1000000000 items\
+    \ of priceOfSkirts[] and over 1000000000 items of priceTops.\n\nTo skip this particular\
+    \ iteration, we use the \"continue\" statement and proceed with the next iteration\
+    \ in the loop. The next priceOfShoe at the location priceOfShoes[102], for example.\
+    \ Listing 1.8 shows an optimized solution.\n\n# Listing 1.8 - Shopping Options.\n\
+    \n```\npublic class ShoppingOptions {\n  public static int getNumberOfOptions(int[]\
+    \ priceJeans, \n    int[] priceOfShoes, int[] priceOfSkirts, int[] priceTops,\
+    \ int dollars) {\n    if (dollars < 1 || dollars > 1000000000)\n      throw new\
+    \ RuntimeException(\"wrong value for budget\");\n\n    validate(priceJeans, \"\
+    jeans\");\n    validate(priceOfShoes, \"shoes\");\n    validate(priceOfSkirts,\
+    \ \"skirts\");\n    validate(priceOfTops, \"tops\");\n    int numberOfOptions\
+    \ = 0;\n    for (int priceOfJean : priceJeans) {\n      if (priceOfJean >= dollars)\n\
+    \        continue;\n      for (int priceOfShoe : priceOfShoes) {\n        if (priceOfJean\
+    \ + priceOfShoe >= dollars)\n          continue;\n        for (int priceOfSkirt\
+    \ : priceOfSkirts) {\n          if (priceOfJean + priceOfShoe + priceOfSkirt >=\
+    \ dollars)\n            continue;\n          for (int priceOfTop : priceTops)\
+    \ {\n            if (priceOfJean + priceOfShoe + priceOfSkirt + priceOfTop <=\
+    \ dollars)\n              numberOfOptions+=1;\n          }\n        }\n      }\n\
+    \    }\n  }}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "```\n}\n}\nreturn numberOfOptions;\n```\n\n```\nprivate static void validate(int[]\
+    \ array, String arrayName) {\nif (array.length < 1 || array.length > 1000)\n \
+    \   throw new RuntimeException(\"wrong size in array \" + arrayName);\n```\n\n\
+    ```\nfor (int price : array) {\n    if (price < 1 || price > 1000000000)\n   \
+    \     throw new RuntimeException(\"wrong value in array \" + arrayName);\n}\n\
+    }\n```\n\n# Tests\n\n```\n@Test\npublic void test_shoppingOptions() {\nint[] priceOfJeans\
+    \ = {2, 3};\nint[] priceOfShoes = {4};\nint[] priceOfSkirts = {2, 3};\nint[] priceOfTops\
+    \ = {1, 2};\nassertEquals(4, ShoppingOptions.getNumberOfOptions(priceOfJeans,\
+    \ priceOfShoes, priceOfSkirts, priceOfTops, 10));\n}\n```\n\n```\n@Test\npublic\
+    \ void test_shoppingOptionsBigPrices() {\nint[] priceOfJeans = {2, 10000};\nint[]\
+    \ priceOfShoes = {2000002, 4};\nint[] priceOfSkirts = {2, 3000000, 3};\nint[]\
+    \ priceOfTops = {1, 2};\nassertEquals(4, ShoppingOptions.getNumberOfOptions(priceOfJeans,\
+    \ priceOfShoes, priceOfSkirts, priceOfTops, 10));\n}\n```\n\nA function or method\
+    \ should be small, making it easier to read and understand. We have moved all\
+    \ validations to a private method.\n\nWhat happens when our choosing prices are\
+    \ located at the end of the arrays?. One possible solution could be to sort the\
+    \ arrays before iterating and find the right combinations of prices."
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Linked Lists
+
+
+    # 2.0 Fundamentals
+
+
+    A linked list is a linear data structure that represents a sequence of nodes.
+    Unlike arrays, linked lists store items at a not contiguous location in the computer''s
+    memory. It connects items using pointers.
+
+
+    Connected data that dispersed throughout memory are known as nodes. In a linked
+    list, a node embeds data items. Because there are many similar nodes in a list,
+    using a separate class called Node makes sense, distinct from the linked list
+    itself.
+
+
+    Each Node object contains a reference (usually called next or link) to the next
+    Node in the list. This reference is a pointer to the next Node''s memory address.
+    A Head is a special node that is used to denote the beginning of a linked list.
+    A linked list representation is shown in the following figure.
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_28_0.png)
+
+
+    Each Node consists of two memory cells. The first cell holds the actual data,
+    while the second cell serves as a link indicating where the next Node begins in
+    memory. The final Node''s list contains null since the linked list ends there.
+
+
+    In the figure, we say that "B" follows "A," not that "B" is in the second position.
+
+
+    A linked list''s data can be spread throughout the computer''s memory, which is
+    a potential advantage over the Array. An array, by contrast, needs to find an
+    entire block of contiguous cells to store its data, which can get increasingly
+    difficult as the array size grows. For this reason, Linked Lists utilize memory
+    more effectively.
+
+
+    When each Node only points to the next Node, we have a singly linked list. A doubly-linked
+    list when each Node points to the next Node and the previous Node.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "If the tail points to the head, then we have a circular singly linked list\n\
+    \nThe following code represents the Node of a doubly-linked list:\n\n```\nprivate\
+    \ final class Node {\n    private int data;\n    private Node next;\n    private\
+    \ Node prev;\n}\n```\n\nUnlike an array, a linked list doesn't provide constant\
+    \ time to access the nth element. We have to iterate n-1 elements to obtain the\
+    \ nth element. But we can insert, remove, and update nodes in constant time from\
+    \ the beginning of a linked list.\n\n# 2.1 Implement a Linked List\n\nImplement\
+    \ a Linked List that includes methods such as create, add, and traverse.\n\nSolution\n\
+    \nCreate a linked list class\n\nWe can represent a LinkedList as a class with\
+    \ its Node as a separate class. The LinkedList class will have a reference to\
+    \ the Node type.\n\nListing 2.1.1 - Linked List Class\n\n```\n//Generic linked\
+    \ list\npublic class LinkedList<T> {\n    Node head;\n\n    private class Node\
+    \ {\n        final T data;\n        Node next;\n        //next is by default initialized\
+    \ as null\n        Node(T data) {\n            this.data = data;\n           \
+    \ this.next = null;\n        }\n    }\n}\n```\n\nAdding a node\n\nWe can add a\
+    \ new node in three ways:\n\n+   * At the front of the linked list.\n* Before/After\
+    \ a given node.\n* At the end of the linked list."
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "We add a new node at the end of the linked list for our purpose.\nSteps to\
+    \ add a new Node:\n\n+   * Create a new node with the given data.\n* If the head\
+    \ node is null (Empty Linked List), make the new node the head.\n* If the head\
+    \ node is not null, find the last node. Make the last node => next as the new\
+    \ node.\n\n# Listing 2.1.2 - Adding a node\n\n```\npublic void add(T data) {\n\
+    \    Node node = new Node(data);\n    if (head == null) {\n        head = node;\n\
+    \    } else {\n        Node last = head;\n        while (last.next != null) {\n\
+    \            last = last.next;\n        }\n        last.next = node;\n    }\n\
+    }\n```\n\nTraverse a linked list\n\nTraverse means printing all data included\
+    \ in a linked list by traversing the list from the head to the node.\n\n# Listing\
+    \ 2.1.3 - Traversing a linked list\n\n# Tests\n\n```\n@Test\npublic void addNodes()\
+    \ {\n    LinkedList<String> linkedList = new LinkedList<>();\n    linkedList.add(\"\
+    s1\");\n    linkedList.add(\"s2\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "```\nlinkedList.add(\"s3\");\nlinkedList.add(\"s4\");\nassertEquals(\"[s1 ->\
+    \ s2 -> s3 -> s4]\", linkedList.toString());\n}\n```\n\n# 2.2 Reverse a Linked\
+    \ List\n\nGiven a pointer to the head node of a linked list, write a program to\
+    \ reverse the linked list.\n\nSolution\n\nTo reverse a linked list, we implement\
+    \ an iterative method.\n\n+   1. Initialize three-pointers: prev as NULL, current\
+    \ as head, and next as NULL.\n2. Iterate through the linked list. Inside the loop,\
+    \ do the following:\n\n```\n// Before changing next of current, store next node\n\
+    next = current->next\n\n// Now change next of current, here is where actual reversing\
+    \ happens\ncurrent->next = prev\n\n// Move prev and current one step forward\n\
+    prev = current\ncurrent = next\n```\n\nListing 2.2 - Reverse a Linked List\n\n\
+    ```\npublic void reverse() {\n  if (head == null) {\n    return;\n  }\n\n  Node\
+    \ prev = null;\n  Node current = head;\n  Node next = null;\n  while (current\
+    \ != null) {\n    next = current.next;\n    current.next = prev;\n    prev = current;\n\
+    \    current = next;\n  }\n  head = prev;\n}\n```\n\nLet's see what happens at\
+    \ the reverse method in the first iteration of a LinkedListList:"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "[s1 -> s2 -> s3]\n\n| next = current.next | next becomes s2, which is the next\
+    \ of s1 |\n| current.next = prev | now the next of s1 points to null |\n| prev\
+    \ = current | prev becomes s1 |\n| current = next | the next iteration will process\
+    \ the new current = s2 |\n\n# Tests\n\n```\n@Test\npublic void reverseLinkedList()\
+    \ {\n    LinkedList<String> linkedList = new LinkedList<>();\n    linkedList.add(\"\
+    s1\");\n    linkedList.add(\"s2\");\n    linkedList.add(\"s3\");\n    linkedList.add(\"\
+    s4\");\n    linkedList.reverse();\n    assertEquals(\"[s4 -> s3 -> s2 -> s1]\"\
+    ,\n        linkedList.toString());\n}\n```\n\n```\n@Test\npublic void reverseIntegersLinkedList()\
+    \ {\n    LinkedList<Integer> linkedList = new LinkedList<>();\n    linkedList.add(new\
+    \ Integer(1));\n    linkedList.add(new Integer(2));\n    linkedList.add(new Integer(3));\n\
+    \    linkedList.add(new Integer(5));\n    linkedList.reverse();\n    assertEquals(\"\
+    [5 -> 3 -> 2 -> 1]\",\n        linkedList.toString());\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# Math and Logic Puzzles
+
+
+    # 3.0 Fundamentals
+
+
+    Puzzles are usually asked to see how you go about solving a tricky problem. You
+    should know basic math concepts to excel in coding interviews.
+
+
+    Useful methods included in the Math Class:
+
+
+    **abs(x):** Returns the absolute value of x.
+
+
+    Example: abs(-1) = 1;
+
+
+    **round(x):** Returns the value of x rounded to its nearest integer.
+
+
+    Example: round(4.4) = 4
+
+
+    **ceil(x):** Returns the value of x rounded up to its nearest integer.
+
+
+    Example: ceil(4,4) = 5.0
+
+
+    **floor(x):** Returns the value of x rounded down to its nearest integer.
+
+
+    Example: floor(4,4) = 4.0
+
+
+    **max(x):** Returns the number with the highest value.
+
+
+    Example: max(6,7) = 7
+
+
+    **pow(x,y):** Returns the value of x to the power of y.
+
+
+    Example: pow(2,5) = 32.0
+
+
+    **random():** Returns a random number between 0 and 1.
+
+
+    Example: random() => 0.4554434499209374
+
+
+    Other useful formulas:
+
+
+    Sum of first n positive integers:
+
+
+    n(n+1)/2
+
+
+    Distance between two points P(x1,y1) and Q(x2,y2):
+
+
+    d(P, Q) = √{(x2 - x1)^2 + (y2 - y1)^2}
+
+
+    **Logarithm** as an inverse function to exponentiation
+
+
+    log_b(b^x) = x'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# 3.1 Sum of All Even Numbers from 1 to a Given Integer\n\nGiven Integer N,\
+    \ calculates the sum of all even numbers from 1 to N.\n\nSolution\n\nIt looks\
+    \ like an easy program, but believe me, most experienced programmers during the\
+    \ interview forget to use the operator \"%%\" which returns the remainder. If\
+    \ it is 0, the number is even; otherwise, it is odd. Listing 3.1 shows the algorithm.\n\
+    \nListing 3.1 - Sum of All Even Numbers from 1 to N\n\n```\npublic class NumberUtils\
+    \ {\n  public static int sumOfEvenNumbers(int N) {\n    int sum = 0;\n    for\
+    \ (int number = 1; number <= N; number++)\n      if ((number % 2) == 0)\n    \
+    \    sum = sum + number;\n  \n    return sum;\n  }\n}\n```\n\nOur code runs properly,\
+    \ but as Software Engineers, we need to care about code efficiency. The following\
+    \ algorithm runs faster than the previous one because it only loops the N/2 times.\n\
+    \n```\npublic class NumberUtils {\n  public static int sumOfEvenNumbers(int N)\
+    \ {\n    int sum = 0;\n    int number = 2;\n    while (number <= N) {\n      sum\
+    \ += number;\n      //increase number by 2, which in definition\n      //is the\
+    \ next even number\n      number+=2;\n    }\n    return sum;\n  }\n}\n```\n\n\
+    Tests\n\n```\n@Test\npublic void sumOfEvenNumbers_test() {\n  assertEquals(42,\
+    \ NumberUtils.sumOfEvenNumbers(12));\n  assertEquals(110, NumberUtils.sumOfEvenNumbers(21));\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# 3.2 Validate a Leap Year\n\nA leap year is a calendar year containing an\
+    \ additional day. This extra day occurs in February. The following rules define\
+    \ a leap year:\n\n+   - A year will be a leap year if it is divisible by 4, but\
+    \ not by 100\n- A year will be a leap year if it is divisible by 400.\n\nSolution\n\
+    \nWe use the % operator to verify if a year is divisible by 4, 100, or 400. Listing\
+    \ 3.2 shows the algorithm.\n\nListing 3.2 - Validate a Leap Year\n\n```\npublic\
+    \ class DateUtils {\n    public static boolean isLeapYear(int year) {\n      \
+    \  return (year % 400 == 0) ||\n            (year % 4 == 0 && year % 100 != 0);\n\
+    \    }\n}\n```\n\nThis algorithm had a real application in the Y2K problem, where\
+    \ COBOL programs in a Bank used to store four-digit years with only the final\
+    \ two digits, so you could not distinguish 2000 from 1900. In addition to calculating\
+    \ a leap year:\n\nFor years represented from 50 to 99, add 19 at begin, resulting\
+    \ in 1950 until 1999.\nFor years represented from 00 to 49, add 20 at begin, resulting\
+    \ in 2000 until 2049.\n\nThe Bank assumed that before 2049 all systems would be\
+    \ migrated to modern programming languages (digital transformation), but that\
+    \ is another story.\n\nTests\n\n```\n@Test\npublic void isLeapYear() {\n    assertTrue(DateUtils.isLeapYear(400));\n\
+    \    assertTrue(DateUtils.isLeapYear(2000));\n    assertTrue(DateUtils.isLeapYear(2020));\n\
+    }\nnn@Test\npublic void is_notLeapYear() {\n    assertFalse(DateUtils.isLeapYear(401));\n\
+    \    assertFalse(DateUtils.isLeapYear(2018));\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "# 3.3 Given an Integer N, Returns the Smallest Number of Digits\n\nWrite a\
+    \ method, given an original number N of $d digits$, returns the smallest number\
+    \ with the same number of digits. For example, given N=4751, the method should\
+    \ return 1000. Given N=1, the method should return 0.\n\nSolution\n\nMaybe the\
+    \ first idea that comes to our minds could be to iterate from the given number\
+    \ and decrease one by one, and in every iteration to check if every new number\
+    \ contains one digit less than the previous number. If the answer is True, the\
+    \ previous one is the smallest number with the same number of digits as the original\
+    \ number. Listing 3.3 shows the first algorithm for positive numbers.\n\nListing\
+    \ 3.3 - Given an Integer N, Returns the Smallest Number of Digits\n\n```\npublic\
+    \ class NumberUtils {\n    public static int smallest(int N) {\n        int smallestNumber\
+    \ = 0;\n        if (N <= 1)\n            return smallestNumber;\n\n        int\
+    \ numberOfDigitsOriginalN = String.valueOf(N).length();\n        while (N > 0)\
+    \ {\n            if (String.valueOf(N).length() == (numberOfDigitsOriginalN -\
+    \ 1)) {\n                return ++N;\n            }\n        }\n        return\
+    \ smallestNumber;\n    }\n}\n```\n\nBut if we realize, the solution follows a\
+    \ particular pattern:\n\nN = 4751 -> smallest number = 1000\nN = 189 -> smallest\
+    \ number = 100\nN = 37 -> smallest number = 10\n\nThe smallest number is a power\
+    \ of 10, where the exponent is: number of digits - 1\n\nSecond solution:"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\npublic static int smallest(int N) {\n    int smallestNumber = 0;\n   \
+    \ if (N <= 1 || String.valueOf(N).length() == 1) {\n        return smallestNumber;\n\
+    \    }\n    int numberOfOfDigits = String.valueOf(N).length();\n    return (int)\
+    \ Math.pow(10, numberOfOfDigits - 1);\n}\n```\n\nIf we want to include negative\
+    \ numbers, we must consider the smallest number with the same number of digits\
+    \ and the same sign. Here the solution:\n\n```\npublic class NumberUtils {\n \
+    \   public static int smallest(int N) {\n        int numberOfOfDigits = (int)\
+    \ String.valueOf(Math.abs(N)).length();\n        if (N >= 0) {\n            if\
+    \ (numberOfOfDigits == 1) {\n                return 0;\n            } else {\n\
+    \                return (int) Math.pow(10, numberOfOfDigits - 1);\n          \
+    \  }\n        } else {\n            return 1 - (int) Math.pow(10, numberOfOfDigits);\n\
+    \        }\n    }\n```\n\nThe main idea in Analysis of Algorithms is always to\
+    \ improve the algorithm performance by reducing the number of steps and comparisons.\
+    \ The simpler and more intuitive an algorithm is, the more useful and efficient\
+    \ it will be.\n\n# Tests\n\n```\n@Test\npublic void test_right_smallest_values()\
+    \ {\n    assertTrue(NumberUtils.smallest(4751) == 1000);\n    assertTrue(NumberUtils.smallest(189)\
+    \ == 100);\n    assertTrue(NumberUtils.smallest(37) == 10);\n    assertTrue(NumberUtils.smallest(1)\
+    \ == 0);\n    assertTrue(NumberUtils.smallest(0) == 0);\n    assertTrue(NumberUtils.smallest(-1)\
+    \ == -0);\n    assertTrue(NumberUtils.smallest(-38) == -99);\n}\n```\n\n```\n\
+    @Test\npublic void test_wrong_smallest_values() {\n    assertFalse(NumberUtils.smallest(8)\
+    \ == 1);\n    assertFalse(NumberUtils.smallest(2891) == 2000);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "# 3.4 FizzBuzz\n\nWrite a program that will display all the numbers between\
+    \ 1 and 100.\n\n+   - For each number divisible by three, the program will display\
+    \ the word \"Fizz\".\n- For each number divisible by five, the program will display\
+    \ the word \"Buzz\".\n- For each number divisible by three and five, the program\
+    \ will display the word \"Fizz-Buzz\".\n\nThe output will look like this:\n\n\
+    1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Buzz, 11, Fizz, 13, 14, Fizz-Buzz, 16, 19, ...\n\
+    \n# Solution\n\nIt looks like a simple algorithm but is \"hard\" for some programmers\
+    \ because they try to follow the following reasoning:\n\n```\nif (theNumber is\
+    \ divisible by 3) then\n    print \"Fizz\"\nelse if (theNumber is divisible by\
+    \ 5) then\n    print \"Buzz\"\nelse /* theNumber is not divisible by 3 or 5 */\n\
+    \    print theNumber\nend\n```\n\nBut where do we print \"Fizz-Buzz\" in this\
+    \ algorithm? The interviewer expects that you think for yourself and make use\
+    \ of conditional without duplication. Realizing that a number by 3 and 5 is also\
+    \ divisible by 3*5 is the key to a FizzBuzz solution. Listing 3.4 shows the algorithm.\n\
+    \n# Listing 3.4 - FizzBuzz\n\n```\npublic class NumberUtils {\n    public static\
+    \ void fizzBuzz(int N) {\n        final String BUZZ = \"Buzz\";\n        final\
+    \ String FIZZ = \"Fizz\";\n        for (int i = 1; i <= N; i++) {\n          \
+    \  if (i % 15 == 0) {\n                System.out.print(FIZZ + \" -\" + BUZZ +\
+    \ \", \");\n            } else if (i % 3 == 0) {\n                System.out.print(FIZZ\
+    \ + \" \", \");\n            } else if (i % 5 == 0) {\n                System.out.print(BUZZ\
+    \ + \" \", \");\n            } else {\n                System.out.print(i + \"\
+    , \");\n            }\n        }\n    }\n} \n```"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "You should never use System.out.print in a Production environment. I/O routines\
+    \ consume a lot of resources in time and memory.\n\n# Tests\n\n```\npublic class\
+    \ FizzBuzzTest {\n    @Test\n    public void testFizzBuzz() {\n        NumberUtils.fizzBuzz(100);\n\
+    \    }\n}\n```\n\n# 3.5 Verify If a Number Is a Valid Power of a Base\n\nIn mathematics,\
+    \ a function is an expression that maps an independent variable (domain) to a\
+    \ dependent variable (range). Functional programming (FP) emphasizes functions\
+    \ that produce results that depend only on their inputs and not on the program\
+    \ state—i.e., pure mathematical functions.\n\nOne of Java's approaches to FP is\
+    \ the definition of functional interfaces. A functional interface in Java has\
+    \ only one abstract method. We can use functional available in the Java 8 library\
+    \ like the Java.util.function.BiFunction<T, U, R>, which accepts two arguments\
+    \ and produces one.\n\n```\nBiFunction<Integer, Integer, Integer> sum = (x1, x2)\
+    \ -> x1 + x2;\nInteger result = sum.apply(2, 3);\nSystem.out.println(result);\
+    \ // 5\n```\n\nExponentiation involves two numbers: the base b and the exponent\
+    \ or power n. Exponentiation corresponds to repeated multiplication of the base\
+    \ n times. For instance, in the following expression: 3⁵ = 243, we say that 243\
+    \ is the 5th power of 3. Therefore, 243 is the correct power of 3.\n\n# Solution\n\
+    \nWe do the inverse operation to verify if a number is a valid power nth of another\
+    \ number (base).\n\nDivide the given number by the base and evaluate if it provides\
+    \ a 0 remainder, then we iterate this operation until we find a value of 1. Otherwise,\
+    \ if the rest is not 0, then the given number is not a valid power nth of the\
+    \ base. Listing 3.5 shows a function, which returns when a given number is the\
+    \ right power of a base.\n\n# Listing 3.5 - Verify If a Number Is a Valid Power\
+    \ of a Base"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "```\nimport java.util.function.BiFunction;\npublic class IsNumberValidPowerOfBase\
+    \ implements\nBiFunction<Integer, Integer, Boolean> {\n\n    @Override\n    public\
+    \ Boolean apply(Integer number, Integer base) {\n        return isNumberValidPowerOfBase(number,\
+    \ base);\n    }\n\n    static boolean isNumberValidPowerOfBase(int number, int\
+    \ base) {\n        if (number == 0) {\n            return true;\n        }\n\n\
+    \        while (number != 1) {\n            if ((number % base) != 0) {\n    \
+    \            return false;\n            }\n            number = number / base;\n\
+    \        }\n        return true;\n    }\n}\n```\n\n# Tests\n\n```\n@Test\npublic\
+    \ void testOfWrongReturnValues() {\n    assertFalse(isNumberValidPowerOfBase.apply(6,\
+    \ 2));\n    assertFalse(isNumberValidPowerOfBase.apply(16, 5));\n    assertFalse(isNumberValidPowerOfBase.apply(14,\
+    \ 7));\n}\n```\n\n```\n@Test\npublic void testValidReturnValues() {\n    assertTrue(isNumberValidPowerOfBase.apply(243,\
+    \ 3));\n    assertTrue(isNumberValidPowerOfBase.apply(16, 4));\n    assertTrue(isNumberValidPowerOfBase.apply(125,\
+    \ 5));\n}\n```\n\n# 3.6 Validate If a Number Is Prime or Not\n\nA prime number\
+    \ is a whole number greater than one, whose only factors are one and itself. A\
+    \ factor is a whole number that can be divided evenly into another number. For\
+    \ instance: 2, 3, 5, 7, 11 are prime numbers.\n\n# Solution\n\nA simple solution\
+    \ is to iterate decreasingly through all numbers from the half of the given"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "n, and for every number, check if it divides m. If we find any number that\
+    \ divides, then we return false. Otherwise, it returns true. Listing 3.6 shows\
+    \ the algorithm.\n\nListing 3.6 - Validate if A Number Is Prime or Not\n\n```\n\
+    public class MathUtils {\n    public static boolean isPrimeNumber(int number)\
+    \ {\n        if (number < 2) {\n            return false;\n        }\n\n     \
+    \   if (number == 2) {\n            return true;\n        }\n\n        for (int\
+    \ div = (number / 2) + 1; div > 1; div--) {\n            if (number % div == 0)\
+    \ {\n                return false;\n            }\n        }\n        return true;\n\
+    \    }\n}\n```\n\n# Tests\n\n```\n@Test\npublic void primeNumbers() {\n    assertFalse(MathUtils.isPrimeNumber(-1));\n\
+    \    assertFalse(MathUtils.isPrimeNumber(625));\n    assertFalse(MathUtils.isPrimeNumber(4));\n\
+    \    assertFalse(MathUtils.isPrimeNumber(100));\n}\n```\n\n```\n@Test\npublic\
+    \ void primeNumbers() {\n    assertTrue(MathUtils.isPrimeNumber(2));\n    assertTrue(MathUtils.isPrimeNumber(3));\n\
+    \    assertTrue(MathUtils.isPrimeNumber(5));\n    assertTrue(MathUtils.isPrimeNumber(7));\n\
+    \    assertTrue(MathUtils.isPrimeNumber(73));\n}\n```\n\n# 3.7 Distance Between\
+    \ Two Points\n\nGiven two points, calculate the distance between them.\n\n# Solution\n\
+    \nEach point has coordinates (x,y), so we can calculate the distance with the\
+    \ hypotenuse."
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "d(A, B) = \\sqrt{(x2 - x1)^2 + (y2 - y1)^2}\n\n![](img/60b89ebeda3428b712e02fb7e9fd8b5b_42_0.png)\n\
+    \nFigure 3.7 Distance Between Two Points\n\n```\npublic class Point {\n    final\
+    \ double x;\n    final double y;\n```\n\n```\npublic Point(double x, double y)\
+    \ {\n    this.x = x;\n    this.y = y;\n}\n```\n\n```\npublic double distance(Point\
+    \ point) {\n    if (this == null || point == null)\n        throw new RuntimeException(\"\
+    Points are not initialized\");\n\n    double dx = this.x - point.x;\n    double\
+    \ dy = this.y - point.y;\n\n    return Math.sqrt(dx * dx + dy * dy);\n}\n```\n\
+    \n# Tests\n\n```\n@Test\npublic void given_twoPoints_return_distance() {\n   \
+    \ Point point1 = new Point(2, 3);\n    Point point2 = new Point(5, 7);\n    assertEquals(5,\
+    \ point1.distance(point2), 0);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# 3.8 Write an Immutable Class to convert Currencies\n\nDesign a Money Class,\
+    \ which can convert Euros to Dollars and vice versa. As examples, write two instances\
+    \ with the following values: 67.89 EUR and 98.76 USD\n\nSolution\n\nAn immutable\
+    \ class is a class whose instances cannot be modified. Its information is fixed\
+    \ for the lifetime of the object without changes.\n\nTo make a class immutable,\
+    \ we follow these rules:\n\n+   - Don't include a mutators method that could modify\
+    \ the object's state.\n\n+   - Don't allow to extend the Class.\n\n+   - Make\
+    \ all class members final and private\n\n+   - Ensure exclusive access to any\
+    \ mutable components. Don't make references to those objects. Make defensive copies.\n\
+    \nImmutable objects are thread-safe; they require no synchronization. We use a\
+    \ BigDecimal data type for our Class because it provides operations on numbers\
+    \ for arithmetic, rounding and can handle large floating-point numbers with great\
+    \ precision. Listing 3.8 shows an immutable Class.\n\nListing 3.8 - Money Class\n\
+    \n```\nimport java.math.BigDecimal;\npublic final class Money {\n    private static\
+    \ final String DOLLAR = \"USD\";\n    private static final String EUR = \"EUR\"\
+    ;\n    private static int ROUNDING_MODE = BigDecimal.ROUND_HALF_EVEN;\n    private\
+    \ static int DECIMALS = 2;\n    private BigDecimal amount;\n    private String\
+    \ currency;\n\n    public Money() {\n}\n\n    public static Money valueOf(\n \
+    \       BigDecimal amount,\n        String currency) {\nreturn new Money(amount,\
+    \ currency);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "```\n//Caller cannot see this private constructor\nprivate Money(\n    BigDecimal\
+    \ amount,\n    String currency) {\n    this.amount = amount;\n    this.currency\
+    \ = currency;\n}\n```\n\n```\n//Currency converter\npublic Money multiply(BigDecimal\
+    \ factor) {\n    return Money.valueOF(\n        rounded(this.amount.multiply(factor)),\n\
+    \        this.currency.equals(DOLAR) ? EURO : DOLAR);\n}\n```\n\n```\n//round\
+    \ to 2 decimals\nprivate BigDecimal rounded(BigDecimal amount) {\n    return amount.setScale(DECIMALS,\
+    \ ROUNDING_MODE);\n}\n```\n\n```\npublic BigDecimal getAmount() {\n    return\
+    \ amount;\n}\n```\n\n```\npublic String getCurrency() {\n    return currency;\n\
+    }\n```\n\nString class produces immutable objects, so we can trust any client\
+    \ who passes it in the arguments. But this is not the case for BigDecimal, which\
+    \ can be extended and manipulated for some untrusted clients, e.g., to expand\
+    \ its toString() method.\n\n```\njava.math\n```\n\n# Class BigDecimal\n\n```\n\
+    java.lang.Object\njava.lang.Number\njava.math.BigDecimal\n```\n\nAll Implemented\
+    \ Interfaces:\n\n```\nSerializable, Comparable<BigDecimal>\n```\n\n```\npublic\
+    \ class BigDecimal\nextxtends Number\nimplements Comparable<BigDecimal>\n```\n\
+    \nTo protect our Class from untrusted clients, we can create copies of these arguments.\
+    \ The following code shows the multiply method modified."
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "```\n//Currency converter, more secure\npublic Money multiplysecure(BigDecimal\
+    \ factor) {\n    if (factor.getClass() == BigDecimal.class) {\n        new factor\
+    \ = new BigDecimal(factor.toString());\n    } else {\n        //TODO throw exception!\n\
+    \    }\n    return Money.valueOf(\n        rounded(this.amount.multiply(factor)),\n\
+    \        this.currency.equals(DOLLAR) ? EURO : DOLLAR\n    );\n}\n```\n\n# Tests:\n\
+    \n```\n@Test\npublic void convert_EURO_to_DOLLAR() {\n    final Money inEuros\
+    \ = Money.valueOf(new BigDecimal(\"67.89\"), \"EUR\");\n    final Money inDollars\
+    \ = =\n        inEuros.multiply(new BigDecimal(\"1.45470614288997\\));\n    assertEquals(new\
+    \ BigDecimal(\"98.76\"), inDollars.getAmount());\n}\n```\n\n```\n@Test\npublic\
+    \ void convert_DOLLAR_to_EURO() {\n    final Money inDollars = Money.valueOf(new\
+    \ BigDecimal(\"98.76\"), \"USD\");\n    final Money inEuros = =\n        inDollars.multiplysecure(new\
+    \ BigDecimal(\"0.6874240583232078\"));\n    assertEquals(new BigDecimal(\"67.89\"\
+    ), inEuros.getAmount());\n}\n```\n\n# 3.9 Number of Products of Two Consecutive\
+    \ Integers\n\nGiven two integers X and Y, returns the number of integers from\
+    \ the range [X .. Y], which can be expressed as the product of two consecutive\
+    \ integers, e.g., N*(N+1) for some integer N.\n\n# Solution\n\nWe need to find\
+    \ the total number of products in this range [X .. Y].\n\nExample:\n\nGiven X=6\
+    \ and Y=20\n\nThe function should return 3\n\nThese integers are 6=2*3, 12=3*4,\
+    \ and 20=4*5."
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "We could iterate from the upper limit=Y, checking if N*(N+1) <=Y. But if the\
+    \ lower limit is 1000, the first small products with two consecutive integers,\
+    \ such as 1*2, 2*3, 3*4, do not fit in the range [1000, 1130]. It is better to\
+    \ start the iteration from the square root of the lower limit X. Listing 3.9 shows\
+    \ the algorithm.\n\n# Listing 3.9 - Number of Products of Two Consecutive Integers\n\
+    \n```\npublic class NumberUtils {\n    public static int validProducts(int X,\
+    \ int Y) {\n        if (X < 1)\n            throw new IllegalArgumentException(\"\
+    invalid input: \" + X);\n\n        int N = (int) Math.sqrt(Integer.valueOf(X).doubleValue());\n\
+    \        int numberOfValidProducts = 0;\n        while (N * (N + 1) <= Y) {\n\
+    \            int product = N * (N + 1);\n            if (product >= X && product\
+    \ <= Y)\n                numberOfValidProducts++;\n            N++;\n        }\n\
+    \        return numberOfValidProducts;\n    }\n}\n```\n\n# Tests\n\n```\n@Test\n\
+    public void test_right_products() {\n    assertTrue(NumberUtils.validProducts(6,\
+    \ 20) == 3);\n    assertTrue(NumberUtils.validProducts(1000, 1130) == 2);\n}\n\
+    ```\n\n```\n@Test\npublic void test_wrong_products() {\n    assertFalse(NumberUtils.validProducts(21,\
+    \ 29) == 1);\n}\n```\n\n# 3.10 Assemble Parts in Minimum Time\n\nWrite a method\
+    \ to calculate the minimum possible time to put the N parts together and build\
+    \ the final product. The input consists of two arguments: numberOfParts, an integer\
+    \ representing the number of the parts, and parts, a list of integers representing\
+    \ the size of the parts.\n\nExample: numberOfParts=4, parts=[8,4,6,12], Output:\
+    \ 58"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "Explanation:\n\nStep 1: Assemble the parts of sizes 4 and 6 (time required\
+    \ is 10). Then, the size of the remaining parts for merging: [8,10,12].\n\nStep\
+    \ 2: Assemble the parts of sizes 8 and 10 (time required is 18). Then, the size\
+    \ of the remaining parts after merging: [18,12].\n\nStep 3: Assemble the parts\
+    \ of sizes 18 and 12 (time required is 30).\n\nThe total time required to assemble\
+    \ the parts is 10+18+30=58.\n\n# Solution\n\nWe order the parts, then calculates\
+    \ the time between the two consecutive parts of small sizes until we arrive at\
+    \ the last part. Listing 3.10 shows the algorithm.\n\nListing 3.10 – Assemble\
+    \ Parts in Minimum Time\n\n```\npublic class AssembleParts {\n    public static\
+    \ int minimumTime(int numOfParts, List<Integer> list) {\n        int[] arrayOfSizes\
+    \ = list.stream().mapToInt(i -> i).toArray();\n        Arrays.sort(arrayOfSizes);\n\
+    \n        int accumulatedTime = 0;\n        for (int idx = 0; idx < arrayOfSizes.length\
+    \ - 1; idx++) {\n            accumulatedTime += arrayOfSizes[idx] + arrayOfSizes[idx\
+    \ + 1];\n            // once assembled, we carry the current time to the next\
+    \ element\n            // so in the next iteration, the first of the next two\
+    \ parts\n            // it will already include the total time required\n    \
+    \        // to assemble the two previous parts\n            arrayOfSizes[idx +\
+    \ 1] = arrayOfSizes[idx] + arrayOfSizes[idx + 1];\n        }\n        return accumulatedTime;\n\
+    \    }\n}\n```\n\n# Tests\n\n```\n@Test\npublic void test_right_values() {\n \
+    \   assertTrue(AssembleParts.minimumTime(4,\n        new ArrayList<Integer>(Arrays.asList(8,\
+    \ 4, 6, 12))) == 58);\n    assertTrue(AssembleParts.minimumTime(5,\n        new\
+    \ ArrayList<Integer>(Arrays.asList(3, 7, 2, 10, 5))) == 59);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "# Recursion\n\n# 4.0 Fundamentals\n\nA method or function that calls itself\
+    \ is called recursion. A recursive function is defined in terms of itself. We\
+    \ always include a base case to finish the recursive calls.\n\nEach time a function\
+    \ calls itself, its arguments are stored on the Stack before the new arguments\
+    \ take effect. Each call creates new local variables. Thus, each call has its\
+    \ copy of arguments and local variables.\n\nThat is one reason sometimes we don't\
+    \ use recursion in the Production environment; for example, when we pass a big\
+    \ integer, they can overflow the Stack and crash any application. But in other\
+    \ cases, we can efficiently solve problems.\n\n# 4.1 Calculate Factorial of a\
+    \ Given Integer N\n\nThe Factorial is the product of all positive integers less\
+    \ than or equal to the non-negative integer. In real life, the Factorial is the\
+    \ number of ways you can arrange n objects.\n\nSolution\n\n+   We define the base\
+    \ case: returns 1 when N <= 1 to stop the recursion\n\n+   We use a recursive\
+    \ formula: N * factorial(N - 1)\n\nListing 4.1 - Calculate Factorial of a Given\
+    \ Integer N\n\n```\npublic class FactorRecursive {\n  public static int factorial(int\
+    \ N) {\n    //base case\n    if (N <= 1)\n      return 1;\n    else\n      //recursive\
+    \ call\n      return (N * factorial(N - 1));\n  }\n}\n```\n\nThe following figure\
+    \ shows in the first half how a succession of recursive calls executes until factorial(1)\
+    \ - the base case - returns 1, which stops the recursion. The second half shows\
+    \ the values calculated and returned from each recursive call to its caller."
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "```\nfactorial(6)\n= 6 * factorial(5)\n= 6 * 5 * factorial(4)\n= 6 * 5 * 4\
+    \ * factorial(3)\n= 6 * 5 * 4 * 3 * factorial(2)\n= 6 * 5 * 4 * 3 * 2 * factorial(1)\n\
+    = 6 * 5 * 4 * 3 * 2 * 1\n= 6 * 5 * 4 * 6\n= 6 * 5 * 24\n= 720\n```\n\nFigure 4.1\
+    \ N Factorial\n\nThe following Listing shows the iterative version (and more efficient).\n\
+    \n```\npublic class FactorIterative {\n    public static int factorial(int N)\
+    \ {\n        int result = 1;\n        for (int i = 2; i <= N; i++)\n         \
+    \   result *= i;\n        return result;\n    }\n}\n```\n\n# Tests\n\n```\n@Test\n\
+    public void test_right_results() {\n    assertTrue(FactorialRecursive.factorial(1)\
+    \ == 1);\n    assertTrue(FactorialRecursive.factorial(0) == 1);\n    assertTrue(FactorialRecursive.factorial(3)\
+    \ == 6);\n    assertTrue(FactorialRecursive.factorial(6) == 720);\n}\n```\n\n\
+    ```\n@Test\npublic void test_wrong_results() {\n    assertFalse(FactorialRecursive.factorial(3)\
+    \ == 5);\n    assertFalse(FactorialRecursive.factorial(4) == 10);\n}\n```\n\n\
+    # 4.2 Calculate Fibonacci Numbers\n\nA Fibonacci Series is a series of numbers\
+    \ in which each subsequent Fibonacci number is the sum of the previous two numbers."
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "0, 1, 1, 2, 3, 5, 8, 13, 21, ...\n\nThe first two numbers of the Fibonacci\
+    \ series are 0 and 1.\n\nExamples:\n\nFibonacci of 7 is: 13\n\nFibonacci of 10\
+    \ is: 55\n\nDefines a method to calculate the Fibonacci Series using Recursion.\n\
+    \n# Solution\n\nWe define two base cases:\n\nfibonacci(0) = 0 and fibonacci(1)\
+    \ = 1\n\nWe calculate the ith Fibonacci number recursively:\n\nfibonacci(N) =\
+    \ fibonacci(N-1) + fibonacci(N-2);\n\nListing 4.2 - Calculate Fibonacci Series\n\
+    \n```\npublic class MathUtils {\n    public static int fibonacci(int N) {\n  \
+    \      if (N == 0)\n            return 0;\n        if (N == 1)\n            return\
+    \ 1;\n        return fibonacci(N-1) + fibonacci(N-2);\n    }\n}\n```\n\n# Tests\n\
+    \n```\npublic class FibonacciTest {\n    @Test\n    public void test_fibonacciSeries()\
+    \ {\n        assertTrue(MathUtils.fibonacci(3) == 2);\n        assertTrue(MathUtils.fibonacci(7)\
+    \ == 13);\n        assertTrue(MathUtils.fibonacci(10) == 55);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# Sorting and Searching
+
+
+    # 5.0 Fundamentals
+
+
+    **Searching** refers to finding an item in a collection that meets some specified
+    criterion.
+
+
+    **Sorting** refers to rearranging all the items in a collection into increasing
+    or decreasing order.
+
+
+    Sorting algorithms are essential to improve the efficiency of algorithms that
+    require input data previously sorted.
+
+
+    Applications of sorting:
+
+
+    +   - Searching - Binary search algorithm needs sorted lists to run in an O(logN)
+    performance.
+
+
+    +   - Element uniqueness - An algorithm would sort the numbers in a list and check
+    adjacent pairs to detect duplicate items.
+
+
+    +   - Frequency distribution - An algorithm would sort a list of items and count
+    from left to right.
+
+
+    +   - Merge lists - An algorithm would compare elements from both sorted lists
+    and add the smaller ones to every iteration''s merged list.
+
+
+    # 5.1 Bubble Sort
+
+
+    Bubble Sort is a sorting algorithm. It uses a unsorted array, which contains at
+    least two adjacent elements out of order. The algorithm repeatedly passes through
+    the array, swaps elements out of order, and continues until it cannot find more
+    swaps.
+
+
+    Solution
+
+
+    The algorithm uses a Boolean variable to track whether it found a swap in its
+    most recent pass through the Array; as long as the variable is true, the algorithm
+    loops through the Array, looking for adjacent pairs of elements that are out of
+    order and swap them. The time complexity, in the worst case it requires O(n²)
+    comparisons. Listing 5.1 shows the algorithm.
+
+
+    Listing 5.1 - Bubble Sort'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "```\npublic class Sorting {\n    public int[] bubbleSort(int[] numbers) {\n\
+    \        if (numbers == null)\n            throw new RuntimeException(\"array\
+    \ not initialized\");\n\n        boolean numbersSwapped;\n        do {\n     \
+    \       numbersSwapped = false;\n            for (int i = 0; i < numbers.length\
+    \ - 1; i++) {\n                if (numbers[i] > numbers[i + 1]) {\n          \
+    \          int aux = numbers[i + 1];\n                    numbers[i + 1] = numbers[i];\n\
+    \                    numbers[i] = aux;\n                    numbersSwapped = true;\n\
+    \                }\n            }\n        } while (numbersSwapped);\n\n     \
+    \   return numbers;\n    }\n}\n```\n\n# Example:\n\nFirst pass-through:\n{6, 4,\
+    \ 9, 5} -> {4, 6, 9, 5} swap because of 6 > 4\n{4, 6, 9, 5} -> {4, 6, 9, 5}\n\
+    {4, 6, 9, 5} -> {4, 6, 5, 9} swap because of 9 > 5\nNumbersSwapped=true\n\nSecond\
+    \ pass-through:\n{4, 6, 5, 9} -> {4, 6, 5, 9}\n{4, 6, 5, 9} -> {4, 5, 6, 9} swap\
+    \ because of 6 > 5\n{4, 5, 6, 9} -> {4, 5, 6, 9}\nNumbersSwapped=true\n\nThird\
+    \ pass-through:\n{4, 5, 6, 9} -> {4, 5, 6, 9}\n{4, 5, 6, 9} -> {4, 5, 6, 9}\n\
+    {4, 5, 6, 9} -> {4, 5, 6, 9}\nNumbersSwapped=false\n\nEfficiency of bubble sort\n\
+    \nIn a worst-case scenario, where the Array comes in descending order, we need\
+    \ a swap for each comparison. In our algorithm, a comparison happens when we compare\
+    \ adjacent pairs of elements to determine which one is greater."
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "Given an array: {9, 6, 5, 4}\n\nIn the first pass through, we have to make\
+    \ three comparisons -> {6, 5, 4, 9}\n\nIn our second passthrough, we have to make\
+    \ only two comparisons because we didn't to compare the final two numbers -> {5,\
+    \ 4, 6, 9}\n\nIn our third pass through, we have made just one comparison -> {4,\
+    \ 5, 6, 9}\n\nIn summarize:\n\n3 + 2 + 1 = 6 comparisons, or (N-1) + (N-2) + (N-3)\
+    \ ... + 1 comparisons\n\nMoreover, in this scenario, we need a swap for each comparison.\
+    \ Therefore, we have six comparisons and six swaps = 12, which is approximately\
+    \ 4^2. As the number of items N increases, the number of steps exponentially grows,\
+    \ as shown in the following table.\n\n| N | # steps | N^2 |\n| 4 | 12 | 16 |\n\
+    | 5 | 20 | 25 |\n| 10 | 90 | 100 |\n\nTherefore, in Big O Nation, we could say\
+    \ that the Bubble Sort algorithm has O(N2) efficiency.\n\n# Tests\n\n```\n@Test\n\
+    public void sortingArrays() {\n    final int[] numbers = {6, 4, 9, 5};\n    final\
+    \ int[] expected = {4, 5, 6, 9};\n    int[] numbersSorted = sorting.bubbleSort(numbers);\n\
+    \    assertEquals(expected, numbersSorted);\n}\n```\n\n```\n@Test\npublic void\
+    \ sortManyArray() {\n    final int[] array = {7, 9, 1, 4, 9, 12, 4, 13, 9};\n\
+    \    final int[] expected = {1, 4, 4, 7, 9, 9, 9, 12, 13};\n    sorting.bubbleSort(array);\n\
+    \    assertEquals(expected, array);\nn\n```"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "# 5.2 Insertion Sort\n\nInsertion sort is a sorting algorithm that builds the\
+    \ final sorted array one element at a time. It's similar to the way we sort playing\
+    \ cards in our hands.\n\nSolution\n\n+   - Iterates over all the elements and\
+    \ start at index i=1.\n- Compare the current element (key) with all its preceding\
+    \ elements.\n- If the key element is smaller than its predecessors, swap them.\
+    \ Move elements that are greater than the key, one position ahead of their current\
+    \ position.\n\nThis algorithm takes a quadratic running time O(n²). Listing 5.2\
+    \ shows the algorithm.\n\nListing 5.2 - Insertion Sort\n\n```\npublic class Sorting\
+    \ {\n    public int[] insertSort(int[] numbers) {\n        if (numbers == null)\n\
+    \            throw new RuntimeException(\"numbers not initialized\");\n\n    \
+    \    for (int i = 1; i < numbers.length; i++) {\n            int key = numbers[i];\n\
+    \            int j = i - 1;\n            while (j >= 0 && numbers[j] > key) {\n\
+    \                numbers[j + 1] = numbers[j];\n                j = j - 1;\n  \
+    \          }\n            numbers[j + 1] = key;\n        }\n        return numbers;\n\
+    \    }\n}\n```\n\nExample:\n\nnumbers = {13, 12, 14, 6, 7}\n\nWhen i = 1. Since\
+    \ 13 is greater than 12, move 13 and insert 12 before 13\n\n12, 13, 14, 6, 7\n\
+    \nWhen i = 2., 14 will remain at its position as all previous elements smaller\
+    \ than 14\n\n12, 13, 14, 6, 7\n\nWhen i = 3., 6 will move to the beginning, and\
+    \ all other elements from 12 to 14 will move"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "one position ahead of their current position.\n\n6, 12, 13, 14, 7\n\nWhen i\
+    \ = 4, 7 will move to the position after 6, and elements from 12 to 14 will move\
+    \ one position ahead of their current position.\n\n6, 7, 12, 13, 14\n\n# Tests\n\
+    \n```\n@Test\npublic void test_insertionSort() {\n    final int[] numbers = {13,\
+    \ 12, 14, 4, 6, 7};\n    final int[] expected = {6, 7, 12, 13, 14};\n    sorting.insertSort(numbers);\n\
+    \    assertArray(expected, numbers);\n}\n```\n\n```\n@Test\npublic void sortingArray()\
+    \ {\n    final int[] numbers = {7, 9, 1, 4, 9, 12, 13, -2, 9};\n    final int[]\
+    \ expected = {-2, 1, 4, 4, 7, 9, 9, 12, 13};\n    sorting.insertSort(numbers);\n\
+    \    assertArrayEquals(expected, numbers);\n}\n```\n\n# 5.3 Quick Sort\n\nQuickSort\
+    \ is a divide and conquer algorithm. Given an array, it picks an element as a\
+    \ pivot and partitions the given array around the chosen pivot.\n\n# Solution\n\
+    \nGiven an array, we execute the following in-place steps:\n\n+   1. We pick from\
+    \ the Array, the last element as our pivot.\n\n+   2. We execute a partition operation,\
+    \ where we put all smaller elements before the pivot and put all greater elements\
+    \ after the pivot. After this reorder of elements, the pivot is in its final and\
+    \ correct position.\n\n+   3. Apply the above steps recursively to every sub-array\
+    \ of elements.\n\nListing 5.3 - Quick Sort"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "```\npublic class Sorting {\n    public int[] quickSort(int[] numbers, int\
+    \ lo, int hi) {\n        if (lo < hi) {\n            int partition_border = partition(numbers,\
+    \ lo, hi);\n            //sort elements recursively\n            quickSort(numbers,\
+    \ lo, partition_border - 1);\n            quickSort(numbers, partition_border\
+    \ + 1, hi);\n        }\n        return numbers;\n    }\n\n    private int partition(int[]\
+    \ numbers, int lo, int hi) {\n        //element to be placed at right position\n\
+    \        int pivot = numbers[hi];\n        int i = lo - 1; //index of smaller\
+    \ element\n        for (int j = lo; j < hi; j++) {\n            //swap when element\
+    \ smaller than pivot\n            if (numbers[j] < pivot) {\n                i++;\n\
+    \                int aux = numbers[i];\n                numbers[i] = numbers[j];\n\
+    \                numbers[j] = aux;\n            }\n        }\n        numbers[hi]\
+    \ = numbers[i + 1];\n        return i + 1;\n    }\n}\n```\n\n# Tests\n\n```\n\
+    @Test\npublic void test_quickSort() {\n    final int[] numbers = {13, 12, 14,\
+    \ 6, 7};\n    final int[] expected = {6, 7, 12, 13, 14};\n    sorting.quickSort(numbers,\
+    \ 0, numbers.length - 1);\n    assertEquals(expected, numbers);\n}\n```\n\n```\n\
+    @Test\npublic void sortingArray() {\n    final int[] numbers = {7, 9, 1, 4, 9,\
+    \ 12, 4, 13, -2, 9};\n    final int[] expected = {-2, 1, 4, 4, 7, 9, 9, 9, 12,\
+    \ 13};\n    sorting.quickSort(numbers, 0, numbers.length - 1);\n    assertEquals(expected,\
+    \ numbers);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# 5.4 Binary Search\n\nGiven a sorted array of N elements, write a function\
+    \ to search a given element X in the Array.\n\n| | 0 | 1 | 2 | 3 | 4 | 5 | 6 |\
+    \ 7 | 8 | 9 |\n|---|---|---|---|---|---|---|---|---|---|--|\n| Search 21 | 3 |\
+    \ 7 | 9 | 13 | 18 | 21 | 41 | 52 | 81 | 97 |\n| 21 > 18 ? | | 3 | 7 | 9 | 13 |\
+    \ 18 | 21 | 41 | 52 | 81 | 97 |\n| 21 > 52 ? | | | 3 | 7 | 9 | 13 | 18 | 21 |\
+    \ 41 | 52 | 81 | 97 |\n| Found 21 | | | | 3 | 7 | 9 | 13 | 18 | 21 | 41 | 52 |\
+    \ 81 | 97 |\n\n![](img/60b89ebeda3428b712e02fb7e9fd8b5b_57_0.png)\n\nSolution\n\
+    Search the Array by repeatedly dividing the search interval in half. If the element\
+    \ X is less than the item in the middle of the interval, narrow the interval to\
+    \ the lower half. Otherwise, narrow it to the upper half. Repeatedly check until\
+    \ the value is found or the interval is empty. Figure 5.4 shows the iteration\
+    \ check when we search for 21. Time complexity is O(log n). If we pass an array\
+    \ of 4 billion elements, it takes 32 comparisons.\n\nListing 5.4 Binary Search\n\
+    \n```\npublic class BinarySearch {\n    public static <T extends Comparable<T>>\
+    \ boolean search(T target, T[] array) {\n        if (array == null || array.length\
+    \ <= 0) {\n            return false;\n        }\n        int min = 0;\n      \
+    \  int max = array.length - 1;\n        while (min <= max) {\n            int\
+    \ mid = (min + max) / 2;\n            if (target.compareTo(array[mid]) < 0) {\n\
+    \                max = mid - 1;\n            } else if (target.compareTo(array[mid])\
+    \ > 0) {\n                min = mid + 1;\n            } else {\n             \
+    \   return true;\n            }\n        }\n        return false;\n    }\n}\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# Tests\n\n```\n@Test\npublic void binarySearch_target_notFound() {\n    assertFalse(BinarySearch.search(\"\
+    fin\", new String[]{\"ada\", \"fda\"));\n    assertFalse(BinarySearch.search(\"\
+    eda\",\n        new String[]{\"ada\", \"bda\", \"cda\", \"dda\"}));\n}\n```\n\n\
+    ```\n@Test\npublic void binarySearch_target_Found() {\n    assertTrue(BinarySearch.search(\"\
+    cal\",\n        new String[]{\"ada\", \"cal\", \"fda\"});\n    assertTrue(BinarySearch.search(21,\n\
+    \        new Integer[]{{1, 2, 3, 4, 5, 21}}));\n    assertTrue(BinarySearch.search(21,\n\
+    \        new Integer[]{{3, 7, 9, 13, 18, 21, 41, 52, 81, 97}}));\n}\n```\n\n#\
+    \ 5.5 Merge Two Sorted Lists\n\nGiven two sorted lists, merge them in a new sorted\
+    \ list.\n\n| List1 | 1 | 1 | 2 | 5 | 8 |\n| List2 | 3 | 4 | 6 |\n| mergedList\
+    \ | 1 | 1 | 2 | 3 | 4 | 5 | 6 | 8 |\n\nFigure 5.5 Merge Two Sorted Lists\n\n#\
+    \ Solution\n\nWe can join the two lists into a new list and apply a sort algorithm\
+    \ such as bubble sort, insertion, or quicksort. What we are going to do implement\
+    \ a new algorithm maintaining the same LogN performance.\n\n+   * We define a\
+    \ new List to add all elements from the other two lists in a sorted way.\n* We\
+    \ define two indices that point to every element in every list\n* We iterate both\
+    \ lists while still exist elements in both lists\n* We compare elements from both\
+    \ lists and add the smaller to the new list in every iteration. Before passing\
+    \ to the next iteration, we increment in one the index of the list, which contains\
+    \ the smaller element.\n* If there is a list that still contains elements, we\
+    \ add them directly to the new list."
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "Listing 5.5 Merge Two Sorted Lists.\n\n```\npublic class SortedList {\n   \
+    \ public static List<Integer> merge_sorted(\n        List<Integer> slist1, List<Integer>\
+    \ slist2) {\n        List<Integer> mergedSortedList = new ArrayList<>();\n   \
+    \     int idx1 = 0;\n        int idx2 = 0;\n\n        while (idx1 < slist1.size()\
+    \ && idx2 < slist2.size()) {\n            if (slist1.get(idx1) <= slist2.get(idx2))\
+    \ {\n                mergedSortedList.add(slist1.get(idx1));\n               \
+    \ idx1++;\n            } else {\n                mergedSortedList.add(slist2.get(idx2));\n\
+    \                idx2++;\n            }\n        }\n\n        if (idx1 < slist1.size())\
+    \ {\n            for (int idx = idx1; idx < slist1.size(); idx++) {\n        \
+    \        mergedSortedList.add(slist1.get(idx));\n            }\n        }\n\n\
+    \        if (idx2 < slist2.size()) {\n            for (int idx = idx2; idx < slist2.size();\
+    \ idx++) {\n                mergedSortedList.add(slist2.get(idx));\n         \
+    \   }\n        }\n        return mergedSortedList;\n    }\n}\n```\n\n# Tests\n\
+    \n```\n@Test\npublic void mergeSortedLists() {\n    List<Integer> slist1 = Arrays.asList(1,1,2,5,8);\n\
+    \    List<Integer> slist2 = Arrays.asList(3,4,6);\n    assertEquals(\"[1, 1, 2,\
+    \ 3, 4, 5, 6, 8]\",\n        SortedList.merge_sorted(slist1,slist2).toString());\n\
+    }\n```\n\n```\n@Test\npublic void mergeSortedLists2() {\n    List<Integer> slist1\
+    \ = Arrays.asList(2,4,5);\n    List<Integer> slist2 = Arrays.asList(1,3,6);\n\
+    \    assertEquals(\"[1, 2, 3, 4, 5, 6]\",\n        SortedList.merge_sorted(slist1,slist2).toString());\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Stacks and Queues
+
+
+    # 6.0 Fundamentals
+
+
+    Stack
+
+
+    A Stack is an abstract data type, which includes a collection of objects that
+    follow the last-in, first-out (LIFO) principle, i.e., the element inserted at
+    last is the first element to come out of the list. A real-world example of a stack
+    is the Stack of trays at a cafeteria.
+
+
+    Stacks have the following constraints:
+
+
+    +   - A push operation allows inserting data at the end of a stack.
+
+    - A pop operation allows deleting data from the end of a stack.
+
+    - It can read only the last element of a stack, which is called the top. The *peek*
+    operation returns the value stored at the top of a stack without removing it from
+    the stack.
+
+
+    You can implement a Stack using an Array or a Singly Linked List.
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_60_0.png)
+
+
+    Stacks are helpful to handle temporary data as part of various algorithms, for
+    example:
+
+
+    +   - Undo mechanism on text editor is based on Stack, i.e., cancel recent edit
+    operations. The editor keeps text changes in a Stack.
+
+    - Web browsers store URLs of visited websites on a stack. When a user visits a
+    new website, its URL is "pushed" on the Stack. When the user presses the "back"
+    button, the previous URL is "pop" from the Stack.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# Queue
+
+
+    A Queue is an abstract data type, which includes a collection of objects that
+    follow the first-in-out (FIFO) principle, i.e., the element inserted at first
+    is the first element to come out of the list.
+
+
+    Queues have the following constraints:
+
+
+    +   * An *enqueue* operation allows inserting data at the end of a Queue.
+
+    * A *dequeue* operation allows deleting data from the front of a Queue.
+
+    * It can read only the element at the front of a Queue, called a front.
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_61_0.png)
+
+
+    Queues are helpful to handle waiting times, for example:
+
+
+    +   * Call centers, theaters, and other similar services process customer requests
+    using the FIFO principle.
+
+
+    # 6.1 Delimiter Matching
+
+
+    Check if the parentheses, braces, and brackets in an expression are balanced.
+    In doing so, we must ensure that:
+
+
+    +   * Each opening symbol on the left delimiter matches a closing symbol on the
+    right delimiter.
+
+    * Left delimiters that occur later should be closed before occurring earlier.
+
+
+    # Solution
+
+
+    We use a *stack* data structure to ensure two limiting symbols match up correctly
+    (right pair). Why Stack? Insertion and deletion of elements take place at one
+    end the top of the Stack. The JDK includes the `Java.Stack` data structure. The
+    *push* method adds an item to the top of this Stack. The *pop* method removes
+    the element at the top of this Stack.
+
+
+    +   * Iterate every character from the given expression. If it is an opening symbol,
+    push that onto the Stack. If it is a closing symbol, pop an element from a Stack
+    (the last opening symbol added) and check that they are the right pair.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "+   • If we reach the end and the Stack is empty, then the expression is balanced;\
+    \ otherwise, it is not balanced.\n\n# Listing 6.1 - Delimiter Matching\n\n```\n\
+    private static boolean isBalanced(String expression) {\n    if (expression ==\
+    \ null || expression.trim().length() < 2) {\n        return false;\n    }\n\n\
+    \    Stack<Character> stack = new Stack<>();\n    for (char c : expression.toCharArray())\
+    \ {\n        if (c == '\\'' || c == '(' || c == '[') {\n            stack.push(c);\n\
+    \        } else if (c == ')') {\n            if (stack.empty() || stack.pop()\
+    \ != '(') {\n                return false;\n            }\n        } else if (c\
+    \ == ']') {\n            if (stack.empty() || stack.pop() != '[') {\n        \
+    \        return false;\n            }\n        } else if (c == '}') {\n      \
+    \      if (stack.empty() || stack.pop() != '{') {\n                return false;\n\
+    \            }\n        }\n    }\n    return stack.empty() ? true : false;\n}\n\
+    ```\n\n# Tests\n\n```\n@Test\npublic void incorrect_expressions() {\n    assertFalse(delimiterMatching.apply(null));\n\
+    \    assertFalse(delimiterMatching.apply(\"\"\"));\n    assertFalse(delimiterMatching.apply(\"\
+    (\\)\"));\n    assertFalse(delimiterMatching.apply(\"([])\"));\n}\n```\n\n```\n\
+    @Test\npublic void correct_expressions() {\n    assertTrue(delimiterMatching.apply(\"\
+    ()\"));\n    assertTrue(delimiterMatching.apply(\"{\\{\\[]}\\}\"));\n    assertTrue(delimiterMatching.apply(\\\
+    (\"{{\\{{{}}}}\\}\"));\n    assertTrue(delimiterMatching.apply(\\(\"{{a([b])}cdd}\\\
+    }\"));\n    assertTrue(delimiterMatching.apply(\\(\"w(x+y)/z-p/(r-q)\"\"));\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "# 6.2 Queue via Stacks\n\nBuild a queue data structure using only two internal\
+    \ stacks.\n\n# Solution\n\nStacks and Queues are abstract in their definition.\
+    \ That means, for example, in the case of Queues, we can implement its behavior\
+    \ using two stacks.\n\nThen we create two stacks of Java.util.Stack, inbox, and\
+    \ outbox. The add method pushes elements onto the inbox. And the peek method will\
+    \ do the following:\n\n+   - If the inbox is empty, refill it by popping each\
+    \ element from the inbox and pushing it onto the outbox.\n\n+   - Pop and return\
+    \ the top element from the outbox.\n\n![](img/60b89ebeda3428b712e02fb7e9fd8b5b_63_0.png)\n\
+    \nListing 6.2 - Queue via Stacks\n\n```\nimport java.util.Stack;\npublic class\
+    \ QueueViaStacks<T> {\nnStack<T> inbox;\nStack<T> outbox;\n\npublic QueueViaStacks()\
+    \ {\n  inbox = new Stack<T>();\n  outbox = new Stack<T>();\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "```\npublic void add(T value) {\n    //This stack always has the newest elements\
+    \ on top\n    inbox.push(value);\n}\n\npublic T peek() {\n    if (!inbox.isEmpty())\
+    \ {\n        while (!inbox.isEmpty()) {\n            //Filled in inverse order\n\
+    \            outbox.push(inbox.pop());\n        }\n    }\n    return outbox.pop();\n\
+    }\n```\n\n# Tests\n\n```\npublic class QueueViaStacksTest {\n    QueueViaStacks<Integer>\
+    \ queueViaStacks;\n\n    @Before\n    public void Before() {\n        queueViaStacks\
+    \ = new QueueViaStacks<>();\n    }\n\n    @Test\n    public void pop_firstElement()\
+    \ {\n        queueViaStacks.add(4);\n        queueViaStacks.add(2);\n        queueViaStacks.add(9);\n\
+    \        assertEquals(new Integer(4), queueViaStacks.peek());\n    }\n}\n```\n\
+    \n# 6.3 Reverse a String using a Stack\n\nGiven a string of characters, reverse\
+    \ the order of the characters using a Stack.\n\nSolution\n\n+   - Convert the\
+    \ text to an array of characters.\n- Create an empty stack.\n- Push all characters\
+    \ into the stack, one by one."
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "+   * Pull all characters from the stack, and put them into the array of characters.\n\
+    \n+   * Finally, return the array of characters as a String\n\nListing 6.3 - Reverse\
+    \ a String using a Stack\n\n```\nimport java.util.Stack;\npublic class StringUtils\
+    \ {\n    public static String reverse(String text) {\n        char[] charsArray\
+    \ = text.toCharArray();\n        Stack<Character> stack = new Stack<Character>();\n\
+    \n        for (int i=0; i<charsArray.length; i++) {\n            stack.push(charsArray[i]);\n\
+    \        }\n\n        for (int i=0; i<charsArray.length; i++) {\n            charsArray[i]\
+    \ = stack.pop();\n        }\n\n        return String.valueOf(charsArray);\n  \
+    \  }\n}\n```\n\n# Tests\n\n```\n@Test\npublic void reverseText_success() {\n \
+    \   assertEquals(\"efac\", StringUtils.reverse(\"cafe\"));\n    assertEquals(\"\
+    2312cba\", StringUtils.reverse(\"abc2132\"));\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "# # Hash Table\n\n#  7.0 Fundamentals\n\nA hash table is a data structure that\
+    \ is very fast for insertion range searching. In Big O Notation takes a constant\
+    \ time: O(1).\n\nA hash table is built using an array of paired values. Each pair\
+    \ is comprised of a key and a value, which are paired to indicate some significant\
+    \ association, for example:\n\n```\nstudents = { \"1573297\" => \"Jan\",\n  \"\
+    8174321\" => \"Brian\",\n  \"8119214\" => \"James\" }\n```\n\nIn this example,\
+    \ the 1573297 is the key, and Jan is the value. They indicate that Passport Number\
+    \ 1573297 identifies Jan.\n\nFor a seven-digit numeric range, we need an array's\
+    \ size of 10,000,000. If we decide to store only a few thousand passport numbers,\
+    \ the *array* will be almost empty.\n\nWe need to squeeze our input key into the\
+    \ array index range. To locate a fast way, we use a hash function (*hashing*)\
+    \ to convert 1573297 (*key*) to an index number within the size of our Array.\
+    \ Its value is stored at the index of the key after the key has been hashed.\n\
+    \nFor example, the following figure shows our hash table after using a hash function.\n\
+    \n![](img/60b89ebeda3428b712e02fb7e9fd8b5b_66_0.png)\n\nNow, our hash table looks\
+    \ like this:"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '```
+
+    students = { 4312 => "Jan",
+
+    5102 => "Brian",
+
+    5303 => "James" }
+
+    ```
+
+
+    An algorithm hashes the key, turns it into an array index, and jumps directly
+    to the index with that number to get the associated value.
+
+
+    But sometimes, there is a risk that different keys map to the same hashed array
+    index. That is called a collision; we obtain a key hash to an already filled position.
+
+
+    There are two solutions to deal with collisions: Chaining, where each entry in
+    the hash array points to its linked list. The other one is open addressing, where
+    only one array stores all items; when we want to insert a new hashed key, the
+    slot is already filled, then the algorithm looks for another empty slot to insert
+    the new item. This kind of search is called the probe sequence.
+
+
+    Most of the programming languages already implement a strategy for dealing with
+    collisions and choosing a hash function.
+
+
+    # 7.1 Design a Hash Table
+
+
+    Design a hash table, which implements add and get operations, key-value pairs
+    should be generic, and use chaining technique for solving index collisions.
+
+
+    # Solution
+
+
+    Imagine that we want to identify warehouses as keys composed of 3 characters.
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_67_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "```\nwarehouses = {\"DAB\", \"Atlanta\",\n\"ABC\", \"Chicago\",\n\"CAD\", \"\
+    Dallas\",\n\"BAD\", \"Detroit\"}\n```\n\nWe realize that exists a collision for\
+    \ the keys \"DAB\" and \"BAD\".\n\nTo implement chaining, we need to create a\
+    \ hash table entry that behaves as a linked list. And we define an array that\
+    \ holds all entries.\n\n# Listing 7.1 – Design a Hash Table\n\n```\npublic class\
+    \ HashTable<K,V> {\n\n    private static final int SIZE = 121;\n    private Entry[]\
+    \ entries = new Entry[SIZE];\n\n    private static class Entry<K,V> {\n      \
+    \  K key;\n        V value;\n        Entry<K,V> next;\n\n        Entry(K key,\
+    \ V value) {\n            this.key = key;\n            this.value = value;\n \
+    \           this.next = null;\n        }\n    }\nn}\n```\n\nWe need to define\
+    \ our hash function. We will do it easily for testing purposes. We map letters\
+    \ to numbers. (A = 1, B = 2, C = 3, D = 4, E = 5). Then take the product of the\
+    \ digits.\n\nExample:\n\nKey: \"DAB\",\n\nMapping: D = 4, A = 1, B = 2\n\nProduct:\n\
+    \n4 * 1 * 2 = 8\n\nFirst, we define our assumption.\n\n```\n@Test\npublic void\
+    \ hashTest() {\n    assertEquals(8, hashTable.hashKey(\"DAB\"));\n    assertEquals(15,\
+    \ hashTable.hashKey(\"ACE\"));\n}\n```\n\nHere, the implementation of the hash\
+    \ function."
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "```\npublic int hashTheKey(K key) {\n    int product = 1;\n    for (char c\
+    \ : ((String)key).toCharArray()) {\n        if (c == 'A') {\n            product\
+    \ *=1;\n        } else if (c == 'B') {\n            product *=2;\n        } else\
+    \ if (c == 'C') {\n            product *=3;\n        } else if (c == 'D') {\n\
+    \            product *=4;\n        } else if (c == 'E') {\n            product\
+    \ *=5;\n        }\n    }\n    return product;\n}\n```\n\nThe put method creates\
+    \ a new hashed index by calling the hashKey method and creates a new entry in\
+    \ the linked list at the hashed index. If the entry was already filled, then create\
+    \ the entry at the end of the linked list.\n\nBefore implementing put and get\
+    \ methods, we define our assumption.\n\n```\n@Test\npublic void getTest() {\n\
+    \    hashTable.put(\"DAB\", \"Atlanta\");\n    hashTable.put(\"ABC\", \"Chicago\"\
+    );\n    hashTable.put(\"CAD\", \"Dallas\");\n    hashTable.put(\"BAD\", \"Detroit\"\
+    );\n    assertEquals(\"Atlanta\", hashTable.get(\"DAB\"));\n}\n```\n\nAnd, here,\
+    \ the implementation.\n\n```\npublic void put(K key, V value) {\n    int hash\
+    \ = hashTheKey(key);\n    Entry newEntry = new Entry(key, value);\n    if (entries[hash]\
+    \ == null) {\n        entries[hash] = newEntry;\n    } else { //collision, chaining.\n\
+    \        //insert as the last node at the linked list\n        Entry currentEntry\
+    \ = entries[hash];\n        while (currentEntry.next != null) {\n            currentEntry\
+    \ = currentEntry.next;\n        }\n        currentEntry.next = newEntry;\n   \
+    \ }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "The get method hash the key again by calling the hashTheKey method, iterates\
+    \ the linked list of entries looking for the key, and returns the value.\n\nAnd\
+    \ here, the implementation:\n\n```\npublic V get(K key) {\n    int hash = hashTheKey(key);\n\
+    \    if (entries[hash] != null) {\n        Entry currentEntry = entries[hash];\n\
+    \        while (currentEntry.key.equals(key)) {\n            return (V)currentEntry.value;\n\
+    \        }\n        currentEntry = currentEntry.next;\n    }\n    return null;\n\
+    }\n```\n\n# 7.2 Find the Most Frequent Elements in an Array\n\nGiven an array,\
+    \ find the most frequent elements in the array.\n\nSolution\n\nFirstly, create\
+    \ a class that implements the Map interface and which permits null values.\n\n\
+    Secondly, iterate the input array and store elements and their frequency as key-value\
+    \ pairs. Then, traverse the Map and inverse the order with the maximum frequency\
+    \ on top.\n\nFinally, traverse the previous Map, and build a list of elements\
+    \ with maximum frequency. Listing 7.2 shows the algorithm.\n\n> Listing 7.2 -\
+    \ Return the most frequent elements of an array\n\n```\nimport java.util.stream.Collectors.*;\n\
+    public class ArrayUtils {\n\n    public static int[] mostFrequent(int[] array)\
+    \ {\n        Map<Integer, Integer> mapFrequencyByElement = new HashMap<>();\n\
+    \        for (int element : array) {\n            Integer frecuency = mapFrequencyByElement.get(element);\n\
+    \            mapFrequencyByElement.put(element, frecuency == null ? 1 : frecuency\
+    \ + 1);\n        }\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "Map<Integer, Integer> mapOrderByTopFrecency = mapFrecencyByElement\n.entrySet()\n\
+    .stream()\n.sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))\n\n\
+    ```\n.collect(\ntoMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2,\n\
+    LinkedHashMap::new);\n\nList<Integer> result = new ArrayList<>();\nint idx = 0;\
+    \ // iterate the result list\nfor (Map.Entry<Integer, Integer> entry : mapOrderByTopFrecency.entrySet())\
+    \ {\n    if (idx > 0) {\n        // continue only if exists same frequencies\n\
+    \        if (entry.getValue().equals(result.get(idx - 1))) {\n            result.add(entry.getKey());\n\
+    \        }\n    } else {\n        break;\n    }\n} else {\n    result.add(entry.getKey());\n\
+    }\nidx++;\n}\nint[] mostFrecuent = result.stream().mapToInt(i -> i).toArray();\n\
+    return mostFrecuent;\n```\n\n# Tests\n\n```\n@Test\npublic void test_right_values()\
+    \ {\n    assertEquals(new int[]{2, 3},\n        ArrayUtils.mostFrecuent(new int[]{3,\
+    \ 2, 0, 3, 1, 2}));\n    assertEquals(new int[]{5},\n        ArrayUtils.mostFrecuent(new\
+    \ int[]{3, 5, 0, 5, 5, 1, 2}));\n    assertEquals(new int[]{7},\n        ArrayUtils.mostFrecuent(new\
+    \ int[]{7}));\n}\n```\n\n# 7.3 Nuts and Bolts\n\nGiven n nuts and n bolts of different\
+    \ sizes, and consider a one-to-one mapping between them. Write a method that finds\
+    \ all matches between the nuts and bolts efficiently."
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "nuts = {'$', '%', '&', 'x', '@'};\nbolts = {'%', '@', 'x', '$', '&'};\n\n#\
+    \ Solution\n\n+   * The method receives two characters array, nuts[] and bolts.\n\
+    * Create a HashMap and put each nut character as a key.\n* Iterate the bolts array\
+    \ and check if the HashMap already contains each bolt as a key.\n* If a bolt at\
+    \ i location in the bolts array is already included in the HashMap, replace each\
+    \ bolt nuts[i] with the content from the bolts[i] to indicate we found a match.\n\
+    \nListing 7.3 - NutsAndBolts\n\n```\npublic class NutsAndBolts {\n  public static\
+    \ void match(char[] nuts, char[] bolts) {\n    Map<Character, Integer> map = new\
+    \ HashMap<>();\n    for (int i=0; i<nuts.length; i++) {\n      map.put(nuts[i],i);\n\
+    \    }\n\n    for (int i=0; i<bolts.length; i++) {\n      if (map.containsKey(bolts[i]))\
+    \ {\n        nuts[i] = bolts[i];\n      }\n    }\n  }\n}\n```\n\n# Tests\n\n```\n\
+    @Test\npublic void matchNutsAndBoltsTest() {\n  char nuts[] = {'$', '%', '&',\
+    \ 'x', '@'};\n  char bolts[] = {'%', '@', 'x', '$', '&'};\n  NutsAndBolts.match(nuts,\
+    \ bolts);\n  assertArrayEquals(nuts, bolts);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# Trees
+
+
+    # 8.0 Fundamentals
+
+
+    Tree
+
+
+    A tree is a data structure that consists of nodes connected by edges.
+
+
+    Tree structures are non-linear data structures. They allow us to implement algorithms
+    faster than when using linear data structures.
+
+
+    # Binary Tree
+
+
+    A binary tree can have at most the two children: a left node and a right node.
+    Every node contains two elements: a key used to identify the data stored by the
+    node and a value that is collected in the node. The following figure shows the
+    binary tree terminology
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_73_0.png)
+
+
+    Figure 8.0 Binary Search Tree - terminology
+
+
+    # Binary Search Tree
+
+
+    The most common type of binary tree is the Binary Search Tree, which has two main
+    characteristics:
+
+
+    +   - The value of the left Node must be less than the value of its parent.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "+   - The value of the right Node must be greater than or equal to the value\
+    \ of its parent.\n\nMoreover, you can search in a tree data structure quickly,\
+    \ as you can with an ordered array, and you can also insert and delete items quickly,\
+    \ as you can with a linked list.\n\nIt takes a maximum of log2(N) attempts to\
+    \ find a value. As the collection of nodes gets large, the binary search tree\
+    \ becomes faster over a linear search which takes up to (N) comparisons.\n\n#\
+    \ 8.1 Binary Search Tree\n\nA company uses the Global Trade Item Number (GTIN)\
+    \ to uniquely identify all of its trade items. The GTIN identifies the types of\
+    \ products that different manufacturers produce.\n\nA Webshop wants to retrieve\
+    \ information about GTINs efficiently by using a binary search algorithm.\n\n\
+    # Solution\n\nWe define a Product Class which will be the data contained in a\
+    \ Node.\n\nListing 8.1.1 shows how we create a Product Class.\n\nListing 8.1.1\
+    \ - Product Class\n\n```\npublic class Product {\n    Integer productId;\n   \
+    \ String name;\n    Double price;\n    String manufacturerName;\n    //setters\
+    \ and getters are omitted\n}\n```\n\nListing 8.1.2 shows how we create a NodeP\
+    \ Class to store a list of Products. Moreover, the Class allows us to have two\
+    \ NodeP attributes to hold the left and right nodes.\n\nListing 8.1.2 - NodeP\
+    \ Class\n\n```\npublic class NodeP {\n    private String gtin;\n    private List<Product>\
+    \ data;\n    private NodeP left;\n    private NodeP right;\n    public NodeP(String\
+    \ gtin, List<Product> data) {\n        this.gtin = gtin;\n        this.data =\
+    \ data;\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "Listing 8.1.3 shows a TreeP Class to implement an abstract data type called\
+    \ binary search tree, which includes a NodeP root variable for the first element\
+    \ to be inserted. We need to implement an insert method, every time a new GTIN\
+    \ is inserted, it compares the current GTIN versus the new GTIN. Depending on\
+    \ the result, we store the new GTIN on the left or the right Node. In this way,\
+    \ the insert method maintains an ordered binary search tree.\n\nListing 8.1.3\
+    \ TreeP and insert method\n\n```\npublic class TreeP {\n    private NodeP root;\n\
+    \    public void insert(String gtin, List<Product> data) {\n        NodeP newNode\
+    \ = new NodeP(gtin, data);\n        if (root == null) {\n            root = newNode;\n\
+    \        } else {\n            NodeP current = root;\n            NodeP parent;\n\
+    \            while (true) {\n                parent = current;\n             \
+    \   if (gtin.compareTo(current.getGtin()) < 0) {\n                    current\
+    \ = current.getLeft();\n                    if (current == null) {\n         \
+    \               parent.setLeft(newNode);\n                        return;\n  \
+    \                  }\n                } else if (gtin.compareTo(current.getGtin())\
+    \ > 0) {\n                    current = current.getRight();\n                \
+    \    if (current == null) {\n                        parent.setRight(newNode);\n\
+    \                        return;\n                    }\n                } else\
+    \ {\n                    return; //already exists\n                }\n       \
+    \     }\n        }\n        return;\n    }\n```\n\nListing 8.1.4 shows a find\
+    \ method, which iterates through all nodes until a GTIN is found. This algorithm\
+    \ reduces the search space to N/2 because the binary search tree is always ordered.\n\
+    \nListing 8.1.4 - find method"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "```\npublic NodeP find(String gtin) {\n\nNodeP current = root;\nif (current\
+    \ == null)\n  return null;\n\n  while (current.getGtin().equals(current.getGtin())\
+    \ {\n    if (gtin.compareTo(current.getGtin()) < 0) {\n      current = current.getLeft();\n\
+    \    } else {\n      current = current.getRight();\n    }\n    if (current ==\
+    \ null) // not found in children\n      return null;\n  }\n  return current;\n\
+    }\n```\n\n# Tests\n\n```\n@Test\npublic void test_findNode() {\n  tree.insert(\"\
+    0400345706564\",\n    new ArrayList<>(Arrays.asList(product1)));\n  tree.insert(\"\
+    0761400983416\",\n    new ArrayList<>(Arrays.asList(product2)));\n  tree.insert(\"\
+    0761400989104\",\n    new ArrayList<>(Arrays.asList(product3, product4)));\n \
+    \ tree.insert(\"0761400989111\",\n    new ArrayList<>(Arrays.asList(product5)));\n\
+    \  tree.insert(\"0761400990292\",\n    new ArrayList<>(Arrays.asList(product6,\
+    \ product7, product8)));\n  assertEquals(null, tree.find(\"0761400983324\"));\n\
+    \  tree.insert(\"0761400983324\", new ArrayList<>(Arrays.asList(product9)));\n\
+    \  assertTrue(tree.find(\"0761400983324\") != null);\n  assertEquals(\"0761400983324\"\
+    , tree.find(\"0761400983324\").getGtin());\n}\n```\n\nThis Binary Search Tree\
+    \ works well when the data is inserted in random order. But when the values to\
+    \ be inserted are already ordered, a binary tree becomes unbalanced. With an unbalanced\
+    \ tree, we cannot find data quickly.\n\nOne approach to solving unbalanced trees\
+    \ is the red-black tree technique, a binary search tree with some unique features.\n\
+    \nAssuming that we already have a balanced tree, 8.1.5 shows how fast in terms\
+    \ of comparisons can be a binary search tree, which depends on a number N of elements.\
+    \ For instance, to find a product by GTIN in 1 billion products, the algorithm\
+    \ needs only 30"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "# Listing 8.1.5 - Tree performance\n\n```\npublic class TreePerformance {\n\
+    \    public int comparisons(int N) {\n        int accumElements = 0;\n       \
+    \ int comparisons = 0;\n        for (int level = 0; level <= N / 2; level++) {\n\
+    \            int power = (int) Math.pow(2, level);\n            accumElements\
+    \ += power;\n            if (accumElements >= N) {\n                comparisons\
+    \ = ++level;\n                break;\n            }\n        }\n        System.out.println(\"\
+    comparisons -> \" + comparisons);\n        return comparisons;\n    }\n}\n```\n\
+    \n# Tests\n\n```\n@Test\npublic void whenNelements_return_NroComparisons() {\n\
+    \    assertTrue(treePerformance.comparisons(15) <= 4);\n    assertTrue(treePerformance.comparisons(31)\
+    \ <= 5);\n    assertTrue(treePerformance.comparisons(1000) <= 10);\n    assertTrue(treePerformance.comparisons(1000000000)\
+    \ <= 30);\n}\n```\n\n# 8.2 Tree Traversal\n\nImplement a method to visit all nodes\
+    \ of a tree and print their values.\n\n![](img/60b89ebeda3428b712e02fb7e9fd8b5b_77_0.png)\n\
+    \nFigure 8.2 In-Order traversal"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "# Solution\n\nWe can traverse a tree in three different ways:\n\n+   - In-order\
+    \ Traversal: We visit the tree in this order: Left, Root, Right.\n\n+   - Pre-order\
+    \ Traversal: We visit the tree in this order: Root, Left, Right.\n\n+   - Post-order\
+    \ Traversal: We visit the tree in this order: Left, Right, Right.\n\nFor this\
+    \ solution, we traverse the tree in order traversal, where the output will produce\
+    \ the key values in ascending order.\n\nWe create a recursive `inOrderTraversal`\
+    \ method that receives the root node as a parameter and does the following instructions:\n\
+    \n+   - call `inOrderTraversal` for the left node\n\n+   - print the data\n\n\
+    +   - call `inOrderTraversal` for the right node\n\nWe include a `StringJoiner`\
+    \ class in the method signature to collect the results.\n\nListing 8.2 - In-order\
+    \ traversal\n\n```\nimport java.util.StringJoiner;\npublic class TreeADT {\n \
+    \   class Product {\n        int productId;\n        String name;\n        Product(int\
+    \ productId, String name) {\n            this.productId = productId;\n       \
+    \     this.name = name;\n        }\n        public String getName() {\n      \
+    \      return name;\n        }\n    }\n    class NodeP {\n        private String\
+    \ gtin;\n        private Product data;\n        NodeP left;\n        NodeP right;\n\
+    \        public NodeP(String gtin, Product data) {\n            this.gtin = gtin;\n\
+    \            this.data = data;\n        }\n        // setters and getters omitted\n\
+    \    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "```\nprivate NodeP root;\n\npublic void insert(String gtin, int productId,\
+    \ String name) {\n    Product product = new Product(productId, name);\n    NodeP\
+    \ newNode = new NodeP(gtin, product);\n\n    if (root == null) {\n        root\
+    \ = newNode;\n    } else {\n        NodeP current = root;\n        NodeP parent;\n\
+    \        while (true) {\n            parent = current;\n            if (gtin.compareTo(current.getGtin())\
+    \ < 0) {\n                current = current.getLeft();\n                if (current\
+    \ == null) {\n                    parent.setLeft(newNode);\n                 \
+    \   return;\n                }\n            } else if (gtin.compareTo(current.getGtin())\
+    \ > 0) {\n                current = current.getRight();\n                if (current\
+    \ == null) {\n                    parent.setRight(newNode);\n                \
+    \    return;\n                }\n            } else {\n                current.setData(product);\
+    \ //already exists\n                return;\n            }\n        }\n    }\n\
+    \    return;\n}\n\npublic String inOrderTraversal(NodeP localRoot, StringJoiner\
+    \ stringJoiner) {\n    if (localRoot != null) {\n        inOrderTraversal(localRoot.getLeft(),\
+    \ stringJoiner);\n        stringJoiner.add(localRoot.getData().getName());\n \
+    \       inOrderTraversal(localRoot.getRight(), stringJoiner);\n    }\n    return\
+    \ stringJoiner.toString();\n}\n```\n\n# Tests\n\n```\nimport java.util.StringJoiner;\n\
+    public class TreeADTTest {\n    private TreeADT tree;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "```\n@Before\npublic void setup() {\n    tree = new TreeADT();\n}\n\n@Test\n\
+    public void test_traverseTree() {\n    tree.insert(\"051414\", 12, \"apple\");\n\
+    \    tree.insert(\"0301712\", 14, \"cherry\");\n    tree.insert(\"0814101\", 13,\
+    \ \"mango\");\n    tree.insert(\"0401312\", 19, \"orange\");\n    tree.insert(\"\
+    0911741\", 11, \"banana\");\n    tree.insert(\"0617411\", 16, \"grape\");\n  \
+    \  tree.insert(\"0210417\", 18, \"kiwi\");\n    StringJoiner stringJoiner = new\
+    \ StringJoiner(\" -> \", \"[\", \"]\");\n    assertEquals(\"kiwi -> cherry ->\
+    \ orange -> apple -> grape -> mango -> banana\",\n        tree.inOrderTraversal(tree.getRoot(),\
+    \ stringJoiner));\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# Graphs
+
+
+    # 9.0 Fundamentals
+
+
+    A Graph is a non-linear data structure consisting of nodes (vertices) and edges.
+    Its shape depends on the physical or abstract problem we are trying to solve.
+    For example, if nodes represent cities, the routes which connect cities may be
+    defined by no-directed edges. But if nodes represent tasks to complete a project,
+    then their edges must be directed to indicate which task must be completed before
+    another.
+
+
+    # Terminology
+
+
+    A Graph can model the Hyperloop transport to be installed in Germany.
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_81_0.png)
+
+
+    Figure 9.0 Graph - terminology
+
+
+    A Graph shows only the relationships between the vertices and the edges, and the
+    most important here is here which edges are connected to which vertex. We can
+    also say that a Graph models connections between objects.
+
+
+    # Adjacency
+
+
+    When a single edge connects two vertices, then they are adjacent or neighbors.
+    In the figure above, the vertices represented by Berlin and Leipzig are adjacent,
+    but the cities Berlin and Dresden are not.
+
+
+    # Path
+
+
+    A Path is a sequence of edges. The figure above shows a path from Berlin to München
+    that passes through cities Leipzig and Nürnberg. Then the path is Berlin, Leipzig,
+    Nürnberg, München.
+
+
+    # Connected Graphs'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: 'A Graph is connected if there is at least one path from every vertex to every
+    other vertex. The figure above is connected because all cities are connected.
+
+
+    # Directed and Weighted Graphs
+
+
+    A Graph is directed when the edges have a direction. In the figure above, we have
+    a non-directed graph because the hyperloop can usually go either way. From Berlin
+    to Leipzig is the same as from Leipzig to Berlin.
+
+
+    Graphs are called a weighted graph when edges are given weight, e.g., the distance
+    between two cities can be weighted in how fast they are connected.
+
+
+    A graph answer one of the questions: which cities can be reached from a given
+    city? We need to implement search algorithms. There are two different ways of
+    searching in a graph: depth-first search (DFS) and breadth-first search (BFS).
+
+
+    # 9.1 Depth-First Search (DFS)
+
+
+    Implement the depth-first search algorithm to traverse a graph data structure.
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_82_0.png)
+
+
+    # Solution
+
+
+    Depth-first search (DFS) is an algorithm for traversing the Graph. The algorithm
+    starts at the root node (selecting some arbitrary city as the root node) and explores
+    as far as possible along each path. Figure 9.1.1 shows a sequence of steps if
+    we choose Berlin as the root node.
+
+
+    # Implementing the algorithm
+
+
+    # Model the problem
+
+
+    We need an Object which supports any data included in the Node. We called it vertex.
+    Inside this vertex, we define a boolean variable to avoid cycles in searching
+    cities, so we will mark each Node when visiting it. Listing 9.1.1 shows a Vertex
+    Class implementation.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "# Listing 9.1.1 - Vertex Class\n\n```\npublic class Vertex {\n    private String\
+    \ name;\n    private boolean visited;\n\n    public Vertex(String name) {\n  \
+    \      this.name = name;\n        this.visited = false;\n    }\n    //setters\
+    \ and getter omitted\n}\n```\n\nWe have two approaches to model how the vertices\
+    \ are connected (edges): the adjacency matrix and the adjacency list. For this\
+    \ algorithm, we are going to implement the adjacency matrix.\n\n# The adjacency\
+    \ matrix\n\nIn a graph of N vertices, we create a two-dimensional array of NxN.\
+    \ An edge between two vertices (cities) indicates a connection (two adjacent nodes)\
+    \ represented by 1. No connections are represented by 0.\n\n| Berlin | Leipzig\
+    \ | Dresden | Rostock | Nürnberg |\n|---|---|---|---|---||\n| Berlin | 0 | 1 |\
+    \ 0 | 1 | 0 |\n| Leipzig | 1 | 0 | 1 | 0 | 1 |\n| Dresden | 0 | 1 | 0 | 0 | 0\
+    \ |\n| Rostock | 1 | 0 | 0 | 0 | 0 |\n| Nürnberg | 0 | 1 | 0 | 0 | 0 |\n\nTable\
+    \ 9.1.1 The adjacency matrix\n\nFor instance, the table says Leipzig is adjacent\
+    \ to Berlin, Dresden, and Nürnberg, for example.\n\n# Create and initialize an\
+    \ abstract data type\n\nWe create an abstract data type called Graph to define\
+    \ the behavior of our data structure.\n\nWe need a stack structure so that we\
+    \ can remember the visited vertices. A stack follows the last-in, first-out (LIFO)\
+    \ principle, i.e., the city inserted at last is the first city to come out of\
+    \ the stack.\n\nWe define an arrayOfVertex[] array to store new Vertices(cities)\
+    \ added to the Graph."
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "We define a numOfVertices variable that indicates the number of Vertices already\
+    \ added to the Graph.\n\nSince we will pass a String argument to our DFS algorithm\
+    \ (city name), a mapOfVertex is defined to register the key-value: city-index.\n\
+    \n# Listing 9.1.2 Graph Class\n\n```\npublic class Graph {\n    private final\
+    \ int MAX_VERTEX = 15;\n    private Vertex arrayOfVertex[]; //cities\n    private\
+    \ Map<String, Integer> mapOfVertex;\n    //matrix of adjacent vertex:\n    private\
+    \ int matrixOfAdjVertex[][];\n    //register the location at the arrayOfVertex:\n\
+    \    private int numOfVertices;\n    private Stack<Integer> stack;\n\n    public\
+    \ Graph() {\n        allOfVertex = new Vertex[MAX_VERTEX];\n        mapOfVertex\
+    \ = new ConcurrentHashMap<>();\n        numOfVertices = 0;\n        matrixOfAdjVertex\
+    \ = new int[MAX_VERTEX][MAX_VERTEX];\n        stack = new Stack<>();\n       \
+    \ //initialize matrix\n        for (int i = 0; i < MAX_VERTEX; i++) {\n      \
+    \      for (int j = 0; j < MAX_VERTEX; j++) {\n                matrixOfAdjVertex[i][j]\
+    \ = 0;\n            }\n        }\n    }\n}\n```\n\nWe define the following methods\
+    \ inside the Graph class.\n\n# Adding a vertex\n\n```\npublic void addVertex(Vertex\
+    \ city) {\n    mapOfVertex.put(city.getName(), numOfVertices);\n    arrayOfVertex[numOfVertices++]\
+    \ = city;\n}\n```\n\nThe numOfVertices variable determines the location (index)\
+    \ of the new City in the arrayOfVertex[\n\n# Adding an edge\n\nWe add two entries\
+    \ to matrixOfAdjVertex, because the two cities are connected in both directions."
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: "```\npublic void addEdge(String city1, String city2) {\n    int start = mapOfVertex.get(city1);\n\
+    \    int end = mapOfVertex.get(city2);\n    matrixOfAdjVertex[start][end] = 1;\n\
+    \    matrixOfAdjVertex[end][start] = 1;\n}\n```\n\nThe point here is that we need\
+    \ to define the topology of our Graph, adding Vertices(cities) and edges that\
+    \ connect them.\n\n# The algorithm\n\nOur dfs(s) method receives the City name\
+    \ as its argument. Then we locate the index of this City in our HashMap, and it\
+    \ is marked as visited and push it onto the Stack.\n\nWe iterate the stack items\
+    \ until it is empty. And this is what we do in every iteration:\n\n+   1. We retrieve\
+    \ the vertex from the top of the Stack (peek).\n2. We try to retrieve at least\
+    \ one unvisited neighbor for the vertex.\n3. If one vertex is found, it is marked\
+    \ as visited and pushes onto the Stack.\n4. If one vertex is not found, we pop\
+    \ the Stack.\n\nIf Berlin were our entry, then the first City will be Leipzig,\
+    \ marked as visited and pushed into the Stack. We read (peek) Leipzig from the\
+    \ Stack in the next iteration and look for its neighbors. Therefore, following\
+    \ these iterations, we arrive at München as the last city in this path. That is\
+    \ the in-depth essence of the algorithm. To explore as far as possible along each\
+    \ branch before continuing with a new one.\n\nListing 9.1.3 Deep-First Search\
+    \ algorithm\n\n```\npublic void dfs(String city) {\n    int vertex = mapOfVertex.get(city);\n\
+    \    arrayOfAdjVertex[vertex].setVisited(true);\n    System.out.print(city + \"\
+    \ \");\n    stack.push(vertex);\n\n    while (!stack.isEmpty()) {\n        int\
+    \ adjVertex = getAdjVertex(stack.peek());\n        if (adjVertex != -1) {\n  \
+    \          arrayOfAdjVertex[adjVertex].setVisited(true);\n            System.out.print(\n\
+    \                arrayOfAdjVertex[adjVertex].getName() + \" \");\n           \
+    \ stack.push(adjVertex);\n        } else {\n            stack.pop();\n       \
+    \ }\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "```\n//adjacent vertices not visited yet\nprivate int getAdjVertex(int vertex)\
+    \ {\n    for (int adj = 0; adj < numOfVertices; adj++) {\n        if (matrixOfAdjVertex[vertex][adj]\
+    \ == 1 &&\n            arrayOfAdjVertex[adj].isVisited() == false)\n         \
+    \   return adj; // return first adjacent vertex\n    }\n    return -1; // not\
+    \ vertices found\n}\n\npublic Map<String, Integer> getMapOfVertex() {\n    return\
+    \ mapOfVertex;\n}\n\npublic int[][] getMatrixOfAdjVertex() {\n    return matrixOfAdjVertex;\n\
+    }\n```\n\n# Tests\n\npublic class GraphTest {\n\nGraph graph;\n\n@Before\npublic\
+    \ void setup() {\n    graph = new Graph();\n}\n\n@Test\npublic void test_addvertex()\
+    \ {\n    Vertex city = new Vertex(\"Berlin\");\n    graph.addVertex(city);\n \
+    \   assertTrue(graph.getMapOfVertex().size() == 1);\n}\n\n@Test\npublic void test_addedge()\
+    \ {\n    String city1 = \"Berlin\";\n    String city2 = \"Leipzig\";\n    Vertex\
+    \ v1 = new Vertex(city1);\n    Vertex v2 = new Vertex(city2);\n    graph.addVertex(v1);\
+    \ //location 0\n    graph.addEdge(city1, city2); //location 1\n    assertTrue(graph.getMatrixOfAdjVertex()[0][1]\
+    \ == 1);\n    assertTrue(graph.getMatrixOfAdjVertex()[1][0] == 1);\n}"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "```\n@Test\npublic void test_dfs() {\n    String city1 = \"Berlin\";\n    String\
+    \ city2 = \"Leipzig\";\n    String city3 = \"Dresden\";\n    String city4 = \"\
+    Nürnberg\";\n    String city5 = \"Hannover\";\n    String city6 = \"Rostock\"\
+    ;\n    String city7 = \"Dortmund\";\n    String city8 = \"Frankfurt\";\n    String\
+    \ city9 = \"Stuttgart\";\n    String city10 = \"Munchen\";\n    String city11\
+    \ = \"Magdeburg\";\n    String city12 = \"Bremen\";\n    graph.addVertex(new Vertex(city1));\n\
+    \    graph.addVertex(new Vertex(city2));\n    graph.addVertex(new Vertex(city3));\n\
+    \    graph.addVertex(new Vertex(city4));\n    graph.addVertex(new Vertex(city5));\n\
+    \    graph.addVertex(new Vertex(city6));\n    graph.addVertex(new Vertex(city7));\n\
+    \    graph.addVertex(new Vertex(city8));\n    graph.addVertex(new Vertex(city9));\n\
+    \    graph.addVertex(new Vertex(city10));\n    graph.addVertex(new Vertex(city11));\n\
+    \    graph.addVertex(new Vertex(city12));\n    graph.addEdge(city1, city2);\n\
+    \    graph.addEdge(city2, city3);\n    graph.addEdge(city3, city4);\n    graph.addEdge(city4,\
+    \ city10);\n    graph.addEdge(city11, city5);\n    graph.addEdge(city5, city7);\n\
+    \    graph.addEdge(city7, city8);\n    graph.addEdge(city8, city9);\n    graph.addEdge(city1,\
+    \ city6);\n    graph.addEdge(city1, city11);\n    graph.addEdge(city5, city12);\n\
+    \    graph.dfs(city1);\n}\n```\n\nOutput:\nBerlin Leipzig Dresden Nürnberg München\
+    \ Rostock Magdeburg Hannover Dortmund Frankfurt Stuttgart Bremen\n\nWe can change\
+    \ the entry city (Hannover) and see different traversal paths.\n\nOutput:\nHannover\
+    \ Dortmund Frankfurt Stuttgart Magdeburg Berlin Leipzig Dresden Nürnberg\nMchen\
+    \ Rostock Bremen"
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# 9.2 Breadth-First Search (BFS)
+
+
+    Implement the breadth-first search algorithm to traverse a graph data structure.
+
+
+    Solution
+
+
+    In the breadth-first search, the algorithm stays as close as possible to the starting
+    point. It visits all the vertices adjacent to the starting vertex. The algorithm
+    is implemented using a queue.
+
+
+    9.2.1 shows a sequence of steps if we choose Berlin as the root node. The numbers
+    indicate the order in which the vertices are visited.
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_88_0.png)
+
+
+    The breath-first search algorithm first finds all the vertices that are one edge
+    away from the starting vertex, then all the vertices that are two edges away,
+    three edges away, and so on. It is useful to answer questions like what is the
+    shortest path from Berlin to another city like München?
+
+
+    We traverse cities that are one edge away from Berlin (first level): Rostock,
+    Magdeburg, and Leipzig. Then we traverse cities that are two edges away from Berlin
+    (second level): Hannover, Nürnberg, and Dresden. Then we traverse cities that
+    are three edges away from Berlin (third level): Berlin, Dortmund, and München.
+    That''s the idea. We already found München before traversing another possible
+    path: Berlin, Magdeburg, Dortmund, Frankfurt, Stuttgart, München, which corresponds
+    to the sixth level.'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: "# Adding an edge\n\nWe use a LinkedList data structure to build Adjacency List.\n\
+    \nTwo cities are adjacent or neighbors when a single edge connects them. Listing\
+    \ 9.2.1 the addEdge method.\n\n# Listing 9.2.1 - LinkedList, addEdge method\n\n\
+    ```\nprivate LinkedList<Integer> adjList[];\n\npublic void addEdge(String city1,\
+    \ String city2) {\n    int start = mapOfVertex.get(city1);\n    int end = mapOfVertex.get(city2);\n\
+    \    adjList[start].add(end);\n    adjList[end].add(start);\n}\n```\n\n# The algorithm\n\
+    \nOur bfs() method receives the City name as its argument. Then we locate the\
+    \ index of this City in our HashMap, and it is marked as visited, and add it onto\
+    \ the queue.\n\nWe iterate the queue items until it is empty. And this is what\
+    \ we do in every iteration:\n\n+   1. We retrieve and remove the head Vertex of\
+    \ this queue (remove).\n2. We iterate in an inner loop through all neighbors (adjacent)\
+    \ of this head Vertex until all were visited. Every adjacent vertex is marked\
+    \ as visited and added to the queue.\n3. When the previous iteration cannot find\
+    \ more adjacent vertices, we retrieve and remove the new head Vertex.\n\n# Listing\
+    \ 9.2.2 - Breath-first search algorithm\n\n```\nimport java.util.*;\nimport java.util.concurrent.ConcurrentHashMap;\n\
+    \npublic class Graph {\n\n    private final int MAX_VERTEX;\n    private Vertex\
+    \ arrayOfVertices[];//cities\n    private Map<String, Integer> mapOfVertex;//Adjacency\
+    \ list:\n    private LinkedList<Integer> adjList[];\n    //register the location\
+    \ at the arrayOfVertices;\n    private int numVertices;\n    private Queue<Integer>\
+    \ queue;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "```\npublic Graph(int vertices) {\n    MAX_VERTEX = vertices;\n    arrayOfVertex\
+    \ = new Vertex[MAX_VERTEX];\n    mapOfVertices = new ConcurrentHashMap<>();\n\
+    \    numOfVertices = 0;\n    queue = new LinkedList<>();\n}\n\nadjList = new LinkedList[MAX_VERTEX];\n\
+    for (int i = 0; i < MAX_VERTEX; i++) {\n    adjList[i] = new LinkedList<>();\n\
+    }\n```\n\n```\npublic void addVertex(Vertex city) {\n    mapOfVertices.put(city.getName(),\
+    \ numOfVertices);\n    arrayOfVertex[numOfVertices++] = city;\n}\n```\n\n```\n\
+    public void addEdge(String city1, String city2) {\n    int start = mapOfVertex.get(city1);\n\
+    \    int end = mapOfVertex.get(city2);\n    adjList[start].add(end);\n    adjList[end].add(start);\n\
+    }\n```\n\n```\npublic void bfs(String city) {\n    int vertex = mapOfVertices.get(city);\n\
+    \    arrayOfVertex[vertex].setVisited(true);\n    System.out.print(city + \" \"\
+    \ \");\n    queue.add(vertex);\n}\n\n// iterate until queue empty\nwhile (!queue.isEmpty())\
+    \ {\n    int headVertex = queue.remove();\n    int adjVertex;\n    // iterate\
+    \ until has no visited cities\n    while ((adjVertex = getAdjVertex(headVertex))\
+    \ != -1) {\n        arrayOfVertex[adjVertex].setVisited(true);\n        System.out.print(arrayOfVertex[adjVertex].getName()\
+    \ + \" \" \");\n        queue.add(adjVertex);\n    }\n}\n```\n\n```\npublic Map<String,\
+    \ Integer> getMapOfVertices() {\n    return mapOfVertices;\n}\n```\n\n```\npublic\
+    \ LinkedList<Integer>[] getAdjList() {\n    return adjList;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: "```\n//adjacent vertices not visited\nprivate int getAdjVertex(int vertex)\
+    \ {\n    LinkedList linkedList = adjList[vertex];\n    for (int adj = 0; adj <\
+    \ linkedList.size(); adj++) {\n        if (arrayOfVertex[(int) linkedList.get(adj)].isVisited()\
+    \ == false)\n            return (int) linkedList.get(adj);//return first adjacent\
+    \ vertex\n    }\n    return -1; //not vertices found\n}\n```\n\n# Tests\n\n```\n\
+    public class GraphTest {\n    Graph graph;\n\n    @Before\n    public void setup()\
+    \ {\n        graph = new Graph(15);\n    }\n\n    @Test\n    public void test_addVertex()\
+    \ {\n        Vertex city = new Vertex(\"Berlin\");\n        graph.addVertex(city);\n\
+    \        assertTrue(graph.getMapOfVertex().size() == 1);\n    }\n\n    @Test\n\
+    \    public void test_addEdge() {\n        String city1 = \"Berlin\";\n      \
+    \  String city2 = \"Leipzig\";\n        Vertex v1 = new Vertex(city1);\n     \
+    \   Vertex v2 = new Vertex(city2);\n        graph.addVertex(v1); //location 0\n\
+    \        graph.addVertex(v2); //location 1\n        graph.addEdge(city1, city2);\n\
+    \        assertTrue(graph.getAdjList()[0].get(0) == 1);\n        assertTrue(graph.getAdjList()[1].get(0)\
+    \ == 0);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "```\n@Test\npublic void test_bfs() {\n    String city1 = \"Berlin\";\n    String\
+    \ city2 = \"Leipzig\";\n    String city3 = \"Dresden\";\n    String city4 = \"\
+    Nürnberg\";\n    String city5 = \"Hannover\";\n    String city6 = \"Rostock\"\
+    ;\n    String city7 = \"Dortmund\";\n    String city8 = \"Frankfurt\";\n    String\
+    \ city9 = \"Stuttgart\";\n    String city10 = \"München\";\n    String city11\
+    \ = \"Magdeburg\";\n    String city12 = \"Bremen\";\n    graph.addVertex(new Vertex(city1));\n\
+    \    graph.addVertex(new Vertex(city2));\n    graph.addVertex(new Vertex(city3));\n\
+    \    graph.addVertex(new Vertex(city4));\n    graph.addVertex(new Vertex(city5));\n\
+    \    graph.addVertex(new Vertex(city6));\n    graph.addVertex(new Vertex(city7));\n\
+    \    graph.addVertex(new Vertex(city8));\n    graph.addVertex(new Vertex(city9));\n\
+    \    graph.addVertex(new Vertex(city10));\n    graph.addVertex(new Vertex(city11));\n\
+    \    graph.addVertex(new Vertex(city12));\n    graph.addEdge(city1, city2);\n\
+    \    graph.addEdge(city2, city3);\n    graph.addEdge(city3, city4);\n    graph.addEdge(city4,\
+    \ city10);\n    graph.addEdge(city11, city5);\n    graph.addEdge(city5, city7);\n\
+    \    graph.addEdge(city7, city8);\n    graph.addEdge(city8, city9);\n    graph.addEdge(city1,\
+    \ city6);\n    graph.addEdge(city1, city11);\n    graph.addEdge(city5, city12);\n\
+    \    graph.addEdge(city9, city10);\n    graph.bfs(city1);\n}\n```\n\nOutput:\n\
+    Berlin Leipzig Rostock Magdeburg Dresden Hannover Nürnberg Dortmund Bremen\nMünchen\
+    \ Frankfurt Stuttgart"
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# Coding Challenges
+
+
+    # 10.0 Fundamentals
+
+
+    There are two ways to receive a coding challenge from a recruiter. First, you
+    receive a description of the coding challenge via email that you need to solve
+    at home. Second, you need to solve the coding challenge in front of other developers
+    at the recruiter''s office.
+
+
+    For both ways, keep in mind a few things for making a good impression on the recruitment
+    process:
+
+
+    +   - Host your final code on a website like Github with a clear README file and
+    clear commit messages
+
+
+    +   - Include test cases for your code. It shows that you care about maintainability.
+
+
+    +   - Build a clean code structure. Your code must be readable.
+
+
+    +   - Apply SOLID principles, which tell you how to arrange your functions into
+    classes and how those classes should be interrelated.
+
+
+    +   - Think about possible improvements - not included in the challenge specification
+    - because these will be the open questions from recruiters when you change your
+    code in front of them.
+
+
+    # 10.1 Optimize Online Purchases
+
+
+    Given a budget B and a 2-D array, which includes [product-id][price][value], write
+    an algorithm to optimize a basket with the most valuable products whose costs
+    are less or equal than B.
+
+
+    # Solution
+
+
+    Imagine that we have a budget of 4 US$ and we want to buy the most valuable snacks
+    from table 10.1.1
+
+
+    But who decides if a product is more valuable than another one? Well, this depends
+    on every business. It could be an estimation based on quantitative or qualitative
+    analysis. We choose a quantitative approach for this solution based on which product
+    gives us more grams per dollar invested.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "| Id | Name | Price US$ | Amount gr. | Amount x US$ |\n|---|---|---|---||\n\
+    | 1 | Snack Funny Pencil | 0,48 | 36 | 75g |\n| 2 | Snackin Chicken Protein |\
+    \ 0,89 | 10 | 11g |\n| 3 | Snacks Waffle Pretzels | 0,98 | 226 | 230g |\n| 4 |\
+    \ Snacks Tahoe Pretzels | 0,98 | 226 | 230g |\n| 5 | Tako Chips Snack | 1,29 |\
+    \ 60 | 47g |\n| 6 | Shrimp Snacks | 1,29 | 71 | 55g |\n| 7 | Rasa Jagung Bakar\
+    \ | 1,35 | 50 | 37g |\n| 8 | Snack Balls | 1,65 | 12 | 7g |\n| 9 | Sabor Cheese\
+    \ Snacks | 1,69 | 20 | 12g |\n| 10 | Osem Bissli Falafel | 4,86 | 70 | 14g |\n\
+    \nTable 10.1.1 List of snacks\n\nWe use the Red-Green Refactor technique to implement\
+    \ our algorithm, which is the basis of test-drive-development (TDD). In every\
+    \ assumption, we will write a test and see if it fails. Then, we write the code\
+    \ that implements only that test and sees if it succeeded, then we can refactor\
+    \ the code to make it better. Then we continue with another assumption and repeat\
+    \ the previous steps until the algorithm is successfully implemented for all tests.\n\
+    \nTo generalize the concept of \"the most valuable product,\" we assign a value\
+    \ to every product. Our algorithm receives two parameters: an array 2-D, which\
+    \ includes [product-id][price][value], and the budget.\n\n# Assumption #1 - Given\
+    \ an array of products ordered by value, return the valuable products\n\nWe start\
+    \ defining a java test creating a new BasketOptimized class.\n\nListing 10.1.1\
+    \ - BasketOptimized Test Case\n\n```\npublic class BasketOptimized Test {\n  \
+    \  BasketOptimized basketOptimized;\n\n    @Before\n    public void setup() {\n\
+    \        basketOptimized = new BasketOptimized();\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "```\n@Test\npublic void productsOrderByValue() {\n    double[][] myProducts\
+    \ = new double[][{\n        {1, 0.98, 230},\n        {2, 0.98, 230},\n       \
+    \ {3, 0.48, 75},\n        {4, 1.29, 55},\n        {5, 1.29, 47},\n        {6,\
+    \ 4.86, 14},\n        {7, 1.69, 12}\n    };\n\n    double[] mostValuableProducts\
+    \ = basketOptimized.fill(myProducts, 4);\n    assertEquals(590d,\n        Arrays.stream(mostValuableProducts)\n\
+    \        mapToDouble(arr -> arr[2]).sum(), 0);\n}\n```\n\nThe first time, it should\
+    \ fail because the fill method does not exist. We then need to create an easy\
+    \ implementation to pass the test: the sum of the values must be equal to 590\
+    \ because this represents all products whose price less than or equal to 4.\n\n\
+    Now, we proceed to implement the fill method.\n\nListing 10.1.2 - BaskedOptimized\
+    \ fill method implementation\n\n```\npublic class BaskedOptimized {\n    public\
+    \ double[][] fill(double[][] myProducts, double budget) {\n        int len = myProducts.length;\n\
+    \        double[][] mostValuableProducts = new double[len][3];\n        double\
+    \ sum = 0;\n        for (int idx = 0; idx < len; idx++) {\n            sum = sum\
+    \ + myProducts[idx][1]; //price\n            if (sum <= budget) {\n          \
+    \      mostValuableProducts[idx][0] = myProducts[idx][0]; //id\n             \
+    \   mostValuableProducts[idx][1] = myProducts[idx][1]; //price\n             \
+    \   mostValuableProducts[idx][2] = myProducts[idx][2]; //value\n            }\n\
+    \        }\n        return mostValuableProducts;\n    }\n}\n```\n\nAssumption\
+    \ #2 - Given an array of products not ordered by value, return the most valuable\
+    \ products"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: "In this case, we pass a not ordered array, so we can see that our new test\
+    \ will fail.\n\n```\n@Test\npublic void given_productsNotOrderedByValue_return_mostValuable()\
+    \ {\n    double[][] myProducts = new double[][]{\n        {1, 0.98, 230},\n  \
+    \      {2, 1.29, 47},\n        {3, 1.69, 12},\n        {4, 1.29, 55},\n      \
+    \  {5, 0.98, 230},\n        {6, 4.86, 14},\n        {7, 0.48, 175}\n    };\n}\n\
+    \ndouble[][] mostValuableProducts =\n    basketOptimized.fill(myProducts, 4);\n\
+    \    assertEquals(590d,\n        Arrays.stream(mostValuableProducts)\n       \
+    \     mapToDouble(arr -> arr[2]).sum(), 0);\n);\n```\n\nWe need to order the Array\
+    \ by value because we want the most valuable products, so it is time to refactor\
+    \ our algorithm. What we need to do is to sort our input array.\n\n```\npublic\
+    \ double[][] fill(double[][] myProducts, double budget) {\n    Arrays.sort(myProducts,\
+    \ Collections.reverseOrder(\n        Comparator.comparingDouble(a -> a[2])));\n\
+    \    int len = myProducts.length;\n    double[][] mostValuableProducts = new double[len][3];\n\
+    \    double sum = 0;\n    for (int idx = 0; idx < len; idx++) {\n        sum +=\
+    \ myProducts[idx][1]; //price\n        if (sum <= budget) {\n            mostValuableProducts[idx][0]\
+    \ =\n                myProducts[idx][0]; //id\n            mostValuableProducts[idx][1]\
+    \ =\n                myProducts[idx][1]; //price\n            mostValuableProducts[idx][2]\
+    \ =\n                myProducts[idx][2]; //value\n        }\n    }\n    return\
+    \ mostValuableProducts;\n}\n```\n\nThen we can see that our first two test cases\
+    \ were successful.\n\n# Assumption #3 - Given an array of products, we need to\
+    \ obtain the most valuable products from all possible combinations of the products"
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "Imagine the following scenario:\n\n```\ndouble[][] myProducts = new double[][]\
+    \ {\n  {1, 0.98, 230},\n  {2, 0.51, 30},\n  {3, 0.49, 28},\n  {4, 1.29, 55},\n\
+    \  {5, 0.98, 230},\n  {6, 4.86, 14},\n  {7, 0.48, 75},\n};\n\ndouble[] mostValuableProducts\
+    \ = basketOptimized\n.fill(myProducts, 4);\nasertEquals(590,\n  Arrays.stream(mostValuableProducts)\n\
+    \  .mapToDouble(arr -> arr[2]).sum());\n```\n\nThe test expects a result of 590,\
+    \ which corresponds to the final price of 3,73US$ (0.98+0.98+0.48+1.29). Once\
+    \ the algorithm sorts by value the input array, we obtain the new input array:\n\
+    \n+   - [1.0, 0.98, 230.0]\n- [5.0, 0.98, 230.0]\n- [7.0, 0.48, 75.0]\n- [4.0,\
+    \ 1.29, 55.0]\n- [2.0, 0.51, 30.0]\n- [3.0, 0.49, 28.0]\n- [6.0, 4.86, 14.0]\n\
+    \nBut here we realize another combination of products that give us the most valuable\
+    \ products: 230+230+75+30 = 593, which corresponds to the final price of 3,44US$.\
+    \ Then we need to refactor our code to calculate all combinations (subsets) and\
+    \ return the most valuable products under a budget of 4 US$.\n\nThe subsets can\
+    \ be represented by the binary options from 0 to 7 (the array size).\n\nBitwise\
+    \ allows us to manipulate the bits within an integer. For example, the value for\
+    \ 33 in binary is 01000001, where each position represents a power of two, starting\
+    \ with 2 at the rightmost bit.\n\n```\nint iterations = (int) Math.pow(2, myProducts.length);\n\
+    ```\n\nSo, for seven products, we have 128 iterations. For every iteration, we\
+    \ build an inner loop to decide which products to include in a subset of products.\n\
+    \nLet us see an example:\n\nWhen int idx = 33\n\nWe need to build a subset with\
+    \ those products, which pass the following criteria:\n\n```\nif ((idx & (int)\
+    \ Math.pow(2, idx)) == 0) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "The following table shows the iteration in our inner loop:\n\n| binary-idx\
+    \ | idx2 | Math.pow(2,idx2) | binary-pow(idx2) | binary-idx AND binary-pow(idx2)\
+    \ |\n|---|---|---|---||}{\n| 00100001 | 0 | 1 | 0001 | |\n| 00100001 | 1 | 2 |\
+    \ 0010 | 0 |\n| 00100001 | 2 | 4 | 0100 | 0 |\n| 00100001 | 3 | 8 | | 0 |\n| 00100001\
+    \ | 4 | 16 | 00010000 | 0 |\n| 00100001 | 5 | 32 | 00100000 | 1 |\n| 00100001\
+    \ | 6 | 64 | 01000000 | 0 |\n\nMeans that a new subset will include these products\
+    \ located at indexes 1, 2, 3, 4, and 6 from our Array of products. And we need\
+    \ to ask if we can afford to buy these products under our limited budget.\n\n\
+    ```\nif (subset.length > 0 && sumPrice <= budget) {\n```\n\nThe following figure\
+    \ shows the result of our current iteration:\n\n```\nidx = 33\n▼ subset = (double[7][@1561)\n\
+    \  Not showing null elements\n  ▼ 0 = (double[3]@1131)\n    idx 0 = 2.0\n    idx\
+    \ 1 = 0.51\n    idx 2 = 30.0\n  ▼ 1 = (double[3]@1612)\n    idx 0 = 3.0\n    idx\
+    \ 1 = 0.49\n    idx 2 = 28.0\n  ▼ 2 = (double[3]@1067)\n    idx 0 = 4.0\n    idx\
+    \ 1 = 1.29\n    idx 2 = 55.0\n  ▼ 3 = (double[3]@1292)\n    idx 0 = 5.0\n    idx\
+    \ 1 = 0.98\n    idx 2 = 230.0\n  ▼ 4 = (double[3]@1641)\n    idx 0 = 7.0\n   \
+    \ idx 1 = 0.48\n    idx 2 = 75.0\n```\n\nWe build a HashMap to store all combinations\
+    \ and the sum of its values. Finally, we can afford the first element of the HashMap,\
+    \ ordered by value."
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: "# Listing 10.1.3 - BaskedOptimized implementation\n\n```\npublic class BasketOptimized\
+    \ {\n    public double[][] fill(double[] myProducts, double budget) {\n      \
+    \  int len = myProducts.length;\n        int numCombinations = (int)Math.pow(2,\
+    \ myProducts.length);\n        Map<double[], Double> combinations = new HashMap<>();\n\
+    \n        for (int idx = 0; idx < numCombinations; idx++) {\n            double[]\
+    \ subset = new double[len];\n            double sumPrice = 0;\n            double\
+    \ sumValue = 0;\n            int i = 0;\n            for (int idx2 = 0; idx2 <\
+    \ len; idx2++) {\n                if ((idx & Math.pow(2, idx2)) == 0) {\n    \
+    \                subset[i++] = myProducts[idx2];\n                    sumPrice\
+    \ += myProducts[idx2][1];\n                    sumValue += myProducts[idx2][2];\n\
+    \                }\n            }\n            if (subset.length > 0 && sumPrice\
+    \ <= budget) {\n                // remove nulls\n                subset = Arrays.stream(subset)\n\
+    \                    .filter(s -> s != null && s.length > 0)\n               \
+    \     .toArray(double[]::new);\n                combinations.put(subset, Double.valueOf(sumValue));\n\
+    \            }\n        }\n\n        HashMap<double[], Double> reverseSortedMap\
+    \ = \n            new LinkedHashMap<>();\n        combinations.entrySet()\n  \
+    \          .stream()\n            .sorted(Map.Entry.comparingBy(Comparator.reverseOrder()))\n\
+    \            .forEach(x -> reverseSortedMap\n                .put(x.getKey(),\
+    \ x.getValue()));\n\n        double[][] mostValueProducts = reverseSortedMap\n\
+    \            keySet().iterator().next();\n        return mostValueProducts;\n\
+    \    }\n}\n```\n\n# Tests"
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "```\npublic class BasketOptimizedTest {\n\nBasketOptimized basketOptimized;\n\
+    \n@Before\npublic void setup() {\n    basketOptimized = new BasketOptimized();\n\
+    }\n```\n\n```\n@Test\npublic void given_productsOrderedByValue_return_mostValuable()\
+    \ {\n\ndouble[][] myProducts = new double[][]{\n    {1, 0.98, 230},\n    {2, 0.98,\
+    \ 230},\n    {3, 0.48, 75},\n    {4, 1.29, 55},\n    {5, 1.29, 47},\n    {6, 4.86,\
+    \ 14},\n    {7, 1.69, 32}\n};\n\ndouble[][] mostValuableProducts =\n    basketOptimized.fill(myProducts,\
+    \ 4);\nassertEquals(590d,\n    Arrays.stream(mostValuableProducts)\n        mapToDouble(arr\
+    \ -> arr[2]).sum(), 0);\n}\n```\n\n```\n@Test\npublic void given_productsNotOrderedByValue_return_mostValuable()\
+    \ {\n\ndouble[][] myProducts = new double[][]{\n    {1, 0.98, 230},\n    {2, 1.29,\
+    \ 47},\n    {3, 1.69, 12},\n    {4, 1.29, 55},\n    {5, 0.98, 230},\n    {6, 4.86,\
+    \ 14},\n    {7, 0.48, 75}\n};\n\ndouble[][] mostValuableProducts =\n    basketOptimized.fill(myProducts,\
+    \ 4);\nassertEquals(590d,\n    Arrays.stream(mostValuableProducts)\n        mapToDouble(arr\
+    \ -> arr[2]).sum(), 0);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "```\n@Test\npublic void[] given_products_return_theMostValuable() {\n    double[][]\
+    \ myProducts = new double[][]{\n        {1, 0.98, 230},\n        {2, 0.51, 30},\n\
+    \        {3, 0.49, 28},\n        {4, 1.29, 55},\n        {5, 0.98, 230},\n   \
+    \     {6, 4.86, 14},\n        {7, 0.48, 75}\n    };\n\n    double[][] mostValuableProducts\
+    \ =\n        basketOptimized.fill(myProducts, 4);\n    assertEquals(593d,\n  \
+    \      Arrays.stream(mostValuableProducts)\n            .mapToDouble(arr -> arr[2]).sum(),\
+    \ 0);\n}\n```\n\n# 10.2 Tic Tac Toe\n\nWrite a tic-tac-toe program where the size\
+    \ of the Board should be configurable between 3x3 and 9x9. It should be for three\
+    \ players instead of two, and it should be configurable. One of the players is\
+    \ an AI. All three players play together against each other. The play starts at\
+    \ random. The input of the AI is automatic. The input from the console must be\
+    \ provided in format X, Y. After every move, the new status of the Board is printed.\
+    \ The Winner is who completes a whole row, column, or diagonal.\n\n![](img/60b89ebeda3428b712e02fb7e9fd8b5b_101_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: "General Rules: https://en.wikipedia.org/wiki/Tic-tac-toe\n\n# Solution\n\n\
+    We learn from Object-Oriented Design and SOLID principles that we need to delegate\
+    \ responsibilities to different components. For this game, we identify the following\
+    \ classes:\n\nBoard – set size, get Winner, draw?\n\nPlayer – (Human, IA)\n\n\
+    Utils – to load configuration files.\n\nApp – the main Class assembles and controls\
+    \ our different components.\n\n# Test case #1: Define the size of the board\n\n\
+    Based on the size of the Board, we need to initialize a bi-dimensional array to\
+    \ store the symbols after every move. Listing 10.2.1 shows one assumption about\
+    \ the setSize method.\n\nListing 10.2.1 – Board Class, setSize Test case\n\n```\n\
+    public class BoardTest {\n\n    private Board board;\n\n    @Before\n    public\
+    \ void setUp() {\n        board = new Board();\n    }\n\n    @Test\n    public\
+    \ void whenSizeThenBoardSize() throws Exception {\n        board.setSize(10);\n\
+    \        assertEquals(10, board.getBody().length);\n    }\n}\n```\n\nListing 10.2.2\
+    \ shows an initial implementation of Board Class and the setSize method.\n\nListing\
+    \ 10.2.2 – Board Class, setSize method\n\n```\npublic class Board {\n\n    private\
+    \ final static String EMPTY_ = \" \";\n    private String[][] board;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "```\npublic void setState(int size) {\n    this.numFPlaysAllowed = size * size;\n\
+    \    this.board = new String[size][size];\n    for (int x = 0; x < size; x++)\
+    \ {\n        for (int y = 0; y < size; y++) {\n            board[x][y] = EMPTY;\n\
+    \        }\n    }\n}\n\npublic String[][] getBoard() {\n    return board;\n}\n\
+    ```\n\nTDD allows us to design, build, and test the smallest methods first and\
+    \ assemble them later.\nThe most important is that we can refactor it without\
+    \ breaking the rest of the test cases.\n\n# Test case #2: Enter a symbol based\
+    \ on valid coordinates\n\nOnce the size is set up, we need to accept valid coordinates\
+    \ and check if that location is still available.\n\n```\n@Test\npublic void whenCoordinatesAreNotBusyThenPutSymbol()\
+    \ throws Exception {\n    board.setSize(3);\n    board.putSymbol(1, 2, \"X\");\n\
+    \    board.putSymbol(2, 3, \"O\");\n    assertEquals(\"O\", board.getBoard()[1][2]);\n\
+    }\n```\n\nListing 10.2.3 shows the implementation of the putSymbol method.\n\n\
+    Listing 10.2.3 – Board Class, putSymbol method\n\n```\npublic void putSymbol(int\
+    \ x, int y, String character) {\n    if (x < 1 || x > this.board.length) {\n \
+    \       throw new RuntimeException(\n            \"X coordinate invalid, must\
+    \ be between 1 and \" +\n            this.board.length);\n        }\n    }\n\n\
+    if (y < 1 || y > this.board.length) {\n        throw new RuntimeException(\n \
+    \           \"Y coordinate invalid, must be between 1 and \" +\n            this.board.length);\n\
+    \        }\n    }\n```\n\n96\t\tCracking the Coding Interview"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "```\nif (board[x - 1][y - 1] != \"\")\n    throw new Runtime(\"Coordinates\
+    \ are busy\");\n```\n\n```\nboard[x - 1][y - 1] = character;\nthis.numOfPlays++;\n\
+    ```\n\nIf we set the size to 4, that means for the player, the lower limit is\
+    \ 1, and the upper limit is 4.\n\n# Test case #3: After every move, print the\
+    \ board\n\nEvery time a player enters coordinates, then the Board is updated and\
+    \ printed.\n\n```\n@Test\npublic void whenBoardIsNotNullThenPrintIsPossible()\
+    \ {\n    board.setSize(10);\n    board.putSymbol(1, 2, \"X\");\n    board.putSymbol(2,\
+    \ 3, \"O\");\n    board.print();\n}\n```\n\nListing 10.2.4 shows the implementation\
+    \ of the print method.\n\n# Listing 10.2.4 - Board Class, print method\n\nIf you\
+    \ can delegate the print of the Board to another component, e.g., Console.print.\
+    \ When you want to print in XML o HTML format, Console Class will be responsible\
+    \ for implementing the new methods. There should never be more than one reason\
+    \ for a class change.\n\n# Test Case #4: Returns a winner"
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "Once we set the size, the game receives different moves. The Board Class checks\
+    \ if the game exists a winner after a move. Listing 10.2.5 defines a test case\
+    \ to check if a whole horizontal line is filled.\n\n# Listing 10.2.5 - Board Class,\
+    \ getWinner Test Case\n\n```\n@Test\npublic void horizontalLineFilledThenWinnerX()\
+    \ {\n    board.setSize(3);\n    board.putSymbol(1, 1, \"X\");\n    board.putSymbol(1,\
+    \ 2, \"O\");\n    board.putSymbol(2, 1, \"X\");\n    board.putSymbol(2, 3, \"\
+    O\");\n    board.putSymbol(3, 1, \"X\");\n    board.print();\n    assertEquals(\"\
+    X\", board.getWinner());\n}\n```\n\nThen we iterate every horizontal line and\
+    \ check if it is filled with the same symbol. Listing 10.2.6 shows the implementation\
+    \ of the getWinner method\n\n# Listing 10.2.6 - Board Class, getWinner method\n\
+    \n```\nprivate String getWinner() {\n    String winner = null;\n    for (int y\
+    \ = 0; y < board.length; y++) {\n        String symbol = board[0][y];\n      \
+    \  if (symbol != EMPTY_) {\n            int counter = 1;\n            for (int\
+    \ x = 1; x < board.length; x++) {\n                if (symbol.equals(board[x][y]))\
+    \ {\n                    counter++;\n                }\n            }\n      \
+    \      if (counter == board.length) {\n                winner = symbol;\n    \
+    \            return winner;\n            }\n        }\n    }\n    return winner;\n\
+    }\n```\n\nWe need the same logic for all the ways to win: vertical, diagonal,\
+    \ so we need to abstract every case in sub methods. Listing 10.2.7 shows the new\
+    \ getWinner method after refactoring."
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: "Listing 10.2.7 - Board Class, getWinner method refactored\n\n```\npublic String\
+    \ getWinner() {\n    if (board == null) {\n        throw new RuntimeException(\"\
+    Board is not initialized\");\n    }\n    String winner = winnerInLine();\n   \
+    \ if (winner != null) {\n        return winner;\n    } else {\n        winner\
+    \ = winnerInVerticalLine();\n        if (winner != null) {\n            return\
+    \ winner;\n        } else {\n            winner = winnerInDiagonalBottomLeft();\n\
+    \            if (winner != null) {\n                return winner;\n         \
+    \   } else {\n                winner = winnerInDiagonalTopLeft();\n          \
+    \      if (winner != null) {\n                    return winner;\n           \
+    \     } else {\n                    // we avoid to iterate the board every time\n\
+    \                    // to look for a draw\n                    if (this.numOfPlays\
+    \ == this.numOfPlaysAllowed) {\n                        return DRAW;\n       \
+    \             } else {\n                        return null;\n               \
+    \     }\n                }\n            }\n        }\n    }\n}\n```\n\nThe previous\
+    \ code shows how we introduce three new variables:\n\nA constant variable:\n\n\
+    private final static String DRAW_ = \"DRAW!\";\n\nnumOfPlays and numOfPlaysAllowed\
+    \ are declared as member variables at the Class.\n\nnumOfPlaysAllowed is initialized\
+    \ in theA method:\n\n```\nthis.numOfPlays = size * size;\n```\n\nAnd the numOfPlays\
+    \ is incremented at the put method:\n\n```\nthis.numOfPlays++;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: "Here are the other ways to win.\n\n```\nprivate String winnerInVerticalLine()\
+    \ {\n    String winner = null;\n    for (int x = 0; x < board.length; x++) {\n\
+    \        String symbol = board[x][];\n        if (symbol != EMPTY_) {\n      \
+    \      int counter = 1;\n            for (int y = 1; y < board.length; y++) {\n\
+    \                if (symbol.equals(board[x][y])) {\n                    counter++;\n\
+    \                }\n            }\n            if (counter == board.length) {\n\
+    \                winner = symbol;\n                return winner;\n          \
+    \  }\n        }\n    }\n    return winner;\n}\n```\n\n```\nprivate String winnerInDiagonalBottomLeft()\
+    \ {\n    String winner = null;\n    String symbol = board[0][];\n    if (symbol\
+    \ != EMPTY_) {\n        int counter = 1;\n        for (int idx = 1; idx < board.length;\
+    \ idx++) {\n            if (symbol.equals(board[idx][idx])) {\n              \
+    \  counter++;\n            }\n        }\n        if (counter == board.length)\
+    \ {\n            winner = symbol;\n            return winner;\n        }\n   \
+    \ }\n    return winner;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "```\nprivate String winnerInDiagonalTopLeft() {\n    String winner = null;\n\
+    \    String symbol = board[@][board.length - 1];\n    if (symbol != EMPTY_) {\n\
+    \        int counter = 1;\n        for (int idx = 1; idx < board.length; idx++)\
+    \ {\n            if (symbol.equals(board[idx][board.length - 1 - idx])) {\n  \
+    \              counter++;\n            }\n        }\n        if (counter == board.length)\
+    \ {\n            winner = symbol;\n            return winner;\n        }\n   \
+    \ }\n    return winner;\n}\n```\n\nNow let see the Utils Class, which loads the\
+    \ symbols and the size of the Board.\n\n# Test case #5: Load file\n\nWe need a\
+    \ method that, given a Filename, retrieves the content of that File. Listing 10.2.8\
+    \ shows the test case.\n\nListing 10.2.8 - Utils Test Class\n\n```\npublic class\
+    \ UtilsTest {\n    private Utils utils;\n\n    @Before\n    public void setUp()\
+    \ {\n        utils = new Utils();\n    }\n\n    @Test\n    public void whenFileExistsThenReturnContent()\
+    \ throws Exception {\n        String content = utils.loadFile(\"symbols.txt\"\
+    );\n        assertNotNull(content);\n    }\n}\n```\n\nAssumes that our configuration\
+    \ files are located under the project name. Listing 10.2.9 shows a loadFile implementation."
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: "# Listing 10.2.9 - Utils Class, loadFile method\n\n```\nimport java.nio.file.Files;\n\
+    import java.nio.file.Paths;\n\npublic class Utils {\n\n    public String loadFile(String\
+    \ fileName) throws Exception {\n        String content;\n        try {\n     \
+    \       content = new String(Files.readAllBytes(Paths.get(fileName)));\n     \
+    \   } catch (IOException io) {\n            throw new RuntimeException(\"File\
+    \ \" + fileName + \" not found\");\n        }\n        return content;\n    }\n\
+    }\n```\n\n# Test case #6: Get the board size\n\nOnce a Board is loaded, we need\
+    \ to validate that it includes valid content. Listing 10.2.10 shows the assumption\
+    \ about how to validate the Board size. Based on the requirements, board size\
+    \ must be between 3 and 9.\n\n# Listing 10.2.10 - Utils Class, getBoardSize Test\
+    \ case\n\n```\n@Test\npublic void getBoardSizeIs4ReturnSize() throws Exception\
+    \ {\n    String content = utils.loadFile(\"board.txt\");\n    assertEquals(4,\
+    \ utils.getBoardSize(content));\n}\n```\n\nListing 10.2.11 shows the implementation\
+    \ of the BoardSize.\n\n# Listing 10.2.11 - Utils Class, getBoardSize method\n\n\
+    ```\npublic int getBoardSize(String content) throws Exception {\n\n    if (content\
+    \ == null) {\n        throw new RuntimeException(\"Invalid setting for the board\"\
+    );\n    }\n\n    if (Integer.valueOf(content) < 3 || Integer.valueOf(content)\
+    \ > 9) {\n        throw new RuntimeException(\"Invalid setting for the board\"\
+    );\n    }\n\n    return Integer.valueOf(content).intValue();\n}\n```\n\nboard.txt\n\
+    4"
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: "Try always to build a small method for each thing. If you can divide the problem\
+    \ into small parts, that means that you can create great software for more significant\
+    \ projects\n\n# Test case #7: Get symbols\n\nOnce a symbol is loaded, it validates\
+    \ that it is retrieved only three symbols. Listing 10.2.12 shows our assumption\
+    \ in one Test case.\n\nListing 10.2.12 - Utils Class, getSymbols Test Case\n\n\
+    ```\n@Test\npublic void whenSymbolsIsThreeReturnValues() throws Exception {\n\
+    \    String content = utils.loadFile(\"symbols.txt\");\n    String[] symbols =\
+    \ utils.getSymbols(content);\n    assertEquals(new String[][\"X\",\"O\",\"A\"\
+    ], symbols);\n}\n```\n\nsymbols.txt\nX0,A\n\nListing 10.2.13 - Utils Class, getSymbols\
+    \ method\n\n```\npublic String[] getSymbols(String content) {\n    String[] symbols\
+    \ = content.split(\",\");\n    if (symbols.length != 3) {\n        throw new RuntimeException(\"\
+    Invalid settings for symbols\");\n    }\n    return symbols;\n}\n```\n\n# Test\
+    \ case #8: Receive input from the console\n\nWe create an auxiliary Input class\
+    \ to store the coordinates entered by the player. Listing 10.2.14 shows our assumption\
+    \ in a Test Case Class.\n\n```\npublic class Input {\n    private int x;\n   \
+    \ private int y;\n}\n```\n\nListing 10.2.14 - Utils Class, getInput Test case\n\
+    \n```\n@Test\npublic void inputFromConsoleReturnInput() throws Exception {\n \
+    \   Input input = utils.getInputFromConsole(\"2,3\");\n    assertEquals(2, input.getX());\n\
+    \    assertEquals(3, input.getY());\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: "Listing 10.2.15 shows the `getInputFromConsole` method implementation, where\
+    \ we need to accept valid numbers.\n\nListing 10.2.15 - Utils Class, getInputFromConsole\
+    \ method\n\n```\npublic Input getInputFromConsole(String inputConsole) {\n   \
+    \ if (inputConsole == null || inputConsole.trim().length() <= 0)\n        throw\
+    \ new RuntimeException(\"Invalid input from console\");\n\n    Pattern p = Pattern.compile(\"\
+    [0-9]*\\\\\\.,?[0-9]+\\]+\");\n    Matcher matcher = p.matcher(inputConsole);\n\
+    \    if (!matcher.find())\n        throw new RuntimeException(\"Invalid input\
+    \ from console\");\n\n    String[] inputSplitted = inputConsole.split(\",\");\n\
+    \n    Input input = new Input();\n    input.setX(Integer.valueOf(inputSplitted[0]).intValue());\n\
+    \    input.setY(Integer.valueOf(inputSplitted[1]).intValue());\n    return input;\n\
+    }\n```\n\nListing 10.2.16 shows a design of a Player Class and its sub-classes.\n\
+    \nListing 10.2.16 - Player Class, and subClasses\n\n```\npublic class Player {\n\
+    \    private String symbol;\n    //getters and setters are omitted\n}\n```\n\n\
+    ```\npublic class Human extends Player {\n```\n\n```\npublic class IA extends\
+    \ Player {\n```\n\n# Test case #9: How to implement IA plays\n\nTo make an easy\
+    \ tic tac toe program, we will allow the IA player to fill the first coordinate\
+    \ available on the Board. Of course, you can write a more complex implementation\
+    \ based on graphs, for example, to decide the best move of the IA player. Listing\
+    \ 10.2.17 shows assumptions about the IA player."
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "# Listing 10.2.17 - Player Class, Test Cases\n\n```\npublic class PlayerTest\
+    \ {\n\n    private Player humanPlayer;\n    private IA iaPlayer;\n    private\
+    \ Board board;\n\n    @Before\n    public void setUp() {\n        humanPlayer\
+    \ = new Human();\n        iaPlayer = new IA();\n        board = new Board();\n\
+    \        board.setSize(3);\n    }\n}\n```\n\n```\n@Test\npublic void whenSetSymbolThenReturnSameSymbol()\
+    \ throws Exception {\n    humanPlayer.setSymbol(\"A\");\n    assertEquals(\"A\"\
+    , humanPlayer.getSymbol());\n}\n```\n\n```\n@Test\npublic void whenIAPlaysThenReturnInput()\
+    \ throws Exception {\n    iaPlayer.setSymbol(\"A\");\n    board.putSymbol(1, 1,\
+    \ \"X\");\n    board.putSymbol(2, 2, \"O\");\n    board.print();\n    Input input\
+    \ = iaPlayer.play(board.getBoard());\n    assertEquals(1, input.getX());\n   \
+    \ assertEquals(2, input.getY());\n}\n```\n\nListing 10.2.18 shows the play method\
+    \ implementation.\n\nListing 10.2.18 - Player Class, play method\n\n```\npublic\
+    \ class IA extends Player {\n    private final static String EMPTY_ = \" \";\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: "```\npublic Input play(String[][] board) {\n    Input input = new Input();\n\
+    \    //Assumption: find the first coordinate available\n    for (int x = 0; x\
+    \ < board.length; x++) {\n    for (int y = 0; y < board.length; y++) {\n     \
+    \ String symbol = board[x][y];\n      if (symbol.equals(\"EMPTY\")) {\n      \
+    \  input.setX(x + 1);\n        input.setY(y + 1);\n        return input;\n   \
+    \   }\n    }\n    }\n    return input;\n}\n```\n\nNow that we have all components\
+    \ ready, it is time to build the main Class. Listing 10.2.19 shows how App Class\
+    \ assembly all components.\n\nListing 10.2.19 - App Class\n\n```\npublic class\
+    \ App {\n    private final static String DRAW_ = \"DRAW!\";\n\n    public static\
+    \ void main(String[] args) throws Exception {\n\n        System.out.println(\"\
+    welcome to TIC TOE 2.0!\");\n\n        Scanner scanner = new Scanner(System.in);\n\
+    \n        Utils utils = new Utils();\n        int boardSize = utils.getBoardSize(utils.loadFile(\"\
+    board.txt\"));\n\n        Board board = new Board();\n        board.setSize(boardSize);\n\
+    \n        System.out.println(\"You are playing in a board \" +\n        boardSize\
+    \ + \"x\" + boardSize);\n        String[] symbols = utils.getSymbols(utils.loadFile(\"\
+    symbols.txt\"));\n\n        Player player1 = new Human();\n        player1.setSymbol(symbols[0]);\n\
+    \        Player player2 = new Human();\n        player2.setSymbol(symbols[1]);\n\
+    \        Player player3 = new IA();\n        player3.setSymbol(symbols[2]);\n\n\
+    \        List<Player> playersIterator = new ArrayList<>();n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: "```\nplayersIterator.add(player1);\nplayersIterator.add(player2);\nplayersIterator.add(player3);\n\
+    Collections.shuffle(playersIterator);\n\nint idx = 0;\nboolean stillPlaying =\
+    \ true;\nwhile (stillPlaying) {\n    Player player = playersIterator.get(idx++);\n\
+    \    if (player instanceof IA) {\n        System.out.println(\"Player \" + player.getSymbol()\
+    \ + \n            \" enter your coordinates in Format x,y: \");\n        Input\
+    \ input = ((IA) player).play(board.board());\n        board.putSymbol(input.getX(),\
+    \ input.getY(), player.getSymbol());\n    } else {\n        boolean coordinateOk\
+    \ = false;\n        while (!coordinateOk) {\n            System.out.println(\"\
+    Player \" + player.getSymbol() + \n            \" enter your coordinates in Format\
+    \ x,y: \");\n            try {\n                Input input = utils.getInputFromConsole(scanner.nextLine());\n\
+    \                board.putSymbol(input.getX(), input.getY(), player.getSymbol());\n\
+    \                coordinateOk = true;\n            } catch (RuntimeException ex)\
+    \ {\n                System.out.println(ex.getMessage());\n            }\n   \
+    \     }\n    }\n}\nboard.print();\nString winner = board.getWinner();\nif (winner\
+    \ != null) {\n    stillPlaying = false;\n    if (winner.equals(DRAW)) {\n    \
+    \    System.out.println(DRAW_);\n    } else {\n        System.out.println(\"Player\
+    \ \" + winner + \" is the Winner!\");\n    }\n}\nif (idx == 3) //to control the\
+    \ turn of every player\n    idx = 0;\n};\n```\n\n# DEMO:\n\nWelcome to TIC TAC\
+    \ TOE 2.0!\n\nYou are playing in a board 4x4\n\nPlayer A enter your coordinates\
+    \ in Format x,y:"
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '1,1
+
+
+    ```
+
+    | |
+
+    | |
+
+    | |
+
+    A| |
+
+    ```
+
+
+    Player O enter your coordinates in Format x,y:
+
+
+    1,1
+
+
+    Coordinates are busy
+
+
+    Player O enter your coordinates in Format x,y:
+
+
+    2,1
+
+
+    ```
+
+    | |
+
+    | |
+
+    | |
+
+    A|o|
+
+    ```
+
+
+    Player X enter your coordinates in Format x,y:
+
+
+    3,4
+
+
+    ```
+
+    | |X|
+
+    | |
+
+    | |
+
+    A|o|
+
+    ```
+
+
+    Player A enter your coordinates in Format x,y:
+
+
+    ```
+
+    | |X|
+
+    | |
+
+    | |
+
+    A|o|
+
+    ```
+
+
+    Player O enter your coordinates in Format x,y:
+
+
+    .
+
+    .
+
+    .
+
+
+    ```
+
+    O |X|o
+
+    A| | |
+
+    A|A|X|
+
+    A|O|X|o
+
+    ```
+
+
+    Player X enter your coordinates in Format x,y:
+
+
+    3,3
+
+
+    ```
+
+    O |X|
+
+    A|X |
+
+    A|A|X|
+
+    A|O|X|o
+
+    ```
+
+
+    Player X is the Winner!'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: "The next section includes all test cases:\n\n# Tests\n\n```\npublic class BoardTest\
+    \ {\n\n    private Board board;\n\n    @Before\n    public void setUp() {\n  \
+    \      board = new Board();\n    }\n\n    @Rule\n    public ExpectedException\
+    \ thrownException = ExpectedException.none();\n\n    @Test\n    public void whenSizeThenBoardSize()\
+    \ throws Exception {\n        board.setSize(10);\n        assertEquals(10, board.getBoard().length);\n\
+    \    }\n\n    @Test\n    public void whenPutCharacterWrongCoordinateThenError()\
+    \ throws Exception {\n        board.setSize(4);\n        thrownException.expect(RuntimeException.class);\n\
+    \        board.putSymbol(1, 5, \"X\");\n    }\n\n    @Test\n    public void whenCoordinateIsValidPutCharacterIsOK()\
+    \ throws Exception {\n        board.setSize(3);\n        board.putSymbol(1, 2,\
+    \ \"X\");\n        assertEquals(\"X\", board.getBoard()[0]);\n    }\n\n    @Test\n\
+    \    public void whenCoordinatesAreBusyThenPutCharacterError() throws Exception\
+    \ {\n        board.setSize(3);\n        board.putSymbol(1, 2, \"X\");\n      \
+    \  thrownException.expect(RuntimeException.class);\n        board.putSymbol(1,\
+    \ 2, \"O\");\n    }\n\n    @Test\n    public void whenCoordinatesAreNotBusyPutSymbol()\
+    \ throws Exception {\n        board.setSize(3);\n        board.putSymbol(1, 2,\
+    \ \"X\");\n        board.putSymbol(2, 3, \"O\");\n        assertEquals(\"O\",\
+    \ board.getBoard()[1][2]);\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: "```\n@Test\npublic void whenBoardIsNullThenPrintThrowsError() {\n  thrownException.expect(RuntimeException.class);\n\
+    \  board.print();\n}\n```\n\n```\n@Test\npublic void whenBoardIsNullThenPrintIsPossible()\
+    \ {\n  board.setSize(10);\n  board.print();\n}\n```\n\n```\n@Test\npublic void\
+    \ horizontalLineIsNotSameSymbolThenReturnNull() {\n  board.setSize(3);\n  board.putSymbol(2,\
+    \ 2, \"X\");\n  board.putSymbol(1, 2, \"O\");\n  board.putSymbol(1, 3, \"X\");\n\
+    \  board.putSymbol(2, 1, \"O\");\n  board.putSymbol(3, 2, \"X\");\n  board.print();\n\
+    \  assertEquals(null, board.getWinner());\n}\n```\n\n```\n@Test\npublic void horizontalLineFilledThenWinnerX()\
+    \ {\n  board.setSize(3);\n  board.putSymbol(1, 1, \"X\");\n  board.putSymbol(1,\
+    \ 2, \"O\");\n  board.putSymbol(2, 1, \"X\");\n  board.putSymbol(2, 3, \"O\");\n\
+    \  board.putSymbol(3, 1, \"X\");\n  board.print();\n  assertEquals(\"X\", board.getWinner());\n\
+    }\n```\n\n```\n@Test\npublic void horizontalLineFilledThenWinnerO() {\n  board.setSize(4);\n\
+    \  board.putSymbol(1, 1, \"X\");\n  board.putSymbol(1, 4, \"O\");\n  board.putSymbol(2,\
+    \ 1, \"X\");\n  board.putSymbol(2, 4, \"O\");\n  board.putSymbol(3, 1, \"X\");\n\
+    \  board.putSymbol(3, 4, \"O\");\n  board.putSymbol(3, 3, \"X\");\n  board.putSymbol(4,\
+    \ 4, \"O\");\n  board.print();\n  assertEquals(\"O\", board.getWinner());\n}\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: "```\n@Test\npublic void verticalLineIsSymbolThenReturnWinnerX() {\n    board.setSize(3);\n\
+    \    board.putSymbol(2, 1, \"X\");\n    board.putSymbol(1, 3, \"O\");\n    board.putSymbol(2,\
+    \ 2, \"X\");\n    board.putSymbol(3, 3, \"O\");\n    board.putSymbol(2, 3, \"\
+    X\");\n    board.print();\n    assertEquals(\"X\", board.getWinner());\n}\n```\n\
+    \n```\n@Test\npublic void diagonalLineIsSymbolThenReturnWinnerX() {\n    board.setSize(3);\n\
+    \    board.putSymbol(1, 1, \"X\");\n    board.putSymbol(1, 2, \"O\");\n    board.putSymbol(2,\
+    \ 2, \"X\");\n    board.putSymbol(2, 1, \"O\");\n    board.putSymbol(3, 3, \"\
+    X\");\n    board.print();\n    assertEquals(\"X\", board.getWinner());\n}\n```\n\
+    \n```\n@Test\npublic void diagonalLineIsSymbolThenReturnWinnerO() {\n    board.setSize(3);\n\
+    \    board.putSymbol(1, 1, \"X\");\n    board.putSymbol(1, 3, \"O\");\n    board.putSymbol(3,\
+    \ 2, \"X\");\n    board.putSymbol(2, 2, \"O\");\n    board.putSymbol(3, 3, \"\
+    X\");\n    board.putSymbol(3, 1, \"O\");\n    board.print();\n    assertEquals(\"\
+    O\", board.getWinner());\n}\n```\n\n```\n@Test\npublic void diagonalLineIsSymbolThenReturnWinnerX_2()\
+    \ {\n    board.setSize(5);\n    board.putSymbol(1, 1, \"O\");\n    board.putSymbol(1,\
+    \ 5, \"X\");\n    board.putSymbol(3, 2, \"O\");\n    board.putSymbol(2, 4, \"\
+    X\");\n    board.putSymbol(3, 4, \"O\");\n    board.putSymbol(3, 3, \"X\");\n\
+    \    board.putSymbol(1, 2, \"O\");\n    board.putSymbol(4, 2, \"X\");\n    board.putSymbol(5,\
+    \ 3, \"O\");\n    board.putSymbol(5, 1, \"X\");\n    board.print();\n    assertEquals(\"\
+    X\", board.getWinner());\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "```\n@Test\npublic void whenISDrawThenReturnTrue() {\n    board.setsize(3);\n\
+    \    board.putSymbol(1, 1, \"X\");\n    board.putSymbol(1, 2, \"O\");\n    board.putSymbol(3,\
+    \ 2, \"X\");\n    board.putSymbol(2, 2, \"X\");\n    board.putSymbol(3, 3, \"\
+    O\");\n    board.putSymbol(2, 1, \"O\");\n    board.putSymbol(1, 3, \"X\");\n\
+    \    board.putSymbol(3, 1, \"O\");\n    board.putSymbol(2, 3, \"X\");\n    board.print();\n\
+    \    assertEquals(\"DRAW!\", board.getWinner());\n}\n```\n\n```\nimport org.junit.rules.ExpectedException;\n\
+    import static org.junit.Assert.*;\n```\n\n```\npublic class UtilsTest {\n```\n\
+    \n```\n    private Utils utils;\n```\n\n```\n@Before\npublic void setUp() {\n\
+    \    utils = new Utils();\n}\n```\n\n```\n@Rule\npublic ExpectedException thrownException\
+    \ = ExpectedException.none();\n```\n\n```\n@Test\npublic void whenFileNotFoundThenThrowError()\
+    \ throws Exception {\n    thrownException.expect(RuntimeException.class);\n  \
+    \  utils.loadFile(\"board2.txt\");\n}\n```\n\n```\n@Test\npublic void whenIfExistsThenReturnContent()\
+    \ throws Exception {\n    String content = utils.loadFile(\"symbols.txt\");\n\
+    \    assertNotNull(content);\n}\n```\n\n```\n@Test\npublic void whenGetBoardSizeIs11ThenThrowError()\
+    \ throws Exception {\n    thrownException.expect(RuntimeException.class);\n  \
+    \  utils.getBoardSize(\"11\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "```\n@Test\npublic void whenGetBoardIs4ThenReturnSize() throws Exception {\n\
+    \    String content = utils.loadFile(\"board.txt\");\n    assertEquals(4, utils.getBoardSize(content));\n\
+    }\n\n@Test\npublic void whenGetSymbolsIsNotThreeThrowError() throws Exception\
+    \ {\n    thrownException.expect(RuntimeException.class);\n    utils.getSymbols(\"\
+    A,B,C,D\");\n}\n\n@Test\npublic void whenGetSymbolsIsThreeReturnValues() throws\
+    \ Exception {\n    String content = utils.loadFile(\"symbols.txt\");\n    String[]\
+    \ symbols = utils.getSymbols(content);\n    assertArrayEquals(new String[]{\"\
+    X\",\"O\",\"A\"}, symbols);\n}\n\n@Test\npublic void whenInputFromConsoleIsWrongThrowException()\
+    \ throws Exception {\n    thrownException.expect(RuntimeException.class);\n  \
+    \  utils.getInputFromConsole(\"\");\n}\n\n@Test\npublic void inputFromConsoleIsWrongFormatThrowException()\
+    \ throws Exception {\n    thrownException.expect(RuntimeException.class);\n  \
+    \  utils.getInputFromConsole(\"10\");\n}\n\n@Test\npublic void inputFromConsoleThenReturnInput()\
+    \ throws Exception {\n    Input input = utils.getInputFromConsole(\"2,3\");\n\
+    \    assertEquals(2, input.getX());\n    assertEquals(3, input.getY());\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# Big O Notation
+
+
+    Big O Notation is a mathematical notation that helps us analyze how complex an
+    algorithm is in terms of time and space. When we build an application for one
+    user or millions of users, it matters.
+
+
+    We usually implement different algorithms to solve one problem and measure how
+    efficient one is with respect to the other ones.
+
+
+    # Time and Space Complexity
+
+
+    Time complexity is related to how many steps take the algorithm.
+
+
+    Space complexity is related to how efficient the algorithm is using the memory
+    and disk.
+
+
+    Both terms depend on the input size, the number of items in the input. We can
+    analyze the complexity based on three cases:
+
+
+    +   - Best case or Big Omega Ω(n): Usually, the algorithm executes independently
+    of the input size in one step.
+
+
+    +   - Average case or Big Theta Θ(n): When the input size is random.
+
+
+    +   - Worst-case or Big O Notation O(n): Gives us an upper bound on the runtime
+    for any input. It gives us a kind of guarantee that the algorithm will never take
+    any longer with a new input size.
+
+
+    # Order of Growth of Common Algorithms
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_121_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: "# Figure A.1 Big O Notation - order of growth\n\nThe order of growth is related\
+    \ to the runtime of an algorithm increases when the input size increases without\
+    \ limit and tells us how efficient the algorithm is. We can compare the relative\
+    \ performance of alternative algorithms.\n\n# Big O Notations examples:\n\n# O(1)\
+    \ - Constant\n\nIt does not matter if the input contains 1000 or 1 million items.\
+    \ The code always executes in one step.\n\n```\npublic class BigONotation {\n\
+    \    public void constant(List<String> list, String item) {\n        list.add(item);\n\
+    \    }\n}\n```\n\n```\n@Test\npublic void test_constantTime() {\n    List<String>\
+    \ list = new ArrayList<>(Arrays.asList(\"one\", \"two\", \"three\\));\n    bigONotation.constant(list,\
+    \ \"four\");\n}\n```\n\nIn a best-case scenario, an add method takes O(1) time.\
+    \ The worst-case scenario takes O(n).\n\n# O(N) - Linear\n\nOur algorithm runs\
+    \ in O(N) time if the number of steps depends on the number of items included\
+    \ in the input.\n\n```\npublic int sum(int[] numbers) {\n    int sum = 0;\n  \
+    \  for (int i = 0; i<numbers.length; i++) {\n        sum+=numbers[i];\n    }\n\
+    \    return sum;\n}\n```\n\n```\n@Test\npublic void test_linearTime() {\n    final\
+    \ int[] numbers = {1, 2, 4, 6, 1, 6};\n    assertTrue(bigONotation.sum(numbers)\
+    \ == 20);\n}\n```\n\n# O(N²) - Quadratic\n\nWhen we have two loops nested in our\
+    \ code, we say it runs in quadratic time O(N²). For"
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: "example, when a 2D matrix is initialized in a tic-tac-toe game.\n\n```\nprivate\
+    \ String[][] board;\n\npublic void initializeBoard(int size) {\n    this.board\
+    \ = new String[size][size];\n    for (int x = 0; x < size; x++) {\n        for\
+    \ (int y = 0; y < size; y++) {\n            board[x][y] = \"\";\n        }\n \
+    \   }\n}\n```\n\n```\n@Test\npublic void test_quadraticTime() {\n    bigONotation.initializeBoard(3);\n\
+    }\n```\n\n# O(N³) - Cubic\n\nWe say that our algorithm runs in Cubic when the\
+    \ code includes at the most three nested loops. For example, how many triples\
+    \ sum to precisely zero? One approach (not the best) is to use three nested loops.\n\
+    \n```\npublic int countThreeSum(int[] numbers) {\n    int N = numbers.length;\n\
+    \    int count = 0;\n    for (int i = 0; i < N; i++) {\n        for (int j = i\
+    \ + 1; j < N; j++) {\n            for (int k = j + 1; k < N; k++) {\n        \
+    \        if (numbers[i] + numbers[j] + numbers[k] == 0) {\n                  \
+    \  count++;\n                }\n            }\n        }\n    }\n    return count;\n\
+    }\n```\n\n```\n@Test\npublic void test_countThreeSum() {\n    final int[] numbers\
+    \ = {30, -40, -20, -10, 40, 0, 10, 5};\n    assertTrue(bigONotation.countThreeSum(numbers)\
+    \ == 4);\n}\n```\n\n# O(LogN) – Logarithmic\n\nThis kind of algorithm produces\
+    \ a growth curve that peaks at the beginning and slowly flattens out as the size\
+    \ of the input increase.\n\nLog8=3"
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: "Log216 = 4\n\nLog32 = 5\n\nThe binary search uses at most LogN key comparisons\
+    \ to search in a sorted array of size N. With eight elements, it takes three comparisons,\
+    \ with 16 elements takes four comparisons, with 32 elements takes five comparisons,\
+    \ and so on.\n\n# How to Find the Time Complexity of an Algorithm\n\nTo find the\
+    \ Big O complexity of an algorithm follows the following rules:\n\n+   - Ignore\
+    \ the lower order terms\n\n+   - Drop the leading constants\n\nExample: If the\
+    \ time complexity of an algorithm is 2n³ + 4n + 3. Its Big O complexity simplifies\
+    \ to O(n³).\n\nExample: Given the following algorithm:\n\n```\npublic Integer\
+    \ sumOfEvenNumbers(Integer N) {\n  int sum = 0;\n  for (int number = 1; number\
+    \ <= N; number++) {\n    if ((number % 2) == 0)\n      sum = sum + number;\n \
+    \ }\n  return sum;\n}\n```\n\nFirst, split the code into individual operations\
+    \ and then compute how many times it is being executed, as is shown in the following\
+    \ table.\n\n| Operation | Number of executions |\n| int sum = 0; | 1 |\n| int\
+    \ number = 1; | 1 |\n| number <= N; | N |\n| number++ | N |\n| if ((number % 2)\
+    \ == 0) | N |\n| sum = sum + number; | N |\n| return sum; | 1 |\n\nNow, we need\
+    \ to sum how many times each operation is executing.\n\nTime complexity = 1 +\
+    \ 1 + N + N + N + N + 1 => 4N + 3\n\nBig O complexity = O(N)"
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# Why Big O Notation ignores Constants?
+
+
+    Big O Notation describes how many steps are required relative to the number of
+    data elements. And it serves as a way to classify the long-term growth rate of
+    algorithms.
+
+
+    For instance, O(N) will be faster than O(N2) for all amounts of data, as shown
+    in Figure A.2.
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_125_0.png)
+
+
+    A.2 O(N) is faster than O(N²) for all amounts of data
+
+
+    Now, if we compare O(100N) with O(N³), we can see that O(N³) is faster than O(100N)
+    for some amounts of data, as shown in Figure A.3.
+
+
+    ![](img/60b89ebeda3428b712e02fb7e9fd8b5b_125_1.png)
+
+
+    A.3 O(N²) is faster than O(100N) for some amounts of data
+
+
+    But after a point, O(100N) becomes faster and remains faster for all increasing
+    amounts of data from that point onward. And that is the reason why Big O Notation
+    ignores constants. Because of this, O(100N) is written as O(N).'
+  merge: -1
+  img_proc: true
