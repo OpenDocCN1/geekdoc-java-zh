@@ -1,0 +1,218 @@
+- - '#'
+  - Java 性能指南
+- - '#'
+  - 序言
+- - '#'
+  - 致谢
+- - '##'
+  - Charlie Hunt
+- - '##'
+  - Monica Beckwith
+- - '##'
+  - Poonam Parhar
+- - '#'
+  - Garbage First 概述
+- - '#'
+  - 术语
+- - '#'
+  - 并行 GC (Parallel GC)
+- - '#'
+  - 第 1 章 Garbage First 概述
+- - '#'
+  - Serial GC (Serial GC)
+- - '##'
+  - 并发标记清除 (CMS) GC
+- - '##'
+  - 收集器总结
+- - '##'
+  - Garbage First (G1) GC
+- - '#'
+  - 垃圾优先 (G1) GC
+- - '#'
+  - 提示
+- - '#'
+  - 第 1 章 垃圾优先概述
+- - '#'
+  - G1 设计
+- - '##'
+  - 巨型对象 (Humongous Objects)
+- - '##'
+  - 全垃圾收集 (Full Garbage Collections)
+- - '##'
+  - 并发周期 (Concurrent Cycle)
+- - '##'
+  - 大小设置 (Sizing)
+- - '##'
+  - 背景介绍 (Background)
+- - '##'
+  - G1 中的垃圾回收
+- - '##'
+  - 年轻代
+- - '#'
+  - 第 2 章 · 深度解析垃圾回收器
+- - '##'
+  - 年轻代回收
+- - '##'
+  - G1 垃圾回收指标
+- - '##'
+  - 对象年龄与老年代
+- - '##'
+  - 巨型区域
+- - '###'
+  - 图 2.1 G1 Java 堆布局
+- - '###'
+  - 图 2.2 映射到巨型区域的不同巨型对象
+- - '##'
+  - 混合收集停顿 (A Mixed Collection Pause)
+- - '##'
+  - 知识 (Trivia)
+- - '##'
+  - 提示 (Tip)
+- - '#'
+  - 第 2 章 · 深度解析 Garbage First Collector
+- - '##'
+  - 集合（Collection Sets）及其重要性
+- - '##'
+  - 记忆集（Remembered Sets）及其重要性
+- - '##'
+  - 并发清理线程与屏障
+- - '##'
+  - 记忆集及其重要性
+- - '##'
+  - 提示
+- - '##'
+  - G1 GC 中的并发标记
+- - '##'
+  - 并发标记的阶段
+- - '###'
+  - 初始标记
+- - '###'
+  - 根区域扫描
+- - '###'
+  - 并发标记
+- - '###'
+  - 重标记
+- - '###'
+  - 清理
+- - '##'
+  - 复制失败与全量收集
+- - '#'
+  - References
+- - '#'
+  - Garbage Collector Tuning
+- - '#'
+  - The Stages of a Young Collection
+- - '#'
+  - 第 3 章 G 垃圾收集器性能调优
+- - '##'
+  - Start of Parallel Activities
+- - '##'
+  - External Root Regions
+- - '##'
+  - Remember Sets and Processed Buffers
+- - '##'
+  - 生存代的阶段
+- - '##'
+  - 记忆集（Remembered Sets）总结
+- - '###'
+  - GC 前 RS 总结
+- - '###'
+  - GC 后 RS 总结
+- - '#'
+  - 第 3 章 · Garbage First 垃圾收集器调优
+- - '##'
+  - GC 之外的并行活动
+- - '##'
+  - 总结所有并行活动
+- - '##'
+  - 所有串行活动的开始
+- - '##'
+  - 年轻代收集的阶段
+- - '##'
+  - 其他串行活动
+- - '##'
+  - 年轻代调优参数
+- - '##'
+  - 并发标记阶段可调参数
+- - '##'
+  - 第 3 章 · Garbage First Garbage Collector Tuning(Continued)
+- - '#'
+  - 第 3 章 垃圾回收器性能调优
+- - '##'
+  - 混合垃圾回收阶段的治理
+- - '###'
+  - 图 3.2 显示回收时间呈指数级增长的混合 GC 周期
+- - '##'
+  - 避免整理失败
+- - '#'
+  - 第 3 章 - Garbage First 垃圾回收器性能调优
+- - '##'
+  - 引用处理 (Reference Processing)
+- - '##'
+  - 观察引用处理
+- - '##'
+  - 引用处理调优
+- - '##'
+  - 使用软引用 (Soft References)
+- - '#'
+  - 参考文献
+- - '#'
+  - SA 组件
+- - '##'
+  - JDK 中的 SA 二进制文件
+- - '##'
+  - 带有完整 SA 二进制文件的 JDK 版本
+- - '##'
+  - SA 如何理解 HotSpot VM 数据结构
+- - '##'
+  - HotSpot 数据结构定义
+- - '##'
+  - SA 版本匹配
+- - '##'
+  - 可维护性代理（Serviceability Agent）调试工具
+- - '##'
+  - 挂载到 HotSpot 进程
+- - '#'
+  - 第 4 章 · 服务性代理
+- - '###'
+  - 附加到 HotSpot Core 文件
+- - '###'
+  - 连接到调试服务器
+- - '###'
+  - HSDB 工具
+- - '###'
+  - 服务性代理调试工具
+- - '###'
+  - 类浏览器（Class Browser）
+- - '###'
+  - 死锁检测
+- - '#'
+  - 第 4 章 可用性代理 (Serviceability Agent)
+- - '##'
+  - 可用性代理调试工具
+- - '###'
+  - 对象直方图
+- - '###'
+  - 计算反向指针 (Compute Reverse Pointers)
+- - '###'
+  - 通过查询查找对象 (Find Object by Query)
+- - '###'
+  - 查找指针 (Find Pointer)
+- - '###'
+  - 在堆中查找地址 (Find Address in Heap)
+- - '###'
+  - 在代码缓存中查找值 (Find Value in Code)
+- - '##'
+  - 内存查看器 (Memory Viewer)
+- - '##'
+  - 监视 (Monitor)
+- - '##'
+  - 代码查看器 (Code Viewer)
+- - '##'
+  - 调试工具
+- - '###'
+  - 堆参数 (Heap Parameters)
+- - '###'
+  - 系统属性 (System Properties)
+- - '###'
+  - 命令行标志 (Command Line Flags)
