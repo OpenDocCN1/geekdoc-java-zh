@@ -1,0 +1,2546 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Java Code Geeks
+
+    JAVA 2 JAVA Developers Resource Center
+
+
+    # MINIBOOK
+
+
+    # Python
+
+    Interview
+
+    Questions
+
+
+    # 150 Python Questions &
+
+    Answers For Interview Success
+
+
+    BROUGHT TO YOU BY
+
+    exelixismedia
+
+    innovation over media networks'
+  - '[PAGE 1]
+
+
+    # Python Interview Questions
+
+
+    # TABLE OF CONTENTS
+
+
+    +   - About the Author 1
+
+    - Preface 1
+
+    - Introduction 1
+
+    - Beginner/Junior Level Questions 1
+
+    - Intermediate/Senior Level Questions 8
+
+    - Advanced/Master Level Questions 17
+
+    - References 25'
+  - '[PAGE 2]
+
+
+    # ABOUT THE AUTHOR
+
+
+    JCGs (Java Code Geeks) is an independent community focused on creating the ultimate
+    software developers resource center; targeted at the technical architect, technical
+    team lead (senior developer), project manager and junior developers alike. JCGs
+    serve Programming, SysAdmin, Agile and Telecom communities with daily news written
+    by domain experts, articles, tutorials, reviews, announcements, code snippets
+    and open source projects.
+
+
+    # PREFACE
+
+
+    Whether you''re a beginner stepping into your first programming role, a seasoned
+    developer aiming for a senior position, or an expert preparing for advanced architecture
+    and systems design interviews, this minibook is crafted to support you at every
+    stage of your Python career journey.
+
+
+    In today''s competitive job market, Python has established itself as one of the
+    most versatile and in programming languages. From web development and automation
+    to data science, machine learning, and DevOps practices—Python continues to play
+    a pivotal role across industries. As hiring trends evolve, so do the expectations
+    from interviewers. Employers are increasingly seeking candidates who not only
+    understand Python syntax, but also demonstrate practical fluency with current
+    tools, frameworks, and real-world problem-solving tactics.
+
+
+    This collection features 150 carefully curated interview questions and answers,
+    divided into three progressive sections:
+
+
+    +   - Beginner Level - Focused on core syntax, data types, control structures,
+    and foundational concepts. Ideal for new developers or students.
+
+    - Intermediate Level - Covers object-oriented design, testing, concurrency, popular
+    frameworks, packaging, and best practices.
+
+    - Expert Level - Explores Python internals, typing innovations, tooling, performance
+    profiling, and architecture-level decision-making.
+
+
+    Each question was selected based on current industry trends and what Python developers
+    are actually being asked in interviews. Our goal is not to help you remember answers,
+    but to deepen your understanding and confidence in Python as a practical, production-ready
+    language.
+
+
+    Whether you''re preparing for interview, brushing up on your skills, or mentoring
+    others, we hope this minibook becomes a valuable companion on your path to Python
+    mastery.
+
+
+    # INTRODUCTION
+
+
+    Python remains one of the most popular programming languages, widely used across
+    web development, data science, and AI/ML. Job market analytics highlight demand
+    for Python developers in domains like backend (Django, Flask), data science/ML
+    (NumPy, pandas, TensorFlow), and automation/DevOps (scripting, Ansible, AWS SDK).
+    Below are 150 common Python interview questions with their answers, organized
+    by experience level (Beginner, Intermediate, Advanced) covering syntax, data types,
+    OOP, libraries, and advanced topics.
+
+
+    # BEGINNER/JUNIOR LEVEL QUESTIONS
+
+
+    What is Python? Python is a high-level, general-purpose, interpreted programming
+    language designed for readability and productivity. It uses significant indentation
+    for blocks, supports multiple paradigms (procedural, OOP, functional) and comes
+    with a large standard library. Python is dynamically typed and'
+  - "[PAGE 3]\n\n# Java Code Geeks MINIBOOK 2 PYTHON INTERVIEW QUESTIONS\n\n**Is Python\
+    \ compiled or interpreted?** Python is usually described as an interpreted language:\
+    \ the source code is compiled to bytecode and executed by the Python interpreter\
+    \ at runtime. In practice, code is not directly converted to machine code - it\
+    \ runs via an interpreter (CPython, PyPy, etc.), which means syntax and runtime\
+    \ errors typically appear when executing the program.\n\n**What are common applications\
+    \ of Python?** Python's versatility makes it suitable for many fields. For example,\
+    \ it's used in **web development** (frameworks like Django and Flask), **data\
+    \ science** and **machine learning** (libraries like NumPy, scikit-learn, TensorFlow),\
+    \ **scripting and automation** (system administration scripts, task automation),\
+    \ desktop GUI (Tkinter, PyQt, Qt), **game development** (Pygame), and education\
+    \ due to its readability. In scientific and numeric computing, Python's powerful\
+    \ libraries make it ideal for research and simulations.\n\n**What are basic data\
+    \ types?** Python's built-in types include **numeric types** (int, float, complex),\
+    \ **sequence types** (str for, list, tuple, range), **mapping type** (dict), **set\
+    \ types** (set, frozenset), **bool** and **binary types** (bytes, bytearray, memoryview).\
+    \ For example, x = 42 creates an int, s = \"hello\" as a str and l = [1,2,3]\n\
+    \n**What is the difference between a list and a tuple?** A list is a mutable sequence\
+    \ (defined with []) whose elements can be changed, added or removed after creation.\
+    \ A **tuple** is an immutable sequence (defined with ()) that cannot be modified.\
+    \ In other words, lists are variable-length and changeable, whereas tuples are\
+    \ fixed-size. Because tuples are immutable, they cannot be used as dictionary\
+    \ keys, lists cannot.\n\n**What is a list and how is it different from an array?**\
+    \ A list is a dynamic, heterogeneous container (elements can be of any types)\
+    \ and can grow or shrink as needed. Python also has an **array** module and third-party\
+    \ arrays (**numpy**) which require fixed data types for performance. In general,\
+    \ use a list for general-purpose collections; use specialized arrays (NumPy arrays)\
+    \ when you need efficient storage and computation on large datasets.\n\n**How\
+    \ do you install external packages?** The standard way is using the package manager.\
+    \ For example, to install the NumPy library you would run `pip install numpy`\
+    \ which downloads the package from PyPI and installs it into your environment.\
+    \ You can also install specific versions (e.g., `pip install package==1.2.3`)\
+    \ and upgrade or uninstall packages using `pip`.\n\n**What is virtual environment\
+    \ and why use it?** A virtual environment (created with `python -m venv`) is an\
+    \ isolated Python environment with its own interpreter and libraries. It ensures\
+    \ that dependencies for one project do not conflict with others. Each virtual\
+    \ env has its own site-directories, so you can install different versions of packages\
+    \ per project. This avoids \"dependency hell\" and makes projects reproducible.\n\
+    \n**How do if, elif, else statements work?** These are Python's conditional blocks.\
+    \ Example:\n\n```\nif condition1:\n    # code block A\nelif condition2:\n    #\
+    \ code block B\n```"
+  - "[PAGE 4]\n\n# else:\n\n```\n# code block C\n```\n\nThe first true condition executes,\
+    \ and the rest are skipped. Indentation is mandatory to delimit the blocks. Comparison\
+    \ operators (=, <, > etc.) and logical operators (and, or not) are used in the\
+    \ condition expressions.\n\nWhat are loops in Python? Python has for and while\
+    \ loops. A for loop iterates over a sequence (list, string, tuple, dict keys,\
+    \ etc.), for example:\n\n```\nfor x in [1,2,3]:\nprint(x)\n```\n\nA while loop\
+    \ repeats as long as a condition is true:\n\n```\ni = 0\nwhile i < 5:\nprint(i)\n\
+    i += 1\n```\n\nInside loops, break exits the loop, and continue skips to the next\
+    \ iteration. The range(start, stop, step) function generates an integer sequence.\
+    \ It's commonly used with for. For example, range(5) yields 0,1,2,3,4. You can\
+    \ specify a start (default 0) and a step. Example: for i in range(2, 10, 2): iterates\
+    \ over 2, 4, 6, 8. The stop value is exclusive.\n\nWhy is indentation important\
+    \ in Python? Unlike languages, Python use significant indentation to define code\
+    \ blocks. All statements within the same block must have the same indentation.\
+    \ Mis-indented code will raise an IndentationError. Proper indentation improves\
+    \ readability, which is part of Python's design philosophy.\n\nWhat is __init__()\
+    \ in a Python class? The __init__ method is the class initializer (often called\
+    \ the constructor). It's automatically invoked when an instance is created. In\
+    \ __init__, you typically assign attributes.\n\n```\nclass Dog:\n  def __init__(self,\
+    \ name):\n    self.name = name\n```\n\nHere, d = Dog(\"Fido\") automatically calls\
+    \ Dog.__init__(d, \"Fido\"), setting d.name. The __init__ method can take additional\
+    \ parameters for initialization.\n\nWhat is self in Python class methods? In Python,\
+    \ self refers to the current instance of the class. It is used inside methods\
+    \ to access attributes and other methods on the object. You include self as the\
+    \ first parameter of instance methods. For example:"
+  md: "\n# Java Code Geeks\nJAVA 2 JAVA Developers Resource Center\n\n# MINIBOOK\n\
+    \n# Python Interview Questions\n\n# 150 Python Questions & Answers For Interview\
+    \ Success\n\nBROUGHT TO YOU BY \nexelixismedia\ninnovation over media networks\n\
+    \n# Python Interview Questions\n\n# TABLE OF CONTENTS\n\n- About the Author 1\n\
+    - Preface 1\n- Introduction 1\n- Beginner/Junior Level Questions 1\n- Intermediate/Senior\
+    \ Level Questions 8\n- Advanced/Master Level Questions 17\n- References 25\n\n\
+    # ABOUT THE AUTHOR\n\nJCGs (Java Code Geeks) is an independent community focused\
+    \ on creating the ultimate software developers resource center; targeted at the\
+    \ technical architect, technical team lead (senior developer), project manager\
+    \ and junior developers alike. JCGs serve Programming, SysAdmin, Agile and Telecom\
+    \ communities with daily news written by domain experts, articles, tutorials,\
+    \ reviews, announcements, code snippets and open source projects.\n\n# PREFACE\n\
+    \nWhether you're a beginner stepping into your first programming role, a seasoned\
+    \ developer aiming for a senior position, or an expert preparing for advanced\
+    \ architecture and systems design interviews, this minibook is crafted to support\
+    \ you at every stage of your Python career journey.\n\nIn today's competitive\
+    \ job market, Python has established itself as one of the most versatile and popular\
+    \ programming languages. From web development and automation to data science,\
+    \ machine learning, and DevOps practices—Python continues to play a pivotal role\
+    \ across industries. As hiring trends evolve, so do the expectations from interviewers.\
+    \ Employers are increasingly seeking candidates who not only understand Python\
+    \ syntax, but also demonstrate practical fluency with current tools, frameworks,\
+    \ and real-world problem-solving tactics.\n\nThis collection features 150 carefully\
+    \ curated interview questions and answers, divided into three progressive sections:\n\
+    \n- Beginner Level - Focused on core syntax, data types, control structures, and\
+    \ foundational concepts. Ideal for new developers or students.\n- Intermediate\
+    \ Level - Covers object-oriented design, testing, concurrency, popular frameworks,\
+    \ packaging, and best practices.\n- Expert Level - Explores Python internals,\
+    \ typing innovations, tooling, performance profiling, and architecture-level decision-making.\n\
+    \nEach question was selected based on current industry trends and what Python\
+    \ developers are actually being asked in interviews. Our goal is not to help you\
+    \ remember answers, but to deepen your understanding and confidence in Python\
+    \ as a practical, production-ready language.\n\nWhether you're preparing for interview,\
+    \ brushing up on your skills, or mentoring others, we hope this minibook becomes\
+    \ a valuable companion on your path to Python mastery.\n\n# INTRODUCTION\n\nPython\
+    \ remains one of the most popular programming languages, widely used across web\
+    \ development, data science, and AI/ML. Job market analytics highlight demand\
+    \ for Python developers in domains like backend (Django, Flask), data science/ML\
+    \ (NumPy, pandas, TensorFlow), and automation/DevOps (scripting, Ansible, AWS\
+    \ SDK). Below are 150 common Python interview questions with their answers, organized\
+    \ by experience level (Beginner, Intermediate, Advanced) covering syntax, data\
+    \ types, OOP, libraries, and advanced topics.\n\n# BEGINNER/JUNIOR LEVEL QUESTIONS\n\
+    \nWhat is Python? Python is a high-level, general-purpose, interpreted programming\
+    \ language designed for readability and productivity. It uses significant indentation\
+    \ for blocks, supports multiple paradigms (procedural, OOP, functional) and comes\
+    \ with a large standard library. Python is dynamically typed and.\n\n**Is Python\
+    \ compiled or interpreted?** Python is usually described as an interpreted language:\
+    \ the source code is compiled to bytecode and executed by the Python interpreter\
+    \ at runtime. In practice, code is not directly converted to machine code - it\
+    \ runs via an interpreter (CPython, PyPy, etc.), which means syntax and runtime\
+    \ errors typically appear when executing the program.\n\n**What are common applications\
+    \ of Python?** Python's versatility makes it suitable for many fields. For example,\
+    \ it's used in **web development** (frameworks like Django and Flask), **data\
+    \ science** and **machine learning** (libraries like NumPy, scikit-learn, TensorFlow),\
+    \ **scripting and automation** (system administration scripts, task automation),\
+    \ desktop GUI (Tkinter, PyQt, Qt), **game development** (Pygame), and education\
+    \ due to its readability. In scientific and numeric computing, Python's powerful\
+    \ libraries make it ideal for research and simulations.\n\n**What are basic data\
+    \ types?** Python's built-in types include **numeric types** (int, float, complex),\
+    \ **sequence types** (str, list, tuple, range), **mapping type** (dict), **set\
+    \ types** (set, frozenset), **bool** and **binary types** (bytes, bytearray, memoryview).\
+    \ For example, x = 42 creates an int, s = \"hello\" as a str and l = [1,2,3].\n\
+    \n**What is the difference between a list and a tuple?** A list is a mutable sequence\
+    \ (defined with []) whose elements can be changed, added or removed after creation.\
+    \ A **tuple** is an immutable sequence (defined with ()) that cannot be modified.\
+    \ In other words, lists are variable-length and changeable, whereas tuples are\
+    \ fixed-size. Because tuples are immutable, they cannot be used as dictionary\
+    \ keys, lists cannot.\n\n**What is a list and how is it different from an array?**\
+    \ A list is a dynamic, heterogeneous container (elements can be of any types)\
+    \ and can grow or shrink as needed. Python also has an **array** module and third-party\
+    \ arrays (**numpy**) which require fixed data types for performance. In general,\
+    \ use a list for general-purpose collections; use specialized arrays (NumPy arrays)\
+    \ when you need efficient storage and computation on large datasets.\n\n**How\
+    \ do you install external packages?** The standard way is using the package manager.\
+    \ For example, to install a package you use pip.\n\n**What is virtual environment\
+    \ and why use it?** A virtual environment (created with -m venv) is an isolated\
+    \ Python environment. It ensures that dependencies for one project not conflict\
+    \ with others.\n\n**How do if, elif, else statements work?** These are conditional\
+    \ blocks. Example:\n\n```\nif condition1:\n    # code block A\nelif condition2:\n\
+    \    # code block B\nelse:\n    # code block C\n```\n\nThe first true condition\
+    \ executes, and the rest are skipped.\n\n**What are loops in Python?** Python\
+    \ has for and while loops. A for loop iterates over a sequence (list, string,\
+    \ tuple, dict), for example:\n\n```\nfor x in [1,2,3]:\n    print(x)\n```\n\n\
+    A while loop repeats as long as a condition is true:\n\n```\ni = 0\nwhile i <\
+    \ 5:\n    print(i)\n    i += 1\n```\n\nInside loops, break exits the loop, and\
+    \ continue skips to the next iteration. The range(start, stop, step) function\
+    \ generates an integer sequence. It's commonly used with for. For example, range(5)\
+    \ yields 0,1,2,3,4. You can specify a start (default 0) and a step. Example: for\
+    \ i in range(2, 10, 2): iterates over 2, 4, 6, 8. The stop value is exclusive.\n\
+    \n**Why is indentation important in Python?** Unlike languages, Python use significant\
+    \ indentation to define code blocks. All statements within the same block must\
+    \ have the same indentation. Mis-indented code will raise an IndentationError.\
+    \ Proper indentation improves readability, which is part of Python's design philosophy.\n\
+    \n**What is __init__() in a Python class?** The __init__ method is the class initializer\
+    \ (often called the constructor). It's automatically invoked when an instance\
+    \ is created. In __init__, you typically assign attributes.\n\n```\nclass Dog:\n\
+    \  def __init__(self, name):\n    self.name = name\n```\n\nHere, d = Dog(\"Fido\"\
+    ) automatically calls Dog.__init__(d, \"Fido\"), setting d.name. The __init__\
+    \ method can take additional parameters for initialization.\n\n**What is self\
+    \ in Python class methods?** In Python, self refers to the current instance of\
+    \ the class. It is used inside methods to access attributes and other methods\
+    \ on the object. You include self as the first parameter of instance methods.\n"
+  mdcn: "\n\n# Java Code Geeks\nJAVA 2 JAVA 开发者资源中心\n\n# 微型书籍\n\n# Python 面试题\n\n\
+    # 150 道助力面试成功的 Python 问答\n\n由 \nexelixismedia\n提供\n创新超越媒体网络\n\n# Python 面试题\n\n\
+    # 目录\n\n- 关于作者 1\n- 前言 1\n- 引言 1\n- 初级/初级水平问题 1\n- 中级/高级水平问题 8\n- 专家/大师级水平问题 17\n\
+    - 参考文献 25\n\n# 关于作者\n\nJCGs (Java Code Geeks) 是一个独立的社区，致力于创建一个终极软件开发者资源中心；目标涵盖技术架构师、技术团队负责人（高级开发人员）、项目经理以及初级开发者。JCGs\
+    \ 为编程、系统管理、敏捷和电信社区提供服务，涵盖领域专家编写的每日新闻、文章、教程、评论、公告、代码片段和开源项目。\n\n# 前言\n\n无论你是初入第一份编程职位的新手，还是目标是高级职位的资深开发者，亦或是准备高级架构和系统设计面试的专家，本微型书籍都旨在为你\
+    \ Python 职业之旅的每个阶段提供支持。\n\n在当今竞争激烈的就业市场上，Python 已经成为最通用且流行的编程语言之一。从 Web 开发、自动化到数据科学、机器学习和\
+    \ DevOps 实践——Python 在各行业继续发挥着关键作用。随着招聘趋势的演变，面试官的期望也在发生变化。雇主日益寻求那些不仅理解 Python 语法，还能熟练运用当前工具、框架和现实问题解决策略的候选人。\n\
+    \n本教程包含 150 道精心挑选的面试题和答案，分为三个渐进阶段：\n\n- 初级水平 - 侧重于核心语法、数据类型、控制结构和基础概念。适用于新开发者或学生。\n\
+    - 中级水平 - 涵盖面向对象的设计、测试、并发、流行框架、打包和最佳实践。\n- 专家级 - 探索 Python 内部机制、类型创新、工具、性能分析和架构层面的决策。\n\
+    \n每道问题都是根据当前的行业趋势以及 Python 开发者在面试中实际被问的问题挑选的。我们的目标不是帮助你记住答案，而是加深你对 Python 作为一种实用的、生产级语言的理解和信心。\n\
+    \n无论你是在准备面试、复习技能还是指导他人，我们都希望本微型书籍能成为你通往 Python 精通之路上的价值伙伴。\n\n# 引言\n\nPython 仍然是最流行的编程语言之一，广泛应用于\
+    \ Web 开发、数据科学和 AI/ML。就业市场分析强调了对后端（Django, Flask）、数据科学/机器学习（NumPy, pandas, TensorFlow）以及自动化/DevOps（脚本、Ansible、AWS\
+    \ SDK）等领域的 Python 开发者有巨大需求。以下是 150 道常见的 Python 面试题及其答案，按经验水平（初级、中级、高级）分类，涵盖了语法、数据类型、OOP、库和高级主题。\n\
+    \n# 初级/初级水平问题\n\nPython 是什么？Python 是一种高级、通用的解释型编程语言，旨在提高可读性和生产力。它使用显著的缩进来定义代码块，支持多种范式（过程式、面向对象、函数式），并带有一个大型标准库。Python\
+    \ 是动态类型且。\n\n**Python 是编译的还是解释执行的？** Python 通常被描述为解释型语言：源代码被编译为字节码，并在运行时由 Python\
+    \ 解释器执行。在实践中，代码并没有直接转换为机器码 - 它们通过解释器（CPython、PyPy 等）运行，这意味着语法和运行时错误通常在执行程序时出现。\n\
+    \n**Python 的常见应用有哪些？** Python 的多功能性使其适用于许多领域。例如，它被用于**Web 开发**（如 Django 和 Flask\
+    \ 等框架）、**数据科学**和**机器学习**（如 NumPy, scikit-learn, TensorFlow 等库）、**脚本和自动化**（系统管理脚本、任务自动化）、桌面\
+    \ GUI（Tkinter, PyQt, Qt）、**游戏开发**（Pygame）以及由于其可读性用于教育。在科学和数值计算中，Python 强大的库使其成为研究和模拟的理想选择。\n\
+    \n**基本数据类型包含哪些？** Python 的内置类型包括**数值类型**（int, float, complex）、**序列类型**（str, list,\
+    \ tuple, range）、**映射类型**（dict）、**集合类型**（set, frozenset）、**bool**（布尔）和**二进制类型**（bytes,\
+    \ bytearray, memoryview）。例如，x = 42 创建了一个 int，s = \"hello\" 是一个 str，l = [1,2,3]。\n\
+    \n**列表（list）和元组（tuple）有什么区别？** 列表是一个可变序列（用 [] 定义），其元素在创建后可以更改、添加或删除。**元组**是不变序列（用\
+    \ () 定义），不能被修改。换句话说，列表是变长且可变的，而元组是固定大小的。由于元组是不可变的，它们可以作为字典的键，而列表不能。\n\n**什么是列表？它和数组（array）有什么区别？**\
+    \ 列表是一个动态的异构容器（元素可以是任何类型），可以根据需要增长或缩小。Python 还有一个 **array** 模块和第三方数组（**numpy**），它们为了性能需要固定的数据类型。通常，使用列表用于通用集合；当你需要对大型数据集进行高效的存储和计算时，请使用专门的数组（NumPy\
+    \ 数组）。\n\n**如何安装外部包？** 标准方法是使用包管理器。例如，要安装一个包请使用 pip。\n\n**什么是虚拟环境？为什么要使用它？** 虚拟环境（使用\
+    \ -m venv 创建）是一个隔离的 Python 环境。它确保一个项目的依赖项不会与其他项目冲突。\n\n**if、elif、else 语句是如何工作的？**\
+    \ 这些是条件块。示例：\n\n```\nif condition1:\n    # 代码块 A\nelif condition2:\n    # 代码块\
+    \ B\nelse:\n    # 代码块 C\n```\n\n执行第一个真条件，并跳过其余。\n\n**Python 中的循环有哪些？** Python\
+    \ 有 for 循环和 while 循环。for 循环遍历序列（列表、字符串、元组、字典），例如：\n\n```\nfor x in [1,2,3]:\n\
+    \    print(x)\n```\n\nwhile 循环在条件为真时重复：\n\n```\ni = 0\nwhile i < 5:\n    print(i)\n\
+    \    i += 1\n```\n\n在循环内部，break 循环，continue 跳到下次迭代。range(start, stop, step) 函数生成一个整数序列。它通常用于\
+    \ for。例如，range(5) 产生 0,1,2,3,4。你可以指定起始值（默认 0）和步长。示例：for i in range(2, 10, 2):\
+    \ 遍历 2, 4, 6, 8。停止值是排他的。\n\n**为什么缩进在 Python 中很重要？** 与其他语言不同，Python 使用显著的缩进来定义代码块。同一代码块内的所有语句必须具有相同的缩进。缩进错误的代码将引发\
+    \ IndentationError。良好的缩进提升了可读性，这是 Python 设计哲学的一部分。\n\n**Python 类中的 __init__()\
+    \ 是什么？** __init__ 方法是类的初始化方法（通常称为构造函数）。它在创建实例时被被自动调用。在 __init__ 中，你通常会分配属性。\n\n\
+    ```\nclass Dog:\n  def __init__(self, name):\n    self.name = name\n```\n\n在这里，d\
+    \ = Dog(\"Fido\") 会自动调用 Dog.__init__(d, \"Fido\")，从而设置 d.name。__init__ 方法可以接受额外的参数进行初始化。\n\
+    \n**Python 类方法中的 self 是什么？** 在 Python 中，self 指向类的当前实例。它用于在方法内部访问对象的属性和其他方法。你需要在实例方法中将\
+    \ self 作为第一个参数包含进去。\n\n"
+  merge: -1
+- raw:
+  - "[PAGE 5]\n\n# Java Code Geeks MINIBOOKS PYTHON INTERVIEW QUESTIONS\n\n```\nclass\
+    \ Example:\ndef __init__(self, value):\n    self.value = value # 'self.value'\
+    \ is an attribute of this object\ndef show(self):\n    print(self.value) # Using\
+    \ 'self' to access the attribute\n```\n\nWhen you call obj = Example(5); obj.show().\
+    \ Python automatically passes obj as self.\n\nHow does exception handling work?\
+    \ Python uses try/except blocks to catch and handle errors. Example:\n\n```\n\
+    try:\n    risky_operation()\nexcept (TypeError, ValueError) as e:\n    print(\"\
+    Error\", e)\nfinally:\n    print(\"Cleanup code runs no matter what\")\n```\n\n\
+    Code in the try block is executed; if an exception occurs, control jumps to the\
+    \ matching except. You can catch special exceptions. The finally block executes\
+    \ regardless of whether an error occurred. This prevents crashes and allows graceful\
+    \ error handling.\n\nWhat is a module and a package? A module is a single Python\
+    \ (.py) file that contains definitions (functions, classes, variables) you can\
+    \ import into other. A package is a directory containing a __init__.py and possibly\
+    \ multiple modules or subpackages. Packages help organize related modules. You\
+    \ import them using module_name or from package submodule.\n\nWhat are positional\
+    \ or keyword arguments in functions? In function definitions, parameters can be\
+    \ passed positionally or by keyword. For example, def f(x, y=2): ..., you can\
+    \ call f(10) (positional) so, x=10, y=2 or f(10, y=3), or with keywords f(y=3,\
+    \ x=10). Keyword arguments specify the parameter name. You can also define default\
+    \ values (y=2 above). *args collects extra arguments into a tuple, and **kwargs\
+    \ collects keyword arguments into a dict, allowing flexible argument lists.\n\n\
+    What is a list comprehension? A list comprehension is a concise way to create\
+    \ lists using a single line. Syntax: [expr(x) for x in iterable if condition(x)].\
+    \ For instance, [n for n in range(5)] produces [0,1,2,3,4]. It is generally more\
+    \ readable and faster than an equivalent loop. Comprehensions can include an optional\
+    \ to filter items, [n for n in range(10) if n%2==0] numbers.\n\nWhat is a generator\
+    \ expression and how does it differ from a list comprehension? A generator expression\
+    \ is similar to a list comprehension but uses parentheses instead of brackets.\
+    \ gen: (x*x for x in range(5)) creates a generator object that yields values one\
+    \ at a time, instead of building the entire list in memory. In contrast, a list\
+    \ comprehension would build and return the full list immediately. Generators are\
+    \ memory-efficient for large data. Generators return an iterator that produces\
+    \ items on demand.\n\nWhat are map(), filter(), and reduce()? These are built-in\
+    \ functions from reduceools functional programming.\n\n+   * function, iterable\
+    \ applies the function to each item of the iterable and returns an iterator of\n\
+    \nJAVCODEGEEKS.COM | JELIXIS MEDIA P.C. VISIT JAVCODEGEEKS.COM | FOR MORE!"
+  - "[PAGE 6]\n\nresults.\n\n+   - filter(function, iterable) yields only the items\
+    \ for which the function returns True.\n\n+   - functools.reduce(function, sequence)\
+    \ applies a binary function cumulatively to the items of the sequence, reducing\
+    \ it to a single value (e.g. summing). It allow concise data transformations without\
+    \ explicit loops.\n\n**Which testing tools/frameworks are available in Python?**\
+    \ The standard library provides unittest, a rich framework for unit testing (with\
+    \ test cases and suites). A popular third-party tool is pytest, which has a simpler\
+    \ syntax (use assert statements) and powerful features like fixtures. It is also\
+    \ nose (negative maintained) and doctest (inline tests in docstrings). In practice,\
+    \ many developers use pytest for ease of use.\n\n```\nif __name__ == \"__main__\"\
+    :\n    main()\n```\n\nThis ensures that the code under this only runs when the\
+    \ script is executed directly, not when is imported as a module. A common pattern\
+    \ to allow a file to be used both as a script and an importable module.\n\n**What\
+    \ is dir() and help()? dir(object)** is a built-in that lists the attributes and\
+    \ methods of an object (module, class, instance, etc.). It's useful for introspection.\
+    \ help(object) or help('keywords') invokes Python's help system, showing documentation\
+    \ for the object or topic. These interactive functions help explore and find available\
+    \ methods or documentation.\n\n**What is slicing in Python?** Slicing allows you\
+    \ to extract a subsequence from sequences (lists, strings, tuples). The syntax\
+    \ is sequence[start:stop:step]. For example, s = \"Hello\"[1:4] gives \"ell\"\
+    \ (indices 1 through 3). Leaving out allows default start/end, and a negative\
+    \ step (e.g. s[:-1]) can reverse the sequence. Slicing is a concise way to manage\
+    \ parts of sequences and is very efficient.\n\n**What is the difference between\
+    \ == and is?** The == operator checks equality of value, whether two objects have\
+    \ the same value. The is operator checks identity, i.e., whether two references\
+    \ point to the same object in memory. For example, two lists with identical contents\
+    \ are == but not is. Generally use == for comparison and is only to check for\
+    \ the same object (often used for None, e.g. if x is None).\n\n**What are *args\
+    \ and **kwargs in functions?** In a function signature, *args extracts positional\
+    \ arguments into a tuple, and **kwargs collects extra arguments into a dict. For\
+    \ example:\n\n```\ndef f(a, *args, **kwargs):\n    print(a, args, kwargs)\nf(1,2,3,y=5)\
+    \ # a=1, args=(2,3), kwargs={'x':4,'y':5}\n```\n\nThis allows functions to accept\
+    \ a variable number of arguments.\n\n**What is a Python package index (PyPI)?**\
+    \ PyPI is the Python Package Index, the official repository of third-party libraries.\
+    \ pip tool installs packages from PyPI by default. You can publish your own"
+  - "[PAGE 7]\n\n# Java Geeks MINIBOOK\n\n# PYTHON INTERVIEW QUESTIONS\n\npackages\
+    \ by PyPI so others can install it via pip install package.\n\n**How do you comment\
+    \ code in Python?** A single-line comment starts with # and continues to the end\
+    \ of the line. For multi-line comments, you can use consecutive # lines or a multi-line\
+    \ string (triple quotes \"\"\"\"). Note: Python does not have any syntax, only\
+    \ the convention of using unused multi-line strings.\n\n**What is PEP 8?** PEP\
+    \ 8 is the Python Enhancement Proposal that describes the official Style Guide\
+    \ for Python Code. It provides conventions on code layout, naming, indentation\
+    \ (4 spaces), maximum line length (79 characters), and Adhering to PEP 8 makes\
+    \ Python code more readable and uniform. Many developers use tools like flake8\
+    \ or black to automatically check or format code to be PEP 8 compliant.\n\n**How\
+    \ do you copy a list in Python?** You can copy a list in several ways. The safest\
+    \ is using the list's copy() method or the list() constructor or slicing:\n\n\
+    ```\nb = a.copy()\nb = list(a)\nb = a[:] # slice of all elements\n```\n\nThese\
+    \ create a shallow copy (the list object is new, but contained elements are references).\
+    \ Don't use b = a, as that would create another reference to the same list.\n\n\
+    **What is the difference between shallow and deep copy?** A shallow copy of a\
+    \ collection copies the container but not the elements; if the elements are mutable\
+    \ objects, both copies refer to the same elements. A deep copy recursively copies\
+    \ everything, protecting independent elements. In Python, you can perform a deep\
+    \ copy using the copy module's deepcopy() function.\n\n**How do you open and read\
+    \ a file in Python?** Use the built-in open() function. For example:\n\n```\n\
+    with open(\"file.txt\", \"r\") as f:\n    data = f.read()\n```\n\nThis opens the\
+    \ file for reading (\"\n\n**What are list, dict, set comprehensions?** Similar\
+    \ to list comprehensions, Python has comprehensions for other collections:\n\n\
+    +   - Dict comprehension: {key_expr: value_expr for item in item} creates a dictionary.\n\
+    - Set comprehension: {expr for item in item} creates a set (unique items). These\
+    \ provide concise ways to build those data structures. For example: (x*x for x\
+    \ in range(5)) yields a dict, and (x for x in list if cond(x)) yields a set of\
+    \ x.\n\n**What is the difference between append() and extend() on lists?** list.append(x)\
+    \ adds a single element x to the end of the list. list.extend(iterable) takes\
+    \ an iterable and appends all its elements to the list. Example:\n\n```\na = [1,2]\n\
+    ```"
+  md: "\n# Java Code Geeks MINIBOOKS PYTHON INTERVIEW QUESTIONS\n\n```python\nclass\
+    \ Example:\n    def __init__(self, value):\n        self.value = value # 'self.value'\
+    \ is an attribute of this object\n    def show(self):\n        print(self.value)\
+    \ # Using 'self' to access the attribute\n```\n\nWhen you call obj = Example(5);\
+    \ obj.show(). Python automatically passes obj as self.\n\nHow does exception handling\
+    \ work? Python uses try/except blocks to catch and handle errors. Example:\n\n\
+    ```\ntry:\n    risky_operation()\nexcept (TypeError, ValueError) as e:\n    print(\"\
+    Error\", e)\nfinally:\n    print(\"Cleanup code runs no matter what\")\n```\n\n\
+    Code in the try block is executed; if an exception occurs, control jumps to the\
+    \ matching except. You can catch special exceptions. The finally block executes\
+    \ regardless of whether an error occurred. This prevents crashes and allows graceful\
+    \ error handling.\n\nWhat is a module and a package? A module is a single Python\
+    \ (.py) file that contains definitions (functions, classes, variables) you can\
+    \ import into other. A package is a directory containing a __init__.py and possibly\
+    \ multiple modules or subpackages. Packages help organize related modules. You\
+    \ import them using module_name or from package submodule.\n\nWhat are positional\
+    \ or keyword arguments in functions? In function definitions, parameters can be\
+    \ passed positionally or by keyword. For example, def f(x, y=2): ..., you can\
+    \ call f(10) (positional) so, x=10, y=2 or f(10, y=3), or with keywords f(y=3,\
+    \ x=10). Keyword arguments specify the parameter name. You can also define default\
+    \ values (y=2 above). *args collects extra arguments into a tuple, and **kwargs\
+    \ collects keyword arguments into a dict, allowing flexible argument lists.\n\n\
+    What is a list comprehension? A list comprehension is a concise way to create\
+    \ lists using a single line. Syntax: [expr(x) for x in iterable if condition(x)].\
+    \ For instance, [n for n in range(5)] produces [0,1,2,3,4]. It is generally more\
+    \ readable and faster than an equivalent loop. Comprehensions can include an optional\
+    \ to filter items, [n for n in range(10) if n%2==0] numbers.\n\nWhat is a generator\
+    \ expression and how does it differ from a list comprehension? A generator expression\
+    \ is similar to a list comprehension but uses parentheses instead of brackets.\
+    \ gen: (x*x for x in range(5)) creates a generator object that yields values one\
+    \ at a time, instead of building the entire list in memory. In contrast, a list\
+    \ comprehension would build and return the full list immediately. Generators are\
+    \ memory-efficient for large data. Generators return an iterator that produces\
+    \ items on demand.\n\nWhat are map(), filter(), and reduce()? These are built-in\
+    \ functions from functools functional programming.\n\n- map(function, iterable)\
+    \ applies the function to each item of the iterable and returns an iterator of\
+    \ results.\n- filter(function, iterable) yields only the items for which the function\
+    \ returns True.\n- functools.reduce(function, sequence) applies a binary function\
+    \ cumulatively to the items of the sequence, reducing it to a single value (e.g.\
+    \ summing). It allow concise data transformations without explicit loops.\n\n\
+    **Which testing tools/frameworks are available in Python?** The standard library\
+    \ provides unittest, a rich framework for unit testing (with test cases and suites).\
+    \ A popular third-party tool is pytest, which has a simpler syntax (use assert\
+    \ statements) and powerful features like fixtures. It is also nose (negative maintained)\
+    \ and doctest (inline tests in docstrings). In practice, many developers use pytest\
+    \ for ease of use.\n\n```python\nif __name__ == \"__main__\":\n    main()\n```\n\
+    \nThis ensures that the code under this only runs when the script is executed\
+    \ directly, not when is imported as a module. A common pattern to allow a file\
+    \ to be used both as a script and an importable module.\n\n**What is dir() and\
+    \ help()? dir(object)** is a built-in that lists the attributes and methods of\
+    \ an object (module, class, instance, etc.). It's useful for introspection. help(object)\
+    \ or help('keywords') invokes Python's help system, showing documentation for\
+    \ the object or topic. These interactive functions help explore and find available\
+    \ methods or documentation.\n\n**What is slicing in Python?** Slicing allows you\
+    \ to extract a subsequence from sequences (lists, strings, tuples). The syntax\
+    \ is sequence[start:stop:step]. For example, s = \"Hello\"[1:4] gives \"ell\"\
+    \ (indices 1 through 3). Leaving out allows default start/end, and a negative\
+    \ step (e.g. s[:-1]) can reverse the sequence. Slicing is a concise way to manage\
+    \ parts of sequences and is very efficient.\n\n**What is the difference between\
+    \ == and is?** The == operator checks equality of value, whether two objects have\
+    \ the same value. The is operator checks identity, i.e., whether two references\
+    \ point to the same object in memory. For example, two lists with identical contents\
+    \ are == but not is. Generally use == for comparison and is only to check for\
+    \ the same object (often used for None, e.g. if x is None).\n\n**What are *args\
+    \ and **kwargs in functions?** In a function signature, *args extracts positional\
+    \ arguments into a tuple, and **kwargs collects extra arguments into a dict. For\
+    \ example:\n\n```python\ndef f(a, *args, **kwargs):\n    print(a, args, kwargs)\n\
+    f(1,2,3,y=5) # a=1, args=(2,3), kwargs={'x':4,'y':5}\n```\n\nThis allows functions\
+    \ to accept a variable number of arguments.\n\n**What is a Python package index\
+    \ (PyPI)?** PyPI is the Python Package Index, the official repository of third-party\
+    \ libraries. pip tool installs packages from PyPI by default. You can publish\
+    \ your own packages by PyPI so others can install it via pip install package.\n\
+    \n**How do you comment code in Python?** A single-line comment starts with # and\
+    \ continues to the end of the line. For multi-line comments, you can use consecutive\
+    \ # lines or a multi-line string (triple quotes \"\"\"\"). Note: Python does not\
+    \ have any syntax, only the convention of using unused multi-line strings.\n\n\
+    **What is PEP 8?** PEP 8 is the Python Enhancement Proposal that describes the\
+    \ official Style Guide for Python Code. It provides conventions on code layout,\
+    \ naming, indentation (4 spaces), maximum line length (79 characters), and Adhering\
+    \ to PEP 8 makes Python code more readable and uniform. Many developers use tools\
+    \ like flake8 or black to automatically check or format code to be PEP 8 compliant.\n\
+    \n**How do you copy a list in Python?** You can copy a list in several ways. The\
+    \ safest is using the list's copy() method or the list() constructor or slicing:\n\
+    \n```python\nb = a.copy()\nb = list(a)\nb = a[:] # slice of all elements\n```\n\
+    \nThese create a shallow copy (the list object is new, but contained elements\
+    \ are references). Don't use b = a, as that would create another reference to\
+    \ the same list.\n\n**What is the difference between shallow and deep copy?**\
+    \ A shallow copy of a collection copies the container but not the elements; if\
+    \ the elements are mutable objects, both copies refer to the same elements. A\
+    \ deep copy recursively copies everything, protecting independent elements. In\
+    \ Python, you can perform a deep copy using the copy module's deepcopy() function.\n\
+    \n**How do you open and read a file in Python?** Use the built-in open() function.\
+    \ For example:\n\n```python\nwith open(\"file.txt\", \"r\") as f:\n    data =\
+    \ f.read()\n```\n\nThis opens the file for reading (\"\n\n**What are list, dict,\
+    \ set comprehensions?** Similar to list comprehensions, Python has comprehensions\
+    \ for other collections:\n\n- Dict comprehension: {key_expr: value_expr for item\
+    \ in item} creates a dictionary.\n- Set comprehension: {expr for item in item}\
+    \ creates a set (unique items). These provide concise ways to build those data\
+    \ structures. For example: (x*x for x in range(5)) yields a dict, and (x for x\
+    \ in list if cond(x)) yields a set of x.\n\n**What is the difference between append()\
+    \ and extend() on lists?** list.append(x) adds a single element x to the end of\
+    \ the list. list.extend(iterable) takes an iterable and appends all its elements\
+    \ to the list. Example:\n\n```python\na = [1,2]\n```\n"
+  mdcn: "\n\n# Java Code Geeks 迷你书籍 Python 面试题\n\n```python\nclass Example:\n    def\
+    \ __init__(self, value):\n        self.value = value # 'self.value' 是该对象的一个属性\n\
+    \    def show(self):\n        print(self.value) # 使用 'self' 来访问属性\n```\n\n当你调用\
+    \ `obj = Example(5); obj.show()` 时，Python会自动将 `obj` 传递给 `self`。\n\n异常处理是如何工作的？Python\
+    \ 使用 `try/except` 块来捕获和处理错误。例如：\n\n```\ntry:\n    risky_operation()\nexcept (TypeError,\
+    \ ValueError) as e:\n    print(\"Error\", e)\nfinally:\n    print(\"无论如何都会执行清理代码\"\
+    )\n```\n\n`try` 块中的代码执行；如果发生异常，控制权将跳转到匹配的 `except`。你可以捕获特殊的异常。`finally` 块无论是否发生错误都会执行。这防止了崩溃并允许优雅的错误处理。\n\
+    \n什么是模块（module）和包（package）？模块是一个单一的 Python (.py) 文件，包含了你可以导入到其他中的定义（函数、类、变量）。包是一个包含\
+    \ `__init__.py` 可能包含多个模块或子包的目录。包有助于组织相关的模块。你使用 `module_name` 或 `from package submodule`\
+    \ 来导入它们。\n\n函数中的位置参数或关键字参数是什么？在函数定义中，参数可以按位置或通过关键字传递。例如 `def f(x, y=2): ...`，你可以调用\
+    \ `f(10)`（位置参数），此时 `x=10, y=2`；或者调用 `f(10, y=3)`，或者使用关键字 `f(y=3, x=10)`。关键字参数指定参数名。你还可以定义默认值（如上面的\
+    \ `y=2`）。`*args` 将额外的参数收集到一个元组中，`**kwargs` 将关键字参数收集到一个字典中，允许灵活的参数列表。什么是列表推导式（list\
+    \ comprehension）？列表推导式是一种使用单行创建列表的简洁方法。语法：`[expr(x) for x in iterable if condition(x)]`。例如，`[n\
+    \ for n in range(5)]` 生成 `[0,1,2,3,4]`。它通常比等价循环更具读读且更快。推导式可以包含可选的过滤项，如 `[n for\
+    \ n in range(10) if n%2==0]` 数字。\n\n什么是生成器表达式（generator expression）以及它与列表推导式有什么区别？生成器表达式类似于列表推导式，但使用圆括号而不是括号。`gen:\
+    \ (x*x for x in range(5))` 创建一个生成器对象，一次产生一个值，而不是在内存中构建整个列表。相比之下，列表推导式会立即构建并返回完整列表。对于大数据，生成器是内存高效的。生成器返回一个按需产生项目的迭代器。\n\
+    \n`map()`、`filter()` 和 `reduce()` 是什么？这些是 `functools` 函数式编程中的内置函数。\n\n- `map(function,\
+    \ iterable)` 将函数应用到可迭代对象的每个项上并返回结果的迭代器。\n- `filter(function, iterable)` 仅产生函数返回\
+    \ `True` 的项。\n- `functools.reduce(function, sequence)` 将二元函数累积地应用于序列的项，将其还原为单个值（例如求和）。它允许在没有显式循环的情况下进行简洁的数据转换。\n\
+    \n**Python 中提供了哪些测试工具/框架？** 标准库提供了 `unittest`，这是一个丰富的单元测试框架（带有测试用例和测试套件）。流行的第三方工具是\
+    \ `pytest`，它具有更简单的语法（使用 `assert` 语句）和强大的功能，如 fixtures（固件）。它还包括 `nose`（不再维护）和 `doctest`（文档字符串中的内联测试）。在实践中，许多开发者使用\
+    \ `pytest` 因为其易用。\n\n```python\nif __name__ == \"__main__\":\n    main()\n```\n\
+    \n这确保了此下的代码只在脚本被直接执行时运行，而不是作为模块导入时运行。这是一个允许文件既作为脚本又作为可导入模块使用的常用模式。\n\n**`dir()`\
+    \ 是什么？** `dir()` 是一个内置函数，列出对象的属性。`help(object)` 会显示对象的帮助文档。`dir()` 常用于检查对象的可用方法。\n\
+    \n**什么是 中的切片（slicing）？** Python 中的切片是获取序列子集的方法。语法为 `[start:stop:step]`。例如，`s[1:5]`\
+    \ 获取索引从 1 到 4 的元素。切片允许高效地处理序列。\n\n**`==` 和 `is` 的区别是什么？** `==` 检查两个对象的值是否相等，而\
+    \ `is` 检查它们是否为同一个对象（引用地址相同）。\n\n**`*args` 和 `**kwargs` 是什么？** 在函数定义中，`*args` 接收任意数量的位置参数，`**kwargs`\
+    \ 接收任意数量的关键字参数。例如：\n\n```python\ndef f(*args, **kwargs):\n    print(args, kwargs)\n\
+    \nf(1, 2, 3, a=4, b=5) # 输出 (1, 2, 3) {'a': 4, 'b': 5}\n```\n\n"
+  merge: 0
+- raw:
+  - "[PAGE 8]\n\n```\na.append(3) # a is now [1,2,3]\na.extend([4,5]) # it would add\
+    \ the list [4,5] as a single element.\n```\n\nIf you make a set and how do you\
+    \ use it? A set is an unordered collection of unique elements. It supports membership\
+    \ testing and removes duplicates. For example, s = {1,2,3} or s = set({1,2,3}).\
+    \ You can do set operations like union, intersection (&), difference. Use sets\
+    \ when you need uniqueness or fast lookup.\n\nHow do you handle modules not in\
+    \ the standard library? Use pip install modulename to install it from PyPI by\
+    \ using, import modulename. Also ensure your PYTHONPATH or working directory is\
+    \ correct by using local modules.\n\nWhat is the Python Standard Library? It's\
+    \ a collection of modules included with Python (no extra installed). It covers\
+    \ many tasks: file I/O, networking, OS interaction, data formats (JSON, CSV),\
+    \ math, and more. For example, modules like os, sys, math, json, datetime, itertools\
+    \ are in the standard library.\n\nExplain exception hierarchy in Python. All exceptions\
+    \ inherit from the BaseException class (most commonly catch Exception). Some built-in\
+    \ exceptions: ValueError, TypeError, IndexError, KeyError, AttributeErrorerror.\
+    \ You can catch multiple exceptions (except TypeError, ValueError()) or a base\
+    \ class to catch. You can also define custom exceptions by subclassing Exception.\n\
+    \nWhat is enumerate() and zip()? enumerate(iterable) yields pairs (index, item)\
+    \ for each element, useful in loops:\n\n```\nfor i, val in enumerate(\"a\", \"\
+    b\", \"c\"):\n    print(i, val)\n```\n\nzip(*iterables) aggregates elements from\
+    \ two or more iterables into tuples:\n\n```\nfor x,y in zip([1,2,3], ['a', 'b',\
+    \ 'c']):\n    print(x, y)\n```\n\nIt stops at the shortest input. These built-ins\
+    \ simplyify many loops.\n\nWhat are some common built-in functions? Python has\
+    \ many built-ins. Examples include len(length), type(), isinstance(), open(),\
+    \ range(), min(), max(), sum(), sorted(), enumerate(), zip(), map(), filter(),\
+    \ and more. Knowing these well can save time.\n\nWhat is exception chaining? You\
+    \ can raise a new exception from an existing one using raise NewException from\
+    \ original_exception. This preserves the context trace. For example:\n\n```\n\
+    try:\n    ...\nexcept KeyError as e:\n    raise RuntimeError(\"High-level error\"\
+    ) from e\n```"
+  - '[PAGE 9]
+
+
+    # Java Code Geeks MINIBOKS
+
+
+    # PYTHON INTERVIEW QUESTIONS
+
+
+    How do you debug Python code? Use print statements, or the debugger: the built-in
+    pdb module (import pdb; pdb.set_trace()). Most IDEs (PyCharm, VSCode) have graphical
+    debuggers with breakpoints. You can also use importing logging versus instead
+    prints, which is more flexible (write to files, adjust severity).
+
+
+    What are __str__() and __repr__() in classes? These are special methods for string
+    representation. __str__(self) returns a "nice" string while __repr__(self) should
+    return an unambiguous representation, ideally that one could recreate the object,
+    and is used in the interactive console. If you only define __repr__, it is also
+    used as a fallback for str().
+
+
+    Explain Object-Oriented Programming (OOP) in Python. Python supports OOP: you
+    define classes with the class keyword can have attributes (data) and methods (functions).
+    You can create an instance by'
+  - "[PAGE 10]\n\ncalling the c (e.g. obj = MyClass()). Python supports inheritance:\
+    \ a class can derive from one or more base classes, inheriting and optionally\
+    \ overriding their methods. Key concepts: encapsulation (grouping data and methods),\
+    \ inheritance (code reuse), and polymorphism (same method name can operate on\
+    \ different types). Python uses dynamic typing, so there is no need to declare\
+    \ types.\n\n**What are instance methods, class methods, and static methods?**\n\
+    \n+   - **Instance methods** use self as the first parameter and operate on object\
+    \ instances.\n- **Class methods** use the @classmethod decorator and take cls\
+    \ as the first parameter (the class itself). They can access or modify class state.\n\
+    - **Static methods** use @staticmethod and take no special parameter; they behave\
+    \ like regular functions but live in the class namespace.\n\nExample:\n\n```\n\
+    class C:\n    def f(self): pass        # instance method\n    @classmethod\n \
+    \   def g(cls): pass        # class method\n    @staticmethod\n    def h(x): return\
+    \ x*x   # static method\n```\n\nUse class methods for factory patterns or operations\
+    \ related to the class, static methods for utility functions related to the class.\n\
+    \n**What is multiple inheritance and how does Python handle it?** Python classes\
+    \ can inherit from multiple base classes: C(A, B). Method resolution order (MRO)\
+    \ defines the order in which base classes are searched for methods. You can use\
+    \ C.__mro__ or help to see it. Python uses the C linearization algorithm for multiple\
+    \ bases define the same method, the leftmost in the class definition is used unless\
+    \ overridden.\n\n**What are magic (dunder) methods?** These are special methods\
+    \ surrounded by underscores (e.g. __init__, __str__, __len__, __add__). They allow\
+    \ to define or override built-in behaviors (construction, string representation,\
+    \ arithmetic operations, iteration, etc.). For instance, __str__(self) customizes\
+    \ str(obj) output __eq__(self, other) defines behavior of __enter__, __exit__\
+    \ context managers (with statements). They let objects integrate with Python syntax\
+    \ and functions.\n\n**What is a decorator? How do you create one?** A decorator\
+    \ is a function that takes another function and returns a new function with enhanced\
+    \ behavior. It is applied using the @decorator syntax above a function. For example:\n\
+    \n```\ndef my_deco(func):\n    def wrapper(*args, **kwargs):\n        print(\"\
+    Before\")\n        result = func(*args, **kwargs)\n        print(\"After\")\n\
+    \        return result\n    return wrapper\n@my_deco\n```"
+  - "[PAGE 11]\n\n# Java Code Geeks MINBOOKS 10\nPYTHON INTERVIEW QUESTIONS\n\n```\n\
+    def greet(name):\n    print(\"Hello\", name)\ngreet(\"Alice\")\n```\n\nThis will\
+    \ print \"Before\", then \"Hello Alice\", then \"After\". Decorators are often\
+    \ used for logging, authorization checks, caching, etc. Under the hood, @my_deco\
+    \ transforms greet into greet = @my_deco(greet).\n\n**What is a generator in Python?**\
+    \ A generator is a special kind of iterator defined by a function using the yield\
+    \ keyword, or by generator function returns a generator object without running\
+    \ the function immediately. Each yield pauses saving its state, and returns a\
+    \ value to the caller. Calling next() on the generator resumes execution until\
+    \ the next yield. This allows producing values one at a time on-demand. Generators\
+    \ are memory-efficient for large sequences because they don't hold the whole list\
+    \ in memory. For example:\n\n```\ndef count_up_to(n):\n    i = 1\n    while i\
+    \ <= n:\n        yield i\n        i += 1\n```\n\nHere, call to next() yields the\
+    \ next number. Generator expressions provide a quick way to define generators\
+    \ (e.g. \"*x for x in range(5)\"). Unlike normal functions that return, generators\
+    \ use yield, which returns a value and pauses the function (without exiting).\n\
+    \n**What are comprehensions and when should you use them?** Comprehensions (list/dict\
+    \ comprehensions) are concise for constructing collections from items. They often\
+    \ replace loops for building lists, improving readability and performance. For\
+    \ example, [**2 for x in nums if x%2==0] quickly creates a list of squares even.\
+    \ Use them for simple transformations. For more complex logic, traditional loops\
+    \ might be clearer. Generator expressions (**x2 for x in nums) similarly create\
+    \ iterators for lazy evaluation.\n\n**What are modules and packages, and how do\
+    \ you organize code?** We covered modules and packages earlier. For intermediate,\
+    \ emphasize organization: Place related functionality in modules (e.g. utils.py).\
+    \ Group related modules into packages (directories with __init__.py). Use absolute\
+    \ or relative imports to access code. Follow a clean project layout, e.g:\n\n\
+    ```\nmyproject/\napp/\n__init__.py\nmodels.py\nviews.py\ntests/\nrequirements.txt\n\
+    ```\n\nUse __name__ == \"__main__\" in scripts to allow modules to run as programs.\n\
+    \n**What are some Python best practices?** Follow PEP 8 style (naming, indentation,\
+    \ line length), write readable code. Use virtual environments per project. Prefer\
+    \ list/set/dict comprehensions over manual loops when concise. Handle exceptions\
+    \ properly (don't use except:). Write meaningful docstrings"
+  md: "\n```python\na.append(3) # a is now [1,2,3]\na.extend([4,5]) # it would add\
+    \ the list [4,5] as a single element.\n```\n\nIf you make a set and how do you\
+    \ use it? A set is an unordered collection of unique elements. It supports membership\
+    \ testing and removes duplicates. For example, s = {1,2,3} or s = set({1,2,3}).\
+    \ You can do set operations like union, intersection (&), difference. Use sets\
+    \ when you need uniqueness or fast lookup.\n\nHow do you handle modules not in\
+    \ the standard library? Use pip install modulename to install it from PyPI by\
+    \ using, import modulename. Also ensure your PYTHONPATH or working directory is\
+    \ correct by using local modules.\n\nWhat is the Python Standard Library? It's\
+    \ a collection of modules included with Python (no extra installed). It covers\
+    \ many tasks: file I/O, networking, OS interaction, data formats (JSON, CSV),\
+    \ math, and more. For example, modules like os, sys, math, json, datetime, itertools\
+    \ are in the standard library.\n\nExplain exception hierarchy in Python. All exceptions\
+    \ inherit from the BaseException class (most commonly catch Exception). Some built-in\
+    \ exceptions: ValueError, TypeError, IndexError, KeyError, AttributeError. You\
+    \ can catch multiple exceptions (except TypeError, ValueError()) or a base class\
+    \ to catch. You can also define custom exceptions by subclassing Exception.\n\n\
+    What is enumerate() and zip()? enumerate(iterable) yields pairs (index, item)\
+    \ for each element, useful in loops:\n\n```python\nfor i, val in enumerate(\"\
+    a\", \"b\", \"c\"):\n    print(i, val)\n```\n\nzip(*iterables) aggregates elements\
+    \ from two or more iterables into tuples:\n\n```python\nfor x,y in zip([1,2,3],\
+    \ ['a', 'b', 'c']):\n    print(x, y)\n```\n\nIt stops at the shortest input. These\
+    \ built-ins simplify many loops.\n\nWhat are some common built-in functions? Python\
+    \ has many built-ins. Examples include len(length), type(), isinstance(), open(),\
+    \ range(), min(), max(), sum(), sorted(), enumerate(), zip(), map(), filter(),\
+    \ and more. Knowing these well can save time.\n\nWhat is exception chaining? You\
+    \ can raise a new exception from an existing one using raise NewException from\
+    \ original_exception. This preserves the context trace. For example:\n\n```python\n\
+    try:\n    ...\nexcept KeyError as e:\n    raise RuntimeError(\"High-level error\"\
+    ) from e\n```\n\n# Java Code Geeks MINIBOKS\n\n# PYTHON INTERVIEW QUESTIONS\n\n\
+    How do you debug Python code? Use print statements, or the debugger: the built-in\
+    \ pdb module (import pdb; pdb.set_trace()). Most IDEs (PyCharm, VSCode) have graphical\
+    \ debuggers with breakpoints. You can also use logging instead of prints, which\
+    \ is more flexible (write to files, adjust severity).\n\nWhat are __str__() and\
+    \ __repr__() in classes? These are special methods for string representation.\
+    \ __str__(self) returns a \"nice\" string while __repr__(self) should return an\
+    \ unambiguous representation, ideally that one could recreate the object, and\
+    \ is used in the interactive console. If you only define __repr__, it is also\
+    \ used as a fallback for str().\n\nExplain Object-Oriented Programming (OOP) in\
+    \ Python. Python supports OOP: you define classes with the class keyword, can\
+    \ have attributes (data) and methods (functions). You can create an instance by\
+    \ calling the class (e.g. obj = MyClass()). Python supports inheritance: a class\
+    \ can derive from one or more base classes, inheriting and optionally overriding\
+    \ their methods. Key concepts: encapsulation (grouping data and methods), inheritance\
+    \ (code reuse), and polymorphism (same method name can operate on different types).\
+    \ Python uses dynamic typing, so there is no need to declare types.\n\n**What\
+    \ are instance methods, class methods, and static methods?**\n\n- **Instance methods**\
+    \ use self as the first parameter and operate on object instances.\n- **Class\
+    \ methods** use the @classmethod decorator and take cls as the first parameter\
+    \ (the class itself). They can access or modify class state.\n- **Static methods**\
+    \ use @staticmethod and take no special parameter; they behave like regular functions\
+    \ but live in the class namespace.\n\nExample:\n\n```python\nclass C:\n    def\
+    \ f(self): pass        # instance method\n    @classmethod\n    def g(cls): pass\
+    \        # class method\n    @staticmethod\n    def h(x): return x*x   # static\
+    \ method\n```\n\nUse class methods for factory methods.\n"
+  mdcn: "\n\n```python\na.append(3) # a is now [1,2,3]\na.extend([4,5]) # 它会将列表 [4,5]\
+    \ 作为一个单个元素添加。\n```\n\n如果你创建一个集合（set），应该如何使用它？集合是唯一元素的无序集合。它支持成员测试并移除重复项。例如，s =\
+    \ {1,2,3} 或 s = set({1,2,3})。你可以执行并集、交集 (&)、差集等集合操作。当你需要唯一性或快速查找时，请使用集合。\n\n如何处理标准库之外的模块？使用\
+    \ `pip install modulename` 从 PyPI 安装它，并使用 `import modulename` 导入。此外，在使用本地模块时，请确保你的\
+    \ `PYTHONPATH` 或工作目录是正确的。\n\n什么是 Python 标准库？它是随 Python 一起な模块集合（无需额外安装）。它涵盖了许多任务：文件\
+    \ I/O、网络、操作系统交互、数据格式（JSON, CSV）、数学等。例如，`os`、`sys`、`math`、`json`、`datetime`、`itertools`\
+    \ 等模块都在标准库中。\n\n解释 Python 中的异常层次结构。所有异常都继承自 `BaseException` 类（最常用的是捕捉 `Exception`）。某些内置异常：`ValueError`、`TypeError`、`IndexError`、`KeyError`、`AttributeError`。你可以捕获多个异常（`except\
+    \ TypeError, ValueError()`）或基类。你也可以通过子类 `Exception` 来定义自定义异常。\n\n`enumerate()`\
+    \ 和 `zip()` 是什么？`enumerate(iterable)` 为每个可迭代元素产生 `(index, item)` 元对，在循环中非常有用：\n\
+    \n```python\nfor i, val in enumerate(\"a\", \"b\", \"c\"):\n    print(i, val)\n\
+    ```\n\n`zip(*iterables)` 将两个或多个可迭代对象的元素聚合为元组：\n\n```python\nfor x,y in zip([1,2,3],\
+    \ ['a', 'b', 'c']):\n    print(x, y)\n```\n\n它会在最短的输入端处停止。这些内置函数简化了许多循环。\n\n有哪些常见的内置函数？Python\
+    \ 有许多内置函数。示例包括 `len()`、`type()`、`isinstance()`、`open()`、`range()`、`min()`、`max()`、`sum()`、`sorted()`、`enumerate()`、`zip()`、`map()`、`filter()`\
+    \ 等。熟练掌握这些节省节省。\n\n什么是异常链？你可以使用 `raise NewException from original_exception` 从现有异常抛出新异常。这保留了上下文追踪信息。例如：\n\
+    \n```python\ntry:\n    ...\nexcept KeyError as e:\n    raise RuntimeError(\"High-level\
+    \ error\") from e\n```\n\n# Java Code Geeks MINIBOKS\n\n# Python 面试题\n\n如何调试 Python\
+    \ 代码？使用 `print` 语句或使用调试器：内置的 `pdb` 模块（`import pdb; pdb.set_trace()`）。大多数 IDE（PyCharm,\
+    \ VSCode）都带有支持断点的图形化调试器。你也可以使用 `logging` 代替 `print`，这更灵活（写入文件、调整严重性）。\n\n类中的 `__str__()`\
+    \ 和 `__repr__()` 是什么？这些用于字符串表示的特殊方法。`__str__(self)` 返回一个“友好”的字符串，而 `__repr__(self)`\
+    \ 应该返回一个无歧的表示，理想情况下是可以重新创建对象的，并用于交互式控制台。如果你只定义了 `__repr__`，它也会作为 `str()` 的备选。\n\
+    \n解释 Python 中的面向对象编程 (OOP)。Python 支持 OOP：你使用 `class` 关键字定义类，可以拥有属性（数据）和方法（函数）。你可以通过调用类来创建实例（例如\
+    \ `obj = MyClass()`）。Python 支持继承：类可以派自一个或多个基类，继承并可选地覆盖它们的方法。核心概念：封装（将数据和方法组合在一起）、继承（代码复用）和多态（相同的方法名可以作用于不同类型）。Python\
+    \ 使用动态类型，因此不需要声明类型。\n\n**什么是实例方法、类方法和静态方法？**\n\n- ****实例方法**使用 `self` 作为第一个参数，并在对象实例上进行操作。\n\
+    - ****类方法**使用 `@classmethod` 装饰器，并将 `cls` 作为第一个参数（类本身）。它们可以访问或修改类状态。\n-   **静态方法**使用\
+    \ `@staticmethod` 且不任何特殊参数；它们的行为像普通函数，但存在于类命名空间中。\n\n示例：\n\n```python\nclass C:\n\
+    \    def f(self): pass        # 实例方法\n    @classmethod\n    def g(cls): pass \
+    \       # 类方法\n    @staticmethod\n    def h(x): return x*x   # 静态方法\n```\n\n使用类方法工厂方法。\n\
+    \n"
+  merge: 0
+- raw:
+  - '[PAGE 12]
+
+
+    # Java Code Geeks MINIBOOK 11 PYTHON INTERVIEW QUESTIONS
+
+
+    and using instead of prints for production code when possible for thread-safety
+    (tuples, frozensets). Keep functions and classes focused (single responsibility).
+
+
+    How is duck typing in Python? Duck typing means Python does not enforce constraints;
+    if an object implements the required methods or behaviors, it can be used. The
+    name comes from "If it walks like a duck and quacks like a duck". This polymorphism
+    without formal interfaces. For example, an object with a `read()` method can be
+    treated as a "file-object". Duck typing emphasizes what an object can do rather
+    than its class.
+
+
+    How do you test Python code? We use frameworks: use unit tests that verify simple
+    pieces of functionality. With `unittest`, you subclass `TestCase` and use assertion
+    methods. With `pytest`, you write functions starting with `test_`, and use `assert`.
+    Run tests automatically with `pytest` or `unittest` discovery. Mock external dependencies
+    using the `unittest.mock` module or libraries by using `pytest-mock`. for high
+    coverage test on critical code.
+
+
+    What is serialization/pickling in Python? Serialization is converting objects
+    to a byte stream. Python''s `pickle` module can serialize and deserialize objects
+    (complex types, custom classes). Example: `data = pickle.dumps(obj)` and `obj
+    = pickle.loads(data)`. For cross-language or human-readable formats, use JSON
+    (JSON only handles basic types). Pickle is Python-specific and can be insecure
+    when loading data from untrusted sources.
+
+
+    What is NumPy and when is it used? NumPy is the fundamental library for numerical
+    computing. It provides the `ndarray` - N-dimensional, homogeneous array - optimized
+    mathematical routines. Use NumPy for efficient array/matrix operations, linear
+    algebra, random sampling. It''s much faster than Python lists for numeric data,
+    which are implemented in C.
+
+
+    What is Pandas and what is a DataFrame? Pandas is a library for data manipulation
+    and analysis. Its primary object is the DataFrame, a 2D labeled data structure
+    (like a spreadsheet). DataFrame stores rows and columns, where each column can
+    have a name and its own data type. You can think of it as a table of heterogeneous
+    data. Pandas provides powerful tools to load data (from CSV, databases), filter/select
+    rows/columns, group and aggregate data, handling missing values, etc. It''s widely
+    used in data science for analyzing datasets.
+
+
+    What is the difference between NumPy arrays and Python lists? NumPy arrays have
+    fixed size and homogeneous type, whereas lists can change and hold different types.
+    NumPy operations (vectorized) are executed in optimized C, making them much faster
+    for large numerical data. For example, adding two arrays adds element-wise in
+    C, adding two lists concatenate them. Use NumPy when performing numerical computations.
+
+
+    How do you handle missing or null values in Pandas? In Pandas, missing data is
+    represented as NaN or None. Use `df.dropna()` to remove rows with missing values,
+    or `df.fillna(value)` to substitute them. Pandas functions `isnull()` to detect
+    missing. Many operations automatically skip `mean()` ignores NaNs. It''s common
+    to fill missing data with statistical values (mean, median) or to drop complete
+    rows, depending on context.
+
+
+    What is Flask and what is it for? Flask is a lightweight web framework for Python.
+    It is designed to start quickly on projects; you can scale complexity by adding
+    extensions. Flask provides routing, templating (Jinja2), and a built-in development
+    server. It''s minimal, add only the components you need (ORM, auth, etc.). It''s
+    ideal for small web services or APIs.
+
+
+    What is Django and what is it for? Django is a high-level Web framework that enables
+    rapid development and clean design. It''s a "batteries-included" framework: it
+    includes an ORM for database access, an admin interface, authentication, and many
+    utilities out of the box. Django abstracts
+
+
+    JAVCODEGEEKS.COM | ELIXIS MEDIA P.C. | VISIT JAVCODEGEEKS.COM FOR MORE!'
+  - '[PAGE 13]
+
+
+    # Java Code Geeks MINIBOOK 12 PYTHON INTERVIEW QUESTIONS
+
+
+    common web developers can focus on writing application code. It''s well-suited
+    to larger applications that benefit from a structured framework.
+
+
+    When would you choose Flask over Django or versa? Choose Flask when you want a
+    lightweight framework with flexibility to pick components. Flask has a minimal
+    core and easy to learn, making it great for simple services or microservices.
+    Choose Django when you want a full-featured framework with many built-in tools
+    (ORM, admin UI, authentication, etc.) that enhance a large project structure,
+    Django''s scalability and security features support large, complex web applications.
+
+
+    What is an ORM? An Object-Relational Mapping (ORM) tool allows you to work with
+    a database using Python classes instead of SQL. For example, you can write `User.objects.filter(age_gt=30)`
+    instead of raw SQL. ORMs handle translating operations, managing connections,
+    and provide a higher-level API for CRUD operations. SQLAlchemy and Django are
+    popular ORMs.
+
+
+    What is serialization in Django? Django can serialize QuerySets to JSON, XML,
+    etc., using django.core.serializers. This is useful for creating APIs or data
+    interchange. For example: from django.core import serializers; data = serializers.serialize(''json'').
+    For REST APIs, use Django REST Framework which handles Serializers to convert
+    model instances to JSON and versa.
+
+
+    How do you manage dependencies in a Python project? Use a virtual environment
+    and keep a requirements.txt list showing package versions. You can create this
+    with pip freeze > requirements.txt. Others can install the same deps with pip
+    install -r requirements.txt. Alternatively use tools like pipenv or poetry for
+    dependency and virtual environment management, which lock versions and provide
+    deterministic builds.
+
+
+    What are some best practices for Python code review?
+
+
+    +   - Follow PEP 8 style.
+
+    - Ensure meaningful variable/function names and docstrings.
+
+    - Check for proper exception handling.
+
+    - Verify unit tests cover new code.
+
+    - Look for potential performance issues (e.g. unnecessary loops).
+
+    - Avoid magic numbers; use constants.
+
+    - Check for security issues (e.g. input sanitization).
+
+    - Use built-in functions and libraries where appropriate (don''t reinvent the
+    wheel).
+
+
+    What is logging, and how is it different from printing? The logging module provides
+    a flexible way to record application events (info, warnings, errors, debug) to
+    files, streams, etc. Unlike `print()`, logging allows levels, formatting, and
+    easy toggling of verbosity. For example:
+
+
+    ```
+
+    import logging
+
+    logging.basicConfig(level=logging.INFO)
+
+    logging.info("Starting process")
+
+    ```
+
+
+    This logs a timestamped message to stderr or a file. In production code, use logging
+    instead of print so you can direct output appropriately and disable verbose logging
+    when needed.'
+  - '[PAGE 14]
+
+
+    # Java Code Geeks MINIBOOKS 13 PYTHON INTERVIEW QUESTIONS
+
+
+    What are *args and **kwargs in function calls? (Already answered in Q27 with function
+    definitions) in calls, * unpacks a list into tuple args, and ** unpacks a dict
+    into dictionary args.) For example:
+
+
+    ```
+
+    def f(a, b, c): ...
+
+    args = (1,2,3)
+
+    f(*args)              # equivalent to f(1,2,3)
+
+    d = {''a'':''1'',''b'':''2'',''c'':''3''}
+
+    f(**d)               # equivalent to f(a=1,b=2,c=3)
+
+    ```
+
+
+    Explain the use of assert. The assert statement is used for debugging: it tests
+    an expression and raises AssertionError if false. assert len(list) > 0,"List not
+    be empty". In optimized runs (python -0), assertions can be skipped, so do not
+    use them for essential checks, only for sanity checks. Use them often to verify
+    conditions.
+
+
+    What are lambda? A lambda is an anonymous (named) function defined with the lambda
+    keyword. It can take any number of arguments but only a single expression. Lambdas
+    are equal: add = lambda x, y: x + y creates a function that returns x+y. Lambdas
+    are often used for short throwaway, e.g., as arguments to map(func, sorted(list)),
+    or filter(). They cannot contain state or annotations - for more complex logic,
+    use a normal function.
+
+
+    What is itertools? A standard library that provides tools for filtering and combinatorics.
+    It includes functions like count(), cycle(), permutations(), combinations(), product(),
+    and groupby(). These create iterators for infinite sequences or combinatorial
+    sets, saving memory. For example, itertools.groupby() groups sorted data by keys,
+    and itertools.chain() can concatenate multiple iterators.
+
+
+    What is functools and give examples? The functools module contains higher-order
+    functions and utils. Examples include:
+
+
+    +   - functools.reduce() for reduction (as)
+
+    - functools.partial(func, *args) to fix some arguments of a function and generate
+    a new callable.
+
+    - functools.lru_cache decorator to cache functions
+
+    - functools.wraps to preserve metadata when writing decorators.
+
+
+    How does slicing work on lists/strings? Already answered in Q25, but here mean
+    indexing specifically. Example: list[-1] is the last element, list[:2] are the
+    first two. s[::1] reverses a string. Slicing in general is [start:stop:step],
+    where start defaults to 0, stop, and negative indices count the end.
+
+
+    How do you merge dictionaries? In Python 3.9, you can use dict = {**dict1, **dict2}
+    or use dict.update(). Note that if there are overlapping keys, the second dictionary''s
+    value overrides the first.
+
+
+    What is the use of enumerate()? We covered enumerate in Q41, but emphasize for
+    itertools: yields (index, value) pairs. Often used in loops when you need a counter:
+
+
+    JAVCODEGEEKS.COM | ©ELIXIS MEDIA P.C. | VISIT JAVCODEGEEKS.COM FOR MORE!'
+  md: '
+
+    # Java Code Geeks MINIBOOK 11 PYTHON INTERVIEW QUESTIONS
+
+
+    and using instead of prints for production code when possible for thread-safety
+    (tuples, frozensets). Keep functions and classes focused (single responsibility).
+
+
+    How is duck typing in Python? Duck typing means Python does not enforce constraints;
+    if an object implements the required methods or behaviors, it can be used. The
+    name comes from "If it walks like a duck and quacks like a duck". This polymorphism
+    without formal interfaces. For example, an object with a `read()` method can be
+    treated as a "file-object". Duck typing emphasizes what an object can do rather
+    than its class.
+
+
+    How do you test Python code? We use frameworks: use unit tests that verify simple
+    pieces of functionality. With `unittest`, you subclass `TestCase` and use assertion
+    methods. With `pytest`, you write functions starting with `test_`, and use `assert`.
+    Run tests automatically with `pytest` or `unittest` discovery. Mock external dependencies
+    using the `unittest.mock` module or libraries by using `pytest-mock` for high
+    coverage test on critical code.
+
+
+    What is serialization/pickling in Python? Serialization is converting objects
+    to a byte stream. Python''s `pickle` module can serialize and deserialize objects
+    (complex types, custom classes). Example: `data = pickle.dumps(obj)` and `obj
+    = pickle.loads(data)`. For cross-language or human-readable formats, use JSON
+    (JSON only handles basic types). Pickle is Python-specific and can be insecure
+    when loading data from untrusted sources.
+
+
+    What is NumPy and when is it used? NumPy is the fundamental library for numerical
+    computing. It provides the `ndarray` - N-dimensional, homogeneous array - optimized
+    mathematical routines. Use NumPy for efficient array/matrix operations, linear
+    algebra, random sampling. It''s much faster than Python lists for numeric data,
+    which are implemented in C.
+
+
+    What is Pandas and what is a DataFrame? Pandas is a library for data manipulation
+    and analysis. Its primary object is the DataFrame, a 2D labeled data structure
+    (like a spreadsheet). DataFrame stores rows and columns, where each column can
+    have a name and its own data type. You can think of it as a table of heterogeneous
+    data. Pandas provides powerful tools to load data (from CSV, databases), filter/select
+    rows/columns, group and aggregate data, handling missing values, etc. It''s widely
+    used in data science for analyzing datasets.
+
+
+    What is the difference between NumPy arrays and Python lists? NumPy arrays have
+    fixed size and homogeneous type, whereas lists can change and hold different types.
+    NumPy operations (vectorized) are executed in optimized C, making them much faster
+    for large numerical data. For example, adding two arrays adds element-wise in
+    C, adding two lists concatenate them. Use NumPy when performing numerical computations.
+
+
+    How do you handle missing or null values in Pandas? In Pandas, missing data is
+    represented as NaN or None. Use `df.dropna()` to remove rows with missing values,
+    or `df.fillna(value)` to substitute them. Pandas functions `isnull()` to detect
+    missing. Many operations automatically skip; `mean()` ignores NaNs. It''s common
+    to fill missing data with statistical values (mean, median) or to drop complete
+    rows, depending on context.
+
+
+    What is Flask and what is it for? Flask is a lightweight web framework for Python.
+    It is designed to start quickly on projects; you can scale complexity by adding
+    extensions. Flask provides routing, templating (Jinja2), and a built-in development
+    server. It''s minimal, add only the components you need (ORM, auth, etc.). It''s
+    ideal for small web services or APIs.
+
+
+    What is Django and what is it for? Django is a high-level Web framework that enables
+    rapid development and clean design. It''s a "batteries-included" framework: it
+    includes an ORM for database access, an admin interface, authentication, and many
+    utilities out of the box. Django abstracts common web developers can focus on
+    writing application code. It''s well-suited to larger applications that benefit
+    from a structured framework.
+
+
+    JAVCODEGEEKS.COM | ELIXIS MEDIA P.C. | VISIT JAVCODEGEEKS.COM FOR MORE!
+
+
+    # Java Code Geeks MINIBOOK 12 PYTHON INTERVIEW QUESTIONS
+
+
+    When would you choose Flask over Django or versa? Choose Flask when you want a
+    lightweight framework with flexibility to pick components. Flask has a minimal
+    core and easy to learn, making it great for simple services or microservices.
+    Choose Django when you want a full-featured framework with many built-in tools
+    (ORM, admin UI, authentication, etc.) that enhance a large project structure,
+    Django''s scalability and security features support large, complex web apps.
+
+
+    What is ORM? ORM (Object-Relational Mapping) allows you to interact with a database
+    using object-oriented code instead of writing raw SQL. It bridges the gap between
+    relational databases and object-oriented programming.
+
+
+    What is serialization in Python? Serialization is converting objects to a byte
+    stream so they can be saved or transmitted. In Python, `pickle` is commonly used
+    for this. Example: `data = pickle.dumps(obj)` and `obj = pickle.loads(data)`.
+    For cross-language or human-readable formats, use JSON (JSON only handles basic
+    types). Pickle is Python-specific and can be insecure when loading data from untrusted
+    sources.
+
+
+    What are *args and **kwargs? In function definitions, `*args` allows a function
+    to accept any number of positional arguments, while `**kwargs` allows for any
+    number of keyword arguments. They are useful for creating flexible function interfaces.
+
+
+    What are some best practices for Python?
+
+    - Follow PEP 8 style.
+
+    - Use meaningful names for variables.
+
+    - Use docstrings for functions and classes.
+
+    - Avoid magic numbers; use constants.
+
+    - Use unit tests to ensure code works as correctly.
+
+
+    Explain the use of assert. The `assert` statement is used for debugging; it tests
+    an expression and, if it is false, raises an `AssertionError`. Use them for sanity
+    checks, do not use them for essential logic in production.
+
+
+    What is lambda? A lambda is an anonymous (named) function defined with the `lambda`
+    keyword. It can take any number of arguments but only a single expression. Lambdas
+    are often used for throwaway logic, e.g., as arguments to `map()` or `filter()`.
+
+
+    What is itertools? A standard library that provides tools for efficient looping.
+    It includes functions like `count()`, `cycle()`, `permutations()`, `combinations()`,
+    `product()`. These create iterators for infinite sequences or combinatorial sets,
+    saving memory.
+
+
+    What is functools and give examples? The `functools` module contains higher-order
+    functions and utils. Examples include:
+
+    - `functools.reduce()` for reduction
+
+    - `functools.partial(func, *args)` to fix some arguments of a function and generate
+    a new callable.
+
+    - `functools.lru_cache` decorator to cache functions.
+
+    - `functools.wraps` to preserve metadata when writing decorators.
+
+
+    How does slicing work on lists/strings? Slicing is generally `[start:stop:step]`,
+    where start defaults to 0, stop, and negative indices count from the end. Example:
+    `list[-1]` is the last element, `list[:2]` are the first two. `s[::-1]` reverses
+    a string.
+
+
+    How do you merge dictionaries? In Python 3.9, you can use `dict = {**dict1, **dict2}`
+    or use `dict.update()`. Note that if there are overlapping keys, the second dictionary''s
+    value overrides the first.
+
+
+    What is the use of enumerate()? `enumerate()` yields `(index, value)` pairs. Often
+    used in loops when you need a counter.
+
+    '
+  mdcn: '
+
+
+    # Java Code Geeks MINIBOOK 11 Python 面试题
+
+
+    在可能的情况下，在生产代码中使用替代 `print` 以确保线程安全（如元组、冻结集合）。保持函数和类的专注（单一职责原则）。
+
+
+    Python 中的鸭子类型（duck typing）是怎样的？鸭子类型意味着 Python 不强制执行约束；如果一个对象实现了所需的方法或行为，就可以被使用。这个名字源于“如果它走起来像鸭子，叫起来也像鸭子”。这是一种无需正式接口的多态性。例如，一个具有
+    `read()` 方法的对象可以被视为“文件对象”。鸭子类型强调的是对象能做什么，而不是它的类。
+
+
+    你如何测试 Python 代码？我们使用框架：使用单元测试来验证简单的功能部分。使用 `unittest` 时，你继承 `TestCase` 子类并使用断言方法。使用
+    `pytest` 时，你编写以 `test_` 开头的函数并使用 `assert`。通过 `pytest` 或 `unittest` 发现功能自动运行测试。使用
+    `unittest.mock` 模块或通过 `pytest-mock` 库对外部依赖进行 Mock，以便对关键代码进行高覆盖率测试。
+
+
+    Python 中的序列化/pickling 是什么？序列化是将对象转换为字节流。Python 的 `pickle` 模块可以序列化和反序列化对象（复杂类型、自定义类）。示例：`data
+    = pickle.dumps(obj)` 和 `obj = pickle.loads(data)`。对于跨语言或人类可读格式，使用 JSON（JSON 仅处理基本类型）。Pickle
+    是 Python 特有的，且当从不可信源加载数据时可能是不安全的。
+
+
+    什么是 NumPy 以及何时使用它？NumPy 是数值计算的基础库。它提供了 `ndarray` —— N 维同构数组以及优化的数学例程。使用 NumPy
+    进行高效的数组/矩阵操作、线性代数、随机采样。对于数值数据，它比用 C 实现的 Python 列表快得多。
+
+
+    什么是 Pandas 以及什么是 DataFrame？Pandas 是一个用于数据处理和分析的库。它的主要对象是 DataFrame，这是一个二维标记数据结构（类似于电子表格）。DataFrame
+    存储行和列，每列可以有自己的名称和数据类型。你可以将其视为一个包含异构数据的表格。Pandas 提供了强大的工具来加载数据（从 CSV、数据库）、过滤/选择行/列、分组和聚合数据、处理缺失值等。它被广泛用于数据科学中分析数据集。
+
+
+    NumPy 数组和 Python 列表之间的区别是什么？NumPy 数组具有固定大小和同构类型，而列表可以改变并持有不同类型。NumPy 操作（向量化）在优化的
+    C 中执行，使其在处理大型数值数据时快得多。例如，两个数组相加是在 C 中进行元素级加法，而两个列表相加是合并。在执行数值计算时使用 NumPy。
+
+
+    你如何在 Pandas 中处理缺失值或空值？在 Pandas 中，缺失数据表示为 `NaN` 或 `None`。使用 `df.dropna()` 删除包含缺失值的行，或使用
+    `df.fillna(value)` 替换它们。Pandas 函数 `isnull()` 用于检测缺失。许多操作会自动跳过；`mean()` 会忽略 NaNs。根据上下文，用统计值（平均值、中位数）填充缺失数据或删除整行是常见操作。
+
+
+    什么是 Flask 以及它是做什么的？Flask 是一个 Python 的轻量级 Web 框架。它的设计旨在快速启动项目；你可以通过添加扩展来扩展复杂度。Flask
+    提供了路由、模板（Jinja2）和内置开发服务器。它是极简的，只添加你需要的组件（ORM、认证等）。它是小型 Web 服务或 API 的理想选择。
+
+
+    什么是 Django 以及它是做什么的？Django 是一个高级 Web 框架，能够实现快速开发和简洁设计。它是一个“内置电池”的框架：它包含了数据库访问的
+    ORM、管理界面、认证和许多内置工具。Django 抽象了常见功能，让开发者能够专注于编写应用程序代码。它非常适合受益结构化框架的大型应用程序。
+
+
+    JAVCODEGEEKS.COM | ELIXIS MEDIA P.C. | 访问 JAVCODEGEEKS.COM 获取更多！
+
+
+    # Java Code Geeks MINIBOOK 12 Python 面试题
+
+
+    何时你会选择 Flask 而不是 Django 或反之？当你想要一个具有灵活选择组件能力的轻量级框架时，选择 Flask。Flask 核心简洁且易于学习，非常适合简单服务或微服务。当你想要一个具有许多内置工具（ORM、管理
+    UI、认证等）以增强大型项目结构的全功能框架时，选择 Django。Django 的可扩展性和安全性特征支持大型、复杂的 Web 应用。
+
+
+    什么是 ORM？ORM（对象关系映射）允许你使用面向对象的代码与数据库交互，而不是编写原始 SQL。它弥合了关系型数据库与面向对象编程之间的鸿沟。
+
+
+    Python 中的序列化是什么？序列化是将对象转换为字节流以便保存或传输。在 Python 中，通常使用 `pickle` 执行此操作。示例：`data =
+    pickle.dumps(obj)` 和 `obj = pickle.loads(data)`。对于跨语言或人类可读格式，使用 JSON（JSON 仅处理基本类型）。Pickle
+    是 Python 特有的，且当从不可信源加载数据时可能是不安全的。
+
+
+    什么是 *args* 和 **kwargs*？在函数定义中，`*args` 允许函数接受任意数量的位置参数，而 `**kwargs` 允许任意数量的关键字参数。它们对于创建灵活的函数接口非常用。
+
+
+    Python 的最佳实践有哪些？
+
+    - 遵循 PEP 8 风格。
+
+    - 为变量使用意义的名字。
+
+    - 为函数和类使用 docstrings（文档字符串）。
+
+    - 避免魔数字；使用常量。
+
+    - 使用单元测试来确保代码运行正确。
+
+
+    解释 `assert` 的用法。`assert` 语句用于调试；它测试一个表达式，如果为假，则抛出 `AssertionError`。将它们用于健康检查，不要在生产环境中使用它们处理核心逻辑。
+
+
+    什么是 lambda？lambda 是用 `lambda` 关键字定义的匿名（命名）函数。它可以接受任意数量的参数，但只有一个表达式。Lambda 常用于临时逻辑，例如作为
+    `map()` 或 `filter()` 的参数。
+
+
+    什么是 `itertools`？这是一个提供高效循环工具的标准库。它包括如 `count()`、`cycle()`、`permutations()`、`combinations()`、`product()`
+    等函数。这些为无限序列或组合集创建迭代器，从而节省内存。
+
+
+    什么是 `functools` 并举例？`functools` 模块包含高阶函数和工具。示例包括：
+
+    - `functools.reduce()` 用于归约
+
+    - `functools.partial(func, *args)` 固定函数的部分参数并生成新的可调用对象
+
+    - `functools.lru_cache` 装饰器用于缓存函数
+
+    - `functools.wraps` 在编写装饰器时用于保留元数据。
+
+
+    切片在列表/字符串上如何工作？切片通常为 `[start:stop:step]`，其中 start 默认为 0，且负索引从末尾计数。示例：`list[-1]`
+    是最后一个元素，`list[:2]` 是前两个元素。`s[::-1]` 反转字符串。
+
+
+    如何合并字典？在 Python 3.9 中，你可以使用 `dict = {**dict1, **dict2}` 或使用 `dict.update()`。注意，如果存在重叠键，第二个字典的值将覆盖第一个。
+
+
+    `enumerate()` 的用途是什么？`enumerate()` 产生 `(index, value)` 元组。在循环中需要计数器时经常使用。
+
+
+    '
+  merge: 0
+- raw:
+  - "[PAGE 15]\n\n```\nfor idx, val in enumerate(some_list, start=1):\n    print(idx,\
+    \ val)\n```\n\nThe optional start parameter can set the the initial index (default\
+    \ 0).\n\nExplain the concept of property in classes. The built-in property() function\
+    \ or decorator @property allows you to define getter/setter behavior in a class\
+    \ attribute. It lets you access a method like an attribute.\nFor example:\n\n\
+    ```\nclass C:\n    @property\n    def x(self):\n        return self._x\n    @x.setter\n\
+    \    def x(self, value):\n        self._x = value\n```\n\nNow obj.x returns and\
+    \ setting obj.x = 5 calls the setter. This provides controlled attribute access\
+    \ without changing the public API.\n\nWhat is multi-threading? Does Python support\
+    \ it? Multi-threading means running threads (lightweight sub-processes) in a program.\
+    \ Python supports via the threading module. However, due to the GIL, CPU-bound\
+    \ threads don't run in parallel. Threads are useful for I/O-bound concurrency\
+    \ (e.g. waiting for network).\nExample:\n\n```\nimport threading\ndef task():\n\
+    \    print(\"Hello from thread\")\n    t = threading.Thread(target=task)\nt.start()\n\
+    t.join()\n```\n\nThis runs task in a separate thread.\n\nWhat is concurrency and\
+    \ parallelism in Python? Concurrency means handling multiple tasks at overlapping\
+    \ times (e.g. using async IO or threads), while parallelism means executing multiple\
+    \ tasks simultaneously on multiple CPU cores (typically via multiprocessing).\
+    \ In Python:\n\n+   - Concurrency can be achieved with asyncio or threads (for\
+    \ I/O-bound tasks).\n- Parallelism is achieved with multiprocessing or concurrent.futures.ProcessPoolExecutor,\
+    \ which run code on different CPUs.\n\nWhat are design patterns in Python (e.g.\
+    \ Singleton, Factory?) Python can implement common design patterns. For example,\
+    \ a Singleton (only one instance) can be done by a class with a class variable\
+    \ holding the instance, or by using a metaclass. A simple example uses module-level\
+    \ instance or overriding __new__. Patterns look different in Python due to its\
+    \ dynamic nature. Discussing specific patterns often depends on the job context."
+  - "[PAGE 16]\n\n# Java Code Geeks MINIBBOOKS PYTHON INTERVIEW QUESTIONS\n\n**What\
+    \ is a context manager? Give an example.** A context manager is an object that\
+    \ defines __enter__ and __exit__ methods to set up and tear down resources. The\
+    \ with statement uses context managers.\n\n```\nopen('file.txt', 'r') as f:\n\
+    \    data = f.read()\n```\n\nHere, open() returns a context manager whose __enter__\
+    \ and __exit__ ensures the file is closed. You can create your own by defining\
+    \ a class with __enter__ and __exit__, or by using the contextlib utilities.\n\
+    \n**How do you run asynchronous code?** Use async def to define coroutine functions,\
+    \ and await to call other async functions. You typically create an event loop:\n\
+    \n```\nimport asyncio\nasync def hello():\n    print(\"Hello\")\n    await asyncio.sleep(1)\n\
+    \    print(\"World\")\nasyncio.run(hello())\n```\n\nHere, asyncio.run() manages\
+    \ the event loop. In frameworks (like FastAPI or aiohttp), the loop is managed\
+    \ for you.\n\n**What are coroutines?** In Python's asyncio, a coroutine is a function\
+    \ defined with async def. Calling it returns a coroutine object. You use await\
+    \ inside coroutines to wait on other coroutines or asynchronous operations. Coroutines\
+    \ allow writing asynchronous code in a sequential style. They must be run in an\
+    \ event loop or awaited.\n\n**What is metaprogramming?** Metaprogramming is writing\
+    \ code that modifies code (classes, functions) at runtime. In Python, metaprogramming\
+    \ examples include decorators, introspection (getattr, setattr), dynamic class\
+    \ creation using type()) or metaclasses. It's an advanced technique to make flexible\
+    \ libraries (ORMs use this). For dynamically creating classes or adding methods\
+    \ at runtime is metaprogramming.\n\n**What is memory leak in Python and how do\
+    \ you prevent it?** Python's garbage collector handles memory. Memory leaks can\
+    \ occur if objects are kept unintentionally (e.g. circular references in objects\
+    \ with __del__, or caching data). To prevent leaks, remove references when done\
+    \ (e.g. del large structures or remove items from caches), and avoid unnecessary\
+    \ circular references. The gc module can help debug leaks. Using weak references\
+    \ (weakref) for caches can also prevent leaks.\n\n**How do you profile and optimize\
+    \ Python code?** Use the cProfile module to collect execution statistics. For\
+    \ example:\n\n```\nimport cProfile\ncProfile.run('my_function()')\n```\n\nThis\
+    \ shows time spent per function call. You can then optimize hot spots (e.g. replace\
+    \ slow Python loops"
+  - "[PAGE 17]\n\nwith comprehensions, built-in functions, or move critical code to\
+    \ extensions if needed. The timeit module can measure small code snippets. Also\
+    \ consider alternatives like PyPy or numpy for numeric loops.\n\n**What is a Python\
+    \ extension?** Python can be extended with modules written in C for performance\
+    \ or to use libraries. A C module is compiled and imported as a regular Python\
+    \ module. You use the Python API to create extension functions. Tools like Cffi\
+    \ ease this process by generating the C code. Extensions can greatly speed up\
+    \ compute-intensive tasks by moving them to native code.\n\n**What are generators\
+    \ and iterators?** We covered generators in Q56. An **iterator** is any object\
+    \ with `__iter__()` and `__next__()` methods. It represents a stream of data that\
+    \ can be iterated over. Lists and tuples are iterable but not iterators (they\
+    \ create an iterator via `iter()`). Generators are a convenient way to create\
+    \ iterators:\n\n```\nclass Countdown:\n    def __init__(self,n): self.n = n\n\
+    \    def __iter__(self): return self\n    def __next__(self):\n        if self.n\
+    \ <= 0: raise StopIteration\n        self.n -= 1\n        return self.n+1\n```\n\
+    \n**What is monkey patching?** Monkey patching means dynamically modifying or\
+    \ extending code at runtime, such as adding attributes or methods to classes or\
+    \ modules. For example, you can add `str.is_palindrome = lambda self: self ==\
+    \ self[::-1]`. While powerful for quick fixes or testing, monkey patching is risky\
+    \ (can break future updates) and should be used judiciously (often in testing\
+    \ to mock behavior).\n\n**How are exceptions propagated?** If an exception is\
+    \ not caught in a function, it propagates (bubbles up) to the caller. If still\
+    \ unhandled, it goes up the stack until it reaches the top, where it terminates\
+    \ the program and prints a traceback. You can catch exceptions at any level with\
+    \ `try/except`, and use `raise` to re-raise `NewException` from e chain. Properly\
+    \ catching exceptions prevents propagation.\n\n**What is Virtualenv vs venv?**\
+    \ `venv` is the standard module (since Python 3.3) for creating virtual environments.\
+    \ `virtualenv` is an older third-party tool that creates isolated environments.\
+    \ Both create folders with Python executables and site-packages. Today, `python\
+    \ -m venv` is the common approach.\n\n**How does Python's contextlib manage resources?**\
+    \ Provide an example using `contextlib.contextmanager`. The contextlib module\
+    \ provides utilities for working with context managers—objects used with `with`\
+    \ blocks to manage resources safely. The `@contextmanager` decorator allows writing\
+    \ a generator-based context manager without creating a full class. For example:\n\
+    \n```\nfrom contextlib import contextmanager\n@contextmanager\ndef open_file(path,\
+    \ mode):\n    f = open(path, mode)\ntry:\n```"
+  - "[PAGE 18]\n\n# yield f\n\n```\nfinally:\n    f.close()\n```\n\nUsing this, with\
+    \ open_file(\"log.txt\", \"w\") as f: automatically handles file closing, even\
+    \ if an error occurs. This approach simplifies resource management for custom\
+    \ logic, making your code cleaner and more robust.\n\nWhat is containerization\
+    \ and how do you Dockerize a Python application? Containerization means packaging\
+    \ an application and all its dependencies into a portable image. To Dockerize\
+    \ a Python app, you might typically write a Dockerfile starting from an official\
+    \ Python base image. For example, you might begin FROM python:3.11-slim, which\
+    \ provides a lightweight Python runtime. In the Dockerfile you set environment\
+    \ variables, create a working directory, and copy your code into it. You then\
+    \ install dependencies with pip (e.g. pip install -r requirements.txt), and finally\
+    \ specify a command to run the app (using CMD or ENTRYPOINT). This results in\
+    \ a container image that encapsulates your Python code, and all libraries, ensuring\
+    \ the app runs any way you manner.\n\n# ADVANCED/MASTER LEVEL QUESTIONS\n\nWhat\
+    \ is the Global Interpreter Lock (GIL) and how does it affect concurrency? The\
+    \ GIL allows only one thread to execute bytecode at a time. This means in a multi-threaded\
+    \ Python program, threads run in parallel on multiple cores - only executes one\
+    \ at any moment. The GIL simplifies memory management (since only one thread accesses\
+    \ Python objects) and is a bottleneck for CPU-bound multi-threading. The impact\
+    \ is minimal for single-threaded or I/O-bound code, but limits Python-multi-threaded.\n\
+    \nHow can you achieve parallelism in Python? Use the multiprocessing module or\
+    \ concurrent.futures.ProcessExecutor to spawn processes (each with its own interpreter\
+    \ and memory) allowing true parallel execution. This bypasses the GIL at the cost\
+    \ of higher overhead. Alternatively, use implementations without a GIL (IronPython)\
+    \ or use C extensions/Numba for heavy computation.\n\nExplain Python's memory\
+    \ model and garbage collection. Python uses reference counting for memory: each\
+    \ object has a reference count that increases/decreases as variables refer to\
+    \ it. When the count hits zero, the object is deleted immediately. For cyclic\
+    \ references (where reference count doesn't drop to zero), Python also has a garbage\
+    \ collector (gc module) that detects and frees cycles. Developers can invoke gc.collect()\
+    \ if needed. This helps manage memory, e.g. removing circular references or clearing\
+    \ large data.\n\nWhat are design patterns (e.g., Singleton, Factory)? Design patterns\
+    \ are typical solutions to common problems. For example, a Singleton ensures only\
+    \ one instance of a class: you can do this with a module (modules are singleton\
+    \ by nature) or by controlling instance creation in __new__. A Factory pattern\
+    \ provides an interface for creating objects (a function method that returns instance\
+    \ classes based on parameters). Python's dynamic features (first-class functions,\
+    \ classes) often offer simpler implementations than in static languages.\n\nWhat\
+    \ are coroutines and async/await in depth? Coroutines (in asyncio) are more than\
+    \ generators: defined with async def, you must await to yield. When you await\
+    \ an async function, it suspends the awaited task is done, allowing other coroutines\
+    \ to run in the runtime. The event loop schedules coroutines and I/O events. Unlike\
+    \ callbacks, async/await leads to more readable sequential code. Internally, coroutines\
+    \ throw StopIteration with the return value when finished. You can gather multiple"
+  md: "\n```python\nfor idx, val in enumerate(some_list, start=1):\n    print(idx,\
+    \ val)\n```\n\nThe optional start parameter can set the initial index (default\
+    \ 0).\n\nExplain the concept of property in classes. The built-in property() function\
+    \ or decorator @property allows you to define getter/setter behavior in a class\
+    \ attribute. It lets you access a method like an attribute.\nFor example:\n\n\
+    ```python\nclass C:\n    @property\n    def x(self):\n        return self._x\n\
+    \    @x.setter\n    def x(self, value):\n        self._x = value\n```\n\nNow obj.x\
+    \ returns and setting obj.x = 5 calls the setter. This provides controlled attribute\
+    \ access without changing the public API.\n\nWhat is multi-threading? Does Python\
+    \ support it? Multi-threading means running threads (lightweight sub-processes)\
+    \ in a program. Python supports via the threading module. However, due to the\
+    \ GIL, CPU-bound threads don't run in parallel. Threads are useful for I/O-bound\
+    \ concurrency (e.g. waiting for network).\nExample:\n\n```python\nimport threading\n\
+    def task():\n    print(\"Hello from thread\")\n    t = threading.Thread(target=task)\n\
+    t.start()\nt.join()\n```\n\nThis runs task in a separate thread.\n\nWhat is concurrency\
+    \ and parallelism in Python? Concurrency means handling multiple tasks at overlapping\
+    \ times (e.g. using async IO or threads), while parallelism means executing multiple\
+    \ tasks simultaneously on multiple CPU cores (typically via multiprocessing).\
+    \ In Python:\n\n- Concurrency can be achieved with asyncio or threads (for I/O-bound\
+    \ tasks).\n- Parallelism is achieved with multiprocessing or concurrent.futures.ProcessPoolExecutor,\
+    \ which run code on different CPUs.\n\nWhat are design patterns in Python (e.g.\
+    \ Singleton, Factory?) Python can implement common design patterns. For example,\
+    \ a Singleton (only one instance) can be done by a class with a class variable\
+    \ holding the instance, or by using a metaclass. A simple example uses module-level\
+    \ instance or overriding __new__. Patterns look different in Python due to its\
+    \ dynamic nature. Discussing specific patterns often depends on the job context.\n\
+    \n# Java Code Geeks MINIBBOOKS PYTHON INTERVIEW QUESTIONS\n\n**What is a context\
+    \ manager? Give an example.** A context manager is an object that defines __enter__\
+    \ and __exit__ methods to set up and tear down resources. The with statement uses\
+    \ context managers.\n\n```python\nopen('file.txt', 'r') as f:\n    data = f.read()\n\
+    ```\n\nHere, open() returns a context manager whose __enter__ and __exit__ ensures\
+    \ the file is closed. You can create your own by defining a class with __enter__\
+    \ and __exit__, or by using the contextlib utilities.\n\n**How do you run asynchronous\
+    \ code?** Use async def to define coroutine functions, and await to call other\
+    \ async functions. You typically create an event loop:\n\n```python\nimport asyncio\n\
+    async def hello():\n    print(\"Hello\")\n    await asyncio.sleep(1)\n    print(\"\
+    World\")\nasyncio.run(hello())\n```\n\nHere, asyncio.run() manages the event loop.\
+    \ In frameworks (like FastAPI or aiohttp), the loop is managed for you.\n\n**What\
+    \ are coroutines?** In Python's asyncio, a coroutine is a function defined with\
+    \ async def. Calling it returns a coroutine object. You use await inside coroutines\
+    \ to wait on other coroutines or asynchronous operations. Coroutines allow writing\
+    \ asynchronous code in a sequential style. They must be run in an event loop or\
+    \ awaited.\n\n**What is metaprogramming?** Metaprogramming is writing code that\
+    \ modifies code (classes, functions) at runtime. In Python, metaprogramming examples\
+    \ include decorators, introspection (getattr, setattr), dynamic class creation\
+    \ using type()) or metaclasses. It's an advanced technique to make flexible libraries\
+    \ (ORMs use this). For dynamically creating classes or adding methods at runtime\
+    \ is metaprogramming.\n\n**What is memory leak in Python and how do you prevent\
+    \ it?** Python's garbage collector handles memory. Memory leaks can occur if objects\
+    \ are kept unintentionally (e.g. circular references in objects with __del__,\
+    \ or caching data). To prevent leaks, remove references when done (e.g. del large\
+    \ structures or remove items from caches), and avoid unnecessary circular references.\
+    \ The gc module can help debug leaks. Using weak references (weakref) for caches\
+    \ can also prevent leaks.\n\n**How do you profile and optimize Python code?**\
+    \ Use the cProfile module to collect execution statistics. For example:\n\n```python\n\
+    import cProfile\ncProfile.run('my_function()')\n```\n\nThis shows time spent per\
+    \ function call. You can then optimize hot spots (e.g. replace slow Python loops\
+    \ with comprehensions, built-in functions, or move critical code to extensions\
+    \ if needed). The timeit module can measure small code snippets. Also consider\
+    \ alternatives like PyPy or numpy for numeric loops.\n\n**What is a Python extension?**\
+    \ Python can be extended with modules written in C for performance or to use libraries.\
+    \ A C module is compiled and imported as a regular Python module. You use the\
+    \ Python API to create extension functions. Tools like Cffi ease this process\
+    \ by generating the C code. Extensions can greatly speed up compute-intensive\
+    \ tasks by moving them to native code.\n\n**What are generators and iterators?**\
+    \ We covered generators in Q56. An **iterator** is any object with `__iter__()`\
+    \ and `__next__()` methods. It represents a stream of data that can be iterated\
+    \ over. Lists and tuples are iterable but not iterators (they create an iterator\
+    \ via `iter()`). Generators are a convenient way to create iterators:\n\n```python\n\
+    class Countdown:\n    def __init__(self,n): self.n = n\n    def __iter__(self):\
+    \ return self\n    def __next__(self):\n        if self.n <= 0: raise StopIteration\n\
+    \        self.n -= 1\n        return self.n+1\n```\n\n**What is monkey patching?**\
+    \ Monkey patching means dynamically modifying or extending code at runtime, such\
+    \ as adding attributes or methods to classes or modules. For example, you can\
+    \ add `str.is_palindrome = lambda self: self == self[::-1]`. While powerful for\
+    \ quick fixes or testing, monkey patching is risky (can break future updates)\
+    \ and should be used judiciously (often in testing to mock behavior).\n\n**How\
+    \ are exceptions propagated?** If an exception is not caught in a function, it\
+    \ propagates (bubbles up) to the caller. If still unhandled, it goes up the stack\
+    \ until it reaches the top, where it terminates the program and prints a traceback.\
+    \ You can catch exceptions at any level with `try/except`, and use `raise` to\
+    \ re-raise a NewException from the chain. Properly catching exceptions prevents\
+    \ propagation.\n\n**What is Virtualenv vs venv?** `venv` is the standard module\
+    \ (since Python 3.3). `virtualenv` is an older tool. Both create isolated environments.\n\
+    \n# ADVANCED/MASTER LEVEL QUESTIONS\n\nWhat is the Global Interpreter Lock (GIL)\
+    \ and how does it affect concurrency? The GIL allows only one thread to execute\
+    \ bytecode at a time. This means in multi-threaded Python, only one thread executes\
+    \ at any moment. The impact is minimal for I/O-bound code but limits parallelism.\n\
+    \nHow can you achieve parallelism in Python? Use the multiprocessing module or\
+    \ concurrent.futures.ProcessPoolExecutor to spawn processes (each with its own\
+    \ interpreter and memory) allowing true parallel execution. This bypasses the\
+    \ GIL at the cost of higher overhead. Alternatively, use implementations without\
+    \ a GIL or C extensions.\n\nExplain Python's memory model and garbage collection.\
+    \ Python uses reference counting for memory: each object has a reference count\
+    \ that increases/decreases as variables refer to it. When the count hits zero,\
+    \ the object is deleted. For cyclic references (where reference count doesn't\
+    \ drop to zero), Python also has a garbage collector (gc module) that detects\
+    \ and frees cycles. Developers can invoke gc.collect() if needed. This helps manage\
+    \ memory, e.g. removing circular references or clearing large data.\n\nWhat are\
+    \ design patterns (e.g. Singleton, Factory)? Design patterns are typical solutions\
+    \ to common problems. For example, a Singleton ensures only one instance of a\
+    \ class: you can do this with a module (modules are singleton by nature) or by\
+    \ controlling instance creation in __new__. A Factory pattern provides an interface\
+    \ for creating objects (a function method that returns instance classes based\
+    \ on parameters). Python's dynamic features often offer simpler implementations.\n\
+    \nWhat are coroutines and async/await in depth? Coroutines (in asyncio) are more\
+    \ than generators: defined with async def, you must await to yield. When you await\
+    \ an async function, it suspends the awaited task is done, allowing other coroutines\
+    \ to run in the runtime. The event loop schedules coroutines and I/O events. Unlike\
+    \ callbacks, async/await leads to more readable sequential code. Internally, coroutines\
+    \ throw StopIteration with the return value when finished.\n"
+  mdcn: "\n\n```python\nfor idx, val in enumerate(some_list, start=1):\n    print(idx,\
+    \ val)\n```\n\n可选的 `start` 参数可以设置初始索引（默认值为 0）。\n\n解释类中属性（property）的概念。内置的 `property()`\
+    \ 函数或 `@property`装饰器允许你在类属性中定义 getter/setter 行为。它让你像访问属性一样访问方法。\n例如：\n\n```python\n\
+    class C:\n    @property\n    def x(self):\n        return self._x\n    @x.setter\n\
+    \    def x(self, value):\n        self._x = value\n```\n\n现在 `obj.x` 返回值，设置 `obj.x\
+    \ = 5` 会调用 setter。这在不改变公共 API 的情况下提供了控制的属性访问。\n\n什么是多线程？Python 支持它吗？多线程意味着在程序中运行线程（轻量级子进程）。Python\
+    \ 通过 `threading` 模块支持。然而，由于 GIL（全局解释器锁）的存在，CPU 密集型线程不会并行运行。线程对于 I/O 密集型并发（例如等待网络）非常有用。\n\
+    示例：\n\n```python\nimport threading\ndef task():\n    print(\"Hello from thread\"\
+    )\n    t = threading.Thread(target=task)\nt.start()\nt.join()\n```\n\n这在一个独立的线程中运行\
+    \ `task`。\n\nPython 中的并发（Concurrency）和并行（Parallelism）是什么？并发意味着在重叠的时间处理多个任务（例如使用异步\
+    \ IO 或线程），而并行意味着在多个 CPU 核心上同时执行多个任务（通常通过多进程实现）。在 Python 中：\n\n- 并发可以通过 `asyncio`\
+    \ 或线程实现（用于 I/O 密集型任务）。\n- 并行可以通过 `multiprocessing` 或 `concurrent.futures.ProcessPoolExecutor`\
+    \ 实现，它们在不同的 CPU 上运行代码。\n\nPython 中的设计模式有哪些（例如单例模式、工厂模式）？Python 可以实现常见的设计模式。例如，单例（只有一个实例）可以通过带有持有实例的类变量类来实现，或者使用元类（metaclass）。一个简单的示例使用模块级实例或重写\
+    \ `__new__`。由于 Python 的动态特性，模式在 Python 中看起来有所不同。讨论特定模式通常取决于工作上下文。\n\n# Java Code\
+    \ Geeks MINIBBOOKS PYTHON 面试题\n\n**什么是上下文管理器？请举例。** 上下管理器是一个定义了 `__enter__` 和\
+    \ `__exit__` 方法以设置和清理资源的对象。`with` 语句使用了上下文管理器。\n\n```python\nopen('file.txt',\
+    \ 'r') as f:\n    data = f.read()\n```\n\n在这里，`open()` 返回一个管理器，其 `__enter__` 和\
+    \ `__exit__` 确保文件被关闭。你可以通过定义带有 `__enter__` 和 `__exit__` 的类或使用 `contextlib` 工具来创建自己的管理器。\n\
+    \n**如何运行异步代码？** 使用 `async def` 定义协程函数，使用 `await` 调用其他异步函数。你通常需要创建一个事件循环：\n\n```python\n\
+    import asyncio\nasync def hello():\n    print(\"Hello\")\n    await asyncio.sleep(1)\n\
+    \    print(\"World\")\nasyncio.run(hello())\n```\n\n在这里，`asyncio.run()` 管理事件循环。在框架（如\
+    \ FastAPI 或 aiohttp）中，循环由框架为你管理。\n\n**什么是协程？** 在 Python 的 `asyncio` 中，协程是一个用 `async\
+    \ def` 定义的函数。调用它会返回一个协程对象。你在协程内部使用 `await` 来等待其他协程或异步操作。协程允许以顺序的风格编写异步代码。它们必须在事件循环中运行或被\
+    \ `await`。\n\n**什么是元编程？** 元编程是编写在运行时修改代码（类、函数）的代码。在 Python 中，元编程的示例包括装饰器、内省（`getattr`,\
+    \ `setattr`）、使用 `type()` 动态创建类或使用元类。这是一种用于构建灵活库的高级技术（ORM 就使用了此技术）。在运行时动态创建类或添加方法属于元编程。\n\
+    \n**Python 中的内存泄漏是什么？如何防止它？** Python 的垃圾回收器处理内存。如果对象被无意中保留，就可能会发生内存泄漏（例如带有 `__del__`\
+    \ 的对象的循环引用，或缓存数据）。为了防止泄漏，请在完成时移除引用（例如 `del` 大型结构或从缓存中删除项），并避免不必要的循环引用。`gc` 模块可以帮助调试泄漏。在缓存中使用弱引用（`weakref`）也可以防止泄漏。\n\
+    \n**如何分析性能并优化 Python 代码？** 使用 `cProfile` 模块收集执行统计信息。例如：\n\n```python\nimport cProfile\n\
+    cProfile.run('my_function()')\n```\n\n这显示了每个函数调用消耗的时间。然后你可以优化热点（例如，将缓慢的 Python\
+    \ 循环替换为列表推导式、内置函数，或者根据需要将关键代码移动到扩展中）。`timeit` 模块可以测量短代码片段。还可以考虑使用 PyPy 或 numpy\
+    \ 处理数值循环。\n\n**什么是 Python 扩展？** Python 可以用 C 编写的模块进行扩展以提高性能或使用库。C 模块被编译并作为普通的\
+    \ Python 模块导入。你使用 Python API 创建扩展函数。诸如 `Cffi` 等工具可以简化这一过程。扩展通过将计算密集型任务移动到原生代码中可以大幅提高速度。\n\
+    \n**什么是生成器和迭代器？** 我们在 Q56 中涵盖了生成器。**迭代器**（iterator）是任何具有 `__iter__()` 和 `__next__()`\
+    \ 方法的对象。它代表一个可以被迭代的数据流。列表和元组是可迭代的，但不是迭代器（它们通过 `iter()` 创建迭代器）。生成器是创建迭代器的方便方法：\n\
+    \n```python\nclass Countdown:\n    def __init__(self,n): self.n = n\n    def __iter__(self):\
+    \ return self\n    def __next__(self):\n        if self.n <= 0: raise StopIteration\n\
+    \        self.n -= 1\n        return self.n+1\n```\n\n**什么是猴子补丁（monkey patching）？**\
+    \ 猴子补丁意味着运行时动态修改或扩展代码，例如向类或模块添加属性或方法。例如，你可以添加 `str.is_palindrome = lambda self:\
+    \ self == self[::-1]`。虽然对于快速修复或测试非常强大，但猴子补丁是有风险的（可能会破坏未来的更新），应该谨慎使用（通常在测试中用于模拟行为）。\n\
+    \n**异常是如何传播的？** 如果异常在函数中没有被捕获，它将传播（向上抛）到调用者。如果仍然未处理，它将沿着堆栈向上移动直到到达顶部，在顶部终止程序并打印回溯跟踪（traceback）。你可以在任何层使用\
+    \ `try/except` 捕获异常，并使用 `raise` 从链中重新抛出新异常。正确捕获异常可以防止传播。\n\n**Virtualenv 和 venv\
+    \ 的区别？** `venv` 是标准模块（从 Python 3.3 开始）。`virtualenv` 是一个较旧的工具。两者都创建隔离的环境。\n\n#\
+    \ 高级/大师级问题\n\n什么是全局解释器锁（GIL）？它如何影响并发？GIL 允许一次只有一个只有一个线程执行字节码。这意味着在多线程 Python 中，任何时刻只有一个线程在执行。对于\
+    \ I/O 密集型代码，影响很小，但它限制了并行性。\n\n如何在 Python 中实现并行？使用 `multiprocessing` 模块或 `concurrent.futures.ProcessPoolExecutor`\
+    \ 来产生进程（每个进程都有自己的解释器和内存），允许真正的并行执行。这以更高开销为代价绕过了 GIL。或者，使用不带 GIL 的实现版本或 C 扩展。\n\
+    \n解释 Python 的内存模型和垃圾收集。Python 使用引用计数管理内存：每个对象都有一个引用计数，随着变量引用它，计数会增加/减少。当计数变为零时，对象会被删除。对于循环引用（引用计数不降为零的情况），Python\
+    \ 还有一个垃圾回收器（`gc` 模块）来检测并释放循环。开发者可以在需要时调用 `gc.collect()`。这有助于管理内存，例如移除循环引用或清除大型数据。\n\
+    \n什么是设计模式（例如单例模式、工厂模式）？设计模式是常见问题的典型解决方案。例如，单例确保类只有一个实例：你可以通过模块来实现（模块本质上是单例的），或者通过在\
+    \ `__new__` 中控制实例创建。工厂模式为创建对象提供接口（一个根据参数返回实例类的函数方法）。Python 的动态特性通常提供了更简单的实现。\n\
+    \n深入理解协程和 async/await。协程（在 `asyncio` 中）不仅仅是生成器：它们用 `async def` 定义，你必须 `await`\
+    \ 来让出控制。当你 `await` 一个异步函数时，它会挂起直到等待的任务完成，允许其他协程在运行时运行。事件循环调度协程和 I/O 事件。与回调相比，async/await\
+    \ 会产生更具可读性的顺序代码。在内部，协程在完成后会抛出带有返回值的 `StopIteration`。\n\n"
+  merge: 1
+- raw:
+  - '[PAGE 19]
+
+
+    # Java Code Geeks MINIBOOK 18 PYTHON INTERVIEW QUESTIONS
+
+
+    coroutines with asyncio.gather().
+
+
+    How do you use the asyncio event loop? The asyncio event loop drives execution
+    of coroutines and callbacks. High-level, use asyncio.run(main()) to start your
+    async code. With async functions, use await. For low-level control, you can get
+    the loop with loop = asyncio.get_event_loop(), schedule tasks with loop.create_task(),
+    and run until loop.run_until_complete(). Callbacks can be registered with loop.call_soon().
+    Understanding the loop is key for integrating any async code with other types.
+
+
+    What are descriptors? Descriptors define how attribute access works. An object
+    implement __get__, __set__, or __delete__—it''s a descriptor. For example, methods
+    are descriptors (with __get__). The @property decorator uses descriptors under
+    the hood. Descriptors allow customization of attribute access (logging, validation).
+    There are a more advanced way to manage attributes through getattr().
+
+
+    Explain metaclasses and give an example. A metaclass is the "type" of a class:
+    a class that creates subclasses. By default, Python uses type as the metaclass.
+    You can create a custom metaclass by subclassing type and overriding __new__ or
+    __init__ to customize class creation. For example, a metaclass could automatically
+    register all classes that use it, or inject new methods into a class to create
+    consistency. In essence, a metaclass functions as templates for classes: it can
+    enforce interface contracts or automatically adding attributes.
+
+
+    What is type hinting and how is it used in Python? 3.5+ supports optional type
+    hints (PEP 484). You can annotate function signatures and variables for declaration
+    and static analysis: def f(x: int, y: str) -> bool: hints that x should be an
+    int, y str, and the return type is bool. The typing module provides complex types
+    like list[int], Optional[str], etc. Python does not enforce types at runtime,
+    but tools like mypy or IDEs detect inconsistencies. Type hints help improve code
+    clarity and catch errors.
+
+
+    What are some memory profiling techniques in Python? For large data, data generators
+    over lists, use __slots__ to reduce instance memory. Use built-in functions (they''re
+    in C). Release large objects when done (e.g., del or reassign). Avoid circular
+    references if necessary. In numeric contexts, use NumPy instead of lists to save
+    memory. When working with strings, use join() rather than concatenation in lists.
+    Profile memory usage with tools like memory_profiler if needed.
+
+
+    How do you perform performance profiling in Python code? Use the cProfile module
+    to see where time is spent. Example:
+
+
+    ```
+
+    import cProfile\Profile.run(''my_func()'',''profile.stats'')
+
+    p = pstats.Stats(''profile.stats'')
+
+    p.sort_stats(''cumtime'').print_stats(10)
+
+    ```
+
+
+    This lists the most time-consuming functions. Also time is useful for small snippets.
+    For memory profiling, use tracalloc (Built-in) or external tools like memory_profiler.
+    After identifying bottlenecks, optimize code (using more efficient algorithms
+    or data structures, caching, or writing critical parts in Cython).
+
+
+    How do you manage concurrency issues? Use synchronization primitives from the
+    threading module: Lock, R, Semaphore, Event. For example, a lock ensures only
+    one thread accesses a shared resource at a time. Alternatively, use higher-level
+    structures like queue.Queue for thread-safe queues, or use multiprocessing which
+    avoids shared state. In async code, avoid shared state or use asyncio.lock. Prefer
+    immutable data patterns or patterns that minimize mutability.'
+  - "[PAGE 20]\n\nWhat is gather() and wait()? asyncio.gather(*coros) runs coroutines\
+    \ concurrently and returns a future that yields all results (in order). It raises\
+    \ exceptions if any coroutine fails. asyncio.wait returns two sets (done, pending)\
+    \ and can be used for more complex concurrency control. There are ways to manage\
+    \ multiple coroutines at once.\n\nWhat are properties of Python's I/O (file/network)\
+    \ operations? Python's I/O (file, socket) is generally blocking by default. Using\
+    \ non-blocking or asynchronous I/O by using threads, asyncio, or libraries like\
+    \ asynciofiles. The file API is buffered, so read() may block until data is available\
+    \ or EOF. Network libraries (socket) can be set to non-blocking and used with\
+    \ select/asyncio. Understanding blocking behavior is important for performance\
+    \ and concurrency.\n\nHow do you deal with large files or data streams? Process\
+    \ them incrementally. For example, large files line by line (for line in file:instead\
+    \ of read()) all at once. Use generators to stream data. For CSV or JSON, iterative\
+    \ parsing with pandas.read_csv(chunksize---) or ijson for streaming JSON. This\
+    \ avoids loading entries into memory.\n\nWhat is Cython? Cython is a tool to compile\
+    \ Python-like code (with static type annotations) for C. Python can include type\
+    \ declarations, and Cython generates C which is compiled into a Python extension\
+    \ module. This can greatly speed up loops and math by moving them into compiled\
+    \ code. Cython is often used for optimizing hotspots in Python applications.\n\
+    \nWhat is a wheel (.whl) and a wheel file? A wheel is a built-package format for\
+    \ Python (PEP 427). Its ZIP archive with a standardized name (including Python\
+    \ and platform tags) that can be installed with pip. Creating wheels allows distributing\
+    \ compiled extensions for faster install. When you pip install, pip prefers wheels\
+    \ (because building from source can take time.\n\nWhat are advanced features in\
+    \ Python 3.x? Examples:\n\n+   - async/await (as above) for asynchronous programming.\n\
+    - Type hinting (PEP 484) for optional static typing (we covered).\n- f-strings\
+    \ for formatted string literals (in 3.6) e.g. f\"Hello {name}\".\n- Data classes\
+    \ (@dataclass in 3.7) for boilerplate-free classes.\n- Pathlib for object-oriented\
+    \ filesystem paths.\n- Enum support (enum module) for enumerations.\n- Keyword-only\
+    \ arguments (functions can enforce keyword args using * in signature).\n- Assignment\
+    \ expressions (the \"walrus operator\" :=) in 3.8).\n\nWhat are dataclasses? The\
+    \ dataclass module (Python 3.7+) provides a decorator to automatically generate\
+    \ special methods in classes (like __init__, __repr__, and others) for classes\
+    \ that are mostly data containers.\n\n```\nfrom dataclasses import dataclass\n\
+    @dataclass\nclass Point:\n  x: float\n  y: float\n```\n\nThis automatically creates\
+    \ an __init__, so you can do Point(1,2), and a __repr__ like Point(x=1, y=2).\
+    \ It saves boilerplate and provides features like default values and comparison."
+  - "[PAGE 21]\n\nWhat is introspection and how is it useful? Introspection is examining\
+    \ objects at runtime (e.g. using type(), hasattr(), inspect module). It allows\
+    \ dynamic code behavior. For example a library might inspect a class's methods\
+    \ to dynamically bind, or auto-generate documentation. Python's ability to inspect\
+    \ its objects enables many frameworks (ORMs, serializers, test frameworks) to\
+    \ work without explicit configuration.\n\nWhat is picking/unpicking and its security\
+    \ implications? (We touched on serialization.) Using pickle, you serialize objects\
+    \ to bytes and pickle.loads() to recreate them. However, unpicking data from untrusted\
+    \ sources can execute arbitrary code, making it a security risk. Only unpickle\
+    \ data you trust. For safer exchange, prefer JSON or other formats where the structure\
+    \ is explicit.\n\nWhat are some ways to handle missing dependencies at runtime?\
+    \ You can use exception handling around imports:\n\n```\ntry:\n    import optional_lib\n\
+    except ImportError:\n    optional_lib = None\n```\n\nOr specify dependencies in\
+    \ setup.py. You can also check sys.version_info for version-specific code. For\
+    \ optional features, gracefully disable functionality if a module is missing.\n\
+    \nWhat is the difference between a module's global variable and a class's static\
+    \ variable? A module is a variable at module level, shared across all instances\
+    \ of a module. A class's static variable (attribute) is shared by all instances\
+    \ of class. Both act as shared state: for example, MyClass.count = 0 is shared\
+    \ by every MyClass instance. The difference is organizational (module vs class\
+    \ scope), but behavior is similar: modifying it affects references.\n\nDescribe\
+    \ Python's execution model for functions. When you call a function, Python pushes\
+    \ a frame onto the stack, with its own namespace. The function arguments are evaluated\
+    \ before the call, and if they are mutable, changes can affect the caller's object.\
+    \ After execution, the frame is popped. This model supports recursion natively.\
+    \ Tail-call optimization is not performed in CPython (so deep recursion can lead\
+    \ to RecursionError).\n\nExplain asynchronous generators and comprehensions. (Advanced)\
+    \ Python 3.6 introduced asynchronous generators: async def agent(): yield ...\
+    \ You can use async for over them. There are also asynchronous comprehensions:\
+    \ [x async for x in iter]. These allow similar patterns in async code. example:\n\
+    \n```\nasync def async_range(n):\n    for i in range(n):\n        yield i\nasync\
+    \ def main():\n    async for x in async_range(5):\n        print(x)\n```\n\nThis\
+    \ is niche but useful in async-heavy code.\nWhat is multi-processing and what\
+    \ are the new features (e.g. spawn/fork)? The multiprocessing module lets you\
+    \ use processes. On Unix, the default method is \"fork\" (child process is a copy).\
+    \ On Windows (and optionally on Unix), start with \"spawn\" (start fresh Python\
+    \ interpreter) or \"forkserver\". You"
+  md: "\n# Java Code Geeks MINIBOOK 18 PYTHON INTERVIEW QUESTIONS\n\ncoroutines with\
+    \ asyncio.gather().\n\nHow do you use the asyncio event loop? The asyncio event\
+    \ loop drives execution of coroutines and callbacks. High-level, use asyncio.run(main())\
+    \ to start your async code. With async functions, use await. For low-level control,\
+    \ you can get the loop with loop = asyncio.get_event_loop(), schedule tasks with\
+    \ loop.create_task(), and run until loop.run_until_complete(). Callbacks can be\
+    \ registered with loop.call_soon(). Understanding the loop is key for integrating\
+    \ any async code with other types.\n\nWhat are descriptors? Descriptors define\
+    \ how attribute access works. An object implement __get__, __set__, or __delete__—it's\
+    \ a descriptor. For example, methods are descriptors (with __get__). The @property\
+    \ decorator uses descriptors under the hood. Descriptors allow customization of\
+    \ attribute access (logging, validation). There are a more advanced way to manage\
+    \ attributes through getattr().\n\nExplain metaclasses and give an example. A\
+    \ metaclass is the \"type\" of a class: a class that creates subclasses. By default,\
+    \ Python uses type as the metaclass. You can create a custom metaclass by subclassing\
+    \ type and overriding __new__ or __init__ to customize class creation. For example,\
+    \ a metaclass could automatically register all classes that use it, or inject\
+    \ new methods into a class to create consistency. In essence, a metaclass functions\
+    \ as templates for classes: it can enforce interface contracts or automatically\
+    \ adding attributes.\n\nWhat is type hinting and how is it used in Python? 3.5+\
+    \ supports optional type hints (PEP 484). You can annotate function signatures\
+    \ and variables for declaration and static analysis: def f(x: int, y: str) ->\
+    \ bool: hints that x should be an int, y str, and the return type is bool. The\
+    \ typing module provides complex types like list[int], Optional[str], etc. Python\
+    \ does not enforce types at runtime, but tools like mypy or IDEs detect inconsistencies.\
+    \ Type hints help improve code clarity and catch errors.\n\nWhat are some memory\
+    \ profiling techniques in Python? For large data, data generators over lists,\
+    \ use __slots__ to reduce instance memory. Use built-in functions (they're in\
+    \ C). Release large objects when done (e.g., del or reassign). Avoid circular\
+    \ references if necessary. In numeric contexts, use NumPy instead of lists to\
+    \ save memory. When working with strings, use join() rather than concatenation\
+    \ in lists. Profile memory usage with tools like memory_profiler if needed.\n\n\
+    How do you perform performance profiling in Python code? Use the cProfile module\
+    \ to see where time is spent. Example:\n\n```python\nimport cProfile, pstats\n\
+    cProfile.run('my_func()','profile.stats')\np = pstats.Stats('profile.stats')\n\
+    p.sort_stats('cumtime').print_stats(10)\n```\n\nThis lists the most time-consuming\
+    \ functions. Also time is useful for small snippets. For memory profiling, use\
+    \ tracalloc (Built-in) or external tools like memory_profiler. After identifying\
+    \ bottlenecks, optimize code (using more efficient algorithms or data structures,\
+    \ caching, or writing critical parts in Cython).\n\nHow do you manage concurrency\
+    \ issues? Use synchronization primitives from the threading module: Lock, R, Semaphore,\
+    \ Event. For example, a lock ensures only one thread accesses a shared resource\
+    \ at a time. Alternatively, use higher-level structures like queue.Queue for thread-safe\
+    \ queues, or use multiprocessing which avoids shared state. In async code, avoid\
+    \ shared state or use asyncio.lock. Prefer immutable data patterns or patterns\
+    \ that minimize mutability.\n\nWhat is gather() and wait()? asyncio.gather(*coros)\
+    \ runs coroutines concurrently and returns a future that yields all results (in\
+    \ order). It raises exceptions if any coroutine fails. asyncio.wait returns two\
+    \ sets (done, pending) and can be used for more complex concurrency control. There\
+    \ are ways to manage multiple coroutines at once.\n\nWhat are properties of Python's\
+    \ I/O (file/network) operations? Python's I/O (file, socket) is generally blocking\
+    \ by default. Using non-blocking or asynchronous I/O by using threads, asyncio,\
+    \ or libraries like asynciofiles. The file API is buffered, so read() may block\
+    \ until data is available or EOF. Network libraries (socket) can be set to non-blocking\
+    \ and used with select/asyncio. Understanding blocking behavior is important for\
+    \ performance and concurrency.\n\nHow do you deal with large files or data streams?\
+    \ Process them incrementally. For example, large files line by line (for line\
+    \ in file: instead of read()) all at once. Use generators to stream data. For\
+    \ CSV or JSON, iterative parsing with pandas.read_csv(chunksize------ or ijson\
+    \ for streaming JSON. This avoids loading entries into memory.\n\nWhat is Cython?\
+    \ Cython is a tool to compile Python-like code (with static type annotations)\
+    \ for C. Python can include type declarations, and Cython generates C which is\
+    \ compiled into a Python extension module. This can greatly speed up loops and\
+    \ math by moving them into compiled code. Cython is often used for optimizing\
+    \ hotspots in Python applications.\n\nWhat is a wheel (.whl) and a wheel file?\
+    \ A wheel is a built-package format for Python (PEP 427). Its ZIP archive with\
+    \ a standardized name (including Python and platform tags) that can be installed\
+    \ with pip. Creating wheels allows distributing compiled extensions for faster\
+    \ install. When you pip install, pip prefers wheels (because building from source\
+    \ can take time.\n\nWhat are advanced features in Python 3.x? Examples:\n\n- async/await\
+    \ (as above) for asynchronous programming.\n- Type hinting (PEP 484) for optional\
+    \ static typing (we covered).\n- f-strings for formatted string literals (in 3.6)\
+    \ e.g. f\"Hello {name}\".\n- Data classes (@dataclass in 3.7) for boilerplate-free\
+    \ classes.\n- Pathlib for object-oriented filesystem paths.\n- Enum support (enum\
+    \ module) for enumerations.\n- Keyword-only arguments (functions can enforce keyword\
+    \ args using * in signature).\n- Assignment expressions (the \"walrus operator\"\
+    \ :=) in 3.8).\n\nWhat are dataclasses? The dataclass module (Python 3.7+) provides\
+    \ a decorator to automatically generate special methods in classes (like __init__,\
+    \ __repr__, and others) for classes that are mostly data containers.\n\n```python\n\
+    from dataclasses import dataclass\n@dataclass\nclass Point:\n  x: float\n  y:\
+    \ float\n```\n\nThis automatically creates an __init__, so you can do Point(1,2),\
+    \ and a __repr__ like Point(x=1, y=2). It saves boilerplate and provides features\
+    \ like default values and comparison.\n\nWhat is introspection and how is it useful?\
+    \ Introspection is examining objects at runtime (e.g. using type(), hasattr(),\
+    \ inspect module). It allows dynamic code behavior. For example a library might\
+    \ inspect a class to dynamically bind.\n\nWhat is picking/unpicking and its security\
+    \ implications? (We touched on serialization.) Using pickle, you serialize objects\
+    \ to bytes and pickle.loads() to recreate them. However, unpicking data from untrusted\
+    \ sources can execute arbitrary code, making it a security risk. Only unpickle\
+    \ data you trust.\n\nWhat are some ways to handle missing dependencies at runtime?\
+    \ You can use exception handling around imports:\n\n```python\ntry:\n    import\
+    \ optional_lib\nexcept ImportError:\n    optional_lib = None\n```\n\nOr check\
+    \ sys.version_info for version-specific code. For optional features, gracefully\
+    \ disable functionality if module is missing.\n\nWhat is the difference between\
+    \ a module's global variable and a class's static variable? A module is a variable\
+    \ at module level, shared across all instances of a module. A class's static variable\
+    \ (attribute) is shared by all instances. Both act as shared state: for example,\
+    \ MyClass.count = 0 is shared by every MyClass instance. The difference is organizational\
+    \ (module vs class scope), but behavior is similar: modifying it affects.\n\n\
+    Describe Python's execution model for functions. When you call a function, Python\
+    \ pushes a frame onto the stack, with its own namespace. The function arguments\
+    \ are evaluated before the call, and if they are mutable, changes can affect the\
+    \ caller's object. After execution, the frame is popped. This model supports recursion\
+    \ natively. Tail-call optimization is not performed in CPython (so deep recursion\
+    \ can lead to RecursionError).\n\nExplain asynchronous generators and comprehensions.\
+    \ (Advanced) Python 3.6 introduced asynchronous generators: async def agent():\
+    \ yield ... You can use async for over them. There are also asynchronous comprehensions:\
+    \ [x async for x in iter]. These allow similar patterns in async code. example:\n\
+    \n```python\nasync def async_range(n):\n    for i in range(n):\n        yield\
+    \ i\nasync def main():\n    async for x in async_range(5):\n        print(x)\n\
+    ```\n\nThis is niche but useful in async-heavy code.\nWhat is multi-processing\
+    \ and what are the new features (e.g spawn/fork)? The multiprocessing module lets\
+    \ you use processes. On Unix, the default method is \"fork\" (child process is\
+    \ a copy). On Windows (and optionally on Unix), start with \"spawn\" (start fresh\
+    \ Python interpreter) or \"forkserver\". You\n"
+  mdcn: "\n\n# Java Code Geeks MINIBOOK 18 PYTHON 面试题\n\n使用 asyncio.gather() 运行协程。\n\
+    \n你如何使用 asyncio 事件循环？asyncio 事件循环驱动协程和回调的执行。在高级层面，使用 `asyncio.run(main())` 来启动你的异步代码。对于异步函数，使用\
+    \ `await`。对于低级控制，你可以通过 `loop = asyncio.get_event_loop()` 获取循环，使用 `loop.create_task()`\
+    \ 调度任务，并运行到 `loop.run_until_complete()`。可以使用 `loop.call_soon()` 注册回调。理解循环是整合任何异步代码与其他类型集的关键。\n\
+    \n什么是描述符？描述符定义了属性访问的工作方式。如果一个对象实现了 `__get__`、`__set__` 或 `__delete__`，它就是一个描述符。例如，方法就是描述符（带有\
+    \ `__get__`）。`@property` 装饰器底层使用了描述符。描述符允许对属性访问进行自定义（日志、验证）。还有更高级的方法通过 `getattr()`\
+    \ 来管理属性。\n\n解释元类（metaclasses）并给出一个例子。元类是类的“类型”：一种创建子类的类。默认情况下，Python 使用 `type`\
+    \ 作为元类。你可以通过继承 `type` 并重写 `__new__` 或 `__init__` 来创建自定义元类，以自定义类的创建过程。例如，元类可以自动注册所有使用它的类，或者向类中注入新方法以创建一致性。本质上，元类充当类的模板：它可以强制执行接口契约或自动添加属性。\n\
+    \n什么是类型提示（type hinting）以及在 Python 中如何使用？3.5+ 版本支持可选的类型提示（PEP 484）。你可以对函数签名和变量进行注解以用于声明和静态分析：`def\
+    \ f(x: int, y: str) -> bool:` 提示 `x` 应该是 `int`，`y` 是 `str`，返回类型是 `bool`。`typing`\
+    \ 模块提供了如 `list[int]`、`Optional[str]` 等复杂类型。Python 在运行时不强制类型，但像 mypy 或 IDE 等工具可以检测不一致之处。类型提示有助于提高代码清晰度并捕捉错误。\n\
+    \nPython 中get哪些内存分析技术？对于大数据，使用数据生成器（generators）而非列表，使用 `__slots__` 来减少实例内存。使用内置函数（它们在\
+    \ C 语言中实现）。完成后释放大对象（例如 `del` 或重新赋值）。必要时避免循环引用。在数值语境下，使用 NumPy 代替列表以节省内存。在处理字符串时，使用\
+    \ `join()` 而不是在列表中进行拼接。如果需要，使用 `memory_profiler` 等工具分析内存使用情况。\n\n你如何在 Python 代码中进行性能分析？使用\
+    \ `cProfile` 模块查看时间消耗在何。示例：\n\n```python\nimport cProfile, pstats\ncProfile.run('my_func()','profile.stats')\n\
+    p = pstats.Stats('profile.stats')\np.sort_stats('cumtime').print_stats(10)\n```\n\
+    \n这会列出最耗时的函数。此外，对于小代码片段，时间也很有用。对于内存分析，使用 `tracalloc`（内置）或 `memory_profiler` 等外部工具。在识别瓶颈后，优化代码（使用更高效的算法或数据结构、缓存，或用\
+    \ Cython 编写关键部分）。\n\n你如何管理并发问题？使用 `threading` 模块中的同步原语：`Lock`、`RLock`、`Semaphore`、`Event`。例如，锁可以确保一次只有一个线程访问共享资源。或者，使用更高级的结构如\
+    \ `queue.Queue` 用于线程安全队列，或者使用可以避免共享状态的 `multiprocessing`。在异步代码中，避免共享状态或使用 `asyncio.lock`。偏好不可变数据模式或最小化可变性的模式。\n\
+    \n什么是 `gather()` 和 `wait()`？`asyncio.gather(*coros)` 并运行协程并返回一个产生所有结果（按顺序）的 future。如果任何协程失败，它会抛出异常。`asyncio.wait`\
+    \ 返回两个集合（done, pending），可用于更复杂的并发控制。有方法一次管理多个协程。\n\nPython I/O（文件/网络）操作的特性有哪些？Python\
+    \ 的 I/O（文件、socket）默认通常是阻塞的。通过线程、asyncio 或像 `aiofiles` 这样的库使用非阻塞或异步 I/O。文件 API\
+    \ 是缓冲的，因此 `read()` 可能会阻塞直到数据可用或到达 EOF。网络库（socket）可以设置为非阻塞并配合 `select/asyncio`\
+    \ 使用。理解阻塞行为对性能和并发非常重要。\n\n你如何处理大文件或数据流？增量处理它们。例如，大文件逐行处理（使用 `for line in file:`\
+    \ 而不是一次性 `read()`）。使用生成器流式传输数据。对于 CSV 或 JSON，使用 `pandas.read_csv(chunksize=...)`\
+    \ 进行迭代解析，或使用 `ijson` 流式 JSON。这避免了将条目加载到内存。\n\n什么是 Cython？Cython 是一种将类 Python 代码（带有静态类型注解）编译为\
+    \ C 的工具。Python 可以包含类型声明，Cython 生成 C 代码并将其编译成 Python 扩展模块。通过将它们移动到编译代码中，可以极大加速循环和数学计算。Cython\
+    \ 常用于优化 Python 中的热点。\n\n什么是 wheel (.whl) 和 wheel 文件？wheel 是 Python 的一种构建包格式（PEP\
+    \ 427）。它是一个具有标准名称（包括 Python 和平台标签）的 ZIP 存档，可以使用 `pip` 安装。创建 wheels 允许分发编译后的扩展以实现更快的安装。当你运行\
+    \ `pip install` 时，pip 会偏选 wheels（因为从源码构建可能耗费时间）。\n\nPython 3.x 中的高级特性有哪些？示例：\n\
+    \n- async/await（如上）用于异步编程。\n- 类型提示（PEP 484）用于可选静态类型（我们已涵盖）。\n- f-strings 用于格式化字符串字面量（在\
+    \ 3.6 中）例如 `f\"Hello {name}\"`。\n- 数据类（@dataclass）。\n- Pathlib 用于文件系统。\n- Enum\
+    \ 支持（enum module）。\n- 仅关键字参数（keyword-only arguments）。\n- 赋值表达式（海象运算符 `:=`）在3.8。\n\
+    \n什么是 dataclasses？Python 3.7 引入了 `dataclass` 装饰器来自动生成特殊方法。\n\n```python\nfrom\
+    \ dataclasses import dataclass\n\n@dataclass\nclass Point:\n    x: float\n   \
+    \ y: float\n```\n\n这为类提供了样板代码，自动生成 `__init__`、`__repr__` 等。\n\n什么是反射（introspection）以及它有什么用？反射是在运行时检查对象（例如使用\
+    \ `type()`、`hasattr()`、`inspect` 模块）。它允许动态代码行为。\n\n什么是序列化/反序列化 及其安全影响？（我们提到了序列化。）使用\
+    \ `pickle`，将对象序列化为字节并使用 `pickle.loads()` 重建它们。然而，从不可信源反序列化可能会执行任意代码。只反序列化你信任的数据。\n\
+    \n有哪些方法处理缺失依赖？你可以对导入使用异常处理：\n\n```python\ntry:\n    import optional_lib\nexcept\
+    \ ImportError:\n    optional_lib = None\n```\n\n或者检查 `sys.version_info` 进行版本特定的代码。对于可选功能，如果模块缺失则禁用。\n\
+    \n模块变量和类静态变量的区别是什么？模块变量是模块级别的，所有模块实例共享。类的静态变量（属性）由所有实例共享。两者都作为共享状态：例如 `MyClass.count\
+    \ = 0` 被 `MyClass` 实例共享。区别在于组织方式（模块 vs 类作用域），但行为相似：修改它会影响。\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 22]
+
+
+    can choose with multiprocessing.set_start_method(). Fork can be faster but may
+    have issues with threads (inheriting state), where ''spawn'' is faster and default
+    on Windows.
+
+
+    **What are some strategies for scaling Python applications?** By scaling multiple
+    workers (via WSGI servers with multiple workers), use load balancers, or container
+    orchestration (Kubernetes). Offload static files to a CDN. Use caching (Redis,
+    Memcached). For CPU-bound tasks, run them in background workers (Celery with multiple
+    processes). Use asynchronous frameworks (FastAPI, ahttp) to handle many I/O-bound
+    requests. Profile and optimize bottlenecks, considering sharing or microservices
+    for large tasks.
+
+
+    **What is the difference between threading and async?** Threading uses OS threads
+    to allow concurrency (though limited by GIL), suitable for I/O-bound tasks, async
+    uses a single-threaded event and coroutines (async/await) to handle concurrency;
+    it doesn''t use threads by default. Async is often more efficient (no overhead)
+    for many small tasks, but code must be written in async style. Threading uses
+    libraries, whereas async requires non-blocking libraries.
+
+
+    **What are Python''s built-in optimization techniques?** Python applies a few
+    optimizations automatically: short-circuit evaluation for boolean ops, caching
+    small integers/strings, and compiled bytecode caching (.py files). You can manually
+    optimize by using built-ins (sum(), list comprehensions), avoiding global lookups
+    (local variables are faster), and minimizing attribute lookups (local variables
+    for frequently accessed attributes).
+
+
+    **What is a memory view?** A memoryview is a built-in allows Python code to access
+    the memory of binary objects (like bytes, bytearray) without copying. It supports
+    slicing and views large data buffers. For zero-copy manipulation of binary data,
+    e.g. in networking or image processing. Example:
+
+
+    ```
+
+    ba = bytearray(b"Hello")
+
+    mv = memoryview(ba)
+
+    m[0] = 74 # changes ba to b"Jello"
+
+    ```
+
+
+    **How do you ensure code quality in large projects?** Use linters (flake8, pylint),
+    formatters (black), type checkers (mypy) for consistency. Enforce code style with
+    CI. Write comprehensive unit/integration tests and use continuous integration
+    to run them on every commit. Perform regular code reviews. Use dependency management
+    (requirements.txt with exact versions or lock files) and documentation (doctrings,
+    Markdown docs).
+
+
+    **How do you call C from Python?** Several ways:
+
+
+    These allow leveraging existing C libraries or writing performance-critical code
+    in C.
+
+
+    +   * ctypes: allow to call C functions in shared libraries (DLLs) at runtime
+    without compiling Python extension.
+
+    * cffi: to call C by interfacing with the C ABI.
+
+    * Cython or Python API: write C extensions (compile .pyx or .c files).
+
+    * subprocess: run a C program as a process.
+
+
+    **What is PyPy project?** PyPy is an alternative Python interpreter with a JIT
+    compiler, faster for long-running code. It is compatible with CPython but may
+    have issues with C extensions (though support has improved). PyPy can run many
+    Python programs faster without code changes. Mention as an option for performance
+    tuning.'
+  - '[PAGE 23]
+
+
+    # What can be used for static code analysis?
+
+
+    Tools include mypy for checking (if you are using hints), pylint or flake8 for
+    styling, bandit for security checks, and safety or pip-audit for checking vulnerabilities
+    in dependencies. These tools help catch errors before runtime.
+
+
+    # What is the purpose of Python Enhancements Proposals (PEPs)? PEPs are documents
+    designed for the Python community. They propose new features (like PEP 484 for
+    high-level hints). Reading PEPs (they are on pep.org) helps insight language decisions
+    and features.
+
+
+    Explain your import system and __init__.py. When you import module, Python searches
+    the module in its import path (directories in sys.path). A directory is recognized
+    as a package if it contains __init__.py (even empty). In Python 3.3+, namespace
+    allows packages without __init__.py. The import mechanism caches modules in sys.modules.
+    Use absolute imports for clarity, and relative imports (from . importing) for
+    intra-package references.
+
+
+    What is PEP 225 and 257? PEP 257 defines conventions for Docstrings. Each module,
+    class, function should have a docstring under the definition using triple quotes.
+    Docstrings describe the object''s purpose and usage. Use tools like Sphinx or
+    pydoc to auto-generate documentation from docstrings. Use PEP 257 for multi-line
+    docstring formatting.
+
+
+    What are some debugging techniques? Use Pdb for step-by-stepping, or higher-level
+    tools like pdb (ython-enabled) or IDE debuggers. Use breakpoints (import pdb;set_trace()).
+    Inspect variables, stack, and execution flow. For multi-threaded programs, use
+    thread-aware debuggers. ProfilersProfile help performance issues. For memory leaks,
+    gc module and tracers can help.
+
+
+    What are interpreters other than C? PyPy (JIT-compiled), Jython (for Java), IronPython
+    (for .NET), MicroPython (for microcontrollers). Each implements Python in different
+    environments or with performance trade-offs. CPython is the standard-based implementation.
+    Knowing alternatives can be useful for specific use cases.
+
+
+    What are design principles EAF vs LBYL? Python often follows the EAF (Easy to
+    Ask Forgiveness than Permission); try any operation and catch exceptions, rather
+    than checking before. This is opposite of LBYL (Look Before You Leap). For example,
+    instead of checking if key in dict:key], try dict[key] and catch KeyError. EAFP
+    is simpler in Python.
+
+
+    What are context variables (PEP 567)? Python 3.7+ introduced context variables
+    for managing context in async (local thread storage as such). Use contextvars
+    to store data that is local to a coroutine. They allow sharing contexts in concurrent
+    code.
+
+
+    How do you achieve scalability in Python for big data/ML? Used distributed processing
+    frameworks (Spark, D) or cloud services. For web services, microservices, GPU
+    acceleration (TensorFlow/PyTorch with CUDA), and horizontal scaling of API servers.
+    Choose appropriate data structures (NumPy arrays, sparse matrices). Offload heavy
+    work to optimized libraries or frameworks. Caching (Redis), message queues (RabbitMQ,
+    Kafka), and load testing help ensure scalability.
+
+
+    What is OpenTelemetry and how do you use it in Python? OpenTelemetry is an observability
+    framework for generating and collecting telemetry (metrics, logs, traces) from
+    applications. In Python, you install the OpenTelemetry API and SDK packages with
+    pip (example, pip install opentelemetry-api opentelemetry-sdk). Then you can instrument
+    your code—either manually or via auto-instrumentation to emit metrics, and logs.
+    This data is sent to collectors (e.g. Jaeger, Prometheus, or an OtLP endpoint).
+    Using OpenTelemetry allows a Python service produce structured telemetry in a
+    standardized way, which greatly aids debugging and monitoring across distributed
+    systems.'
+  - "[PAGE 24]\n\nExplain Python's structural pattern matching (match-case) introduced\
+    \ in Python 3.10. Provide an example. Structural pattern matching (PEP 634) adds\
+    \ a match statement that compares a value against a series of patterns. The syntax\
+    \ is:\n\n```\nmatch subject:\n    case <pattern1>:\n        <action1>\n    case\
+    \ <pattern2>:\n        <action2>\n    case _:\n        <fallback>\n```\n\nThe\
+    \ subject is evaluated and checked against each case in order, executing the first\
+    \ matching block. Patterns can be literals, types, sequences, or even class instances.\
+    \ For example:\n\n```\ndef http_error(status):\n    match status:\n        case\
+    \ 400:\n            return \"Bad request\"\n        case 404:\n            return\
+    \ \"Not found\"\n        case _:\n            return \"Something else\"\n```\n\
+    \nHere, if status is 404, the function returns \"Not found\", and if no literal\
+    \ matches, the wildcard _ case handles the rest. Pattern matching is more powerful\
+    \ than simple if/elif chains when you need to destructure data or match on complex\
+    \ conditions.\n\nWhat are Exception Groups and the except* syntax introduced in\
+    \ Python 3.11 (PEP 654)? When would you use them? PEP 654 (Python 3.11) introduced\
+    \ Exception Groups, which allow a single raise to combine multiple exceptions\
+    \ into one. The new except* syntax lets you catch and handle specific exception\
+    \ types within an exception group. This is useful in concurrency; for example,\
+    \ if several coroutines run simultaneously, asyncio can raise an ExceptionGroup\
+    \ containing all errors. You can then write:\n\n```\ntry:\n    await asyncio.gather(task1(),\
+    \ task2())\nexcept* (ValueError, TypeError) as eg:\n    # handle ValueError and\
+    \ TypeError from any task\n```\n\nIn this way, except* allows catching all exceptions\
+    \ of the given type inside the group. It provides finer-grained error handling\
+    \ when multiple errors occur together.\n\nWhat is LangChain, and how is it used\
+    \ in Python for LLM-based applications? LangChain is a Python framework for building\
+    \ applications using large language models (LLMs). It provides standard interfaces\
+    \ for language models, prompting, memory, and data connectors, and integrates\
+    \ with many LLM providers. LangChain provides common patterns in LLM workflows:\
+    \ for example, LangChain allows you"
+  md: "\ncan choose with multiprocessing.set_start_method(). Fork can be faster but\
+    \ may have issues with threads (inheriting state), where 'spawn' is faster and\
+    \ default on Windows.\n\n**What are some strategies for scaling Python applications?**\
+    \ By scaling multiple workers (via WSGI servers with multiple workers), use load\
+    \ balancers, or container orchestration (Kubernetes). Offload static files to\
+    \ a CDN. Use caching (Redis, Memcached). For CPU-bound tasks, run them in background\
+    \ workers (Celery with multiple processes). Use asynchronous frameworks (FastAPI,\
+    \ ahttp) to handle many I/O-bound requests. Profile and optimize bottlenecks,\
+    \ considering sharing or microservices for large tasks.\n\n**What is the difference\
+    \ between threading and async?** Threading uses OS threads to allow concurrency\
+    \ (though limited by GIL), suitable for I/O-bound tasks, async uses a single-threaded\
+    \ event and coroutines (async/await) to handle concurrency; it doesn't use threads\
+    \ by default. Async is often more efficient (no overhead) for many small tasks,\
+    \ but code must be written in async style. Threading uses libraries, whereas async\
+    \ requires non-blocking libraries.\n\n**What are Python's built-in optimization\
+    \ techniques?** Python applies a few optimizations automatically: short-circuit\
+    \ evaluation for boolean ops, caching small integers/strings, and compiled bytecode\
+    \ caching (.py files). You can manually optimize by using built-ins (sum(), list\
+    \ comprehensions), avoiding global lookups (local variables are faster), and minimizing\
+    \ attribute lookups (local variables for frequently accessed attributes).\n\n\
+    **What is a memory view?** A memoryview is a built-in allows Python code to access\
+    \ the memory of binary objects (like bytes, bytearray) without copying. It supports\
+    \ slicing and views large data buffers. For zero-copy manipulation of binary data,\
+    \ e.g. in networking or image processing. Example:\n\n```\nba = bytearray(b\"\
+    Hello\")\nmv = memoryview(ba)\nm[0] = 74 # changes ba to b\"Jello\"\n```\n\n**How\
+    \ do you ensure code quality in large projects?** Use linters (flake8, pylint),\
+    \ formatters (black), type checkers (mypy) for consistency. Enforce code style\
+    \ with CI. Write comprehensive unit/integration tests and use continuous integration\
+    \ to run them on every commit. Perform regular code reviews. Use dependency management\
+    \ (requirements.txt with exact versions or lock files) and documentation (doctrings,\
+    \ Markdown docs).\n\n**How do you call C from Python?** Several ways allow leveraging\
+    \ existing C libraries or writing performance-critical code in C:\n\n- ctypes:\
+    \ allow to call C functions in shared libraries (DLLs) at runtime without compiling\
+    \ Python extension.\n- cffi: to call C by interfacing with the C ABI.\n- Cython\
+    \ or Python API: write C extensions (compile .pyx or .c files).\n- subprocess:\
+    \ run a C program as a process.\n\n**What is PyPy project?** PyPy is an alternative\
+    \ Python interpreter with a JIT compiler, faster for long-running code. It is\
+    \ compatible with CPython but may have issues with C extensions (though support\
+    \ has improved). PyPy can run many Python programs faster without code changes.\
+    \ Mention as an option for performance tuning.\n\n## What can be used for static\
+    \ code analysis?\n\nTools include mypy for checking (if you are using hints),\
+    \ pylint or flake8 for styling, bandit for security checks, and safety or pip-audit\
+    \ for checking vulnerabilities in dependencies. These tools help catch errors\
+    \ before runtime.\n\n## What is the purpose of Python Enhancements Proposals (PEPs)?\
+    \ PEPs are documents designed for the Python community. They propose new features\
+    \ (like PEP 484 for high-level hints). Reading PEPs (they are on pep.org) helps\
+    \ insight language decisions and features.\n\nExplain your import system and __init__.py.\
+    \ When you import module, Python searches the module in its import path (directories\
+    \ in sys.path). A directory is recognized as a package if it contains __init__.py\
+    \ (even empty). In Python 3.3+, namespace allows packages without __init__.py.\
+    \ The import mechanism caches modules in sys.modules. Use absolute imports for\
+    \ clarity, and relative imports (from . importing) for intra-package references.\n\
+    \nWhat is PEP 225 and 257? PEP 257 defines conventions for Docstrings. Each module,\
+    \ class, function should have a docstring under the definition using triple quotes.\
+    \ Docstrings describe the object's purpose and usage. Use tools like Sphinx or\
+    \ pydoc to auto-generate documentation from docstrings. Use PEP 257 for multi-line\
+    \ docstring formatting.\n\nWhat are some debugging techniques? Use Pdb for step-by-stepping,\
+    \ or higher-level tools like pdb (ython-enabled) or IDE debuggers. Use breakpoints\
+    \ (import pdb;set_trace()). Inspect variables, stack, and execution flow. For\
+    \ multi-threaded programs, use thread-aware debuggers. ProfilersProfile help performance\
+    \ issues. For memory leaks, gc module and tracers can help.\n\nWhat are interpreters\
+    \ other than C? PyPy (JIT-compiled), Jython (for Java), IronPython (for .NET),\
+    \ MicroPython (for microcontrollers). Each implements Python in different environments\
+    \ or with performance trade-offs. CPython is the standard-based implementation.\
+    \ Knowing alternatives can be useful for specific use cases.\n\nWhat are design\
+    \ principles EAF vs LBYL? Python often follows the EAF (Easy to Ask Forgiveness\
+    \ than Permission); try any operation and catch exceptions, rather than checking\
+    \ before. This is opposite of LBYL (Look Before You Leap). For example, instead\
+    \ of checking if key in dict[:], try dict[key] and catch KeyError. EAFP is simpler\
+    \ in Python.\n\nWhat are context variables (PEP 567)? Python 3.7+ introduced context\
+    \ variables for managing context in async (local thread storage as such). Use\
+    \ contextvars to store data that is local to a coroutine. They allow sharing contexts\
+    \ in concurrent code.\n\nHow do you achieve scalability in Python for big data/ML?\
+    \ Used distributed processing frameworks (Spark, D) or cloud services. For web\
+    \ services, microservices, GPU acceleration (TensorFlow/PyTorch with CUDA), and\
+    \ horizontal scaling of API servers. Choose appropriate data structures (NumPy\
+    \ arrays, sparse matrices). Offload heavy work to optimized libraries or frameworks.\
+    \ Caching (Redis), message queues (RabbitMQ, Kafka), and load testing help ensure\
+    \ scalability.\n\nWhat is OpenTelemetry and how do you use it in Python? OpenTelemetry\
+    \ is an observability framework for generating and collecting telemetry (metrics,\
+    \ logs, traces) from applications. In Python, you install the OpenTelemetry API\
+    \ and SDK packages with pip (example, pip install opentelemetry-api opentelemetry-sdk).\
+    \ Then you can instrument your code—either manually or via auto-instrumentation\
+    \ to emit metrics, and logs. This data is sent to collectors (e.g. Jaeger, Prometheus,\
+    \ or an OtLP endpoint). Using OpenTelemetry allows a Python service produce structured\
+    \ telemetry in a standardized way, which greatly aids debugging and monitoring\
+    \ across distributed systems.\n\nExplain Python's structural pattern matching\
+    \ (match-case) introduced in Python 3.10. Provide an example. Structural pattern\
+    \ matching (PEP 634) adds a match statement that compares a value against a series\
+    \ of patterns. The syntax is:\n\n```\nmatch subject:\n    case <pattern1>:\n \
+    \       <action1>\n    case <pattern2>:\n        <action2>\n    case _:\n    \
+    \    <fallback>\n```\n\nThe subject is evaluated and checked against each case\
+    \ in order, executing the first matching block. Patterns can be literals, types,\
+    \ sequences, or even class instances. For example:\n\n```\ndef http_error(status):\n\
+    \    match status:\n        case 400:\n            return \"Bad request\"\n  \
+    \      case 404:\n            return \"Not found\"\n        case _:\n        \
+    \    return \"Something else\"\n```\n\nHere, if status is 404, the function returns\
+    \ \"Not found\", and if no literal matches, the wildcard _ handles the rest. Pattern\
+    \ matching is more powerful than simple if/elif chains when you need to destructure\
+    \ data or match on complex conditions.\n\nWhat are Exception Groups and the except*\
+    \ syntax introduced in Python 3.11 (PEP 654)? When would you use them? PEP 654\
+    \ (Python 3.11) introduced Exception Groups, which allow a single raise to combine\
+    \ multiple exceptions into one. The new except* syntax lets you catch and handle\
+    \ specific exception types within an exception group. This is useful in concurrency;\
+    \ for example, if several coroutines run simultaneously, asyncio can raise an\
+    \ ExceptionGroup containing all errors. You can then write:\n\n```\ntry:\n   \
+    \ await asyncio.gather(task1(), task2())\nexcept* (ValueError, TypeError) as eg:\n\
+    \    # handle ValueError and TypeError from any task\n```\n\nIn this way, except*\
+    \ allows catching all exceptions of the given type inside the group. It provides\
+    \ finer-grained error handling when multiple errors occur together.\n\nWhat is\
+    \ LangChain, and how is it used in Python for LLM-based applications? LangChain\
+    \ is a Python framework for building applications using large language models\
+    \ (LLMs). It provides standard interfaces for language models, prompting, memory,\
+    \ and data connectors, and integrates with many LLM providers. LangChain provides\
+    \ common patterns in LLM workflows: for example, LangChain allows you\n"
+  mdcn: "\n可以通过 `multiprocessing.set_start_method()` 进行选择。`Fork` 可以更快，但在线程方面可能会出现问题（继承状态），而\
+    \ `'spawn'` 则更快且是 Windows 上的默认值。\n\n**扩展 Python 应用的哪些策略？** 通过扩展多个 worker（通过具有多个\
+    \ worker 的 WSGI 服务器）、使用负载均衡器或容器编排（Kubernetes）。将静态文件卸载到 CDN。使用缓存（Redis, Memcached）。对于\
+    \ CPU 密集型任务，在后台工作进程中运行（带有多个进程的 Celery）。使用异步框架（FastAPI, ahttp）处理大量的 I/O 密集型请求。分析并优化瓶颈，对于大型任务考虑共享或微服务。\n\
+    \n**线程（threading）和异步（async）之间的区别是什么？** 线程使用操作系统线程来实现并发（尽管受 GIL 限制），适用于 I/O 密集型任务；异步使用单线程事件循环和协程（async/await）来处理并发；默认不使用线程。对于许多小任务，异步通常更高效（无开销），但代码必须以异步风格编写。线程使用库，而异步则需要非阻塞库。\n\
+    \n**Python 的内置优化技术有哪些？** Python 自动应用了一些优化：布尔操作的短路求值、小整数/字符串缓存以及编译后的字节码缓存（.py 文件）。你可以通过使用内置函数（`sum()`，列表推导式）、避免全局查找（局部变量更快）以及最小化属性查找（为频繁访问的属性使用局部变量）来手动优化。\n\
+    \n**什么是内存视图（memoryview）？** `memoryview` 是一个内置类型，允许 Python 代码在不复制的情况下访问二进制对象（如\
+    \ bytes, bytearray）的内存。它支持切片和查看大型缓冲区。适用于二进制数据的零拷贝操作，例如在网络或图像处理中。示例：\n\n```\nba\
+    \ = bytearray(b\"Hello\")\nmv = memoryview(ba)\nm[0] = 74 # 将 ba 修改为 b\"Jello\"\
+    \n```\n\n**如何在大型项目中确保代码质量？** 使用 linter（flake8, pylint）、格式化工具（black）、类型检查器（mypy）来保持一致性。通过\
+    \ CI 强制执行代码风格。编写全面的单元/集成测试，并使用持续集成在每次提交时运行这些测试。进行定期的代码审查。使用依赖管理（带有精确版本的 requirements.txt\
+    \ 或锁文件）和文档（docstrings，Markdown 文档）。\n\n**如何从 Python 调用 C？** 有几种方法可以利用现有的 C 库或用\
+    \ C 编写性能关键的代码：\n\n- ctypes：允许在运行时调用共享库（DLLs）中的 C 函数，而无需编译 Python 扩展。\n- cffi：通过与\
+    \ C ABI 接口交互调用 C。\n- Cython 或 Python API：编写 C 扩展（编译 .pyx 或 .c 文件）。\n- subprocess：将\
+    \ C 程序作为进程运行。\n\n**什么是 PyPy 项目？** PyPy 是一种带有 JIT 编译器的替代性 Python 解释器，对于长时间运行的代码速度更快。它与\
+    \ CPython 兼容，但在 C 扩展方面可能会有问题（尽管支持已提高）。PyPy 可以在不更改代码的情况下更快地运行许多 Python 程序。作为性能调优的选项提及。\n\
+    \n## 什么可以用于静态代码分析？\n\n工具包括用于检查的 mypy（如果你使用了类型提示）、用于样式的 pylint 或 flake8、用于安全检查的\
+    \ bandit，以及用于检查依赖项漏洞的 safety 或 pip-audit。这些工具有助于在运行之前捕捉错误。\n\n## Python 增强提案（PEPs）的目的是什么？PEPs\
+    \ 是为 Python 社区设计的文档。它们提出了新功能（例如用于高级类型提示的 PEP 484）。阅读 PEPs（它们在 pep.org 上）有助于了解语言决策和特性。\n\
+    \n解释你的导入系统和 `__init__.py`。当你导入模块时，Python 会在它的导入路径（`sys.path` 中的目录）中搜索该模块。如果一个目录包含\
+    \ `__init__.py`（即使是空的），则该目录识别为一个包。在 Python 3.3+ 中，命名空间允许不包含 `__init__.py` 的包。使用绝对导入以保持清晰，并使用相对导入（`from\
+    \ . importing`）进行包内引用。\n\n什么是 PEP 225 和 257？PEP 257 定义了 Docstrings（文档字符串）的规范。每个模块、类、函数都应该在定义下有一个使用三引号的\
+    \ docstring。Docstrings 描述了对象的用途和用法。使用 Sphinx 或 pydoc 等工具从 docstrings 自动生成文档。使用\
+    \ PEP 257 进行多行 docstring 格式化。\n\n有哪些调试技术？使用 Pdb 进行逐步执行，或使用更高级工具如 pdb（启用了 IPython\
+    \ 的）或 IDE 调试器。使用断点（`import pdb;set_trace()`）。检查变量、堆栈和执行流。对于多线程程序，使用线程感知的调试器。Profile\
+    \ 分析工具帮助解决性能问题。对于内存泄漏，`gc` 模块和跟踪器可以帮助。\n\n除了 C 之外还有哪些解释器？PyPy（JIT 编译的）、Jython（针对\
+    \ Java）、IronPython（针对 .NET）、MicroPython（针对微控制器）。每种都在不同的环境中或通过性能权衡实现 Python。CPython\
+    \ 是基于标准的实现。了解替代方案对于特定用例很有用。\n\nEAF 与 LBYL 的设计原则是什么？Python 经常遵循 EAF（与其请求许可，不如原谅）；尝试任何操作并捕获异常，而不是在之前检查。这与\
+    \ LBYL（先看后做）相反。例如，与其检查键是否在字典 `dict[]` 中，不如尝试 `dict[key]` 并捕获 `KeyError`。EAFP 在\
+    \ Python 中更简单。\n\n什么是上下文变量（PEP 567）？Python 3.7+ 引入了上下文变量来管理异步中的上下文（类似于本地线程存储）。使用\
+    \ `contextvars` 存储协程本地的数据。它们允许在并发代码中共享上下文。\n\n如何在 Python 中实现大数据/机器学习的可扩展性？使用分布式处理框架（Spark,\
+    \ Dask...）或云服务。对于 Web 服务，使用微服务、GPU 加速（带有 CUDA 的 TensorFlow/PyTorch）以及 API 服务器的水平扩展。选择合适的数据结构（NumPy\
+    \ 数组、稀疏矩阵）。将沉重工作卸载到优化的库或框架。缓存（Redis）、消息队列（RabbitMQ, Kafka）和负载测试有助于确保可扩展性。\n\n\
+    什么是 OpenTelemetry 以及你如何在 Python 中使用它？OpenTelemetry 是一个观测性框架，用于从应用程序生成和收集遥测数据（指标、日志、追踪）。在\
+    \ Python 中，你通过 pip 安装 OpenTelemetry API 和 SDK 包（例如，`pip install opentelemetry-api\
+    \ opentelemetry-sdk`）。然后你可以对代码进行插桩——手动或通过自动插桩发布指标和日志。这些数据被发送到收集器（例如 Jaeger、Prometheus\
+    \ 或 OtLP 端点）。使用 OpenTelemetry 允许 Python 服务以标准化的产生结构化的遥测数据，极极大有助于分布式系统的调试和监控。\n\
+    \n解释 Python 3.10 引入的结构化模式匹配（match-case）。提供一个示例。结构化模式匹配（PEP 634）增加了 `match` 语句，将值与一系列模式进行比较。语法为：\n\
+    \n```\nmatch subject:\n    case <pattern1>:\n        <action1>\n    case <pattern2>:\n\
+    \        <action2>\n    case _:\n        <fallback>\n```\n\nsubject 被评估并与每个 case\
+    \ 进行比较，执行第一个匹配块。模式可以是字面量、类型、序列甚至是类实例。例如：\n\n```\ndef http_error(status):\n   \
+    \ match status:\n        case 400:\n            return \"Bad request\"\n     \
+    \   case 404:\n            return \"Not found\"\n        case _:\n           \
+    \ return \"Something else\"\n```\n\n在这里，如果 status 为 404，函数返回 \"Not found\"，如果没有字面量匹配，通配符\
+    \ `_` 处理剩余部分。当你需要解构数据或匹配复杂条件时，模式匹配比简单的 if/elif 链更强大。\n\nPython 3.11 中引入的异常组和 `except*`\
+    \ 语法（PEP 654）是什么？你何时使用它们？PEP 654 引入了异常组，允许单个抛组合多个异常。这对于并发非常有用，例如如果多个协程同时运行，async\
+    \ 可以抛出一个包含所有异常的 ExceptionGroup。你可以这样写：\n\n```\ntry:\n    await asyncio.gather(task1(),\
+    \ task2())\nexcept* (ValueError, TypeError) as eg:\n    # 处理任何任务中的 ValueError\
+    \ 和 TypeError\n```\n\n通过这种方式，except* 允许捕获组内指定类型的异常。它在多个异常同时发生时提供了细粒度的错误处理。\n\n\
+    什么是 LangChain 以及如何在 Python 中使用它构建基于 LLM 应用？LangChain 是一个用于构建大型语言模型（LLM）应用的 Python\
+    \ 框架。它为语言模型、提示词、内存和数据连接器提供了标准接口，并与许多 LLM 提供者集成。LangChain 提供了 LLM 工作流中的常见模式：例如，LangChain\
+    \ 允许\n\n"
+  merge: 0
+- raw:
+  - "[PAGE 25]\n\n# Java Code Geeks MINIBOOK 24 PYTHON INTERVIEW QUESTIONS\n\nto pair\
+    \ a prompt template with an LLM call, and components like RetrievalQA combine\
+    \ embeddings and vector stores to answer questions from documents. By using LangChain,\
+    \ developers can compose chains or agents of LLM calls and other in a structured\
+    \ way, making it easier to develop, test, and deploy generative AI applications.\n\
+    \nWhat is FastAPI and what advantages does it offer for modern Python APIs? FastAPI\
+    \ is a modern, high-performance Python framework for building APIs. It is based\
+    \ on standard Python hints (using Pydantic for data validation), which enables\
+    \ automatic request validation and interactive API docs. Because FastAPI builds\
+    \ on Starlette and includes async features, it can achieve performance comparable\
+    \ to Node.js or Go. For example, by declaring a request model with types, FastAPI\
+    \ automatically generates OpenAPI (Swagger) with strong editor support and reliable\
+    \ APIs. Overall, FastAPI's use of standard Python features and async support makes\
+    \ it developer-friendly and production-ready.\n\nHow does Python's ParamSpec and\
+    \ TypeVar enhance function typing, and when would you use them? Python's typing\
+    \ system has evolved to support more dynamic and flexible function signatures.\
+    \ These enhancements provide greater flexibility and precision in type annotations,\
+    \ factoring better code clarity and tooling support:\n\n+   * ParamSpec: Introduced\
+    \ in PEP 612, ParamSpec allows for precise typing of callable parameters, especially\
+    \ when writing decorators that need to preserve the signature of the functions\
+    \ they wrap.\n\n```\nfrom typing import Callable, ParamSpec, TypeVar\nP = ParamSpec('P')\n\
+    R = TypeVar('R')\n\ndef decorator(func: Callable[[P], R]) -> Callable[[P...]]\
+    \ -> R:\n    def wrapper(*args: P.args, **kwargs: P.kwargs) -> R:\n        # Pre-processing\n\
+    \        result = func(*args, **kwargs)\n        # Post-processing\n        return\
+    \ result\n    return wrapper\n```\n\n+   * TypeVarTuple: Proposed in PEP 646,\
+    \ TypeVarTuple allows for variadic generics, enabling functions and classes to\
+    \ accept an arbitrary number of type parameters. This is particularly beneficial\
+    \ when working with functions that accept a variable number of arguments, such\
+    \ as in mathematical computations or data processing pipelines.\n\nWhat are the\
+    \ implications of Python 3.13's free-threaded mode on C extensions? Python 3.13\
+    \ introduces experimental free-threaded mode, aiming to remove the Global Interpreter\
+    \ Lock (GIL) and allow true multi-threaded execution. This change has significant\
+    \ implications for C extensions:\n\n+   * ABI Compatibility: C extensions for\
+    \ the traditional GIL-based Python interpreter are incompatible with the free-threaded\
+    \ version due to differences in the Application Binary Interface (ABI). Developers\
+    \ must ensure their extensions are compiled specifically for the targeted Python\
+    \ build.\n\n+   * Thread Safety: Extensions must be audited and refactored to\
+    \ be thread-safe, as the absence of the GIL means concurrent access to shared\
+    \ resources must be managed explicitly to avoid race conditions."
+  - '[PAGE 26]
+
+
+    Distribution Complexity: Package maintainers may need to distribute multiple wheels
+    to support GIL and free-threaded versions, increasing the complexity of package
+    management.
+
+
+    How can you profile and address numerical instability in Python applications?
+    Numerical instability can lead to significant errors in scientific and engineering
+    computations. By proactively profiling and addressing numerical instability, developers
+    can enhance the reliability and accuracy of Python applications, particularly
+    in domains requiring high-precision computations. To profile and mitigate such
+    issues in Python:
+
+
+    +   - Use Specialized Tools: Tools like PyTracer can automatically instrument
+    Python code to detect and quantify numerical instabilities. PyTracer tracks numerical
+    operations and identifies areas where rounding errors or loss of significance
+    may occur.
+
+    - Implement Monte Arithmetic: Introducing controlled random perturbations in computations
+    can help assess the sensitivity of algorithms to numbers.
+
+    - Adopt Arbitrary Precision Libraries: For critical computations, libraries like
+    decimal or mpmath provide arbitrary arithmetic, reducing the risk of floating-point
+    errors.
+
+    - Refactor Algorithms: Analyze and refactor algorithms to improve numerical stability,
+    such as by avoiding subtraction of nearly equal numbers or by reordering operations
+    to minimize error propagation.
+
+
+    # REFERENCES
+
+
+    +   Python Official Documentation - Core language features, standard library modules,
+    and syntax (used across all levels).
+
+
+    +   PEP Index (Python Enhancement Proposals) - Specification of language changes
+    (e.g., PEP 484 for type hints, PEP 634 for pattern matching, PEP 703 for no-GIL
+    Python).
+
+
+    +   FastAPI Documentation - Official docs for FastAPI: validation, async APIs,
+    OpenAPI generation.
+
+
+    +   LangChain Documentation - Building LLM-powered applications using chains,
+    tools, and memory.
+
+
+    +   OpenTelemetry Documentation - Native async concurrency, tasks, and event loops.
+
+
+    +   Python Typing Documentation - Modern typing concepts (ParamSpec, TypeTuple,
+    Callable, Any, etc.).
+
+
+    +   Pytest Documentation - Testing framework with features, plugins, and parameterization.
+
+
+    +   Docker + Python Best Practices - Efficient Dockerfiles and containerization
+    for Python apps.
+
+
+    +   NumPy Documentation - Array operations, numerical computing, and performance
+    tasks.
+
+
+    +   Pandas Documentation - Data manipulation and analysis for data engineering
+    and data science tasks.
+
+
+    +   Django Documentation - Full-stack web framework: ORM, views, models, migrations.
+
+
+    +   Flask Documentation - Lightweight web framework widely used in REST API development.
+
+
+    +   Python Performance Tips (CPython Internals) - Insights into memory management,
+    the GIL, and interpreter-level behavior.'
+  - '[PAGE 27]
+
+
+    Ray Documentation - Parallel/distributed computing in Python, increasingly common
+    in ML & backend tasks.
+
+
+    Pyright (Microsoft) & mypy Documentation - Static type checking for advanced Python
+    typing.
+
+
+    Pydantic Documentation - Data validation via Python type annotations (used in
+    FastAPI, Langavodegeeks.com, etc.).
+
+
+    CPython Free-threaded Mode - PEP 703 - The proposal to make the GIL optional and
+    support free-threaded Python.
+
+
+    Contextlib Module (Official Docs) - Advanced context management patterns and custom
+    resource handlers.
+
+
+    Python Tutorials On Java Code Geeks - Junior to advanced Python development, we
+    have you covered!
+
+
+    JCG delivers over 1 million pages each month to more than 700K software developers,
+    architects and decision makers. JCG offers something for everyone, including news,
+    tutorials, cheat sheets, research guides, feature articles, source code and more.
+
+
+    Copyright © 2014 Elexis Media P.C. All rights reserved. No part of this publication
+    may be reproduced, stored in a retrieval system, or transmitted. In any form or
+    by means electronic, mechanical, photocopying, or otherwise, without prior permission
+    of the publisher.'
+  md: "\n# Java Code Geeks MINIBOOK 24 PYTHON INTERVIEW QUESTIONS\n\nto pair a prompt\
+    \ template with an LLM call, and components like RetrievalQA combine embeddings\
+    \ and vector stores to answer questions from documents. By using LangChain, developers\
+    \ can compose chains or agents of LLM calls and other in a structured way, making\
+    \ it easier to develop, test, and deploy generative AI applications.\n\nWhat is\
+    \ FastAPI and what advantages does it offer for modern Python APIs? FastAPI is\
+    \ a modern, high-performance Python framework for building APIs. It is based on\
+    \ standard Python hints (using Pydantic for data validation), which enables automatic\
+    \ request validation and interactive API docs. Because FastAPI builds on Starlette\
+    \ and includes async features, it can achieve performance comparable to Node.js\
+    \ or Go. For example, by declaring a request model with types, FastAPI automatically\
+    \ generates OpenAPI (Swagger) with strong editor support and reliable APIs. Overall,\
+    \ FastAPI's use of standard Python features and async support makes it developer-friendly\
+    \ and production-ready.\n\nHow does Python's ParamSpec and TypeVar enhance function\
+    \ typing, and when would you use them? Python's typing system has evolved to support\
+    \ more dynamic and flexible function signatures. These enhancements provide greater\
+    \ flexibility and precision in type annotations, factoring better code clarity\
+    \ and tooling support:\n\n- *ParamSpec*: Introduced in PEP 612, ParamSpec allows\
+    \ for precise typing of callable parameters, especially when writing decorators\
+    \ that need to preserve the signature of the functions they wrap.\n\n```python\n\
+    from typing import Callable, ParamSpec, TypeVar\nP = ParamSpec('P')\nR = TypeVar('R')\n\
+    \ndef decorator(func: Callable[[P], R]) -> Callable[[P...]] -> R:\n    def wrapper(*args:\
+    \ P.args, **kwargs: P.kwargs) -> R:\n        # Pre-processing\n        result\
+    \ = func(*args, **kwargs)\n        # Post-processing\n        return result\n\
+    \    return wrapper\n```\n\n- *TypeVarTuple*: Proposed in PEP 646, TypeVarTuple\
+    \ allows for variadic generics, enabling functions and classes to accept an arbitrary\
+    \ number of type parameters. This is particularly beneficial when working with\
+    \ functions that accept a variable number of arguments, such as in mathematical\
+    \ computations or data processing pipelines.\n\nWhat are the implications of Python\
+    \ 3.13's free-threaded mode on C extensions? Python 3.13 introduces experimental\
+    \ free-threaded mode, aiming to remove the Global Interpreter Lock (GIL) and allow\
+    \ true multi-threaded execution. This change has significant implications for\
+    \ C extensions:\n\n- *ABI Compatibility*: C extensions for the traditional GIL-based\
+    \ Python interpreter are incompatible with the free-threaded version due to differences\
+    \ in the Application Binary Interface (ABI). Developers must ensure their extensions\
+    \ are compiled specifically for the targeted Python build.\n\n- *Thread Safety*:\
+    \ Extensions must be audited and refactored to be thread-safe, as the absence\
+    \ of the GIL means concurrent access to shared resources must be managed explicitly\
+    \ to avoid race conditions.\n\n- *Distribution Complexity*: Package maintainers\
+    \ may need to distribute multiple wheels to support GIL and free-threaded versions,\
+    \ increasing the complexity of package management.\n\nHow can you profile and\
+    \ address numerical instability in Python applications? Numerical instability\
+    \ can lead to significant errors in scientific and engineering computations. By\
+    \ proactively profiling and addressing numerical instability, developers can enhance\
+    \ the reliability and accuracy of Python applications, particularly in domains\
+    \ requiring high-precision computations. To profile and mitigate such issues in\
+    \ Python:\n\n- Use Specialized Tools: Tools like PyTracer can automatically instrument\
+    \ Python code to detect and quantify numerical instabilities. PyTracer tracks\
+    \ numerical operations and identifies areas where rounding errors or loss of significance\
+    \ may occur.\n- Implement Monte Arithmetic: Introducing controlled random perturbations\
+    \ in computations can help assess the sensitivity of algorithms to numbers.\n\
+    - Adopt Arbitrary Precision Libraries: For critical computations, libraries like\
+    \ decimal or mpmath provide arbitrary arithmetic, reducing the risk of floating-point\
+    \ errors.\n- Refactor Algorithms: Analyze and refactor algorithms to improve numerical\
+    \ stability, such as by avoiding subtraction of nearly equal numbers or by reordering\
+    \ operations to minimize error propagation.\n\n# REFERENCES\n\n- Python Official\
+    \ Documentation - Core language features, standard library modules, and syntax\
+    \ (used across all levels).\n- PEP Index (Python Enhancement Proposals) - Specification\
+    \ of language changes (e.g., PEP 484 for type hints, PEP 634 for pattern matching,\
+    \ PEP 703 for no-GIL Python).\n- FastAPI Documentation - Official docs for FastAPI:\
+    \ validation, async APIs, OpenAPI generation.\n- LangChain Documentation - Building\
+    \ LLM-powered applications using chains, tools, and memory.\n- OpenTelemetry Documentation\
+    \ - Native async concurrency, tasks, and event loops.\n- Python Typing Documentation\
+    \ - Modern typing concepts (ParamSpec, TypeTuple, Callable, Any, etc.).\n- Pytest\
+    \ Documentation - Testing framework with features, plugins, and parameterization.\n\
+    - Docker + Python Best Practices - Efficient Dockerfiles and containerization\
+    \ for Python apps.\n- NumPy Documentation - Array operations, numerical computing,\
+    \ and performance tasks.\n- Pandas Documentation - Data manipulation and analysis\
+    \ for data engineering and data science tasks.\n- Django Documentation - Full-stack\
+    \ web framework: ORM, views, models, migrations.\n- Flask Documentation - Lightweight\
+    \ web framework widely used in REST API development.\n- Python Performance Tips\
+    \ (CPython Internals) - Insights into memory management, the GIL, and interpreter-level\
+    \ behavior.\n- Ray Documentation - Parallel/distributed computing in Python, increasingly\
+    \ common in ML & backend tasks.\n- Pyright (Microsoft) & mypy Documentation -\
+    \ Static type checking for advanced Python typing.\n- Pydantic Documentation -\
+    \ Data validation via Python type annotations (used in FastAPI, JavacodeGeeks.com,\
+    \ etc.).\n- CPython Free-threaded Mode - PEP 703 - The proposal to make the GIL\
+    \ optional and support free-threaded Python.\n- Contextlib Module (Official Docs)\
+    \ - Advanced context management patterns and custom resource handlers.\n- Python\
+    \ Tutorials On Java Code Geeks - Junior to advanced Python development, we have\
+    \ you covered!\n\nCopyright © 2014 Elexis Media P.C. All rights reserved. No part\
+    \ of this publication may be reproduced, stored in a retrieval system, or transmitted.\
+    \ In any form or by means electronic, mechanical, photocopying, or otherwise,\
+    \ without prior permission of the publisher.\n"
+  mdcn: "\n\n# Java Code Geeks 微型书籍 24：Python 面试题\n\n将提示词模板与 LLM 调用配对，而 RetrievalQA\
+    \ 等组件通过结合嵌入和向量存储来回答文档中的问题。通过使用 LangChain，开发者可以以结构化的方式组合 LLM 调用和其他组件的链或代理，使得开发、测试和部署生成式\
+    \ AI 应用变得更加容易。\n\n什么是 FastAPI？它为现代 Python API 哪些优势？FastAPI 是一个用于构建 API 的现代、高性能\
+    \ Python 框架。它基于标准的 Python 类型提示（使用 Pydantic 进行数据验证），能够实现自动请求验证和交互式 API 文档。由于 FastAPI\
+    \ 构建在 Starlette 之上并包含异步特性，它的性能可以与 Node.js 或 Go 相。例如，通过类型声明请求模型，FastAPI 会自动生成具有强大编辑器支持和可靠\
+    \ API 的 OpenAPI (Swagger)。总的来说，FastAPI 对标准 Python 特性的使用和异步支持使其对开发者友好，并且适用于生产环境。\n\
+    \nPython 的 `ParamSpec` 和 `TypeVar` 如何增强函数类型标注？在什么情况下你会使用它们？Python 的类型系统已经进化到支持更动态、更灵活的函数签名。这些增强功能为类型标注提供了更大的灵活性和精确性，有助于提高代码清晰度和工具支持：\n\
+    \n- *ParamSpec*：在 PEP 612 中引入，ParamSpec 允许对可调用参数进行精确类型标注，特别是在编写需要保留被封装函数签名的装饰器时。\n\
+    \n```python\nfrom typing import Callable, ParamSpec, TypeVar\nP = ParamSpec('P')\n\
+    R = TypeVar('R')\n\ndef decorator(func: Callable[[P], R]) -> Callable[[P...]]\
+    \ -> R:\n    def wrapper(*args: P.args, **kwargs: P.kwargs) -> R:\n        # Pre-processing\n\
+    \        result = func(*args, **kwargs)\n        # Post-processing\n        return\
+    \ result\n    return wrapper\n```\n\n- *TypeVarTuple*：在 PEP 646 中提出，TypeVarTuple\
+    \ 允许变长泛型，使函数和类接受任意数量的类型参数。这对于接受数量参数的函数特别有用，例如数学计算或数据处理管道中。\n\nPython 3.13 的无线程模式（free-threaded\
+    \ mode）对 C 扩展有什么影响？Python 3.13 引入了实验性的无线程模式，旨在移除全局解释器锁（GIL）并允许真正的多线程执行。此更改对 C\
+    \ 扩展具有影响：\n\n- *ABI 兼容性*：基于传统 GIL 的 Python 解释器的 C 扩展由于应用程序二进制接口（ABI）的差异与无线程版本不兼容。开发者必须确保其扩展针对目标\
+    \ Python 构建专门编译。\n\n- *线程安全*：扩展必须经过审计和重构以确保线程安全，因为没有了 GIL 意味着显式管理对共享资源的并发访问，以避免竞态条件。\n\
+    \n- *发布复杂性*：包维护者可能需要发布多个 wheels 以支持 GIL 和无线程版本，这增加了包管理的复杂性。\n\n你如何对 Python 应用进行剖析并解决数值不稳定性问题？数值不稳定性会导致科学和工程计算中的严重错误。通过主动剖析和解决数值不稳定性，开发者可以提高\
+    \ Python 应用的可靠性和准确性，特别是在需要高精度计算的领域。在 Python 中剖析和缓解此类问题：\n\n- 使用专用工具：如 PyTracer\
+    \ 等工具可以自动对 Python 代码进行插桩，以检测并量化数值不稳定性。PyTracer 跟踪数值操作并识别可能发生舍入误差或精度丢失的区域。\n- 实现蒙特卡洛运算：在计算中引入受控的随机扰动有助于评估算法对数值敏感性。\n\
+    - 采用任意精度库：对于关键计算，`decimal` 或 `mpmath` 等库提供了任意运算，减少了浮点误差的风险。\n- 重构算法：分析并重构算法以提高数值稳定性，例如避免相减相等的数字或通过重新排序操作来最小化误差传播。\n\
+    \n# 参考文献\n\n- Python 官方文档 - 核心语言特性、标准库模块和语法（用于所有级别）。\n- PEP 索引（Python 增强提案） -\
+    \ 语言变更（例如 PEP 484 类型提示、PEP 634 模式匹配、PEP 703 无 GIL Python）。\n- FastAPI 文档 - FastAPI\
+    \ 官方文档：验证、异步 API。\n- LangChain 文档 - 使用链、工具和内存构建基于 LLM 的应用。\n- OpenTelemetry 文档\
+    \ - 原生异步、任务和事件循环。\n- Python 类型文档 - 现代类型概念（ParamSpec, TypeTuple, Callable, Any\
+    \ 等）。\n- Pytest 文档 - 具有功能、插件和参数化的测试框架。\n- Docker + Python 最佳实践 - Python 应用的高效\
+    \ Dockerfile 和容器化。\n- NumPy 文档 - 数组操作、数值计算。\n- Pandas 文档 - 用于数据工程和数据科学的数据处理与分析。\n\
+    - Django 文档 - 全栈 Web 框架：ORM、视图、模型、迁移。\n- Flask 文档 - 用于 REST API 开发的轻量级 Web 框架。\n\
+    - Python 性能技巧（CPython 内部）：内存管理、GIL 和解释器行为的深度解析。\n- Ray 文档 - Python 中的并行/分布式计算，在机器学习和后端日益常见。\n\
+    - Pyright (Microsoft) & mypy 文档 - Python 静态类型检查。\n- Pydantic 文档 - 通过 Python 类型标注进行数据验证（用于\
+    \ FastAPI、JavaGeeks.com 等）。\n- CPython 无线程模式 - PEP 703 - 使 GIL 可选并支持无线程 Python\
+    \ 的提案。\n- Contextlib 模块（官方文档） - 高级上下文管理模式和自定义资源处理程序。\n- Java Code Geeks Python\
+    \ 教程 - 从基础到高级的 Python 开发，我们为你提供！\n\n版权 © 2014 Elexis Media P.C. 版权所有。未经出版者事先许可，本出版物的任何部分不得复制、存储在检索系统中或以任何形式（电子、机械、复印或其他）传输。\n\
+    \n"
+  merge: 0
