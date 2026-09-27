@@ -23,41 +23,39 @@ Davi 的技术生涯始于在 Web 托管行业担任 Linux 系统管理员。在
 
 - **Ron Veen** 是一位资深软件工程师，在 Java 生态系统中拥有超过 20 年的经验。从大型机到微服务，他见证了一切。他对软件工程和架构的热情驱动着他的工作。作为一名认证的 Java 专家（OCP/OCPBCD），Ron 精通从 Apache 到 ZK 的各种框架和库。他还以探索 Kotlin 等替代性 JVM 语言而闻名。作为 Team Rockstars IT 的特工和高级开发人员，Ron 通过国际会议演讲者和其书面作品分享他的知识。他是《基于 Jakarta EE 的 Java 云原生迁移》和《虚拟线程、结构化并发和作用域值》书籍的作者。
 
-- **Stan Komar (Stanisław Kazimierz Komar)** 是一位专注于工业自动化和系统集成的企业主，使用 Rockwell、施耐德、西门子或三菱工具。他从 1973 年起一直活跃在编程领域。尽管他本该退休了，但他非常喜欢他工作的项目，以至于“退休可以等等”。编程世界的变化实在太大，保持与时俱进非常有挑战性。年仅 69 岁的他是一位热爱的网球爱好者。
+- **Stan Komar (Stanisław Kazimierz Komar)** 是一位专注于工业自动化和系统集成的企业主，使用 Rockwell、施耐德、西门子或三菱工具。他从 1973 年起一直活跃在编程领域。尽管他本该退休了，但他非常喜欢他工作的项目，以至于“退休可以等待”。编程世界的变化实在太大，保持与时俱进非常有挑战性。年仅 69 岁的他是一位热爱的网球爱好者。
 
 # 致谢
 
-我清晰地记得小时候，我的哥哥 Bruno Pinheiro de Oliveira 探索电脑，在互联网上发现新事物，并直到深夜还在通过拨号连接下载 Linux。我对比技术的激情就源于那里，感谢他向我灌输了这种热情。
+我清晰地记得小时候，我的哥哥 Bruno Pinheiro de Oliveira 探索电脑，在互联网上发现新事物，并直到深夜还在通过拨号连接下载 Linux。我对技术的激情就源于那里，感谢他向我灌输了这种热情。
 
 我感谢我的父母 Davi 和 Rosimar，他们一直相信并支持我的梦想；也感谢我的妻子 Eloise 和儿子 Davi，在困难时期给了我坚持的理由。
 
-我的 Java 之旅始于学习编程语言，与其说是学习，不如是为了在职业重大变革期间保住我的工作。我仍在旅程中，我想感谢那些通过让我与他们相处而对我的学习做出贡献的人。
+我的 Java 之旅始于学习编程语言，与其说是学习，不如说是为了在职业重大变革期间保住我的工作。我仍在旅程中，我想感谢那些通过让我与他们相处而对我的学习做出贡献的人。
 
 我在 HSBC Global Technology 首次接触企业软件，这为这本书的写作奠定基础至关重要。我永远感谢能与 Ana Moises de Souza、Renan Augusto da Silva、Caio Cesar Ferreira、Marco Aurélio Scheid、Ricardo André Pikussa、Carlos Bochnia、Emilio Fernandes、Adenir Rodrigues Filho、Alejandro Andrade、Jerson Rodrigues（纪念）以及 Luiz Hauth 等卓越人士合作，我永远不会忘记他的领导力课程。
 
 我不能忘记提到 Filipe Negrello，他对我的职业产生了影响。我永远感谢能与 Wilson Bissi、Lucas Maldaner、Mauricio Orozimbo de Silva、Raoni Gabriel、Leonardo Henrique Pereira、Tiago Silvestrini、Wagner Costa、Adriano Wierzicki、Ricardo Ribeiro、Nelmar Alvarenga、Hamilton Santos、Jefferson Lira、Julio Truncasa、Fagner da Silva 以及 Paulo Jorge Lagranha 合作。
 
-自首次发布多年以来，Java 依然如既往地非常重要，支撑着各种规模企业的各类关键应用程序。看到十、二十年前甚至更久以前运行的 Java 应用程序并不罕见，这证明了 Java 健且可靠的本质。硬币的另一面，Java 仍然是许多新项目的首选语言，它们可以选择如 `Spring Boot`、`Quarkus` 或 `Jakarta EE` 等高质量框架，这些框架促进了创新，并让 Java 语言保持活力，以应对云和人工智能时代现代软件开发的挑战。
+自首次发布多年以来，Java 依然如既往地非常重要，支撑着各种规模企业的各类关键应用程序。看到十、二十年前甚至更久以前运行的 Java 应用程序并不罕见，这证明了 Java 健壮且可靠的本质。硬币的另一面，Java 仍然是许多新项目的首选语言，它们可以选择如 Spring Boot、Quarkus 或 Jakarta EE 等高质量框架，这些框架促进了创新，并让 Java 语言保持活力，以应对云和人工智能时代现代软件开发的挑战。
 
-基于这种机遇与创新的格局，本书的编写是为那些决定面对任何严肃 Java 项目可能产生的复杂性、模糊性和困难的人准备的。从探索 Java 基础知识开始，本书回顾了用于高效处理数据结构、文件、异常、日志以及大多数企业 Java 应用中常见的其他要素的核心 Java API 组件。它还
+基于这种机遇与创新的格局，本书的编写是为那些决定面对任何严肃 Java 项目可能产生的复杂性、模糊性和困难的人准备的。从探索 Java 基础知识开始，本书回顾了用于高效处理数据结构、文件、异常、日志以及大多数企业 Java 应用中常见的其他要素的核心 Java API 组件。它还探讨了现代 Java 特性（如密封类、模式匹配、记录模式和虚拟线程）如何被用于构建能够充分发挥 Java 优势的软件系统。书中介绍了如何利用 `Java-Database Connectivity (JDBC)` 和 `Jakarta Persistence APIs (JPA)` 高效处理关系型数据库的技术，从而为 Java 开发奠定坚实的基础。尽管如此，在 Java 基础的背景下，本书仍探索了如何通过单元测试和集成测试来提高整体代码质量。
 
-本书探讨了现代 Java 特性（如密封类、模式匹配、记录模式和虚拟线程）如何被用于构建能够充分发挥 Java 优势的软件系统。书中介绍了如何利用 `Java-Database Connectivity (JDBC)` 和 `Jakarta Persistence APIs (JPA)` 高效处理关系型数据库的技术，从而为 Java 开发奠定坚实的基础。尽管如此，在 Java 基础的背景下，本书仍探索了如何通过单元测试和集成测试来提高整体代码质量。
+在涵盖了 Java 基础之后，本书探讨了如何使用 Spring Boot、Quarkus 和 Jakarta EE 等可靠的软件开发框架，基于开发者友好和高生产力的原则来开发应用程序。这些框架通过让 Java 开发者使用尖端技术和行业标准赋予了他们能力，而这些标准正是大多数关键后端应用程序的基础。
 
-在涵盖了 Java 基础之后，本书探讨了如何使用 `Spring Boot`、`Quarkus` 和 `Jakarta EE` 等可靠的软件开发框架，基于开发者友好和高生产力的原则来开发应用程序。这些框架通过让 Java 开发者使用尖端技术和行业标准赋予了他们能力，而这些标准正是大多数关键后端应用程序的基础。
-
-针对在生产环境中可靠运行 Java 应用的日常挑战，本书描述了至关重要的监控和可观测性技术。这些技术帮助 Java 开发者更好地理解应用程序在不同且完全意料的情况下的运行表现，使开发者在处理瓶颈、可扩展性任何其他可能影响应用程序可用性的问题时，处于更加主动而非被动的地位。
+针对在生产环境中可靠运行 Java 应用的日常挑战，本书描述了至关重要的监控和可观测性技术。这些技术帮助 Java 开发者更好地理解应用程序在不同且完全意料之外的情况下的运行表现，使开发者在处理瓶颈、可扩展性以及任何其他可能影响应用程序可用性的问题时，处于更加主动而非被动的地位。
 
 最后，本书探讨了不同的软件架构思想（如 `领域驱动设计 (DDD)`、分层架构和六边形架构）如何在开发容错性且易于维护的应用中发挥至关重要的作用。这些应用不仅能满足客户需求，还能建立坚实的基础，使开发者能够更优雅地引入代码更改，并减少重构工作。
 
 ## 第 1 章：重新回顾 Java API
 
-本章重新回顾了真实项目中常见的 Java 核心 API。首先探索了 Collections API 的数据结构，展示了在 Java 系统中将数据处理为对象的可能方式。考虑到文件处理的频繁性，本章展示了如何使用 NIO2 操作文件。通过对异常的深入检查以及后续日志 API，为有效的错误处理和增强的日志管理奠定了坚实基础。由于大多数 Java 应用程序都需要处理日期和时间，书中还探索了 Data-Time API。章节最后涵盖了流处理和 Lambda 等函数式编程特性，展示了如何编写更高效简洁的 Java 代码。
+本章重新回顾了真实项目中常见的 Java 核心 API。首先探索了 Collections API 的数据结构，展示了在 Java 系统中将数据处理为对象的可能方式。考虑到文件处理的频繁性，本章展示了如何使用 NIO2 操作文件。通过对异常的深入检查以及后续日志 API，为有效的错误处理和增强的日志管理奠定了坚实基础。由于大多数 Java 应用程序都需要处理日期和时间，书中还探索了 Date-Time API。章节最后涵盖了流处理和 Lambda 等函数式编程特性，展示了如何编写更高效简洁的 Java 代码。
 
 ## 版权
 
 如果您在互联网上发现任何任何形式的作品非法盗版，如果您能提供所在地址或网站名称，我们将不胜感激。请通过 `business@bpbonline.com` 联系我们并附上材料链接。
 
-## 如果您兴趣成为作者
+## 如果您有兴趣成为作者
 
 如果您在某个领域拥有专长，并且对编写或贡献书籍感兴趣，请访问 `www.bpbonline.com`。我们已经与成千上万像您这样的开发者和技术专业人士合作，帮助他们向全球技术社区分享见解。您可以提交通用申请、申请我们正在招募的特定热门话题，或提交您自己的想法。
 
@@ -71,370 +69,243 @@ Davi 的技术生涯始于在 Web 托管行业担任 Linux 系统管理员。在
 
 加入书籍的 Discord 工作空间，获取最新更新、优惠、全球科技动态、新发布以及与作者的交流：
 
-### 序言
-
-### 目标
-
-- 使用 lists 创建有序对象集合
-- 使用 maps 创建键值数据结构
-- 创建路径
-
-### 使用异常进行错误处理
-
-- 未检查异常 (Unchecked exceptions)
-- 创建自定义异常
-- 日志处理程序、级别和格式
-- `LocalDate`
-- `LocalDateTime`
-
+- 序言
+- 目标
+    - 使用 lists 创建有序对象集合
+    - 使用 maps 创建键值数据结构
+    - 创建路径
+- 使用异常进行错误处理
+    - 未检查异常 (Unchecked exceptions)
+    - 创建自定义异常
+    - 日志处理程序、级别和格式
+    - LocalDate
+    - LocalDateTime
 - 函数 (Functions)
 - 消费者 (Consumers)
 - 流的源化
 - 终端操作 (Terminal operation)
+- 结论
+- 序言
+- 结构
+- 目标
+- 使用密封类（sealed classes）获得对继承的更多控制
+- 强制执行继承预期
+- 使用模式匹配（pattern matching）提高代码可读性
+    - 模式匹配简介
+    - 针对模式匹配
+    - 针对 switch 语句的模式匹配
+    - 针对 record 的模式匹配
+- 使用虚拟线程（virtual threads）提高应用吞吐量
+    - 理解 Java 平台线程
+    - 平台线程的局限性
+    - 平台线程与阻塞 IO 操作
+- 使用响应式编程处理阻塞 IO
+- 使用虚拟线程编写简单的并发代码
+- 编译并运行示例项目
+- 结论
 
-### 结论
+## 第 3 章：使用 Java 处理关系型数据库
 
-### 序言
-
-### 结构
-
-### 目标
-
-### 使用密封类（sealed classes）获得对继承的更多控制
-
-### 强制执行继承预期
-
-### 使用模式匹配（pattern matching）提高代码可读性
-
-- 模式匹配简介
-- 针对模式匹配
-- 针对 switch 语句的模式匹配
-- 针对 record 的模式匹配
-
-### 使用虚拟线程（virtual threads）提高应用吞吐量
-
-- 理解 Java 平台线程
-- 平台线程的局限性
-- 平台线程与阻塞 IO 操作
-
-## 使用响应式编程处理阻塞 IO
-
-使用虚拟线程编写简单的并发代码
-
-编译并运行示例项目
-
-### 结论
-
-## 3. 使用 Java 处理关系型数据库
-
-### 序言
-
-### 结构
-
-### 目标
-
-### JDBC 简介
-
-### 使用 JDBC API 创建数据库连接
-
-### 使用 DriverManager 获取数据库连接
-
-### 使用 DataSource 接口获取数据库连接
-
-### 使用 Statement 执行简单查询
-
-### 使用 PreparedStatement 执行参数化查询
-
-### 使用 CallableStatement 调用存储过程
-
-### 使用 ResultSet 处理结果
-
-### 使用 Jakarta Persistence 简化数据处理
-
-### 定义实体
-
-### 定义实体关系
-
-- 多对多 (OneToMany)
-- 多对一 (ManyToOne)
-- 一一 (OneToOne)
-- 多对多 (ManyToMany)
-
-### 使用 Hibernate 处理数据库实体
-
-### 探索 JPQL 和 Criteria API
-
-### 探索数据库时的本地开发方法
-
+- 序言
+- 结构
+- 目标
+- JDBC 简介
+- 使用 JDBC API 创建数据库连接
+- 使用 `DriverManager` 获取数据库连接
+- 使用 `DataSource` 接口获取数据库连接
+- 使用 `Statement` 执行简单查询
+- 使用 `PreparedStatement` 执行参数化查询
+- 使用 `CallableStatement` 调用存储过程
+- 使用 `ResultSet` 处理结果
+- 使用 Jakarta Persistence 简化数据处理
+- 定义实体
+- 定义实体关系
+    - 一对多 (OneToMany)
+    - 多对一 (ManyToOne)
+    - 一对一 (OneToOne)
+    - 多对多 (ManyToMany)
+- 使用 Hibernate 处理数据库实体
+- 探索 JPQL 和 Criteria API
+- 探索数据库时的本地开发方法
 - 远程数据库的本地开发
 - 内存数据库的本地开发
 - 容器数据库的本地开发
+- 运行项目
 
-运行项目
+## 第 4 章：使用测试防止意外行为
 
-## 4. 使用测试防止意外行为
+- 序言
+- 结构
+- 目标
+- 关注单元测试和集成测试
+    - 单元测试
+    - 集成测试
+- 使用 JUnit 5 编写有效的单元测试
+- 设置 JUnit 5
+- 引入账户注册系统
+- 测试账户注册系统
+- 准备-执行-断言（Arrange-Act-Assert）模式
+- 断言 (Assertions)
+- 何时使用 Mockito
+- 在 JUnit 5 中设置 Mockito
+- 为账户注册系统添加外部调用
+- 使用 Mockito 模拟外部调用
+- 使用 Maven 执行测试
+- 使用 Testcontainers 实现可靠的集成测试
+- 设置 Testcontainers
+- 将账户注册系统集成 MySQL
+- 使用 Testcontainers 实现集成测试
+- 使用 Maven 运行集成测试
+- 编译并运行项目
+- 结论
 
-### 序言
+## 第 5 章：使用 Spring Boot 构建生产级系统
 
-### 结构
+- 序言
+- 结构
+- 目标
+- 学习 Spring 基础
+    - 使用 Spring Context 管理 bean
+    - 使用 `@Bean` 注解创建 bean
+    - 使用 Spring 类型注解创建 bean
+        - `@Component` 注解
+        - `@Service` 注解
+        - `@Repository` 注解
+    - 使用类型注解
+    - 使用 `@Autowired` 注入依赖
+    - 使用切面（aspects）提供新的应用行为
+        - 切面 (Aspect)
+        - 连接点 (Joinpoint)
+        - 建议 (Advice)
+        - 切点 (Pointcut)
+    - 使用 Spring AOP
+- 引导启动新的 Spring Boot 项目
+- 使用 Spring Initializr 创建 Spring Boot 项目
+- 使用 Spring Boot 实现 CRUD 应用
+    - 设置依赖
+    - 配置 Spring Boot 应用
+    - 定义数据库实体
+    - 创建仓库
+    - 实现服务
+    - 使用控制器暴露 API 端点
+    - 向 Spring Boot 应用程序发送 HTTP 请求
+    - 编译并运行示例项目
+- 结论
 
-### 目标
+## 第 6 章：使用 Quarkus 提升开发者体验
 
-### 关注单元测试和集成测试
-
-- 单元测试
-- 集成测试
-
-### 使用 JUnit 5 编写有效的单元测试
-
-### 设置 JUnit 5
-
-### 引入账户注册系统
-
-### 测试账户注册系统
-
-### 准备-执行-断言（Arrange-Act-Assert）模式
-
-### 断言 (Assertions)
-
-### 何时使用 Mockito
-
-### 在 JUnit 5 中设置 Mockito
-
-### 为账户注册系统添加外部调用
-
-### 使用 Mockito 模拟外部调用
-
-### 使用 Maven 执行测试
-
-### 使用 Testcontainers 实现可靠的集成测试
-
-### 设置 Testcontainers
-
-### 将账户注册系统集成 MySQL
-
-### 使用 Testcontainers 实现集成测试
-
-使用 Maven 运行集成测试
-
-编译并运行项目
-
-### 结论
-
-## 5. 使用 Spring Boot 构建生产级系统
-
-### 序言
-
-### 结构
-
-### 目标
-
-### 学习 Spring 基础
-
-- 使用 Spring Context 管理 bean
-- 使用 `@Bean` 注解创建 bean
-- 使用 Spring 类型注解创建 bean
-  - `@Component` 注解
-  - `@Service` 注解
-  - `@Repository` 注解
-- 使用类型注解
-- 使用 `@Autowired` 注入依赖
-- 使用切面（aspects）提供新的应用行为
-  - 切面 (Aspect)
-  - 连接点 (Jointpoint)
-  - 建议 (Advice)
-  - 切点 (Pointcut)
-- 使用 Spring AOP
-
-### 引导启动新的 Spring Boot 项目
-
-### 使用 Spring Initializr 创建 Spring Boot 项目
-
-### 使用 Spring Boot 实现 CRUD 应用
-
-- 设置依赖
-- 配置 Spring Boot 应用
-- 定义数据库实体
-- 创建仓库
-- 实现服务
-- 使用控制器暴露 API 端点
-- 向 Spring Boot 应用程序发送 HTTP 请求
+- 引言
+- 目录结构
+- 目标
+- 评估 Quarkus 的益处
+- 启动一个新的 Quarkus 项目
+- 使用 Quarkus 构建 CRUD 应用
+- 使用 Quarkus DI 注入依赖
+    - 托管 Bean (Managed beans)
+    - 应用作用域 Bean (Application-scoped beans)
+    - 单例 Bean (Singleton beans)
+    - 请求范围 Bean (Request-scoped beans)
+- 使用 Hibernate 持久化
+- 配置 Quarkus 以配合数据库
+- 使用 `EntityManager` 处理数据库实体
+- 使用 Panache 简化数据库实体处理
+    - 结合存储库模式的 Panache
+    - 结合活动记录模式的 Panache
+- 使用 Quarkus REST 实现 API
+- 编写原生应用程序
+    - 介绍原生镜像
+    - 使用 Quarkus 创建原生可执行文件
 - 编译并运行示例项目
+- 结论
 
-### 结论
+## 第 7 章：使用 Jakarta EE 和 MicroProfile 构建企业级应用
 
-# 6. 使用 Quarkus 提升开发者体验
-
-### 引言
-
-### 目录结构
-
-### 目标
-
-### 评估 Quarkus 的益处
-
-### 启动一个新的 Quarkus 项目
-
-### 使用 Quarkus 构建 CRUD 应用
-
-### 使用 Quarkus DI 注入依赖
-
-- 托管 Bean (Managed beans)
-- 应用作用域 Bean (Application-scoped beans)
-- 单例 Bean (Singleton beans)
-- 请求范围 Bean (Request-scoped beans)
-
-### 使用 Hibernate 持久化
-
-### 配置 Quarkus 以配合数据库
-
-### 使用 EntityManager 处理数据库实体
-
-### 使用 Panache 简化数据库实体处理
-
-- 结合存储库模式的 Panache
-- 结合活动记录模式的 Panache
-
-### 使用 Quarkus REST 实现 API
-
-### 编写原生应用程序
-
-- 介绍原生镜像
-- 使用 Quarkus 创建原生可执行文件
+- 引言
+- 目录结构
+- 目标
+- Jakarta EE 概述
+- 设计多层架构应用
+    - 客户端层 (Client tier)
+    - Web 层 (Web tier)
+    - 业务层 (Business tier)
+    - 企业信息系统层 (Enterprise information system tier)
+- 探索 Jakarta EE 规范
+    - Jakarta EE Platform 规范
+    - Jakarta EE Web Profile 规范
+    - Jakarta EE Core Profile 规范
+- 打包、部署和运行 Jakarta EE 应用
+    - Java Archive (JAR)
+    - Web Archive (WAR)
+    - Enterprise Archive (EAR)
+- 介绍 MicroProfile
+- 探索 MicroProfile 规范
+    - Jakarta EE Core Profile 规范
+    - MicroProfile 规范
+- 开始一个新的 Jakarta EE 项目
+- 使用 Jakarta EE 构建企业应用
+- 使用 MicroProfile 添加微服务和云原生支持
+- 设置项目
+    - 定义数据源
+    - 实现 Jakarta Persistence 实体
+    - 使用 `EntityManager` 实现存储库 (Repository)
+    - 将服务类实现 Jakarta CDI 托管 Bean
+    - 使用 Jakarta EE 和 MicroProfile 构建 API
+    - 使用 MicroProfile Health 实现健康检查
 - 编译并运行示例项目
+- 结论
 
-## 结论
+## 第 8 章：在云原生环境中运行您的应用程序
 
-# 7. 使用 Jakarta EE 和 MicroProfile 构建企业级应用
-
-### 引言
-
-### 目录结构
-
-### 目标
-
-### Jakarta EE 概述
-
-### 设计多层架构应用
-
-- 客户端层 (Client tier)
-- Web 层 (Web tier)
-- 业务层 (Business tier)
-- 企业信息系统层 (Enterprise information system tier)
-
-### 探索 Jakarta EE 规范
-
-- Jakarta EE Platform 规范
-- Jakarta EE Web Profile 规范
-- Jakarta EE Core Profile 规范
-
-### 打包、部署和运行 Jakarta EE 应用
-
-- Java Archive (JAR)
-- Web Archive (WAR)
-- Enterprise Archive (EAR)
-
-### 介绍 MicroProfile
-
-### 探索 MicroProfile 规范
-
-- Jakarta EE Core Profile 规范
-- MicroProfile 规范
-
-### 开始一个新的 Jakarta EE 项目
-
-### 使用 Jakarta EE 构建企业应用
-
-### 使用 MicroProfile 添加微服务和云原生支持
-
-## 设置项目
-
-### 定义数据源
-
-### 实现 Jakarta Persistence 实体
-
-### 使用 EntityManager 实现存储库 (Repository)
-
-### 将服务类实现 Jakarta CDI 托管 Bean
-
-### 使用 Jakarta EE 和 MicroProfile 构建 API
-
-### 使用 MicroProfile Health 实现健康检查
-
-### 编译并运行示例项目
-
-### 结论
-
-# 8. 在云原生环境中运行您的应用程序
-
-### 引言
-
-### 目录结构
-
-### 目标
-
-### 理解容器技术
-
-- 介绍虚拟化
-  - 全虚拟化 (Full virtualization)
-  - 半虚拟化 (Paravirtualization)
-  - 基于容器的虚拟化
-
-### 探索 Docker
-
-- 学习 Docker 基础
-- 管理 Docker 镜像
-- 创建 Docker 容器
-
-### 介绍 Kubernetes
-
-- Kubernetes 架构
-  - kube-scheduler
-  - kube-apiserver
-  - kube-controller-manager
-  - 容器运行时
-  - kubelet
-  - kube-proxy
-
-### Kubernetes 对象
-
-- Pod
-- Deployment (部署)
-- Service (服务)
-- ConfigMap 和 Secret
-
-### 将 Spring Boot、Quarkus 和 Jakarta EE 应用容器化
-
-- 创建 Spring Boot 应用的可启动 JAR 包
-- 创建 Quarkus 应用的可启动 JAR 包
-- 创建 Jakarta EE 应用的可启动 JAR 包
-- 创建 Docker 镜像
+- 引言
+- 目录结构
+- 目标
+- 理解容器技术
+    - 介绍虚拟化
+    - 全虚拟化 (Full virtualization)
+    - 半虚拟化 (Paravirtualization)
+    - 基于容器的虚拟化
+- 探索 Docker
+    - 学习 Docker 基础
+    - 管理 Docker 镜像
+    - 创建 Docker 容器
+- 介绍 Kubernetes
+    - Kubernetes 架构
+        - kube-scheduler
+        - kube-apiserver
+        - kube-controller-manager
+        - 容器运行时
+        - kubelet
+        - kube-proxy
+- Kubernetes 对象
+    - Pod
+    - Deployment (部署)
+    - Service (服务)
+    - ConfigMap 和 Secret
+- 将 Spring Boot、Quarkus 和 Jakarta EE 应用容器化
+    - 创建 Spring Boot 应用的可启动 JAR 包
+    - 创建 Quarkus 应用的可启动 JAR 包
+    - 创建 Jakarta EE 应用的可启动 JAR 包
+    - 创建 Docker 镜像
 - 在 Kubernetes 上部署基于 Docker 的应用
 - 外部化应用配置
-- 创建 Kubernetes 对象
-- 使用 ConfigMap 提供应用配置
-- 使用 Secret 定义数据库凭据
-- 使用 Deployment 部署应用
-- 使用 Service 允许应用程序
-- 使用 kubectl 安装 Kubernetes 对象
+    - 创建 Kubernetes 对象
+    - 使用 ConfigMap 提供应用配置
+    - 使用 Secret 定义数据库凭据
+    - 使用 Deployment 部署应用
+    - 使用 Service 允许应用程序
+    - 使用 `kubectl` 安装 Kubernetes 对象
 - 编译并运行示例项目
+- 结论
 
-### 结论
+## 第 9 章：学习监控与可观测性基础
 
-## 9. 学习监控与可观测性基础
-
-### 引言
-
-### 目录结构
-
-### 目标
-
-### 理解监控与可观测性
-
-- 监控 (Monitoring)
-- 可观测性 (Observability)
-
-### 使用 Spring Boot 和 Telemetry 实现分布式追踪
+- 引言
+- 目录结构
+- 目标
+- 理解监控与可观测性
+    - 监控 (Monitoring)
+    - 可观测性 (Observability)
+- 使用 Spring Boot 和 Telemetry 实现分布式追踪
 
 
 
@@ -623,13 +494,13 @@ System.out.println(person.equals(samePerson)); // true
 
 
 
-# Java 集合与文件操作
-
-## 对象相等性与 Set 接口
+# 使用 `==` 运算符的相等性检查
 
 使用 `==` 运算符的相等性检查返回 `false`，因为 `person` 和 `samePerson` 指向不同内存地址的对象。当我们使用 `equals` 进行比较时，得到了 `true`，我们现在依赖于检查 `Person` `name` 属性的实现。
 
 关于 Java 中对象相等性的知识是理解 `Set` 接口如何排除重复的基础。所有关于对象相等性的讨论为解决任何我们需要处理的重复数据问题铺平了道路。
+
+## 常用的 `Set` 实现：`HashSet`
 
 常用的 `Set` 实现之一是 `HashSet` 类。以下是我们如何创建并向 `HashSet` 添加对象：
 
@@ -654,11 +525,13 @@ System.out.println(setPersons.size()); // 0
 
 尽管 `Set` 底层由键值 `Map` 接口支持，但我们不能使用 `Set` 来建立一个对象是键、另一个对象是值的双对象关系。因此，我们需要依靠 `Map` 接口及其实现来实现该目的。让我们在下一节中查看。
 
-## 使用 Map 创建键值数据结构
+# 使用 Map 创建键值数据结构
 
 在某些场景下，我们需要比列表或对象集合更复杂的结构来解决问题。
 
-1. 让我们从定义 `Id` 类开始：
+## 1. 定义 `Id` 类
+
+让我们从定义 `Id` 类开始：
 
 ```java
 class Id {
@@ -688,7 +561,9 @@ class Id {
 }
 ```
 
-2. 然后我们创建 `Message` 类：
+## 2. 创建 `Message` 类
+
+然后我们创建 `Message` 类：
 
 ```java
 class Message {
@@ -713,7 +588,9 @@ class Message {
 }
 ```
 
-3. 最后，我们创建 `HandleMessage`：
+## 3. 创建 `HandleMessage`
+
+最后，我们创建 `HandleMessage`：
 
 ```java
 public class HandleMessage {
@@ -747,7 +624,7 @@ public class HandleMessage {
 
 Java 集合框架是一个广泛的主题，内容远超本节涵盖的范围。探讨该主题的每一个方面超出了本书的范围。因此，本节重点关注 Java 项目中常见的集合方法。现在让我们看看如何使用 Java 高效处理文件。
 
-## 使用 NIO 操作文件
+# 使用 NIO 操作文件
 
 在许多情况下，Java 应用程序需要与操作系统交互以处理文件和目录。作者回忆起一个项目，当时使用的系统会生成报告并通过文件提供下载。应用程序会运行逻辑来创建报告，并将其保存到 JVM 运行所在文件系统的某个位置。完成后，应用程序会提供一个下载报告的 URL。
 
@@ -755,7 +632,7 @@ Java 集合框架是一个广泛的主题，内容远超本节涵盖的范围。
 
 我们本节的重点将放在 NIO2 API，因为它提供了处理文件和目录的现代特性。
 
-### 创建路径
+## 创建路径
 
 文件系统代表了操作系统中文件和目录的组织方式。这种表示遵循基于树的结构，我们有一个根目录以及其下的其他目录和文件。我们有两种文件系统，一种源自 Windows，另一种源自 Unix（例如 Linux 或 macOS）。在 Windows 上，根目录通常是 `C:`，而在 Linux 上，它是 `/`。
 
@@ -804,18 +681,17 @@ NIO API 提供了实用的方法以不同的方式操作 `Path` 对象。例如�
 Path absPath = Path.of("/home/");
 Path relativePath = Path.of("./john/textFile.txt");
 Path combinedPath = absPath.resolve(relativePath);
-
 System.out.println(combinedPath); // /home/./john/textFile.txt
 System.out.println(combinedPath.normalize()); // /home/john/textFile.txt
 ```
 
 在 `Path` 中调用的 `resolve` 方法允许将其与另一个 `Path` 对象结合，就像我们对 `absPath` 和相对路径操作的那样。
 
-当打印 `combinedPath` 时，它是冗余的，可以从路径表示中排除。当打印为 `combinedPath` 调用 `normalize` 方法的结果时，我们看到了去除了 `./` 元素的规范后的 `combinedPath`。`normalize` 方法对于清理包含冗余元素（如 `./` 表示当前目录和 `../` 表示上一级目录）的路径非常有帮助。
+当打印 `combinedPath` 时，它是冗余的，可以从路径表示中排除。当打印 `combinedPath` 调用 `normalize` 方法的结果时，我们看到了去除了 `./` 元素的规范后的 `combinedPath`。`normalize` 方法对于清理包含冗余元素（如 `./` 表示当前目录和 `../` 表示上一级目录）的路径非常有帮助。
 
 现在我们知道了如何操作 `Path` 对象，让我们看看如何使用它们来处理文件和目录。
 
-### 处理文件和目录
+## 处理文件和目录
 
 NIO.2 API 提供了 `Files` 类，包含处理文件和目录的工厂方法。以下是如何使用该类的示例：
 
@@ -827,16 +703,18 @@ public class HandlingFilesAndDirectories {
     public static void main(String[] args) throws IOException {
         Path textFile = Files.createFile(Path.of("/tmp/textFile.txt"));
         String content = """
-            First line
-            Second line
-            Third line
-            """;
+First line
+Second line
+Third line
+""";
         Files.writeString(textFile, content, StandardOpenOption.APPEND);
     }
 }
 ```
 
-我们通过 `Files.createFile(Path.of("/tmp/textFile.txt"))` 开始创建一个新文件。`StandardOpenOption.APPEND` 是允许向文件写入数据而不覆盖现有内容的选项。以下显示了我们如何使用 NIO.2 API 实现：
+我们通过 `Files.createFile(Path.of("/tmp/textFile.txt"))` 开始创建一个新文件。`StandardOpenOption.APPEND` 是允许向文件写入数据而不覆盖现有内容的选项。
+
+以下显示了我们如何使用 NIO.2 API 实现目录和文件的检查与移动：
 
 ```java
 Path dirA = Path.of("/tmp/dirA");
@@ -857,11 +735,10 @@ NIO API 提供了读取文件内容的有用方法，例如 `Files.lines` 方法
 
 ```java
 Path newFile = Path.of("/tmp/newFile.txt");
-
 String content = """
-    First Line
-    Second Line
-    """;
+First Line
+Second Line
+""";
 Files.writeString(newFile, content, StandardOpenOption.CREATE);
 ```
 
@@ -869,7 +746,7 @@ Files.writeString(newFile, content, StandardOpenOption.CREATE);
 
 下一节将探讨如何使用异常来处理 Java 应用程序中的意外行为。
 
-## 使用异常处理错误
+# 使用异常处理错误
 
 开发一个健壮的 Java 应用程序意味着理解可能出现的问题以及应用程序如何优雅地处理意外行为。你的应用程序可能存在某种逻辑，当用户提供了应用程序未准备好处理的异常输入时，该逻辑就会崩溃。在将应用程序与数据库集成时，你假设数据总是以一种格式出现。你所调用的 API 可能会更改其契约，导致你的应用程序崩溃。应用程序保存文件的文件系统空间满了，导致保存新文件时失败。关于导致应用程序出现问题的情况，我们可以列出无穷。
 
@@ -881,7 +758,7 @@ Java 架构师已经意识到应用程序可能面临的失败条件，因此，
 
 接下来，让我们来看一些受检异常的案例。
 
-### 受检异常
+## 受检异常
 
 这里我们有一个示例展示了如何使用受检异常：
 
@@ -907,6 +784,10 @@ public class ExceptionAnalysis {
 ```
 
 
+
+# Java 异常处理与日志 API
+
+## try-catch 结构
 
 在 Java 中，我们使用 `try-catch` 结构来处理异常。在 `try` 块内部，放置可能会抛出受检异常的代码。我们可以在 `catch` 块内部处理异常，通过打印友好的错误信息或执行某些操作来从失败条件中恢复。
 
@@ -1002,7 +883,7 @@ throw new NegativeNumberException("Negative numbers are not allowed");
 
 创建、抛出和处理异常有助于开发更直接的应用程序。另一个可以支持故障排除的是我们如何记录日志。让我们在下一节中调查。
 
-## 使用日志 API 改进应用程序维护
+# 使用日志 API 改进应用程序维护
 
 在开发新应用程序时，主要关注的是解决问题。这通常意味着快速且粗糙的代码。这不是最终解决方案，但它可以胜任工作。在这一阶段，我们通过清理和尽可能提高性能来改进代码。我们另一个考虑的是如何记录不同的行为以确保解决方案。毕竟，提供相关的日志消息对于调查系统问题非常有帮助。
 
@@ -1075,7 +956,7 @@ logger.setLevel(Level.INFO);
 
 执行 `TestApp` 程序将导致创建 `/tmp/java-severe-0.log` 文件，内容如下：
 
-```text
+```
 Jan 28, 2024 12:24:44 PM org.corp.TestApp main
 SEVERE: Error while executing operation
 java.lang.Exception: Application failure
@@ -1087,7 +968,7 @@ at org.corp.TestApp.main(TestApp.java:17)
 
 以下是 `Console` 产生的输出：
 
-```text
+```
 Jan 28, 2024 12:24:44 PM org.corp.TestApp main
 INFO: Start operation
 Jan 28, 2024 12:24:44 PM org.corp.TestApp execute
@@ -1104,15 +985,13 @@ INFO: Finish operation
 
 由于我们依赖默认的 `ConsoleHandler` 配置，默认日志级别是 `INFO`，因此在这里我们看到了 `SEVERE` 和 `INFO` 日志消息。
 
-让我们探索如何在 Java 中处理日期和时间。
-
-## 探索 Date-Time API
+# 探索 Date-Time API
 
 Date-Time API 在 JDK 8 中引入，通过 `java.time` 包提供，这是一组表示不同格式日期和时间值的类。在 Date-Time API 出现之前，我们依赖于 `java.util.Date` 类。引入新的 Date-Time API 是为了填补之前的 `java.util.Date` 实现的缺陷。
 
 本节涵盖了 Date-Time API 的一些主要方面，包括日期、时间、带时间的日期以及带时区的日期时间。让我们先检查 `LocalDate` 类是如何工作的。
 
-### LocalDate
+## LocalDate
 
 当我们只对天、月、年的日期表示感兴趣时，我们使用 `LocalDate` 类。你可能正在处理一个提供范围过滤功能的应用程序，其粒度由天定义，排除了任何与小时或月相关的时间。这种情况可以从 `LocalDate` 的功能中受益。以下是创建表示当前日期的 `LocalDate` 方法：
 
@@ -1164,7 +1043,7 @@ System.out.println(LocalDate.of(2024, JANUARY, 28).plusYears(1)); // 2025-01-28
 
 如果我们只对给定日期的时间方面感兴趣怎么办？那就是 `LocalTime` 出现并帮助我们的时候。
 
-### LocalTime
+## LocalTime
 
 
 
@@ -1189,7 +1068,7 @@ System.out.println(LocalTime.of(20, 10, 5).minusSeconds(30)); // 20:09:35
 
 ### LocalDateTime
 
-通过将日期和时间合并到一个对象中，`LocalDateTime` 提供了日期和时间的完整本地表示。“本地”一词意味着这些日期时间对象不包含任何对时区的引用，这在它支持时区的变体中是可能的，我们将在本节稍后看到。
+通过将日期和时间合并到一个对象中，`LocalDateTime` 提供了日期和时间的完整本地表示。本地一词意味着这些日期时间对象不包含任何对时区的引用，这在它支持时区的变体中是可能的，我们将在本节稍后看到。
 
 以下是我们是如何创建 `LocalDateTime` 的：
 
@@ -1219,7 +1098,7 @@ System.out.println(ZonedDateTime.now(ZoneId.of("Japan"))); // 2024-01-29T07:47:4
 
 ```java
 var localDateTime = LocalDateTime.now();
-System.out.println(localDateTime.atZone(ZoneId.of("UTC"))); // 2024-01-28T23:55:27.04617893[UTC]
+System.out.println(ZonedDateTime.of(localDateTime, ZoneId.of("UTC"))); // 2024-01-28T23:55:27.04617893[UTC]
 ```
 
 记住，除非我们强制 **Java 虚拟机 (JVM)** 使用另一个时区，否则 `now()` 方法将根据操作系统的默认时区获取当前日期和时间。上面的示例在创建 `ZonedDateTime` 时获取本地日期，然后将其转换为 UTC。
@@ -1318,7 +1197,7 @@ System.out.println(optionsSupplier.get()); // [Option 1, Option 2, Option 3]
 
 ### 消费者
 
-对于 `Supplier`，我们在不提供输入的情况下获取对象。消费者的方向相反，因为我们给它们输入，但它们不返回任何。我们使用它们对提供的输入执行某些操作。以下是 `Consumer` 函数式接口：
+对于 `Supplier`，我们在不提供输入的情况下获取对象。消费者的方向相反，因为我们给它们输入，但它们不返回任何内容。我们使用它们对提供的输入执行某些操作。以下是 `Consumer` 函数式接口：
 
 ```java
 @FunctionalInterface
@@ -1359,7 +1238,7 @@ print.accept(List.of("Item A", "Item AB", "Item ABC"));
 - 中间操作
 - 终端操作
 
-流源是我们获取作为流进行处理的数据的地方。例如，我们可以使用 `List` 作为流源。中间操作允许我们以流水线的方式操纵数据，其中一个中间操作的结果可以作为另一个中间操作的输入。作为最后一个组件，终端操作决定了流的最终结果。终端操作可以返回一个对象，也可以在不返回任何的情况下处理流数据。
+流源是我们获取作为流进行处理的数据的地方。例如，我们可以使用 `List` 作为流源。中间操作允许我们以流水线的方式操纵数据，其中一个中间操作的结果可以作为另一个中间操作的输入。作为最后一个组件，终端操作决定了流的最终结果。终端操作可以返回一个对象，也可以在不返回任何内容的情况下处理流数据。
 
 让我们从检查如何获取流源开始。
 
@@ -1399,11 +1278,11 @@ Stream<String> intermediateStream3 = ofStrings.map(value -> value.toUpperCase())
 
 
 
-```java
+```
 streamOfStrings
-    .map(value -> value.toUpperCase())
-    .filter(value -> value.contains("1"))
-    .filter(value -> value.contains("3"));
+.map(value -> value.toUpperCase())
+.filter(value -> value.contains("1"))
+.filter(value -> value.contains("3"));
 ```
 
 重要的一点是理解，我们并不是通过创建中间操作来处理数据的。真正的处理只在调用终端操作时才会发生。让我们接下来检查它是否有效。
@@ -1412,27 +1291,28 @@ streamOfStrings
 
 在流数据上创建一个或多个中间操作并不意味着应用程序正在对流数据进行某些操作。我们只是在中间层规定了数据应该如何被处理。只有在我们调用终端操作后，流数据才会被处理。以下是一些终端操作的示例：
 
-```java
-Stream<String> streamOfStrings = Stream.of("Element 1", "Element 2", "Element 3");
+```
+Stream<String> streamOfStrings = Stream.of("Element 1", "Element 2",
+"Element 3");
 ```
 
-```java
+```
 streamOfStrings
-    .map(String::toUpperCase)
-    .filter(value -> value.contains("1"))
-    .forEach(System.out::println); // ELEMENT 1
+.map(String::toUpperCase)
+.filter(value -> value.contains("1"))
+.forEach(System.out::println); // ELEMENT 1
 ```
 
-```java
-// .collect(Collectors.toList()); // [ELEMENT 1]
-// .count(); // 1
+```
+//.collect(Collectors.toList()); // [ELEMENT 1]
+//.count(); // 1
 ```
 
 在连接 `map` 和 `filter` 中间操作后，我们应用了 `forEach` 终端操作。注意，我们使用了更简洁的语法而不是 Lambda 表达式。
 
 我们称之为方法引用，并将其用于以下场景：Lambda 表达式右侧的参数与 Lambda 表达式体部分内部调用的方法的参数相同。在这里，我们有一个方法引用和一个 Lambda，它们产生相同的结果：
 
-```java
+```
 .forEach(System.out::println);
 .forEach(value -> System.out.println(value));
 ```
@@ -1443,20 +1323,23 @@ streamOfStrings
 
 你的机器上需要安装 JDK 21 或以上版本以及 Maven 3.8 或以上版本。要编译项目，请进入书籍的第一章目录。从那里，你需要执行以下命令：
 
-```bash
+```
 $ mvn clean package
 ```
 
 Maven 将创建一个 JAR 文件，你可以通过运行以下命令使用它：
 
-```bash
+```
 $ java -jar target/chapter1-1.0-SNAPSHOT.jar
 ```
 
-```text
-Jan 30, 2024 9:44:15 PM dev.davieviera.report.service.ReportService generateReport
+```
+Jan 30, 2024 9:44:15 PM dev.davieviera.report.service.ReportService
+generateReport
 INFO: Starting to generate report
-Jan 30, 2024 9:44:15 PM dev.davieviera.report.service.ReportService generateReport
+
+Jan 30, 2024 9:44:15 PM dev.davieviera.report.service.ReportService
+generateReport
 INFO: Report generated with success
 ```
 
@@ -1470,7 +1353,7 @@ https://discord.bpbonline.com
 
 ![](img/9b5739f37699f084397670714bf63edd_61_0.png)
 
-# 第二章 探索现代 Java 特性
+## 第二章 探索现代 Java 特性
 
 ## 引言
 
@@ -1517,6 +1400,7 @@ class Printer {
 }
 
 public class Report {
+
     private Printer printer;
 
     Report(Printer printer) {
@@ -1551,12 +1435,12 @@ public class Report extends Printer {
 
 ```java
 abstract class Report {
-    String name;
-    abstract void print();
-    abstract void generate();
-    void printName() {
-        System.out.println("Report " + name);
-    }
+  String name;
+  abstract void print();
+  abstract void generate();
+  void printName() {
+    System.out.println("Report "+name);
+  }
 }
 ```
 
@@ -1564,29 +1448,29 @@ abstract class Report {
 
 ```java
 class PDFReport extends Report {
-    @Override
-    void print() {
-        printName();
-        System.out.println("Print PDF");
-    }
-    @Override
-    void generate() {
-        // Generate PDF
-    }
+  @Override
+  void print() {
+    printName();
+    System.out.println("Print PDF");
+  }
+  @Override
+  void generate() {
+    // Generate PDF
+  }
 }
 ```
 
 ```java
 class WordReport extends Report {
-    @Override
-    void print() {
-        printName();
-        System.out.println("Print Word");
-    }
-    @Override
-    void generate() {
-        // Generate Word
-    }
+  @Override
+  void print() {
+    printName();
+    System.out.println("Print Word");
+  }
+  @Override
+  void generate() {
+    // Generate Word
+  }
 }
 ```
 
@@ -1594,26 +1478,27 @@ class WordReport extends Report {
 
 ```java
 class ExcelReport extends Report {
-    @Override
-    void print() { // Dummy implementation }
+  @Override
+  void print() { // Dummy implementation }
 
-    @Override
-    void generate() {
-        // Generate Excel
-    }
+  @Override
+  void generate() {
+    // Generate Excel
+  }
 }
 ```
 
 `ExcelReport` 类只关心生成报告；它不需要打印任何内容，因此它提供了 `print` 方法的空实现。这并不是我们预期的 `Report` 类的行为。我们的预期是基于 `PDFReport` 和 `WordReport` 类提供的行为。Java 允许我们使用密封类来强制执行此类预期。下面的代码块展示了一个密封类的示例：
 
 ```java
-sealed abstract class Report permits PDFReport, WordReport {
-    String name;
-    abstract void print();
-    abstract void generate();
-    void printReportName() {
-        System.out.println("Report " + name);
-    }
+sealed abstract class Report permits PDFReport,
+WordReport {
+  String name;
+  abstract void print();
+  abstract void generate();
+  void printReportName() {
+    System.out.println("Report "+name);
+  }
 }
 ```
 
@@ -1623,7 +1508,7 @@ sealed abstract class Report permits PDFReport, WordReport {
 
 ```java
 final class WordReport extends Report {
-    // Code omitted //
+  // Code omitted //
 }
 ```
 
@@ -1631,13 +1516,13 @@ final class WordReport extends Report {
 
 ```java
 sealed class WordReport extends Report permits Word97, Word2003 {
-    // Code omitted //
+  // Code omitted //
 }
 final class Word97 extends WordReport {
-    // Code omitted //
+// Code omitted //
 }
 final class Word2003 extends WordReport {
-    // Code omitted //
+  // Code omitted //
 }
 ```
 
@@ -1645,10 +1530,10 @@ final class Word2003 extends WordReport {
 
 ```java
 public sealed abstract class Report permits WordReport {
-    // Code omitted //
+  // Code omitted //
 }
 non-sealed class WordReport extends Report {
-    // Code omitted //
+  // Code omitted //
 }
 ```
 
@@ -1660,19 +1545,19 @@ non-sealed class WordReport extends Report {
 // Code omitted //
 }
 final class WordReport extends Report {
-    // Code omitted //
+// Code omitted //
 }
 final class PDFReport extends Report {
-    // Code omitted //
+  // Code omitted //
 }
 class TestSwitch {
-    int result(Report report) {
-        return switch (report) { // pattern matching switch
-            case WordReport wordReport -> 1;
-            case PDFReport pdfReport -> 2;
-            // there is no need for default
-        };
-    }
+  int result(Report report) {
+    return switch (report) { // pattern matching switch
+      case WordReport wordReport -> 1;
+      case PDFReport pdfReport -> 2;
+      // there is no need for default
+    };
+  }
 }
 ```
 
@@ -1700,7 +1585,7 @@ class TestSwitch {
 $ grep "Line 2" lines.txt
 ```
 
-```text
+```
 Line 2 - Message B
 ```
 
@@ -1747,8 +1632,6 @@ if(object instanceof String name) {
 }
 ```
 
-## 使用模式匹配简化 `equals` 方法
-
 之前的示例显示我们可以不用模式匹配来实现 `equals` 方法。考虑 `Person` 类的 `equals` 方法：
 
 ```java
@@ -1775,9 +1658,9 @@ public class Person {
 }
 ```
 
-## switch 语句的模式匹配
-
 除了检查类型，模式匹配还可以用于 `switch` 表达式。
+
+## switch 语句的模式匹配
 
 `switch` 语句的模式匹配是 Java 19 版本的预览功能，并在 Java 21 中作为非预览功能发布。它允许我们在评估分支条件时利用模式匹配。为了理解它的工作原理，让我们考虑一个使用 `if-else` 的示例：
 
@@ -1814,7 +1697,7 @@ private static void checkParamType(Object param) {
 }
 ```
 
-在 `->` 运算符的左侧，我们有 `String`、`Integer` 和 `Double` 类型，随后分别跟着它们的模式变量 `s`、`i` 和 `d`。在运算符的右侧，我们使用模式变量打印一条消息，说明是哪个 `param` 对象。在评估 `case` 时，我们还可以在正在进行的类型检查的同时包含一个布尔表达式：
+在 `->` 运算符的左侧，我们有 String、Integer 和 Double 类型，随后分别跟着它们的模式变量 s、i 和 d。在运算符的右侧，我们使用模式变量打印一条消息，说明是哪个 param 对象。在评估 `case` 时，我们还可以在正在进行的类型检查的同时包含一个布尔表达式：
 
 ```java
 private static void checkParamType(Object param) {
@@ -1827,7 +1710,7 @@ private static void checkParamType(Object param) {
 }
 ```
 
-在这里，我们检查 `param` 是否为 `Integer` 类型。接下来，我们使用 `when` 子句来检查 `i` 是否为正整数。只有在之前的两个检查都通过时，`case` `->` 运算符的右侧才会被执行。我们将在 case 标签上使用 `when` 子句的行为称为**守卫模式**（guarded patterns）。
+在这里，我们检查 param 是否为 Integer 类型。接下来，我们使用 `when` 子句来检查 i 是否为正整数。只有在之前的两个检查都通过时，`case` `->` 运算符的右侧才会被执行。我们将在 case 标签上使用 `when` 子句的行为称为**守卫模式**（guarded patterns）。
 
 ## 用于 record 的模式匹配
 
@@ -1862,7 +1745,7 @@ public class RecordPatternMatching {
 }
 ```
 
-我们创建了一个新的 `Book` record 并将其传递给 `printAuthor` 方法。然后，我们使用以下结构提取书籍的作者属性值：
+我们创建了一个新的 Book record 并将其传递给 `printAuthor` 方法。然后，我们使用以下结构提取书籍的作者属性值：
 
 ```java
 if (object instanceof Book(var title, var author, var year)) {
@@ -1870,9 +1753,9 @@ if (object instanceof Book(var title, var author, var year)) {
 }
 ```
 
-我们想要匹配的模式类型（即 `instanceof` 运算符之后的内容）是 `Book` record 类型。我们使用所有必需的 record 初始化参数来声明它，包括 `title`、`author` 和 `year`。注意，我们使用 `var` 关键字来引用 `Book` record 属性。在模式 record 匹配表达式中使用 `var` 是合法的。`if` 块内部后续使用的是我们之前通过 `var` 关键字定义的参数打印书籍的作者。在底层，Java 正在调用 `Book` record 类中的访问器方法 `author`。
+我们想要匹配的模式类型（即 `instanceof` 运算符之后的内容）是 Book record 类型。我们使用所有必需的 record 初始化参数来声明它，包括 title、author 和 year。注意，我们使用 `var` 关键字来引用 Book record 属性。在模式 record 匹配表达式中使用 `var` 是合法的。`if` 块内部后续使用的是我们之前通过 `var` 关键字定义的参数打印书籍的作者。在底层，Java 正在调用 Book record 类中的访问器方法 `author`。
 
-通过 `getTitle(Object object)` 方法，我们在定义 `switch` 语句的 `case` 标签时遵循了相同的思路。在那里，我们再次使用其初始化参数声明了 `Book` record 类型。我们还使用了守卫模式来检查 `title` 值是否不空。
+通过 `getTitle(Object object)` 方法，我们在定义 `switch` 语句的 `case` 标签时遵循了相同的思路。在那里，我们再次使用其初始化参数声明了 Book record 类型。我们还使用了守卫模式来检查 title 值是否不空。
 
 # 使用虚拟线程增加应用程序吞吐量
 
@@ -2072,15 +1955,12 @@ Feb 25, 2024 3:04:58 AM
 dev.daviviera.file.service.FileConverterService.convertFile
 INFO: Downloading file from
 https://daviviera.dev/file.pdf
-
 Feb 25, 2024 3:05:00 AM
 dev.daviviera.file.service.FileConverterService.convertFile
 INFO: The file.pdf has been successfully downloaded
-
 Feb 25, 2024 3:05:00 AM
 dev.daviviera.file.service.FileConverterService.convertFile
 INFO: Converting file.pdf to WORD
-
 Feb 25, 2024 3:05:00 AM
 dev.daviviera.file.service.FileConverterService.convertFile
 INFO: Conversion to WORD was successful!
@@ -2102,9 +1982,7 @@ INFO: Conversion to WORD was successful!
 
 ![](img/9b5739f37699f084397670714bf63edd_95_0.png)
 
-# 第 3 章
-
-## 使用 Java 处理关系型数据库
+# 第 3 章：使用 Java 处理关系型数据库
 
 ## 引言
 
@@ -2135,14 +2013,13 @@ Java 数据库连接（JDBC）规范定义了 Java 应用程序如何与关系�
 var user = "test";
 var password = "test";
 var dbName = "test";
-var connection = getConnectionWithDriverManager(user, password,
-dbName);
+var connection = getConnectionWithDriverManager(user, password, dbName);
 System.out.println(connection.isClosed()); // false
 ```
 
 假设本地运行着一个 MySQL 服务器，并且用户、密码和数据库名称定义为 test，我们使用以下结构构建数据库 URL 连接：
 
-protocol:provider:host:port:database
+`protocol:provider:host:port:database`
 
 协议（protocol）通常是 `jdbc`。提供者（provider）代表数据库厂商，在我们案例中是 `mysql`。由于数据库与 Java 运行在同一机器上，因此主机（host）为 `127.0.0.1`。示例中的 MySQL 服务器使用默认端口 `3306`。数据库名称为 `test`。
 
@@ -2159,8 +2036,7 @@ protocol:provider:host:port:database
 1. 配置并创建一个 `DataSource` 对象：
 
 ```java
-private DataSource createDatasource(String user, String
-password, String dbName) {
+private DataSource createDatasource(String user, String password, String dbName) {
     var dataSource = new MySqlDataSource();
     dataSource.setPort(3306);
     dataSource.setUser(user);
@@ -2175,9 +2051,8 @@ a. 应用程序服务器通常负责创建 `DataSource` 对象，但我们在这
 2. 创建一个 `InitialContext` 并将 JNDI 名称绑定到 `DataSource` 对象上：
 
 ```java
-private Context createAndBindContext(DataSource dataSource)
-throws NamingException {
-    var env = new Hashtable(Map.of(Context.INITIAL_CONTEXT_FACTORY, "org.apache.naming.SimpleContextFactory"));
+private Context createAndBindContext(DataSource dataSource) throws NamingException {
+    var env = new Hashtable<>(Map.of(Context.INITIAL_CONTEXT_FACTORY, "org.apache.naming.SimpleContextFactory"));
     Context context = new InitialContext(env);
     context.bind("jdbc/testDB", dataSource);
     return context;
@@ -2399,7 +2274,7 @@ findAndPrintPersonOlderThanAge(29);
 
 `ResultSet` 是一个允许在数据库中检索和持久化数据的接口。每当我们执行 `Statement` 类型对象（包括 `PreparedStatement` 和 `CallableStatement`）的 `executeQuery` 方法时，结果都是 `ResultSet`，因为 `executeQuery` 方法用于用于是从数据库中检索数据的 `SELECT` 语句。在使用 `UPDATE` 或 `DELETE` 语句更改数据库时也会使用 `executeUpdate` 方法。`executeUpdate` 返回一个整数，表示受 `UPDATE` 或 `DELETE` 语句影响的行数。本节将关注 `executeQuery` 方法及其返回的 `ResultSet`。
 
-从数据库查询时，我们对查询返回的行和列感兴趣。`ResultSet` 接口允许我们检查 `SELECT` 在数据库中执行后返回的内容。以下命令将帮助我们获取一个 `ResultSet`：
+从数据库查询时，我们对查询返回的行和列感兴趣`ResultSet` 接口允许我们检查 `SELECT` 在数据库中执行后返回的内容。以下命令将帮助我们获取一个 `ResultSet`：
 
 ```java
 var fetchAllPersons = "SELECT * FROM PERSON";
@@ -2886,19 +2761,29 @@ public User findByEmail(String email) {
 
 
 
-# 第 3 章：使用 Jakarta Persistence 和 Hibernate 管理数据
+# 作为一个示例项目，我们有一个名为 User Management（用户管理）的 Java 应用程序
 
-作为一个示例项目，我们有一个名为 User Management（用户管理）的 Java 应用程序。该程序由内存数据库提供支持，展示了我们如何使用 Jakarta Persistence 和 Hibernate 来创建一个系统，用于管理和分组来自关系型数据库的数据。
+该程序由内存数据库提供支持，展示了我们如何使用 Jakarta Persistence 和 Hibernate 来创建一个系统，用于管理和分组来自关系型数据库的数据。
+
+## 项目源代码
 
 项目的源代码位于：
 
-`https://github.com/bpbpublications/Java-Real-World-Projects/tree/main/Chapter%2003`
+https://github.com/bpbpublications/Java-Real-World-Projects/tree/main/Chapter%2003.
 
-你需要在机器上安装 JDK 21 或更高版本，以及 Maven 3.8 或更高版本。要编译它，请进入仓库中的第 3 章目录。从那里，你需要执行以下命令：
+## 环境要求
+
+你需要在机器上安装 `JDK 21` 或更高版本，以及 `Maven 3.8` 或更高版本。
+
+## 编译项目
+
+要编译它，请进入仓库中的第 3 章目录。从那里，你需要执行以下命令：
 
 ```
 $ mvn clean package
 ```
+
+## 运行应用程序
 
 Maven 将创建一个 JAR 文件，我们可以通过运行以下命令来启动该应用程序：
 
@@ -2906,7 +2791,7 @@ Maven 将创建一个 JAR 文件，我们可以通过运行以下命令来启动
 $ java -jar target/chapter03-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
-输出示例：
+## 运行结果示例
 
 ```
 [User(email=admin@daviviera.dev, name='Admin', groups=[Group(name='Administrators')], User(email=user1@daviviera.dev, name='User 1', groups=[Group(name='Users')], User(email=user2@daviviera.dev, name='User 2', groups=[Group(name='Users')]), User(email=user3@daviviera.dev, name='User 3', groups=[Group(name='Users')])
@@ -2918,8 +2803,10 @@ $ java -jar target/chapter03-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 在下一章中，我们将涵盖用于测试 Java 代码的技术和技巧。我们将关注核心主题，如单元测试和集成测试、流行的测试框架 `JUnit 5`，以及使用 `Testcontainers` 测试真实系统的能力。
 
-1. `https://github.com/h-thurow/Simple-JNDI`
-2. `https://hibernate.org/`
+## 参考链接
+
+1. https://github.com/h-thurow/Simple-JNDI
+2. https://hibernate.org/
 
 # 第 4 章：通过测试防止意外行为
 
@@ -3146,7 +3033,9 @@ public class ValidatorServiceTest {
 
 ```java
 // Execute and Pre-assert
-Exception exception = assertThrows(Exception.class, () -> {
+Exception exception =
+assertThrows(Exception.class, () -> {
+
     validatorService.validateAccount(accountPayload);
 });
 ```
@@ -3155,7 +3044,7 @@ Exception exception = assertThrows(Exception.class, () -> {
 
 ```java
 // Post-assert
-String expected = "Email format is not valid";
+String expected = "Email format is not valid"
 String actual = exception.getMessage();
 assertEquals(actual, expected);
 ```
@@ -3217,7 +3106,7 @@ public class RegistrationService {
     private final AccountRepository accountRepository;
 
     public RegistrationService(ValidatorService validatorService,
-                               AccountRepository accountRepository) {
+    AccountRepository accountRepository) {
         this.validatorService = validatorService;
         this.accountRepository = accountRepository;
     }
@@ -3225,27 +3114,27 @@ public class RegistrationService {
 }
 ```
 
-我们已经用上了之前实现的 `ValidatorService`，并且 `AccountRepository` 意在数据库中持久化数据。现在我们来实现注册账户的逻辑：
+我们已经使用了之前实现的 `ValidatorService`，并且 `AccountRepository` 意在数据库中持久化数据。现在我们来实现注册账户的逻辑：
 
 ```java
 public class RegistrationService {
-    // Code omitted
+    //Code omitted
     public Account register(AccountPayload accountPayload) throws Exception {
         validatorService.validateAccount(accountPayload);
         return createAccount(accountPayload);
     }
+}
 
-    private Account createAccount(AccountPayload accountPayload) {
-        var account = new Account(
-            accountPayload.email(),
-            accountPayload.password(),
-            accountPayload.birthDate(),
-            Instant.now(),
-            Status.ACTIVE
-        );
-        accountRepository.persist(account); // Throws RuntimeException
-        return account;
-    }
+private Account createAccount(AccountPayload accountPayload) {
+    var account = new Account(
+        accountPayload.email(),
+        accountPayload.password(),
+        accountPayload.birthDate(),
+        Instant.now(),
+        Status.ACTIVE
+    );
+    accountRepository.persist(account); // Throws RuntimeException
+    return account;
 }
 ```
 
@@ -3311,9 +3200,8 @@ public class RegistrationServiceTest {
                 () -> assertEquals(account.email(), email),
                 () -> assertEquals(account.password(), password),
                 () -> assertEquals(account.birthDate(), birthDate),
-                () -> assertEquals(account.status(), Status.ACTIVE)
-            );
-}
+                () -> assertEquals(account.status(), ACTIVE);
+        }
 // Code omitted
 }
 ```
@@ -3594,25 +3482,25 @@ mvn integration-test
 
 要运行应用程序的单元测试，请进入书籍仓库中的第 4 章目录。在该目录下，你需要执行以下命令：
 
-```bash
+```
 $ mvn test
 ```
 
 执行以下命令运行集成测试：
 
-```bash
+```
 $ mvn integration-test
 ```
 
 执行以下命令编译应用程序：
 
-```bash
+```
 $ mvn clean package
 ```
 
 在启动应用程序之前，执行以下命令来启动 MySQL Docker 容器：
 
-```bash
+```
 $ docker-compose up -d
 ```
 
@@ -3620,7 +3508,7 @@ $ docker-compose up -d
 
 最后，我们可以启动应用程序：
 
-```bash
+```
 $ java -jar target/chapter04-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
 
@@ -3630,9 +3518,9 @@ Account[email=test@daviviera.dev, password=123456, birthDate=1980-01-01, Creatio
 
 # 结
 
-当我们谈论 Java 应用程序测试时，我们主要指的是运行单元测试和集成测试。理解它们是什么、它们的优点以及如何使用它们，是任何 Java 开发者的基础技能。在本章中，我们学习了由 JUnit 5 支持的单元测试如何能够在方法级、自包含层面上验证应用程序的行为，这些方法包含一系列指令序列，也包括包含外部资源调用（如数据库访问）的方法。对于此类方法，我们学习了如何使用 Mockito 模拟外部调用。接下来，我们利用了 Testcontainers 的功能来为集成测试快速提供容器。
+当我们谈论 Java 应用程序测试时，我们主要指的是运行单元测试和集成测试。理解它们是什么、它们的优点以及如何使用它们，是任何 Java 开发者的基础技能。在本章中，我们学习了由 `JUnit 5` 支持的单元测试如何能够在方法级、自包含层面上验证应用程序的行为，这些方法包含一系列指令序列，也包括包含外部资源调用（如数据库访问）的方法。对于此类方法，我们学习了如何使用 `Mockito` 模拟外部调用。接下来，我们利用了 `Testcontainers` 的功能来为集成测试快速提供容器。
 
-在下一章中，我们将研究 Java 软件开发框架，从 Spring Boot 开始我们的探索。我们将涵盖 Spring Boot 框架的基础知识，学习如何引导一个新项目，使用 Spring Web 实现 RESTful API，并使用 Spring Data JPA 持久化数据。
+在下一章中，我们将研究 Java 软件开发框架，从 `Spring Boot` 开始我们的探索。我们将涵盖 `Spring Boot` 框架的基础知识，学习如何引导一个新项目，使用 `Spring Web` 实现 RESTful API，并使用 `Spring Data JPA` 持久化数据。
 
 # 加入我们书籍的 Discord 空间
 
@@ -3648,9 +3536,9 @@ https://discord.bpbonline.com
 
 软件开发框架构成了大多数企业级应用程序的基石，为开发健壮系统提供了基础。依赖框架提供的功能还可以为我们节省宝贵的时间。在意识到开发框架可以提供的优势后，我们将探索 Essential Spring Boot 特性来构建 Java 应用程序。
 
-多年来，Spring Boot 已成为最受欢迎的软件开发框架之一，广泛应用于各行各业。如果你是一个经验丰富的 Java 开发者，在你的职业生涯中至少遇到过一个 Spring Boot 应用程序。如果你是一个初级开发者，很有可能在你的开发之旅中遇到 Spring Boot 应用程序。无论你经验多么丰富，了解 Spring Boot 都是在 Java 开发市场中保持竞争力的基础技能。
+多年来，`Spring Boot` 已成为最受欢迎的软件开发框架之一，广泛应用于各行各业。如果你是一个经验丰富的 Java 开发者，在你的职业生涯中至少遇到过一个 `Spring Boot` 应用程序。如果你是一个初级开发者，很有可能在你的开发之旅中遇到 `Spring Boot` 应用程序。无论你经验多么丰富，了解 `Spring Boot` 都是在 Java 开发市场中保持竞争力的基础技能。
 
-本章从对 Spring 基础知识的简要介绍开始，然后通过实践方法从零开始开发一个支持 RESTful 的简单 CRUD Spring Boot 应用程序。
+本章从对 Spring 基础知识的简要介绍开始，然后通过实践方法从零开始开发一个支持 RESTful 的简单 CRUD `Spring Boot` 应用程序。
 
 ## 结构
 
@@ -3663,21 +3551,21 @@ https://discord.bpbonline.com
 
 ## 目标
 
-在本章结束时，你将掌握构建 Spring Boot 应用程序的基础技能，通过 RESTful API 处理 HTTP 请求并使用 Spring Data JPA 将数据持久化到关系型数据库中。你还将掌握 Spring Boot 的“约定优于配置”的理念如何帮助你快速搭建新应用程序，而无需在配置细节上花费过多时间。通过本章的知识，你将具备应对挑战性 Spring Boot 项目的核心要素。
+在本章结束时，你将掌握构建 `Spring Boot` 应用程序的基础技能，通过 RESTful API 处理 HTTP 请求并使用 `Spring Data JPA` 将数据持久化到关系型数据库中。你还将掌握 `Spring Boot` 的“约定优于配置”的理念如何帮助你快速搭建新应用程序，而无需在配置细节上花费过多时间。通过本章的知识，你将具备应对挑战性 `Spring Boot` 项目的核心要素。
 
 ## 学习 Spring 基础知识
 
-在我们构建 Spring Boot 应用程序之旅开启，让我们先了解 Spring 的力量及其核心概念。这些是使 Spring Boot 成为 Java 开发者热门选择的构建模块。
+在我们构建 `Spring Boot` 应用程序之旅开启，让我们先了解 Spring 的力量及其核心概念。这些是使 `Spring Boot` 成为 Java 开发者热门选择的构建模块。
 
 以前，如果你想构建支持事务、安全和数据持久化的应用程序，可以使用名为 Java Enterprise Edition (EE) 的框架。这是最初由 Sun Microsystems 提供的官方框架，后由 Oracle 收购。Oracle 继续维护 Java EE 直到它决定通过将项目交给 Eclipse Foundation 来开源该项目，后者将其更名为 Jakarta EE。
 
 在早期发布中使用 Java EE 创建应用程序并没有提供最佳的开发者体验。尽管足以支持任务关键应用程序的开发，但 Java EE 规范难以使用，需要开发者付出大量努力才能让一切就绪。正是在 2002 年左右，Rod Johnson 决定创建 Spring 框架，以提供与 EE 类似的功能，但没有官方框架的复杂性。实际上，Spring 框架被创建作为 Java EE 的接口，为 servlet、JPA（Java 持久化 API）和基于 JMS（Java 消息服务）的消息传递等 EE 特性提供了更简单的抽象。从那时起，由于易用性、经过时间考验的稳定性、卓越的开发者体验以及活跃的社区，Spring 框架的采用率多年大幅增加。
 
-Spring 现在是一个框架生态系统，服务于软件开发中最多样化的项目。在 Spring 项目的骨干之上，还有其他项目如 Spring Data JPA、Spring Security，当然还有 Spring Boot。
+Spring 现在是一个框架生态系统，服务于软件开发中最多样化的项目。在 Spring 项目的骨干之上，还有其他项目如 `Spring Data JPA`、`Spring Security`，当然还有 `Spring Boot`。
 
-Spring Core 项目提供了大多数 Spring 应用中常见的上下文（context）、依赖注入和切面（aspects）等功能。
+`Spring Core` 项目提供了大多数 Spring 应用中常见的上下文（`ApplicationContext`）、依赖注入和切面（`Aspect`）等功能。
 
-Spring Boot 项目则采用了 Spring 维护者的观点（opinionated view），提供了一个让开发者能够快速引导新应用程序的框架，遵循约定优于配置的哲学。
+`Spring Boot` 项目则采用了 Spring 维护者的观点（opinionated view），提供了一个让开发者能够快速引导新应用程序的框架，遵循约定优于配置的哲学。
 
 让我们从学习什么是 Spring 上下文以及如何使用它来管理被称为 Bean 的对象开始探索。
 
@@ -3689,7 +3577,7 @@ Spring Boot 项目则采用了 Spring 维护者的观点（opinionated view）�
 
 文件配置。然而，由于 XML 方法现在已不再常见，因为它更加冗长且难以维护。使用 Spring 刻型注解（如 `@Component` 或 `@Service`）创建 bean 是可能的。接下来，让我们学习如何使用 `@Bean` 注解创建 bean。
 
-### 使用 @Bean 注解创建 bean
+### 使用 `@Bean` 注解创建 bean
 
 为了理解 Spring 上下文和 bean 背后的原理，让我们考虑以下示例：
 
@@ -3702,15 +3590,19 @@ class Person {
 
 ```java
 public class PersonExample {
-    public static void main(String... args) {
-        var person = new Person();
-        person.setName("John Doe");
-        System.out.println(person.getName()); // John Doe
-    }
+```
+
+```java
+public static void main(String... args) {
+    var person = new Person();
+    person.setName("John Doe");
+    System.out.println(person.getName()); // John Doe
 }
 ```
 
-在上一个示例中，我们使用类的构造函数创建了 Person 对象。然而，还有另一种方法，可以让 Spring 负责对象的创建。考虑以下示例，Spring 负责创建 Person 对象：
+以下步骤描述了 `Person` 和 `PersonExample` 类是如何实现的：
+
+在上一个示例中，我们使用类的构造函数创建了 `Person` 对象。然而，还有另一种方法，可以让 Spring 负责对象的创建。考虑以下示例，Spring 负责创建 `Person` 对象：
 
 ```java
 @Configuration
@@ -3724,13 +3616,17 @@ class PersonConfiguration {
 }
 ```
 
+// 省略代码
+
 ```java
 public class PersonExample {
-    public static void main(String... args) {
-        var context = new AnnotationConfigApplicationContext(PersonConfiguration.class);
-        var person = context.getBean(Person.class);
-        System.out.println(person.getName()); // John Doe
-    }
+```
+
+```java
+public static void main(String... args) {
+    var context = new AnnotationConfigApplicationContext(PersonConfiguration.class);
+    var person = context.getBean(Person.class);
+    System.out.println(person.getName()); // John Doe
 }
 ```
 
@@ -3739,7 +3635,7 @@ public class PersonExample {
 1. 我们在 `PersonConfiguration` 类上放置了 `@Configuration` 注解。`@Configuration` 注解告诉我们使用 Java 类来配置 Spring 上下文。
 2. 我们在 `person` 方法上方放置了 `@Bean` 注解。该注解告诉 Spring 根据被注解的方法创建一个新的对象实例。
 3. 在 `person` 方法内部，我们创建了一个新的 `Person` 实例，设置了它的名称属性并返回它。Bean 有名称；按照惯例，bean 的名称与其产生 bean 的方法命名，在我们的示例中是 `person`。
-4. 要使用 Person bean，我们需要通过传递配置类来初始化 Spring 上下文：
+4. 要使用 `Person` bean，我们需要通过传递配置类来初始化 Spring 上下文：
    ```java
    var context = new AnnotationConfigApplicationContext(PersonConfiguration.class);
    ```
@@ -3796,6 +3692,9 @@ public Person anotherPerson() {
     return person;
 }
 ...
+```
+
+```java
 var person = context.getBean("mary", Person.class);
 System.out.println(person.getName()); // Mary Doe
 ```
@@ -3858,7 +3757,7 @@ class Person {
 
 使用刻型注解 `@Component` 创建的 bean 与使用 `@Bean` 注解创建的 bean 之间的区别在于，刻型注解只能用于我们的类。相比之下，`@Bean` 方法允许我们从第三方类（如第三方库）创建 bean。
 
-### 使用 `@Autowired` 注入依赖
+### 使用 @Autowired 注入依赖
 
 面向对象的编程中，类可以通过依赖其他类提供的行为和数据来增强其能力。这被称为组合，是继承的一种良好替代方案。此类类代表了需要以某种方式提供的依赖项的类。如果没有依赖注入，类必须自己创建它所依赖的类的实例。考虑以下示例：
 
@@ -4019,11 +3918,11 @@ class Person {
 
 `drive` 条目，它指向 `dev.davivieira.Skills` 类，`drive()` 方法在该类中执行。`drive()` 方法执行后，`LogSkillAspect` 类重新接管控制权并提供最后的“Skill执行成功”日志条目。
 
-切面（Aspects）、Bean（Beans）和依赖注入构成了大多数 Spring Boot 应用的构建模块。现在我们已经理解了这些构建模块是如何工作的，让我们来探索如何启动一个新的 Spring Boot 项目。
+切面、Bean 和依赖注入构成了大多数 Spring Boot 应用的构建模块。现在我们已经理解了这些构建模块是如何工作的，让我们来探索如何启动一个新的 Spring Boot 项目。
 
 ## 启动一个新的 Spring Boot 项目
 
-作为 Spring Framework 生态的一部分，Spring Boot 让开发者能够快速启动新的应用程序。Spring Boot 框架遵循“约定优于配置”（convention over configuration）的思想构建。这是基于对大多数 Spring 应用开发方式的观察。这些观察让 Spring 维护者识别出这些应用程序共享的特定标准；这些标准基于特定的 Spring 组件将如何被配置。架构师们发现，大多数情况下，许多不同 Spring 应用中这些组件的配置是相同的。那么，为什么不在使用 Spring Boot 时将这种配置作为默认约定呢？因此，这种约定优于配置的原则成为了 Spring Boot 的基石。
+作为 Spring Framework 生态的一部分，Spring Boot 让开发者能够快速启动新的应用程序。Spring Boot 框架遵循“约定优于配置”的思想构建。这是基于对大多数 Spring 应用开发方式的观察。这些观察让 Spring 维护者识别出这些应用程序共享的特定标准；这些标准基于特定的 Spring 组件将如何被配置。架构师们发现，大多数情况下，许多不同 Spring 应用中这些组件的配置是相同的。那么，为什么不在使用 Spring Boot 时将这种配置作为默认约定呢？因此，这种约定优于配置的原则成为了 Spring Boot 的基石。
 
 你获得的应用程序，其大部分配置已经根据大多数应用程序的配置约定由 Spring Boot 提供了。你不需要从零开始配置应用程序，只需要更改与你的项目相关的配置部分。
 
@@ -4106,25 +4005,21 @@ $ mvn clean package
 $ java -jar target/sample-project-0.0.1-SNAPSHOT.jar
 ```
 
+```yaml
 datasource:
-
   url: jdbc:h2:mem:mydb
-
   username: sa
-
   password: password
-
   driverClassName: org.h2.Driver
-
 jpa:
-
   database-platform: org.hibernate.dialect.H2Dialect
+```
 
-利用 YAML 语法，我们通过数据源配置提供连接详情，指令 Spring Boot 使用 H2 内存数据库。
+利用 YAML 语法，我们通过数据源配置提供连接详情，指示 Spring Boot 使用 H2 内存数据库。
 
 为了确保 Spring Boot 应用程序可以启动，我们实现了 `SpringSampleApplication` 类：
 
-```
+```java
 @SpringBootApplication
 public class SpringSampleApplication {
 
@@ -4140,7 +4035,7 @@ public class SpringSampleApplication {
 
 我们想要使用 Spring Boot 应用程序操作 `Person` 数据库实体。为了实现这一点，我们首先需要实现一个数据库实体类：
 
-```
+```java
 @Entity
 public class Person {
 
@@ -4158,14 +4053,14 @@ public class Person {
 
 为了处理 `Person` 数据库实体，我们需要实现一个仓库接口：
 
-```
+```java
 @Repository
 public interface PersonRepository extends CrudRepository<Person, String> {
     Optional<Person> findByEmail(String email);
 }
 ```
 
-`CrudRepository` 是 Spring 提供的一个接口，包含了许多标准的数据库操作，包括 `delete`、`save` 和 `findAll`。通过扩展 `CrudRepository`，我们可以在 `PersonRepository` 接口上声明 `findByEmail` 来创建新的操作，如上面的示例。`CrudRepository` 是一个泛型，其中我们需要指定由仓库处理的实体类（在我们的示例中为 `Person`）以及实体 ID 使用的类型（因为实体是 ID，所以是 `String`）。
+`CrudRepository` 是 Spring 提供的一个接口，包含了许多标准的数据库操作，包括 `delete`、`save` 和 `findAll`。通过扩展 `CrudRepository`，我们可以在 `PersonRepository` 接口上声明 `findByEmail` 来创建新的操作，如上面的示例。`CrudRepository` 是一个泛型，其中我们需要指定由仓库处理的实体类（在我们的示例中为 `Person`）以及实体 ID 使用的类型（因为实体 ID 是 `String` 类型，所以是 `String`）。
 
 遵循“约定优于配置”（convention-over-configuration）的方法，Spring Data JPA 允许我们定义 `findByX` 方法，其中 `X` 可以是实体属性之一。
 
@@ -4175,7 +4070,7 @@ public interface PersonRepository extends CrudRepository<Person, String> {
 
 让服务类包含与数据库实体相关的逻辑是一种常见做法。此外，引入服务类是为了形成一个服务层，作为数据层与仓库类之间通信的媒介。以下代码可实现 `PersonService` 类：
 
-```
+```java
 @Service
 public class PersonService {
 
@@ -4206,13 +4101,13 @@ public class PersonService {
 
 Spring Boot 将 `PersonRepository` 类注入到 `PersonService` 的构造函数中。在这里 `@Autowired` 注解不是强制的，因为 Spring Boot 理解构造函数的参数是需要注入的依赖项。尽管如此，我们保留了它，以强调 `PersonService` 构造函数中发生的依赖注入活动。
 
-此时，我们已经有了应用程序的实体、仓库和类类。唯一缺失的是一个暴露 API 端点的控制器类。
+此时，我们已经有了应用程序的实体、仓库和服务类。唯一缺失的是一个暴露 API 端点的控制器类。
 
 ### 使用控制器暴露 API 端点
 
 我们必须实现一个控制器类来定义端点，让外部客户端与系统交互，允许 Spring Boot 应用程序接收 HTTP 请求。我们通过实现 `PersonController` 类来实现这一点：
 
-```
+```java
 @RestController
 public class PersonController {
 
@@ -4242,11 +4137,11 @@ public class PersonController {
 
 我们在 `PersonController` 类上方放置了 `@RestController` 注解，从而提供了处理 HTTP 请求的方法。注意我们使用了如 `@GetMapping` 和 `@PostMapping` 等注解。我们使用它们来定义端点的相对 URL 以及其支持的 HTTP 方法（如 GET 或 POST）。
 
-注意我们还对 `Person` 类使用了 `@RequestBody` 注解。该注解允许 Spring Boot 将 JSON 负载的请求属性映射到类中。如果我们发送一个带有 `email` 和 `name` 属性的 JSON 负载，Spring Boot 将将这些属性赋给 `Person` 类。
+注意我们还对 `Person` 类使用了 `@RequestBody` 注解。该注解允许 Spring Boot 将 JSON 负载的请求属性映射到类中。如果我们发送一个带有 `email` 和 `name` 属性的 JSON 负载，Spring Boot 将把这些属性赋给 `Person` 类。
 
 我们还可以传递 URL 参数，就像我们在 `@GetMapping("/person/{email}")` 中做的那样，其中 `email` 参数由 `@PathVariable` 注解捕获。
 
-控制器是是我们 CRUD 操作的最后一部分。让我们在接下来看看如何使用它。
+控制器是我们 CRUD 操作的最后一部分。让我们在接下来看看如何使用它。
 
 ## 向 Spring Boot 应用程序发送 HTTP 请求
 
@@ -4308,7 +4203,7 @@ java -jar target/chapter05-1.0-SNAPSHOT.jar
 
 在下一章中，我们将通过探索 Quarkus 的云原生方法，继续我们的 Java 框架学习之旅。我们将学习 Quarkus 提供的优势，以及如何启动一个新的 Quarkus 项目，该项目将作为开发探索 Quarkus 特性（如 Quarkus DI、Quarkus REST 和 Panache）系统的基础。
 
-## 第 6 章 使用 Quarkus 提升开发者体验
+# 第 6 章 使用 Quarkus 提升开发者体验
 
 ## 引言
 
@@ -4330,7 +4225,7 @@ Quarkus 被设计为一种云原生（cloud-first）的框架，为创建运行�
 
 ## 评估 Quarkus 的优势
 
-此前，Java 开发与能够赋能开发者构建优化以利用云环境优势的框架之间并没有联系。在云原生开发实践像今天这样变得普及之前，看到许多 Java 项目依赖于 WebSphere 或 WebLogic 等旧式的应用程序服务器是很常见的现象。任何工作过此类技术的人都理解，要用配置良好的应用程序服务器来搭建本地开发环境是非常非易的。
+此前，Java 开发与能够赋能开发者构建优化以利用云环境优势的框架之间并没有联系。在云原生开发实践像今天这样变得普及之前，看到许多 Java 项目依赖于 WebSphere 或 WebLogic 等旧式的应用程序服务器是很常见的现象。任何工作过此类技术的人都理解，要用配置良好的应用程序服务器来搭建本地开发环境是非常不易的。
 
 随着计算资源成本的降低，像容器这样的虚拟化技术变得流行，允许更快的开发。开发者拥抱了一种新方法，而不是将他们的 Java 系统封装在旧式的应用程序服务器中运行，而是开始将其封装在 Docker 容器中运行在 Kubernetes 集群中。然而，这不仅仅是将应用程序打包到不同的环境中运行。在云端拥有 Java 应用创造了机遇和挑战，迫使开发者思考新的方法来设计他们的应用程序，以最大限度地利用云环境提供的资源。
 
@@ -4342,7 +4237,7 @@ Quarkus 最关键的点之一是它依赖行业标准来提供大多数企业所
 
 除了云原生和符合行业标准外，Quarkus 的设计旨在提高开发者的生产力和快乐。诸如热编码（live coding）等特性允许开发者无需重启应用程序即可看到代码更改的影响，节省了宝贵的开发者时间（这些时间本会被浪费在停止、重新编译和重启应用程序上）。
 
-Quarkus 是一个拥有许多不同场景的巨大框架。因此，本章将只关注大多数 Quarkus 项目中使用的基础框架组件。我们将从学习如何引导启动一个新的 Quarkus 应用开始。在我们 Quarkus 应用运行起来后，我们将探索如何学习 Quark DI 以通过 CDI 管理应用程序的对象。然后，我们学习 Quarkus 如何使用 Hibernate ORM 和 Jakarta Persistence 与数据库交互。最后，我们将探索如何使用 Quarkus REST 创建 RESTful 端点。
+Quarkus 是一个拥有许多不同场景的巨大框架。因此，本章将只关注大多数 Quarkus 项目中使用的基础框架组件。我们将从学习如何引导启动一个新的 Quarkus 应用开始。在我们 Quarkus 应用运行起来后，我们将探索如何学习 Quarkus DI 以通过 CDI 管理应用程序的对象。然后，我们学习 Quarkus 如何使用 Hibernate ORM 和 Jakarta Persistence 与数据库交互。最后，我们将探索如何使用 Quarkus REST 创建 RESTful 端点。
 
 我们将从学习如何启动一个新的 Quarkus 项目开始。
 
@@ -4408,13 +4303,20 @@ $ quarkus ext list --concise -i
 
 当前可安装的 Quarkus 扩展：
 
++ ArtifactId
+* blaze-persistence-integration-quarkus-3
+* camel-quarkus-activemq
+* camel-quarkus-amqp
+* camel-quarkus-arangodb
+
 | ArtifactId | Extension Name |
 |---|---|
 | blaze-persistence-integration-quarkus-3 | Blaze-Persistence |
 | camel-quarkus-activemq | Camel ActiveMQ |
 | camel-quarkus-amqp | Camel AMQP |
 | camel-quarkus-arangodb | Camel ArangoDB |
-| ... | ... |
+
+...
 
 扩展列表非常长，因此我们在上面的输出中仅显示了前几个条目。
 
@@ -4467,7 +4369,7 @@ $ quarkus dev
 
 已选扩展
 
-- ARC (指南)
++ ARC (指南)
 - Hibernate ORM (指南)
 - Hibernate ORM with Panache (指南)
 
@@ -4475,7 +4377,7 @@ $ quarkus dev
 
 在浏览器中加载此页面可确认 Quarkus 应用已启动并运行。
 
-作为引导过程的一部分，Quarkus CLI 在 `src/main/java/org/acme/GreetingResource.java` 处生成了一个 Java 类，代码如下：
+作为引导过程的一部分，Quarkus CLI 在 `src/main/java/org/acme/GreetingResource.java` 处创建了一个 Java 类，代码如下：
 
 ```java
 @Path("/hello")
@@ -4774,11 +4676,11 @@ public void run() {
 
 与 Quarkus 的其他功能一样，Quarkus 对 REST API 的支持基于 Jakarta REST 规范。`REST` 扩展完全实现了 Jakarta 规范，允许开发者实现响应式非响应式的端点。Quarkus REST 还通过 Jackson 或 JSON-B 库支持 JSON 负载。
 
-在本节中，我们将引导你创建一个实用的 Quarkus REST API。该 API 能够从数据库中创建、检索和删除数据。我们将基于我们在之前的章节中处理过的 **Account** 数据库实体使用示例。
+在本节中，我们将引导你创建一个实用的 Quarkus REST API。该 API 能够从数据库中创建、检索和删除数据。我们将基于我们在之前的章节中处理过的 `Account` 数据库实体使用示例。
 
 接下来，我们将查看实现 API 的步骤：
 
-1. 在跳手 API 实现之前，让我们先通过以下代码复习 **Account** 实体类的结构：
+1. 在跳手 API 实现之前，让我们先通过以下代码复习 `Account` 实体类的结构：
 
 ```java
 @Entity
@@ -4790,7 +4692,7 @@ public class Account {
 }
 ```
 
-2. 为了允许处理 **Account** 实体，我们有以下 **AccountRepository** 类：
+2. 为了允许处理 `Account` 实体，我们有以下 `AccountRepository` 类：
 
 ```java
 @ApplicationScoped
@@ -4808,7 +4710,7 @@ public class AccountRepository implements PanacheRepository<Account> {
 
 一旦充分实现了实体类和仓库类，我们就可以实现 REST 端点以允许更改数据库。
 
-3. 以下是我们如何开始实现 **AccountEndpoint** 类的：
+3. 以下是我们如何开始实现 `AccountEndpoint` 类的：
 
 ```java
 @Path("/account")
@@ -4938,9 +4840,9 @@ curl -s localhost:8080/account/all
 
 # 编写原生应用程序
 
-典型的 Java 应用程序基于类编译成字节码，并在 **Java Virtual Machine (JVM)** 中运行。JVM 是我们要在想要运行 Java 应用程序的操作系统上安装的软件。一旦编译为字节码，Java 类就可以在 Windows、Mac 和 Linux 等不同的操作系统上执行，只要这些系统安装了 JVM。JVM 提供了如垃圾回收和优化等优势，让我们能够执行 Java 应用程序。然而，这些优势是需要代价的。运行 JVM 并执行执行 Java 应用程序所需的所有预热活动会消耗资源，特别是内存。
+典型的 Java 应用程序基于类编译成字节码，并在 `Java Virtual Machine (JVM)` 中运行。JVM 是我们要在想要运行 Java 应用程序的操作系统上安装的软件。一旦编译为字节码，Java 类就可以在 Windows、Mac 和 Linux 等不同的操作系统上执行，只要这些系统安装了 JVM。JVM 提供了如垃圾回收和优化等优势，让我们能够执行 Java 应用程序。然而，这些优势是需要代价的。运行 JVM 并执行执行 Java 应用程序所需的所有预热活动会消耗资源，特别是内存。
 
-在 Java 应用程序准备好执行其任务之前，JVM 必须启动并处理应用程序的字节码。在大多数情况下，等待应用程序启动以及在 JVM 中运行它所需的大量内存是可以接受的。然而，在某些场景，加速应用程序启动和使用极少内存至关重要。将 Java 应用程序用于一次性执行（如 **Amazon Web Services (AWS)** Lambda 等函数即解决方案提供的服务），是内存占用较小的 Java 应用程序受益的案例之一，因为函数即服务的费用是根据系统使用的内存量和系统执行操作所需的时间来计算的。减少 Java 应用程序使用的内存量和启动时间是可能的。通过这样做，我们可以节省费用，特别是当许多 Java 应用程序转换为原生程序时。
+在 Java 应用程序准备好执行其任务之前，JVM 必须启动并处理应用程序的字节码。在大多数情况下，等待应用程序启动以及在 JVM 中运行它所需的大量内存是可以接受的。然而，在某些场景，加速应用程序启动和使用极少内存至关重要。将 Java 应用程序用于一次性执行（如 `Amazon Web Services (AWS)` Lambda 等函数即解决方案提供的服务），是内存占用较小的 Java 应用程序受益的案例之一，因为函数即服务的费用是根据系统使用的内存量和系统执行操作所需的时间来计算的。减少 Java 应用程序使用的内存量和启动时间是可能的。通过这样做，我们可以节省费用，特别是当许多 Java 应用程序转换为原生程序时。
 
 让我们探索一种名为 native image 的技术，它允许创建内存优化的 Java 版本。
 
@@ -4950,7 +4852,7 @@ curl -s localhost:8080/account/all
 
 # GraalVM 与原生镜像编译
 
-GraalVM 是一种提供了 `native image` 技术的 **Java Development Kit (JDK)**。该技术依赖提前编译（ahead-of-time compilation），将 Java 应用程序编译成独立的可执行文件，并在无需安装 **Java Virtual Machine (JVM)** 的情况下直接在操作系统中运行。普通的 Java 应用程序编译成字节码并在 JVM 中运行。相反，GraalVM 将 Java 应用程序编译成直接在目标系统中运行的原生代码。Quarkus 依赖 GraalVM 提供原生镜像编译支持。接下来，我们将学习如何将 Quarkus 应用程序编译为原生镜像。
+GraalVM 是一种提供了 native image 技术的 `Java Development Kit (JDK)`。该技术依赖提前编译（ahead-of-time compilation），将 Java 应用程序编译成独立的可执行文件，并在无需安装 `Java Virtual Machine (JVM)` 的情况下直接在操作系统中运行。普通的 Java 应用程序编译成字节码并在 JVM 中运行。相反，GraalVM 将 Java 应用程序编译成直接在目标系统中运行的原生代码。Quarkus 依赖 GraalVM 提供原生镜像编译支持。接下来，我们将学习如何将 Quarkus 应用程序编译为原生镜像。
 
 ```xml
 <id>native</id>
@@ -4969,7 +4871,7 @@ GraalVM 是一种提供了 `native image` 技术的 **Java Development Kit (JDK)
 </project>
 ```
 
-`profile` ID 和 name 都被定义为 `native`。我们在执行 `mvn` 命令来编译原生可执行文件时，稍后会使用 profile name。原生编译通过设置为 `true` 的 `quarkus.native.enabled` 属性激活的。在创建 Maven profile 后，我们可以执行以下命令来创建一个原生可执行文件：
+Profile ID 和 name 都被定义为 native。我们在执行 `mvn` 命令来编译原生可执行文件时，稍后会使用 profile name。原生编译通过设置为 `true` 的 `quarkus.native.enabled` 属性激活。在创建 Maven profile 后，我们可以执行以下命令来创建一个原生可执行文件：
 
 ```bash
 $ mvn clean package -Pnative
@@ -5009,7 +4911,7 @@ http://0.0.0.0:8080
 
 你可以从 GitHub 仓库 `https://github.com/bppublications/Java-Real-World-Projects/tree/main/Chapter%206` 克隆源代码。
 
-你需要在你的机器上安装 JDK 21 或 Maven 3.8.5。要运行应用程序的端点，你必须拥有 `curl` 或任何你喜欢的 HTTP 客户端。`jq` 命令工具是可选的，但它有助于格式化 `curl` 生成的 JSON 输出。步骤如下：
+你需要在你的机器上安装 `JDK 21` 或 `Maven 3.8.5`。要运行应用程序的端点，你必须拥有 `curl` 或任何你喜欢的 HTTP 客户端。`jq` 命令工具是可选的，但它有助于格式化 `curl` 生成的 JSON 输出。步骤如下：
 
 1. 执行以下命令编译应用程序：
 
@@ -5060,7 +4962,7 @@ JSON 响应确认了在我们发送第一个请求时账户已成功创建。
 
 ## 结论
 
-尽管 Quarkus 与 Spring 来说是一个新框架，但它正在快速发展，并拥有一个活跃的社区。Quarkus 构建并利用了如 Jakarta EE 等提供的坚实行业标准。
+尽管 Quarkus 与 Spring 相比是一个新框架，但它正在快速发展，并拥有一个活跃的社区。Quarkus 构建并利用了如 Jakarta EE 等提供的坚实行业标准。
 
 Jakarta EE 提出了一种用于开发企业级应用程序的多层架构。让我们进一步探索多层应用程序的深层含义。
 
@@ -5074,15 +4976,15 @@ Jakarta EE 提出了一种用于开发企业级应用程序的多层架构。让
 
 ## Web 层 (Web tier)
 
-企业级系统可以提供一种 Web 应用程序，渲染可以通过浏览器访问的 HTML 页面。虽然在今天这并不常见（因为大多数前端开发是在客户端进行的），但对服务器端前端应用的支持也是 Jakarta EE 规范的一部分。基于 Jakarta Servlet 规范之上的 Jakarta Server Pages (JSP) 和 Jakarta Server Faces (JSF) 规范，是我们在 Web 层找到的技术，它们使得企业系统组件能够提供 Web 资源。
+企业级系统可以提供一种 Web 应用程序，渲染可以通过浏览器访问的 HTML 页面。虽然在今天这并不常见（因为大多数前端开发是在客户端进行的），但对服务器端前端应用的支持也是 Jakarta EE 规范的一部分。基于 `Jakarta Servlet` 规范之上的 `Jakarta Server Pages (JSP)` 和 `Jakarta Server Faces (JSF)` 规范，是我们在 Web 层找到的技术，它们使得企业系统组件能够提供 Web 资源。
 
 ## 业务层 (Business tier)
 
-业务规则代表了企业级系统中关键的组件。无论企业级系统旨在解决什么业务问题，业务层都包含包含业务逻辑的组件，负责解决这些问题。这就是 Jakarta EE 组件（如 Jakarta Persistence 实体以及无状态、有状态和消息驱动的豆，也称为企业豆）被用来解决业务问题的地方。
+业务规则代表了企业级系统中关键的组件。无论企业级系统旨在解决什么业务问题，业务层都包含包含业务逻辑的组件，负责解决这些问题。这就是 Jakarta EE 组件（如 `Jakarta Persistence` 实体以及无状态、有状态和消息驱动的 Bean，也称为企业 Bean）被用来解决业务问题的地方。
 
 ## 企业信息系统层 (Enterprise information system tier)
 
-Jakarta EE 企业级应用程序依赖于外部系统，如数据库、大型机、**企业资源计划 (ERP)** 以及任何提供数据以满足企业级应用需求的系统。这些外部系统构成了企业信息系统层。
+Jakarta EE 企业级应用程序依赖于外部系统，如数据库、大型机、`企业资源计划 (ERP)` 以及任何提供数据以满足企业级应用需求的系统。这些外部系统构成了企业信息系统层。
 
 下图展示了各层级之间的相互关系：
 
@@ -5096,13 +4998,13 @@ Jakarta EE 是一系列用于用 Java 开发企业级软件的规范集合。让
 
 # 探索 Jakarta EE 规范
 
-Jakarta EE 是一套用于用 Java 开发企业级应用程序的规范。Jakarta EE 项目并不提供这些规范的实现。实现工作由 Jakarta EE 供应商负责。开发者使用规范来构建自己的应用程序，并可以选择哪种 Jakarta EE 供应商符合其需求。Jakarta EE 的实现通过实现规范接口的 Java 库提供。这些库与 Jakarta EE 供应商提供的应用程序服务器一起分发，该供应商实现了这些规范，或者依赖于实现部分规范的第三方。Oracle WebLogic、IBM WebSphere、Payara 和 Eclipse Glassfish 是市场上的一些 Jakarta EE 供应商。
+Jakarta EE 是一套用于用 Java 开发企业级应用程序的规范。Jakarta EE 项目并不提供这些规范的实现。实现工作由 Jakarta EE 供应商负责。开发者使用规范来构建自己的应用程序，并可以选择哪种 Jakarta EE 供应商符合其需求。Jakarta EE 的实现通过实现规范接口的 Java 库提供。这些库与 Jakarta EE 供应商提供的应用程序服务器一起分发，该供应商实现了这些规范，或者依赖于实现部分规范的第三方。`Oracle WebLogic`、`IBM WebSphere`、`Payara` 和 `Eclipse Glassfish` 是市场上的一些 Jakarta EE 供应商。
 
-所有的 Jakarta EE 独立规范都被分组在 Jakarta EE Platform（平台）规范和 Profile（配置/概况）规范中。让我们进一步检查每种规范的目的。
+所有 Jakarta EE 独立规范都被分组在 Jakarta EE Platform（平台）规范和 Profile（配置/概况）规范中。让我们进一步检查每种规范的目的。
 
 ## Jakarta EE Platform 规范
 
-我们之前已经看到，Jakarta EE 项目基于多层架构，不同的应用程序组件在客户端、Web 层、业务层和**企业信息系统 (EIS)** 层之间进行交互。来自 Web 层和业务层的组件运行在容器中，容器是由 Jakarta EE 服务器提供的运行时环境。Web 容器负责执行 Web 资源，如 **Java Server Page (JSP)**；**Enterprise Java Bean (EJB)** 容器负责执行业务逻辑代码。来自客户端和 EIS 层的组件通常运行在 Jakarta EE 服务器之外，并与 Web 层和业务层的组件交互。由于在 Jakarta EE 服务器之外运行，我们可能会有客户端系统向企业级应用程序发起调用，以及数据库为此类应用程序提供数据。
+我们之前已经看到，Jakarta EE 项目基于多层架构，不同的应用程序组件在客户端、Web 层、业务层和`企业信息系统 (EIS)`层之间进行交互。来自 Web 层和业务层的组件运行在容器中，容器是由 Jakarta EE 服务器提供的运行时环境。Web 容器负责执行 Web 资源，如 `Java Server Page (JSP)`；`Enterprise Java Bean (EJB)` 容器负责执行业务逻辑代码。来自客户端和 EIS 层的组件通常运行在 Jakarta EE 服务器之外，并与 Web 层和业务层的组件交互。由于在 Jakarta EE 服务器之外运行，我们可能会有客户端系统向企业级应用程序发起调用，以及数据库为此类应用程序提供数据。
 
 Jakarta EE Platform 规范规定了在多层架构中运行的组件。运行在 Jakarta EE 服务器之外，我们可能会有客户端系统向企业级应用程序发起调用，以及数据库为此类应用程序提供数据。
 
@@ -5118,7 +5020,7 @@ Jakarta EE Platform 规范规定了在多层架构中运行的组件。运行在
 
 ## Web Profile 规范
 
-Jakarta EE Web Profile 规范是第一个创建的配置规范。其主要目标是仅分组 Web 应用程序。例如，Jakarta Messaging 是 Jakarta EE Platform 规范的一部分，但不是 Web Profile 规范的一部分。这意味着目标 Web Profile 的平台可以提供更小的企业级应用程序。下图展示了 Web Profile 规范所涵盖的所有技术：
+Jakarta EE Web Profile 规范是第一个创建的配置规范。其主要目标是仅分组 Web 应用程序。例如，`Jakarta Messaging` 是 Jakarta EE Platform 规范的一部分，但不是 Web Profile 规范的一部分。这意味着目标 Web Profile 的平台可以提供更小的企业级应用程序。下图展示了 Web Profile 规范所涵盖的所有技术：
 
 ![](img/9b5739f37699f084397670714bf63edd_213_0.png)
 
@@ -5136,7 +5038,7 @@ Jakarta EE Web Profile 规范是第一个创建的配置规范。其主要目标
 
 注意，这里只使用了部分规范。所有不认为是云应用开发严格必需的内容都被删除了。
 
-像 Tomcat 这样的非认证服务器没有实现所有要求的 Jakarta EE 规范，但提供了足够托管企业级应用的能力。Jakarta EE 持续作为开发企业级应用的稳健平台而保持其重要性。在本节中，我们只涵盖了这一庞大项目的一个角，该项目通过其规范为创建 Java 应用程序提供了标准。现在，让我们探索 Jakarta EE 的另一个影响：MicroProfile，一个针对微服务的项目。
+像 `Tomcat` 这样的非认证服务器没有实现所有要求的 Jakarta EE 规范，但提供了足够托管企业级应用的能力。Jakarta EE 持续作为开发企业级应用的稳健平台而保持其重要性。在本节中，我们只涵盖了这一庞大项目的一个角，该项目通过其规范为创建 Java 应用程序提供了标准。现在，让我们探索 Jakarta EE 的另一个影响：MicroProfile，一个针对微服务的项目。
 
 # 介绍 MicroProfile
 
@@ -5152,39 +5054,41 @@ Jakarta EE Web Profile 规范是第一个创建的配置规范。其主要目标
 
 MicroProfile 依赖 Jakarta EE Core Profile 规范作为开发云原生应用的基础，列表如下：
 
-- Jakarta RESTful Web Services 3.1
-- Jakarta JSON Processing 2.1
-- Jakarta JSON Binding 3.0
-- Jakarta Interceptors 2.1
-- Jakarta Beans 4.0
-- Jakarta Dependency Injection 2.0
-- Jakarta CDI 4.0
+- `Jakarta RESTful Web Services 3.1`
+- `Jakarta JSON Processing 2.1`
+- `Jakarta JSON Binding 3.0`
+- `Jakarta Interceptors 2.1`
+- `Jakarta Beans 4.0`
+- `Jakarta Dependency Injection 2.0`
+- `Jakarta CDI 4.0`
 
-Core Profile 规范构成了运行在云端的任何企业级应用的骨干。我们可以使用 Jakarta RESTful Web Services 3.1 规范构建能够处理 JSON 负载的 API 端点。Jakarta JSON Processing 2.1 和 Jakarta JSON Binding 3.0 规范提供了 JSON 支持。Jakarta Dependency Injection 2.0 和 Jakarta CDI 4.0 规范为处理企业级应用中的依赖提供了稳健的机制。
+Core Profile 规范构成了运行在云端的任何企业级应用的骨干。我们可以使用 `Jakarta RESTful Web Services 3.1` 规范构建能够处理 JSON 负载的 API 端点。`Jakarta JSON Processing 2.1` 和 `Jakarta JSON Binding 3.0` 规范提供了 JSON 支持。`Jakarta Dependency Injection 2.0` 和 `Jakarta CDI 4.0` 规范为处理企业级应用中的依赖提供了稳健的机制。
 
 ## MicroProfile 规范
 
 作为 Jakarta EE Profile 规范的补充，典型的 Java 微服务应用可能需要监控、可观测性、配置和其他基本能力。MicroProfile 通过一套用于云原生开发的规范涵盖了以下能力：
 
-- MicroProfile Telemetry 1.1
-- MicroProfile OpenAPI 3.1
-- MicroProfile Rest Client 3.0
-- MicroProfile Config 3.1
-- MicroProfile Fault Tolerance 4.0
-- MicroProfile Metrics 5.1
-- MicroProfile JWT Authentication 2.1
-- MicroProfile Health 4.0
+- `MicroProfile Telemetry 1.1`
+- `MicroProfile OpenAPI 3.1`
+- `MicroProfile Rest Client 3.0`
+- `MicroProfile Config 3.1`
+- `MicroProfile Fault Tolerance 4.0`
+- `MicroProfile Metrics 5.1`
+- `MicroProfile JWT Authentication 2.1`
+- `MicroProfile Health 4.0`
 
-排除错误是使用微服务架构时的挑战之一，因为为了理解请求为何失败，开发者可能需要检查参与该请求的多个微服务的日志。MicroProfile Telemetry 1.1 提供了带有 spans（跨）和 traces（追踪）的高级可观测能力，帮助我们理解跨越不同应用程序的请求流。通过 MicroProfile Rest Client 3.0，我们可以让微服务之间相互通信。通过 MicroProfile Health 4.0，我们探索了通知外部代理 Java 应用程序健康的方法。MicroProfile 规范规范了运行在云原生环境中企业级应用的开发方面。Open Liberty、Quarkus 和 Payara 等供应商实现了 MicroProfile 规范。
+排除错误是使用微服务架构时的挑战之一，因为为了理解请求为何失败，开发者可能需要检查参与该请求的多个微服务的日志。`MicroProfile Telemetry 1.1` 提供了带有 spans（跨）和 traces（追踪）的高级可观测能力，帮助我们理解跨越不同应用程序的请求流。通过 `MicroProfile Rest Client 3.0`，我们可以让微服务之间相互通信。通过 `MicroProfile Health 4.0`，我们探索了通知外部代理 Java 应用程序健康的方法。MicroProfile 规范规范了运行在云原生环境中企业级应用的开发方面。`Open Liberty`、`Quarkus` 和 `Payara` 等供应商实现了 MicroProfile 规范。
 
 
 
-# 开始一个新的 Jakarta EE 项目
+在涵盖 Jakarta EE 和 MicroProfile 规范之后，让我们学习如何使用它们来构建 Java 应用程序。
+
+## 开始一个新的 Jakarta EE 项目
 
 启动新 Jakarta EE 项目的一种简便方法是访问 `http://start.jakarta.ee` 网站。在那里，我们可以通过定义 Jakarta EE 版本、Jakarta EE 配置文件、Java SE 版本和其他选项来自定义项目设置。还可以使用 Maven 的最小 Jakarta EE 应用骨架来启动新项目，如下所示 Maven 命令示例所示：
 
 ```bash
-mvn archetype:generate -DgroupId=org.eclipse.starter -DarchetypeId=jakartaee10-minimal -Dversion=1.1.0 -DgroupId=dev.developer -DartifactId=enterpriseapp -Dprofile=web-api -Dversion=1.0.0-SNAPSHOT -DinteractiveMode=false
+mvn archetype:generate -DarchetypeGroupId=org.eclipse.starter -DarchetypeArtifactId=jakartaee10-minimal -DarchetypeVersion=1.1.0 -DgroupId=dev.developer -DartifactId=enterpriseapp -Dprofile=web-api -Dversion=1.0.0-SNAPSHOT -DinteractiveMode=false
 ```
 
 参数 `archetypeGroupId`、`archetypeArtifactId` 和 `archetypeVersion` 指定了我们想要用于生成 Maven 项目的骨架。我们正在使用 Eclipse Foundation 为新 Jakarta EE 项目提供的骨架。其他参数指定了我们正在生成的 Jakarta EE 项目的配置。注意，我们正在使用 `web-api` 配置，这使得该项目支持 Jakarta EE 规范中的 Web 应用功能（如暴露 RESTful 端点）。
@@ -5217,26 +5121,31 @@ public class SampleResource {
 此处通过 `@Path` 注解定义的 "sample" 路径将附加到 `ApplicationConfig` 类中 `@ApplicationPath` 定义的之后。`@GET` 和 `@Produces` 注解来自 Jakarta RESTful Web Services 规范。我们使用这些注解来暴露一个接收 HTTP GET 请求并产生纯文本响应的端点。
 
 ```xml
-<execution>
-  <phase>install</phase>
-  <goals>
-    <goal>deploy</goal>
-  </goals>
-</execution>
-</executions>
+<plugin>
+    <groupId>org.wildfly.plugins</groupId>
+    <artifactId>wildfly-maven-plugin</artifactId>
+    <version>4.0.0.Final</version>
+    <executions>
+        <execution>
+            <phase>install</phase>
+            <goals>
+                <goal>deploy</goal>
+            </goals>
+        </execution>
+    </executions>
 </plugin>
 ```
 
 上述插件必须放置在 `pom.xml` 文件的 `plugins` 部分。一旦配置好 WildFly，我们就可以通过运行以下命令启动应用程序：
 
 ```bash
-$ mvn clean package wildfly:run
+mvn clean package wildfly:run
 ```
 
 我们可以通过在浏览器中访问 `http://localhost:8080/enterpriseapp/sample` 或者执行以下命令来确认应用程序正在运行：
 
 ```bash
-$ curl -X GET http://localhost:8080/enterpriseapp/sample
+curl -X GET http://localhost:8080/enterpriseapp/sample
 ```
 
 ## Jakarta EE 应用程序示例数据
@@ -5249,14 +5158,14 @@ $ curl -X GET http://localhost:8080/enterpriseapp/sample
 
 在这一节中，我们将探索如何使用 Jakarta EE 和 MicroProfile 规范来构建一个支持 MicroProfile 提供的所有微服务和云原生能力的 Java 企业级应用程序。我们首先学习如何设置带有正确依赖的初始 Maven 项目，然后开始实现一个简单的许可管理应用程序，以演示 Jakarta EE 和 MicroProfile 的某些功能。
 
-# 项目设置
+## 项目设置
 
 要启动一个新的 MicroProfile 项目，我们可以使用 `https://start.microprofile.io/` 上的项目生成器生成骨架 Maven 或 Gradle 项目，或者手动指定项目所需的依赖项。让我们采用手动方法，因为这能让我们更好地理解所需的依赖。以下是使用 Maven 的 MicroProfile 项目的 `pom.xml` 文件应有的：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-<!-- code omitted -->
+  <!-- code omitted -->
   <dependencies>
     <dependency>
       <groupId>jakarta.platform</groupId>
@@ -5272,7 +5181,7 @@ $ curl -X GET http://localhost:8080/enterpriseapp/sample
       <scope>provided</scope>
     </dependency>
   </dependencies>
-<!-- code omitted -->
+  <!-- code omitted -->
 </project>
 ```
 
@@ -5346,8 +5255,8 @@ $ curl -X GET http://localhost:8080/enterpriseapp/sample
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://jakarta.ee/xml/ns/jakartaee http://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
   <data-source>
     <name>java:global/h2-db</name>
     <class-name>org.h2.jdbcx.JdbcDataSource</class-name>
@@ -5361,8 +5270,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence http://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
   <persistence-unit name="H2DB">
     <jta-data-source>java:global/h2-db</jta-data-source>
     <properties>
@@ -5384,13 +5293,16 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 ```java
 @Entity
 public class License {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     long id;
+
     String name;
     LocalDate startDate;
     LocalDate endDate;
     boolean isExpired;
+
     // Code omitted
 }
 ```
@@ -5405,6 +5317,7 @@ public class License {
 @ApplicationScoped
 @Transactional
 public class LicenseRepository {
+
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -5424,7 +5337,7 @@ public class LicenseRepository {
 
 来自 Jakarta CDI 规范，我们拥有 `@ApplicationScoped` 注解来确保为 `LicenseRepository` 类创建一个 Bean 实例。放置在 `entityManager` 字段上的 `@PersistenceContext` 注解依赖于我们之前创建的 `persistence.xml` 提供的配置。该存储库类包含一个持久化 `License` 实体的方法以及另一个从数据库检索 `License` 实体的方法。
 
-持久化上下文（persistence context）代表我们可以持久化到数据库的实体。当 Java 应用启动时，Jakarta 实体会被映射并放入持久化上下文。每个持久化上下文都与实体管理器（entity manager）关联，允许从该上下文中处理实体。
+持久化上下文代表我们可以持久化到数据库的实体。当 Java 应用启动时，Jakarta 实体会被映射并放入持久化上下文。每个持久化上下文都与实体管理器关联，允许从该上下文中处理实体。
 
 # 作为 Jakarta CDI 管理 Bean 实现服务类
 
@@ -5447,9 +5360,9 @@ public class LicenseService {
 }
 ```
 
-我们通过使用 `@ApplicationScoped` 注解将 `LicenseService` 类转换为一个托管 Bean。在 `LicenseService` 类内部，我们注入了 `LicenseRepository`，用于创建和检索许可证（licenses）。
+我们通过使用 `@ApplicationScoped` 注解将 `LicenseService` 类转换为一个托管 Bean。在 `LicenseService` 类内部，我们注入了 `LicenseRepository`，用于创建和检索许可证。
 
-在使用 Jakarta EE 规范实现了实体（entity）、存储库类和服务类之后，让我们使用 MicroProfile 和 Jakarta EE 规范定义一个端点（endpoint）类。
+在使用 Jakarta EE 规范实现了实体、存储库类和服务类之后，让我们使用 MicroProfile 和 Jakarta EE 规范定义一个端点类。
 
 # 使用 Jakarta EE 和 MicroProfile 构建 API
 
@@ -5458,8 +5371,7 @@ public class LicenseService {
 ```java
 @Path("api")
 @OpenAPIDefinition(
-    info = @Info(title = "License Management",
-    version = "1.0.0")
+    info = @Info(title = "License Management", version = "1.0.0")
 )
 public class LicenseApplication extends Application {
 }
@@ -5476,18 +5388,20 @@ public class LicenseEndpoint {
 
     @Inject
     private LicenseService licenseService;
+
     // 代码省略
 }
 ```
 
 来自 Jakarta RESTful Web Services 规范的 `@Path` 注解至关重要，因为它允许我们定义端点路径。在 `LicenseApplication` 类中定义的 `/api` 将被置于此处 `LicenseEndpoint` 类中使用的 `/license` 路径之前，形成 `/api/license` 路径。来自 MicroProfile OpenAPI 规范的 `@Tag` 注解对于生成 API 文档至关重要。
 
-继续实现 `LicenseEndpoint`，我们实现一个允许创建新许可证的端点。
+继续实现 `LicenseEndpoint`，我们实现一个允许创建新许可证的端点：
 
 ```java
 @Path("/license")
 @Tag(name = "License API", description = "It allows managing licenses")
 public class LicenseEndpoint {
+
     // 代码省略
 
     @POST
@@ -5503,12 +5417,12 @@ public class LicenseEndpoint {
     public void createLicense(License license) {
       licenseService.createLicense(license);
     }
+
     // 代码省略
 }
 ```
 
-`@POST` 注解创建了一个可以通过 HTTP POST 请求在 `/api/license` 访问的端点路径。
-`@POST`、`@Consumes` 和 `@Produces` 来自 Jakarta RESTful Web Services 规范。注意，此端点消费并产生 JSON 数据。Jakarta JSON Processing 和 Jakarta JSON Binding 规范提供了 JSON 支持。剩余的注解来自 MicroProfile OpenAPI 规范，允许我们提供详细信息，用于在 API 文档中记录此端点。
+`@POST` 注解创建了一个可以通过 HTTP POST 请求在 `/api/license` 访问的端点路径。`@POST`、`@Consumes` 和 `@Produces` 来自 Jakarta RESTful Web Services 规范。注意，此端点消费并产生 JSON 数据。Jakarta JSON Processing 和 Jakarta JSON Binding 规范提供了 JSON 支持。剩余的注解来自 MicroProfile OpenAPI 规范，允许我们提供详细信息，用于在 API 文档中记录此端点。
 
 最后，我们实现一个检索所有可用许可证的端点：
 
@@ -5516,6 +5430,7 @@ public class LicenseEndpoint {
 @Path("/license")
 @Tag(name = "License API", description = "It allows managing licenses")
 public class LicenseEndpoint {
+
     // 代码省略
 
     @GET
@@ -5534,6 +5449,7 @@ public class LicenseEndpoint {
         return licenseService.getAllLicenses();
     }
 }
+
 // 代码省略
 ```
 
@@ -5583,9 +5499,9 @@ public class LicenseHealthCheck {
 }
 ```
 
-我们通过 `@ApplicationScoped` 类级注解将 `LicenseHealthCheck` 类实现为托管豆（managed bean）。`@Produces` 方法级注解用于 `checkMemoryUsage` 和 `checkCpuUsage` 方法，因为它们会产生类型为 `HealthCheck` 的托管豆，其中包含了我们从应用程序收集的健康信息。在 `checkMemoryUsage` 方法上，我们使用了 `@Liveness` 注解，让第三方服务知道 MicroProfile 应用是否运行正常。用于 `checkCpuUsage` 方法的 `@Readiness` 注解则让第三方服务知道 MicroProfile 应用是否准备好接收请求。
+我们通过 `@ApplicationScoped` 类级注解将 `LicenseHealthCheck` 类实现为托管 Bean。`@Produces` 方法级注解用于 `checkMemoryUsage` 和 `checkCpuUsage` 方法，因为它们会产生类型为 `HealthCheck` 的托管 Bean，其中包含了我们从应用程序收集的健康信息。在 `checkMemoryUsage` 方法上，我们使用了 `@Liveness` 注解，让第三方服务知道 MicroProfile 应用是否运行正常。用于 `checkCpuUsage` 方法的 `@Readiness` 注解则让第三方服务知道 MicroProfile 应用是否准备好接收请求。
 
-第三方服务通常通过 Kubernetes 集群组件表示，这些组件负责定期发送存活探测（liveness）和就绪探测（readiness）以检查应用程序的健康状况。如果 Kubernetes 在执行健康检查时检测到问题，它可以触发补救措施，例如重启 Kubernetes 集群中运行 MicroProfile 应用的 Pod。
+第三方服务通常通过 Kubernetes 集群组件表示，这些组件负责定期发送存活探测和就绪探测以检查应用程序的健康状况。如果 Kubernetes 在执行健康检查时检测到问题，它可以触发补救措施，例如重启 Kubernetes 集群中运行 MicroProfile 应用的 Pod。
 
 在下一节中，我们将学习如何编译和运行许可证管理应用程序。
 
@@ -5593,7 +5509,7 @@ public class LicenseHealthCheck {
 
 在上一节中，我们使用 Jakarta EE 和 MicroProfile 实现了一个简单的许可证管理应用程序。在本节中，我们将探索如何编译和运行此项目。
 
-你可以从 GitHub 仓库克隆应用程序源代码：https://github.com/bpbpublications/Java-Real-World-Projects/tree/main/Chapter%2007。
+你可以从 GitHub 仓库克隆应用程序源代码：`https://github.com/bpbpublications/Java-Real-World-Projects/tree/main/Chapter%2007`。
 
 你的机器需要安装 JDK 21 或以上版本以及 Maven 3.8.5 或以上版本。
 
@@ -5635,8 +5551,7 @@ $ curl -s localhost:8080/license-management/api/license | jq
     "expired": false,
     "id": 1,
     "name": "Premium License",
-    "startDate": "2025-01-18",
-    "endDate": "2025-01-18"
+    "startDate": "2025-01-18"
   },
   {
     "endDate": "2025-01-18",
@@ -5669,7 +5584,7 @@ $ curl -s http://localhost:8080/health | jq
 }
 ```
 
-你可以在 http://localhost:8080/license-management/api/openapi-ui/index.html 访问 OpenAPI UI，页面如下：
+你可以在 `http://localhost:8080/license-management/api/openapi-ui/index.html` 访问 OpenAPI UI，页面如下：
 
 ![](img/9b5739f37699f084397670714bf63edd_243_0.png)
 
@@ -5681,9 +5596,9 @@ OpenAPI UI 是根据实现 MicroProfile 项目的 API 端点时使用的 OpenAPI
 
 
 
-# 本章探讨了 Jakarta EE 及其 Platform、Web Profile 和 Core Profile 规范如何被用于开发 Java 企业级应用程序
+# Jakarta EE 与云原生部署概述
 
-在比较不同规范的差异时，我们了解到 Platform 规范包含了所有的 Jakarta EE 规范：针对需要 Web 组件的企业级应用程序的 Web Profile 规范，以及适用于在云原生环境中运行的应用程序 Core Profile 规范。我们还学习了 Jakarta EE Core Profile 规范如何补充 MicroProfile 规范，从而提供了一套支持 Java 微服务开发的规范。在概述了 Jakarta EE 和 MicroProfile 规范后，我们通过开发许可证管理应用程序学习了如何使用它们。
+本章探讨了 Jakarta EE 及其 Platform、Web Profile 和 Core Profile 规范如何被用于开发 Java 企业级应用程序。在比较不同规范的差异时，我们了解到 Platform 规范包含了所有的 Jakarta EE 规范：针对需要 Web 组件的企业级应用程序的 Web Profile 规范，以及适用于在云原生环境中运行的应用程序 Core Profile 规范。我们还学习了 Jakarta EE Core Profile 规范如何补充 MicroProfile 规范，从而提供了一套支持 Java 微服务开发的规范。在概述了 Jakarta EE 和 MicroProfile 规范后，我们通过开发许可证管理应用程序学习了如何使用它们。
 
 下一章将涵盖在云原生环境中部署和运行 Java 应用程序的技术和方法。我们将学习 Kubernetes 及其架构，以及如何在 Kubernetes 集群中部署和运行容器化的 Java 应用程序。
 
@@ -5695,9 +5610,13 @@ https://discord.bpbononline.com
 
 ![](img/9b5739f37699f084397670714bf63edd_244_0.png)
 
+# 虚拟化技术
+
+## 全虚拟化
+
 全虚拟化是在重现真实计算机行为和指令的环境中运行软件的技术。它允许对 CPU 和内存等计算机资源进行完全虚拟化。计算机硬件提供的所有内容都经过了虚拟化，使得软件可以在完全感知不到正运行在虚拟化环境中的情况下执行。
 
-宿主机可以通过支持 Intel VT-x 或 AMD-V 等硬件辅助虚拟化技术提供全虚拟化。宿主机运行虚拟机管理程序（`hypervisor`），负责创建虚拟机实例，这些实例也被称为宿主机的虚拟机（`guests`）。KVM、VMware 和 VirtualBox 是提供全虚拟化的某些虚拟机管理程序。当一台机器被完全虚拟化时，它允许我们安装与宿主机运行的操作系统不同的操作系统。例如，Linux 宿主机可以拥有 Windows 虚拟机。
+宿主机可以通过支持 Intel VT-x 或 AMD-V 等硬件辅助虚拟化技术提供全虚拟化。宿主机运行虚拟机管理程序（`hypervisor`），负责创建虚拟机实例，这些实例也被称为宿主机的虚拟机（guests）。KVM、VMware 和 VirtualBox 是提供全虚拟化的某些虚拟机管理程序。当一台机器被完全虚拟化时，它允许我们安装与宿主机运行的操作系统不同的操作系统。例如，Linux 宿主机可以拥有 Windows 虚拟机。
 
 云服务提供者依赖全虚拟化技术作为**基础设施即服务（IaaS）**解决方案来提供虚拟服务器。这些虚拟服务器运行在物理服务器上，并由虚拟机管理程序软件管理。
 
@@ -5731,7 +5650,7 @@ https://discord.bpbononline.com
 
 整个 IT 行业因为 Docker 而改变了。越来越多的组织开始以 Docker 容器的形式部署应用程序，这带来了关于如何在大规模高效运行容器的挑战。这时 Kubernetes 等技术作为管理容器的解决方案出现了。在深入研究 Kubernetes 之前，让我们发现 Docker 是如何工作的。
 
-## 探索 Docker
+# 探索 Docker
 
 在没有 Docker 本身其他工具辅助的情况下，操作一组 Docker 容器相对简单。容器像操作系统中的进程一样运行，因此，确保容器进程始终运行而不报错至关重要。系统管理员可以检查容器日志并在出现问题时重启容器。对于简单的用例，仅靠 Docker 可能就足够托管应用程序。可能需要手动管理任务来保持容器运行，这对于较小的非关键系统是可以接受的。
 
@@ -5741,41 +5660,35 @@ https://docs.docker.com/manuals/
 
 Docker Engine 提供了容器虚拟化引擎以及用于控制 Docker 资源（如镜像、卷和网络）的 CLI 命令工具。Docker Desktop 包含了 Docker Engine 和一个友好的图形用户界面，简化了 Docker 资源的管理。对于那些倾向于用户界面而非 CLI 命令工具的用户来说，它是一个替代方案。
 
-要创建一个 Docker 容器，我们首先需要使用 `Dockerfile` 创建一个 Docker 镜像：
+要创建一个 Docker 容器，我们首先需要使用 Dockerfile 创建一个 Docker 镜像：
 
 ```
 FROM busybox
-```
-
-```
 CMD ["date"]
 ```
 
-上述两行被放置在一个名为 `Dockerfile` 的文件中，这是 Docker 在构建 镜像时使用的默认文件名。镜像有两种类型：父派衍生镜像（`parent-derived images`）始终构建在父级 Docker 镜像之上。上面的示例使用了 `FROM` 指令来引用 `busybox` 父级镜像。基础镜像（`Base images`）没有父镜像；它们在 `Dockerfile` 中使用 `FROM scratch` 指令来表示它们不引用任何父镜像。我们还使用 `CMD` 指令来执行命令。命令是作为隔离进程在 Docker 容器中执行的程序。`Dockerfile` 支持其他指令，允许我们通过添加文件、创建目录、创建环境变量、设置系统权限和其他操作来自定义 Docker 镜像。
+上述两行被放置在一个名为 `Dockerfile` 的文件中，这是 Docker 在构建镜像时使用的默认文件名。镜像有两种类型：父派衍生镜像（parent-derived images）始终构建在父级 Docker 镜像之上。上面的示例使用了 `FROM` 指令来引用 `busybox` 父级镜像。基础镜像（Base images）没有父镜像；它们在 Dockerfile 中使用 `FROM scratch` 指令来表示它们不引用任何父镜像。我们还使用 `CMD` 指令来执行命令。命令是作为隔离进程在 Docker 容器中执行的程序。Dockerfile 支持其他指令，允许我们通过添加文件、创建目录、创建环境变量、设置系统权限和其他操作来自定义 Docker 镜像。
 
 ## 管理 Docker 镜像
 
-我们可以使用之前创建的 `Dockerfile`，通过以下命令构建构建 Docker 镜像：
+我们可以使用之前创建的 Dockerfile，通过以下命令构建 Docker 镜像：
 
 ```
 $ docker build . -t busybox-date
 ```
 
-上述命令应该在你的操作系统的终端中执行。`docker` 二进制文件是 Docker Engine 提供的 CLI 工具。它允许许多操作，例如使用 `build` 选项构建镜像。在构建命令之后，点符号 `.` 指定了 `Dockerfile` 的路径，在我们的案例中，点符号代表当前目录。`-t` 选项指的是 Docker 镜像名称，在命令示例中为 `busybox-date`。在标记 Docker 镜像时，我们可以指定它的标签和路径，这可以作为版本控制机制：
+上述命令应该在你的操作系统的终端中执行。`docker` 二进制文件是 Docker Engine 提供的 CLI 工具。它允许许多操作，例如使用 `build` 选项构建镜像。在构建命令之后，点符号 `.` 指定了 Dockerfile 的路径，在我们的案例中，点符号代表当前目录。`-t` 选项指的是 Docker 镜像名称，在命令示例中为 `busybox-date`。在标记 Docker 镜像时，我们可以指定它的标签和路径，这可以作为版本控制机制：
 
 ```
 $ docker build -t s4intlurent/busybox-date:1.0
 ```
 
-`-t` 选项提供的镜像名称基于 `命名空间/仓库:标签`（`namespace/repository:tag`）结构。`s4intlurent` 是 Docker Hub 的命名空间，`busybox-date` 是仓库，`1.0` 是镜像标签。Docker Hub (https://hub.docker.com/) 是一个公共镜像存储位置，称为注册表（`registry`），用户可以在其中存储他们的 Docker 镜像。组织可以使用带有自己命名空间的私有注册表。如果省略版本，Docker 镜像将自动标记为 `latest`。
+`-t` 选项提供的镜像名称基于 `命名空间/仓库:标签`（namespace/repository:tag）结构。`s4intlurent` 是 Docker Hub 的命名空间，`busybox-date` 是仓库，`1.0` 是镜像标签。Docker Hub (https://hub.docker.com/) 是一个公共镜像存储位置，称为注册表（registry），用户可以在其中存储他们的 Docker 镜像。组织可以使用带有自己命名空间的私有注册表。如果省略版本，Docker 镜像将自动标记为 `latest`。
 
 你可以使用以下命令之一列出存储在你计算机上的所有 Docker 镜像：
 
 ```
 $ docker images
-```
-
-```
 $ docker image ls
 ```
 
@@ -5816,7 +5729,7 @@ $ docker run s4intlaurent/busybox-date:1.0
 Thu May 9 23:35:47 UTC 2024
 ```
 
-通过执行 `docker run`，我们创建了一个新容器，并在容器内执行 `date` 命令。在执行 `date` 后，进程被终止，这意味着容器也停止了。记住，容器绑定在一个或多个进程上。如果没有进程执行，容器就结束了。为了保持容器运行，我们需要一个守护进程（`daemon process`）。这种进程用于进程无限存活并能够接收处理请求的场景。我们将在本章稍后创建 Spring Boot 应用程序 Docker 镜像时探索这种场景。
+通过执行 `docker run`，我们创建了一个新容器，并在容器内执行 `date` 命令。在执行 `date` 后，进程被终止，这意味着容器也停止了。记住，容器绑定在一个或多个进程上。如果没有进程执行，容器就结束了。为了保持容器运行，我们需要一个守护进程（daemon process）。这种进程用于进程无限存活并能够接收处理请求的场景。我们将在本章稍后创建 Spring Boot 应用程序 Docker 镜像时探索这种场景。
 
 我们可以通过以下命令检查当前正在运行的容器：
 
@@ -5848,6 +5761,8 @@ $ docker kill [CONTAINER ID]
 $ docker rm 32ff796fac8
 ```
 
+# Kubernetes 架构与组件
+
 当 Kubernetes 对象需要在其中一个工作节点上进行配置时，`kube-scheduler` 负责寻找最符合给定 Kubernetes 对象要求的工作节点。CPU、内存和存储使用率高的工作节点可能会被跳过，而选择具有更多可用容量的工作节点。Pod 是我们在下一节中将进一步探索的 Kubernetes 示例之一。
 
 ## kube-apiserver
@@ -5864,7 +5779,7 @@ Kubernetes 对象具有当前状态和期望状态。期望状态通过另一种
 
 ## Container runtime
 
-它是运行在 Kubernetes 节点上的容器引擎。它可以是 Docker 所基于的 `containerd`，也可以是其他兼容的容器技术。Kubernetes 提供了容器运行时接口 **(CRI)**，这是一项定义了如何实现容器技术以支持 Kubernetes 的规范，因此任何实现此类规范的容器运行时都与 Kubernetes 兼容。
+它是运行在 Kubernetes 节点上的容器引擎。它可以是 Docker 所基于的 `containerd`，也可以是其他兼容的容器技术。Kubernetes 提供了容器运行时接口 **（CRI）**，这是一项定义了如何实现容器技术以支持 Kubernetes 的规范，因此任何实现此类规范的容器运行时都与 Kubernetes 兼容。
 
 ## kubelet
 
@@ -5878,9 +5793,9 @@ Kubernetes 集群中的每个节点都需要一个名为 `kubelet` 的代理来�
 
 接下来，学习 Kubernetes 对象以及它们如何用于运行容器化应用程序。
 
-## Kubernetes objects
+## Kubernetes 对象
 
-容器化应用程序是驱动所有 Kubernetes 机制的基本元素。在 Kubernetes 中宿托管应用程序时，我们可以使其对外部网络可用，提供应用程序所需的环境变量，并控制同时运行的实例数量。此类任务可以通过使用 Kubernetes 对象完成。我们将在接下来的章节中进一步探索它们。
+容器化应用程序是驱动所有 Kubernetes 机制的基本元素。在 Kubernetes 中托管应用程序时，我们可以使其对外部网络可用，提供应用程序所需的环境变量，并控制同时运行的实例数量。此类任务可以通过使用 Kubernetes 对象完成。我们将在接下来的章节中进一步探索它们。
 
 ## Pod
 
@@ -6000,7 +5915,7 @@ data:
 
 接下来，我们将探索如何基于 Spring Boot、Quarkus 和 Jakarta EE 准备应用程序，以便在 Docker 容器内部执行。
 
-### 创建 Spring Boot 应用的可启动 JAR
+## 创建 Spring Boot 应用的可启动 JAR
 
 Spring Boot 应用可以依赖 Maven 插件，该插件会创建一个打包了所有所需应用程序类和依赖项的 JAR 文件。以下是配置 Spring Boot 应用的 `pom.xml` 文件以构建可启动 JAR 文件的方法：
 
@@ -6019,7 +5934,9 @@ Spring Boot 应用可以依赖 Maven 插件，该插件会创建一个打包了�
 
 通过 `finalName` 属性，我们定义了 JAR 文件的文件名。负责执行魔法操作的插件是 `spring-boot-maven-plugin`。使用此插件时，`mvn package` 命令将在 Spring Boot Maven 项目的 `target` 目录下创建 `sample-spring-boot-app.jar`。
 
-### 创建 Quarkus 应用的可启动 JAR
+接下来，我们将学习如何为 Quarkus 应用创建可启动 JAR。
+
+## 创建 Quarkus 应用的可启动 JAR
 
 为 Quarkus 创建可启动 JAR 方法与我们对 Spring Boot 应用的方法类似。以下示例展示了如何配置 `pom.xml` 文件：
 
@@ -6050,7 +5967,9 @@ Spring Boot 应用可以依赖 Maven 插件，该插件会创建一个打包了�
 
 我们使用 `build` 目标来打包 Quarkus 应用。`generate-code` 目标编译源文件，而 `generate-code-tests` 目标编译测试代码文件。一旦源码和测试代码文件都编译完成，build 目标就会将它们打包成一个可启动的 JAR 文件。
 
-### 创建 Jakarta EE 应用的可启动 JAR
+随后，我们将学习如何为 Jakarta EE 应用创建可启动 JAR。
+
+## 创建 Jakarta EE 应用的可启动 JAR
 
 我们需要一个认证的 Jakarta EE 应用服务器来运行 Jakarta EE 应用。在创建可启动 JAR 时，这种需求可以通过将应用服务器嵌入到包含 Jakarta EE 应用编译类文件的同一个 JAR 文件中来实现。在可用的认证的 Jakarta EE 应用服务器中，让我们使用 WildFly 来配置 `pom.xml`：
 
@@ -6150,7 +6069,7 @@ d310e774110a: Pushed
 
 由于我们在上一节中已经创建了应用程序的 Docker 镜像，让我们学习如何通过环境变量外部化应用程序配置。在容器化应用程序配置时，外部化配置是一种常见做法。
 
-### 外部化应用程序配置
+## 外部化应用程序配置
 
 使用环境变量允许您在不重新编译的情况下更改应用程序配置。这在将应用程序部署到多个环境中也很有帮助，因为每个环境可能需要特定的设置，如数据库主机、用户和密码。在 Spring Boot 中，我们可以在定义 `application.yaml` 文件时使用占位符来应用外部配置：
 
@@ -6167,11 +6086,13 @@ jpa:
 
 例如，`${DATABASE_URL:jdbc:h2:mem:mydb}` 定义了数据源 URL 配置。`DATABASE_URL` 是预期由运行应用程序的环境提供的环境变量。它可以由本地机器或容器提供，例如。如果环境变量的值未定义，Spring Boot 将使用回退值 `jdbc:h2:mem:mydb`。在本章稍后的部分，我们将使用 ConfigMap 定义环境变量的值。
 
-### 创建 Kubernetes 对象
+接下来，我们将学习如何创建在 Kubernetes 集群中运行 Java 应用程序所需的 Kubernetes 对象。
+
+## 创建 Kubernetes 对象
 
 
 
-我们可以使用 `minikube` 等本地集群解决方案在本地轻松设置 Kubernetes 集群。安装本地 Kubernetes 集群不在本书的讨论范围内，但你可以在此处找到安装说明 <https://minikube.sigs.k8s.io/docs/start/>。拥有本地 Kubernetes 集群对于确保 Kubernetes 对象按预期工作非常方便。
+我们可以使用 `minikube` 等本地集群解决方案在本地轻松设置 Kubernetes 集群。安装本地 Kubernetes 集群不在本书的讨论范围内，但你可以在此处找到安装说明：https://minikube.sigs.k8s.io/docs/start/。拥有本地 Kubernetes 集群对于确保 Kubernetes 对象按预期工作非常方便。
 
 设置 `minikube` 集群后，我们可以创建运行我们的 Spring Boot 应用程序的 Kubernetes 对象。让我们从创建一个 ConfigMap 开始。
 
@@ -6272,7 +6193,7 @@ spec:
 
 注意，此 Deployment 有一个使用 `busybox` 镜像的 `initContainers` 块，它执行 Netcat (`nc`) 命令来检查 `sample-spring-boot-app-mysql.default.svc.cluster.local:3306` 是否可用。我们在这里设置 `initContainers` 块是为了防止 Spring Boot 应用程序在数据库之前启动导致启动错误。这种技术确保了 Pod 在初始化容器任务成功执行后才进行初始化。主机 `sample-spring-boot-app-mysql.default.svc.cluster.local` 是 Spring Boot 应用程序连接数据库时使用的 Kubernetes 服务。
 
-当线创建应用程序 Pod 时，Kubernetes 将拉取此镜像。
+当创建应用程序 Pod 时，Kubernetes 将拉取此镜像。
 
 一旦 Deployment 对象配置恰当，我们可以使用类似于下面的命令进行安装：
 
@@ -6336,7 +6257,7 @@ $ kubectl apply -f service.yaml
 
 ## 使用 kubectl 安装 Kubernetes 对象
 
-与 Kubernetes 集群交互的常用方式是通过一个名为 `kubectl` 的命令行工具。你可以在 <https://kubernetes.io/docs/tasks/tools/#kubectl> 找到 `kubectl` 的安装和配置说明。
+与 Kubernetes 集群交互的常用方式是通过一个名为 `kubectl` 的命令行工具。你可以在 https://kubernetes.io/docs/tasks/tools/#kubectl 找到 `kubectl` 的安装和配置说明。
 
 使用 `minikube` 时，它会自动配置 `kubectl` 连接到你的本地 Kubernetes 集群。
 
@@ -6347,8 +6268,9 @@ $ kubectl apply -f k8s/
 configmap/sample-spring-boot-app created
 service/sample-spring-boot-app-mysql created
 deployment.apps/sample-spring-boot-app-boot-app-mysql created
-
-deployment.apps/sample-spring-boot-app created secret/sample-spring-boot-app created service/sample-spring-boot-app created
+deployment.apps/sample-spring-boot-app created
+secret/sample-spring-boot-app created
+service/sample-spring-boot-app created
 ```
 
 此类似的命令会在 Kubernetes 集群上创建 `k8s` 目录内 YAML 文件指定的所有对象。
@@ -6382,7 +6304,7 @@ $ kubectl get service
 
 ## 编译并运行示例项目
 
-示例项目基于 <https://github.com/Java-World-Projects/main> 代码。你需要 JDK 21 或更高版本以及 Maven 3.8.5。执行以下命令编译应用程序：
+示例项目基于 https://github.com/Java-World-Projects/main 代码。你需要 JDK 21 或更高版本以及 Maven 3.8.5。执行以下命令编译应用程序：
 
 ```bash
 $ mvn package
@@ -6486,13 +6408,13 @@ $ minikube ip
 
 高维度性指的是事件中使用的数据属性。包含完整属性 set 的事件有助于从不同维度理解系统行为。例如，当 `User ID` 是一个标识、`Organization ID` 是另一个、`Region`（地区）、`Status`（状态）、`Source`（源）或 `Destination`（目的）时，这些可以被用作衡量标准。链接关键属性的事件可能会损害对系统行为的理解；因此，确保基于相关属性的结构化事件至关重要。
 
-具有高基数和高维度数据的结构化事件是可观测性工具和技术的在这。在分布式系统中，可观测性技术可以用于理解通过多个应用程序的请求流。接下来，我们将学习如何使用 `Spring Boot` 和 `OpenTelemetry` 实现分布式追踪。
+具有高基数和高维度数据的结构化事件是可观测性工具和技术的基石。在分布式系统中，可观测性技术可以用于理解通过多个应用程序的请求流。接下来，我们将学习如何使用 `Spring Boot` 和 `OpenTelemetry` 实现分布式追踪。
 
 # 使用 Spring Boot 和 OpenTelemetry 实现分布式追踪
 
 在分布式架构系统中，理解系统行为是一项非易的挑战。在这种架构中，用户请求可能会触发不同应用程序上的其他请求，这些应用程序协作工作提供功能。例如，用户向 `Service A` 发送请求，`A` 向 `Service B` 发送请求，`B` 再向 `Service C` 发送另一个请求。如果涉及的三个服务中的一个出现问题，我们必须能够识别问题来自哪里。我们可以使用分布式追踪来实现。
 
-分布式追踪是帮助我们根据应用程序发布的追踪来理解系统行为的技术。一个追踪代表请求执行系统行为所采取的路径。每个追踪包含一个或多个跨，代表一个工作单元。请求从一个应用程序到另一个应用程序，生成新的 `span`，并携带上下文数据，让我们知道上一个 `span` 以及所有 `span` 属于哪个追踪。通过追踪和 `span`，我们可以更好地看到由多个应用程序组成的系统中发生了什么。以下是追踪样子的插图：
+分布式追踪是帮助我们根据应用程序发布的追踪来理解系统行为的技术。一个追踪代表请求执行系统行为所采取的路径。每个追踪包含一个或多个跨，代表一个工作单元。请求从一个应用程序到另一个应用程序，生成新的跨，并携带上下文数据，让我们知道上一个跨以及所有跨属于哪个追踪。通过追踪和跨，我们可以更好地看到由多个应用程序组成的系统中发生了什么。以下是追踪样子的插图：
 
 ![](img/9b5739f37699f084397670714bf63edd_291_0.png)
 
@@ -6742,11 +6664,11 @@ Elasticsearch 基于 Lucene 搜索库，是一个分布式企业级搜索引擎�
 
 Kibana 专为配合 Elasticsearch 构建，是一个提供用户界面来管理和搜索 Elasticsearch 数据的系统。用户可以使用自定义过滤器和标准搜索数据，使搜索具有高度灵活性。
 
-这三种技术（Elasticsearch、Fluentd 和 Kibana）通常一起使用，形成可靠且广泛使用的 EFK 栈。在下一节中，我们将引导你设置 EFK 栈，以捕获之前开发的 Spring Boot 应用的日志。
+这三种技术通常一起使用，形成可靠且广泛使用的 EFK 栈。在下一节中，我们将引导你设置 EFK 栈，以捕获之前开发的 Spring Boot 应用的日志。
 
 ## 使用 Docker Compose 设置 EFK 栈
 
-没有需要更改应用代码，因为 Fluentd 使用应用产生的日志输出来捕获数据。因此，确保生成日志的应用与 Fluentd 服务器之间进行良好的通信至关重要。我们还需要确保 Fluentd 将日志发送到 Elasticsearch 服务器，Kibana 通过用户界面显示日志。
+不需要更改应用代码，因为 Fluentd 使用应用产生的日志输出来捕获数据。因此，确保生成日志的应用与 Fluentd 服务器之间进行良好的通信至关重要。我们还需要确保 Fluentd 将日志发送到 Elasticsearch 服务器，Kibana 通过用户界面显示日志。
 
 1. 让我们从在 `docker-compose.yml` 文件中配置 EFK 栈开始。代码如下：
 
@@ -6835,7 +6757,7 @@ inventory-service:
 ```
 
 ```yaml
-- fluentd
+  - fluentd
 logging:
   driver: "fluentd"
   options:
@@ -6871,9 +6793,7 @@ report-service:
 
 执行以下命令来编译两个 Spring Boot 应用：
 
-```bash
-$ mvn clean package
-```
+`$ mvn clean package`
 
 Maven 将为 `inventor-service` 和 `report-service` 应用创建一个 JAR 文件。接下来，你可以执行以下命令启动所有 Spring Boot 应用容器以及可观测性工具：
 
@@ -6899,7 +6819,7 @@ $ curl -s localhost:9090/report/generate | jq
 
 > 图 9.2: Jaeger UI
 
-请注意，追踪包含了跨越 `report-service` 和 `inventory-service` 应用的 span（跨）。
+请注意，追踪包含了跨越 `report-service` 和 `inventory-service` 应用的 span。
 
 我们可以在 `http://localhost:5601` 的 Kibana 中找到应用程序日志。界面如下：
 
@@ -7155,7 +7075,7 @@ public class File {
 
 实现实体后，我们需要一个包含操作的仓库接口，允许我们从数据库中持久化和检索文件。让我们来实现它。
 
-## 实现 File repository
+## 实现 File Repository
 
 仓库通过从数据库中持久化和检索处理 `File` 实体对象。以下是 `FileRepository` 接口的实现：
 
@@ -7167,13 +7087,13 @@ public interface FileRepository extends CrudRepository<File, String> {
 }
 ```
 
-`findById(String Id)` 方法声明允许我们通过各自的 ID 检索 `File` 实体。我们不需要为持久化 `File` 实体声明方法，因为父接口 `CrudRepository` 已经提供了此类方法。
+`findById(String id)` 方法声明允许我们通过各自的 ID 检索 `File` 实体。我们不需要为持久化 `File` 实体声明方法，因为父接口 `CrudRepository` 已经提供了此类方法。
 
 我们仍然需要实现服务类和控制器类但在此之前，让我们创建一个包含 `File` 指标构建器的类。
 
 ## 实现 File Metrics
 
-为了对我们的文件存储应用进行插值，我们需要提供可以用于测量系统不同方面的计数器（meters）。实现这一点的一种方法是创建一个带有公共方法的托管 bean，返回我们可以在其他应用程序类使用的计数器对象。让我们从定义初始类结构开始：
+为了对我们的文件存储应用进行插值，我们需要提供可以用于测量系统不同方面的计数器。实现这一点的一种方法是创建一个带有公共方法的托管 bean，返回我们可以在其他应用程序类使用的计数器对象。让我们从定义初始类结构开始：
 
 ```java
 @Component
@@ -7224,7 +7144,7 @@ public class FileMetric {
 }
 ```
 
-`requestCounter` 返回一个计数器，允许我们测量到达文件存储端点的 HTTP 请求，注意我们使用了方法和路径作为标签。然后，我们有 `fileUploadTimer` 返回一个计时器（Timer），用于测量文件上传所需的时间。最后，我们有 `fileDownloadSizeSummary` 返回一个分布摘要（DistributionSummary），用于测量下载的文件大小。这并不意味着 Spring Boot 将连接到 Prometheus 实例来导出 Micrometer 指标。相反，Micrometer 将生成与 Prometheus 兼容的指标。
+`requestCounter` 返回一个计数器，允许我们测量到达文件存储端点的 HTTP 请求，注意我们使用了方法和路径作为标签。然后，我们有 `fileUploadTimer` 返回一个计时器，用于测量文件上传所需的时间。最后，我们有 `fileDownloadSizeSummary` 返回一个分布摘要，用于测量下载的文件大小。这并不意味着 Spring Boot 将连接到 Prometheus 实例来导出 Micrometer 指标。相反，Micrometer 将生成与 Prometheus 兼容的指标。
 
 在正确定义依赖关系并使用 Micrometer 充分配置 Spring Boot 应用程序后，我们已经准备好开始实现带有指标插值的文件存储系统。
 
@@ -7244,7 +7164,7 @@ public class FileMetric {
 }
 ```
 
-`FileMetric` 类被标记为 `@Component`，使其成为一个 Spring 管理的 bean，可以在其他 Spring bean 中使用。我们使用构造函数初始化 `meterRegistry` 属性。请记住 `MeterRegistry` 是一个接口，拥有针对不同监控系统的实现。由于我们定义了支持 Prometheus 的 Micrometer Maven 依赖，当启动此 Spring Boot 应用程序时，`meterRegistry` 属性将用 `PrometheusMeterRegistry` 实现初始化。接下来，我们实现返回程序所需的计数器的方法：
+`FileMetric` 类被标记为 `@Component`，使其成为一个 Spring 管理的 bean，可以在其他 Spring bean 中使用。我们使用构造函数初始化 `meterRegistry` 属性。请记住 `MeterRegistry` 是一个接口，拥有针对不同监控系统的实现。由于我们定义了支持 Prometheus 的 Micrometer Maven 依赖，当启动此 Spring Boot 应用程序时，`meterRegistry` 属性将用 `PrometheusMeterRegistry` 实现初始化。接下来，我们实现返回程序程序所需的计数器的方法：
 
 ```java
 @Component
@@ -7263,23 +7183,26 @@ public class FileMetric {
     public Timer fileUploadTimer(String fileName) {
         return Timer
             .builder("file.upload.duration")
-            .description("File Upload Duration")
-            .tags("fileName", fileName)
-            .register(meterRegistry);
-    }
-
-    public DistributionSummary fileDownloadSizeSummary(String fileName) {
-        return DistributionSummary
-            .builder("file.download.size")
-            .baseUnit("bytes")
-            .description("File Download Size")
-            .tags("fileName", fileName)
-            .register(meterRegistry);
-    }
+            // ...
 }
 ```
 
-`requestCounter` 返回一个计数器，允许我们测量到达文件存储端点的 HTTP 请求，注意我们使用了方法和路径作为标签。然后，我们有 `fileUploadTimer` 返回一个计时器（`Timer`），用于测量文件上传所需的时间。最后，我们有 `fileDownloadSizeSummary` 返回一个分布摘要（`DistributionSummary`），用于测量下载的文件大小。这并不意味着 Spring Boot 将连接到 Prometheus 实例来导出 Micrometer 指标。相反，Micrometer 将生成与 Prometheus 兼容的指标。
+```java
+.description("File Upload Duration")
+.tags("fileName", fileName)
+.register(meterRegistry);
+
+public DistributionSummary fileDownloadSizeSummary(String fileName) {
+    return builder
+        .unit("file.download.size")
+        .baseUnit("bytes")
+        .description("File Download Size")
+        .tags("fileName", fileName)
+        .register(meterRegistry);
+}
+```
+
+`requestCounter` 返回一个计数器，允许我们测量到达文件存储端点的 HTTP 请求，注意我们使用了方法和路径作为标签。然后，我们有 `fileUploadTimer` 返回一个计时器（Timer），用于测量文件上传所需的时间。最后，我们有 `fileDownloadSizeSummary` 返回一个分布摘要（DistributionSummary），用于测量下载的文件大小。这并不意味着 Spring Boot 将连接到 Prometheus 实例来导出 Micrometer 指标。相反，Micrometer 将生成与 Prometheus 兼容的指标。
 
 在正确定义依赖关系并使用 Micrometer 充分配置 Spring Boot 应用程序后，我们已经准备好开始实现带有指标插值的文件存储系统。
 
@@ -7337,9 +7260,9 @@ public Optional<File> downloadFile(String id) {
 }
 ```
 
-这里需要注意的关键点是使用 `fileUploadTimer` 来测量 `uploadFile` 方法在调用 lambda 表达式 `() -> fileRepository.save(file)` 时保存文件到数据库所需的时间。
+这里需要注意的关键点是使用 `fileUploadTimer` 来测量 `uploadFile` 方法在调用 lambda 表达式 `-> fileRepository.save(file)` 时保存文件到数据库所需的时间。
 
-通过使用计数器和分布摘要指标创建控制器类完成文件系统的实现。
+通过使用计数器和分布摘要指标创建控制器类完成文件文件系统的实现。
 
 ## 实现 Controller 类
 
@@ -7350,20 +7273,25 @@ public Optional<File> downloadFile(String id) {
 public class FileController {
   private final FileService fileService;
   private final FileMetric fileMetric;
+```
 
-  @Autowired
-  public FileController(FileService fileService, FileMetric fileMetric) {
-      this.fileService = fileService;
-      this.fileMetric = fileMetric;
-  }
-  // Code omitted
-  private void incrementRequestCounter(String method, String path) {
-      fileMetric.requestCounter(method, path).increment();
-  }
-  private void recordDownloadSizeSummary(File file) {
-      fileMetric.fileDownloadSizeSummary(
-          file.getName()).record(file.getContent().length);
-  }
+```java
+@Autowired
+```
+
+```java
+FileController(FileService fileService, FileMetric fileMetric) {
+    this.fileService = fileService;
+    this.fileMetric = fileMetric;
+}
+// Code omitted
+private void incrementRequestCounter(String method, String path) {
+    fileMetric.requestCounter(method, path).increment();
+}
+private void recordDownloadSizeSummary(File file) {
+    fileMetric.fileDownloadSizeSummary(
+        file.getName()).record(file.getContent().length);
+}
 }
 ```
 
@@ -7371,35 +7299,35 @@ public class FileController {
 
 现在我们准备好实现代表上传和下载文件的 HTTP 端点的方法。让我们从上传端点开始：
 
-```java
+```
 @RestController
 public class FileController {
     // Code omitted
     @PostMapping("/file")
-    public String uploadFile(@RequestParam("file") MultipartFile file)
+    private String uploadFile(@RequestParam("file") MultipartFile file)
     throws IOException {
         incrementRequestCounter(HttpMethod.POST.name(), "/file");
 
-        var fileToUpload = new File(UUID.randomUUID().toString(),
-            file.getOriginalFilename(), file.getBytes());
-        fileService.uploadFile(fileToUpload);
+        var fileToUpload = new File(UUID.randomUUID().toString());
+        file.getOriginalFilename(), file.getBytes());
+        fileService.upload(fileToUpload);
         return fileToUpload.getId();
     }
     // Code omitted
 }
 ```
 
-在方法体的一开始，我们调用了之前定义的 `incrementRequestCounter(HttpMethod.POST.name(), "/file")` 方法。我们将 `HttpMethod.POST.name()` 和 "/file" 路径作为指标标签传递给它。每当有 POST 请求到达此端点时，计数器就会增加。
+在方法体的正开始，我们调用了之前定义的 `incrementRequestCounter(HttpMethod.POST.name(), "/file")` 方法。我们将 `HttpMethod.POST.name()` 和 "file" 路径作为指标标签传递给它。每当有 POST 请求到达此端点时，计数器就会增加。
 
 接下来，我们实现处理文件下载的端点：
 
-```java
+```
 @RestController
 public class FileController {
     // Code omitted
     @GetMapping("/file/{id}")
-    public ResponseEntity<Resource> downloadFile(@PathVariable String id) {
-        incrementRequestCounter(HttpMethod.GET.name(), "/file/" + id);
+    private ResponseEntity<Resource> downloadFile(@PathVariable String id) {
+        incrementRequestCounter(HttpMethod.GET.name(), "/file/"+id);
 
         var file = fileService.downloadFile(id);
 
@@ -7423,7 +7351,7 @@ public class FileController {
 }
 ```
 
-`downloadFile` 方法跟踪两个指标：首先通过调用 `incrementRequestCounter(HttpMethod.GET.name(), "/file/" + id)` 跟踪请求计数指标，其次通过 `recordDownloadSizeSummary(file.get())` 跟踪下载大小摘要指标。对 `/file/{id}` 端点的请求将在浏览器中触发文件下载。
+`downloadFile` 方法跟踪两个指标：首先通过调用 `incrementRequestCounter(HttpMethod.GET.name(), "/file/"+id)` 跟踪请求计数指标，其次通过 `recordDownloadSizeSummary(file.get)` 跟踪下载大小摘要指标。对 `/file/{id}` 端点的请求将在 浏览器中触发文件下载。
 
 接下来，让我们检查如何发送请求来测试我们的应用程序并可视化 Micrometer 采集的指标。
 
@@ -7431,7 +7359,7 @@ public class FileController {
 
 在本节中，我们将编译并运行在上一章节中实现的文件存储系统。
 
-你可以从 GitHub 仓库克隆应用程序源码：`https://github.com/bpbpublications/Java-Real-World-Projects/tree/main/Chapter%2010`。
+你可以从 GitHub 仓库克隆应用程序源码：https://github.com/bpbpublications/Java-Real-World-Projects/tree/main/Chapter%2010。
 
 你需要在机器上安装 JDK 21 或更高版本或 Maven 3.8.5 以上版本。
 
@@ -7455,19 +7383,17 @@ $ java -jar target/chapter10-1.0-SNAPSHOT.jar
 $ curl --form file="@random.txt" localhost:8080/file
 ```
 
-```
 69d6cea-4022-4262-a217-a89b9f52e57
-```
 
-上一个命令返回一个文件 ID，你可以在浏览器中通过 URL `http://localhost:8080/file/{fileId}` 下载该文件。你需要将 `{fileId}` 替换为服务器在你上传文件后提供的 ID，如图所示：
+上一个命令返回一个文件，你可以在浏览器中通过 URL http://localhost:8080/file/{fileId} 下载该文件。你需要将 `{fileId}` 替换为服务器在你上传文件后提供的 ID，如图所示：
 
 ![](img/9b5739f37699f084397670714bf63edd_318_0.png)
 
 **图 10.1**: 从文件系统下载文件
 
-注意，文件名 `random.txt` 与上传文件时提供的文件名相同。
+注意，文件名 random.txt 与上传文件时提供的文件名相同。
 
-2. 我们可以访问 URL `http://localhost:8080/actuator/prometheus` 来可视化应用程序指标，如图所示：
+2. 我们可以访问 URL http://localhost:8080/actuator/prometheus 来可视化应用程序指标，如图所示：
 
 ```
 # HELP file_http_request_total HTTP metric
@@ -7488,7 +7414,7 @@ $ curl --form file="@random.txt" localhost:8080/file
 # file_download_size_summary{filename="random.txt"}
 ```
 
-Prometheus 最初于 2012 年发布，是一种开源监控和告警软件，运行在系统生成的指标之上。我们可以使用 Prometheus 监控运行应用程序的基础设施，例如检查 CPU、内存和磁盘的使用情况。我们还可以通过对插桩的应用程序采集指标，来监控应用程序的行为。它已被全球许多组织使用，提供了一种健壮且可以轻松集成到云原生环境中的监控解决方案。
+Prometheus 最初于 2012 年发布，是一种开源监控和告警软件，运行在系统生成的指标之上。我们可以使用 Prometheus 监控运行应用程序的基础设施，例如检查 CPU、内存和磁盘的使用情况。我们还可以通过对插桩（instrumented）的应用程序采集指标，来监控应用程序的行为。它已被全球许多组织使用，提供了一种健壮且可以轻松集成到云原生环境中的监控解决方案。
 
 Prometheus 凭借其简单而强大的功能而流行。它允许我们在时序数据库中存储和查询指标数据。Prometheus 还依赖于一种名为 `Alertmanager` 的告警机制，它允许我们在各种地方（包括电子邮件、电话和聊天系统）触发告警。
 
@@ -7496,11 +7422,9 @@ Prometheus 是大多数企业项目中的常用组件，受到了 Spring Boot、
 
 
 
-我们将从学习 Prometheus 架构以及它如何通过导出器（`exporters`）与其他系统协作开始，导出器将指标暴露给 Grafana 等仪表板系统进行消费。在学习 Prometheus 架构后，我们将安装并配置它，以便我们探索 PromQL —— 一种允许我们从 Prometheus 存储的指标中获取答案的查询语言。
+# 学习 Prometheus 架构
 
-## 学习 Prometheus 架构
-
-Prometheus 架构的主要组件是服务器进程，它从监控目标抓取指标。值得注意的是，Prometheus 是一种拉取（`pull-mode`）监控工具，这意味着它通过配置从预定义的系统拉取监控数据。以指标形式存储的监控数据通过 HTTP API 端点提供，告警和仪表板系统可以使用。在图中，我们 Prometheus 架构的高级表示：
+Prometheus 架构的主要组件是服务器进程，它从监控目标抓取指标。值得注意的是，Prometheus 是一种拉取（pull-mode）监控工具，这意味着它通过配置从预定义的系统拉取监控数据。以指标形式存储的监控数据通过 HTTP API 端点提供，告警和仪表板系统可以使用。在图中，我们展示了 Prometheus 架构的高级表示：
 
 ![](img/9b5739f37699f084397670714bf63edd_322_0.png)
 
@@ -7512,9 +7436,9 @@ Prometheus 架构的主要组件是服务器进程，它从监控目标抓取指
 
 导出器是负责为 Prometheus 提供指标的架构组件。我们将涵盖三种类型的导出器，如下：
 
-1.  **第三方导出器**：当你想从一个无法控制源代码的系统获取指标时使用。假设你的应用程序数据存储在 MySQL 数据库中，你想从中获取指标。由于你无法控制 MySQL 源码，你必须依赖第三方提供的 MySQL 指标导出器。
-2.  **应用程序导出器**：提供由插桩应用程序生成的指标。与第三方导出器相反，我们对应用程序导出器生成的指标具有控制权，因为我们可以更改应用程序代码。
-3.  **节点导出器（`node exporter`）**：旨在仅基于机器的指标，如 CPU、内存和磁盘使用率。它作为操作系统的一个进程运行。
+1. **第三方导出器**：当你想从一个无法控制源代码的系统获取指标时使用。假设你的应用程序数据存储在 MySQL 数据库中，你想从中获取指标。由于你无法控制 MySQL 源码，你必须依赖第三方提供的 MySQL 指标导出器。
+2. **应用程序导出器**：提供由插桩应用程序生成的指标。与第三方导出器相反，我们对应用程序导出器生成的指标具有控制权，因为我们可以更改应用程序代码。
+3. **节点导出器（`node exporter`）**：旨在仅基于机器的指标，如 CPU、内存和磁盘使用率。它作为操作系统的一个进程运行。
 
 所有导出器都提供一个 HTTP 端点，Prometheus 服务器使用它来拉取指标数据。让我们探索 Prometheus 服务器内部的内容。
 
@@ -7528,7 +7452,7 @@ Prometheus 服务器是一个基础架构组件。它的存储基于时序数据
 
 现在我们了解了 Prometheus 架构，将学习如何安装 Prometheus 服务器并探索使用 PromQL，这是一种强大的查询语言，允许我们对指标进行聚合操作。
 
-## 启动并运行 Prometheus
+# 启动并运行 Prometheus
 
 Prometheus 兼容多个操作系统和 CPU 架构。你可以在 `https://prometheus.io/download/` 找到对应操作系统的二进制文件。接下来，我们将介绍如何在 Linux 环境下下载、配置和运行 Prometheus 服务器。
 
@@ -7536,28 +7460,28 @@ Prometheus 兼容多个操作系统和 CPU 架构。你可以在 `https://promet
 
 在本地环境中安装 Prometheus 非常简单，因为它涉及下载 Prometheus 二进制文件、解压、配置和启动。接下来，我们介绍 Prometheus 的安装步骤。
 
-1.  你可以通过浏览器或在 Linux 终端运行以下命令下载 Prometheus 二进制文件：
+1. 你可以通过浏览器或在 Linux 终端运行以下命令下载 Prometheus 二进制文件：
 
-    ```
-    $ wget https://github.com/prometheus/prometheus/releases/download/v2.53.0
-    ```
+```
+$ wget https://github.com/prometheus/prometheus/releases/download/v2.53.0
+```
 
-    上述命令下载的是 2.53.0 版本，但你可以调整以获取最新版本。
+上述命令下载的是 2.53.0 版本，但你可以调整以获取最新版本。
 
-2.  接下来，我们在下载文件的相同目录下解压 Prometheus 二进制文件：
+2. 接下来，我们在下载文件的相同目录下解压 Prometheus 二进制文件：
 
-    ```
-    $ tar xvf prometheus-2.53.0.linux-amd64.tar.gz
-    ```
+```
+$ tar xvf prometheus-2.53.0.linux-amd64.tar.gz
+```
 
-3.  解压后，你可以执行以下命令检查解压后的文件：
+3. 解压后，你可以执行以下命令检查解压后的文件：
 
-    ```
-    $ ls prometheus-2.53.0.linux-amd64
-    console_libraries consoles LICENSE NOTICE prometheus prometheus.yml
-    ```
+```
+$ ls prometheus-2.53.0.linux-amd64
+console_libraries consoles LICENSE NOTICE prometheus prometheus.yml
+```
 
-    这两个文件值得我们关注：启动 Prometheus 服务器的可执行文件 `prometheus` 以及包含配置的 `prometheus.yml`。
+这两个文件值得我们关注：启动 Prometheus 服务器的可执行文件 `prometheus` 以及包含配置的 `prometheus.yml`。
 
 让我们探索如何通过 `prometheus.yml` 文件找到初始配置。
 
@@ -7565,87 +7489,72 @@ Prometheus 兼容多个操作系统和 CPU 架构。你可以在 `https://promet
 
 Prometheus 配置通过 `prometheus.yml` 文件定义，允许我们设置（例如） Prometheus 服务器用于抓取的导出器端点。接下来，我们将介绍配置 Prometheus 的步骤。
 
-1.  我们先考虑 `prometheus.yml` 的默认配置是长样的：
+1. 我们先考虑 `prometheus.yml` 的默认配置：
 
-    ```yaml
-    # 全局配置
-    global:
-      scrape_interval: 15s # 将抓取间隔设置为 15 秒。
-      evaluation_interval: 15s # 每 15 秒评估一次规则。
-      # scrape_timeout 设置为全局默认值 (10s)。
-    ```
+```yaml
+# 全局配置
+global:
+  scrape_interval: 15s # 将抓取间隔设置为 15 秒。
+  evaluation_interval: 15s # 每 15 秒评估一次规则。
+  # scrape_timeout 设置为全局默认值 (10s)。
 
-    # Alertmanager 配置
+# Alertmanager 配置
+alerting:
+  alertmanagers:
+    - static_configs:
+        targets:
+          - alertmanager:9093
 
-    ```yaml
-    alerting:
-      alertmanagers:
-        - static_configs:
-            targets:
-              - alertmanager:9093
-    ```
+# 加载规则并根据全局配置定期评估它们
+rule_files:
+  - "first_rules.yml"
+  - "second_rules.yml"
 
-    # 加载规则并根据全局配置定期评估它们
+# 一个包含一个待抓取端点的抓取配置：
+# 这里是 Prometheus 本身。
+scrape_configs:
+  - job_name: "prometheus"
+    # metrics_path 默认值为 '/metrics'
+    # scheme 默认值为 'http'
+    static_configs:
+      - targets: ["localhost:9090"]
+```
 
-    ```yaml
-    rule_files:
-      - "first_rules.yml"
-      - "second_rules.yml"
-    ```
+2. 无需更改默认的 `prometheus.yml` 文件即可启动它，因此我们可以继续执行 `prometheus` 可执行文件：
 
-    # 一个包含一个待抓取端点的抓取配置：
+```bash
+$ ./prometheus
+...
+ts=2024-06-23T13:41:34.322 caller=main.go:1354 level=info msg="Loading co"
+ts=2024-06-23T13:41:37.382 caller=main.go:1391 level=info msg="updated G"
+ts=2024-06-23T13:41:39.792 caller=main.go:1402 level=info msg="Completed"
+ts=2024-06-23T13:41:39.792 caller=main.go:1133 level=info msg="Server is"
+ts=2024-06-23T13:41:39.792 caller=manager.go:164 level=info component="ru"
+```
 
-    # 这里是 Prometheus 本身。
+上述输出显示 Prometheus 已经启动并运行。
 
-    ```yaml
-    scrape_configs:
-      - 任务名称作为标签 `job=<job_name>` 添加到任何时序任务
-        job_name: "prometheus"
-        # metrics_path 默认值为 '/metrics'
-        # scheme 默认值为 'http'
-        static_configs:
-          - targets: ["localhost:9090"]
-    ```
+3. 此时，你可以通过浏览器查看 Prometheus 用户界面，如下所示：
 
-2.  无需更改默认的 `prometheus.yml` 文件即可启动它，因此我们可以继续执行 `prometheus` 可执行文件：
+![](img/9b5739f37699f084397670714bf63edd_325_0.png)
 
-    ```bash
-    $ ./prometheus
-    ```
+**图 11.2：** 浏览器中的 Prometheus 用户界面
 
-    ...
+该图显示了你在浏览器中访问 URL `http://localhost:9090/` 时的初始页面。
 
-    ```
-    ts=2024-06-23T13:41:34.322 caller=main.go:1354 level=info msg="Loading co"
-    ts=2024-06-23T13:41:37.382 caller=main.go:1391 level=info msg="updated G"
-    ts=2024-06-23T13:41:39.792 caller=main.go:1402 level=info msg="Completed"
-    ts=2024-06-23T13:41:39.792 caller=main.go:1133 level=info msg="Server is"
-    ts=2024-06-23T13:41:39.792 caller=manager.go:164 level=info component="ru"
-    ```
+4. 当你点击 **Status**（状态），然后 **Target**（目标）时，你可以看到 Prometheus 连接的 exporter 端点（endpoints），如下所示：
 
-    上述输出显示 Prometheus 已经启动并运行。
+![](img/9b5739f37699f084397670714bf63edd_326_0.png)
 
-3.  此时，你可以通过浏览器查看 Prometheus 用户界面，如下所示：
-
-    ![](img/9b5739f37699f084397670714bf63edd_325_0.png)
-
-    **图 11.2：** 浏览器中的 Prometheus 用户界面
-
-    该图显示了你在浏览器中访问 URL `http://localhost:9090/` 时的初始页面。
-
-4.  当你点击 **Status**（状态），然后 **Target**（目标）时，你可以看到 Prometheus 连接的 exporter 端点（`endpoints`），如下所示：
-
-    ![](img/9b5739f37699f084397670714bf63edd_326_0.png)
-
-    上图 exporter 端点定义在 `prometheus.yml` 文件中。exporter 端点 `http://localhost:9090/metrics` 让我们能够从 Prometheus 获取指标。
+上图 exporter 端点定义在 `prometheus.yml` 文件中。exporter 端点 `http://localhost:9090/metrics` 让我们能够从 Prometheus 获取指标。
 
 现在我们已经知道如何让 Prometheus 启动并运行，让我们探索 Prometheus 查询语言 (PromQL)，这是一种允许我们对指标数据进行查询和聚合的工具。
 
-## 探索 PromQL
+# 探索 PromQL
 
 Prometheus 拥有强大的查询语言，让我们能够从原始指标数据中提取关于系统行为的有用信息。例如，考虑以下 PromQL 表达式的使用：
 
-### file_http_request_total
+## `file_http_request_total`
 
 执行查询的最基本方法是提供我们感兴趣的指标名称，如下所示：
 
@@ -7681,51 +7590,51 @@ PromQL 提供了让我们聚合指标数据的函数。除了 `rate` 函数外�
 
 在涵盖了 Prometheus 的工作原理后，让我们学习如何与 Grafana 集成。
 
-## 将 Prometheus 与 Grafana 集成
+# 将 Prometheus 与 Grafana 集成
 
 Grafana 是一种分析和监控解决方案，广泛与其他技术集成，以提供监控系统行为的全面视图。它的优势之一能够视觉化表示从 Prometheus 等系统中获取指标和其他监控数据。在本节中，我们将学习如何使用 Docker Compose 配置这两个系统之间的简单集成。
 
-1.  通过 `docker-compose.yml` 文件，我们为 Prometheus 和 Grafana 定义了 Docker compose 配置：
+1. 通过 `docker-compose.yml` 文件，我们为 Prometheus 和 Grafana 定义了 Docker compose 配置：
 
-    ```yaml
-    version: '3.8'
+```yaml
+version: '3.8'
 
-    services:
-      prometheus:
-        image: prom/prometheus:v2.45.6
-        network_mode: host
-        volumes:
-          /monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+services:
+  prometheus:
+    image: prom/prometheus:v2.45.6
+    network_mode: host
+    volumes:
+      - /monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
 
-      grafana:
-        image: grafana/grafana:10.4.4
-        network_mode: host
-        depends_on:
-          - Prometheus
-    ```
+  grafana:
+    image: grafana/grafana:10.4.4
+    network_mode: host
+    depends_on:
+      - prometheus
+```
 
-2.  Prometheus 配置通过 `prometheus.yml` 文件完成。以下是配置此类文件的方法：
+2. Prometheus 配置通过 `prometheus.yml` 文件完成。以下是配置此类文件的方法：
 
-    ```yaml
-    global:
-      scrape_interval: 15s
-      evaluation_interval: 15s
+```yaml
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
 
-    scrape_configs:
-      job_name: "File Storage"
-      static_configs:
-        - targets: ['localhost:9090']
-    ```
+scrape_configs:
+  - job_name: "File Storage"
+    static_configs:
+      - targets: ['localhost:9090']
+```
 
-    exporter 端点 `http://localhost:9090/metrics` 让我们能够从 Prometheus 获取指标。
+exporter 端点 `http://localhost:9090/metrics` 让我们能够从 Prometheus 获取指标。
 
-3.  我们通过执行以下命令启动 Grafana 容器：
+3. 我们通过执行以下命令启动 Grafana 容器：
 
-    ```bash
-    docker-compose up -d
-    ```
+```bash
+docker-compose up -d
+```
 
-    图中 exporter 端点定义在 `prometheus.yml` 文件中。exporter 端点 `http://localhost:9090/metrics` 让我们能够从 Prometheus 获取指标。
+图中 exporter 端点定义在 `prometheus.yml` 文件中。exporter 端点 `http://localhost:9090/metrics` 让我们能够从 Prometheus 获取指标。
 
 我们想要检查给定时间间隔内下载的 5 个最大的文件。我们可以使用条形图可视化来实现这一目标，如图所示：
 
@@ -7735,17 +7644,17 @@ Grafana 是一种分析和监控解决方案，广泛与其他技术集成，以
 
 可视化是通过以下查询构建的：
 
-`top(5,sort_desc(max_over_time(file_download_size_bytes[$__range])))`
+`top(5, sort_desc(max_over_time(file_download_size_bytes[$__range])))`
 
 我们在 `file_download_size_bytes` 指标上使用了 `max_over_time` 函数，该指标按降序排列。最后，我们使用 `top` 函数获取前 5 个最大的结果。
 
-设置具有意义的可视化 Grafana 仪表板可以增强我们对系统的监控。我们可以使用仪表板来排除故障并预测瓶颈，我们不希望不断检查以查看是否达到了某些阈值。为此，我们可以依靠告警。让我们接下来探索如何使用 Prometheus 和 Alertmanager 来触发告警。
+设置具有意义的可视化 Grafana 仪表板可以增强我们对系统的监控。我们可以使用仪表板来排查故障并预测瓶颈，我们不希望不断检查以查看是否达到了某些阈值。为此，我们可以依靠告警。让我们接下来探索如何使用 Prometheus 和 Alertmanager 来触发告警。
 
-## 使用 Alertmanager 触发告警
+# 使用 Alertmanager 触发告警
 
 Prometheus 拥有一个规则引擎，允许我们根据预定义规则使用指标来触发告警。Alertmanager 负责接收 Prometheus 触发的告警，并通过电子邮件等通知通道通知相关方（例如）。在本节中，我们将学习如何配置 Prometheus 和 Alertmanager，以便根据文件存储系统生成的指标来触发告警。让我们从提供一个 Docker compose 配置开始。
 
-### 设置 Alertmanager 容器
+## 设置 Alertmanager 容器
 
 为了提供 Alertmanager 容器，我们使用之前获取 Prometheus 和 Grafana 容器时所需的相同的 `docker-compose.yml` 文件：
 
@@ -7768,21 +7677,17 @@ services:
       - alertmanager
 ```
 
-### 我们需要调整 prometheus.yml 文件以启用告警机制
-
-# 代码省略
+## 我们需要调整 prometheus.yml 文件以启用告警机制
 
 ```yaml
 alerting:
   alertmanagers:
     - static_configs:
-        targets: [ 'localhost:9093' ]
+        targets: ['localhost:9093']
 
 rule_files:
   - "etc/prometheus/alert-rules.yml"
 ```
-
-# 代码省略
 
 告警配置块允许我们指定用于触发告警的 Alertmanager URL `localhost:9093`。通过 `rule_files` 块，我们可以告诉 Prometheus 在哪里可以找到包含告警规则的文件。让我们探索一下我们如何定义 Prometheus 规则并配置 Alertmanager 发送电子邮件通知。
 
@@ -7840,7 +7745,7 @@ receivers:
 
 在本节中，我们编译并运行带有 Prometheus、Grafana 和 Alertmanager 的文件存储系统。
 
-你可以从 GitHub 仓库克隆应用程序源代码：https://github.com/bppublications/Java-Real-World-Projects/tree/main/Chapter%2011。
+你可以从 GitHub 仓库克隆应用程序源代码：`https://github.com/bppublications/Java-Real-World-Projects/tree/main/Chapter%2011`。
 
 你需要在机器上安装 JDK 21 或更高版本，以及 Maven 3.8.5 或更高版本。还需要 Docker 和 Docker Compose。
 
@@ -7864,16 +7769,11 @@ $ docker-compose up -d
 
 现在，我们介绍如何使用：
 
-1. 访问 http://localhost:3000 处的 Grafana 并设置数据源。
-
+1. 访问 `http://localhost:3000` 处的 Grafana 并设置数据源。
 2. 然后，从仓库中导入 `dashboard.json`。
-
 3. 向以下地址请求：
-
    - `http://localhost:9090/api/v1/metrics`
-
    - `http://localhost:9090/api/v1/rules`
-
 4. 按照如下方式检查仪表板：
 
 ![](img/9b5739f37699f084397670714bf63edd_332_0.png)
@@ -7913,12 +7813,10 @@ $ docker-compose up -d
 在想象一个能够交付上述个人财务功能的软件系统时，我们可以考虑以下三个系统职责：
 
 - **资金处理：** 负责存储和提供资金交易的访问。它允许通过用户定义的类别（如健身房、租金、杂货、投资等）对交易进行组织。
-
 - **报告生成：** 包含使用 Excel 表格生成月度资金活动的规则。
-
 - **文件存储：** 提供文件存储能力，允许上传和下载 Excel 报告文件。
 
-在传统的单体方法中，所有三个职责都将是同一个应用程序的一部分，封装在部署单元中。它们可能位于同一个源代码中。底图说明了基于上述职责的单体应用结构：
+在传统的单体方法中，所有三个职责都将是同一个应用程序的一部分，封装在部署单元中。它们可能位于同一个源代码中。下图说明了基于上述职责的单体应用结构：
 
 ![](img/9b5739f37699f084397670714bf63edd_340_png)
 
@@ -7944,7 +7842,7 @@ $ docker-compose up -d
 
 知识萃取的范围可以从阅读关于问题领域的书籍，到与能够提供业务运作有用信息的人进行交流。我们使用一种名为“事件风暴”（`Event Storming`）的技术作为知识萃取的方法。事件风暴技术源于领域驱动设计的实践，能够在理解问题领域和构建通用语言方面产生显著成果。接下来，我们将讨论什么是事件风暴以及它能为软件项目带来的益处。
 
-## 事件风暴 (Event Storming)
+## 事件风暴
 
 大多数业务的运行基于代表人员与业务流程交互的事件。这些交互源于业务流程，业务流程预期代表一系列步骤，执行后会产生结果。映射这些业务流程及其运作方式构成了事件风暴的主要目标，这是一场不了解业务如何运作的人与了解业务的人之间的研讨会。寻求问题领域知识的软件开发者是需要学习业务如何运作的人。相反，那些了解业务流程的人就是领域专家。
 
@@ -7952,9 +7850,9 @@ $ docker-compose up -d
 
 意识到事件风暴对于帮助清晰定义边界上下文（`Bounded Contexts`）、通用语言和领域模型的益处后，我们将探索如何开展一次事件风暴会议。
 
-## 识别事件风暴会议参与者
+### 识别事件风暴会议参与者
 
-在一个遵循敏捷实践的组织中，你可能会发现产品主（`Product Owner`）、敏捷大师（`Scrum Master`）、技术负责人以及具有后端、前端、QA（测试）和 DevOps 背景的工程师。这些人被组织在一个产品导向的团队中，负责一个产品或产品的特定部分。产品导向团队通常对软件项目的整个生命周期负责。通过与业务部门协作，他们识别客户需求，通过用户故事（`User Stories`）将其转化为技术需求，并实现、部署和积极维护软件解决方案。参与软件项目生命期的每个人都应该参加事件风暴会议。
+在一个遵循敏捷实践的组织中，你可能会发现产品主（`Product Owner`）、敏捷大师（`Scrum Master`）、技术负责人以及具有后端、前端、QA（测试）和 DevOps 背景的工程师。这些人被组织在一个产品导向的团队中，负责一个产品或产品的特定部分。产品导向团队通常对软件项目的整个生命周期负责。通过与业务部门协作，他们识别客户需求，通过用户故事（`User Stories`）将其转化为技术需求，并实现、部署和积极维护软件解决方案。参与软件项目生命周期的每个人都应该参加事件风暴会议。
 
 业务部门与产品导向团队之间的协作对于项目的成功至关重要。业务部门通常由理解业务运营方式的非技术人员组成。这些人也被称为领域专家，他们必须参与事件风暴会议，帮助那些想要创建软件解决方案但需要学习业务如何运作的人。
 
@@ -7962,16 +7860,13 @@ $ docker-compose up -d
 
 在了解了谁应该参加事件风暴会议后，让我们看看如何准备它。
 
-## 准备事件风暴会议
+### 准备事件风暴会议
 
 事件风暴会议以面对面会议的形式举行时效果最好，房间内应有白板、所有参与者的笔以及橙色、蓝色、绿色和多种颜色的便利贴。在以下，我们将看到每种颜色便利贴的用途：
 
 - 橙色便利贴描述领域事件（`Domain Events`）。我们选择橙色是为了强调领域事件是事件风暴练习中的核心元素。
-
 - 蓝色便利贴用于命令（`Commands`）。命令规范了一个触发领域事件的动作。
-
 - 黄色便利贴是聚合根（`Aggregates`），描述由领域事件和命令处理的对象或数据。
-
 - 绿色可以代表人类参与者（如用户）和非人类参与者（如系统）。
 
 开展事件风暴会议的标准方法是完全依赖白板和物理便利贴。然而，也可以探索使用网络协作工具的混合方法。如果采用这种方法，参与者在会议期间需要笔记本电脑。
@@ -7980,7 +7875,7 @@ $ docker-compose up -d
 
 让我们进一步了解领域事件、命令和聚合根。
 
-## 领域事件 (Domain Events)
+### 领域事件
 
 事件风暴始于获取关于业务流程如何运作的知识。例如，考虑一个个人财务解决方案以及它如何运作以实现业务结果。此类解决方案的最关键方面之一是让人们通过添加交易记录来跟踪支出。基于此，我们可以定义一个名为 `TransactionAdded`（交易添加）的领域事件，如图所示：
 
@@ -7988,7 +7883,7 @@ $ docker-compose up -d
 
 领域事件始终被定义为过去时的名词，用于描述已经发生的事情。好了，我们有了 `TransactionAdded` 事件，但它是如何被触发的呢？为了做到这一点，我们需要定义一个命令。让我们接下来检查。
 
-## 命令 (Commands)
+### 命令
 
 在确定了我们的第一个领域事件 `TransactionAdded` 后，我们必须确定由哪个命令触发该事件。我们可以通过定义 `AddTransaction` 命令来解决这个问题，如图所示：
 
@@ -7998,7 +7893,7 @@ $ docker-compose up -d
 
 在这个阶段，我们知道了领域事件以及触发它的命令，但我们需要知道谁负责执行该命令。
 
-## 参与者 (Actors)
+### 参与者
 
 参与者即使在事件风暴中也起着基础作用，因为通过他们我们才能追踪领域事件存在的来源。参与者可以被定义为人类或非人类，他们与领域事件的关系通过命令调解，如下：
 
@@ -8006,7 +7901,7 @@ $ docker-compose up -d
 
 识别参与者有助于我们理解是谁在触发事件，并允许我们探索他们与命令交互背后的动机。
 
-## 聚合根 (Aggregates)
+### 聚合根
 
 我们已经确定了 `TransactionAdded` 领域事件和 `AddTransaction` 命令。前者代表一个已经发生的事件，而后者指的是生成该事件的动作。领域事件和命令代表了一种连接，即为了实现某些业务结果而进行的活动聚合。在我们的个人财务示例中，领域事件与命令之间的这种连接通过一个名为 `Transaction` 的聚合根来描述，如下所示：
 
@@ -8016,11 +7911,11 @@ $ docker-compose up -d
 
 将聚合根看作一个实体或数据，它将负责实现业务流程的命令和领域事件紧密结合。在上面的示例中，聚合根位于命令和领域事件便签贴之间。
 
-我们可以通过使用领域事件、命令、参与者（`Actors`）和聚合根来映射我们感兴趣的所有业务流程。一旦完成映射，最终结果将作为领域模型实现的输入。在接下来的章节中，我们将探索什么是领域模型。
+我们可以通过使用领域事件、命令、参与者（`actors`）和聚合根来映射我们感兴趣的所有业务流程。一旦完成映射，最终结果将作为领域模型实现的输入。在接下来的章节中，我们将探索什么是领域模型。
 
-# 领域模型 (The Domain Model)
+# 领域模型
 
-到目前为止，所有围绕边界上下文（`Bounded Contexts`）、通用语言（`Ubiquitous Language`）和事件风暴（`Event Storming`）的讨论显著提升了我们获取领域知识的能力。我们使用这些知识来创建领域模型，它是我们想要解决的问题以及解决该问题的具化表示。我们称之为“具化”，是因为领域模型通常结合了基于编写文档、图表和代码的产物。它们共享相同的通用语言，因此应用程序代码中使用的术语与文档和图表具有相同的含义。这特别有用，因为它确保了所有项目的利益相关者对领域模型的表示方式有共同的理解。非技术利益相关者可以轻松理解模型，因为他们知道应用程序代码遵循相同的术语和含义。
+到目前为止，所有围绕边界上下文（`bounded contexts`）、通用语言（`ubiquitous language`）和事件风暴（`event storming`）的讨论显著提升了我们获取领域知识的能力。我们使用这些知识来创建领域模型，它是我们想要解决的问题以及解决该问题的具化表示。我们称之为“具化”，是因为领域模型通常结合了基于编写文档、图表和代码的产物。它们共享相同的通用语言，因此应用程序代码中使用的术语与文档和图表具有相同的含义。这特别有用，因为它确保了所有项目的利益相关者对领域模型的表示方式有共同的理解。非技术利益相关者可以轻松理解模型，因为他们知道应用程序代码遵循相同的术语和含义。
 
 
 
@@ -8030,7 +7925,7 @@ $ docker-compose up -d
 
 ## 使用值对象传递语义
 
-在本节中，我们开始开发个人财务应用程序，这是一个允许我们跟踪支出并将其分类的系统。一个基础的个人财务应用程序应该允许我们存储借或贷方交易。交易本身就是我们稍后讨论实体时将处理的领域元素，但我们现在就可以通过考虑交易可能具有哪些属性来思考它。考虑到交易可以是正的也可以是负的，我们可以实现以下枚举：
+在本节中，我们开始开发个人财务应用程序，这是一个允许我们跟踪支出并将其分类的系统。一个基础的个人财务应用程序应该允许我们存储借方或贷方交易。交易本身就是我们稍后讨论实体时将处理的领域元素，但我们现在就可以通过考虑交易可能具有哪些属性来思考它。考虑到交易可以是正的也可以是负的，我们可以实现以下枚举：
 
 ```java
 public enum Type {
@@ -8055,7 +7950,6 @@ public class Id {
   public static Id withId(String id) {
     return new Id(UUID.fromString(id));
   }
-  
   public static Id withoutId() {
     return new Id(UUID.randomUUID());
   }
@@ -8068,7 +7962,7 @@ public class Id {
 
 ## 使用实体表达身份
 
-实体被定义为具有身份的某种东西。它是我们可以唯一标识的东西。在个人财务系统的上下文中，账户实体可以代表管理财务的人。一个人有兴趣跟踪自己的交易，以便知道钱从哪里来，去哪里。每笔交易都是唯一的，因此拥有一个交易实体是有意义的。仅仅将交易记录在一个桶里可能不够；如果对交易进行分类，预算实践可能会产生更好的结果。为此，我们可以有一个分类实体。接下来，我们将介绍创建 `Transaction`、`Category` 和 `Account` 实体类的步骤。
+实体被定义为具有身份的某种东西。它是我们可以唯一标识的东西。在个人财务系统的上下文中，账户实体可以代表管理财务的人。一个人有兴趣跟踪自己的交易，以便知道钱从哪里来，去哪里。每笔交易都是唯一的，因此拥有一个交易实体是有意义的。仅仅将交易记录在一个桶里可能够用；如果对交易进行分类，预算实践可能会产生更好的结果。为此，我们可以有一个分类实体。接下来，我们将介绍创建 `Transaction`、`Category` 和 `Account` 实体类的步骤。
 
 ### 1. Transaction 实体
 
@@ -8076,13 +7970,13 @@ public class Id {
 
 ```java
 @Builder
-public record Transaction(Id id, String name, Double amount, Type type, Instant timestamp) {
+public record Transaction(Id id, String name, Double amount, Type type) {
 
   public static Transaction createTransaction(Account account, String name, Double amount, Type type) {
     // Code committed
   }
 
-  private static Transaction getTransaction(String name, Double amount, Type type) {
+  private static Transaction getTransaction(String name, Type type) {
     return Transaction.builder()
         .id(Id.withoutId())
         .name(name)
@@ -8182,19 +8076,19 @@ public sealed interface Specification<T> permits AbstractSpecification {
 接下来，我们实现 `AbstractSpecification` 抽象类：
 
 ```java
-public abstract class AbstractSpecification<T> implements Specification<T> {
+public abstract class AbstractSpecification<T> implements Specification {
 
     public abstract boolean isSatisfiedBy(T t);
 
     public abstract void check(T t) throws GenericSpecificationException;
 
     public Specification<T> and(final Specification<T> specification) {
-        return new AndSpecification<>(this, specification);
+        return new AndSpecification(this, specification);
     }
 }
 ```
 
-注意在 `AndSpecification`、`DuplicateCategorySpec` 和 `TransactionAmountSpec` 类中 `permits` 的用法。我们在为个人财务应用提供规格时，定义了这些类。在 `AbstractSpecification` 中，我们定义了一个名为 `check` 的新抽象方法，负责执行业务规则验证。该方法允许我们使用 `AndSpecification` 类将多个规格的结果结合。
+注意在 `AndSpecification`、`DuplicateCategorySpec` 和 `TransactionAmountSpec` 抽象类中 `permits` 的用法。我们在为个人财务应用提供规格时，定义了这些类。在 `AbstractSpecification` 中，我们定义了一个名为 `check` 的新抽象方法，负责执行业务规则验证。该方法允许我们使用 `AndSpecification` 抽象类将多个规格的结果结合。
 
 ### 3. AndSpecification 类
 
@@ -8211,7 +8105,6 @@ public final class AndSpecification<T> extends AbstractSpecification<T> {
         this.spec2 = spec2;
     }
 
-    @Override
     public boolean isSatisfiedBy(final T t) {
         return spec1.isSatisfiedBy(t) && spec2.isSatisfiedBy(t);
     }
@@ -8236,7 +8129,7 @@ public final class TransactionAmountSpec extends AbstractSpecification<Double> {
 
     @Override
     public void check(Double amount) throws GenericSpecificationException {
-        if (!isSatisfiedBy(amount)) {
+        if(!isSatisfiedBy(amount)) {
             throw new GenericSpecificationException("Transaction value 0 is invalid");
         }
     }
@@ -8252,7 +8145,7 @@ public record Transaction(Id id, String name, Double amount, Type type, Instant 
     public static Transaction createTransaction(Account account, String name, Double amount, Type type) {
         var transaction = getTransaction(name, amount, type);
         var transactions = account.transactions();
-        new TransactionAmountSpec().check(transaction.amount());
+        new TransactionAmountSpec().check(transaction.amount);
         transactions.add(transaction);
         return transaction;
     }
@@ -8278,7 +8171,7 @@ public final class DuplicateCategorySpec extends AbstractSpecification<Category>
 
     @Override
     public void check(Category category) throws GenericSpecificationException {
-        if (isSatisfiedBy(category)) {
+        if(isSatisfiedBy(category)) {
             throw new GenericSpecificationException("Category already exists");
         }
     }
@@ -8315,15 +8208,139 @@ public record Category(Id id, String name, List<Transaction> transactions) {
 
 
 
+```java
+public class AccountTest {
+    @Test
+    public void accountIsCreated() {
+        var account = Account.createAccount("Test Account");
+        assertEquals("Test Account", account.name());
+    }
+
+    private Account createAccount(String name) {
+        return Account.builder()
+            .id(Id.generate())
+            .name(name)
+            .build();
+    }
+}
+```
+
+上述测试执行了一个简单的测试以确保 `Account` 实体被创建。
+
+### 2. 接下来，我们测试 `Category` 实体：
+
+```java
+public class CategoryTest {
+    @Test
+    public void account_exists_create_category() {
+        var account = Account.createAccount("Test Account");
+        var category = Category.createCategory(account, "Test Category");
+        assertEquals("Test Category", category.name());
+        assertEquals(1, account.categories().size());
+    }
+
+    @Test
+    public void category_already_exists_throw_exception() {
+        var account = Account.createAccount("Test Account");
+        Category.createCategory(account, "Test Category");
+        assertThrows(GenericSpecificationException.class, () ->
+            Category.createCategory(account, "Test Category"));
+    }
+
+    private Account createAccount(String name) {
+        return Account.builder()
+            .id(Id.generate())
+            .name(name)
+            .build();
+    }
+}
+```
+
+通过 `account_exists_create_category` 测试，我们可以确认是否在现有账户中创建了新类别。我们还通过 `category_already_exists_throw_exception` 测试了规格是否有效，该测试检查了添加现有类别时是否捕获了异常。
+
+### 3. 最后，我们测试 `Transaction` 实体。
+
+```java
+public class TransactionTest {
+    @Test
+    public void transactionTransactionIsInvalid() {
+        var account = Account.createAccount("Test Account");
+        assertThrows(GenericSpecificationException.class, () ->
+            Transaction.createTransaction(account, "testTransaction", 0.0, Type.DEBIT));
+    }
+
+    @Test
+    public void category_add_and_remove_a_credit_transaction() {
+        var account = Account.createAccount("Test Account");
+        var category = Category.createCategory(account, "Test Category");
+        var transaction = Transaction.createTransaction(account, "testTransaction", 10.0, Type.CREDIT);
+        assertEquals(0, category.transactions().size());
+        transaction.addTransactionToCategory(category);
+        assertEquals(1, category.transactions().size());
+        transaction.removeTransactionFromCategory(category);
+        assertEquals(0, category.transactions().size());
+    }
+
+    private Account createAccount(String name) {
+        return Account.builder()
+            .id(Id.generate())
+            .name(name)
+            .build();
+    }
+}
+```
+
+```
+[INFO] 测试
+
+[INFO] Running dev.daviviera.entity.CategoryTest
+
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in dev.daviviera.entity.CategoryTest
+
+[INFO] Running dev.daviviera.entity.AccountTest
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in dev.daviviera.entity.AccountTest
+
+[INFO] Running dev.daviviera.entity.TransactionTest
+
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s - in dev.daviviera.entity.TransactionTest
+
+[INFO] 结果:
+
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 构建成功
+```
+
+上述输出确认了来自 `AccountTest`、`CategoryTest` 和 `TransactionTest` 的测试已成功执行。
+
+## 结论
+
+领域驱动设计（DDD）是一种设计企业级应用的可靠方法。通过将业务关注点而非技术问题作为应用开发的主要驱动力，领域驱动设计方法通过通用语言、上下文和领域模型等概念，有助于理解业务问题以及如何解决问题。
+
+受领域驱动设计优势的启发，我们研究了如通用语言等基本原则，它促进了开发人员、业务分析师、项目所有以及所有利益相关者之间的共同理解。我们探索了映射边界约束的重要性，以消除歧义并清晰地定义系统职责。此外，我们发现了事件风暴，这是一种强大的协作技术，将开发人员和领域专家聚集在一起，讨论并明确软件项目意图解决的业务问题。
+
+最后，我们通过实现一个个人财务应用将这些概念付诸实践。这项实践练习让我们看到实体、值对象和规范这些领域驱动设计的关键要素如何通过 Java 代码表达。
+
+在下一章，我们将探索如何使用分层架构实现 Java 应用。其中，数据层负责数据访问和操作，服务层提供业务规则，而 API 层暴露系统行为。
+
+# 加入我们书籍的 Discord 空间
+
+加入书籍的 Discord 工作空间以获取最新更新、优惠、全球科技动态、新发布以及与作者的互动：
+
+https://discord.bpbonline.com
+
+![](img/9b5739f37699f084397670714bf63edd_357_0.png)
+
 # 第 13 章
 
-使用分层架构进行快速应用
+## 使用分层架构进行快速应用
 
-## 引言
+### 引言
 
-每当一个新软件项目启动时，开发人员都需要决定不同的软件组件将如何构建以及相互交互以满足需求。做出这些决策是为了以最好的方式提供在生产环境中运行的软件。多年来，开发人员一直在探索构建应用程序代码的技术，以产生可运行软件并让他们能够可持续地工作，这通过通过识别和分离软件系统中的关注点来实现。其中，一种被称为分层架构（layered architecture）的技术，由于其合理的简单性和务实的方法，在企业软件行业被广泛采用。当采用分层架构时，实现它并向团队其他成员解释其原理并不费力，这可能对于那些想要更快交付可运行软件，同时在某种程度上保持应用程序代码结构秩序的人来说，是一个可行的替代方案。在本章中，我们将探索分层架构以及我们如何使用它来开发结构更好的 Java 应用。
+每当一个新软件项目启动时，开发人员都需要决定不同的软件组件将如何构建以及相互交互以满足需求。做出这些决策是为了以最好的方式提供在生产环境中运行的软件。多年来，开发人员一直在探索构建应用程序代码的技术，以产生可运行软件并让他们能够可持续地工作，这通过通过识别和分离软件系统中的关注点来实现。其中，一种被称为分层架构的技术，由于其合理的简单性和务实的方法，在企业软件行业被广泛采用。当采用分层架构时，实现它并向团队其他成员解释其原理并不费精力，这可能对于那些想要更快交付可运行软件，同时在某种程度上保持应用程序代码结构秩序的人来说，是一个可行的替代方案。在本章中，我们将探索分层架构以及我们如何使用它来开发结构更好的 Java 应用。
 
-## 结构
+### 结构
 
 本章涵盖了以下主题：
 
@@ -8334,21 +8351,21 @@ public record Category(Id id, String name, List<Transaction> transactions) {
 - 在表示层中暴露应用行为
 - 编译并运行示例项目
 
-## 目标
+### 目标
 
 在本章结束时，你将通过将应用程序代码分为若干层（每层都有特定的职责）来理解分层架构。你将学习分层方法如何帮助在应用程序代码建立边界，这有助于识别和分离软件系统中的关注点，从而对整体软件架构产生积极影响。为了巩固本章探索的概念，我们将检查使用分层架构思想实现 Java 应用程序的开发步骤。
 
-# 软件架构的重要性
+## 软件架构的重要性
 
 在软件开发周期中，会有这样一个时刻，我们作为开发人员，对想要为特定问题提供的解决方案有了足够清晰的认识。在那些时刻，我们对用户需求有了理解，并认为足够开始编写代码来提供解决方案。在有了这样的理解之后，在任何应用开发的早期我们做的最重要的事情就是创建解决问题的代码。拥有一段虽然糟糕但可以运行的代码，比什么都没有展示要好得多。然而，一旦我们弄清楚了如何产生这些虽然糟糕但可以运行的代码，我们需要开始考虑对其进行润色，使其结构更好且更具维护性。
 
 追求更好的结构和可维护代码的目标源于事实：我们预期软件会变化。新功能可能被引入，现有功能可能需要更改，并且会出现 Bug。我们预计经常在需要时重新访问代码并进行更改。因此，通过意识到软件未来会发生变化，我们不仅希望产生只解决我们现在问题的代码，还希望拥有能够让我们轻松应对未来问题的代码。那就是我们必须开始考虑软件架构的时候了。
 
-我们决定的软件架构，决定了我们在任何需要时能够准确、安全且快速地引入代码的能力。糟糕的软件架构会导致所谓的“大泥球”（big ball of mud）——一种极其复杂、难以理解但却能运行的应用程序代码。而且，讽刺的是，由于它是运行的，我们产生了一个问题。这个问题产生是因为它对我们有用，但对维护者来说却是负担。
+我们决定的软件架构，决定了我们在任何需要时能够准确、安全且快速地引入代码的能力。糟糕的软件架构会导致所谓的“大泥球”——一种极其复杂、难以理解但却能运行的应用程序代码。而且，讽刺的是，由于它是运行的，我们产生了一个问题。这个问题产生是因为它对我们有用，但对维护者来说却是负担。
 
 我们如何为开发的应用程序选择架构，根据作者的经验，这通常是有意识的努力或自发发生的。
 
-# 理解分层架构
+## 理解分层架构
 
 分层架构是一种软件开发技术，帮助我们根据软件系统的关注点或职责来组织应用程序代码。为了识别这些关注点，我们模拟用户发出系统请求以及完成这些请求所需的步骤。第一步可以是用户与图形用户界面或 API 交互。在第一步中，我们看到一种情况，即将某些东西展示给感兴趣的人。通过图形用户界面或 API 展示东西可以被看作表示关注点。在分层架构中，这样的表示关注点可以被捕获，例如在表示层中。
 
@@ -8360,7 +8377,7 @@ public record Category(Id id, String name, List<Transaction> transactions) {
 
 一旦定义了这些层，我们就必须建立它们之间如何相互通信。让我们接下来探索如何做到：
 
-## 层只知道下一层
+### 层只知道下一层
 
 在这种方法中，表现层将知道并直接与服务层进行交互。与数据层的每次交互都通过服务层进行中介。
 
@@ -8372,7 +8389,7 @@ public record Category(Id id, String name, List<Transaction> transactions) {
 
 让我们接着检查另一种方案，即层可以与其他层进行交互。
 
-## 层可以知道其他层
+### 层可以知道其他层
 
 表现层将被允许访问数据层，如下所示：
 
@@ -8386,7 +8403,7 @@ public record Category(Id id, String name, List<Transaction> transactions) {
 
 掌握了分层架构的基本思想后，让我们现在看看它们在基于 Spring Boot 框架开发个人财务系统的实际应用。从我们目前讨论的基于数据、服务和表现层的层结构开始，我们开始探索数据层在处理数据实体和持久化方面的作用。
 
-## 在数据层中处理和持久化数据
+### 在数据层中处理和持久化数据
 
 个人财务系统通过将所有用户交易存储在数据库中来跟踪资金支出。为了实现这一点，让我们实现 `Transaction` 实体：
 
@@ -8420,7 +8437,7 @@ public interface TransactionRepository extends CrudRepository<Transaction, Strin
 
 接下来，我们实现分类实体及其仓库。
 
-## 实现分类实体和仓库
+### 实现分类实体和仓库
 
 我们打算让用户创建分类来对相似交易分组。随后，我们定义 `Category` 实体类：
 
@@ -8454,17 +8471,11 @@ public int hashCode() {
 }
 ```
 
-注意，我们在 `transactions` 分类属性上方放置了 `@OneToMany` 注解。该注解表示了分类与一个或多个交易之间的一对多关系。随后，我们重写了 `equals` 和 `hashCode` 方法。这种逻辑规定了相同名称的 Category 对象被认为是等等的。接下来，我们实现仓库接口：
+注意，我们在 `transactions` 分类属性上方放置了 `@OneToMany` 注解。该注解表示了分类与一个或多个交易之间的一对多关系。随后，我们重写了 `equals` 和 `hashCode` 方法。这种逻辑规定了相同名称的 `Category` 对象被认为是等等的。接下来，我们实现仓库接口：
 
 
 
 正如我们之前对 `TransactionRepository` 所做的那样，我们在 `CategoryRepository` 中扩展 `CrudRepository`，继承了处理分类实体所需的全部数据库操作。
-
-```java
-@Repository
-public interface CategoryRepository extends CrudRepository<Category, String> {
-}
-```
 
 最后，我们实现处理账户的实体和仓库。
 
@@ -8538,7 +8549,7 @@ public class TransactionService {
 }
 ```
 
-我们使用 Spring 的 `@Service` 注解将其变为一个托管豆，因此我们不需要担心创建类实例或提供依赖。我们还定义了通过 `TransactionService` 构造函数注入的 `CategoryRepository` 和 `AccountRepository` 类属性。
+我们使用 Spring 的 `@Service` 注解将其变为一个托管豆（managed bean），因此我们不需要担心创建类实例或提供依赖。我们还定义了通过 `TransactionService` 构造函数注入的 `CategoryRepository` 和 `AccountRepository` 类属性。
 
 2. 继续实现部分，我们实现了负责创建新交易的方法：
 
@@ -8561,7 +8572,7 @@ public class TransactionService {
 
     private void validateAmount(TransactionPayload transactionPayload) throws Exception {
         var amount = transactionPayload.getAmount();
-        if (!(amount > 0)) {
+        if(!(amount > 0)) {
             throw new Exception("Transaction value 0 is invalid");
         }
     }
@@ -8655,7 +8666,7 @@ public class CategoryService {
 
     private void validateCategory(Account account, Category category) throws Exception {
         var categories = account.getCategories();
-        if (categories.contains(category)) {
+        if(categories.contains(category)) {
             throw new Exception("Category already exists in this account");
         }
     }
@@ -8744,7 +8755,7 @@ public class AccountPayload {
 
 所有可能的操作都通过 RESTful 端点暴露。通过这样的端点，用户可以请求创建交易并将其放入分类中。
 
-让我们通过定义基础类结构开始实现交易端点：
+1. 让我们通过定义基础类结构开始实现交易端点：
 
 
 
@@ -8759,12 +8770,13 @@ public class TransactionEndpoint {
 }
 ```
 
-```java
 @Autowired
+```java
 private TransactionEndpoint(TransactionService transactionService,
-                            TransactionRepository transactionRepository,
-                            AccountRepository accountRepository,
-                            CategoryRepository categoryRepository) {
+    TransactionRepository transactionRepository,
+    AccountRepository accountRepository,
+    CategoryRepository categoryRepository) {
+
     this.transactionService = transactionService;
     this.transactionRepository = transactionRepository;
     this.accountRepository = accountRepository;
@@ -8779,31 +8791,27 @@ private TransactionEndpoint(TransactionService transactionService,
 
 我们在 `TransactionEndpoint` 类上使用了 Spring Boot 的 `@RestController` 注解来暴露 API 端点。我们注入了 `TransactionService`、`TransactionRepository`、`AccountRepository` 和 `CategoryRepository` 作为依赖，以便进行适当的事务管理。
 
-### 2. 有了基础类结构后，让我们来定义创建和检索事务的端点：
+## 定义事务端点
 
-#### @RestController
+有了基础类结构后，让我们来定义创建和检索事务的端点：
 
 ```java
+@RestController
 public class TransactionEndpoint {
     // Code omitted
-}
-```
 
-```java
-@PostMapping("/transaction")
-public void createTransaction(
-    @RequestBody TransactionPayload transactionPayload) throws Exception {
-    var account = accountRepository.findById(transactionPayload.getAccountId()).get();
-    transactionService.createTransaction(account, transactionPayload);
-}
-```
+    @PostMapping("/transaction")
+    public void createTransaction(
+        @RequestBody TransactionPayload transactionPayload) throws Exception {
+        var account = accountRepository.findById(transactionPayload.getAccountId()).get();
+        transactionService.createTransaction(account, transactionPayload);
+    }
 
-```java
-@GetMapping("/transactions")
-public List<Transaction> allTransactions() {
-    return (List<Transaction>) transactionRepository.findAll();
-}
-// Code omitted
+    @GetMapping("/transactions")
+    public List<Transaction> allTransactions() {
+        return (List<Transaction>) transactionRepository.findAll();
+    }
+    // Code omitted
 }
 ```
 
@@ -8811,7 +8819,9 @@ public List<Transaction> allTransactions() {
 
 `allTransactions` 方法非常简单。它处理 GET 请求以检索系统中的所有事务。
 
-### 3. 除了允许创建和检索事务，`TransactionEndpoint` 还包含了允许我们从分类中添加或删除事务的端点：
+## 事务与分类关联端点
+
+除了允许创建和检索事务，`TransactionEndpoint` 还包含了允许我们从分类中添加或删除事务的端点：
 
 ```java
 @RestController
@@ -8858,9 +8868,7 @@ public class CategoryEndpoint {
     private final AccountRepository accountRepository;
 
     @Autowired
-    private CategoryEndpoint(CategoryService categoryService,
-                             CategoryRepository categoryRepository,
-                             AccountRepository accountRepository) {
+    private CategoryEndpoint(CategoryService categoryService, CategoryRepository categoryRepository, AccountRepository accountRepository) {
         this.categoryService = categoryService;
         this.categoryRepository = categoryRepository;
         this.accountRepository = accountRepository;
@@ -8905,7 +8913,7 @@ public class AccountEndpoint {
 
     @Autowired
     private AccountEndpoint(AccountService accountService,
-                            AccountRepository accountRepository) {
+        AccountRepository accountRepository) {
         this.accountService = accountService;
         this.accountRepository = accountRepository;
     }
@@ -8922,7 +8930,7 @@ public class AccountEndpoint {
 }
 ```
 
-`createAccount` 方法处理位于 `/account` 端点的 HTTP POST 请求，用户由此创建账户，而 `getAccount` 方法处理 HTTP GET 请求，允许用户通过传递地址获取详情。
+`createAccount` 方法处理位于 `/account` 端点的 HTTP POST 请求，用户由此创建账户，而 `getAccount` 方法处理 HTTP GET 请求，允许用户通过传递邮箱地址获取账户详情。
 
 在此阶段，个人财务应用程序已使用数据层、服务层和表示层实现。让我们接下来探索如何编译和运行该个人财务应用程序。
 
@@ -8930,7 +8938,7 @@ public class AccountEndpoint {
 
 在本节中，我们将编译并运行之前的章节中一直在探索的个人财务项目。由于我们为个人财务应用暴露了 API，我们将在下一节中探索如何使用此类 API。
 
-你可以从 GitHub 仓库下载应用程序源码：`https://github.com/bpubublications/Java-Real-World-Projects/tree/main/Chapter%2013`。
+你可以从 GitHub 仓库下载应用程序源码：https://github.com/bpubublications/Java-Real-World-Projects/tree/main/Chapter%2013。
 
 你的机器需要安装 JDK 21 或 Maven 3.8 以上版本。
 
@@ -8950,33 +8958,25 @@ $ java -jar target/chapter13-1.0-SNAPSHOT.jar
 
 1. 
 ```bash
-$ curl -XPOST localhost:8080/account -H 'Content-type:application/json' -d ...
+$ curl -XPOST localhost:8080/account -H 'Content-type:application/json' -d '...'
 ```
 
 2. 拥有账户后，我们可以为它创建一些类别：
-
 ```bash
-$ curl -XPOST localhost:8080/category -H 'Content-type:application/json'
-```
-
-```bash
-$ curl -XPOST localhost:8080/category -H 'Content-type:application/json'
+$ curl -XPOST localhost:8080/category -H 'Content-type:application/json' -d '...'
 ```
 
 3. 以下是我们如何创建一个新交易的：
-
 ```bash
-$ curl -XPOST localhost:8080/transaction -H 'Content-type:application/json'
+$ curl -XPOST localhost:8080/transaction -H 'Content-type:application/json' -d '...'
 ```
 
 4. 要查找交易和类别的 ID，我们可以通过以下请求获取账户详情：
-
 ```bash
-$ curl -XGET localhost:8080/account/john.doe@davivieira.dev
+$ curl localhost:8080/account/john.doe@davivieira.dev
 ```
 
 5. 以下是如何将交易添加到某个类别中的：
-
 ```bash
 $ curl -XPUT localhost:8080/{CATEGORY_ID}/{TRANSACTION_ID}
 ```
@@ -8991,9 +8991,7 @@ $ curl -XPUT localhost:8080/{CATEGORY_ID}/{TRANSACTION_ID}
 
 在下一章也是最后一章中，我们将探索被称为六边形架构的软件设计方法，它允许我们开发更具变化容性的应用程序。我们将学习如何在领域六边形中安排领域模型，在应用六边形中提供输入输出端口，并在框架六边形中暴露输入输出适配器。
 
-# 第 14 章
-
-使用六边形架构构建应用程序
+# 第 14 章：使用六边形架构构建应用程序
 
 ## 引言
 
@@ -9079,7 +9077,7 @@ Alister Cockburn 构想出六边形架构作为一种开发解决方案，使得
 
 后端系统可能需要接收并处理来自用户或其他应用程序的数据。同样，根据场景的不同，此类系统可能需要从不同的系统（如数据库或消息代理）发送和检索数据。一方面，有参与者（actors）通过发送请求负载和通过系统 API 触发行为来与系统交互。另一方面，后端系统与其他参与者交互，这些参与者负责提供使后端系统运行所需的依赖。我们可以将这两面识别为驱动侧（driver side）和被驱动侧（driven side）。
 
-驱动侧包含与六边形应用交互的用户和系统，而被驱动侧对应于六边形应用所依赖的系统。意识到这种动态关系，我们可以确认：六边形应用提供的功能可以由驱动侧触发，而启用这些功能的依赖项来自驱动侧。存在于驱动侧的内容由六边形应用本身控制和驱动。我们可以在应用六边形中实现输入端口和输出端口，以准备系统处理驱动和被驱动操作。此外，我们还可以采用用例（use cases）作为输入端口的抽象。将一切整合在一起，我们可以拥有输入端口、输出端口和用例作为构成应用六边形的元素，如图所示：
+驱动侧包含与六边形应用交互的用户和系统，而被驱动侧对应于六边形应用所依赖的系统。意识到这种动态关系，我们可以确认：六边形应用提供的功能可以由驱动侧触发，而启用这些功能的依赖项来自被驱动侧。存在于驱动侧的内容由六边形应用本身控制和驱动。我们可以在应用六边形中实现输入端口和输出端口，以准备系统处理驱动和被驱动操作。此外，我们还可以采用用例（use cases）作为输入端口的抽象。将一切整合在一起，我们可以拥有输入端口、输出端口和用例作为构成应用六边形的元素，如图所示：
 
 ![](img/9b5739f37699f084397670714bf63edd_382_0.png)
 
@@ -9099,11 +9097,9 @@ Alister Cockburn 构想出六边形架构作为一种开发解决方案，使得
 
 输入端口描述了如何填充用例。输入端口负责处理由六边形应用驱动侧客户端提供的数据。此类数据可以根据领域六边形提供的约束进行处理。如有必要，输入端口可以使用输出端口从六边形应用被驱动侧的系统中持久化或检索数据。
 
-应用六边形中的所有操作在定义时未指定来自六边形应用驱动侧和被驱动侧系统的技术细节。
+应用六边形中的所有操作在定义时未指定来自六边形应用驱动侧和被驱动侧系统的技术细节，提供了更大的灵活性，因为我们可以定义系统功能，而无需指定将由哪些技术来实现这些功能。
 
-提供了更大的灵活性，因为我们可以定义系统功能，而无需指定将由哪些技术来实现这些功能。
-
-我们之前学习过，输入端口可以依赖输出端口来从六边形应用的驱动侧（driven side）系统中持久化或检索数据。让我们探索输出端口。
+我们之前学习过，输入端口可以依赖输出端口来从六边形应用的被驱动侧系统中持久化或检索数据。让我们探索输出端口。
 
 ## 输出端口
 
@@ -9111,9 +9107,9 @@ Alister Cockburn 构想出六边形架构作为一种开发解决方案，使得
 
 ## 框架六边形
 
-在开发软件系统过程中，有一个时刻我们必须决定哪些技术将启用系统功能。基于六边形架构创建新系统时，决策可以推迟到最后，此时领域模型已经在领域六边形（domain hexagon）中实现，用例和订单已经在应用六边形（application hexagon）中定义。现在剩下的是六边形系统与其外部依赖的集成，这些可能包括数据库、电子邮件服务、服务器、协议等。集成还涵盖了提供一个 API，允许用户和其他系统向六边形应用发送请求。在讨论六边形应用中的端口时讨论过的驱动侧（driver side）和被侧（driven side）的思想，也可以应用于处理框架六边形中的适配器。
+在开发软件系统过程中，有一个时刻我们必须决定哪些技术将启用系统功能。基于六边形架构创建新系统时，决策可以推迟到最后，此时领域模型已经在领域六边形（domain hexagon）中实现，用例和端口已经在应用六边形（application hexagon）中定义。现在剩下的是六边形系统与其外部依赖的集成，这些可能包括数据库、电子邮件服务、服务器、协议等。集成还涵盖了提供一个 API，允许用户和其他系统向六边形应用发送请求。在讨论六边形应用中的端口时讨论过的驱动侧（driver side）和被驱动侧（driven side）的思想，也可以应用于处理框架六边形中的适配器。
 
-总结一下，在六边形应用的被侧，我们有如用户和其他系统之类的执行者，它们可以触发系统行为，正如此，它们处于驱动六边形应用的位置。在被侧，我们有提供依赖的执行者来驱动这些者。输入适配器支持驱动侧，而被侧则使用输出适配器处理。框架六边形由输入适配器和输出适配器组成，它们决定了六边形应用支持哪些技术，如图所示：
+总结一下，在六边形应用的驱动侧，我们有如用户和其他系统之类的执行者，它们可以触发系统行为，正如此，它们处于驱动六边形应用的位置。在被驱动侧，我们有提供依赖的执行者来驱动这些者。输入适配器支持驱动侧，而被驱动侧则使用输出适配器处理。框架六边形由输入适配器和输出适配器组成，它们决定了六边形应用支持哪些技术，如图所示：
 
 ![](img/9b5739f37699f084397670714bf63edd_383_0.png)
 
@@ -9125,7 +9121,7 @@ Alister Cockburn 构想出六边形架构作为一种开发解决方案，使得
 
 一旦我们的六边形应用暴露了定义为用例并实现为输入端口的功能，我们可能希望将这些功能暴露给外部世界。我们通过输入适配器来实现，它们提供一个接口允许驱动者与六边形应用交互。输入适配器在某种程度上类似于物理适配器，其目的都是将某个东西的格式适配到另一个东西中。从软件系统的角度来看，格式可以被视为六边形系统支持的协议。对协议的支持取决于 API 的概念，它建立了用于与六边形应用通信的技术方案。我们可以使用基于 HTTP 的解决方案（如 RESTful、gRPC 或 SOAP）来定义 API。根据用例，我们可以探索用于文件传输的协议或用于电子邮件服务的 SMTP。
 
-六边形架构允许我们以输入适配器的形式支持我们想要的任何技术。六边形应用最初可以定义为提供支持 RESTful 请求的输入适配器。随着应用程序的成熟，可以快速引入支持 gRPC 调新的输入适配器。添加新的输入适配器只会影响框架六边形。应用和领域六边形中的代码完全不受框架六边形变化的影响。一个或多个输入适配器可以连接到同一个输入端口，这允许访问输入端口提供的相同系统功能，并通过输入适配器支持的不同技术暴露出来。
+六边形架构允许我们以输入适配器的形式支持我们想要的任何技术。六边形应用最初可以定义为提供支持 RESTful 请求的输入适配器。随着应用程序的成熟，可以快速引入支持 gRPC 调用的新输入适配器。添加新的输入适配器只会影响框架六边形。应用和领域六边形中的代码完全不受框架六边形变化的影响。一个或多个输入适配器可以连接到同一个输入端口，这允许访问输入端口提供的相同系统功能，并通过输入适配器支持的不同技术暴露出来。
 
 输入适配器是为对六边形应用提供的功能感兴趣的人打开门的六边形元素。然而，为了启用这些功能，六边形应用需要通过不同的技术获取数据并访问系统。对这些系统的访问通过使用输出适配器变为可能。让我们探索它们。
 
@@ -9133,15 +9129,15 @@ Alister Cockburn 构想出六边形架构作为一种开发解决方案，使得
 
 大多数后端应用程序依赖其他系统来控制其活动。这种依赖可以表现为访问的需求，例如，负责处理支付的外部 API、在预定时间执行任务的调度器系统、允许异步处理的消息代理器，或用于数据持久化的数据库。无数场景都可以作为依赖的示例。这里的关键概念是，六边形应用之外的所有依赖都通过输出适配器处理。
 
-输出适配器支持六边形系统的被侧。它们是应用六边形中定义的输出端口的直接实现。通过输出适配器，我们定义了处理提供数据或在六边形应用功能内所需的任何技术的代码。系统可以开始在 MySQL 数据库中持久化数据并在不进行重大重构的情况下进化支持 Oracle 数据库。每种新技术都由实现相同输出端口的新输出适配器支持，该端口表达了领域六边形所需的数据类型。
+输出适配器支持六边形系统的被驱动侧。它们是应用六边形中定义的输出端口的直接实现。通过输出适配器，我们定义了处理提供数据或在六边形应用功能内所需的任何技术的代码。系统可以开始在 MySQL 数据库中持久化数据并在不进行重大重构的情况下进化支持 Oracle 数据库。每种新技术都由实现相同输出端口的新输出适配器支持，该端口表达了领域六边形所需的数据类型。
 
 在涵盖了基础架构思想后，让我们看看接下来如何在开发六边形应用时应用所学的概念。我们从在领域六边形中安排领域模型开始。
 
 ## 安排领域模型
 
-在本节中，我们将根据上一节中探索的六边形架构概念实现一个记笔记者系统。记笔记者系统是一个 Spring Boot 应用，可以通过两种方式访问：**命令行 (CLI)** 和 REST API。作为第一步，我们必须在领域六边形中安排领域模型以开发此类应用程序。让我们创建领域实体名称：
+在本节中，我们将根据上一节中探索的六边形架构概念实现一个记笔记者系统。记笔记者系统是一个 Spring Boot 应用，可以通过两种方式访问：`命令行 (CLI)` 和 REST API。作为第一步，我们必须在领域六边形中安排领域模型以开发此类应用程序。让我们创建领域实体名称：
 
-```java
+```
 @Builder
 @Getter
 @ToString
@@ -9171,7 +9167,7 @@ public class Note {
 
 我们使用 `@Builder`、`@Getter` 和 `@ToString` 注解使代码更简洁。在领域实体上使用辅助库是可以接受的，取决于我们希望实体呈现成什么样。在辅助库不可接受的情况下，我们可以仅依赖于 Java 标准。你可能注意到了 `Id` 和 `Title` 属性的使用；这些是用于更好地描述领域模型的值对象（value objects）。以下代码是 `Id` 值对象的实现方式：
 
-```java
+```
 public class Id {
   private final UUID uuid;
   private Id(UUID uuid) {
@@ -9528,12 +9524,12 @@ https://github.com/bppublications/Java-Real-World-Projects/tree/main/Chapter%201
 $ mvn clean package
 ```
 
-一旦有了这个文件，我们就可以按照以下步骤在不同模式下测试应用程序。
+这将创建一个 JAR 文件。一旦有了这个文件，我们就可以按照以下步骤在不同模式下测试应用程序。
 
 ### 1. 在 CLI 模式下运行应用程序
 
 ```bash
-$ java -jar -Dspring.main.web-application-type=NONE target/chapter14-1.0.jar
+$ java -jar -DSpring.main.web-application-type=NONE target/chapter14-1.0.jar
 ```
 
 提供笔记标题：
@@ -9553,7 +9549,7 @@ I want to finish reading the Java Real World Projects book
 ### 2. 检查现有的笔记
 
 ```bash
-$ java -jar -Dspring.main.web-application-type=NONE target/chapter14-1.0.jar printNotes
+$ java -jar -DSpring.main.web-application-type=NONE target/chapter14-1.0.jar printNotes
 ```
 
 ```text
@@ -9565,6 +9561,8 @@ Note(id=fec502a-afc6-46a2-a200-bc3a1aad05, title=My goal for this week,
 ```bash
 $ java -jar target/chapter14-1.0.jar
 ```
+
+应用程序启动，准备好接收 HTTP 请求。
 
 ### 4. 在 Web 模式下创建一个新笔记
 
@@ -9609,7 +9607,7 @@ $ curl -s localhost:8080/notes | jq
 
 我们可以通过实现笔记管理器系统来应用本章分享的观点，这是一个使用六边形架构结构的 Spring Boot 应用程序。该应用程序展示了如何应用用例、输入和输出端口以及输入和输出适配器等概念，创建一个可以通过 CLI 接口和 REST API 访问的应用程序。
 
-在本书结束之际，作者感谢你们在探索 Java 过程中所面临的挑战和所获得的知识。你们通过探索核心 Java API、最新的 Java 特性、测试技术、云原生开发、可观测性和软件架构坚持了下来。作者鼓励你们继续学习、实践，并克服 Java 开发人员生活中经常出现的复杂性问题。
+在本书结束之际，作者感谢你们在探索 Java 过程中所面临的挑战和所获得的知识。你们通过探索核心 Java API、最新的 Java 特性、测试技术、云原生开发、可观测性和软件架构坚持了下去。作者鼓励你们继续学习、实践，并克服 Java 开发人员生活中经常出现的复杂性问题。
 
 # 加入我们书籍的 Discord 空间
 
@@ -9619,33 +9617,24 @@ https://discord.bpbonline.com
 
 ![](img/9b5739f37699f08439760714bf63edd_395_0.png)
 
-# 索引
+## 索引
 
-## 数字
+### 符号
 
-- Quarkus 应用 205, 206
-- Spring Boot 应用 205
+- `@Autowired` 119-122
+- `@SpringBootApplication` 205, 206
 
-## A
+### A
 
-- 限界上下文 279-281
-
-## B
-
-- 业务规则
-  - 使用规格进行定义 291-295
-
-## C
-
-- CallableStatement 接口
+- `CallableStatement` 接口
   - 存储过程，调用 68, 69
 - 检查异常 17, 18
-- Collections API 1
+- `Collections` API 1
 - 命令行接口 (CLI) 应用 126
 - 基于容器的虚拟化 194
 - 容器运行时接口 (CRI) 200
 - 容器技术 192
-- Criteria API 84
+- `Criteria` API 84
 - 使用 Spring Boot 的 CRUD 应用
   - API 端点，通过 controller 暴露 133, 134
   - 配置 130, 131
@@ -9661,43 +9650,32 @@ https://discord.bpbonline.com
   - 数据持久化 148
   - 依赖注入，使用 Quarkus DI 143
 
-## D
+### B
 
-- 数据库连接
-  - 创建，使用 DataSource 接口 62-64
-  - 创建，使用 DriverManager 61, 62
-  - 创建，使用 JDBC API 60, 61
-- 数据定义语言 (DDL) 60
-- 数据层
-  - 账户实体和仓库，实现 308
-  - 类别实体和仓库，实现 306, 307
-  - 数据处理 305, 306
-  - 数据持久化 305, 306
-- 数据操作语言 (DML) 60
-- 数据结构
-  - 处理，使用 collections 2
-  - 键值数据结构，创建 maps 9-12
-  - 重复对象集合，使用 set 提供 6-8
-  - 有序集合，使用 lists 创建 3-5
-- 日期时间 API 24
-  - Instant 类 28
-  - LocalDate 24-26
-  - LocalDateTime 26
-  - LocalTime 26
-  - ZoneDateTime 27
-- 依赖注入
-  - 使用 @Autowired 119-122
-- 分布式追踪 222
-  - 实现，使用 Spring Boot 和 OpenTelemetry 222, 223
-- 分布摘要 244
-- Docker 195
+- `bean` 143
+
+### C
+
+- `CommandLineRunner` 接口 126
+- `ConfigMap` 203, 204
+- `Consumer` 31
+- `Criteria` API 84
+
+### D
+
+- `DataSource` 接口 62-64
+- `Deployment` 201, 202
+- `DriverManager` 类 61
+- `DDL` (数据定义语言) 60
+- `DML` (数据操作语言) 60
+- `Docker` 195
   - 基础 196
 - 基于 Docker 的应用程序
   - 访问，通过 Service 214-216
   - 应用配置，外部化 210
   - 应用配置，使用 ConfigMap 提供 210, 211
   - 部署，使用 Deployment 212-214
-  - kubectl，用于安装 Kubernetes 对象 216, 217
+  - `kubectl`，用于安装 Kubernetes 对象 216, 217
   - Kubernetes 对象，创建 210, 212
 - Docker 容器
   - 创建 197, 198
@@ -9715,14 +9693,14 @@ https://discord.bpbonline.com
   - 规格 328
   - 测试 295-298
   - 值对象 327
-- DriverManager 类 61
 
-## E
+### E
 
-- EFK 栈 233
+- `EFK` 栈 233
   - 设置，使用 Docker Compose 233-236
-- Elasticsearch 企业信息系统 (EIS) 层级 167
-  - 企业信息系统层 166
+- `Elasticsearch` 232
+- 企业信息系统 (EIS) 层级 167
+- 企业信息系统层 166
 - 企业 Java Bean (EJB) 167
 - 企业资源规划 (ERP) 166
 - 实体 288
@@ -9732,12 +9710,12 @@ https://discord.bpbonline.com
   - 多对多关系 78-81
   - 多对一关系 76
   - 一对一关系 74-76
-  - 一对一关系 76-78
+  - 一对多关系 76-78
 - 异常处理，使用异常 17, 18
   - 检查异常 17
   - 自定义异常，创建 20, 21
-  - finally 块 19
-  - try-with-resources 19, 20
+  - `finally` 块 19
+  - `try-with-resources` 19, 20
   - 非检查异常 18, 19
 - 事件风暴 282, 283
   - 事件风暴会议参与者
@@ -9749,56 +9727,57 @@ https://discord.bpbonline.com
   - 事件风暴会议，准备 283, 284
   - 识别 283
 
-## F
+### F
 
-- Fluentd 232
+- `Fluentd` 232
+- `Function` 29, 30
 - 框架六边形 330, 331
   - 输入适配器 331, 332
   - 输出适配器 332
 - 函数式接口 28
-  - Consumer 31
-  - Function 29, 30
-  - Predicate 29
-  - Stream 31, 32
-  - Supplier 30
+  - `Consumer` 31
+  - `Function` 29, 30
+  - `Predicate` 29
+  - `Stream` 31, 32
+  - `Supplier` 30
 - 函数式编程
   - 使用 streams 和 lambdas 28
 
-## G
+### G
 
-- Google Cloud Platform (GCP) 191
-- GraalVM 159
-- Grafana 仪表板 268, 269
+- `Google Cloud Platform` (GCP) 191
+- `GraalVM` 159
+- `Grafana` 仪表板 268, 269
   - 创建，使用应用程序生成的指标 268
   - 下载大小的可视化 271
   - 文件上传时长的可视化 270
   - 每个 HTTP 方法请求数量的可视化 269, 270
 
-## H
+### H
 
 - 六边形架构 324, 325
   - 应用六边形 328, 329
   - 领域六边形 326
   - 框架六边形 330
-- Hibernate 81
+- `Hibernate` 81
   - 配置 21
   - 用于处理数据库 81-83
 
-## I
+### I
 
+- `Instant` 类 28
 - 基础设施即服务 (IaaS) 193
 - 继承 38
 - 预期 39-43
-- Instant 类 28
 - 集成测试 89
   - 实现，使用 Testcontainers 105-107
   - 运行，使用 Maven 107-109
 - 中间操作 32
 - 控制反转 (IoC) 113
 
-## J
+### J
 
-- Jakarta EE 164-167
+- `Jakarta EE` 164-167
   - 企业级应用，构建 174, 175
   - Jakarta EE Core 规格 169, 170
   - Jakarta EE Web Profile 规格 167, 168
@@ -9811,54 +9790,51 @@ https://discord.bpbonline.com
     - 数据处理，使用 72, 73
     - 实体，定义 73, 74
     - 实体关系，定义 74
-- Jakarta Server Faces (JSF) 165
-- Jakarta Server Pages (JSP) 165
-- Java 1
-- Java Enterprise Edition (JEE) 164
-- Java API 1
-- Java Archive (JAR) 170
-- Java Collections Framework 2, 3
-- Java Database Connectivity (JDBC) 59, 60
-- Java Development Kit (JDK) 159
-- Java Enterprise Edition (EE) 112
-- Java 平台线程 49, 50
+- `Jakarta Server Faces` (JSF) 165
+- `Jakarta Server Pages` (JSP) 165
+- `Java` 1
+- `Java API` 1
+- `Java Archive` (JAR) 170
+- `Java Collections Framework` 2, 3
+- `Java Database Connectivity` (JDBC) 59, 60
+- `Java Development Kit` (JDK) 159
+- `Java Enterprise Edition` (EE) 112
+- `Java` 平台线程 49, 50
   - 阻塞 IO 操作 50, 51
   - 局限性 50
-- Java Server Page (JSP) 167
-- java.util.Set 接口 6
-- Java Virtual Machine (JVM) 27, 49, 158, 159, 208
-- JPA
-  - 探索 83
-- JUnit 5
+- `java.util.Set` 接口 6
+- `Java Virtual Machine` (JVM) 27, 49, 158, 159, 208
+- `JP` 探索 83
+- `JUnit 5`
   - 账户注册 91-93
   - 设置 90, 91
 
-## K
+### K
 
-- Kibana 232
-- Kubernetes 198, 199
+- `Kibana` 232
+- `Kubernetes` 198, 199
   - 架构 199
   - 容器运行时 200
-  - kube-apiserver 200
-  - kube-controller-manager 200
-  - kubelet 200
-  - kube-proxy 200
-  - kube-scheduler 199
+  - `kube-apiserver` 200
+  - `kube-controller-manager` 200
+  - `kubelet` 200
+  - `kube-proxy` 200
+  - `kube-scheduler` 199
 - Kubernetes 对象
-  - ConfigMap 203, 204
-  - Deployment 201, 202
-  - Pod 201
-  - Secret 203, 204
-  - Service 203
+  - `ConfigMap` 203, 204
+  - `Deployment` 201, 202
+  - `Pod` 201
+  - `Secret` 203, 204
+  - `Service` 203
 
-## L
+### L
 
-- lambda 表达式 29
+- `lambda` 表达式 29
 - 分层架构 303, 304
-- Linux Containers (LXC) 194
-- lists 3
-- LocalDate 24
-- LocalTime 26
+- `Linux Containers` (LXC) 194
+- `lists` 3
+- `LocalDate` 24
+- `LocalTime` 26
 - 本地开发
   - 方法 85
   - 使用容器 86
@@ -9868,23 +9844,67 @@ https://discord.bpbonline.com
   - 用于改进应用 21
   - 格式 24
 
-## M
+### M
 
-- Bean 143
-- 多对多关系 78
-- 多对一关系 76
-- Maven
+- `Maven`
   - 测试，执行 101
-- Micrometer 241
+- `Micrometer` 241
   - 计数器 242
   - 测量值 243
   - 注册表 241
   - 标签 243
   - 计时器 244
-- MicroProfile 171, 172
+- `MicroProfile` 171, 172
   - Jakarta EE Core 172
   - 规格 173
   - 使用 Jakarta EE 构建 API 183
+
+### N
+
+- `NoteCLIAdapter` 126
+- `NoteKeeperCLIApplication` 126
+- `NoteKeeperWebApplication` 205
+
+### P
+
+- `Panache` 150
+- `Predicate` 29
+- `Pod` 201
+
+### Q
+
+- `Quarkus` 143
+  - DI 143
+
+### R
+
+- `REST API` 126
+- `repository` 131
+
+### S
+
+- `Secret` 203, 204
+- `Service` 203
+- `SpringApplication` 205
+- `Spring Boot` 112, 205
+  - 应用 205, 206
+- `Spring Boot` 应用 205
+- `Stream` 31, 32
+- `Supplier` 30
+- `Testcontainers` 105
+
+### T
+
+- `try-with-resources` 19, 20
+
+### V
+
+- 值对象 327
+
+### Z
+
+- `ZoneDateTime` 27
+- `ZoneId` 27
 
 
 
@@ -9933,23 +9953,12 @@ https://discord.bpbonline.com
 
 # O
 
-## 面向对象编程 (OOP)
-- 28
-
-## 对象关系映射 (ORM)
-- 4, 83
-
-## 技术
-- 72
-
-## 可观测性
-- 221, 222
-
-## 一对多关系
-- 74
-
-## 一对一关系
-- 76
+- 面向对象编程 (OOP) 28
+- 对象关系映射 (ORM) 4, 83
+- 技术 72
+- 可观测性 221, 222
+- 一对多关系 74
+- 一对一关系 76
 
 # P
 
@@ -9966,11 +9975,8 @@ https://discord.bpbonline.com
   - 用于 switch 语句 46, 47
   - 用于类型 45, 46
 
-## 纯 Java 对象 (POJO)
-- 327
-
-## 切割点 (pointcut)
-- 123
+- 纯 Java 对象 (POJO) 327
+- 切割点 (`pointcut`) 123
 
 ## PreparedStatement 接口
 - 参数化查询，执行 67, 68
@@ -9997,21 +10003,19 @@ https://discord.bpbonline.com
 
 ## Quarkus
 - 优势 138, 139
-- Quarkus 项目
-  - 引导 139-143
-  - 使用 `EntityManager` 处理数据库实体 149, 150
-  - 启用数据库支持 148, 149
+
+### Quarkus 项目
+- 引导 139-143
+- 使用 `EntityManager` 处理数据库实体 149, 150
+- 启用数据库支持 148, 149
 
 ## Quarkark REST
 - API 实现 153-158
 
 # R
 
-## 远程文件转换器
-- 57
-
-## 请求作用域 bean (`request-scoped beans`)
-- 146-148
+- 远程文件转换器 57
+- 请求作用域 bean (`request-scoped beans`) 146-148
 
 ## ResultSet 对象
 - 结果，处理 69-72
@@ -10021,37 +10025,20 @@ https://discord.bpbonline.com
 
 ## Spring Boot Maven 项目，带有 Micrometer 配置
 - 246, 247
+  - 控制器类 (`controller`), 实现 252-254
+  - 文件实体 (`entity`), 实现 247, 248
+  - 文件指标 (`metrics`), 实现 248-250
+  - 文件存储库 (`repository`), 实现 248
+  - 文件服务 (`service`), 实现 250, 251
+  - 指标指标，在存储系统上启用 247
+  - 设置 245, 246
 
-## 控制器类 (`controller`), 实现
-- 252-254
-
-## 文件实体 (`entity`), 实现
-- 247, 248
-
-## 文件指标 (`metrics`), 实现
-- 248-250
-
-## 文件存储库 (`repository`), 实现
-- 248
-
-## 文件服务 (`service`), 实现
-- 250, 251
-
-## 指标指标，在存储系统上启用
-- 247
-
-## 设置
-- 245, 246
-
-## Spring Boot 项目
-- 113
-  - 引导 126
-  - 使用 Spring Initializr 创建 126-129
-  - 使用 Micrometer 的 Spring Boot 实现指标 244
-  - 用于管理 Bean 的 Spring 上下文 113
-
-## Spring Core 项目
-- 113
+- Spring Boot 项目 113
+- 引导 126
+- 使用 Spring Initializr 创建 126-129
+- 使用 Micrometer 的 Spring Boot 实现指标 244
+- 用于管理 Bean 的 Spring 上下文 113
+- Spring Core 项目 113
 
 ## Spring 体系注解 (stereotype annotations)
 - `@Component` 注解 117
@@ -10059,8 +10046,7 @@ https://discord.bpbonline.com
 - `@Service` 注解 117
 - 使用 117-119
 
-## Statement 接口
-- 简单查询，执行 64-67
+- `Statement` 接口：简单查询，执行 64-67
 
 ## Stream 接口
 - 31, 32
@@ -10069,61 +10055,39 @@ https://discord.bpbonline.com
   - 终端操作 34
   - 流源 32
 
-## 结构化查询语言 (SQL) 语法
-- 60
+- 结构化查询语言 (SQL) 语法 60
 
 # T
 
-## 终端操作
-- 32
-
-## Testcontainers
-- 可靠的集成测试，使用 102
-- 实现，设置 102
-
-## 线程
-- 49
-
-## Title 值对象
-- 335
+- 终端操作 32
+- Testcontainers：可靠的集成测试，使用 102 实现，设置 102
+- 线程 49
+- Title 值对象 335
 
 # U
 
-## 领域通用语言 (ubiquitous language)
-- 281, 282
-
-## 未检查的异常 (unchecked exceptions)
-- 18, 19
-
-## 单元测试
-- 88, 89
+- 领域通用语言 (ubiquitous language) 281, 282
+- 未检查的异常 (`unchecked exceptions`) 18, 19
+- 单元测试 88, 89
 
 # V
 
-## 值对象 (value objects)
-- 287, 288
-
-## 虚拟化
-- 192
-  - 基于容器的虚拟化 194, 195
-  - 全虚拟化 193
-  - 半虚拟化 (`paravirtualization`) 193, 194
-
-## 虚拟线程
-- 49
-  - 编写简单的并发代码 53-57
+- 值对象 (`value objects`) 287, 288
+- 虚拟化 192
+- 基于容器的虚拟化 194, 195
+- 全虚拟化 193
+- 半虚拟化 (`paravirtualization`) 193, 194
+- 虚拟线程 49
+- 编写简单的并发代码 53-57
 
 # W
 
-## Web 归档 (WAR)
-- 171
+- Web 归档 (WAR) 171
 
 # Y
 
-## 另一种标记语言 (YAML)
-- 200
+- 另一种标记语言 (YAML) 200
 
 # Z
 
-## ZoneDateTime 类
-- 27
+- `ZoneDateTime` 类 27
