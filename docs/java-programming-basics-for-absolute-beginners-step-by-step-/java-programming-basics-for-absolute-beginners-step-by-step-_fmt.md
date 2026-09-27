@@ -129,39 +129,27 @@ Java 语言由 James Gosling 设计，于 1995 年 5 月首次面世。该编程
 
 ## 3.1 简单性
 
-Java 设计得易于学习。如果你理解面向对象编程的基本概念，Java 将很容易掌握。
+Java 被设计为易于学习和使用。它去除了 C++ 中复杂的特性，如指针、多重继承和操作符重载。
 
 ## 3.2 面向对象
-
-在 Java 中，一切皆对象。由于它基于对象模型，因此可以轻松扩展。
-
-## 3.3 平台无关性
-
-与其他许多编程语言（包括 C 和 C++）不同，Java 编译成平台无关的字节码，而不是特定平台的机器码。字节码通过虚拟机（VM）在平台上分发和解释。
-
-## 3.4 面向对象核心概念
 
 这是任何编程语言的基本原理之一，在其中你可以定义类和对象。类是属性和方法的封装。类与真实世界的实体相关。下面是一个使用类的 Java 程序的简单示例。我们将在该系列的第二本书中看到更多内容。
 
 **示例 7：以下程序用于展示一个关于类的简单 Java 示例。**
 
 ```java
-class Student
-{
+class Student {
     // 封装 ID 属性
     private int ID;
-    public void setID(int pID)
-    {
+    public void setID(int pID) {
         ID = pID;
     }
-    public int getID()
-    {
+    public int getID() {
         return ID;
     }
 }
 
-public class HelloWorld
-{
+public class HelloWorld {
     public static void main(String[] args) {
         Student stud = new Student();
         stud.setID(1);
@@ -170,29 +158,25 @@ public class HelloWorld
 }
 ```
 
-## 3.5 数据封装支持
+## 3.3 数据封装支持
 
 Java 具有封装其数据成员的能力，使其不会暴露给其他类。你可以拥有“getter”和“setter”方法，这些方法可以相应地获取和设置数据成员。下面是一个数据封装的示例。
 
 **示例 8：以下程序用于展示一个关于数据封装的简单 Java 示例。**
 
 ```java
-class Student
-{
+class Student {
     // 封装 ID 属性
     private int ID;
-    public void setID(int pID)
-    {
+    public void setID(int pID) {
         ID = pID;
     }
-    public int getID()
-    {
+    public int getID() {
         return ID;
     }
 }
 
-public class HelloWorld
-{
+public class HelloWorld {
     public static void main(String[] args) {
         Student stud = new Student();
         stud.setID(1);
@@ -201,42 +185,35 @@ public class HelloWorld
 }
 ```
 
-## 3.6 继承
+## 3.4 继承
 
 Java 支持类继承其他类的属性和方法。这在很大程度上避免了重复开发类，并有助于更好地开发应用程序。下面是一个继承的示例。我们将在该系列的第二本书中详细介绍这一点。
 
 **示例 9：以下程序用于展示一个关于继承的简单 Java 示例。**
 
 ```java
-class Person
-{
+class Person {
     // 封装 ID 属性
     private int ID;
-    public void setID(int pID)
-    {
+    public void setID(int pID) {
         ID = pID;
     }
-    public int getID()
-    {
+    public int getID() {
         return ID;
     }
 }
 
-class Student extends Person
-{
+class Student extends Person {
     private String Name;
-    public void setName(String pName)
-    {
+    public void setName(String pName) {
         Name = pName;
     }
-    public String getName()
-    {
+    public String getName() {
         return Name;
     }
 }
 
-public class HelloWorld
-{
+public class HelloWorld {
     public static void main(String[] args) {
         Student stud = new Student();
         stud.setID(1);
@@ -247,51 +224,41 @@ public class HelloWorld
 }
 ```
 
-## 3.7 接口
+## 3.5 接口
 
 接口是类必须遵守的契约。在接口中，你有函数定义，而在使用接口的类中，你为接口函数提供实现。下面是一个接口的示例。我们将在该系列的第二本书中详细介绍这一点。
 
 **示例 10：以下程序用于展示一个关于接口的简单 Java 示例。**
 
 ```java
-interface IStudent
-{
+interface IStudent {
     // 只有函数是接口的一部分
     void Display();
 }
 
-class Student implements IStudent
-{
+class Student implements IStudent {
     // 封装 ID 属性
     private int ID;
     private String Name;
-    public void setID(int pID)
-    {
+    public void setID(int pID) {
         ID = pID;
     }
-    public int getID()
-    {
+    public int getID() {
         return ID;
     }
-
-    public void setName(String pName)
-    {
+    public void setName(String pName) {
         Name = pName;
     }
-    public String getName()
-    {
+    public String getName() {
         return Name;
     }
-
-    public void Display()
-    {
+    public void Display() {
         System.out.println("The ID of the student is " + this.getID());
         System.out.println("The name of the student is " + this.getName());
     }
 }
 
-public class HelloWorld
-{
+public class HelloWorld {
     public static void main(String[] args) {
         Student stud = new Student();
         stud.setID(1);
@@ -301,52 +268,43 @@ public class HelloWorld
 }
 ```
 
-## 3.8 多态
+## 3.6 多态
 
 这是编译器在运行时确定需要调用的类的能力。例如，你可以让基类变量指向派生类的对象。下面是一个多态的示例。我们将在该系列的第二本书中详细介绍。
 
 **示例 11：以下程序用于展示一个关于多态的简单 Java 示例。**
 
 ```java
-class Person
-{
+class Person {
     // 封装 ID 属性
     private int ID;
-    public void setID(int pID)
-    {
+    public void setID(int pID) {
         ID = pID;
     }
-    public int getID()
-    {
+    public int getID() {
         return ID;
     }
-    public void Display()
-    {
+    public void Display() {
         System.out.println("The ID of the person is " + this.getID());
     }
 }
 
-class Student extends Person
-{
+class Student extends Person {
     private String Name;
-    public void setName(String pName)
-    {
+    public void setName(String pName) {
         Name = pName;
     }
-    public String getName()
-    {
+    public String getName() {
         return Name;
     }
     @Override
-    public void Display()
-    {
+    public void Display() {
         System.out.println("The ID of the student is " + this.getID());
         System.out.println("The name of the student is " + this.getName());
     }
 }
 
-public class HelloWorld
-{
+public class HelloWorld {
     public static void main(String[] args) {
         Person person = new Student(); // 多态：父类引用指向子类对象
         person.setID(1);
@@ -357,8 +315,6 @@ public class HelloWorld
     }
 }
 ```
-
-*(注：原文 3.8 节的源码存在混乱/交叉，我已根据标准的 Java 模式和提供的片段进行了重构以确保逻辑清晰。)*
 
 # 4. Java 编译器
 
@@ -392,7 +348,7 @@ public class HelloWorld {
 
 ### 步骤 2
 
-接下来，要编译程序，我们需要使用 Java 开发包中的 `javac` 命令。用于编译程序的命令如下所示：
+接下来，要编译程序，我们需要使用 Java 开发包中的 `javac` 命令。用于编译程序的命令如下：
 
 ```
 javac HelloWorld.java
@@ -430,11 +386,11 @@ Java 有许多版本。下面简要讨论了不同版本及其含义：
 
 
 
-- **Java 企业版（Java Enterprise Edition – EE）**：主要用于开发和支持大规模应用程序。它主要针对需要在多层和多平台上开发应用程序的大型组织。在这里，你可以构建更具扩展性、可靠且安全的网络应用程序。
+- **Java 企业版（Java Enterprise Edition – EE）**：这主要用于开发和支持大规模应用程序。它主要针对需要在多层和多平台上开发应用程序的大型组织。在这里，你可以构建更具扩展性、可靠且安全的网络应用程序。
 
-- **Java 微型版（Java Micro Edition – ME）**：这是 Java 编程语言的一个较小子集，用于为手机和平板电脑等较小设备开发应用程序。
+- **Java 微型版（Java Micro Edition – ME）**：这是 Java 编程语言的一个较小子集，用于为手机和平电脑等较小设备开发应用程序。
 
-- **Java FX**：JavaFX 是一个使用轻量级用户界面 API 创建丰富互联网应用程序的平台。该 API 可以利用高级图形处理器为终端用户创建更具吸引力的应用程序。
+- **Java FX**：JavaFX 是一个使用轻级用户界面 API 创建丰富互联网应用程序的平台。该 API 可以利用高级图形处理器为终端用户创建更具吸引力的应用程序。
 
 ## 5. 构建你的环境
 
@@ -446,7 +402,7 @@ Java 开发工具包（Java Development Kit，简称 `JDK`）用于开发基于 
 
 <http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
 
-一旦安装了 Java 开发工具包，下一步是确保其安装正确。实现此目的的最简单方法是执行以下命令。
+一旦安装了 Java 开发工具包，下一步是确保其安装正确。实现此的最简单方法是执行以下命令。
 
 ```
 java -version
@@ -566,11 +522,11 @@ The value of i is 5
 
 1. `int i=5;`
 
-   在这里，我们声明了一个名为 `i` 的变量，并给该变量赋值为 5。关于变量和数据类型有一个专门的章节，但为了掌握如何开始使用变量，你可以对上面的程序进行实验。
+   在这里，我们声明了一个名为 `i` 的变量，并给该变量赋值为 5。关于变量和数据类型有一有一个专门的章节，但为了掌握如何开始使用变量，你可以对上面的程序进行实验。
 
 2. `System.out.println("The value of i is "+i);`
 
-   现在我们正在尝试显示变量的值。我们仍然在使用 `System.out.println` 函数。在这里，我们将字符串 `"The value of i is"` 和变量 `i` 本身结合在一起。这可以通过 `+` 运算符来实现。
+   现在我们正在尝试显示变量的值。我们仍然在使用 `System.out.println` 函数。在这里，我们将字符串 "The value of i is" 和变量 `i` 本身结合在一起。这可以通过 `+` 运算符来实现。
 
 现在让我们来看一个与上面显示的程序类似的程序，但对程序进行了微小的更改。
 
@@ -817,42 +773,11 @@ i 的值为 10.111111111
 j 的值为 -45.44444444
 ```
 
-## 7.7 Char 数据类型
-
-这种数据类型用于定义单个 16 位 Unicode 字符，范围从 0 到 65,535。
-
-### 示例 23：以下程序用于演示 char 数据类型。
-
-```java
-// 这是一个 Java 类
-public class Demo
-{
-    // 这是 Java 程序的主入口点
-    public static void main(String args[])
-    {
-        // 初始化变量
-        char i='A';
-        char j='B';
-
-        // 显示变量
-        System.out.println("The value of i is "+i);
-        System.out.println("The value of j is "+j);
-    }
-}
-```
-
-通过此程序，输出如下：
-
-```
-i 的值为 A
-j 的值为 B
-```
-
 ## 7.8 布尔数据类型
 
 该数据类型用于定义布尔值，其值可以是真（`true`）或假（`false`）。
 
-### 示例 24：以下程序用于展示布尔数据类型。
+**示例 24**：以下程序用于展示布尔数据类型。
 
 ```java
 // This is a Java class
@@ -875,15 +800,15 @@ public class Demo
 通过此程序，输出如下：
 
 ```
-The value of i is true
-The value of j is false
+The value of i is True
+The value of j is False
 ```
 
 ## 7.9 字符串数据类型
 
 该数据类型用于定义字符序列。
 
-### 示例 25：以下程序用于展示字符串数据类型。
+**示例 25**：以下程序用于展示字符串数据类型。
 
 ```java
 // This is a Java class
@@ -912,26 +837,16 @@ The value of j is World
 
 ## 7.10 字段的默认值
 
-如果为各种数据类型的字段没有定义值，则它们会被分配默认值。我们将在该系列丛书的第二本书中介绍类时详细讨论字段，但对这一点有一个基本的了解是有好处。下表提供了各种数据类型的默认值。
+如果为各种数据类型的字段没有定义值，则它们会被分配默认值。我们将在该系列丛第二本书中介绍类时详细讨论字段，但对这一点有一个基本的了解是有好处。下表提供了各种数据类型的默认值。
 
-### 表 2：数据类型默认值
-
-| 数据类型 | 默认值 |
-| :--- | :--- |
-| `byte` | 0 |
-| `short` | 0 |
-| `int` | 0 |
-| `long` | 0L |
-| `float` | 0.0f |
-| `double` | 0.0d |
-| `char` | '\u0000' |
-| `boolean` | false |
-| `String` (或其他对象) | null |
+**表 2：数据类型默认值**
 
 
+
+# 数据类型默认值
 
 | 数据类型 | 默认值 |
-|---|---|
+| --- | --- |
 | byte | 0 |
 | short | 0 |
 | int | 0 |
@@ -973,9 +888,10 @@ public class Demo
 
 通过此程序，输出如下：
 
+```text
 The value of i is A
-
 The value of i is B
+```
 
 ## 8.2 整数变量
 
@@ -1004,9 +920,10 @@ public class Demo
 
 通过此程序，输出如下：
 
+```text
 The value of i is 5
-
 The value of i is 6
+```
 
 ## 8.3 浮点数变量
 
@@ -1034,9 +951,10 @@ public class Demo
 
 通过此程序，输出如下：
 
+```text
 The value of i is 1.1
-
 The value of i is 2.2
+```
 
 ## 8.4 Double 变量
 
@@ -1064,9 +982,10 @@ public class Demo
 
 通过此程序，输出如下：
 
+```text
 The value of i is 1.111
-
 The value of i is 2.222
+```
 
 ## 8.5 字符串变量
 
@@ -1094,9 +1013,10 @@ public class Demo
 
 通过此程序，输出如下：
 
+```text
 The value of i is Hello
-
 The value of i is World
+```
 
 ## 8.6 布尔变量
 
@@ -1124,9 +1044,10 @@ public class Demo
 
 通过此程序，输出如下：
 
+```text
 The value of i is true
-
 The value of i is false
+```
 
 ## 8.7 变量作用域
 
@@ -1176,9 +1097,10 @@ public class Demo
 
 通过此程序，输出如下：
 
+```text
 The value of i is 5
-
 The value of j is 6
+```
 
 让我们来看同一个示例并尝试在程序中创建一个错误以确认我们对作用域变量的理解。
 
@@ -1211,7 +1133,7 @@ System.out.println("The value of j is "+j);
 
 通过此程序，你实际上得到一个编译时错误。
 
-```
+```text
 Error:(15, 49) java: cannot find symbol
 symbol: variable j
 location: class Demo
@@ -1219,11 +1141,11 @@ location: class Demo
 
 正如所示，程序中存在错误，因为我们正试图在定义 `j` 的作用范围之外使用它的值。
 
-# 9. 常量 (Constants)
+# 9. 常量
 
 常量是一个值在程序运行过程中不会改变的标识符。例如，如果你定义了一个名为 `val` 的标识符，给它赋值为 5，并将其定义为常量值，那么你将无法更改该标识符的值。
 
-在 Java 中，定义常量的语法所示：
+在 Java 中，定义常量的语法如下所示：
 
 ```java
 static final datatype identifier = value
@@ -1244,7 +1166,7 @@ public class Demo
 {
     static final int i=5;
 
-    // 这是 Java 程序的 main 入点
+    // 这是 Java 程序的 main 入口
     public static void main(String args[])
     {
         System.out.println("The value of i is "+i);
@@ -1254,7 +1176,9 @@ public class Demo
 
 通过此程序，输出如下：
 
+```text
 The value of i is 5
+```
 
 现在我们来编写相同的程序，但这次尝试在程序过程中更改 `i` 的值。
 
@@ -1265,7 +1189,7 @@ The value of i is 5
 public class Demo
 {
     static final int i=5;
-    // 这是 Java 程序的 main 入点
+    // 这是 Java 程序的 main 入口
     public static void main(String args[])
     {
         System.out.println("The value of i is "+i);
@@ -1276,7 +1200,7 @@ public class Demo
 
 通过此程序，你将得到一个如下所示的编译时错误。
 
-```
+```text
 Error:(10, 9) java: cannot assign a value to final variable
 ```
 
@@ -1290,7 +1214,7 @@ public class Demo
 {
   static final int ValA=5;
   static final int ValB=5;
-  // 这是 Java 程序的 main 入点
+  // 这是 Java 程序的 main 入口
   public static void main(String args[])
   {
     int ValC=ValA+ValB;
@@ -1306,20 +1230,22 @@ public class Demo
 
 通过此程序，输出如下：
 
+```text
 The value of ValC is 10
+```
 
-# 10. 运算符 (Operators)
+# 10. 运算符
 
 Java 中提供了多种类型的运算符。这些运算符有助于对 Java 程序中定义的变量执行各种操作。让我们详细地查看每个运算符。
 
-## 10.1 算术运算符 (Arithmetic Operators)
+## 10.1 算术运算符
 
 这些是用于处理数字的运算符。最常用的运算符如下所示，并带有一个它们在程序中运行的示例。
 
 **表 3：算术运算符**
 
 | 运算符 | 操作 |
-|---|---|
+| --- | --- |
 | `+` | 用于两个操作数相加 |
 | `-` | 用于减去一个操作数 |
 | `*` | 用于两个操作数相乘 |
@@ -1334,7 +1260,7 @@ Java 中提供了多种类型的运算符。这些运算符有助于对 Java 程
 // 这是一个 Java 类
 public class Demo
 {
-    // 这是 Java 程序的 main 入点
+    // 这是 Java 程序的 main 入口
     public static void main(String args[])
     {
         int i=4;
@@ -1361,31 +1287,29 @@ public class Demo
 
 通过此程序，输出如下：
 
+```text
 The addition of the two operands is 9
-
 The subtraction of the two operands is -1
-
 The multiplication of the two operands is 20
-
 The division of the two operands is 0
-
 The remainder of the two operands is 4
-
 Incrementing operand by one 4
-
 Decrementing operand by one 5
+```
 
-## 10.2 关系运算符 (Relational Operators)
+## 10.2 关系运算符
 
 这些运算符用于根据操作数的值来确定条件的值。Java 中可能的关系运算符如下所示，所有它们都用在一个示例中。
 
 **表 4：关系运算符**
 
 | 运算符 | 操作 |
-|---|---|
+| --- | --- |
 | `==` | 用于检查两个操作数是否相等 |
 
 
+
+## 关系运算符
 
 | 运算符 | 操作 |
 | --- | --- |
@@ -1622,8 +1546,8 @@ public class Demo
         // The value of i*=j
         System.out.println("The value of i*=j is " + (i *= j));
 
-        // The value of i/=j
-        System.out.println("The value of i/=j is " + (i /= j));
+        // The value of i /=j
+        System.out.println("The value of i /=j is " + (i /= j));
 
         // The value of i%=j
         System.out.println("The value of i%=j is " + (i %= j));
@@ -1638,7 +1562,7 @@ The value of i+j is 15
 The value of i+=j is 15
 The value of i-=j is 5
 The value of i*=j is 5
-The value of i/=j is 5
+The value of i /=j is 5
 The value of i%=j is 5
 ```
 
@@ -1651,7 +1575,7 @@ The value of i%=j is 5
 | 运算符 | 操作 |
 | --- | --- |
 | `&` | 如果操作数都为 1，结果为 1 |
-| `|` | 如果操作数中有一个为 1，结果为 1 |
+| `\|` | 如果操作数中有一个为 1，结果为 1 |
 | `^` | 如果操作数互不相同，结果为 1 |
 | `<<` | 将操作数左移 |
 | `>>` | 将操作数右移 |
@@ -2257,15 +2181,15 @@ public class Demo
         switch (i)
         {
             case 1: System.out.println("The value of i is 1");
-                break;
+            break;
             case 2: System.out.println("The value of i is 2");
-                break;
+            break;
             case 3: System.out.println("The value of i is 3");
-                break;
+            break;
             case 4: System.out.println("The value of i is 4");
-                break;
+            break;
             default: System.out.println("The value of i is unknown");
-                break;
+            break;
         }
     }
 }
